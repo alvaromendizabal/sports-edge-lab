@@ -1,0 +1,46 @@
+# Private raw and derived data (also applies to licensed bookmaker feeds)
+data/
+nfl-edge-lab-data/
+raw/
+curated/
+features/
+models/
+outputs/
+artifacts/
+*.parquet
+*.duckdb
+*.sqlite
+*.pkl
+*.joblib
+*.onnx
+*.pt
+*.pth
+*.safetensors
+*.zip
+*.pyz
+*_return_*.json
+*_return_*.csv
+
+# Secrets and local AWS credentials
+.env
+.env.*
+!.env.example
+*credentials*
+*api_key*
+*.pem
+*.key
+.aws/
+secrets/
+
+# Python / notebook / IDE
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.ipynb_checkpoints/
+.venv/
+venv/
+.vscode/
+.idea/
+.DS_Store
