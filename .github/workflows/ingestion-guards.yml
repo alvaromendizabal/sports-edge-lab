@@ -1,0 +1,37 @@
+name: NFL Edge Lab - Ingestion Guardrails
+on:
+  push:
+    branches: [main]
+  pull_request:
+permissions:
+  contents: read
+jobs:
+  validate-source-catalog:
+    runs-on: ubuntu-latest
+    timeout-minutes: 8
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - name: Compile acquisition code
+        run: python -m py_compile tools/acquire_public_assets.py
+      - name: Run isolated source guards
+        run: python tools/acquire_public_assets.py --self-test
+      - name: Validate catalog scope and structure (offline)
+        run: |
+          python - <<'PY'
+          import json
+          from pathlib import Path
+          p = Path('catalog/public_asset_manifest_20261015.json')
+          catalog = json.loads(p.read_text())
+          assert catalog['schema_version'] == 'nfl-edge-lab-public-assets-v1'
+          assets = catalog['assets']
+          assert len(assets) >= 800
+          keys = [(a['source'], a['release_tag'], a['name']) for a in assets]
+          assert len(set(keys)) == len(keys)
+          assert any(a['release_tag'] == 'pbp' for a in assets)
+          assert all(a['url'].startswith('https://') for a in assets)
+          assert all(int(a['bytes']) >= 0 for a in assets)
+          print('Public catalog guardrails passed:', len(assets), 'assets')
+          PY
