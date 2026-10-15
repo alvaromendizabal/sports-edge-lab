@@ -5494,9 +5494,9 @@
       "name": "games.parquet",
       "url": "https://github.com/nflverse/nflverse-data/releases/download/schedules/games.parquet",
       "bytes": 522246,
-      "sha256": "017436149d64e52725782674fb5a6c5764ad6386d2be5323b011532f8ac0ae1a",
-      "release_asset_id": 645336515,
-      "updated_utc": "2026-10-15T22:16:36Z"
+      "sha256": "c0c2b0458157374622d92f36a04f22a8a64b2ee80dbe7b03255f59d9ad92c9de",
+      "release_asset_id": 645472847,
+      "updated_utc": "2026-10-15T23:16:45Z"
     },
     {
       "source": "nflverse",
