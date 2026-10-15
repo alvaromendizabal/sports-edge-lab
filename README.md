@@ -4,7 +4,7 @@
 
 NFL Edge Lab is an applied machine learning research project for estimating NFL game outcome probabilities, point margins, and score distributions, then comparing forecast estimates against observable historical betting prices. The emphasis is on **calibration, temporal correctness, explainability, reproducible evaluation, and system design** rather than unsupported claims of profitable betting.
 
-> **Status — Phase 0: reproducible source acquisition.** The repository contains a pinned public-source catalog of 815 assets (approximately 723 MB total published file size) and a resumable downloader with SHA-256 checks, private-S3 syncing, and receipt generation. **These files are cataloged, not yet confirmed downloaded.** Paid bookmaker data and point-in-time feature engineering are separate workstreams.
+> **Status — Phase 0: reproducible source acquisition.** The repository contains a pinned public-source catalog of 815 assets (approximately 723 MB total published file size) and a resumable downloader with SHA-256 checks, private-S3 syncing, and receipt generation. **All 815 assets (722,613,027 bytes) were confirmed present in private S3 on 2026-10-15, and the final repair job completed successfully.** Field coverage, availability-date and point-in-time audits remain pending. Paid bookmaker data and point-in-time feature engineering are separate workstreams.
 
 ## Problem and design
 
@@ -21,10 +21,10 @@ NFL game forecasts are easy to overfit and hard to validate as actual wagering d
 The Python acquisition runner uses only the standard library. It retrieves public nflverse source assets without requiring an odds subscription or cloud credentials. Start from this repository in a network-enabled AWS SageMaker terminal:
 
 ```bash
-python3 -u tools/acquire_public_assets.py --seasons 1999:2026 --data-root /home/sagemaker-user/nfl-edge-lab-data --return-dir /home/sagemaker-user --bucket sagemaker-nfl-edge-lab-560403859723-us-west-2 --workers 6 --max-seconds 2400 --max-download-gb 5
+python3 -u tools/acquire_public_assets_v003.py --seasons 1999:2026 --data-root /home/sagemaker-user/nfl-edge-lab-data --return-dir /home/sagemaker-user --bucket sagemaker-nfl-edge-lab-560403859723-us-west-2 --workers 8 --max-seconds 900 --max-download-gb 3
 ```
 
-For a smaller proof run use `--seasons 2023:2025`. A previous v001 standalone `.pyz` was distributed separately; the GitHub acquisition source is now v002. Re-running v002 reuses verified local files and retries incomplete transfers. Check `catalog/public_asset_manifest_20261015.json` and `docs/SOURCE_INVENTORY_20261015.md` for the actual published asset universe.
+For a smaller proof run use `--seasons 2023:2025`. A previous v001 standalone `.pyz` was distributed separately; the new v003 GitHub acquisition runner reuses already verified assets directly in S3, minimizing repeated downloads. The v002 source is retained as a historical version. Check `catalog/public_asset_manifest_20261015.json` and `docs/SOURCE_INVENTORY_20261015.md` for the actual published asset universe.
 
 Outputs are intentionally stored **outside this Git repository**:
 
@@ -35,24 +35,28 @@ nfl-edge-lab-data/
 └── (one acquisition return ZIP under /home/sagemaker-user)
 ```
 
-Every full v002 acquisition attempt produces exactly one uniquely named **return ZIP** in the specified return directory. It contains acquisition receipts, coverage, data quality, and test results, not bulky or potentially licensed raw datasets.
+Every full v003 acquisition attempt produces exactly one uniquely named **return ZIP** in the specified return directory. It contains acquisition receipts, coverage, data quality, and test results, not bulky or potentially licensed raw datasets.
 
 ### Available CLI controls
 
 | Flag | Purpose |
 |---|---|
 | `--seasons 1999:2026` | Inclusive season range, or explicit list `2021,2023,2025` |
-| `--self-test` | Six local tests; no external network |
+| `--self-test` | Seven local tests; no external network |
 | `--plan` | Display source URL manifest; no downloads |
-| `--workers 6` | Conservative concurrency; valid range 1–12 |
-| `--max-seconds 2400` | Bounded run with graceful return report |
-| `--max-download-gb 5` | Global download budget |
+| `--workers 8` | Conservative concurrency; valid range 1–12 |
+| `--max-seconds 900` | Bounded run with graceful return report |
+| `--max-download-gb 3` | Global download budget |
 | `--data-root ...` | Resumable source archive outside Git |
 | `--return-dir ...` | Directory for one unique return ZIP |
 
+**AWS data lake:** `s3://sagemaker-nfl-edge-lab-560403859723-us-west-2/`; **current environment:** SageMaker Studio `nfl-edge-lab-dev` in `us-west-2` with `ml.m7i.2xlarge` and a 60-minute idle policy.
+
+**Paid historical markets:** [purchase and acquisition plan](docs/PAID_DATA_ACQUISITION_PLAN_20261015.md) · [deduplicated historical-odds credit planner](tools/plan_the_odds_api_backfill.py). No paid sportsbook API key or licensed raw odds are stored in this public repo.
+
 ## Explicit leakage boundary
 
-`games.csv` contains game results, actual quarterback starters, and observed weather **alongside** pregame schedule fields and archived market numbers. They are not interchangeable in a model input table. The runner splits them into distinct files and includes a strict results consistency test. Likewise, archived reference spreads do **not** become day-before betting quotes just because they were originally determined before kickoff.
+`games.csv` contains game results, actual quarterback starters, and observed weather **alongside** pregame schedule fields and archived market numbers. They are not interchangeable in a model input table. The download runner preserves raw source files; future curated feature-building must explicitly separate outcome and other postgame columns before any training. Raw game records must never be used directly as a feature matrix. Likewise, archived reference spreads do **not** become day-before betting quotes just because they were originally determined before kickoff.
 
 The archived `closing_lines.csv` and `initial_lines.csv` each have limited historical windows; coverage must be verified by season and line provenance. These are **not** a continuous archive of bookmaker snapshots. The official paid The Odds API history can supply timestamped sports-book observations dating from 2020, but will be considered only after we audit the free source.
 
