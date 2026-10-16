@@ -1,0 +1,172 @@
+{
+  "status": "success",
+  "stdout": "",
+  "return_value": {
+    "observed_at": "2026-10-16T22:24:50.741782+00:00",
+    "results": [
+      {
+        "ProcessingInputs": [
+          {
+            "InputName": "code",
+            "AppManaged": false,
+            "S3Input": {
+              "S3Uri": "s3://sagemaker-sports-edge-lab-560403859723-us-west-2/infrastructure/code/football-refresh-20261016-v041/",
+              "LocalPath": "/opt/ml/processing/code",
+              "S3DataType": "S3Prefix",
+              "S3InputMode": "File",
+              "S3DataDistributionType": "FullyReplicated"
+            }
+          }
+        ],
+        "ProcessingJobName": "sports-edge-lab-football-refresh-20261016-v041",
+        "ProcessingResources": {
+          "ClusterConfig": {
+            "InstanceCount": 1,
+            "InstanceType": "ml.m5.2xlarge",
+            "VolumeSizeInGB": 30
+          }
+        },
+        "StoppingCondition": {
+          "MaxRuntimeInSeconds": 432000
+        },
+        "AppSpecification": {
+          "ImageUri": "246618743249.dkr.ecr.us-west-2.amazonaws.com/sagemaker-scikit-learn:1.9-0",
+          "ContainerEntrypoint": [
+            "python3",
+            "-u",
+            "/opt/ml/processing/code/sports_edge_lab_football_refresh_v041_20261016.pyz"
+          ]
+        },
+        "RoleArn": "arn:aws:iam::560403859723:role/SportsEdgeLabProcessingRole",
+        "ProcessingJobArn": "arn:aws:sagemaker:us-west-2:560403859723:processing-job/sports-edge-lab-football-refresh-20261016-v041",
+        "ProcessingJobStatus": "Completed",
+        "ProcessingEndTime": "2026-10-16T22:22:53.325000+00:00",
+        "ProcessingStartTime": "2026-10-16T22:21:59.856000+00:00",
+        "LastModifiedTime": "2026-10-16T22:23:47.444000+00:00",
+        "CreationTime": "2026-10-16T22:21:16.344000+00:00"
+      },
+      {
+        "logStreams": [
+          {
+            "logStreamName": "sports-edge-lab-football-refresh-20261016-v041/algo-1-1792189319",
+            "creationTime": 1792189360636,
+            "firstEventTimestamp": 1792189354529,
+            "lastEventTimestamp": 1792189356530,
+            "lastIngestionTime": 1792189360646,
+            "uploadSequenceToken": "49039859689936715385999479684965995695207523924511641966",
+            "arn": "arn:aws:logs:us-west-2:560403859723:log-group:/aws/sagemaker/ProcessingJobs:log-stream:sports-edge-lab-football-refresh-20261016-v041/algo-1-1792189319",
+            "storedBytes": 0
+          }
+        ]
+      },
+      {
+        "Contents": [
+          {
+            "Key": "shared/acquisition/football-refresh/20261016T222233Z-3d51c4585a/config.json",
+            "LastModified": "2026-10-16T22:22:34+00:00",
+            "ETag": "\"d596b626656d1a007dbb1fb7e3c18763\"",
+            "ChecksumAlgorithm": [
+              "CRC32"
+            ],
+            "ChecksumType": "FULL_OBJECT",
+            "Size": 5223,
+            "StorageClass": "STANDARD"
+          },
+          {
+            "Key": "shared/acquisition/football-refresh/20261016T222233Z-3d51c4585a/depth_charts_2026.csv.gz.receipt.json",
+            "LastModified": "2026-10-16T22:22:36+00:00",
+            "ETag": "\"a1dd2ec5539b5be319ed256cced1f432\"",
+            "ChecksumAlgorithm": [
+              "CRC32"
+            ],
+            "ChecksumType": "FULL_OBJECT",
+            "Size": 448,
+            "StorageClass": "STANDARD"
+          },
+          {
+            "Key": "shared/acquisition/football-refresh/20261016T222233Z-3d51c4585a/progress.json",
+            "LastModified": "2026-10-16T22:22:43+00:00",
+            "ETag": "\"e7e1642b2166f09b584fe44e4dbd796e\"",
+            "ChecksumAlgorithm": [
+              "CRC32"
+            ],
+            "ChecksumType": "FULL_OBJECT",
+            "Size": 9736,
+            "StorageClass": "STANDARD"
+          },
+          {
+            "Key": "shared/acquisition/football-refresh/20261016T222233Z-3d51c4585a/report.json",
+            "LastModified": "2026-10-16T22:22:43+00:00",
+            "ETag": "\"0bd1106a9eafd1a143709f4ec8d14eab\"",
+            "ChecksumAlgorithm": [
+              "CRC32"
+            ],
+            "ChecksumType": "FULL_OBJECT",
+            "Size": 9701,
+            "StorageClass": "STANDARD"
+          },
+          {
+            "Key": "shared/acquisition/football-refresh/20261016T222233Z-3d51c4585a/roster_weekly_2026.csv.gz.receipt.json",
+            "LastModified": "2026-10-16T22:22:36+00:00",
+            "ETag": "\"fa541dd3fd95993861438b00e6561314\"",
+            "ChecksumAlgorithm": [
+              "CRC32"
+            ],
+            "ChecksumType": "FULL_OBJECT",
+            "Size": 452,
+            "StorageClass": "STANDARD"
+          },
+          {
+            "Key": "shared/acquisition/football-refresh/20261016T222233Z-3d51c4585a/snap_counts_2026.csv.gz.receipt.json",
+            "LastModified": "2026-10-16T22:22:35+00:00",
+            "ETag": "\"f47913158feb6df97df7acc02b2e7585\"",
+            "ChecksumAlgorithm": [
+              "CRC32"
+            ],
+            "ChecksumType": "FULL_OBJECT",
+            "Size": 442,
+            "StorageClass": "STANDARD"
+          },
+          {
+            "Key": "shared/acquisition/football-refresh/20261016T222233Z-3d51c4585a/sports_edge_lab_football_refresh_return_20261016T222233Z-3d51c4585a.zip",
+            "LastModified": "2026-10-16T22:22:43+00:00",
+            "ETag": "\"692bfa2627750c166bd9e6a2e184084e\"",
+            "ChecksumAlgorithm": [
+              "CRC32"
+            ],
+            "ChecksumType": "FULL_OBJECT",
+            "Size": 5787,
+            "StorageClass": "STANDARD"
+          }
+        ],
+        "Prefix": "shared/acquisition/football-refresh/"
+      }
+    ]
+  },
+  "api_calls": [
+    {
+      "service": "sagemaker",
+      "operation": "DescribeProcessingJob",
+      "status": "success",
+      "n_items": {
+        "ProcessingInputs": 1
+      }
+    },
+    {
+      "service": "logs",
+      "operation": "DescribeLogStreams",
+      "status": "success",
+      "n_items": {
+        "logStreams": 1
+      }
+    },
+    {
+      "service": "s3",
+      "operation": "ListObjectsV2",
+      "status": "success",
+      "n_items": {
+        "Contents": 7
+      }
+    }
+  ]
+}

@@ -1,0 +1,21 @@
+{
+  "observed_at": "2026-10-16T22:08:14.201Z",
+  "assets": [
+    {
+      "name": "ngs_passing.csv.gz",
+      "digest": "sha256:12a66e1d30bb9cfe48e5b85decfd5dca31fad63f4b637be031df9048497f695c",
+      "updated_at": "2026-10-16T12:02:03Z"
+    },
+    {
+      "name": "ngs_receiving.csv.gz",
+      "digest": "sha256:168773b1a20defb8066acc75db58552b125e108f80b59c168e4b26696adf13b4",
+      "updated_at": "2026-10-16T12:02:18Z"
+    },
+    {
+      "name": "ngs_rushing.csv.gz",
+      "digest": "sha256:c0309c49dc7685a5f3d11260d9159ec73cf465771d9f6d35433f65928e88da5a",
+      "updated_at": "2026-10-16T12:02:11Z"
+    }
+  ],
+  "changed_since_v040": false
+}

@@ -1,0 +1,244 @@
+{
+  "application_runtime_limit_seconds": null,
+  "cost_excludes": "Startup/shutdown, S3 requests/storage and discovery tooling",
+  "elapsed_seconds": 8.97,
+  "estimated_application_compute_usd": 0.001148,
+  "failures": [],
+  "finished_at": "2026-10-16T22:22:42Z",
+  "full_source_coverage_claimed": false,
+  "paid_provider_requests": 0,
+  "planned": 9,
+  "processed": 9,
+  "remaining": 0,
+  "results": [
+    {
+      "bytes": 140793,
+      "captured_at": "2026-10-16T22:22:35Z",
+      "coverage": {
+        "all_completed_games_verified": false,
+        "duplicate_identity_rows": 0,
+        "historical_point_in_time_approved": false,
+        "latest_regular_week": 6,
+        "latest_regular_week_rows": 93,
+        "missing_player_ids": 0,
+        "regular_games": 80,
+        "regular_rows": 7463,
+        "regular_week_counts": {
+          "1": 1492,
+          "2": 1502,
+          "3": 1494,
+          "4": 1482,
+          "5": 1400,
+          "6": 93
+        },
+        "rows": 7463,
+        "teams": 32
+      },
+      "current_rows_key": "tracks/nfl/derived/snap_counts-current/20261016T222233Z-3d51c4585a/rows.jsonl.gz",
+      "headers": {
+        "Date": "Fri, 16 Oct 2026 22:22:34 GMT",
+        "ETag": "\"0x8DF2B752E8FEA09\"",
+        "Last-Modified": "Fri, 16 Oct 2026 11:04:00 GMT"
+      },
+      "kind": "snap_counts",
+      "lineage": "nflverse community compilation",
+      "raw_key": "tracks/nfl/raw/nflverse/snap_counts/f91a2003862a68841e413320bf611852195c61c9bada797ffab25275c62f78dd/snap_counts_2026.csv.gz",
+      "sha256": "f91a2003862a68841e413320bf611852195c61c9bada797ffab25275c62f78dd",
+      "source_updated_at": "2026-10-16T11:04:00Z",
+      "source_url": "https://github.com/nflverse/nflverse-data/releases/download/snap_counts/snap_counts_2026.csv.gz",
+      "status": "downloaded"
+    },
+    {
+      "bytes": 501612,
+      "captured_at": "2026-10-16T22:22:35Z",
+      "coverage": {
+        "duplicate_identity_rows": 0,
+        "historical_point_in_time_approved": false,
+        "latest_regular_week": 6,
+        "latest_regular_week_rows": 2279,
+        "missing_gsis_ids": 7,
+        "regular_rows": 15327,
+        "regular_week_counts": {
+          "1": 2963,
+          "2": 2528,
+          "3": 2545,
+          "4": 2576,
+          "5": 2436,
+          "6": 2279
+        },
+        "rows": 15327,
+        "teams": 32
+      },
+      "current_rows_key": "tracks/nfl/derived/weekly_rosters-current/20261016T222233Z-3d51c4585a/rows.jsonl.gz",
+      "headers": {
+        "Date": "Fri, 16 Oct 2026 22:22:35 GMT",
+        "ETag": "\"0x8DF2B80252752A1\"",
+        "Last-Modified": "Fri, 16 Oct 2026 12:22:28 GMT"
+      },
+      "kind": "weekly_rosters",
+      "lineage": "nflverse community compilation",
+      "raw_key": "tracks/nfl/raw/nflverse/weekly_rosters/31c7f1a82a23b4b46fb25881451f8af1bab8dbcae372e205dac00eedfbc5bb6f/roster_weekly_2026.csv.gz",
+      "sha256": "31c7f1a82a23b4b46fb25881451f8af1bab8dbcae372e205dac00eedfbc5bb6f",
+      "source_updated_at": "2026-10-16T12:22:29Z",
+      "source_url": "https://github.com/nflverse/nflverse-data/releases/download/weekly_rosters/roster_weekly_2026.csv.gz",
+      "status": "downloaded"
+    },
+    {
+      "bytes": 12805209,
+      "captured_at": "2026-10-16T22:22:40Z",
+      "coverage": {
+        "duplicate_identity_rows": 0,
+        "earliest_snapshot": "2026-03-22T06:38:42+00:00",
+        "historical_point_in_time_approved": false,
+        "latest_snapshot": "2026-10-16T12:16:59+00:00",
+        "latest_snapshot_missing_gsis": 5,
+        "latest_snapshot_rows": 2305,
+        "rows": 659277,
+        "source_snapshot_not_original_publication_time": true,
+        "teams": 32
+      },
+      "current_rows_key": "tracks/nfl/derived/depth_charts-current/20261016T222233Z-3d51c4585a/rows.jsonl.gz",
+      "headers": {
+        "Date": "Fri, 16 Oct 2026 22:22:34 GMT",
+        "ETag": "\"0x8DF2B7F67818D10\"",
+        "Last-Modified": "Fri, 16 Oct 2026 12:17:10 GMT"
+      },
+      "kind": "depth_charts",
+      "lineage": "nflverse community compilation",
+      "raw_key": "tracks/nfl/raw/nflverse/depth_charts/dcdcbce877e1777f7b372e44f9e15fb4ef23ef79e9446e572529feb46b3da3f2/depth_charts_2026.csv.gz",
+      "sha256": "dcdcbce877e1777f7b372e44f9e15fb4ef23ef79e9446e572529feb46b3da3f2",
+      "source_updated_at": "2026-10-16T12:17:10Z",
+      "source_url": "https://github.com/nflverse/nflverse-data/releases/download/depth_charts/depth_charts_2026.csv.gz",
+      "status": "downloaded"
+    },
+    {
+      "coverage": {
+        "current_weekend_rows": 177,
+        "current_weekend_team_games": 14,
+        "duplicate_identity_rows": 0,
+        "first_game_date": "2026-08-29",
+        "historical_point_in_time_approved": false,
+        "last_game_date": "2026-10-17",
+        "player_identity_join_validated": false,
+        "rejected_rows": 0,
+        "rows": 801,
+        "team_games": 64,
+        "teams": 17
+      },
+      "derived_key": "tracks/ncaaf/derived/acc-availability/20261016T222233Z-3d51c4585a/rows.jsonl.gz",
+      "header_evidence": {
+        "browser_run_url": "https://agent.tinyfish.ai/runs/4241ca29-6db1-4464-bb2d-d0b423b29570",
+        "headers": [
+          "Team",
+          "Date",
+          "Opponent",
+          "Number",
+          "Player",
+          "Initial Status",
+          "Update 1 Status",
+          "Update 2 Status",
+          "Game Day Status"
+        ],
+        "observation": "## ACC Football Archive – Column Headers & Filters\n\n### Nine Column Headers (Left to Right)\n1. **Team**\n2. **Date**\n3. **Opponent**\n4. **Number**\n5. **Player**\n6. **Initial Status**\n7. **Update 1 Status**\n8. **Update 2 Status**\n9. **Game Day Status**\n\n### Evidence of Visibility\nAll nine headers are rendered as visible HTML elements on the page. Each header is wrapped in a `` tag and appears as a clickable column-sort button. The headers are visible above the data rows without any scrolling required for the first six columns; the last three columns (Update 1 Status, Update 2 Status, Game Day Status) may require horizontal scrolling if the table overflows, but they are still rendered and labeled.\n\n### Date/Season Filters (Visible on Page)\n- **\"View Seasons Prior to 2026\"** – A button to access archive seasons before the current 2026 season.\n- **\"Filter by Week\"** – Text input field for filtering by week number.\n- **\"Filter by Team\"** – Text input field for filtering by team name.\n- **\"Filter by Player\"** – Text input field for filtering by player name.\n- **\"Go\"** – Submit button to apply the above filters.\n\n### Status Labels\nThe statuses shown in the table data (based on sample rows such as Boston College players vs. Virginia Tech on 9/26/26) include:\n- **Questionable**\n- **Available**\n- **Out**\n\nThese correspond to the three status columns: **Initial Status**, **Update 1 Status**, and **Update 2 Status**, followed by **Game Day Status**.\n\n**Note:** The task instruction requested that statuses only be reported \"if explicitly shown.\" The column headers themselves are labeled \"Initial Status,\" \"Update 1 Status,\" and \"Update 2 Status,\" which directly map to the meanings *Initial*, *Update 1*, and *Update 2*. \"Game Day Status\" is the fourth status column. The status values observed in the data (Questionable, Available, Out) are sample values and not a definitive exhaustive list of all possible status values across the entire archive.\n\n### Conclusion\nAll nine column headers are **visible and labeled**. No headers were omitted or required inference. The date/season filters are clearly present as described above.",
+        "observed_at": "2026-10-16T22:08:14.201Z",
+        "url": "https://app.hdintelligence.com/?source=ACC&sport=Football&conf=ACC&type=archive"
+      },
+      "kind": "acc_availability",
+      "raw_key": "tracks/ncaaf/raw/acc-availability-rendered/objects/40f0d83eb4be5d7dbe70dd7f11c4f61889cfd2f917e4cd57a119352b67e410af.md.gz",
+      "rejected": [],
+      "source_publication_time": null,
+      "status": "parsed_existing_capture"
+    },
+    {
+      "declared_row_count": 301,
+      "export_claimed_complete": true,
+      "export_complete": false,
+      "exported_rows": 453,
+      "kind": "sec_availability",
+      "method": "Public browser-rendered table export; unresolved count discrepancy",
+      "normalization_blocker": "sec_schema_or_count",
+      "raw_key": "tracks/ncaaf/raw/sec-availability-rendered/objects/391f95a7758d2818c0bbb362d15ab371cb52fae6e0e3c370fed0d9d7f798f862.json.gz",
+      "sha256": "391f95a7758d2818c0bbb362d15ab371cb52fae6e0e3c370fed0d9d7f798f862",
+      "status": "raw_only_quarantined"
+    },
+    {
+      "coverage": {
+        "current_regular_rows": 163,
+        "historical_point_in_time_approved": false,
+        "roster_join_counts": {
+          "matched_exact_week_team_gsis": 158,
+          "unmatched": 5
+        },
+        "rows": 6133
+      },
+      "derived_key": "tracks/nfl/derived/ngs_passing-roster-joined/20261016T222233Z-3d51c4585a/rows.jsonl.gz",
+      "kind": "ngs_passing.csv.gz",
+      "new_source_requests": 0,
+      "raw_key": "tracks/nfl/raw/nflverse/nextgen_stats/12a66e1d30bb9cfe48e5b85decfd5dca31fad63f4b637be031df9048497f695c/ngs_passing.csv.gz",
+      "source_updated_at": "2026-10-16T12:02:03Z",
+      "status": "reused_verified_and_joined"
+    },
+    {
+      "coverage": {
+        "current_regular_rows": 369,
+        "historical_point_in_time_approved": false,
+        "roster_join_counts": {
+          "matched_exact_week_team_gsis": 356,
+          "unmatched": 13
+        },
+        "rows": 15218
+      },
+      "derived_key": "tracks/nfl/derived/ngs_receiving-roster-joined/20261016T222233Z-3d51c4585a/rows.jsonl.gz",
+      "kind": "ngs_receiving.csv.gz",
+      "new_source_requests": 0,
+      "raw_key": "tracks/nfl/raw/nflverse/nextgen_stats/168773b1a20defb8066acc75db58552b125e108f80b59c168e4b26696adf13b4/ngs_receiving.csv.gz",
+      "source_updated_at": "2026-10-16T12:02:18Z",
+      "status": "reused_verified_and_joined"
+    },
+    {
+      "coverage": {
+        "current_regular_rows": 160,
+        "historical_point_in_time_approved": false,
+        "roster_join_counts": {
+          "matched_exact_week_team_gsis": 153,
+          "unmatched": 7
+        },
+        "rows": 6262
+      },
+      "derived_key": "tracks/nfl/derived/ngs_rushing-roster-joined/20261016T222233Z-3d51c4585a/rows.jsonl.gz",
+      "kind": "ngs_rushing.csv.gz",
+      "new_source_requests": 0,
+      "raw_key": "tracks/nfl/raw/nflverse/nextgen_stats/c0309c49dc7685a5f3d11260d9159ec73cf465771d9f6d35433f65928e88da5a/ngs_rushing.csv.gz",
+      "source_updated_at": "2026-10-16T12:02:11Z",
+      "status": "reused_verified_and_joined"
+    },
+    {
+      "coverage": {
+        "historical_point_in_time_approved": false,
+        "roster_join_counts": {
+          "matched_exact_week_team_pfr": 6075,
+          "unmatched": 1388
+        },
+        "rows": 7463
+      },
+      "derived_key": "tracks/nfl/derived/snaps-roster-joined/20261016T222233Z-3d51c4585a/rows.jsonl.gz",
+      "ftn": {
+        "key": "tracks/nfl/raw/nflverse/ftn_charting/ftn_charting_2026.parquet",
+        "sha256": "6b799c2014b239f44604638cd9be436351fcc5ee0493e26b7ffe93952ab9e3ff",
+        "size": 175862,
+        "source_requests": 0,
+        "source_updated_at": "2026-10-14T16:30:07Z",
+        "status": "unchanged_verified_cached"
+      },
+      "kind": "snap_identity_and_ftn_cache",
+      "status": "joined_and_reused"
+    }
+  ],
+  "run_id": "20261016T222233Z-3d51c4585a",
+  "source_downloaded_bytes": 13447614,
+  "source_requests": 3,
+  "started_at": "2026-10-16T22:22:33Z",
+  "status": "completed_with_gaps",
+  "subscription_credits": 0,
+  "version": "sports-edge-lab-football-refresh-v041"
+}

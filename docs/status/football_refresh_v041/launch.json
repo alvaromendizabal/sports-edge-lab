@@ -1,0 +1,88 @@
+{
+  "status": "success",
+  "stdout": "",
+  "return_value": {
+    "observed_at": "2026-10-16T22:21:16.586798+00:00",
+    "existing_before_launch": [],
+    "artifact_head": {
+      "AcceptRanges": "bytes",
+      "LastModified": "2026-10-16T22:20:40+00:00",
+      "ContentLength": 32910,
+      "ETag": "\"a3b96eea1d56bfa4235f1b1f1f1ff496\"",
+      "ContentType": "application/x-www-form-urlencoded",
+      "ServerSideEncryption": "AES256",
+      "Metadata": {}
+    },
+    "artifact_sha256": "d5c023c1957585781c52dc3f727715a07bbe39f3710272adef748c5fd019178e",
+    "request": {
+      "ProcessingJobName": "sports-edge-lab-football-refresh-20261016-v041",
+      "RoleArn": "arn:aws:iam::560403859723:role/SportsEdgeLabProcessingRole",
+      "AppSpecification": {
+        "ImageUri": "246618743249.dkr.ecr.us-west-2.amazonaws.com/sagemaker-scikit-learn:1.9-0",
+        "ContainerEntrypoint": [
+          "python3",
+          "-u",
+          "/opt/ml/processing/code/sports_edge_lab_football_refresh_v041_20261016.pyz"
+        ]
+      },
+      "ProcessingResources": {
+        "ClusterConfig": {
+          "InstanceCount": 1,
+          "InstanceType": "ml.m5.2xlarge",
+          "VolumeSizeInGB": 30
+        }
+      },
+      "ProcessingInputs": [
+        {
+          "InputName": "code",
+          "AppManaged": false,
+          "S3Input": {
+            "S3Uri": "s3://sagemaker-sports-edge-lab-560403859723-us-west-2/infrastructure/code/football-refresh-20261016-v041/",
+            "LocalPath": "/opt/ml/processing/code",
+            "S3DataType": "S3Prefix",
+            "S3InputMode": "File",
+            "S3DataDistributionType": "FullyReplicated"
+          }
+        }
+      ],
+      "StoppingCondition": {
+        "MaxRuntimeInSeconds": 432000
+      },
+      "Tags": [
+        {
+          "Key": "Project",
+          "Value": "SportsEdgeLab"
+        },
+        {
+          "Key": "Scope",
+          "Value": "public-football-refresh"
+        }
+      ]
+    },
+    "launch": {
+      "ProcessingJobArn": "arn:aws:sagemaker:us-west-2:560403859723:processing-job/sports-edge-lab-football-refresh-20261016-v041"
+    },
+    "tests_passed": 46,
+    "sec_export_count_discrepancy_quarantined": true
+  },
+  "api_calls": [
+    {
+      "service": "sagemaker",
+      "operation": "ListProcessingJobs",
+      "status": "success",
+      "n_items": {
+        "ProcessingJobSummaries": 0
+      }
+    },
+    {
+      "service": "s3",
+      "operation": "HeadObject",
+      "status": "success"
+    },
+    {
+      "service": "sagemaker",
+      "operation": "CreateProcessingJob",
+      "status": "success"
+    }
+  ]
+}

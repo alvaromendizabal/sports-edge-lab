@@ -1,0 +1,22 @@
+{
+  "source_url": "https://app.hdintelligence.com/?source=SEC&sport=Football&conf=SEC&type=archive",
+  "observed_at": "2026-10-16T22:24:23.439Z",
+  "method": "Read-only DOM table extraction through cloud browser; every rendered row and cell counted programmatically",
+  "row_count": 453,
+  "column_count": 9,
+  "headers": ["Team","Date","Opponent","Number","Player","Initial Status","Update 1 Status","Update 2 Status","Game Day Status"],
+  "canonicalization": "Compact UTF-8 JSON arrays; strip only the leading # from Number; every other cell remains verbatim",
+  "canonical_rows_sha256": "9d5c60c2249b1c6404d86b5d8263c485eb04b66db1664574024828ec686bae21",
+  "canonical_utf8_bytes": 42171,
+  "sha256_implementation_selftest_abc": "ba7816bf8f01cfea414140de5dae2223b00361a396177a9cb410ff61f20015ad",
+  "team_counts": {"Alabama":38,"Arkansas":15,"Auburn":11,"Florida":14,"Georgia":30,"Kentucky":38,"LSU":26,"Mississippi State":24,"Missouri":54,"Oklahoma":35,"Ole Miss":41,"South Carolina":32,"Tennessee":34,"Texas":15,"Texas A&M":13,"Vanderbilt":33},
+  "export_discrepancies": {
+    "declared_count":301,
+    "actual_count":453,
+    "non_source_emdash_cells":254,
+    "name_correction": {"zero_based_row":374,"column":"Player","export_value":"Shamourad Umarov","rendered_value":"Shamurad Umarov"}
+  },
+  "full_archive_or_season_coverage_claimed": false,
+  "source_publication_time": null,
+  "historical_point_in_time_approved": false
+}

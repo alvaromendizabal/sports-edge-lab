@@ -1,0 +1,12 @@
+{
+  "bytes": 5787,
+  "sha256": "89bfed21a193dbef9916eebc15367414a09743043432f9a535ab1b70bbf39ca3",
+  "members": [
+    "report.json",
+    "config.json",
+    "resume.json"
+  ],
+  "report_matches_s3": true,
+  "unique_zip_count_in_run_prefix": 1,
+  "referenced_s3_objects_verified": 16
+}

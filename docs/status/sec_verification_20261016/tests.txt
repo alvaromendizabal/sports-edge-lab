@@ -1,0 +1,13 @@
+test_any_status_change_rejected (__main__.Tests.test_any_status_change_rejected) ... ok
+test_any_team_change_rejected (__main__.Tests.test_any_team_change_rejected) ... ok
+test_counter_disagreement_rejected (__main__.Tests.test_counter_disagreement_rejected) ... ok
+test_exact_dom_parity_and_null_status (__main__.Tests.test_exact_dom_parity_and_null_status) ... ok
+test_extra_row_rejected (__main__.Tests.test_extra_row_rejected) ... ok
+test_header_swap_rejected (__main__.Tests.test_header_swap_rejected) ... ok
+test_unobserved_correction_rejected (__main__.Tests.test_unobserved_correction_rejected) ... ok
+test_wrong_hash_rejected (__main__.Tests.test_wrong_hash_rejected) ... ok
+
+----------------------------------------------------------------------
+Ran 8 tests in 0.002s
+
+OK

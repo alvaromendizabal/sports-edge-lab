@@ -1,16 +1,16 @@
 {
-  "as_of": "2026-10-16T21:56:33.110915+00:00",
-  "as_of_utc": "2026-10-16T21:56:33.110915+00:00",
+  "as_of": "2026-10-16T22:29:34.808689+00:00",
+  "as_of_utc": "2026-10-16T22:29:34.808689+00:00",
   "cost_note": "Estimates use AWS-reported processing intervals and the preserved instance-specific rates. InProgress elapsed intervals are provisional and separate from finished jobs. Jobs without ProcessingStartTime have unallocated cost. Excludes unreported provisioning/shutdown, Studio, S3 storage/requests, data transfer, paid API credits and subscriptions; final AWS bill not reconciled.",
   "describe_errors": 0,
   "execution_outcome_counts": {
     "Failed": 10,
-    "Completed": 30,
+    "Completed": 31,
     "Stopped": 2,
     "InProgress": 1
   },
   "is_billing_statement": false,
-  "job_count": 43,
+  "job_count": 44,
   "jobs": [
     {
       "created_at": "2026-10-15T23:12:16.987000+00:00",
@@ -766,7 +766,7 @@
       "status": "InProgress",
       "created_at": "2026-10-16T21:14:08.428000+00:00",
       "last_modified_at": "2026-10-16T21:16:39.401000+00:00",
-      "observed_at": "2026-10-16T21:56:33.110915+00:00",
+      "observed_at": "2026-10-16T22:29:34.808689+00:00",
       "instance_type": "ml.m5.2xlarge",
       "instance_count": 1,
       "hourly_usd_per_instance": 0.461,
@@ -776,8 +776,8 @@
       "processing_end_at": null,
       "failure_reason": null,
       "interval_kind": "provisional_running_interval",
-      "interval_seconds": 2499.78,
-      "estimated_processing_interval_usd": 0.320111,
+      "interval_seconds": 4481.478,
+      "estimated_processing_interval_usd": 0.573878,
       "legacy_nfl_track_name": false
     },
     {
@@ -804,6 +804,32 @@
       "failed_tasks": 0,
       "raw_only_tasks": 1,
       "subscription_credits": 0
+    },
+    {
+      "job_name": "sports-edge-lab-football-refresh-20261016-v041",
+      "status": "Completed",
+      "created_at": "2026-10-16T22:21:16.344000+00:00",
+      "last_modified_at": "2026-10-16T22:23:47.444000+00:00",
+      "observed_at": "2026-10-16T22:24:50.741782+00:00",
+      "instance_type": "ml.m5.2xlarge",
+      "instance_count": 1,
+      "hourly_usd_per_instance": 0.461,
+      "max_runtime_seconds": 432000,
+      "application_runtime_limit_seconds": null,
+      "processing_start_at": "2026-10-16T22:21:59.856000+00:00",
+      "processing_end_at": "2026-10-16T22:22:53.325000+00:00",
+      "failure_reason": null,
+      "interval_kind": "finished_processing_interval",
+      "interval_seconds": 53.469,
+      "estimated_processing_interval_usd": 0.006847,
+      "legacy_nfl_track_name": false,
+      "application_outcome": "completed_with_gaps",
+      "selected_tasks": 9,
+      "processed_tasks": 9,
+      "failed_tasks": 0,
+      "raw_only_tasks_at_runtime": 1,
+      "subscription_credits": 0,
+      "sec_gap_later_resolved_by": "docs/status/sec_verification_20261016/report.json"
     }
   ],
   "listing_complete": true,
@@ -813,7 +839,10 @@
     "v038 superseded and not launched",
     "ACB removed by prior user-authorized cleanup",
     "v040 Completed with ProcessingEndTime; 6 tasks processed, 0 failures, ACC raw-only gap",
-    "v039 InProgress at21:56UTC:1822 historical captures,2874remaining,0failures"
+    "v039 InProgress at21:56UTC:1822 historical captures,2874remaining,0failures",
+    "docs/FOOTBALL_REFRESH_V041.md",
+    "docs/status/football_refresh_v041/",
+    "docs/status/sec_verification_20261016/"
   ],
   "nonblocking_incidents": [
     {
@@ -843,8 +872,8 @@
       "resolution": "Corrected to account maximum; no quota increase, provider calls or processing compute from the rejected request"
     }
   ],
-  "observation_note": "Prior full listing and terminal metadata retained. V039 re-described with actual start time and live S3 progress. V040 added after launch, terminal DescribeProcessingJob, runtime tests, report and saved-object verification. No full account relist in this observation.",
-  "observation_window_end": "2026-10-16T21:56:33.110915+00:00",
+  "observation_note": "Prior complete listing and terminal metadata retained. V039 re-described with live S3 progress; V041 added after terminal DescribeProcessingJob, runtime tests, report, ZIP and saved-object verification. No full account relist. SEC cached-data verification did not create another ProcessingJob.",
+  "observation_window_end": "2026-10-16T22:29:34.808689+00:00",
   "observation_window_start": "2026-10-16T18:44:28.198793+00:00",
   "outcome_note": "AWS status is retained separately. The direct ESPN source-access rejection is a valid negative access result, not acquired data; no bypass occurred. Completed bounded runs need not complete source coverage.",
   "project": "sports-edge-lab",
@@ -862,7 +891,7 @@
   "scope": "SageMaker ProcessingJobs named sports-edge-lab-* plus four immutable nfl-edge-lab-* historical track job names. Metadata only; no S3 objects or receipts read.",
   "status_counts": {
     "Failed": 10,
-    "Completed": 30,
+    "Completed": 31,
     "Stopped": 2,
     "InProgress": 1
   },
@@ -874,9 +903,9 @@
       "unreported_intervals": 0
     },
     "Completed": {
-      "jobs": 30,
-      "estimated_processing_interval_usd": 2.829981,
-      "interval_seconds": 22095.306,
+      "jobs": 31,
+      "estimated_processing_interval_usd": 2.836828,
+      "interval_seconds": 22148.775,
       "unreported_intervals": 0
     },
     "Stopped": {
@@ -887,8 +916,8 @@
     },
     "InProgress": {
       "jobs": 1,
-      "estimated_processing_interval_usd": 0.320111,
-      "interval_seconds": 2499.78,
+      "estimated_processing_interval_usd": 0.573878,
+      "interval_seconds": 4481.478,
       "unreported_intervals": 0
     }
   },

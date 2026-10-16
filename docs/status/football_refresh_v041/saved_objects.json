@@ -1,0 +1,283 @@
+{
+  "status": "success",
+  "stdout": "",
+  "return_value": {
+    "observed_at": "2026-10-16T22:27:25.414616+00:00",
+    "objects": [
+      {
+        "key": "tracks/nfl/raw/nflverse/snap_counts/f91a2003862a68841e413320bf611852195c61c9bada797ffab25275c62f78dd/snap_counts_2026.csv.gz",
+        "result": {
+          "AcceptRanges": "bytes",
+          "LastModified": "2026-10-16T22:22:35+00:00",
+          "ContentLength": 140793,
+          "ETag": "\"ff261d7b851203c4adb15b51fe204b78\"",
+          "ContentType": "application/gzip",
+          "ServerSideEncryption": "AES256",
+          "Metadata": {}
+        }
+      },
+      {
+        "key": "tracks/nfl/derived/snap_counts-current/20261016T222233Z-3d51c4585a/rows.jsonl.gz",
+        "result": {
+          "AcceptRanges": "bytes",
+          "LastModified": "2026-10-16T22:22:36+00:00",
+          "ContentLength": 2779,
+          "ETag": "\"8248e1cb67cdec154727b989281cd22b\"",
+          "ContentType": "application/gzip",
+          "ServerSideEncryption": "AES256",
+          "Metadata": {}
+        }
+      },
+      {
+        "key": "tracks/nfl/raw/nflverse/weekly_rosters/31c7f1a82a23b4b46fb25881451f8af1bab8dbcae372e205dac00eedfbc5bb6f/roster_weekly_2026.csv.gz",
+        "result": {
+          "AcceptRanges": "bytes",
+          "LastModified": "2026-10-16T22:22:36+00:00",
+          "ContentLength": 501612,
+          "ETag": "\"32abe384ec094a7e477315fd8e23c094\"",
+          "ContentType": "application/gzip",
+          "ServerSideEncryption": "AES256",
+          "Metadata": {}
+        }
+      },
+      {
+        "key": "tracks/nfl/derived/weekly_rosters-current/20261016T222233Z-3d51c4585a/rows.jsonl.gz",
+        "result": {
+          "AcceptRanges": "bytes",
+          "LastModified": "2026-10-16T22:22:36+00:00",
+          "ContentLength": 351775,
+          "ETag": "\"9c8aaf22c2503932d0e9dc86b2cb083c\"",
+          "ContentType": "application/gzip",
+          "ServerSideEncryption": "AES256",
+          "Metadata": {}
+        }
+      },
+      {
+        "key": "tracks/nfl/raw/nflverse/depth_charts/dcdcbce877e1777f7b372e44f9e15fb4ef23ef79e9446e572529feb46b3da3f2/depth_charts_2026.csv.gz",
+        "result": {
+          "AcceptRanges": "bytes",
+          "LastModified": "2026-10-16T22:22:35+00:00",
+          "ContentLength": 12805209,
+          "ETag": "\"c82ca3219e8945a24957ae9de121a2a1\"",
+          "ContentType": "application/gzip",
+          "ServerSideEncryption": "AES256",
+          "Metadata": {}
+        }
+      },
+      {
+        "key": "tracks/nfl/derived/depth_charts-current/20261016T222233Z-3d51c4585a/rows.jsonl.gz",
+        "result": {
+          "AcceptRanges": "bytes",
+          "LastModified": "2026-10-16T22:22:41+00:00",
+          "ContentLength": 56503,
+          "ETag": "\"f9b8a2eacc0d2a1f1121b456bdaa357a\"",
+          "ContentType": "application/gzip",
+          "ServerSideEncryption": "AES256",
+          "Metadata": {}
+        }
+      },
+      {
+        "key": "tracks/ncaaf/raw/acc-availability-rendered/objects/40f0d83eb4be5d7dbe70dd7f11c4f61889cfd2f917e4cd57a119352b67e410af.md.gz",
+        "result": {
+          "AcceptRanges": "bytes",
+          "LastModified": "2026-10-16T21:53:43+00:00",
+          "ContentLength": 8489,
+          "ETag": "\"5d2fdf4482b6527c56c95383636f0270\"",
+          "ContentType": "application/gzip",
+          "ServerSideEncryption": "AES256",
+          "Metadata": {}
+        }
+      },
+      {
+        "key": "tracks/ncaaf/derived/acc-availability/20261016T222233Z-3d51c4585a/rows.jsonl.gz",
+        "result": {
+          "AcceptRanges": "bytes",
+          "LastModified": "2026-10-16T22:22:41+00:00",
+          "ContentLength": 12699,
+          "ETag": "\"7621fc73e6ca0f4431481b7584c3de19\"",
+          "ContentType": "application/gzip",
+          "ServerSideEncryption": "AES256",
+          "Metadata": {}
+        }
+      },
+      {
+        "key": "tracks/ncaaf/raw/sec-availability-rendered/objects/391f95a7758d2818c0bbb362d15ab371cb52fae6e0e3c370fed0d9d7f798f862.json.gz",
+        "result": {
+          "AcceptRanges": "bytes",
+          "LastModified": "2026-10-16T22:22:41+00:00",
+          "ContentLength": 5540,
+          "ETag": "\"1bc12e02379fcd6375f3e8d58b7e423d\"",
+          "ContentType": "application/gzip",
+          "ServerSideEncryption": "AES256",
+          "Metadata": {}
+        }
+      },
+      {
+        "key": "tracks/nfl/raw/nflverse/nextgen_stats/12a66e1d30bb9cfe48e5b85decfd5dca31fad63f4b637be031df9048497f695c/ngs_passing.csv.gz",
+        "result": {
+          "AcceptRanges": "bytes",
+          "LastModified": "2026-10-16T21:53:42+00:00",
+          "ContentLength": 602888,
+          "ETag": "\"4b53983ee8d75c67c0dd41741e1eac66\"",
+          "ContentType": "application/gzip",
+          "ServerSideEncryption": "AES256",
+          "Metadata": {}
+        }
+      },
+      {
+        "key": "tracks/nfl/derived/ngs_passing-roster-joined/20261016T222233Z-3d51c4585a/rows.jsonl.gz",
+        "result": {
+          "AcceptRanges": "bytes",
+          "LastModified": "2026-10-16T22:22:42+00:00",
+          "ContentLength": 23038,
+          "ETag": "\"d70859f9ea1c25e5144c0e5e75d6de4e\"",
+          "ContentType": "application/gzip",
+          "ServerSideEncryption": "AES256",
+          "Metadata": {}
+        }
+      },
+      {
+        "key": "tracks/nfl/raw/nflverse/nextgen_stats/168773b1a20defb8066acc75db58552b125e108f80b59c168e4b26696adf13b4/ngs_receiving.csv.gz",
+        "result": {
+          "AcceptRanges": "bytes",
+          "LastModified": "2026-10-16T21:53:43+00:00",
+          "ContentLength": 1014873,
+          "ETag": "\"a5837c77473f8b12cb10d6be01b8a616\"",
+          "ContentType": "application/gzip",
+          "ServerSideEncryption": "AES256",
+          "Metadata": {}
+        }
+      },
+      {
+        "key": "tracks/nfl/derived/ngs_receiving-roster-joined/20261016T222233Z-3d51c4585a/rows.jsonl.gz",
+        "result": {
+          "AcceptRanges": "bytes",
+          "LastModified": "2026-10-16T22:22:42+00:00",
+          "ContentLength": 37473,
+          "ETag": "\"b7387f3ceb1192724e313530df7c1ebc\"",
+          "ContentType": "application/gzip",
+          "ServerSideEncryption": "AES256",
+          "Metadata": {}
+        }
+      },
+      {
+        "key": "tracks/nfl/raw/nflverse/nextgen_stats/c0309c49dc7685a5f3d11260d9159ec73cf465771d9f6d35433f65928e88da5a/ngs_rushing.csv.gz",
+        "result": {
+          "AcceptRanges": "bytes",
+          "LastModified": "2026-10-16T21:53:42+00:00",
+          "ContentLength": 335650,
+          "ETag": "\"cc4bf0719265544dbbaa68ba836b300b\"",
+          "ContentType": "application/gzip",
+          "ServerSideEncryption": "AES256",
+          "Metadata": {}
+        }
+      },
+      {
+        "key": "tracks/nfl/derived/ngs_rushing-roster-joined/20261016T222233Z-3d51c4585a/rows.jsonl.gz",
+        "result": {
+          "AcceptRanges": "bytes",
+          "LastModified": "2026-10-16T22:22:42+00:00",
+          "ContentLength": 14259,
+          "ETag": "\"85823695f5570f64c5d8679f7455b983\"",
+          "ContentType": "application/gzip",
+          "ServerSideEncryption": "AES256",
+          "Metadata": {}
+        }
+      },
+      {
+        "key": "tracks/nfl/derived/snaps-roster-joined/20261016T222233Z-3d51c4585a/rows.jsonl.gz",
+        "result": {
+          "AcceptRanges": "bytes",
+          "LastModified": "2026-10-16T22:22:43+00:00",
+          "ContentLength": 211153,
+          "ETag": "\"560c48e453f01d616b45f58fccca3e1e\"",
+          "ContentType": "application/gzip",
+          "ServerSideEncryption": "AES256",
+          "Metadata": {}
+        }
+      }
+    ]
+  },
+  "api_calls": [
+    {
+      "service": "s3",
+      "operation": "HeadObject",
+      "status": "success"
+    },
+    {
+      "service": "s3",
+      "operation": "HeadObject",
+      "status": "success"
+    },
+    {
+      "service": "s3",
+      "operation": "HeadObject",
+      "status": "success"
+    },
+    {
+      "service": "s3",
+      "operation": "HeadObject",
+      "status": "success"
+    },
+    {
+      "service": "s3",
+      "operation": "HeadObject",
+      "status": "success"
+    },
+    {
+      "service": "s3",
+      "operation": "HeadObject",
+      "status": "success"
+    },
+    {
+      "service": "s3",
+      "operation": "HeadObject",
+      "status": "success"
+    },
+    {
+      "service": "s3",
+      "operation": "HeadObject",
+      "status": "success"
+    },
+    {
+      "service": "s3",
+      "operation": "HeadObject",
+      "status": "success"
+    },
+    {
+      "service": "s3",
+      "operation": "HeadObject",
+      "status": "success"
+    },
+    {
+      "service": "s3",
+      "operation": "HeadObject",
+      "status": "success"
+    },
+    {
+      "service": "s3",
+      "operation": "HeadObject",
+      "status": "success"
+    },
+    {
+      "service": "s3",
+      "operation": "HeadObject",
+      "status": "success"
+    },
+    {
+      "service": "s3",
+      "operation": "HeadObject",
+      "status": "success"
+    },
+    {
+      "service": "s3",
+      "operation": "HeadObject",
+      "status": "success"
+    },
+    {
+      "service": "s3",
+      "operation": "HeadObject",
+      "status": "success"
+    }
+  ]
+}

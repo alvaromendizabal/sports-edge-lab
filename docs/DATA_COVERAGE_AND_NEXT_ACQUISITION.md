@@ -1,6 +1,6 @@
 # Downloaded data and next acquisition priorities
 
-**Latest update:** v011 is terminal. The user-authorized continuous football completion job v039 has launched; the short v038 restart is superseded. [Scope, safeguards and runtime evidence](FOOTBALL_FINISH_V039.md). ACB remains deleted.
+**Latest update — October 16, 22:29 UTC:** V041 finished: current 2026 NFL snaps, rosters and depth charts are saved; cached NGS/FTN were reused. ACC has 801 normalized availability rows and separately DOM-verified SEC has 453. V039 remains running: 3,673/4,696 historical NCAAF price captures, 1,023 remaining and zero final failures (two retryable incidents). [Verified results and remaining gaps](FOOTBALL_REFRESH_V041.md). ACB remains deleted.
 
 
 **93,319 in-scope raw content files / 17.26 GB are verified in the shared archive.**
@@ -28,6 +28,12 @@ receipts and collector were deleted on October 16; the removal is verified separ
 File counts are not unique games, complete seasons or training examples.
 Different revisions and statistical families can overlap.
 
+## Current NFL and availability additions
+
+V041 saved 7,463 2026 NFL snap rows, 15,327 weekly-roster rows and 659,277 depth-chart snapshot rows (2,305 latest rows for all 32 teams). Public NGS already contains 27,613 rows; all three hashes were unchanged and reused. Exact current-year roster joins matched 667/692 NGS rows and 6,075/7,463 snap rows. Unmatched identities remain explicit; historical information-time validation is pending. The three new public assets total 13.45 MB and used zero subscription credits.
+
+ACC has 801 normalized rows (177 this weekend); SEC has 453 source-verified rows (127 this weekend). The existing Big Ten and Big 12 captures remain available. These archives do not establish original publication timestamps. [Execution proof and next priorities](FOOTBALL_REFRESH_V041.md).
+
 ## Fresh football data captured this turn
 
 | Source | Verified content | Actual data recency |
@@ -36,7 +42,7 @@ Different revisions and statistical families can overlap.
 | Direct CFBD FBS plays and drives | 22,151 plays and 2,888 drives across 124 completed games in Weeks 5–7; every completed FBS schedule game in those windows has plays, drives, team/player box and advanced-stat rows | Latest covered kickoff October 16, 00:00 UTC, corresponding to Thursday evening in the US; downloaded 20:31–20:32 UTC |
 | Current game markets | 24 NFL, 74 NCAAF and 46 NBA events with outcomes; 32 populated player-prop responses across these tracks | Fresh observation 20:22–20:23 UTC; provider quote times remain distinct |
 | Big Ten football availability | 715 normalized player-status rows across 64 team-games; 154 rows across 14 team-games for October 16–17 | Public rendered archive observed October 16; source publication timestamps unavailable |
-| NFL official roster/injury pages | All 32 team roster pages, plus Week 6 injury and schedule pages | Earlier same-day capture; structured extraction and report-time audit remain pending |
+| NFL official roster/injury pages | All 32 team roster pages, plus Week 6 injury and schedule pages | All 32 roster pages retained; V040 extracted 358 Week 6 injury rows at 21:53 UTC; report-time and identity audit remain pending |
 
 The CFBD job made 21 subscription-quota requests, with no failures, and also
 captured current player usage and three weekly game-weather responses. The
@@ -50,7 +56,7 @@ an archive of verified publication-time versions. Four rows with ambiguous
 missing columns were preserved in raw extraction and quarantined from the
 normalized table. A missing game-day status stays null, never "available".
 Player identity joins and historical point-in-time eligibility remain unverified.
-SEC discovery did not yield downloadable report links; it is still a gap.
+SEC now has a directly DOM-verified current rendered archive: 453 rows, 66 team-games and all 16 teams; 127 rows / 14 team-games for October 16–18. ACC has 801 rows, including 177 for this weekend. Original report PDFs, publication times and player identity joins remain gaps.
 
 CFBD game-box endpoints also returned non-FBS games; they are retained in raw
 responses but excluded from the 124-game FBS coverage denominator. Matching
@@ -65,14 +71,13 @@ their own games.
    games. Build dated NFL/NCAAF evaluation sets before claiming a usable edge.
 2. **Reliable current availability:** original NFL and NCAA report versions,
    publication timestamps, quarterback/depth-chart changes and cross-conference
-   coverage. The Big Ten extraction is useful partial coverage; SEC and other
-   conferences remain open. Archive final game-day updates when published.
+   coverage. Big Ten, Big 12, ACC and SEC rendered archives are saved; historical publication times, identity mapping and other conferences remain open. Archive final game-day updates when published.
 3. **Historical market gaps:** finish missing game-price checkpoints and audit
    quote times and kickoff revisions. The odds-only continuation preserves
    existing request indexes. CBBD details are paused after rate limiting.
 4. **Tracking and aligned video for the five target sports:** vendor access,
    export scope, history/current latency and modeling rights are still
-   unconfirmed. Previous SkillCorner/Genius inquiries are recorded; a targeted mailbox check at 20:43 UTC found no new replies from those
+   unconfirmed. Previous SkillCorner/Genius inquiries are recorded; a targeted mailbox check at 22:17 UTC found no new replies from those
    provider domains today. No new license was purchased. ACB is out of scope.
 5. **Basketball-specific gaps:** complete CBBD plays/lineups/substitutions after
    the provider limit clears; current NBA injury versions; women's current
@@ -155,5 +160,6 @@ See the [latest operational snapshot](status/operational-status_20261016T1810Z.j
 ## Subsequent acquisition milestone
 
 The starting content scan above remains frozen. A public refresh added 19 revisions while reusing 4,473 verified assets. New bounded work now adds missing game-price and player-prop checkpoints, college basketball plays/lineups/substitutions, official NBA injury PDFs, current NWS forecast vintages and an original NOAA historical forecast-field pilot. See the [dated runtime, quota and launch evidence](FRONTIER_ACQUISITION_20261016.md) for actual progress and failures, and the [frontier source priorities](FRONTIER_DATA_PRIORITIES_20261016.md) for public sources, unconfirmed tracking access and acceptance gates. These additions are not silently folded into the earlier byte or file counts.
+
 
 

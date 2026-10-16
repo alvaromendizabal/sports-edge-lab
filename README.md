@@ -1,6 +1,6 @@
 # Sports Edge Lab
 
-**Latest update — October 16, 21:56 UTC:** public NGS and availability v040 finished with 27,613 NGS rows, 358 NFL injury rows and 434 Big 12 availability rows; ACC raw extraction is saved but normalization is blocked. V039 is still running: 1,822/4,696 historical football price captures, 2,874 remaining, zero failures. [Verified results and remaining work](docs/NGS_AVAILABILITY_V040.md). ACB remains deleted.
+**Latest update — October 16, 22:29 UTC:** V041 finished: current 2026 NFL snaps, rosters and depth charts are saved; cached NGS/FTN were reused. ACC has 801 normalized availability rows and separately DOM-verified SEC has 453. V039 remains running: 3,673/4,696 historical NCAAF price captures, 1,023 remaining and zero final failures (two retryable incidents). [Verified results and remaining gaps](docs/FOOTBALL_REFRESH_V041.md). ACB remains deleted.
 
 
 **Five sports. One reproducible forecasting and market-research platform.**
@@ -46,6 +46,12 @@ receipts and collector were deleted on October 16; the removal is verified separ
 File counts are not unique games, complete seasons or training examples.
 Different revisions and statistical families can overlap.
 
+## Current NFL and availability additions
+
+V041 saved 7,463 2026 NFL snap rows, 15,327 weekly-roster rows and 659,277 depth-chart snapshot rows (2,305 latest rows for all 32 teams). Public NGS already contains 27,613 rows; all three hashes were unchanged and reused. Exact current-year roster joins matched 667/692 NGS rows and 6,075/7,463 snap rows. Unmatched identities remain explicit; historical information-time validation is pending. The three new public assets total 13.45 MB and used zero subscription credits.
+
+ACC has 801 normalized rows (177 this weekend); SEC has 453 source-verified rows (127 this weekend). The existing Big Ten and Big 12 captures remain available. These archives do not establish original publication timestamps. [Execution proof and next priorities](docs/FOOTBALL_REFRESH_V041.md).
+
 ## Fresh football data captured this turn
 
 | Source | Verified content | Actual data recency |
@@ -68,7 +74,7 @@ an archive of verified publication-time versions. Four rows with ambiguous
 missing columns were preserved in raw extraction and quarantined from the
 normalized table. A missing game-day status stays null, never "available".
 Player identity joins and historical point-in-time eligibility remain unverified.
-SEC discovery did not yield downloadable report links; it is still a gap.
+SEC now has a directly DOM-verified current rendered archive: 453 rows, 66 team-games and all 16 teams; 127 rows / 14 team-games for October 16–18. ACC has 801 rows, including 177 for this weekend. Original report PDFs, publication times and player identity joins remain gaps.
 
 CFBD game-box endpoints also returned non-FBS games; they are retained in raw
 responses but excluded from the 124-game FBS coverage denominator. Matching
@@ -89,8 +95,8 @@ their own games.
   remain; those totals include reused data.
 - **Historical v011 stopped:** AWS confirmed terminal Stopped with ProcessingEndTime October 16, 20:49:04 UTC after CBBD rate-limit responses. CBBD is not resumed.
 - **Odds-only v037 failed before provider calls:** its worker lacked a management-plane permission; no paid requests occurred. V038 was prepared but superseded and never launched.
-- **Football v039 is running:** the finite missing-price queue has 4,696 NCAAF requests and zero uncached NFL requests after reconciliation. At 21:56:17 UTC, 1,822 were captured with zero failures and 2,874 remaining. It uses at most 200,000 existing odds credits, zero college-statistics calls and one source request/second, with live quota reserve and denial stops. There is no short application timer. [Scope and safeguards](docs/FOOTBALL_FINISH_V039.md).
-- **NGS/availability v040 finished:** all six selected tasks processed; three current public NGS assets total 27,613 rows from 2016–2026, including the available Week 6 records. Also extracted 358 official NFL injury rows and 434 Big 12 availability rows. ACC remains raw-only because column headers were missing. Zero paid API credits. [Terminal evidence and limitations](docs/NGS_AVAILABILITY_V040.md).
+- **Football v039 is running:** the finite missing-price queue has 4,696 NCAAF requests and zero uncached NFL requests after reconciliation. At 22:29:33 UTC, 3,673 were captured with zero final failures, two retryable incidents and 1,023 remaining. It uses at most 200,000 existing odds credits, zero college-statistics calls and one source request/second, with live quota reserve and denial stops. There is no short application timer. [Scope and safeguards](docs/FOOTBALL_FINISH_V039.md).
+- **NGS/availability v040 finished:** all six selected tasks processed; three current public NGS assets total 27,613 rows from 2016–2026, including the available Week 6 records. Also extracted 358 official NFL injury rows and 434 Big 12 availability rows. ACC was raw-only in V040; V041 verified the headers and normalized 801 rows. SEC was later verified separately against all 453 rendered rows. Zero paid API credits. [Terminal evidence and limitations](docs/NGS_AVAILABILITY_V040.md).
 
 The enabled follow-up monitors v039 only and will record its terminal outcome; it cannot launch v038 or restart a job.
 
@@ -159,3 +165,4 @@ Win prediction, spread/total distributions and market value are separate questio
 ## Repository and data boundaries
 
 Code, configuration, tests, source catalogs and non-sensitive reports belong here. Raw data, API keys, private receipts containing licensed records and large model artifacts remain outside Git. Upstream attribution and usage conditions travel with each source. The project does not claim a demonstrated betting edge, complete player-prop coverage or a production forecasting system at this acquisition stage.
+

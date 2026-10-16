@@ -1,0 +1,37 @@
+[
+  {
+    "key": "tracks/ncaaf/raw/sec-availability-rendered/verified/20261016T222423Z/capture.json.gz",
+    "bytes": 6064,
+    "sha256": "626a1a28f0f25fe447f16516793a4813252999341eabf6e660d437172dc5c490",
+    "etag": "\"abc4e9f8d1166157e95f721dcd548b79\"",
+    "status": 200
+  },
+  {
+    "key": "tracks/ncaaf/derived/sec-availability/20261016T222423Z/rows.jsonl.gz",
+    "bytes": 7457,
+    "sha256": "426910e835c5be1295ad81df6fb24cf39fbd9d37091272adedcbfc314ddeb815",
+    "etag": "\"3d1db5cc5612368cf1dbd2cc33df8519\"",
+    "status": 200
+  },
+  {
+    "key": "shared/acquisition/sec-verification/20261016T222423Z/dom_receipt.json",
+    "bytes": 1348,
+    "sha256": "02e72b492c325aefdd12815fd92e3958184287b98de0e1a0a22b3cce386cce80",
+    "etag": "\"7a1a670e714e93121700b50a01d28c01\"",
+    "status": 200
+  },
+  {
+    "key": "shared/acquisition/sec-verification/20261016T222423Z/report.json",
+    "bytes": 1094,
+    "sha256": "2095653bb1e410fa9a9326ced81d5ebb7aeee5e7c206faed6824ede2a89fa66e",
+    "etag": "\"adb26fcbe31840402d803f7371aa3a64\"",
+    "status": 200
+  },
+  {
+    "key": "shared/acquisition/sec-verification/20261016T222423Z/sports_edge_lab_sec_verification_return_20261016T222423Z.zip",
+    "bytes": 15399,
+    "sha256": "1b20ad31a3bbd9a5d2357fe3d3470bc274332d51e213bb7900d4c048b3ab9e3d",
+    "etag": "\"7e6fb4b3554084d2bb95f6f4134bb066\"",
+    "status": 200
+  }
+]

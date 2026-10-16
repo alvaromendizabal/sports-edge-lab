@@ -1,0 +1,52 @@
+{"event":"SELF_TEST_PASS","tests":46,"timestamp":"2026-10-16T22:20:34Z","version":"sports-edge-lab-football-refresh-v041"}
+test_acc_blank_headers_restore_and_preserve_null (__main__.Tests.test_acc_blank_headers_restore_and_preserve_null) ... ok
+test_acc_requires_header_evidence (__main__.Tests.test_acc_requires_header_evidence) ... ok
+test_ambiguous_pfr_not_guessed (__main__.Tests.test_ambiguous_pfr_not_guessed) ... ok
+test_bad_snap_count (__main__.Tests.test_bad_snap_count) ... ok
+test_complete_runtime_cache_and_return_bundle (__main__.Tests.test_complete_runtime_cache_and_return_bundle) ... ok
+test_corrupt_cache_stops (__main__.Tests.test_corrupt_cache_stops) ... ok
+test_csv_ragged (__main__.Tests.test_csv_ragged) ... ok
+test_depth_time_scope (__main__.Tests.test_depth_time_scope) ... ok
+test_join_uses_team_and_week (__main__.Tests.test_join_uses_team_and_week) ... ok
+test_latest_per_team (__main__.Tests.test_latest_per_team) ... ok
+test_missing_column (__main__.Tests.test_missing_column) ... ok
+test_missing_id_not_matched (__main__.Tests.test_missing_id_not_matched) ... ok
+test_preseason_not_current (__main__.Tests.test_preseason_not_current) ... ok
+test_provider_denial_no_retry (__main__.Tests.test_provider_denial_no_retry) ... ok
+test_scope (__main__.Tests.test_scope) ... ok
+test_season_scope (__main__.Tests.test_season_scope) ... ok
+test_sec_count_mismatch (__main__.Tests.test_sec_count_mismatch) ... ok
+test_ambiguous_columns (ngs_avail.Tests.test_ambiguous_columns) ... ok
+test_complete_run_cache_and_unique_return (ngs_avail.Tests.test_complete_run_cache_and_unique_return) ... ok
+test_integrity_and_pacing (ngs_avail.Tests.test_integrity_and_pacing) ... ok
+test_missing_headers (ngs_avail.Tests.test_missing_headers) ... ok
+test_missing_status (ngs_avail.Tests.test_missing_status) ... ok
+test_nfl_empty_status (ngs_avail.Tests.test_nfl_empty_status) ... ok
+test_ngs_current_and_aggregate (ngs_avail.Tests.test_ngs_current_and_aggregate) ... ok
+test_ngs_future_rejected (ngs_avail.Tests.test_ngs_future_rejected) ... ok
+test_ngs_schema (ngs_avail.Tests.test_ngs_schema) ... ok
+test_rate_denial_stops (ngs_avail.Tests.test_rate_denial_stops) ... ok
+test_redirect_rejected (ngs_avail.Tests.test_redirect_rejected) ... ok
+test_source_scope (ngs_avail.Tests.test_source_scope) ... ok
+test_archived_directory_regression_and_exact_observed_resolution (nfl_current.Tests.test_archived_directory_regression_and_exact_observed_resolution) ... ok
+test_byte_bound_before_http (nfl_current.Tests.test_byte_bound_before_http) ... ok
+test_cache_identity_mismatch (nfl_current.Tests.test_cache_identity_mismatch) ... ok
+test_cached_body_hash_failure (nfl_current.Tests.test_cached_body_hash_failure) ... ok
+test_call_bound_before_http (nfl_current.Tests.test_call_bound_before_http) ... ok
+test_hourly_vintage_changes_identity (nfl_current.Tests.test_hourly_vintage_changes_identity) ... ok
+test_no_constructed_roster_urls (nfl_current.Tests.test_no_constructed_roster_urls) ... ok
+test_observed_links_only (nfl_current.Tests.test_observed_links_only) ... ok
+test_only_exact_official_paths (nfl_current.Tests.test_only_exact_official_paths) ... ok
+test_pacing_honors_policy_after_robots (nfl_current.Tests.test_pacing_honors_policy_after_robots) ... ok
+test_profile_links_accept_observed_slashless_forms (nfl_current.Tests.test_profile_links_accept_observed_slashless_forms) ... ok
+test_resume_verifies_bodies_and_preserves_vintage (nfl_current.Tests.test_resume_verifies_bodies_and_preserves_vintage) ... ok
+test_robots_disallow_and_longer_delay (nfl_current.Tests.test_robots_disallow_and_longer_delay) ... ok
+test_robots_document_gate (nfl_current.Tests.test_robots_document_gate) ... ok
+test_roster_html_scope_and_challenge (nfl_current.Tests.test_roster_html_scope_and_challenge) ... ok
+test_run_one_zip_and_same_vintage_resume (nfl_current.Tests.test_run_one_zip_and_same_vintage_resume) ... ok
+test_source_403_stops_next_call (nfl_current.Tests.test_source_403_stops_next_call) ... ok
+
+----------------------------------------------------------------------
+Ran 46 tests in 0.064s
+
+OK

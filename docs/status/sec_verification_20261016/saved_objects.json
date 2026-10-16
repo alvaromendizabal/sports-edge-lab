@@ -1,0 +1,96 @@
+{
+  "status": "success",
+  "stdout": "",
+  "return_value": {
+    "observed_at": "2026-10-16T22:30:34.246304+00:00",
+    "objects": [
+      {
+        "key": "tracks/ncaaf/raw/sec-availability-rendered/verified/20261016T222423Z/capture.json.gz",
+        "result": {
+          "AcceptRanges": "bytes",
+          "LastModified": "2026-10-16T22:29:26+00:00",
+          "ContentLength": 6064,
+          "ETag": "\"abc4e9f8d1166157e95f721dcd548b79\"",
+          "ContentType": "application/x-www-form-urlencoded",
+          "ServerSideEncryption": "AES256",
+          "Metadata": {}
+        }
+      },
+      {
+        "key": "tracks/ncaaf/derived/sec-availability/20261016T222423Z/rows.jsonl.gz",
+        "result": {
+          "AcceptRanges": "bytes",
+          "LastModified": "2026-10-16T22:29:29+00:00",
+          "ContentLength": 7457,
+          "ETag": "\"3d1db5cc5612368cf1dbd2cc33df8519\"",
+          "ContentType": "application/x-www-form-urlencoded",
+          "ServerSideEncryption": "AES256",
+          "Metadata": {}
+        }
+      },
+      {
+        "key": "shared/acquisition/sec-verification/20261016T222423Z/dom_receipt.json",
+        "result": {
+          "AcceptRanges": "bytes",
+          "LastModified": "2026-10-16T22:29:32+00:00",
+          "ContentLength": 1348,
+          "ETag": "\"7a1a670e714e93121700b50a01d28c01\"",
+          "ContentType": "application/x-www-form-urlencoded",
+          "ServerSideEncryption": "AES256",
+          "Metadata": {}
+        }
+      },
+      {
+        "key": "shared/acquisition/sec-verification/20261016T222423Z/report.json",
+        "result": {
+          "AcceptRanges": "bytes",
+          "LastModified": "2026-10-16T22:29:35+00:00",
+          "ContentLength": 1094,
+          "ETag": "\"adb26fcbe31840402d803f7371aa3a64\"",
+          "ContentType": "application/x-www-form-urlencoded",
+          "ServerSideEncryption": "AES256",
+          "Metadata": {}
+        }
+      },
+      {
+        "key": "shared/acquisition/sec-verification/20261016T222423Z/sports_edge_lab_sec_verification_return_20261016T222423Z.zip",
+        "result": {
+          "AcceptRanges": "bytes",
+          "LastModified": "2026-10-16T22:29:38+00:00",
+          "ContentLength": 15399,
+          "ETag": "\"7e6fb4b3554084d2bb95f6f4134bb066\"",
+          "ContentType": "application/x-www-form-urlencoded",
+          "ServerSideEncryption": "AES256",
+          "Metadata": {}
+        }
+      }
+    ]
+  },
+  "api_calls": [
+    {
+      "service": "s3",
+      "operation": "HeadObject",
+      "status": "success"
+    },
+    {
+      "service": "s3",
+      "operation": "HeadObject",
+      "status": "success"
+    },
+    {
+      "service": "s3",
+      "operation": "HeadObject",
+      "status": "success"
+    },
+    {
+      "service": "s3",
+      "operation": "HeadObject",
+      "status": "success"
+    },
+    {
+      "service": "s3",
+      "operation": "HeadObject",
+      "status": "success"
+    }
+  ]
+}
