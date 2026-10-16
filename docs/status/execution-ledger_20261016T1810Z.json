@@ -1,0 +1,192 @@
+{
+  "as_of_utc": "2026-10-16T18:11:36.327745+00:00",
+  "project": "sports-edge-lab",
+  "counts": {
+    "Completed": 8,
+    "Failed": 6
+  },
+  "processing_rate_usd_hour": 0.461,
+  "rate_source": "AWS Pricing GetProducts USW2-Processing:ml.m5.2xlarge 2026-10-16",
+  "successful_completed_execution_estimate_usd": 1.44824,
+  "failed_execution_estimate_usd": 0.040885,
+  "unallocated": [
+    "Provisioning and shutdown outside reported processing interval",
+    "Temporary Studio backup app",
+    "Storage and API requests",
+    "Final AWS billing reconciliation pending"
+  ],
+  "new_acquisition_runtime_limit_compute_estimate_usd": 2.88125,
+  "is_billing_statement": false,
+  "jobs": [
+    {
+      "ProcessingJobName": "sports-edge-lab-shooting-recovery-20261016-v010",
+      "ProcessingJobStatus": "Completed",
+      "CreationTime": "2026-10-16T00:56:58.533000+00:00",
+      "ProcessingStartTime": "2026-10-16T00:57:36.013000+00:00",
+      "ProcessingEndTime": "2026-10-16T01:06:46.508000+00:00",
+      "instance_type": "ml.m5.2xlarge",
+      "max_seconds": 600,
+      "reported_execution_seconds": 550.495,
+      "estimated_execution_usd": 0.070494
+    },
+    {
+      "ProcessingJobName": "sports-edge-lab-original-espn-20261016-v009",
+      "ProcessingJobStatus": "Failed",
+      "CreationTime": "2026-10-16T00:48:34.448000+00:00",
+      "ProcessingStartTime": "2026-10-16T00:49:13.231000+00:00",
+      "ProcessingEndTime": "2026-10-16T00:50:06.872000+00:00",
+      "FailureReason": "AlgorithmError: , exit code: 2",
+      "instance_type": "ml.m5.2xlarge",
+      "max_seconds": 3600,
+      "reported_execution_seconds": 53.641,
+      "estimated_execution_usd": 0.006869
+    },
+    {
+      "ProcessingJobName": "sports-edge-lab-player-props-20261016-v008",
+      "ProcessingJobStatus": "Completed",
+      "CreationTime": "2026-10-16T00:47:47.616000+00:00",
+      "ProcessingStartTime": "2026-10-16T00:48:32.137000+00:00",
+      "ProcessingEndTime": "2026-10-16T01:35:18.191000+00:00",
+      "instance_type": "ml.m5.2xlarge",
+      "max_seconds": 7200,
+      "reported_execution_seconds": 2806.054,
+      "estimated_execution_usd": 0.359331
+    },
+    {
+      "ProcessingJobName": "sports-edge-lab-public-archive-20261016-v007",
+      "ProcessingJobStatus": "Completed",
+      "CreationTime": "2026-10-16T00:46:36.618000+00:00",
+      "ProcessingStartTime": "2026-10-16T00:47:15.015000+00:00",
+      "ProcessingEndTime": "2026-10-16T00:59:45.709000+00:00",
+      "instance_type": "ml.m5.2xlarge",
+      "max_seconds": 3900,
+      "reported_execution_seconds": 750.694,
+      "estimated_execution_usd": 0.096131
+    },
+    {
+      "ProcessingJobName": "sports-edge-lab-consolidate-20261016-v005c",
+      "ProcessingJobStatus": "Completed",
+      "CreationTime": "2026-10-16T00:40:36.400000+00:00",
+      "ProcessingStartTime": "2026-10-16T00:41:16.398000+00:00",
+      "ProcessingEndTime": "2026-10-16T00:42:24.943000+00:00",
+      "instance_type": "ml.m5.2xlarge",
+      "max_seconds": 900,
+      "reported_execution_seconds": 68.545,
+      "estimated_execution_usd": 0.008778
+    },
+    {
+      "ProcessingJobName": "sports-edge-lab-paid-backfill-20261016-v006",
+      "ProcessingJobStatus": "Completed",
+      "CreationTime": "2026-10-16T00:38:32.035000+00:00",
+      "ProcessingStartTime": "2026-10-16T00:39:10.009000+00:00",
+      "ProcessingEndTime": "2026-10-16T02:34:59.032000+00:00",
+      "instance_type": "ml.m5.2xlarge",
+      "max_seconds": 7200,
+      "reported_execution_seconds": 6949.023,
+      "estimated_execution_usd": 0.889861
+    },
+    {
+      "ProcessingJobName": "sports-edge-lab-consolidate-20261016-v005b",
+      "ProcessingJobStatus": "Failed",
+      "CreationTime": "2026-10-16T00:37:42.501000+00:00",
+      "ProcessingStartTime": "2026-10-16T00:38:18.566000+00:00",
+      "ProcessingEndTime": "2026-10-16T00:39:22.180000+00:00",
+      "FailureReason": "AlgorithmError: , exit code: 1",
+      "instance_type": "ml.m5.2xlarge",
+      "max_seconds": 900,
+      "reported_execution_seconds": 63.614,
+      "estimated_execution_usd": 0.008146
+    },
+    {
+      "ProcessingJobName": "sports-edge-lab-consolidate-20261016-v005",
+      "ProcessingJobStatus": "Failed",
+      "CreationTime": "2026-10-16T00:33:40.664000+00:00",
+      "ProcessingStartTime": "2026-10-16T00:34:22.031000+00:00",
+      "ProcessingEndTime": "2026-10-16T00:35:10.749000+00:00",
+      "FailureReason": "AlgorithmError: , exit code: 1",
+      "instance_type": "ml.m5.2xlarge",
+      "max_seconds": 900,
+      "reported_execution_seconds": 48.718,
+      "estimated_execution_usd": 0.006239
+    },
+    {
+      "ProcessingJobName": "sports-edge-lab-bootstrap-canary-20261016-v004b",
+      "ProcessingJobStatus": "Completed",
+      "CreationTime": "2026-10-16T00:18:57.176000+00:00",
+      "ProcessingStartTime": "2026-10-16T00:19:37.073000+00:00",
+      "ProcessingEndTime": "2026-10-16T00:21:10.501000+00:00",
+      "instance_type": "ml.m5.2xlarge",
+      "max_seconds": 1200,
+      "reported_execution_seconds": 93.428,
+      "estimated_execution_usd": 0.011964
+    },
+    {
+      "ProcessingJobName": "sports-edge-lab-bootstrap-canary-20261016-v004",
+      "ProcessingJobStatus": "Failed",
+      "CreationTime": "2026-10-16T00:14:34.893000+00:00",
+      "ProcessingStartTime": "2026-10-16T00:15:18.823000+00:00",
+      "ProcessingEndTime": "2026-10-16T00:16:12.636000+00:00",
+      "FailureReason": "AlgorithmError: , exit code: 1",
+      "instance_type": "ml.m5.2xlarge",
+      "max_seconds": 1200,
+      "reported_execution_seconds": 53.813,
+      "estimated_execution_usd": 0.006891
+    },
+    {
+      "ProcessingJobName": "nfl-edge-lab-odds-request-plan-v001-20261015",
+      "ProcessingJobStatus": "Completed",
+      "CreationTime": "2026-10-15T23:29:44.620000+00:00",
+      "ProcessingStartTime": "2026-10-15T23:30:17.435000+00:00",
+      "ProcessingEndTime": "2026-10-15T23:31:00.959000+00:00",
+      "instance_type": "ml.m7i.2xlarge",
+      "max_seconds": 1200,
+      "estimated_execution_usd": 0.00585,
+      "reported_execution_seconds": 43.524
+    },
+    {
+      "ProcessingJobName": "nfl-edge-lab-data-repair-v003-20261015",
+      "ProcessingJobStatus": "Completed",
+      "CreationTime": "2026-10-15T23:23:01.572000+00:00",
+      "ProcessingStartTime": "2026-10-15T23:23:42.848000+00:00",
+      "ProcessingEndTime": "2026-10-15T23:24:26.234000+00:00",
+      "instance_type": "ml.m7i.2xlarge",
+      "max_seconds": 1200,
+      "estimated_execution_usd": 0.005831,
+      "reported_execution_seconds": 43.386
+    },
+    {
+      "ProcessingJobName": "nfl-edge-lab-free-data-v002b-20261015",
+      "ProcessingJobStatus": "Failed",
+      "CreationTime": "2026-10-15T23:17:38.315000+00:00",
+      "ProcessingStartTime": "2026-10-15T23:18:15.706000+00:00",
+      "ProcessingEndTime": "2026-10-15T23:19:50.077000+00:00",
+      "FailureReason": "AlgorithmError: , exit code: 1",
+      "instance_type": "ml.m7i.2xlarge",
+      "max_seconds": 2700,
+      "estimated_execution_usd": 0.012683,
+      "reported_execution_seconds": 94.371
+    },
+    {
+      "ProcessingJobName": "nfl-edge-lab-free-data-v002-20261015",
+      "ProcessingJobStatus": "Failed",
+      "CreationTime": "2026-10-15T23:12:16.987000+00:00",
+      "ProcessingStartTime": "2026-10-15T23:12:55.716000+00:00",
+      "ProcessingEndTime": "2026-10-15T23:12:56.137000+00:00",
+      "FailureReason": "ClientError: Data download failed:API error (404): pull access denied for 683313688378.dkr.ecr.us-west-2.amazonaws.com/sagemaker-scikit-learn, repository does not exist or may require 'docker login': denied: User: arn:aws:sts::854399100601:assumed-role/ECS_Instance_Role_For_Scopedown/SageMaker is not authorized to perform: ecr:BatchGetImage on resource: arn:aws:ecr:us-west-2:683313688378:repository/sagemaker-scikit-learn because no resource-based policy allows the ecr:BatchGetImage action",
+      "instance_type": "ml.m7i.2xlarge",
+      "max_seconds": 2700,
+      "estimated_execution_usd": 5.7e-05,
+      "reported_execution_seconds": 0.421
+    }
+  ],
+  "rates": {
+    "ml.m5.2xlarge": 0.461,
+    "ml.m7i.2xlarge": 0.48384
+  },
+  "notes": [
+    "Completed is AWS execution status, not full data-coverage acceptance. The initial base paid backfill and shooting repair reached time bounds; props reached its credit bound.",
+    "The public archive batch passed byte integrity for all 4,492 additional files, and AWS now reports Completed.",
+    "Direct ESPN v009 stopped on source-access denial with zero captures and no bypass.",
+    "The two migration failures and four earlier blockers remain counted. Successfully downloaded intermediate data was preserved."
+  ]
+}

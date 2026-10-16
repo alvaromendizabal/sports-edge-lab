@@ -1,0 +1,163 @@
+{
+  "scope": "raw content objects, excluding receipts, request indexes, audit files and legacy duplicate copy; content hashes deduplicate identical paid response bodies but counts are not unique games",
+  "filename_year_note": "Filename year tokens are not proof of nonempty or complete season coverage",
+  "tracks": [
+    {
+      "sport": "nfl",
+      "as_of_utc": "2026-10-16T18:09:15.470492+00:00",
+      "raw": [
+        {
+          "provider_prefix": "tracks/nfl/raw/nfldata/",
+          "objects": 18,
+          "stored_bytes": 8794332,
+          "pages": 1,
+          "receipt_objects_excluded": 0
+        },
+        {
+          "provider_prefix": "tracks/nfl/raw/nflverse/",
+          "objects": 797,
+          "stored_bytes": 713818695,
+          "pages": 1,
+          "receipt_objects_excluded": 0
+        },
+        {
+          "provider_prefix": "tracks/nfl/raw/paid/",
+          "objects": 1,
+          "stored_bytes": 5149,
+          "pages": 1,
+          "receipt_objects_excluded": 0
+        },
+        {
+          "provider_prefix": "tracks/nfl/raw/the-odds-api/objects/",
+          "objects": 8654,
+          "stored_bytes": 68375399,
+          "pages": 9,
+          "receipt_objects_excluded": 0
+        }
+      ]
+    },
+    {
+      "sport": "nba",
+      "as_of_utc": "2026-10-16T18:09:44.151052+00:00",
+      "raw": [
+        {
+          "provider_prefix": "tracks/nba/raw/paid/",
+          "objects": 1,
+          "stored_bytes": 2345,
+          "pages": 1,
+          "receipt_objects_excluded": 0
+        },
+        {
+          "provider_prefix": "tracks/nba/raw/sportsdataverse/",
+          "objects": 2909,
+          "stored_bytes": 1863460773,
+          "pages": 6,
+          "receipt_objects_excluded": 2909
+        },
+        {
+          "provider_prefix": "tracks/nba/raw/the-odds-api/objects/",
+          "objects": 9309,
+          "stored_bytes": 38206002,
+          "pages": 10,
+          "receipt_objects_excluded": 0
+        }
+      ]
+    },
+    {
+      "sport": "ncaaf",
+      "as_of_utc": "2026-10-16T18:10:08.172167+00:00",
+      "raw": [
+        {
+          "provider_prefix": "tracks/ncaaf/raw/cfbd/objects/",
+          "objects": 2360,
+          "stored_bytes": 341370127,
+          "pages": 3,
+          "receipt_objects_excluded": 0
+        },
+        {
+          "provider_prefix": "tracks/ncaaf/raw/paid/",
+          "objects": 1,
+          "stored_bytes": 1187,
+          "pages": 1,
+          "receipt_objects_excluded": 0
+        },
+        {
+          "provider_prefix": "tracks/ncaaf/raw/sportsdataverse/",
+          "objects": 668,
+          "stored_bytes": 2604738211,
+          "pages": 2,
+          "receipt_objects_excluded": 668
+        },
+        {
+          "provider_prefix": "tracks/ncaaf/raw/the-odds-api/objects/",
+          "objects": 9690,
+          "stored_bytes": 110889094,
+          "pages": 10,
+          "receipt_objects_excluded": 0
+        }
+      ]
+    },
+    {
+      "sport": "ncaam",
+      "as_of_utc": "2026-10-16T18:10:30.646202+00:00",
+      "raw": [
+        {
+          "provider_prefix": "tracks/ncaam/raw/cbbd/objects/",
+          "objects": 2148,
+          "stored_bytes": 1051852538,
+          "pages": 3,
+          "receipt_objects_excluded": 0
+        },
+        {
+          "provider_prefix": "tracks/ncaam/raw/paid/",
+          "objects": 2,
+          "stored_bytes": 43742,
+          "pages": 1,
+          "receipt_objects_excluded": 0
+        },
+        {
+          "provider_prefix": "tracks/ncaam/raw/sportsdataverse/",
+          "objects": 466,
+          "stored_bytes": 3064443411,
+          "pages": 1,
+          "receipt_objects_excluded": 466
+        },
+        {
+          "provider_prefix": "tracks/ncaam/raw/the-odds-api/objects/",
+          "objects": 7021,
+          "stored_bytes": 70521319,
+          "pages": 8,
+          "receipt_objects_excluded": 0
+        }
+      ]
+    },
+    {
+      "sport": "ncaaw",
+      "as_of_utc": "2026-10-16T18:10:41.970071+00:00",
+      "raw": [
+        {
+          "provider_prefix": "tracks/ncaaw/raw/paid/",
+          "objects": 1,
+          "stored_bytes": 472,
+          "pages": 1,
+          "receipt_objects_excluded": 0
+        },
+        {
+          "provider_prefix": "tracks/ncaaw/raw/sportsdataverse/",
+          "objects": 449,
+          "stored_bytes": 2483709545,
+          "pages": 1,
+          "receipt_objects_excluded": 449
+        },
+        {
+          "provider_prefix": "tracks/ncaaw/raw/the-odds-api/objects/",
+          "objects": 1574,
+          "stored_bytes": 3106718,
+          "pages": 2,
+          "receipt_objects_excluded": 0
+        }
+      ]
+    }
+  ],
+  "family_inventory": "archive-family-coverage_20261016.json"
+}

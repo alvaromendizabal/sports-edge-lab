@@ -1,0 +1,11 @@
+{
+  "filename": "sports_edge_lab_original_enrichment_v012_20261016.pyz",
+  "bytes": 10240,
+  "sha256": "9c8e7a1a7cf20a8fa9460e7c782194f57a662efbd8ac590e01390c7815805f3f",
+  "source_sha256": "4c09f980c32db872520b2aa813edc69e44930ea78b8f37f40aeb17065992385b",
+  "tests": 7,
+  "runtime_seconds": 600,
+  "source_request_limit": 300,
+  "aws_job_limit_seconds": 900,
+  "source": "tools/acquire_original_enrichment.py"
+}

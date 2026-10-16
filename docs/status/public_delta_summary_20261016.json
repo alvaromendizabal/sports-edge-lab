@@ -1,0 +1,32 @@
+{
+  "job": {
+    "ProcessingJobName": "sports-edge-lab-public-delta-20261016-v013",
+    "ProcessingJobStatus": "Completed",
+    "ProcessingStartTime": "2026-10-16T18:13:54.803000+00:00",
+    "ProcessingEndTime": "2026-10-16T18:15:58.333000+00:00"
+  },
+  "report": {
+    "acceptance_scope": "archive byte-integrity only; schema, coverage and point-in-time gates remain",
+    "all_ok": true,
+    "assets_cataloged": 4492,
+    "at": "2026-10-16T18:15:43.489560+00:00",
+    "bytes_downloaded_including_retries": 44710821,
+    "bytes_verified": 10016647217,
+    "completed_at": "2026-10-16T18:15:42.811717+00:00",
+    "cost_note": "Processing compute estimate only; storage, requests, and boot time additional",
+    "counts": {
+      "deferred": 0,
+      "downloaded": 19,
+      "failed": 0,
+      "not_attempted": 0,
+      "reused": 4473
+    },
+    "elapsed_seconds": 69.27,
+    "estimated_compute_usd": 0.00887,
+    "event": "finished",
+    "fatal": null,
+    "run_id": "20261016T181433Z-713306c5",
+    "sport": "all"
+  },
+  "interpretation": "19 new immutable revisions; not 19 new source families. Earlier versions are preserved. Frozen content inventory predates this delta."
+}

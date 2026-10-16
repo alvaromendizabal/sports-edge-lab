@@ -1,0 +1,8 @@
+{
+  "artifact": "sports_edge_lab_public_delta_20261016.pyz",
+  "sha256": "0a058999c3d441442958e3db026c4aad1bb551f5e2121e832fb605c09d71a718",
+  "bytes": 7377,
+  "source_sha256": "955a727b7074372f6b41e40f40fde42edce3d3ecfeea17d1e606794bc148d2c1",
+  "source": "tools/acquire_public_archives.py",
+  "purpose": "Incremental source revisions; same immutable source cache, no forced redownload"
+}

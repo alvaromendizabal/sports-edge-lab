@@ -1,0 +1,21 @@
+{
+  "path": "sports_edge_lab_continuation_v011.pyz",
+  "bytes": 16689,
+  "sha256": "e11eb11e56aa00df74b52fe052a410ea057dac352125285121142c04c692fe49",
+  "tests": 20,
+  "max_odds_credits": 1600000,
+  "max_stats_calls": 30000,
+  "app_seconds": 14100,
+  "aws_seconds": 14400,
+  "hourly_usd": 0.461,
+  "source_files": [
+    {
+      "path": "tools/continue_acquisition.py",
+      "sha256": "d8023464fcb30e65fd64d223a02dcbc24fce41a1965af386b422821f91def749"
+    },
+    {
+      "path": "tools/acquire_paid_data.py",
+      "sha256": "868c011d061b42cce68b863006b8902a4990dcb8294f50dcecf036f54e001a0c"
+    }
+  ]
+}

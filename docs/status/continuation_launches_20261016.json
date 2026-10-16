@@ -1,0 +1,156 @@
+{
+  "as_of_utc": "2026-10-16T18:20:12.528205+00:00",
+  "jobs": [
+    {
+      "ProcessingJobName": "sports-edge-lab-gap-backfill-20261016-v011",
+      "ProcessingJobStatus": "InProgress",
+      "CreationTime": "2026-10-16T18:18:43.087000+00:00",
+      "AppSpecification": {
+        "ImageUri": "246618743249.dkr.ecr.us-west-2.amazonaws.com/sagemaker-scikit-learn:1.9-0",
+        "ContainerEntrypoint": [
+          "python3",
+          "-u",
+          "/opt/ml/processing/code/sports_edge_lab_continuation_v011.pyz"
+        ],
+        "ContainerArguments": [
+          "--odds-credits",
+          "1600000",
+          "--stats-calls",
+          "30000",
+          "--max-seconds",
+          "14100",
+          "--hourly-usd",
+          "0.461"
+        ]
+      },
+      "ProcessingInputs": [
+        {
+          "InputName": "code",
+          "AppManaged": false,
+          "S3Input": {
+            "S3Uri": "s3://sagemaker-sports-edge-lab-560403859723-us-west-2/infrastructure/code/gap-backfill-20261016/",
+            "LocalPath": "/opt/ml/processing/code",
+            "S3DataType": "S3Prefix",
+            "S3InputMode": "File",
+            "S3DataDistributionType": "FullyReplicated"
+          }
+        }
+      ],
+      "ProcessingResources": {
+        "ClusterConfig": {
+          "InstanceCount": 1,
+          "InstanceType": "ml.m5.2xlarge",
+          "VolumeSizeInGB": 30
+        }
+      },
+      "StoppingCondition": {
+        "MaxRuntimeInSeconds": 14400
+      }
+    },
+    {
+      "ProcessingJobName": "sports-edge-lab-original-context-20261016-v012",
+      "ProcessingJobStatus": "InProgress",
+      "CreationTime": "2026-10-16T18:19:42.168000+00:00",
+      "AppSpecification": {
+        "ImageUri": "246618743249.dkr.ecr.us-west-2.amazonaws.com/sagemaker-scikit-learn:1.9-0",
+        "ContainerEntrypoint": [
+          "python3",
+          "-u",
+          "/opt/ml/processing/code/sports_edge_lab_original_enrichment_v012_20261016.pyz"
+        ],
+        "ContainerArguments": [
+          "--bucket",
+          "sagemaker-sports-edge-lab-560403859723-us-west-2",
+          "--cfbd-vintage",
+          "2026-10-16",
+          "--max-requests",
+          "300",
+          "--max-seconds",
+          "600",
+          "--max-venues",
+          "120",
+          "--hourly-usd",
+          "0.461"
+        ]
+      },
+      "ProcessingInputs": [
+        {
+          "InputName": "code",
+          "AppManaged": false,
+          "S3Input": {
+            "S3Uri": "s3://sagemaker-sports-edge-lab-560403859723-us-west-2/infrastructure/code/original-context-20261016/",
+            "LocalPath": "/opt/ml/processing/code",
+            "S3DataType": "S3Prefix",
+            "S3InputMode": "File",
+            "S3DataDistributionType": "FullyReplicated"
+          }
+        }
+      ],
+      "ProcessingResources": {
+        "ClusterConfig": {
+          "InstanceCount": 1,
+          "InstanceType": "ml.m5.2xlarge",
+          "VolumeSizeInGB": 30
+        }
+      },
+      "StoppingCondition": {
+        "MaxRuntimeInSeconds": 900
+      }
+    },
+    {
+      "ProcessingJobName": "sports-edge-lab-public-delta-20261016-v013",
+      "ProcessingJobStatus": "Completed",
+      "CreationTime": "2026-10-16T18:13:16.866000+00:00",
+      "ProcessingStartTime": "2026-10-16T18:13:54.803000+00:00",
+      "ProcessingEndTime": "2026-10-16T18:15:58.333000+00:00",
+      "AppSpecification": {
+        "ImageUri": "246618743249.dkr.ecr.us-west-2.amazonaws.com/sagemaker-scikit-learn:1.9-0",
+        "ContainerEntrypoint": [
+          "python3",
+          "-u",
+          "/opt/ml/processing/code/sports_edge_lab_public_delta_20261016.pyz"
+        ],
+        "ContainerArguments": [
+          "--sport",
+          "all",
+          "--bucket",
+          "sagemaker-sports-edge-lab-560403859723-us-west-2",
+          "--prefix",
+          "tracks",
+          "--workers",
+          "4",
+          "--max-seconds",
+          "900",
+          "--max-download-gb",
+          "3",
+          "--hourly-usd",
+          "0.461"
+        ]
+      },
+      "ProcessingInputs": [
+        {
+          "InputName": "code",
+          "AppManaged": false,
+          "S3Input": {
+            "S3Uri": "s3://sagemaker-sports-edge-lab-560403859723-us-west-2/infrastructure/code/public-delta-20261016/",
+            "LocalPath": "/opt/ml/processing/code",
+            "S3DataType": "S3Prefix",
+            "S3InputMode": "File",
+            "S3DataDistributionType": "FullyReplicated"
+          }
+        }
+      ],
+      "ProcessingResources": {
+        "ClusterConfig": {
+          "InstanceCount": 1,
+          "InstanceType": "ml.m5.2xlarge",
+          "VolumeSizeInGB": 30
+        }
+      },
+      "StoppingCondition": {
+        "MaxRuntimeInSeconds": 1200
+      }
+    }
+  ],
+  "paid_logs": []
+}

@@ -1,0 +1,741 @@
+{
+  "as_of_utc": "2026-10-16T18:10:41.970071+00:00",
+  "repository": "https://github.com/alvaromendizabal/sports-edge-lab",
+  "space": "sports-edge-lab-dev",
+  "space_url": "https://0nrayepa6pujaiu.studio.us-west-2.sagemaker.aws/jupyterlab/default",
+  "instance": "ml.m7i.2xlarge",
+  "storage_gib": 150,
+  "idle_timeout_minutes": 60,
+  "studio_app": "not_running",
+  "region": "us-west-2",
+  "bucket": "sagemaker-sports-edge-lab-560403859723-us-west-2",
+  "tracks": [
+    "nfl",
+    "nba",
+    "ncaaf",
+    "ncaam",
+    "ncaaw"
+  ],
+  "migration": {
+    "verified_objects": 1663,
+    "bytes": 1451136208,
+    "includes_legacy_archive_duplicates": true,
+    "source_buckets_removed": 6,
+    "old_spaces_removed": 6,
+    "home_backup_verified": true
+  },
+  "nfl_initial_archive": {
+    "assets": 815,
+    "bytes": 722613027
+  },
+  "public": {
+    "job": "sports-edge-lab-public-archive-20261016-v007",
+    "assets_cataloged": 4492,
+    "bytes_cataloged": 10016351940,
+    "complete": true,
+    "report": {
+      "acceptance_scope": "archive byte-integrity only; schema, coverage and point-in-time gates remain",
+      "all_ok": true,
+      "assets_cataloged": 4492,
+      "bytes_downloaded_including_retries": 10016351940,
+      "bytes_verified": 10016351940,
+      "completed_at": "2026-10-16T00:58:35.608396+00:00",
+      "cost_note": "Processing compute estimate only; storage, requests, and boot time additional",
+      "counts": {
+        "deferred": 0,
+        "downloaded": 4492,
+        "failed": 0,
+        "not_attempted": 0,
+        "reused": 0
+      },
+      "elapsed_seconds": 642.1,
+      "estimated_compute_usd": 0.082224,
+      "run_id": "20261016T004753Z-b73bc10d",
+      "sport": "all"
+    },
+    "per_sport": {
+      "nba": {
+        "assets": 2909,
+        "bytes": 1863460773,
+        "source_families": 40
+      },
+      "ncaaf": {
+        "assets": 668,
+        "bytes": 2604738211,
+        "source_families": 29
+      },
+      "ncaam": {
+        "assets": 466,
+        "bytes": 3064443411,
+        "source_families": 24
+      },
+      "ncaaw": {
+        "assets": 449,
+        "bytes": 2483709545,
+        "source_families": 24
+      }
+    },
+    "data_acceptance": "all_4492_files_byte_verified",
+    "job_status": "Completed"
+  },
+  "paid": {
+    "game_markets_and_college": {
+      "key": "shared/acquisition/paid/20261016T003943Z-742acb6443/summary.json",
+      "bucket": "sagemaker-sports-edge-lab-560403859723-us-west-2",
+      "budget": {
+        "actual_known": {
+          "odds": 837600,
+          "stats": 5406
+        },
+        "disabled_providers": [],
+        "limits": {
+          "odds": 1000000,
+          "stats": 15000
+        },
+        "provider_headers": {
+          "cbbd": {},
+          "cfbd": {},
+          "odds": {
+            "x-requests-last": 30,
+            "x-requests-remaining": 3662320,
+            "x-requests-used": 1337680
+          }
+        },
+        "reserved_or_known": {
+          "odds": 837660,
+          "stats": 5406
+        },
+        "unknown_charge_reserve": {
+          "odds": 60,
+          "stats": 0
+        }
+      },
+      "capture_coverage": {
+        "cbbd_access_canary": 1,
+        "cbbd_boxscores/games/players": 908,
+        "cbbd_boxscores/games/teams": 308,
+        "cbbd_boxscores/lines": 292,
+        "cbbd_daily_plays": 582,
+        "cbbd_games": 292,
+        "cbbd_reference": 5,
+        "cbbd_season/draft/picks": 25,
+        "cbbd_season/rankings": 25,
+        "cbbd_season/ratings/adjusted": 25,
+        "cbbd_season/ratings/elo": 25,
+        "cbbd_season/ratings/srs": 25,
+        "cbbd_season/recruiting/players": 25,
+        "cbbd_season/recruiting/portal": 25,
+        "cbbd_season/recruiting/teams": 25,
+        "cbbd_season/stats/player/season": 25,
+        "cbbd_season/stats/team/season": 25,
+        "cbbd_season/teams/roster": 25,
+        "cfbd_calendar": 27,
+        "cfbd_games": 27,
+        "cfbd_reference": 6,
+        "cfbd_season/coaches": 27,
+        "cfbd_season/draft/picks": 27,
+        "cfbd_season/lines": 27,
+        "cfbd_season/player/portal": 27,
+        "cfbd_season/player/returning": 27,
+        "cfbd_season/player/usage": 27,
+        "cfbd_season/ppa/players/season": 27,
+        "cfbd_season/ppa/teams": 27,
+        "cfbd_season/rankings": 27,
+        "cfbd_season/ratings/elo": 27,
+        "cfbd_season/ratings/srs": 27,
+        "cfbd_season/records": 27,
+        "cfbd_season/recruiting/players": 27,
+        "cfbd_season/recruiting/teams": 27,
+        "cfbd_season/roster": 27,
+        "cfbd_season/stats/player/season": 27,
+        "cfbd_season/stats/season": 27,
+        "cfbd_season/stats/season/advanced": 27,
+        "cfbd_season/talent": 27,
+        "cfbd_weekly/drives": 424,
+        "cfbd_weekly/games/players": 424,
+        "cfbd_weekly/games/teams": 424,
+        "cfbd_weekly/plays": 424,
+        "cfbd_weekly/stats/game/advanced": 424,
+        "odds_daily_census": 9811,
+        "odds_event_derived_checkpoint": 18112
+      },
+      "compute_estimate_excludes_storage_requests_and_subscription": true,
+      "compute_estimate_usd": 0.8837,
+      "compute_rate_usd_per_hour": 0.461,
+      "data_notes": [
+        "End-of-season ratings and postgame data are not pregame features.",
+        "Daily odds census can omit events absent at 12:00 UTC.",
+        "Event-derived checkpoints require kickoff revision and bookmaker last_update auditing.",
+        "Snapshot API may return the closest available snapshot at or before request.",
+        "CBBD is the men's basketball statistical track; women's stats come from other sources.",
+        "No claim of complete source or season coverage follows from HTTP success."
+      ],
+      "discovered_odds_events": {
+        "nba": 8088,
+        "ncaaf": 6245,
+        "ncaam": 31232,
+        "ncaaw": 2119,
+        "nfl": 2399
+      },
+      "elapsed_seconds": 6901.26,
+      "failures_count": 50,
+      "not_completed_by_this_runner": [
+        "player_props",
+        "non_US_regions",
+        "bookmaker_full_intraday_tape",
+        "odds_schedule_completeness_audit",
+        "point_in_time_feature_approval",
+        "forecast_training"
+      ],
+      "official_documentation": [
+        "https://the-odds-api.com/liveapi/guides/v4/",
+        "https://the-odds-api.com/historical-odds-data/",
+        "https://api.collegefootballdata.com/api/games",
+        "https://api.collegefootballdata.com/api/plays",
+        "https://api.collegebasketballdata.com/data-availability",
+        "https://api.collegebasketballdata.com/api/games",
+        "https://api.collegebasketballdata.com/api/plays"
+      ],
+      "phases": {
+        "cbbd": {
+          "play_dates_planned": 3144,
+          "reason": "time_budget_exhausted",
+          "seasons": [
+            2003,
+            2027
+          ],
+          "status": "bounded_stop"
+        },
+        "cfbd": {
+          "seasons": [
+            2000,
+            2026
+          ],
+          "status": "planned_requests_processed",
+          "weekly_slices": 424
+        },
+        "odds": {
+          "reason": "time_budget_exhausted",
+          "status": "bounded_stop"
+        },
+        "odds_daily_census": {
+          "completed": 9811,
+          "planned": 9811,
+          "status": "planned_requests_processed"
+        },
+        "odds_event_derived_checkpoint": {
+          "completed": 18263,
+          "discovered_events": {
+            "nba": 8082,
+            "ncaaf": 6184,
+            "ncaam": 31191,
+            "ncaaw": 393,
+            "nfl": 2379
+          },
+          "horizons_minutes": [
+            4320,
+            1440,
+            360,
+            15
+          ],
+          "planned": 63686,
+          "requires_schedule_and_quote_timestamp_audit": true
+        }
+      },
+      "run_id": "20261016T003943Z-742acb6443",
+      "scope": "US bookmaker featured markets; direct CFBD/CBBD stats; private raw archive",
+      "statistics": {
+        "cache_reused": 154,
+        "captured": 33279,
+        "cbbd_captured": 2663,
+        "cbbd_http_calls": 2713,
+        "cfbd_captured": 2693,
+        "cfbd_http_calls": 2693,
+        "http_calls": 33331,
+        "nba_captured": 6624,
+        "ncaaf_captured": 9300,
+        "ncaam_captured": 9112,
+        "ncaaw_captured": 2117,
+        "nfl_captured": 6126,
+        "odds_captured": 27923,
+        "odds_http_calls": 27925,
+        "raw_bytes": 26397574006,
+        "retryable_incidents": 2
+      },
+      "timestamp": "2026-10-16T02:34:44Z",
+      "until": "2026-10-16T00:29:43Z",
+      "version": "sports-edge-lab-paid-v001"
+    },
+    "player_props": {
+      "key": "shared/acquisition/paid/20261016T004910Z-fa9211a177/summary.json",
+      "bucket": "sagemaker-sports-edge-lab-560403859723-us-west-2",
+      "budget": {
+        "actual_known": {
+          "odds": 499930,
+          "stats": 0
+        },
+        "disabled_providers": [],
+        "limits": {
+          "odds": 500000,
+          "stats": 0
+        },
+        "provider_headers": {
+          "odds": {
+            "x-requests-last": 60,
+            "x-requests-remaining": 4040740,
+            "x-requests-used": 959260
+          }
+        },
+        "reserved_or_known": {
+          "odds": 499990,
+          "stats": 0
+        },
+        "unknown_charge_reserve": {
+          "odds": 60,
+          "stats": 0
+        }
+      },
+      "capture_coverage": {
+        "player_props_1440min": 3635,
+        "player_props_15min": 4472,
+        "player_props_360min": 4476
+      },
+      "compute_estimate_excludes_storage_requests_and_subscription": true,
+      "compute_estimate_usd": 0.3527,
+      "compute_rate_usd_per_hour": 0.461,
+      "data_notes": [
+        "End-of-season ratings and postgame data are not pregame features.",
+        "Daily odds census can omit events absent at 12:00 UTC.",
+        "Event-derived checkpoints require kickoff revision and bookmaker last_update auditing.",
+        "Snapshot API may return the closest available snapshot at or before request.",
+        "CBBD is the men's basketball statistical track; women's stats come from other sources.",
+        "No claim of complete source or season coverage follows from HTTP success."
+      ],
+      "discovered_odds_events": {
+        "nba": 8085,
+        "ncaaf": 6200,
+        "ncaam": 31197,
+        "ncaaw": 0,
+        "nfl": 2379
+      },
+      "earliest_possible_snapshot": "2023-05-03T05:30:00Z",
+      "elapsed_seconds": 2753.97,
+      "failures_count": 1228,
+      "horizons_minutes": [
+        1440,
+        360,
+        15
+      ],
+      "markets": {
+        "nba": [
+          "player_points",
+          "player_rebounds",
+          "player_assists",
+          "player_threes",
+          "player_blocks",
+          "player_steals"
+        ],
+        "ncaaf": [
+          "player_pass_yds",
+          "player_pass_tds",
+          "player_rush_yds",
+          "player_reception_yds",
+          "player_receptions",
+          "player_anytime_td"
+        ],
+        "ncaam": [
+          "player_points",
+          "player_rebounds",
+          "player_assists",
+          "player_threes",
+          "player_blocks",
+          "player_steals"
+        ],
+        "nfl": [
+          "player_pass_yds",
+          "player_pass_tds",
+          "player_rush_yds",
+          "player_reception_yds",
+          "player_receptions",
+          "player_anytime_td"
+        ]
+      },
+      "not_completed_by_this_runner": [
+        "all_event_coverage",
+        "all_player_prop_market_types",
+        "NCAA_women_player_props",
+        "prop_settlement_mapping",
+        "point_in_time_feature_approval",
+        "proven_market_advantage"
+      ],
+      "official_documentation": [
+        "https://the-odds-api.com/sports-odds-data/betting-markets.html",
+        "https://the-odds-api.com/liveapi/guides/v4/#get-historical-event-odds"
+      ],
+      "paid_discovery_requests": 0,
+      "phases": {
+        "player_props": {
+          "completed": 13808,
+          "currently_pending": 67949,
+          "planned": 81677,
+          "reason": "odds_budget_exhausted",
+          "status": "bounded_stop"
+        }
+      },
+      "prop_audits": {
+        "issue_kickoff_revision": 4650,
+        "issue_missing_event_response": 1228,
+        "issue_not_pregame_at_actual_kickoff": 51,
+        "issue_quote_update_after_cutoff": 6608,
+        "nba_outcomes": 2092816,
+        "nba_requests_audited": 3453,
+        "ncaaf_outcomes": 381591,
+        "ncaaf_requests_audited": 3453,
+        "ncaam_outcomes": 116588,
+        "ncaam_requests_audited": 3452,
+        "nfl_outcomes": 2235358,
+        "nfl_requests_audited": 3453,
+        "nonempty_responses": 9438,
+        "outcomes_captured": 4826353,
+        "requests_audited": 13811,
+        "time_consistent_nonempty_responses": 1737
+      },
+      "run_id": "20261016T004910Z-fa9211a177",
+      "scope": "Historical US-bookmaker player props for NFL/NBA/NCAAF/NCAAM using archived event IDs",
+      "source_daily_census_complete": true,
+      "source_events_key": "shared/acquisition/paid/20261016T003943Z-742acb6443/discovered-events.json",
+      "source_events_last_loaded": "2026-10-16T01:34:48Z",
+      "statistics": {
+        "captured": 12583,
+        "http_calls": 13812,
+        "nba_captured": 3106,
+        "ncaaf_captured": 3343,
+        "ncaam_captured": 2882,
+        "nfl_captured": 3252,
+        "odds_captured": 12583,
+        "odds_http_calls": 13812,
+        "raw_bytes": 366218642,
+        "retryable_incidents": 1,
+        "source_snapshot_refreshes": 144
+      },
+      "timestamp": "2026-10-16T01:35:04Z",
+      "until": "2026-10-16T00:39:10Z",
+      "version": "sports-edge-lab-props-v001"
+    },
+    "shooting_recovery": {
+      "key": "shared/acquisition/paid/20261016T005814Z-dc2ec3e9a5/summary.json",
+      "bucket": "sagemaker-sports-edge-lab-560403859723-us-west-2",
+      "budget": {
+        "actual_known": {
+          "odds": 0,
+          "stats": 965
+        },
+        "disabled_providers": [],
+        "limits": {
+          "odds": 0,
+          "stats": 2000
+        },
+        "provider_headers": {
+          "cbbd": {}
+        },
+        "reserved_or_known": {
+          "odds": 0,
+          "stats": 965
+        },
+        "unknown_charge_reserve": {
+          "odds": 0,
+          "stats": 0
+        }
+      },
+      "cached_source_seasons": [
+        2012,
+        2013,
+        2014,
+        2015,
+        2016,
+        2017,
+        2018,
+        2019,
+        2020,
+        2021,
+        2022,
+        2023,
+        2024,
+        2025,
+        2026,
+        2027
+      ],
+      "capture_coverage": {
+        "cbbd_season/stats/player/shooting/season": 452,
+        "cbbd_season/stats/team/shooting/season": 451
+      },
+      "compute_estimate_excludes_storage_requests_and_subscription": true,
+      "compute_estimate_usd": 0.0641,
+      "compute_rate_usd_per_hour": 0.461,
+      "data_notes": [
+        "End-of-season ratings and postgame data are not pregame features.",
+        "Daily odds census can omit events absent at 12:00 UTC.",
+        "Event-derived checkpoints require kickoff revision and bookmaker last_update auditing.",
+        "Snapshot API may return the closest available snapshot at or before request.",
+        "CBBD is the men's basketball statistical track; women's stats come from other sources.",
+        "No claim of complete source or season coverage follows from HTTP success."
+      ],
+      "discovered_odds_events": {
+        "nba": 0,
+        "ncaaf": 0,
+        "ncaam": 0,
+        "ncaaw": 0,
+        "nfl": 0
+      },
+      "elapsed_seconds": 500.26,
+      "failures_count": 12,
+      "not_completed_by_this_runner": [
+        "source_seasons_not_yet_cached",
+        "point_in_time_feature_approval"
+      ],
+      "official_documentation": [
+        "https://api.collegebasketballdata.com/api/stats"
+      ],
+      "paid_discovery_requests": 0,
+      "pending_source_seasons": [
+        2003,
+        2004,
+        2005,
+        2006,
+        2007,
+        2008,
+        2009,
+        2010,
+        2011
+      ],
+      "phases": {
+        "shooting_recovery": {
+          "completed": 912,
+          "pending_source_seasons": [
+            2003,
+            2004,
+            2005,
+            2006,
+            2007,
+            2008,
+            2009,
+            2010,
+            2011
+          ],
+          "planned": 9864,
+          "reason": "time_budget_exhausted",
+          "status": "bounded_stop"
+        }
+      },
+      "run_id": "20261016T005814Z-dc2ec3e9a5",
+      "scope": "CBBD team/player season shooting with documented conference/team filters only",
+      "statistics": {
+        "captured": 903,
+        "cbbd_captured": 903,
+        "cbbd_http_calls": 965,
+        "http_calls": 965,
+        "ncaam_captured": 903,
+        "raw_bytes": 7336367,
+        "retryable_incidents": 62,
+        "shooting_failed_requests": 12,
+        "shooting_successful_or_cached_requests": 903
+      },
+      "timestamp": "2026-10-16T01:06:35Z",
+      "until": "2026-10-16T00:48:15Z",
+      "version": "sports-edge-lab-cbbd-shooting-recovery-v001"
+    }
+  },
+  "original_espn": {
+    "job": "sports-edge-lab-original-espn-20261016-v009",
+    "status": "source_access_blocked",
+    "captures": 0,
+    "action": "Stopped without bypass"
+  },
+  "known_limitations": [
+    "Community statistical archives retain upstream lineage and may contain overlapping records and derived columns.",
+    "Original ESPN access denied in current runtime; zero captures, stopped without bypass.",
+    "Initial game odds and CBBD backfills stopped at runtime bound; props stopped at credit bound; targeted shooting repair stopped at runtime bound. Cached successful requests remain reusable.",
+    "Props include inconsistent quote/update timestamps and kickoff revisions; only 1,737 responses passed the initial nonempty timestamp checks, not full feature acceptance.",
+    "Source coverage, event identities, row-level duplication, schema audits, injury publication vintages and point-in-time feature approval remain incomplete.",
+    "NCAAW paid statistical coverage and player-prop coverage are not established.",
+    "GitHub About description cannot be updated through available plugin; main README and source are multi-sport."
+  ],
+  "raw_content_inventory": {
+    "objects": 46069,
+    "stored_bytes": 12423339059,
+    "public_archive_files": 5307,
+    "public_archive_bytes": 10738964967,
+    "hash_addressed_paid_payloads": 40756,
+    "canary_files": 6,
+    "scope": "raw content objects, excluding receipts, request indexes, audit files and legacy duplicate copy; content hashes deduplicate identical paid response bodies but counts are not unique games",
+    "scan_completed_utc": "2026-10-16T18:10:41.970071+00:00",
+    "per_track": [
+      {
+        "track": "nfl",
+        "as_of_utc": "2026-10-16T18:09:15.470492+00:00",
+        "objects": 9470,
+        "stored_bytes": 790993575,
+        "providers": [
+          {
+            "provider_prefix": "tracks/nfl/raw/nfldata/",
+            "objects": 18,
+            "stored_bytes": 8794332,
+            "pages": 1,
+            "receipt_objects_excluded": 0
+          },
+          {
+            "provider_prefix": "tracks/nfl/raw/nflverse/",
+            "objects": 797,
+            "stored_bytes": 713818695,
+            "pages": 1,
+            "receipt_objects_excluded": 0
+          },
+          {
+            "provider_prefix": "tracks/nfl/raw/paid/",
+            "objects": 1,
+            "stored_bytes": 5149,
+            "pages": 1,
+            "receipt_objects_excluded": 0
+          },
+          {
+            "provider_prefix": "tracks/nfl/raw/the-odds-api/objects/",
+            "objects": 8654,
+            "stored_bytes": 68375399,
+            "pages": 9,
+            "receipt_objects_excluded": 0
+          }
+        ]
+      },
+      {
+        "track": "nba",
+        "as_of_utc": "2026-10-16T18:09:44.151052+00:00",
+        "objects": 12219,
+        "stored_bytes": 1901669120,
+        "providers": [
+          {
+            "provider_prefix": "tracks/nba/raw/paid/",
+            "objects": 1,
+            "stored_bytes": 2345,
+            "pages": 1,
+            "receipt_objects_excluded": 0
+          },
+          {
+            "provider_prefix": "tracks/nba/raw/sportsdataverse/",
+            "objects": 2909,
+            "stored_bytes": 1863460773,
+            "pages": 6,
+            "receipt_objects_excluded": 2909
+          },
+          {
+            "provider_prefix": "tracks/nba/raw/the-odds-api/objects/",
+            "objects": 9309,
+            "stored_bytes": 38206002,
+            "pages": 10,
+            "receipt_objects_excluded": 0
+          }
+        ]
+      },
+      {
+        "track": "ncaaf",
+        "as_of_utc": "2026-10-16T18:10:08.172167+00:00",
+        "objects": 12719,
+        "stored_bytes": 3056998619,
+        "providers": [
+          {
+            "provider_prefix": "tracks/ncaaf/raw/cfbd/objects/",
+            "objects": 2360,
+            "stored_bytes": 341370127,
+            "pages": 3,
+            "receipt_objects_excluded": 0
+          },
+          {
+            "provider_prefix": "tracks/ncaaf/raw/paid/",
+            "objects": 1,
+            "stored_bytes": 1187,
+            "pages": 1,
+            "receipt_objects_excluded": 0
+          },
+          {
+            "provider_prefix": "tracks/ncaaf/raw/sportsdataverse/",
+            "objects": 668,
+            "stored_bytes": 2604738211,
+            "pages": 2,
+            "receipt_objects_excluded": 668
+          },
+          {
+            "provider_prefix": "tracks/ncaaf/raw/the-odds-api/objects/",
+            "objects": 9690,
+            "stored_bytes": 110889094,
+            "pages": 10,
+            "receipt_objects_excluded": 0
+          }
+        ]
+      },
+      {
+        "track": "ncaam",
+        "as_of_utc": "2026-10-16T18:10:30.646202+00:00",
+        "objects": 9637,
+        "stored_bytes": 4186861010,
+        "providers": [
+          {
+            "provider_prefix": "tracks/ncaam/raw/cbbd/objects/",
+            "objects": 2148,
+            "stored_bytes": 1051852538,
+            "pages": 3,
+            "receipt_objects_excluded": 0
+          },
+          {
+            "provider_prefix": "tracks/ncaam/raw/paid/",
+            "objects": 2,
+            "stored_bytes": 43742,
+            "pages": 1,
+            "receipt_objects_excluded": 0
+          },
+          {
+            "provider_prefix": "tracks/ncaam/raw/sportsdataverse/",
+            "objects": 466,
+            "stored_bytes": 3064443411,
+            "pages": 1,
+            "receipt_objects_excluded": 466
+          },
+          {
+            "provider_prefix": "tracks/ncaam/raw/the-odds-api/objects/",
+            "objects": 7021,
+            "stored_bytes": 70521319,
+            "pages": 8,
+            "receipt_objects_excluded": 0
+          }
+        ]
+      },
+      {
+        "track": "ncaaw",
+        "as_of_utc": "2026-10-16T18:10:41.970071+00:00",
+        "objects": 2024,
+        "stored_bytes": 2486816735,
+        "providers": [
+          {
+            "provider_prefix": "tracks/ncaaw/raw/paid/",
+            "objects": 1,
+            "stored_bytes": 472,
+            "pages": 1,
+            "receipt_objects_excluded": 0
+          },
+          {
+            "provider_prefix": "tracks/ncaaw/raw/sportsdataverse/",
+            "objects": 449,
+            "stored_bytes": 2483709545,
+            "pages": 1,
+            "receipt_objects_excluded": 449
+          },
+          {
+            "provider_prefix": "tracks/ncaaw/raw/the-odds-api/objects/",
+            "objects": 1574,
+            "stored_bytes": 3106718,
+            "pages": 2,
+            "receipt_objects_excluded": 0
+          }
+        ]
+      }
+    ]
+  }
+}
