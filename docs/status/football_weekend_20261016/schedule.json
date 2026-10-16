@@ -1,0 +1,20 @@
+{
+  "title": "Weekend football refresh",
+  "is_enabled": true,
+  "schedule": "BEGIN:VEVENT\nDTSTART;TZID=America/Los_Angeles:20261016T161500\nRRULE:FREQ=DAILY;BYHOUR=6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22;BYMINUTE=15;BYSECOND=0;COUNT=42\nEND:VEVENT",
+  "default_timezone": "America/Los_Angeles",
+  "updated_at": "2026-10-16T23:08:14.688639+00:00",
+  "scope": [
+    "nfl",
+    "ncaaf"
+  ],
+  "cfbd_series_limit": 160,
+  "cfbd_per_pass_limit": 16,
+  "odds_credits": 0,
+  "cbbd_requests": 0,
+  "control_s3_key": "shared/acquisition/football-weekend-20261016/control.json",
+  "first_local_check": "2026-10-16T16:15:00-07:00",
+  "last_local_check": "2026-10-19T06:15:00-07:00",
+  "scheduled_observation_opportunities": 42,
+  "old_odds_monitor_disabled": true
+}

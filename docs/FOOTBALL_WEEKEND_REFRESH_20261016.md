@@ -11,7 +11,7 @@ The authorized target is newly published NFL/NCAAF game data and final availabil
 
 ## Capture windows and limits
 
-The supplemental follow-up checks for changes hourly during 06:15–22:15 Pacific through Monday October 19 at 06:15 Pacific, starting Friday at 17:15. Notify only meaningful new captures, completed validations or concrete blockers. These are observation opportunities; no guarantee is made that every provider publishes a final report at those times. Prioritize official pregame reports for games starting in the next two hours and persist postgame completions once published. Stop the supplemental follow-up after the final Monday result or an unrecoverable access blocker.
+The enabled supplemental follow-up checks for changes hourly during 06:15–22:15 Pacific through Monday October 19 at 06:15 Pacific, starting Friday at 16:15. Notify only meaningful new captures, completed validations or concrete blockers. These are observation opportunities; no guarantee is made that every provider publishes a final report at those times. Prioritize official pregame reports for games starting in the next two hours and persist postgame completions once published. Stop the supplemental follow-up after the final Monday result or an unrecoverable access blocker.
 
 The existing six-hour AWS schedule remains the sole scheduled current odds collector. Its v043 target permanently disables CBBD until separate authorization and provider clearance. It retains the existing 500 odds-credit and 100 statistics-call bounds per run and ends November 16. The American Conference one-off at October 17, 01:05 UTC remains unchanged; inspect its outcome and reuse its captures.
 
@@ -32,3 +32,7 @@ Canonical bucket: `sagemaker-sports-edge-lab-560403859723-us-west-2`, region `us
 ## Tracking access
 
 Check only the existing SkillCorner/Genius inquiry threads for a substantive new entitlement or access offer. SkillCorner's automated response says it does not sell B2C; it is not a granted trial. Genius has no confirmed access yet. Do not resend outreach, accept a paid license, or download restricted video. If access is granted, verify allowed leagues/seasons, actual endpoints, player/ball fields, aligned-video delivery and modeling/betting/display permissions before using it. Record a concrete business-eligibility or contractual action for the user when one is actually required.
+
+## Activation evidence
+
+The finite schedule is enabled, with 42 hourly observation opportunities from Friday October 16 at 16:15 Pacific through Monday October 19 at 06:15 Pacific. [Schedule receipt](status/football_weekend_20261016/schedule.json). The S3 control ledger was created with `IfNoneMatch` and read back at 23:07 UTC: zero supplemental calls charged/reserved, CFBD total ceiling 160, zero odds credits and CBBD disabled. Future passes must update it conditionally using ETags; no reset is permitted. The completed v039 monitor was disabled after its terminal evidence commit.
