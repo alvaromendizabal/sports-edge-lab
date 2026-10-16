@@ -1,0 +1,82 @@
+{
+  "status": "success",
+  "stdout": "",
+  "return_value": {
+    "observed_at": "2026-10-16T21:52:19.344359+00:00",
+    "created": {
+      "ProcessingJobArn": "arn:aws:sagemaker:us-west-2:560403859723:processing-job/sports-edge-lab-ngs-availability-20261016-v040"
+    },
+    "request": {
+      "ProcessingJobName": "sports-edge-lab-ngs-availability-20261016-v040",
+      "RoleArn": "arn:aws:iam::560403859723:role/SportsEdgeLabProcessingRole",
+      "AppSpecification": {
+        "ImageUri": "246618743249.dkr.ecr.us-west-2.amazonaws.com/sagemaker-scikit-learn:1.9-0",
+        "ContainerEntrypoint": [
+          "python3",
+          "-u",
+          "/opt/ml/processing/code/sports_edge_lab_ngs_availability_v040_20261016.pyz"
+        ]
+      },
+      "ProcessingInputs": [
+        {
+          "InputName": "code",
+          "S3Input": {
+            "S3Uri": "s3://sagemaker-sports-edge-lab-560403859723-us-west-2/infrastructure/code/ngs-availability-20261016-v040/",
+            "LocalPath": "/opt/ml/processing/code",
+            "S3DataType": "S3Prefix",
+            "S3InputMode": "File",
+            "S3DataDistributionType": "FullyReplicated"
+          }
+        }
+      ],
+      "ProcessingResources": {
+        "ClusterConfig": {
+          "InstanceCount": 1,
+          "InstanceType": "ml.m5.2xlarge",
+          "VolumeSizeInGB": 30
+        }
+      },
+      "StoppingCondition": {
+        "MaxRuntimeInSeconds": 432000
+      },
+      "NetworkConfig": {
+        "EnableNetworkIsolation": false,
+        "EnableInterContainerTrafficEncryption": false
+      },
+      "Tags": [
+        {
+          "Key": "Project",
+          "Value": "sports-edge-lab"
+        },
+        {
+          "Key": "Scope",
+          "Value": "public-ngs-and-football-availability"
+        }
+      ]
+    },
+    "verified_artifact": {
+      "bytes": 31658,
+      "sha256": "966bff81ccf28c48a5fe5071accf77f7f53d9197631537b5d8b64a9ece22a658"
+    }
+  },
+  "api_calls": [
+    {
+      "service": "s3",
+      "operation": "HeadObject",
+      "status": "success"
+    },
+    {
+      "service": "sagemaker",
+      "operation": "ListProcessingJobs",
+      "status": "success",
+      "n_items": {
+        "ProcessingJobSummaries": 0
+      }
+    },
+    {
+      "service": "sagemaker",
+      "operation": "CreateProcessingJob",
+      "status": "success"
+    }
+  ]
+}

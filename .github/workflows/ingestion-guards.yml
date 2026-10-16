@@ -124,3 +124,6 @@ jobs:
           python tools/odds_only_v037/src/__main__.py --self-test
           python tools/odds_only_v038/src/__main__.py --self-test
           python tools/football_finish_v039/src/__main__.py --self-test
+
+      - name: Run public NGS and availability guards
+        run: python tools/ngs_availability_v040/src/__main__.py --self-test

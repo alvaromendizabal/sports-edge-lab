@@ -1,0 +1,448 @@
+{
+  "observed_at": "2026-10-16T21:56:00.620293+00:00",
+  "job": {
+    "ProcessingInputs": [
+      {
+        "InputName": "code",
+        "AppManaged": false,
+        "S3Input": {
+          "S3Uri": "s3://sagemaker-sports-edge-lab-560403859723-us-west-2/infrastructure/code/ngs-availability-20261016-v040/",
+          "LocalPath": "/opt/ml/processing/code",
+          "S3DataType": "S3Prefix",
+          "S3InputMode": "File",
+          "S3DataDistributionType": "FullyReplicated"
+        }
+      }
+    ],
+    "ProcessingJobName": "sports-edge-lab-ngs-availability-20261016-v040",
+    "ProcessingResources": {
+      "ClusterConfig": {
+        "InstanceCount": 1,
+        "InstanceType": "ml.m5.2xlarge",
+        "VolumeSizeInGB": 30
+      }
+    },
+    "StoppingCondition": {
+      "MaxRuntimeInSeconds": 432000
+    },
+    "AppSpecification": {
+      "ImageUri": "246618743249.dkr.ecr.us-west-2.amazonaws.com/sagemaker-scikit-learn:1.9-0",
+      "ContainerEntrypoint": [
+        "python3",
+        "-u",
+        "/opt/ml/processing/code/sports_edge_lab_ngs_availability_v040_20261016.pyz"
+      ]
+    },
+    "NetworkConfig": {
+      "EnableInterContainerTrafficEncryption": false,
+      "EnableNetworkIsolation": false
+    },
+    "RoleArn": "arn:aws:iam::560403859723:role/SportsEdgeLabProcessingRole",
+    "ProcessingJobArn": "arn:aws:sagemaker:us-west-2:560403859723:processing-job/sports-edge-lab-ngs-availability-20261016-v040",
+    "ProcessingJobStatus": "Completed",
+    "ProcessingEndTime": "2026-10-16T21:53:55.742000+00:00",
+    "ProcessingStartTime": "2026-10-16T21:53:02.153000+00:00",
+    "LastModifiedTime": "2026-10-16T21:54:50.265000+00:00",
+    "CreationTime": "2026-10-16T21:52:19.099000+00:00"
+  },
+  "logs": {
+    "events": [
+      {
+        "timestamp": 1792187621547,
+        "message": "test_ambiguous_columns (__main__.Tests.test_ambiguous_columns) ... ok",
+        "ingestionTime": 1792187627666
+      },
+      {
+        "timestamp": 1792187621547,
+        "message": "test_complete_run_cache_and_unique_return (__main__.Tests.test_complete_run_cache_and_unique_return) ... ok",
+        "ingestionTime": 1792187627666
+      },
+      {
+        "timestamp": 1792187621547,
+        "message": "test_integrity_and_pacing (__main__.Tests.test_integrity_and_pacing) ... ok",
+        "ingestionTime": 1792187627666
+      },
+      {
+        "timestamp": 1792187621547,
+        "message": "test_missing_headers (__main__.Tests.test_missing_headers) ... ok",
+        "ingestionTime": 1792187627666
+      },
+      {
+        "timestamp": 1792187621547,
+        "message": "test_missing_status (__main__.Tests.test_missing_status) ... ok",
+        "ingestionTime": 1792187627666
+      },
+      {
+        "timestamp": 1792187621547,
+        "message": "test_nfl_empty_status (__main__.Tests.test_nfl_empty_status) ... ok",
+        "ingestionTime": 1792187627666
+      },
+      {
+        "timestamp": 1792187621547,
+        "message": "test_ngs_current_and_aggregate (__main__.Tests.test_ngs_current_and_aggregate) ... ok",
+        "ingestionTime": 1792187627666
+      },
+      {
+        "timestamp": 1792187621547,
+        "message": "test_ngs_future_rejected (__main__.Tests.test_ngs_future_rejected) ... ok",
+        "ingestionTime": 1792187627666
+      },
+      {
+        "timestamp": 1792187621547,
+        "message": "test_ngs_schema (__main__.Tests.test_ngs_schema) ... ok",
+        "ingestionTime": 1792187627666
+      },
+      {
+        "timestamp": 1792187621547,
+        "message": "test_rate_denial_stops (__main__.Tests.test_rate_denial_stops) ... ok",
+        "ingestionTime": 1792187627666
+      },
+      {
+        "timestamp": 1792187621547,
+        "message": "test_redirect_rejected (__main__.Tests.test_redirect_rejected) ... ok",
+        "ingestionTime": 1792187627666
+      },
+      {
+        "timestamp": 1792187621547,
+        "message": "test_source_scope (__main__.Tests.test_source_scope) ... ok",
+        "ingestionTime": 1792187627666
+      },
+      {
+        "timestamp": 1792187621547,
+        "message": "test_archived_directory_regression_and_exact_observed_resolution (nfl_current.Tests.test_archived_directory_regression_and_exact_observed_resolution) ... ok",
+        "ingestionTime": 1792187627666
+      },
+      {
+        "timestamp": 1792187621547,
+        "message": "test_byte_bound_before_http (nfl_current.Tests.test_byte_bound_before_http) ... ok",
+        "ingestionTime": 1792187627666
+      },
+      {
+        "timestamp": 1792187621547,
+        "message": "test_cache_identity_mismatch (nfl_current.Tests.test_cache_identity_mismatch) ... ok",
+        "ingestionTime": 1792187627666
+      },
+      {
+        "timestamp": 1792187621547,
+        "message": "test_cached_body_hash_failure (nfl_current.Tests.test_cached_body_hash_failure) ... ok",
+        "ingestionTime": 1792187627666
+      },
+      {
+        "timestamp": 1792187621547,
+        "message": "test_call_bound_before_http (nfl_current.Tests.test_call_bound_before_http) ... ok",
+        "ingestionTime": 1792187627666
+      },
+      {
+        "timestamp": 1792187621547,
+        "message": "test_hourly_vintage_changes_identity (nfl_current.Tests.test_hourly_vintage_changes_identity) ... ok",
+        "ingestionTime": 1792187627666
+      },
+      {
+        "timestamp": 1792187621547,
+        "message": "test_no_constructed_roster_urls (nfl_current.Tests.test_no_constructed_roster_urls) ... ok",
+        "ingestionTime": 1792187627666
+      },
+      {
+        "timestamp": 1792187621547,
+        "message": "test_observed_links_only (nfl_current.Tests.test_observed_links_only) ... ok",
+        "ingestionTime": 1792187627666
+      },
+      {
+        "timestamp": 1792187621547,
+        "message": "test_only_exact_official_paths (nfl_current.Tests.test_only_exact_official_paths) ... ok",
+        "ingestionTime": 1792187627666
+      },
+      {
+        "timestamp": 1792187621547,
+        "message": "test_pacing_honors_policy_after_robots (nfl_current.Tests.test_pacing_honors_policy_after_robots) ... ok",
+        "ingestionTime": 1792187627666
+      },
+      {
+        "timestamp": 1792187621547,
+        "message": "test_profile_links_accept_observed_slashless_forms (nfl_current.Tests.test_profile_links_accept_observed_slashless_forms) ... ok",
+        "ingestionTime": 1792187627666
+      },
+      {
+        "timestamp": 1792187621547,
+        "message": "test_resume_verifies_bodies_and_preserves_vintage (nfl_current.Tests.test_resume_verifies_bodies_and_preserves_vintage) ... ok",
+        "ingestionTime": 1792187627666
+      },
+      {
+        "timestamp": 1792187621547,
+        "message": "test_robots_disallow_and_longer_delay (nfl_current.Tests.test_robots_disallow_and_longer_delay) ... ok",
+        "ingestionTime": 1792187627666
+      },
+      {
+        "timestamp": 1792187621547,
+        "message": "test_robots_document_gate (nfl_current.Tests.test_robots_document_gate) ... ok",
+        "ingestionTime": 1792187627666
+      },
+      {
+        "timestamp": 1792187621547,
+        "message": "test_roster_html_scope_and_challenge (nfl_current.Tests.test_roster_html_scope_and_challenge) ... ok",
+        "ingestionTime": 1792187627666
+      },
+      {
+        "timestamp": 1792187621547,
+        "message": "test_run_one_zip_and_same_vintage_resume (nfl_current.Tests.test_run_one_zip_and_same_vintage_resume) ... ok",
+        "ingestionTime": 1792187627666
+      },
+      {
+        "timestamp": 1792187621547,
+        "message": "test_source_403_stops_next_call (nfl_current.Tests.test_source_403_stops_next_call) ... ok",
+        "ingestionTime": 1792187627666
+      },
+      {
+        "timestamp": 1792187621547,
+        "message": "----------------------------------------------------------------------",
+        "ingestionTime": 1792187627666
+      },
+      {
+        "timestamp": 1792187621547,
+        "message": "Ran 29 tests in 0.121s",
+        "ingestionTime": 1792187627666
+      },
+      {
+        "timestamp": 1792187621547,
+        "message": "OK",
+        "ingestionTime": 1792187627666
+      },
+      {
+        "timestamp": 1792187621547,
+        "message": "{\"event\":\"SELF_TEST_PASS\",\"tests\":29,\"timestamp\":\"2026-10-16T21:53:39Z\",\"version\":\"sports-edge-lab-ngs-availability-v040\"}",
+        "ingestionTime": 1792187627666
+      },
+      {
+        "timestamp": 1792187621547,
+        "message": "{\"event\":\"START\",\"planned\":6,\"run_id\":\"20261016T215339Z-af3efcca00\",\"timestamp\":\"2026-10-16T21:53:40Z\"}",
+        "ingestionTime": 1792187627666
+      },
+      {
+        "timestamp": 1792187622548,
+        "message": "{\"event\":\"CAPTURE\",\"kind\":\"ngs\",\"name\":\"ngs_rushing.csv.gz\",\"rows\":6262,\"run_id\":\"20261016T215339Z-af3efcca00\",\"status\":\"downloaded\",\"timestamp\":\"2026-10-16T21:53:41Z\"}",
+        "ingestionTime": 1792187627666
+      },
+      {
+        "timestamp": 1792187622548,
+        "message": "{\"event\":\"CAPTURE\",\"kind\":\"ngs\",\"name\":\"ngs_passing.csv.gz\",\"rows\":6133,\"run_id\":\"20261016T215339Z-af3efcca00\",\"status\":\"downloaded\",\"timestamp\":\"2026-10-16T21:53:41Z\"}",
+        "ingestionTime": 1792187627666
+      },
+      {
+        "timestamp": 1792187622548,
+        "message": "{\"event\":\"CAPTURE\",\"kind\":\"nfl_injuries\",\"name\":null,\"rows\":358,\"run_id\":\"20261016T215339Z-af3efcca00\",\"status\":\"captured_and_extracted\",\"timestamp\":\"2026-10-16T21:53:41Z\"}",
+        "ingestionTime": 1792187627666
+      },
+      {
+        "timestamp": 1792187622548,
+        "message": "{\"event\":\"CAPTURE\",\"kind\":\"ngs\",\"name\":\"ngs_receiving.csv.gz\",\"rows\":15218,\"run_id\":\"20261016T215339Z-af3efcca00\",\"status\":\"downloaded\",\"timestamp\":\"2026-10-16T21:53:42Z\"}",
+        "ingestionTime": 1792187627666
+      },
+      {
+        "timestamp": 1792187622548,
+        "message": "{\"event\":\"CAPTURE\",\"kind\":\"ncaa_availability\",\"name\":null,\"rows\":434,\"run_id\":\"20261016T215339Z-af3efcca00\",\"status\":\"captured_and_extracted\",\"timestamp\":\"2026-10-16T21:53:42Z\"}",
+        "ingestionTime": 1792187627666
+      },
+      {
+        "timestamp": 1792187622548,
+        "message": "{\"event\":\"CAPTURE\",\"kind\":\"ncaa_availability\",\"name\":null,\"rows\":null,\"run_id\":\"20261016T215339Z-af3efcca00\",\"status\":\"raw_only\",\"timestamp\":\"2026-10-16T21:53:42Z\"}",
+        "ingestionTime": 1792187627666
+      },
+      {
+        "timestamp": 1792187622548,
+        "message": "{\"event\":\"FINISHED\",\"failed_tasks\":0,\"remaining\":0,\"report_key\":\"shared/acquisition/ngs-availability/20261016T215339Z-af3efcca00/report.json\",\"return_zip\":\"sports_edge_lab_ngs_availability_return_20261016T215339Z-af3efcca00.zip\",\"run_id\":\"20261016T215339Z-af3efcca00\",\"status\":\"completed_with_gaps\",\"timestamp\":\"2026-10-16T21:53:42Z\"}",
+        "ingestionTime": 1792187627666
+      }
+    ],
+    "nextForwardToken": "f/39967119518403323753168471737360835910946946673708957736/s",
+    "nextBackwardToken": "b/39967119496080277809439317972683581920025936806222561280/s"
+  },
+  "objects": [
+    {
+      "Key": "shared/acquisition/ngs-availability/20261016T215339Z-af3efcca00/ngs_passing.csv.gz.receipt.json",
+      "LastModified": "2026-10-16T21:53:42+00:00",
+      "ETag": "\"6ae699f33649350c7f3359fd913e62a3\"",
+      "ChecksumAlgorithm": [
+        "CRC32"
+      ],
+      "ChecksumType": "FULL_OBJECT",
+      "Size": 14004,
+      "StorageClass": "STANDARD"
+    },
+    {
+      "Key": "shared/acquisition/ngs-availability/20261016T215339Z-af3efcca00/ngs_receiving.csv.gz.receipt.json",
+      "LastModified": "2026-10-16T21:53:43+00:00",
+      "ETag": "\"8b0d2271c901ae38e16df15f06ceb78d\"",
+      "ChecksumAlgorithm": [
+        "CRC32"
+      ],
+      "ChecksumType": "FULL_OBJECT",
+      "Size": 14043,
+      "StorageClass": "STANDARD"
+    },
+    {
+      "Key": "shared/acquisition/ngs-availability/20261016T215339Z-af3efcca00/ngs_rushing.csv.gz.receipt.json",
+      "LastModified": "2026-10-16T21:53:42+00:00",
+      "ETag": "\"5ce7b0cbc2f7a6658551b4aa7d63aeba\"",
+      "ChecksumAlgorithm": [
+        "CRC32"
+      ],
+      "ChecksumType": "FULL_OBJECT",
+      "Size": 14005,
+      "StorageClass": "STANDARD"
+    },
+    {
+      "Key": "shared/acquisition/ngs-availability/20261016T215339Z-af3efcca00/progress.json",
+      "LastModified": "2026-10-16T21:53:41+00:00",
+      "ETag": "\"46cb0af143a4d8dd7c9d4851c449f445\"",
+      "ChecksumAlgorithm": [
+        "CRC32"
+      ],
+      "ChecksumType": "FULL_OBJECT",
+      "Size": 700,
+      "StorageClass": "STANDARD"
+    },
+    {
+      "Key": "shared/acquisition/ngs-availability/20261016T215339Z-af3efcca00/report.json",
+      "LastModified": "2026-10-16T21:53:43+00:00",
+      "ETag": "\"a5aeb121d79d349541340f6caf0e3c70\"",
+      "ChecksumAlgorithm": [
+        "CRC32"
+      ],
+      "ChecksumType": "FULL_OBJECT",
+      "Size": 45543,
+      "StorageClass": "STANDARD"
+    },
+    {
+      "Key": "shared/acquisition/ngs-availability/20261016T215339Z-af3efcca00/sources.json",
+      "LastModified": "2026-10-16T21:53:41+00:00",
+      "ETag": "\"c32bcb9dfac17899e60b29cc5bcc5b3b\"",
+      "ChecksumAlgorithm": [
+        "CRC32"
+      ],
+      "ChecksumType": "FULL_OBJECT",
+      "Size": 1172,
+      "StorageClass": "STANDARD"
+    },
+    {
+      "Key": "shared/acquisition/ngs-availability/20261016T215339Z-af3efcca00/sports_edge_lab_ngs_availability_return_20261016T215339Z-af3efcca00.zip",
+      "LastModified": "2026-10-16T21:53:43+00:00",
+      "ETag": "\"2021170f3b7bdf8258a5066a7bf2ea84\"",
+      "ChecksumAlgorithm": [
+        "CRC32"
+      ],
+      "ChecksumType": "FULL_OBJECT",
+      "Size": 6183,
+      "StorageClass": "STANDARD"
+    }
+  ],
+  "object_verification": [
+    {
+      "key": "tracks/nfl/raw/nflverse/nextgen_stats/c0309c49dc7685a5f3d11260d9159ec73cf465771d9f6d35433f65928e88da5a/ngs_rushing.csv.gz",
+      "result": {
+        "AcceptRanges": "bytes",
+        "LastModified": "2026-10-16T21:53:42+00:00",
+        "ContentLength": 335650,
+        "ETag": "\"cc4bf0719265544dbbaa68ba836b300b\"",
+        "ContentType": "application/gzip",
+        "ServerSideEncryption": "AES256",
+        "Metadata": {}
+      }
+    },
+    {
+      "key": "tracks/nfl/raw/nflverse/nextgen_stats/12a66e1d30bb9cfe48e5b85decfd5dca31fad63f4b637be031df9048497f695c/ngs_passing.csv.gz",
+      "result": {
+        "AcceptRanges": "bytes",
+        "LastModified": "2026-10-16T21:53:42+00:00",
+        "ContentLength": 602888,
+        "ETag": "\"4b53983ee8d75c67c0dd41741e1eac66\"",
+        "ContentType": "application/gzip",
+        "ServerSideEncryption": "AES256",
+        "Metadata": {}
+      }
+    },
+    {
+      "key": "tracks/nfl/derived/nfl-official-injuries/20261016T215339Z-af3efcca00/rows.jsonl.gz",
+      "result": {
+        "AcceptRanges": "bytes",
+        "LastModified": "2026-10-16T21:53:42+00:00",
+        "ContentLength": 5561,
+        "ETag": "\"07c6147eb2e9b8d0eb09c402a2cb553e\"",
+        "ContentType": "application/gzip",
+        "ServerSideEncryption": "AES256",
+        "Metadata": {}
+      }
+    },
+    {
+      "key": "tracks/nfl/raw/nfl-official-current/objects/f55fc208ae781c480a50bd45a4bcf20e1f42f72e4a00895324723c1b555a5712.html.gz",
+      "result": {
+        "AcceptRanges": "bytes",
+        "LastModified": "2026-10-16T21:53:42+00:00",
+        "ContentLength": 64568,
+        "ETag": "\"5a36cb30c6e1c2590da050358eb38c5d\"",
+        "ContentType": "application/gzip",
+        "ServerSideEncryption": "AES256",
+        "Metadata": {}
+      }
+    },
+    {
+      "key": "tracks/nfl/raw/nflverse/nextgen_stats/168773b1a20defb8066acc75db58552b125e108f80b59c168e4b26696adf13b4/ngs_receiving.csv.gz",
+      "result": {
+        "AcceptRanges": "bytes",
+        "LastModified": "2026-10-16T21:53:43+00:00",
+        "ContentLength": 1014873,
+        "ETag": "\"a5837c77473f8b12cb10d6be01b8a616\"",
+        "ContentType": "application/gzip",
+        "ServerSideEncryption": "AES256",
+        "Metadata": {}
+      }
+    },
+    {
+      "key": "tracks/ncaaf/raw/big12-availability-rendered/objects/a132627fb7f3de836fcc9fbbb99749ee014f523379735ea2142e79aa5cb46492.md.gz",
+      "result": {
+        "AcceptRanges": "bytes",
+        "LastModified": "2026-10-16T21:53:43+00:00",
+        "ContentLength": 5439,
+        "ETag": "\"f04114d898cc197739a83ef8cd1ba9d2\"",
+        "ContentType": "application/gzip",
+        "ServerSideEncryption": "AES256",
+        "Metadata": {}
+      }
+    },
+    {
+      "key": "tracks/ncaaf/derived/big12-availability/20261016T215339Z-af3efcca00/rows.jsonl.gz",
+      "result": {
+        "AcceptRanges": "bytes",
+        "LastModified": "2026-10-16T21:53:43+00:00",
+        "ContentLength": 7862,
+        "ETag": "\"c4663e5a504697821bd9e23ce979d05b\"",
+        "ContentType": "application/gzip",
+        "ServerSideEncryption": "AES256",
+        "Metadata": {}
+      }
+    },
+    {
+      "key": "tracks/ncaaf/raw/acc-availability-rendered/objects/40f0d83eb4be5d7dbe70dd7f11c4f61889cfd2f917e4cd57a119352b67e410af.md.gz",
+      "result": {
+        "AcceptRanges": "bytes",
+        "LastModified": "2026-10-16T21:53:43+00:00",
+        "ContentLength": 8489,
+        "ETag": "\"5d2fdf4482b6527c56c95383636f0270\"",
+        "ContentType": "application/gzip",
+        "ServerSideEncryption": "AES256",
+        "Metadata": {}
+      }
+    },
+    {
+      "key": "shared/acquisition/ngs-availability/20261016T215339Z-af3efcca00/sports_edge_lab_ngs_availability_return_20261016T215339Z-af3efcca00.zip",
+      "result": {
+        "AcceptRanges": "bytes",
+        "LastModified": "2026-10-16T21:53:43+00:00",
+        "ContentLength": 6183,
+        "ETag": "\"2021170f3b7bdf8258a5066a7bf2ea84\"",
+        "ContentType": "application/zip",
+        "ServerSideEncryption": "AES256",
+        "Metadata": {}
+      }
+    }
+  ]
+}

@@ -1,0 +1,4389 @@
+{
+  "application_runtime_limit_seconds": null,
+  "cost_excludes": "Startup, shutdown, S3 storage and requests",
+  "discovery_gaps": [
+    "SEC public landing yielded no report links",
+    "Big Ten discovery URL blocked; retained earlier valid capture",
+    "ACC and Big 12 current embedded pages returned empty rendered content"
+  ],
+  "elapsed_seconds": 2.63,
+  "estimated_application_compute_usd": 0.000337,
+  "failures": [],
+  "finished_at": "2026-10-16T21:53:42Z",
+  "ngs_downloaded_bytes": 1953411,
+  "ngs_source_requests": 3,
+  "optimizations": [
+    "Concurrent independent public assets, source pacing and hash cache",
+    "No duplicate format variants or paid source overlap",
+    "Existing NFL source guards; explicit missing-value and schema checks"
+  ],
+  "paid_provider_calls": 0,
+  "planned": 6,
+  "processed": 6,
+  "remaining": 0,
+  "results": [
+    {
+      "bytes": 335650,
+      "captured_at": "2026-10-16T21:53:41Z",
+      "coverage": {
+        "all_games_or_players_complete": false,
+        "current_regular_week_counts": {
+          "1": 34,
+          "2": 33,
+          "3": 31,
+          "4": 30,
+          "5": 30,
+          "6": 2
+        },
+        "duplicate_identity_rows": 0,
+        "granularity": "Player-week and season aggregates, not tracking trajectories",
+        "historical_point_in_time_approved": false,
+        "latest_current_regular_week": 6,
+        "missing_player_ids": 0,
+        "rows": 6262,
+        "season_max": 2026,
+        "season_min": 2016,
+        "season_type_week_counts": [
+          {
+            "rows": 9,
+            "season": 2016,
+            "season_type": "POST",
+            "week": 18
+          },
+          {
+            "rows": 8,
+            "season": 2016,
+            "season_type": "POST",
+            "week": 19
+          },
+          {
+            "rows": 4,
+            "season": 2016,
+            "season_type": "POST",
+            "week": 20
+          },
+          {
+            "rows": 2,
+            "season": 2016,
+            "season_type": "POST",
+            "week": 22
+          },
+          {
+            "rows": 53,
+            "season": 2016,
+            "season_type": "REG",
+            "week": 0
+          },
+          {
+            "rows": 33,
+            "season": 2016,
+            "season_type": "REG",
+            "week": 1
+          },
+          {
+            "rows": 31,
+            "season": 2016,
+            "season_type": "REG",
+            "week": 2
+          },
+          {
+            "rows": 34,
+            "season": 2016,
+            "season_type": "REG",
+            "week": 3
+          },
+          {
+            "rows": 28,
+            "season": 2016,
+            "season_type": "REG",
+            "week": 4
+          },
+          {
+            "rows": 26,
+            "season": 2016,
+            "season_type": "REG",
+            "week": 5
+          },
+          {
+            "rows": 27,
+            "season": 2016,
+            "season_type": "REG",
+            "week": 6
+          },
+          {
+            "rows": 30,
+            "season": 2016,
+            "season_type": "REG",
+            "week": 7
+          },
+          {
+            "rows": 25,
+            "season": 2016,
+            "season_type": "REG",
+            "week": 8
+          },
+          {
+            "rows": 27,
+            "season": 2016,
+            "season_type": "REG",
+            "week": 9
+          },
+          {
+            "rows": 27,
+            "season": 2016,
+            "season_type": "REG",
+            "week": 10
+          },
+          {
+            "rows": 25,
+            "season": 2016,
+            "season_type": "REG",
+            "week": 11
+          },
+          {
+            "rows": 31,
+            "season": 2016,
+            "season_type": "REG",
+            "week": 12
+          },
+          {
+            "rows": 25,
+            "season": 2016,
+            "season_type": "REG",
+            "week": 13
+          },
+          {
+            "rows": 34,
+            "season": 2016,
+            "season_type": "REG",
+            "week": 14
+          },
+          {
+            "rows": 33,
+            "season": 2016,
+            "season_type": "REG",
+            "week": 15
+          },
+          {
+            "rows": 35,
+            "season": 2016,
+            "season_type": "REG",
+            "week": 16
+          },
+          {
+            "rows": 32,
+            "season": 2016,
+            "season_type": "REG",
+            "week": 17
+          },
+          {
+            "rows": 9,
+            "season": 2017,
+            "season_type": "POST",
+            "week": 18
+          },
+          {
+            "rows": 10,
+            "season": 2017,
+            "season_type": "POST",
+            "week": 19
+          },
+          {
+            "rows": 3,
+            "season": 2017,
+            "season_type": "POST",
+            "week": 20
+          },
+          {
+            "rows": 1,
+            "season": 2017,
+            "season_type": "POST",
+            "week": 22
+          },
+          {
+            "rows": 50,
+            "season": 2017,
+            "season_type": "REG",
+            "week": 0
+          },
+          {
+            "rows": 30,
+            "season": 2017,
+            "season_type": "REG",
+            "week": 1
+          },
+          {
+            "rows": 28,
+            "season": 2017,
+            "season_type": "REG",
+            "week": 2
+          },
+          {
+            "rows": 31,
+            "season": 2017,
+            "season_type": "REG",
+            "week": 3
+          },
+          {
+            "rows": 32,
+            "season": 2017,
+            "season_type": "REG",
+            "week": 4
+          },
+          {
+            "rows": 28,
+            "season": 2017,
+            "season_type": "REG",
+            "week": 5
+          },
+          {
+            "rows": 32,
+            "season": 2017,
+            "season_type": "REG",
+            "week": 6
+          },
+          {
+            "rows": 28,
+            "season": 2017,
+            "season_type": "REG",
+            "week": 7
+          },
+          {
+            "rows": 29,
+            "season": 2017,
+            "season_type": "REG",
+            "week": 8
+          },
+          {
+            "rows": 26,
+            "season": 2017,
+            "season_type": "REG",
+            "week": 9
+          },
+          {
+            "rows": 30,
+            "season": 2017,
+            "season_type": "REG",
+            "week": 10
+          },
+          {
+            "rows": 29,
+            "season": 2017,
+            "season_type": "REG",
+            "week": 11
+          },
+          {
+            "rows": 29,
+            "season": 2017,
+            "season_type": "REG",
+            "week": 12
+          },
+          {
+            "rows": 35,
+            "season": 2017,
+            "season_type": "REG",
+            "week": 13
+          },
+          {
+            "rows": 33,
+            "season": 2017,
+            "season_type": "REG",
+            "week": 14
+          },
+          {
+            "rows": 36,
+            "season": 2017,
+            "season_type": "REG",
+            "week": 15
+          },
+          {
+            "rows": 33,
+            "season": 2017,
+            "season_type": "REG",
+            "week": 16
+          },
+          {
+            "rows": 33,
+            "season": 2017,
+            "season_type": "REG",
+            "week": 17
+          },
+          {
+            "rows": 7,
+            "season": 2018,
+            "season_type": "POST",
+            "week": 18
+          },
+          {
+            "rows": 7,
+            "season": 2018,
+            "season_type": "POST",
+            "week": 19
+          },
+          {
+            "rows": 4,
+            "season": 2018,
+            "season_type": "POST",
+            "week": 20
+          },
+          {
+            "rows": 2,
+            "season": 2018,
+            "season_type": "POST",
+            "week": 22
+          },
+          {
+            "rows": 55,
+            "season": 2018,
+            "season_type": "REG",
+            "week": 0
+          },
+          {
+            "rows": 31,
+            "season": 2018,
+            "season_type": "REG",
+            "week": 1
+          },
+          {
+            "rows": 30,
+            "season": 2018,
+            "season_type": "REG",
+            "week": 2
+          },
+          {
+            "rows": 30,
+            "season": 2018,
+            "season_type": "REG",
+            "week": 3
+          },
+          {
+            "rows": 28,
+            "season": 2018,
+            "season_type": "REG",
+            "week": 4
+          },
+          {
+            "rows": 30,
+            "season": 2018,
+            "season_type": "REG",
+            "week": 5
+          },
+          {
+            "rows": 31,
+            "season": 2018,
+            "season_type": "REG",
+            "week": 6
+          },
+          {
+            "rows": 31,
+            "season": 2018,
+            "season_type": "REG",
+            "week": 7
+          },
+          {
+            "rows": 29,
+            "season": 2018,
+            "season_type": "REG",
+            "week": 8
+          },
+          {
+            "rows": 27,
+            "season": 2018,
+            "season_type": "REG",
+            "week": 9
+          },
+          {
+            "rows": 31,
+            "season": 2018,
+            "season_type": "REG",
+            "week": 10
+          },
+          {
+            "rows": 25,
+            "season": 2018,
+            "season_type": "REG",
+            "week": 11
+          },
+          {
+            "rows": 30,
+            "season": 2018,
+            "season_type": "REG",
+            "week": 12
+          },
+          {
+            "rows": 28,
+            "season": 2018,
+            "season_type": "REG",
+            "week": 13
+          },
+          {
+            "rows": 36,
+            "season": 2018,
+            "season_type": "REG",
+            "week": 14
+          },
+          {
+            "rows": 35,
+            "season": 2018,
+            "season_type": "REG",
+            "week": 15
+          },
+          {
+            "rows": 31,
+            "season": 2018,
+            "season_type": "REG",
+            "week": 16
+          },
+          {
+            "rows": 36,
+            "season": 2018,
+            "season_type": "REG",
+            "week": 17
+          },
+          {
+            "rows": 7,
+            "season": 2019,
+            "season_type": "POST",
+            "week": 18
+          },
+          {
+            "rows": 7,
+            "season": 2019,
+            "season_type": "POST",
+            "week": 19
+          },
+          {
+            "rows": 4,
+            "season": 2019,
+            "season_type": "POST",
+            "week": 20
+          },
+          {
+            "rows": 2,
+            "season": 2019,
+            "season_type": "POST",
+            "week": 22
+          },
+          {
+            "rows": 48,
+            "season": 2019,
+            "season_type": "REG",
+            "week": 0
+          },
+          {
+            "rows": 34,
+            "season": 2019,
+            "season_type": "REG",
+            "week": 1
+          },
+          {
+            "rows": 34,
+            "season": 2019,
+            "season_type": "REG",
+            "week": 2
+          },
+          {
+            "rows": 36,
+            "season": 2019,
+            "season_type": "REG",
+            "week": 3
+          },
+          {
+            "rows": 31,
+            "season": 2019,
+            "season_type": "REG",
+            "week": 4
+          },
+          {
+            "rows": 28,
+            "season": 2019,
+            "season_type": "REG",
+            "week": 5
+          },
+          {
+            "rows": 29,
+            "season": 2019,
+            "season_type": "REG",
+            "week": 6
+          },
+          {
+            "rows": 28,
+            "season": 2019,
+            "season_type": "REG",
+            "week": 7
+          },
+          {
+            "rows": 30,
+            "season": 2019,
+            "season_type": "REG",
+            "week": 8
+          },
+          {
+            "rows": 28,
+            "season": 2019,
+            "season_type": "REG",
+            "week": 9
+          },
+          {
+            "rows": 26,
+            "season": 2019,
+            "season_type": "REG",
+            "week": 10
+          },
+          {
+            "rows": 25,
+            "season": 2019,
+            "season_type": "REG",
+            "week": 11
+          },
+          {
+            "rows": 30,
+            "season": 2019,
+            "season_type": "REG",
+            "week": 12
+          },
+          {
+            "rows": 35,
+            "season": 2019,
+            "season_type": "REG",
+            "week": 13
+          },
+          {
+            "rows": 34,
+            "season": 2019,
+            "season_type": "REG",
+            "week": 14
+          },
+          {
+            "rows": 31,
+            "season": 2019,
+            "season_type": "REG",
+            "week": 15
+          },
+          {
+            "rows": 29,
+            "season": 2019,
+            "season_type": "REG",
+            "week": 16
+          },
+          {
+            "rows": 32,
+            "season": 2019,
+            "season_type": "REG",
+            "week": 17
+          },
+          {
+            "rows": 10,
+            "season": 2020,
+            "season_type": "POST",
+            "week": 18
+          },
+          {
+            "rows": 10,
+            "season": 2020,
+            "season_type": "POST",
+            "week": 19
+          },
+          {
+            "rows": 3,
+            "season": 2020,
+            "season_type": "POST",
+            "week": 20
+          },
+          {
+            "rows": 2,
+            "season": 2020,
+            "season_type": "POST",
+            "week": 22
+          },
+          {
+            "rows": 55,
+            "season": 2020,
+            "season_type": "REG",
+            "week": 0
+          },
+          {
+            "rows": 30,
+            "season": 2020,
+            "season_type": "REG",
+            "week": 1
+          },
+          {
+            "rows": 32,
+            "season": 2020,
+            "season_type": "REG",
+            "week": 2
+          },
+          {
+            "rows": 30,
+            "season": 2020,
+            "season_type": "REG",
+            "week": 3
+          },
+          {
+            "rows": 31,
+            "season": 2020,
+            "season_type": "REG",
+            "week": 4
+          },
+          {
+            "rows": 29,
+            "season": 2020,
+            "season_type": "REG",
+            "week": 5
+          },
+          {
+            "rows": 28,
+            "season": 2020,
+            "season_type": "REG",
+            "week": 6
+          },
+          {
+            "rows": 30,
+            "season": 2020,
+            "season_type": "REG",
+            "week": 7
+          },
+          {
+            "rows": 31,
+            "season": 2020,
+            "season_type": "REG",
+            "week": 8
+          },
+          {
+            "rows": 24,
+            "season": 2020,
+            "season_type": "REG",
+            "week": 9
+          },
+          {
+            "rows": 24,
+            "season": 2020,
+            "season_type": "REG",
+            "week": 10
+          },
+          {
+            "rows": 27,
+            "season": 2020,
+            "season_type": "REG",
+            "week": 11
+          },
+          {
+            "rows": 33,
+            "season": 2020,
+            "season_type": "REG",
+            "week": 12
+          },
+          {
+            "rows": 29,
+            "season": 2020,
+            "season_type": "REG",
+            "week": 13
+          },
+          {
+            "rows": 38,
+            "season": 2020,
+            "season_type": "REG",
+            "week": 14
+          },
+          {
+            "rows": 34,
+            "season": 2020,
+            "season_type": "REG",
+            "week": 15
+          },
+          {
+            "rows": 35,
+            "season": 2020,
+            "season_type": "REG",
+            "week": 16
+          },
+          {
+            "rows": 31,
+            "season": 2020,
+            "season_type": "REG",
+            "week": 17
+          },
+          {
+            "rows": 11,
+            "season": 2021,
+            "season_type": "POST",
+            "week": 19
+          },
+          {
+            "rows": 8,
+            "season": 2021,
+            "season_type": "POST",
+            "week": 20
+          },
+          {
+            "rows": 5,
+            "season": 2021,
+            "season_type": "POST",
+            "week": 21
+          },
+          {
+            "rows": 2,
+            "season": 2021,
+            "season_type": "POST",
+            "week": 23
+          },
+          {
+            "rows": 52,
+            "season": 2021,
+            "season_type": "REG",
+            "week": 0
+          },
+          {
+            "rows": 30,
+            "season": 2021,
+            "season_type": "REG",
+            "week": 1
+          },
+          {
+            "rows": 31,
+            "season": 2021,
+            "season_type": "REG",
+            "week": 2
+          },
+          {
+            "rows": 32,
+            "season": 2021,
+            "season_type": "REG",
+            "week": 3
+          },
+          {
+            "rows": 36,
+            "season": 2021,
+            "season_type": "REG",
+            "week": 4
+          },
+          {
+            "rows": 35,
+            "season": 2021,
+            "season_type": "REG",
+            "week": 5
+          },
+          {
+            "rows": 26,
+            "season": 2021,
+            "season_type": "REG",
+            "week": 6
+          },
+          {
+            "rows": 24,
+            "season": 2021,
+            "season_type": "REG",
+            "week": 7
+          },
+          {
+            "rows": 28,
+            "season": 2021,
+            "season_type": "REG",
+            "week": 8
+          },
+          {
+            "rows": 28,
+            "season": 2021,
+            "season_type": "REG",
+            "week": 9
+          },
+          {
+            "rows": 27,
+            "season": 2021,
+            "season_type": "REG",
+            "week": 10
+          },
+          {
+            "rows": 28,
+            "season": 2021,
+            "season_type": "REG",
+            "week": 11
+          },
+          {
+            "rows": 32,
+            "season": 2021,
+            "season_type": "REG",
+            "week": 12
+          },
+          {
+            "rows": 29,
+            "season": 2021,
+            "season_type": "REG",
+            "week": 13
+          },
+          {
+            "rows": 29,
+            "season": 2021,
+            "season_type": "REG",
+            "week": 14
+          },
+          {
+            "rows": 31,
+            "season": 2021,
+            "season_type": "REG",
+            "week": 15
+          },
+          {
+            "rows": 30,
+            "season": 2021,
+            "season_type": "REG",
+            "week": 16
+          },
+          {
+            "rows": 32,
+            "season": 2021,
+            "season_type": "REG",
+            "week": 17
+          },
+          {
+            "rows": 32,
+            "season": 2021,
+            "season_type": "REG",
+            "week": 18
+          },
+          {
+            "rows": 13,
+            "season": 2022,
+            "season_type": "POST",
+            "week": 19
+          },
+          {
+            "rows": 9,
+            "season": 2022,
+            "season_type": "POST",
+            "week": 20
+          },
+          {
+            "rows": 4,
+            "season": 2022,
+            "season_type": "POST",
+            "week": 21
+          },
+          {
+            "rows": 1,
+            "season": 2022,
+            "season_type": "POST",
+            "week": 23
+          },
+          {
+            "rows": 48,
+            "season": 2022,
+            "season_type": "REG",
+            "week": 0
+          },
+          {
+            "rows": 31,
+            "season": 2022,
+            "season_type": "REG",
+            "week": 1
+          },
+          {
+            "rows": 31,
+            "season": 2022,
+            "season_type": "REG",
+            "week": 2
+          },
+          {
+            "rows": 33,
+            "season": 2022,
+            "season_type": "REG",
+            "week": 3
+          },
+          {
+            "rows": 34,
+            "season": 2022,
+            "season_type": "REG",
+            "week": 4
+          },
+          {
+            "rows": 31,
+            "season": 2022,
+            "season_type": "REG",
+            "week": 5
+          },
+          {
+            "rows": 28,
+            "season": 2022,
+            "season_type": "REG",
+            "week": 6
+          },
+          {
+            "rows": 27,
+            "season": 2022,
+            "season_type": "REG",
+            "week": 7
+          },
+          {
+            "rows": 27,
+            "season": 2022,
+            "season_type": "REG",
+            "week": 8
+          },
+          {
+            "rows": 23,
+            "season": 2022,
+            "season_type": "REG",
+            "week": 9
+          },
+          {
+            "rows": 27,
+            "season": 2022,
+            "season_type": "REG",
+            "week": 10
+          },
+          {
+            "rows": 29,
+            "season": 2022,
+            "season_type": "REG",
+            "week": 11
+          },
+          {
+            "rows": 32,
+            "season": 2022,
+            "season_type": "REG",
+            "week": 12
+          },
+          {
+            "rows": 32,
+            "season": 2022,
+            "season_type": "REG",
+            "week": 13
+          },
+          {
+            "rows": 25,
+            "season": 2022,
+            "season_type": "REG",
+            "week": 14
+          },
+          {
+            "rows": 40,
+            "season": 2022,
+            "season_type": "REG",
+            "week": 15
+          },
+          {
+            "rows": 31,
+            "season": 2022,
+            "season_type": "REG",
+            "week": 16
+          },
+          {
+            "rows": 30,
+            "season": 2022,
+            "season_type": "REG",
+            "week": 17
+          },
+          {
+            "rows": 31,
+            "season": 2022,
+            "season_type": "REG",
+            "week": 18
+          },
+          {
+            "rows": 10,
+            "season": 2023,
+            "season_type": "POST",
+            "week": 19
+          },
+          {
+            "rows": 7,
+            "season": 2023,
+            "season_type": "POST",
+            "week": 20
+          },
+          {
+            "rows": 4,
+            "season": 2023,
+            "season_type": "POST",
+            "week": 21
+          },
+          {
+            "rows": 2,
+            "season": 2023,
+            "season_type": "POST",
+            "week": 23
+          },
+          {
+            "rows": 49,
+            "season": 2023,
+            "season_type": "REG",
+            "week": 0
+          },
+          {
+            "rows": 33,
+            "season": 2023,
+            "season_type": "REG",
+            "week": 1
+          },
+          {
+            "rows": 31,
+            "season": 2023,
+            "season_type": "REG",
+            "week": 2
+          },
+          {
+            "rows": 34,
+            "season": 2023,
+            "season_type": "REG",
+            "week": 3
+          },
+          {
+            "rows": 28,
+            "season": 2023,
+            "season_type": "REG",
+            "week": 4
+          },
+          {
+            "rows": 25,
+            "season": 2023,
+            "season_type": "REG",
+            "week": 5
+          },
+          {
+            "rows": 32,
+            "season": 2023,
+            "season_type": "REG",
+            "week": 6
+          },
+          {
+            "rows": 29,
+            "season": 2023,
+            "season_type": "REG",
+            "week": 7
+          },
+          {
+            "rows": 30,
+            "season": 2023,
+            "season_type": "REG",
+            "week": 8
+          },
+          {
+            "rows": 27,
+            "season": 2023,
+            "season_type": "REG",
+            "week": 9
+          },
+          {
+            "rows": 29,
+            "season": 2023,
+            "season_type": "REG",
+            "week": 10
+          },
+          {
+            "rows": 30,
+            "season": 2023,
+            "season_type": "REG",
+            "week": 11
+          },
+          {
+            "rows": 32,
+            "season": 2023,
+            "season_type": "REG",
+            "week": 12
+          },
+          {
+            "rows": 27,
+            "season": 2023,
+            "season_type": "REG",
+            "week": 13
+          },
+          {
+            "rows": 34,
+            "season": 2023,
+            "season_type": "REG",
+            "week": 14
+          },
+          {
+            "rows": 31,
+            "season": 2023,
+            "season_type": "REG",
+            "week": 15
+          },
+          {
+            "rows": 30,
+            "season": 2023,
+            "season_type": "REG",
+            "week": 16
+          },
+          {
+            "rows": 37,
+            "season": 2023,
+            "season_type": "REG",
+            "week": 17
+          },
+          {
+            "rows": 32,
+            "season": 2023,
+            "season_type": "REG",
+            "week": 18
+          },
+          {
+            "rows": 9,
+            "season": 2024,
+            "season_type": "POST",
+            "week": 19
+          },
+          {
+            "rows": 7,
+            "season": 2024,
+            "season_type": "POST",
+            "week": 20
+          },
+          {
+            "rows": 4,
+            "season": 2024,
+            "season_type": "POST",
+            "week": 21
+          },
+          {
+            "rows": 1,
+            "season": 2024,
+            "season_type": "POST",
+            "week": 23
+          },
+          {
+            "rows": 47,
+            "season": 2024,
+            "season_type": "REG",
+            "week": 0
+          },
+          {
+            "rows": 34,
+            "season": 2024,
+            "season_type": "REG",
+            "week": 1
+          },
+          {
+            "rows": 33,
+            "season": 2024,
+            "season_type": "REG",
+            "week": 2
+          },
+          {
+            "rows": 28,
+            "season": 2024,
+            "season_type": "REG",
+            "week": 3
+          },
+          {
+            "rows": 33,
+            "season": 2024,
+            "season_type": "REG",
+            "week": 4
+          },
+          {
+            "rows": 26,
+            "season": 2024,
+            "season_type": "REG",
+            "week": 5
+          },
+          {
+            "rows": 26,
+            "season": 2024,
+            "season_type": "REG",
+            "week": 6
+          },
+          {
+            "rows": 30,
+            "season": 2024,
+            "season_type": "REG",
+            "week": 7
+          },
+          {
+            "rows": 32,
+            "season": 2024,
+            "season_type": "REG",
+            "week": 8
+          },
+          {
+            "rows": 30,
+            "season": 2024,
+            "season_type": "REG",
+            "week": 9
+          },
+          {
+            "rows": 34,
+            "season": 2024,
+            "season_type": "REG",
+            "week": 10
+          },
+          {
+            "rows": 27,
+            "season": 2024,
+            "season_type": "REG",
+            "week": 11
+          },
+          {
+            "rows": 21,
+            "season": 2024,
+            "season_type": "REG",
+            "week": 12
+          },
+          {
+            "rows": 29,
+            "season": 2024,
+            "season_type": "REG",
+            "week": 13
+          },
+          {
+            "rows": 29,
+            "season": 2024,
+            "season_type": "REG",
+            "week": 14
+          },
+          {
+            "rows": 28,
+            "season": 2024,
+            "season_type": "REG",
+            "week": 15
+          },
+          {
+            "rows": 29,
+            "season": 2024,
+            "season_type": "REG",
+            "week": 16
+          },
+          {
+            "rows": 31,
+            "season": 2024,
+            "season_type": "REG",
+            "week": 17
+          },
+          {
+            "rows": 33,
+            "season": 2024,
+            "season_type": "REG",
+            "week": 18
+          },
+          {
+            "rows": 14,
+            "season": 2025,
+            "season_type": "POST",
+            "week": 19
+          },
+          {
+            "rows": 9,
+            "season": 2025,
+            "season_type": "POST",
+            "week": 20
+          },
+          {
+            "rows": 4,
+            "season": 2025,
+            "season_type": "POST",
+            "week": 21
+          },
+          {
+            "rows": 1,
+            "season": 2025,
+            "season_type": "POST",
+            "week": 23
+          },
+          {
+            "rows": 51,
+            "season": 2025,
+            "season_type": "REG",
+            "week": 0
+          },
+          {
+            "rows": 32,
+            "season": 2025,
+            "season_type": "REG",
+            "week": 1
+          },
+          {
+            "rows": 33,
+            "season": 2025,
+            "season_type": "REG",
+            "week": 2
+          },
+          {
+            "rows": 34,
+            "season": 2025,
+            "season_type": "REG",
+            "week": 3
+          },
+          {
+            "rows": 33,
+            "season": 2025,
+            "season_type": "REG",
+            "week": 4
+          },
+          {
+            "rows": 25,
+            "season": 2025,
+            "season_type": "REG",
+            "week": 5
+          },
+          {
+            "rows": 31,
+            "season": 2025,
+            "season_type": "REG",
+            "week": 6
+          },
+          {
+            "rows": 32,
+            "season": 2025,
+            "season_type": "REG",
+            "week": 7
+          },
+          {
+            "rows": 26,
+            "season": 2025,
+            "season_type": "REG",
+            "week": 8
+          },
+          {
+            "rows": 30,
+            "season": 2025,
+            "season_type": "REG",
+            "week": 9
+          },
+          {
+            "rows": 31,
+            "season": 2025,
+            "season_type": "REG",
+            "week": 10
+          },
+          {
+            "rows": 32,
+            "season": 2025,
+            "season_type": "REG",
+            "week": 11
+          },
+          {
+            "rows": 28,
+            "season": 2025,
+            "season_type": "REG",
+            "week": 12
+          },
+          {
+            "rows": 38,
+            "season": 2025,
+            "season_type": "REG",
+            "week": 13
+          },
+          {
+            "rows": 32,
+            "season": 2025,
+            "season_type": "REG",
+            "week": 14
+          },
+          {
+            "rows": 36,
+            "season": 2025,
+            "season_type": "REG",
+            "week": 15
+          },
+          {
+            "rows": 30,
+            "season": 2025,
+            "season_type": "REG",
+            "week": 16
+          },
+          {
+            "rows": 31,
+            "season": 2025,
+            "season_type": "REG",
+            "week": 17
+          },
+          {
+            "rows": 35,
+            "season": 2025,
+            "season_type": "REG",
+            "week": 18
+          },
+          {
+            "rows": 43,
+            "season": 2026,
+            "season_type": "REG",
+            "week": 0
+          },
+          {
+            "rows": 34,
+            "season": 2026,
+            "season_type": "REG",
+            "week": 1
+          },
+          {
+            "rows": 33,
+            "season": 2026,
+            "season_type": "REG",
+            "week": 2
+          },
+          {
+            "rows": 31,
+            "season": 2026,
+            "season_type": "REG",
+            "week": 3
+          },
+          {
+            "rows": 30,
+            "season": 2026,
+            "season_type": "REG",
+            "week": 4
+          },
+          {
+            "rows": 30,
+            "season": 2026,
+            "season_type": "REG",
+            "week": 5
+          },
+          {
+            "rows": 2,
+            "season": 2026,
+            "season_type": "REG",
+            "week": 6
+          }
+        ]
+      },
+      "headers": {
+        "Date": "Fri, 16 Oct 2026 21:53:41 GMT",
+        "ETag": "\"0x8DF2B7D4F2FA1D3\"",
+        "Last-Modified": "Fri, 16 Oct 2026 12:02:10 GMT"
+      },
+      "kind": "ngs",
+      "lineage": "nflverse compilation of NFL NGS summaries; not original tracking",
+      "name": "ngs_rushing.csv.gz",
+      "raw_key": "tracks/nfl/raw/nflverse/nextgen_stats/c0309c49dc7685a5f3d11260d9159ec73cf465771d9f6d35433f65928e88da5a/ngs_rushing.csv.gz",
+      "sha256": "c0309c49dc7685a5f3d11260d9159ec73cf465771d9f6d35433f65928e88da5a",
+      "source_asset_id": 647205040,
+      "source_updated_at": "2026-10-16T12:02:11Z",
+      "source_url": "https://github.com/nflverse/nflverse-data/releases/download/nextgen_stats/ngs_rushing.csv.gz",
+      "status": "downloaded"
+    },
+    {
+      "bytes": 602888,
+      "captured_at": "2026-10-16T21:53:41Z",
+      "coverage": {
+        "all_games_or_players_complete": false,
+        "current_regular_week_counts": {
+          "1": 32,
+          "2": 34,
+          "3": 32,
+          "4": 32,
+          "5": 31,
+          "6": 2
+        },
+        "duplicate_identity_rows": 0,
+        "granularity": "Player-week and season aggregates, not tracking trajectories",
+        "historical_point_in_time_approved": false,
+        "latest_current_regular_week": 6,
+        "missing_player_ids": 0,
+        "rows": 6133,
+        "season_max": 2026,
+        "season_min": 2016,
+        "season_type_week_counts": [
+          {
+            "rows": 8,
+            "season": 2016,
+            "season_type": "POST",
+            "week": 18
+          },
+          {
+            "rows": 8,
+            "season": 2016,
+            "season_type": "POST",
+            "week": 19
+          },
+          {
+            "rows": 4,
+            "season": 2016,
+            "season_type": "POST",
+            "week": 20
+          },
+          {
+            "rows": 2,
+            "season": 2016,
+            "season_type": "POST",
+            "week": 22
+          },
+          {
+            "rows": 39,
+            "season": 2016,
+            "season_type": "REG",
+            "week": 0
+          },
+          {
+            "rows": 32,
+            "season": 2016,
+            "season_type": "REG",
+            "week": 1
+          },
+          {
+            "rows": 32,
+            "season": 2016,
+            "season_type": "REG",
+            "week": 2
+          },
+          {
+            "rows": 32,
+            "season": 2016,
+            "season_type": "REG",
+            "week": 3
+          },
+          {
+            "rows": 31,
+            "season": 2016,
+            "season_type": "REG",
+            "week": 4
+          },
+          {
+            "rows": 28,
+            "season": 2016,
+            "season_type": "REG",
+            "week": 5
+          },
+          {
+            "rows": 30,
+            "season": 2016,
+            "season_type": "REG",
+            "week": 6
+          },
+          {
+            "rows": 29,
+            "season": 2016,
+            "season_type": "REG",
+            "week": 7
+          },
+          {
+            "rows": 27,
+            "season": 2016,
+            "season_type": "REG",
+            "week": 8
+          },
+          {
+            "rows": 26,
+            "season": 2016,
+            "season_type": "REG",
+            "week": 9
+          },
+          {
+            "rows": 28,
+            "season": 2016,
+            "season_type": "REG",
+            "week": 10
+          },
+          {
+            "rows": 28,
+            "season": 2016,
+            "season_type": "REG",
+            "week": 11
+          },
+          {
+            "rows": 32,
+            "season": 2016,
+            "season_type": "REG",
+            "week": 12
+          },
+          {
+            "rows": 29,
+            "season": 2016,
+            "season_type": "REG",
+            "week": 13
+          },
+          {
+            "rows": 32,
+            "season": 2016,
+            "season_type": "REG",
+            "week": 14
+          },
+          {
+            "rows": 32,
+            "season": 2016,
+            "season_type": "REG",
+            "week": 15
+          },
+          {
+            "rows": 33,
+            "season": 2016,
+            "season_type": "REG",
+            "week": 16
+          },
+          {
+            "rows": 31,
+            "season": 2016,
+            "season_type": "REG",
+            "week": 17
+          },
+          {
+            "rows": 8,
+            "season": 2017,
+            "season_type": "POST",
+            "week": 18
+          },
+          {
+            "rows": 8,
+            "season": 2017,
+            "season_type": "POST",
+            "week": 19
+          },
+          {
+            "rows": 4,
+            "season": 2017,
+            "season_type": "POST",
+            "week": 20
+          },
+          {
+            "rows": 2,
+            "season": 2017,
+            "season_type": "POST",
+            "week": 22
+          },
+          {
+            "rows": 41,
+            "season": 2017,
+            "season_type": "REG",
+            "week": 0
+          },
+          {
+            "rows": 30,
+            "season": 2017,
+            "season_type": "REG",
+            "week": 1
+          },
+          {
+            "rows": 32,
+            "season": 2017,
+            "season_type": "REG",
+            "week": 2
+          },
+          {
+            "rows": 32,
+            "season": 2017,
+            "season_type": "REG",
+            "week": 3
+          },
+          {
+            "rows": 32,
+            "season": 2017,
+            "season_type": "REG",
+            "week": 4
+          },
+          {
+            "rows": 28,
+            "season": 2017,
+            "season_type": "REG",
+            "week": 5
+          },
+          {
+            "rows": 28,
+            "season": 2017,
+            "season_type": "REG",
+            "week": 6
+          },
+          {
+            "rows": 31,
+            "season": 2017,
+            "season_type": "REG",
+            "week": 7
+          },
+          {
+            "rows": 26,
+            "season": 2017,
+            "season_type": "REG",
+            "week": 8
+          },
+          {
+            "rows": 26,
+            "season": 2017,
+            "season_type": "REG",
+            "week": 9
+          },
+          {
+            "rows": 28,
+            "season": 2017,
+            "season_type": "REG",
+            "week": 10
+          },
+          {
+            "rows": 28,
+            "season": 2017,
+            "season_type": "REG",
+            "week": 11
+          },
+          {
+            "rows": 32,
+            "season": 2017,
+            "season_type": "REG",
+            "week": 12
+          },
+          {
+            "rows": 33,
+            "season": 2017,
+            "season_type": "REG",
+            "week": 13
+          },
+          {
+            "rows": 30,
+            "season": 2017,
+            "season_type": "REG",
+            "week": 14
+          },
+          {
+            "rows": 32,
+            "season": 2017,
+            "season_type": "REG",
+            "week": 15
+          },
+          {
+            "rows": 32,
+            "season": 2017,
+            "season_type": "REG",
+            "week": 16
+          },
+          {
+            "rows": 32,
+            "season": 2017,
+            "season_type": "REG",
+            "week": 17
+          },
+          {
+            "rows": 8,
+            "season": 2018,
+            "season_type": "POST",
+            "week": 18
+          },
+          {
+            "rows": 8,
+            "season": 2018,
+            "season_type": "POST",
+            "week": 19
+          },
+          {
+            "rows": 4,
+            "season": 2018,
+            "season_type": "POST",
+            "week": 20
+          },
+          {
+            "rows": 2,
+            "season": 2018,
+            "season_type": "POST",
+            "week": 22
+          },
+          {
+            "rows": 39,
+            "season": 2018,
+            "season_type": "REG",
+            "week": 0
+          },
+          {
+            "rows": 34,
+            "season": 2018,
+            "season_type": "REG",
+            "week": 1
+          },
+          {
+            "rows": 32,
+            "season": 2018,
+            "season_type": "REG",
+            "week": 2
+          },
+          {
+            "rows": 32,
+            "season": 2018,
+            "season_type": "REG",
+            "week": 3
+          },
+          {
+            "rows": 31,
+            "season": 2018,
+            "season_type": "REG",
+            "week": 4
+          },
+          {
+            "rows": 30,
+            "season": 2018,
+            "season_type": "REG",
+            "week": 5
+          },
+          {
+            "rows": 30,
+            "season": 2018,
+            "season_type": "REG",
+            "week": 6
+          },
+          {
+            "rows": 28,
+            "season": 2018,
+            "season_type": "REG",
+            "week": 7
+          },
+          {
+            "rows": 29,
+            "season": 2018,
+            "season_type": "REG",
+            "week": 8
+          },
+          {
+            "rows": 26,
+            "season": 2018,
+            "season_type": "REG",
+            "week": 9
+          },
+          {
+            "rows": 28,
+            "season": 2018,
+            "season_type": "REG",
+            "week": 10
+          },
+          {
+            "rows": 27,
+            "season": 2018,
+            "season_type": "REG",
+            "week": 11
+          },
+          {
+            "rows": 31,
+            "season": 2018,
+            "season_type": "REG",
+            "week": 12
+          },
+          {
+            "rows": 32,
+            "season": 2018,
+            "season_type": "REG",
+            "week": 13
+          },
+          {
+            "rows": 32,
+            "season": 2018,
+            "season_type": "REG",
+            "week": 14
+          },
+          {
+            "rows": 32,
+            "season": 2018,
+            "season_type": "REG",
+            "week": 15
+          },
+          {
+            "rows": 31,
+            "season": 2018,
+            "season_type": "REG",
+            "week": 16
+          },
+          {
+            "rows": 32,
+            "season": 2018,
+            "season_type": "REG",
+            "week": 17
+          },
+          {
+            "rows": 8,
+            "season": 2019,
+            "season_type": "POST",
+            "week": 18
+          },
+          {
+            "rows": 7,
+            "season": 2019,
+            "season_type": "POST",
+            "week": 19
+          },
+          {
+            "rows": 3,
+            "season": 2019,
+            "season_type": "POST",
+            "week": 20
+          },
+          {
+            "rows": 2,
+            "season": 2019,
+            "season_type": "POST",
+            "week": 22
+          },
+          {
+            "rows": 39,
+            "season": 2019,
+            "season_type": "REG",
+            "week": 0
+          },
+          {
+            "rows": 31,
+            "season": 2019,
+            "season_type": "REG",
+            "week": 1
+          },
+          {
+            "rows": 34,
+            "season": 2019,
+            "season_type": "REG",
+            "week": 2
+          },
+          {
+            "rows": 32,
+            "season": 2019,
+            "season_type": "REG",
+            "week": 3
+          },
+          {
+            "rows": 31,
+            "season": 2019,
+            "season_type": "REG",
+            "week": 4
+          },
+          {
+            "rows": 30,
+            "season": 2019,
+            "season_type": "REG",
+            "week": 5
+          },
+          {
+            "rows": 30,
+            "season": 2019,
+            "season_type": "REG",
+            "week": 6
+          },
+          {
+            "rows": 27,
+            "season": 2019,
+            "season_type": "REG",
+            "week": 7
+          },
+          {
+            "rows": 30,
+            "season": 2019,
+            "season_type": "REG",
+            "week": 8
+          },
+          {
+            "rows": 28,
+            "season": 2019,
+            "season_type": "REG",
+            "week": 9
+          },
+          {
+            "rows": 26,
+            "season": 2019,
+            "season_type": "REG",
+            "week": 10
+          },
+          {
+            "rows": 28,
+            "season": 2019,
+            "season_type": "REG",
+            "week": 11
+          },
+          {
+            "rows": 28,
+            "season": 2019,
+            "season_type": "REG",
+            "week": 12
+          },
+          {
+            "rows": 32,
+            "season": 2019,
+            "season_type": "REG",
+            "week": 13
+          },
+          {
+            "rows": 32,
+            "season": 2019,
+            "season_type": "REG",
+            "week": 14
+          },
+          {
+            "rows": 32,
+            "season": 2019,
+            "season_type": "REG",
+            "week": 15
+          },
+          {
+            "rows": 34,
+            "season": 2019,
+            "season_type": "REG",
+            "week": 16
+          },
+          {
+            "rows": 32,
+            "season": 2019,
+            "season_type": "REG",
+            "week": 17
+          },
+          {
+            "rows": 12,
+            "season": 2020,
+            "season_type": "POST",
+            "week": 18
+          },
+          {
+            "rows": 8,
+            "season": 2020,
+            "season_type": "POST",
+            "week": 19
+          },
+          {
+            "rows": 4,
+            "season": 2020,
+            "season_type": "POST",
+            "week": 20
+          },
+          {
+            "rows": 2,
+            "season": 2020,
+            "season_type": "POST",
+            "week": 22
+          },
+          {
+            "rows": 41,
+            "season": 2020,
+            "season_type": "REG",
+            "week": 0
+          },
+          {
+            "rows": 32,
+            "season": 2020,
+            "season_type": "REG",
+            "week": 1
+          },
+          {
+            "rows": 32,
+            "season": 2020,
+            "season_type": "REG",
+            "week": 2
+          },
+          {
+            "rows": 33,
+            "season": 2020,
+            "season_type": "REG",
+            "week": 3
+          },
+          {
+            "rows": 31,
+            "season": 2020,
+            "season_type": "REG",
+            "week": 4
+          },
+          {
+            "rows": 29,
+            "season": 2020,
+            "season_type": "REG",
+            "week": 5
+          },
+          {
+            "rows": 28,
+            "season": 2020,
+            "season_type": "REG",
+            "week": 6
+          },
+          {
+            "rows": 28,
+            "season": 2020,
+            "season_type": "REG",
+            "week": 7
+          },
+          {
+            "rows": 28,
+            "season": 2020,
+            "season_type": "REG",
+            "week": 8
+          },
+          {
+            "rows": 28,
+            "season": 2020,
+            "season_type": "REG",
+            "week": 9
+          },
+          {
+            "rows": 27,
+            "season": 2020,
+            "season_type": "REG",
+            "week": 10
+          },
+          {
+            "rows": 29,
+            "season": 2020,
+            "season_type": "REG",
+            "week": 11
+          },
+          {
+            "rows": 30,
+            "season": 2020,
+            "season_type": "REG",
+            "week": 12
+          },
+          {
+            "rows": 30,
+            "season": 2020,
+            "season_type": "REG",
+            "week": 13
+          },
+          {
+            "rows": 33,
+            "season": 2020,
+            "season_type": "REG",
+            "week": 14
+          },
+          {
+            "rows": 31,
+            "season": 2020,
+            "season_type": "REG",
+            "week": 15
+          },
+          {
+            "rows": 33,
+            "season": 2020,
+            "season_type": "REG",
+            "week": 16
+          },
+          {
+            "rows": 32,
+            "season": 2020,
+            "season_type": "REG",
+            "week": 17
+          },
+          {
+            "rows": 12,
+            "season": 2021,
+            "season_type": "POST",
+            "week": 19
+          },
+          {
+            "rows": 8,
+            "season": 2021,
+            "season_type": "POST",
+            "week": 20
+          },
+          {
+            "rows": 4,
+            "season": 2021,
+            "season_type": "POST",
+            "week": 21
+          },
+          {
+            "rows": 2,
+            "season": 2021,
+            "season_type": "POST",
+            "week": 23
+          },
+          {
+            "rows": 38,
+            "season": 2021,
+            "season_type": "REG",
+            "week": 0
+          },
+          {
+            "rows": 32,
+            "season": 2021,
+            "season_type": "REG",
+            "week": 1
+          },
+          {
+            "rows": 31,
+            "season": 2021,
+            "season_type": "REG",
+            "week": 2
+          },
+          {
+            "rows": 32,
+            "season": 2021,
+            "season_type": "REG",
+            "week": 3
+          },
+          {
+            "rows": 34,
+            "season": 2021,
+            "season_type": "REG",
+            "week": 4
+          },
+          {
+            "rows": 33,
+            "season": 2021,
+            "season_type": "REG",
+            "week": 5
+          },
+          {
+            "rows": 28,
+            "season": 2021,
+            "season_type": "REG",
+            "week": 6
+          },
+          {
+            "rows": 27,
+            "season": 2021,
+            "season_type": "REG",
+            "week": 7
+          },
+          {
+            "rows": 29,
+            "season": 2021,
+            "season_type": "REG",
+            "week": 8
+          },
+          {
+            "rows": 28,
+            "season": 2021,
+            "season_type": "REG",
+            "week": 9
+          },
+          {
+            "rows": 28,
+            "season": 2021,
+            "season_type": "REG",
+            "week": 10
+          },
+          {
+            "rows": 30,
+            "season": 2021,
+            "season_type": "REG",
+            "week": 11
+          },
+          {
+            "rows": 30,
+            "season": 2021,
+            "season_type": "REG",
+            "week": 12
+          },
+          {
+            "rows": 26,
+            "season": 2021,
+            "season_type": "REG",
+            "week": 13
+          },
+          {
+            "rows": 28,
+            "season": 2021,
+            "season_type": "REG",
+            "week": 14
+          },
+          {
+            "rows": 31,
+            "season": 2021,
+            "season_type": "REG",
+            "week": 15
+          },
+          {
+            "rows": 33,
+            "season": 2021,
+            "season_type": "REG",
+            "week": 16
+          },
+          {
+            "rows": 31,
+            "season": 2021,
+            "season_type": "REG",
+            "week": 17
+          },
+          {
+            "rows": 33,
+            "season": 2021,
+            "season_type": "REG",
+            "week": 18
+          },
+          {
+            "rows": 12,
+            "season": 2022,
+            "season_type": "POST",
+            "week": 19
+          },
+          {
+            "rows": 8,
+            "season": 2022,
+            "season_type": "POST",
+            "week": 20
+          },
+          {
+            "rows": 3,
+            "season": 2022,
+            "season_type": "POST",
+            "week": 21
+          },
+          {
+            "rows": 2,
+            "season": 2022,
+            "season_type": "POST",
+            "week": 23
+          },
+          {
+            "rows": 40,
+            "season": 2022,
+            "season_type": "REG",
+            "week": 0
+          },
+          {
+            "rows": 32,
+            "season": 2022,
+            "season_type": "REG",
+            "week": 1
+          },
+          {
+            "rows": 31,
+            "season": 2022,
+            "season_type": "REG",
+            "week": 2
+          },
+          {
+            "rows": 32,
+            "season": 2022,
+            "season_type": "REG",
+            "week": 3
+          },
+          {
+            "rows": 30,
+            "season": 2022,
+            "season_type": "REG",
+            "week": 4
+          },
+          {
+            "rows": 32,
+            "season": 2022,
+            "season_type": "REG",
+            "week": 5
+          },
+          {
+            "rows": 27,
+            "season": 2022,
+            "season_type": "REG",
+            "week": 6
+          },
+          {
+            "rows": 27,
+            "season": 2022,
+            "season_type": "REG",
+            "week": 7
+          },
+          {
+            "rows": 29,
+            "season": 2022,
+            "season_type": "REG",
+            "week": 8
+          },
+          {
+            "rows": 26,
+            "season": 2022,
+            "season_type": "REG",
+            "week": 9
+          },
+          {
+            "rows": 28,
+            "season": 2022,
+            "season_type": "REG",
+            "week": 10
+          },
+          {
+            "rows": 28,
+            "season": 2022,
+            "season_type": "REG",
+            "week": 11
+          },
+          {
+            "rows": 32,
+            "season": 2022,
+            "season_type": "REG",
+            "week": 12
+          },
+          {
+            "rows": 30,
+            "season": 2022,
+            "season_type": "REG",
+            "week": 13
+          },
+          {
+            "rows": 25,
+            "season": 2022,
+            "season_type": "REG",
+            "week": 14
+          },
+          {
+            "rows": 33,
+            "season": 2022,
+            "season_type": "REG",
+            "week": 15
+          },
+          {
+            "rows": 34,
+            "season": 2022,
+            "season_type": "REG",
+            "week": 16
+          },
+          {
+            "rows": 30,
+            "season": 2022,
+            "season_type": "REG",
+            "week": 17
+          },
+          {
+            "rows": 32,
+            "season": 2022,
+            "season_type": "REG",
+            "week": 18
+          },
+          {
+            "rows": 12,
+            "season": 2023,
+            "season_type": "POST",
+            "week": 19
+          },
+          {
+            "rows": 8,
+            "season": 2023,
+            "season_type": "POST",
+            "week": 20
+          },
+          {
+            "rows": 4,
+            "season": 2023,
+            "season_type": "POST",
+            "week": 21
+          },
+          {
+            "rows": 2,
+            "season": 2023,
+            "season_type": "POST",
+            "week": 23
+          },
+          {
+            "rows": 45,
+            "season": 2023,
+            "season_type": "REG",
+            "week": 0
+          },
+          {
+            "rows": 32,
+            "season": 2023,
+            "season_type": "REG",
+            "week": 1
+          },
+          {
+            "rows": 32,
+            "season": 2023,
+            "season_type": "REG",
+            "week": 2
+          },
+          {
+            "rows": 33,
+            "season": 2023,
+            "season_type": "REG",
+            "week": 3
+          },
+          {
+            "rows": 32,
+            "season": 2023,
+            "season_type": "REG",
+            "week": 4
+          },
+          {
+            "rows": 27,
+            "season": 2023,
+            "season_type": "REG",
+            "week": 5
+          },
+          {
+            "rows": 29,
+            "season": 2023,
+            "season_type": "REG",
+            "week": 6
+          },
+          {
+            "rows": 26,
+            "season": 2023,
+            "season_type": "REG",
+            "week": 7
+          },
+          {
+            "rows": 32,
+            "season": 2023,
+            "season_type": "REG",
+            "week": 8
+          },
+          {
+            "rows": 28,
+            "season": 2023,
+            "season_type": "REG",
+            "week": 9
+          },
+          {
+            "rows": 29,
+            "season": 2023,
+            "season_type": "REG",
+            "week": 10
+          },
+          {
+            "rows": 28,
+            "season": 2023,
+            "season_type": "REG",
+            "week": 11
+          },
+          {
+            "rows": 32,
+            "season": 2023,
+            "season_type": "REG",
+            "week": 12
+          },
+          {
+            "rows": 26,
+            "season": 2023,
+            "season_type": "REG",
+            "week": 13
+          },
+          {
+            "rows": 31,
+            "season": 2023,
+            "season_type": "REG",
+            "week": 14
+          },
+          {
+            "rows": 32,
+            "season": 2023,
+            "season_type": "REG",
+            "week": 15
+          },
+          {
+            "rows": 35,
+            "season": 2023,
+            "season_type": "REG",
+            "week": 16
+          },
+          {
+            "rows": 32,
+            "season": 2023,
+            "season_type": "REG",
+            "week": 17
+          },
+          {
+            "rows": 33,
+            "season": 2023,
+            "season_type": "REG",
+            "week": 18
+          },
+          {
+            "rows": 12,
+            "season": 2024,
+            "season_type": "POST",
+            "week": 19
+          },
+          {
+            "rows": 8,
+            "season": 2024,
+            "season_type": "POST",
+            "week": 20
+          },
+          {
+            "rows": 4,
+            "season": 2024,
+            "season_type": "POST",
+            "week": 21
+          },
+          {
+            "rows": 2,
+            "season": 2024,
+            "season_type": "POST",
+            "week": 23
+          },
+          {
+            "rows": 43,
+            "season": 2024,
+            "season_type": "REG",
+            "week": 0
+          },
+          {
+            "rows": 32,
+            "season": 2024,
+            "season_type": "REG",
+            "week": 1
+          },
+          {
+            "rows": 31,
+            "season": 2024,
+            "season_type": "REG",
+            "week": 2
+          },
+          {
+            "rows": 32,
+            "season": 2024,
+            "season_type": "REG",
+            "week": 3
+          },
+          {
+            "rows": 32,
+            "season": 2024,
+            "season_type": "REG",
+            "week": 4
+          },
+          {
+            "rows": 29,
+            "season": 2024,
+            "season_type": "REG",
+            "week": 5
+          },
+          {
+            "rows": 28,
+            "season": 2024,
+            "season_type": "REG",
+            "week": 6
+          },
+          {
+            "rows": 29,
+            "season": 2024,
+            "season_type": "REG",
+            "week": 7
+          },
+          {
+            "rows": 33,
+            "season": 2024,
+            "season_type": "REG",
+            "week": 8
+          },
+          {
+            "rows": 32,
+            "season": 2024,
+            "season_type": "REG",
+            "week": 9
+          },
+          {
+            "rows": 28,
+            "season": 2024,
+            "season_type": "REG",
+            "week": 10
+          },
+          {
+            "rows": 28,
+            "season": 2024,
+            "season_type": "REG",
+            "week": 11
+          },
+          {
+            "rows": 26,
+            "season": 2024,
+            "season_type": "REG",
+            "week": 12
+          },
+          {
+            "rows": 32,
+            "season": 2024,
+            "season_type": "REG",
+            "week": 13
+          },
+          {
+            "rows": 27,
+            "season": 2024,
+            "season_type": "REG",
+            "week": 14
+          },
+          {
+            "rows": 32,
+            "season": 2024,
+            "season_type": "REG",
+            "week": 15
+          },
+          {
+            "rows": 31,
+            "season": 2024,
+            "season_type": "REG",
+            "week": 16
+          },
+          {
+            "rows": 32,
+            "season": 2024,
+            "season_type": "REG",
+            "week": 17
+          },
+          {
+            "rows": 31,
+            "season": 2024,
+            "season_type": "REG",
+            "week": 18
+          },
+          {
+            "rows": 12,
+            "season": 2025,
+            "season_type": "POST",
+            "week": 19
+          },
+          {
+            "rows": 8,
+            "season": 2025,
+            "season_type": "POST",
+            "week": 20
+          },
+          {
+            "rows": 4,
+            "season": 2025,
+            "season_type": "POST",
+            "week": 21
+          },
+          {
+            "rows": 2,
+            "season": 2025,
+            "season_type": "POST",
+            "week": 23
+          },
+          {
+            "rows": 42,
+            "season": 2025,
+            "season_type": "REG",
+            "week": 0
+          },
+          {
+            "rows": 32,
+            "season": 2025,
+            "season_type": "REG",
+            "week": 1
+          },
+          {
+            "rows": 31,
+            "season": 2025,
+            "season_type": "REG",
+            "week": 2
+          },
+          {
+            "rows": 32,
+            "season": 2025,
+            "season_type": "REG",
+            "week": 3
+          },
+          {
+            "rows": 32,
+            "season": 2025,
+            "season_type": "REG",
+            "week": 4
+          },
+          {
+            "rows": 28,
+            "season": 2025,
+            "season_type": "REG",
+            "week": 5
+          },
+          {
+            "rows": 31,
+            "season": 2025,
+            "season_type": "REG",
+            "week": 6
+          },
+          {
+            "rows": 30,
+            "season": 2025,
+            "season_type": "REG",
+            "week": 7
+          },
+          {
+            "rows": 27,
+            "season": 2025,
+            "season_type": "REG",
+            "week": 8
+          },
+          {
+            "rows": 28,
+            "season": 2025,
+            "season_type": "REG",
+            "week": 9
+          },
+          {
+            "rows": 26,
+            "season": 2025,
+            "season_type": "REG",
+            "week": 10
+          },
+          {
+            "rows": 31,
+            "season": 2025,
+            "season_type": "REG",
+            "week": 11
+          },
+          {
+            "rows": 29,
+            "season": 2025,
+            "season_type": "REG",
+            "week": 12
+          },
+          {
+            "rows": 32,
+            "season": 2025,
+            "season_type": "REG",
+            "week": 13
+          },
+          {
+            "rows": 28,
+            "season": 2025,
+            "season_type": "REG",
+            "week": 14
+          },
+          {
+            "rows": 31,
+            "season": 2025,
+            "season_type": "REG",
+            "week": 15
+          },
+          {
+            "rows": 27,
+            "season": 2025,
+            "season_type": "REG",
+            "week": 16
+          },
+          {
+            "rows": 32,
+            "season": 2025,
+            "season_type": "REG",
+            "week": 17
+          },
+          {
+            "rows": 30,
+            "season": 2025,
+            "season_type": "REG",
+            "week": 18
+          },
+          {
+            "rows": 37,
+            "season": 2026,
+            "season_type": "REG",
+            "week": 0
+          },
+          {
+            "rows": 32,
+            "season": 2026,
+            "season_type": "REG",
+            "week": 1
+          },
+          {
+            "rows": 34,
+            "season": 2026,
+            "season_type": "REG",
+            "week": 2
+          },
+          {
+            "rows": 32,
+            "season": 2026,
+            "season_type": "REG",
+            "week": 3
+          },
+          {
+            "rows": 32,
+            "season": 2026,
+            "season_type": "REG",
+            "week": 4
+          },
+          {
+            "rows": 31,
+            "season": 2026,
+            "season_type": "REG",
+            "week": 5
+          },
+          {
+            "rows": 2,
+            "season": 2026,
+            "season_type": "REG",
+            "week": 6
+          }
+        ]
+      },
+      "headers": {
+        "Date": "Fri, 16 Oct 2026 21:53:40 GMT",
+        "ETag": "\"0x8DF2B7D4A684474\"",
+        "Last-Modified": "Fri, 16 Oct 2026 12:02:02 GMT"
+      },
+      "kind": "ngs",
+      "lineage": "nflverse compilation of NFL NGS summaries; not original tracking",
+      "name": "ngs_passing.csv.gz",
+      "raw_key": "tracks/nfl/raw/nflverse/nextgen_stats/12a66e1d30bb9cfe48e5b85decfd5dca31fad63f4b637be031df9048497f695c/ngs_passing.csv.gz",
+      "sha256": "12a66e1d30bb9cfe48e5b85decfd5dca31fad63f4b637be031df9048497f695c",
+      "source_asset_id": 647204647,
+      "source_updated_at": "2026-10-16T12:02:03Z",
+      "source_url": "https://github.com/nflverse/nflverse-data/releases/download/nextgen_stats/ngs_passing.csv.gz",
+      "status": "downloaded"
+    },
+    {
+      "derived_key": "tracks/nfl/derived/nfl-official-injuries/20261016T215339Z-af3efcca00/rows.jsonl.gz",
+      "kind": "nfl_injuries",
+      "player_identity_join_validated": false,
+      "receipt": {
+        "bytes": 394522,
+        "capture_vintage": "2026-10-16T21:53:40Z",
+        "captured_at": "2026-10-16T21:53:41Z",
+        "discovered_from": null,
+        "historical_available_at": null,
+        "html_title": "Official NFL Injury Report for Players - Week 6 of the 2026 Season | NFL.com",
+        "kind": "injuries",
+        "point_in_time_approved": false,
+        "raw_key": "tracks/nfl/raw/nfl-official-current/objects/f55fc208ae781c480a50bd45a4bcf20e1f42f72e4a00895324723c1b555a5712.html.gz",
+        "run_id": "20261016T215339Z-af3efcca00",
+        "sha256": "f55fc208ae781c480a50bd45a4bcf20e1f42f72e4a00895324723c1b555a5712",
+        "source_etag": null,
+        "source_http_date": "Fri, 16 Oct 2026 21:53:41 GMT",
+        "source_last_modified": null,
+        "status": "downloaded",
+        "table_count": 28,
+        "url": "https://www.nfl.com/injuries/league/2026/reg6"
+      },
+      "rejected": [],
+      "rows": 358,
+      "source_publication_time": null,
+      "source_requests": 2,
+      "status": "captured_and_extracted"
+    },
+    {
+      "bytes": 1014873,
+      "captured_at": "2026-10-16T21:53:42Z",
+      "coverage": {
+        "all_games_or_players_complete": false,
+        "current_regular_week_counts": {
+          "1": 74,
+          "2": 69,
+          "3": 75,
+          "4": 75,
+          "5": 71,
+          "6": 5
+        },
+        "duplicate_identity_rows": 0,
+        "granularity": "Player-week and season aggregates, not tracking trajectories",
+        "historical_point_in_time_approved": false,
+        "latest_current_regular_week": 6,
+        "missing_player_ids": 0,
+        "rows": 15218,
+        "season_max": 2026,
+        "season_min": 2016,
+        "season_type_week_counts": [
+          {
+            "rows": 24,
+            "season": 2016,
+            "season_type": "POST",
+            "week": 18
+          },
+          {
+            "rows": 22,
+            "season": 2016,
+            "season_type": "POST",
+            "week": 19
+          },
+          {
+            "rows": 13,
+            "season": 2016,
+            "season_type": "POST",
+            "week": 20
+          },
+          {
+            "rows": 7,
+            "season": 2016,
+            "season_type": "POST",
+            "week": 22
+          },
+          {
+            "rows": 132,
+            "season": 2016,
+            "season_type": "REG",
+            "week": 0
+          },
+          {
+            "rows": 91,
+            "season": 2016,
+            "season_type": "REG",
+            "week": 1
+          },
+          {
+            "rows": 105,
+            "season": 2016,
+            "season_type": "REG",
+            "week": 2
+          },
+          {
+            "rows": 85,
+            "season": 2016,
+            "season_type": "REG",
+            "week": 3
+          },
+          {
+            "rows": 85,
+            "season": 2016,
+            "season_type": "REG",
+            "week": 4
+          },
+          {
+            "rows": 72,
+            "season": 2016,
+            "season_type": "REG",
+            "week": 5
+          },
+          {
+            "rows": 85,
+            "season": 2016,
+            "season_type": "REG",
+            "week": 6
+          },
+          {
+            "rows": 78,
+            "season": 2016,
+            "season_type": "REG",
+            "week": 7
+          },
+          {
+            "rows": 80,
+            "season": 2016,
+            "season_type": "REG",
+            "week": 8
+          },
+          {
+            "rows": 74,
+            "season": 2016,
+            "season_type": "REG",
+            "week": 9
+          },
+          {
+            "rows": 77,
+            "season": 2016,
+            "season_type": "REG",
+            "week": 10
+          },
+          {
+            "rows": 79,
+            "season": 2016,
+            "season_type": "REG",
+            "week": 11
+          },
+          {
+            "rows": 82,
+            "season": 2016,
+            "season_type": "REG",
+            "week": 12
+          },
+          {
+            "rows": 78,
+            "season": 2016,
+            "season_type": "REG",
+            "week": 13
+          },
+          {
+            "rows": 82,
+            "season": 2016,
+            "season_type": "REG",
+            "week": 14
+          },
+          {
+            "rows": 75,
+            "season": 2016,
+            "season_type": "REG",
+            "week": 15
+          },
+          {
+            "rows": 90,
+            "season": 2016,
+            "season_type": "REG",
+            "week": 16
+          },
+          {
+            "rows": 85,
+            "season": 2016,
+            "season_type": "REG",
+            "week": 17
+          },
+          {
+            "rows": 18,
+            "season": 2017,
+            "season_type": "POST",
+            "week": 18
+          },
+          {
+            "rows": 23,
+            "season": 2017,
+            "season_type": "POST",
+            "week": 19
+          },
+          {
+            "rows": 10,
+            "season": 2017,
+            "season_type": "POST",
+            "week": 20
+          },
+          {
+            "rows": 7,
+            "season": 2017,
+            "season_type": "POST",
+            "week": 22
+          },
+          {
+            "rows": 124,
+            "season": 2017,
+            "season_type": "REG",
+            "week": 0
+          },
+          {
+            "rows": 72,
+            "season": 2017,
+            "season_type": "REG",
+            "week": 1
+          },
+          {
+            "rows": 79,
+            "season": 2017,
+            "season_type": "REG",
+            "week": 2
+          },
+          {
+            "rows": 81,
+            "season": 2017,
+            "season_type": "REG",
+            "week": 3
+          },
+          {
+            "rows": 87,
+            "season": 2017,
+            "season_type": "REG",
+            "week": 4
+          },
+          {
+            "rows": 67,
+            "season": 2017,
+            "season_type": "REG",
+            "week": 5
+          },
+          {
+            "rows": 66,
+            "season": 2017,
+            "season_type": "REG",
+            "week": 6
+          },
+          {
+            "rows": 69,
+            "season": 2017,
+            "season_type": "REG",
+            "week": 7
+          },
+          {
+            "rows": 65,
+            "season": 2017,
+            "season_type": "REG",
+            "week": 8
+          },
+          {
+            "rows": 61,
+            "season": 2017,
+            "season_type": "REG",
+            "week": 9
+          },
+          {
+            "rows": 71,
+            "season": 2017,
+            "season_type": "REG",
+            "week": 10
+          },
+          {
+            "rows": 72,
+            "season": 2017,
+            "season_type": "REG",
+            "week": 11
+          },
+          {
+            "rows": 70,
+            "season": 2017,
+            "season_type": "REG",
+            "week": 12
+          },
+          {
+            "rows": 74,
+            "season": 2017,
+            "season_type": "REG",
+            "week": 13
+          },
+          {
+            "rows": 81,
+            "season": 2017,
+            "season_type": "REG",
+            "week": 14
+          },
+          {
+            "rows": 73,
+            "season": 2017,
+            "season_type": "REG",
+            "week": 15
+          },
+          {
+            "rows": 78,
+            "season": 2017,
+            "season_type": "REG",
+            "week": 16
+          },
+          {
+            "rows": 74,
+            "season": 2017,
+            "season_type": "REG",
+            "week": 17
+          },
+          {
+            "rows": 22,
+            "season": 2018,
+            "season_type": "POST",
+            "week": 18
+          },
+          {
+            "rows": 22,
+            "season": 2018,
+            "season_type": "POST",
+            "week": 19
+          },
+          {
+            "rows": 10,
+            "season": 2018,
+            "season_type": "POST",
+            "week": 20
+          },
+          {
+            "rows": 6,
+            "season": 2018,
+            "season_type": "POST",
+            "week": 22
+          },
+          {
+            "rows": 125,
+            "season": 2018,
+            "season_type": "REG",
+            "week": 0
+          },
+          {
+            "rows": 83,
+            "season": 2018,
+            "season_type": "REG",
+            "week": 1
+          },
+          {
+            "rows": 81,
+            "season": 2018,
+            "season_type": "REG",
+            "week": 2
+          },
+          {
+            "rows": 80,
+            "season": 2018,
+            "season_type": "REG",
+            "week": 3
+          },
+          {
+            "rows": 86,
+            "season": 2018,
+            "season_type": "REG",
+            "week": 4
+          },
+          {
+            "rows": 75,
+            "season": 2018,
+            "season_type": "REG",
+            "week": 5
+          },
+          {
+            "rows": 74,
+            "season": 2018,
+            "season_type": "REG",
+            "week": 6
+          },
+          {
+            "rows": 66,
+            "season": 2018,
+            "season_type": "REG",
+            "week": 7
+          },
+          {
+            "rows": 72,
+            "season": 2018,
+            "season_type": "REG",
+            "week": 8
+          },
+          {
+            "rows": 62,
+            "season": 2018,
+            "season_type": "REG",
+            "week": 9
+          },
+          {
+            "rows": 59,
+            "season": 2018,
+            "season_type": "REG",
+            "week": 10
+          },
+          {
+            "rows": 61,
+            "season": 2018,
+            "season_type": "REG",
+            "week": 11
+          },
+          {
+            "rows": 63,
+            "season": 2018,
+            "season_type": "REG",
+            "week": 12
+          },
+          {
+            "rows": 77,
+            "season": 2018,
+            "season_type": "REG",
+            "week": 13
+          },
+          {
+            "rows": 77,
+            "season": 2018,
+            "season_type": "REG",
+            "week": 14
+          },
+          {
+            "rows": 66,
+            "season": 2018,
+            "season_type": "REG",
+            "week": 15
+          },
+          {
+            "rows": 75,
+            "season": 2018,
+            "season_type": "REG",
+            "week": 16
+          },
+          {
+            "rows": 77,
+            "season": 2018,
+            "season_type": "REG",
+            "week": 17
+          },
+          {
+            "rows": 17,
+            "season": 2019,
+            "season_type": "POST",
+            "week": 18
+          },
+          {
+            "rows": 19,
+            "season": 2019,
+            "season_type": "POST",
+            "week": 19
+          },
+          {
+            "rows": 7,
+            "season": 2019,
+            "season_type": "POST",
+            "week": 20
+          },
+          {
+            "rows": 6,
+            "season": 2019,
+            "season_type": "POST",
+            "week": 22
+          },
+          {
+            "rows": 125,
+            "season": 2019,
+            "season_type": "REG",
+            "week": 0
+          },
+          {
+            "rows": 84,
+            "season": 2019,
+            "season_type": "REG",
+            "week": 1
+          },
+          {
+            "rows": 80,
+            "season": 2019,
+            "season_type": "REG",
+            "week": 2
+          },
+          {
+            "rows": 85,
+            "season": 2019,
+            "season_type": "REG",
+            "week": 3
+          },
+          {
+            "rows": 75,
+            "season": 2019,
+            "season_type": "REG",
+            "week": 4
+          },
+          {
+            "rows": 58,
+            "season": 2019,
+            "season_type": "REG",
+            "week": 5
+          },
+          {
+            "rows": 70,
+            "season": 2019,
+            "season_type": "REG",
+            "week": 6
+          },
+          {
+            "rows": 70,
+            "season": 2019,
+            "season_type": "REG",
+            "week": 7
+          },
+          {
+            "rows": 74,
+            "season": 2019,
+            "season_type": "REG",
+            "week": 8
+          },
+          {
+            "rows": 70,
+            "season": 2019,
+            "season_type": "REG",
+            "week": 9
+          },
+          {
+            "rows": 67,
+            "season": 2019,
+            "season_type": "REG",
+            "week": 10
+          },
+          {
+            "rows": 70,
+            "season": 2019,
+            "season_type": "REG",
+            "week": 11
+          },
+          {
+            "rows": 61,
+            "season": 2019,
+            "season_type": "REG",
+            "week": 12
+          },
+          {
+            "rows": 76,
+            "season": 2019,
+            "season_type": "REG",
+            "week": 13
+          },
+          {
+            "rows": 76,
+            "season": 2019,
+            "season_type": "REG",
+            "week": 14
+          },
+          {
+            "rows": 71,
+            "season": 2019,
+            "season_type": "REG",
+            "week": 15
+          },
+          {
+            "rows": 73,
+            "season": 2019,
+            "season_type": "REG",
+            "week": 16
+          },
+          {
+            "rows": 84,
+            "season": 2019,
+            "season_type": "REG",
+            "week": 17
+          },
+          {
+            "rows": 31,
+            "season": 2020,
+            "season_type": "POST",
+            "week": 18
+          },
+          {
+            "rows": 20,
+            "season": 2020,
+            "season_type": "POST",
+            "week": 19
+          },
+          {
+            "rows": 12,
+            "season": 2020,
+            "season_type": "POST",
+            "week": 20
+          },
+          {
+            "rows": 5,
+            "season": 2020,
+            "season_type": "POST",
+            "week": 22
+          },
+          {
+            "rows": 132,
+            "season": 2020,
+            "season_type": "REG",
+            "week": 0
+          },
+          {
+            "rows": 88,
+            "season": 2020,
+            "season_type": "REG",
+            "week": 1
+          },
+          {
+            "rows": 86,
+            "season": 2020,
+            "season_type": "REG",
+            "week": 2
+          },
+          {
+            "rows": 76,
+            "season": 2020,
+            "season_type": "REG",
+            "week": 3
+          },
+          {
+            "rows": 80,
+            "season": 2020,
+            "season_type": "REG",
+            "week": 4
+          },
+          {
+            "rows": 70,
+            "season": 2020,
+            "season_type": "REG",
+            "week": 5
+          },
+          {
+            "rows": 64,
+            "season": 2020,
+            "season_type": "REG",
+            "week": 6
+          },
+          {
+            "rows": 69,
+            "season": 2020,
+            "season_type": "REG",
+            "week": 7
+          },
+          {
+            "rows": 66,
+            "season": 2020,
+            "season_type": "REG",
+            "week": 8
+          },
+          {
+            "rows": 73,
+            "season": 2020,
+            "season_type": "REG",
+            "week": 9
+          },
+          {
+            "rows": 79,
+            "season": 2020,
+            "season_type": "REG",
+            "week": 10
+          },
+          {
+            "rows": 79,
+            "season": 2020,
+            "season_type": "REG",
+            "week": 11
+          },
+          {
+            "rows": 82,
+            "season": 2020,
+            "season_type": "REG",
+            "week": 12
+          },
+          {
+            "rows": 81,
+            "season": 2020,
+            "season_type": "REG",
+            "week": 13
+          },
+          {
+            "rows": 81,
+            "season": 2020,
+            "season_type": "REG",
+            "week": 14
+          },
+          {
+            "rows": 78,
+            "season": 2020,
+            "season_type": "REG",
+            "week": 15
+          },
+          {
+            "rows": 89,
+            "season": 2020,
+            "season_type": "REG",
+            "week": 16
+          },
+          {
+            "rows": 79,
+            "season": 2020,
+            "season_type": "REG",
+            "week": 17
+          },
+          {
+            "rows": 32,
+            "season": 2021,
+            "season_type": "POST",
+            "week": 19
+          },
+          {
+            "rows": 20,
+            "season": 2021,
+            "season_type": "POST",
+            "week": 20
+          },
+          {
+            "rows": 12,
+            "season": 2021,
+            "season_type": "POST",
+            "week": 21
+          },
+          {
+            "rows": 6,
+            "season": 2021,
+            "season_type": "POST",
+            "week": 23
+          },
+          {
+            "rows": 127,
+            "season": 2021,
+            "season_type": "REG",
+            "week": 0
+          },
+          {
+            "rows": 88,
+            "season": 2021,
+            "season_type": "REG",
+            "week": 1
+          },
+          {
+            "rows": 75,
+            "season": 2021,
+            "season_type": "REG",
+            "week": 2
+          },
+          {
+            "rows": 81,
+            "season": 2021,
+            "season_type": "REG",
+            "week": 3
+          },
+          {
+            "rows": 89,
+            "season": 2021,
+            "season_type": "REG",
+            "week": 4
+          },
+          {
+            "rows": 76,
+            "season": 2021,
+            "season_type": "REG",
+            "week": 5
+          },
+          {
+            "rows": 80,
+            "season": 2021,
+            "season_type": "REG",
+            "week": 6
+          },
+          {
+            "rows": 65,
+            "season": 2021,
+            "season_type": "REG",
+            "week": 7
+          },
+          {
+            "rows": 70,
+            "season": 2021,
+            "season_type": "REG",
+            "week": 8
+          },
+          {
+            "rows": 72,
+            "season": 2021,
+            "season_type": "REG",
+            "week": 9
+          },
+          {
+            "rows": 69,
+            "season": 2021,
+            "season_type": "REG",
+            "week": 10
+          },
+          {
+            "rows": 75,
+            "season": 2021,
+            "season_type": "REG",
+            "week": 11
+          },
+          {
+            "rows": 73,
+            "season": 2021,
+            "season_type": "REG",
+            "week": 12
+          },
+          {
+            "rows": 74,
+            "season": 2021,
+            "season_type": "REG",
+            "week": 13
+          },
+          {
+            "rows": 81,
+            "season": 2021,
+            "season_type": "REG",
+            "week": 14
+          },
+          {
+            "rows": 73,
+            "season": 2021,
+            "season_type": "REG",
+            "week": 15
+          },
+          {
+            "rows": 79,
+            "season": 2021,
+            "season_type": "REG",
+            "week": 16
+          },
+          {
+            "rows": 79,
+            "season": 2021,
+            "season_type": "REG",
+            "week": 17
+          },
+          {
+            "rows": 79,
+            "season": 2021,
+            "season_type": "REG",
+            "week": 18
+          },
+          {
+            "rows": 39,
+            "season": 2022,
+            "season_type": "POST",
+            "week": 19
+          },
+          {
+            "rows": 18,
+            "season": 2022,
+            "season_type": "POST",
+            "week": 20
+          },
+          {
+            "rows": 9,
+            "season": 2022,
+            "season_type": "POST",
+            "week": 21
+          },
+          {
+            "rows": 5,
+            "season": 2022,
+            "season_type": "POST",
+            "week": 23
+          },
+          {
+            "rows": 122,
+            "season": 2022,
+            "season_type": "REG",
+            "week": 0
+          },
+          {
+            "rows": 72,
+            "season": 2022,
+            "season_type": "REG",
+            "week": 1
+          },
+          {
+            "rows": 78,
+            "season": 2022,
+            "season_type": "REG",
+            "week": 2
+          },
+          {
+            "rows": 79,
+            "season": 2022,
+            "season_type": "REG",
+            "week": 3
+          },
+          {
+            "rows": 73,
+            "season": 2022,
+            "season_type": "REG",
+            "week": 4
+          },
+          {
+            "rows": 80,
+            "season": 2022,
+            "season_type": "REG",
+            "week": 5
+          },
+          {
+            "rows": 69,
+            "season": 2022,
+            "season_type": "REG",
+            "week": 6
+          },
+          {
+            "rows": 63,
+            "season": 2022,
+            "season_type": "REG",
+            "week": 7
+          },
+          {
+            "rows": 69,
+            "season": 2022,
+            "season_type": "REG",
+            "week": 8
+          },
+          {
+            "rows": 60,
+            "season": 2022,
+            "season_type": "REG",
+            "week": 9
+          },
+          {
+            "rows": 61,
+            "season": 2022,
+            "season_type": "REG",
+            "week": 10
+          },
+          {
+            "rows": 61,
+            "season": 2022,
+            "season_type": "REG",
+            "week": 11
+          },
+          {
+            "rows": 73,
+            "season": 2022,
+            "season_type": "REG",
+            "week": 12
+          },
+          {
+            "rows": 74,
+            "season": 2022,
+            "season_type": "REG",
+            "week": 13
+          },
+          {
+            "rows": 68,
+            "season": 2022,
+            "season_type": "REG",
+            "week": 14
+          },
+          {
+            "rows": 75,
+            "season": 2022,
+            "season_type": "REG",
+            "week": 15
+          },
+          {
+            "rows": 73,
+            "season": 2022,
+            "season_type": "REG",
+            "week": 16
+          },
+          {
+            "rows": 67,
+            "season": 2022,
+            "season_type": "REG",
+            "week": 17
+          },
+          {
+            "rows": 78,
+            "season": 2022,
+            "season_type": "REG",
+            "week": 18
+          },
+          {
+            "rows": 30,
+            "season": 2023,
+            "season_type": "POST",
+            "week": 19
+          },
+          {
+            "rows": 17,
+            "season": 2023,
+            "season_type": "POST",
+            "week": 20
+          },
+          {
+            "rows": 9,
+            "season": 2023,
+            "season_type": "POST",
+            "week": 21
+          },
+          {
+            "rows": 7,
+            "season": 2023,
+            "season_type": "POST",
+            "week": 23
+          },
+          {
+            "rows": 115,
+            "season": 2023,
+            "season_type": "REG",
+            "week": 0
+          },
+          {
+            "rows": 79,
+            "season": 2023,
+            "season_type": "REG",
+            "week": 1
+          },
+          {
+            "rows": 85,
+            "season": 2023,
+            "season_type": "REG",
+            "week": 2
+          },
+          {
+            "rows": 84,
+            "season": 2023,
+            "season_type": "REG",
+            "week": 3
+          },
+          {
+            "rows": 66,
+            "season": 2023,
+            "season_type": "REG",
+            "week": 4
+          },
+          {
+            "rows": 67,
+            "season": 2023,
+            "season_type": "REG",
+            "week": 5
+          },
+          {
+            "rows": 69,
+            "season": 2023,
+            "season_type": "REG",
+            "week": 6
+          },
+          {
+            "rows": 68,
+            "season": 2023,
+            "season_type": "REG",
+            "week": 7
+          },
+          {
+            "rows": 76,
+            "season": 2023,
+            "season_type": "REG",
+            "week": 8
+          },
+          {
+            "rows": 68,
+            "season": 2023,
+            "season_type": "REG",
+            "week": 9
+          },
+          {
+            "rows": 60,
+            "season": 2023,
+            "season_type": "REG",
+            "week": 10
+          },
+          {
+            "rows": 67,
+            "season": 2023,
+            "season_type": "REG",
+            "week": 11
+          },
+          {
+            "rows": 80,
+            "season": 2023,
+            "season_type": "REG",
+            "week": 12
+          },
+          {
+            "rows": 62,
+            "season": 2023,
+            "season_type": "REG",
+            "week": 13
+          },
+          {
+            "rows": 73,
+            "season": 2023,
+            "season_type": "REG",
+            "week": 14
+          },
+          {
+            "rows": 72,
+            "season": 2023,
+            "season_type": "REG",
+            "week": 15
+          },
+          {
+            "rows": 83,
+            "season": 2023,
+            "season_type": "REG",
+            "week": 16
+          },
+          {
+            "rows": 72,
+            "season": 2023,
+            "season_type": "REG",
+            "week": 17
+          },
+          {
+            "rows": 64,
+            "season": 2023,
+            "season_type": "REG",
+            "week": 18
+          },
+          {
+            "rows": 20,
+            "season": 2024,
+            "season_type": "POST",
+            "week": 19
+          },
+          {
+            "rows": 18,
+            "season": 2024,
+            "season_type": "POST",
+            "week": 20
+          },
+          {
+            "rows": 9,
+            "season": 2024,
+            "season_type": "POST",
+            "week": 21
+          },
+          {
+            "rows": 6,
+            "season": 2024,
+            "season_type": "POST",
+            "week": 23
+          },
+          {
+            "rows": 129,
+            "season": 2024,
+            "season_type": "REG",
+            "week": 0
+          },
+          {
+            "rows": 66,
+            "season": 2024,
+            "season_type": "REG",
+            "week": 1
+          },
+          {
+            "rows": 57,
+            "season": 2024,
+            "season_type": "REG",
+            "week": 2
+          },
+          {
+            "rows": 76,
+            "season": 2024,
+            "season_type": "REG",
+            "week": 3
+          },
+          {
+            "rows": 69,
+            "season": 2024,
+            "season_type": "REG",
+            "week": 4
+          },
+          {
+            "rows": 72,
+            "season": 2024,
+            "season_type": "REG",
+            "week": 5
+          },
+          {
+            "rows": 64,
+            "season": 2024,
+            "season_type": "REG",
+            "week": 6
+          },
+          {
+            "rows": 66,
+            "season": 2024,
+            "season_type": "REG",
+            "week": 7
+          },
+          {
+            "rows": 75,
+            "season": 2024,
+            "season_type": "REG",
+            "week": 8
+          },
+          {
+            "rows": 66,
+            "season": 2024,
+            "season_type": "REG",
+            "week": 9
+          },
+          {
+            "rows": 62,
+            "season": 2024,
+            "season_type": "REG",
+            "week": 10
+          },
+          {
+            "rows": 63,
+            "season": 2024,
+            "season_type": "REG",
+            "week": 11
+          },
+          {
+            "rows": 63,
+            "season": 2024,
+            "season_type": "REG",
+            "week": 12
+          },
+          {
+            "rows": 82,
+            "season": 2024,
+            "season_type": "REG",
+            "week": 13
+          },
+          {
+            "rows": 67,
+            "season": 2024,
+            "season_type": "REG",
+            "week": 14
+          },
+          {
+            "rows": 71,
+            "season": 2024,
+            "season_type": "REG",
+            "week": 15
+          },
+          {
+            "rows": 73,
+            "season": 2024,
+            "season_type": "REG",
+            "week": 16
+          },
+          {
+            "rows": 78,
+            "season": 2024,
+            "season_type": "REG",
+            "week": 17
+          },
+          {
+            "rows": 83,
+            "season": 2024,
+            "season_type": "REG",
+            "week": 18
+          },
+          {
+            "rows": 30,
+            "season": 2025,
+            "season_type": "POST",
+            "week": 19
+          },
+          {
+            "rows": 24,
+            "season": 2025,
+            "season_type": "POST",
+            "week": 20
+          },
+          {
+            "rows": 8,
+            "season": 2025,
+            "season_type": "POST",
+            "week": 21
+          },
+          {
+            "rows": 7,
+            "season": 2025,
+            "season_type": "POST",
+            "week": 23
+          },
+          {
+            "rows": 120,
+            "season": 2025,
+            "season_type": "REG",
+            "week": 0
+          },
+          {
+            "rows": 73,
+            "season": 2025,
+            "season_type": "REG",
+            "week": 1
+          },
+          {
+            "rows": 80,
+            "season": 2025,
+            "season_type": "REG",
+            "week": 2
+          },
+          {
+            "rows": 69,
+            "season": 2025,
+            "season_type": "REG",
+            "week": 3
+          },
+          {
+            "rows": 74,
+            "season": 2025,
+            "season_type": "REG",
+            "week": 4
+          },
+          {
+            "rows": 72,
+            "season": 2025,
+            "season_type": "REG",
+            "week": 5
+          },
+          {
+            "rows": 65,
+            "season": 2025,
+            "season_type": "REG",
+            "week": 6
+          },
+          {
+            "rows": 70,
+            "season": 2025,
+            "season_type": "REG",
+            "week": 7
+          },
+          {
+            "rows": 60,
+            "season": 2025,
+            "season_type": "REG",
+            "week": 8
+          },
+          {
+            "rows": 63,
+            "season": 2025,
+            "season_type": "REG",
+            "week": 9
+          },
+          {
+            "rows": 56,
+            "season": 2025,
+            "season_type": "REG",
+            "week": 10
+          },
+          {
+            "rows": 76,
+            "season": 2025,
+            "season_type": "REG",
+            "week": 11
+          },
+          {
+            "rows": 63,
+            "season": 2025,
+            "season_type": "REG",
+            "week": 12
+          },
+          {
+            "rows": 68,
+            "season": 2025,
+            "season_type": "REG",
+            "week": 13
+          },
+          {
+            "rows": 60,
+            "season": 2025,
+            "season_type": "REG",
+            "week": 14
+          },
+          {
+            "rows": 68,
+            "season": 2025,
+            "season_type": "REG",
+            "week": 15
+          },
+          {
+            "rows": 70,
+            "season": 2025,
+            "season_type": "REG",
+            "week": 16
+          },
+          {
+            "rows": 65,
+            "season": 2025,
+            "season_type": "REG",
+            "week": 17
+          },
+          {
+            "rows": 61,
+            "season": 2025,
+            "season_type": "REG",
+            "week": 18
+          },
+          {
+            "rows": 118,
+            "season": 2026,
+            "season_type": "REG",
+            "week": 0
+          },
+          {
+            "rows": 74,
+            "season": 2026,
+            "season_type": "REG",
+            "week": 1
+          },
+          {
+            "rows": 69,
+            "season": 2026,
+            "season_type": "REG",
+            "week": 2
+          },
+          {
+            "rows": 75,
+            "season": 2026,
+            "season_type": "REG",
+            "week": 3
+          },
+          {
+            "rows": 75,
+            "season": 2026,
+            "season_type": "REG",
+            "week": 4
+          },
+          {
+            "rows": 71,
+            "season": 2026,
+            "season_type": "REG",
+            "week": 5
+          },
+          {
+            "rows": 5,
+            "season": 2026,
+            "season_type": "REG",
+            "week": 6
+          }
+        ]
+      },
+      "headers": {
+        "Date": "Fri, 16 Oct 2026 21:53:41 GMT",
+        "ETag": "\"0x8DF2B7D53B9DB3D\"",
+        "Last-Modified": "Fri, 16 Oct 2026 12:02:18 GMT"
+      },
+      "kind": "ngs",
+      "lineage": "nflverse compilation of NFL NGS summaries; not original tracking",
+      "name": "ngs_receiving.csv.gz",
+      "raw_key": "tracks/nfl/raw/nflverse/nextgen_stats/168773b1a20defb8066acc75db58552b125e108f80b59c168e4b26696adf13b4/ngs_receiving.csv.gz",
+      "sha256": "168773b1a20defb8066acc75db58552b125e108f80b59c168e4b26696adf13b4",
+      "source_asset_id": 647205449,
+      "source_updated_at": "2026-10-16T12:02:18Z",
+      "source_url": "https://github.com/nflverse/nflverse-data/releases/download/nextgen_stats/ngs_receiving.csv.gz",
+      "status": "downloaded"
+    },
+    {
+      "capture_method": "TinyFish public rendered-page extraction; not original PDF",
+      "conference": "Big 12",
+      "current_weekend_rows": 90,
+      "current_weekend_team_games": 12,
+      "derived_key": "tracks/ncaaf/derived/big12-availability/20261016T215339Z-af3efcca00/rows.jsonl.gz",
+      "first_game_date": "2026-09-12",
+      "historical_point_in_time_approved": false,
+      "kind": "ncaa_availability",
+      "last_game_date": "2026-10-17",
+      "observed_at": "2026-10-16T21:46:52.507Z",
+      "player_identity_join_validated": false,
+      "raw_bytes": 45255,
+      "raw_key": "tracks/ncaaf/raw/big12-availability-rendered/objects/a132627fb7f3de836fcc9fbbb99749ee014f523379735ea2142e79aa5cb46492.md.gz",
+      "rejected": [],
+      "rows": 434,
+      "sha256": "a132627fb7f3de836fcc9fbbb99749ee014f523379735ea2142e79aa5cb46492",
+      "source_publication_time": null,
+      "source_url": "https://app.hdintelligence.com/?source=B12&sport=Football&conf=B12&type=archive",
+      "status": "captured_and_extracted",
+      "team_games": 50
+    },
+    {
+      "capture_method": "TinyFish public rendered-page extraction; not original PDF",
+      "conference": "ACC",
+      "historical_point_in_time_approved": false,
+      "kind": "ncaa_availability",
+      "normalization_blocker": "missing_or_changed_headers",
+      "observed_at": "2026-10-16T21:50:09.561Z",
+      "raw_bytes": 83874,
+      "raw_key": "tracks/ncaaf/raw/acc-availability-rendered/objects/40f0d83eb4be5d7dbe70dd7f11c4f61889cfd2f917e4cd57a119352b67e410af.md.gz",
+      "sha256": "40f0d83eb4be5d7dbe70dd7f11c4f61889cfd2f917e4cd57a119352b67e410af",
+      "source_publication_time": null,
+      "source_url": "https://app.hdintelligence.com/?source=ACC&sport=Football&conf=ACC&type=archive",
+      "status": "raw_only"
+    }
+  ],
+  "run_id": "20261016T215339Z-af3efcca00",
+  "started_at": "2026-10-16T21:53:40Z",
+  "status": "completed_with_gaps",
+  "subscription_credits": 0,
+  "version": "sports-edge-lab-ngs-availability-v040"
+}

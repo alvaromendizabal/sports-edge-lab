@@ -48,3 +48,9 @@ S3 evidence: `shared/acquisition/paid/20261016T211526Z-92ef3be742/` contains the
 
 - [Runtime test/heartbeat evidence](status/football39_runtime_log_evidence.json)
 - [Verified S3 progress and availability receipt](status/football39_progress_20261016T2117Z.json)
+
+## Verified progress update — 21:56 UTC
+
+AWS re-described this job as InProgress at 2026-10-16T21:56:33Z with ProcessingStartTime 21:14:53.331 UTC. The saved 21:56:17 UTC progress has **1,822/4,696 historical price checkpoints captured, 2,874 remaining, zero failed requests**, and 54,660 known subscription credits used. No terminal outcome is claimed. [Saved progress](status/football39_progress_20261016T2156Z.json).
+
+A separate user-authorized public NGS/availability job v040 has completed. It did not alter this job's scope, pacing, quota controls or execution. See [actual v040 results](NGS_AVAILABILITY_V040.md).

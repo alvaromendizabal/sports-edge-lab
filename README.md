@@ -1,6 +1,6 @@
 # Sports Edge Lab
 
-**Latest update:** v011 is terminal. The user-authorized continuous football completion job v039 has launched; the short v038 restart is superseded. [Scope, safeguards and runtime evidence](docs/FOOTBALL_FINISH_V039.md). ACB remains deleted.
+**Latest update — October 16, 21:56 UTC:** public NGS and availability v040 finished with 27,613 NGS rows, 358 NFL injury rows and 434 Big 12 availability rows; ACC raw extraction is saved but normalization is blocked. V039 is still running: 1,822/4,696 historical football price captures, 2,874 remaining, zero failures. [Verified results and remaining work](docs/NGS_AVAILABILITY_V040.md). ACB remains deleted.
 
 
 **Five sports. One reproducible forecasting and market-research platform.**
@@ -54,7 +54,7 @@ Different revisions and statistical families can overlap.
 | Direct CFBD FBS plays and drives | 22,151 plays and 2,888 drives across 124 completed games in Weeks 5–7; every completed FBS schedule game in those windows has plays, drives, team/player box and advanced-stat rows | Latest covered kickoff October 16, 00:00 UTC, corresponding to Thursday evening in the US; downloaded 20:31–20:32 UTC |
 | Current game markets | 24 NFL, 74 NCAAF and 46 NBA events with outcomes; 32 populated player-prop responses across these tracks | Fresh observation 20:22–20:23 UTC; provider quote times remain distinct |
 | Big Ten football availability | 715 normalized player-status rows across 64 team-games; 154 rows across 14 team-games for October 16–17 | Public rendered archive observed October 16; source publication timestamps unavailable |
-| NFL official roster/injury pages | All 32 team roster pages, plus Week 6 injury and schedule pages | Earlier same-day capture; structured extraction and report-time audit remain pending |
+| NFL official roster/injury pages | All 32 team roster pages, plus Week 6 injury and schedule pages | All 32 roster pages retained; v040 extracted 358 Week 6 injury rows at 21:53 UTC; identity/publication-time audit remains pending |
 
 The CFBD job made 21 subscription-quota requests, with no failures, and also
 captured current player usage and three weekly game-weather responses. The
@@ -87,26 +87,12 @@ their own games.
   all 1,294 planned queries. Across that plan, 1,256 responses had records,
   38 were empty and 88,554 summary rows were observed. Zero planned queries
   remain; those totals include reused data.
-- **Historical v011 stop requested after repeated CBBD HTTP 429:** AWS still reported Stopping at 20:44 UTC. At the preserved
-  20:35:20 UTC checkpoint it had 37,443 captures, 70 final request failures and
-  351 retry incidents. The checkpoint is not a final stop-time count. Existing
-  successful payloads and indexes remain available.
-- **Odds-only v037 failed before provider calls:** its worker role lacks
-  SageMaker DescribeProcessingJob permission. Zero API requests/credits were
-  consumed, and its return ZIP was saved. V038 removes this worker-side
-  management API call and instead requires an embedded control-plane receipt
-  proving v011 has terminated. V038 is prepared, not launched while v011 is
-  still Stopping. Its limits are no college-statistics requests, one source
-  request per second, 200,000-credit ceiling, 30-minute application limit and
-  35-minute AWS limit. It requires v011 to be terminal, checks the live quota
-  reserve and stops its provider on 401/402/403/429. Its budget fits within the
-  unused v011 odds ceiling. No resumed historical acquisition is claimed until a successful runtime
-  receipt exists.
+- **Historical v011 stopped:** AWS confirmed terminal Stopped with ProcessingEndTime October 16, 20:49:04 UTC after CBBD rate-limit responses. CBBD is not resumed.
+- **Odds-only v037 failed before provider calls:** its worker lacked a management-plane permission; no paid requests occurred. V038 was prepared but superseded and never launched.
+- **Football v039 is running:** the finite missing-price queue has 4,696 NCAAF requests and zero uncached NFL requests after reconciliation. At 21:56:17 UTC, 1,822 were captured with zero failures and 2,874 remaining. It uses at most 200,000 existing odds credits, zero college-statistics calls and one source request/second, with live quota reserve and denial stops. There is no short application timer. [Scope and safeguards](docs/FOOTBALL_FINISH_V039.md).
+- **NGS/availability v040 finished:** all six selected tasks processed; three current public NGS assets total 27,613 rows from 2016–2026, including the available Week 6 records. Also extracted 358 official NFL injury rows and 434 Big 12 availability rows. ACC remains raw-only because column headers were missing. Zero paid API credits. [Terminal evidence and limitations](docs/NGS_AVAILABILITY_V040.md).
 
-A bounded follow-up is enabled for **2, 3 and 4 p.m. Pacific today** to verify
-AWS termination and launch at most one v038 odds-only job, then check its
-result. It does not restart CBBD. This is a scheduled follow-up, not a claim
-that the historical restart is already running.
+The enabled follow-up monitors v039 only and will record its terminal outcome; it cannot launch v038 or restart a job.
 
 The existing six-hour current snapshot schedule remains configured, with its
 first scheduled execution at **October 17, 03:05 UTC (8:05 p.m. Pacific today)**.
@@ -173,7 +159,3 @@ Win prediction, spread/total distributions and market value are separate questio
 ## Repository and data boundaries
 
 Code, configuration, tests, source catalogs and non-sensitive reports belong here. Raw data, API keys, private receipts containing licensed records and large model artifacts remain outside Git. Upstream attribution and usage conditions travel with each source. The project does not claim a demonstrated betting edge, complete player-prop coverage or a production forecasting system at this acquisition stage.
-
-
-
-

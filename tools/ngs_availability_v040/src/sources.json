@@ -1,0 +1,35 @@
+{
+  "observed_at": "2026-10-16T21:46:29.486Z",
+  "assets": [
+    {
+      "name": "ngs_passing.csv.gz",
+      "size": 602888,
+      "id": 647204647,
+      "updated_at": "2026-10-16T12:02:03Z",
+      "digest": "sha256:12a66e1d30bb9cfe48e5b85decfd5dca31fad63f4b637be031df9048497f695c",
+      "url": "https://github.com/nflverse/nflverse-data/releases/download/nextgen_stats/ngs_passing.csv.gz"
+    },
+    {
+      "name": "ngs_receiving.csv.gz",
+      "size": 1014873,
+      "id": 647205449,
+      "updated_at": "2026-10-16T12:02:18Z",
+      "digest": "sha256:168773b1a20defb8066acc75db58552b125e108f80b59c168e4b26696adf13b4",
+      "url": "https://github.com/nflverse/nflverse-data/releases/download/nextgen_stats/ngs_receiving.csv.gz"
+    },
+    {
+      "name": "ngs_rushing.csv.gz",
+      "size": 335650,
+      "id": 647205040,
+      "updated_at": "2026-10-16T12:02:11Z",
+      "digest": "sha256:c0309c49dc7685a5f3d11260d9159ec73cf465771d9f6d35433f65928e88da5a",
+      "url": "https://github.com/nflverse/nflverse-data/releases/download/nextgen_stats/ngs_rushing.csv.gz"
+    }
+  ],
+  "gaps": [
+    "SEC public landing yielded no report links",
+    "Big Ten discovery URL blocked; retained earlier valid capture",
+    "ACC and Big 12 current embedded pages returned empty rendered content"
+  ],
+  "method": "Public GitHub release assets and official report sources; no paid API calls"
+}

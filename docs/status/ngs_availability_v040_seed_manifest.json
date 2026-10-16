@@ -1,0 +1,20 @@
+[
+  {
+    "source_url": "https://app.hdintelligence.com/?source=B12&sport=Football&conf=B12&type=archive",
+    "observed_at": "2026-10-16T21:46:52.507Z",
+    "capture_method": "TinyFish public rendered-page extraction; not original PDF",
+    "conference": "Big 12",
+    "source_publication_time": null,
+    "sha256": "a132627fb7f3de836fcc9fbbb99749ee014f523379735ea2142e79aa5cb46492",
+    "raw_bytes": 45255
+  },
+  {
+    "source_url": "https://app.hdintelligence.com/?source=ACC&sport=Football&conf=ACC&type=archive",
+    "observed_at": "2026-10-16T21:50:09.561Z",
+    "capture_method": "TinyFish public rendered-page extraction; not original PDF",
+    "conference": "ACC",
+    "source_publication_time": null,
+    "sha256": "40f0d83eb4be5d7dbe70dd7f11c4f61889cfd2f917e4cd57a119352b67e410af",
+    "raw_bytes": 83874
+  }
+]
