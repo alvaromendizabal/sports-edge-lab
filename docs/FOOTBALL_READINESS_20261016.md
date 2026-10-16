@@ -82,6 +82,11 @@ their own games.
   unused v011 odds ceiling. No resumed historical acquisition is claimed until a successful runtime
   receipt exists.
 
+A bounded follow-up is enabled for **2, 3 and 4 p.m. Pacific today** to verify
+AWS termination and launch at most one v038 odds-only job, then check its
+result. It does not restart CBBD. This is a scheduled follow-up, not a claim
+that the historical restart is already running.
+
 The existing six-hour current snapshot schedule remains configured, with its
 first scheduled execution at **October 17, 03:05 UTC (8:05 p.m. Pacific today)**.
 It refreshes current odds/stats; it does not continuously refresh every raw

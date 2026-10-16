@@ -25,3 +25,5 @@ Verify runtime tests, quota gate and positive captures. Publish the actual
 execution/result evidence, including any failure or bounded stop. Do not call
 this prepared code an active or completed download. No additional subscription
 or license purchase is part of this restart.
+
+A bounded follow-up is enabled for 2, 3 and 4 p.m. Pacific on October 16, 2026, to perform the guarded restart and verify its outcome. It must not duplicate an existing v038 job.
