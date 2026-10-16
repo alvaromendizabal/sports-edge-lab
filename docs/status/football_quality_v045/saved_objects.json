@@ -1,0 +1,279 @@
+{
+  "status": "success",
+  "stdout": "",
+  "return_value": {
+    "observed_at": "2026-10-16T23:05:34.146792+00:00",
+    "objects": [
+      {
+        "expected": {
+          "bytes": 20820,
+          "key": "tracks/ncaaf/derived/acc-availability-quality-v045/20261016T230312Z-4dd577ff91/rows.jsonl.gz",
+          "rows": 800,
+          "sha256": "2e44d7ea7bf1e69d7fd900c0c634c51c431cec52eac126e61886d893af70ee19"
+        },
+        "head": {
+          "AcceptRanges": "bytes",
+          "LastModified": "2026-10-16T23:03:15+00:00",
+          "ContentLength": 20820,
+          "ETag": "\"984de4d5fedad06d52c9f00d1e7bd81c\"",
+          "ContentType": "application/gzip",
+          "ServerSideEncryption": "AES256",
+          "Metadata": {}
+        }
+      },
+      {
+        "expected": {
+          "bytes": 575,
+          "key": "tracks/ncaaf/derived/acc-availability-quality-v045-quarantine/20261016T230312Z-4dd577ff91/rows.jsonl.gz",
+          "rows": 1,
+          "sha256": "bb03068424440c836c5b02e377f2b4592d607553a2784033578319cf41beffa5"
+        },
+        "head": {
+          "AcceptRanges": "bytes",
+          "LastModified": "2026-10-16T23:03:15+00:00",
+          "ContentLength": 575,
+          "ETag": "\"6e693f12f8a64b9d798988b7ef6ff9f9\"",
+          "ContentType": "application/gzip",
+          "ServerSideEncryption": "AES256",
+          "Metadata": {}
+        }
+      },
+      {
+        "expected": {
+          "bytes": 12852,
+          "key": "tracks/ncaaf/derived/big12-availability-quality-v045/20261016T230312Z-4dd577ff91/rows.jsonl.gz",
+          "rows": 434,
+          "sha256": "5bae26f746174da56e1e611122723a059a1761585e19738efdefa6a0c86883ac"
+        },
+        "head": {
+          "AcceptRanges": "bytes",
+          "LastModified": "2026-10-16T23:03:15+00:00",
+          "ContentLength": 12852,
+          "ETag": "\"55e071cf367a97578e82a96235f6d5ce\"",
+          "ContentType": "application/gzip",
+          "ServerSideEncryption": "AES256",
+          "Metadata": {}
+        }
+      },
+      {
+        "expected": {
+          "bytes": 20,
+          "key": "tracks/ncaaf/derived/big12-availability-quality-v045-quarantine/20261016T230312Z-4dd577ff91/rows.jsonl.gz",
+          "rows": 0,
+          "sha256": "f61f27bd17de546264aa58f40f3aafaac7021e0ef69c17f6b1b4cd7664a037ec"
+        },
+        "head": {
+          "AcceptRanges": "bytes",
+          "LastModified": "2026-10-16T23:03:15+00:00",
+          "ContentLength": 20,
+          "ETag": "\"4a4dd3598707603b3f76a2378a4504aa\"",
+          "ContentType": "application/gzip",
+          "ServerSideEncryption": "AES256",
+          "Metadata": {}
+        }
+      },
+      {
+        "expected": {
+          "bytes": 18930,
+          "key": "tracks/ncaaf/derived/bigten-availability-quality-v045/20261016T230312Z-4dd577ff91/rows.jsonl.gz",
+          "rows": 715,
+          "sha256": "336eff812238e909897889b7b309cd522c9e4b286ead81541a6ec1fae028d8e6"
+        },
+        "head": {
+          "AcceptRanges": "bytes",
+          "LastModified": "2026-10-16T23:03:15+00:00",
+          "ContentLength": 18930,
+          "ETag": "\"e3b2a8961683921b5605c73021ad3cdb\"",
+          "ContentType": "application/gzip",
+          "ServerSideEncryption": "AES256",
+          "Metadata": {}
+        }
+      },
+      {
+        "expected": {
+          "bytes": 20,
+          "key": "tracks/ncaaf/derived/bigten-availability-quality-v045-quarantine/20261016T230312Z-4dd577ff91/rows.jsonl.gz",
+          "rows": 0,
+          "sha256": "f61f27bd17de546264aa58f40f3aafaac7021e0ef69c17f6b1b4cd7664a037ec"
+        },
+        "head": {
+          "AcceptRanges": "bytes",
+          "LastModified": "2026-10-16T23:03:15+00:00",
+          "ContentLength": 20,
+          "ETag": "\"4a4dd3598707603b3f76a2378a4504aa\"",
+          "ContentType": "application/gzip",
+          "ServerSideEncryption": "AES256",
+          "Metadata": {}
+        }
+      },
+      {
+        "expected": {
+          "bytes": 12459,
+          "key": "tracks/ncaaf/derived/sec-availability-quality-v045/20261016T230312Z-4dd577ff91/rows.jsonl.gz",
+          "rows": 453,
+          "sha256": "0094fded2487b5e66df32b0b558b9281f99c4c1298bc7c199d347584e92c4b31"
+        },
+        "head": {
+          "AcceptRanges": "bytes",
+          "LastModified": "2026-10-16T23:03:15+00:00",
+          "ContentLength": 12459,
+          "ETag": "\"a6a61408f470686702403c5b45ea0eac\"",
+          "ContentType": "application/gzip",
+          "ServerSideEncryption": "AES256",
+          "Metadata": {}
+        }
+      },
+      {
+        "expected": {
+          "bytes": 20,
+          "key": "tracks/ncaaf/derived/sec-availability-quality-v045-quarantine/20261016T230312Z-4dd577ff91/rows.jsonl.gz",
+          "rows": 0,
+          "sha256": "f61f27bd17de546264aa58f40f3aafaac7021e0ef69c17f6b1b4cd7664a037ec"
+        },
+        "head": {
+          "AcceptRanges": "bytes",
+          "LastModified": "2026-10-16T23:03:15+00:00",
+          "ContentLength": 20,
+          "ETag": "\"4a4dd3598707603b3f76a2378a4504aa\"",
+          "ContentType": "application/gzip",
+          "ServerSideEncryption": "AES256",
+          "Metadata": {}
+        }
+      },
+      {
+        "expected": {
+          "bytes": 231388,
+          "key": "tracks/nfl/derived/snaps-identity-v045/20261016T230312Z-4dd577ff91/rows.jsonl.gz",
+          "rows": 7463,
+          "sha256": "82a82814120ed8719d78a040b3c36db1c27986cd789f818f065072aaef17e330"
+        },
+        "head": {
+          "AcceptRanges": "bytes",
+          "LastModified": "2026-10-16T23:03:14+00:00",
+          "ContentLength": 231388,
+          "ETag": "\"b3cdf7cdea07530e1ebc3c3de0845ed9\"",
+          "ContentType": "application/gzip",
+          "ServerSideEncryption": "AES256",
+          "Metadata": {}
+        }
+      },
+      {
+        "expected": {
+          "key": "tracks/nfl/raw/nflverse/players/78ccdebe065a691b3a11b2a8920726680af6f7393789da385dcdef51b0be0a47/players.csv.gz",
+          "bytes": 2501827,
+          "sha256": "78ccdebe065a691b3a11b2a8920726680af6f7393789da385dcdef51b0be0a47"
+        },
+        "head": {
+          "AcceptRanges": "bytes",
+          "LastModified": "2026-10-16T23:03:13+00:00",
+          "ContentLength": 2501827,
+          "ETag": "\"801a241683f647643d09e4e322f3ca64\"",
+          "ContentType": "application/gzip",
+          "ServerSideEncryption": "AES256",
+          "Metadata": {}
+        }
+      }
+    ],
+    "job": {
+      "ProcessingInputs": [
+        {
+          "InputName": "code",
+          "AppManaged": false,
+          "S3Input": {
+            "S3Uri": "s3://sagemaker-sports-edge-lab-560403859723-us-west-2/infrastructure/code/football-quality-20261016-v045/",
+            "LocalPath": "/opt/ml/processing/code",
+            "S3DataType": "S3Prefix",
+            "S3InputMode": "File",
+            "S3DataDistributionType": "FullyReplicated"
+          }
+        }
+      ],
+      "ProcessingJobName": "sports-edge-lab-football-quality-20261016-v045",
+      "ProcessingResources": {
+        "ClusterConfig": {
+          "InstanceCount": 1,
+          "InstanceType": "ml.m5.2xlarge",
+          "VolumeSizeInGB": 30
+        }
+      },
+      "StoppingCondition": {
+        "MaxRuntimeInSeconds": 432000
+      },
+      "AppSpecification": {
+        "ImageUri": "246618743249.dkr.ecr.us-west-2.amazonaws.com/sagemaker-scikit-learn:1.9-0",
+        "ContainerEntrypoint": [
+          "python3",
+          "-u",
+          "/opt/ml/processing/code/sports_edge_lab_football_quality_v045_20261016.pyz"
+        ]
+      },
+      "RoleArn": "arn:aws:iam::560403859723:role/SportsEdgeLabProcessingRole",
+      "ProcessingJobArn": "arn:aws:sagemaker:us-west-2:560403859723:processing-job/sports-edge-lab-football-quality-20261016-v045",
+      "ProcessingJobStatus": "Completed",
+      "ProcessingEndTime": "2026-10-16T23:03:26.455000+00:00",
+      "ProcessingStartTime": "2026-10-16T23:02:33.034000+00:00",
+      "LastModifiedTime": "2026-10-16T23:03:59.460000+00:00",
+      "CreationTime": "2026-10-16T23:00:55.028000+00:00"
+    }
+  },
+  "api_calls": [
+    {
+      "service": "s3",
+      "operation": "HeadObject",
+      "status": "success"
+    },
+    {
+      "service": "s3",
+      "operation": "HeadObject",
+      "status": "success"
+    },
+    {
+      "service": "s3",
+      "operation": "HeadObject",
+      "status": "success"
+    },
+    {
+      "service": "s3",
+      "operation": "HeadObject",
+      "status": "success"
+    },
+    {
+      "service": "s3",
+      "operation": "HeadObject",
+      "status": "success"
+    },
+    {
+      "service": "s3",
+      "operation": "HeadObject",
+      "status": "success"
+    },
+    {
+      "service": "s3",
+      "operation": "HeadObject",
+      "status": "success"
+    },
+    {
+      "service": "s3",
+      "operation": "HeadObject",
+      "status": "success"
+    },
+    {
+      "service": "s3",
+      "operation": "HeadObject",
+      "status": "success"
+    },
+    {
+      "service": "s3",
+      "operation": "HeadObject",
+      "status": "success"
+    },
+    {
+      "service": "sagemaker",
+      "operation": "DescribeProcessingJob",
+      "status": "success",
+      "n_items": {
+        "ProcessingInputs": 1
+      }
+    }
+  ]
+}

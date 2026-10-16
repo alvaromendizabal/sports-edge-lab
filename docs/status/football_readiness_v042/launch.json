@@ -1,0 +1,91 @@
+{
+  "status": "success",
+  "stdout": "",
+  "return_value": {
+    "observed_at": "2026-10-16T22:45:32.144228+00:00",
+    "request": {
+      "ProcessingJobName": "sports-edge-lab-football-readiness-20261016-v042",
+      "RoleArn": "arn:aws:iam::560403859723:role/SportsEdgeLabProcessingRole",
+      "AppSpecification": {
+        "ImageUri": "246618743249.dkr.ecr.us-west-2.amazonaws.com/sagemaker-scikit-learn:1.9-0",
+        "ContainerEntrypoint": [
+          "python3",
+          "-u",
+          "/opt/ml/processing/code/sports_edge_lab_football_readiness_v042_20261016.pyz"
+        ]
+      },
+      "ProcessingResources": {
+        "ClusterConfig": {
+          "InstanceCount": 1,
+          "InstanceType": "ml.m5.2xlarge",
+          "VolumeSizeInGB": 30
+        }
+      },
+      "ProcessingInputs": [
+        {
+          "InputName": "code",
+          "AppManaged": false,
+          "S3Input": {
+            "S3Uri": "s3://sagemaker-sports-edge-lab-560403859723-us-west-2/infrastructure/code/football-readiness-20261016-v042/",
+            "LocalPath": "/opt/ml/processing/code",
+            "S3DataType": "S3Prefix",
+            "S3InputMode": "File",
+            "S3DataDistributionType": "FullyReplicated"
+          }
+        }
+      ],
+      "StoppingCondition": {
+        "MaxRuntimeInSeconds": 432000
+      },
+      "Tags": [
+        {
+          "Key": "Project",
+          "Value": "SportsEdgeLab"
+        },
+        {
+          "Key": "Scope",
+          "Value": "football-identities-and-freshness"
+        }
+      ]
+    },
+    "launch": {
+      "ProcessingJobArn": "arn:aws:sagemaker:us-west-2:560403859723:processing-job/sports-edge-lab-football-readiness-20261016-v042"
+    },
+    "preflight": [
+      {
+        "ProcessingJobSummaries": []
+      },
+      {
+        "AcceptRanges": "bytes",
+        "LastModified": "2026-10-16T22:44:37+00:00",
+        "ContentLength": 41079,
+        "ETag": "\"a00c9b2cc6d1bde3c3eefbea2c8790a1\"",
+        "ContentType": "application/x-www-form-urlencoded",
+        "ServerSideEncryption": "AES256",
+        "Metadata": {}
+      }
+    ],
+    "local_tests_passed": 59,
+    "artifact_sha256": "f9a984c642bcaae171708740513b4ff018fb97b1332fedff75d0d83c30e38b48"
+  },
+  "api_calls": [
+    {
+      "service": "sagemaker",
+      "operation": "ListProcessingJobs",
+      "status": "success",
+      "n_items": {
+        "ProcessingJobSummaries": 0
+      }
+    },
+    {
+      "service": "s3",
+      "operation": "HeadObject",
+      "status": "success"
+    },
+    {
+      "service": "sagemaker",
+      "operation": "CreateProcessingJob",
+      "status": "success"
+    }
+  ]
+}

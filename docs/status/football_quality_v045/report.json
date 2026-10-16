@@ -1,0 +1,323 @@
+{
+  "application_runtime_limit_seconds": null,
+  "cbbd_requests": 0,
+  "cfbd_requests": 0,
+  "elapsed_seconds": 2.36,
+  "failures": [],
+  "finished_at": "2026-10-16T23:03:14Z",
+  "odds_credits": 0,
+  "planned_stages": 3,
+  "processed_stages": 3,
+  "provider_stopped": false,
+  "remaining_stages": 0,
+  "results": {
+    "college_quality": {
+      "conferences": {
+        "ACC": {
+          "audit": {
+            "historical_point_in_time_approved": false,
+            "identity_counts": {
+              "exact_normalized_team_name_jersey_unique": 750,
+              "unmatched": 50
+            },
+            "input_rows": 801,
+            "model_ready": false,
+            "prospective_identity_time_candidates": 166,
+            "quarantined_rows": 1,
+            "valid_rows": 800
+          },
+          "quarantine": {
+            "bytes": 575,
+            "key": "tracks/ncaaf/derived/acc-availability-quality-v045-quarantine/20261016T230312Z-4dd577ff91/rows.jsonl.gz",
+            "rows": 1,
+            "sha256": "bb03068424440c836c5b02e377f2b4592d607553a2784033578319cf41beffa5"
+          },
+          "source_input": {
+            "bytes": 17629,
+            "key": "tracks/ncaaf/derived/acc-availability-identity-v042/20261016T224648Z-7ab37da393/rows.jsonl.gz",
+            "rows": 801,
+            "sha256": "2d5f702804b35b9d84c1b44be6bb9c198f1b5c616765870c31a8874d9c2b2678"
+          },
+          "valid": {
+            "bytes": 20820,
+            "key": "tracks/ncaaf/derived/acc-availability-quality-v045/20261016T230312Z-4dd577ff91/rows.jsonl.gz",
+            "rows": 800,
+            "sha256": "2e44d7ea7bf1e69d7fd900c0c634c51c431cec52eac126e61886d893af70ee19"
+          }
+        },
+        "Big 12": {
+          "audit": {
+            "historical_point_in_time_approved": false,
+            "identity_counts": {
+              "exact_normalized_team_name_jersey_unique": 429,
+              "unmatched": 5
+            },
+            "input_rows": 434,
+            "model_ready": false,
+            "prospective_identity_time_candidates": 89,
+            "quarantined_rows": 0,
+            "valid_rows": 434
+          },
+          "quarantine": {
+            "bytes": 20,
+            "key": "tracks/ncaaf/derived/big12-availability-quality-v045-quarantine/20261016T230312Z-4dd577ff91/rows.jsonl.gz",
+            "rows": 0,
+            "sha256": "f61f27bd17de546264aa58f40f3aafaac7021e0ef69c17f6b1b4cd7664a037ec"
+          },
+          "source_input": {
+            "bytes": 11079,
+            "key": "tracks/ncaaf/derived/big12-availability-identity-v042/20261016T224648Z-7ab37da393/rows.jsonl.gz",
+            "rows": 434,
+            "sha256": "5b88b0932a95ec1e057f8f6acb9423d8d6d0499b5b678bf2badc5dd8dada99ed"
+          },
+          "valid": {
+            "bytes": 12852,
+            "key": "tracks/ncaaf/derived/big12-availability-quality-v045/20261016T230312Z-4dd577ff91/rows.jsonl.gz",
+            "rows": 434,
+            "sha256": "5bae26f746174da56e1e611122723a059a1761585e19738efdefa6a0c86883ac"
+          }
+        },
+        "Big Ten": {
+          "audit": {
+            "historical_point_in_time_approved": false,
+            "identity_counts": {
+              "exact_normalized_team_name_jersey_unique": 677,
+              "unmatched": 38
+            },
+            "input_rows": 715,
+            "model_ready": false,
+            "prospective_identity_time_candidates": 147,
+            "quarantined_rows": 0,
+            "valid_rows": 715
+          },
+          "quarantine": {
+            "bytes": 20,
+            "key": "tracks/ncaaf/derived/bigten-availability-quality-v045-quarantine/20261016T230312Z-4dd577ff91/rows.jsonl.gz",
+            "rows": 0,
+            "sha256": "f61f27bd17de546264aa58f40f3aafaac7021e0ef69c17f6b1b4cd7664a037ec"
+          },
+          "source_input": {
+            "bytes": 16448,
+            "key": "tracks/ncaaf/derived/bigten-availability-identity-v042/20261016T224648Z-7ab37da393/rows.jsonl.gz",
+            "rows": 715,
+            "sha256": "c166b0dda61ffb5f8354d344da30ea11c653233c2f61d2ffd04bac194243fb05"
+          },
+          "valid": {
+            "bytes": 18930,
+            "key": "tracks/ncaaf/derived/bigten-availability-quality-v045/20261016T230312Z-4dd577ff91/rows.jsonl.gz",
+            "rows": 715,
+            "sha256": "336eff812238e909897889b7b309cd522c9e4b286ead81541a6ec1fae028d8e6"
+          }
+        },
+        "SEC": {
+          "audit": {
+            "historical_point_in_time_approved": false,
+            "identity_counts": {
+              "exact_normalized_team_name_jersey_unique": 450,
+              "unmatched": 3
+            },
+            "input_rows": 453,
+            "model_ready": false,
+            "prospective_identity_time_candidates": 126,
+            "quarantined_rows": 0,
+            "valid_rows": 453
+          },
+          "quarantine": {
+            "bytes": 20,
+            "key": "tracks/ncaaf/derived/sec-availability-quality-v045-quarantine/20261016T230312Z-4dd577ff91/rows.jsonl.gz",
+            "rows": 0,
+            "sha256": "f61f27bd17de546264aa58f40f3aafaac7021e0ef69c17f6b1b4cd7664a037ec"
+          },
+          "source_input": {
+            "bytes": 10547,
+            "key": "tracks/ncaaf/derived/sec-availability-identity-v042/20261016T224648Z-7ab37da393/rows.jsonl.gz",
+            "rows": 453,
+            "sha256": "ce2adc0115c53ea0ba5408b493c94d675a340f0770fcb2a2b8399a8031882a8b"
+          },
+          "valid": {
+            "bytes": 12459,
+            "key": "tracks/ncaaf/derived/sec-availability-quality-v045/20261016T230312Z-4dd577ff91/rows.jsonl.gz",
+            "rows": 453,
+            "sha256": "0094fded2487b5e66df32b0b558b9281f99c4c1298bc7c199d347584e92c4b31"
+          }
+        }
+      }
+    },
+    "players_crosswalk": {
+      "bytes": 2501827,
+      "captured_or_reverified_at": "2026-10-16T23:03:13Z",
+      "headers": {
+        "Date": "Fri, 16 Oct 2026 23:03:12 GMT",
+        "ETag": "\"0x8DF2B84BC0B1440\"",
+        "Last-Modified": "Fri, 16 Oct 2026 12:55:20 GMT"
+      },
+      "raw_key": "tracks/nfl/raw/nflverse/players/78ccdebe065a691b3a11b2a8920726680af6f7393789da385dcdef51b0be0a47/players.csv.gz",
+      "rows": 24854,
+      "sha256": "78ccdebe065a691b3a11b2a8920726680af6f7393789da385dcdef51b0be0a47",
+      "source_url": "https://github.com/nflverse/nflverse-data/releases/download/players/players.csv.gz",
+      "status": "downloaded"
+    },
+    "snap_identity": {
+      "audit": {
+        "identity_methods": {
+          "conflicting_crosswalk": 4,
+          "prior_verified_identity": 6071,
+          "unique_authoritative_crosswalk_pfr_gsis": 1374,
+          "unresolved": 14
+        },
+        "matched": 7445,
+        "roster_membership": {
+          "same_week_team_gsis_confirmed": 7445,
+          "unverified": 18
+        },
+        "rows": 7463,
+        "unresolved": 18,
+        "unresolved_examples": [
+          {
+            "identity_method": "unresolved",
+            "pfr_player_id": "AndeAl01",
+            "player": "Alec Anderson",
+            "team": "BUF",
+            "week": "1"
+          },
+          {
+            "identity_method": "conflicting_crosswalk",
+            "pfr_player_id": "WoodPe00",
+            "player": "Peter Woods",
+            "team": "KC",
+            "week": "1"
+          },
+          {
+            "identity_method": "unresolved",
+            "pfr_player_id": "WhitCo05",
+            "player": "Cody White",
+            "team": "LV",
+            "week": "1"
+          },
+          {
+            "identity_method": "unresolved",
+            "pfr_player_id": "AndeAl01",
+            "player": "Alec Anderson",
+            "team": "BUF",
+            "week": "2"
+          },
+          {
+            "identity_method": "conflicting_crosswalk",
+            "pfr_player_id": "WoodPe00",
+            "player": "Peter Woods",
+            "team": "KC",
+            "week": "2"
+          },
+          {
+            "identity_method": "unresolved",
+            "pfr_player_id": "WhitCo05",
+            "player": "Cody White",
+            "team": "LV",
+            "week": "2"
+          },
+          {
+            "identity_method": "unresolved",
+            "pfr_player_id": "OkoyCJ00",
+            "player": "CJ Okoye",
+            "team": "NYG",
+            "week": "2"
+          },
+          {
+            "identity_method": "conflicting_crosswalk",
+            "pfr_player_id": "WoodPe00",
+            "player": "Peter Woods",
+            "team": "KC",
+            "week": "3"
+          },
+          {
+            "identity_method": "unresolved",
+            "pfr_player_id": "AndeAl01",
+            "player": "Alec Anderson",
+            "team": "BUF",
+            "week": "3"
+          },
+          {
+            "identity_method": "unresolved",
+            "pfr_player_id": "WhitCo05",
+            "player": "Cody White",
+            "team": "LV",
+            "week": "3"
+          },
+          {
+            "identity_method": "unresolved",
+            "pfr_player_id": "OkoyCJ00",
+            "player": "CJ Okoye",
+            "team": "NYG",
+            "week": "3"
+          },
+          {
+            "identity_method": "unresolved",
+            "pfr_player_id": "OkoyCJ00",
+            "player": "CJ Okoye",
+            "team": "NYG",
+            "week": "4"
+          },
+          {
+            "identity_method": "unresolved",
+            "pfr_player_id": "WhitCo05",
+            "player": "Cody White",
+            "team": "LV",
+            "week": "4"
+          },
+          {
+            "identity_method": "conflicting_crosswalk",
+            "pfr_player_id": "WoodPe00",
+            "player": "Peter Woods",
+            "team": "KC",
+            "week": "4"
+          },
+          {
+            "identity_method": "unresolved",
+            "pfr_player_id": "AndeAl01",
+            "player": "Alec Anderson",
+            "team": "BUF",
+            "week": "4"
+          },
+          {
+            "identity_method": "unresolved",
+            "pfr_player_id": "AndeAl01",
+            "player": "Alec Anderson",
+            "team": "BUF",
+            "week": "5"
+          },
+          {
+            "identity_method": "unresolved",
+            "pfr_player_id": "WhitCo05",
+            "player": "Cody White",
+            "team": "LV",
+            "week": "5"
+          },
+          {
+            "identity_method": "unresolved",
+            "pfr_player_id": "OkoyCJ00",
+            "player": "CJ Okoye",
+            "team": "NYG",
+            "week": "5"
+          }
+        ]
+      },
+      "output": {
+        "bytes": 231388,
+        "key": "tracks/nfl/derived/snaps-identity-v045/20261016T230312Z-4dd577ff91/rows.jsonl.gz",
+        "rows": 7463,
+        "sha256": "82a82814120ed8719d78a040b3c36db1c27986cd789f818f065072aaef17e330"
+      },
+      "source_input": {
+        "bytes": 223114,
+        "key": "tracks/nfl/derived/snaps-identity-v042/20261016T224648Z-7ab37da393/rows.jsonl.gz",
+        "rows": 7463,
+        "sha256": "09c55a5168c948226c9829df231b0470d3b1d96289c5419deaf45d1aa56b7b34"
+      }
+    }
+  },
+  "run_id": "20261016T230312Z-4dd577ff91",
+  "source_requests": 1,
+  "started_at": "2026-10-16T23:03:12Z",
+  "status": "completed_with_explicit_gaps",
+  "version": "sports-edge-lab-football-quality-v045"
+}

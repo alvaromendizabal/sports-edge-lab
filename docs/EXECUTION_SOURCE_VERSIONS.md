@@ -1,6 +1,6 @@
 # Execution source versions
 
-**Latest update, October 16 at 20:59 UTC:** ACB data and its collector have been deleted. V011 remains Stopping; v038 has not launched. [Current backlog, removal evidence and collection endpoint](DOWNLOAD_CLOSEOUT_20261016.md) supersede older status observations below.
+**Latest update — October 16:** V039 completed its selected queue. V042 completed current refresh/identity work. The six-hour schedule targets CBBD-paused v043. V044 failed before provider calls; v045 fixes embedded configuration loading. Exact source, hashes and tests are in the corresponding `tools/` and `docs/status/` directories.
 
 A running AWS Processing job keeps the source uploaded at launch. Updating the repository does not hot-patch that running process. Preserve its exact source alongside the current implementation so receipts remain reproducible.
 
@@ -152,3 +152,4 @@ The earlier v028 inventory source is preserved byte-for-byte under
 V037 preserves the original v011 and v002 modules in an isolated package and
 adds a rate-limited odds-only wrapper, predecessor terminal-state guard,
 successful-index reuse and fail-closed quota checks. CBBD is not requested.
+

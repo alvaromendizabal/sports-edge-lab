@@ -1,0 +1,87 @@
+{
+  "status": "success",
+  "stdout": "",
+  "return_value": {
+    "observed_at": "2026-10-16T22:48:33.968696+00:00",
+    "previous": {
+      "ActionAfterCompletion": "DELETE",
+      "Arn": "arn:aws:scheduler:us-west-2:560403859723:schedule/sports-edge-lab-ingestion/sports-edge-lab-current-6h-20261017-v026",
+      "CreationDate": "2026-10-16T19:53:27.348000+00:00",
+      "Description": "Current sports odds and statistics every 6 hours, 120 slots maximum, 500 odds credits and 100 statistics calls per run; expires 2026-11-16.",
+      "EndDate": "2026-11-16T03:04:59+00:00",
+      "FlexibleTimeWindow": {
+        "Mode": "OFF"
+      },
+      "GroupName": "sports-edge-lab-ingestion",
+      "LastModificationDate": "2026-10-16T19:53:27.348000+00:00",
+      "Name": "sports-edge-lab-current-6h-20261017-v026",
+      "ScheduleExpression": "cron(5 3,9,15,21 * * ? *)",
+      "ScheduleExpressionTimezone": "UTC",
+      "StartDate": "2026-10-17T03:00:00+00:00",
+      "State": "ENABLED",
+      "Target": {
+        "Arn": "arn:aws:scheduler:::aws-sdk:sagemaker:createProcessingJob",
+        "Input": "{\"ProcessingJobName\":\"sports-edge-lab-current-<aws.scheduler.execution-id>\",\"RoleArn\":\"arn:aws:iam::560403859723:role/SportsEdgeLabProcessingRole\",\"AppSpecification\":{\"ImageUri\":\"246618743249.dkr.ecr.us-west-2.amazonaws.com/sagemaker-scikit-learn:1.9-0\",\"ContainerEntrypoint\":[\"python3\",\"-u\",\"/opt/ml/processing/code/sports_edge_lab_current_v026_20261016.pyz\"],\"ContainerArguments\":[\"--odds-credits\",\"500\",\"--stats-calls\",\"100\",\"--max-seconds\",\"600\",\"--workers\",\"4\",\"--props-per-track\",\"12\",\"--odds-reserve-floor\",\"100000\"]},\"Environment\":{\"SEL_SCHEDULED_TIME\":\"<aws.scheduler.scheduled-time>\",\"SEL_SCHEDULER_EXECUTION_ID\":\"<aws.scheduler.execution-id>\",\"SEL_SCHEDULE_ARN\":\"<aws.scheduler.schedule-arn>\"},\"ProcessingInputs\":[{\"InputName\":\"code\",\"S3Input\":{\"S3Uri\":\"s3://sagemaker-sports-edge-lab-560403859723-us-west-2/infrastructure/code/current-20261016-v026/\",\"LocalPath\":\"/opt/ml/processing/code\",\"S3DataType\":\"S3Prefix\",\"S3InputMode\":\"File\",\"S3DataDistributionType\":\"FullyReplicated\"}}],\"ProcessingResources\":{\"ClusterConfig\":{\"InstanceCount\":1,\"InstanceType\":\"ml.m5.2xlarge\",\"VolumeSizeInGB\":30}},\"StoppingCondition\":{\"MaxRuntimeInSeconds\":900},\"NetworkConfig\":{\"EnableNetworkIsolation\":false},\"Tags\":[{\"Key\":\"Project\",\"Value\":\"sports-edge-lab\"},{\"Key\":\"Workstream\",\"Value\":\"current-paid-data\"},{\"Key\":\"Environment\",\"Value\":\"dev\"},{\"Key\":\"Schedule\",\"Value\":\"sports-edge-lab-current-6h-20261017-v026\"}]}",
+        "RetryPolicy": {
+          "MaximumEventAgeInSeconds": 60,
+          "MaximumRetryAttempts": 0
+        },
+        "RoleArn": "arn:aws:iam::560403859723:role/SportsEdgeLabCurrentSchedulerRole"
+      }
+    },
+    "updated": {
+      "ScheduleArn": "arn:aws:scheduler:us-west-2:560403859723:schedule/sports-edge-lab-ingestion/sports-edge-lab-current-6h-20261017-v026"
+    },
+    "verified": {
+      "ActionAfterCompletion": "DELETE",
+      "Arn": "arn:aws:scheduler:us-west-2:560403859723:schedule/sports-edge-lab-ingestion/sports-edge-lab-current-6h-20261017-v026",
+      "CreationDate": "2026-10-16T19:53:27.348000+00:00",
+      "Description": "Current odds and CFBD every 6 hours; CBBD paused after provider 429. Existing 500 odds credit / 100 statistics call ceilings and end date preserved.",
+      "EndDate": "2026-11-16T03:04:59+00:00",
+      "FlexibleTimeWindow": {
+        "Mode": "OFF"
+      },
+      "GroupName": "sports-edge-lab-ingestion",
+      "LastModificationDate": "2026-10-16T22:48:33.386000+00:00",
+      "Name": "sports-edge-lab-current-6h-20261017-v026",
+      "ScheduleExpression": "cron(5 3,9,15,21 * * ? *)",
+      "ScheduleExpressionTimezone": "UTC",
+      "StartDate": "2026-10-17T03:00:00+00:00",
+      "State": "ENABLED",
+      "Target": {
+        "Arn": "arn:aws:scheduler:::aws-sdk:sagemaker:createProcessingJob",
+        "Input": "{\"ProcessingJobName\":\"sports-edge-lab-current-<aws.scheduler.execution-id>\",\"RoleArn\":\"arn:aws:iam::560403859723:role/SportsEdgeLabProcessingRole\",\"AppSpecification\":{\"ImageUri\":\"246618743249.dkr.ecr.us-west-2.amazonaws.com/sagemaker-scikit-learn:1.9-0\",\"ContainerEntrypoint\":[\"python3\",\"-u\",\"/opt/ml/processing/code/sports_edge_lab_current_v043_20261016.pyz\"],\"ContainerArguments\":[\"--odds-credits\",\"500\",\"--stats-calls\",\"100\",\"--max-seconds\",\"600\",\"--workers\",\"4\",\"--props-per-track\",\"12\",\"--odds-reserve-floor\",\"100000\"]},\"Environment\":{\"SEL_SCHEDULED_TIME\":\"<aws.scheduler.scheduled-time>\",\"SEL_SCHEDULER_EXECUTION_ID\":\"<aws.scheduler.execution-id>\",\"SEL_SCHEDULE_ARN\":\"<aws.scheduler.schedule-arn>\"},\"ProcessingInputs\":[{\"InputName\":\"code\",\"S3Input\":{\"S3Uri\":\"s3://sagemaker-sports-edge-lab-560403859723-us-west-2/infrastructure/code/current-20261016-v043/\",\"LocalPath\":\"/opt/ml/processing/code\",\"S3DataType\":\"S3Prefix\",\"S3InputMode\":\"File\",\"S3DataDistributionType\":\"FullyReplicated\"}}],\"ProcessingResources\":{\"ClusterConfig\":{\"InstanceCount\":1,\"InstanceType\":\"ml.m5.2xlarge\",\"VolumeSizeInGB\":30}},\"StoppingCondition\":{\"MaxRuntimeInSeconds\":900},\"NetworkConfig\":{\"EnableNetworkIsolation\":false},\"Tags\":[{\"Key\":\"Project\",\"Value\":\"sports-edge-lab\"},{\"Key\":\"Workstream\",\"Value\":\"current-paid-data\"},{\"Key\":\"Environment\",\"Value\":\"dev\"},{\"Key\":\"Schedule\",\"Value\":\"sports-edge-lab-current-6h-20261017-v026\"}]}",
+        "RetryPolicy": {
+          "MaximumEventAgeInSeconds": 60,
+          "MaximumRetryAttempts": 0
+        },
+        "RoleArn": "arn:aws:iam::560403859723:role/SportsEdgeLabCurrentSchedulerRole"
+      }
+    },
+    "tests_passed": 32,
+    "artifact_sha256": "da4933151390916fc26e92649422cb71420345b7c4bc3edd063a27740ae08fb4",
+    "permissions_changed": false
+  },
+  "api_calls": [
+    {
+      "service": "s3",
+      "operation": "HeadObject",
+      "status": "success"
+    },
+    {
+      "service": "scheduler",
+      "operation": "GetSchedule",
+      "status": "success"
+    },
+    {
+      "service": "scheduler",
+      "operation": "UpdateSchedule",
+      "status": "success"
+    },
+    {
+      "service": "scheduler",
+      "operation": "GetSchedule",
+      "status": "success"
+    }
+  ]
+}

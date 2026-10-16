@@ -1,5 +1,7 @@
 # Current Sports Edge Lab snapshot v026
 
+**Deployed schedule update — October 16, 22:48 UTC:** The existing schedule now uses [v043](../current_snapshot_v043/README.md). CBBD is disabled both in planning and direct calls after the provider rate limit. The original v026 source and execution history below are retained; do not deploy its unpaused CBBD worker. V043 passed 32 tests and preserves the existing cadence, budgets, lease and end date. [Read-back evidence](../../docs/status/current_snapshot_v043/schedule_change.json).
+
 This finite AWS acquisition captures current observations for near-term work.
 It does not reuse historical observations as if they were live. Every request
 has a capture vintage containing a UTC observation timestamp and unique run ID;
@@ -93,3 +95,4 @@ The AWS receipt did not record exact boto3/botocore package versions. The
 execution used the configured SageMaker scikit-learn image and verified real
 conditional S3 writes. CI installs boto3 for offline mocked ClientError/lease
 tests; CI success is separate from the recorded AWS acquisition evidence.
+

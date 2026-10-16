@@ -1,0 +1,41 @@
+{
+  "ProcessingInputs": [
+    {
+      "InputName": "code",
+      "AppManaged": false,
+      "S3Input": {
+        "S3Uri": "s3://sagemaker-sports-edge-lab-560403859723-us-west-2/infrastructure/code/football-readiness-20261016-v042/",
+        "LocalPath": "/opt/ml/processing/code",
+        "S3DataType": "S3Prefix",
+        "S3InputMode": "File",
+        "S3DataDistributionType": "FullyReplicated"
+      }
+    }
+  ],
+  "ProcessingJobName": "sports-edge-lab-football-readiness-20261016-v042",
+  "ProcessingResources": {
+    "ClusterConfig": {
+      "InstanceCount": 1,
+      "InstanceType": "ml.m5.2xlarge",
+      "VolumeSizeInGB": 30
+    }
+  },
+  "StoppingCondition": {
+    "MaxRuntimeInSeconds": 432000
+  },
+  "AppSpecification": {
+    "ImageUri": "246618743249.dkr.ecr.us-west-2.amazonaws.com/sagemaker-scikit-learn:1.9-0",
+    "ContainerEntrypoint": [
+      "python3",
+      "-u",
+      "/opt/ml/processing/code/sports_edge_lab_football_readiness_v042_20261016.pyz"
+    ]
+  },
+  "RoleArn": "arn:aws:iam::560403859723:role/SportsEdgeLabProcessingRole",
+  "ProcessingJobArn": "arn:aws:sagemaker:us-west-2:560403859723:processing-job/sports-edge-lab-football-readiness-20261016-v042",
+  "ProcessingJobStatus": "Completed",
+  "ProcessingEndTime": "2026-10-16T22:47:18.089000+00:00",
+  "ProcessingStartTime": "2026-10-16T22:46:11.415000+00:00",
+  "LastModifiedTime": "2026-10-16T22:48:03.112000+00:00",
+  "CreationTime": "2026-10-16T22:45:31.918000+00:00"
+}

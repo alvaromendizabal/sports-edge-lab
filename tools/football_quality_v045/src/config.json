@@ -1,0 +1,48 @@
+{
+  "version": "v045",
+  "players_asset": {
+    "name": "players.csv.gz",
+    "url": "https://github.com/nflverse/nflverse-data/releases/download/players/players.csv.gz",
+    "size": 2501827,
+    "digest": "sha256:78ccdebe065a691b3a11b2a8920726680af6f7393789da385dcdef51b0be0a47",
+    "updated_at": "2026-10-16T12:55:20Z"
+  },
+  "snap_input": {
+    "bytes": 223114,
+    "key": "tracks/nfl/derived/snaps-identity-v042/20261016T224648Z-7ab37da393/rows.jsonl.gz",
+    "rows": 7463,
+    "sha256": "09c55a5168c948226c9829df231b0470d3b1d96289c5419deaf45d1aa56b7b34"
+  },
+  "availability_inputs": {
+    "ACC": {
+      "bytes": 17629,
+      "key": "tracks/ncaaf/derived/acc-availability-identity-v042/20261016T224648Z-7ab37da393/rows.jsonl.gz",
+      "rows": 801,
+      "sha256": "2d5f702804b35b9d84c1b44be6bb9c198f1b5c616765870c31a8874d9c2b2678"
+    },
+    "Big 12": {
+      "bytes": 11079,
+      "key": "tracks/ncaaf/derived/big12-availability-identity-v042/20261016T224648Z-7ab37da393/rows.jsonl.gz",
+      "rows": 434,
+      "sha256": "5b88b0932a95ec1e057f8f6acb9423d8d6d0499b5b678bf2badc5dd8dada99ed"
+    },
+    "Big Ten": {
+      "bytes": 16448,
+      "key": "tracks/ncaaf/derived/bigten-availability-identity-v042/20261016T224648Z-7ab37da393/rows.jsonl.gz",
+      "rows": 715,
+      "sha256": "c166b0dda61ffb5f8354d344da30ea11c653233c2f61d2ffd04bac194243fb05"
+    },
+    "SEC": {
+      "bytes": 10547,
+      "key": "tracks/ncaaf/derived/sec-availability-identity-v042/20261016T224648Z-7ab37da393/rows.jsonl.gz",
+      "rows": 453,
+      "sha256": "ce2adc0115c53ea0ba5408b493c94d675a340f0770fcb2a2b8399a8031882a8b"
+    }
+  },
+  "prior_refresh_report": "shared/acquisition/football-refresh/20261016T222233Z-3d51c4585a/report.json",
+  "source_readiness_report": "shared/acquisition/football-readiness/20261016T224648Z-7ab37da393/report.json",
+  "source_requests_limit": 1,
+  "odds_credits": 0,
+  "cfbd_requests": 0,
+  "cbbd_requests": 0
+}

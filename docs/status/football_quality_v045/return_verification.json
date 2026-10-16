@@ -1,0 +1,15 @@
+{
+  "bytes": 3000,
+  "sha256": "b657c8a81bd3810f84a8cca3741013bddbc98134d1d6ff5cf1c001fad89a730c",
+  "members": [
+    "report.json",
+    "config.json",
+    "resume.json"
+  ],
+  "crc_validation_passed": true,
+  "report_matches_s3": true,
+  "unique_zip_count_in_run_prefix": 1,
+  "processed_stages": 3,
+  "remaining_stages": 0,
+  "failed_stages": 0
+}

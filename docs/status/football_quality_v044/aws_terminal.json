@@ -1,0 +1,91 @@
+{
+  "status": "success",
+  "stdout": "",
+  "return_value": {
+    "observed_at": "2026-10-16T22:58:31.168231+00:00",
+    "results": [
+      {
+        "ProcessingInputs": [
+          {
+            "InputName": "code",
+            "AppManaged": false,
+            "S3Input": {
+              "S3Uri": "s3://sagemaker-sports-edge-lab-560403859723-us-west-2/infrastructure/code/football-quality-20261016-v044/",
+              "LocalPath": "/opt/ml/processing/code",
+              "S3DataType": "S3Prefix",
+              "S3InputMode": "File",
+              "S3DataDistributionType": "FullyReplicated"
+            }
+          }
+        ],
+        "ProcessingJobName": "sports-edge-lab-football-quality-20261016-v044",
+        "ProcessingResources": {
+          "ClusterConfig": {
+            "InstanceCount": 1,
+            "InstanceType": "ml.m5.2xlarge",
+            "VolumeSizeInGB": 30
+          }
+        },
+        "StoppingCondition": {
+          "MaxRuntimeInSeconds": 432000
+        },
+        "AppSpecification": {
+          "ImageUri": "246618743249.dkr.ecr.us-west-2.amazonaws.com/sagemaker-scikit-learn:1.9-0",
+          "ContainerEntrypoint": [
+            "python3",
+            "-u",
+            "/opt/ml/processing/code/sports_edge_lab_football_quality_v044_20261016.pyz"
+          ]
+        },
+        "RoleArn": "arn:aws:iam::560403859723:role/SportsEdgeLabProcessingRole",
+        "ProcessingJobArn": "arn:aws:sagemaker:us-west-2:560403859723:processing-job/sports-edge-lab-football-quality-20261016-v044",
+        "ProcessingJobStatus": "Failed",
+        "FailureReason": "AlgorithmError: , exit code: 1",
+        "ProcessingEndTime": "2026-10-16T22:56:41.374000+00:00",
+        "ProcessingStartTime": "2026-10-16T22:55:47.717000+00:00",
+        "LastModifiedTime": "2026-10-16T22:57:41.185000+00:00",
+        "CreationTime": "2026-10-16T22:55:10.155000+00:00"
+      },
+      {
+        "logStreams": [
+          {
+            "logStreamName": "sports-edge-lab-football-quality-20261016-v044/algo-1-1792191347",
+            "creationTime": 1792191393385,
+            "firstEventTimestamp": 1792191387236,
+            "lastEventTimestamp": 1792191387237,
+            "lastIngestionTime": 1792191393399,
+            "uploadSequenceToken": "49039859689939417378195595533834121826353161008004880047",
+            "arn": "arn:aws:logs:us-west-2:560403859723:log-group:/aws/sagemaker/ProcessingJobs:log-stream:sports-edge-lab-football-quality-20261016-v044/algo-1-1792191347",
+            "storedBytes": 0
+          }
+        ]
+      },
+      {
+        "Prefix": "shared/acquisition/football-quality/"
+      }
+    ]
+  },
+  "api_calls": [
+    {
+      "service": "sagemaker",
+      "operation": "DescribeProcessingJob",
+      "status": "success",
+      "n_items": {
+        "ProcessingInputs": 1
+      }
+    },
+    {
+      "service": "logs",
+      "operation": "DescribeLogStreams",
+      "status": "success",
+      "n_items": {
+        "logStreams": 1
+      }
+    },
+    {
+      "service": "s3",
+      "operation": "ListObjectsV2",
+      "status": "success"
+    }
+  ]
+}

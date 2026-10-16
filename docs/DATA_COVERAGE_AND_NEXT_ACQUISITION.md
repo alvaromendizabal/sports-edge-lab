@@ -1,6 +1,6 @@
 # Downloaded data and next acquisition priorities
 
-**Latest update — October 16, 22:29 UTC:** V041 finished: current 2026 NFL snaps, rosters and depth charts are saved; cached NGS/FTN were reused. ACC has 801 normalized availability rows and separately DOM-verified SEC has 453. V039 remains running: 3,673/4,696 historical NCAAF price captures, 1,023 remaining and zero final failures (two retryable incidents). [Verified results and remaining gaps](FOOTBALL_REFRESH_V041.md). ACB remains deleted.
+**Latest update — October 16:** The selected historical football odds queue is finished: 4,696/4,696 requests, zero final failures and zero remaining. V042 refreshed current football data and resolved 692/692 current NGS joins. V045 repaired NFL snap identities to 7,445/7,463; 18 remain unresolved. College structural validation retains 2,402 rows, of which 2,306 have exact unique player IDs; 1 malformed rows are quarantined. All 692 current NGS rows already have exact week/team/GSIS matches. Original publication-time gaps remain explicit. [Verified readiness](FOOTBALL_READINESS_V042.md). ACB remains deleted and CBBD paused.
 
 
 **93,319 in-scope raw content files / 17.26 GB are verified in the shared archive.**
@@ -30,9 +30,11 @@ Different revisions and statistical families can overlap.
 
 ## Current NFL and availability additions
 
-V041 saved 7,463 2026 NFL snap rows, 15,327 weekly-roster rows and 659,277 depth-chart snapshot rows (2,305 latest rows for all 32 teams). Public NGS already contains 27,613 rows; all three hashes were unchanged and reused. Exact current-year roster joins matched 667/692 NGS rows and 6,075/7,463 snap rows. Unmatched identities remain explicit; historical information-time validation is pending. The three new public assets total 13.45 MB and used zero subscription credits.
+V045 repaired NFL snap identities to 7,445/7,463; 18 remain unresolved. College structural validation retains 2,402 rows, of which 2,306 have exact unique player IDs; 1 malformed rows are quarantined. All 692 current NGS rows already have exact week/team/GSIS matches. Original publication-time gaps remain explicit.
 
-ACC has 801 normalized rows (177 this weekend); SEC has 453 source-verified rows (127 this weekend). The existing Big Ten and Big 12 captures remain available. These archives do not establish original publication timestamps. [Execution proof and next priorities](FOOTBALL_REFRESH_V041.md).
+V041 saved 7,463 current-season snap rows, 15,327 weekly-roster rows and 659,277 depth-chart snapshot rows. V042 verified all 80 completed NFL schedule games have PBP, retained 14,031 PBP rows and captured 374 official Week 6 injury rows at 22:47:04 UTC. The fresh FBS schedule contained no additional completed game at 22:46:51 UTC; Friday games had not started. The public NGS archive contains 27,613 summary rows from 2016–2026, not raw trajectories.
+
+See [V042 evidence](FOOTBALL_READINESS_V042.md), [quality repair](FOOTBALL_QUALITY_V045.md) and [weekend refresh playbook](FOOTBALL_WEEKEND_REFRESH_20261016.md). Existing historical inventory totals below retain their stated observation time.
 
 ## Fresh football data captured this turn
 
@@ -55,8 +57,8 @@ The Big Ten capture is a **rendered-page extraction**, not an original PDF or
 an archive of verified publication-time versions. Four rows with ambiguous
 missing columns were preserved in raw extraction and quarantined from the
 normalized table. A missing game-day status stays null, never "available".
-Player identity joins and historical point-in-time eligibility remain unverified.
-SEC now has a directly DOM-verified current rendered archive: 453 rows, 66 team-games and all 16 teams; 127 rows / 14 team-games for October 16–18. ACC has 801 rows, including 177 for this weekend. Original report PDFs, publication times and player identity joins remain gaps.
+V042 resolved 2,306 exact college player-ID joins; V045 applies structural quarantine. Historical point-in-time eligibility remains unverified.
+SEC now has a directly DOM-verified current rendered archive: 453 rows, 66 team-games and all 16 teams; 127 rows / 14 team-games for October 16–18. ACC has 801 rows, including 177 for this weekend. Original report PDFs, publication times and unresolved player identities remain gaps; the V045 quality table supersedes the preliminary ACC normalized count.
 
 CFBD game-box endpoints also returned non-FBS games; they are retained in raw
 responses but excluded from the 124-game FBS coverage denominator. Matching
@@ -72,13 +74,10 @@ their own games.
 2. **Reliable current availability:** original NFL and NCAA report versions,
    publication timestamps, quarterback/depth-chart changes and cross-conference
    coverage. Big Ten, Big 12, ACC and SEC rendered archives are saved; historical publication times, identity mapping and other conferences remain open. Archive final game-day updates when published.
-3. **Historical market gaps:** finish missing game-price checkpoints and audit
-   quote times and kickoff revisions. The odds-only continuation preserves
-   existing request indexes. CBBD details are paused after rate limiting.
+3. **Historical market validation:** the selected football game-price queue is complete. Audit bookmaker quote times and kickoff revisions before using those prices in backtests. Basketball historical queues are separate; CBBD remains paused.
 4. **Tracking and aligned video for the five target sports:** vendor access,
    export scope, history/current latency and modeling rights are still
-   unconfirmed. Previous SkillCorner/Genius inquiries are recorded; a targeted mailbox check at 22:17 UTC found no new replies from those
-   provider domains today. No new license was purchased. ACB is out of scope.
+   unconfirmed. Previous SkillCorner/Genius inquiries are recorded; a search including spam found SkillCorner's automated no-B2C acknowledgment but no granted access. Genius has no substantive access reply yet. No new license was purchased. ACB is out of scope.
 5. **Basketball-specific gaps:** complete CBBD plays/lineups/substitutions after
    the provider limit clears; current NBA injury versions; women's current
    schedules, availability and market coverage. Shooting's specified recovery

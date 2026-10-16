@@ -1,0 +1,35 @@
+{
+  "status": "success",
+  "stdout": "",
+  "return_value": {
+    "preflight": [
+      {
+        "ProcessingJobSummaries": []
+      },
+      {
+        "AcceptRanges": "bytes",
+        "LastModified": "2026-10-16T23:00:14+00:00",
+        "ContentLength": 43064,
+        "ETag": "\"c96ccdf7e0c07811ca30f34b0028e64f\"",
+        "ContentType": "application/x-www-form-urlencoded",
+        "ServerSideEncryption": "AES256",
+        "Metadata": {}
+      }
+    ]
+  },
+  "api_calls": [
+    {
+      "service": "sagemaker",
+      "operation": "ListProcessingJobs",
+      "status": "success",
+      "n_items": {
+        "ProcessingJobSummaries": 0
+      }
+    },
+    {
+      "service": "s3",
+      "operation": "HeadObject",
+      "status": "success"
+    }
+  ]
+}

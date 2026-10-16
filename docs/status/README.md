@@ -1,5 +1,7 @@
 # Operational evidence
 
+Latest: [V039 selected queue complete](../FOOTBALL_FINISH_V039.md), [V042 current refresh](../FOOTBALL_READINESS_V042.md), [V045 quality repair](../FOOTBALL_QUALITY_V045.md). V044 failed before provider calls; its evidence and cost remain recorded. Earlier observations below are dated history.
+
 Latest October 16, 22:29 UTC: [V041 completed public refresh and SEC verification](../FOOTBALL_REFRESH_V041.md). V039 remains running with 3,673/4,696 historical price checkpoints saved and 1,023 left; zero final failures, two retryable incidents. New evidence directories: `football_refresh_v041/` and `sec_verification_20261016/`. The dated inventory below is not silently updated.
 
 **Latest update:** v011 is terminal. The user-authorized continuous football completion job v039 has launched; the short v038 restart is superseded. [Scope, safeguards and runtime evidence](../FOOTBALL_FINISH_V039.md). ACB remains deleted.

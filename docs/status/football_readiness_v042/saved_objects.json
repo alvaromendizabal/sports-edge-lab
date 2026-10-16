@@ -1,0 +1,199 @@
+{
+  "status": "success",
+  "stdout": "",
+  "return_value": {
+    "objects": [
+      {
+        "expected": {
+          "key": "tracks/ncaaf/derived/acc-availability-identity-v042/20261016T224648Z-7ab37da393/rows.jsonl.gz",
+          "bytes": 17629,
+          "sha256": "2d5f702804b35b9d84c1b44be6bb9c198f1b5c616765870c31a8874d9c2b2678"
+        },
+        "head": {
+          "AcceptRanges": "bytes",
+          "LastModified": "2026-10-16T22:47:00+00:00",
+          "ContentLength": 17629,
+          "ETag": "\"31af60c7f2b6b41985b87ac11a7e46dd\"",
+          "ContentType": "application/gzip",
+          "ServerSideEncryption": "AES256",
+          "Metadata": {}
+        }
+      },
+      {
+        "expected": {
+          "key": "tracks/ncaaf/derived/big12-availability-identity-v042/20261016T224648Z-7ab37da393/rows.jsonl.gz",
+          "bytes": 11079,
+          "sha256": "5b88b0932a95ec1e057f8f6acb9423d8d6d0499b5b678bf2badc5dd8dada99ed"
+        },
+        "head": {
+          "AcceptRanges": "bytes",
+          "LastModified": "2026-10-16T22:46:57+00:00",
+          "ContentLength": 11079,
+          "ETag": "\"07ac8b9a905d05e7716f991a53edfdfc\"",
+          "ContentType": "application/gzip",
+          "ServerSideEncryption": "AES256",
+          "Metadata": {}
+        }
+      },
+      {
+        "expected": {
+          "key": "tracks/ncaaf/derived/bigten-availability-identity-v042/20261016T224648Z-7ab37da393/rows.jsonl.gz",
+          "bytes": 16448,
+          "sha256": "c166b0dda61ffb5f8354d344da30ea11c653233c2f61d2ffd04bac194243fb05"
+        },
+        "head": {
+          "AcceptRanges": "bytes",
+          "LastModified": "2026-10-16T22:46:55+00:00",
+          "ContentLength": 16448,
+          "ETag": "\"b9068cf4c3f32ef517d8b0f250dce1a2\"",
+          "ContentType": "application/gzip",
+          "ServerSideEncryption": "AES256",
+          "Metadata": {}
+        }
+      },
+      {
+        "expected": {
+          "key": "tracks/ncaaf/derived/sec-availability-identity-v042/20261016T224648Z-7ab37da393/rows.jsonl.gz",
+          "bytes": 10547,
+          "sha256": "ce2adc0115c53ea0ba5408b493c94d675a340f0770fcb2a2b8399a8031882a8b"
+        },
+        "head": {
+          "AcceptRanges": "bytes",
+          "LastModified": "2026-10-16T22:47:03+00:00",
+          "ContentLength": 10547,
+          "ETag": "\"d9fb406036102b7b5eb297d3ac328de0\"",
+          "ContentType": "application/gzip",
+          "ServerSideEncryption": "AES256",
+          "Metadata": {}
+        }
+      },
+      {
+        "expected": {
+          "key": "tracks/nfl/derived/snaps-identity-v042/20261016T224648Z-7ab37da393/rows.jsonl.gz",
+          "bytes": 223114,
+          "sha256": "09c55a5168c948226c9829df231b0470d3b1d96289c5419deaf45d1aa56b7b34"
+        },
+        "head": {
+          "AcceptRanges": "bytes",
+          "LastModified": "2026-10-16T22:46:51+00:00",
+          "ContentLength": 223114,
+          "ETag": "\"17d95eb3405c8010d77e82823aacceb1\"",
+          "ContentType": "application/gzip",
+          "ServerSideEncryption": "AES256",
+          "Metadata": {}
+        }
+      },
+      {
+        "expected": {
+          "key": "tracks/nfl/derived/ngs_passing-identity-v042/20261016T224648Z-7ab37da393/rows.jsonl.gz",
+          "bytes": 23840,
+          "sha256": "162fb8cf00eaf9008e869bfff06bcdd09516370c182c13f676996da91de1cea8"
+        },
+        "head": {
+          "AcceptRanges": "bytes",
+          "LastModified": "2026-10-16T22:46:51+00:00",
+          "ContentLength": 23840,
+          "ETag": "\"e76dad59fa9d911ad9c5a2c3ae352d60\"",
+          "ContentType": "application/gzip",
+          "ServerSideEncryption": "AES256",
+          "Metadata": {}
+        }
+      },
+      {
+        "expected": {
+          "key": "tracks/nfl/derived/ngs_receiving-identity-v042/20261016T224648Z-7ab37da393/rows.jsonl.gz",
+          "bytes": 38135,
+          "sha256": "a8a0e6f6aba68409167860d51c98efa9ad62525b75af821f8351e0e15018aef9"
+        },
+        "head": {
+          "AcceptRanges": "bytes",
+          "LastModified": "2026-10-16T22:46:51+00:00",
+          "ContentLength": 38135,
+          "ETag": "\"7062606bf0c4fb932c9a799914412e17\"",
+          "ContentType": "application/gzip",
+          "ServerSideEncryption": "AES256",
+          "Metadata": {}
+        }
+      },
+      {
+        "expected": {
+          "key": "tracks/nfl/derived/ngs_rushing-identity-v042/20261016T224648Z-7ab37da393/rows.jsonl.gz",
+          "bytes": 14887,
+          "sha256": "12589ed383e489eca43870b61afbca649ab247f30b2e429c2ef82146b200984f"
+        },
+        "head": {
+          "AcceptRanges": "bytes",
+          "LastModified": "2026-10-16T22:46:51+00:00",
+          "ContentLength": 14887,
+          "ETag": "\"ead785e3366a79ca0e81563315afae7a\"",
+          "ContentType": "application/gzip",
+          "ServerSideEncryption": "AES256",
+          "Metadata": {}
+        }
+      },
+      {
+        "expected": {
+          "key": "tracks/nfl/derived/injuries-current-v042/20261016T224648Z-7ab37da393/rows.jsonl.gz",
+          "bytes": 6141,
+          "sha256": "f68fb2772d141a3da0855254e7f0add739cfdd21ef90dde5a799c567df555fd1"
+        },
+        "head": {
+          "AcceptRanges": "bytes",
+          "LastModified": "2026-10-16T22:47:05+00:00",
+          "ContentLength": 6141,
+          "ETag": "\"dbe68ec427a50876fa65a80a16a5ccd9\"",
+          "ContentType": "application/gzip",
+          "ServerSideEncryption": "AES256",
+          "Metadata": {}
+        }
+      }
+    ]
+  },
+  "api_calls": [
+    {
+      "service": "s3",
+      "operation": "HeadObject",
+      "status": "success"
+    },
+    {
+      "service": "s3",
+      "operation": "HeadObject",
+      "status": "success"
+    },
+    {
+      "service": "s3",
+      "operation": "HeadObject",
+      "status": "success"
+    },
+    {
+      "service": "s3",
+      "operation": "HeadObject",
+      "status": "success"
+    },
+    {
+      "service": "s3",
+      "operation": "HeadObject",
+      "status": "success"
+    },
+    {
+      "service": "s3",
+      "operation": "HeadObject",
+      "status": "success"
+    },
+    {
+      "service": "s3",
+      "operation": "HeadObject",
+      "status": "success"
+    },
+    {
+      "service": "s3",
+      "operation": "HeadObject",
+      "status": "success"
+    },
+    {
+      "service": "s3",
+      "operation": "HeadObject",
+      "status": "success"
+    }
+  ]
+}
