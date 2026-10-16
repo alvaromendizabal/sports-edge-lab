@@ -1,0 +1,110 @@
+{
+  "as_of_utc": "2026-10-16T18:21:14.961917+00:00",
+  "jobs": [
+    {
+      "ProcessingJobName": "sports-edge-lab-gap-backfill-20261016-v011",
+      "ProcessingJobStatus": "InProgress"
+    },
+    {
+      "ProcessingJobName": "sports-edge-lab-original-context-20261016-v012",
+      "ProcessingJobStatus": "InProgress"
+    }
+  ],
+  "latest_paid_heartbeat": {
+    "budget": {
+      "actual_known": {
+        "odds": 5580,
+        "stats": 18
+      },
+      "disabled_providers": [],
+      "limits": {
+        "odds": 1600000,
+        "stats": 30000
+      },
+      "provider_headers": {
+        "cbbd": {},
+        "odds": {
+          "x-requests-last": 30,
+          "x-requests-remaining": 3656710,
+          "x-requests-used": 1343290
+        }
+      },
+      "reserved_or_known": {
+        "odds": 5670,
+        "stats": 22
+      },
+      "unknown_charge_reserve": {
+        "odds": 0,
+        "stats": 0
+      }
+    },
+    "compute_estimate_usd": 0.0078,
+    "event": "HEARTBEAT",
+    "phases": {
+      "cbbd_gap_inventory": {
+        "cached_game_requests": 293,
+        "eligible_game_ids": 18866,
+        "known_play_dates": 3144,
+        "missing_lineups": 18866,
+        "missing_play_dates": 2562,
+        "missing_substitutions": 18866
+      },
+      "cbbd_gaps": {
+        "completed": 18,
+        "negative_responses": 0,
+        "planned_missing_requests": 40294,
+        "processed": 18,
+        "status": "running",
+        "successful_or_reused": 18
+      },
+      "new_daily_census": {
+        "requests_processed": 5,
+        "status": "completed"
+      },
+      "odds_gap_checkpoints": {
+        "completed": 181,
+        "negative_responses": 0,
+        "planned_missing_requests": 75481,
+        "processed": 181,
+        "status": "running",
+        "successful_or_reused": 181
+      },
+      "odds_missing_by_track": {
+        "nba": 19569,
+        "ncaaf": 12573,
+        "ncaam": 35414,
+        "ncaaw": 4831,
+        "nfl": 3094
+      },
+      "seed": {
+        "permanent_request_404s": 1228,
+        "source_runs": 3,
+        "status": "completed",
+        "successful_request_ids": 46765
+      }
+    },
+    "run_id": "20261016T182005Z-1999205e92",
+    "seconds": 60.56,
+    "statistics": {
+      "captured": 203,
+      "cbbd_captured": 18,
+      "cbbd_http_calls": 18,
+      "http_calls": 204,
+      "nba_captured": 38,
+      "ncaaf_captured": 36,
+      "ncaam_captured": 55,
+      "ncaaw_captured": 37,
+      "nfl_captured": 37,
+      "odds_captured": 185,
+      "odds_http_calls": 186,
+      "raw_bytes": 103942802
+    },
+    "timestamp": "2026-10-16T18:21:06Z"
+  },
+  "interpretation": [
+    "Captures are HTTP responses, not unique games or approved features.",
+    "Existing successful requests and immutable historical 404s are seeded before collection.",
+    "New plans include 75,481 missing odds checkpoint requests and 40,294 college-basketball requests; credit/call/runtime bounds may stop before full completion.",
+    "Original-context job had passed its seven self-tests and was initializing; no source success is claimed in this snapshot."
+  ]
+}

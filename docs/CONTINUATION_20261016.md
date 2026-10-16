@@ -27,3 +27,7 @@ The original-context collector is an access and provenance milestone. Its single
 The existing statistics archive is broad. The most immediate gaps are odds observations at usable decision times, original player availability vintages, incomplete college basketball play history, and reliable identities. This batch adds missing data and source context while retaining earlier acquisitions. It does not rerun completed model experiments or present newly downloaded data as validated model features.
 
 The first prop batch exposed substantial quote-time and kickoff inconsistencies. New prop credit spending is deferred while the repair path is investigated. More raw prop volume would not fix that eligibility problem by itself.
+
+## First verified continuation progress
+
+At 18:21:06 UTC, the paid continuation had seeded 46,765 successful request IDs and 1,228 immutable historical missing-event responses, then captured **203 new responses** (185 odds and 18 CBBD). Its source-derived plan contains 75,481 missing odds checkpoints and 40,294 college-basketball requests; the configured budget does not promise completion of that whole plan. Both new jobs were InProgress at the 18:21:14 UTC check. The original-context collector had passed its seven self-tests and was initializing. [Read the first runtime evidence](status/first_runtime_summary_20261016.json).
