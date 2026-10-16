@@ -1,0 +1,45 @@
+{
+  "ProcessingInputs": [
+    {
+      "InputName": "code",
+      "AppManaged": false,
+      "S3Input": {
+        "S3Uri": "s3://sagemaker-sports-edge-lab-560403859723-us-west-2/infrastructure/code/football-finish-20261016-v039/",
+        "LocalPath": "/opt/ml/processing/code",
+        "S3DataType": "S3Prefix",
+        "S3InputMode": "File",
+        "S3DataDistributionType": "FullyReplicated"
+      }
+    }
+  ],
+  "ProcessingJobName": "sports-edge-lab-football-finish-20261016-v039",
+  "ProcessingResources": {
+    "ClusterConfig": {
+      "InstanceCount": 1,
+      "InstanceType": "ml.m5.2xlarge",
+      "VolumeSizeInGB": 30
+    }
+  },
+  "StoppingCondition": {
+    "MaxRuntimeInSeconds": 432000
+  },
+  "AppSpecification": {
+    "ImageUri": "246618743249.dkr.ecr.us-west-2.amazonaws.com/sagemaker-scikit-learn:1.9-0",
+    "ContainerEntrypoint": [
+      "python3",
+      "-u",
+      "/opt/ml/processing/code/sports_edge_lab_football_finish_v039_20261016.pyz"
+    ]
+  },
+  "NetworkConfig": {
+    "EnableInterContainerTrafficEncryption": false,
+    "EnableNetworkIsolation": false
+  },
+  "RoleArn": "arn:aws:iam::560403859723:role/SportsEdgeLabProcessingRole",
+  "ProcessingJobArn": "arn:aws:sagemaker:us-west-2:560403859723:processing-job/sports-edge-lab-football-finish-20261016-v039",
+  "ProcessingJobStatus": "Completed",
+  "ProcessingEndTime": "2026-10-16T22:47:02.416000+00:00",
+  "ProcessingStartTime": "2026-10-16T21:14:53.331000+00:00",
+  "LastModifiedTime": "2026-10-16T22:49:18.135000+00:00",
+  "CreationTime": "2026-10-16T21:14:08.428000+00:00"
+}

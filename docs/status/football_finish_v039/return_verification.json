@@ -1,0 +1,28 @@
+{
+  "bytes": 574596,
+  "sha256": "144f02c84a974172cf21cdf76df7b525abcea4cbc0c7a6ccff432b4b88af0f3b",
+  "members": [
+    "summary.json",
+    "failures.json",
+    "receipts.json",
+    "plan.json",
+    "availability.json",
+    "resume.json"
+  ],
+  "crc_validation_passed": true,
+  "unique_zip_count_in_run_prefix": 1,
+  "selected_planned": 4696,
+  "successful_price_receipts": 4696,
+  "unique_successful_request_ids": 4696,
+  "failed_requests": 0,
+  "remaining": 0,
+  "plan_equals_successful_receipt_identities": true,
+  "quota_preflight_receipts": 1,
+  "known_credits_from_receipt_headers": 140880,
+  "unknown_charge_reserve": 60,
+  "retryable_incidents": 2,
+  "all_successful_receipts_status_200": true,
+  "source_tracks": [
+    "ncaaf"
+  ]
+}

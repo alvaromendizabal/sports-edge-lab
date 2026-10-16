@@ -1,5 +1,8 @@
 # Continuous football completion v039 — October 16, 2026
 
+**Verified terminal outcome — October 16, 22:51 UTC:** AWS `Completed`, ProcessingEndTime `2026-10-16T22:47:02.416Z`. The frozen selected queue is complete: 4,696/4,696 successful NCAAF historical US game-price requests, zero final failures and zero remaining. Receipt identities exactly match the frozen plan. Two retryable incidents consumed a conservative 60-credit unknown-charge reserve; known usage is 140,880 existing subscription credits. Final account header: 2,074,356 remaining. One 574,596-byte return ZIP passed CRC and receipt/plan validation (SHA-256 `144f02c84a974172cf21cdf76df7b525abcea4cbc0c7a6ccff432b4b88af0f3b`). The processing interval is 5,529.085 seconds, approximately $0.708 at the recorded $0.461/hour rate, excluding S3 and subscription costs. No restart occurred. [Terminal and independent receipt verification](status/football_finish_v039/). Older progress observations below are historical.
+
+
 **Latest observation — October 16, 22:29:34 UTC:** AWS `InProgress`; S3 heartbeat at 22:29:33 reports 3,673/4,696 captured, 1,023 remaining, zero final failures, two retryable incidents, 110,190 known odds credits and 60 unknown-charge reserve credits. Last account header: 2,105,046 credits remaining. No terminal outcome or final ZIP yet. V039 was not changed or restarted. [Raw observation](status/football_refresh_v041/odds_observation.json).
 
 The user authorized the next necessary downloads without short application runtime windows. V039 replaces the prepared v038 restart. V038 was never launched and must not be launched by the old follow-up.
