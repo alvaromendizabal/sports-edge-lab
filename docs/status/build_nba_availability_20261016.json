@@ -1,0 +1,25 @@
+{
+  "artifact": "sports_edge_lab_nba_availability_v016_20261016.pyz",
+  "bytes": 7146,
+  "sha256": "16d9630b00003b465117c9e58ef4a45a874c0a08a1bce367417e4dab935062a6",
+  "tests": 13,
+  "seed_urls": 24,
+  "inputs": {
+    "acquire_nba_availability.py": "88013507c30b31b3c38d959f4d6999e379f000a2f31ce1efdcbe5af97a6f2ee0",
+    "nba_report_seeds.json": "4edbaf19890aa1f3294f2df5e69160ceb5fcbfb29f2970a0c532325e4133ea7c"
+  },
+  "self_test_command": "python sports_edge_lab_nba_availability_v016_20261016.pyz --self-test",
+  "suggested_aws_max_runtime_seconds": 720,
+  "application_arguments": [
+    "--max-seconds",
+    "600",
+    "--max-requests",
+    "300",
+    "--max-reports",
+    "250",
+    "--max-pages",
+    "4"
+  ],
+  "historical_coverage_complete": false,
+  "point_in_time_approved": false
+}

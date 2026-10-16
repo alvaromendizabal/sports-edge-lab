@@ -1,0 +1,201 @@
+{
+  "status": "success",
+  "stdout": "",
+  "return_value": {
+    "checked_at": "2026-10-16T18:50:31.978211+00:00",
+    "runs": {
+      "game_backfill": {
+        "run_id": "20261016T182005Z-1999205e92",
+        "timestamp": "2026-10-16T18:50:22Z",
+        "statistics": {
+          "captured": 7429,
+          "cbbd_captured": 1390,
+          "cbbd_http_calls": 1391,
+          "http_calls": 7431,
+          "nba_captured": 1208,
+          "ncaaf_captured": 1208,
+          "ncaam_captured": 2597,
+          "ncaaw_captured": 1208,
+          "nfl_captured": 1208,
+          "odds_captured": 6039,
+          "odds_http_calls": 6040,
+          "raw_bytes": 6471008655
+        },
+        "budget": {
+          "actual_known": {
+            "odds": 181200,
+            "stats": 1391
+          },
+          "disabled_providers": [],
+          "limits": {
+            "odds": 1600000,
+            "stats": 30000
+          },
+          "provider_headers": {
+            "cbbd": {},
+            "odds": {
+              "x-requests-last": 30,
+              "x-requests-remaining": 3396120,
+              "x-requests-used": 1603880
+            }
+          },
+          "reserved_or_known": {
+            "odds": 181290,
+            "stats": 1394
+          },
+          "unknown_charge_reserve": {
+            "odds": 0,
+            "stats": 0
+          }
+        },
+        "phases": {
+          "cbbd_gap_inventory": {
+            "cached_game_requests": 293,
+            "eligible_game_ids": 18866,
+            "known_play_dates": 3144,
+            "missing_lineups": 18866,
+            "missing_play_dates": 2562,
+            "missing_substitutions": 18866
+          },
+          "cbbd_gaps": {
+            "completed": 1390,
+            "negative_responses": 0,
+            "planned_missing_requests": 40294,
+            "processed": 1390,
+            "status": "running",
+            "successful_or_reused": 1390
+          },
+          "new_daily_census": {
+            "requests_processed": 5,
+            "status": "completed"
+          },
+          "odds_gap_checkpoints": {
+            "completed": 6034,
+            "negative_responses": 0,
+            "planned_missing_requests": 75481,
+            "processed": 6034,
+            "status": "running",
+            "successful_or_reused": 6034
+          },
+          "odds_missing_by_track": {
+            "nba": 19569,
+            "ncaaf": 12573,
+            "ncaam": 35414,
+            "ncaaw": 4831,
+            "nfl": 3094
+          },
+          "seed": {
+            "permanent_request_404s": 1228,
+            "source_runs": 3,
+            "status": "completed",
+            "successful_request_ids": 46765
+          }
+        },
+        "elapsed_seconds": 1816.18,
+        "errors_count": 0,
+        "failures_count": 0,
+        "report_key": "shared/acquisition/paid/20261016T182005Z-1999205e92/progress.json"
+      },
+      "props": {
+        "run_id": "20261016T184218Z-a7117f54b6",
+        "timestamp": "2026-10-16T18:50:22Z",
+        "statistics": {
+          "captured": 2241,
+          "http_calls": 2496,
+          "nba_captured": 575,
+          "ncaaf_captured": 611,
+          "ncaam_captured": 548,
+          "nfl_captured": 507,
+          "odds_captured": 2241,
+          "odds_http_calls": 2496,
+          "raw_bytes": 66555954,
+          "source_event_snapshots_loaded": 4
+        },
+        "budget": {
+          "actual_known": {
+            "odds": 84970,
+            "stats": 0
+          },
+          "disabled_providers": [],
+          "limits": {
+            "odds": 500000,
+            "stats": 0
+          },
+          "provider_headers": {
+            "odds": {
+              "x-requests-last": 60,
+              "x-requests-remaining": 3396150,
+              "x-requests-used": 1603850
+            }
+          },
+          "reserved_or_known": {
+            "odds": 84970,
+            "stats": 0
+          },
+          "unknown_charge_reserve": {
+            "odds": 0,
+            "stats": 0
+          }
+        },
+        "phases": {
+          "player_props": {
+            "completed": 2496,
+            "currently_pending": 67560,
+            "initial_missing": 69960,
+            "pending_by_track": {
+              "nba": 10064,
+              "ncaaf": 7113,
+              "ncaam": 49186,
+              "nfl": 1197
+            },
+            "planned": 69960,
+            "status": "running"
+          },
+          "seed": {
+            "permanent_request_404s": 1228,
+            "source_runs": 2,
+            "status": "completed",
+            "successful_request_ids": 45862
+          }
+        },
+        "elapsed_seconds": 484.45,
+        "errors_count": 0,
+        "failures_count": 255,
+        "report_key": "shared/acquisition/paid/20261016T184218Z-a7117f54b6/progress.json"
+      },
+      "weather": {
+        "run_id": "20261016T184430Z-99a2b636c5",
+        "status": "running",
+        "requests": 703,
+        "elapsed_seconds": 352.3,
+        "planned_venues": 609,
+        "eligible_venues": 728,
+        "errors_count": 0,
+        "failures_count": 0,
+        "report_key": "shared/acquisition/weather-continuation/20261016T184430Z-99a2b636c5/progress.json",
+        "prior_successful_venues": 119,
+        "venues_successful_this_run": 351,
+        "venues_processed": 351,
+        "receipts": 702,
+        "errors_sample": []
+      }
+    }
+  },
+  "api_calls": [
+    {
+      "service": "s3",
+      "operation": "GetObject",
+      "status": "success"
+    },
+    {
+      "service": "s3",
+      "operation": "GetObject",
+      "status": "success"
+    },
+    {
+      "service": "s3",
+      "operation": "GetObject",
+      "status": "success"
+    }
+  ]
+}

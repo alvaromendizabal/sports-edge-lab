@@ -1,0 +1,38 @@
+{
+  "run_family": "sports-edge-lab-weather-continuation",
+  "version": "v015",
+  "artifact": "turn3_weather/sports_edge_lab_weather_continuation_v015_20261016.pyz",
+  "artifact_sha256": "35fbcd06c3f5669535f0089631cba4d776feccb0069f38bafc6a3922a745a2d3",
+  "artifact_bytes": 8669,
+  "source": "/workspace/scratch/f3ff20681710/turn3_weather/acquire_weather_continuation.py",
+  "source_sha256": "b7bb7d76c7a6941253d53c8d11f1b038c9531532ed346d2abacf9c65d6d95d3b",
+  "self_tests": 12,
+  "python_dependencies": "standard library + boto3/botocore already present in SageMaker image",
+  "prior_report_key": "shared/acquisition/original-enrichment/20261016T182059Z-5f05a0d4d3/report.json",
+  "expected_prior_eligible": 728,
+  "expected_prior_successful_skipped": 119,
+  "expected_remaining_target": 609,
+  "bounds": {
+    "max_requests": 1500,
+    "max_seconds": 1200,
+    "max_venues": 728,
+    "workers": 4,
+    "requests_per_second": 2,
+    "recommended_aws_max_runtime_seconds": 1500
+  },
+  "entrypoint": [
+    "python3",
+    "-u",
+    "/opt/ml/processing/input/code/sports_edge_lab_weather_continuation_v015_20261016.pyz"
+  ],
+  "output_prefix": "shared/acquisition/weather-continuation/{run_id}/",
+  "outputs": "one uniquely named return ZIP per execution, plus report.json/progress.json in S3",
+  "cost_estimate_runtime_usd": 0.15366666666666667,
+  "cost_exclusions": [
+    "boot",
+    "shutdown",
+    "S3 requests",
+    "S3 storage"
+  ],
+  "safety": "On HTTP 401/403/429 the NWS host is suspended immediately; no retries or alternate hosts. Prior successful venues retain original timestamp and are skipped."
+}

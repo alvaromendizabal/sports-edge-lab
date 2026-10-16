@@ -1,0 +1,117 @@
+{
+  "status": "success",
+  "stdout": "",
+  "return_value": {
+    "checked_at": "2026-10-16T18:56:49.748944+00:00",
+    "jobs": [
+      {
+        "ProcessingJobName": "sports-edge-lab-gap-backfill-20261016-v011",
+        "ProcessingJobStatus": "InProgress",
+        "CreationTime": "2026-10-16T18:18:43.087000+00:00",
+        "ProcessingStartTime": "2026-10-16T18:19:27.656000+00:00",
+        "StoppingCondition": {
+          "MaxRuntimeInSeconds": 14400
+        }
+      },
+      {
+        "ProcessingJobName": "sports-edge-lab-props-continuation-20261016-v014",
+        "ProcessingJobStatus": "InProgress",
+        "CreationTime": "2026-10-16T18:41:02.477000+00:00",
+        "ProcessingStartTime": "2026-10-16T18:41:39.565000+00:00",
+        "StoppingCondition": {
+          "MaxRuntimeInSeconds": 7200
+        }
+      },
+      {
+        "ProcessingJobName": "sports-edge-lab-weather-resume-20261016-v015",
+        "ProcessingJobStatus": "Completed",
+        "CreationTime": "2026-10-16T18:43:12.334000+00:00",
+        "ProcessingStartTime": "2026-10-16T18:43:52.056000+00:00",
+        "ProcessingEndTime": "2026-10-16T18:54:42.360000+00:00",
+        "StoppingCondition": {
+          "MaxRuntimeInSeconds": 1500
+        }
+      },
+      {
+        "ProcessingJobName": "sports-edge-lab-nba-availability-20261016-v016",
+        "ProcessingJobStatus": "Completed",
+        "CreationTime": "2026-10-16T18:41:14.389000+00:00",
+        "ProcessingStartTime": "2026-10-16T18:41:53.859000+00:00",
+        "ProcessingEndTime": "2026-10-16T18:43:02.294000+00:00",
+        "StoppingCondition": {
+          "MaxRuntimeInSeconds": 720
+        }
+      },
+      {
+        "ProcessingJobName": "sports-edge-lab-noaa-hrrr-20261016-v018",
+        "ProcessingJobStatus": "Failed",
+        "FailureReason": "AlgorithmError: , exit code: 2",
+        "CreationTime": "2026-10-16T18:47:26.660000+00:00",
+        "ProcessingStartTime": "2026-10-16T18:48:04.100000+00:00",
+        "ProcessingEndTime": "2026-10-16T18:49:12.878000+00:00",
+        "StoppingCondition": {
+          "MaxRuntimeInSeconds": 900
+        }
+      },
+      {
+        "ProcessingJobName": "sports-edge-lab-noaa-hrrr-20261016-v019",
+        "ProcessingJobStatus": "InProgress",
+        "CreationTime": "2026-10-16T18:52:31.241000+00:00",
+        "ProcessingStartTime": "2026-10-16T18:53:09.680000+00:00",
+        "StoppingCondition": {
+          "MaxRuntimeInSeconds": 900
+        }
+      }
+    ]
+  },
+  "api_calls": [
+    {
+      "service": "sagemaker",
+      "operation": "DescribeProcessingJob",
+      "status": "success",
+      "n_items": {
+        "ProcessingInputs": 1
+      }
+    },
+    {
+      "service": "sagemaker",
+      "operation": "DescribeProcessingJob",
+      "status": "success",
+      "n_items": {
+        "ProcessingInputs": 1
+      }
+    },
+    {
+      "service": "sagemaker",
+      "operation": "DescribeProcessingJob",
+      "status": "success",
+      "n_items": {
+        "ProcessingInputs": 1
+      }
+    },
+    {
+      "service": "sagemaker",
+      "operation": "DescribeProcessingJob",
+      "status": "success",
+      "n_items": {
+        "ProcessingInputs": 1
+      }
+    },
+    {
+      "service": "sagemaker",
+      "operation": "DescribeProcessingJob",
+      "status": "success",
+      "n_items": {
+        "ProcessingInputs": 1
+      }
+    },
+    {
+      "service": "sagemaker",
+      "operation": "DescribeProcessingJob",
+      "status": "success",
+      "n_items": {
+        "ProcessingInputs": 1
+      }
+    }
+  ]
+}

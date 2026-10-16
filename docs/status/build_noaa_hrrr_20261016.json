@@ -1,0 +1,17 @@
+{
+  "file": "turn3_sources/sports_edge_lab_noaa_hrrr_v019_20261016.pyz",
+  "bytes": 12752,
+  "sha256": "feaf908212ae648ac9a54b8b0bad467f2ee5e4b7ceb26bddeea74fb65f8e5a2b",
+  "source_sha256": "f5fc39360dc9f09661eb1d73212c64613c564036cb8295970157578f9b1d4a79",
+  "tests": 15,
+  "bounds": {
+    "source_bytes": 250000000,
+    "source_calls": 500,
+    "application_seconds": 600,
+    "aws_seconds": 900
+  },
+  "season": 2024,
+  "utc_game_date": "2024-10-12",
+  "validation": "AST parsed; targeted v019 review and mandatory AWS self-tests pending",
+  "fix": "Retain both HRRR APCP accumulation intervals as separately identified fields with exact start/end semantics; validate requested forecast lead. Real NOAA index fixture embedded in self-tests."
+}

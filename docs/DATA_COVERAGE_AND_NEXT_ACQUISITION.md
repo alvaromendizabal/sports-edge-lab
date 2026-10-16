@@ -2,9 +2,9 @@
 
 Verified against the canonical private S3 archive on **16 October 2026, 18:09–18:11 UTC**. Counts below exclude acquisition receipts, request indexes, audit files, return ZIPs, and the duplicate legacy NFL archive.
 
-## What is stored
+## Frozen starting inventory
 
-**46,069 raw content files occupy 12,423,339,059 bytes (12.42 GB)**. This comprises 5,307 public archive files (10.74 GB), 40,756 hash-addressed paid API payloads, and six provider canaries. File counts are not unique games, rows, or model-ready examples. Public files overlap across source families; paid bodies are deduplicated by content within their storage namespace.
+**At the stated inventory timestamp, 46,069 raw content files occupy 12,423,339,059 bytes (12.42 GB)**. This comprises 5,307 public archive files (10.74 GB), 40,756 hash-addressed paid API payloads, and six provider canaries. File counts are not unique games, rows, or model-ready examples. Public files overlap across source families; paid bodies are deduplicated by content within their storage namespace.
 
 | Track | Public archive files | Paid payload files | Canaries | Total stored bytes |
 | --- | ---: | ---: | ---: | ---: |
@@ -61,3 +61,7 @@ Downloading more data is one part of the research program. The next acceptance g
 All 14 earlier Processing executions are terminal: eight AWS `Completed`, six `Failed`. Completed denotes execution status, not complete data coverage. Their reported start/end intervals imply **$1.448240 for completed jobs and $0.040885 for failed jobs** at the recorded instance rates. Provisioning/shutdown outside those intervals, the temporary Studio backup app, storage, requests and subscriptions are excluded; this is not a billing statement.
 
 See the [latest operational snapshot](status/operational-status_20261016T1810Z.json), [raw content inventory](status/raw_inventory_20261016.json), and [cumulative execution ledger](status/execution-ledger_20261016T1810Z.json). Later launches are recorded separately so this completed-run snapshot remains reproducible.
+
+## Subsequent acquisition milestone
+
+The starting content scan above remains frozen. A public refresh added 19 revisions while reusing 4,473 verified assets. New bounded work now adds missing game-price and player-prop checkpoints, college basketball plays/lineups/substitutions, official NBA injury PDFs, current NWS forecast vintages and an original NOAA historical forecast-field pilot. See the [dated runtime, quota and launch evidence](FRONTIER_ACQUISITION_20261016.md) for actual progress and failures, and the [frontier source priorities](FRONTIER_DATA_PRIORITIES_20261016.md) for public sources, unconfirmed tracking access and acceptance gates. These additions are not silently folded into the earlier byte or file counts.

@@ -75,3 +75,14 @@ jobs:
           python tools/continue_acquisition.py --self-test
           python tools/acquire_original_enrichment.py --self-test
 
+
+      - name: Run continued props, weather and availability guards
+        run: |
+          python -m py_compile tools/continue_player_props.py tools/acquire_weather_continuation.py tools/acquire_nba_availability.py
+          python tools/continue_player_props.py --self-test
+          python tools/acquire_weather_continuation.py --self-test
+          python tools/acquire_nba_availability.py --self-test
+      - name: Run original HRRR forecast archive guards
+        run: |
+          python -m py_compile tools/acquire_hrrr_original.py
+          python tools/acquire_hrrr_original.py --self-test

@@ -1,0 +1,26 @@
+{
+  "config": {
+    "job": "sports-edge-lab-noaa-hrrr-20261016-v019",
+    "prefix": "noaa-hrrr-20261016-v019",
+    "file": "sports_edge_lab_noaa_hrrr_v019_20261016.pyz",
+    "max": 900,
+    "work": "noaa-hrrr"
+  },
+  "response": {
+    "status": "success",
+    "stdout": "",
+    "return_value": {
+      "job": "sports-edge-lab-noaa-hrrr-20261016-v019",
+      "response": {
+        "ProcessingJobArn": "arn:aws:sagemaker:us-west-2:560403859723:processing-job/sports-edge-lab-noaa-hrrr-20261016-v019"
+      }
+    },
+    "api_calls": [
+      {
+        "service": "sagemaker",
+        "operation": "CreateProcessingJob",
+        "status": "success"
+      }
+    ]
+  }
+}

@@ -1,0 +1,16 @@
+{
+  "file": "turn3_sources/sports_edge_lab_noaa_hrrr_v017_20261016.pyz",
+  "bytes": 8707,
+  "sha256": "dd69a8b522780478a6f31bbd5131f4f2abe0d27bece1cdcc299d8618ce853735",
+  "source_sha256": "7ecb01d9bebf4fc632d59472fa9ab91b40bd528d388aceedf0246d589e76d52c",
+  "tests": 11,
+  "bounds": {
+    "source_bytes": 250000000,
+    "source_calls": 500,
+    "application_seconds": 600,
+    "aws_seconds": 900
+  },
+  "season": 2024,
+  "utc_game_date": "2024-10-12",
+  "validation": "AST parsed and independent static review cleared; runtime self-tests mandatory in AWS before collection"
+}

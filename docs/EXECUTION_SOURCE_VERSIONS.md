@@ -24,3 +24,20 @@ The v011 continuation imports the unchanged v002 base engine. Its source is [`to
 
 The public delta uses the current six-test public archive source: SHA-256 `955a727b7074372f6b41e40f40fde42edce3d3ecfeea17d1e606794bc148d2c1`. It reuses existing immutable assets and preserves revised versions. Deployment receipts and budgets are in [the continuation record](CONTINUATION_20261016.md).
 
+
+## Frontier-relevant acquisition continuation
+
+The earlier collectors remain byte-identical. These separate sources add bounded, resumable workstreams and are gated by their own offline tests in AWS and CI. Actual launch and first runtime results are recorded in [the acquisition milestone](FRONTIER_ACQUISITION_20261016.md).
+
+| Collector source | Bytes | SHA-256 |
+| --- | ---: | --- |
+| [Continued player props](../tools/continue_player_props.py) | 28,803 | `1c977b8fbaef3e16b5455d80188a7868d900d9724961341b3ad7b8d1a1cd8b09` |
+| [NWS forecast continuation](../tools/acquire_weather_continuation.py) | 30,883 | `b7bb7d76c7a6941253d53c8d11f1b038c9531532ed346d2abacf9c65d6d95d3b` |
+| [Official NBA availability](../tools/acquire_nba_availability.py) | 19,105 | `88013507c30b31b3c38d959f4d6999e379f000a2f31ce1efdcbe5af97a6f2ee0` |
+| [Original NOAA HRRR fields](../tools/acquire_hrrr_original.py) | 42,742 | `f5fc39360dc9f09661eb1d73212c64613c564036cb8295970157578f9b1d4a79` |
+
+The player-prop continuation imports the unchanged v002 paid engine. Availability also requires the published `tools/nba_report_seeds.json`, which the self-contained PYZ embeds. Artifact build manifests preserve the actual executable hashes and source inputs. NOAA initialization time and forecast-valid time are recorded separately from unknown historical release availability. No passing source test or successful HTTP response establishes feature eligibility.
+
+NOAA v017 passed its 11 guards but failed before any source HTTP request because its historical CFBD cache descriptor used a current-data vintage. The [exact failed-launched source](../tools/history/acquire_hrrr_original_v017_launched.py) and [artifact manifest](status/build_noaa_hrrr_v017_20261016.json) remain preserved. V018 adds exact historical and current/reference cache-identity regression guards (13 tests total), after the existing 2024 receipt was verified read-only. It does not repeat the paid CFBD acquisition.
+
+NOAA v018 obtained listing/index metadata but rejected forecast pairs with both total and hourly precipitation accumulations. It downloaded zero GRIB fields. Its [exact launched source](../tools/history/acquire_hrrr_original_v018_launched.py) and [build manifest](status/build_noaa_hrrr_v018_20261016.json) remain preserved. Current v019 keeps the accumulation intervals distinct and embeds the complete actual NOAA index fixture in its 15 guards; fixture tests require no external file. Source/run evidence must establish actual field acquisition separately.

@@ -1,0 +1,17 @@
+{
+  "file": "turn3_sources/sports_edge_lab_noaa_hrrr_v018_20261016.pyz",
+  "bytes": 9190,
+  "sha256": "fca0f0abda2e7fcfa2531384482bbe5a381306dfaa220df602e9f7ce7eb110c4",
+  "source_sha256": "b185fca4747c1b5d206b004485d9a3648edc488af37f3c64ae7ea199aa6ea4d1",
+  "tests": 13,
+  "bounds": {
+    "source_bytes": 250000000,
+    "source_calls": 500,
+    "application_seconds": 600,
+    "aws_seconds": 900
+  },
+  "season": 2024,
+  "utc_game_date": "2024-10-12",
+  "validation": "AST parsed; v017 static review cleared; v018 cache fix awaiting review and automatic AWS tests",
+  "fix": "Historical CFBD season cache uses empty vintage; references/current seasons retain capture day. Exact existing 2024 index receipt verified read-only."
+}

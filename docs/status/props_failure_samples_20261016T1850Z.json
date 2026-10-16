@@ -1,0 +1,144 @@
+{
+  "status": "success",
+  "stdout": "",
+  "return_value": {
+    "nfl": {
+      "failure_receipt_count": 153,
+      "one_sample": {
+        "status": 404,
+        "error_type": "HTTPError",
+        "retrieved_at": "2026-10-16T18:49:21Z",
+        "request": {
+          "capture_vintage": "",
+          "endpoint": "/v4/historical/sports/americanfootball_nfl/events/f8ad203043021473d24d841674bc8c0b/odds",
+          "params": {
+            "date": "2023-12-10T21:10:00Z",
+            "dateFormat": "iso",
+            "markets": "player_pass_yds,player_pass_tds,player_rush_yds,player_reception_yds,player_receptions,player_anytime_td",
+            "oddsFormat": "decimal",
+            "regions": "us"
+          },
+          "provider": "odds",
+          "track": "nfl"
+        }
+      }
+    },
+    "nba": {
+      "failure_receipt_count": 52,
+      "one_sample": {
+        "status": 404,
+        "error_type": "HTTPError",
+        "retrieved_at": "2026-10-16T18:43:54Z",
+        "request": {
+          "capture_vintage": "",
+          "endpoint": "/v4/historical/sports/basketball_nba/events/79eb6c4e1c2997c28d23ce515d513081/odds",
+          "params": {
+            "date": "2026-02-20T00:12:00Z",
+            "dateFormat": "iso",
+            "markets": "player_points,player_rebounds,player_assists,player_threes,player_blocks,player_steals",
+            "oddsFormat": "decimal",
+            "regions": "us"
+          },
+          "provider": "odds",
+          "track": "nba"
+        }
+      }
+    },
+    "ncaaf": {
+      "failure_receipt_count": 13,
+      "one_sample": {
+        "status": 404,
+        "error_type": "HTTPError",
+        "retrieved_at": "2026-10-16T18:47:04Z",
+        "request": {
+          "capture_vintage": "",
+          "endpoint": "/v4/historical/sports/americanfootball_ncaaf/events/664e219533a3b4305ae26beba80e4869/odds",
+          "params": {
+            "date": "2025-10-30T23:00:00Z",
+            "dateFormat": "iso",
+            "markets": "player_pass_yds,player_pass_tds,player_rush_yds,player_reception_yds,player_receptions,player_anytime_td",
+            "oddsFormat": "decimal",
+            "regions": "us"
+          },
+          "provider": "odds",
+          "track": "ncaaf"
+        }
+      }
+    },
+    "ncaam": {
+      "failure_receipt_count": 90,
+      "one_sample": {
+        "status": 404,
+        "error_type": "HTTPError",
+        "retrieved_at": "2026-10-16T18:46:11Z",
+        "request": {
+          "capture_vintage": "",
+          "endpoint": "/v4/historical/sports/basketball_ncaab/events/e1e3797299e4e312d4d438deb7ea0e8d/odds",
+          "params": {
+            "date": "2026-03-02T23:01:17Z",
+            "dateFormat": "iso",
+            "markets": "player_points,player_rebounds,player_assists,player_threes,player_blocks,player_steals",
+            "oddsFormat": "decimal",
+            "regions": "us"
+          },
+          "provider": "odds",
+          "track": "ncaam"
+        }
+      }
+    }
+  },
+  "api_calls": [
+    {
+      "service": "s3",
+      "operation": "ListObjectsV2",
+      "status": "success",
+      "n_items": {
+        "Contents": 153
+      }
+    },
+    {
+      "service": "s3",
+      "operation": "ListObjectsV2",
+      "status": "success",
+      "n_items": {
+        "Contents": 52
+      }
+    },
+    {
+      "service": "s3",
+      "operation": "ListObjectsV2",
+      "status": "success",
+      "n_items": {
+        "Contents": 13
+      }
+    },
+    {
+      "service": "s3",
+      "operation": "ListObjectsV2",
+      "status": "success",
+      "n_items": {
+        "Contents": 90
+      }
+    },
+    {
+      "service": "s3",
+      "operation": "GetObject",
+      "status": "success"
+    },
+    {
+      "service": "s3",
+      "operation": "GetObject",
+      "status": "success"
+    },
+    {
+      "service": "s3",
+      "operation": "GetObject",
+      "status": "success"
+    },
+    {
+      "service": "s3",
+      "operation": "GetObject",
+      "status": "success"
+    }
+  ]
+}

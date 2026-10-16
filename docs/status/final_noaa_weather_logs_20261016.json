@@ -1,0 +1,110 @@
+{
+  "status": "success",
+  "stdout": "",
+  "return_value": [
+    {
+      "job": "sports-edge-lab-noaa-hrrr-20261016-v019",
+      "events": [
+        {
+          "timestamp": 1792176834066,
+          "message": "OK",
+          "ingestionTime": 1792176840206
+        },
+        {
+          "timestamp": 1792176834066,
+          "message": "{\"timestamp\": \"2026-10-16T18:53:49Z\", \"event\": \"SELF_TEST_PASSED\", \"tests\": 15}",
+          "ingestionTime": 1792176840206
+        },
+        {
+          "timestamp": 1792176834066,
+          "message": "{\"timestamp\": \"2026-10-16T18:53:50Z\", \"event\": \"HEARTBEAT\", \"run_id\": \"20261016T185349Z-d6e8fce305\", \"requests\": 0, \"source_bytes\": 0, \"captures\": 0, \"forecast_pairs_processed\": 0, \"forecast_pairs_remaining\": 18, \"estimated_compute_usd\": 0.00013}",
+          "ingestionTime": 1792176840206
+        },
+        {
+          "timestamp": 1792176851069,
+          "message": "{\"timestamp\": \"2026-10-16T18:54:10Z\", \"event\": \"HEARTBEAT\", \"run_id\": \"20261016T185349Z-d6e8fce305\", \"requests\": 30, \"source_bytes\": 36049871, \"captures\": 39, \"forecast_pairs_processed\": 4, \"forecast_pairs_remaining\": 14, \"estimated_compute_usd\": 0.002728}",
+          "ingestionTime": 1792176856258
+        },
+        {
+          "timestamp": 1792176871072,
+          "message": "{\"timestamp\": \"2026-10-16T18:54:30Z\", \"event\": \"HEARTBEAT\", \"run_id\": \"20261016T185349Z-d6e8fce305\", \"requests\": 59, \"source_bytes\": 72758975, \"captures\": 75, \"forecast_pairs_processed\": 9, \"forecast_pairs_remaining\": 9, \"estimated_compute_usd\": 0.005349}",
+          "ingestionTime": 1792176876309
+        },
+        {
+          "timestamp": 1792176892074,
+          "message": "{\"timestamp\": \"2026-10-16T18:54:51Z\", \"event\": \"HEARTBEAT\", \"run_id\": \"20261016T185349Z-d6e8fce305\", \"requests\": 88, \"source_bytes\": 109691546, \"captures\": 112, \"forecast_pairs_processed\": 14, \"forecast_pairs_remaining\": 4, \"estimated_compute_usd\": 0.00795}",
+          "ingestionTime": 1792176897357
+        }
+      ]
+    },
+    {
+      "job": "sports-edge-lab-weather-resume-20261016-v015",
+      "events": [
+        {
+          "timestamp": 1792176788938,
+          "message": "{\"timestamp\": \"2026-10-16T18:53:08Z\", \"event\": \"HEARTBEAT\", \"run_id\": \"20261016T184430Z-99a2b636c5\", \"requests\": 1034, \"captures\": 1046, \"prior_successful_skipped\": 119, \"venues_processed\": 523, \"venues_remaining\": 86, \"elapsed_seconds\": 517.7, \"estimated_compute_usd\": 0.066294}",
+          "ingestionTime": 1792176794194
+        },
+        {
+          "timestamp": 1792176809941,
+          "message": "{\"timestamp\": \"2026-10-16T18:53:29Z\", \"event\": \"HEARTBEAT\", \"run_id\": \"20261016T184430Z-99a2b636c5\", \"requests\": 1076, \"captures\": 1088, \"prior_successful_skipped\": 119, \"venues_processed\": 544, \"venues_remaining\": 65, \"elapsed_seconds\": 538.55, \"estimated_compute_usd\": 0.068964}",
+          "ingestionTime": 1792176815242
+        },
+        {
+          "timestamp": 1792176829943,
+          "message": "{\"timestamp\": \"2026-10-16T18:53:49Z\", \"event\": \"HEARTBEAT\", \"run_id\": \"20261016T184430Z-99a2b636c5\", \"requests\": 1116, \"captures\": 1128, \"prior_successful_skipped\": 119, \"venues_processed\": 564, \"venues_remaining\": 45, \"elapsed_seconds\": 558.73, \"estimated_compute_usd\": 0.071548}",
+          "ingestionTime": 1792176835293
+        },
+        {
+          "timestamp": 1792176849946,
+          "message": "{\"timestamp\": \"2026-10-16T18:54:09Z\", \"event\": \"HEARTBEAT\", \"run_id\": \"20261016T184430Z-99a2b636c5\", \"requests\": 1157, \"captures\": 1170, \"prior_successful_skipped\": 119, \"venues_processed\": 585, \"venues_remaining\": 24, \"elapsed_seconds\": 579.1, \"estimated_compute_usd\": 0.074157}",
+          "ingestionTime": 1792176855342
+        },
+        {
+          "timestamp": 1792176871949,
+          "message": "{\"timestamp\": \"2026-10-16T18:54:31Z\", \"event\": \"HEARTBEAT\", \"run_id\": \"20261016T184430Z-99a2b636c5\", \"requests\": 1200, \"captures\": 1214, \"prior_successful_skipped\": 119, \"venues_processed\": 607, \"venues_remaining\": 2, \"elapsed_seconds\": 600.61, \"estimated_compute_usd\": 0.076911}",
+          "ingestionTime": 1792176877386
+        },
+        {
+          "timestamp": 1792176872949,
+          "message": "{\"timestamp\": \"2026-10-16T18:54:32Z\", \"event\": \"FINISHED\", \"run_id\": \"20261016T184430Z-99a2b636c5\", \"status\": \"planned_scope_processed\", \"downloaded\": 1201, \"successful_forecast_venues\": 609, \"combined_successful_forecast_venues\": 728, \"remaining_eligible_after_run\": 0, \"requests\": 1201, \"return_zip\": \"/opt/ml/processing/output/sports_edge_lab_weather_continuation_return_20261016T184430Z-99a2b636c5.zip\", \"report_key\": \"shared/acquisition/weather-continuation/20261016T184430Z-99a2b636c5/report.json\"}",
+          "ingestionTime": 1792176877386
+        }
+      ]
+    }
+  ],
+  "api_calls": [
+    {
+      "service": "logs",
+      "operation": "DescribeLogStreams",
+      "status": "success",
+      "n_items": {
+        "logStreams": 1
+      }
+    },
+    {
+      "service": "logs",
+      "operation": "DescribeLogStreams",
+      "status": "success",
+      "n_items": {
+        "logStreams": 1
+      }
+    },
+    {
+      "service": "logs",
+      "operation": "GetLogEvents",
+      "status": "success",
+      "n_items": {
+        "events": 6
+      }
+    },
+    {
+      "service": "logs",
+      "operation": "GetLogEvents",
+      "status": "success",
+      "n_items": {
+        "events": 6
+      }
+    }
+  ]
+}

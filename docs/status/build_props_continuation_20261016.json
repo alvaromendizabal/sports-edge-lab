@@ -1,0 +1,34 @@
+{
+  "artifact": "/workspace/scratch/f3ff20681710/turn3_props/sports_edge_lab_props_continuation_v014.pyz",
+  "bytes": 19443,
+  "sha256": "7625faf97b3d1fafc826548b173d94c2aa7fd3e0d4190febba6bd32dc1e2cfc1",
+  "source_files": {
+    "/workspace/scratch/f3ff20681710/turn3_props/src/__main__.py": {
+      "bytes": 28803,
+      "sha256": "1c977b8fbaef3e16b5455d80188a7868d900d9724961341b3ad7b8d1a1cd8b09"
+    },
+    "/workspace/scratch/f3ff20681710/turn3_props/src/acquire_paid_data.py": {
+      "bytes": 41494,
+      "sha256": "868c011d061b42cce68b863006b8902a4990dcb8294f50dcecf036f54e001a0c"
+    }
+  },
+  "automatic_self_tests": 30,
+  "test_command": "python3 sports_edge_lab_props_continuation_v014.pyz --self-test",
+  "local_validation": "Syntax compilation passed. Runtime self-tests are automatic gates on AWS, not yet run by this build agent.",
+  "launch_defaults": {
+    "odds_credits": 500000,
+    "max_seconds": 6900,
+    "odds_workers": 4,
+    "max_response_mb": 64
+  },
+  "aws_job_max_seconds": 7200,
+  "run_id_prefix": "sports-edge-lab-props-continuation-20261016-v014",
+  "source_runs": [
+    "20261016T003943Z-742acb6443",
+    "20261016T004910Z-fa9211a177"
+  ],
+  "source_events_keys": [
+    "shared/acquisition/paid/20261016T003943Z-742acb6443/discovered-events.json",
+    "shared/acquisition/paid/20261016T182005Z-1999205e92/discovered-events.json"
+  ]
+}

@@ -18,7 +18,7 @@ The project has **one repository, one SageMaker development space, and one priva
 
 ## Current execution status
 
-**The shared archive contains 46,069 raw content files / 12.42 GB**, verified by content-only S3 inventory on **16 October 2026, 18:09–18:11 UTC**. Receipt files, request indexes, audit files and the duplicate legacy archive are excluded.
+**The frozen starting inventory is 46,069 raw content files / 12.42 GB**, verified by content-only S3 inventory on **16 October 2026, 18:09–18:11 UTC**. Receipt files, request indexes, audit files and the duplicate legacy archive are excluded. Acquisitions after this scan are reported separately below; no unmeasured live total is implied.
 
 | Track | Public archive files | Paid payload files | Stored content GB |
 | --- | ---: | ---: | ---: |
@@ -28,7 +28,7 @@ The project has **one repository, one SageMaker development space, and one priva
 | NCAA men's basketball | 466 | 9,169 | 4.187 |
 | NCAA women's basketball | 449 | 1,574 | 2.487 |
 
-The total also includes six provider canary files. Public files can overlap across source families, and hash-addressed paid payloads can serve multiple requests. These are file counts, not unique games or approved training examples.
+This baseline also includes six provider canary files. Public files can overlap across source families, and hash-addressed paid payloads can serve multiple requests. These are file counts, not unique games or approved training examples.
 
 - **Public archive:** all 5,307 files are retained, including the original 815 NFL files. The new 4,492-file batch passed byte-integrity checks in full.
 - **Paid acquisition:** initial runs captured 46,765 responses, including 40,506 odds responses and 6,259 college-statistics responses. The daily odds census processed all 9,811 planned requests; event checkpoints, CBBD plays, player props and shooting recovery still have gaps.
@@ -36,12 +36,14 @@ The total also includes six provider canary files. Public files can overlap acro
 - **Timestamp quality:** only 1,737 prop responses passed the initial nonempty timestamp checks. Full prediction-time eligibility remains a separate acceptance gate.
 - **Direct ESPN:** zero captures, stopped on source-access denial without bypass.
 
-**Two continuation jobs are now running in AWS:** missing game-market/college-basketball history and original weather/availability context. The next incremental public pass has completed: **19 new source revisions / 44.71 MB**, **4,473 verified files reused**, and zero failed assets. Prior revisions remain preserved; this does not represent 19 new dataset families. [Continuation scope and launch evidence](docs/CONTINUATION_20261016.md).
+The incremental public pass completed with **19 new source revisions / 44.71 MB**, **4,473 verified files reused**, and zero failed assets. Prior revisions remain preserved; this does not represent 19 new dataset families. The paid continuation reuses successful request identities while acquiring missing game-market checkpoints and college basketball plays, lineups and substitutions.
 
-[Read the data coverage and next acquisition priorities](docs/DATA_COVERAGE_AND_NEXT_ACQUISITION.md). It maps actual archived families and observed filename years to the remaining source, identity, availability and timestamp gaps.
+At **18:56 UTC**, later acquisition had added **8,984 game/statistics responses** and **3,735 player-prop responses**, with both paid collectors still active. The NWS continuation completed the remaining venues: **728 of 728 eligible cached venues** now have a forecast vintage. Official NBA availability has **24 observed PDFs** (23 new plus one reused), and the corrected NOAA pilot acquired **108 GRIB fields / 133.12 MB across 18 forecast pairs**. The NBA landing host remained blocked, prop missing-event responses remain recorded, and historical availability/feature eligibility are not yet approved. [Latest launch and runtime evidence](docs/FRONTIER_ACQUISITION_20261016.md) · [Earlier continuation record](docs/CONTINUATION_20261016.md).
 
-- [Latest completed-run snapshot](docs/status/operational-status_20261016T1810Z.json) · [content-only inventory](docs/status/raw_inventory_20261016.json)
-- [Cumulative execution and cost ledger](docs/status/execution-ledger_20261016T1820Z.json)
+[Read the data coverage and next acquisition priorities](docs/DATA_COVERAGE_AND_NEXT_ACQUISITION.md) and [the frontier-relevant source inventory](docs/FRONTIER_DATA_PRIORITIES_20261016.md). It maps actual archived families and observed filename years to the remaining source, identity, availability and timestamp gaps.
+
+- [Frozen completed-run snapshot](docs/status/operational-status_20261016T1810Z.json) · [content-only inventory](docs/status/raw_inventory_20261016.json)
+- [Cumulative execution and cost ledger](docs/status/execution-ledger_20261016T1845Z.json)
 - [Family and filename-year inventory](docs/status/archive-family-coverage_20261016.json)
 - [Paid acquisition scope, budgets and tests](docs/PAID_ACQUISITION.md)
 - [Deployed source versions and hashes](docs/EXECUTION_SOURCE_VERSIONS.md)
@@ -104,4 +106,5 @@ Win prediction, spread/total distributions and market value are separate questio
 ## Repository and data boundaries
 
 Code, configuration, tests, source catalogs and non-sensitive reports belong here. Raw data, API keys, private receipts containing licensed records and large model artifacts remain outside Git. Upstream attribution and usage conditions travel with each source. The project does not claim a demonstrated betting edge, complete player-prop coverage or a production forecasting system at this acquisition stage.
+
 

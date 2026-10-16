@@ -1,0 +1,59 @@
+{
+  "status": "success",
+  "stdout": "",
+  "return_value": {
+    "timestamp": "2026-10-16T18:37:14Z",
+    "statistics": {
+      "captured": 4024,
+      "cbbd_captured": 753,
+      "cbbd_http_calls": 753,
+      "http_calls": 4024,
+      "nba_captured": 655,
+      "ncaaf_captured": 653,
+      "ncaam_captured": 1407,
+      "ncaaw_captured": 654,
+      "nfl_captured": 655,
+      "odds_captured": 3271,
+      "odds_http_calls": 3271,
+      "raw_bytes": 3513671637
+    },
+    "failures_count": 0,
+    "budget": {
+      "actual_known": {
+        "odds": 98130,
+        "stats": 753
+      },
+      "disabled_providers": [],
+      "limits": {
+        "odds": 1600000,
+        "stats": 30000
+      },
+      "provider_headers": {
+        "cbbd": {},
+        "odds": {
+          "x-requests-last": 30,
+          "x-requests-remaining": 3564130,
+          "x-requests-used": 1435870
+        }
+      },
+      "reserved_or_known": {
+        "odds": 98250,
+        "stats": 757
+      },
+      "unknown_charge_reserve": {
+        "odds": 0,
+        "stats": 0
+      }
+    },
+    "outstanding_active_maximum": 1501750,
+    "new_props_maximum": 500000,
+    "remaining_after_outstanding_and_new": 1562380
+  },
+  "api_calls": [
+    {
+      "service": "s3",
+      "operation": "GetObject",
+      "status": "success"
+    }
+  ]
+}
