@@ -1,0 +1,22 @@
+{
+  "manifest": "/workspace/scratch/f3ff20681710/turn5_current/artifact_manifest.json",
+  "artifact": "sports_edge_lab_current_v026_20261016.pyz",
+  "sha256": "43d0e7c256dd71066430793672db31049d7689b0c034e35b32d8b26b1f731a52",
+  "bytes": 20902,
+  "s3_bucket": "sagemaker-sports-edge-lab-560403859723-us-west-2",
+  "s3_key": "infrastructure/code/current-20261016-v026/sports_edge_lab_current_v026_20261016.pyz",
+  "schedule_slots": 120,
+  "first_trigger_utc": "2026-10-17T03:05:00+00:00",
+  "last_trigger_utc": "2026-11-15T21:05:00+00:00",
+  "maximum_scheduled_odds_credits": 60000,
+  "maximum_scheduled_stats_calls": 12000,
+  "maximum_job_runtime_hours": 30.0,
+  "reported_runtime_compute_estimate_usd": 13.83,
+  "estimate_excludes": "Startup/billing differences, storage/requests, subscriptions, other jobs.",
+  "prior_ncaa_schedule_changed": false,
+  "aws_schedule_created": true,
+  "aws_schedule_state": "ENABLED",
+  "aws_schedule_arn": "arn:aws:scheduler:us-west-2:560403859723:schedule/sports-edge-lab-ingestion/sports-edge-lab-current-6h-20261017-v026",
+  "aws_schedule_creation_verified_utc": "2026-10-16T19:53:27.348000+00:00",
+  "first_scheduled_invocation_verified": false
+}

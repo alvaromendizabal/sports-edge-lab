@@ -1,0 +1,18 @@
+{
+  "artifact": "/workspace/scratch/f3ff20681710/turn5_inventory/sports_edge_lab_content_inventory_v028_20261016.pyz",
+  "bytes": 5663,
+  "sha256": "de345b2712ca6908f1990a445e370806aac953e6e33471aacf5bb767965659d7",
+  "source_sha256": "bf0bbac42357bb089464b1b91aef1fefcca11b95a022cb464e78aa0d744a4469",
+  "self_tests": 19,
+  "validation": "AST parse locally; mandatory19tests execute on AWS before listing",
+  "application_seconds": 240,
+  "aws_seconds": 300,
+  "max_listing_pages": 1000,
+  "source_api_calls": 0,
+  "new_sources": {
+    "nfl_official_current": "tracks/nfl/raw/nfl-official-current/objects/*.html.gz",
+    "skillcorner_acb_research": "shared/raw/skillcorner-acb-research/objects/*.{jsonl.gz,json,csv}"
+  },
+  "exclusions": "Request/url indexes; source discovery evidence; licenses and dictionaries; code; return ZIPs; legacy backups; NOAA listing/index metadata",
+  "previous_source_preserved": "tools/history/inventory_raw_content_v025_launched.py"
+}

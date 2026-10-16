@@ -1,0 +1,47 @@
+{
+  "events": [
+    "test_actual_403_blocks_next_network_call (__main__.Tests.test_actual_403_blocks_next_network_call) ... ok",
+    "test_bad_game_and_venue_excluded (__main__.Tests.test_bad_game_and_venue_excluded) ... ok",
+    "test_bound_before_network (__main__.Tests.test_bound_before_network) ... ok",
+    "test_buffer_and_valid_time (__main__.Tests.test_buffer_and_valid_time) ... ok",
+    "test_cache_reuse_hash_gate (__main__.Tests.test_cache_reuse_hash_gate) ... ok",
+    "test_cached_field_corruption_stops_reuse (__main__.Tests.test_cached_field_corruption_stops_reuse) ... ok",
+    "test_cfbd_reference_and_current_season_vintage (__main__.Tests.test_cfbd_reference_and_current_season_vintage) ... ok",
+    "test_duplicate_forecast_reuses_fields (__main__.Tests.test_duplicate_forecast_reuses_fields) ... ok",
+    "test_empty_date_selects_multiple_days (__main__.Tests.test_empty_date_selects_multiple_days) ... ok",
+    "test_field_cache_identity_is_stable_across_runs (__main__.Tests.test_field_cache_identity_is_stable_across_runs) ... ok",
+    "test_full_season_includes_january_postseason (__main__.Tests.test_full_season_includes_january_postseason) ... ok",
+    "test_full_season_rejects_prior_bowl_and_wrong_season (__main__.Tests.test_full_season_rejects_prior_bowl_and_wrong_season) ... ok",
+    "test_grib_and_range_validation (__main__.Tests.test_grib_and_range_validation) ... ok",
+    "test_historical_cfbd_cache_exact_observed_key (__main__.Tests.test_historical_cfbd_cache_exact_observed_key) ... ok",
+    "test_ignored_range_never_reads_body (__main__.Tests.test_ignored_range_never_reads_body) ... ok",
+    "test_index_fields_and_ranges (__main__.Tests.test_index_fields_and_ranges) ... ok",
+    "test_listing_truncation (__main__.Tests.test_listing_truncation) ... ok",
+    "test_real_noaa_duplicate_precipitation_intervals (__main__.Tests.test_real_noaa_duplicate_precipitation_intervals) ... ok",
+    "test_real_noaa_lead_and_duplicate_interval_gate (__main__.Tests.test_real_noaa_lead_and_duplicate_interval_gate) ... ok",
+    "test_source_suspension_before_network (__main__.Tests.test_source_suspension_before_network) ... ok",
+    "test_zero_game_cap_selects_every_eligible_game (__main__.Tests.test_zero_game_cap_selects_every_eligible_game) ... ok",
+    "----------------------------------------------------------------------",
+    "Ran 21 tests in 0.096s",
+    "OK",
+    "{\"timestamp\": \"2026-10-16T19:47:03Z\", \"event\": \"SELF_TEST_PASSED\", \"tests\": 21}"
+  ],
+  "api_calls": [
+    {
+      "service": "logs",
+      "operation": "GetLogEvents",
+      "status": "success",
+      "n_items": {
+        "events": 100
+      }
+    },
+    {
+      "service": "logs",
+      "operation": "GetLogEvents",
+      "status": "success",
+      "n_items": {
+        "events": 55
+      }
+    }
+  ]
+}

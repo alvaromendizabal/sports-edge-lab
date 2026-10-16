@@ -1,0 +1,22 @@
+{
+  "artifact": "/workspace/scratch/f3ff20681710/turn5_latest_public/sports_edge_lab_nfl_current_v027_20261016.pyz",
+  "bytes": 7731,
+  "sha256": "62f8205e8cb53f8cb957c29de12d6a329f848758a71b772b4908fd8e721ad472",
+  "source_sha256": "93110c43e8222bd77b2fc92a2f0a3d9e8dc8f143d208efdf19c1dce6e079f29d",
+  "tests": 14,
+  "validation": "AST parsed; root and provider_review independently cleared; mandatory 14 self-tests must pass in AWS before acquisition",
+  "application_arguments": [
+    "--max-seconds",
+    "600",
+    "--max-requests",
+    "120",
+    "--max-bytes",
+    "50000000"
+  ],
+  "aws_max_runtime_seconds": 720,
+  "current_scope": "NFL 2026 Week 6 original injury and current-week schedule HTML; up to 32 current rosters discovered from official directory/profile links",
+  "paid_api_calls": 0,
+  "point_in_time_approved": false,
+  "raw_prefix": "tracks/nfl/raw/nfl-official-current/objects/",
+  "raw_extension": ".html.gz"
+}

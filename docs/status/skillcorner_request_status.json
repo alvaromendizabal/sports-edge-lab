@@ -1,0 +1,23 @@
+{
+  "provider": "SkillCorner",
+  "action": "nonbinding access and pricing inquiry sent",
+  "sent_date": "2026-10-16",
+  "contact_source": "https://github.com/SkillCorner",
+  "coverage_requested": [
+    "NFL",
+    "NBA",
+    "NCAAF",
+    "NCAAM",
+    "NCAAW"
+  ],
+  "requested_products": [
+    "time-indexed player/ball trajectories",
+    "synchronized video rights",
+    "current delivery latency",
+    "historical coverage",
+    "trial and ongoing pricing",
+    "model-training, betting-research, derived-demo, and future commercial rights"
+  ],
+  "purchase_or_subscription_activated": false,
+  "access_granted": false
+}

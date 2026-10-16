@@ -1,0 +1,91 @@
+{
+  "status": "success",
+  "stdout": "",
+  "return_value": {
+    "blocked_hosts": [],
+    "bounds": {
+      "http_bytes": 600000000,
+      "http_requests": 100,
+      "seconds": 1200
+    },
+    "commit": "4bbed2e35e8fdd2cf083e8c8b280b3e5381a2c66",
+    "completed_at": "2026-10-16T19:54:51Z",
+    "coverage": "Ten ACB research games; not NBA, NCAA, league-wide tracking, or model performance evidence.",
+    "current_asset": "data/player_id_aliases.csv",
+    "downloaded_raw_files": 32,
+    "elapsed_seconds": 112.943,
+    "errors": [],
+    "estimated_compute_usd": 0.014463,
+    "http_bytes": 394838835,
+    "http_requests": 62,
+    "league": "Spanish Liga ACB",
+    "license": {
+      "application_to_data": "Inference from repository-wide license and README explicitly releasing data; no separate restrictive data license observed. Preserve license and credit.",
+      "copyright": "Copyright (c) 2026 SkillCorner. https://skillcorner.com",
+      "identifier": "MIT",
+      "license_path": "LICENSE",
+      "sha256": "61487d7c808239847755401b75efbfba1ed0568bf5e409b96e6273a1a8866824"
+    },
+    "pending_paths": [],
+    "planned_games": [
+      114086,
+      114099,
+      114169,
+      114234,
+      114243,
+      178442,
+      179612,
+      184439,
+      188630,
+      191313
+    ],
+    "point_in_time_approved": false,
+    "raw_stored_bytes": 394736881,
+    "raw_video_included": false,
+    "remaining_assets": 0,
+    "reused_raw_files": 0,
+    "robots": [
+      {
+        "captured_at": "2026-10-16T19:52:58Z",
+        "interpretation": "robots unavailable; no published directives",
+        "status": 404,
+        "url": "https://raw.githubusercontent.com/robots.txt"
+      },
+      {
+        "captured_at": "2026-10-16T19:53:30Z",
+        "interpretation": "robots unavailable; no published directives",
+        "status": 404,
+        "url": "https://media.githubusercontent.com/robots.txt"
+      }
+    ],
+    "run_id": "20261016T195258Z-d0e4041c3c",
+    "season": "2025-2026",
+    "source_ownership": "SkillCorner original tracking and provider-derived event annotations; not user-created tracking.",
+    "started_at": "2026-10-16T19:52:58Z",
+    "status": "completed_pinned_sample",
+    "tests": {
+      "count": 16,
+      "passed": true
+    },
+    "tracking_games": [
+      114086,
+      114099,
+      114169,
+      114234,
+      114243,
+      178442,
+      179612,
+      184439,
+      188630,
+      191313
+    ],
+    "updated_at": "2026-10-16T19:54:51Z"
+  },
+  "api_calls": [
+    {
+      "service": "s3",
+      "operation": "GetObject",
+      "status": "success"
+    }
+  ]
+}

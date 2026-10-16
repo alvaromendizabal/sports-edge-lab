@@ -1,0 +1,30 @@
+{
+  "schema_version": "sports-edge-lab-access-request-v1",
+  "provider": "Genius Sports / Second Spectrum",
+  "submission_date_utc": "2026-10-16",
+  "channel": "official_contact_sales_form",
+  "official_contact_source": "https://www.geniussports.com/contact-sales/",
+  "confirmation_url": "https://www.geniussports.com/thank-you-contact-sales/",
+  "confirmation_observed": true,
+  "confirmation_type": "successful_submission_page",
+  "status": "nonbinding_inquiry_submitted_awaiting_provider_reply",
+  "requested_scope": [
+    "NFL Next Gen Stats raw time-indexed player trajectories",
+    "NBA Second Spectrum raw player trajectories and ball tracking where available",
+    "Separate confirmation of NCAA football, NCAA men's basketball and NCAA women's basketball coverage",
+    "API or file exports distinguished from event data and derived aggregates",
+    "Independent researcher eligibility, current-game latency, latest games and historical seasons",
+    "Frame rate, coordinates, stable identifiers and quality flags",
+    "Synchronized video alignment, download and model-training rights distinguished from viewing rights",
+    "Smallest pilot price, ongoing price and minimum commitment",
+    "Private ML training, predictive and betting research, derived public demos and eventual commercial use"
+  ],
+  "identity_scope": "independent ML engineer; Sports Edge Lab independent project; no team, university or sportsbook affiliation claimed",
+  "optional_marketing_opt_in": false,
+  "access_granted": false,
+  "price_received": false,
+  "purchase_activated": false,
+  "subscription_created": false,
+  "agreement_signed": false,
+  "personal_contact_details_included": false
+}

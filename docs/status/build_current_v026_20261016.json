@@ -1,0 +1,38 @@
+{
+  "artifact": "/workspace/scratch/f3ff20681710/turn5_current/sports_edge_lab_current_v026_20261016.pyz",
+  "bytes": 20902,
+  "sha256": "43d0e7c256dd71066430793672db31049d7689b0c034e35b32d8b26b1f731a52",
+  "version": "sports-edge-lab-current-v026",
+  "source_sha256": {
+    "src/__main__.py": "e3ec320fa2c78609084695c5fce0678c4ac920b404b7a97ee0bca2d3b43284c5",
+    "src/acquire_paid_data.py": "2c2e51cc33133aa03c1f122b3b9968029cfe1e7a2584abd2a707713f20d6bb3b"
+  },
+  "self_tests": "30 tests bundled; AWS preflight before credentials or acquisition",
+  "limits": {
+    "odds_credits": 500,
+    "stats_calls": 100,
+    "app_seconds": 600,
+    "aws_seconds": 900,
+    "workers": 4,
+    "props_per_track": 12,
+    "maximum_requests_per_second": 2,
+    "lease_seconds": 1200,
+    "odds_reserve_floor": 100000
+  },
+  "arguments": [
+    "--odds-credits",
+    "500",
+    "--stats-calls",
+    "100",
+    "--max-seconds",
+    "600",
+    "--workers",
+    "4",
+    "--props-per-track",
+    "12",
+    "--odds-reserve-floor",
+    "100000"
+  ],
+  "report_prefix": "shared/acquisition/current/",
+  "lease_key": "shared/control/current-acquisition/v026-active.json"
+}

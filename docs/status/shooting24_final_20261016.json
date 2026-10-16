@@ -1,0 +1,346 @@
+{
+  "job": {
+    "ProcessingJobName": "sports-edge-lab-shooting-resume-20261016-v024",
+    "ProcessingJobStatus": "InProgress",
+    "ProcessingStartTime": "2026-10-16T19:26:17.748000+00:00"
+  },
+  "report": {
+    "key": "summary.json",
+    "run_id": "20261016T192651Z-5313e818ee",
+    "timestamp": "2026-10-16T20:01:52Z",
+    "statistics": {
+      "captured": 958,
+      "cbbd_captured": 958,
+      "cbbd_http_calls": 962,
+      "http_calls": 962,
+      "ncaam_captured": 958,
+      "raw_bytes": 49426672,
+      "retryable_incidents": 4,
+      "shooting_empty_responses": 0,
+      "shooting_nonempty_responses": 958,
+      "shooting_positive_data_responses": 958,
+      "shooting_records_observed": 71593
+    },
+    "failures_count": 0,
+    "phases": {
+      "positive_cached_gate": {
+        "endpoints": 2,
+        "status": "passed"
+      },
+      "positive_fresh_gate": {
+        "endpoints": 2,
+        "status": "passed"
+      },
+      "seed": {
+        "previous_empty_receipts": 779,
+        "previous_failed_requests": 12,
+        "previous_nonempty_receipts": 124,
+        "status": "completed",
+        "stopped_v021_empty_receipts": 580,
+        "stopped_v021_nonempty_receipts": 0,
+        "successful_shooting_request_ids": 903
+      },
+      "shooting_continuation": {
+        "completed": 958,
+        "http_successful_or_reused": 958,
+        "planned": 1294,
+        "processed": 958,
+        "reason": "time_budget_exhausted",
+        "remaining": 336,
+        "status": "bounded_stop",
+        "unsuccessful": 0
+      }
+    },
+    "budget": {
+      "actual_known": {
+        "odds": 0,
+        "stats": 962
+      },
+      "disabled_providers": [],
+      "limits": {
+        "odds": 0,
+        "stats": 3000
+      },
+      "provider_headers": {
+        "cbbd": {}
+      },
+      "reserved_or_known": {
+        "odds": 0,
+        "stats": 962
+      },
+      "unknown_charge_reserve": {
+        "odds": 0,
+        "stats": 0
+      }
+    },
+    "pending_source_seasons": [],
+    "seed_counts": {
+      "previous_empty_receipts": 779,
+      "previous_failed_requests": 12,
+      "previous_nonempty_receipts": 124,
+      "stopped_v021_empty_receipts": 580,
+      "stopped_v021_nonempty_receipts": 0,
+      "successful_shooting_request_ids": 903
+    },
+    "canary_evidence": [
+      {
+        "kind": "cached_positive",
+        "records": 18,
+        "request_id": "cad415f769c828e84dee2fe75c5642c113904e3f83906010d120135ed6a770b3",
+        "requires_positive_tracked_shots": true,
+        "sha256": "93feabcb92448bbff79e695a393616985d37cd0fe02e3719414f962134f5865e"
+      },
+      {
+        "kind": "cached_positive",
+        "records": 235,
+        "request_id": "cd563c6791a7ab606be0867c2be613d5ebe41497233f3f2ac4620d8a9baa38d0",
+        "requires_positive_tracked_shots": true,
+        "sha256": "7cccf6f2e72e9a43bd6785174c2c965c59ce4025c50c297307bcd53c214147be"
+      },
+      {
+        "kind": "fresh_or_request_index_positive",
+        "records": 15,
+        "request_id": "a6a99dc074ff99730b2e9778e589079b6d146cf620072968b590d51adf7de8cf",
+        "requires_positive_tracked_shots": true
+      },
+      {
+        "kind": "fresh_or_request_index_positive",
+        "records": 195,
+        "request_id": "ec39df89a14c6e57b45788761dc77f59b8696a45ee054791ccd07527b3b9d221",
+        "requires_positive_tracked_shots": true
+      }
+    ],
+    "elapsed_seconds": 2100.93,
+    "source_inventory": {
+      "2003": {
+        "deferred_conference_less_team_requests": 390,
+        "planned_shooting_requests": 64,
+        "remaining_before_request_index_check": 64,
+        "seeded_successes": 0,
+        "source_rows": 519,
+        "status": "source_cache_verified"
+      },
+      "2006": {
+        "deferred_conference_less_team_requests": 444,
+        "planned_shooting_requests": 64,
+        "remaining_before_request_index_check": 64,
+        "seeded_successes": 0,
+        "source_rows": 548,
+        "status": "source_cache_verified"
+      },
+      "2007": {
+        "deferred_conference_less_team_requests": 472,
+        "planned_shooting_requests": 64,
+        "remaining_before_request_index_check": 64,
+        "seeded_successes": 0,
+        "source_rows": 562,
+        "status": "source_cache_verified"
+      },
+      "2008": {
+        "deferred_conference_less_team_requests": 436,
+        "planned_shooting_requests": 64,
+        "remaining_before_request_index_check": 64,
+        "seeded_successes": 0,
+        "source_rows": 546,
+        "status": "source_cache_verified"
+      },
+      "2009": {
+        "deferred_conference_less_team_requests": 514,
+        "planned_shooting_requests": 64,
+        "remaining_before_request_index_check": 64,
+        "seeded_successes": 0,
+        "source_rows": 587,
+        "status": "source_cache_verified"
+      },
+      "2010": {
+        "deferred_conference_less_team_requests": 554,
+        "empty_responses_this_run": 0,
+        "nonempty_responses_this_run": 50,
+        "planned_shooting_requests": 66,
+        "records_this_run": 3427,
+        "remaining_before_request_index_check": 66,
+        "seeded_successes": 0,
+        "source_rows": 612,
+        "status": "source_cache_verified"
+      },
+      "2011": {
+        "deferred_conference_less_team_requests": 526,
+        "empty_responses_this_run": 0,
+        "nonempty_responses_this_run": 66,
+        "planned_shooting_requests": 66,
+        "records_this_run": 4559,
+        "remaining_before_request_index_check": 66,
+        "seeded_successes": 0,
+        "source_rows": 609,
+        "status": "source_cache_verified"
+      },
+      "2012": {
+        "deferred_conference_less_team_requests": 522,
+        "empty_responses_this_run": 0,
+        "nonempty_responses_this_run": 66,
+        "planned_shooting_requests": 66,
+        "records_this_run": 4505,
+        "remaining_before_request_index_check": 66,
+        "seeded_successes": 0,
+        "source_rows": 606,
+        "status": "source_cache_verified"
+      },
+      "2013": {
+        "deferred_conference_less_team_requests": 486,
+        "empty_responses_this_run": 0,
+        "nonempty_responses_this_run": 66,
+        "planned_shooting_requests": 66,
+        "records_this_run": 4572,
+        "remaining_before_request_index_check": 66,
+        "seeded_successes": 0,
+        "source_rows": 591,
+        "status": "source_cache_verified"
+      },
+      "2014": {
+        "deferred_conference_less_team_requests": 568,
+        "empty_responses_this_run": 0,
+        "nonempty_responses_this_run": 66,
+        "planned_shooting_requests": 66,
+        "records_this_run": 4772,
+        "remaining_before_request_index_check": 66,
+        "seeded_successes": 0,
+        "source_rows": 635,
+        "status": "source_cache_verified"
+      },
+      "2015": {
+        "deferred_conference_less_team_requests": 580,
+        "empty_responses_this_run": 0,
+        "nonempty_responses_this_run": 66,
+        "planned_shooting_requests": 66,
+        "records_this_run": 4861,
+        "remaining_before_request_index_check": 66,
+        "seeded_successes": 0,
+        "source_rows": 641,
+        "status": "source_cache_verified"
+      },
+      "2016": {
+        "deferred_conference_less_team_requests": 594,
+        "empty_responses_this_run": 0,
+        "nonempty_responses_this_run": 64,
+        "planned_shooting_requests": 64,
+        "records_this_run": 4832,
+        "remaining_before_request_index_check": 64,
+        "seeded_successes": 0,
+        "source_rows": 648,
+        "status": "source_cache_verified"
+      },
+      "2017": {
+        "deferred_conference_less_team_requests": 586,
+        "empty_responses_this_run": 0,
+        "nonempty_responses_this_run": 64,
+        "planned_shooting_requests": 64,
+        "records_this_run": 4899,
+        "remaining_before_request_index_check": 64,
+        "seeded_successes": 0,
+        "source_rows": 644,
+        "status": "source_cache_verified"
+      },
+      "2018": {
+        "deferred_conference_less_team_requests": 616,
+        "empty_responses_this_run": 0,
+        "nonempty_responses_this_run": 64,
+        "planned_shooting_requests": 64,
+        "records_this_run": 4885,
+        "remaining_before_request_index_check": 64,
+        "seeded_successes": 0,
+        "source_rows": 659,
+        "status": "source_cache_verified"
+      },
+      "2019": {
+        "deferred_conference_less_team_requests": 598,
+        "empty_responses_this_run": 0,
+        "nonempty_responses_this_run": 64,
+        "planned_shooting_requests": 64,
+        "records_this_run": 4873,
+        "remaining_before_request_index_check": 64,
+        "seeded_successes": 0,
+        "source_rows": 653,
+        "status": "source_cache_verified"
+      },
+      "2020": {
+        "deferred_conference_less_team_requests": 620,
+        "empty_responses_this_run": 0,
+        "nonempty_responses_this_run": 64,
+        "planned_shooting_requests": 64,
+        "records_this_run": 4879,
+        "remaining_before_request_index_check": 64,
+        "seeded_successes": 0,
+        "source_rows": 664,
+        "status": "source_cache_verified"
+      },
+      "2021": {
+        "deferred_conference_less_team_requests": 292,
+        "empty_responses_this_run": 0,
+        "nonempty_responses_this_run": 62,
+        "planned_shooting_requests": 62,
+        "records_this_run": 4987,
+        "remaining_before_request_index_check": 62,
+        "seeded_successes": 0,
+        "source_rows": 493,
+        "status": "source_cache_verified"
+      },
+      "2022": {
+        "deferred_conference_less_team_requests": 644,
+        "empty_responses_this_run": 0,
+        "nonempty_responses_this_run": 64,
+        "planned_shooting_requests": 64,
+        "records_this_run": 5201,
+        "remaining_before_request_index_check": 64,
+        "seeded_successes": 0,
+        "source_rows": 680,
+        "status": "source_cache_verified"
+      },
+      "2023": {
+        "deferred_conference_less_team_requests": 686,
+        "empty_responses_this_run": 0,
+        "nonempty_responses_this_run": 66,
+        "planned_shooting_requests": 66,
+        "records_this_run": 5162,
+        "remaining_before_request_index_check": 66,
+        "seeded_successes": 0,
+        "source_rows": 706,
+        "status": "source_cache_verified"
+      },
+      "2024": {
+        "deferred_conference_less_team_requests": 710,
+        "empty_responses_this_run": 0,
+        "nonempty_responses_this_run": 66,
+        "planned_shooting_requests": 66,
+        "records_this_run": 5179,
+        "remaining_before_request_index_check": 66,
+        "seeded_successes": 0,
+        "source_rows": 717,
+        "status": "source_cache_verified"
+      },
+      "2025": {
+        "deferred_conference_less_team_requests": 672,
+        "planned_shooting_requests": 62,
+        "remaining_before_request_index_check": 0,
+        "seeded_successes": 62,
+        "source_rows": 700,
+        "status": "source_cache_verified"
+      },
+      "2026": {
+        "deferred_conference_less_team_requests": 724,
+        "planned_shooting_requests": 62,
+        "remaining_before_request_index_check": 0,
+        "seeded_successes": 62,
+        "source_rows": 727,
+        "status": "source_cache_verified"
+      },
+      "2027": {
+        "deferred_conference_less_team_requests": 0,
+        "planned_shooting_requests": 0,
+        "remaining_before_request_index_check": 0,
+        "seeded_successes": 0,
+        "source_rows": 0,
+        "status": "source_cache_verified"
+      }
+    }
+  }
+}

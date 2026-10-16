@@ -1,0 +1,15 @@
+{
+  "directory_sha256": "2ddd4f28411b99e7e973f3f179fc5f3a265acf80307c09f31833ea99cea63e68",
+  "directory_observed_href_forms": [
+    "/teams/houston-texans",
+    "/teams/indianapolis-colts"
+  ],
+  "injury_sha256": "0356f95429097ac706d8d86d3af49926fc215c8dc8ecdb3b8209d07d3d52a736",
+  "injury_observed_href_forms": [
+    "/teams/houston-texans/",
+    "/teams/indianapolis-colts/"
+  ],
+  "cause": "v027 profile regex required a trailing slash",
+  "remedy": "Accept both observed forms; prefer slash form from the hash-verified existing injury page",
+  "prior_rosters_to_preserve": 30
+}

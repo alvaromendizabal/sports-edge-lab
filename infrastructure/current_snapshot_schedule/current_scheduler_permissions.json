@@ -1,0 +1,40 @@
+{
+  "Version": "2012-10-17",
+  "Statement": [
+    {
+      "Sid": "CreateOnlyBoundedTaggedCurrentJobs",
+      "Effect": "Allow",
+      "Action": "sagemaker:CreateProcessingJob",
+      "Resource": "arn:aws:sagemaker:us-west-2:560403859723:processing-job/sports-edge-lab-current-*",
+      "Condition": {
+        "ForAllValues:StringEquals": {"sagemaker:InstanceTypes": ["ml.m5.2xlarge"]},
+        "NumericLessThanEquals": {"sagemaker:MaxRuntimeInSeconds": "900"},
+        "Null": {"sagemaker:InstanceTypes": "false", "sagemaker:MaxRuntimeInSeconds": "false"},
+        "StringEquals": {
+          "aws:RequestTag/Project": "sports-edge-lab",
+          "aws:RequestTag/Workstream": "current-paid-data",
+          "aws:RequestTag/Environment": "dev",
+          "aws:RequestTag/Schedule": "sports-edge-lab-current-6h-20261017-v026"
+        },
+        "DateLessThan": {"aws:CurrentTime": "2026-11-16T03:04:59Z"}
+      }
+    },
+    {
+      "Sid": "TagOnlyCurrentJobPrefixBeforeExpiry",
+      "Effect": "Allow",
+      "Action": "sagemaker:AddTags",
+      "Resource": "arn:aws:sagemaker:us-west-2:560403859723:processing-job/sports-edge-lab-current-*",
+      "Condition": {"DateLessThan": {"aws:CurrentTime": "2026-11-16T03:04:59Z"}}
+    },
+    {
+      "Sid": "PassOnlyExistingProcessingRoleBeforeExpiry",
+      "Effect": "Allow",
+      "Action": "iam:PassRole",
+      "Resource": "arn:aws:iam::560403859723:role/SportsEdgeLabProcessingRole",
+      "Condition": {
+        "StringEquals": {"iam:PassedToService": "sagemaker.amazonaws.com"},
+        "DateLessThan": {"aws:CurrentTime": "2026-11-16T03:04:59Z"}
+      }
+    }
+  ]
+}

@@ -2,34 +2,54 @@
 
 ## Latest measured content inventory
 
-The corrected **19:23:51–19:24:43 UTC** scan counted **71,181 raw content files /
-14,393,519,871 stored bytes (14.39 GB)**, with zero unclassified raw objects.
-This is an increase of 25,112 files and 1,970,180,812 bytes from the frozen
-baseline below. Live collectors were writing during the scan; its observation
-window is explicit and is not an atomic snapshot.
+**85,417 raw content files / 17.24 GB are verified in the shared archive.**
+The content-only S3 scan ran on **October 16, 20:02:52–20:03:45 UTC**.
+It counted **17,241,530,808 stored bytes**, excluding receipts, request indexes,
+source discovery, code, return bundles and duplicate legacy archives. All raw
+objects were classified. Live collectors wrote during the paginated scan;
+this is an observation window, not an atomic snapshot.
 
 | Track | Stored content files | Stored content GB |
 | --- | ---: | ---: |
-| NFL | 11,442 | 0.805 |
-| NBA | 17,684 | 1.925 |
-| NCAA football | 18,091 | 3.139 |
-| NCAA men's basketball | 17,470 | 4.827 |
-| NCAA women's basketball | 4,168 | 2.492 |
-| Shared weather | 2,326 | 1.205 |
+| NFL | 11,564 | 0.808 |
+| NBA | 20,688 | 1.936 |
+| NCAA football | 20,914 | 3.165 |
+| NCAA men's basketball | 22,572 | 5.139 |
+| NCAA women's basketball | 5,726 | 2.495 |
+| Shared weather and external tracking research | 3,953 | 3.699 |
 
-The total consists of 5,326 public archive files, 63,499 paid payloads, six
-provider canaries, 24 NBA PDFs, 1,438 NWS point/forecast JSON files, and 888 NOAA
-forecast fields. Counts are stored objects, not unique games, calls or usable
-training examples. NCAA availability is scheduled and contributes zero images
-at this snapshot.
+The archive grew by **14,236 files / 2.85 GB** since the
+19:24 UTC scan, and by **39,348 files / 4.82 GB** since the
+18:10 UTC baseline. File counts are not unique games, API captures, complete
+seasons or approved training rows; source families and revisions can overlap.
+Stored bytes are separate from uncompressed response-byte counters.
 
-[Exact measured inventory](status/content_inventory_20261016T1924Z.json) ·
-[continued acquisition and new source status](EXPANDED_DATA_COLLECTION_20261016.md) ·
-[counting method and corrected RDS fallback](RAW_CONTENT_INVENTORY_20261016.md).
+[Exact inventory](status/content_inventory_20261016T2003Z.json) · [current data and source-time matrix](DATA_FRESHNESS_AND_ACCESS_20261016.md) · [tracking/video access](TRACKING_AND_VIDEO_ACCESS_20261016.md).
 
-The baseline and filename-year coverage below remain preserved as dated
-observations; they are not presented as the current storage total.
+Current odds have populated NFL, NBA and NCAA football responses. NCAA men's
+and women's current odds returned empty arrays at the 19:50 UTC observation.
+The current men's schedule response has November games; that does not fill
+women's statistics or availability gaps. An enabled six-hour schedule captures
+future current vintages, while historical backfills remain separate.
 
+The measured archive contains **5,326 public archive files**, **76,074 paid
+payload files**, six provider canaries, **24 original NBA injury PDFs**, **34
+original NFL pages**, **1,438 NWS JSON files**, **2,483 NOAA forecast fields**,
+and **32 SkillCorner ACB research files**. The ACB sample covers ten historical
+Spanish league games with original trajectories, provider event annotations
+and identity metadata; it adds no NBA/NCAA tracking or raw video.
+
+The NFL current capture now includes all **32 team rosters** plus Week 6 injury
+and schedule pages, after a targeted two-roster recovery. Extraction and
+publication-time validation remain pending. The broader historical gap run
+continues. College shooting reached **958 positive responses / 71,593 summary
+rows** before its runtime bound; a bounded replay is now active, reusing those
+958 responses and adding two new captures in its first observed heartbeat.
+The NOAA continuation also remains active at the recorded metadata check.
+
+
+The original baseline and filename-year coverage below remain preserved as
+dated observations; they are not the current storage total.
 
 Verified against the canonical private S3 archive on **16 October 2026, 18:09–18:11 UTC**. Counts below exclude acquisition receipts, request indexes, audit files, return ZIPs, and the duplicate legacy NFL archive.
 
@@ -96,4 +116,5 @@ See the [latest operational snapshot](status/operational-status_20261016T1810Z.j
 ## Subsequent acquisition milestone
 
 The starting content scan above remains frozen. A public refresh added 19 revisions while reusing 4,473 verified assets. New bounded work now adds missing game-price and player-prop checkpoints, college basketball plays/lineups/substitutions, official NBA injury PDFs, current NWS forecast vintages and an original NOAA historical forecast-field pilot. See the [dated runtime, quota and launch evidence](FRONTIER_ACQUISITION_20261016.md) for actual progress and failures, and the [frontier source priorities](FRONTIER_DATA_PRIORITIES_20261016.md) for public sources, unconfirmed tracking access and acceptance gates. These additions are not silently folded into the earlier byte or file counts.
+
 

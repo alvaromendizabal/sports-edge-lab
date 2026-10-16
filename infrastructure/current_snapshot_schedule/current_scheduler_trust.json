@@ -1,0 +1,12 @@
+{
+  "Version": "2012-10-17",
+  "Statement": [{
+    "Effect": "Allow",
+    "Principal": {"Service": "scheduler.amazonaws.com"},
+    "Action": "sts:AssumeRole",
+    "Condition": {
+      "StringEquals": {"aws:SourceAccount": "560403859723"},
+      "ArnEquals": {"aws:SourceArn": "arn:aws:scheduler:us-west-2:560403859723:schedule-group/sports-edge-lab-ingestion"}
+    }
+  }]
+}

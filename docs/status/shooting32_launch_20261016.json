@@ -1,0 +1,30 @@
+{
+  "status": "success",
+  "stdout": "",
+  "return_value": {
+    "previous_status": "Completed",
+    "job": "sports-edge-lab-shooting-resume-20261016-v032",
+    "created": {
+      "ProcessingJobArn": "arn:aws:sagemaker:us-west-2:560403859723:processing-job/sports-edge-lab-shooting-resume-20261016-v032"
+    },
+    "stats_call_cap": 500,
+    "application_seconds": 1200,
+    "aws_seconds": 1500,
+    "artifact_version": "v024"
+  },
+  "api_calls": [
+    {
+      "service": "sagemaker",
+      "operation": "DescribeProcessingJob",
+      "status": "success",
+      "n_items": {
+        "ProcessingInputs": 1
+      }
+    },
+    {
+      "service": "sagemaker",
+      "operation": "CreateProcessingJob",
+      "status": "success"
+    }
+  ]
+}

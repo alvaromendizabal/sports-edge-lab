@@ -1,0 +1,24 @@
+{
+  "disposition": "cleared",
+  "reviewer": "weather_season",
+  "artifact": "sports_edge_lab_current_v026_20261016.pyz",
+  "bytes": 20902,
+  "sha256": "43d0e7c256dd71066430793672db31049d7689b0c034e35b32d8b26b1f731a52",
+  "bundle_source_match": true,
+  "registered_tests": 30,
+  "tests_executed_by_reviewer": false,
+  "mandatory_gate": "AWS self-tests before credentials and acquisition",
+  "reviewed_controls": [
+    "Current endpoints and per-run current vintage",
+    "500 odds-credit and 100 stats-call limits",
+    "Fresh provider quota minus active historical commitments and 100000-credit floor",
+    "Conditional S3 active lease, ETag takeover and ETag release",
+    "Two-request-per-second pacing, queued cancellation on provider denial",
+    "Runtime-only credentials and redacted failures",
+    "Empty response versus nonempty outcome coverage",
+    "Distinct capture, event, quote time and no feature approval",
+    "Single unique ZIP and current run report prefix"
+  ],
+  "blocking_findings": [],
+  "future_scope_note": "Football current-season selection is correct for October 2026; a collector operating in January-June should explicitly account for preceding fall season."
+}

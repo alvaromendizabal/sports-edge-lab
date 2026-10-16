@@ -1,0 +1,601 @@
+{
+  "repository": "https://github.com/SkillCorner/opendata-basketball",
+  "commit": "4bbed2e35e8fdd2cf083e8c8b280b3e5381a2c66",
+  "observed_at": "2026-10-16T19:43:53.765030+00:00",
+  "tree_sha256": "e4e041bb6839e766d49f52f11e5e005bede25363aa78c4f56f888cf68f1fe163",
+  "assets": [
+    {
+      "path": "data/matches/114086/114086_dynamic_events.json",
+      "size": 3345025,
+      "url": "https://raw.githubusercontent.com/SkillCorner/opendata-basketball/4bbed2e35e8fdd2cf083e8c8b280b3e5381a2c66/data/matches/114086/114086_dynamic_events.json",
+      "kind": "events",
+      "game_id": 114086,
+      "git_blob_sha1": "4adddaa94608b22e0e847f03a4e6786b9b55ab86",
+      "discovery": "GitHub Contents API at pinned commit"
+    },
+    {
+      "path": "data/matches/114086/114086_game_data.json",
+      "size": 2168,
+      "url": "https://raw.githubusercontent.com/SkillCorner/opendata-basketball/4bbed2e35e8fdd2cf083e8c8b280b3e5381a2c66/data/matches/114086/114086_game_data.json",
+      "kind": "game_metadata",
+      "game_id": 114086,
+      "git_blob_sha1": "f302a354296028ff3ae3c7d65f0d1b610fd26d41",
+      "discovery": "GitHub Contents API at pinned commit"
+    },
+    {
+      "path": "data/matches/114086/114086_tracking_data.jsonl.gz",
+      "size": 39842015,
+      "url": "https://media.githubusercontent.com/media/SkillCorner/opendata-basketball/4bbed2e35e8fdd2cf083e8c8b280b3e5381a2c66/data/matches/114086/114086_tracking_data.jsonl.gz",
+      "lfs_sha256": "df4043c143a6f7e3996089d4e20f19b25608a90b40f9a449d927dce89b0da846",
+      "lfs_pointer_sha256": "854173e4ce6ffd5afddcbc80e2454d8ad94d5c442da2563be711d29db37fba37",
+      "lfs_pointer_text": "version https://git-lfs.github.com/spec/v1\noid sha256:df4043c143a6f7e3996089d4e20f19b25608a90b40f9a449d927dce89b0da846\nsize 39842015\n",
+      "kind": "tracking",
+      "game_id": 114086,
+      "git_blob_sha1": "c368dad45222f8ae0cb03e2b6f3ee1c17acc8eb6",
+      "discovery": "GitHub Contents API at pinned commit"
+    },
+    {
+      "path": "data/matches/114099/114099_dynamic_events.json",
+      "size": 3392618,
+      "url": "https://raw.githubusercontent.com/SkillCorner/opendata-basketball/4bbed2e35e8fdd2cf083e8c8b280b3e5381a2c66/data/matches/114099/114099_dynamic_events.json",
+      "kind": "events",
+      "game_id": 114099,
+      "git_blob_sha1": "0283c8affb2eda0bec623f562c7bb1ebfcece29e",
+      "discovery": "GitHub Contents API at pinned commit"
+    },
+    {
+      "path": "data/matches/114099/114099_game_data.json",
+      "size": 2225,
+      "url": "https://raw.githubusercontent.com/SkillCorner/opendata-basketball/4bbed2e35e8fdd2cf083e8c8b280b3e5381a2c66/data/matches/114099/114099_game_data.json",
+      "kind": "game_metadata",
+      "game_id": 114099,
+      "git_blob_sha1": "e274adb9b4d7b9e97aca3cbd98b86cb8024eae0e",
+      "discovery": "GitHub Contents API at pinned commit"
+    },
+    {
+      "path": "data/matches/114099/114099_tracking_data.jsonl.gz",
+      "size": 33060109,
+      "url": "https://media.githubusercontent.com/media/SkillCorner/opendata-basketball/4bbed2e35e8fdd2cf083e8c8b280b3e5381a2c66/data/matches/114099/114099_tracking_data.jsonl.gz",
+      "lfs_sha256": "1e4af3c2ea8f56f80a2b4adb56ffcf5abc479145c7dec55ebd7ebda652a2cc38",
+      "lfs_pointer_sha256": "b7af1b079d4c781b0c11f667a2b4363b88cf729b82f97ce154a77a4e25980228",
+      "lfs_pointer_text": "version https://git-lfs.github.com/spec/v1\noid sha256:1e4af3c2ea8f56f80a2b4adb56ffcf5abc479145c7dec55ebd7ebda652a2cc38\nsize 33060109\n",
+      "kind": "tracking",
+      "game_id": 114099,
+      "git_blob_sha1": "f9465d6dc6a1360ef6e540246b7f843c6b4b8cc4",
+      "discovery": "GitHub Contents API at pinned commit"
+    },
+    {
+      "path": "data/matches/114169/114169_dynamic_events.json",
+      "size": 3459130,
+      "url": "https://raw.githubusercontent.com/SkillCorner/opendata-basketball/4bbed2e35e8fdd2cf083e8c8b280b3e5381a2c66/data/matches/114169/114169_dynamic_events.json",
+      "kind": "events",
+      "game_id": 114169,
+      "git_blob_sha1": "19313805c4f27ffcd9d0437bfb20d10aa8392ab0",
+      "discovery": "GitHub Contents API at pinned commit"
+    },
+    {
+      "path": "data/matches/114169/114169_game_data.json",
+      "size": 2098,
+      "url": "https://raw.githubusercontent.com/SkillCorner/opendata-basketball/4bbed2e35e8fdd2cf083e8c8b280b3e5381a2c66/data/matches/114169/114169_game_data.json",
+      "kind": "game_metadata",
+      "game_id": 114169,
+      "git_blob_sha1": "b671ed43f6c73006b8aa4b4051df7ece5f48cfe7",
+      "discovery": "GitHub Contents API at pinned commit"
+    },
+    {
+      "path": "data/matches/114169/114169_tracking_data.jsonl.gz",
+      "size": 45580755,
+      "url": "https://media.githubusercontent.com/media/SkillCorner/opendata-basketball/4bbed2e35e8fdd2cf083e8c8b280b3e5381a2c66/data/matches/114169/114169_tracking_data.jsonl.gz",
+      "lfs_sha256": "0b9f028febc7f7d46e7bd3d2bffa10c50ad85abbf0dd2a7937d5f32895e685f0",
+      "lfs_pointer_sha256": "49e1ccbe6f529f25bb781c7809d48ef1f6118fcdfde24fc242c447e044ad6d4d",
+      "lfs_pointer_text": "version https://git-lfs.github.com/spec/v1\noid sha256:0b9f028febc7f7d46e7bd3d2bffa10c50ad85abbf0dd2a7937d5f32895e685f0\nsize 45580755\n",
+      "kind": "tracking",
+      "game_id": 114169,
+      "git_blob_sha1": "5a0b8a069dc98104a95d023d774bc28caa50bb5c",
+      "discovery": "GitHub Contents API at pinned commit"
+    },
+    {
+      "path": "data/matches/114234/114234_dynamic_events.json",
+      "size": 3465154,
+      "url": "https://raw.githubusercontent.com/SkillCorner/opendata-basketball/4bbed2e35e8fdd2cf083e8c8b280b3e5381a2c66/data/matches/114234/114234_dynamic_events.json",
+      "kind": "events",
+      "game_id": 114234,
+      "git_blob_sha1": "4a1facbcf29293f4eba2ec07a72d8f2358d85d5c",
+      "discovery": "GitHub Contents API at pinned commit"
+    },
+    {
+      "path": "data/matches/114234/114234_game_data.json",
+      "size": 2130,
+      "url": "https://raw.githubusercontent.com/SkillCorner/opendata-basketball/4bbed2e35e8fdd2cf083e8c8b280b3e5381a2c66/data/matches/114234/114234_game_data.json",
+      "kind": "game_metadata",
+      "game_id": 114234,
+      "git_blob_sha1": "9fd1a15ec5ab31873311b45641d777b748b2431e",
+      "discovery": "GitHub Contents API at pinned commit"
+    },
+    {
+      "path": "data/matches/114234/114234_tracking_data.jsonl.gz",
+      "size": 31697559,
+      "url": "https://media.githubusercontent.com/media/SkillCorner/opendata-basketball/4bbed2e35e8fdd2cf083e8c8b280b3e5381a2c66/data/matches/114234/114234_tracking_data.jsonl.gz",
+      "lfs_sha256": "988b8a2ca3a8cc9c1c2a2838ab9a2d8d1add64cafd1113f0c63d2439f5164690",
+      "lfs_pointer_sha256": "9520079b1383daf217f630833945afd76c35236902670aae4a4aa1109ae98fcf",
+      "lfs_pointer_text": "version https://git-lfs.github.com/spec/v1\noid sha256:988b8a2ca3a8cc9c1c2a2838ab9a2d8d1add64cafd1113f0c63d2439f5164690\nsize 31697559\n",
+      "kind": "tracking",
+      "game_id": 114234,
+      "git_blob_sha1": "009de6229d4221be98632dd1028b50331a0c5fa3",
+      "discovery": "GitHub Contents API at pinned commit"
+    },
+    {
+      "path": "data/matches/114243/114243_dynamic_events.json",
+      "size": 3526294,
+      "url": "https://raw.githubusercontent.com/SkillCorner/opendata-basketball/4bbed2e35e8fdd2cf083e8c8b280b3e5381a2c66/data/matches/114243/114243_dynamic_events.json",
+      "kind": "events",
+      "game_id": 114243,
+      "git_blob_sha1": "fd4a48df294287c6e1771913297dd43f0f73cae5",
+      "discovery": "GitHub Contents API at pinned commit"
+    },
+    {
+      "path": "data/matches/114243/114243_game_data.json",
+      "size": 2253,
+      "url": "https://raw.githubusercontent.com/SkillCorner/opendata-basketball/4bbed2e35e8fdd2cf083e8c8b280b3e5381a2c66/data/matches/114243/114243_game_data.json",
+      "kind": "game_metadata",
+      "game_id": 114243,
+      "git_blob_sha1": "e969077a56d6d0b57022a6c3f8aaaa0cc002e63a",
+      "discovery": "GitHub Contents API at pinned commit"
+    },
+    {
+      "path": "data/matches/114243/114243_tracking_data.jsonl.gz",
+      "size": 33707974,
+      "url": "https://media.githubusercontent.com/media/SkillCorner/opendata-basketball/4bbed2e35e8fdd2cf083e8c8b280b3e5381a2c66/data/matches/114243/114243_tracking_data.jsonl.gz",
+      "lfs_sha256": "a150110f57c365940ae1da32243cf924628c443ea16a85336c8cc4a674e05c0e",
+      "lfs_pointer_sha256": "ba31db2077b53fcc22ddaba105db8ad7692a188575ce6d43593c6eb69bd0d4ce",
+      "lfs_pointer_text": "version https://git-lfs.github.com/spec/v1\noid sha256:a150110f57c365940ae1da32243cf924628c443ea16a85336c8cc4a674e05c0e\nsize 33707974\n",
+      "kind": "tracking",
+      "game_id": 114243,
+      "git_blob_sha1": "5b28079ac58fb14bb3865f2cc11cd831a4589c34",
+      "discovery": "GitHub Contents API at pinned commit"
+    },
+    {
+      "path": "data/matches/178442/178442_dynamic_events.json",
+      "size": 3572420,
+      "url": "https://raw.githubusercontent.com/SkillCorner/opendata-basketball/4bbed2e35e8fdd2cf083e8c8b280b3e5381a2c66/data/matches/178442/178442_dynamic_events.json",
+      "kind": "events",
+      "game_id": 178442,
+      "git_blob_sha1": "5bee35229ff145f84a3c530e4cd023e7901af5dd",
+      "discovery": "GitHub Contents API at pinned commit"
+    },
+    {
+      "path": "data/matches/178442/178442_game_data.json",
+      "size": 2271,
+      "url": "https://raw.githubusercontent.com/SkillCorner/opendata-basketball/4bbed2e35e8fdd2cf083e8c8b280b3e5381a2c66/data/matches/178442/178442_game_data.json",
+      "kind": "game_metadata",
+      "game_id": 178442,
+      "git_blob_sha1": "9ec380ecd92e5b63a96696b9b305639e78e7de68",
+      "discovery": "GitHub Contents API at pinned commit"
+    },
+    {
+      "path": "data/matches/178442/178442_tracking_data.jsonl.gz",
+      "size": 39067647,
+      "url": "https://media.githubusercontent.com/media/SkillCorner/opendata-basketball/4bbed2e35e8fdd2cf083e8c8b280b3e5381a2c66/data/matches/178442/178442_tracking_data.jsonl.gz",
+      "lfs_sha256": "03ed31f1f76eaaad39eefec90b7eb2ca6234fa3a20ee0bcf3279d12ab6f7cc09",
+      "lfs_pointer_sha256": "2463e2eb8e651efa8975eca2503f292498cb8e247931f2b434876b378bba3fd9",
+      "lfs_pointer_text": "version https://git-lfs.github.com/spec/v1\noid sha256:03ed31f1f76eaaad39eefec90b7eb2ca6234fa3a20ee0bcf3279d12ab6f7cc09\nsize 39067647\n",
+      "kind": "tracking",
+      "game_id": 178442,
+      "git_blob_sha1": "850abe875c24f168d2ddb1a2619927794741f7a8",
+      "discovery": "GitHub Contents API at pinned commit"
+    },
+    {
+      "path": "data/matches/179612/179612_dynamic_events.json",
+      "size": 3414961,
+      "url": "https://raw.githubusercontent.com/SkillCorner/opendata-basketball/4bbed2e35e8fdd2cf083e8c8b280b3e5381a2c66/data/matches/179612/179612_dynamic_events.json",
+      "kind": "events",
+      "game_id": 179612,
+      "git_blob_sha1": "77b54abd6c74b97350f9b068ff5ce486ed413707",
+      "discovery": "GitHub Contents API at pinned commit"
+    },
+    {
+      "path": "data/matches/179612/179612_game_data.json",
+      "size": 2221,
+      "url": "https://raw.githubusercontent.com/SkillCorner/opendata-basketball/4bbed2e35e8fdd2cf083e8c8b280b3e5381a2c66/data/matches/179612/179612_game_data.json",
+      "kind": "game_metadata",
+      "game_id": 179612,
+      "git_blob_sha1": "259b9cd97ae0d161c42a5d79f95a132ce62d3b36",
+      "discovery": "GitHub Contents API at pinned commit"
+    },
+    {
+      "path": "data/matches/179612/179612_tracking_data.jsonl.gz",
+      "size": 36191342,
+      "url": "https://media.githubusercontent.com/media/SkillCorner/opendata-basketball/4bbed2e35e8fdd2cf083e8c8b280b3e5381a2c66/data/matches/179612/179612_tracking_data.jsonl.gz",
+      "lfs_sha256": "9681027e1306a2e5d6a6b80459ea2fc0816f455e5b65508c8ba9f32cc85024b8",
+      "lfs_pointer_sha256": "3af22a3272b3401273b4fe5fdd05c0d9c7c1986895c44692ba4e351194a17e18",
+      "lfs_pointer_text": "version https://git-lfs.github.com/spec/v1\noid sha256:9681027e1306a2e5d6a6b80459ea2fc0816f455e5b65508c8ba9f32cc85024b8\nsize 36191342\n",
+      "kind": "tracking",
+      "game_id": 179612,
+      "git_blob_sha1": "17d6a55e49e2c420746528d05dc96a2e3bdc28a4",
+      "discovery": "GitHub Contents API at pinned commit"
+    },
+    {
+      "path": "data/matches/184439/184439_dynamic_events.json",
+      "size": 3341994,
+      "url": "https://raw.githubusercontent.com/SkillCorner/opendata-basketball/4bbed2e35e8fdd2cf083e8c8b280b3e5381a2c66/data/matches/184439/184439_dynamic_events.json",
+      "kind": "events",
+      "game_id": 184439,
+      "git_blob_sha1": "edd6d653cdc9c8e06188b1d69deaa583f23a6170",
+      "discovery": "GitHub Contents API at pinned commit"
+    },
+    {
+      "path": "data/matches/184439/184439_game_data.json",
+      "size": 2260,
+      "url": "https://raw.githubusercontent.com/SkillCorner/opendata-basketball/4bbed2e35e8fdd2cf083e8c8b280b3e5381a2c66/data/matches/184439/184439_game_data.json",
+      "kind": "game_metadata",
+      "game_id": 184439,
+      "git_blob_sha1": "99f9738e9b7fe1a543f0b316b6d8623585ed3265",
+      "discovery": "GitHub Contents API at pinned commit"
+    },
+    {
+      "path": "data/matches/184439/184439_tracking_data.jsonl.gz",
+      "size": 33809782,
+      "url": "https://media.githubusercontent.com/media/SkillCorner/opendata-basketball/4bbed2e35e8fdd2cf083e8c8b280b3e5381a2c66/data/matches/184439/184439_tracking_data.jsonl.gz",
+      "lfs_sha256": "a602b5c53d05eaebdb9e358945b8a92c42fb9fdc3e090f687b79224fa4d49bc1",
+      "lfs_pointer_sha256": "dc15bc2521f692365c84ed39348a61c17a0c94075690f84d7a8c00008fbf5299",
+      "lfs_pointer_text": "version https://git-lfs.github.com/spec/v1\noid sha256:a602b5c53d05eaebdb9e358945b8a92c42fb9fdc3e090f687b79224fa4d49bc1\nsize 33809782\n",
+      "kind": "tracking",
+      "game_id": 184439,
+      "git_blob_sha1": "9a84d7445f81697cbbde1ca7b63cf5b25df3242c",
+      "discovery": "GitHub Contents API at pinned commit"
+    },
+    {
+      "path": "data/matches/188630/188630_dynamic_events.json",
+      "size": 3183718,
+      "url": "https://raw.githubusercontent.com/SkillCorner/opendata-basketball/4bbed2e35e8fdd2cf083e8c8b280b3e5381a2c66/data/matches/188630/188630_dynamic_events.json",
+      "kind": "events",
+      "game_id": 188630,
+      "git_blob_sha1": "1b6b1da590fe4789abefd4f4385ffabf60de7118",
+      "discovery": "GitHub Contents API at pinned commit"
+    },
+    {
+      "path": "data/matches/188630/188630_game_data.json",
+      "size": 2260,
+      "url": "https://raw.githubusercontent.com/SkillCorner/opendata-basketball/4bbed2e35e8fdd2cf083e8c8b280b3e5381a2c66/data/matches/188630/188630_game_data.json",
+      "kind": "game_metadata",
+      "game_id": 188630,
+      "git_blob_sha1": "224db3fd5dd21ab806a28b1d94a20ea10f12b73c",
+      "discovery": "GitHub Contents API at pinned commit"
+    },
+    {
+      "path": "data/matches/188630/188630_tracking_data.jsonl.gz",
+      "size": 31869680,
+      "url": "https://media.githubusercontent.com/media/SkillCorner/opendata-basketball/4bbed2e35e8fdd2cf083e8c8b280b3e5381a2c66/data/matches/188630/188630_tracking_data.jsonl.gz",
+      "lfs_sha256": "1a289ff627f8985f3f54021fc6e3ad5b97c11e7b5e85bbd1d1a0842b9d1a17c6",
+      "lfs_pointer_sha256": "c6b8043c72c5e85c3405b5ab600fe38656d9f95e6e7e407fc08b8c72fcf0f830",
+      "lfs_pointer_text": "version https://git-lfs.github.com/spec/v1\noid sha256:1a289ff627f8985f3f54021fc6e3ad5b97c11e7b5e85bbd1d1a0842b9d1a17c6\nsize 31869680\n",
+      "kind": "tracking",
+      "game_id": 188630,
+      "git_blob_sha1": "c3e3f580f46b36f40d909163dadedfd010106fa8",
+      "discovery": "GitHub Contents API at pinned commit"
+    },
+    {
+      "path": "data/matches/191313/191313_dynamic_events.json",
+      "size": 3282745,
+      "url": "https://raw.githubusercontent.com/SkillCorner/opendata-basketball/4bbed2e35e8fdd2cf083e8c8b280b3e5381a2c66/data/matches/191313/191313_dynamic_events.json",
+      "kind": "events",
+      "game_id": 191313,
+      "git_blob_sha1": "dcee1a012632e4f1a38816d829e5b8ca79e8d7a6",
+      "discovery": "GitHub Contents API at pinned commit"
+    },
+    {
+      "path": "data/matches/191313/191313_game_data.json",
+      "size": 2294,
+      "url": "https://raw.githubusercontent.com/SkillCorner/opendata-basketball/4bbed2e35e8fdd2cf083e8c8b280b3e5381a2c66/data/matches/191313/191313_game_data.json",
+      "kind": "game_metadata",
+      "game_id": 191313,
+      "git_blob_sha1": "9bef665640fadd9683bb121badf9ebd0435e6b1b",
+      "discovery": "GitHub Contents API at pinned commit"
+    },
+    {
+      "path": "data/matches/191313/191313_tracking_data.jsonl.gz",
+      "size": 35898393,
+      "url": "https://media.githubusercontent.com/media/SkillCorner/opendata-basketball/4bbed2e35e8fdd2cf083e8c8b280b3e5381a2c66/data/matches/191313/191313_tracking_data.jsonl.gz",
+      "lfs_sha256": "a1c7cc6b5070686a8c5254a4a89627d289680c9f103bbe469b850f24a0742883",
+      "lfs_pointer_sha256": "e26251d53dedc6410d8b6f98e17a69e639a1802ed40b222cf631bfd25136f059",
+      "lfs_pointer_text": "version https://git-lfs.github.com/spec/v1\noid sha256:a1c7cc6b5070686a8c5254a4a89627d289680c9f103bbe469b850f24a0742883\nsize 35898393\n",
+      "kind": "tracking",
+      "game_id": 191313,
+      "git_blob_sha1": "9cd9df1b258fd587a270848bb2f42503ac72a116",
+      "discovery": "GitHub Contents API at pinned commit"
+    },
+    {
+      "path": "LICENSE",
+      "git_blob_sha1": "6a6080dbdca63db6aa3f7c14c577d7640de7d26a",
+      "size": 1097,
+      "url": "https://raw.githubusercontent.com/SkillCorner/opendata-basketball/4bbed2e35e8fdd2cf083e8c8b280b3e5381a2c66/LICENSE",
+      "kind": "evidence",
+      "game_id": null,
+      "discovery": "Observed GitHub recursive tree at pinned commit; GitHub raw-content endpoint"
+    },
+    {
+      "path": "README.md",
+      "git_blob_sha1": "d5aa96c799beb99ef896d0d1800f9518a1a05e09",
+      "size": 8581,
+      "url": "https://raw.githubusercontent.com/SkillCorner/opendata-basketball/4bbed2e35e8fdd2cf083e8c8b280b3e5381a2c66/README.md",
+      "kind": "evidence",
+      "game_id": null,
+      "discovery": "Observed GitHub recursive tree at pinned commit; GitHub raw-content endpoint"
+    },
+    {
+      "path": "data/matches.json",
+      "git_blob_sha1": "6db83d7fa75a699270630c02efc330ce8a8d2e2b",
+      "size": 4324,
+      "url": "https://raw.githubusercontent.com/SkillCorner/opendata-basketball/4bbed2e35e8fdd2cf083e8c8b280b3e5381a2c66/data/matches.json",
+      "kind": "dataset_metadata",
+      "game_id": null,
+      "discovery": "Observed GitHub recursive tree at pinned commit; GitHub raw-content endpoint"
+    },
+    {
+      "path": "data/player_id_aliases.csv",
+      "git_blob_sha1": "af2100462ea1aa7800a107207e2537a5b3642035",
+      "size": 1062,
+      "url": "https://raw.githubusercontent.com/SkillCorner/opendata-basketball/4bbed2e35e8fdd2cf083e8c8b280b3e5381a2c66/data/player_id_aliases.csv",
+      "kind": "dataset_metadata",
+      "game_id": null,
+      "discovery": "Observed GitHub recursive tree at pinned commit; GitHub raw-content endpoint"
+    },
+    {
+      "path": "docs/KNOWN_ISSUES.md",
+      "git_blob_sha1": "d0c5c6af7f5e868e15c91828478ced2651b785b3",
+      "size": 3390,
+      "url": "https://raw.githubusercontent.com/SkillCorner/opendata-basketball/4bbed2e35e8fdd2cf083e8c8b280b3e5381a2c66/docs/KNOWN_ISSUES.md",
+      "kind": "evidence",
+      "game_id": null,
+      "discovery": "Observed GitHub recursive tree at pinned commit; GitHub raw-content endpoint"
+    },
+    {
+      "path": "docs/PRIMER.md",
+      "git_blob_sha1": "2ec1e32687246ce9a848c2c254adf858c4c1707e",
+      "size": 7839,
+      "url": "https://raw.githubusercontent.com/SkillCorner/opendata-basketball/4bbed2e35e8fdd2cf083e8c8b280b3e5381a2c66/docs/PRIMER.md",
+      "kind": "evidence",
+      "game_id": null,
+      "discovery": "Observed GitHub recursive tree at pinned commit; GitHub raw-content endpoint"
+    },
+    {
+      "path": "docs/aggregates_columns.md",
+      "git_blob_sha1": "c6b59e93214f193994c3c816e45eebde60d1342e",
+      "size": 13872,
+      "url": "https://raw.githubusercontent.com/SkillCorner/opendata-basketball/4bbed2e35e8fdd2cf083e8c8b280b3e5381a2c66/docs/aggregates_columns.md",
+      "kind": "evidence",
+      "game_id": null,
+      "discovery": "Observed GitHub recursive tree at pinned commit; GitHub raw-content endpoint"
+    },
+    {
+      "path": "docs/data_dictionary/README.md",
+      "git_blob_sha1": "3c1b7f59c9e173016c96bfbb3a61437242c0d491",
+      "size": 7228,
+      "url": "https://raw.githubusercontent.com/SkillCorner/opendata-basketball/4bbed2e35e8fdd2cf083e8c8b280b3e5381a2c66/docs/data_dictionary/README.md",
+      "kind": "evidence",
+      "game_id": null,
+      "discovery": "Observed GitHub recursive tree at pinned commit; GitHub raw-content endpoint"
+    },
+    {
+      "path": "docs/data_dictionary/chance_players.md",
+      "git_blob_sha1": "2f8f1ab55f7fc4523e711ad876225bf56db7c696",
+      "size": 1865,
+      "url": "https://raw.githubusercontent.com/SkillCorner/opendata-basketball/4bbed2e35e8fdd2cf083e8c8b280b3e5381a2c66/docs/data_dictionary/chance_players.md",
+      "kind": "evidence",
+      "game_id": null,
+      "discovery": "Observed GitHub recursive tree at pinned commit; GitHub raw-content endpoint"
+    },
+    {
+      "path": "docs/data_dictionary/chances.md",
+      "git_blob_sha1": "04b007e1647f510453cd0e8c2df8d610a2c18c84",
+      "size": 4128,
+      "url": "https://raw.githubusercontent.com/SkillCorner/opendata-basketball/4bbed2e35e8fdd2cf083e8c8b280b3e5381a2c66/docs/data_dictionary/chances.md",
+      "kind": "evidence",
+      "game_id": null,
+      "discovery": "Observed GitHub recursive tree at pinned commit; GitHub raw-content endpoint"
+    },
+    {
+      "path": "docs/data_dictionary/closeouts.md",
+      "git_blob_sha1": "752ba24c1de433bd6894c931d27222ddec8bd448",
+      "size": 3359,
+      "url": "https://raw.githubusercontent.com/SkillCorner/opendata-basketball/4bbed2e35e8fdd2cf083e8c8b280b3e5381a2c66/docs/data_dictionary/closeouts.md",
+      "kind": "evidence",
+      "game_id": null,
+      "discovery": "Observed GitHub recursive tree at pinned commit; GitHub raw-content endpoint"
+    },
+    {
+      "path": "docs/data_dictionary/dribbles.md",
+      "git_blob_sha1": "43dd9140618c5b6ca4754ef27875ed79b568c9b5",
+      "size": 1428,
+      "url": "https://raw.githubusercontent.com/SkillCorner/opendata-basketball/4bbed2e35e8fdd2cf083e8c8b280b3e5381a2c66/docs/data_dictionary/dribbles.md",
+      "kind": "evidence",
+      "game_id": null,
+      "discovery": "Observed GitHub recursive tree at pinned commit; GitHub raw-content endpoint"
+    },
+    {
+      "path": "docs/data_dictionary/drives.md",
+      "git_blob_sha1": "adde322bc9727a829a93199dbaf8ecee7aa02f9d",
+      "size": 3029,
+      "url": "https://raw.githubusercontent.com/SkillCorner/opendata-basketball/4bbed2e35e8fdd2cf083e8c8b280b3e5381a2c66/docs/data_dictionary/drives.md",
+      "kind": "evidence",
+      "game_id": null,
+      "discovery": "Observed GitHub recursive tree at pinned commit; GitHub raw-content endpoint"
+    },
+    {
+      "path": "docs/data_dictionary/fouls.md",
+      "git_blob_sha1": "a73f4a91bd79fec280ad93fb48870662e6187cd0",
+      "size": 2278,
+      "url": "https://raw.githubusercontent.com/SkillCorner/opendata-basketball/4bbed2e35e8fdd2cf083e8c8b280b3e5381a2c66/docs/data_dictionary/fouls.md",
+      "kind": "evidence",
+      "game_id": null,
+      "discovery": "Observed GitHub recursive tree at pinned commit; GitHub raw-content endpoint"
+    },
+    {
+      "path": "docs/data_dictionary/free_throws.md",
+      "git_blob_sha1": "dd4e3abee5a07bbbe5fc11851f76c607ead85428",
+      "size": 1546,
+      "url": "https://raw.githubusercontent.com/SkillCorner/opendata-basketball/4bbed2e35e8fdd2cf083e8c8b280b3e5381a2c66/docs/data_dictionary/free_throws.md",
+      "kind": "evidence",
+      "game_id": null,
+      "discovery": "Observed GitHub recursive tree at pinned commit; GitHub raw-content endpoint"
+    },
+    {
+      "path": "docs/data_dictionary/game_data.md",
+      "git_blob_sha1": "ec07a4de28585050f6772bf838ccc0c9fe9ba25b",
+      "size": 2463,
+      "url": "https://raw.githubusercontent.com/SkillCorner/opendata-basketball/4bbed2e35e8fdd2cf083e8c8b280b3e5381a2c66/docs/data_dictionary/game_data.md",
+      "kind": "evidence",
+      "game_id": null,
+      "discovery": "Observed GitHub recursive tree at pinned commit; GitHub raw-content endpoint"
+    },
+    {
+      "path": "docs/data_dictionary/handoffs.md",
+      "git_blob_sha1": "5cc64b3ac43d7b1fde9f3b3f8bd7a8d8c5c38480",
+      "size": 2606,
+      "url": "https://raw.githubusercontent.com/SkillCorner/opendata-basketball/4bbed2e35e8fdd2cf083e8c8b280b3e5381a2c66/docs/data_dictionary/handoffs.md",
+      "kind": "evidence",
+      "game_id": null,
+      "discovery": "Observed GitHub recursive tree at pinned commit; GitHub raw-content endpoint"
+    },
+    {
+      "path": "docs/data_dictionary/isolations.md",
+      "git_blob_sha1": "c35a14ec6beca0e6309ebfbb572551d670ef6e15",
+      "size": 2379,
+      "url": "https://raw.githubusercontent.com/SkillCorner/opendata-basketball/4bbed2e35e8fdd2cf083e8c8b280b3e5381a2c66/docs/data_dictionary/isolations.md",
+      "kind": "evidence",
+      "game_id": null,
+      "discovery": "Observed GitHub recursive tree at pinned commit; GitHub raw-content endpoint"
+    },
+    {
+      "path": "docs/data_dictionary/matchups.md",
+      "git_blob_sha1": "68500dd5a78658b9ad7508a071f4666c5436aa61",
+      "size": 1745,
+      "url": "https://raw.githubusercontent.com/SkillCorner/opendata-basketball/4bbed2e35e8fdd2cf083e8c8b280b3e5381a2c66/docs/data_dictionary/matchups.md",
+      "kind": "evidence",
+      "game_id": null,
+      "discovery": "Observed GitHub recursive tree at pinned commit; GitHub raw-content endpoint"
+    },
+    {
+      "path": "docs/data_dictionary/off_ball_screens.md",
+      "git_blob_sha1": "eeb0207f131fa8b5224951fbc331eac4d7aaa45e",
+      "size": 2956,
+      "url": "https://raw.githubusercontent.com/SkillCorner/opendata-basketball/4bbed2e35e8fdd2cf083e8c8b280b3e5381a2c66/docs/data_dictionary/off_ball_screens.md",
+      "kind": "evidence",
+      "game_id": null,
+      "discovery": "Observed GitHub recursive tree at pinned commit; GitHub raw-content endpoint"
+    },
+    {
+      "path": "docs/data_dictionary/passes.md",
+      "git_blob_sha1": "8a679c8f15c1fccaa96f6e758249f6a952bec931",
+      "size": 3247,
+      "url": "https://raw.githubusercontent.com/SkillCorner/opendata-basketball/4bbed2e35e8fdd2cf083e8c8b280b3e5381a2c66/docs/data_dictionary/passes.md",
+      "kind": "evidence",
+      "game_id": null,
+      "discovery": "Observed GitHub recursive tree at pinned commit; GitHub raw-content endpoint"
+    },
+    {
+      "path": "docs/data_dictionary/picks.md",
+      "git_blob_sha1": "57492369921bd803851018997141441895e9a4db",
+      "size": 2874,
+      "url": "https://raw.githubusercontent.com/SkillCorner/opendata-basketball/4bbed2e35e8fdd2cf083e8c8b280b3e5381a2c66/docs/data_dictionary/picks.md",
+      "kind": "evidence",
+      "game_id": null,
+      "discovery": "Observed GitHub recursive tree at pinned commit; GitHub raw-content endpoint"
+    },
+    {
+      "path": "docs/data_dictionary/possessions.md",
+      "git_blob_sha1": "293ac11988419403cada8d163615943363f0ecbb",
+      "size": 3469,
+      "url": "https://raw.githubusercontent.com/SkillCorner/opendata-basketball/4bbed2e35e8fdd2cf083e8c8b280b3e5381a2c66/docs/data_dictionary/possessions.md",
+      "kind": "evidence",
+      "game_id": null,
+      "discovery": "Observed GitHub recursive tree at pinned commit; GitHub raw-content endpoint"
+    },
+    {
+      "path": "docs/data_dictionary/posts.md",
+      "git_blob_sha1": "fd7a3eb5acf806d8b93805bb6da662daf2e20fc5",
+      "size": 2591,
+      "url": "https://raw.githubusercontent.com/SkillCorner/opendata-basketball/4bbed2e35e8fdd2cf083e8c8b280b3e5381a2c66/docs/data_dictionary/posts.md",
+      "kind": "evidence",
+      "game_id": null,
+      "discovery": "Observed GitHub recursive tree at pinned commit; GitHub raw-content endpoint"
+    },
+    {
+      "path": "docs/data_dictionary/rebounds.md",
+      "git_blob_sha1": "6640ea4abea64b65576c328785fd96906c0973a2",
+      "size": 2024,
+      "url": "https://raw.githubusercontent.com/SkillCorner/opendata-basketball/4bbed2e35e8fdd2cf083e8c8b280b3e5381a2c66/docs/data_dictionary/rebounds.md",
+      "kind": "evidence",
+      "game_id": null,
+      "discovery": "Observed GitHub recursive tree at pinned commit; GitHub raw-content endpoint"
+    },
+    {
+      "path": "docs/data_dictionary/shots.md",
+      "git_blob_sha1": "300bb206237ea4ab66a2ab6b1eb1e0c37d8e2b68",
+      "size": 4338,
+      "url": "https://raw.githubusercontent.com/SkillCorner/opendata-basketball/4bbed2e35e8fdd2cf083e8c8b280b3e5381a2c66/docs/data_dictionary/shots.md",
+      "kind": "evidence",
+      "game_id": null,
+      "discovery": "Observed GitHub recursive tree at pinned commit; GitHub raw-content endpoint"
+    },
+    {
+      "path": "docs/data_dictionary/timeouts.md",
+      "git_blob_sha1": "db031ce4c1fef4b41d7909c1b5dfce748d902840",
+      "size": 1068,
+      "url": "https://raw.githubusercontent.com/SkillCorner/opendata-basketball/4bbed2e35e8fdd2cf083e8c8b280b3e5381a2c66/docs/data_dictionary/timeouts.md",
+      "kind": "evidence",
+      "game_id": null,
+      "discovery": "Observed GitHub recursive tree at pinned commit; GitHub raw-content endpoint"
+    },
+    {
+      "path": "docs/data_dictionary/touches.md",
+      "git_blob_sha1": "1e2c855b67a20de66ffca5fa52ca4c6ae0c4047b",
+      "size": 4030,
+      "url": "https://raw.githubusercontent.com/SkillCorner/opendata-basketball/4bbed2e35e8fdd2cf083e8c8b280b3e5381a2c66/docs/data_dictionary/touches.md",
+      "kind": "evidence",
+      "game_id": null,
+      "discovery": "Observed GitHub recursive tree at pinned commit; GitHub raw-content endpoint"
+    },
+    {
+      "path": "docs/data_dictionary/tracking_data.md",
+      "git_blob_sha1": "efdfd592a4e653a31a7231e40405b727cfadcc4d",
+      "size": 4494,
+      "url": "https://raw.githubusercontent.com/SkillCorner/opendata-basketball/4bbed2e35e8fdd2cf083e8c8b280b3e5381a2c66/docs/data_dictionary/tracking_data.md",
+      "kind": "evidence",
+      "game_id": null,
+      "discovery": "Observed GitHub recursive tree at pinned commit; GitHub raw-content endpoint"
+    },
+    {
+      "path": "docs/data_dictionary/turnovers.md",
+      "git_blob_sha1": "ebc5851ad40f60df1fbeb2dd57895213c33d437b",
+      "size": 2030,
+      "url": "https://raw.githubusercontent.com/SkillCorner/opendata-basketball/4bbed2e35e8fdd2cf083e8c8b280b3e5381a2c66/docs/data_dictionary/turnovers.md",
+      "kind": "evidence",
+      "game_id": null,
+      "discovery": "Observed GitHub recursive tree at pinned commit; GitHub raw-content endpoint"
+    }
+  ],
+  "games": [
+    114086,
+    114099,
+    114169,
+    114234,
+    114243,
+    178442,
+    179612,
+    184439,
+    188630,
+    191313
+  ],
+  "license": {
+    "identifier": "MIT",
+    "license_path": "LICENSE",
+    "sha256": "61487d7c808239847755401b75efbfba1ed0568bf5e409b96e6273a1a8866824",
+    "copyright": "Copyright (c) 2026 SkillCorner. https://skillcorner.com",
+    "application_to_data": "Inference from repository-wide license and README explicitly releasing data; no separate restrictive data license observed. Preserve license and credit."
+  },
+  "raw_video_included": false,
+  "league": "Spanish Liga ACB",
+  "season": "2025-2026",
+  "ownership": "SkillCorner original tracking and provider-derived event annotations; not user-created tracking."
+}

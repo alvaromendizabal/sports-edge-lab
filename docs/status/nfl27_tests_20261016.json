@@ -1,0 +1,133 @@
+{
+  "status": "success",
+  "stdout": "",
+  "return_value": {
+    "events": [
+      {
+        "timestamp": 1792180112901,
+        "message": "test_byte_bound_before_http (__main__.Tests.test_byte_bound_before_http) ... ok",
+        "ingestionTime": 1792180119016
+      },
+      {
+        "timestamp": 1792180112901,
+        "message": "test_cache_identity_mismatch (__main__.Tests.test_cache_identity_mismatch) ... ok",
+        "ingestionTime": 1792180119016
+      },
+      {
+        "timestamp": 1792180112901,
+        "message": "test_cached_body_hash_failure (__main__.Tests.test_cached_body_hash_failure) ... ok",
+        "ingestionTime": 1792180119016
+      },
+      {
+        "timestamp": 1792180112901,
+        "message": "test_call_bound_before_http (__main__.Tests.test_call_bound_before_http) ... ok",
+        "ingestionTime": 1792180119016
+      },
+      {
+        "timestamp": 1792180112901,
+        "message": "test_hourly_vintage_changes_identity (__main__.Tests.test_hourly_vintage_changes_identity) ... ok",
+        "ingestionTime": 1792180119016
+      },
+      {
+        "timestamp": 1792180112901,
+        "message": "test_no_constructed_roster_urls (__main__.Tests.test_no_constructed_roster_urls) ... ok",
+        "ingestionTime": 1792180119016
+      },
+      {
+        "timestamp": 1792180112901,
+        "message": "test_observed_links_only (__main__.Tests.test_observed_links_only) ... ok",
+        "ingestionTime": 1792180119016
+      },
+      {
+        "timestamp": 1792180112901,
+        "message": "test_only_exact_official_paths (__main__.Tests.test_only_exact_official_paths) ... ok",
+        "ingestionTime": 1792180119016
+      },
+      {
+        "timestamp": 1792180112901,
+        "message": "test_pacing_honors_policy_after_robots (__main__.Tests.test_pacing_honors_policy_after_robots) ... ok",
+        "ingestionTime": 1792180119016
+      },
+      {
+        "timestamp": 1792180112902,
+        "message": "test_robots_disallow_and_longer_delay (__main__.Tests.test_robots_disallow_and_longer_delay) ... ok",
+        "ingestionTime": 1792180119016
+      },
+      {
+        "timestamp": 1792180112902,
+        "message": "test_robots_document_gate (__main__.Tests.test_robots_document_gate) ... ok",
+        "ingestionTime": 1792180119016
+      },
+      {
+        "timestamp": 1792180112902,
+        "message": "test_roster_html_scope_and_challenge (__main__.Tests.test_roster_html_scope_and_challenge) ... ok",
+        "ingestionTime": 1792180119016
+      },
+      {
+        "timestamp": 1792180112902,
+        "message": "test_run_one_zip_and_same_vintage_resume (__main__.Tests.test_run_one_zip_and_same_vintage_resume) ... ok",
+        "ingestionTime": 1792180119016
+      },
+      {
+        "timestamp": 1792180112902,
+        "message": "test_source_403_stops_next_call (__main__.Tests.test_source_403_stops_next_call) ... ok",
+        "ingestionTime": 1792180119016
+      },
+      {
+        "timestamp": 1792180112902,
+        "message": "----------------------------------------------------------------------",
+        "ingestionTime": 1792180119016
+      },
+      {
+        "timestamp": 1792180112902,
+        "message": "Ran 14 tests in 0.045s",
+        "ingestionTime": 1792180119016
+      },
+      {
+        "timestamp": 1792180112902,
+        "message": "OK",
+        "ingestionTime": 1792180119016
+      },
+      {
+        "timestamp": 1792180112902,
+        "message": "{\"timestamp\": \"2026-10-16T19:48:31Z\", \"event\": \"SELF_TEST_PASSED\", \"tests\": 14}",
+        "ingestionTime": 1792180119016
+      },
+      {
+        "timestamp": 1792180112902,
+        "message": "{\"timestamp\": \"2026-10-16T19:48:32Z\", \"event\": \"HEARTBEAT\", \"run_id\": \"20261016T194831Z-56b44f4abd\", \"requests\": 0, \"bytes\": 0, \"data_pages\": 0, \"rosters\": 0, \"teams_remaining\": 0, \"estimated_compute_usd\": 6.6e-05}",
+        "ingestionTime": 1792180119016
+      },
+      {
+        "timestamp": 1792180132906,
+        "message": "{\"timestamp\": \"2026-10-16T19:48:52Z\", \"event\": \"HEARTBEAT\", \"run_id\": \"20261016T194831Z-56b44f4abd\", \"requests\": 21, \"bytes\": 7672647, \"data_pages\": 10, \"rosters\": 8, \"teams_remaining\": 22, \"estimated_compute_usd\": 0.002685}",
+        "ingestionTime": 1792180138067
+      },
+      {
+        "timestamp": 1792180152908,
+        "message": "{\"timestamp\": \"2026-10-16T19:49:12Z\", \"event\": \"HEARTBEAT\", \"run_id\": \"20261016T194831Z-56b44f4abd\", \"requests\": 41, \"bytes\": 13365357, \"data_pages\": 20, \"rosters\": 18, \"teams_remaining\": 12, \"estimated_compute_usd\": 0.005261}",
+        "ingestionTime": 1792180158117
+      },
+      {
+        "timestamp": 1792180172911,
+        "message": "{\"timestamp\": \"2026-10-16T19:49:32Z\", \"event\": \"HEARTBEAT\", \"run_id\": \"20261016T194831Z-56b44f4abd\", \"requests\": 61, \"bytes\": 19115799, \"data_pages\": 30, \"rosters\": 28, \"teams_remaining\": 2, \"estimated_compute_usd\": 0.007822}",
+        "ingestionTime": 1792180178163
+      },
+      {
+        "timestamp": 1792180176911,
+        "message": "{\"timestamp\": \"2026-10-16T19:49:36Z\", \"event\": \"FINISHED\", \"run_id\": \"20261016T194831Z-56b44f4abd\", \"status\": \"discovered_scope_processed\", \"data_pages\": 32, \"rosters\": 30, \"report_key\": \"shared/acquisition/nfl-official-current/20261016T194831Z-56b44f4abd/report.json\", \"return_zip\": \"/opt/ml/processing/output/sports_edge_lab_nfl_current_return_20261016T194831Z-56b44f4abd.zip\"}",
+        "ingestionTime": 1792180178163
+      }
+    ]
+  },
+  "api_calls": [
+    {
+      "service": "logs",
+      "operation": "GetLogEvents",
+      "status": "success",
+      "n_items": {
+        "events": 23
+      }
+    }
+  ]
+}

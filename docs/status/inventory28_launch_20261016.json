@@ -1,0 +1,17 @@
+{
+  "status": "success",
+  "stdout": "",
+  "return_value": {
+    "job": "sports-edge-lab-content-inventory-20261016-v028",
+    "created": {
+      "ProcessingJobArn": "arn:aws:sagemaker:us-west-2:560403859723:processing-job/sports-edge-lab-content-inventory-20261016-v028"
+    }
+  },
+  "api_calls": [
+    {
+      "service": "sagemaker",
+      "operation": "CreateProcessingJob",
+      "status": "success"
+    }
+  ]
+}

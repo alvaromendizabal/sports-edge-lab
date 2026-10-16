@@ -1,6 +1,32 @@
 # Operational evidence
 
-The latest comparable content scan is [19:23:51–19:24:43 UTC](content_inventory_20261016T1924Z.json):
+## Latest acquisition and freshness evidence
+
+The **20:02:52–20:03:45 UTC** [content scan](content_inventory_20261016T2003Z.json) counted
+**85,417 files / 17,241,530,808 stored bytes**, with zero unclassified raw objects.
+The count includes only whitelisted content, records a live observation window,
+and does not establish unique games or model-ready examples.
+
+- [Current paid snapshot: aggregate freshness and empty coverage](current26_freshness_summary_20261016.json)
+- [Verified recurring six-hour schedule](current_schedule_verified_20261016.json)
+- [Initial NFL source acquisition](nfl27_acquisition_summary_20261016.json) and [completed 32-roster recovery](nfl31_acquisition_summary_20261016.json)
+- [Current source-time and access matrix](../DATA_FRESHNESS_AND_ACCESS_20261016.md)
+- [SkillCorner inquiry](skillcorner_request_status.json) and [Genius inquiry](genius_submission_status.json)
+
+The [36-execution ledger](execution_ledger_20261016_latest.json) combines preserved
+terminal metadata with current observations through 20:07:52 UTC: 23 Completed,
+9 Failed, 1 Stopped and 3 InProgress. Current active jobs are historical gap
+backfill v011, NOAA resume v030 and shooting replay v032. Processing-interval
+estimates are $2.568472 completed, $0.082103 failed, $0.054439 stopped and
+$0.980916 running elapsed at each job's observation time. These are not an
+AWS bill; provider subscriptions, storage, requests and unreported provisioning
+remain excluded. Successful bounded executions need not finish all data scope.
+
+Earlier measurements below are preserved historical observations.
+
+## Previous 19:24 UTC milestone
+
+The prior comparable content scan was [19:23:51–19:24:43 UTC](content_inventory_20261016T1924Z.json):
 71,181 files / 14,393,519,871 stored bytes, with zero unclassified raw objects.
 The [expanded collection record](../EXPANDED_DATA_COLLECTION_20261016.md) explains
 current acquisition, the corrected shooting priority, and the verified one-time
@@ -41,3 +67,4 @@ The stopped shooting collector's detection checkpoint was 300 empty responses;
 its frozen final receipt audit counted 580 empty and zero nonempty responses.
 The corrected collector had 30 nonempty positive responses / 2,384 observed
 records at 19:28:52 UTC. Original and corrected source versions are retained.
+

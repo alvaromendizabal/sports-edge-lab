@@ -1,0 +1,42 @@
+{
+  "events": [
+    "test_bounds (__main__.Tests.test_bounds) ... ok",
+    "test_changed_source_hash (__main__.Tests.test_changed_source_hash) ... ok",
+    "test_full_run_one_bundle_scope_and_reuse (__main__.Tests.test_full_run_one_bundle_scope_and_reuse) ... ok",
+    "test_git_blob_hash (__main__.Tests.test_git_blob_hash) ... ok",
+    "test_gzip_full_tracking (__main__.Tests.test_gzip_full_tracking) ... ok",
+    "test_gzip_truncated (__main__.Tests.test_gzip_truncated) ... ok",
+    "test_http_denial_suspends (__main__.Tests.test_http_denial_suspends) ... ok",
+    "test_lfs_pointer_rejected_as_tracking (__main__.Tests.test_lfs_pointer_rejected_as_tracking) ... ok",
+    "test_manifest (__main__.Tests.test_manifest) ... ok",
+    "test_manifest_extra_game (__main__.Tests.test_manifest_extra_game) ... ok",
+    "test_manifest_missing_lfs_sha (__main__.Tests.test_manifest_missing_lfs_sha) ... ok",
+    "test_manifest_url_tamper (__main__.Tests.test_manifest_url_tamper) ... ok",
+    "test_metadata_wrong_league (__main__.Tests.test_metadata_wrong_league) ... ok",
+    "test_robots_deny (__main__.Tests.test_robots_deny) ... ok",
+    "test_robots_longest_rule (__main__.Tests.test_robots_longest_rule) ... ok",
+    "test_streaming_budget (__main__.Tests.test_streaming_budget) ... ok",
+    "----------------------------------------------------------------------",
+    "Ran 16 tests in 0.146s",
+    "OK",
+    "{\"event\": \"SELF_TEST_PASSED\", \"tests\": 16, \"at\": \"2026-10-16T19:52:58Z\"}"
+  ],
+  "api_calls": [
+    {
+      "service": "logs",
+      "operation": "GetLogEvents",
+      "status": "success",
+      "n_items": {
+        "events": 100
+      }
+    },
+    {
+      "service": "logs",
+      "operation": "GetLogEvents",
+      "status": "success",
+      "n_items": {
+        "events": 55
+      }
+    }
+  ]
+}

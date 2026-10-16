@@ -1,0 +1,174 @@
+{
+  "status": "success",
+  "stdout": "",
+  "return_value": {
+    "tests": [
+      {
+        "test": "intended_create_and_tag",
+        "evaluations": [
+          {
+            "action": "sagemaker:CreateProcessingJob",
+            "resource": "arn:aws:sagemaker:us-west-2:560403859723:processing-job/sports-edge-lab-current-d32c5kddcf5bb8c3",
+            "decision": "allowed",
+            "missing_context": []
+          },
+          {
+            "action": "sagemaker:AddTags",
+            "resource": "arn:aws:sagemaker:us-west-2:560403859723:processing-job/sports-edge-lab-current-d32c5kddcf5bb8c3",
+            "decision": "allowed",
+            "missing_context": []
+          }
+        ]
+      },
+      {
+        "test": "reject_other_prefix",
+        "evaluations": [
+          {
+            "action": "sagemaker:CreateProcessingJob",
+            "resource": "arn:aws:sagemaker:us-west-2:560403859723:processing-job/sports-edge-lab-other-d32c5kddcf5bb8c3",
+            "decision": "implicitDeny",
+            "missing_context": []
+          }
+        ]
+      },
+      {
+        "test": "reject_gpu",
+        "evaluations": [
+          {
+            "action": "sagemaker:CreateProcessingJob",
+            "resource": "arn:aws:sagemaker:us-west-2:560403859723:processing-job/sports-edge-lab-current-d32c5kddcf5bb8c3",
+            "decision": "implicitDeny",
+            "missing_context": []
+          }
+        ]
+      },
+      {
+        "test": "reject_long_runtime",
+        "evaluations": [
+          {
+            "action": "sagemaker:CreateProcessingJob",
+            "resource": "arn:aws:sagemaker:us-west-2:560403859723:processing-job/sports-edge-lab-current-d32c5kddcf5bb8c3",
+            "decision": "implicitDeny",
+            "missing_context": []
+          }
+        ]
+      },
+      {
+        "test": "reject_wrong_workstream",
+        "evaluations": [
+          {
+            "action": "sagemaker:CreateProcessingJob",
+            "resource": "arn:aws:sagemaker:us-west-2:560403859723:processing-job/sports-edge-lab-current-d32c5kddcf5bb8c3",
+            "decision": "implicitDeny",
+            "missing_context": []
+          }
+        ]
+      },
+      {
+        "test": "reject_after_expiry",
+        "evaluations": [
+          {
+            "action": "sagemaker:CreateProcessingJob",
+            "resource": "arn:aws:sagemaker:us-west-2:560403859723:processing-job/sports-edge-lab-current-d32c5kddcf5bb8c3",
+            "decision": "implicitDeny",
+            "missing_context": []
+          },
+          {
+            "action": "sagemaker:AddTags",
+            "resource": "arn:aws:sagemaker:us-west-2:560403859723:processing-job/sports-edge-lab-current-d32c5kddcf5bb8c3",
+            "decision": "implicitDeny",
+            "missing_context": []
+          }
+        ]
+      },
+      {
+        "test": "pass_intended_role",
+        "evaluations": [
+          {
+            "action": "iam:PassRole",
+            "resource": "arn:aws:iam::560403859723:role/SportsEdgeLabProcessingRole",
+            "decision": "allowed",
+            "missing_context": []
+          }
+        ]
+      },
+      {
+        "test": "reject_other_role",
+        "evaluations": [
+          {
+            "action": "iam:PassRole",
+            "resource": "arn:aws:iam::560403859723:role/OtherRole",
+            "decision": "implicitDeny",
+            "missing_context": []
+          }
+        ]
+      }
+    ]
+  },
+  "api_calls": [
+    {
+      "service": "iam",
+      "operation": "SimulateCustomPolicy",
+      "status": "success",
+      "n_items": {
+        "EvaluationResults": 2
+      }
+    },
+    {
+      "service": "iam",
+      "operation": "SimulateCustomPolicy",
+      "status": "success",
+      "n_items": {
+        "EvaluationResults": 1
+      }
+    },
+    {
+      "service": "iam",
+      "operation": "SimulateCustomPolicy",
+      "status": "success",
+      "n_items": {
+        "EvaluationResults": 1
+      }
+    },
+    {
+      "service": "iam",
+      "operation": "SimulateCustomPolicy",
+      "status": "success",
+      "n_items": {
+        "EvaluationResults": 1
+      }
+    },
+    {
+      "service": "iam",
+      "operation": "SimulateCustomPolicy",
+      "status": "success",
+      "n_items": {
+        "EvaluationResults": 1
+      }
+    },
+    {
+      "service": "iam",
+      "operation": "SimulateCustomPolicy",
+      "status": "success",
+      "n_items": {
+        "EvaluationResults": 2
+      }
+    },
+    {
+      "service": "iam",
+      "operation": "SimulateCustomPolicy",
+      "status": "success",
+      "n_items": {
+        "EvaluationResults": 1
+      }
+    },
+    {
+      "service": "iam",
+      "operation": "SimulateCustomPolicy",
+      "status": "success",
+      "n_items": {
+        "EvaluationResults": 1
+      }
+    }
+  ]
+}

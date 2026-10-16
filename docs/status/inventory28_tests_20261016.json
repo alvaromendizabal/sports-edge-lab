@@ -1,0 +1,165 @@
+{
+  "status": "success",
+  "stdout": "",
+  "return_value": {
+    "streams": [
+      "sports-edge-lab-content-inventory-20261016-v028/algo-1-1792180935"
+    ],
+    "events": [
+      {
+        "timestamp": 1792180975543,
+        "message": "test_acb_evidence_excluded (__main__.Tests.test_acb_evidence_excluded) ... ok",
+        "ingestionTime": 1792180981656
+      },
+      {
+        "timestamp": 1792180975543,
+        "message": "test_acb_metadata_separate (__main__.Tests.test_acb_metadata_separate) ... ok",
+        "ingestionTime": 1792180981656
+      },
+      {
+        "timestamp": 1792180975543,
+        "message": "test_acb_trajectories (__main__.Tests.test_acb_trajectories) ... ok",
+        "ingestionTime": 1792180981656
+      },
+      {
+        "timestamp": 1792180975543,
+        "message": "test_american_images_only (__main__.Tests.test_american_images_only) ... ok",
+        "ingestionTime": 1792180981656
+      },
+      {
+        "timestamp": 1792180975543,
+        "message": "test_canaries (__main__.Tests.test_canaries) ... ok",
+        "ingestionTime": 1792180981656
+      },
+      {
+        "timestamp": 1792180975543,
+        "message": "test_exact_aggregation (__main__.Tests.test_exact_aggregation) ... ok",
+        "ingestionTime": 1792180981656
+      },
+      {
+        "timestamp": 1792180975543,
+        "message": "test_failure_receipts_excluded (__main__.Tests.test_failure_receipts_excluded) ... ok",
+        "ingestionTime": 1792180981656
+      },
+      {
+        "timestamp": 1792180975543,
+        "message": "test_nfl_current_html (__main__.Tests.test_nfl_current_html) ... ok",
+        "ingestionTime": 1792180981656
+      },
+      {
+        "timestamp": 1792180975543,
+        "message": "test_noaa_field_vs_metadata (__main__.Tests.test_noaa_field_vs_metadata) ... ok",
+        "ingestionTime": 1792180981656
+      },
+      {
+        "timestamp": 1792180975543,
+        "message": "test_non_content_excluded (__main__.Tests.test_non_content_excluded) ... ok",
+        "ingestionTime": 1792180981656
+      },
+      {
+        "timestamp": 1792180975543,
+        "message": "test_nws (__main__.Tests.test_nws) ... ok",
+        "ingestionTime": 1792180981656
+      },
+      {
+        "timestamp": 1792180975543,
+        "message": "test_official_pdf (__main__.Tests.test_official_pdf) ... ok",
+        "ingestionTime": 1792180981656
+      },
+      {
+        "timestamp": 1792180975543,
+        "message": "test_pagination_and_window (__main__.Tests.test_pagination_and_window) ... ok",
+        "ingestionTime": 1792180981656
+      },
+      {
+        "timestamp": 1792180975543,
+        "message": "test_paid_content (__main__.Tests.test_paid_content) ... ok",
+        "ingestionTime": 1792180981656
+      },
+      {
+        "timestamp": 1792180975543,
+        "message": "test_public_fallback_formats (__main__.Tests.test_public_fallback_formats) ... ok",
+        "ingestionTime": 1792180981656
+      },
+      {
+        "timestamp": 1792180975543,
+        "message": "test_public_formats (__main__.Tests.test_public_formats) ... ok",
+        "ingestionTime": 1792180981656
+      },
+      {
+        "timestamp": 1792180975543,
+        "message": "test_receipts_excluded (__main__.Tests.test_receipts_excluded) ... ok",
+        "ingestionTime": 1792180981656
+      },
+      {
+        "timestamp": 1792180975543,
+        "message": "test_request_index_excluded (__main__.Tests.test_request_index_excluded) ... ok",
+        "ingestionTime": 1792180981656
+      },
+      {
+        "timestamp": 1792180975543,
+        "message": "test_unknown_not_inflated (__main__.Tests.test_unknown_not_inflated) ... ok",
+        "ingestionTime": 1792180981656
+      },
+      {
+        "timestamp": 1792180975543,
+        "message": "----------------------------------------------------------------------",
+        "ingestionTime": 1792180981656
+      },
+      {
+        "timestamp": 1792180975543,
+        "message": "Ran 19 tests in 0.001s",
+        "ingestionTime": 1792180981656
+      },
+      {
+        "timestamp": 1792180975543,
+        "message": "OK",
+        "ingestionTime": 1792180981656
+      },
+      {
+        "timestamp": 1792180975543,
+        "message": "{\"timestamp\": \"2026-10-16T20:02:51Z\", \"event\": \"SELF_TEST_PASSED\", \"tests\": 19}",
+        "ingestionTime": 1792180981656
+      },
+      {
+        "timestamp": 1792180975543,
+        "message": "{\"timestamp\": \"2026-10-16T20:02:52Z\", \"event\": \"HEARTBEAT\", \"run_id\": \"20261016T200252Z-e236a9705b\", \"pages\": 1, \"prefix\": \"tracks/\", \"listed_objects\": 1000, \"included_objects\": 0, \"included_stored_bytes\": 0, \"elapsed_seconds\": 0.33, \"estimated_compute_usd\": 4.2e-05}",
+        "ingestionTime": 1792180981656
+      },
+      {
+        "timestamp": 1792180992545,
+        "message": "{\"timestamp\": \"2026-10-16T20:03:12Z\", \"event\": \"HEARTBEAT\", \"run_id\": \"20261016T200252Z-e236a9705b\", \"pages\": 119, \"prefix\": \"tracks/\", \"listed_objects\": 119000, \"included_objects\": 41602, \"included_stored_bytes\": 5101204247, \"elapsed_seconds\": 20.38, \"estimated_compute_usd\": 0.00261}",
+        "ingestionTime": 1792180997699
+      },
+      {
+        "timestamp": 1792181013548,
+        "message": "{\"timestamp\": \"2026-10-16T20:03:32Z\", \"event\": \"HEARTBEAT\", \"run_id\": \"20261016T200252Z-e236a9705b\", \"pages\": 236, \"prefix\": \"tracks/\", \"listed_objects\": 236000, \"included_objects\": 64174, \"included_stored_bytes\": 10240361087, \"elapsed_seconds\": 40.54, \"estimated_compute_usd\": 0.005191}",
+        "ingestionTime": 1792181018745
+      },
+      {
+        "timestamp": 1792181026549,
+        "message": "{\"timestamp\": \"2026-10-16T20:03:45Z\", \"event\": \"FINISHED\", \"run_id\": \"20261016T200252Z-e236a9705b\", \"status\": \"completed\", \"total\": {\"objects\": 85417, \"stored_bytes\": 17241530808}, \"report_key\": \"shared/acquisition/content-inventory/20261016T200252Z-e236a9705b/report.json\", \"return_key\": \"shared/acquisition/content-inventory/20261016T200252Z-e236a9705b/sports_edge_lab_content_inventory_return_20261016T200252Z-e236a9705b.zip\"}",
+        "ingestionTime": 1792181031791
+      }
+    ],
+    "errors": []
+  },
+  "api_calls": [
+    {
+      "service": "logs",
+      "operation": "DescribeLogStreams",
+      "status": "success",
+      "n_items": {
+        "logStreams": 1
+      }
+    },
+    {
+      "service": "logs",
+      "operation": "GetLogEvents",
+      "status": "success",
+      "n_items": {
+        "events": 27
+      }
+    }
+  ]
+}

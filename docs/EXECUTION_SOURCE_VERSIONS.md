@@ -66,7 +66,7 @@ are active. Its count is not a unique-game or complete-season metric.
 | [tools/acquire_hrrr_original.py](../tools/acquire_hrrr_original.py) | `2283df2797f85191362287b749b7c1f262810a118f0e3d712ad809d07b821d34` | 21 |
 | [tools/shooting_continuation_v021/src/__main__.py](../tools/shooting_continuation_v021/src/__main__.py) | `abccf9cbbba35a1b78c09cc4d3eed9668e72f0db9fe3df3d02326fc60f263cd2` | 29 |
 | [tools/shooting_continuation_v021/src/acquire_paid_data.py](../tools/shooting_continuation_v021/src/acquire_paid_data.py) | `6da4a715f239b60b00ef506857821751de8da63efc0332af5710316d3dcd326b` | Included in v021 |
-| [tools/inventory_raw_content.py](../tools/inventory_raw_content.py) | `5c516796088b89454cc01e5ff5e8894051fca9b3af0ecd239889e32aa0f729bd` | 15 |
+| [tools/history/inventory_raw_content_v025_launched.py](../tools/history/inventory_raw_content_v025_launched.py) | `5c516796088b89454cc01e5ff5e8894051fca9b3af0ecd239889e32aa0f729bd` | 15 |
 
 See [the expanded acquisition record](EXPANDED_DATA_COLLECTION_20261016.md) for runtime and schedule evidence. Source tests and successful storage do not approve data for model features.
 
@@ -78,3 +78,57 @@ The v021 shooting execution was stopped when its initial 300 HTTP successes cont
 
 - [tools/shooting_continuation_v024/src/__main__.py](../tools/shooting_continuation_v024/src/__main__.py): SHA-256 `240e7ed274bee968ae38c3650d9e7cb620d20c65532f88b1151060b7be46c5de`.
 - [tools/shooting_continuation_v024/src/acquire_paid_data.py](../tools/shooting_continuation_v024/src/acquire_paid_data.py): SHA-256 `5b918e7f0a8af2d9fd5bd5db3d5935f0c102dd9ce699ad64ad3747b1cad7c009`.
+
+
+## Current snapshots, original pages and tracking research
+
+The v028 inventory classifier extends the existing measured content census to
+explicit original NFL HTML and SkillCorner ACB research files. It keeps
+trajectory JSONL, provider game/event JSON and identity CSV counts distinct.
+The original v025 classifier remains preserved at
+[`tools/history/inventory_raw_content_v025_launched.py`](../tools/history/inventory_raw_content_v025_launched.py).
+The updated source SHA-256 is
+`bf0bbac42357bb089464b1b91aef1fefcca11b95a022cb464e78aa0d744a4469`;
+its 19 tests must pass before AWS lists archive metadata. The classifier does
+not read payloads, infer event freshness, or claim NBA/NCAA tracking coverage.
+
+[Freshness and access interpretation](DATA_FRESHNESS_AND_ACCESS_20261016.md)
+separates acquisition time from source update, report/game time and permitted
+tracking scope.
+
+The current v026 snapshot collector keeps its engine isolated under
+`tools/current_snapshot_v026/src/`; it does not replace historical collectors.
+It distinguishes fresh retrieval times from event and quote-update timestamps,
+uses a conditional S3 lease against overlap, and enforces per-run provider
+budgets and a remaining-quota reserve. The v027 collector captures original
+NFL HTML; v029 acquires the pinned ten-game SkillCorner ACB research sample.
+
+| Exact source | SHA-256 | Mandatory AWS tests |
+| --- | --- | ---: |
+| [Current v026 entrypoint](../tools/current_snapshot_v026/src/__main__.py) | `e3ec320fa2c78609084695c5fce0678c4ac920b404b7a97ee0bca2d3b43284c5` | 30, including engine |
+| [Current v026 engine](../tools/current_snapshot_v026/src/acquire_paid_data.py) | `2c2e51cc33133aa03c1f122b3b9968029cfe1e7a2584abd2a707713f20d6bb3b` | Included above |
+| [Original NFL v027](../tools/history/acquire_nfl_current_v027_launched.py) | `93110c43e8222bd77b2fc92a2f0a3d9e8dc8f143d208efdf19c1dce6e079f29d` | 14 |
+| [Open tracking v029](../tools/open_tracking_v029/acquire_open_tracking.py) | `ed25ba4face7882185e0ac7a06099bdb3e075d3dc27260cd4d1361e57098ae90` | 16 |
+
+Build manifests retain executable hashes. V029 embeds its pinned source
+manifest and upstream MIT license. V030 reuses the exact v020 weather artifact
+and existing source caches; it introduces no new collector source.
+
+The first NFL run captured 30 roster pages because its profile-link parser
+required a trailing slash. Two observed links in the archived directory omit
+that slash. V031 accepts both observed forms, verifies the existing report and
+30 stored roster bodies, and requests only the missing rosters. The
+[exact v027 source](../tools/history/acquire_nfl_current_v027_launched.py)
+remains preserved. V031 source SHA-256 is
+`c92dc82354e7e4bc005585576c18d063fec41b68bbe0e673d0af703ff7c3936d`,
+with 17 mandatory AWS tests. Its executable and diagnosis are recorded in
+[the v031 manifest](status/build_nfl_current_v031_20261016.json) and
+[archived-source diagnosis](status/nfl_current_v031_diagnosis_20261016.json).
+
+V032 reuses the exact v024 shooting artifact (SHA-256
+`261940c3acfaca4bdac975700e4cb29e37ee824fa101d7ce1bcbc671b5438e0e`)
+under a new job identity with 500 statistics calls, 1,200 application seconds
+and 1,500 AWS seconds. It preserves the v010 source descriptor and reuses the
+958 verified successes from v024; no code rebuild or new engine version was
+introduced. Its 34 AWS tests and first cache/new-capture counters are retained
+in [the replay evidence](status/shooting32_tests_and_progress_20261016.json).

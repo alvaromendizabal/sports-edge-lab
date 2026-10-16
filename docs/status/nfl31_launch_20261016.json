@@ -1,0 +1,17 @@
+{
+  "status": "success",
+  "stdout": "",
+  "return_value": {
+    "job": "sports-edge-lab-nfl-current-resume-20261016-v031",
+    "created": {
+      "ProcessingJobArn": "arn:aws:sagemaker:us-west-2:560403859723:processing-job/sports-edge-lab-nfl-current-resume-20261016-v031"
+    }
+  },
+  "api_calls": [
+    {
+      "service": "sagemaker",
+      "operation": "CreateProcessingJob",
+      "status": "success"
+    }
+  ]
+}

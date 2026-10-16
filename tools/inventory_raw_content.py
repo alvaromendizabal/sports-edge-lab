@@ -54,6 +54,8 @@ def classify(key):
             return (track, provider, 'original_availability_pdf', 'published_report'), None
         if track in ('ncaam', 'ncaaw') and provider == 'american-availability' and parts[4] == 'objects' and key.endswith('.png.gz'):
             return (track, provider, 'original_availability_image', 'published_report'), None
+        if track == 'nfl' and provider == 'nfl-official-current' and parts[4] == 'objects' and key.endswith('.html.gz'):
+            return (track, provider, 'original_current_nfl_html', 'injury_roster_schedule_pages'), None
         return None, 'unclassified_raw'
     if key.startswith('shared/raw/nws/objects/') and key.endswith('.json.gz'):
         return ('shared', 'nws', 'original_weather_json', 'point_metadata_and_hourly_forecasts'), None
@@ -62,6 +64,13 @@ def classify(key):
             return ('shared', 'noaa-hrrr-original', 'original_forecast_field', 'grib2_field'), None
         if key.endswith(('.idx.gz', '.xml.gz')):
             return None, 'source_listing_or_index_metadata'
+    if key.startswith('shared/raw/skillcorner-acb-research/objects/'):
+        if key.endswith('.jsonl.gz'):
+            return ('shared', 'skillcorner-acb-research', 'tracking_trajectory_jsonl', 'acb_research_trajectories'), None
+        if key.endswith('.json'):
+            return ('shared', 'skillcorner-acb-research', 'tracking_dataset_json', 'game_metadata_and_provider_event_annotations'), None
+        if key.endswith('.csv'):
+            return ('shared', 'skillcorner-acb-research', 'tracking_identity_csv', 'provider_player_aliases'), None
     if key.startswith('shared/raw/'):
         return None, 'unclassified_raw'
     return None, 'outside_raw_scope'
@@ -161,6 +170,8 @@ def run(args):
                 'Paid response bodies are content-addressed within provider and sport namespaces; public families and revisions may overlap.',
                 'Stored compressed bytes are not comparable to uncompressed response-byte counters.',
                 'NOAA listing/index metadata is excluded; NWS point metadata is included with forecast JSON responses.',
+                'SkillCorner ACB research files are a separate transfer-research source, not NBA or NCAA trajectory coverage; provider event annotations and game metadata remain separate from trajectory files.',
+                'NFL original HTML is archived page content; its count is not extracted player/game rows or approved feature coverage.',
                 'Live collectors may write during this paginated scan; this report measures an interval, not a transactionally frozen instant.',
                 'Objects outside listed prefixes, including duplicate legacy backups, acquisition reports and code, are outside this census.'],
               'limits': {'application_seconds': args.max_seconds, 'max_listing_pages': args.max_pages}, 'status': 'running'}
@@ -225,6 +236,19 @@ class Tests(unittest.TestCase):
             self.assertEqual(classify('tracks/'+track+'/raw/american-availability/objects/a.png.gz')[0][2], 'original_availability_image')
             self.assertIsNone(classify('tracks/'+track+'/raw/american-availability/url-index/a.json')[0])
         self.assertIsNone(classify('shared/acquisition/ncaa-availability/evidence/objects/a.txt.gz')[0])
+    def test_nfl_current_html(self):
+        self.assertEqual(classify('tracks/nfl/raw/nfl-official-current/objects/a.html.gz')[0][2], 'original_current_nfl_html')
+        self.assertIsNone(classify('tracks/nfl/raw/nfl-official-current/request-index/a.json')[0])
+        self.assertIsNone(classify('shared/acquisition/nfl-official-current/evidence/objects/a.txt.gz')[0])
+    def test_acb_trajectories(self):
+        self.assertEqual(classify('shared/raw/skillcorner-acb-research/objects/a.jsonl.gz')[0][2], 'tracking_trajectory_jsonl')
+        self.assertIsNone(classify('shared/raw/skillcorner-acb-research/objects/a.zip')[0])
+    def test_acb_metadata_separate(self):
+        self.assertEqual(classify('shared/raw/skillcorner-acb-research/objects/a.json')[0][2], 'tracking_dataset_json')
+        self.assertEqual(classify('shared/raw/skillcorner-acb-research/objects/a.csv')[0][2], 'tracking_identity_csv')
+    def test_acb_evidence_excluded(self):
+        self.assertIsNone(classify('shared/raw/skillcorner-acb-research/url-index/a.json')[0])
+        self.assertIsNone(classify('shared/acquisition/open-tracking/evidence/objects/a.json')[0])
     def test_noaa_field_vs_metadata(self):
         self.assertEqual(classify('shared/raw/noaa-hrrr-original/objects/a.grib2')[0][2], 'original_forecast_field')
         for ext in ('.idx.gz', '.xml.gz'):

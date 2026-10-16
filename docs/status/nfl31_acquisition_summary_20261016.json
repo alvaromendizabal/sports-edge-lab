@@ -1,0 +1,61 @@
+{
+  "bounds": {
+    "bytes": 20000000,
+    "requests": 20,
+    "seconds": 300,
+    "teams": 32
+  },
+  "capture_vintage": "2026-10-16T19:00Z",
+  "cost_scope": "Application runtime only; excludes startup/shutdown, S3 storage and requests.",
+  "downloaded_data_pages": 2,
+  "elapsed_seconds": 8.93,
+  "errors": [],
+  "estimated_compute_usd": 0.001144,
+  "finished_at": "2026-10-16T19:59:23Z",
+  "limitations": [
+    "Acquisition time is distinct from publication, injury-event, transaction or game time.",
+    "Raw HTML captured; player/game tables and dates require validated extraction.",
+    "No claim of complete historical injury/roster coverage or validated prediction-time features.",
+    "Current source pages can change within an hourly capture vintage.",
+    "Requested vintage retained from resume source; new captured_at values remain the actual acquisition times."
+  ],
+  "missing_roster_teams_planned": 2,
+  "planned_teams": 32,
+  "point_in_time_approved": false,
+  "prior_verified_teams": 30,
+  "processed_teams": 32,
+  "requests": 5,
+  "resume_evidence": {
+    "report_key": "shared/acquisition/nfl-official-current/20261016T194831Z-56b44f4abd/report.json",
+    "report_sha256": "9e15eff0ede29a037c3af9c4c5754aa1da61157d6abd7930cd1570c05e903784",
+    "verified_roster_bodies": 30
+  },
+  "reused_data_pages": 32,
+  "roster_pages": 32,
+  "run_id": "20261016T195914Z-437c9f59f7",
+  "scope": "Original current NFL Week 6 injuries, current-week schedule, and roster pages discovered through official team links.",
+  "selected_scope_complete": true,
+  "source_bytes": 1154275,
+  "source_seeds": [
+    {
+      "kind": "injuries",
+      "observed_by": "Official NFL current Week 6 injury page; public search and direct HTTP 200 on 2026-10-16",
+      "url": "https://www.nfl.com/injuries/league/2026/reg6"
+    },
+    {
+      "kind": "schedule",
+      "observed_by": "Exact current-week URL from public official NFL search result on 2026-10-16",
+      "url": "https://www.nfl.com/schedules/2026/by-week/week-6"
+    },
+    {
+      "kind": "directory",
+      "observed_by": "Official NFL team directory public search result on 2026-10-16",
+      "url": "https://www.nfl.com/teams/"
+    }
+  ],
+  "started_at": "2026-10-16T19:59:14Z",
+  "status": "discovered_scope_processed",
+  "version": "sports-edge-lab-nfl-current-v031",
+  "combined_original_and_resume_data_pages": 34,
+  "retrieval_time_note": "30rosters plus injury/schedule retain their original19:48\u201319:49UTCcapture times; only2newrosters were captured19:59UTC."
+}

@@ -1,0 +1,78 @@
+{
+  "status": "success",
+  "stdout": "",
+  "return_value": {
+    "events": [
+      {
+        "timestamp": 1792180246899,
+        "message": "...............",
+        "ingestionTime": 1792180253018
+      },
+      {
+        "timestamp": 1792180246899,
+        "message": "----------------------------------------------------------------------",
+        "ingestionTime": 1792180253018
+      },
+      {
+        "timestamp": 1792180246899,
+        "message": "Ran 15 tests in 0.007s",
+        "ingestionTime": 1792180253018
+      },
+      {
+        "timestamp": 1792180246899,
+        "message": "OK",
+        "ingestionTime": 1792180253018
+      },
+      {
+        "timestamp": 1792180246899,
+        "message": "...............",
+        "ingestionTime": 1792180253018
+      },
+      {
+        "timestamp": 1792180246899,
+        "message": "----------------------------------------------------------------------",
+        "ingestionTime": 1792180253018
+      },
+      {
+        "timestamp": 1792180246899,
+        "message": "Ran 15 tests in 0.010s",
+        "ingestionTime": 1792180253018
+      },
+      {
+        "timestamp": 1792180246899,
+        "message": "OK",
+        "ingestionTime": 1792180253018
+      },
+      {
+        "timestamp": 1792180246899,
+        "message": "{\"event\": \"SELF_TEST_PASS\", \"tests\": 30, \"timestamp\": \"2026-10-16T19:50:42Z\", \"workload\": \"sports-edge-lab-current-v026\"}",
+        "ingestionTime": 1792180253018
+      },
+      {
+        "timestamp": 1792180246899,
+        "message": "{\"current_vintage\": \"current:2026-10-16T19:50:42Z:20261016T195042Z-de7c4fb55a\", \"event\": \"START\", \"max_odds_credits\": 500, \"max_stats_calls\": 100, \"run_id\": \"20261016T195042Z-de7c4fb55a\", \"timestamp\": \"2026-10-16T19:50:42Z\", \"version\": \"sports-edge-lab-current-v026\"}",
+        "ingestionTime": 1792180253018
+      },
+      {
+        "timestamp": 1792180273904,
+        "message": "{\"budget\": {\"actual_known\": {\"odds\": 176, \"stats\": 2}, \"disabled_providers\": [], \"limits\": {\"odds\": 500, \"stats\": 100}, \"provider_headers\": {\"cfbd\": {}, \"odds\": {\"x-requests-last\": 6, \"x-requests-remaining\": 2570014, \"x-requests-used\": 2429986}}, \"reserved_or_known\": {\"odds\": 176, \"stats\": 3}, \"unknown_charge_reserve\": {\"odds\": 0, \"stats\": 0}}, \"compute_estimate_usd\": 0.0039, \"event\": \"HEARTBEAT\", \"phases\": {\"current_cfbd_week\": {\"calendar_matched_weeks\": [[7, \"regular\"]], \"games_matching_weeks\": 302}, \"current_game_markets\": {\"completed\": 5, \"planned\": 5, \"status\": \"planned_requests_processed\"}, \"current_props\": {\"completed\": 36, \"event_window_days\": 7, \"maximum_events_per_track\": 12, \"planned\": 36, \"status\": \"planned_requests_processed\"}}, \"run_id\": \"20261016T195042Z-de7c4fb55a\", \"seconds\": 30.25, \"statistics\": {\"cache_reused\": 1, \"captured\": 48, \"cfbd_captured\": 2, \"cfbd_http_calls\": 2, \"http_calls\": 48, \"nba_captured\": 14, \"ncaaf_captured\": 16, \"ncaam_captured\": 2, \"ncaaw_captured\": 2, \"nfl_captured\": 14, \"odds_captured\": 46, \"odds_http_calls\": 46, \"raw_bytes\": 4078976}, \"timestamp\": \"2026-10-16T19:51:13Z\"}",
+        "ingestionTime": 1792180279070
+      },
+      {
+        "timestamp": 1792180299907,
+        "message": "{\"budget\": {\"actual_known\": {\"odds\": 176, \"stats\": 12}, \"disabled_providers\": [], \"limits\": {\"odds\": 500, \"stats\": 100}, \"provider_headers\": {\"cbbd\": {}, \"cfbd\": {}, \"odds\": {\"x-requests-last\": 6, \"x-requests-remaining\": 2570014, \"x-requests-used\": 2429986}}, \"reserved_or_known\": {\"odds\": 176, \"stats\": 12}, \"unknown_charge_reserve\": {\"odds\": 0, \"stats\": 0}}, \"event\": \"COMPLETE\", \"failures_count\": 0, \"return_zip\": \"sports_edge_lab_paid_return_20261016T195042Z-de7c4fb55a.zip\", \"run_id\": \"20261016T195042Z-de7c4fb55a\", \"statistics\": {\"cache_reused\": 1, \"captured\": 58, \"cbbd_captured\": 4, \"cbbd_http_calls\": 4, \"cfbd_captured\": 8, \"cfbd_http_calls\": 8, \"http_calls\": 58, \"nba_captured\": 14, \"ncaaf_captured\": 22, \"ncaam_captured\": 6, \"ncaaw_captured\": 2, \"nfl_captured\": 14, \"odds_captured\": 46, \"odds_http_calls\": 46, \"raw_bytes\": 39917293}, \"summary_s3\": \"s3://sagemaker-sports-edge-lab-560403859723-us-west-2/shared/acquisition/current/20261016T195042Z-de7c4fb55a/summary.json\", \"timestamp\": \"2026-10-16T19:51:39Z\"}",
+        "ingestionTime": 1792180305147
+      }
+    ]
+  },
+  "api_calls": [
+    {
+      "service": "logs",
+      "operation": "GetLogEvents",
+      "status": "success",
+      "n_items": {
+        "events": 12
+      }
+    }
+  ]
+}

@@ -1,0 +1,176 @@
+{
+  "observed_at": "2026-10-16T20:07:52.190008+00:00",
+  "jobs": [
+    {
+      "ProcessingJobName": "sports-edge-lab-gap-backfill-20261016-v011",
+      "ProcessingJobStatus": "InProgress",
+      "CreationTime": "2026-10-16T18:18:43.087000+00:00",
+      "ProcessingStartTime": "2026-10-16T18:19:27.656000+00:00",
+      "LastModifiedTime": "2026-10-16T18:21:14.119000+00:00",
+      "ProcessingResources": {
+        "ClusterConfig": {
+          "InstanceCount": 1,
+          "InstanceType": "ml.m5.2xlarge",
+          "VolumeSizeInGB": 30
+        }
+      },
+      "StoppingCondition": {
+        "MaxRuntimeInSeconds": 14400
+      },
+      "observed_at": "2026-10-16T20:03:08.533292+00:00"
+    },
+    {
+      "ProcessingJobName": "sports-edge-lab-shooting-resume-20261016-v024",
+      "ProcessingJobStatus": "Completed",
+      "CreationTime": "2026-10-16T19:25:35.688000+00:00",
+      "ProcessingStartTime": "2026-10-16T19:26:17.748000+00:00",
+      "ProcessingEndTime": "2026-10-16T20:02:47.700000+00:00",
+      "LastModifiedTime": "2026-10-16T20:03:10.255000+00:00",
+      "ProcessingResources": {
+        "ClusterConfig": {
+          "InstanceCount": 1,
+          "InstanceType": "ml.m5.2xlarge",
+          "VolumeSizeInGB": 30
+        }
+      },
+      "StoppingCondition": {
+        "MaxRuntimeInSeconds": 2400
+      },
+      "observed_at": "2026-10-16T20:07:52.190008+00:00"
+    },
+    {
+      "ProcessingJobName": "sports-edge-lab-current-20261016-v026",
+      "ProcessingJobStatus": "Completed",
+      "CreationTime": "2026-10-16T19:49:26.166000+00:00",
+      "ProcessingStartTime": "2026-10-16T19:50:02.613000+00:00",
+      "ProcessingEndTime": "2026-10-16T19:51:51.229000+00:00",
+      "LastModifiedTime": "2026-10-16T19:51:57.264000+00:00",
+      "ProcessingResources": {
+        "ClusterConfig": {
+          "InstanceCount": 1,
+          "InstanceType": "ml.m5.2xlarge",
+          "VolumeSizeInGB": 30
+        }
+      },
+      "StoppingCondition": {
+        "MaxRuntimeInSeconds": 900
+      },
+      "observed_at": "2026-10-16T20:03:08.533292+00:00"
+    },
+    {
+      "ProcessingJobName": "sports-edge-lab-nfl-current-20261016-v027",
+      "ProcessingJobStatus": "Completed",
+      "CreationTime": "2026-10-16T19:47:21.249000+00:00",
+      "ProcessingStartTime": "2026-10-16T19:47:58.513000+00:00",
+      "ProcessingEndTime": "2026-10-16T19:49:52.157000+00:00",
+      "LastModifiedTime": "2026-10-16T19:49:52.364000+00:00",
+      "ProcessingResources": {
+        "ClusterConfig": {
+          "InstanceCount": 1,
+          "InstanceType": "ml.m5.2xlarge",
+          "VolumeSizeInGB": 30
+        }
+      },
+      "StoppingCondition": {
+        "MaxRuntimeInSeconds": 720
+      },
+      "observed_at": "2026-10-16T20:03:08.533292+00:00"
+    },
+    {
+      "ProcessingJobName": "sports-edge-lab-content-inventory-20261016-v028",
+      "ProcessingJobStatus": "Completed",
+      "CreationTime": "2026-10-16T20:00:56.221000+00:00",
+      "ProcessingStartTime": "2026-10-16T20:02:15.623000+00:00",
+      "ProcessingEndTime": "2026-10-16T20:03:57.327000+00:00",
+      "LastModifiedTime": "2026-10-16T20:05:57.528000+00:00",
+      "ProcessingResources": {
+        "ClusterConfig": {
+          "InstanceCount": 1,
+          "InstanceType": "ml.m5.2xlarge",
+          "VolumeSizeInGB": 30
+        }
+      },
+      "StoppingCondition": {
+        "MaxRuntimeInSeconds": 300
+      },
+      "observed_at": "2026-10-16T20:07:52.190008+00:00"
+    },
+    {
+      "ProcessingJobName": "sports-edge-lab-open-tracking-20261016-v029",
+      "ProcessingJobStatus": "Completed",
+      "CreationTime": "2026-10-16T19:51:40.646000+00:00",
+      "ProcessingStartTime": "2026-10-16T19:52:19.736000+00:00",
+      "ProcessingEndTime": "2026-10-16T19:55:03.593000+00:00",
+      "LastModifiedTime": "2026-10-16T19:56:42.031000+00:00",
+      "ProcessingResources": {
+        "ClusterConfig": {
+          "InstanceCount": 1,
+          "InstanceType": "ml.m5.2xlarge",
+          "VolumeSizeInGB": 30
+        }
+      },
+      "StoppingCondition": {
+        "MaxRuntimeInSeconds": 1500
+      },
+      "observed_at": "2026-10-16T20:03:08.533292+00:00"
+    },
+    {
+      "ProcessingJobName": "sports-edge-lab-noaa-resume-20261016-v030",
+      "ProcessingJobStatus": "InProgress",
+      "CreationTime": "2026-10-16T19:45:47.767000+00:00",
+      "ProcessingStartTime": "2026-10-16T19:46:27.300000+00:00",
+      "LastModifiedTime": "2026-10-16T19:48:18.783000+00:00",
+      "ProcessingResources": {
+        "ClusterConfig": {
+          "InstanceCount": 1,
+          "InstanceType": "ml.m5.2xlarge",
+          "VolumeSizeInGB": 30
+        }
+      },
+      "StoppingCondition": {
+        "MaxRuntimeInSeconds": 7200
+      },
+      "observed_at": "2026-10-16T20:07:52.190008+00:00"
+    },
+    {
+      "ProcessingJobName": "sports-edge-lab-nfl-current-resume-20261016-v031",
+      "ProcessingJobStatus": "Completed",
+      "CreationTime": "2026-10-16T19:58:02.235000+00:00",
+      "ProcessingStartTime": "2026-10-16T19:58:41.133000+00:00",
+      "ProcessingEndTime": "2026-10-16T19:59:34.579000+00:00",
+      "LastModifiedTime": "2026-10-16T20:00:33.313000+00:00",
+      "ProcessingResources": {
+        "ClusterConfig": {
+          "InstanceCount": 1,
+          "InstanceType": "ml.m5.2xlarge",
+          "VolumeSizeInGB": 30
+        }
+      },
+      "StoppingCondition": {
+        "MaxRuntimeInSeconds": 600
+      },
+      "observed_at": "2026-10-16T20:03:08.533292+00:00"
+    },
+    {
+      "ProcessingJobName": "sports-edge-lab-shooting-resume-20261016-v032",
+      "ProcessingJobStatus": "InProgress",
+      "CreationTime": "2026-10-16T20:04:38.984000+00:00",
+      "ProcessingStartTime": "2026-10-16T20:05:17.874000+00:00",
+      "LastModifiedTime": "2026-10-16T20:07:10.117000+00:00",
+      "ProcessingResources": {
+        "ClusterConfig": {
+          "InstanceCount": 1,
+          "InstanceType": "ml.m5.2xlarge",
+          "VolumeSizeInGB": 30
+        }
+      },
+      "StoppingCondition": {
+        "MaxRuntimeInSeconds": 1500
+      },
+      "observed_at": "2026-10-16T20:07:52.190008+00:00"
+    }
+  ],
+  "errors": [],
+  "observation_window_start": "2026-10-16T20:03:08.533292+00:00",
+  "observation_note": "Completed new-source jobs and v011 retain20:03metadata; changing24/28/30/32refreshed20:07. Per-job timestamps explicit."
+}

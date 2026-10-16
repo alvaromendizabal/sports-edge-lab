@@ -1,0 +1,25 @@
+{
+  "artifact": "/workspace/scratch/f3ff20681710/turn5_nfl_resume/sports_edge_lab_nfl_current_resume_v031_20261016.pyz",
+  "bytes": 9264,
+  "sha256": "6fd28eea03221e385a1d39cd294d38a8b80a0ee9fdef1b0f55f0cdbd4501912a",
+  "source_sha256": "c92dc82354e7e4bc005585576c18d063fec41b68bbe0e673d0af703ff7c3936d",
+  "tests": 17,
+  "validation": "AST parsed; independent provider_review cleared exact source and artifact; mandatory 17-test AWS gate remains before acquisition",
+  "arguments": [
+    "--resume-run",
+    "20261016T194831Z-56b44f4abd",
+    "--max-seconds",
+    "300",
+    "--max-requests",
+    "20",
+    "--max-bytes",
+    "20000000"
+  ],
+  "aws_max_runtime_seconds": 600,
+  "expected_prior_verified_rosters": 30,
+  "expected_missing_rosters": 2,
+  "expected_source_calls": 5,
+  "capture_vintage": "2026-10-16T19:00Z",
+  "source_difference": "Accept observed profile href with or without trailing slash; prefer exact slash-form href already in archived injury page; verify and skip prior roster bodies.",
+  "point_in_time_approved": false
+}

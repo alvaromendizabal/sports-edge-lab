@@ -18,68 +18,72 @@ The project has **one repository, one SageMaker development space, and one priva
 
 ## Current execution status
 
-**71,181 raw content files / 14.39 GB are verified in the shared archive.**
-The corrected content-only S3 scan ran on **16 October 2026, 19:23:51–19:24:43
-UTC (12:23–12:24 p.m. Pacific)**. It counted 14,393,519,871 stored bytes and
-excluded request indexes, receipts, source listings, audit files, return
-bundles and duplicate legacy data. All raw objects were classified.
+**85,417 raw content files / 17.24 GB are verified in the shared archive.**
+The content-only S3 scan ran on **October 16, 20:02:52–20:03:45 UTC**.
+It counted **17,241,530,808 stored bytes**, excluding receipts, request indexes,
+source discovery, code, return bundles and duplicate legacy archives. All raw
+objects were classified. Live collectors wrote during the paginated scan;
+this is an observation window, not an atomic snapshot.
 
 | Track | Stored content files | Stored content GB |
 | --- | ---: | ---: |
-| NFL | 11,442 | 0.805 |
-| NBA | 17,684 | 1.925 |
-| NCAA football | 18,091 | 3.139 |
-| NCAA men's basketball | 17,470 | 4.827 |
-| NCAA women's basketball | 4,168 | 2.492 |
-| Shared weather | 2,326 | 1.205 |
+| NFL | 11,564 | 0.808 |
+| NBA | 20,688 | 1.936 |
+| NCAA football | 20,914 | 3.165 |
+| NCAA men's basketball | 22,572 | 5.139 |
+| NCAA women's basketball | 5,726 | 2.495 |
+| Shared weather and external tracking research | 3,953 | 3.699 |
 
-The archive contains **5,326 public archive files**, **63,499 paid payload
-files**, six provider canaries, **24 original NBA injury PDFs**, **1,438 NWS
-point/forecast JSON files**, and **888 original NOAA forecast fields**. Public
-archives are community-compiled source assets with attribution; original
-source captures retain their own provenance. Public source families and
-revisions can overlap, and content-addressed responses can serve multiple
-requests. File counts do not establish unique games, complete seasons or
-approved training rows.
+The archive grew by **14,236 files / 2.85 GB** since the
+19:24 UTC scan, and by **39,348 files / 4.82 GB** since the
+18:10 UTC baseline. File counts are not unique games, API captures, complete
+seasons or approved training rows; source families and revisions can overlap.
+Stored bytes are separate from uncompressed response-byte counters.
 
-Compared with the earlier 18:10 UTC baseline, the measured archive grew by
-**25,112 files / 1.97 GB**. Active collectors continued writing during this
-52-second paginated scan, so it records an observation window rather than an
-atomic snapshot. Subsequent API capture counters are reported separately.
+Fresh current odds and statistics were captured at **19:50–19:51 UTC**. The
+58-response run returned game markets for **24 NFL, 46 NBA and 73 NCAA football
+events**, plus 31 populated prop responses across those tracks. NCAA men's and
+women's current odds were empty at this observation. Fresh CFBD season data and
+CBBD November schedules are stored; actual returned dates and empty partitions
+are recorded in the [freshness report](docs/DATA_FRESHNESS_AND_ACCESS_20261016.md).
 
-The source program now spans historical odds and props, play-by-play,
-possessions, shots, lineups, substitutions, rosters, schedules, availability
-reports and weather. Coverage remains uneven. The 728 eligible cached football
-venues have a current NWS forecast vintage; historical NOAA grids still need
-venue extraction and publication-time checks. Full player/ball trajectories
-and aligned video are not established by aggregate tracking summaries.
+A verified recurring schedule now refreshes current data **every six hours**,
+starting **tonight at 8:05 p.m. Pacific / October 17, 03:05 UTC**. Its fixed
+one-month ceiling is 60,000 odds credits and 12,000 statistics calls, with
+per-run bounds, quota reserve and overlap prevention. This is an enabled
+schedule; the first future scheduled execution has not yet run.
 
-A one-time American Conference availability collector is **scheduled for
-6:05 p.m. Pacific on October 16 / 01:05 UTC on October 17**. Its AWS preflight
-passed 23 tests and correctly made zero source requests outside the permitted
-visit window. Scheduled NCAA reports are not counted as downloaded data.
+The measured archive contains **5,326 public archive files**, **76,074 paid
+payload files**, six provider canaries, **24 original NBA injury PDFs**, **34
+original NFL pages**, **1,438 NWS JSON files**, **2,483 NOAA forecast fields**,
+and **32 SkillCorner ACB research files**. The ACB sample covers ten historical
+Spanish league games with original trajectories, provider event annotations
+and identity metadata; it adds no NBA/NCAA tracking or raw video.
 
-The college-shooting continuation was corrected when its first 300 HTTP
-successes were empty. The final stopped-run audit counted **580 empty responses
-and zero nonempty responses**; additional requests finished before the stop
-settled. The corrected v024 run passed 34 AWS tests and its positive-data gates.
-At **19:28:52 UTC**, it had acquired **30 nonempty shooting responses containing
-2,384 observed records**, with zero empty responses or failures. These are
-retrospective season-summary records, not individual shot trajectories.
+The NFL current capture now includes all **32 team rosters** plus Week 6 injury
+and schedule pages, after a targeted two-roster recovery. Extraction and
+publication-time validation remain pending. The broader historical gap run
+continues. College shooting reached **958 positive responses / 71,593 summary
+rows** before its runtime bound; a bounded replay is now active, reusing those
+958 responses and adding two new captures in its first observed heartbeat.
+The NOAA continuation also remains active at the recorded metadata check.
 
-At the **19:26–19:28 UTC** runtime check, the game/statistics continuation had
-captured **17,362 responses** and the prop continuation **12,808 responses**;
-both remained active. The NOAA season expansion had processed **164 of 440
-forecast pairs**, downloaded **1.344 GB of source bodies**, and recorded zero
-errors. Those live counters overlap the stored inventory and are not added to
-its totals. [Expanded acquisition, failures and runtime evidence](docs/EXPANDED_DATA_COLLECTION_20261016.md).
 
-- [Latest content inventory](docs/status/content_inventory_20261016T1924Z.json) · [inventory method and counting correction](docs/RAW_CONTENT_INVENTORY_20261016.md)
+Nonbinding tracking/video access inquiries were sent to **SkillCorner and
+Genius Sports**. Neither request establishes a paid license or delivered
+commercial feed. League-wide NFL/NBA/NCAA trajectories and aligned video remain
+access gaps. The [access record](docs/TRACKING_AND_VIDEO_ACCESS_20261016.md)
+distinguishes raw trajectories, provider annotations and video rights.
+
+The separate American Conference availability capture remains scheduled for
+**6:05 p.m. Pacific today / October 17, 01:05 UTC**, within the source's access
+window. Future scheduled images are not counted as downloaded.
+
+- [Latest content inventory](docs/status/content_inventory_20261016T2003Z.json) · [freshness, current coverage and access](docs/DATA_FRESHNESS_AND_ACCESS_20261016.md)
 - [Data coverage and remaining gaps](docs/DATA_COVERAGE_AND_NEXT_ACQUISITION.md)
-- [Frontier-relevant source priorities](docs/FRONTIER_DATA_PRIORITIES_20261016.md)
-- [Earlier acquisition milestone](docs/FRONTIER_ACQUISITION_20261016.md)
+- [Earlier expanded acquisition milestone](docs/EXPANDED_DATA_COLLECTION_20261016.md)
 - [Shared research protocol](docs/RESEARCH_PROTOCOL.md)
-- [Deployed source versions and hashes](docs/EXECUTION_SOURCE_VERSIONS.md)
+- [Exact deployed source versions and hashes](docs/EXECUTION_SOURCE_VERSIONS.md)
 - [Verified one-repository consolidation](docs/CONSOLIDATION_20261016.md)
 - [Machine-readable five-track configuration](config/tracks.json)
 
@@ -134,6 +138,7 @@ Win prediction, spread/total distributions and market value are separate questio
 ## Repository and data boundaries
 
 Code, configuration, tests, source catalogs and non-sensitive reports belong here. Raw data, API keys, private receipts containing licensed records and large model artifacts remain outside Git. Upstream attribution and usage conditions travel with each source. The project does not claim a demonstrated betting edge, complete player-prop coverage or a production forecasting system at this acquisition stage.
+
 
 
 

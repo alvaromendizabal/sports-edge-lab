@@ -1,0 +1,38 @@
+{
+  "source_repository": "https://github.com/SkillCorner/opendata-basketball",
+  "commit": "4bbed2e35e8fdd2cf083e8c8b280b3e5381a2c66",
+  "observed_at": "2026-10-16T19:43:53.765030+00:00",
+  "research_only_not_aws_download": true,
+  "event_time_range": [
+    "2025-10-11T19:00:00Z",
+    "2026-05-29T18:30:00Z"
+  ],
+  "games": 10,
+  "league": "Liga ACB",
+  "season": "2025-2026",
+  "matches_file_sha256": "5a6f2ee5b55aff806e0f13c9c90b47f19bc1734a6ed7d26b7682dd4bcc7ca063",
+  "tracking_range_canary": {
+    "url": "https://media.githubusercontent.com/media/SkillCorner/opendata-basketball/4bbed2e35e8fdd2cf083e8c8b280b3e5381a2c66/data/matches/114086/114086_tracking_data.jsonl.gz",
+    "status": 206,
+    "content_range": "bytes 0-1023/39842015",
+    "read_bytes": 1024,
+    "gzip_magic": "1f8b"
+  },
+  "robots_research": {
+    "raw.githubusercontent.com": 404,
+    "media.githubusercontent.com": 404
+  },
+  "license_identifier": "MIT",
+  "license_sha256": "61487d7c808239847755401b75efbfba1ed0568bf5e409b96e6273a1a8866824",
+  "license_data_application": "Inference from repository-wide license and README explicitly releasing data; no separate restrictive data license observed. Preserve license and credit.",
+  "raw_video_included": false,
+  "raw_expected_files": 32,
+  "raw_expected_bytes": 394736881,
+  "schema_and_provenance_files": 28,
+  "schema_and_provenance_bytes": 101954,
+  "provider_processing_canary": {
+    "dynamicEventsLastProcessingDate": "2026-07-17T12:23:44Z",
+    "trackingLastProcessingDate": "2026-07-17T12:23:16Z",
+    "physicalLastProcessingDate": "2026-07-17T12:23:06Z"
+  }
+}

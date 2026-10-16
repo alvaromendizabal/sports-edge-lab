@@ -1,0 +1,84 @@
+{
+  "status": "success",
+  "stdout": "",
+  "return_value": {
+    "response": {
+      "ProcessingJobArn": "arn:aws:sagemaker:us-west-2:560403859723:processing-job/sports-edge-lab-noaa-resume-20261016-v030"
+    },
+    "request": {
+      "ProcessingJobName": "sports-edge-lab-noaa-resume-20261016-v030",
+      "RoleArn": "arn:aws:iam::560403859723:role/SportsEdgeLabProcessingRole",
+      "AppSpecification": {
+        "ImageUri": "246618743249.dkr.ecr.us-west-2.amazonaws.com/sagemaker-scikit-learn:1.9-0",
+        "ContainerEntrypoint": [
+          "python3",
+          "-u",
+          "/opt/ml/processing/code/sports_edge_lab_noaa_hrrr_v020_20261016.pyz"
+        ],
+        "ContainerArguments": [
+          "--season",
+          "2024",
+          "--full-season",
+          "--max-games",
+          "0",
+          "--max-bytes",
+          "2000000000",
+          "--max-requests",
+          "6000",
+          "--max-seconds",
+          "6900",
+          "--cfbd-vintage",
+          "2026-10-16",
+          "--hourly-usd",
+          "0.461"
+        ]
+      },
+      "ProcessingInputs": [
+        {
+          "InputName": "code",
+          "S3Input": {
+            "S3Uri": "s3://sagemaker-sports-edge-lab-560403859723-us-west-2/infrastructure/code/noaa-season-20261016-v020/",
+            "LocalPath": "/opt/ml/processing/code",
+            "S3DataType": "S3Prefix",
+            "S3InputMode": "File",
+            "S3DataDistributionType": "FullyReplicated"
+          }
+        }
+      ],
+      "ProcessingResources": {
+        "ClusterConfig": {
+          "InstanceCount": 1,
+          "InstanceType": "ml.m5.2xlarge",
+          "VolumeSizeInGB": 30
+        }
+      },
+      "StoppingCondition": {
+        "MaxRuntimeInSeconds": 7200
+      },
+      "NetworkConfig": {
+        "EnableNetworkIsolation": false
+      },
+      "Tags": [
+        {
+          "Key": "Project",
+          "Value": "sports-edge-lab"
+        },
+        {
+          "Key": "Workstream",
+          "Value": "noaa-season"
+        },
+        {
+          "Key": "Environment",
+          "Value": "dev"
+        }
+      ]
+    }
+  },
+  "api_calls": [
+    {
+      "service": "sagemaker",
+      "operation": "CreateProcessingJob",
+      "status": "success"
+    }
+  ]
+}

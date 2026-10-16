@@ -1,0 +1,91 @@
+{
+  "job": {
+    "ProcessingJobName": "sports-edge-lab-shooting-resume-20261016-v032",
+    "ProcessingJobStatus": "InProgress"
+  },
+  "self_test": {
+    "event": "SELF_TEST_PASS",
+    "tests": 34,
+    "timestamp": "2026-10-16T20:05:55Z",
+    "workload": "sports-edge-lab-cbbd-shooting-continuation-v024"
+  },
+  "start": {
+    "event": "START",
+    "max_calls": 500,
+    "maximum_compute_usd": 0.15366666666666667,
+    "run_id": "20261016T200556Z-9f2127719a",
+    "timestamp": "2026-10-16T20:05:56Z",
+    "workload": "sports-edge-lab-cbbd-shooting-continuation-v024"
+  },
+  "heartbeat": {
+    "budget": {
+      "actual_known": {
+        "odds": 0,
+        "stats": 2
+      },
+      "disabled_providers": [],
+      "limits": {
+        "odds": 0,
+        "stats": 500
+      },
+      "provider_headers": {
+        "cbbd": {}
+      },
+      "reserved_or_known": {
+        "odds": 0,
+        "stats": 6
+      },
+      "unknown_charge_reserve": {
+        "odds": 0,
+        "stats": 0
+      }
+    },
+    "compute_estimate_usd": 0.0039,
+    "event": "HEARTBEAT",
+    "phases": {
+      "positive_cached_gate": {
+        "endpoints": 2,
+        "status": "passed"
+      },
+      "positive_fresh_gate": {
+        "endpoints": 2,
+        "status": "passed"
+      },
+      "seed": {
+        "previous_empty_receipts": 779,
+        "previous_failed_requests": 12,
+        "previous_nonempty_receipts": 124,
+        "status": "completed",
+        "stopped_v021_empty_receipts": 580,
+        "stopped_v021_nonempty_receipts": 0,
+        "successful_shooting_request_ids": 903
+      },
+      "shooting_continuation": {
+        "completed": 960,
+        "http_successful_or_reused": 960,
+        "planned": 1294,
+        "processed": 960,
+        "remaining": 334,
+        "status": "running",
+        "unsuccessful": 0
+      }
+    },
+    "run_id": "20261016T200556Z-9f2127719a",
+    "seconds": 30.22,
+    "statistics": {
+      "cache_reused": 958,
+      "captured": 2,
+      "cbbd_captured": 2,
+      "cbbd_http_calls": 2,
+      "http_calls": 2,
+      "ncaam_captured": 2,
+      "raw_bytes": 97293,
+      "shooting_empty_responses": 0,
+      "shooting_nonempty_responses": 960,
+      "shooting_positive_data_responses": 960,
+      "shooting_records_observed": 71737
+    },
+    "timestamp": "2026-10-16T20:06:26Z"
+  },
+  "interpretation": "958 successful requests were reused from cache; only 2 new HTTP captures occurred at this checkpoint. Shooting row/nonempty counters include reused responses."
+}
