@@ -1,0 +1,136 @@
+{
+  "status": "success",
+  "stdout": "",
+  "return_value": {
+    "observed_at": "2026-10-16T23:30:05.002143+00:00",
+    "job": {
+      "ProcessingInputs": [
+        {
+          "InputName": "code",
+          "AppManaged": false,
+          "S3Input": {
+            "S3Uri": "s3://sagemaker-sports-edge-lab-560403859723-us-west-2/infrastructure/code/football-validation-20261016-23-v046/",
+            "LocalPath": "/opt/ml/processing/code",
+            "S3DataType": "S3Prefix",
+            "S3InputMode": "File",
+            "S3DataDistributionType": "FullyReplicated"
+          }
+        }
+      ],
+      "ProcessingJobName": "sports-edge-lab-football-validation-20261016-23-v046",
+      "ProcessingResources": {
+        "ClusterConfig": {
+          "InstanceCount": 1,
+          "InstanceType": "ml.m5.2xlarge",
+          "VolumeSizeInGB": 30
+        }
+      },
+      "StoppingCondition": {
+        "MaxRuntimeInSeconds": 432000
+      },
+      "AppSpecification": {
+        "ImageUri": "246618743249.dkr.ecr.us-west-2.amazonaws.com/sagemaker-scikit-learn:1.9-0",
+        "ContainerEntrypoint": [
+          "python3",
+          "-u",
+          "/opt/ml/processing/code/sports_edge_lab_football_validation_v046.pyz"
+        ]
+      },
+      "NetworkConfig": {
+        "EnableInterContainerTrafficEncryption": false,
+        "EnableNetworkIsolation": false
+      },
+      "RoleArn": "arn:aws:iam::560403859723:role/SportsEdgeLabProcessingRole",
+      "ProcessingJobArn": "arn:aws:sagemaker:us-west-2:560403859723:processing-job/sports-edge-lab-football-validation-20261016-23-v046",
+      "ProcessingJobStatus": "Completed",
+      "ProcessingEndTime": "2026-10-16T23:25:14.369000+00:00",
+      "ProcessingStartTime": "2026-10-16T23:22:25.598000+00:00",
+      "LastModifiedTime": "2026-10-16T23:26:46.624000+00:00",
+      "CreationTime": "2026-10-16T23:21:45.383000+00:00"
+    },
+    "objects": {
+      "Contents": [
+        {
+          "Key": "shared/acquisition/football-validation/20261016T232304Z-954fca0a08/config.json",
+          "LastModified": "2026-10-16T23:25:03+00:00",
+          "ETag": "\"ed0e66daebc898a3d3d25187c0e9f689\"",
+          "ChecksumAlgorithm": [
+            "CRC32"
+          ],
+          "ChecksumType": "FULL_OBJECT",
+          "Size": 2833,
+          "StorageClass": "STANDARD"
+        },
+        {
+          "Key": "shared/acquisition/football-validation/20261016T232304Z-954fca0a08/progress.json",
+          "LastModified": "2026-10-16T23:25:03+00:00",
+          "ETag": "\"3d0705b9aa2ccb6173c1e5db93826785\"",
+          "ChecksumAlgorithm": [
+            "CRC32"
+          ],
+          "ChecksumType": "FULL_OBJECT",
+          "Size": 5291,
+          "StorageClass": "STANDARD"
+        },
+        {
+          "Key": "shared/acquisition/football-validation/20261016T232304Z-954fca0a08/report.json",
+          "LastModified": "2026-10-16T23:25:03+00:00",
+          "ETag": "\"3d0705b9aa2ccb6173c1e5db93826785\"",
+          "ChecksumAlgorithm": [
+            "CRC32"
+          ],
+          "ChecksumType": "FULL_OBJECT",
+          "Size": 5291,
+          "StorageClass": "STANDARD"
+        },
+        {
+          "Key": "shared/acquisition/football-validation/20261016T232304Z-954fca0a08/sports_edge_lab_football_validation_return_20261016T232304Z-954fca0a08.zip",
+          "LastModified": "2026-10-16T23:25:03+00:00",
+          "ETag": "\"a56b23f77e83eba365fc2e361b11a5d1\"",
+          "ChecksumAlgorithm": [
+            "CRC32"
+          ],
+          "ChecksumType": "FULL_OBJECT",
+          "Size": 3845,
+          "StorageClass": "STANDARD"
+        }
+      ],
+      "Prefix": "shared/acquisition/football-validation/20261016T232304Z-954fca0a08/"
+    },
+    "control": {
+      "AcceptRanges": "bytes",
+      "LastModified": "2026-10-16T23:25:03+00:00",
+      "ContentLength": 956,
+      "ETag": "\"0a297ed5bd00598453d46927dfe2b322\"",
+      "ChecksumCRC32": "/Da2RA==",
+      "ChecksumType": "FULL_OBJECT",
+      "ContentType": "application/json",
+      "ServerSideEncryption": "AES256",
+      "Metadata": {},
+      "Body": "{\"cbbd_requests_limit\":0,\"cfbd_charged_attempts\":0,\"cfbd_outstanding_reservations\":0,\"cfbd_per_run_limit\":16,\"cfbd_total_limit\":160,\"created_at\":\"2026-10-16T23:07:41.588344+00:00\",\"historical_jobs_never_restart\":[\"sports-edge-lab-football-finish-20261016-v039\",\"sports-edge-lab-odds-only-20261016-v038\"],\"latest_evidence_commit\":\"ee4acaa7fda6f74680edf2b1d11cf675e0deba5b\",\"odds_credits_limit\":0,\"provider_blocks\":{\"cbbd\":\"Retained pause after prior HTTP 429; no calls authorized\"},\"runs\":[{\"cbbd_requests\":0,\"cfbd_attempts\":0,\"finished_at\":\"2026-10-16T23:25:02Z\",\"job_name\":\"sports-edge-lab-football-validation-20261016-23-v046\",\"nfl_source_requests\":2,\"odds_credits\":0,\"report_key\":\"shared/acquisition/football-validation/20261016T232304Z-954fca0a08/report.json\",\"run_id\":\"20261016T232304Z-954fca0a08\",\"status\":\"completed_with_explicit_gaps\"}],\"schema_version\":1,\"scope\":[\"nfl\",\"ncaaf\"],\"series\":\"football-weekend-20261016\",\"source_requests_per_second\":1}"
+    }
+  },
+  "api_calls": [
+    {
+      "service": "sagemaker",
+      "operation": "DescribeProcessingJob",
+      "status": "success",
+      "n_items": {
+        "ProcessingInputs": 1
+      }
+    },
+    {
+      "service": "s3",
+      "operation": "ListObjectsV2",
+      "status": "success",
+      "n_items": {
+        "Contents": 4
+      }
+    },
+    {
+      "service": "s3",
+      "operation": "GetObject",
+      "status": "success"
+    }
+  ]
+}

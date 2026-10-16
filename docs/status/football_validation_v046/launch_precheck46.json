@@ -1,0 +1,19 @@
+{
+  "status": "success",
+  "stdout": "",
+  "return_value": {
+    "observed_at": "2026-10-16T23:21:00.768873+00:00",
+    "exact": [],
+    "active": []
+  },
+  "api_calls": [
+    {
+      "service": "sagemaker",
+      "operation": "ListProcessingJobs",
+      "status": "success",
+      "n_items": {
+        "ProcessingJobSummaries": 43
+      }
+    }
+  ]
+}

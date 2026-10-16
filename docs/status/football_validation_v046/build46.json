@@ -1,0 +1,17 @@
+{
+  "artifact": "sports_edge_lab_football_validation_v046.pyz",
+  "sha256": "c446805946e764f44610d4fed05a7a49453dcc968362be87f175d6830f047c3b",
+  "bytes": 52523,
+  "source_files": {
+    "team_alias_source.csv": "206f8bba69122bec48ee725bfcaf45cfbf5eebc8bb4c4aa77bc8807f9c3a5d3b",
+    "football_refresh.py": "997c6d69bfa10275795a6b77c97734ce5232b2fbaf915a6d66f79de4aaf9595d",
+    "__main__.py": "0a0512abd3c6665301be3297a1ce8f048d992fbc5888bbc9e04083ea64b6e400",
+    "friday_bigten.json": "da80ffcb5cb9b3ae06de8f0b53854c62962859dd300349c41c58e083a01549fd",
+    "config.json": "8be2ab3bce600a51443c217f6dea0f312df294e3d85758fe3ae811523dfe4e82",
+    "readiness.py": "385cf3dc93892bd200b94dadfcfe306f757167807a8031e19a22ea31a7c14e73",
+    "quality.py": "185af41b9a8cfc57d5ec8ccbfaf4fa226e3811f246b0e38c5c0f11b736234bd3",
+    "nfl_current.py": "c92dc82354e7e4bc005585576c18d063fec41b68bbe0e673d0af703ff7c3936d",
+    "ngs_avail.py": "1b87c4338f77c83b0c646cfb279f9583574635e532e70f21783eb9567f09e890"
+  },
+  "tests_required": 95
+}

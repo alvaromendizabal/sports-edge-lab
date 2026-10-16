@@ -1,0 +1,275 @@
+{
+  "acb_canonical_raw_objects": 0,
+  "by_track": {
+    "nba": {
+      "objects": 23766,
+      "stored_bytes": 1948940091
+    },
+    "ncaaf": {
+      "objects": 27200,
+      "stored_bytes": 3290840783
+    },
+    "ncaam": {
+      "objects": 28674,
+      "stored_bytes": 5305552626
+    },
+    "ncaaw": {
+      "objects": 5726,
+      "stored_bytes": 2494567103
+    },
+    "nfl": {
+      "objects": 11591,
+      "stored_bytes": 835993676
+    },
+    "shared": {
+      "objects": 4078,
+      "stored_bytes": 3517091253
+    }
+  },
+  "classification_addendum": {
+    "bytes": 6064,
+    "key": "tracks/ncaaf/raw/sec-availability-rendered/verified/20261016T222423Z/capture.json.gz",
+    "reason": "DOM-verified SEC source capture, confirmed by existing v041 provenance and HeadObject; included as raw content."
+  },
+  "complete": true,
+  "method": "Provider discovery by delimiter, then explicit complete pagination of public raw and paid object prefixes. Paid receipts/indexes are not scanned or included. Failed broad scans are not used. Revisions and quarantined raw captures may overlap; these counts do not measure unique games or training eligibility.",
+  "observation_window_end": "2026-10-16T23:30:40.925633+00:00",
+  "observation_window_start": "2026-10-16T23:24:27.013528+00:00",
+  "shared_scan": {
+    "fully_paginated": true,
+    "listed_objects": 9670,
+    "observation_window_end": "2026-10-16T23:25:35.381468+00:00",
+    "observation_window_start": "2026-10-16T23:24:27.013528+00:00",
+    "pages": 10,
+    "prefix": "shared/raw/",
+    "total": {
+      "objects": 4078,
+      "stored_bytes": 3517091253
+    }
+  },
+  "total": {
+    "objects": 101035,
+    "stored_bytes": 17392985532
+  },
+  "track_scans": [
+    {
+      "by_source": {
+        "nfl-official-current": {
+          "objects": 38,
+          "stored_bytes": 2293654
+        },
+        "nfldata": {
+          "objects": 20,
+          "stored_bytes": 13164752
+        },
+        "nflverse": {
+          "objects": 805,
+          "stored_bytes": 737231100
+        },
+        "paid": {
+          "objects": 1,
+          "stored_bytes": 5149
+        },
+        "the-odds-api": {
+          "objects": 10727,
+          "stored_bytes": 83299021
+        }
+      },
+      "complete": true,
+      "excluded": {
+        "receipt_index_audit_or_legacy": 73
+      },
+      "objects": 11591,
+      "observed_end": "2026-10-16T23:27:23.584543+00:00",
+      "observed_start": "2026-10-16T23:27:07.978140+00:00",
+      "omitted_raw_root_keys": [],
+      "pages": 16,
+      "scanned_prefixes": [
+        "tracks/nfl/raw/nfl-official-current/",
+        "tracks/nfl/raw/nfldata/",
+        "tracks/nfl/raw/nflverse/",
+        "tracks/nfl/raw/paid/",
+        "tracks/nfl/raw/the-odds-api/objects/"
+      ],
+      "stored_bytes": 835993676,
+      "track": "nfl",
+      "unclassified_examples": []
+    },
+    {
+      "by_source": {
+        "nba-official-injuries": {
+          "objects": 24,
+          "stored_bytes": 1186137
+        },
+        "paid": {
+          "objects": 1,
+          "stored_bytes": 2345
+        },
+        "sportsdataverse": {
+          "objects": 2913,
+          "stored_bytes": 1863707502
+        },
+        "the-odds-api": {
+          "objects": 20828,
+          "stored_bytes": 84044107
+        }
+      },
+      "complete": true,
+      "excluded": {
+        "receipt_index_audit_or_legacy": 2937
+      },
+      "objects": 23766,
+      "observed_end": "2026-10-16T23:28:05.843110+00:00",
+      "observed_start": "2026-10-16T23:27:33.962277+00:00",
+      "omitted_raw_root_keys": [],
+      "pages": 30,
+      "scanned_prefixes": [
+        "tracks/nba/raw/nba-official-injuries/",
+        "tracks/nba/raw/paid/",
+        "tracks/nba/raw/sportsdataverse/",
+        "tracks/nba/raw/the-odds-api/objects/"
+      ],
+      "stored_bytes": 1948940091,
+      "track": "nba",
+      "unclassified_examples": []
+    },
+    {
+      "by_source": {
+        "acc-availability-rendered": {
+          "objects": 1,
+          "stored_bytes": 8489
+        },
+        "big12-availability-rendered": {
+          "objects": 1,
+          "stored_bytes": 5439
+        },
+        "bigten-availability-rendered": {
+          "objects": 1,
+          "stored_bytes": 7657
+        },
+        "cfbd": {
+          "objects": 2384,
+          "stored_bytes": 345931082
+        },
+        "official-availability": {
+          "objects": 1,
+          "stored_bytes": 2394
+        },
+        "paid": {
+          "objects": 1,
+          "stored_bytes": 1187
+        },
+        "sec-availability-rendered": {
+          "objects": 1,
+          "stored_bytes": 5540
+        },
+        "sportsdataverse": {
+          "objects": 683,
+          "stored_bytes": 2649202303
+        },
+        "the-odds-api": {
+          "objects": 24126,
+          "stored_bytes": 295670628
+        }
+      },
+      "complete": true,
+      "excluded": {
+        "receipt_index_audit_or_legacy": 684,
+        "unclassified_raw": 1
+      },
+      "objects": 27199,
+      "observed_end": "2026-10-16T23:28:44.823993+00:00",
+      "observed_start": "2026-10-16T23:28:14.239550+00:00",
+      "omitted_raw_root_keys": [],
+      "pages": 37,
+      "scanned_prefixes": [
+        "tracks/ncaaf/raw/acc-availability-rendered/",
+        "tracks/ncaaf/raw/big12-availability-rendered/",
+        "tracks/ncaaf/raw/bigten-availability-rendered/",
+        "tracks/ncaaf/raw/cfbd/objects/",
+        "tracks/ncaaf/raw/official-availability/",
+        "tracks/ncaaf/raw/paid/",
+        "tracks/ncaaf/raw/sec-availability-rendered/",
+        "tracks/ncaaf/raw/sportsdataverse/",
+        "tracks/ncaaf/raw/the-odds-api/objects/"
+      ],
+      "stored_bytes": 3290834719,
+      "track": "ncaaf",
+      "unclassified_examples": [
+        "tracks/ncaaf/raw/sec-availability-rendered/verified/20261016T222423Z/capture.json.gz"
+      ]
+    },
+    {
+      "by_source": {
+        "cbbd": {
+          "objects": 13648,
+          "stored_bytes": 2119671806
+        },
+        "paid": {
+          "objects": 2,
+          "stored_bytes": 43742
+        },
+        "sportsdataverse": {
+          "objects": 466,
+          "stored_bytes": 3064443411
+        },
+        "the-odds-api": {
+          "objects": 14558,
+          "stored_bytes": 121393667
+        }
+      },
+      "complete": true,
+      "excluded": {
+        "receipt_index_audit_or_legacy": 466
+      },
+      "objects": 28674,
+      "observed_end": "2026-10-16T23:29:22.530139+00:00",
+      "observed_start": "2026-10-16T23:28:53.633641+00:00",
+      "omitted_raw_root_keys": [],
+      "pages": 32,
+      "scanned_prefixes": [
+        "tracks/ncaam/raw/cbbd/objects/",
+        "tracks/ncaam/raw/paid/",
+        "tracks/ncaam/raw/sportsdataverse/",
+        "tracks/ncaam/raw/the-odds-api/objects/"
+      ],
+      "stored_bytes": 5305552626,
+      "track": "ncaam",
+      "unclassified_examples": []
+    },
+    {
+      "by_source": {
+        "paid": {
+          "objects": 1,
+          "stored_bytes": 472
+        },
+        "sportsdataverse": {
+          "objects": 449,
+          "stored_bytes": 2483709545
+        },
+        "the-odds-api": {
+          "objects": 5276,
+          "stored_bytes": 10857086
+        }
+      },
+      "complete": true,
+      "excluded": {
+        "receipt_index_audit_or_legacy": 449
+      },
+      "objects": 5726,
+      "observed_end": "2026-10-16T23:29:38.645049+00:00",
+      "observed_start": "2026-10-16T23:29:31.380476+00:00",
+      "omitted_raw_root_keys": [],
+      "pages": 9,
+      "scanned_prefixes": [
+        "tracks/ncaaw/raw/paid/",
+        "tracks/ncaaw/raw/sportsdataverse/",
+        "tracks/ncaaw/raw/the-odds-api/objects/"
+      ],
+      "stored_bytes": 2494567103,
+      "track": "ncaaw",
+      "unclassified_examples": []
+    }
+  ],
+  "unclassified_raw_objects": 0
+}

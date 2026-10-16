@@ -1,0 +1,65 @@
+{
+  "date": "2026-10-16",
+  "observation_window_utc": "23:12–23:18",
+  "unchanged_assets": [
+    {
+      "name": "play_by_play_2026.csv.gz",
+      "size": 5509553,
+      "digest": "sha256:820c579ed06f7a57e5233e891b77e644360492d761d3df7c81d526cabb354d7a",
+      "source_updated_at": "2026-10-16T13:57:39Z",
+      "release_url": "https://github.com/nflverse/nflverse-data/releases/tag/pbp"
+    },
+    {
+      "name": "snap_counts_2026.csv.gz",
+      "size": 140793,
+      "digest": "sha256:f91a2003862a68841e413320bf611852195c61c9bada797ffab25275c62f78dd",
+      "source_updated_at": "2026-10-16T11:04:00Z",
+      "release_url": "https://github.com/nflverse/nflverse-data/releases/tag/snap_counts"
+    },
+    {
+      "name": "roster_weekly_2026.csv.gz",
+      "size": 501612,
+      "digest": "sha256:31c7f1a82a23b4b46fb25881451f8af1bab8dbcae372e205dac00eedfbc5bb6f",
+      "source_updated_at": "2026-10-16T12:22:29Z",
+      "release_url": "https://github.com/nflverse/nflverse-data/releases/tag/weekly_rosters"
+    },
+    {
+      "name": "depth_charts_2026.csv.gz",
+      "size": 12805209,
+      "digest": "sha256:dcdcbce877e1777f7b372e44f9e15fb4ef23ef79e9446e572529feb46b3da3f2",
+      "source_updated_at": "2026-10-16T12:17:10Z",
+      "release_url": "https://github.com/nflverse/nflverse-data/releases/tag/depth_charts"
+    },
+    {
+      "name": "players.csv.gz",
+      "size": 2501827,
+      "digest": "sha256:78ccdebe065a691b3a11b2a8920726680af6f7393789da385dcdef51b0be0a47",
+      "source_updated_at": "2026-10-16T12:55:20Z",
+      "release_url": "https://github.com/nflverse/nflverse-data/releases/tag/players"
+    },
+    {
+      "name": "ngs_passing.csv.gz",
+      "size": 602888,
+      "digest": "sha256:12a66e1d30bb9cfe48e5b85decfd5dca31fad63f4b637be031df9048497f695c",
+      "updated_at": "2026-10-16T12:02:03Z",
+      "url": "https://github.com/nflverse/nflverse-data/releases/download/nextgen_stats/ngs_passing.csv.gz"
+    },
+    {
+      "name": "ngs_receiving.csv.gz",
+      "size": 1014873,
+      "digest": "sha256:168773b1a20defb8066acc75db58552b125e108f80b59c168e4b26696adf13b4",
+      "updated_at": "2026-10-16T12:02:18Z",
+      "url": "https://github.com/nflverse/nflverse-data/releases/download/nextgen_stats/ngs_receiving.csv.gz"
+    },
+    {
+      "name": "ngs_rushing.csv.gz",
+      "size": 335650,
+      "digest": "sha256:c0309c49dc7685a5f3d11260d9159ec73cf465771d9f6d35433f65928e88da5a",
+      "updated_at": "2026-10-16T12:02:11Z",
+      "url": "https://github.com/nflverse/nflverse-data/releases/download/nextgen_stats/ngs_rushing.csv.gz"
+    }
+  ],
+  "source_downloads_skipped": 8,
+  "bytes_not_redownloaded": 23412405,
+  "note": "Provider metadata hashes matched the existing captured asset hashes; no new payload was fetched."
+}

@@ -1,5 +1,7 @@
 # Execution source versions
 
+Latest: [V046 completed cache audit and current availability](FOOTBALL_VALIDATION_V046.md). All 95 tests passed locally and in AWS; zero paid-provider calls. Exact code, terminal outcome and unique return ZIP verification are committed.
+
 **Latest update — October 16:** V039 completed its selected queue. V042 completed current refresh/identity work. The six-hour schedule targets CBBD-paused v043. V044 failed before provider calls; v045 fixes embedded configuration loading. Exact source, hashes and tests are in the corresponding `tools/` and `docs/status/` directories.
 
 A running AWS Processing job keeps the source uploaded at launch. Updating the repository does not hot-patch that running process. Preserve its exact source alongside the current implementation so receipts remain reproducible.

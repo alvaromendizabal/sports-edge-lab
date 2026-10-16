@@ -1,0 +1,179 @@
+{
+  "application_runtime_limit_seconds": null,
+  "cbbd_requests": 0,
+  "cfbd_requests": 0,
+  "elapsed_seconds": 117.95,
+  "failed_requests": 0,
+  "failures": [],
+  "finished_at": "2026-10-16T23:25:02Z",
+  "heartbeat_errors": [],
+  "nfl_provider_blocked": false,
+  "nfl_source_requests": 2,
+  "odds_credits": 0,
+  "planned_odds_requests": 4696,
+  "planned_stages": 3,
+  "processed_requests": 4696,
+  "processed_stages": 3,
+  "remaining_requests": 0,
+  "remaining_stages": 0,
+  "results": {
+    "cached_odds_time_audit": {
+      "audit": {
+        "audited_requests": 4696,
+        "counts": {
+          "markets": 8014295,
+          "outcomes": 16028590,
+          "rejected_markets": 453268,
+          "timestamp_candidate_markets": 7561027
+        },
+        "deduplicated_s3_reads_saved": 107,
+        "failed_requests": 0,
+        "historical_training_approved": false,
+        "planned_requests": 4696,
+        "provider_event_ids_with_kickoff_revisions": 1674,
+        "provider_event_ids_with_team_revisions": 20,
+        "rejection_reasons": {
+          "book_update_at_or_after_kickoff": 338337,
+          "event_started_by_request": 396700,
+          "inconsistent_total": 7,
+          "invalid_decimal_price": 22896,
+          "market_update_at_or_after_kickoff": 338314,
+          "unsupported_market": 47876
+        },
+        "remaining_requests": 0,
+        "requests_with_rejected_markets": 4144,
+        "requests_without_markets": 0,
+        "scope": "Only v039 acquired NCAAF checkpoints; not all cached NFL/NCAAF history",
+        "snapshot_lag_max_seconds": 300900,
+        "snapshot_lag_min_seconds": 0,
+        "unique_provider_event_ids": 3885,
+        "unique_source_objects": 4589
+      },
+      "compressed_bytes_read": 90545756,
+      "event_registry": {
+        "bytes": 156854,
+        "key": "tracks/ncaaf/derived/odds-event-registry-v046/20261016T232304Z-954fca0a08/rows.jsonl.gz",
+        "rows": 3885,
+        "sha256": "7bacfa166b58aa72b0d9e8828797840dd2ebe0d7570476f22a3f35ff9a12ab1d"
+      },
+      "failures": [],
+      "manifest": {
+        "bytes": 794932,
+        "key": "tracks/ncaaf/derived/odds-time-audit-v046/20261016T232304Z-954fca0a08/rows.jsonl.gz",
+        "rows": 4696,
+        "sha256": "5eea14b42b4a7a03f4d28681405e82b4f366d1141a662b8671534667d5bb8510"
+      }
+    },
+    "friday_bigten": {
+      "canonical_subset_sha256": "d99931a3b3a3eb2dca5fdf6eaf1fcdfbd305f21a7e873f1ade859d00d938f9a4",
+      "captured_subset_rows": 20,
+      "changed_valid_rows_vs_prior": 0,
+      "full_dom_row_count": 719,
+      "game_day_statuses_present": 0,
+      "historical_training_approved": false,
+      "identity_audit": {
+        "identity_counts": {
+          "exact_normalized_team_name_jersey_unique": 19,
+          "unmatched": 1
+        },
+        "rows": 20,
+        "time_gate_counts": {
+          "observed_before_kickoff": 20
+        },
+        "unmatched_examples": [
+          {
+            "game_date": "2026-10-16",
+            "jersey": "",
+            "player_name": "CJ Christian",
+            "team": "Washington"
+          }
+        ],
+        "unmatched_teams": []
+      },
+      "observed_at": "2026-10-16T23:16:06.371Z",
+      "quality_audit": {
+        "historical_point_in_time_approved": false,
+        "identity_counts": {
+          "exact_normalized_team_name_jersey_unique": 19
+        },
+        "input_rows": 20,
+        "model_ready": false,
+        "prospective_identity_time_candidates": 19,
+        "quarantined_rows": 1,
+        "valid_rows": 19
+      },
+      "quarantine": {
+        "bytes": 399,
+        "key": "tracks/ncaaf/derived/bigten-friday-quarantine-v046/20261016T232304Z-954fca0a08/rows.jsonl.gz",
+        "rows": 1,
+        "sha256": "b1ca2c2036f5207f8e417c73b631da2460997dd4d87f93e90bd1f092a092b7c9"
+      },
+      "raw_key": "tracks/ncaaf/raw/official-availability/bigten/dom/6952371abae38407e7d940b41bc00e89d1b62fe603353c5e538a619869de04cf.json",
+      "raw_sha256": "6952371abae38407e7d940b41bc00e89d1b62fe603353c5e538a619869de04cf",
+      "scope": "Friday 2026-10-16 rows only; full DOM counted",
+      "source_url": "https://app.hdintelligence.com/?conf=B10&source=B10&sport=Football&type=archive",
+      "valid": {
+        "bytes": 1071,
+        "key": "tracks/ncaaf/derived/bigten-friday-availability-v046/20261016T232304Z-954fca0a08/rows.jsonl.gz",
+        "rows": 19,
+        "sha256": "f25cb954fea5307e49bcfa54491f7a4ff90c146c774cbc53d430440c39bbcd0d"
+      }
+    },
+    "nfl_injuries": {
+      "changed_rows_vs_prior": 14,
+      "output": {
+        "bytes": 6160,
+        "key": "tracks/nfl/derived/injuries-current-v046/20261016T232304Z-954fca0a08/rows.jsonl.gz",
+        "rows": 374,
+        "sha256": "679b0800c897bce86d89e0a835badf8cd57ec40f72b4f852bde47730de44a8c3"
+      },
+      "publication_time_unverified": true,
+      "receipt": {
+        "bytes": 400382,
+        "capture_vintage": "2026-10-16T23:00Z",
+        "captured_at": "2026-10-16T23:23:06Z",
+        "discovered_from": null,
+        "historical_available_at": null,
+        "html_title": "Official NFL Injury Report for Players - Week 6 of the 2026 Season | NFL.com",
+        "kind": "injuries",
+        "point_in_time_approved": false,
+        "raw_key": "tracks/nfl/raw/nfl-official-current/objects/15d60c55506dea4002d7ae1fe625daf571b52f5b1d1308485eda72f36a50b26c.html.gz",
+        "run_id": "20261016T232304Z-954fca0a08",
+        "sha256": "15d60c55506dea4002d7ae1fe625daf571b52f5b1d1308485eda72f36a50b26c",
+        "source_etag": null,
+        "source_http_date": "Fri, 16 Oct 2026 23:23:06 GMT",
+        "source_last_modified": null,
+        "status": "downloaded",
+        "table_count": 28,
+        "url": "https://www.nfl.com/injuries/league/2026/reg6"
+      },
+      "rejected": 0,
+      "robots_evidence": [
+        {
+          "bytes": 343,
+          "capture_vintage": "2026-10-16T23:00Z",
+          "captured_at": "2026-10-16T23:23:05Z",
+          "discovered_from": null,
+          "historical_available_at": null,
+          "kind": "robots",
+          "point_in_time_approved": false,
+          "raw_key": "shared/acquisition/nfl-official-current/evidence/objects/0183802b9df0fad8075bba80f8e13c3486da842410d68329adccbe5b8f8831cb.txt.gz",
+          "run_id": "20261016T232304Z-954fca0a08",
+          "sha256": "0183802b9df0fad8075bba80f8e13c3486da842410d68329adccbe5b8f8831cb",
+          "source_etag": null,
+          "source_http_date": "Fri, 16 Oct 2026 23:23:05 GMT",
+          "source_last_modified": null,
+          "status": "downloaded",
+          "url": "https://www.nfl.com/robots.txt"
+        }
+      ],
+      "rows": 374,
+      "source_requests": 2
+    }
+  },
+  "run_id": "20261016T232304Z-954fca0a08",
+  "started_at": "2026-10-16T23:23:04Z",
+  "status": "completed_with_explicit_gaps",
+  "successful_requests": 4696,
+  "version": "sports-edge-lab-football-validation-v046"
+}

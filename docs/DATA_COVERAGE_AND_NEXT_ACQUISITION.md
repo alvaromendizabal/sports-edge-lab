@@ -1,38 +1,28 @@
 # Downloaded data and next acquisition priorities
 
-**Latest update — October 16:** The selected historical football odds queue is finished: 4,696/4,696 requests, zero final failures and zero remaining. V042 refreshed current football data and resolved 692/692 current NGS joins. V045 repaired NFL snap identities to 7,445/7,463; 18 remain unresolved. College structural validation retains 2,402 rows, of which 2,306 have exact unique player IDs; 1 malformed rows are quarantined. All 692 current NGS rows already have exact week/team/GSIS matches. Original publication-time gaps remain explicit. [Verified readiness](FOOTBALL_READINESS_V042.md). ACB remains deleted and CBBD paused.
+**Latest update — October 16, 23:30 UTC:** Selected historical football odds downloading is finished (4,696/4,696). V046 validated that cache block with zero read failures, saved 14 changed NFL injury rows, and preserved Friday college availability. The current archive has 101,035 in-scope raw files / 17.39 GB. We can start core NFL/NCAAF model development now; canonical game joins, prediction-time features and chronological testing remain gates before trusting forecasts. [Validation](FOOTBALL_VALIDATION_V046.md) · [Start modeling](FOOTBALL_MODELING_START.md). ACB remains deleted and CBBD paused.
 
 
-**93,319 in-scope raw content files / 17.26 GB are verified in the shared archive.**
-The content-only S3 scan ran on **October 16, 20:36:28–20:37:35 UTC**, counting
-**17,259,029,672 stored bytes**. It excludes receipts, indexes, code, return
-bundles, derived tables, legacy duplicates and the entire unrelated ACB prefix.
-There are zero unclassified raw objects. Collectors wrote during the paginated
-scan, so this is an observation window rather than an atomic snapshot.
+**101,035 in-scope raw content files / 17.39 GB are verified in the shared archive.**
+
+The complete paginated observation window on **October 16, 23:24:27–23:30:40 UTC** counted **17,392,985,532 stored bytes**. It excludes receipts, indexes, code, return bundles, derived tables, legacy duplicates and ACB. All included raw paths were classified. Revisions and quarantined raw captures can overlap; files are not unique games or training examples.
 
 | Track | Stored content files | Stored GB |
 | --- | ---: | ---: |
-| NFL | 11,579 | 0.816 |
-| NBA | 22,962 | 1.945 |
-| NCAA football | 22,178 | 3.191 |
-| NCAA men's basketball | 26,796 | 5.296 |
+| NFL | 11,591 | 0.836 |
+| NBA | 23,766 | 1.949 |
+| NCAA football | 27,200 | 3.291 |
+| NCAA men's basketball | 28,674 | 5.306 |
 | NCAA women's basketball | 5,726 | 2.495 |
 | Shared weather | 4,078 | 3.517 |
 
-The previous 20:03 UTC report included 32 ACB content files / 394,736,881 bytes.
-Its comparable in-scope baseline is 85,385 files / 16,846,793,927 bytes. Growth
-since that corrected baseline is **7,934 files / 412,235,745 bytes**. Historical
-mixed inventory receipts remain historical observations. ACB raw data, dedicated
-receipts and collector were deleted on October 16; the removal is verified separately.
-
-File counts are not unique games, complete seasons or training examples.
-Different revisions and statistical families can overlap.
+The earlier 20:36–20:37 UTC observation was 93,319 files / 17,259,029,672 bytes. Growth since that observation includes intervening runs, not just this pass. ACB canonical raw content is still absent. [Current inventory evidence](status/content_inventory_20261016T2330Z.json).
 
 ## Current NFL and availability additions
 
 V045 repaired NFL snap identities to 7,445/7,463; 18 remain unresolved. College structural validation retains 2,402 rows, of which 2,306 have exact unique player IDs; 1 malformed rows are quarantined. All 692 current NGS rows already have exact week/team/GSIS matches. Original publication-time gaps remain explicit.
 
-V041 saved 7,463 current-season snap rows, 15,327 weekly-roster rows and 659,277 depth-chart snapshot rows. V042 verified all 80 completed NFL schedule games have PBP, retained 14,031 PBP rows and captured 374 official Week 6 injury rows at 22:47:04 UTC. The fresh FBS schedule contained no additional completed game at 22:46:51 UTC; Friday games had not started. The public NGS archive contains 27,613 summary rows from 2016–2026, not raw trajectories.
+V041 saved 7,463 current-season snap rows, 15,327 weekly-roster rows and 659,277 depth-chart snapshot rows. V042 verified all 80 completed NFL schedule games have PBP, retained 14,031 PBP rows and captured 374 official Week 6 injury rows at 22:47:04 UTC; v046 refreshed them at 23:23:06 UTC and found 14 changed rows. The fresh FBS schedule contained no additional completed game at 22:46:51 UTC; Friday games had not started. The public NGS archive contains 27,613 summary rows from 2016–2026, not raw trajectories.
 
 See [V042 evidence](FOOTBALL_READINESS_V042.md), [quality repair](FOOTBALL_QUALITY_V045.md) and [weekend refresh playbook](FOOTBALL_WEEKEND_REFRESH_20261016.md). Existing historical inventory totals below retain their stated observation time.
 
@@ -74,7 +64,7 @@ their own games.
 2. **Reliable current availability:** original NFL and NCAA report versions,
    publication timestamps, quarterback/depth-chart changes and cross-conference
    coverage. Big Ten, Big 12, ACC and SEC rendered archives are saved; historical publication times, identity mapping and other conferences remain open. Archive final game-day updates when published.
-3. **Historical market validation:** the selected football game-price queue is complete. Audit bookmaker quote times and kickoff revisions before using those prices in backtests. Basketball historical queues are separate; CBBD remains paused.
+3. **Historical market validation:** the selected football game-price queue is complete. V046 audited the newly acquired NCAAF block: 453,268 repeated market observations fail selected checks; 1,674 event IDs have kickoff revisions and 17 responses are more than ten minutes stale. Filter/reconcile these and audit older cached football blocks before backtests. Basketball historical queues are separate; CBBD remains paused.
 4. **Tracking and aligned video for the five target sports:** vendor access,
    export scope, history/current latency and modeling rights are still
    unconfirmed. Previous SkillCorner/Genius inquiries are recorded; a search including spam found SkillCorner's automated no-B2C acknowledgment but no granted access. Genius has no substantive access reply yet. No new license was purchased. ACB is out of scope.
@@ -141,7 +131,7 @@ The prop audit found 6,608 quote-update inconsistencies, 4,650 kickoff revisions
 
 | Priority | What to acquire or establish | Research enabled |
 | --- | --- | --- |
-| 1 | Resume missing game-price checkpoints, CBBD play history and high-value prop slices using verified caches; reconcile every odds event against canonical schedules and settlements. | Honest comparisons against prices available at the actual prediction time. |
+| 1 | Validate the completed selected football price queue and older cached prices against canonical schedules and settlements. Basketball/prop expansion remains separate; CBBD is paused. | Honest comparisons against prices available at the actual prediction time. |
 | 2 | Original injury/availability reports with publication timestamps and revisions; preserve current captures as immutable vintages. | Expected minutes, snaps, usage and lineup distributions before a game. |
 | 3 | Stable player/team/game identities and effective-dated roster, transfer and depth-chart changes. | Player-adjusted forecasts and longitudinal models without incorrect joins. |
 | 4 | Original play/shot/lineup sequences where permitted, plus completeness and source-column audits of existing archives. | Independently engineered possession and play representations, rotation models and player interaction models. |

@@ -1,0 +1,72 @@
+{
+  "files": [
+    {
+      "name": "return46.zip",
+      "bytes": 3845,
+      "sha256": "453703dd19806c86b7e7d0034a14c4822416bf74abfbfe72ab2a63de3ab0420f"
+    },
+    {
+      "name": "odds_audit46.jsonl.gz",
+      "bytes": 794932,
+      "sha256": "5eea14b42b4a7a03f4d28681405e82b4f366d1141a662b8671534667d5bb8510"
+    }
+  ],
+  "zip_valid": true,
+  "zip_report_matches_saved_report": true,
+  "request_rows": 4696,
+  "request_ids_unique": 4696,
+  "counts_recomputed": {
+    "markets": 8014295,
+    "outcomes": 16028590,
+    "rejected_markets": 453268,
+    "timestamp_candidate_markets": 7561027
+  },
+  "reasons_recomputed": {
+    "invalid_decimal_price": 22896,
+    "unsupported_market": 47876,
+    "book_update_at_or_after_kickoff": 338337,
+    "event_started_by_request": 396700,
+    "market_update_at_or_after_kickoff": 338314,
+    "inconsistent_total": 7
+  },
+  "snapshot_lag_bands": {
+    "0_to_300_seconds": 4671,
+    "over300_to600_seconds": 8,
+    "over600_to3600_seconds": 2,
+    "over3600_seconds": 15
+  },
+  "lag_max_seconds": 300900.0,
+  "stale_snapshot_examples": [
+    {
+      "request_id": "b78cc41832cc85235b25a2523c309e3ae33b6eb5096e2f68d633d0b1dd080b7b",
+      "requested_at": "2021-04-08T00:00:00Z",
+      "snapshot_at": "2021-04-04T12:25:00Z",
+      "snapshot_lag_seconds": 300900.0
+    },
+    {
+      "request_id": "45ebdc7f63d8b5ea5a390fb33eb852d929d83ab84d602d125e5131b3804c14b0",
+      "requested_at": "2021-04-07T22:00:00Z",
+      "snapshot_at": "2021-04-04T12:25:00Z",
+      "snapshot_lag_seconds": 293700.0
+    },
+    {
+      "request_id": "c0ef0523784d98d6489af1c957a1597ef97ff6c66bf2591a385319d26bce23de",
+      "requested_at": "2021-04-07T21:00:00Z",
+      "snapshot_at": "2021-04-04T12:25:00Z",
+      "snapshot_lag_seconds": 290100.0
+    },
+    {
+      "request_id": "3dbecfbf905c267a9a51cd9fabca79adb241991014cdd0e5423270bc32e3014d",
+      "requested_at": "2021-04-07T20:05:00Z",
+      "snapshot_at": "2021-04-04T12:25:00Z",
+      "snapshot_lag_seconds": 286800.0
+    },
+    {
+      "request_id": "ef2ebb39a96ec467deaf699b10e425cc320cfaa527f6960a36e5f8ac949dd87c",
+      "requested_at": "2021-04-07T20:00:00Z",
+      "snapshot_at": "2021-04-04T12:25:00Z",
+      "snapshot_lag_seconds": 286500.0
+    }
+  ],
+  "historical_training_approved": false
+}

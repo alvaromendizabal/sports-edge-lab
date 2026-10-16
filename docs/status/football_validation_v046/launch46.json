@@ -1,0 +1,80 @@
+{
+  "status": "success",
+  "stdout": "",
+  "return_value": {
+    "observed_at": "2026-10-16T23:21:45.629800+00:00",
+    "request": {
+      "ProcessingJobName": "sports-edge-lab-football-validation-20261016-23-v046",
+      "RoleArn": "arn:aws:iam::560403859723:role/SportsEdgeLabProcessingRole",
+      "AppSpecification": {
+        "ImageUri": "246618743249.dkr.ecr.us-west-2.amazonaws.com/sagemaker-scikit-learn:1.9-0",
+        "ContainerEntrypoint": [
+          "python3",
+          "-u",
+          "/opt/ml/processing/code/sports_edge_lab_football_validation_v046.pyz"
+        ]
+      },
+      "ProcessingInputs": [
+        {
+          "InputName": "code",
+          "S3Input": {
+            "S3Uri": "s3://sagemaker-sports-edge-lab-560403859723-us-west-2/infrastructure/code/football-validation-20261016-23-v046/",
+            "LocalPath": "/opt/ml/processing/code",
+            "S3DataType": "S3Prefix",
+            "S3InputMode": "File",
+            "S3DataDistributionType": "FullyReplicated"
+          }
+        }
+      ],
+      "ProcessingResources": {
+        "ClusterConfig": {
+          "InstanceCount": 1,
+          "InstanceType": "ml.m5.2xlarge",
+          "VolumeSizeInGB": 30
+        }
+      },
+      "StoppingCondition": {
+        "MaxRuntimeInSeconds": 432000
+      },
+      "NetworkConfig": {
+        "EnableNetworkIsolation": false
+      },
+      "Tags": [
+        {
+          "Key": "Project",
+          "Value": "sports-edge-lab"
+        },
+        {
+          "Key": "Workstream",
+          "Value": "football-validation"
+        },
+        {
+          "Key": "Environment",
+          "Value": "dev"
+        }
+      ]
+    },
+    "response": {
+      "ProcessingJobArn": "arn:aws:sagemaker:us-west-2:560403859723:processing-job/sports-edge-lab-football-validation-20261016-23-v046"
+    },
+    "artifact": {
+      "bytes": 52523,
+      "etag": "\"60e3ce3df4d3b9b5b3916d68b69a9810\"",
+      "sha256": "c446805946e764f44610d4fed05a7a49453dcc968362be87f175d6830f047c3b"
+    },
+    "offline_tests_passed": 95,
+    "paid_provider_requests": 0
+  },
+  "api_calls": [
+    {
+      "service": "s3",
+      "operation": "HeadObject",
+      "status": "success"
+    },
+    {
+      "service": "sagemaker",
+      "operation": "CreateProcessingJob",
+      "status": "success"
+    }
+  ]
+}

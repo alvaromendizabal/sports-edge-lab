@@ -1,6 +1,6 @@
 # Tracking and aligned-video access — 16 October 2026
 
-**Latest update — October 16, 22:40 UTC:** Existing inquiry threads were checked including spam. SkillCorner sent an automated acknowledgment saying it does not sell B2C; there is no granted data or video access. No substantive Genius access reply was found. Full trajectories and aligned-video access remain unconfirmed. No new inquiry, paid trial or contract was activated.
+**Latest update — October 16, 23:17 UTC:** Existing inquiry threads were checked including spam. SkillCorner sent an automated acknowledgment saying it does not sell B2C; there is no granted data or video access. No substantive Genius access reply was found. Full trajectories and aligned-video access remain unconfirmed. No new inquiry, paid trial or contract was activated.
 
 Sports Edge Lab has five target tracks: NFL, NBA, NCAA football, NCAA men's basketball, and NCAA women's basketball. A raw trajectory is a time-indexed sequence of player or ball coordinates. Shot coordinates, play-by-play, tracking-derived statistics, and a video-viewing subscription are different products.
 
