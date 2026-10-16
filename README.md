@@ -18,24 +18,32 @@ The project has **one repository, one SageMaker development space, and one priva
 
 ## Current execution status
 
-**Acquisition is active; model performance has not yet been established.** The initial NFL catalog contains 815 pinned public assets (722,613,027 bytes), previously verified in the private NFL archive. That work and its Git history are preserved. Consolidation has verified 1,663 prior objects (1,451,136,208 bytes) in the central data lake, including metadata and duplicate legacy captures. These object counts do not represent additional unique NFL datasets. The six old project buckets were retired after the archive verification.
+**The initial four-sport public archive collection is complete:** all **4,492 cataloged files / 10,016,351,940 bytes** passed archive byte-integrity checks, with zero failed, deferred or unattempted assets. The original **815-file NFL archive** is retained. Schema, event coverage and historical availability are separate acceptance gates.
 
-A bounded paid-data backfill has started in AWS for all five sports: historical moneylines, spreads and totals, plus CollegeFootballData and CollegeBasketballData statistics. At the **2026-10-16 00:53:30 UTC** snapshot, three acquisition jobs were running: public archive expansion, game-level odds/college statistics, and historical player props. The direct ESPN job stopped on source-access denial with zero captures. The archived [operational status](docs/status/operational-status_20261016.json) and [execution/cost ledger](docs/status/execution-ledger_20261016.json) distinguish completed work, active runs and failures. Successful requests and stored files are not evidence that every source, season, field or pregame timestamp is complete.
+| Track | Newly verified public assets |
+| --- | ---: |
+| NBA | 2,909 |
+| NCAA football | 668 |
+| NCAA men's basketball | 466 |
+| NCAA women's basketball | 449 |
 
-| Workstream | Observed progress at the snapshot | State |
-| --- | --- | --- |
-| Public statistics | 4,492 assets cataloged; 2,643 processed; 817,475,475 bytes downloaded | Running; incomplete |
-| Game odds and college statistics | 5,554 captures; 3,329,493,477 uncompressed response bytes | Running; 22 optional shooting-query errors recorded |
-| Player props | 872 captures; 434,453 market outcomes across returned responses | Running; timestamp and kickoff issues flagged |
-| Direct ESPN capture | 0 captures | Access blocked; stopped without bypass |
+At the **2026-10-16 01:00:21 UTC** snapshot:
 
-These measures describe requests and files, not unique games or model-ready examples. Payload bytes and compressed archive sizes are different measures; they are not summed into a headline dataset size. [Read the snapshot interpretation](docs/status/README.md).
+- Game markets and college statistics: **8,766 captures** — 6,349 odds responses and 2,417 college-statistics responses; running within its budget.
+- Player props: **2,945 captures**; running, with timestamp and kickoff inconsistencies flagged for audit.
+- Targeted shooting recovery: **46 successful responses, zero failures**; recovery remains in progress.
+- Direct ESPN capture: **zero captures**, stopped on source-access denial without bypass.
+- The public collection's final data report passed; its AWS job was still finishing and reported `InProgress`. The three paid acquisition jobs were also running.
 
+Capture counts are responses rather than unique games or model-ready examples. Compressed archive sizes and uncompressed response bytes remain separate measures.
+
+- [Operational snapshot](docs/status/operational-status_20261016.json) · [interpretation](docs/status/README.md)
+- [Cumulative execution and cost ledger](docs/status/execution-ledger_20261016.json)
 - [Paid acquisition scope, budgets and tests](docs/PAID_ACQUISITION.md)
 - [Deployed source versions and hashes](docs/EXECUTION_SOURCE_VERSIONS.md)
 - [Public archive source inventory](docs/SOURCE_INVENTORY_20261016.md)
 - [Direct original-source capture](docs/ORIGINAL_SOURCE_CAPTURE.md)
-- [Shared research and acceptance protocol](docs/RESEARCH_PROTOCOL.md)
+- [Shared research protocol](docs/RESEARCH_PROTOCOL.md)
 - [Verified consolidation record](docs/CONSOLIDATION_20261016.md)
 - [Machine-readable track configuration](config/tracks.json)
 - [Preserved original NFL setup](docs/history/NFL_SETUP_20261015.md)

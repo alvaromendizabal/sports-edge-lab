@@ -1,10 +1,10 @@
 {
-  "as_of_utc": "2026-10-16T00:53:30Z",
+  "as_of_utc": "2026-10-16T01:00:21.699683+00:00",
   "project": "sports-edge-lab",
   "counts": {
-    "InProgress": 3,
-    "Completed": 4,
-    "Failed": 6
+    "InProgress": 4,
+    "Failed": 6,
+    "Completed": 4
   },
   "processing_rate_usd_hour": 0.461,
   "rate_source": "AWS Pricing GetProducts USW2-Processing:ml.m5.2xlarge 2026-10-16",
@@ -17,9 +17,17 @@
     "Storage and API requests",
     "Final AWS billing reconciliation pending"
   ],
-  "new_acquisition_runtime_limit_compute_estimate_usd": 2.8044,
+  "new_acquisition_runtime_limit_compute_estimate_usd": 2.88125,
   "is_billing_statement": false,
   "jobs": [
+    {
+      "ProcessingJobName": "sports-edge-lab-shooting-recovery-20261016-v010",
+      "ProcessingJobStatus": "InProgress",
+      "ProcessingStartTime": "2026-10-16T00:57:36.013000+00:00",
+      "CreationTime": "2026-10-16T00:56:58.533000+00:00",
+      "instance_type": "ml.m5.2xlarge",
+      "max_seconds": 600
+    },
     {
       "ProcessingJobName": "sports-edge-lab-original-espn-20261016-v009",
       "ProcessingJobStatus": "Failed",
@@ -37,7 +45,8 @@
       "ProcessingJobStatus": "InProgress",
       "CreationTime": "2026-10-16T00:47:47.616000+00:00",
       "instance_type": "ml.m5.2xlarge",
-      "max_seconds": 7200
+      "max_seconds": 7200,
+      "ProcessingStartTime": "2026-10-16T00:48:32.137000+00:00"
     },
     {
       "ProcessingJobName": "sports-edge-lab-public-archive-20261016-v007",
@@ -167,6 +176,8 @@
   "notes": [
     "Original ESPN v009 failed closed on HTTP access denial: zero source responses, no bypass attempted; its compact return and status are preserved.",
     "Public v007 launched revision has5 automatic tests; current repository revision adds sixth integration test.",
-    "Two migration failures repaired; all1663 objects verified before6 source bucket deletions."
+    "Two migration failures repaired; all1663 objects verified before6 source bucket deletions.",
+    "Public v007 final archive report all_ok=true: 4,492 downloaded, zero failures, 10,016,351,940 bytes verified. AWS job still InProgress at last read.",
+    "Targeted shooting recovery v010 is additionally limited to 2,000 statistics calls and 600 AWS runtime seconds; 46 successful responses at 01:00:15 UTC."
   ]
 }
