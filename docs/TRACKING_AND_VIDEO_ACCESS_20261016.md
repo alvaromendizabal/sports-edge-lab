@@ -1,5 +1,7 @@
 # Tracking and aligned-video access — 16 October 2026
 
+**Latest update, October 16 at 20:59 UTC:** ACB data and its collector have been deleted. V011 remains Stopping; v038 has not launched. [Current backlog, removal evidence and collection endpoint](DOWNLOAD_CLOSEOUT_20261016.md) supersede older status observations below.
+
 Sports Edge Lab has five target tracks: NFL, NBA, NCAA football, NCAA men's basketball, and NCAA women's basketball. A raw trajectory is a time-indexed sequence of player or ball coordinates. Shot coordinates, play-by-play, tracking-derived statistics, and a video-viewing subscription are different products.
 
 Two nonbinding access inquiries have been sent: SkillCorner by email and Genius Sports through its official sales form. No paid service or new contract was activated. Availability, license scope, current latency, and prices await provider replies. This document records access research; acquisition receipts and the measured S3 inventory determine what is actually downloaded.
@@ -15,9 +17,7 @@ Two nonbinding access inquiries have been sent: SkillCorner by email and Genius 
 
 ## Public research data
 
-**Scope correction (October 16, 2026): the ACB sample is unrelated to the five target tracks. It is excluded from active coverage and modeling; no further ACB downloads are planned. The acquisition details below remain historical audit evidence only.**
-
-[SkillCorner's official basketball repository](https://github.com/SkillCorner/opendata-basketball) contains ten Spanish Liga ACB games from the 2025–26 season, plus game metadata and model-derived event annotations. It is a separate transfer-research source, not NBA or NCAA coverage. Its [primer](https://github.com/SkillCorner/opendata-basketball/blob/main/docs/PRIMER.md) documents 25 Hz trajectories, player XY (player Z currently zero), ball XYZ, feet, and shared frame/timestamp references. The manifest lists no video assets. The [repository license](https://github.com/SkillCorner/opendata-basketball/blob/main/LICENSE) is MIT; retain it and the source README with the snapshot. Do not infer video rights or broader commercial-feed rights from this repository license. The bounded AWS pilot completed at **19:54:51 UTC on October 16, 2026** after 16 tests: **32 raw files / 394,736,881 stored bytes for all ten selected games**, with zero errors and no pending assets. Its actual game dates span October 11, 2025–May 29, 2026; the retrieval date is separate. [Acquisition evidence](status/tracking29_report_20261016.json) preserves the pinned scope.
+The unrelated ACB sample and acquisition tooling were deleted at the user’s request. It supplies no project data.
 
 The [NFL's official Big Data Bowl repository](https://github.com/nfl-football-ops/Big-Data-Bowl) retains one 2017 game with tracking and linking tables. It is not a current feed. The [NFL Big Data Bowl program](https://operations.nfl.com/programs-initiatives/innovation/big-data-bowl) and its linked Kaggle competition are research access routes with competition-specific rules. The user's separate competition workflow must not be treated as a blanket commercial Sports Edge Lab license. Preserve that separation until the applicable terms and transfer rights are verified. A current free official NBA/NCAA trajectory-plus-video export was not established by this review.
 

@@ -1,5 +1,7 @@
 # Current football acquisition and project coverage — October 16, 2026
 
+**Latest update, October 16 at 20:59 UTC:** ACB data and its collector have been deleted. V011 remains Stopping; v038 has not launched. [Current backlog, removal evidence and collection endpoint](DOWNLOAD_CLOSEOUT_20261016.md) supersede older status observations below.
+
 **93,319 in-scope raw content files / 17.26 GB are verified in the shared archive.**
 The content-only S3 scan ran on **October 16, 20:36:28–20:37:35 UTC**, counting
 **17,259,029,672 stored bytes**. It excludes receipts, indexes, code, return
@@ -19,8 +21,8 @@ scan, so this is an observation window rather than an atomic snapshot.
 The previous 20:03 UTC report included 32 ACB content files / 394,736,881 bytes.
 Its comparable in-scope baseline is 85,385 files / 16,846,793,927 bytes. Growth
 since that corrected baseline is **7,934 files / 412,235,745 bytes**. Historical
-receipts remain unchanged. ACB is excluded from project coverage and modeling;
-no further ACB collection is planned.
+mixed inventory receipts remain historical observations. ACB raw data, dedicated
+receipts and collector were deleted on October 16; the removal is verified separately.
 
 File counts are not unique games, complete seasons or training examples.
 Different revisions and statistical families can overlap.

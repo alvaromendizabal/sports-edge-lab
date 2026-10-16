@@ -1,0 +1,197 @@
+{
+  "scope": "User-requested removal of all ACB acquisition data and current collector",
+  "s3": {
+    "status": "success",
+    "stdout": "",
+    "return_value": {
+      "bucket": "sagemaker-sports-edge-lab-560403859723-us-west-2",
+      "started_at": "2026-10-16T20:57:52.242291+00:00",
+      "prefixes": [
+        {
+          "prefix": "shared/raw/skillcorner-acb-research/",
+          "deleted_objects_or_versions": 92,
+          "deleted_bytes": 394813363,
+          "receipts": [
+            {
+              "deleted": 92,
+              "errors": []
+            }
+          ],
+          "remaining_current_objects": 0,
+          "remaining_versions": 0,
+          "remaining_delete_markers": 0,
+          "remaining_multipart_uploads": 0
+        },
+        {
+          "prefix": "shared/acquisition/open-tracking/",
+          "deleted_objects_or_versions": 31,
+          "deleted_bytes": 274819,
+          "receipts": [
+            {
+              "deleted": 31,
+              "errors": []
+            }
+          ],
+          "remaining_current_objects": 0,
+          "remaining_versions": 0,
+          "remaining_delete_markers": 0,
+          "remaining_multipart_uploads": 0
+        },
+        {
+          "prefix": "infrastructure/code/open-tracking-20261016-v029/",
+          "deleted_objects_or_versions": 1,
+          "deleted_bytes": 14335,
+          "receipts": [
+            {
+              "deleted": 1,
+              "errors": []
+            }
+          ],
+          "remaining_current_objects": 0,
+          "remaining_versions": 0,
+          "remaining_delete_markers": 0,
+          "remaining_multipart_uploads": 0
+        }
+      ],
+      "completed_at": "2026-10-16T20:58:01.162380+00:00"
+    },
+    "api_calls": [
+      {
+        "service": "s3",
+        "operation": "ListObjectVersions",
+        "status": "success",
+        "n_items": {
+          "Versions": 92
+        }
+      },
+      {
+        "service": "s3",
+        "operation": "DeleteObjects",
+        "status": "success",
+        "n_items": {
+          "Deleted": 92
+        }
+      },
+      {
+        "service": "s3",
+        "operation": "ListObjectVersions",
+        "status": "success"
+      },
+      {
+        "service": "s3",
+        "operation": "ListObjectsV2",
+        "status": "success"
+      },
+      {
+        "service": "s3",
+        "operation": "ListMultipartUploads",
+        "status": "success"
+      },
+      {
+        "service": "s3",
+        "operation": "ListObjectVersions",
+        "status": "success",
+        "n_items": {
+          "Versions": 31
+        }
+      },
+      {
+        "service": "s3",
+        "operation": "DeleteObjects",
+        "status": "success",
+        "n_items": {
+          "Deleted": 31
+        }
+      },
+      {
+        "service": "s3",
+        "operation": "ListObjectVersions",
+        "status": "success"
+      },
+      {
+        "service": "s3",
+        "operation": "ListObjectsV2",
+        "status": "success"
+      },
+      {
+        "service": "s3",
+        "operation": "ListMultipartUploads",
+        "status": "success"
+      },
+      {
+        "service": "s3",
+        "operation": "ListObjectVersions",
+        "status": "success",
+        "n_items": {
+          "Versions": 1
+        }
+      },
+      {
+        "service": "s3",
+        "operation": "DeleteObjects",
+        "status": "success",
+        "n_items": {
+          "Deleted": 1
+        }
+      },
+      {
+        "service": "s3",
+        "operation": "ListObjectVersions",
+        "status": "success"
+      },
+      {
+        "service": "s3",
+        "operation": "ListObjectsV2",
+        "status": "success"
+      },
+      {
+        "service": "s3",
+        "operation": "ListMultipartUploads",
+        "status": "success"
+      }
+    ]
+  },
+  "cloudwatch": {
+    "status": "success",
+    "stdout": "",
+    "return_value": {
+      "deleted_stream": "sports-edge-lab-open-tracking-20261016-v029/algo-1-1792180339",
+      "remaining_streams": 0,
+      "observed_at": "2026-10-16T20:59:02.268124+00:00"
+    },
+    "api_calls": [
+      {
+        "service": "logs",
+        "operation": "DeleteLogStream",
+        "status": "success"
+      },
+      {
+        "service": "logs",
+        "operation": "DescribeLogStreams",
+        "status": "success",
+        "n_items": {
+          "logStreams": 0
+        }
+      }
+    ]
+  },
+  "removed_current_repository_paths": [
+    "docs/status/build_open_tracking_v029_20261016.json",
+    "docs/status/open_tracking_discovery_20261016.json",
+    "docs/status/tracking29_launch_20261016.json",
+    "docs/status/tracking29_report_20261016.json",
+    "docs/status/tracking29_tests_20261016.json",
+    "tools/open_tracking_v029/README.md",
+    "tools/open_tracking_v029/UPSTREAM_LICENSE.txt",
+    "tools/open_tracking_v029/acquire_open_tracking.py",
+    "tools/open_tracking_v029/source_manifest.json"
+  ],
+  "historical_metadata": "Prior Git commits, mixed historical inventory/cost audit records and the AWS processing-job metadata remain; they are not active datasets or collectors.",
+  "removed_local_paths": [
+    "turn5_open_tracking",
+    "turn6_publish/open_tracking_README.md",
+    "turn5_audit/tracking29_launch.json",
+    "turn5_audit/tracking29_report.json",
+    "turn5_audit/tracking29_tests.json"
+  ]
+}

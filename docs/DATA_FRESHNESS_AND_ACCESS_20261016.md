@@ -1,5 +1,7 @@
 # Data freshness and access — current update
 
+**Latest update, October 16 at 20:59 UTC:** ACB data and its collector have been deleted. V011 remains Stopping; v038 has not launched. [Current backlog, removal evidence and collection endpoint](DOWNLOAD_CLOSEOUT_20261016.md) supersede older status observations below.
+
 ## Fresh football data captured this turn
 
 | Source | Verified content | Actual data recency |

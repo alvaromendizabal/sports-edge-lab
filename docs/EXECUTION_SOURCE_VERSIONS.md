@@ -1,5 +1,7 @@
 # Execution source versions
 
+**Latest update, October 16 at 20:59 UTC:** ACB data and its collector have been deleted. V011 remains Stopping; v038 has not launched. [Current backlog, removal evidence and collection endpoint](DOWNLOAD_CLOSEOUT_20261016.md) supersede older status observations below.
+
 A running AWS Processing job keeps the source uploaded at launch. Updating the repository does not hot-patch that running process. Preserve its exact source alongside the current implementation so receipts remain reproducible.
 
 | Source | Version and use | Bytes | SHA-256 |
@@ -101,17 +103,15 @@ The current v026 snapshot collector keeps its engine isolated under
 It distinguishes fresh retrieval times from event and quote-update timestamps,
 uses a conditional S3 lease against overlap, and enforces per-run provider
 budgets and a remaining-quota reserve. The v027 collector captures original
-NFL HTML; v029 acquires the pinned ten-game SkillCorner ACB research sample.
+NFL HTML. The unrelated v029 collector and its ACB data were deleted at the user’s request.
 
 | Exact source | SHA-256 | Mandatory AWS tests |
 | --- | --- | ---: |
 | [Current v026 entrypoint](../tools/current_snapshot_v026/src/__main__.py) | `e3ec320fa2c78609084695c5fce0678c4ac920b404b7a97ee0bca2d3b43284c5` | 30, including engine |
 | [Current v026 engine](../tools/current_snapshot_v026/src/acquire_paid_data.py) | `2c2e51cc33133aa03c1f122b3b9968029cfe1e7a2584abd2a707713f20d6bb3b` | Included above |
 | [Original NFL v027](../tools/history/acquire_nfl_current_v027_launched.py) | `93110c43e8222bd77b2fc92a2f0a3d9e8dc8f143d208efdf19c1dce6e079f29d` | 14 |
-| [Open tracking v029](../tools/open_tracking_v029/acquire_open_tracking.py) | `ed25ba4face7882185e0ac7a06099bdb3e075d3dc27260cd4d1361e57098ae90` | 16 |
 
-Build manifests retain executable hashes. V029 embeds its pinned source
-manifest and upstream MIT license. V030 reuses the exact v020 weather artifact
+Build manifests retain executable hashes for retained sources. V030 reuses the exact v020 weather artifact
 and existing source caches; it introduces no new collector source.
 
 The first NFL run captured 30 roster pages because its profile-link parser

@@ -111,12 +111,11 @@ jobs:
         run: |
           python -m py_compile tools/current_snapshot_v026/src/__main__.py tools/current_snapshot_v026/src/acquire_paid_data.py
           python tools/current_snapshot_v026/src/__main__.py --self-test
-      - name: Run original current NFL and tracking acquisition guards
+      - name: Run original current NFL acquisition guards
         run: |
-          python -m py_compile tools/acquire_nfl_current.py tools/history/acquire_nfl_current_v027_launched.py tools/open_tracking_v029/acquire_open_tracking.py
+          python -m py_compile tools/acquire_nfl_current.py tools/history/acquire_nfl_current_v027_launched.py
           python tools/acquire_nfl_current.py --self-test
           python tools/history/acquire_nfl_current_v027_launched.py --self-test
-          python tools/open_tracking_v029/acquire_open_tracking.py --self-test
 
       - name: Run current football coverage and odds-resume guards
         run: |
