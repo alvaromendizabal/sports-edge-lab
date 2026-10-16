@@ -1,4 +1,4 @@
-name: NFL Edge Lab - Ingestion Guardrails
+name: Sports Edge Lab - Ingestion Guardrails
 on:
   push:
     branches: [main]
@@ -34,4 +34,24 @@ jobs:
           assert all(a['url'].startswith('https://') for a in assets)
           assert all(int(a['bytes']) >= 0 for a in assets)
           print('Public catalog guardrails passed:', len(assets), 'assets')
+          PY
+      - name: Compile shared acquisition utilities
+        run: python -m py_compile tools/acquire_paid_data.py tools/test_paid_acquisition.py tools/consolidate_archive.py
+      - name: Run paid acquisition safety and budget guards
+        run: python tools/acquire_paid_data.py --self-test
+      - name: Run offline paid acquisition integration checks
+        run: python -m unittest discover -s tools -p 'test_paid_acquisition.py' -v
+      - name: Validate the five sport tracks
+        run: |
+          python - <<'PY'
+          import json
+          from pathlib import Path
+          c = json.loads(Path('config/tracks.json').read_text())
+          assert c['space'] == 'sports-edge-lab-dev'
+          assert c['repository'] == 'alvaromendizabal/sports-edge-lab'
+          assert {t['id'] for t in c['tracks']} == {'nfl', 'nba', 'ncaaf', 'ncaam', 'ncaaw'}
+          assert len({t['odds_api_sport_key'] for t in c['tracks']}) == 5
+          assert all(t['archive_prefix'] == 'tracks/' + t['id'] + '/' for t in c['tracks'])
+          assert all(Path('tracks', t['id'], 'README.md').exists() for t in c['tracks'])
+          print('Single-workspace five-sport configuration passed')
           PY

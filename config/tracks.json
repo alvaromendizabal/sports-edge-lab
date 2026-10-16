@@ -1,0 +1,115 @@
+{
+  "schema_version": "sports-edge-lab-tracks-v1",
+  "region": "us-west-2",
+  "repository": "alvaromendizabal/sports-edge-lab",
+  "space": "sports-edge-lab-dev",
+  "data_bucket": "sagemaker-sports-edge-lab-560403859723-us-west-2",
+  "shared_prefix": "shared/",
+  "tracks": [
+    {
+      "id": "nfl",
+      "name": "NFL",
+      "odds_api_sport_key": "americanfootball_nfl",
+      "archive_prefix": "tracks/nfl/",
+      "phase": "acquisition_and_audit",
+      "research_focus": "Quarterback-adjusted team strength, EPA-based matchups, calibrated win probabilities, point margins and game totals.",
+      "model_sequence": [
+        "regularized win-probability classifier",
+        "opponent-adjusted team and QB ratings",
+        "joint score and margin distributions",
+        "usage-conditioned player props after the game-level audit"
+      ],
+      "feature_families": [
+        "rolling EPA and success rates",
+        "quarterback availability and prior performance",
+        "opponent-adjusted offense and defense",
+        "rest, travel and forecast weather"
+      ],
+      "temporal_boundary": "Realized starters, observed game weather and final statistics are labels or postgame records unless a separate pre-decision source establishes availability."
+    },
+    {
+      "id": "nba",
+      "name": "NBA",
+      "odds_api_sport_key": "basketball_nba",
+      "archive_prefix": "tracks/nba/",
+      "phase": "acquisition_and_audit",
+      "research_focus": "Player-minute and usage distributions, rotation-aware game forecasts, pace, spreads and totals.",
+      "model_sequence": [
+        "player minutes and availability distributions",
+        "lineup-adjusted usage and rate models",
+        "correlated player-stat simulations",
+        "game score and margin distributions"
+      ],
+      "feature_families": [
+        "recent minutes and rotations",
+        "lineup combinations and role changes",
+        "pace and possession efficiency",
+        "schedule density, rest and travel"
+      ],
+      "temporal_boundary": "Final starting lineups, actual minutes and late injury updates must not enter a forecast produced before they were available. Player props require a separate event-market backfill."
+    },
+    {
+      "id": "ncaaf",
+      "name": "NCAA football",
+      "odds_api_sport_key": "americanfootball_ncaaf",
+      "archive_prefix": "tracks/ncaaf/",
+      "phase": "acquisition_and_audit",
+      "research_focus": "Opponent-adjusted play efficiency, quarterback and roster transitions, recruiting and schedule-aware margin forecasts.",
+      "model_sequence": [
+        "hierarchical team offense and defense ratings",
+        "win-probability classifier",
+        "point-margin and total distributions",
+        "team and quarterback scenario models"
+      ],
+      "feature_families": [
+        "opponent-adjusted EPA/PPA",
+        "QB continuity and depth",
+        "recruiting and transfers with publication dates",
+        "coaching changes and schedule strength"
+      ],
+      "temporal_boundary": "End-of-season ratings, revised recruiting assessments and current rosters cannot stand in for the values available in a historical forecast week."
+    },
+    {
+      "id": "ncaam",
+      "name": "NCAA men's basketball",
+      "odds_api_sport_key": "basketball_ncaab",
+      "archive_prefix": "tracks/ncaam/",
+      "phase": "acquisition_and_audit",
+      "research_focus": "Possession efficiency, tempo, player availability and calibrated game-margin distributions across regular-season and tournament play.",
+      "model_sequence": [
+        "opponent-adjusted possession ratings",
+        "point-margin and total distributions",
+        "calibrated win-probability ensemble",
+        "tournament simulations driven by game-level distributions"
+      ],
+      "feature_families": [
+        "offensive and defensive efficiency",
+        "tempo and shot profile",
+        "player roles and roster continuity",
+        "rest, venue and schedule strength"
+      ],
+      "temporal_boundary": "CollegeBasketballData season labels use ending years. Post-tournament ratings and retrospectively corrected injury data require explicit vintage checks. Existing March Madness research remains a separate project."
+    },
+    {
+      "id": "ncaaw",
+      "name": "NCAA women's basketball",
+      "odds_api_sport_key": "basketball_wncaab",
+      "archive_prefix": "tracks/ncaaw/",
+      "phase": "acquisition_and_audit",
+      "research_focus": "Player-adjusted team strength, possession efficiency, tempo and roster continuity with explicit separation between long statistical history and shorter odds history.",
+      "model_sequence": [
+        "hierarchical team and player ratings",
+        "point-margin and total distributions",
+        "calibrated win-probability classifier",
+        "tournament simulations"
+      ],
+      "feature_families": [
+        "possession efficiency and tempo",
+        "player role and availability",
+        "roster continuity and matchup depth",
+        "venue, rest and schedule strength"
+      ],
+      "temporal_boundary": "Market evaluation begins only where timestamped quotes are actually present; the planned provider starting date is November 12, 2024. Older statistics do not create older market quotes."
+    }
+  ]
+}
