@@ -18,74 +18,101 @@ The project has **one repository, one SageMaker development space, and one priva
 
 ## Current execution status
 
-**85,417 raw content files / 17.24 GB are verified in the shared archive.**
-The content-only S3 scan ran on **October 16, 20:02:52–20:03:45 UTC**.
-It counted **17,241,530,808 stored bytes**, excluding receipts, request indexes,
-source discovery, code, return bundles and duplicate legacy archives. All raw
-objects were classified. Live collectors wrote during the paginated scan;
-this is an observation window, not an atomic snapshot.
+**93,319 in-scope raw content files / 17.26 GB are verified in the shared archive.**
+The content-only S3 scan ran on **October 16, 20:36:28–20:37:35 UTC**, counting
+**17,259,029,672 stored bytes**. It excludes receipts, indexes, code, return
+bundles, derived tables, legacy duplicates and the entire unrelated ACB prefix.
+There are zero unclassified raw objects. Collectors wrote during the paginated
+scan, so this is an observation window rather than an atomic snapshot.
 
-| Track | Stored content files | Stored content GB |
+| Track | Stored content files | Stored GB |
 | --- | ---: | ---: |
-| NFL | 11,564 | 0.808 |
-| NBA | 20,688 | 1.936 |
-| NCAA football | 20,914 | 3.165 |
-| NCAA men's basketball | 22,572 | 5.139 |
+| NFL | 11,579 | 0.816 |
+| NBA | 22,962 | 1.945 |
+| NCAA football | 22,178 | 3.191 |
+| NCAA men's basketball | 26,796 | 5.296 |
 | NCAA women's basketball | 5,726 | 2.495 |
-| Shared weather and external tracking research | 3,953 | 3.699 |
+| Shared weather | 4,078 | 3.517 |
 
-The archive grew by **14,236 files / 2.85 GB** since the
-19:24 UTC scan, and by **39,348 files / 4.82 GB** since the
-18:10 UTC baseline. File counts are not unique games, API captures, complete
-seasons or approved training rows; source families and revisions can overlap.
-Stored bytes are separate from uncompressed response-byte counters.
+The previous 20:03 UTC report included 32 ACB content files / 394,736,881 bytes.
+Its comparable in-scope baseline is 85,385 files / 16,846,793,927 bytes. Growth
+since that corrected baseline is **7,934 files / 412,235,745 bytes**. Historical
+receipts remain unchanged. ACB is excluded from project coverage and modeling;
+no further ACB collection is planned.
 
-Fresh current odds and statistics were captured at **19:50–19:51 UTC**. The
-58-response run returned game markets for **24 NFL, 46 NBA and 73 NCAA football
-events**, plus 31 populated prop responses across those tracks. NCAA men's and
-women's current odds were empty at this observation. Fresh CFBD season data and
-CBBD November schedules are stored; actual returned dates and empty partitions
-are recorded in the [freshness report](docs/DATA_FRESHNESS_AND_ACCESS_20261016.md).
+File counts are not unique games, complete seasons or training examples.
+Different revisions and statistical families can overlap.
 
-A verified recurring schedule now refreshes current data **every six hours**,
-starting **tonight at 8:05 p.m. Pacific / October 17, 03:05 UTC**. Its fixed
-one-month ceiling is 60,000 odds credits and 12,000 statistics calls, with
-per-run bounds, quota reserve and overlap prevention. This is an enabled
-schedule; the first future scheduled execution has not yet run.
+## Fresh football data captured this turn
 
-The measured archive contains **5,326 public archive files**, **76,074 paid
-payload files**, six provider canaries, **24 original NBA injury PDFs**, **34
-original NFL pages**, **1,438 NWS JSON files**, **2,483 NOAA forecast fields**,
-and **32 SkillCorner ACB research files**. The ACB sample covers ten historical
-Spanish league games with original trajectories, provider event annotations
-and identity metadata; it adds no NBA/NCAA tracking or raw video.
+| Source | Verified content | Actual data recency |
+| --- | --- | --- |
+| NFL public play-by-play | 14,031 rows, 80 games; all 80 completed games in the current schedule have PBP; no unmatched game IDs | Game dates through October 15, 2026; downloaded at 20:34 UTC October 16 |
+| Direct CFBD FBS plays and drives | 22,151 plays and 2,888 drives across 124 completed games in Weeks 5–7; every completed FBS schedule game in those windows has plays, drives, team/player box and advanced-stat rows | Latest covered kickoff October 16, 00:00 UTC, corresponding to Thursday evening in the US; downloaded 20:31–20:32 UTC |
+| Current game markets | 24 NFL, 74 NCAAF and 46 NBA events with outcomes; 32 populated player-prop responses across these tracks | Fresh observation 20:22–20:23 UTC; provider quote times remain distinct |
+| Big Ten football availability | 715 normalized player-status rows across 64 team-games; 154 rows across 14 team-games for October 16–17 | Public rendered archive observed October 16; source publication timestamps unavailable |
+| NFL official roster/injury pages | All 32 team roster pages, plus Week 6 injury and schedule pages | Earlier same-day capture; structured extraction and report-time audit remain pending |
 
-The NFL current capture now includes all **32 team rosters** plus Week 6 injury
-and schedule pages, after a targeted two-roster recovery. Extraction and
-publication-time validation remain pending. The broader historical gap run
-continues. College shooting reached **958 positive responses / 71,593 summary
-rows** before its runtime bound; a bounded replay is now active, reusing those
-958 responses and adding two new captures in its first observed heartbeat.
-The NOAA continuation also remains active at the recorded metadata check.
+The CFBD job made 21 subscription-quota requests, with no failures, and also
+captured current player usage and three weekly game-weather responses. The
+current odds/statistics snapshot made 58 successful captures using 178 odds
+credits and 12 statistics requests; five responses were empty. NCAA men's and
+women's current odds remained empty. These counters represent subscription
+allowances, not separately purchased API calls or dollar charges.
 
+The Big Ten capture is a **rendered-page extraction**, not an original PDF or
+an archive of verified publication-time versions. Four rows with ambiguous
+missing columns were preserved in raw extraction and quarantined from the
+normalized table. A missing game-day status stays null, never "available".
+Player identity joins and historical point-in-time eligibility remain unverified.
+SEC discovery did not yield downloadable report links; it is still a gap.
 
-Nonbinding tracking/video access inquiries were sent to **SkillCorner and
-Genius Sports**. Neither request establishes a paid license or delivered
-commercial feed. League-wide NFL/NBA/NCAA trajectories and aligned video remain
-access gaps. The [access record](docs/TRACKING_AND_VIDEO_ACCESS_20261016.md)
-distinguishes raw trajectories, provider annotations and video rights.
+CFBD game-box endpoints also returned non-FBS games; they are retained in raw
+responses but excluded from the 124-game FBS coverage denominator. Matching
+game IDs proves game representation, not that every play or nested player
+statistic is complete. Fresh postgame statistics are not pregame features for
+their own games.
 
-The separate American Conference availability capture remains scheduled for
-**6:05 p.m. Pacific today / October 17, 01:05 UTC**, within the source's access
-window. Future scheduled images are not counted as downloaded.
+## Continuations and completed backfills
 
-- [Latest content inventory](docs/status/content_inventory_20261016T2003Z.json) · [freshness, current coverage and access](docs/DATA_FRESHNESS_AND_ACCESS_20261016.md)
-- [Data coverage and remaining gaps](docs/DATA_COVERAGE_AND_NEXT_ACQUISITION.md)
-- [Earlier expanded acquisition milestone](docs/EXPANDED_DATA_COLLECTION_20261016.md)
-- [Shared research protocol](docs/RESEARCH_PROTOCOL.md)
-- [Exact deployed source versions and hashes](docs/EXECUTION_SOURCE_VERSIONS.md)
-- [Verified one-repository consolidation](docs/CONSOLIDATION_20261016.md)
-- [Machine-readable five-track configuration](config/tracks.json)
+- **Weather v030 completed:** all 440 planned forecast initialization/lead
+  pairs for the selected 2024 football scope are processed; 1,037 new GRIB
+  fields were downloaded. The final inventory has 2,640 forecast fields and
+  1,438 NWS JSON objects. This is not all historical weather or a validated
+  venue-level feature table.
+- **Shooting v032 completed:** 336 new responses and 958 cache reuses processed
+  all 1,294 planned queries. Across that plan, 1,256 responses had records,
+  38 were empty and 88,554 summary rows were observed. Zero planned queries
+  remain; those totals include reused data.
+- **Historical v011 stop requested after repeated CBBD HTTP 429:** AWS still reported Stopping at 20:44 UTC. At the preserved
+  20:35:20 UTC checkpoint it had 37,443 captures, 70 final request failures and
+  351 retry incidents. The checkpoint is not a final stop-time count. Existing
+  successful payloads and indexes remain available.
+- **Odds-only v037 failed before provider calls:** its worker role lacks
+  SageMaker DescribeProcessingJob permission. Zero API requests/credits were
+  consumed, and its return ZIP was saved. V038 removes this worker-side
+  management API call and instead requires an embedded control-plane receipt
+  proving v011 has terminated. V038 is prepared, not launched while v011 is
+  still Stopping. Its limits are no college-statistics requests, one source
+  request per second, 200,000-credit ceiling, 30-minute application limit and
+  35-minute AWS limit. It requires v011 to be terminal, checks the live quota
+  reserve and stops its provider on 401/402/403/429. Its budget fits within the
+  unused v011 odds ceiling. No resumed historical acquisition is claimed until a successful runtime
+  receipt exists.
+
+The existing six-hour current snapshot schedule remains configured, with its
+first scheduled execution at **October 17, 03:05 UTC (8:05 p.m. Pacific today)**.
+It refreshes current odds/stats; it does not continuously refresh every raw
+football play or conference report. The American Conference availability
+one-off remains scheduled for **October 17, 01:05 UTC (6:05 p.m. Pacific)**;
+future captures are not counted as downloaded. This turn did not change either
+schedule or create a new data subscription.
+
+The next priorities are validated NFL/NCAAF prediction tables, broader current
+availability, missing historical prices, and licensed in-scope tracking/video.
+See [the current football readiness and gap report](docs/FOOTBALL_READINESS_20261016.md),
+[data coverage](docs/DATA_COVERAGE_AND_NEXT_ACQUISITION.md), and
+[source identities](docs/EXECUTION_SOURCE_VERSIONS.md).
 
 ## AWS workspace
 

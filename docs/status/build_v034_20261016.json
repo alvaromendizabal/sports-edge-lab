@@ -1,0 +1,12 @@
+{
+  "version": "v034",
+  "artifact": "sports_edge_lab_football_current_v034_20261016.pyz",
+  "sha256": "ef6267e093a100d232d83dca6380109655c787cea3c64ebc213ee639cc34c736",
+  "tests": 35,
+  "source_hashes": {
+    "current_capture.py": "e3ec320fa2c78609084695c5fce0678c4ac920b404b7a97ee0bca2d3b43284c5",
+    "__main__.py": "e4eb6971ed6b1ea64823cf169dcc67d5ea62826036033c514ea64097ad2c7510",
+    "acquire_paid_data.py": "2c2e51cc33133aa03c1f122b3b9968029cfe1e7a2584abd2a707713f20d6bb3b",
+    "availability_seed.json": "823058536247d7209490ca6949e2a26f98aa458df57ecd9a74c87906b59252b7"
+  }
+}

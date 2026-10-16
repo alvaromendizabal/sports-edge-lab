@@ -1,161 +1,95 @@
-# Data freshness and tracking access — 16 October 2026
+# Data freshness and access — current update
 
-A new download timestamp does not make a historical observation current. This
-report keeps three clocks separate: when Sports Edge Lab captured a response,
-when the source published or updated it, and when the underlying game, report,
-or forecast is valid. An S3 modification timestamp is storage evidence only.
+## Fresh football data captured this turn
 
-## Latest current-provider snapshot
+| Source | Verified content | Actual data recency |
+| --- | --- | --- |
+| NFL public play-by-play | 14,031 rows, 80 games; all 80 completed games in the current schedule have PBP; no unmatched game IDs | Game dates through October 15, 2026; downloaded at 20:34 UTC October 16 |
+| Direct CFBD FBS plays and drives | 22,151 plays and 2,888 drives across 124 completed games in Weeks 5–7; every completed FBS schedule game in those windows has plays, drives, team/player box and advanced-stat rows | Latest covered kickoff October 16, 00:00 UTC, corresponding to Thursday evening in the US; downloaded 20:31–20:32 UTC |
+| Current game markets | 24 NFL, 74 NCAAF and 46 NBA events with outcomes; 32 populated player-prop responses across these tracks | Fresh observation 20:22–20:23 UTC; provider quote times remain distinct |
+| Big Ten football availability | 715 normalized player-status rows across 64 team-games; 154 rows across 14 team-games for October 16–17 | Public rendered archive observed October 16; source publication timestamps unavailable |
+| NFL official roster/injury pages | All 32 team roster pages, plus Week 6 injury and schedule pages | Earlier same-day capture; structured extraction and report-time audit remain pending |
 
-The v026 AWS run passed 30 tests, then captured **58 responses** from
-**19:50:43–19:51:39 UTC** on October 16: 53 nonempty responses and five empty
-arrays, with zero request failures. Usage was **176 odds credits and 12 college
-statistics calls**. The lease was released with its matching ETag. The
-[aggregate freshness summary](status/current26_freshness_summary_20261016.json)
-contains no raw prices, player records or event identities.
+The CFBD job made 21 subscription-quota requests, with no failures, and also
+captured current player usage and three weekly game-weather responses. The
+current odds/statistics snapshot made 58 successful captures using 178 odds
+credits and 12 statistics requests; five responses were empty. NCAA men's and
+women's current odds remained empty. These counters represent subscription
+allowances, not separately purchased API calls or dollar charges.
 
-| Current track | Games with moneyline/spread/total outcomes | Of those, upcoming within seven days | Prop responses with outcomes / captured | Actual event-time range in game-odds response (UTC) |
-| --- | ---: | ---: | ---: | --- |
-| NFL | 24 | 14 | 12 / 12 | October 18, 13:30 – October 25, 20:25 |
-| NBA | 46 | 16 | 8 / 12 | October 20, 19:00 – December 26, 03:30 |
-| NCAA football | 73 | 59 | 11 / 12 | October 16, 23:30 – October 25, 02:00 |
-| NCAA men | 0 | 0 | No eligible events returned | Empty current odds and event arrays |
-| NCAA women | 0 | 0 | Not included in prop scope | Empty current odds and event arrays |
+The Big Ten capture is a **rendered-page extraction**, not an original PDF or
+an archive of verified publication-time versions. Four rows with ambiguous
+missing columns were preserved in raw extraction and quarantined from the
+normalized table. A missing game-day status stays null, never "available".
+Player identity joins and historical point-in-time eligibility remain unverified.
+SEC discovery did not yield downloadable report links; it is still a gap.
 
-The table describes the returned snapshot, not permanent market coverage. The
-36 prop responses include five event objects with no offered outcomes; those
-are not called populated prop markets. The 143 game-market events and 31
-populated prop responses overlap and must not be added as unique games.
-Across priced game and prop responses, observed quote-update times ranged from
-**19:46:28 to 19:50:59 UTC**. Their audit recorded zero missing update times and
-zero quote updates after retrieval. This checks recorded timestamps, not
-bookmaker executability, independent accuracy or feature approval.
+CFBD game-box endpoints also returned non-FBS games; they are retained in raw
+responses but excluded from the 124-game FBS coverage denominator. Matching
+game IDs proves game representation, not that every play or nested player
+statistic is complete. Fresh postgame statistics are not pregame features for
+their own games.
 
-Current CFBD returned **3,679 game rows**, including 1,937 with a true completion
-flag and 1,738 scheduled after retrieval. Their game dates range from August 27
-to December 12, 2026. The response also included 31,479 roster rows, 8,655 team
-season-stat rows, 134,672 player season-stat rows, 138 advanced team rows and
-seven current-week box-score rows in each of two endpoints. These are endpoint
-row counts, not unique players or independent examples. The newest completed
-game or statistics publication time was not established by this summary.
+## Continuations and completed backfills
 
-Current CBBD returned 365 team rows and three upcoming-schedule slices with
-**0, 701 and 634 rows**. The nonempty slices contain game dates from November 1
-to November 29, 2026. Slice boundaries can overlap, so 1,335 returned rows are
-not asserted to be 1,335 distinct games. Its statistical feed covers the men's
-track; it does not establish current NCAA women's statistics coverage.
+- **Weather v030 completed:** all 440 planned forecast initialization/lead
+  pairs for the selected 2024 football scope are processed; 1,037 new GRIB
+  fields were downloaded. The final inventory has 2,640 forecast fields and
+  1,438 NWS JSON objects. This is not all historical weather or a validated
+  venue-level feature table.
+- **Shooting v032 completed:** 336 new responses and 958 cache reuses processed
+  all 1,294 planned queries. Across that plan, 1,256 responses had records,
+  38 were empty and 88,554 summary rows were observed. Zero planned queries
+  remain; those totals include reused data.
+- **Historical v011 stop requested after repeated CBBD HTTP 429:** AWS still reported Stopping at 20:44 UTC. At the preserved
+  20:35:20 UTC checkpoint it had 37,443 captures, 70 final request failures and
+  351 retry incidents. The checkpoint is not a final stop-time count. Existing
+  successful payloads and indexes remain available.
+- **Odds-only v037 failed before provider calls:** its worker role lacks
+  SageMaker DescribeProcessingJob permission. Zero API requests/credits were
+  consumed, and its return ZIP was saved. V038 removes this worker-side
+  management API call and instead requires an embedded control-plane receipt
+  proving v011 has terminated. V038 is prepared, not launched while v011 is
+  still Stopping. Its limits are no college-statistics requests, one source
+  request per second, 200,000-credit ceiling, 30-minute application limit and
+  35-minute AWS limit. It requires v011 to be terminal, checks the live quota
+  reserve and stops its provider on 401/402/403/429. Its budget fits within the
+  unused v011 odds ceiling. No resumed historical acquisition is claimed until a successful runtime
+  receipt exists.
 
-## Freshness matrix
+The existing six-hour current snapshot schedule remains configured, with its
+first scheduled execution at **October 17, 03:05 UTC (8:05 p.m. Pacific today)**.
+It refreshes current odds/stats; it does not continuously refresh every raw
+football play or conference report. The American Conference availability
+one-off remains scheduled for **October 17, 01:05 UTC (6:05 p.m. Pacific)**;
+future captures are not counted as downloaded. This turn did not change either
+schedule or create a new data subscription.
 
-| Source family | Latest verified retrieval evidence | Actual event/report/valid time established | Gap or boundary |
-| --- | --- | --- | --- |
-| Current odds and limited props | October 16, 19:50:43–19:51:06 UTC | Returned game dates and quote times above | College men's/women's current odds empty at this observation; limited prop sample |
-| Current CFBD/CBBD | October 16, 19:51:06–19:51:39 UTC | Actual CFBD and CBBD game-date ranges above | Latest stats publication and newest completed-game time not verified |
-| Historical odds/props and shooting | Historical continuations have separately timestamped progress/final receipts | Historical request windows and retrospective season summaries | A new retrieval does not make old observations current |
-| Original NFL pages | October 16, 19:48:33–19:59:23 UTC, including targeted resume | Validated 2026 Week 6 injury/schedule titles and 2026 roster titles | 34 pages: injury + schedule + all 32 rosters; report publication/player tables not yet extracted |
-| Public statistical archives | Delta finished October 16, 18:15:58 UTC | Filename-year observations retained in the coverage report | Latest actual game inside every file not audited; upstream revisions can overlap |
-| Original NBA availability | Batch finished October 16, 18:42:51 UTC | Sparse URL dates through April 25, 2026 | 24 PDFs; PDF-internal publication extraction pending; no current complete feed |
-| American Conference availability | Scheduled for October 17, 01:05 UTC | No acquisition from the future run yet | Scheduled images are not downloaded data |
-| NWS hourly forecasts | All 728 selected venues captured by October 16, 18:54:32 UTC | Issue/update and valid-hour fields preserved in raw responses | Newest valid-hour range not aggregated here; roof/location joins pending |
-| NOAA original forecast grids | v020 finished October 16, 19:35:07 UTC; v030 resume separately launched | Selected 2024-season initialization/lead/valid-hour coordinates | Initialization and storage timestamps do not prove historical release time; venue extraction pending |
-| SkillCorner ACB research tracking | AWS capture October 16, 19:52:58–19:54:51 UTC; 32 raw files / 394,736,881 bytes | Ten Liga ACB games, October 11, 2025 – May 29, 2026 | External research sample; no NBA/NCAA or raw-video coverage |
-| Commercial league-wide tracking/video | SkillCorner inquiry and Genius Sports form submitted October 16 | No delivered licensed dataset | Provider response, scope, price and rights remain pending |
+## What we still need, in priority order
 
-Capture, source publication/update, and game/report/forecast-valid time are
-separate clocks. Where a report does not expose an inspected payload maximum,
-the newest actual game/report time remains **not verified**. A requested season
-or filename year alone is not proof of current data or complete coverage.
+1. **Prediction-time football tables:** reconcile team/player/game identities,
+   validate every play schema, and join only prior-game performance to upcoming
+   games. Build dated NFL/NCAAF evaluation sets before claiming a usable edge.
+2. **Reliable current availability:** original NFL and NCAA report versions,
+   publication timestamps, quarterback/depth-chart changes and cross-conference
+   coverage. The Big Ten extraction is useful partial coverage; SEC and other
+   conferences remain open. Archive final game-day updates when published.
+3. **Historical market gaps:** finish missing game-price checkpoints and audit
+   quote times and kickoff revisions. The odds-only continuation preserves
+   existing request indexes. CBBD details are paused after rate limiting.
+4. **Tracking and aligned video for the five target sports:** vendor access,
+   export scope, history/current latency and modeling rights are still
+   unconfirmed. Previous SkillCorner/Genius inquiries are recorded; a targeted mailbox check at 20:43 UTC found no new replies from those
+   provider domains today. No new license was purchased. ACB is out of scope.
+5. **Basketball-specific gaps:** complete CBBD plays/lineups/substitutions after
+   the provider limit clears; current NBA injury versions; women's current
+   schedules, availability and market coverage. Shooting's specified recovery
+   plan is complete, not every possible historical query.
+6. **Weather feature readiness:** extract venue values from archived forecast
+   fields and verify historical availability times before using them in backtests.
 
-## Original-source and research boundaries
+We have substantial data for initial NFL/NCAAF baselines. Frontier modeling
+still requires stronger identity, sequence, availability and temporal
+validation; download volume alone does not establish frontier performance.
 
-The NFL runs now store 34 report/roster/schedule HTML data pages: Week 6 injury
-and schedule pages plus all 32 team rosters. V031 passed 17 AWS tests, verified
-30 prior roster bodies and recovered two missing observed links at19:59 UTC
-with zero errors. Original capture times remain unchanged for reused pages. Team
-directories, profile discovery pages, robots files and other discovery evidence
-are stored separately. Counts of HTML pages are not player records.
-
-The completed SkillCorner ACB sample contains ten original compressed trajectory
-files, 21 game/event/catalog JSON files and one identity CSV, totaling 32 raw
-files and 394,736,881 stored bytes. Its acquisition passed 16 AWS tests and
-reported zero errors or remaining assets. It separates trajectory files, game metadata
-and provider-generated event annotations, and identity aliases. Source README,
-license, data dictionaries and retrieval receipts are preserved as evidence and
-excluded from raw-content totals. This source supplies a limited external
-basketball research sample; it does not establish access to NBA or NCAA
-trajectories, full seasons, or raw video. Usage follows the observed source
-license and any provider restrictions documented in its acquisition record.
-
-Access outreach, a provider reply, an enabled API account and an acquired
-tracking dataset are different statuses. Paid or commercial tracking remains
-unacquired until delivery and permitted scope are verified. No requested access
-is reported as data already held.
-
-## Historical continuation results
-
-The v014 historical prop continuation reached its 500,000-credit bound after
-**499,840 known credits**, storing 16,296 successful response captures and
-recording 2,057 failed requests. Its final dynamic plan retained 51,624 pending
-requests. Quote/kickoff temporal issues remain explicitly audited; successful
-HTTP retrieval does not approve the data for historical features.
-
-The corrected v024 shooting run stopped at its runtime bound at **20:01:52 UTC**
-with **958 positive nonempty responses / 71,593 observed summary rows**, zero
-empty responses and zero failed requests. It made 962 statistics calls,
-including four retry incidents, and retained 336 of its 1,294 planned requests.
-These are retrospective team/player season-shooting summaries, not per-shot
-trajectories or coordinates. The original stopped v021 audit still records
-580 empty responses after the initial 300-response detection checkpoint.
-
-The broader v011 gap run had **26,730 captured responses at 19:59 UTC**,
-including college play/lineup/substitution responses and historical odds. These
-run counters overlap the raw-content inventory and must not be added to it.
-[Continuation evidence](status/live_progress_20261016T1959Z.json),
-[final shooting report](status/shooting24_final_20261016.json) and
-[final prop report](status/props_final_20261016.json) retain the distinct bounds.
-
-The v032 replay uses the unchanged v024 artifact with a smaller envelope:
-500 statistics calls, 1,200 application seconds and 1,500 AWS seconds. All
-34 AWS tests passed at 20:05:55 UTC. Its 20:06:26 heartbeat verified 958 reused
-responses and **two new captures**, with 334 requests still pending and zero
-unsuccessful responses. The 960 nonempty response observations and 71,737 rows
-in that heartbeat include reused data. They are not 960 new downloads.
-[Replay evidence](status/shooting32_tests_and_progress_20261016.json).
-
-The NOAA v030 resume reuses the exact v020 artifact and verified caches under
-another 2 GB source-byte bound. Its progress remains separate from the 20:03
-storage inventory. Source grids still need venue extraction and historical
-publication-time checks. No further inventory refresh is implied by later
-runtime heartbeats.
-
-## Automatic refresh and acquisition limits
-
-A recurring current-data schedule was created and read back as **ENABLED** at
-19:53:27 UTC. It runs at 03:05, 09:05, 15:05 and 21:05 UTC, starting **October
-17 at 03:05 UTC (October 16 at 8:05 p.m. Pacific)**, and expires November 16.
-Its 120 possible runs are limited to 500 odds credits, 100 statistics calls and
-900 AWS runtime seconds each: at most 60,000 scheduled odds credits and 12,000
-statistics calls across the configured month. These are ceilings, not usage.
-The manual snapshot consumed 176 credits and 12 statistics calls separately.
-
-The exact artifact, input, lease and quota-reserve controls are recorded in
-[the verified schedule](status/current_schedule_verified_20261016.json) and
-[deployment configuration](../infrastructure/current_snapshot_schedule/RECURRING_PLAN.md).
-Creation does not prove the first future scheduled invocation has run.
-The separate American Conference availability capture remains scheduled at
-01:05 UTC on October 17, within its permitted source window.
-
-## Next acceptance checks
-
-- Audit event/report/forecast time ranges inside the actual payloads, with
-  empty partitions and lag explicit by sport and source.
-- Join teams, players, games and reports using stable identities; retain
-  ambiguity and unavailable matches rather than forcing joins.
-- Keep source publication and quote timestamps separate from retrieval time;
-  approve features only when information availability is established.
-- Validate trajectories and event synchronization before using the tracking
-  sample for sequence or interaction research.
-
-The acquisition program supports more advanced models, but data volume and
-source recency do not establish predictive performance. The evaluation remains
-chronological, calibrated and compared with statistical and market baselines.
+[Exact current inventory and evidence](FOOTBALL_READINESS_20261016.md).

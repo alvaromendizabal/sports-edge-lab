@@ -132,3 +132,23 @@ and 1,500 AWS seconds. It preserves the v010 source descriptor and reuses the
 958 verified successes from v024; no code rebuild or new engine version was
 introduced. Its 34 AWS tests and first cache/new-capture counters are retained
 in [the replay evidence](status/shooting32_tests_and_progress_20261016.json).
+
+
+## Current football and scope correction, v034–v037
+
+- v034: `sports_edge_lab_football_current_v034_20261016.pyz`, SHA-256 `ef6267e093a100d232d83dca6380109655c787cea3c64ebc213ee639cc34c736`, 35 mandatory pre-network tests. [Build manifest](status/build_v034_20261016.json).
+- v035: `sports_edge_lab_nfl_recent_v035_20261016.pyz`, SHA-256 `875ceb6f3f45cd2171c44229abf1b9a5a56dc27b6aeaefa241124b70d5e03375`, 3 mandatory pre-network tests. [Build manifest](status/build_v035_20261016.json).
+- v036: `sports_edge_lab_content_inventory_v036_20261016.pyz`, SHA-256 `faa2ab3d1bf38ab36bfc8134ce9984762c4e297757c0c1e1f6346bd4586b4af2`, 19 mandatory pre-network tests. [Build manifest](status/build_v036_20261016.json).
+- v037: `sports_edge_lab_odds_only_v037_20261016.pyz`, SHA-256 `46318afcc310f5705267885fae59ce23f39fa924bd18fe5e21229ec3f219e9a9`, 37 mandatory pre-network tests. [Build manifest](status/build_v037_20261016.json).
+
+V034 packages the unchanged v026 current engine and a public rendered Big Ten
+seed. The seed remains in the private AWS artifact, with its SHA-256 in the
+build manifest; raw player-status records are not published to Git. The source
+modules and provenance are public. V035 downloads the observed current NFL
+release asset and audits actual game dates. V036 excludes the entire ACB
+prefix and recognizes rendered availability separately from original PDFs.
+The earlier v028 inventory source is preserved byte-for-byte under
+`tools/history/inventory_raw_content_v028_launched.py`.
+V037 preserves the original v011 and v002 modules in an isolated package and
+adds a rate-limited odds-only wrapper, predecessor terminal-state guard,
+successful-index reuse and fail-closed quota checks. CBBD is not requested.

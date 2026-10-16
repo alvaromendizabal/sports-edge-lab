@@ -1,52 +1,88 @@
 # Downloaded data and next acquisition priorities
 
-## Latest measured content inventory
+**93,319 in-scope raw content files / 17.26 GB are verified in the shared archive.**
+The content-only S3 scan ran on **October 16, 20:36:28–20:37:35 UTC**, counting
+**17,259,029,672 stored bytes**. It excludes receipts, indexes, code, return
+bundles, derived tables, legacy duplicates and the entire unrelated ACB prefix.
+There are zero unclassified raw objects. Collectors wrote during the paginated
+scan, so this is an observation window rather than an atomic snapshot.
 
-**85,417 raw content files / 17.24 GB are verified in the shared archive.**
-The content-only S3 scan ran on **October 16, 20:02:52–20:03:45 UTC**.
-It counted **17,241,530,808 stored bytes**, excluding receipts, request indexes,
-source discovery, code, return bundles and duplicate legacy archives. All raw
-objects were classified. Live collectors wrote during the paginated scan;
-this is an observation window, not an atomic snapshot.
-
-| Track | Stored content files | Stored content GB |
+| Track | Stored content files | Stored GB |
 | --- | ---: | ---: |
-| NFL | 11,564 | 0.808 |
-| NBA | 20,688 | 1.936 |
-| NCAA football | 20,914 | 3.165 |
-| NCAA men's basketball | 22,572 | 5.139 |
+| NFL | 11,579 | 0.816 |
+| NBA | 22,962 | 1.945 |
+| NCAA football | 22,178 | 3.191 |
+| NCAA men's basketball | 26,796 | 5.296 |
 | NCAA women's basketball | 5,726 | 2.495 |
-| Shared weather and external tracking research | 3,953 | 3.699 |
+| Shared weather | 4,078 | 3.517 |
 
-The archive grew by **14,236 files / 2.85 GB** since the
-19:24 UTC scan, and by **39,348 files / 4.82 GB** since the
-18:10 UTC baseline. File counts are not unique games, API captures, complete
-seasons or approved training rows; source families and revisions can overlap.
-Stored bytes are separate from uncompressed response-byte counters.
+The previous 20:03 UTC report included 32 ACB content files / 394,736,881 bytes.
+Its comparable in-scope baseline is 85,385 files / 16,846,793,927 bytes. Growth
+since that corrected baseline is **7,934 files / 412,235,745 bytes**. Historical
+receipts remain unchanged. ACB is excluded from project coverage and modeling;
+no further ACB collection is planned.
 
-[Exact inventory](status/content_inventory_20261016T2003Z.json) · [current data and source-time matrix](DATA_FRESHNESS_AND_ACCESS_20261016.md) · [tracking/video access](TRACKING_AND_VIDEO_ACCESS_20261016.md).
+File counts are not unique games, complete seasons or training examples.
+Different revisions and statistical families can overlap.
 
-Current odds have populated NFL, NBA and NCAA football responses. NCAA men's
-and women's current odds returned empty arrays at the 19:50 UTC observation.
-The current men's schedule response has November games; that does not fill
-women's statistics or availability gaps. An enabled six-hour schedule captures
-future current vintages, while historical backfills remain separate.
+## Fresh football data captured this turn
 
-The measured archive contains **5,326 public archive files**, **76,074 paid
-payload files**, six provider canaries, **24 original NBA injury PDFs**, **34
-original NFL pages**, **1,438 NWS JSON files**, **2,483 NOAA forecast fields**,
-and **32 SkillCorner ACB research files**. The ACB sample covers ten historical
-Spanish league games with original trajectories, provider event annotations
-and identity metadata; it adds no NBA/NCAA tracking or raw video.
+| Source | Verified content | Actual data recency |
+| --- | --- | --- |
+| NFL public play-by-play | 14,031 rows, 80 games; all 80 completed games in the current schedule have PBP; no unmatched game IDs | Game dates through October 15, 2026; downloaded at 20:34 UTC October 16 |
+| Direct CFBD FBS plays and drives | 22,151 plays and 2,888 drives across 124 completed games in Weeks 5–7; every completed FBS schedule game in those windows has plays, drives, team/player box and advanced-stat rows | Latest covered kickoff October 16, 00:00 UTC, corresponding to Thursday evening in the US; downloaded 20:31–20:32 UTC |
+| Current game markets | 24 NFL, 74 NCAAF and 46 NBA events with outcomes; 32 populated player-prop responses across these tracks | Fresh observation 20:22–20:23 UTC; provider quote times remain distinct |
+| Big Ten football availability | 715 normalized player-status rows across 64 team-games; 154 rows across 14 team-games for October 16–17 | Public rendered archive observed October 16; source publication timestamps unavailable |
+| NFL official roster/injury pages | All 32 team roster pages, plus Week 6 injury and schedule pages | Earlier same-day capture; structured extraction and report-time audit remain pending |
 
-The NFL current capture now includes all **32 team rosters** plus Week 6 injury
-and schedule pages, after a targeted two-roster recovery. Extraction and
-publication-time validation remain pending. The broader historical gap run
-continues. College shooting reached **958 positive responses / 71,593 summary
-rows** before its runtime bound; a bounded replay is now active, reusing those
-958 responses and adding two new captures in its first observed heartbeat.
-The NOAA continuation also remains active at the recorded metadata check.
+The CFBD job made 21 subscription-quota requests, with no failures, and also
+captured current player usage and three weekly game-weather responses. The
+current odds/statistics snapshot made 58 successful captures using 178 odds
+credits and 12 statistics requests; five responses were empty. NCAA men's and
+women's current odds remained empty. These counters represent subscription
+allowances, not separately purchased API calls or dollar charges.
 
+The Big Ten capture is a **rendered-page extraction**, not an original PDF or
+an archive of verified publication-time versions. Four rows with ambiguous
+missing columns were preserved in raw extraction and quarantined from the
+normalized table. A missing game-day status stays null, never "available".
+Player identity joins and historical point-in-time eligibility remain unverified.
+SEC discovery did not yield downloadable report links; it is still a gap.
+
+CFBD game-box endpoints also returned non-FBS games; they are retained in raw
+responses but excluded from the 124-game FBS coverage denominator. Matching
+game IDs proves game representation, not that every play or nested player
+statistic is complete. Fresh postgame statistics are not pregame features for
+their own games.
+
+## What we still need, in priority order
+
+1. **Prediction-time football tables:** reconcile team/player/game identities,
+   validate every play schema, and join only prior-game performance to upcoming
+   games. Build dated NFL/NCAAF evaluation sets before claiming a usable edge.
+2. **Reliable current availability:** original NFL and NCAA report versions,
+   publication timestamps, quarterback/depth-chart changes and cross-conference
+   coverage. The Big Ten extraction is useful partial coverage; SEC and other
+   conferences remain open. Archive final game-day updates when published.
+3. **Historical market gaps:** finish missing game-price checkpoints and audit
+   quote times and kickoff revisions. The odds-only continuation preserves
+   existing request indexes. CBBD details are paused after rate limiting.
+4. **Tracking and aligned video for the five target sports:** vendor access,
+   export scope, history/current latency and modeling rights are still
+   unconfirmed. Previous SkillCorner/Genius inquiries are recorded; a targeted mailbox check at 20:43 UTC found no new replies from those
+   provider domains today. No new license was purchased. ACB is out of scope.
+5. **Basketball-specific gaps:** complete CBBD plays/lineups/substitutions after
+   the provider limit clears; current NBA injury versions; women's current
+   schedules, availability and market coverage. Shooting's specified recovery
+   plan is complete, not every possible historical query.
+6. **Weather feature readiness:** extract venue values from archived forecast
+   fields and verify historical availability times before using them in backtests.
+
+We have substantial data for initial NFL/NCAAF baselines. Frontier modeling
+still requires stronger identity, sequence, availability and temporal
+validation; download volume alone does not establish frontier performance.
+
+[Detailed execution and evidence](FOOTBALL_READINESS_20261016.md).
 
 The original baseline and filename-year coverage below remain preserved as
 dated observations; they are not the current storage total.

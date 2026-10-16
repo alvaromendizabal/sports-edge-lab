@@ -1,0 +1,73 @@
+{
+  "bounds": {
+    "max_seconds": 360,
+    "max_source_requests": 8,
+    "max_transfer_bytes": 157286400
+  },
+  "cost_excludes": "Provisioning, shutdown, S3 storage and requests",
+  "coverage": {
+    "all_completed_schedule_games_have_pbp": true,
+    "completed_games_missing_pbp": [],
+    "completed_schedule_games": 80,
+    "earliest_pbp_game_date": "2026-09-09",
+    "latest_completed_schedule_game_date": "2026-10-15",
+    "latest_pbp_game_date": "2026-10-15",
+    "pbp_distinct_games": 80,
+    "pbp_rows": 14031,
+    "pbp_rows_missing_game_id": 0,
+    "point_in_time_approved": false,
+    "row_completeness_verified": false,
+    "scheduled_current_season_games": 272,
+    "unmatched_pbp_game_ids": [],
+    "weeks": [
+      "1",
+      "2",
+      "3",
+      "4",
+      "5",
+      "6"
+    ]
+  },
+  "downloaded_bytes": 8164786,
+  "elapsed_seconds": 2.62,
+  "estimated_application_compute_usd": 0.0003,
+  "finished_at": "2026-10-16T20:34:28.275398+00:00",
+  "receipts": [
+    {
+      "bytes": 5509553,
+      "http_headers": {
+        "Content-Type": "application/octet-stream",
+        "ETag": "\"0x8DF2B8D70FF9972\"",
+        "Last-Modified": "Fri, 16 Oct 2026 13:57:39 GMT"
+      },
+      "lineage": "nflverse community statistical compilation",
+      "point_in_time_approved": false,
+      "raw_key": "tracks/nfl/raw/nflverse/pbp/820c579ed06f7a57e5233e891b77e644360492d761d3df7c81d526cabb354d7a/play_by_play_2026.csv.gz",
+      "retrieved_at": "2026-10-16T20:34:27.973103+00:00",
+      "sha256": "820c579ed06f7a57e5233e891b77e644360492d761d3df7c81d526cabb354d7a",
+      "source_asset_id": 647502816,
+      "source_updated_at": "2026-10-16T13:57:39Z",
+      "source_url": "https://github.com/nflverse/nflverse-data/releases/download/pbp/play_by_play_2026.csv.gz"
+    },
+    {
+      "bytes": 2185210,
+      "http_headers": {
+        "Content-Type": "text/plain; charset=utf-8",
+        "ETag": "\"694388bd920ad048a1de151a1cc5ebfda065d6695a36caddf9eb7950d0c13c19\"",
+        "Last-Modified": null
+      },
+      "lineage": "nflverse nfldata community schedule",
+      "point_in_time_approved": false,
+      "raw_key": "tracks/nfl/raw/nfldata/games/6897aa10f7559f7094c461057a7b71af734dc47ca1baf2859a03cec3c9ecc4ec/games.csv",
+      "retrieved_at": "2026-10-16T20:34:28.218506+00:00",
+      "sha256": "6897aa10f7559f7094c461057a7b71af734dc47ca1baf2859a03cec3c9ecc4ec",
+      "source_url": "https://raw.githubusercontent.com/nflverse/nfldata/master/data/games.csv"
+    }
+  ],
+  "requests": 5,
+  "run_id": "20261016T203425Z-c910b6ce4d",
+  "scope": "Current NFL season public PBP and schedule, immutable source observations",
+  "started_at": "2026-10-16T20:34:25.656632+00:00",
+  "status": "completed",
+  "version": "v035"
+}

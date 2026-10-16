@@ -1,0 +1,538 @@
+{
+  "bucket": "sagemaker-sports-edge-lab-560403859723-us-west-2",
+  "budget": {
+    "actual_known": {
+      "odds": 0,
+      "stats": 336
+    },
+    "disabled_providers": [],
+    "limits": {
+      "odds": 0,
+      "stats": 500
+    },
+    "provider_headers": {
+      "cbbd": {}
+    },
+    "reserved_or_known": {
+      "odds": 0,
+      "stats": 336
+    },
+    "unknown_charge_reserve": {
+      "odds": 0,
+      "stats": 0
+    }
+  },
+  "canary_evidence": [
+    {
+      "kind": "cached_positive",
+      "records": 18,
+      "request_id": "cad415f769c828e84dee2fe75c5642c113904e3f83906010d120135ed6a770b3",
+      "requires_positive_tracked_shots": true,
+      "sha256": "93feabcb92448bbff79e695a393616985d37cd0fe02e3719414f962134f5865e"
+    },
+    {
+      "kind": "cached_positive",
+      "records": 235,
+      "request_id": "cd563c6791a7ab606be0867c2be613d5ebe41497233f3f2ac4620d8a9baa38d0",
+      "requires_positive_tracked_shots": true,
+      "sha256": "7cccf6f2e72e9a43bd6785174c2c965c59ce4025c50c297307bcd53c214147be"
+    },
+    {
+      "kind": "fresh_or_request_index_positive",
+      "records": 15,
+      "request_id": "a6a99dc074ff99730b2e9778e589079b6d146cf620072968b590d51adf7de8cf",
+      "requires_positive_tracked_shots": true
+    },
+    {
+      "kind": "fresh_or_request_index_positive",
+      "records": 195,
+      "request_id": "ec39df89a14c6e57b45788761dc77f59b8696a45ee054791ccd07527b3b9d221",
+      "requires_positive_tracked_shots": true
+    }
+  ],
+  "capture_coverage": {
+    "cbbd_season/stats/player/shooting/season": 168,
+    "cbbd_season/stats/team/shooting/season": 168
+  },
+  "compute_estimate_excludes_storage_requests_and_subscription": true,
+  "compute_estimate_usd": 0.0507,
+  "compute_rate_usd_per_hour": 0.461,
+  "data_notes": [
+    "End-of-season ratings and postgame data are not pregame features.",
+    "Daily odds census can omit events absent at 12:00 UTC.",
+    "Event-derived checkpoints require kickoff revision and bookmaker last_update auditing.",
+    "Snapshot API may return the closest available snapshot at or before request.",
+    "CBBD is the men's basketball statistical track; women's stats come from other sources.",
+    "No claim of complete source or season coverage follows from HTTP success."
+  ],
+  "deferred_scope": "Conference-less team selectors require independent coverage evidence before paid acquisition",
+  "discovered_odds_events": {
+    "nba": 0,
+    "ncaaf": 0,
+    "ncaam": 0,
+    "ncaaw": 0,
+    "nfl": 0
+  },
+  "elapsed_seconds": 395.68,
+  "failures_count": 0,
+  "maximum_http_requests_per_second": 2,
+  "not_completed_by_this_runner": [
+    "raw_shot_coordinate_acquisition_in_active_plays_job",
+    "NCAA_women_shooting",
+    "point_in_time_feature_approval",
+    "complete_season_coverage"
+  ],
+  "official_documentation": [
+    "https://api.collegebasketballdata.com/api/stats",
+    "https://api.collegebasketballdata.com/data-availability"
+  ],
+  "paid_discovery_requests": 0,
+  "pending_source_seasons": [],
+  "phases": {
+    "positive_cached_gate": {
+      "endpoints": 2,
+      "status": "passed"
+    },
+    "positive_fresh_gate": {
+      "endpoints": 2,
+      "status": "passed"
+    },
+    "seed": {
+      "previous_empty_receipts": 779,
+      "previous_failed_requests": 12,
+      "previous_nonempty_receipts": 124,
+      "status": "completed",
+      "stopped_v021_empty_receipts": 580,
+      "stopped_v021_nonempty_receipts": 0,
+      "successful_shooting_request_ids": 903
+    },
+    "shooting_continuation": {
+      "completed": 1294,
+      "http_successful_or_reused": 1294,
+      "planned": 1294,
+      "processed": 1294,
+      "remaining": 0,
+      "status": "planned_requests_processed",
+      "unsuccessful": 0
+    }
+  },
+  "plan_key": "shared/acquisition/paid/20261016T200556Z-9f2127719a/shooting-plan.json",
+  "run_id": "20261016T200556Z-9f2127719a",
+  "scope": "Only missing conference-filtered CBBD team/player season shooting breakdowns: 2003 and 2006-2027",
+  "seed_counts": {
+    "previous_empty_receipts": 779,
+    "previous_failed_requests": 12,
+    "previous_nonempty_receipts": 124,
+    "stopped_v021_empty_receipts": 580,
+    "stopped_v021_nonempty_receipts": 0,
+    "successful_shooting_request_ids": 903
+  },
+  "skipped_documented_absent_seasons": [
+    2004,
+    2005
+  ],
+  "source_evidence": [
+    {
+      "raw_key": "tracks/ncaam/raw/cbbd/objects/4f/4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945.json.gz",
+      "receipt_key": "tracks/ncaam/raw/cbbd/request-index/75f1fe59bbe8596204c821379f4232a0a12e0b1e0fedfb45464c77e3ec54285f.json",
+      "season": 2027,
+      "sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945"
+    },
+    {
+      "raw_key": "tracks/ncaam/raw/cbbd/objects/98/98e9b85a9c8cb4d10cf70fc16842d5650ff30890b916e648f301961e3ab9ef32.json.gz",
+      "receipt_key": "tracks/ncaam/raw/cbbd/request-index/8c4a55b1b17558fb5106b9b50316270a68bcc1bef6f0361a74cc8a357de60467.json",
+      "season": 2026,
+      "sha256": "98e9b85a9c8cb4d10cf70fc16842d5650ff30890b916e648f301961e3ab9ef32"
+    },
+    {
+      "raw_key": "tracks/ncaam/raw/cbbd/objects/61/6196f7b366ca068b38420b6d48af64626c3affc57af8705bd0dc0e2072662a47.json.gz",
+      "receipt_key": "tracks/ncaam/raw/cbbd/request-index/c6b473af9d2ccc307f0971592c1bf56429fbe2dc4ac78ebb5763c00f45eb980c.json",
+      "season": 2025,
+      "sha256": "6196f7b366ca068b38420b6d48af64626c3affc57af8705bd0dc0e2072662a47"
+    },
+    {
+      "raw_key": "tracks/ncaam/raw/cbbd/objects/fe/fe7d45c78f44883c36d4dc60f9f94c9ffb460498dd903e9ec216878c1a815b06.json.gz",
+      "receipt_key": "tracks/ncaam/raw/cbbd/request-index/2924c7d1381c645eda6d0c83e8db0abf8083c49796164b65ee23b9a2040adf82.json",
+      "season": 2024,
+      "sha256": "fe7d45c78f44883c36d4dc60f9f94c9ffb460498dd903e9ec216878c1a815b06"
+    },
+    {
+      "raw_key": "tracks/ncaam/raw/cbbd/objects/9d/9dc4fd810c1f3fee61c8da94b2deff404b065a684e03749ad787396e53d46e2a.json.gz",
+      "receipt_key": "tracks/ncaam/raw/cbbd/request-index/7030adcd084d8acc83611cc3cb0a41d42478738a484a0a09a397db7bccf547b3.json",
+      "season": 2023,
+      "sha256": "9dc4fd810c1f3fee61c8da94b2deff404b065a684e03749ad787396e53d46e2a"
+    },
+    {
+      "raw_key": "tracks/ncaam/raw/cbbd/objects/e1/e1cc4c909bd08b7d2366eae7a8742e355120350aef5ad99eca526cdb13e79427.json.gz",
+      "receipt_key": "tracks/ncaam/raw/cbbd/request-index/a620e8d5550d2942849e2b9960d62995bd80b6e081982f9d839a1e51e25b6edf.json",
+      "season": 2022,
+      "sha256": "e1cc4c909bd08b7d2366eae7a8742e355120350aef5ad99eca526cdb13e79427"
+    },
+    {
+      "raw_key": "tracks/ncaam/raw/cbbd/objects/10/10ff2c09ce9e2b0388073b09cd9f2ef252313ab524fef284594010bebbbc2810.json.gz",
+      "receipt_key": "tracks/ncaam/raw/cbbd/request-index/19e79c0d2c137a4a3f690fbfa034851b86b59dc1a67f970830e760090561db94.json",
+      "season": 2021,
+      "sha256": "10ff2c09ce9e2b0388073b09cd9f2ef252313ab524fef284594010bebbbc2810"
+    },
+    {
+      "raw_key": "tracks/ncaam/raw/cbbd/objects/d7/d788d1488570273707bb588df588314ba1458d5be21b0006e28e52313caf3e6b.json.gz",
+      "receipt_key": "tracks/ncaam/raw/cbbd/request-index/08a2e3dbe67f4e11481b0bb9e99e4553600adda72a94891fecd967dcf5c6255f.json",
+      "season": 2020,
+      "sha256": "d788d1488570273707bb588df588314ba1458d5be21b0006e28e52313caf3e6b"
+    },
+    {
+      "raw_key": "tracks/ncaam/raw/cbbd/objects/c1/c1f440860a03a9eb435b9217ff82f25e458a19adb4b14d627bf0c9b5720596ad.json.gz",
+      "receipt_key": "tracks/ncaam/raw/cbbd/request-index/547077d538bed9e771f2fe549e1fc8338b42743628bc618bef8dc65e5aa5c6c2.json",
+      "season": 2019,
+      "sha256": "c1f440860a03a9eb435b9217ff82f25e458a19adb4b14d627bf0c9b5720596ad"
+    },
+    {
+      "raw_key": "tracks/ncaam/raw/cbbd/objects/17/17ce42af1a9a80d10e9f7cfdd2c2923212e4fc88b7c36cfe4ed551948982c736.json.gz",
+      "receipt_key": "tracks/ncaam/raw/cbbd/request-index/113bf6f24bc1a2dc69f5eb42878a2fa2b0bfe4d7785b944117f1ac3cba49811b.json",
+      "season": 2018,
+      "sha256": "17ce42af1a9a80d10e9f7cfdd2c2923212e4fc88b7c36cfe4ed551948982c736"
+    },
+    {
+      "raw_key": "tracks/ncaam/raw/cbbd/objects/db/db8bd9268c780eb53b4aeb21f5df65bf519af9d6cafdc4322790fd0aee425503.json.gz",
+      "receipt_key": "tracks/ncaam/raw/cbbd/request-index/9046432741cd2ca49f4fc337fa2a7a31be5a75681be5382427eacf42a90aab81.json",
+      "season": 2017,
+      "sha256": "db8bd9268c780eb53b4aeb21f5df65bf519af9d6cafdc4322790fd0aee425503"
+    },
+    {
+      "raw_key": "tracks/ncaam/raw/cbbd/objects/86/86a5cbe4df8cae1a60b8ea0186c74bd6605b11b3c9de85d3180fbbbc55180018.json.gz",
+      "receipt_key": "tracks/ncaam/raw/cbbd/request-index/edc007c9a26b5dcba3441723c8f69d19010e835dc89ea95e6976b570bf64f397.json",
+      "season": 2016,
+      "sha256": "86a5cbe4df8cae1a60b8ea0186c74bd6605b11b3c9de85d3180fbbbc55180018"
+    },
+    {
+      "raw_key": "tracks/ncaam/raw/cbbd/objects/59/59361b5d24fd702626003f1ff5ad3021413530d9040861e10d5d38299873aac4.json.gz",
+      "receipt_key": "tracks/ncaam/raw/cbbd/request-index/09c28a34e06ff228ca8bcce62a0c99d962e1a4d8f32f90570dd03ceabf1d5d5a.json",
+      "season": 2015,
+      "sha256": "59361b5d24fd702626003f1ff5ad3021413530d9040861e10d5d38299873aac4"
+    },
+    {
+      "raw_key": "tracks/ncaam/raw/cbbd/objects/02/02902e523f959932aa93e7325235862eec8bdfa4650ed69f623fa8b49a6d62ce.json.gz",
+      "receipt_key": "tracks/ncaam/raw/cbbd/request-index/2001fa8c35eb020d763dce6d0fa00031a7d049d9f6f89795342c49de35825856.json",
+      "season": 2014,
+      "sha256": "02902e523f959932aa93e7325235862eec8bdfa4650ed69f623fa8b49a6d62ce"
+    },
+    {
+      "raw_key": "tracks/ncaam/raw/cbbd/objects/33/3324e5baac660d9e80e6aa9e7fbd762c75507dd27dfbf85e97f69c24cbfcdaab.json.gz",
+      "receipt_key": "tracks/ncaam/raw/cbbd/request-index/b08501175be10db685a90814172967473c81a36edfaaf400a6af496b59dd5a62.json",
+      "season": 2013,
+      "sha256": "3324e5baac660d9e80e6aa9e7fbd762c75507dd27dfbf85e97f69c24cbfcdaab"
+    },
+    {
+      "raw_key": "tracks/ncaam/raw/cbbd/objects/2e/2e6a61f25e6e3379fae26a0241f067a760e56c47cc751ad9ea1fe87b2a9f2e2b.json.gz",
+      "receipt_key": "tracks/ncaam/raw/cbbd/request-index/602f18f310d9dcd632d9c437645ebeaf8f92d00ce9a30fbf81859f7a13ce1ddc.json",
+      "season": 2012,
+      "sha256": "2e6a61f25e6e3379fae26a0241f067a760e56c47cc751ad9ea1fe87b2a9f2e2b"
+    },
+    {
+      "raw_key": "tracks/ncaam/raw/cbbd/objects/59/5921fa928cc7e15eda20e421aaab16e98c8fc79d8b57ae97e24414ce600287fa.json.gz",
+      "receipt_key": "tracks/ncaam/raw/cbbd/request-index/3eb6ba37f8cd50b3720456b2ab429bcf42e6e871a4df9d7c37f62b90242c86c1.json",
+      "season": 2011,
+      "sha256": "5921fa928cc7e15eda20e421aaab16e98c8fc79d8b57ae97e24414ce600287fa"
+    },
+    {
+      "raw_key": "tracks/ncaam/raw/cbbd/objects/47/47f3d303f902af61b793ec76faf7ecec09c5d4b0ec89c58cd9758dfb5b2ffdf7.json.gz",
+      "receipt_key": "tracks/ncaam/raw/cbbd/request-index/a737186d893a8d4ee0006e56998fcf3a86893ad0b69d400ec6ee2241f5edd47f.json",
+      "season": 2010,
+      "sha256": "47f3d303f902af61b793ec76faf7ecec09c5d4b0ec89c58cd9758dfb5b2ffdf7"
+    },
+    {
+      "raw_key": "tracks/ncaam/raw/cbbd/objects/3f/3fcdc86a03506f755d5aff1914bd7c200a3ea02ebc0a8190a7eb78a04b137bd5.json.gz",
+      "receipt_key": "tracks/ncaam/raw/cbbd/request-index/c026826bdab79fae66b888e61abc931b987cb7da63f96b44b56535bb38ff4e5c.json",
+      "season": 2009,
+      "sha256": "3fcdc86a03506f755d5aff1914bd7c200a3ea02ebc0a8190a7eb78a04b137bd5"
+    },
+    {
+      "raw_key": "tracks/ncaam/raw/cbbd/objects/b1/b1f5f04c32eb333c6180df6222f12987d43ccf74c1dc02828ffd1f15633eae0b.json.gz",
+      "receipt_key": "tracks/ncaam/raw/cbbd/request-index/ea76113713928723adfa86aaab1580f377801d287e01574510aebcfe418b9ec6.json",
+      "season": 2008,
+      "sha256": "b1f5f04c32eb333c6180df6222f12987d43ccf74c1dc02828ffd1f15633eae0b"
+    },
+    {
+      "raw_key": "tracks/ncaam/raw/cbbd/objects/fb/fb3a5f52fb88620be979a6b16b6c01b181241da07904eff981976b0806ad6d0d.json.gz",
+      "receipt_key": "tracks/ncaam/raw/cbbd/request-index/c992136c08d63a98b3bc5c2359bf33455b13618ebf1f4f2c4be3ad972dfd62b8.json",
+      "season": 2007,
+      "sha256": "fb3a5f52fb88620be979a6b16b6c01b181241da07904eff981976b0806ad6d0d"
+    },
+    {
+      "raw_key": "tracks/ncaam/raw/cbbd/objects/86/86fd3631463e17fed2ce98db6eea2b3ee7945861268f0f50233a51e3d699fd67.json.gz",
+      "receipt_key": "tracks/ncaam/raw/cbbd/request-index/1bc59b14a8468ff9413af6fe16db109e5bdb6be189d41ace7b2bb896f794b60e.json",
+      "season": 2006,
+      "sha256": "86fd3631463e17fed2ce98db6eea2b3ee7945861268f0f50233a51e3d699fd67"
+    },
+    {
+      "raw_key": "tracks/ncaam/raw/cbbd/objects/5f/5fb61c6d3996fb9b738db11cdd8e8e85870e855ab2cea11d46881ed046100f19.json.gz",
+      "receipt_key": "tracks/ncaam/raw/cbbd/request-index/e3789b85bd8e8edd67777918437927ceebfdf9cbba407e6dc1dd80fb3bfdd56f.json",
+      "season": 2003,
+      "sha256": "5fb61c6d3996fb9b738db11cdd8e8e85870e855ab2cea11d46881ed046100f19"
+    }
+  ],
+  "source_inventory": {
+    "2003": {
+      "deferred_conference_less_team_requests": 390,
+      "empty_responses_this_run": 38,
+      "nonempty_responses_this_run": 26,
+      "planned_shooting_requests": 64,
+      "records_this_run": 216,
+      "remaining_before_request_index_check": 64,
+      "seeded_successes": 0,
+      "source_rows": 519,
+      "status": "source_cache_verified"
+    },
+    "2006": {
+      "deferred_conference_less_team_requests": 444,
+      "empty_responses_this_run": 0,
+      "nonempty_responses_this_run": 64,
+      "planned_shooting_requests": 64,
+      "records_this_run": 3080,
+      "remaining_before_request_index_check": 64,
+      "seeded_successes": 0,
+      "source_rows": 548,
+      "status": "source_cache_verified"
+    },
+    "2007": {
+      "deferred_conference_less_team_requests": 472,
+      "empty_responses_this_run": 0,
+      "nonempty_responses_this_run": 64,
+      "planned_shooting_requests": 64,
+      "records_this_run": 3742,
+      "remaining_before_request_index_check": 64,
+      "seeded_successes": 0,
+      "source_rows": 562,
+      "status": "source_cache_verified"
+    },
+    "2008": {
+      "deferred_conference_less_team_requests": 436,
+      "empty_responses_this_run": 0,
+      "nonempty_responses_this_run": 64,
+      "planned_shooting_requests": 64,
+      "records_this_run": 4344,
+      "remaining_before_request_index_check": 64,
+      "seeded_successes": 0,
+      "source_rows": 546,
+      "status": "source_cache_verified"
+    },
+    "2009": {
+      "deferred_conference_less_team_requests": 514,
+      "empty_responses_this_run": 0,
+      "nonempty_responses_this_run": 64,
+      "planned_shooting_requests": 64,
+      "records_this_run": 4424,
+      "remaining_before_request_index_check": 64,
+      "seeded_successes": 0,
+      "source_rows": 587,
+      "status": "source_cache_verified"
+    },
+    "2010": {
+      "deferred_conference_less_team_requests": 554,
+      "empty_responses_this_run": 0,
+      "nonempty_responses_this_run": 66,
+      "planned_shooting_requests": 66,
+      "records_this_run": 4582,
+      "remaining_before_request_index_check": 66,
+      "seeded_successes": 0,
+      "source_rows": 612,
+      "status": "source_cache_verified"
+    },
+    "2011": {
+      "deferred_conference_less_team_requests": 526,
+      "empty_responses_this_run": 0,
+      "nonempty_responses_this_run": 66,
+      "planned_shooting_requests": 66,
+      "records_this_run": 4559,
+      "remaining_before_request_index_check": 66,
+      "seeded_successes": 0,
+      "source_rows": 609,
+      "status": "source_cache_verified"
+    },
+    "2012": {
+      "deferred_conference_less_team_requests": 522,
+      "empty_responses_this_run": 0,
+      "nonempty_responses_this_run": 66,
+      "planned_shooting_requests": 66,
+      "records_this_run": 4505,
+      "remaining_before_request_index_check": 66,
+      "seeded_successes": 0,
+      "source_rows": 606,
+      "status": "source_cache_verified"
+    },
+    "2013": {
+      "deferred_conference_less_team_requests": 486,
+      "empty_responses_this_run": 0,
+      "nonempty_responses_this_run": 66,
+      "planned_shooting_requests": 66,
+      "records_this_run": 4572,
+      "remaining_before_request_index_check": 66,
+      "seeded_successes": 0,
+      "source_rows": 591,
+      "status": "source_cache_verified"
+    },
+    "2014": {
+      "deferred_conference_less_team_requests": 568,
+      "empty_responses_this_run": 0,
+      "nonempty_responses_this_run": 66,
+      "planned_shooting_requests": 66,
+      "records_this_run": 4772,
+      "remaining_before_request_index_check": 66,
+      "seeded_successes": 0,
+      "source_rows": 635,
+      "status": "source_cache_verified"
+    },
+    "2015": {
+      "deferred_conference_less_team_requests": 580,
+      "empty_responses_this_run": 0,
+      "nonempty_responses_this_run": 66,
+      "planned_shooting_requests": 66,
+      "records_this_run": 4861,
+      "remaining_before_request_index_check": 66,
+      "seeded_successes": 0,
+      "source_rows": 641,
+      "status": "source_cache_verified"
+    },
+    "2016": {
+      "deferred_conference_less_team_requests": 594,
+      "empty_responses_this_run": 0,
+      "nonempty_responses_this_run": 64,
+      "planned_shooting_requests": 64,
+      "records_this_run": 4832,
+      "remaining_before_request_index_check": 64,
+      "seeded_successes": 0,
+      "source_rows": 648,
+      "status": "source_cache_verified"
+    },
+    "2017": {
+      "deferred_conference_less_team_requests": 586,
+      "empty_responses_this_run": 0,
+      "nonempty_responses_this_run": 64,
+      "planned_shooting_requests": 64,
+      "records_this_run": 4899,
+      "remaining_before_request_index_check": 64,
+      "seeded_successes": 0,
+      "source_rows": 644,
+      "status": "source_cache_verified"
+    },
+    "2018": {
+      "deferred_conference_less_team_requests": 616,
+      "empty_responses_this_run": 0,
+      "nonempty_responses_this_run": 64,
+      "planned_shooting_requests": 64,
+      "records_this_run": 4885,
+      "remaining_before_request_index_check": 64,
+      "seeded_successes": 0,
+      "source_rows": 659,
+      "status": "source_cache_verified"
+    },
+    "2019": {
+      "deferred_conference_less_team_requests": 598,
+      "empty_responses_this_run": 0,
+      "nonempty_responses_this_run": 64,
+      "planned_shooting_requests": 64,
+      "records_this_run": 4873,
+      "remaining_before_request_index_check": 64,
+      "seeded_successes": 0,
+      "source_rows": 653,
+      "status": "source_cache_verified"
+    },
+    "2020": {
+      "deferred_conference_less_team_requests": 620,
+      "empty_responses_this_run": 0,
+      "nonempty_responses_this_run": 64,
+      "planned_shooting_requests": 64,
+      "records_this_run": 4879,
+      "remaining_before_request_index_check": 64,
+      "seeded_successes": 0,
+      "source_rows": 664,
+      "status": "source_cache_verified"
+    },
+    "2021": {
+      "deferred_conference_less_team_requests": 292,
+      "empty_responses_this_run": 0,
+      "nonempty_responses_this_run": 62,
+      "planned_shooting_requests": 62,
+      "records_this_run": 4987,
+      "remaining_before_request_index_check": 62,
+      "seeded_successes": 0,
+      "source_rows": 493,
+      "status": "source_cache_verified"
+    },
+    "2022": {
+      "deferred_conference_less_team_requests": 644,
+      "empty_responses_this_run": 0,
+      "nonempty_responses_this_run": 64,
+      "planned_shooting_requests": 64,
+      "records_this_run": 5201,
+      "remaining_before_request_index_check": 64,
+      "seeded_successes": 0,
+      "source_rows": 680,
+      "status": "source_cache_verified"
+    },
+    "2023": {
+      "deferred_conference_less_team_requests": 686,
+      "empty_responses_this_run": 0,
+      "nonempty_responses_this_run": 66,
+      "planned_shooting_requests": 66,
+      "records_this_run": 5162,
+      "remaining_before_request_index_check": 66,
+      "seeded_successes": 0,
+      "source_rows": 706,
+      "status": "source_cache_verified"
+    },
+    "2024": {
+      "deferred_conference_less_team_requests": 710,
+      "empty_responses_this_run": 0,
+      "nonempty_responses_this_run": 66,
+      "planned_shooting_requests": 66,
+      "records_this_run": 5179,
+      "remaining_before_request_index_check": 66,
+      "seeded_successes": 0,
+      "source_rows": 717,
+      "status": "source_cache_verified"
+    },
+    "2025": {
+      "deferred_conference_less_team_requests": 672,
+      "planned_shooting_requests": 62,
+      "remaining_before_request_index_check": 0,
+      "seeded_successes": 62,
+      "source_rows": 700,
+      "status": "source_cache_verified"
+    },
+    "2026": {
+      "deferred_conference_less_team_requests": 724,
+      "planned_shooting_requests": 62,
+      "remaining_before_request_index_check": 0,
+      "seeded_successes": 62,
+      "source_rows": 727,
+      "status": "source_cache_verified"
+    },
+    "2027": {
+      "deferred_conference_less_team_requests": 0,
+      "planned_shooting_requests": 0,
+      "remaining_before_request_index_check": 0,
+      "seeded_successes": 0,
+      "source_rows": 0,
+      "status": "source_cache_verified"
+    }
+  },
+  "source_run": "20261016T005814Z-dc2ec3e9a5",
+  "statistics": {
+    "cache_reused": 958,
+    "captured": 336,
+    "cbbd_captured": 336,
+    "cbbd_http_calls": 336,
+    "http_calls": 336,
+    "ncaam_captured": 336,
+    "raw_bytes": 11467410,
+    "shooting_empty_responses": 38,
+    "shooting_nonempty_responses": 1256,
+    "shooting_positive_data_responses": 1256,
+    "shooting_records_observed": 88554
+  },
+  "stopped_v021_audit_key": "shared/acquisition/paid/20261016T200556Z-9f2127719a/stopped-v021-audit.json",
+  "timestamp": "2026-10-16T20:12:31Z",
+  "until": "2026-10-16T19:55:56Z",
+  "version": "sports-edge-lab-cbbd-shooting-continuation-v024"
+}

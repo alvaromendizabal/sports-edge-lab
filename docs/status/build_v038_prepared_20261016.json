@@ -1,0 +1,19 @@
+{
+  "budget": {
+    "application_seconds": 1800,
+    "aws_seconds": 2100,
+    "max_odds_credits": 200000,
+    "source_requests_per_second": 1,
+    "stats_calls": 0
+  },
+  "required_input": "predecessor_terminal.json from successful AWS DescribeProcessingJob of v011; exact name, terminal status and ProcessingEndTime required",
+  "source_hashes": {
+    "__main__.py": "9795a6bf97ae571a29522fe824c1718d928bc1265d668536b29b88cda1d763d9",
+    "acquire_paid_data.py": "868c011d061b42cce68b863006b8902a4990dcb8294f50dcecf036f54e001a0c",
+    "continuation.py": "d8023464fcb30e65fd64d223a02dcbc24fce41a1965af386b422821f91def749",
+    "current_capture.py": "e3ec320fa2c78609084695c5fce0678c4ac920b404b7a97ee0bca2d3b43284c5"
+  },
+  "status": "prepared_not_launched",
+  "tests": 38,
+  "version": "v038"
+}

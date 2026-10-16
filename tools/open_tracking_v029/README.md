@@ -1,3 +1,7 @@
+# Historical out-of-scope acquisition — disabled project use
+
+ACB is outside the five Sports Edge Lab tracks. Do not run this collector for further project downloads or use its data in project coverage/modeling. Source and receipts are retained to reproduce the earlier scope mistake.
+
 # SkillCorner ACB open tracking pilot v029
 
 This collector acquires the official SkillCorner open basketball sample into the Sports Edge Lab research namespace. It is **Spanish Liga ACB 2025–2026**, separate from the NFL/NBA/NCAAF/NCAAM/NCAAW production tracks.

@@ -1,0 +1,51 @@
+{
+  "ProcessingJobName": "sports-edge-lab-nfl-recent-20261016-v035",
+  "RoleArn": "arn:aws:iam::560403859723:role/SportsEdgeLabProcessingRole",
+  "AppSpecification": {
+    "ImageUri": "246618743249.dkr.ecr.us-west-2.amazonaws.com/sagemaker-scikit-learn:1.9-0",
+    "ContainerEntrypoint": [
+      "python3",
+      "-u",
+      "/opt/ml/processing/code/sports_edge_lab_nfl_recent_v035_20261016.pyz"
+    ]
+  },
+  "ProcessingInputs": [
+    {
+      "InputName": "code",
+      "S3Input": {
+        "S3Uri": "s3://sagemaker-sports-edge-lab-560403859723-us-west-2/infrastructure/code/nfl-recent-20261016-v035/",
+        "LocalPath": "/opt/ml/processing/code",
+        "S3DataType": "S3Prefix",
+        "S3InputMode": "File",
+        "S3DataDistributionType": "FullyReplicated"
+      }
+    }
+  ],
+  "ProcessingResources": {
+    "ClusterConfig": {
+      "InstanceCount": 1,
+      "InstanceType": "ml.m5.2xlarge",
+      "VolumeSizeInGB": 30
+    }
+  },
+  "StoppingCondition": {
+    "MaxRuntimeInSeconds": 600
+  },
+  "NetworkConfig": {
+    "EnableNetworkIsolation": false
+  },
+  "Tags": [
+    {
+      "Key": "Project",
+      "Value": "sports-edge-lab"
+    },
+    {
+      "Key": "Workstream",
+      "Value": "nfl"
+    },
+    {
+      "Key": "Environment",
+      "Value": "dev"
+    }
+  ]
+}

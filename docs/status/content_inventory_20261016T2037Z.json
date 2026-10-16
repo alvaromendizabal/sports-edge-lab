@@ -1,0 +1,869 @@
+{
+  "bound_reason": null,
+  "bucket": "sagemaker-sports-edge-lab-560403859723-us-west-2",
+  "by_content_type": {
+    "original_availability_pdf": {
+      "objects": 24,
+      "stored_bytes": 1186137
+    },
+    "original_current_nfl_html": {
+      "objects": 34,
+      "stored_bytes": 2033222
+    },
+    "original_forecast_field": {
+      "objects": 2640,
+      "stored_bytes": 3512826372
+    },
+    "original_weather_json": {
+      "objects": 1438,
+      "stored_bytes": 4264881
+    },
+    "paid_payload": {
+      "objects": 83848,
+      "stored_bytes": 2947287957
+    },
+    "provider_canary": {
+      "objects": 6,
+      "stored_bytes": 52895
+    },
+    "public_archive": {
+      "objects": 5328,
+      "stored_bytes": 10791370551
+    },
+    "rendered_availability_extraction": {
+      "objects": 1,
+      "stored_bytes": 7657
+    }
+  },
+  "by_track": {
+    "nba": {
+      "objects": 22962,
+      "stored_bytes": 1945446093
+    },
+    "ncaaf": {
+      "objects": 22178,
+      "stored_bytes": 3190528545
+    },
+    "ncaam": {
+      "objects": 26796,
+      "stored_bytes": 5295751496
+    },
+    "ncaaw": {
+      "objects": 5726,
+      "stored_bytes": 2494567103
+    },
+    "nfl": {
+      "objects": 11579,
+      "stored_bytes": 815645182
+    },
+    "shared": {
+      "objects": 4078,
+      "stored_bytes": 3517091253
+    }
+  },
+  "by_track_source": {
+    "nba/nba-official-injuries": {
+      "objects": 24,
+      "stored_bytes": 1186137
+    },
+    "nba/paid": {
+      "objects": 1,
+      "stored_bytes": 2345
+    },
+    "nba/sportsdataverse": {
+      "objects": 2913,
+      "stored_bytes": 1863707502
+    },
+    "nba/the-odds-api": {
+      "objects": 20024,
+      "stored_bytes": 80550109
+    },
+    "ncaaf/bigten-availability-rendered": {
+      "objects": 1,
+      "stored_bytes": 7657
+    },
+    "ncaaf/cfbd": {
+      "objects": 2383,
+      "stored_bytes": 345861470
+    },
+    "ncaaf/paid": {
+      "objects": 1,
+      "stored_bytes": 1187
+    },
+    "ncaaf/sportsdataverse": {
+      "objects": 683,
+      "stored_bytes": 2649202303
+    },
+    "ncaaf/the-odds-api": {
+      "objects": 19110,
+      "stored_bytes": 195455928
+    },
+    "ncaam/cbbd": {
+      "objects": 11985,
+      "stored_bytes": 2114551978
+    },
+    "ncaam/paid": {
+      "objects": 2,
+      "stored_bytes": 43742
+    },
+    "ncaam/sportsdataverse": {
+      "objects": 466,
+      "stored_bytes": 3064443411
+    },
+    "ncaam/the-odds-api": {
+      "objects": 14343,
+      "stored_bytes": 116712365
+    },
+    "ncaaw/paid": {
+      "objects": 1,
+      "stored_bytes": 472
+    },
+    "ncaaw/sportsdataverse": {
+      "objects": 449,
+      "stored_bytes": 2483709545
+    },
+    "ncaaw/the-odds-api": {
+      "objects": 5276,
+      "stored_bytes": 10857086
+    },
+    "nfl/nfl-official-current": {
+      "objects": 34,
+      "stored_bytes": 2033222
+    },
+    "nfl/nfldata": {
+      "objects": 19,
+      "stored_bytes": 10979542
+    },
+    "nfl/nflverse": {
+      "objects": 798,
+      "stored_bytes": 719328248
+    },
+    "nfl/paid": {
+      "objects": 1,
+      "stored_bytes": 5149
+    },
+    "nfl/the-odds-api": {
+      "objects": 10727,
+      "stored_bytes": 83299021
+    },
+    "shared/noaa-hrrr-original": {
+      "objects": 2640,
+      "stored_bytes": 3512826372
+    },
+    "shared/nws": {
+      "objects": 1438,
+      "stored_bytes": 4264881
+    }
+  },
+  "by_track_source_family": {
+    "nba/nba-official-injuries/published_report": {
+      "objects": 24,
+      "stored_bytes": 1186137
+    },
+    "nba/paid/canary": {
+      "objects": 1,
+      "stored_bytes": 2345
+    },
+    "nba/sportsdataverse/espn_nba_depthcharts": {
+      "objects": 2,
+      "stored_bytes": 98046
+    },
+    "nba/sportsdataverse/espn_nba_draft": {
+      "objects": 26,
+      "stored_bytes": 549122
+    },
+    "nba/sportsdataverse/espn_nba_game_rosters": {
+      "objects": 26,
+      "stored_bytes": 7781339
+    },
+    "nba/sportsdataverse/espn_nba_injuries": {
+      "objects": 2,
+      "stored_bytes": 226657
+    },
+    "nba/sportsdataverse/espn_nba_officials": {
+      "objects": 26,
+      "stored_bytes": 572003
+    },
+    "nba/sportsdataverse/espn_nba_pbp": {
+      "objects": 25,
+      "stored_bytes": 555539962
+    },
+    "nba/sportsdataverse/espn_nba_player_boxscores": {
+      "objects": 33,
+      "stored_bytes": 19901841
+    },
+    "nba/sportsdataverse/espn_nba_player_core": {
+      "objects": 33,
+      "stored_bytes": 1813148
+    },
+    "nba/sportsdataverse/espn_nba_player_season_stats": {
+      "objects": 34,
+      "stored_bytes": 3204929
+    },
+    "nba/sportsdataverse/espn_nba_rosters": {
+      "objects": 6,
+      "stored_bytes": 309502
+    },
+    "nba/sportsdataverse/espn_nba_schedules": {
+      "objects": 36,
+      "stored_bytes": 9920514
+    },
+    "nba/sportsdataverse/espn_nba_shots": {
+      "objects": 26,
+      "stored_bytes": 81085210
+    },
+    "nba/sportsdataverse/espn_nba_standings": {
+      "objects": 26,
+      "stored_bytes": 533137
+    },
+    "nba/sportsdataverse/espn_nba_team_boxscores": {
+      "objects": 33,
+      "stored_bytes": 4398814
+    },
+    "nba/sportsdataverse/espn_nba_team_season_stats": {
+      "objects": 26,
+      "stored_bytes": 679039
+    },
+    "nba/sportsdataverse/nba_crosswalk": {
+      "objects": 81,
+      "stored_bytes": 1954233
+    },
+    "nba/sportsdataverse/nba_groups": {
+      "objects": 61,
+      "stored_bytes": 284694
+    },
+    "nba/sportsdataverse/nba_stats_coaches": {
+      "objects": 30,
+      "stored_bytes": 258007
+    },
+    "nba/sportsdataverse/nba_stats_draft": {
+      "objects": 31,
+      "stored_bytes": 243242
+    },
+    "nba/sportsdataverse/nba_stats_draft_combine": {
+      "objects": 135,
+      "stored_bytes": 1878815
+    },
+    "nba/sportsdataverse/nba_stats_game_lineups": {
+      "objects": 30,
+      "stored_bytes": 22237391
+    },
+    "nba/sportsdataverse/nba_stats_game_matchups": {
+      "objects": 9,
+      "stored_bytes": 42879670
+    },
+    "nba/sportsdataverse/nba_stats_game_rosters": {
+      "objects": 30,
+      "stored_bytes": 1344844
+    },
+    "nba/sportsdataverse/nba_stats_hustle": {
+      "objects": 88,
+      "stored_bytes": 1901533
+    },
+    "nba/sportsdataverse/nba_stats_leaguedash": {
+      "objects": 833,
+      "stored_bytes": 297997817
+    },
+    "nba/sportsdataverse/nba_stats_lineups": {
+      "objects": 19,
+      "stored_bytes": 26306810
+    },
+    "nba/sportsdataverse/nba_stats_matchups": {
+      "objects": 54,
+      "stored_bytes": 34632433
+    },
+    "nba/sportsdataverse/nba_stats_officials": {
+      "objects": 30,
+      "stored_bytes": 531041
+    },
+    "nba/sportsdataverse/nba_stats_pbp": {
+      "objects": 30,
+      "stored_bytes": 481038340
+    },
+    "nba/sportsdataverse/nba_stats_player_boxscores": {
+      "objects": 30,
+      "stored_bytes": 17878574
+    },
+    "nba/sportsdataverse/nba_stats_player_game_logs": {
+      "objects": 30,
+      "stored_bytes": 2311848
+    },
+    "nba/sportsdataverse/nba_stats_player_season_stats": {
+      "objects": 30,
+      "stored_bytes": 16862738
+    },
+    "nba/sportsdataverse/nba_stats_possessions": {
+      "objects": 30,
+      "stored_bytes": 96654541
+    },
+    "nba/sportsdataverse/nba_stats_rosters": {
+      "objects": 30,
+      "stored_bytes": 700834
+    },
+    "nba/sportsdataverse/nba_stats_schedules": {
+      "objects": 30,
+      "stored_bytes": 681251
+    },
+    "nba/sportsdataverse/nba_stats_shots": {
+      "objects": 30,
+      "stored_bytes": 105531808
+    },
+    "nba/sportsdataverse/nba_stats_standings": {
+      "objects": 30,
+      "stored_bytes": 1140092
+    },
+    "nba/sportsdataverse/nba_stats_synergy": {
+      "objects": 792,
+      "stored_bytes": 16820878
+    },
+    "nba/sportsdataverse/nba_stats_team_boxscores": {
+      "objects": 30,
+      "stored_bytes": 2072043
+    },
+    "nba/sportsdataverse/nba_stats_team_season_stats": {
+      "objects": 30,
+      "stored_bytes": 2950762
+    },
+    "nba/the-odds-api/content_addressed_response": {
+      "objects": 20024,
+      "stored_bytes": 80550109
+    },
+    "ncaaf/bigten-availability-rendered/public_archive_table": {
+      "objects": 1,
+      "stored_bytes": 7657
+    },
+    "ncaaf/cfbd/content_addressed_response": {
+      "objects": 2383,
+      "stored_bytes": 345861470
+    },
+    "ncaaf/paid/canary": {
+      "objects": 1,
+      "stored_bytes": 1187
+    },
+    "ncaaf/sportsdataverse/cfb_crosswalk": {
+      "objects": 32,
+      "stored_bytes": 2072315
+    },
+    "ncaaf/sportsdataverse/cfb_groups": {
+      "objects": 161,
+      "stored_bytes": 1106816
+    },
+    "ncaaf/sportsdataverse/cfb_recruits": {
+      "objects": 25,
+      "stored_bytes": 1558000
+    },
+    "ncaaf/sportsdataverse/cfb_schedules": {
+      "objects": 27,
+      "stored_bytes": 1678333
+    },
+    "ncaaf/sportsdataverse/cfb_team_info": {
+      "objects": 26,
+      "stored_bytes": 3431842
+    },
+    "ncaaf/sportsdataverse/cfb_team_portal": {
+      "objects": 12,
+      "stored_bytes": 86666
+    },
+    "ncaaf/sportsdataverse/cfbfastR_cfb_pbp": {
+      "objects": 13,
+      "stored_bytes": 1091880151
+    },
+    "ncaaf/sportsdataverse/espn_cfb_betting": {
+      "objects": 24,
+      "stored_bytes": 151543
+    },
+    "ncaaf/sportsdataverse/espn_cfb_coach_careers": {
+      "objects": 2,
+      "stored_bytes": 3055548
+    },
+    "ncaaf/sportsdataverse/espn_cfb_drives": {
+      "objects": 24,
+      "stored_bytes": 10472072
+    },
+    "ncaaf/sportsdataverse/espn_cfb_game_rosters": {
+      "objects": 24,
+      "stored_bytes": 135462650
+    },
+    "ncaaf/sportsdataverse/espn_cfb_injuries": {
+      "objects": 2,
+      "stored_bytes": 24305
+    },
+    "ncaaf/sportsdataverse/espn_cfb_linescores": {
+      "objects": 24,
+      "stored_bytes": 318656
+    },
+    "ncaaf/sportsdataverse/espn_cfb_pbp": {
+      "objects": 24,
+      "stored_bytes": 1110096615
+    },
+    "ncaaf/sportsdataverse/espn_cfb_play_participants": {
+      "objects": 14,
+      "stored_bytes": 49855450
+    },
+    "ncaaf/sportsdataverse/espn_cfb_player_box": {
+      "objects": 24,
+      "stored_bytes": 11267969
+    },
+    "ncaaf/sportsdataverse/espn_cfb_rosters": {
+      "objects": 25,
+      "stored_bytes": 44646081
+    },
+    "ncaaf/sportsdataverse/espn_cfb_schedules": {
+      "objects": 24,
+      "stored_bytes": 655428
+    },
+    "ncaaf/sportsdataverse/espn_cfb_team_box": {
+      "objects": 24,
+      "stored_bytes": 1159585
+    },
+    "ncaaf/sportsdataverse/espn_cfb_teams": {
+      "objects": 26,
+      "stored_bytes": 3220847
+    },
+    "ncaaf/sportsdataverse/ncaa_mfb_drives": {
+      "objects": 14,
+      "stored_bytes": 6055753
+    },
+    "ncaaf/sportsdataverse/ncaa_mfb_linescore": {
+      "objects": 14,
+      "stored_bytes": 893066
+    },
+    "ncaaf/sportsdataverse/ncaa_mfb_officials": {
+      "objects": 14,
+      "stored_bytes": 544085
+    },
+    "ncaaf/sportsdataverse/ncaa_mfb_pbp": {
+      "objects": 14,
+      "stored_bytes": 140677241
+    },
+    "ncaaf/sportsdataverse/ncaa_mfb_player_stats": {
+      "objects": 14,
+      "stored_bytes": 8149221
+    },
+    "ncaaf/sportsdataverse/ncaa_mfb_rosters": {
+      "objects": 14,
+      "stored_bytes": 6153324
+    },
+    "ncaaf/sportsdataverse/ncaa_mfb_schedule": {
+      "objects": 14,
+      "stored_bytes": 756363
+    },
+    "ncaaf/sportsdataverse/ncaa_mfb_team_stats": {
+      "objects": 14,
+      "stored_bytes": 13715217
+    },
+    "ncaaf/sportsdataverse/ncaa_mfb_teams": {
+      "objects": 14,
+      "stored_bytes": 57161
+    },
+    "ncaaf/the-odds-api/content_addressed_response": {
+      "objects": 19110,
+      "stored_bytes": 195455928
+    },
+    "ncaam/cbbd/content_addressed_response": {
+      "objects": 11985,
+      "stored_bytes": 2114551978
+    },
+    "ncaam/paid/canary": {
+      "objects": 2,
+      "stored_bytes": 43742
+    },
+    "ncaam/sportsdataverse/espn_mens_college_basketball_game_rosters": {
+      "objects": 27,
+      "stored_bytes": 48577840
+    },
+    "ncaam/sportsdataverse/espn_mens_college_basketball_officials": {
+      "objects": 25,
+      "stored_bytes": 2168069
+    },
+    "ncaam/sportsdataverse/espn_mens_college_basketball_pbp": {
+      "objects": 22,
+      "stored_bytes": 849744682
+    },
+    "ncaam/sportsdataverse/espn_mens_college_basketball_player_boxscores": {
+      "objects": 24,
+      "stored_bytes": 71253364
+    },
+    "ncaam/sportsdataverse/espn_mens_college_basketball_player_core": {
+      "objects": 24,
+      "stored_bytes": 15049271
+    },
+    "ncaam/sportsdataverse/espn_mens_college_basketball_player_season_stats": {
+      "objects": 4,
+      "stored_bytes": 2517030
+    },
+    "ncaam/sportsdataverse/espn_mens_college_basketball_rosters": {
+      "objects": 5,
+      "stored_bytes": 2708174
+    },
+    "ncaam/sportsdataverse/espn_mens_college_basketball_schedules": {
+      "objects": 28,
+      "stored_bytes": 49067791
+    },
+    "ncaam/sportsdataverse/espn_mens_college_basketball_shots": {
+      "objects": 23,
+      "stored_bytes": 143378361
+    },
+    "ncaam/sportsdataverse/espn_mens_college_basketball_standings": {
+      "objects": 26,
+      "stored_bytes": 3587429
+    },
+    "ncaam/sportsdataverse/espn_mens_college_basketball_team_boxscores": {
+      "objects": 24,
+      "stored_bytes": 15297667
+    },
+    "ncaam/sportsdataverse/espn_mens_college_basketball_team_season_stats": {
+      "objects": 26,
+      "stored_bytes": 4769508
+    },
+    "ncaam/sportsdataverse/mbb_groups": {
+      "objects": 30,
+      "stored_bytes": 288977
+    },
+    "ncaam/sportsdataverse/ncaa_mbb_lineups": {
+      "objects": 17,
+      "stored_bytes": 236058565
+    },
+    "ncaam/sportsdataverse/ncaa_mbb_matchup_stints": {
+      "objects": 17,
+      "stored_bytes": 146411488
+    },
+    "ncaam/sportsdataverse/ncaa_mbb_pbp": {
+      "objects": 17,
+      "stored_bytes": 1002010704
+    },
+    "ncaam/sportsdataverse/ncaa_mbb_player_box": {
+      "objects": 17,
+      "stored_bytes": 160833988
+    },
+    "ncaam/sportsdataverse/ncaa_mbb_possessions": {
+      "objects": 17,
+      "stored_bytes": 222559967
+    },
+    "ncaam/sportsdataverse/ncaa_mbb_rosters": {
+      "objects": 17,
+      "stored_bytes": 1271360
+    },
+    "ncaam/sportsdataverse/ncaa_mbb_schedule": {
+      "objects": 17,
+      "stored_bytes": 819523
+    },
+    "ncaam/sportsdataverse/ncaa_mbb_shots": {
+      "objects": 8,
+      "stored_bytes": 60405119
+    },
+    "ncaam/sportsdataverse/ncaa_mbb_team_box": {
+      "objects": 17,
+      "stored_bytes": 22374369
+    },
+    "ncaam/sportsdataverse/ncaa_mbb_team_ids": {
+      "objects": 17,
+      "stored_bytes": 84102
+    },
+    "ncaam/sportsdataverse/ncaa_mbb_team_rosters": {
+      "objects": 17,
+      "stored_bytes": 3206063
+    },
+    "ncaam/the-odds-api/content_addressed_response": {
+      "objects": 14343,
+      "stored_bytes": 116712365
+    },
+    "ncaaw/paid/canary": {
+      "objects": 1,
+      "stored_bytes": 472
+    },
+    "ncaaw/sportsdataverse/espn_womens_college_basketball_game_rosters": {
+      "objects": 24,
+      "stored_bytes": 25081689
+    },
+    "ncaaw/sportsdataverse/espn_womens_college_basketball_officials": {
+      "objects": 12,
+      "stored_bytes": 1074317
+    },
+    "ncaaw/sportsdataverse/espn_womens_college_basketball_pbp": {
+      "objects": 23,
+      "stored_bytes": 523236948
+    },
+    "ncaaw/sportsdataverse/espn_womens_college_basketball_player_boxscores": {
+      "objects": 23,
+      "stored_bytes": 33208124
+    },
+    "ncaaw/sportsdataverse/espn_womens_college_basketball_player_core": {
+      "objects": 22,
+      "stored_bytes": 7388667
+    },
+    "ncaaw/sportsdataverse/espn_womens_college_basketball_player_season_stats": {
+      "objects": 20,
+      "stored_bytes": 2187992
+    },
+    "ncaaw/sportsdataverse/espn_womens_college_basketball_rosters": {
+      "objects": 3,
+      "stored_bytes": 2371721
+    },
+    "ncaaw/sportsdataverse/espn_womens_college_basketball_schedules": {
+      "objects": 28,
+      "stored_bytes": 41279511
+    },
+    "ncaaw/sportsdataverse/espn_womens_college_basketball_shots": {
+      "objects": 24,
+      "stored_bytes": 77930646
+    },
+    "ncaaw/sportsdataverse/espn_womens_college_basketball_standings": {
+      "objects": 23,
+      "stored_bytes": 2412645
+    },
+    "ncaaw/sportsdataverse/espn_womens_college_basketball_team_boxscores": {
+      "objects": 23,
+      "stored_bytes": 8072846
+    },
+    "ncaaw/sportsdataverse/espn_womens_college_basketball_team_season_stats": {
+      "objects": 16,
+      "stored_bytes": 1552479
+    },
+    "ncaaw/sportsdataverse/ncaa_wbb_lineups": {
+      "objects": 17,
+      "stored_bytes": 217803090
+    },
+    "ncaaw/sportsdataverse/ncaa_wbb_matchup_stints": {
+      "objects": 17,
+      "stored_bytes": 138840459
+    },
+    "ncaaw/sportsdataverse/ncaa_wbb_pbp": {
+      "objects": 17,
+      "stored_bytes": 958936798
+    },
+    "ncaaw/sportsdataverse/ncaa_wbb_player_box": {
+      "objects": 17,
+      "stored_bytes": 147410178
+    },
+    "ncaaw/sportsdataverse/ncaa_wbb_possessions": {
+      "objects": 17,
+      "stored_bytes": 211541327
+    },
+    "ncaaw/sportsdataverse/ncaa_wbb_rosters": {
+      "objects": 17,
+      "stored_bytes": 1033998
+    },
+    "ncaaw/sportsdataverse/ncaa_wbb_schedule": {
+      "objects": 17,
+      "stored_bytes": 762651
+    },
+    "ncaaw/sportsdataverse/ncaa_wbb_shots": {
+      "objects": 8,
+      "stored_bytes": 57016555
+    },
+    "ncaaw/sportsdataverse/ncaa_wbb_team_box": {
+      "objects": 17,
+      "stored_bytes": 21200226
+    },
+    "ncaaw/sportsdataverse/ncaa_wbb_team_ids": {
+      "objects": 17,
+      "stored_bytes": 84324
+    },
+    "ncaaw/sportsdataverse/ncaa_wbb_team_rosters": {
+      "objects": 17,
+      "stored_bytes": 2998297
+    },
+    "ncaaw/sportsdataverse/wbb_groups": {
+      "objects": 30,
+      "stored_bytes": 284057
+    },
+    "ncaaw/the-odds-api/content_addressed_response": {
+      "objects": 5276,
+      "stored_bytes": 10857086
+    },
+    "nfl/nfl-official-current/injury_roster_schedule_pages": {
+      "objects": 34,
+      "stored_bytes": 2033222
+    },
+    "nfl/nfldata/data": {
+      "objects": 18,
+      "stored_bytes": 8794332
+    },
+    "nfl/nfldata/games": {
+      "objects": 1,
+      "stored_bytes": 2185210
+    },
+    "nfl/nflverse/combine": {
+      "objects": 1,
+      "stored_bytes": 374318
+    },
+    "nfl/nflverse/contracts": {
+      "objects": 1,
+      "stored_bytes": 11078547
+    },
+    "nfl/nflverse/depth_charts": {
+      "objects": 26,
+      "stored_bytes": 16182349
+    },
+    "nfl/nflverse/draft_picks": {
+      "objects": 1,
+      "stored_bytes": 701584
+    },
+    "nfl/nflverse/espn_data": {
+      "objects": 2,
+      "stored_bytes": 378476
+    },
+    "nfl/nflverse/ftn_charting": {
+      "objects": 5,
+      "stored_bytes": 2365225
+    },
+    "nfl/nflverse/injuries": {
+      "objects": 18,
+      "stored_bytes": 2023828
+    },
+    "nfl/nflverse/misc": {
+      "objects": 1,
+      "stored_bytes": 1036316
+    },
+    "nfl/nflverse/nextgen_stats": {
+      "objects": 3,
+      "stored_bytes": 2296698
+    },
+    "nfl/nflverse/officials": {
+      "objects": 1,
+      "stored_bytes": 150096
+    },
+    "nfl/nflverse/pbp": {
+      "objects": 29,
+      "stored_bytes": 499480229
+    },
+    "nfl/nflverse/pbp_participation": {
+      "objects": 11,
+      "stored_bytes": 37427933
+    },
+    "nfl/nflverse/pfr_advstats": {
+      "objects": 40,
+      "stored_bytes": 2946475
+    },
+    "nfl/nflverse/player_stats": {
+      "objects": 365,
+      "stored_bytes": 63863647
+    },
+    "nfl/nflverse/players": {
+      "objects": 1,
+      "stored_bytes": 3393784
+    },
+    "nfl/nflverse/rosters": {
+      "objects": 28,
+      "stored_bytes": 10919167
+    },
+    "nfl/nflverse/schedules": {
+      "objects": 1,
+      "stored_bytes": 522246
+    },
+    "nfl/nflverse/snap_counts": {
+      "objects": 15,
+      "stored_bytes": 3014981
+    },
+    "nfl/nflverse/stats_player": {
+      "objects": 111,
+      "stored_bytes": 38095060
+    },
+    "nfl/nflverse/stats_team": {
+      "objects": 111,
+      "stored_bytes": 8520660
+    },
+    "nfl/nflverse/teams": {
+      "objects": 1,
+      "stored_bytes": 13361
+    },
+    "nfl/nflverse/trades": {
+      "objects": 1,
+      "stored_bytes": 107779
+    },
+    "nfl/nflverse/weekly_rosters": {
+      "objects": 25,
+      "stored_bytes": 14435489
+    },
+    "nfl/paid/canary": {
+      "objects": 1,
+      "stored_bytes": 5149
+    },
+    "nfl/the-odds-api/content_addressed_response": {
+      "objects": 10727,
+      "stored_bytes": 83299021
+    },
+    "shared/noaa-hrrr-original/grib2_field": {
+      "objects": 2640,
+      "stored_bytes": 3512826372
+    },
+    "shared/nws/point_metadata_and_hourly_forecasts": {
+      "objects": 1438,
+      "stored_bytes": 4264881
+    }
+  },
+  "cost_scope": "Application interval only; Processing provisioning/shutdown, S3 requests and storage excluded.",
+  "elapsed_seconds": 67.53,
+  "estimated_compute_usd": 0.008648,
+  "excluded_within_listed_prefixes": {
+    "code_or_return_bundle": {
+      "objects": 17,
+      "stored_bytes": 5653440
+    },
+    "out_of_scope_acb": {
+      "objects": 92,
+      "stored_bytes": 394813363
+    },
+    "outside_raw_scope": {
+      "objects": 30,
+      "stored_bytes": 12090361
+    },
+    "receipt_index_audit_or_legacy": {
+      "objects": 249668,
+      "stored_bytes": 330243802
+    },
+    "source_listing_or_index_metadata": {
+      "objects": 757,
+      "stored_bytes": 1690006
+    }
+  },
+  "included_last_modified_max": "2026-10-16T20:37:13+00:00",
+  "included_last_modified_min": "2026-10-16T00:34:57+00:00",
+  "included_listing_sha256": "a0b362f88a4446b6ae0a422803cd1b7facc184fedfc0af5e82bac8124312d9e2",
+  "interpretation": [
+    "Object counts are not unique games, API captures, rows, seasons or approved features.",
+    "Paid response bodies are content-addressed within provider and sport namespaces; public families and revisions may overlap.",
+    "Stored compressed bytes are not comparable to uncompressed response-byte counters.",
+    "NOAA listing/index metadata is excluded; NWS point metadata is included with forecast JSON responses.",
+    "SkillCorner ACB research files are a separate transfer-research source, not NBA or NCAA trajectory coverage; provider event annotations and game metadata remain separate from trajectory files.",
+    "NFL original HTML is archived page content; its count is not extracted player/game rows or approved feature coverage.",
+    "Live collectors may write during this paginated scan; this report measures an interval, not a transactionally frozen instant.",
+    "Objects outside listed prefixes, including duplicate legacy backups, acquisition reports and code, are outside this census."
+  ],
+  "limits": {
+    "application_seconds": 240,
+    "max_listing_pages": 1000
+  },
+  "listed_objects": 343883,
+  "listed_stored_bytes": 18003520644,
+  "listing_completed": true,
+  "pages": 345,
+  "point_in_time_atomic_snapshot": false,
+  "prefix_windows": [
+    {
+      "finished_at": "2026-10-16T20:37:34Z",
+      "pages": 335,
+      "prefix": "tracks/",
+      "started_at": "2026-10-16T20:36:28Z"
+    },
+    {
+      "finished_at": "2026-10-16T20:37:35Z",
+      "pages": 10,
+      "prefix": "shared/raw/",
+      "started_at": "2026-10-16T20:37:34Z"
+    }
+  ],
+  "region": "us-west-2",
+  "run_id": "20261016T203628Z-2cd6c0a72e",
+  "scan_finished_at": "2026-10-16T20:37:35Z",
+  "scan_started_at": "2026-10-16T20:36:28Z",
+  "schema_version": "sports-edge-lab-content-inventory-v1",
+  "scope": "Current S3 objects under tracks/ and shared/raw/; explicit raw-content whitelist only.",
+  "status": "completed",
+  "total": {
+    "objects": 93319,
+    "stored_bytes": 17259029672
+  },
+  "unclassified_raw_examples": []
+}

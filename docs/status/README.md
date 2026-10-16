@@ -1,5 +1,18 @@
 # Operational evidence
 
+Latest content scan: **93,319 in-scope files / 17,259,029,672 bytes**, October 16, 20:36:28–20:37:35 UTC. ACB is excluded.
+
+[Current football acquisition and remaining gaps](../FOOTBALL_READINESS_20261016.md) · [exact content inventory](content_inventory_20261016T2037Z.json) · [current execution ledger](execution_ledger_20261016_latest.json).
+
+The cumulative ledger contains 41 jobs as of 2026-10-16T20:44:23.218262+00:00: 10 Failed, 29 Completed, 1 Stopping, 1 Stopped. Successful execution does not certify complete historical coverage.
+
+V011 has an accepted stop request after repeated CBBD rate limits; AWS shutdown remains pending. V037 failed before any provider calls because the worker role lacks DescribeProcessingJob. V038 is prepared with a control-plane terminal-receipt gate, and is not launched until termination is verified. Raw successful caches remain intact.
+
+[NFL current game coverage](nfl35_report_20261016.json), [FBS and Big Ten coverage](football34_summary_20261016.json), [fresh market snapshot](current33_summary_20261016.json), [weather completion](weather30_summary_20261016.json), and [shooting completion](shooting32_summary_20261016.json) preserve source dates and scope.
+
+## Earlier observations
+
+
 ## Latest acquisition and freshness evidence
 
 The **20:02:52–20:03:45 UTC** [content scan](content_inventory_20261016T2003Z.json) counted

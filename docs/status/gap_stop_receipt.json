@@ -1,0 +1,6 @@
+{
+  "stop_requested": true,
+  "job": "sports-edge-lab-gap-backfill-20261016-v011",
+  "reason": "Repeated CBBD HTTP 429 confirmed in immutable failure receipts; prevent further rate-limited requests",
+  "response": {}
+}

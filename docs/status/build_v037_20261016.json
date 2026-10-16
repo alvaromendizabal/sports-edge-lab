@@ -1,0 +1,11 @@
+{
+  "artifact": "sports_edge_lab_odds_only_v037_20261016.pyz",
+  "sha256": "46318afcc310f5705267885fae59ce23f39fa924bd18fe5e21229ec3f219e9a9",
+  "tests": 37,
+  "source_hashes": {
+    "current_capture.py": "e3ec320fa2c78609084695c5fce0678c4ac920b404b7a97ee0bca2d3b43284c5",
+    "__main__.py": "662d9afa5dd6bf95d33866605f3569c436bc4769056df7bafda592bab9726c70",
+    "continuation.py": "d8023464fcb30e65fd64d223a02dcbc24fce41a1965af386b422821f91def749",
+    "acquire_paid_data.py": "868c011d061b42cce68b863006b8902a4990dcb8294f50dcecf036f54e001a0c"
+  }
+}

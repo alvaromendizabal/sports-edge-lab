@@ -34,6 +34,8 @@ def pack(value):
 
 def classify(key):
     """Return (track, provider, content type, family), exclusion, or unknown."""
+    if key.startswith('shared/raw/skillcorner-acb-research/'):
+        return None, 'out_of_scope_acb'
     parts = key.split('/')
     if key.endswith('/'):
         return None, 'directory_marker'
@@ -56,6 +58,8 @@ def classify(key):
             return (track, provider, 'original_availability_image', 'published_report'), None
         if track == 'nfl' and provider == 'nfl-official-current' and parts[4] == 'objects' and key.endswith('.html.gz'):
             return (track, provider, 'original_current_nfl_html', 'injury_roster_schedule_pages'), None
+        if track == 'ncaaf' and provider == 'bigten-availability-rendered' and parts[4] == 'objects' and key.endswith('.md.gz'):
+            return (track, provider, 'rendered_availability_extraction', 'public_archive_table'), None
         return None, 'unclassified_raw'
     if key.startswith('shared/raw/nws/objects/') and key.endswith('.json.gz'):
         return ('shared', 'nws', 'original_weather_json', 'point_metadata_and_hourly_forecasts'), None
@@ -64,13 +68,6 @@ def classify(key):
             return ('shared', 'noaa-hrrr-original', 'original_forecast_field', 'grib2_field'), None
         if key.endswith(('.idx.gz', '.xml.gz')):
             return None, 'source_listing_or_index_metadata'
-    if key.startswith('shared/raw/skillcorner-acb-research/objects/'):
-        if key.endswith('.jsonl.gz'):
-            return ('shared', 'skillcorner-acb-research', 'tracking_trajectory_jsonl', 'acb_research_trajectories'), None
-        if key.endswith('.json'):
-            return ('shared', 'skillcorner-acb-research', 'tracking_dataset_json', 'game_metadata_and_provider_event_annotations'), None
-        if key.endswith('.csv'):
-            return ('shared', 'skillcorner-acb-research', 'tracking_identity_csv', 'provider_player_aliases'), None
     if key.startswith('shared/raw/'):
         return None, 'unclassified_raw'
     return None, 'outside_raw_scope'
@@ -240,12 +237,11 @@ class Tests(unittest.TestCase):
         self.assertEqual(classify('tracks/nfl/raw/nfl-official-current/objects/a.html.gz')[0][2], 'original_current_nfl_html')
         self.assertIsNone(classify('tracks/nfl/raw/nfl-official-current/request-index/a.json')[0])
         self.assertIsNone(classify('shared/acquisition/nfl-official-current/evidence/objects/a.txt.gz')[0])
-    def test_acb_trajectories(self):
-        self.assertEqual(classify('shared/raw/skillcorner-acb-research/objects/a.jsonl.gz')[0][2], 'tracking_trajectory_jsonl')
-        self.assertIsNone(classify('shared/raw/skillcorner-acb-research/objects/a.zip')[0])
-    def test_acb_metadata_separate(self):
-        self.assertEqual(classify('shared/raw/skillcorner-acb-research/objects/a.json')[0][2], 'tracking_dataset_json')
-        self.assertEqual(classify('shared/raw/skillcorner-acb-research/objects/a.csv')[0][2], 'tracking_identity_csv')
+    def test_acb_all_formats_excluded(self):
+        for name in ('a.jsonl.gz','a.json','a.csv','a.zip'):
+            self.assertEqual(classify('shared/raw/skillcorner-acb-research/objects/'+name),(None,'out_of_scope_acb'))
+    def test_bigten_rendered_not_original_pdf(self):
+        self.assertEqual(classify('tracks/ncaaf/raw/bigten-availability-rendered/objects/a.md.gz')[0][2],'rendered_availability_extraction')
     def test_acb_evidence_excluded(self):
         self.assertIsNone(classify('shared/raw/skillcorner-acb-research/url-index/a.json')[0])
         self.assertIsNone(classify('shared/acquisition/open-tracking/evidence/objects/a.json')[0])

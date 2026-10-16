@@ -1,0 +1,65 @@
+{
+  "ProcessingJobName": "sports-edge-lab-current-20261016-v033",
+  "RoleArn": "arn:aws:iam::560403859723:role/SportsEdgeLabProcessingRole",
+  "AppSpecification": {
+    "ImageUri": "246618743249.dkr.ecr.us-west-2.amazonaws.com/sagemaker-scikit-learn:1.9-0",
+    "ContainerEntrypoint": [
+      "python3",
+      "-u",
+      "/opt/ml/processing/code/sports_edge_lab_current_v026_20261016.pyz"
+    ],
+    "ContainerArguments": [
+      "--odds-credits",
+      "500",
+      "--stats-calls",
+      "100",
+      "--max-seconds",
+      "600",
+      "--workers",
+      "4",
+      "--props-per-track",
+      "12",
+      "--odds-reserve-floor",
+      "100000"
+    ]
+  },
+  "ProcessingInputs": [
+    {
+      "InputName": "code",
+      "S3Input": {
+        "S3Uri": "s3://sagemaker-sports-edge-lab-560403859723-us-west-2/infrastructure/code/current-20261016-v026/",
+        "LocalPath": "/opt/ml/processing/code",
+        "S3DataType": "S3Prefix",
+        "S3InputMode": "File",
+        "S3DataDistributionType": "FullyReplicated"
+      }
+    }
+  ],
+  "ProcessingResources": {
+    "ClusterConfig": {
+      "InstanceCount": 1,
+      "InstanceType": "ml.m5.2xlarge",
+      "VolumeSizeInGB": 30
+    }
+  },
+  "StoppingCondition": {
+    "MaxRuntimeInSeconds": 900
+  },
+  "NetworkConfig": {
+    "EnableNetworkIsolation": false
+  },
+  "Tags": [
+    {
+      "Key": "Project",
+      "Value": "sports-edge-lab"
+    },
+    {
+      "Key": "Workstream",
+      "Value": "current-snapshot"
+    },
+    {
+      "Key": "Environment",
+      "Value": "dev"
+    }
+  ]
+}
