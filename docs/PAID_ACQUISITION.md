@@ -122,3 +122,11 @@ Official references:
 - https://api.collegebasketballdata.com/data-availability
 - https://api.collegebasketballdata.com/api/games
 - https://api.collegebasketballdata.com/api/plays
+
+## Targeted shooting-stat recovery
+
+[`recover_shooting.py`](../tools/recover_shooting.py) fills the optional CBBD shooting-stat gaps caused by the original unfiltered season requests. It imports the current v002 base collector and derives conference/team selectors from team-season responses already cached in S3. It does not repeat paid discovery or redownload the successful base archive.
+
+The runner is restricted to the team/player season shooting endpoints, at most 2,000 additional statistics calls, 500 application seconds and four workers. The corresponding Processing runtime ceiling is 600 seconds. Missing source seasons remain pending while the base job progresses; current-season cache identity includes its capture day. Eighteen automatic tests cover the shared base and recovery-specific limits, selector deduplication and cache identities.
+
+A submitted recovery job is not evidence that every failed query has been filled. Its actual capture counts and any remaining gaps belong in the operational ledger after execution.

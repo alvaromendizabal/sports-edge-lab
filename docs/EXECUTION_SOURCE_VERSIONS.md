@@ -16,4 +16,4 @@ The historical source file is preserved byte-for-byte for audit. Use current cod
 
 ## Public archive revision
 
-The running `sports-edge-lab-public-archive-20261016-v007` job launched the revision with five automatic tests. The current `tools/acquire_public_archives.py` adds a sixth mocked download/resume/hash-rejection test. That test-only update does not change the running job, and the current source must not be mislabeled as the byte-identical launched artifact. The exact launched revision is being retained separately with its receipt.
+The running `sports-edge-lab-public-archive-20261016-v007` job launched the revision with five automatic tests. The current `tools/acquire_public_archives.py` adds a sixth mocked download/resume/hash-rejection test. That test-only update does not change the running job, and the current source must not be mislabeled as the byte-identical launched artifact. The exact launched revision is preserved at [`tools/history/acquire_public_archives_v007_launched.py`](../tools/history/acquire_public_archives_v007_launched.py): **20,087 bytes**, SHA-256 `6de859894c88a8458c10312f149282dd1501b5cb72a633167ca1a55be62b3b35`.

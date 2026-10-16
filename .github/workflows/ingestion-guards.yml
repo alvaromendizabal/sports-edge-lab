@@ -64,3 +64,7 @@ jobs:
         run: |
           python -m py_compile tools/acquire_player_props.py tools/history/acquire_paid_data_v001_launched.py
           python tools/acquire_player_props.py --self-test
+      - name: Run targeted college shooting recovery guards
+        run: |
+          python -m py_compile tools/recover_shooting.py tools/history/acquire_public_archives_v007_launched.py
+          python tools/recover_shooting.py --self-test
