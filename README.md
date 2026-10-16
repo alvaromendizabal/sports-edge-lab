@@ -18,12 +18,15 @@ The project has **one repository, one SageMaker development space, and one priva
 
 ## Current execution status
 
-**Acquisition is active; model performance has not yet been established.** The initial NFL catalog contains 815 pinned public assets (722,613,027 bytes), previously verified in the private NFL archive. That work and its Git history are preserved. Consolidation into the central data lake is being verified; the current migration process preserves source archives.
+**Acquisition is active; model performance has not yet been established.** The initial NFL catalog contains 815 pinned public assets (722,613,027 bytes), previously verified in the private NFL archive. That work and its Git history are preserved. Consolidation has verified 1,663 prior objects (1,451,136,208 bytes) in the central data lake, including metadata and duplicate legacy captures. These object counts do not represent additional unique NFL datasets. The six old project buckets were retired after the archive verification.
 
 A bounded paid-data backfill has started in AWS for all five sports: historical moneylines, spreads and totals, plus CollegeFootballData and CollegeBasketballData statistics. Public-source expansion is a separate acquisition workstream. Successful requests and stored files are not evidence that every source, season, field or pregame timestamp is complete.
 
 - [Paid acquisition scope, budgets and tests](docs/PAID_ACQUISITION.md)
+- [Public archive source inventory](docs/SOURCE_INVENTORY_20261016.md)
+- [Direct original-source capture](docs/ORIGINAL_SOURCE_CAPTURE.md)
 - [Shared research and acceptance protocol](docs/RESEARCH_PROTOCOL.md)
+- [Verified consolidation record](docs/CONSOLIDATION_20261016.md)
 - [Machine-readable track configuration](config/tracks.json)
 - [Preserved original NFL setup](docs/history/NFL_SETUP_20261015.md)
 - [Original NFL asset manifest](catalog/public_asset_manifest_20261015.json)
@@ -49,16 +52,20 @@ The space configuration is verified. Creating a space does not imply a running n
 
 The shared [paid-data runner](tools/acquire_paid_data.py) resolves credentials only inside AWS from encrypted SSM parameters. It archives immutable, hashed raw responses and sanitized receipts; enforces shared provider budgets; emits heartbeats; and reuses completed historical requests after verifying the stored response hash. One compact return ZIP is generated per execution.
 
-The [migration utility](tools/consolidate_archive.py) copies previous archives and verifies object size, metadata and content before recording success. It preserves source buckets. The original NFL acquisition and planning scripts remain available as historical implementations; their older default paths should not be used for new multi-sport runs.
+The [migration utility](tools/consolidate_archive.py) records the completed one-time consolidation: it copied previous archives and verified object size, metadata and content before recording success. Its source buckets have since been retired, so it is retained for historical reproducibility, not as a routine acquisition command. The original NFL acquisition and planning scripts remain available as historical implementations; their older default paths should not be used for new multi-sport runs.
 
 Offline verification:
 
 ```bash
+python tools/acquire_public_archives.py --self-test
+python tools/acquire_espn.py --self-test
 python tools/acquire_paid_data.py --self-test
 python -m unittest discover -s tools -p 'test_paid_acquisition.py' -v
 ```
 
 Operational acquisition runs use explicit runtime and provider budgets. The initial paid milestone permits at most 1,000,000 odds credits and 15,000 combined college-statistics calls, with a 7,200-second Processing-job runtime ceiling. A budget ceiling is not a claim that this allowance has already been consumed.
+
+The [public archive runner](tools/acquire_public_archives.py) discovers actual SportsDataverse release assets for the four additional sports and preserves upstream lineage. The [direct ESPN collector](tools/acquire_espn.py) captures original responses separately. Community-compiled archives and direct original-source captures remain distinguishable in storage and provenance.
 
 ## Evaluation standard
 

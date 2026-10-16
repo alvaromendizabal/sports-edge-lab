@@ -55,3 +55,8 @@ jobs:
           assert all(Path('tracks', t['id'], 'README.md').exists() for t in c['tracks'])
           print('Single-workspace five-sport configuration passed')
           PY
+      - name: Run public archive and direct-source guards
+        run: |
+          python -m py_compile tools/acquire_public_archives.py tools/acquire_espn.py
+          python tools/acquire_public_archives.py --self-test
+          python tools/acquire_espn.py --self-test
