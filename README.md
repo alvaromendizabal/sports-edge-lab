@@ -20,7 +20,16 @@ The project has **one repository, one SageMaker development space, and one priva
 
 **Acquisition is active; model performance has not yet been established.** The initial NFL catalog contains 815 pinned public assets (722,613,027 bytes), previously verified in the private NFL archive. That work and its Git history are preserved. Consolidation has verified 1,663 prior objects (1,451,136,208 bytes) in the central data lake, including metadata and duplicate legacy captures. These object counts do not represent additional unique NFL datasets. The six old project buckets were retired after the archive verification.
 
-A bounded paid-data backfill has started in AWS for all five sports: historical moneylines, spreads and totals, plus CollegeFootballData and CollegeBasketballData statistics. Additional bounded jobs cover public archive expansion, direct ESPN captures and historical player-prop markets for NFL, NBA, NCAA football and NCAA men's basketball. Job acceptance and actual stored-response verification are recorded separately. Successful requests and stored files are not evidence that every source, season, field or pregame timestamp is complete.
+A bounded paid-data backfill has started in AWS for all five sports: historical moneylines, spreads and totals, plus CollegeFootballData and CollegeBasketballData statistics. At the **2026-10-16 00:53:30 UTC** snapshot, three acquisition jobs were running: public archive expansion, game-level odds/college statistics, and historical player props. The direct ESPN job stopped on source-access denial with zero captures. The archived [operational status](docs/status/operational-status_20261016.json) and [execution/cost ledger](docs/status/execution-ledger_20261016.json) distinguish completed work, active runs and failures. Successful requests and stored files are not evidence that every source, season, field or pregame timestamp is complete.
+
+| Workstream | Observed progress at the snapshot | State |
+| --- | --- | --- |
+| Public statistics | 4,492 assets cataloged; 2,643 processed; 817,475,475 bytes downloaded | Running; incomplete |
+| Game odds and college statistics | 5,554 captures; 3,329,493,477 uncompressed response bytes | Running; 22 optional shooting-query errors recorded |
+| Player props | 872 captures; 434,453 market outcomes across returned responses | Running; timestamp and kickoff issues flagged |
+| Direct ESPN capture | 0 captures | Access blocked; stopped without bypass |
+
+These measures describe requests and files, not unique games or model-ready examples. Payload bytes and compressed archive sizes are different measures; they are not summed into a headline dataset size. [Read the snapshot interpretation](docs/status/README.md).
 
 - [Paid acquisition scope, budgets and tests](docs/PAID_ACQUISITION.md)
 - [Deployed source versions and hashes](docs/EXECUTION_SOURCE_VERSIONS.md)

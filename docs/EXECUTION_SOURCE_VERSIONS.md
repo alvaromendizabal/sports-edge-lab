@@ -13,3 +13,7 @@ The v001 collector has already archived successful responses. Optional CBBD shoo
 Player-prop acquisition uses existing archived event IDs and does not pay for a second event-discovery pass. Its additional credit ceiling is 500,000 across four supported leagues. The base collector's credit ceiling remains 1,000,000; the two executions have separate run IDs and usage ledgers.
 
 The historical source file is preserved byte-for-byte for audit. Use current code for subsequent planned executions. A source version or passing offline test proves neither historical data completeness nor a live acquisition outcome; use the actual S3 run receipts for those conclusions.
+
+## Public archive revision
+
+The running `sports-edge-lab-public-archive-20261016-v007` job launched the revision with five automatic tests. The current `tools/acquire_public_archives.py` adds a sixth mocked download/resume/hash-rejection test. That test-only update does not change the running job, and the current source must not be mislabeled as the byte-identical launched artifact. The exact launched revision is being retained separately with its receipt.
