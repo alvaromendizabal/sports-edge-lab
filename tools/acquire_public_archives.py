@@ -300,6 +300,50 @@ class SelfTests(unittest.TestCase):
         b = {**a, "sha256": "b" * 64}
         self.assertNotEqual(asset_key(a, "tracks"), asset_key(b, "tracks"))
 
+    def test_download_resume_and_corruption_gate(self):
+        import io
+        import types
+        from unittest.mock import patch
+
+        class FakeClientError(Exception):
+            def __init__(self):
+                self.response = {"ResponseMetadata": {"HTTPStatusCode": 404}}
+
+        class FakeS3:
+            def __init__(self):
+                self.objects = {}
+
+            def head_object(self, Bucket, Key):
+                if Key not in self.objects:
+                    raise FakeClientError()
+                return self.objects[Key]
+
+            def upload_file(self, path, bucket, key, **kwargs):
+                self.objects[key] = {"ContentLength": os.path.getsize(path), "Metadata": kwargs["ExtraArgs"]["Metadata"]}
+
+            def put_object(self, **kwargs):
+                return {}
+
+        payload = b"PAR1testPAR1"
+        asset = {"sport": "nba", "release": "espn_nba_pbp", "name": "a.parquet", "asset_id": 1,
+                 "size": len(payload), "sha256": hashlib.sha256(payload).hexdigest(), "url": "https://example.test/a"}
+        args = types.SimpleNamespace(prefix="tracks", bucket="test")
+        modules = {"botocore.exceptions": types.SimpleNamespace(ClientError=FakeClientError)}
+        s3 = FakeS3()
+        def response(*args, **kwargs):
+            value = io.BytesIO(payload)
+            value.headers = {"Content-Length": str(len(payload))}
+            return value
+        with patch.dict(sys.modules, modules), patch("urllib.request.urlopen", side_effect=response) as download:
+            first = acquire(asset, s3, args, Budget(60, 1000), None)
+            second = acquire(asset, s3, args, Budget(60, 1000), None)
+            self.assertEqual(first["status"], "downloaded")
+            self.assertEqual(second["status"], "reused")
+            self.assertEqual(download.call_count, 1)
+            corrupt = acquire({**asset, "sha256": "0" * 64}, s3, args, Budget(60, 1000), None)
+            self.assertEqual(corrupt["status"], "failed")
+            self.assertEqual(len(s3.objects), 1)
+
 
 def main():
     parser = argparse.ArgumentParser(description=__doc__)
