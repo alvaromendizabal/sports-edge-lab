@@ -1,6 +1,7 @@
 # Data freshness and access — current update
 
-**Latest update, October 16 at 20:59 UTC:** ACB data and its collector have been deleted. V011 remains Stopping; v038 has not launched. [Current backlog, removal evidence and collection endpoint](DOWNLOAD_CLOSEOUT_20261016.md) supersede older status observations below.
+**Latest update:** v011 is terminal. The user-authorized continuous football completion job v039 has launched; the short v038 restart is superseded. [Scope, safeguards and runtime evidence](FOOTBALL_FINISH_V039.md). ACB remains deleted.
+
 
 ## Fresh football data captured this turn
 

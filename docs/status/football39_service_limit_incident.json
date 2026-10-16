@@ -1,0 +1,35 @@
+{
+  "status": "error",
+  "error": "ClientError: An error occurred (ResourceLimitExceeded) when calling the CreateProcessingJob operation: The account-level service limit 'Longest run time for a processing job' is 432000 Seconds, with total requested utilization of 777600 Seconds. Please use AWS Service Quotas to request an increase for this quota. If AWS Service Quotas is not available, contact AWS support to request an increase for this quota.",
+  "stdout": "",
+  "stderr": "Error calling function call_boto3 with arguments {'service_name': 'sagemaker', 'operation_name': 'CreateProcessingJob', 'region_name': 'us-west-2', 'params': {'ProcessingJobName': 'sports-edge-lab-football-finish-20261016-v039', 'RoleArn': 'arn:aws:iam::560403859723:role/SportsEdgeLabProcessingRole', 'AppSpecification': {'ImageUri': '246618743249.dkr.ecr.us-west-2.amazonaws.com/sagemaker-scikit-learn:1.9-0', 'ContainerEntrypoint': ['python3', '-u', '/opt/ml/processing/code/sports_edge_lab_football_finish_v039_20261016.pyz']}, 'ProcessingInputs': [{'InputName': 'code', 'S3Input': {'S3Uri': 's3://sagemaker-sports-edge-lab-560403859723-us-west-2/infrastructure/code/football-finish-20261016-v039/', 'LocalPath': '/opt/ml/processing/code', 'S3DataType': 'S3Prefix', 'S3InputMode': 'File', 'S3DataDistributionType': 'FullyReplicated'}}], 'ProcessingResources': {'ClusterConfig': {'InstanceCount': 1, 'InstanceType': 'ml.m5.2xlarge', 'VolumeSizeInGB': 30}}, 'StoppingCondition': {'MaxRuntimeInSeconds': 777600}, 'NetworkConfig': {'EnableNetworkIsolation': False}, 'Tags': [{'Key': 'Project', 'Value': 'sports-edge-lab'}, {'Key': 'Workstream', 'Value': 'football-core'}, {'Key': 'Environment', 'Value': 'dev'}]}}: An error occurred (ResourceLimitExceeded) when calling the CreateProcessingJob operation: The account-level service limit 'Longest run time for a processing job' is 432000 Seconds, with total requested utilization of 777600 Seconds. Please use AWS Service Quotas to request an increase for this quota. If AWS Service Quotas is not available, contact AWS support to request an increase for this quota.\n",
+  "api_calls": [
+    {
+      "service": "sagemaker",
+      "operation": "ListProcessingJobs",
+      "status": "success",
+      "n_items": {
+        "ProcessingJobSummaries": 37
+      }
+    },
+    {
+      "service": "sagemaker",
+      "operation": "DescribeProcessingJob",
+      "status": "success",
+      "n_items": {
+        "ProcessingInputs": 1
+      }
+    },
+    {
+      "service": "s3",
+      "operation": "HeadObject",
+      "status": "success"
+    },
+    {
+      "service": "sagemaker",
+      "operation": "CreateProcessingJob",
+      "status": "error",
+      "error": "ResourceLimitExceeded: An error occurred (ResourceLimitExceeded) when calling the CreateProcessingJob operation: The account-level service limit 'Longest run time for a processing job' is 432000 Seconds, with total requested utilization of 777600 Seconds. Please use AWS Service Quotas to request an increase for this quota. If AWS Service Quotas is not available, contact AWS support to request an increase for this quota."
+    }
+  ]
+}

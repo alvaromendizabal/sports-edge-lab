@@ -1,0 +1,240 @@
+{
+  "status": "success",
+  "stdout": "",
+  "return_value": {
+    "observed_at": "2026-10-16T21:17:45.171549+00:00",
+    "progress": {
+      "aws_service_runtime_max_seconds": 432000,
+      "bucket": "sagemaker-sports-edge-lab-560403859723-us-west-2",
+      "budget": {
+        "actual_known": {
+          "odds": 2310,
+          "stats": 0
+        },
+        "disabled_providers": [],
+        "limits": {
+          "odds": 200000,
+          "stats": 0
+        },
+        "provider_headers": {
+          "odds": {
+            "x-requests-last": 30,
+            "x-requests-remaining": 2212926,
+            "x-requests-used": 2787074
+          }
+        },
+        "reserved_or_known": {
+          "odds": 2340,
+          "stats": 0
+        },
+        "unknown_charge_reserve": {
+          "odds": 0,
+          "stats": 0
+        }
+      },
+      "capture_coverage": {
+        "football_historical_game_prices": 77,
+        "quota_preflight": 1
+      },
+      "college_statistics_requests_permitted": 0,
+      "compute_estimate_excludes_storage_requests_and_subscription": true,
+      "compute_estimate_usd": 0.0155,
+      "compute_rate_usd_per_hour": 0.461,
+      "data_notes": [
+        "End-of-season ratings and postgame data are not pregame features.",
+        "Daily odds census can omit events absent at 12:00 UTC.",
+        "Event-derived checkpoints require kickoff revision and bookmaker last_update auditing.",
+        "Snapshot API may return the closest available snapshot at or before request.",
+        "CBBD is the men's basketball statistical track; women's stats come from other sources.",
+        "No claim of complete source or season coverage follows from HTTP success."
+      ],
+      "dedup_policy": "Exact successful request identities; exact historical event 404 identities; private immutable raw captures",
+      "discovered_odds_events": {
+        "nba": 8088,
+        "ncaaf": 6245,
+        "ncaam": 31232,
+        "ncaaw": 2119,
+        "nfl": 2399
+      },
+      "elapsed_seconds": 120.96,
+      "failures_count": 0,
+      "frozen_cutoff": "2026-10-16T18:10:06Z",
+      "no_new_subscription_or_license": true,
+      "not_completed_by_this_runner": [
+        "basketball_history",
+        "historical_player_props",
+        "unpublished_availability",
+        "tracking_video",
+        "point_in_time_validation",
+        "model_training"
+      ],
+      "official_documentation": [
+        "https://the-odds-api.com/liveapi/guides/v4/",
+        "https://the-odds-api.com/historical-odds-data/",
+        "https://api.collegefootballdata.com/api/games",
+        "https://api.collegefootballdata.com/api/plays",
+        "https://api.collegebasketballdata.com/data-availability",
+        "https://api.collegebasketballdata.com/api/games",
+        "https://api.collegebasketballdata.com/api/plays"
+      ],
+      "phases": {
+        "availability": {
+          "captured_pages": 1,
+          "source_requests": 2,
+          "status": "current_report_captured_or_reused"
+        },
+        "football_game_odds": {
+          "completed": 77,
+          "negative_responses": 0,
+          "planned_missing_requests": 4696,
+          "processed": 77,
+          "status": "running",
+          "successful_or_reused": 77
+        },
+        "plan": {
+          "cutoff": "2026-10-16T18:10:06Z",
+          "markets": [
+            "h2h",
+            "spreads",
+            "totals"
+          ],
+          "missing_by_track": {
+            "ncaaf": 4696,
+            "nfl": 0
+          },
+          "planned": 4696,
+          "planned_nominal_credits": 140880,
+          "status": "frozen"
+        },
+        "predecessor": {
+          "evidence": {
+            "LastModifiedTime": "2026-10-16T21:03:56.497000+00:00",
+            "ProcessingEndTime": "2026-10-16T20:49:04.439000+00:00",
+            "ProcessingJobName": "sports-edge-lab-gap-backfill-20261016-v011",
+            "ProcessingJobStatus": "Stopped",
+            "ProcessingStartTime": "2026-10-16T18:19:27.656000+00:00",
+            "observed_at": "2026-10-16T21:08:55.019704+00:00"
+          },
+          "status": "terminal_verified"
+        },
+        "seed": {
+          "permanent_request_404s": 1228,
+          "source_runs": 3,
+          "status": "completed",
+          "successful_request_ids": 46765
+        }
+      },
+      "planned_missing_by_track": {
+        "ncaaf": 4696,
+        "nfl": 0
+      },
+      "predecessor_run": "20261016T182005Z-1999205e92",
+      "quota_preflight": {
+        "passed": true,
+        "remaining": 2215236,
+        "required": 300000,
+        "reserve_floor": 100000
+      },
+      "run_id": "20261016T211526Z-92ef3be742",
+      "scope": "Missing NFL/NCAAF US game-price checkpoints and one current NFL injury report",
+      "seed_counts": {
+        "existing_successful_football_indexes": 36691,
+        "permanent_request_404s": 1228,
+        "source_runs": 3,
+        "successful_request_ids": 46765
+      },
+      "selected_queue_complete": false,
+      "selected_queue_failed": 0,
+      "selected_queue_remaining": 4619,
+      "source_events_key": "shared/acquisition/paid/20261016T182005Z-1999205e92/discovered-events.json",
+      "source_requests_per_second_limit": 1,
+      "source_runs": [
+        "20261016T003943Z-742acb6443",
+        "20261016T004910Z-fa9211a177",
+        "20261016T005814Z-dc2ec3e9a5"
+      ],
+      "statistics": {
+        "captured": 78,
+        "http_calls": 78,
+        "ncaaf_captured": 77,
+        "nfl_captured": 1,
+        "odds_captured": 78,
+        "odds_http_calls": 78,
+        "raw_bytes": 27961963
+      },
+      "timestamp": "2026-10-16T21:17:27Z",
+      "tracks": [
+        "nfl",
+        "ncaaf"
+      ],
+      "until": "2026-10-16T18:10:06Z",
+      "version": "sports-edge-lab-football-finish-v039"
+    },
+    "availability": {
+      "capture_vintage": "2026-10-16T21:00Z",
+      "captured": [
+        {
+          "bytes": 394522,
+          "capture_vintage": "2026-10-16T21:00Z",
+          "captured_at": "2026-10-16T21:15:39Z",
+          "html_title": "Official NFL Injury Report for Players - Week 6 of the 2026 Season | NFL.com",
+          "kind": "injuries",
+          "point_in_time_approved": false,
+          "raw_key": "tracks/nfl/raw/nfl-official-current/objects/6d8e2a48e66698cbe9062e6e1219b4d7d0902bb064ef4d953c54c64e0c7a63a3.html.gz",
+          "run_id": "20261016T211526Z-92ef3be742",
+          "sha256": "6d8e2a48e66698cbe9062e6e1219b4d7d0902bb064ef4d953c54c64e0c7a63a3",
+          "source_http_date": "Fri, 16 Oct 2026 21:15:39 GMT",
+          "status": "downloaded",
+          "table_count": 28,
+          "url": "https://www.nfl.com/injuries/league/2026/reg6"
+        }
+      ],
+      "evidence": [
+        {
+          "bytes": 343,
+          "capture_vintage": "2026-10-16T21:00Z",
+          "captured_at": "2026-10-16T21:15:38Z",
+          "kind": "robots",
+          "point_in_time_approved": false,
+          "raw_key": "shared/acquisition/nfl-official-current/evidence/objects/0183802b9df0fad8075bba80f8e13c3486da842410d68329adccbe5b8f8831cb.txt.gz",
+          "run_id": "20261016T211526Z-92ef3be742",
+          "sha256": "0183802b9df0fad8075bba80f8e13c3486da842410d68329adccbe5b8f8831cb",
+          "source_http_date": "Fri, 16 Oct 2026 21:15:38 GMT",
+          "status": "downloaded",
+          "url": "https://www.nfl.com/robots.txt"
+        }
+      ],
+      "ncaa_note": "Existing Big Ten capture retained; American Conference reports are acquired by the existing release-window schedule. No unpublished report assumed available.",
+      "point_in_time_approved": false,
+      "run_id": "20261016T211526Z-92ef3be742",
+      "source_bytes": 394865,
+      "source_requests": 2,
+      "status": "current_report_captured_or_reused"
+    },
+    "plan": {
+      "tasks": 4696,
+      "earliest": "2020-08-31T16:00:00Z",
+      "latest": "2023-10-20T16:04:16Z",
+      "by_track": {
+        "ncaaf": 4696
+      }
+    }
+  },
+  "api_calls": [
+    {
+      "service": "s3",
+      "operation": "GetObject",
+      "status": "success"
+    },
+    {
+      "service": "s3",
+      "operation": "GetObject",
+      "status": "success"
+    },
+    {
+      "service": "s3",
+      "operation": "GetObject",
+      "status": "success"
+    }
+  ]
+}

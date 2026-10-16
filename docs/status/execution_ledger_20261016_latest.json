@@ -1,16 +1,16 @@
 {
-  "as_of": "2026-10-16T20:44:23.218262+00:00",
-  "as_of_utc": "2026-10-16T20:44:23.218262+00:00",
+  "as_of": "2026-10-16T21:17:45.171549+00:00",
+  "as_of_utc": "2026-10-16T21:17:45.171549+00:00",
   "cost_note": "Estimates use AWS-reported processing intervals and the preserved instance-specific rates. InProgress elapsed intervals are provisional and separate from finished jobs. Jobs without ProcessingStartTime have unallocated cost. Excludes unreported provisioning/shutdown, Studio, S3 storage/requests, data transfer, paid API credits and subscriptions; final AWS bill not reconciled.",
   "describe_errors": 0,
   "execution_outcome_counts": {
-    "Completed": 29,
     "Failed": 10,
-    "Stopped": 1,
-    "Stopping": 1
+    "Completed": 29,
+    "Stopped": 2,
+    "InProgress": 1
   },
   "is_billing_statement": false,
-  "job_count": 41,
+  "job_count": 42,
   "jobs": [
     {
       "created_at": "2026-10-15T23:12:16.987000+00:00",
@@ -284,21 +284,21 @@
     },
     {
       "created_at": "2026-10-16T18:18:43.087000+00:00",
-      "estimated_processing_interval_usd": 1.113515,
+      "estimated_processing_interval_usd": 1.149527,
       "failure_reason": null,
       "hourly_usd_per_instance": 0.461,
       "instance_count": 1,
       "instance_type": "ml.m5.2xlarge",
-      "interval_kind": "provisional_elapsed_interval",
-      "interval_seconds": 8695.562,
+      "interval_kind": "finished_processing_interval",
+      "interval_seconds": 8976.783,
       "job_name": "sports-edge-lab-gap-backfill-20261016-v011",
-      "last_modified_at": "2026-10-16T20:36:45.609000+00:00",
+      "last_modified_at": "2026-10-16T21:03:56.497000+00:00",
       "legacy_nfl_track_name": false,
       "max_runtime_seconds": 14400,
-      "observed_at": "2026-10-16T20:44:23.218262+00:00",
-      "processing_end_at": null,
+      "observed_at": "2026-10-16T21:08:55.019704+00:00",
+      "processing_end_at": "2026-10-16T20:49:04.439000+00:00",
       "processing_start_at": "2026-10-16T18:19:27.656000+00:00",
-      "status": "Stopping"
+      "status": "Stopped"
     },
     {
       "created_at": "2026-10-16T18:19:42.168000+00:00",
@@ -760,13 +760,31 @@
       "processing_end_at": "2026-10-16T20:23:29.695000+00:00",
       "processing_start_at": "2026-10-16T20:21:41.169000+00:00",
       "status": "Completed"
+    },
+    {
+      "job_name": "sports-edge-lab-football-finish-20261016-v039",
+      "status": "InProgress",
+      "observed_at": "2026-10-16T21:17:45.171549+00:00",
+      "instance_type": "ml.m5.2xlarge",
+      "instance_count": 1,
+      "hourly_usd_per_instance": 0.461,
+      "max_runtime_seconds": 432000,
+      "application_runtime_limit_seconds": null,
+      "processing_start_at": null,
+      "processing_end_at": null,
+      "interval_kind": "unreported_aws_interval",
+      "estimated_processing_interval_usd": null,
+      "application_elapsed_seconds": 120.96,
+      "application_estimated_compute_usd": 0.0155,
+      "application_estimate_not_billing_reconciled": true
     }
   ],
   "listing_complete": true,
   "new_evidence": [
-    "Four fresh acquisition/census completions v033-v036",
-    "v011 stop requested after CBBD 429",
-    "v037 failed at AWS management permission check with zero provider requests; return saved"
+    "v011 terminal Stopped with real ProcessingEndTime",
+    "v039 launched and passed62runtime tests; successful captures running",
+    "v038 superseded and not launched",
+    "ACB removed by prior user-authorized cleanup"
   ],
   "nonblocking_incidents": [
     {
@@ -787,10 +805,17 @@
       "classification": "completed discovered subset with30of32rosters",
       "job": "sports-edge-lab-nfl-current-20261016-v027",
       "resolution": "v031 resumesmissingteamsafterverifyingexistingrawbodies;actualrecoveryreportseparate"
+    },
+    {
+      "classification": "service-limit rejection before any job creation",
+      "job": "sports-edge-lab-football-finish-20261016-v039",
+      "requested_seconds": 777600,
+      "account_limit_seconds": 432000,
+      "resolution": "Corrected to account maximum; no quota increase, provider calls or processing compute from the rejected request"
     }
   ],
-  "observation_note": "Earlier terminal metadata is preserved. Updated jobs were re-described; AWS Stopping is not terminal. The metadata census lists 37 sports-edge-lab jobs plus four preserved legacy NFL jobs.",
-  "observation_window_end": "2026-10-16T20:44:23.218262+00:00",
+  "observation_note": "Prior terminal job metadata retained; v011 re-observed terminal; v039 runtime logs and S3 progress verified. Service-limit CreateProcessingJob rejection is not an executed job.",
+  "observation_window_end": "2026-10-16T21:17:45.171549+00:00",
   "observation_window_start": "2026-10-16T18:44:28.198793+00:00",
   "outcome_note": "AWS status is retained separately. The direct ESPN source-access rejection is a valid negative access result, not acquired data; no bypass occurred. Completed bounded runs need not complete source coverage.",
   "project": "sports-edge-lab",
@@ -807,35 +832,35 @@
   "schema_version": 1,
   "scope": "SageMaker ProcessingJobs named sports-edge-lab-* plus four immutable nfl-edge-lab-* historical track job names. Metadata only; no S3 objects or receipts read.",
   "status_counts": {
-    "Completed": 29,
     "Failed": 10,
-    "Stopped": 1,
-    "Stopping": 1
+    "Completed": 29,
+    "Stopped": 2,
+    "InProgress": 1
   },
   "totals_by_status": {
-    "Completed": {
-      "estimated_processing_interval_usd": 2.823119,
-      "interval_seconds": 22041.717,
-      "jobs": 29,
-      "unreported_intervals": 0
-    },
     "Failed": {
+      "jobs": 10,
       "estimated_processing_interval_usd": 0.088997,
       "interval_seconds": 690.301,
-      "jobs": 10,
+      "unreported_intervals": 0
+    },
+    "Completed": {
+      "jobs": 29,
+      "estimated_processing_interval_usd": 2.823119,
+      "interval_seconds": 22041.717,
       "unreported_intervals": 0
     },
     "Stopped": {
-      "estimated_processing_interval_usd": 0.054439,
-      "interval_seconds": 425.118,
-      "jobs": 1,
+      "jobs": 2,
+      "estimated_processing_interval_usd": 1.203966,
+      "interval_seconds": 9401.901,
       "unreported_intervals": 0
     },
-    "Stopping": {
-      "estimated_processing_interval_usd": 1.113515,
-      "interval_seconds": 8695.562,
+    "InProgress": {
       "jobs": 1,
-      "unreported_intervals": 0
+      "estimated_processing_interval_usd": 0,
+      "interval_seconds": 0,
+      "unreported_intervals": 1
     }
   }
 }

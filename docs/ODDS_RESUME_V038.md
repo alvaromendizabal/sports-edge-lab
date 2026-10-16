@@ -1,4 +1,6 @@
-# Prepared odds-only restart
+# Superseded odds-only restart
+
+**Do not launch v038.** The October 16 user instruction removes short application windows and focuses the next run on needed football data. [V039](FOOTBALL_FINISH_V039.md) was launched instead; the old follow-up now only monitors it. The original v038 instructions below are retained as historical evidence.
 
 V037 failed before provider access because its role has no SageMaker management
 permissions. Its saved return is `shared/acquisition/paid/20261016T204029Z-1fac91dda7/`.

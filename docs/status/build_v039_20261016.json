@@ -1,0 +1,31 @@
+{
+  "version": "v039",
+  "artifact": "sports_edge_lab_football_finish_v039_20261016.pyz",
+  "sha256": "bccdc8e2c87269bfae01c8e8d25a85e374df8b3c455cdf095716cd806dd48769",
+  "bytes": 43343,
+  "self_tests": {
+    "event": "SELF_TEST_PASS",
+    "tests": 62,
+    "timestamp": "2026-10-16T21:13:32Z",
+    "workload": "sports-edge-lab-football-finish-v039"
+  },
+  "runtime_credentials_or_source_requests_during_self_tests": false,
+  "sources": {
+    "__main__.py": "08eb989e87d4f101d09cb77af474e8f58d8864887d538fbd9ac3cea3ac50ff3a",
+    "acquire_paid_data.py": "868c011d061b42cce68b863006b8902a4990dcb8294f50dcecf036f54e001a0c",
+    "continuation.py": "d8023464fcb30e65fd64d223a02dcbc24fce41a1965af386b422821f91def749",
+    "current_capture.py": "e3ec320fa2c78609084695c5fce0678c4ac920b404b7a97ee0bca2d3b43284c5",
+    "nfl_current.py": "c92dc82354e7e4bc005585576c18d063fec41b68bbe0e673d0af703ff7c3936d",
+    "odds_resume.py": "9795a6bf97ae571a29522fe824c1718d928bc1265d668536b29b88cda1d763d9",
+    "predecessor_terminal.json": "e004ae9424a3953ee4b46d80c7e639109459ce9e35cf05ca83d492cebeb2dcf7"
+  },
+  "application_runtime_limit_seconds": null,
+  "aws_runtime_seconds": 432000,
+  "odds_credit_ceiling": 200000,
+  "stats_calls": 0,
+  "source_request_rate_per_second": 1,
+  "tracks": [
+    "nfl",
+    "ncaaf"
+  ]
+}

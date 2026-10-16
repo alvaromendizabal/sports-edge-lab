@@ -1,6 +1,7 @@
 # Downloaded data and next acquisition priorities
 
-**Latest update, October 16 at 20:59 UTC:** ACB data and its collector have been deleted. V011 remains Stopping; v038 has not launched. [Current backlog, removal evidence and collection endpoint](DOWNLOAD_CLOSEOUT_20261016.md) supersede older status observations below.
+**Latest update:** v011 is terminal. The user-authorized continuous football completion job v039 has launched; the short v038 restart is superseded. [Scope, safeguards and runtime evidence](FOOTBALL_FINISH_V039.md). ACB remains deleted.
+
 
 **93,319 in-scope raw content files / 17.26 GB are verified in the shared archive.**
 The content-only S3 scan ran on **October 16, 20:36:28–20:37:35 UTC**, counting

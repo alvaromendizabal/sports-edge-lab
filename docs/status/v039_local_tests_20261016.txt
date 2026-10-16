@@ -1,0 +1,38 @@
+{"event": "SELF_TEST_PASS", "tests": 62, "timestamp": "2026-10-16T21:13:32Z", "workload": "sports-edge-lab-football-finish-v039"}
+...............
+----------------------------------------------------------------------
+Ran 15 tests in 0.017s
+
+OK
+.....
+----------------------------------------------------------------------
+Ran 5 tests in 0.000s
+
+OK
+...............
+----------------------------------------------------------------------
+Ran 15 tests in 0.004s
+
+OK
+...
+----------------------------------------------------------------------
+Ran 3 tests in 0.000s
+
+OK
+test_live_reserve_stops_after_response (__main__.focused_tests.<locals>.Tests.test_live_reserve_stops_after_response) ... ok
+test_old_application_timer_does_not_stop_queue (__main__.focused_tests.<locals>.Tests.test_old_application_timer_does_not_stop_queue) ... ok
+test_one_unique_return_with_resume_state (__main__.focused_tests.<locals>.Tests.test_one_unique_return_with_resume_state) ... ok
+test_plan_excludes_basketball_and_future_and_deduplicates (__main__.focused_tests.<locals>.Tests.test_plan_excludes_basketball_and_future_and_deduplicates) ... ok
+test_plan_skips_successful_indexes (__main__.focused_tests.<locals>.Tests.test_plan_skips_successful_indexes) ... ok
+test_scope_gate_runs_before_parent_capture (__main__.focused_tests.<locals>.Tests.test_scope_gate_runs_before_parent_capture) ... ok
+test_scope_rejects_stats_props_and_non_us (__main__.focused_tests.<locals>.Tests.test_scope_rejects_stats_props_and_non_us) ... ok
+
+----------------------------------------------------------------------
+Ran 7 tests in 0.003s
+
+OK
+.................
+----------------------------------------------------------------------
+Ran 17 tests in 0.015s
+
+OK
