@@ -1,0 +1,133 @@
+{
+  "role_creation": {
+    "status": "success",
+    "stdout": "",
+    "return_value": {
+      "schedule_group": {
+        "ScheduleGroupArn": "arn:aws:scheduler:us-west-2:560403859723:schedule-group/sports-edge-lab-ingestion"
+      },
+      "role_arn": "arn:aws:iam::560403859723:role/SportsEdgeLabAvailabilitySchedulerRole",
+      "inline_policy": "LaunchAvailabilityV022Only",
+      "policy_attach_response": {}
+    },
+    "api_calls": [
+      {
+        "service": "scheduler",
+        "operation": "CreateScheduleGroup",
+        "status": "success"
+      },
+      {
+        "service": "iam",
+        "operation": "CreateRole",
+        "status": "success"
+      },
+      {
+        "service": "iam",
+        "operation": "PutRolePolicy",
+        "status": "success"
+      }
+    ]
+  },
+  "schedule": {
+    "status": "success",
+    "stdout": "",
+    "return_value": {
+      "create_response": {
+        "ScheduleArn": "arn:aws:scheduler:us-west-2:560403859723:schedule/sports-edge-lab-ingestion/sports-edge-lab-ncaa-availability-20261017-v022"
+      },
+      "verified_schedule": {
+        "ActionAfterCompletion": "DELETE",
+        "Arn": "arn:aws:scheduler:us-west-2:560403859723:schedule/sports-edge-lab-ingestion/sports-edge-lab-ncaa-availability-20261017-v022",
+        "CreationDate": "2026-10-16T19:22:18.608000+00:00",
+        "Description": "One-time original American Conference availability acquisition in the source robots UTC visit window; max 15 minutes AWS runtime.",
+        "FlexibleTimeWindow": {
+          "Mode": "OFF"
+        },
+        "GroupName": "sports-edge-lab-ingestion",
+        "LastModificationDate": "2026-10-16T19:22:18.608000+00:00",
+        "Name": "sports-edge-lab-ncaa-availability-20261017-v022",
+        "ScheduleExpression": "at(2026-10-17T01:05:00)",
+        "ScheduleExpressionTimezone": "UTC",
+        "State": "ENABLED",
+        "Target": {
+          "Arn": "arn:aws:scheduler:::aws-sdk:sagemaker:createProcessingJob",
+          "Input": "{\"ProcessingJobName\":\"sports-edge-lab-ncaa-availability-20261017-v022\",\"RoleArn\":\"arn:aws:iam::560403859723:role/SportsEdgeLabProcessingRole\",\"AppSpecification\":{\"ImageUri\":\"246618743249.dkr.ecr.us-west-2.amazonaws.com/sagemaker-scikit-learn:1.9-0\",\"ContainerEntrypoint\":[\"python3\",\"-u\",\"/opt/ml/processing/code/sports_edge_lab_ncaa_availability_v022_20261016.pyz\"],\"ContainerArguments\":[\"--max-seconds\",\"600\",\"--max-requests\",\"200\",\"--max-bytes\",\"100000000\"]},\"ProcessingInputs\":[{\"InputName\":\"code\",\"S3Input\":{\"S3Uri\":\"s3://sagemaker-sports-edge-lab-560403859723-us-west-2/infrastructure/code/ncaa-availability-20261016-v022/\",\"LocalPath\":\"/opt/ml/processing/code\",\"S3DataType\":\"S3Prefix\",\"S3InputMode\":\"File\",\"S3DataDistributionType\":\"FullyReplicated\"}}],\"ProcessingResources\":{\"ClusterConfig\":{\"InstanceCount\":1,\"InstanceType\":\"ml.m5.2xlarge\",\"VolumeSizeInGB\":30}},\"StoppingCondition\":{\"MaxRuntimeInSeconds\":900},\"NetworkConfig\":{\"EnableNetworkIsolation\":false},\"Tags\":[{\"Key\":\"Project\",\"Value\":\"sports-edge-lab\"},{\"Key\":\"Workstream\",\"Value\":\"ncaa-original-availability\"},{\"Key\":\"Environment\",\"Value\":\"dev\"},{\"Key\":\"Schedule\",\"Value\":\"sports-edge-lab-ncaa-availability-20261017-v022\"}]}",
+          "RetryPolicy": {
+            "MaximumEventAgeInSeconds": 60,
+            "MaximumRetryAttempts": 0
+          },
+          "RoleArn": "arn:aws:iam::560403859723:role/SportsEdgeLabAvailabilitySchedulerRole"
+        }
+      }
+    },
+    "api_calls": [
+      {
+        "service": "scheduler",
+        "operation": "CreateSchedule",
+        "status": "success"
+      },
+      {
+        "service": "scheduler",
+        "operation": "GetSchedule",
+        "status": "success"
+      }
+    ]
+  },
+  "preflight": {
+    "status": "success",
+    "stdout": "",
+    "return_value": {
+      "job": "sports-edge-lab-ncaa-preflight-20261016-v022",
+      "events": [
+        {
+          "timestamp": 1792178459732,
+          "message": "----------------------------------------------------------------------",
+          "ingestionTime": 1792178465857
+        },
+        {
+          "timestamp": 1792178459732,
+          "message": "Ran 23 tests in 0.052s",
+          "ingestionTime": 1792178465857
+        },
+        {
+          "timestamp": 1792178459732,
+          "message": "OK",
+          "ingestionTime": 1792178465857
+        },
+        {
+          "timestamp": 1792178459732,
+          "message": "{\"event\": \"SELF_TEST_PASSED\", \"tests\": 23, \"at\": \"2026-10-16T19:20:58Z\"}",
+          "ingestionTime": 1792178465857
+        },
+        {
+          "timestamp": 1792178459732,
+          "message": "{\"updated_at\": \"2026-10-16T19:20:58Z\", \"status\": \"deferred_source_window\", \"requests\": 0, \"downloaded_images\": 0, \"reused_images\": 0, \"http_bytes\": 0, \"elapsed_seconds\": 0.594, \"estimated_compute_usd\": 7.6e-05}",
+          "ingestionTime": 1792178465857
+        },
+        {
+          "timestamp": 1792178459732,
+          "message": "{\"report_key\": \"shared/acquisition/ncaa-availability/20261016T192058Z-50de83bb2e/report.json\", \"return_zip\": \"/opt/ml/processing/output/sports_edge_lab_ncaa_availability_20261016T192058Z-50de83bb2e_return.zip\", \"return_sha256\": \"fd5ed7ea4b9e6c0d453a8e5554932d99b01d334bbce0008e4975ccfc1ee3b36d\"}",
+          "ingestionTime": 1792178465857
+        }
+      ]
+    },
+    "api_calls": [
+      {
+        "service": "logs",
+        "operation": "DescribeLogStreams",
+        "status": "success",
+        "n_items": {
+          "logStreams": 1
+        }
+      },
+      {
+        "service": "logs",
+        "operation": "GetLogEvents",
+        "status": "success",
+        "n_items": {
+          "events": 6
+        }
+      }
+    ]
+  }
+}

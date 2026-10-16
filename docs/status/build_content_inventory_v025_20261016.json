@@ -1,0 +1,15 @@
+{
+  "artifact": "/workspace/scratch/f3ff20681710/turn4_inventory/sports_edge_lab_content_inventory_v025_20261016.pyz",
+  "bytes": 5239,
+  "sha256": "1321acb1ac6bb3e24abccdf2e2197f33c13809408bbf1d05fb86106251960b44",
+  "source_sha256": "5c516796088b89454cc01e5ff5e8894051fca9b3af0ecd239889e32aa0f729bd",
+  "self_tests": 15,
+  "validation": "AST parse only locally; 15 mandatory tests run in AWS before listing",
+  "application_seconds": 240,
+  "aws_seconds": 300,
+  "max_listing_pages": 1000,
+  "provider_api_calls": 0,
+  "reads": "ListObjectsV2 only; no source payloads or receipts read",
+  "output": "One report, progress, and one unique return ZIP under shared/acquisition/content-inventory/{run_id}/",
+  "correction": "Public whitelist now matches all six downloader formats including observed .rds fallback; failure receipts explicitly excluded. Original v023 source/report retained."
+}

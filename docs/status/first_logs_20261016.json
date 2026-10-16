@@ -1,0 +1,110 @@
+{
+  "status": "success",
+  "stdout": "",
+  "return_value": [
+    {
+      "job": "sports-edge-lab-noaa-season-20261016-v020",
+      "events": [
+        {
+          "timestamp": 1792177995639,
+          "message": "{\"timestamp\": \"2026-10-16T19:13:15Z\", \"event\": \"HEARTBEAT\", \"run_id\": \"20261016T191314Z-af9f749022\", \"requests\": 0, \"source_bytes\": 0, \"captures\": 0, \"forecast_pairs_processed\": 0, \"forecast_pairs_remaining\": 440, \"estimated_compute_usd\": 0.000128}",
+          "ingestionTime": 1792178000754
+        },
+        {
+          "timestamp": 1792178016643,
+          "message": "{\"timestamp\": \"2026-10-16T19:13:36Z\", \"event\": \"HEARTBEAT\", \"run_id\": \"20261016T191314Z-af9f749022\", \"requests\": 30, \"source_bytes\": 32775188, \"captures\": 30, \"forecast_pairs_processed\": 3, \"forecast_pairs_remaining\": 437, \"estimated_compute_usd\": 0.002763}",
+          "ingestionTime": 1792178021812
+        },
+        {
+          "timestamp": 1792178036645,
+          "message": "{\"timestamp\": \"2026-10-16T19:13:56Z\", \"event\": \"HEARTBEAT\", \"run_id\": \"20261016T191314Z-af9f749022\", \"requests\": 61, \"source_bytes\": 62739046, \"captures\": 61, \"forecast_pairs_processed\": 7, \"forecast_pairs_remaining\": 433, \"estimated_compute_usd\": 0.005345}",
+          "ingestionTime": 1792178041867
+        },
+        {
+          "timestamp": 1792178057648,
+          "message": "{\"timestamp\": \"2026-10-16T19:14:16Z\", \"event\": \"HEARTBEAT\", \"run_id\": \"20261016T191314Z-af9f749022\", \"requests\": 92, \"source_bytes\": 93367265, \"captures\": 92, \"forecast_pairs_processed\": 11, \"forecast_pairs_remaining\": 429, \"estimated_compute_usd\": 0.007985}",
+          "ingestionTime": 1792178062917
+        },
+        {
+          "timestamp": 1792178077650,
+          "message": "{\"timestamp\": \"2026-10-16T19:14:37Z\", \"event\": \"HEARTBEAT\", \"run_id\": \"20261016T191314Z-af9f749022\", \"requests\": 123, \"source_bytes\": 126253142, \"captures\": 123, \"forecast_pairs_processed\": 15, \"forecast_pairs_remaining\": 425, \"estimated_compute_usd\": 0.010601}",
+          "ingestionTime": 1792178082969
+        },
+        {
+          "timestamp": 1792178098653,
+          "message": "{\"timestamp\": \"2026-10-16T19:14:57Z\", \"event\": \"HEARTBEAT\", \"run_id\": \"20261016T191314Z-af9f749022\", \"requests\": 152, \"source_bytes\": 159728454, \"captures\": 152, \"forecast_pairs_processed\": 18, \"forecast_pairs_remaining\": 422, \"estimated_compute_usd\": 0.013244}",
+          "ingestionTime": 1792178104016
+        }
+      ]
+    },
+    {
+      "job": "sports-edge-lab-shooting-resume-20261016-v021",
+      "events": [
+        {
+          "timestamp": 1792178089764,
+          "message": "..............",
+          "ingestionTime": 1792178095888
+        },
+        {
+          "timestamp": 1792178089764,
+          "message": "----------------------------------------------------------------------",
+          "ingestionTime": 1792178095888
+        },
+        {
+          "timestamp": 1792178089764,
+          "message": "Ran 14 tests in 0.002s",
+          "ingestionTime": 1792178095888
+        },
+        {
+          "timestamp": 1792178089764,
+          "message": "OK",
+          "ingestionTime": 1792178095888
+        },
+        {
+          "timestamp": 1792178089764,
+          "message": "{\"event\": \"SELF_TEST_PASS\", \"tests\": 29, \"timestamp\": \"2026-10-16T19:14:48Z\", \"workload\": \"sports-edge-lab-cbbd-shooting-continuation-v021\"}",
+          "ingestionTime": 1792178095888
+        },
+        {
+          "timestamp": 1792178089764,
+          "message": "{\"event\": \"START\", \"max_calls\": 10000, \"maximum_compute_usd\": 0.8835833333333334, \"run_id\": \"20261016T191449Z-151560b90d\", \"timestamp\": \"2026-10-16T19:14:49Z\", \"workload\": \"sports-edge-lab-cbbd-shooting-continuation-v021\"}",
+          "ingestionTime": 1792178095888
+        }
+      ]
+    }
+  ],
+  "api_calls": [
+    {
+      "service": "logs",
+      "operation": "DescribeLogStreams",
+      "status": "success",
+      "n_items": {
+        "logStreams": 1
+      }
+    },
+    {
+      "service": "logs",
+      "operation": "DescribeLogStreams",
+      "status": "success",
+      "n_items": {
+        "logStreams": 1
+      }
+    },
+    {
+      "service": "logs",
+      "operation": "GetLogEvents",
+      "status": "success",
+      "n_items": {
+        "events": 6
+      }
+    },
+    {
+      "service": "logs",
+      "operation": "GetLogEvents",
+      "status": "success",
+      "n_items": {
+        "events": 6
+      }
+    }
+  ]
+}

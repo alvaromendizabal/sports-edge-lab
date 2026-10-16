@@ -1,0 +1,43 @@
+{
+  "status": "success",
+  "stdout": "",
+  "return_value": {
+    "job": "sports-edge-lab-content-inventory-20261016-v023",
+    "status": "InProgress",
+    "start": "None",
+    "end": "None",
+    "events": [
+      "Ran 13 tests in 0.001s",
+      "OK",
+      "{\"timestamp\": \"2026-10-16T19:17:35Z\", \"event\": \"SELF_TEST_PASSED\", \"tests\": 13}",
+      "{\"timestamp\": \"2026-10-16T19:17:36Z\", \"event\": \"HEARTBEAT\", \"run_id\": \"20261016T191735Z-33fb34d9a7\", \"pages\": 1, \"prefix\": \"tracks/\", \"listed_objects\": 1000, \"included_objects\": 0, \"included_stored_bytes\": 0, \"elapsed_seconds\": 0.35, \"estimated_compute_usd\": 4.5e-05}",
+      "{\"timestamp\": \"2026-10-16T19:17:56Z\", \"event\": \"HEARTBEAT\", \"run_id\": \"20261016T191735Z-33fb34d9a7\", \"pages\": 101, \"prefix\": \"tracks/\", \"listed_objects\": 101000, \"included_objects\": 34060, \"included_stored_bytes\": 5057197284, \"elapsed_seconds\": 20.48, \"estimated_compute_usd\": 0.002623}"
+    ]
+  },
+  "api_calls": [
+    {
+      "service": "sagemaker",
+      "operation": "DescribeProcessingJob",
+      "status": "success",
+      "n_items": {
+        "ProcessingInputs": 1
+      }
+    },
+    {
+      "service": "logs",
+      "operation": "DescribeLogStreams",
+      "status": "success",
+      "n_items": {
+        "logStreams": 1
+      }
+    },
+    {
+      "service": "logs",
+      "operation": "GetLogEvents",
+      "status": "success",
+      "n_items": {
+        "events": 5
+      }
+    }
+  ]
+}

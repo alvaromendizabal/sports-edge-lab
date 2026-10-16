@@ -1,0 +1,58 @@
+{
+  "artifact": "/workspace/scratch/f3ff20681710/turn4_shooting_v024/sports_edge_lab_shooting_continuation_v024_20261016.pyz",
+  "bytes": 19559,
+  "sha256": "261940c3acfaca4bdac975700e4cb29e37ee824fa101d7ce1bcbc671b5438e0e",
+  "version": "sports-edge-lab-cbbd-shooting-continuation-v024",
+  "source_sha256": {
+    "src/__main__.py": "240e7ed274bee968ae38c3650d9e7cb620d20c65532f88b1151060b7be46c5de",
+    "src/acquire_paid_data.py": "5b918e7f0a8af2d9fd5bd5db3d5935f0c102dd9ce699ad64ad3747b1cad7c009"
+  },
+  "self_tests": "34 meaningful tests bundled; self-test gate executes on AWS before credentials and downloads",
+  "limits": {
+    "stats_http_reservations": 3000,
+    "odds_credits": 0,
+    "app_seconds": 2100,
+    "recommended_aws_seconds": 2400,
+    "workers": 4,
+    "max_requests_per_second": 2,
+    "max_response_bytes": 67108864
+  },
+  "command_arguments": [
+    "--stats-calls",
+    "3000",
+    "--max-seconds",
+    "2100",
+    "--workers",
+    "4"
+  ],
+  "source_run": "20261016T005814Z-dc2ec3e9a5",
+  "endpoints": [
+    "/stats/team/shooting/season",
+    "/stats/player/shooting/season"
+  ],
+  "seasons": [
+    2003,
+    2006,
+    2007,
+    2008,
+    2009,
+    2010,
+    2011,
+    2012,
+    2013,
+    2014,
+    2015,
+    2016,
+    2017,
+    2018,
+    2019,
+    2020,
+    2021,
+    2022,
+    2023,
+    2024,
+    2025,
+    2026,
+    2027
+  ]
+}

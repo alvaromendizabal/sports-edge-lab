@@ -1,0 +1,43 @@
+{
+  "config": {
+    "job": "sports-edge-lab-noaa-season-20261016-v020",
+    "prefix": "noaa-season-20261016-v020",
+    "file": "sports_edge_lab_noaa_hrrr_v020_20261016.pyz",
+    "max": 7200,
+    "work": "noaa-season",
+    "args": [
+      "--season",
+      "2024",
+      "--full-season",
+      "--max-games",
+      "0",
+      "--max-bytes",
+      "2000000000",
+      "--max-requests",
+      "6000",
+      "--max-seconds",
+      "6900",
+      "--cfbd-vintage",
+      "2026-10-16",
+      "--hourly-usd",
+      "0.461"
+    ]
+  },
+  "response": {
+    "status": "success",
+    "stdout": "",
+    "return_value": {
+      "job": "sports-edge-lab-noaa-season-20261016-v020",
+      "response": {
+        "ProcessingJobArn": "arn:aws:sagemaker:us-west-2:560403859723:processing-job/sports-edge-lab-noaa-season-20261016-v020"
+      }
+    },
+    "api_calls": [
+      {
+        "service": "sagemaker",
+        "operation": "CreateProcessingJob",
+        "status": "success"
+      }
+    ]
+  }
+}

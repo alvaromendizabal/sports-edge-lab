@@ -41,3 +41,40 @@ The player-prop continuation imports the unchanged v002 paid engine. Availabilit
 NOAA v017 passed its 11 guards but failed before any source HTTP request because its historical CFBD cache descriptor used a current-data vintage. The [exact failed-launched source](../tools/history/acquire_hrrr_original_v017_launched.py) and [artifact manifest](status/build_noaa_hrrr_v017_20261016.json) remain preserved. V018 adds exact historical and current/reference cache-identity regression guards (13 tests total), after the existing 2024 receipt was verified read-only. It does not repeat the paid CFBD acquisition.
 
 NOAA v018 obtained listing/index metadata but rejected forecast pairs with both total and hourly precipitation accumulations. It downloaded zero GRIB fields. Its [exact launched source](../tools/history/acquire_hrrr_original_v018_launched.py) and [build manifest](status/build_noaa_hrrr_v018_20261016.json) remain preserved. Current v019 keeps the accumulation intervals distinct and embeds the complete actual NOAA index fixture in its 15 guards; fixture tests require no external file. Source/run evidence must establish actual field acquisition separately.
+
+
+## Season expansion, shooting continuation and content census
+
+The v020 NOAA collector expands the existing forecast-field cache across the
+eligible 2024 football season without changing URL/range/ETag identities. The
+exact v019 pilot source is preserved at
+[`tools/history/acquire_hrrr_original_v019_launched.py`](../tools/history/acquire_hrrr_original_v019_launched.py).
+
+The v021 shooting collector bundles an isolated copy of the paid engine under
+`tools/shooting_continuation_v021/src/`. Its engine change refunds a call
+reservation when provider suspension cancels a queued request before HTTP send.
+This keeps nonexistent requests out of usage counters. Existing collectors and
+the shared engine remain unchanged. The build script preserves the executable
+module layout; CI runs the bundled source's offline guards.
+
+The v025 census reads S3 listing metadata only, separates actual content from
+receipts and source indexes, and records an observation window while collectors
+are active. Its count is not a unique-game or complete-season metric.
+
+| Source | SHA-256 | Mandatory tests |
+| --- | --- | ---: |
+| [tools/acquire_hrrr_original.py](../tools/acquire_hrrr_original.py) | `2283df2797f85191362287b749b7c1f262810a118f0e3d712ad809d07b821d34` | 21 |
+| [tools/shooting_continuation_v021/src/__main__.py](../tools/shooting_continuation_v021/src/__main__.py) | `abccf9cbbba35a1b78c09cc4d3eed9668e72f0db9fe3df3d02326fc60f263cd2` | 29 |
+| [tools/shooting_continuation_v021/src/acquire_paid_data.py](../tools/shooting_continuation_v021/src/acquire_paid_data.py) | `6da4a715f239b60b00ef506857821751de8da63efc0332af5710316d3dcd326b` | Included in v021 |
+| [tools/inventory_raw_content.py](../tools/inventory_raw_content.py) | `5c516796088b89454cc01e5ff5e8894051fca9b3af0ecd239889e32aa0f729bd` | 15 |
+
+See [the expanded acquisition record](EXPANDED_DATA_COLLECTION_20261016.md) for runtime and schedule evidence. Source tests and successful storage do not approve data for model features.
+
+The scheduled v022 American Conference collector source is [`tools/acquire_ncaa_availability.py`](../tools/acquire_ncaa_availability.py), SHA-256 `eb6932e44a70025d75fee1e204de16ee5c57d262e5e7a7e3b1720b7cb24f1916`. Its 23 mandatory tests enforce the observed UTC visit window, source permission, PNG validation, cache reuse and bounded return handling. The seed list is [`tools/ncaa_availability_seeds.json`](../tools/ncaa_availability_seeds.json). The scheduling receipt is separate from proof of a future acquisition.
+
+The original v023 inventory source is preserved at [`tools/history/inventory_raw_content_v023_launched.py`](../tools/history/inventory_raw_content_v023_launched.py). Its completed scan conservatively omitted one existing RDS fallback; v025 matches all six supported public archive formats and explicitly excludes failure receipts. The separate listing evidence identifies the 151,579-byte standings file. No archive data was lost.
+
+The v021 shooting execution was stopped when its initial 300 HTTP successes contained no shooting records; the final frozen audit counted 580 empty and zero nonempty responses. V024 preserves those valid-empty caches, prioritizes conference-filtered requests, and gates bulk work on positive cached 2026 and new 2024 Duke/ACC records. Its isolated engine adds a return-bundle hook for the stopped-run receipt audit. It never replaces the shared engine. The 34-test source and executable identities are recorded in [the v024 build manifest](status/build_shooting_continuation_v024_20261016.json).
+
+- [tools/shooting_continuation_v024/src/__main__.py](../tools/shooting_continuation_v024/src/__main__.py): SHA-256 `240e7ed274bee968ae38c3650d9e7cb620d20c65532f88b1151060b7be46c5de`.
+- [tools/shooting_continuation_v024/src/acquire_paid_data.py](../tools/shooting_continuation_v024/src/acquire_paid_data.py): SHA-256 `5b918e7f0a8af2d9fd5bd5db3d5935f0c102dd9ce699ad64ad3747b1cad7c009`.

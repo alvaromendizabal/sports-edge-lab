@@ -1,5 +1,36 @@
 # Downloaded data and next acquisition priorities
 
+## Latest measured content inventory
+
+The corrected **19:23:51–19:24:43 UTC** scan counted **71,181 raw content files /
+14,393,519,871 stored bytes (14.39 GB)**, with zero unclassified raw objects.
+This is an increase of 25,112 files and 1,970,180,812 bytes from the frozen
+baseline below. Live collectors were writing during the scan; its observation
+window is explicit and is not an atomic snapshot.
+
+| Track | Stored content files | Stored content GB |
+| --- | ---: | ---: |
+| NFL | 11,442 | 0.805 |
+| NBA | 17,684 | 1.925 |
+| NCAA football | 18,091 | 3.139 |
+| NCAA men's basketball | 17,470 | 4.827 |
+| NCAA women's basketball | 4,168 | 2.492 |
+| Shared weather | 2,326 | 1.205 |
+
+The total consists of 5,326 public archive files, 63,499 paid payloads, six
+provider canaries, 24 NBA PDFs, 1,438 NWS point/forecast JSON files, and 888 NOAA
+forecast fields. Counts are stored objects, not unique games, calls or usable
+training examples. NCAA availability is scheduled and contributes zero images
+at this snapshot.
+
+[Exact measured inventory](status/content_inventory_20261016T1924Z.json) ·
+[continued acquisition and new source status](EXPANDED_DATA_COLLECTION_20261016.md) ·
+[counting method and corrected RDS fallback](RAW_CONTENT_INVENTORY_20261016.md).
+
+The baseline and filename-year coverage below remain preserved as dated
+observations; they are not presented as the current storage total.
+
+
 Verified against the canonical private S3 archive on **16 October 2026, 18:09–18:11 UTC**. Counts below exclude acquisition receipts, request indexes, audit files, return ZIPs, and the duplicate legacy NFL archive.
 
 ## Frozen starting inventory
@@ -65,3 +96,4 @@ See the [latest operational snapshot](status/operational-status_20261016T1810Z.j
 ## Subsequent acquisition milestone
 
 The starting content scan above remains frozen. A public refresh added 19 revisions while reusing 4,473 verified assets. New bounded work now adds missing game-price and player-prop checkpoints, college basketball plays/lineups/substitutions, official NBA injury PDFs, current NWS forecast vintages and an original NOAA historical forecast-field pilot. See the [dated runtime, quota and launch evidence](FRONTIER_ACQUISITION_20261016.md) for actual progress and failures, and the [frontier source priorities](FRONTIER_DATA_PRIORITIES_20261016.md) for public sources, unconfirmed tracking access and acceptance gates. These additions are not silently folded into the earlier byte or file counts.
+

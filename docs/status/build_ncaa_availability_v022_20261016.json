@@ -1,0 +1,25 @@
+{
+  "artifact": "/workspace/scratch/f3ff20681710/turn4_ncaa_availability/sports_edge_lab_ncaa_availability_v022_20261016.pyz",
+  "sha256": "992fd7519a0fce4eaf626781a08c3481aee455a437a1bd5b14ade609ff03c50b",
+  "bytes": 9397,
+  "tests": 23,
+  "tests_executed_locally": false,
+  "syntax_compilation": "passed",
+  "bounds": {
+    "app_seconds": 600,
+    "aws_seconds": 900,
+    "http_requests": 200,
+    "http_bytes": 100000000
+  },
+  "window": "01:00 <= UTC < 06:45; outside window emits deferred report and one return ZIP with zero source HTTP",
+  "source_sha256": "eb6932e44a70025d75fee1e204de16ee5c57d262e5e7a7e3b1720b7cb24f1916",
+  "s3_key": "infrastructure/code/ncaa-availability-20261016-v022/sports_edge_lab_ncaa_availability_v022_20261016.pyz",
+  "container_arguments": [
+    "--max-seconds",
+    "600",
+    "--max-requests",
+    "200",
+    "--max-bytes",
+    "100000000"
+  ]
+}

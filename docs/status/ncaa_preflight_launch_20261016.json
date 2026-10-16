@@ -1,0 +1,34 @@
+{
+  "config": {
+    "job": "sports-edge-lab-ncaa-preflight-20261016-v022",
+    "prefix": "ncaa-availability-20261016-v022",
+    "file": "sports_edge_lab_ncaa_availability_v022_20261016.pyz",
+    "max": 300,
+    "work": "ncaa-availability-preflight",
+    "args": [
+      "--max-seconds",
+      "240",
+      "--max-requests",
+      "200",
+      "--max-bytes",
+      "100000000"
+    ]
+  },
+  "response": {
+    "status": "success",
+    "stdout": "",
+    "return_value": {
+      "job": "sports-edge-lab-ncaa-preflight-20261016-v022",
+      "response": {
+        "ProcessingJobArn": "arn:aws:sagemaker:us-west-2:560403859723:processing-job/sports-edge-lab-ncaa-preflight-20261016-v022"
+      }
+    },
+    "api_calls": [
+      {
+        "service": "sagemaker",
+        "operation": "CreateProcessingJob",
+        "status": "success"
+      }
+    ]
+  }
+}

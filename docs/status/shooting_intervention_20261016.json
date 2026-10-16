@@ -1,0 +1,225 @@
+{
+  "observation": {
+    "status": "success",
+    "stdout": "",
+    "return_value": {
+      "timestamp": "2026-10-16T19:18:19Z",
+      "statistics": {
+        "captured": 300,
+        "cbbd_captured": 300,
+        "cbbd_http_calls": 301,
+        "http_calls": 301,
+        "ncaam_captured": 300,
+        "raw_bytes": 600,
+        "shooting_empty_responses": 300,
+        "shooting_nonempty_responses": 0,
+        "shooting_records_observed": 0
+      },
+      "failures_count": 0,
+      "source_inventory": {
+        "2003": {
+          "planned_shooting_requests": 454,
+          "remaining_before_request_index_check": 454,
+          "seeded_successes": 0,
+          "source_rows": 519,
+          "status": "source_cache_verified"
+        },
+        "2006": {
+          "planned_shooting_requests": 508,
+          "remaining_before_request_index_check": 508,
+          "seeded_successes": 0,
+          "source_rows": 548,
+          "status": "source_cache_verified"
+        },
+        "2007": {
+          "planned_shooting_requests": 536,
+          "remaining_before_request_index_check": 536,
+          "seeded_successes": 0,
+          "source_rows": 562,
+          "status": "source_cache_verified"
+        },
+        "2008": {
+          "planned_shooting_requests": 500,
+          "remaining_before_request_index_check": 500,
+          "seeded_successes": 0,
+          "source_rows": 546,
+          "status": "source_cache_verified"
+        },
+        "2009": {
+          "planned_shooting_requests": 578,
+          "remaining_before_request_index_check": 578,
+          "seeded_successes": 0,
+          "source_rows": 587,
+          "status": "source_cache_verified"
+        },
+        "2010": {
+          "planned_shooting_requests": 620,
+          "remaining_before_request_index_check": 620,
+          "seeded_successes": 0,
+          "source_rows": 612,
+          "status": "source_cache_verified"
+        },
+        "2011": {
+          "planned_shooting_requests": 592,
+          "remaining_before_request_index_check": 592,
+          "seeded_successes": 0,
+          "source_rows": 609,
+          "status": "source_cache_verified"
+        },
+        "2012": {
+          "planned_shooting_requests": 588,
+          "remaining_before_request_index_check": 588,
+          "seeded_successes": 0,
+          "source_rows": 606,
+          "status": "source_cache_verified"
+        },
+        "2013": {
+          "planned_shooting_requests": 552,
+          "remaining_before_request_index_check": 552,
+          "seeded_successes": 0,
+          "source_rows": 591,
+          "status": "source_cache_verified"
+        },
+        "2014": {
+          "planned_shooting_requests": 634,
+          "remaining_before_request_index_check": 634,
+          "seeded_successes": 0,
+          "source_rows": 635,
+          "status": "source_cache_verified"
+        },
+        "2015": {
+          "planned_shooting_requests": 646,
+          "remaining_before_request_index_check": 646,
+          "seeded_successes": 0,
+          "source_rows": 641,
+          "status": "source_cache_verified"
+        },
+        "2016": {
+          "planned_shooting_requests": 658,
+          "remaining_before_request_index_check": 658,
+          "seeded_successes": 0,
+          "source_rows": 648,
+          "status": "source_cache_verified"
+        },
+        "2017": {
+          "planned_shooting_requests": 650,
+          "remaining_before_request_index_check": 650,
+          "seeded_successes": 0,
+          "source_rows": 644,
+          "status": "source_cache_verified"
+        },
+        "2018": {
+          "planned_shooting_requests": 680,
+          "remaining_before_request_index_check": 680,
+          "seeded_successes": 0,
+          "source_rows": 659,
+          "status": "source_cache_verified"
+        },
+        "2019": {
+          "planned_shooting_requests": 662,
+          "remaining_before_request_index_check": 662,
+          "seeded_successes": 0,
+          "source_rows": 653,
+          "status": "source_cache_verified"
+        },
+        "2020": {
+          "planned_shooting_requests": 684,
+          "remaining_before_request_index_check": 684,
+          "seeded_successes": 0,
+          "source_rows": 664,
+          "status": "source_cache_verified"
+        },
+        "2021": {
+          "planned_shooting_requests": 354,
+          "remaining_before_request_index_check": 354,
+          "seeded_successes": 0,
+          "source_rows": 493,
+          "status": "source_cache_verified"
+        },
+        "2022": {
+          "planned_shooting_requests": 708,
+          "remaining_before_request_index_check": 708,
+          "seeded_successes": 0,
+          "source_rows": 680,
+          "status": "source_cache_verified"
+        },
+        "2023": {
+          "planned_shooting_requests": 752,
+          "remaining_before_request_index_check": 752,
+          "seeded_successes": 0,
+          "source_rows": 706,
+          "status": "source_cache_verified"
+        },
+        "2024": {
+          "planned_shooting_requests": 776,
+          "remaining_before_request_index_check": 776,
+          "seeded_successes": 0,
+          "source_rows": 717,
+          "status": "source_cache_verified"
+        },
+        "2025": {
+          "planned_shooting_requests": 734,
+          "remaining_before_request_index_check": 609,
+          "seeded_successes": 125,
+          "source_rows": 700,
+          "status": "source_cache_verified"
+        },
+        "2026": {
+          "planned_shooting_requests": 786,
+          "remaining_before_request_index_check": 8,
+          "seeded_successes": 778,
+          "source_rows": 727,
+          "status": "source_cache_verified"
+        },
+        "2027": {
+          "planned_shooting_requests": 0,
+          "remaining_before_request_index_check": 0,
+          "seeded_successes": 0,
+          "source_rows": 0,
+          "status": "source_cache_verified"
+        }
+      },
+      "pending_source_seasons": [],
+      "phases": {
+        "seed": {
+          "previous_failed_requests": 12,
+          "status": "completed",
+          "successful_shooting_request_ids": 903
+        },
+        "shooting_continuation": {
+          "completed": 300,
+          "planned": 12749,
+          "processed": 300,
+          "remaining": 12449,
+          "status": "running",
+          "successful_or_reused": 300,
+          "unsuccessful": 0
+        }
+      }
+    },
+    "api_calls": [
+      {
+        "service": "s3",
+        "operation": "GetObject",
+        "status": "success"
+      }
+    ]
+  },
+  "action": {
+    "status": "success",
+    "stdout": "",
+    "return_value": {
+      "job": "sports-edge-lab-shooting-resume-20261016-v021",
+      "action": "StopProcessingJob",
+      "reason": "300 initial successful responses were empty; reprioritize confirmed conference coverage before low-yield unclassified team selectors. Immutable captures and indexes preserved.",
+      "response": {}
+    },
+    "api_calls": [
+      {
+        "service": "sagemaker",
+        "operation": "StopProcessingJob",
+        "status": "success"
+      }
+    ]
+  }
+}

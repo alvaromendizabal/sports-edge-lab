@@ -1,0 +1,44 @@
+{
+  "receipts": [
+    {
+      "bytes": 12265,
+      "raw_key": "tracks/ncaam/raw/cbbd/objects/93/93feabcb92448bbff79e695a393616985d37cd0fe02e3719414f962134f5865e.json.gz",
+      "records": 18,
+      "request": {
+        "capture_vintage": "",
+        "endpoint": "/stats/team/shooting/season",
+        "params": {
+          "conference": "ACC",
+          "season": 2026
+        },
+        "provider": "cbbd",
+        "track": "ncaam"
+      },
+      "run_id": "20261016T005814Z-dc2ec3e9a5",
+      "sha256": "93feabcb92448bbff79e695a393616985d37cd0fe02e3719414f962134f5865e"
+    },
+    {
+      "missing": true
+    },
+    {
+      "bytes": 162870,
+      "raw_key": "tracks/ncaam/raw/cbbd/objects/7c/7cccf6f2e72e9a43bd6785174c2c965c59ce4025c50c297307bcd53c214147be.json.gz",
+      "records": 235,
+      "request": {
+        "capture_vintage": "",
+        "endpoint": "/stats/player/shooting/season",
+        "params": {
+          "conference": "ACC",
+          "season": 2026
+        },
+        "provider": "cbbd",
+        "track": "ncaam"
+      },
+      "run_id": "20261016T005814Z-dc2ec3e9a5",
+      "sha256": "7cccf6f2e72e9a43bd6785174c2c965c59ce4025c50c297307bcd53c214147be"
+    },
+    {
+      "missing": true
+    }
+  ]
+}

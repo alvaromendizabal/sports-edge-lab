@@ -1,0 +1,14 @@
+{
+  "artifact": "/workspace/scratch/f3ff20681710/turn4_inventory/sports_edge_lab_content_inventory_v023_20261016.pyz",
+  "bytes": 5143,
+  "sha256": "2163fd0e9b428204721ee5cea965aad01cedcf23e0c4a51738c535efc5442597",
+  "source_sha256": "b21c3f8535125ac1f16a909b2d7289748f33acbf75d45d812cfb409008ffaeb3",
+  "self_tests": 13,
+  "validation": "AST parse only locally; 13 mandatory tests run in AWS before listing",
+  "application_seconds": 240,
+  "aws_seconds": 300,
+  "max_listing_pages": 1000,
+  "provider_api_calls": 0,
+  "reads": "ListObjectsV2 only; no source payloads or receipts read",
+  "output": "One report, progress, and one unique return ZIP under shared/acquisition/content-inventory/{run_id}/"
+}

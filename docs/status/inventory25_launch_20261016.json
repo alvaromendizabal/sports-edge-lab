@@ -1,0 +1,34 @@
+{
+  "config": {
+    "job": "sports-edge-lab-content-inventory-20261016-v025",
+    "prefix": "content-inventory-20261016-v025",
+    "file": "sports_edge_lab_content_inventory_v025_20261016.pyz",
+    "max": 300,
+    "work": "content-inventory",
+    "args": [
+      "--max-seconds",
+      "240",
+      "--max-pages",
+      "1000",
+      "--hourly-usd",
+      "0.461"
+    ]
+  },
+  "response": {
+    "status": "success",
+    "stdout": "",
+    "return_value": {
+      "job": "sports-edge-lab-content-inventory-20261016-v025",
+      "response": {
+        "ProcessingJobArn": "arn:aws:sagemaker:us-west-2:560403859723:processing-job/sports-edge-lab-content-inventory-20261016-v025"
+      }
+    },
+    "api_calls": [
+      {
+        "service": "sagemaker",
+        "operation": "CreateProcessingJob",
+        "status": "success"
+      }
+    ]
+  }
+}

@@ -1,0 +1,27 @@
+{
+  "observed_at_date": "2026-10-16",
+  "aws_downloaded": false,
+  "canary": {
+    "url": "https://theamerican.org/common/controls/image_handler.aspx?thumb_id=0&image_path=/images/2026/3/14/wbb_pa_031426.png",
+    "http_status": 200,
+    "bytes": 915856,
+    "sha256": "7b11425980711279cf4a57e17d57605d94e2c42c80a0eaea68e0c6077dc04018"
+  },
+  "robots": {
+    "source": "https://theamerican.org/robots.txt",
+    "sha256": "bb01f376f844316fa17dcb1929a91a88ca1c460c18c89d91ebefcb0fea6b92d9",
+    "visit_time": "0100-0645",
+    "crawl_delay_seconds": 5
+  },
+  "coverage": {
+    "conference": "American Conference",
+    "men_pages": 6,
+    "women_pages": 2,
+    "national_ncaa": false,
+    "complete_season": false
+  },
+  "blocked": {
+    "ncaa_national": "https://www.ncaa.com/PAReports robot-verification wall",
+    "conference_usa": "robots disallows /documents/; 18 observed official links not fetched"
+  }
+}

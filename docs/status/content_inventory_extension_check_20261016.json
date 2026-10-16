@@ -1,0 +1,27 @@
+{
+  "status": "success",
+  "stdout": "",
+  "return_value": {
+    "non_parquet_objects": [
+      {
+        "key": "tracks/ncaaw/raw/sportsdataverse/espn_womens_college_basketball_standings/457fb16c1cc1e2fbb0b0c0f04c7c533a087981856976bb3c8bade985c9923567/wbb_standings_in_data_repo.csv",
+        "bytes": 186
+      },
+      {
+        "key": "tracks/ncaaw/raw/sportsdataverse/espn_womens_college_basketball_standings/60ada4b229b7f2863bbd87f827353641e38dbc7315029b394da3e0dbfd2ab3e5/standings_2005.rds",
+        "bytes": 151579
+      }
+    ],
+    "listed_count": 46
+  },
+  "api_calls": [
+    {
+      "service": "s3",
+      "operation": "ListObjectsV2",
+      "status": "success",
+      "n_items": {
+        "Contents": 46
+      }
+    }
+  ]
+}

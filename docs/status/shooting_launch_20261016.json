@@ -1,0 +1,34 @@
+{
+  "config": {
+    "job": "sports-edge-lab-shooting-resume-20261016-v021",
+    "prefix": "shooting-continuation-20261016-v021",
+    "file": "sports_edge_lab_shooting_continuation_v021_20261016.pyz",
+    "max": 7200,
+    "work": "shooting-continuation",
+    "args": [
+      "--stats-calls",
+      "10000",
+      "--max-seconds",
+      "6900",
+      "--workers",
+      "4"
+    ]
+  },
+  "response": {
+    "status": "success",
+    "stdout": "",
+    "return_value": {
+      "job": "sports-edge-lab-shooting-resume-20261016-v021",
+      "response": {
+        "ProcessingJobArn": "arn:aws:sagemaker:us-west-2:560403859723:processing-job/sports-edge-lab-shooting-resume-20261016-v021"
+      }
+    },
+    "api_calls": [
+      {
+        "service": "sagemaker",
+        "operation": "CreateProcessingJob",
+        "status": "success"
+      }
+    ]
+  }
+}

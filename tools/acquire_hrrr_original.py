@@ -70,8 +70,12 @@ def game_plan(games, venues, now, max_games, buffer_hours=9, season=2026, game_d
             lat, lon = float(v['latitude']), float(v['longitude'])
         except (KeyError, ValueError, TypeError):
             skip('invalid_time_or_venue'); continue
-        if not (dt.datetime(season, 1, 1, tzinfo=UTC) <= kickoff < min(now, dt.datetime(season+1, 1, 1, tzinfo=UTC))):
-            skip('outside_requested_year'); continue
+        # The verified CFBD /games request is a football season, not a calendar
+        # year: January postseason belongs to the preceding fall season.
+        if g.get('season') is not None and g.get('season') != season:
+            skip('mismatched_season_metadata'); continue
+        if not (dt.datetime(season, 7, 1, tzinfo=UTC) <= kickoff < min(now, dt.datetime(season+1, 7, 1, tzinfo=UTC))):
+            skip('outside_requested_football_season'); continue
         if game_date and kickoff.strftime('%Y-%m-%d') != game_date:
             skip('outside_requested_utc_date'); continue
         # Restrict to mainland US model domain, with explicit US country tag.
@@ -95,7 +99,9 @@ def game_plan(games, venues, now, max_games, buffer_hours=9, season=2026, game_d
                          'historical_available_at': None, 'point_in_time_approved': False,
                          'roof_verified_for_game': False})
     selected.sort(key=lambda x: (x['kickoff_utc'], str(x['game_id'])), reverse=True)
-    selected = selected[:max_games]
+    # Zero explicitly selects the entire eligible cache without a row cap.
+    if max_games:
+        selected = selected[:max_games]
     pairs = {}
     for game in selected:
         pairs.setdefault(game['run_key'], {'run_key': game['run_key'], 'run_init_utc': game['run_init_utc'],
@@ -342,6 +348,7 @@ def run(args):
               'forecasts':[],'errors':[],'historical_available_at':None,'point_in_time_approved':False,
               'scope':'Original CONUS surface GRIB fields for cached completed NCAAF games; no point extraction.',
               'requested_season':args.season,'requested_utc_game_date':args.game_date,
+              'season_window':'July 1 inclusive through next July 1 exclusive; supplied season metadata must match',
               'selection_buffer_hours':9,'selection_buffer_is_not_release_evidence':True,
               'bounds':{'bytes':args.max_bytes,'requests':args.max_requests,'seconds':args.max_seconds,'games':args.max_games},
               'source_documentation':'https://registry.opendata.aws/noaa-hrrr-pds/',
@@ -444,6 +451,69 @@ REAL_NOAA_INDEX_FIXTURE = '1:0:d=2024101214:REFC:entire atmosphere:10 hour fcst:
 
 
 class Tests(unittest.TestCase):
+    def test_full_season_includes_january_postseason(self):
+        g,v=self.fixture()
+        g.update(season=2024,startDate='2025-01-10T19:30:00Z')
+        plan,_,n=game_plan([g],[v],dt.datetime(2026,10,16,tzinfo=UTC),0,season=2024)
+        self.assertEqual(n,1)
+        self.assertEqual(plan[0]['games'][0]['kickoff_utc'],'2025-01-10T19:30:00+00:00')
+
+    def test_full_season_rejects_prior_bowl_and_wrong_season(self):
+        g,v=self.fixture()
+        games=[dict(g,id=1,season=2024,startDate='2024-01-10T19:00:00Z'),
+               dict(g,id=2,season=2025,startDate='2024-10-12T19:00:00Z')]
+        plan,skipped,n=game_plan(games,[v],dt.datetime(2026,10,16,tzinfo=UTC),0,season=2024)
+        self.assertEqual(n,0)
+        self.assertEqual(skipped,{'outside_requested_football_season':1,'mismatched_season_metadata':1})
+
+    def test_zero_game_cap_selects_every_eligible_game(self):
+        g,v=self.fixture()
+        games=[dict(g,id=i) for i in range(1201)]
+        plan,_,n=game_plan(games,[v],dt.datetime(2026,10,16,tzinfo=UTC),0)
+        self.assertEqual(n,1201)
+        self.assertEqual(len(plan[0]['games']),1201)
+        limited,_,count=game_plan(games,[v],dt.datetime(2026,10,16,tzinfo=UTC),400)
+        self.assertEqual(count,400)
+
+    def test_empty_date_selects_multiple_days(self):
+        g,v=self.fixture()
+        games=[g,dict(g,id=2,startDate='2026-10-11T19:30:00Z')]
+        plan,_,n=game_plan(games,[v],dt.datetime(2026,10,16,tzinfo=UTC),0,game_date='')
+        self.assertEqual(n,2)
+        self.assertEqual(len(plan),2)
+        plan,_,n=game_plan(games,[v],dt.datetime(2026,10,16,tzinfo=UTC),0,game_date='2026-10-10')
+        self.assertEqual(n,1)
+
+    def test_field_cache_identity_is_stable_across_runs(self):
+        raw=b'GRIB'+b'\x00\x00\x00\x02'+(20).to_bytes(8,'big')+b'7777'
+        url=BASE+'/hrrr.20241012/conus/hrrr.t14z.wrfsfcf10.grib2'
+        ident={'url':url,'range_start':100,'range_end':119,'source_etag':'"same-etag"'}
+        expected=PREFIX+'request-index/'+sha(pack(ident))+'.json'
+        class FakeStore:
+            calls=[]
+            def get(self,key):
+                self.calls.append(key)
+                if key==expected:
+                    return pack(dict(ident,raw_key='body',sha256=sha(raw),bytes=20,kind='grib2',run_id='old'))
+                if key=='body': return raw
+                raise AssertionError('unexpected cache identity')
+        class NoFetch:
+            def get(self,*args,**kwargs): raise AssertionError('captured source must not be fetched again')
+        store=FakeStore()
+        result,receipt=capture(store,NoFetch(),url,'grib2','new',100,119,'"same-etag"',1000)
+        self.assertEqual(result,raw)
+        self.assertEqual(receipt['run_id'],'old')
+        self.assertEqual(receipt['status'],'reused')
+        self.assertEqual(store.calls,[expected,'body'])
+
+    def test_cached_field_corruption_stops_reuse(self):
+        raw=b'GRIB'+b'\x00\x00\x00\x02'+(20).to_bytes(8,'big')+b'7777'
+        class FakeStore:
+            def get(self,key):
+                return pack({'raw_key':'body','sha256':sha(raw),'bytes':20,'kind':'grib2'}) if 'request-index' in key else b'corrupted'
+        with self.assertRaisesRegex(ValueError,'hrrr_cached_hash_mismatch'):
+            capture(FakeStore(),None,BASE+'/x','grib2','new',0,19)
+
     def test_historical_cfbd_cache_exact_observed_key(self):
         key=cfbd_cache_key('/games',{'year':2024,'seasonType':'both'},'2026-10-16')
         self.assertEqual(key,'tracks/ncaaf/raw/cfbd/request-index/8cf8578b55c87a3d8859b5e11dccd2e92f0646d2e05615ab64ed32b7cc8b8af2.json')
@@ -572,6 +642,7 @@ def main():
     p.add_argument('--cfbd-vintage',default='2026-10-16')
     p.add_argument('--season',type=int,default=2024)
     p.add_argument('--game-date',default='2024-10-12')
+    p.add_argument('--full-season',action='store_true',help='Remove the pilot UTC date filter; combine with --max-games 0 for all eligible games')
     p.add_argument('--max-seconds',type=int,default=600)
     p.add_argument('--max-requests',type=int,default=500)
     p.add_argument('--max-bytes',type=int,default=250000000)
@@ -580,9 +651,11 @@ def main():
     p.add_argument('--output-dir',default='/opt/ml/processing/output')
     p.add_argument('--self-test',action='store_true')
     a=p.parse_args()
+    if a.full_season:
+        a.game_date=None
     if not 2014<=a.season<=2026 or (a.game_date and not re.fullmatch(r'\d{4}-\d{2}-\d{2}',a.game_date)):
         p.error('invalid season or UTC game date')
-    if not (0<a.max_seconds<=600 and 0<a.max_requests<=500 and 0<a.max_bytes<=250000000 and 0<a.max_games<=1000):
+    if not (0<a.max_seconds<=6900 and 0<a.max_requests<=6000 and 0<a.max_bytes<=2000000000 and 0<=a.max_games<=20000):
         p.error('bounds exceed the authorized collector envelope')
     result=unittest.TextTestRunner(verbosity=2).run(unittest.defaultTestLoader.loadTestsFromTestCase(Tests))
     if not result.wasSuccessful(): return 1

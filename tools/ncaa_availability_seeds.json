@@ -1,0 +1,74 @@
+[
+  {
+    "track": "ncaam",
+    "url": "https://theamerican.org/sports/2026/3/1/mbb_pa_030126.aspx",
+    "discovery": {
+      "method": "observed_primary_site_web_search_result",
+      "observed_date": "2026-10-16",
+      "scope": "American Conference published daily availability report page"
+    }
+  },
+  {
+    "track": "ncaam",
+    "url": "https://theamerican.org/sports/2026/2/25/mbb_pa_022526.aspx",
+    "discovery": {
+      "method": "observed_primary_site_web_search_result",
+      "observed_date": "2026-10-16",
+      "scope": "American Conference published daily availability report page"
+    }
+  },
+  {
+    "track": "ncaam",
+    "url": "https://theamerican.org/sports/2026/2/11/mbb_pa_0211.aspx",
+    "discovery": {
+      "method": "observed_primary_site_web_search_result",
+      "observed_date": "2026-10-16",
+      "scope": "American Conference published daily availability report page"
+    }
+  },
+  {
+    "track": "ncaam",
+    "url": "https://theamerican.org/sports/2026/1/22/mbb_pa_012226.aspx",
+    "discovery": {
+      "method": "observed_primary_site_web_search_result",
+      "observed_date": "2026-10-16",
+      "scope": "American Conference published daily availability report page"
+    }
+  },
+  {
+    "track": "ncaam",
+    "url": "https://theamerican.org/sports/2026/1/21/mbb_pa_012126.aspx",
+    "discovery": {
+      "method": "observed_primary_site_web_search_result",
+      "observed_date": "2026-10-16",
+      "scope": "American Conference published daily availability report page"
+    }
+  },
+  {
+    "track": "ncaam",
+    "url": "https://theamerican.org/sports/2026/1/3/mbb_pa_010326.aspx",
+    "discovery": {
+      "method": "observed_primary_site_web_search_result",
+      "observed_date": "2026-10-16",
+      "scope": "American Conference published daily availability report page"
+    }
+  },
+  {
+    "track": "ncaaw",
+    "url": "https://theamerican.org/sports/2026/3/14/wbb_pa_031426.aspx",
+    "discovery": {
+      "method": "observed_primary_site_web_search_result",
+      "observed_date": "2026-10-16",
+      "scope": "American Conference published daily availability report page"
+    }
+  },
+  {
+    "track": "ncaaw",
+    "url": "https://theamerican.org/sports/2026/2/24/wbb_pa_022426.aspx",
+    "discovery": {
+      "method": "observed_primary_site_web_search_result",
+      "observed_date": "2026-10-16",
+      "scope": "American Conference published daily availability report page"
+    }
+  }
+]

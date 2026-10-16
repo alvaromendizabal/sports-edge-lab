@@ -1,0 +1,123 @@
+{
+  "status": "success",
+  "stdout": "",
+  "return_value": {
+    "checked_at": "2026-10-16 19:29:12.888916+00:00",
+    "jobs": [
+      {
+        "ProcessingJobName": "sports-edge-lab-noaa-hrrr-20261016-v019",
+        "ProcessingJobStatus": "Completed",
+        "CreationTime": "2026-10-16T18:52:31.241000+00:00",
+        "ProcessingStartTime": "2026-10-16T18:53:09.680000+00:00",
+        "ProcessingEndTime": "2026-10-16T18:55:18.364000+00:00",
+        "LastModifiedTime": "2026-10-16T18:57:32.704000+00:00",
+        "StoppingCondition": {
+          "MaxRuntimeInSeconds": 900
+        },
+        "ProcessingResources": {
+          "ClusterConfig": {
+            "InstanceCount": 1,
+            "InstanceType": "ml.m5.2xlarge",
+            "VolumeSizeInGB": 30
+          }
+        }
+      },
+      {
+        "ProcessingJobName": "sports-edge-lab-content-inventory-20261016-v023",
+        "ProcessingJobStatus": "Completed",
+        "CreationTime": "2026-10-16T19:16:05.139000+00:00",
+        "ProcessingStartTime": "2026-10-16T19:16:56.578000+00:00",
+        "ProcessingEndTime": "2026-10-16T19:18:35.090000+00:00",
+        "LastModifiedTime": "2026-10-16T19:18:36.170000+00:00",
+        "StoppingCondition": {
+          "MaxRuntimeInSeconds": 300
+        },
+        "ProcessingResources": {
+          "ClusterConfig": {
+            "InstanceCount": 1,
+            "InstanceType": "ml.m5.2xlarge",
+            "VolumeSizeInGB": 30
+          }
+        }
+      },
+      {
+        "ProcessingJobName": "sports-edge-lab-shooting-resume-20261016-v024",
+        "ProcessingJobStatus": "InProgress",
+        "CreationTime": "2026-10-16T19:25:35.688000+00:00",
+        "ProcessingStartTime": "2026-10-16T19:26:17.748000+00:00",
+        "LastModifiedTime": "2026-10-16T19:28:06.825000+00:00",
+        "StoppingCondition": {
+          "MaxRuntimeInSeconds": 2400
+        },
+        "ProcessingResources": {
+          "ClusterConfig": {
+            "InstanceCount": 1,
+            "InstanceType": "ml.m5.2xlarge",
+            "VolumeSizeInGB": 30
+          }
+        }
+      }
+    ],
+    "all_sports_job_names": [
+      "sports-edge-lab-shooting-resume-20261016-v024",
+      "sports-edge-lab-content-inventory-20261016-v025",
+      "sports-edge-lab-ncaa-preflight-20261016-v022",
+      "sports-edge-lab-content-inventory-20261016-v023",
+      "sports-edge-lab-shooting-resume-20261016-v021",
+      "sports-edge-lab-noaa-season-20261016-v020",
+      "sports-edge-lab-noaa-hrrr-20261016-v019",
+      "sports-edge-lab-noaa-hrrr-20261016-v018",
+      "sports-edge-lab-weather-resume-20261016-v015",
+      "sports-edge-lab-noaa-hrrr-20261016-v017",
+      "sports-edge-lab-nba-availability-20261016-v016",
+      "sports-edge-lab-props-continuation-20261016-v014",
+      "sports-edge-lab-original-context-20261016-v012",
+      "sports-edge-lab-gap-backfill-20261016-v011",
+      "sports-edge-lab-public-delta-20261016-v013",
+      "sports-edge-lab-shooting-recovery-20261016-v010",
+      "sports-edge-lab-original-espn-20261016-v009",
+      "sports-edge-lab-player-props-20261016-v008",
+      "sports-edge-lab-public-archive-20261016-v007",
+      "sports-edge-lab-consolidate-20261016-v005c",
+      "sports-edge-lab-paid-backfill-20261016-v006",
+      "sports-edge-lab-consolidate-20261016-v005b",
+      "sports-edge-lab-consolidate-20261016-v005",
+      "sports-edge-lab-bootstrap-canary-20261016-v004b",
+      "sports-edge-lab-bootstrap-canary-20261016-v004"
+    ]
+  },
+  "api_calls": [
+    {
+      "service": "sagemaker",
+      "operation": "DescribeProcessingJob",
+      "status": "success",
+      "n_items": {
+        "ProcessingInputs": 1
+      }
+    },
+    {
+      "service": "sagemaker",
+      "operation": "DescribeProcessingJob",
+      "status": "success",
+      "n_items": {
+        "ProcessingInputs": 1
+      }
+    },
+    {
+      "service": "sagemaker",
+      "operation": "DescribeProcessingJob",
+      "status": "success",
+      "n_items": {
+        "ProcessingInputs": 1
+      }
+    },
+    {
+      "service": "sagemaker",
+      "operation": "ListProcessingJobs",
+      "status": "success",
+      "n_items": {
+        "ProcessingJobSummaries": 25
+      }
+    }
+  ]
+}

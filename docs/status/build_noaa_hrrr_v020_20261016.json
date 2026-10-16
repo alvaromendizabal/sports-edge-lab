@@ -1,0 +1,41 @@
+{
+  "file": "/workspace/scratch/f3ff20681710/turn4_weather/sports_edge_lab_noaa_hrrr_v020_20261016.pyz",
+  "bytes": 13719,
+  "sha256": "fe1d14c706d10505184ad44e5f741f3389067503d3cfa87305d342ef5be70e11",
+  "source_sha256": "2283df2797f85191362287b749b7c1f262810a118f0e3d712ad809d07b821d34",
+  "tests": 21,
+  "validation": "AST parsed; independent provider_review cleared source and artifact; mandatory 21 self-tests execute in AWS before acquisition",
+  "container_arguments": [
+    "--season",
+    "2024",
+    "--full-season",
+    "--max-games",
+    "0",
+    "--max-bytes",
+    "2000000000",
+    "--max-requests",
+    "6000",
+    "--max-seconds",
+    "6900",
+    "--cfbd-vintage",
+    "2026-10-16",
+    "--hourly-usd",
+    "0.461"
+  ],
+  "aws_max_seconds": 7200,
+  "bounds": {
+    "source_bytes": 2000000000,
+    "source_calls": 6000,
+    "application_seconds": 6900,
+    "aws_seconds": 7200,
+    "source_requests_per_second": 2,
+    "max_games": 0
+  },
+  "notes": [
+    "All eligible completed cached games in football season 2024 including January 2025 postseason; any supplied season metadata must match.",
+    "Known domes, uncertain kickoff times, incomplete games and locations outside CONUS remain excluded.",
+    "Exact URL/range/ETag request identity and content hashes preserve prior field caches.",
+    "No historical release timestamp proof; no venue-point extraction or training approval.",
+    "Budget may stop before full season completion; resumption skips existing immutable fields."
+  ]
+}

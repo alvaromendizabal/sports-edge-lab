@@ -1,0 +1,83 @@
+{
+  "status": "success",
+  "stdout": "",
+  "return_value": {
+    "events": [
+      {
+        "timestamp": 1792178811833,
+        "message": "...............",
+        "ingestionTime": 1792178817951
+      },
+      {
+        "timestamp": 1792178811833,
+        "message": "----------------------------------------------------------------------",
+        "ingestionTime": 1792178817951
+      },
+      {
+        "timestamp": 1792178811833,
+        "message": "Ran 15 tests in 0.007s",
+        "ingestionTime": 1792178817951
+      },
+      {
+        "timestamp": 1792178811833,
+        "message": "OK",
+        "ingestionTime": 1792178817951
+      },
+      {
+        "timestamp": 1792178811833,
+        "message": "...................",
+        "ingestionTime": 1792178817951
+      },
+      {
+        "timestamp": 1792178811833,
+        "message": "----------------------------------------------------------------------",
+        "ingestionTime": 1792178817951
+      },
+      {
+        "timestamp": 1792178811833,
+        "message": "Ran 19 tests in 0.002s",
+        "ingestionTime": 1792178817951
+      },
+      {
+        "timestamp": 1792178811833,
+        "message": "OK",
+        "ingestionTime": 1792178817951
+      },
+      {
+        "timestamp": 1792178811833,
+        "message": "{\"event\": \"SELF_TEST_PASS\", \"tests\": 34, \"timestamp\": \"2026-10-16T19:26:51Z\", \"workload\": \"sports-edge-lab-cbbd-shooting-continuation-v024\"}",
+        "ingestionTime": 1792178817951
+      },
+      {
+        "timestamp": 1792178811833,
+        "message": "{\"event\": \"START\", \"max_calls\": 3000, \"maximum_compute_usd\": 0.2689166666666667, \"run_id\": \"20261016T192651Z-5313e818ee\", \"timestamp\": \"2026-10-16T19:26:51Z\", \"workload\": \"sports-edge-lab-cbbd-shooting-continuation-v024\"}",
+        "ingestionTime": 1792178817951
+      },
+      {
+        "timestamp": 1792178842838,
+        "message": "{\"budget\": {\"actual_known\": {\"odds\": 0, \"stats\": 1}, \"disabled_providers\": [], \"limits\": {\"odds\": 0, \"stats\": 3000}, \"provider_headers\": {\"cbbd\": {}}, \"reserved_or_known\": {\"odds\": 0, \"stats\": 2}, \"unknown_charge_reserve\": {\"odds\": 0, \"stats\": 0}}, \"compute_estimate_usd\": 0.0039, \"event\": \"HEARTBEAT\", \"phases\": {\"positive_cached_gate\": {\"endpoints\": 2, \"status\": \"passed\"}, \"seed\": {\"previous_empty_receipts\": 779, \"previous_failed_requests\": 12, \"previous_nonempty_receipts\": 124, \"status\": \"completed\", \"stopped_v021_empty_receipts\": 580, \"stopped_v021_nonempty_receipts\": 0, \"successful_shooting_request_ids\": 903}, \"shooting_continuation\": {\"completed\": 1, \"http_successful_or_reused\": 1, \"planned\": 1294, \"processed\": 1, \"remaining\": 1293, \"status\": \"running\", \"unsuccessful\": 0}}, \"run_id\": \"20261016T192651Z-5313e818ee\", \"seconds\": 30.2, \"statistics\": {\"captured\": 1, \"cbbd_captured\": 1, \"cbbd_http_calls\": 1, \"http_calls\": 1, \"ncaam_captured\": 1, \"raw_bytes\": 10192, \"shooting_empty_responses\": 0, \"shooting_nonempty_responses\": 1, \"shooting_positive_data_responses\": 1, \"shooting_records_observed\": 15}, \"timestamp\": \"2026-10-16T19:27:21Z\"}",
+        "ingestionTime": 1792178848006
+      },
+      {
+        "timestamp": 1792178872842,
+        "message": "{\"budget\": {\"actual_known\": {\"odds\": 0, \"stats\": 8}, \"disabled_providers\": [], \"limits\": {\"odds\": 0, \"stats\": 3000}, \"provider_headers\": {\"cbbd\": {}}, \"reserved_or_known\": {\"odds\": 0, \"stats\": 12}, \"unknown_charge_reserve\": {\"odds\": 0, \"stats\": 0}}, \"compute_estimate_usd\": 0.0077, \"event\": \"HEARTBEAT\", \"phases\": {\"positive_cached_gate\": {\"endpoints\": 2, \"status\": \"passed\"}, \"positive_fresh_gate\": {\"endpoints\": 2, \"status\": \"passed\"}, \"seed\": {\"previous_empty_receipts\": 779, \"previous_failed_requests\": 12, \"previous_nonempty_receipts\": 124, \"status\": \"completed\", \"stopped_v021_empty_receipts\": 580, \"stopped_v021_nonempty_receipts\": 0, \"successful_shooting_request_ids\": 903}, \"shooting_continuation\": {\"completed\": 8, \"http_successful_or_reused\": 8, \"planned\": 1294, \"processed\": 8, \"remaining\": 1286, \"status\": \"running\", \"unsuccessful\": 0}}, \"run_id\": \"20261016T192651Z-5313e818ee\", \"seconds\": 60.29, \"statistics\": {\"captured\": 8, \"cbbd_captured\": 8, \"cbbd_http_calls\": 8, \"http_calls\": 8, \"ncaam_captured\": 8, \"raw_bytes\": 509358, \"shooting_empty_responses\": 0, \"shooting_nonempty_responses\": 8, \"shooting_positive_data_responses\": 8, \"shooting_records_observed\": 738}, \"timestamp\": \"2026-10-16T19:27:51Z\"}",
+        "ingestionTime": 1792178878052
+      },
+      {
+        "timestamp": 1792178902845,
+        "message": "{\"budget\": {\"actual_known\": {\"odds\": 0, \"stats\": 18}, \"disabled_providers\": [], \"limits\": {\"odds\": 0, \"stats\": 3000}, \"provider_headers\": {\"cbbd\": {}}, \"reserved_or_known\": {\"odds\": 0, \"stats\": 22}, \"unknown_charge_reserve\": {\"odds\": 0, \"stats\": 0}}, \"compute_estimate_usd\": 0.0116, \"event\": \"HEARTBEAT\", \"phases\": {\"positive_cached_gate\": {\"endpoints\": 2, \"status\": \"passed\"}, \"positive_fresh_gate\": {\"endpoints\": 2, \"status\": \"passed\"}, \"seed\": {\"previous_empty_receipts\": 779, \"previous_failed_requests\": 12, \"previous_nonempty_receipts\": 124, \"status\": \"completed\", \"stopped_v021_empty_receipts\": 580, \"stopped_v021_nonempty_receipts\": 0, \"successful_shooting_request_ids\": 903}, \"shooting_continuation\": {\"completed\": 18, \"http_successful_or_reused\": 18, \"planned\": 1294, \"processed\": 18, \"remaining\": 1276, \"status\": \"running\", \"unsuccessful\": 0}}, \"run_id\": \"20261016T192651Z-5313e818ee\", \"seconds\": 90.35, \"statistics\": {\"captured\": 18, \"cbbd_captured\": 18, \"cbbd_http_calls\": 18, \"http_calls\": 18, \"ncaam_captured\": 18, \"raw_bytes\": 1067648, \"shooting_empty_responses\": 0, \"shooting_nonempty_responses\": 18, \"shooting_positive_data_responses\": 18, \"shooting_records_observed\": 1542}, \"timestamp\": \"2026-10-16T19:28:22Z\"}",
+        "ingestionTime": 1792178908103
+      }
+    ]
+  },
+  "api_calls": [
+    {
+      "service": "logs",
+      "operation": "GetLogEvents",
+      "status": "success",
+      "n_items": {
+        "events": 13
+      }
+    }
+  ]
+}
