@@ -67,18 +67,51 @@ rights. Final ratings, postgame statistics, realized weather, and historical
 corrections are not automatically pregame features. Timestamped feature
 construction and season-by-season completeness audits are separate gates.
 
-Player props, other bookmaker regions, a complete intraday quote tape, feature
-training, and proven market advantage are not delivered by this acquisition
-milestone. Empty responses and HTTP success are recorded without claiming full
+The base runner does not acquire player props; the companion runner below handles
+that separate bounded workload. Other bookmaker regions, a complete intraday
+quote tape, feature training and proven market advantage are not delivered by
+these acquisition runs. Empty responses and HTTP success are recorded without claiming full
 data coverage.
 
 ## Verification
 
-The runner includes 13 offline self-tests. Three additional integration tests
+The v002 runner includes 15 offline self-tests. Three additional integration tests
 exercise successful archival and remote-cache replay, hash mismatch rejection,
 provider authentication failure, and credential exclusion. They use synthetic
 credentials and in-memory fake services; production network and AWS validation
 occur in the actual processing job.
+
+The launched v001 source is preserved as
+[`tools/history/acquire_paid_data_v001_launched.py`](../tools/history/acquire_paid_data_v001_launched.py).
+See [execution source versions](EXECUTION_SOURCE_VERSIONS.md) for exact hashes.
+Its nonblocking CBBD shooting-stat requests omitted a required conference/team
+selector. V002 recovers those requests using distinct conferences from archived
+team-season statistics, with team-level fallback for unaffiliated teams. It
+reuses successful archived requests. No running job was altered.
+
+## Additional player-prop runner
+
+`acquire_player_props.py` imports `acquire_paid_data.py`; deploy those two files
+together. It reads the existing `discovered-events.json` and refreshes it while
+the base archive grows. It never calls a paid event-discovery endpoint.
+
+The additional run reserves no more than 500,000 credits across all four supported
+tracks, with a 6,900-second application limit. It attempts 24-hour, 6-hour, and
+15-minute checkpoints from May 3, 2023 at 05:30 UTC onward. Latest games are
+prioritized with leagues interleaved. The six-market request reserves 60 credits
+for one US bookmaker region and reconciles the actual unique returned-market
+charge from provider headers.
+
+Football requests passing yards, passing TDs, rushing yards, receiving yards,
+receptions, and anytime TDs. Basketball requests points, rebounds, assists,
+threes, blocks, and steals. The league/market combinations are documented by
+The Odds API, but this does not guarantee every market existed historically for
+every event. NCAA women's player props are excluded.
+
+Every response also receives an audit of event identity, kickoff revisions,
+snapshot time, quote-update times, and returned market/outcome counts. Even
+consistent timestamps do not replace participant mapping, settlements, and
+availability audits. It includes 19 automatic tests (15 shared plus 4 props).
 
 Official references:
 

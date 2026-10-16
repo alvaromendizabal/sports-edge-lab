@@ -60,3 +60,7 @@ jobs:
           python -m py_compile tools/acquire_public_archives.py tools/acquire_espn.py
           python tools/acquire_public_archives.py --self-test
           python tools/acquire_espn.py --self-test
+      - name: Run historical player-prop audit and budget guards
+        run: |
+          python -m py_compile tools/acquire_player_props.py tools/history/acquire_paid_data_v001_launched.py
+          python tools/acquire_player_props.py --self-test
