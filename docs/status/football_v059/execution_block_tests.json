@@ -1,0 +1,10 @@
+{
+  "passed": 4,
+  "checks": [
+    "missing",
+    "corrupt",
+    "renamed",
+    "child_failure"
+  ],
+  "actual_aws_execution": false
+}

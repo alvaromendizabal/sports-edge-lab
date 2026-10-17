@@ -1,0 +1,37 @@
+{
+  "status": "PASS",
+  "real_data_fits": 0,
+  "provider_calls": 0,
+  "synthetic_batch_posterior_matches": true,
+  "same_release_update_order_invariant": true,
+  "crps_quadrature": [
+    {
+      "target": -4.0,
+      "mean": 1.0,
+      "variance": 9.0,
+      "quadrature": 3.4263905593852337,
+      "closed_form": 3.4263905593850765
+    },
+    {
+      "target": 0.0,
+      "mean": 0.0,
+      "variance": 1.0,
+      "quadrature": 0.23369497725510913,
+      "closed_form": 0.23369497725510913
+    },
+    {
+      "target": 12.0,
+      "mean": 3.0,
+      "variance": 4.0,
+      "quadrature": 7.87162360975267,
+      "closed_form": 7.87162360975267
+    }
+  ],
+  "correlated_joint_nll_matches_scipy": true,
+  "owner_state_tests_passed": 27,
+  "owner_tests_synthetic_smoke_fits": 4,
+  "source_hashes": {
+    "state_model.py": "dd31a1a1a4e4e969f561b5519e7e3cafb5ece0294089ad6b3f68322cb1256e20",
+    "state_tests.py": "612771ba38f67b7a845e8c6ff759005dc80c96851ce0f4ecb9e430fa1f4c93be"
+  }
+}

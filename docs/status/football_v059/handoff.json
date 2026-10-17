@@ -1,0 +1,27 @@
+{
+  "status": "PREPARED_NOT_EXECUTED",
+  "artifact_filename": "sports_edge_lab_football_fbs_state_v059.pyz",
+  "artifact_sha256": "edaddfeec7c0cd3326b04683e6addd8f3dc52b114487f67d1aff91f39fafed02",
+  "artifact_bytes": 151008,
+  "real_fits_executed": 0,
+  "max_joint_fit_attempts": 16,
+  "synthetic_smoke_fits": 4,
+  "provider_calls": 0,
+  "input_asset_count": 16,
+  "pinned_input_bytes": 10668204,
+  "scope": [
+    "nfl",
+    "ncaaf_fbs_vs_fbs"
+  ],
+  "model_arms": [
+    "static",
+    "dynamic"
+  ],
+  "baseline_refits": 0,
+  "model_promotions": 0,
+  "predecessor": "V058 accepted execution; all candidate gates negative",
+  "local_repair_status": "VERIFIED_OWNER_RUNTIME_PENDING",
+  "locally_repaired_fbs_games": 8,
+  "remaining_fbs_drive_gaps_after_repair": 14,
+  "owner_execution_required": true
+}

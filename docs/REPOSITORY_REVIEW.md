@@ -6,12 +6,14 @@ This is an internal, criterion-based editorial assessment, not an independent em
 
 The before state is preserved in [README_PRE_MODELING_20261017.md](history/README_PRE_MODELING_20261017.md). Its acquisition-stage narrative was useful historical context but no longer represented the model executions already completed.
 
+Latest maintenance incorporates the completed V058 negative benchmark, FBS-only evaluation scope, explicitly runtime-pending data repairs and the V059 scientific core. The editorial ratings below are unchanged; a new experiment or more code does not automatically increase the project score.
+
 ## Before / after assessment
 
 | Criterion | Before / 10 | After / 10 | Evidence for the change |
 | --- | ---: | ---: | --- |
 | Immediate project comprehension | 6.5 | 9.0 | Concise mission, two-minute review, accepted models, actual result and limits on the landing page. |
-| Current-state accuracy | 5.5 | 9.0 | Stale join counts and “start modeling” status replaced by V057 evidence; current-season PBP clearly separated from historical holdings. |
+| Current-state accuracy | 5.5 | 9.0 | Stale join counts and “start modeling” status replaced by verified modeling evidence; current-season PBP clearly separated from historical holdings. |
 | Modeling transparency | 6.0 | 9.0 | Dedicated model card: exact targets, feature groups, families, folds, metric cohorts, negative results and unimplemented capabilities. |
 | Evidence traceability | 7.5 | 8.8 | Sanitized aggregate evidence links and a static scorecard; fuller private prediction-level reproduction remains access-dependent. |
 | Reproducibility explanation | 7.0 | 8.5 | Architecture and public-fixture path distinguish software tests from licensed-data result reproduction. |

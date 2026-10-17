@@ -1,0 +1,37 @@
+{
+  "status": "LOCAL_DATA_REPAIR_VERIFIED_OWNER_RUNTIME_PENDING",
+  "scope": {
+    "completed_fbs_vs_fbs": 7898,
+    "completed_fbs_history_context": 1191,
+    "standalone_fcs_games": 0,
+    "context_prediction_rows": 0,
+    "frozen_counts": {
+      "completed_total": 9086,
+      "completed_fbs_vs_fbs": 7895
+    },
+    "frozen_features_modified": false,
+    "strict_point_in_time_verified": false,
+    "source_publication_at": null
+  },
+  "newly_completed_fbs_games_since_frozen": 3,
+  "repair": {
+    "selected_fbs_games": 8,
+    "repaired_fbs_games": 8,
+    "accepted_team_rows": 16,
+    "excluded_overtime_rows": 33,
+    "original_fbs_gaps": 22,
+    "remaining_fbs_gaps": 14,
+    "historical_context_gaps": 6,
+    "remaining_by_reason": {
+      "current_source_update_needed": 3,
+      "unknown_positive_play_drive_result": 5,
+      "absent_from_alternate_archive": 6
+    },
+    "new_provider_calls": 0,
+    "new_fits": 0,
+    "fcs_recovery_attempts": 0,
+    "baseline_replacement_permitted": false,
+    "source_interchangeability_approved": false
+  },
+  "interpretation": "Local cached-data preparation only; authoritative owner AWS integration and model execution remain pending. Preserve accepted features and historical FCS context; no new standalone FCS work."
+}

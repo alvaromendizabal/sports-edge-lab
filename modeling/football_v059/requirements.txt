@@ -1,0 +1,7 @@
+# Python 3.12; pinned scientific preparation environment.
+# Installing packages may use the network. Tests/demo themselves are offline.
+numpy==2.3.5
+pandas==2.2.3
+scipy==1.17.0
+pyarrow==19.0.1
+threadpoolctl==3.6.0
