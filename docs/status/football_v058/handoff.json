@@ -1,0 +1,53 @@
+{
+  "schema": "sports-edge-lab-handoff-v1",
+  "version": "V058",
+  "status": "PREPARED_NOT_EXECUTED",
+  "prepared_date": "2026-10-17",
+  "artifact_name": "sports_edge_lab_football_nonlinear_v058.pyz",
+  "artifact_sha256": "147d20846b269ebfdcee59d9ee78ab325a3f583eecaf6a3f6960fdca3eb71a48",
+  "artifact_bytes": 108487,
+  "real_fits_this_preparation": 0,
+  "planned_real_fits": 36,
+  "baseline_refits": 0,
+  "provider_calls": 0,
+  "asset_count": 17,
+  "asset_bytes": 6681024,
+  "families": {
+    "nfl": [
+      "histogram_gradient_boosting",
+      "multilayer_perceptron"
+    ],
+    "ncaaf": [
+      "multilayer_perceptron"
+    ]
+  },
+  "features": {
+    "nfl": 36,
+    "ncaaf": 60
+  },
+  "gates": {
+    "unit_tests_passed": 66,
+    "acceptance_scenarios_passed": 9,
+    "runtime_mock_scenarios_passed": 6,
+    "terminal_block_scenarios_passed": 4,
+    "public_unit_tests_passed": 46,
+    "public_demo_synthetic_fits": 9
+  },
+  "private_aws_workflow_executed": false,
+  "browser_rendering_verified": false,
+  "accepted_model_replacements": 0,
+  "limitations": [
+    "Repeatedly exposed evaluation seasons; no untouched holdout",
+    "Historical publication timestamps remain unknown",
+    "Market horizons differ from nominal feature cutoffs",
+    "Synthetic checks do not establish real-data performance"
+  ],
+  "independent_actual_cache_review": {
+    "baseline_partitions": 24,
+    "market_groups": 12,
+    "exhaustive_subgroup_partitions": 96,
+    "sparse_or_empty_groups_without_confidence_bounds": 294,
+    "verified_brier_skill_values": 38,
+    "real_fits": 0
+  }
+}
