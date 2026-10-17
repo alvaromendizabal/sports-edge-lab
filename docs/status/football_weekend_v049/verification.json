@@ -1,0 +1,147 @@
+{
+  "artifact": {
+    "bytes": 252302,
+    "sha256": "d0900f5d454c49583e260826b2288323ab43bbb698f62ca721bbdeea525b8175",
+    "offline_tests": 107,
+    "s3_download_verified_identical": true
+  },
+  "terminal": {
+    "ProcessingInputs": [
+      {
+        "InputName": "code",
+        "AppManaged": false,
+        "S3Input": {
+          "S3Uri": "s3://sagemaker-sports-edge-lab-560403859723-us-west-2/infrastructure/code/weekend-20261017-01-v049/",
+          "LocalPath": "/opt/ml/processing/code",
+          "S3DataType": "S3Prefix",
+          "S3InputMode": "File",
+          "S3DataDistributionType": "FullyReplicated"
+        }
+      }
+    ],
+    "ProcessingJobName": "sports-edge-lab-weekend-20261017-01-v049",
+    "ProcessingResources": {
+      "ClusterConfig": {
+        "InstanceCount": 1,
+        "InstanceType": "ml.m5.2xlarge",
+        "VolumeSizeInGB": 30
+      }
+    },
+    "StoppingCondition": {
+      "MaxRuntimeInSeconds": 86400
+    },
+    "AppSpecification": {
+      "ImageUri": "246618743249.dkr.ecr.us-west-2.amazonaws.com/sagemaker-scikit-learn:1.9-0",
+      "ContainerEntrypoint": [
+        "python3",
+        "-u",
+        "/opt/ml/processing/code/sports_edge_lab_weekend_v049.pyz"
+      ]
+    },
+    "NetworkConfig": {
+      "EnableInterContainerTrafficEncryption": false,
+      "EnableNetworkIsolation": false
+    },
+    "RoleArn": "arn:aws:iam::560403859723:role/SportsEdgeLabProcessingRole",
+    "ProcessingJobArn": "arn:aws:sagemaker:us-west-2:560403859723:processing-job/sports-edge-lab-weekend-20261017-01-v049",
+    "ProcessingJobStatus": "Completed",
+    "ProcessingEndTime": "2026-10-17T01:27:35.068000+00:00",
+    "ProcessingStartTime": "2026-10-17T01:26:46.576000+00:00",
+    "LastModifiedTime": "2026-10-17T01:28:34.600000+00:00",
+    "CreationTime": "2026-10-17T01:26:03.524000+00:00"
+  },
+  "return_manifest": {
+    "bytes": 2336,
+    "key": "shared/acquisition/football-weekend/20261017T012720Z-3b05742b96/sports_edge_lab_weekend_return_20261017T012720Z-3b05742b96.zip",
+    "sha256": "20a918f2bc6cd0c79c80d9fdc4eaf9eabd8ca5da1a22284070e4f44a17cd31a0"
+  },
+  "zip_crc_valid": true,
+  "zip_report_matches_s3": true,
+  "unique_return_zip_count": 1,
+  "log_note": "Two FINISHED lines before SELF_TEST_PASS are mocked offline test fixtures, not AWS data runs. Only runtime run_id 20261017T012720Z-3b05742b96 has an S3 return ZIP.",
+  "american_v022": {
+    "terminal": {
+      "ProcessingInputs": [
+        {
+          "InputName": "code",
+          "AppManaged": false,
+          "S3Input": {
+            "S3Uri": "s3://sagemaker-sports-edge-lab-560403859723-us-west-2/infrastructure/code/ncaa-availability-20261016-v022/",
+            "LocalPath": "/opt/ml/processing/code",
+            "S3DataType": "S3Prefix",
+            "S3InputMode": "File",
+            "S3DataDistributionType": "FullyReplicated"
+          }
+        }
+      ],
+      "ProcessingJobName": "sports-edge-lab-ncaa-availability-20261017-v022",
+      "ProcessingResources": {
+        "ClusterConfig": {
+          "InstanceCount": 1,
+          "InstanceType": "ml.m5.2xlarge",
+          "VolumeSizeInGB": 30
+        }
+      },
+      "StoppingCondition": {
+        "MaxRuntimeInSeconds": 900
+      },
+      "AppSpecification": {
+        "ImageUri": "246618743249.dkr.ecr.us-west-2.amazonaws.com/sagemaker-scikit-learn:1.9-0",
+        "ContainerEntrypoint": [
+          "python3",
+          "-u",
+          "/opt/ml/processing/code/sports_edge_lab_ncaa_availability_v022_20261016.pyz"
+        ],
+        "ContainerArguments": [
+          "--max-seconds",
+          "600",
+          "--max-requests",
+          "200",
+          "--max-bytes",
+          "100000000"
+        ]
+      },
+      "NetworkConfig": {
+        "EnableInterContainerTrafficEncryption": false,
+        "EnableNetworkIsolation": false
+      },
+      "RoleArn": "arn:aws:iam::560403859723:role/SportsEdgeLabProcessingRole",
+      "ProcessingJobArn": "arn:aws:sagemaker:us-west-2:560403859723:processing-job/sports-edge-lab-ncaa-availability-20261017-v022",
+      "ProcessingJobStatus": "Failed",
+      "FailureReason": "AlgorithmError: , exit code: 2",
+      "ProcessingEndTime": "2026-10-17T01:07:35.716000+00:00",
+      "ProcessingStartTime": "2026-10-17T01:05:41.771000+00:00",
+      "LastModifiedTime": "2026-10-17T01:10:04.630000+00:00",
+      "CreationTime": "2026-10-17T01:05:03.195000+00:00"
+    },
+    "requests": 13,
+    "downloaded_report_images": 4,
+    "failed_page_parses": 4,
+    "reason": "unexpected_report_image_count",
+    "status": "partial",
+    "return_zip_bytes": 3137,
+    "return_zip_sha256": "38f64ce939e0bdd8b2360afec1688bbb321f93438cfa8c45216e5a3e536b30e6",
+    "zip_crc_valid": true,
+    "counts_as_football_coverage": false,
+    "restarted": false
+  },
+  "tracking_access": {
+    "substantive_new_access": false,
+    "skillcorner": "Existing automated no-B2C reply only",
+    "genius": "No matching reply found; access remains unconfirmed"
+  },
+  "next_current_collector": {
+    "schedule": "sports-edge-lab-current-6h-20261017-v026",
+    "first_due_utc": "2026-10-17T03:05:00Z",
+    "artifact_version": "v043",
+    "cbbd_disabled": true,
+    "duplicated": false
+  },
+  "independent_data_verification": {
+    "raw_and_derived_sha256_verified": true,
+    "rows_independently_reparsed": 374,
+    "changed_rows_independently_recomputed": 0,
+    "rejected": 0,
+    "publication_null_and_observation_time_verified": true
+  }
+}

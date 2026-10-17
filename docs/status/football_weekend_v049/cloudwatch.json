@@ -1,0 +1,576 @@
+{
+  "events": [
+    {
+      "timestamp": 1792200440921,
+      "message": "test_all_provider_denials (__main__.Tests.test_all_provider_denials) ... ok",
+      "ingestionTime": 1792200447099
+    },
+    {
+      "timestamp": 1792200440921,
+      "message": "test_ambiguous_bool_closed (__main__.Tests.test_ambiguous_bool_closed) ... ok",
+      "ingestionTime": 1792200447099
+    },
+    {
+      "timestamp": 1792200440921,
+      "message": "test_cbbd_block_required (__main__.Tests.test_cbbd_block_required) ... ok",
+      "ingestionTime": 1792200447099
+    },
+    {
+      "timestamp": 1792200440921,
+      "message": "test_conditional_ledger_preserves_budget (__main__.Tests.test_conditional_ledger_preserves_budget) ... ok",
+      "ingestionTime": 1792200447099
+    },
+    {
+      "timestamp": 1792200440921,
+      "message": "test_duplicate_record_closed (__main__.Tests.test_duplicate_record_closed) ... ok",
+      "ingestionTime": 1792200447099
+    },
+    {
+      "timestamp": 1792200440921,
+      "message": "{\"event\":\"FINISHED\",\"report_key\":\"shared/acquisition/football-weekend/20261017T012719Z-d7a22e56bb/report.json\",\"return_zip\":{\"bytes\":1704,\"key\":\"shared/acquisition/football-weekend/20261017T012719Z-d7a22e56bb/sports_edge_lab_weekend_return_20261017T012719Z-d7a22e56bb.zip\",\"sha256\":\"512d92e69b9c25a75f3a071eab312dd7f4c70835b66d01cef6431d93a880eef5\"},\"status\":\"completed_with_explicit_gaps\"}",
+      "ingestionTime": 1792200447099
+    },
+    {
+      "timestamp": 1792200440921,
+      "message": "test_entrypoint_single_zip_no_odds_or_cfbd (__main__.Tests.test_entrypoint_single_zip_no_odds_or_cfbd) ... ok",
+      "ingestionTime": 1792200447099
+    },
+    {
+      "timestamp": 1792200440921,
+      "message": "{\"event\":\"FINISHED\",\"report_key\":\"shared/acquisition/football-weekend/20261017T012719Z-b92c1d0441/report.json\",\"return_zip\":{\"bytes\":1726,\"key\":\"shared/acquisition/football-weekend/20261017T012719Z-b92c1d0441/sports_edge_lab_weekend_return_20261017T012719Z-b92c1d0441.zip\",\"sha256\":\"9e0b934b5458b5b78f28efb6b76e8930812fbccbad7e065d5c93cab0647cc331\"},\"status\":\"partial_failure\"}",
+      "ingestionTime": 1792200447099
+    },
+    {
+      "timestamp": 1792200440921,
+      "message": "test_failure_has_unique_return (__main__.Tests.test_failure_has_unique_return) ... ok",
+      "ingestionTime": 1792200447099
+    },
+    {
+      "timestamp": 1792200440921,
+      "message": "test_friday_hash_unchanged (__main__.Tests.test_friday_hash_unchanged) ... ok",
+      "ingestionTime": 1792200447099
+    },
+    {
+      "timestamp": 1792200440921,
+      "message": "test_missing_budget_closed (__main__.Tests.test_missing_budget_closed) ... ok",
+      "ingestionTime": 1792200447099
+    },
+    {
+      "timestamp": 1792200440921,
+      "message": "test_odds_disabled (__main__.Tests.test_odds_disabled) ... ok",
+      "ingestionTime": 1792200447099
+    },
+    {
+      "timestamp": 1792200440921,
+      "message": "test_overspent_closed (__main__.Tests.test_overspent_closed) ... ok",
+      "ingestionTime": 1792200447099
+    },
+    {
+      "timestamp": 1792200440921,
+      "message": "test_valid_budget (__main__.Tests.test_valid_budget) ... ok",
+      "ingestionTime": 1792200447099
+    },
+    {
+      "timestamp": 1792200440921,
+      "message": "test_402_stops_provider (validation.Tests.test_402_stops_provider) ... ok",
+      "ingestionTime": 1792200447099
+    },
+    {
+      "timestamp": 1792200440921,
+      "message": "test_bad_price (validation.Tests.test_bad_price) ... ok",
+      "ingestionTime": 1792200447099
+    },
+    {
+      "timestamp": 1792200440921,
+      "message": "test_bad_spread_pair (validation.Tests.test_bad_spread_pair) ... ok",
+      "ingestionTime": 1792200447099
+    },
+    {
+      "timestamp": 1792200440921,
+      "message": "test_bad_total_pair (validation.Tests.test_bad_total_pair) ... ok",
+      "ingestionTime": 1792200447099
+    },
+    {
+      "timestamp": 1792200440921,
+      "message": "test_book_after_snapshot (validation.Tests.test_book_after_snapshot) ... ok",
+      "ingestionTime": 1792200447099
+    },
+    {
+      "timestamp": 1792200440921,
+      "message": "test_cached_audit_reuses_duplicate_objects (validation.Tests.test_cached_audit_reuses_duplicate_objects) ... ok",
+      "ingestionTime": 1792200447099
+    },
+    {
+      "timestamp": 1792200440921,
+      "message": "test_corrupt_cache_is_recorded_not_approved (validation.Tests.test_corrupt_cache_is_recorded_not_approved) ... ok",
+      "ingestionTime": 1792200447099
+    },
+    {
+      "timestamp": 1792200440921,
+      "message": "test_duplicate_market_rejected (validation.Tests.test_duplicate_market_rejected) ... ok",
+      "ingestionTime": 1792200447099
+    },
+    {
+      "timestamp": 1792200440921,
+      "message": "test_good_spread_pair (validation.Tests.test_good_spread_pair) ... ok",
+      "ingestionTime": 1792200447099
+    },
+    {
+      "timestamp": 1792200440921,
+      "message": "test_invalid_outcomes (validation.Tests.test_invalid_outcomes) ... ok",
+      "ingestionTime": 1792200447099
+    },
+    {
+      "timestamp": 1792200440921,
+      "message": "test_market_after_request (validation.Tests.test_market_after_request) ... ok",
+      "ingestionTime": 1792200447099
+    },
+    {
+      "timestamp": 1792200440921,
+      "message": "test_market_missing_time_falls_back_to_book (validation.Tests.test_market_missing_time_falls_back_to_book) ... ok",
+      "ingestionTime": 1792200447099
+    },
+    {
+      "timestamp": 1792200440921,
+      "message": "test_missing_book_time (validation.Tests.test_missing_book_time) ... ok",
+      "ingestionTime": 1792200447099
+    },
+    {
+      "timestamp": 1792200440921,
+      "message": "test_naive_time (validation.Tests.test_naive_time) ... ok",
+      "ingestionTime": 1792200447099
+    },
+    {
+      "timestamp": 1792200440921,
+      "message": "test_quarantine_missing_jersey (validation.Tests.test_quarantine_missing_jersey) ... ok",
+      "ingestionTime": 1792200447099
+    },
+    {
+      "timestamp": 1792200440921,
+      "message": "test_real_embedded_entrypoint_and_unique_zip (validation.Tests.test_real_embedded_entrypoint_and_unique_zip) ... ok",
+      "ingestionTime": 1792200447099
+    },
+    {
+      "timestamp": 1792200440921,
+      "message": "test_snapshot_after_request (validation.Tests.test_snapshot_after_request) ... ok",
+      "ingestionTime": 1792200447099
+    },
+    {
+      "timestamp": 1792200440921,
+      "message": "test_snapshot_missing (validation.Tests.test_snapshot_missing) ... ok",
+      "ingestionTime": 1792200447099
+    },
+    {
+      "timestamp": 1792200440921,
+      "message": "test_started_game (validation.Tests.test_started_game) ... ok",
+      "ingestionTime": 1792200447099
+    },
+    {
+      "timestamp": 1792200440921,
+      "message": "test_summary_keeps_failures_and_scope (validation.Tests.test_summary_keeps_failures_and_scope) ... ok",
+      "ingestionTime": 1792200447099
+    },
+    {
+      "timestamp": 1792200440921,
+      "message": "test_valid_times (validation.Tests.test_valid_times) ... ok",
+      "ingestionTime": 1792200447099
+    },
+    {
+      "timestamp": 1792200440921,
+      "message": "test_ambiguous_crosswalk_never_guessed (quality.Tests.test_ambiguous_crosswalk_never_guessed) ... ok",
+      "ingestionTime": 1792200447099
+    },
+    {
+      "timestamp": 1792200440921,
+      "message": "test_asset_scope (quality.Tests.test_asset_scope) ... ok",
+      "ingestionTime": 1792200447099
+    },
+    {
+      "timestamp": 1792200440921,
+      "message": "test_conflict_quarantined (quality.Tests.test_conflict_quarantined) ... ok",
+      "ingestionTime": 1792200447099
+    },
+    {
+      "timestamp": 1792200440921,
+      "message": "test_corrupt_asset_rejected (quality.Tests.test_corrupt_asset_rejected) ... ok",
+      "ingestionTime": 1792200447099
+    },
+    {
+      "timestamp": 1792200440922,
+      "message": "test_denial_stops (quality.Tests.test_denial_stops) ... ok",
+      "ingestionTime": 1792200447099
+    },
+    {
+      "timestamp": 1792200440922,
+      "message": "test_exact_crosswalk_recovers (quality.Tests.test_exact_crosswalk_recovers) ... ok",
+      "ingestionTime": 1792200447099
+    },
+    {
+      "timestamp": 1792200440922,
+      "message": "test_exact_week_membership (quality.Tests.test_exact_week_membership) ... ok",
+      "ingestionTime": 1792200447099
+    },
+    {
+      "timestamp": 1792200440922,
+      "message": "test_identity_does_not_prove_membership (quality.Tests.test_identity_does_not_prove_membership) ... ok",
+      "ingestionTime": 1792200447099
+    },
+    {
+      "timestamp": 1792200440922,
+      "message": "test_information_time_not_backdated (quality.Tests.test_information_time_not_backdated) ... ok",
+      "ingestionTime": 1792200447099
+    },
+    {
+      "timestamp": 1792200440922,
+      "message": "test_old_capture_not_candidate (quality.Tests.test_old_capture_not_candidate) ... ok",
+      "ingestionTime": 1792200447099
+    },
+    {
+      "timestamp": 1792200440922,
+      "message": "test_prior_identity_retained_without_crosswalk (quality.Tests.test_prior_identity_retained_without_crosswalk) ... ok",
+      "ingestionTime": 1792200447099
+    },
+    {
+      "timestamp": 1792200440922,
+      "message": "test_real_embedded_config_complete_runtime_and_cache (quality.Tests.test_real_embedded_config_complete_runtime_and_cache) ... ok",
+      "ingestionTime": 1792200447099
+    },
+    {
+      "timestamp": 1792200440922,
+      "message": "test_shifted_acc_row_rejected (quality.Tests.test_shifted_acc_row_rejected) ... ok",
+      "ingestionTime": 1792200447099
+    },
+    {
+      "timestamp": 1792200440922,
+      "message": "test_unresolved_not_candidate (quality.Tests.test_unresolved_not_candidate) ... ok",
+      "ingestionTime": 1792200447099
+    },
+    {
+      "timestamp": 1792200440922,
+      "message": "test_valid_null_status_preserved (quality.Tests.test_valid_null_status_preserved) ... ok",
+      "ingestionTime": 1792200447099
+    },
+    {
+      "timestamp": 1792200440922,
+      "message": "test_ambiguous_global_id_not_guessed (readiness.Tests.test_ambiguous_global_id_not_guessed) ... ok",
+      "ingestionTime": 1792200447099
+    },
+    {
+      "timestamp": 1792200440922,
+      "message": "test_available_after_prediction_rejected (readiness.Tests.test_available_after_prediction_rejected) ... ok",
+      "ingestionTime": 1792200447099
+    },
+    {
+      "timestamp": 1792200440922,
+      "message": "test_available_at_prediction_before_kickoff (readiness.Tests.test_available_at_prediction_before_kickoff) ... ok",
+      "ingestionTime": 1792200447099
+    },
+    {
+      "timestamp": 1792200440922,
+      "message": "test_college_matching_requires_jersey_and_unique_id (readiness.Tests.test_college_matching_requires_jersey_and_unique_id) ... ok",
+      "ingestionTime": 1792200447099
+    },
+    {
+      "timestamp": 1792200440922,
+      "message": "test_college_missing_status_preserved (readiness.Tests.test_college_missing_status_preserved) ... ok",
+      "ingestionTime": 1792200447099
+    },
+    {
+      "timestamp": 1792200440922,
+      "message": "test_global_id_does_not_claim_week_membership (readiness.Tests.test_global_id_does_not_claim_week_membership) ... ok",
+      "ingestionTime": 1792200447099
+    },
+    {
+      "timestamp": 1792200440922,
+      "message": "test_naive_timestamp_rejected (readiness.Tests.test_naive_timestamp_rejected) ... ok",
+      "ingestionTime": 1792200447099
+    },
+    {
+      "timestamp": 1792200440922,
+      "message": "test_number_not_imputed (readiness.Tests.test_number_not_imputed) ... ok",
+      "ingestionTime": 1792200447099
+    },
+    {
+      "timestamp": 1792200440922,
+      "message": "test_postkickoff_rejected (readiness.Tests.test_postkickoff_rejected) ... ok",
+      "ingestionTime": 1792200447099
+    },
+    {
+      "timestamp": 1792200440922,
+      "message": "test_source_block_stops_before_http (readiness.Tests.test_source_block_stops_before_http) ... ok",
+      "ingestionTime": 1792200447099
+    },
+    {
+      "timestamp": 1792200440922,
+      "message": "test_unknown_time_rejected (readiness.Tests.test_unknown_time_rejected) ... ok",
+      "ingestionTime": 1792200447099
+    },
+    {
+      "timestamp": 1792200440922,
+      "message": "test_verified_alias_recovers_exact_ngs (readiness.Tests.test_verified_alias_recovers_exact_ngs) ... ok",
+      "ingestionTime": 1792200447099
+    },
+    {
+      "timestamp": 1792200440922,
+      "message": "test_wrong_host_never_receives_credential (readiness.Tests.test_wrong_host_never_receives_credential) ... ok",
+      "ingestionTime": 1792200447099
+    },
+    {
+      "timestamp": 1792200440922,
+      "message": "test_acc_blank_headers_restore_and_preserve_null (football_refresh.Tests.test_acc_blank_headers_restore_and_preserve_null) ... ok",
+      "ingestionTime": 1792200447099
+    },
+    {
+      "timestamp": 1792200440922,
+      "message": "test_acc_requires_header_evidence (football_refresh.Tests.test_acc_requires_header_evidence) ... ok",
+      "ingestionTime": 1792200447099
+    },
+    {
+      "timestamp": 1792200440922,
+      "message": "test_ambiguous_pfr_not_guessed (football_refresh.Tests.test_ambiguous_pfr_not_guessed) ... ok",
+      "ingestionTime": 1792200447099
+    },
+    {
+      "timestamp": 1792200440922,
+      "message": "test_bad_snap_count (football_refresh.Tests.test_bad_snap_count) ... ok",
+      "ingestionTime": 1792200447099
+    },
+    {
+      "timestamp": 1792200440922,
+      "message": "test_complete_runtime_cache_and_return_bundle (football_refresh.Tests.test_complete_runtime_cache_and_return_bundle) ... ok",
+      "ingestionTime": 1792200447099
+    },
+    {
+      "timestamp": 1792200440922,
+      "message": "test_corrupt_cache_stops (football_refresh.Tests.test_corrupt_cache_stops) ... ok",
+      "ingestionTime": 1792200447099
+    },
+    {
+      "timestamp": 1792200440922,
+      "message": "test_csv_ragged (football_refresh.Tests.test_csv_ragged) ... ok",
+      "ingestionTime": 1792200447099
+    },
+    {
+      "timestamp": 1792200440922,
+      "message": "test_depth_time_scope (football_refresh.Tests.test_depth_time_scope) ... ok",
+      "ingestionTime": 1792200447099
+    },
+    {
+      "timestamp": 1792200440922,
+      "message": "test_join_uses_team_and_week (football_refresh.Tests.test_join_uses_team_and_week) ... ok",
+      "ingestionTime": 1792200447099
+    },
+    {
+      "timestamp": 1792200440922,
+      "message": "test_latest_per_team (football_refresh.Tests.test_latest_per_team) ... ok",
+      "ingestionTime": 1792200447099
+    },
+    {
+      "timestamp": 1792200440922,
+      "message": "test_missing_column (football_refresh.Tests.test_missing_column) ... ok",
+      "ingestionTime": 1792200447099
+    },
+    {
+      "timestamp": 1792200440922,
+      "message": "test_missing_id_not_matched (football_refresh.Tests.test_missing_id_not_matched) ... ok",
+      "ingestionTime": 1792200447099
+    },
+    {
+      "timestamp": 1792200440922,
+      "message": "test_preseason_not_current (football_refresh.Tests.test_preseason_not_current) ... ok",
+      "ingestionTime": 1792200447099
+    },
+    {
+      "timestamp": 1792200440922,
+      "message": "test_provider_denial_no_retry (football_refresh.Tests.test_provider_denial_no_retry) ... ok",
+      "ingestionTime": 1792200447099
+    },
+    {
+      "timestamp": 1792200440922,
+      "message": "test_scope (football_refresh.Tests.test_scope) ... ok",
+      "ingestionTime": 1792200447099
+    },
+    {
+      "timestamp": 1792200440922,
+      "message": "test_season_scope (football_refresh.Tests.test_season_scope) ... ok",
+      "ingestionTime": 1792200447099
+    },
+    {
+      "timestamp": 1792200440922,
+      "message": "test_sec_count_mismatch (football_refresh.Tests.test_sec_count_mismatch) ... ok",
+      "ingestionTime": 1792200447099
+    },
+    {
+      "timestamp": 1792200440922,
+      "message": "test_ambiguous_columns (ngs_avail.Tests.test_ambiguous_columns) ... ok",
+      "ingestionTime": 1792200447099
+    },
+    {
+      "timestamp": 1792200440922,
+      "message": "test_complete_run_cache_and_unique_return (ngs_avail.Tests.test_complete_run_cache_and_unique_return) ... ok",
+      "ingestionTime": 1792200447099
+    },
+    {
+      "timestamp": 1792200440922,
+      "message": "test_integrity_and_pacing (ngs_avail.Tests.test_integrity_and_pacing) ... ok",
+      "ingestionTime": 1792200447099
+    },
+    {
+      "timestamp": 1792200440922,
+      "message": "test_missing_headers (ngs_avail.Tests.test_missing_headers) ... ok",
+      "ingestionTime": 1792200447099
+    },
+    {
+      "timestamp": 1792200440922,
+      "message": "test_missing_status (ngs_avail.Tests.test_missing_status) ... ok",
+      "ingestionTime": 1792200447099
+    },
+    {
+      "timestamp": 1792200440922,
+      "message": "test_nfl_empty_status (ngs_avail.Tests.test_nfl_empty_status) ... ok",
+      "ingestionTime": 1792200447099
+    },
+    {
+      "timestamp": 1792200440922,
+      "message": "test_ngs_current_and_aggregate (ngs_avail.Tests.test_ngs_current_and_aggregate) ... ok",
+      "ingestionTime": 1792200447099
+    },
+    {
+      "timestamp": 1792200440922,
+      "message": "test_ngs_future_rejected (ngs_avail.Tests.test_ngs_future_rejected) ... ok",
+      "ingestionTime": 1792200447099
+    },
+    {
+      "timestamp": 1792200440922,
+      "message": "test_ngs_schema (ngs_avail.Tests.test_ngs_schema) ... ok",
+      "ingestionTime": 1792200447099
+    },
+    {
+      "timestamp": 1792200440922,
+      "message": "test_rate_denial_stops (ngs_avail.Tests.test_rate_denial_stops) ... ok",
+      "ingestionTime": 1792200447099
+    },
+    {
+      "timestamp": 1792200440922,
+      "message": "test_redirect_rejected (ngs_avail.Tests.test_redirect_rejected) ... ok",
+      "ingestionTime": 1792200447099
+    },
+    {
+      "timestamp": 1792200440922,
+      "message": "test_source_scope (ngs_avail.Tests.test_source_scope) ... ok",
+      "ingestionTime": 1792200447099
+    },
+    {
+      "timestamp": 1792200440922,
+      "message": "test_archived_directory_regression_and_exact_observed_resolution (nfl_current.Tests.test_archived_directory_regression_and_exact_observed_resolution) ... ok",
+      "ingestionTime": 1792200447099
+    },
+    {
+      "timestamp": 1792200440922,
+      "message": "test_byte_bound_before_http (nfl_current.Tests.test_byte_bound_before_http) ... ok",
+      "ingestionTime": 1792200447099
+    },
+    {
+      "timestamp": 1792200440922,
+      "message": "test_cache_identity_mismatch (nfl_current.Tests.test_cache_identity_mismatch) ... ok",
+      "ingestionTime": 1792200447099
+    },
+    {
+      "timestamp": 1792200440922,
+      "message": "test_cached_body_hash_failure (nfl_current.Tests.test_cached_body_hash_failure) ... ok",
+      "ingestionTime": 1792200447099
+    },
+    {
+      "timestamp": 1792200440922,
+      "message": "test_call_bound_before_http (nfl_current.Tests.test_call_bound_before_http) ... ok",
+      "ingestionTime": 1792200447099
+    },
+    {
+      "timestamp": 1792200440922,
+      "message": "test_hourly_vintage_changes_identity (nfl_current.Tests.test_hourly_vintage_changes_identity) ... ok",
+      "ingestionTime": 1792200447099
+    },
+    {
+      "timestamp": 1792200440922,
+      "message": "test_no_constructed_roster_urls (nfl_current.Tests.test_no_constructed_roster_urls) ... ok",
+      "ingestionTime": 1792200447099
+    },
+    {
+      "timestamp": 1792200440922,
+      "message": "test_observed_links_only (nfl_current.Tests.test_observed_links_only) ... ok",
+      "ingestionTime": 1792200447099
+    },
+    {
+      "timestamp": 1792200440922,
+      "message": "test_only_exact_official_paths (nfl_current.Tests.test_only_exact_official_paths) ... ok",
+      "ingestionTime": 1792200447099
+    },
+    {
+      "timestamp": 1792200440922,
+      "message": "test_pacing_honors_policy_after_robots (nfl_current.Tests.test_pacing_honors_policy_after_robots) ... ok",
+      "ingestionTime": 1792200447099
+    },
+    {
+      "timestamp": 1792200440922,
+      "message": "test_profile_links_accept_observed_slashless_forms (nfl_current.Tests.test_profile_links_accept_observed_slashless_forms) ... ok",
+      "ingestionTime": 1792200447099
+    },
+    {
+      "timestamp": 1792200440922,
+      "message": "test_resume_verifies_bodies_and_preserves_vintage (nfl_current.Tests.test_resume_verifies_bodies_and_preserves_vintage) ... ok",
+      "ingestionTime": 1792200447099
+    },
+    {
+      "timestamp": 1792200440922,
+      "message": "test_robots_disallow_and_longer_delay (nfl_current.Tests.test_robots_disallow_and_longer_delay) ... ok",
+      "ingestionTime": 1792200447099
+    },
+    {
+      "timestamp": 1792200440922,
+      "message": "test_robots_document_gate (nfl_current.Tests.test_robots_document_gate) ... ok",
+      "ingestionTime": 1792200447099
+    },
+    {
+      "timestamp": 1792200440922,
+      "message": "test_roster_html_scope_and_challenge (nfl_current.Tests.test_roster_html_scope_and_challenge) ... ok",
+      "ingestionTime": 1792200447099
+    },
+    {
+      "timestamp": 1792200440922,
+      "message": "test_run_one_zip_and_same_vintage_resume (nfl_current.Tests.test_run_one_zip_and_same_vintage_resume) ... ok",
+      "ingestionTime": 1792200447099
+    },
+    {
+      "timestamp": 1792200440922,
+      "message": "test_source_403_stops_next_call (nfl_current.Tests.test_source_403_stops_next_call) ... ok",
+      "ingestionTime": 1792200447099
+    },
+    {
+      "timestamp": 1792200440922,
+      "message": "----------------------------------------------------------------------",
+      "ingestionTime": 1792200447099
+    },
+    {
+      "timestamp": 1792200440922,
+      "message": "Ran 107 tests in 0.259s",
+      "ingestionTime": 1792200447099
+    },
+    {
+      "timestamp": 1792200440922,
+      "message": "OK",
+      "ingestionTime": 1792200447099
+    },
+    {
+      "timestamp": 1792200440922,
+      "message": "{\"at\":\"2026-10-17T01:27:19Z\",\"event\":\"SELF_TEST_PASS\",\"tests\":107,\"version\":\"sports-edge-lab-football-weekend-v049\"}",
+      "ingestionTime": 1792200447099
+    },
+    {
+      "timestamp": 1792200442923,
+      "message": "{\"event\":\"FINISHED\",\"report_key\":\"shared/acquisition/football-weekend/20261017T012720Z-3b05742b96/report.json\",\"return_zip\":{\"bytes\":2336,\"key\":\"shared/acquisition/football-weekend/20261017T012720Z-3b05742b96/sports_edge_lab_weekend_return_20261017T012720Z-3b05742b96.zip\",\"sha256\":\"20a918f2bc6cd0c79c80d9fdc4eaf9eabd8ca5da1a22284070e4f44a17cd31a0\"},\"status\":\"completed_with_explicit_gaps\"}",
+      "ingestionTime": 1792200447099
+    }
+  ],
+  "nextForwardToken": "f/39967405422319548365206145401088483207778614549516583025/s",
+  "nextBackwardToken": "b/39967405377673456477747837871733975225936594814543790080/s"
+}

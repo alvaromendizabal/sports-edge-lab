@@ -1,0 +1,45 @@
+{
+  "ProcessingInputs": [
+    {
+      "InputName": "code",
+      "AppManaged": false,
+      "S3Input": {
+        "S3Uri": "s3://sagemaker-sports-edge-lab-560403859723-us-west-2/infrastructure/code/weekend-20261017-01-v049/",
+        "LocalPath": "/opt/ml/processing/code",
+        "S3DataType": "S3Prefix",
+        "S3InputMode": "File",
+        "S3DataDistributionType": "FullyReplicated"
+      }
+    }
+  ],
+  "ProcessingJobName": "sports-edge-lab-weekend-20261017-01-v049",
+  "ProcessingResources": {
+    "ClusterConfig": {
+      "InstanceCount": 1,
+      "InstanceType": "ml.m5.2xlarge",
+      "VolumeSizeInGB": 30
+    }
+  },
+  "StoppingCondition": {
+    "MaxRuntimeInSeconds": 86400
+  },
+  "AppSpecification": {
+    "ImageUri": "246618743249.dkr.ecr.us-west-2.amazonaws.com/sagemaker-scikit-learn:1.9-0",
+    "ContainerEntrypoint": [
+      "python3",
+      "-u",
+      "/opt/ml/processing/code/sports_edge_lab_weekend_v049.pyz"
+    ]
+  },
+  "NetworkConfig": {
+    "EnableInterContainerTrafficEncryption": false,
+    "EnableNetworkIsolation": false
+  },
+  "RoleArn": "arn:aws:iam::560403859723:role/SportsEdgeLabProcessingRole",
+  "ProcessingJobArn": "arn:aws:sagemaker:us-west-2:560403859723:processing-job/sports-edge-lab-weekend-20261017-01-v049",
+  "ProcessingJobStatus": "Completed",
+  "ProcessingEndTime": "2026-10-17T01:27:35.068000+00:00",
+  "ProcessingStartTime": "2026-10-17T01:26:46.576000+00:00",
+  "LastModifiedTime": "2026-10-17T01:28:34.600000+00:00",
+  "CreationTime": "2026-10-17T01:26:03.524000+00:00"
+}
