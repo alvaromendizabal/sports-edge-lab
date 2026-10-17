@@ -1,0 +1,3569 @@
+{
+  "source_run_id": "20261017T223343Z-7b16359d",
+  "source_return_sha256": "4e6afb5a25efce8bcca833a0490238672611e2564ca33e73085bb0142ee7c244",
+  "independent_audit_status": "PASS",
+  "numeric_checks": 18509,
+  "scores": [
+    {
+      "track": "nfl",
+      "task": "win",
+      "phase": "development",
+      "arm": "accepted",
+      "n": 567,
+      "metric": "log_loss",
+      "value": 0.6426247220970562,
+      "brier": 0.22562281491188974,
+      "auc": 0.6727832231593345,
+      "accuracy": 0.6243386243386243,
+      "probability_bias": -0.014336801629362112,
+      "mean_probability": 0.551800764508204,
+      "base_rate": 0.5661375661375662,
+      "ece10": 0.05101367387810231
+    },
+    {
+      "track": "nfl",
+      "task": "win",
+      "phase": "development",
+      "arm": "dynamic",
+      "n": 567,
+      "metric": "log_loss",
+      "value": 0.6455473177667148,
+      "brier": 0.22729689066106812,
+      "auc": 0.6618418053339412,
+      "accuracy": 0.6331569664902998,
+      "probability_bias": -0.018843588003988804,
+      "mean_probability": 0.5472939781335774,
+      "base_rate": 0.5661375661375662,
+      "ece10": 0.03710550324962212
+    },
+    {
+      "track": "nfl",
+      "task": "win",
+      "phase": "development",
+      "arm": "static",
+      "n": 567,
+      "metric": "log_loss",
+      "value": 0.680821178222891,
+      "brier": 0.2436575253859366,
+      "auc": 0.5881265354709622,
+      "accuracy": 0.582010582010582,
+      "probability_bias": -0.016530627620720086,
+      "mean_probability": 0.5496069385168462,
+      "base_rate": 0.5661375661375662,
+      "ece10": 0.06717361640653258
+    },
+    {
+      "track": "nfl",
+      "task": "margin",
+      "phase": "development",
+      "arm": "accepted",
+      "n": 569,
+      "metric": "mae",
+      "value": 9.72809733251259,
+      "rmse": 12.711967402970634,
+      "bias": -0.7956158212091861,
+      "median_absolute_error": 7.5066155262617595,
+      "p90_absolute_error": 21.984930325987097
+    },
+    {
+      "track": "nfl",
+      "task": "margin",
+      "phase": "development",
+      "arm": "dynamic",
+      "n": 569,
+      "metric": "mae",
+      "value": 9.767700696756773,
+      "rmse": 12.698324637438205,
+      "bias": -0.7557246464128009,
+      "median_absolute_error": 7.562745006046466,
+      "p90_absolute_error": 21.812598355637384
+    },
+    {
+      "track": "nfl",
+      "task": "margin",
+      "phase": "development",
+      "arm": "static",
+      "n": 569,
+      "metric": "mae",
+      "value": 10.447579878198164,
+      "rmse": 13.337286963359068,
+      "bias": -0.7711433666471798,
+      "median_absolute_error": 8.585301028031445,
+      "p90_absolute_error": 21.784669459685624
+    },
+    {
+      "track": "nfl",
+      "task": "total",
+      "phase": "development",
+      "arm": "accepted",
+      "n": 569,
+      "metric": "mae",
+      "value": 10.881346466779814,
+      "rmse": 13.557881551489823,
+      "bias": 1.5389544628490273,
+      "median_absolute_error": 9.458252132848095,
+      "p90_absolute_error": 22.02247443768783
+    },
+    {
+      "track": "nfl",
+      "task": "total",
+      "phase": "development",
+      "arm": "dynamic",
+      "n": 569,
+      "metric": "mae",
+      "value": 10.724762735663248,
+      "rmse": 13.532638762004831,
+      "bias": 0.6416829969848156,
+      "median_absolute_error": 8.81172066390964,
+      "p90_absolute_error": 22.18631987467286
+    },
+    {
+      "track": "nfl",
+      "task": "total",
+      "phase": "development",
+      "arm": "static",
+      "n": 569,
+      "metric": "mae",
+      "value": 11.190505504123418,
+      "rmse": 13.94057500124781,
+      "bias": 1.9892119438288345,
+      "median_absolute_error": 9.637506462204357,
+      "p90_absolute_error": 22.432533863528334
+    },
+    {
+      "track": "ncaaf",
+      "task": "win",
+      "phase": "development",
+      "arm": "accepted",
+      "n": 1568,
+      "metric": "log_loss",
+      "value": 0.5607959882759231,
+      "brier": 0.19054748116521508,
+      "auc": 0.772500654682775,
+      "accuracy": 0.7072704081632653,
+      "probability_bias": 0.00270922415656619,
+      "mean_probability": 0.5811531017075866,
+      "base_rate": 0.5784438775510204,
+      "ece10": 0.026741979567199106
+    },
+    {
+      "track": "ncaaf",
+      "task": "win",
+      "phase": "development",
+      "arm": "dynamic",
+      "n": 1568,
+      "metric": "log_loss",
+      "value": 0.5729991787417862,
+      "brier": 0.1945593988330766,
+      "auc": 0.7722371135912145,
+      "accuracy": 0.7130102040816326,
+      "probability_bias": -0.013434908409794593,
+      "mean_probability": 0.5650089691412258,
+      "base_rate": 0.5784438775510204,
+      "ece10": 0.06425975882190024
+    },
+    {
+      "track": "ncaaf",
+      "task": "win",
+      "phase": "development",
+      "arm": "static",
+      "n": 1568,
+      "metric": "log_loss",
+      "value": 0.6082970972568239,
+      "brier": 0.21043370407996168,
+      "auc": 0.7189501056666339,
+      "accuracy": 0.6709183673469388,
+      "probability_bias": -0.008548655174318104,
+      "mean_probability": 0.5698952223767023,
+      "base_rate": 0.5784438775510204,
+      "ece10": 0.03628459596311707
+    },
+    {
+      "track": "ncaaf",
+      "task": "margin",
+      "phase": "development",
+      "arm": "accepted",
+      "n": 1568,
+      "metric": "mae",
+      "value": 12.82189883977797,
+      "rmse": 16.17040528110574,
+      "bias": -0.05528497010105644,
+      "median_absolute_error": 10.855553881752233,
+      "p90_absolute_error": 26.038486435502836
+    },
+    {
+      "track": "ncaaf",
+      "task": "margin",
+      "phase": "development",
+      "arm": "dynamic",
+      "n": 1568,
+      "metric": "mae",
+      "value": 13.017307954682597,
+      "rmse": 16.572661610437613,
+      "bias": -0.31190332884839206,
+      "median_absolute_error": 10.778743388366369,
+      "p90_absolute_error": 27.211561984337653
+    },
+    {
+      "track": "ncaaf",
+      "task": "margin",
+      "phase": "development",
+      "arm": "static",
+      "n": 1568,
+      "metric": "mae",
+      "value": 13.884847343183075,
+      "rmse": 17.58794531051167,
+      "bias": 0.06846360355794634,
+      "median_absolute_error": 11.687455026194622,
+      "p90_absolute_error": 29.13060367617242
+    },
+    {
+      "track": "ncaaf",
+      "task": "total",
+      "phase": "development",
+      "arm": "accepted",
+      "n": 1568,
+      "metric": "mae",
+      "value": 13.101300807773098,
+      "rmse": 16.295077046535738,
+      "bias": 1.1974841271996564,
+      "median_absolute_error": 11.266410984648946,
+      "p90_absolute_error": 26.570545869386503
+    },
+    {
+      "track": "ncaaf",
+      "task": "total",
+      "phase": "development",
+      "arm": "dynamic",
+      "n": 1568,
+      "metric": "mae",
+      "value": 12.970255686129487,
+      "rmse": 16.172093846269266,
+      "bias": 0.8377631102673818,
+      "median_absolute_error": 11.147551361131924,
+      "p90_absolute_error": 26.107769613235437
+    },
+    {
+      "track": "ncaaf",
+      "task": "total",
+      "phase": "development",
+      "arm": "static",
+      "n": 1568,
+      "metric": "mae",
+      "value": 13.627391098032678,
+      "rmse": 17.051164662475394,
+      "bias": 2.275369183646926,
+      "median_absolute_error": 11.358037631293033,
+      "p90_absolute_error": 27.93693832776701
+    },
+    {
+      "track": "nfl",
+      "task": "win",
+      "phase": "holdout",
+      "arm": "accepted",
+      "n": 569,
+      "metric": "log_loss",
+      "value": 0.6298304983663755,
+      "brier": 0.22027394209432988,
+      "auc": 0.6941583320893665,
+      "accuracy": 0.6467486818980668,
+      "probability_bias": 0.005871515062870043,
+      "mean_probability": 0.5471720423036434,
+      "base_rate": 0.5413005272407733,
+      "ece10": 0.0235906301566406
+    },
+    {
+      "track": "nfl",
+      "task": "win",
+      "phase": "holdout",
+      "arm": "dynamic",
+      "n": 569,
+      "metric": "log_loss",
+      "value": 0.6286219833969535,
+      "brier": 0.21931767415985332,
+      "auc": 0.7085385878489326,
+      "accuracy": 0.6678383128295254,
+      "probability_bias": 0.005918662581388995,
+      "mean_probability": 0.5472191898221622,
+      "base_rate": 0.5413005272407733,
+      "ece10": 0.057637206250725395
+    },
+    {
+      "track": "nfl",
+      "task": "win",
+      "phase": "holdout",
+      "arm": "static",
+      "n": 569,
+      "metric": "log_loss",
+      "value": 0.6613248559506074,
+      "brier": 0.2347280805783682,
+      "auc": 0.6330049261083743,
+      "accuracy": 0.5957820738137083,
+      "probability_bias": 0.010939169778943757,
+      "mean_probability": 0.552239697019717,
+      "base_rate": 0.5413005272407733,
+      "ece10": 0.02589422134303751
+    },
+    {
+      "track": "nfl",
+      "task": "win",
+      "phase": "holdout_market_subset",
+      "arm": "accepted",
+      "n": 458,
+      "metric": "log_loss",
+      "value": 0.6266212743594952,
+      "brier": 0.21883064402612903,
+      "auc": 0.7003923820461289,
+      "accuracy": 0.6419213973799127,
+      "probability_bias": 0.01465573194964393,
+      "mean_probability": 0.5452234175391636,
+      "base_rate": 0.5305676855895196,
+      "ece10": 0.022660647839469177
+    },
+    {
+      "track": "nfl",
+      "task": "win",
+      "phase": "holdout_market_subset",
+      "arm": "dynamic",
+      "n": 458,
+      "metric": "log_loss",
+      "value": 0.6237144302061081,
+      "brier": 0.21689803903694937,
+      "auc": 0.7232653842472964,
+      "accuracy": 0.6812227074235808,
+      "probability_bias": 0.014631713164546666,
+      "mean_probability": 0.5451993987540663,
+      "base_rate": 0.5305676855895196,
+      "ece10": 0.07164755440973619
+    },
+    {
+      "track": "nfl",
+      "task": "win",
+      "phase": "holdout_market_subset",
+      "arm": "market",
+      "n": 458,
+      "metric": "log_loss",
+      "value": 0.5999026346067621,
+      "brier": 0.20646663238244786,
+      "auc": 0.7397454301847067,
+      "accuracy": 0.6921397379912664,
+      "probability_bias": 0.013735088023784725,
+      "mean_probability": 0.5443027736133044,
+      "base_rate": 0.5305676855895196,
+      "ece10": 0.059802565443788556
+    },
+    {
+      "track": "nfl",
+      "task": "win",
+      "phase": "holdout_market_subset",
+      "arm": "static",
+      "n": 458,
+      "metric": "log_loss",
+      "value": 0.6600275748259367,
+      "brier": 0.23403237997163975,
+      "auc": 0.6405397645707722,
+      "accuracy": 0.5960698689956332,
+      "probability_bias": 0.01940502640837305,
+      "mean_probability": 0.5499727119978927,
+      "base_rate": 0.5305676855895196,
+      "ece10": 0.0251721358599349
+    },
+    {
+      "track": "nfl",
+      "task": "win",
+      "phase": "monitor",
+      "arm": "accepted",
+      "n": 79,
+      "metric": "log_loss",
+      "value": 0.6569590149588095,
+      "brier": 0.23405035362495807,
+      "auc": 0.6383526383526383,
+      "accuracy": 0.569620253164557,
+      "probability_bias": 0.003918682934790535,
+      "mean_probability": 0.5355642525550437,
+      "base_rate": 0.5316455696202531,
+      "ece10": 0.10941317538706287
+    },
+    {
+      "track": "nfl",
+      "task": "win",
+      "phase": "monitor",
+      "arm": "dynamic",
+      "n": 79,
+      "metric": "log_loss",
+      "value": 0.6469930363172895,
+      "brier": 0.22825177722071796,
+      "auc": 0.6763191763191764,
+      "accuracy": 0.620253164556962,
+      "probability_bias": 0.02245295553624525,
+      "mean_probability": 0.5540985251564984,
+      "base_rate": 0.5316455696202531,
+      "ece10": 0.09161513324779436
+    },
+    {
+      "track": "nfl",
+      "task": "win",
+      "phase": "monitor",
+      "arm": "static",
+      "n": 79,
+      "metric": "log_loss",
+      "value": 0.6708708787476891,
+      "brier": 0.23966137213689842,
+      "auc": 0.6261261261261262,
+      "accuracy": 0.5316455696202531,
+      "probability_bias": 0.022567264125074135,
+      "mean_probability": 0.5542128337453271,
+      "base_rate": 0.5316455696202531,
+      "ece10": 0.11627927904912147
+    },
+    {
+      "track": "nfl",
+      "task": "win",
+      "phase": "monitor_market_subset",
+      "arm": "accepted",
+      "n": 67,
+      "metric": "log_loss",
+      "value": 0.6382445252003662,
+      "brier": 0.22516544462259147,
+      "auc": 0.6723214285714286,
+      "accuracy": 0.6119402985074627,
+      "probability_bias": 0.012572698013079874,
+      "mean_probability": 0.5349607577145724,
+      "base_rate": 0.5223880597014925,
+      "ece10": 0.09406311501344237
+    },
+    {
+      "track": "nfl",
+      "task": "win",
+      "phase": "monitor_market_subset",
+      "arm": "dynamic",
+      "n": 67,
+      "metric": "log_loss",
+      "value": 0.6310822944899377,
+      "brier": 0.22064011519705548,
+      "auc": 0.7223214285714286,
+      "accuracy": 0.6567164179104478,
+      "probability_bias": 0.02767934944409478,
+      "mean_probability": 0.5500674091455873,
+      "base_rate": 0.5223880597014925,
+      "ece10": 0.12807336646205775
+    },
+    {
+      "track": "nfl",
+      "task": "win",
+      "phase": "monitor_market_subset",
+      "arm": "market",
+      "n": 67,
+      "metric": "log_loss",
+      "value": 0.62032504515937,
+      "brier": 0.21491991808663466,
+      "auc": 0.7138392857142857,
+      "accuracy": 0.6716417910447762,
+      "probability_bias": 0.025863380749173888,
+      "mean_probability": 0.5482514404506665,
+      "base_rate": 0.5223880597014925,
+      "ece10": 0.10743048205940658
+    },
+    {
+      "track": "nfl",
+      "task": "win",
+      "phase": "monitor_market_subset",
+      "arm": "static",
+      "n": 67,
+      "metric": "log_loss",
+      "value": 0.6611188509185036,
+      "brier": 0.23463825889905193,
+      "auc": 0.65,
+      "accuracy": 0.5671641791044776,
+      "probability_bias": 0.028513552162540062,
+      "mean_probability": 0.5509016118640326,
+      "base_rate": 0.5223880597014925,
+      "ece10": 0.08084266826991432
+    },
+    {
+      "track": "nfl",
+      "task": "margin",
+      "phase": "holdout",
+      "arm": "accepted",
+      "n": 570,
+      "metric": "mae",
+      "value": 10.198375423478133,
+      "rmse": 13.098543760011106,
+      "bias": -0.41437276416311053,
+      "median_absolute_error": 7.813421161792781,
+      "p90_absolute_error": 22.82728112106473
+    },
+    {
+      "track": "nfl",
+      "task": "margin",
+      "phase": "holdout",
+      "arm": "dynamic",
+      "n": 570,
+      "metric": "mae",
+      "value": 10.142102130333896,
+      "rmse": 13.013398110355842,
+      "bias": -0.3647991840990393,
+      "median_absolute_error": 8.0151809385741,
+      "p90_absolute_error": 22.63531146177234
+    },
+    {
+      "track": "nfl",
+      "task": "margin",
+      "phase": "holdout",
+      "arm": "static",
+      "n": 570,
+      "metric": "mae",
+      "value": 10.708146579226224,
+      "rmse": 13.836752634142268,
+      "bias": -0.3240943315158508,
+      "median_absolute_error": 7.925208234708174,
+      "p90_absolute_error": 23.11423068671184
+    },
+    {
+      "track": "nfl",
+      "task": "margin",
+      "phase": "holdout_market_subset",
+      "arm": "accepted",
+      "n": 459,
+      "metric": "mae",
+      "value": 10.261325215583508,
+      "rmse": 13.184134962053998,
+      "bias": -0.5753682196133265,
+      "median_absolute_error": 7.837971690639666,
+      "p90_absolute_error": 22.50078973202378
+    },
+    {
+      "track": "nfl",
+      "task": "margin",
+      "phase": "holdout_market_subset",
+      "arm": "dynamic",
+      "n": 459,
+      "metric": "mae",
+      "value": 10.157482854818294,
+      "rmse": 13.086533706259576,
+      "bias": -0.5105665462995402,
+      "median_absolute_error": 8.187759014406947,
+      "p90_absolute_error": 21.92454169372192
+    },
+    {
+      "track": "nfl",
+      "task": "margin",
+      "phase": "holdout_market_subset",
+      "arm": "market",
+      "n": 459,
+      "metric": "mae",
+      "value": 9.821350762527233,
+      "rmse": 12.654179861763314,
+      "bias": -0.775599128540305,
+      "median_absolute_error": 7.5,
+      "p90_absolute_error": 21.099999999999994
+    },
+    {
+      "track": "nfl",
+      "task": "margin",
+      "phase": "holdout_market_subset",
+      "arm": "static",
+      "n": 459,
+      "metric": "mae",
+      "value": 10.859122748026188,
+      "rmse": 13.947704702434407,
+      "bias": -0.4765877827557842,
+      "median_absolute_error": 7.934830689058348,
+      "p90_absolute_error": 23.09739443092552
+    },
+    {
+      "track": "nfl",
+      "task": "margin",
+      "phase": "monitor",
+      "arm": "accepted",
+      "n": 80,
+      "metric": "mae",
+      "value": 9.898554124723152,
+      "rmse": 12.555535278175855,
+      "bias": 1.022889071440062,
+      "median_absolute_error": 7.650184586499368,
+      "p90_absolute_error": 20.50555680642855
+    },
+    {
+      "track": "nfl",
+      "task": "margin",
+      "phase": "monitor",
+      "arm": "dynamic",
+      "n": 80,
+      "metric": "mae",
+      "value": 9.859317744221402,
+      "rmse": 12.688848522484493,
+      "bias": 1.7183054067981771,
+      "median_absolute_error": 6.358697771028213,
+      "p90_absolute_error": 21.224707194170747
+    },
+    {
+      "track": "nfl",
+      "task": "margin",
+      "phase": "monitor",
+      "arm": "static",
+      "n": 80,
+      "metric": "mae",
+      "value": 10.006360474479411,
+      "rmse": 12.84990209262304,
+      "bias": 1.5781386855654325,
+      "median_absolute_error": 7.453924880338096,
+      "p90_absolute_error": 20.9630794463181
+    },
+    {
+      "track": "nfl",
+      "task": "margin",
+      "phase": "monitor_market_subset",
+      "arm": "accepted",
+      "n": 68,
+      "metric": "mae",
+      "value": 9.270710644999605,
+      "rmse": 11.78694686612125,
+      "bias": 1.1091129600418117,
+      "median_absolute_error": 7.235918184281523,
+      "p90_absolute_error": 18.17092002968604
+    },
+    {
+      "track": "nfl",
+      "task": "margin",
+      "phase": "monitor_market_subset",
+      "arm": "dynamic",
+      "n": 68,
+      "metric": "mae",
+      "value": 9.18876720361756,
+      "rmse": 11.959019900219115,
+      "bias": 1.6540929776848314,
+      "median_absolute_error": 6.086005397965532,
+      "p90_absolute_error": 19.200111243979336
+    },
+    {
+      "track": "nfl",
+      "task": "margin",
+      "phase": "monitor_market_subset",
+      "arm": "market",
+      "n": 68,
+      "metric": "mae",
+      "value": 8.963235294117647,
+      "rmse": 11.418992177637271,
+      "bias": 1.3014705882352942,
+      "median_absolute_error": 7.5,
+      "p90_absolute_error": 18.650000000000002
+    },
+    {
+      "track": "nfl",
+      "task": "margin",
+      "phase": "monitor_market_subset",
+      "arm": "static",
+      "n": 68,
+      "metric": "mae",
+      "value": 9.516812564023946,
+      "rmse": 12.334354938203518,
+      "bias": 1.5436782648323548,
+      "median_absolute_error": 7.146827361581421,
+      "p90_absolute_error": 19.76104373659544
+    },
+    {
+      "track": "nfl",
+      "task": "total",
+      "phase": "holdout",
+      "arm": "accepted",
+      "n": 570,
+      "metric": "mae",
+      "value": 10.332146990896888,
+      "rmse": 13.182260154726142,
+      "bias": -0.37083280145156916,
+      "median_absolute_error": 8.480418433414265,
+      "p90_absolute_error": 22.24037377985883
+    },
+    {
+      "track": "nfl",
+      "task": "total",
+      "phase": "holdout",
+      "arm": "dynamic",
+      "n": 570,
+      "metric": "mae",
+      "value": 10.33330726526115,
+      "rmse": 13.176342587464022,
+      "bias": -0.44022338209829603,
+      "median_absolute_error": 8.423491691540704,
+      "p90_absolute_error": 21.856285193796047
+    },
+    {
+      "track": "nfl",
+      "task": "total",
+      "phase": "holdout",
+      "arm": "static",
+      "n": 570,
+      "metric": "mae",
+      "value": 10.613079359841286,
+      "rmse": 13.521635066496353,
+      "bias": -0.4166985474055873,
+      "median_absolute_error": 8.834318062767736,
+      "p90_absolute_error": 22.711048626653092
+    },
+    {
+      "track": "nfl",
+      "task": "total",
+      "phase": "holdout_market_subset",
+      "arm": "accepted",
+      "n": 459,
+      "metric": "mae",
+      "value": 10.298856311960845,
+      "rmse": 13.096941082613577,
+      "bias": -0.4324884237488756,
+      "median_absolute_error": 8.504495835177913,
+      "p90_absolute_error": 21.275859884986627
+    },
+    {
+      "track": "nfl",
+      "task": "total",
+      "phase": "holdout_market_subset",
+      "arm": "dynamic",
+      "n": 459,
+      "metric": "mae",
+      "value": 10.31655804794643,
+      "rmse": 13.093572406854344,
+      "bias": -0.5107939160745404,
+      "median_absolute_error": 8.622433180824075,
+      "p90_absolute_error": 21.199705724582113
+    },
+    {
+      "track": "nfl",
+      "task": "total",
+      "phase": "holdout_market_subset",
+      "arm": "market",
+      "n": 459,
+      "metric": "mae",
+      "value": 10.036492374727668,
+      "rmse": 12.752210496577431,
+      "bias": -1.5321350762527233,
+      "median_absolute_error": 8.0,
+      "p90_absolute_error": 20.299999999999997
+    },
+    {
+      "track": "nfl",
+      "task": "total",
+      "phase": "holdout_market_subset",
+      "arm": "static",
+      "n": 459,
+      "metric": "mae",
+      "value": 10.593002612394185,
+      "rmse": 13.421257415433356,
+      "bias": -0.4752152255819808,
+      "median_absolute_error": 8.975164435972516,
+      "p90_absolute_error": 22.21836848460311
+    },
+    {
+      "track": "nfl",
+      "task": "total",
+      "phase": "monitor",
+      "arm": "accepted",
+      "n": 80,
+      "metric": "mae",
+      "value": 11.980694952519588,
+      "rmse": 14.614392214030106,
+      "bias": -0.7365360055004866,
+      "median_absolute_error": 10.90421419597524,
+      "p90_absolute_error": 21.685031607945685
+    },
+    {
+      "track": "nfl",
+      "task": "total",
+      "phase": "monitor",
+      "arm": "dynamic",
+      "n": 80,
+      "metric": "mae",
+      "value": 11.439019338702519,
+      "rmse": 14.083672096987131,
+      "bias": -0.677179885170711,
+      "median_absolute_error": 11.345184355155908,
+      "p90_absolute_error": 19.946471590650354
+    },
+    {
+      "track": "nfl",
+      "task": "total",
+      "phase": "monitor",
+      "arm": "static",
+      "n": 80,
+      "metric": "mae",
+      "value": 11.217683334682556,
+      "rmse": 13.782246770472774,
+      "bias": -0.8549742628311174,
+      "median_absolute_error": 9.432866332387057,
+      "p90_absolute_error": 20.257532831191714
+    },
+    {
+      "track": "nfl",
+      "task": "total",
+      "phase": "monitor_market_subset",
+      "arm": "accepted",
+      "n": 68,
+      "metric": "mae",
+      "value": 11.550650902394834,
+      "rmse": 14.307569119994085,
+      "bias": -1.0647483751213007,
+      "median_absolute_error": 10.29764219953924,
+      "p90_absolute_error": 19.555573987800773
+    },
+    {
+      "track": "nfl",
+      "task": "total",
+      "phase": "monitor_market_subset",
+      "arm": "dynamic",
+      "n": 68,
+      "metric": "mae",
+      "value": 11.040675674686197,
+      "rmse": 13.8871924671997,
+      "bias": -0.9445458130326643,
+      "median_absolute_error": 10.498003443439984,
+      "p90_absolute_error": 19.76516975689402
+    },
+    {
+      "track": "nfl",
+      "task": "total",
+      "phase": "monitor_market_subset",
+      "arm": "market",
+      "n": 68,
+      "metric": "mae",
+      "value": 10.367647058823529,
+      "rmse": 13.080632292686412,
+      "bias": -1.8970588235294117,
+      "median_absolute_error": 9.25,
+      "p90_absolute_error": 18.5
+    },
+    {
+      "track": "nfl",
+      "task": "total",
+      "phase": "monitor_market_subset",
+      "arm": "static",
+      "n": 68,
+      "metric": "mae",
+      "value": 10.968467766773324,
+      "rmse": 13.643182747004875,
+      "bias": -1.0221267767792805,
+      "median_absolute_error": 9.202314887269505,
+      "p90_absolute_error": 18.541467257454926
+    },
+    {
+      "track": "ncaaf",
+      "task": "win",
+      "phase": "holdout",
+      "arm": "accepted",
+      "n": 1606,
+      "metric": "log_loss",
+      "value": 0.5546815876109851,
+      "brier": 0.18951726331095,
+      "auc": 0.7737428153437178,
+      "accuracy": 0.701120797011208,
+      "probability_bias": -0.003348665529898918,
+      "mean_probability": 0.5863150953667388,
+      "base_rate": 0.5896637608966376,
+      "ece10": 0.027757827061702878
+    },
+    {
+      "track": "ncaaf",
+      "task": "win",
+      "phase": "holdout",
+      "arm": "dynamic",
+      "n": 1606,
+      "metric": "log_loss",
+      "value": 0.565082853129967,
+      "brier": 0.1914767350012448,
+      "auc": 0.7842576108884698,
+      "accuracy": 0.709838107098381,
+      "probability_bias": -0.024046387296801253,
+      "mean_probability": 0.5656173735998363,
+      "base_rate": 0.5896637608966376,
+      "ece10": 0.06967054980250906
+    },
+    {
+      "track": "ncaaf",
+      "task": "win",
+      "phase": "holdout",
+      "arm": "static",
+      "n": 1606,
+      "metric": "log_loss",
+      "value": 0.6268223228528159,
+      "brier": 0.21965892161550024,
+      "auc": 0.6863443859933052,
+      "accuracy": 0.6413449564134496,
+      "probability_bias": -0.018862244419446363,
+      "mean_probability": 0.5708015164771914,
+      "base_rate": 0.5896637608966376,
+      "ece10": 0.045229846007372135
+    },
+    {
+      "track": "ncaaf",
+      "task": "win",
+      "phase": "holdout_market_subset",
+      "arm": "accepted",
+      "n": 1076,
+      "metric": "log_loss",
+      "value": 0.5659513615948036,
+      "brier": 0.1930333500358769,
+      "auc": 0.7663277173739076,
+      "accuracy": 0.6960966542750929,
+      "probability_bias": -0.007578930005353681,
+      "mean_probability": 0.5769935607009661,
+      "base_rate": 0.5845724907063197,
+      "ece10": 0.027903598512973492
+    },
+    {
+      "track": "ncaaf",
+      "task": "win",
+      "phase": "holdout_market_subset",
+      "arm": "dynamic",
+      "n": 1076,
+      "metric": "log_loss",
+      "value": 0.5730228940531644,
+      "brier": 0.1943008523067622,
+      "auc": 0.778509263309895,
+      "accuracy": 0.7100371747211895,
+      "probability_bias": -0.026107597562066598,
+      "mean_probability": 0.5584648931442531,
+      "base_rate": 0.5845724907063197,
+      "ece10": 0.07081437400254899
+    },
+    {
+      "track": "ncaaf",
+      "task": "win",
+      "phase": "holdout_market_subset",
+      "arm": "market",
+      "n": 1076,
+      "metric": "log_loss",
+      "value": 0.536879098480417,
+      "brier": 0.18141563831019678,
+      "auc": 0.7954940728331963,
+      "accuracy": 0.7174721189591078,
+      "probability_bias": -0.019127522864948208,
+      "mean_probability": 0.5654449678413715,
+      "base_rate": 0.5845724907063197,
+      "ece10": 0.038886269626522474
+    },
+    {
+      "track": "ncaaf",
+      "task": "win",
+      "phase": "holdout_market_subset",
+      "arm": "static",
+      "n": 1076,
+      "metric": "log_loss",
+      "value": 0.6361662223468401,
+      "brier": 0.22264793443346584,
+      "auc": 0.6801784018523063,
+      "accuracy": 0.6449814126394052,
+      "probability_bias": -0.018562768997811754,
+      "mean_probability": 0.5660097217085079,
+      "base_rate": 0.5845724907063197,
+      "ece10": 0.04305216233043755
+    },
+    {
+      "track": "ncaaf",
+      "task": "win",
+      "phase": "monitor",
+      "arm": "accepted",
+      "n": 336,
+      "metric": "log_loss",
+      "value": 0.5081358123053874,
+      "brier": 0.1678887343793709,
+      "auc": 0.811214168479713,
+      "accuracy": 0.7589285714285714,
+      "probability_bias": -0.014638439056158211,
+      "mean_probability": 0.6192901323724133,
+      "base_rate": 0.6339285714285714,
+      "ece10": 0.04845258071104165
+    },
+    {
+      "track": "ncaaf",
+      "task": "win",
+      "phase": "monitor",
+      "arm": "dynamic",
+      "n": 336,
+      "metric": "log_loss",
+      "value": 0.5479854547822489,
+      "brier": 0.18305044496687684,
+      "auc": 0.7980075575403642,
+      "accuracy": 0.7351190476190477,
+      "probability_bias": -0.04889744028593238,
+      "mean_probability": 0.585031131142639,
+      "base_rate": 0.6339285714285714,
+      "ece10": 0.08932686846054974
+    },
+    {
+      "track": "ncaaf",
+      "task": "win",
+      "phase": "monitor",
+      "arm": "static",
+      "n": 336,
+      "metric": "log_loss",
+      "value": 0.5108282810828451,
+      "brier": 0.17170214752304008,
+      "auc": 0.8043055078438108,
+      "accuracy": 0.7351190476190477,
+      "probability_bias": -0.028971682357602918,
+      "mean_probability": 0.6049568890709685,
+      "base_rate": 0.6339285714285714,
+      "ece10": 0.060097992323521546
+    },
+    {
+      "track": "ncaaf",
+      "task": "win",
+      "phase": "monitor_market_subset",
+      "arm": "accepted",
+      "n": 218,
+      "metric": "log_loss",
+      "value": 0.529751837353364,
+      "brier": 0.17464131940081196,
+      "auc": 0.7917455168063441,
+      "accuracy": 0.7522935779816514,
+      "probability_bias": -0.027363916359460838,
+      "mean_probability": 0.6010764506130163,
+      "base_rate": 0.6284403669724771,
+      "ece10": 0.07377716037240759
+    },
+    {
+      "track": "ncaaf",
+      "task": "win",
+      "phase": "monitor_market_subset",
+      "arm": "dynamic",
+      "n": 218,
+      "metric": "log_loss",
+      "value": 0.5674547077566516,
+      "brier": 0.1907475689787762,
+      "auc": 0.7711093088222042,
+      "accuracy": 0.7110091743119266,
+      "probability_bias": -0.06078356405461591,
+      "mean_probability": 0.5676568029178611,
+      "base_rate": 0.6284403669724771,
+      "ece10": 0.08992011240978003
+    },
+    {
+      "track": "ncaaf",
+      "task": "win",
+      "phase": "monitor_market_subset",
+      "arm": "market",
+      "n": 218,
+      "metric": "log_loss",
+      "value": 0.4757919738530036,
+      "brier": 0.15669559529597202,
+      "auc": 0.8357664233576642,
+      "accuracy": 0.7660550458715596,
+      "probability_bias": -0.026635781615584428,
+      "mean_probability": 0.6018045853568925,
+      "base_rate": 0.6284403669724771,
+      "ece10": 0.05969797096484007
+    },
+    {
+      "track": "ncaaf",
+      "task": "win",
+      "phase": "monitor_market_subset",
+      "arm": "static",
+      "n": 218,
+      "metric": "log_loss",
+      "value": 0.5313158673384544,
+      "brier": 0.18031746786877695,
+      "auc": 0.7782283500045059,
+      "accuracy": 0.7110091743119266,
+      "probability_bias": -0.039283464754478366,
+      "mean_probability": 0.5891569022179988,
+      "base_rate": 0.6284403669724771,
+      "ece10": 0.07041862796722705
+    },
+    {
+      "track": "ncaaf",
+      "task": "margin",
+      "phase": "holdout",
+      "arm": "accepted",
+      "n": 1606,
+      "metric": "mae",
+      "value": 12.819829327552045,
+      "rmse": 16.101880530359367,
+      "bias": -1.0459781736652607,
+      "median_absolute_error": 10.62104639183844,
+      "p90_absolute_error": 26.3585102419297
+    },
+    {
+      "track": "ncaaf",
+      "task": "margin",
+      "phase": "holdout",
+      "arm": "dynamic",
+      "n": 1606,
+      "metric": "mae",
+      "value": 12.982906025243475,
+      "rmse": 16.523724636578947,
+      "bias": -1.4123748318270333,
+      "median_absolute_error": 10.38958976517181,
+      "p90_absolute_error": 27.980912668899443
+    },
+    {
+      "track": "ncaaf",
+      "task": "margin",
+      "phase": "holdout",
+      "arm": "static",
+      "n": 1606,
+      "metric": "mae",
+      "value": 14.474231786907911,
+      "rmse": 18.21109957425638,
+      "bias": -1.117558960619849,
+      "median_absolute_error": 12.393607402973467,
+      "p90_absolute_error": 30.1839212898006
+    },
+    {
+      "track": "ncaaf",
+      "task": "margin",
+      "phase": "holdout_market_subset",
+      "arm": "accepted",
+      "n": 1126,
+      "metric": "mae",
+      "value": 12.960157642927186,
+      "rmse": 16.301782509521292,
+      "bias": -1.308679182981924,
+      "median_absolute_error": 10.74947719917538,
+      "p90_absolute_error": 27.021411255338553
+    },
+    {
+      "track": "ncaaf",
+      "task": "margin",
+      "phase": "holdout_market_subset",
+      "arm": "dynamic",
+      "n": 1126,
+      "metric": "mae",
+      "value": 13.242636776091373,
+      "rmse": 16.88060594754264,
+      "bias": -1.7600187408025554,
+      "median_absolute_error": 10.518272356775588,
+      "p90_absolute_error": 28.545538961220025
+    },
+    {
+      "track": "ncaaf",
+      "task": "margin",
+      "phase": "holdout_market_subset",
+      "arm": "market",
+      "n": 1126,
+      "metric": "mae",
+      "value": 12.048623445825932,
+      "rmse": 15.280948345139466,
+      "bias": -0.8452486678507993,
+      "median_absolute_error": 10.0,
+      "p90_absolute_error": 25.5
+    },
+    {
+      "track": "ncaaf",
+      "task": "margin",
+      "phase": "holdout_market_subset",
+      "arm": "static",
+      "n": 1126,
+      "metric": "mae",
+      "value": 14.56407220502371,
+      "rmse": 18.386001694150195,
+      "bias": -1.1751647629548323,
+      "median_absolute_error": 12.36461601905629,
+      "p90_absolute_error": 30.90998527584701
+    },
+    {
+      "track": "ncaaf",
+      "task": "margin",
+      "phase": "monitor",
+      "arm": "accepted",
+      "n": 336,
+      "metric": "mae",
+      "value": 12.916026841505484,
+      "rmse": 16.27286112271065,
+      "bias": -1.192729122996333,
+      "median_absolute_error": 10.447261866224451,
+      "p90_absolute_error": 25.95036856981585
+    },
+    {
+      "track": "ncaaf",
+      "task": "margin",
+      "phase": "monitor",
+      "arm": "dynamic",
+      "n": 336,
+      "metric": "mae",
+      "value": 13.659814160579723,
+      "rmse": 17.41187388000156,
+      "bias": -3.1442892461355245,
+      "median_absolute_error": 10.453305101359579,
+      "p90_absolute_error": 29.566434599134656
+    },
+    {
+      "track": "ncaaf",
+      "task": "margin",
+      "phase": "monitor",
+      "arm": "static",
+      "n": 336,
+      "metric": "mae",
+      "value": 12.911323614932572,
+      "rmse": 16.60909771696813,
+      "bias": -1.8525628381985892,
+      "median_absolute_error": 10.078490568784414,
+      "p90_absolute_error": 27.52359439090549
+    },
+    {
+      "track": "ncaaf",
+      "task": "margin",
+      "phase": "monitor_market_subset",
+      "arm": "accepted",
+      "n": 237,
+      "metric": "mae",
+      "value": 12.832282816882941,
+      "rmse": 16.131935855663713,
+      "bias": -1.8575154675395555,
+      "median_absolute_error": 10.239025408143258,
+      "p90_absolute_error": 26.312201399841097
+    },
+    {
+      "track": "ncaaf",
+      "task": "margin",
+      "phase": "monitor_market_subset",
+      "arm": "dynamic",
+      "n": 237,
+      "metric": "mae",
+      "value": 13.562979126747882,
+      "rmse": 17.451061172142357,
+      "bias": -4.014178274524938,
+      "median_absolute_error": 10.30919698084805,
+      "p90_absolute_error": 29.771408647238708
+    },
+    {
+      "track": "ncaaf",
+      "task": "margin",
+      "phase": "monitor_market_subset",
+      "arm": "market",
+      "n": 237,
+      "metric": "mae",
+      "value": 11.255274261603375,
+      "rmse": 14.50772746222314,
+      "bias": -1.2109704641350212,
+      "median_absolute_error": 9.5,
+      "p90_absolute_error": 24.400000000000006
+    },
+    {
+      "track": "ncaaf",
+      "task": "margin",
+      "phase": "monitor_market_subset",
+      "arm": "static",
+      "n": 237,
+      "metric": "mae",
+      "value": 12.726614725615129,
+      "rmse": 16.32652184231409,
+      "bias": -2.2904795282124,
+      "median_absolute_error": 10.080419021624927,
+      "p90_absolute_error": 26.03936567451716
+    },
+    {
+      "track": "ncaaf",
+      "task": "total",
+      "phase": "holdout",
+      "arm": "accepted",
+      "n": 1606,
+      "metric": "mae",
+      "value": 13.093919492054331,
+      "rmse": 16.29333127077633,
+      "bias": 1.349032742876406,
+      "median_absolute_error": 10.854591270745857,
+      "p90_absolute_error": 26.968420537830376
+    },
+    {
+      "track": "ncaaf",
+      "task": "total",
+      "phase": "holdout",
+      "arm": "dynamic",
+      "n": 1606,
+      "metric": "mae",
+      "value": 12.86218749818191,
+      "rmse": 16.11547398364785,
+      "bias": 0.726569528431683,
+      "median_absolute_error": 10.845106573542825,
+      "p90_absolute_error": 26.326905006066212
+    },
+    {
+      "track": "ncaaf",
+      "task": "total",
+      "phase": "holdout",
+      "arm": "static",
+      "n": 1606,
+      "metric": "mae",
+      "value": 13.596401706298282,
+      "rmse": 16.89319667151957,
+      "bias": 2.3880741037404105,
+      "median_absolute_error": 11.574804447594254,
+      "p90_absolute_error": 27.947176304830652
+    },
+    {
+      "track": "ncaaf",
+      "task": "total",
+      "phase": "holdout_market_subset",
+      "arm": "accepted",
+      "n": 1126,
+      "metric": "mae",
+      "value": 13.048872466282903,
+      "rmse": 16.297729129438128,
+      "bias": 1.1166329451471606,
+      "median_absolute_error": 10.816980683495832,
+      "p90_absolute_error": 27.112700753377723
+    },
+    {
+      "track": "ncaaf",
+      "task": "total",
+      "phase": "holdout_market_subset",
+      "arm": "dynamic",
+      "n": 1126,
+      "metric": "mae",
+      "value": 12.767190219187668,
+      "rmse": 16.08098916220299,
+      "bias": 0.5584021119111754,
+      "median_absolute_error": 10.614279520108546,
+      "p90_absolute_error": 26.092922658413023
+    },
+    {
+      "track": "ncaaf",
+      "task": "total",
+      "phase": "holdout_market_subset",
+      "arm": "market",
+      "n": 1126,
+      "metric": "mae",
+      "value": 12.565719360568384,
+      "rmse": 15.842856894033703,
+      "bias": -0.8916518650088809,
+      "median_absolute_error": 10.5,
+      "p90_absolute_error": 25.5
+    },
+    {
+      "track": "ncaaf",
+      "task": "total",
+      "phase": "holdout_market_subset",
+      "arm": "static",
+      "n": 1126,
+      "metric": "mae",
+      "value": 13.57093509507574,
+      "rmse": 16.968027511817862,
+      "bias": 2.282010789657005,
+      "median_absolute_error": 11.430256336674077,
+      "p90_absolute_error": 28.17647935063833
+    },
+    {
+      "track": "ncaaf",
+      "task": "total",
+      "phase": "monitor",
+      "arm": "accepted",
+      "n": 336,
+      "metric": "mae",
+      "value": 12.577537827688682,
+      "rmse": 15.588301385650869,
+      "bias": 0.975579819164952,
+      "median_absolute_error": 10.943572900840078,
+      "p90_absolute_error": 23.938174190108107
+    },
+    {
+      "track": "ncaaf",
+      "task": "total",
+      "phase": "monitor",
+      "arm": "dynamic",
+      "n": 336,
+      "metric": "mae",
+      "value": 12.599325521067856,
+      "rmse": 15.774879992657807,
+      "bias": 1.1884776164078323,
+      "median_absolute_error": 10.726614848959638,
+      "p90_absolute_error": 26.011357461502083
+    },
+    {
+      "track": "ncaaf",
+      "task": "total",
+      "phase": "monitor",
+      "arm": "static",
+      "n": 336,
+      "metric": "mae",
+      "value": 13.011375353114138,
+      "rmse": 16.53665944328709,
+      "bias": 2.8317655188003834,
+      "median_absolute_error": 11.130260356115123,
+      "p90_absolute_error": 27.786833537342552
+    },
+    {
+      "track": "ncaaf",
+      "task": "total",
+      "phase": "monitor_market_subset",
+      "arm": "accepted",
+      "n": 237,
+      "metric": "mae",
+      "value": 12.428295735719031,
+      "rmse": 15.418844330052362,
+      "bias": 1.2718738783076344,
+      "median_absolute_error": 10.58076421357859,
+      "p90_absolute_error": 24.127513398274075
+    },
+    {
+      "track": "ncaaf",
+      "task": "total",
+      "phase": "monitor_market_subset",
+      "arm": "dynamic",
+      "n": 237,
+      "metric": "mae",
+      "value": 12.622837490624203,
+      "rmse": 15.888168398025508,
+      "bias": 1.57062245994352,
+      "median_absolute_error": 10.587046047677404,
+      "p90_absolute_error": 26.399200874494223
+    },
+    {
+      "track": "ncaaf",
+      "task": "total",
+      "phase": "monitor_market_subset",
+      "arm": "market",
+      "n": 237,
+      "metric": "mae",
+      "value": 11.995780590717299,
+      "rmse": 15.169645462564892,
+      "bias": -0.20675105485232068,
+      "median_absolute_error": 9.5,
+      "p90_absolute_error": 25.200000000000003
+    },
+    {
+      "track": "ncaaf",
+      "task": "total",
+      "phase": "monitor_market_subset",
+      "arm": "static",
+      "n": 237,
+      "metric": "mae",
+      "value": 12.705898384414963,
+      "rmse": 16.388650690335957,
+      "bias": 2.983038801866531,
+      "median_absolute_error": 10.316874631646556,
+      "p90_absolute_error": 27.636941022063116
+    }
+  ],
+  "gates": [
+    {
+      "track": "nfl",
+      "task": "win",
+      "phase": "development",
+      "arm": "dynamic",
+      "gates": {
+        "gain_1pct_vs_accepted": false,
+        "paired_upper_negative_vs_accepted": false,
+        "secondary_guard_vs_accepted": false,
+        "stable_folds_vs_accepted": true,
+        "gain_1pct_vs_static": true,
+        "paired_upper_negative_vs_static": true,
+        "secondary_guard_vs_static": true,
+        "stable_folds_vs_static": true
+      },
+      "all_gates": false,
+      "paired": {
+        "accepted": {
+          "blocks": 44,
+          "difference": 0.0029225956696585413,
+          "lower95": -0.006280889409669594,
+          "method": "paired season-week bootstrap; descriptive after development, no multiplicity guarantee",
+          "replicates": 1000,
+          "upper95": 0.012208866797490411
+        },
+        "static": {
+          "blocks": 44,
+          "difference": -0.035273860456176184,
+          "lower95": -0.058086047646416394,
+          "method": "paired season-week bootstrap; descriptive after development, no multiplicity guarantee",
+          "replicates": 1000,
+          "upper95": -0.013604803403906332
+        }
+      },
+      "relative_to_accepted": 0.004547904195346453,
+      "relative_to_static": -0.051810756751500375,
+      "brier_skill": {
+        "accepted": {
+          "candidate_brier": 0.22729689066106812,
+          "formula": "1 - candidate_brier / reference_brier",
+          "n": 567,
+          "reason": null,
+          "reference_brier": 0.22562281491188974,
+          "same_cohort": true,
+          "value": -0.007419798169933101
+        },
+        "static": {
+          "candidate_brier": 0.22729689066106812,
+          "formula": "1 - candidate_brier / reference_brier",
+          "n": 567,
+          "reason": null,
+          "reference_brier": 0.2436575253859366,
+          "same_cohort": true,
+          "value": 0.06714602678063963
+        }
+      }
+    },
+    {
+      "track": "nfl",
+      "task": "margin",
+      "phase": "development",
+      "arm": "dynamic",
+      "gates": {
+        "gain_1pct_vs_accepted": false,
+        "paired_upper_negative_vs_accepted": false,
+        "secondary_guard_vs_accepted": true,
+        "stable_folds_vs_accepted": true,
+        "gain_1pct_vs_static": true,
+        "paired_upper_negative_vs_static": true,
+        "secondary_guard_vs_static": true,
+        "stable_folds_vs_static": true
+      },
+      "all_gates": false,
+      "paired": {
+        "accepted": {
+          "blocks": 44,
+          "difference": 0.039603364244182725,
+          "lower95": -0.07818047633044536,
+          "method": "paired season-week bootstrap; descriptive after development, no multiplicity guarantee",
+          "replicates": 1000,
+          "upper95": 0.15559981991140495
+        },
+        "static": {
+          "blocks": 44,
+          "difference": -0.6798791814413903,
+          "lower95": -0.9866538627396543,
+          "method": "paired season-week bootstrap; descriptive after development, no multiplicity guarantee",
+          "replicates": 1000,
+          "upper95": -0.36963160200658063
+        }
+      },
+      "relative_to_accepted": 0.004071028782969055,
+      "relative_to_static": -0.06507527957361225,
+      "brier_skill": null
+    },
+    {
+      "track": "nfl",
+      "task": "total",
+      "phase": "development",
+      "arm": "dynamic",
+      "gates": {
+        "gain_1pct_vs_accepted": true,
+        "paired_upper_negative_vs_accepted": false,
+        "secondary_guard_vs_accepted": true,
+        "stable_folds_vs_accepted": true,
+        "gain_1pct_vs_static": true,
+        "paired_upper_negative_vs_static": true,
+        "secondary_guard_vs_static": true,
+        "stable_folds_vs_static": true
+      },
+      "all_gates": false,
+      "paired": {
+        "accepted": {
+          "blocks": 44,
+          "difference": -0.1565837311165656,
+          "lower95": -0.39826675954223517,
+          "method": "paired season-week bootstrap; descriptive after development, no multiplicity guarantee",
+          "replicates": 1000,
+          "upper95": 0.088744207095334
+        },
+        "static": {
+          "blocks": 44,
+          "difference": -0.46574276846017126,
+          "lower95": -0.812363940686682,
+          "method": "paired season-week bootstrap; descriptive after development, no multiplicity guarantee",
+          "replicates": 1000,
+          "upper95": -0.1376617301407367
+        }
+      },
+      "relative_to_accepted": -0.014390106187189944,
+      "relative_to_static": -0.041619457520355674,
+      "brier_skill": null
+    },
+    {
+      "track": "ncaaf",
+      "task": "win",
+      "phase": "development",
+      "arm": "dynamic",
+      "gates": {
+        "gain_1pct_vs_accepted": false,
+        "paired_upper_negative_vs_accepted": false,
+        "secondary_guard_vs_accepted": false,
+        "stable_folds_vs_accepted": false,
+        "gain_1pct_vs_static": true,
+        "paired_upper_negative_vs_static": true,
+        "secondary_guard_vs_static": true,
+        "stable_folds_vs_static": true
+      },
+      "all_gates": false,
+      "paired": {
+        "accepted": {
+          "blocks": 30,
+          "difference": 0.012203190465863073,
+          "lower95": 0.0003929596938011357,
+          "method": "paired season-week bootstrap; descriptive after development, no multiplicity guarantee",
+          "replicates": 1000,
+          "upper95": 0.02418173498931796
+        },
+        "static": {
+          "blocks": 30,
+          "difference": -0.03529791851503767,
+          "lower95": -0.05644958476887088,
+          "method": "paired season-week bootstrap; descriptive after development, no multiplicity guarantee",
+          "replicates": 1000,
+          "upper95": -0.014622471397425042
+        }
+      },
+      "relative_to_accepted": 0.02176048103229089,
+      "relative_to_static": -0.05802743211206696,
+      "brier_skill": {
+        "accepted": {
+          "candidate_brier": 0.1945593988330766,
+          "formula": "1 - candidate_brier / reference_brier",
+          "n": 1568,
+          "reason": null,
+          "reference_brier": 0.19054748116521508,
+          "same_cohort": true,
+          "value": -0.02105468748958672
+        },
+        "static": {
+          "candidate_brier": 0.1945593988330766,
+          "formula": "1 - candidate_brier / reference_brier",
+          "n": 1568,
+          "reason": null,
+          "reference_brier": 0.21043370407996168,
+          "same_cohort": true,
+          "value": 0.07543613470232446
+        }
+      }
+    },
+    {
+      "track": "ncaaf",
+      "task": "margin",
+      "phase": "development",
+      "arm": "dynamic",
+      "gates": {
+        "gain_1pct_vs_accepted": false,
+        "paired_upper_negative_vs_accepted": false,
+        "secondary_guard_vs_accepted": false,
+        "stable_folds_vs_accepted": false,
+        "gain_1pct_vs_static": true,
+        "paired_upper_negative_vs_static": true,
+        "secondary_guard_vs_static": true,
+        "stable_folds_vs_static": true
+      },
+      "all_gates": false,
+      "paired": {
+        "accepted": {
+          "blocks": 30,
+          "difference": 0.19540911490462695,
+          "lower95": -0.05104153331402052,
+          "method": "paired season-week bootstrap; descriptive after development, no multiplicity guarantee",
+          "replicates": 1000,
+          "upper95": 0.443596676644263
+        },
+        "static": {
+          "blocks": 30,
+          "difference": -0.8675393885004781,
+          "lower95": -1.3227178634126666,
+          "method": "paired season-week bootstrap; descriptive after development, no multiplicity guarantee",
+          "replicates": 1000,
+          "upper95": -0.41843781868770286
+        }
+      },
+      "relative_to_accepted": 0.015240263345269733,
+      "relative_to_static": -0.06248101740394052,
+      "brier_skill": null
+    },
+    {
+      "track": "ncaaf",
+      "task": "total",
+      "phase": "development",
+      "arm": "dynamic",
+      "gates": {
+        "gain_1pct_vs_accepted": true,
+        "paired_upper_negative_vs_accepted": false,
+        "secondary_guard_vs_accepted": true,
+        "stable_folds_vs_accepted": true,
+        "gain_1pct_vs_static": true,
+        "paired_upper_negative_vs_static": true,
+        "secondary_guard_vs_static": true,
+        "stable_folds_vs_static": true
+      },
+      "all_gates": false,
+      "paired": {
+        "accepted": {
+          "blocks": 30,
+          "difference": -0.13104512164360907,
+          "lower95": -0.2921773520113585,
+          "method": "paired season-week bootstrap; descriptive after development, no multiplicity guarantee",
+          "replicates": 1000,
+          "upper95": 0.035513179767578056
+        },
+        "static": {
+          "blocks": 30,
+          "difference": -0.6571354119031914,
+          "lower95": -0.9164874172591179,
+          "method": "paired season-week bootstrap; descriptive after development, no multiplicity guarantee",
+          "replicates": 1000,
+          "upper95": -0.4009060145473485
+        }
+      },
+      "relative_to_accepted": -0.01000245117384535,
+      "relative_to_static": -0.048221659389966365,
+      "brier_skill": null
+    },
+    {
+      "track": "nfl",
+      "task": "win",
+      "phase": "holdout",
+      "arm": "dynamic",
+      "gates": {
+        "gain_1pct_vs_accepted": false,
+        "paired_upper_negative_vs_accepted": false,
+        "secondary_guard_vs_accepted": true,
+        "gain_1pct_vs_static": true,
+        "paired_upper_negative_vs_static": true,
+        "secondary_guard_vs_static": true
+      },
+      "all_gates": false,
+      "paired": {
+        "accepted": {
+          "blocks": 44,
+          "difference": -0.0012085149694220424,
+          "lower95": -0.013893367035793922,
+          "method": "paired season-week bootstrap; descriptive after development, no multiplicity guarantee",
+          "replicates": 1000,
+          "upper95": 0.010986426714153709
+        },
+        "static": {
+          "blocks": 44,
+          "difference": -0.032702872553653874,
+          "lower95": -0.049474974163626166,
+          "method": "paired season-week bootstrap; descriptive after development, no multiplicity guarantee",
+          "replicates": 1000,
+          "upper95": -0.014780214801545429
+        }
+      },
+      "relative_to_accepted": -0.001918793981168898,
+      "relative_to_static": -0.04945054198310106,
+      "brier_skill": {
+        "accepted": {
+          "candidate_brier": 0.21931767415985332,
+          "formula": "1 - candidate_brier / reference_brier",
+          "n": 569,
+          "reason": null,
+          "reference_brier": 0.22027394209432988,
+          "same_cohort": true,
+          "value": 0.004341266721721637
+        },
+        "static": {
+          "candidate_brier": 0.21931767415985332,
+          "formula": "1 - candidate_brier / reference_brier",
+          "n": 569,
+          "reason": null,
+          "reference_brier": 0.2347280805783682,
+          "same_cohort": true,
+          "value": 0.0656521639019233
+        }
+      }
+    },
+    {
+      "track": "nfl",
+      "task": "win",
+      "phase": "monitor",
+      "arm": "dynamic",
+      "gates": {
+        "gain_1pct_vs_accepted": true,
+        "paired_upper_negative_vs_accepted": false,
+        "secondary_guard_vs_accepted": true,
+        "gain_1pct_vs_static": true,
+        "paired_upper_negative_vs_static": false,
+        "secondary_guard_vs_static": true
+      },
+      "all_gates": false,
+      "paired": {
+        "accepted": {
+          "blocks": 6,
+          "difference": -0.009965978641520044,
+          "lower95": null,
+          "method": "At least eight season-week blocks required; no confidence interval asserted",
+          "replicates": 0,
+          "status": "insufficient_blocks",
+          "upper95": null
+        },
+        "static": {
+          "blocks": 6,
+          "difference": -0.023877842430399608,
+          "lower95": null,
+          "method": "At least eight season-week blocks required; no confidence interval asserted",
+          "replicates": 0,
+          "status": "insufficient_blocks",
+          "upper95": null
+        }
+      },
+      "relative_to_accepted": -0.015169863590569377,
+      "relative_to_static": -0.03559230723350548,
+      "brier_skill": {
+        "accepted": {
+          "candidate_brier": 0.22825177722071796,
+          "formula": "1 - candidate_brier / reference_brier",
+          "n": 79,
+          "reason": null,
+          "reference_brier": 0.23405035362495807,
+          "same_cohort": true,
+          "value": 0.02477490981932773
+        },
+        "static": {
+          "candidate_brier": 0.22825177722071796,
+          "formula": "1 - candidate_brier / reference_brier",
+          "n": 79,
+          "reason": null,
+          "reference_brier": 0.23966137213689842,
+          "same_cohort": true,
+          "value": 0.04760715009869476
+        }
+      }
+    },
+    {
+      "track": "nfl",
+      "task": "margin",
+      "phase": "holdout",
+      "arm": "dynamic",
+      "gates": {
+        "gain_1pct_vs_accepted": false,
+        "paired_upper_negative_vs_accepted": false,
+        "secondary_guard_vs_accepted": true,
+        "gain_1pct_vs_static": true,
+        "paired_upper_negative_vs_static": true,
+        "secondary_guard_vs_static": true
+      },
+      "all_gates": false,
+      "paired": {
+        "accepted": {
+          "blocks": 44,
+          "difference": -0.05627329314423703,
+          "lower95": -0.236757382783894,
+          "method": "paired season-week bootstrap; descriptive after development, no multiplicity guarantee",
+          "replicates": 1000,
+          "upper95": 0.10648161906624755
+        },
+        "static": {
+          "blocks": 44,
+          "difference": -0.5660444488923275,
+          "lower95": -0.9042827464042156,
+          "method": "paired season-week bootstrap; descriptive after development, no multiplicity guarantee",
+          "replicates": 1000,
+          "upper95": -0.22587297200187748
+        }
+      },
+      "relative_to_accepted": -0.005517868367023171,
+      "relative_to_static": -0.052861103899198736,
+      "brier_skill": null
+    },
+    {
+      "track": "nfl",
+      "task": "margin",
+      "phase": "monitor",
+      "arm": "dynamic",
+      "gates": {
+        "gain_1pct_vs_accepted": false,
+        "paired_upper_negative_vs_accepted": false,
+        "secondary_guard_vs_accepted": false,
+        "gain_1pct_vs_static": true,
+        "paired_upper_negative_vs_static": false,
+        "secondary_guard_vs_static": true
+      },
+      "all_gates": false,
+      "paired": {
+        "accepted": {
+          "blocks": 6,
+          "difference": -0.03923638050174773,
+          "lower95": null,
+          "method": "At least eight season-week blocks required; no confidence interval asserted",
+          "replicates": 0,
+          "status": "insufficient_blocks",
+          "upper95": null
+        },
+        "static": {
+          "blocks": 6,
+          "difference": -0.14704273025801023,
+          "lower95": null,
+          "method": "At least eight season-week blocks required; no confidence interval asserted",
+          "replicates": 0,
+          "status": "insufficient_blocks",
+          "upper95": null
+        }
+      },
+      "relative_to_accepted": -0.003963849670099884,
+      "relative_to_static": -0.014694926355394933,
+      "brier_skill": null
+    },
+    {
+      "track": "nfl",
+      "task": "total",
+      "phase": "holdout",
+      "arm": "dynamic",
+      "gates": {
+        "gain_1pct_vs_accepted": false,
+        "paired_upper_negative_vs_accepted": false,
+        "secondary_guard_vs_accepted": true,
+        "gain_1pct_vs_static": true,
+        "paired_upper_negative_vs_static": false,
+        "secondary_guard_vs_static": true
+      },
+      "all_gates": false,
+      "paired": {
+        "accepted": {
+          "blocks": 44,
+          "difference": 0.0011602743642622614,
+          "lower95": -0.19573350772244213,
+          "method": "paired season-week bootstrap; descriptive after development, no multiplicity guarantee",
+          "replicates": 1000,
+          "upper95": 0.17621479724883046
+        },
+        "static": {
+          "blocks": 44,
+          "difference": -0.2797720945801374,
+          "lower95": -0.5896012215607183,
+          "method": "paired season-week bootstrap; descriptive after development, no multiplicity guarantee",
+          "replicates": 1000,
+          "upper95": 0.02748997686965277
+        }
+      },
+      "relative_to_accepted": 0.00011229750847374653,
+      "relative_to_static": -0.026361066858574866,
+      "brier_skill": null
+    },
+    {
+      "track": "nfl",
+      "task": "total",
+      "phase": "monitor",
+      "arm": "dynamic",
+      "gates": {
+        "gain_1pct_vs_accepted": true,
+        "paired_upper_negative_vs_accepted": false,
+        "secondary_guard_vs_accepted": true,
+        "gain_1pct_vs_static": false,
+        "paired_upper_negative_vs_static": false,
+        "secondary_guard_vs_static": false
+      },
+      "all_gates": false,
+      "paired": {
+        "accepted": {
+          "blocks": 6,
+          "difference": -0.5416756138170662,
+          "lower95": null,
+          "method": "At least eight season-week blocks required; no confidence interval asserted",
+          "replicates": 0,
+          "status": "insufficient_blocks",
+          "upper95": null
+        },
+        "static": {
+          "blocks": 6,
+          "difference": 0.22133600401996442,
+          "lower95": null,
+          "method": "At least eight season-week blocks required; no confidence interval asserted",
+          "replicates": 0,
+          "status": "insufficient_blocks",
+          "upper95": null
+        }
+      },
+      "relative_to_accepted": -0.04521237006398804,
+      "relative_to_static": 0.019730990563411765,
+      "brier_skill": null
+    },
+    {
+      "track": "ncaaf",
+      "task": "win",
+      "phase": "holdout",
+      "arm": "dynamic",
+      "gates": {
+        "gain_1pct_vs_accepted": false,
+        "paired_upper_negative_vs_accepted": false,
+        "secondary_guard_vs_accepted": false,
+        "gain_1pct_vs_static": true,
+        "paired_upper_negative_vs_static": true,
+        "secondary_guard_vs_static": true
+      },
+      "all_gates": false,
+      "paired": {
+        "accepted": {
+          "blocks": 32,
+          "difference": 0.01040126551898191,
+          "lower95": -0.0003394529571802447,
+          "method": "paired season-week bootstrap; descriptive after development, no multiplicity guarantee",
+          "replicates": 1000,
+          "upper95": 0.020495478996915204
+        },
+        "static": {
+          "blocks": 32,
+          "difference": -0.06173946972284898,
+          "lower95": -0.08420557273607754,
+          "method": "paired season-week bootstrap; descriptive after development, no multiplicity guarantee",
+          "replicates": 1000,
+          "upper95": -0.04089761160202743
+        }
+      },
+      "relative_to_accepted": 0.018751777148003468,
+      "relative_to_static": -0.09849596523917348,
+      "brier_skill": {
+        "accepted": {
+          "candidate_brier": 0.1914767350012448,
+          "formula": "1 - candidate_brier / reference_brier",
+          "n": 1606,
+          "reason": null,
+          "reference_brier": 0.18951726331095,
+          "same_cohort": true,
+          "value": -0.01033927810090729
+        },
+        "static": {
+          "candidate_brier": 0.1914767350012448,
+          "formula": "1 - candidate_brier / reference_brier",
+          "n": 1606,
+          "reason": null,
+          "reference_brier": 0.21965892161550024,
+          "same_cohort": true,
+          "value": 0.12829975858475107
+        }
+      }
+    },
+    {
+      "track": "ncaaf",
+      "task": "win",
+      "phase": "monitor",
+      "arm": "dynamic",
+      "gates": {
+        "gain_1pct_vs_accepted": false,
+        "paired_upper_negative_vs_accepted": false,
+        "secondary_guard_vs_accepted": false,
+        "gain_1pct_vs_static": false,
+        "paired_upper_negative_vs_static": false,
+        "secondary_guard_vs_static": false
+      },
+      "all_gates": false,
+      "paired": {
+        "accepted": {
+          "blocks": 7,
+          "difference": 0.03984964247686144,
+          "lower95": null,
+          "method": "At least eight season-week blocks required; no confidence interval asserted",
+          "replicates": 0,
+          "status": "insufficient_blocks",
+          "upper95": null
+        },
+        "static": {
+          "blocks": 7,
+          "difference": 0.03715717369940389,
+          "lower95": null,
+          "method": "At least eight season-week blocks required; no confidence interval asserted",
+          "replicates": 0,
+          "status": "insufficient_blocks",
+          "upper95": null
+        }
+      },
+      "relative_to_accepted": 0.0784232118890924,
+      "relative_to_static": 0.07273906922427775,
+      "brier_skill": {
+        "accepted": {
+          "candidate_brier": 0.18305044496687684,
+          "formula": "1 - candidate_brier / reference_brier",
+          "n": 336,
+          "reason": null,
+          "reference_brier": 0.1678887343793709,
+          "same_cohort": true,
+          "value": -0.09030808793427236
+        },
+        "static": {
+          "candidate_brier": 0.18305044496687684,
+          "formula": "1 - candidate_brier / reference_brier",
+          "n": 336,
+          "reason": null,
+          "reference_brier": 0.17170214752304008,
+          "same_cohort": true,
+          "value": -0.06609292666135103
+        }
+      }
+    },
+    {
+      "track": "ncaaf",
+      "task": "margin",
+      "phase": "holdout",
+      "arm": "dynamic",
+      "gates": {
+        "gain_1pct_vs_accepted": false,
+        "paired_upper_negative_vs_accepted": false,
+        "secondary_guard_vs_accepted": false,
+        "gain_1pct_vs_static": true,
+        "paired_upper_negative_vs_static": true,
+        "secondary_guard_vs_static": true
+      },
+      "all_gates": false,
+      "paired": {
+        "accepted": {
+          "blocks": 32,
+          "difference": 0.16307669769142835,
+          "lower95": -0.12931049201060044,
+          "method": "paired season-week bootstrap; descriptive after development, no multiplicity guarantee",
+          "replicates": 1000,
+          "upper95": 0.43388663121728527
+        },
+        "static": {
+          "blocks": 32,
+          "difference": -1.491325761664437,
+          "lower95": -1.949364627138342,
+          "method": "paired season-week bootstrap; descriptive after development, no multiplicity guarantee",
+          "replicates": 1000,
+          "upper95": -0.9706243861054742
+        }
+      },
+      "relative_to_accepted": 0.012720660589525146,
+      "relative_to_static": -0.10303315461711449,
+      "brier_skill": null
+    },
+    {
+      "track": "ncaaf",
+      "task": "margin",
+      "phase": "monitor",
+      "arm": "dynamic",
+      "gates": {
+        "gain_1pct_vs_accepted": false,
+        "paired_upper_negative_vs_accepted": false,
+        "secondary_guard_vs_accepted": false,
+        "gain_1pct_vs_static": false,
+        "paired_upper_negative_vs_static": false,
+        "secondary_guard_vs_static": false
+      },
+      "all_gates": false,
+      "paired": {
+        "accepted": {
+          "blocks": 7,
+          "difference": 0.7437873190742417,
+          "lower95": null,
+          "method": "At least eight season-week blocks required; no confidence interval asserted",
+          "replicates": 0,
+          "status": "insufficient_blocks",
+          "upper95": null
+        },
+        "static": {
+          "blocks": 7,
+          "difference": 0.7484905456471509,
+          "lower95": null,
+          "method": "At least eight season-week blocks required; no confidence interval asserted",
+          "replicates": 0,
+          "status": "insufficient_blocks",
+          "upper95": null
+        }
+      },
+      "relative_to_accepted": 0.057586386913047294,
+      "relative_to_static": 0.057971635439567626,
+      "brier_skill": null
+    },
+    {
+      "track": "ncaaf",
+      "task": "total",
+      "phase": "holdout",
+      "arm": "dynamic",
+      "gates": {
+        "gain_1pct_vs_accepted": true,
+        "paired_upper_negative_vs_accepted": true,
+        "secondary_guard_vs_accepted": true,
+        "gain_1pct_vs_static": true,
+        "paired_upper_negative_vs_static": true,
+        "secondary_guard_vs_static": true
+      },
+      "all_gates": true,
+      "paired": {
+        "accepted": {
+          "blocks": 32,
+          "difference": -0.2317319938724199,
+          "lower95": -0.43929965753075695,
+          "method": "paired season-week bootstrap; descriptive after development, no multiplicity guarantee",
+          "replicates": 1000,
+          "upper95": -0.03619636992950531
+        },
+        "static": {
+          "blocks": 32,
+          "difference": -0.7342142081163718,
+          "lower95": -1.0145371577311035,
+          "method": "paired season-week bootstrap; descriptive after development, no multiplicity guarantee",
+          "replicates": 1000,
+          "upper95": -0.4862522534162324
+        }
+      },
+      "relative_to_accepted": -0.017697679752272877,
+      "relative_to_static": -0.05400062634044278,
+      "brier_skill": null
+    },
+    {
+      "track": "ncaaf",
+      "task": "total",
+      "phase": "monitor",
+      "arm": "dynamic",
+      "gates": {
+        "gain_1pct_vs_accepted": false,
+        "paired_upper_negative_vs_accepted": false,
+        "secondary_guard_vs_accepted": false,
+        "gain_1pct_vs_static": true,
+        "paired_upper_negative_vs_static": false,
+        "secondary_guard_vs_static": true
+      },
+      "all_gates": false,
+      "paired": {
+        "accepted": {
+          "blocks": 7,
+          "difference": 0.021787693379170896,
+          "lower95": null,
+          "method": "At least eight season-week blocks required; no confidence interval asserted",
+          "replicates": 0,
+          "status": "insufficient_blocks",
+          "upper95": null
+        },
+        "static": {
+          "blocks": 7,
+          "difference": -0.4120498320462856,
+          "lower95": null,
+          "method": "At least eight season-week blocks required; no confidence interval asserted",
+          "replicates": 0,
+          "status": "insufficient_blocks",
+          "upper95": null
+        }
+      },
+      "relative_to_accepted": 0.0017322701531623519,
+      "relative_to_static": -0.03166843019002308,
+      "brier_skill": null
+    }
+  ],
+  "distribution_scores": [
+    {
+      "track": "nfl",
+      "phase": "holdout",
+      "arm": "static",
+      "metrics": {
+        "n": 570,
+        "joint_gaussian_nll": 7.386111963752381,
+        "margin": {
+          "gaussian_crps": 7.735106399534236,
+          "gaussian_nll": 4.046849523137901,
+          "intervals": [
+            {
+              "nominal_coverage": 0.8,
+              "empirical_coverage": 0.7771929824561403,
+              "mean_width": 34.60406127274998,
+              "mean_interval_score": 50.04475265656626,
+              "coverage_guaranteed": false
+            },
+            {
+              "nominal_coverage": 0.95,
+              "empirical_coverage": 0.9385964912280702,
+              "mean_width": 52.922344786482086,
+              "mean_interval_score": 66.99524934845148,
+              "coverage_guaranteed": false
+            }
+          ]
+        },
+        "total": {
+          "gaussian_crps": 7.6215506650638485,
+          "gaussian_nll": 4.032409621174426,
+          "intervals": [
+            {
+              "nominal_coverage": 0.8,
+              "empirical_coverage": 0.8526315789473684,
+              "mean_width": 38.25392449939461,
+              "mean_interval_score": 48.38002335952879,
+              "coverage_guaranteed": false
+            },
+            {
+              "nominal_coverage": 0.95,
+              "empirical_coverage": 0.9701754385964912,
+              "mean_width": 58.50432889469131,
+              "mean_interval_score": 65.77055477613919,
+              "coverage_guaranteed": false
+            }
+          ]
+        },
+        "negative_score_mass": {
+          "home_marginal_mean": 0.011471831714335221,
+          "away_marginal_mean": 0.0177842458455,
+          "any_negative_union_bound_mean": 0.02925607755983521,
+          "joint_probability_not_computed": true,
+          "scores_not_truncated": true
+        }
+      }
+    },
+    {
+      "track": "nfl",
+      "phase": "holdout",
+      "arm": "dynamic",
+      "metrics": {
+        "n": 570,
+        "joint_gaussian_nll": 7.331934141863492,
+        "margin": {
+          "gaussian_crps": 7.341486323875317,
+          "gaussian_nll": 3.995839292732646,
+          "intervals": [
+            {
+              "nominal_coverage": 0.8,
+              "empirical_coverage": 0.8368421052631579,
+              "mean_width": 37.160717742044554,
+              "mean_interval_score": 47.35188399946632,
+              "coverage_guaranteed": false
+            },
+            {
+              "nominal_coverage": 0.95,
+              "empirical_coverage": 0.9736842105263158,
+              "mean_width": 56.832413437156525,
+              "mean_interval_score": 61.4698644168298,
+              "coverage_guaranteed": false
+            }
+          ]
+        },
+        "total": {
+          "gaussian_crps": 7.484516785884302,
+          "gaussian_nll": 4.029242029690792,
+          "intervals": [
+            {
+              "nominal_coverage": 0.8,
+              "empirical_coverage": 0.8736842105263158,
+              "mean_width": 40.73909643325449,
+              "mean_interval_score": 48.50092360675717,
+              "coverage_guaranteed": false
+            },
+            {
+              "nominal_coverage": 0.95,
+              "empirical_coverage": 0.9736842105263158,
+              "mean_width": 62.30507138271226,
+              "mean_interval_score": 66.06368209933385,
+              "coverage_guaranteed": false
+            }
+          ]
+        },
+        "negative_score_mass": {
+          "home_marginal_mean": 0.01768274721934654,
+          "away_marginal_mean": 0.025741689745318545,
+          "any_negative_union_bound_mean": 0.043424436964665095,
+          "joint_probability_not_computed": true,
+          "scores_not_truncated": true
+        }
+      }
+    },
+    {
+      "track": "nfl",
+      "phase": "monitor",
+      "arm": "static",
+      "metrics": {
+        "n": 80,
+        "joint_gaussian_nll": 7.3296916522193385,
+        "margin": {
+          "gaussian_crps": 7.21624545261357,
+          "gaussian_nll": 3.974640284404573,
+          "intervals": [
+            {
+              "nominal_coverage": 0.8,
+              "empirical_coverage": 0.8125,
+              "mean_width": 34.58054663500618,
+              "mean_interval_score": 46.184499879677034,
+              "coverage_guaranteed": false
+            },
+            {
+              "nominal_coverage": 0.95,
+              "empirical_coverage": 0.975,
+              "mean_width": 52.886382251437475,
+              "mean_interval_score": 61.338346704160564,
+              "coverage_guaranteed": false
+            }
+          ]
+        },
+        "total": {
+          "gaussian_crps": 7.686422510961559,
+          "gaussian_nll": 4.048198548374711,
+          "intervals": [
+            {
+              "nominal_coverage": 0.8,
+              "empirical_coverage": 0.875,
+              "mean_width": 38.22783544025824,
+              "mean_interval_score": 46.21391921912587,
+              "coverage_guaranteed": false
+            },
+            {
+              "nominal_coverage": 0.95,
+              "empirical_coverage": 0.975,
+              "mean_width": 58.464429121890454,
+              "mean_interval_score": 71.42362311001091,
+              "coverage_guaranteed": false
+            }
+          ]
+        },
+        "negative_score_mass": {
+          "home_marginal_mean": 0.011039162851816671,
+          "away_marginal_mean": 0.017574443322145257,
+          "any_negative_union_bound_mean": 0.02861360617396193,
+          "joint_probability_not_computed": true,
+          "scores_not_truncated": true
+        }
+      }
+    },
+    {
+      "track": "nfl",
+      "phase": "monitor",
+      "arm": "dynamic",
+      "metrics": {
+        "n": 80,
+        "joint_gaussian_nll": 7.36722188397799,
+        "margin": {
+          "gaussian_crps": 7.182768709782714,
+          "gaussian_nll": 3.9804044363234494,
+          "intervals": [
+            {
+              "nominal_coverage": 0.8,
+              "empirical_coverage": 0.8625,
+              "mean_width": 38.02781483966087,
+              "mean_interval_score": 45.969325686866895,
+              "coverage_guaranteed": false
+            },
+            {
+              "nominal_coverage": 0.95,
+              "empirical_coverage": 0.9875,
+              "mean_width": 58.15852401133775,
+              "mean_interval_score": 61.12161822858203,
+              "coverage_guaranteed": false
+            }
+          ]
+        },
+        "total": {
+          "gaussian_crps": 7.922270698505571,
+          "gaussian_nll": 4.079964628214485,
+          "intervals": [
+            {
+              "nominal_coverage": 0.8,
+              "empirical_coverage": 0.925,
+              "mean_width": 41.48726968212833,
+              "mean_interval_score": 48.78037089858819,
+              "coverage_guaranteed": false
+            },
+            {
+              "nominal_coverage": 0.95,
+              "empirical_coverage": 0.975,
+              "mean_width": 63.44930362542025,
+              "mean_interval_score": 75.49694334391437,
+              "coverage_guaranteed": false
+            }
+          ]
+        },
+        "negative_score_mass": {
+          "home_marginal_mean": 0.017563249024649785,
+          "away_marginal_mean": 0.027139352781012503,
+          "any_negative_union_bound_mean": 0.04470260180566229,
+          "joint_probability_not_computed": true,
+          "scores_not_truncated": true
+        }
+      }
+    },
+    {
+      "track": "ncaaf",
+      "phase": "holdout",
+      "arm": "static",
+      "metrics": {
+        "n": 1606,
+        "joint_gaussian_nll": 7.89324626131328,
+        "margin": {
+          "gaussian_crps": 10.268107693521491,
+          "gaussian_nll": 4.322091243379268,
+          "intervals": [
+            {
+              "nominal_coverage": 0.8,
+              "empirical_coverage": 0.7814445828144458,
+              "mean_width": 45.22200244699335,
+              "mean_interval_score": 64.23330520513447,
+              "coverage_guaranteed": false
+            },
+            {
+              "nominal_coverage": 0.95,
+              "empirical_coverage": 0.9414694894146949,
+              "mean_width": 69.16108449153506,
+              "mean_interval_score": 84.92521026327445,
+              "coverage_guaranteed": false
+            }
+          ]
+        },
+        "total": {
+          "gaussian_crps": 9.60870569011032,
+          "gaussian_nll": 4.264302198493958,
+          "intervals": [
+            {
+              "nominal_coverage": 0.8,
+              "empirical_coverage": 0.8605230386052304,
+              "mean_width": 49.974861205846665,
+              "mean_interval_score": 60.092957820965495,
+              "coverage_guaranteed": false
+            },
+            {
+              "nominal_coverage": 0.95,
+              "empirical_coverage": 0.9788293897882939,
+              "mean_width": 76.42995469653506,
+              "mean_interval_score": 80.56976711943841,
+              "coverage_guaranteed": false
+            }
+          ]
+        },
+        "negative_score_mass": {
+          "home_marginal_mean": 0.02037530682698517,
+          "away_marginal_mean": 0.03825928612944938,
+          "any_negative_union_bound_mean": 0.05863459295643454,
+          "joint_probability_not_computed": true,
+          "scores_not_truncated": true
+        }
+      }
+    },
+    {
+      "track": "ncaaf",
+      "phase": "holdout",
+      "arm": "dynamic",
+      "metrics": {
+        "n": 1606,
+        "joint_gaussian_nll": 7.812619370284627,
+        "margin": {
+          "gaussian_crps": 9.345968040436096,
+          "gaussian_nll": 4.244039417116206,
+          "intervals": [
+            {
+              "nominal_coverage": 0.8,
+              "empirical_coverage": 0.861145703611457,
+              "mean_width": 49.73315178060211,
+              "mean_interval_score": 60.04319046340578,
+              "coverage_guaranteed": false
+            },
+            {
+              "nominal_coverage": 0.95,
+              "empirical_coverage": 0.9788293897882939,
+              "mean_width": 76.06029203063845,
+              "mean_interval_score": 81.1496357407151,
+              "coverage_guaranteed": false
+            }
+          ]
+        },
+        "total": {
+          "gaussian_crps": 9.288098644703279,
+          "gaussian_nll": 4.261727133728366,
+          "intervals": [
+            {
+              "nominal_coverage": 0.8,
+              "empirical_coverage": 0.9090909090909091,
+              "mean_width": 54.32736821261781,
+              "mean_interval_score": 60.230010444366215,
+              "coverage_guaranteed": false
+            },
+            {
+              "nominal_coverage": 0.95,
+              "empirical_coverage": 0.9900373599003736,
+              "mean_width": 83.08653973383282,
+              "mean_interval_score": 85.22158329593559,
+              "coverage_guaranteed": false
+            }
+          ]
+        },
+        "negative_score_mass": {
+          "home_marginal_mean": 0.030103046504079783,
+          "away_marginal_mean": 0.0507107020756226,
+          "any_negative_union_bound_mean": 0.08081374857970239,
+          "joint_probability_not_computed": true,
+          "scores_not_truncated": true
+        }
+      }
+    },
+    {
+      "track": "ncaaf",
+      "phase": "monitor",
+      "arm": "static",
+      "metrics": {
+        "n": 336,
+        "joint_gaussian_nll": 7.78736937822567,
+        "margin": {
+          "gaussian_crps": 9.28944979338102,
+          "gaussian_nll": 4.231082564549272,
+          "intervals": [
+            {
+              "nominal_coverage": 0.8,
+              "empirical_coverage": 0.8214285714285714,
+              "mean_width": 45.243417483189475,
+              "mean_interval_score": 59.92310191280636,
+              "coverage_guaranteed": false
+            },
+            {
+              "nominal_coverage": 0.95,
+              "empirical_coverage": 0.9583333333333334,
+              "mean_width": 69.19383596311101,
+              "mean_interval_score": 82.26394379477173,
+              "coverage_guaranteed": false
+            }
+          ]
+        },
+        "total": {
+          "gaussian_crps": 9.37883406659917,
+          "gaussian_nll": 4.249433994236343,
+          "intervals": [
+            {
+              "nominal_coverage": 0.8,
+              "empirical_coverage": 0.875,
+              "mean_width": 49.98607693355668,
+              "mean_interval_score": 60.43892134225823,
+              "coverage_guaranteed": false
+            },
+            {
+              "nominal_coverage": 0.95,
+              "empirical_coverage": 0.9761904761904762,
+              "mean_width": 76.44710767185269,
+              "mean_interval_score": 81.42304856404549,
+              "coverage_guaranteed": false
+            }
+          ]
+        },
+        "negative_score_mass": {
+          "home_marginal_mean": 0.01804229583891651,
+          "away_marginal_mean": 0.04882753043788212,
+          "any_negative_union_bound_mean": 0.06686982627679863,
+          "joint_probability_not_computed": true,
+          "scores_not_truncated": true
+        }
+      }
+    },
+    {
+      "track": "ncaaf",
+      "phase": "monitor",
+      "arm": "dynamic",
+      "metrics": {
+        "n": 336,
+        "joint_gaussian_nll": 7.854910788850101,
+        "margin": {
+          "gaussian_crps": 9.836518088246597,
+          "gaussian_nll": 4.289623765720514,
+          "intervals": [
+            {
+              "nominal_coverage": 0.8,
+              "empirical_coverage": 0.8571428571428571,
+              "mean_width": 50.88048682915416,
+              "mean_interval_score": 62.847646926730725,
+              "coverage_guaranteed": false
+            },
+            {
+              "nominal_coverage": 0.95,
+              "empirical_coverage": 0.9761904761904762,
+              "mean_width": 77.81498956589286,
+              "mean_interval_score": 83.56133262387364,
+              "coverage_guaranteed": false
+            }
+          ]
+        },
+        "total": {
+          "gaussian_crps": 9.143964205267537,
+          "gaussian_nll": 4.258434203689532,
+          "intervals": [
+            {
+              "nominal_coverage": 0.8,
+              "empirical_coverage": 0.9166666666666666,
+              "mean_width": 55.31507729544677,
+              "mean_interval_score": 61.2204197623703,
+              "coverage_guaranteed": false
+            },
+            {
+              "nominal_coverage": 0.95,
+              "empirical_coverage": 0.9910714285714286,
+              "mean_width": 84.59711042142368,
+              "mean_interval_score": 86.36234641913437,
+              "coverage_guaranteed": false
+            }
+          ]
+        },
+        "negative_score_mass": {
+          "home_marginal_mean": 0.029918775345952078,
+          "away_marginal_mean": 0.0574290806376516,
+          "any_negative_union_bound_mean": 0.08734785598360367,
+          "joint_probability_not_computed": true,
+          "scores_not_truncated": true
+        }
+      }
+    }
+  ],
+  "residual_prediction_intervals": [
+    {
+      "track": "nfl",
+      "task": "margin",
+      "phase": "holdout",
+      "arm": "accepted",
+      "nominal": 0.8,
+      "coverage": 0.7666666666666667,
+      "mean_width": 32.246215151846854,
+      "mean_interval_score": 47.38709010274403,
+      "residual_lower": -14.152956680084738,
+      "residual_upper": 18.09325847176212,
+      "calibration_rows": 569,
+      "evaluation_rows": 570
+    },
+    {
+      "track": "nfl",
+      "task": "margin",
+      "phase": "holdout",
+      "arm": "accepted",
+      "nominal": 0.9,
+      "coverage": 0.8894736842105263,
+      "mean_width": 43.57726690179243,
+      "mean_interval_score": 55.40251642864736,
+      "residual_lower": -19.800648069418656,
+      "residual_upper": 23.776618832373767,
+      "calibration_rows": 569,
+      "evaluation_rows": 570
+    },
+    {
+      "track": "nfl",
+      "task": "margin",
+      "phase": "holdout",
+      "arm": "static",
+      "nominal": 0.8,
+      "coverage": 0.775438596491228,
+      "mean_width": 35.52095988317133,
+      "mean_interval_score": 49.923033317061204,
+      "residual_lower": -15.708992946130643,
+      "residual_upper": 19.811966937040687,
+      "calibration_rows": 569,
+      "evaluation_rows": 570
+    },
+    {
+      "track": "nfl",
+      "task": "margin",
+      "phase": "holdout",
+      "arm": "static",
+      "nominal": 0.9,
+      "coverage": 0.8824561403508772,
+      "mean_width": 43.594503409614454,
+      "mean_interval_score": 58.51870404711378,
+      "residual_lower": -20.234111778238503,
+      "residual_upper": 23.36039163137595,
+      "calibration_rows": 569,
+      "evaluation_rows": 570
+    },
+    {
+      "track": "nfl",
+      "task": "margin",
+      "phase": "holdout",
+      "arm": "dynamic",
+      "nominal": 0.8,
+      "coverage": 0.7824561403508772,
+      "mean_width": 32.40936901853857,
+      "mean_interval_score": 47.02594875617964,
+      "residual_lower": -13.99147497376168,
+      "residual_upper": 18.41789404477689,
+      "calibration_rows": 569,
+      "evaluation_rows": 570
+    },
+    {
+      "track": "nfl",
+      "task": "margin",
+      "phase": "holdout",
+      "arm": "dynamic",
+      "nominal": 0.9,
+      "coverage": 0.8859649122807017,
+      "mean_width": 43.99260641625274,
+      "mean_interval_score": 54.87014991063391,
+      "residual_lower": -20.44345485860155,
+      "residual_upper": 23.549151557651186,
+      "calibration_rows": 569,
+      "evaluation_rows": 570
+    },
+    {
+      "track": "nfl",
+      "task": "margin",
+      "phase": "monitor",
+      "arm": "accepted",
+      "nominal": 0.8,
+      "coverage": 0.775,
+      "mean_width": 32.246215151846854,
+      "mean_interval_score": 45.88252557376655,
+      "residual_lower": -14.152956680084738,
+      "residual_upper": 18.09325847176212,
+      "calibration_rows": 569,
+      "evaluation_rows": 80
+    },
+    {
+      "track": "nfl",
+      "task": "margin",
+      "phase": "monitor",
+      "arm": "accepted",
+      "nominal": 0.9,
+      "coverage": 0.9125,
+      "mean_width": 43.57726690179243,
+      "mean_interval_score": 51.72366799076188,
+      "residual_lower": -19.800648069418656,
+      "residual_upper": 23.776618832373767,
+      "calibration_rows": 569,
+      "evaluation_rows": 80
+    },
+    {
+      "track": "nfl",
+      "task": "margin",
+      "phase": "monitor",
+      "arm": "static",
+      "nominal": 0.8,
+      "coverage": 0.8125,
+      "mean_width": 35.52095988317133,
+      "mean_interval_score": 48.10668301276769,
+      "residual_lower": -15.708992946130643,
+      "residual_upper": 19.811966937040687,
+      "calibration_rows": 569,
+      "evaluation_rows": 80
+    },
+    {
+      "track": "nfl",
+      "task": "margin",
+      "phase": "monitor",
+      "arm": "static",
+      "nominal": 0.9,
+      "coverage": 0.8875,
+      "mean_width": 43.594503409614454,
+      "mean_interval_score": 55.573478263062476,
+      "residual_lower": -20.234111778238503,
+      "residual_upper": 23.36039163137595,
+      "calibration_rows": 569,
+      "evaluation_rows": 80
+    },
+    {
+      "track": "nfl",
+      "task": "margin",
+      "phase": "monitor",
+      "arm": "dynamic",
+      "nominal": 0.8,
+      "coverage": 0.7625,
+      "mean_width": 32.40936901853857,
+      "mean_interval_score": 47.913577276543705,
+      "residual_lower": -13.99147497376168,
+      "residual_upper": 18.41789404477689,
+      "calibration_rows": 569,
+      "evaluation_rows": 80
+    },
+    {
+      "track": "nfl",
+      "task": "margin",
+      "phase": "monitor",
+      "arm": "dynamic",
+      "nominal": 0.9,
+      "coverage": 0.9,
+      "mean_width": 43.99260641625274,
+      "mean_interval_score": 53.93782652890137,
+      "residual_lower": -20.44345485860155,
+      "residual_upper": 23.549151557651186,
+      "calibration_rows": 569,
+      "evaluation_rows": 80
+    },
+    {
+      "track": "nfl",
+      "task": "total",
+      "phase": "holdout",
+      "arm": "accepted",
+      "nominal": 0.8,
+      "coverage": 0.8228070175438597,
+      "mean_width": 33.716712298101676,
+      "mean_interval_score": 46.96686379793354,
+      "residual_lower": -17.32681714962918,
+      "residual_upper": 16.389895148472498,
+      "calibration_rows": 569,
+      "evaluation_rows": 570
+    },
+    {
+      "track": "nfl",
+      "task": "total",
+      "phase": "holdout",
+      "arm": "accepted",
+      "nominal": 0.9,
+      "coverage": 0.8982456140350877,
+      "mean_width": 43.988172168740576,
+      "mean_interval_score": 55.79857434797064,
+      "residual_lower": -21.351173786611298,
+      "residual_upper": 22.636998382129278,
+      "calibration_rows": 569,
+      "evaluation_rows": 570
+    },
+    {
+      "track": "nfl",
+      "task": "total",
+      "phase": "holdout",
+      "arm": "static",
+      "nominal": 0.8,
+      "coverage": 0.8175438596491228,
+      "mean_width": 34.92405044124822,
+      "mean_interval_score": 48.061384842063774,
+      "residual_lower": -18.271377186851133,
+      "residual_upper": 16.652673254397087,
+      "calibration_rows": 569,
+      "evaluation_rows": 570
+    },
+    {
+      "track": "nfl",
+      "task": "total",
+      "phase": "holdout",
+      "arm": "static",
+      "nominal": 0.9,
+      "coverage": 0.8894736842105263,
+      "mean_width": 44.29096289144515,
+      "mean_interval_score": 56.54368723833918,
+      "residual_lower": -21.47660075340559,
+      "residual_upper": 22.814362138039556,
+      "calibration_rows": 569,
+      "evaluation_rows": 570
+    },
+    {
+      "track": "nfl",
+      "task": "total",
+      "phase": "holdout",
+      "arm": "dynamic",
+      "nominal": 0.8,
+      "coverage": 0.8175438596491228,
+      "mean_width": 34.33138699134202,
+      "mean_interval_score": 46.85823409917398,
+      "residual_lower": -16.83196172295984,
+      "residual_upper": 17.499425268382183,
+      "calibration_rows": 569,
+      "evaluation_rows": 570
+    },
+    {
+      "track": "nfl",
+      "task": "total",
+      "phase": "holdout",
+      "arm": "dynamic",
+      "nominal": 0.9,
+      "coverage": 0.9087719298245615,
+      "mean_width": 45.618145557464956,
+      "mean_interval_score": 55.40055969596914,
+      "residual_lower": -21.241986287280014,
+      "residual_upper": 24.376159270184942,
+      "calibration_rows": 569,
+      "evaluation_rows": 570
+    },
+    {
+      "track": "nfl",
+      "task": "total",
+      "phase": "monitor",
+      "arm": "accepted",
+      "nominal": 0.8,
+      "coverage": 0.7375,
+      "mean_width": 33.716712298101676,
+      "mean_interval_score": 49.24080375146052,
+      "residual_lower": -17.32681714962918,
+      "residual_upper": 16.389895148472498,
+      "calibration_rows": 569,
+      "evaluation_rows": 80
+    },
+    {
+      "track": "nfl",
+      "task": "total",
+      "phase": "monitor",
+      "arm": "accepted",
+      "nominal": 0.9,
+      "coverage": 0.925,
+      "mean_width": 43.988172168740576,
+      "mean_interval_score": 57.98517076812368,
+      "residual_lower": -21.351173786611298,
+      "residual_upper": 22.636998382129278,
+      "calibration_rows": 569,
+      "evaluation_rows": 80
+    },
+    {
+      "track": "nfl",
+      "task": "total",
+      "phase": "monitor",
+      "arm": "static",
+      "nominal": 0.8,
+      "coverage": 0.8125,
+      "mean_width": 34.92405044124822,
+      "mean_interval_score": 45.706784690945575,
+      "residual_lower": -18.271377186851133,
+      "residual_upper": 16.652673254397087,
+      "calibration_rows": 569,
+      "evaluation_rows": 80
+    },
+    {
+      "track": "nfl",
+      "task": "total",
+      "phase": "monitor",
+      "arm": "static",
+      "nominal": 0.9,
+      "coverage": 0.95,
+      "mean_width": 44.29096289144515,
+      "mean_interval_score": 54.68854631717537,
+      "residual_lower": -21.47660075340559,
+      "residual_upper": 22.814362138039556,
+      "calibration_rows": 569,
+      "evaluation_rows": 80
+    },
+    {
+      "track": "nfl",
+      "task": "total",
+      "phase": "monitor",
+      "arm": "dynamic",
+      "nominal": 0.8,
+      "coverage": 0.825,
+      "mean_width": 34.33138699134202,
+      "mean_interval_score": 46.413832413581005,
+      "residual_lower": -16.83196172295984,
+      "residual_upper": 17.499425268382183,
+      "calibration_rows": 569,
+      "evaluation_rows": 80
+    },
+    {
+      "track": "nfl",
+      "task": "total",
+      "phase": "monitor",
+      "arm": "dynamic",
+      "nominal": 0.9,
+      "coverage": 0.9375,
+      "mean_width": 45.618145557464956,
+      "mean_interval_score": 58.06356705742045,
+      "residual_lower": -21.241986287280014,
+      "residual_upper": 24.376159270184942,
+      "calibration_rows": 569,
+      "evaluation_rows": 80
+    },
+    {
+      "track": "ncaaf",
+      "task": "margin",
+      "phase": "holdout",
+      "arm": "accepted",
+      "nominal": 0.8,
+      "coverage": 0.7951432129514321,
+      "mean_width": 40.51940929794273,
+      "mean_interval_score": 56.99579764053454,
+      "residual_lower": -20.689307094895554,
+      "residual_upper": 19.830102203047176,
+      "calibration_rows": 1568,
+      "evaluation_rows": 1606
+    },
+    {
+      "track": "ncaaf",
+      "task": "margin",
+      "phase": "holdout",
+      "arm": "accepted",
+      "nominal": 0.9,
+      "coverage": 0.8966376089663761,
+      "mean_width": 52.26772474750211,
+      "mean_interval_score": 67.59142665762624,
+      "residual_lower": -26.73339209362038,
+      "residual_upper": 25.534332653881727,
+      "calibration_rows": 1568,
+      "evaluation_rows": 1606
+    },
+    {
+      "track": "ncaaf",
+      "task": "margin",
+      "phase": "holdout",
+      "arm": "static",
+      "nominal": 0.8,
+      "coverage": 0.7764632627646326,
+      "mean_width": 44.415170905056144,
+      "mean_interval_score": 64.26495629639655,
+      "residual_lower": -21.859521824863133,
+      "residual_upper": 22.555649080193007,
+      "calibration_rows": 1568,
+      "evaluation_rows": 1606
+    },
+    {
+      "track": "ncaaf",
+      "task": "margin",
+      "phase": "holdout",
+      "arm": "static",
+      "nominal": 0.9,
+      "coverage": 0.8848069738480697,
+      "mean_width": 58.39769220319282,
+      "mean_interval_score": 75.29974314700259,
+      "residual_lower": -29.676408384892877,
+      "residual_upper": 28.72128381829994,
+      "calibration_rows": 1568,
+      "evaluation_rows": 1606
+    },
+    {
+      "track": "ncaaf",
+      "task": "margin",
+      "phase": "holdout",
+      "arm": "dynamic",
+      "nominal": 0.8,
+      "coverage": 0.8094645080946451,
+      "mean_width": 42.75748975954404,
+      "mean_interval_score": 58.88498883181957,
+      "residual_lower": -21.04863574570923,
+      "residual_upper": 21.70885401383481,
+      "calibration_rows": 1568,
+      "evaluation_rows": 1606
+    },
+    {
+      "track": "ncaaf",
+      "task": "margin",
+      "phase": "holdout",
+      "arm": "dynamic",
+      "nominal": 0.9,
+      "coverage": 0.8922789539227896,
+      "mean_width": 54.37556165987505,
+      "mean_interval_score": 69.65181362545539,
+      "residual_lower": -27.16316706572837,
+      "residual_upper": 27.212394594146684,
+      "calibration_rows": 1568,
+      "evaluation_rows": 1606
+    },
+    {
+      "track": "ncaaf",
+      "task": "margin",
+      "phase": "monitor",
+      "arm": "accepted",
+      "nominal": 0.8,
+      "coverage": 0.7797619047619048,
+      "mean_width": 40.51940929794273,
+      "mean_interval_score": 57.357403942075116,
+      "residual_lower": -20.689307094895554,
+      "residual_upper": 19.830102203047176,
+      "calibration_rows": 1568,
+      "evaluation_rows": 336
+    },
+    {
+      "track": "ncaaf",
+      "task": "margin",
+      "phase": "monitor",
+      "arm": "accepted",
+      "nominal": 0.9,
+      "coverage": 0.9017857142857143,
+      "mean_width": 52.26772474750211,
+      "mean_interval_score": 68.53826317278033,
+      "residual_lower": -26.73339209362038,
+      "residual_upper": 25.534332653881727,
+      "calibration_rows": 1568,
+      "evaluation_rows": 336
+    },
+    {
+      "track": "ncaaf",
+      "task": "margin",
+      "phase": "monitor",
+      "arm": "static",
+      "nominal": 0.8,
+      "coverage": 0.8184523809523809,
+      "mean_width": 44.415170905056144,
+      "mean_interval_score": 59.723203841664336,
+      "residual_lower": -21.859521824863133,
+      "residual_upper": 22.555649080193007,
+      "calibration_rows": 1568,
+      "evaluation_rows": 336
+    },
+    {
+      "track": "ncaaf",
+      "task": "margin",
+      "phase": "monitor",
+      "arm": "static",
+      "nominal": 0.9,
+      "coverage": 0.9196428571428571,
+      "mean_width": 58.39769220319282,
+      "mean_interval_score": 71.6254710320588,
+      "residual_lower": -29.676408384892877,
+      "residual_upper": 28.72128381829994,
+      "calibration_rows": 1568,
+      "evaluation_rows": 336
+    },
+    {
+      "track": "ncaaf",
+      "task": "margin",
+      "phase": "monitor",
+      "arm": "dynamic",
+      "nominal": 0.8,
+      "coverage": 0.7797619047619048,
+      "mean_width": 42.75748975954404,
+      "mean_interval_score": 62.23741161904445,
+      "residual_lower": -21.04863574570923,
+      "residual_upper": 21.70885401383481,
+      "calibration_rows": 1568,
+      "evaluation_rows": 336
+    },
+    {
+      "track": "ncaaf",
+      "task": "margin",
+      "phase": "monitor",
+      "arm": "dynamic",
+      "nominal": 0.9,
+      "coverage": 0.8690476190476191,
+      "mean_width": 54.37556165987505,
+      "mean_interval_score": 73.92739297508594,
+      "residual_lower": -27.16316706572837,
+      "residual_upper": 27.212394594146684,
+      "calibration_rows": 1568,
+      "evaluation_rows": 336
+    },
+    {
+      "track": "ncaaf",
+      "task": "total",
+      "phase": "holdout",
+      "arm": "accepted",
+      "nominal": 0.8,
+      "coverage": 0.8063511830635118,
+      "mean_width": 42.21720458709023,
+      "mean_interval_score": 56.91105210448507,
+      "residual_lower": -22.443253588406357,
+      "residual_upper": 19.773950998683873,
+      "calibration_rows": 1568,
+      "evaluation_rows": 1606
+    },
+    {
+      "track": "ncaaf",
+      "task": "total",
+      "phase": "holdout",
+      "arm": "accepted",
+      "nominal": 0.9,
+      "coverage": 0.8947696139476962,
+      "mean_width": 52.58153547300456,
+      "mean_interval_score": 66.47046312741581,
+      "residual_lower": -26.940361576759635,
+      "residual_upper": 25.641173896244922,
+      "calibration_rows": 1568,
+      "evaluation_rows": 1606
+    },
+    {
+      "track": "ncaaf",
+      "task": "total",
+      "phase": "holdout",
+      "arm": "static",
+      "nominal": 0.8,
+      "coverage": 0.8038605230386052,
+      "mean_width": 42.765694328139254,
+      "mean_interval_score": 58.94563349870925,
+      "residual_lower": -23.891084954877073,
+      "residual_upper": 18.87460937326218,
+      "calibration_rows": 1568,
+      "evaluation_rows": 1606
+    },
+    {
+      "track": "ncaaf",
+      "task": "total",
+      "phase": "holdout",
+      "arm": "static",
+      "nominal": 0.9,
+      "coverage": 0.9016189290161893,
+      "mean_width": 55.58278474074672,
+      "mean_interval_score": 69.43273351967997,
+      "residual_lower": -29.671675018029006,
+      "residual_upper": 25.91110972271771,
+      "calibration_rows": 1568,
+      "evaluation_rows": 1606
+    },
+    {
+      "track": "ncaaf",
+      "task": "total",
+      "phase": "holdout",
+      "arm": "dynamic",
+      "nominal": 0.8,
+      "coverage": 0.815068493150685,
+      "mean_width": 42.44798872178589,
+      "mean_interval_score": 56.65733167324899,
+      "residual_lower": -22.281917174479915,
+      "residual_upper": 20.166071547305975,
+      "calibration_rows": 1568,
+      "evaluation_rows": 1606
+    },
+    {
+      "track": "ncaaf",
+      "task": "total",
+      "phase": "holdout",
+      "arm": "dynamic",
+      "nominal": 0.9,
+      "coverage": 0.8972602739726028,
+      "mean_width": 52.40928532771662,
+      "mean_interval_score": 66.03021571926675,
+      "residual_lower": -26.065663193398876,
+      "residual_upper": 26.34362213431774,
+      "calibration_rows": 1568,
+      "evaluation_rows": 1606
+    },
+    {
+      "track": "ncaaf",
+      "task": "total",
+      "phase": "monitor",
+      "arm": "accepted",
+      "nominal": 0.8,
+      "coverage": 0.8392857142857143,
+      "mean_width": 42.21720458709023,
+      "mean_interval_score": 54.450878760544995,
+      "residual_lower": -22.443253588406357,
+      "residual_upper": 19.773950998683873,
+      "calibration_rows": 1568,
+      "evaluation_rows": 336
+    },
+    {
+      "track": "ncaaf",
+      "task": "total",
+      "phase": "monitor",
+      "arm": "accepted",
+      "nominal": 0.9,
+      "coverage": 0.9166666666666666,
+      "mean_width": 52.58153547300456,
+      "mean_interval_score": 65.11088376032863,
+      "residual_lower": -26.940361576759635,
+      "residual_upper": 25.641173896244922,
+      "calibration_rows": 1568,
+      "evaluation_rows": 336
+    },
+    {
+      "track": "ncaaf",
+      "task": "total",
+      "phase": "monitor",
+      "arm": "static",
+      "nominal": 0.8,
+      "coverage": 0.8244047619047619,
+      "mean_width": 42.765694328139254,
+      "mean_interval_score": 58.28024812744528,
+      "residual_lower": -23.891084954877073,
+      "residual_upper": 18.87460937326218,
+      "calibration_rows": 1568,
+      "evaluation_rows": 336
+    },
+    {
+      "track": "ncaaf",
+      "task": "total",
+      "phase": "monitor",
+      "arm": "static",
+      "nominal": 0.9,
+      "coverage": 0.9017857142857143,
+      "mean_width": 55.58278474074672,
+      "mean_interval_score": 69.62412275273006,
+      "residual_lower": -29.671675018029006,
+      "residual_upper": 25.91110972271771,
+      "calibration_rows": 1568,
+      "evaluation_rows": 336
+    },
+    {
+      "track": "ncaaf",
+      "task": "total",
+      "phase": "monitor",
+      "arm": "dynamic",
+      "nominal": 0.8,
+      "coverage": 0.8363095238095238,
+      "mean_width": 42.44798872178589,
+      "mean_interval_score": 55.7181318991083,
+      "residual_lower": -22.281917174479915,
+      "residual_upper": 20.166071547305975,
+      "calibration_rows": 1568,
+      "evaluation_rows": 336
+    },
+    {
+      "track": "ncaaf",
+      "task": "total",
+      "phase": "monitor",
+      "arm": "dynamic",
+      "nominal": 0.9,
+      "coverage": 0.9047619047619048,
+      "mean_width": 52.40928532771662,
+      "mean_interval_score": 66.74966567678074,
+      "residual_lower": -26.065663193398876,
+      "residual_upper": 26.34362213431774,
+      "calibration_rows": 1568,
+      "evaluation_rows": 336
+    }
+  ],
+  "market_timing": [
+    {
+      "track": "nfl",
+      "task": "win",
+      "phase": "holdout",
+      "n": 458,
+      "candidate_matched_rows": 458,
+      "timing_excluded_rows": 0
+    },
+    {
+      "track": "nfl",
+      "task": "win",
+      "phase": "monitor",
+      "n": 67,
+      "candidate_matched_rows": 67,
+      "timing_excluded_rows": 0
+    },
+    {
+      "track": "nfl",
+      "task": "margin",
+      "phase": "holdout",
+      "n": 459,
+      "candidate_matched_rows": 459,
+      "timing_excluded_rows": 0
+    },
+    {
+      "track": "nfl",
+      "task": "margin",
+      "phase": "monitor",
+      "n": 68,
+      "candidate_matched_rows": 68,
+      "timing_excluded_rows": 0
+    },
+    {
+      "track": "nfl",
+      "task": "total",
+      "phase": "holdout",
+      "n": 459,
+      "candidate_matched_rows": 459,
+      "timing_excluded_rows": 0
+    },
+    {
+      "track": "nfl",
+      "task": "total",
+      "phase": "monitor",
+      "n": 68,
+      "candidate_matched_rows": 68,
+      "timing_excluded_rows": 0
+    },
+    {
+      "track": "ncaaf",
+      "task": "win",
+      "phase": "holdout",
+      "n": 1076,
+      "candidate_matched_rows": 1232,
+      "timing_excluded_rows": 156
+    },
+    {
+      "track": "ncaaf",
+      "task": "win",
+      "phase": "monitor",
+      "n": 218,
+      "candidate_matched_rows": 262,
+      "timing_excluded_rows": 44
+    },
+    {
+      "track": "ncaaf",
+      "task": "margin",
+      "phase": "holdout",
+      "n": 1126,
+      "candidate_matched_rows": 1283,
+      "timing_excluded_rows": 157
+    },
+    {
+      "track": "ncaaf",
+      "task": "margin",
+      "phase": "monitor",
+      "n": 237,
+      "candidate_matched_rows": 283,
+      "timing_excluded_rows": 46
+    },
+    {
+      "track": "ncaaf",
+      "task": "total",
+      "phase": "holdout",
+      "n": 1126,
+      "candidate_matched_rows": 1283,
+      "timing_excluded_rows": 157
+    },
+    {
+      "track": "ncaaf",
+      "task": "total",
+      "phase": "monitor",
+      "n": 237,
+      "candidate_matched_rows": 283,
+      "timing_excluded_rows": 46
+    }
+  ],
+  "decisions": {
+    "ncaaf/margin/dynamic": {
+      "accepted_baseline_replaced": false,
+      "development_qualified": false,
+      "eligible_for_future_prospective_trial": false,
+      "exposed_diagnostic": {
+        "eligible": false,
+        "exploratory": true,
+        "gates": {
+          "gain_1pct_vs_accepted": false,
+          "gain_1pct_vs_static": true,
+          "paired_upper_negative_vs_accepted": false,
+          "paired_upper_negative_vs_static": true,
+          "secondary_guard_vs_accepted": false,
+          "secondary_guard_vs_static": true
+        },
+        "production_promoted": false
+      },
+      "production_promoted": false
+    },
+    "ncaaf/total/dynamic": {
+      "accepted_baseline_replaced": false,
+      "development_qualified": false,
+      "eligible_for_future_prospective_trial": false,
+      "exposed_diagnostic": {
+        "eligible": true,
+        "exploratory": true,
+        "gates": {
+          "gain_1pct_vs_accepted": true,
+          "gain_1pct_vs_static": true,
+          "paired_upper_negative_vs_accepted": true,
+          "paired_upper_negative_vs_static": true,
+          "secondary_guard_vs_accepted": true,
+          "secondary_guard_vs_static": true
+        },
+        "production_promoted": false
+      },
+      "production_promoted": false
+    },
+    "ncaaf/win/dynamic": {
+      "accepted_baseline_replaced": false,
+      "development_qualified": false,
+      "eligible_for_future_prospective_trial": false,
+      "exposed_diagnostic": {
+        "eligible": false,
+        "exploratory": true,
+        "gates": {
+          "gain_1pct_vs_accepted": false,
+          "gain_1pct_vs_static": true,
+          "paired_upper_negative_vs_accepted": false,
+          "paired_upper_negative_vs_static": true,
+          "secondary_guard_vs_accepted": false,
+          "secondary_guard_vs_static": true
+        },
+        "production_promoted": false
+      },
+      "production_promoted": false
+    },
+    "nfl/margin/dynamic": {
+      "accepted_baseline_replaced": false,
+      "development_qualified": false,
+      "eligible_for_future_prospective_trial": false,
+      "exposed_diagnostic": {
+        "eligible": false,
+        "exploratory": true,
+        "gates": {
+          "gain_1pct_vs_accepted": false,
+          "gain_1pct_vs_static": true,
+          "paired_upper_negative_vs_accepted": false,
+          "paired_upper_negative_vs_static": true,
+          "secondary_guard_vs_accepted": true,
+          "secondary_guard_vs_static": true
+        },
+        "production_promoted": false
+      },
+      "production_promoted": false
+    },
+    "nfl/total/dynamic": {
+      "accepted_baseline_replaced": false,
+      "development_qualified": false,
+      "eligible_for_future_prospective_trial": false,
+      "exposed_diagnostic": {
+        "eligible": false,
+        "exploratory": true,
+        "gates": {
+          "gain_1pct_vs_accepted": false,
+          "gain_1pct_vs_static": true,
+          "paired_upper_negative_vs_accepted": false,
+          "paired_upper_negative_vs_static": false,
+          "secondary_guard_vs_accepted": true,
+          "secondary_guard_vs_static": true
+        },
+        "production_promoted": false
+      },
+      "production_promoted": false
+    },
+    "nfl/win/dynamic": {
+      "accepted_baseline_replaced": false,
+      "development_qualified": false,
+      "eligible_for_future_prospective_trial": false,
+      "exposed_diagnostic": {
+        "eligible": false,
+        "exploratory": true,
+        "gates": {
+          "gain_1pct_vs_accepted": false,
+          "gain_1pct_vs_static": true,
+          "paired_upper_negative_vs_accepted": false,
+          "paired_upper_negative_vs_static": true,
+          "secondary_guard_vs_accepted": true,
+          "secondary_guard_vs_static": true
+        },
+        "production_promoted": false
+      },
+      "production_promoted": false
+    }
+  },
+  "cohort_notes": [
+    "V059 college candidate training and evaluation target FBS vs FBS only.",
+    "Accepted college reference was trained on the earlier mixed FBS/opponent cohort.",
+    "Previously examined retrospective seasons; no new untouched holdout.",
+    "Point-only accepted references do not have an implied joint predictive density.",
+    "Native Gaussian intervals are not calibration guarantees; negative-score mass is explicitly reported."
+  ]
+}

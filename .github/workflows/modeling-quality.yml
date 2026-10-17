@@ -5,11 +5,13 @@ on:
     paths:
       - 'modeling/football_v058/**'
       - 'modeling/football_v059/**'
+      - 'modeling/football_v060/**'
       - '.github/workflows/modeling-quality.yml'
   pull_request:
     paths:
       - 'modeling/football_v058/**'
       - 'modeling/football_v059/**'
+      - 'modeling/football_v060/**'
       - '.github/workflows/modeling-quality.yml'
   workflow_dispatch:
 permissions:
@@ -87,3 +89,24 @@ jobs:
           assert report['v059_owner_run_completed'] is False
           print('Four synthetic joint fits and temporal/distribution checks completed.')
           PY
+
+  offline-native-boosting:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    env:
+      OMP_NUM_THREADS: '2'
+      OPENBLAS_NUM_THREADS: '2'
+      MKL_NUM_THREADS: '2'
+      NUMEXPR_NUM_THREADS: '2'
+      PYTHONHASHSEED: '0'
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+          cache: pip
+          cache-dependency-path: modeling/football_v060/requirements.txt
+      - name: Install pinned CPU native-boosting dependencies
+        run: python -m pip install -r modeling/football_v060/requirements.txt
+      - name: Run twelve synthetic fits and public parser checks
+        run: python -m unittest discover -s modeling/football_v060 -p '*_tests.py' -v

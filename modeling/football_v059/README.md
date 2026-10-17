@@ -1,6 +1,6 @@
 # Football V059 — dynamic score states and FBS data contracts
 
-This public scientific core implements a fixed Gaussian team offense/defense model, its static control, exact FBS-versus-FBS scope selection and a conservative regulation-drive repair. It includes synthetic tests and a small offline demonstration. **V059 owner execution is still pending; public fixture outputs are not achieved NFL/FBS model results.**
+This public scientific core implements a fixed Gaussian team offense/defense model, its static control, exact FBS-versus-FBS scope selection and a conservative regulation-drive repair. It includes synthetic tests and a small offline demonstration. **V059 owner execution completed 16 real joint fits and eight FBS repairs; no task qualified. Public fixtures remain software checks, separate from those real results.**
 
 ## Reproduce the software behavior
 
@@ -18,7 +18,7 @@ Windows PowerShell activation is `.venv-state\Scripts\Activate.ps1`; select a su
 
 The state test class performs **four tiny synthetic joint fits**, then checks the same results across mathematical and temporal cases. Repair/scope tests use invented local fixtures and perform no fits. The separate demo performs another **four synthetic joint fits**, with four training and four evaluation games per arm. Those counts are deliberately small software checks, not a model-quality evaluation.
 
-The actual owner plan has **16 joint fits**: two tracks × static/dynamic × four chronological partitions. A joint fit produces three task outputs; it does not count as three independent fits.
+The completed owner execution had **16 joint fits**: two tracks × static/dynamic × four chronological partitions. A joint fit produces three task outputs; it does not count as three independent fits.
 
 ## Method and control
 
@@ -56,4 +56,4 @@ This directory contains no raw football records, credentials, private account co
 
 The original eight repair target IDs in `fbs_repair.py` identify the bounded historical hypothesis; identifiers do not supply the source data or permission to redistribute it. The public core does not download those games. Exact owner results require authorized source access, source hashes and the self-contained AWS handoff, which this demonstration does not replace.
 
-Current real evidence remains [V058's negative benchmark](../../docs/status/football_v058/summary.json). [Local V059 data preparation](../../docs/status/football_v059/local_data_preparation.json) is separately labeled runtime-pending. CI configuration is not proof of a passing hosted run; inspect the actual workflow result.
+Current actual evidence is the [V059 completed benchmark](../../docs/status/football_v059/summary.json), [metrics](../../docs/status/football_v059/metrics.json) and [accepted repair receipt](../../docs/status/football_v059/repair_completion.json). [Local V059 preparation](../../docs/status/football_v059/local_data_preparation.json) preserves its original pending status as dated history. CI configuration is not proof of a passing hosted run; inspect the actual workflow result.

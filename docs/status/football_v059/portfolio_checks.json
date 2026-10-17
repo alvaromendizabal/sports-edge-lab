@@ -1,0 +1,40 @@
+{
+  "status": "PASS",
+  "exact_metric_field_checks": 78,
+  "distribution_evidence_exact": true,
+  "distribution_series": 8,
+  "local_links": 177,
+  "missing_links": [],
+  "historical_evidence_files_preserved": [
+    "docs/status/football_v057/summary.json",
+    "docs/status/football_v057/metrics.json",
+    "docs/status/football_v058/summary.json",
+    "docs/status/football_v058/metrics.json",
+    "docs/status/football_v059/handoff.json",
+    "docs/status/football_v059/acceptance.json",
+    "docs/status/football_v059/local_data_preparation.json",
+    "docs/history/README_PRE_MODELING_20261017.md"
+  ],
+  "html_tables_with_captions": 3,
+  "external_runtime_assets": 0,
+  "browser_render": "Not verified: Chromium executable unavailable",
+  "html_sha256": "e4266969d0974e73dbb3e4b05db624775ef154a6b8223528d2cfb0e3ca806273",
+  "scorecard_behavior": {
+    "status": "PASS",
+    "task_selections": 6,
+    "distribution_selections": 8,
+    "method": "Node VM minimal DOM shim; not rendered browser"
+  },
+  "notebook_render_fixture": {
+    "code_cells": 6,
+    "plotly_figures": 2,
+    "executed": true,
+    "execution_engine": "in-process IPython; real cells and captured MIME output",
+    "saved_reopened_validated": true,
+    "later_cell_completed": true,
+    "browser_visual_inspection": false,
+    "fixture": true,
+    "real_fits": 0,
+    "provider_calls": 0
+  }
+}

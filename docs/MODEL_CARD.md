@@ -1,6 +1,6 @@
 # Model card — NFL and NCAAF
 
-Evidence cutoff: **October 17, 2026, 22:06:37 UTC**, V058 return. [Overview](../README.md) · [Data](DATA_READINESS.md) · [Roadmap](RESEARCH_ROADMAP.md)
+Evidence cutoff: **October 17, 2026, 22:34:31 UTC**, V059 return. [Overview](../README.md) · [Data](DATA_READINESS.md) · [Roadmap](RESEARCH_ROADMAP.md)
 
 ## Intended use and accepted models
 
@@ -15,15 +15,49 @@ The foundation includes Elo, recent points scored/allowed, recent margin and tot
 
 Regularization is fixed (`C=1` for logistic, `alpha=20` for ridge); scaling is fitted only inside the training partition. Current point predictions are not cover/over probabilities or a joint score distribution.
 
+## V059 — completed joint-score state experiment
+
+V059 completed **16 joint fits**: two tracks × static/dynamic arms × four chronological partitions. Each fit emits win, margin and total outputs. Both state arms update from released earlier results; the static control has zero process drift, not zero posterior learning. Fixed Gaussian priors and observation assumptions are research choices, not fitted hyperparameter optimality.
+
+| Exposed 2024–2025 output | Games | Accepted | Static | Dynamic |
+| --- | ---: | ---: | ---: | ---: |
+| NFL win log loss | 569 | 0.629830 | 0.661325 | 0.628622 |
+| NFL win Brier | 569 | 0.220274 | 0.234728 | 0.219318 |
+| NFL margin MAE | 570 | 10.198375 | 10.708147 | 10.142102 |
+| NFL total MAE | 570 | 10.332147 | 10.613079 | 10.333307 |
+| FBS vs FBS win log loss | 1,606 | 0.554682 | 0.626822 | 0.565083 |
+| FBS vs FBS win Brier | 1,606 | 0.189517 | 0.219659 | 0.191477 |
+| FBS vs FBS margin MAE | 1,606 | 12.819829 | 14.474232 | 12.982906 |
+| FBS vs FBS total MAE | 1,606 | 13.093919 | 13.596402 | 12.862187 |
+
+**No task qualified on development.** FBS total MAE improved 1.77% on the exposed cohort, with paired difference interval **[-0.439300, -0.036196] points**. The corresponding development interval was **[-0.292177, +0.035513]**; its uncertainty gate failed. The 2026 monitoring comparison also worsened slightly: dynamic **12.599326** versus accepted **12.577538**, 336 games. Exposed significance cannot override the frozen development decision.
+
+College state models train and evaluate only FBS-versus-FBS; the accepted college reference was historically trained on mixed FBS/opponent rows. V059 accepted eight FBS regulation-drive repairs, but those secondary aggregates were **not inserted into model features**. It preserved accepted predictions and frozen targets.
+
+### Distribution diagnostics are now actual evidence
+
+| Dynamic total distribution, exposed 2024–2025 | NFL | FBS vs FBS |
+| --- | ---: | ---: |
+| Gaussian CRPS, lower better | 7.484517 | 9.288099 |
+| Gaussian marginal NLL, lower better | 4.029242 | 4.261727 |
+| Nominal 80% coverage, observed | 87.37% | 90.91% |
+| 80% mean width, points | 40.7391 | 54.3274 |
+| Nominal 95% coverage, observed | 97.37% | 99.00% |
+| 95% mean width, points | 62.3051 | 83.0865 |
+
+These broad, overcovering intervals do not establish well-calibrated uncertainty. Coverage must be interpreted with width, interval score, CRPS and NLL. The Gaussian model permits negative scores; mean upper bounds on either team being negative are **4.34% NFL / 8.08% FBS**, not exact joint probabilities. Scores are not silently truncated. Accepted point-only models have no implied comparable joint density.
+
+Independent inspection passed **18,509 numerical checks**, 85 runtime tests, 16 input-cache hash checks and all 16 actual fits. The run took **47.568 seconds**; estimated compute was **$0.006395** at the stated $0.484/hour assumption, excluding startup/idle, storage and requests. No providers were called. [Actual summary](status/football_v059/summary.json) · [Exact scores, gates and distributions](status/football_v059/metrics.json) · [Repair completion](status/football_v059/repair_completion.json).
+
 ## Complexity already tested
 
-Histogram gradient boosting is not absent from the project: **at least 24 verified early real fits** evaluated it across V047/V048R1. This is a verified early subset, not an exhaustive count of boosting fits across later experiments. Development win log loss favored the linear models: NFL 0.642625 versus HGB 0.664903; college adjusted features 0.510625 versus HGB 0.530834. This evidence rejected those particular configurations, not the entire boosting family.
+Histogram gradient boosting is not absent from the project: **36 verified real fits** cover 24 early V047/V048R1 fits and 12 NFL V058 fits. Development win log loss favored the linear models: NFL 0.642625 versus HGB 0.664903; college adjusted features 0.510625 versus HGB 0.530834. This evidence rejected those particular configurations, not the entire boosting family.
 
 **V058 completed 36 real fits:** 12 NFL HGB fits on the 36-feature QB representation and 24 MLP fits across NFL (36 features) and NCAAF (60 features). HGB used 100 boosting iterations, at most 15 leaves and depth five. The MLP used 32- and 16-unit tanh hidden layers, fixed 200 Adam epochs and training-only input/target scaling. This single-seed benchmark did not use random validation or early stopping. No college HGB was refitted.
 
 All nine candidate/task development qualifications failed; no model was promoted. Every reported MLP completed its 200 epochs. A completed but poor experiment is negative evidence, not proof that the model family is fundamentally unsuitable.
 
-## V058 results on the relevant college scope
+## Preserved V058 nonlinear results
 
 Future college predictions and headline evaluation target **FBS versus FBS**. The historical accepted college model was fitted on the prior FBS-plus-opponents cohort; the FBS rows below are retrospective subgroup scores of those existing predictions, not a newly trained FBS-only model. FCS archives are preserved as history/context without new standalone FCS work.
 
@@ -44,7 +78,7 @@ Independent inspection verified **23,053 numerical checks**, 36 actual fits, 66 
 
 ## Evaluation design and exposure
 
-V057 development folds evaluate 2022 after training through 2021 and 2023 after training through 2022. The exposed 2024–2025 evaluation trains through 2023. The 2026 monitoring fold trains through 2025. Model coefficients are fixed within each fold; declared released history updates between games.
+The repeated development folds evaluate 2022 after training through 2021 and 2023 after training through 2022. The exposed 2024–2025 evaluation trains through 2023. The 2026 monitoring fold trains through 2025. Model coefficients are fixed within each fold; declared released history updates between games.
 
 All these evaluation periods have been examined across experiments. A new version does not create a new untouched test. Confidence intervals are descriptive paired season-week bootstraps, not a correction for repeated model selection. Fewer than eight blocks means no asserted interval. A future prospective protocol must be frozen before a confirmatory claim.
 
@@ -90,9 +124,9 @@ The win model's lower Brier but higher log loss illustrates why metrics must be 
 | --- | --- |
 | Win probability | Log loss, Brier, same-cohort Brier skill against declared references, reliability bins/counts/uncertainty and probability bias; AUC and accuracy as secondary diagnostics. |
 | Margin / total point accuracy | MAE, RMSE, median and 90th-percentile absolute error, signed bias. |
-| Prediction intervals | 80%/90% coverage, width and interval score; no automatic coverage guarantee under temporal drift. |
+| Prediction intervals | Residual-calibrated interval coverage/width/score plus V059 native Gaussian 80%/95% diagnostics; no automatic coverage guarantee under temporal drift. |
 | Stability | Predeclared season, venue, prior-history coverage and college matchup slices, paired losses, block counts and uncertainty. Sparse groups do not support promotion claims. |
-| Full predictive distribution | CRPS becomes relevant after a valid distribution is implemented. |
+| Full predictive distribution | V059 joint Gaussian NLL and marginal Gaussian CRPS/NLL; explicit support assumptions and negative-score mass. Accepted point-only references have no implied joint density. |
 | Economic decisions | Separate future executable-price protocol with costs, settlement, no-action rules, CLV, ROI, turnover and drawdown. Not established here. |
 
 ## Material limitations
@@ -105,11 +139,11 @@ The win model's lower Brier but higher log loss illustrates why metrics must be 
 - Tracking/video access and permitted ML use are not confirmed.
 - No held-out prospective test, serving SLO, ongoing calibration monitoring or live wagering approval exists.
 
-Source records: [latest V058 execution](status/football_v058/summary.json), [V058 metrics](status/football_v058/metrics.json), [preserved V057 evidence](status/football_v057/summary.json) and [scorecard evidence](demo/evidence.json). The owner return archives contain fuller prediction-level diagnostics and model manifests; public aggregate evidence does not replace them.
+Source records: [latest V059 execution](status/football_v059/summary.json), [V059 metrics](status/football_v059/metrics.json), [preserved V058 execution](status/football_v058/summary.json), [V058 metrics](status/football_v058/metrics.json), [preserved V057 evidence](status/football_v057/summary.json) and [scorecard evidence](demo/evidence.json). The owner return archives contain fuller prediction-level diagnostics and model manifests; public aggregate evidence does not replace them.
 
 
-## Next hypothesis: V059, not yet executed
+## Next decision
 
-A fixed dynamic-versus-static joint Gaussian model will represent team offense/defense states and derive win, margin and total outputs. The planned comparison is 16 joint fits across two arms, two tracks and four folds; this is not 48 independent fit attempts. The NFL dynamic-strength literature, including [Glickman and Stern (1998)](https://www.tandfonline.com/doi/abs/10.1080/01621459.1998.10474084), motivates changing latent team strength. The proposed offense/defense and joint-output design is an extension inspired by that work, not an exact reproduction or a transferred performance claim.
+Keep NFL V047 and college V048R1 as accepted research references. Close the tested V059 fixed specification as negative/inconclusive while preserving its FBS-total lead for a materially different, predeclared investigation. Resolve the remaining 14 FBS source gaps where evidence supports repair; distinguish improved data coverage from improved predictions.
 
-V059 must first validate FBS scope and the prepared overtime-order repair. A local counterfactual does not establish a completed AWS repair or a better model. Accepted checkpoints and predictions remain preserved.
+The dynamic-strength mechanism is inspired by [Glickman and Stern (1998)](https://www.tandfonline.com/doi/abs/10.1080/01621459.1998.10474084), not an exact reproduction. The [feature strategy](FEATURE_STRATEGY.md) prioritizes decision-time information and explicitly separates completed sklearn HGB/MLP work from unexecuted XGBoost, LightGBM, CatBoost, PyTorch and TensorFlow possibilities.

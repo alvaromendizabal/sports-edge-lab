@@ -4,11 +4,11 @@
 
 Sports Edge Lab develops NFL and NCAA football win probabilities, point-margin forecasts and game-total forecasts. The project connects source acquisition, player identity, historical feature construction, model evaluation and recoverable AWS execution. Basketball tracks share the infrastructure; football is the current modeling focus.
 
-**Verified through October 17, 2026 · V058:** 246 completed real model fits; accepted NFL and NCAAF baselines; no demonstrated market advantage or production promotion. The nonlinear benchmark completed all 36 fits, including 24 neural-network fits. None of its nine candidate/task combinations passed qualification. Negative results are retained as research evidence.
+**Verified through October 17, 2026 · V059:** 262 completed real model fits; eight accepted FBS data repairs; 14 FBS drive gaps remain. The latest static/dynamic score-state benchmark completed all 16 joint fits. None of its six task development qualifications passed. Accepted NFL/NCAAF baselines remain unchanged; no market advantage or production promotion is established.
 
 **College scope:** future forecasts and headline evaluation target **FBS versus FBS**. Historical FBS/FCS games remain archived and may provide declared opponent context; no standalone FCS acquisition or modeling work is planned.
 
-[Model card](docs/MODEL_CARD.md) · [Data readiness](docs/DATA_READINESS.md) · [Architecture](docs/ARCHITECTURE.md) · [Research roadmap](docs/RESEARCH_ROADMAP.md) · [V058 completed evidence](docs/status/football_v058/README.md) · [Evidence scorecard](docs/demo/index.html)
+[Model card](docs/MODEL_CARD.md) · [Data readiness](docs/DATA_READINESS.md) · [Architecture](docs/ARCHITECTURE.md) · [Research roadmap](docs/RESEARCH_ROADMAP.md) · [V059 completed evidence](docs/status/football_v059/README.md) · [Evidence scorecard](docs/demo/index.html)
 
 ## A two-minute review
 
@@ -17,26 +17,26 @@ Sports Edge Lab develops NFL and NCAA football win probabilities, point-margin f
 | What is being predicted? | Home win conditional on no tie, home-minus-away margin, and combined points; separate models for NFL and NCAAF. |
 | What is currently accepted? | NFL V047: 16 team-history features. NCAAF V048R1: 60 team-history and opponent-adjusted drive features. Regularized logistic/ridge models. |
 | Is the history substantial? | The audited NFL modeling slice contains **498,285 play-by-play rows across 2016–2026**, covering 2,841 completed games. The previously highlighted 14,031 rows were only the current-season slice. The wider raw archive spans NFL **1999–2026** and ESPN college **2004–2026**, with **3.23 million** records in the latest selected annual ESPN files. These are raw source records, not deduplicated validated plays. |
-| Why not just use a larger model? | V058 added 12 histogram-boosting and 24 small-neural-network fits. All nine candidate/task qualifications failed. More capacity did not improve these fixed representations reliably. |
+| Why not just use a larger model? | V058 completed HGB/MLP tests; V059 tested dynamic score states. Neither qualified a replacement. Named frameworks and prioritized predictive information are distinguished in the [feature strategy](docs/FEATURE_STRATEGY.md). |
 | What prevents overstated results? | Chronological fitting, exact same-game comparisons, training-only preprocessing, paired uncertainty, data-time caveats and explicit records of repeatedly examined evaluation seasons. |
 | What is reproducible publicly? | Source, tests, execution contracts and sanitized evidence. Private/licensed raw data and credentials stay outside Git. Public fixtures test behavior; they do not reproduce private-data scores. |
 
 ## Results, not just downloads
 
-V058 tested fixed histogram gradient boosting (HGB) and a small multilayer perceptron (MLP), reusing accepted predictions. The 2024–2025 periods below are exposed retrospective evaluation, not untouched tests. Lower is better.
+V059 tested joint Gaussian offense/defense states against a static control and accepted forecasts. Its 2024–2025 periods are exposed retrospective evaluation, not untouched tests. Lower is better.
 
-| Track / task | Accepted linear | HGB | MLP | Metric |
+| Track / task | Accepted linear | Static state | Dynamic state | Metric |
 | --- | ---: | ---: | ---: | --- |
-| NFL win | **0.6298** | 0.6309 | 1.1478 | Log loss; 569 games |
-| NFL margin | 10.1984 | **10.1315** | 13.4098 | MAE, points; 570 games |
-| NFL total | **10.3321** | 10.3919 | 14.4034 | MAE, points; 570 games |
-| FBS vs FBS win | **0.5547** | Not refitted | 1.0393 | Log loss; 1,606 games |
-| FBS vs FBS margin | **12.8198** | Not refitted | 15.6696 | MAE, points; 1,606 games |
-| FBS vs FBS total | **13.0939** | Not refitted | 15.6920 | MAE, points; 1,606 games |
+| NFL win | 0.6298 | 0.6613 | **0.6286** | Log loss; 569 games |
+| NFL margin | 10.1984 | 10.7081 | **10.1421** | MAE, points; 570 games |
+| NFL total | **10.3321** | 10.6131 | 10.3333 | MAE, points; 570 games |
+| FBS vs FBS win | **0.5547** | 0.6268 | 0.5651 | Log loss; 1,606 games |
+| FBS vs FBS margin | **12.8198** | 14.4742 | 12.9829 | MAE, points; 1,606 games |
+| FBS vs FBS total | 13.0939 | 13.5964 | **12.8622** | MAE, points; 1,606 games |
 
-The small NFL margin gain was **0.0669 points / 0.66%**, with a paired 95% difference interval spanning zero. It failed the declared threshold and development gates. The MLP configurations performed materially worse. This rejects these tested configurations, not neural networks or boosting as whole fields.
+The FBS total gain was **1.77%** on exposed seasons. Its development paired 95% difference interval **[-0.2922, +0.0355] points** crossed zero, and 2026 monitoring MAE was slightly worse than accepted (12.5993 versus 12.5775). It is an exploratory lead, not a qualified replacement. All six development qualifications failed.
 
-The FBS-only rows are exact subgroups of the existing college forecasts; they are **not a new FBS-only model fit**. Prior market comparisons use separate quote-matched cohorts and horizons. [Full model card, Brier scores and limitations](docs/MODEL_CARD.md) · [V058 verified evidence](docs/status/football_v058/summary.json).
+V059 college candidates trained and evaluated only FBS-versus-FBS. The accepted college reference retains its earlier mixed FBS/opponent training. Native Gaussian CRPS, NLL and interval width/coverage are now reported; they reveal broad intervals and nonzero negative-score probability. [Full model card](docs/MODEL_CARD.md) · [Exact V059 metrics](docs/status/football_v059/metrics.json) · [Prior HGB/MLP results](docs/status/football_v058/README.md).
 
 ## Engineering that supports the research
 
@@ -49,11 +49,11 @@ The FBS-only rows are exact subgroups of the existing college forecasts; they ar
 
 ## What is ready—and what is not
 
-Core team-level research is ready. NFL quarterback histories are auditable research features; they are **not confirmed future starters**. The FBS-versus-FBS canonical scope has **7,898 completed games**, with **7,895** in the frozen feature table and three recent finals still missing there.
+Core team-level research is ready. NFL quarterback histories are auditable research features; they are **not confirmed future starters**. The audited FBS-versus-FBS canonical scope has **7,898 completed games**, with **7,895** in the frozen feature table. A newer existing capture contains **15 further FBS finals** with team/player boxes; their drive/PBP readiness remains to be checked. Frozen predictions are preserved.
 
-Of **22 in-scope drive gaps**, eight have a locally verified overtime-ordering repair prepared for V059. AWS integration is pending; **14 would remain after that repair**. Six historical mixed FBS/FCS gaps are retained separately and are not new repair targets. Nine previously unresolved college availability rows, historical publication-time verification, final pregame availability and tracking/video entitlement remain open.
+V059 runtime verification accepted **eight of 22 in-scope drive repairs**; **14 remain** (six absent alternate-source games, five unknown positive-play results and three current source updates). Five of the 14 now have locally validated official-school secondary captures staged for V060; runtime acceptance remains pending. Six historical mixed FBS/FCS gaps are retained separately and are not new repair targets. Nine previously unresolved college availability rows, historical publication-time verification, final pregame availability and tracking/video entitlement remain open.
 
-**Next — V059:** cached FBS scope/repair validation and a controlled dynamic-versus-static joint Gaussian team offense/defense benchmark. Sixteen planned joint fits each generate win, margin and total outputs. It has not executed. No live wagering readiness or profitability claim is made.
+**Next — V060, prepared:** investigate the 14 FBS gaps and changed current NFL assets; then compare native XGBoost/LightGBM/CatBoost with fixed, equivalent-cohort controls (84 planned new fits). Captured updates stay separate from frozen experiment inputs. No V060 result is claimed. Predictive priorities remain decision-time team strength, expected QB/lineup, role-weighted availability and situation-aware efficiency. [Feature priorities and framework status](docs/FEATURE_STRATEGY.md). No live wagering readiness or profitability claim is made.
 
 The five-sport raw archive measured 101,035 in-scope content files / 17.39 GB at October 16, 23:30 UTC. This dated storage inventory is not a count of unique games, training rows or current model-ready examples. [Original inventory evidence](docs/status/content_inventory_20261016T2330Z.json).
 
@@ -63,7 +63,7 @@ The five-sport raw archive measured 101,035 in-scope content files / 17.39 GB at
 | --- | --- |
 | Modeling and experimental reasoning | [Model card](docs/MODEL_CARD.md) → [research roadmap](docs/RESEARCH_ROADMAP.md) |
 | Data engineering and provenance | [Data readiness](docs/DATA_READINESS.md) → [source catalog](docs/DATA_CATALOG.md) |
-| Systems and reliability | [Architecture](docs/ARCHITECTURE.md) → [V059 state core](modeling/football_v059/README.md) / [completed V058 benchmark](modeling/football_v058/README.md) |
+| Systems and reliability | [Architecture](docs/ARCHITECTURE.md) → [V060 native booster core](modeling/football_v060/README.md) / [V059 state core](modeling/football_v059/README.md) / [V058 benchmark](modeling/football_v058/README.md) |
 | Portfolio presentation | [Static evidence scorecard](docs/demo/index.html) → [review rubric](docs/REPOSITORY_REVIEW.md) |
 | Historical acquisition decisions | [Preserved pre-modeling README](docs/history/README_PRE_MODELING_20261017.md) → [execution source versions](docs/EXECUTION_SOURCE_VERSIONS.md) |
 

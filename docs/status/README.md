@@ -1,12 +1,14 @@
 # Operational evidence
 
-**Latest verified modeling evidence — October 17, 2026, 22:06:37 UTC:** [V058 summary](football_v058/summary.json) and [metrics / FBS-only slices](football_v058/metrics.json). All 36 planned fits completed (12 HGB, 24 MLP), zero provider calls, no model promotions. All nine candidate/task development qualifications failed. Accepted models remain NFL V047 and NCAAF V048R1.
+**Latest verified modeling evidence — October 17, 2026, 22:34:31 UTC:** [V059 summary](football_v059/summary.json), [metrics](football_v059/metrics.json) and [accepted FBS repair evidence](football_v059/repair_completion.json). All 16 planned joint fits completed; eight FBS data repairs were accepted; 14 FBS drive gaps remain. Zero provider calls and no model promotions. All six task development qualifications failed. Accepted models remain NFL V047 and NCAAF V048R1.
 
-Verified minimum tally: **17 accepted / 12 failed / two stopped executions; seven accepted modeling runs / one failed; 246 completed real fits.**
+Verified minimum tally: **18 accepted / 12 failed / two stopped executions; eight accepted modeling runs / one failed; 262 completed real fits.** V059 college candidates train/evaluate only FBS-versus-FBS. Earlier accepted college training remains mixed FBS/opponent scope.
 
-Future college forecasts/evaluation target **FBS versus FBS**. [Local cached-data preparation for V059](football_v059/local_data_preparation.json) verifies eight regulation-drive repairs locally; AWS integration is pending. The 22 in-scope drive gaps would become 14 after runtime verification; six historical FBS/FCS context gaps remain deferred. V059 has not executed.
+[Current model card](../MODEL_CARD.md) · [Data readiness](../DATA_READINESS.md) · [Feature strategy](../FEATURE_STRATEGY.md) · [V059 public core](../../modeling/football_v059/README.md).
 
-[Current model card](../MODEL_CARD.md) · [Data readiness](../DATA_READINESS.md) · [Fresh PBP archive evidence](pbp_coverage_verified_20261017.json) · [Completed V058 implementation](../../modeling/football_v058/README.md).
+### Preserved V058 observation
+
+[V058 summary](football_v058/summary.json) and [metrics / FBS-only slices](football_v058/metrics.json): 36 completed fits (12 HGB, 24 MLP), no provider calls, all nine development qualifications failed. Its 246-fit cumulative tally and V059-pending fields describe that earlier observation, not current state.
 
 ### Preserved V057 modeling observation
 

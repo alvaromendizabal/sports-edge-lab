@@ -62,11 +62,11 @@ Existing acquisition collectors and schedules have their own frozen scope. Cache
 
 ## Public reproducibility boundary
 
-[V059 state/repair core](../modeling/football_v059/README.md) and [V058 benchmark implementation](../modeling/football_v058/README.md) expose the experiment mechanics. The V059 public tests/demonstration use synthetic data; its owner execution remains pending. Code, tests, contracts, source references and non-sensitive aggregate metrics are reviewable here. Exact owner results require access to the pinned AWS objects and their applicable source rights. Synthetic fixtures establish software behavior, not achieved real-data model performance. Large raw files, private/licensed records, model binaries and secrets stay outside public Git history.
+[V059 state/repair core](../modeling/football_v059/README.md) and [V058 benchmark implementation](../modeling/football_v058/README.md) expose the experiment mechanics. The V059 public tests/demonstration use synthetic data; its owner execution completed separately, with 16 verified real fits. Code, tests, contracts, source references and non-sensitive aggregate metrics are reviewable here. Exact owner results require access to the pinned AWS objects and their applicable source rights. Synthetic fixtures establish software behavior, not achieved real-data model performance. Large raw files, private/licensed records, model binaries and secrets stay outside public Git history.
 
 
-## V059 joint-state extension: prepared
+## V059 joint-state extension: completed
 
-The next branch keeps acquisition separate from modeling. It first validates FBS-versus-FBS scope and a cached regulation-drive repair, preserving frozen features and labels. Static/dynamic Gaussian team filters then consume only declared released results. Both arms update their posterior after earlier outcomes become available; the static control has zero process drift rather than no learning. Each joint fit produces home/away means and covariance, then win, margin and total outputs.
+V059 kept acquisition separate from modeling. It validated FBS-versus-FBS scope and a cached regulation-drive repair, preserving frozen features and labels. Static/dynamic Gaussian team filters then consume only declared released results. Both arms update their posterior after earlier outcomes become available; the static control has zero process drift rather than no learning. Each joint fit produces home/away means and covariance, then win, margin and total outputs.
 
-The public core reports Gaussian density/CRPS, native interval diagnostics and negative-score mass as explicit model assumptions. No runtime completion, production promotion or full-distribution baseline result is implied by publishing this source.
+The public core reports Gaussian density/CRPS, native interval diagnostics and negative-score mass as explicit model assumptions. The actual return completed 16 fits and eight FBS repairs, with no model promotions. Point-only accepted baselines do not acquire a joint density by comparison. [Runtime evidence](status/football_v059/summary.json) is distinct from public fixture outputs.

@@ -1,0 +1,51 @@
+{
+  "status": "SUCCESS",
+  "class": "VALID_NEGATIVE_OR_INCONCLUSIVE",
+  "run_id": "20261017T223343Z-7b16359d",
+  "started_at": "2026-10-17T22:33:43.520725+00:00",
+  "finished_at": "2026-10-17T22:34:31.085561+00:00",
+  "completed_new_fits": 16,
+  "baseline_refits": 0,
+  "provider_calls": 0,
+  "odds_credits": 0,
+  "cfbd_requests": 0,
+  "cbbd_requests": 0,
+  "model_promotions": 0,
+  "elapsed_total_seconds": 47.568,
+  "estimated_compute_usd": 0.006395,
+  "hourly_rate_assumption": 0.484,
+  "cost_exclusions": [
+    "Studio idle/startup",
+    "persistent EBS and S3",
+    "S3 request charges"
+  ],
+  "completed_stages": [
+    "feature_and_reference_integrity",
+    "chronological_state_development",
+    "exposed_and_monitoring_scorecards",
+    "readiness_and_research_notebook"
+  ],
+  "reason": "Four FBS repair/state workstreams complete; accepted NFL/FBS references preserved.",
+  "source_return_sha256": "4e6afb5a25efce8bcca833a0490238672611e2564ca33e73085bb0142ee7c244",
+  "source_return_bytes": 7222662,
+  "independent_audit_status": "PASS",
+  "independent_numeric_checks": 18509,
+  "runtime_tests": 85,
+  "static_fits": 8,
+  "dynamic_fits": 8,
+  "new_live_forecasts": 0,
+  "verified_minimum_tally": {
+    "accepted_executions": 18,
+    "failed_executions": 12,
+    "stopped_executions": 2,
+    "accepted_modeling_runs": 8,
+    "failed_modeling_runs": 1,
+    "completed_real_fits": 262
+  },
+  "all_six_task_development_qualifications_failed": true,
+  "current_college_target": "FBS vs FBS; earlier accepted college reference trained on mixed FBS/opponent cohort",
+  "accepted_model_versions": {
+    "nfl": "V047",
+    "ncaaf": "V048R1"
+  }
+}
