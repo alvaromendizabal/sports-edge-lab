@@ -6,7 +6,7 @@ Sports Edge Lab develops NFL and NCAA football win probabilities, point-margin f
 
 **Verified through October 17, 2026 · V057:** 210 completed real model fits; accepted NFL and NCAAF baselines; no demonstrated market advantage or production promotion. The latest quarterback experiment completed correctly and did not pass its qualification gates. Negative results are retained as research evidence.
 
-[Model card](docs/MODEL_CARD.md) · [Data readiness](docs/DATA_READINESS.md) · [Architecture](docs/ARCHITECTURE.md) · [Research roadmap](docs/RESEARCH_ROADMAP.md) · [Evidence scorecard](docs/demo/index.html)
+[Model card](docs/MODEL_CARD.md) · [Data readiness](docs/DATA_READINESS.md) · [Architecture](docs/ARCHITECTURE.md) · [Research roadmap](docs/RESEARCH_ROADMAP.md) · [V058 prepared handoff](docs/status/football_v058/README.md) · [Evidence scorecard](docs/demo/index.html)
 
 ## A two-minute review
 

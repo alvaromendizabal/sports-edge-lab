@@ -47,3 +47,16 @@ def residual_intervals(calibration_frame,evaluation,arm):
   lo,hi=np.quantile(residual,[alpha/2,1-alpha/2],method='inverted_cdf');lower=p+lo;upper=p+hi
   out.append(dict(nominal_coverage=1-alpha,coverage=float(((y>=lower)&(y<=upper)).mean()),mean_width=float(hi-lo),mean_interval_score=float(interval_score(y,lower,upper,alpha).mean()),calibration_rows=len(residual),evaluation_rows=len(y),residual_lower=float(lo),residual_upper=float(hi),method='chronological empirical residual intervals; no exchangeability or guaranteed-coverage claim'))
  return out
+
+
+def brier_skill(y,p,reference):
+ """Same-row Brier skill: 1 - candidate Brier / reference Brier.
+
+ Endpoint probabilities are valid for this Brier-only calculation. A perfect
+ reference makes relative skill undefined; it is never replaced by an epsilon.
+ """
+ y=np.asarray(y,float);p=np.asarray(p,float);reference=np.asarray(reference,float)
+ require(y.ndim==1 and len(y)>0 and y.shape==p.shape==reference.shape and np.isfinite(y).all() and np.isfinite(p).all() and np.isfinite(reference).all(),'METRIC','Invalid aligned Brier skill arrays')
+ require(set(np.unique(y))<={0.,1.} and ((p>=0)&(p<=1)).all() and ((reference>=0)&(reference<=1)).all(),'METRIC','Invalid Brier skill probabilities/outcomes')
+ candidate_brier=float(np.mean((p-y)**2));reference_brier=float(np.mean((reference-y)**2))
+ return dict(n=len(y),value=None if reference_brier==0 else float(1-candidate_brier/reference_brier),candidate_brier=candidate_brier,reference_brier=reference_brier,reason='zero_reference_brier' if reference_brier==0 else None,formula='1 - candidate_brier / reference_brier',same_cohort=True)

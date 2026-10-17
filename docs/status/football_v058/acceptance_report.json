@@ -1,7 +1,7 @@
 {
-  "artifact_tested_sha256": "85be8d2a7427574526b3fc031e2f4eaec3487e90904a51d39dab4bdb10b4ee31",
+  "artifact_tested_sha256": "147d20846b269ebfdcee59d9ee78ab325a3f583eecaf6a3f6960fdca3eb71a48",
   "passed": 9,
-  "unit_tests": 54,
+  "unit_tests": 66,
   "checks": [
     "Injected post-validation failure preserves all 18 fit checkpoints and returns diagnostics",
     "Resume completes only 18 remaining fits; 18 existing fits unchanged by hashes and mtimes",

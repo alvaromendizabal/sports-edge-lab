@@ -42,7 +42,7 @@ All these evaluation periods have been examined across experiments. A new versio
 | NCAAF | Margin MAE | 1,411 | 13.034424 | 12.122785 |
 | NCAAF | Total MAE | 1,411 | 12.905078 | 12.476435 |
 
-These benchmarks use available matched quotes; a consensus price need not be executable. Market snapshots can contain information later than the feature cutoff. ROI, closing-line value and profit cannot be inferred from these metrics. Tie exclusions and differing source coverage explain differing task denominators.
+These benchmarks use available matched quotes; a consensus price need not be executable. NFL quotes are later than the 24-hour feature cutoff. Matched college quotes precede the nominal one-hour decision, while the actual consumed historical features predate those quotes under the retrospective release assumption. This is not a controlled comparison at identical information horizons. ROI, closing-line value and profit cannot be inferred from these metrics. Tie exclusions and differing source coverage explain differing task denominators.
 
 ## V057: historical quarterback ablation
 
@@ -67,10 +67,10 @@ The win model's lower Brier but higher log loss illustrates why metrics must be 
 
 | Output / question | Report |
 | --- | --- |
-| Win probability | Log loss, Brier, reliability bins/counts/uncertainty, probability bias; AUC and accuracy as secondary diagnostics. |
+| Win probability | Log loss, Brier, same-cohort Brier skill against declared references, reliability bins/counts/uncertainty and probability bias; AUC and accuracy as secondary diagnostics. |
 | Margin / total point accuracy | MAE, RMSE, median and 90th-percentile absolute error, signed bias. |
 | Prediction intervals | 80%/90% coverage, width and interval score; no automatic coverage guarantee under temporal drift. |
-| Stability | Predeclared season and coverage slices, paired losses, block counts and uncertainty. |
+| Stability | Predeclared season, venue, prior-history coverage and college matchup slices, paired losses, block counts and uncertainty. Sparse groups do not support promotion claims. |
 | Full predictive distribution | CRPS becomes relevant after a valid distribution is implemented. |
 | Economic decisions | Separate future executable-price protocol with costs, settlement, no-action rules, CLV, ROI, turnover and drawdown. Not established here. |
 

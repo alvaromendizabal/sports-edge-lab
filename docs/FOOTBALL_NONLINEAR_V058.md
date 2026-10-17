@@ -37,7 +37,7 @@ All exposed cohorts have been viewed before. No fresh untouched test, automatic 
 
 Markets: NFL quotes are later than the 24-hour cutoff; college matched quotes precede the nominal one-hour cutoff. Actual consumed college history precedes all matched quotes by at least 83.93 hours on these pins. Verify that relation, preserve quote counts, and do not claim a controlled matched-horizon market edge or executable ROI.
 
-Win scores: log loss, Brier, AUC, accuracy, reliability/ECE and probability bias. Point scores: MAE, RMSE, median/90th-percentile absolute error and signed bias. Empirical 80%/90% intervals report coverage, width and interval score, calibrated using earlier forward-development residuals. Fewer than eight season-week blocks means unavailable bootstrap bounds. No coverage guarantee is claimed.
+Win scores: log loss, Brier, same-cohort Brier skill against declared references, AUC, accuracy, reliability/ECE and probability bias. A zero reference Brier score yields an unavailable skill score with an explicit reason. Diagnostic slices cover season, venue, prior-history coverage and college FBS/FCS matchup type; groups retain counts and sparse-block limitations, without subgroup promotion. Point scores: MAE, RMSE, median/90th-percentile absolute error and signed bias. Empirical 80%/90% intervals report coverage, width and interval score, calibrated using earlier forward-development residuals. Fewer than eight season-week blocks means unavailable bootstrap bounds. No coverage guarantee is claimed.
 
 ## Remaining data work and limits
 
