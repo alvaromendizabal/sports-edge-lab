@@ -1,0 +1,31 @@
+{
+  "status": "PASS",
+  "verification_kind": "local_public_method_tests",
+  "v061_owner_execution_completed": false,
+  "tests": 23,
+  "model_fits": 0,
+  "provider_calls": 0,
+  "feature_columns": 52,
+  "source_sha256": {
+    "nfl_situation.py": "8f60218193f4bf1626fcf100f28ca45c129a5373cbf2dbb999797de59f17edbf",
+    "data.py": "f119c93375965fb493d325889da6d912b4a268f09d96778dd1fca16ccf4c75ca",
+    "common.py": "9347b58186341c9c6967a125cabb670c170085f61429da854f2b643b9abb0a52",
+    "fixtures.py": "60303c65cb6b3aec3b7a5193ce40a4130e66b45641a2e3815af63951e26dc21c",
+    "situation_tests.py": "1992c99386c5c5d1de07d2f54e5e48dcb4a4b06fe393811155880e2951eac48b"
+  },
+  "public_source_exact_match_to_prepared_method": true,
+  "private_path_account_and_network_fit_dependency_scan_passed": true,
+  "fixture_kind": "entirely_synthetic",
+  "test_command": "python -m unittest discover -s modeling/football_v061 -p '*_tests.py' -v",
+  "runtime": "Python 3.12; NumPy 2.3.5; pandas 2.2.3",
+  "ci_job": "offline-situation-features",
+  "ci_execution_verified": false,
+  "workflow_yaml_parsed": true,
+  "actual_football_performance_verified": false,
+  "accepted_aws_secondary_representations": 10,
+  "local_secondary_representations_in_preparation": 12,
+  "planned_current_fbs_games": 15,
+  "planned_public_attempt_limit": 40,
+  "planned_paid_provider_calls": 0,
+  "planned_real_nfl_fits": 24
+}

@@ -1,5 +1,13 @@
 # Operational evidence
 
+**Latest — V060, October 17, 2026, 23:08:14 UTC:** [summary](football_v060/summary.json), [metrics](football_v060/metrics.json), [acquisition outcome](football_v060/acquisition_completion.json) and [reporting corrections](football_v060/readiness_errata.json). All 84 fits completed; none of 18 candidate/task combinations qualified. Ten of 14 selected official-school sources validated as secondary representations; four remain. Six NFL downloads produced four semantic changes.
+
+Verified minimum tally: **19 accepted / 12 failed / two stopped executions; nine accepted / one failed modeling runs; 346 real fits.** Public HTTP attempts were 32, including two robots-file 404s; no new denial. College-statistics/odds usage was zero. Several inherited readiness counters were stale; use the linked authoritative corrections.
+
+**Prepared next — V061:** [public feature method](../../modeling/football_v061/README.md) and [local checks](football_v061/public_checks.json). It has not executed. Local secondary coverage is 12/14; accepted AWS coverage remains 10/14. Four historical parser cases use caches; 15 current ESPN captures allow at most 40 public attempts and zero paid calls. The planned NFL benchmark has 52 features and 24 fits.
+
+## Preserved V059 observation
+
 **Latest verified modeling evidence — October 17, 2026, 22:34:31 UTC:** [V059 summary](football_v059/summary.json), [metrics](football_v059/metrics.json) and [accepted FBS repair evidence](football_v059/repair_completion.json). All 16 planned joint fits completed; eight FBS data repairs were accepted; 14 FBS drive gaps remain. Zero provider calls and no model promotions. All six task development qualifications failed. Accepted models remain NFL V047 and NCAAF V048R1.
 
 Verified minimum tally: **18 accepted / 12 failed / two stopped executions; eight accepted modeling runs / one failed; 262 completed real fits.** V059 college candidates train/evaluate only FBS-versus-FBS. Earlier accepted college training remains mixed FBS/opponent scope.

@@ -1,39 +1,39 @@
 {
   "review_type": "evidence_based_internal_review_not_rating",
-  "as_of": "2026-10-17",
+  "as_of": "2026-10-17T23:08:14Z",
   "criteria": [
     {
       "criterion": "Immediate project comprehension",
       "before": "Acquisition-stage landing page did not summarize completed modeling work.",
-      "after": "Landing page states targets, accepted references, actual V059 outcome, scope and next bounded experiment.",
+      "after": "Landing page states targets, accepted references, actual V060 outcome, scope and planned V061 work.",
       "status": "improved",
       "verified_checks": [
-        "Current result links resolve",
-        "Accepted models and no-promotion decision match audited V059 evidence"
+        "Current evidence links resolve",
+        "Accepted models and no-promotion decision match audited V060 evidence"
       ],
       "remaining_gap": "No observed external reviewer comprehension study."
     },
     {
       "criterion": "Current-state accuracy",
       "before": "Current-season row counts and V059-pending statements could be mistaken for full historical coverage or current status.",
-      "after": "Historical/raw/model-ready denominators and completed versus staged data are explicitly separated.",
+      "after": "Authoritative acquisition receipts correct inherited readiness fields; original-provider gaps, secondary coverage, frozen cohorts and current captures remain distinct.",
       "status": "improved",
       "verified_checks": [
-        "78 exact displayed score fields matched actual evaluation",
-        "Eight distribution series matched independent audit",
-        "Eight prior evidence files preserved byte-identically"
+        "130 exact displayed score fields matched actual V060 evaluation",
+        "Eight preserved V059 distribution series match historical evidence",
+        "12 prior evidence files remain byte-identical"
       ],
-      "remaining_gap": "Current data remains incomplete; 14 accepted-state FBS gaps and temporal eligibility limits are disclosed."
+      "remaining_gap": "Four selected cases lack validated secondary representation; current finals still need PBP/drive coverage checks."
     },
     {
       "criterion": "Modeling transparency",
       "before": "No compact method/status registry spanning completed and requested named frameworks.",
-      "after": "Model card states features, same-cohort comparisons, qualification failures and distribution support; framework registry distinguishes completed sklearn work from prepared native boosters.",
+      "after": "Five-arm same-cohort native-library comparisons, failed qualification and completed-versus-planned framework/feature status are explicit.",
       "status": "improved",
       "verified_checks": [
-        "Six task-selector states checked",
-        "Eight distribution-selector states checked",
-        "Exact FBS training/reference distinction retained"
+        "Six five-arm task-selector states checked",
+        "Eight preserved V059 distribution-selector states checked",
+        "FBS matched-linear control distinguished from older mixed-trained reference"
       ],
       "remaining_gap": "No prospective qualifying improvement or fair information-horizon market advantage established."
     },
@@ -43,34 +43,33 @@
       "after": "Public summaries, metrics, repair receipts and scorecard link directly to current aggregate evidence.",
       "status": "improved",
       "verified_checks": [
-        "177 local links checked; zero missing",
-        "Return SHA and independent-audit totals recorded",
-        "Historical preparation receipts preserved"
+        "200 local links checked; zero missing",
+        "Actual return SHA and audit outcome PASS_WITH_REPORTING_ERRATA recorded",
+        "Historical evidence preserved and explicit readiness corrections published"
       ],
       "remaining_gap": "Full prediction-level/private-source reproduction remains access-dependent."
     },
     {
       "criterion": "Public reproducibility",
       "before": "V058/V059 public cores existed; native booster/official parser mechanics were not public.",
-      "after": "V060 public core includes pinned CPU dependencies, native family adapters and a synthetic-only parser/learning test subset.",
+      "after": "V060 public core includes native family adapters and synthetic parser checks; V061 publishes a minimal feature method with pinned NumPy/Pandas dependencies and no private collector.",
       "status": "partial",
       "verified_checks": [
-        "50 public V060 tests passed",
-        "Exactly 12 tiny synthetic training fits",
-        "Zero real-football fits/provider calls in public check",
-        "No publisher HTML/private configuration in public package"
+        "Prior public V060 suite: 50 tests/12 synthetic fits; its historical receipt is preserved",
+        "V061 public method: 23 local synthetic/mathematical tests, zero model fits and zero provider calls",
+        "No publisher HTML/private configuration in public packages"
       ],
       "remaining_gap": "Hosted CI and independent clean-environment real-data reproduction are not established by local checks."
     },
     {
       "criterion": "Scientific claim discipline",
       "before": "Negative results were retained, but latest source and family distinctions required consolidation.",
-      "after": "Development failure, exposed improvement, monitoring deterioration and source support limitations are presented together.",
+      "after": "All 18 V060 candidate/task failures remain binding; source validation and source repair are distinct; stale counters are corrected explicitly.",
       "status": "improved",
       "verified_checks": [
-        "V059 all-six-development-fail decision retained",
-        "Five locally validated secondary captures labeled runtime-pending",
-        "Original ESPN repairs not conflated with secondary-source validation"
+        "32 actual public attempts reported instead of stale zero",
+        "Ten validated secondary games/four selected remaining reported",
+        "Original source remains unrepaired; frozen features preserved"
       ],
       "remaining_gap": "Original publication vintages, reliable future starter coverage and tracking rights remain unresolved."
     },
@@ -82,23 +81,24 @@
       "verified_checks": [
         "Three tables have captions",
         "Selectors have labels and exact values",
-        "Six task plus eight distribution interactions checked with DOM shim",
-        "No external runtime assets",
-        "Six notebook code cells and two inline Plotly figures executed/reopened"
+        "Six five-arm task plus eight historical distribution interactions checked with DOM shim",
+        "No external runtime assets"
       ],
       "remaining_gap": "No rendered-browser accessibility audit or observed user usability validation."
     },
     {
       "criterion": "Research plan",
-      "before": "The roadmap focused on a now-completed dynamic-state benchmark.",
-      "after": "Four bounded V060 workstreams separate capture, validation, equivalent-cohort native models and full evaluation; feature priorities are mechanism-driven.",
+      "before": "The roadmap focused on the prepared native-library benchmark.",
+      "after": "Completed V060 closes that fixed comparison; prepared V061 separates cached historical parser validation, bounded current public capture and a 52-feature NFL information hypothesis.",
       "status": "improved",
       "verified_checks": [
-        "84 planned real fits explicitly distinguished from 12 synthetic checks",
-        "New captures do not alter frozen model inputs",
-        "PyTorch/TensorFlow execution not claimed"
+        "V061 is planned, not executed",
+        "24 planned fits distinguished from 84 completed V060 fits",
+        "No architecture or breakthrough guarantee",
+        "At most 40 public ESPN attempts for 15 current finals are distinguished from four cached historical parser cases",
+        "Local 12/14 secondary coverage is distinguished from accepted AWS 10/14"
       ],
-      "remaining_gap": "Prepared V060 work is not an achieved result."
+      "remaining_gap": "V061 owner execution, current PBP/drive validation and model performance remain pending."
     },
     {
       "criterion": "Production and economic value",
@@ -115,8 +115,9 @@
   "numeric_ratings_assigned": false,
   "quality_9_9_claimed": false,
   "verification_receipts": [
-    "status/football_v059/portfolio_checks.json",
-    "status/football_v060/public_checks.json"
+    "status/football_v060/portfolio_checks.json",
+    "status/football_v060/public_checks.json",
+    "status/football_v061/public_checks.json"
   ],
   "remaining_requirements": [
     "Frozen prospective forecasts before outcomes",
@@ -125,5 +126,6 @@
     "Independent reproduction with legally accessible real data",
     "Serving and monitoring evidence if production pursued",
     "Rendered accessibility review and observed usability feedback"
-  ]
+  ],
+  "latest_accepted_runtime": "V060"
 }

@@ -1,0 +1,164 @@
+{
+  "source_run_id": "20261017T230214Z-3276670a",
+  "status": "RUNTIME_VERIFIED_WITH_EXPLICIT_REMAINING_GAPS",
+  "accounting": {
+    "attempted": 32,
+    "bytes_charged": 38253166,
+    "cbbd_requests": 0,
+    "cfbd_requests": 0,
+    "http_successes": 30,
+    "inflight_reservations": 0,
+    "observed_at": "2026-10-17T23:07:22.284094+00:00",
+    "odds_credits": 0,
+    "request_failures": 2,
+    "run_status": "completed_with_gaps",
+    "robots_404_responses": 2,
+    "new_401_402_403_429_denials": 0,
+    "prior_cbbd_stop_retained": true,
+    "attempts_include_policy_checks_and_redirects": true
+  },
+  "official_fbs": {
+    "selected_games": 14,
+    "successful_source_captures": 14,
+    "validated_secondary_games": 10,
+    "remaining_without_valid_secondary": 4,
+    "original_source_gaps_retained": 14,
+    "original_ESPN_source_gaps_repaired": 0,
+    "new_secondary_sources_only": true,
+    "frozen_features_modified": false
+  },
+  "nfl": {
+    "capture_completed_at": "2026-10-17T23:07:22.049364+00:00",
+    "selected_changed_assets": 6,
+    "successful_downloads": 6,
+    "semantic_content_changes": 4,
+    "unchanged_cached_assets_reused": 2,
+    "assets": [
+      {
+        "name": "play_by_play_2026.csv.gz",
+        "status": "downloaded",
+        "compressed_digest_changed": true,
+        "content_change_confirmed": true,
+        "observed_at": "2026-10-17T23:07:08.789934+00:00",
+        "bytes": 5509556,
+        "current_rows": 14031,
+        "prior_rows": 14031,
+        "added_game_id_count": 0
+      },
+      {
+        "name": "snap_counts_2026.csv.gz",
+        "status": "unchanged_cached_digest",
+        "compressed_digest_changed": false,
+        "content_change_confirmed": false,
+        "observed_at": null,
+        "bytes": 140793
+      },
+      {
+        "name": "roster_weekly_2026.csv.gz",
+        "status": "downloaded",
+        "compressed_digest_changed": true,
+        "content_change_confirmed": true,
+        "observed_at": "2026-10-17T23:07:11.016826+00:00",
+        "bytes": 501697,
+        "current_rows": 15327,
+        "prior_rows": 15327,
+        "added_game_id_count": 0
+      },
+      {
+        "name": "depth_charts_2026.csv.gz",
+        "status": "downloaded",
+        "compressed_digest_changed": true,
+        "content_change_confirmed": true,
+        "observed_at": "2026-10-17T23:07:12.257396+00:00",
+        "bytes": 12892630,
+        "current_rows": 663879,
+        "prior_rows": 659277,
+        "added_game_id_count": 0
+      },
+      {
+        "name": "players.csv.gz",
+        "status": "downloaded",
+        "compressed_digest_changed": true,
+        "content_change_confirmed": true,
+        "observed_at": "2026-10-17T23:07:19.206265+00:00",
+        "bytes": 2501911,
+        "current_rows": 24854,
+        "prior_rows": 24854,
+        "added_game_id_count": 0
+      },
+      {
+        "name": "ngs_passing.csv.gz",
+        "status": "downloaded",
+        "compressed_digest_changed": true,
+        "content_change_confirmed": false,
+        "observed_at": "2026-10-17T23:07:20.613726+00:00",
+        "bytes": 602903,
+        "current_rows": 6133,
+        "prior_rows": 6133,
+        "added_game_id_count": 0
+      },
+      {
+        "name": "ngs_receiving.csv.gz",
+        "status": "unchanged_cached_digest",
+        "compressed_digest_changed": false,
+        "content_change_confirmed": false,
+        "observed_at": null,
+        "bytes": 1014873
+      },
+      {
+        "name": "ngs_rushing.csv.gz",
+        "status": "downloaded",
+        "compressed_digest_changed": true,
+        "content_change_confirmed": false,
+        "observed_at": "2026-10-17T23:07:21.771131+00:00",
+        "bytes": 335674,
+        "current_rows": 6262,
+        "prior_rows": 6262,
+        "added_game_id_count": 0
+      }
+    ]
+  },
+  "current_fbs": {
+    "observed_at": "2026-10-17T21:07:13Z",
+    "reconciled_at": "2026-10-17T23:07:22.152913+00:00",
+    "fbs_completed": 354,
+    "old_canonical_completed_fbs": 339,
+    "new_completed_count": 15,
+    "current_drive_or_play_coverage_claimed": false,
+    "no_new_provider_calls": true,
+    "frozen_features_modified": false
+  },
+  "frozen_features_modified": false,
+  "source_publication_at": null,
+  "strict_historical_point_in_time_verified": false,
+  "legacy_readiness_errata": {
+    "new_provider_calls": {
+      "stored": 0,
+      "actual": 32
+    },
+    "remaining_without_valid_secondary": {
+      "stored": 14,
+      "actual_selected_remaining": 4
+    },
+    "games_without_any_valid_drive_representation": {
+      "stored": 14,
+      "actual_selected_remaining": 4
+    },
+    "predecessor_real_fits": {
+      "stored": 36,
+      "actual_V059": 16
+    },
+    "nfl_snapshot_at": {
+      "stored": "2026-10-16T23:30:05Z",
+      "current_capture_completed_at": "2026-10-17T23:07:22.049364+00:00"
+    },
+    "ncaaf_current_observed_at": {
+      "stored": "2026-10-17T15:07:26Z",
+      "actual_existing_current_capture": "2026-10-17T21:07:13Z"
+    },
+    "ncaaf_player_feature_readiness": {
+      "stored": "No accepted FBS player-level model; current state candidates use only scores, team identity, venue and time.",
+      "actual": "V060 uses 60 frozen base/drive-efficiency features; no accepted FBS player model"
+    }
+  }
+}

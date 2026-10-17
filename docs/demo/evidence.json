@@ -20,27 +20,32 @@
     "production_promoted": false,
     "tracking_video_confirmed": false
   },
-  "schema_version": 3,
-  "evidence_cutoff": "2026-10-17T22:34:31.085561+00:00",
-  "source_run_id": "20261017T223343Z-7b16359d",
-  "source_return_sha256": "4e6afb5a25efce8bcca833a0490238672611e2564ca33e73085bb0142ee7c244",
+  "schema_version": 4,
+  "evidence_cutoff": "2026-10-17T23:08:14.478598+00:00",
+  "source_run_id": "20261017T230214Z-3276670a",
+  "source_return_sha256": "963da7d25b720c30ea320225fcdcd65941b66c2d8ed333ed7cdc44495078a381",
   "status": "SUCCESS",
   "classification": "VALID_NEGATIVE_OR_INCONCLUSIVE",
-  "new_real_fits": 16,
-  "static_fits": 8,
-  "dynamic_fits": 8,
-  "provider_calls": 0,
+  "audit_status": "PASS_WITH_REPORTING_ERRATA",
+  "new_real_fits": 84,
+  "fit_family_counts": {
+    "xgb": 24,
+    "lgbm": 24,
+    "catboost": 24,
+    "linear": 12
+  },
+  "provider_calls": 32,
   "promotions": 0,
   "new_live_forecasts": 0,
   "tally": {
-    "accepted_executions": 18,
+    "accepted_executions": 19,
     "failed_executions": 12,
     "stopped_executions": 2,
-    "accepted_modeling_runs": 8,
+    "accepted_modeling_runs": 9,
     "failed_modeling_runs": 1,
-    "completed_real_fits": 262
+    "completed_real_fits": 346
   },
-  "v059_comparisons": [
+  "v060_comparisons": [
     {
       "track": "nfl",
       "task": "win",
@@ -54,19 +59,33 @@
           "n": 569,
           "value": 0.6298304983663755
         },
-        "dynamic": {
-          "auc": 0.7085385878489326,
-          "brier": 0.21931767415985332,
+        "catboost": {
+          "auc": 0.7056463651291237,
+          "brier": 0.21848874976644542,
           "metric": "log_loss",
           "n": 569,
-          "value": 0.6286219833969535
+          "value": 0.6277486532644843
         },
-        "static": {
-          "auc": 0.6330049261083743,
-          "brier": 0.2347280805783682,
+        "lgbm": {
+          "auc": 0.695464497188635,
+          "brier": 0.22049653051599152,
           "metric": "log_loss",
           "n": 569,
-          "value": 0.6613248559506073
+          "value": 0.6316787148122089
+        },
+        "matched_linear": {
+          "auc": 0.6941583320893665,
+          "brier": 0.22027394209432988,
+          "metric": "log_loss",
+          "n": 569,
+          "value": 0.6298304983663755
+        },
+        "xgb": {
+          "auc": 0.6958501268846097,
+          "brier": 0.22050025094669692,
+          "metric": "log_loss",
+          "n": 569,
+          "value": 0.63243301009992
         }
       }
     },
@@ -82,17 +101,29 @@
           "rmse": 13.098543760011106,
           "value": 10.198375423478133
         },
-        "dynamic": {
+        "catboost": {
           "metric": "mae",
           "n": 570,
-          "rmse": 13.013398110355842,
-          "value": 10.142102130333896
+          "rmse": 13.06816018410683,
+          "value": 10.141177679914183
         },
-        "static": {
+        "lgbm": {
           "metric": "mae",
           "n": 570,
-          "rmse": 13.836752634142268,
-          "value": 10.708146579226224
+          "rmse": 13.122976165840306,
+          "value": 10.155026804889332
+        },
+        "matched_linear": {
+          "metric": "mae",
+          "n": 570,
+          "rmse": 13.098543760011106,
+          "value": 10.198375423478133
+        },
+        "xgb": {
+          "metric": "mae",
+          "n": 570,
+          "rmse": 13.098398082215907,
+          "value": 10.16307234090279
         }
       }
     },
@@ -108,17 +139,29 @@
           "rmse": 13.182260154726142,
           "value": 10.332146990896888
         },
-        "dynamic": {
+        "catboost": {
           "metric": "mae",
           "n": 570,
-          "rmse": 13.176342587464022,
-          "value": 10.33330726526115
+          "rmse": 13.254449399719332,
+          "value": 10.44731839633348
         },
-        "static": {
+        "lgbm": {
           "metric": "mae",
           "n": 570,
-          "rmse": 13.521635066496353,
-          "value": 10.613079359841286
+          "rmse": 13.221589542595067,
+          "value": 10.416418322370179
+        },
+        "matched_linear": {
+          "metric": "mae",
+          "n": 570,
+          "rmse": 13.182260154726142,
+          "value": 10.332146990896888
+        },
+        "xgb": {
+          "metric": "mae",
+          "n": 570,
+          "rmse": 13.259919055293405,
+          "value": 10.470487815455387
         }
       }
     },
@@ -135,19 +178,33 @@
           "n": 1606,
           "value": 0.5546815876109851
         },
-        "dynamic": {
-          "auc": 0.7842576108884698,
-          "brier": 0.1914767350012448,
+        "catboost": {
+          "auc": 0.7580355182807139,
+          "brier": 0.19546506513862122,
           "metric": "log_loss",
           "n": 1606,
-          "value": 0.565082853129967
+          "value": 0.5723007069314828
         },
-        "static": {
-          "auc": 0.6863443859933052,
-          "brier": 0.21965892161550024,
+        "lgbm": {
+          "auc": 0.7634619667891416,
+          "brier": 0.1934939494135615,
           "metric": "log_loss",
           "n": 1606,
-          "value": 0.6268223228528159
+          "value": 0.567086730550983
+        },
+        "matched_linear": {
+          "auc": 0.772145245828613,
+          "brier": 0.19006878831474042,
+          "metric": "log_loss",
+          "n": 1606,
+          "value": 0.5558832606945519
+        },
+        "xgb": {
+          "auc": 0.7621768607198197,
+          "brier": 0.19399857834494183,
+          "metric": "log_loss",
+          "n": 1606,
+          "value": 0.5687266365009078
         }
       }
     },
@@ -163,17 +220,29 @@
           "rmse": 16.101880530359367,
           "value": 12.819829327552045
         },
-        "dynamic": {
+        "catboost": {
           "metric": "mae",
           "n": 1606,
-          "rmse": 16.523724636578947,
-          "value": 12.982906025243475
+          "rmse": 16.761251161643425,
+          "value": 13.285841836776678
         },
-        "static": {
+        "lgbm": {
           "metric": "mae",
           "n": 1606,
-          "rmse": 18.21109957425638,
-          "value": 14.474231786907911
+          "rmse": 16.63774302531626,
+          "value": 13.193786081439736
+        },
+        "matched_linear": {
+          "metric": "mae",
+          "n": 1606,
+          "rmse": 16.150202062301933,
+          "value": 12.868193911742107
+        },
+        "xgb": {
+          "metric": "mae",
+          "n": 1606,
+          "rmse": 16.653241664945096,
+          "value": 13.205397365577658
         }
       }
     },
@@ -189,17 +258,29 @@
           "rmse": 16.29333127077633,
           "value": 13.093919492054331
         },
-        "dynamic": {
+        "catboost": {
           "metric": "mae",
           "n": 1606,
-          "rmse": 16.11547398364785,
-          "value": 12.86218749818191
+          "rmse": 16.283124703085594,
+          "value": 13.079862195264823
         },
-        "static": {
+        "lgbm": {
           "metric": "mae",
           "n": 1606,
-          "rmse": 16.89319667151957,
-          "value": 13.596401706298282
+          "rmse": 16.31580413074541,
+          "value": 13.117648127126552
+        },
+        "matched_linear": {
+          "metric": "mae",
+          "n": 1606,
+          "rmse": 16.293819268391626,
+          "value": 13.094980585852309
+        },
+        "xgb": {
+          "metric": "mae",
+          "n": 1606,
+          "rmse": 16.340769906650646,
+          "value": 13.139566442886295
         }
       }
     }
@@ -654,39 +735,177 @@
       }
     }
   ],
-  "repair_completion": {
-    "games": 8,
-    "team_rows": 16,
-    "excluded_overtime_rows": 33,
-    "remaining_fbs_gaps": 14,
-    "repair_frame_matches_independent_raw_audit": true,
-    "status": "RUNTIME_VERIFIED_INDEPENDENT_AUDIT_PASS",
-    "source_run_id": "20261017T223343Z-7b16359d",
-    "finished_at": "2026-10-17T22:34:31.085561+00:00",
-    "canonical_completed_fbs_games": 7898,
-    "frozen_completed_fbs_games": 7895,
-    "new_fbs_finals_outside_frozen_cohort": 3,
-    "gaps_before": 22,
-    "remaining_breakdown": {
-      "absent_alternate": 6,
-      "unknown_positive_play_result": 5,
-      "current_source_updates": 3
+  "distribution_evidence_version": "V059 preserved historical experiment; not a V060 density",
+  "acquisition_completion": {
+    "source_run_id": "20261017T230214Z-3276670a",
+    "status": "RUNTIME_VERIFIED_WITH_EXPLICIT_REMAINING_GAPS",
+    "accounting": {
+      "attempted": 32,
+      "bytes_charged": 38253166,
+      "cbbd_requests": 0,
+      "cfbd_requests": 0,
+      "http_successes": 30,
+      "inflight_reservations": 0,
+      "observed_at": "2026-10-17T23:07:22.284094+00:00",
+      "odds_credits": 0,
+      "request_failures": 2,
+      "run_status": "completed_with_gaps",
+      "robots_404_responses": 2,
+      "new_401_402_403_429_denials": 0,
+      "prior_cbbd_stop_retained": true,
+      "attempts_include_policy_checks_and_redirects": true
     },
-    "deferred_historical_fbs_fcs_context_gaps": 6,
-    "fcs_repair_attempts": 0,
-    "provider_calls": 0,
-    "accepted_features_modified": false,
-    "repaired_aggregates_inserted_into_model_features": false,
-    "source_interchangeability_approved": false,
-    "strict_point_in_time_verified": false,
-    "source_publication_at": null
+    "official_fbs": {
+      "selected_games": 14,
+      "successful_source_captures": 14,
+      "validated_secondary_games": 10,
+      "remaining_without_valid_secondary": 4,
+      "original_source_gaps_retained": 14,
+      "original_ESPN_source_gaps_repaired": 0,
+      "new_secondary_sources_only": true,
+      "frozen_features_modified": false
+    },
+    "nfl": {
+      "capture_completed_at": "2026-10-17T23:07:22.049364+00:00",
+      "selected_changed_assets": 6,
+      "successful_downloads": 6,
+      "semantic_content_changes": 4,
+      "unchanged_cached_assets_reused": 2,
+      "assets": [
+        {
+          "name": "play_by_play_2026.csv.gz",
+          "status": "downloaded",
+          "compressed_digest_changed": true,
+          "content_change_confirmed": true,
+          "observed_at": "2026-10-17T23:07:08.789934+00:00",
+          "bytes": 5509556,
+          "current_rows": 14031,
+          "prior_rows": 14031,
+          "added_game_id_count": 0
+        },
+        {
+          "name": "snap_counts_2026.csv.gz",
+          "status": "unchanged_cached_digest",
+          "compressed_digest_changed": false,
+          "content_change_confirmed": false,
+          "observed_at": null,
+          "bytes": 140793
+        },
+        {
+          "name": "roster_weekly_2026.csv.gz",
+          "status": "downloaded",
+          "compressed_digest_changed": true,
+          "content_change_confirmed": true,
+          "observed_at": "2026-10-17T23:07:11.016826+00:00",
+          "bytes": 501697,
+          "current_rows": 15327,
+          "prior_rows": 15327,
+          "added_game_id_count": 0
+        },
+        {
+          "name": "depth_charts_2026.csv.gz",
+          "status": "downloaded",
+          "compressed_digest_changed": true,
+          "content_change_confirmed": true,
+          "observed_at": "2026-10-17T23:07:12.257396+00:00",
+          "bytes": 12892630,
+          "current_rows": 663879,
+          "prior_rows": 659277,
+          "added_game_id_count": 0
+        },
+        {
+          "name": "players.csv.gz",
+          "status": "downloaded",
+          "compressed_digest_changed": true,
+          "content_change_confirmed": true,
+          "observed_at": "2026-10-17T23:07:19.206265+00:00",
+          "bytes": 2501911,
+          "current_rows": 24854,
+          "prior_rows": 24854,
+          "added_game_id_count": 0
+        },
+        {
+          "name": "ngs_passing.csv.gz",
+          "status": "downloaded",
+          "compressed_digest_changed": true,
+          "content_change_confirmed": false,
+          "observed_at": "2026-10-17T23:07:20.613726+00:00",
+          "bytes": 602903,
+          "current_rows": 6133,
+          "prior_rows": 6133,
+          "added_game_id_count": 0
+        },
+        {
+          "name": "ngs_receiving.csv.gz",
+          "status": "unchanged_cached_digest",
+          "compressed_digest_changed": false,
+          "content_change_confirmed": false,
+          "observed_at": null,
+          "bytes": 1014873
+        },
+        {
+          "name": "ngs_rushing.csv.gz",
+          "status": "downloaded",
+          "compressed_digest_changed": true,
+          "content_change_confirmed": false,
+          "observed_at": "2026-10-17T23:07:21.771131+00:00",
+          "bytes": 335674,
+          "current_rows": 6262,
+          "prior_rows": 6262,
+          "added_game_id_count": 0
+        }
+      ]
+    },
+    "current_fbs": {
+      "observed_at": "2026-10-17T21:07:13Z",
+      "reconciled_at": "2026-10-17T23:07:22.152913+00:00",
+      "fbs_completed": 354,
+      "old_canonical_completed_fbs": 339,
+      "new_completed_count": 15,
+      "current_drive_or_play_coverage_claimed": false,
+      "no_new_provider_calls": true,
+      "frozen_features_modified": false
+    },
+    "frozen_features_modified": false,
+    "source_publication_at": null,
+    "strict_historical_point_in_time_verified": false,
+    "legacy_readiness_errata": {
+      "new_provider_calls": {
+        "stored": 0,
+        "actual": 32
+      },
+      "remaining_without_valid_secondary": {
+        "stored": 14,
+        "actual_selected_remaining": 4
+      },
+      "games_without_any_valid_drive_representation": {
+        "stored": 14,
+        "actual_selected_remaining": 4
+      },
+      "predecessor_real_fits": {
+        "stored": 36,
+        "actual_V059": 16
+      },
+      "nfl_snapshot_at": {
+        "stored": "2026-10-16T23:30:05Z",
+        "current_capture_completed_at": "2026-10-17T23:07:22.049364+00:00"
+      },
+      "ncaaf_current_observed_at": {
+        "stored": "2026-10-17T15:07:26Z",
+        "actual_existing_current_capture": "2026-10-17T21:07:13Z"
+      },
+      "ncaaf_player_feature_readiness": {
+        "stored": "No accepted FBS player-level model; current state candidates use only scores, team identity, venue and time.",
+        "actual": "V060 uses 60 frozen base/drive-efficiency features; no accepted FBS player model"
+      }
+    }
   },
-  "college_scope": "V059 candidates train/evaluate FBS vs FBS; accepted reference trained on earlier mixed FBS/opponent cohort.",
+  "college_scope": "V060 candidate and matched-linear target rows are FBS versus FBS; inherited feature history may include FCS opponent context. Legacy accepted reference was mixed-cohort trained.",
   "limitations": [
-    "Previously exposed seasons; no fresh untouched holdout.",
-    "Unknown source publication timestamps remain unknown.",
-    "Gaussian scores permit negative values and intervals have no guaranteed future coverage.",
-    "Eight repaired secondary aggregates are not inserted into accepted model features.",
-    "No V060 execution or new framework result is claimed."
+    "Previously exposed seasons; no untouched holdout.",
+    "Inherited readiness fields have explicit authoritative corrections.",
+    "V059 Gaussian distribution diagnostics are earlier evidence, not V060 probability densities.",
+    "Secondary sources do not repair original ESPN source or alter frozen model inputs.",
+    "V061 is planned, not executed."
   ]
 }

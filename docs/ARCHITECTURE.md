@@ -70,3 +70,17 @@ Existing acquisition collectors and schedules have their own frozen scope. Cache
 V059 kept acquisition separate from modeling. It validated FBS-versus-FBS scope and a cached regulation-drive repair, preserving frozen features and labels. Static/dynamic Gaussian team filters then consume only declared released results. Both arms update their posterior after earlier outcomes become available; the static control has zero process drift rather than no learning. Each joint fit produces home/away means and covariance, then win, margin and total outputs.
 
 The public core reports Gaussian density/CRPS, native interval diagnostics and negative-score mass as explicit model assumptions. The actual return completed 16 fits and eight FBS repairs, with no model promotions. Point-only accepted baselines do not acquire a joint density by comparison. [Runtime evidence](status/football_v059/summary.json) is distinct from public fixture outputs.
+
+
+## V060 reporting boundary: acquisition, representation and frozen inputs
+
+V060's actual run completed 84 native/linear fits and finite source capture. All 14 selected official pages were received; ten passed secondary-source validation and four remained rejected. Six changed NFL files were downloaded, with four semantic changes. These data are staged separately from frozen model features.
+
+The return inherited stale top-level readiness counters from an earlier version. The [explicit errata](status/football_v060/readiness_errata.json) preserves the original report and names authoritative current sources for calls, coverage and freshness. Counts are now separated into original-provider gaps, captured sources, validated secondary games, frozen prediction rows and current finals. A report field must not override a newer, verified capture ledger merely because it is labeled readiness.
+
+
+## V061 public feature boundary: prepared
+
+The [minimal situation-method core](../modeling/football_v061/README.md) contains feature construction, shared normalization and synthetic tests only. It adds 36 historical situation columns to the 16 baseline columns and has no collector, credentials or model fitter. Its 23 checks verify identity, denominators and temporal isolation; they do not establish improved football performance.
+
+The separate owner workflow is prepared, not executed: four historical parser cases reuse captured sources; a 15-game current ESPN queue permits at most 40 public attempts and zero paid calls. Two more secondary representations are locally verified (12/14), while accepted AWS coverage remains V060's 10/14. Twenty-four planned NFL linear/XGBoost fits preserve frozen references and expose their release assumptions.
