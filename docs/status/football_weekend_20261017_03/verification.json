@@ -1,0 +1,207 @@
+{
+  "kind": "inspection_of_existing_current_collector_no_new_job",
+  "job_name": "sports-edge-lab-current-1c6ad2e5-dcee-4b8e-859a-9c5aae2a43d9",
+  "aws_status": "Completed",
+  "processing_start": "2026-10-17T03:06:17.432000+00:00",
+  "processing_end": "2026-10-17T03:07:50.939000+00:00",
+  "run_id": "20261017T030650Z-eabc362b3a",
+  "summary_key": "shared/acquisition/current/20261017T030650Z-eabc362b3a/summary.json",
+  "statistics": {
+    "cache_reused": 1,
+    "captured": 54,
+    "cfbd_captured": 8,
+    "cfbd_http_calls": 8,
+    "http_calls": 54,
+    "nba_captured": 14,
+    "ncaaf_captured": 22,
+    "ncaam_captured": 2,
+    "ncaaw_captured": 2,
+    "nfl_captured": 14,
+    "odds_captured": 46,
+    "odds_http_calls": 46,
+    "raw_bytes": 38371640
+  },
+  "budget": {
+    "actual_known": {
+      "odds": 181,
+      "stats": 8
+    },
+    "disabled_providers": [
+      "cbbd"
+    ],
+    "limits": {
+      "odds": 500,
+      "stats": 100
+    },
+    "provider_headers": {
+      "cfbd": {},
+      "odds": {
+        "x-requests-last": 6,
+        "x-requests-remaining": 2074175,
+        "x-requests-used": 2925825
+      }
+    },
+    "reserved_or_known": {
+      "odds": 181,
+      "stats": 8
+    },
+    "unknown_charge_reserve": {
+      "odds": 0,
+      "stats": 0
+    }
+  },
+  "request_summary": {
+    "empty_lists": 4,
+    "http_successes": 54,
+    "nonempty_list_responses": 50,
+    "odds_events_with_outcomes_including_repeated_requests": 180,
+    "requests": 54
+  },
+  "failures_count": 0,
+  "runtime_tests": 32,
+  "all_runtime_tests_passed": true,
+  "verification": {
+    "zip_count": 1,
+    "zip_bytes": 42989,
+    "zip_sha256": "efa12d8f3738c92c9c2fb28090ab3cd4a4d48a9cfd0f6d65a8619b6ce4e07e2d",
+    "zip_crc_passed": true,
+    "zip_summary_equals_s3": true,
+    "zip_failure_list_empty": true,
+    "unique_receipt_ids": 54,
+    "http_200_receipts": 54,
+    "unique_raw_keys_verified_present": 52,
+    "raw_compressed_bytes": 3288852,
+    "raw_uncompressed_response_bytes": 38371640,
+    "independently_hash_verified_payloads": [
+      "/games",
+      "/games/teams",
+      "/games/players"
+    ]
+  },
+  "football_coverage": {
+    "fbs_schedule_rows": 888,
+    "week7_fbs_games": 62,
+    "week7_completed": 7,
+    "team_box_game_ids": [
+      401860923,
+      401871068,
+      401871053,
+      401871067,
+      401869950,
+      401871054,
+      401862800
+    ],
+    "player_box_same_ids": true,
+    "missing_boxes_for_confirmed_completed_week7": 0,
+    "friday_games": [
+      {
+        "id": 401862801,
+        "matchup": "Memphis at Tulane",
+        "completed": false
+      },
+      {
+        "id": 401858493,
+        "matchup": "Washington at Purdue",
+        "completed": false
+      },
+      {
+        "id": 401869844,
+        "matchup": "App State at Coastal Carolina",
+        "completed": false
+      }
+    ],
+    "friday_status_observed_at": "2026-10-17T03:07:15Z",
+    "friday_not_in_week7_boxes": true,
+    "does_not_establish_live_game_status": true,
+    "remaining_season_week7_games": 55,
+    "remaining_is_future_or_not_confirmed_complete_not_a_download_failure": true
+  },
+  "public_assets": [
+    {
+      "name": "play_by_play_2026.csv.gz",
+      "size": 5509553,
+      "digest": "sha256:820c579ed06f7a57e5233e891b77e644360492d761d3df7c81d526cabb354d7a",
+      "updated_at": "2026-10-16T13:57:39Z",
+      "url": "https://github.com/nflverse/nflverse-data/releases/download/pbp/play_by_play_2026.csv.gz"
+    },
+    {
+      "name": "snap_counts_2026.csv.gz",
+      "size": 140793,
+      "digest": "sha256:f91a2003862a68841e413320bf611852195c61c9bada797ffab25275c62f78dd",
+      "updated_at": "2026-10-16T11:04:00Z",
+      "url": "https://github.com/nflverse/nflverse-data/releases/download/snap_counts/snap_counts_2026.csv.gz"
+    },
+    {
+      "name": "roster_weekly_2026.csv.gz",
+      "size": 501612,
+      "digest": "sha256:31c7f1a82a23b4b46fb25881451f8af1bab8dbcae372e205dac00eedfbc5bb6f",
+      "updated_at": "2026-10-16T12:22:29Z",
+      "url": "https://github.com/nflverse/nflverse-data/releases/download/weekly_rosters/roster_weekly_2026.csv.gz"
+    },
+    {
+      "name": "depth_charts_2026.csv.gz",
+      "size": 12805209,
+      "digest": "sha256:dcdcbce877e1777f7b372e44f9e15fb4ef23ef79e9446e572529feb46b3da3f2",
+      "updated_at": "2026-10-16T12:17:10Z",
+      "url": "https://github.com/nflverse/nflverse-data/releases/download/depth_charts/depth_charts_2026.csv.gz"
+    },
+    {
+      "name": "players.csv.gz",
+      "size": 2501827,
+      "digest": "sha256:78ccdebe065a691b3a11b2a8920726680af6f7393789da385dcdef51b0be0a47",
+      "updated_at": "2026-10-16T12:55:20Z",
+      "url": "https://github.com/nflverse/nflverse-data/releases/download/players/players.csv.gz"
+    },
+    {
+      "name": "ngs_passing.csv.gz",
+      "size": 602888,
+      "digest": "sha256:12a66e1d30bb9cfe48e5b85decfd5dca31fad63f4b637be031df9048497f695c",
+      "updated_at": "2026-10-16T12:02:03Z",
+      "url": "https://github.com/nflverse/nflverse-data/releases/download/nextgen_stats/ngs_passing.csv.gz"
+    },
+    {
+      "name": "ngs_receiving.csv.gz",
+      "size": 1014873,
+      "digest": "sha256:168773b1a20defb8066acc75db58552b125e108f80b59c168e4b26696adf13b4",
+      "updated_at": "2026-10-16T12:02:18Z",
+      "url": "https://github.com/nflverse/nflverse-data/releases/download/nextgen_stats/ngs_receiving.csv.gz"
+    },
+    {
+      "name": "ngs_rushing.csv.gz",
+      "size": 335650,
+      "digest": "sha256:c0309c49dc7685a5f3d11260d9159ec73cf465771d9f6d35433f65928e88da5a",
+      "updated_at": "2026-10-16T12:02:11Z",
+      "url": "https://github.com/nflverse/nflverse-data/releases/download/nextgen_stats/ngs_rushing.csv.gz"
+    }
+  ],
+  "all_eight_asset_payloads_unchanged": true,
+  "bigten": {
+    "url": "https://app.hdintelligence.com/?conf=B10&source=B10&sport=Football&type=archive",
+    "observed_at": "2026-10-17T03:47:02.231Z",
+    "dom_rows": 719,
+    "raw_dom_rows_sha256": "5af1db31d05d7eebdb16ce0e6e23f9f922d8222076f66f5df3f803a1db70e760",
+    "friday_rows": 20,
+    "raw_friday_sha256": "b9151c337ac991531b84547d8688cf34114460cb7471c581157cbd6fd0689e76",
+    "date_normalized_friday_sha256": "d99931a3b3a3eb2dca5fdf6eaf1fcdfbd305f21a7e873f1ade859d00d938f9a4",
+    "normalization": "Date display only: 10/16/26 -> Fri, Oct 16, 2026",
+    "status_changes": 0,
+    "final_game_day_statuses": 0,
+    "prior_quarantine_retained": true,
+    "source_publication_time": null,
+    "after_kickoff": true
+  },
+  "supplemental_provider_requests": 0,
+  "supplemental_cfbd_used": 0,
+  "supplemental_cfbd_limit": 160,
+  "provider_blocks_unchanged": true,
+  "new_aws_jobs": 0,
+  "tracking_access_change": false,
+  "limitations": [
+    "Current sources are not historical pregame evidence.",
+    "Friday game completion was not confirmed by the reused 03:07 UTC capture; no extra CFBD polling was made.",
+    "Other conference final versions and verified 2026 American football availability remain gaps.",
+    "No fresh NFL injury acquisition this pass; v049 is the latest saved successful injury observation.",
+    "No full player/ball tracking or aligned-video access grant."
+  ],
+  "verified_at": "2026-10-17T03:49:07Z"
+}

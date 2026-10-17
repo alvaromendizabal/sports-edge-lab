@@ -1,0 +1,64 @@
+{
+  "ProcessingInputs": [
+    {
+      "InputName": "code",
+      "AppManaged": false,
+      "S3Input": {
+        "S3Uri": "s3://sagemaker-sports-edge-lab-560403859723-us-west-2/infrastructure/code/current-20261016-v043/",
+        "LocalPath": "/opt/ml/processing/code",
+        "S3DataType": "S3Prefix",
+        "S3InputMode": "File",
+        "S3DataDistributionType": "FullyReplicated"
+      }
+    }
+  ],
+  "ProcessingJobName": "sports-edge-lab-current-1c6ad2e5-dcee-4b8e-859a-9c5aae2a43d9",
+  "ProcessingResources": {
+    "ClusterConfig": {
+      "InstanceCount": 1,
+      "InstanceType": "ml.m5.2xlarge",
+      "VolumeSizeInGB": 30
+    }
+  },
+  "StoppingCondition": {
+    "MaxRuntimeInSeconds": 900
+  },
+  "AppSpecification": {
+    "ImageUri": "246618743249.dkr.ecr.us-west-2.amazonaws.com/sagemaker-scikit-learn:1.9-0",
+    "ContainerEntrypoint": [
+      "python3",
+      "-u",
+      "/opt/ml/processing/code/sports_edge_lab_current_v043_20261016.pyz"
+    ],
+    "ContainerArguments": [
+      "--odds-credits",
+      "500",
+      "--stats-calls",
+      "100",
+      "--max-seconds",
+      "600",
+      "--workers",
+      "4",
+      "--props-per-track",
+      "12",
+      "--odds-reserve-floor",
+      "100000"
+    ]
+  },
+  "Environment": {
+    "SEL_SCHEDULED_TIME": "2026-10-17T03:05:00Z",
+    "SEL_SCHEDULER_EXECUTION_ID": "1c6ad2e5-dcee-4b8e-859a-9c5aae2a43d9",
+    "SEL_SCHEDULE_ARN": "arn:aws:scheduler:us-west-2:560403859723:schedule/sports-edge-lab-ingestion/sports-edge-lab-current-6h-20261017-v026"
+  },
+  "NetworkConfig": {
+    "EnableInterContainerTrafficEncryption": false,
+    "EnableNetworkIsolation": false
+  },
+  "RoleArn": "arn:aws:iam::560403859723:role/SportsEdgeLabProcessingRole",
+  "ProcessingJobArn": "arn:aws:sagemaker:us-west-2:560403859723:processing-job/sports-edge-lab-current-1c6ad2e5-dcee-4b8e-859a-9c5aae2a43d9",
+  "ProcessingJobStatus": "Completed",
+  "ProcessingEndTime": "2026-10-17T03:07:50.939000+00:00",
+  "ProcessingStartTime": "2026-10-17T03:06:17.432000+00:00",
+  "LastModifiedTime": "2026-10-17T03:08:10.170000+00:00",
+  "CreationTime": "2026-10-17T03:05:39.149000+00:00"
+}

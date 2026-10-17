@@ -40,3 +40,7 @@ The finite schedule is enabled, with 41 remaining hourly observation opportuniti
 ## Latest pass — October 17, 01 UTC
 
 [V049 terminal observation](FOOTBALL_WEEKEND_V049.md): one NFL refresh completed at 01:27:35.068 UTC; 374 rows unchanged, two successful public requests, zero paid-provider calls. Reuse the latest v049 NFL receipt. Eight public assets and the directly counted Friday Big Ten subset were unchanged. The pre-existing basketball v022 one-off ended partial/Failed with four image-page parser errors and does not establish American football coverage. Do not restart either exact job. Supplemental CFBD remains 0/160. The next existing v043 current collector is due 03:05 UTC. Continue the existing weekend follow-up.
+
+## Latest pass — October 17, 03 UTC
+
+[Verified existing v043 capture](FOOTBALL_WEEKEND_20261017_03.md): AWS ended at 03:07:50.939 UTC; 54 successful requests, zero failures, 181 existing odds credits and eight separately budgeted current-collector CFBD calls. One return ZIP verified. All seven provider-confirmed completed Week 7 FBS game IDs have both weekly boxes; the three Friday games were still incomplete in the 03:07 source snapshot. Reuse that fresh capture. No supplemental job or paid calls were made; supplemental CFBD remains 0/160. Eight NFL release assets and date-normalized Friday Big Ten statuses remain unchanged. Continue the existing follow-up; do not restart this completed job.
