@@ -1,0 +1,27 @@
+{
+  "games": 8,
+  "team_rows": 16,
+  "excluded_overtime_rows": 33,
+  "remaining_fbs_gaps": 14,
+  "repair_frame_matches_independent_raw_audit": true,
+  "status": "RUNTIME_VERIFIED_INDEPENDENT_AUDIT_PASS",
+  "source_run_id": "20261017T223343Z-7b16359d",
+  "finished_at": "2026-10-17T22:34:31.085561+00:00",
+  "canonical_completed_fbs_games": 7898,
+  "frozen_completed_fbs_games": 7895,
+  "new_fbs_finals_outside_frozen_cohort": 3,
+  "gaps_before": 22,
+  "remaining_breakdown": {
+    "absent_alternate": 6,
+    "unknown_positive_play_result": 5,
+    "current_source_updates": 3
+  },
+  "deferred_historical_fbs_fcs_context_gaps": 6,
+  "fcs_repair_attempts": 0,
+  "provider_calls": 0,
+  "accepted_features_modified": false,
+  "repaired_aggregates_inserted_into_model_features": false,
+  "source_interchangeability_approved": false,
+  "strict_point_in_time_verified": false,
+  "source_publication_at": null
+}

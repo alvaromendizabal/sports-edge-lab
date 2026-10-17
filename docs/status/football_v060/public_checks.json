@@ -1,0 +1,20 @@
+{
+  "status": "PASS",
+  "public_tests_passed": 50,
+  "synthetic_training_fits": 12,
+  "real_football_fits": 0,
+  "provider_calls": 0,
+  "raw_publisher_fixtures_included": false,
+  "private_configuration_included": false,
+  "hosted_CI_status": "not yet run",
+  "source_hashes": {
+    "README.md": "29cafea1a3548f5876d9019c6557d3766292246b06a02bf549a868f19b539e2d",
+    "requirements.txt": "da5fcc26cdaa9cf24b551e4e055ef8b961f16389f32361aa4b317e2a0b2f2697",
+    "boost_families.py": "0d73e2056d5a7578faff3a778d853636fc6421aabbd99391acfaac942a1b339d",
+    "gap_parser.py": "91f322ab953becef6a87375e933093a6827e901d5684cc961fb8389d89ea3a4a",
+    "gap_parser_tests.py": "7b8b8e0e6c16b3f8bea8cfea2dc9d97ef02d6735df025515481cc0014b872b31",
+    "classic_math_tests.py": "a3f4cdfb4f3c434a5aec866895aa38b6aa01cc56732ea2ce8e0c5e7b415e3092",
+    "gap_classic.py": "a6c0b066ad85c4e55d449633a268b689d8eea9524d71611997f614c55c45f68c",
+    "boost_tests.py": "2debd310ce38c6af8971b50b4ca5f22ac420f029aac7581614dff71a8c85d293"
+  }
+}

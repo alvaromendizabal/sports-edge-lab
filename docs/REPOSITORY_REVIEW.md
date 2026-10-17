@@ -1,43 +1,40 @@
 # Repository review — October 17, 2026
 
-[Overview](../README.md) · [Evidence scorecard](demo/index.html)
+[Overview](../README.md) · [Evidence scorecard](demo/index.html) · [Machine-readable review matrix](repository_review_matrix.json)
 
-This is an internal, criterion-based editorial assessment, not an independent employer rating. Scores distinguish presentation and research engineering from predictive performance. A polished repository cannot establish market advantage or turn retrospective tests into prospective evidence.
+This review records concrete changes and verification boundaries. It does not assign an arbitrary quality score or claim a 9.9 result. Presentation, scientific validity, predictive performance and production readiness require different evidence.
 
-The before state is preserved in [README_PRE_MODELING_20261017.md](history/README_PRE_MODELING_20261017.md). Its acquisition-stage narrative was useful historical context but no longer represented the model executions already completed.
+The acquisition-stage [earlier README](history/README_PRE_MODELING_20261017.md) remains preserved. The latest update presents the completed V059 experiment and eight accepted FBS repairs while keeping V060 preparation separate from actual results.
 
-Latest maintenance incorporates the completed V058 negative benchmark, FBS-only evaluation scope, explicitly runtime-pending data repairs and the V059 scientific core. The editorial ratings below are unchanged; a new experiment or more code does not automatically increase the project score.
+## Before / after evidence
 
-## Before / after assessment
+| Criterion | Before | Current improvement and verification | Status |
+| --- | --- | --- | --- |
+| Project comprehension | Landing page emphasized acquisition rather than completed model research. | Concise target, accepted references, V059 outcome, current scope and bounded next step. | Improved |
+| Current-state accuracy | Current-season counts and pending statuses could obscure total coverage and actual completion. | 78 exact score fields and eight distribution series matched audited evidence; historical/raw/model-ready denominators separated. | Improved |
+| Modeling transparency | Method status was scattered across version receipts. | Accepted/static/dynamic comparisons, failed development gates, FBS scope and implemented-versus-prepared framework registry. Six task views and eight distribution views checked. | Improved |
+| Traceability | Reviewers had to reconstruct the latest state across receipts. | 177 local links checked with zero missing; actual summary/metrics/repair evidence linked; eight historical files byte-preserved. | Improved |
+| Public reproducibility | V058/V059 cores existed; native boosting/parser code was not public. | V060 pinned CPU core: 50 public tests pass, exactly 12 synthetic training fits, zero real-football fits/provider calls. Actual publisher HTML and private configuration excluded. | Partial |
+| Claim discipline | Latest source/family distinctions needed consolidation. | Development failures remain binding despite exposed FBS-total gain. Secondary captures are not labeled original-source repairs. No promotion or framework execution is invented. | Improved |
+| Reviewer interface | Task comparison lacked native uncertainty inspection. | Self-contained distribution inspector; three captioned tables, labelled selectors and exact values. Notebook fixture executes six code cells/two inline Plotly figures and reopens correctly. | Partial |
+| Research plan | Roadmap pointed at the completed V059 branch. | Four V060 workstreams, 84 planned real fits, frozen data boundaries and prioritized football information mechanisms. | Improved |
+| Production / economic value | No prospective deployment or profit evidence. | Still unproven; requirements remain explicit. Documentation cannot establish an edge. | Unproven |
 
-| Criterion | Before / 10 | After / 10 | Evidence for the change |
-| --- | ---: | ---: | --- |
-| Immediate project comprehension | 6.5 | 9.0 | Concise mission, two-minute review, accepted models, actual result and limits on the landing page. |
-| Current-state accuracy | 5.5 | 9.0 | Stale join counts and “start modeling” status replaced by verified modeling evidence; current-season PBP clearly separated from historical holdings. |
-| Modeling transparency | 6.0 | 9.0 | Dedicated model card: exact targets, feature groups, families, folds, metric cohorts, negative results and unimplemented capabilities. |
-| Evidence traceability | 7.5 | 8.8 | Sanitized aggregate evidence links and a static scorecard; fuller private prediction-level reproduction remains access-dependent. |
-| Reproducibility explanation | 7.0 | 8.5 | Architecture and public-fixture path distinguish software tests from licensed-data result reproduction. |
-| Scientific claim discipline | 8.0 | 9.2 | No exaggerated edge claim; explicit time-vintage limitations, exposure accounting, controls and failed gates. |
-| Reviewer navigation and presentation | 6.5 | 9.0 | Focused review paths, readable cards/tables, responsive offline scorecard with accessible labels and exact-value tables. |
-| Research roadmap quality | 7.0 | 8.8 | Discipline-to-method obligations, closed negative branches, fixed next benchmark and outcome-dependent decisions. |
+[Documentation and interface receipt](status/football_v059/portfolio_checks.json) · [Public V060 test receipt](status/football_v060/public_checks.json).
 
-Equal-weight editorial mean: **6.8 → 8.9 / 10** after rounding. These ratings assess the listed documentation/review criteria. They do not rate an unseen production system, certify all source data, or claim an employer's likely response.
+## What remains for exceptional project quality
 
-## Why this is not rated 9.9
+1. Immutable prospective predictions recorded before outcomes, with the protocol frozen in advance.
+2. Stronger source-publication/revision evidence and reliable pregame starter/availability observations.
+3. A passing controlled model improvement and information-matched market comparison.
+4. Independent clean-environment reproduction with legally accessible real data or an adequate redistributable sample.
+5. Serving, calibration/drift monitoring, incident handling and complete resource accounting if production is pursued.
+6. Rendered accessibility checks, independent review and observed usability feedback.
 
-Remaining material requirements include:
-
-1. A frozen prospective evaluation with immutable predictions recorded before outcomes.
-2. Stronger source-publication/revision evidence and reliable pregame lineup availability.
-3. A passing controlled model improvement and a fair information-horizon market comparison, rather than model complexity alone.
-4. Reproducibility from a clean external environment with clearly licensed data or a sufficient redistributable real-data sample.
-5. Verified serving behavior, calibration/drift monitoring, incident handling and resource accounting if production is pursued.
-6. Independent review and observed user/employer usability feedback, beyond this internal rubric.
-
-There is no honest basis to assign predictive quality, profitability or production readiness a 9.9 from the current record. The documented model results remain scientifically useful even when the market performs better.
+The public interface and evidence have improved. Predictive skill and production readiness have not improved merely because those materials are clearer.
 
 ## Verification boundary
 
-The documentation update preserves acquisition history, replaces stale landing-page claims, and adds architecture/model/data/roadmap references plus a self-contained HTML scorecard. Local verification checks referenced file paths, HTML semantics and evidence-value consistency. The implementation's own test/CI records are reported separately; a static HTML check is not a browser accessibility audit, a live deployment or a real-data model execution.
+Local checks verify file links, exact aggregate values, HTML semantics, selector behavior and the public synthetic test suite. The selector checks use a minimal DOM shim; **rendered browser and accessibility inspection remain unverified**. Notebook code really executed and persisted Plotly output, but this was a synthetic report fixture, not a new football model run.
 
-No forecasts, player records, credentials or licensed source responses are embedded in the scorecard. It contains aggregate evidence only, requires no external assets and makes no network requests.
+Hosted CI configuration is present; local passing checks do not establish a passing hosted run. Public tests exercise a deliberately smaller suite than the private owner artifact and omit actual publisher-source fixtures. No forecasts, private player records, credential material or licensed responses are embedded in the scorecard.

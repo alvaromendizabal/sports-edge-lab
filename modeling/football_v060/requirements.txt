@@ -1,0 +1,11 @@
+# Python 3.12. CPU-only native boosting; no CUDA dependency is requested.
+# Installation uses the package index. Tests themselves are offline.
+numpy==2.3.5
+pandas==2.2.3
+scipy==1.17.0
+scikit-learn==1.8.0
+threadpoolctl==3.6.0
+joblib==1.5.3
+xgboost-cpu==3.4.1
+lightgbm==4.7.0
+catboost==1.2.10

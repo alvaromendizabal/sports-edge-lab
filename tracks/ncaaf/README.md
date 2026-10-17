@@ -1,12 +1,12 @@
 # Sports Edge Lab · NCAA football
 
-**Current verified state — V058, October 17, 2026:** NCAAF V048R1 remains the accepted 60-feature team-history/opponent-adjusted-drive logistic/ridge baseline. V058 completed 12 college MLP fits and no college HGB refits; all three MLP tasks failed qualification.
+**Current verified state — V059, October 17, 2026:** NCAAF V048R1 remains the accepted 60-feature team-history/opponent-adjusted-drive logistic/ridge reference. V059 static/dynamic candidates trained/evaluated only FBS-versus-FBS; no task qualified. Accepted college training retains its historical mixed FBS/opponent scope.
 
-Future college forecasts and evaluation target **FBS versus FBS**. The canonical scope has 7,898 completed games, of which 7,895 are in the frozen table. Eight of 22 in-scope drive gaps have a locally verified repair awaiting V059 AWS execution; 14 would then remain. Six historical mixed FBS/FCS context gaps are deferred. Existing FCS history is preserved without standalone FCS work.
+Canonical FBS coverage is 7,898 completed games, with 7,895 in the frozen table. V059 accepted eight regulation-drive repairs, reducing FBS gaps from 22 to **14**. Six historical mixed-context gaps remain deferred; no standalone FCS work is planned.
 
-V058's FBS-only exposed win log loss was 0.554682 for the accepted reference versus 1.039290 for MLP over 1,606 games. These are subgroup scores, not a newly trained FBS-only model. V059 is a prepared repair/dynamic-state experiment, not an achieved result.
+Exposed FBS total MAE improved from 13.093919 to 12.862187, but development paired uncertainty crossed zero and 2026 monitoring was slightly worse. This is a research lead, not a promoted model. V060 prepares source-gap investigation and native boosters with fresh FBS linear controls; no V060 result is claimed.
 
-[Current model card](../../docs/MODEL_CARD.md) · [Data readiness](../../docs/DATA_READINESS.md) · [Research roadmap](../../docs/RESEARCH_ROADMAP.md) · [V058 evidence](../../docs/status/football_v058/summary.json) · [V059 local preparation](../../docs/status/football_v059/local_data_preparation.json)
+[Current model card](../../docs/MODEL_CARD.md) · [Data readiness](../../docs/DATA_READINESS.md) · [Feature strategy](../../docs/FEATURE_STRATEGY.md) · [V059 evidence](../../docs/status/football_v059/README.md)
 
 <details>
 <summary>Original acquisition-stage research plan — retained as history</summary>

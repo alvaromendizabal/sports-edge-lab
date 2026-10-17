@@ -1,10 +1,10 @@
 # Sports Edge Lab · NFL
 
-**Current verified state — V058, October 17, 2026:** NFL V047 remains the accepted 16-feature team-history logistic/ridge baseline. V058 completed 12 NFL HGB fits and 12 NFL MLP fits on the 36-feature QB representation. Neither family qualified a task. The small HGB margin improvement was below threshold with uncertainty spanning zero; the tested neural configuration performed worse.
+**Current verified state — V059, October 17, 2026:** NFL V047 remains the accepted 16-feature team-history logistic/ridge baseline. V059 completed static/dynamic joint Gaussian score states; no NFL task qualified. Exposed margin MAE was 10.142102 dynamic versus 10.198375 accepted, while total MAE was essentially unchanged. These exposed metrics do not establish reliable improvement.
 
-The audited 2016–2026 slice contains 498,285 PBP records / 2,841 completed games; the wider raw archive spans 1999–2026. The 14,031-row count is only the 2026 snapshot. V059 next tests dynamic versus static joint team offense/defense states; it has not executed.
+The audited 2016–2026 slice contains 498,285 PBP records / 2,841 completed games; the broader raw archive spans 1999–2026. The 14,031-row count is only the 2026 snapshot. Earlier sklearn HGB and MLP were tested; V060 prepares native XGBoost/LightGBM/CatBoost comparisons without claiming results yet.
 
-[Current model card](../../docs/MODEL_CARD.md) · [Data readiness](../../docs/DATA_READINESS.md) · [Research roadmap](../../docs/RESEARCH_ROADMAP.md) · [V058 evidence](../../docs/status/football_v058/summary.json) · [V059 local preparation](../../docs/status/football_v059/local_data_preparation.json)
+[Current model card](../../docs/MODEL_CARD.md) · [Data readiness](../../docs/DATA_READINESS.md) · [Feature strategy](../../docs/FEATURE_STRATEGY.md) · [V059 evidence](../../docs/status/football_v059/README.md)
 
 <details>
 <summary>Original acquisition-stage research plan — retained as history</summary>

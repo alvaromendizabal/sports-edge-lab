@@ -1,0 +1,37 @@
+{
+  "status": "PREPARATION_EVIDENCE_NOT_V060_RUNTIME",
+  "college_existing_capture": {
+    "observed_at": "2026-10-17T21:07:13Z",
+    "current_season_completed_fbs": 354,
+    "prior_canonical_current_season_completed_fbs": 339,
+    "new_finals": 15,
+    "all_new_finals_have_team_and_player_box_capture": true,
+    "pbp_drive_readiness_verified": false,
+    "new_provider_calls": 0,
+    "frozen_features_modified": false
+  },
+  "nfl_release_metadata": {
+    "observed_at": "2026-10-17T22:41:01.176Z",
+    "inspected_assets": 8,
+    "changed_compressed_digests": 6,
+    "semantic_change_confirmed": false,
+    "new_assets_runtime_verified": false
+  },
+  "no_live_forecasts": true,
+  "unknown_publication_stays_null": true,
+  "official_secondary_local_preparation": {
+    "source_games": 5,
+    "raw_HTML_bytes": 8678844,
+    "validated_secondary_games": 5,
+    "normalized_drive_rows": 122,
+    "excluded_drive_rows": 12,
+    "aggregate_team_rows": 10,
+    "aggregate_games": 5,
+    "original_espn_gaps_repaired": 0,
+    "model_fits": 0,
+    "owner_runtime_pending": true,
+    "first_observed_at": "2026-10-17T22:42:26.088489+00:00",
+    "last_observed_at": "2026-10-17T22:44:38.790180+00:00",
+    "remaining_without_local_secondary": 9
+  }
+}
