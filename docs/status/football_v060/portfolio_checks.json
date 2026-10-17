@@ -1,0 +1,45 @@
+{
+  "status": "PASS",
+  "exact_metric_field_checks": 130,
+  "distribution_evidence_exact": true,
+  "distribution_series": 8,
+  "local_links": 200,
+  "missing_links": [],
+  "historical_evidence_files_preserved": [
+    "docs/status/football_v059/summary.json",
+    "docs/status/football_v059/metrics.json",
+    "docs/status/football_v059/repair_completion.json",
+    "docs/status/football_v060/current_public_preparation.json",
+    "docs/status/football_v057/summary.json",
+    "docs/status/football_v057/metrics.json",
+    "docs/status/football_v058/summary.json",
+    "docs/status/football_v058/metrics.json",
+    "docs/status/football_v059/handoff.json",
+    "docs/status/football_v059/acceptance.json",
+    "docs/status/football_v059/local_data_preparation.json",
+    "docs/history/README_PRE_MODELING_20261017.md"
+  ],
+  "html_tables_with_captions": 3,
+  "external_runtime_assets": 0,
+  "browser_render": "Not verified: Chromium executable unavailable",
+  "html_sha256": "ac6fc0c3d297efe039cc00e9d08e0a80e2508caa6c0a000930c5dcadde510f4c",
+  "scorecard_behavior": {
+    "status": "PASS",
+    "task_selections": 6,
+    "distribution_selections": 8,
+    "method": "Node VM minimal DOM shim; not rendered browser"
+  },
+  "scope": "Public documentation, scorecard and V061 synthetic feature method; zero new real model fits or provider calls",
+  "prior_public_v060_suite": {
+    "tests_passed": 50,
+    "synthetic_fits": 12,
+    "receipt": "public_checks.json",
+    "reexecuted_this_update": false
+  },
+  "v061_public_method": {
+    "tests": 23,
+    "model_fits": 0,
+    "provider_calls": 0,
+    "receipt": "../football_v061/public_checks.json"
+  }
+}

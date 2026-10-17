@@ -1,6 +1,6 @@
 # Football V060 — native boosting and strict source parsing
 
-This public core exposes the prepared native XGBoost/LightGBM/CatBoost benchmark and its linear control, plus conservative official drive-chart parsing. **No V060 real-data result has executed or been accepted yet.** Public synthetic checks are separate from owner AWS execution and data rights.
+This public core exposes the native XGBoost/LightGBM/CatBoost benchmark and its linear control, plus conservative official drive-chart parsing. **V060 owner execution completed 84 real fits; none of 18 candidate/task combinations qualified.** Public synthetic checks are separate from owner AWS execution and data rights.
 
 ## Run the public checks
 
@@ -15,7 +15,7 @@ python -m unittest discover -s modeling/football_v060 -p '*_tests.py' -v
 
 The pinned `xgboost-cpu` distribution avoids requesting CUDA dependencies. Windows PowerShell uses `.venv-boost\Scripts\Activate.ps1`. Installation may contact the package index. The tests use invented in-memory inputs and do not load football archives, request provider data or require AWS credentials.
 
-The booster test class performs **exactly 12 tiny synthetic fits** (four families × three targets) once, then reuses them across assertions. Classifier fixtures exercise the full 200-round ceiling; regression fixtures use an explicitly recorded eight-round override. The real planned experiment has **84 new fits**, not 12: 72 native boosters plus 12 fresh FBS linear controls. Public tests are not evidence of that real queue executing.
+The booster test class performs **exactly 12 tiny synthetic fits** (four families × three targets) once, then reuses them across assertions. Classifier fixtures exercise the full 200-round ceiling; regression fixtures use an explicitly recorded eight-round override. The completed owner experiment had **84 new fits**, not 12: 72 native boosters plus 12 fresh FBS linear controls. Public tests are not evidence of that real queue executing; the separate [actual return evidence](../../docs/status/football_v060/README.md) establishes completion.
 
 ## What is controlled
 
@@ -30,7 +30,7 @@ The booster test class performs **exactly 12 tiny synthetic fits** (four familie
 | Rendered evidence | Structured drives must agree with actual counted DOM rows and hashes. Source acquisition alone is not validated drive coverage. |
 | Time provenance | Observation time does not become original publication time. Unknown source publication remains null. |
 
-The prepared owner's college target rows are FBS-versus-FBS; inherited prior-opponent feature history may still include FCS context. Accepted college predictions retain older mixed-cohort training, so the new FBS linear control isolates that change. New captures are staged separately and do not alter frozen benchmark features.
+The owner experiment's college target rows are FBS-versus-FBS; inherited prior-opponent feature history may still include FCS context. Accepted college predictions retain older mixed-cohort training, so the new FBS linear control isolates that change. New captures are staged separately and do not alter frozen benchmark features.
 
 ## Public-suite boundary
 
@@ -40,6 +40,6 @@ No private account configuration, bucket names, object pins, source payloads, pr
 
 ## Research status
 
-[Current model card](../../docs/MODEL_CARD.md) · [Feature priorities / framework registry](../../docs/FEATURE_STRATEGY.md) · [V059 actual evidence](../../docs/status/football_v059/README.md).
+[Current model card](../../docs/MODEL_CARD.md) · [Feature priorities / framework registry](../../docs/FEATURE_STRATEGY.md) · [V060 actual evidence](../../docs/status/football_v060/README.md).
 
-Earlier completed methods include sklearn HGB, sklearn MLP and Gaussian score states. These are distinct from the prepared native boosters. PyTorch and TensorFlow have no verified project execution. Model frameworks provide capabilities; source quality, decision-time information and controlled evaluation determine whether forecasts improve.
+Earlier completed methods include sklearn HGB, sklearn MLP and Gaussian score states. V060 now adds actual native booster results; none qualified. PyTorch and TensorFlow have no verified project execution. Model frameworks provide capabilities; source quality, decision-time information and controlled evaluation determine whether forecasts improve.

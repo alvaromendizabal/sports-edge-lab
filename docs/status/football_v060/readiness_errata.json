@@ -1,0 +1,39 @@
+{
+  "status": "CORRECTED_PUBLIC_REPORTING_ORIGINAL_RETURN_PRESERVED",
+  "authoritative_sources": [
+    "summary.json",
+    "acquisition_report.json",
+    "nfl_current_capture.json",
+    "current_fbs_reconciliation.json"
+  ],
+  "errata": {
+    "new_provider_calls": {
+      "stored": 0,
+      "actual": 32
+    },
+    "remaining_without_valid_secondary": {
+      "stored": 14,
+      "actual_selected_remaining": 4
+    },
+    "games_without_any_valid_drive_representation": {
+      "stored": 14,
+      "actual_selected_remaining": 4
+    },
+    "predecessor_real_fits": {
+      "stored": 36,
+      "actual_V059": 16
+    },
+    "nfl_snapshot_at": {
+      "stored": "2026-10-16T23:30:05Z",
+      "current_capture_completed_at": "2026-10-17T23:07:22.049364+00:00"
+    },
+    "ncaaf_current_observed_at": {
+      "stored": "2026-10-17T15:07:26Z",
+      "actual_existing_current_capture": "2026-10-17T21:07:13Z"
+    },
+    "ncaaf_player_feature_readiness": {
+      "stored": "No accepted FBS player-level model; current state candidates use only scores, team identity, venue and time.",
+      "actual": "V060 uses 60 frozen base/drive-efficiency features; no accepted FBS player model"
+    }
+  }
+}

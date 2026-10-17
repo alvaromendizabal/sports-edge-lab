@@ -1,6 +1,6 @@
 # Model card — NFL and NCAAF
 
-Evidence cutoff: **October 17, 2026, 22:34:31 UTC**, V059 return. [Overview](../README.md) · [Data](DATA_READINESS.md) · [Roadmap](RESEARCH_ROADMAP.md)
+Evidence cutoff: **October 17, 2026, 23:08:14 UTC**, V060 return. [Overview](../README.md) · [Data](DATA_READINESS.md) · [Roadmap](RESEARCH_ROADMAP.md)
 
 ## Intended use and accepted models
 
@@ -15,7 +15,34 @@ The foundation includes Elo, recent points scored/allowed, recent margin and tot
 
 Regularization is fixed (`C=1` for logistic, `alpha=20` for ridge); scaling is fitted only inside the training partition. Current point predictions are not cover/over probabilities or a joint score distribution.
 
-## V059 — completed joint-score state experiment
+## V060 — completed native boosting with matched controls
+
+V060 completed **84 fits**: 24 each for native XGBoost, LightGBM and CatBoost, plus 12 fresh college linear controls. NFL used the 16-feature accepted representation; FBS used 60 inherited team/drive features. New college target rows were FBS-versus-FBS, with declared prior-opponent context retained. The accepted college reference was mixed-cohort trained; the newly fitted linear control isolates that target-cohort change.
+
+| Exposed 2024–2025 output | Games | Accepted | Matched linear | XGBoost | LightGBM | CatBoost |
+| --- | ---: | ---: | ---: | ---: | ---: | ---: |
+| NFL win log loss | 569 | 0.629830 | 0.629830 | 0.632433 | 0.631679 | 0.627749 |
+| NFL win Brier | 569 | 0.220274 | 0.220274 | 0.220500 | 0.220497 | 0.218489 |
+| NFL margin MAE | 570 | 10.198375 | 10.198375 | 10.163072 | 10.155027 | 10.141178 |
+| NFL total MAE | 570 | 10.332147 | 10.332147 | 10.470488 | 10.416418 | 10.447318 |
+| FBS win log loss | 1,606 | 0.554682 | 0.555883 | 0.568727 | 0.567087 | 0.572301 |
+| FBS win Brier | 1,606 | 0.189517 | 0.190069 | 0.193999 | 0.193494 | 0.195465 |
+| FBS margin MAE | 1,606 | 12.819829 | 12.868194 | 13.205397 | 13.193786 | 13.285842 |
+| FBS total MAE | 1,606 | 13.093919 | 13.094981 | 13.139566 | 13.117648 | 13.079862 |
+
+**All 18 candidate/task development qualifications failed; no candidate qualified for prospective advancement.** A smaller exposed error is not sufficient: the fixed comparison requires meaningful gain, paired uncertainty and secondary/stability guards against both references. The benchmark did not use a configuration sweep or evaluation-driven early stopping. All 72 boosters completed 200 rounds.
+
+NFL CatBoost win log loss improved only **0.33%** on exposed seasons; paired difference **[-0.012107, +0.008092]** spans zero. Brier improved to 0.218489 from 0.220274 while ECE worsened to 0.044289 from 0.023591, so different probability diagnostics tell different parts of the story. Its development loss was worse. NFL CatBoost margin improved 0.56% exposed with a zero-crossing interval; FBS CatBoost total improved only 0.11% exposed and worsened on development and 2026 monitoring.
+
+These scores do not diagnose underfitting versus overfitting: the return lacks the training losses and learning curves needed for that distinction. The six NFL and seven FBS 2026 week blocks are too few for the declared paired-interval rule, so current-monitoring uncertainty remains unavailable rather than falsely precise.
+
+The implementation now has actual native-library results: XGBoost CPU 3.4.1, LightGBM 4.7.0 and CatBoost 1.2.10 in the returned environment. PyTorch and TensorFlow remain unexecuted. None of these names supplies additional football information or guarantees improvement.
+
+The audit passed **32,105 numerical checks**, 186 runtime tests and 84 fit records. Execution took **360.053 seconds**; estimated compute was **$0.048407** at the stated $0.484/hour rate, excluding startup/idle, storage and requests. This is not a total AWS bill.
+
+The audit outcome is **PASS_WITH_REPORTING_ERRATA**: inherited readiness counters incorrectly retained zero calls, 14 remaining gaps and older freshness/feature descriptions. Authoritative runtime evidence records 32 public HTTP attempts, 10 secondary representations and four remaining selected cases. Model scores and accepted predictions were preserved; the original return was not edited. [Summary](status/football_v060/summary.json) · [Exact metrics](status/football_v060/metrics.json) · [Reporting corrections](status/football_v060/readiness_errata.json).
+
+## Preserved V059 joint-score state experiment
 
 V059 completed **16 joint fits**: two tracks × static/dynamic arms × four chronological partitions. Each fit emits win, margin and total outputs. Both state arms update from released earlier results; the static control has zero process drift, not zero posterior learning. Fixed Gaussian priors and observation assumptions are research choices, not fitted hyperparameter optimality.
 
@@ -139,11 +166,11 @@ The win model's lower Brier but higher log loss illustrates why metrics must be 
 - Tracking/video access and permitted ML use are not confirmed.
 - No held-out prospective test, serving SLO, ongoing calibration monitoring or live wagering approval exists.
 
-Source records: [latest V059 execution](status/football_v059/summary.json), [V059 metrics](status/football_v059/metrics.json), [preserved V058 execution](status/football_v058/summary.json), [V058 metrics](status/football_v058/metrics.json), [preserved V057 evidence](status/football_v057/summary.json) and [scorecard evidence](demo/evidence.json). The owner return archives contain fuller prediction-level diagnostics and model manifests; public aggregate evidence does not replace them.
+Source records: [latest V060 execution](status/football_v060/summary.json), [V060 metrics](status/football_v060/metrics.json), [preserved V059 execution](status/football_v059/summary.json), [V059 metrics](status/football_v059/metrics.json), [preserved V058 execution](status/football_v058/summary.json), [V058 metrics](status/football_v058/metrics.json), [preserved V057 evidence](status/football_v057/summary.json) and [scorecard evidence](demo/evidence.json). The owner return archives contain fuller prediction-level diagnostics and model manifests; public aggregate evidence does not replace them.
 
 
 ## Next decision
 
-Keep NFL V047 and college V048R1 as accepted research references. Close the tested V059 fixed specification as negative/inconclusive while preserving its FBS-total lead for a materially different, predeclared investigation. Resolve the remaining 14 FBS source gaps where evidence supports repair; distinguish improved data coverage from improved predictions.
+Keep NFL V047 and college V048R1 as accepted research references. The tested V060 native configurations did not qualify; a new library is not the next information mechanism. V061 is prepared, not executed: four cached FBS parser cases, plus a separate public ESPN capture for 15 current finals capped at 40 public attempts and zero paid calls. Two additional historical representations are locally verified (12/14 locally; accepted AWS remains 10/14). The NFL representation has 52 features, with 24 planned linear/XGBoost fits. The [public method and 23 no-fit tests](../modeling/football_v061/README.md) verify construction, not predictive quality.
 
-The dynamic-strength mechanism is inspired by [Glickman and Stern (1998)](https://www.tandfonline.com/doi/abs/10.1080/01621459.1998.10474084), not an exact reproduction. The [feature strategy](FEATURE_STRATEGY.md) prioritizes decision-time information and explicitly separates completed sklearn HGB/MLP work from unexecuted XGBoost, LightGBM, CatBoost, PyTorch and TensorFlow possibilities.
+[Feature strategy](FEATURE_STRATEGY.md) prioritizes football mechanism, decision-time validity, conservative denominators and matched controls. Tracking/video, sequence and larger neural methods remain contingent on useful data and a testable hypothesis. No breakthrough, prospective edge or production promotion is established.

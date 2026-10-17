@@ -12,9 +12,9 @@ The forecasting target is NFL and **FBS-versus-FBS** win probability, point marg
 | scikit-learn histogram gradient boosting | 36 verified fits: 24 early V047/V048R1 and 12 V058 | These tested configurations did not qualify a replacement. This is not an XGBoost, LightGBM or CatBoost execution. |
 | scikit-learn multilayer perceptron | V058 completed 24 NFL/NCAAF neural fits; exact FBS evaluation slices retained | A real neural network, but neither PyTorch nor TensorFlow was used. The fixed configurations performed poorly. |
 | NumPy/SciPy Gaussian team-state filter | V059 completed 16 joint fits | Static/dynamic offense-defense research; all six task development gates failed. |
-| XGBoost | No verified execution yet | Prepared V060 fixed, equivalent-cohort benchmark; no result yet. |
-| LightGBM | No verified execution yet | Prepared V060 fixed benchmark; no score or production claim. |
-| CatBoost | No verified execution yet | Prepared V060 fixed benchmark; categorical design must remain declared and leakage-safe. |
+| XGBoost | V060 completed 24 native CPU fits | No candidate/task qualified under the fixed representation and gates. |
+| LightGBM | V060 completed 24 native CPU fits | No candidate/task qualified. |
+| CatBoost | V060 completed 24 native CPU fits | No candidate/task qualified; the numerical benchmark did not test a new categorical representation. |
 | PyTorch | No verified execution yet | Candidate framework for an explicit neural mechanism, with regularization and validation controls. |
 | TensorFlow | No verified execution yet | Alternative framework, not independent evidence of a better model. |
 
@@ -41,13 +41,20 @@ The order may change after a new error analysis. Record the reason for the chang
 
 - **V057:** QB continuity explained most of the observed total-point gain; extra rate features did not pass the full comparison against that control.
 - **V058:** additional tabular capacity did not fix the representation. The tested neural models had worse probability and point errors; poor generalization is observed, while a causal diagnosis such as overfitting needs learning curves and further diagnostics.
-- **V059:** changing latent team strength substantially improved over a deliberately static state model. FBS total MAE also improved on exposed 2024–2025, but the development uncertainty gate failed. Preserve this as an exploratory lead, not a promoted model.
+- **V059:** changing latent team strength improved over the static state control. FBS total MAE also improved on exposed 2024–2025, but the development uncertainty gate failed. Preserve this as an exploratory lead, not a promoted model.
+- **V060:** native XGBoost, LightGBM and CatBoost did not qualify against accepted and matched linear references. Small exposed CatBoost gains were insufficient; native libraries do not substitute for new information.
 
-## Next bounded benchmark: prepared V060
+## Next information hypothesis: planned V061
 
-V060 plans 72 native XGBoost/LightGBM/CatBoost fits on NFL 16-feature and FBS 60-feature tables, plus 12 fresh FBS-only linear-control fits: **84 new fits**. Existing NFL accepted-control predictions are reused. New college training/evaluation rows are FBS-versus-FBS; the inherited historical feature representation may still include declared prior FCS-opponent context. The fixed benchmark has no configuration sweep or automatic early stopping.
+V060 has now tested the named native libraries on equivalent fixed representations: 72 booster fits and 12 new FBS linear controls completed; all 18 candidate/task development qualifications failed. Changing library alone did not establish useful incremental information.
 
-Fourteen FBS source gaps and changed current NFL sources are investigated in a separate capture/validation workstream. Newly captured data does not retroactively change frozen features. Development-only grouped permutation importance will inspect information sensitivity; it is neither causal importance nor a license to select features using exposed evaluation scores. This is the prepared plan, not an executed result.
+V061 is prepared, **not executed**. Four historical FBS parser cases use existing cached pages; two are newly verified locally, yielding 12/14 local secondary representations while the accepted AWS count remains 10/14. A separate owner capture covers 15 newly final FBS games through public ESPN, with at most 40 public attempts and zero CFBD/CBBD/odds usage. Preparation made zero new source calls.
+
+The model hypothesis adds early-down pass/run efficiency, neutral play mix, explosiveness and observation controls to the 16 accepted baseline features: **52 columns**, fixed linear and XGBoost arms, **24 planned fits**. The [public method](../modeling/football_v061/README.md) provides 23 offline tests without fitting a model. Strict earlier-game cutoffs, explicit denominators and null original-publication times remain mandatory. Adjusted rate indices are not probabilities; a new representation is a hypothesis, not a promised gain.
+
+The scientific rationale is to separate passing and rushing opportunity/efficiency before late-game state dominates play choice. This remains predictive modeling, not causal play-calling optimization. Future starter and availability information may still be more valuable than additional architecture capacity, but that requires trustworthy pre-decision observations.
+
+V060 grouped permutation used 2023 development data only. Correlated feature groups can substitute for one another; these shuffles measure model sensitivity, not causal player/team value or a universal ranking of future predictive features.
 
 ## Required experiment design
 
@@ -61,9 +68,9 @@ Fourteen FBS source gaps and changed current NFL sources are investigated in a s
 
 ## Data repair versus predictive improvement
 
-V059 accepted eight regulation-drive repairs and reduced FBS gaps from 22 to **14**. The repaired secondary aggregates remain separate from accepted model inputs; their acceptance does not establish source interchangeability or better predictions. The remaining gaps are six absent alternate-source games, five unknown positive-play drive outcomes and three current source updates. Resolve only supported facts; unresolved outcomes remain quarantined.
+V059 accepted eight regulation-drive repairs. V060 captured all 14 remaining selected official-school pages and validated ten secondary representations; four remain unaccepted. Original ESPN-source repairs from this secondary-source work remain zero. Newly captured data was not inserted into the frozen native benchmark, so source validation cannot explain an artificial model gain.
 
-Historical FCS records remain archived as declared context. No standalone FCS acquisition or modeling effort is part of this strategy.
+V060 also verified four semantic changes among six NFL downloads and reconciled 15 cached FBS finals against team/player boxes. Boxes alone do not establish current drive/PBP coverage. Historical FCS records remain declared context; no standalone FCS acquisition or modeling effort is part of this strategy.
 
 ## Framework documentation
 
