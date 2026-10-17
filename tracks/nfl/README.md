@@ -1,10 +1,10 @@
 # Sports Edge Lab · NFL
 
-**Current verified state — October 17, 2026:** NFL V047 remains the accepted 16-feature team-history logistic/ridge baseline. V057 completed 24 QB-history fits but qualified no replacement. The audited 2016–2026 NFL slice contains 498,285 PBP records across 2,841 completed games; the broader stored archive spans 1999–2026. The 14,031-row figure refers only to the 2026 snapshot.
+**Current verified state — V058, October 17, 2026:** NFL V047 remains the accepted 16-feature team-history logistic/ridge baseline. V058 completed 12 NFL HGB fits and 12 NFL MLP fits on the 36-feature QB representation. Neither family qualified a task. The small HGB margin improvement was below threshold with uncertainty spanning zero; the tested neural configuration performed worse.
 
-Next: the fixed V058 HGB/MLP benchmark on the 36-feature QB representation. No neural result, confirmed upcoming-starter feature or market advantage is claimed.
+The audited 2016–2026 slice contains 498,285 PBP records / 2,841 completed games; the wider raw archive spans 1999–2026. The 14,031-row count is only the 2026 snapshot. V059 next tests dynamic versus static joint team offense/defense states; it has not executed.
 
-[Current model card](../../docs/MODEL_CARD.md) · [Data readiness](../../docs/DATA_READINESS.md) · [Research roadmap](../../docs/RESEARCH_ROADMAP.md) · [V057 evidence](../../docs/status/football_v057/summary.json) · [V058 implementation](../../modeling/football_v058/README.md)
+[Current model card](../../docs/MODEL_CARD.md) · [Data readiness](../../docs/DATA_READINESS.md) · [Research roadmap](../../docs/RESEARCH_ROADMAP.md) · [V058 evidence](../../docs/status/football_v058/summary.json) · [V059 local preparation](../../docs/status/football_v059/local_data_preparation.json)
 
 <details>
 <summary>Original acquisition-stage research plan — retained as history</summary>

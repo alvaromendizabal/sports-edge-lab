@@ -2,6 +2,26 @@
 
 [Overview](../README.md) · [Model card](MODEL_CARD.md) · [Architecture](ARCHITECTURE.md)
 
+## Current target: NFL and FBS versus FBS
+
+Future college forecasts and headline evaluation are **FBS versus FBS**. The historical FBS/FCS archive remains available as explicitly declared opponent context; no standalone FCS prediction, acquisition or repair work is planned. Prior mixed-cohort counts below remain historical coverage evidence and are not relabeled FBS-only.
+
+| Current FBS scope / repair state | Count | Status |
+| --- | ---: | --- |
+| Canonical completed FBS-vs-FBS games | 7,898 | Verified cached canonical schedule |
+| FBS-vs-FBS games in the frozen feature table | 7,895 | Accepted frozen table preserved |
+| New FBS finals missing from that table | 3 | Canonical finals exist; feature/drive refresh still required |
+| Prior in-scope drive gaps | 22 | Excludes six historical FBS/FCS context gaps |
+| Overtime-ordering repairs | 8 games / 16 team rows | Locally verified from existing caches; AWS integration pending |
+| Gaps after the prepared repair | 14 | Conditional on successful V059 runtime verification |
+| Deferred historical FBS/FCS context gaps | 6 | Preserved; no new repair attempts |
+
+The eight local repairs exclude **33 explicitly identified overtime rows before regulation-drive validation**. They fix an ordering defect in the audit, not by guessing unknown outcomes or adding provider calls. Existing accepted feature tables and source bytes remain unchanged. Secondary-source interchangeability is still unapproved.
+
+The remaining 14 FBS cases are **six absent from the alternate archive, five unknown positive-play drive results and three current source updates**. Unknown positive-play results stay quarantined. The three newer finals may support future state updates after their declared release gate; they do not retroactively alter frozen predictions.
+
+[Aggregate local preparation evidence](status/football_v059/local_data_preparation.json) is explicitly marked `LOCAL_DATA_REPAIR_VERIFIED_OWNER_RUNTIME_PENDING`. This is not a completed AWS repair, a new model fit or a source-publication verification.
+
 ## The play-by-play history is much larger than one season
 
 The **14,031 NFL rows / 80 games** previously highlighted describe the **2026 slice only**. V057 audited 11 NFL seasons, 2016–2026, with **498,285 play-by-play rows / 2,841 completed games**. The broader raw archive includes NFL assets for **1999–2026**. College archives include **ESPN PBP for 2004–2026**, **cfbfastR for 2014–2026** and **NCAA PBP for 2013–2026**. Archive availability and an audited modeling cohort are separate claims.
@@ -36,7 +56,7 @@ An October 17, 2026, 21:38 UTC S3 listing verified these stored scopes. ETag-pin
 
 These are stored file records, including administrative events, not certified valid offensive plays or independent prediction examples. Do not sum overlapping sources into a unique total. The earlier **22,151 direct CFBD plays** described a selected current backfill, not the entire college history. [Exact listing and metadata evidence](status/pbp_coverage_verified_20261017.json).
 
-## Readiness by asset
+## Preserved broader historical holdings
 
 | Asset | Verified scope | Interpretation / remaining gap |
 | --- | --- | --- |
@@ -51,7 +71,7 @@ These are stored file records, including administrative events, not certified va
 | College availability | 2,393/2,402 valid rows joined | Nine unresolved rows; one malformed ACC row quarantined separately. |
 | Tracking and aligned video | No verified entitlement | Access, coverage, synchronization and permitted ML use remain unconfirmed. |
 
-The 28 college drive gaps comprise **eight absent, 17 invalid and three recent finals** awaiting representation. There are **152 gaps in the original primary drive source**, of which 124 have separately validated alternatives. Those denominators must not be conflated. The accepted college model is unchanged; a recovered source is not automatically an interchangeable feature input.
+In the prior mixed FBS/opponent scope, 28 college drive gaps comprised **eight absent, 17 invalid and three recent finals** awaiting representation. The current FBS-only breakdown and prepared repair are reported above. There are **152 gaps in the original primary drive source**, of which 124 have separately validated alternatives. Those denominators must not be conflated. The accepted college model is unchanged; a recovered source is not automatically an interchangeable feature input.
 
 The wider raw archive contains older and overlapping sources. Row counts from multiple college releases, direct captures and revisions must not be added and described as unique plays without an exact game/play reconciliation. A source/season inventory establishes stored coverage, not valid model-ready rows.
 
@@ -61,9 +81,9 @@ The wider raw archive contains older and overlapping sources. Row counts from mu
 | --- | --- |
 | NFL current modeling snapshot | October 16, 2026, 23:30:05 UTC; completed NFL game dates through October 15 |
 | College current canonical snapshot | October 17, 2026, 15:07:26 UTC; three newer finals beyond the accepted feature table |
-| V057 model execution | Finished October 17, 2026, 21:35:36 UTC; reused pinned caches, no new source calls |
+| Latest V058 model execution | Finished October 17, 2026, 22:06:37 UTC; reused pinned caches, no new source calls |
 
-These dates are observations, not universal source-publication timestamps. V057 did not download new games, make new live forecasts, or refresh current player availability.
+These dates are observations, not universal source-publication timestamps. V058 did not download new games, make new live forecasts, or refresh current player availability.
 
 ## Information-time constraints
 
@@ -71,16 +91,18 @@ Historical archives may contain later corrections. Unknown publication timestamp
 
 Availability values retain missing and ambiguous states. Missing game-day status is never relabeled “available.” A verified 2026 American Conference football availability source remains a gap; the known 2025 archive and basketball-seeded one-off do not resolve it.
 
+The nine unresolved college availability rows represent **three players**, and **none of those rows satisfies the examined 24-hour pregame eligibility gate**. Correcting an ID alone would not make these rows valid historical pregame features.
+
 ## Highest-value repairs
 
 1. Incorporate newly completed/revised games through the existing authorized freshness workflow, preserving versions and avoiding duplicate collectors.
-2. Resolve the 28 drive gaps and nine availability rows with exact source-backed evidence; retain any unrecoverable cases explicitly.
+2. Runtime-verify the eight prepared FBS regulation-drive repairs, then address the 14 remaining FBS cases and nine tracked availability rows using exact source-backed evidence. Keep the six FBS/FCS context gaps separate.
 3. Establish upcoming QB/starter and availability observations with defensible decision timestamps before live player-informed forecasts.
 4. Collect forward-only information vintages and freeze a prospective evaluation contract before claiming deployable skill.
 5. Confirm tracking/video rights before designing a method that depends on them. Tracking is not required for the next cache-only benchmark.
 
-V058 is a **model-family experiment on existing data**, not an acquisition job or a declaration that these repairs are complete. ACB remains excluded and CBBD stopped.
+V058 completed a **model-family experiment on existing data**; it did not repair data coverage. V059 prepares the scoped cached-data repair and a dynamic-team benchmark; it has not executed. ACB remains excluded and CBBD stopped.
 
 ## Source evidence
 
-[V057 summary](status/football_v057/summary.json) · [scorecard data](demo/evidence.json) · [original content inventory](status/content_inventory_20261016T2330Z.json) · [source catalog](DATA_CATALOG.md) · [acquisition history](history/README_PRE_MODELING_20261017.md).
+[V058 summary](status/football_v058/summary.json) · [local FBS preparation](status/football_v059/local_data_preparation.json) · [preserved V057 summary](status/football_v057/summary.json) · [scorecard data](demo/evidence.json) · [original content inventory](status/content_inventory_20261016T2330Z.json) · [source catalog](DATA_CATALOG.md) · [acquisition history](history/README_PRE_MODELING_20261017.md).

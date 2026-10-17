@@ -1,0 +1,164 @@
+{
+  "status": "PASS",
+  "fit_calls": 0,
+  "groups": [
+    {
+      "n": 458,
+      "candidate_matched_rows": 458,
+      "timing_excluded_rows": 0,
+      "timing_exclusion_counts": {
+        "missing_information_time": 0,
+        "history_not_strictly_before_quote": 0
+      },
+      "status": "available_diagnostic",
+      "track": "nfl",
+      "phase": "holdout",
+      "task": "win"
+    },
+    {
+      "n": 459,
+      "candidate_matched_rows": 459,
+      "timing_excluded_rows": 0,
+      "timing_exclusion_counts": {
+        "missing_information_time": 0,
+        "history_not_strictly_before_quote": 0
+      },
+      "status": "available_diagnostic",
+      "track": "nfl",
+      "phase": "holdout",
+      "task": "margin"
+    },
+    {
+      "n": 459,
+      "candidate_matched_rows": 459,
+      "timing_excluded_rows": 0,
+      "timing_exclusion_counts": {
+        "missing_information_time": 0,
+        "history_not_strictly_before_quote": 0
+      },
+      "status": "available_diagnostic",
+      "track": "nfl",
+      "phase": "holdout",
+      "task": "total"
+    },
+    {
+      "n": 67,
+      "candidate_matched_rows": 67,
+      "timing_excluded_rows": 0,
+      "timing_exclusion_counts": {
+        "missing_information_time": 0,
+        "history_not_strictly_before_quote": 0
+      },
+      "status": "available_diagnostic",
+      "track": "nfl",
+      "phase": "monitor",
+      "task": "win"
+    },
+    {
+      "n": 68,
+      "candidate_matched_rows": 68,
+      "timing_excluded_rows": 0,
+      "timing_exclusion_counts": {
+        "missing_information_time": 0,
+        "history_not_strictly_before_quote": 0
+      },
+      "status": "available_diagnostic",
+      "track": "nfl",
+      "phase": "monitor",
+      "task": "margin"
+    },
+    {
+      "n": 68,
+      "candidate_matched_rows": 68,
+      "timing_excluded_rows": 0,
+      "timing_exclusion_counts": {
+        "missing_information_time": 0,
+        "history_not_strictly_before_quote": 0
+      },
+      "status": "available_diagnostic",
+      "track": "nfl",
+      "phase": "monitor",
+      "task": "total"
+    },
+    {
+      "n": 1076,
+      "candidate_matched_rows": 1232,
+      "timing_excluded_rows": 156,
+      "timing_exclusion_counts": {
+        "missing_information_time": 0,
+        "history_not_strictly_before_quote": 156
+      },
+      "status": "available_diagnostic",
+      "track": "ncaaf",
+      "phase": "holdout",
+      "task": "win"
+    },
+    {
+      "n": 1126,
+      "candidate_matched_rows": 1283,
+      "timing_excluded_rows": 157,
+      "timing_exclusion_counts": {
+        "missing_information_time": 0,
+        "history_not_strictly_before_quote": 157
+      },
+      "status": "available_diagnostic",
+      "track": "ncaaf",
+      "phase": "holdout",
+      "task": "margin"
+    },
+    {
+      "n": 1126,
+      "candidate_matched_rows": 1283,
+      "timing_excluded_rows": 157,
+      "timing_exclusion_counts": {
+        "missing_information_time": 0,
+        "history_not_strictly_before_quote": 157
+      },
+      "status": "available_diagnostic",
+      "track": "ncaaf",
+      "phase": "holdout",
+      "task": "total"
+    },
+    {
+      "n": 218,
+      "candidate_matched_rows": 262,
+      "timing_excluded_rows": 44,
+      "timing_exclusion_counts": {
+        "missing_information_time": 0,
+        "history_not_strictly_before_quote": 44
+      },
+      "status": "available_diagnostic",
+      "track": "ncaaf",
+      "phase": "monitor",
+      "task": "win"
+    },
+    {
+      "n": 237,
+      "candidate_matched_rows": 283,
+      "timing_excluded_rows": 46,
+      "timing_exclusion_counts": {
+        "missing_information_time": 0,
+        "history_not_strictly_before_quote": 46
+      },
+      "status": "available_diagnostic",
+      "track": "ncaaf",
+      "phase": "monitor",
+      "task": "margin"
+    },
+    {
+      "n": 237,
+      "candidate_matched_rows": 283,
+      "timing_excluded_rows": 46,
+      "timing_exclusion_counts": {
+        "missing_information_time": 0,
+        "history_not_strictly_before_quote": 46
+      },
+      "status": "available_diagnostic",
+      "track": "ncaaf",
+      "phase": "monitor",
+      "task": "total"
+    }
+  ],
+  "equality_boundary_unavailable": true,
+  "missing_time_unavailable": true
+}

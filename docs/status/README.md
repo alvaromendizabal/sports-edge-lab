@@ -1,6 +1,16 @@
 # Operational evidence
 
-**Latest verified modeling evidence — October 17, 2026, 21:35:36 UTC:** [V057 summary](football_v057/summary.json) and [metrics](football_v057/metrics.json). All 24 planned fits completed, zero provider calls, no model promotions; the QB representation did not pass its frozen qualification gates. Accepted models remain NFL V047 and NCAAF V048R1. Cumulative verified record: 16 accepted / 12 failed / two stopped executions; six accepted modeling runs / one failed; 210 completed real fits.
+**Latest verified modeling evidence — October 17, 2026, 22:06:37 UTC:** [V058 summary](football_v058/summary.json) and [metrics / FBS-only slices](football_v058/metrics.json). All 36 planned fits completed (12 HGB, 24 MLP), zero provider calls, no model promotions. All nine candidate/task development qualifications failed. Accepted models remain NFL V047 and NCAAF V048R1.
+
+Verified minimum tally: **17 accepted / 12 failed / two stopped executions; seven accepted modeling runs / one failed; 246 completed real fits.**
+
+Future college forecasts/evaluation target **FBS versus FBS**. [Local cached-data preparation for V059](football_v059/local_data_preparation.json) verifies eight regulation-drive repairs locally; AWS integration is pending. The 22 in-scope drive gaps would become 14 after runtime verification; six historical FBS/FCS context gaps remain deferred. V059 has not executed.
+
+[Current model card](../MODEL_CARD.md) · [Data readiness](../DATA_READINESS.md) · [Fresh PBP archive evidence](pbp_coverage_verified_20261017.json) · [Completed V058 implementation](../../modeling/football_v058/README.md).
+
+### Preserved V057 modeling observation
+
+**Previously verified modeling evidence — October 17, 2026, 21:35:36 UTC:** [V057 summary](football_v057/summary.json) and [metrics](football_v057/metrics.json). All 24 planned fits completed, zero provider calls, no model promotions; the QB representation did not pass its frozen qualification gates. Accepted models remain NFL V047 and NCAAF V048R1. Cumulative verified record: 16 accepted / 12 failed / two stopped executions; six accepted modeling runs / one failed; 210 completed real fits.
 
 [Current model card](../MODEL_CARD.md) · [Data readiness](../DATA_READINESS.md) · [Fresh PBP archive evidence](pbp_coverage_verified_20261017.json) · [Next V058 experiment](../../modeling/football_v058/README.md). V058 is prepared, not an executed result.
 

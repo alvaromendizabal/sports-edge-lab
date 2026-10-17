@@ -1,0 +1,19 @@
+{
+  "artifact_tested_sha256": "edaddfeec7c0cd3326b04683e6addd8f3dc52b114487f67d1aff91f39fafed02",
+  "passed": 9,
+  "unit_tests": 85,
+  "checks": [
+    "Injected post-validation failure preserves all 8 fit checkpoints and returns diagnostics",
+    "Resume completes only 8 remaining fits; 8 existing fits unchanged by hashes and mtimes",
+    "Accepted re-entry returns identical ZIP with no new tally or fits",
+    "Six executed notebook cells, two embedded Plotly figures, reopening and subsequent cell verified",
+    "Timeout stops nonzero and creates a diagnostic ZIP",
+    "Offline gate failure stops before model work",
+    "Concurrent lock rejects duplicate and preserves accepted state",
+    "Source tampering rejected before tests/credentials",
+    "Real-mode failed offline test proves AWS preflight was never called"
+  ],
+  "fixture_or_mock_only": true,
+  "real_aws_or_provider_calls": 0,
+  "browser_rendering_verified": false
+}

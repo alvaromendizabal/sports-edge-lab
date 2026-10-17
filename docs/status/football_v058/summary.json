@@ -1,0 +1,48 @@
+{
+  "status": "SUCCESS",
+  "class": "VALID_NEGATIVE_OR_INCONCLUSIVE",
+  "run_id": "20261017T220515Z-8a97291c",
+  "started_at": "2026-10-17T22:05:15.344852+00:00",
+  "finished_at": "2026-10-17T22:06:37.519936+00:00",
+  "completed_new_fits": 36,
+  "baseline_refits": 0,
+  "provider_calls": 0,
+  "odds_credits": 0,
+  "cfbd_requests": 0,
+  "cbbd_requests": 0,
+  "model_promotions": 0,
+  "elapsed_total_seconds": 82.178,
+  "estimated_compute_usd": 0.011048,
+  "hourly_rate_assumption": 0.484,
+  "cost_exclusions": [
+    "Studio idle/startup",
+    "persistent EBS and S3",
+    "S3 request charges"
+  ],
+  "completed_stages": [
+    "feature_and_reference_integrity",
+    "chronological_family_development",
+    "exposed_and_monitoring_scorecards",
+    "readiness_and_research_notebook"
+  ],
+  "reason": "Four nonlinear workstreams complete; accepted NFL/NCAAF models preserved.",
+  "source_return_sha256": "e15e7d4da5dbed5c60d4c00953efcc3675fbeba19936fb5311689f010dd1bc56",
+  "source_return_bytes": 6849774,
+  "independent_audit_status": "PASS",
+  "independent_numeric_checks": 23053,
+  "runtime_tests": 66,
+  "hgb_fits": 12,
+  "mlp_fits": 24,
+  "new_live_forecasts": 0,
+  "verified_minimum_tally": {
+    "accepted_executions": 17,
+    "failed_executions": 12,
+    "stopped_executions": 2,
+    "accepted_modeling_runs": 7,
+    "failed_modeling_runs": 1,
+    "completed_real_fits": 246
+  },
+  "all_nine_candidate_task_development_qualifications_failed": true,
+  "current_college_target": "FBS vs FBS; historical mixed FBS/opponent outputs retained as evidence",
+  "v059_executed": false
+}

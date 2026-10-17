@@ -27,32 +27,33 @@ The objective is original, reproducible football forecasting with demonstrable i
 | V055 recovered drives | Does the tested recovered-drive representation improve forecasts? | Negative/inconclusive. | Do not silently change accepted source semantics. |
 | V056 market complement | Does combining our forecasts and market prices add value? | 48 completed fits; no task qualified. | Close fixed combination branch. |
 | V057 QB history | Does historical QB performance add beyond continuity and team history? | 24 completed fits; all development gates failed. | No promotion; preserve histories for a materially different test. |
-| V058 nonlinear benchmark | Do fixed nonlinear models extract useful interactions from existing features? | Prepared; no actual V058 result yet. | Owner execution required before any performance claim. |
+| V058 nonlinear benchmark | Do fixed nonlinear models extract useful interactions from existing features? | 36 completed fits; all nine candidate/task qualifications failed. | No promotion; close these fixed configurations. |
+| V059 FBS repair and dynamic teams | Does changing latent offense/defense improve joint forecasts beyond a static control? | Prepared; 16 joint fits planned, no V059 result yet. | Runtime-verify scope/repair, then evaluate the frozen comparison. |
 
-## Immediate next experiment: V058
+## Immediate next experiment: V059
 
-Four compatible workstreams: input/evidence validation, fixed family benchmarks, chronological comparison with cached references, and an executed research report with a next-decision record.
+Four compatible workstreams: validate the FBS-only target and cached regulation-drive repair; fit fixed static/dynamic joint Gaussian team models; compare chronologically with accepted predictions; and produce complete uncertainty/readiness evidence.
 
-- **NFL:** histogram gradient boosting and a small multilayer perceptron on V057's 36-feature QB table. Compare against accepted team-only predictions and the same-feature linear QB reference, so a gain can be attributed more carefully.
-- **NCAAF:** a small multilayer perceptron on the accepted 60-feature table. Preserve the previously completed college HGB result instead of repeating that configuration.
-- **Scope:** three tasks × four chronological folds × three track/family combinations = **36 maximum new real fits**. No new source requests or accepted-baseline refits.
-- **Interpretation:** 2022/2023 development, exposed 2024/2025 diagnostics and 2026 monitoring remain previously examined evidence. Family comparison is not a fresh prospective validation.
-- **Gate:** the frozen executable specification controls acceptance. Do not choose a family from the exposed period, retune a failed result, or claim production readiness from a retrospective improvement.
+- **Scope:** NFL plus FBS-versus-FBS prediction/evaluation. Preserve historical FCS opponent context without new standalone FCS work.
+- **Data work:** verify eight locally recovered FBS games (16 team rows) in owner runtime. This would reduce in-scope drive gaps from 22 to 14; six historical mixed-context gaps are deferred. Three newer FBS finals remain absent from the frozen feature table.
+- **Model question:** compare changing team offense/defense states with a static control. Each joint fit produces win, margin and total outputs; the planned queue is **16 joint fits = two arms × two tracks × four folds**, not 48 separate fits.
+- **Research basis:** [Glickman and Stern (1998)](https://www.tandfonline.com/doi/abs/10.1080/01621459.1998.10474084) motivates dynamic latent strength for NFL forecasts. The offense/defense joint-output model is an inspired extension, not an exact replication or a performance transfer.
+- **Evidence standard:** retain exposed-season labels, same-game controls, model uncertainty and proper scores. A candidate that fails development cannot be rescued by a favorable exposed result.
 
-The frozen implementation and fixture instructions live in [modeling/football_v058](../modeling/football_v058/README.md). This document describes the research question; executable tests/configuration define exact parameters and stop conditions.
+No V059 execution, accepted-model replacement, provider acquisition or fully resolved data state is claimed. The [local preparation evidence](status/football_v059/local_data_preparation.json) and current source/feature hashes remain distinct from a future AWS return. [Prepared V059 public core](../modeling/football_v059/README.md) and [completed V058 implementation](../modeling/football_v058/README.md) are retained for reproducibility.
 
 ## After the benchmark
 
 | Result | Next action |
 | --- | --- |
-| Nonlinear family improves reliably under the declared gates | Freeze it for a prospective, forward-recorded trial. Confirm feature availability and monitor calibration/coverage. |
-| Nonlinear family fails | Treat complexity as an unsuccessful intervention on this representation. Prioritize new information or a different representation. |
+| Dynamic model improves reliably under the declared gates | Freeze it for a prospective, forward-recorded trial. Confirm feature availability and monitor calibration/coverage. |
+| Dynamic model fails | Retain the static/accepted references and close the fixed dynamic specification. Prioritize verified information or a materially different representation. |
 | Poor QB identity or lineup coverage dominates errors | Improve prospective starter/availability observations; do not infer historical starters from target outcomes. |
 | Team-strength drift dominates errors | Test a bounded dynamic offense/defense model with opponent adjustment and explicit state uncertainty. |
 | Full score distribution becomes the target | Design a joint or distributional model, then add CRPS, interval scores and dependence diagnostics. |
 | Tracking/video access is confirmed | Verify license, population, alignment and target relevance before any multimodal or sequence project. |
 
-Advanced architectures should follow a verified mechanism: sequence models for ordered events, graph models for interaction structure, hierarchical models for sparse changing players, or multimodal models for aligned video and trajectories. None is currently an accepted Sports Edge Lab model.
+Advanced architectures should follow a verified mechanism: sequence models for ordered events, graph models for interaction structure, hierarchical models for sparse changing players, or multimodal models for aligned video and trajectories. Neural networks and HGB have now been tested but were not promoted. Full hierarchical, sequence, graph and multimodal models remain unimplemented or access-blocked.
 
 ## Research anchors
 

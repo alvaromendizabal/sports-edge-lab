@@ -62,4 +62,11 @@ Existing acquisition collectors and schedules have their own frozen scope. Cache
 
 ## Public reproducibility boundary
 
-[V058 public implementation and fixture instructions](../modeling/football_v058/README.md) expose the experiment mechanics. Code, tests, contracts, source references and non-sensitive aggregate metrics are reviewable here. Exact owner results require access to the pinned AWS objects and their applicable source rights. Synthetic fixtures establish software behavior, not achieved real-data model performance. Large raw files, private/licensed records, model binaries and secrets stay outside public Git history.
+[V059 state/repair core](../modeling/football_v059/README.md) and [V058 benchmark implementation](../modeling/football_v058/README.md) expose the experiment mechanics. The V059 public tests/demonstration use synthetic data; its owner execution remains pending. Code, tests, contracts, source references and non-sensitive aggregate metrics are reviewable here. Exact owner results require access to the pinned AWS objects and their applicable source rights. Synthetic fixtures establish software behavior, not achieved real-data model performance. Large raw files, private/licensed records, model binaries and secrets stay outside public Git history.
+
+
+## V059 joint-state extension: prepared
+
+The next branch keeps acquisition separate from modeling. It first validates FBS-versus-FBS scope and a cached regulation-drive repair, preserving frozen features and labels. Static/dynamic Gaussian team filters then consume only declared released results. Both arms update their posterior after earlier outcomes become available; the static control has zero process drift rather than no learning. Each joint fit produces home/away means and covariance, then win, margin and total outputs.
+
+The public core reports Gaussian density/CRPS, native interval diagnostics and negative-score mass as explicit model assumptions. No runtime completion, production promotion or full-distribution baseline result is implied by publishing this source.
