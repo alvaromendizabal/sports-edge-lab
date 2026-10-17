@@ -1,0 +1,43 @@
+{
+  "status": "SUCCESS",
+  "class": "VALID_NEGATIVE_OR_INCONCLUSIVE",
+  "started_at": "2026-10-17T21:34:09.909067+00:00",
+  "finished_at": "2026-10-17T21:35:36.995486+00:00",
+  "run_id": "20261017T213409Z-92e75df1",
+  "completed_new_fits": 24,
+  "baseline_refits": 0,
+  "model_promotions": 0,
+  "provider_calls": 0,
+  "elapsed_total_seconds": 87.089,
+  "estimated_compute_usd": 0.011709,
+  "hourly_rate_assumption": 0.484,
+  "cost_exclusions": [
+    "Studio idle/startup",
+    "persistent EBS and S3",
+    "S3 request charges"
+  ],
+  "completed_stages": [
+    "exact_passer_and_play_audit",
+    "lagged_qb_history_and_controls",
+    "chronological_player_ablation",
+    "readiness_decision_and_research_notebook"
+  ],
+  "prospective_eligible_tasks": [],
+  "return_sha256": "00abac9d7f989ea9485c3a85f2acc512c8704f9ad8da8708fb41991869f6be79",
+  "return_bytes": 6314138,
+  "independent_numeric_checks": 575,
+  "present_manifest_hashes_verified": 88,
+  "raw_records_redistributed": false,
+  "accepted_models": {
+    "nfl": "V047",
+    "ncaaf": "V048R1"
+  },
+  "tally": {
+    "accepted": 16,
+    "failed": 12,
+    "stopped": 2,
+    "modeling_accepted": 6,
+    "modeling_failed": 1,
+    "completed_real_fits": 210
+  }
+}

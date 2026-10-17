@@ -1,0 +1,234 @@
+{
+  "schema_version": 1,
+  "evidence_cutoff": "2026-10-17T21:35:36.995486+00:00",
+  "source_run_id": "20261017T213409Z-92e75df1",
+  "source_return_sha256": "00abac9d7f989ea9485c3a85f2acc512c8704f9ad8da8708fb41991869f6be79",
+  "status": "SUCCESS",
+  "classification": "VALID_NEGATIVE_OR_INCONCLUSIVE",
+  "new_real_fits": 24,
+  "provider_calls": 0,
+  "promotions": 0,
+  "new_live_forecasts": 0,
+  "tally": {
+    "accepted_executions": 16,
+    "failed_executions": 12,
+    "stopped_executions": 2,
+    "accepted_modeling_runs": 6,
+    "failed_modeling_runs": 1,
+    "completed_real_fits": 210
+  },
+  "nfl_audited_pbp": {
+    "seasons": "2016\u20132026",
+    "raw_rows": 498285,
+    "games": 2841,
+    "identified_non_scramble_dropbacks": 207337,
+    "player_team_game_rows": 6963,
+    "ambiguous_primary_cases": 8
+  },
+  "nfl_2026_snapshot": {
+    "rows": 14031,
+    "games": 80,
+    "snapshot_at": "2026-10-16T23:30:05Z"
+  },
+  "v057_comparisons": [
+    {
+      "track": "nfl",
+      "task": "win",
+      "phase": "exposed_2024_2025",
+      "scores": {
+        "accepted_v047": {
+          "auc": 0.6941583320893665,
+          "brier": 0.22027394209432988,
+          "metric": "log_loss",
+          "n": 569,
+          "value": 0.6298304983663755
+        },
+        "continuity_control": {
+          "auc": 0.6948922724784794,
+          "brier": 0.22117769099463247,
+          "metric": "log_loss",
+          "n": 569,
+          "value": 0.6370788990839379
+        },
+        "qb_values": {
+          "auc": 0.7011743046225805,
+          "brier": 0.21877361595362813,
+          "metric": "log_loss",
+          "n": 569,
+          "value": 0.6323086584734123
+        }
+      },
+      "paired_difference": {
+        "accepted_v047": {
+          "blocks": 44,
+          "difference": 0.0024781601070368343,
+          "lower95": -0.012426945750357975,
+          "method": "paired season-week bootstrap; descriptive after development, no multiplicity guarantee",
+          "replicates": 1000,
+          "upper95": 0.02135226571798529
+        },
+        "continuity_control": {
+          "blocks": 44,
+          "difference": -0.004770240610525589,
+          "lower95": -0.01051522218220097,
+          "method": "paired season-week bootstrap; descriptive after development, no multiplicity guarantee",
+          "replicates": 1000,
+          "upper95": 0.0009447214085523921
+        }
+      },
+      "development_qualified": false
+    },
+    {
+      "track": "nfl",
+      "task": "margin",
+      "phase": "exposed_2024_2025",
+      "scores": {
+        "accepted_v047": {
+          "metric": "mae",
+          "n": 570,
+          "rmse": 13.098543760011106,
+          "value": 10.198375423478133
+        },
+        "continuity_control": {
+          "metric": "mae",
+          "n": 570,
+          "rmse": 13.178958671814582,
+          "value": 10.231769488297001
+        },
+        "qb_values": {
+          "metric": "mae",
+          "n": 570,
+          "rmse": 13.122573402569262,
+          "value": 10.184908832351452
+        }
+      },
+      "paired_difference": {
+        "accepted_v047": {
+          "blocks": 44,
+          "difference": -0.013466591126680309,
+          "lower95": -0.15348943565379092,
+          "method": "paired season-week bootstrap; descriptive after development, no multiplicity guarantee",
+          "replicates": 1000,
+          "upper95": 0.12356326144065943
+        },
+        "continuity_control": {
+          "blocks": 44,
+          "difference": -0.04686065594554816,
+          "lower95": -0.1062183659855378,
+          "method": "paired season-week bootstrap; descriptive after development, no multiplicity guarantee",
+          "replicates": 1000,
+          "upper95": 0.01400188289585267
+        }
+      },
+      "development_qualified": false
+    },
+    {
+      "track": "nfl",
+      "task": "total",
+      "phase": "exposed_2024_2025",
+      "scores": {
+        "accepted_v047": {
+          "metric": "mae",
+          "n": 570,
+          "rmse": 13.182260154726142,
+          "value": 10.332146990896888
+        },
+        "continuity_control": {
+          "metric": "mae",
+          "n": 570,
+          "rmse": 13.080737683197695,
+          "value": 10.217871949228627
+        },
+        "qb_values": {
+          "metric": "mae",
+          "n": 570,
+          "rmse": 13.096970151286216,
+          "value": 10.20459220991045
+        }
+      },
+      "paired_difference": {
+        "accepted_v047": {
+          "blocks": 44,
+          "difference": -0.12755478098643697,
+          "lower95": -0.26171178178840354,
+          "method": "paired season-week bootstrap; descriptive after development, no multiplicity guarantee",
+          "replicates": 1000,
+          "upper95": 0.007660657579606803
+        },
+        "continuity_control": {
+          "blocks": 44,
+          "difference": -0.013279739318176945,
+          "lower95": -0.12699233715313618,
+          "method": "paired season-week bootstrap; descriptive after development, no multiplicity guarantee",
+          "replicates": 1000,
+          "upper95": 0.10250080720027983
+        }
+      },
+      "development_qualified": false
+    }
+  ],
+  "accepted_market_comparison": [
+    {
+      "track": "NFL",
+      "task": "Win",
+      "metric": "Log loss",
+      "n": 458,
+      "accepted": 0.6266212743594952,
+      "market": 0.5999026346
+    },
+    {
+      "track": "NFL",
+      "task": "Margin",
+      "metric": "MAE",
+      "n": 459,
+      "accepted": 10.261325,
+      "market": 9.821351
+    },
+    {
+      "track": "NFL",
+      "task": "Total",
+      "metric": "MAE",
+      "n": 459,
+      "accepted": 10.298856,
+      "market": 10.036492
+    },
+    {
+      "track": "NCAAF",
+      "task": "Win",
+      "metric": "Log loss",
+      "n": 1293,
+      "accepted": 0.5489742202,
+      "market": 0.5233128735
+    },
+    {
+      "track": "NCAAF",
+      "task": "Margin",
+      "metric": "MAE",
+      "n": 1411,
+      "accepted": 13.034424,
+      "market": 12.122785
+    },
+    {
+      "track": "NCAAF",
+      "task": "Total",
+      "metric": "MAE",
+      "n": 1411,
+      "accepted": 12.905078,
+      "market": 12.476435
+    }
+  ],
+  "claims": {
+    "prospective_validated": false,
+    "strict_historical_publication_verified": false,
+    "upcoming_starters_known": false,
+    "market_advantage_demonstrated": false,
+    "production_promoted": false,
+    "tracking_video_confirmed": false
+  },
+  "limitations": [
+    "Previously exposed seasons; no new untouched holdout.",
+    "Market quotes can have later information horizons.",
+    "Unknown source publication timestamps remain unknown.",
+    "This page contains aggregate retrospective evidence, not live forecasts."
+  ]
+}

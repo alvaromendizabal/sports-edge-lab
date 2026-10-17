@@ -1,5 +1,13 @@
 # Operational evidence
 
+**Latest verified modeling evidence — October 17, 2026, 21:35:36 UTC:** [V057 summary](football_v057/summary.json) and [metrics](football_v057/metrics.json). All 24 planned fits completed, zero provider calls, no model promotions; the QB representation did not pass its frozen qualification gates. Accepted models remain NFL V047 and NCAAF V048R1. Cumulative verified record: 16 accepted / 12 failed / two stopped executions; six accepted modeling runs / one failed; 210 completed real fits.
+
+[Current model card](../MODEL_CARD.md) · [Data readiness](../DATA_READINESS.md) · [Fresh PBP archive evidence](pbp_coverage_verified_20261017.json) · [Next V058 experiment](../../modeling/football_v058/README.md). V058 is prepared, not an executed result.
+
+## Historical acquisition observations (superseded)
+
+The dated entries below preserve the acquisition history. Their “latest,” “running” and pending-job wording describes the observation recorded at that time; it is not a live job-status claim. Use the current evidence links above for modeling state.
+
 Latest: [V046 completed cache audit and current availability](../FOOTBALL_VALIDATION_V046.md). All 95 tests passed locally and in AWS; zero paid-provider calls. Exact code, terminal outcome and unique return ZIP verification are committed.
 
 Latest: [V039 selected queue complete](../FOOTBALL_FINISH_V039.md), [V042 current refresh](../FOOTBALL_READINESS_V042.md), [V045 quality repair](../FOOTBALL_QUALITY_V045.md). V044 failed before provider calls; its evidence and cost remain recorded. Earlier observations below are dated history.

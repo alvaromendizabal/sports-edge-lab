@@ -1,0 +1,22 @@
+{
+  "passed": 6,
+  "checks": [
+    "Canonical account and exactly four runtime preflight files verified via mocked S3 upload/head/hash metadata",
+    "All 17 actual hash-pinned cached assets fetched under exact runtime names including 12 nested baseline files; no training",
+    "All 17 successful cached assets reused without another mocked S3 head or download",
+    "Existing corrupted feature cache fails closed and remains unchanged without redownload",
+    "Wrong account stops after mocked STS identity and before constructing or using S3",
+    "Durable 36-fit budget rejects reservation 37 without incrementing or resetting the ledger"
+  ],
+  "asset_count": 17,
+  "pinned_asset_bytes": 6681024,
+  "preflight_upload_count": 4,
+  "mocked_download_count": 17,
+  "fit_reservations_only": 36,
+  "mocked_aws_only": true,
+  "real_aws_reads": 0,
+  "real_aws_mutations": 0,
+  "new_model_fits": 0,
+  "provider_calls": 0,
+  "event_count": 70
+}
