@@ -9,6 +9,7 @@ on:
       - 'modeling/football_v061/**'
       - 'modeling/football_v062/**'
       - 'modeling/football_v063/**'
+      - 'modeling/football_v064/**'
       - '.github/workflows/modeling-quality.yml'
   pull_request:
     paths:
@@ -18,6 +19,7 @@ on:
       - 'modeling/football_v061/**'
       - 'modeling/football_v062/**'
       - 'modeling/football_v063/**'
+      - 'modeling/football_v064/**'
       - '.github/workflows/modeling-quality.yml'
   workflow_dispatch:
 permissions:
@@ -188,6 +190,42 @@ jobs:
           suite = unittest.defaultTestLoader.loadTestsFromModule(prospective_tests)
           assert suite.countTestCases() == 36
           assert prospective_tests.ProspectiveTests.synthetic_smoke_fits == 4
+          result = unittest.TextTestRunner(verbosity=2).run(suite)
+          raise SystemExit(0 if result.wasSuccessful() else 1)
+          PY
+
+  offline-feature-reconstruction:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    env:
+      OMP_NUM_THREADS: '2'
+      OPENBLAS_NUM_THREADS: '2'
+      MKL_NUM_THREADS: '2'
+      NUMEXPR_NUM_THREADS: '2'
+      PYTHONHASHSEED: '0'
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+          cache: pip
+          cache-dependency-path: modeling/football_v064/requirements.txt
+      - name: Install pinned reconstruction and serving dependencies
+        run: python -m pip install -r modeling/football_v064/requirements.txt
+      - name: Run 69 offline checks and four tiny synthetic estimator fits
+        run: |
+          python - <<'PY'
+          import sys
+          import unittest
+          sys.path.insert(0, 'modeling/football_v064')
+          import fresh_feature_tests
+          import prospective_tests
+          reconstruction = unittest.defaultTestLoader.loadTestsFromModule(fresh_feature_tests)
+          serving = unittest.defaultTestLoader.loadTestsFromModule(prospective_tests)
+          assert reconstruction.countTestCases() == 26
+          assert serving.countTestCases() == 43
+          assert prospective_tests.ProspectiveTests.synthetic_smoke_fits == 4
+          suite = unittest.TestSuite([reconstruction, serving])
           result = unittest.TextTestRunner(verbosity=2).run(suite)
           raise SystemExit(0 if result.wasSuccessful() else 1)
           PY

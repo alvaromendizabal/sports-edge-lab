@@ -1,5 +1,18 @@
 # Feature strategy and framework status
 
+
+## Current evidence — V063 complete, V064 prepared
+
+V063 finished at **2026-10-18 00:49:10 UTC**. An independent 3,079-check audit accepted three cached source repairs, 1,247 reproduced saved predictions and all 195 immutable abstention records. Its original source vintage was 25.316 hours old; zero forecasts were issued. No training or provider calls occurred, and no model improved or was promoted. The selected repair inventory is now **28/29** (15/15 current; 13/14 historical), not a claim of complete play-by-play or tracking coverage. Temple–UConn remains denied; nine college availability identities and tracking/video entitlement remain unresolved.
+
+**Current minimum tally:** 22 accepted / 12 failed / two stopped execution runs; modeling 11 accepted / one failed; 386 real fits. [Actual V063 evidence](status/football_v063/README.md).
+
+V064 is **prepared, not AWS-executed**: one bounded current NFL schedule capture; reuse of the original-observation FBS schedule; exact replay and reconstruction of the existing NFL16/FBS60 feature definitions; then immutable prospective forecasts or explicit abstentions. No real fits, paid calls, new jobs or model promotions. Historical opposite-division context is retained; all new college forecast targets are FBS-versus-FBS. Secondary drive-chart statistics are not silently substituted into the trained feature definition. [V064 preparation](status/football_v064/README.md).
+
+A separate primary-efficiency freshness gate keeps production FBS60 forecasts abstained: its original current-season drive source was observed October 16, 18:15:25 UTC, and no newer compatible observation/equivalence is verified. NFL16 may qualify after its canonical refresh.
+
+Earlier experiment sections below retain their dated evidence. V063 changes readiness and source-repair counts; it does not change V062 or earlier predictive results.
+
 [Project overview](../README.md) · [Model card](MODEL_CARD.md) · [Data readiness](DATA_READINESS.md) · [Research roadmap](RESEARCH_ROADMAP.md)
 
 The forecasting target is NFL and **FBS-versus-FBS** win probability, point margin and game total. The most useful next feature is one that contributes information available at the actual decision time, remains reliable across seasons and improves a controlled comparison. An additional library or more columns is not automatically new information.

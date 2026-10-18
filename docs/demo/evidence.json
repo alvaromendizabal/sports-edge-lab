@@ -18,24 +18,26 @@
     "upcoming_starters_known": false,
     "market_advantage_demonstrated": false,
     "production_promoted": false,
-    "tracking_video_confirmed": false
+    "tracking_video_confirmed": false,
+    "saved_model_serving_verified": true,
+    "current_feature_freshness_verified": false,
+    "current_model_features_rebuilt": false,
+    "live_wagering_ready": false
   },
-  "schema_version": 5,
-  "evidence_cutoff": "2026-10-18T00:16:00.461582+00:00",
-  "source_run_id": "20261018T000747Z-e22bef22",
-  "source_return_sha256": "26a86867bdcf643c0127922f077e465d4db722e6dbe3cd90f37d3d2d46b81f78",
+  "schema_version": 6,
+  "evidence_cutoff": "2026-10-18T00:49:10.643867+00:00",
+  "source_run_id": "20261018T004833Z-2286a7e1",
+  "source_return_sha256": "b55ff1fc92a7683a2b35cff7c43dc3952be2956220963ea079808afa1bd20ed5",
   "status": "SUCCESS",
-  "classification": "VALID_NEGATIVE_OR_INCONCLUSIVE",
-  "audit_status": "PASS_WITH_SCOPE_LIMITS",
-  "new_real_fits": 16,
-  "fit_family_counts": {
-    "LightGBM_regression_l1": 16
-  },
-  "provider_calls": 33,
+  "classification": "DATA_AND_SERVING_EVIDENCE",
+  "audit_status": "PASS_ACTUAL_ENGINEERING_EXECUTION",
+  "new_real_fits": 0,
+  "fit_family_counts": {},
+  "provider_calls": 0,
   "promotions": 0,
   "new_live_forecasts": 0,
   "tally": {
-    "accepted_executions": 21,
+    "accepted_executions": 22,
     "failed_executions": 12,
     "stopped_executions": 2,
     "accepted_modeling_runs": 11,
@@ -734,100 +736,52 @@
   ],
   "distribution_evidence_version": "V059 preserved historical experiment; not a V062 density",
   "acquisition_completion": {
-    "bytes_charged": 28605855,
-    "complete_PBP_or_tracking_coverage_claimed": false,
-    "conservative_available_at_max": "2026-10-18T17:34:00+00:00",
-    "conservative_available_at_min": "2026-10-18T16:02:00+00:00",
-    "counted_DOM_rows": 285,
-    "current_normalized_games_available_at_run_completion": 0,
-    "downloaded_pdf_captures": 2,
-    "excluded_bookkeeping_rows": 23,
-    "inflight_reservations": 0,
-    "model_feature_table_modified": false,
-    "new_blocked_host": "s3.us-east-2.amazonaws.com",
-    "new_current_regulation_drives": 262,
-    "new_current_secondary_games": 13,
-    "new_current_secondary_team_rows": 26,
-    "paid_provider_calls": 0,
-    "prior_espn_denial_preserved": true,
-    "prior_validated_historical_secondary_games": 12,
-    "public_attempts": 33,
-    "remaining": [
-      {
-        "away_name": "Mississippi State",
-        "cohort": "current_15",
-        "game_id": "401856720",
-        "home_name": "LSU",
-        "reason": [
-          {
-            "error_type": "Rejected",
-            "reason": "quarter_score_total_header_missing",
-            "source_sha256": "690c78569b3c50e1855e70c6bd919d46e7b201b1cc5f450964c48b89e4d7188f",
-            "stage": "PDF_event_identity"
-          }
-        ]
-      },
-      {
-        "away_name": "Rutgers",
-        "cohort": "current_15",
-        "game_id": "401858489",
-        "home_name": "Maryland",
-        "reason": [
-          {
-            "reason": "drive_period_clock_duration_conflict",
-            "source_sha256": "b4900d2fbd3a5d923522baacf2abb4a91471d4f272ff1ee41ce3155c6dbfdcb3",
-            "stage": "official_HTML_validation"
-          }
-        ]
-      },
-      {
-        "away_name": "UConn",
-        "cohort": "historical_2",
-        "game_id": "401117914",
-        "home_name": "Temple",
-        "reason": [
-          {
-            "reason": "provider_denial"
-          }
-        ]
-      },
-      {
-        "away_name": "San Diego State",
-        "cohort": "historical_2",
-        "game_id": "401415228",
-        "home_name": "Boise State",
-        "reason": [
-          {
-            "error_type": "Rejected",
-            "reason": "quarter_score_total_header_missing",
-            "source_sha256": "99bc08bcb7e37d975f8e9c4558d8814e17f38a8ece9689e31fb74719819d331a",
-            "stage": "PDF_event_identity"
-          }
-        ]
-      }
+    "version": "V063",
+    "mode": "exact_cached_reparse",
+    "new_source_captures": 0,
+    "provider_calls": 0,
+    "newly_validated_cached_games": 3,
+    "newly_validated_regulation_drives": 63,
+    "newly_validated_team_rows": 6,
+    "cached_source_files": 3,
+    "cached_source_bytes": 3729404,
+    "validated_current_secondary_games": 15,
+    "selected_current_secondary_games": 15,
+    "validated_historical_secondary_games": 13,
+    "selected_historical_secondary_games": 14,
+    "combined_selected_validated_games": 28,
+    "combined_selected_games": 29,
+    "remaining_game_ids": [
+      "401117914"
     ],
-    "remaining_combined_selected_drive_games": 4,
-    "remaining_current_drive_games": 2,
-    "remaining_historical_secondary_games": 2,
-    "request_failures": 3,
-    "robots_403_stops": 1,
-    "robots_404_allowances": 2,
-    "secondary_source_interchangeability_approved": false,
-    "selected_source_games": 17,
+    "remaining_combined_selected_drive_games": 1,
+    "remaining_current_drive_games": 0,
+    "remaining_historical_secondary_games": 1,
+    "merged_this_output_drive_rows": 325,
+    "merged_this_output_team_rows": 32,
+    "merged_this_output_scope": "15 current games plus newly validated historical Boise–SDSU; prior 12 historical rows remain in their original evidence",
+    "original_provider_gaps_repaired": 0,
+    "model_feature_table_modified": false,
     "source_publication_at": null,
-    "successful_public_http": 30,
-    "successful_source_captures": 16,
-    "verified_pdf_text_only_games": 0,
-    "version": "V062"
+    "current_games_with_available_clock_after_run": 15,
+    "complete_PBP_or_tracking_coverage_claimed": false,
+    "secondary_source_interchangeability_approved": false,
+    "retained_provider_blocks": [
+      "site.api.espn.com",
+      "s3.us-east-2.amazonaws.com",
+      "cbbd"
+    ]
   },
   "college_scope": "Current candidate and strict-FBS shadow-control target rows are FBS versus FBS; inherited feature history may include FCS opponent context. The accepted legacy college reference was mixed-cohort trained.",
   "limitations": [
     "2016–2026 evaluation years were already examined; no untouched historical holdout.",
-    "V062 completed16 L1 fits; one development candidate qualified but all four exposed task gates failed.",
-    "V059 Gaussian scores and V060 native-booster comparisons are preserved historical evidence.",
-    "Secondary sources do not repair original ESPN sources or alter frozen model inputs.",
-    "V063 is prepared and locally checked, not an AWS execution or model promotion.",
-    "Serving parity is not prospective validation; stale source vintages require abstention."
+    "V059 Gaussian scores, V060 native-booster comparisons and V062 objective-only results remain preserved historical evidence.",
+    "V063 improved source reconciliation and verified serving parity, not model quality; no new fit or promotion.",
+    "All 195 V063 records abstained on stale inputs; 39 also missed issuance deadlines. These reason counts overlap.",
+    "Selected secondary-drive coverage 28/29 does not establish full provider PBP, tracking or video completeness.",
+    "One historical Temple–UConn source remains blocked; 9 college identity rows remain unresolved.",
+    "New source repairs did not change frozen model features or establish historical publication timestamps.",
+    "V064 is prepared, not executed; current input and feature reconstruction must be verified before fresh forecasts are claimed."
   ],
   "v060_acquisition_completion": {
     "source_run_id": "20261017T230214Z-3276670a",
@@ -2906,21 +2860,159 @@
     }
   ],
   "v060_evidence_version": "V060 preserved historical native-booster comparison; 84 fits, no candidate qualification",
-  "v063_prepared": {
-    "status": "PREPARED_NOT_AWS_EXECUTED",
+  "v062_acquisition_completion": {
+    "bytes_charged": 28605855,
+    "complete_PBP_or_tracking_coverage_claimed": false,
+    "conservative_available_at_max": "2026-10-18T17:34:00+00:00",
+    "conservative_available_at_min": "2026-10-18T16:02:00+00:00",
+    "counted_DOM_rows": 285,
+    "current_normalized_games_available_at_run_completion": 0,
+    "downloaded_pdf_captures": 2,
+    "excluded_bookkeeping_rows": 23,
+    "inflight_reservations": 0,
+    "model_feature_table_modified": false,
+    "new_blocked_host": "s3.us-east-2.amazonaws.com",
+    "new_current_regulation_drives": 262,
+    "new_current_secondary_games": 13,
+    "new_current_secondary_team_rows": 26,
+    "paid_provider_calls": 0,
+    "prior_espn_denial_preserved": true,
+    "prior_validated_historical_secondary_games": 12,
+    "public_attempts": 33,
+    "remaining": [
+      {
+        "away_name": "Mississippi State",
+        "cohort": "current_15",
+        "game_id": "401856720",
+        "home_name": "LSU",
+        "reason": [
+          {
+            "error_type": "Rejected",
+            "reason": "quarter_score_total_header_missing",
+            "source_sha256": "690c78569b3c50e1855e70c6bd919d46e7b201b1cc5f450964c48b89e4d7188f",
+            "stage": "PDF_event_identity"
+          }
+        ]
+      },
+      {
+        "away_name": "Rutgers",
+        "cohort": "current_15",
+        "game_id": "401858489",
+        "home_name": "Maryland",
+        "reason": [
+          {
+            "reason": "drive_period_clock_duration_conflict",
+            "source_sha256": "b4900d2fbd3a5d923522baacf2abb4a91471d4f272ff1ee41ce3155c6dbfdcb3",
+            "stage": "official_HTML_validation"
+          }
+        ]
+      },
+      {
+        "away_name": "UConn",
+        "cohort": "historical_2",
+        "game_id": "401117914",
+        "home_name": "Temple",
+        "reason": [
+          {
+            "reason": "provider_denial"
+          }
+        ]
+      },
+      {
+        "away_name": "San Diego State",
+        "cohort": "historical_2",
+        "game_id": "401415228",
+        "home_name": "Boise State",
+        "reason": [
+          {
+            "error_type": "Rejected",
+            "reason": "quarter_score_total_header_missing",
+            "source_sha256": "99bc08bcb7e37d975f8e9c4558d8814e17f38a8ece9689e31fb74719819d331a",
+            "stage": "PDF_event_identity"
+          }
+        ]
+      }
+    ],
+    "remaining_combined_selected_drive_games": 4,
+    "remaining_current_drive_games": 2,
+    "remaining_historical_secondary_games": 2,
+    "request_failures": 3,
+    "robots_403_stops": 1,
+    "robots_404_allowances": 2,
+    "secondary_source_interchangeability_approved": false,
+    "selected_source_games": 17,
+    "source_publication_at": null,
+    "successful_public_http": 30,
+    "successful_source_captures": 16,
+    "verified_pdf_text_only_games": 0,
+    "version": "V062"
+  },
+  "v062_execution": {
+    "evidence_cutoff": "2026-10-18T00:16:00.461582+00:00",
+    "source_run_id": "20261018T000747Z-e22bef22",
+    "source_return_sha256": "26a86867bdcf643c0127922f077e465d4db722e6dbe3cd90f37d3d2d46b81f78",
+    "status": "SUCCESS",
+    "classification": "VALID_NEGATIVE_OR_INCONCLUSIVE",
+    "new_real_fits": 16,
+    "fit_family_counts": {
+      "LightGBM_regression_l1": 16
+    },
+    "provider_calls": 33,
+    "promotions": 0,
+    "new_live_forecasts": 0
+  },
+  "latest_executed_version": "V063",
+  "v063_actual": {
+    "status": "ACCEPTED_ACTUAL_ENGINEERING_EXECUTION",
+    "run_id": "20261018T004833Z-2286a7e1",
+    "finished_at": "2026-10-18T00:49:10.643867+00:00",
+    "classification": "DATA_AND_SERVING_EVIDENCE",
     "new_real_fits": 0,
-    "new_provider_calls": 0,
-    "new_model_promotions": 0,
-    "locally_verified_cached_parser_repairs": 3,
-    "combined_selected_validated_if_owner_execution_confirms": 28,
-    "combined_selected_total": 29,
-    "remaining_provider_blocked": 1,
+    "provider_calls": 0,
+    "model_promotions": 0,
+    "new_source_captures": 0,
+    "newly_validated_cached_games": 3,
+    "combined_selected_validated_games": 28,
+    "combined_selected_games": 29,
     "owned_model_parity_rows": 1247,
     "owned_model_count": 6,
     "maximum_absolute_parity_difference": 1.4210854715202004e-14,
+    "eligible_schedule_games": 65,
+    "prospective_records": 195,
     "live_forecasts_issued": 0,
+    "abstentions": 195,
+    "abstention_reasons": {
+      "canonical_snapshot_stale": 195,
+      "frozen_feature_snapshot_stale": 195,
+      "inherited_feature_source_stale": 195,
+      "issue_deadline_passed": 39
+    },
+    "abstention_reasons_overlap": true,
+    "feature_snapshot_at": "2026-10-16T23:30:05+00:00",
+    "snapshot_age_hours_at_batch": 25.315805027499998,
+    "hash_chain_valid": true,
+    "immutable_batch_matches": true,
     "strict_fbs_linear_models_are_shadow_controls": true,
-    "feature_snapshot_at": "2026-10-16T23:30:05Z",
-    "stale_snapshots_require_abstention": true
+    "current_model_features_rebuilt": false,
+    "prospective_performance_verified": false,
+    "live_wagering_ready": false
+  },
+  "v064_prepared": {
+    "status": "PREPARED_NOT_EXECUTED",
+    "new_real_fits_planned": 0,
+    "model_promotions_planned": 0,
+    "execution_result": null,
+    "feature_reconstruction_executed": false,
+    "quality_gain_claimed": false,
+    "scope": "Refresh NFL canonical inputs and reconstruct exact NFL16/FBS60 features. NFL shadow forecasts may qualify; FBS60 remains abstained without independent current drive-source proof.",
+    "workstreams": [
+      "Verify a fresh hash-pinned canonical observation and source availability.",
+      "Reconstruct the existing 16 NFL and 60 FBS feature contracts from eligible current histories.",
+      "Apply the unchanged owned models with actual issuance time and NFL 24h/FBS 1h deadlines.",
+      "Preserve immutable forecasts or exact abstentions and freeze subsequent settlement evidence."
+    ],
+    "prepared_evidence_path": "../status/football_v064/README.md",
+    "FBS_primary_efficiency_original_observation": "2026-10-16T18:15:25+00:00",
+    "FBS_production_issuance": "blocked until compatible current primary-efficiency observation and equivalence proof"
   }
 }

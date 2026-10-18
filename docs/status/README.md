@@ -1,6 +1,19 @@
 # Operational evidence
 
 
+## Current evidence — V063 complete, V064 prepared
+
+V063 finished at **2026-10-18 00:49:10 UTC**. An independent 3,079-check audit accepted three cached source repairs, 1,247 reproduced saved predictions and all 195 immutable abstention records. Its original source vintage was 25.316 hours old; zero forecasts were issued. No training or provider calls occurred, and no model improved or was promoted. The selected repair inventory is now **28/29** (15/15 current; 13/14 historical), not a claim of complete play-by-play or tracking coverage. Temple–UConn remains denied; nine college availability identities and tracking/video entitlement remain unresolved.
+
+**Current minimum tally:** 22 accepted / 12 failed / two stopped execution runs; modeling 11 accepted / one failed; 386 real fits. [Actual V063 evidence](football_v063/README.md).
+
+V064 is **prepared, not AWS-executed**: one bounded current NFL schedule capture; reuse of the original-observation FBS schedule; exact replay and reconstruction of the existing NFL16/FBS60 feature definitions; then immutable prospective forecasts or explicit abstentions. No real fits, paid calls, new jobs or model promotions. Historical opposite-division context is retained; all new college forecast targets are FBS-versus-FBS. Secondary drive-chart statistics are not silently substituted into the trained feature definition. [V064 preparation](football_v064/README.md).
+
+A separate primary-efficiency freshness gate keeps production FBS60 forecasts abstained: its original current-season drive source was observed October 16, 18:15:25 UTC, and no newer compatible observation/equivalence is verified. NFL16 may qualify after its canonical refresh.
+
+Earlier experiment sections below retain their dated evidence. V063 changes readiness and source-repair counts; it does not change V062 or earlier predictive results.
+
+
 ## Latest completed evidence — V062
 
 [Actual V062 summary](football_v062/summary.json), [metrics/gates](football_v062/metrics.json) and [source outcome](football_v062/acquisition_completion.json): 16 actual fits, one NFL-total development qualification, zero exposed qualifications or promotions. Accepted models remain unchanged. Thirteen current official secondary drive representations validate; four selected gaps remain. Thirty-three public attempts preserved all provider stops; no paid calls.

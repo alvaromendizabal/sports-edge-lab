@@ -1,0 +1,161 @@
+{
+  "schema": "sports-edge-lab.factual-scorecard.v060-holdout",
+  "calculated_from": "owned V060 evaluation_predictions.parquet",
+  "source_bytes": 452664,
+  "source_sha256": "b2d635a1bf2a2f184b78da80a05d00410c3df0f4e5c3ca647cb4458fb3500bf3",
+  "phase": "holdout",
+  "phase_interpretation": "previously exposed retrospective 2024\u20132025; not an untouched test or prospective performance",
+  "seasons": [
+    2024,
+    2025
+  ],
+  "rows": [
+    {
+      "track": "nfl",
+      "target_scope": "NFL",
+      "model_column": "accepted",
+      "model_role": "accepted_V047_reference",
+      "task": "win",
+      "n": 569,
+      "unique_games": 569,
+      "seasons": [
+        2024,
+        2025
+      ],
+      "games_by_season": {
+        "2024": 285,
+        "2025": 284
+      },
+      "metrics": {
+        "log_loss": 0.6298304983663755,
+        "brier": 0.22027394209432988
+      }
+    },
+    {
+      "track": "nfl",
+      "target_scope": "NFL",
+      "model_column": "accepted",
+      "model_role": "accepted_V047_reference",
+      "task": "margin",
+      "n": 570,
+      "unique_games": 570,
+      "seasons": [
+        2024,
+        2025
+      ],
+      "games_by_season": {
+        "2024": 285,
+        "2025": 285
+      },
+      "metrics": {
+        "mae": 10.198375423478133,
+        "rmse": 13.098543760011106
+      }
+    },
+    {
+      "track": "nfl",
+      "target_scope": "NFL",
+      "model_column": "accepted",
+      "model_role": "accepted_V047_reference",
+      "task": "total",
+      "n": 570,
+      "unique_games": 570,
+      "seasons": [
+        2024,
+        2025
+      ],
+      "games_by_season": {
+        "2024": 285,
+        "2025": 285
+      },
+      "metrics": {
+        "mae": 10.332146990896888,
+        "rmse": 13.182260154726142
+      }
+    },
+    {
+      "track": "ncaaf",
+      "target_scope": "FBS versus FBS",
+      "model_column": "matched_linear",
+      "model_role": "V060_strict_FBS_trained_unpromoted_linear_control",
+      "task": "win",
+      "n": 1606,
+      "unique_games": 1606,
+      "seasons": [
+        2024,
+        2025
+      ],
+      "games_by_season": {
+        "2024": 798,
+        "2025": 808
+      },
+      "metrics": {
+        "log_loss": 0.5558832606945519,
+        "brier": 0.19006878831474042
+      }
+    },
+    {
+      "track": "ncaaf",
+      "target_scope": "FBS versus FBS",
+      "model_column": "matched_linear",
+      "model_role": "V060_strict_FBS_trained_unpromoted_linear_control",
+      "task": "margin",
+      "n": 1606,
+      "unique_games": 1606,
+      "seasons": [
+        2024,
+        2025
+      ],
+      "games_by_season": {
+        "2024": 798,
+        "2025": 808
+      },
+      "metrics": {
+        "mae": 12.868193911742107,
+        "rmse": 16.150202062301933
+      }
+    },
+    {
+      "track": "ncaaf",
+      "target_scope": "FBS versus FBS",
+      "model_column": "matched_linear",
+      "model_role": "V060_strict_FBS_trained_unpromoted_linear_control",
+      "task": "total",
+      "n": 1606,
+      "unique_games": 1606,
+      "seasons": [
+        2024,
+        2025
+      ],
+      "games_by_season": {
+        "2024": 798,
+        "2025": 808
+      },
+      "metrics": {
+        "mae": 13.094980585852309,
+        "rmse": 16.293819268391626
+      }
+    }
+  ],
+  "nfl_win_point_cohort_difference_game_ids": [
+    "2025_04_GB_DAL"
+  ],
+  "win_target": "home win conditional on a non-tie; tie excluded from binary win task",
+  "fbs_control_status": {
+    "strict_FBS_training_targets": true,
+    "unpromoted_control": true,
+    "accepted_replacement": false,
+    "feature_history_may_include_prior_FCS_opponent_context": true,
+    "evidence": [
+      "Executed V060 preparation filters FBS versus FBS targets before fitting.",
+      "Executed V063 model role: strict FBS V060 linear control shadow; not promoted."
+    ]
+  },
+  "new_fits": 0,
+  "new_acquisition": 0,
+  "limitations": [
+    "No market or price comparison computed; no equal-horizon or executable-price claim.",
+    "These scores do not establish prospective performance, profitability or a new model promotion.",
+    "Source publication timestamps remain unknown; strict historical point-in-time verification is false."
+  ]
+}

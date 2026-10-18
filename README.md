@@ -4,11 +4,11 @@
 
 Sports Edge Lab develops NFL and NCAA football win probabilities, point-margin forecasts and game-total forecasts. The project connects source acquisition, player identity, historical feature construction, model evaluation and recoverable AWS execution. Basketball tracks share the infrastructure; football is the current modeling focus.
 
-**Verified through October 18, 2026 · V062:** **386 completed real fits**; **21 accepted / 12 failed / 2 stopped execution runs**. V062 completed 16 controlled LightGBM L1 fits. NFL totals qualified on development but failed exposed evaluation; **no model was promoted**. It captured 16 official sources and validated 13 current FBS drive representations. Four selected source gaps remain. **V063 is in preparation: zero new research fits or provider calls.**
+**Verified through October 18, 2026 · V063:** **386 completed real fits**; **22 accepted / 12 failed / two stopped executions**. V063 repaired three cached games, verified 1,247 saved-model predictions and recorded 195 freshness/deadline abstentions, with zero live forecasts. All 15 selected current repair games and 13/14 historical repair games are represented; one denied-source gap remains. **V064 is prepared for current-input reconstruction and prospective shadow inference; it has not executed on AWS.**
 
 **College scope:** future forecasts and headline evaluation target **FBS versus FBS**. Historical FBS/FCS games remain archived and may provide declared opponent context; no standalone FCS acquisition or modeling work is planned.
 
-[Model card](docs/MODEL_CARD.md) · [Data readiness](docs/DATA_READINESS.md) · [Architecture](docs/ARCHITECTURE.md) · [Research roadmap](docs/RESEARCH_ROADMAP.md) · [V062 completed evidence](docs/status/football_v062/README.md) · [Evidence scorecard](docs/demo/index.html)
+[Model card](docs/MODEL_CARD.md) · [Data readiness](docs/DATA_READINESS.md) · [Architecture](docs/ARCHITECTURE.md) · [Research roadmap](docs/RESEARCH_ROADMAP.md) · [V063 completed evidence](docs/status/football_v063/README.md) · [Evidence scorecard](docs/demo/index.html)
 
 ## A two-minute review
 

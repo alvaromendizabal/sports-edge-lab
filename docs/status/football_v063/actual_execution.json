@@ -1,0 +1,121 @@
+{
+  "schema": "sports-edge-lab.sanitized-actual-execution.v063",
+  "status": "accepted_data_and_serving_execution",
+  "version": "V063",
+  "run_id": "20261018T004833Z-2286a7e1",
+  "started_at": "2026-10-18T00:48:33.949868+00:00",
+  "finished_at": "2026-10-18T00:49:10.643867+00:00",
+  "runtime_tests": {
+    "passed": 298,
+    "total": 298,
+    "synthetic_smoke_fits": 4
+  },
+  "independent_audit": {
+    "status": "PASS",
+    "semantic_numerical_time_checks": 3079,
+    "failures": 0
+  },
+  "new_real_fits": 0,
+  "baseline_refits": 0,
+  "new_source_captures": 0,
+  "provider_calls": 0,
+  "model_promotions": 0,
+  "cached_repairs": {
+    "newly_validated": 3,
+    "current_validated": 15,
+    "current_selected": 15,
+    "historical_validated": 13,
+    "historical_selected": 14,
+    "combined_validated": 28,
+    "combined_selected": 29,
+    "merged_output_drive_rows": 325,
+    "merged_output_team_rows": 32,
+    "newly_validated_drive_rows": 63,
+    "newly_validated_team_rows": 6,
+    "current_games_with_available_clock_after_run": 15,
+    "original13current_unchanged": true,
+    "original12historical_unchanged": true,
+    "original_UConn_block_preserved": true,
+    "original_source_observations_preserved": true
+  },
+  "remaining_historical_gap": "Temple–UConn; existing public source-host block preserved",
+  "saved_model_parity": {
+    "model_count": 6,
+    "prediction_rows": 1247,
+    "independent_maximum_absolute_difference": 1.4210854715202004e-14,
+    "new_fits": 0,
+    "roles": {
+      "nfl": "accepted V047 linear models",
+      "ncaaf": "unpromoted strict-FBS V060 linear shadow controls"
+    },
+    "prospective_performance_evidence": false
+  },
+  "prospective": {
+    "games": 65,
+    "records": 195,
+    "forecasts": 0,
+    "abstentions": 195,
+    "by_track": {
+      "ncaaf": 153,
+      "nfl": 42
+    },
+    "reasons": {
+      "canonical_snapshot_stale": 195,
+      "frozen_feature_snapshot_stale": 195,
+      "inherited_feature_source_stale": 195,
+      "issue_deadline_passed": 39
+    },
+    "first_record_at": "2026-10-18T00:49:02.053041+00:00",
+    "last_record_at": "2026-10-18T00:49:03.021419+00:00",
+    "pending_checkpoint_at": "2026-10-18T00:49:03.026956+00:00",
+    "source_snapshot_at": "2026-10-16T23:30:05+00:00",
+    "snapshot_age_hours_at_batch": 25.315805027499998,
+    "hash_chain_valid": true,
+    "immutable_batch_matches": true
+  },
+  "notebook": {
+    "executed_code_cells": 5,
+    "plotly_figures": 1,
+    "error_outputs": 0
+  },
+  "tally": {
+    "accepted_execution_runs": 22,
+    "failed_execution_runs": 12,
+    "stopped_execution_runs": 2,
+    "accepted_modeling_runs": 11,
+    "failed_modeling_runs": 1,
+    "completed_real_fits": 386,
+    "classification": "V063 is accepted data/serving engineering, not a new model-training run"
+  },
+  "integrity": {
+    "return_zip_bytes": 6700491,
+    "return_zip_sha256": "b55ff1fc92a7683a2b35cff7c43dc3952be2956220963ea079808afa1bd20ed5",
+    "unique_members": 173,
+    "crc_clean": true,
+    "extracted_members_match": true,
+    "present_manifest_hashes": 161,
+    "manifest_entries": 164,
+    "present_upload_hashes": 162,
+    "upload_entries": 165,
+    "verified_checkpoint_references": 18,
+    "checkpoint_references": 18,
+    "source_integrity_entries": 136,
+    "returned_source_files_match": 137,
+    "delivered_pyz_sha256": "61af7bdd98b262c931b2f178aeb3fc9d42b5cb006ec2e5067dcb0da69fbf0d4e",
+    "compact_omissions": 3,
+    "omissions_explanation": "AWS identity receipt, ledger lock file and source PYZ. The PYZ was separately verified against the delivered archive."
+  },
+  "elapsed_seconds": 36.701,
+  "estimated_active_compute_usd": 0.004934,
+  "cost_limitations": "Assumed hourly rate times active runtime; excludes idle/startup, storage and request charges. Not the total AWS bill.",
+  "limitations": [
+    "No live forecasts or prospective performance evidence were created; all195 rows abstain on stale frozen input.",
+    "Current repaired rows remain separate from frozen model features and preserve conservative availability.",
+    "Current15/15 is selected secondary-drive representation coverage, not full provider PBP or tracking/video completeness.",
+    "PDF chart play counts include source-specific field-goal attempts; no direct equivalence to raw PBP scrimmage denominators.",
+    "One historical Temple–UConn source remains blocked;9 college identity rows and tracking/video access remain unresolved.",
+    "Return contains provider-call ledger/code evidence, not independent AWS account telemetry."
+  ],
+  "preparation_evidence_sha256": "47662336cc46a71bec6ac0aedaff4f60afc75563a50db79476d843f1aa0e38bd",
+  "public_artifact_scope": "Aggregate receipts only; no raw publisher payloads, player-level rows, forecast rows, model binaries, credentials or private account paths."
+}
