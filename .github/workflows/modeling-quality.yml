@@ -11,6 +11,7 @@ on:
       - 'modeling/football_v063/**'
       - 'modeling/football_v064/**'
       - 'modeling/football_v065/**'
+      - 'modeling/football_v066/**'
       - '.github/workflows/modeling-quality.yml'
   pull_request:
     paths:
@@ -22,6 +23,7 @@ on:
       - 'modeling/football_v063/**'
       - 'modeling/football_v064/**'
       - 'modeling/football_v065/**'
+      - 'modeling/football_v066/**'
       - '.github/workflows/modeling-quality.yml'
   workflow_dispatch:
 permissions:
@@ -264,5 +266,30 @@ jobs:
           assert settlement.countTestCases() == 50
           suite = unittest.TestSuite([drive, settlement])
           result = unittest.TextTestRunner(verbosity=2).run(suite)
+          raise SystemExit(0 if result.wasSuccessful() else 1)
+          PYCODE
+
+  offline-source-clock-adjudication:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    env:
+      PYTHONHASHSEED: '0'
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Run 49 standard-library diagnostics with network blocked and no model fits
+        run: |
+          python - <<'PYCODE'
+          import sys
+          import unittest
+          from unittest import mock
+          sys.path.insert(0, 'modeling/football_v066')
+          import source_adjudication_tests
+          suite = unittest.defaultTestLoader.loadTestsFromModule(source_adjudication_tests)
+          assert suite.countTestCases() == 49
+          with mock.patch('socket.socket.connect', side_effect=AssertionError('Offline suite must not connect')):
+              result = unittest.TextTestRunner(verbosity=2).run(suite)
           raise SystemExit(0 if result.wasSuccessful() else 1)
           PYCODE

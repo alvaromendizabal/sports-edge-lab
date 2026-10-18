@@ -1,0 +1,111 @@
+{
+  "schema": "sports-edge-lab.v065.actual-execution",
+  "version": "V065",
+  "status": "SUCCESS",
+  "classification": "DATA_AND_FORECAST_ACCOUNTING",
+  "started_at": "2026-10-18T02:01:53.583816+00:00",
+  "finished_at": "2026-10-18T02:02:55.528311+00:00",
+  "completed_stages": 4,
+  "runtime_tests_passed": 495,
+  "synthetic_smoke_fits": 4,
+  "independent_checks_passed": 2743,
+  "new_real_fits": 0,
+  "new_live_forecasts": 0,
+  "model_promotions": 0,
+  "elapsed_total_seconds": 61.951,
+  "estimated_compute_usd": 0.008329,
+  "hourly_rate_assumption": 0.484,
+  "cost_exclusions": [
+    "Studio idle/startup",
+    "persistent storage",
+    "request charges"
+  ],
+  "acquisition": {
+    "provider": "CFBD",
+    "confirmed_HTTP_attempts": 1,
+    "http_successes": 1,
+    "observed_at": "2026-10-18T02:02:44.276517+00:00",
+    "raw_bytes": 6281636,
+    "compressed_bytes": 408164,
+    "raw_rows": 11405,
+    "raw_games": 489,
+    "series_charged_attempts": 1,
+    "series_limit": 160,
+    "outstanding_reservations": 0,
+    "odds_credits": 0,
+    "CBBD_requests": 0,
+    "public_requests": 0,
+    "source_publication_at": null
+  },
+  "source_quality": {
+    "normalized_games": 393,
+    "normalized_team_rows": 786,
+    "strict_FBS_games": 291,
+    "declared_opponent_context_games": 102,
+    "quarantined_games": 82,
+    "quarantined_rows": 99,
+    "quarantine_reasons": {
+      "Drive end period precedes start period": 31,
+      "invalid eligible drive/team/result": 68
+    },
+    "excluded_rows": 324,
+    "excluded_games": 14,
+    "excluded_reason": "canonical_game_not_completed",
+    "primary_required_games": 455,
+    "primary_required_strict_FBS_games": 336,
+    "primary_required_context_games": 119,
+    "exact_prior_games": 308,
+    "exact_prior_strict_FBS_games": 226,
+    "exact_prior_context_games": 82,
+    "mismatching_prior_games": 81,
+    "mismatching_prior_strict_FBS_games": 61,
+    "missing_prior_games": 66,
+    "missing_prior_strict_FBS_games": 49,
+    "automatic_model_insertion": false,
+    "primary_FBS60_still_blocked": true,
+    "newly_normalized_strict_FBS_games": 4,
+    "missing_strict_FBS_games_all_quarantined": true
+  },
+  "forecast_accounting": {
+    "original_records_preserved": 192,
+    "issued_records_preserved": 6,
+    "original_abstentions_preserved": 186,
+    "pending_records": 6,
+    "pending_games": 2,
+    "matured_records": 0,
+    "scored_records": 0,
+    "new_forecasts": 0,
+    "prospective_metrics_available": false,
+    "original_forecasts_byte_identical": true,
+    "individual_forecasts_not_published": true
+  },
+  "notebook": {
+    "code_cells_executed": 6,
+    "plotly_MIME_verified": true,
+    "html_verified": true,
+    "browser_visual_inspection": false
+  },
+  "return_integrity": {
+    "unique_members": 215,
+    "CRC_verified": true,
+    "one_unique_return_verified": true,
+    "raw_source_replay_verified": true
+  },
+  "tally_after": {
+    "accepted_execution_runs": 24,
+    "failed_execution_runs": 12,
+    "stopped_execution_runs": 2,
+    "accepted_modeling_runs": 11,
+    "failed_modeling_runs": 1,
+    "completed_real_fits": 386,
+    "verified_minimum": true
+  },
+  "limitations": [
+    "Independent source capture is not complete primary-feed equivalence.",
+    "Missing strict-FBS primary comparisons are quarantined games, not missing downloads.",
+    "Frozen canonical completion excludes later source rows.",
+    "No matured prospective scores, model promotion or wagering advantage.",
+    "Unknown historical publication remains unknown."
+  ],
+  "public_scope": "Sanitized aggregate evidence only; private object paths, artifact pins, source records and individual forecasts are omitted."
+}

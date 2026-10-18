@@ -1,22 +1,32 @@
-# V065 — current FBS drives and immutable settlement
+# V065 — current FBS source comparison and forecast accounting
 
-**Preparation only; owner execution has not occurred.** This is a zero-fit data and evaluation milestone, with no new forecast issuance or model promotion.
+**Completed October 18, 2026, 02:02:55 UTC.** Four stages succeeded, 495 runtime tests passed and an independent actual-return audit passed 2,743 checks. V065 made one confirmed CFBD request, zero real fits, zero new forecasts and zero model promotions. [Sanitized actual execution](actual_execution.json).
 
-## Four workstreams
+## What was captured and validated
 
-1. Reuse exact successful cached data, then capture at most **one** current CFBD drive response from the existing subscription under durable shared attempt accounting and provider-denial stops. The source request is 2026 regular-season FBS-involving drives, not a historical backfill or new subscription. Response cap: 10 MB.
-2. Normalize exact game/team/drive identities and compare all five original drive metrics against the complete 455-game primary reference. Invalid eligible rows quarantine the whole game. The required inventory cannot shrink when canonical rows are missing. Independently normalized data remains separate; even complete equality is review evidence and never automatic FBS60 insertion.
-3. Evaluate only immutable forecasts that were actually issued before their original deadlines, using observed final labels and conservative release. Append settlement records; retain earlier versions and resume idempotently. The current two-game NFL forecast batch has **no matured outcomes** at preparation. No new forecasts are generated.
-4. Report the source dependency, complete/unequal/missing coverage, pending outcomes, cost and next decision in an executed notebook and one return.
+The successful current-season response contains **11,405 source records across 489 games**. Strict normalization retains **393 games / 786 team rows: 291 FBS-versus-FBS games and 102 declared opponent-context games**. The intermediate 475-game normalizer count precedes whole-game quarantine and is not accepted coverage.
 
-V064's canonical snapshot is unchanged. CFBD rows for later games absent from that snapshot are retained in the immutable raw capture but excluded from normalization until a separately verified canonical refresh. Publication remains null where unknown. Declared FBS/FCS opponent context is reported separately; new forecast/training targets remain FBS versus FBS.
+| Against the complete primary reference | All declared games | Strict FBS games |
+| --- | ---: | ---: |
+| Required reference inventory | 455 | 336 |
+| Exact metric matches | 308 | 226 |
+| Unequal metrics | 81 | 61 |
+| Missing accepted comparisons | 66 | 49 |
 
-## Why another source is not a silent repair
+All 49 missing strict-FBS comparisons are represented in the source but quarantined; they are **not missing downloads**. In total, 99 invalid rows affect 82 games: 31 backward-period rows and 68 invalid eligible drive/team/result rows. Entire affected games remain excluded. A further 324 rows across 14 games remain in raw captures because the unchanged canonical schedule did not mark those games completed. Four additional strict-FBS games have independently normalized metrics.
 
-The owned three-response overlap covers 2,888 drives and 124 games. Strict validation retains 110 games: 107 FBS-versus-FBS and three declared opponent-context games. Fourteen games are quarantined after 19 invalid eligible rows. Of the 110 retained games, **81 match all five primary metrics and 29 disagree**; 345 games are missing/quarantined against the 455-game reference. Neither matching drive IDs nor a fresh timestamp establishes equivalent inputs. [Sanitized owned-source diagnostic](owned_source_comparison.json).
+**No model inputs were replaced. FBS60 remains blocked.** A fresh source capture does not prove semantic equivalence, complete canonical coverage or historical pregame information availability. Source publication remains unknown.
 
-The nine unresolved college availability rows represent three people and need exact dated identity corroboration. No fabricated join, tracking entitlement, new subscription, provider-denial bypass or source-semantic replacement is part of this milestone.
+## Preserved forecasts and execution evidence
 
-**Final preparation passed:** 495 packaged offline tests with four tiny synthetic fits, 89 public pure-method checks (39 compatibility + 50 settlement), and 144 independent focused checks. An injected failure after append resumed with six immutable files unchanged; accepted reentry reused the same ZIP. The fixture executed six notebook cells, saved/reopened Plotly evidence and verified return CRC. These are synthetic preparation tests, not an owner AWS execution. [Final artifact hash, bounds and test receipt](preparation.json).
+The original 192-record ledger remains byte-identical: six issued NFL records for two games and 186 abstentions. All six issued records are pending. No outcomes matured, so there are no new prospective scores. Actual original leads remain distinct from the minimum issuance cutoff; individual forecast values are not published here.
 
-[Actual predecessor V064](../football_v064/README.md) · [Public pure methods and fixtures](../../../modeling/football_v065/README.md) · [Model card](../../MODEL_CARD.md).
+The report executed six code cells and retained verified Plotly MIME and HTML. The unique return had 215 CRC-clean members. Actual runtime was 61.951 seconds; estimated active compute was $0.008329 at the assumed $0.484/hour, excluding idle/startup, storage and request charges. Browser inspection and verified billing are not claimed.
+
+Verified minimum tally: **24 accepted / 12 failed / two stopped executions**; modeling **11 accepted / one failed**; **386 completed real fits**. Accepted execution means the declared work completed, not that a model improved.
+
+## Preserved preparation and next decision
+
+[Original preparation receipt](preparation.json) and [earlier owned-cache comparison](owned_source_comparison.json) retain their pre-execution observations. Their 110-game retained overlap is historical and superseded for current-source coverage by the actual result above.
+
+[V066 preparation](../football_v066/README.md) tests a score/schedule-based 16-feature strict-FBS fallback while adjudicating cached source inconsistencies. It permits no provider calls or new live forecasts. [Public pure methods](../../../modeling/football_v065/README.md) · [Model card](../../MODEL_CARD.md).

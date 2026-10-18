@@ -1,19 +1,19 @@
 # Model card — NFL and NCAAF
 
 
-## Current evidence — V064 complete, V065 prepared
+## Current evidence — V065 complete, V066 prepared
 
-V064 finished at **2026-10-18 01:27:39 UTC**, issued **six immutable NFL forecast records for two games**, and retained **186 abstentions** (36 NFL and 150 FBS). The independent actual-return audit passed 3,937 checks; 356 runtime tests passed. Genuine NFL schedule observation and exact feature reconstruction enabled issuance. No outcome had matured at audit, so no prospective model-quality claim is established. Zero real fits and zero promotions preserve the 386-fit research history.
+V065 finished at **2026-10-18 02:02:55 UTC** after one confirmed CFBD capture: **11,405 source rows across 489 games**. Strict validation retains **393 games: 291 FBS versus FBS and 102 declared opponent-context games**. Against all 455 primary games, **308 match, 81 disagree and 66 lack accepted comparisons**. The 49 missing strict-FBS comparisons are quarantined source games, not missing downloads. No model inputs were replaced; FBS60 remains blocked.
 
-**Current minimum tally:** 23 accepted / 12 failed / two stopped execution runs; modeling 11 accepted / one failed. [Actual V064 evidence](status/football_v064/README.md).
+**99 invalid rows affect 82 quarantined games**. Another 324 source rows across 14 games are retained raw but excluded by the unchanged canonical completion snapshot. New source observation, canonical completion and model-input freshness remain separate contracts. [Actual V065 evidence](status/football_v065/README.md).
 
-The primary FBS drive vintage remains October 16, 18:15:25 UTC. Fresh canonical scores cannot refresh that separate input. A read-only comparison of owned CFBD caches found 2,888 drives across 124 games; **110 games** pass strict whole-game validation, of which **81 match** all primary metrics and **29 disagree**. Fourteen games remain quarantined after 19 invalid eligible rows. This is not equivalent full 455-game coverage, and no model input was replaced.
+All six previously issued NFL forecast records remain pending for two games; 186 abstentions are preserved. V065 made zero real fits, new forecasts or promotions. **495 runtime tests and 2,743 independent audit checks passed.** The verified minimum tally is **24 accepted / 12 failed / two stopped executions; 11 accepted / one failed modeling runs; 386 completed real fits**.
 
-**V065 is tested and prepared, not executed:** one bounded existing-subscription CFBD drive request, strict source compatibility diagnostics, append-only settlement of already-issued forecasts, and an explicit dependency/readiness report. It makes no new model fits or forecasts. It reuses V064's canonical snapshot; later games absent from that snapshot remain archived raw and cannot enter normalized features until a separately verified canonical refresh. The final package passed 495 offline tests, failure/resume and idempotency checks. [V065 preparation](status/football_v065/README.md).
+**V066 is prepared, not executed:** cached source-clock adjudication, exact FBS16 reconstruction/readiness, 12 fixed linear fits against cached strict-FBS60 controls, and coverage/uncertainty evidence. It permits **zero provider calls and zero new live forecasts**. A frozen 1% operational noninferiority margin must pass development and exposed evaluation with sufficient paired-block support; no automatic promotion. Final package verification remains pending. [V066 preparation](status/football_v066/README.md).
 
-Earlier experiment sections retain their dated results. Neither V064 issuance nor V065 preparation changes the negative boosting/neural experiment conclusions or establishes betting readiness.
+Earlier sections preserve their dated observations. Neither a successful capture nor prepared fallback establishes prospective skill or wagering readiness.
 
-Predictive-score cutoff: **October 18, 2026**, V062 return; operational issuance updated through V064. [Overview](../README.md) · [Data](DATA_READINESS.md) · [Roadmap](RESEARCH_ROADMAP.md)
+Predictive-score cutoff: **October 18, 2026**, V062 return; operational/source evidence updated through V065. [Overview](../README.md) · [Data](DATA_READINESS.md) · [Roadmap](RESEARCH_ROADMAP.md)
 
 ## Intended use and accepted models
 
@@ -227,10 +227,10 @@ The win model's lower Brier but higher log loss illustrates why metrics must be 
 Source records: [latest V062 execution](status/football_v062/summary.json), [V062 metrics](status/football_v062/metrics.json), [preserved V061 execution](status/football_v061/summary.json), [V061 metrics](status/football_v061/metrics.json), [preserved V060 execution](status/football_v060/summary.json), [V060 metrics](status/football_v060/metrics.json), [preserved V059 execution](status/football_v059/summary.json), [V059 metrics](status/football_v059/metrics.json), [preserved V058 execution](status/football_v058/summary.json), [V058 metrics](status/football_v058/metrics.json), [preserved V057 evidence](status/football_v057/summary.json) and [scorecard evidence](demo/evidence.json). The owner return archives contain fuller prediction-level diagnostics and model manifests; public aggregate evidence does not replace them.
 
 
-## Next decision — V065 source compatibility and immutable settlement
+## Next decision — V066 operational fallback
 
-Keep NFL V047 and historical college V048R1 as accepted references. V064 actually issued six NFL forecasts and 186 abstentions after exact reconstruction; V060 strict-FBS60 shadow controls remain unpromoted and freshness-blocked. V065 prepares current independent CFBD drive acquisition and immutable settlement, with zero fits or new forecasts.
+Keep NFL V047 and historical college V048R1 as accepted references. V060's strict-FBS60 shadow controls remain unpromoted and freshness-blocked. V065's independent source normalization did not establish complete equivalence and made no model-input replacement. Six original NFL forecast records remain pending; there is no prospective score yet.
 
-The original current-season primary FBS drive observation is October 16, 18:15:25 UTC. A newer schedule cannot refresh that input. All production FBS60 forecasts remain abstained until compatible current primary-drive coverage/equivalence is verified. NFL16 qualified for two actual forecast games in V064. V065 does not issue new forecasts or automatically insert another drive source.
+V066 prepares a **16-feature strict-FBS score/schedule model** against the cached 60-feature control. Twelve fixed logistic/ridge fits span three targets and four chronological origins. The hypothesis is reduced operational dependence on a stale/invalid drive feed with at most 1% primary-loss degradation under frozen same-game development/exposed and paired-block checks. The model still needs valid current canonical information. Zero provider calls, new forecasts or automatic promotions are permitted.
 
-No retrospective score or passing serving test makes a forecast prospectively valid. A forecast must be recorded before its decision cutoff; late, unsupported, stale or ambiguous inputs require abstention. Current secondary captures do not silently enter the frozen representation. Evaluate actual future outcomes under the frozen multi-metric contract before making a new model-quality claim.
+Final V066 verification is pending and no V066 real fits are counted. A passing experiment would be a candidate for a separately frozen prospective test. No retrospective result, source capture or passing serving test establishes live wagering readiness. [Prepared contract](status/football_v066/README.md).
