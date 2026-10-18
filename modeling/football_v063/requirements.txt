@@ -1,0 +1,8 @@
+# Python 3.12; minimal V062 scientific pins for the offline serving checks.
+# Installing dependencies may use the package index; the tests make no requests.
+numpy==1.26.4
+pandas==2.3.3
+scikit-learn==1.7.2
+scipy==1.16.3
+joblib==1.5.2
+threadpoolctl==3.6.0

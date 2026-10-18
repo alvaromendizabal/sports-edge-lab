@@ -31,19 +31,21 @@ The objective is original, reproducible football forecasting with demonstrable i
 | V059 FBS repair and dynamic teams | Does changing latent offense/defense improve joint forecasts beyond a static control? | 16 joint fits complete; eight FBS repairs accepted; all six development qualifications failed. | Keep accepted references; preserve the exposed FBS-total lead without promotion. |
 | V060 source gaps and native boosting | Can source updates and controlled native boosters add value? | 84 fits completed; all 18 candidate/task qualifications failed. Ten secondary sources validated; four selected cases remain. | Keep accepted references; prioritize new information and cached parser validation. |
 | V061 neutral-situation NFL history | Do early-down pass/run histories add beyond accepted team features? | 24 fits complete; all six qualifications failed. Two cached repairs accepted; current capture stopped on HTTP 403. | Close the fixed branch; preserve accepted models and the provider stop. |
-| V062 point-loss alignment | Does directly targeting the median improve declared MAE without unacceptable RMSE loss? | Prepared, not executed; 16 planned L1 fits and three cached references. | One objective-only change; no baseline refits or sweep. |
+| V062 point-loss alignment | Does directly targeting the median improve MAE without unacceptable RMSE loss? | 16 fits complete; NFL total passes development but fails exposed evaluation. 13 current drive cases validate; four selected gaps remain. | No promotion; close the objective-only branch. |
+| V063 serving and prospective record | Can accepted forecasts be served with exact parity and immutable pre-decision evidence? | In preparation; zero new research fits and provider calls planned. | Cache repairs, serving parity, shadow forecasts or explicit abstentions; no quality claim yet. |
 
-## Immediate next experiment: V062, prepared
+## Immediate next work: V063 engineering continuation
 
-V061 is complete and negative: 24 fits, no qualified replacement, two additional secondary repairs and no current drive capture after the persisted ESPN denial. The next bounded model hypothesis changes the forecast objective, not the feature list or software family.
+V062 is complete: 16 controlled L1 fits, one development qualification, zero exposed qualifications, and no promoted replacement. Its 13 new current secondary drive cases are separate from the frozen model feature table and have conservative October 18, 16:02–17:34 UTC availability.
 
-- **Models:** 16 LightGBM L1 point fits across NFL/FBS, margin/total and four chronological origins. Keep exact V060 inputs (16/60 features), version, original seeds 6001 and all non-objective parameters.
-- **Controls:** reuse accepted forecasts, the same-scope linear control and L2 LightGBM predictions. No reference or win model is refitted. FBS target rows remain FBS-versus-FBS; prior FCS context is disclosed.
-- **Meaning and kill rules:** conditional medians, not expected points or probabilities. Require at least 1% MAE gain, negative upper paired interval, RMSE within 1% and stable development folds against the declared references. Failed development cannot be rescued by exposed outcomes. A failed fixed test closes this hypothesis.
-- **Data:** 17 exact independent official-school targets: 15 recent finals and two historical gaps. Fourteen HTML targets can produce at most 14 validated drive closures; three PDFs are text-only. Cap 40 HTTP attempts / 100 MB, with zero ESPN/CFBD/CBBD/odds use and persistent host stops. New captures remain outside frozen features.
-- **Evidence boundary:** V062 is prepared, not executed. Source discovery, local fixtures and a successful download do not establish valid drive coverage or football predictive gains.
+Four bounded workstreams now take priority:
 
-[Prepared contract](status/football_v062/README.md) · [Completed V061 evidence](status/football_v061/README.md) · [Feature strategy](FEATURE_STRATEGY.md). PyTorch/TensorFlow remain unexecuted.
+1. Repair only provable cached parser issues, preserving quarantines and denied-provider controls.
+2. Verify accepted-model serving parity against pinned historical inputs and predictions.
+3. Record an immutable prospective shadow forecast or abstention with exact model, source, observation, decision and eligibility evidence. No late/backfilled forecast may count as prospective.
+4. Execute and retain engineering evidence separately from model-quality results.
+
+V063 is in preparation and plans **zero new research fits and zero provider calls**. These steps do not certify profitable deployment, exhaustive feed coverage or confirmed tracking/video rights. [Actual V062 outcome](status/football_v062/README.md) · [Feature strategy](FEATURE_STRATEGY.md).
 
 ## Lessons retained from V059
 
@@ -58,7 +60,7 @@ The method was inspired by [Glickman and Stern (1998)](https://www.tandfonline.c
 | Evidence | Next action |
 | --- | --- |
 | A new candidate passes frozen development gates | Freeze a prospective forward-recorded trial; passing retrospectively does not establish a deployable edge. |
-| Native boosters and situation features fail — observed in V060/V061 | Keep accepted references; close those fixed branches. Test the predeclared objective mismatch, not another unbounded library search. |
+| Native boosters, situation features and objective-only branches fail — observed in V060–V062 | Keep accepted references; close those fixed branches. Build parity and prospective evidence before another claim of improvement. |
 | Starter or availability uncertainty limits predictions | Capture prospective lineups with exact identity and pre-decision timestamps; never infer starters from target outcomes. |
 | A distribution has poor calibration or unrealistic support | Investigate a predeclared scoring-process model with proper scoring rules and explicit dependence. |
 | Tracking/video access is confirmed | Verify license, population, alignment and target relevance before a separate multimodal or sequence project. |

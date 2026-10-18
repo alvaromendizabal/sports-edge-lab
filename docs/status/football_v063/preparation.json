@@ -1,0 +1,183 @@
+{
+  "cache_repair": {
+    "current_locally_validated_games": 15,
+    "current_selected_games": 15,
+    "evidence_kind": "local_reparse_of_existing_immutable_source_bytes",
+    "full_provider_PBP_coverage_claimed": false,
+    "historical_locally_validated_games": 13,
+    "historical_selected_games": 14,
+    "locally_validated_secondary_games": 28,
+    "merged_accepted_drive_rows": 325,
+    "merged_official_queue_games": 17,
+    "merged_official_queue_validated_games": 16,
+    "merged_paired_team_feature_rows": 32,
+    "new_downloads": 0,
+    "newly_repaired_game_ids": [
+      "401415228",
+      "401856720",
+      "401858489"
+    ],
+    "original_ESPN_gaps_repaired": 0,
+    "prior_12_not_duplicated_in_merged_parquets": true,
+    "prior_historical_validated_games_preserved": 12,
+    "provider_denials_preserved": true,
+    "raw_hashes_and_source_observations_preserved": true,
+    "remaining_game_ids": [
+      "401117914"
+    ],
+    "selected_repair_inventories": 29,
+    "source_specific_play_count_semantics_preserved": true,
+    "unmodeled_conflicting_fields_quarantined": true
+  },
+  "information_contract": {
+    "complete_play_feed_claimed": false,
+    "frozen_benchmark_modified": false,
+    "prospective_success_claimed": false,
+    "source_publication_at": null,
+    "strict_historical_point_in_time_verified": false
+  },
+  "local_cache_parser_tests": {
+    "failed": 0,
+    "passed": 128
+  },
+  "local_release_acceptance": {
+    "accepted_reentry_reused_same_return": true,
+    "artifact": "sports_edge_lab_v063.pyz",
+    "browser_visual_inspection": false,
+    "bytes": 3492616,
+    "crash_after_append_failed_as_expected": true,
+    "fixture_provider_calls": 0,
+    "fixture_real_fits": 0,
+    "offline_tests_failed": 0,
+    "offline_tests_passed": 298,
+    "owner_aws_execution_completed": false,
+    "real_cached_source_repairs": 3,
+    "real_owned_model_parity_rows": 1247,
+    "required_pending_batch_in_return": true,
+    "resume_preserved_exact_ledger_bytes": true,
+    "return_crc_manifest_hashes_verified": true,
+    "sha256": "61af7bdd98b262c931b2f178aeb3fc9d42b5cb006ec2e5067dcb0da69fbf0d4e",
+    "source_tamper_rejected_before_credentials": true,
+    "status": "PASS",
+    "synthetic_smoke_fits_per_test_run": 4,
+    "workstreams_completed": 4
+  },
+  "model_promotions": 0,
+  "new_research_fits": 0,
+  "owner_execution_completed": false,
+  "owner_full_release_gate": "local_release_fixture_failure_resume_idempotency_passed; AWS_owner_execution_pending",
+  "owner_prepared_artifact": {
+    "bytes": 3492616,
+    "expected_full_release_tests": 298,
+    "full_fixture_gate": "298 offline checks and four-stage local fixture passed; AWS owner execution pending",
+    "owner_execution_completed": false,
+    "sha256": "61af7bdd98b262c931b2f178aeb3fc9d42b5cb006ec2e5067dcb0da69fbf0d4e"
+  },
+  "paid_provider_calls": 0,
+  "portability_correction": {
+    "hosted_test_difference": 4.440892098500626e-16,
+    "production_code_unchanged": true,
+    "production_parity_rule_unchanged": true,
+    "reason": "Synthetic parity assertion permits numerical roundoff across BLAS/NumPy builds; substantive drift still fails.",
+    "test_absolute_tolerance": 1e-12
+  },
+  "provider_calls": 0,
+  "public_adapter": {
+    "expected_offline_tests": 36,
+    "local_check_executed_github_workflow": false,
+    "local_offline_tests_failed": 0,
+    "local_offline_tests_passed": 36,
+    "local_test_provider_calls": 0,
+    "local_test_sklearn_version": "1.7.2",
+    "private_model_binaries_published": false,
+    "private_production_contracts_published": false,
+    "private_raw_sources_published": false,
+    "production_module_fits": 0,
+    "prospective_tests_sha256": "95130f4c28bac0327261d3398afe4b9f8e5b8ef80389fc58a96a1f6e991e051b",
+    "source_files": [
+      {
+        "bytes": 26220,
+        "name": "prospective.py",
+        "sha256": "be80cee142f6f7487b107542fbd29c3c672da65ddf0afe45619f68572eba0f44"
+      },
+      {
+        "bytes": 14984,
+        "name": "prospective_tests.py",
+        "sha256": "95130f4c28bac0327261d3398afe4b9f8e5b8ef80389fc58a96a1f6e991e051b"
+      }
+    ],
+    "synthetic_predictive_estimator_fits": 4,
+    "synthetic_scaler_fits": 4
+  },
+  "serving_contract": {
+    "FBS_issue_horizon_hours": 1,
+    "FBS_models_are_shadow": true,
+    "NFL_issue_horizon_hours": 24,
+    "accepted_models_changed": false,
+    "append_only_scope": "application ledger with atomic replacement, integrity chain and process locking; not tamper-proof infrastructure",
+    "job_time_does_not_refresh_source": true,
+    "max_games": 200,
+    "max_lookahead_days": 7,
+    "max_snapshot_age_hours": 24,
+    "new_fits": 0,
+    "new_provider_requests": 0,
+    "runtime_timestamp_required": true,
+    "stale_inputs_abstain": true
+  },
+  "serving_parity": {
+    "all_checks_passed": true,
+    "checks": [
+      {
+        "max_absolute_difference": 1.1102230246251565e-16,
+        "n": 79,
+        "status": "PASS",
+        "task": "win",
+        "track": "nfl"
+      },
+      {
+        "max_absolute_difference": 3.552713678800501e-15,
+        "n": 80,
+        "status": "PASS",
+        "task": "margin",
+        "track": "nfl"
+      },
+      {
+        "max_absolute_difference": 7.105427357601002e-15,
+        "n": 80,
+        "status": "PASS",
+        "task": "total",
+        "track": "nfl"
+      },
+      {
+        "max_absolute_difference": 2.220446049250313e-16,
+        "n": 336,
+        "status": "PASS",
+        "task": "win",
+        "track": "ncaaf"
+      },
+      {
+        "max_absolute_difference": 1.4210854715202004e-14,
+        "n": 336,
+        "status": "PASS",
+        "task": "margin",
+        "track": "ncaaf"
+      },
+      {
+        "max_absolute_difference": 1.4210854715202004e-14,
+        "n": 336,
+        "status": "PASS",
+        "task": "total",
+        "track": "ncaaf"
+      }
+    ],
+    "evidence_kind": "local_cached_prediction_replay",
+    "maximum_absolute_difference": 1.4210854715202004e-14,
+    "new_fits": 0,
+    "new_prospective_evidence": false,
+    "new_provider_calls": 0,
+    "owned_models": 6,
+    "prediction_comparisons": 1247
+  },
+  "status": "PREPARED_NOT_AWS_EXECUTED",
+  "version": "V063"
+}

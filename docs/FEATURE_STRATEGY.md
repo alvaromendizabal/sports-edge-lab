@@ -13,7 +13,7 @@ The forecasting target is NFL and **FBS-versus-FBS** win probability, point marg
 | scikit-learn multilayer perceptron | V058 completed 24 NFL/NCAAF neural fits; exact FBS evaluation slices retained | A real neural network, but neither PyTorch nor TensorFlow was used. The fixed configurations performed poorly. |
 | NumPy/SciPy Gaussian team-state filter | V059 completed 16 joint fits | Static/dynamic offense-defense research; all six task development gates failed. |
 | XGBoost | V060 completed 24 and V061 completed 12 native CPU fits | No candidate/task qualified under the fixed representation and gates. |
-| LightGBM | V060 completed 24 native CPU fits | No candidate/task qualified. |
+| LightGBM | V060 completed 24 L2/native fits; V062 completed 16 L1 point fits | V062 NFL totals qualified on development but failed exposed evaluation; no promotion. |
 | CatBoost | V060 completed 24 native CPU fits | No candidate/task qualified; the numerical benchmark did not test a new categorical representation. |
 | PyTorch | No verified execution yet | Candidate framework for an explicit neural mechanism, with regularization and validation controls. |
 | TensorFlow | No verified execution yet | Alternative framework, not independent evidence of a better model. |
@@ -45,13 +45,11 @@ The order may change after a new error analysis. Record the reason for the chang
 - **V060:** native XGBoost, LightGBM and CatBoost did not qualify against accepted and matched linear references. Small exposed CatBoost gains were insufficient; native libraries do not substitute for new information.
 - **V061:** 24 situation-feature fits completed; all six candidate/task development decisions failed. Some new inputs influence predictions, but that did not establish incremental accuracy. The 2026 linear win improvement is small-sample monitoring evidence, not a promotion.
 
-## Next bounded hypothesis: V062 loss alignment, prepared
+## Completed V062 objective alignment and next evidence work
 
-V061's 52-feature neutral-situation representation has now been tested. The [public feature method](../modeling/football_v061/README.md) still provides construction tests, while the separate [actual result](status/football_v061/README.md) records 24 completed fits and no qualification. Close that fixed branch without selecting a favorable exposed feature subset.
+V062 completed 16 LightGBM L1 point fits on exact V060 features, version 4.7.0, all seeds 6001 and unchanged non-objective settings. It reused accepted, same-scope linear and same-feature L2 controls. NFL totals passed development but failed exposed evaluation; no task qualifies for promotion. L1 is a conditional-median functional, not an expected score or scoring distribution. [Actual result](status/football_v062/README.md).
 
-V062 changes only LightGBM's point-loss objective from L2 to L1, keeping exact V060 16-field NFL / 60-field FBS inputs, version 4.7.0, all seeds 6001 and the remaining configuration. It prepares **16 margin/total fits** and reuses accepted, same-scope linear and same-feature L2 controls. Win models are unchanged. L1 targets a conditional median for MAE evaluation, not expected points, a score distribution or profitability. The objective mismatch is a hypothesis to test, not an established explanation of earlier failure.
-
-**V062 is prepared, not executed.** It includes no feature/objective grid or extra reference fits. The declared gain, paired-uncertainty, RMSE and development-stability gates remain binding. [Prepared scope](status/football_v062/README.md).
+V063 is an engineering continuation with zero new research fits or provider calls: provable cached repairs, accepted-model serving parity, and immutable prospective shadow forecasts or explicit abstentions. Feature availability must precede decision time; source capture alone does not make a record eligible. No exposed-data feature selection or objective sweep is justified by V062's small isolated gains.
 
 V060/V061 grouped permutation used 2023 development data only. Correlated feature groups can substitute; sensitivity is not causal player/team value or a universal ranking of future predictive information. Upcoming starter and availability observations remain potentially useful but require exact identity and trustworthy pre-decision timestamps.
 
@@ -69,7 +67,7 @@ V060/V061 grouped permutation used 2023 development data only. Correlated featur
 
 V059 accepted eight regulation-drive repairs. V060 captured all 14 selected official-school pages and validated ten secondary representations. V061 added two validated cached representations; two remain unaccepted. Original ESPN-source repairs from this secondary-source work remain zero. Newly captured data was not inserted into the frozen native benchmark, so source validation cannot explain an artificial model gain.
 
-V060 also verified four semantic changes among six NFL downloads and reconciled 15 cached FBS finals against team/player boxes. Boxes alone do not establish current drive/PBP coverage. V061 captured zero current summaries after a persisted ESPN robots HTTP 403. Prepared V062 instead names 17 independent official targets: at most 14 HTML drive closures and three PDF text-only captures, capped at 40 requests / 100 MB, zero ESPN or paid-provider use. Historical FCS records remain declared context; no standalone FCS acquisition or modeling effort is part of this strategy.
+V060 also verified four semantic changes among six NFL downloads and reconciled 15 cached FBS finals against team/player boxes. Boxes alone do not establish current drive/PBP coverage. V061 captured zero current summaries after a persisted ESPN robots HTTP 403. V062 then captured 16 independent official sources and validated 13 current drive representations. Four selected gaps remain; both downloaded PDFs failed exact identity parsing, so zero verified PDF-text-only identities are claimed. Its ledger used 33 public attempts and no paid calls. Historical FCS records remain declared context; no standalone FCS acquisition or modeling effort is part of this strategy.
 
 ## Framework documentation
 

@@ -1,0 +1,51 @@
+{
+  "accepted_models_unchanged": true,
+  "audit_scope": "Offline returned predictions, controls, metrics/gates, source metadata/normalized rows and all present hashes. No refits or independent remote-object fetch.",
+  "audit_status": "PASS_WITH_SCOPE_LIMITS",
+  "classification": "VALID_NEGATIVE_OR_INCONCLUSIVE",
+  "completed_real_fits": 16,
+  "compute_rate_assumption_usd_per_hour": 0.484,
+  "cost_estimate_not_total_bill": true,
+  "elapsed_seconds": 492.511,
+  "estimated_compute_usd": 0.066215,
+  "features": {
+    "ncaaf_fbs_vs_fbs": 60,
+    "nfl": 16
+  },
+  "fit_family_counts": {
+    "LightGBM_regression_l1": 16
+  },
+  "fit_iterations_completed": 200,
+  "historical_publication_verified": false,
+  "independent_numeric_and_source_checks": 8187,
+  "integrity_limits": {
+    "compact_manifest_omissions": 98,
+    "remote_omitted_objects_verified": false
+  },
+  "last_event_at": "2026-10-18T00:15:51.568747+00:00",
+  "model_promotions": 0,
+  "new_win_fits": 0,
+  "qualified_development": 1,
+  "qualified_exposed": 0,
+  "qualified_prospective": 0,
+  "reference_refits": 0,
+  "return_zip": {
+    "bytes": 8595290,
+    "sha256": "26a86867bdcf643c0127922f077e465d4db722e6dbe3cd90f37d3d2d46b81f78",
+    "unique_members": 221
+  },
+  "runtime_synthetic_smoke_fits": 4,
+  "runtime_tests": 238,
+  "source_acquisition_complete": false,
+  "started_at": "2026-10-18T00:07:47.954916+00:00",
+  "status": "SUCCESS",
+  "verified_minimum_tally": {
+    "accepted_executions": 21,
+    "accepted_modeling_runs": 11,
+    "completed_real_fits": 386,
+    "failed_executions": 12,
+    "failed_modeling_runs": 1,
+    "stopped_executions": 2
+  },
+  "version": "V062"
+}
