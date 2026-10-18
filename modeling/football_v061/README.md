@@ -1,6 +1,6 @@
 # V061 — NFL neutral-situation feature method
 
-**Prepared method, not an executed V061 model result.** This public package reproduces feature construction and 23 synthetic/mathematical tests, with **zero model fits and zero provider calls**. The latest completed experiment remains [V060](../../docs/status/football_v060/README.md); accepted predictions remain unchanged.
+**Preserved method from the completed V061 experiment.** This public package reproduces feature construction and23 synthetic/mathematical tests, with **zero model fits and zero provider calls in this public suite**. The separate actual [V061 owner run](../../docs/status/football_v061/README.md) completed24 fits and produced zero qualified candidates; accepted predictions remain unchanged.
 
 ## Run the public checks
 
@@ -37,6 +37,6 @@ The method assumes each game's data becomes available at kickoff +24 hours and p
 
 ## Owner work remains separate
 
-The prepared owner V061 workflow plans 24 real NFL fits: linear and one fixed XGBoost arm × three targets × four chronological folds. It also validates four previously cached FBS parser cases and permits at most 40 public ESPN attempts for 15 newly final FBS games, with zero paid/CFBD/CBBD/odds calls. Two additional historical secondary representations are verified locally (12/14 including the prior ten); the accepted AWS outcome remains V060's 10/14 until an actual V061 return is reviewed. Current-source capture is pending owner execution, and preparation made zero new source calls.
+The actual V061 owner workflow completed24 real NFL fits: linear and fixed XGBoost × three targets × four chronological folds. It also accepted two additional cached historical repairs, bringing selected valid secondary representations to12/14. The current-source collector made one ESPN robots request, received HTTP403, persisted the provider stop and captured zero of15 current summaries. Zero paid/CFBD/CBBD/odds calls occurred. [Actual execution and acquisition evidence](../../docs/status/football_v061/README.md) is separate from the preserved preparation receipt. V062 is the next prepared, unexecuted milestone and does not retry ESPN.
 
 Those collectors, private source payloads, source pins and the owner execution configuration are **not included here**. This package tests the scientific mechanism; it does not start a job, fit a model, fetch a game or establish current coverage. See [feature strategy](../../docs/FEATURE_STRATEGY.md), [data readiness](../../docs/DATA_READINESS.md) and [research roadmap](../../docs/RESEARCH_ROADMAP.md).

@@ -30,19 +30,20 @@ The objective is original, reproducible football forecasting with demonstrable i
 | V058 nonlinear benchmark | Do fixed nonlinear models extract useful interactions from existing features? | 36 completed fits; all nine candidate/task qualifications failed. | No promotion; close these fixed configurations. |
 | V059 FBS repair and dynamic teams | Does changing latent offense/defense improve joint forecasts beyond a static control? | 16 joint fits complete; eight FBS repairs accepted; all six development qualifications failed. | Keep accepted references; preserve the exposed FBS-total lead without promotion. |
 | V060 source gaps and native boosting | Can source updates and controlled native boosters add value? | 84 fits completed; all 18 candidate/task qualifications failed. Ten secondary sources validated; four selected cases remain. | Keep accepted references; prioritize new information and cached parser validation. |
-| V061 neutral-situation NFL history | Do early-down pass/run histories add beyond accepted team features? | Planned, not executed; 24 fits. | Validate denominators/timing and compare fixed linear/booster controls. |
+| V061 neutral-situation NFL history | Do early-down pass/run histories add beyond accepted team features? | 24 fits complete; all six qualifications failed. Two cached repairs accepted; current capture stopped on HTTP 403. | Close the fixed branch; preserve accepted models and the provider stop. |
+| V062 point-loss alignment | Does directly targeting the median improve declared MAE without unacceptable RMSE loss? | Prepared, not executed; 16 planned L1 fits and three cached references. | One objective-only change; no baseline refits or sweep. |
 
-## Immediate next experiment: V061, planned
+## Immediate next experiment: V062, prepared
 
-The next bounded work pairs cached historical parser validation and a finite current public capture with a new football representation. It does not repeat the native-library comparison.
+V061 is complete and negative: 24 fits, no qualified replacement, two additional secondary repairs and no current drive capture after the persisted ESPN denial. The next bounded model hypothesis changes the forecast objective, not the feature list or software family.
 
-- **Historical data:** validate four cached FBS parser cases. Two additional representations are verified locally (12/14 locally), while accepted AWS coverage remains 10/14 until the owner return is accepted. Original ESPN-source repairs remain zero.
-- **Current data:** capture public ESPN data for 15 newly final FBS games, with at most 40 public attempts and zero CFBD/CBBD/odds usage. Preparation made zero new source calls. Downloaded pages and team/player boxes alone do not establish usable drive/PBP rows.
-- **NFL features:** construct lagged early-down pass/run histories in neutral situations, with explicit denominators and source-time assumptions. Separate play-selection context from player/team causality.
-- **Models:** 24 planned NFL fits using linear and one fixed XGBoost arm on 52 features across three targets and four chronological folds. Preserve accepted references. The [public feature method](../modeling/football_v061/README.md) has 23 no-fit checks; this is not model-performance evidence.
-- **Evidence:** matched-cohort log loss/Brier, MAE/RMSE, uncertainty, stability and information-time gates. No live edge or breakthrough claim follows from a more detailed feature representation.
+- **Models:** 16 LightGBM L1 point fits across NFL/FBS, margin/total and four chronological origins. Keep exact V060 inputs (16/60 features), version, original seeds 6001 and all non-objective parameters.
+- **Controls:** reuse accepted forecasts, the same-scope linear control and L2 LightGBM predictions. No reference or win model is refitted. FBS target rows remain FBS-versus-FBS; prior FCS context is disclosed.
+- **Meaning and kill rules:** conditional medians, not expected points or probabilities. Require at least 1% MAE gain, negative upper paired interval, RMSE within 1% and stable development folds against the declared references. Failed development cannot be rescued by exposed outcomes. A failed fixed test closes this hypothesis.
+- **Data:** 17 exact independent official-school targets: 15 recent finals and two historical gaps. Fourteen HTML targets can produce at most 14 validated drive closures; three PDFs are text-only. Cap 40 HTTP attempts / 100 MB, with zero ESPN/CFBD/CBBD/odds use and persistent host stops. New captures remain outside frozen features.
+- **Evidence boundary:** V062 is prepared, not executed. Source discovery, local fixtures and a successful download do not establish valid drive coverage or football predictive gains.
 
-V061 has not executed. [Feature strategy](FEATURE_STRATEGY.md) prioritizes useful football information over library names. V060 actual native-library execution is documented in its [completed evidence](status/football_v060/README.md) and [public core](../modeling/football_v060/README.md). PyTorch/TensorFlow remain unexecuted.
+[Prepared contract](status/football_v062/README.md) · [Completed V061 evidence](status/football_v061/README.md) · [Feature strategy](FEATURE_STRATEGY.md). PyTorch/TensorFlow remain unexecuted.
 
 ## Lessons retained from V059
 
@@ -57,7 +58,7 @@ The method was inspired by [Glickman and Stern (1998)](https://www.tandfonline.c
 | Evidence | Next action |
 | --- | --- |
 | A new candidate passes frozen development gates | Freeze a prospective forward-recorded trial; passing retrospectively does not establish a deployable edge. |
-| Native boosters fail on equivalent representations — observed in V060 | Retain accepted references and close the fixed configurations. Test a bounded new information mechanism. |
+| Native boosters and situation features fail — observed in V060/V061 | Keep accepted references; close those fixed branches. Test the predeclared objective mismatch, not another unbounded library search. |
 | Starter or availability uncertainty limits predictions | Capture prospective lineups with exact identity and pre-decision timestamps; never infer starters from target outcomes. |
 | A distribution has poor calibration or unrealistic support | Investigate a predeclared scoring-process model with proper scoring rules and explicit dependence. |
 | Tracking/video access is confirmed | Verify license, population, alignment and target relevance before a separate multimodal or sequence project. |
@@ -68,6 +69,8 @@ Sequence, graph, full hierarchical player and multimodal models remain unimpleme
 
 These primary sources guide mechanisms and validation; no published performance is transferred to this project.
 
+- [Gneiting, Making and Evaluating Point Forecasts](https://arxiv.org/html/0912.0902v2): match the evaluation loss to the intended mean or quantile functional.
+- [LightGBM 4.7.0 objectives](https://lightgbm.readthedocs.io/en/v4.7.0/Parameters.html): L1/MAE versus L2 objectives; no performance promise.
 - [nflWAR](https://arxiv.org/abs/1802.00998): multilevel player analysis from public play-by-play and uncertainty estimation.
 - [nflfastR guide](https://nflfastr.com/articles/beginners_guide.html): play-by-play fields and football-valid handling.
 - [TrueSkill 2](https://www.microsoft.com/en-us/research/publication/trueskill-2-improved-bayesian-skill-rating-system/): hierarchical skill modeling inspiration, not a direct implementation claim.

@@ -1,0 +1,39 @@
+{
+  "accepted_models_unchanged": true,
+  "audit_scope": "Prediction tables, labels, metrics, gates, present return artifacts, source and fit receipts; no model refits.",
+  "audit_status": "PASS_WITH_SCOPE_LIMITS",
+  "classification": "VALID_NEGATIVE_OR_INCONCLUSIVE",
+  "completed_real_fits": 24,
+  "features": 52,
+  "finished_at": "2026-10-17T23:42:25.870463+00:00",
+  "fit_family_counts": {
+    "linear": 12,
+    "xgb": 12
+  },
+  "historical_publication_verified": false,
+  "independent_numeric_checks": 11411,
+  "integrity_limits": {
+    "absent_manifest_paths": 79,
+    "absent_model_artifacts": 72,
+    "present_manifest_files_verified": 157,
+    "remote_omitted_objects_verified": false
+  },
+  "model_promotions": 0,
+  "new_college_fits": 0,
+  "qualified_development": 0,
+  "qualified_exposed": 0,
+  "qualified_prospective": 0,
+  "runtime_synthetic_smoke_fits": 12,
+  "runtime_tests": 295,
+  "source_acquisition_complete": false,
+  "status": "SUCCESS",
+  "verified_minimum_tally": {
+    "accepted_executions": 20,
+    "accepted_modeling_runs": 10,
+    "completed_real_fits": 370,
+    "failed_executions": 12,
+    "failed_modeling_runs": 1,
+    "stopped_executions": 2
+  },
+  "version": "V061"
+}
