@@ -8,6 +8,7 @@ on:
       - 'modeling/football_v060/**'
       - 'modeling/football_v061/**'
       - 'modeling/football_v062/**'
+      - 'modeling/football_v063/**'
       - '.github/workflows/modeling-quality.yml'
   pull_request:
     paths:
@@ -16,6 +17,7 @@ on:
       - 'modeling/football_v060/**'
       - 'modeling/football_v061/**'
       - 'modeling/football_v062/**'
+      - 'modeling/football_v063/**'
       - '.github/workflows/modeling-quality.yml'
   workflow_dispatch:
 permissions:
@@ -157,3 +159,35 @@ jobs:
         run: python -m pip install -r modeling/football_v062/requirements.txt
       - name: Run 23 offline objective checks and four tiny synthetic fits
         run: python -m unittest discover -s modeling/football_v062 -p '*_tests.py' -v
+
+  offline-serving:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    env:
+      OMP_NUM_THREADS: '2'
+      OPENBLAS_NUM_THREADS: '2'
+      MKL_NUM_THREADS: '2'
+      NUMEXPR_NUM_THREADS: '2'
+      PYTHONHASHSEED: '0'
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+          cache: pip
+          cache-dependency-path: modeling/football_v063/requirements.txt
+      - name: Install pinned existing-model serving dependencies
+        run: python -m pip install -r modeling/football_v063/requirements.txt
+      - name: Run 36 offline serving checks and four tiny synthetic estimator fits
+        run: |
+          python - <<'PY'
+          import sys
+          import unittest
+          sys.path.insert(0, 'modeling/football_v063')
+          import prospective_tests
+          suite = unittest.defaultTestLoader.loadTestsFromModule(prospective_tests)
+          assert suite.countTestCases() == 36
+          assert prospective_tests.ProspectiveTests.synthetic_smoke_fits == 4
+          result = unittest.TextTestRunner(verbosity=2).run(suite)
+          raise SystemExit(0 if result.wasSuccessful() else 1)
+          PY

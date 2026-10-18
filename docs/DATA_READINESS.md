@@ -15,20 +15,23 @@ Future college forecasts and headline evaluation are **FBS versus FBS**. The his
 | V060 selected official-school sources captured | 14 / 14 | All selected source captures succeeded |
 | V061 validated secondary representations | 12 / 14 | Two additional cached records validated at runtime; separate source semantics |
 | Selected historical games still without validated secondary representation | 2 | Temple–UConn and Boise State–SDSU |
-| Original ESPN-source gaps repaired by V060/V061 | 0 | All 14 original-source gaps remain; secondary sources stay distinct |
+| Original ESPN-source gaps repaired by V060–V062 | 0 | All 14 original-source gaps remain; secondary sources stay distinct |
+| V062 current official-source captures | 16 / 17 sources | Includes historical sources; capture is not validation |
+| V062 current validated secondary drive representations | 13 / 15 current games | 26 team rows / 262 regulation drives |
+| V062 selected remaining drive gaps | 4 | Two current plus two historical; denominators remain separate |
 | Historical FBS/FCS context gaps | 6 | Deferred; no standalone FCS work |
 
 The eight V059 repairs corrected regulation-drive auditing order. V060 then validated ten official-school secondary representations among the remaining 14 cases. Accepted model features and source bytes remain unchanged; secondary-source interchangeability is still unapproved. Do not subtract those ten and claim the original ESPN source is repaired.
 
 V061 replayed the four previously captured cases and runtime-validated two more secondary representations, Syracuse–Purdue and Texas–UTSA, bringing accepted coverage to **12/14**. Temple–UConn and Boise State–SDSU remain. This cache-only repair made no new source request and did not alter frozen features.
 
-V061's separate 15-game current drive queue made **one robots request**, received **HTTP 403**, saved the host stop and captured **zero current summaries**. All 15 remain unvalidated for drive representation. No ESPN retry or alternate access-path bypass is authorized by the next plan.
+V061's separate 15-game current drive queue made **one robots request**, received **HTTP 403**, saved the host stop and captured **zero current summaries**. All 15 remained unvalidated at that V061 observation. No ESPN retry or alternate access-path bypass is authorized by the next plan.
 
-**V062 is prepared, not executed.** Its independent official-school queue contains 17 FBS-versus-FBS targets: these 15 recent finals and the two historical gaps. Fourteen HTML targets can support at most 14 validated drive closures; three PDFs are text-only capture/extraction and cannot close drive gaps. Limits are **40 HTTP attempts / 100 MB**, including policy/redirect accounting, with zero ESPN, CFBD, CBBD or odds usage. [Prepared scope](status/football_v062/README.md).
+**V062 has now completed.** Its independent official-school queue captured 16/17 sources and validated 13 of the 15 current games, producing 26 team rows and 262 normalized regulation drives. The prior historical secondary coverage remains 12/14. Four selected gaps remain: LSU–Mississippi State and Boise State–SDSU PDFs failed exact quarter-score identity parsing; Rutgers–Maryland HTML retained a clock conflict; Temple–UConn's PDF host returned robots 403 before any body request. Two PDFs have extracted text but **zero verified PDF-text-only identities**. No denied source is retried or bypassed. [Actual scope and evidence](status/football_v062/README.md).
 
 The existing six-hour college capture observed **October 17, 2026, 21:07:13 UTC** contains 354 current-season FBS finals, including 15 beyond the earlier canonical snapshot. V060 reconciled exact final scores against team/player boxes for all 15, with zero new CFBD requests. This does **not** verify current PBP/drive completeness or alter frozen historical predictions.
 
-[Actual V061 acquisition outcome](status/football_v061/acquisition_completion.json) · [Preserved V060 outcome](status/football_v060/acquisition_completion.json) · [V059 accepted repair](status/football_v059/repair_completion.json).
+[Actual V062 acquisition outcome](status/football_v062/acquisition_completion.json) · [Preserved V061 acquisition outcome](status/football_v061/acquisition_completion.json) · [Preserved V060 outcome](status/football_v060/acquisition_completion.json) · [V059 accepted repair](status/football_v059/repair_completion.json).
 
 ## Readiness reporting correction
 
@@ -97,13 +100,17 @@ The wider raw archive contains older and overlapping sources. Row counts from mu
 | NFL current PBP | 14,031 rows / 80 game IDs after revision; no new game IDs in this capture |
 | College current capture | Observed October 17, 2026, 21:07:13 UTC; 15 newer finals reconciled against exact team/player boxes |
 | V061 modeling execution | Finished October 17, 2026, 23:42:25 UTC; 24 fits, frozen references preserved |
-| V061 current drive queue | One robots HTTP 403; zero captures; all 15 current games remain open |
+| V061 current drive queue | One robots HTTP 403; zero captures at that dated observation |
+| V062 official-source capture | October 18, 2026, 00:08:01–00:15:40 UTC; 16 captures, 13 validated current games |
+| V062 conservative feature availability | October 18, 2026, 16:02–17:34 UTC for the 13 new representations; none eligible at run completion |
 
 The four NFL semantic changes were PBP, weekly rosters, depth charts and player mapping. NGS passing/rushing changed compressed bytes but not normalized content; snap counts and NGS receiving reused unchanged cached digests. These are source revisions, not six new NFL games.
 
 V060 recorded **32 public HTTP attempts**, 30 successful responses/redirects and two robots-file 404 responses. No new 401/402/403/429 provider denial occurred. CFBD requests, CBBD requests and odds credits were zero; the prior CBBD stop remains. The request count includes policy checks/redirects and does not equal downloaded dataset count.
 
 V061 subsequently recorded one failed robots-policy request and retained the provider denial. Its models completed while acquisition remained blocked; these are separate outcomes. Paid-provider usage remained zero.
+
+V062 recorded 33 public attempts: 30 HTTP 200 responses, two robots 404 allowances and one new robots 403 stop. Successful capture, exact validation and model-feature eligibility are separate states. The four remaining drive gaps are explicit; no current captures were inserted into the frozen benchmark.
 
 These observation dates do not establish unknown original publication timestamps. New source captures remain separate from frozen benchmark features and do not produce live forecasts automatically.
 
@@ -117,14 +124,8 @@ The nine unresolved college availability rows represent **three players**, and *
 
 ## Highest-value next work
 
-1. Execute the prepared, finite official-source queue only within its declared scope; keep unsupported HTML/PDF records separate from validated drives.
-2. Test the prepared L1-versus-L2 point objective with exact cached controls; do not reopen the failed V061 representation by exposed-period tuning.
-3. Establish upcoming QB/starter and availability observations with exact identity and defensible decision timestamps.
-4. Preserve forward-only information vintages and freeze a prospective evaluation contract before claiming deployable skill.
-5. Confirm tracking/video rights before a method that depends on them. These are not prerequisites for the prepared cached-feature benchmark.
-
-V061 completed 24 model fits, two cached secondary repairs and a bounded provider stop. V062 remains prepared, with **zero completed V062 real fits**. ACB remains excluded and CBBD stopped.
-
-## Source evidence
-
-[V061 summary](status/football_v061/summary.json) · [V062 preparation](status/football_v062/preparation.json) · [Preserved V060 summary](status/football_v060/summary.json) · [acquisition completion](status/football_v060/acquisition_completion.json) · [readiness corrections](status/football_v060/readiness_errata.json) · [V059 accepted repair](status/football_v059/repair_completion.json) · [scorecard data](demo/evidence.json) · [original content inventory](status/content_inventory_20261016T2330Z.json) · [source catalog](DATA_CATALOG.md) · [acquisition history](history/README_PRE_MODELING_20261017.md).
+1. Resolve exact cached Rutgers–Maryland HTML and downloaded-PDF parser issues without new source calls or weakened identity/clock rules; keep unavailable hosts blocked.
+2. Verify accepted-model serving reproduces frozen retrospective predictions before prospective use.
+3. Write prospective shadow forecasts or explicit abstentions before the decision time, preserving source/model identities and eligibility. Cached captures are not eligible merely because they exist.
+4. Preserve forward-only information vintages and a frozen evaluation contract; no new research fit or promoted model is part of V063.
+5. Keep exact availability joins, future starter observations and tracking/video rights as distinct unconfirmed inputs. These gaps do not require another broad download or model sweep.

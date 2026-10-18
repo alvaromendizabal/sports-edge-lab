@@ -1,0 +1,21 @@
+{
+  "PYZ_sha256": "246435d0a75b7cbaa41f82955d3e6b12c5fe00de7a1ebb3c6ffdb0773be7d90f",
+  "actual_hash_mismatches": 0,
+  "checkpoint_file_references": 98,
+  "checkpoint_fingerprints_verified": 36,
+  "compact_omissions": 98,
+  "exact_extraction": true,
+  "independent_remote_fetch": false,
+  "manifest_entries": 307,
+  "present_checkpoint_file_hashes_verified": 33,
+  "present_manifest_hashes_verified": 209,
+  "present_upload_hashes_verified": 210,
+  "source_files_match_frozen_build_and_PYZ": 119,
+  "source_integrity_entries": 118,
+  "status": "PASS_WITH_COMPACT_RETURN_LIMITS",
+  "upload_entries": 308,
+  "zip_bytes": 8595290,
+  "zip_crc_ok": true,
+  "zip_members": 221,
+  "zip_sha256": "26a86867bdcf643c0127922f077e465d4db722e6dbe3cd90f37d3d2d46b81f78"
+}

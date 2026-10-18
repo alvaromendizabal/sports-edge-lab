@@ -9,3 +9,8 @@ The23 offline tests include exactly four tiny synthetic fits, independent contro
 The private prepared experiment makes16 fits on frozen NFL16/FBS60 features and compares exact same-game accepted, matched-linear and matched-L2 forecasts. Development decisions are locked before already-exposed evaluation. Better exposed performance cannot rescue failed development, and no automatic promotion is allowed.
 
 References: [LightGBM4.7.0 objectives](https://lightgbm.readthedocs.io/en/v4.7.0/Parameters.html), [Gneiting, Making and Evaluating Point Forecasts](https://arxiv.org/abs/0912.0902).
+
+
+## Actual V062 outcome
+
+The owner run completed all 16 planned real fits and 238 runtime tests. NFL totals passed development but failed exposed evaluation; no model was promoted. [Completed evidence](../../docs/status/football_v062/README.md) preserves scores, controls and limitations. The public synthetic tests demonstrate adapter behavior and do not reproduce private-data scores.

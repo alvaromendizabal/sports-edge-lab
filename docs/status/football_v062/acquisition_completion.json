@@ -1,0 +1,87 @@
+{
+  "bytes_charged": 28605855,
+  "complete_PBP_or_tracking_coverage_claimed": false,
+  "conservative_available_at_max": "2026-10-18T17:34:00+00:00",
+  "conservative_available_at_min": "2026-10-18T16:02:00+00:00",
+  "counted_DOM_rows": 285,
+  "current_normalized_games_available_at_run_completion": 0,
+  "downloaded_pdf_captures": 2,
+  "excluded_bookkeeping_rows": 23,
+  "inflight_reservations": 0,
+  "model_feature_table_modified": false,
+  "new_blocked_host": "s3.us-east-2.amazonaws.com",
+  "new_current_regulation_drives": 262,
+  "new_current_secondary_games": 13,
+  "new_current_secondary_team_rows": 26,
+  "paid_provider_calls": 0,
+  "prior_espn_denial_preserved": true,
+  "prior_validated_historical_secondary_games": 12,
+  "public_attempts": 33,
+  "remaining": [
+    {
+      "away_name": "Mississippi State",
+      "cohort": "current_15",
+      "game_id": "401856720",
+      "home_name": "LSU",
+      "reason": [
+        {
+          "error_type": "Rejected",
+          "reason": "quarter_score_total_header_missing",
+          "source_sha256": "690c78569b3c50e1855e70c6bd919d46e7b201b1cc5f450964c48b89e4d7188f",
+          "stage": "PDF_event_identity"
+        }
+      ]
+    },
+    {
+      "away_name": "Rutgers",
+      "cohort": "current_15",
+      "game_id": "401858489",
+      "home_name": "Maryland",
+      "reason": [
+        {
+          "reason": "drive_period_clock_duration_conflict",
+          "source_sha256": "b4900d2fbd3a5d923522baacf2abb4a91471d4f272ff1ee41ce3155c6dbfdcb3",
+          "stage": "official_HTML_validation"
+        }
+      ]
+    },
+    {
+      "away_name": "UConn",
+      "cohort": "historical_2",
+      "game_id": "401117914",
+      "home_name": "Temple",
+      "reason": [
+        {
+          "reason": "provider_denial"
+        }
+      ]
+    },
+    {
+      "away_name": "San Diego State",
+      "cohort": "historical_2",
+      "game_id": "401415228",
+      "home_name": "Boise State",
+      "reason": [
+        {
+          "error_type": "Rejected",
+          "reason": "quarter_score_total_header_missing",
+          "source_sha256": "99bc08bcb7e37d975f8e9c4558d8814e17f38a8ece9689e31fb74719819d331a",
+          "stage": "PDF_event_identity"
+        }
+      ]
+    }
+  ],
+  "remaining_combined_selected_drive_games": 4,
+  "remaining_current_drive_games": 2,
+  "remaining_historical_secondary_games": 2,
+  "request_failures": 3,
+  "robots_403_stops": 1,
+  "robots_404_allowances": 2,
+  "secondary_source_interchangeability_approved": false,
+  "selected_source_games": 17,
+  "source_publication_at": null,
+  "successful_public_http": 30,
+  "successful_source_captures": 16,
+  "verified_pdf_text_only_games": 0,
+  "version": "V062"
+}

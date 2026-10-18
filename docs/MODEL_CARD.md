@@ -1,6 +1,6 @@
 # Model card — NFL and NCAAF
 
-Evidence cutoff: **October 17, 2026, 23:42:25 UTC**, V061 return. [Overview](../README.md) · [Data](DATA_READINESS.md) · [Roadmap](RESEARCH_ROADMAP.md)
+Evidence cutoff: **October 18, 2026**, V062 return. [Overview](../README.md) · [Data](DATA_READINESS.md) · [Roadmap](RESEARCH_ROADMAP.md)
 
 ## Intended use and accepted models
 
@@ -14,6 +14,29 @@ These models support retrospective sports forecasting research and prospective e
 The foundation includes Elo, recent points scored/allowed, recent margin and total, games of history, rest, venue and season information. College adds four efficiency-history coverage fields and 40 raw/opponent-adjusted home/away offense/defense measures: yards/play, TDs/drive, turnovers/drive, plays/drive and yards/drive. Some foundation FBS indicators are constant in the NFL population.
 
 Regularization is fixed (`C=1` for logistic, `alpha=20` for ridge); scaling is fitted only inside the training partition. Current point predictions are not cover/over probabilities or a joint score distribution.
+
+## V062 — completed objective-only point comparison
+
+V062 completed **16 LightGBM L1 fits** on exact V060 inputs and target cohorts, with version 4.7.0, seeds 6001 and other parameters fixed. Every fit completed 200 iterations. Accepted, matched linear and L2 references were reused without refitting. No win model was fitted. These are conditional-median point forecasts, not expected scores or a distribution.
+
+| Track | Task | Phase | Games | Accepted | Matched linear | L2 LightGBM | L1 LightGBM |
+| --- | --- | --- | --- | --- | --- | --- | --- |
+| NFL | margin | 2022–2023 development | 569 | 9.728097 | 9.728097 | 9.957677 | 9.824034 |
+| NFL | margin | 2024–2025 exposed | 570 | 10.198375 | 10.198375 | 10.155027 | 10.118940 |
+| NFL | margin | 2026 monitor | 80 | 9.898554 | 9.898554 | 9.958589 | 9.738635 |
+| NFL | total | 2022–2023 development | 569 | 10.881346 | 10.881346 | 10.864426 | 10.715334 |
+| NFL | total | 2024–2025 exposed | 570 | 10.332147 | 10.332147 | 10.416418 | 10.436805 |
+| NFL | total | 2026 monitor | 80 | 11.980695 | 11.980695 | 12.389521 | 12.223035 |
+| NCAAF | margin | 2022–2023 development | 1568 | 12.821899 | 12.829299 | 13.327795 | 13.227576 |
+| NCAAF | margin | 2024–2025 exposed | 1606 | 12.819829 | 12.868194 | 13.193786 | 13.174680 |
+| NCAAF | margin | 2026 monitor | 336 | 12.916027 | 12.924678 | 13.692153 | 13.747658 |
+| NCAAF | total | 2022–2023 development | 1568 | 13.101301 | 13.113400 | 13.300096 | 13.294700 |
+| NCAAF | total | 2024–2025 exposed | 1606 | 13.093919 | 13.094981 | 13.117648 | 13.057386 |
+| NCAAF | total | 2026 monitor | 336 | 12.577538 | 12.610560 | 12.762425 | 12.705872 |
+
+**NFL totals passed development; all four tasks failed exposed qualification. No model qualified for prospective advancement.** NFL-total development MAE improved 1.53% versus accepted, paired interval [−0.335385, −0.000286]; exposed MAE worsened 1.01%, interval [−0.059323, +0.273938]. The development upper bound is only barely negative and carries no multiplicity guarantee. NFL margin's 0.78% exposed gain and FBS total's 0.28% gain are below the declared threshold; their earlier gates also failed. Sparse 2026 gains cannot rescue a rejected branch.
+
+All point scores, secondary diagnostics, empirical residual intervals and exhaustive subgroup counts recompute. No source/feature/label changes explain the controlled L1/L2 comparison. The audit verified **8,187 numerical/source checks**, 238 runtime tests and 16 real fits. Model/data success remains separate: 13 current secondary drive cases validated, while four selected gaps remain. [V062 summary](status/football_v062/summary.json) · [All scores and gates](status/football_v062/metrics.json).
 
 ## V061 — completed situation-feature experiment
 
@@ -187,15 +210,11 @@ The win model's lower Brier but higher log loss illustrates why metrics must be 
 - Tracking/video access and permitted ML use are not confirmed.
 - No held-out prospective test, serving SLO, ongoing calibration monitoring or live wagering approval exists.
 
-Source records: [latest V061 execution](status/football_v061/summary.json), [V061 metrics](status/football_v061/metrics.json), [preserved V060 execution](status/football_v060/summary.json), [V060 metrics](status/football_v060/metrics.json), [preserved V059 execution](status/football_v059/summary.json), [V059 metrics](status/football_v059/metrics.json), [preserved V058 execution](status/football_v058/summary.json), [V058 metrics](status/football_v058/metrics.json), [preserved V057 evidence](status/football_v057/summary.json) and [scorecard evidence](demo/evidence.json). The owner return archives contain fuller prediction-level diagnostics and model manifests; public aggregate evidence does not replace them.
+Source records: [latest V062 execution](status/football_v062/summary.json), [V062 metrics](status/football_v062/metrics.json), [preserved V061 execution](status/football_v061/summary.json), [V061 metrics](status/football_v061/metrics.json), [preserved V060 execution](status/football_v060/summary.json), [V060 metrics](status/football_v060/metrics.json), [preserved V059 execution](status/football_v059/summary.json), [V059 metrics](status/football_v059/metrics.json), [preserved V058 execution](status/football_v058/summary.json), [V058 metrics](status/football_v058/metrics.json), [preserved V057 evidence](status/football_v057/summary.json) and [scorecard evidence](demo/evidence.json). The owner return archives contain fuller prediction-level diagnostics and model manifests; public aggregate evidence does not replace them.
 
 
-## Next decision — V062 prepared, not executed
+## Next decision — V063 serving and prospective evidence
 
-Keep NFL V047 and college V048R1 as accepted research references. V061 is a completed negative branch. The next bounded hypothesis aligns the point-model objective with the declared MAE criterion: **16 LightGBM L1 fits**, two tracks × margin/total × four origins. Exact V060 feature sets (NFL 16, FBS 60), version 4.7.0, all seeds 6001 and every non-objective setting remain fixed. Three cached hurdles are reused: accepted, same-scope linear and same-feature L2 LightGBM. There are no reference or win-probability refits.
+Keep NFL V047 and college V048R1 as the accepted references. V062 closes the declared objective-only hypothesis without promotion. V063 is in preparation to repair exact cached source issues, verify accepted-model serving parity, and write an immutable prospective shadow forecast/abstention ledger with explicit timestamps, eligibility, missingness and model identity. It plans zero new research fits and zero provider calls.
 
-L1 targets a **conditional median**, not expected points or a score distribution. [Gneiting's forecasting framework](https://arxiv.org/html/0912.0902v2) and [LightGBM's objective definitions](https://lightgbm.readthedocs.io/en/v4.7.0/Parameters.html) motivate this distinction; they do not promise a gain. At least 1% MAE improvement, paired uncertainty, RMSE protection and stable development folds remain required against the references. No objective grid or exposed-result rescue is planned.
-
-A separate finite queue targets 17 independent official-school sources, with at most 14 HTML drive closures and three PDF text-only captures; the cap is 40 public requests / 100 MB, zero ESPN or paid calls. Source validation does not change the frozen benchmark. [Prepared contract](status/football_v062/README.md).
-
-V062 has **not executed**. No breakthrough, prospective edge, production promotion or completed V062 fit is claimed. [Feature strategy](FEATURE_STRATEGY.md) continues to prioritize valid information, conservative denominators and matched controls.
+No retrospective score or passing serving test makes a forecast prospectively valid. A forecast must be recorded before its decision cutoff; late, unsupported, stale or ambiguous inputs require abstention. Current secondary captures do not silently enter the frozen representation. The engineering continuation produces no new model-quality claim until actual future outcomes are evaluated under a frozen contract.
