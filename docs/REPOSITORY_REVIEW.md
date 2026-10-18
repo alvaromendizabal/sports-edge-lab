@@ -1,12 +1,14 @@
-# Repository review — October 17, 2026
+# Repository review — completed evidence through October 17, 2026
 
 [Overview](../README.md) · [Evidence scorecard](demo/index.html) · [Machine-readable review matrix](repository_review_matrix.json)
 
 This review records concrete changes and verification boundaries. It does not assign an arbitrary quality score or claim a 9.9 result. Presentation, scientific validity, predictive performance and production readiness require different evidence.
 
-The acquisition-stage [earlier README](history/README_PRE_MODELING_20261017.md) remains preserved. The latest update presents the completed V060 native-library experiment, ten validated secondary representations and four remaining cases, while keeping V061 plans separate from actual results.
+The acquisition-stage [earlier README](history/README_PRE_MODELING_20261017.md) remains preserved. The latest documentation update records V061 as completed: 24 NFL fits, zero qualification, 12/14 selected secondary representations and a persisted current-source denial. V062 is separately labeled prepared, not executed: 16 objective-aligned point fits and a bounded 17-target official-source queue. Its PDF text captures are not counted as drive coverage.
 
-## Before / after evidence
+## Preserved V060 interface-review evidence
+
+The counts and interface checks below belong to the earlier V060 review. They are preserved evidence, not a newly rerun interface or hosted-CI audit.
 
 | Criterion | Before | Current improvement and verification | Status |
 | --- | --- | --- | --- |
@@ -17,10 +19,10 @@ The acquisition-stage [earlier README](history/README_PRE_MODELING_20261017.md) 
 | Public reproducibility | V058/V059 cores existed; native boosting/parser code was not public. | V060 has a preserved 50-test/12-synthetic-fit receipt. New V061 method: 23 local synthetic/mathematical checks, zero fits/provider calls, pinned NumPy/Pandas, and no private configuration. | Partial |
 | Claim discipline | Latest source/family distinctions needed consolidation. | All 18 development failures remain binding despite small exposed gains. Stale readiness fields receive explicit authoritative corrections; secondary coverage is not labeled original-source repair. | Improved |
 | Reviewer interface | Task comparison lacked native uncertainty inspection. | Self-contained distribution inspector; three captioned tables, labelled selectors and exact values. Notebook fixture executes six code cells/two inline Plotly figures and reopens correctly. | Partial |
-| Research plan | Roadmap pointed at the now-completed V060 branch. | V061 separates four cached historical parser cases, at most 40 public ESPN attempts for 15 current finals, and 24 controlled NFL feature fits. Its public feature method has 23 no-fit checks; no V061 runtime result is claimed. | Improved |
+| Research plan | Roadmap pointed at completed work. | Current roadmap records the negative V061 result and prepares one loss-alignment hypothesis with unchanged controls and explicit source bounds. | Updated documentation |
 | Production / economic value | No prospective deployment or profit evidence. | Still unproven; requirements remain explicit. Documentation cannot establish an edge. | Unproven |
 
-[Documentation and interface receipt](status/football_v060/portfolio_checks.json) · [Public V060 test receipt](status/football_v060/public_checks.json) · [Public V061 method receipt](status/football_v061/public_checks.json).
+[Latest completed V061](status/football_v061/README.md) · [Prepared V062](status/football_v062/README.md) · [Preserved documentation and interface receipt](status/football_v060/portfolio_checks.json) · [Public V060 test receipt](status/football_v060/public_checks.json) · [Public V061 method receipt](status/football_v061/public_checks.json).
 
 ## What remains for exceptional project quality
 

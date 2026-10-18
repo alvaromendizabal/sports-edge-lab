@@ -1,10 +1,10 @@
 # Sports Edge Lab · NFL
 
-**Current verified state — V060, October 17, 2026:** NFL V047 remains accepted. Native XGBoost/LightGBM/CatBoost fits completed on the 16-feature representation; no candidate/task qualified. The next planned V061 question is early-down pass/run neutral-situation history, with 52 features and 24 planned linear/XGBoost fits; it has not executed. The [public feature method](../../modeling/football_v061/README.md) supplies 23 offline checks and no model fits.
+**Current verified state — V061, October 17, 2026:** NFL V047 remains accepted. All 24 situation-feature linear/XGBoost fits completed on 52 fields; none of six candidate/task combinations qualified. The [public feature method](../../modeling/football_v061/README.md) remains a no-fit construction demo, separate from actual performance. V062 is prepared, not executed: a fixed L1 margin/total comparison on the original 16 fields, with cached references and no win-model refit.
 
 The current refresh downloaded six assets and verified four semantic changes. Revised PBP remains 14,031 rows / 80 games with no added game IDs. Audited history remains 498,285 rows across 2016–2026; the broader archive spans 1999–2026.
 
-[Current model card](../../docs/MODEL_CARD.md) · [Data readiness](../../docs/DATA_READINESS.md) · [Feature strategy](../../docs/FEATURE_STRATEGY.md) · [V060 actual evidence](../../docs/status/football_v060/README.md)
+[Current model card](../../docs/MODEL_CARD.md) · [Data readiness](../../docs/DATA_READINESS.md) · [Feature strategy](../../docs/FEATURE_STRATEGY.md) · [V061 actual evidence](../../docs/status/football_v061/README.md) · [Prepared V062](../../docs/status/football_v062/README.md)
 
 <details>
 <summary>Original acquisition-stage research plan — retained as history</summary>

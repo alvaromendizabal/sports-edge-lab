@@ -1,10 +1,10 @@
 # Sports Edge Lab · NCAA football
 
-**Current verified state — V060, October 17, 2026:** college V048R1 remains accepted. Native boosters and fresh FBS linear controls completed; no candidate/task qualified. New target rows are FBS-versus-FBS, while inherited history may include declared FCS opponent context.
+**Current verified state — V061, October 17, 2026:** college V048R1 remains accepted; V061 made no college fits. V060 native boosters and fresh FBS-only linear controls did not qualify a replacement. V062 prepares L1 margin/total fits on the frozen 60 fields; target rows remain FBS-versus-FBS and inherited FCS opponent context is disclosed.
 
-Ten of 14 selected official-school sources now have validated secondary representations; four captured pages remain unaccepted. Original ESPN-source repairs remain zero. Fifteen newer cached FBS finals have exact team/player box checks, but current PBP/drive completeness is not established. V061 has not executed. Two additional historical representations are locally verified (12/14 locally; accepted AWS remains 10/14). Four historical parser cases use caches; a separate public ESPN capture for 15 current finals permits at most 40 public attempts with zero paid calls. Preparation made zero new source calls.
+Twelve of 14 selected official-school secondary representations now validate; two historical gaps remain. Original ESPN-source repairs remain zero. Fifteen newer finals have exact boxes but no newly captured drive summaries after V061's first robots request returned HTTP 403 and stopped the provider. Prepared V062 names 17 independent official sources: at most 14 HTML drive closures plus three PDF text-only captures, capped at 40 requests / 100 MB and zero ESPN or paid-provider calls. No V062 outcome is claimed.
 
-[Current model card](../../docs/MODEL_CARD.md) · [Data readiness](../../docs/DATA_READINESS.md) · [Feature strategy](../../docs/FEATURE_STRATEGY.md) · [V060 actual evidence](../../docs/status/football_v060/README.md)
+[Current model card](../../docs/MODEL_CARD.md) · [Data readiness](../../docs/DATA_READINESS.md) · [Feature strategy](../../docs/FEATURE_STRATEGY.md) · [V061 actual evidence](../../docs/status/football_v061/README.md) · [Prepared V062](../../docs/status/football_v062/README.md)
 
 <details>
 <summary>Original acquisition-stage research plan — retained as history</summary>

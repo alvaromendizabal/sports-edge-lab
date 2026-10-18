@@ -1,0 +1,35 @@
+{
+  "accepted_frozen_model_features_changed": false,
+  "denial_host": "site.api.espn.com",
+  "denial_kind": "robots",
+  "denial_status": 403,
+  "durable_provider_block_verified_from_return": true,
+  "new_current_captures": 0,
+  "new_secondary_game_ids": [
+    "401405084",
+    "401426562"
+  ],
+  "new_secondary_games": 2,
+  "official_secondary_interchangeability_approved": false,
+  "original_espn_source_repaired": false,
+  "paid_provider_calls": 0,
+  "public_attempts": 1,
+  "remaining_college_identity_rows": 9,
+  "remaining_current_drive_games": 15,
+  "remaining_original_espn_gaps": 14,
+  "remaining_secondary_game_ids": [
+    "401117914",
+    "401415228"
+  ],
+  "remaining_selected_secondary_games": 2,
+  "selected_current_fbs_games": 15,
+  "selected_secondary_team_rows": 24,
+  "source_capture_completion_claim": false,
+  "source_publication_at": null,
+  "strict_point_in_time_ready": false,
+  "successful_public_http": 0,
+  "successful_response_bytes": 0,
+  "tracking_video_confirmed": false,
+  "validated_secondary_games": 12,
+  "version": "V061"
+}

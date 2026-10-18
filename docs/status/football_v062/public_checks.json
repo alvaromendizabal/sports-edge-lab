@@ -1,0 +1,21 @@
+{
+  "browser_visual_inspection": false,
+  "inline_plotly_figures": 2,
+  "notebook_executed_cells": 8,
+  "owner_execution_completed": false,
+  "packaged_synthetic_experiment_fits": 16,
+  "private_runtime_offline_tests": 238,
+  "provider_calls": 0,
+  "public_synthetic_fits": 4,
+  "public_unit_tests": 23,
+  "real_football_fits": 0,
+  "resume_additional_experiment_fits": 0,
+  "scope": "Local public adapter tests plus final private artifact synthetic release checks; not an actual owner V062 run",
+  "source_sha256": {
+    "objective_model.py": "fb2bb4f548fd1a079c0d0b389602a035d1e46c993781c91b55d2b6a561987c9a",
+    "objective_tests.py": "89cc280d4caa4046efec14093e1320eca26fcb99745ec498917acc6ba4685fee"
+  },
+  "status": "PASS",
+  "success_reentry_same_zip": true,
+  "tamper_rejected_before_worker": true
+}

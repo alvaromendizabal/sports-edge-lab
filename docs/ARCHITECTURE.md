@@ -79,8 +79,14 @@ V060's actual run completed 84 native/linear fits and finite source capture. All
 The return inherited stale top-level readiness counters from an earlier version. The [explicit errata](status/football_v060/readiness_errata.json) preserves the original report and names authoritative current sources for calls, coverage and freshness. Counts are now separated into original-provider gaps, captured sources, validated secondary games, frozen prediction rows and current finals. A report field must not override a newer, verified capture ledger merely because it is labeled readiness.
 
 
-## V061 public feature boundary: prepared
+## V061 public feature boundary and completed owner outcome
 
 The [minimal situation-method core](../modeling/football_v061/README.md) contains feature construction, shared normalization and synthetic tests only. It adds 36 historical situation columns to the 16 baseline columns and has no collector, credentials or model fitter. Its 23 checks verify identity, denominators and temporal isolation; they do not establish improved football performance.
 
-The separate owner workflow is prepared, not executed: four historical parser cases reuse captured sources; a 15-game current ESPN queue permits at most 40 public attempts and zero paid calls. Two more secondary representations are locally verified (12/14), while accepted AWS coverage remains V060's 10/14. Twenty-four planned NFL linear/XGBoost fits preserve frozen references and expose their release assumptions.
+The owner workflow completed 24 NFL fits with no qualified candidate and validated two cached historical records, bringing secondary coverage to 12/14. Its current 15-game capture stopped on the first robots HTTP 403, with zero summaries captured. The persisted host denial is retained. [Actual outcome](status/football_v061/README.md) is separate from the preserved public-method preparation receipt.
+
+## V062 boundary: prepared objective comparison and independent sources
+
+V062 prepares 16 LightGBM L1 margin/total fits against three cached references. Exact frozen input hashes, feature order, target cohorts, timestamps, package version, original seeds 6001 and all non-objective settings must match V060. No reference or win model is refitted. The outputs are conditional medians, not expected points or probabilities.
+
+The source queue separately names 17 FBS-versus-FBS official-school targets. Fourteen HTML pages permit at most 14 validated drive closures; three PDF captures yield text only. Forty total HTTP attempts / 100 MB, one-second host spacing, exact game validation and durable provider stops bound execution. ESPN and paid-provider calls are zero. New data does not enter the frozen comparison. [Prepared contract](status/football_v062/README.md); no runtime result is claimed.

@@ -1,10 +1,20 @@
 # Operational evidence
 
-**Latest — V060, October 17, 2026, 23:08:14 UTC:** [summary](football_v060/summary.json), [metrics](football_v060/metrics.json), [acquisition outcome](football_v060/acquisition_completion.json) and [reporting corrections](football_v060/readiness_errata.json). All 84 fits completed; none of 18 candidate/task combinations qualified. Ten of 14 selected official-school sources validated as secondary representations; four remain. Six NFL downloads produced four semantic changes.
+**Latest completed — V061, October 17, 2026, 23:42:25 UTC:** [summary](football_v061/summary.json), [metrics/gates](football_v061/metrics.json), [acquisition outcome](football_v061/acquisition_completion.json). All 24 NFL fits completed; none of six candidate/task combinations qualified. Two additional cached secondary records validated, bringing selected coverage to 12/14. The 15 current drive captures remain open after one HTTP 403 robots request and a persisted provider stop. Paid-provider usage was zero.
+
+Verified minimum tally: **20 accepted / 12 failed / 2 stopped execution runs; 10 accepted / 1 failed modeling runs; 370 completed real fits.** Accepted work includes valid negative results; model promotions remain zero.
+
+**Prepared next — V062, not executed:** [scope](football_v062/README.md) and [preparation receipt](football_v062/preparation.json). Sixteen L1 point fits against three cached references; 17 official-source targets with at most 14 HTML drive closures plus three PDF text-only captures. Limits: 40 requests / 100 MB; zero ESPN/paid calls. No V062 real fit or future capture is counted complete.
+
+## Preserved V060 and V061 preparation observations
+
+The following earlier status and preparation receipts retain their original dates and claims. They are not current execution status.
+
+**Preserved V060 observation, October 17, 2026, 23:08:14 UTC:** [summary](football_v060/summary.json), [metrics](football_v060/metrics.json), [acquisition outcome](football_v060/acquisition_completion.json) and [reporting corrections](football_v060/readiness_errata.json). All 84 fits completed; none of 18 candidate/task combinations qualified. Ten of 14 selected official-school sources validated as secondary representations; four remain. Six NFL downloads produced four semantic changes.
 
 Verified minimum tally: **19 accepted / 12 failed / two stopped executions; nine accepted / one failed modeling runs; 346 real fits.** Public HTTP attempts were 32, including two robots-file 404s; no new denial. College-statistics/odds usage was zero. Several inherited readiness counters were stale; use the linked authoritative corrections.
 
-**Prepared next — V061:** [public feature method](../../modeling/football_v061/README.md) and [local checks](football_v061/public_checks.json). It has not executed. Local secondary coverage is 12/14; accepted AWS coverage remains 10/14. Four historical parser cases use caches; 15 current ESPN captures allow at most 40 public attempts and zero paid calls. The planned NFL benchmark has 52 features and 24 fits.
+**Preserved pre-execution V061 observation:** [public feature method](../../modeling/football_v061/README.md) and [local checks](football_v061/public_checks.json). It has not executed. Local secondary coverage is 12/14; accepted AWS coverage remains 10/14. Four historical parser cases use caches; 15 current ESPN captures allow at most 40 public attempts and zero paid calls. The planned NFL benchmark has 52 features and 24 fits.
 
 ## Preserved V059 observation
 
