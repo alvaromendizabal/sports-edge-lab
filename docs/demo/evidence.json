@@ -23,22 +23,22 @@
     "current_feature_freshness_verified": false,
     "current_model_features_rebuilt": true,
     "live_wagering_ready": false,
-    "NFL_freshness_verified_for_two_forecast_games": true
+    "NFL_freshness_verified_for_two_forecast_games": true,
+    "primary_FBS60_source_equivalence_verified": false,
+    "automatic_source_replacement": false
   },
-  "schema_version": 7,
-  "evidence_cutoff": "2026-10-18T01:27:39.778665+00:00",
-  "source_run_id": "20261018T012649Z-13c584d9",
-  "source_return_sha256": "3a1861c5db5f761da634f5eebb69c127fbd2e36355c2a77cd3fc9db16a5d1fa0",
+  "schema_version": 8,
+  "evidence_cutoff": "2026-10-18T02:02:55.528311+00:00",
   "status": "SUCCESS",
-  "classification": "DATA_AND_SERVING_EVIDENCE",
-  "audit_status": "PASS_ACTUAL_ENGINEERING_EXECUTION",
+  "classification": "DATA_AND_FORECAST_ACCOUNTING",
+  "audit_status": "PASS_ACTUAL_SOURCE_AND_FORECAST_ACCOUNTING",
   "new_real_fits": 0,
   "fit_family_counts": {},
-  "provider_calls": 2,
+  "provider_calls": 1,
   "promotions": 0,
-  "new_live_forecasts": 6,
+  "new_live_forecasts": 0,
   "tally": {
-    "accepted_executions": 23,
+    "accepted_executions": 24,
     "failed_executions": 12,
     "stopped_executions": 2,
     "accepted_modeling_runs": 11,
@@ -782,7 +782,8 @@
     "One historical Temple\u2013UConn source remains blocked; 9 college identity rows remain unresolved.",
     "New source repairs did not change frozen model features or establish historical publication timestamps.",
     "V064 issued six genuine NFL forecasts for two games; no matured outcomes or prospective quality conclusion are available.",
-    "All FBS60 forecasts remain freshness-blocked; V065 prepares an independent source diagnosis and does not automatically substitute inputs."
+    "V065 captured an independent feed, but 81 primary games disagree and 66 lack accepted comparisons; no trained model inputs changed.",
+    "V066 is prepared only, with no executed fits, new forecasts or provider calls."
   ],
   "v060_acquisition_completion": {
     "source_run_id": "20261017T230214Z-3276670a",
@@ -2962,7 +2963,7 @@
     "promotions": 0,
     "new_live_forecasts": 0
   },
-  "latest_executed_version": "V064",
+  "latest_executed_version": "V065",
   "v063_actual": {
     "status": "ACCEPTED_ACTUAL_ENGINEERING_EXECUTION",
     "run_id": "20261018T004833Z-2286a7e1",
@@ -3039,7 +3040,8 @@
     "all_FBS60_forecasts_abstained": true,
     "FBS_primary_observed_at": "2026-10-16T18:15:25Z"
   },
-  "v065_prepared": {
+  "preserved_live_forecasts": 6,
+  "v065_preparation_history": {
     "owner_executed": false,
     "max_cfbd_attempts": 1,
     "new_fits": 0,
@@ -3048,5 +3050,247 @@
     "scope": "Current independent CFBD drive capture, complete-reference semantic diagnosis, immutable settlement and explicit dependency/readiness evidence.",
     "original_canonical_snapshot_reused": true,
     "later_unknown_games_retained_raw_excluded_from_normalization": true
+  },
+  "v065_actual": {
+    "schema": "sports-edge-lab.v065.actual-execution",
+    "version": "V065",
+    "status": "SUCCESS",
+    "classification": "DATA_AND_FORECAST_ACCOUNTING",
+    "started_at": "2026-10-18T02:01:53.583816+00:00",
+    "finished_at": "2026-10-18T02:02:55.528311+00:00",
+    "completed_stages": 4,
+    "runtime_tests_passed": 495,
+    "synthetic_smoke_fits": 4,
+    "independent_checks_passed": 2743,
+    "new_real_fits": 0,
+    "new_live_forecasts": 0,
+    "model_promotions": 0,
+    "elapsed_total_seconds": 61.951,
+    "estimated_compute_usd": 0.008329,
+    "hourly_rate_assumption": 0.484,
+    "cost_exclusions": [
+      "Studio idle/startup",
+      "persistent storage",
+      "request charges"
+    ],
+    "acquisition": {
+      "provider": "CFBD",
+      "confirmed_HTTP_attempts": 1,
+      "http_successes": 1,
+      "observed_at": "2026-10-18T02:02:44.276517+00:00",
+      "raw_bytes": 6281636,
+      "compressed_bytes": 408164,
+      "raw_rows": 11405,
+      "raw_games": 489,
+      "series_charged_attempts": 1,
+      "series_limit": 160,
+      "outstanding_reservations": 0,
+      "odds_credits": 0,
+      "CBBD_requests": 0,
+      "public_requests": 0,
+      "source_publication_at": null
+    },
+    "source_quality": {
+      "normalized_games": 393,
+      "normalized_team_rows": 786,
+      "strict_FBS_games": 291,
+      "declared_opponent_context_games": 102,
+      "quarantined_games": 82,
+      "quarantined_rows": 99,
+      "quarantine_reasons": {
+        "Drive end period precedes start period": 31,
+        "invalid eligible drive/team/result": 68
+      },
+      "excluded_rows": 324,
+      "excluded_games": 14,
+      "excluded_reason": "canonical_game_not_completed",
+      "primary_required_games": 455,
+      "primary_required_strict_FBS_games": 336,
+      "primary_required_context_games": 119,
+      "exact_prior_games": 308,
+      "exact_prior_strict_FBS_games": 226,
+      "exact_prior_context_games": 82,
+      "mismatching_prior_games": 81,
+      "mismatching_prior_strict_FBS_games": 61,
+      "missing_prior_games": 66,
+      "missing_prior_strict_FBS_games": 49,
+      "automatic_model_insertion": false,
+      "primary_FBS60_still_blocked": true,
+      "newly_normalized_strict_FBS_games": 4,
+      "missing_strict_FBS_games_all_quarantined": true
+    },
+    "forecast_accounting": {
+      "original_records_preserved": 192,
+      "issued_records_preserved": 6,
+      "original_abstentions_preserved": 186,
+      "pending_records": 6,
+      "pending_games": 2,
+      "matured_records": 0,
+      "scored_records": 0,
+      "new_forecasts": 0,
+      "prospective_metrics_available": false,
+      "original_forecasts_byte_identical": true,
+      "individual_forecasts_not_published": true
+    },
+    "notebook": {
+      "code_cells_executed": 6,
+      "plotly_MIME_verified": true,
+      "html_verified": true,
+      "browser_visual_inspection": false
+    },
+    "return_integrity": {
+      "unique_members": 215,
+      "CRC_verified": true,
+      "one_unique_return_verified": true,
+      "raw_source_replay_verified": true
+    },
+    "tally_after": {
+      "accepted_execution_runs": 24,
+      "failed_execution_runs": 12,
+      "stopped_execution_runs": 2,
+      "accepted_modeling_runs": 11,
+      "failed_modeling_runs": 1,
+      "completed_real_fits": 386,
+      "verified_minimum": true
+    },
+    "limitations": [
+      "Independent source capture is not complete primary-feed equivalence.",
+      "Missing strict-FBS primary comparisons are quarantined games, not missing downloads.",
+      "Frozen canonical completion excludes later source rows.",
+      "No matured prospective scores, model promotion or wagering advantage.",
+      "Unknown historical publication remains unknown."
+    ],
+    "public_scope": "Sanitized aggregate evidence only; private object paths, artifact pins, source records and individual forecasts are omitted."
+  },
+  "v066_prepared": {
+    "schema": "sports-edge-lab.v066.preparation",
+    "version": "V066",
+    "status": "PREPARED_TESTED_NOT_OWNER_EXECUTED",
+    "owner_AWS_run_completed": false,
+    "new_real_fits_executed": 0,
+    "new_forecasts_executed": 0,
+    "model_promotions": 0,
+    "planned_workstreams": [
+      "Cached CFBD clock/period adjudication without authoritative correction",
+      "Exact historical FBS16 feature parity and current readiness",
+      "Fixed strict-FBS16 linear benchmark against cached strict-FBS60 controls",
+      "Coverage, uncertainty, original-forecast accounting and executed report"
+    ],
+    "planned_limits": {
+      "real_fit_attempts": 12,
+      "baseline_refits": 0,
+      "provider_requests": 0,
+      "CFBD_requests": 0,
+      "CBBD_requests": 0,
+      "odds_credits": 0,
+      "new_live_forecasts": 0,
+      "owned_input_assets": 7,
+      "owned_input_bytes": 7511389,
+      "input_bound_bytes": 9000000,
+      "threads": 2,
+      "RSS_GiB": 12,
+      "output_GiB": 2,
+      "application_safety_seconds": 3600
+    },
+    "experiment_contract": {
+      "features": 16,
+      "target_scope": "FBS versus FBS",
+      "declared_prior_opponent_context_retained": true,
+      "families": [
+        "regularized logistic regression",
+        "ridge regression"
+      ],
+      "tasks": [
+        "win",
+        "margin",
+        "total"
+      ],
+      "training_through": [
+        2021,
+        2022,
+        2023,
+        2025
+      ],
+      "evaluation_seasons": [
+        [
+          2022
+        ],
+        [
+          2023
+        ],
+        [
+          2024,
+          2025
+        ],
+        [
+          2026
+        ]
+      ],
+      "reference": "cached V060 strict-FBS60 matched linear predictions",
+      "operational_noninferiority_margin": 0.01,
+      "development_and_exposed_both_required": true,
+      "exposed_cannot_rescue_development": true,
+      "paired_blocked_primary_loss_upper_bound_max": 0.01,
+      "adequate_block_support_required": true,
+      "automatic_promotion": false,
+      "historical_publication_verified": false,
+      "monitor_independently_required": true,
+      "secondary_metric_max_relative_increase": 0.01,
+      "each_season_primary_required": true
+    },
+    "baseline_tally": {
+      "accepted_execution_runs": 24,
+      "failed_execution_runs": 12,
+      "stopped_execution_runs": 2,
+      "accepted_modeling_runs": 11,
+      "failed_modeling_runs": 1,
+      "completed_real_fits": 386,
+      "verified_minimum": true
+    },
+    "final_packaged_tests": {
+      "passed": 582,
+      "failed": 0,
+      "synthetic_smoke_fits": 4,
+      "provider_calls": 0,
+      "credentials_used": false
+    },
+    "final_fixture_verification": {
+      "status": "PASS",
+      "offline_tests": 582,
+      "synthetic_smoke_fits": 4,
+      "failure": {
+        "exit_code": 1,
+        "seconds": 29.608
+      },
+      "resume": {
+        "exit_code": 0,
+        "seconds": 28.731
+      },
+      "reentry": {
+        "exit_code": 0,
+        "seconds": 0.064
+      },
+      "immutable_files_verified": 47,
+      "mocked_fit_slots": 12,
+      "refits_on_resume": 0,
+      "notebook_executed_code_cells": 6,
+      "return_crc_clean": true,
+      "one_unique_return_per_attempt": true,
+      "successful_reentry_same_return": true,
+      "new_real_fits": 0,
+      "provider_calls": 0,
+      "aws_credentials_used": false,
+      "browser_visual_inspection": false
+    },
+    "final_review_pending": false,
+    "public_scope": "Sanitized preparation only. No executable, private data, forecast values, object paths or artifact pins.",
+    "independent_review": {
+      "checks_passed": 27,
+      "remaining_blockers": 0,
+      "actual_feature_values_checked": 129712,
+      "max_absolute_difference": 0.0,
+      "exact_reference_partitions": 12,
+      "real_fits": 0
+    }
   }
 }

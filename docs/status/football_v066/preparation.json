@@ -1,0 +1,131 @@
+{
+  "schema": "sports-edge-lab.v066.preparation",
+  "version": "V066",
+  "status": "PREPARED_TESTED_NOT_OWNER_EXECUTED",
+  "owner_AWS_run_completed": false,
+  "new_real_fits_executed": 0,
+  "new_forecasts_executed": 0,
+  "model_promotions": 0,
+  "planned_workstreams": [
+    "Cached CFBD clock/period adjudication without authoritative correction",
+    "Exact historical FBS16 feature parity and current readiness",
+    "Fixed strict-FBS16 linear benchmark against cached strict-FBS60 controls",
+    "Coverage, uncertainty, original-forecast accounting and executed report"
+  ],
+  "planned_limits": {
+    "real_fit_attempts": 12,
+    "baseline_refits": 0,
+    "provider_requests": 0,
+    "CFBD_requests": 0,
+    "CBBD_requests": 0,
+    "odds_credits": 0,
+    "new_live_forecasts": 0,
+    "owned_input_assets": 7,
+    "owned_input_bytes": 7511389,
+    "input_bound_bytes": 9000000,
+    "threads": 2,
+    "RSS_GiB": 12,
+    "output_GiB": 2,
+    "application_safety_seconds": 3600
+  },
+  "experiment_contract": {
+    "features": 16,
+    "target_scope": "FBS versus FBS",
+    "declared_prior_opponent_context_retained": true,
+    "families": [
+      "regularized logistic regression",
+      "ridge regression"
+    ],
+    "tasks": [
+      "win",
+      "margin",
+      "total"
+    ],
+    "training_through": [
+      2021,
+      2022,
+      2023,
+      2025
+    ],
+    "evaluation_seasons": [
+      [
+        2022
+      ],
+      [
+        2023
+      ],
+      [
+        2024,
+        2025
+      ],
+      [
+        2026
+      ]
+    ],
+    "reference": "cached V060 strict-FBS60 matched linear predictions",
+    "operational_noninferiority_margin": 0.01,
+    "development_and_exposed_both_required": true,
+    "exposed_cannot_rescue_development": true,
+    "paired_blocked_primary_loss_upper_bound_max": 0.01,
+    "adequate_block_support_required": true,
+    "automatic_promotion": false,
+    "historical_publication_verified": false,
+    "monitor_independently_required": true,
+    "secondary_metric_max_relative_increase": 0.01,
+    "each_season_primary_required": true
+  },
+  "baseline_tally": {
+    "accepted_execution_runs": 24,
+    "failed_execution_runs": 12,
+    "stopped_execution_runs": 2,
+    "accepted_modeling_runs": 11,
+    "failed_modeling_runs": 1,
+    "completed_real_fits": 386,
+    "verified_minimum": true
+  },
+  "final_packaged_tests": {
+    "passed": 582,
+    "failed": 0,
+    "synthetic_smoke_fits": 4,
+    "provider_calls": 0,
+    "credentials_used": false
+  },
+  "final_fixture_verification": {
+    "status": "PASS",
+    "offline_tests": 582,
+    "synthetic_smoke_fits": 4,
+    "failure": {
+      "exit_code": 1,
+      "seconds": 29.608
+    },
+    "resume": {
+      "exit_code": 0,
+      "seconds": 28.731
+    },
+    "reentry": {
+      "exit_code": 0,
+      "seconds": 0.064
+    },
+    "immutable_files_verified": 47,
+    "mocked_fit_slots": 12,
+    "refits_on_resume": 0,
+    "notebook_executed_code_cells": 6,
+    "return_crc_clean": true,
+    "one_unique_return_per_attempt": true,
+    "successful_reentry_same_return": true,
+    "new_real_fits": 0,
+    "provider_calls": 0,
+    "aws_credentials_used": false,
+    "browser_visual_inspection": false
+  },
+  "final_review_pending": false,
+  "public_scope": "Sanitized preparation only. No executable, private data, forecast values, object paths or artifact pins.",
+  "independent_review": {
+    "checks_passed": 27,
+    "remaining_blockers": 0,
+    "actual_feature_values_checked": 129712,
+    "max_absolute_difference": 0.0,
+    "exact_reference_partitions": 12,
+    "real_fits": 0
+  }
+}
