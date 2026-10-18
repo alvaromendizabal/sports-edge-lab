@@ -44,7 +44,7 @@
     "accepted_reentry_reused_same_return": true,
     "artifact": "sports_edge_lab_v063.pyz",
     "browser_visual_inspection": false,
-    "bytes": 3492603,
+    "bytes": 3492616,
     "crash_after_append_failed_as_expected": true,
     "fixture_provider_calls": 0,
     "fixture_real_fits": 0,
@@ -56,7 +56,7 @@
     "required_pending_batch_in_return": true,
     "resume_preserved_exact_ledger_bytes": true,
     "return_crc_manifest_hashes_verified": true,
-    "sha256": "dfd2a835ea1203e14bcaa4b9a7e3b599fa103e6145c53a2fc7072dd46096024e",
+    "sha256": "61af7bdd98b262c931b2f178aeb3fc9d42b5cb006ec2e5067dcb0da69fbf0d4e",
     "source_tamper_rejected_before_credentials": true,
     "status": "PASS",
     "synthetic_smoke_fits_per_test_run": 4,
@@ -67,13 +67,20 @@
   "owner_execution_completed": false,
   "owner_full_release_gate": "local_release_fixture_failure_resume_idempotency_passed; AWS_owner_execution_pending",
   "owner_prepared_artifact": {
-    "bytes": 3492603,
+    "bytes": 3492616,
     "expected_full_release_tests": 298,
-    "full_fixture_gate": "pending_owner_verification",
+    "full_fixture_gate": "298 offline checks and four-stage local fixture passed; AWS owner execution pending",
     "owner_execution_completed": false,
-    "sha256": "dfd2a835ea1203e14bcaa4b9a7e3b599fa103e6145c53a2fc7072dd46096024e"
+    "sha256": "61af7bdd98b262c931b2f178aeb3fc9d42b5cb006ec2e5067dcb0da69fbf0d4e"
   },
   "paid_provider_calls": 0,
+  "portability_correction": {
+    "hosted_test_difference": 4.440892098500626e-16,
+    "production_code_unchanged": true,
+    "production_parity_rule_unchanged": true,
+    "reason": "Synthetic parity assertion permits numerical roundoff across BLAS/NumPy builds; substantive drift still fails.",
+    "test_absolute_tolerance": 1e-12
+  },
   "provider_calls": 0,
   "public_adapter": {
     "expected_offline_tests": 36,
@@ -86,6 +93,7 @@
     "private_production_contracts_published": false,
     "private_raw_sources_published": false,
     "production_module_fits": 0,
+    "prospective_tests_sha256": "95130f4c28bac0327261d3398afe4b9f8e5b8ef80389fc58a96a1f6e991e051b",
     "source_files": [
       {
         "bytes": 26220,
@@ -93,9 +101,9 @@
         "sha256": "be80cee142f6f7487b107542fbd29c3c672da65ddf0afe45619f68572eba0f44"
       },
       {
-        "bytes": 14976,
+        "bytes": 14984,
         "name": "prospective_tests.py",
-        "sha256": "ecb7208891492c9e444de9387f3974415b4a188334ed8b63cc170443245f3f57"
+        "sha256": "95130f4c28bac0327261d3398afe4b9f8e5b8ef80389fc58a96a1f6e991e051b"
       }
     ],
     "synthetic_predictive_estimator_fits": 4,

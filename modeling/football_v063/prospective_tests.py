@@ -159,7 +159,7 @@ class ProspectiveTests(unittest.TestCase):
         x['kickoff']=pd.date_range('2026-01-01',periods=8,freq='7D',tz='UTC')
         m=self.smoke[('sklearn_pipeline','margin')];c=self.contract('sklearn_pipeline','margin')
         p=x[['track','game_id','season','kickoff']].copy();p['task']='margin';p['target']=x.margin;p['accepted']=predict_existing(m,x,c);p['decision_at']=p.kickoff-pd.Timedelta(hours=24)
-        a=verify_serving_parity(m,x,p,c);self.assertEqual(a['n'],8);self.assertEqual(a['max_absolute_difference'],0)
+        a=verify_serving_parity(m,x,p,c);self.assertEqual(a['n'],8);self.assertLessEqual(a['max_absolute_difference'],1e-12)
         x['home_games']=1
         with self.assertRaisesRegex(ValueError,'unknown availability clock'):verify_serving_parity(m,x,p,c)
         x['home_games']=0
