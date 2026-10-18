@@ -1,4 +1,37 @@
-# V063 preparation: cached repairs and existing-model serving
+# V063 actual execution: cached repairs and saved-model serving
+
+**Accepted engineering execution, completed 2026-10-18 at 00:49:10 UTC.** [Sanitized actual receipt](actual_execution.json) · [Preserved preparation receipt](preparation.json) · [Public serving adapter](../../../modeling/football_v063/README.md).
+
+The actual return passed **298/298 runtime tests** and **3,079 independent numerical, source and timestamp checks**, with no integrity mismatch. It used **zero research fits, zero provider calls and zero new source captures**. Three previously captured game sources now validate: LSU–Mississippi State, Boise State–San Diego State and Rutgers–Maryland.
+
+| Actual outcome | Verified count |
+|---|---:|
+| Current selected secondary-drive coverage | 15/15 games |
+| Historical selected secondary-drive coverage | 13/14 games |
+| Combined selected coverage | 28/29 games |
+| Newly validated cached representation | 63 regulation drives / 6 team rows |
+| Merged 17-source queue | 325 drives / 32 team rows across 16 validated games |
+| Saved-model parity | 1,247 predictions / 6 models, maximum independent difference 1.42e−14 |
+| Prospective forecasts | 0 |
+| Prospective abstentions | 195 task records across 65 scheduled games |
+
+The prior 12 accepted historical games remain a separate inventory; they are not duplicated in the merged queue. Temple–UConn remains blocked. All original source observations and unknown publication times were preserved. All 15 current games still had conservative availability times after this run finished. The repaired rows remain separate from the frozen model features and do not establish full provider PBP, tracking or video coverage. Publisher-specific drive play counts can include field-goal attempts.
+
+The **195 abstentions are the correct result**, not forecast failures. The frozen source vintage was 2026-10-16 23:30:05 UTC, **25.316 hours old** at issuance, beyond the fixed 24-hour freshness gate. Fourteen NFL games produced 42 abstentions and 51 FBS games produced 153; 39 records additionally missed their decision deadline. The immutable pending batch and ledger hash chain match exactly. No prediction was backdated or promoted.
+
+The saved models reproduce their previous outputs: accepted NFL V047 linear models and unpromoted strict-FBS V060 matched linear shadow controls. Parity is not an accuracy improvement or new prospective evidence. The next live-use requirement is a genuinely current, verified feature and canonical vintage with the same feature semantics and release-time rules.
+
+The executed notebook has five code cells and one Plotly figure. The return contains 173 unique files; all present hashes and source files match the verified build. The active-runtime cost estimate is $0.004934 for 36.701 seconds under the stated rate assumption, excluding idle/startup, storage and requests.
+
+**Running tally:** 22 accepted executions, 12 failures and 2 stops. Modeling stays at 11 accepted runs, 1 failed run and **386 completed real fits**. V063 is engineering work, not another modeling experiment.
+
+[Prior completed V062 evidence](../football_v062/README.md) · [Status index](../README.md)
+
+## Preserved preparation context
+
+The following records what was known before the owner execution; it does not replace the actual result above.
+
+### V063 preparation: cached repairs and existing-model serving
 
 **Prepared, not an executed V063 AWS result.** [Sanitized preparation receipt](preparation.json) and [public serving adapter](../../../modeling/football_v063/README.md).
 

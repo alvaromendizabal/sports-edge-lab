@@ -1,0 +1,102 @@
+{
+  "schema": "sports-edge-lab.v064.final-preparation",
+  "prepared_at": "2026-10-18T01:18:07.359359+00:00",
+  "status": "TESTED_PREPARED_NOT_OWNER_EXECUTED",
+  "artifact": {
+    "artifact": "sports_edge_lab_v064.pyz",
+    "sha256": "bf5b99b182536f163069ea706b401e27bb07125f1c5b65cf31f95ee885c64055",
+    "bytes": 3612270,
+    "members": 156
+  },
+  "source_commit": "331f79361c8a0b9278555d1f65a780d6e08c00ab",
+  "master_prompt": "SPORTS_EDGE_LAB_MASTER_PROMPT_V2_2026-10-17",
+  "owner_AWS_run_completed": false,
+  "new_real_fits": 0,
+  "new_live_forecasts": 0,
+  "new_model_promotions": 0,
+  "new_provider_calls_during_preparation": 0,
+  "four_workstreams": [
+    "current canonical source audit",
+    "exact feature reconstruction and saved-model parity",
+    "immutable prospective shadow ledger",
+    "executed readiness and evidence"
+  ],
+  "planned_limits": {
+    "real_fits": 0,
+    "paid_credits": 0,
+    "cfbd_requests": 0,
+    "cbbd_requests": 0,
+    "public_HTTP_attempts_including_robots": 2,
+    "public_response_bytes": 5000000,
+    "public_total_bytes": 10000000,
+    "owned_pinned_assets": 20,
+    "owned_pinned_bytes": 6896684,
+    "threads": 2,
+    "RSS_GiB": 12,
+    "output_GiB": 2,
+    "runtime_seconds": 3600,
+    "final_upload_seconds": 90
+  },
+  "offline_verification": {
+    "full_packaged_tests": 356,
+    "synthetic_estimator_fits_per_suite": 4,
+    "public_adapter_tests": 69,
+    "independent_focused_tests": 98,
+    "independent_review": "PASS_BOUNDED_PREPARATION_REVIEW",
+    "failure_injected_after_append_before_checkpoint": true,
+    "resume_success": true,
+    "six_resume_files_byte_identical": true,
+    "accepted_reentry_reuses_same_zip_and_tally": true,
+    "return_zip_unique_members": 193,
+    "return_zip_CRC_pass": true,
+    "executed_notebook_code_cells": 6,
+    "browser_visual_inspection": false
+  },
+  "actual_owned_historical_replay": {
+    "NFL_rows": 3033,
+    "NFL_features": 16,
+    "college_rows": 9305,
+    "college_features": 60,
+    "values_compared": 606828,
+    "maximum_absolute_difference": 0,
+    "new_fits": 0
+  },
+  "current_data_findings": {
+    "owned_FBS_schedule_observed_at": "2026-10-17T21:07:13Z",
+    "strict_completed_FBS_games_in_current_cache": 354,
+    "strict_completed_FBS_games_in_frozen_frame": 336,
+    "additional_strict_FBS_finals": 18,
+    "additional_declared_FCS_opponent_context_results": 2,
+    "released_new_strict_FBS_finals_missing_compatible_primary_stats": 3,
+    "primary_current_FBS_efficiency_observed_at": "2026-10-16T18:15:25+00:00",
+    "primary_efficiency_reobserved": false,
+    "all_production_FBS60_forecasts_must_abstain_pending_compatible_freshness_proof": true,
+    "fresh_schedule_does_not_refresh_drive_statistics": true,
+    "NFL16_may_qualify_only_after_runtime_canonical_refresh_and_all_gates": true,
+    "source_publication_at": null,
+    "college_target_scope": "FBS versus FBS only; declared prior-opponent context retained"
+  },
+  "baseline_tally": {
+    "accepted_execution_runs": 22,
+    "accepted_modeling_runs": 11,
+    "completed_real_fits": 386,
+    "failed_execution_runs": 12,
+    "failed_modeling_runs": 1,
+    "stopped_execution_runs": 2,
+    "verified_minimum": true
+  },
+  "open_gaps": [
+    "compatible current primary FBS drive vintage/equivalence",
+    "nine unresolved college availability IDs",
+    "one denied-source Temple-UConn historical repair",
+    "verified 2026 American football availability source",
+    "original historical publication evidence",
+    "confirmed tracking/video entitlement and permitted ML use"
+  ],
+  "limitations": [
+    "All packaged execution evidence is synthetic. Owner AWS execution has not occurred.",
+    "Historical replay is read-only parity verification, not new model-quality evidence.",
+    "No fresh provider capture or actual new forecast occurred during preparation.",
+    "FBS shadow controls are strict-FBS-trained V060 linear models and remain unpromoted."
+  ]
+}

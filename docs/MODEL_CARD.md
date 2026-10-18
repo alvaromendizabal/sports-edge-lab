@@ -1,5 +1,18 @@
 # Model card — NFL and NCAAF
 
+
+## Current evidence — V063 complete, V064 prepared
+
+V063 finished at **2026-10-18 00:49:10 UTC**. An independent 3,079-check audit accepted three cached source repairs, 1,247 reproduced saved predictions and all 195 immutable abstention records. Its original source vintage was 25.316 hours old; zero forecasts were issued. No training or provider calls occurred, and no model improved or was promoted. The selected repair inventory is now **28/29** (15/15 current; 13/14 historical), not a claim of complete play-by-play or tracking coverage. Temple–UConn remains denied; nine college availability identities and tracking/video entitlement remain unresolved.
+
+**Current minimum tally:** 22 accepted / 12 failed / two stopped execution runs; modeling 11 accepted / one failed; 386 real fits. [Actual V063 evidence](status/football_v063/README.md).
+
+V064 is **prepared, not AWS-executed**: one bounded current NFL schedule capture; reuse of the original-observation FBS schedule; exact replay and reconstruction of the existing NFL16/FBS60 feature definitions; then immutable prospective forecasts or explicit abstentions. No real fits, paid calls, new jobs or model promotions. Historical opposite-division context is retained; all new college forecast targets are FBS-versus-FBS. Secondary drive-chart statistics are not silently substituted into the trained feature definition. [V064 preparation](status/football_v064/README.md).
+
+A separate primary-efficiency freshness gate keeps production FBS60 forecasts abstained: its original current-season drive source was observed October 16, 18:15:25 UTC, and no newer compatible observation/equivalence is verified. NFL16 may qualify after its canonical refresh.
+
+Earlier experiment sections below retain their dated evidence. V063 changes readiness and source-repair counts; it does not change V062 or earlier predictive results.
+
 Evidence cutoff: **October 18, 2026**, V062 return. [Overview](../README.md) · [Data](DATA_READINESS.md) · [Roadmap](RESEARCH_ROADMAP.md)
 
 ## Intended use and accepted models
@@ -213,8 +226,10 @@ The win model's lower Brier but higher log loss illustrates why metrics must be 
 Source records: [latest V062 execution](status/football_v062/summary.json), [V062 metrics](status/football_v062/metrics.json), [preserved V061 execution](status/football_v061/summary.json), [V061 metrics](status/football_v061/metrics.json), [preserved V060 execution](status/football_v060/summary.json), [V060 metrics](status/football_v060/metrics.json), [preserved V059 execution](status/football_v059/summary.json), [V059 metrics](status/football_v059/metrics.json), [preserved V058 execution](status/football_v058/summary.json), [V058 metrics](status/football_v058/metrics.json), [preserved V057 evidence](status/football_v057/summary.json) and [scorecard evidence](demo/evidence.json). The owner return archives contain fuller prediction-level diagnostics and model manifests; public aggregate evidence does not replace them.
 
 
-## Next decision — V063 serving and prospective evidence
+## Next decision — V064 fresh reconstruction and prospective evidence
 
-Keep NFL V047 and college V048R1 as the accepted references. V062 closes the declared objective-only hypothesis without promotion. V063 is in preparation to repair exact cached source issues, verify accepted-model serving parity, and write an immutable prospective shadow forecast/abstention ledger with explicit timestamps, eligibility, missingness and model identity. It plans zero new research fits and zero provider calls.
+Keep NFL V047 and historical college V048R1 as accepted references. V063 actually completed three cached repairs, reproduced 1,247 saved predictions, and recorded 195 abstentions with zero forecasts. V064 is prepared with zero new research fits. It reconstructs unchanged inputs and uses V060 strict-FBS linear controls for FBS shadow serving; those controls remain unpromoted.
 
-No retrospective score or passing serving test makes a forecast prospectively valid. A forecast must be recorded before its decision cutoff; late, unsupported, stale or ambiguous inputs require abstention. Current secondary captures do not silently enter the frozen representation. The engineering continuation produces no new model-quality claim until actual future outcomes are evaluated under a frozen contract.
+The original current-season primary FBS drive observation is October 16, 18:15:25 UTC. A newer schedule cannot refresh that input. All production FBS60 forecasts remain abstained until compatible current primary-drive coverage/equivalence is verified. NFL16 may qualify after its separate bounded canonical refresh. The owner run, not preparation or synthetic fixtures, determines actual coverage.
+
+No retrospective score or passing serving test makes a forecast prospectively valid. A forecast must be recorded before its decision cutoff; late, unsupported, stale or ambiguous inputs require abstention. Current secondary captures do not silently enter the frozen representation. Evaluate actual future outcomes under the frozen multi-metric contract before making a new model-quality claim.
