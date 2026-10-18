@@ -1,20 +1,24 @@
-# V064 — prepared current-input reconstruction
+# V064 — actual prospective issuance
 
-**Preparation only. Owner execution has not occurred.** This is a data/serving milestone with zero real fits, not a new model-quality result.
+**Completed on AWS October 18, 2026 at 01:27:39 UTC.** Independent inspection passed **3,937 checks**. The run completed four stages in **49.907 seconds**, with **356 runtime tests**, zero real fits and zero promotions.
 
-Four workstreams:
+| Verified outcome | Count |
+| --- | ---: |
+| New NFL forecasts | **6 records / 2 games** |
+| NFL abstentions | 36 records |
+| FBS abstentions | **150 records / 50 games** |
+| Total records | 192 across 64 games |
+| Historical feature values replayed exactly | 606,828 |
+| Saved predictions reproduced | 1,247 |
+| Public HTTP attempts | 2: robots 404 and data 200 |
+| CFBD / CBBD requests / odds credits | 0 / 0 / 0 |
 
-1. Verify current canonical schedules/results. Reuse the owned FBS snapshot at its original October 17, 21:07:13 UTC observation. At most two public HTTP attempts cover robots and one NFL schedule; shared conditional accounting and provider denials remain mandatory. No odds/CFBD/CBBD calls.
-2. Replay the original feature definitions against exact owned historical aggregates, then reconstruct current inputs without changing saved model definitions. Source age, observation time and assumed label release remain separate. FBS source incompatibility or incomplete history causes explicit affected-game abstention.
-3. Verify six owned model artifacts and saved prediction parity; issue immutable shadow forecasts before the NFL24h/FBS1h cutoffs. Preserve actual lead time, original source observations and pending-batch resume. No backdated forecasts or model promotion.
-4. Produce executed reconstruction/coverage evidence, source accounting, future scoring contract, notebook and one return ZIP.
+The NFL canonical source was genuinely observed at **01:27:17 UTC**. It had no newly completed or revised games versus the reference. The six forecast records cover two games with actual lead times **46.79 and 118.79 hours**, not uniform 24-hour forecasts. The 24-hour NFL rule is a minimum issuance cutoff. The original forecasts remain immutable. No outcome had matured at this audit; **no prospective quality or economic edge is established**.
 
-The NFL reference is the accepted V047 logistic/ridge family with16 features. The FBS serving family is V060 strict-FBS logistic/ridge control with60 features, still unpromoted. Both retain their declared historical opponent context. There is no claim that current inputs alone improve accuracy. Full tracking/video rights remain unconfirmed and are not required for this team-level research.
+FBS reused the October 17, 21:07:13 schedule snapshot. Its separate primary-drive observation remains **October 16, 18:15:25 UTC**. Fresh schedules did not renew drive statistics. All production FBS60 records correctly abstained. New college targets remain FBS versus FBS, with declared historical opponent context retained separately.
 
-[Preparation evidence](preparation.json) · [Actual predecessor V063](../football_v063/README.md) · [Model card](../../MODEL_CARD.md).
+The return ZIP has 195 unique members and a verified CRC. Six executed notebook cells and the saved/reopened Plotly report passed; browser visual inspection was not performed. Estimated active compute is **$0.00671** at an assumed $0.484/hour, excluding Studio startup/idle, storage and requests.
 
-## Separate FBS efficiency blocker
+**Updated minimum tally:** 23 accepted / 12 failed / two stopped executions; 11 accepted / one failed modeling runs; 386 completed real fits. Acceptance records engineering completion, not model superiority.
 
-The actual primary 2026 drive-source observation is **October 16, 18:15:25 UTC**, verified against the executed V048R1 manifest and aggregate checkpoint. Aggregating it later did not reobserve it. A fresh game schedule cannot establish current drive statistics or unchanged metrics. The private owner handoff therefore keeps every production FBS60 forecast abstained pending compatible current drive-source/equivalence proof. NFL16 may qualify after its own refresh. Three newly released strict FBS finals also lack compatible primary drive metrics; existing secondary reports are retained separately.
-
-Final preparation: **356** full offline tests, **69** public adapter tests and **98** independent focused checks passed. Packaged failure/resume kept six evidence files byte-identical; accepted reentry reused the same ZIP. These are synthetic tests, not owner execution. [Retrospective strict-FBS/NFL scorecard](retrospective_scorecard.json) preserves exposed 2024–2025 cohort counts and model roles.
+[Actual execution evidence](actual_execution.json) · [Original preparation record](preparation.json) · [Preserved retrospective scorecard](retrospective_scorecard.json) · [Next V065 preparation](../football_v065/README.md).

@@ -1,19 +1,19 @@
 # Model card — NFL and NCAAF
 
 
-## Current evidence — V063 complete, V064 prepared
+## Current evidence — V064 complete, V065 prepared
 
-V063 finished at **2026-10-18 00:49:10 UTC**. An independent 3,079-check audit accepted three cached source repairs, 1,247 reproduced saved predictions and all 195 immutable abstention records. Its original source vintage was 25.316 hours old; zero forecasts were issued. No training or provider calls occurred, and no model improved or was promoted. The selected repair inventory is now **28/29** (15/15 current; 13/14 historical), not a claim of complete play-by-play or tracking coverage. Temple–UConn remains denied; nine college availability identities and tracking/video entitlement remain unresolved.
+V064 finished at **2026-10-18 01:27:39 UTC**, issued **six immutable NFL forecast records for two games**, and retained **186 abstentions** (36 NFL and 150 FBS). The independent actual-return audit passed 3,937 checks; 356 runtime tests passed. Genuine NFL schedule observation and exact feature reconstruction enabled issuance. No outcome had matured at audit, so no prospective model-quality claim is established. Zero real fits and zero promotions preserve the 386-fit research history.
 
-**Current minimum tally:** 22 accepted / 12 failed / two stopped execution runs; modeling 11 accepted / one failed; 386 real fits. [Actual V063 evidence](status/football_v063/README.md).
+**Current minimum tally:** 23 accepted / 12 failed / two stopped execution runs; modeling 11 accepted / one failed. [Actual V064 evidence](status/football_v064/README.md).
 
-V064 is **prepared, not AWS-executed**: one bounded current NFL schedule capture; reuse of the original-observation FBS schedule; exact replay and reconstruction of the existing NFL16/FBS60 feature definitions; then immutable prospective forecasts or explicit abstentions. No real fits, paid calls, new jobs or model promotions. Historical opposite-division context is retained; all new college forecast targets are FBS-versus-FBS. Secondary drive-chart statistics are not silently substituted into the trained feature definition. [V064 preparation](status/football_v064/README.md).
+The primary FBS drive vintage remains October 16, 18:15:25 UTC. Fresh canonical scores cannot refresh that separate input. A read-only comparison of owned CFBD caches found 2,888 drives across 124 games; **110 games** pass strict whole-game validation, of which **81 match** all primary metrics and **29 disagree**. Fourteen games remain quarantined after 19 invalid eligible rows. This is not equivalent full 455-game coverage, and no model input was replaced.
 
-A separate primary-efficiency freshness gate keeps production FBS60 forecasts abstained: its original current-season drive source was observed October 16, 18:15:25 UTC, and no newer compatible observation/equivalence is verified. NFL16 may qualify after its canonical refresh.
+**V065 is tested and prepared, not executed:** one bounded existing-subscription CFBD drive request, strict source compatibility diagnostics, append-only settlement of already-issued forecasts, and an explicit dependency/readiness report. It makes no new model fits or forecasts. It reuses V064's canonical snapshot; later games absent from that snapshot remain archived raw and cannot enter normalized features until a separately verified canonical refresh. The final package passed 495 offline tests, failure/resume and idempotency checks. [V065 preparation](status/football_v065/README.md).
 
-Earlier experiment sections below retain their dated evidence. V063 changes readiness and source-repair counts; it does not change V062 or earlier predictive results.
+Earlier experiment sections retain their dated results. Neither V064 issuance nor V065 preparation changes the negative boosting/neural experiment conclusions or establishes betting readiness.
 
-Evidence cutoff: **October 18, 2026**, V062 return. [Overview](../README.md) · [Data](DATA_READINESS.md) · [Roadmap](RESEARCH_ROADMAP.md)
+Predictive-score cutoff: **October 18, 2026**, V062 return; operational issuance updated through V064. [Overview](../README.md) · [Data](DATA_READINESS.md) · [Roadmap](RESEARCH_ROADMAP.md)
 
 ## Intended use and accepted models
 
@@ -22,7 +22,8 @@ These models support retrospective sports forecasting research and prospective e
 | Track | Accepted version | Targets / family | Inputs |
 | --- | --- | --- | --- |
 | NFL | V047 | Home win given no tie: regularized logistic regression. Home-minus-away margin and total: ridge regression. | 16 team-history features. |
-| NCAAF | V048R1 | The same three targets and families. | 60 features, including opponent-adjusted drive efficiency. |
+| NCAAF historical reference | V048R1 | Logistic/ridge; historically trained on mixed FBS/opponent targets. Retained for retrospective comparisons, not a strict-FBS deployment claim. | 60 features, including opponent-adjusted drive efficiency. |
+| FBS versus FBS shadow control | V060 | Logistic/ridge trained only on FBS-versus-FBS targets. Unpromoted; current serving remains blocked by primary-drive freshness. | 60 features; declared prior-opponent context remains separate. |
 
 The foundation includes Elo, recent points scored/allowed, recent margin and total, games of history, rest, venue and season information. College adds four efficiency-history coverage fields and 40 raw/opponent-adjusted home/away offense/defense measures: yards/play, TDs/drive, turnovers/drive, plays/drive and yards/drive. Some foundation FBS indicators are constant in the NFL population.
 
@@ -226,10 +227,10 @@ The win model's lower Brier but higher log loss illustrates why metrics must be 
 Source records: [latest V062 execution](status/football_v062/summary.json), [V062 metrics](status/football_v062/metrics.json), [preserved V061 execution](status/football_v061/summary.json), [V061 metrics](status/football_v061/metrics.json), [preserved V060 execution](status/football_v060/summary.json), [V060 metrics](status/football_v060/metrics.json), [preserved V059 execution](status/football_v059/summary.json), [V059 metrics](status/football_v059/metrics.json), [preserved V058 execution](status/football_v058/summary.json), [V058 metrics](status/football_v058/metrics.json), [preserved V057 evidence](status/football_v057/summary.json) and [scorecard evidence](demo/evidence.json). The owner return archives contain fuller prediction-level diagnostics and model manifests; public aggregate evidence does not replace them.
 
 
-## Next decision — V064 fresh reconstruction and prospective evidence
+## Next decision — V065 source compatibility and immutable settlement
 
-Keep NFL V047 and historical college V048R1 as accepted references. V063 actually completed three cached repairs, reproduced 1,247 saved predictions, and recorded 195 abstentions with zero forecasts. V064 is prepared with zero new research fits. It reconstructs unchanged inputs and uses V060 strict-FBS linear controls for FBS shadow serving; those controls remain unpromoted.
+Keep NFL V047 and historical college V048R1 as accepted references. V064 actually issued six NFL forecasts and 186 abstentions after exact reconstruction; V060 strict-FBS60 shadow controls remain unpromoted and freshness-blocked. V065 prepares current independent CFBD drive acquisition and immutable settlement, with zero fits or new forecasts.
 
-The original current-season primary FBS drive observation is October 16, 18:15:25 UTC. A newer schedule cannot refresh that input. All production FBS60 forecasts remain abstained until compatible current primary-drive coverage/equivalence is verified. NFL16 may qualify after its separate bounded canonical refresh. The owner run, not preparation or synthetic fixtures, determines actual coverage.
+The original current-season primary FBS drive observation is October 16, 18:15:25 UTC. A newer schedule cannot refresh that input. All production FBS60 forecasts remain abstained until compatible current primary-drive coverage/equivalence is verified. NFL16 qualified for two actual forecast games in V064. V065 does not issue new forecasts or automatically insert another drive source.
 
 No retrospective score or passing serving test makes a forecast prospectively valid. A forecast must be recorded before its decision cutoff; late, unsupported, stale or ambiguous inputs require abstention. Current secondary captures do not silently enter the frozen representation. Evaluate actual future outcomes under the frozen multi-metric contract before making a new model-quality claim.

@@ -1,17 +1,17 @@
 # Research roadmap — evidence before complexity
 
 
-## Current evidence — V063 complete, V064 prepared
+## Current evidence — V064 complete, V065 prepared
 
-V063 finished at **2026-10-18 00:49:10 UTC**. An independent 3,079-check audit accepted three cached source repairs, 1,247 reproduced saved predictions and all 195 immutable abstention records. Its original source vintage was 25.316 hours old; zero forecasts were issued. No training or provider calls occurred, and no model improved or was promoted. The selected repair inventory is now **28/29** (15/15 current; 13/14 historical), not a claim of complete play-by-play or tracking coverage. Temple–UConn remains denied; nine college availability identities and tracking/video entitlement remain unresolved.
+V064 finished at **2026-10-18 01:27:39 UTC**, issued **six immutable NFL forecast records for two games**, and retained **186 abstentions** (36 NFL and 150 FBS). The independent actual-return audit passed 3,937 checks; 356 runtime tests passed. Genuine NFL schedule observation and exact feature reconstruction enabled issuance. No outcome had matured at audit, so no prospective model-quality claim is established. Zero real fits and zero promotions preserve the 386-fit research history.
 
-**Current minimum tally:** 22 accepted / 12 failed / two stopped execution runs; modeling 11 accepted / one failed; 386 real fits. [Actual V063 evidence](status/football_v063/README.md).
+**Current minimum tally:** 23 accepted / 12 failed / two stopped execution runs; modeling 11 accepted / one failed. [Actual V064 evidence](status/football_v064/README.md).
 
-V064 is **prepared, not AWS-executed**: one bounded current NFL schedule capture; reuse of the original-observation FBS schedule; exact replay and reconstruction of the existing NFL16/FBS60 feature definitions; then immutable prospective forecasts or explicit abstentions. No real fits, paid calls, new jobs or model promotions. Historical opposite-division context is retained; all new college forecast targets are FBS-versus-FBS. Secondary drive-chart statistics are not silently substituted into the trained feature definition. [V064 preparation](status/football_v064/README.md).
+The primary FBS drive vintage remains October 16, 18:15:25 UTC. Fresh canonical scores cannot refresh that separate input. A read-only comparison of owned CFBD caches found 2,888 drives across 124 games; **110 games** pass strict whole-game validation, of which **81 match** all primary metrics and **29 disagree**. Fourteen games remain quarantined after 19 invalid eligible rows. This is not equivalent full 455-game coverage, and no model input was replaced.
 
-A separate primary-efficiency freshness gate keeps production FBS60 forecasts abstained: its original current-season drive source was observed October 16, 18:15:25 UTC, and no newer compatible observation/equivalence is verified. NFL16 may qualify after its canonical refresh.
+**V065 is tested and prepared, not executed:** one bounded existing-subscription CFBD drive request, strict source compatibility diagnostics, append-only settlement of already-issued forecasts, and an explicit dependency/readiness report. It makes no new model fits or forecasts. It reuses V064's canonical snapshot; later games absent from that snapshot remain archived raw and cannot enter normalized features until a separately verified canonical refresh. The final package passed 495 offline tests, failure/resume and idempotency checks. [V065 preparation](status/football_v065/README.md).
 
-Earlier experiment sections below retain their dated evidence. V063 changes readiness and source-repair counts; it does not change V062 or earlier predictive results.
+Earlier experiment sections retain their dated results. Neither V064 issuance nor V065 preparation changes the negative boosting/neural experiment conclusions or establishes betting readiness.
 
 [Overview](../README.md) · [Models](MODEL_CARD.md) · [Data readiness](DATA_READINESS.md)
 

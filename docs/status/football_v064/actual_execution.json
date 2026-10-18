@@ -1,0 +1,121 @@
+{
+  "status": "PASS",
+  "audit_type": "independent read-only actual-return audit",
+  "checks_passed": 3937,
+  "audited_at": "2026-10-18T01:36:52.018578+00:00",
+  "run_id": "20261018T012649Z-13c584d9",
+  "runtime_status": "SUCCESS",
+  "class": "DATA_AND_SERVING_EVIDENCE",
+  "return_zip": {
+    "name": "sports_edge_lab_v064_return_20261018T012649Z-13c584d9_a001.zip",
+    "bytes": 10807919,
+    "sha256": "3a1861c5db5f761da634f5eebb69c127fbd2e36355c2a77cd3fc9db16a5d1fa0",
+    "unique_members": 195,
+    "crc": "PASS"
+  },
+  "source_artifact": {
+    "sha256": "bf5b99b182536f163069ea706b401e27bb07125f1c5b65cf31f95ee885c64055",
+    "bytes": 3612270,
+    "returned_source_members_verified": 155
+  },
+  "tests": {
+    "runtime_tests_passed": 356,
+    "synthetic_smoke_fits": 4
+  },
+  "execution": {
+    "started_at": "2026-10-18T01:26:49.878454+00:00",
+    "finished_at": "2026-10-18T01:27:39.778665+00:00",
+    "elapsed_total_seconds": 49.907,
+    "elapsed_worker_seconds": 45.871,
+    "stages_completed": 4,
+    "new_real_fits": 0,
+    "model_promotions": 0,
+    "estimated_compute_usd": 0.00671,
+    "hourly_rate_assumption": 0.484,
+    "cost_exclusions": [
+      "Studio idle/startup",
+      "persistent EBS and S3",
+      "S3 request charges"
+    ]
+  },
+  "public_requests": {
+    "attempted": 2,
+    "HTTP200": 1,
+    "robots_HTTP404": 1,
+    "new_denials": 0,
+    "payload_bytes": 2185209,
+    "odds_credits": 0,
+    "cfbd_requests": 0,
+    "cbbd_requests": 0,
+    "lease_released": true
+  },
+  "sources": {
+    "nfl_original_observed_at": "2026-10-18T01:27:17.579456+00:00",
+    "nfl_new_completed_games": 0,
+    "nfl_revised_games": 0,
+    "fbs_schedule_original_observed_at": "2026-10-17T21:07:13+00:00",
+    "fbs_primary_original_observed_at": "2026-10-16T18:15:25+00:00",
+    "strict_current_fbs_completed": 354,
+    "new_completed_fbs_vs_fbs": 18,
+    "new_completed_prior_fcs_context": 2,
+    "new_compatible_primary_drive_games": 0,
+    "released_missing_primary_games": 3
+  },
+  "historical_replay": {
+    "exact_feature_values": 606828,
+    "max_feature_difference": 0,
+    "saved_predictions": 1247,
+    "max_prediction_difference": 1.4210854715202004e-14
+  },
+  "notebook": {
+    "code_cells_executed": 6,
+    "plotly_figures": 1,
+    "saved_reopened_validated": true,
+    "browser_visual_inspection": false,
+    "preflight_plotly_gate_cells": 3
+  },
+  "tally_after": {
+    "accepted_execution_runs": 23,
+    "failed_execution_runs": 12,
+    "stopped_execution_runs": 2,
+    "accepted_modeling_runs": 11,
+    "failed_modeling_runs": 1,
+    "completed_real_fits": 386,
+    "verified_minimum": true
+  },
+  "prospective": {
+    "records": 192,
+    "games": 64,
+    "nfl_games": 14,
+    "fbs_games": 50,
+    "nfl_forecasts": 6,
+    "nfl_forecast_games": 2,
+    "nfl_abstentions": 36,
+    "fbs_forecasts": 0,
+    "fbs_abstentions": 150,
+    "reason_counts_overlap": {
+      "current_efficiency_source_stale": 150,
+      "issue_deadline_passed": 42,
+      "reconstructed_feature_inputs_not_ready": 186,
+      "input_not_observed_before_decision": 36,
+      "reconstructed_feature_observation_not_available": 36,
+      "source_not_observed_before_cutoff": 36,
+      "released_history_missing_compatible_drive_statistics": 9
+    },
+    "independent_prediction_replay": {
+      "records": 6,
+      "models": 3,
+      "absolute_tolerance": 1e-10
+    },
+    "actual_lead_hours_min": 46.7915086675,
+    "actual_lead_hours_max": 118.79147878861112,
+    "matured_outcomes_at_audit": 0,
+    "quality_or_profitability_established": false
+  },
+  "limitations": [
+    "Two forecast games are an operational milestone, not a predictive skill or profitability result.",
+    "All FBS forecasts abstained on stale primary drive inputs; no replacement source was inserted.",
+    "Original source publication remains unknown where unavailable.",
+    "Audit checks actual returned evidence; no new fitting, provider capture or browser visual inspection occurred."
+  ]
+}

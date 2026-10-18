@@ -1,0 +1,62 @@
+{
+  "schema": "sports-edge-lab.v065.owned-source-comparison",
+  "preparation_only": true,
+  "provider_calls": 0,
+  "real_fits": 0,
+  "raw_drive_keys": 2888,
+  "raw_games": 124,
+  "strict_valid_games": 110,
+  "strict_FBS_vs_FBS_valid_games": 107,
+  "declared_context_valid_games": 3,
+  "quarantined_games": 14,
+  "quarantined_eligible_rows": 19,
+  "required_primary_games": 455,
+  "exact_prior_games": 81,
+  "unequal_prior_games": 29,
+  "missing_or_quarantined_prior_games": 345,
+  "semantic_equivalence_proven": false,
+  "freshness_proven": false,
+  "model_input_insertions": 0,
+  "original_primary_observed_at": "2026-10-16T18:15:25Z",
+  "owned_CFBD_observed_at_range": [
+    "2026-10-16T20:31:40Z",
+    "2026-10-16T20:31:55Z"
+  ],
+  "metric_comparison": {
+    "drive_yards_per_play": {
+      "required_team_rows": 910,
+      "compared_team_rows": 220,
+      "equal_team_rows": 178,
+      "max_abs_difference": 1.9333333333333336
+    },
+    "td_drives_rate": {
+      "required_team_rows": 910,
+      "compared_team_rows": 220,
+      "equal_team_rows": 211,
+      "max_abs_difference": 0.1111111111111111
+    },
+    "turnover_drives_rate": {
+      "required_team_rows": 910,
+      "compared_team_rows": 220,
+      "equal_team_rows": 210,
+      "max_abs_difference": 0.1111111111111111
+    },
+    "plays_per_drive": {
+      "required_team_rows": 910,
+      "compared_team_rows": 220,
+      "equal_team_rows": 205,
+      "max_abs_difference": 0.541666666666667
+    },
+    "yards_per_drive": {
+      "required_team_rows": 910,
+      "compared_team_rows": 220,
+      "equal_team_rows": 181,
+      "max_abs_difference": 9.27272727272727
+    }
+  },
+  "limitations": [
+    "Counts refer to owned historical captures, not a fresh CFBD request.",
+    "Diagnostic data is retained separately; neither source is universally declared correct.",
+    "Whole-game quarantine prevents accepting a game after silently dropping malformed eligible drives."
+  ]
+}
