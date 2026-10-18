@@ -10,6 +10,7 @@ on:
       - 'modeling/football_v062/**'
       - 'modeling/football_v063/**'
       - 'modeling/football_v064/**'
+      - 'modeling/football_v065/**'
       - '.github/workflows/modeling-quality.yml'
   pull_request:
     paths:
@@ -20,6 +21,7 @@ on:
       - 'modeling/football_v062/**'
       - 'modeling/football_v063/**'
       - 'modeling/football_v064/**'
+      - 'modeling/football_v065/**'
       - '.github/workflows/modeling-quality.yml'
   workflow_dispatch:
 permissions:
@@ -229,3 +231,38 @@ jobs:
           result = unittest.TextTestRunner(verbosity=2).run(suite)
           raise SystemExit(0 if result.wasSuccessful() else 1)
           PY
+
+  offline-source-compatibility-and-settlement:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    env:
+      OMP_NUM_THREADS: '2'
+      OPENBLAS_NUM_THREADS: '2'
+      MKL_NUM_THREADS: '2'
+      NUMEXPR_NUM_THREADS: '2'
+      PYTHONHASHSEED: '0'
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+          cache: pip
+          cache-dependency-path: modeling/football_v065/requirements.txt
+      - name: Install pinned pure-method dependencies
+        run: python -m pip install -r modeling/football_v065/requirements.txt
+      - name: Run 89 offline checks with no model fits or provider calls
+        run: |
+          python - <<'PYCODE'
+          import sys
+          import unittest
+          sys.path.insert(0, 'modeling/football_v065')
+          import drive_compatibility_tests
+          import settlement_tests
+          drive = unittest.defaultTestLoader.loadTestsFromModule(drive_compatibility_tests)
+          settlement = unittest.defaultTestLoader.loadTestsFromModule(settlement_tests)
+          assert drive.countTestCases() == 39
+          assert settlement.countTestCases() == 50
+          suite = unittest.TestSuite([drive, settlement])
+          result = unittest.TextTestRunner(verbosity=2).run(suite)
+          raise SystemExit(0 if result.wasSuccessful() else 1)
+          PYCODE

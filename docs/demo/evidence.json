@@ -1,6 +1,6 @@
 {
   "nfl_audited_pbp": {
-    "seasons": "2016–2026",
+    "seasons": "2016\u20132026",
     "raw_rows": 498285,
     "games": 2841,
     "identified_non_scramble_dropbacks": 207337,
@@ -21,23 +21,24 @@
     "tracking_video_confirmed": false,
     "saved_model_serving_verified": true,
     "current_feature_freshness_verified": false,
-    "current_model_features_rebuilt": false,
-    "live_wagering_ready": false
+    "current_model_features_rebuilt": true,
+    "live_wagering_ready": false,
+    "NFL_freshness_verified_for_two_forecast_games": true
   },
-  "schema_version": 6,
-  "evidence_cutoff": "2026-10-18T00:49:10.643867+00:00",
-  "source_run_id": "20261018T004833Z-2286a7e1",
-  "source_return_sha256": "b55ff1fc92a7683a2b35cff7c43dc3952be2956220963ea079808afa1bd20ed5",
+  "schema_version": 7,
+  "evidence_cutoff": "2026-10-18T01:27:39.778665+00:00",
+  "source_run_id": "20261018T012649Z-13c584d9",
+  "source_return_sha256": "3a1861c5db5f761da634f5eebb69c127fbd2e36355c2a77cd3fc9db16a5d1fa0",
   "status": "SUCCESS",
   "classification": "DATA_AND_SERVING_EVIDENCE",
   "audit_status": "PASS_ACTUAL_ENGINEERING_EXECUTION",
   "new_real_fits": 0,
   "fit_family_counts": {},
-  "provider_calls": 0,
+  "provider_calls": 2,
   "promotions": 0,
-  "new_live_forecasts": 0,
+  "new_live_forecasts": 6,
   "tally": {
-    "accepted_executions": 22,
+    "accepted_executions": 23,
     "failed_executions": 12,
     "stopped_executions": 2,
     "accepted_modeling_runs": 11,
@@ -759,7 +760,7 @@
     "remaining_historical_secondary_games": 1,
     "merged_this_output_drive_rows": 325,
     "merged_this_output_team_rows": 32,
-    "merged_this_output_scope": "15 current games plus newly validated historical Boise–SDSU; prior 12 historical rows remain in their original evidence",
+    "merged_this_output_scope": "15 current games plus newly validated historical Boise\u2013SDSU; prior 12 historical rows remain in their original evidence",
     "original_provider_gaps_repaired": 0,
     "model_feature_table_modified": false,
     "source_publication_at": null,
@@ -774,14 +775,14 @@
   },
   "college_scope": "Current candidate and strict-FBS shadow-control target rows are FBS versus FBS; inherited feature history may include FCS opponent context. The accepted legacy college reference was mixed-cohort trained.",
   "limitations": [
-    "2016–2026 evaluation years were already examined; no untouched historical holdout.",
+    "2016\u20132026 evaluation years were already examined; no untouched historical holdout.",
     "V059 Gaussian scores, V060 native-booster comparisons and V062 objective-only results remain preserved historical evidence.",
-    "V063 improved source reconciliation and verified serving parity, not model quality; no new fit or promotion.",
     "All 195 V063 records abstained on stale inputs; 39 also missed issuance deadlines. These reason counts overlap.",
     "Selected secondary-drive coverage 28/29 does not establish full provider PBP, tracking or video completeness.",
-    "One historical Temple–UConn source remains blocked; 9 college identity rows remain unresolved.",
+    "One historical Temple\u2013UConn source remains blocked; 9 college identity rows remain unresolved.",
     "New source repairs did not change frozen model features or establish historical publication timestamps.",
-    "V064 is prepared, not executed; current input and feature reconstruction must be verified before fresh forecasts are claimed."
+    "V064 issued six genuine NFL forecasts for two games; no matured outcomes or prospective quality conclusion are available.",
+    "All FBS60 forecasts remain freshness-blocked; V065 prepares an independent source diagnosis and does not automatically substitute inputs."
   ],
   "v060_acquisition_completion": {
     "source_run_id": "20261017T230214Z-3276670a",
@@ -2961,7 +2962,7 @@
     "promotions": 0,
     "new_live_forecasts": 0
   },
-  "latest_executed_version": "V063",
+  "latest_executed_version": "V064",
   "v063_actual": {
     "status": "ACCEPTED_ACTUAL_ENGINEERING_EXECUTION",
     "run_id": "20261018T004833Z-2286a7e1",
@@ -2997,7 +2998,7 @@
     "prospective_performance_verified": false,
     "live_wagering_ready": false
   },
-  "v064_prepared": {
+  "v064_preparation_history": {
     "status": "PREPARED_NOT_EXECUTED",
     "new_real_fits_planned": 0,
     "model_promotions_planned": 0,
@@ -3014,5 +3015,38 @@
     "prepared_evidence_path": "../status/football_v064/README.md",
     "FBS_primary_efficiency_original_observation": "2026-10-16T18:15:25+00:00",
     "FBS_production_issuance": "blocked until compatible current primary-efficiency observation and equivalence proof"
+  },
+  "v064_actual": {
+    "status": "SUCCESS",
+    "class": "DATA_AND_SERVING_EVIDENCE",
+    "new_real_fits": 0,
+    "new_forecasts": 6,
+    "forecast_games": 2,
+    "abstentions": 186,
+    "NFL_abstentions": 36,
+    "FBS_abstentions": 150,
+    "actual_lead_hours": [
+      46.7915,
+      118.7915
+    ],
+    "minimum_NFL_deadline_hours": 24,
+    "matured_outcomes_at_audit": 0,
+    "runtime_tests_passed": 356,
+    "independent_checks_passed": 3937,
+    "elapsed_seconds": 49.907,
+    "estimated_compute_usd": 0.00671,
+    "hourly_rate_assumption": 0.484,
+    "all_FBS60_forecasts_abstained": true,
+    "FBS_primary_observed_at": "2026-10-16T18:15:25Z"
+  },
+  "v065_prepared": {
+    "owner_executed": false,
+    "max_cfbd_attempts": 1,
+    "new_fits": 0,
+    "new_forecasts": 0,
+    "automatic_model_input_replacement": false,
+    "scope": "Current independent CFBD drive capture, complete-reference semantic diagnosis, immutable settlement and explicit dependency/readiness evidence.",
+    "original_canonical_snapshot_reused": true,
+    "later_unknown_games_retained_raw_excluded_from_normalization": true
   }
 }
