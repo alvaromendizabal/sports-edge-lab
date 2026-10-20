@@ -22,6 +22,8 @@ jobs:
           root=Path.cwd().resolve()
           paths=[x for x in subprocess.check_output(['git','ls-files','-z'],text=True).split('\0') if x]
           errors=[];links=0;notebooks=0
+          if 'tools/consolidate_archive.py' in paths:
+              errors.append('Completed migration utility must not be restored to active source')
           for name in paths:
               p=Path(name)
               if any(x in {'__pycache__','.ipynb_checkpoints','node_modules','.venv'} or x.startswith('.cleanup') for x in p.parts):
@@ -41,4 +43,58 @@ jobs:
                       links+=1;dest=(root/p.parent/unquote(u.path)).resolve()
                       if not dest.is_relative_to(root) or not dest.exists():errors.append(name+' -> '+target)
           print(json.dumps({'tracked_files':len(paths),'notebooks':notebooks,'local_file_links':links,'errors':errors},indent=2))
+          if errors:raise SystemExit(1)
+      - name: Reject stale navigation in the actual rendered reports
+        shell: python
+        run: |
+          import json,subprocess
+          from html.parser import HTMLParser
+          from pathlib import Path
+          from urllib.parse import unquote,urlsplit
+
+          class Anchors(HTMLParser):
+              def __init__(self):
+                  super().__init__()
+                  self.targets=[]
+                  self.ids=set()
+              def handle_starttag(self,tag,attrs):
+                  attrs=dict(attrs)
+                  if attrs.get('id'):self.ids.add(attrs['id'])
+                  if tag=='a' and attrs.get('href'):self.targets.append(attrs['href'])
+                  if tag in {'script','link','img'}:
+                      key='href' if tag=='link' else 'src'
+                      if attrs.get(key):self.targets.append(attrs[key])
+
+          root=Path.cwd().resolve()
+          def broken(html,path):
+              parser=Anchors();parser.feed(html);errors=[]
+              for target in parser.targets:
+                  u=urlsplit(target);destination=None
+                  if not u.scheme and not u.netloc:
+                      if u.path:destination=(path.parent/unquote(u.path)).resolve()
+                      elif u.fragment and unquote(u.fragment) not in parser.ids:
+                          errors.append(target)
+                  elif u.hostname=='github.com':
+                      prefix='/alvaromendizabal/sports-edge-lab/'
+                      if u.path.startswith(prefix):
+                          parts=u.path[len(prefix):].split('/',2)
+                          if len(parts)==3 and parts[0] in {'blob','tree'} and parts[1]=='main':
+                              destination=(root/unquote(parts[2])).resolve()
+                  if destination is not None:
+                      if not destination.is_relative_to(root) or not destination.exists():errors.append(target)
+              return errors
+
+          # Regression checks: inspect real HTML attributes, never URL-like JavaScript text.
+          fixture='<script>const sample="href=not-a-link";</script><a href="#ok">jump</a><h2 id="ok">ok</h2>'
+          if broken(fixture,root/'README.html'):raise ValueError('Valid navigation rejected')
+          for target in ('absent-file-for-navigation-test.html','#absent-anchor',
+                         'https://github.com/alvaromendizabal/sports-edge-lab/blob/main/absent-test.md'):
+              if broken('<a href="'+target+'">missing</a>',root/'README.html')!=[target]:
+                  raise ValueError('Broken navigation was not detected: '+target)
+          paths=[p for p in subprocess.check_output(['git','ls-files','-z'],text=True).split('\0') if p.endswith('.html')]
+          errors=[]
+          for name in paths:
+              p=root/name
+              for target in broken(p.read_text(encoding='utf-8'),p):errors.append(name+' -> '+target)
+          print(json.dumps({'rendered_html_files':len(paths),'checker_regressions':4,'errors':errors},indent=2))
           if errors:raise SystemExit(1)
