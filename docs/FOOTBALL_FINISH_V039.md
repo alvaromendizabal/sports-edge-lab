@@ -39,7 +39,7 @@ At the verified rate of $0.461/instance-hour, compute depends on actual elapsed 
 - [Local test log](status/v039_local_tests_20261016.txt)
 - [Launch request](status/football39_job_request.json) and [successful launch receipt](status/football39_launch_20261016.json)
 - [Service-limit rejection before launch](status/football39_service_limit_incident.json)
-- [Embedded predecessor receipt](../tools/football_finish_v039/src/predecessor_terminal.json)
+- [Embedded predecessor receipt](https://github.com/alvaromendizabal/sports-edge-lab/blob/b247d233fee72734c868e07e24b4de67704e2a2a/tools/football_finish_v039/src/predecessor_terminal.json)
 
 ## Verified running captures — 21:17 UTC
 

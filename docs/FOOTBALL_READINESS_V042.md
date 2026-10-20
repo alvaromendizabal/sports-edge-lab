@@ -21,4 +21,4 @@ Raw and derived inputs are private in the canonical S3 bucket. The one unique re
 
 The old six-hour current collector still included CBBD calls despite the provider pause. V043 disables CBBD both in its work planner and its direct capture path. All 32 mocked tests passed before upload. The existing schedule `sports-edge-lab-current-6h-20261017-v026` was updated and read back at 22:48:33 UTC to point to the tested v043 artifact. All prior budgets, lease behavior, six-hour cadence and November 16 end date remain unchanged; no IAM permissions were added. This patch did not launch a new ProcessingJob.
 
-[V043 source and reproduction](../tools/current_snapshot_v043/) and [schedule evidence](status/current_guard_v043/). [Weekend continuation playbook](FOOTBALL_WEEKEND_REFRESH_20261016.md).
+[V043 source and reproduction](../tools/current_snapshot_v043/) and [schedule evidence](../tools/current_snapshot_v043/README.md). [Weekend continuation playbook](FOOTBALL_WEEKEND_REFRESH_20261016.md).

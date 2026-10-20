@@ -4,7 +4,7 @@
 
 This review records concrete changes and verification boundaries. It does not assign an arbitrary quality score or claim a 9.9 result. Presentation, scientific validity, predictive performance and production readiness require different evidence.
 
-The acquisition-stage [earlier README](history/README_PRE_MODELING_20261017.md) remains preserved. The latest documentation update records V061 as completed: 24 NFL fits, zero qualification, 12/14 selected secondary representations and a persisted current-source denial. V062 is separately labeled prepared, not executed: 16 objective-aligned point fits and a bounded 17-target official-source queue. Its PDF text captures are not counted as drive coverage.
+The acquisition-stage [earlier README](https://github.com/alvaromendizabal/sports-edge-lab/blob/b247d233fee72734c868e07e24b4de67704e2a2a/docs/history/README_PRE_MODELING_20261017.md) remains preserved. The latest documentation update records V061 as completed: 24 NFL fits, zero qualification, 12/14 selected secondary representations and a persisted current-source denial. V062 is separately labeled prepared, not executed: 16 objective-aligned point fits and a bounded 17-target official-source queue. Its PDF text captures are not counted as drive coverage.
 
 ## Preserved V060 interface-review evidence
 

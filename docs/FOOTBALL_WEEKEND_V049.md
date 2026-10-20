@@ -26,4 +26,4 @@ The already scheduled v022 job ended **Failed at 01:07:35.716 UTC**, with applic
 
 Existing tracking inquiries show no substantive access grant. SkillCorner's existing no-B2C autoack remains non-entitlement; no Genius reply was found. No new outreach occurred.
 
-Continue the existing weekend follow-up; no new automation was created. Do not relaunch v049. Reuse its latest successful NFL receipt for comparisons. [Receipts](status/football_weekend_v049/) · [Reproducible source](../tools/football_weekend_v049/).
+Continue the existing weekend follow-up; no new automation was created. Do not relaunch v049. Reuse its latest successful NFL receipt for comparisons. [Receipts](status/football_weekend_v049/) · [Reproducible source](https://github.com/alvaromendizabal/sports-edge-lab/tree/b247d233fee72734c868e07e24b4de67704e2a2a/tools/football_weekend_v049).

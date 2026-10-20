@@ -82,7 +82,7 @@ credentials and in-memory fake services; production network and AWS validation
 occur in the actual processing job.
 
 The launched v001 source is preserved as
-[`tools/history/acquire_paid_data_v001_launched.py`](../tools/history/acquire_paid_data_v001_launched.py).
+[`tools/history/acquire_paid_data_v001_launched.py`](https://github.com/alvaromendizabal/sports-edge-lab/blob/b247d233fee72734c868e07e24b4de67704e2a2a/tools/history/acquire_paid_data_v001_launched.py).
 See [execution source versions](EXECUTION_SOURCE_VERSIONS.md) for exact hashes.
 Its nonblocking CBBD shooting-stat requests omitted a required conference/team
 selector. V002 recovers those requests using distinct conferences from archived

@@ -21,7 +21,7 @@ Job: `sports-edge-lab-football-validation-20261016-23-v046`. Existing bucket, ex
 
 **95 offline tests passed before runtime credentials/network, and all 95 passed again in AWS.** They include full embedded-entrypoint execution, unique ZIP output, deduplicated cache reads, corruption recording, timestamp/market rejection and the prior identity/acquisition regressions. Heartbeats recorded progress; there were zero heartbeat errors. Zero odds subscription credits, zero CFBD calls and zero CBBD calls. Supplemental weekend CFBD usage remains 0/160.
 
-Artifact: `sports_edge_lab_football_validation_v046.pyz`, 52,523 bytes. SHA-256 `c446805946e764f44610d4fed05a7a49453dcc968362be87f175d6830f047c3b`. Exact sources are in [tools/football_validation_v046](../tools/football_validation_v046/).
+Artifact: `sports_edge_lab_football_validation_v046.pyz`, 52,523 bytes. SHA-256 `c446805946e764f44610d4fed05a7a49453dcc968362be87f175d6830f047c3b`. Exact sources are in [tools/football_validation_v046](https://github.com/alvaromendizabal/sports-edge-lab/tree/b247d233fee72734c868e07e24b4de67704e2a2a/tools/football_validation_v046).
 
 One unique return ZIP exists at `s3://sagemaker-sports-edge-lab-560403859723-us-west-2/shared/acquisition/football-validation/20261016T232304Z-954fca0a08/sports_edge_lab_football_validation_return_20261016T232304Z-954fca0a08.zip`: **3,845 bytes**, SHA-256 `453703dd19806c86b7e7d0034a14c4822416bf74abfbfe72ab2a63de3ab0420f`. ZIP integrity and equality to the saved report were verified. All 4,696 unique manifest IDs and both market/rejection counters were independently recomputed from the saved manifest.
 
