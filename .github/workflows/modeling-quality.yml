@@ -2,29 +2,7 @@ name: Football modeling - offline scientific checks
 on:
   push:
     branches: [main]
-    paths:
-      - 'modeling/football_v058/**'
-      - 'modeling/football_v059/**'
-      - 'modeling/football_v060/**'
-      - 'modeling/football_v061/**'
-      - 'modeling/football_v062/**'
-      - 'modeling/football_v063/**'
-      - 'modeling/football_v064/**'
-      - 'modeling/football_v065/**'
-      - 'modeling/football_v066/**'
-      - '.github/workflows/modeling-quality.yml'
   pull_request:
-    paths:
-      - 'modeling/football_v058/**'
-      - 'modeling/football_v059/**'
-      - 'modeling/football_v060/**'
-      - 'modeling/football_v061/**'
-      - 'modeling/football_v062/**'
-      - 'modeling/football_v063/**'
-      - 'modeling/football_v064/**'
-      - 'modeling/football_v065/**'
-      - 'modeling/football_v066/**'
-      - '.github/workflows/modeling-quality.yml'
   workflow_dispatch:
 permissions:
   contents: read
@@ -39,8 +17,8 @@ jobs:
       NUMEXPR_NUM_THREADS: '2'
       PYTHONHASHSEED: '0'
     steps:
-      - uses: actions/checkout@v4
-      - uses: actions/setup-python@v5
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1
+      - uses: actions/setup-python@5fda3b95a4ea91299a34e894583c3862153e4b97
         with:
           python-version: '3.12'
           cache: pip
@@ -75,8 +53,8 @@ jobs:
       NUMEXPR_NUM_THREADS: '2'
       PYTHONHASHSEED: '0'
     steps:
-      - uses: actions/checkout@v4
-      - uses: actions/setup-python@v5
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1
+      - uses: actions/setup-python@5fda3b95a4ea91299a34e894583c3862153e4b97
         with:
           python-version: '3.12'
           cache: pip
@@ -112,8 +90,8 @@ jobs:
       NUMEXPR_NUM_THREADS: '2'
       PYTHONHASHSEED: '0'
     steps:
-      - uses: actions/checkout@v4
-      - uses: actions/setup-python@v5
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1
+      - uses: actions/setup-python@5fda3b95a4ea91299a34e894583c3862153e4b97
         with:
           python-version: '3.12'
           cache: pip
@@ -134,8 +112,8 @@ jobs:
       NUMEXPR_NUM_THREADS: '2'
       PYTHONHASHSEED: '0'
     steps:
-      - uses: actions/checkout@v4
-      - uses: actions/setup-python@v5
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1
+      - uses: actions/setup-python@5fda3b95a4ea91299a34e894583c3862153e4b97
         with:
           python-version: '3.12'
           cache: pip
@@ -155,8 +133,8 @@ jobs:
       NUMEXPR_NUM_THREADS: '2'
       PYTHONHASHSEED: '0'
     steps:
-      - uses: actions/checkout@v4
-      - uses: actions/setup-python@v5
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1
+      - uses: actions/setup-python@5fda3b95a4ea91299a34e894583c3862153e4b97
         with:
           python-version: '3.12'
           cache: pip
@@ -176,8 +154,8 @@ jobs:
       NUMEXPR_NUM_THREADS: '2'
       PYTHONHASHSEED: '0'
     steps:
-      - uses: actions/checkout@v4
-      - uses: actions/setup-python@v5
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1
+      - uses: actions/setup-python@5fda3b95a4ea91299a34e894583c3862153e4b97
         with:
           python-version: '3.12'
           cache: pip
@@ -208,8 +186,8 @@ jobs:
       NUMEXPR_NUM_THREADS: '2'
       PYTHONHASHSEED: '0'
     steps:
-      - uses: actions/checkout@v4
-      - uses: actions/setup-python@v5
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1
+      - uses: actions/setup-python@5fda3b95a4ea91299a34e894583c3862153e4b97
         with:
           python-version: '3.12'
           cache: pip
@@ -244,8 +222,8 @@ jobs:
       NUMEXPR_NUM_THREADS: '2'
       PYTHONHASHSEED: '0'
     steps:
-      - uses: actions/checkout@v4
-      - uses: actions/setup-python@v5
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1
+      - uses: actions/setup-python@5fda3b95a4ea91299a34e894583c3862153e4b97
         with:
           python-version: '3.12'
           cache: pip
@@ -275,8 +253,8 @@ jobs:
     env:
       PYTHONHASHSEED: '0'
     steps:
-      - uses: actions/checkout@v4
-      - uses: actions/setup-python@v5
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1
+      - uses: actions/setup-python@5fda3b95a4ea91299a34e894583c3862153e4b97
         with:
           python-version: '3.12'
       - name: Run 49 standard-library diagnostics with network blocked and no model fits
