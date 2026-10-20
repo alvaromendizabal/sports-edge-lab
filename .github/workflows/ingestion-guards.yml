@@ -38,7 +38,7 @@ jobs:
           print('Public catalog guardrails passed:', len(assets), 'assets')
           PY
       - name: Compile shared acquisition utilities
-        run: python -m py_compile tools/acquire_paid_data.py tools/test_paid_acquisition.py tools/consolidate_archive.py
+        run: python -m py_compile tools/acquire_paid_data.py tools/test_paid_acquisition.py
       - name: Run paid acquisition safety and budget guards
         run: python tools/acquire_paid_data.py --self-test
       - name: Run offline paid acquisition integration checks

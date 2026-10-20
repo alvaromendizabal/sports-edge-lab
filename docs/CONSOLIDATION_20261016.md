@@ -26,7 +26,10 @@ The final migration receipt is private at:
 
 `infrastructure/migrations/consolidation_20261016.json`
 
-The [migration source](../tools/consolidate_archive.py) is a historical one-time utility. Its old source buckets no longer exist; it should not be rerun as the normal ingestion entry point.
+The completed one-time migration utility has been retired from the maintained
+source tree. Its six source buckets no longer exist. The original receipt and
+Git history preserve the migration evidence; use the [current acquisition
+guide](DATA_FRESHNESS_AND_ACCESS_20261016.md) rather than recreating the old buckets.
 
 ## Legacy home backup
 
