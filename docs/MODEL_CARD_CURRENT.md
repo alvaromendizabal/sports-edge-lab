@@ -30,6 +30,8 @@ The current NFL monitor has 77 games across six weekly blocks, below the study's
 
 The retained current NFL and FBS references have lower monitoring log loss than raw MARKET. The latest joint challenger improves all four corresponding NFL framework controls in current monitoring but does not surpass the strongest retained reference. FBS effects are smaller and less consistent. V118 serves saved models and adds no real fits, so its operational success is not a new model-quality gain.
 
+V119's October 26 owner attempt stopped at a source-state gate before fitting. Its registered feature-combination experiment has no result. The [execution receipt](evidence/2026-10-26-execution.json) and [recovery case study](CASE_STUDY_PROVENANCE.md) preserve this engineering failure separately from scientific qualification and the unchanged scores.
+
 ## Data and failure modes
 
 Potential limitations include sparse independent game outcomes, correlated inputs, incomplete pregame availability clocks, source revisions, missing enrichment, stale pricing, regime changes, small current-season blocks and repeated model selection. A large play count is not a large number of independent game labels. Synthetic test success does not establish real-data predictive validity.

@@ -4,6 +4,8 @@
 
 This publication separates completed model experiments, current research serving and wagering readiness. The current numerical panels come from audited V117R1 scorecards; V118 adds serving and data evidence, not a new fitting result.
 
+October 26 execution update: V119 passed 1,058 owner checks and its notebook gate, then failed at source admission before the experiment began. It completed zero real fits, admitted no new data and issued no new forecasts. Its qualification result is unavailable; every numerical panel below remains unchanged. See the [dated execution receipt](evidence/2026-10-26-execution.json) and [provenance case study](CASE_STUDY_PROVENANCE.md).
+
 ## Three campaigns, explicit comparison policies
 
 Each cell is log loss / Brier; lower is better. References are selected independently for each metric. These panels are exposed and repeatedly examined, not untouched confirmation sets.

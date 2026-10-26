@@ -6,6 +6,8 @@ Designed and implemented by [Alvaro Mendizabal](https://github.com/alvaromendiza
 
 [Start the review](docs/REVIEW_GUIDE.md) · [Current evidence](docs/CURRENT_EVIDENCE.md) · [Model card](docs/MODEL_CARD_CURRENT.md) · [System design](docs/SYSTEM_DESIGN.md) · [Run the example](examples/review_lab/README.md)
 
+Latest execution, October 26: V119 stopped at a source-provenance gate after 1,058 owner checks passed. It made zero real fits and produced no new model result. The [recovery case study](docs/CASE_STUDY_PROVENANCE.md) explains the missed multi-parent integration case and provides a separate runnable synthetic demonstration. Prior accepted models and the scorecard below remain unchanged.
+
 ## A five-minute technical review
 
 | Inspect | What it demonstrates |
@@ -15,6 +17,7 @@ Designed and implemented by [Alvaro Mendizabal](https://github.com/alvaromendiza
 | [Current evidence export](docs/evidence/2026-10-25.json) | Three campaigns, multiple training origins, raw MARKET, controls, all four frameworks and retained references |
 | [System design](docs/SYSTEM_DESIGN.md) | Data/model/decision contracts, lineage, failure states and recovery |
 | [Published scientific implementations](docs/PROJECT_SCOPE.md) | Preserved fitting, source-adjudication, uncertainty and interruption tests from earlier research stages |
+| [Failure-to-recovery case study](docs/CASE_STUDY_PROVENANCE.md) | Multi-parent provenance, content-pinned relocation, rejection tests and honest incident classification |
 
 <p align="center"><img src="docs/assets/evidence-overview.svg" alt="Current matched-cohort log loss: NFL MARKET 0.660022 and retained reference 0.624093; FBS MARKET 0.474843 and retained reference 0.465519. Exposed monitoring, not prospective profit." width="1100"></p>
 
@@ -33,7 +36,7 @@ Lower is better. These are matched, non-tied games with included kickoffs throug
 
 [All 2024–25, 2025–26 and 2026–27 comparisons](docs/CURRENT_EVIDENCE.md) include Brier scores, different update policies and separate metric-specific references. MARKET means archived bookmaker consensus after paired de-vig—not an executable quote, a closing line, or Kalshi.
 
-## What the latest execution actually proved
+## What the latest completed serving run proved
 
 | V118 owner result | Verified outcome |
 |---|---|
@@ -66,11 +69,12 @@ python -m unittest discover -s examples/review_lab/tests -v
 python -m examples.review_lab --output /tmp/sports-edge-review
 python -m examples.review_lab --output /tmp/sports-edge-review
 python -m examples.review_lab.build_review --check
+python -m examples.review_lab.provenance
 ```
 
 The second invocation verifies and reuses the accepted synthetic report with zero new fits. A different seed, changed implementation or corrupted artifact is rejected. The optional notebook uses Jupyter; see its [environment and reproduction instructions](examples/review_lab/README.md).
 
-The new public-review workflow complements the retained [scientific modeling](.github/workflows/modeling-quality.yml), [acquisition guards](.github/workflows/ingestion-guards.yml) and [repository hygiene](.github/workflows/repository-hygiene.yml) workflows. Earlier implementations and dated evidence remain intact.
+The public-review workflow runs the synthetic suite on Python 3.11/3.12, checks selector behavior, and executes the notebook in a separate kernel with saved-output validation. It complements the retained [scientific modeling](.github/workflows/modeling-quality.yml), [acquisition guards](.github/workflows/ingestion-guards.yml) and [repository hygiene](.github/workflows/repository-hygiene.yml) workflows. Consult the actual Actions result for the published commit. Earlier implementations and dated evidence remain intact.
 
 ## Public code, private research assets
 
