@@ -1,131 +1,150 @@
 {
   "review_type": "evidence_based_internal_review_not_rating",
-  "as_of": "2026-10-17T23:08:14Z",
-  "criteria": [
-    {
-      "criterion": "Immediate project comprehension",
-      "before": "Acquisition-stage landing page did not summarize completed modeling work.",
-      "after": "Landing page states targets, accepted references, actual V060 outcome, scope and planned V061 work.",
-      "status": "improved",
-      "verified_checks": [
-        "Current evidence links resolve",
-        "Accepted models and no-promotion decision match audited V060 evidence"
-      ],
-      "remaining_gap": "No observed external reviewer comprehension study."
-    },
-    {
-      "criterion": "Current-state accuracy",
-      "before": "Current-season row counts and V059-pending statements could be mistaken for full historical coverage or current status.",
-      "after": "Authoritative acquisition receipts correct inherited readiness fields; original-provider gaps, secondary coverage, frozen cohorts and current captures remain distinct.",
-      "status": "improved",
-      "verified_checks": [
-        "130 exact displayed score fields matched actual V060 evaluation",
-        "Eight preserved V059 distribution series match historical evidence",
-        "12 prior evidence files remain byte-identical"
-      ],
-      "remaining_gap": "Four selected cases lack validated secondary representation; current finals still need PBP/drive coverage checks."
-    },
-    {
-      "criterion": "Modeling transparency",
-      "before": "No compact method/status registry spanning completed and requested named frameworks.",
-      "after": "Five-arm same-cohort native-library comparisons, failed qualification and completed-versus-planned framework/feature status are explicit.",
-      "status": "improved",
-      "verified_checks": [
-        "Six five-arm task-selector states checked",
-        "Eight preserved V059 distribution-selector states checked",
-        "FBS matched-linear control distinguished from older mixed-trained reference"
-      ],
-      "remaining_gap": "No prospective qualifying improvement or fair information-horizon market advantage established."
-    },
-    {
-      "criterion": "Evidence traceability",
-      "before": "Evidence was spread across execution and acquisition receipts.",
-      "after": "Public summaries, metrics, repair receipts and scorecard link directly to current aggregate evidence.",
-      "status": "improved",
-      "verified_checks": [
-        "200 local links checked; zero missing",
-        "Actual return SHA and audit outcome PASS_WITH_REPORTING_ERRATA recorded",
-        "Historical evidence preserved and explicit readiness corrections published"
-      ],
-      "remaining_gap": "Full prediction-level/private-source reproduction remains access-dependent."
-    },
-    {
-      "criterion": "Public reproducibility",
-      "before": "V058/V059 public cores existed; native booster/official parser mechanics were not public.",
-      "after": "V060 public core includes native family adapters and synthetic parser checks; V061 publishes a minimal feature method with pinned NumPy/Pandas dependencies and no private collector.",
-      "status": "partial",
-      "verified_checks": [
-        "Prior public V060 suite: 50 tests/12 synthetic fits; its historical receipt is preserved",
-        "V061 public method: 23 local synthetic/mathematical tests, zero model fits and zero provider calls",
-        "No publisher HTML/private configuration in public packages"
-      ],
-      "remaining_gap": "Hosted CI and independent clean-environment real-data reproduction are not established by local checks."
-    },
-    {
-      "criterion": "Scientific claim discipline",
-      "before": "Negative results were retained, but latest source and family distinctions required consolidation.",
-      "after": "All 18 V060 candidate/task failures remain binding; source validation and source repair are distinct; stale counters are corrected explicitly.",
-      "status": "improved",
-      "verified_checks": [
-        "32 actual public attempts reported instead of stale zero",
-        "Ten validated secondary games/four selected remaining reported",
-        "Original source remains unrepaired; frozen features preserved"
-      ],
-      "remaining_gap": "Original publication vintages, reliable future starter coverage and tracking rights remain unresolved."
-    },
-    {
-      "criterion": "Reviewer interface",
-      "before": "Offline task comparison existed without native distribution inspection.",
-      "after": "Self-contained scorecard adds CRPS/NLL, interval coverage/width/score and negative-score-mass inspection.",
-      "status": "partial",
-      "verified_checks": [
-        "Three tables have captions",
-        "Selectors have labels and exact values",
-        "Six five-arm task plus eight historical distribution interactions checked with DOM shim",
-        "No external runtime assets"
-      ],
-      "remaining_gap": "No rendered-browser accessibility audit or observed user usability validation."
-    },
-    {
-      "criterion": "Research plan",
-      "before": "The roadmap focused on the prepared native-library benchmark.",
-      "after": "Completed V060 closes that fixed comparison; prepared V061 separates cached historical parser validation, bounded current public capture and a 52-feature NFL information hypothesis.",
-      "status": "improved",
-      "verified_checks": [
-        "V061 is planned, not executed",
-        "24 planned fits distinguished from 84 completed V060 fits",
-        "No architecture or breakthrough guarantee",
-        "At most 40 public ESPN attempts for 15 current finals are distinguished from four cached historical parser cases",
-        "Local 12/14 secondary coverage is distinguished from accepted AWS 10/14"
-      ],
-      "remaining_gap": "V061 owner execution, current PBP/drive validation and model performance remain pending."
-    },
-    {
-      "criterion": "Production and economic value",
-      "before": "No production or economic-edge evidence.",
-      "after": "No production or economic-edge evidence; requirements are explicit.",
-      "status": "unproven",
-      "verified_checks": [
-        "No fabricated forecasts or profitability claims",
-        "No model promotion reported"
-      ],
-      "remaining_gap": "Prospective predictions, operational SLOs, calibration/drift monitoring and executable-price evaluation are required."
-    }
-  ],
+  "as_of": "2026-10-26",
   "numeric_ratings_assigned": false,
   "quality_9_9_claimed": false,
-  "verification_receipts": [
-    "status/football_v060/portfolio_checks.json",
-    "status/football_v060/public_checks.json",
-    "status/football_v061/public_checks.json"
-  ],
-  "remaining_requirements": [
-    "Frozen prospective forecasts before outcomes",
-    "Verified publication vintages and pregame availability",
-    "Controlled qualifying improvement and information-matched market comparison",
-    "Independent reproduction with legally accessible real data",
-    "Serving and monitoring evidence if production pursued",
-    "Rendered accessibility review and observed usability feedback"
-  ],
-  "latest_accepted_runtime": "V060"
+  "current": {
+    "base_commit": "8ddb512b35ca29ee8bae0c31207a38d57ed7b800",
+    "public_python_tests": 26,
+    "selector_states": 24,
+    "selector_method": "minimal DOM fixture, not rendered browser",
+    "notebook_executed_code_cells": 7,
+    "notebook_execution_mode": "in-process IPython",
+    "svg_assets_rendered_and_visually_inspected": 2,
+    "hosted_ci": "Consult the actual GitHub Actions run for the published commit; local checks do not establish hosted success.",
+    "private_football_retraining_reproducible": false,
+    "prospective_profit_established": false,
+    "preservation": "All earlier source and scientific workflows retained."
+  },
+  "prior_review_preserved": {
+    "review_type": "evidence_based_internal_review_not_rating",
+    "as_of": "2026-10-17T23:08:14Z",
+    "criteria": [
+      {
+        "criterion": "Immediate project comprehension",
+        "before": "Acquisition-stage landing page did not summarize completed modeling work.",
+        "after": "Landing page states targets, accepted references, actual V060 outcome, scope and planned V061 work.",
+        "status": "improved",
+        "verified_checks": [
+          "Current evidence links resolve",
+          "Accepted models and no-promotion decision match audited V060 evidence"
+        ],
+        "remaining_gap": "No observed external reviewer comprehension study."
+      },
+      {
+        "criterion": "Current-state accuracy",
+        "before": "Current-season row counts and V059-pending statements could be mistaken for full historical coverage or current status.",
+        "after": "Authoritative acquisition receipts correct inherited readiness fields; original-provider gaps, secondary coverage, frozen cohorts and current captures remain distinct.",
+        "status": "improved",
+        "verified_checks": [
+          "130 exact displayed score fields matched actual V060 evaluation",
+          "Eight preserved V059 distribution series match historical evidence",
+          "12 prior evidence files remain byte-identical"
+        ],
+        "remaining_gap": "Four selected cases lack validated secondary representation; current finals still need PBP/drive coverage checks."
+      },
+      {
+        "criterion": "Modeling transparency",
+        "before": "No compact method/status registry spanning completed and requested named frameworks.",
+        "after": "Five-arm same-cohort native-library comparisons, failed qualification and completed-versus-planned framework/feature status are explicit.",
+        "status": "improved",
+        "verified_checks": [
+          "Six five-arm task-selector states checked",
+          "Eight preserved V059 distribution-selector states checked",
+          "FBS matched-linear control distinguished from older mixed-trained reference"
+        ],
+        "remaining_gap": "No prospective qualifying improvement or fair information-horizon market advantage established."
+      },
+      {
+        "criterion": "Evidence traceability",
+        "before": "Evidence was spread across execution and acquisition receipts.",
+        "after": "Public summaries, metrics, repair receipts and scorecard link directly to current aggregate evidence.",
+        "status": "improved",
+        "verified_checks": [
+          "200 local links checked; zero missing",
+          "Actual return SHA and audit outcome PASS_WITH_REPORTING_ERRATA recorded",
+          "Historical evidence preserved and explicit readiness corrections published"
+        ],
+        "remaining_gap": "Full prediction-level/private-source reproduction remains access-dependent."
+      },
+      {
+        "criterion": "Public reproducibility",
+        "before": "V058/V059 public cores existed; native booster/official parser mechanics were not public.",
+        "after": "V060 public core includes native family adapters and synthetic parser checks; V061 publishes a minimal feature method with pinned NumPy/Pandas dependencies and no private collector.",
+        "status": "partial",
+        "verified_checks": [
+          "Prior public V060 suite: 50 tests/12 synthetic fits; its historical receipt is preserved",
+          "V061 public method: 23 local synthetic/mathematical tests, zero model fits and zero provider calls",
+          "No publisher HTML/private configuration in public packages"
+        ],
+        "remaining_gap": "Hosted CI and independent clean-environment real-data reproduction are not established by local checks."
+      },
+      {
+        "criterion": "Scientific claim discipline",
+        "before": "Negative results were retained, but latest source and family distinctions required consolidation.",
+        "after": "All 18 V060 candidate/task failures remain binding; source validation and source repair are distinct; stale counters are corrected explicitly.",
+        "status": "improved",
+        "verified_checks": [
+          "32 actual public attempts reported instead of stale zero",
+          "Ten validated secondary games/four selected remaining reported",
+          "Original source remains unrepaired; frozen features preserved"
+        ],
+        "remaining_gap": "Original publication vintages, reliable future starter coverage and tracking rights remain unresolved."
+      },
+      {
+        "criterion": "Reviewer interface",
+        "before": "Offline task comparison existed without native distribution inspection.",
+        "after": "Self-contained scorecard adds CRPS/NLL, interval coverage/width/score and negative-score-mass inspection.",
+        "status": "partial",
+        "verified_checks": [
+          "Three tables have captions",
+          "Selectors have labels and exact values",
+          "Six five-arm task plus eight historical distribution interactions checked with DOM shim",
+          "No external runtime assets"
+        ],
+        "remaining_gap": "No rendered-browser accessibility audit or observed user usability validation."
+      },
+      {
+        "criterion": "Research plan",
+        "before": "The roadmap focused on the prepared native-library benchmark.",
+        "after": "Completed V060 closes that fixed comparison; prepared V061 separates cached historical parser validation, bounded current public capture and a 52-feature NFL information hypothesis.",
+        "status": "improved",
+        "verified_checks": [
+          "V061 is planned, not executed",
+          "24 planned fits distinguished from 84 completed V060 fits",
+          "No architecture or breakthrough guarantee",
+          "At most 40 public ESPN attempts for 15 current finals are distinguished from four cached historical parser cases",
+          "Local 12/14 secondary coverage is distinguished from accepted AWS 10/14"
+        ],
+        "remaining_gap": "V061 owner execution, current PBP/drive validation and model performance remain pending."
+      },
+      {
+        "criterion": "Production and economic value",
+        "before": "No production or economic-edge evidence.",
+        "after": "No production or economic-edge evidence; requirements are explicit.",
+        "status": "unproven",
+        "verified_checks": [
+          "No fabricated forecasts or profitability claims",
+          "No model promotion reported"
+        ],
+        "remaining_gap": "Prospective predictions, operational SLOs, calibration/drift monitoring and executable-price evaluation are required."
+      }
+    ],
+    "numeric_ratings_assigned": false,
+    "quality_9_9_claimed": false,
+    "verification_receipts": [
+      "status/football_v060/portfolio_checks.json",
+      "status/football_v060/public_checks.json",
+      "status/football_v061/public_checks.json"
+    ],
+    "remaining_requirements": [
+      "Frozen prospective forecasts before outcomes",
+      "Verified publication vintages and pregame availability",
+      "Controlled qualifying improvement and information-matched market comparison",
+      "Independent reproduction with legally accessible real data",
+      "Serving and monitoring evidence if production pursued",
+      "Rendered accessibility review and observed usability feedback"
+    ],
+    "latest_accepted_runtime": "V060"
+  }
 }

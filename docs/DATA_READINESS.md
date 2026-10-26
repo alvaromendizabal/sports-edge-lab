@@ -1,3 +1,5 @@
+> Historical source-readiness lineage. Current verified inventory and remaining conflicts are summarized in [the October 25 evidence report](CURRENT_EVIDENCE.md#data-and-operational-readiness). The dated observations below are preserved.
+
 # Data readiness — scope, history and remaining gaps
 
 

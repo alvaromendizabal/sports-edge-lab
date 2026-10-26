@@ -1,3 +1,5 @@
+> Historical architecture lineage. The [current system design](SYSTEM_DESIGN.md) explains the completed V118 serving path and its remaining readiness limits. Earlier stage statements below remain dated.
+
 # Architecture and execution contracts
 
 [Project overview](../README.md) · [Data readiness](DATA_READINESS.md) · [Model card](MODEL_CARD.md)

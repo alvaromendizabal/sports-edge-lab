@@ -1,0 +1,30 @@
+name: Public review example
+on:
+  pull_request:
+  push:
+    branches: [main]
+permissions:
+  contents: read
+jobs:
+  synthetic-and-evidence:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 3
+    strategy:
+      matrix:
+        python-version: ['3.11', '3.12']
+    steps:
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1
+        with:
+          persist-credentials: false
+      - uses: actions/setup-python@5fda3b95a4ea91299a34e894583c3862153e4b97
+        with:
+          python-version: ${{ matrix.python-version }}
+      - name: Test chronology, matched scoring and recovery
+        run: python -m unittest discover -s examples/review_lab/tests -v
+      - name: Run and reuse the synthetic example
+        shell: bash
+        run: |
+          python -m examples.review_lab --output "${RUNNER_TEMP}/sports-edge-review"
+          python -m examples.review_lab --output "${RUNNER_TEMP}/sports-edge-review"
+      - name: Check generated evidence page
+        run: python -m examples.review_lab.build_review --check

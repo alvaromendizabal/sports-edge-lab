@@ -1,62 +1,79 @@
-# Sports Edge Lab
+<p align="center"><img src="docs/assets/masthead.svg" alt="Sports Edge Lab — probabilistic forecasting, scientific evaluation, reliable ML systems" width="1100"></p>
 
-**Football forecasting · Data integrity · Reproducible ML systems**
+NFL and FBS forecasting built around a difficult engineering question: can a model add information beyond the market, and can every result survive an audit?
 
-NFL and FBS football research for **win probabilities, point margins and game totals**.
-The project connects historical source acquisition, player identity, availability-aware
-features, chronological evaluation and recoverable AWS execution. Football is the
-modeling focus; NBA and NCAA basketball share the active data infrastructure.
+Designed and implemented by [Alvaro Mendizabal](https://github.com/alvaromendizabal). The project connects source acquisition, information-time contracts, four native ML frameworks, chronological experiments, immutable forecasts and recoverable AWS execution. NFL and FBS are the modeling focus; NBA and NCAA basketball share the data infrastructure.
 
-[Model card](docs/MODEL_CARD.md) · [Data readiness](docs/DATA_READINESS.md) ·
-[Architecture](docs/ARCHITECTURE.md) · [Evidence scorecard](docs/demo/index.html) ·
-[Maintained code and run paths](docs/PROJECT_SCOPE.md)
+[Start the review](docs/REVIEW_GUIDE.md) · [Current evidence](docs/CURRENT_EVIDENCE.md) · [Model card](docs/MODEL_CARD_CURRENT.md) · [System design](docs/SYSTEM_DESIGN.md) · [Run the example](examples/review_lab/README.md)
 
-## What the evidence supports
+## A five-minute technical review
 
-| System | Accepted repository evidence | Important boundary |
-|---|---|---|
-| NFL reference | V047: 16 team-history features; regularized logistic/ridge models | Prospective forecast outcomes are not established by retrospective accuracy |
-| College reference | V048R1: 60 team-history and opponent-adjusted drive features | Strict FBS use has source-readiness restrictions; the older accepted training cohort was mixed |
-| Historical evaluation | Exact same-game comparisons, training-only preprocessing and paired uncertainty | 2024–2025 seasons were repeatedly examined, not untouched confirmation |
-| Data operations | Hash-bound source inputs, quarantine, budgets, checkpoint reuse and scheduled current capture | A downloaded record is not automatically a model-ready observation |
-
-**No profitable betting edge or live-model promotion is claimed.** The dated
-[V065 evidence](docs/status/football_v065/README.md) records 386 completed real fits,
-393 normalized independent-source games, 81 disagreements and 66 missing accepted
-comparisons. The [V066 package](docs/status/football_v066/README.md) is a separately
-prepared fallback experiment in that publication, not an outcome invented by this
-cleanup. AWS work may advance beyond the repository's published snapshot.
-
-## Inspect the engineering
-
-| Question | Implementation and review |
+| Inspect | What it demonstrates |
 |---|---|
-| Are provider calls safe and bounded? | [Paid acquisition](tools/acquire_paid_data.py), [mocked integration tests](tools/test_paid_acquisition.py) |
-| Can incomplete or conflicting observations enter a model? | [Data contracts](docs/DATA_READINESS.md), [V065 validation](modeling/football_v065/README.md) |
-| Can accepted work be resumed unchanged? | [Current scheduled source](tools/current_snapshot_v043/README.md), content and lease guards |
-| How were candidate models compared? | [Model card](docs/MODEL_CARD.md), [fixed-feature booster comparison](modeling/football_v060/README.md) |
-| Can I run a real public example? | [Synthetic fitting and validation](modeling/football_v066/README.md), [earlier chronological example](modeling/football_v058/README.md) |
+| [Credential-free ML example](examples/review_lab/README.md) | Real fitting on invented data, chronological separation, exact-cohort scoring, leakage rejection and zero-fit reentry |
+| [Executed review notebook](notebooks/engineering_review.ipynb) | Reproducible synthetic results beside clearly separated, sanitized real-run aggregate evidence |
+| [Current evidence export](docs/evidence/2026-10-25.json) | Three campaigns, multiple training origins, raw MARKET, controls, all four frameworks and retained references |
+| [System design](docs/SYSTEM_DESIGN.md) | Data/model/decision contracts, lineage, failure states and recovery |
+| [Published scientific implementations](docs/PROJECT_SCOPE.md) | Preserved fitting, source-adjudication, uncertainty and interruption tests from earlier research stages |
 
-The [offline scorecard](docs/demo/index.html) opens as a self-contained HTML file.
-Public synthetic demonstrations fit actual controls and exercise leakage, state and
-recovery checks. Their scores are **not actual football performance**. The modeling
-workflow runs all nine retained verification jobs for every pull request, including
-changes to documentation and acquisition packaging.
+<p align="center"><img src="docs/assets/evidence-overview.svg" alt="Current matched-cohort log loss: NFL MARKET 0.660022 and retained reference 0.624093; FBS MARKET 0.474843 and retained reference 0.465519. Exposed monitoring, not prospective profit." width="1100"></p>
 
-## Deliberately narrow publication
+The graphic above is generated from the same aggregate export as the [evidence explorer](docs/review/index.html). Download and open that self-contained HTML file locally; GitHub's file viewer displays its source. It has sport, campaign and proper-score selectors, responsive tables and no external requests.
 
-Current acquisition utilities and the **deployed v043 scheduled collector** remain.
-Superseded one-time collector bundles, duplicate history READMEs and an obsolete
-schedule-construction script are removed from the current tree. Links in dated
-receipts point to their exact original Git commit; source attribution, rejected
-results, scientific controls and private S3 evidence are not erased.
+## Current evidence, with the boundaries attached
 
-All five tracks remain: [NFL](tracks/nfl/README.md), [NCAAF](tracks/ncaaf/README.md),
-[NBA](tracks/nba/README.md), [NCAAM](tracks/ncaam/README.md), [NCAAW](tracks/ncaaw/README.md).
-College headline forecasts target **FBS versus FBS**; historical FCS opponents may
-supply explicitly declared context. ACB is excluded. Private/licensed raw records,
-credentials, fitted assets and exact active recipes are not added to GitHub.
+The October 25, 2026 publication incorporates completed V117R1 modeling and V118 current serving. It preserves negative results and distinguishes predictive scores from economic outcomes.
 
-This is active research. Repository cleanup does not stop scheduled acquisition,
-reset an AWS workspace, delete checkpoints, change a frozen forecast, or reclassify
-an unpromoted candidate as a final deployed model.
+| 2026–27 monitoring cohort | Games | MARKET log loss | New joint challenger | Strongest retained reference |
+|---|---:|---:|---:|---:|
+| NFL | 77 | 0.660022 | 0.647299 | **0.624093** |
+| FBS | 301 | 0.474843 | 0.473819 | **0.465519** |
+
+Lower is better. These are matched, non-tied games with included kickoffs through October 15, not complete seasons. Retained references were selected on exposed outcomes. The new challenger failed both historical qualification gates; the NFL monitoring panel has only six weekly blocks. These results do not establish prospective profitability.
+
+[All 2024–25, 2025–26 and 2026–27 comparisons](docs/CURRENT_EVIDENCE.md) include Brier scores, different update policies and separate metric-specific references. MARKET means archived bookmaker consensus after paired de-vig—not an executable quote, a closing line, or Kalshi.
+
+## What the latest execution actually proved
+
+| V118 owner result | Verified outcome |
+|---|---|
+| Verification | 927 tests passed |
+| Current research issuance | 2,058 model rows across 39 games; rows are not independent games |
+| Model reuse | Zero new real fits |
+| Final source-read-to-issue interval | 6.282 seconds, versus 245.440 seconds in an earlier execution; an observational comparison, not a controlled benchmark |
+| Action admission | Zero paper actions and zero actual wagers; all named sportsbook quotes were stale |
+| Data integrity | 105/105 NFL PBP coverage; 549/566 detailed FBS summaries; 17 kickoff conflicts remain quarantined |
+
+Reliable abstention is part of the system. A completed forecast pipeline does not turn a stale price or an incompatible settlement target into a valid decision.
+
+## Engineering decisions worth inspecting
+
+- Keep publication, observation, revision, label availability and decision clocks distinct.
+- Fit preprocessing and learned representations inside their chronological training boundaries.
+- Compare new systems with raw MARKET, matched controls and the strongest retained references on identical games.
+- Preserve source bytes, model identity and accepted forecasts through recovery.
+- Separate successful execution from positive science and deployment readiness.
+- Validate source, environment, notebooks and resource guards before expensive owner work.
+
+[Architecture and trade-offs](docs/SYSTEM_DESIGN.md) · [Research protocol](docs/RESEARCH_PROTOCOL.md) · [Current data gaps](docs/CURRENT_EVIDENCE.md#data-and-operational-readiness)
+
+## Reproduce the public review
+
+Python 3.11+; no credentials, cloud account or third-party packages are required for the core example. Run from the repository root:
+
+```bash
+python -m unittest discover -s examples/review_lab/tests -v
+python -m examples.review_lab --output /tmp/sports-edge-review
+python -m examples.review_lab --output /tmp/sports-edge-review
+python -m examples.review_lab.build_review --check
+```
+
+The second invocation verifies and reuses the accepted synthetic report with zero new fits. A different seed, changed implementation or corrupted artifact is rejected. The optional notebook uses Jupyter; see its [environment and reproduction instructions](examples/review_lab/README.md).
+
+The new public-review workflow complements the retained [scientific modeling](.github/workflows/modeling-quality.yml), [acquisition guards](.github/workflows/ingestion-guards.yml) and [repository hygiene](.github/workflows/repository-hygiene.yml) workflows. Earlier implementations and dated evidence remain intact.
+
+## Public code, private research assets
+
+Public material includes source contracts, evaluation mechanics, synthetic fitting, tests, notebooks, architecture and aggregate research results. Licensed/raw observations, individual forecasts, trained production weights, exact active feature transformations, tuning and live decision configuration remain private. The synthetic example verifies engineering behavior; it does not reproduce the private football scores.
+
+[Publication boundary](docs/PUBLICATION_BOUNDARY.md) · [Historical evidence and maintained paths](docs/PROJECT_SCOPE.md) · [Evidence-based repository review](docs/REPOSITORY_REVIEW.md)

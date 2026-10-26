@@ -1,0 +1,638 @@
+{
+  "schema": "sports-edge-public-evidence-v1",
+  "snapshot_date": "2026-10-25",
+  "timezone": "America/Los_Angeles",
+  "data_kind": "aggregate_private_run_export",
+  "publication_scope": "Aggregate results and engineering receipts; no individual forecasts or active model recipes",
+  "selection_warning": "Retained references were selected on already exposed results. These are descriptive comparisons, not untouched confirmation or proven profit.",
+  "current_monitor_last_included_date": "2026-10-15",
+  "cohort_policy": "Exactly matched eligible non-tied games within each row; rows with different origins are not interchangeable.",
+  "market_definition": "Median bookmaker consensus after proportional paired moneyline de-vig; at least three common complete books. Consensus is not an executable quote or necessarily a closing line.",
+  "model_state": "Both latest historical challenger qualification gates failed; no automatic promotion.",
+  "rows": [
+    {
+      "sport": "NFL",
+      "campaign": "2024\u20132025 fixed",
+      "games": 280,
+      "market": {
+        "logloss": 0.5900112210718799,
+        "brier": 0.2014181761085739,
+        "accuracy": 0.7107142857142857,
+        "auc": 0.7573027362800966,
+        "label": "MARKET consensus"
+      },
+      "matched_control": {
+        "logloss": 0.5868007108210802,
+        "brier": 0.2002202664908735,
+        "accuracy": 0.7071428571428572,
+        "auc": 0.7563016581960059,
+        "label": "Matched full-feature control"
+      },
+      "challenger": {
+        "logloss": 0.5852436429077591,
+        "brier": 0.19926962365187828,
+        "accuracy": 0.7071428571428572,
+        "auc": 0.7599466091688486,
+        "label": "Joint opportunity challenger"
+      },
+      "retained_log_loss_reference": {
+        "logloss": 0.5750833713169241,
+        "brier": 0.1946267737162553,
+        "accuracy": 0.7071428571428572,
+        "auc": 0.7747317624108014,
+        "label": "Retained TensorFlow joint model"
+      },
+      "retained_brier_reference": {
+        "logloss": 0.5750833713169241,
+        "brier": 0.1946267737162553,
+        "accuracy": 0.7071428571428572,
+        "auc": 0.7747317624108014,
+        "label": "Retained TensorFlow joint model"
+      },
+      "new_frameworks": {
+        "LightGBM": {
+          "logloss": 0.5915001567279136,
+          "brier": 0.2023258927674235,
+          "accuracy": 0.7071428571428572,
+          "auc": 0.7522460085219981
+        },
+        "XGBoost": {
+          "logloss": 0.5898149083927012,
+          "brier": 0.20148112597906268,
+          "accuracy": 0.7,
+          "auc": 0.754607526053699
+        },
+        "PyTorch": {
+          "logloss": 0.5767230823180995,
+          "brier": 0.1954454054386304,
+          "accuracy": 0.7142857142857143,
+          "auc": 0.7722162328661635
+        },
+        "TensorFlow": {
+          "logloss": 0.5894508885662649,
+          "brier": 0.2007263359862848,
+          "accuracy": 0.7142857142857143,
+          "auc": 0.7557369474819037
+        },
+        "Equal-weight ensemble": {
+          "logloss": 0.5852436429077591,
+          "brier": 0.19926962365187828,
+          "accuracy": 0.7071428571428572,
+          "auc": 0.7599466091688486
+        }
+      }
+    },
+    {
+      "sport": "NFL",
+      "campaign": "2025\u20132026 fixed",
+      "games": 277,
+      "market": {
+        "logloss": 0.6119232229829618,
+        "brier": 0.2131328073500103,
+        "accuracy": 0.6642599277978339,
+        "auc": 0.7156302432885907,
+        "label": "MARKET consensus"
+      },
+      "matched_control": {
+        "logloss": 0.61245761100277,
+        "brier": 0.21348614401856383,
+        "accuracy": 0.6642599277978339,
+        "auc": 0.714869966442953,
+        "label": "Matched full-feature control"
+      },
+      "challenger": {
+        "logloss": 0.6136223429607132,
+        "brier": 0.21388658560370846,
+        "accuracy": 0.6570397111913358,
+        "auc": 0.7152369966442953,
+        "label": "Joint opportunity challenger"
+      },
+      "retained_log_loss_reference": {
+        "logloss": 0.6060984159923861,
+        "brier": 0.21073554662864177,
+        "accuracy": 0.6462093862815884,
+        "auc": 0.723888422818792,
+        "label": "Learned MARKET model"
+      },
+      "retained_brier_reference": {
+        "logloss": 0.6060984159923861,
+        "brier": 0.21073554662864177,
+        "accuracy": 0.6462093862815884,
+        "auc": 0.723888422818792,
+        "label": "Learned MARKET model"
+      },
+      "new_frameworks": {
+        "LightGBM": {
+          "logloss": 0.6163638491947653,
+          "brier": 0.21499010115486045,
+          "accuracy": 0.6498194945848376,
+          "auc": 0.712300755033557
+        },
+        "XGBoost": {
+          "logloss": 0.6135564268880715,
+          "brier": 0.2137811903775175,
+          "accuracy": 0.6570397111913358,
+          "auc": 0.713664010067114
+        },
+        "PyTorch": {
+          "logloss": 0.6130846270561037,
+          "brier": 0.21373454351616167,
+          "accuracy": 0.6606498194945848,
+          "auc": 0.7164953859060402
+        },
+        "TensorFlow": {
+          "logloss": 0.6179520910954188,
+          "brier": 0.21574272112211912,
+          "accuracy": 0.6570397111913358,
+          "auc": 0.7126677852348994
+        },
+        "Equal-weight ensemble": {
+          "logloss": 0.6136223429607132,
+          "brier": 0.21388658560370846,
+          "accuracy": 0.6570397111913358,
+          "auc": 0.7152369966442953
+        }
+      }
+    },
+    {
+      "sport": "NFL",
+      "campaign": "2025\u20132026 annual",
+      "games": 277,
+      "market": {
+        "logloss": 0.6119232229829618,
+        "brier": 0.2131328073500103,
+        "accuracy": 0.6642599277978339,
+        "auc": 0.7156302432885907,
+        "label": "MARKET consensus"
+      },
+      "matched_control": {
+        "logloss": 0.6157973687933916,
+        "brier": 0.21491308694868444,
+        "accuracy": 0.6678700361010831,
+        "auc": 0.7104656040268457,
+        "label": "Matched full-feature control"
+      },
+      "challenger": {
+        "logloss": 0.6198930984909726,
+        "brier": 0.21682915715724538,
+        "accuracy": 0.6534296028880866,
+        "auc": 0.7059039429530201,
+        "label": "Joint opportunity challenger"
+      },
+      "retained_log_loss_reference": {
+        "logloss": 0.6060984159923861,
+        "brier": 0.21073554662864177,
+        "accuracy": 0.6462093862815884,
+        "auc": 0.723888422818792,
+        "label": "Learned MARKET model (fixed origin)"
+      },
+      "retained_brier_reference": {
+        "logloss": 0.6060984159923861,
+        "brier": 0.21073554662864177,
+        "accuracy": 0.6462093862815884,
+        "auc": 0.723888422818792,
+        "label": "Learned MARKET model (fixed origin)"
+      },
+      "new_frameworks": {
+        "LightGBM": {
+          "logloss": 0.6154137491599607,
+          "brier": 0.21494376348038247,
+          "accuracy": 0.6678700361010831,
+          "auc": 0.709731543624161
+        },
+        "XGBoost": {
+          "logloss": 0.6153069699682958,
+          "brier": 0.2147047722515031,
+          "accuracy": 0.6534296028880866,
+          "auc": 0.712458053691275
+        },
+        "PyTorch": {
+          "logloss": 0.6285758061294471,
+          "brier": 0.220413745179171,
+          "accuracy": 0.6534296028880866,
+          "auc": 0.696728187919463
+        },
+        "TensorFlow": {
+          "logloss": 0.6265782928534026,
+          "brier": 0.21993624512488621,
+          "accuracy": 0.6570397111913358,
+          "auc": 0.6996119966442953
+        },
+        "Equal-weight ensemble": {
+          "logloss": 0.6198930984909726,
+          "brier": 0.21682915715724538,
+          "accuracy": 0.6534296028880866,
+          "auc": 0.7059039429530201
+        }
+      }
+    },
+    {
+      "sport": "NFL",
+      "campaign": "2026\u20132027 monitoring",
+      "games": 77,
+      "market": {
+        "logloss": 0.6600223067802711,
+        "brier": 0.23330074853757352,
+        "accuracy": 0.6103896103896104,
+        "auc": 0.643970189701897,
+        "label": "MARKET consensus"
+      },
+      "matched_control": {
+        "logloss": 0.6543553355991665,
+        "brier": 0.23095404710533327,
+        "accuracy": 0.6103896103896104,
+        "auc": 0.6517615176151762,
+        "label": "Matched full-feature control"
+      },
+      "challenger": {
+        "logloss": 0.6472988970828324,
+        "brier": 0.22765855646582095,
+        "accuracy": 0.6363636363636364,
+        "auc": 0.6612466124661247,
+        "label": "Joint opportunity challenger"
+      },
+      "retained_log_loss_reference": {
+        "logloss": 0.6240925001208945,
+        "brier": 0.21728815496429008,
+        "accuracy": 0.6623376623376623,
+        "auc": 0.7012195121951219,
+        "label": "Retained weekly PyTorch model"
+      },
+      "retained_brier_reference": {
+        "logloss": 0.6240925001208945,
+        "brier": 0.21728815496429008,
+        "accuracy": 0.6623376623376623,
+        "auc": 0.7012195121951219,
+        "label": "Retained weekly PyTorch model"
+      },
+      "new_frameworks": {
+        "LightGBM": {
+          "logloss": 0.649242754173841,
+          "brier": 0.22913237930564662,
+          "accuracy": 0.6233766233766234,
+          "auc": 0.6551490514905149
+        },
+        "XGBoost": {
+          "logloss": 0.6532943370044425,
+          "brier": 0.23075075456502456,
+          "accuracy": 0.6493506493506493,
+          "auc": 0.6449864498644987
+        },
+        "PyTorch": {
+          "logloss": 0.6499794444761157,
+          "brier": 0.22792170080601976,
+          "accuracy": 0.6493506493506493,
+          "auc": 0.6612466124661247
+        },
+        "TensorFlow": {
+          "logloss": 0.6441214216150867,
+          "brier": 0.22587721576306077,
+          "accuracy": 0.6363636363636364,
+          "auc": 0.6686991869918699
+        },
+        "Equal-weight ensemble": {
+          "logloss": 0.6472988970828324,
+          "brier": 0.22765855646582095,
+          "accuracy": 0.6363636363636364,
+          "auc": 0.6612466124661247
+        }
+      }
+    },
+    {
+      "sport": "FBS",
+      "campaign": "2024\u20132025 fixed",
+      "games": 740,
+      "market": {
+        "logloss": 0.5540956643676985,
+        "brier": 0.18863068608334832,
+        "accuracy": 0.6945945945945946,
+        "auc": 0.7787871292694444,
+        "label": "MARKET consensus"
+      },
+      "matched_control": {
+        "logloss": 0.5555459105383104,
+        "brier": 0.1891813064243722,
+        "accuracy": 0.7013513513513514,
+        "auc": 0.7786896918729717,
+        "label": "Matched full-feature control"
+      },
+      "challenger": {
+        "logloss": 0.5552140839799603,
+        "brier": 0.18919818225190718,
+        "accuracy": 0.6959459459459459,
+        "auc": 0.7779851445446301,
+        "label": "Joint opportunity challenger"
+      },
+      "retained_log_loss_reference": {
+        "logloss": 0.5520314372954968,
+        "brier": 0.18760884470491443,
+        "accuracy": 0.7013513513513514,
+        "auc": 0.7813804630524888,
+        "label": "Retained LightGBM family model"
+      },
+      "retained_brier_reference": {
+        "logloss": 0.5520423768329213,
+        "brier": 0.18755427784754689,
+        "accuracy": 0.7054054054054054,
+        "auc": 0.7813130063933922,
+        "label": "Retained LightGBM family model"
+      },
+      "new_frameworks": {
+        "LightGBM": {
+          "logloss": 0.5545037634090204,
+          "brier": 0.18901078749357927,
+          "accuracy": 0.6972972972972973,
+          "auc": 0.7776928323552117
+        },
+        "XGBoost": {
+          "logloss": 0.5551920478540362,
+          "brier": 0.18933037516527654,
+          "accuracy": 0.6945945945945946,
+          "auc": 0.7778577264107811
+        },
+        "PyTorch": {
+          "logloss": 0.5561346817372156,
+          "brier": 0.18927812019692491,
+          "accuracy": 0.7040540540540541,
+          "auc": 0.7790419655371423
+        },
+        "TensorFlow": {
+          "logloss": 0.5607845937599705,
+          "brier": 0.19146793998403963,
+          "accuracy": 0.6972972972972973,
+          "auc": 0.774170095713504
+        },
+        "Equal-weight ensemble": {
+          "logloss": 0.5552140839799603,
+          "brier": 0.18919818225190718,
+          "accuracy": 0.6959459459459459,
+          "auc": 0.7779851445446301
+        }
+      }
+    },
+    {
+      "sport": "FBS",
+      "campaign": "2025\u20132026 fixed",
+      "games": 748,
+      "market": {
+        "logloss": 0.5385469987134486,
+        "brier": 0.18167809734361764,
+        "accuracy": 0.7299465240641712,
+        "auc": 0.7949565587484224,
+        "label": "MARKET consensus"
+      },
+      "matched_control": {
+        "logloss": 0.5384846797557367,
+        "brier": 0.18187017353606263,
+        "accuracy": 0.7272727272727273,
+        "auc": 0.7929349261792245,
+        "label": "Matched full-feature control"
+      },
+      "challenger": {
+        "logloss": 0.5384064302227662,
+        "brier": 0.18185563765691015,
+        "accuracy": 0.7272727272727273,
+        "auc": 0.793206434001585,
+        "label": "Joint opportunity challenger"
+      },
+      "retained_log_loss_reference": {
+        "logloss": 0.5368139246167197,
+        "brier": 0.18108616788455226,
+        "accuracy": 0.7179144385026738,
+        "auc": 0.797029557662391,
+        "label": "Retained PyTorch joint model"
+      },
+      "retained_brier_reference": {
+        "logloss": 0.5368139246167197,
+        "brier": 0.18108616788455226,
+        "accuracy": 0.7179144385026738,
+        "auc": 0.797029557662391,
+        "label": "Retained PyTorch joint model"
+      },
+      "new_frameworks": {
+        "LightGBM": {
+          "logloss": 0.5398581515855475,
+          "brier": 0.18253873504753826,
+          "accuracy": 0.732620320855615,
+          "auc": 0.7916654436584579
+        },
+        "XGBoost": {
+          "logloss": 0.5389457402100659,
+          "brier": 0.1821636528956053,
+          "accuracy": 0.7286096256684492,
+          "auc": 0.7925606856673222
+        },
+        "PyTorch": {
+          "logloss": 0.5424528160120844,
+          "brier": 0.18351426140136093,
+          "accuracy": 0.7232620320855615,
+          "auc": 0.789331943996008
+        },
+        "TensorFlow": {
+          "logloss": 0.5378211406118867,
+          "brier": 0.18155895932475521,
+          "accuracy": 0.7245989304812834,
+          "auc": 0.7945859872611465
+        },
+        "Equal-weight ensemble": {
+          "logloss": 0.5384064302227662,
+          "brier": 0.18185563765691015,
+          "accuracy": 0.7272727272727273,
+          "auc": 0.793206434001585
+        }
+      }
+    },
+    {
+      "sport": "FBS",
+      "campaign": "2025\u20132026 annual",
+      "games": 748,
+      "market": {
+        "logloss": 0.5385469987134486,
+        "brier": 0.18167809734361764,
+        "accuracy": 0.7299465240641712,
+        "auc": 0.7949565587484224,
+        "label": "MARKET consensus"
+      },
+      "matched_control": {
+        "logloss": 0.538649547818145,
+        "brier": 0.18211438605906471,
+        "accuracy": 0.7205882352941176,
+        "auc": 0.7934118993806686,
+        "label": "Matched full-feature control"
+      },
+      "challenger": {
+        "logloss": 0.5380608462985409,
+        "brier": 0.18191708683969615,
+        "accuracy": 0.7245989304812834,
+        "auc": 0.7928982359329596,
+        "label": "Joint opportunity challenger"
+      },
+      "retained_log_loss_reference": {
+        "logloss": 0.5356176184194437,
+        "brier": 0.18052200859052514,
+        "accuracy": 0.7366310160427807,
+        "auc": 0.7970368957116439,
+        "label": "Retained PyTorch response model"
+      },
+      "retained_brier_reference": {
+        "logloss": 0.5356176184194437,
+        "brier": 0.18052200859052514,
+        "accuracy": 0.7366310160427807,
+        "auc": 0.7970368957116439,
+        "label": "Retained PyTorch response model"
+      },
+      "new_frameworks": {
+        "LightGBM": {
+          "logloss": 0.5382331490388689,
+          "brier": 0.181858002795241,
+          "accuracy": 0.7286096256684492,
+          "auc": 0.793764125744812
+        },
+        "XGBoost": {
+          "logloss": 0.5382325096867402,
+          "brier": 0.18193932377232305,
+          "accuracy": 0.7286096256684492,
+          "auc": 0.7930303208195134
+        },
+        "PyTorch": {
+          "logloss": 0.5419345365851729,
+          "brier": 0.18347137255957932,
+          "accuracy": 0.7179144385026738,
+          "auc": 0.79049135577798
+        },
+        "TensorFlow": {
+          "logloss": 0.5400586204948365,
+          "brier": 0.18291127377032226,
+          "accuracy": 0.7179144385026738,
+          "auc": 0.7913352314420734
+        },
+        "Equal-weight ensemble": {
+          "logloss": 0.5380608462985409,
+          "brier": 0.18191708683969615,
+          "accuracy": 0.7245989304812834,
+          "auc": 0.7928982359329596
+        }
+      }
+    },
+    {
+      "sport": "FBS",
+      "campaign": "2026\u20132027 monitoring",
+      "games": 301,
+      "market": {
+        "logloss": 0.47484296692463795,
+        "brier": 0.1561530724452904,
+        "accuracy": 0.770764119601329,
+        "auc": 0.8480364916180418,
+        "label": "MARKET consensus"
+      },
+      "matched_control": {
+        "logloss": 0.47378117948572135,
+        "brier": 0.15624437415462045,
+        "accuracy": 0.770764119601329,
+        "auc": 0.8462072797999444,
+        "label": "Matched full-feature control"
+      },
+      "challenger": {
+        "logloss": 0.47381894894281595,
+        "brier": 0.155893900796668,
+        "accuracy": 0.760797342192691,
+        "auc": 0.8467629897193665,
+        "label": "Joint opportunity challenger"
+      },
+      "retained_log_loss_reference": {
+        "logloss": 0.46551880819770836,
+        "brier": 0.15263011173024493,
+        "accuracy": 0.7873754152823921,
+        "auc": 0.852366398073539,
+        "label": "Retained TensorFlow family model"
+      },
+      "retained_brier_reference": {
+        "logloss": 0.46551880819770836,
+        "brier": 0.15263011173024493,
+        "accuracy": 0.7873754152823921,
+        "auc": 0.852366398073539,
+        "label": "Retained TensorFlow family model"
+      },
+      "new_frameworks": {
+        "LightGBM": {
+          "logloss": 0.47500167187156916,
+          "brier": 0.15631589097995735,
+          "accuracy": 0.770764119601329,
+          "auc": 0.8463925164397518
+        },
+        "XGBoost": {
+          "logloss": 0.47299069642681096,
+          "brier": 0.15546380342454294,
+          "accuracy": 0.7641196013289037,
+          "auc": 0.8481059553579698
+        },
+        "PyTorch": {
+          "logloss": 0.4765731473282318,
+          "brier": 0.1568057264889934,
+          "accuracy": 0.770764119601329,
+          "auc": 0.8450495508011485
+        },
+        "TensorFlow": {
+          "logloss": 0.47591094418586327,
+          "brier": 0.15742001159213392,
+          "accuracy": 0.7740863787375415,
+          "auc": 0.8431045660831713
+        },
+        "Equal-weight ensemble": {
+          "logloss": 0.47381894894281595,
+          "brier": 0.155893900796668,
+          "accuracy": 0.760797342192691,
+          "auc": 0.8467629897193665
+        }
+      }
+    }
+  ],
+  "current_execution": {
+    "version": "V118",
+    "status": "completed",
+    "tests_passed": 927,
+    "real_fits": 0,
+    "research_forecast_rows": 2058,
+    "unique_forecast_games": 39,
+    "fresh_named_quotes": 0,
+    "paper_actions": 0,
+    "actual_wagers": 0,
+    "automatic_promotions": 0,
+    "final_read_to_issue_seconds": 6.282,
+    "earlier_observed_read_to_issue_seconds": 245.44,
+    "latency_comparison": "Different executions and serving paths; observational comparison, not a controlled performance benchmark.",
+    "owner_return_sha256": "cbe39ee1b548caeecefde3fc4b361e8846c0f5cb65ccc120c3231d0510efe1d9"
+  },
+  "data_inventory": {
+    "nfl_finals": 105,
+    "nfl_pbp_games": 105,
+    "nfl_pbp_rows": 18401,
+    "nfl_enrichment_games": 94,
+    "nfl_enrichment_exact_play_joins": 16070,
+    "nfl_enrichment_game_gaps": 11,
+    "fbs_finals": 566,
+    "fbs_bulk_drive_games": 566,
+    "fbs_bulk_drive_rows": 13241,
+    "fbs_detailed_summary_games": 549,
+    "fbs_detailed_play_rows": 97615,
+    "fbs_detailed_drive_rows": 12840,
+    "fbs_detailed_team_stat_rows": 16470,
+    "fbs_detailed_player_stat_rows": 284617,
+    "fbs_kickoff_conflicts": 17
+  },
+  "inference_limits": {
+    "nfl_monitor_week_blocks": 6,
+    "nfl_monitor_interval": "Not issued: fewer than eight week blocks",
+    "fbs_monitor_week_blocks": 8,
+    "fbs_challenger_minus_market_log_loss_ci95": [
+      -0.006467602610279413,
+      0.005927845538904518
+    ],
+    "repeated_selection_adjustment": false
+  },
+  "reproducibility": {
+    "public": "Evaluation/demo code, synthetic training example, tests, source attributions, aggregate metrics and documentation",
+    "private": "Licensed/raw observations, immutable individual predictions, trained weights, exact feature transforms, tuning and live decision configuration",
+    "real_data_retraining_from_public_repo": false
+  }
+}
