@@ -50,3 +50,7 @@ The [public module](../examples/review_lab/provenance.py) is a deliberately sepa
 5. Does the final report distinguish preflight success, run completion and model qualification?
 
 The [notebook](../notebooks/engineering_review.ipynb) executes the synthetic failure/recovery flow beside the dated owner-run status. Both remain separate from the unchanged real-football aggregate scorecard.
+
+## Owner correction outcome — October 26
+
+V119R1 subsequently completed owner execution: 1,142 checks passed, 96 new real fits completed, and all four workstreams finished. The [sanitized receipt](evidence/2026-10-26-v119r1-execution.json) records that evidence. Both model qualification gates failed, so successful infrastructure recovery did not become a predictive-success claim. The earlier incident and failure classification above remain preserved.

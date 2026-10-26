@@ -6,7 +6,7 @@ Designed and implemented by [Alvaro Mendizabal](https://github.com/alvaromendiza
 
 [Start the review](docs/REVIEW_GUIDE.md) · [Current evidence](docs/CURRENT_EVIDENCE.md) · [Model card](docs/MODEL_CARD_CURRENT.md) · [System design](docs/SYSTEM_DESIGN.md) · [Run the example](examples/review_lab/README.md)
 
-Latest execution, October 26: V119 stopped at a source-provenance gate after 1,058 owner checks passed. It made zero real fits and produced no new model result. The [recovery case study](docs/CASE_STUDY_PROVENANCE.md) explains the missed multi-parent integration case and provides a separate runnable synthetic demonstration. Prior accepted models and the scorecard below remain unchanged.
+Latest execution, October 26: V119R1 completed 96 new fits and a 192-cell integrated experiment after 1,142 owner checks passed. Both historical model qualification gates failed; stronger retained references remain in place. The [joint-evidence case study](docs/CASE_STUDY_JOINT_EVIDENCE.md) shows how the project tests complementarity without confusing integration with improvement. The [earlier source failure and recovery](docs/CASE_STUDY_PROVENANCE.md) remain preserved.
 
 ## A five-minute technical review
 
@@ -14,40 +14,41 @@ Latest execution, October 26: V119 stopped at a source-provenance gate after 1,0
 |---|---|
 | [Credential-free ML example](examples/review_lab/README.md) | Real fitting on invented data, chronological separation, exact-cohort scoring, leakage rejection and zero-fit reentry |
 | [Executed review notebook](notebooks/engineering_review.ipynb) | Reproducible synthetic results beside clearly separated, sanitized real-run aggregate evidence |
-| [Current evidence export](docs/evidence/2026-10-25.json) | Three campaigns, multiple training origins, raw MARKET, controls, all four frameworks and retained references |
+| [Current evidence export](docs/evidence/2026-10-26.json) | Three campaigns, multiple training origins, raw MARKET, controls, all four frameworks and retained references |
 | [System design](docs/SYSTEM_DESIGN.md) | Data/model/decision contracts, lineage, failure states and recovery |
 | [Published scientific implementations](docs/PROJECT_SCOPE.md) | Preserved fitting, source-adjudication, uncertainty and interruption tests from earlier research stages |
+| [Joint-feature case study](docs/CASE_STUDY_JOINT_EVIDENCE.md) | Factorial complementarity, paired uncertainty, exact cohorts and a preserved negative decision |
 | [Failure-to-recovery case study](docs/CASE_STUDY_PROVENANCE.md) | Multi-parent provenance, content-pinned relocation, rejection tests and honest incident classification |
 
 <p align="center"><img src="docs/assets/evidence-overview.svg" alt="Current matched-cohort log loss: NFL MARKET 0.660022 and retained reference 0.624093; FBS MARKET 0.474843 and retained reference 0.465519. Exposed monitoring, not prospective profit." width="1100"></p>
 
-The graphic above is generated from the same aggregate export as the [evidence explorer](docs/review/index.html). Download and open that self-contained HTML file locally; GitHub's file viewer displays its source. It has sport, campaign and proper-score selectors, responsive tables and no external requests.
+The graphic above is generated from the same aggregate export as the [evidence explorer](docs/review/index.html). Download and open that self-contained HTML file locally; GitHub's file viewer displays its source. It has synchronized joint-model and framework tables, sport/campaign/proper-score selectors, paired interaction evidence, feature-family explanations and no external requests.
 
 ## Current evidence, with the boundaries attached
 
-The October 25, 2026 publication incorporates completed V117R1 modeling and V118 current serving. It preserves negative results and distinguishes predictive scores from economic outcomes.
+The October 26, 2026 publication incorporates completed V119R1 integrated modeling, data repairs and current serving. It preserves negative results and distinguishes predictive scores from economic outcomes.
 
-| 2026–27 monitoring cohort | Games | MARKET log loss | New joint challenger | Strongest retained reference |
+| 2026–27 monitoring cohort | Games | MARKET log loss | New combined UL | Strongest retained reference |
 |---|---:|---:|---:|---:|
-| NFL | 77 | 0.660022 | 0.647299 | **0.624093** |
-| FBS | 301 | 0.474843 | 0.473819 | **0.465519** |
+| NFL | 77 | 0.660022 | 0.654224 | **0.624093** |
+| FBS | 301 | 0.474843 | 0.475016 | **0.465519** |
 
 Lower is better. These are matched, non-tied games with included kickoffs through October 15, not complete seasons. Retained references were selected on exposed outcomes. The new challenger failed both historical qualification gates; the NFL monitoring panel has only six weekly blocks. These results do not establish prospective profitability.
 
 [All 2024–25, 2025–26 and 2026–27 comparisons](docs/CURRENT_EVIDENCE.md) include Brier scores, different update policies and separate metric-specific references. MARKET means archived bookmaker consensus after paired de-vig—not an executable quote, a closing line, or Kalshi.
 
-## What the latest completed serving run proved
+## What the integrated owner run established
 
-| V118 owner result | Verified outcome |
+| V119R1 owner result | Verified outcome |
 |---|---|
-| Verification | 927 tests passed |
-| Current research issuance | 2,058 model rows across 39 games; rows are not independent games |
-| Model reuse | Zero new real fits |
-| Final source-read-to-issue interval | 6.282 seconds, versus 245.440 seconds in an earlier execution; an observational comparison, not a controlled benchmark |
-| Action admission | Zero paper actions and zero actual wagers; all named sportsbook quotes were stale |
-| Data integrity | 105/105 NFL PBP coverage; 549/566 detailed FBS summaries; 17 kickoff conflicts remain quarantined |
+| Verification | 1,142 tests passed; 3,230 scorecards independently rescored |
+| Model comparison | 192 cells: 96 new fits + 96 reused controls; four native frameworks |
+| Scientific decision | Both historical gates failed; no automatic promotion |
+| Current research issuance | 3,270 model rows across 52 games; rows are not independent games |
+| Data repair | All 17 FBS kickoff conflicts corroborated; 566/566 detailed summaries admitted with separate observation clocks |
+| Action admission | Zero paper actions and zero actual wagers; eligible source quotes remained stale |
 
-Reliable abstention is part of the system. A completed forecast pipeline does not turn a stale price or an incompatible settlement target into a valid decision.
+Reliable negative results and abstention are part of the system. Completing an experiment does not guarantee improvement, and processing a capture quickly does not make its source observations fresh.
 
 ## Engineering decisions worth inspecting
 
@@ -58,7 +59,7 @@ Reliable abstention is part of the system. A completed forecast pipeline does no
 - Separate successful execution from positive science and deployment readiness.
 - Validate source, environment, notebooks and resource guards before expensive owner work.
 
-[Architecture and trade-offs](docs/SYSTEM_DESIGN.md) · [Research protocol](docs/RESEARCH_PROTOCOL.md) · [Current data gaps](docs/CURRENT_EVIDENCE.md#data-and-operational-readiness)
+[Architecture and trade-offs](docs/SYSTEM_DESIGN.md) · [Research protocol](docs/RESEARCH_PROTOCOL.md) · [Current data gaps](docs/CURRENT_EVIDENCE.md#data-and-serving-outcomes)
 
 ## Reproduce the public review
 
@@ -70,6 +71,7 @@ python -m examples.review_lab --output /tmp/sports-edge-review
 python -m examples.review_lab --output /tmp/sports-edge-review
 python -m examples.review_lab.build_review --check
 python -m examples.review_lab.provenance
+python -m examples.review_lab.factorial
 ```
 
 The second invocation verifies and reuses the accepted synthetic report with zero new fits. A different seed, changed implementation or corrupted artifact is rejected. The optional notebook uses Jupyter; see its [environment and reproduction instructions](examples/review_lab/README.md).

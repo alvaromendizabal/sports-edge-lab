@@ -1,3 +1,30 @@
+# Repository review — integrated evidence, October 26, 2026
+
+[Overview](../README.md) · [Review guide](REVIEW_GUIDE.md) · [Current evidence](CURRENT_EVIDENCE.md) · [Review matrix](repository_review_matrix.json)
+
+This incremental review starts from commit `14b06c0792986e5ed9c9142c0f36d4c6464284e9`. It evaluates observable engineering artifacts; it does not assign a public quality rating or claim profitable forecasts.
+
+| Area | Improvement | Verification and boundary |
+|---|---|---|
+| Scientific question | Complete C/L/U/UL experiment and its negative decision replace an unexecuted-plan status | 96 new fits / 192 cells from the owner return; both historical gates failed |
+| Reproducible reasoning | Generic factorial evaluator with complementary, redundant and harmful invented score fixtures | Seventeen targeted tests include negative interaction with a stronger MARKET, unequal block sizes, insufficient support, exact identity and label mismatch |
+| Comparisons | All eight season/origin panels, six systems and four native frameworks | Generated explorer exposes synchronized proper-score tables; 24 selector states × two tables checked |
+| Evidence provenance | Successful correction is distinct from the preserved V119 incident | Separate dated receipts; 3,230 private scorecards / 12,920 scalar metrics independently rescored without fitting |
+| Model comprehension | Feature families and raw/learned MARKET definitions accompany results | No bookmaker-internal features or external global ranking invented |
+| Notebook | Twelve executed code cells connect fitting, rejection, recovery, negative research and generic factorial reasoning | Saved and reopened HTML/SVG outputs; execution used in-process IPython locally |
+| Testing | Seventy-three local public Python checks, including native aggregate validation | Hosted separate-kernel CI remains a distinct observation for the published commit |
+| Publication boundary | Aggregate research projection and unrelated educational fixtures | Private observations, individual forecasts, weights, active transformations and decision recipes excluded |
+
+The HTML interface is responsive and self-contained; selector behavior was tested in a semantic DOM fixture. A rendered browser/accessibility audit and independent user review remain outstanding. The retained SVG companion uses unchanged current retained-reference values; no graphical predictive gain is implied by presentation improvements.
+
+## Remaining evidence needed
+
+A qualifying predictive advance, independent prospective evaluation, fresh executable prices with correct settlement mapping, verified pregame availability and legally accessible real-data reproduction remain separate requirements. Public documentation and synthetic tests do not substitute for them.
+
+## Preserved previous review
+
+The following record is retained as dated history; its check counts and pending owner statuses describe the preceding publication.
+
 # Repository review — public review refresh, October 26, 2026
 
 [Overview](../README.md) · [Review guide](REVIEW_GUIDE.md) · [Current evidence](CURRENT_EVIDENCE.md) · [Review matrix](repository_review_matrix.json)

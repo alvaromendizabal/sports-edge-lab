@@ -14,6 +14,7 @@ python -m examples.review_lab --output /tmp/sports-edge-review
 python -m examples.review_lab --output /tmp/sports-edge-review
 python -m examples.review_lab.build_review --check
 python -m examples.review_lab.provenance
+python -m examples.review_lab.factorial
 node examples/review_lab/tests/test_selectors.cjs
 ```
 
@@ -60,3 +61,7 @@ python -m examples.review_lab.build_review
 ```
 
 `docs/evidence/2026-10-25.json` is an aggregate export of audited owner results, not training data. The renderer checks its declared cohort inventory and produces `docs/review/index.html`. Open that self-contained file locally. It makes no external requests and discloses selected/exposed results, unresolved source gaps and zero admitted wagering actions.
+
+## Evaluate feature families together
+
+The [factorial evaluator](factorial.py) compares the complete base / A / B / AB system against MARKET and a retained reference on identical invented events. It includes paired weekly-block intervals and transparent complementary, redundant and harmful score fixtures. Read the [case study](../../docs/CASE_STUDY_JOINT_EVIDENCE.md) for why a favorable interaction alone does not establish market outperformance. The evaluator performs no fitting, network calls or wagering; its examples are separate from all real-football aggregate results.

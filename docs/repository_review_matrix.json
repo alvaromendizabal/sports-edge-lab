@@ -4,13 +4,15 @@
   "numeric_ratings_assigned": false,
   "quality_9_9_claimed": false,
   "current": {
-    "base_commit": "b2744c6e2f448183be92fa5a32a08f3c7022332b",
-    "public_python_tests": 54,
+    "base_commit": "14b06c0792986e5ed9c9142c0f36d4c6464284e9",
+    "public_python_tests": 73,
+    "factorial_tests": 17,
     "provenance_tests": 23,
     "notebook_output_contract_tests": 5,
     "selector_states": 24,
+    "tables_per_selector_state": 2,
     "selector_method": "minimal DOM fixture, not rendered browser",
-    "notebook_executed_code_cells": 10,
+    "notebook_executed_code_cells": 12,
     "notebook_execution_mode": "in-process IPython",
     "notebook_saved_and_reopened": true,
     "notebook_rich_formats": [
@@ -18,14 +20,13 @@
       "text/html",
       "text/plain"
     ],
-    "local_separate_kernel": "Blocked by authoring environment IPC socket policy; no local success claimed.",
-    "hosted_ci": "Separate-kernel notebook and selector checks configured. Consult the actual GitHub Actions run for the published commit; local checks do not establish hosted success.",
-    "svg_assets": "Existing two previously rendered assets preserved byte-for-byte; no new visual-inspection claim.",
-    "incident_case_study": "CASE_STUDY_PROVENANCE.md",
-    "latest_owner_run": "V119 failed before the registered experiment; zero real fits, no predictive metric change.",
+    "hosted_ci": "Consult actual Actions for this commit; prior main had four successful workflow suites. New local evidence does not establish new hosted success.",
+    "latest_owner_run": "V119R1 SUCCESS:96newfits192cells1142tests; both historical qualification gates failed.",
+    "real_football_scores": "3230scorecards/12920metrics independently rescored; public export contains aggregate projections only.",
     "private_football_retraining_reproducible": false,
     "prospective_profit_established": false,
-    "preservation": "Prior source, scientific workflows, aggregate model scores, explorer and SVG assets retained."
+    "preservation": "Earlier source, workflows, evidence snapshots and provenance incident remain preserved.",
+    "rendered_browser_accessibility": "Not established."
   },
   "prior_review_preserved": {
     "review_type": "evidence_based_internal_review_not_rating",
@@ -170,5 +171,29 @@
     "private_football_retraining_reproducible": false,
     "prospective_profit_established": false,
     "preservation": "All earlier source and scientific workflows retained."
+  },
+  "prior_provenance_refresh_preserved": {
+    "base_commit": "b2744c6e2f448183be92fa5a32a08f3c7022332b",
+    "public_python_tests": 54,
+    "provenance_tests": 23,
+    "notebook_output_contract_tests": 5,
+    "selector_states": 24,
+    "selector_method": "minimal DOM fixture, not rendered browser",
+    "notebook_executed_code_cells": 10,
+    "notebook_execution_mode": "in-process IPython",
+    "notebook_saved_and_reopened": true,
+    "notebook_rich_formats": [
+      "image/svg+xml",
+      "text/html",
+      "text/plain"
+    ],
+    "local_separate_kernel": "Blocked by authoring environment IPC socket policy; no local success claimed.",
+    "hosted_ci": "Separate-kernel notebook and selector checks configured. Consult the actual GitHub Actions run for the published commit; local checks do not establish hosted success.",
+    "svg_assets": "Existing two previously rendered assets preserved byte-for-byte; no new visual-inspection claim.",
+    "incident_case_study": "CASE_STUDY_PROVENANCE.md",
+    "latest_owner_run": "V119 failed before the registered experiment; zero real fits, no predictive metric change.",
+    "private_football_retraining_reproducible": false,
+    "prospective_profit_established": false,
+    "preservation": "Prior source, scientific workflows, aggregate model scores, explorer and SVG assets retained."
   }
 }
