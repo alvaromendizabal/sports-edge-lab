@@ -14,9 +14,10 @@ NFL and FBS probabilistic forecasting research, controlled model comparison and 
 | Learned MARKET models | Learn from bookmaker quotes and their structure | Distinct from football-feature models |
 | LightGBM and XGBoost | Native nonlinear football-plus-MARKET systems | Current aggregate scores and method class |
 | PyTorch and TensorFlow | Group/context representations and joint neural systems | Current aggregate scores and method class |
+| Joint score distributions | New normalized score-law systems with shared or matchup-dependent uncertainty | Aggregate results and generic finite-law evaluator; active parameterization private |
 | Fixed ensembles | Combine declared model systems | Aggregate outcomes; no post-hoc serving-weight change |
 
-The primary winner target is home win conditional on a non-tied result. Point margin and total models are distinct outputs. Point predictions are not calibrated cover/over probabilities or a complete joint score distribution. Contract-specific decisions require the model target and the contract's tie, void and settlement rules to agree.
+The primary winner target is home win conditional on a non-tied result. Point margin and total models are distinct outputs. Point predictions are not calibrated cover/over probabilities or a complete joint score distribution. V120 now supplies a separate joint score-law family, including tie mass and derived intervals; coherence does not establish calibration. Contract-specific decisions require the model target and the contract's tie, void and settlement rules to agree.
 
 ## Evaluation
 
@@ -24,15 +25,15 @@ The public export includes 2024–25 and 2025–26 fixed-origin cohorts, a separ
 
 Log loss is primary; Brier is a secondary proper score. Accuracy and AUC are reported as different properties. The strongest retained reference can differ by metric. Historical panels have been repeatedly examined, and retained leaders are selected descriptive references. Current monitoring is not an untouched confirmation set.
 
-The current NFL monitor has 77 games across six weekly blocks, below the study's minimum for a weekly-block interval. FBS has 301 games across eight blocks. The new FBS combined model's paired factorial interaction interval crosses zero. Both latest historical challenger gates failed. Positive subthreshold effects remain recorded.
+The current NFL monitor has 77 games across six weekly blocks, below the study's minimum for a weekly-block interval. FBS has 301 games across eight blocks. The new FBS combined model's paired factorial interaction interval crosses zero. Both V120 historical candidate gates and both season-stability guards failed. Positive subthreshold effects remain recorded.
 
 ## Current outcome
 
-V119R1 completed the integrated C / L / U / UL feature study: 96 new fits and 96 reused control cells across four native frameworks. Both historical gates failed; the selected retained NFL/FBS references remain ahead. Current NFL combined UL improves over raw MARKET but regresses against the learned-only arm and retained leader. Current FBS combined UL regresses against raw MARKET and the retained leader.
+V120 completed 48 new PyTorch/TensorFlow fits using the complete integrated football bank and reused 192 comparison cells. D0 models a joint score law with shared uncertainty; D1 conditions uncertainty and dependence on the same representation. Neither sport qualified a candidate. The strongest retained conditional-win references remain ahead.
 
-Every estimable primary ensemble factorial interval crosses zero. The experiment therefore does not establish useful complementarity under its declared comparison. All scores remain exposed research evidence. The [joint-evidence case study](CASE_STUDY_JOINT_EVIDENCE.md) explains the scientific decision and provides a separate generic evaluator on invented fixtures.
+Joint scorecards include tied games; conditional binary scorecards exclude them. Raw MARKET moneyline consensus is distinct from the learned MARKET score-distribution baseline. Neither baseline is an executable Kalshi price. All seven new/baseline score laws and all four retained native frameworks remain visible in the [aggregate evidence](evidence/2026-10-26-v120.json).
 
-The prior V119 source-state failure is preserved in its [dated receipt](evidence/2026-10-26-execution.json). The [V119R1 receipt](evidence/2026-10-26-v119r1-execution.json) records successful correction and completed modeling. Success in recovery did not change the requirement for a qualifying model result.
+The [score-distribution case study](CASE_STUDY_SCORE_DISTRIBUTIONS.md) explains target coherence, underflow-safe evaluation and the negative decision. The earlier [factorial feature study](CASE_STUDY_JOINT_EVIDENCE.md), [V119 failure](evidence/2026-10-26-execution.json) and [V119R1 recovery](evidence/2026-10-26-v119r1-execution.json) remain preserved. No prospective profitability or production wagering readiness is established.
 
 ## Data and failure modes
 
@@ -42,4 +43,4 @@ Current source inventory and unresolved identity/time conflicts are in [the evid
 
 ## Publication and deployment status
 
-The current exact feature recipes, fitted assets, individual forecasts and live decision configuration are private. The [public example](../examples/review_lab/README.md) is a deliberately separate synthetic system. V119R1 emitted 3,270 research probability rows across 52 games but admitted zero paper actions or real wagers. Fresh inputs, contract-target alignment and independent prospective evidence remain necessary for economic validation.
+The current exact feature recipes, fitted assets, individual forecasts and live decision configuration are private. The [public example](../examples/review_lab/README.md) is a deliberately separate synthetic system. V120 emitted 4,749 research forecast rows across 69 priced games but admitted zero paper actions or real wagers. Fresh inputs, contract-target alignment and independent prospective evidence remain necessary for economic validation.

@@ -1,0 +1,40 @@
+{
+  "schema": "sports-edge-public-execution-v2",
+  "version": "V120",
+  "status": "SUCCESS",
+  "tests_passed": 1278,
+  "real_fits": 48,
+  "reused_control_cells": 192,
+  "completed_study_cells": 240,
+  "research_forecast_rows": 4749,
+  "unique_forecast_games": 69,
+  "fresh_named_quotes": 0,
+  "paper_actions": 0,
+  "actual_wagers": 0,
+  "automatic_promotions": 0,
+  "final_read_to_issue_seconds": 6.005107,
+  "latency_comparison": "The final read-to-issue interval is separate from older source price timestamps; stale named quotes kept action admission closed.",
+  "worker_seconds": 857.006779826,
+  "supervisor_seconds": 892.221950078,
+  "peak_rss_bytes": 2200846336,
+  "estimated_active_compute_usd": 0.11995677274797333,
+  "cost_basis": "Assumed $0.484/hour; excludes idle, startup, storage and transfers.",
+  "owner_return_sha256": "7295ce789a61168a1451fac2b77afec7602fe3efb1f199a51f23c5084acd6a7e",
+  "current_market_input_events": 77,
+  "current_market_admitted_events": 69,
+  "current_market_identity_rejections": 7,
+  "current_market_book_coverage_rejections": 1,
+  "scientific_result": "VALID_NEGATIVE",
+  "historical_candidate_gate": {
+    "NFL": false,
+    "FBS": false
+  },
+  "season_stability_guard": {
+    "NFL": false,
+    "FBS": false
+  },
+  "completed_real_fits": 48,
+  "real_fit_attempts": 48,
+  "prior_execution": "2026-10-26-v119r1-execution.json",
+  "boundary": "Aggregate execution evidence only; no individual forecasts, private paths, fitted assets or active recipes."
+}

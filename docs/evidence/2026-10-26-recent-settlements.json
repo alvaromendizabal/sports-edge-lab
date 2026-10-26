@@ -1,0 +1,196 @@
+{
+  "schema": "sports-edge-public-recent-settlements-v1",
+  "data_kind": "aggregate_private_run_export",
+  "snapshot_date": "2026-10-26",
+  "raw_archived_forecast_rows": 6755,
+  "unique_settled_games": 56,
+  "unique_games_by_sport": {
+    "ncaaf": 44,
+    "nfl": 12
+  },
+  "deduplicated_model_game_rows": 3191,
+  "exact_model_groups": 176,
+  "earliest_event_utc": "2026-10-24T16:00:00+00:00",
+  "latest_event_utc": "2026-10-26T00:20:00+00:00",
+  "selection_warning": "Archived pre-kickoff frozen forecasts; retrospective reporting/family comparison and variable issue horizons remain descriptive. This audit is not a newly predeclared model-selection experiment.",
+  "information_time_warning": "Football feature horizon and forecast issue horizon are separate. feature_asof is build/observation receipt, not proof all input publication timestamps precede T-24h. Individual lineage remains in archived model cards.",
+  "rows": [
+    {
+      "track": "ncaaf",
+      "model_id": "retained_fixed_ncaaf_tf_family_base",
+      "model_label": "Football + MARKET V110 through_2025 tf_family_base",
+      "n": 3,
+      "model": {
+        "win_logloss": 0.45348585918308965,
+        "win_brier": 0.13658224729501017,
+        "win_accuracy": 1.0,
+        "correct": 3,
+        "win_auc": 1.0,
+        "probability_bias": -0.030373734070062015
+      },
+      "MARKET_raw_same_issue_same_games": {
+        "win_logloss": 0.4650577222395489,
+        "win_brier": 0.13922167548619452,
+        "win_accuracy": 1.0,
+        "correct": 3,
+        "win_auc": 1.0,
+        "probability_bias": -0.08440651220186508
+      },
+      "logloss_improvement_vs_MARKET": 0.024882638225494583,
+      "paired_logloss_difference": -0.011571863056459242,
+      "utc_week_blocks": 1,
+      "ci95": null,
+      "uncertainty_reason": "Fewer than eight settled UTC-week blocks; minimum eight required.",
+      "issue_lead_hours_min": 0.14390759777777778,
+      "issue_lead_hours_max": 2.393907597777778
+    },
+    {
+      "track": "ncaaf",
+      "model_id": "upcoming_ncaaf_ensemble_joint_feedback_recent",
+      "model_label": "Football + MARKET equal-four-framework ensemble joint_feedback_recent",
+      "n": 44,
+      "model": {
+        "win_logloss": 0.6271041440304255,
+        "win_brier": 0.2194548271257798,
+        "win_accuracy": 0.7272727272727273,
+        "correct": 32,
+        "win_auc": 0.6674937965260546,
+        "probability_bias": -0.11669305116761276
+      },
+      "MARKET_raw_same_issue_same_games": {
+        "win_logloss": 0.6251568216555446,
+        "win_brier": 0.21844853955758062,
+        "win_accuracy": 0.6590909090909091,
+        "correct": 29,
+        "win_auc": 0.6811414392059554,
+        "probability_bias": -0.1263408120167919
+      },
+      "logloss_improvement_vs_MARKET": -0.0031149342171839533,
+      "paired_logloss_difference": 0.0019473223748808222,
+      "utc_week_blocks": 1,
+      "ci95": null,
+      "uncertainty_reason": "Fewer than eight settled UTC-week blocks; minimum eight required.",
+      "issue_lead_hours_min": 12.270473265555557,
+      "issue_lead_hours_max": 22.520473265555555
+    },
+    {
+      "track": "ncaaf",
+      "model_id": "upcoming_ncaaf_tf_family_base",
+      "model_label": "Football + MARKET V110 tf_family_base",
+      "n": 44,
+      "model": {
+        "win_logloss": 0.6030752176510645,
+        "win_brier": 0.20966682308737752,
+        "win_accuracy": 0.7272727272727273,
+        "correct": 32,
+        "win_auc": 0.6898263027295286,
+        "probability_bias": -0.11233817305090499
+      },
+      "MARKET_raw_same_issue_same_games": {
+        "win_logloss": 0.6251568216555446,
+        "win_brier": 0.21844853955758062,
+        "win_accuracy": 0.6590909090909091,
+        "correct": 29,
+        "win_auc": 0.6811414392059554,
+        "probability_bias": -0.1263408120167919
+      },
+      "logloss_improvement_vs_MARKET": 0.03532170367429321,
+      "paired_logloss_difference": -0.022081604004480115,
+      "utc_week_blocks": 1,
+      "ci95": null,
+      "uncertainty_reason": "Fewer than eight settled UTC-week blocks; minimum eight required.",
+      "issue_lead_hours_min": 12.270473265555557,
+      "issue_lead_hours_max": 22.520473265555555
+    },
+    {
+      "track": "nfl",
+      "model_id": "retained_weekly_nfl_torch_joint_feedback_recent",
+      "model_label": "Football + MARKET V110 latest_weekly torch_joint_feedback_recent",
+      "n": 12,
+      "model": {
+        "win_logloss": 0.6694015124414672,
+        "win_brier": 0.2357528533293953,
+        "win_accuracy": 0.6666666666666666,
+        "correct": 8,
+        "win_auc": 0.65625,
+        "probability_bias": 0.18029596808305537
+      },
+      "MARKET_raw_same_issue_same_games": {
+        "win_logloss": 0.6958979781979547,
+        "win_brier": 0.2467651061845374,
+        "win_accuracy": 0.6666666666666666,
+        "correct": 8,
+        "win_auc": 0.6875,
+        "probability_bias": 0.19772744505078213
+      },
+      "logloss_improvement_vs_MARKET": 0.03807521588883018,
+      "paired_logloss_difference": -0.026496465756487564,
+      "utc_week_blocks": 2,
+      "ci95": null,
+      "uncertainty_reason": "Fewer than eight settled UTC-week blocks; minimum eight required.",
+      "issue_lead_hours_min": 13.643907597777778,
+      "issue_lead_hours_max": 24.477240931111112
+    },
+    {
+      "track": "nfl",
+      "model_id": "upcoming_nfl_ensemble_joint_feedback_recent",
+      "model_label": "Football + MARKET equal-four-framework ensemble joint_feedback_recent",
+      "n": 12,
+      "model": {
+        "win_logloss": 0.7029774834975493,
+        "win_brier": 0.25082024127005786,
+        "win_accuracy": 0.5833333333333334,
+        "correct": 7,
+        "win_auc": 0.65625,
+        "probability_bias": 0.19442421179637748
+      },
+      "MARKET_raw_same_issue_same_games": {
+        "win_logloss": 0.7042197616977913,
+        "win_brier": 0.2509085588672057,
+        "win_accuracy": 0.6666666666666666,
+        "correct": 8,
+        "win_auc": 0.65625,
+        "probability_bias": 0.2036285202860226
+      },
+      "logloss_improvement_vs_MARKET": 0.0017640490480514827,
+      "paired_logloss_difference": -0.0012422782002420307,
+      "utc_week_blocks": 2,
+      "ci95": null,
+      "uncertainty_reason": "Fewer than eight settled UTC-week blocks; minimum eight required.",
+      "issue_lead_hours_min": 33.77047326555556,
+      "issue_lead_hours_max": 44.60380659888889
+    },
+    {
+      "track": "nfl",
+      "model_id": "upcoming_nfl_torch_joint_feedback_recent",
+      "model_label": "Football + MARKET V110 torch_joint_feedback_recent",
+      "n": 12,
+      "model": {
+        "win_logloss": 0.7232842733924572,
+        "win_brier": 0.2583489982295307,
+        "win_accuracy": 0.6666666666666666,
+        "correct": 8,
+        "win_auc": 0.625,
+        "probability_bias": 0.18459926931924206
+      },
+      "MARKET_raw_same_issue_same_games": {
+        "win_logloss": 0.7042197616977913,
+        "win_brier": 0.2509085588672057,
+        "win_accuracy": 0.6666666666666666,
+        "correct": 8,
+        "win_auc": 0.65625,
+        "probability_bias": 0.2036285202860226
+      },
+      "logloss_improvement_vs_MARKET": -0.02707182151307928,
+      "paired_logloss_difference": 0.01906451169466583,
+      "utc_week_blocks": 2,
+      "ci95": null,
+      "uncertainty_reason": "Fewer than eight settled UTC-week blocks; minimum eight required.",
+      "issue_lead_hours_min": 33.77047326555556,
+      "issue_lead_hours_max": 44.60380659888889
+    }
+  ],
+  "new_V120_score_laws_with_settled_forecasts": 0,
+  "profit_established": false,
+  "individual_predictions_exported": false
+}

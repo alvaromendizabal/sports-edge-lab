@@ -65,3 +65,9 @@ python -m examples.review_lab.build_review
 ## Evaluate feature families together
 
 The [factorial evaluator](factorial.py) compares the complete base / A / B / AB system against MARKET and a retained reference on identical invented events. It includes paired weekly-block intervals and transparent complementary, redundant and harmful score fixtures. Read the [case study](../../docs/CASE_STUDY_JOINT_EVIDENCE.md) for why a favorable interaction alone does not establish market outperformance. The evaluator performs no fitting, network calls or wagering; its examples are separate from all real-football aggregate results.
+
+## Generic finite-distribution mechanics
+
+The `distribution` module accepts invented finite score laws. It does not fit a football model. It demonstrates normalized probability mass, authoritative log probabilities, conditional winner targets, mixtures before conditioning, marginal CRPS and explicit contract settlement. Twenty-two adversarial checks cover invalid supports, underflow, tied outcomes, impossible events and immutable inputs. These checks supplement the synthetic training and factorial examples.
+
+The evidence explorer now separates conditional binary scores from joint distribution scores across all eight sport/origin panels. Its learned MARKET distribution baseline is labeled distinctly from raw MARKET consensus. All public example tests run in the same unittest discovery command above.
