@@ -1,34 +1,47 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="1100" height="470" viewBox="0 0 1100 470" role="img" aria-labelledby="title desc">
-<title id="title">Current monitoring: matched log loss</title>
-<desc id="desc">MARKET compared with the strongest retained reference on exposed 2026 monitoring cohorts. Lower is better; this does not establish prospective profitability.</desc>
-<rect width="1100" height="470" rx="14" fill="#f4f8fa"/>
+<svg xmlns="http://www.w3.org/2000/svg" width="1100" height="610" viewBox="0 0 1100 610" role="img" aria-labelledby="title desc">
+<title id="title">V120: coherent distributions, unchanged winner leaders</title>
+<desc id="desc">Four matched conditional-win log losses for each sport: raw MARKET, retained leader, new D0 and D1 joint-score ensembles. Lower is better. All bars start at zero.</desc>
+<rect width="1100" height="610" rx="14" fill="#f4f8fa"/>
 <g font-family="Arial, sans-serif" fill="#12263a">
-<text x="42" y="44" font-size="12" letter-spacing="2" fill="#087c74">2026–2027 · EXPOSED MONITORING</text>
-<text x="42" y="84" font-size="29" font-weight="700">Compare the same games. Keep the caveats.</text>
-<text x="42" y="113" font-size="15" fill="#52677a">Log loss · lower is better · games through October 15, 2026</text>
-<text x="42" y="170" font-size="22" font-weight="700">NFL</text>
-<text x="112" y="170" font-size="14" fill="#52677a">77 matched games</text>
-<text x="42" y="205" font-size="12" fill="#52677a">MARKET</text>
-<rect x="42" y="214" width="377.156" height="24" rx="3" fill="#8da1b3"/>
-<text x="428.156" y="232" font-size="14" fill="#12263a">0.660022</text>
-<text x="42" y="272" font-size="12" fill="#52677a">Retained reference</text>
-<rect x="42" y="281" width="356.624" height="24" rx="3" fill="#087c74"/>
-<text x="407.624" y="299" font-size="14" fill="#12263a">0.624093</text>
-<line x1="42" y1="321" x2="442" y2="321" stroke="#d1dce4"/>
-<text x="42" y="340" font-size="11" fill="#52677a">0</text>
-<text x="421" y="340" font-size="11" fill="#52677a">0.70</text>
-<text x="572" y="170" font-size="22" font-weight="700">FBS</text>
-<text x="642" y="170" font-size="14" fill="#52677a">301 matched games</text>
-<text x="572" y="205" font-size="12" fill="#52677a">MARKET</text>
-<rect x="572" y="214" width="271.339" height="24" rx="3" fill="#8da1b3"/>
-<text x="852.339" y="232" font-size="14" fill="#12263a">0.474843</text>
-<text x="572" y="272" font-size="12" fill="#52677a">Retained reference</text>
-<rect x="572" y="281" width="266.011" height="24" rx="3" fill="#087c74"/>
-<text x="847.011" y="299" font-size="14" fill="#12263a">0.465519</text>
-<line x1="572" y1="321" x2="972" y2="321" stroke="#d1dce4"/>
-<text x="572" y="340" font-size="11" fill="#52677a">0</text>
-<text x="951" y="340" font-size="11" fill="#52677a">0.70</text>
-<rect x="42" y="370" width="1016" height="67" rx="7" fill="#fff4df"/>
-<text x="60" y="396" font-size="14" fill="#644b1b">Retained references were selected on exposed outcomes. Both new-challenger historical gates failed.</text>
-<text x="60" y="418" font-size="13" fill="#644b1b">MARKET is archived bookmaker consensus, not an executable quote. No prospective profit is established.</text>
+<text x="42" y="42" font-size="12" letter-spacing="2" fill="#087c74">V120 · COMPLETED EXPERIMENT · 48 NEW FITS</text>
+<text x="42" y="81" font-size="29" font-weight="700">Richer predictions. The same standard of evidence.</text>
+<text x="42" y="110" font-size="15" fill="#52677a">2026–27 conditional-win log loss · lower is better · included games through October 15</text>
+<text x="42" y="162" font-size="22" font-weight="700">NFL</text>
+<text x="112" y="162" font-size="14" fill="#52677a">77 matched non-tied games</text>
+<text x="42" y="194" font-size="12" fill="#52677a">MARKET raw</text>
+<rect x="42" y="203" width="358.298" height="22" rx="3" fill="#899cac"/>
+<text x="409.298" y="220" font-size="14" font-weight="400">0.660022</text>
+<text x="42" y="258" font-size="12" fill="#52677a">Retained leader</text>
+<rect x="42" y="267" width="338.793" height="22" rx="3" fill="#087c74"/>
+<text x="389.793" y="284" font-size="14" font-weight="700">0.624093</text>
+<text x="42" y="322" font-size="12" fill="#52677a">D0 · joint-score ensemble</text>
+<rect x="42" y="331" width="349.190" height="22" rx="3" fill="#577fa9"/>
+<text x="400.190" y="348" font-size="14" font-weight="400">0.643245</text>
+<text x="42" y="386" font-size="12" fill="#52677a">D1 · conditional uncertainty</text>
+<rect x="42" y="395" width="353.854" height="22" rx="3" fill="#8a76a9"/>
+<text x="404.854" y="412" font-size="14" font-weight="400">0.651836</text>
+<line x1="42" y1="431" x2="422" y2="431" stroke="#cbd8e2"/>
+<text x="42" y="450" font-size="11" fill="#52677a">0</text>
+<text x="401" y="450" font-size="11" fill="#52677a">0.70</text>
+<text x="572" y="162" font-size="22" font-weight="700">FBS</text>
+<text x="642" y="162" font-size="14" fill="#52677a">301 matched non-tied games</text>
+<text x="572" y="194" font-size="12" fill="#52677a">MARKET raw</text>
+<rect x="572" y="203" width="257.772" height="22" rx="3" fill="#899cac"/>
+<text x="838.772" y="220" font-size="14" font-weight="400">0.474843</text>
+<text x="572" y="258" font-size="12" fill="#52677a">Retained leader</text>
+<rect x="572" y="267" width="252.710" height="22" rx="3" fill="#087c74"/>
+<text x="833.710" y="284" font-size="14" font-weight="700">0.465519</text>
+<text x="572" y="322" font-size="12" fill="#52677a">D0 · joint-score ensemble</text>
+<rect x="572" y="331" width="257.780" height="22" rx="3" fill="#577fa9"/>
+<text x="838.780" y="348" font-size="14" font-weight="400">0.474858</text>
+<text x="572" y="386" font-size="12" fill="#52677a">D1 · conditional uncertainty</text>
+<rect x="572" y="395" width="261.595" height="22" rx="3" fill="#8a76a9"/>
+<text x="842.595" y="412" font-size="14" font-weight="400">0.481886</text>
+<line x1="572" y1="431" x2="952" y2="431" stroke="#cbd8e2"/>
+<text x="572" y="450" font-size="11" fill="#52677a">0</text>
+<text x="931" y="450" font-size="11" fill="#52677a">0.70</text>
+<rect x="42" y="482" width="1016" height="91" rx="7" fill="#fff4df"/>
+<text x="60" y="508" font-size="14" fill="#644b1b">Decision: retain the prior leaders. Both historical candidate gates and season-stability guards failed.</text>
+<text x="60" y="531" font-size="13" fill="#644b1b">Joint-distribution metrics include ties and appear separately in the evidence explorer.</text>
+<text x="60" y="552" font-size="13" fill="#644b1b">Exposed monitoring; no independent prospective profit claim. MARKET raw is archived bookmaker consensus.</text>
 </g></svg>

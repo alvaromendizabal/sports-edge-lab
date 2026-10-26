@@ -26,8 +26,12 @@ Ask whether each comparison uses the same events, targets and decision horizon; 
 
 ## For a systems review
 
-Examine how raw source revisions, canonical identity, information clocks, model provenance, immutable issue time, price freshness and settlement rules constrain a decision. V119R1 produced current research forecasts while admitting zero actions. This is an observable boundary, not a claim of profitable deployment.
+Examine how raw source revisions, canonical identity, information clocks, model provenance, immutable issue time, price freshness and settlement rules constrain a decision. V120 produced current research forecasts while admitting zero actions. This is an observable boundary, not a claim of profitable deployment.
 
 ## Questions this project cannot answer from public assets alone
 
 Exact retraining of the private football models requires licensed/raw source snapshots, active feature transformations and fitted assets that are intentionally withheld. No external commercial forecasting ranking, prospective profitable wagering record or independent real-data reproduction is claimed.
+
+## Inspect the newest capability
+
+Read [the score-distribution case study](CASE_STUDY_SCORE_DISTRIBUTIONS.md), then compare its conditional-win and joint-target tables in the [current evidence](CURRENT_EVIDENCE.md). The generic [distribution evaluator](../examples/review_lab/distribution.py) demonstrates normalization, exact support, log-space stability, ties, mixtures and contract settlement using invented inputs. Its tests are independent of the private football data and model recipes.

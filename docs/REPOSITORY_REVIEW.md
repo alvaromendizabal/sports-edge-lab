@@ -1,3 +1,30 @@
+# Repository review — score distributions and recent outcomes
+
+October 26, 2026. [Overview](../README.md) · [Review guide](REVIEW_GUIDE.md) · [Current evidence](CURRENT_EVIDENCE.md) · [Review matrix](repository_review_matrix.json)
+
+This update starts from commit `943532b145180d04aa14102697cb1c4a4c6b8b35` and reviews observable artifacts. It does not assign a public self-rating, claim a 9.9 result or establish profitable forecasts.
+
+| Area | Improvement | Verified evidence and limit |
+|---|---|---|
+| Forecast target | Joint score laws, conditional winner targets and contract settlement are explicitly separated | Completed V120 and a distinct generic evaluator; both candidate and season-stability gates failed |
+| Numerical engineering | Public finite-law evaluator preserves log probabilities, normalization, mixtures, ties and CRPS | 22 new adversarial checks use invented inputs; private active model recipes excluded |
+| Comparisons | All eight season/origin panels, seven score-law variants and all four retained native frameworks | Four tables over 48 selector combinations; binary and joint cohorts validated separately |
+| Newest outcomes | Recent frozen-forecast evidence extends beyond the October 15 fixed monitoring cutoff | 6,755 rows reduced to 56 unique games; same-issue MARKET comparisons and version identities preserved |
+| Research transparency | Mathematical validity, predictive value, current issuance and wager readiness receive separate conclusions | 3,342 binary and 112 distribution scorecards independently rescored; no automatic promotion |
+| Notebook | Fifteen code cells connect synthetic fits, recovery, factorial effects, distributions and recent outcomes | Executed in-process, saved and reopened with HTML/SVG output; local IPC policy blocked a separate kernel |
+| Visual explanation | New zero-based four-model graphic links the numerical comparison to the decision | SVG rendered and visually inspected; full browser accessibility and usability remain unverified |
+| Public verification | Ninety-nine Python tests plus selector checks | Hosted CI is verified separately for the published commit |
+
+All prior dated evidence and implementations remain preserved. The newest research result is negative, and the public presentation says so. The update adds reproducible evaluation mechanics and a clearer audit trail; it does not convert private-data research into complete public reproduction.
+
+## Remaining evidence needed
+
+Independent real-data reproduction, an untouched prospective evaluation, verified pregame availability, fresh executable prices, contract-aligned probabilities and external usability review remain important gaps. Read the exact [publication boundary](PUBLICATION_BOUNDARY.md).
+
+## Preserved earlier review
+
+The following reviews describe their own dated publication states and are retained unchanged.
+
 # Repository review — integrated evidence, October 26, 2026
 
 [Overview](../README.md) · [Review guide](REVIEW_GUIDE.md) · [Current evidence](CURRENT_EVIDENCE.md) · [Review matrix](repository_review_matrix.json)

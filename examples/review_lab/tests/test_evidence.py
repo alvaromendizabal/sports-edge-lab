@@ -9,7 +9,7 @@ import unittest
 from examples.review_lab.build_review import render, validate_evidence
 
 ROOT = Path(__file__).resolve().parents[3]
-SOURCE = ROOT / "docs/evidence/2026-10-26.json"
+SOURCE = ROOT / "docs/evidence/2026-10-26-v120.json"
 
 
 class TableParser(HTMLParser):
@@ -51,7 +51,7 @@ class EvidenceTests(unittest.TestCase):
         parser = TableParser()
         parser.feed(render(self.data, "0" * 64))
         self.assertEqual(len(parser.ids), len(set(parser.ids)))
-        self.assertEqual(parser.selects, ["sport", "campaign", "metric"])
+        self.assertEqual(parser.selects, ["sport", "campaign", "metric", "distribution-metric"])
 
     def test_missing_native_framework_rejected(self):
         del self.data["rows"][0]["new_frameworks"]["PyTorch"]
@@ -61,6 +61,26 @@ class EvidenceTests(unittest.TestCase):
     def test_nonfinite_native_framework_rejected(self):
         self.data["rows"][0]["new_frameworks"]["TensorFlow"]["brier"] = float("nan")
         with self.assertRaisesRegex(ValueError, "non-finite"):
+            validate_evidence(self.data)
+
+    def test_unmatched_distribution_cohort_rejected(self):
+        self.data["rows"][0]["score_law_distribution"]["PyTorch D0"]["cohort_sha256"] = "different"
+        with self.assertRaisesRegex(ValueError, "unmatched distribution"):
+            validate_evidence(self.data)
+
+    def test_nonfinite_distribution_score_rejected(self):
+        self.data["rows"][0]["score_law_distribution"]["PyTorch D0"]["joint_nll"] = float("nan")
+        with self.assertRaisesRegex(ValueError, "invalid distribution"):
+            validate_evidence(self.data)
+
+    def test_ties_explain_binary_and_joint_cohort_difference(self):
+        for row in self.data["rows"]:
+            for law in row["score_law_distribution"].values():
+                self.assertEqual(law["games"] - law["ties"], row["games"])
+
+    def test_missing_score_law_rejected(self):
+        del self.data["rows"][0]["score_law_binary"]["PyTorch D1"]
+        with self.assertRaisesRegex(ValueError, "incomplete score-law"):
             validate_evidence(self.data)
 
     def test_no_individual_prediction_export(self):

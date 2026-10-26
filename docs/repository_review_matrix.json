@@ -4,15 +4,16 @@
   "numeric_ratings_assigned": false,
   "quality_9_9_claimed": false,
   "current": {
-    "base_commit": "14b06c0792986e5ed9c9142c0f36d4c6464284e9",
-    "public_python_tests": 73,
+    "base_commit": "943532b145180d04aa14102697cb1c4a4c6b8b35",
+    "public_python_tests": 99,
+    "distribution_tests": 22,
     "factorial_tests": 17,
     "provenance_tests": 23,
     "notebook_output_contract_tests": 5,
-    "selector_states": 24,
-    "tables_per_selector_state": 2,
-    "selector_method": "minimal DOM fixture, not rendered browser",
-    "notebook_executed_code_cells": 12,
+    "selector_states": 48,
+    "tables_per_selector_state": 4,
+    "selector_method": "minimal DOM fixture; not rendered browser",
+    "notebook_executed_code_cells": 15,
     "notebook_execution_mode": "in-process IPython",
     "notebook_saved_and_reopened": true,
     "notebook_rich_formats": [
@@ -20,12 +21,15 @@
       "text/html",
       "text/plain"
     ],
-    "hosted_ci": "Consult actual Actions for this commit; prior main had four successful workflow suites. New local evidence does not establish new hosted success.",
-    "latest_owner_run": "V119R1 SUCCESS:96newfits192cells1142tests; both historical qualification gates failed.",
-    "real_football_scores": "3230scorecards/12920metrics independently rescored; public export contains aggregate projections only.",
+    "local_separate_kernel": "Authoring environment denied IPC socket binding; no local kernel success claimed.",
+    "hosted_ci": "Consult the actual Actions result for this commit; local checks do not establish hosted success.",
+    "svg_visual_check": "New zero-based V120 comparison SVG rendered and visually inspected for clipping, values and target labels.",
+    "latest_owner_run": "V120 SUCCESS: 48 new fits, 240 total comparison cells, 1278 owner tests; both candidate and season-stability gates failed.",
+    "real_football_scores": "3342 binary and112 distribution scorecards independently rescored;414 paired binary point contrasts exactly reproduced.",
+    "recent_settlements": "6755 archived rows reduce to56 unique games; exact fitted model identities and issue cohorts remain separate.",
     "private_football_retraining_reproducible": false,
     "prospective_profit_established": false,
-    "preservation": "Earlier source, workflows, evidence snapshots and provenance incident remain preserved.",
+    "preservation": "All prior source, workflows, dated aggregate exports and incident histories remain preserved.",
     "rendered_browser_accessibility": "Not established."
   },
   "prior_review_preserved": {
@@ -195,5 +199,30 @@
     "private_football_retraining_reproducible": false,
     "prospective_profit_established": false,
     "preservation": "Prior source, scientific workflows, aggregate model scores, explorer and SVG assets retained."
+  },
+  "prior_joint_feature_review_preserved": {
+    "base_commit": "14b06c0792986e5ed9c9142c0f36d4c6464284e9",
+    "public_python_tests": 73,
+    "factorial_tests": 17,
+    "provenance_tests": 23,
+    "notebook_output_contract_tests": 5,
+    "selector_states": 24,
+    "tables_per_selector_state": 2,
+    "selector_method": "minimal DOM fixture, not rendered browser",
+    "notebook_executed_code_cells": 12,
+    "notebook_execution_mode": "in-process IPython",
+    "notebook_saved_and_reopened": true,
+    "notebook_rich_formats": [
+      "image/svg+xml",
+      "text/html",
+      "text/plain"
+    ],
+    "hosted_ci": "Consult actual Actions for this commit; prior main had four successful workflow suites. New local evidence does not establish new hosted success.",
+    "latest_owner_run": "V119R1 SUCCESS:96newfits192cells1142tests; both historical qualification gates failed.",
+    "real_football_scores": "3230scorecards/12920metrics independently rescored; public export contains aggregate projections only.",
+    "private_football_retraining_reproducible": false,
+    "prospective_profit_established": false,
+    "preservation": "Earlier source, workflows, evidence snapshots and provenance incident remain preserved.",
+    "rendered_browser_accessibility": "Not established."
   }
 }
