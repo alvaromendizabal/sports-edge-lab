@@ -8,12 +8,15 @@ This review evaluates observable project artifacts. Presentation quality, resear
 |---|---|---|
 | Reviewer navigation | Current landing page, five-minute guide, model card and system design | Earlier source implementations and dated evidence remain available; historical documents link to current counterparts. |
 | Scientific reporting | Eight sport/origin cohorts across three campaigns, MARKET, controls, four native frameworks and retained references | Aggregate export, generated HTML and SVG share exact values; exposed selection and failed historical qualification stay visible. |
-| Public reproducibility | Standard-library synthetic training and scoring, integrity manifests and zero-fit reentry | 26 local Python tests passed; the example does not recreate private football training or scores. |
+| Public reproducibility | Standard-library synthetic training and scoring, integrity manifests and zero-fit reentry | 54 local Python tests passed, including 23 provenance and five notebook-output checks; the example does not recreate private football training or scores. |
 | Interactions and time integrity | Invented interaction model, chronological fit/evaluation and exact-cohort comparison | Tests reject future information, mismatched identities, unavailable models and invalid probabilities. Synthetic features are unrelated to active private formulas. |
 | Reviewer interface | Self-contained evidence explorer and generated vector graphics | 24 selector states checked with a minimal DOM fixture; both SVG assets rendered and visually inspected. A rendered-browser and accessibility audit remains outstanding. |
-| Notebook | Seven executed code cells with persisted table, SVG and final persistence check | Executed through in-process IPython. Separate-kernel execution was blocked by local socket restrictions; it is not claimed as verified. |
-| Automation | Added public-review workflow for Python 3.11/3.12, preserving earlier scientific workflows | Local checks do not establish hosted CI success; consult the actual GitHub Actions run for the published commit. |
+| Recovery and incident reasoning | Independent synthetic two-parent admission demo and a source-state failure case study | Relocation preserves content identity and observation clocks; omitted parents, changed bytes and unsafe paths fail closed. This does not establish that the private correction has completed owner execution. |
+| Notebook | Ten executed code cells with persisted table, SVG, provenance demonstration and final persistence check | Executed through in-process IPython, saved and reopened with output validation. Separate-kernel execution was blocked by local IPC restrictions. |
+| Automation | Python 3.11/3.12 core checks, all selector states and a separate-kernel notebook job, preserving earlier scientific workflows | Local checks do not establish hosted CI success; consult the actual GitHub Actions run for the published commit. |
 | Publication boundary | Explicit public/private inventory and generic model-family labels | No individual forecasts, private model weights, active feature formulas, decision recipes or raw licensed observations in this refresh. |
+
+The incremental update is based on commit `b2744c6e2f448183be92fa5a32a08f3c7022332b`. It preserves the previous review refresh and all published model scores. The [V119 execution evidence](evidence/2026-10-26-execution.json) records 1,058 passing owner checks followed by a source-state failure before any real fit. The [case study](CASE_STUDY_PROVENANCE.md) turns that distinction into a reproducible engineering exercise without presenting it as a model improvement.
 
 ## Remaining work
 

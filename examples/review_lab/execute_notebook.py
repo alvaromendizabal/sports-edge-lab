@@ -7,6 +7,23 @@ import sys
 import tempfile
 
 
+def verify_outputs(notebook: dict) -> dict:
+    """Check the saved review, including rich output and the following cell."""
+    cells = [cell for cell in notebook["cells"] if cell["cell_type"] == "code"]
+    if not cells or [cell.get("execution_count") for cell in cells] != list(range(1, len(cells) + 1)):
+        raise ValueError("not every code cell executed in order")
+    outputs = [output for cell in cells for output in cell.get("outputs", [])]
+    if any(output.get("output_type") == "error" for output in outputs):
+        raise ValueError("notebook contains an error output")
+    formats = {name for output in outputs for name in output.get("data", {})}
+    if not {"text/html", "image/svg+xml"}.issubset(formats):
+        raise ValueError("saved rich table or figure is missing")
+    last_text = "".join(output.get("text", "") for output in cells[-1].get("outputs", []))
+    if "PUBLIC_REVIEW_COMPLETE" not in last_text:
+        raise ValueError("the final persistence-check cell did not finish")
+    return {"code_cells": len(cells), "rich_formats": sorted(formats), "final_cell_completed": True}
+
+
 def main() -> None:
     import nbformat
 
@@ -54,10 +71,12 @@ def main() -> None:
     if errors:
         raise RuntimeError("notebook returned error outputs")
     notebook.metadata["sports_edge_execution"] = {"mode": args.mode, "synthetic_only_fitting": True}
+    verify_outputs(notebook)
     args.output.parent.mkdir(parents=True, exist_ok=True)
     nbformat.write(notebook, args.output)
-    print(json.dumps({"status": "PASS", "mode": args.mode, "code_cells": sum(cell.cell_type == "code" for cell in notebook.cells),
-                      "synthetic_only_fitting": True, "output": str(args.output)}))
+    persisted = verify_outputs(nbformat.read(args.output, as_version=4))
+    print(json.dumps({"status": "PASS", "mode": args.mode, **persisted,
+                      "synthetic_only_fitting": True, "saved_and_reopened": True, "output": str(args.output)}))
 
 
 if __name__ == "__main__":

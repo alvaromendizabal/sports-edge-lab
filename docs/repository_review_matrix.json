@@ -4,17 +4,28 @@
   "numeric_ratings_assigned": false,
   "quality_9_9_claimed": false,
   "current": {
-    "base_commit": "8ddb512b35ca29ee8bae0c31207a38d57ed7b800",
-    "public_python_tests": 26,
+    "base_commit": "b2744c6e2f448183be92fa5a32a08f3c7022332b",
+    "public_python_tests": 54,
+    "provenance_tests": 23,
+    "notebook_output_contract_tests": 5,
     "selector_states": 24,
     "selector_method": "minimal DOM fixture, not rendered browser",
-    "notebook_executed_code_cells": 7,
+    "notebook_executed_code_cells": 10,
     "notebook_execution_mode": "in-process IPython",
-    "svg_assets_rendered_and_visually_inspected": 2,
-    "hosted_ci": "Consult the actual GitHub Actions run for the published commit; local checks do not establish hosted success.",
+    "notebook_saved_and_reopened": true,
+    "notebook_rich_formats": [
+      "image/svg+xml",
+      "text/html",
+      "text/plain"
+    ],
+    "local_separate_kernel": "Blocked by authoring environment IPC socket policy; no local success claimed.",
+    "hosted_ci": "Separate-kernel notebook and selector checks configured. Consult the actual GitHub Actions run for the published commit; local checks do not establish hosted success.",
+    "svg_assets": "Existing two previously rendered assets preserved byte-for-byte; no new visual-inspection claim.",
+    "incident_case_study": "CASE_STUDY_PROVENANCE.md",
+    "latest_owner_run": "V119 failed before the registered experiment; zero real fits, no predictive metric change.",
     "private_football_retraining_reproducible": false,
     "prospective_profit_established": false,
-    "preservation": "All earlier source and scientific workflows retained."
+    "preservation": "Prior source, scientific workflows, aggregate model scores, explorer and SVG assets retained."
   },
   "prior_review_preserved": {
     "review_type": "evidence_based_internal_review_not_rating",
@@ -146,5 +157,18 @@
       "Rendered accessibility review and observed usability feedback"
     ],
     "latest_accepted_runtime": "V060"
+  },
+  "prior_refresh_review_preserved": {
+    "base_commit": "8ddb512b35ca29ee8bae0c31207a38d57ed7b800",
+    "public_python_tests": 26,
+    "selector_states": 24,
+    "selector_method": "minimal DOM fixture, not rendered browser",
+    "notebook_executed_code_cells": 7,
+    "notebook_execution_mode": "in-process IPython",
+    "svg_assets_rendered_and_visually_inspected": 2,
+    "hosted_ci": "Consult the actual GitHub Actions run for the published commit; local checks do not establish hosted success.",
+    "private_football_retraining_reproducible": false,
+    "prospective_profit_established": false,
+    "preservation": "All earlier source and scientific workflows retained."
   }
 }

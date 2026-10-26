@@ -12,6 +12,8 @@ The strongest way to evaluate this project is to follow one result from its assu
 4. Open the [executed notebook](../notebooks/engineering_review.ipynb) and [evidence explorer](review/index.html). The page is an offline file, not a hosted deployment.
 5. Inspect the [publication boundary](PUBLICATION_BOUNDARY.md) before interpreting reproducibility claims.
 
+For an integration-failure example, follow the [provenance case study](CASE_STUDY_PROVENANCE.md) and its executable synthetic notebook section. It shows how individual checks passed while a missing relationship between two verified parents still stopped the owner run before fitting.
+
 ## For an ML engineering review
 
 Follow `validate_rows`, `fit_synthetic`, `predict_synthetic`, `score_matched` and `write_run` in the [small public core](../examples/review_lab/core.py). The [tests](../examples/review_lab/tests/test_core.py) deliberately exercise future information, duplicate identities, equal-size but different cohorts, unavailable models, corrupt artifacts and zero-fit reentry.
