@@ -1,0 +1,35 @@
+{
+  "schema": "sports-edge-public-execution-v1",
+  "version": "V119R1",
+  "status": "SUCCESS",
+  "scientific_result": "VALID_NEGATIVE",
+  "historical_candidate_gate": {
+    "NFL": false,
+    "FBS": false
+  },
+  "real_fit_attempts": 96,
+  "completed_real_fits": 96,
+  "reused_control_cells": 96,
+  "completed_study_cells": 192,
+  "owner_tests_passed": 1142,
+  "research_forecast_rows": 3270,
+  "unique_forecast_games": 52,
+  "fresh_named_quotes": 0,
+  "paper_actions": 0,
+  "actual_wagers": 0,
+  "automatic_promotions": 0,
+  "predictive_metric_change": true,
+  "promoted_model_change": false,
+  "owner_return_sha256": "c3f225596697c12a26ee1e52d8bf5e783a32c402f1b965b915ac29fd6cf58f02",
+  "supervisor_seconds": 893.386977074,
+  "peak_rss_bytes": 2697252864,
+  "independent_metric_check": {
+    "scorecards_independently_rescored": 3230,
+    "scalar_metric_comparisons": 12920,
+    "max_metric_absolute_error": 2.220446049250313e-16,
+    "factorial_point_contrasts_independently_rescored": 80,
+    "real_fits_or_inference_during_audit": 0
+  },
+  "prior_failed_execution": "2026-10-26-execution.json",
+  "boundary": "No individual predictions, licensed observations, private paths or active model recipes are included."
+}

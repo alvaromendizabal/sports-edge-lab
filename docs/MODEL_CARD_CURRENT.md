@@ -1,6 +1,6 @@
 # Model card — current research bank
 
-Publication date: October 25, 2026. [Project](../README.md) · [All evidence](CURRENT_EVIDENCE.md) · [Historical model card](MODEL_CARD.md)
+Publication date: October 26, 2026. [Project](../README.md) · [All evidence](CURRENT_EVIDENCE.md) · [Historical model card](MODEL_CARD.md)
 
 ## Intended use
 
@@ -24,20 +24,22 @@ The public export includes 2024–25 and 2025–26 fixed-origin cohorts, a separ
 
 Log loss is primary; Brier is a secondary proper score. Accuracy and AUC are reported as different properties. The strongest retained reference can differ by metric. Historical panels have been repeatedly examined, and retained leaders are selected descriptive references. Current monitoring is not an untouched confirmation set.
 
-The current NFL monitor has 77 games across six weekly blocks, below the study's minimum for a weekly-block interval. FBS has 301 games across eight blocks. The new FBS challenger's log-loss difference against MARKET has a 95% interval crossing zero. Both latest historical challenger gates failed. Positive subthreshold effects remain recorded.
+The current NFL monitor has 77 games across six weekly blocks, below the study's minimum for a weekly-block interval. FBS has 301 games across eight blocks. The new FBS combined model's paired factorial interaction interval crosses zero. Both latest historical challenger gates failed. Positive subthreshold effects remain recorded.
 
 ## Current outcome
 
-The retained current NFL and FBS references have lower monitoring log loss than raw MARKET. The latest joint challenger improves all four corresponding NFL framework controls in current monitoring but does not surpass the strongest retained reference. FBS effects are smaller and less consistent. V118 serves saved models and adds no real fits, so its operational success is not a new model-quality gain.
+V119R1 completed the integrated C / L / U / UL feature study: 96 new fits and 96 reused control cells across four native frameworks. Both historical gates failed; the selected retained NFL/FBS references remain ahead. Current NFL combined UL improves over raw MARKET but regresses against the learned-only arm and retained leader. Current FBS combined UL regresses against raw MARKET and the retained leader.
 
-V119's October 26 owner attempt stopped at a source-state gate before fitting. Its registered feature-combination experiment has no result. The [execution receipt](evidence/2026-10-26-execution.json) and [recovery case study](CASE_STUDY_PROVENANCE.md) preserve this engineering failure separately from scientific qualification and the unchanged scores.
+Every estimable primary ensemble factorial interval crosses zero. The experiment therefore does not establish useful complementarity under its declared comparison. All scores remain exposed research evidence. The [joint-evidence case study](CASE_STUDY_JOINT_EVIDENCE.md) explains the scientific decision and provides a separate generic evaluator on invented fixtures.
+
+The prior V119 source-state failure is preserved in its [dated receipt](evidence/2026-10-26-execution.json). The [V119R1 receipt](evidence/2026-10-26-v119r1-execution.json) records successful correction and completed modeling. Success in recovery did not change the requirement for a qualifying model result.
 
 ## Data and failure modes
 
 Potential limitations include sparse independent game outcomes, correlated inputs, incomplete pregame availability clocks, source revisions, missing enrichment, stale pricing, regime changes, small current-season blocks and repeated model selection. A large play count is not a large number of independent game labels. Synthetic test success does not establish real-data predictive validity.
 
-Current source inventory and unresolved identity/time conflicts are in [the evidence report](CURRENT_EVIDENCE.md#data-and-operational-readiness). Every feature family must state whether it is collected, admitted, implemented, evaluated and serving-ready; these are different states.
+Current source inventory and unresolved identity/time conflicts are in [the evidence report](CURRENT_EVIDENCE.md#data-and-serving-outcomes). Every feature family must state whether it is collected, admitted, implemented, evaluated and serving-ready; these are different states.
 
 ## Publication and deployment status
 
-The current exact feature recipes, fitted assets, individual forecasts and live decision configuration are private. The [public example](../examples/review_lab/README.md) is a deliberately separate synthetic system. V118 emitted research probabilities but admitted zero paper actions or real wagers. Fresh inputs, contract-target alignment and independent prospective evidence remain necessary for economic validation.
+The current exact feature recipes, fitted assets, individual forecasts and live decision configuration are private. The [public example](../examples/review_lab/README.md) is a deliberately separate synthetic system. V119R1 emitted 3,270 research probability rows across 52 games but admitted zero paper actions or real wagers. Fresh inputs, contract-target alignment and independent prospective evidence remain necessary for economic validation.

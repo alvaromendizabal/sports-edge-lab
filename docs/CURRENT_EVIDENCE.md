@@ -1,77 +1,63 @@
-# Current research evidence — October 25, 2026
+# Current research evidence — October 26, 2026
 
-[Project](../README.md) · [Model card](MODEL_CARD_CURRENT.md) · [Machine-readable export](evidence/2026-10-25.json) · [Offline explorer](review/index.html)
+[Project](../README.md) · [Model card](MODEL_CARD_CURRENT.md) · [Aggregate export](evidence/2026-10-26.json) · [Offline explorer](review/index.html)
 
-This publication separates completed model experiments, current research serving and wagering readiness. The current numerical panels come from audited V117R1 scorecards; V118 adds serving and data evidence, not a new fitting result.
+V119R1 completed the integrated football experiment: 96 new fits, 96 reused control cells, 192 total cells, and 24 new fits in each native framework. Both NFL and FBS historical qualification gates failed. The selected retained references remain ahead. This is a successfully executed negative result, not a breakthrough or a promotion.
 
-October 26 execution update: V119 passed 1,058 owner checks and its notebook gate, then failed at source admission before the experiment began. It completed zero real fits, admitted no new data and issued no new forecasts. Its qualification result is unavailable; every numerical panel below remains unchanged. See the [dated execution receipt](evidence/2026-10-26-execution.json) and [provenance case study](CASE_STUDY_PROVENANCE.md).
+The earlier [V119 failure](evidence/2026-10-26-execution.json) and [October 25 model publication](evidence/2026-10-25.json) remain preserved. The [new execution receipt](evidence/2026-10-26-v119r1-execution.json) distinguishes the corrected owner execution from its earlier synthetic preparation.
 
-## Three campaigns, explicit comparison policies
+## Three campaigns and the complete joint comparison
 
-Each cell is log loss / Brier; lower is better. References are selected independently for each metric. These panels are exposed and repeatedly examined, not untouched confirmation sets.
+Each cell is log loss / Brier; lower is better. C is compact football plus MARKET; L adds learned football representations; U adds direct football measurements; UL combines both additions. All six systems are evaluated on identical games within a row.
 
-| Sport / campaign / policy | Games | MARKET | Matched control | Joint challenger | Best retained by metric |
-|---|---:|---:|---:|---:|---:|
-| NFL 2024–2025 fixed | 280 | 0.590011 / 0.201418 | 0.586801 / 0.200220 | 0.585244 / 0.199270 | **0.575083 / 0.194627** |
-| NFL 2025–2026 fixed | 277 | 0.611923 / 0.213133 | 0.612458 / 0.213486 | 0.613622 / 0.213887 | **0.606098 / 0.210736** |
-| NFL 2025–2026 annual | 277 | 0.611923 / 0.213133 | 0.615797 / 0.214913 | 0.619893 / 0.216829 | **0.606098 / 0.210736** |
-| NFL 2026–2027 monitoring | 77 | 0.660022 / 0.233301 | 0.654355 / 0.230954 | 0.647299 / 0.227659 | **0.624093 / 0.217288** |
-| FBS 2024–2025 fixed | 740 | 0.554096 / 0.188631 | 0.555546 / 0.189181 | 0.555214 / 0.189198 | **0.552031 / 0.187554** |
-| FBS 2025–2026 fixed | 748 | 0.538547 / 0.181678 | 0.538485 / 0.181870 | 0.538406 / 0.181856 | **0.536814 / 0.181086** |
-| FBS 2025–2026 annual | 748 | 0.538547 / 0.181678 | 0.538650 / 0.182114 | 0.538061 / 0.181917 | **0.535618 / 0.180522** |
-| FBS 2026–2027 monitoring | 301 | 0.474843 / 0.156153 | 0.473781 / 0.156244 | 0.473819 / 0.155894 | **0.465519 / 0.152630** |
+| Sport / campaign / policy | Games | MARKET | C | L | U | UL | Retained best by metric |
+|---|---:|---:|---:|---:|---:|---:|---:|
+| NFL 2024–2025 fixed | 280 | 0.590011 / 0.201418 | 0.586801 / 0.200220 | 0.585244 / 0.199270 | 0.587264 / 0.200296 | 0.587995 / 0.200815 | **0.575083** / **0.194627** |
+| NFL 2025–2026 fixed | 277 | 0.611923 / 0.213133 | 0.612458 / 0.213486 | 0.613622 / 0.213887 | 0.614809 / 0.214423 | 0.615619 / 0.214723 | **0.606098** / **0.210736** |
+| NFL 2025–2026 annual | 277 | 0.611923 / 0.213133 | 0.615797 / 0.214913 | 0.619893 / 0.216829 | 0.617426 / 0.215472 | 0.620113 / 0.216819 | **0.606098** / **0.210736** |
+| NFL 2026–2027 monitoring | 77 | 0.660022 / 0.233301 | 0.654355 / 0.230954 | 0.647299 / 0.227659 | 0.647731 / 0.227945 | 0.654224 / 0.231141 | **0.624093** / **0.217288** |
+| FBS 2024–2025 fixed | 740 | 0.554096 / 0.188631 | 0.555546 / 0.189181 | 0.555214 / 0.189198 | 0.557164 / 0.189922 | 0.556444 / 0.189721 | **0.552031** / **0.187554** |
+| FBS 2025–2026 fixed | 748 | 0.538547 / 0.181678 | 0.538485 / 0.181870 | 0.538406 / 0.181856 | 0.538928 / 0.182109 | 0.539773 / 0.182477 | **0.536814** / **0.181086** |
+| FBS 2025–2026 annual | 748 | 0.538547 / 0.181678 | 0.538650 / 0.182114 | 0.538061 / 0.181917 | 0.538551 / 0.182090 | 0.538394 / 0.182047 | **0.535618** / **0.180522** |
+| FBS 2026–2027 monitoring | 301 | 0.474843 / 0.156153 | 0.473781 / 0.156244 | 0.473819 / 0.155894 | 0.473950 / 0.155902 | 0.475016 / 0.156573 | **0.465519** / **0.152630** |
 
-Fixed-origin heads train through 2023. The separate annual 2025 comparison generally trains through 2024; its strongest NFL retained reference is still the older fixed MARKET model. Current monitoring uses a distinct origin/update policy. FBS 2024 has different retained log-loss and Brier references. The 2026–27 cohort includes games only through October 15 Pacific, not the complete current season.
+The FBS 2024 retained Brier leader is a different LightGBM model: 0.187554. The interactive explorer selects the retained reference independently for each metric. Fixed heads train through 2023; annual 2025 heads generally train through 2024. The strongest annual NFL retained reference is still an older fixed MARKET model. Current monitoring has a separate origin and includes eligible non-tied games only through October 15, 2026.
 
-MARKET is archived bookmaker consensus after paired proportional de-vig with at least three common complete books. A median consensus is not an executable quote or necessarily a closing line. Learned MARKET-only models are explicitly distinguished from football-plus-MARKET systems.
+These are exposed descriptive comparisons. The retained leaders are the strongest evaluated references within this project and cohort; external commercial systems lack aligned archived forecasts and are not ranked here.
 
-## All four new frameworks
+## What the integration experiment answered
 
-These are log losses on the same rows above. A framework label is an implementation choice, not proof of a useful football mechanism.
+A four-arm comparison measures predictive complementarity using Loss(UL) − Loss(U) − Loss(L) + Loss(C). Negative values indicate that the combined loss reduction exceeds the sum of the isolated reductions on the chosen loss scale. They do not establish causality. See the [joint-evidence case study](CASE_STUDY_JOINT_EVIDENCE.md) for the outcome and a separate executable public demonstration.
 
-| Sport / campaign / policy | LightGBM | XGBoost | PyTorch | TensorFlow | Equal-weight primary | Best retained |
-|---|---:|---:|---:|---:|---:|---:|
-| NFL 2024–2025 fixed | 0.591500 | 0.589815 | 0.576723 | 0.589451 | 0.585244 | **0.575083** |
-| NFL 2025–2026 fixed | 0.616364 | 0.613556 | 0.613085 | 0.617952 | 0.613622 | **0.606098** |
-| NFL 2025–2026 annual | 0.615414 | 0.615307 | 0.628576 | 0.626578 | 0.619893 | **0.606098** |
-| NFL 2026–2027 monitoring | 0.649243 | 0.653294 | 0.649979 | 0.644121 | 0.647299 | **0.624093** |
-| FBS 2024–2025 fixed | 0.554504 | 0.555192 | 0.556135 | 0.560785 | 0.555214 | **0.552031** |
-| FBS 2025–2026 fixed | 0.539858 | 0.538946 | 0.542453 | 0.537821 | 0.538406 | **0.536814** |
-| FBS 2025–2026 annual | 0.538233 | 0.538233 | 0.541935 | 0.540059 | 0.538061 | **0.535618** |
-| FBS 2026–2027 monitoring | 0.475002 | 0.472991 | 0.476573 | 0.475911 | 0.473819 | **0.465519** |
+Every estimable primary ensemble interaction interval crossed zero. NFL current monitoring has only six weekly blocks and therefore no interval under the declared eight-block support rule. The FBS current interaction is +0.001029 with interval [−0.006903, +0.007825]. More features did not produce established complementarity.
 
-The JSON export also contains Brier, accuracy and AUC for every displayed framework. The new opportunity representation improves all four corresponding NFL controls in current monitoring, while remaining behind the strongest retained reference. FBS effects are smaller and inconsistent.
+Current NFL UL log loss is 0.654224: better than MARKET's 0.660022, worse than the learned-only arm's 0.647299, and worse than the retained reference's 0.624093. Current FBS UL log loss is 0.475016, worse than MARKET's 0.474843 and the retained reference's 0.465519. The newest model is not automatically the best model.
 
-## Qualification and uncertainty
+## All four native implementations
 
-Both latest historical challenger qualification gates failed. That is a valid negative scientific result from a successful execution. It is not repaired by selecting a favorable current-season cell.
+The [aggregate export](evidence/2026-10-26.json) includes log loss, Brier, accuracy and AUC for LightGBM, XGBoost, PyTorch, TensorFlow, the equal-weight UL ensemble, controls and retained references in all eight panels. The [explorer](review/index.html) displays these framework results beside the complete factorial comparison with synchronized sport, campaign and metric selectors.
 
-- NFL monitoring: 77 games, six weekly blocks. No weekly-block interval was issued because the study requires at least eight blocks.
-- FBS monitoring: 301 games, eight weekly blocks. The new challenger's paired log-loss difference against MARKET is −0.001024; its 95% block-bootstrap interval is [−0.006468, +0.005928].
-- Retained references are descriptive leaders from exposed comparisons. Repeated-selection multiplicity is not corrected by those intervals.
-- The public snapshot does not establish long-run after-fee profitability or superiority to external commercial forecast services.
+## What MARKET means
 
-## Completed current serving
+Raw MARKET is the median bookmaker consensus after paired proportional moneyline de-vig, using at least three common complete books. It is not an executable quote or necessarily a closing line. Learned MARKET models use quote values, missingness, bookmaker identity and archived price paths. Football-plus-MARKET models add the feature families listed in the explorer. Bookmakers' internal feature sets are unknown.
 
-V118 passed 927 owner tests and issued 2,058 research probability rows across 39 unique games: 44 NFL rows for one game and 2,014 FBS rows for 38 games. Multiple model rows are not independent games. It made zero new real fits, zero paper actions, zero wagers and zero automatic promotions.
+Kalshi is a separate contract venue with its own bid/ask, fees and settlement targets. Conditional non-tie game-win probabilities are not automatically the same quantity as contract payout probabilities. A forecasting score does not establish an executable betting edge.
 
-Its final source-read-to-issue interval was 6.282 seconds versus 245.440 seconds in an earlier execution. Different paths and workloads were involved, so this is an observational operational comparison. All named sportsbook quotes were still stale; faster processing did not make their source timestamps fresh.
+## Data and serving outcomes
 
-## Data and operational readiness
-
-| Layer | Verified inventory | Remaining boundary |
+| Layer | Audited owner outcome | Remaining boundary |
 |---|---|---|
-| NFL finals/PBP | 105 finals, 105 PBP games, 18,401 plays | Complete game-count coverage is not proof of every enrichment |
-| NFL enrichment | 94 games, 16,070 exact play joins | 11 game gaps |
-| FBS bulk drives | 566 finals and 566 covered games, 13,241 drives | Detailed summaries have separate admission checks |
-| FBS detailed summaries | 549 games, 97,615 plays and 12,840 drives | 17 kickoff conflicts remain quarantined |
-| FBS detailed boxes | 16,470 team-stat and 284,617 player-stat rows | Collected rows are not automatically admitted model features |
-| Current prices | Zero fresh named quotes | Action gates remain closed |
+| NFL finals/PBP | 106 finals with PBP coverage for all 106 | Enrichment covers 94 games; 12 gaps remain |
+| FBS detailed summaries | 566/566 games; 100,687 plays, 13,242 drives | Two native drive records remain quarantined |
+| FBS detailed boxes | 16,980 team-stat and 293,422 player-stat rows | Collected observations are not automatically historically eligible features |
+| Kickoff conflicts | 17 conflicts corroborated and repaired under separate source clocks | No historical feature rows changed; present evidence does not prove historical publication |
+| Current research issuance | 3,270 model rows across 52 unique games | Multiple model rows are not independent games |
+| Price admission | Zero fresh eligible named quotes; zero paper actions or wagers | A 5.071-second final capture-to-issue interval did not repair old source observations |
 
-Current pregame starter/participation, roster transitions, historical publication clocks and coherent contract-specific outcome distributions remain research dependencies. Public NGS summaries are not full tracking data. Newly collected observations cannot be inserted into historical folds under invented availability times.
+Current pregame starter/participation, roster transitions, forecast weather vintages and coherent contract-specific outcome distributions remain research dependencies. Public NGS summaries are not full tracking data. Publication, observation, revision, release and decision clocks remain separate.
 
-## Provenance and reproducibility
+## Verification and reproducibility
 
-The [aggregate export](evidence/2026-10-25.json) records the private owner-return digest and the scope of each public claim. It deliberately omits individual predictions and exact active recipes. The [public synthetic example](../examples/review_lab/README.md) independently demonstrates chronology, scoring and recovery behavior; its outputs are not these real football metrics.
+The owner run passed 1,142 checks. Independent read-only rescoring matched all 3,230 scorecards / 12,920 scalar metrics to within 2.23e-16 and all 80 factorial point contrasts. No models were fitted or invoked during that audit. The public artifact contains aggregate projections and a synthetic evaluator, not private predictions or a reproduction of private training.
 
-The original [V065 publication](status/football_v065/README.md), [prepared V066 record](status/football_v066/README.md) and [historical model card](MODEL_CARD.md) remain preserved. Their older pending statuses describe those publications, not this current snapshot.
+The [public/private boundary](PUBLICATION_BOUNDARY.md) and [historical paths](PROJECT_SCOPE.md) remain explicit. No automatic promotion, real wager, proven prospective profitability or global state-of-the-art claim follows from this publication.

@@ -22,11 +22,11 @@ Then inspect the broader, preserved [published source inventory](PROJECT_SCOPE.m
 
 ## For a data-science review
 
-Ask whether each comparison uses the same events, targets and decision horizon; whether the reference was selected after outcomes; whether uncertainty supports the conclusion; and whether the strongest retained model actually improved. The latest representation showed a current NFL signal while failing historical qualification. Both facts remain visible.
+Ask whether each comparison uses the same events, targets and decision horizon; whether the reference was selected after outcomes; whether uncertainty supports the conclusion; and whether the strongest retained model actually improved. The latest combined representation failed both historical qualification gates. Read the [joint-evidence case study](CASE_STUDY_JOINT_EVIDENCE.md) and run the factorial evaluator to inspect how predictive complementarity is separated from superiority over MARKET and retained references.
 
 ## For a systems review
 
-Examine how raw source revisions, canonical identity, information clocks, model provenance, immutable issue time, price freshness and settlement rules constrain a decision. V118 produced current research forecasts while admitting zero actions. This is an observable boundary, not a claim of profitable deployment.
+Examine how raw source revisions, canonical identity, information clocks, model provenance, immutable issue time, price freshness and settlement rules constrain a decision. V119R1 produced current research forecasts while admitting zero actions. This is an observable boundary, not a claim of profitable deployment.
 
 ## Questions this project cannot answer from public assets alone
 

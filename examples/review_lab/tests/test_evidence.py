@@ -9,7 +9,7 @@ import unittest
 from examples.review_lab.build_review import render, validate_evidence
 
 ROOT = Path(__file__).resolve().parents[3]
-SOURCE = ROOT / "docs/evidence/2026-10-25.json"
+SOURCE = ROOT / "docs/evidence/2026-10-26.json"
 
 
 class TableParser(HTMLParser):
@@ -52,6 +52,16 @@ class EvidenceTests(unittest.TestCase):
         parser.feed(render(self.data, "0" * 64))
         self.assertEqual(len(parser.ids), len(set(parser.ids)))
         self.assertEqual(parser.selects, ["sport", "campaign", "metric"])
+
+    def test_missing_native_framework_rejected(self):
+        del self.data["rows"][0]["new_frameworks"]["PyTorch"]
+        with self.assertRaisesRegex(ValueError, "incomplete native framework"):
+            validate_evidence(self.data)
+
+    def test_nonfinite_native_framework_rejected(self):
+        self.data["rows"][0]["new_frameworks"]["TensorFlow"]["brier"] = float("nan")
+        with self.assertRaisesRegex(ValueError, "non-finite"):
+            validate_evidence(self.data)
 
     def test_no_individual_prediction_export(self):
         self.assertEqual(self.data["data_kind"], "aggregate_private_run_export")
