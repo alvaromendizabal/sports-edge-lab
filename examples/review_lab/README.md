@@ -1,0 +1,51 @@
+# A small, executable review of the engineering
+
+[Project](../../README.md) · [Code](core.py) · [Tests](tests/test_core.py) · [Notebook](../../notebooks/engineering_review.ipynb)
+
+This example fits real models to invented data. It demonstrates chronological ML and recoverable execution without exposing the private football models, data or individual forecasts. It is intentionally small enough to inspect in one sitting.
+
+## Run it
+
+Use Python 3.11 or 3.12 from the repository root. The core example has no third-party dependencies and makes no network or provider calls.
+
+```bash
+python -m unittest discover -s examples/review_lab/tests -v
+python -m examples.review_lab --output /tmp/sports-edge-review
+python -m examples.review_lab --output /tmp/sports-edge-review
+python -m examples.review_lab.build_review --check
+```
+
+The first run fits two regularized logistic models on 240 invented historical events, then evaluates the same 80 later events for a synthetic MARKET baseline, additive model and interaction model. The fixed educational settings are unrelated to the active research recipe. A synthetic interaction is present in the generator to make joint modeling inspectable; the example is not a test of whether real football features work.
+
+The second invocation verifies the manifest and reuses the accepted result without fitting again. Changing the seed or implementation rejects incompatible reuse. Corrupting a file fails integrity validation. Choose a new output directory for a new experiment; the runner never repairs an accepted result by silently overwriting it.
+
+## What the checks establish
+
+- Canonical event identity and timezone-aware publication, observation, decision and label clocks.
+- Training labels available before fitting and model availability before prediction.
+- Exact cohort equality, with alignment by event ID rather than row position.
+- Proper binary log loss and Brier scores, including boundary and invalid-probability cases.
+- Deterministic training/evaluation and integrity-checked zero-fit reentry.
+
+The public example is not a production-grade artifact transaction protocol or a full sports pipeline. The broader historical [published implementations](../../docs/PROJECT_SCOPE.md) contain additional fitting, checkpoint and recovery mechanisms.
+
+## Notebook
+
+The committed [notebook](../../notebooks/engineering_review.ipynb) has seven executed code cells, recorded using in-process IPython. The notebook discovers the repository root, trains only on synthetic events, renders the aggregate score table separately, displays a small inline SVG and executes a final persistence check. The runner records its execution mode in notebook metadata.
+
+```bash
+python -m pip install -r examples/review_lab/notebook-requirements.txt
+python -m examples.review_lab.execute_notebook --output /tmp/sports-edge-engineering-review.ipynb
+```
+
+A fresh independent environment is preferable for review. Package installation is optional; it is not needed by the core command or test suite.
+
+The default runner executes cells in-process and captures their rich outputs. Use `--mode kernel` for a separate Jupyter kernel, or open the notebook and run all cells normally. Separate-kernel execution was blocked by socket restrictions in the authoring environment and is not claimed as verified here.
+
+## Rebuild the evidence page
+
+```bash
+python -m examples.review_lab.build_review
+```
+
+`docs/evidence/2026-10-25.json` is an aggregate export of audited owner results, not training data. The renderer checks its declared cohort inventory and produces `docs/review/index.html`. Open that self-contained file locally. It makes no external requests and discloses selected/exposed results, unresolved source gaps and zero admitted wagering actions.

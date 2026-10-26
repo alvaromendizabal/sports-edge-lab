@@ -1,3 +1,5 @@
+> Historical publication through V065. For the October 25, 2026 research bank and current qualification boundaries, read the [current model card](MODEL_CARD_CURRENT.md). The dated content below is preserved as lineage.
+
 # Model card — NFL and NCAAF
 
 

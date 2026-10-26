@@ -4,10 +4,15 @@ This active project separates three surfaces: current acquisition, scientific
 verification, and immutable records of earlier executions. Only the first two
 require working launch code in the current checkout.
 
+The [current review guide](REVIEW_GUIDE.md) and [credential-free example](../examples/review_lab/README.md) provide an updated entry point. The current public aggregate snapshot includes completed V118; the older source implementations below retain their original scientific scope.
+
 ## Active components
 
 | Path | Responsibility |
 |---|---|
+| `examples/review_lab/` | Credential-free synthetic training, exact-cohort scoring, temporal guards and verified reentry |
+| `notebooks/engineering_review.ipynb` | Executed public review; synthetic outputs and real-run aggregates kept separate |
+| `docs/evidence/`, `docs/review/` | Sanitized aggregate export and generated offline evidence explorer |
 | `tools/*.py` | Provider clients, quotas, source validation, inventory and recovery; each client keeps its offline guards |
 | `tools/current_snapshot_v043/` | Source snapshot corresponding to the currently scheduled AWS collector; preserved unchanged |
 | `modeling/football_v058` through `modeling/football_v066` | Executable scientific controls, validation and recovery tests for the published modeling evidence |

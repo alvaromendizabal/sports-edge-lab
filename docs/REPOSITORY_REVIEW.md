@@ -1,3 +1,28 @@
+# Repository review — public review refresh, October 26, 2026
+
+[Overview](../README.md) · [Review guide](REVIEW_GUIDE.md) · [Current evidence](CURRENT_EVIDENCE.md) · [Review matrix](repository_review_matrix.json)
+
+This review evaluates observable project artifacts. Presentation quality, research validity, predictive superiority and economic readiness are different questions; polishing documentation cannot establish profitable forecasts.
+
+| Criterion | Change | Verification and boundary |
+|---|---|---|
+| Reviewer navigation | Current landing page, five-minute guide, model card and system design | Earlier source implementations and dated evidence remain available; historical documents link to current counterparts. |
+| Scientific reporting | Eight sport/origin cohorts across three campaigns, MARKET, controls, four native frameworks and retained references | Aggregate export, generated HTML and SVG share exact values; exposed selection and failed historical qualification stay visible. |
+| Public reproducibility | Standard-library synthetic training and scoring, integrity manifests and zero-fit reentry | 26 local Python tests passed; the example does not recreate private football training or scores. |
+| Interactions and time integrity | Invented interaction model, chronological fit/evaluation and exact-cohort comparison | Tests reject future information, mismatched identities, unavailable models and invalid probabilities. Synthetic features are unrelated to active private formulas. |
+| Reviewer interface | Self-contained evidence explorer and generated vector graphics | 24 selector states checked with a minimal DOM fixture; both SVG assets rendered and visually inspected. A rendered-browser and accessibility audit remains outstanding. |
+| Notebook | Seven executed code cells with persisted table, SVG and final persistence check | Executed through in-process IPython. Separate-kernel execution was blocked by local socket restrictions; it is not claimed as verified. |
+| Automation | Added public-review workflow for Python 3.11/3.12, preserving earlier scientific workflows | Local checks do not establish hosted CI success; consult the actual GitHub Actions run for the published commit. |
+| Publication boundary | Explicit public/private inventory and generic model-family labels | No individual forecasts, private model weights, active feature formulas, decision recipes or raw licensed observations in this refresh. |
+
+## Remaining work
+
+Independent clean-environment reproduction, rendered accessibility review and external reviewer feedback would strengthen the public artifact. Prospective forecasts, a qualifying model improvement, reliable publication-time and current-availability evidence, executable-price evaluation and operational monitoring are separate research and deployment requirements. None is established merely by this repository refresh.
+
+## Preserved historical review
+
+The following October 17 review is retained as dated history. Its version statuses and check counts describe that earlier review, not the current state.
+
 # Repository review — completed evidence through October 17, 2026
 
 [Overview](../README.md) · [Evidence scorecard](demo/index.html) · [Machine-readable review matrix](repository_review_matrix.json)
