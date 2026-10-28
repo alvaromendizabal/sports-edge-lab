@@ -34,4 +34,10 @@ CollegeBasketballData season labels use ending years. Post-tournament ratings an
 
 Apply the [shared research protocol](../../docs/RESEARCH_PROTOCOL.md). Establish sport-specific identity mappings and source coverage before feature development. A market backtest requires an actual bookmaker quote and a recorded availability time. Track quality with log loss, Brier score, calibration and distribution coverage, then separately assess simulated market returns, closing-line value and uncertainty.
 
-**Current phase:** source acquisition and audit. No trained-model performance claim.
+**Current phase:** first real reconstructed historical evaluation completed; prospective monitoring and MARKET coverage remain incomplete.
+
+## B002 basketball evidence
+
+NCAA men completed 59 native estimator units across the two horizons. The 53-predictor regularized combined model led the full basketball probability cohort; its separate point head uses shared Ridge. Matched T−60 MARKET comparisons contain no eligible ending-2025 games and 118 ending-2026 games. The exploratory style-model improvement has a block interval crossing zero and does not qualify. Eight current games have early outlooks; no qualified current prices or settled prospective scores were present.
+
+Read the [basketball study](../../docs/BASKETBALL_FOUNDATION.md), [separate league leaderboards](../../docs/BASKETBALL_RESULTS.md), [model card](../../docs/BASKETBALL_MODEL_CARD.md) and [executed notebook](../../notebooks/basketball_review.ipynb). The [public contracts](../../examples/basketball_contracts/README.md) use invented fixtures and remain separate from the real aggregate results. B001’s pre-modeling failure is preserved. B003 owner execution is pending.

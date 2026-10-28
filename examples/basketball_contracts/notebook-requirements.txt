@@ -1,0 +1,2 @@
+-r ../review_lab/notebook-requirements.txt
+plotly==7.1.0
