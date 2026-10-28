@@ -1,0 +1,33 @@
+{
+  "schema": "sports-edge.public-review-local-verification-v1",
+  "baseline_commit": "023a7561a0d2be8dbad54225415b577a89780f5d",
+  "public_python_tests": 154,
+  "new_public_python_tests": 55,
+  "legacy_selector_states": 48,
+  "new_selector_states": 1710,
+  "monitoring_only_selector_states": 450,
+  "exact_panels": 57,
+  "sanitized_model_scorecards": 9756,
+  "venue_diagnostics": 1586,
+  "notebook": {
+    "executed_code_cells": 18,
+    "mode": "in-process",
+    "synthetic_only_fitting": true,
+    "saved_and_reopened": true,
+    "html_and_svg_outputs": true
+  },
+  "local_links_checked": 573,
+  "missing_links": 0,
+  "secret_and_private_path_findings_in_changed_content": 0,
+  "generated_pages_deterministic": true,
+  "svg_rendered_and_visually_inspected": true,
+  "rendered_browser_audit": false,
+  "hosted_ci_verified": false,
+  "actual_orders": 0,
+  "limitations": [
+    "Public tests reproduce generic mechanics with invented data, not private football training.",
+    "Local tests and persisted notebook outputs do not establish hosted CI success.",
+    "Semantic DOM fixtures are not rendered browser or accessibility audits.",
+    "No qualified predictive advance or executable historical profitability is established."
+  ]
+}

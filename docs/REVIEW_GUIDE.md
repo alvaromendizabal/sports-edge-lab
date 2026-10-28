@@ -1,3 +1,21 @@
+# Latest review entry: V126 serving identity
+
+Begin with the [current evidence](CURRENT_EVIDENCE.md), then inspect the [serving-lineage case study](CASE_STUDY_SERVING_LINEAGE.md) and [public verifier](../examples/review_lab/serving_lineage.py). The actual owner run passed 2,595 checks, issued 83 market references and preserved one historical-selection identity through the authoritative financial ledger. No learned challenger qualified and historical profit is unavailable.
+
+The retained model explorer still contains V125 and prior model-score evidence. V126 is an operational correction, not a new predictive result. Current-season outcomes remain monitoring-only. The guide below preserves the broader review path.
+
+# Review guide — historical evidence to immutable decisions
+
+[Overview](../README.md) · [Current explorer](current/index.html) · [Executed notebook](../notebooks/engineering_review.ipynb)
+
+Start with the latest V125 status: 20 completed expert fits, 2,523 passing owner checks, failed historical gates for NFL and FBS, zero promotions and zero wagers. Then inspect the [selection-to-decision case study](CASE_STUDY_SELECTION_TO_DECISION.md), the generic [historical-selection guard](../examples/review_lab/historical_selection.py) and [paper ledger](../examples/review_lab/decision_replay.py).
+
+The explorer separates 2026 monitoring from historical diagnostics and exposes 57 exact panels with 9,756 sanitized aggregate model rows. Its historical emphasis is a numerical comparison on matched games, not a champion decision. Forward panels never rank or highlight by outcomes. All scores remain exposed retrospective evidence unless separately demonstrated otherwise.
+
+Run the standard-library tests and the synthetic example twice, then both generated-page checks and both JavaScript selector suites. The notebook adds executed selection, ledger and aggregate-boundary cells. The hosted workflow separately executes its kernel job; local checks do not substitute for a passing remote run.
+
+The dated review below explains the preserved earlier mechanisms and evidence. Read historical status counts in their own context.
+
 # A technical review of Sports Edge Lab
 
 [Project](../README.md) · [Current evidence](CURRENT_EVIDENCE.md) · [Model card](MODEL_CARD_CURRENT.md)

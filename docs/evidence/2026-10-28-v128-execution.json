@@ -1,0 +1,22 @@
+{
+  "schema": "sports-edge-lab.public-v128-execution-aggregate-v1",
+  "status": "SUCCESS",
+  "owner_date_utc": "2026-10-28",
+  "source_artifact_sha256": "79e91160253b32494fe5fd758cb1811b5f13a512175875929dab206f798b73ce",
+  "new_real_fits": 0,
+  "new_real_fit_attempts": 0,
+  "retained_residual_fits": 50,
+  "self_tests_passed": 2777,
+  "self_test_workers": 4,
+  "self_test_seconds": 174.86779,
+  "worker_seconds": 518.564402,
+  "supervised_seconds": 560.4133885,
+  "peak_process_tree_rss_bytes": 4119453696,
+  "operational_selection": "V126 raw MARKET fallback preserved",
+  "residual_qualified_track_protocols": 0,
+  "current_season_selection_or_ranking": false,
+  "historical_executable_profit": null,
+  "actual_orders": 0,
+  "automatic_promotions": 0,
+  "audit_scope": "Verified owner return aggregate; private data, probabilities, selections, prices, weights and recipes excluded. Runtime is an observed measurement, not a universal benchmark."
+}

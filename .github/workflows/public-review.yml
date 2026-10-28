@@ -33,10 +33,20 @@ jobs:
           python -m examples.review_lab --output "${RUNNER_TEMP}/sports-edge-review"
       - name: Check generated evidence page
         run: python -m examples.review_lab.build_review --check
+      - name: Check current aggregate review and decision boundaries
+        run: |
+          python -m examples.review_lab.build_current_review --check
+          python -m examples.review_lab.historical_selection
+          python -m examples.review_lab.decision_replay
+          python -m examples.review_lab.serving_lineage
+          python -m examples.review_lab.portfolio_evidence
+          python -m examples.review_lab.prospective_state
       - name: Demonstrate scoped multi-parent recovery
         run: python -m examples.review_lab.provenance
       - name: Check every public evidence selector state
-        run: node examples/review_lab/tests/test_selectors.cjs
+        run: |
+          node examples/review_lab/tests/test_selectors.cjs
+          node examples/review_lab/tests/test_current_selectors.cjs
   executed-notebook:
     runs-on: ubuntu-24.04
     timeout-minutes: 5

@@ -2,11 +2,16 @@
 
 NFL and FBS forecasting built around a difficult engineering question: can a model add information beyond the market, and can every result survive an audit?
 
-Designed and implemented by [Alvaro Mendizabal](https://github.com/alvaromendizabal). The project connects source acquisition, information-time contracts, four native ML frameworks, chronological experiments, immutable forecasts and recoverable AWS execution. NFL, FBS, NBA and NCAA basketball maintain separate model evaluations while sharing provenance, recovery and data infrastructure.
+Designed and implemented by [Alvaro Mendizabal](https://github.com/alvaromendizabal). The project connects source acquisition, information-time contracts, native ML frameworks, chronological experiments, immutable forecasts and recoverable AWS execution. NFL, FBS, NBA and NCAA basketball maintain separate model evaluations while sharing provenance, recovery and data infrastructure.
 
-[Start the review](docs/REVIEW_GUIDE.md) · [Current evidence](docs/CURRENT_EVIDENCE.md) · [Model card](docs/MODEL_CARD_CURRENT.md) · [System design](docs/SYSTEM_DESIGN.md) · [Run the example](examples/review_lab/README.md)
+[Start the review](docs/REVIEW_GUIDE.md) · [Current explorer](docs/current/index.html) · [Current evidence](docs/CURRENT_EVIDENCE.md) · [Model card](docs/MODEL_CARD_CURRENT.md) · [System design](docs/SYSTEM_DESIGN.md) · [Run the example](examples/review_lab/README.md)
 
-Latest published football execution, October 26: V120 completed 48 joint-distribution fits and a 240-cell comparison after 1,278 owner checks passed. Both historical candidate gates and both season-stability guards failed; stronger retained references remain in place. The [score-distribution case study](docs/CASE_STUDY_SCORE_DISTRIBUTIONS.md) follows the mechanism from coherent probabilities to an honest negative decision. The earlier [joint-feature experiment](docs/CASE_STUDY_JOINT_EVIDENCE.md) and [source failure and recovery](docs/CASE_STUDY_PROVENANCE.md) remain preserved.
+Latest verified football owner execution, October 28: [V129 completed 24 constrained ensemble fits and passed 2,856 owner checks](docs/evidence/2026-10-28-v129-execution.json). Independent saved-output rescoring verified 2,046 probability scorecards and 32 matched MARKET intervals. All four historical league/protocol qualification gates failed, so operational forecasts retain the sportsbook MARKET fallback. The [new study note](docs/CONSTRAINED_ENSEMBLE_FINDINGS.md) explains the small NFL 2024 gain, the 2025 reversal and why training safeguards did not establish heldout superiority. No promotion, order or realized profit is claimed. The V130 owner experiment remains pending.
+
+The [retained V125 aggregate export](docs/evidence/2026-10-27-v125.json) preserves 9,756 model scorecard views, 180 paired expert comparisons and 1,586 venue diagnostics. Counts describe aggregate records, not unique games or independent tests.
+The new [historical-selection contract](docs/HISTORICAL_SELECTION_BOUNDARY.md) reserves 2026–2027 for monitoring. Current-season outcomes cannot choose a champion, calibration method, feature set, ensemble or staking policy. The public example demonstrates how that boundary survives a forward-season apparent winner and how a frozen, outcome-free paper decision is settled separately.
+
+<p align="center"><img src="docs/assets/current-evidence.svg" alt="Verified V126: 83 selected market references, 2595 owner checks, 2026 monitoring only and zero orders or promotions. No learned challenger qualified." width="1100"></p>
 
 Basketball status, October 27: B003 completed controlled opponent-adjustment experiments with 60 new native estimator units and 156 exact predecessor reuses, bringing the cumulative basketball total to 232. Rich regularized models improved both college historical seasons; NBA retained its previous strength model. Larger matched sportsbook cohorts still establish no qualified MARKET advantage. The [basketball study](docs/BASKETBALL_FOUNDATION.md), [generated league leaderboards](docs/BASKETBALL_RESULTS.md), [model card](docs/BASKETBALL_MODEL_CARD.md) and [executed notebook](notebooks/basketball_review.ipynb) expose both gains and calibration weaknesses. Prior forecasts remain immutable; all 61 upcoming games still lack settled prospective scores at the audited snapshot. B001's failure is preserved and B004 owner execution is pending.
 
@@ -14,77 +19,87 @@ Basketball status, October 27: B003 completed controlled opponent-adjustment exp
 
 | Inspect | What it demonstrates |
 |---|---|
-| [Credential-free ML example](examples/review_lab/README.md) | Real fitting on invented data, chronological separation, exact-cohort scoring, leakage rejection and zero-fit reentry |
+| [Credential-free ML example](examples/review_lab/README.md) | Real fitting on invented data, chronological separation, exact-cohort scoring and zero-fit reentry |
+| [Executed review notebook](notebooks/engineering_review.ipynb) | Synthetic mechanisms beside separately validated owner-run aggregates and actual V126 serving lineage |
+| [Exact-panel explorer](docs/current/index.html) | 57 league / protocol / origin / target panels, full model filters, points and distribution metrics |
+| [Historical-selection guard](examples/review_lab/historical_selection.py) | Forward-outcome rejection, evidence clocks, matched panels and immutable selection identity |
+| [Serving-lineage contract](examples/review_lab/serving_lineage.py) | The same historical policy identity in selection, serving and ledger; typed clocks and honest row accounting |
+| [Paper-decision ledger](examples/review_lab/decision_replay.py) | Pregame-only selection, explicit native league weeks, price/depth/fee constraints and separate settlement |
+| [Portfolio evidence boundary](docs/PORTFOLIO_EVIDENCE.md) | Persisted commitment before settlement, explicit unavailable profit and one budget across mutually exclusive venue scenarios |
+| [Transactional prospective state](docs/PROSPECTIVE_STATE_MACHINE.md) | Append-only decisions and settlement, atomic native-week capital reservation, immutable reentry, source clocks and unavailable unsettled profit |
+| [Selection-to-decision case study](docs/CASE_STUDY_SELECTION_TO_DECISION.md) | Why a successful expert run and favorable isolated score do not establish a trading edge |
 | [Basketball study and public checks](docs/BASKETBALL_FOUNDATION.md) | Audited real season aggregates, separate league leaderboards and executable identity/time contracts using invented fixtures |
-| [Executed review notebook](notebooks/engineering_review.ipynb) | Reproducible synthetic results beside clearly separated, sanitized real-run aggregate evidence |
-| [Current evidence export](docs/evidence/2026-10-26-v120.json) | Three campaigns, multiple training origins, raw MARKET, controls, all four frameworks and retained references |
 | [System design](docs/SYSTEM_DESIGN.md) | Data/model/decision contracts, lineage, failure states and recovery |
-| [Published scientific implementations](docs/PROJECT_SCOPE.md) | Preserved fitting, source-adjudication, uncertainty and interruption tests from earlier research stages |
-| [Joint-score case study](docs/CASE_STUDY_SCORE_DISTRIBUTIONS.md) | Normalized probability laws, ties, proper scores, log-space stability and a completed negative experiment |
-| [Joint-feature case study](docs/CASE_STUDY_JOINT_EVIDENCE.md) | Factorial complementarity, paired uncertainty, exact cohorts and a preserved negative decision |
-| [Failure-to-recovery case study](docs/CASE_STUDY_PROVENANCE.md) | Multi-parent provenance, content-pinned relocation, rejection tests and honest incident classification |
+| [Published scientific implementations](docs/PROJECT_SCOPE.md) | Preserved fitting, acquisition, uncertainty and interruption tests from earlier research stages |
 
-<p align="center"><img src="docs/assets/evidence-overview.svg" alt="V120 current monitoring: raw MARKET, retained leader, D0 and D1 conditional-win log loss. Retained leaders remain best; exposed monitoring does not establish profit." width="1100"></p>
+Open the self-contained HTML explorer locally; GitHub's file viewer displays source. It makes no external requests. Historical minimums are emphasized only within one exact cohort, protocol and origin. The 2026 view uses stable model identifiers and never ranks, highlights or promotes by current-season outcome. Filtering models does not redefine the historical comparison winner.
 
-The graphic above is generated from the same aggregate export as the [evidence explorer](docs/review/index.html). Download and open that self-contained HTML file locally; GitHub's file viewer displays its source. It has four synchronized tables, sport/campaign selectors, separate binary and joint proper scores, paired interaction evidence, feature-family explanations and no external requests.
+## What the completed run established
 
-## Current evidence, with the boundaries attached
-
-The October 26, 2026 publication incorporates completed V120 joint-distribution modeling, event identity repairs and current research issuance. It preserves negative results and distinguishes predictive scores from economic outcomes.
-
-| 2026–27 monitoring cohort | Games | MARKET raw log loss | D0 ensemble | D1 ensemble | Retained leader |
-|---|---:|---:|---:|---:|---:|
-| NFL | 77 | 0.660022 | 0.643245 | 0.651836 | **0.624093** |
-| FBS | 301 | 0.474843 | 0.474858 | 0.481886 | **0.465519** |
-
-Lower is better. These are matched, non-tied games with included kickoffs through October 15, not complete seasons. Retained references were selected on exposed outcomes. The new challenger failed both historical qualification gates; the NFL monitoring panel has only six weekly blocks. These results do not establish prospective profitability.
-
-[All 2024–25, 2025–26 and 2026–27 comparisons](docs/CURRENT_EVIDENCE.md) include Brier scores, different update policies and separate metric-specific references. MARKET means archived bookmaker consensus after paired de-vig—not an executable quote, a closing line, or Kalshi.
-
-## What the completed owner run established
-
-| V120 owner result | Verified outcome |
+| V126 owner result | Verified outcome |
 |---|---|
-| Verification | 1,278 tests passed; 3,342 binary and 112 distribution scorecards independently rescored |
-| Model comparison | 240 cells: 48 new PyTorch/TensorFlow fits + 192 retained comparisons |
-| Scientific decision | Both historical candidate and season-stability gates failed; no automatic promotion |
-| Current research issuance | 4,749 model rows across 69 priced games; rows are not independent games |
-| Event admission | 69/77 incoming price events admitted; seven identity and one book-coverage rejection preserved |
-| Action admission | Zero paper actions and zero actual wagers; stale source quotes kept gates closed |
+| Execution | SUCCESS; zero new fits and zero new fit attempts |
+| Owner verification | 2,595 checks passed across four workers |
+| Measured worker time | 450.646 seconds; peak process-tree RSS 4.12 GB |
+| Retained work | 456 native cells, six fusion fits and 20 expert fits reused |
+| Historical selection | No learned qualifier; raw MARKET fallback for each league |
+| Serving identity | 83 market references bind to the same frozen historical selection |
+| Research output | 7,908 research forecast rows remain separately classified |
+| Financial evidence | Historical profit unavailable; no strict eligible replay established |
+| Orders and promotion | Zero actual orders and zero automatic promotions |
 
-The new capability is a coherent joint score distribution. Passing probability checks does not imply better forecasts, and better forecast metrics alone do not establish executable value. The public example now includes a generic distribution evaluator with invented inputs and adversarial numerical tests.
+The [serving-lineage case study](docs/CASE_STUDY_SERVING_LINEAGE.md) connects the correction to an executable public invariant. The [conditional-expert study](docs/CASE_STUDY_SELECTION_TO_DECISION.md) preserves V125's negative historical result. The [earlier factorial study](docs/CASE_STUDY_JOINT_EVIDENCE.md) tests complementarity; the [joint-score study](docs/CASE_STUDY_SCORE_DISTRIBUTIONS.md) separates coherent distributions from improved forecasts. The completed V127 residual study adds a further negative qualification result: all eight primary historical season/protocol comparisons have Holm-adjusted p-values of 1.0. Its 2026 panels are monitoring only, with no model ranking or promotion.
+
+## Market comparisons without invented profit
+
+Raw MARKET is archived bookmaker consensus after paired de-vig. A fitted MARKET-only model is a separate learned baseline. Kalshi and Polymarket US are separate venue diagnostics, with contract-specific payout targets and execution requirements.
+
+| 2026 monitoring archive | NFL games | FBS games |
+|---|---:|---:|
+| Kalshi intersection | 77 | 177 |
+| Polymarket US intersection | 59 | 272 |
+| Both venues | 59 | 174 |
+
+These are intersection counts, not completed-wager counts. NFL midpoint comparisons remain conditional-non-tie proxies. A historical quote does not establish an available ask, depth, correct fees, a fill or a contract-aligned payoff. Historical net profit remains unavailable. The illustrative public ledger permits unspent cash, rejects invalid execution evidence, and never accepts outcomes during selection.
 
 ## Engineering decisions worth inspecting
 
-- Keep publication, observation, revision, label availability and decision clocks distinct.
-- Fit preprocessing and learned representations inside their chronological training boundaries.
-- Compare new systems with raw MARKET, matched controls and the strongest retained references on identical games.
-- Preserve source bytes, model identity and accepted forecasts through recovery.
-- Separate successful execution from positive science and deployment readiness.
-- Validate source, environment, notebooks and resource guards before expensive owner work.
-
-[Architecture and trade-offs](docs/SYSTEM_DESIGN.md) · [Research protocol](docs/RESEARCH_PROTOCOL.md) · [Current data gaps](docs/CURRENT_EVIDENCE.md#data-and-serving-outcomes)
+- Preserve publication, observation, revision, label-availability, model-availability and decision clocks.
+- Fit preprocessing and learned representations within chronological training boundaries.
+- Compare complete systems, their interactions and retained controls on the same games.
+- Separate historical qualification from forward monitoring; exposed evidence cannot become untouched evidence by relabelling it.
+- Bind forecasts and decisions to content identities; settle immutable decisions without rerunning selection.
+- Distinguish a valid probability target, a predictive score improvement and executable economic value.
+- Preserve accepted work through bounded recovery and report negative results directly.
 
 ## Reproduce the public review
 
-Python 3.11+; no credentials, cloud account or third-party packages are required for the core example. Run from the repository root:
+Python 3.11+; no credentials or cloud account are required for the standard-library example. Run from the repository root:
 
 ```bash
 python -m unittest discover -s examples/review_lab/tests -v
 python -m examples.review_lab --output /tmp/sports-edge-review
 python -m examples.review_lab --output /tmp/sports-edge-review
 python -m examples.review_lab.build_review --check
+python -m examples.review_lab.build_current_review --check
 python -m examples.review_lab.provenance
 python -m examples.review_lab.factorial
 python -m examples.review_lab.distribution
+python -m examples.review_lab.historical_selection
+python -m examples.review_lab.decision_replay
+python -m examples.review_lab.serving_lineage
+python -m examples.review_lab.portfolio_evidence
+python -m examples.review_lab.prospective_state
+node examples/review_lab/tests/test_selectors.cjs
+node examples/review_lab/tests/test_current_selectors.cjs
 ```
 
-The second invocation verifies and reuses the accepted synthetic report with zero new fits. A different seed, changed implementation or corrupted artifact is rejected. The optional notebook uses Jupyter; see its [environment and reproduction instructions](examples/review_lab/README.md).
+The second fitting invocation verifies and reuses the accepted synthetic report with zero new fits. A changed seed, implementation or artifact is rejected. Selection and decision examples use invented data and illustrative rules; they do not expose the private football recipe or place orders. Optional notebook execution uses pinned Jupyter dependencies; see [reproduction instructions](examples/review_lab/README.md).
 
-The public-review workflow runs the synthetic suite on Python 3.11/3.12, checks selector behavior, and executes the notebook in a separate kernel with saved-output validation. It complements the retained [scientific modeling](.github/workflows/modeling-quality.yml), [acquisition guards](.github/workflows/ingestion-guards.yml) and [repository hygiene](.github/workflows/repository-hygiene.yml) workflows. Consult the actual Actions result for the published commit. Earlier implementations and dated evidence remain intact.
+The public-review workflow runs Python 3.11/3.12 checks, deterministic generated-page checks, selector semantics and a separate-kernel notebook job. It preserves [scientific modeling](.github/workflows/modeling-quality.yml), [acquisition guards](.github/workflows/ingestion-guards.yml) and [repository hygiene](.github/workflows/repository-hygiene.yml) workflows. Local validation and hosted Actions are separate evidence; consult the Actions result for the exact published commit.
 
 ## Public code, private research assets
 
-Public material includes source contracts, evaluation mechanics, synthetic fitting, tests, notebooks, architecture and aggregate research results. Licensed/raw observations, individual forecasts, trained production weights, exact active feature transformations, tuning and live decision configuration remain private. The synthetic example verifies engineering behavior; it does not reproduce the private football scores.
+Public material includes evaluation mechanisms, synthetic fitting, tests, notebooks, architecture and sanitized aggregate research results. Licensed/raw observations, individual forecasts, production weights, active feature transformations, exact tuning and live decision configuration remain private. Public examples verify engineering behavior and do not reproduce private football training.
 
-[Publication boundary](docs/PUBLICATION_BOUNDARY.md) · [Historical evidence and maintained paths](docs/PROJECT_SCOPE.md) · [Evidence-based repository review](docs/REPOSITORY_REVIEW.md)
+[Publication boundary](docs/PUBLICATION_BOUNDARY.md) · [Historical evidence and maintained paths](docs/PROJECT_SCOPE.md) · [Repository review](docs/REPOSITORY_REVIEW.md) · [Dated V120 explorer](docs/review/index.html)

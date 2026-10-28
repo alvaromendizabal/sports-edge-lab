@@ -1,0 +1,123 @@
+{
+  "schema": "sports-edge-lab.public-v129-execution-aggregate-v1",
+  "owner_date_utc": "2026-10-28",
+  "status": "SUCCESS",
+  "new_real_fits": 24,
+  "new_real_fit_attempts": 24,
+  "tests_passed": 2856,
+  "supervised_seconds": 576.018,
+  "worker_seconds": 533.083,
+  "peak_process_tree_rss_bytes": 4135055360,
+  "workspace_bytes": 3449950069,
+  "probability_scorecards_independently_verified": 2046,
+  "largest_absolute_rescore_error": 2.220446049250313e-16,
+  "matched_market_intervals_verified": 32,
+  "historical_gates_passed": 0,
+  "historical_gates_total": 4,
+  "operational_policy": "raw sportsbook MARKET fallback",
+  "automatic_promotions": 0,
+  "actual_orders": 0,
+  "qualified_prospective_captures": 0,
+  "realized_profit": null,
+  "annual_primary_comparisons": [
+    {
+      "league": "nfl",
+      "season_starting": 2024,
+      "protocol": "annual",
+      "n": 280,
+      "primary_log_loss": 0.5890283794394767,
+      "market_log_loss": 0.5900112210718799,
+      "primary_brier": 0.20100882967328224,
+      "market_brier": 0.2014181761085739,
+      "relative_log_loss_improvement": 0.001665801593769018,
+      "historical_development_exposed": true,
+      "paired_logloss_difference": -0.0009828416324030344,
+      "paired_logloss_ci95": [
+        -0.0019253420390634034,
+        -6.475018561068305e-05
+      ],
+      "week_blocks": 22
+    },
+    {
+      "league": "nfl",
+      "season_starting": 2025,
+      "protocol": "annual",
+      "n": 277,
+      "primary_log_loss": 0.6147318102306507,
+      "market_log_loss": 0.6119232229829618,
+      "primary_brier": 0.21440240100489502,
+      "market_brier": 0.2131328073500103,
+      "relative_log_loss_improvement": -0.004589770648019932,
+      "historical_development_exposed": true,
+      "paired_logloss_difference": 0.0028085872476888577,
+      "paired_logloss_ci95": [
+        0.0002461940615324165,
+        0.0053835700290865715
+      ],
+      "week_blocks": 22
+    },
+    {
+      "league": "ncaaf",
+      "season_starting": 2024,
+      "protocol": "annual",
+      "n": 740,
+      "primary_log_loss": 0.5543703823726397,
+      "market_log_loss": 0.5540956643676985,
+      "primary_brier": 0.18876329540491832,
+      "market_brier": 0.18863068608334832,
+      "relative_log_loss_improvement": -0.0004957952617345558,
+      "historical_development_exposed": true,
+      "paired_logloss_difference": 0.0002747180049411207,
+      "paired_logloss_ci95": [
+        -0.0003400337962018959,
+        0.0008758434337816304
+      ],
+      "week_blocks": 17
+    },
+    {
+      "league": "ncaaf",
+      "season_starting": 2025,
+      "protocol": "annual",
+      "n": 748,
+      "primary_log_loss": 0.5386087394027693,
+      "market_log_loss": 0.5385469987134486,
+      "primary_brier": 0.18172613823603045,
+      "market_brier": 0.18167809734361764,
+      "relative_log_loss_improvement": -0.00011464308494567451,
+      "historical_development_exposed": true,
+      "paired_logloss_difference": 6.174068932071206e-05,
+      "paired_logloss_ci95": [
+        -4.656759897278199e-05,
+        0.00017106079531535993
+      ],
+      "week_blocks": 17
+    }
+  ],
+  "monitoring": [
+    {
+      "league": "nfl",
+      "season_starting": 2026,
+      "n": 77,
+      "primary_equals_market": true,
+      "log_loss": 0.6600223067802711,
+      "brier": 0.23330074853757352,
+      "correct": 47,
+      "incorrect": 30
+    },
+    {
+      "league": "ncaaf",
+      "season_starting": 2026,
+      "n": 301,
+      "primary_equals_market": true,
+      "log_loss": 0.47484296692463795,
+      "brier": 0.1561530724452904,
+      "correct": 232,
+      "incorrect": 69
+    }
+  ],
+  "current_season_selection_or_ranking": false,
+  "heldout_qualification": "No primary policy passed both historical seasons and required uncertainty gates. Historical development has been repeatedly exposed; independent prospective confirmation remains required.",
+  "next_release": "V130",
+  "next_owner_execution": "PENDING",
+  "scope": "Sanitized owner aggregate and saved-output rescore; no private observations, individual forecasts, prices, component weights, active formulas, source paths or credentials."
+}

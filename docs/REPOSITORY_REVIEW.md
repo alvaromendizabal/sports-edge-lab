@@ -1,3 +1,36 @@
+# Repository review — V126 serving-lineage evidence
+
+The latest public preparation preserves the reviewed V126 revision and adds actual owner evidence for the selection-to-serving correction. The public mechanism checks matching policy hashes, historical selection boundaries, immutable availability clocks and separate benchmark/learned row counts. It does not claim a predictive advance or executable profit.
+
+Local validation passed 194 Python tests, including 40 new adversarial lineage/receipt checks; 1,710 current selector states including 450 monitoring-only states; and 48 retained selector states. Twenty notebook code cells executed on invented data or sanitized aggregate evidence, saved and reopened with HTML/SVG outputs. All 567 checked local links resolve. The current SVG was rendered and visually inspected. Semantic HTML checks verify captions, header scopes, labels, keyboard focus and a skip link; rendered-browser and accessibility audits remain unverified.
+
+The current page binds separately hashed V125 score evidence and V126 execution evidence. No V127 owner modeling result is implied. GitHub publication encountered an interrupted write with an unknown result; subsequent authenticated lookup did not find the attempted blob and the proposed branch remains absent. No PR, hosted CI or merge is claimed. The validated local revision is preserved for recovery. Earlier review records below remain dated history.
+
+---
+
+# Repository review — immutable selection and decision boundaries
+
+October 27, 2026. [Overview](../README.md) · [Case study](CASE_STUDY_SELECTION_TO_DECISION.md) · [Current explorer](current/index.html)
+
+This local reconstruction starts from published commit `023a7561a0d2be8dbad54225415b577a89780f5d`. It preserves earlier public implementations and adds explicit historical selection, monitoring-only current-season presentation and outcome-free decision replay. The previous unpublished local update was unavailable in the current workspace; this is a new reconstruction with its own commit identity.
+
+| Area | Observable change | Limit |
+|---|---|---|
+| Selection integrity | Complete historical panels, evidence clocks, frozen identity and forward-outcome rejection | Educational rule; private football selection recipe excluded |
+| Decision integrity | Native league week, complete universe, price/depth/fee constraints and separate settlement | Invented paper scenario; no exchange orders or realistic fill claim |
+| Evidence presentation | 9,756 model scorecards, 57 exact panels and full venue diagnostics | Aggregate-only; no full real-data training reproduction |
+| Forward discipline | 2026 monitoring uses stable identifiers, no outcome ranking or winner emphasis | Existing exposed evidence does not become prospective |
+| Reproducibility | New adversarial tests, deterministic page generation and executed notebook cells | Hosted Actions must be assessed for the exact published commit |
+| Scientific honesty | Both V125 historical gates failed; no promoted expert and no profit claim | A qualified predictive breakthrough remains unproved |
+
+Public repository quality and demonstrated forecasting superiority are separate. Independent reproduction with suitable real data, prospective confirmation, correct contract targets, execution-quality prices and external usability review remain open.
+
+Local verification completed: 154 public Python tests, including 55 new checks; 48 legacy and 1,710 current selector states; 18 executed notebook code cells saved and reopened with HTML/SVG output; and 573 local links with zero missing targets. The new SVG was rendered and visually inspected. Both generated pages match their source exports. These are local checks; hosted CI and a rendered browser/accessibility audit are separate, unverified claims.
+
+See the [machine-readable local verification receipt](evidence/2026-10-27-public-review.json).
+
+## Preserved dated repository reviews
+
 # Repository review — score distributions and recent outcomes
 
 October 26, 2026. [Overview](../README.md) · [Review guide](REVIEW_GUIDE.md) · [Current evidence](CURRENT_EVIDENCE.md) · [Review matrix](repository_review_matrix.json)
