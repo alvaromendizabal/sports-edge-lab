@@ -1,4 +1,4 @@
-# V130: preserve partial work when the numerical solver stops
+# V130 and V131: preserve partial work when numerical acceptance stops
 
 [Project](../README.md) · [Actual failure receipt](evidence/2026-10-28-v130-execution.json) · [Synthetic example](../examples/review_lab/numerical_recovery.py) · [Tests](../examples/review_lab/tests/test_numerical_recovery.py) · [Last completed research](CONSTRAINED_ENSEMBLE_FINDINGS.md)
 
@@ -38,4 +38,6 @@ This is not the private football objective, a reproduction of the private solver
 
 The companion accounting example keeps imported completions, new attempts, new completions and failures separate. It rejects duplicate attempts, changed input signatures under one unit identity, modified completion identities and an attempt to count imported work as newly fitted. Prior receipts are unchanged. Reuse requires an exact compatible input and artifact contract; a changed research definition requires a new unit identity.
 
-V131 is the next prepared recovery release. Its implementation and synthetic checks are preparation evidence. Only the subsequent actual owner return can establish accepted reuse, newly completed fits, the full historical study, new forecasts and end-to-end recovery. The failed V130 run remains failed even if its successor succeeds.
+V131 subsequently executed and also failed. It retained the six V130 accepted units and added seven accepted units in eight attempts. Six new completions used an optimizer; one was a mathematically certified zero-call endpoint. The former failed FBS unit completed on its remaining retry. A later NFL candidate reported `xtol` success but its independent bound, 3.305585687570622e-8, did not establish the unchanged 2e-8 tolerance. This does not prove actual suboptimality is above the limit. The failed payload was not accepted.
+
+All 2,968 owner software checks passed; the research remained incomplete and current serving was not reached. Thirteen units now survive across 15 cumulative attempts, with 11 units incomplete. The [V131 aggregate](evidence/2026-10-28-v131-execution.json) and [dashboard](dashboard/index.html) preserve these distinctions. Saved diagnostic arithmetic was independently checked; the protected training design and rejected candidate were not reconstructed. V132 owner recovery is pending. The [fault-isolation example](FAULT_ISOLATION.md) demonstrates a separate serving path on invented inputs; it is not evidence that actual V132 owner serving succeeded.

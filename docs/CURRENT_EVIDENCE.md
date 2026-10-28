@@ -1,10 +1,16 @@
-# Current evidence — V130 partial work, numerical failure
+# Current evidence — V131 executed, failed and preserved partial work
 
-October 28, 2026. [Incident and synthetic recovery](NUMERICAL_RECOVERY_INCIDENT.md) · [Actual V130 receipt](evidence/2026-10-28-v130-execution.json)
+October 28, 2026. [Interactive dashboard](dashboard/index.html) · [Actual V131 receipt](evidence/2026-10-28-v131-execution.json) · [Fault-isolation demonstration](FAULT_ISOLATION.md)
 
-V130 completed six real fits in seven attempts, then failed a line-search termination check during historical fitting. All 2,916 owner tests had passed. The complete 24-fit study, new historical qualification, new forecasts and owner full-depth economic audit did not run to completion. Earlier immutable evidence and MARKET policy remain preserved. V131 owner recovery is pending.
+V131 completed seven new training units in eight attempts: six numerical estimator fits and one certified zero-call endpoint. With the six V130 successes retained, the registered study now has 13 accepted units, 15 attempts and two preserved failures; 11 units remain incomplete. All 2,968 owner checks passed. The owner research run nevertheless failed.
 
-The following V129 and earlier evidence remains dated completed research; it is not a V130 success claim.
+The NFL historical conditional candidate reported `xtol` solver success, but its independent gap bound, 3.305585687570622e-8, exceeded the unchanged 2e-8 limit. Feasibility and objective nonregression passed. Rejection is correct: the bound did not establish tolerance, without proving actual suboptimality exceeds the limit. The failed candidate produced no accepted payload.
+
+Four saved FBS historical panels are available, with annual and fixed protocols in 2024 and 2025. Every new challenger loses to MARKET on both log loss and Brier in those panels. Conditional combinations modestly improve the plain global combination, but no complete qualification or NFL heldout panel exists. Numerical certification, predictive qualification and financial readiness remain separate.
+
+Serving and execution stages were not reached. There is no fresh V131 forecast, new 2026 monitoring, quote capture, paper event, promotion or order. The dashboard's 2026 rows explicitly retain their V129 vintage. V132 owner execution remains **PENDING**. Its public workflow demonstration is invented implementation evidence, not a real recovery success.
+
+The following V129 and earlier evidence remains dated completed research; it is not a V131 success claim.
 
 # Dated V129 completed research outcome
 

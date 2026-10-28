@@ -4,9 +4,11 @@ NFL and FBS forecasting built around a difficult engineering question: can a mod
 
 Designed and implemented by [Alvaro Mendizabal](https://github.com/alvaromendizabal). The project connects source acquisition, information-time contracts, native ML frameworks, chronological experiments, immutable forecasts and recoverable AWS execution. NFL, FBS, NBA and NCAA basketball maintain separate model evaluations while sharing provenance, recovery and data infrastructure.
 
-[Start the review](docs/REVIEW_GUIDE.md) · [Current explorer](docs/current/index.html) · [Current evidence](docs/CURRENT_EVIDENCE.md) · [Model card](docs/MODEL_CARD_CURRENT.md) · [System design](docs/SYSTEM_DESIGN.md) · [Run the example](examples/review_lab/README.md)
+[Results dashboard](docs/dashboard/index.html) · [Start the review](docs/REVIEW_GUIDE.md) · [Current explorer](docs/current/index.html) · [Current evidence](docs/CURRENT_EVIDENCE.md) · [Model card](docs/MODEL_CARD_CURRENT.md) · [System design](docs/SYSTEM_DESIGN.md) · [Run the example](examples/review_lab/README.md)
 
-Latest verified football owner execution, October 28: [V130 failed after six completed real fits and seven attempts](docs/evidence/2026-10-28-v130-execution.json), following 2,916 passing owner checks. A numerical line-search failure stopped the historical study before new forecasts or qualification. The [incident and recovery example](docs/NUMERICAL_RECOVERY_INCIDENT.md) separates solver status, independent numerical evidence, predictive qualification and honest partial-work accounting. V131 owner recovery remains pending; operational policy remains sportsbook MARKET.
+Latest verified football owner execution, October 28: [V131 failed after seven new completed units and eight new attempts](docs/evidence/2026-10-28-v131-execution.json), following 2,968 passing owner checks. Six new units used optimizer fits; one was a certified zero-call endpoint. The study retains 13 of 24 completed units across 15 cumulative attempts. An independent numerical bound rejected a solver-reported success; this does not prove its actual error exceeds the tolerance. No fresh forecasts or complete qualification were produced. V132 owner recovery is pending.
+
+The [interactive results dashboard](docs/dashboard/index.html) separates actual research, serving and paper-execution statuses, historical comparisons and retained 2026 monitoring. Its [executable fault-isolation example](docs/FAULT_ISOLATION.md) shows an invented reference slate still being served after research fails, while stale or future observations fail independently. MARKET-reference output is not a learned edge or an executable venue quote.
 
 Last fully completed football research, V129: [V129 completed 24 constrained ensemble fits and passed 2,856 owner checks](docs/evidence/2026-10-28-v129-execution.json). Independent saved-output rescoring verified 2,046 probability scorecards and 32 matched MARKET intervals. All four historical league/protocol qualification gates failed, so operational forecasts retain the sportsbook MARKET fallback. The [new study note](docs/CONSTRAINED_ENSEMBLE_FINDINGS.md) explains the small NFL 2024 gain, the 2025 reversal and why training safeguards did not establish heldout superiority. No promotion, order or realized profit is claimed.
 
@@ -21,6 +23,7 @@ Basketball status, October 27: B003 completed controlled opponent-adjustment exp
 
 | Inspect | What it demonstrates |
 |---|---|
+| [Results and execution dashboard](docs/dashboard/index.html) | Actual failure, exact historical panels, monitoring vintage and an interactive fault-isolation demonstration |
 | [Credential-free ML example](examples/review_lab/README.md) | Real fitting on invented data, chronological separation, exact-cohort scoring and zero-fit reentry |
 | [Executed review notebook](notebooks/engineering_review.ipynb) | Synthetic mechanisms beside separately validated owner-run aggregates and actual V126 serving lineage |
 | [Exact-panel explorer](docs/current/index.html) | 57 league / protocol / origin / target panels, full model filters, points and distribution metrics |
@@ -94,6 +97,9 @@ python -m examples.review_lab.serving_lineage
 python -m examples.review_lab.portfolio_evidence
 python -m examples.review_lab.prospective_state
 python -m examples.review_lab.numerical_recovery
+python -m examples.review_lab.fault_isolation
+python -m examples.review_lab.build_status_dashboard --check
+node examples/review_lab/tests/test_dashboard.cjs
 node examples/review_lab/tests/test_selectors.cjs
 node examples/review_lab/tests/test_current_selectors.cjs
 ```

@@ -45,12 +45,15 @@ jobs:
           python -m examples.review_lab.portfolio_evidence
           python -m examples.review_lab.prospective_state
           python -m examples.review_lab.numerical_recovery
+          python -m examples.review_lab.fault_isolation
+          python -m examples.review_lab.build_status_dashboard --check
       - name: Demonstrate scoped multi-parent recovery
         run: python -m examples.review_lab.provenance
       - name: Check every public evidence selector state
         run: |
           node examples/review_lab/tests/test_selectors.cjs
           node examples/review_lab/tests/test_current_selectors.cjs
+          node examples/review_lab/tests/test_dashboard.cjs
   executed-notebook:
     runs-on: ubuntu-24.04
     timeout-minutes: 5
@@ -72,4 +75,28 @@ jobs:
 
       - name: Execute and reopen basketball feature-release notebook
         run: python -m examples.basketball_contracts.execute_feature_notebook --output "${{ runner.temp }}/basketball-feature-release.ipynb"
+
+  dashboard-browser:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 8
+    steps:
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1
+        with:
+          persist-credentials: false
+      - name: Install pinned browser test dependency
+        run: |
+          npm install --prefix "${RUNNER_TEMP}/dashboard-browser" --ignore-scripts --no-audit --no-fund playwright@1.62.1
+          node "${RUNNER_TEMP}/dashboard-browser/node_modules/playwright/cli.js" install --with-deps chromium
+      - name: Render desktop and mobile dashboard and exercise real UI
+        env:
+          PLAYWRIGHT_MODULE_DIR: ${{ runner.temp }}/dashboard-browser/node_modules/playwright
+          DASHBOARD_SCREENSHOTS: ${{ runner.temp }}/dashboard-screenshots
+        run: node examples/review_lab/tests/test_dashboard_browser.cjs
+      - name: Preserve rendered public dashboard for visual review
+        uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02
+        with:
+          name: public-dashboard-screenshots
+          path: ${{ runner.temp }}/dashboard-screenshots/*.png
+          if-no-files-found: error
+          retention-days: 14
 
