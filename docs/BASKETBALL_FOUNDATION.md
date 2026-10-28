@@ -89,3 +89,8 @@ Sports Edge Lab's NFL/FBS research provides shared provenance, temporal evaluati
 The [public notebook](../notebooks/basketball_review.ipynb) reads only aggregate exports, visualizes controlled contrasts, calibration and matched coverage, and runs invented contract checks in a separate section. The validator regenerates the tables and checks exact cohort identity, pooled arithmetic, calibration-bin totals and reuse accounting. Neither the notebook nor CI fits a private model. Full private-model retraining remains outside the public publication boundary.
 
 [B004 executed on October 28 and stopped at the public-request ceiling](BASKETBALL_B004_EXECUTION.md). It completed six historical league/horizon scopes and six new score-correction units before the stop. None of the three challenger programs earned promotion. Its stopped status, unchanged incumbents, uncertainty diagnostics and accounting are recorded separately; B003 remains the latest fully completed real modeling release.
+
+## Saved MARKET coverage investigation
+
+B005 completed evidence recovery with zero new fits, inference, source requests or forecasts; B003 remains the latest fully completed real modeling release. The [new same-season cohort study](BASKETBALL_MARKET_COVERAGE.md) separates year confounding, baseline probability, calendar composition and common-support loss. Its [executed notebook](../notebooks/basketball_market_coverage.ipynb) presents descriptive uncertainty and retention together. No independent MARKET advantage, promotion or additional budget is established.
+
