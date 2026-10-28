@@ -1,10 +1,10 @@
-# Current model card — MARKET policy retained after incomplete V131 study
+# Current model card — V132 study complete; MARKET remains selected
 
-V131 executed and failed after seven new accepted units across eight new attempts, leaving 13 of 24 registered units complete cumulatively. An independent certificate rejected a solver-reported success. It did not complete predictive qualification or produce fresh current forecasts. The [dashboard](dashboard/index.html) keeps research, serving, numerical evidence and paper readiness separate. V132 owner recovery is pending.
+V132 completed the remaining 11 units and the full 24-unit conditional/robust study. All four historical qualification gates failed. It issued 83 timestamped MARKET-reference games before remaining research and completed conditional financial reporting, with zero qualified executions. The [dashboard](dashboard/index.html) separates numerical recovery, predictive qualification, reference serving and financial evidence. V133 owner execution is pending.
 
 [Current evidence](CURRENT_EVIDENCE.md) · [Selection contract](HISTORICAL_SELECTION_BOUNDARY.md) · [Serving case study](CASE_STUDY_SERVING_LINEAGE.md) · [Retained model cards](history/MODEL_CARD_THROUGH_V125.md)
 
-Latest verification, October 28: V129 completed 24 constrained ensemble fits; all four fixed/annual historical qualification gates failed. The [V129 findings](CONSTRAINED_ENSEMBLE_FINDINGS.md) report exact matched annual scores and monitoring separately. No new learned policy qualified. The serving architecture and older counts below retain their explicit V126 origin.
+Earlier completed V129 study, October 28: 24 constrained ensemble fits; all four fixed/annual historical qualification gates failed. The [V129 findings](CONSTRAINED_ENSEMBLE_FINDINGS.md) report exact matched annual scores and monitoring separately. No new learned policy qualified. The serving architecture and older counts below retain their explicit V126 origin.
 
 ## Intended use and current decision
 

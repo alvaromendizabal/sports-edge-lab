@@ -46,6 +46,7 @@ jobs:
           python -m examples.review_lab.prospective_state
           python -m examples.review_lab.numerical_recovery
           python -m examples.review_lab.fault_isolation
+          python -m examples.review_lab.recoverable_stages
           python -m examples.review_lab.build_status_dashboard --check
       - name: Demonstrate scoped multi-parent recovery
         run: python -m examples.review_lab.provenance
