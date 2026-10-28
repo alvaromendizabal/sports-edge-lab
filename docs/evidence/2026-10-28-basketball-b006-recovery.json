@@ -1,0 +1,90 @@
+{
+  "schema": "basketball_b006_recovery_public_v1",
+  "date": "2026-10-28",
+  "release": "B006",
+  "status": "SUCCESS_EVIDENCE_RECOVERY",
+  "completed_saved_historical_analysis": true,
+  "completed_modeling_release": false,
+  "latest_completed_real_modeling_release": "B003",
+  "b004_status": "STOPPED",
+  "new_real_fits": 0,
+  "new_synthetic_fits": 0,
+  "model_inferences": 0,
+  "new_external_requests": 0,
+  "new_forecasts": 0,
+  "new_orders": 0,
+  "cumulative_real_units": 238,
+  "modeling_run_counts": {
+    "accepted": 2,
+    "failed": 1,
+    "stopped": 1
+  },
+  "completed_evidence_recovery_runs": 2,
+  "integrity": {
+    "return_pins_verified": 128,
+    "embedded_source_pins_verified": 423,
+    "return_crc_verified": true,
+    "safe_paths": true,
+    "embedded_source_matches_delivered_executable": true,
+    "native_references_reconciled": 222,
+    "native_models_loaded_by_audit": 0,
+    "unchanged_predecessor_files": 111,
+    "local_report_links_verified": 70
+  },
+  "forecasts": {
+    "files": 18,
+    "versions": 330,
+    "unique_games": 61,
+    "all_original_versions_preserved": true,
+    "new_settlement_check": false,
+    "new_or_expanded_monitoring_cohort": false
+  },
+  "resources": {
+    "maximum_measured_active_floor_seconds": 4263.755538637,
+    "open_finalization_reservation_until_seconds": 4443.755538637,
+    "open_reservation_is_measured_spend": false,
+    "work_ceiling_seconds": 4500,
+    "finalization_only_seconds": 180,
+    "remaining_from_measured_floor_seconds": 236.24446136299957,
+    "remaining_conservative_work_seconds": 56.24446136299957,
+    "minimum_next_work_admission_seconds": 60,
+    "conservative_next_work_admissible": false,
+    "closed_finalization_receipt_in_return": false,
+    "previous_later_matching_live_charge_added_once_seconds": 4.66279356799987,
+    "counters": {
+      "download_bytes": 231226454,
+      "fit_attempts": 238,
+      "public_requests": 48,
+      "s3_gets": 11083,
+      "s3_pages": 24,
+      "s3_puts": 1754
+    },
+    "public_request_ceiling": 48,
+    "additional_budget_authorized": false,
+    "observed_cpus": 8,
+    "peak_sampled_process_tree_rss_bytes": 154058752,
+    "instance_type_verified": false,
+    "billing_price_verified": false
+  },
+  "notebook_provenance": {
+    "owner_return_preserves_inherited_notebook": true,
+    "new_B006_notebook_execution": false,
+    "local_pre_owner_tests": 493,
+    "local_tests_are_not_owner_tests": true
+  },
+  "scientific_status": {
+    "market_advantage_established": false,
+    "new_champion_promoted": false,
+    "canonical_player_repairs_admitted": 0,
+    "pregame_player_feature_rows_admitted": 0,
+    "current_outcomes_used_for_selection": false
+  },
+  "evidence_limit": "Authenticated returned bytes and ledger statements; not independent cloud infrastructure or billing telemetry.",
+  "budget_note": "The open reservation is not measured spending. Until exact matching closed live evidence is authenticated, 56.244 seconds of conservative headroom fails the unchanged 60-second work guard. No extra budget is activated.",
+  "rating": {
+    "before": 8.5,
+    "after": 8.5,
+    "scale": 10,
+    "reason": "Engineering auditability improves; no new independent MARKET or untouched predictive validation."
+  }
+}
