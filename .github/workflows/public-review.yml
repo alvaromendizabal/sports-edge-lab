@@ -21,6 +21,11 @@ jobs:
           python-version: ${{ matrix.python-version }}
       - name: Test chronology, matched scoring and recovery
         run: python -m unittest discover -s examples/review_lab/tests -v
+      - name: Test basketball identities and information-time contracts
+        run: |
+          python -m unittest discover -s examples/basketball_contracts/tests -v
+          python -m examples.basketball_contracts --output "${RUNNER_TEMP}/basketball-contracts.json"
+          python -m examples.basketball_contracts.evidence --check-results
       - name: Run and reuse the synthetic example
         shell: bash
         run: |
@@ -43,6 +48,8 @@ jobs:
         with:
           python-version: '3.12'
       - name: Install pinned public notebook dependencies
-        run: python -m pip install -r examples/review_lab/notebook-requirements.txt
+        run: python -m pip install -r examples/basketball_contracts/notebook-requirements.txt
       - name: Execute and validate persisted rich notebook outputs
         run: python -m examples.review_lab.execute_notebook --mode kernel --output "${{ runner.temp }}/engineering-review.ipynb"
+      - name: Execute and reopen basketball aggregate notebook
+        run: python -m examples.basketball_contracts.execute_notebook --output "${{ runner.temp }}/basketball-review.ipynb"

@@ -6,13 +6,16 @@ Designed and implemented by [Alvaro Mendizabal](https://github.com/alvaromendiza
 
 [Start the review](docs/REVIEW_GUIDE.md) · [Current evidence](docs/CURRENT_EVIDENCE.md) · [Model card](docs/MODEL_CARD_CURRENT.md) · [System design](docs/SYSTEM_DESIGN.md) · [Run the example](examples/review_lab/README.md)
 
-Latest execution, October 26: V120 completed 48 joint-distribution fits and a 240-cell comparison after 1,278 owner checks passed. Both historical candidate gates and both season-stability guards failed; stronger retained references remain in place. The [score-distribution case study](docs/CASE_STUDY_SCORE_DISTRIBUTIONS.md) follows the mechanism from coherent probabilities to an honest negative decision. The earlier [joint-feature experiment](docs/CASE_STUDY_JOINT_EVIDENCE.md) and [source failure and recovery](docs/CASE_STUDY_PROVENANCE.md) remain preserved.
+Latest published football execution, October 26: V120 completed 48 joint-distribution fits and a 240-cell comparison after 1,278 owner checks passed. Both historical candidate gates and both season-stability guards failed; stronger retained references remain in place. The [score-distribution case study](docs/CASE_STUDY_SCORE_DISTRIBUTIONS.md) follows the mechanism from coherent probabilities to an honest negative decision. The earlier [joint-feature experiment](docs/CASE_STUDY_JOINT_EVIDENCE.md) and [source failure and recovery](docs/CASE_STUDY_PROVENANCE.md) remain preserved.
+
+Basketball status, October 27: B002 completed the first real NBA, NCAA men's and NCAA women's historical evaluations: 172 native estimator units across six reconstructed tracks. Regularized strength/combined models led the full basketball cohorts; no model established an advantage over MARKET. The [basketball study](docs/BASKETBALL_FOUNDATION.md), [separate league leaderboards](docs/BASKETBALL_RESULTS.md), [model card](docs/BASKETBALL_MODEL_CARD.md) and [executed notebook](notebooks/basketball_review.ipynb) show the results, sparse matched-price evidence and 61-game early-outlook scope. B001's pre-modeling failure remains documented; B003 owner execution is pending.
 
 ## A five-minute technical review
 
 | Inspect | What it demonstrates |
 |---|---|
 | [Credential-free ML example](examples/review_lab/README.md) | Real fitting on invented data, chronological separation, exact-cohort scoring, leakage rejection and zero-fit reentry |
+| [Basketball study and public checks](docs/BASKETBALL_FOUNDATION.md) | Audited real season aggregates, separate league leaderboards and executable identity/time contracts using invented fixtures |
 | [Executed review notebook](notebooks/engineering_review.ipynb) | Reproducible synthetic results beside clearly separated, sanitized real-run aggregate evidence |
 | [Current evidence export](docs/evidence/2026-10-26-v120.json) | Three campaigns, multiple training origins, raw MARKET, controls, all four frameworks and retained references |
 | [System design](docs/SYSTEM_DESIGN.md) | Data/model/decision contracts, lineage, failure states and recovery |

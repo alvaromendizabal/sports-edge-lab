@@ -43,7 +43,7 @@ This is an educational implementation for an immutable local cache, not a sandbo
 
 ## Notebook
 
-The committed [notebook](../../notebooks/engineering_review.ipynb) has ten executed code cells, recorded using in-process IPython. It discovers the repository root, trains only on synthetic events, renders the aggregate score table separately, displays an inline SVG, demonstrates two-parent recovery and inspects the sanitized owner-run status. The final cell verifies that these claims remain distinct. The runner records its execution mode and reopens the saved notebook to validate execution order, rich formats and completion.
+The committed [notebook](../../notebooks/engineering_review.ipynb) has fifteen executed code cells, recorded using in-process IPython. It discovers the repository root, trains only on synthetic events, renders the aggregate score table separately, displays an inline SVG, demonstrates two-parent recovery and inspects the sanitized owner-run status. The final cell verifies that these claims remain distinct. The runner records its execution mode and reopens the saved notebook to validate execution order, rich formats and completion.
 
 ```bash
 python -m pip install -r examples/review_lab/notebook-requirements.txt
@@ -52,7 +52,7 @@ python -m examples.review_lab.execute_notebook --output /tmp/sports-edge-enginee
 
 A fresh independent environment is preferable for review. Package installation is optional; it is not needed by the core command or test suite.
 
-The default runner executes cells in-process and captures their rich outputs. Use `--mode kernel` for a separate Jupyter kernel, or open the notebook and run all cells normally. Separate-kernel execution was blocked by IPC socket restrictions in the authoring environment. The public-review workflow runs this mode independently on GitHub; its actual Actions result, not this local receipt, establishes hosted success.
+The default runner executes cells in-process and captures their rich outputs. Use `--mode kernel` for a separate Jupyter kernel, or open the notebook and run all cells normally. Separate-kernel execution was reverified during the basketball extension: all fifteen cells completed, rich outputs persisted, and save/reopen plus final-cell checks passed. The public-review workflow also runs this mode independently on GitHub; its actual Actions result establishes hosted success.
 
 ## Rebuild the evidence page
 
