@@ -62,3 +62,14 @@ The score fixture deliberately assigns slightly different invented probabilities
 
 The default aggregate export is B003; the immutable B002 export remains available for review. Validation reconciles new fits, predecessor imports and cumulative unique units; verifies per-season cohort identity and pooled scoring; and checks the calibration bins used in the notebook. Negative tests reject reused units counted as new work, a reset cumulative budget, mismatched game cohorts, altered chart totals and current-season selection leakage. Generated Markdown tables must exactly match the committed export in CI.
 
+
+
+## Historical odds recovery contract
+
+The [recovery planner and durable quota journal](../../docs/HISTORICAL_ODDS_RECOVERY.md) add content-verified archive reuse, exact cutoff eligibility, deterministic missing-observation batches, entitlement and quota gates, and interruption-safe request reservations. Every built-in observation and authorization receipt is invented; the example makes zero provider requests and does not verify an account.
+
+```bash
+python -m examples.basketball_contracts.recovery_plan
+```
+
+The planner accepts a documented normalized envelope, not native vendor JSON. Its local journal complements the production account-wide lease; it cannot replace shared quota coordination across collectors.

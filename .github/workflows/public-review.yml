@@ -26,6 +26,7 @@ jobs:
           python -m unittest discover -s examples/basketball_contracts/tests -v
           python -m examples.basketball_contracts --output "${RUNNER_TEMP}/basketball-contracts.json"
           python -m examples.basketball_contracts.evidence --check-results
+          python -m examples.basketball_contracts.recovery_plan
           python -m examples.basketball_contracts.evidence_market_coverage --check
           python -m examples.basketball_contracts.build_basketball_dashboard --check
           node examples/basketball_contracts/tests/test_dashboard.cjs
@@ -100,4 +101,5 @@ jobs:
           path: ${{ runner.temp }}/dashboard-screenshots/*.png
           if-no-files-found: error
           retention-days: 14
+
 
