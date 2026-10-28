@@ -5,6 +5,7 @@ import json
 from pathlib import Path
 from .fault_isolation import walkthrough
 from .recoverable_stages import walkthrough as recovery_walkthrough
+from .portable_recovery import walkthrough as portable_walkthrough
 ROOT = Path(__file__).resolve().parents[2]
 OUTPUT = ROOT / "docs/dashboard/index.html"
 
@@ -29,7 +30,8 @@ def payload():
                      "season": 2026, "games": row["n"], "policy": "annual", "origin": "retained_monitoring_aggregate",
                      "model": "MARKET reference (primary identical)", "win_logloss": row["log_loss"], "win_brier": row["brier"],
                      "correct": row["correct"], "incorrect": row["incorrect"], "ece10": None})
-    return {"latest": latest, "rows": rows, "recovery": recovery_walkthrough(),
+    return {"completed_research": latest, "owner": json.loads((ROOT / "docs/evidence/2026-10-28-v133-execution.json").read_text()),
+            "rows": rows, "recovery": recovery_walkthrough(), "portability": portable_walkthrough(),
             "scenarios": {s: walkthrough(s) for s in ("research_failure", "research_complete", "stale_reference", "future_reference")}}
 
 

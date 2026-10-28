@@ -1,3 +1,17 @@
+# Repository review — V133 context loss and portable recovery
+
+October 28, 2026. [Dashboard](dashboard/index.html) · [Actual incident](PORTABLE_RECOVERY_INCIDENT.md) · [Public mechanism](../examples/review_lab/portable_recovery.py)
+
+The latest owner execution failed after issuing 82 MARKET-reference games and before starting any of twelve new research units. Its 3,095 passing owner tests did not cover the selective-import context loss. The public status now separates preserved V132 scientific evidence, V133 serving, an incomplete financial stage and return-only dependency gaps. It does not claim a new modeling failure, predictive improvement or fresh validated allocation.
+
+The new invented-data mechanism verifies transitive artifact closure before export, pins original decision bytes independently of release transport, rejects an empty-lock reconstruction, and checks complete or explicitly selected recovery scopes. Its limitations include caller-owned dependency declarations, externally held trust anchors and a trusted quiescent local filesystem. Stage readiness is distinct from actual execution.
+
+Local validation passed 334 public-review tests (including 26 new portable-recovery tests), 145 basketball tests, 72 dashboard filter states and nine scenario/recovery/portability interactions. The engineering notebook executed and reopened all 24 code cells with persisted HTML/SVG outputs. The hosted workflow separately runs four notebooks in independent kernels and renders the dashboard in Chromium at desktop and mobile sizes; its result must be assessed at the published commit. Local browser execution was unavailable because the Chromium binary was not installed.
+
+This revision starts from main after basketball PR #25, preserving its historical-odds recovery module, 56 new checks, documentation and workflow step. Prior dated reviews follow unchanged. Public engineering improvements and a valid market-beating football model remain separate claims.
+
+---
+
 # Repository review — V126 serving-lineage evidence
 
 The latest public preparation preserves the reviewed V126 revision and adds actual owner evidence for the selection-to-serving correction. The public mechanism checks matching policy hashes, historical selection boundaries, immutable availability clocks and separate benchmark/learned row counts. It does not claim a predictive advance or executable profit.
