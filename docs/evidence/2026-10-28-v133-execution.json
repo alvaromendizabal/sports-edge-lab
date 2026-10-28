@@ -1,0 +1,76 @@
+{
+  "schema": "sports-edge-lab.public-owner-v133.v1",
+  "release": "V133",
+  "status": "FAILED",
+  "failure_class": "IMMUTABLE_ORIGINAL_DECISION_CONTEXT_LOSS",
+  "failed_stage": "financial_evidence",
+  "failure_boundary": "The original proof guard rejected changed whole-week context during selective parent recovery. This was not a numerical failure.",
+  "owner_tests_passed": 3095,
+  "mandatory_owner_notebook_checks_passed": 4,
+  "registered_extension_units": 12,
+  "extension_completed_units": 0,
+  "extension_attempts": 0,
+  "extension_status": "NOT_REACHED",
+  "extension_predictive_qualification": "NOT_EVALUATED",
+  "retained_original_units": 24,
+  "retained_original_attempts": 26,
+  "retained_research_evidence_release": "V132",
+  "new_model_comparison_panels": 0,
+  "serving": {
+    "unique_market_reference_games": 82,
+    "issued_at": "2026-10-28T21:41:26.275464Z",
+    "native_week_counts": {
+      "NFL_2026_week_8": 14,
+      "NFL_2026_week_9": 14,
+      "FBS_2026_week_9": 54
+    },
+    "qualified_learned_forecasts": 0,
+    "remaining_current_week_games_covered": 68,
+    "next_nfl_week_unresolved_event_identity": 1,
+    "dated_snapshot_only": true
+  },
+  "financial": {
+    "new_report_status": "NOT_COMPLETED",
+    "actual_orders": 0,
+    "new_qualified_executions": 0,
+    "realized_profit": null,
+    "last_completed_report_release": "V132",
+    "inherited_conditional_net_usd": 2.4,
+    "inherited_market_control_net_usd": 2.4,
+    "inherited_result_is_actual_profit": false,
+    "current_selective_allocation_not_reestablished": true
+  },
+  "return_dependency_audit": [
+    {
+      "stage": "data_integrity",
+      "receipt_required_files": 335,
+      "present_verified_files": 322,
+      "missing_files": 13,
+      "return_only_closure_complete": false
+    },
+    {
+      "stage": "forecasts",
+      "receipt_required_files": 2453,
+      "present_verified_files": 148,
+      "missing_files": 2305,
+      "return_only_closure_complete": false
+    },
+    {
+      "stage": "venue_capture",
+      "receipt_required_files": 380,
+      "present_verified_files": 380,
+      "missing_files": 0,
+      "return_only_closure_complete": true
+    }
+  ],
+  "portability_boundary": "These counts compare each receipt with the returned archive. Some omitted dependencies may exist in the owner workspace or authenticated parents. A completed on-host receipt alone does not establish return-only recovery.",
+  "resources": {
+    "supervised_seconds": 565.229263464,
+    "worker_seconds": 526.118623008,
+    "peak_rss_bytes": 4149731328,
+    "workspace_bytes": 4023886158,
+    "return_bytes": 178457564
+  },
+  "next_owner_execution": "PENDING",
+  "publication_boundary": "Only sanitized aggregate owner facts. No individual football predictions, venue prices, private models, paid data, source paths or private hashes."
+}

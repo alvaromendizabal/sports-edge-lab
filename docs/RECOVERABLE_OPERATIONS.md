@@ -50,3 +50,8 @@ node examples/review_lab/tests/test_dashboard.cjs
 The dashboard embeds the actual output of three fresh invented journal invocations. Its execution selector shows stage status, new work and content identity; it never presents synthetic probabilities as current football forecasts. Hosted Chromium checks the new controls on desktop and mobile. The notebook executes and reopens rich outputs.
 
 The public V132 export contains 50 whitelisted aggregate scorecards and measured owner status. Model internals, raw/paid observations, individual forecasts, private source hashes and active configuration are excluded. Historical data remain repeatedly exposed; 2026 scores are reconstructed post-freeze monitoring and cannot select a model. The editorial assessment remains 8.94/10.
+
+
+## Subsequent V133 portability failure
+
+The actual V133 owner run later failed during paper-proof import, after fresh reference serving but before new research. An omitted original context changed whole-week decision locks; the immutable proof guard correctly rejected it. Some completed stage receipts also referred to dependencies absent from the returned ZIP. See the [incident and portable-closure example](PORTABLE_RECOVERY_INCIDENT.md). The successful synthetic journal above does not prove that the private return was complete.

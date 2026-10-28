@@ -123,4 +123,11 @@ The [workflow contract](../../docs/FAULT_ISOLATION.md) documents snapshot isolat
 
 ## Persistent recovery across invocations
 
-The [eight-stage journal](recoverable_stages.py) uses immutable local receipts on invented inputs. It preserves forecast/finance identities after research failure, executes only unfinished stages on resume, and reenters with zero work. Run `python -m examples.review_lab.recoverable_stages`; see [contracts and limits](../../docs/RECOVERABLE_OPERATIONS.md). The latest dashboard separately records actual V132 completion, failed predictive qualification, 83 issued MARKET references and zero qualified financial executions.
+The [eight-stage journal](recoverable_stages.py) uses immutable local receipts on invented inputs. It preserves forecast/finance identities after research failure, executes only unfinished stages on resume, and reenters with zero work. Run `python -m examples.review_lab.recoverable_stages`; see [contracts and limits](../../docs/RECOVERABLE_OPERATIONS.md). The retained V132 evidence records completed research and failed predictive qualification. The latest dashboard now separately records the actual V133 paper-import failure, 82 fresh MARKET references and twelve unattempted research units.
+
+
+## Portable recovery after context loss
+
+The [portable recovery example](portable_recovery.py) verifies transitive file dependencies before export and preserves exact original decision proofs across release transport. It demonstrates a sparse return with intact forecasts but missing financial context, a complete export, and rejection of empty-lock reconstruction. All files and decisions are invented. Read the [actual V133 incident and trust limits](../../docs/PORTABLE_RECOVERY_INCIDENT.md).
+
+Run `python -m examples.review_lab.portable_recovery`. The notebook adds this walkthrough before its final persistence check. Hosted CI executes the same example and the full public test suite; stage readiness does not imply a model fit or qualified trade.
