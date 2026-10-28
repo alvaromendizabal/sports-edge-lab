@@ -1,0 +1,119 @@
+{
+  "schema": "sports-edge-lab.public-owner-v134.v1",
+  "release": "V134",
+  "status": "SUCCESS",
+  "extension_status": "COMPLETE",
+  "registered_extension_units": 12,
+  "extension_completed_units": 12,
+  "extension_attempts": 12,
+  "retained_original_units": 24,
+  "retained_original_attempts": 26,
+  "combined_completed_units": 36,
+  "combined_attempts": 38,
+  "preserved_failed_attempts": 2,
+  "historical_gates_evaluated": 4,
+  "historical_gates_passed": 0,
+  "extension_predictive_qualification": "FAILED_ALL_FOUR_GATES",
+  "operational_policy": "MARKET reference",
+  "automatic_promotions": 0,
+  "owner_tests_passed": 3158,
+  "owner_test_modules": 235,
+  "mandatory_owner_notebook_checks_passed": 4,
+  "serving": {
+    "unique_market_reference_games": 89,
+    "issued_at": "2026-10-28T22:41:26.368680Z",
+    "native_week_counts": {
+      "NFL_2026_week_8": 14,
+      "NFL_2026_week_9": 15,
+      "FBS_2026_week_9": 54,
+      "FBS_2026_week_10": 6
+    },
+    "remaining_current_week_games_covered": 68,
+    "qualified_learned_forecasts": 0,
+    "dated_snapshot_only": true,
+    "point_forecast_rows": 81,
+    "extension_research_rows": 162,
+    "total_issued_rows": 9049,
+    "row_count_is_not_unique_game_count": true
+  },
+  "financial": {
+    "new_report_status": "VERIFIED_COMPLETE",
+    "actual_orders": 0,
+    "actual_fills": 0,
+    "qualified_executions": 0,
+    "selective_allocation_usd": 0,
+    "unallocated_shared_budget_usd": 500,
+    "inherited_conditional_net_usd": 2.4,
+    "inherited_market_control_net_usd": 2.4,
+    "inherited_result_is_actual_profit": false,
+    "realized_profit": null
+  },
+  "return_dependency_audit": [
+    {
+      "stage": "data_integrity",
+      "declared_outputs": 336,
+      "verified_outputs": 336,
+      "missing_outputs": 0,
+      "complete": true
+    },
+    {
+      "stage": "financial_evidence",
+      "declared_outputs": 865,
+      "verified_outputs": 865,
+      "missing_outputs": 0,
+      "complete": true
+    },
+    {
+      "stage": "forecasts",
+      "declared_outputs": 155,
+      "verified_outputs": 155,
+      "missing_outputs": 0,
+      "complete": true
+    },
+    {
+      "stage": "report_forecasts_22ac9ef1ea7bd4ca",
+      "declared_outputs": 3,
+      "verified_outputs": 3,
+      "missing_outputs": 0,
+      "complete": true
+    },
+    {
+      "stage": "report_pre_research_eef0cac80cffaa40",
+      "declared_outputs": 3,
+      "verified_outputs": 3,
+      "missing_outputs": 0,
+      "complete": true
+    },
+    {
+      "stage": "research_report",
+      "declared_outputs": 1,
+      "verified_outputs": 1,
+      "missing_outputs": 0,
+      "complete": true
+    },
+    {
+      "stage": "venue_capture",
+      "declared_outputs": 380,
+      "verified_outputs": 380,
+      "missing_outputs": 0,
+      "complete": true
+    }
+  ],
+  "authentication": {
+    "return_payloads_verified": 1894,
+    "source_payloads_verified": 1714,
+    "all_declared_stage_outputs_verified": true
+  },
+  "resources": {
+    "supervised_seconds": 681.752985893,
+    "worker_seconds": 641.5813602210001,
+    "peak_rss_bytes": 4133732352,
+    "workspace_bytes": 4626984219,
+    "return_bytes": 246877339,
+    "test_seconds": 187.40122982000003,
+    "new_fit_receipt_seconds_sum": 0.49882238899954245,
+    "timing_boundary": "Fit-receipt durations exclude data preparation, scoring and orchestration; not exclusive CPU time."
+  },
+  "next_owner_execution": "PENDING",
+  "publication_boundary": "Sanitized aggregate owner facts only. Individual predictions, venue prices, private models, parameters, paid data and private source identities are excluded."
+}

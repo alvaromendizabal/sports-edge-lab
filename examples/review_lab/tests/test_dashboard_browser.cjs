@@ -39,7 +39,7 @@ const {chromium}=require(process.env.PLAYWRIGHT_MODULE_DIR||'playwright');
   assert.equal(await page.locator('#portable-output tbody tr').count(),4);
   await page.getByRole('button',{name:'2 · Complete export',exact:true}).click();
   assert.doesNotMatch(await page.locator('#portable-output').innerText(),/BLOCKED/);
-  assert.match(await page.locator('.hero-note').innerText(),/V133 owner: FAILED/);
+  assert.match(await page.locator('.hero-note').innerText(),/V134 owner: SUCCESS/);
   await page.selectOption('#release','V132');await page.selectOption('#league','FBS');await page.selectOption('#season','2024');
   await page.locator('#metric').focus();await page.keyboard.press('ArrowDown');
   assert.equal(await page.locator('#metric').inputValue(),'win_brier');
