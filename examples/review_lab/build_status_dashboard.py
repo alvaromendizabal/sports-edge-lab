@@ -31,7 +31,7 @@ def payload():
 
 def render():
     data = json.dumps(payload(), sort_keys=True, separators=(",", ":"), allow_nan=False).replace("<", "\\u003c")
-    template = (Path(__file__).with_name("dashboard.html")).read_text()
+    template = (Path(__file__).with_name("dashboard.html.template")).read_text()
     return template.replace("__DASHBOARD_DATA__", data)
 
 
