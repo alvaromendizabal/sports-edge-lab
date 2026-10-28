@@ -11,11 +11,11 @@ import math
 from pathlib import Path
 from typing import Any
 
-EVIDENCE_PATH = Path(__file__).resolve().parents[2] / "docs/evidence/2026-10-27-basketball-b002.json"
+EVIDENCE_PATH = Path(__file__).resolve().parents[2] / "docs/evidence/2026-10-27-basketball-b003.json"
 
 
 def validate_evidence(value: dict[str, Any]) -> None:
-    if value.get("schema") != "sports-edge-public-basketball-evidence-v1":
+    if value.get("schema") not in {"sports-edge-public-basketball-evidence-v1", "sports-edge-public-basketball-evidence-v2"}:
         raise ValueError("unknown aggregate evidence schema")
     policy = value["evaluation"]
     if (policy["historical_validation_seasons"] != [2025, 2026]
@@ -24,7 +24,7 @@ def validate_evidence(value: dict[str, Any]) -> None:
             or policy["current_outcomes_used_for_selection_or_fitting"] is not False):
         raise ValueError("historical selection and protected monitoring boundary changed")
     if policy["market_advantage_established"] is not False:
-        raise ValueError("B002 did not establish MARKET advantage")
+        raise ValueError("these owner runs did not establish MARKET advantage")
     owner = value["owner_execution"]
     counts = [owner["completed_native_fit_units"], *owner["fit_units_by_kind"].values(), *owner["fit_units_by_league"].values()]
     if any(type(n) is not int or n < 0 for n in counts):
@@ -68,6 +68,9 @@ def validate_evidence(value: dict[str, Any]) -> None:
             if group in cohorts and cohorts[group] != identity:
                 raise ValueError("comparison recipes do not share an exact aggregate cohort identity")
             cohorts[group] = identity
+    if value["schema"].endswith("v2"):
+        from .evidence_v2 import validate_extended
+        validate_extended(value)
 
 
 def load_evidence(path: Path = EVIDENCE_PATH) -> dict[str, Any]:
@@ -98,6 +101,9 @@ def selected_season_rows(value: dict[str, Any], horizon: int = 60) -> list[dict[
 def results_markdown(value: dict[str, Any]) -> str:
     """Render the public tables from the same validated aggregate export."""
     validate_evidence(value)
+    if value["schema"].endswith("v2"):
+        from .evidence_v2 import render_results
+        return render_results(value)
     names = {"nba":"NBA", "ncaam":"NCAA men", "ncaaw":"NCAA women"}
     recipes = {"basketball_strength":"Strength · regularized logistic", "basketball_style":"Style · regularized logistic",
                "basketball_combined":"Combined · regularized logistic", "basketball_lightgbm":"Combined · LightGBM",

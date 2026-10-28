@@ -10,11 +10,13 @@ class BasketballNotebookTests(unittest.TestCase):
             {'cell_type':'code','execution_count':1,'outputs':[
                 {'output_type':'display_data','data':{'text/html':'<table></table>'}},
                 {'output_type':'display_data','data':{'image/svg+xml':'<svg/>'}},
+                {'output_type':'display_data','data':{'application/vnd.plotly.v1+json':{'data':[],'layout':{}}}},
+                {'output_type':'display_data','data':{'application/vnd.plotly.v1+json':{'data':[],'layout':{}}}},
                 {'output_type':'display_data','data':{'application/vnd.plotly.v1+json':{'data':[],'layout':{}}}}]},
             {'cell_type':'code','execution_count':2,'outputs':[{'output_type':'stream','text':'PUBLIC_REVIEW_COMPLETE\n'}]}]}
 
     def test_saved_plotly_and_later_cell_verified(self):
-        self.assertEqual(verify_basketball_outputs(self.notebook)['native_inline_plotly_outputs'],1)
+        self.assertEqual(verify_basketball_outputs(self.notebook)['native_inline_plotly_outputs'],3)
 
     def test_missing_native_plotly_rejected(self):
         self.notebook['cells'][0]['outputs'].pop()

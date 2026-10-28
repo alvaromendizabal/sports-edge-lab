@@ -1,12 +1,12 @@
 # Executable basketball contracts
 
-[Project](../../README.md) · [Study](../../docs/BASKETBALL_FOUNDATION.md) · [Real aggregate evidence](../../docs/evidence/2026-10-27-basketball-b002.json) · [Notebook](../../notebooks/basketball_review.ipynb) · [Contracts](contracts.py) · [Tests](tests/test_contracts.py)
+[Project](../../README.md) · [Study](../../docs/BASKETBALL_FOUNDATION.md) · [Real aggregate evidence](../../docs/evidence/2026-10-27-basketball-b003.json) · [Notebook](../../notebooks/basketball_review.ipynb) · [Contracts](contracts.py) · [Tests](tests/test_contracts.py)
 
 This small, standard-library example makes the basketball extension's information-time and identity rules inspectable. It covers NBA, NCAA Division I men's basketball and NCAA Division I women's basketball separately. Every input and numerical result in the walkthrough is invented. It performs zero model fits, network calls, paid requests or orders.
 
 ## Owner execution status
 
-The first owner attempt, B001, failed during MARKET identity reconciliation before modeling. B002 then completed 172 native estimator units and six reconstructed historical tracks. Its 110 issued forecast rows cover 61 games, all as early outlooks before the declared locks. No MARKET advantage, qualified current prices, settled prospective scores or profit was established. B003 owner execution is pending. These audited aggregate facts are separate from the unchanged invented score examples below.
+B001 failed before modeling and B002 completed the first 172 native estimator units. B003 then completed 60 new units, imported 156 exact compatible predecessor units and evaluated controlled opponent-adjustment representations. The cumulative unique count is 232. College proper scores improved while calibration weaknesses remained; expanded MARKET comparisons still established no qualified advantage. B003 checked 110 prior immutable forecasts, all pending, and issued 110 later versions for the same 61 games. B004 owner execution remains pending. These facts are separate from the invented examples below.
 
 ## Run the example
 
@@ -24,7 +24,7 @@ The separate [evidence module](evidence.py) validates the committed real aggrega
 
 ## Executed basketball notebook
 
-The [notebook](../../notebooks/basketball_review.ipynb) displays the real aggregate season results, a native inline Plotly figure with an SVG fallback, and the invented contract walkthrough in a separate section. It makes zero model fits and network calls. Its executor saves, reopens and verifies a cell after the figure. A public CI job repeats separate-kernel execution.
+The [notebook](../../notebooks/basketball_review.ipynb) displays the real aggregate season results, three native inline Plotly figures covering controlled contrasts, calibration and matched coverage, with an SVG fallback, and the invented contract walkthrough in a separate section. It makes zero model fits and network calls. Its executor saves, reopens and verifies a cell after the figure. A public CI job repeats separate-kernel execution.
 
 ```bash
 python -m pip install -r examples/basketball_contracts/notebook-requirements.txt
@@ -57,3 +57,7 @@ The source example intentionally lacks publication evidence. It remains unknown 
 This is a public contract demonstration, not the production pipeline. It does not implement acquisition entitlements, a canonical NCAA denominator, real team aliases, possession features, calibration, model training, forecast issuance or sportsbook execution. The private owner workflow must provide evidence for those stages. An official classification is still needed before an exceptional NBA competition or uncertain NCAA opponent belongs to a primary cohort.
 
 The score fixture deliberately assigns slightly different invented probabilities to two comparators. Their resulting numerical ordering demonstrates the scoring API only. It is not an experiment, an improvement claim or evidence of market advantage.
+
+## Aggregate evidence checks
+
+The default aggregate export is B003; the immutable B002 export remains available for review. Validation reconciles new fits, predecessor imports and cumulative unique units; verifies per-season cohort identity and pooled scoring; and checks the calibration bins used in the notebook. Negative tests reject reused units counted as new work, a reset cumulative budget, mismatched game cohorts, altered chart totals and current-season selection leakage. Generated Markdown tables must exactly match the committed export in CI.

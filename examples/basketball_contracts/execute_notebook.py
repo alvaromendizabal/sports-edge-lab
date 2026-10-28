@@ -14,8 +14,8 @@ def verify_basketball_outputs(notebook: dict) -> dict:
     result = verify_outputs(notebook)
     outputs = [o for c in notebook['cells'] if c['cell_type']=='code' for o in c.get('outputs',[])]
     plotly_count = sum('application/vnd.plotly.v1+json' in o.get('data',{}) for o in outputs)
-    if plotly_count != 1:
-        raise ValueError('expected one persisted native inline Plotly figure')
+    if plotly_count != 3:
+        raise ValueError('expected three persisted native inline Plotly figures')
     metadata = notebook.get('metadata',{}).get('sports_edge_execution',{})
     if metadata.get('model_fits') != 0 or metadata.get('private_data_loaded') is not False:
         raise ValueError('aggregate notebook must not claim private modeling')
