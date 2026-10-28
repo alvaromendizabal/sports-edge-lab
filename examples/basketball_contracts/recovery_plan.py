@@ -207,13 +207,23 @@ class Catalog:
             "normalized_observations": sum(len(v["records"]) for v in self._objects.values()),
             "scope_receipt_sha256": self.scope_receipt_sha256}
 
-    def request_already_captured(self, request: SnapshotRequest) -> bool:
+    def captured_request_receipts(self, request: SnapshotRequest) -> list[dict]:
+        """Return deterministic original receipt pins for an exact or broader query.
+
+        A response can be authentic and still contain no usable observation.
+        Keep that distinction in the gap report so restart does not repurchase it.
+        """
+        matches = []
         for receipt in self._receipts.values():
             saved = receipt["request"]
             if (saved["sport_key"] == request.sport_key and iso(saved["at"]) == request.at
                 and set(saved["markets"]) >= set(request.markets) and set(saved["regions"]) >= set(request.regions)):
-                return True
-        return False
+                matches.append({"receipt_sha256": digest(receipt), "content_sha256": receipt["sha256"],
+                    "request_sha256": receipt["request_sha256"], "captured_at": receipt["captured_at"]})
+        return sorted(matches, key=lambda row: row["receipt_sha256"])
+
+    def request_already_captured(self, request: SnapshotRequest) -> bool:
+        return bool(self.captured_request_receipts(request))
 
     def usable(self, need: Need, market: str, region: str, *, freshness_seconds: int):
         integer(freshness_seconds, positive=True)
@@ -330,9 +340,16 @@ def plan_recovery(needs: Iterable[Need], catalog: Catalog, capabilities: Iterabl
                     continue
                 seen_cells.add(cell_key)
                 hits = catalog.usable(need, market, region, freshness_seconds=freshness_seconds)
+                exact_request = SnapshotRequest(SPORT_KEYS[need.league], need.cutoff, (market,), (region,))
+                captured = catalog.captured_request_receipts(exact_request)
                 cell = {"need_sha256": need.identity, "event_id": need.event_id, "league": need.league,
                     "market": market, "region": region, "status": "cached_usable" if hits else "missing_usable_observation",
-                    "observations": hits, "binding_receipt_sha256": need.binding_receipt_sha256}
+                    "observations": hits, "binding_receipt_sha256": need.binding_receipt_sha256,
+                    "cutoff": need.cutoff, "inventory_scope_sha256": catalog.scope_receipt_sha256,
+                    "required_request_sha256": exact_request.identity, "captured_request_receipts": captured,
+                    "gap_provenance": ("usable_archived_observation" if hits else
+                        "captured_request_without_eligible_observation" if captured else
+                        "request_not_found_in_declared_inventory")}
                 cells.append(cell)
                 if not hits:
                     key = (SPORT_KEYS[need.league], need.cutoff, region)

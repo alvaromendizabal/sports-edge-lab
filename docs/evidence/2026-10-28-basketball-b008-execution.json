@@ -1,0 +1,65 @@
+{
+  "blockers": {
+    "acquisition": "Relevant archive inventory remained incomplete; no provider credential or probe was needed to reach this gate.",
+    "global_time_or_public_limit_caused_stop": false,
+    "research": "A shared preflight stopped at the first insufficient calibration fold before any fit, preventing later eligible folds from reaching the model stage."
+  },
+  "continuation": {
+    "current_season_outcomes_excluded_from_selection": true,
+    "independent_fold_preflight": true,
+    "new_protocol_requires_distinct_experiment_identity": true,
+    "no_prediction_or_profit_improvement_established": true,
+    "owner_execution_status": "PENDING",
+    "retains_original_consent_and_window": true,
+    "same_scope_requires_no_renewed_allowance": true,
+    "support_thresholds_cannot_be_relaxed_to_relabel_an_old_experiment": true
+  },
+  "cumulative_real_estimator_units": 238,
+  "evidence_basis": "Authenticated owner return and saved receipts; sanitized aggregate export. No new owner execution was performed to prepare this page.",
+  "forecasts": {
+    "archived_versions": 440,
+    "new_game_identities": 0,
+    "new_orders": 0,
+    "new_versions": 110,
+    "previous_versions": 330,
+    "prospective_scores_available": false,
+    "settled_versions": 0,
+    "unique_games": 61
+  },
+  "latest_completed_real_modeling_release": "B003",
+  "new_fit_attempts": 0,
+  "new_public_requests": 8,
+  "new_real_fits": 0,
+  "original_paid_approval_recorded": true,
+  "original_research_approval_recorded": true,
+  "paid_requests": 0,
+  "portfolio_assessment": {
+    "after": 8.5,
+    "basis": "Engineering evidence improved; no new predictive or economic qualification established.",
+    "before": 8.5,
+    "scale": 10
+  },
+  "provider_credits_charged_or_reserved": 0,
+  "provider_live_quota_verified": false,
+  "publication_boundary": "No individual forecasts, private source locations, accounts, credentials, model assets, feature formulas or tuning parameters.",
+  "release": "B008",
+  "resources": {
+    "additional_B009_allowance_granted": false,
+    "conservative_remaining_seconds_before_later_charges": 3082.229741279,
+    "cumulative_active_seconds_limit": 8100,
+    "cumulative_public_request_limit": 168,
+    "cumulative_public_requests_used": 56,
+    "exact_live_closing_receipt_in_uploaded_return": false,
+    "maximum_returned_measured_floor_seconds": 4839.77416405,
+    "open_finalization_reservation_until_seconds": 5017.770258721,
+    "public_requests_remaining_before_later_charges": 112,
+    "reservation_is_measured_spend": false
+  },
+  "return_sha256": "8679334d5f4c04dc960dd6b3e49d2df152587ca2b1987430c5f141910917417c",
+  "schema": "public.basketball.execution.v1",
+  "source_sha256": "015e3d0abe047f1cfe3079e453786ee6a890be3eef6deff785d3e661354cf3e2",
+  "status": "BLOCKED_DATA_CONTRACT",
+  "synthetic": false,
+  "verified_date": "2026-10-28",
+  "verified_payload_pins": 11105
+}
