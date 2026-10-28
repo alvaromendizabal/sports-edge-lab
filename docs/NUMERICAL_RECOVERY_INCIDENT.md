@@ -1,4 +1,4 @@
-# V130 and V131: preserve partial work when numerical acceptance stops
+# V130–V132: preserve failures and verify eventual recovery
 
 [Project](../README.md) · [Actual failure receipt](evidence/2026-10-28-v130-execution.json) · [Synthetic example](../examples/review_lab/numerical_recovery.py) · [Tests](../examples/review_lab/tests/test_numerical_recovery.py) · [Last completed research](CONSTRAINED_ENSEMBLE_FINDINGS.md)
 
@@ -40,4 +40,13 @@ The companion accounting example keeps imported completions, new attempts, new c
 
 V131 subsequently executed and also failed. It retained the six V130 accepted units and added seven accepted units in eight attempts. Six new completions used an optimizer; one was a mathematically certified zero-call endpoint. The former failed FBS unit completed on its remaining retry. A later NFL candidate reported `xtol` success but its independent bound, 3.305585687570622e-8, did not establish the unchanged 2e-8 tolerance. This does not prove actual suboptimality is above the limit. The failed payload was not accepted.
 
-All 2,968 owner software checks passed; the research remained incomplete and current serving was not reached. Thirteen units now survive across 15 cumulative attempts, with 11 units incomplete. The [V131 aggregate](evidence/2026-10-28-v131-execution.json) and [dashboard](dashboard/index.html) preserve these distinctions. Saved diagnostic arithmetic was independently checked; the protected training design and rejected candidate were not reconstructed. V132 owner recovery is pending. The [fault-isolation example](FAULT_ISOLATION.md) demonstrates a separate serving path on invented inputs; it is not evidence that actual V132 owner serving succeeded.
+All 2,968 owner software checks passed; the research remained incomplete and current serving was not reached. Thirteen units now survive across 15 cumulative attempts, with 11 units incomplete. The [V131 aggregate](evidence/2026-10-28-v131-execution.json) and [dashboard](dashboard/index.html) preserve these distinctions. Saved diagnostic arithmetic was independently checked; the protected training design and rejected candidate were not reconstructed. V132 subsequently completed the remaining 11 units; the verified update follows below. The [fault-isolation example](FAULT_ISOLATION.md) demonstrates a separate serving path on invented inputs; it is not evidence that actual V132 owner serving succeeded.
+
+
+## V132: actual numerical completion, no predictive promotion
+
+The authenticated V132 owner completed 11 additional units in 11 attempts, using ten optimizer calls and one certified zero-call endpoint. The full registered family now has 24 accepted units / 26 attempts, with both earlier failures intact. All 3,025 owner checks and four required notebook checks passed.
+
+The independent audit replayed 22 saved certificate calculations exactly. Maximum newly accepted guarded gap was 1.3883729284283598e-8, within the unchanged 2e-8 limit. These are newly computed iterates. The discarded failed V131 candidate was not recovered or retroactively accepted. Exact saved-diagnostic replay is conditional on those quantities; protected rowwise derivatives and original feature arrays were not regenerated.
+
+All four predictive qualification gates failed. Reference forecasting nevertheless completed before research, with 83 selected MARKET games, and financial reporting completed with zero qualified executions. [The V132 aggregate](evidence/2026-10-28-v132-execution.json) and [recoverable stage example](RECOVERABLE_OPERATIONS.md) make these independent outcomes inspectable. V133 remains pending on the owner environment.

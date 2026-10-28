@@ -2,7 +2,7 @@
 
 [Dashboard](dashboard/index.html) · [Executable example](../examples/review_lab/fault_isolation.py) · [Tests](../examples/review_lab/tests/test_fault_isolation.py) · [Actual V131 owner aggregate](evidence/2026-10-28-v131-execution.json)
 
-V131's actual failure prevented serving and paper stages from being reached. It produced no fresh forecasts. The public demonstration implements a different control flow on invented data: capture an ordinary research exception, then independently validate and serve a frozen reference policy. This is an engineering mechanism, not a claim that V132 has succeeded on the owner environment.
+V131's actual failure prevented serving and paper stages from being reached. It produced no fresh forecasts. The public demonstration implements a different control flow on invented data: capture an ordinary research exception, then independently validate and serve a frozen reference policy. V132 later succeeded on the owner environment and issued references before remaining research; its [actual aggregate](evidence/2026-10-28-v132-execution.json) is separate from this invented mechanism. The newer [persistent stage journal](RECOVERABLE_OPERATIONS.md) demonstrates recovery across invocations.
 
 ```mermaid
 flowchart TB
@@ -30,11 +30,11 @@ This is ordinary exception isolation in one process. `SystemExit`, process death
 
 ## Dashboard evidence contract
 
-The generated dashboard has 30 aggregate rows: 20 V131 partial historical FBS rows, eight prior V129 annual historical comparison rows and two prior V129 monitoring rows. League, season, protocol and evidence release must all match. Historical rows may emphasize the numerical minimum within that exact panel. Monitoring rows have stable order and no winner styling. No panel is fabricated when a combination is unavailable.
+The generated dashboard now has 80 aggregate rows: 50 V132 scorecards, 20 V131 partial historical FBS rows, eight prior V129 annual historical comparison rows and two prior V129 monitoring rows. League, season, protocol and evidence release must all match. Historical rows may emphasize the numerical minimum within that exact panel. Monitoring rows have stable order and no winner styling. No panel is fabricated when a combination is unavailable.
 
-The 2026 monitoring view is a retained V129 snapshot, not a refreshed V131 or V132 result. V131 did not produce new monitoring. The compact export does not establish individual forecast issue timestamps. Older historical research has been repeatedly exposed; a descriptive confidence interval is not the complete multiple-comparison qualification family. V131's new challengers lose to MARKET on both proper scores in each available FBS panel; full two-league qualification remains incomplete.
+The 2026 monitoring view labels its release explicitly. V129 is retained; V131 produced none; V132 is reconstructed post-freeze evaluation, not independently archived pregame performance. The compact export does not establish individual forecast issue timestamps. Older historical research has been repeatedly exposed; a descriptive confidence interval is not the complete multiple-comparison qualification family. V131's new challengers lose to MARKET on both proper scores in each available FBS panel; full two-league qualification remains incomplete.
 
-The actual owner status cards remain independent: research `FAILED`, serving `NOT_REACHED`, paper execution `NOT_REACHED`. The synthetic section uses a separate dark panel, repeated invented labels and a different timestamp. This avoids substituting a UI demonstration for real scientific or operational evidence.
+The latest actual V132 cards are independent: research complete but qualification failed, reference serving issued, financial reporting complete with zero qualified executions. The preceding V131 receipt preserves research `FAILED`, serving `NOT_REACHED` and paper execution `NOT_REACHED`. The synthetic section uses a separate dark panel, repeated invented labels and a different timestamp. This avoids substituting a UI demonstration for real scientific or operational evidence.
 
 ## Reproduce and verify
 
@@ -47,6 +47,6 @@ python -m examples.review_lab.build_status_dashboard --check
 node examples/review_lab/tests/test_dashboard.cjs
 ```
 
-The generator reads only the two sanitized public aggregate files and executes the four invented scenarios. It produces a self-contained page with no external requests. Selector checks exercise all 48 filter states and four scenario buttons, including missing panels and monitoring restrictions. Hosted Chromium checks render desktop/mobile layouts, exercise actual UI events, reject script errors and verify that the page makes no external requests. Separate notebook execution preserves rich outputs and final-cell completion.
+The generator reads only the two sanitized public aggregate files and executes the four invented scenarios. It produces a self-contained page with no external requests. Selector checks exercise all 72 filter states, four exception scenarios and three journal executions, including missing panels and monitoring restrictions. Hosted Chromium checks render desktop/mobile layouts, exercise actual UI events, reject script errors and verify that the page makes no external requests. Separate notebook execution preserves rich outputs and final-cell completion.
 
 Runtime and memory shown in the dashboard are measured V131 owner values. They are not throughput estimates, scalability benchmarks or V132 forecasts. Public data excludes private game observations, individual football predictions, component identities, parameters, paid data, source paths and credentials. The editorial assessment remains 8.94/10; this is an internal judgment, not external certification.

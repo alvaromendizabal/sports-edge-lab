@@ -1,16 +1,32 @@
-# Current evidence — V131 executed, failed and preserved partial work
+# Current evidence — V132 study completed; MARKET policy retained
 
-October 28, 2026. [Interactive dashboard](dashboard/index.html) · [Actual V131 receipt](evidence/2026-10-28-v131-execution.json) · [Fault-isolation demonstration](FAULT_ISOLATION.md)
+October 28, 2026. [Interactive dashboard](dashboard/index.html) · [Actual V132 aggregate](evidence/2026-10-28-v132-execution.json) · [Recoverable operations](RECOVERABLE_OPERATIONS.md)
 
-V131 completed seven new training units in eight attempts: six numerical estimator fits and one certified zero-call endpoint. With the six V130 successes retained, the registered study now has 13 accepted units, 15 attempts and two preserved failures; 11 units remain incomplete. All 2,968 owner checks passed. The owner research run nevertheless failed.
+The authenticated V132 owner run succeeded. It completed the remaining 11 units in 11 attempts: ten optimizer fits and one certified zero-call endpoint. All 24 registered units are complete across 26 cumulative attempts; the 13 earlier accepted payloads, 15 earlier attempts and both failures remain preserved. All 3,025 owner checks and four mandatory notebook checks passed.
 
-The NFL historical conditional candidate reported `xtol` solver success, but its independent gap bound, 3.305585687570622e-8, exceeded the unchanged 2e-8 limit. Feasibility and objective nonregression passed. Rejection is correct: the bound did not establish tolerance, without proving actual suboptimality exceeds the limit. The failed candidate produced no accepted payload.
+Independent numerical review replayed 22 saved certificate calculations using exact rational arithmetic. The largest newly accepted guarded bound was 1.3883729284283598e-8, within the unchanged 2e-8 threshold. This verifies certificate arithmetic conditional on the saved diagnostic quantities. Original rowwise loss/derivative inputs were not reconstructed, and the unretained rejected V131 candidate was not retroactively certified.
 
-Four saved FBS historical panels are available, with annual and fixed protocols in 2024 and 2025. Every new challenger loses to MARKET on both log loss and Brier in those panels. Conditional combinations modestly improve the plain global combination, but no complete qualification or NFL heldout panel exists. Numerical certification, predictive qualification and financial readiness remain separate.
+## Predictive qualification remains separate
 
-Serving and execution stages were not reached. There is no fresh V131 forecast, new 2026 monitoring, quote capture, paper event, promotion or order. The dashboard's 2026 rows explicitly retain their V129 vintage. V132 owner execution remains **PENDING**. Its public workflow demonstration is invented implementation evidence, not a real recovery success.
+All four league/protocol historical qualification gates failed. The annual conditional robust challenger improves NFL 2024 log loss from MARKET's 0.590011221 to 0.587280639, then regresses in 2025 from 0.611923223 to 0.615247532. FBS primary log loss is worse than MARKET in both years. A numerical optimum is not a statistically qualified policy.
 
-The following V129 and earlier evidence remains dated completed research; it is not a V131 success claim.
+The [dashboard](dashboard/index.html) exposes 50 exact V132 aggregate scorecards across NFL/FBS, annual/fixed 2024/2025 and annual 2026 monitoring, alongside retained V131/V129 evidence. All 2,086 scorecards in the independent full audit were rescored; maximum error was 2.22e-16. Historical development is repeatedly exposed. The 2026 evaluation is reconstructed after policy freeze, not independently archived pregame performance. It never selects, ranks, calibrates or promotes a champion.
+
+## Current references were issued before research
+
+V132 issued 83 selected MARKET references at **2026-10-28 20:20:13.969555 UTC**, before remaining research: 54 FBS week-9 games, 14 NFL week-8 games and 15 NFL week-9 games. All issue times precede kickoff; all selected probabilities equal MARKET. Input cutoff was 20:20:00.087384 UTC and the source snapshot 20:16:16.640545 UTC. These are dated owner outputs, not a claim that the dashboard refreshes itself.
+
+No learned model qualified for serving. The 8,718 research-probability rows span multiple models per game and remain distinct from 83 selected references. No individual forecasts or source observations are published here.
+
+## Financial reporting completed without qualified execution
+
+The conditional depth/weekly audit completed. Qualified executions, actual fills, orders and promotions are zero. Selective allocation is $0 and unspent capital $500. The inherited conditional historical +$2.40 uses identical probabilities, selections, prices, quantities and fees as MARKET; it establishes no learned-model uplift or actual profit. Realized profit remains unavailable. Original native-week decision commitments were not replaced.
+
+Supervisor / worker runtime was 620.474 / 576.876 seconds; peak process-tree memory 4.137 GB and disk 3.915 GB, within the established limits. V133 owner execution remains **PENDING**.
+
+## Preserved failed releases
+
+V130 stopped after six completed units / seven attempts. V131 added seven units / eight attempts, leaving 13 accepted units / 15 attempts. Its solver-success flag did not establish the unchanged numerical tolerance. Those failures remain failed even though V132 subsequently completed the registered work. [Numerical incident history](NUMERICAL_RECOVERY_INCIDENT.md).
 
 # Dated V129 completed research outcome
 

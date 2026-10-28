@@ -120,3 +120,7 @@ node examples/review_lab/tests/test_dashboard.cjs
 ```
 
 The [workflow contract](../../docs/FAULT_ISOLATION.md) documents snapshot isolation, failure boundaries, public-data limits and reproduction. Hosted CI additionally exercises the dashboard in Chromium at desktop/mobile widths. Research completion never changes the frozen fixture policy; successful reference serving never grants paper eligibility.
+
+## Persistent recovery across invocations
+
+The [eight-stage journal](recoverable_stages.py) uses immutable local receipts on invented inputs. It preserves forecast/finance identities after research failure, executes only unfinished stages on resume, and reenters with zero work. Run `python -m examples.review_lab.recoverable_stages`; see [contracts and limits](../../docs/RECOVERABLE_OPERATIONS.md). The latest dashboard separately records actual V132 completion, failed predictive qualification, 83 issued MARKET references and zero qualified financial executions.
