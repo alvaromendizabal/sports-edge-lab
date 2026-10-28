@@ -1,8 +1,16 @@
-# Current evidence — V129 owner outcome verified
+# Current evidence — V130 partial work, numerical failure
+
+October 28, 2026. [Incident and synthetic recovery](NUMERICAL_RECOVERY_INCIDENT.md) · [Actual V130 receipt](evidence/2026-10-28-v130-execution.json)
+
+V130 completed six real fits in seven attempts, then failed a line-search termination check during historical fitting. All 2,916 owner tests had passed. The complete 24-fit study, new historical qualification, new forecasts and owner full-depth economic audit did not run to completion. Earlier immutable evidence and MARKET policy remain preserved. V131 owner recovery is pending.
+
+The following V129 and earlier evidence remains dated completed research; it is not a V130 success claim.
+
+# Dated V129 completed research outcome
 
 October 28, 2026, Pacific time. [V129 findings and season comparisons](CONSTRAINED_ENSEMBLE_FINDINGS.md) · [Actual owner aggregate](evidence/2026-10-28-v129-execution.json)
 
-V129 completed 24 real fits in 24 attempts and passed 2,856 checks. Independent saved-output rescoring verified 2,046 probability scorecards. All four historical league/protocol qualification gates failed. Operational policy remains sportsbook MARKET; 2026–2027 remains monitoring only. No actual order, promotion or realized profit is established. V130 owner execution remains pending.
+V129 completed 24 real fits in 24 attempts and passed 2,856 checks. Independent saved-output rescoring verified 2,046 probability scorecards. All four historical league/protocol qualification gates failed. Operational policy remains sportsbook MARKET; 2026–2027 remains monitoring only. No actual order, promotion or realized profit is established. V130 subsequently failed during its incomplete historical study; see the current incident above.
 
 The V126 and V125 sections below are preserved dated checkpoints. Their fit plans and counts are historical, not the latest execution status.
 

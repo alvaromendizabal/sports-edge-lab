@@ -1,3 +1,7 @@
+# Numerical certification and partial-work accounting
+
+The [invented numerical-recovery example](numerical_recovery.py) keeps solver termination, primal feasibility, an explicit convex optimality certificate and predictive qualification separate. It rejects counting imported completed units as new work and preserves failed attempts. Run `python -m examples.review_lab.numerical_recovery`; read the [actual V130 incident](../../docs/NUMERICAL_RECOVERY_INCIDENT.md) for the boundary between this example and pending owner recovery. No football data, private objective, network call or actual order is used.
+
 # Transactional prospective state
 
 The [prospective-state example](prospective_state.py) adds an append-only SQLite journal with atomic native-week capital reservation, immutable decision reentry and separate settlement events. Run `python -m examples.review_lab.prospective_state`. Its 22 targeted tests cover cutoff timing, native quote age, budget rollback, duplicate exposure, pre-kickoff outcome rejection and tamper detection. Read the [limitations and operational boundary](../../docs/PROSPECTIVE_STATE_MACHINE.md): injected clocks and external evidence flags are test inputs, not independent historical attestation or venue verification. Every event and financial result is invented.
@@ -76,7 +80,7 @@ This is an educational implementation for an immutable local cache, not a sandbo
 
 ## Notebook
 
-The committed [notebook](../../notebooks/engineering_review.ipynb) has twenty-one code cells, preserving the earlier research narrative and subsequent executed sections, recorded using in-process IPython. It discovers the repository root, trains only on synthetic events, renders the aggregate score table separately, displays an inline SVG, demonstrates two-parent recovery and inspects the sanitized owner-run status. The final cell verifies that these claims remain distinct. The runner records its execution mode and reopens the saved notebook to validate execution order, rich formats and completion.
+The committed [notebook](../../notebooks/engineering_review.ipynb) has twenty-two code cells, preserving the earlier research narrative and subsequent executed sections, recorded using in-process IPython. It discovers the repository root, trains only on synthetic events, renders the aggregate score table separately, displays an inline SVG, demonstrates two-parent recovery and inspects the sanitized owner-run status. The final cell verifies that these claims remain distinct. The runner records its execution mode and reopens the saved notebook to validate execution order, rich formats and completion.
 
 ```bash
 python -m pip install -r examples/review_lab/notebook-requirements.txt
@@ -85,7 +89,7 @@ python -m examples.review_lab.execute_notebook --output /tmp/sports-edge-enginee
 
 A fresh independent environment is preferable for review. Package installation is optional; it is not needed by the core command or test suite.
 
-The default runner executes cells in-process and captures their rich outputs. Use `--mode kernel` for a separate Jupyter kernel, or open the notebook and run all cells normally. The earlier fifteen-cell version passed separate-kernel execution during the basketball extension. The current twenty-one-cell notebook is reexecuted in-process for this release; local separate-kernel startup is blocked by the authoring environment IPC restriction. The public-review workflow also runs this mode independently on GitHub; its actual Actions result establishes hosted success.
+The default runner executes cells in-process and captures their rich outputs. Use `--mode kernel` for a separate Jupyter kernel, or open the notebook and run all cells normally. The earlier fifteen-cell version passed separate-kernel execution during the basketball extension. The current twenty-two-cell notebook is reexecuted in-process for this release; local separate-kernel startup is blocked by the authoring environment IPC restriction. The public-review workflow also runs this mode independently on GitHub; its actual Actions result establishes hosted success.
 
 ## Rebuild the evidence page
 

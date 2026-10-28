@@ -6,7 +6,9 @@ Designed and implemented by [Alvaro Mendizabal](https://github.com/alvaromendiza
 
 [Start the review](docs/REVIEW_GUIDE.md) · [Current explorer](docs/current/index.html) · [Current evidence](docs/CURRENT_EVIDENCE.md) · [Model card](docs/MODEL_CARD_CURRENT.md) · [System design](docs/SYSTEM_DESIGN.md) · [Run the example](examples/review_lab/README.md)
 
-Latest verified football owner execution, October 28: [V129 completed 24 constrained ensemble fits and passed 2,856 owner checks](docs/evidence/2026-10-28-v129-execution.json). Independent saved-output rescoring verified 2,046 probability scorecards and 32 matched MARKET intervals. All four historical league/protocol qualification gates failed, so operational forecasts retain the sportsbook MARKET fallback. The [new study note](docs/CONSTRAINED_ENSEMBLE_FINDINGS.md) explains the small NFL 2024 gain, the 2025 reversal and why training safeguards did not establish heldout superiority. No promotion, order or realized profit is claimed. The V130 owner experiment remains pending.
+Latest verified football owner execution, October 28: [V130 failed after six completed real fits and seven attempts](docs/evidence/2026-10-28-v130-execution.json), following 2,916 passing owner checks. A numerical line-search failure stopped the historical study before new forecasts or qualification. The [incident and recovery example](docs/NUMERICAL_RECOVERY_INCIDENT.md) separates solver status, independent numerical evidence, predictive qualification and honest partial-work accounting. V131 owner recovery remains pending; operational policy remains sportsbook MARKET.
+
+Last fully completed football research, V129: [V129 completed 24 constrained ensemble fits and passed 2,856 owner checks](docs/evidence/2026-10-28-v129-execution.json). Independent saved-output rescoring verified 2,046 probability scorecards and 32 matched MARKET intervals. All four historical league/protocol qualification gates failed, so operational forecasts retain the sportsbook MARKET fallback. The [new study note](docs/CONSTRAINED_ENSEMBLE_FINDINGS.md) explains the small NFL 2024 gain, the 2025 reversal and why training safeguards did not establish heldout superiority. No promotion, order or realized profit is claimed.
 
 The [retained V125 aggregate export](docs/evidence/2026-10-27-v125.json) preserves 9,756 model scorecard views, 180 paired expert comparisons and 1,586 venue diagnostics. Counts describe aggregate records, not unique games or independent tests.
 The new [historical-selection contract](docs/HISTORICAL_SELECTION_BOUNDARY.md) reserves 2026–2027 for monitoring. Current-season outcomes cannot choose a champion, calibration method, feature set, ensemble or staking policy. The public example demonstrates how that boundary survives a forward-season apparent winner and how a frozen, outcome-free paper decision is settled separately.
@@ -26,6 +28,7 @@ Basketball status, October 27: B003 completed controlled opponent-adjustment exp
 | [Serving-lineage contract](examples/review_lab/serving_lineage.py) | The same historical policy identity in selection, serving and ledger; typed clocks and honest row accounting |
 | [Paper-decision ledger](examples/review_lab/decision_replay.py) | Pregame-only selection, explicit native league weeks, price/depth/fee constraints and separate settlement |
 | [Portfolio evidence boundary](docs/PORTFOLIO_EVIDENCE.md) | Persisted commitment before settlement, explicit unavailable profit and one budget across mutually exclusive venue scenarios |
+| [Numerical recovery and partial work](docs/NUMERICAL_RECOVERY_INCIDENT.md) | Independent convex certificates, bounded invented recovery and no double-counting imported work |
 | [Transactional prospective state](docs/PROSPECTIVE_STATE_MACHINE.md) | Append-only decisions and settlement, atomic native-week capital reservation, immutable reentry, source clocks and unavailable unsettled profit |
 | [Selection-to-decision case study](docs/CASE_STUDY_SELECTION_TO_DECISION.md) | Why a successful expert run and favorable isolated score do not establish a trading edge |
 | [Basketball study and public checks](docs/BASKETBALL_FOUNDATION.md) | Audited real season aggregates, separate league leaderboards and executable identity/time contracts using invented fixtures |
@@ -90,6 +93,7 @@ python -m examples.review_lab.decision_replay
 python -m examples.review_lab.serving_lineage
 python -m examples.review_lab.portfolio_evidence
 python -m examples.review_lab.prospective_state
+python -m examples.review_lab.numerical_recovery
 node examples/review_lab/tests/test_selectors.cjs
 node examples/review_lab/tests/test_current_selectors.cjs
 ```
