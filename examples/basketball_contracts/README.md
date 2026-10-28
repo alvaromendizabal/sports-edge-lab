@@ -73,3 +73,21 @@ python -m examples.basketball_contracts.recovery_plan
 ```
 
 The planner accepts a documented normalized envelope, not native vendor JSON. Its local journal complements the production account-wide lease; it cannot replace shared quota coordination across collectors.
+
+## Continue approved work without resetting it
+
+The [B008 execution case study](../../docs/BASKETBALL_B008_EXECUTION.md) records the actual blocked result: zero new fits or paid requests, 110 forecast versions added, 440 archived versions for 61 games, and no settlement. The new [continuation example](continuation.py) is separate invented evidence.
+
+```bash
+python -m examples.basketball_contracts.continuation
+python -m unittest discover -s examples/basketball_contracts/tests -p test_continuation.py -v
+python -m examples.basketball_contracts.build_basketball_dashboard --check
+```
+
+The example copies the original consent and original window baseline into a source-bound continuation. It rejects altered limits, changed baselines, missing counters and missing paid consent. Its invented archive allowance starts at three pages, permits twelve more, and remains capped at fifteen even after eleven pages have been consumed. A code release cannot create another twelve-page allowance.
+
+Independent fold preflight catches only a declared support failure. Eligible folds remain eligible, while an identity mismatch or corrupt input still fails closed. It neither lowers the support threshold nor treats eligibility as a completed model fit. A different partition must have a distinct registered experiment identity; it cannot be credited to an earlier blocked experiment.
+
+The existing quota journal is exercised across interruption and reopening. An unanswered attempt retains its request and maximum credit debit. A verified zero-credit completion releases only the credit reservation; the HTTP request remains counted. Replaying either the reservation or completion preserves the accepted journal bytes. The example never dispatches a request, verifies an account or performs a fit.
+
+The dashboard retains all 235 saved scorecards, 24 populated comparison panels and 120 overlap specifications. Historical leaderboard data are unchanged, current outcomes remain monitoring-only, and B006 appears as an explicitly dated prior snapshot beside the newer B008 execution evidence.

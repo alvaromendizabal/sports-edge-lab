@@ -81,3 +81,11 @@ This local journal does **not** replace the shared account lease and quota commi
 ## What this contributes
 
 The change adds reusable acquisition invariants and a working failure model: cached bytes are verified, missing observations are distinct from missing requests, pregame eligibility is explicit, costs are bounded before work, and ambiguous interruption cannot reset spending. It supplies engineering evidence for the recovery pipeline. Real recovery yield, modeling gains, forecast settlement and market superiority require their own authenticated owner-run evidence.
+
+## Gap provenance and continuation after a blocked run
+
+[B008 actually reached an incomplete-inventory gate](BASKETBALL_B008_EXECUTION.md), so it made zero paid requests and consumed zero provider credits. It did not verify the owner's current subscription quota. That outcome is distinct from the successful invented walkthrough.
+
+Every planned cell now retains its cutoff, declared inventory-scope pin, binding receipt, required request identity and matching captured-response receipt pins. Its provenance distinguishes a usable archive observation, an already captured query with no eligible observation, and a query not found in the declared inventory. The last category describes the inspected scope; it does not prove universal absence. An empty captured response remains a gap and retains its original content pin, while the exact duplicate query remains deferred. Neither an inventory count nor a new download timestamp establishes historical eligibility.
+
+The [continuation example](../examples/basketball_contracts/continuation.py) exercises the durable journal through a lost response, reopening and zero-credit completion. It preserves original authorization identity across code releases. Original approved limits and the original counter baseline remain pinned; prior spend, unresolved requests and adopted active-time floors do not reset. The caller must authenticate the original authority and exact live closing receipt before supplying those inputs. This public example does not implement that private archive verifier or the shared account lease.
