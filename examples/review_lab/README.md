@@ -1,3 +1,36 @@
+# Transactional prospective state
+
+The [prospective-state example](prospective_state.py) adds an append-only SQLite journal with atomic native-week capital reservation, immutable decision reentry and separate settlement events. Run `python -m examples.review_lab.prospective_state`. Its 22 targeted tests cover cutoff timing, native quote age, budget rollback, duplicate exposure, pre-kickoff outcome rejection and tamper detection. Read the [limitations and operational boundary](../../docs/PROSPECTIVE_STATE_MACHINE.md): injected clocks and external evidence flags are test inputs, not independent historical attestation or venue verification. Every event and financial result is invented.
+
+# Persisted portfolio evidence
+
+The [portfolio evidence example](portfolio_evidence.py) extends the existing decision ledger with a persisted byte commitment, explicit unavailable/display/executable-price classes and same-budget venue alternatives. Run `python -m examples.review_lab.portfolio_evidence`. The [review guide](../../docs/PORTFOLIO_EVIDENCE.md) explains why a local hash is not a historical timestamp attestation and why a displayed price cannot establish realized profit. All events and monetary results in this example are invented.
+
+# V126 serving-lineage review
+
+The new [serving-lineage mechanism](serving_lineage.py) binds immutable selected, served and recorded policy identities. It rejects hash substitutions, forward-season selection, backdated availability, duplicate league policies and reference/model count confusion. Its invented-data demonstration is separate from the sanitized actual [V126 owner receipt](../../docs/evidence/2026-10-27-v126-execution.json).
+
+The [case study](../../docs/CASE_STUDY_SERVING_LINEAGE.md) explains what the owner correction established and what remains unproved. Reconcile the receipt and run the demonstration with `python -m examples.review_lab.serving_lineage` from the repository root. All lineage tests run in the existing unittest discovery command. No network calls, real football fitting or actual orders occur in these examples.
+
+The current notebook now extends the retained research narrative with selection-to-serving verification and a separate V126 owner-status section. Older counts below describe earlier notebook stages; the saved execution receipt reports the current cell count.
+
+# Public review — new historical-selection and decision mechanisms
+
+Two additional standard-library examples connect the existing chronological training, provenance, factorial and distribution demonstrations:
+
+```bash
+python -m examples.review_lab.historical_selection
+python -m examples.review_lab.decision_replay
+python -m examples.review_lab.build_current_review --check
+node examples/review_lab/tests/test_current_selectors.cjs
+```
+
+The historical example rejects forward outcomes and preserves the frozen choice even when another model appears better in monitoring. The paper ledger accepts a complete outcome-free candidate universe, native league week and evidence clocks; settlement is a separate operation. Both use invented data and illustrative rules, not the private football selection or staking recipe.
+
+The [current explorer](../../docs/current/index.html) exposes 57 exact panels and 9,756 sanitized V125 scorecards. Its 2026 panels use stable identifiers with no winner emphasis. Historical comparison emphasis is computed over the full exact panel before a search filter is applied. No individual forecasts or execution-quality historical profit are provided.
+
+The reproducibility instructions below remain valid for the preserved mechanisms. The executed notebook extends them with selection, ledger and current evidence validation cells.
+
 # A small, executable review of the engineering
 
 [Project](../../README.md) · [Code](core.py) · [Tests](tests/test_core.py) · [Notebook](../../notebooks/engineering_review.ipynb) · [Recovery case study](../../docs/CASE_STUDY_PROVENANCE.md)
@@ -43,7 +76,7 @@ This is an educational implementation for an immutable local cache, not a sandbo
 
 ## Notebook
 
-The committed [notebook](../../notebooks/engineering_review.ipynb) has fifteen executed code cells, recorded using in-process IPython. It discovers the repository root, trains only on synthetic events, renders the aggregate score table separately, displays an inline SVG, demonstrates two-parent recovery and inspects the sanitized owner-run status. The final cell verifies that these claims remain distinct. The runner records its execution mode and reopens the saved notebook to validate execution order, rich formats and completion.
+The committed [notebook](../../notebooks/engineering_review.ipynb) has twenty-one code cells, preserving the earlier research narrative and subsequent executed sections, recorded using in-process IPython. It discovers the repository root, trains only on synthetic events, renders the aggregate score table separately, displays an inline SVG, demonstrates two-parent recovery and inspects the sanitized owner-run status. The final cell verifies that these claims remain distinct. The runner records its execution mode and reopens the saved notebook to validate execution order, rich formats and completion.
 
 ```bash
 python -m pip install -r examples/review_lab/notebook-requirements.txt
@@ -52,7 +85,7 @@ python -m examples.review_lab.execute_notebook --output /tmp/sports-edge-enginee
 
 A fresh independent environment is preferable for review. Package installation is optional; it is not needed by the core command or test suite.
 
-The default runner executes cells in-process and captures their rich outputs. Use `--mode kernel` for a separate Jupyter kernel, or open the notebook and run all cells normally. Separate-kernel execution was reverified during the basketball extension: all fifteen cells completed, rich outputs persisted, and save/reopen plus final-cell checks passed. The public-review workflow also runs this mode independently on GitHub; its actual Actions result establishes hosted success.
+The default runner executes cells in-process and captures their rich outputs. Use `--mode kernel` for a separate Jupyter kernel, or open the notebook and run all cells normally. The earlier fifteen-cell version passed separate-kernel execution during the basketball extension. The current twenty-one-cell notebook is reexecuted in-process for this release; local separate-kernel startup is blocked by the authoring environment IPC restriction. The public-review workflow also runs this mode independently on GitHub; its actual Actions result establishes hosted success.
 
 ## Rebuild the evidence page
 

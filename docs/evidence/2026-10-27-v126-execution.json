@@ -1,0 +1,190 @@
+{
+  "schema": "sports-edge-lab.public-v126-execution-v1",
+  "as_of_local": "2026-10-27",
+  "owner_return_sha256": "b097bf79e6d006e3cc1b976ec4511bb9deabdd3e5e83f2c6160087b924a98573",
+  "owner_source_sha256": "eac50ca6e095f607c6a40bf76979ed9c3543d047602ecf713a6c32538c74953d",
+  "owner": {
+    "status": "SUCCESS",
+    "new_fits": 0,
+    "fit_attempts": 0,
+    "owner_tests": 2595,
+    "test_workers": 4,
+    "tests_seconds": 171.37340449300007,
+    "worker_seconds": 450.645713892,
+    "supervised_seconds": 492.316870779,
+    "peak_rss_bytes": 4117950464,
+    "working_disk_bytes": 2558147839,
+    "retained_native_cells": 456,
+    "retained_fusion_fits": 6,
+    "retained_expert_fits": 20,
+    "archive_member_pins": 669,
+    "actual_wagers": 0,
+    "automatic_promotions": 0
+  },
+  "selection": {
+    "sha256": "66fb84c139db721181815a4cdbecae6428934bb093c9b3c42c298df893d17bf8",
+    "available_at": "2026-10-28T02:40:33.053289+00:00",
+    "allowed_seasons": [
+      2023,
+      2024,
+      2025
+    ],
+    "current_outcomes_used": false,
+    "identities": [
+      {
+        "league": "ncaaf",
+        "policy_id": "v126_market_reference_ncaaf",
+        "policy_kind": "market_fallback",
+        "rule_sha256": "463b867766a19a7d54ef5f72a30726dc358760d6842dd41f7f1666d2ec8bc5d2",
+        "learned_policy_qualified": false
+      },
+      {
+        "league": "nfl",
+        "policy_id": "v126_market_reference_nfl",
+        "policy_kind": "market_fallback",
+        "rule_sha256": "dbd5e0c8ac35affac574d64d04c4abaef5c265e623b10b0452fea231904d7f1b",
+        "learned_policy_qualified": false
+      }
+    ]
+  },
+  "issue": {
+    "selection_sha256": "66fb84c139db721181815a4cdbecae6428934bb093c9b3c42c298df893d17bf8",
+    "issued_at": "2026-10-28T02:44:00.878298+00:00",
+    "reference_rows_by_league": {
+      "ncaaf": 54,
+      "nfl": 29
+    },
+    "learned_policy_rows": 0,
+    "separate_research_forecast_rows": 7908,
+    "identity_matches_selection": true,
+    "historical_publication_claimed": false
+  },
+  "ledger": {
+    "selection_sha256": "66fb84c139db721181815a4cdbecae6428934bb093c9b3c42c298df893d17bf8",
+    "created_at": "2026-10-28T02:44:21.611759+00:00",
+    "backdated": false,
+    "legacy_exposed_forecasts_used": false,
+    "native_week_rows": 32,
+    "schedule_game_rows": 1160,
+    "historical_profit": null,
+    "execution_ready": false,
+    "strict_forecast_eligible_games": 0
+  },
+  "performance_stages": [
+    {
+      "stage": "NOTEBOOK_GATE",
+      "seconds": 1.8118527280000194
+    },
+    {
+      "stage": "SYNTHETIC_TESTS",
+      "seconds": 171.43719329900006
+    },
+    {
+      "stage": "AWS_IDENTITY",
+      "seconds": 0.2213423179999836
+    },
+    {
+      "stage": "PINNED_PARENT_RECOVERY",
+      "seconds": 26.90293895299999
+    },
+    {
+      "stage": "HISTORICAL_ONLY_SELECTION_NO_2026_INPUTS",
+      "seconds": 5.398585177999962
+    },
+    {
+      "stage": "BOUNDED_CURRENT_AUXILIARY_SOURCE_REFRESH",
+      "seconds": 4.0038621439999815
+    },
+    {
+      "stage": "RETAINED_SOURCE_PROVENANCE",
+      "seconds": 0.23918471199999658
+    },
+    {
+      "stage": "INCREMENTAL_PUBLIC_DATA_AND_FTN_AUDIT",
+      "seconds": 36.85890094199999
+    },
+    {
+      "stage": "OPTIONAL_NFL_PASSING_EDGE_SOURCE_AUDIT",
+      "seconds": 0.463720004000038
+    },
+    {
+      "stage": "HISTORICAL_PARTICIPATION_SOURCE_READINESS",
+      "seconds": 4.21859779600004
+    },
+    {
+      "stage": "IMMUTABLE_ISSUE_SETTLEMENT",
+      "seconds": 30.444541208999908
+    },
+    {
+      "stage": "REUSE_COMPLETE_HISTORICAL_ROLES_REFRESH_CURRENT_INPUTS",
+      "seconds": 9.648109651000027
+    },
+    {
+      "stage": "REUSE_PINNED_V125_EXPERTS_NO_OPTIMIZATION",
+      "seconds": 0.031608665000021574
+    },
+    {
+      "stage": "FROZEN_EXACT_HORIZON_VENUE_BENCHMARK",
+      "seconds": 3.855418329000031
+    },
+    {
+      "stage": "SHARED_FOOTBALL_PREPARATION_AND_FRESH_CURRENT_CAPTURE",
+      "seconds": 94.82029664200002
+    },
+    {
+      "stage": "CURRENT_REGISTERED_MODEL_PROBABILITY_DIAGNOSTICS",
+      "seconds": 0.10591439399991032
+    },
+    {
+      "stage": "ALL_SAVED_POINT_AND_DISTRIBUTION_TASK_METRICS",
+      "seconds": 8.147857343000055
+    },
+    {
+      "stage": "CURRENT_RETAINED_HIERARCHY_FORECASTS",
+      "seconds": 1.484026331999985
+    },
+    {
+      "stage": "CURRENT_NEW_RELATIONAL_FORECASTS",
+      "seconds": 5.851568694999969
+    },
+    {
+      "stage": "CURRENT_RETAINED_DISTRIBUTION_FORECASTS",
+      "seconds": 6.3730931860000055
+    },
+    {
+      "stage": "CURRENT_CHRONOLOGICAL_FUSION_FORECASTS",
+      "seconds": 0.23781267900005787
+    },
+    {
+      "stage": "CURRENT_EXACT_STATIC_ANCHOR_EXPERT_FORECASTS",
+      "seconds": 0.8401813219999212
+    },
+    {
+      "stage": "EXACT_HISTORY_SELECTED_CURRENT_REFERENCE",
+      "seconds": 0.26847847100009403
+    },
+    {
+      "stage": "KALSHI_AND_POLYMARKET_NATIVE_WEEK_EVIDENCE",
+      "seconds": 20.755194232000008
+    },
+    {
+      "stage": "ALL_COMPLETED_NATIVE_WEEK_EVIDENCE",
+      "seconds": 5.802765953999938
+    },
+    {
+      "stage": "PARENT_AND_MODEL_PRESERVATION",
+      "seconds": 2.070159778000061
+    },
+    {
+      "stage": "INTEGRATED_RESEARCH_NOTEBOOK",
+      "seconds": 8.32951544399998
+    }
+  ],
+  "limitations": [
+    "Market references are deterministic benchmark rules, not qualified learned-model forecasts or executable prices.",
+    "The 7,908 research forecast rows are separate from the 83 history-selected market references.",
+    "Lineage consistency does not establish complete football data, calibrated contract probabilities, available fills, historical profit or future superiority.",
+    "Local public examples use invented data; the owner aggregate records report independently audited private execution.",
+    "No actual orders or automatic promotions occurred."
+  ]
+}

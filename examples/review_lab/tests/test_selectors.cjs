@@ -36,14 +36,14 @@ for (const sport of ['all', 'NFL', 'FBS']) for (const campaign of ['all', '2024'
     assert.equal(cells[1].textContent, row.campaign);
     scores.forEach((value, j) => {
       assert.equal(cells[j + 3].textContent, value.toFixed(6));
-      assert.equal(cells[j + 3].className.includes('best'), value === Math.min(...scores));
+      assert.equal(cells[j + 3].className.includes('best'), !row.campaign.startsWith('2026') && value === Math.min(...scores));
     });
   });
   expected.forEach((row, i) => {
     const reference = metric === 'brier' ? 'retained_brier_reference' : 'retained_log_loss_reference';
     const scores = [...['LightGBM','XGBoost','PyTorch','TensorFlow','Equal-weight ensemble'].map(name=>row.new_frameworks[name][metric]),row[reference][metric]];
     const cells = nodes['framework-tbody'].children[i].children;
-    scores.forEach((value,j)=>{assert.equal(cells[j+3].textContent,value.toFixed(6));assert.equal(cells[j+3].className.includes('best'),value===Math.min(...scores));});
+    scores.forEach((value,j)=>{assert.equal(cells[j+3].textContent,value.toFixed(6));assert.equal(cells[j+3].className.includes('best'),!row.campaign.startsWith('2026')&&value===Math.min(...scores));});
   });
   expected.forEach((row,i)=>{
     const reference=metric==='brier'?'retained_brier_reference':'retained_log_loss_reference';
@@ -51,7 +51,7 @@ for (const sport of ['all', 'NFL', 'FBS']) for (const campaign of ['all', '2024'
     const distributions=['Learned MARKET distribution','Ensemble D0','Ensemble D1','PyTorch D0','PyTorch D1','TensorFlow D0','TensorFlow D1'].map(name=>row.score_law_distribution[name]);
     for(const [name,records,key] of [['score-law-binary-tbody',binaries,metric],['score-law-distribution-tbody',distributions,distributionMetric]]){
       const cells=nodes[name].children[i].children;const values=records.map(record=>record[key]);
-      values.forEach((value,j)=>{assert.equal(cells[j+3].textContent,value.toFixed(6));assert.equal(cells[j+3].className.includes('best'),value===Math.min(...values));});
+      values.forEach((value,j)=>{assert.equal(cells[j+3].textContent,value.toFixed(6));assert.equal(cells[j+3].className.includes('best'),!row.campaign.startsWith('2026')&&value===Math.min(...values));});
     }
     assert.equal(nodes['score-law-distribution-tbody'].children[i].children[2].textContent,distributions[0].games);
   });

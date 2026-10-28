@@ -1,3 +1,17 @@
+# Research protocol — V4 historical selection, forward monitoring
+
+[Historical-selection contract](HISTORICAL_SELECTION_BOUNDARY.md) · [Current evidence](CURRENT_EVIDENCE.md)
+
+2026–2027 outcomes are monitoring only. They must not choose, rank for promotion, tune or calibrate a champion, feature set, ensemble or staking policy. Use declared 2023–2025 historical material for selection with fixed, annual and precommitted online protocols explicitly distinguished. A later online refit must follow a frozen update rule; it is not permission to optimize the rule on current-season outcomes.
+
+Any retrospectively inspected panel is exposed. Preserve negative qualification decisions, exact matched cohorts, complete candidate sets and paired uncertainty. A current-season apparent winner cannot repair a failed historical gate. A promising interaction requires comparison against retained systems and MARKET as well as the component features.
+
+V125 completed 20 expert fits and failed both historical qualification gates. The new public examples test selection and immutable decision mechanics with invented data. No private football fit or new prospective claim is created by public documentation or aggregate rescoring.
+
+## Preserved dated research protocol
+
+The details below remain evidence for their dated states. The current selection boundary takes precedence over older current-season descriptive ranking terminology.
+
 # Shared research protocol
 
 ## Distinct acceptance gates

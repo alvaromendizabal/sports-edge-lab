@@ -1,0 +1,21 @@
+{
+  "actual_orders": 0,
+  "all_eight_primary_holm_p": 1.0,
+  "audit_scope": "Saved owner result; private features, coefficients, individual forecasts and data excluded.",
+  "automatic_promotions": 0,
+  "current_season_selection_or_ranking": false,
+  "historical_executable_profit": null,
+  "new_real_fit_attempts": 50,
+  "new_real_fits": 50,
+  "operational_selection": "V126 raw MARKET fallback preserved",
+  "owner_date_utc": "2026-10-28",
+  "residual_binary_forecast_rows": 486,
+  "residual_distinct_games": 81,
+  "residual_points_rows": 81,
+  "residual_qualified_track_protocols": 0,
+  "schema": "sports-edge-lab.public-v127-execution-aggregate-v1",
+  "self_tests_passed": 2719,
+  "source_artifact_sha256": "7b53c7d108f242c33cd62bcf09e5e1135daef9de26b336e953d276e4ef2bc7a5",
+  "source_summary_sha256": "86f511babe7977ac3d52214cf93c2b9dd8632c4c91701de5fde4e7758e77331a",
+  "status": "SUCCESS"
+}

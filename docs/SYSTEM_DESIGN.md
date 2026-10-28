@@ -1,3 +1,21 @@
+## Verified selection-to-serving boundary
+
+V126 demonstrated the historical policy binding in the owner environment. The selected policy identity, actual serving rule and authoritative native-week ledger share one frozen selection digest. A forecast with a different rule hash or later selection clock remains separate research evidence. Benchmark references and learned forecasts have separate counters. See the [case study](CASE_STUDY_SERVING_LINEAGE.md), [public verifier](../examples/review_lab/serving_lineage.py) and [sanitized receipt](evidence/2026-10-27-v126-execution.json).
+
+Elapsed performance stages are operational measurements; publication, first observation, selection availability and issue times are evidence clocks. Neither is substituted for the other. Passing lineage checks does not qualify a learned policy or a contract edge.
+
+# System design — explicit selection and decision boundaries
+
+[Overview](../README.md) · [Selection contract](HISTORICAL_SELECTION_BOUNDARY.md) · [Case study](CASE_STUDY_SELECTION_TO_DECISION.md)
+
+The latest public extension separates four records: historical qualification, forward monitoring, pregame paper decision and settlement. Historical qualification fixes candidates, protocols, cohorts and evidence clocks. Forward monitoring verifies that frozen identity without choosing a new winner. The paper decision consumes outcome-free evidence under a precommitted rule and native league week. Settlement attaches realized unit payoffs without rerunning selection.
+
+These records complement source provenance and model lineage. A valid source join does not establish historical publication time; a valid forecast does not establish a qualified selection; a model edge does not establish an executable fill. Content identities and explicit failure reasons connect these layers while preserving their distinct evidence requirements.
+
+Public implementations are standard-library educational mechanisms with invented examples. Private football recipes and operational credentials are excluded. See the [publication boundary](PUBLICATION_BOUNDARY.md).
+
+## Preserved architecture detail
+
 # From source observations to auditable forecasts
 
 [Project](../README.md) · [Current evidence](CURRENT_EVIDENCE.md) · [Model card](MODEL_CARD_CURRENT.md)
