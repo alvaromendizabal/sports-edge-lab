@@ -1,58 +1,69 @@
-# Model card — B002 basketball research
+# Model card — B003 basketball research
 
-Publication date: October 27, 2026, Pacific time. [Project](../README.md) · [Study](BASKETBALL_FOUNDATION.md) · [Results](BASKETBALL_RESULTS.md) · [Aggregate evidence](evidence/2026-10-27-basketball-b002.json)
+Publication date: October 27, 2026, Pacific time. [Project](../README.md) · [Study](BASKETBALL_FOUNDATION.md) · [Results](BASKETBALL_RESULTS.md) · [B003 aggregate](evidence/2026-10-27-basketball-b003.json) · [Preserved B002 aggregate](evidence/2026-10-27-basketball-b002.json)
 
 ## Intended use and current status
 
-Separate NBA, NCAA men's and NCAA women's historical prediction research and prospective monitoring. B002 is the first completed real basketball modeling run after the preserved B001 ingestion failure. No MARKET advantage, execution policy, profitable wagering record or production service guarantee is established.
+Separate NBA, NCAA men's and NCAA women's historical prediction research and prospective monitoring. B002 established the first functioning real modeling pipeline after the preserved B001 ingestion failure. B003 completed controlled opponent-adjustment experiments, broader cached MARKET comparisons and exact predecessor reuse. No qualified MARKET advantage, executable betting policy, profitable wagering record or continuous production service is established.
 
-The public evidence contains aggregate scores and engineering contracts. Exact active feature transforms, parameters, fitted weights and individual forecasts remain private. The credential-free example fits no model; its invented probabilities demonstrate contract behavior only.
+The public evidence contains aggregate scores, cohort digests and engineering contracts. Individual records, active feature transforms, fitted weights and private infrastructure paths remain excluded. The public example fits no model, and its invented probabilities are labeled separately from the actual owner aggregates.
 
-## Targets and model families
+## Targets and evaluated model families
 
-| Family | Probability model | Predictor count | B002 execution |
+| Family | Probability architecture | Predictor count | B003 evidence |
 |---|---|---:|---|
 | Historical prior | Historical outcome baseline | Baseline | Evaluated |
-| Elo | Chronological rating baseline | Baseline | Evaluated |
-| Strength | Regularized logistic classifier with chronological calibration | 15 | Evaluated; NBA full-cohort selection |
-| Style | Regularized logistic classifier with chronological calibration | 25 | Evaluated |
-| Combined basketball | Regularized logistic classifier with chronological calibration | 53 | Evaluated; both college full-cohort selections |
-| LightGBM, XGBoost, CatBoost | Native boosted classifiers with chronological calibration | 53 | Evaluated at T−60 |
-| Learned MARKET-only | Declared MARKET classifier | 3 planned | Blocked by insufficient matched training history |
-| Integrated MARKET plus basketball | Declared integrated classifier | 56 planned | Blocked by insufficient matched training history |
+| Elo and Margin Elo | Chronological rating baselines | Baseline | Evaluated |
+| Strength | Regularized logistic with chronological calibration | 15 | NBA full-cohort selection |
+| Style | Regularized logistic with chronological calibration | 25 | Retained control |
+| Combined | Regularized logistic with chronological calibration | 53 | Retained control; both T−24h college selections |
+| LightGBM, XGBoost, CatBoost | Native boosted classifiers with chronological calibration | 53 | Retained T−60 controls |
+| Strength plus opponent adjustment | Regularized logistic with chronological calibration | 25 | New controlled T−60 arm |
+| Rich combined | Regularized logistic with chronological calibration | 63 | New T−60 arm; both college historical selections |
+| Rich LightGBM | Native boosted classifier with chronological calibration | 63 | New controlled T−60 arm |
+| Learned MARKET-only | Declared regularized MARKET classifier | 3 | Blocked by earlier training support |
+| Integrated basketball plus MARKET | Declared regularized integrated classifier | 56 | Blocked by earlier training support |
 
-The winner target is the completed game's home-win outcome. The point head predicts margin and total using shared regularized Ridge regressors, then derives home and away points coherently. Negative or otherwise impossible issued scores are rejected rather than clipped. A boosted probability classifier does not imply a boosted score estimator; the shared Ridge head is labeled separately in the export.
+The winner target is the completed game's home-win outcome. Separate shared Ridge regressors predict margin and total; home and away points are derived coherently. A classifier label does not name the point estimator. Impossible issued scores are rejected rather than clipped. Point estimates do not constitute calibrated intervals, a joint score distribution or cover/over probabilities.
 
-Point estimates do not provide game-level prediction intervals, a full joint score distribution, cover/over probabilities or contract settlement probabilities. Those capabilities remain unavailable for basketball.
+The ten added predictors use historically available opponent state under the reconstruction policy. This is not a full dynamic Bayesian hierarchy. PyTorch, TensorFlow, learned player graphs and temporal player encoders did not train basketball models in B003. A discoverable library or graph-derived statistic is not evidence of a trained architecture.
 
-## Chronology and calibration
+## Chronology, selection and uncertainty
 
-The declared historical folds train through the season ending 2024 and validate in ending 2025, then train through ending 2025 and validate in ending 2026. Calibration uses a later chronological training partition and excludes labels unavailable before its cutoff. Probability and point recipes are selected separately from historical evidence. Final fitted recipes use eligible history through ending 2026.
+Training ends in 2024 for validation in 2025 and in 2025 for validation in 2026. Later chronological training partitions supply calibration; future validation outcomes never fit preprocessing or calibration. Historical results select probability and point recipes separately. Final selected recipes fit eligible history through 2026.
 
-The season ending 2027 is excluded from selecting, tuning, ranking, calibrating or fitting model parameters. Already released current-season outcomes may update pregame histories for later games under the frozen feature policy. The resulting monitoring observations remain labeled according to whether a forecast actually existed before the game.
+The season ending 2027 is excluded from feature choice, tuning, calibration, ensembling, ranking and champion promotion. Already released current outcomes may update pregame team histories under the frozen policy. Retrospective current-season monitoring remains distinct from genuinely preissued predictions.
 
-Completed historical tracks are reconstructed research: original publication evidence is unavailable, the primary release assumption is 24 hours, and a frozen 48-hour delay sensitivity is separate. T−60 is primary, T−24h secondary. Model selection exposes both historical validation seasons; results and paired uncertainty are descriptive, with no untouched confirmation claim.
+All completed historical tracks use an explicit 24-hour reconstructed statistical-release assumption because original publication clocks are unavailable. A frozen 48-hour input-delay sensitivity is separate. T−60 and T−24h are separate experiments. All earlier B002 control probabilities, point estimates, outcomes and cutoffs are unchanged in the B003 comparison audit.
 
-## Results and comparator limitations
+Both validation seasons are development-exposed after selection. Paired seven-calendar-day block intervals are descriptive; repeated-team and longer-range dependence may remain. No multiplicity adjustment, untouched validation or causal interpretation of feature gains is claimed.
 
-The [league tables](BASKETBALL_RESULTS.md) show per-season game counts, proper scores, accuracy, calibration error and point errors. On the pooled 2025–2026 full basketball cohorts, selected T−60 log loss was 0.607468 for NBA strength, 0.532072 for NCAA men's combined representation and 0.465183 for NCAA women's combined representation.
+## Results, weaknesses and MARKET qualification
 
-Those scores cannot be compared against MARKET's metrics on different games. The much smaller exact matched cohorts are disclosed separately. Neither the sparse NBA/women's comparisons nor NCAA men's single-season 118-game observation satisfies the historical qualification conditions. Learned MARKET-only and integrated training remain blocked. No model is promoted as a proven MARKET improvement.
+Pooled T−60 selected log loss is 0.607468 for NBA strength, 0.525415 for men's rich logistic and 0.457143 for women's rich logistic. The college rich models improve both historical folds relative to the 53-predictor controls, but their pooled fixed-bin calibration errors increase. Women's 2025 correct-pick count decreases despite better proper scores. NBA's added features do not improve the previous probability selection.
 
-## Data limitations and failure modes
+The [generated results](BASKETBALL_RESULTS.md) retain each season, baseline, game count, proper score, accuracy, calibration error and separate point diagnostic. They also show all equivalent-game MARKET comparisons. Full-cohort scores cannot be compared with a market result from different games.
 
-Historical NBA advanced-box coverage is reduced by inconsistent rebound definitions. College schedules use a provisional membership/opponent protocol; neutral venues, identity changes and non-Division-I opponents need explicit treatment. Provider-covered schedules are not an authoritative league-wide denominator. Women's box and player coverage cannot be inferred from men's availability.
+After cached recovery, T−60 MARKET validation counts are 9/16 NBA games, 0/1,143 men's games and 149/143 women's games in 2025/2026. Eligible earlier training counts remain 6/15, 0/0 and 0/149. Learned MARKET-only and integrated models do not pass the existing support requirements. The women's rich model loses to MARKET in 2025 and improves in 2026, with both paired intervals including zero. No league qualifies a MARKET advantage.
 
-Additional risks include evolving team composition, changing roles, small market cohorts, unknown original publication clocks, stale odds, calibration shift and dependence across games involving the same teams. Player availability, rotations, transfers, coaching histories, learned player graphs and temporal encoders are not implemented basketball inputs in this release. Raw source completeness is different from eligible feature support.
+NBA's selected point model has total bias about +1.84 and +2.66 points in the two seasons. Better 2025 bias did not solve the 2026 weakness. Men’s selected rich point head underpredicts totals by about two points. These failures motivate a historical bias/uncertainty study; current-season outcomes cannot tune its correction.
 
-## Issuance and deployment design
+## Data risks and unimplemented inputs
 
-The admitted output is an immutable research forecast with a source cutoff, model availability time, actual issue time, named probability and point recipes, and explicit uncertainty limitations. B002's 110 output rows span 61 games and are early outlooks before their designated locks. No contemporaneously qualified MARKET probability was present. There were no settled prospective forecasts at the issue snapshot.
+Historical NBA advanced-box features lose support because of inconsistent rebound definitions. College membership/opponent status remains a research proxy. Women's early box coverage is incomplete. Source denominators describe provider-covered eligible schedules, not certified complete league universes.
 
-Serving depends on verified input revisions and an unchanged historical selection boundary. Native estimator fingerprints, byte hashes and atomic checkpoints protect reusable work. The execution carries predecessor runtime and request counters forward and writes diagnostics on failure or resource stops. This is a bounded owner-run workflow; a continuously deployed service, service-level objectives and automated betting are not demonstrated.
+No verified player-level modeling joins or historically timed injury, projected-minute, roster continuity, coaching or replacement-value inputs are established in B003. Current-season roster change can therefore invalidate the apparent confidence of a stale team-history forecast. Unknown original publication clocks, revisions, league drift, missing data and dependent games remain additional risks.
 
-Actual orders are outside this release. Informational exchange comparisons require separate verified event, side, cutoff and settlement bindings, which remain unavailable. Profit is null, not zero realized profit.
+## Immutable forecasts and operational scope
 
-## Next release
+B003 preserves and checks all 110 B002-issued rows: all pending, no settled outcomes at the snapshot. It issues 110 later versions across the same 61 distinct upcoming games. All are early outlooks before declared locks, with no qualified current MARKET price. Earlier probabilities remain immutable. Every issue is rechecked after inference for source cutoff, model availability and pregame timing.
 
-B003 owner execution is pending. Planned improvements address cached MARKET enumeration, verified source/checkpoint reuse, repeated feature preparation and prospective evaluation. Any new model or feature family must retain the frozen chronology, match its comparator's exact cohort, disclose both historical seasons and preserve unsuccessful results.
+There are 60 new real estimator units, 156 imported predecessor units and 232 cumulative unique basketball units. The 216 current-release manifests do not imply 216 new fits. Exact input, label, feature-order, dependency and numerical-method compatibility plus byte hashes govern reuse. Failure and resource-stop paths preserve checkpoints and produce diagnostics.
+
+Cumulative active work remains charged across releases; the returned floor is 3,571.02 seconds of the 4,500-second work ceiling. A continuously deployed service, service-level objective, automated order execution and realized P&L remain undemonstrated.
+
+Kalshi, Polymarket US and international Polymarket have separate settlement and execution evidence requirements. No venue has admitted historical exchange observations or current executable quotes in B003. Displayed page prices are research observations, not fills. Basketball bankroll is unset and profit is null rather than zero realized profit.
+
+## Next decision
+
+B004 execution is pending. Its prepared work targets exact historical feature reuse, bounded point-bias and uncertainty experiments, source recovery and venue-separated exchange evidence. Any later model decision must retain historical chronology, equivalent-game comparison, both-season reporting, negative results and current-season isolation.

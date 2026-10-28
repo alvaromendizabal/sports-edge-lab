@@ -10,7 +10,8 @@ class EvidenceTests(unittest.TestCase):
         self.value = load_evidence()
 
     def test_export_separates_owner_work_from_inspection(self):
-        self.assertEqual(self.value["owner_execution"]["completed_native_fit_units"], 172)
+        self.assertEqual(self.value["owner_execution"]["completed_native_fit_units"], 60)
+        self.assertEqual(self.value["owner_execution"]["cumulative_basketball_native_units"], 232)
         self.assertEqual(len(selected_season_rows(self.value)), 6)
         self.assertEqual(len(selected_season_rows(self.value, 1440)), 6)
 
@@ -57,6 +58,46 @@ class EvidenceTests(unittest.TestCase):
     def test_scopes_cannot_be_pooled_or_duplicated(self):
         self.value["tracks"].append(deepcopy(self.value["tracks"][0]))
         with self.assertRaisesRegex(ValueError, "league and horizon"):
+            validate_evidence(self.value)
+
+    def test_predecessor_aliases_do_not_add_unique_fits(self):
+        self.value["owner_execution"]["cumulative_basketball_native_units"] += 156
+        with self.assertRaisesRegex(ValueError, "predecessor reuse"):
+            validate_evidence(self.value)
+
+    def test_reuse_count_must_match_manifests(self):
+        self.value["owner_execution"]["imported_predecessor_units"] -= 1
+        with self.assertRaisesRegex(ValueError, "predecessor reuse"):
+            validate_evidence(self.value)
+
+    def test_cumulative_budget_cannot_reset(self):
+        self.value["owner_execution"]["remaining_work_seconds_at_return_snapshot"] = 4500
+        with self.assertRaisesRegex(ValueError, "cumulative budget"):
+            validate_evidence(self.value)
+
+    def test_calibration_chart_cannot_omit_scored_games(self):
+        self.value["tracks"][0]["season_scorecards"][0]["calibration_bins"][0]["n"] += 1
+        with self.assertRaisesRegex(ValueError, "calibration bins"):
+            validate_evidence(self.value)
+
+    def test_calibration_chart_must_match_ece(self):
+        self.value["tracks"][0]["season_scorecards"][0]["calibration_bins"][0]["observed_rate"] += .1
+        with self.assertRaisesRegex(ValueError, "calibration plot"):
+            validate_evidence(self.value)
+
+    def test_pooled_metrics_must_equal_season_weighted_results(self):
+        self.value["tracks"][0]["selections"][0]["leaderboard"][0]["log_loss"] += .01
+        with self.assertRaisesRegex(ValueError, "pooled leaderboard"):
+            validate_evidence(self.value)
+
+    def test_paired_intervals_cannot_use_current_season(self):
+        self.value["tracks"][0]["paired_control_comparisons"][0]["season"] = 2027
+        with self.assertRaisesRegex(ValueError, "protected monitoring"):
+            validate_evidence(self.value)
+
+    def test_prospective_pending_rows_must_reconcile(self):
+        self.value["owner_execution"]["prior_pending_rows"] -= 1
+        with self.assertRaisesRegex(ValueError, "pending-row"):
             validate_evidence(self.value)
 
 
