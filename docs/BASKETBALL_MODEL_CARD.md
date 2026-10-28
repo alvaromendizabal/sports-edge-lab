@@ -66,4 +66,4 @@ Kalshi, Polymarket US and international Polymarket have separate settlement and 
 
 ## Next decision
 
-B004 execution is pending. Its prepared work targets exact historical feature reuse, bounded point-bias and uncertainty experiments, source recovery and venue-separated exchange evidence. Any later model decision must retain historical chronology, equivalent-game comparison, both-season reporting, negative results and current-season isolation.
+[B004 subsequently executed and stopped at the public-request ceiling](BASKETBALL_B004_EXECUTION.md). Six new score-correction units completed, but no probability or point challenger passed promotion. The selected B003 probability recipes and separate point heads remain unchanged. The execution note reports rejected challengers and empirical intervals without presenting them as approved forecast uncertainty.

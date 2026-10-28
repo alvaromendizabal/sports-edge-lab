@@ -6,7 +6,7 @@ This small, standard-library example makes the basketball extension's informatio
 
 ## Owner execution status
 
-B001 failed before modeling and B002 completed the first 172 native estimator units. B003 then completed 60 new units, imported 156 exact compatible predecessor units and evaluated controlled opponent-adjustment representations. The cumulative unique count is 232. College proper scores improved while calibration weaknesses remained; expanded MARKET comparisons still established no qualified advantage. B003 checked 110 prior immutable forecasts, all pending, and issued 110 later versions for the same 61 games. B004 owner execution remains pending. These facts are separate from the invented examples below.
+B001 failed before modeling and B002 completed the first 172 native estimator units. B003 then completed 60 new units, imported 156 exact compatible predecessor units and evaluated controlled opponent-adjustment representations. The cumulative unique count is 232. College proper scores improved while calibration weaknesses remained; expanded MARKET comparisons still established no qualified advantage. B003 checked 110 prior immutable forecasts, all pending, and issued 110 later versions for the same 61 games. [B004 subsequently executed and stopped at the public-request ceiling](../../docs/BASKETBALL_B004_EXECUTION.md), adding six real units without promoting a challenger; cumulative basketball units are now 238. The latest fully completed real modeling release remains B003. These facts are separate from the invented examples below.
 
 ## Run the example
 
@@ -61,3 +61,4 @@ The score fixture deliberately assigns slightly different invented probabilities
 ## Aggregate evidence checks
 
 The default aggregate export is B003; the immutable B002 export remains available for review. Validation reconciles new fits, predecessor imports and cumulative unique units; verifies per-season cohort identity and pooled scoring; and checks the calibration bins used in the notebook. Negative tests reject reused units counted as new work, a reset cumulative budget, mismatched game cohorts, altered chart totals and current-season selection leakage. Generated Markdown tables must exactly match the committed export in CI.
+
