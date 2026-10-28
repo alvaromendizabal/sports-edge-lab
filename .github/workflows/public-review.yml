@@ -41,6 +41,7 @@ jobs:
           python -m examples.review_lab.serving_lineage
           python -m examples.review_lab.portfolio_evidence
           python -m examples.review_lab.prospective_state
+          python -m examples.review_lab.numerical_recovery
       - name: Demonstrate scoped multi-parent recovery
         run: python -m examples.review_lab.provenance
       - name: Check every public evidence selector state

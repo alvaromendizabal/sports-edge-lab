@@ -1,4 +1,6 @@
-# Current model card — V129 retains the historical MARKET policy
+# Current model card — MARKET policy retained after incomplete V130 study
+
+V130 failed after six real fits and seven attempts. It did not complete a new qualification or produce new current forecasts. The [incident](NUMERICAL_RECOVERY_INCIDENT.md) distinguishes preserved partial work from a completed evaluation. V131 recovery remains pending.
 
 [Current evidence](CURRENT_EVIDENCE.md) · [Selection contract](HISTORICAL_SELECTION_BOUNDARY.md) · [Serving case study](CASE_STUDY_SERVING_LINEAGE.md) · [Retained model cards](history/MODEL_CARD_THROUGH_V125.md)
 
