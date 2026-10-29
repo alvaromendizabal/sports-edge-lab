@@ -6,6 +6,8 @@ Designed and implemented by [Alvaro Mendizabal](https://github.com/alvaromendiza
 
 [Results dashboard](docs/dashboard/index.html) · [Start the review](docs/REVIEW_GUIDE.md) · [Current explorer](docs/current/index.html) · [Current evidence](docs/CURRENT_EVIDENCE.md) · [Model card](docs/MODEL_CARD_CURRENT.md) · [System design](docs/SYSTEM_DESIGN.md) · [Run the example](examples/review_lab/README.md)
 
+NFL owner branch, October 29: the [NFL evidence review](tracks/nfl/README.md) accounts for 7,549 game identities and explains why the complete 2024/2025 seasons contain 285 games while the saved model cohorts contain 280/277. Its [interactive comparison](tracks/nfl/review.html) exposes 316 audited model/market tables and a credential-free reconciliation example. N007's coordinator-admission failure is preserved; N006 remains the latest successful owner execution in that branch, MARKET remains accepted, and N008 owner research is pending.
+
 Latest completed football execution, October 28: [V134 completed all twelve registered extension fits in twelve attempts](docs/evidence/2026-10-28-v134-execution.json), restored financial reporting, and verified every declared emitted stage output. The combined study now contains 36 completed units across 38 attempts, preserving both earlier failures. All four extension qualification gates failed; the operational policy remains MARKET.
 
 V134 issued 89 timestamped MARKET references, covering all 68 remaining current-week games. Its edge-qualified portfolio retained $500 as cash, with zero qualified executions, fills or orders. Inherited conditional +$2.40 still equals MARKET and is not realized profit. [The completion study](docs/V134_COMPLETION_AND_SHARED_INVENTORY.md) connects the [earlier V133 recovery failure](docs/PORTABLE_RECOVERY_INCIDENT.md), the verified correction and measured throughput costs. The [dashboard](docs/dashboard/index.html) preserves earlier scorecards under their original vintages. A new [shared-inventory example](examples/review_lab/shared_inventory.py) deduplicates three invented project scopes without turning missing inventory into permission to buy data. V135 owner execution remains pending.
@@ -27,6 +29,7 @@ B007 completed authenticated saved-evidence recovery with zero new fits, request
 
 | Inspect | What it demonstrates |
 |---|---|
+| [NFL owner evidence and reconciliation](tracks/nfl/README.md) | Full-season denominators, exact-cohort market comparisons, exposed monitoring and a coordinator-admission failure with runnable public contracts |
 | [Shared archive federation](docs/V134_COMPLETION_AND_SHARED_INVENTORY.md) | Complete declared scope, byte and semantic deduplication, original request receipts, cutoff admission and no implicit spend authority |
 | [Recoverable operations journal](docs/RECOVERABLE_OPERATIONS.md) | Atomic immutable receipts, input/dependency identity, bounded attempts, interrupted-publication recovery and zero-work reentry |
 | [Results and execution dashboard](docs/dashboard/index.html) | Actual failure, exact historical panels, monitoring vintage and an interactive fault-isolation demonstration |
