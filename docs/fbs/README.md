@@ -2,7 +2,7 @@
 
 [Project](../../README.md) · [FBS dashboard](index.html) · [Aggregate evidence](evidence.json) · [Invented reproducer](../../examples/fbs_contracts/README.md) · [Notebook](../../notebooks/fbs_branch_review.ipynb)
 
-## The latest execution failed before science
+## The earlier V135 execution failed before science
 
 The supplied V135 owner return reports `FAILED` during its precredential source-contract tests. A required earlier prompt was preserved inside an archive while an inherited test still looked for its original root path. All 56 return payloads and 1,723 embedded source payloads match their hashes, but byte integrity did not establish semantic dependency closure. Of 3,239 executed tests, one errored. The run produced zero new estimator fits and zero new fit attempts.
 
@@ -33,3 +33,9 @@ The example contains no paid raw observations, individual forecasts, private sou
 ## Runtime compatibility repair
 
 [The v002 repair note](runtime-repair.md) explains the reproduced LightGBM warning, named prediction schema, version-specific regression matrix, and owner-progress boundary. The original evidence page remains a record of the first independent release.
+
+## Pretraining source recovery
+
+A later independent FBS attempt passed 122 tests, then entered shared-source inventory. At the returned audit snapshot, it had zero saved estimator completions or optimizer-start receipts. The replacement correctly declined to overlap its live writer. The elapsed stage-entry interval does not establish a deadlock. A further owner release is prepared; no new scientific result is claimed.
+
+[The recovery example](pretraining-recovery.md) demonstrates explicit phase/work eligibility and an inactive SQLite checkpoint under its existing writer lock. Tests use a real local child and hot rollback journal, preserve the original bytes, and recover only a separate copy. No process signals, provider requests or private owner locations are included. The owner program schedules pinned-input science before broad source reconciliation; actual completion still requires its returned evidence.
