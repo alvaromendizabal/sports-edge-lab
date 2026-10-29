@@ -1,3 +1,9 @@
+# Current V134 completion and shared archive scope
+
+[V134 actually completed](../../docs/V134_COMPLETION_AND_SHARED_INVENTORY.md) all twelve new registered fits, financial reporting and declared output-closure verification. All four historical qualification gates failed, so MARKET remains selected. Earlier dated sections below remain historical context. The dashboard now shows the actual V134 result and preserves older numerical panels under their original vintages.
+
+Run `python -m examples.review_lab.shared_inventory` for a credential-free, invented-data federation of football, basketball and March archive scopes. It deduplicates both byte-identical objects and the same normalized observation serialized differently, retains source pins, rejects incomplete declared scope and keeps dispatch authority separate. The notebook adds a V134 receipt check and this demonstration before its final persistence check.
+
 # Numerical certification and partial-work accounting
 
 The [invented numerical-recovery example](numerical_recovery.py) keeps solver termination, primal feasibility, an explicit convex optimality certificate and predictive qualification separate. It rejects counting imported completed units as new work and preserves failed attempts. Run `python -m examples.review_lab.numerical_recovery`; read the [actual V130 incident](../../docs/NUMERICAL_RECOVERY_INCIDENT.md) for the boundary between this example and the actual failed V130/V131 owner executions. No football data, private objective, network call or actual order is used.

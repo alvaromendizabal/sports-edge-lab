@@ -1,6 +1,6 @@
 # Current model card — V132 study complete; MARKET remains selected
 
-V132 completed the remaining 11 units and the full 24-unit conditional/robust study. All four historical qualification gates failed. It issued 83 timestamped MARKET-reference games before remaining research and completed conditional financial reporting, with zero qualified executions. The [dashboard](dashboard/index.html) separates numerical recovery, predictive qualification, reference serving and financial evidence. V133 owner execution is pending.
+V134 completed all twelve registered extension fits in twelve attempts. All four historical qualification gates failed. It issued 89 timestamped MARKET references and completed financial reporting, with zero qualified executions. The [completion study](V134_COMPLETION_AND_SHARED_INVENTORY.md) and [dashboard](dashboard/index.html) separate execution, qualification, current serving and financial evidence. Earlier scorecards retain their original vintages. V135 owner execution is pending.
 
 [Current evidence](CURRENT_EVIDENCE.md) · [Selection contract](HISTORICAL_SELECTION_BOUNDARY.md) · [Serving case study](CASE_STUDY_SERVING_LINEAGE.md) · [Retained model cards](history/MODEL_CARD_THROUGH_V125.md)
 
