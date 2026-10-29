@@ -21,7 +21,7 @@
   "mandatory_owner_notebook_checks_passed": 4,
   "serving": {
     "unique_market_reference_games": 89,
-    "issued_at": "2026-10-28T22:41:26.368680Z",
+    "issued_at": "2026-10-28T22:41:33.675073Z",
     "native_week_counts": {
       "NFL_2026_week_8": 14,
       "NFL_2026_week_9": 15,
@@ -117,3 +117,4 @@
   "next_owner_execution": "PENDING",
   "publication_boundary": "Sanitized aggregate owner facts only. Individual predictions, venue prices, private models, parameters, paid data and private source identities are excluded."
 }
+

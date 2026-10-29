@@ -145,6 +145,11 @@ class V134CompletionTests(unittest.TestCase):
             self.assertEqual(stage['declared_outputs'],stage['verified_outputs'])
             self.assertEqual(stage['missing_outputs'],0)
 
+    def test_reference_issue_uses_saved_forecast_issuance_clock(self):
+        self.assertEqual(payload()["owner"]["serving"]["issued_at"], "2026-10-28T22:41:33.675073Z")
+        self.assertIn("Issued at 22:41:33.675073 UTC", render())
+        self.assertNotIn("22:41:26.368680", render())
+
     def test_shared_inventory_demo_is_not_actual_owner_coverage(self):
         x=payload()['shared_inventory']
         self.assertEqual(x['unique_observations'],1)
@@ -156,3 +161,4 @@ class V134CompletionTests(unittest.TestCase):
         serialized=json.dumps(payload()['owner'])
         for forbidden in ('/home/', 's3://', 'source_sha256', 'weights', 'player_id', 'api_key', 'contract_id'):
             self.assertNotIn(forbidden,serialized)
+

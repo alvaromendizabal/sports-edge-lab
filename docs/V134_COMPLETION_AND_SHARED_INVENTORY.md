@@ -16,7 +16,7 @@ This follows the [V133 paper-import failure](PORTABLE_RECOVERY_INCIDENT.md). Tha
 | Owner checks / required notebook checks | 3,158 / 4 passed |
 | Return payloads / embedded-source payloads | 1,894 / 1,714 hash-verified |
 | Data / forecast / venue / financial emitted outputs | 336 / 155 / 380 / 865 verified |
-| Operational reference games | 89, issued October 28 at 22:41:26.368680 UTC |
+| Operational reference games | 89, issued October 28 at 22:41:33.675073 UTC |
 | Remaining current-week coverage | 68 / 68 games |
 | Edge-qualified paper allocation / unused capital | $0 / $500 |
 | Qualified execution / actual fills / actual orders | 0 / 0 / 0 |
@@ -53,3 +53,4 @@ The caller must authenticate inventory and event-binding receipts, validate raw 
 ## Publication and review boundary
 
 The dashboard retains all earlier scorecards under their original release and information-time labels. V134 adds completed-execution and failed-qualification evidence; it does not relabel V132 metrics as V134 results. Current-season outcomes remain monitoring only. The new notebook section independently checks the actual aggregate receipt and then runs the invented federation, preserving that distinction through saved rich outputs and the final persistence check.
+
