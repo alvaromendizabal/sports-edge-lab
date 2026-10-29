@@ -1,0 +1,74 @@
+{
+  "actual_verified_after": null,
+  "baseline_commit": "13de4616a03c99f82bc4b624fa976fada794c5fb",
+  "cohort_provenance": {
+    "algorithm": "SHA-256 of UTF-8 compact JSON (separators comma/colon, no trailing newline) of sorted string game IDs from each actual saved prediction table.",
+    "audit_gate": "The independent audit asserts complete market_value equality, including game-ID digest, across every table in the same panel.",
+    "public_limit": "Original per-game records remain private; this export carries observed audit hashes, not independently reconstructible game lists.",
+    "source": "Independent N006 audit prediction_verification.market_metrics, joined by original season/target/policy; game counts and MARKET metrics also checked."
+  },
+  "data_boundary": "Sanitized derived season/metric aggregates; no paid raw odds, per-game forecasts, private owner paths, credentials, weights or active feature/tuning configuration.",
+  "editorial_baseline": {
+    "overall": 8.308333333333334,
+    "role_fit": {
+      "ai_engineer": 8.0,
+      "data_scientist": 8.7,
+      "ml_engineer": 8.8
+    },
+    "scores": {
+      "architecture": 8.8,
+      "ci_merge_safety": 8.3,
+      "employer_navigation": 7.2,
+      "four_project_consistency": 7.0,
+      "interaction_accessibility": 8.1,
+      "ml_breadth": 8.6,
+      "privacy": 8.7,
+      "provenance": 8.8,
+      "reproducibility": 8.4,
+      "role_relevance": 8.5,
+      "scientific_rigor": 9.0,
+      "visual_design": 8.3
+    },
+    "weight_policy": "Equal 1/12 for all dimensions; fixed before judging after. Editorial judgments, not certified measurements."
+  },
+  "hypothesis": "A current NFL-specific evidence surface and executable reconciliation contracts make full-game accounting, matched cohorts and integration failure boundaries easier to inspect without changing scientific conclusions.",
+  "local_preparation_checks": {
+    "aggregate_tables": 316,
+    "demo_first_then_resume": "CREATED then REUSED, zero new reentry work",
+    "generated_page": "VERIFIED",
+    "local_browser": "NOT_EXECUTED: Playwright browser binary unavailable; hosted browser CI must establish rendering.",
+    "python_contract_tests": 17,
+    "recomputed_scalars_in_owner_audit": 948
+  },
+  "owned_paths": [
+    "tracks/nfl/README.md",
+    "tracks/nfl/evidence.json",
+    "tracks/nfl/review.template.html",
+    "tracks/nfl/review.html",
+    "tracks/nfl/contracts.py",
+    "tracks/nfl/test_contracts.py",
+    "tracks/nfl/browser_test.cjs",
+    "tracks/nfl/change_manifest.json"
+  ],
+  "ownership_note": "NFL track files are owned by this contribution. The root agent is integration owner for the small dated NFL entry and five-minute review row in README.md plus the new focused NFL CI workflow. Existing other-league content, shared examples, and seven existing workflows remain intact.",
+  "project": "nfl",
+  "rating_note": "After-merge judgments require final publication, current-head CI and rendered verification receipts. No target-achievement claim.",
+  "rollback": "Revert the focused publication commit through the repository workflow; no owner scientific outputs are mutated by these public files.",
+  "root_coordinated_integration_paths": [
+    "README.md",
+    ".github/workflows/nfl-owner-review.yml"
+  ],
+  "schema": "sports-edge-lab.nfl.public-change.v1",
+  "shared_paths_edited_by_this_contribution": [
+    "README.md",
+    ".github/workflows/nfl-owner-review.yml"
+  ],
+  "snapshot_phase": "PRE_PUBLICATION_CHANGE_RECORD",
+  "target": 9.9,
+  "test_commands": [
+    "python -m unittest discover -s tracks/nfl -p 'test_*.py' -v",
+    "python tracks/nfl/contracts.py --check-review",
+    "python tracks/nfl/contracts.py --demo --output /tmp/nfl-review-demo.json",
+    "node tracks/nfl/browser_test.cjs"
+  ]
+}

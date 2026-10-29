@@ -1,0 +1,45 @@
+// Real offline Chromium checks; no AWS, provider data requests or external assets.
+'use strict';
+const assert=require('node:assert/strict'),path=require('node:path'),fs=require('node:fs');
+const {chromium}=require(process.env.PLAYWRIGHT_MODULE_DIR||'playwright');
+(async()=>{
+ const browser=await chromium.launch({headless:true});
+ const page=await browser.newPage(),errors=[],network=[];
+ page.on('pageerror',e=>errors.push(e.message));
+ page.on('request',r=>{if(!r.url().startsWith('file:')&&!r.url().startsWith('data:'))network.push(r.url());});
+ const widths=[1440,390];let states=0;
+ for(const width of widths){
+  await page.setViewportSize({width,height:1000});await page.goto('file://'+path.join(__dirname,'review.html'));
+  await page.locator('#results tbody tr').first().waitFor();
+  assert.equal(await page.evaluate(()=>document.documentElement.scrollWidth>innerWidth),false,'page overflow at '+width);
+  assert.match(await page.locator('#coverage').innerText(),/280 \/ 285/);
+  assert.match(await page.locator('#coverage').innerText(),/272 regular · 13 postseason/);
+  for(const id of ['season','target','policy','metric','family','model'])assert.equal(await page.locator('label[for="'+id+'"]').count(),1);
+  await page.selectOption('#season','2025');assert.match(await page.locator('#coverage').innerText(),/277 \/ 285/);
+  await page.selectOption('#policy','fixed');await page.selectOption('#target','margin');
+  assert.match(await page.locator('#results').innerText(),/MAE/);
+  await page.locator('#metric').focus();await page.keyboard.press('ArrowDown');
+  assert.equal(await page.locator('#metric').inputValue(),'rmse');
+  await page.selectOption('#family','Constrained ensemble');
+  assert((await page.locator('#results [data-model]').count())>0);
+  const model=await page.locator('#model option').nth(1).getAttribute('value');
+  await page.selectOption('#model',model);assert.equal(await page.locator('#results [data-model]').count(),1);
+  await page.selectOption('#family','all');await page.selectOption('#season','2026');
+  assert.match(await page.locator('#coverage').innerText(),/77 \/ 107/);
+  assert.match(await page.locator('#coverage').innerText(),/165 unplayed/);
+  assert.match(await page.locator('#result-boundary').innerText(),/EXPOSED MONITORING/);
+  assert.equal(await page.locator('#results .best,#results [data-winner],#results .winner').count(),0);
+  const ids=await page.locator('#results [data-model]').evaluateAll(nodes=>nodes.map(n=>n.dataset.model));
+  assert.deepEqual(ids,[...ids].sort(),'monitoring stays in stable identifier order');
+  await page.selectOption('#season','1999');
+  assert.match(await page.locator('#results').innerText(),/No saved panel/);
+  assert.match(await page.locator('#coverage').innerText(),/259 known game identities/);
+  await page.selectOption('#season','2022');assert.match(await page.locator('#coverage').innerText(),/canceled game/);
+  await page.selectOption('#season','2024');await page.selectOption('#target','win');await page.selectOption('#model','all');
+  if(process.env.NFL_SCREENSHOTS){fs.mkdirSync(process.env.NFL_SCREENSHOTS,{recursive:true});await page.screenshot({path:path.join(process.env.NFL_SCREENSHOTS,'nfl-review-'+width+'.png'),fullPage:true});}
+  states+=8;
+ }
+ assert.deepEqual(errors,[]);assert.deepEqual(network,[]);
+ console.log(JSON.stringify({status:'PASS',viewports:widths,selection_scenarios:states,keyboard_control:true,label_checks:12,external_requests:0,script_errors:0,monitoring_ranking:false}));
+ await browser.close();
+})().catch(error=>{console.error(error);process.exitCode=1});

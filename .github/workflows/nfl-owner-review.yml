@@ -1,0 +1,59 @@
+name: NFL owner evidence review
+on:
+  pull_request:
+    paths:
+      - 'tracks/nfl/**'
+      - '.github/workflows/nfl-owner-review.yml'
+  push:
+    branches: [main]
+    paths:
+      - 'tracks/nfl/**'
+      - '.github/workflows/nfl-owner-review.yml'
+permissions:
+  contents: read
+concurrency:
+  group: nfl-owner-review-${{ github.event.pull_request.number || github.ref }}
+  cancel-in-progress: true
+jobs:
+  contracts:
+    runs-on: ubuntu-24.04
+    strategy:
+      matrix:
+        python-version: ['3.11', '3.12']
+    steps:
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1
+        with:
+          persist-credentials: false
+      - uses: actions/setup-python@5fda3b95a4ea91299a34e894583c3862153e4b97
+        with:
+          python-version: ${{ matrix.python-version }}
+      - name: Check NFL denominator, matched-cohort and coordinator contracts
+        run: python -m unittest discover -s tracks/nfl -p 'test_*.py' -v
+      - name: Check the published review against its aggregate evidence
+        run: python tracks/nfl/contracts.py --check-review
+      - name: Reenter the credential-free demonstration
+        run: |
+          python tracks/nfl/contracts.py --demo --output "${{ runner.temp }}/nfl-review-demo.json"
+          python tracks/nfl/contracts.py --demo --output "${{ runner.temp }}/nfl-review-demo.json"
+  browser:
+    runs-on: ubuntu-24.04
+    steps:
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1
+        with:
+          persist-credentials: false
+      - name: Install the pinned local-page browser test
+        run: |
+          npm install --prefix "${RUNNER_TEMP}/nfl-review-browser" --ignore-scripts --no-audit --no-fund playwright@1.62.1
+          node "${RUNNER_TEMP}/nfl-review-browser/node_modules/playwright/cli.js" install --with-deps chromium
+      - name: Exercise NFL desktop, mobile and keyboard controls
+        env:
+          PLAYWRIGHT_MODULE_DIR: ${{ runner.temp }}/nfl-review-browser/node_modules/playwright
+          NFL_SCREENSHOTS: ${{ runner.temp }}/nfl-review-screenshots
+        run: node tracks/nfl/browser_test.cjs
+      - name: Preserve rendered NFL evidence review
+        uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02
+        with:
+          name: nfl-owner-review-screenshots
+          path: ${{ runner.temp }}/nfl-review-screenshots/*.png
+          if-no-files-found: error
+          retention-days: 14
