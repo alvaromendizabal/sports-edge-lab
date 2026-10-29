@@ -22,6 +22,8 @@ FBS001 registers 203 intended estimator units: 183 core units plus 20 chronologi
 
 The program's research plan has no elapsed-time or dollar stop. Durable checkpoints preserve productive work and support resumed stages. Actual provider quotas, terms, disk and memory safety, and transaction authorization still apply. Stored originals must be reconciled across shared project scopes before any missing paid snapshot can justify acquisition. A new source request is not a substitute for repairing lost normalization.
 
+The prepared owner acquisition primitive supports exact historical requests only after a closed shared catalog proves the gap, a conditional shared reservation succeeds, the catalog is checked again, and current entitlement and quota are verified. **New paid live requests are disabled until a shared live capture-slot coordinator exists.** Different live capture timestamps could otherwise create different reservation keys for concurrent requests. Verified completed live originals remain reusable, and unresolved prior dispatches never authorize an automatic replacement purchase. The current runtime selects no proven missing target and reports `READY_BUT_NO_PROVEN_GAPS`; it does not dispatch a provider request.
+
 ## Public engineering contribution
 
 The [standard-library example](../../examples/fbs_contracts/core.py) uses invented events to make four failure boundaries reproducible: FBS population/identity, actual source timing, atomic fit reentry, and complete shared-source content closure. It performs three synthetic fits, then reenters with zero new fits. Its tests alter clocks, labels, identities and saved bytes to verify rejection and preserve failed attempts.
