@@ -1,0 +1,40 @@
+{
+  "schema": "public.nba.audit.v1",
+  "published_on": "2026-10-29",
+  "evidence_kind": "sanitized_authenticated_owner_aggregates",
+  "league": "nba",
+  "owner_release": "B009",
+  "owner_status": "SUCCESS_RESEARCH_WITH_REPORTED_GAPS",
+  "owner_execution_completed": true,
+  "new_real_nba_units": 10,
+  "lifetime_nba_units": 85,
+  "combined_basketball_units": 268,
+  "nba_lineage": [
+    {"release": "B002", "new_unique_units": 54},
+    {"release": "B003", "new_unique_units": 19},
+    {"release": "B004", "new_unique_units": 2},
+    {"release": "B009", "new_unique_units": 10}
+  ],
+  "lineage_method": "Unique completed native identities; compatible predecessor aliases and replayed checkpoints excluded from new-fit counts.",
+  "new_paid_provider_requests": 0,
+  "new_paid_provider_credits": 0,
+  "nba_challenger_promoted": false,
+  "qualified_market_advantage": false,
+  "original_B008_NBA_folds": "blocked_calibration_support_preserved",
+  "B009_NBA_experiment": "separately_registered_and_completed",
+  "B010_NBA_real_execution": "pending",
+  "historical_validation_seasons": [2025, 2026],
+  "historical_seasons_development_exposed": true,
+  "current_season_selection_allowed": false,
+  "public_example_data": "entirely_invented",
+  "public_example_real_model_fits": 0,
+  "public_example_network_requests": 0,
+  "portfolio_rating": {"before": 8.5, "after": 8.5, "kind": "editorial_assessment", "target_established": false},
+  "verification": "Complete predecessor archive, member digests, lengths, CRCs, embedded source and inherited payload continuity were checked privately. This public summary is not a distribution of the raw evidence or native models.",
+  "limits": [
+    "A completed research unit does not establish predictive improvement.",
+    "Combined basketball accounting is not NBA-only accounting.",
+    "Current outcomes remain monitoring-only for model selection.",
+    "This receipt contains no individual forecasts, private artifact digests, raw datasets or infrastructure identifiers."
+  ]
+}

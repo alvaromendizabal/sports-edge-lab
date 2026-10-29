@@ -1,0 +1,39 @@
+name: NBA branch contracts
+on:
+  pull_request:
+    paths:
+      - 'examples/nba_branch/**'
+      - 'docs/nba/**'
+      - 'docs/NBA_RESEARCH_CARD.md'
+      - 'docs/evidence/2026-10-29-nba-b009-audit.json'
+      - '.github/workflows/nba-branch-contracts.yml'
+  push:
+    branches: [main]
+    paths:
+      - 'examples/nba_branch/**'
+      - 'docs/nba/**'
+      - 'docs/NBA_RESEARCH_CARD.md'
+      - 'docs/evidence/2026-10-29-nba-b009-audit.json'
+      - '.github/workflows/nba-branch-contracts.yml'
+permissions:
+  contents: read
+jobs:
+  invented-contracts:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 3
+    strategy:
+      matrix:
+        python-version: ['3.11', '3.12']
+    steps:
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1
+        with:
+          persist-credentials: false
+      - uses: actions/setup-python@5fda3b95a4ea91299a34e894583c3862153e4b97
+        with:
+          python-version: ${{ matrix.python-version }}
+      - name: Test NBA scope, chronology, factorial cohorts and exact checkpoint reuse
+        run: python -m unittest discover -s examples/nba_branch/tests -v
+      - name: Execute invented contracts with zero real fits or provider requests
+        run: python -m examples.nba_branch.contracts
+      - name: Verify standalone NBA page agrees with sanitized evidence
+        run: python -m examples.nba_branch.build_review --check
