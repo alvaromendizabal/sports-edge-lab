@@ -177,7 +177,9 @@ def fit_model(rows, target_year):
         gradient = [0.03 * (b - a) for b, a in zip(coefficients, prior)]
         for row in rows:
             x = design(row)
-            error = sigmoid(sum(b * v for b, v in zip(coefficients, x))) - row["y"]
+            # Explicit compensated reduction keeps the fit independent of the
+            # built-in sum algorithm, which changed for floats in Python 3.12.
+            error = sigmoid(math.fsum(b * v for b, v in zip(coefficients, x))) - row["y"]
             for index, value in enumerate(x):
                 gradient[index] += error * value / len(rows)
         coefficients = [b - 0.12 * g for b, g in zip(coefficients, gradient)]
@@ -194,7 +196,7 @@ def fit_model(rows, target_year):
 def predict(model, row):
     if row["season"] < model["target_year"] or instant(row["cutoff"]) < instant(model["fit_cutoff"]):
         raise ValueError("model applied before its registered target season")
-    return sigmoid(sum(b * x for b, x in zip(model["coefficients"], design(row))))
+    return sigmoid(math.fsum(b * x for b, x in zip(model["coefficients"], design(row))))
 
 
 class FitJournal:
@@ -272,8 +274,8 @@ def scores(rows, probabilities):
         raise ValueError("exact unique paired cohort required")
     if any(not math.isfinite(p) or not 0 < p < 1 for p in probabilities):
         raise ValueError("finite probabilities strictly inside zero and one required")
-    return {"games": len(rows), "brier": sum((p - r["y"]) ** 2 for p, r in zip(probabilities, rows)) / len(rows),
-            "log_loss": sum(-math.log(max(1e-15, p if r["y"] else 1 - p)) for p, r in zip(probabilities, rows)) / len(rows)}
+    return {"games": len(rows), "brier": math.fsum((p - r["y"]) ** 2 for p, r in zip(probabilities, rows)) / len(rows),
+            "log_loss": math.fsum(-math.log(max(1e-15, p if r["y"] else 1 - p)) for p, r in zip(probabilities, rows)) / len(rows)}
 
 
 def run_demo(root):

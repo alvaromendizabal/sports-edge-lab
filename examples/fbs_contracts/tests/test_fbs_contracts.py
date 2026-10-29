@@ -3,6 +3,7 @@ from dataclasses import replace
 from pathlib import Path
 import tempfile
 import unittest
+from unittest.mock import patch
 from concurrent.futures import ThreadPoolExecutor
 from examples.fbs_contracts.core import FitJournal, atomic_json, digest, fit_model, fixture, pregame_rows, run_demo, source_catalog
 
@@ -104,6 +105,21 @@ class SourceClosureTests(unittest.TestCase):
 
 
 class JournalTests(unittest.TestCase):
+    def test_float_outputs_do_not_depend_on_builtin_sum_version(self):
+        # Python 3.11 used left-to-right float sum; Python 3.12 compensates it.
+        # Force the old reduction and compare complete model identities and
+        # scorecards, not only rounded display values.
+        def left_to_right(values, start=0):
+            total = start
+            for value in values:
+                total += value
+            return total
+        with tempfile.TemporaryDirectory() as current, tempfile.TemporaryDirectory() as legacy:
+            expected = run_demo(current)
+            with patch('examples.fbs_contracts.core.sum', left_to_right, create=True):
+                observed = run_demo(legacy)
+            self.assertEqual(observed, expected)
+
     def test_failed_fit_is_preserved_then_retried(self):
         with tempfile.TemporaryDirectory() as tmp:
             journal = FitJournal(tmp)
