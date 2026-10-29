@@ -29,3 +29,7 @@ The prepared owner acquisition primitive supports exact historical requests only
 The [standard-library example](../../examples/fbs_contracts/core.py) uses invented events to make four failure boundaries reproducible: FBS population/identity, actual source timing, atomic fit reentry, and complete shared-source content closure. It performs three synthetic fits, then reenters with zero new fits. Its tests alter clocks, labels, identities and saved bytes to verify rejection and preserve failed attempts.
 
 The example contains no paid raw observations, individual forecasts, private source locations or credentials. It does not make provider requests, claim a sports edge, or alter the NFL and basketball research programs. [The dashboard](index.html) displays actual inherited aggregates separately from executable invented results.
+
+## Runtime compatibility repair
+
+[The v002 repair note](runtime-repair.md) explains the reproduced LightGBM warning, named prediction schema, version-specific regression matrix, and owner-progress boundary. The original evidence page remains a record of the first independent release.
