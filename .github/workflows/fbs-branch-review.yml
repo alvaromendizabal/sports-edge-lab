@@ -1,0 +1,40 @@
+name: FBS branch evidence and invented reproduction
+on:
+  pull_request:
+  push:
+    branches: [main]
+permissions:
+  contents: read
+jobs:
+  fbs-contracts:
+    runs-on: ubuntu-24.04
+    strategy:
+      matrix:
+        python-version: ['3.11', '3.12']
+    steps:
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1
+        with:
+          persist-credentials: false
+      - uses: actions/setup-python@5fda3b95a4ea91299a34e894583c3862153e4b97
+        with:
+          python-version: ${{ matrix.python-version }}
+      - name: Check timing, population, content closure and fit reentry
+        run: python -m unittest discover -s examples/fbs_contracts/tests -v
+      - name: Execute twice and verify deterministic evidence page
+        run: |
+          python -m examples.fbs_contracts --output "${RUNNER_TEMP}/fbs-review"
+          python -m examples.fbs_contracts --output "${RUNNER_TEMP}/fbs-review"
+          python -m examples.fbs_contracts.build_review --check
+  fbs-notebook:
+    runs-on: ubuntu-24.04
+    steps:
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1
+        with:
+          persist-credentials: false
+      - uses: actions/setup-python@5fda3b95a4ea91299a34e894583c3862153e4b97
+        with:
+          python-version: '3.12'
+      - name: Install pinned existing notebook dependencies
+        run: python -m pip install -r examples/basketball_contracts/notebook-requirements.txt
+      - name: Execute in a real kernel and reopen saved HTML outputs
+        run: python -m examples.fbs_contracts.execute_notebook --output "${{ runner.temp }}/fbs-branch-review.ipynb"
