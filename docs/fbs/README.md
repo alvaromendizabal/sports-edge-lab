@@ -39,3 +39,8 @@ The example contains no paid raw observations, individual forecasts, private sou
 A later independent FBS attempt passed 122 tests, then entered shared-source inventory. At the returned audit snapshot, it had zero saved estimator completions or optimizer-start receipts. The replacement correctly declined to overlap its live writer. The elapsed stage-entry interval does not establish a deadlock. A further owner release is prepared; no new scientific result is claimed.
 
 [The recovery example](pretraining-recovery.md) demonstrates explicit phase/work eligibility and an inactive SQLite checkpoint under its existing writer lock. Tests use a real local child and hot rollback journal, preserve the original bytes, and recover only a separate copy. No process signals, provider requests or private owner locations are included. The owner program schedules pinned-input science before broad source reconciliation; actual completion still requires its returned evidence.
+
+## Process-handle portability
+
+A subsequent recovery attempt refused before signaling because its Python build omitted at least one pidfd wrapper. That attribute check did not establish whether the running Linux interface was available. The [compatibility adapter and explanation](pidfd-compatibility.md) demonstrate per-operation Python/libc selection, an own-process signal-zero probe, exact errno reporting and descriptor cleanup. Tests remove the Python wrappers and exercise the exported libc path with local child processes. Operational errors do not trigger backend switching, and the adapter contains no numeric-PID signaling fallback. Target identity, ownership and application recovery eligibility remain separate caller obligations.
+
