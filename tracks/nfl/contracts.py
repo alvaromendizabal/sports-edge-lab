@@ -17,6 +17,8 @@ from pathlib import Path
 HERE = Path(__file__).resolve().parent
 PROJECTS = {"nfl", "ncaa_fbs", "nba", "ncaa_basketball"}
 SUBDIRECTORIES = {"src", "config", "data", "runs", "notebooks", "reports", "releases", "archive"}
+NFL_WEEKS = tuple(map(str, range(1, 19))) + ("WC", "DIV", "CON", "SB")
+PROVIDERS = ("DraftKings", "Underdog", "PrizePicks", "Kalshi", "Polymarket")
 
 
 def canonical(value):
@@ -109,6 +111,100 @@ def compare_panel(challenger, market):
         "promotion_authorized": False, "qualification": "Separate complete historical family required"}
 
 
+def validate_weekly_review(review, seasons):
+    """Check dated aggregate closure; no new forecasts or provider admission."""
+    require(review.get("schema") == "sports-edge-lab.nfl.public-weekly-review.v1", "Unknown weekly schema")
+    require(review.get("historical_owner_release") == "N006", "Weekly source is historical N006")
+    require(review.get("new_forecasts") == review.get("provider_calls") == review.get("new_estimator_fits") == 0,
+            "Aggregate reanalysis cannot become new forecasts or fits")
+    require(review.get("schedule_observed_at_utc") == "2026-10-29T19:38:19.361649+00:00", "Dated schedule identity changed")
+    require(review.get("saved_availability_semantics") == "UNION_OF_REGISTERED_SAVED_PANELS_NOT_ISSUED_FORECASTS",
+            "Saved availability must not become issued forecasts")
+    expected = {(season, week) for season in (2024, 2025, 2026) for week in NFL_WEEKS}
+    rows, providers = review["weeks"], review["provider_weeks"]
+    require(len(rows) == 66, "Expected all 66 NFL season/week slots")
+    indexed = {}
+    count_fields = ("games_scheduled", "games_scored", "ties", "canceled", "unplayed_from_capture",
+                    "unscored_status_unknown", "saved_win_binary", "saved_margin", "saved_total")
+    unknown_fields = ("forecast_issued_verified", "forecastable_verified", "settled_profit", "roi",
+                      "cumulative_profit", "drawdown", "clv")
+    fields = set(count_fields + unknown_fields + ("season", "nfl_week", "schedule_status",
+                  "expected_postseason_games_by_format", "economic_status"))
+    for row in rows:
+        require(set(row) == fields, "Unknown weekly field")
+        require(type(row["season"]) is int and type(row["nfl_week"]) is str, "NFL season/week identity must be explicit")
+        key = (row["season"], row["nfl_week"])
+        require(key in expected and key not in indexed, "Duplicate or unsupported NFL season/week")
+        indexed[key] = row
+        require(all(type(row[k]) is int and row[k] >= 0 for k in count_fields), "Invalid weekly count")
+        require(row["games_scheduled"] == sum(row[k] for k in
+            ("games_scored", "canceled", "unplayed_from_capture", "unscored_status_unknown")), "Weekly status closure differs")
+        require(row["ties"] <= row["games_scored"], "Weekly ties exceed scored games")
+        require(row["saved_win_binary"] <= row["games_scored"] - row["ties"] and
+                all(row[k] <= row["games_scored"] for k in ("saved_margin", "saved_total")), "Saved predictions exceed target eligibility")
+        require(all(row[k] is None for k in unknown_fields), "Unknown forecasts or economics cannot become zero")
+        require(row["economic_status"] == "ISSUED_PICKS_AND_SETTLEMENTS_NOT_VERIFIED", "Settlement qualification changed")
+        future = key[0] == 2026 and key[1] in ("WC", "DIV", "CON", "SB")
+        if future:
+            require(all(row[k] == 0 for k in count_fields), "Future postseason cannot invent matchups or results")
+            require(row["schedule_status"] == "NO_CAPTURED_MATCHUPS_NO_IDS_INVENTED" and
+                    row["expected_postseason_games_by_format"] == {"WC": 6, "DIV": 4, "CON": 2, "SB": 1}[key[1]],
+                    "Future postseason format differs")
+        else:
+            require(row["schedule_status"] == "CAPTURED_GAME_ROWS" and
+                    row["expected_postseason_games_by_format"] == {"WC": 6, "DIV": 4, "CON": 2, "SB": 1}.get(key[1]),
+                    "Captured schedule state changed")
+    require(set(indexed) == expected, "Missing NFL season/week slot")
+    for year in (2024, 2025, 2026):
+        selected = [r for r in rows if r["season"] == year]
+        for weekly, yearly in (("games_scheduled", "accounted"), ("games_scored", "scored"), ("ties", "ties"),
+                               ("canceled", "canceled"), ("unplayed_from_capture", "unplayed"),
+                               ("saved_win_binary", "retained"), ("saved_margin", "retained"), ("saved_total", "retained")):
+            require(sum(r[weekly] for r in selected) == seasons[year][yearly], "Weekly and season aggregates disagree: " + weekly)
+        require(sum(r["games_scheduled"] for r in selected if r["nfl_week"].isdigit()) == seasons[year]["regular"],
+                "NFL regular-season denominator differs")
+        require(sum(r["games_scheduled"] for r in selected if not r["nfl_week"].isdigit()) == seasons[year]["postseason"],
+                "NFL postseason denominator differs")
+    expected_providers = {(year, week, provider) for year, week in expected for provider in PROVIDERS}
+    require(len(providers) == 330, "Expected all 330 provider/week states")
+    keys = set()
+    provider_unknowns = ("matched_games", "coverage_fraction", "brier", "log_loss", "settled_profit", "roi")
+    for row in providers:
+        require(set(row) == set(provider_unknowns + ("season", "nfl_week", "games_scheduled", "provider", "quote_status")),
+                "Unknown provider field")
+        key = (row["season"], row["nfl_week"], row["provider"])
+        require(key in expected_providers and key not in keys, "Duplicate or unsupported provider/week")
+        keys.add(key)
+        require(type(row["games_scheduled"]) is int and row["games_scheduled"] == indexed[key[:2]]["games_scheduled"],
+                "Provider denominator differs")
+        require(row["quote_status"] == "NO_VERIFIED_QUOTE" and all(row[k] is None for k in provider_unknowns),
+                "Unknown provider evidence cannot become generic MARKET performance")
+    require(keys == expected_providers, "Missing provider/week state")
+    return {"season_week_slots": 66, "provider_week_slots": 330, "new_forecasts": 0, "provider_calls": 0}
+
+
+def validate_owner_attempt(data):
+    """Historical record arithmetic; this does not observe current storage."""
+    attempt = data["n008_owner_attempt"]
+    require(data["owner_latest_success"] == "N006" and data["owner_latest_attempt"] == "N008", "Owner release boundary changed")
+    require(data["next_owner_execution"] == {"release": "N009", "verified": False}, "Pending owner work cannot become executed")
+    require(attempt["status"] == "FAILED_FIRST_STORAGE_GUARD_BEFORE_SCIENCE" and attempt["worker_started"] is True,
+            "N008 failure stage changed")
+    require(attempt["new_n004_fits"] is None and all(attempt[k] is False for k in
+        ("tests_reached", "parent_admission_reached", "coverage_refresh_reached", "n004_science_reached", "persistence_reached")),
+        "Unreached N008 science cannot become completed work")
+    storage = attempt["storage"]
+    require(storage["observed_at_utc"] == "2026-10-29T22:11:59.328807+00:00" and storage["live_observation"] is False,
+            "Historical storage cannot become live telemetry")
+    for key in ("total_bytes", "used_bytes", "available_bytes", "research_reserve_bytes", "available_inodes"):
+        require(type(storage[key]) is int and storage[key] >= 0, "Invalid historical storage count")
+    require(storage["total_bytes"] == storage["used_bytes"] + storage["available_bytes"], "Historical storage arithmetic differs")
+    require(storage["research_reserve_bytes"] == max(512 * 1024 * 1024, (3 * storage["total_bytes"] + 99) // 100) and
+            storage["available_bytes"] < storage["research_reserve_bytes"], "Historical reserve boundary differs")
+    require(attempt["owner_cleanup_verified"] is False and attempt["archive_payloads_verified"] == 33,
+            "N008 archive audit cannot become owner cleanup")
+
+
 def validate_evidence(data):
     require(data.get("schema") == "sports-edge-lab.nfl.public-review.v1", "Unknown public evidence schema")
     require(data.get("accepted_reference") == "MARKET", "Reference identity changed")
@@ -141,10 +237,12 @@ def validate_evidence(data):
         groups[group] = panel
         compare_panel(row, panel)
     require(data["qualification"]["passed"] == 0 and data["qualification"]["n003_corrected_comparisons"] == 522, "Qualification boundary changed")
+    weekly = validate_weekly_review(data["weekly_review"], seasons)
+    validate_owner_attempt(data)
     text = canonical(data).decode()
-    require(not re.search(r"/home/|s3://|AKIA[A-Z0-9]{16}|ASIA[A-Z0-9]{16}|api[_-]?key|password|credential_value", text, re.I), "Private fields are not public evidence")
+    require(not re.search(r"/home/|/tmp/|/workspace/|s3://|arn:aws:|AKIA[A-Z0-9]{16}|ASIA[A-Z0-9]{16}|api[_-]?key|password|credential_value", text, re.I), "Private fields are not public evidence")
     return {"status": "PUBLIC_AGGREGATES_VALIDATED", "seasons": len(seasons), "game_identities": 7549,
-        "prediction_tables": 316, "metric_scalars": 948, "matched_panels": len(groups), "private_training_reproduced": False}
+        "prediction_tables": 316, "metric_scalars": 948, "matched_panels": len(groups), "private_training_reproduced": False, **weekly}
 
 
 def build_review(*, check=False):

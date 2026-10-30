@@ -140,6 +140,88 @@ class PublicEvidenceTests(unittest.TestCase):
         self.assertEqual(sum(row["absent_both_saved_tables"] for row in self.data["gap_counts"] if row["season"] < 2026), 22)
 
 
+class WeeklyEvidenceTests(unittest.TestCase):
+    def setUp(self):
+        self.data = json.loads((contracts.HERE / "evidence.json").read_text())
+        self.weekly = self.data["weekly_review"]
+        self.seasons = {row["season"]: row for row in self.data["seasons"]}
+
+    def test_complete_nfl_week_and_provider_slot_closure(self):
+        before = copy.deepcopy(self.weekly)
+        receipt = contracts.validate_weekly_review(self.weekly, self.seasons)
+        self.assertEqual((receipt["season_week_slots"], receipt["provider_week_slots"]), (66, 330))
+        self.assertEqual(self.weekly, before)
+        for season in (2024, 2025):
+            rows = [row for row in self.weekly["weeks"] if row["season"] == season]
+            self.assertEqual(sum(r["games_scheduled"] for r in rows if r["nfl_week"].isdigit()), 272)
+            self.assertEqual(sum(r["games_scheduled"] for r in rows if not r["nfl_week"].isdigit()), 13)
+
+    def test_future_postseason_is_format_only_not_missing_completed_games(self):
+        rows = [r for r in self.weekly["weeks"] if r["season"] == 2026]
+        future = [r for r in rows if not r["nfl_week"].isdigit()]
+        self.assertEqual(sum(r["expected_postseason_games_by_format"] for r in future), 13)
+        self.assertEqual(sum(r["games_scheduled"] for r in future), 0)
+        self.assertEqual(sum(r["unplayed_from_capture"] for r in rows), 165)
+        self.assertTrue(all(r["schedule_status"] == "NO_CAPTURED_MATCHUPS_NO_IDS_INVENTED" for r in future))
+
+    def test_saved_availability_remains_distinct_from_issued_forecasts(self):
+        for year, expected in ((2024, 280), (2025, 277), (2026, 77)):
+            rows = [r for r in self.weekly["weeks"] if r["season"] == year]
+            self.assertEqual(sum(r["saved_win_binary"] for r in rows), expected)
+            self.assertTrue(all(r["forecast_issued_verified"] is None for r in rows))
+        self.weekly["weeks"][0]["forecast_issued_verified"] = 0
+        with self.assertRaisesRegex(ValueError, "Unknown forecasts"):
+            contracts.validate_weekly_review(self.weekly, self.seasons)
+
+    def test_unknown_provider_coverage_cannot_inherit_market_or_zero_returns(self):
+        self.assertEqual({r["provider"] for r in self.weekly["provider_weeks"]}, set(contracts.PROVIDERS))
+        for field, value in (("matched_games", 0), ("roi", 0.0), ("brier", 0.2), ("quote_status", "VERIFIED")):
+            sample = copy.deepcopy(self.weekly); sample["provider_weeks"][0][field] = value
+            with self.subTest(field=field), self.assertRaisesRegex(ValueError, "Unknown provider"):
+                contracts.validate_weekly_review(sample, self.seasons)
+
+    def test_duplicate_missing_or_calendar_week_identity_is_rejected(self):
+        for table in ("weeks", "provider_weeks"):
+            sample = copy.deepcopy(self.weekly); sample[table][-1] = copy.deepcopy(sample[table][0])
+            with self.subTest(table=table), self.assertRaisesRegex(ValueError, "Duplicate"):
+                contracts.validate_weekly_review(sample, self.seasons)
+        self.weekly["weeks"][0]["nfl_week"] = "2024-W36"
+        with self.assertRaisesRegex(ValueError, "unsupported NFL"):
+            contracts.validate_weekly_review(self.weekly, self.seasons)
+
+    def test_tie_as_binary_loss_and_unplayed_as_scored_are_rejected(self):
+        tied = next(i for i,r in enumerate(self.weekly["weeks"]) if r["ties"])
+        sample = copy.deepcopy(self.weekly)
+        sample["weeks"][tied]["saved_win_binary"] = sample["weeks"][tied]["games_scored"]
+        with self.assertRaisesRegex(ValueError, "eligibility"):
+            contracts.validate_weekly_review(sample, self.seasons)
+        future = next(i for i,r in enumerate(self.weekly["weeks"]) if r["unplayed_from_capture"])
+        self.weekly["weeks"][future]["games_scored"] += 1
+        with self.assertRaisesRegex(ValueError, "status closure"):
+            contracts.validate_weekly_review(self.weekly, self.seasons)
+
+    def test_historical_disk_failure_is_not_live_or_completed_owner_work(self):
+        contracts.validate_owner_attempt(self.data)
+        storage = self.data["n008_owner_attempt"]["storage"]
+        self.assertEqual(storage["research_reserve_bytes"] - storage["available_bytes"], 833953792)
+        for section, key, value in (("storage", "live_observation", True), ("attempt", "new_n004_fits", 0),
+                                    ("attempt", "owner_cleanup_verified", True)):
+            sample = copy.deepcopy(self.data)
+            target = sample["n008_owner_attempt"]["storage"] if section == "storage" else sample["n008_owner_attempt"]
+            target[key] = value
+            with self.subTest(key=key), self.assertRaises(ValueError):
+                contracts.validate_owner_attempt(sample)
+        self.data["next_owner_execution"]["verified"] = True
+        with self.assertRaisesRegex(ValueError, "Pending owner"):
+            contracts.validate_owner_attempt(self.data)
+
+    def test_private_fields_and_invented_economic_values_are_rejected(self):
+        for key, value in (("settled_profit", 0.0), ("clv", 0.0), ("private_path", "/tmp/private")):
+            sample = copy.deepcopy(self.data); sample["weekly_review"]["weeks"][0][key] = value
+            with self.subTest(key=key), self.assertRaises(ValueError):
+                contracts.validate_evidence(sample)
+
+
 class DemoReentryTests(unittest.TestCase):
     def test_fresh_and_resumed_demo_preserves_identity_and_mtime(self):
         with tempfile.TemporaryDirectory() as directory:
