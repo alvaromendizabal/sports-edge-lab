@@ -2,13 +2,13 @@
 
 **Pregame forecasting, honest market comparisons, and recoverable ML systems.** Built by [Alvaro Mendizabal](https://github.com/alvaromendizabal) as one track in the existing [Sports Edge Lab](../../README.md) portfolio.
 
-**Owner evidence dated October 29, 2026:** N006 completed all-game accounting and checkpoint verification. N007 subsequently stopped at coordinator admission before its worker. MARKET remains the accepted reference; no new predictive advantage or promotion is established. The separate N008 continuation is pending owner execution.
+**Owner evidence dated October 29, 2026:** N006 remains the latest successful execution. N007 stopped at coordinator admission; N008 subsequently admitted the coordinator and stopped at its first worker storage guard, before tests or new science. The new weekly review reanalyzes authenticated N006 evidence locally. **N009 owner execution remains pending.** MARKET remains the accepted reference; no predictive advantage or promotion is established.
 
 ## Start here
 
 | Inspect | What it demonstrates |
 |---|---|
-| [Interactive NFL evidence review](review.html) | All 28 source seasons; exact smaller model cohorts; target/protocol/family/stable-ID controls; explicit monitoring limits |
+| [Interactive NFL evidence review](review.html) | All 28 source seasons; 66 NFL week slots; 330 provider/week states; exact smaller model cohorts and preserved model controls |
 | [Model card and evaluation boundary](#model-card) | Conditional win vs point targets, matched MARKET references, historical exposure and unavailable uncertainty |
 | [Coordinator incident and reconciliation method](#a-real-integration-failure) | A proved pre-worker failure, unknown existing state and a safe semantic admission gate |
 | [Public source and negative tests](contracts.py) / [tests](test_contracts.py) | Outer-universe accounting, ties, postseason season labels, exact cohort identity and immutable reentry |
@@ -30,10 +30,37 @@ The interactive review is a self-contained offline HTML file. Download/open it l
 | N006 preservation | **237 parent checkpoints**, 1,948 scientific files preserved; 450 owner checks passed; no new scientific fits |
 | N003 qualification | **0 of 522** recorded corrected comparisons pass; MARKET retained; zero actual orders |
 | N007 outcome | Executable admitted, coordinator filename rejected before parsing; worker/tests/science/migration not reached |
+| N008 outcome | Coordinator admitted; first worker disk guard failed before tests, full parent admission, coverage refresh or new science |
+| Three-season weekly review | **66 NFL season/week slots + 330 provider/week states**, locally recomputed from authenticated N006 evidence; no new fits, forecasts or provider calls |
 
 Both 2024 and 2025 contain 272 regular-season games and 13 playoff games. All 22 omitted 2023–2025 training/evaluation games are absent from both saved MARKET/design input tables. This proves the saved-table gap; it does not establish that original provider quotes never existed. A complete accounting ledger can preserve those gaps without manufacturing predictions.
 
 The 2025 tie is also absent from both input tables. The 2026 tie is present in both, including point targets, but excluded by the legacy non-tie cohort. Future margin/total eligibility must be qualified separately. Future games, canceled games, missing inputs and unsupported target semantics are distinct states.
+
+## Every NFL week and five provider evidence states
+
+The [weekly view](review.html#weekly) covers **2024, 2025 and 2026** with 18 regular-season weeks plus Wild Card, Divisional, Conference and Super Bowl rounds for each season. Use its season selector to inspect 22 rows or all 66; the provider selector exposes each named provider for the same slots. January postseason games remain in their football season. The existing target, protocol, metric, family and stable-model-ID controls are unchanged.
+
+The underlying [aggregate JSON](evidence.json) carries all **330** provider/week combinations for DraftKings, Underdog, PrizePicks, Kalshi and Polymarket. Every current provider state is `NO_VERIFIED_QUOTE`. This means the admitted evidence does not establish that provider's qualified quotes, product contracts, issued picks and settlements. It is not proof those providers offered no markets. Generic archived MARKET stays a separate comparison reference; provider coverage, profit and ROI remain `null`, never zero.
+
+The schedule was captured at **2026-10-29 19:38:19 UTC**. The weekly export is a local N009 preparation reanalysis of N006's authenticated saved predictions, not a refreshed schedule or N009 owner run. Saved win/margin/total counts are availability unions across registered panels, not issued forecasts or pooled performance. The four 2026 postseason rows hold **13 expected games by format and zero captured matchups**; no game identity or result is invented. The 165 unplayed regular-season rows remain distinct from missing completed evaluations.
+
+The public checks enforce slot closure, full-season denominators, tie eligibility, future-round semantics, unknown-value preservation and provider separation. They cannot recover private source records or establish historically issued forecasts.
+
+## N008: a dated physical-storage failure
+
+The authenticated N008 return contained 34 ZIP members and 33 verified payloads. Coordinator admission and dependency reuse passed, then the first worker storage check stopped before packaged tests, full parent-checkpoint admission, refreshed coverage, feature research, notebook execution or persistence. N004 fit counts were unset because that stage was not reached.
+
+| Historical owner measurement | October 29, 2026 at 22:11:59 UTC |
+|---|---:|
+| Filesystem total | 149.927 GiB |
+| Used | 146.206 GiB |
+| Available | 3.721 GiB |
+| Research reserve | 4.498 GiB |
+| Reserve shortfall at this observation | 0.777 GiB |
+| Available inodes | 7,803,877 |
+
+These are dated observations from the uploaded return, not live storage telemetry or billing estimates. The disk headroom stop does not make a unique catalog disposable. N009 is a separate prepared recovery and research continuation; actual owner cleanup, reclaimed capacity and scientific completion require fresh receipts. This public update neither performs cleanup nor claims recovered owner capacity. The [storage panel](review.html#storage) makes that boundary visible beside the earlier N007 incident.
 
 ## Run the public checks
 
@@ -77,9 +104,9 @@ This case illustrates a practical distinction: a portable artifact can pass its 
 
 ## Provenance and public boundary
 
-The [export](evidence.json) records SHA-256 identities for the independently audited N006 return, N007 failure return, recomputed metric aggregate and audit summary. The audit verified each actual saved prediction file and hashed its sorted string game IDs as compact UTF-8 JSON. It asserted complete cohort-hash and MARKET-metric equality across every table in a season/target/protocol panel. The export copies these observed hashes by the original panel key; no hash is inferred from a row count or label. The original 2026 protocol spelling remains in `source_policy` when the UI groups it as monitoring. The export exposes counts, coarse families and aggregate scores only. It cannot independently reproduce private model training or recover per-game outputs. See the existing [publication boundary](../../docs/PUBLICATION_BOUNDARY.md).
+The [export](evidence.json) records SHA-256 identities for the independently audited N006 return, N007/N008 failure returns, original recomputed metric aggregate and audit summary, and the two pinned weekly aggregate CSV sources. Blank CSV cells are converted to JSON null without adding values. The audit verified each actual saved prediction file and hashed its sorted string game IDs as compact UTF-8 JSON. It asserted complete cohort-hash and MARKET-metric equality across every table in a season/target/protocol panel. The export copies these observed hashes by the original panel key; no hash is inferred from a row count or label. The original 2026 protocol spelling remains in `source_policy` when the UI groups it as monitoring. The export exposes counts, coarse families and aggregate scores only. It cannot independently reproduce private model training or recover per-game outputs. See the existing [publication boundary](../../docs/PUBLICATION_BOUNDARY.md).
 
-The source snapshot is dated. The dashboard does not assert current AWS storage, current live workloads, completed N008 work, a newly executed notebook or a live website deployment. The [change manifest](change_manifest.json) identifies this NFL-owned publication scope; actual PR/commit/check receipts determine its publication state.
+The source snapshot is dated. The dashboard does not assert current AWS storage, current live workloads, completed N009 owner work, a newly executed owner notebook or a live website deployment. The [change manifest](change_manifest.json) identifies this NFL-owned publication scope; actual PR/commit/check receipts determine its publication state.
 
 ## Review by role
 
