@@ -9,6 +9,45 @@
     "public_limit": "Original per-game records remain private; this export carries observed audit hashes, not independently reconstructible game lists.",
     "source": "Independent N006 audit prediction_verification.market_metrics, joined by original season/target/policy; game counts and MARKET metrics also checked."
   },
+  "execution_outcomes": {
+    "authenticated_invocations": 6,
+    "blocked": 1,
+    "deduplication": "N003 interim/final snapshots are one invocation; repeated identical N005 transcript is one rejected launch; the identical N010 return upload adds no invocation or failure; shared V011 is separate maintenance",
+    "failed": 3,
+    "launch_rejection_release": "N005",
+    "lifetime_failures": null,
+    "lifetime_successes": null,
+    "n002_inherited_research_success": "147 completed fits supported; original final invocation receipt not available in this evidence set",
+    "rows": [
+      {
+        "outcome": "SUCCESS_RESEARCH",
+        "release": "N003"
+      },
+      {
+        "outcome": "SUCCESS_COVERAGE_ONLY",
+        "release": "N006"
+      },
+      {
+        "outcome": "BLOCKED_BEFORE_WORKER",
+        "release": "N007"
+      },
+      {
+        "outcome": "FAILED",
+        "release": "N008"
+      },
+      {
+        "outcome": "FAILED",
+        "release": "N009"
+      },
+      {
+        "outcome": "FAILED",
+        "release": "N010"
+      }
+    ],
+    "scope": "Distinct authenticated owner invocations; not a lifetime total, fit count or test count",
+    "scoped_successes": 2,
+    "separate_observed_launch_rejections": 1
+  },
   "gap_counts": [
     {
       "absent_both_saved_tables": 9,
@@ -47,16 +86,481 @@
       "ties": 1
     }
   ],
+  "information_time_demo": {
+    "cases": [
+      {
+        "arguments": {
+          "decision_at": "2025-11-02T17:00:00+00:00",
+          "kickoff_at": "2025-11-02T18:00:00+00:00",
+          "source_training_cutoff_at": "2025-11-02T17:00:00+00:00"
+        },
+        "audit": {
+          "actual_fit_time_inferred_from_source_cutoff": false,
+          "checks": {
+            "inputs": "UNVERIFIED",
+            "labels": "UNVERIFIED",
+            "model_availability": "UNVERIFIED",
+            "source_bound": "INSUFFICIENT_FOR_EARLIER_POLICY"
+          },
+          "effective_policy_at": "2025-11-01T18:00:00+00:00",
+          "known_late_input_or_label": false,
+          "real_forecast_issued": false,
+          "schema": "sports-edge-lab.public-information-time-audit.v1",
+          "source_clocks": {
+            "latest_input_available_at": null,
+            "latest_label_available_at": null,
+            "model_completed_at": null,
+            "source_training_cutoff_at": "2025-11-02T17:00:00+00:00"
+          },
+          "source_timestamp_rewritten": false,
+          "status": "NOT_ESTABLISHED_FOR_POLICY",
+          "synthetic": true
+        },
+        "decision_hours_before": 1,
+        "label": "Source boundary only: one hour before kickoff",
+        "scenario": "origin_bound"
+      },
+      {
+        "arguments": {
+          "decision_at": "2025-10-31T18:00:00+00:00",
+          "kickoff_at": "2025-11-02T18:00:00+00:00",
+          "source_training_cutoff_at": "2025-11-02T17:00:00+00:00"
+        },
+        "audit": {
+          "actual_fit_time_inferred_from_source_cutoff": false,
+          "checks": {
+            "inputs": "UNVERIFIED",
+            "labels": "UNVERIFIED",
+            "model_availability": "UNVERIFIED",
+            "source_bound": "INSUFFICIENT_FOR_EARLIER_POLICY"
+          },
+          "effective_policy_at": "2025-10-31T18:00:00+00:00",
+          "known_late_input_or_label": false,
+          "real_forecast_issued": false,
+          "schema": "sports-edge-lab.public-information-time-audit.v1",
+          "source_clocks": {
+            "latest_input_available_at": null,
+            "latest_label_available_at": null,
+            "model_completed_at": null,
+            "source_training_cutoff_at": "2025-11-02T17:00:00+00:00"
+          },
+          "source_timestamp_rewritten": false,
+          "status": "NOT_ESTABLISHED_FOR_POLICY",
+          "synthetic": true
+        },
+        "decision_hours_before": 48,
+        "label": "Source boundary only: one hour before kickoff",
+        "scenario": "origin_bound"
+      },
+      {
+        "arguments": {
+          "decision_at": "2025-11-02T17:00:00+00:00",
+          "kickoff_at": "2025-11-02T18:00:00+00:00",
+          "latest_input_available_at": "2025-11-01T16:00:00+00:00",
+          "latest_label_available_at": "2025-11-01T12:00:00+00:00",
+          "model_completed_at": "2025-11-01T17:30:00+00:00",
+          "source_training_cutoff_at": "2025-11-01T17:00:00+00:00"
+        },
+        "audit": {
+          "actual_fit_time_inferred_from_source_cutoff": false,
+          "checks": {
+            "inputs": "STRICTLY_BEFORE_POLICY",
+            "labels": "STRICTLY_BEFORE_POLICY",
+            "model_availability": "AVAILABLE_BY_POLICY",
+            "source_bound": "STRICTLY_BEFORE_POLICY"
+          },
+          "effective_policy_at": "2025-11-01T18:00:00+00:00",
+          "known_late_input_or_label": false,
+          "real_forecast_issued": false,
+          "schema": "sports-edge-lab.public-information-time-audit.v1",
+          "source_clocks": {
+            "latest_input_available_at": "2025-11-01T16:00:00+00:00",
+            "latest_label_available_at": "2025-11-01T12:00:00+00:00",
+            "model_completed_at": "2025-11-01T17:30:00+00:00",
+            "source_training_cutoff_at": "2025-11-01T17:00:00+00:00"
+          },
+          "source_timestamp_rewritten": false,
+          "status": "DEMO_ADMISSIBLE",
+          "synthetic": true
+        },
+        "decision_hours_before": 1,
+        "label": "Complete invented evidence: all clocks before policy",
+        "scenario": "complete"
+      },
+      {
+        "arguments": {
+          "decision_at": "2025-10-31T18:00:00+00:00",
+          "kickoff_at": "2025-11-02T18:00:00+00:00",
+          "latest_input_available_at": "2025-11-01T16:00:00+00:00",
+          "latest_label_available_at": "2025-11-01T12:00:00+00:00",
+          "model_completed_at": "2025-11-01T17:30:00+00:00",
+          "source_training_cutoff_at": "2025-11-01T17:00:00+00:00"
+        },
+        "audit": {
+          "actual_fit_time_inferred_from_source_cutoff": false,
+          "checks": {
+            "inputs": "OBSERVED_TOO_LATE",
+            "labels": "OBSERVED_TOO_LATE",
+            "model_availability": "COMPLETED_AFTER_POLICY",
+            "source_bound": "INSUFFICIENT_FOR_EARLIER_POLICY"
+          },
+          "effective_policy_at": "2025-10-31T18:00:00+00:00",
+          "known_late_input_or_label": true,
+          "real_forecast_issued": false,
+          "schema": "sports-edge-lab.public-information-time-audit.v1",
+          "source_clocks": {
+            "latest_input_available_at": "2025-11-01T16:00:00+00:00",
+            "latest_label_available_at": "2025-11-01T12:00:00+00:00",
+            "model_completed_at": "2025-11-01T17:30:00+00:00",
+            "source_training_cutoff_at": "2025-11-01T17:00:00+00:00"
+          },
+          "source_timestamp_rewritten": false,
+          "status": "NOT_ESTABLISHED_FOR_POLICY",
+          "synthetic": true
+        },
+        "decision_hours_before": 48,
+        "label": "Complete invented evidence: all clocks before policy",
+        "scenario": "complete"
+      },
+      {
+        "arguments": {
+          "decision_at": "2025-11-02T17:00:00+00:00",
+          "kickoff_at": "2025-11-02T18:00:00+00:00",
+          "latest_input_available_at": "2025-11-01T16:00:00+00:00",
+          "latest_label_available_at": "2025-11-01T12:00:00+00:00",
+          "model_completed_at": "2025-11-01T17:30:00+00:00",
+          "source_training_cutoff_at": "2025-11-01T18:00:00+00:00"
+        },
+        "audit": {
+          "actual_fit_time_inferred_from_source_cutoff": false,
+          "checks": {
+            "inputs": "STRICTLY_BEFORE_POLICY",
+            "labels": "STRICTLY_BEFORE_POLICY",
+            "model_availability": "AVAILABLE_BY_POLICY",
+            "source_bound": "INSUFFICIENT_FOR_EARLIER_POLICY"
+          },
+          "effective_policy_at": "2025-11-01T18:00:00+00:00",
+          "known_late_input_or_label": false,
+          "real_forecast_issued": false,
+          "schema": "sports-edge-lab.public-information-time-audit.v1",
+          "source_clocks": {
+            "latest_input_available_at": "2025-11-01T16:00:00+00:00",
+            "latest_label_available_at": "2025-11-01T12:00:00+00:00",
+            "model_completed_at": "2025-11-01T17:30:00+00:00",
+            "source_training_cutoff_at": "2025-11-01T18:00:00+00:00"
+          },
+          "source_timestamp_rewritten": false,
+          "status": "NOT_ESTABLISHED_FOR_POLICY",
+          "synthetic": true
+        },
+        "decision_hours_before": 1,
+        "label": "Source boundary exactly at the policy",
+        "scenario": "equal_boundary"
+      },
+      {
+        "arguments": {
+          "decision_at": "2025-10-31T18:00:00+00:00",
+          "kickoff_at": "2025-11-02T18:00:00+00:00",
+          "latest_input_available_at": "2025-11-01T16:00:00+00:00",
+          "latest_label_available_at": "2025-11-01T12:00:00+00:00",
+          "model_completed_at": "2025-11-01T17:30:00+00:00",
+          "source_training_cutoff_at": "2025-11-01T18:00:00+00:00"
+        },
+        "audit": {
+          "actual_fit_time_inferred_from_source_cutoff": false,
+          "checks": {
+            "inputs": "OBSERVED_TOO_LATE",
+            "labels": "OBSERVED_TOO_LATE",
+            "model_availability": "COMPLETED_AFTER_POLICY",
+            "source_bound": "INSUFFICIENT_FOR_EARLIER_POLICY"
+          },
+          "effective_policy_at": "2025-10-31T18:00:00+00:00",
+          "known_late_input_or_label": true,
+          "real_forecast_issued": false,
+          "schema": "sports-edge-lab.public-information-time-audit.v1",
+          "source_clocks": {
+            "latest_input_available_at": "2025-11-01T16:00:00+00:00",
+            "latest_label_available_at": "2025-11-01T12:00:00+00:00",
+            "model_completed_at": "2025-11-01T17:30:00+00:00",
+            "source_training_cutoff_at": "2025-11-01T18:00:00+00:00"
+          },
+          "source_timestamp_rewritten": false,
+          "status": "NOT_ESTABLISHED_FOR_POLICY",
+          "synthetic": true
+        },
+        "decision_hours_before": 48,
+        "label": "Source boundary exactly at the policy",
+        "scenario": "equal_boundary"
+      },
+      {
+        "arguments": {
+          "decision_at": "2025-11-02T17:00:00+00:00",
+          "kickoff_at": "2025-11-02T18:00:00+00:00",
+          "latest_input_available_at": "2025-11-01T19:00:00+00:00",
+          "latest_label_available_at": "2025-11-01T12:00:00+00:00",
+          "model_completed_at": "2025-11-01T20:00:00+00:00",
+          "source_training_cutoff_at": "2025-11-01T17:00:00+00:00"
+        },
+        "audit": {
+          "actual_fit_time_inferred_from_source_cutoff": false,
+          "checks": {
+            "inputs": "OBSERVED_TOO_LATE",
+            "labels": "STRICTLY_BEFORE_POLICY",
+            "model_availability": "COMPLETED_AFTER_POLICY",
+            "source_bound": "STRICTLY_BEFORE_POLICY"
+          },
+          "effective_policy_at": "2025-11-01T18:00:00+00:00",
+          "known_late_input_or_label": true,
+          "real_forecast_issued": false,
+          "schema": "sports-edge-lab.public-information-time-audit.v1",
+          "source_clocks": {
+            "latest_input_available_at": "2025-11-01T19:00:00+00:00",
+            "latest_label_available_at": "2025-11-01T12:00:00+00:00",
+            "model_completed_at": "2025-11-01T20:00:00+00:00",
+            "source_training_cutoff_at": "2025-11-01T17:00:00+00:00"
+          },
+          "source_timestamp_rewritten": false,
+          "status": "NOT_ESTABLISHED_FOR_POLICY",
+          "synthetic": true
+        },
+        "decision_hours_before": 1,
+        "label": "An observed input arrives after the policy",
+        "scenario": "late_input"
+      },
+      {
+        "arguments": {
+          "decision_at": "2025-10-31T18:00:00+00:00",
+          "kickoff_at": "2025-11-02T18:00:00+00:00",
+          "latest_input_available_at": "2025-11-01T19:00:00+00:00",
+          "latest_label_available_at": "2025-11-01T12:00:00+00:00",
+          "model_completed_at": "2025-11-01T20:00:00+00:00",
+          "source_training_cutoff_at": "2025-11-01T17:00:00+00:00"
+        },
+        "audit": {
+          "actual_fit_time_inferred_from_source_cutoff": false,
+          "checks": {
+            "inputs": "OBSERVED_TOO_LATE",
+            "labels": "OBSERVED_TOO_LATE",
+            "model_availability": "COMPLETED_AFTER_POLICY",
+            "source_bound": "INSUFFICIENT_FOR_EARLIER_POLICY"
+          },
+          "effective_policy_at": "2025-10-31T18:00:00+00:00",
+          "known_late_input_or_label": true,
+          "real_forecast_issued": false,
+          "schema": "sports-edge-lab.public-information-time-audit.v1",
+          "source_clocks": {
+            "latest_input_available_at": "2025-11-01T19:00:00+00:00",
+            "latest_label_available_at": "2025-11-01T12:00:00+00:00",
+            "model_completed_at": "2025-11-01T20:00:00+00:00",
+            "source_training_cutoff_at": "2025-11-01T17:00:00+00:00"
+          },
+          "source_timestamp_rewritten": false,
+          "status": "NOT_ESTABLISHED_FOR_POLICY",
+          "synthetic": true
+        },
+        "decision_hours_before": 48,
+        "label": "An observed input arrives after the policy",
+        "scenario": "late_input"
+      },
+      {
+        "arguments": {
+          "decision_at": "2025-11-02T17:00:00+00:00",
+          "kickoff_at": "2025-11-02T18:00:00+00:00",
+          "latest_input_available_at": "2025-11-01T16:00:00+00:00",
+          "latest_label_available_at": "2025-11-01T12:00:00+00:00",
+          "model_completed_at": "2025-11-02T17:00:00+00:00",
+          "source_training_cutoff_at": "2025-11-01T17:00:00+00:00"
+        },
+        "audit": {
+          "actual_fit_time_inferred_from_source_cutoff": false,
+          "checks": {
+            "inputs": "STRICTLY_BEFORE_POLICY",
+            "labels": "STRICTLY_BEFORE_POLICY",
+            "model_availability": "COMPLETED_AFTER_POLICY",
+            "source_bound": "STRICTLY_BEFORE_POLICY"
+          },
+          "effective_policy_at": "2025-11-01T18:00:00+00:00",
+          "known_late_input_or_label": false,
+          "real_forecast_issued": false,
+          "schema": "sports-edge-lab.public-information-time-audit.v1",
+          "source_clocks": {
+            "latest_input_available_at": "2025-11-01T16:00:00+00:00",
+            "latest_label_available_at": "2025-11-01T12:00:00+00:00",
+            "model_completed_at": "2025-11-02T17:00:00+00:00",
+            "source_training_cutoff_at": "2025-11-01T17:00:00+00:00"
+          },
+          "source_timestamp_rewritten": false,
+          "status": "NOT_ESTABLISHED_FOR_POLICY",
+          "synthetic": true
+        },
+        "decision_hours_before": 1,
+        "label": "Inputs are earlier; model finishes after the policy",
+        "scenario": "late_fit"
+      },
+      {
+        "arguments": {
+          "decision_at": "2025-10-31T18:00:00+00:00",
+          "kickoff_at": "2025-11-02T18:00:00+00:00",
+          "latest_input_available_at": "2025-11-01T16:00:00+00:00",
+          "latest_label_available_at": "2025-11-01T12:00:00+00:00",
+          "model_completed_at": "2025-11-02T17:00:00+00:00",
+          "source_training_cutoff_at": "2025-11-01T17:00:00+00:00"
+        },
+        "audit": {
+          "actual_fit_time_inferred_from_source_cutoff": false,
+          "checks": {
+            "inputs": "OBSERVED_TOO_LATE",
+            "labels": "OBSERVED_TOO_LATE",
+            "model_availability": "COMPLETED_AFTER_POLICY",
+            "source_bound": "INSUFFICIENT_FOR_EARLIER_POLICY"
+          },
+          "effective_policy_at": "2025-10-31T18:00:00+00:00",
+          "known_late_input_or_label": true,
+          "real_forecast_issued": false,
+          "schema": "sports-edge-lab.public-information-time-audit.v1",
+          "source_clocks": {
+            "latest_input_available_at": "2025-11-01T16:00:00+00:00",
+            "latest_label_available_at": "2025-11-01T12:00:00+00:00",
+            "model_completed_at": "2025-11-02T17:00:00+00:00",
+            "source_training_cutoff_at": "2025-11-01T17:00:00+00:00"
+          },
+          "source_timestamp_rewritten": false,
+          "status": "NOT_ESTABLISHED_FOR_POLICY",
+          "synthetic": true
+        },
+        "decision_hours_before": 48,
+        "label": "Inputs are earlier; model finishes after the policy",
+        "scenario": "late_fit"
+      },
+      {
+        "arguments": {
+          "decision_at": "2025-11-02T17:00:00+00:00",
+          "kickoff_at": "2025-11-02T18:00:00+00:00",
+          "latest_input_available_at": "2025-11-01T16:00:00+00:00",
+          "latest_label_available_at": "2025-11-01T12:00:00+00:00",
+          "model_completed_at": null,
+          "source_training_cutoff_at": "2025-11-01T17:00:00+00:00"
+        },
+        "audit": {
+          "actual_fit_time_inferred_from_source_cutoff": false,
+          "checks": {
+            "inputs": "STRICTLY_BEFORE_POLICY",
+            "labels": "STRICTLY_BEFORE_POLICY",
+            "model_availability": "UNVERIFIED",
+            "source_bound": "STRICTLY_BEFORE_POLICY"
+          },
+          "effective_policy_at": "2025-11-01T18:00:00+00:00",
+          "known_late_input_or_label": false,
+          "real_forecast_issued": false,
+          "schema": "sports-edge-lab.public-information-time-audit.v1",
+          "source_clocks": {
+            "latest_input_available_at": "2025-11-01T16:00:00+00:00",
+            "latest_label_available_at": "2025-11-01T12:00:00+00:00",
+            "model_completed_at": null,
+            "source_training_cutoff_at": "2025-11-01T17:00:00+00:00"
+          },
+          "source_timestamp_rewritten": false,
+          "status": "NOT_ESTABLISHED_FOR_POLICY",
+          "synthetic": true
+        },
+        "decision_hours_before": 1,
+        "label": "Earlier information; completion time is unknown",
+        "scenario": "unknown_fit"
+      },
+      {
+        "arguments": {
+          "decision_at": "2025-10-31T18:00:00+00:00",
+          "kickoff_at": "2025-11-02T18:00:00+00:00",
+          "latest_input_available_at": "2025-11-01T16:00:00+00:00",
+          "latest_label_available_at": "2025-11-01T12:00:00+00:00",
+          "model_completed_at": null,
+          "source_training_cutoff_at": "2025-11-01T17:00:00+00:00"
+        },
+        "audit": {
+          "actual_fit_time_inferred_from_source_cutoff": false,
+          "checks": {
+            "inputs": "OBSERVED_TOO_LATE",
+            "labels": "OBSERVED_TOO_LATE",
+            "model_availability": "UNVERIFIED",
+            "source_bound": "INSUFFICIENT_FOR_EARLIER_POLICY"
+          },
+          "effective_policy_at": "2025-10-31T18:00:00+00:00",
+          "known_late_input_or_label": true,
+          "real_forecast_issued": false,
+          "schema": "sports-edge-lab.public-information-time-audit.v1",
+          "source_clocks": {
+            "latest_input_available_at": "2025-11-01T16:00:00+00:00",
+            "latest_label_available_at": "2025-11-01T12:00:00+00:00",
+            "model_completed_at": null,
+            "source_training_cutoff_at": "2025-11-01T17:00:00+00:00"
+          },
+          "source_timestamp_rewritten": false,
+          "status": "NOT_ESTABLISHED_FOR_POLICY",
+          "synthetic": true
+        },
+        "decision_hours_before": 48,
+        "label": "Earlier information; completion time is unknown",
+        "scenario": "unknown_fit"
+      }
+    ],
+    "clock_semantics": "Source training cutoff is an admissible boundary, not wall-clock fit completion.",
+    "policy": "Earlier of explicit decision and kickoff minus 24 hours; information bounds are strict.",
+    "schema": "sports-edge-lab.nfl.public-time-demo.v1",
+    "synthetic": true
+  },
+  "latest_schedule_reference": {
+    "scheduled_regular": 272,
+    "scope": "Later authenticated schedule diagnostic; retained public model/week artifact remains the explicitly dated earlier N006 snapshot",
+    "scored": 108,
+    "season": 2026,
+    "source_release": "N010"
+  },
+  "latest_shared_maintenance": {
+    "catalog_member_records": 55076,
+    "catalog_records_are_engineered_columns": false,
+    "completed_at_utc": "2026-10-31T02:21:30.346702+00:00",
+    "display_time": "October 30, 2026, 7:21:30 PM PDT",
+    "elapsed_seconds": 162.27,
+    "evidence_class": "AUTHENTICATED_UPLOADED_MAINTENANCE_RETURN",
+    "feature_consumer_parity_established_by_cleanup": false,
+    "global_cleanup_to_repeat": false,
+    "new_features": 0,
+    "new_scientific_fits": 0,
+    "nfl_scientific_success_credit": 0,
+    "payloads_verified": 13,
+    "protected_roots_preserved": 6,
+    "release": "V011",
+    "restore_full_legacy_roots": false,
+    "return_sha256": "003ee8cd601fca749edc9fd4b7805a02f7912642537ee74fbe615ca113ba0937",
+    "runtime_remote_byte_verification": "REQUIRED_WHEN_CONSUMING_OBJECTS_NOT_PERFORMED_BY_PUBLIC_REVIEW",
+    "scope_complete": true,
+    "selected_roots_removed": 30,
+    "status": "SCOPED_RECLAIM_AND_SHARED_CONTRACT_COMPLETE_OTHER_WORK_REMAINS",
+    "storage": {
+      "available_bytes": 115923566592,
+      "available_inodes": 78166903,
+      "current_storage_measured": false,
+      "live_observation": false,
+      "prior_available_bytes": 78591442944,
+      "shared_change_attributed_exclusively_to_nfl": false,
+      "shared_free_space_delta_bytes": 37332123648,
+      "total_bytes": 160982630400,
+      "used_bytes": 45059063808
+    },
+    "whole_workspace_cleanup_claimed": false
+  },
   "limitations": [
     "Historical 2024 and 2025 comparisons are repeatedly exposed development evidence.",
     "2026 is exposed monitoring, with stable IDs and no outcome-based ranking or promotion.",
     "Cohort digests assert audited exact game identity; public aggregates do not reproduce private training.",
     "Paired uncertainty intervals, ECE and full promotion-family statistics are not in this compact export; no inferential superiority follows from a smaller score.",
     "Unknown raw-provider coverage remains unknown; a missing saved feature row does not prove a missing provider response.",
-    "N007 stopped before its worker; N008 recognized the coordinator and then failed its first storage guard before science. N009 owner execution remains pending.",
     "Weekly saved-prediction availability is a union across registered panels, not evidence of issued pregame forecasts or pooled performance.",
     "All five provider-specific quote, forecast and settlement histories remain unverified; generic MARKET cannot substitute for provider evidence.",
-    "N008 storage readings are a dated uploaded observation, not current live telemetry or verified N009 cleanup savings."
+    "N009 passed storage recovery, 909 tests and parent admission, then stopped at an information-time guard; no completed N004 job receipts or prediction tables were produced. Launched-fit counters remain unknown.",
+    "Source fit_cutoff_at is an admissible training boundary, not wall-clock fit completion. A boundary later than the strategy decision is insufficient proof for that earlier policy; it alone does not prove actual future information use.",
+    "N009 fallback did not rescan saved model panels. It does not replace the earlier authenticated 316 panels, 948 metrics, 66 week slots or 330 provider states preserved here.",
+    "All capacity measurements are dated uploaded observations. Attributed allocated-byte reduction excludes metadata and concurrent shared-filesystem changes; it is not the entire increase in shared free space."
   ],
   "n006_owner_tests": 450,
   "n007_owner_tests_executed": 0,
@@ -85,11 +589,183 @@
     "tests_reached": false,
     "worker_started": true
   },
+  "n009_owner_attempt": {
+    "actual_orders": 0,
+    "actual_owner_execution": true,
+    "archive_payloads_verified": 77,
+    "automatic_promotions": 0,
+    "completed_n004_job_receipts": 0,
+    "failure_message": "Expert base fit reaches the decision cutoff",
+    "fallback_model_panels": 0,
+    "model_week_fallback": "NOT_RESCANNED_INPUTS_UNVERIFIED",
+    "n004_prediction_tables": 0,
+    "new_n004_fits": null,
+    "output_pins_verified": 14,
+    "owner_status": "FAILED",
+    "paid_provider_calls": 0,
+    "parent_checkpoints": {
+      "n003": 90,
+      "original": 147,
+      "refits": 0
+    },
+    "preserved_files": {
+      "bridge": 1680,
+      "content_size_mtime_unchanged": true,
+      "full_worker": 1948
+    },
+    "status": "FAILED_INFORMATION_TIME_GUARD",
+    "storage_final": {
+      "available_bytes": 28284907520,
+      "available_inodes": 55244189,
+      "live_observation": false,
+      "net_nfl_allocated_change_bytes": null,
+      "new_execution_allocated_bytes": null,
+      "observed_at_utc": "2026-10-30T01:53:36.691688+00:00",
+      "research_reserve_bytes": 4829478912,
+      "shared_free_space_is_exclusively_nfl": false,
+      "total_bytes": 160982630400,
+      "total_inodes": 56417336,
+      "used_bytes": 132697722880
+    },
+    "storage_recovery": {
+      "allocation_scope": "Source allocated blocks minus compressed archive and targeted view; directory, journal and marker overhead and concurrent shared-volume changes excluded.",
+      "archive_allocated_bytes": 2527780864,
+      "archive_logical_bytes": 2527775402,
+      "attributed_allocated_bytes_reclaimed": 15383494656,
+      "completed_at_utc": "2026-10-30T01:52:10.495802+00:00",
+      "independent_full_decompression_verified": true,
+      "new_retirement_this_invocation": true,
+      "observed_shared_available_after_bytes": 19182432256,
+      "observed_shared_available_before_bytes": 3798405120,
+      "raw_bodies_or_scientific_files_deleted": 0,
+      "source_allocated_bytes": 17911427072,
+      "source_logical_bytes": 17911418880,
+      "status": "ARCHIVED_LOSSLESS_VERIFIED",
+      "view_allocated_bytes": 151552
+    },
+    "tests": {
+      "errors": 0,
+      "failures": 0,
+      "inherited": 736,
+      "n009": 173,
+      "passed": 909,
+      "skipped": 0
+    },
+    "timing_interpretation": "The preserved source training boundary did not establish the stricter decision-time contract. Actual completion time or actual last input cannot be inferred from that boundary alone.",
+    "worker_elapsed_seconds": 71.62056820199996,
+    "worker_finished_at_utc": "2026-10-30T01:53:28.826631+00:00",
+    "worker_started_at_utc": "2026-10-30T01:52:17.206060+00:00"
+  },
+  "n010_owner_attempt": {
+    "actual_owner_execution": true,
+    "archive_members": 54,
+    "archive_payloads_verified": 53,
+    "clock_migration_reached": false,
+    "fallback_does_not_replace_historical_results": true,
+    "fallback_panels_rescanned": 0,
+    "new_reclamation_bytes": 0,
+    "new_scientific_fits": null,
+    "parent_admission_reached": false,
+    "science_reached": false,
+    "source_gap_count_verified": null,
+    "status": "FAILED_FIRST_STORAGE_GUARD_BEFORE_SCIENCE",
+    "storage_final": {
+      "available_bytes": 704483328,
+      "available_inodes": 1376004,
+      "display_time": "October 30, 2026, 11:40:11 AM PDT",
+      "live_observation": false,
+      "nfl_new_execution_allocated_bytes": null,
+      "observed_at_utc": "2026-10-30T18:40:11.037063+00:00",
+      "research_reserve_bytes": 4829478912,
+      "shared_change_attributed_exclusively_to_nfl": false,
+      "total_bytes": 160982630400,
+      "used_bytes": 160278147072
+    },
+    "tests_reached": false
+  },
+  "n011_preparation": {
+    "automatic_database_expansion": false,
+    "cold_object_allocated_bytes": 2527780864,
+    "cold_retirement_is_planned_not_owner_verified": true,
+    "conditional_remote_preservation_before_exact_local_retirement": true,
+    "current_disposition": "HISTORICAL_PREPARATION_NOT_OWNER_EXECUTED_SHARED_CLEANUP_PLAN_SUPERSEDED_BY_V011",
+    "local_historical_replay": {
+      "actual_worker_and_packager_exercised": true,
+      "aws_calls": 0,
+      "full_reports_survived_resource_block": true,
+      "model_week_rows": 5688,
+      "new_scientific_fits": 0,
+      "provider_week_states": 330,
+      "saved_panels": 316,
+      "scope": "Authenticated historical owner tables with simulated low-disk probes; no AWS execution",
+      "season_week_slots": 66,
+      "status": "PASSED"
+    },
+    "new_owner_reclamation_bytes": null,
+    "normal_emergency_floor_bytes": 536870912,
+    "old_three_percent_guard_was_consistent": true,
+    "owner_executed": false,
+    "private_runtime_final_acceptance": "See separately delivered exact release receipt; this public patch does not assert its aggregate test count",
+    "stage_specific_resource_policy": true,
+    "strict_scientific_clock_unchanged": true,
+    "valid_completed_parents_to_reuse": 237
+  },
+  "n012_preparation": {
+    "actual_orders": 0,
+    "compact_expanded_and_interaction_ablations": true,
+    "compatible_completed_fit_reuse_only": true,
+    "consumer_contract": "Exact feature schemas, values, missingness, clocks, target lineage and fold state must match",
+    "current_season_adaptive_selection": false,
+    "current_season_estimator_fit_excluded": true,
+    "feature_catalog_is_not_consumer_acceptance": true,
+    "fold_specific_fitted_transforms": true,
+    "historical_nested_chronological_selection": true,
+    "market_free_and_market_aware_controls": true,
+    "new_owner_fits": null,
+    "owner_executed": false,
+    "owner_feature_consumer_parity_verified": false,
+    "owner_scientific_improvement_verified": false,
+    "paid_provider_requests": 0,
+    "public_limit": "This public example proves generic contracts only, not private training or owner feature migration",
+    "registered_study_scope": "Separately versioned chronological feature-family and interaction study",
+    "restore_full_legacy_roots": false,
+    "shared_cleanup_repeat": false,
+    "status": "IN_PREPARATION_NOT_OWNER_EXECUTED"
+  },
   "next_owner_execution": {
-    "release": "N009",
+    "release": "N012",
     "verified": false
   },
-  "owner_latest_attempt": "N008",
+  "official_schedule_observation": {
+    "actual_last_week_pnl": null,
+    "display_time": "October 31, 2026, 3:00:03 PM PDT",
+    "evidence_class": "PUBLIC_SOURCE_PREPARATION_OBSERVATION",
+    "frozen_historical_rows_modified": false,
+    "issued_paper_ledger_verified": false,
+    "known_result_or_identity_changes": 0,
+    "new_paper_allocation": 0,
+    "observed_at_utc": "2026-10-31T22:00:03.968048+00:00",
+    "observed_games": 28,
+    "owner_execution": false,
+    "paper_remaining_budget": null,
+    "prior_week_completed_games": 14,
+    "qualified_forecasts": 0,
+    "quarantined_conflicts": 0,
+    "reconstructed_last_week_pnl": null,
+    "scope": "Dated aggregate observation; not a current quote, issued pick or frozen cohort refresh",
+    "source": "Official NFL public weekly schedule pages",
+    "source_request_count": 2,
+    "source_urls": [
+      "https://www.nfl.com/schedules/2026/by-week/week-7",
+      "https://www.nfl.com/schedules/2026/by-week/week-8"
+    ],
+    "unstarted_day_before_cutoff_expired": 11,
+    "unstarted_day_before_cutoff_open": 2,
+    "upcoming_week_unstarted_games": 13,
+    "verified_provider_quotes": 0
+  },
+  "operational_evidence_as_of": "2026-10-30T18:40:11.037063+00:00",
+  "owner_latest_attempt": "N010",
   "owner_latest_success": "N006",
   "parent_checkpoints": 237,
   "prediction_tables": 316,
@@ -6911,9 +7587,15 @@
     "n006_return_sha256": "06ac68f9496026b8cae16043b88c897c32b5bc6fdbee41252271da8851802237",
     "n006_season_week_csv_sha256": "c55dfd30104de090f6a9d681a5236964b6bb32d61e4d672fc2a501d96627f475",
     "n007_return_sha256": "cb8dd9003d1cf9b1db7b199c37cf578d992a0990fecdde42a6dd7fcc249c438e",
-    "n008_return_sha256": "cc3d8ac04dcd8ca2f02604e963cb6259e379a7256a94baf04d24d98321de9b6a"
+    "n008_return_sha256": "cc3d8ac04dcd8ca2f02604e963cb6259e379a7256a94baf04d24d98321de9b6a",
+    "n009_bridge_sha256": "b029c1498a1ffee8c394746069f19d759d2ea5f119285ca8625654b15ce1a7df",
+    "n009_return_sha256": "0e53c4d105ca771d121a82ed6ee9227b7de76f12336b05f94996f0a58a408692",
+    "n009_storage_completion_sha256": "05a0445b4797379d037e76fee9e76811d53796ce3a5adfa434a5bc6fa3fbaf3a",
+    "n009_storage_recovery_sha256": "dd91e9e49dae29523f128c5b71e57c20af6d07e3e12437f0b0d072c98cbdda35",
+    "n009_summary_sha256": "ef5669c4559ae257004c063f11be9007738466d53492840d0f48fed224e54d78",
+    "n009_tests_sha256": "f0f757dd41ea98d9aa44b90904f50613cef533ab359dc6ca6e324093e6fd2168"
   },
-  "source_scope": "Sanitized season, week, provider-status and metric aggregates from independently audited owner returns; no per-game predictions, raw odds, private paths, weights or active configuration. N009 owner execution remains pending.",
+  "source_scope": "Sanitized derived season, week, provider-status and metric aggregates from authenticated owner returns; no per-game predictions, raw odds, private paths, weights or active configuration. N009 executed with verified storage recovery and tests, then failed its stricter information-time guard. N010 owner execution is not verified.",
   "weekly_review": {
     "historical_owner_release": "N006",
     "new_estimator_fits": 0,
