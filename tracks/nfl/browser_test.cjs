@@ -14,11 +14,39 @@ const {chromium}=require(process.env.PLAYWRIGHT_MODULE_DIR||'playwright');
   assert.equal(await page.evaluate(()=>document.documentElement.scrollWidth>innerWidth),false,'page overflow at '+width);
   assert.match(await page.locator('#coverage').innerText(),/280 \/ 285/);
   assert.match(await page.locator('#coverage').innerText(),/272 regular · 13 postseason/);
-  for(const id of ['season','target','policy','metric','family','model','week-season','week-provider'])assert.equal(await page.locator('label[for="'+id+'"]').count(),1);
+  for(const id of ['season','target','policy','metric','family','model','week-season','week-provider','time-scenario','time-decision'])assert.equal(await page.locator('label[for="'+id+'"]').count(),1);
   assert.equal(await page.locator('#weekly-results [data-week]').count(),22);
   assert.equal(await page.locator('#provider-summary tbody tr').count(),5);
-  assert.match(await page.locator('#storage-evidence').innerText(),/3\.721 GiB/);
-  assert.match(await page.locator('#storage-evidence').innerText(),/N009 owner execution is pending/);
+  assert.match(await page.locator('#storage-evidence').innerText(),/14\.327 GiB/);
+  assert.match(await page.locator('#storage-evidence').innerText(),/15,383,494,656 allocated bytes/);
+  assert.match(await page.locator('#storage-evidence').innerText(),/0\.656 GiB/);
+  assert.match(await page.locator('#storage-evidence').innerText(),/107\.962 GiB/);
+  assert.match(await page.locator('#storage-evidence').innerText(),/global cleanup is not repeated/);
+  assert.match(await page.locator('#storage-evidence').innerText(),/remaining budget are unknown/);
+  assert.match(await page.locator('#storage-evidence').innerText(),/N011 and N012 owner execution are not verified/);
+  assert.match(await page.locator('#time-detail [data-time-check="source_bound"]').innerText(),/Does not establish the earlier policy/);
+  assert.match(await page.locator('#time-detail [data-time-check="model_availability"]').innerText(),/Not recorded \/ not inferred/);
+  for(const scenario of ['origin_bound','complete','equal_boundary','late_input','late_fit','unknown_fit']){
+   await page.selectOption('#time-scenario',scenario);
+   for(const hours of ['1','48']){
+    await page.selectOption('#time-decision',hours);
+    const expected=scenario==='complete'&&hours==='1'?'DEMO_ADMISSIBLE':'NOT_ESTABLISHED_FOR_POLICY';
+    assert.equal(await page.locator('#time-status [data-time-status]').getAttribute('data-time-status'),expected);
+    assert.equal(await page.locator('#time-detail [data-time-check]').count(),4);
+    if(scenario==='late_fit'&&hours==='1'){
+     assert.match(await page.locator('#time-detail [data-time-check="inputs"]').innerText(),/Strictly before policy/);
+     assert.match(await page.locator('#time-detail [data-time-check="model_availability"]').innerText(),/Model completed after policy/);
+    }
+    if(scenario==='origin_bound'&&hours==='1')assert.match(await page.locator('#time-status').innerText(),/No actual late input or label is established/);
+    if(scenario==='late_input')assert.match(await page.locator('#time-status').innerText(),/recorded input or label is too late/);
+    states++;
+   }
+  }
+  await page.selectOption('#time-scenario','complete');await page.selectOption('#time-decision','1');
+  await page.locator('#time-decision').focus();await page.keyboard.press('ArrowDown');
+  assert.equal(await page.locator('#time-decision').inputValue(),'48');
+  assert.match(await page.locator('#time-status').innerText(),/2025-10-31T18:00:00\+00:00/);states++;
+  await page.selectOption('#time-scenario','origin_bound');await page.selectOption('#time-decision','1');
   await page.selectOption('#week-season','2026');
   assert.equal(await page.locator('#weekly-results [data-future="true"]').count(),4);
   assert.match(await page.locator('#weekly-results').innerText(),/6 expected by format; no captured matchups/);
@@ -57,6 +85,6 @@ const {chromium}=require(process.env.PLAYWRIGHT_MODULE_DIR||'playwright');
   states+=13;
  }
  assert.deepEqual(errors,[]);assert.deepEqual(network,[]);
- console.log(JSON.stringify({status:'PASS',viewports:widths,selection_scenarios:states,keyboard_control:true,label_checks:16,external_requests:0,script_errors:0,monitoring_ranking:false,complete_week_slots:66,provider_week_states:330}));
+ console.log(JSON.stringify({status:'PASS',viewports:widths,selection_scenarios:states,information_time_scenarios:24,keyboard_control:true,label_checks:20,external_requests:0,script_errors:0,monitoring_ranking:false,complete_week_slots:66,provider_week_states:330}));
  await browser.close();
 })().catch(error=>{console.error(error);process.exitCode=1});

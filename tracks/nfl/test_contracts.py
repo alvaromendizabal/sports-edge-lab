@@ -247,5 +247,316 @@ class DemoReentryTests(unittest.TestCase):
             self.assertEqual(path.read_bytes(), before)
 
 
+class InformationTimeTests(unittest.TestCase):
+    def setUp(self):
+        self.cases = contracts.temporal_demo_cases()["cases"]
+        self.complete = next(row["arguments"] for row in self.cases
+                             if row["scenario"] == "complete" and row["decision_hours_before"] == 1)
+
+    def test_later_source_boundary_is_insufficient_not_proved_future_use(self):
+        row = next(row for row in self.cases if row["scenario"] == "origin_bound" and row["decision_hours_before"] == 1)
+        audit = row["audit"]
+        self.assertEqual(audit["status"], "NOT_ESTABLISHED_FOR_POLICY")
+        self.assertEqual(audit["checks"]["source_bound"], "INSUFFICIENT_FOR_EARLIER_POLICY")
+        self.assertEqual(audit["checks"]["model_availability"], "UNVERIFIED")
+        self.assertFalse(audit["known_late_input_or_label"])
+        self.assertFalse(audit["actual_fit_time_inferred_from_source_cutoff"])
+        self.assertFalse(audit["source_timestamp_rewritten"])
+
+    def test_complete_invented_evidence_can_pass_without_claiming_real_forecast(self):
+        result = contracts.audit_information_time(**self.complete)
+        self.assertEqual(result["status"], "DEMO_ADMISSIBLE")
+        self.assertTrue(result["synthetic"])
+        self.assertFalse(result["real_forecast_issued"])
+
+    def test_explicit_earlier_decision_cannot_be_relaxed_to_the_day_before(self):
+        result = contracts.audit_information_time(**{**self.complete, "decision_at": "2025-10-31T18:00:00Z"})
+        self.assertEqual(result["effective_policy_at"], "2025-10-31T18:00:00+00:00")
+        self.assertEqual(result["status"], "NOT_ESTABLISHED_FOR_POLICY")
+        self.assertTrue(result["known_late_input_or_label"])
+
+    def test_source_bound_and_input_equality_fail_strict_information_rule(self):
+        for field in ("source_training_cutoff_at", "latest_input_available_at", "latest_label_available_at"):
+            with self.subTest(field=field):
+                result = contracts.audit_information_time(**{**self.complete, field: "2025-11-01T18:00:00Z"})
+                self.assertEqual(result["status"], "NOT_ESTABLISHED_FOR_POLICY")
+
+    def test_completion_is_separate_and_can_be_available_exactly_at_policy(self):
+        at_policy = {**self.complete, "model_completed_at": "2025-11-01T18:00:00Z"}
+        self.assertEqual(contracts.audit_information_time(**at_policy)["status"], "DEMO_ADMISSIBLE")
+        after = {**self.complete, "model_completed_at": "2025-11-01T18:00:01Z"}
+        result = contracts.audit_information_time(**after)
+        self.assertEqual(result["checks"]["model_availability"], "COMPLETED_AFTER_POLICY")
+        self.assertEqual(result["checks"]["source_bound"], "STRICTLY_BEFORE_POLICY")
+        self.assertFalse(result["known_late_input_or_label"])
+
+    def test_known_late_input_or_label_is_distinct_from_insufficient_bound(self):
+        for key in ("latest_input_available_at", "latest_label_available_at"):
+            with self.subTest(key=key):
+                result = contracts.audit_information_time(**{**self.complete, key: "2025-11-01T19:00:00Z"})
+                self.assertTrue(result["known_late_input_or_label"])
+                self.assertEqual(result["checks"]["source_bound"], "STRICTLY_BEFORE_POLICY")
+
+    def test_missing_clock_never_gets_inferred_from_a_different_clock(self):
+        for key in ("source_training_cutoff_at", "latest_input_available_at", "latest_label_available_at", "model_completed_at"):
+            with self.subTest(key=key):
+                result = contracts.audit_information_time(**{**self.complete, key: None})
+                self.assertEqual(result["status"], "NOT_ESTABLISHED_FOR_POLICY")
+                self.assertIsNone(result["source_clocks"][key])
+
+    def test_timezone_equivalent_instants_have_identical_admission(self):
+        equivalent = {**self.complete, "model_completed_at": "2025-11-01T10:30:00-07:00"}
+        first = contracts.audit_information_time(**self.complete)
+        second = contracts.audit_information_time(**equivalent)
+        self.assertEqual(first["checks"], second["checks"])
+        self.assertEqual(first["effective_policy_at"], second["effective_policy_at"])
+        self.assertEqual(second["source_clocks"]["model_completed_at"], equivalent["model_completed_at"])
+
+    def test_naive_malformed_or_nonpregame_clock_rejected(self):
+        for clock in ("2025-11-01", "2025-11-01T17:00:00", "bad-clock", 0):
+            with self.subTest(clock=clock), self.assertRaises(ValueError):
+                contracts.audit_information_time(**{**self.complete, "model_completed_at": clock})
+        with self.assertRaisesRegex(ValueError, "precede kickoff"):
+            contracts.audit_information_time(**{**self.complete, "decision_at": self.complete["kickoff_at"]})
+
+    def test_audit_preserves_inputs_and_committed_case_results_are_executable(self):
+        original = copy.deepcopy(self.complete)
+        contracts.audit_information_time(**self.complete)
+        self.assertEqual(original, self.complete)
+        self.assertEqual(len(self.cases), 12)
+        data = json.loads((contracts.HERE / "evidence.json").read_text())
+        self.assertEqual(data["information_time_demo"], contracts.temporal_demo_cases())
+        data["information_time_demo"]["cases"][0]["audit"]["status"] = "DEMO_ADMISSIBLE"
+        with self.assertRaisesRegex(ValueError, "timing audit"):
+            contracts.validate_evidence(data)
+
+
+class OwnerRecoveryTests(unittest.TestCase):
+    def setUp(self):
+        self.data = json.loads((contracts.HERE / "evidence.json").read_text())
+
+    def test_authenticated_recovery_does_not_claim_completed_new_science(self):
+        contracts.validate_owner_attempt(self.data)
+        attempt = self.data["n009_owner_attempt"]
+        self.assertEqual(attempt["tests"]["inherited"] + attempt["tests"]["n009"], 909)
+        self.assertEqual(attempt["completed_n004_job_receipts"], 0)
+        self.assertIsNone(attempt["new_n004_fits"])
+        self.assertEqual(self.data["owner_latest_success"], "N006")
+
+    def test_allocated_recovery_is_not_logical_compression_or_shared_delta(self):
+        recovery = self.data["n009_owner_attempt"]["storage_recovery"]
+        reclaimed = recovery["attributed_allocated_bytes_reclaimed"]
+        self.assertEqual(reclaimed, 15383494656)
+        self.assertNotEqual(reclaimed, recovery["source_logical_bytes"] - recovery["archive_logical_bytes"])
+        self.assertNotEqual(reclaimed, recovery["observed_shared_available_after_bytes"] - recovery["observed_shared_available_before_bytes"])
+        for key, value in (("attributed_allocated_bytes_reclaimed", reclaimed + 4096),
+                           ("independent_full_decompression_verified", False)):
+            sample = copy.deepcopy(self.data); sample["n009_owner_attempt"]["storage_recovery"][key] = value
+            with self.subTest(key=key), self.assertRaises(ValueError):
+                contracts.validate_owner_attempt(sample)
+
+    def test_missing_fit_measurements_and_dated_capacity_stay_unknown(self):
+        for section, key, value in (("attempt", "new_n004_fits", 0),
+                                    ("storage", "live_observation", True),
+                                    ("storage", "new_execution_allocated_bytes", 0),
+                                    ("storage", "shared_free_space_is_exclusively_nfl", True)):
+            sample = copy.deepcopy(self.data)
+            target = sample["n009_owner_attempt"] if section == "attempt" else sample["n009_owner_attempt"]["storage_final"]
+            target[key] = value
+            with self.subTest(key=key), self.assertRaises(ValueError):
+                contracts.validate_owner_attempt(sample)
+
+    def test_failure_diagnostic_preserves_all_previously_authenticated_results(self):
+        before = copy.deepcopy(self.data)
+        receipt = contracts.preserved_result_receipt(self.data)
+        self.assertEqual(receipt["status"], "ACCEPTED_RESULTS_PRESERVED")
+        self.assertEqual((receipt["model_panels"], receipt["metric_scalars"], receipt["season_week_slots"], receipt["provider_week_states"]),
+                         (316, 948, 66, 330))
+        self.assertFalse(receipt["latest_diagnostic_replaces_results"])
+        self.assertEqual(self.data, before)
+
+    def test_changed_or_empty_fallback_cannot_replace_valid_previous_panels(self):
+        for changes in ({"rows": []}, {"rows": self.data["rows"][:-1]},
+                        {"weekly_review": {**self.data["weekly_review"], "weeks": []}}):
+            with self.subTest(changes=list(changes)), self.assertRaisesRegex(ValueError, "Preserved"):
+                contracts.preserved_result_receipt({**self.data, **changes})
+
+
+class LatestOwnerBoundaryTests(unittest.TestCase):
+    def setUp(self):
+        self.data=json.loads((contracts.HERE / "evidence.json").read_text())
+
+    def test_latest_disk_failure_keeps_prior_results_and_null_stage_counts(self):
+        contracts.validate_evidence(self.data)
+        self.assertEqual(contracts.preserved_result_receipt(self.data)["latest_attempt"], "N010")
+
+    def test_earlier_cleanup_cannot_be_counted_again(self):
+        self.data["n010_owner_attempt"]["new_reclamation_bytes"]=15383494656
+        with self.assertRaisesRegex(ValueError,"reclamation"):
+            contracts.validate_owner_attempt(self.data)
+
+    def test_preparation_cannot_claim_owner_retirement(self):
+        self.data["n011_preparation"]["new_owner_reclamation_bytes"]=2527780864
+        with self.assertRaisesRegex(ValueError,"Preparation"):
+            contracts.validate_owner_attempt(self.data)
+
+    def test_snapshot_duplication_cannot_inflate_outcomes(self):
+        self.data["execution_outcomes"]["rows"].append({"release":"N003","outcome":"SUCCESS_RESEARCH"})
+        with self.assertRaisesRegex(ValueError,"Deduplicated"):
+            contracts.validate_owner_attempt(self.data)
+
+
+class FeatureConsumerParityTests(unittest.TestCase):
+    def setUp(self):
+        self.reference = contracts.invented_feature_view()
+        self.candidate = copy.deepcopy(self.reference)
+
+    def test_identical_invented_view_passes_without_owner_migration_claim(self):
+        receipt = contracts.compare_feature_consumers(self.reference, self.candidate)
+        self.assertEqual(receipt["status"], "EXACT_SUPPLIED_VIEW_PARITY")
+        self.assertEqual((receipt["rows"], receipt["columns"]), (2, 2))
+        self.assertTrue(receipt["synthetic_example"])
+        self.assertFalse(receipt["full_owner_migration_verified"])
+
+    def test_physical_row_order_does_not_change_keyed_semantics(self):
+        self.candidate["rows"].reverse()
+        self.assertEqual(contracts.feature_view_identity(self.reference),
+                         contracts.feature_view_identity(self.candidate))
+
+    def test_equal_rows_and_columns_do_not_hide_a_changed_value(self):
+        self.candidate["rows"][0]["values"][0] = 9.5
+        with self.assertRaisesRegex(ValueError, "semantics differ"):
+            contracts.compare_feature_consumers(self.reference, self.candidate)
+
+    def test_missingness_is_not_zero(self):
+        self.candidate["rows"][1]["values"][0] = 0.0
+        with self.assertRaisesRegex(ValueError, "semantics differ"):
+            contracts.compare_feature_consumers(self.reference, self.candidate)
+
+    def test_ordered_model_columns_cannot_be_silently_reordered(self):
+        self.candidate["columns"].reverse()
+        for row in self.candidate["rows"]:
+            row["values"].reverse()
+        with self.assertRaisesRegex(ValueError, "semantics differ"):
+            contracts.compare_feature_consumers(self.reference, self.candidate)
+
+    def test_fold_dataset_and_transform_identity_cannot_change(self):
+        for key in ("fold_id", "dataset_version", "transform_version"):
+            candidate = copy.deepcopy(self.reference)
+            candidate[key] = "different-invented-identity"
+            with self.subTest(key=key), self.assertRaisesRegex(ValueError, "semantics differ"):
+                contracts.compare_feature_consumers(self.reference, candidate)
+
+    def test_changed_availability_clock_fails_parity(self):
+        self.candidate["rows"][0]["available_at"] = "2025-01-01T00:00:01Z"
+        with self.assertRaisesRegex(ValueError, "semantics differ"):
+            contracts.compare_feature_consumers(self.reference, self.candidate)
+
+    def test_timezone_equivalent_clocks_match(self):
+        self.candidate["rows"][0]["available_at"] = "2024-12-31T16:00:00-08:00"
+        contracts.compare_feature_consumers(self.reference, self.candidate)
+
+    def test_repeated_event_and_column_names_are_rejected(self):
+        self.candidate["rows"].append(copy.deepcopy(self.candidate["rows"][0]))
+        with self.assertRaisesRegex(ValueError, "event identity"):
+            contracts.feature_view_identity(self.candidate)
+        self.candidate = copy.deepcopy(self.reference)
+        self.candidate["columns"][1]["name"] = self.candidate["columns"][0]["name"]
+        with self.assertRaisesRegex(ValueError, "Duplicate feature columns"):
+            contracts.feature_view_identity(self.candidate)
+
+    def test_nonfinite_boolean_as_numeric_and_wrong_width_rejected(self):
+        for value in (float("nan"), float("inf"), True, "1.5"):
+            candidate = copy.deepcopy(self.reference)
+            candidate["rows"][0]["values"][0] = value
+            with self.subTest(value=value), self.assertRaisesRegex(ValueError, "dtype"):
+                contracts.feature_view_identity(candidate)
+        self.candidate["rows"][0]["values"].append(3)
+        with self.assertRaisesRegex(ValueError, "ordered columns"):
+            contracts.feature_view_identity(self.candidate)
+
+    def test_namespace_and_naive_clocks_are_rejected(self):
+        self.candidate["project"] = "nba"
+        with self.assertRaisesRegex(ValueError, "namespace"):
+            contracts.feature_view_identity(self.candidate)
+        self.candidate = copy.deepcopy(self.reference)
+        self.candidate["rows"][0]["available_at"] = "2025-01-01T00:00:00"
+        with self.assertRaisesRegex(ValueError, "timezone"):
+            contracts.feature_view_identity(self.candidate)
+
+    def test_inputs_unchanged_and_demo_carries_qualified_parity(self):
+        original = copy.deepcopy(self.reference)
+        contracts.compare_feature_consumers(self.reference, self.candidate)
+        self.assertEqual(self.reference, original)
+        with tempfile.TemporaryDirectory() as directory:
+            path = Path(directory) / "demo.json"
+            contracts.demo(output=path)
+            output = json.loads(path.read_text())
+            self.assertEqual(output["schema"], "sports-edge-lab.nfl.demo.v3")
+            self.assertFalse(output["feature_consumer_parity"]["full_owner_migration_verified"])
+
+
+class SharedMaintenanceBoundaryTests(unittest.TestCase):
+    def setUp(self):
+        self.data = json.loads((contracts.HERE / "evidence.json").read_text())
+
+    def test_shared_maintenance_does_not_alter_nfl_outcomes_or_results(self):
+        contracts.validate_evidence(self.data)
+        self.assertEqual(self.data["execution_outcomes"]["authenticated_invocations"], 6)
+        self.assertEqual(self.data["next_owner_execution"], {"release": "N012", "verified": False})
+        self.assertEqual(contracts.preserved_result_receipt(self.data)["metric_scalars"], 948)
+
+    def test_cleanup_cannot_be_credited_as_science_or_feature_migration(self):
+        for key, value in (("nfl_scientific_success_credit", 1),
+                           ("feature_consumer_parity_established_by_cleanup", True)):
+            data = copy.deepcopy(self.data)
+            data["latest_shared_maintenance"][key] = value
+            with self.subTest(key=key), self.assertRaisesRegex(ValueError, "Shared maintenance"):
+                contracts.validate_owner_attempt(data)
+
+    def test_completed_cleanup_cannot_restart_or_restore_sprawl(self):
+        for key in ("global_cleanup_to_repeat", "restore_full_legacy_roots", "whole_workspace_cleanup_claimed"):
+            data = copy.deepcopy(self.data); data["latest_shared_maintenance"][key] = True
+            with self.subTest(key=key), self.assertRaisesRegex(ValueError, "Completed scoped cleanup"):
+                contracts.validate_owner_attempt(data)
+
+    def test_catalog_records_cannot_become_feature_columns(self):
+        self.data["latest_shared_maintenance"]["catalog_records_are_engineered_columns"] = True
+        with self.assertRaisesRegex(ValueError, "Catalog members"):
+            contracts.validate_owner_attempt(self.data)
+
+    def test_dated_storage_cannot_become_live_or_nfl_exclusive(self):
+        for key in ("live_observation", "current_storage_measured", "shared_change_attributed_exclusively_to_nfl"):
+            data = copy.deepcopy(self.data); data["latest_shared_maintenance"]["storage"][key] = True
+            with self.subTest(key=key), self.assertRaisesRegex(ValueError, "Uploaded shared snapshot"):
+                contracts.validate_owner_attempt(data)
+
+    def test_preparation_cannot_become_owner_science(self):
+        for key, value in (("owner_executed", True), ("new_owner_fits", 126),
+                           ("owner_feature_consumer_parity_verified", True),
+                           ("owner_scientific_improvement_verified", True)):
+            data = copy.deepcopy(self.data); data["n012_preparation"][key] = value
+            with self.subTest(key=key), self.assertRaisesRegex(ValueError, "N012 preparation"):
+                contracts.validate_owner_attempt(data)
+
+    def test_current_season_cannot_become_fit_or_selection_data(self):
+        for key, value in (("current_season_estimator_fit_excluded", False),
+                           ("current_season_adaptive_selection", True), ("fold_specific_fitted_transforms", False)):
+            data = copy.deepcopy(self.data); data["n012_preparation"][key] = value
+            with self.subTest(key=key), self.assertRaisesRegex(ValueError, "Current-season"):
+                contracts.validate_owner_attempt(data)
+
+    def test_schedule_observation_cannot_become_quotes_or_paper_economics(self):
+        for key, value in (("qualified_forecasts", 1), ("verified_provider_quotes", 1),
+                           ("frozen_historical_rows_modified", True)):
+            data = copy.deepcopy(self.data); data["official_schedule_observation"][key] = value
+            with self.subTest(key=key), self.assertRaisesRegex(ValueError, "Public schedule observation"):
+                contracts.validate_owner_attempt(data)
+        for key in ("actual_last_week_pnl", "reconstructed_last_week_pnl", "paper_remaining_budget"):
+            data = copy.deepcopy(self.data); data["official_schedule_observation"][key] = 0
+            with self.subTest(key=key), self.assertRaisesRegex(ValueError, "Unverified issued history"):
+                contracts.validate_owner_attempt(data)
+
+
 if __name__ == "__main__":
     unittest.main()

@@ -1,15 +1,63 @@
 {
   "actual_verified_after": null,
-  "aggregate_export_canonical_sha256": "31d0dd6a288713b70f5ab3a1188295baa92f3779b8c6e0062849e9de2c27d4ef",
-  "baseline_commit": "e49369b05eb4388d2ff2494a491f1d297f58e93c",
+  "aggregate_export_canonical_sha256": "d20739c17b9e97067260ea1dd39c3711674df8e8b5b430a6bdc5ec5c292b3dee",
+  "baseline_ci": {
+    "head_sha": "631dd0a0cd1c1cdd50997d4c190878c36bb5d5ce",
+    "main_protected": false,
+    "open_prs_observed": 0,
+    "required_check_enforcement": "OFF_AT_AUDIT",
+    "rulesets_observed": 0,
+    "successful_jobs": 25,
+    "workflow_runs": 7
+  },
+  "baseline_commit": "631dd0a0cd1c1cdd50997d4c190878c36bb5d5ce",
   "cohort_provenance": {
     "algorithm": "SHA-256 of UTF-8 compact JSON (separators comma/colon, no trailing newline) of sorted string game IDs from each actual saved prediction table.",
     "audit_gate": "The independent audit asserts complete market_value equality, including game-ID digest, across every table in the same panel.",
     "public_limit": "Original per-game records remain private; this export carries observed audit hashes, not independently reconstructible game lists.",
     "source": "Independent N006 audit prediction_verification.market_metrics, joined by original season/target/policy; game counts and MARKET metrics also checked."
   },
-  "data_boundary": "Sanitized derived season/week/provider-state/metric aggregates and dated capacity arithmetic; no raw paid odds, per-game forecasts, private owner paths, account identifiers, credentials, weights or active feature/tuning configuration.",
+  "data_boundary": "Sanitized derived season/week/provider/metric aggregates, dated storage arithmetic and explicitly invented clock fixtures; no raw paid odds, per-game forecasts, owner paths, account identifiers, credentials, weights or active feature/tuning configuration.",
   "editorial_baseline": {
+    "audit_commit": "631dd0a0cd1c1cdd50997d4c190878c36bb5d5ce",
+    "dimension_names": {
+      "architecture": "Technical architecture and engineering depth",
+      "ci_merge_safety": "Testing, CI/CD and merge safety",
+      "five_minute_employer_review": "Five-minute employer review experience",
+      "four_project_consistency": "Four-project consistency and maintainability",
+      "interaction_accessibility": "Interactive UX and accessibility",
+      "ml_breadth": "ML breadth and feature engineering",
+      "privacy": "Security, privacy, licenses and protected IP",
+      "provenance": "Data provenance and reliability",
+      "reproducibility": "Reproducibility and documentation",
+      "role_relevance": "Hiring relevance for ML Engineer, AI Engineer and Data Scientist",
+      "scientific_rigor": "Scientific rigor, leakage prevention and evaluation",
+      "visual_design": "Visual design and professional polish"
+    },
+    "overall": 8.525,
+    "role_fit": {
+      "ai_engineer": 8.3,
+      "data_scientist": 8.8,
+      "ml_engineer": 8.9
+    },
+    "scope": "Current main/PR/rules/checks reverified October 31. Main unchanged; fixed prior 12-dimension baseline retained. No fresh rendered browser or complete other-track audit.",
+    "scores": {
+      "architecture": 8.8,
+      "ci_merge_safety": 8.3,
+      "five_minute_employer_review": 8.2,
+      "four_project_consistency": 7.5,
+      "interaction_accessibility": 8.7,
+      "ml_breadth": 8.6,
+      "privacy": 8.7,
+      "provenance": 8.8,
+      "reproducibility": 8.6,
+      "role_relevance": 8.7,
+      "scientific_rigor": 9.0,
+      "visual_design": 8.4
+    },
+    "weight_policy": "Equal 1/12, fixed before implementation; editorial judgments separate from tests. AFTER remains not verified until actual merge and resulting-main checks."
+  },
+  "historical_editorial_baseline": {
     "overall": 8.308333333333334,
     "role_fit": {
       "ai_engineer": 8.0,
@@ -34,22 +82,33 @@
     "weight_policy": "Equal 1/12 for all dimensions; fixed before judging after. Editorial judgments, not certified measurements."
   },
   "historical_n008_baseline_commit": "13de4616a03c99f82bc4b624fa976fada794c5fb",
-  "hypothesis": "Complete season-week and named-provider evidence states make the existing NFL denominators and unavailable wagering evidence inspectable, while a dated storage incident separates owner execution from preparation.",
+  "hypothesis": "Preserve complete historical evidence while proving clear maintenance/science boundaries and exact invented feature-consumer compatibility.",
+  "licensing_note": "Existing publication boundary applies; no repository-wide license file found in the audited tree. No new redistribution license is asserted.",
   "local_preparation_checks": {
     "aggregate_tables": 316,
     "browser_test_javascript_syntax": "PASSED",
+    "feature_consumer_demo": "PASSED_INVENTED_EXACT_VIEW_NOT_OWNER_MIGRATION",
     "generated_page": "VERIFIED_EXACT_DETERMINISTIC_OUTPUT",
     "inline_javascript_syntax": "PASSED",
-    "local_browser": "NOT_EXECUTED: Playwright is installed but the Chromium binary is unavailable; current-head hosted browser CI must establish rendering.",
-    "new_weekly_and_failure_boundary_tests": 8,
-    "owner_n009_execution": "PENDING",
-    "prior_contract_tests_retained": 17,
+    "invented_time_scenarios": 12,
+    "local_browser": "NOT_EXECUTED_BY_REQUEST_NO_BROWSER",
+    "local_navigation": "VERIFIED_AGAINST_PINNED_GIT_TREE_AND_SAME_PAGE_ANCHORS",
+    "metric_scalars_preserved": 948,
+    "new_feature_parity_and_maintenance_tests": 20,
+    "new_temporal_and_recovery_tests": 15,
+    "owner_n009_execution": "EXECUTED_FAILED_INFORMATION_TIME_GUARD",
+    "owner_n010_execution": "EXECUTED_FAILED_FIRST_DISK_GUARD",
+    "owner_n011_execution": "NOT_VERIFIED",
+    "owner_n012_execution": "NOT_VERIFIED",
+    "prior_contract_tests_retained": 44,
+    "privacy": "PASSED_8_SCOPED_FILES_AND_NEGATIVE_TESTS",
     "private_training_reproduced": false,
     "provider_week_states": 330,
-    "python_contract_tests": 25,
-    "python_contract_tests_passed": 25,
-    "recomputed_scalars_in_owner_audit": 948,
-    "season_week_slots": 66
+    "public_patch_publication": "EXTERNAL_PR_COMMIT_AND_MAIN_RECEIPTS_REQUIRED",
+    "python_contract_tests": 64,
+    "python_contract_tests_passed": 64,
+    "season_week_slots": 66,
+    "shared_v011": "AUTHENTICATED_SCOPED_MAINTENANCE_COMPLETE"
   },
   "owned_paths": [
     "tracks/nfl/README.md",
@@ -61,16 +120,23 @@
     "tracks/nfl/browser_test.cjs",
     "tracks/nfl/change_manifest.json"
   ],
-  "ownership_note": "This update changes only the eight existing NFL track files. The previously merged root navigation and NFL workflow remain in place; no shared path, workflow or other league is edited by this contribution.",
+  "ownership_note": "This update changes only the eight existing NFL track files. Root navigation, shared workflows and all other sports remain unchanged. A stale root NFL status is flagged to the integration owner.",
   "preserved_result_rows_canonical_sha256": "06f113daac0d4f38975da09a4df74cad22674763c6e7e7457b5ae87a70f06947",
+  "preserved_result_rows_canonical_sha256_with_lf": "e50ad7e1d1177b137fecc7bca58a61ce9405e82e19975f19a6d7600d39100f12",
+  "preserved_weekly_review_canonical_sha256_with_lf": "4ee52b3bad2d4af105588efb015444d37f55260d8169bd5a6ce4ebfe764370e2",
   "project": "nfl",
-  "publication_status": "PENDING_BRANCH_PR_AND_CURRENT_HEAD_CI",
-  "rating_note": "No current reassessment or achieved 9.9 target is claimed. Prior fixed rubric is preserved as dated history; current publication and rendered CI require their own receipts.",
+  "publication_status": "LOCAL_VALIDATED_SNAPSHOT_PUBLICATION_STATE_REQUIRES_EXACT_GITHUB_RECEIPT",
+  "rating_note": "Fresh fixed BEFORE rubric uses the exact twelve requested dimensions, including Five-minute employer review experience. AFTER and achieved 9.9 remain unverified until actual publication; scores are editorial, not test results.",
   "rollback": "Revert the focused publication commit through the repository workflow; no owner scientific outputs are mutated by these public files.",
   "root_coordinated_integration_paths": [],
   "schema": "sports-edge-lab.nfl.public-change.v1",
   "shared_paths_edited_by_this_contribution": [],
-  "snapshot_phase": "PRE_PUBLICATION_N009_AGGREGATE_UPDATE",
+  "snapshot_phase": "LOCAL_N012_QUALIFIED_PUBLIC_CONTRIBUTION",
+  "source_observation": {
+    "observed_at_utc": "2026-10-31T22:00:03.968048+00:00",
+    "role": "Dated separate observation, not a cohort replacement or quote",
+    "source": "Official NFL weekly pages"
+  },
   "target": 9.9,
   "test_commands": [
     "python -m unittest discover -s tracks/nfl -p 'test_*.py' -v",
