@@ -1,12 +1,22 @@
 # NCAA FBS: an independent research branch
 
+## Latest verified milestone — V013, October 31, 2026
+
+[Completed native research: exact matched-market comparisons](V013_NATIVE_RESEARCH_2026-10-31.md) · [Full-precision aggregate](v013-native-research-2026-10-31.json)
+
+The authenticated owner run completed **70 new estimator units: 24 optimizer starts and 46 closed-form ridge solves**. Native models were worse than the market reference on all six 2024/2025 winner, margin and total panels. **MARKET is retained; no production promotion or realized ROI is claimed.** The inherited 203-unit research registration stays separate. Incremental S3-backed consumer access reused the previously admitted 7,196,533-observation reconstruction overlay and performed 22 fresh representative partition checks—not a fresh complete raw scan or a second admission count.
+
+The sections, dashboard, notebook and legacy `evidence.json` below preserve earlier dated evidence. V013 is a separate authenticated milestone; it does not rewrite old failed/prepared states or substitute its different cohorts into historical scorecards.
+
+## Historical branch evidence
+
 [Project](../../README.md) · [FBS dashboard](index.html) · [Aggregate evidence](evidence.json) · [Invented reproducer](../../examples/fbs_contracts/README.md) · [Notebook](../../notebooks/fbs_branch_review.ipynb)
 
 ## The earlier V135 execution failed before science
 
 The supplied V135 owner return reports `FAILED` during its precredential source-contract tests. A required earlier prompt was preserved inside an archive while an inherited test still looked for its original root path. All 56 return payloads and 1,723 embedded source payloads match their hashes, but byte integrity did not establish semantic dependency closure. Of 3,239 executed tests, one errored. The run produced zero new estimator fits and zero new fit attempts.
 
-V134 remains the last completed scientific release in the inherited evidence. The recent FBS sequence contains **18 completed fits across 19 attempts**: twelve pooling fits across thirteen attempts plus six explicitly FBS-tagged calibration/innovation fits. This is a league-tagged subset, not an arbitrary division of a combined NFL/FBS count and not an all-project lifetime total.
+At the time of that earlier V135 audit, V134 remained the last completed scientific release in its inherited evidence. The recent FBS sequence contains **18 completed fits across 19 attempts**: twelve pooling fits across thirteen attempts plus six explicitly FBS-tagged calibration/innovation fits. This is a league-tagged subset, not an arbitrary division of a combined NFL/FBS count and not an all-project lifetime total.
 
 Eight 2024/2025 MARKET and retained-minimax scorecards were independently recomputed from saved game-level prediction rows. Their reported metrics match exactly. V134 innovation scorecards and completed status are carried from the supplied prior audit; the full V134 owner archive was not attached to this branch's preparation. That distinction remains explicit in the aggregate evidence.
 
@@ -43,4 +53,5 @@ A later independent FBS attempt passed 122 tests, then entered shared-source inv
 ## Process-handle portability
 
 A subsequent recovery attempt refused before signaling because its Python build omitted at least one pidfd wrapper. That attribute check did not establish whether the running Linux interface was available. The [compatibility adapter and explanation](pidfd-compatibility.md) demonstrate per-operation Python/libc selection, an own-process signal-zero probe, exact errno reporting and descriptor cleanup. Tests remove the Python wrappers and exercise the exported libc path with local child processes. Operational errors do not trigger backend switching, and the adapter contains no numeric-PID signaling fallback. Target identity, ownership and application recovery eligibility remain separate caller obligations.
+
 
