@@ -2,13 +2,15 @@
 
 **Pregame forecasting, honest market comparisons, and recoverable ML systems.** Built by [Alvaro Mendizabal](https://github.com/alvaromendizabal) as one track in the existing [Sports Edge Lab](../../README.md) portfolio.
 
+**Installed-file evidence, with an explicit trust boundary:** the [runtime manifest guide](RUNTIME_MANIFEST.md) and [stdlib example](runtime_manifest.py) verify a complete bounded package tree against pinned local installed metadata. Original and installed hashes remain distinct; altered metadata, missing/extra files and changes before phase entry are rejected. The example uses invented files and executes no package code. The actual N016 owner attempt stopped at numerical runtime admission before tests or research; N017 is tested local preparation with owner validation pending.
+
 **Paper-return arithmetic, with explicit unknowns:** [the invented scenario guide](PAPER_SCENARIOS.md) and [standard-library example](paper_scenarios.py) explain prices, returned stake, profit, tie rules, quote clocks and a whole-week budget. Run `python tracks/nfl/paper_scenarios.py --demo` for all 16 win/loss dollar scenarios across four invented positions. Unknown prior commitments produce zero new proposed allocation; no provider calls or orders occur.
 
 **Owner-state update, October 31, 2026 at 5:35 PM PDT:** authenticated N014 completed 102 fresh standard-library tests and its content-pinned market/comparison/paper-report stage, then failed installed-runtime admission before research. New or reused owner fits, new learned forecasts and genuine day-before forecast issues remain zero. N012, N013 and N014 each count once: the verified minimum is nine logical owner outcomes, comprising two scoped successes, six failures and one admission block; the separate checksum launch rejection remains separate. Verified persistence of failure evidence does not turn the run into a scientific success. The dated historical public review below is unchanged and does not publish current prices or private picks.
 
 **Latest authenticated storage evidence: scoped shared V011 cleanup completed October 30, 2026 at 7:21 PM PDT.** Its final snapshot reports **107.962 GiB available, 27.99% used**, after 30 authorized cold roots were removed recoverably and all six protected dependency roots remained. The **34.768 GiB shared free-space increase** is not assigned exclusively to NFL. These are uploaded dated observations, not current telemetry. Do not repeat that global cleanup or restore the old folder layout.
 
-**NFL science remains separately qualified.** The historical N010 attempt failed before tests or new science; the latest owner state is N014 above. Reuploading the same return adds no failure. N006 is the latest successful coverage-only run; N003 is the latest adding real models. N011 was prepared but no owner execution is established. **The registered N012 study has not passed owner runtime admission; consumer parity, new fits and scientific improvement remain unverified.** MARKET remains retained. All **316 accepted historical model panels, 948 metrics, 66 week slots and 330 provider states** remain unchanged.
+**NFL science remains separately qualified.** The historical N010 attempt failed before tests or new science; the latest N016 owner state is separated above from the dated N014 history. Reuploading the same return adds no failure. N006 is the latest successful coverage-only run; N003 is the latest adding real models. N011 was prepared but no owner execution is established. **The registered N012 study has not passed owner runtime admission; consumer parity, new fits and scientific improvement remain unverified.** MARKET remains retained. All **316 accepted historical model panels, 948 metrics, 66 week slots and 330 provider states** remain unchanged.
 
 ## Maintenance, preparation and scientific outcomes
 
@@ -38,6 +40,7 @@ All five providers in the dated public aggregate snapshot below remain **NO VERI
 | [Storage recovery](#n009-recovery-followed-by-an-information-time-stop) | Verified allocation arithmetic, preserved results and a later scientific stop |
 | [Coordinator incident and reconciliation method](#a-real-integration-failure) | A proved earlier failure and a semantic admission gate |
 | [Public source and negative tests](contracts.py) / [tests](test_contracts.py) | Information clocks, retained-result identity, full denominators, exact cohorts and immutable reentry |
+| [Installed-manifest contract](RUNTIME_MANIFEST.md) / [tests](test_runtime_manifest.py) | Whole-tree identity, original versus installed hashes, local-metadata trust and phase-entry rechecks using invented files |
 | [Executed public methods notebook](../../notebooks/engineering_review.ipynb) | Existing synthetic methods and separately labeled owner aggregates; no private NFL retraining claim |
 | [System architecture](../../docs/SYSTEM_DESIGN.md) | Source, model and decision contracts across the existing project |
 
