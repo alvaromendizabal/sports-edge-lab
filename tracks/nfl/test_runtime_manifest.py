@@ -48,6 +48,81 @@ class InstalledManifestTests(unittest.TestCase):
         self.write_metadata()
         with self.assertRaises(ValueError): self.verify()
 
+    def test_original_size_does_not_constrain_installed_length(self):
+        self.doc["files"][0]["original_bytes"] = len(self.body) + 123
+        self.write_metadata()
+        receipt = self.verify()
+        self.assertEqual(receipt.files[0][1], len(self.body))
+        self.assertEqual(receipt.files[0][4], len(self.body) + 123)
+        self.assertEqual(receipt.files[0][5], len(self.body))
+
+    def test_missing_installed_size_accepts_nonempty_exact_hash(self):
+        del self.doc["files"][0]["installed_bytes"]
+        self.doc["files"][0]["original_bytes"] = 999
+        self.write_metadata()
+        receipt = self.verify()
+        self.assertEqual(receipt.files[0][1], len(self.body))
+        self.assertEqual(receipt.files[0][2], hashlib.sha256(self.body).hexdigest())
+        self.assertEqual(receipt.files[0][4], 999)
+        self.assertIsNone(receipt.files[0][5])
+
+    def test_missing_installed_size_accepts_empty_exact_hash(self):
+        (self.root / "sample.py").write_bytes(b"")
+        del self.doc["files"][0]["installed_bytes"]
+        self.doc["files"][0]["installed_sha256"] = hashlib.sha256(b"").hexdigest()
+        self.write_metadata()
+        receipt = self.verify()
+        self.assertEqual(receipt.files[0][1], 0)
+        self.assertIsNone(receipt.files[0][5])
+
+    def test_size_omission_does_not_permit_wrong_hash(self):
+        del self.doc["files"][0]["installed_bytes"]
+        self.doc["files"][0]["installed_sha256"] = hashlib.sha256(b"wrong").hexdigest()
+        self.write_metadata()
+        with self.assertRaises(ValueError): self.verify()
+
+    def test_size_omission_does_not_permit_appended_bytes(self):
+        del self.doc["files"][0]["installed_bytes"]
+        self.write_metadata()
+        with (self.root / "sample.py").open("ab") as stream:
+            stream.write(b"extra")
+        with self.assertRaises(ValueError): self.verify()
+
+    def test_phase_recheck_binds_measured_length_without_declared_size(self):
+        del self.doc["files"][0]["installed_bytes"]
+        self.write_metadata()
+        receipt = self.verify()
+        self.assertEqual(receipt, recheck_before_use(receipt, self.root, self.metadata))
+        (self.root / "sample.py").write_bytes(self.body + b"extra")
+        with self.assertRaises(ValueError): recheck_before_use(receipt, self.root, self.metadata)
+
+    def test_present_malformed_optional_sizes_rejected(self):
+        for field in ["installed_bytes", "original_bytes"]:
+            for value in [None, True, -1, 0.0, "0", [], {}]:
+                with self.subTest(field=field, value=value):
+                    old = self.doc["files"][0].copy()
+                    self.doc["files"][0][field] = value
+                    self.write_metadata()
+                    with self.assertRaises(ValueError): self.verify()
+                    self.doc["files"][0] = old
+
+    def test_original_digest_and_size_cannot_replace_installed_digest(self):
+        row = self.doc["files"][0]
+        row["original_bytes"] = len(self.body)
+        row["original_sha256"] = hashlib.sha256(self.body).hexdigest()
+        del row["installed_sha256"]
+        del row["installed_bytes"]
+        self.write_metadata()
+        with self.assertRaises(ValueError): self.verify()
+
+    def test_measured_empty_length_with_declared_zero(self):
+        (self.root / "sample.py").write_bytes(b"")
+        self.doc["files"][0].update(installed_bytes=0, installed_sha256=hashlib.sha256(b"").hexdigest(), original_bytes=27)
+        self.write_metadata()
+        receipt = self.verify()
+        self.assertEqual(receipt.files[0][1], 0)
+        self.assertEqual(receipt.files[0][5], 0)
+
     def test_changed_payload_does_not_enroll_new_expected_digest(self):
         receipt = self.verify()
         original_metadata = self.metadata.read_bytes()

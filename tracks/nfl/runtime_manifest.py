@@ -22,6 +22,15 @@ def _sha(value):
     return value
 
 
+def _optional_size(item, key):
+    if key not in item:
+        return None
+    value = item[key]
+    if type(value) is not int or value < 0:
+        raise ValueError("Invalid byte count: " + key)
+    return value
+
+
 def _unique_object(pairs):
     result = {}
     for key, value in pairs:
@@ -52,7 +61,9 @@ class Receipt:
     metadata_sha256: str
     package: str
     # Keep original packaged-file identity separate from installed identity.
-    files: tuple  # (relative path, installed bytes, installed SHA, original SHA)
+    # (path, measured bytes, installed SHA, original SHA, original bytes,
+    #  optional declared installed bytes). Measured length is never omitted.
+    files: tuple
     trust_boundary: str = "local installed metadata; upstream archive not authenticated"
 
 
@@ -89,16 +100,18 @@ def verify_tree(root, metadata_path, *, trusted_metadata_sha256):
     expected = {}
     folded = set()
     for item in document["files"]:
-        if not isinstance(item, dict) or not {"path", "installed_bytes", "installed_sha256"} <= set(item) or set(item) - {"path", "installed_bytes", "installed_sha256", "original_sha256"}:
-            raise ValueError("An explicit installed digest and size are required")
+        if not isinstance(item, dict) or not {"path", "installed_sha256"} <= set(item) or set(item) - {"path", "installed_bytes", "installed_sha256", "original_sha256", "original_bytes"}:
+            raise ValueError("An explicit installed digest is required")
         name = _relative(item["path"])
         if name.casefold() in folded:
             raise ValueError("Duplicate or case-colliding package path")
         folded.add(name.casefold())
-        size = item["installed_bytes"]
-        if type(size) is not int or size < 0:
-            raise ValueError("Invalid installed size")
-        expected[name] = (size, _sha(item["installed_sha256"]), _sha(item["original_sha256"]) if "original_sha256" in item else None)
+        expected[name] = (
+            _optional_size(item, "installed_bytes"),
+            _sha(item["installed_sha256"]),
+            _sha(item["original_sha256"]) if "original_sha256" in item else None,
+            _optional_size(item, "original_bytes"),
+        )
     observed = {}
 
     def scan_error(error):
@@ -121,9 +134,15 @@ def verify_tree(root, metadata_path, *, trusted_metadata_sha256):
     if set(observed) != set(expected):
         raise ValueError("Package tree is not exactly covered by metadata")
     for name, actual in observed.items():
-        if actual != expected[name][:2]:
+        declared_size, installed_sha, _, _ = expected[name]
+        if actual[1] != installed_sha or (declared_size is not None and actual[0] != declared_size):
             raise ValueError("Installed payload mismatch: " + name)
-    return Receipt(trusted_metadata_sha256, document["package"], tuple((name, *expected[name]) for name in sorted(expected)))
+    # An installed digest binds the complete observed byte string. An original
+    # source-file length is provenance, never an installed-length constraint.
+    return Receipt(trusted_metadata_sha256, document["package"], tuple(
+        (name, *observed[name], expected[name][2], expected[name][3], expected[name][0])
+        for name in sorted(expected)
+    ))
 
 
 def recheck_before_use(receipt, root, metadata_path):
@@ -140,7 +159,7 @@ def demo():
     # All data are invented; the expected pin is fixed before any verification.
     installed = b"INVENTED installed prefix\n"
     original = b"INVENTED archive placeholder\n"
-    document = {"schema": "invented.installed-files.v1", "package": "invented-example", "files": [{"path": "example.py", "installed_bytes": len(installed), "installed_sha256": digest(installed), "original_sha256": digest(original)}]}
+    document = {"schema": "invented.installed-files.v1", "package": "invented-example", "files": [{"path": "example.py", "installed_sha256": digest(installed), "original_sha256": digest(original), "original_bytes": len(original)}]}
     raw = (json.dumps(document, sort_keys=True) + "\n").encode()
     with tempfile.TemporaryDirectory() as folder:
         base = Path(folder).resolve()
@@ -158,7 +177,7 @@ def demo():
             mutation_rejected = True
         else:
             mutation_rejected = False
-        return {"invented_example": True, "verified_files": len(receipt.files), "original_equals_installed": receipt.files[0][2] == receipt.files[0][3], "later_mutation_rejected": mutation_rejected, "package_code_executed": False, "owner_success_claimed": False, "trust_boundary": receipt.trust_boundary}
+        return {"invented_example": True, "verified_files": len(receipt.files), "original_equals_installed": receipt.files[0][2] == receipt.files[0][3], "measured_installed_bytes": receipt.files[0][1], "original_bytes": receipt.files[0][4], "declared_installed_bytes": receipt.files[0][5], "later_mutation_rejected": mutation_rejected, "package_code_executed": False, "owner_success_claimed": False, "trust_boundary": receipt.trust_boundary}
 
 
 if __name__ == "__main__":
