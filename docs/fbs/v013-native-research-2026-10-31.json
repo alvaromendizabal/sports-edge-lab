@@ -1,0 +1,241 @@
+{
+  "schema_version": 1,
+  "milestone": "FBS V013 authenticated native research",
+  "as_of_date_pacific": "2026-10-31",
+  "project": "ncaa_fbs",
+  "evidence_class": "ACTUAL_PRIVATE_OWNER_RETURN_AUTHENTICATED_PUBLIC_AGGREGATES_ONLY",
+  "execution": {
+    "status": "COMPLETED",
+    "exit_code": 0,
+    "elapsed_seconds": 109.5072,
+    "elapsed_scope": "Recorded research-work interval before later report, archive and persistence; not full terminal-command duration.",
+    "new_estimator_units": 70,
+    "optimizer_starts": 24,
+    "closed_form_ridge_solves": 46,
+    "reused_estimator_units": 0,
+    "inherited_registered_research_units": 203,
+    "inherited_units_recounted_as_new": 0
+  },
+  "scientific_policy": {
+    "model_selection_through_season": 2023,
+    "forecast_model_training_through_season": 2025,
+    "current_season_training_labels": 0,
+    "current_season_selection_labels": 0,
+    "permanently_development_exposed_seasons": [
+      2024,
+      2025
+    ],
+    "calibration": "Fitted using chronological out-of-fold historical predictions; selection and calibration are not an independent calibration holdout.",
+    "production_incumbent": "MARKET",
+    "promoted": false,
+    "prospective_probability_validation_established": false,
+    "realized_roi": null,
+    "actual_orders": 0
+  },
+  "data_admission": {
+    "input_selection_price_observations": 24320371,
+    "research_admitted_observations": 7196533,
+    "not_admitted_to_research": 17123838,
+    "excluded_count_interpretation": "Complement of research-admitted observations, not a claim that every excluded observation is an identity failure. Monitoring and other ineligible observations are included.",
+    "strict_contemporaneous_observations": 0,
+    "complete_paired_historical_quotes": 4461,
+    "parent_overlay_reused": true,
+    "source_groups_reused": 372,
+    "fresh_representative_consumer_partitions_checked": 22,
+    "fresh_complete_raw_observation_pass": false,
+    "previous_authenticated_complete_parent_pass_reused": true,
+    "original_raw_replayed": false,
+    "local_bulk_source_materialization_bytes": 0,
+    "legacy_sqlite_writer_restarted": false
+  },
+  "comparison_policy": {
+    "decision_time": "LATEST_COMPLETE_SAME_SNAPSHOT_PAIR_AT_OR_BEFORE_T_MINUS_1H",
+    "winner_novig_method": "PROPORTIONAL_INVERSE_DECIMAL_ODDS",
+    "comparisons": [
+      {
+        "season": 2024,
+        "front": "game_winner",
+        "provider": "DraftKings",
+        "common_cohort_games": 690,
+        "model_metrics": {
+          "accuracy": 0.636231884057971,
+          "brier": 0.21825852562795792,
+          "games": 690,
+          "logloss": 0.6227132258396442
+        },
+        "market_metrics": {
+          "accuracy": 0.7231884057971014,
+          "brier": 0.1781659219048679,
+          "games": 690,
+          "logloss": 0.5278910843040825
+        },
+        "model_minus_market": {
+          "accuracy_model_minus_market": -0.08695652173913038,
+          "brier_model_minus_market": 0.04009260372309001,
+          "logloss_model_minus_market": 0.09482214153556168
+        },
+        "historical_reconstruction": true,
+        "strict_contemporaneous_games": 0,
+        "development_exposed": true,
+        "promotion": false,
+        "realized_roi": null
+      },
+      {
+        "season": 2024,
+        "front": "home_margin",
+        "provider": "DraftKings",
+        "common_cohort_games": 750,
+        "model_metrics": {
+          "games": 750,
+          "mae": 15.065981945832748,
+          "rmse": 18.848417318215663
+        },
+        "market_metrics": {
+          "games": 750,
+          "mae": 11.999333333333333,
+          "rmse": 15.351449442967919
+        },
+        "model_minus_market": {
+          "mae_model_minus_market": 3.0666486124994154,
+          "rmse_model_minus_market": 3.496967875247744
+        },
+        "historical_reconstruction": true,
+        "strict_contemporaneous_games": 0,
+        "development_exposed": true,
+        "promotion": false,
+        "realized_roi": null
+      },
+      {
+        "season": 2024,
+        "front": "game_total",
+        "provider": "DraftKings",
+        "common_cohort_games": 749,
+        "model_metrics": {
+          "games": 749,
+          "mae": 13.015732447265837,
+          "rmse": 16.49839989627192
+        },
+        "market_metrics": {
+          "games": 749,
+          "mae": 12.608811748998665,
+          "rmse": 16.150493839767186
+        },
+        "model_minus_market": {
+          "mae_model_minus_market": 0.4069206982671716,
+          "rmse_model_minus_market": 0.3479060565047334
+        },
+        "historical_reconstruction": true,
+        "strict_contemporaneous_games": 0,
+        "development_exposed": true,
+        "promotion": false,
+        "realized_roi": null
+      },
+      {
+        "season": 2025,
+        "front": "game_winner",
+        "provider": "DraftKings",
+        "common_cohort_games": 724,
+        "model_metrics": {
+          "accuracy": 0.6878453038674033,
+          "brier": 0.19974525178765568,
+          "games": 724,
+          "logloss": 0.5831929549173357
+        },
+        "market_metrics": {
+          "accuracy": 0.7527624309392266,
+          "brier": 0.16842957402684952,
+          "games": 724,
+          "logloss": 0.5038933182278841
+        },
+        "model_minus_market": {
+          "accuracy_model_minus_market": -0.06491712707182329,
+          "brier_model_minus_market": 0.031315677760806154,
+          "logloss_model_minus_market": 0.07929963668945161
+        },
+        "historical_reconstruction": true,
+        "strict_contemporaneous_games": 0,
+        "development_exposed": true,
+        "promotion": false,
+        "realized_roi": null
+      },
+      {
+        "season": 2025,
+        "front": "home_margin",
+        "provider": "DraftKings",
+        "common_cohort_games": 774,
+        "model_metrics": {
+          "games": 774,
+          "mae": 13.826870263796023,
+          "rmse": 17.555243764113275
+        },
+        "market_metrics": {
+          "games": 774,
+          "mae": 11.779069767441861,
+          "rmse": 14.919530061666887
+        },
+        "model_minus_market": {
+          "mae_model_minus_market": 2.047800496354162,
+          "rmse_model_minus_market": 2.635713702446388
+        },
+        "historical_reconstruction": true,
+        "strict_contemporaneous_games": 0,
+        "development_exposed": true,
+        "promotion": false,
+        "realized_roi": null
+      },
+      {
+        "season": 2025,
+        "front": "game_total",
+        "provider": "DraftKings",
+        "common_cohort_games": 774,
+        "model_metrics": {
+          "games": 774,
+          "mae": 13.231853283367062,
+          "rmse": 16.378698100241763
+        },
+        "market_metrics": {
+          "games": 774,
+          "mae": 12.443152454780362,
+          "rmse": 15.458183151864555
+        },
+        "model_minus_market": {
+          "mae_model_minus_market": 0.7887008285867001,
+          "rmse_model_minus_market": 0.9205149483772086
+        },
+        "historical_reconstruction": true,
+        "strict_contemporaneous_games": 0,
+        "development_exposed": true,
+        "promotion": false,
+        "realized_roi": null
+      }
+    ],
+    "all_six_target_season_panels_worse_than_market_on_primary_error_metrics": true,
+    "current_season_matched_market_results_reported": 0,
+    "limitation": "These are historical reconstructions, not real-time captured predictions or actual betting P&L. Margin/total errors do not establish cover/over probabilities."
+  },
+  "historical_lineage": {
+    "prior_public_evidence_preserved": "evidence.json",
+    "cohorts_are_not_replacements_for_prior_740_748_game_panels": true,
+    "prior_prepared_or_failed_releases_not_relabelled_as_completed": true
+  },
+  "publication_boundary": {
+    "included": [
+      "dated aggregate metrics",
+      "research unit accounting",
+      "admission/reuse limits",
+      "chronology and negative results"
+    ],
+    "excluded": [
+      "private provider responses",
+      "individual or current forecasts",
+      "current selections",
+      "model weights",
+      "model recipes",
+      "active feature configuration",
+      "private storage paths",
+      "account identifiers",
+      "owner return archives"
+    ]
+  }
+}
+
