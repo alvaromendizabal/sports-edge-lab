@@ -2,6 +2,12 @@
 
 **Pregame forecasting, honest market comparisons, and recoverable ML systems.** Built by [Alvaro Mendizabal](https://github.com/alvaromendizabal) as one track in the existing [Sports Edge Lab](../../README.md) portfolio.
 
+**Test the executable's actual import context:** the [packaged-source example](PACKAGED_SOURCE.md)
+reproduces a source-read failure that occurs inside a zipapp but not an extracted
+tree. Its exact-source and physical-archive checks are exercised in a real `.pyz`
+subprocess, including wrong-hash rejection. Invented fixtures establish
+engineering behavior; they provide no model-fit or owner-acceptance credit.
+
 ## Exact spread/total probability scoring
 
 The [discrete settlement-distribution example](SETTLEMENT_DISTRIBUTION.md)
