@@ -233,3 +233,8 @@ Apply the [shared research protocol](../../docs/RESEARCH_PROTOCOL.md). Establish
 
 The [model-role evidence example](MODEL_ROLES.md) distinguishes a saved candidate, a retrospective minimum, an unrun challenger, and an authenticated selected champion. Its invented data and executable tests require identical game identities and per-game market references; missing results remain unknown, and exposed 2026 monitoring cannot generate a ranking. This is a public engineering example with no new owner fits or claimed predictive improvement.
 
+
+
+### Feature dependency admission
+
+[Feature lineage](FEATURE_LINEAGE.md) checks the full dependency graph at the decision cutoff, including unknown upstream teacher training clocks. Valid count-based features remain usable when a separate derived family is blocked. The credential-free example and behavioral tests use invented metadata, not sports results.
