@@ -2,6 +2,14 @@
 
 **Pregame forecasting, honest market comparisons, and recoverable ML systems.** Built by [Alvaro Mendizabal](https://github.com/alvaromendizabal) as one track in the existing [Sports Edge Lab](../../README.md) portfolio.
 
+## Exact spread/total probability scoring
+
+The [discrete settlement-distribution example](SETTLEMENT_DISTRIBUTION.md)
+maps a supplied game probability distribution to one exact spread or total,
+retains push mass, and distinguishes proper three-state losses from conditional
+non-push diagnostics. Its deterministic fixtures are invented engineering
+examples, not private sports results or betting advice.
+
 **Installed-file evidence, with an explicit trust boundary:** the [runtime manifest guide](RUNTIME_MANIFEST.md) and [stdlib example](runtime_manifest.py) verify a complete bounded package tree against pinned local installed metadata. The installed digest is required; an original source size is separate provenance. A declared installed size is optional but enforced when present, and the actual full length is always measured and retained. Altered metadata, missing/extra files and changes before phase entry are rejected. The example uses invented files and executes no package code. N018 previously passed scientific runtime admission and then failed its test gate. The newer N019 result below advances the numerical work while retaining separate report, native-acceptance and persistence gates.
 
 **Complete model reporting, with explicit roles:** [the model-role guide](MODEL_ROLES.md) and [stdlib example](model_roles.py) now check an independently declared model inventory against reported rows. An omitted model differs from a reported model with an unknown score. Frozen, weekly-updated and unresolved models remain visible under their declared policies; exact prediction aliases do not become independent model evidence. The example uses invented values, performs no fitting or ranking, and establishes no new forecast edge.
