@@ -27,7 +27,7 @@ upstream model-lineage verification remain the caller's responsibility.
 | Home-minus-away margin | MAE and RMSE in points | Absolute-error wins and direction relative to one exact line |
 | Game total | MAE and RMSE in points | Absolute-error wins and direction relative to one exact line |
 
-All observations must declare matching orientation, settlement, value basis,
+All observations must bind to their declared model or reference series and matching orientation, settlement, value basis,
 decision cutoff and, for point-direction diagnostics, threshold. The probability
 conversion method belongs in the upstream reference declaration: a two-sided
 sportsbook normalization, an exchange ask and a contract midpoint are different

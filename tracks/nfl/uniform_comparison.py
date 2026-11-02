@@ -105,6 +105,8 @@ def compare_fixed_cohort(contract, census, model_rows, reference_rows):
     keys = ('target', 'orientation', 'settlement', 'value_basis')
     for key in keys:
         _text(contract.get(key), key)
+    for key in ('model_id', 'reference_id'):
+        _text(contract.get(key), key)
     expected = {'winner': ('HOME', 'CONDITIONAL_NON_TIE_PROBABILITY'),
                 'margin': ('HOME_MINUS_AWAY', 'POINT_CENTER'),
                 'total': ('TOTAL', 'POINT_CENTER')}[target]
@@ -134,13 +136,15 @@ def compare_fixed_cohort(contract, census, model_rows, reference_rows):
     if not fixed_set <= games.keys():
         raise ValueError('Fixed cohort contains a game absent from census')
 
-    def index(rows):
+    def index(rows, series_id):
         output = {}
         for raw in rows:
             row = dict(raw)
             gid = row.get('game_id')
             if gid not in games or gid in output:
                 raise ValueError('Unknown or duplicate observation identity')
+            if row.get('series_id') != series_id:
+                raise ValueError('Observation belongs to a different model or reference series')
             if any(row.get(k) != contract[k] for k in keys):
                 raise ValueError('Different target, orientation, settlement or value basis')
             if _instant(row.get('decision_at')) != _instant(games[gid]['decision_at']):
@@ -164,7 +168,8 @@ def compare_fixed_cohort(contract, census, model_rows, reference_rows):
             output[gid] = row
         return output
 
-    models, references = index(model_rows), index(reference_rows)
+    models = index(model_rows, contract['model_id'])
+    references = index(reference_rows, contract['reference_id'])
     ledger, matched = [], []
     for gid, game in sorted(games.items()):
         m, r = models.get(gid), references.get(gid)
@@ -206,7 +211,8 @@ def compare_fixed_cohort(contract, census, model_rows, reference_rows):
     weeks = defaultdict(list)
     for row in ledger:
         weeks[row['week']].append(row)
-    return {'target': target, 'fixed_n': len(fixed), 'fixed_cohort_sha256': contract['cohort_sha256'],
+    return {'target': target, 'model_id': contract['model_id'], 'reference_id': contract['reference_id'],
+            'fixed_n': len(fixed), 'fixed_cohort_sha256': contract['cohort_sha256'],
             'census_n': len(games), 'matched_n': len(matched), 'coverage': len(matched)/len(fixed),
             'headline_state': 'COMPLETE_FIXED_COHORT' if full else 'INCOMPLETE_FIXED_COHORT',
             'headline_scores': _paired(matched, target) if full else None,
@@ -228,15 +234,16 @@ def compare_fixed_cohort(contract, census, model_rows, reference_rows):
 def invented_inputs():
     ids = ['invented-A', 'invented-B', 'invented-C', 'invented-D']
     contract = dict(target='winner', orientation='HOME', settlement='FULL_GAME_CONDITIONAL_NO_TIE',
-                    value_basis='CONDITIONAL_NON_TIE_PROBABILITY', game_ids=ids, cohort_sha256=cohort_digest(ids))
+                    value_basis='CONDITIONAL_NON_TIE_PROBABILITY', game_ids=ids, cohort_sha256=cohort_digest(ids),
+                    model_id='invented-frozen-model', reference_id='invented-reference')
     census = [dict(game_id=g, week='REG_01' if i < 2 else 'REG_02', actual=i % 2,
                    decision_at='2026-09-09T20:00:00Z') for i, g in enumerate(ids)]
-    def rows(values):
-        return [dict(game_id=g, **{k: contract[k] for k in ('target','orientation','settlement','value_basis')},
+    def rows(values, series_id):
+        return [dict(game_id=g, series_id=series_id, **{k: contract[k] for k in ('target','orientation','settlement','value_basis')},
                      decision_at=census[i]['decision_at'], value=v, source_at='2026-09-09T18:00:00Z',
                      available_at='2026-09-09T19:00:00Z', created_at='2026-11-01T00:00:00Z')
                 for i, (g, v) in enumerate(zip(ids, values))]
-    return contract, census, rows([.3, .7, .7, .3]), rows([.7, .7, .3, .3])
+    return contract, census, rows([.3, .7, .7, .3], contract['model_id']), rows([.7, .7, .3, .3], contract['reference_id'])
 
 
 def invented_demo():

@@ -90,6 +90,12 @@ class UniformComparisonTests(unittest.TestCase):
         self.refs[0]['decision_at'] = '2026-09-09T21:00:00Z'
         with self.assertRaises(ValueError): self.run_comparison()
 
+    def test_mixed_model_or_provider_identity_rejected(self):
+        for field in ('models', 'refs'):
+            with self.subTest(field=field):
+                self.setUp(); getattr(self, field)[0]['series_id'] = 'another-producer'
+                with self.assertRaises(ValueError): self.run_comparison()
+
     def test_equivalent_timezone_cutoffs_match(self):
         self.refs[0]['decision_at'] = '2026-09-09T13:00:00-07:00'
         self.assertEqual(self.run_comparison()['matched_n'], 4)
