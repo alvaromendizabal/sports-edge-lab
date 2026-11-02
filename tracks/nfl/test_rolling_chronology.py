@@ -82,6 +82,15 @@ class RollingChronologyTests(unittest.TestCase):
         self.origin['policy_id']='different-policy'
         with self.assertRaises(ValueError):self.result()
 
+    def test_origin_cutoff_cannot_move_forward_without_identity_change(self):
+        self.origin['fit_information_before']='2032-01-01T00:00:00Z'
+        with self.assertRaises(ValueError):admitted_training_labels(self.policy,self.origin,self.labels)
+        with self.assertRaises(ValueError):self.result()
+
+    def test_origin_reconstruction_metadata_is_immutable(self):
+        self.origin['historical_reconstruction']=True
+        with self.assertRaises(ValueError):self.result()
+
     def test_matured_oof_feedback_arithmetic(self):
         row=self.result()['rows'][0]
         self.assertAlmostEqual(row['model_residual'],.3)

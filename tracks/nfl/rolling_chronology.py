@@ -51,14 +51,18 @@ def weekly_origin(policy, games):
     if len({(g['season'], g['phase'], g['week']) for g in games}) != 1:
         raise ValueError('Different official weeks cannot share this origin')
     cutoff = min(clock(g['kickoff']) for g in games) - timedelta(hours=policy['horizon_hours'])
-    return {'policy_id': policy['policy_id'], 'policy_sha256': digest(policy),
+    result = {'policy_id': policy['policy_id'], 'policy_sha256': digest(policy),
             'fit_information_before': cutoff.isoformat(), 'game_ids': sorted(ids),
             'week_membership_sha256': digest(sorted(ids)),
             'historical_reconstruction': clock(policy['registered_at']) >= cutoff}
+    result['origin_sha256'] = digest(result)
+    return result
 
 
 def validate_origin(policy, origin):
     validate_policy(policy)
+    if origin.get('origin_sha256') != digest({k:v for k,v in origin.items() if k!='origin_sha256'}):
+        raise ValueError('Declared origin body changed')
     if origin['policy_sha256'] != digest(policy) or origin['policy_id'] != policy['policy_id']:
         raise ValueError('Origin belongs to a different policy')
     ids = origin['game_ids']

@@ -28,7 +28,9 @@ before its earliest kickoff. It keeps official season, phase and week together;
 an ISO calendar week is not a substitute. Labels arriving at the boundary are
 excluded under this strict convention. Missing availability is unknown, not a
 zero label or an assumed publication date. The exact week membership and policy
-have separate hashes.
+have separate hashes. The complete origin body has its own digest, including
+the cutoff and reconstruction classification; changing either invalidates it.
+These hashes bind caller declarations, not independently authenticated source clocks.
 
 Two hours is a **new horizon declaration**, not an edit to older day-before
 results. Fitted preprocessing, calibration, blends and thresholds need the same
