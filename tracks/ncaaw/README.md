@@ -59,7 +59,7 @@ The current observation snapshot is November 2 at 05:17 UTC. Stored odds remain 
 
 The inherited MARKET populations contain **235 games** from the season ending in 2025 and **260 games** from the season ending in 2026. In the latter cohort, one B030 calibrated variant scored Brier **0.178195**, natural-log loss **0.518839** and accuracy **71.54%**, versus MARKET's **0.178801**, **0.523213** and **70.38%**. The Brier difference was about **−0.000606**, with descriptive block interval **[−0.007442, +0.005911]**. The interval includes zero.
 
-A retained earlier gradient model scored Brier **0.175054** and log loss **0.512560** on the same 260 games. Its stronger descriptive result also did not establish a statistically resolved MARKET advantage. The newest batch is not automatically the best retained model.
+A retained earlier gradient model scored Brier **0.175054** and log loss **0.512560** on the same 260 games. Its Brier interval includes zero. Its descriptive log-loss interval favors the retained model: the model-minus-MARKET difference is about −0.010653, with interval [−0.026373, −0.000947]. Prior exposure and unadjusted multiple comparisons prevent a confirmatory or prospective profitability claim. The newest batch is not automatically the best retained model.
 
 Two other calibration variants improved Brier slightly while worsening log loss because exact endpoint probabilities encountered losses. Those negative results remain in the record; favorable Brier alone does not qualify the calibrator.
 
