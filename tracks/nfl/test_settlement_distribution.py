@@ -82,6 +82,13 @@ class SettlementDistributionTests(unittest.TestCase):
         self.assertEqual(result['log_loss_3state'], 0)
         self.assertEqual(result['brier_3state'], 0)
 
+    def test_rare_positive_loss_mass_does_not_cancel_to_zero(self):
+        self.d['support'] = [{'points': -7, 'probability': 1e-20}, {'points': 7, 'probability': 1.0}]
+        result = score_outcome(self.d, self.i, -7)
+        self.assertTrue(math.isfinite(result['conditional_binary_log_loss']))
+        self.assertAlmostEqual(result['conditional_binary_log_loss'], -math.log(1e-20))
+        self.assertAlmostEqual(result['conditional_binary_log_loss'], result['log_loss_3state'])
+
     def test_tied_mode_abstains(self):
         self.d['support'] = [{'points': -7, 'probability': .5}, {'points': 7, 'probability': .5}]
         self.assertIsNone(score_outcome(self.d, self.i, 7)['unique_mode_correct'])

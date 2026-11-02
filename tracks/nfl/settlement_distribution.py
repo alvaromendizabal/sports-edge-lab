@@ -161,7 +161,7 @@ def score_outcome(distribution, instrument, actual_points):
     q = mapped['conditional_win_given_no_push']
     binary_loss = binary_brier = None
     if state != 'PUSH' and q is not None:
-        event_probability = q if state == 'WIN' else 1 - q
+        event_probability = probabilities[state] / (probabilities['WIN'] + probabilities['LOSS'])
         binary_loss = -math.log(event_probability) if event_probability else math.inf
         binary_brier = (q - (state == 'WIN')) ** 2
     modes = [s for s in STATES if probabilities[s] == max(probabilities.values())]
