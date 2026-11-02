@@ -2,6 +2,12 @@
 
 **Pregame forecasting, honest market comparisons, and recoverable ML systems.** Built by [Alvaro Mendizabal](https://github.com/alvaromendizabal) as one track in the existing [Sports Edge Lab](../../README.md) portfolio.
 
+**Preserve exact inputs through numerical replay:** the [dependent-replay example](DEPENDENT_REPLAY.md)
+shows why a permitted floating-point difference in a baseline can change a derived
+feature. It checks independent fields exactly, verifies each derived formula and
+returns the original authenticated bytes for exact training hashes. Invented
+tests prove this boundary; actual owner acceptance remains a separate requirement.
+
 **Test the executable's actual import context:** the [packaged-source example](PACKAGED_SOURCE.md)
 reproduces a source-read failure that occurs inside a zipapp but not an extracted
 tree. Its exact-source and physical-archive checks are exercised in a real `.pyz`
