@@ -1,6 +1,10 @@
 # Sports Edge Lab · NCAA football
 
-**Latest verified aggregate milestone — V013, October 31, 2026:** [completed native research and matched-market results](../../docs/fbs/V013_NATIVE_RESEARCH_2026-10-31.md). The owner run completed 70 new estimator units (24 optimizer starts, 46 closed-form ridge solves). All six matched 2024/2025 target-season panels were worse than the market reference; MARKET remains unchanged. Current selections and private model artifacts are not published.
+**Latest verified study — V024, November 3, 2026:** 723 fresh fits, a preserved negative result, and zero live forecast issues. The registered challenger has worse winner log loss than V023 on both exposed historical seasons. Seven fixed comparisons share exact identities and labels on 918 games in 2024 and 934 in 2025; all 12 displayed metrics were independently recomputed. Current raw feature-value reconstruction remains unverified and live issue stays blocked.
+
+[Interactive FBS evidence](../../docs/fbs/index.html) · [Current model card](MODEL_CARD.md) · [Dated verification](../../docs/fbs/V024_REVIEW_2026-11-03.md) · [Public aggregate JSON](../../docs/fbs/V024_AGGREGATE_2026-11-03.json) · [Executed notebook](../../notebooks/fbs_branch_review.ipynb) · [Run the invented example](../../examples/fbs_contracts/README.md)
+
+**Earlier verified aggregate milestone — V013, October 31, 2026:** [completed native research and matched-market results](../../docs/fbs/V013_NATIVE_RESEARCH_2026-10-31.md). The owner run completed 70 new estimator units (24 optimizer starts, 46 closed-form ridge solves). All six matched 2024/2025 target-season panels were worse than the market reference; MARKET remains unchanged. Current selections and private model artifacts are not published.
 
 [Current dated aggregate](../../docs/fbs/v013-native-research-2026-10-31.json) · [FBS evidence index](../../docs/fbs/README.md)
 

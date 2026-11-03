@@ -1,0 +1,464 @@
+{
+  "schema": "sports-edge-lab.fbs.public-release.v1",
+  "release": "V024",
+  "as_of": "2026-11-03T20:13:14.899428Z",
+  "result": "Historical research completed; challenger not promoted",
+  "comparison_status": "Privately verified matched historical cohorts; public aggregates only",
+  "exposure": {
+    "selection_seasons": [
+      2021,
+      2022,
+      2023
+    ],
+    "evaluation_seasons": [
+      2024,
+      2025
+    ],
+    "evaluation_status": "Permanently exposed historical seasons, not untouched holdouts",
+    "current_season_used_for_selection": false,
+    "prospective_forecasts_issued": 0,
+    "live_feature_values_recomputed": false
+  },
+  "execution": {
+    "fresh_completed_fits": 723,
+    "reused_fits": 0,
+    "failed_fits": 0,
+    "inner_selection_fits": 432,
+    "historical_evaluation_fits": 288,
+    "frozen_state_fits": 3,
+    "elapsed_seconds": 1485.1575691379999,
+    "new_paid_provider_calls": 0,
+    "fresh_rolling_fits": 0,
+    "original_objects_verified": 21
+  },
+  "verification": {
+    "return_bytes": 92420627,
+    "return_sha256": "f55da15a0031e2e03737bfbd71fd738d4413bf1b698404c9315bf74b6354a720",
+    "completion_bytes": 848,
+    "completion_sha256": "8c88a0fd2a3962d88058c9b6400975938357c9d3fff22ac0637af697bd600639",
+    "completion_after_research": true,
+    "exit_code": 0,
+    "pinned_reports_verified": 39,
+    "public_reproduction": "The repository reproduces aggregate validation and invented engineering examples. Full private research cannot be reconstructed from these aggregates."
+  },
+  "models": [
+    {
+      "id": "earlier-baseline",
+      "label": "Earlier baseline \u00b7 V020",
+      "role": "fixed comparison"
+    },
+    {
+      "id": "earlier-study",
+      "label": "Earlier study \u00b7 V021",
+      "role": "fixed comparison"
+    },
+    {
+      "id": "previous-study",
+      "label": "Previous study \u00b7 V023",
+      "role": "fixed comparison"
+    },
+    {
+      "id": "registered-challenger",
+      "label": "Registered challenger \u00b7 V024",
+      "role": "registered challenger"
+    },
+    {
+      "id": "fixed-control-a",
+      "label": "Fixed control A",
+      "role": "fixed comparison"
+    },
+    {
+      "id": "fixed-control-b",
+      "label": "Fixed control B",
+      "role": "fixed comparison"
+    },
+    {
+      "id": "fixed-control-c",
+      "label": "Fixed control C",
+      "role": "fixed comparison"
+    }
+  ],
+  "panels": [
+    {
+      "model": "earlier-baseline",
+      "season": 2024,
+      "games": 918,
+      "metrics": {
+        "winner_logloss": 0.5227611630527513,
+        "winner_brier": 0.17796905852396988,
+        "winner_accuracy": 0.7276688453159041,
+        "winner_correct": 668,
+        "winner_ece": 0.03979072412011976,
+        "winner_mcc": 0.3994774152081237,
+        "margin_mae": 13.541559902348038,
+        "margin_rmse": 16.998965033032828,
+        "margin_bias": -1.4792551423400042,
+        "total_mae": 12.7904023079287,
+        "total_rmse": 16.25722182609339,
+        "total_bias": -0.6064088597003962
+      },
+      "cohort_sha256": "bbdf511c57d17f6eeaf46dbadbe5777cffbd83b2d37f9ecaa8a217494a87158c"
+    },
+    {
+      "model": "earlier-study",
+      "season": 2024,
+      "games": 918,
+      "metrics": {
+        "winner_logloss": 0.5316656535151312,
+        "winner_brier": 0.18116483561079225,
+        "winner_accuracy": 0.7222222222222222,
+        "winner_correct": 663,
+        "winner_ece": 0.04036799267219317,
+        "winner_mcc": 0.3859511142608802,
+        "margin_mae": 13.536831425469977,
+        "margin_rmse": 17.039230926271475,
+        "margin_bias": -1.3540344211852111,
+        "total_mae": 12.787911145080955,
+        "total_rmse": 16.276466606387494,
+        "total_bias": -0.6990635894935883
+      },
+      "cohort_sha256": "bbdf511c57d17f6eeaf46dbadbe5777cffbd83b2d37f9ecaa8a217494a87158c"
+    },
+    {
+      "model": "previous-study",
+      "season": 2024,
+      "games": 918,
+      "metrics": {
+        "winner_logloss": 0.5264508761622789,
+        "winner_brier": 0.17872488203192352,
+        "winner_accuracy": 0.7265795206971678,
+        "winner_correct": 667,
+        "winner_ece": 0.05571848405279195,
+        "winner_mcc": 0.4051045107963832,
+        "margin_mae": 13.526359650554614,
+        "margin_rmse": 17.030689876801215,
+        "margin_bias": -1.4135718426598913,
+        "total_mae": 12.805628012646116,
+        "total_rmse": 16.26553406504098,
+        "total_bias": -0.6240971693550283
+      },
+      "cohort_sha256": "bbdf511c57d17f6eeaf46dbadbe5777cffbd83b2d37f9ecaa8a217494a87158c"
+    },
+    {
+      "model": "registered-challenger",
+      "season": 2024,
+      "games": 918,
+      "metrics": {
+        "winner_logloss": 0.5320835800514434,
+        "winner_brier": 0.18099807019744582,
+        "winner_accuracy": 0.7309368191721133,
+        "winner_correct": 671,
+        "winner_ece": 0.03825145159404123,
+        "winner_mcc": 0.4059857137545135,
+        "margin_mae": 13.551200767114514,
+        "margin_rmse": 17.01957029034679,
+        "margin_bias": -1.2823170262352703,
+        "total_mae": 12.787645200548422,
+        "total_rmse": 16.266373393063468,
+        "total_bias": -0.7424018182333235
+      },
+      "cohort_sha256": "bbdf511c57d17f6eeaf46dbadbe5777cffbd83b2d37f9ecaa8a217494a87158c"
+    },
+    {
+      "model": "fixed-control-a",
+      "season": 2024,
+      "games": 918,
+      "metrics": {
+        "winner_logloss": 0.5259712177603302,
+        "winner_brier": 0.17877438206097507,
+        "winner_accuracy": 0.7265795206971678,
+        "winner_correct": 667,
+        "winner_ece": 0.041287570109668464,
+        "winner_mcc": 0.4019569722230005,
+        "margin_mae": 13.533674684597564,
+        "margin_rmse": 17.01972694137805,
+        "margin_bias": -1.3479444344475806,
+        "total_mae": 12.795680908129828,
+        "total_rmse": 16.26455988693594,
+        "total_bias": -0.683249493794176
+      },
+      "cohort_sha256": "bbdf511c57d17f6eeaf46dbadbe5777cffbd83b2d37f9ecaa8a217494a87158c"
+    },
+    {
+      "model": "fixed-control-b",
+      "season": 2024,
+      "games": 918,
+      "metrics": {
+        "winner_logloss": 0.5248949917246392,
+        "winner_brier": 0.17854134169211527,
+        "winner_accuracy": 0.7320261437908496,
+        "winner_correct": 672,
+        "winner_ece": 0.04278476582592946,
+        "winner_mcc": 0.4086770996214926,
+        "margin_mae": 13.522524354543917,
+        "margin_rmse": 16.970303882681584,
+        "margin_bias": -1.3807860842876372,
+        "total_mae": 12.788928068738716,
+        "total_rmse": 16.26069677710465,
+        "total_bias": -0.6744053389668598
+      },
+      "cohort_sha256": "bbdf511c57d17f6eeaf46dbadbe5777cffbd83b2d37f9ecaa8a217494a87158c"
+    },
+    {
+      "model": "fixed-control-c",
+      "season": 2024,
+      "games": 918,
+      "metrics": {
+        "winner_logloss": 0.5248248725264687,
+        "winner_brier": 0.17849114004342648,
+        "winner_accuracy": 0.7309368191721133,
+        "winner_correct": 671,
+        "winner_ece": 0.04094569135030519,
+        "winner_mcc": 0.4086562845098663,
+        "margin_mae": 13.519429791941027,
+        "margin_rmse": 16.99199822048383,
+        "margin_bias": -1.3822946081050944,
+        "total_mae": 12.791966084662356,
+        "total_rmse": 16.264229243133773,
+        "total_bias": -0.6679928591955843
+      },
+      "cohort_sha256": "bbdf511c57d17f6eeaf46dbadbe5777cffbd83b2d37f9ecaa8a217494a87158c"
+    },
+    {
+      "model": "earlier-baseline",
+      "season": 2025,
+      "games": 934,
+      "metrics": {
+        "winner_logloss": 0.4927284110268585,
+        "winner_brier": 0.16449303556048828,
+        "winner_accuracy": 0.7505353319057816,
+        "winner_correct": 701,
+        "winner_ece": 0.030774235051425344,
+        "winner_mcc": 0.44075416200759987,
+        "margin_mae": 12.82347679037854,
+        "margin_rmse": 16.242665978080606,
+        "margin_bias": -1.1489668537453597,
+        "total_mae": 12.679764094703527,
+        "total_rmse": 15.708575524249758,
+        "total_bias": 0.7003340035238275
+      },
+      "cohort_sha256": "29733c0095d04be28a4458fb2a62e0c3aa80cf90777545f80ac0375691d741f1"
+    },
+    {
+      "model": "earlier-study",
+      "season": 2025,
+      "games": 934,
+      "metrics": {
+        "winner_logloss": 0.499890197088591,
+        "winner_brier": 0.16775684448581896,
+        "winner_accuracy": 0.7494646680942184,
+        "winner_correct": 700,
+        "winner_ece": 0.028800595360978624,
+        "winner_mcc": 0.4358653234336288,
+        "margin_mae": 12.894112210575768,
+        "margin_rmse": 16.334010189784923,
+        "margin_bias": -1.238824944541717,
+        "total_mae": 12.659078709862515,
+        "total_rmse": 15.709077015962329,
+        "total_bias": 0.8370063803956416
+      },
+      "cohort_sha256": "29733c0095d04be28a4458fb2a62e0c3aa80cf90777545f80ac0375691d741f1"
+    },
+    {
+      "model": "previous-study",
+      "season": 2025,
+      "games": 934,
+      "metrics": {
+        "winner_logloss": 0.4887974040520876,
+        "winner_brier": 0.1627484540081407,
+        "winner_accuracy": 0.7591006423982869,
+        "winner_correct": 709,
+        "winner_ece": 0.042991326208122606,
+        "winner_mcc": 0.46649128460750017,
+        "margin_mae": 12.88635739004783,
+        "margin_rmse": 16.324885606402194,
+        "margin_bias": -1.2944793734990112,
+        "total_mae": 12.684257903838489,
+        "total_rmse": 15.716701990970064,
+        "total_bias": 0.7301201463101383
+      },
+      "cohort_sha256": "29733c0095d04be28a4458fb2a62e0c3aa80cf90777545f80ac0375691d741f1"
+    },
+    {
+      "model": "registered-challenger",
+      "season": 2025,
+      "games": 934,
+      "metrics": {
+        "winner_logloss": 0.49802479545635525,
+        "winner_brier": 0.16705755320652987,
+        "winner_accuracy": 0.7430406852248393,
+        "winner_correct": 694,
+        "winner_ece": 0.025611967922084335,
+        "winner_mcc": 0.4229055190046293,
+        "margin_mae": 12.879868513359437,
+        "margin_rmse": 16.33788356430315,
+        "margin_bias": -1.1119605450701868,
+        "total_mae": 12.691053637061069,
+        "total_rmse": 15.722838075025264,
+        "total_bias": 0.6957295671386536
+      },
+      "cohort_sha256": "29733c0095d04be28a4458fb2a62e0c3aa80cf90777545f80ac0375691d741f1"
+    },
+    {
+      "model": "fixed-control-a",
+      "season": 2025,
+      "games": 934,
+      "metrics": {
+        "winner_logloss": 0.4909711793684885,
+        "winner_brier": 0.163842735160347,
+        "winner_accuracy": 0.7548179871520343,
+        "winner_correct": 705,
+        "winner_ece": 0.033894019847478876,
+        "winner_mcc": 0.45448372160341877,
+        "margin_mae": 12.877268495283769,
+        "margin_rmse": 16.325634495340964,
+        "margin_bias": -1.203219959284599,
+        "total_mae": 12.686967729252485,
+        "total_rmse": 15.717963883608663,
+        "total_bias": 0.7129248567243959
+      },
+      "cohort_sha256": "29733c0095d04be28a4458fb2a62e0c3aa80cf90777545f80ac0375691d741f1"
+    },
+    {
+      "model": "fixed-control-b",
+      "season": 2025,
+      "games": 934,
+      "metrics": {
+        "winner_logloss": 0.4936199651787915,
+        "winner_brier": 0.16499216642963205,
+        "winner_accuracy": 0.7505353319057816,
+        "winner_correct": 701,
+        "winner_ece": 0.02508254785638882,
+        "winner_mcc": 0.4418987360297782,
+        "margin_mae": 12.829754860099271,
+        "margin_rmse": 16.256862067560572,
+        "margin_bias": -1.1304636994077732,
+        "total_mae": 12.684640397515233,
+        "total_rmse": 15.714260134202837,
+        "total_bias": 0.6980317853312409
+      },
+      "cohort_sha256": "29733c0095d04be28a4458fb2a62e0c3aa80cf90777545f80ac0375691d741f1"
+    },
+    {
+      "model": "fixed-control-c",
+      "season": 2025,
+      "games": 934,
+      "metrics": {
+        "winner_logloss": 0.49215671225208746,
+        "winner_brier": 0.16436519008547912,
+        "winner_accuracy": 0.7569593147751607,
+        "winner_correct": 707,
+        "winner_ece": 0.0325463569890201,
+        "winner_mcc": 0.45694304272923836,
+        "margin_mae": 12.850099083730555,
+        "margin_rmse": 16.28253787546464,
+        "margin_bias": -1.1985579292140685,
+        "total_mae": 12.67693564709535,
+        "total_rmse": 15.711639278998803,
+        "total_bias": 0.7407975243420653
+      },
+      "cohort_sha256": "29733c0095d04be28a4458fb2a62e0c3aa80cf90777545f80ac0375691d741f1"
+    }
+  ],
+  "intervals": [
+    {
+      "season": 2024,
+      "target": "margin",
+      "games": 918,
+      "covered": 819,
+      "empirical_coverage": 0.8921568627450981,
+      "mean_width": 55.98784299038285,
+      "nominal_coverage": 0.9,
+      "descriptive_only": true
+    },
+    {
+      "season": 2024,
+      "target": "total",
+      "games": 918,
+      "covered": 819,
+      "empirical_coverage": 0.8921568627450981,
+      "mean_width": 52.41438895197605,
+      "nominal_coverage": 0.9,
+      "descriptive_only": true
+    },
+    {
+      "season": 2025,
+      "target": "margin",
+      "games": 934,
+      "covered": 849,
+      "empirical_coverage": 0.9089935760171306,
+      "mean_width": 55.98784299038285,
+      "nominal_coverage": 0.9,
+      "descriptive_only": true
+    },
+    {
+      "season": 2025,
+      "target": "total",
+      "games": 934,
+      "covered": 845,
+      "empirical_coverage": 0.9047109207708779,
+      "mean_width": 52.41438895197605,
+      "nominal_coverage": 0.9,
+      "descriptive_only": true
+    }
+  ],
+  "source_scope": {
+    "observed_at": "2026-11-03T19:48:23.998334Z",
+    "upcoming_strict_7_days": 63,
+    "upcoming_extended_schedule": 68,
+    "original_summary_7_day_count": 68,
+    "window_correction": "Five kickoffs lay beyond the strict rolling seven-day UTC endpoint; 68 belongs to the extended schedule.",
+    "quote_rows_all": 2168,
+    "quote_rows_game_markets": 2039,
+    "quote_rows_player_props": 129,
+    "mapped_game_market_rows": 2006,
+    "quarantined_game_market_rows": 33,
+    "mapped_events": 62,
+    "observed_events": 63,
+    "certified_60_or_120_minute_rows": 0
+  },
+  "limitations": [
+    "Historical seasons have been repeatedly examined; no untouched holdout or prospective edge is claimed.",
+    "The registered challenger has worse winner log loss than the previous study in both exposed seasons. Lower calibration error does not overturn that result.",
+    "These comparisons evaluate private historical model variants; no matched current market benchmark is present in this study.",
+    "Calibrated interval coverage is descriptive. Selection reuse and dependent sports outcomes preclude a formal coverage guarantee.",
+    "Current raw feature values still lack a verified executable recomputation path, so no live forecasts or rolling refits were issued.",
+    "Public names identify aggregate panels only; active feature definitions, fitted state, blend construction and individual forecasts remain private."
+  ],
+  "pairing": {
+    "evidence_class": "Authenticated private owner artifacts; independent local aggregate and pairing verification; not public raw-data reproduction.",
+    "canonicalization": "Sort each season by the event identifier lexicographically. Each record contains integer season, string event identifier, ordered home and away team names, and integer final home and away points. Serialize the complete list with sorted object keys, ensure_ascii=true, compact comma/colon separators, UTF-8 and no trailing newline; compute SHA-256. Exact private schema and underlying records are retained in the owner audit.",
+    "seasons": [
+      {
+        "season": 2024,
+        "games": 918,
+        "cohort_labels_sha256": "bbdf511c57d17f6eeaf46dbadbe5777cffbd83b2d37f9ecaa8a217494a87158c",
+        "exact_identity_teams_labels_verified": true,
+        "prediction_columns_verified": 21
+      },
+      {
+        "season": 2025,
+        "games": 934,
+        "cohort_labels_sha256": "29733c0095d04be28a4458fb2a62e0c3aa80cf90777545f80ac0375691d741f1",
+        "exact_identity_teams_labels_verified": true,
+        "prediction_columns_verified": 21
+      }
+    ],
+    "independently_recomputed_metrics": [
+      "winner_logloss",
+      "winner_brier",
+      "winner_accuracy",
+      "winner_correct",
+      "winner_ece",
+      "winner_mcc",
+      "margin_mae",
+      "margin_rmse",
+      "margin_bias",
+      "total_mae",
+      "total_rmse",
+      "total_bias"
+    ],
+    "absolute_tolerance": 1e-12,
+    "individual_rows_published": false
+  }
+}

@@ -1,6 +1,14 @@
 # NCAA FBS: an independent research branch
 
-## Latest verified milestone — V013, October 31, 2026
+## Latest verified study — V024, November 3, 2026
+
+[Interactive comparison](index.html) · [Model card](../../tracks/ncaaf/MODEL_CARD.md) · [Verification record](V024_REVIEW_2026-11-03.md) · [Aggregate JSON](V024_AGGREGATE_2026-11-03.json) · [Executed notebook](../../notebooks/fbs_branch_review.ipynb)
+
+The owner run completed **723 fresh fits in 24 minutes 45 seconds**, with zero reused or failed units. Independent verification matched all seven fixed panels on exact identities, ordered teams and labels across **918 games in 2024 and 934 in 2025**, and recomputed all 12 displayed metrics within 10⁻¹². The registered challenger has worse winner log loss than V023 in both exposed historical seasons. **No promotion is claimed.** Current raw feature-value recomputation remains unverified, so this run issued zero genuine forecasts and made zero rolling refits.
+
+The public explorer preserves this negative result, exposes target/metric/reference comparisons and aggregate-only exports, and links to a real executed notebook. The [invented cohort example](../../examples/fbs_contracts/matched_cohort.py) rejects equal-count mismatches and label drift. It is a software demonstrator, not a private sports-model reproduction. V024 is separate from the earlier market-comparison studies below; their cohorts are not pooled.
+
+## Earlier verified milestone — V013, October 31, 2026
 
 [Completed native research: exact matched-market comparisons](V013_NATIVE_RESEARCH_2026-10-31.md) · [Full-precision aggregate](v013-native-research-2026-10-31.json)
 

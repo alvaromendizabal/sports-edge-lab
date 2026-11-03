@@ -1,0 +1,95 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="description" content="A reproducible public review of NCAA FBS model evaluation: matched historical cohorts, a preserved negative result, tested engineering contracts, and explicit limits.">
+  <title>FBS evidence review · Sports Edge Lab</title>
+  <link rel="stylesheet" href="dashboard.css">
+</head>
+<body>
+<a class="skip" href="#main">Skip to evidence</a>
+<div class="topbar"><div class="shell">
+  <a class="brand" href="../../README.md">SPORTS EDGE LAB <span>/ FBS</span></a>
+  <nav aria-label="Review navigation"><a href="#explorer">Evidence</a><a href="#reproduce">Reproduce</a><a href="../../tracks/ncaaf/MODEL_CARD.md">Model card</a><a href="#provenance">Provenance</a></nav>
+</div></div>
+<header class="hero"><div class="shell hero-grid">
+  <div>
+    <div class="eyebrow">NCAA football / FBS research <span class="badge">V024 · 03 NOV 2026</span></div>
+    <h1>723 fits.<br><span>A result worth inspecting.</span></h1>
+    <p>A completed model study, compared on identical historical games. Explore the scores, inspect the evidence boundary, and run the public engineering example.</p>
+    <div class="links"><a class="button primary" href="#explorer">Explore the comparison ↓</a><a class="button ghost" href="../../notebooks/fbs_branch_review.ipynb">Open executed notebook ↗</a></div>
+  </div>
+  <aside class="verdict" aria-label="Study decision">
+    <div class="eyebrow">Decision / no promotion</div>
+    <h2>The challenger’s winner loss increased in both seasons.</h2>
+    <p>Relative to V023, V024 has worse log loss on both exposed panels. Better calibration error alone does not establish a better forecasting model.</p>
+    <div class="delta-pair"><div><strong>+0.005633</strong><span>2024 · log-loss change</span></div><div><strong>+0.009227</strong><span>2025 · log-loss change</span></div></div>
+  </aside>
+</div></header>
+<main id="main" class="shell">
+  <section class="stats" aria-label="Verified study counts">
+    <div class="stat"><div class="eyebrow">Completed work</div><strong>723 <span class="unit">fresh fits</span></strong><p>432 selection + 288 evaluation + 3 frozen states. Zero reused or failed fits.</p></div>
+    <div class="stat"><div class="eyebrow">Paired evaluation</div><strong>1,852 <span class="unit">games</span></strong><p>918 in 2024 and 934 in 2025. Seven comparisons share exact identities and labels.</p></div>
+    <div class="stat"><div class="eyebrow">Research duration</div><strong>24m 45s</strong><p>Completed research, followed by an independently verified completion receipt.</p></div>
+    <div class="stat"><div class="eyebrow">Genuine live issues</div><strong>0 <span class="unit">forecasts</span></strong><p>No current rolling refits. Raw feature-value recomputation remains unverified.</p></div>
+  </section>
+
+  <section id="explorer" class="section" aria-labelledby="explorer-title">
+    <div class="section-intro"><div><div class="eyebrow">01 / Compare the evidence</div><h2 id="explorer-title">Same games. Explicit denominators.</h2><p>Choose the season, target, score and reference. Every view preserves the complete fixed comparison set; no favorable subset is selected.</p></div><span class="tag">Exposed historical evidence</span></div>
+    <noscript><p>JavaScript is off. The complete 2025 winner log-loss table remains visible below. Download the <a href="V024_AGGREGATE_2026-11-03.json">aggregate JSON</a> for every season and metric.</p></noscript>
+    <div class="panel">
+      <div class="controls">
+        <div><label for="study-season">Historical season</label><select id="study-season"><option value="2024">2024 · 918 games</option><option value="2025" selected>2025 · 934 games</option></select></div>
+        <div><label for="target">Prediction target</label><select id="target"><option value="winner">Winner</option><option value="margin">Margin</option><option value="total">Total points</option></select></div>
+        <div><label for="metric">Score</label><select id="metric"><option value="winner_logloss">Log loss</option></select></div>
+        <div><label for="reference">Comparison reference</label><select id="reference">@@REFERENCE_OPTIONS@@</select></div>
+      </div>
+      <div class="comparison-head"><div><h3 id="comparison-title">2025 · Winner · Log loss</h3><p id="metric-description" class="small">Natural-log probability loss; lower is better.</p></div><div id="cohort-short" class="small">Cohort 29733c0095d04be2…</div></div>
+      <div class="charts">
+        <div class="plot" aria-hidden="true"><div class="plot-title"><span id="chart-caption">Difference from Previous study · V023</span><span>zero = reference</span></div><div id="delta-chart"></div><p class="plot-note">Bars show score differences on a symmetric, view-specific scale. Teal means a numerically favorable change; rust means an unfavorable change. The table gives exact values. These colors confer no qualification or promotion.</p></div>
+        <div class="tablewrap" role="region" aria-label="Matched aggregate scores" tabindex="0"><table id="comparison-table"><caption id="table-caption">Seven fixed comparisons on the same 934 historical games. Delta = score minus Previous study · V023.</caption><thead><tr><th scope="col">Public comparison</th><th scope="col">Games</th><th scope="col" id="metric-heading">Log loss</th><th scope="col">Delta</th><th scope="col" class="sr-only">Interpretation</th></tr></thead><tbody>@@INITIAL_ROWS@@</tbody></table></div>
+      </div>
+      <div class="comparison-foot"><p class="small">All 12 aggregate metrics were independently recomputed from private owner evidence within 10⁻¹². This public page validates the released aggregates; it does not expose or reproduce the private training data.</p><div><button class="button small-button" id="reset-comparison" type="button">Reset view</button> <button class="button small-button" id="download-csv" type="button">Download view · CSV</button></div></div>
+    </div>
+    <p id="selection-status" class="sr-only" role="status" aria-live="polite"></p>
+    <div class="callout"><strong>What this comparison cannot establish.</strong> The 2024 and 2025 seasons have been repeatedly examined. They are not untouched holdouts. This study has no matched current market benchmark and supplies no claim of live edge, realized return or profitability.</div>
+  </section>
+
+  <section class="section" aria-labelledby="boundaries-title">
+    <div class="section-intro"><div><div class="eyebrow">02 / Read the boundaries</div><h2 id="boundaries-title">Successful research is one state.</h2><p>Current inference and source coverage have their own requirements. Missing provenance stays visible instead of becoming a forecast.</p></div></div>
+    <div class="two-columns">
+      <article class="content-card"><h3>Research and issue states</h3><p>Model recipes were selected using 2021–2023. The two later seasons remain historical diagnostics; 2026 labels did not choose this recipe.</p><ul class="status-list"><li><span>Historical fitting and evaluation</span><span class="state">COMPLETE</span></li><li><span>Independent paired aggregate verification</span><span class="state">VERIFIED</span></li><li><span>Raw feature-value recomputation for live use</span><span class="state blocked">BLOCKED</span></li><li><span>Rolling refits / genuine issued forecasts</span><strong>0 / 0</strong></li><li><span>New paid provider calls in this run</span><strong>0</strong></li></ul></article>
+      <article class="content-card"><h3>Source counts with their actual scope</h3><p>A dated acquisition snapshot describes availability, not trade eligibility. These counts are not refreshed by opening this page.</p><ul class="status-list"><li><span>Strict rolling seven-day schedule</span><strong>63 games</strong></li><li><span>Extended schedule</span><strong>68 games</strong></li><li><span>Game-market rows / separate player props</span><strong>2,039 / 129</strong></li><li><span>Mapped / quarantined game-market rows</span><strong>2,006 / 33</strong></li><li><span>Uniquely mapped observed events</span><strong>62 / 63</strong></li><li><span>Certified 60- or 120-minute market rows</span><strong>0</strong></li></ul></article>
+    </div>
+    <p class="small" style="margin-top:14px">Correction to the owner summary: 68 included five games outside the strict seven-day UTC endpoint. The original 2,168 quote-row total combines 2,039 game-market rows with 129 player-prop rows. <a href="V024_REVIEW_2026-11-03.md#source-scope-corrections">See the correction record.</a></p>
+    <details><summary>Descriptive interval coverage: useful diagnostics, limited guarantees</summary><p class="small">Nominal 90% intervals were calibrated using pre-2024 outcomes. Model selection reuse and dependent sports outcomes prevent a formal coverage guarantee. These intervals have not been qualified for current issue.</p><div class="tablewrap" role="region" aria-label="Descriptive interval coverage" tabindex="0"><table><thead><tr><th scope="col">Season</th><th scope="col">Target</th><th scope="col">Covered / games</th><th scope="col">Coverage</th><th scope="col">Mean width · points</th></tr></thead><tbody>@@INTERVAL_ROWS@@</tbody></table></div></details>
+  </section>
+
+  <section id="reproduce" class="section" aria-labelledby="reproduce-title">
+    <div class="section-intro"><div><div class="eyebrow">03 / Reproduce the engineering</div><h2 id="reproduce-title">Start with a two-game contract.</h2><p>The public example is credential-free and wholly invented. Its value is testable behavior: exact pairing, information timing, durable fit accounting and unchanged reentry.</p></div></div>
+    <div class="two-columns">
+      <article class="content-card"><h3>What happens when evidence changes?</h3><p>Choose a fixture. Each outcome below is generated by the Python contract during the page build; the browser displays that saved result.</p><div class="demo-controls" role="group" aria-label="Invented pairing scenarios"><button type="button" data-demo="paired" aria-pressed="true">Paired</button><button type="button" data-demo="different_identity" aria-pressed="false">Same count, other game</button><button type="button" data-demo="label_drift" aria-pressed="false">Label changed</button><button type="button" data-demo="late_issue" aria-pressed="false">Late issue</button></div><div class="demo-result" role="status" aria-live="polite"><h3 id="demo-state">PAIRED</h3><p id="demo-reason">Two invented events, exact identity and label agreement. Scores can be compared.</p><table id="demo-table"><caption>Wholly invented · no sports-skill claim</caption><thead><tr><th scope="col">Fixture model</th><th scope="col">Games</th><th scope="col">Brier</th><th scope="col">Log loss</th></tr></thead><tbody>@@COHORT_DEMO_ROWS@@</tbody></table></div></article>
+      <article class="content-card"><h3>One local review path</h3><p>From the repository root, run the scorer, fit/reentry example, tests and generated-page check. No provider credentials or paid observations are required.</p><pre><code>python -m examples.fbs_contracts.matched_cohort
+python -m examples.fbs_contracts --output /tmp/fbs-review
+python -m examples.fbs_contracts --output /tmp/fbs-review
+python -m unittest discover -s examples/fbs_contracts/tests -v
+python -m examples.fbs_contracts.build_review --check</code></pre><p class="small">The invented fitting example completes three synthetic estimators; its identical second run creates zero new fits. These synthetic fits are separate from the 723 private owner fits.</p><a href="../../examples/fbs_contracts/README.md">Read the commands and contract tests ↗</a></article>
+    </div>
+    <div class="steps"><article class="step"><span class="number">01 / AGGREGATES</span><h3>Revalidate published facts</h3><p>Run the strict schema, denominator, receipt-shape and accounting checks. Public JSON contains only approved aggregate fields.</p></article><article class="step"><span class="number">02 / INVENTED DATA</span><h3>Exercise failure behavior</h3><p>Reject equal-size mismatched cohorts, changed labels, late issue clocks and nonfinite values. Pool point errors using sufficient statistics.</p></article><article class="step"><span class="number">03 / PRIVATE EVIDENCE</span><h3>Understand the boundary</h3><p>Independent reviewers verified the private return. Full research reproduction requires private originals and model state; this public demo does not supply them.</p></article></div>
+  </section>
+
+  <section id="provenance" class="section" aria-labelledby="provenance-title">
+    <div class="section-intro"><div><div class="eyebrow">04 / Inspect the record</div><h2 id="provenance-title">A short path from claim to evidence.</h2><p>The study result, cohort commitments and independent verification scope are recorded in versioned artifacts. Hashes identify bytes; they do not establish scientific validity by themselves.</p></div></div>
+    <div class="two-columns"><article class="content-card"><h3>Review in five minutes</h3><ol><li>Inspect the <a href="#explorer">matched comparison</a> and negative decision.</li><li>Read the <a href="../../tracks/ncaaf/MODEL_CARD.md">current model card</a> for intended use and limits.</li><li>Open the <a href="../../notebooks/fbs_branch_review.ipynb">executed notebook</a> and rerun its assertions.</li><li>Review the <a href="../../examples/fbs_contracts/matched_cohort.py">generic cohort contract</a> and its <a href="../../examples/fbs_contracts/tests/test_matched_cohort.py">failure tests</a>.</li><li>Compare the <a href="V024_AGGREGATE_2026-11-03.json">aggregate export</a> with the <a href="V024_REVIEW_2026-11-03.md">dated verification record</a>.</li></ol></article><article class="content-card"><h3>Independent verification scope</h3><p>All 39 pinned reports were checked. Seven panels per season share exact event identities, ordered teams and outcome labels; all 21 prediction columns agree across the paired exports. Twelve aggregate metrics were recomputed for each panel.</p><p class="small">Return SHA-256</p><p class="hash">@@RETURN_SHA@@</p><p class="small">Post-research completion receipt SHA-256</p><p class="hash">@@COMPLETION_SHA@@</p><p class="small">Integrity audit of private evidence. Individual rows, active recipes, model weights, private locations and provider originals are not published.</p></article></div>
+    <div class="note-grid"><div><h3>A complete evidence boundary</h3><p><a href="../PUBLICATION_BOUNDARY.md">The publication policy</a> separates generic engineering from private research. This repository is not a redistribution license for original sports data. No new license terms are implied.</p></div><div><h3>Evaluation is not deployment</h3><p>The static explorer works from a local file, makes no external requests and issues no forecasts. Live use remains blocked pending executable, verified reconstruction of the required feature values.</p></div></div>
+  </section>
+
+  <section id="history" class="section" aria-labelledby="history-title"><div class="eyebrow">05 / Preserve the history</div><h2 id="history-title">Earlier evidence remains dated.</h2><p class="small">New presentation does not replace failed attempts or negative studies. Historical releases use different datasets and should not be pooled with the V024 panels.</p>
+  <details><summary>V013 · October 31 — 70 completed estimator units, no qualified replacement</summary><p>All six matched historical market panels favored the market over the tested candidate. This is a separate study with a different comparison population.</p><p><a href="V013_NATIVE_RESEARCH_2026-10-31.md">Read the preserved V013 study</a> · <a href="v013-native-research-2026-10-31.json">Read its aggregate evidence</a></p></details>
+  <details><summary>October 28 archive — V135 failed before training; 203 units were prepared</summary><p>The then-latest owner attempt added zero fits. The retained prior FBS sequence had 18 completed fits from 19 attempts. The 203 units were a registration, not completed work. The following immutable legacy panels remain separate from V024.</p><div class="legacy-grid">@@LEGACY_PANELS@@</div><p class="small">The 2026 panel was descriptive monitoring only; it could not choose a model or threshold. <a href="evidence.json">Original dated aggregate record</a>.</p></details>
+  </section>
+<script id="fbs-payload" type="application/json">@@PAYLOAD@@</script>
+<script src="dashboard.js" defer></script>
+</main>
+<footer><div class="shell"><p>Sports Edge Lab · NCAA FBS · Research completed November 3, 2026</p><p><a href="README.md">Study notes</a> · <a href="V024_AGGREGATE_2026-11-03.json" download>Download aggregate JSON</a> · <a href="../../tracks/ncaaf/README.md">FBS track</a></p></div></footer>
+</body></html>

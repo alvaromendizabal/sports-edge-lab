@@ -34,3 +34,30 @@ The filesystem lock uses Linux `flock`; distributed multi-host request coordinat
 ```bash
 python -m examples.fbs_contracts.execute_notebook --output /tmp/fbs-branch-review.ipynb
 ```
+
+
+## V024: matched aggregates and explicit publication boundaries
+
+The [current explorer](../../docs/fbs/index.html) reads the versioned [V024 aggregate](../../docs/fbs/V024_AGGREGATE_2026-11-03.json). `public_release.py` requires the complete seven-comparison/two-season grid, consistent cohort commitments, exact count-to-accuracy closure, finite metrics, fit accounting, distinct game-market/prop counts and approved fields. Unknown nested fields fail closed. These checks validate published facts; they do not authenticate unpublished records from the hashes alone.
+
+`matched_cohort.py` is a generic, standard-library scorer demonstrated on two invented events. It requires identical event/season/target sets, matching labels and kickoff clocks, and a declared issue time before kickoff. It rejects duplicate records, invalid probability values, naive timestamps, equal-count identity substitutions and label drift. Declared timestamps are not independent proof of actual possession. The public contract does not reconstruct private live feature values.
+
+```bash
+python -m examples.fbs_contracts.public_release
+python -m examples.fbs_contracts.matched_cohort
+python -m unittest examples.fbs_contracts.tests.test_matched_cohort examples.fbs_contracts.tests.test_v024_release -v
+```
+
+Hand-calculated tests cover log loss, Brier score, accuracy, point error and bias. Unequal-size pooling uses count-weighted sufficient statistics; RMSE is reconstructed from squared error, while ECE and MCC reject aggregation from scalar averages. No per-game private forecast enters the public fixture or its output.
+
+### Real browser verification
+
+The FBS workflow installs pinned Playwright 1.56.1 and its matching Chromium. The test renders desktop and mobile layouts, checks every season/target/metric/reference state, verifies numeric values against the public JSON, exercises keyboard and failure scenarios, validates an aggregate CSV download, checks the no-JavaScript fallback, and rejects external network requests. Screenshots are retained as CI artifacts.
+
+```bash
+PLAYWRIGHT_MODULE_DIR=/path/to/playwright \
+FBS_SCREENSHOTS=/tmp/fbs-screenshots \
+node examples/fbs_contracts/tests/test_dashboard_browser.cjs
+```
+
+See the [model card](../../tracks/ncaaf/MODEL_CARD.md) for the three reproducibility tiers: public aggregate validation, invented engineering execution, and independently verified private research.
