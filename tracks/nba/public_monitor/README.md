@@ -1,6 +1,6 @@
 # NBA public evidence monitor
 
-An offline review of dated aggregate diagnostics and a reproducible, invented failure case. Open the [evidence page](../../../docs/nba/monitor.html) locally after cloning; the HTML is generated from the reviewed [aggregate capsule](evidence.json). GitHub's source view is not a deployed application.
+An offline review of dated aggregate diagnostics and two reproducible, invented failure cases. The [evidence page source](../../../docs/nba/monitor.html) is generated from the reviewed [current publication capsule](evidence-v2.json). The [earlier capsule](evidence.json) remains unchanged. GitHub's source view is not a deployed application; a static-host export and its deployment receipt are separate from the source commit.
 
 ## Start in five minutes
 
@@ -23,9 +23,9 @@ The dated public capsule retains the original B003 fixed-model diagnostic on thr
 
 Winner diagnostics use natural-log loss, binary Brier, accuracy at a home-probability threshold of 0.5, ROC AUC, and 10-bin ECE. Margin and total errors use points. Every row keeps its own exact denominator; a season filter does not change or refit a model. The public table is a representative control summary, not an all-model ranking. It does not assert that the control is the numerically best model on every objective.
 
-The latest historical branch completed 366 estimator fits, after a prior completed study of 654. The latest overall owner nevertheless **failed** when a fresh result response omitted a previously possessed final. That source frame is not admitted. Completed branch evidence is preserved without claiming overall success or repeating fits.
+The historical branch completed 366 estimator fits, after a prior completed study of 654. Its overall owner **failed** when a fresh result response omitted a previously possessed final. The next refresh reused all 366 fits, completed 758 software tests and performed **zero new estimator fits**, but also **failed**: a retained reconstruction differed after its source inputs refreshed. Neither overall owner is promoted to success. Original issued records and completed research remain preserved.
 
-Qualified current provider common cohorts are absent in this snapshot. Therefore disagreement accuracy, market advantage and executable P&L are not estimable. Unknown profit is not zero profit. The prospective rolling protocol remains inactive; synthetic code is not authorization or evidence of live rolling execution.
+The active comparison policy is **DraftKings, Kalshi and Polymarket**. Polymarket US and international remain separate product scopes, not a pooled fourth provider. Historical evidence for older provider scopes is retained in the prior capsule. This public snapshot admits zero qualified current common-cohort comparisons; it does **not** establish zero raw provider coverage. Raw historical coverage is not evaluated in the public capsule. Both disagreement directions, market advantage and executable P&L remain unknown. The prospective rolling protocol remains inactive; synthetic code is not authorization or evidence of live rolling execution.
 
 ## What the example reproduces
 
@@ -38,8 +38,21 @@ All [fixtures](fixtures.json) use invented events in 2035. They are separate fro
 5. Model and provider comparisons must ask the same event/side/target/line/horizon/product/settlement question with valid quote-possession clocks. These identity and clock checks alone do not establish executable prices or legal access.
 6. Missing price, fees, depth or settlement evidence produces **NO BET**, unknown EV and unknown P&L. Optional one-unit arithmetic uses only invented numbers and always allocates zero.
 7. Completed work and overall owner success are different states. A failed publication preserves completed fit evidence but cannot become successful merely because its research branch finished. Reuse earns zero new credit.
+8. A different input-source version may change a fixed model's reconstruction without changing its parameters. New snapshots append, while reusing an identity with changed values fails. Issued and reconstructed rows never acquire each other's evidence class. Same-input oracle checks retain their strict tolerance.
 
 The interactive example shows why a refreshed response containing only a win would report 100% toy accuracy, while the admitted two-event union retains the loss and reports 50%. The rejected view is labeled explicitly; it is not a competing valid model result.
+
+The source-version example shows an invented 70% original issue alongside a later 62% reconstruction. Switching views never changes the original. Time-only first/last issue policies cannot inspect outcomes; same-clock collisions require explicit resolution instead of a score-based tie-breaker.
+
+## Static-host projection
+
+The public exporter emits exactly five reviewed assets: the current dashboard, preserved October 29 page, local interaction script, sanitized capsule and hosting provenance. It rewrites repository navigation to an exact public commit. No private workspace, model or source response enters the bundle.
+
+```bash
+python -m tracks.nba.public_monitor.build_site --source-ref EXACT_PUBLIC_COMMIT_SHA --destination /tmp/new-empty-nba-static-export
+```
+
+The destination must be new or empty; no cleanup or overwrite is attempted. Export reports `EXPORTED_NOT_DEPLOYED`. Only a successful host deployment receipt establishes the live URL. The deployment has no live provider acquisition or inference service.
 
 ## Public/private boundary and ownership
 
@@ -56,6 +69,6 @@ No raw source responses, individual actual forecasts, provider quotes, proprieta
 - A rolling study needs a separately registered, approved, causally qualified policy and actual timestamped issues.
 - Matched quotes, product rules, fees, liquidity and settlement are prerequisites for executable financial claims.
 - UI tests cover interaction logic, HTML structure, labels and deterministic generation. The separate hosted browser job adds actual rendering and bounded accessibility checks; it is not a full external accessibility or cross-browser audit.
-- This publication adds no real fits, new provider acquisitions, promotions, profits or deployment claims.
+- This publication adds no real fits, new provider acquisitions, promotions or profits. A deployed static projection is a presentation deliverable, not a live model or acquisition service.
 
 The dated [October 29 NBA review](../../../docs/nba/index.html), existing research history and negative findings remain intact.
