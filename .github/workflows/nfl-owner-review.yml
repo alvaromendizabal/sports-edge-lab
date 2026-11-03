@@ -27,6 +27,10 @@ jobs:
       - uses: actions/setup-python@5fda3b95a4ea91299a34e894583c3862153e4b97
         with:
           python-version: ${{ matrix.python-version }}
+      - name: Demonstrate paired uncertainty without credentials
+        run: |
+          python tracks/nfl/paired_evaluation.py --demo --output "${{ runner.temp }}/nfl-paired.json"
+          python tracks/nfl/paired_evaluation.py --demo --output "${{ runner.temp }}/nfl-paired.json"
       - name: Check NFL denominator, matched-cohort and coordinator contracts
         run: python -m unittest discover -s tracks/nfl -p 'test_*.py' -v
       - name: Check the published review against its aggregate evidence
