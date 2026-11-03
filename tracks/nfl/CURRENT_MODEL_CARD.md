@@ -6,7 +6,9 @@
 
 ## Status and coverage
 
-The historical registered study completed its declared design. Forward delivery remains blocked: **13 new owner fits, zero protected-original refits, zero new issued forecasts**. Restored work is reported separately. The actual owner return is 107,071,493 bytes; its physical SHA256 is `4c8d7049f37753ef70340eb12de9e638340f43afdf536b02f7f7e454afc21a77`. Physical members, CRC, manifest/payload closure and exact external receipt binding passed the independent audit. Public checks do not replace that owner acceptance.
+The registered historical design is complete and preserved. The latest owner run added **192 native forward fits and 27,405 genuine early prediction rows across 29 games**. It restored 1,152 historical cells, 447 rolling fit uses and nine stacks; these are not new training. There were **zero protected-original refits and zero final-hour-qualified cards**. Full-pipeline selection qualification remains false.
+
+The actual owner return is **109,893,690 bytes**, SHA256 `575cbfe4dfed5b918df1c0ec7cbee8adfc59d5d71f8d46c0dfe1052e76104abf`. All 29,663 members and 29,662 manifest payloads passed physical path, CRC, hash, size and closure checks. The exact later completion receipt is bound to those bytes. Public tests do not replace owner acceptance.
 
 | Evidence universe | Coverage |
 |---|---:|
@@ -51,7 +53,9 @@ The [28 resolved disagreement rows](current_disagreements.csv) include both side
 
 **Week 8:** both research leaders were 11/13 on the common subset; Kalshi was 10/13. The source has 14 finals. Against T−2h Kalshi, the probability model has log loss 0.512343 and Brier 0.166816; Kalshi has 0.504198 and 0.162594. The accuracy model has log loss 0.519881 and Brier 0.169985. **Kalshi’s probabilities scored better that week despite one fewer correct winner.** Each model won two disagreements and lost one.
 
-**Week 9:** the archived study contains 45 early research cards across 15 games. The new owner forward stage is blocked and issued zero new final-hour forecasts. No active selections or prices are published here. The next recorded kickoff is November 6, 2026 at 01:15 UTC.
+**Week 9:** [all 15 games and rounded forecasts](review.html#weekly-cards) are visible, with their actual issue clock: **November 3 at 21:20:14 UTC**. They are early research issues, not final-hour selections. The target-specific forward heads were selected on pre-2024 evidence; they are separate from the descriptive current-season leaders above. Updating learned parents leave full-pipeline selection qualification false. No supported executable-price/fee/liquidity comparison means **NO BET**, not an invented expected return. The next kickoff in this snapshot is November 6 at 01:15 UTC (November 5 at 5:15 p.m. Pacific).
+
+The [complete 272-game inventory](review.html#season-inventory) retains 121 finals and 151 unstarted games. Week 8 contains all 14 final scores, with explicit missing forecasts and the separate CHI–SEA genuine issue. The 13-game common subset is never presented as the full week.
 
 **Separate latest resolved issued example:** CHI beat SEA 34–17. The genuine earlier T−1h model picked SEA at 62.9%, with a home-margin forecast favoring SEA by 5.22 points and total 46.49. That winner pick was wrong. It was issued at 2026-11-02T23:56:35.061863+00:00, after feature capture at 23:56:01.654716+00:00 and before kickoff at 2026-11-03T01:15:00+00:00. It missed the T−2h cutoff, so it is not inserted into the common T−2h panel. No matched historical Kalshi comparison for this game is established by the current export.
 
@@ -74,29 +78,26 @@ Full per-season leader cross-evaluations are in [current_evidence.json](current_
 
 ## Exact common-provider comparisons
 
-A separately pre-2024 selected tree is evaluated against MARKET and DraftKings using one identical event set per season and target. The selected tree is not replaced by the hindsight winner. Native T−2h model and reference qualifications remain explicit; source cutoff, acquisition, possession and genuine issue clocks remain distinct.
+A separately pre-2024 selected tree is evaluated against DraftKings on the preserved exact cohort using one identical event set per season and target. The selected tree is not replaced by the hindsight winner. Native T−2h model and reference qualifications remain explicit; source cutoff, acquisition, possession and genuine issue clocks remain distinct.
 
-| Season / target | Games | Selected tree | MARKET | DraftKings |
-|---|---:|---:|---:|---:|
-| 2024 / win log_loss | 264 | 0.621389 | 0.593978 | 0.596126 |
-| 2024 / margin mae | 264 | 10.143 | 9.782 | 9.797 |
-| 2024 / total mae | 264 | 9.878 | 9.628 | 9.597 |
-| 2025 / win log_loss | 249 | 0.618157 | 0.602494 | 0.603514 |
-| 2025 / margin mae | 250 | 10.043 | 9.748 | 9.756 |
-| 2025 / total mae | 250 | 10.941 | 10.606 | 10.644 |
-| 2026 / win log_loss | 119 | 0.653945 | 0.646465 | 0.647103 |
-| 2026 / margin mae | 120 | 10.045 | 9.494 | 9.521 |
-| 2026 / total mae | 120 | 11.431 | 10.738 | 10.783 |
+| Season / target | Games | Selected tree | DraftKings |
+| --- | ---: | ---: | ---: |
+| 2024 / win log_loss | 264 | 0.621389 | 0.596126 |
+| 2024 / margin mae | 264 | 10.143 | 9.797 |
+| 2024 / total mae | 264 | 9.878 | 9.597 |
+| 2025 / win log_loss | 249 | 0.618157 | 0.603514 |
+| 2025 / margin mae | 250 | 10.043 | 9.756 |
+| 2025 / total mae | 250 | 10.941 | 10.644 |
+| 2026 / win log_loss | 119 | 0.653945 | 0.647103 |
+| 2026 / margin mae | 120 | 10.045 | 9.521 |
+| 2026 / total mae | 120 | 11.431 | 10.783 |
 
 Accuracy/Brier and point RMSE/bias are retained in the JSON and explorer. Prediction-interval coverage/width are **unavailable in this compact public export**. Missing statistics remain missing.
 
 | Provider | Current supported scope |
 |---|---|
-| MARKET | Archived winner, margin and total panels; exact intersections shown above |
 | DraftKings | Archived winner, margin and total panels; exact intersections shown above |
 | Kalshi | Audited 120 finals, T−1h/T−2h winner history and both contracts; point history incomplete |
-| PrizePicks | No comparable audited game-target historical panel; props are not winner probabilities |
-| Underdog | No comparable audited game-target historical panel; props are not winner probabilities |
 | Polymarket | No comparable audited game-target historical panel in this current export; no advantage estimate |
 
 These are coverage statements about the audited export, not assertions that a provider offered no product. Earlier portfolio snapshots remain dated historical records and are not silently substituted. No all-season Kalshi margin/total edge or Polymarket advantage is claimed.
@@ -108,18 +109,20 @@ These are coverage statements about the audited export, not assertions that a pr
 | Native estimator families × rooted blocks | 8 × 8 |
 | Annual base cells completed / registered | 1,152 / 1,152 |
 | Fixed pairwise blends completed / registered | 224 / 224 |
-| New fits in this owner run | 13 = 4 base + 9 stack |
-| Restored annual fits | 1,148 |
+| New fits in this owner run | 192 native forward heads |
+| Restored annual fits / stacks | 1,152 / 9 |
 | Restored rolling fit uses | 447 |
-| Protected-original refits / new forecast issues | 0 / 0 |
-| Historical study elapsed | 170.71 seconds |
+| Protected-original refits | 0 |
+| New early prediction rows / unique games | 27,405 / 29 |
+| Final-hour-qualified cards | 0 |
+| Latest owner elapsed / preserved historical study elapsed | 885.65 / 170.71 seconds |
 | Source public requests / authorized paid calls | 22 / 16 |
 | Source team-stat rows / play-by-play rows | 242 / 21,191 |
 | Independently scored game rows | 698,068 |
 | Season metric scalar checks / weekly-provider scalar checks | 13,158 / 293,583 |
 
-Counts of fit uses are not counts of newly trained models. Family/all-family means and causal OOF stacking belong to the registered design; all hypothetical feature subsets do not. Current source refresh and historical model acceptance remain separate from forward delivery. Timing describes this run and its reuse, not a new full-training benchmark.
+Counts of fit uses are not counts of newly trained models. Family/all-family means and causal OOF stacking belong to the registered design; all hypothetical feature subsets do not. Current source refresh, historical model acceptance and forward issue qualification remain separate. Timing describes this run and its reuse, not a new full-training benchmark.
 
 ## Reproduce the public engineering
 
-Run `python tracks/nfl/paired_evaluation.py --demo`, the [NFL tests](test_public_snapshot.py), and `python tracks/nfl/contracts.py --check-review`. Public fixtures prove behavior, not football accuracy. The [methodology](CURRENT_METHODOLOGY.md) explains chronology and retraining. The [publication boundary](../../docs/PUBLICATION_BOUNDARY.md) separates public contracts, sanitized resolved examples and private production work.
+Run `python tracks/nfl/paired_evaluation.py --demo`, the [NFL tests](test_public_snapshot.py), and `python tracks/nfl/contracts.py --check-review`. Public fixtures prove behavior, not football accuracy. The [methodology](CURRENT_METHODOLOGY.md) explains chronology and retraining. The [publication boundary](../../docs/PUBLICATION_BOUNDARY.md) separates public contracts, sanitized results and rounded forecast outputs from private production work.

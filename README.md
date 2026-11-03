@@ -4,11 +4,11 @@
 
 **Sports Edge Lab** connects probabilistic sports modeling with reliable ML infrastructure: chronological training, immutable forecasts, matched market comparisons and recoverable cloud execution. Built by [Alvaro Mendizabal](https://github.com/alvaromendizabal).
 
-[**Start with NFL results →**](tracks/nfl/README.md) · [Five-minute technical review](docs/REVIEW_GUIDE.md) · [System design](docs/SYSTEM_DESIGN.md) · [Reproducibility boundary](docs/PUBLICATION_BOUNDARY.md)
+[**Open the NFL dashboard →**](https://sports-edge-lab-nfl.alv-mendizabal.chatgpt.site/) · [NFL evidence](tracks/nfl/README.md) · [Five-minute technical review](docs/REVIEW_GUIDE.md) · [System design](docs/SYSTEM_DESIGN.md) · [Reproducibility boundary](docs/PUBLICATION_BOUNDARY.md)
 
 ## Current NFL evidence · November 3, 2026
 
-**Eight model families. Three targets. One auditable comparison.** The latest authenticated owner execution completed the historical 1,152-cell design across eight feature blocks. It added 13 fitted bodies while preserving completed work. Forward forecasting stopped on a missing metadata dependency; no fresh predictions or betting profit are credited to that run.
+**Eight model families. Three targets. One auditable comparison.** The latest authenticated owner execution passed all 63 stages, fitted 192 forward models and issued early research forecasts for 29 games. It reused the completed historical 1,152-cell design across eight feature blocks. The dashboard accounts for all 272 scheduled games, every game last week and every game this week. Early forecasts remain separate from final-hour-qualified recommendations, of which there are zero.
 
 | Matched 2026 monitoring | Model | Kalshi | What the difference means |
 |---|---:|---:|---|
@@ -18,9 +18,9 @@
 
 These are **descriptive reconstructions**, not an originally issued betting record. Primary comparisons use T−2h inputs and quotes, the same events and the declared non-tie proxy. Paired week-bootstrap intervals cross zero. No durable or prospective advantage is established. Full source coverage is **121 finals**; the scored model panel remains **120 finals for points / 119 non-ties for winner scoring**. Polymarket history is unavailable for this NFL cohort, so no unsupported comparison is shown.
 
-[Season and weekly results](tracks/nfl/README.md) · [Interactive offline explorer](tracks/nfl/review.html) · [Model card](tracks/nfl/CURRENT_MODEL_CARD.md) · [Methodology](tracks/nfl/CURRENT_METHODOLOGY.md) · [Resolved examples](tracks/nfl/current_disagreements.csv)
+[Season and weekly results](tracks/nfl/README.md) · [Open interactive dashboard](https://sports-edge-lab-nfl.alv-mendizabal.chatgpt.site/) · [Model card](tracks/nfl/CURRENT_MODEL_CARD.md) · [Methodology](tracks/nfl/CURRENT_METHODOLOGY.md) · [Resolved examples](tracks/nfl/current_disagreements.csv)
 
-The HTML explorer is self-contained and makes no external requests. Download it and open it in a browser; GitHub displays its source. A merged source file is not a hosted website deployment.
+The dashboard opens directly in a browser. It is an explicitly published, dated snapshot of this repository, with its source commit visible; it is not a live price feed or automatic GitHub sync. The [self-contained HTML](tracks/nfl/review.html) also works offline. Current NFL provider comparisons are limited to DraftKings, Kalshi and Polymarket. Older studies retain their original provider definitions in a closed historical section.
 
 ## Review the work in five minutes
 
@@ -45,7 +45,7 @@ Python 3.11+; no credentials, data subscriptions or cloud account. The demonstra
 - **Experiments retain failures:** feature interactions and ensembles are evaluated alongside original controls; unsuccessful arms remain visible.
 - **Evaluation is paired:** event identities, horizons and settlement definitions must agree before metrics are compared.
 - **Operations survive interruption:** committed bodies and receipts are authenticated before reuse; restored work is never counted as a new fit.
-- **Publication has a boundary:** generic methods and sanitized resolved examples are public; licensed feeds, active recipes, weights and credentials remain private.
+- **Publication has a boundary:** generic methods, sanitized resolved examples and selected rounded early research cards are public; licensed feeds, active recipes, weights and credentials remain private.
 
 For ML engineering roles, follow [recovery](docs/RECOVERABLE_OPERATIONS.md), [serving lineage](docs/CASE_STUDY_SERVING_LINEAGE.md) and the tests. For data science, inspect [matched uncertainty](tracks/nfl/paired_evaluation.py), calibration and negative findings. For AI engineering, the evidence here is dependable model orchestration and evaluation; this repository does not claim an implemented LLM/RAG product.
 
@@ -53,7 +53,7 @@ For ML engineering roles, follow [recovery](docs/RECOVERABLE_OPERATIONS.md), [se
 
 | Track | Entry point | Publication boundary |
 |---|---|---|
-| NFL | [Current evidence](tracks/nfl/README.md) | Updated November 3; current study and its unresolved forward failure |
+| NFL | [Current evidence](tracks/nfl/README.md) | Updated November 3; authenticated forward execution and explicit coverage gaps |
 | NCAA FBS | [Track](docs/V134_COMPLETION_AND_SHARED_INVENTORY.md) | Independently maintained research; no NFL result is transferred to FBS |
 | NBA | [Research view](docs/NBA_RESEARCH_CARD.md) | Separately dated basketball evidence |
 | NCAA basketball | [Open dashboards](https://alvaro-ncaa-research-review.alv-mendizabal.chatgpt.site/) · [Men's evidence](tracks/ncaam/README.md) · [Women's evidence](tracks/ncaaw/README.md) · [Runnable contracts](examples/ncaa_review/README.md) | Separate historical selections, current execution gaps and three-provider qualification |
