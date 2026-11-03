@@ -12,6 +12,44 @@ const {chromium}=require(process.env.PLAYWRIGHT_MODULE_DIR||'playwright');
   await page.setViewportSize({width,height:1000});await page.goto('file://'+path.join(__dirname,'review.html'));
   await page.locator('#results tbody tr').first().waitFor();
   assert.equal(await page.evaluate(()=>document.documentElement.scrollWidth>innerWidth),false,'page overflow at '+width);
+  // Current evidence is separately dated; old 316-panel controls remain intact.
+  assert.equal(await page.locator('h1').count(),1);
+  for(const id of ['kalshi-horizon','current-year','current-target','disagreement-model','disagreement-result'])assert.equal(await page.locator('label[for="'+id+'"]').count(),1);
+  assert.match(await page.locator('#current-headline').innerText(),/79/);
+  assert.match(await page.locator('#current-comparison').innerText(),/119/);
+  assert.match(await page.locator('#current-comparison').innerText(),/0\.644377/);
+  await page.selectOption('#kalshi-horizon','T1');
+  assert.match(await page.locator('#current-summary').innerText(),/not a same-horizon comparison/);
+  assert.match(await page.locator('#current-comparison').innerText(),/0\.644579/);
+  await page.selectOption('#kalshi-horizon','T2');
+  assert.match(await page.locator('#current-comparison').innerText(),/0\.629080/);
+  assert.equal(await page.locator('#current-provider-table tbody tr').count(),6);
+  assert.match(await page.locator('#current-providers').innerText(),/incomplete/i);
+  assert.match(await page.locator('#legacy').innerText(),/316 panels/);
+  assert.match(await page.locator('#current-snapshots').innerText(),/Week 8/);
+  for(const year of ['2024','2025','2026']){
+   await page.selectOption('#current-year',year);
+   for(const target of ['winner','margin','total']){
+    await page.selectOption('#current-target',target);
+    assert.match(await page.locator('#current-selection').innerText(),new RegExp(year));
+    assert((await page.locator('#current-season-table').innerText()).length>50,'current target has evidence or explicit missing state');
+    states++;
+   }
+  }
+  await page.selectOption('#current-target','winner');
+  await page.selectOption('#disagreement-result','kalshi');
+  assert((await page.locator('#disagreement-table tbody tr').count())>0,'lost disagreements stay visible');
+  assert.equal(await page.locator('#disagreement-table [data-result="model"]').count(),0);
+  await page.selectOption('#disagreement-result','model');
+  assert((await page.locator('#disagreement-table [data-result="model"]').count())>0);
+  assert.equal(await page.locator('#disagreement-table [data-result="kalshi"]').count(),0);
+  await page.selectOption('#disagreement-result','all');
+  await page.locator('#current-year').focus();await page.keyboard.press('ArrowDown');
+  assert.equal(await page.locator('#current-year').inputValue(),'2025');
+  await page.selectOption('#current-year','2026');
+  await page.evaluate(()=>window.scrollTo(0,0));
+  if(process.env.NFL_SCREENSHOTS){fs.mkdirSync(process.env.NFL_SCREENSHOTS,{recursive:true});await page.screenshot({path:path.join(process.env.NFL_SCREENSHOTS,'nfl-current-'+width+'.png')});}
+
   assert.match(await page.locator('#coverage').innerText(),/280 \/ 285/);
   assert.match(await page.locator('#coverage').innerText(),/272 regular · 13 postseason/);
   for(const id of ['season','target','policy','metric','family','model','week-season','week-provider','time-scenario','time-decision'])assert.equal(await page.locator('label[for="'+id+'"]').count(),1);
@@ -85,6 +123,6 @@ const {chromium}=require(process.env.PLAYWRIGHT_MODULE_DIR||'playwright');
   states+=13;
  }
  assert.deepEqual(errors,[]);assert.deepEqual(network,[]);
- console.log(JSON.stringify({status:'PASS',viewports:widths,selection_scenarios:states,information_time_scenarios:24,keyboard_control:true,label_checks:20,external_requests:0,script_errors:0,monitoring_ranking:false,complete_week_slots:66,provider_week_states:330}));
+ console.log(JSON.stringify({status:'PASS',viewports:widths,selection_scenarios:states,information_time_scenarios:24,keyboard_control:true,label_checks:30,external_requests:0,script_errors:0,monitoring_ranking:false,complete_week_slots:66,provider_week_states:330}));
  await browser.close();
 })().catch(error=>{console.error(error);process.exitCode=1});

@@ -1,3 +1,19 @@
+# Start here · NFL evidence updated November 3, 2026
+
+[Project overview](../README.md) · [NFL scorecard](../tracks/nfl/README.md) · [Current model card](../tracks/nfl/CURRENT_MODEL_CARD.md)
+
+Begin with the NFL scorecard: 79 correct winner picks versus Kalshi's 76 on the same 119 non-ties; a different probability-focused model has 0.6291 log loss versus 0.6444. These are reconstructed monitoring results with intervals crossing zero, not a proven betting strategy. Source coverage has reached 121 finals; the common scored panel has 120. All eight historical estimator families completed, while fresh forecasting remains blocked.
+
+1. Inspect the [current model card](../tracks/nfl/CURRENT_MODEL_CARD.md) and [methodology](../tracks/nfl/CURRENT_METHODOLOGY.md).
+2. Open the downloaded [offline explorer](../tracks/nfl/review.html). Compare providers and inspect both sides of disagreements.
+3. Run `python tracks/nfl/paired_evaluation.py --demo` from the repository root. It demonstrates scoring, calibration and paired week uncertainty on invented data.
+4. Read the [source and tests](../tracks/nfl/test_paired_evaluation.py), then the [recovery case study](RECOVERABLE_OPERATIONS.md).
+5. Consult [publication boundaries](PUBLICATION_BOUNDARY.md) before interpreting reproducibility or profit claims.
+
+The earlier cross-project review routes below remain historical evidence. Their release numbers do not supersede the current NFL entry.
+
+<details><summary>Earlier cross-project review guide</summary>
+
 # Latest review entry: V126 serving identity
 
 Begin with the [current evidence](CURRENT_EVIDENCE.md), then inspect the [serving-lineage case study](CASE_STUDY_SERVING_LINEAGE.md) and [public verifier](../examples/review_lab/serving_lineage.py). The actual owner run passed 2,595 checks, issued 83 market references and preserved one historical-selection identity through the authoritative financial ledger. No learned challenger qualified and historical profit is unavailable.
@@ -53,3 +69,5 @@ Exact retraining of the private football models requires licensed/raw source sna
 ## Inspect the newest capability
 
 Read [the score-distribution case study](CASE_STUDY_SCORE_DISTRIBUTIONS.md), then compare its conditional-win and joint-target tables in the [current evidence](CURRENT_EVIDENCE.md). The generic [distribution evaluator](../examples/review_lab/distribution.py) demonstrates normalization, exact support, log-space stability, ties, mixtures and contract settlement using invented inputs. Its tests are independent of the private football data and model recipes.
+
+</details>

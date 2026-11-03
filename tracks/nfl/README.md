@@ -2,6 +2,57 @@
 
 **Pregame forecasting, honest market comparisons, and recoverable ML systems.** Built by [Alvaro Mendizabal](https://github.com/alvaromendizabal) as one track in the existing [Sports Edge Lab](../../README.md) portfolio.
 
+[**Explore current evidence →**](review.html) · [Model card](CURRENT_MODEL_CARD.md) · [Methods & retraining](CURRENT_METHODOLOGY.md) · [Public evidence](current_evidence.json)
+
+## Current NFL evidence · November 3, 2026
+
+The project combines chronological modeling research with an engineering system that preserves exactly what ran, what could be known before kickoff, and what a comparison can support. The strongest current finding is a **small descriptive improvement over Kalshi on the same resolved games**. It is not yet evidence of a durable betting edge.
+
+### The season, on identical games
+
+**Audited Kalshi winner cohort: 120 finals, 119 non-ties, registered T−2h primary reconstruction.** Both team contracts and T−1h history are also audited. The explorer keeps the later T−1h quote sensitivity separate; it does not relabel the model as a T−1h issue. Verified T−2h lineage includes the late-appended resolved event; retrospective reconstruction does not establish original issuance.
+
+| Model / reference | Correct winners | Accuracy | Log loss ↓ | Brier ↓ | Disagreements: model correct / Kalshi correct |
+|---|---:|---:|---:|---:|---:|
+| Kalshi reference | 76 / 119 | 63.87% | 0.644377 | 0.224897 | — |
+| Market-informed probability model | 77 / 119 | 64.71% | 0.629080 | 0.219521 | 5 / 4 |
+| Accuracy-focused research model | 79 / 119 | 66.39% | 0.646823 | 0.227057 | 11 / 8 |
+
+The probability model lowers log loss by **0.015297** (2.37% relative) and Brier by **0.005377** (2.39% relative) in this cohort. The accuracy-focused model adds **three correct picks**, a **2.52 percentage-point** difference. These are hindsight leaders from exposed current-season monitoring. **All paired week-bootstrap intervals cross zero.** Neither result qualifies a prospective strategy or demonstrates profit.
+
+- [Resolved disagreement examples](current_disagreements.csv) show both model wins and losses, with rounded model confidence.
+- [Interactive evidence](review.html#current-seasons) separates winner, margin and total results across 2024/2025/2026.
+- [Provider coverage](review.html#current-providers) keeps MARKET, DraftKings, PrizePicks, Underdog, Kalshi and Polymarket distinct.
+- The full current source census, scored cohort and last-week coverage are documented in [the model card](CURRENT_MODEL_CARD.md). The 120-final Kalshi audit is not a claim to cover every latest source final.
+
+A winner forecast and a spread bet are different targets. An independently placed live bet cannot be counted as an issued pregame model pick. The public export contains resolved examples, not current private selections or raw paid quote arrays.
+
+### Five-minute employer review
+
+| Review question | Start here | What you can verify |
+|---|---|---|
+| Can the modeling claims withstand scrutiny? | [Current model card](CURRENT_MODEL_CARD.md) | Cohorts, target-specific results, uncertainty, missing evidence |
+| Is the pipeline engineered for real failures? | [Exact dependent replay](DEPENDENT_REPLAY.md) · [Packaged source](PACKAGED_SOURCE.md) | Authenticated inputs, isolated imports, deterministic recovery |
+| Does the evaluation prevent leakage? | [Chronology](ROLLING_CHRONOLOGY.md) · [Methods](CURRENT_METHODOLOGY.md) | Availability cutoffs, frozen versus rolling policies, honest issue clocks |
+| Can I run something without credentials? | [Paired evaluation](paired_evaluation.py) · [Contract source](contracts.py) | Recomputable invented examples and negative tests |
+| Is the interface usable? | [Offline evidence explorer](review.html) · [Browser tests](browser_test.cjs) | Responsive filters, exact denominators, keyboard controls, no external requests |
+
+From the repository root, using only Python's standard library:
+
+```bash
+python tracks/nfl/paired_evaluation.py --demo
+python -m unittest discover -s tracks/nfl -p 'test_*.py'
+python tracks/nfl/contracts.py --check-review
+```
+
+**Public reproducibility has a clear boundary:** invented fixtures reproduce evaluation and recovery behavior; authenticated private-run aggregates are inspectable; proprietary transforms, tuned recipes, trained weights, active forecasts and licensed raw feeds remain private. These public tests do not reproduce private training or substitute for owner acceptance.
+
+GitHub's HTML viewer displays source. Download `review.html` and open it locally for the self-contained interactive page; this Markdown overview is the direct GitHub reading path.
+
+## Preserved engineering and research history
+
+The notes below retain their original snapshots. Older “latest” states, provider gaps and storage figures describe those dated records, not the current evidence above. The [historical explorer](review.html#legacy) preserves **316 saved panels, 948 metric scalars, 66 week slots and 330 provider states** without replacing their underlying data.
+
 **Preserve exact inputs through numerical replay:** the [dependent-replay example](DEPENDENT_REPLAY.md)
 shows why a permitted floating-point difference in a baseline can change a derived
 feature. It checks independent fields exactly, verifies each derived formula and

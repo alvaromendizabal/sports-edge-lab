@@ -528,16 +528,19 @@ def validate_evidence(data):
 def build_review(*, check=False):
     data = json.loads((HERE / "evidence.json").read_text())
     receipt = validate_evidence(data)
+    from public_snapshot import load_snapshot
+    current, current_receipt = load_snapshot()
     template = (HERE / "review.template.html").read_text()
     embedded = canonical(data).decode().replace("<", "\\u003c")
     page = template.replace("__EVIDENCE_JSON__", embedded).replace("__EVIDENCE_SHA__", digest(data))
-    require("__EVIDENCE_" not in page, "Unfilled review template")
+    page = page.replace("__CURRENT_JSON__", canonical(current).decode().replace("<", "\\u003c"))
+    require("__EVIDENCE_" not in page and "__CURRENT_" not in page, "Unfilled review template")
     output = HERE / "review.html"
     if check:
         require(output.is_file() and output.read_text() == page, "Generated review differs; run contracts.py --build-review")
     else:
         output.write_text(page)
-    return {**receipt, "review": "review.html", "evidence_sha256": digest(data), "generated_page_matches": True}
+    return {**receipt, **current_receipt, "review": "review.html", "evidence_sha256": digest(data), "generated_page_matches": True}
 
 
 def demo(*, output):

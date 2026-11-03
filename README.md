@@ -1,5 +1,69 @@
 <p align="center"><img src="docs/assets/masthead.svg" alt="Sports Edge Lab — probabilistic forecasting, scientific evaluation, reliable ML systems" width="1100"></p>
 
+# Forecasts you can interrogate
+
+**Sports Edge Lab** connects probabilistic sports modeling with reliable ML infrastructure: chronological training, immutable forecasts, matched market comparisons and recoverable cloud execution. Built by [Alvaro Mendizabal](https://github.com/alvaromendizabal).
+
+[**Start with NFL results →**](tracks/nfl/README.md) · [Five-minute technical review](docs/REVIEW_GUIDE.md) · [System design](docs/SYSTEM_DESIGN.md) · [Reproducibility boundary](docs/PUBLICATION_BOUNDARY.md)
+
+## Current NFL evidence · November 3, 2026
+
+**Eight model families. Three targets. One auditable comparison.** The latest authenticated owner execution completed the historical 1,152-cell design across eight feature blocks. It added 13 fitted bodies while preserving completed work. Forward forecasting stopped on a missing metadata dependency; no fresh predictions or betting profit are credited to that run.
+
+| Matched 2026 monitoring | Model | Kalshi | What the difference means |
+|---|---:|---:|---|
+| Winner accuracy, 119 non-ties | **79/119 · 66.4%** | 76/119 · 63.9% | Accuracy-focused research model: three additional correct picks |
+| Winner log loss, same 119 games | **0.6291** | 0.6444 | Probability-focused model: lower loss; different model from the accuracy row |
+| Last completed week, common 13 of 14 finals | **11/13** | 10/13 | Both highlighted models picked one more winner; Kalshi had better probability scores that week |
+
+These are **descriptive reconstructions**, not an originally issued betting record. Primary comparisons use T−2h inputs and quotes, the same events and the declared non-tie proxy. Paired week-bootstrap intervals cross zero. No durable or prospective advantage is established. Full source coverage is **121 finals**; the scored model panel remains **120 finals for points / 119 non-ties for winner scoring**. Polymarket history is unavailable for this NFL cohort, so no unsupported comparison is shown.
+
+[Season and weekly results](tracks/nfl/README.md) · [Interactive offline explorer](tracks/nfl/review.html) · [Model card](tracks/nfl/CURRENT_MODEL_CARD.md) · [Methodology](tracks/nfl/CURRENT_METHODOLOGY.md) · [Resolved examples](tracks/nfl/current_disagreements.csv)
+
+The HTML explorer is self-contained and makes no external requests. Download it and open it in a browser; GitHub displays its source. A merged source file is not a hosted website deployment.
+
+## Review the work in five minutes
+
+| Time | Inspect | Evidence of capability |
+|---|---|---|
+| 1 minute | [Current NFL results](tracks/nfl/README.md) | Proper scoring, honest denominators, both winning and losing disagreements |
+| 1 minute | [Current model card](tracks/nfl/CURRENT_MODEL_CARD.md) | Model/feature families, selection boundaries, update policy and failure modes |
+| 2 minutes | Run the three commands below | Exact-cohort evaluation, paired uncertainty, calibration, meaningful negative tests |
+| 1 minute | [System design](docs/SYSTEM_DESIGN.md) and [recovery case study](docs/RECOVERABLE_OPERATIONS.md) | Lineage, immutable receipts, bounded recovery and honest reuse accounting |
+
+```bash
+python tracks/nfl/paired_evaluation.py --demo
+python -m unittest discover -s tracks/nfl -p 'test_*.py'
+python tracks/nfl/contracts.py --check-review
+```
+
+Python 3.11+; no credentials, data subscriptions or cloud account. The demonstration uses **invented inputs** and does not reproduce real football accuracy. [The broader synthetic fitting example](examples/review_lab/README.md) and [executed notebook](notebooks/engineering_review.ipynb) expose training and recovery mechanisms. Public result aggregates are inspectable; full private-model retraining requires withheld source snapshots and research assets.
+
+## Engineering choices worth reviewing
+
+- **Information time is enforced:** source, label, fit and forecast clocks have separate contracts.
+- **Experiments retain failures:** feature interactions and ensembles are evaluated alongside original controls; unsuccessful arms remain visible.
+- **Evaluation is paired:** event identities, horizons and settlement definitions must agree before metrics are compared.
+- **Operations survive interruption:** committed bodies and receipts are authenticated before reuse; restored work is never counted as a new fit.
+- **Publication has a boundary:** generic methods and sanitized resolved examples are public; licensed feeds, active recipes, weights and credentials remain private.
+
+For ML engineering roles, follow [recovery](docs/RECOVERABLE_OPERATIONS.md), [serving lineage](docs/CASE_STUDY_SERVING_LINEAGE.md) and the tests. For data science, inspect [matched uncertainty](tracks/nfl/paired_evaluation.py), calibration and negative findings. For AI engineering, the evidence here is dependable model orchestration and evaluation; this repository does not claim an implemented LLM/RAG product.
+
+## Separate projects, shared engineering
+
+| Track | Entry point | Publication boundary |
+|---|---|---|
+| NFL | [Current evidence](tracks/nfl/README.md) | Updated November 3; current study and its unresolved forward failure |
+| NCAA FBS | [Track](docs/V134_COMPLETION_AND_SHARED_INVENTORY.md) | Independently maintained research; no NFL result is transferred to FBS |
+| NBA | [Research view](docs/NBA_RESEARCH_CARD.md) | Separately dated basketball evidence |
+| NCAA basketball | [Study](docs/BASKETBALL_FOUNDATION.md) | Men's and women's results remain separately evaluated |
+
+Each track has its own scientific ownership and update history. Shared infrastructure and navigation changes are coordinated through a scoped PR. [Contribution and ownership rules](CONTRIBUTING.md) · [Security](SECURITY.md) · [Public-use scope](docs/PUBLICATION_BOUNDARY.md)
+
+<details>
+<summary><strong>Preserved project history and earlier review routes</strong> — dated evidence, not the latest NFL status</summary>
+
+
 NFL and FBS forecasting built around a difficult engineering question: can a model add information beyond the market, and can every result survive an audit?
 
 Designed and implemented by [Alvaro Mendizabal](https://github.com/alvaromendizabal). The project connects source acquisition, information-time contracts, native ML frameworks, chronological experiments, immutable forecasts and recoverable AWS execution. NFL, FBS, NBA and NCAA basketball maintain separate model evaluations while sharing provenance, recovery and data infrastructure.
@@ -129,3 +193,5 @@ Public material includes evaluation mechanisms, synthetic fitting, tests, notebo
 
 
 
+
+</details>

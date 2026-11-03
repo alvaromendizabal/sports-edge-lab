@@ -1,0 +1,2154 @@
+{
+  "schema": "sports-edge-lab.nfl.public-review.v2",
+  "as_of": "2026-11-03T19:51:14.727230+00:00",
+  "season": 2026,
+  "provenance": {
+    "owner_return_sha256": "4c8d7049f37753ef70340eb12de9e638340f43afdf536b02f7f7e454afc21a77",
+    "owner_return_bytes": 107071493,
+    "physical_manifest_crc_payload_verification": "PASS",
+    "external_completion_receipt": "Verified exact return binding",
+    "research_status": "Historical study complete; forward delivery repair required",
+    "public_scope": "Derived aggregate metrics and resolved examples only."
+  },
+  "cohorts": {
+    "source_finals": 121,
+    "source_non_ties": 120,
+    "scored_finals": 120,
+    "scored_non_ties": 119,
+    "kalshi_finals": 120,
+    "kalshi_non_ties": 119,
+    "latest_week": 8,
+    "latest_week_source_finals": 14,
+    "latest_week_common_games": 13,
+    "excluded_latest_final": "CHI–SEA; separately scored original T1 issue, absent from T2 common panel",
+    "historical_binary_games": {
+      "2024": 285,
+      "2025": 284
+    },
+    "historical_point_games": {
+      "2024": 285,
+      "2025": 285
+    },
+    "current_cohort_sha256": "6550d93a8a0e3a466e72e3c35846495429e3f4d9a7dacd6cd0ff0321a02cad1d"
+  },
+  "models": [
+    {
+      "label": "Market-informed probability model",
+      "evaluation": "Reconstructed descriptive monitoring, not originally issued picks",
+      "horizon": "Preserved registered T2 reconstruction; T1 is a separate later-quote sensitivity. Not an original issued forecast.",
+      "season": 2026,
+      "games": 119,
+      "correct": 77,
+      "accuracy": 0.6470588235294118,
+      "log_loss": 0.6290801572659865,
+      "brier": 0.2195206465608185,
+      "ece_10": 0.08258941146742635,
+      "disagreements_won": 5,
+      "disagreements_lost": 4,
+      "lost_disagreements_probability_50_to_60": 3,
+      "all_losses_probability_50_to_60": 18
+    },
+    {
+      "label": "Accuracy-focused research model",
+      "evaluation": "Reconstructed descriptive monitoring, not originally issued picks",
+      "horizon": "Preserved registered T2 reconstruction; T1 is a separate later-quote sensitivity. Not an original issued forecast.",
+      "season": 2026,
+      "games": 119,
+      "correct": 79,
+      "accuracy": 0.6638655462184874,
+      "log_loss": 0.6468233623572284,
+      "brier": 0.2270569759604353,
+      "ece_10": 0.09458219015636947,
+      "disagreements_won": 11,
+      "disagreements_lost": 8,
+      "lost_disagreements_probability_50_to_60": 6,
+      "all_losses_probability_50_to_60": 15
+    },
+    {
+      "label": "Earlier retained control",
+      "evaluation": "Reconstructed descriptive monitoring, not originally issued picks",
+      "horizon": "Preserved registered T2 reconstruction; T1 is a separate later-quote sensitivity. Not an original issued forecast.",
+      "season": 2026,
+      "games": 119,
+      "correct": 73,
+      "accuracy": 0.6134453781512605,
+      "log_loss": 0.6461461445357148,
+      "brier": 0.2279082033163951,
+      "ece_10": 0.06283931250261578,
+      "disagreements_won": 8,
+      "disagreements_lost": 11,
+      "lost_disagreements_probability_50_to_60": 8,
+      "all_losses_probability_50_to_60": 22
+    },
+    {
+      "label": "Earlier pre-2024 selected control",
+      "evaluation": "Reconstructed descriptive monitoring, not originally issued picks",
+      "horizon": "Preserved registered T2 reconstruction; T1 is a separate later-quote sensitivity. Not an original issued forecast.",
+      "season": 2026,
+      "games": 119,
+      "correct": 72,
+      "accuracy": 0.6050420168067226,
+      "log_loss": 0.659557206554384,
+      "brier": 0.23242907465712484,
+      "ece_10": 0.06794190743097998,
+      "disagreements_won": 9,
+      "disagreements_lost": 13,
+      "lost_disagreements_probability_50_to_60": 10,
+      "all_losses_probability_50_to_60": 22
+    },
+    {
+      "label": "Pre-2024 selected tree — annual learned head",
+      "evaluation": "Pre-2024 recipe selection; descriptive monitoring with updating learned parents",
+      "horizon": "T2",
+      "season": 2026,
+      "games": 119.0,
+      "correct": 76.0,
+      "accuracy": 0.6386554621848739,
+      "log_loss": 0.6539453808670435,
+      "brier": 0.23139760034118959,
+      "ece_10": 0.08148761259500939
+    },
+    {
+      "label": "Pre-2024 selected tree — weekly expanding",
+      "evaluation": "Pre-2024 recipe selection; descriptive monitoring with updating learned parents",
+      "horizon": "T2",
+      "season": 2026,
+      "games": 119.0,
+      "correct": 75.0,
+      "accuracy": 0.6302521008403361,
+      "log_loss": 0.6498213957897587,
+      "brier": 0.2293751222492603,
+      "ece_10": 0.058760833893784795
+    },
+    {
+      "label": "Pre-2024 selected tree — event expanding",
+      "evaluation": "Pre-2024 recipe selection; descriptive monitoring with updating learned parents",
+      "horizon": "T2",
+      "season": 2026,
+      "games": 119.0,
+      "correct": 75.0,
+      "accuracy": 0.6302521008403361,
+      "log_loss": 0.6498374512339485,
+      "brier": 0.22933397222861243,
+      "ece_10": 0.04457739909429685
+    }
+  ],
+  "benchmarks": [
+    {
+      "label": "Kalshi",
+      "season": 2026,
+      "horizon": "T1",
+      "games": 119,
+      "correct": 76,
+      "accuracy": 0.6386554621848739,
+      "log_loss": 0.6445785203688722,
+      "brier": 0.22510735294117648,
+      "ece_10": 0.05483193277310926,
+      "qualification": "Historical quote reconstruction; non-tie binary scores use a zero-tie probability proxy; half-tie settlement retained separately."
+    },
+    {
+      "label": "Kalshi",
+      "season": 2026,
+      "horizon": "T2",
+      "games": 119,
+      "correct": 76,
+      "accuracy": 0.6386554621848739,
+      "log_loss": 0.6443770478492419,
+      "brier": 0.22489726890756304,
+      "ece_10": 0.058865546218487386,
+      "qualification": "Historical quote reconstruction; non-tie binary scores use a zero-tie probability proxy; half-tie settlement retained separately."
+    }
+  ],
+  "history": [
+    {
+      "ranking_period": "2026",
+      "criterion": "accuracy",
+      "target": "win",
+      "label": "Accuracy-focused research model",
+      "selection": "Descriptive leaderboard; not a hindsight-selected betting strategy",
+      "seasons": [
+        {
+          "season": "2024",
+          "games": 272.0,
+          "correct": 186.0,
+          "accuracy": 0.6838235294117647,
+          "log_loss": 0.6142235310710824,
+          "brier": 0.20834454019206117
+        },
+        {
+          "season": "2025",
+          "games": 283.0,
+          "correct": 183.0,
+          "accuracy": 0.6466431095406361,
+          "log_loss": 0.6456804501558315,
+          "brier": 0.22454644487470202
+        },
+        {
+          "season": "2026",
+          "games": 119.0,
+          "correct": 79.0,
+          "accuracy": 0.6638655462184874,
+          "log_loss": 0.6468233623572283,
+          "brier": 0.2270569759604353
+        },
+        {
+          "season": "pooled",
+          "games": 555.0,
+          "accuracy": 0.6648648648648648,
+          "log_loss": 0.6302637258476302,
+          "brier": 0.2166060519491555
+        }
+      ]
+    },
+    {
+      "ranking_period": "2024",
+      "criterion": "log_loss",
+      "target": "win",
+      "label": "Probability research model",
+      "selection": "Descriptive leaderboard; not a hindsight-selected betting strategy",
+      "seasons": [
+        {
+          "season": "2024",
+          "games": 285.0,
+          "correct": 198.0,
+          "accuracy": 0.6947368421052632,
+          "log_loss": 0.5997720606830029,
+          "brier": 0.20661515997746485,
+          "ece_10": 0.041252363167456105
+        },
+        {
+          "season": "2025",
+          "games": 284.0,
+          "correct": 176.0,
+          "accuracy": 0.6197183098591549,
+          "log_loss": 0.6663094791717217,
+          "brier": 0.23641699462013416,
+          "ece_10": 0.08147141993043903
+        },
+        {
+          "season": "2026",
+          "games": 119.0,
+          "correct": 73.0,
+          "accuracy": 0.6134453781512605,
+          "log_loss": 0.666453494346089,
+          "brier": 0.23546135538925259,
+          "ece_10": 0.10180440158213062
+        },
+        {
+          "season": "pooled",
+          "games": 569.0,
+          "correct": 374.0,
+          "accuracy": 0.6572934973637962,
+          "log_loss": 0.6329823011940682,
+          "brier": 0.22148988939489558
+        }
+      ]
+    },
+    {
+      "ranking_period": "2024",
+      "criterion": "accuracy",
+      "target": "win",
+      "label": "Accuracy research model",
+      "selection": "Descriptive leaderboard; not a hindsight-selected betting strategy",
+      "seasons": [
+        {
+          "season": "2024",
+          "games": 285.0,
+          "accuracy": 0.7052631578947368,
+          "log_loss": 0.6206734306127893,
+          "brier": 0.2142099785597537
+        },
+        {
+          "season": "2025",
+          "games": 284.0,
+          "accuracy": 0.6232394366197183,
+          "log_loss": 0.6245463525521265,
+          "brier": 0.2191680380948925
+        },
+        {
+          "season": "2026",
+          "games": 119.0,
+          "accuracy": 0.6554621848739496,
+          "log_loss": 0.6428808722376005,
+          "brier": 0.2268133952891241
+        },
+        {
+          "season": "pooled",
+          "games": 569.0,
+          "accuracy": 0.664323374340949,
+          "log_loss": 0.6226064883118609,
+          "brier": 0.21668465150875094
+        }
+      ]
+    },
+    {
+      "ranking_period": "2024",
+      "criterion": "mae",
+      "target": "margin",
+      "label": "Margin research model",
+      "selection": "Descriptive leaderboard; not a hindsight-selected betting strategy",
+      "seasons": [
+        {
+          "season": "2024",
+          "games": 285.0,
+          "mae": 9.960954036600034,
+          "rmse": 13.027672910740293,
+          "bias": 0.07014287079299387
+        },
+        {
+          "season": "2025",
+          "games": 285.0,
+          "mae": 10.104563603835555,
+          "rmse": 12.920898485630778,
+          "bias": 0.08094532214438027
+        },
+        {
+          "season": "2026",
+          "games": 120.0,
+          "mae": 9.78116953801335,
+          "rmse": 12.478673033517909,
+          "bias": 2.186237625459877
+        },
+        {
+          "season": "pooled",
+          "games": 570.0,
+          "mae": 10.032758820217794,
+          "rmse": 12.97439553785093,
+          "bias": 0.07554409646868708
+        }
+      ]
+    },
+    {
+      "ranking_period": "2024",
+      "criterion": "mae",
+      "target": "total",
+      "label": "Total research model",
+      "selection": "Descriptive leaderboard; not a hindsight-selected betting strategy",
+      "seasons": [
+        {
+          "season": "2024",
+          "games": 285.0,
+          "mae": 9.754140142948899,
+          "rmse": 12.76211368657416,
+          "bias": -0.9013851433271567
+        },
+        {
+          "season": "2025",
+          "games": 285.0,
+          "mae": 10.728084532293662,
+          "rmse": 13.47193136422315,
+          "bias": 0.08254716488130837
+        },
+        {
+          "season": "2026",
+          "games": 120.0,
+          "mae": 11.206007331506582,
+          "rmse": 13.75391920349902,
+          "bias": -1.5084199495482433
+        },
+        {
+          "season": "pooled",
+          "games": 570.0,
+          "mae": 10.24111233762128,
+          "rmse": 13.121823052293134,
+          "bias": -0.4094189892229242
+        }
+      ]
+    },
+    {
+      "ranking_period": "2025",
+      "criterion": "log_loss",
+      "target": "win",
+      "label": "Probability research model",
+      "selection": "Descriptive leaderboard; not a hindsight-selected betting strategy",
+      "seasons": [
+        {
+          "season": "2024",
+          "games": 285.0,
+          "accuracy": 0.6736842105263158,
+          "log_loss": 0.6311372306719436,
+          "brier": 0.2196877152472121
+        },
+        {
+          "season": "2025",
+          "games": 284.0,
+          "accuracy": 0.6795774647887324,
+          "log_loss": 0.6156598874040627,
+          "brier": 0.2139706608378696
+        },
+        {
+          "season": "2026",
+          "games": 119.0,
+          "accuracy": 0.6386554621848739,
+          "log_loss": 0.632248373668675,
+          "brier": 0.2216783003408219
+        },
+        {
+          "season": "pooled",
+          "games": 569.0,
+          "accuracy": 0.6766256590509666,
+          "log_loss": 0.6234121595153915,
+          "brier": 0.216834211816187
+        }
+      ]
+    },
+    {
+      "ranking_period": "2025",
+      "criterion": "accuracy",
+      "target": "win",
+      "label": "Accuracy research model",
+      "selection": "Descriptive leaderboard; not a hindsight-selected betting strategy",
+      "seasons": [
+        {
+          "season": "2024",
+          "games": 285.0,
+          "correct": 194.0,
+          "accuracy": 0.6807017543859649,
+          "log_loss": 0.6202320278773596,
+          "brier": 0.21530173451416898,
+          "ece_10": 0.05046147001604656
+        },
+        {
+          "season": "2025",
+          "games": 284.0,
+          "correct": 193.0,
+          "accuracy": 0.6795774647887324,
+          "log_loss": 0.6410203605022535,
+          "brier": 0.22480087370221305,
+          "ece_10": 0.06941205610396335
+        },
+        {
+          "season": "2026",
+          "games": 119.0,
+          "correct": 71.0,
+          "accuracy": 0.5966386554621849,
+          "log_loss": 0.6638067213793932,
+          "brier": 0.23538343778217163,
+          "ece_10": 0.09678528645674003
+        },
+        {
+          "season": "pooled",
+          "games": 569.0,
+          "correct": 387.0,
+          "accuracy": 0.680140597539543,
+          "log_loss": 0.6306079267621924,
+          "brier": 0.22004295688570594
+        }
+      ]
+    },
+    {
+      "ranking_period": "2025",
+      "criterion": "mae",
+      "target": "margin",
+      "label": "Margin research model",
+      "selection": "Descriptive leaderboard; not a hindsight-selected betting strategy",
+      "seasons": [
+        {
+          "season": "2024",
+          "games": 285.0,
+          "mae": 10.320874798628603,
+          "rmse": 13.30627704967104
+        },
+        {
+          "season": "2025",
+          "games": 285.0,
+          "mae": 9.803331749498945,
+          "rmse": 12.7827329967509
+        },
+        {
+          "season": "2026",
+          "games": 120.0,
+          "mae": 9.784059615958622,
+          "rmse": 12.366248392536118
+        },
+        {
+          "season": "pooled",
+          "games": 570.0,
+          "mae": 10.062103274063773,
+          "rmse": 13.047131328166099
+        }
+      ]
+    },
+    {
+      "ranking_period": "2025",
+      "criterion": "mae",
+      "target": "total",
+      "label": "Total research model",
+      "selection": "Descriptive leaderboard; not a hindsight-selected betting strategy",
+      "seasons": [
+        {
+          "season": "2024",
+          "games": 285.0,
+          "mae": 10.000836828009403,
+          "rmse": 12.995358522028805,
+          "bias": -0.9486828980069596
+        },
+        {
+          "season": "2025",
+          "games": 285.0,
+          "mae": 10.57098630572512,
+          "rmse": 13.37552813585832,
+          "bias": -0.21458545981285385
+        },
+        {
+          "season": "2026",
+          "games": 120.0,
+          "mae": 11.301258746015254,
+          "rmse": 13.882818563418473,
+          "bias": -1.9906653556506508
+        },
+        {
+          "season": "pooled",
+          "games": 570.0,
+          "mae": 10.285911566867263,
+          "rmse": 13.186813413960255,
+          "bias": -0.5816341789099067
+        }
+      ]
+    },
+    {
+      "ranking_period": "pooled",
+      "criterion": "log_loss",
+      "target": "win",
+      "label": "Probability research model",
+      "selection": "Descriptive leaderboard; not a hindsight-selected betting strategy",
+      "seasons": [
+        {
+          "season": "2024",
+          "games": 285.0,
+          "correct": 196.0,
+          "accuracy": 0.6877192982456141,
+          "log_loss": 0.6163239474257067,
+          "brier": 0.2130157927463062,
+          "ece_10": 0.06837006413951247
+        },
+        {
+          "season": "2025",
+          "games": 284.0,
+          "correct": 183.0,
+          "accuracy": 0.6443661971830986,
+          "log_loss": 0.6190873925494139,
+          "brier": 0.21558450735464663,
+          "ece_10": 0.04501223318393991
+        },
+        {
+          "season": "2026",
+          "games": 119.0,
+          "correct": 73.0,
+          "accuracy": 0.6134453781512605,
+          "log_loss": 0.640404018530623,
+          "brier": 0.22543823787259745,
+          "ece_10": 0.06619795418379504
+        },
+        {
+          "season": "pooled",
+          "games": 569.0,
+          "correct": 379.0,
+          "accuracy": 0.6660808435852372,
+          "log_loss": 0.6177032416526538,
+          "brier": 0.21429789283201567
+        }
+      ]
+    },
+    {
+      "ranking_period": "pooled",
+      "criterion": "accuracy",
+      "target": "win",
+      "label": "Accuracy research model",
+      "selection": "Descriptive leaderboard; not a hindsight-selected betting strategy",
+      "seasons": [
+        {
+          "season": "2024",
+          "games": 285.0,
+          "correct": 199.0,
+          "accuracy": 0.6982456140350877,
+          "log_loss": 0.620137004726184,
+          "brier": 0.21483744986537517,
+          "ece_10": 0.072054584944715
+        },
+        {
+          "season": "2025",
+          "games": 284.0,
+          "correct": 192.0,
+          "accuracy": 0.676056338028169,
+          "log_loss": 0.6334247086039922,
+          "brier": 0.22146308518316526,
+          "ece_10": 0.06253930661298897
+        },
+        {
+          "season": "2026",
+          "games": 119.0,
+          "correct": 76.0,
+          "accuracy": 0.6386554621848739,
+          "log_loss": 0.6539453808670435,
+          "brier": 0.23139760034118959,
+          "ece_10": 0.08148761259500939
+        },
+        {
+          "season": "pooled",
+          "games": 569.0,
+          "correct": 391.0,
+          "accuracy": 0.687170474516696,
+          "log_loss": 0.6267691802996419,
+          "brier": 0.21814444534912278
+        }
+      ]
+    },
+    {
+      "ranking_period": "pooled",
+      "criterion": "mae",
+      "target": "margin",
+      "label": "Margin research model",
+      "selection": "Descriptive leaderboard; not a hindsight-selected betting strategy",
+      "seasons": [
+        {
+          "season": "2024",
+          "games": 285.0,
+          "mae": 9.995414309445616,
+          "rmse": 13.096917039073384,
+          "bias": -0.1970137423350822
+        },
+        {
+          "season": "2025",
+          "games": 285.0,
+          "mae": 10.017134580405344,
+          "rmse": 12.882027361726651,
+          "bias": -0.07928670156321149
+        },
+        {
+          "season": "2026",
+          "games": 120.0,
+          "mae": 9.992066378314501,
+          "rmse": 12.580032727009153,
+          "bias": 2.0385272876802545
+        },
+        {
+          "season": "pooled",
+          "games": 570.0,
+          "mae": 10.006274444925479,
+          "rmse": 12.989916567796826,
+          "bias": -0.13815022194914683
+        }
+      ]
+    },
+    {
+      "ranking_period": "pooled",
+      "criterion": "mae",
+      "target": "total",
+      "label": "Total research model",
+      "selection": "Descriptive leaderboard; not a hindsight-selected betting strategy",
+      "seasons": [
+        {
+          "season": "2024",
+          "games": 285.0,
+          "mae": 9.814871089676913,
+          "rmse": 12.776279076226219,
+          "bias": -0.8197919742590997
+        },
+        {
+          "season": "2025",
+          "games": 285.0,
+          "mae": 10.65560481250875,
+          "rmse": 13.386219778080244,
+          "bias": -0.11515750594697907
+        },
+        {
+          "season": "2026",
+          "games": 120.0,
+          "mae": 11.274046828139564,
+          "rmse": 13.799592283481728,
+          "bias": -1.5236046306567803
+        },
+        {
+          "season": "pooled",
+          "games": 570.0,
+          "mae": 10.23523795109283,
+          "rmse": 13.084803914860219,
+          "bias": -0.46747474010303935
+        }
+      ]
+    },
+    {
+      "ranking_period": "2026",
+      "criterion": "log_loss",
+      "target": "win",
+      "label": "Market-informed probability model",
+      "selection": "Descriptive leaderboard; not a hindsight-selected betting strategy",
+      "seasons": [
+        {
+          "season": "2024",
+          "games": 272.0,
+          "correct": 183.0,
+          "accuracy": 0.6727941176470589,
+          "log_loss": 0.6270412640810374,
+          "brier": 0.21626964578223223
+        },
+        {
+          "season": "2025",
+          "games": 283.0,
+          "correct": 179.0,
+          "accuracy": 0.6325088339222615,
+          "log_loss": 0.6302246651203071,
+          "brier": 0.21990849341571586
+        },
+        {
+          "season": "2026",
+          "games": 119.0,
+          "correct": 77.0,
+          "accuracy": 0.6470588235294118,
+          "log_loss": 0.6290801572659865,
+          "brier": 0.2195206465608185
+        },
+        {
+          "season": "pooled",
+          "games": 555.0,
+          "accuracy": 0.6522522522522523,
+          "log_loss": 0.6286645118181786,
+          "brier": 0.21812513025119776
+        }
+      ]
+    },
+    {
+      "ranking_period": "2026",
+      "criterion": "mae",
+      "target": "margin",
+      "label": "Margin research model",
+      "selection": "Descriptive leaderboard; not a hindsight-selected betting strategy",
+      "seasons": [
+        {
+          "season": "2024",
+          "games": 285.0,
+          "mae": 10.109508291158116,
+          "rmse": 13.076373922589875,
+          "bias": -0.6710543698954865
+        },
+        {
+          "season": "2025",
+          "games": 285.0,
+          "mae": 10.04517460802177,
+          "rmse": 12.744384612831599,
+          "bias": -0.31777243467270017
+        },
+        {
+          "season": "2026",
+          "games": 120.0,
+          "mae": 9.51125876531506,
+          "rmse": 12.183944071497624,
+          "bias": 1.1133229128157003
+        },
+        {
+          "season": "pooled",
+          "games": 570.0,
+          "mae": 10.077341449589943,
+          "rmse": 12.911446358235148,
+          "bias": -0.49441340228409336
+        }
+      ]
+    },
+    {
+      "ranking_period": "2026",
+      "criterion": "mae",
+      "target": "total",
+      "label": "Market-informed probability model",
+      "selection": "Descriptive leaderboard; not a hindsight-selected betting strategy",
+      "seasons": [
+        {
+          "season": "2024",
+          "games": 272.0,
+          "mae": 10.08379900449391,
+          "rmse": 12.875715286125974,
+          "bias": 0.5510676416548221
+        },
+        {
+          "season": "2025",
+          "games": 284.0,
+          "mae": 10.6712013334755,
+          "rmse": 13.41294465453099,
+          "bias": 1.876251643767681
+        },
+        {
+          "season": "2026",
+          "games": 120.0,
+          "mae": 10.795788197487695,
+          "rmse": 13.321770224469393,
+          "bias": 1.1024944281921718
+        },
+        {
+          "season": "pooled",
+          "games": 556.0,
+          "mae": 10.383839043038462,
+          "rmse": 13.152869311516035,
+          "bias": 1.227960189496642
+        }
+      ]
+    }
+  ],
+  "common_provider_metrics": [
+    {
+      "season": 2024,
+      "target": "win",
+      "label": "Pre-2024 selected tree",
+      "cohort_sha256": "d490dd6495eafffc8b65fb187b704748700d1b941aa0e878d13776bb669b40fb",
+      "qualification": "Exact common events; historical quote/publication and possession qualifications apply.",
+      "games": 264.0,
+      "correct": 186.0,
+      "accuracy": 0.7045454545454546,
+      "log_loss": 0.62138866071638,
+      "brier": 0.21526886256461228
+    },
+    {
+      "season": 2024,
+      "target": "win",
+      "label": "MARKET",
+      "cohort_sha256": "d490dd6495eafffc8b65fb187b704748700d1b941aa0e878d13776bb669b40fb",
+      "qualification": "Exact common events; historical quote/publication and possession qualifications apply.",
+      "games": 264.0,
+      "correct": 190.0,
+      "accuracy": 0.7196969696969697,
+      "log_loss": 0.5939775527374093,
+      "brier": 0.2028974741287756
+    },
+    {
+      "season": 2024,
+      "target": "win",
+      "label": "DraftKings",
+      "cohort_sha256": "d490dd6495eafffc8b65fb187b704748700d1b941aa0e878d13776bb669b40fb",
+      "qualification": "Exact common events; historical quote/publication and possession qualifications apply.",
+      "games": 264.0,
+      "correct": 191.0,
+      "accuracy": 0.7234848484848485,
+      "log_loss": 0.5961255885139778,
+      "brier": 0.20390587803865073
+    },
+    {
+      "season": 2024,
+      "target": "margin",
+      "label": "Pre-2024 selected tree",
+      "cohort_sha256": "d490dd6495eafffc8b65fb187b704748700d1b941aa0e878d13776bb669b40fb",
+      "qualification": "Exact common events; historical quote/publication and possession qualifications apply.",
+      "games": 264.0,
+      "mae": 10.14341166543768,
+      "rmse": 13.291790364692096,
+      "bias": 0.19973568236909217
+    },
+    {
+      "season": 2024,
+      "target": "margin",
+      "label": "MARKET",
+      "cohort_sha256": "d490dd6495eafffc8b65fb187b704748700d1b941aa0e878d13776bb669b40fb",
+      "qualification": "Exact common events; historical quote/publication and possession qualifications apply.",
+      "games": 264.0,
+      "mae": 9.782196969696969,
+      "rmse": 12.810943179622457,
+      "bias": -0.2859848484848485
+    },
+    {
+      "season": 2024,
+      "target": "margin",
+      "label": "DraftKings",
+      "cohort_sha256": "d490dd6495eafffc8b65fb187b704748700d1b941aa0e878d13776bb669b40fb",
+      "qualification": "Exact common events; historical quote/publication and possession qualifications apply.",
+      "games": 264.0,
+      "mae": 9.797348484848484,
+      "rmse": 12.819810368285012,
+      "bias": -0.3087121212121212
+    },
+    {
+      "season": 2024,
+      "target": "total",
+      "label": "Pre-2024 selected tree",
+      "cohort_sha256": "d490dd6495eafffc8b65fb187b704748700d1b941aa0e878d13776bb669b40fb",
+      "qualification": "Exact common events; historical quote/publication and possession qualifications apply.",
+      "games": 264.0,
+      "mae": 9.877727238537563,
+      "rmse": 12.908403001253818,
+      "bias": -1.1238059977999961
+    },
+    {
+      "season": 2024,
+      "target": "total",
+      "label": "MARKET",
+      "cohort_sha256": "d490dd6495eafffc8b65fb187b704748700d1b941aa0e878d13776bb669b40fb",
+      "qualification": "Exact common events; historical quote/publication and possession qualifications apply.",
+      "games": 264.0,
+      "mae": 9.627840909090908,
+      "rmse": 12.502717507636392,
+      "bias": -1.4857954545454546
+    },
+    {
+      "season": 2024,
+      "target": "total",
+      "label": "DraftKings",
+      "cohort_sha256": "d490dd6495eafffc8b65fb187b704748700d1b941aa0e878d13776bb669b40fb",
+      "qualification": "Exact common events; historical quote/publication and possession qualifications apply.",
+      "games": 264.0,
+      "mae": 9.596590909090908,
+      "rmse": 12.47691049316879,
+      "bias": -1.4791666666666667
+    },
+    {
+      "season": 2025,
+      "target": "win",
+      "label": "Pre-2024 selected tree",
+      "cohort_sha256": "8d53aa8f5c3fdabb3411e66cdd86a73c992a52ad600445747fea1e6210570998",
+      "qualification": "Exact common events; historical quote/publication and possession qualifications apply.",
+      "games": 249.0,
+      "correct": 172.0,
+      "accuracy": 0.6907630522088354,
+      "log_loss": 0.6181567372717257,
+      "brier": 0.21468761331688183
+    },
+    {
+      "season": 2025,
+      "target": "win",
+      "label": "MARKET",
+      "cohort_sha256": "8d53aa8f5c3fdabb3411e66cdd86a73c992a52ad600445747fea1e6210570998",
+      "qualification": "Exact common events; historical quote/publication and possession qualifications apply.",
+      "games": 249.0,
+      "correct": 167.0,
+      "accuracy": 0.6706827309236948,
+      "log_loss": 0.6024936441427939,
+      "brier": 0.2087819299964839
+    },
+    {
+      "season": 2025,
+      "target": "win",
+      "label": "DraftKings",
+      "cohort_sha256": "8d53aa8f5c3fdabb3411e66cdd86a73c992a52ad600445747fea1e6210570998",
+      "qualification": "Exact common events; historical quote/publication and possession qualifications apply.",
+      "games": 249.0,
+      "correct": 167.0,
+      "accuracy": 0.6706827309236948,
+      "log_loss": 0.6035138645775275,
+      "brier": 0.20910911205678984
+    },
+    {
+      "season": 2025,
+      "target": "margin",
+      "label": "Pre-2024 selected tree",
+      "cohort_sha256": "38c1c34acb00220c5f6988c2e8074dda5ed63d389070c0a1f66652819875f08f",
+      "qualification": "Exact common events; historical quote/publication and possession qualifications apply.",
+      "games": 250.0,
+      "mae": 10.042978909028026,
+      "rmse": 12.857606751880859,
+      "bias": -0.3580745843376665
+    },
+    {
+      "season": 2025,
+      "target": "margin",
+      "label": "MARKET",
+      "cohort_sha256": "38c1c34acb00220c5f6988c2e8074dda5ed63d389070c0a1f66652819875f08f",
+      "qualification": "Exact common events; historical quote/publication and possession qualifications apply.",
+      "games": 250.0,
+      "mae": 9.748,
+      "rmse": 12.337949586539896,
+      "bias": -0.946
+    },
+    {
+      "season": 2025,
+      "target": "margin",
+      "label": "DraftKings",
+      "cohort_sha256": "38c1c34acb00220c5f6988c2e8074dda5ed63d389070c0a1f66652819875f08f",
+      "qualification": "Exact common events; historical quote/publication and possession qualifications apply.",
+      "games": 250.0,
+      "mae": 9.756,
+      "rmse": 12.338152211737379,
+      "bias": -0.976
+    },
+    {
+      "season": 2025,
+      "target": "total",
+      "label": "Pre-2024 selected tree",
+      "cohort_sha256": "38c1c34acb00220c5f6988c2e8074dda5ed63d389070c0a1f66652819875f08f",
+      "qualification": "Exact common events; historical quote/publication and possession qualifications apply.",
+      "games": 250.0,
+      "mae": 10.941097904635237,
+      "rmse": 13.739140649868892,
+      "bias": 0.3051762090285107
+    },
+    {
+      "season": 2025,
+      "target": "total",
+      "label": "MARKET",
+      "cohort_sha256": "38c1c34acb00220c5f6988c2e8074dda5ed63d389070c0a1f66652819875f08f",
+      "qualification": "Exact common events; historical quote/publication and possession qualifications apply.",
+      "games": 250.0,
+      "mae": 10.606,
+      "rmse": 13.438470895157678,
+      "bias": -0.826
+    },
+    {
+      "season": 2025,
+      "target": "total",
+      "label": "DraftKings",
+      "cohort_sha256": "38c1c34acb00220c5f6988c2e8074dda5ed63d389070c0a1f66652819875f08f",
+      "qualification": "Exact common events; historical quote/publication and possession qualifications apply.",
+      "games": 250.0,
+      "mae": 10.644,
+      "rmse": 13.498222105151479,
+      "bias": -0.804
+    },
+    {
+      "season": 2026,
+      "target": "win",
+      "label": "Pre-2024 selected tree",
+      "cohort_sha256": "6550d93a8a0e3a466e72e3c35846495429e3f4d9a7dacd6cd0ff0321a02cad1d",
+      "qualification": "Exact common events; historical quote/publication and possession qualifications apply.",
+      "games": 119.0,
+      "correct": 76.0,
+      "accuracy": 0.6386554621848739,
+      "log_loss": 0.6539453808670436,
+      "brier": 0.2313976003411896
+    },
+    {
+      "season": 2026,
+      "target": "win",
+      "label": "MARKET",
+      "cohort_sha256": "6550d93a8a0e3a466e72e3c35846495429e3f4d9a7dacd6cd0ff0321a02cad1d",
+      "qualification": "Exact common events; historical quote/publication and possession qualifications apply.",
+      "games": 119.0,
+      "correct": 78.0,
+      "accuracy": 0.6554621848739496,
+      "log_loss": 0.6464647256763781,
+      "brier": 0.22605108981476063
+    },
+    {
+      "season": 2026,
+      "target": "win",
+      "label": "DraftKings",
+      "cohort_sha256": "6550d93a8a0e3a466e72e3c35846495429e3f4d9a7dacd6cd0ff0321a02cad1d",
+      "qualification": "Exact common events; historical quote/publication and possession qualifications apply.",
+      "games": 119.0,
+      "correct": 77.0,
+      "accuracy": 0.6470588235294118,
+      "log_loss": 0.6471026136108164,
+      "brier": 0.2264234865390672
+    },
+    {
+      "season": 2026,
+      "target": "margin",
+      "label": "Pre-2024 selected tree",
+      "cohort_sha256": "9ed4df3dc7e657937e53d89d837c729e1e84cff9dccf6533bed968ce1d2a2f1a",
+      "qualification": "Exact common events; historical quote/publication and possession qualifications apply.",
+      "games": 120.0,
+      "mae": 10.045130683037522,
+      "rmse": 12.625191800994342,
+      "bias": 1.9642379447996148
+    },
+    {
+      "season": 2026,
+      "target": "margin",
+      "label": "MARKET",
+      "cohort_sha256": "9ed4df3dc7e657937e53d89d837c729e1e84cff9dccf6533bed968ce1d2a2f1a",
+      "qualification": "Exact common events; historical quote/publication and possession qualifications apply.",
+      "games": 120.0,
+      "mae": 9.49375,
+      "rmse": 12.080394757622782,
+      "bias": 1.16875
+    },
+    {
+      "season": 2026,
+      "target": "margin",
+      "label": "DraftKings",
+      "cohort_sha256": "9ed4df3dc7e657937e53d89d837c729e1e84cff9dccf6533bed968ce1d2a2f1a",
+      "qualification": "Exact common events; historical quote/publication and possession qualifications apply.",
+      "games": 120.0,
+      "mae": 9.520833333333334,
+      "rmse": 12.101738855773302,
+      "bias": 1.1791666666666667
+    },
+    {
+      "season": 2026,
+      "target": "total",
+      "label": "Pre-2024 selected tree",
+      "cohort_sha256": "9ed4df3dc7e657937e53d89d837c729e1e84cff9dccf6533bed968ce1d2a2f1a",
+      "qualification": "Exact common events; historical quote/publication and possession qualifications apply.",
+      "games": 120.0,
+      "mae": 11.431376932983857,
+      "rmse": 14.037058641491413,
+      "bias": -0.8822687571668982
+    },
+    {
+      "season": 2026,
+      "target": "total",
+      "label": "MARKET",
+      "cohort_sha256": "9ed4df3dc7e657937e53d89d837c729e1e84cff9dccf6533bed968ce1d2a2f1a",
+      "qualification": "Exact common events; historical quote/publication and possession qualifications apply.",
+      "games": 120.0,
+      "mae": 10.7375,
+      "rmse": 13.278350173622224,
+      "bias": -0.9875
+    },
+    {
+      "season": 2026,
+      "target": "total",
+      "label": "DraftKings",
+      "cohort_sha256": "9ed4df3dc7e657937e53d89d837c729e1e84cff9dccf6533bed968ce1d2a2f1a",
+      "qualification": "Exact common events; historical quote/publication and possession qualifications apply.",
+      "games": 120.0,
+      "mae": 10.783333333333333,
+      "rmse": 13.293482112173118,
+      "bias": -0.9916666666666667
+    }
+  ],
+  "weekly": [
+    {
+      "season": 2026,
+      "week": 8,
+      "kalshi_quote_horizon": "T1",
+      "model_origin": "Preserved retrospective model vectors; horizon not relabelled",
+      "model_binary_games": 13,
+      "model_correct": 11,
+      "model_accuracy": 0.8461538461538461,
+      "model_log_loss": 0.519881119926506,
+      "model_brier": 0.16998482948841692,
+      "kalshi_correct": 10,
+      "kalshi_accuracy": 0.7692307692307693,
+      "kalshi_log_loss": 0.5100461560466265,
+      "kalshi_brier": 0.16504038461538462,
+      "model_right_disagreements": 2,
+      "kalshi_right_disagreements": 1,
+      "evaluation": "Reconstructed common cohort; not issued-pick record",
+      "current_week_finals": 14,
+      "common_games": 13,
+      "label": "Accuracy-focused research model",
+      "horizon_qualification": "Registered T2 reconstruction versus T2 reference; T1 is a later-quote supplemental reference. Reconstruction is not original issuance."
+    },
+    {
+      "season": 2026,
+      "week": 8,
+      "kalshi_quote_horizon": "T2",
+      "model_origin": "Preserved retrospective model vectors; horizon not relabelled",
+      "model_binary_games": 13,
+      "model_correct": 11,
+      "model_accuracy": 0.8461538461538461,
+      "model_log_loss": 0.519881119926506,
+      "model_brier": 0.16998482948841692,
+      "kalshi_correct": 10,
+      "kalshi_accuracy": 0.7692307692307693,
+      "kalshi_log_loss": 0.5041975961621972,
+      "kalshi_brier": 0.16259423076923077,
+      "model_right_disagreements": 2,
+      "kalshi_right_disagreements": 1,
+      "evaluation": "Reconstructed common cohort; not issued-pick record",
+      "current_week_finals": 14,
+      "common_games": 13,
+      "label": "Accuracy-focused research model",
+      "horizon_qualification": "Registered T2 reconstruction versus T2 reference; T1 is a later-quote supplemental reference. Reconstruction is not original issuance."
+    },
+    {
+      "season": 2026,
+      "week": 8,
+      "kalshi_quote_horizon": "T1",
+      "model_origin": "Preserved retrospective model vectors; horizon not relabelled",
+      "model_binary_games": 13,
+      "model_correct": 11,
+      "model_accuracy": 0.8461538461538461,
+      "model_log_loss": 0.5123430352339728,
+      "model_brier": 0.16681613140604276,
+      "kalshi_correct": 10,
+      "kalshi_accuracy": 0.7692307692307693,
+      "kalshi_log_loss": 0.5100461560466265,
+      "kalshi_brier": 0.16504038461538462,
+      "model_right_disagreements": 2,
+      "kalshi_right_disagreements": 1,
+      "evaluation": "Reconstructed common cohort; not issued-pick record",
+      "current_week_finals": 14,
+      "common_games": 13,
+      "label": "Market-informed probability model",
+      "horizon_qualification": "Registered T2 reconstruction versus T2 reference; T1 is a later-quote supplemental reference. Reconstruction is not original issuance."
+    },
+    {
+      "season": 2026,
+      "week": 8,
+      "kalshi_quote_horizon": "T2",
+      "model_origin": "Preserved retrospective model vectors; horizon not relabelled",
+      "model_binary_games": 13,
+      "model_correct": 11,
+      "model_accuracy": 0.8461538461538461,
+      "model_log_loss": 0.5123430352339728,
+      "model_brier": 0.16681613140604276,
+      "kalshi_correct": 10,
+      "kalshi_accuracy": 0.7692307692307693,
+      "kalshi_log_loss": 0.5041975961621972,
+      "kalshi_brier": 0.16259423076923077,
+      "model_right_disagreements": 2,
+      "kalshi_right_disagreements": 1,
+      "evaluation": "Reconstructed common cohort; not issued-pick record",
+      "current_week_finals": 14,
+      "common_games": 13,
+      "label": "Market-informed probability model",
+      "horizon_qualification": "Registered T2 reconstruction versus T2 reference; T1 is a later-quote supplemental reference. Reconstruction is not original issuance."
+    }
+  ],
+  "providers": [
+    {
+      "provider": "MARKET",
+      "status": "Comparable historical aggregate panels with clock qualifications",
+      "coverage": [
+        {
+          "season": 2024,
+          "target": "win",
+          "rows": 264,
+          "eligible": 264
+        },
+        {
+          "season": 2024,
+          "target": "margin",
+          "rows": 264,
+          "eligible": 264
+        },
+        {
+          "season": 2024,
+          "target": "total",
+          "rows": 264,
+          "eligible": 264
+        },
+        {
+          "season": 2025,
+          "target": "win",
+          "rows": 249,
+          "eligible": 249
+        },
+        {
+          "season": 2025,
+          "target": "margin",
+          "rows": 250,
+          "eligible": 250
+        },
+        {
+          "season": 2025,
+          "target": "total",
+          "rows": 250,
+          "eligible": 250
+        },
+        {
+          "season": 2026,
+          "target": "win",
+          "rows": 120,
+          "eligible": 119
+        },
+        {
+          "season": 2026,
+          "target": "margin",
+          "rows": 120,
+          "eligible": 120
+        },
+        {
+          "season": 2026,
+          "target": "total",
+          "rows": 120,
+          "eligible": 120
+        }
+      ],
+      "qualification": "Quote cutoff, acquisition time, outcome availability and model issue time remain distinct."
+    },
+    {
+      "provider": "DraftKings",
+      "status": "Comparable historical aggregate panels with clock qualifications",
+      "coverage": [
+        {
+          "season": 2024,
+          "target": "win",
+          "rows": 272,
+          "eligible": 272
+        },
+        {
+          "season": 2024,
+          "target": "margin",
+          "rows": 272,
+          "eligible": 272
+        },
+        {
+          "season": 2024,
+          "target": "total",
+          "rows": 272,
+          "eligible": 272
+        },
+        {
+          "season": 2025,
+          "target": "win",
+          "rows": 283,
+          "eligible": 283
+        },
+        {
+          "season": 2025,
+          "target": "margin",
+          "rows": 284,
+          "eligible": 284
+        },
+        {
+          "season": 2025,
+          "target": "total",
+          "rows": 284,
+          "eligible": 284
+        },
+        {
+          "season": 2026,
+          "target": "win",
+          "rows": 120,
+          "eligible": 119
+        },
+        {
+          "season": 2026,
+          "target": "margin",
+          "rows": 120,
+          "eligible": 120
+        },
+        {
+          "season": 2026,
+          "target": "total",
+          "rows": 120,
+          "eligible": 120
+        }
+      ],
+      "qualification": "Quote cutoff, acquisition time, outcome availability and model issue time remain distinct."
+    },
+    {
+      "provider": "PrizePicks",
+      "status": "No comparable audited game-target historical panel",
+      "coverage": [
+        {
+          "season": 2024,
+          "target": "win",
+          "rows": 0,
+          "eligible": 0
+        },
+        {
+          "season": 2024,
+          "target": "margin",
+          "rows": 0,
+          "eligible": 0
+        },
+        {
+          "season": 2024,
+          "target": "total",
+          "rows": 0,
+          "eligible": 0
+        },
+        {
+          "season": 2025,
+          "target": "win",
+          "rows": 0,
+          "eligible": 0
+        },
+        {
+          "season": 2025,
+          "target": "margin",
+          "rows": 0,
+          "eligible": 0
+        },
+        {
+          "season": 2025,
+          "target": "total",
+          "rows": 0,
+          "eligible": 0
+        },
+        {
+          "season": 2026,
+          "target": "win",
+          "rows": 0,
+          "eligible": 0
+        },
+        {
+          "season": 2026,
+          "target": "margin",
+          "rows": 0,
+          "eligible": 0
+        },
+        {
+          "season": 2026,
+          "target": "total",
+          "rows": 0,
+          "eligible": 0
+        }
+      ],
+      "qualification": "Player props are not converted into game-winner probabilities."
+    },
+    {
+      "provider": "Underdog",
+      "status": "No comparable audited game-target historical panel",
+      "coverage": [
+        {
+          "season": 2024,
+          "target": "win",
+          "rows": 0,
+          "eligible": 0
+        },
+        {
+          "season": 2024,
+          "target": "margin",
+          "rows": 0,
+          "eligible": 0
+        },
+        {
+          "season": 2024,
+          "target": "total",
+          "rows": 0,
+          "eligible": 0
+        },
+        {
+          "season": 2025,
+          "target": "win",
+          "rows": 0,
+          "eligible": 0
+        },
+        {
+          "season": 2025,
+          "target": "margin",
+          "rows": 0,
+          "eligible": 0
+        },
+        {
+          "season": 2025,
+          "target": "total",
+          "rows": 0,
+          "eligible": 0
+        },
+        {
+          "season": 2026,
+          "target": "win",
+          "rows": 0,
+          "eligible": 0
+        },
+        {
+          "season": 2026,
+          "target": "margin",
+          "rows": 0,
+          "eligible": 0
+        },
+        {
+          "season": 2026,
+          "target": "total",
+          "rows": 0,
+          "eligible": 0
+        }
+      ],
+      "qualification": "Player props are not converted into game-winner probabilities."
+    },
+    {
+      "provider": "Kalshi",
+      "status": "Audited 2026 winner history only; point history incomplete",
+      "coverage": [
+        {
+          "season": 2024,
+          "target": "win",
+          "rows": 0,
+          "eligible": 0
+        },
+        {
+          "season": 2024,
+          "target": "margin",
+          "rows": 0,
+          "eligible": 0
+        },
+        {
+          "season": 2024,
+          "target": "total",
+          "rows": 0,
+          "eligible": 0
+        },
+        {
+          "season": 2025,
+          "target": "win",
+          "rows": 0,
+          "eligible": 0
+        },
+        {
+          "season": 2025,
+          "target": "margin",
+          "rows": 0,
+          "eligible": 0
+        },
+        {
+          "season": 2025,
+          "target": "total",
+          "rows": 0,
+          "eligible": 0
+        },
+        {
+          "season": 2026,
+          "target": "win",
+          "rows": 120,
+          "eligible": 119
+        },
+        {
+          "season": 2026,
+          "target": "margin",
+          "rows": 0,
+          "eligible": 0
+        },
+        {
+          "season": 2026,
+          "target": "total",
+          "rows": 0,
+          "eligible": 0
+        }
+      ],
+      "qualification": "Quote cutoff, acquisition time, outcome availability and model issue time remain distinct."
+    },
+    {
+      "provider": "Polymarket",
+      "status": "No comparable audited game-target historical panel",
+      "coverage": [
+        {
+          "season": 2024,
+          "target": "win",
+          "rows": 0,
+          "eligible": 0
+        },
+        {
+          "season": 2024,
+          "target": "margin",
+          "rows": 0,
+          "eligible": 0
+        },
+        {
+          "season": 2024,
+          "target": "total",
+          "rows": 0,
+          "eligible": 0
+        },
+        {
+          "season": 2025,
+          "target": "win",
+          "rows": 0,
+          "eligible": 0
+        },
+        {
+          "season": 2025,
+          "target": "margin",
+          "rows": 0,
+          "eligible": 0
+        },
+        {
+          "season": 2025,
+          "target": "total",
+          "rows": 0,
+          "eligible": 0
+        },
+        {
+          "season": 2026,
+          "target": "win",
+          "rows": 0,
+          "eligible": 0
+        },
+        {
+          "season": 2026,
+          "target": "margin",
+          "rows": 0,
+          "eligible": 0
+        },
+        {
+          "season": 2026,
+          "target": "total",
+          "rows": 0,
+          "eligible": 0
+        }
+      ],
+      "qualification": "No Polymarket advantage estimate is established."
+    }
+  ],
+  "disagreement_examples": [
+    {
+      "season": 2026,
+      "week": 1,
+      "game_id": "2026_01_BUF_HOU",
+      "away_team": "BUF",
+      "home_team": "HOU",
+      "away_score": 36,
+      "home_score": 31,
+      "model": "Market-informed probability model",
+      "model_pick": "HOU",
+      "model_pick_probability_percent": 64.2,
+      "kalshi_pick": "BUF",
+      "actual_winner": "BUF",
+      "disagreement_winner": "Kalshi",
+      "model_origin": "Retrospective reconstruction",
+      "kalshi_horizon": "T1 supplemental; model horizon unchanged",
+      "kickoff_utc": "2026-09-13T17:00:00+00:00",
+      "qualification": "Resolved descriptive example; not an originally issued pick or executed bet."
+    },
+    {
+      "season": 2026,
+      "week": 1,
+      "game_id": "2026_01_NYJ_TEN",
+      "away_team": "NYJ",
+      "home_team": "TEN",
+      "away_score": 23,
+      "home_score": 10,
+      "model": "Market-informed probability model",
+      "model_pick": "NYJ",
+      "model_pick_probability_percent": 51.5,
+      "kalshi_pick": "TEN",
+      "actual_winner": "NYJ",
+      "disagreement_winner": "model",
+      "model_origin": "Retrospective reconstruction",
+      "kalshi_horizon": "T1 supplemental; model horizon unchanged",
+      "kickoff_utc": "2026-09-13T17:00:00+00:00",
+      "qualification": "Resolved descriptive example; not an originally issued pick or executed bet."
+    },
+    {
+      "season": 2026,
+      "week": 1,
+      "game_id": "2026_01_DEN_KC",
+      "away_team": "DEN",
+      "home_team": "KC",
+      "away_score": 10,
+      "home_score": 31,
+      "model": "Market-informed probability model",
+      "model_pick": "DEN",
+      "model_pick_probability_percent": 56.0,
+      "kalshi_pick": "KC",
+      "actual_winner": "KC",
+      "disagreement_winner": "Kalshi",
+      "model_origin": "Retrospective reconstruction",
+      "kalshi_horizon": "T1 supplemental; model horizon unchanged",
+      "kickoff_utc": "2026-09-15T00:15:00+00:00",
+      "qualification": "Resolved descriptive example; not an originally issued pick or executed bet."
+    },
+    {
+      "season": 2026,
+      "week": 3,
+      "game_id": "2026_03_LA_DEN",
+      "away_team": "LA",
+      "home_team": "DEN",
+      "away_score": 26,
+      "home_score": 30,
+      "model": "Market-informed probability model",
+      "model_pick": "DEN",
+      "model_pick_probability_percent": 52.7,
+      "kalshi_pick": "LA",
+      "actual_winner": "DEN",
+      "disagreement_winner": "model",
+      "model_origin": "Retrospective reconstruction",
+      "kalshi_horizon": "T1 supplemental; model horizon unchanged",
+      "kickoff_utc": "2026-09-28T00:20:00+00:00",
+      "qualification": "Resolved descriptive example; not an originally issued pick or executed bet."
+    },
+    {
+      "season": 2026,
+      "week": 6,
+      "game_id": "2026_06_NO_NYG",
+      "away_team": "NO",
+      "home_team": "NYG",
+      "away_score": 34,
+      "home_score": 27,
+      "model": "Market-informed probability model",
+      "model_pick": "NO",
+      "model_pick_probability_percent": 54.2,
+      "kalshi_pick": "NYG",
+      "actual_winner": "NO",
+      "disagreement_winner": "model",
+      "model_origin": "Retrospective reconstruction",
+      "kalshi_horizon": "T1 supplemental; model horizon unchanged",
+      "kickoff_utc": "2026-10-18T17:00:00+00:00",
+      "qualification": "Resolved descriptive example; not an originally issued pick or executed bet."
+    },
+    {
+      "season": 2026,
+      "week": 7,
+      "game_id": "2026_07_GB_DET",
+      "away_team": "GB",
+      "home_team": "DET",
+      "away_score": 17,
+      "home_score": 20,
+      "model": "Market-informed probability model",
+      "model_pick": "GB",
+      "model_pick_probability_percent": 50.3,
+      "kalshi_pick": "DET",
+      "actual_winner": "DET",
+      "disagreement_winner": "Kalshi",
+      "model_origin": "Retrospective reconstruction",
+      "kalshi_horizon": "T1 supplemental; model horizon unchanged",
+      "kickoff_utc": "2026-10-25T20:25:00+00:00",
+      "qualification": "Resolved descriptive example; not an originally issued pick or executed bet."
+    },
+    {
+      "season": 2026,
+      "week": 8,
+      "game_id": "2026_08_ATL_TB",
+      "away_team": "ATL",
+      "home_team": "TB",
+      "away_score": 0,
+      "home_score": 16,
+      "model": "Market-informed probability model",
+      "model_pick": "ATL",
+      "model_pick_probability_percent": 59.4,
+      "kalshi_pick": "TB",
+      "actual_winner": "TB",
+      "disagreement_winner": "Kalshi",
+      "model_origin": "Retrospective reconstruction",
+      "kalshi_horizon": "T1 supplemental; model horizon unchanged",
+      "kickoff_utc": "2026-11-01T18:00:00+00:00",
+      "qualification": "Resolved descriptive example; not an originally issued pick or executed bet."
+    },
+    {
+      "season": 2026,
+      "week": 8,
+      "game_id": "2026_08_LV_NYJ",
+      "away_team": "LV",
+      "home_team": "NYJ",
+      "away_score": 38,
+      "home_score": 33,
+      "model": "Market-informed probability model",
+      "model_pick": "LV",
+      "model_pick_probability_percent": 51.4,
+      "kalshi_pick": "NYJ",
+      "actual_winner": "LV",
+      "disagreement_winner": "model",
+      "model_origin": "Retrospective reconstruction",
+      "kalshi_horizon": "T1 supplemental; model horizon unchanged",
+      "kickoff_utc": "2026-11-01T18:00:00+00:00",
+      "qualification": "Resolved descriptive example; not an originally issued pick or executed bet."
+    },
+    {
+      "season": 2026,
+      "week": 8,
+      "game_id": "2026_08_KC_DEN",
+      "away_team": "KC",
+      "home_team": "DEN",
+      "away_score": 24,
+      "home_score": 28,
+      "model": "Market-informed probability model",
+      "model_pick": "DEN",
+      "model_pick_probability_percent": 64.9,
+      "kalshi_pick": "KC",
+      "actual_winner": "DEN",
+      "disagreement_winner": "model",
+      "model_origin": "Retrospective reconstruction",
+      "kalshi_horizon": "T1 supplemental; model horizon unchanged",
+      "kickoff_utc": "2026-11-01T21:25:00+00:00",
+      "qualification": "Resolved descriptive example; not an originally issued pick or executed bet."
+    },
+    {
+      "season": 2026,
+      "week": 1,
+      "game_id": "2026_01_BUF_HOU",
+      "away_team": "BUF",
+      "home_team": "HOU",
+      "away_score": 36,
+      "home_score": 31,
+      "model": "Accuracy-focused research model",
+      "model_pick": "HOU",
+      "model_pick_probability_percent": 59.6,
+      "kalshi_pick": "BUF",
+      "actual_winner": "BUF",
+      "disagreement_winner": "Kalshi",
+      "model_origin": "Retrospective reconstruction",
+      "kalshi_horizon": "T1 supplemental; model horizon unchanged",
+      "kickoff_utc": "2026-09-13T17:00:00+00:00",
+      "qualification": "Resolved descriptive example; not an originally issued pick or executed bet."
+    },
+    {
+      "season": 2026,
+      "week": 1,
+      "game_id": "2026_01_NYJ_TEN",
+      "away_team": "NYJ",
+      "home_team": "TEN",
+      "away_score": 23,
+      "home_score": 10,
+      "model": "Accuracy-focused research model",
+      "model_pick": "NYJ",
+      "model_pick_probability_percent": 60.0,
+      "kalshi_pick": "TEN",
+      "actual_winner": "NYJ",
+      "disagreement_winner": "model",
+      "model_origin": "Retrospective reconstruction",
+      "kalshi_horizon": "T1 supplemental; model horizon unchanged",
+      "kickoff_utc": "2026-09-13T17:00:00+00:00",
+      "qualification": "Resolved descriptive example; not an originally issued pick or executed bet."
+    },
+    {
+      "season": 2026,
+      "week": 1,
+      "game_id": "2026_01_DEN_KC",
+      "away_team": "DEN",
+      "home_team": "KC",
+      "away_score": 10,
+      "home_score": 31,
+      "model": "Accuracy-focused research model",
+      "model_pick": "DEN",
+      "model_pick_probability_percent": 62.3,
+      "kalshi_pick": "KC",
+      "actual_winner": "KC",
+      "disagreement_winner": "Kalshi",
+      "model_origin": "Retrospective reconstruction",
+      "kalshi_horizon": "T1 supplemental; model horizon unchanged",
+      "kickoff_utc": "2026-09-15T00:15:00+00:00",
+      "qualification": "Resolved descriptive example; not an originally issued pick or executed bet."
+    },
+    {
+      "season": 2026,
+      "week": 2,
+      "game_id": "2026_02_CAR_ATL",
+      "away_team": "CAR",
+      "home_team": "ATL",
+      "away_score": 34,
+      "home_score": 3,
+      "model": "Accuracy-focused research model",
+      "model_pick": "ATL",
+      "model_pick_probability_percent": 53.8,
+      "kalshi_pick": "CAR",
+      "actual_winner": "CAR",
+      "disagreement_winner": "Kalshi",
+      "model_origin": "Retrospective reconstruction",
+      "kalshi_horizon": "T1 supplemental; model horizon unchanged",
+      "kickoff_utc": "2026-09-20T17:00:00+00:00",
+      "qualification": "Resolved descriptive example; not an originally issued pick or executed bet."
+    },
+    {
+      "season": 2026,
+      "week": 3,
+      "game_id": "2026_03_CAR_CLE",
+      "away_team": "CAR",
+      "home_team": "CLE",
+      "away_score": 18,
+      "home_score": 21,
+      "model": "Accuracy-focused research model",
+      "model_pick": "CLE",
+      "model_pick_probability_percent": 54.0,
+      "kalshi_pick": "CAR",
+      "actual_winner": "CLE",
+      "disagreement_winner": "model",
+      "model_origin": "Retrospective reconstruction",
+      "kalshi_horizon": "T1 supplemental; model horizon unchanged",
+      "kickoff_utc": "2026-09-27T17:00:00+00:00",
+      "qualification": "Resolved descriptive example; not an originally issued pick or executed bet."
+    },
+    {
+      "season": 2026,
+      "week": 3,
+      "game_id": "2026_03_LA_DEN",
+      "away_team": "LA",
+      "home_team": "DEN",
+      "away_score": 26,
+      "home_score": 30,
+      "model": "Accuracy-focused research model",
+      "model_pick": "DEN",
+      "model_pick_probability_percent": 58.9,
+      "kalshi_pick": "LA",
+      "actual_winner": "DEN",
+      "disagreement_winner": "model",
+      "model_origin": "Retrospective reconstruction",
+      "kalshi_horizon": "T1 supplemental; model horizon unchanged",
+      "kickoff_utc": "2026-09-28T00:20:00+00:00",
+      "qualification": "Resolved descriptive example; not an originally issued pick or executed bet."
+    },
+    {
+      "season": 2026,
+      "week": 3,
+      "game_id": "2026_03_PHI_CHI",
+      "away_team": "PHI",
+      "home_team": "CHI",
+      "away_score": 7,
+      "home_score": 27,
+      "model": "Accuracy-focused research model",
+      "model_pick": "CHI",
+      "model_pick_probability_percent": 50.0,
+      "kalshi_pick": "PHI",
+      "actual_winner": "CHI",
+      "disagreement_winner": "model",
+      "model_origin": "Retrospective reconstruction",
+      "kalshi_horizon": "T1 supplemental; model horizon unchanged",
+      "kickoff_utc": "2026-09-29T00:15:00+00:00",
+      "qualification": "Resolved descriptive example; not an originally issued pick or executed bet."
+    },
+    {
+      "season": 2026,
+      "week": 4,
+      "game_id": "2026_04_IND_WAS",
+      "away_team": "IND",
+      "home_team": "WAS",
+      "away_score": 30,
+      "home_score": 13,
+      "model": "Accuracy-focused research model",
+      "model_pick": "WAS",
+      "model_pick_probability_percent": 55.4,
+      "kalshi_pick": "IND",
+      "actual_winner": "IND",
+      "disagreement_winner": "Kalshi",
+      "model_origin": "Retrospective reconstruction",
+      "kalshi_horizon": "T1 supplemental; model horizon unchanged",
+      "kickoff_utc": "2026-10-04T13:30:00+00:00",
+      "qualification": "Resolved descriptive example; not an originally issued pick or executed bet."
+    },
+    {
+      "season": 2026,
+      "week": 4,
+      "game_id": "2026_04_DAL_HOU",
+      "away_team": "DAL",
+      "home_team": "HOU",
+      "away_score": 34,
+      "home_score": 30,
+      "model": "Accuracy-focused research model",
+      "model_pick": "DAL",
+      "model_pick_probability_percent": 50.0,
+      "kalshi_pick": "HOU",
+      "actual_winner": "DAL",
+      "disagreement_winner": "model",
+      "model_origin": "Retrospective reconstruction",
+      "kalshi_horizon": "T1 supplemental; model horizon unchanged",
+      "kickoff_utc": "2026-10-04T17:00:00+00:00",
+      "qualification": "Resolved descriptive example; not an originally issued pick or executed bet."
+    },
+    {
+      "season": 2026,
+      "week": 4,
+      "game_id": "2026_04_ATL_NO",
+      "away_team": "ATL",
+      "home_team": "NO",
+      "away_score": 45,
+      "home_score": 24,
+      "model": "Accuracy-focused research model",
+      "model_pick": "ATL",
+      "model_pick_probability_percent": 54.1,
+      "kalshi_pick": "NO",
+      "actual_winner": "ATL",
+      "disagreement_winner": "model",
+      "model_origin": "Retrospective reconstruction",
+      "kalshi_horizon": "T1 supplemental; model horizon unchanged",
+      "kickoff_utc": "2026-10-06T00:15:00+00:00",
+      "qualification": "Resolved descriptive example; not an originally issued pick or executed bet."
+    },
+    {
+      "season": 2026,
+      "week": 5,
+      "game_id": "2026_05_BUF_LA",
+      "away_team": "BUF",
+      "home_team": "LA",
+      "away_score": 37,
+      "home_score": 34,
+      "model": "Accuracy-focused research model",
+      "model_pick": "BUF",
+      "model_pick_probability_percent": 51.7,
+      "kalshi_pick": "LA",
+      "actual_winner": "BUF",
+      "disagreement_winner": "model",
+      "model_origin": "Retrospective reconstruction",
+      "kalshi_horizon": "T1 supplemental; model horizon unchanged",
+      "kickoff_utc": "2026-10-13T00:15:00+00:00",
+      "qualification": "Resolved descriptive example; not an originally issued pick or executed bet."
+    },
+    {
+      "season": 2026,
+      "week": 6,
+      "game_id": "2026_06_BAL_CLE",
+      "away_team": "BAL",
+      "home_team": "CLE",
+      "away_score": 10,
+      "home_score": 13,
+      "model": "Accuracy-focused research model",
+      "model_pick": "CLE",
+      "model_pick_probability_percent": 53.0,
+      "kalshi_pick": "BAL",
+      "actual_winner": "CLE",
+      "disagreement_winner": "model",
+      "model_origin": "Retrospective reconstruction",
+      "kalshi_horizon": "T1 supplemental; model horizon unchanged",
+      "kickoff_utc": "2026-10-18T17:00:00+00:00",
+      "qualification": "Resolved descriptive example; not an originally issued pick or executed bet."
+    },
+    {
+      "season": 2026,
+      "week": 6,
+      "game_id": "2026_06_CAR_PHI",
+      "away_team": "CAR",
+      "home_team": "PHI",
+      "away_score": 25,
+      "home_score": 14,
+      "model": "Accuracy-focused research model",
+      "model_pick": "PHI",
+      "model_pick_probability_percent": 59.9,
+      "kalshi_pick": "CAR",
+      "actual_winner": "CAR",
+      "disagreement_winner": "Kalshi",
+      "model_origin": "Retrospective reconstruction",
+      "kalshi_horizon": "T1 supplemental; model horizon unchanged",
+      "kickoff_utc": "2026-10-18T17:00:00+00:00",
+      "qualification": "Resolved descriptive example; not an originally issued pick or executed bet."
+    },
+    {
+      "season": 2026,
+      "week": 6,
+      "game_id": "2026_06_CHI_ATL",
+      "away_team": "CHI",
+      "home_team": "ATL",
+      "away_score": 31,
+      "home_score": 23,
+      "model": "Accuracy-focused research model",
+      "model_pick": "ATL",
+      "model_pick_probability_percent": 59.0,
+      "kalshi_pick": "CHI",
+      "actual_winner": "CHI",
+      "disagreement_winner": "Kalshi",
+      "model_origin": "Retrospective reconstruction",
+      "kalshi_horizon": "T1 supplemental; model horizon unchanged",
+      "kickoff_utc": "2026-10-18T17:00:00+00:00",
+      "qualification": "Resolved descriptive example; not an originally issued pick or executed bet."
+    },
+    {
+      "season": 2026,
+      "week": 6,
+      "game_id": "2026_06_PIT_TB",
+      "away_team": "PIT",
+      "home_team": "TB",
+      "away_score": 26,
+      "home_score": 19,
+      "model": "Accuracy-focused research model",
+      "model_pick": "TB",
+      "model_pick_probability_percent": 50.8,
+      "kalshi_pick": "PIT",
+      "actual_winner": "PIT",
+      "disagreement_winner": "Kalshi",
+      "model_origin": "Retrospective reconstruction",
+      "kalshi_horizon": "T1 supplemental; model horizon unchanged",
+      "kickoff_utc": "2026-10-18T17:00:00+00:00",
+      "qualification": "Resolved descriptive example; not an originally issued pick or executed bet."
+    },
+    {
+      "season": 2026,
+      "week": 6,
+      "game_id": "2026_06_DAL_GB",
+      "away_team": "DAL",
+      "home_team": "GB",
+      "away_score": 13,
+      "home_score": 23,
+      "model": "Accuracy-focused research model",
+      "model_pick": "GB",
+      "model_pick_probability_percent": 58.9,
+      "kalshi_pick": "DAL",
+      "actual_winner": "GB",
+      "disagreement_winner": "model",
+      "model_origin": "Retrospective reconstruction",
+      "kalshi_horizon": "T1 supplemental; model horizon unchanged",
+      "kickoff_utc": "2026-10-19T00:20:00+00:00",
+      "qualification": "Resolved descriptive example; not an originally issued pick or executed bet."
+    },
+    {
+      "season": 2026,
+      "week": 8,
+      "game_id": "2026_08_ATL_TB",
+      "away_team": "ATL",
+      "home_team": "TB",
+      "away_score": 0,
+      "home_score": 16,
+      "model": "Accuracy-focused research model",
+      "model_pick": "ATL",
+      "model_pick_probability_percent": 60.6,
+      "kalshi_pick": "TB",
+      "actual_winner": "TB",
+      "disagreement_winner": "Kalshi",
+      "model_origin": "Retrospective reconstruction",
+      "kalshi_horizon": "T1 supplemental; model horizon unchanged",
+      "kickoff_utc": "2026-11-01T18:00:00+00:00",
+      "qualification": "Resolved descriptive example; not an originally issued pick or executed bet."
+    },
+    {
+      "season": 2026,
+      "week": 8,
+      "game_id": "2026_08_LV_NYJ",
+      "away_team": "LV",
+      "home_team": "NYJ",
+      "away_score": 38,
+      "home_score": 33,
+      "model": "Accuracy-focused research model",
+      "model_pick": "LV",
+      "model_pick_probability_percent": 53.6,
+      "kalshi_pick": "NYJ",
+      "actual_winner": "LV",
+      "disagreement_winner": "model",
+      "model_origin": "Retrospective reconstruction",
+      "kalshi_horizon": "T1 supplemental; model horizon unchanged",
+      "kickoff_utc": "2026-11-01T18:00:00+00:00",
+      "qualification": "Resolved descriptive example; not an originally issued pick or executed bet."
+    },
+    {
+      "season": 2026,
+      "week": 8,
+      "game_id": "2026_08_KC_DEN",
+      "away_team": "KC",
+      "home_team": "DEN",
+      "away_score": 24,
+      "home_score": 28,
+      "model": "Accuracy-focused research model",
+      "model_pick": "DEN",
+      "model_pick_probability_percent": 65.2,
+      "kalshi_pick": "KC",
+      "actual_winner": "DEN",
+      "disagreement_winner": "model",
+      "model_origin": "Retrospective reconstruction",
+      "kalshi_horizon": "T1 supplemental; model horizon unchanged",
+      "kickoff_utc": "2026-11-01T21:25:00+00:00",
+      "qualification": "Resolved descriptive example; not an originally issued pick or executed bet."
+    }
+  ],
+  "resolved_forecast_example": {
+    "game": "CHI at SEA",
+    "final": "CHI 34–17",
+    "issued_at_utc": "2026-11-02T23:56:35.061863+00:00",
+    "feature_as_of_utc": "2026-11-02T23:56:01.654716+00:00",
+    "kickoff_utc": "2026-11-03T01:15:00+00:00",
+    "horizon": "Genuine prior T1 research issue; missed T2 cutoff",
+    "model_pick": "SEA",
+    "model_pick_probability_percent": 62.9,
+    "model_margin_pick": "SEA +5.22 points",
+    "model_total": 46.49,
+    "correct": false,
+    "qualification": "This genuine prior pregame issue was incorrect. No matched historical Kalshi comparison exists for this game in the current export."
+  },
+  "upcoming": {
+    "week": 9,
+    "archived_early_cards": 45,
+    "games": 15,
+    "new_final_hour_issues": 0,
+    "status": "New owner forward stage blocked; archived early research forecasts are not final-hour or live advice.",
+    "next_kickoff_utc": "2026-11-06T01:15:00+00:00"
+  },
+  "uncertainty": {
+    "method": "Paired whole-week bootstrap; eight completed evaluation weeks",
+    "advantage_supported": false,
+    "statement": "All reported paired advantage intervals include zero. The observed lead is not evidence of a durable or prospective edge.",
+    "small_confidence_band_note": "The 50–<60% loss counts are descriptive diagnostics. Removing them after seeing results does not establish an improved strategy."
+  },
+  "execution": {
+    "families": 8,
+    "rooted_blocks": 8,
+    "annual_base_cells_completed": 1152,
+    "annual_base_cells_registered": 1152,
+    "pairwise_blends_completed": 224,
+    "pairwise_blends_registered": 224,
+    "new_owner_fits": 13,
+    "new_base_fits": 4,
+    "new_stack_fits": 9,
+    "restored_annual_fits": 1148,
+    "restored_rolling_fit_uses": 447,
+    "protected_original_refits": 0,
+    "new_issued_forecasts": 0,
+    "historical_study_elapsed_seconds": 170.709814845,
+    "source_public_requests": 22,
+    "authorized_paid_calls": 16,
+    "provider_calls": 17,
+    "paid_credits": 48,
+    "source_final_games": 121,
+    "source_statistics_team_rows": 242,
+    "source_play_by_play_rows": 21191,
+    "current_quote_capture_start_utc": "2026-11-03T19:51:03+00:00",
+    "current_quote_capture_end_utc": "2026-11-03T19:51:10+00:00",
+    "independently_scored_game_rows": 698068,
+    "season_scalar_checks": 13158,
+    "weekly_provider_scalar_checks": 293583,
+    "qualification": "Restored fits are not new training. Source refresh completion does not establish complete historical provider coverage."
+  },
+  "limitations": [
+    "2024 and 2025 are development-exposed retrospective evaluation; 2026 leader rankings are descriptive monitoring.",
+    "Pre-2024 OOF recipe selection is distinct from frozen-original monitoring and updating learned parents.",
+    "A 0.45 current-season log loss is not supported by the audited common panel. The current probability leader is approximately 0.629.",
+    "T2 and T1 quote benchmarks are separately labeled; the model vector is never relabeled as a later issue.",
+    "Winner accuracy does not establish spread/total skill or fee-adjusted profitability.",
+    "No all-season Kalshi margin/total comparison or Polymarket advantage claim is supported.",
+    "Reconstructed metrics, genuine earlier issues, hypothetical P&L and actual personal profit are separate records.",
+    "No new final-hour forecasts were issued by this owner execution.",
+    "The late-appended resolved event passed T2 source/quote/model-availability lineage checks. Its prediction was reconstructed after the result without a new fit; it is not an original issued pick."
+  ]
+}
