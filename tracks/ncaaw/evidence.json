@@ -1,0 +1,924 @@
+{
+  "current_owner_attempt": {
+    "completed_at": "2026-11-03T21:24:02.379868+00:00",
+    "failure_class": "A stream context manager returned a raw HTTP reader, hiding the wrapper-specific iterator. The test double returned itself, so the API boundary was not represented.",
+    "new_calibration_fits": 0,
+    "new_orders": 0,
+    "new_prediction_rows": 0,
+    "new_prospective_issues": 0,
+    "new_real_target_fits": 0,
+    "new_source_refreshes": 0,
+    "original_monitoring_unchanged": true,
+    "owner_post_close_verification": "failed_on_same_stream_interface",
+    "release": "B032",
+    "scientific_credit_from_subsequent_readback": 0,
+    "status": "FAILED_BEFORE_PARENT_DATA_RESTORATION",
+    "subsequent_independent_return_readback": "verified_full_bytes_after_owner_failure",
+    "synthetic_test_seconds": 10.460865365000245,
+    "synthetic_tests_passed": 250
+  },
+  "current_season": {
+    "label": "2026\u201327",
+    "season_end_year": 2027
+  },
+  "evaluation": {
+    "active_recipes_published": false,
+    "all_official_games_covered": false,
+    "brier": "Mean squared probability error on unmodified model probabilities.",
+    "current_outcomes_used_for_selection": false,
+    "historical_exposure": "Development-exposed retrospective reconstruction. The pooled seasons selected these models; they are not an untouched final test.",
+    "historical_label_availability": "Declared 24-hour release assumption, not independently proven historical publication.",
+    "individual_prediction_rows_published": false,
+    "input_horizon_minutes": 60,
+    "log_loss": "Natural logarithm, shared evaluation clipping at 1e-15.",
+    "model_selection": "Objective-specific historical selection; the same selected model is displayed in each season, without choosing a new seasonal winner.",
+    "points": "Home-minus-away margin and full-game total, including overtime; MAE, RMSE and signed predicted-minus-actual bias in points.",
+    "population": "largest exact shared historical prediction cohort, separately by sex and season",
+    "probability_tie_accuracy_credit": 0.5,
+    "probability_tie_direction": "no directional pick"
+  },
+  "historical_seasons": {
+    "2025": "2024\u201325",
+    "2026": "2025\u201326"
+  },
+  "league": "ncaaw",
+  "league_label": "NCAA women's basketball",
+  "market_advantage": {
+    "demonstrated": false,
+    "realized_betting_profit": null,
+    "reason": "No qualified three-provider current-season pairing or executable-price replay was produced by this attempt. Historical model quality alone does not establish profitability."
+  },
+  "models": [
+    {
+      "equivalent_retained_variants": 1,
+      "id": "W-W1",
+      "label": "Probability selection",
+      "panels": {
+        "2025": {
+          "Accuracy": 0.7680871212121212,
+          "BalancedAccuracy": 0.748799369285503,
+          "Brier": 0.15058292283800184,
+          "CalibrationBias": 5.303078908488973e-05,
+          "ECE10": 0.016987598946383388,
+          "LogLoss": 0.4525352704627906,
+          "N": 5280,
+          "ROC_AUC": 0.8558965010018786,
+          "calibration_bins": [
+            {
+              "N": 332,
+              "bin": 0,
+              "mean_probability": 0.04234191447667062,
+              "observed_rate": 0.0391566265060241
+            },
+            {
+              "N": 388,
+              "bin": 1,
+              "mean_probability": 0.1503514576842283,
+              "observed_rate": 0.15979381443298968
+            },
+            {
+              "N": 263,
+              "bin": 2,
+              "mean_probability": 0.2669422731059229,
+              "observed_rate": 0.21673003802281368
+            },
+            {
+              "N": 462,
+              "bin": 3,
+              "mean_probability": 0.3366289768284751,
+              "observed_rate": 0.38311688311688313
+            },
+            {
+              "N": 421,
+              "bin": 4,
+              "mean_probability": 0.45330811376985936,
+              "observed_rate": 0.47030878859857483
+            },
+            {
+              "N": 516,
+              "bin": 5,
+              "mean_probability": 0.5445564063066295,
+              "observed_rate": 0.5251937984496124
+            },
+            {
+              "N": 627,
+              "bin": 6,
+              "mean_probability": 0.6662405477102125,
+              "observed_rate": 0.6331738437001595
+            },
+            {
+              "N": 406,
+              "bin": 7,
+              "mean_probability": 0.7332950630425571,
+              "observed_rate": 0.7438423645320197
+            },
+            {
+              "N": 736,
+              "bin": 8,
+              "mean_probability": 0.8518485165431854,
+              "observed_rate": 0.8546195652173914
+            },
+            {
+              "N": 1129,
+              "bin": 9,
+              "mean_probability": 0.9671503698142805,
+              "observed_rate": 0.9725420726306466
+            }
+          ],
+          "probability_ties": 19
+        },
+        "2026": {
+          "Accuracy": 0.7657000533712862,
+          "BalancedAccuracy": 0.7461567506053142,
+          "Brier": 0.15163831829563387,
+          "CalibrationBias": 0.00994582059777074,
+          "ECE10": 0.017412157099118676,
+          "LogLoss": 0.45657459887067736,
+          "N": 5621,
+          "ROC_AUC": 0.8549707706565909,
+          "calibration_bins": [
+            {
+              "N": 351,
+              "bin": 0,
+              "mean_probability": 0.03903553221973889,
+              "observed_rate": 0.037037037037037035
+            },
+            {
+              "N": 373,
+              "bin": 1,
+              "mean_probability": 0.14424781863506933,
+              "observed_rate": 0.16353887399463807
+            },
+            {
+              "N": 321,
+              "bin": 2,
+              "mean_probability": 0.2567323343676281,
+              "observed_rate": 0.2398753894080997
+            },
+            {
+              "N": 446,
+              "bin": 3,
+              "mean_probability": 0.34409380632415265,
+              "observed_rate": 0.3475336322869955
+            },
+            {
+              "N": 497,
+              "bin": 4,
+              "mean_probability": 0.45820369450448895,
+              "observed_rate": 0.45472837022132795
+            },
+            {
+              "N": 520,
+              "bin": 5,
+              "mean_probability": 0.5429005581097337,
+              "observed_rate": 0.5134615384615384
+            },
+            {
+              "N": 631,
+              "bin": 6,
+              "mean_probability": 0.6576953103747689,
+              "observed_rate": 0.5911251980982567
+            },
+            {
+              "N": 521,
+              "bin": 7,
+              "mean_probability": 0.7442531161065804,
+              "observed_rate": 0.7332053742802304
+            },
+            {
+              "N": 735,
+              "bin": 8,
+              "mean_probability": 0.8581572616211002,
+              "observed_rate": 0.8748299319727891
+            },
+            {
+              "N": 1226,
+              "bin": 9,
+              "mean_probability": 0.9698041635009548,
+              "observed_rate": 0.9649265905383361
+            }
+          ],
+          "probability_ties": 0
+        },
+        "pooled": {
+          "Accuracy": 0.7668562517200257,
+          "BalancedAccuracy": 0.7474161710843367,
+          "Brier": 0.15112712776116022,
+          "CalibrationBias": 0.0051541565128371295,
+          "ECE10": 0.01500684042196161,
+          "LogLoss": 0.4546181128608027,
+          "N": 10901,
+          "ROC_AUC": 0.8551777798699707,
+          "calibration_bins": [
+            {
+              "N": 683,
+              "bin": 0,
+              "mean_probability": 0.04064273413672474,
+              "observed_rate": 0.03806734992679356
+            },
+            {
+              "N": 761,
+              "bin": 1,
+              "mean_probability": 0.14735979228956825,
+              "observed_rate": 0.1616294349540079
+            },
+            {
+              "N": 584,
+              "bin": 2,
+              "mean_probability": 0.26133030335422314,
+              "observed_rate": 0.22945205479452055
+            },
+            {
+              "N": 908,
+              "bin": 3,
+              "mean_probability": 0.3402956221534444,
+              "observed_rate": 0.3656387665198238
+            },
+            {
+              "N": 918,
+              "bin": 4,
+              "mean_probability": 0.4559585534486294,
+              "observed_rate": 0.46187363834422657
+            },
+            {
+              "N": 1036,
+              "bin": 5,
+              "mean_probability": 0.5437252855900409,
+              "observed_rate": 0.5193050193050193
+            },
+            {
+              "N": 1258,
+              "bin": 6,
+              "mean_probability": 0.661954343609525,
+              "observed_rate": 0.6120826709062003
+            },
+            {
+              "N": 927,
+              "bin": 7,
+              "mean_probability": 0.7394537962101473,
+              "observed_rate": 0.7378640776699029
+            },
+            {
+              "N": 1471,
+              "bin": 8,
+              "mean_probability": 0.8550007447092408,
+              "observed_rate": 0.8647178789938818
+            },
+            {
+              "N": 2355,
+              "bin": 9,
+              "mean_probability": 0.9685319201581712,
+              "observed_rate": 0.9685774946921444
+            }
+          ],
+          "probability_ties": 19
+        }
+      },
+      "same_cohort_candidates": 71,
+      "selected_for": [
+        "LogLoss"
+      ],
+      "target": "win"
+    },
+    {
+      "equivalent_retained_variants": 1,
+      "id": "W-W2",
+      "label": "Brier selection",
+      "panels": {
+        "2025": {
+          "Accuracy": 0.7680871212121212,
+          "BalancedAccuracy": 0.748799369285503,
+          "Brier": 0.15058291498403864,
+          "CalibrationBias": 4.764684890316646e-05,
+          "ECE10": 0.016994624225728158,
+          "LogLoss": 0.4525370152116104,
+          "N": 5280,
+          "ROC_AUC": 0.8558965010018786,
+          "calibration_bins": [
+            {
+              "N": 332,
+              "bin": 0,
+              "mean_probability": 0.04236497029961891,
+              "observed_rate": 0.0391566265060241
+            },
+            {
+              "N": 388,
+              "bin": 1,
+              "mean_probability": 0.1503690722203651,
+              "observed_rate": 0.15979381443298968
+            },
+            {
+              "N": 263,
+              "bin": 2,
+              "mean_probability": 0.26695401404934327,
+              "observed_rate": 0.21673003802281368
+            },
+            {
+              "N": 462,
+              "bin": 3,
+              "mean_probability": 0.3366372071067205,
+              "observed_rate": 0.38311688311688313
+            },
+            {
+              "N": 421,
+              "bin": 4,
+              "mean_probability": 0.4533104660059415,
+              "observed_rate": 0.47030878859857483
+            },
+            {
+              "N": 516,
+              "bin": 5,
+              "mean_probability": 0.5445541616513998,
+              "observed_rate": 0.5251937984496124
+            },
+            {
+              "N": 627,
+              "bin": 6,
+              "mean_probability": 0.6662321728715367,
+              "observed_rate": 0.6331738437001595
+            },
+            {
+              "N": 406,
+              "bin": 7,
+              "mean_probability": 0.7332833101426556,
+              "observed_rate": 0.7438423645320197
+            },
+            {
+              "N": 736,
+              "bin": 8,
+              "mean_probability": 0.8518307911771127,
+              "observed_rate": 0.8546195652173914
+            },
+            {
+              "N": 1129,
+              "bin": 9,
+              "mean_probability": 0.967126835790612,
+              "observed_rate": 0.9725420726306466
+            }
+          ],
+          "probability_ties": 19
+        },
+        "2026": {
+          "Accuracy": 0.7657000533712862,
+          "BalancedAccuracy": 0.7461567506053142,
+          "Brier": 0.15163820529196326,
+          "CalibrationBias": 0.009941393128119914,
+          "ECE10": 0.0174085935358208,
+          "LogLoss": 0.45657319241396227,
+          "N": 5621,
+          "ROC_AUC": 0.8549707706565909,
+          "calibration_bins": [
+            {
+              "N": 351,
+              "bin": 0,
+              "mean_probability": 0.03905387541384077,
+              "observed_rate": 0.037037037037037035
+            },
+            {
+              "N": 373,
+              "bin": 1,
+              "mean_probability": 0.14426197510866123,
+              "observed_rate": 0.16353887399463807
+            },
+            {
+              "N": 321,
+              "bin": 2,
+              "mean_probability": 0.2567420147363361,
+              "observed_rate": 0.2398753894080997
+            },
+            {
+              "N": 446,
+              "bin": 3,
+              "mean_probability": 0.3441000103111671,
+              "observed_rate": 0.3475336322869955
+            },
+            {
+              "N": 497,
+              "bin": 4,
+              "mean_probability": 0.45820535770805015,
+              "observed_rate": 0.45472837022132795
+            },
+            {
+              "N": 520,
+              "bin": 5,
+              "mean_probability": 0.5428988509645643,
+              "observed_rate": 0.5134615384615384
+            },
+            {
+              "N": 631,
+              "bin": 6,
+              "mean_probability": 0.6576890351932976,
+              "observed_rate": 0.5911251980982567
+            },
+            {
+              "N": 521,
+              "bin": 7,
+              "mean_probability": 0.7442433965237668,
+              "observed_rate": 0.7332053742802304
+            },
+            {
+              "N": 735,
+              "bin": 8,
+              "mean_probability": 0.8581430094419668,
+              "observed_rate": 0.8748299319727891
+            },
+            {
+              "N": 1226,
+              "bin": 9,
+              "mean_probability": 0.9697854685481695,
+              "observed_rate": 0.9649265905383361
+            }
+          ],
+          "probability_ties": 0
+        },
+        "pooled": {
+          "Accuracy": 0.7668562517200257,
+          "BalancedAccuracy": 0.7474161710843367,
+          "Brier": 0.15112706568772127,
+          "CalibrationBias": 0.005149265767853479,
+          "ECE10": 0.015011583668527291,
+          "LogLoss": 0.4546182327195839,
+          "N": 10901,
+          "ROC_AUC": 0.8551770762176493,
+          "calibration_bins": [
+            {
+              "N": 683,
+              "bin": 0,
+              "mean_probability": 0.04066336809623951,
+              "observed_rate": 0.03806734992679356
+            },
+            {
+              "N": 761,
+              "bin": 1,
+              "mean_probability": 0.14737571187520673,
+              "observed_rate": 0.1616294349540079
+            },
+            {
+              "N": 584,
+              "bin": 2,
+              "mean_probability": 0.261340911687228,
+              "observed_rate": 0.22945205479452055
+            },
+            {
+              "N": 908,
+              "bin": 3,
+              "mean_probability": 0.34030285713886055,
+              "observed_rate": 0.3656387665198238
+            },
+            {
+              "N": 918,
+              "bin": 4,
+              "mean_probability": 0.4559605326464077,
+              "observed_rate": 0.46187363834422657
+            },
+            {
+              "N": 1036,
+              "bin": 5,
+              "mean_probability": 0.5437233107275056,
+              "observed_rate": 0.5193050193050193
+            },
+            {
+              "N": 1258,
+              "bin": 6,
+              "mean_probability": 0.6619470219375392,
+              "observed_rate": 0.6120826709062003
+            },
+            {
+              "N": 927,
+              "bin": 7,
+              "mean_probability": 0.7394431860914786,
+              "observed_rate": 0.7378640776699029
+            },
+            {
+              "N": 1471,
+              "bin": 8,
+              "mean_probability": 0.8549847547560846,
+              "observed_rate": 0.8647178789938818
+            },
+            {
+              "N": 2355,
+              "bin": 9,
+              "mean_probability": 0.9685109053280923,
+              "observed_rate": 0.9685774946921444
+            }
+          ],
+          "probability_ties": 19
+        }
+      },
+      "same_cohort_candidates": 71,
+      "selected_for": [
+        "Brier"
+      ],
+      "target": "win"
+    },
+    {
+      "equivalent_retained_variants": 1,
+      "id": "W-W3",
+      "label": "Accuracy selection",
+      "panels": {
+        "2025": {
+          "Accuracy": 0.7746212121212122,
+          "BalancedAccuracy": 0.7565506989096,
+          "Brier": 0.15085827327102533,
+          "CalibrationBias": -0.0022657129992486305,
+          "ECE10": 0.02059545235290127,
+          "LogLoss": 0.4544182219258246,
+          "N": 5280,
+          "ROC_AUC": 0.8555128283768603,
+          "calibration_bins": [
+            {
+              "N": 330,
+              "bin": 0,
+              "mean_probability": 0.054591379635924184,
+              "observed_rate": 0.04242424242424243
+            },
+            {
+              "N": 375,
+              "bin": 1,
+              "mean_probability": 0.1511204146663735,
+              "observed_rate": 0.168
+            },
+            {
+              "N": 381,
+              "bin": 2,
+              "mean_probability": 0.25174696359677556,
+              "observed_rate": 0.24146981627296588
+            },
+            {
+              "N": 397,
+              "bin": 3,
+              "mean_probability": 0.3505630291626984,
+              "observed_rate": 0.40554156171284633
+            },
+            {
+              "N": 421,
+              "bin": 4,
+              "mean_probability": 0.4492623533692419,
+              "observed_rate": 0.4251781472684085
+            },
+            {
+              "N": 455,
+              "bin": 5,
+              "mean_probability": 0.5517592246396441,
+              "observed_rate": 0.5714285714285714
+            },
+            {
+              "N": 512,
+              "bin": 6,
+              "mean_probability": 0.6512610553786047,
+              "observed_rate": 0.615234375
+            },
+            {
+              "N": 592,
+              "bin": 7,
+              "mean_probability": 0.7514774533127027,
+              "observed_rate": 0.731418918918919
+            },
+            {
+              "N": 705,
+              "bin": 8,
+              "mean_probability": 0.8527773756333558,
+              "observed_rate": 0.8595744680851064
+            },
+            {
+              "N": 1112,
+              "bin": 9,
+              "mean_probability": 0.9555254931297562,
+              "observed_rate": 0.9721223021582733
+            }
+          ],
+          "probability_ties": 0
+        },
+        "2026": {
+          "Accuracy": 0.7658779576587795,
+          "BalancedAccuracy": 0.746304679599397,
+          "Brier": 0.15307884200900676,
+          "CalibrationBias": 0.009027819573232149,
+          "ECE10": 0.021531283632120257,
+          "LogLoss": 0.4604051217639203,
+          "N": 5621,
+          "ROC_AUC": 0.8531647959358802,
+          "calibration_bins": [
+            {
+              "N": 365,
+              "bin": 0,
+              "mean_probability": 0.053661907665270424,
+              "observed_rate": 0.052054794520547946
+            },
+            {
+              "N": 398,
+              "bin": 1,
+              "mean_probability": 0.14955797683867106,
+              "observed_rate": 0.16331658291457288
+            },
+            {
+              "N": 372,
+              "bin": 2,
+              "mean_probability": 0.25013301236059154,
+              "observed_rate": 0.271505376344086
+            },
+            {
+              "N": 418,
+              "bin": 3,
+              "mean_probability": 0.3520792241009951,
+              "observed_rate": 0.37799043062200954
+            },
+            {
+              "N": 434,
+              "bin": 4,
+              "mean_probability": 0.45143357971710746,
+              "observed_rate": 0.43317972350230416
+            },
+            {
+              "N": 491,
+              "bin": 5,
+              "mean_probability": 0.5515322799900875,
+              "observed_rate": 0.5173116089613035
+            },
+            {
+              "N": 519,
+              "bin": 6,
+              "mean_probability": 0.6524379315173895,
+              "observed_rate": 0.5761078998073218
+            },
+            {
+              "N": 612,
+              "bin": 7,
+              "mean_probability": 0.7528675196196951,
+              "observed_rate": 0.7222222222222222
+            },
+            {
+              "N": 773,
+              "bin": 8,
+              "mean_probability": 0.8514942195649199,
+              "observed_rate": 0.8486416558861578
+            },
+            {
+              "N": 1239,
+              "bin": 9,
+              "mean_probability": 0.958124570789627,
+              "observed_rate": 0.966908797417272
+            }
+          ],
+          "probability_ties": 0
+        },
+        "pooled": {
+          "Accuracy": 0.7701128336849831,
+          "BalancedAccuracy": 0.7512268178224437,
+          "Brier": 0.15200328903803698,
+          "CalibrationBias": 0.0035576927974594187,
+          "ECE10": 0.018313088563749472,
+          "LogLoss": 0.4575053115497064,
+          "N": 10901,
+          "ROC_AUC": 0.8542003540215559,
+          "calibration_bins": [
+            {
+              "N": 695,
+              "bin": 0,
+              "mean_probability": 0.05410323968011321,
+              "observed_rate": 0.04748201438848921
+            },
+            {
+              "N": 773,
+              "bin": 1,
+              "mean_probability": 0.1503159512052796,
+              "observed_rate": 0.16558861578266496
+            },
+            {
+              "N": 753,
+              "bin": 2,
+              "mean_probability": 0.2509496331055931,
+              "observed_rate": 0.25630810092961487
+            },
+            {
+              "N": 815,
+              "bin": 3,
+              "mean_probability": 0.3513406604316653,
+              "observed_rate": 0.3914110429447853
+            },
+            {
+              "N": 855,
+              "bin": 4,
+              "mean_probability": 0.45036447294231047,
+              "observed_rate": 0.42923976608187137
+            },
+            {
+              "N": 946,
+              "bin": 5,
+              "mean_probability": 0.5516414341291447,
+              "observed_rate": 0.5433403805496829
+            },
+            {
+              "N": 1031,
+              "bin": 6,
+              "mean_probability": 0.6518534886628232,
+              "observed_rate": 0.5955383123181377
+            },
+            {
+              "N": 1204,
+              "bin": 7,
+              "mean_probability": 0.7521840318674198,
+              "observed_rate": 0.7267441860465116
+            },
+            {
+              "N": 1478,
+              "bin": 8,
+              "mean_probability": 0.8521062798005407,
+              "observed_rate": 0.8538565629228687
+            },
+            {
+              "N": 2351,
+              "bin": 9,
+              "mean_probability": 0.9568952324834696,
+              "observed_rate": 0.9693747341556784
+            }
+          ],
+          "probability_ties": 0
+        }
+      },
+      "same_cohort_candidates": 71,
+      "selected_for": [
+        "Accuracy"
+      ],
+      "target": "win"
+    },
+    {
+      "equivalent_retained_variants": 1,
+      "id": "W-M1",
+      "label": "Margin selection",
+      "panels": {
+        "2025": {
+          "Bias": -0.1609318728402468,
+          "DirectionAccuracy": 0.7662878787878787,
+          "MAE": 9.691082941929709,
+          "N": 5280,
+          "R2": 0.5806056209069208,
+          "RMSE": 12.251170490342894
+        },
+        "2026": {
+          "Bias": -0.12017822652318438,
+          "DirectionAccuracy": 0.7667674790962462,
+          "MAE": 9.682328427205372,
+          "N": 5621,
+          "R2": 0.6009452254902166,
+          "RMSE": 12.294365901270126
+        },
+        "pooled": {
+          "Bias": -0.13991763139925956,
+          "DirectionAccuracy": 0.7665351802586918,
+          "MAE": 9.686568757243396,
+          "N": 10901,
+          "R2": 0.5914216214585202,
+          "RMSE": 12.273462789402803
+        }
+      },
+      "same_cohort_candidates": 54,
+      "selected_for": [
+        "MAE",
+        "RMSE"
+      ],
+      "target": "margin"
+    },
+    {
+      "equivalent_retained_variants": 1,
+      "id": "W-T1",
+      "label": "Total absolute-error selection",
+      "panels": {
+        "2025": {
+          "Bias": 0.2460410831586504,
+          "MAE": 12.625487869850476,
+          "N": 5280,
+          "R2": 0.27498076229726487,
+          "RMSE": 15.979340560779594
+        },
+        "2026": {
+          "Bias": 0.4424305614448774,
+          "MAE": 12.660168562105893,
+          "N": 5621,
+          "R2": 0.24938350112516472,
+          "RMSE": 16.044445808076713
+        },
+        "pooled": {
+          "Bias": 0.3473075043536678,
+          "MAE": 12.643370648601756,
+          "N": 10901,
+          "R2": 0.2620582565587791,
+          "RMSE": 16.01294453610309
+        }
+      },
+      "same_cohort_candidates": 54,
+      "selected_for": [
+        "MAE"
+      ],
+      "target": "total"
+    },
+    {
+      "equivalent_retained_variants": 1,
+      "id": "W-T2",
+      "label": "Total squared-error selection",
+      "panels": {
+        "2025": {
+          "Bias": 0.32208599085920114,
+          "MAE": 12.631370890955068,
+          "N": 5280,
+          "R2": 0.2753955990274999,
+          "RMSE": 15.974768429776434
+        },
+        "2026": {
+          "Bias": 0.5214066008943755,
+          "MAE": 12.655438902931763,
+          "N": 5621,
+          "R2": 0.24928233815833833,
+          "RMSE": 16.0455269520813
+        },
+        "pooled": {
+          "Bias": 0.42486382307713827,
+          "MAE": 12.64378133910854,
+          "N": 10901,
+          "R2": 0.26221042552249385,
+          "RMSE": 16.01129345807042
+        }
+      },
+      "same_cohort_candidates": 54,
+      "selected_for": [
+        "RMSE"
+      ],
+      "target": "total"
+    }
+  ],
+  "objective_tradeoff": {
+    "blocks_per_season": {
+      "2025": 22,
+      "2026": 22
+    },
+    "bootstrap_repetitions": 2000,
+    "bootstrap_seed": 1133,
+    "causal_or_prospective_edge_claimed": false,
+    "confidence_level": 0.95,
+    "difference": "probability_selection_minus_accuracy_selection",
+    "directions": {
+      "accuracy_only_correct": 288.0,
+      "accuracy_ties": 0,
+      "probability_only_correct": 252.0,
+      "probability_ties": 19
+    },
+    "interval_type": "percentile_descriptive_not_selection_adjusted",
+    "left": "W-W1",
+    "method": "Resample whole local-calendar weeks with replacement within each of two seasons; sum game-level losses and divide by the resampled game count.",
+    "metrics": {
+      "Accuracy": {
+        "difference": -0.0032565819649573433,
+        "lower": -0.007948137258722185,
+        "upper": 0.0006404331113219135
+      },
+      "Brier": {
+        "difference": -0.0008761612768767254,
+        "lower": -0.001801987742503221,
+        "upper": -1.2962754974704483e-05
+      },
+      "LogLoss": {
+        "difference": -0.0028871986889036113,
+        "lower": -0.005577898014263186,
+        "upper": -0.00017166804517336837
+      }
+    },
+    "multiple_comparison_adjustment": false,
+    "paired_games": 10901,
+    "right": "W-W3",
+    "selection_exposed": true
+  },
+  "provenance": {
+    "aggregate_verification": "Historical objective and season metrics were independently recomputed from authenticated per-game exports. Only sanitized aggregates are public.",
+    "failed_owner_return_sha256": "ae14d708cf85615c1c9c57a7891db85261a5b1632ecd70349730bf2dde51d9b0",
+    "historical_accepted_owner_return_sha256": "df98ed0758c29deaed943355349833ab0aeaa23a79693b5efc027e835075e4da",
+    "public_review_reproduces": "Information-time and evaluation contracts on invented data; not private real-data retraining."
+  },
+  "providers": [
+    {
+      "current_log_loss": null,
+      "current_matched_games": null,
+      "hypothetical_ROI": null,
+      "name": "Kalshi",
+      "required_evidence": "Exact event identity, pre-cutoff quote availability, compatible full-game settlement, executable price and applicable fee rules.",
+      "status": "NOT_ESTABLISHED_BY_THIS_FAILED_ATTEMPT"
+    },
+    {
+      "current_log_loss": null,
+      "current_matched_games": null,
+      "hypothetical_ROI": null,
+      "name": "Polymarket",
+      "required_evidence": "Exact event identity, pre-cutoff quote availability, compatible full-game settlement, executable price and applicable fee rules.",
+      "status": "NOT_ESTABLISHED_BY_THIS_FAILED_ATTEMPT"
+    },
+    {
+      "current_log_loss": null,
+      "current_matched_games": null,
+      "hypothetical_ROI": null,
+      "name": "DraftKings",
+      "required_evidence": "Exact event identity, pre-cutoff quote availability, compatible full-game settlement, executable price and applicable fee rules.",
+      "status": "NOT_ESTABLISHED_BY_THIS_FAILED_ATTEMPT"
+    }
+  ],
+  "published_snapshot_date": "2026-11-03",
+  "schema": "sports-edge-lab.public.ncaa-review.v1"
+}

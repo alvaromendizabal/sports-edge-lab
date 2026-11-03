@@ -1,5 +1,48 @@
 # Sports Edge Lab · NCAA women's basketball
 
+[Project](../../README.md) · [Open interactive dashboard](https://alvaro-ncaa-research-review.alv-mendizabal.chatgpt.site/tracks/ncaaw/index.html) · [Dashboard source](index.html) · [Methodology and runnable example](../../examples/ncaa_review/README.md) · [Separate men's track](../ncaam/README.md)
+
+## Current review — November 3, 2026 UTC
+
+The accepted historical evidence compares objective-specific models on **10,901 exact shared games** across 2024–25 and 2025–26. The latest B032 owner attempt then failed at parent-data restoration: **zero new real fits, source refreshes, forecasts or prospective issues**. The failed return and prior accepted research remain preserved. A later independent full-byte return readback established durability without adding scientific credit.
+
+### One fixed selection for each objective
+
+| Evaluation window | Exact games | Best log loss | Same model's Brier | Best accuracy | Best margin MAE | Best total MAE |
+|---|---:|---:|---:|---:|---:|---:|
+| 2024–25 | 5,280 | 0.452535 | 0.150583 | 77.46% | 9.691 | 12.625 |
+| 2025–26 | 5,621 | 0.456575 | 0.151638 | 76.59% | 9.682 | 12.660 |
+| Both seasons | 10,901 | 0.454618 | 0.151127 | 77.01% | 9.687 | 12.643 |
+
+The log-loss, accuracy, margin and total columns may use different models. Each is selected on the pooled historical cohort and stays fixed when the window changes. The interactive view also separates Brier and RMSE leaders and displays reliability bins, calibration error, AUC, signed point bias and the exact game counts. The [sanitized aggregate JSON](evidence.json) contains the full precision and qualifications; public model IDs keep exact active recipes private.
+
+These historical seasons are **development-exposed**: they contributed to model selection after evaluation. They are not untouched confirmation or a record of prospectively issued picks. Availability relies on a declared 24-hour historical release assumption; official-season completeness is not established. Probability ties receive half accuracy credit and no directional pick; point errors are in basketball points including overtime.
+
+### Probability quality and winner accuracy are different objectives
+
+The log-loss selection minus the accuracy selection has pooled log-loss difference **-0.002887**, with descriptive week-block interval **[-0.005578, -0.000172]**. Its accuracy difference is **-0.3257 percentage points**, with interval **[-0.7948, +0.0640]**. The latter crosses zero.
+
+These 2,000 resamples retain whole weeks within seasons and identical games for the two selections. They are not adjusted for the prior model search or dependence across weeks. A descriptive historical difference does not establish future advantage or profitability.
+
+### Original monitoring, rolling research and provider comparisons
+
+Frozen-original parameters and actual issue timestamps remain unchanged. Rolling reconstruction must use only labels and features released strictly before each training or prediction cutoff, and must remain separate from the original model's season record. More recent training data does not guarantee better future predictions.
+
+The active provider scope is **Kalshi, Polymarket and DraftKings only**. Current-season matched comparisons, executable-price replay, ROI and market edge remain **unavailable**, not zero. Every comparison requires the same event, ordered teams, horizon, target and settlement, plus qualified quote clocks. The failed attempt did not reach these stages. Passing software fixtures never supplies missing game or quote evidence.
+
+### Reproducible public engineering
+
+The new [credential-free example](../../examples/ncaa_review/README.md) implements exact population pairing, information-clock validation, separate winner/margin/total metrics, an invented chronological baseline, explicit-fee payoff math and complete streamed-byte verification. Negative tests cover future-label poisoning, equal boundaries, wrong settlements, incompatible identities, missing coverage, mixed evaluation tracks and the actual stream-context failure class. Generated pages are checked against the exact aggregate JSON; real browser tests exercise every objective/window state at desktop and mobile widths.
+
+No private model bodies, exact active features, licensed responses, individual forecast archives or execution handoffs are published. The [publication boundary](../../docs/PUBLICATION_BOUNDARY.md) remains in force. The accepted historical return digest is `df98ed0758c29deaed943355349833ab0aeaa23a79693b5efc027e835075e4da`; the failed current return digest is `ae14d708cf85615c1c9c57a7891db85261a5b1632ecd70349730bf2dde51d9b0`.
+
+<details>
+<summary>Earlier published track history — preserved as dated evidence through B030</summary>
+
+The narrative below is the earlier November 2 track snapshot. Its acquisition targets, inherited reference definitions and run-status statements describe that date, not the active three-provider scope or latest execution above.
+
+# Sports Edge Lab · NCAA women's basketball
+
 Player-adjusted team strength, possession efficiency, tempo and roster continuity with explicit separation between long statistical history and shorter odds history.
 
 This track lives in the shared [Sports Edge Lab](../../README.md) repository and `sports-edge-lab-dev` workspace. Its private archive prefix is `tracks/ncaaw/` in the central data lake.
@@ -70,3 +113,5 @@ The accepted B030 owner-return digest is `842c299af8d177b289cc12568c8eb2faaac0a3
 The March tournament Brier records near 0.1028 and 0.1034 use different populations. They are not all-season baselines or reproduced NCAA recipes. The original serving recipe and its runtime, numerical, source-time and prospective-issuance gates remain unchanged.
 
 See the [publication boundary](../../docs/PUBLICATION_BOUNDARY.md) for the distinction between inspectable aggregate evidence and privately reproducible research.
+
+</details>
