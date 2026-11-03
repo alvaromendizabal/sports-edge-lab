@@ -6,6 +6,8 @@
 
 [**Open the NFL dashboard →**](https://sports-edge-lab-nfl.alv-mendizabal.chatgpt.site/) · [NFL evidence](tracks/nfl/README.md) · [Five-minute technical review](docs/REVIEW_GUIDE.md) · [System design](docs/SYSTEM_DESIGN.md) · [Reproducibility boundary](docs/PUBLICATION_BOUNDARY.md)
 
+[**Open the FBS browser dashboard →**](https://sports-edge-lab-fbs.alv-mendizabal.chatgpt.site) · [FBS recovery and current-season coverage](https://sports-edge-lab-fbs.alv-mendizabal.chatgpt.site/recovery.html) · [FBS source and model card](tracks/ncaaf/README.md)
+
 ## Current NFL evidence · November 3, 2026
 
 **Eight model families. Three targets. One auditable comparison.** The latest authenticated owner execution passed all 63 stages, fitted 192 forward models and issued early research forecasts for 29 games. It reused the completed historical 1,152-cell design across eight feature blocks. The dashboard accounts for all 272 scheduled games, every game last week and every game this week. Early forecasts remain separate from final-hour-qualified recommendations, of which there are zero.
@@ -54,7 +56,7 @@ For ML engineering roles, follow [recovery](docs/RECOVERABLE_OPERATIONS.md), [se
 | Track | Entry point | Publication boundary |
 |---|---|---|
 | NFL | [Current evidence](tracks/nfl/README.md) | Updated November 3; authenticated forward execution and explicit coverage gaps |
-| NCAA FBS | [Track](docs/V134_COMPLETION_AND_SHARED_INVENTORY.md) | Independently maintained research; no NFL result is transferred to FBS |
+| NCAA FBS | [Browser dashboard](https://sports-edge-lab-fbs.alv-mendizabal.chatgpt.site) · [Track](tracks/ncaaf/README.md) | V024 completed; V025 partial work preserved; independent FBS evidence |
 | NBA | [Research view](docs/NBA_RESEARCH_CARD.md) | Separately dated basketball evidence |
 | NCAA basketball | [Open dashboards](https://alvaro-ncaa-research-review.alv-mendizabal.chatgpt.site/) · [Men's evidence](tracks/ncaam/README.md) · [Women's evidence](tracks/ncaaw/README.md) · [Runnable contracts](examples/ncaa_review/README.md) | Separate historical selections, current execution gaps and three-provider qualification |
 

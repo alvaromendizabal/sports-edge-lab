@@ -1,5 +1,8 @@
 # NCAA FBS · V024 research model card
 
+> **Owner update, V025 / November 3:** partial exit 2, with 197 committed learned states, one failed forward attempt and 99 final states not attempted. No new complete owner comparison or promotion is claimed. V024 remains the last complete scientific study. [Operational review and source limits](../../docs/fbs/RECOVERY_AND_COVERAGE_2026-11-03.md).
+
+
 **Dated evidence: November 3, 2026. Status: historical research complete; no model promotion and no genuine live forecasts.**
 
 [Interactive evidence](../../docs/fbs/index.html) · [Full-precision public aggregate](../../docs/fbs/V024_AGGREGATE_2026-11-03.json) · [Verification record](../../docs/fbs/V024_REVIEW_2026-11-03.md) · [Executed notebook](../../notebooks/fbs_branch_review.ipynb)

@@ -1,0 +1,315 @@
+{
+  "schema": "sports-edge-lab.fbs.public-v025-operational-review.v1",
+  "release_date": "2026-11-03",
+  "evidence_class": "AUTHENTICATED_PRIVATE_OWNER_AGGREGATES_NOT_PUBLIC_RAW_REPRODUCTION",
+  "owner_attempt": {
+    "release": "V025",
+    "status": "PARTIAL",
+    "exit_code": 2,
+    "planned_learned_fits": 297,
+    "attempted_forward_fits": 198,
+    "committed_fits": 197,
+    "failed_fits": 1,
+    "final_fits_not_attempted": 99,
+    "reused_fits": 0,
+    "new_forecasts": 0,
+    "new_orders": 0,
+    "new_complete_performance_comparison": false,
+    "failure_class": "NUMERICAL_OPTIMIZER_STOP_WITH_PARTIAL_WORK_PRESERVED",
+    "returned_archive_sha256": "9ec5bd11c835ee6e9bc30c4f4bc59680efd67cfc5e9e86bad6f758b2c80527b2"
+  },
+  "last_complete_study": "V024",
+  "private_recovery_prepared_not_owner_executed": true,
+  "source_snapshot": {
+    "assessment_at": "2026-11-03T21:38:44.242546Z",
+    "capture_start": "2026-11-02T03:07:02Z",
+    "capture_end": "2026-11-02T03:07:53Z",
+    "observed_games": 888,
+    "completed_games": 622,
+    "pure_fbs_completed_games": 500,
+    "upcoming_seven_days": 63,
+    "game_market_events": 63,
+    "mapped_game_market_events": 55,
+    "game_market_rows": 1835,
+    "mapped_game_market_rows": 1603,
+    "quarantined_game_market_rows": 232,
+    "player_prop_rows": 18,
+    "mapped_player_prop_rows": 18,
+    "tbd_clock_gaps": 6,
+    "explicit_clock_gaps": 2,
+    "all_latest_or_complete_coverage_proven": false
+  },
+  "active_provider_coverage": [
+    {
+      "provider": "DraftKings",
+      "game_market_rows": 186,
+      "mapped_rows": 162,
+      "observed_events": 62,
+      "mapped_events": 54,
+      "qualified_current_cutoff_quotes": 0,
+      "status": "EARLY_STALE_OBSERVATIONS_ONLY"
+    },
+    {
+      "provider": "Kalshi",
+      "game_market_rows": null,
+      "mapped_rows": null,
+      "observed_events": null,
+      "mapped_events": null,
+      "qualified_current_cutoff_quotes": 0,
+      "status": "QUALIFIED_PANEL_UNAVAILABLE_NOT_PROOF_PRODUCT_ABSENT"
+    },
+    {
+      "provider": "Polymarket",
+      "game_market_rows": null,
+      "mapped_rows": null,
+      "observed_events": null,
+      "mapped_events": null,
+      "qualified_current_cutoff_quotes": 0,
+      "status": "QUALIFIED_PANEL_UNAVAILABLE_US_GLOBAL_REMAIN_SEPARATE"
+    }
+  ],
+  "original_replay_2026": {
+    "evidence_class": "RETROSPECTIVE_FROZEN_RECIPE_REPLAY_NOT_ISSUED_FORECASTS",
+    "games": 622,
+    "correct_winners": 465,
+    "winner_logloss": 0.5133276378,
+    "winner_brier": 0.1732519718,
+    "margin_mae": 14.59976158,
+    "total_mae": 13.09277548,
+    "weekly": [
+      {
+        "season": 2026,
+        "week": 1,
+        "games": 99,
+        "correct_winner": 85,
+        "accuracy": 0.8585858585858586,
+        "logloss": 0.35789802854459635,
+        "brier": 0.11168953308466173,
+        "ece": 0.07237644760649381,
+        "mcc": 0.16508332072280235,
+        "margin_mae": 17.327250913591648,
+        "margin_rmse": 21.351492594071576,
+        "total_mae": 12.201927346736205,
+        "total_rmse": 15.061699812039754
+      },
+      {
+        "season": 2026,
+        "week": 2,
+        "games": 86,
+        "correct_winner": 71,
+        "accuracy": 0.8255813953488372,
+        "logloss": 0.41216107093539905,
+        "brier": 0.13556233746363291,
+        "ece": 0.08803464588129413,
+        "mcc": 0.44143323100062226,
+        "margin_mae": 15.26582902574305,
+        "margin_rmse": 18.706209117870156,
+        "total_mae": 11.28621940145397,
+        "total_rmse": 14.43307020663746
+      },
+      {
+        "season": 2026,
+        "week": 3,
+        "games": 75,
+        "correct_winner": 63,
+        "accuracy": 0.84,
+        "logloss": 0.40631700162155665,
+        "brier": 0.12893859646398986,
+        "ece": 0.06912262320686043,
+        "mcc": 0.521168438562221,
+        "margin_mae": 13.316000035614575,
+        "margin_rmse": 16.514122946583687,
+        "total_mae": 13.419711667632452,
+        "total_rmse": 16.72906982590844
+      },
+      {
+        "season": 2026,
+        "week": 4,
+        "games": 71,
+        "correct_winner": 49,
+        "accuracy": 0.6901408450704225,
+        "logloss": 0.5425095331567173,
+        "brier": 0.18807799691240928,
+        "ece": 0.10485387139347987,
+        "mcc": 0.31874775021448376,
+        "margin_mae": 15.360956731622661,
+        "margin_rmse": 19.10300237721697,
+        "total_mae": 12.218439125248947,
+        "total_rmse": 14.457700504413227
+      },
+      {
+        "season": 2026,
+        "week": 5,
+        "games": 59,
+        "correct_winner": 42,
+        "accuracy": 0.711864406779661,
+        "logloss": 0.5841504689838712,
+        "brier": 0.19608077452296968,
+        "ece": 0.08913780320623832,
+        "mcc": 0.4096892878538011,
+        "margin_mae": 15.665161112068583,
+        "margin_rmse": 19.754782083235515,
+        "total_mae": 13.774133805279353,
+        "total_rmse": 16.67539371588795
+      },
+      {
+        "season": 2026,
+        "week": 6,
+        "games": 58,
+        "correct_winner": 37,
+        "accuracy": 0.6379310344827587,
+        "logloss": 0.5972804422334961,
+        "brier": 0.20587833833292513,
+        "ece": 0.122228349802032,
+        "mcc": 0.2573819098583825,
+        "margin_mae": 13.25269822450444,
+        "margin_rmse": 17.05998295162949,
+        "total_mae": 13.524252205589132,
+        "total_rmse": 17.341249451286902
+      },
+      {
+        "season": 2026,
+        "week": 7,
+        "games": 62,
+        "correct_winner": 40,
+        "accuracy": 0.6451612903225806,
+        "logloss": 0.646219434085985,
+        "brier": 0.22945071526943714,
+        "ece": 0.13507464387300722,
+        "mcc": 0.25262158224835785,
+        "margin_mae": 12.244759583453773,
+        "margin_rmse": 14.932363137605334,
+        "total_mae": 13.764011047466429,
+        "total_rmse": 16.6712988477853
+      },
+      {
+        "season": 2026,
+        "week": 8,
+        "games": 56,
+        "correct_winner": 32,
+        "accuracy": 0.5714285714285714,
+        "logloss": 0.7797267765126988,
+        "brier": 0.28309158268465695,
+        "ece": 0.2471528399550799,
+        "mcc": 0.017543859649122806,
+        "margin_mae": 14.021906081627678,
+        "margin_rmse": 17.044417288944906,
+        "total_mae": 15.486899654006464,
+        "total_rmse": 19.385162107703096
+      },
+      {
+        "season": 2026,
+        "week": 9,
+        "games": 56,
+        "correct_winner": 46,
+        "accuracy": 0.8214285714285714,
+        "logloss": 0.47468989451150867,
+        "brier": 0.15061405049063512,
+        "ece": 0.1190543914690214,
+        "mcc": 0.6010407640085653,
+        "margin_mae": 12.967174933495217,
+        "margin_rmse": 15.874129515799977,
+        "total_mae": 13.810670156577308,
+        "total_rmse": 17.281630174793502
+      }
+    ]
+  },
+  "rolling_issued_2026": {
+    "games": 0,
+    "winner_logloss": null,
+    "margin_mae": null,
+    "total_mae": null,
+    "status": "RAW_FEATURE_VALUE_PATH_BLOCKED"
+  },
+  "paper_results": {
+    "orders": 0,
+    "proposed_stake": 0,
+    "realized_pnl": null,
+    "roi": null,
+    "status": "NO_QUALIFIED_EXECUTABLE_LEDGER"
+  },
+  "limitations": [
+    "Historical evaluation remains exposed.",
+    "No current-season outcome selects a model.",
+    "Numerical recovery is separate from predictive qualification.",
+    "Private raw data, active recipes and individual forecasts are withheld."
+  ],
+  "historical_matched_comparisons": {
+    "evidence_class": "PRESERVED_RETROSPECTIVE_REPLAY_AND_ARCHIVED_PROVIDER_PANEL; NOT_PROVEN_ACTUAL_PREGAME_POSSESSION",
+    "verification": "INDEPENDENTLY_RECOMPUTED; EXACT_EVENT_LABEL_AND_MODEL_VALUE_MATCH",
+    "panels": [
+      {
+        "provider": "DraftKings",
+        "market": "h2h",
+        "target": "winner",
+        "n": 192,
+        "exact_game_and_label_pairing_verified": true,
+        "cohort_commitment_sha256": "561bfd580777c33fa33a56d8d92e058ceb403c0f48744fd4d152e6e612c70df4",
+        "model": {
+          "games": 192,
+          "correct": 132,
+          "accuracy": 0.6875,
+          "logloss": 0.6043587720872505,
+          "brier": 0.20924099075963176
+        },
+        "provider_metrics": {
+          "games": 192,
+          "correct": 136,
+          "accuracy": 0.7083333333333334,
+          "logloss": 0.553191342348842,
+          "brier": 0.1896134696556131
+        }
+      },
+      {
+        "provider": "DraftKings",
+        "market": "spreads",
+        "target": "margin",
+        "n": 199,
+        "exact_game_and_label_pairing_verified": true,
+        "cohort_commitment_sha256": "6b9317b06985de94f1b9976f7f984b47eaa7bef1eba2648e0f0fe792757a912b",
+        "model": {
+          "games": 199,
+          "mae": 14.325366993134631,
+          "rmse": 17.67819197573953,
+          "bias": 0.1880422918772564
+        },
+        "provider_metrics": {
+          "games": 199,
+          "mae": 12.030150753768844,
+          "rmse": 14.583324958121548,
+          "bias": -1.5829145728643217
+        }
+      },
+      {
+        "provider": "DraftKings",
+        "market": "totals",
+        "target": "total",
+        "n": 199,
+        "exact_game_and_label_pairing_verified": true,
+        "cohort_commitment_sha256": "1fb52e6f7a369fcb94f450295590f8418bf0985ce47134fb162b79e2662c5a7a",
+        "model": {
+          "games": 199,
+          "mae": 14.637073092198388,
+          "rmse": 17.975532025024425,
+          "bias": -1.9519014342813215
+        },
+        "provider_metrics": {
+          "games": 199,
+          "mae": 13.329145728643216,
+          "rmse": 16.469516534324008,
+          "bias": -1.4899497487437185
+        }
+      }
+    ],
+    "winner_disagreements": {
+      "model_right_provider_wrong": 18,
+      "model_wrong_provider_right": 22,
+      "total_disagreements": 40
+    },
+    "unavailable_providers": [
+      "Kalshi",
+      "Polymarket"
+    ],
+    "live_execution_qualified": false
+  }
+}
