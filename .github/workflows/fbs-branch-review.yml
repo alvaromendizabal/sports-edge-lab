@@ -25,6 +25,8 @@ jobs:
           python -m examples.fbs_contracts --output "${RUNNER_TEMP}/fbs-review"
           python -m examples.fbs_contracts --output "${RUNNER_TEMP}/fbs-review"
           python -m examples.fbs_contracts.build_review --check
+          python -m examples.fbs_contracts.build_recovery_review --check
+          python -m examples.fbs_contracts.certified_resume
   fbs-notebook:
     runs-on: ubuntu-24.04
     steps:
@@ -53,7 +55,9 @@ jobs:
         env:
           PLAYWRIGHT_MODULE_DIR: ${{ runner.temp }}/fbs-browser/node_modules/playwright
           FBS_SCREENSHOTS: ${{ runner.temp }}/fbs-screenshots
-        run: node examples/fbs_contracts/tests/test_dashboard_browser.cjs
+        run: |
+          node examples/fbs_contracts/tests/test_dashboard_browser.cjs
+          node examples/fbs_contracts/tests/test_recovery_browser.cjs
       - name: Preserve desktop and mobile evidence views
         uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02
         with:

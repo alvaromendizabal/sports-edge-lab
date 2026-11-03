@@ -1,5 +1,11 @@
 # Sports Edge Lab · NCAA football
 
+[**Open the browser dashboard →**](https://sports-edge-lab-fbs.alv-mendizabal.chatgpt.site) · [Recovery and 2026 coverage](https://sports-edge-lab-fbs.alv-mendizabal.chatgpt.site/recovery.html)
+
+
+**Latest owner attempt — V025, November 3, 2026: partial.** It preserved 197 committed fits, one failed forward attempt and 99 final learned states not attempted. V024 remains the last completed owner study. [Inspect the recovery demonstration, all nine replay weeks and three-provider source coverage](../../docs/fbs/recovery.html).
+
+
 **Latest verified study — V024, November 3, 2026:** 723 fresh fits, a preserved negative result, and zero live forecast issues. The registered challenger has worse winner log loss than V023 on both exposed historical seasons. Seven fixed comparisons share exact identities and labels on 918 games in 2024 and 934 in 2025; all 12 displayed metrics were independently recomputed. Current raw feature-value reconstruction remains unverified and live issue stays blocked.
 
 [Interactive FBS evidence](../../docs/fbs/index.html) · [Current model card](MODEL_CARD.md) · [Dated verification](../../docs/fbs/V024_REVIEW_2026-11-03.md) · [Public aggregate JSON](../../docs/fbs/V024_AGGREGATE_2026-11-03.json) · [Executed notebook](../../notebooks/fbs_branch_review.ipynb) · [Run the invented example](../../examples/fbs_contracts/README.md)
