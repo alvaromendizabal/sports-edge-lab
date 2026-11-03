@@ -29,7 +29,7 @@ def evidence(league):
 
 def render_track(data):
     league=data['league'];sibling='ncaaw' if league=='ncaam' else 'ncaam'
-    template=(HERE/'dashboard.template.html').read_text()
+    template=(HERE/'dashboard.html.tmpl').read_text()
     embedded=json.dumps(data,sort_keys=True,separators=(',',':'),allow_nan=False).replace('<','\\u003c')
     for key,value in {'__TITLE__':escape(data['league_label']),'__SIBLING__':sibling,
         '__SIBLING_LABEL__':"women's basketball" if sibling=='ncaaw' else "men's basketball",
