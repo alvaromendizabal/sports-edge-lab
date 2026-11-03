@@ -3,6 +3,7 @@ on:
   pull_request:
     paths:
       - 'examples/nba_branch/**'
+      - 'tracks/nba/**'
       - 'docs/nba/**'
       - 'docs/NBA_RESEARCH_CARD.md'
       - 'docs/evidence/2026-10-29-nba-b009-audit.json'
@@ -11,6 +12,7 @@ on:
     branches: [main]
     paths:
       - 'examples/nba_branch/**'
+      - 'tracks/nba/**'
       - 'docs/nba/**'
       - 'docs/NBA_RESEARCH_CARD.md'
       - 'docs/evidence/2026-10-29-nba-b009-audit.json'
@@ -37,3 +39,12 @@ jobs:
         run: python -m examples.nba_branch.contracts
       - name: Verify standalone NBA page agrees with sanitized evidence
         run: python -m examples.nba_branch.build_review --check
+      - name: Test NBA evidence admission and partial-owner boundaries
+        run: python -m unittest discover -s tracks/nba/public_monitor/tests -v
+      - name: Execute the invented NBA monitor walkthrough
+        run: python -m tracks.nba.public_monitor
+      - name: Verify the dated NBA aggregate monitor
+        run: python -m tracks.nba.public_monitor.build --check
+      - name: Test progressive-enhancement interaction logic
+        run: node --test docs/nba/monitor.test.cjs
+

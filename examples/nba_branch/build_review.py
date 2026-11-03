@@ -84,7 +84,7 @@ code{background:#eaf0f4;border-radius:4px;padding:2px 5px;overflow-wrap:anywhere
 <p class="eyebrow">NBA / Research &amp; engineering</p><h1>Controlled comparisons.<br>Verifiable progress.</h1>
 <p class="lede">B009 completed a separately registered NBA experiment. The next NBA branch makes feature changes and training-window changes independently visible, preserves exact checkpoints, and keeps source timing attached to every admitted observation.</p>
 <p><span class="tag">B009 completed with reported gaps</span> <span class="tag pending">B010 real execution pending</span></p></div></header>
-<main><section class="metrics" aria-label="Verified accounting scopes">
+<main><aside class="note"><strong>Preserved October 29, 2026 snapshot.</strong> The dated B009/B010 status below is unchanged. See the <a href="monitor.html">November 3 evidence monitor</a> for the admitted fixed-model diagnostics, subsequent completed research and latest failed-publication boundary.</aside><section class="metrics" aria-label="Verified accounting scopes">
 <div class="metric"><span>B009 new NBA units</span><strong>''' + str(data["new_real_nba_units"]) + '''</strong><span>Completed native estimator units</span></div>
 <div class="metric"><span>Lifetime NBA units</span><strong>''' + str(data["lifetime_nba_units"]) + '''</strong><span>Unique units; predecessor aliases excluded</span></div>
 <div class="metric"><span>Combined basketball units</span><strong>''' + str(data["combined_basketball_units"]) + '''</strong><span>Includes NCAA; not an NBA-only total</span></div>
@@ -125,3 +125,4 @@ def main(argv=None):
 
 if __name__ == "__main__":
     main()
+

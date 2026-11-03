@@ -6,6 +6,14 @@ This track lives in the shared [Sports Edge Lab](../../README.md) repository. NB
 
 ## Current verified status
 
+The [November 3 public evidence monitor](../../docs/nba/monitor.html) reports the last fully admitted **94-game fixed-model diagnostic**, not 94 prospectively issued forecasts: B003 log loss **0.6472**, Brier **0.2290**, and accuracy **61/94**. Its owner finished November 2 at 6:57 p.m. Pacific. Historical seasons and actual pre-tip source-possession limitations remain explicit; the current season cannot select a challenger.
+
+A prior completed historical study contains **654 fits**. The latest historical branch completed another **366/366 fits**, but the overall owner **failed** when a source refresh omitted an older possessed final. The fresh frame is not admitted, the failed owner is not upgraded, and completed work is preserved without repeating fits. No qualified current provider edge or executable profit is established. The rolling current-season protocol remains inactive.
+
+The new [offline engineering example](public_monitor/README.md) demonstrates immutable forecast versions, qualified result unions, pre-update outcome possession, frozen/rolling separation, matched-product gates, unknown P&L, and truthful partial-owner accounting. All event-level examples are invented. Read the [sanitized aggregate capsule](public_monitor/evidence.json), run the negative tests, and inspect the accessible, progressively enhanced page; no credentials or private models are needed.
+
+## Preserved October 29 research snapshot
+
 The authenticated B009 owner return completed 10 new NBA native estimator units. The NBA lifetime ledger contains 85 unique units; the 268-unit combined basketball count includes other leagues. B009 did not promote an NBA challenger or establish a qualified MARKET advantage. Replayed checkpoints are excluded from new-fit counts.
 
 [B010-NBA research](../../docs/NBA_RESEARCH_CARD.md) is prepared as an independent branch; real owner execution remains pending. Its primary comparison registers incumbent and candidate features under both original and revised training windows, across the same two historical validation seasons. Current-season outcomes cannot select a model.
@@ -41,11 +49,12 @@ Final starting lineups, actual minutes and late injury updates must not enter a 
 
 Apply the [shared research protocol](../../docs/RESEARCH_PROTOCOL.md). Establish sport-specific identity mappings and source coverage before feature development. A market backtest requires an actual bookmaker quote and a recorded availability time. Track quality with log loss, Brier score, calibration and distribution coverage, then separately assess simulated market returns, closing-line value and uncertainty.
 
-Current phase: B009 NBA research completed without promotion; independent B010-NBA research is pending. Source timing, MARKET training support and prospective confirmation remain incomplete.
+At the preserved October 29 snapshot, B009 NBA research completed without promotion and independent B010-NBA research was pending. Source timing, MARKET training support and prospective confirmation remain incomplete. See the current verified status above for the newer evidence boundary.
 
 ## B003 basketball evidence
 
 NBA added 19 new estimator units and retained the 15-predictor regularized strength probability model: pooled historical log loss 0.607468 across 2,497 games. The new adjusted and rich arms do not beat it. The selected point head is a separate Ridge model, with total bias still +2.66 points in ending 2026. Matched T−60 MARKET cohorts expanded to nine ending-2025 and 16 ending-2026 games; no advantage is established. The 41 upcoming games have later-version early outlooks, no qualified current prices and no settled prospective scores at the snapshot.
 
 Read the [basketball study](../../docs/BASKETBALL_FOUNDATION.md), [generated league leaderboards](../../docs/BASKETBALL_RESULTS.md), [model card](../../docs/BASKETBALL_MODEL_CARD.md) and [executed notebook](../../notebooks/basketball_review.ipynb). The [public contracts](../../examples/basketball_contracts/README.md) use invented fixtures separate from actual aggregate results. B002 evidence and B001’s pre-modeling failure remain preserved. [B004 executed but stopped at its public-request ceiling](../../docs/BASKETBALL_B004_EXECUTION.md); no challenger was promoted. That dated B004 result is preserved; the authenticated B009 NBA follow-up is reported above.
+
 
