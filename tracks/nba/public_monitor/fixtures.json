@@ -1,0 +1,15 @@
+{
+  "data_kind": "INVENTED",
+  "description": "Invented events, probabilities and clocks. Not actual games or forecasts.",
+  "previous_results": [
+    {"data_kind": "INVENTED", "event": "invented-01", "home_win": 0, "official_final": true, "published_at": "2035-11-01T23:00:00Z", "possessed_at": "2035-11-01T23:05:00Z"}
+  ],
+  "fresh_results": [
+    {"data_kind": "INVENTED", "event": "invented-02", "home_win": 1, "official_final": true, "published_at": "2035-11-02T23:00:00Z", "possessed_at": "2035-11-02T23:05:00Z"}
+  ],
+  "issues": [
+    {"data_kind": "INVENTED", "event": "invented-01", "model_version": "toy-frozen-v1", "issue_id": "invented-issue-01", "track": "frozen", "side": "home", "target": "winner", "settlement": "full-game-including-overtime", "horizon_minutes": 60, "tip_at": "2035-11-01T20:00:00Z", "cutoff_at": "2035-11-01T19:00:00Z", "issued_at": "2035-11-01T19:00:00Z", "source_published_at": "2035-11-01T18:00:00Z", "source_possessed_at": "2035-11-01T18:05:00Z", "probability": 0.7},
+    {"data_kind": "INVENTED", "event": "invented-02", "model_version": "toy-frozen-v1", "issue_id": "invented-issue-02", "track": "frozen", "side": "home", "target": "winner", "settlement": "full-game-including-overtime", "horizon_minutes": 60, "tip_at": "2035-11-02T20:00:00Z", "cutoff_at": "2035-11-02T19:00:00Z", "issued_at": "2035-11-02T19:00:00Z", "source_published_at": "2035-11-02T18:00:00Z", "source_possessed_at": "2035-11-02T18:05:00Z", "probability": 0.7},
+    {"data_kind": "INVENTED", "event": "invented-02", "model_version": "toy-rolling-v1", "issue_id": "invented-issue-03", "track": "rolling", "side": "home", "target": "winner", "settlement": "full-game-including-overtime", "horizon_minutes": 60, "tip_at": "2035-11-02T20:00:00Z", "cutoff_at": "2035-11-02T19:00:00Z", "issued_at": "2035-11-02T19:00:00Z", "source_published_at": "2035-11-02T18:00:00Z", "source_possessed_at": "2035-11-02T18:05:00Z", "probability": 0.6}
+  ]
+}
