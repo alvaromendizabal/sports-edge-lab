@@ -1,6 +1,6 @@
 # Sports Edge Lab · NCAA men's basketball
 
-[Project](../../README.md) · [Interactive evidence source](index.html) · [Methodology and runnable example](../../examples/ncaa_review/README.md) · [Separate women's track](../ncaaw/README.md)
+[Project](../../README.md) · [Open interactive dashboard](https://alvaro-ncaa-research-review.alv-mendizabal.chatgpt.site/tracks/ncaam/index.html) · [Dashboard source](index.html) · [Methodology and runnable example](../../examples/ncaa_review/README.md) · [Separate women's track](../ncaaw/README.md)
 
 ## Current review — November 3, 2026 UTC
 

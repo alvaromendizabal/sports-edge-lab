@@ -56,7 +56,7 @@ For ML engineering roles, follow [recovery](docs/RECOVERABLE_OPERATIONS.md), [se
 | NFL | [Current evidence](tracks/nfl/README.md) | Updated November 3; current study and its unresolved forward failure |
 | NCAA FBS | [Track](docs/V134_COMPLETION_AND_SHARED_INVENTORY.md) | Independently maintained research; no NFL result is transferred to FBS |
 | NBA | [Research view](docs/NBA_RESEARCH_CARD.md) | Separately dated basketball evidence |
-| NCAA basketball | [Men's evidence](tracks/ncaam/README.md) · [Women's evidence](tracks/ncaaw/README.md) · [Runnable contracts](examples/ncaa_review/README.md) | Separate historical selections, current execution gaps and three-provider qualification |
+| NCAA basketball | [Open dashboards](https://alvaro-ncaa-research-review.alv-mendizabal.chatgpt.site/) · [Men's evidence](tracks/ncaam/README.md) · [Women's evidence](tracks/ncaaw/README.md) · [Runnable contracts](examples/ncaa_review/README.md) | Separate historical selections, current execution gaps and three-provider qualification |
 
 Each track has its own scientific ownership and update history. Shared infrastructure and navigation changes are coordinated through a scoped PR. [Contribution and ownership rules](CONTRIBUTING.md) · [Security](SECURITY.md) · [Public-use scope](docs/PUBLICATION_BOUNDARY.md)
 
