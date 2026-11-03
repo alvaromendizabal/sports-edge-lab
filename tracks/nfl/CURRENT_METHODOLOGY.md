@@ -50,7 +50,11 @@ The registered design covers eight native estimator families, eight rooted featu
 
 ## Public reproduction and private evidence
 
-The public code exposes evaluation contracts, recovery behavior, disclosure checks and invented demonstrations. Sanitized result aggregates and resolved examples can be inspected. Exact production features, fitted weights, tuning rules, active forecasts, licensed raw feeds, credentials and private cloud locations remain private.
+The public code exposes evaluation contracts, recovery behavior, disclosure checks and invented demonstrations. Sanitized result aggregates and resolved examples can be inspected. The owner explicitly authorized publication of rounded current per-game outputs. The public weekly export may contain game identity, rounded win probability/margin/total, a public model-series label, actual issue/source/fit clocks, outcomes and explicit missingness. This is a narrow output-disclosure exception, not permission to publish the model recipe or provider feed.
+
+Exact production features, feature-level values, fitted weights, tuned recipes, licensed raw quote arrays, credentials and private cloud locations remain private. Unknown public fields fail closed in the disclosure validator. Only DraftKings, Kalshi and Polymarket are active comparison providers. Earlier immutable evidence and its original provider universe remain inside the dated archive.
+
+Current early issues remain distinct from final-hour cards. “Issued before T−2h” means the output was available earlier; it does not mean the inputs were captured at T−2h or that a final-hour selection passed. The interface displays the actual clock, research classification and **NO BET** wherever fee-adjusted executable evidence is missing. Target-specific historically selected forward heads are never replaced by the retrospectively strongest current-season model.
 
 From the repository root:
 

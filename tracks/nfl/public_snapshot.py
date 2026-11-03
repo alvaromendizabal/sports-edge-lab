@@ -14,7 +14,7 @@ from datetime import datetime, timedelta
 from pathlib import Path
 
 HERE = Path(__file__).resolve().parent
-SCHEMA = "sports-edge-lab.nfl.public-review.v2"
+SCHEMA = "sports-edge-lab.nfl.public-review.v3"
 ALLOWED_FIELDS = {'$': ('as_of',
        'benchmarks',
        'cohorts',
@@ -96,6 +96,13 @@ ALLOWED_FIELDS = {'$': ('as_of',
                  'historical_study_elapsed_seconds',
                  'independently_scored_game_rows',
                  'new_base_fits',
+                 'new_forward_fits',
+                 'new_rolling_fits',
+                 'new_calibration_fits',
+                 'forward_games',
+                 'forward_issue_at_utc',
+                 'owner_elapsed_seconds',
+                 'restored_stack_fits',
                  'new_issued_forecasts',
                  'new_owner_fits',
                  'new_stack_fits',
@@ -188,7 +195,7 @@ ALLOWED_FIELDS = {'$': ('as_of',
                 'week')}
 
 FORBIDDEN = re.compile(r"s3://|arn:aws:|/home/|/workspace/|AKIA[A-Z0-9]{16}|ASIA[A-Z0-9]{16}|https?://[^\s]+[?&](?:token|key|signature)=|n0[0-9]{2}_[a-z]|__direct[0-9]|X-Amz-(?:Signature|Credential|Security-Token)=|api[_-]?key\s*[:=]", re.I)
-PROVIDERS = {"MARKET", "DraftKings", "PrizePicks", "Underdog", "Kalshi", "Polymarket"}
+PROVIDERS = {"DraftKings", "Kalshi", "Polymarket"}
 
 REQUIRED_FIELDS = {
     "$.models[]": {"label", "evaluation", "horizon", "season", "games", "correct", "accuracy", "log_loss", "brier", "ece_10"},
@@ -293,9 +300,11 @@ def validate_snapshot(data):
             require(low_losses == model["lost_disagreements_probability_50_to_60"], "Confidence-band loss count differs")
     issue = data["resolved_forecast_example"]
     require(datetime.fromisoformat(issue["feature_as_of_utc"]) <= datetime.fromisoformat(issue["issued_at_utc"]) <= datetime.fromisoformat(issue["kickoff_utc"]) - timedelta(hours=1), "Resolved issue misses its T1 clock")
-    require(data["execution"]["new_owner_fits"] == data["execution"]["new_base_fits"] + data["execution"]["new_stack_fits"], "New fit counts do not reconcile")
+    require(data["execution"]["new_owner_fits"] == sum(data["execution"][k] for k in ("new_base_fits", "new_stack_fits", "new_forward_fits", "new_rolling_fits", "new_calibration_fits")), "New fit counts do not reconcile")
     require(data["execution"]["protected_original_refits"] == 0, "Protected original refit")
-    require(data["execution"]["new_issued_forecasts"] == data["upcoming"]["new_final_hour_issues"] == 0, "Unsupported new issue claim")
+    require(data["upcoming"]["new_final_hour_issues"] == 0, "Unsupported final-hour issue claim")
+    require(data["execution"]["new_issued_forecasts"] >= data["execution"]["forward_games"] > 0, "Issue rows and games do not reconcile")
+    require(datetime.fromisoformat(data["execution"]["forward_issue_at_utc"]) <= datetime.fromisoformat(data["as_of"]), "Issue later than export")
     require(data["uncertainty"]["advantage_supported"] is False, "Unsupported durable edge claim")
     return {"status": "PUBLIC_CURRENT_EVIDENCE_VALIDATED", "public_models": len(data["models"]), "resolved_examples": len(examples), "provider_target_cells": len(groups), "private_training_reproduced": False}
 

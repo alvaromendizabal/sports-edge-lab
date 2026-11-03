@@ -1,14 +1,14 @@
 {
-  "schema": "sports-edge-lab.nfl.public-review.v2",
-  "as_of": "2026-11-03T19:51:14.727230+00:00",
+  "schema": "sports-edge-lab.nfl.public-review.v3",
+  "as_of": "2026-11-03T21:24:00+00:00",
   "season": 2026,
   "provenance": {
-    "owner_return_sha256": "4c8d7049f37753ef70340eb12de9e638340f43afdf536b02f7f7e454afc21a77",
-    "owner_return_bytes": 107071493,
+    "owner_return_sha256": "575cbfe4dfed5b918df1c0ec7cbee8adfc59d5d71f8d46c0dfe1052e76104abf",
+    "owner_return_bytes": 109893690,
     "physical_manifest_crc_payload_verification": "PASS",
     "external_completion_receipt": "Verified exact return binding",
-    "research_status": "Historical study complete; forward delivery repair required",
-    "public_scope": "Derived aggregate metrics and resolved examples only."
+    "research_status": "Complete registered research with explicit gaps; early forward issues are not final-hour selections",
+    "public_scope": "Derived aggregate metrics, resolved examples and explicitly authorized rounded current forecast outputs. Private recipes and raw feeds are excluded."
   },
   "cohorts": {
     "source_finals": 121,
@@ -20,7 +20,7 @@
     "latest_week": 8,
     "latest_week_source_finals": 14,
     "latest_week_common_games": 13,
-    "excluded_latest_final": "CHI–SEA; separately scored original T1 issue, absent from T2 common panel",
+    "excluded_latest_final": "CHI\u2013SEA; separately scored original T1 issue, absent from T2 common panel",
     "historical_binary_games": {
       "2024": 285,
       "2025": 284
@@ -97,7 +97,7 @@
       "all_losses_probability_50_to_60": 22
     },
     {
-      "label": "Pre-2024 selected tree — annual learned head",
+      "label": "Pre-2024 selected tree \u2014 annual learned head",
       "evaluation": "Pre-2024 recipe selection; descriptive monitoring with updating learned parents",
       "horizon": "T2",
       "season": 2026,
@@ -109,7 +109,7 @@
       "ece_10": 0.08148761259500939
     },
     {
-      "label": "Pre-2024 selected tree — weekly expanding",
+      "label": "Pre-2024 selected tree \u2014 weekly expanding",
       "evaluation": "Pre-2024 recipe selection; descriptive monitoring with updating learned parents",
       "horizon": "T2",
       "season": 2026,
@@ -121,7 +121,7 @@
       "ece_10": 0.058760833893784795
     },
     {
-      "label": "Pre-2024 selected tree — event expanding",
+      "label": "Pre-2024 selected tree \u2014 event expanding",
       "evaluation": "Pre-2024 recipe selection; descriptive monitoring with updating learned parents",
       "horizon": "T2",
       "season": 2026,
@@ -799,18 +799,6 @@
     {
       "season": 2024,
       "target": "win",
-      "label": "MARKET",
-      "cohort_sha256": "d490dd6495eafffc8b65fb187b704748700d1b941aa0e878d13776bb669b40fb",
-      "qualification": "Exact common events; historical quote/publication and possession qualifications apply.",
-      "games": 264.0,
-      "correct": 190.0,
-      "accuracy": 0.7196969696969697,
-      "log_loss": 0.5939775527374093,
-      "brier": 0.2028974741287756
-    },
-    {
-      "season": 2024,
-      "target": "win",
       "label": "DraftKings",
       "cohort_sha256": "d490dd6495eafffc8b65fb187b704748700d1b941aa0e878d13776bb669b40fb",
       "qualification": "Exact common events; historical quote/publication and possession qualifications apply.",
@@ -834,17 +822,6 @@
     {
       "season": 2024,
       "target": "margin",
-      "label": "MARKET",
-      "cohort_sha256": "d490dd6495eafffc8b65fb187b704748700d1b941aa0e878d13776bb669b40fb",
-      "qualification": "Exact common events; historical quote/publication and possession qualifications apply.",
-      "games": 264.0,
-      "mae": 9.782196969696969,
-      "rmse": 12.810943179622457,
-      "bias": -0.2859848484848485
-    },
-    {
-      "season": 2024,
-      "target": "margin",
       "label": "DraftKings",
       "cohort_sha256": "d490dd6495eafffc8b65fb187b704748700d1b941aa0e878d13776bb669b40fb",
       "qualification": "Exact common events; historical quote/publication and possession qualifications apply.",
@@ -863,17 +840,6 @@
       "mae": 9.877727238537563,
       "rmse": 12.908403001253818,
       "bias": -1.1238059977999961
-    },
-    {
-      "season": 2024,
-      "target": "total",
-      "label": "MARKET",
-      "cohort_sha256": "d490dd6495eafffc8b65fb187b704748700d1b941aa0e878d13776bb669b40fb",
-      "qualification": "Exact common events; historical quote/publication and possession qualifications apply.",
-      "games": 264.0,
-      "mae": 9.627840909090908,
-      "rmse": 12.502717507636392,
-      "bias": -1.4857954545454546
     },
     {
       "season": 2024,
@@ -901,18 +867,6 @@
     {
       "season": 2025,
       "target": "win",
-      "label": "MARKET",
-      "cohort_sha256": "8d53aa8f5c3fdabb3411e66cdd86a73c992a52ad600445747fea1e6210570998",
-      "qualification": "Exact common events; historical quote/publication and possession qualifications apply.",
-      "games": 249.0,
-      "correct": 167.0,
-      "accuracy": 0.6706827309236948,
-      "log_loss": 0.6024936441427939,
-      "brier": 0.2087819299964839
-    },
-    {
-      "season": 2025,
-      "target": "win",
       "label": "DraftKings",
       "cohort_sha256": "8d53aa8f5c3fdabb3411e66cdd86a73c992a52ad600445747fea1e6210570998",
       "qualification": "Exact common events; historical quote/publication and possession qualifications apply.",
@@ -936,17 +890,6 @@
     {
       "season": 2025,
       "target": "margin",
-      "label": "MARKET",
-      "cohort_sha256": "38c1c34acb00220c5f6988c2e8074dda5ed63d389070c0a1f66652819875f08f",
-      "qualification": "Exact common events; historical quote/publication and possession qualifications apply.",
-      "games": 250.0,
-      "mae": 9.748,
-      "rmse": 12.337949586539896,
-      "bias": -0.946
-    },
-    {
-      "season": 2025,
-      "target": "margin",
       "label": "DraftKings",
       "cohort_sha256": "38c1c34acb00220c5f6988c2e8074dda5ed63d389070c0a1f66652819875f08f",
       "qualification": "Exact common events; historical quote/publication and possession qualifications apply.",
@@ -965,17 +908,6 @@
       "mae": 10.941097904635237,
       "rmse": 13.739140649868892,
       "bias": 0.3051762090285107
-    },
-    {
-      "season": 2025,
-      "target": "total",
-      "label": "MARKET",
-      "cohort_sha256": "38c1c34acb00220c5f6988c2e8074dda5ed63d389070c0a1f66652819875f08f",
-      "qualification": "Exact common events; historical quote/publication and possession qualifications apply.",
-      "games": 250.0,
-      "mae": 10.606,
-      "rmse": 13.438470895157678,
-      "bias": -0.826
     },
     {
       "season": 2025,
@@ -1003,18 +935,6 @@
     {
       "season": 2026,
       "target": "win",
-      "label": "MARKET",
-      "cohort_sha256": "6550d93a8a0e3a466e72e3c35846495429e3f4d9a7dacd6cd0ff0321a02cad1d",
-      "qualification": "Exact common events; historical quote/publication and possession qualifications apply.",
-      "games": 119.0,
-      "correct": 78.0,
-      "accuracy": 0.6554621848739496,
-      "log_loss": 0.6464647256763781,
-      "brier": 0.22605108981476063
-    },
-    {
-      "season": 2026,
-      "target": "win",
       "label": "DraftKings",
       "cohort_sha256": "6550d93a8a0e3a466e72e3c35846495429e3f4d9a7dacd6cd0ff0321a02cad1d",
       "qualification": "Exact common events; historical quote/publication and possession qualifications apply.",
@@ -1038,17 +958,6 @@
     {
       "season": 2026,
       "target": "margin",
-      "label": "MARKET",
-      "cohort_sha256": "9ed4df3dc7e657937e53d89d837c729e1e84cff9dccf6533bed968ce1d2a2f1a",
-      "qualification": "Exact common events; historical quote/publication and possession qualifications apply.",
-      "games": 120.0,
-      "mae": 9.49375,
-      "rmse": 12.080394757622782,
-      "bias": 1.16875
-    },
-    {
-      "season": 2026,
-      "target": "margin",
       "label": "DraftKings",
       "cohort_sha256": "9ed4df3dc7e657937e53d89d837c729e1e84cff9dccf6533bed968ce1d2a2f1a",
       "qualification": "Exact common events; historical quote/publication and possession qualifications apply.",
@@ -1067,17 +976,6 @@
       "mae": 11.431376932983857,
       "rmse": 14.037058641491413,
       "bias": -0.8822687571668982
-    },
-    {
-      "season": 2026,
-      "target": "total",
-      "label": "MARKET",
-      "cohort_sha256": "9ed4df3dc7e657937e53d89d837c729e1e84cff9dccf6533bed968ce1d2a2f1a",
-      "qualification": "Exact common events; historical quote/publication and possession qualifications apply.",
-      "games": 120.0,
-      "mae": 10.7375,
-      "rmse": 13.278350173622224,
-      "bias": -0.9875
     },
     {
       "season": 2026,
@@ -1183,67 +1081,6 @@
   ],
   "providers": [
     {
-      "provider": "MARKET",
-      "status": "Comparable historical aggregate panels with clock qualifications",
-      "coverage": [
-        {
-          "season": 2024,
-          "target": "win",
-          "rows": 264,
-          "eligible": 264
-        },
-        {
-          "season": 2024,
-          "target": "margin",
-          "rows": 264,
-          "eligible": 264
-        },
-        {
-          "season": 2024,
-          "target": "total",
-          "rows": 264,
-          "eligible": 264
-        },
-        {
-          "season": 2025,
-          "target": "win",
-          "rows": 249,
-          "eligible": 249
-        },
-        {
-          "season": 2025,
-          "target": "margin",
-          "rows": 250,
-          "eligible": 250
-        },
-        {
-          "season": 2025,
-          "target": "total",
-          "rows": 250,
-          "eligible": 250
-        },
-        {
-          "season": 2026,
-          "target": "win",
-          "rows": 120,
-          "eligible": 119
-        },
-        {
-          "season": 2026,
-          "target": "margin",
-          "rows": 120,
-          "eligible": 120
-        },
-        {
-          "season": 2026,
-          "target": "total",
-          "rows": 120,
-          "eligible": 120
-        }
-      ],
-      "qualification": "Quote cutoff, acquisition time, outcome availability and model issue time remain distinct."
-    },
-    {
       "provider": "DraftKings",
       "status": "Comparable historical aggregate panels with clock qualifications",
       "coverage": [
@@ -1303,128 +1140,6 @@
         }
       ],
       "qualification": "Quote cutoff, acquisition time, outcome availability and model issue time remain distinct."
-    },
-    {
-      "provider": "PrizePicks",
-      "status": "No comparable audited game-target historical panel",
-      "coverage": [
-        {
-          "season": 2024,
-          "target": "win",
-          "rows": 0,
-          "eligible": 0
-        },
-        {
-          "season": 2024,
-          "target": "margin",
-          "rows": 0,
-          "eligible": 0
-        },
-        {
-          "season": 2024,
-          "target": "total",
-          "rows": 0,
-          "eligible": 0
-        },
-        {
-          "season": 2025,
-          "target": "win",
-          "rows": 0,
-          "eligible": 0
-        },
-        {
-          "season": 2025,
-          "target": "margin",
-          "rows": 0,
-          "eligible": 0
-        },
-        {
-          "season": 2025,
-          "target": "total",
-          "rows": 0,
-          "eligible": 0
-        },
-        {
-          "season": 2026,
-          "target": "win",
-          "rows": 0,
-          "eligible": 0
-        },
-        {
-          "season": 2026,
-          "target": "margin",
-          "rows": 0,
-          "eligible": 0
-        },
-        {
-          "season": 2026,
-          "target": "total",
-          "rows": 0,
-          "eligible": 0
-        }
-      ],
-      "qualification": "Player props are not converted into game-winner probabilities."
-    },
-    {
-      "provider": "Underdog",
-      "status": "No comparable audited game-target historical panel",
-      "coverage": [
-        {
-          "season": 2024,
-          "target": "win",
-          "rows": 0,
-          "eligible": 0
-        },
-        {
-          "season": 2024,
-          "target": "margin",
-          "rows": 0,
-          "eligible": 0
-        },
-        {
-          "season": 2024,
-          "target": "total",
-          "rows": 0,
-          "eligible": 0
-        },
-        {
-          "season": 2025,
-          "target": "win",
-          "rows": 0,
-          "eligible": 0
-        },
-        {
-          "season": 2025,
-          "target": "margin",
-          "rows": 0,
-          "eligible": 0
-        },
-        {
-          "season": 2025,
-          "target": "total",
-          "rows": 0,
-          "eligible": 0
-        },
-        {
-          "season": 2026,
-          "target": "win",
-          "rows": 0,
-          "eligible": 0
-        },
-        {
-          "season": 2026,
-          "target": "margin",
-          "rows": 0,
-          "eligible": 0
-        },
-        {
-          "season": 2026,
-          "target": "total",
-          "rows": 0,
-          "eligible": 0
-        }
-      ],
-      "qualification": "Player props are not converted into game-winner probabilities."
     },
     {
       "provider": "Kalshi",
@@ -2085,7 +1800,7 @@
   ],
   "resolved_forecast_example": {
     "game": "CHI at SEA",
-    "final": "CHI 34–17",
+    "final": "CHI 34\u201317",
     "issued_at_utc": "2026-11-02T23:56:35.061863+00:00",
     "feature_as_of_utc": "2026-11-02T23:56:01.654716+00:00",
     "kickoff_utc": "2026-11-03T01:15:00+00:00",
@@ -2102,14 +1817,14 @@
     "archived_early_cards": 45,
     "games": 15,
     "new_final_hour_issues": 0,
-    "status": "New owner forward stage blocked; archived early research forecasts are not final-hour or live advice.",
+    "status": "Genuine early research forecasts issued November 3 at 21:20 UTC. Rounded Week 9 outputs are published separately with their actual clocks; zero final-hour-qualified cards.",
     "next_kickoff_utc": "2026-11-06T01:15:00+00:00"
   },
   "uncertainty": {
     "method": "Paired whole-week bootstrap; eight completed evaluation weeks",
     "advantage_supported": false,
     "statement": "All reported paired advantage intervals include zero. The observed lead is not evidence of a durable or prospective edge.",
-    "small_confidence_band_note": "The 50–<60% loss counts are descriptive diagnostics. Removing them after seeing results does not establish an improved strategy."
+    "small_confidence_band_note": "The 50\u2013<60% loss counts are descriptive diagnostics. Removing them after seeing results does not establish an improved strategy."
   },
   "execution": {
     "families": 8,
@@ -2118,13 +1833,13 @@
     "annual_base_cells_registered": 1152,
     "pairwise_blends_completed": 224,
     "pairwise_blends_registered": 224,
-    "new_owner_fits": 13,
-    "new_base_fits": 4,
-    "new_stack_fits": 9,
-    "restored_annual_fits": 1148,
+    "new_owner_fits": 192,
+    "new_base_fits": 0,
+    "new_stack_fits": 0,
+    "restored_annual_fits": 1152,
     "restored_rolling_fit_uses": 447,
     "protected_original_refits": 0,
-    "new_issued_forecasts": 0,
+    "new_issued_forecasts": 27405,
     "historical_study_elapsed_seconds": 170.709814845,
     "source_public_requests": 22,
     "authorized_paid_calls": 16,
@@ -2133,12 +1848,19 @@
     "source_final_games": 121,
     "source_statistics_team_rows": 242,
     "source_play_by_play_rows": 21191,
-    "current_quote_capture_start_utc": "2026-11-03T19:51:03+00:00",
-    "current_quote_capture_end_utc": "2026-11-03T19:51:10+00:00",
+    "current_quote_capture_start_utc": "2026-11-03T21:17:29Z",
+    "current_quote_capture_end_utc": "2026-11-03T21:17:36Z",
     "independently_scored_game_rows": 698068,
     "season_scalar_checks": 13158,
     "weekly_provider_scalar_checks": 293583,
-    "qualification": "Restored fits are not new training. Source refresh completion does not establish complete historical provider coverage."
+    "qualification": "192 new forward native heads. All historical, rolling and stacking fits are restored. Early research issues are genuine timestamped outputs, not final-hour betting cards or full-pipeline selection qualification.",
+    "new_forward_fits": 192,
+    "new_rolling_fits": 0,
+    "new_calibration_fits": 0,
+    "restored_stack_fits": 9,
+    "forward_games": 29,
+    "forward_issue_at_utc": "2026-11-03T21:20:14.083292+00:00",
+    "owner_elapsed_seconds": 885.6539526160004
   },
   "limitations": [
     "2024 and 2025 are development-exposed retrospective evaluation; 2026 leader rankings are descriptive monitoring.",
@@ -2149,6 +1871,8 @@
     "No all-season Kalshi margin/total comparison or Polymarket advantage claim is supported.",
     "Reconstructed metrics, genuine earlier issues, hypothetical P&L and actual personal profit are separate records.",
     "No new final-hour forecasts were issued by this owner execution.",
-    "The late-appended resolved event passed T2 source/quote/model-availability lineage checks. Its prediction was reconstructed after the result without a new fit; it is not an original issued pick."
+    "The late-appended resolved event passed T2 source/quote/model-availability lineage checks. Its prediction was reconstructed after the result without a new fit; it is not an original issued pick.",
+    "Only DraftKings, Kalshi and Polymarket are active providers. Dated historical evidence retains its original providers and cohorts in the archive.",
+    "The 27,405 new early prediction rows cover 29 unique games and many candidate arms. They are not independent games, bets or validated recommendations. Frozen originals and registered updating recipes remain distinct."
   ]
 }

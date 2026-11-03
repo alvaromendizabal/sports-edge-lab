@@ -3,14 +3,14 @@
 const assert=require('node:assert/strict'),path=require('node:path'),fs=require('node:fs');
 const {chromium}=require(process.env.PLAYWRIGHT_MODULE_DIR||'playwright');
 (async()=>{
- const browser=await chromium.launch({headless:true});
+ const browser=await chromium.launch({headless:true,executablePath:process.env.NFL_BROWSER_EXECUTABLE||undefined});
  const page=await browser.newPage(),errors=[],network=[];
  page.on('pageerror',e=>errors.push(e.message));
  page.on('request',r=>{if(!r.url().startsWith('file:')&&!r.url().startsWith('data:'))network.push(r.url());});
  const widths=[1440,390];let states=0;
  for(const width of widths){
   await page.setViewportSize({width,height:1000});await page.goto('file://'+path.join(__dirname,'review.html'));
-  await page.locator('#results tbody tr').first().waitFor();
+  await page.locator('#results tbody tr').first().waitFor({state:'attached'});
   assert.equal(await page.evaluate(()=>document.documentElement.scrollWidth>innerWidth),false,'page overflow at '+width);
   // Current evidence is separately dated; old 316-panel controls remain intact.
   assert.equal(await page.locator('h1').count(),1);
@@ -23,7 +23,7 @@ const {chromium}=require(process.env.PLAYWRIGHT_MODULE_DIR||'playwright');
   assert.match(await page.locator('#current-comparison').innerText(),/0\.644579/);
   await page.selectOption('#kalshi-horizon','T2');
   assert.match(await page.locator('#current-comparison').innerText(),/0\.629080/);
-  assert.equal(await page.locator('#current-provider-table tbody tr').count(),6);
+  assert.equal(await page.locator('#current-provider-table tbody tr').count(),3);
   assert.match(await page.locator('#current-providers').innerText(),/incomplete/i);
   assert.match(await page.locator('#legacy').innerText(),/316 panels/);
   assert.match(await page.locator('#current-snapshots').innerText(),/Week 8/);
@@ -50,6 +50,39 @@ const {chromium}=require(process.env.PLAYWRIGHT_MODULE_DIR||'playwright');
   await page.evaluate(()=>window.scrollTo(0,0));
   if(process.env.NFL_SCREENSHOTS){fs.mkdirSync(process.env.NFL_SCREENSHOTS,{recursive:true});await page.screenshot({path:path.join(process.env.NFL_SCREENSHOTS,'nfl-current-'+width+'.png')});}
 
+  assert.equal(await page.locator('#historical-archive').getAttribute('open'),null,'dated archive starts closed');
+  for(const id of ['weekly-period','weekly-model','inventory-week','inventory-status'])assert.equal(await page.locator('label[for="'+id+'"]').count(),1);
+  assert.equal(await page.locator('#weekly-game-cards [data-game]').count(),14);
+  assert.match(await page.locator('#weekly-count').innerText(),/13 with winner probabilities/);
+  assert.match(await page.locator('[data-game="2026_08_CHI_SEA"]').innerText(),/Separate genuine T−1h issue/);
+  await page.selectOption('#weekly-model','original_frozen');
+  assert.equal(await page.locator('#weekly-game-cards [data-game]').count(),14,'missing model coverage cannot drop games');
+  assert.match(await page.locator('#weekly-count').innerText(),/0 with winner probabilities/);
+  await page.selectOption('#weekly-model','selected_weekly');
+  assert.match(await page.locator('#weekly-count').innerText(),/retrospective reconstruction/);
+  await page.selectOption('#weekly-period','9');
+  assert.equal(await page.locator('#weekly-model').inputValue(),'selected_latest_origin','future view uses historically selected series');
+  assert.equal(await page.locator('#weekly-game-cards [data-game]').count(),15);
+  assert.equal(await page.locator('#weekly-game-cards .no-bet').count(),15);
+  assert.match(await page.locator('#weekly-count').innerText(),/DraftKings 14\/15/);
+  assert.match(await page.locator('#weekly-policy').innerText(),/Full-pipeline promotion is false/);
+  assert.match(await page.locator('[data-game="2026_09_JAX_BAL"]').innerText(),/JAX 67.8%/);
+  assert.match(await page.locator('[data-game="2026_09_LV_SF"]').innerText(),/Unavailable/);
+  await page.locator('[data-game="2026_09_JAX_BAL"] summary').click();
+  assert.match(await page.locator('[data-game="2026_09_JAX_BAL"]').innerText(),/2026-11-03T21:20:14/);
+  assert.equal(await page.locator('#inventory-table tbody tr').count(),272);
+  await page.selectOption('#inventory-status','final');assert.equal(await page.locator('#inventory-table tbody tr').count(),121);
+  await page.selectOption('#inventory-status','upcoming');assert.equal(await page.locator('#inventory-table tbody tr').count(),151);
+  await page.selectOption('#inventory-week','9');assert.equal(await page.locator('#inventory-table tbody tr').count(),15);
+  await page.selectOption('#inventory-status','final');assert.equal(await page.locator('#inventory-table tbody tr').count(),0,'no invented future results');
+  await page.selectOption('#inventory-week','8');assert.equal(await page.locator('#inventory-table tbody tr').count(),14);
+  if(process.env.NFL_SCREENSHOTS){await page.locator('#weekly-cards').scrollIntoViewIfNeeded();await page.screenshot({path:path.join(process.env.NFL_SCREENSHOTS,'nfl-weekly-'+width+'.png')});}
+  assert.equal(await page.evaluate(()=>document.documentElement.scrollWidth>innerWidth),false,'weekly view overflow at '+width);
+  await page.selectOption('#weekly-model','all');assert.equal(await page.locator('#weekly-game-cards [data-game]').count(),15);
+  await page.selectOption('#weekly-period','8');
+  await page.selectOption('#inventory-status','all');await page.selectOption('#inventory-week','all');
+  states+=18;
+  await page.locator('#historical-archive>summary').click();
   assert.match(await page.locator('#coverage').innerText(),/280 \/ 285/);
   assert.match(await page.locator('#coverage').innerText(),/272 regular · 13 postseason/);
   for(const id of ['season','target','policy','metric','family','model','week-season','week-provider','time-scenario','time-decision'])assert.equal(await page.locator('label[for="'+id+'"]').count(),1);
@@ -123,6 +156,6 @@ const {chromium}=require(process.env.PLAYWRIGHT_MODULE_DIR||'playwright');
   states+=13;
  }
  assert.deepEqual(errors,[]);assert.deepEqual(network,[]);
- console.log(JSON.stringify({status:'PASS',viewports:widths,selection_scenarios:states,information_time_scenarios:24,keyboard_control:true,label_checks:30,external_requests:0,script_errors:0,monitoring_ranking:false,complete_week_slots:66,provider_week_states:330}));
+ console.log(JSON.stringify({status:'PASS',viewports:widths,selection_scenarios:states,information_time_scenarios:24,keyboard_control:true,label_checks:38,external_requests:0,script_errors:0,monitoring_ranking:false,complete_week_slots:66,provider_week_states:330,weekly_games:29,schedule_inventory:272,active_providers:3,archived_providers_preserved:true}));
  await browser.close();
 })().catch(error=>{console.error(error);process.exitCode=1});

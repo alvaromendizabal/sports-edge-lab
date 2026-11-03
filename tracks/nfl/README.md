@@ -2,7 +2,7 @@
 
 **Pregame forecasting, honest market comparisons, and recoverable ML systems.** Built by [Alvaro Mendizabal](https://github.com/alvaromendizabal) as one track in the existing [Sports Edge Lab](../../README.md) portfolio.
 
-[**Explore current evidence →**](review.html) · [Model card](CURRENT_MODEL_CARD.md) · [Methods & retraining](CURRENT_METHODOLOGY.md) · [Public evidence](current_evidence.json)
+[**Open the live NFL dashboard →**](https://sports-edge-lab-nfl.alv-mendizabal.chatgpt.site/) · [Model card](CURRENT_MODEL_CARD.md) · [Methods & retraining](CURRENT_METHODOLOGY.md) · [Public evidence](current_evidence.json)
 
 ## Current NFL evidence · November 3, 2026
 
@@ -22,10 +22,16 @@ The probability model lowers log loss by **0.015297** (2.37% relative) and Brier
 
 - [Resolved disagreement examples](current_disagreements.csv) show both model wins and losses, with rounded model confidence.
 - [Interactive evidence](review.html#current-seasons) separates winner, margin and total results across 2024/2025/2026.
-- [Provider coverage](review.html#current-providers) keeps MARKET, DraftKings, PrizePicks, Underdog, Kalshi and Polymarket distinct.
+- [Provider coverage](review.html#current-providers) keeps DraftKings, Kalshi and Polymarket distinct.
 - The full current source census, scored cohort and last-week coverage are documented in [the model card](CURRENT_MODEL_CARD.md). The 120-final Kalshi audit is not a claim to cover every latest source final.
 
-A winner forecast and a spread bet are different targets. An independently placed live bet cannot be counted as an issued pregame model pick. The public export contains resolved examples, not current private selections or raw paid quote arrays.
+A winner forecast and a spread bet are different targets. An independently placed live bet cannot be counted as an issued pregame model pick. The public export now includes rounded current research forecasts and actual clocks. Exact recipes, fitted weights, private locations and raw paid quote arrays remain private.
+
+### Every week, every game, and an honest issue clock
+
+[**Weekly forecast explorer →**](review.html#weekly-cards) shows all **14 Week 8 finals** and all **15 Week 9 scheduled games**, with winner probability, margin, total, result and forecast origin. [**Full-season inventory →**](review.html#season-inventory) retains all **272 schedule games**: 121 final and 151 upcoming at the November 3 source observation. Missing or incomparable forecasts remain explicit.
+
+The latest authenticated run added **192 native forward fits** and issued **27,405 early prediction rows across 29 games**, including multiple candidate arms. It reused the complete historical design instead of calling restored work new. All actual issues were early research forecasts at **21:20 UTC on November 3**; there were **zero final-hour-qualified cards**. The upcoming historical-selected heads are not the hindsight leaders in the season table. No qualified executable-price evidence means **NO BET**.
 
 ### Five-minute employer review
 
@@ -45,9 +51,12 @@ python -m unittest discover -s tracks/nfl -p 'test_*.py'
 python tracks/nfl/contracts.py --check-review
 ```
 
-**Public reproducibility has a clear boundary:** invented fixtures reproduce evaluation and recovery behavior; authenticated private-run aggregates are inspectable; proprietary transforms, tuned recipes, trained weights, active forecasts and licensed raw feeds remain private. These public tests do not reproduce private training or substitute for owner acceptance.
+**Public reproducibility has a clear boundary:** invented fixtures reproduce evaluation and recovery behavior; authenticated private-run aggregates are inspectable; proprietary transforms, tuned recipes, trained weights and licensed raw feeds remain private. Rounded per-game research outputs are published under the scoped disclosure policy in the [methods](CURRENT_METHODOLOGY.md#public-reproduction-and-private-evidence). These public tests do not reproduce private training or substitute for owner acceptance.
 
-GitHub's HTML viewer displays source. Download `review.html` and open it locally for the self-contained interactive page; this Markdown overview is the direct GitHub reading path.
+[Open the hosted dashboard directly](https://sports-edge-lab-nfl.alv-mendizabal.chatgpt.site/). GitHub remains the canonical repository for source and public evidence. The self-contained [HTML download](review.html) works offline; this Markdown overview is the direct GitHub reading path.
+
+<details>
+<summary><strong>Preserved engineering and research history · dated snapshots</strong></summary>
 
 ## Preserved engineering and research history
 
@@ -309,3 +318,5 @@ The [model-role evidence example](MODEL_ROLES.md) distinguishes a saved candidat
 ### Feature dependency admission
 
 [Feature lineage](FEATURE_LINEAGE.md) checks the full dependency graph at the decision cutoff, including unknown upstream teacher training clocks. Valid count-based features remain usable when a separate derived family is blocked. The credential-free example and behavioral tests use invented metadata, not sports results.
+
+</details>
