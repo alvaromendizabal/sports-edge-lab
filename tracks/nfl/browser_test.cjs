@@ -26,7 +26,6 @@ const {chromium}=require(process.env.PLAYWRIGHT_MODULE_DIR||'playwright');
   assert.match(await page.locator('#current-comparison').innerText(),/0\.629080/);
   assert.equal(await page.locator('#current-provider-table tbody tr').count(),3);
   assert.match(await page.locator('#current-providers').innerText(),/incomplete/i);
-  assert.match(await page.locator('#legacy').innerText(),/316 panels/);
   assert.match(await page.locator('#current-snapshots').innerText(),/Week 8/);
   for(const year of ['2024','2025','2026']){
    await page.selectOption('#current-year',year);
@@ -84,6 +83,7 @@ const {chromium}=require(process.env.PLAYWRIGHT_MODULE_DIR||'playwright');
   await page.selectOption('#inventory-status','all');await page.selectOption('#inventory-week','all');
   states+=18;
   await page.locator('#historical-archive>summary').click();
+  assert.match(await page.locator('#legacy').innerText(),/316 panels/);
   assert.match(await page.locator('#coverage').innerText(),/280 \/ 285/);
   assert.match(await page.locator('#coverage').innerText(),/272 regular · 13 postseason/);
   for(const id of ['season','target','policy','metric','family','model','week-season','week-provider','time-scenario','time-decision'])assert.equal(await page.locator('label[for="'+id+'"]').count(),1);
