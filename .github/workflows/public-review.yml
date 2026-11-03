@@ -35,6 +35,11 @@ jobs:
         run: |
           python -m examples.review_lab --output "${RUNNER_TEMP}/sports-edge-review"
           python -m examples.review_lab --output "${RUNNER_TEMP}/sports-edge-review"
+      - name: Test NCAA evaluation, stream recovery and exact aggregate pages
+        run: |
+          python -m unittest discover -s examples/ncaa_review -p 'test_*.py' -v
+          python examples/ncaa_review/contracts.py --demo
+          python examples/ncaa_review/build_dashboard.py --check
       - name: Check generated evidence page
         run: python -m examples.review_lab.build_review --check
       - name: Check current aggregate review and decision boundaries
@@ -95,7 +100,9 @@ jobs:
         env:
           PLAYWRIGHT_MODULE_DIR: ${{ runner.temp }}/dashboard-browser/node_modules/playwright
           DASHBOARD_SCREENSHOTS: ${{ runner.temp }}/dashboard-screenshots
-        run: node examples/review_lab/tests/test_dashboard_browser.cjs
+        run: |
+          node examples/review_lab/tests/test_dashboard_browser.cjs
+          node examples/ncaa_review/test_dashboard_browser.cjs
       - name: Preserve rendered public dashboard for visual review
         uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02
         with:
