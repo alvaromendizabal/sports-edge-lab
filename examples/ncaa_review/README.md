@@ -10,6 +10,7 @@ Python 3.11 or newer; standard library only:
 
 ```sh
 python examples/ncaa_review/contracts.py --demo
+python examples/ncaa_review/admission.py
 python -m unittest discover -s examples/ncaa_review -p 'test_*.py' -v
 python examples/ncaa_review/build_dashboard.py --check
 ```
@@ -74,12 +75,29 @@ The failed owner code entered a streaming-body context manager and then called a
 
 `verified_read` demonstrates a portable correction: retain the actual wrapper, call its ordinary bounded `read`, verify the complete byte count and SHA-256, and close that wrapper in `finally`. A regression double deliberately returns a *different* object from `__enter__`; the test proves that readback no longer depends on the context return value. Separate negative tests reject truncated, oversized and corrupt content and verify closure after failure. This public test exercises the failure class; it is not evidence that the replacement owner workload has already run successfully.
 
+## Resource admission with a bounded diagnostic
+
+[admission.py](admission.py) demonstrates a resource policy with **invented counters, process identities, memory sizes and worker demands**. It does not inspect this computer, modify a production lock or start an owner workload. The demonstration is a policy contract with injected sampler, lock and clock adapters; its successful admission is software evidence, not a completed scientific stage.
+
+CPU headroom comes from the change in an aggregate busy-CPU counter divided by the sampling interval and subtracted from the capacity of that same scope. Available memory is a separate measured input. After explicit reserves, the policy selects the largest whole worker count allowed by both resources and the requested worker limit. An unrelated process existing is not a veto. Missing aggregate measurements remain unavailable and cause a measured deferral, not an assumed idle machine.
+
+The process-tree diagnostic follows children and grandchildren using stable process identities that include start tokens. It does not confuse a reused PID with the original process. Aggregate counters include child work even when a child has exited between snapshots. The tree's CPU total is **not subtracted a second time**, and summed resident memory is not subtracted from available memory. Partial or invalid optional process detail stays explicit without overriding valid aggregate measurements.
+
+The injected lock adapter represents the **existing canonical project lock**. Acquisition must be nonblocking, and release must accept only the caller's own acquired token. Resource waiting does not hold that lock. Once admitted, the context holds it until the protected work exits, including an exception. A busy project lock still prevents a second owner from starting. The policy has no operation for removing a lock, changing its identity, terminating another workload or substituting a second lock.
+
+Waiting has an explicit positive budget measured by a monotonic clock. Each sampler call receives the remaining budget; each pause is clipped to it. The deadline is checked again after sampling and acquisition, so a result arriving at or after the deadline cannot authorize a start. Exhaustion yields one diagnostic containing sampled capacity, attempted worker counts, deferral reasons and elapsed waiting time. A token acquired too late is released before that diagnostic is yielded. Broken or nonadvancing clocks produce a diagnostic instead of an endless polling loop.
+
+Actual adapters must honor their timeouts, sample the same resource scope as the workload, and account for applicable CPU affinity/quotas and memory limits. This loop cannot interrupt arbitrary blocking adapter code. Resource readings are a snapshot, not a reservation against future activity; production demand and reserves need workload measurements and ongoing supervision. The toy sizes and budgets in this example are not production recommendations.
+
+Admission changes **when computation may start**, not which information a forecast may use. Original forecasts remain frozen; rolling models still need eligible training labels and inputs at each historical origin. The example makes no new source, fit, forecast, coverage or profit claim and changes none of the committed historical evidence or generated dashboards.
+
 ## Review map
 
 | File | What can be inspected |
 |---|---|
 | [contracts.py](contracts.py) | Information clocks, exact identity pairing, separate metrics, invented baseline, explicit-fee payoff and stream verification |
 | [test_contracts.py](test_contracts.py) | Future-outcome poisoning, equal-boundary exclusion, reordered identities, missing coverage, mixed-track rejection, stream-interface failures |
+| [admission.py](admission.py) and [test_admission.py](test_admission.py) | Aggregate resource headroom, child accounting, canonical lock ownership, bounded waits, late-result rejection and explicit diagnostics using invented fixtures |
 | [test_evidence.py](test_evidence.py) | Cohort closure, metric aggregation, calibration support, fixed selections, missing-value preservation and deterministic page generation |
 | [build_dashboard.py](build_dashboard.py) | Deterministic, dependency-free rendering from aggregate JSON |
 | [test_dashboard_browser.cjs](test_dashboard_browser.cjs) | Real desktop/mobile browser events, accessibility hooks, keyboard controls and offline rendering |
