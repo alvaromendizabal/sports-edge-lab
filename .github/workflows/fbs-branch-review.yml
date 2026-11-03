@@ -38,3 +38,26 @@ jobs:
         run: python -m pip install -r examples/basketball_contracts/notebook-requirements.txt
       - name: Execute in a real kernel and reopen saved HTML outputs
         run: python -m examples.fbs_contracts.execute_notebook --output "${{ runner.temp }}/fbs-branch-review.ipynb"
+  fbs-browser:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 8
+    steps:
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1
+        with:
+          persist-credentials: false
+      - name: Install pinned browser test dependency
+        run: |
+          npm install --prefix "${RUNNER_TEMP}/fbs-browser" --ignore-scripts --no-audit --no-fund playwright@1.56.1
+          node "${RUNNER_TEMP}/fbs-browser/node_modules/playwright/cli.js" install --with-deps chromium
+      - name: Verify every aggregate selector, keyboard, mobile and download state
+        env:
+          PLAYWRIGHT_MODULE_DIR: ${{ runner.temp }}/fbs-browser/node_modules/playwright
+          FBS_SCREENSHOTS: ${{ runner.temp }}/fbs-screenshots
+        run: node examples/fbs_contracts/tests/test_dashboard_browser.cjs
+      - name: Preserve desktop and mobile evidence views
+        uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02
+        with:
+          name: fbs-evidence-screenshots
+          path: ${{ runner.temp }}/fbs-screenshots/*.png
+          if-no-files-found: error
+          retention-days: 14
