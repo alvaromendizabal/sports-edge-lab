@@ -13,7 +13,9 @@ python -m tracks.nba.public_monitor.build --check
 node --test docs/nba/monitor.test.cjs
 ```
 
-Python uses only the standard library. Node.js is needed only for the optional interaction-logic tests. No model weights, external package installation, network requests, cloud credentials, licensed data, or real estimator fits are needed.
+Python uses only the standard library. Node.js is needed only for the optional interaction-logic tests. These four local commands need no model weights, external package installation, network requests, cloud credentials, licensed data, or real estimator fits.
+
+The separate NBA hosted browser job follows the repository's established pinned Playwright setup. It renders desktop/mobile screenshots, exercises actual controls and keyboard navigation, checks no-JavaScript content and sampled text contrast, and blocks remote page requests. Browser/dependency installation is a CI setup operation, not a provider-data acquisition. Its artifact is a bounded review, not a complete external accessibility or cross-browser audit.
 
 ## What is measured
 
@@ -53,7 +55,7 @@ No raw source responses, individual actual forecasts, provider quotes, proprieta
 - Current-season outcomes cannot choose new models or research directions.
 - A rolling study needs a separately registered, approved, causally qualified policy and actual timestamped issues.
 - Matched quotes, product rules, fees, liquidity and settlement are prerequisites for executable financial claims.
-- UI tests cover interaction logic, HTML structure, labels and deterministic generation, not a full external accessibility or cross-browser audit.
+- UI tests cover interaction logic, HTML structure, labels and deterministic generation. The separate hosted browser job adds actual rendering and bounded accessibility checks; it is not a full external accessibility or cross-browser audit.
 - This publication adds no real fits, new provider acquisitions, promotions, profits or deployment claims.
 
 The dated [October 29 NBA review](../../../docs/nba/index.html), existing research history and negative findings remain intact.

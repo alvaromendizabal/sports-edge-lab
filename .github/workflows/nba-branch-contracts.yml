@@ -48,3 +48,27 @@ jobs:
       - name: Test progressive-enhancement interaction logic
         run: node --test docs/nba/monitor.test.cjs
 
+  offline-browser:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 8
+    steps:
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1
+        with:
+          persist-credentials: false
+      - name: Install the repository-established pinned browser dependency
+        run: |
+          npm install --prefix "${RUNNER_TEMP}/nba-monitor-browser" --ignore-scripts --no-audit --no-fund playwright@1.62.1
+          node "${RUNNER_TEMP}/nba-monitor-browser/node_modules/playwright/cli.js" install --with-deps chromium
+      - name: Render offline desktop/mobile evidence and exercise actual controls
+        env:
+          PLAYWRIGHT_MODULE_DIR: ${{ runner.temp }}/nba-monitor-browser/node_modules/playwright
+          NBA_MONITOR_SCREENSHOTS: ${{ runner.temp }}/nba-monitor-screenshots
+        run: node docs/nba/monitor.browser.cjs
+      - name: Preserve rendered review and bounded accessibility checks
+        uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02
+        with:
+          name: nba-monitor-browser-review
+          path: ${{ runner.temp }}/nba-monitor-screenshots/*
+          if-no-files-found: error
+          retention-days: 14
+
