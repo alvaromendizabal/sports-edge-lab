@@ -4,6 +4,7 @@ const assert=require('node:assert/strict'),path=require('node:path'),fs=require(
 const {chromium}=require(process.env.PLAYWRIGHT_MODULE_DIR||'playwright');
 (async()=>{
  const browser=await chromium.launch({headless:true,executablePath:process.env.NFL_BROWSER_EXECUTABLE||undefined});
+ try {
  const page=await browser.newPage(),errors=[],network=[];
  page.on('pageerror',e=>errors.push(e.message));
  page.on('request',r=>{if(!r.url().startsWith('file:')&&!r.url().startsWith('data:'))network.push(r.url());});
@@ -157,5 +158,7 @@ const {chromium}=require(process.env.PLAYWRIGHT_MODULE_DIR||'playwright');
  }
  assert.deepEqual(errors,[]);assert.deepEqual(network,[]);
  console.log(JSON.stringify({status:'PASS',viewports:widths,selection_scenarios:states,information_time_scenarios:24,keyboard_control:true,label_checks:38,external_requests:0,script_errors:0,monitoring_ranking:false,complete_week_slots:66,provider_week_states:330,weekly_games:29,schedule_inventory:272,active_providers:3,archived_providers_preserved:true}));
- await browser.close();
+ } finally {
+  await browser.close();
+ }
 })().catch(error=>{console.error(error);process.exitCode=1});
