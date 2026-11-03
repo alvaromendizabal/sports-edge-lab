@@ -1,5 +1,7 @@
 # NBA public evidence monitor
 
+**[Open the public NBA evidence dashboard](https://sports-edge-lab-nba.alv-mendizabal.chatgpt.site)** in your browser; no HTML download is required. The reviewed five-asset projection was deployed and public access verified November 3, 2026. It contains no live provider acquisition, inference or private forecast service.
+
 An offline review of dated aggregate diagnostics and two reproducible, invented failure cases. The [evidence page source](../../../docs/nba/monitor.html) is generated from the reviewed [current publication capsule](evidence-v2.json). The [earlier capsule](evidence.json) remains unchanged. GitHub's source view is not a deployed application; a static-host export and its deployment receipt are separate from the source commit.
 
 ## Start in five minutes

@@ -6,6 +6,8 @@ This track lives in the shared [Sports Edge Lab](../../README.md) repository. NB
 
 ## Current verified status
 
+**[Open the NBA evidence dashboard](https://sports-edge-lab-nba.alv-mendizabal.chatgpt.site)** — a public browser-viewable static site, not an HTML download. The published projection contains only reviewed aggregates and invented engineering examples; it is not a live prediction service.
+
 The [November 3 public evidence monitor](../../docs/nba/monitor.html) reports the last fully admitted **94-game fixed-model diagnostic**, not 94 prospectively issued forecasts: B003 log loss **0.6472**, Brier **0.2290**, and accuracy **61/94**. Its owner finished November 2 at 6:57 p.m. Pacific. Historical seasons and actual pre-tip source-possession limitations remain explicit; the current season cannot select a challenger.
 
 A prior completed historical study contains **654 fits**. A later historical branch completed another **366/366 fits**, but its overall owner **failed** when a source refresh omitted an older possessed final. The next refresh reused the 366 fits, performed **zero new estimator fits** and passed **758 software tests**, but failed on a reconstruction-version mismatch after inputs refreshed. Neither failed owner is upgraded. Completed work and original issues remain preserved. No qualified current provider edge or executable profit is established. The rolling current-season protocol remains inactive.
