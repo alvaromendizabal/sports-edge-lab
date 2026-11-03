@@ -28,6 +28,15 @@
     };
   }
 
+  function toyVersion(mode) {
+    if (!["issued", "reconstruction"].includes(mode)) throw new Error("Unknown invented version view");
+    return { dataKind: "INVENTED", probability: mode === "issued" ? 0.7 : 0.62,
+      originalProbability: 0.7, archivedVersions: 2, prospectiveCredit: 0,
+      status: mode === "issued" ? "Original invented issue remains 70.0%; no source refresh can edit it."
+        : "Later invented reconstruction: 62.0%. Not issued; original 70.0% remains unchanged.",
+    };
+  }
+
   function boot(document) {
     const season = document.getElementById("season-filter");
     const objective = document.getElementById("objective-filter");
@@ -35,7 +44,8 @@
     const status = document.getElementById("filter-status");
     const filters = document.getElementById("filters");
     const mode = document.getElementById("demo-mode");
-    if (!season || !objective || !table || !status || !filters || !mode) return false;
+    const versionMode = document.getElementById("version-mode");
+    if (!season || !objective || !table || !status || !filters || !mode || !versionMode) return false;
 
     function updateTable() {
       const view = selectedView(season.value, objective.value);
@@ -55,16 +65,25 @@
       document.getElementById("demo-status").textContent = snapshot.status;
     }
 
+    function updateVersion() {
+      const version = toyVersion(versionMode.value);
+      document.getElementById("version-probability").textContent = `${(version.probability * 100).toFixed(1)}%`;
+      document.getElementById("version-status").textContent = version.status;
+    }
+
     season.addEventListener("change", updateTable);
     objective.addEventListener("change", updateTable);
     mode.addEventListener("change", updateDemo);
+    versionMode.addEventListener("change", updateVersion);
     filters.hidden = false;
     mode.disabled = false;
+    versionMode.disabled = false;
     updateTable();
     updateDemo();
+    updateVersion();
     return true;
   }
 
-  if (typeof module !== "undefined" && module.exports) module.exports = { selectedView, toySnapshot, boot };
+  if (typeof module !== "undefined" && module.exports) module.exports = { selectedView, toySnapshot, toyVersion, boot };
   if (typeof document !== "undefined") boot(document);
 })(typeof globalThis === "undefined" ? this : globalThis);

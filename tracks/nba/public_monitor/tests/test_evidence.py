@@ -104,7 +104,7 @@ class PublicEvidence(unittest.TestCase):
             validate(self.data)
 
     def test_unmatched_disagreement_accuracy_cannot_be_manufactured(self):
-        self.data["providers"][4]["disagreement_accuracy"] = 0.75
+        self.data["providers"][1]["disagreement_accuracy"] = 0.75
         with self.assertRaises(ValueError):
             validate(self.data)
 
@@ -126,7 +126,7 @@ class PublicEvidence(unittest.TestCase):
 
     def test_unknown_profit_does_not_become_numeric_during_render(self):
         html = render(self.data)
-        self.assertEqual(html.count("<td>Unknown</td>"), 7)
+        self.assertEqual(html.count("<td>Unknown</td>"), 4)
         self.assertIn("Missing historical P&amp;L is unknown, not zero", html)
 
     def test_generated_page_matches_reviewed_evidence(self):
@@ -141,7 +141,7 @@ class PublicEvidence(unittest.TestCase):
         self.assertTrue(all(scope in {"row", "col"} for scope in parser.th))
         self.assertTrue(set(parser.labels) <= set(parser.ids))
         self.assertIn("#main", parser.anchors)
-        self.assertEqual(set(parser.live), {"filter-status", "demo-status"})
+        self.assertEqual(set(parser.live), {"filter-status", "demo-status", "version-status"})
 
     def test_no_remote_scripts_or_individual_actual_forecasts(self):
         html = render(self.data)
@@ -159,6 +159,41 @@ class PublicEvidence(unittest.TestCase):
         self.assertIn('id="demo-mode" disabled', html)
         self.assertEqual(html.count('<tr data-season="'), 3)
         self.assertIn("prefers-reduced-motion:reduce", html)
+
+    def test_three_active_families_and_separate_polymarket_products(self):
+        self.assertEqual(self.data["active_provider_families"], ["DraftKings", "Kalshi", "Polymarket"])
+        self.assertEqual(PROVIDERS, ["DraftKings", "Kalshi", "Polymarket US", "Polymarket international"])
+
+    def test_prior_public_capsule_and_metrics_remain_unchanged(self):
+        prior = json.loads(EVIDENCE.with_name("evidence.json").read_text())
+        self.assertEqual(prior["schema"], "public.nba.monitor.v1")
+        self.assertEqual(self.data["metrics"], prior["metrics"])
+        self.assertEqual(len(prior["providers"]), 7)
+
+    def test_latest_refresh_reuse_is_not_new_fit_credit(self):
+        self.assertEqual(self.data["latest_refresh"]["new_estimator_fits"], 0)
+        self.assertEqual(self.data["latest_refresh"]["reused_completed_historical_fits"], 366)
+        self.data["latest_refresh"]["new_estimator_fits"] = 366
+        with self.assertRaisesRegex(ValueError, "latest failed refresh"):
+            validate(self.data)
+
+    def test_unknown_raw_provider_history_cannot_be_reported_as_zero(self):
+        self.data["providers"][0]["raw_historical_coverage"] = 0
+        with self.assertRaisesRegex(ValueError, "unknown provider history"):
+            validate(self.data)
+
+    def test_both_disagreement_direction_counts_remain_unknown(self):
+        for key in ("disagreement_model_right", "disagreement_provider_right"):
+            changed = copy.deepcopy(self.data)
+            changed["providers"][0][key] = 0
+            with self.subTest(key=key), self.assertRaisesRegex(ValueError, "unknown provider history"):
+                validate(changed)
+
+    def test_new_source_version_example_is_explicitly_invented(self):
+        html = render(self.data)
+        self.assertIn('id="version-mode" disabled', html)
+        self.assertIn("Later reconstruction (not issued)", html)
+        self.assertIn("The numbers and events in this example are invented", html)
 
 
 if __name__ == "__main__":

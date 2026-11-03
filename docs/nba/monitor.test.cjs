@@ -1,7 +1,7 @@
 /* Unit-level interaction checks; not a browser or external accessibility audit. */
 const test = require("node:test");
 const assert = require("node:assert/strict");
-const { selectedView, toySnapshot, boot } = require("./monitor.js");
+const { selectedView, toySnapshot, toyVersion, boot } = require("./monitor.js");
 
 test("all seasons and objectives remain visible by default", () => {
   const view = selectedView("all", "all");
@@ -53,11 +53,12 @@ function fixtureDocument() {
   const rowNodes = ["2024–25", "2025–26", "2026–27"].map((season) => ({ dataset: { season }, hidden: false }));
   const columnNodes = ["winner", "margin", "total"].map((objective) => ({ dataset: { objective }, hidden: false }));
   const nodes = {};
-  for (const id of ["season-filter", "objective-filter", "metrics-table", "filter-status", "filters", "demo-mode", "demo-accuracy", "demo-log-loss", "demo-games", "demo-status"]) {
+  for (const id of ["season-filter", "objective-filter", "metrics-table", "filter-status", "filters", "demo-mode", "demo-accuracy", "demo-log-loss", "demo-games", "demo-status", "version-mode", "version-probability", "version-status"]) {
     nodes[id] = { value: "all", hidden: true, disabled: true, textContent: "", handlers: {},
       addEventListener(kind, handler) { this.handlers[kind] = handler; } };
   }
   nodes["demo-mode"].value = "union";
+  nodes["version-mode"].value = "issued";
   nodes["metrics-table"].querySelectorAll = (selector) => selector.startsWith("tbody") ? rowNodes : columnNodes;
   return { getElementById: (id) => nodes[id] || null, nodes, rowNodes, columnNodes };
 }
@@ -88,4 +89,30 @@ test("unsafe toy mode retains an explicit rejection in the rendered status", () 
   assert.equal(document.nodes["demo-accuracy"].textContent, "100.0%");
   assert.equal(document.nodes["demo-games"].textContent, "1");
   assert.match(document.nodes["demo-status"].textContent, /REJECTED/);
+});
+
+test("a later input version leaves the original issue untouched", () => {
+  const issued = toyVersion("issued"), reconstruction = toyVersion("reconstruction");
+  assert.equal(issued.probability, 0.7);
+  assert.equal(reconstruction.probability, 0.62);
+  assert.equal(reconstruction.originalProbability, 0.7);
+  assert.equal(reconstruction.prospectiveCredit, 0);
+  assert.equal(reconstruction.archivedVersions, 2);
+  assert.match(reconstruction.status, /Not issued/);
+});
+test("unknown version choices cannot select a best-after-results record", () => {
+  assert.throws(() => toyVersion("best_result"), /Unknown/);
+});
+test("the source-version view has an actual handler and preserves explicit labels", () => {
+  const document = fixtureDocument();
+  boot(document);
+  assert.equal(document.nodes["version-mode"].disabled, false);
+  assert.equal(document.nodes["version-probability"].textContent, "70.0%");
+  document.nodes["version-mode"].value = "reconstruction";
+  document.nodes["version-mode"].handlers.change();
+  assert.equal(document.nodes["version-probability"].textContent, "62.0%");
+  assert.match(document.nodes["version-status"].textContent, /Not issued/);
+  document.nodes["version-mode"].value = "issued";
+  document.nodes["version-mode"].handlers.change();
+  assert.equal(document.nodes["version-probability"].textContent, "70.0%");
 });
