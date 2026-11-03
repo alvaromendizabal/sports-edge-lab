@@ -7,7 +7,7 @@ The repository exposes enough implementation to inspect engineering decisions wi
 | Public | Private or access-controlled |
 |---|---|
 | Information-time, identity and artifact contracts | Original licensed/private data and provider responses |
-| Metric implementation, matched-cohort behavior and scoped resolved examples | Complete immutable forecast archives and private current selections beyond the narrow NFL exception below |
+| Metric implementation, matched-cohort behavior and scoped resolved examples | Complete immutable forecast archives and private current selections beyond the narrow reporting exceptions below |
 | Synthetic fitting and negative-case tests | Production weights, checkpoints and tuned configuration |
 | Aggregate scores and their evaluation qualifications | Exact active feature transforms and representation parameters |
 | Architecture, operational failure classes and source attribution | Credentials, account identifiers, private object paths and execution handoffs |
@@ -25,7 +25,7 @@ Real NFL/FBS scorecards summarize audited private owner runs. The public export 
 
 ## Publication checks
 
-Changes are reviewed for secrets, private account/object paths, runtime packages, individual forecasts, raw licensed records and active feature recipes. Generic method names and aggregate outcomes are not substitutes for those private materials. A historical public implementation remains a dated historical implementation; it must not be confused with the current private model.
+Changes are reviewed for secrets, private account/object paths, runtime packages, individual forecasts outside the explicit reporting exceptions, raw licensed records and active feature recipes. Generic method names and aggregate outcomes are not substitutes for those private materials. A historical public implementation remains a dated historical implementation; it must not be confused with the current private model.
 
 This publication does not create a data redistribution entitlement or expand any source provider's terms. Source-specific usage rights continue to apply.
 
@@ -46,3 +46,13 @@ The owner explicitly authorized current-week projections in the browser dashboar
 Do not publish candidate-level forecast grids, exact recipe identifiers, feature-column lists, transforms, calibration parameters, production weights, raw feeds, private storage paths, credentials or personal conversations. Provider content stays within the permitted derived reporting scope; this exception creates no raw-data redistribution right. The 2026 outcomes cannot select a model, blend or stake policy.
 
 Current NFL comparison views use DraftKings, Kalshi and Polymarket exclusively. Historical studies remain immutable with dated original scopes. The public host is an explicitly published snapshot of canonical GitHub source; source commit and evidence time are visible. Deployment does not refresh research or prices.
+
+## FBS all-game analytical report: November 3 extension
+
+The owner explicitly authorized an NCAA FBS dashboard that retains every observed season game and the current week. The integration owner approved this narrowly scoped extension after reviewing shared main and open changes. It permits public game identities, schedule/result facts, rounded derived original-model replay outputs, genuinely issued outputs when independently admitted, rounded provider comparison values, coverage states and source/acquisition clocks. The current report has no admitted rolling or new issued forecast. Missing values remain explicit; they are never replaced by zeros or invented predictions.
+
+DraftKings, Kalshi, Polymarket US and Polymarket Global have separate product identities. Stored market references are analytical comparisons, not executable orders or a continuous feed. A historical price recovered later retains its real retrieval time. A catalog record without an individual quote timestamp cannot satisfy a historical prediction cutoff. Display collection does not depend on admission of private feature values, and neither activity creates a bet.
+
+Per-game values are rounded for analytical display. Headline metrics retain their original full-precision cohort calculations. The optional comparison CSV combines model replay, outcomes, coverage and derived references; it does not distribute raw quotes, order books, candles, provider identifiers or provider payload arrays. The Odds API permits dashboard display, derived-value use and storage in its [August 31, 2026 terms](https://the-odds-api.com/terms-and-conditions.html); these permissions do not authorize a repackaged raw-data service. Other source terms and rights remain applicable.
+
+Private recipes, weights, candidate prediction grids, exact feature transforms, complete immutable issue archives, owner packages, cloud identifiers and credentials remain excluded. This FBS scope does not modify the NFL exceptions or any basketball track. Earlier dated aggregate reports remain available as historical records.

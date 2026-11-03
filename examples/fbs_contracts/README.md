@@ -38,7 +38,7 @@ python -m examples.fbs_contracts.execute_notebook --output /tmp/fbs-branch-revie
 
 ## V024: matched aggregates and explicit publication boundaries
 
-The [current explorer](../../docs/fbs/index.html) reads the versioned [V024 aggregate](../../docs/fbs/V024_AGGREGATE_2026-11-03.json). `public_release.py` requires the complete seven-comparison/two-season grid, consistent cohort commitments, exact count-to-accuracy closure, finite metrics, fit accounting, distinct game-market/prop counts and approved fields. Unknown nested fields fail closed. These checks validate published facts; they do not authenticate unpublished records from the hashes alone.
+The [preserved V024 explorer](../../docs/fbs/research.html) reads the versioned [V024 aggregate](../../docs/fbs/V024_AGGREGATE_2026-11-03.json). `public_release.py` requires the complete seven-comparison/two-season grid, consistent cohort commitments, exact count-to-accuracy closure, finite metrics, fit accounting, distinct game-market/prop counts and approved fields. Unknown nested fields fail closed. These checks validate published facts; they do not authenticate unpublished records from the hashes alone.
 
 `matched_cohort.py` is a generic, standard-library scorer demonstrated on two invented events. It requires identical event/season/target sets, matching labels and kickoff clocks, and a declared issue time before kickoff. It rejects duplicate records, invalid probability values, naive timestamps, equal-count identity substitutions and label drift. Declared timestamps are not independent proof of actual possession. The public contract does not reconstruct private live feature values.
 
@@ -66,3 +66,17 @@ See the [model card](../../tracks/ncaaf/MODEL_CARD.md) for the three reproducibi
 ## Certified checkpoint recovery on invented problems
 
 Run `python -m examples.fbs_contracts.certified_resume`. It reuses the shared exact rational convex certificate, rejects a false solver success, preserves two committed states, solves only the remaining invented unit and reenters with zero new solves. [Implementation](certified_resume.py) · [Tests](tests/test_certified_resume.py) · [Interactive explanation](../../docs/fbs/recovery.html). These fixtures do not expose or reproduce the private football objective.
+
+## All-game season explorer and independent market clocks
+
+[Current dashboard](../../docs/fbs/index.html) retains the full observed inventory with left-joined provider evidence. [The clock selector](market_time.py) separates a source observation at a historical cutoff from proof of actual historical possession. It excludes missing quote clocks, later prices, incompatible products, ambiguous equal-time values and candles that extend beyond a cutoff. [Adversarial tests](tests/test_market_time.py) preserve valid zeros and all unmatched games.
+
+The sanitized report contains public game facts and explicitly authorized rounded analytical outputs. It has no raw feeds, private recipes, source credentials or model bodies. [Publication scope](../../docs/PUBLICATION_BOUNDARY.md#fbs-all-game-analytical-report-november-3-extension). Public values do not establish full private retraining reproducibility.
+
+```bash
+python -m examples.fbs_contracts.build_season_review --check
+node examples/fbs_contracts/tests/test_season_logic.cjs
+python -m unittest discover -s examples/fbs_contracts/tests -v
+```
+
+The separate CI browser test exercises all 888-game inventory views, current/last-week windows, provider switches, exact historical disagreement count, keyboard dialog, CSV analysis download, responsive layouts and an all-888-row no-script fallback. It rejects external requests and browser errors. These checks perform zero owner model fits.

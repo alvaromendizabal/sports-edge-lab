@@ -26,6 +26,8 @@ jobs:
           python -m examples.fbs_contracts --output "${RUNNER_TEMP}/fbs-review"
           python -m examples.fbs_contracts.build_review --check
           python -m examples.fbs_contracts.build_recovery_review --check
+          python -m examples.fbs_contracts.build_season_review --check
+          node examples/fbs_contracts/tests/test_season_logic.cjs
           python -m examples.fbs_contracts.certified_resume
   fbs-notebook:
     runs-on: ubuntu-24.04
@@ -58,6 +60,7 @@ jobs:
         run: |
           node examples/fbs_contracts/tests/test_dashboard_browser.cjs
           node examples/fbs_contracts/tests/test_recovery_browser.cjs
+          node examples/fbs_contracts/tests/test_season_browser.cjs
       - name: Preserve desktop and mobile evidence views
         uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02
         with:

@@ -6,7 +6,7 @@
 
 [**Open the NFL dashboard →**](https://sports-edge-lab-nfl.alv-mendizabal.chatgpt.site/) · [NFL evidence](tracks/nfl/README.md) · [Five-minute technical review](docs/REVIEW_GUIDE.md) · [System design](docs/SYSTEM_DESIGN.md) · [Reproducibility boundary](docs/PUBLICATION_BOUNDARY.md)
 
-[**Open the FBS browser dashboard →**](https://sports-edge-lab-fbs.alv-mendizabal.chatgpt.site) · [FBS recovery and current-season coverage](https://sports-edge-lab-fbs.alv-mendizabal.chatgpt.site/recovery.html) · [FBS source and model card](tracks/ncaaf/README.md)
+[**Open the FBS browser dashboard →**](https://sports-edge-lab-fbs.alv-mendizabal.chatgpt.site) · [FBS clock and coverage methodology](docs/fbs/SEASON_EXPLORER_2026-11-03.md) · [FBS source and model card](tracks/ncaaf/README.md)
 
 ## Current NFL evidence · November 3, 2026
 
@@ -56,7 +56,7 @@ For ML engineering roles, follow [recovery](docs/RECOVERABLE_OPERATIONS.md), [se
 | Track | Entry point | Publication boundary |
 |---|---|---|
 | NFL | [Current evidence](tracks/nfl/README.md) | Updated November 3; authenticated forward execution and explicit coverage gaps |
-| NCAA FBS | [Browser dashboard](https://sports-edge-lab-fbs.alv-mendizabal.chatgpt.site) · [Track](tracks/ncaaf/README.md) | V024 completed; V025 partial work preserved; independent FBS evidence |
+| NCAA FBS | [Browser dashboard](https://sports-edge-lab-fbs.alv-mendizabal.chatgpt.site) · [Track](tracks/ncaaf/README.md) | V026 recovery completed; all 888 observed season games; dated provider coverage |
 | NBA | [Research view](docs/NBA_RESEARCH_CARD.md) | Separately dated basketball evidence |
 | NCAA basketball | [Open dashboards](https://alvaro-ncaa-research-review.alv-mendizabal.chatgpt.site/) · [Men's evidence](tracks/ncaam/README.md) · [Women's evidence](tracks/ncaaw/README.md) · [Runnable contracts](examples/ncaa_review/README.md) | Separate historical selections, current execution gaps and three-provider qualification |
 

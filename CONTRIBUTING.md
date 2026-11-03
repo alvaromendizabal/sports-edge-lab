@@ -4,7 +4,7 @@
 
 Preserve completed work. Use one scoped branch and PR per change, inspect the current default-branch head and open PRs before editing, and do not overwrite concurrent track work. NFL, NCAA FBS, NBA and NCAA basketball keep independent research identities. A shared change needs an integration owner who reviews its effects across the tracks.
 
-Public contributions should include the concrete behavior changed, evidence or meaningful tests, limits and source attribution. Reproducible demonstrations use invented inputs or data whose public redistribution is authorized. Do not commit private runtime archives, credentials, model bodies, licensed source responses, exact active recipes or unissued predictions.
+Public contributions should include the concrete behavior changed, evidence or meaningful tests, limits and source attribution. Reproducible demonstrations use invented inputs or data whose public redistribution is authorized. Do not commit private runtime archives, credentials, model bodies, licensed source responses, exact active recipes or unissued live forecasts. Rounded retrospective reports require the explicit track-specific publication scope.
 
 ## Review contract
 

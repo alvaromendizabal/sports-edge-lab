@@ -6,7 +6,7 @@ const path = require('node:path');
 const {chromium} = require(process.env.PLAYWRIGHT_MODULE_DIR || 'playwright');
 const root = path.resolve(__dirname, '../../..');
 const data = JSON.parse(fs.readFileSync(path.join(root, 'docs/fbs/V024_AGGREGATE_2026-11-03.json'), 'utf8'));
-const url = 'file://' + path.join(root, 'docs/fbs/index.html');
+const url = 'file://' + path.join(root, 'docs/fbs/research.html');
 let browser;
 
 (async () => {

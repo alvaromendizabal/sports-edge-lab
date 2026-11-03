@@ -1,69 +1,62 @@
-# NCAA FBS · V024 research model card
+# NCAA FBS model card · V026 completion and 2026 monitoring
 
-> **Owner update, V025 / November 3:** partial exit 2, with 197 committed learned states, one failed forward attempt and 99 final states not attempted. No new complete owner comparison or promotion is claimed. V024 remains the last complete scientific study. [Operational review and source limits](../../docs/fbs/RECOVERY_AND_COVERAGE_2026-11-03.md).
+**Evidence dated November 3, 2026. Historical recovery complete; no new live forecast, rolling fit or model promotion.**
 
+[Season and market explorer](../../docs/fbs/index.html) · [Methodology](../../docs/fbs/SEASON_EXPLORER_2026-11-03.md) · [Preserved V024 card](MODEL_CARD_V024.md) · [Historical studies](../../docs/fbs/research.html)
 
-**Dated evidence: November 3, 2026. Status: historical research complete; no model promotion and no genuine live forecasts.**
+## Intended use and publication scope
 
-[Interactive evidence](../../docs/fbs/index.html) · [Full-precision public aggregate](../../docs/fbs/V024_AGGREGATE_2026-11-03.json) · [Verification record](../../docs/fbs/V024_REVIEW_2026-11-03.md) · [Executed notebook](../../notebooks/fbs_branch_review.ipynb)
+This report supports review of an NCAA FBS research system: winner probabilities, home-minus-away margins and combined points. The observed population includes FBS teams playing other FBS teams and non-FBS opponents. It is not a claim of independently proven official-season completeness or a trading service.
 
-## Intended use
+The owner explicitly authorized public schedule/result facts, rounded derived model outputs, provider reference values and source clocks. Complete private forecast archives, licensed response bodies, model weights, exact feature transforms and execution packages remain private. Rounded display values do not rescore headline metrics. The [publication boundary](../../docs/PUBLICATION_BOUNDARY.md) defines the narrow FBS scope.
 
-This card supports review of an NCAA FBS forecasting research pipeline, its historical model comparisons, and the engineering needed to preserve trustworthy results. The public repository supplies aggregate outcomes and generic reproducible contracts. It does not serve individual predictions, support automated wagers, or establish a profitable strategy.
+## Actual completed work
 
-The study models the home-team winner, home-minus-away final margin, and final combined points. It evaluates registered private model variants on a declared FBS-target population. FCS opponents can contribute context; “FBS-target” must not be read as a universal pure-FBS-versus-FBS population. The exact evaluated populations are committed separately for each season.
+V026 completed **100 new learned fits and reused 197 authenticated states**, producing 297 committed learned states in **70.212252817 seconds**. The inherited V025 attempt had stopped after 197 committed states and one failed forward attempt. Recovery preserves that failure and the original numerical stop signal; it does not count saved states as new fits.
 
-## Training, selection and evaluation
+The registered research reuses saved base predictions. Its chronological meta-policy selection uses only data through 2023. The 2024/2025 evaluations are exposed diagnostics; 2026 outcomes cannot select or tune a model. Annual fitted coefficients stay fixed while past completed-game feature state may expand. This is not a season-start feature freeze.
 
-| Stage | Role | Evidence |
-|---|---|---|
-| 2021–2023 | Chronological recipe selection and interval calibration | 432 new inner-selection fits |
-| 2024 | Exposed historical evaluation | 918 matched games, seven published fixed comparisons |
-| 2025 | Exposed historical evaluation | 934 matched games, seven published fixed comparisons |
-| Frozen model states | Research output retained for later admissible inference | Three fresh states |
-| 2026 | Current source diagnostics; excluded from recipe selection | Zero rolling fits and zero genuine issued forecasts |
+Actual V026 owner return: **128,049,129 bytes**, SHA-256 `fda3b6c068f9bf457add339027e1d9fdd53810a9fb56976e23ad4593abca7606`. Independent archive authentication checked physical bytes, all report pins, source/parent identity, the separate terminal record and a later external completion. Public release checks validate the sanitized export; the digest alone is not a substitute for those private records.
 
-The owner run completed **723 fresh fits: 432 inner selection + 288 historical evaluation + 3 frozen states**. It reused zero fit commitments and recorded zero failed units. The historical evaluation work includes registered arms beyond the seven selected/fixed aggregate panels published here. Each fit is a separate estimator invocation, not an observation or an inference. Research elapsed time was **1,485.157569 seconds**. This is run-local work, not the all-project lifetime fit count. [Source: dated aggregate](../../docs/fbs/V024_AGGREGATE_2026-11-03.json).
+## Exposed historical results
 
-The public names identify comparison panels. They do not reveal active feature definitions, fitted parameters, model checkpoints, blend construction, or selection formulas. The existing [publication boundary](../../docs/PUBLICATION_BOUNDARY.md) applies. A complete private rerun requires the private source and model artifacts; the public example does not claim to perform it.
+| Season | Games | Winner log loss | Brier | Accuracy | Margin MAE / RMSE | Total MAE / RMSE |
+|---|---:|---:|---:|---:|---:|---:|
+| 2024 | 918 | 0.525230 | 0.178311 | 73.31% | 13.536 / 17.003 | 12.782 / 16.252 |
+| 2025 | 934 | 0.493465 | 0.164686 | 74.95% | 12.806 / 16.239 | 12.693 / 15.727 |
 
-## Primary observed result
+These are the completed V026 registered selections. Winner log loss remains worse than V020 in both displayed seasons; V023 also has lower 2025 loss. Margin and total metrics move in different directions. The result does not establish universal improvement or authorize promotion. All earlier fixed selections remain in the season explorer; full V024 comparison panels remain in the historical page.
 
-| Exposed season | Games | Previous study V023 log loss | Registered challenger V024 log loss | Change, challenger minus previous |
-|---|---:|---:|---:|---:|
-| 2024 | 918 | 0.5264508762 | 0.5320835801 | +0.0056327039 |
-| 2025 | 934 | 0.4887974041 | 0.4980247955 | +0.0092273914 |
+Repeated inspection makes 2024/2025 unsuitable as untouched confirmation. Pre-2024 selection scores are selected OOF evidence, not an independent confirmatory test. Descriptive intervals are not formal coverage guarantees.
 
-Lower log loss is better. V024 is worse on both panels. Its winner calibration error is lower, and individual point metrics move in both directions; these diagnostics do not establish an overall improvement. The study does **not** promote the challenger. All seven fixed panels and the winner, margin and total metrics remain available in the [explorer](../../docs/fbs/index.html). No matched current market benchmark belongs to this particular study, so it cannot establish an advantage over market prices.
+## Current-season evidence
 
-The 2024 and 2025 seasons have been repeatedly examined. They are permanently exposed historical diagnostics, not untouched holdouts. Selecting a new recipe from these displayed results would introduce further selection bias. Differences in displayed scores are descriptive; no statistical significance or causal claim is attached to them.
+The authenticated inventory contains **888 observed games: 622 completed and 266 scheduled**. The original retrospective replay covers all 622 completed rows; 465 winner picks were correct and 157 incorrect. The separately preserved TF228 monitor has 301 games and approximately 0.465519 log loss. It must not replace or expand the broader cohort.
 
-## Metric definitions and comparison integrity
+| Original replay metric | Exact 622-game cohort |
+|---|---:|
+| Winner log loss | 0.513328 |
+| Brier | 0.173252 |
+| Accuracy | 74.76% |
+| ROC AUC | 0.769937 |
+| Ten-bin ECE | 0.044593 |
+| Margin MAE / RMSE | 14.600 / 18.185 |
+| Total MAE / RMSE | 13.093 / 16.290 |
 
-Winner metrics are natural-log binary log loss, Brier score, accuracy at a 0.5 threshold, correct count, ten-bin expected calibration error, and Matthews correlation coefficient. Margin and total metrics are mean absolute error, root mean squared error, and signed bias (prediction minus observed points). Lower error is better; higher accuracy and correlation are better; bias is judged by proximity to zero.
+The preceding complete Pacific calendar week, October 26–November 1, contains 56 observed games and 46 correct original replay winners. The current November 2–8 calendar week contains 63 observed scheduled games at the source clock. The prior calendar week spans 169 hours because daylight saving time ends; native football phase/week identifiers remain separate.
 
-Independent local verification of the private owner evidence established identical event identities, ordered teams, and labels across all seven panels for each season. All 21 per-game prediction columns agreed with the paired export, and **all 12 displayed aggregate metrics matched independent recomputation within 10⁻¹²**. The [aggregate JSON](../../docs/fbs/V024_AGGREGATE_2026-11-03.json) records season commitments and verification scope. Hash commitments identify the checked populations; they do not make the private records publicly reproducible or prove timing on their own.
+No replay row is represented as an issued forecast. This snapshot has **zero admitted rolling forecasts and zero new genuine issues**. The raw-to-feature numerical reconstruction and causal input checks are incomplete. Market and schedule collection proceeds independently of those model admission requirements.
 
-The generic [public scorer](../../examples/fbs_contracts/matched_cohort.py) demonstrates exact identity/label/kickoff checks on two invented events. It rejects equal-size mismatched cohorts instead of taking an intersection. It checks declared issue times but does not authenticate real historical possession. Its scoring logic is distinct from a native private feature producer. Its tests establish software behavior, not sports prediction quality.
+## Market comparison and abstention
 
-## Interval diagnostics
+On the archived exact 192-game DraftKings winner cohort, model log loss is **0.604359**, versus **0.553191** for DraftKings. Among 40 winner disagreements, the model was correct 18 times and DraftKings 22 times. On 199 point-market games, model/DraftKings margin MAE is **14.325 / 12.030**, and total MAE **14.637 / 13.329**. These are negative matched accuracy results for the model.
 
-The nominal interval level is 90%. Calibration uses pre-2024 outcomes. In 2024, both margin and total intervals covered 819 of 918 games (89.22%). In 2025, margin covered 849 of 934 (90.90%) and total covered 845 of 934 (90.47%). Mean width was 55.99 margin points and 52.41 total points. [Source: interval aggregate](../../docs/fbs/V024_AGGREGATE_2026-11-03.json).
+DraftKings, Kalshi, Polymarket US and Polymarket Global are distinct comparison products. The dashboard records observed coverage and retains each missing game. A last trade, candle close, book midpoint or no-vig sportsbook probability is labeled with its own meaning. A late retrieval can support a retrospective comparison, but cannot establish possession before a historical model issue. Quote-less catalog snapshots remain outside fixed-cutoff comparisons.
 
-These are descriptive diagnostics. Reusing selection data, dependent outcomes, population shifts and repeated examination prevent a formal distribution-free coverage guarantee. Coverage near a nominal level is insufficient to authorize current inference or a bet.
+No executable edge, realized P&L, ROI, fill, fee or settlement result is established. Every paper decision is **NO BET**, with **$0 proposed stake**.
 
-## Current-use limitations and abstention
+## Reproducibility and remaining limits
 
-The required current raw feature values do not yet have a verified executable reconstruction path. Matching metadata, ancestor hashes and observation clocks does not prove that submitted numeric values were produced by the required transformation. The current issue path therefore remains blocked. This run completed zero rolling refits and zero genuine forecasts. There is no public live betting or serving interface.
+The public report and deterministic renderer reproduce the all-game display from the committed sanitized JSON. Generic timing and left-join contracts run without credentials. Adversarial tests reject duplicate identities, post-cutoff observations, missing quote clocks, straddling candle buckets, changed replay results, private fields and silent inventory loss. Browser CI exercises mobile/desktop views, keyboard details, all four products, current/last-week windows, disagreement export and the complete no-script table.
 
-Observed source availability is also bounded. At the run’s acquisition clock, the strict next seven days contained 63 games, while an extended schedule contained 68. The 2,168 quote rows comprise 2,039 game-market rows and 129 player-prop rows. Of the game-market rows, 2,006 map and 33 are quarantined; 62 of 63 observed events have unique mappings. Zero rows were certified as actual 60- or 120-minute historical captures. These counts establish acquisition scope, not a qualified market comparison or permission to buy data. [Correction details](../../docs/fbs/V024_REVIEW_2026-11-03.md#source-scope-corrections).
-
-## Reproducibility and rights
-
-Three levels are explicit:
-
-1. **Public aggregate validation:** check schema, metric/count consistency, fit accounting, cohort commitments, publication fields and generated-page freshness.
-2. **Public invented execution:** run exact-cohort scoring, chronology guards, three small synthetic fits and unchanged reentry that adds zero fits. Run the notebook in a real kernel and inspect persisted HTML outputs.
-3. **Private research verification:** verify the authenticated return, independent completion and the individual source/prediction records. The public repository reports the verification outcome and byte commitments; it does not distribute those records.
-
-Run instructions and exact tests are in the [FBS example](../../examples/fbs_contracts/README.md). The notebook and browser checks execute in FBS-specific CI. No new software or data license is granted by this card. Original-source terms and the [publication boundary](../../docs/PUBLICATION_BOUNDARY.md) remain applicable. Earlier evidence is retained in the [FBS history](../../docs/fbs/README.md); different cohorts must not be pooled as if they were one experiment.
+This public execution does not retrain the private football models. Independent official-population closure, complete native provider price histories, real historical possession, the remaining feature-value producer and genuinely issued prospective evaluation are unresolved. These limitations affect scientific claims; they do not justify hiding available game or market observations.

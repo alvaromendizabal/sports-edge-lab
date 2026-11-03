@@ -3,12 +3,22 @@
 [**Open the browser dashboard →**](https://sports-edge-lab-fbs.alv-mendizabal.chatgpt.site) · [Recovery and 2026 coverage](https://sports-edge-lab-fbs.alv-mendizabal.chatgpt.site/recovery.html)
 
 
-**Latest owner attempt — V025, November 3, 2026: partial.** It preserved 197 committed fits, one failed forward attempt and 99 final learned states not attempted. V024 remains the last completed owner study. [Inspect the recovery demonstration, all nine replay weeks and three-provider source coverage](recovery.html).
+## Current season explorer and completed V026 recovery
+
+[All 888 observed games](index.html) · [Clock and coverage contract](SEASON_EXPLORER_2026-11-03.md) · [Current model card](../../tracks/ncaaf/MODEL_CARD.md)
+
+The public explorer retains **888 observed FBS-involving games: 622 completed and 266 scheduled**, including all **63 games in the recorded November 2–8 Pacific calendar week**. Original replay, actual results, rounded provider references and rolling status remain separate. A missing market never drops a game. Last week’s 56 observed games produced 46 correct original replay winners; the full replay produced 465 correct out of 622.
+
+V026 completed the registered recovery: **100 new learned fits plus 197 independently checked reused states, 297 committed states total**, in 70.212253 seconds. The V025 failure remains preserved below. V026 did not issue a new forecast or fit a rolling model. Mixed exposed historical results do not promote a champion.
+
+The season view includes all nine native-week scorecards, original winner/margin/total outputs, final scores, full replay metrics and calibration bins. Market controls separate T−120, T−60, the latest stored observation strictly before kickoff, and the latest stored snapshot. Recovered historical data keeps its actual retrieval clock; a missing quote timestamp cannot qualify an earlier cutoff. Polymarket US and Global are separate products. All decisions remain NO BET with zero stake.
+
+**Preserved prior attempt — V025, November 3, 2026: partial.** It preserved 197 committed fits, one failed forward attempt and 99 final learned states not attempted. At that attempt, V024 was the last completed owner study. [Inspect the recovery demonstration, all nine replay weeks and three-provider source coverage](recovery.html).
 
 
-## Latest verified study — V024, November 3, 2026
+## Preserved verified study — V024, November 3, 2026
 
-[Interactive comparison](index.html) · [Model card](../../tracks/ncaaf/MODEL_CARD.md) · [Verification record](V024_REVIEW_2026-11-03.md) · [Aggregate JSON](V024_AGGREGATE_2026-11-03.json) · [Executed notebook](../../notebooks/fbs_branch_review.ipynb)
+[Historical interactive comparison](research.html) · [Model card](../../tracks/ncaaf/MODEL_CARD.md) · [Verification record](V024_REVIEW_2026-11-03.md) · [Aggregate JSON](V024_AGGREGATE_2026-11-03.json) · [Executed notebook](../../notebooks/fbs_branch_review.ipynb)
 
 The owner run completed **723 fresh fits in 24 minutes 45 seconds**, with zero reused or failed units. Independent verification matched all seven fixed panels on exact identities, ordered teams and labels across **918 games in 2024 and 934 in 2025**, and recomputed all 12 displayed metrics within 10⁻¹². The registered challenger has worse winner log loss than V023 in both exposed historical seasons. **No promotion is claimed.** Current raw feature-value recomputation remains unverified, so this run issued zero genuine forecasts and made zero rolling refits.
 

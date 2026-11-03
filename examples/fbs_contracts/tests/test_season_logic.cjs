@@ -1,0 +1,28 @@
+'use strict';
+const assert=require('node:assert/strict');
+const fs=require('node:fs');
+const path=require('node:path');
+const {reference,filterGames,csvCell}=require('../../../docs/fbs/season.js');
+const data=JSON.parse(fs.readFileSync(path.join(__dirname,'../../../docs/fbs/season-2026.json'),'utf8'));
+const state={view:'all',week:'all',query:'',provider:'DraftKings',horizon:'latest_pre_kickoff',disagreements:false};
+for(const provider of ['DraftKings','Kalshi','Polymarket US','Polymarket Global'])
+ assert.equal(filterGames(data.games,{...state,provider},data.windows,data.prepared_at).length,888);
+assert.equal(filterGames(data.games,{...state,view:'completed'},data.windows,data.prepared_at).length,622);
+assert.equal(filterGames(data.games,{...state,view:'last'},data.windows,data.prepared_at).length,56);
+assert.equal(filterGames(data.games,{...state,view:'current'},data.windows,data.prepared_at).length,63);
+assert.equal(filterGames(data.games,{...state,view:'completed',horizon:'T120',disagreements:true},data.windows,data.prepared_at).length,40);
+const game={kickoff:'2026-11-03T14:00:00Z',markets:{Kalshi:[]}};
+const make=(quote_at,value=.7)=>({target:'winner',join_status:'matched',value,picked_home:value>=.5,quote_at,captured_at:'2026-11-04T15:00:00Z',reference_kind:'trade',product:'game_winner',interval_end_at:null});
+game.markets.Kalshi=[make('2026-11-03T11:00:00Z'),make('2026-11-03T14:00:00Z',.9),make('2026-11-03T14:01:00Z',.2)];
+assert.equal(reference(game,'Kalshi','winner','latest_pre_kickoff','2026-11-05T00:00:00Z').row.value,.7);
+assert.equal(reference(game,'Kalshi','winner','current','2026-11-05T00:00:00Z').status,'after_kickoff');
+game.markets.Kalshi=[{...make(null),captured_at:'2026-11-03T13:00:00Z'}];
+assert.equal(reference(game,'Kalshi','winner','latest_pre_kickoff','2026-11-05T00:00:00Z').row,null);
+assert.equal(reference(game,'Kalshi','winner','current','2026-11-05T00:00:00Z').status,'quote_clock_unknown');
+game.markets.Kalshi=[{...make('2026-11-03T11:59:00Z'),interval_end_at:'2026-11-03T12:01:00Z'}];
+assert.equal(reference(game,'Kalshi','winner','T120','2026-11-05T00:00:00Z').row,null);
+game.markets.Kalshi=[make('2026-11-03T11:00:00Z'),make('2026-11-03T11:00:00Z',.3)];
+assert.equal(reference(game,'Kalshi','winner','T120','2026-11-05T00:00:00Z').status,'conflict');
+assert.equal(csvCell('=HYPERLINK("https://example.test")'),'"\'=HYPERLINK(""https://example.test"")"');
+assert.equal(csvCell(-5.5),'"-5.5"');
+console.log(JSON.stringify({status:'PASS',provider_inventory_views:4,calendar_counts:[888,622,56,63],historical_disagreements:40,clock_scenarios:5,formula_injection_escaped:true}));
