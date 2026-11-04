@@ -65,3 +65,7 @@ python tracks/nfl/contracts.py --check-review
 ```
 
 These commands require only Python's standard library. A separate Chromium check exercises actual page interactions at desktop and mobile widths. Passing public tests is engineering evidence; it is not acceptance of a private owner run.
+
+## Independent market display clocks
+
+The [all-game coverage review](review.html#latest-coverage) separates two-hour, one-hour, latest-before-kickoff and latest-observed-upcoming references. T2 is a registered evaluation boundary, not a publication embargo. A genuine last observation at or before a cutoff need not be recorded on the exact minute; its age and source clock remain visible. Later quotes never change the model's training or original issue. See [the clock policy and executable examples](CURRENT_MARKET_CLOCKS.md) for the full distinction. The N034 provider-history failure remains a failure even when its completed, authenticated outputs are displayed.

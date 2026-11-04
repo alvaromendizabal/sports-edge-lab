@@ -50,6 +50,55 @@ const {chromium}=require(process.env.PLAYWRIGHT_MODULE_DIR||'playwright');
   await page.evaluate(()=>window.scrollTo(0,0));
   if(process.env.NFL_SCREENSHOTS){fs.mkdirSync(process.env.NFL_SCREENSHOTS,{recursive:true});await page.screenshot({path:path.join(process.env.NFL_SCREENSHOTS,'nfl-current-'+width+'.png')});}
 
+  // N035 all-game evidence is separate from the retained N033 scorecard.
+  for(const id of ['coverage-period','coverage-model','coverage-horizon','coverage-metric-season','coverage-metric-week','coverage-metric-model','coverage-metric-provider','coverage-metric-target','coverage-disagreement-result'])assert.equal(await page.locator('label[for="'+id+'"]').count(),1);
+  assert.equal(await page.locator('#coverage-games [data-coverage-game]').count(),15);
+  assert.equal(await page.locator('#coverage-horizon').inputValue(),'LATEST_OBSERVED');
+  assert.match(await page.locator('#coverage-provider-counts').innerText(),/14 \/ 15/);
+  assert.match(await page.locator('#coverage-provider-counts').innerText(),/11 \/ 15/);
+  assert.match(await page.locator('#coverage-asof').innerText(),/FAILED/);
+  assert.match(await page.locator('#coverage-clock-note').innerText(),/Reaching T2 is not a requirement/);
+  await page.selectOption('#coverage-period','completed');
+  assert.equal(await page.locator('#coverage-games [data-coverage-game]').count(),121);
+  assert.equal(await page.locator('#coverage-horizon').inputValue(),'T2');
+  assert.match(await page.locator('#coverage-provider-counts').innerText(),/121 \/ 121/);
+  assert.match(await page.locator('#coverage-provider-counts').innerText(),/92 \/ 121/);
+  await page.selectOption('#coverage-model','original_frozen');
+  assert.equal(await page.locator('#coverage-games [data-coverage-game]').count(),121);
+  assert.match(await page.locator('#coverage-count').innerText(),/0 with a selected model winner output/);
+  await page.selectOption('#coverage-horizon','T1');
+  assert.match(await page.locator('#coverage-clock-note').innerText(),/one hour before kickoff/);
+  assert.match(await page.locator('#coverage-provider-counts').innerText(),/92 \/ 121/);
+  await page.selectOption('#coverage-horizon','LATEST_PREGAME');
+  assert.equal((await page.locator('#coverage-provider-counts').innerText()).match(/0 \/ 121/g).length,3);
+  assert.match(await page.locator('#coverage-clock-note').innerText(),/never replaced silently with a T2 quote/);
+  assert.match(await page.locator('#coverage-games').innerText(),/next runtime acquires it separately/);
+  for(const week of ['1','2','3','4','5','6','7','8']){
+   await page.selectOption('#coverage-period',week);
+   assert.equal(await page.locator('#coverage-games [data-coverage-game]').count(),Number(week)<5?16:week==='5'?15:14);
+   states++;
+  }
+  await page.selectOption('#coverage-period','all');
+  assert.equal(await page.locator('#coverage-games [data-coverage-game]').count(),272);
+  await page.selectOption('#coverage-period','9');
+  await page.selectOption('#coverage-metric-provider','Polymarket');
+  assert.match(await page.locator('#coverage-paired-table').innerText(),/0\.606083/);
+  assert.match(await page.locator('#coverage-paired-table').innerText(),/0\.615317/);
+  assert.match(await page.locator('#coverage-paired-count').innerText(),/exactly the same games/);
+  await page.selectOption('#coverage-disagreement-result','provider');
+  assert((await page.locator('#coverage-disagreements tbody tr').count())>0,'new provider losses remain visible');
+  assert.match(await page.locator('#coverage-disagreement-count').innerText(),/below 60%/);
+  await page.selectOption('#coverage-metric-target','total');
+  assert.match(await page.locator('#coverage-paired-table').innerText(),/No equivalent authenticated comparison/);
+  await page.selectOption('#coverage-metric-provider','DraftKings');
+  assert.match(await page.locator('#coverage-paired-table').innerText(),/MAE/);
+  await page.selectOption('#coverage-metric-target','win');
+  await page.selectOption('#coverage-metric-provider','all');
+  await page.selectOption('#coverage-disagreement-result','all');
+  if(process.env.NFL_SCREENSHOTS){await page.locator('#latest-coverage').scrollIntoViewIfNeeded();await page.screenshot({path:path.join(process.env.NFL_SCREENSHOTS,'nfl-all-games-'+width+'.png')});}
+  assert.equal(await page.evaluate(()=>document.documentElement.scrollWidth>innerWidth),false,'new all-game view overflow at '+width);
+  states+=19;
+
   assert.equal(await page.locator('#historical-archive').getAttribute('open'),null,'dated archive starts closed');
   for(const id of ['weekly-period','weekly-model','inventory-week','inventory-status'])assert.equal(await page.locator('label[for="'+id+'"]').count(),1);
   assert.equal(await page.locator('#weekly-game-cards [data-game]').count(),14);
