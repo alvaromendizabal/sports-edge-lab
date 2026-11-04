@@ -1,0 +1,1439 @@
+{
+  "schema": "sports-edge-lab.nfl.experimental-injury-issued-addendum.n038.v1",
+  "owner_return_sha256": "e50b34a54f4f1b5304a7c454c6dfc0ede181e068ff0791c268bf65a248d60507",
+  "source_member_sha256": "81aafebaf6eee8c28b9c976f76f17ae299b05d2d7c99f23e3ac019d8a523a06d",
+  "as_of": "2026-11-04T06:10:07.939230+00:00",
+  "new_selected_forward_fits": 3,
+  "owner_pipeline_accepted": false,
+  "cards": [
+    {
+      "game_id": "2026_09_ARI_SEA",
+      "model_id": "experimental_injury_issue",
+      "model_label": "Experimental injury-era issue",
+      "origin": "registered_pre2024_recipe_new_owner_fit",
+      "pick": "SEA",
+      "pick_probability": 0.718,
+      "home_win_probability": 0.718,
+      "home_margin": 9.7,
+      "total": 45.6,
+      "home_score_center": 27.6,
+      "away_score_center": 17.9,
+      "actual_issue_at": "2026-11-04T06:10:07.939230+00:00",
+      "source_asof": "2026-11-04T01:52:35.279297+00:00",
+      "base_feature_asof_at": "2026-11-04T01:52:35.279297+00:00",
+      "injury_cutoff_at": "2026-11-04T06:09:37.320475+00:00",
+      "injury_observed_at": null,
+      "fit_completed": "2026-11-04T06:10:07.371551+00:00",
+      "horizon": "EARLY_BEFORE_T2",
+      "issue_class": "EARLY_FORWARD_RESEARCH_ISSUE",
+      "full_pipeline_selection_qualified": false,
+      "final_hour_qualified_card": false,
+      "injury_inputs_verified": false,
+      "injury_report_status": "NO_CURRENT_REPORTS_ADMITTED",
+      "injury_source_report_team_count": {
+        "ARI": 0,
+        "SEA": 0
+      },
+      "injury_source_excluded_rows": null,
+      "announced_starter_verified": false,
+      "reserve_status_verified": false,
+      "target_feature_views": {
+        "winner": "matched_base_no_direct_injury_fields",
+        "margin": "injury_augmented_with_unknown_report_flags",
+        "total": "injury_augmented_with_unknown_report_flags"
+      },
+      "margin_interval": {
+        "lower": -4.4,
+        "upper": 28.5,
+        "nominal_coverage": 0.8
+      },
+      "total_interval": {
+        "lower": 27.0,
+        "upper": 61.7,
+        "interval_note": "Fixed pre-2024 residual quantiles; no coverage guarantee"
+      },
+      "correct": null,
+      "unavailable_reason": null
+    },
+    {
+      "game_id": "2026_09_BUF_MIN",
+      "model_id": "experimental_injury_issue",
+      "model_label": "Experimental injury-era issue",
+      "origin": "registered_pre2024_recipe_new_owner_fit",
+      "pick": "BUF",
+      "pick_probability": 0.524,
+      "home_win_probability": 0.476,
+      "home_margin": -0.8,
+      "total": 42.5,
+      "home_score_center": 20.9,
+      "away_score_center": 21.7,
+      "actual_issue_at": "2026-11-04T06:10:07.939230+00:00",
+      "source_asof": "2026-11-04T01:52:35.279297+00:00",
+      "base_feature_asof_at": "2026-11-04T01:52:35.279297+00:00",
+      "injury_cutoff_at": "2026-11-04T06:09:37.320475+00:00",
+      "injury_observed_at": null,
+      "fit_completed": "2026-11-04T06:10:07.371551+00:00",
+      "horizon": "EARLY_BEFORE_T2",
+      "issue_class": "EARLY_FORWARD_RESEARCH_ISSUE",
+      "full_pipeline_selection_qualified": false,
+      "final_hour_qualified_card": false,
+      "injury_inputs_verified": false,
+      "injury_report_status": "NO_CURRENT_REPORTS_ADMITTED",
+      "injury_source_report_team_count": {
+        "BUF": 0,
+        "MIN": 0
+      },
+      "injury_source_excluded_rows": null,
+      "announced_starter_verified": false,
+      "reserve_status_verified": false,
+      "target_feature_views": {
+        "winner": "matched_base_no_direct_injury_fields",
+        "margin": "injury_augmented_with_unknown_report_flags",
+        "total": "injury_augmented_with_unknown_report_flags"
+      },
+      "margin_interval": {
+        "lower": -14.9,
+        "upper": 18.0,
+        "nominal_coverage": 0.8
+      },
+      "total_interval": {
+        "lower": 24.0,
+        "upper": 58.7,
+        "interval_note": "Fixed pre-2024 residual quantiles; no coverage guarantee"
+      },
+      "correct": null,
+      "unavailable_reason": null
+    },
+    {
+      "game_id": "2026_09_CIN_ATL",
+      "model_id": "experimental_injury_issue",
+      "model_label": "Experimental injury-era issue",
+      "origin": "registered_pre2024_recipe_new_owner_fit",
+      "pick": "CIN",
+      "pick_probability": 0.601,
+      "home_win_probability": 0.399,
+      "home_margin": -2.5,
+      "total": 49.0,
+      "home_score_center": 23.2,
+      "away_score_center": 25.7,
+      "actual_issue_at": "2026-11-04T06:10:07.939230+00:00",
+      "source_asof": "2026-11-04T01:52:35.279297+00:00",
+      "base_feature_asof_at": "2026-11-04T01:52:35.279297+00:00",
+      "injury_cutoff_at": "2026-11-04T06:09:37.320475+00:00",
+      "injury_observed_at": null,
+      "fit_completed": "2026-11-04T06:10:07.371551+00:00",
+      "horizon": "EARLY_BEFORE_T2",
+      "issue_class": "EARLY_FORWARD_RESEARCH_ISSUE",
+      "full_pipeline_selection_qualified": false,
+      "final_hour_qualified_card": false,
+      "injury_inputs_verified": false,
+      "injury_report_status": "NO_CURRENT_REPORTS_ADMITTED",
+      "injury_source_report_team_count": {
+        "ATL": 0,
+        "CIN": 0
+      },
+      "injury_source_excluded_rows": null,
+      "announced_starter_verified": false,
+      "reserve_status_verified": false,
+      "target_feature_views": {
+        "winner": "matched_base_no_direct_injury_fields",
+        "margin": "injury_augmented_with_unknown_report_flags",
+        "total": "injury_augmented_with_unknown_report_flags"
+      },
+      "margin_interval": {
+        "lower": -16.6,
+        "upper": 16.3,
+        "nominal_coverage": 0.8
+      },
+      "total_interval": {
+        "lower": 30.4,
+        "upper": 65.1,
+        "interval_note": "Fixed pre-2024 residual quantiles; no coverage guarantee"
+      },
+      "correct": null,
+      "unavailable_reason": null
+    },
+    {
+      "game_id": "2026_09_CLE_NO",
+      "model_id": "experimental_injury_issue",
+      "model_label": "Experimental injury-era issue",
+      "origin": "registered_pre2024_recipe_new_owner_fit",
+      "pick": "NO",
+      "pick_probability": 0.52,
+      "home_win_probability": 0.52,
+      "home_margin": -0.2,
+      "total": 41.9,
+      "home_score_center": 20.8,
+      "away_score_center": 21.0,
+      "actual_issue_at": "2026-11-04T06:10:07.939230+00:00",
+      "source_asof": "2026-11-04T01:52:35.279297+00:00",
+      "base_feature_asof_at": "2026-11-04T01:52:35.279297+00:00",
+      "injury_cutoff_at": "2026-11-04T06:09:37.320475+00:00",
+      "injury_observed_at": null,
+      "fit_completed": "2026-11-04T06:10:07.371551+00:00",
+      "horizon": "EARLY_BEFORE_T2",
+      "issue_class": "EARLY_FORWARD_RESEARCH_ISSUE",
+      "full_pipeline_selection_qualified": false,
+      "final_hour_qualified_card": false,
+      "injury_inputs_verified": false,
+      "injury_report_status": "NO_CURRENT_REPORTS_ADMITTED",
+      "injury_source_report_team_count": {
+        "CLE": 0,
+        "NO": 0
+      },
+      "injury_source_excluded_rows": null,
+      "announced_starter_verified": false,
+      "reserve_status_verified": false,
+      "target_feature_views": {
+        "winner": "matched_base_no_direct_injury_fields",
+        "margin": "injury_augmented_with_unknown_report_flags",
+        "total": "injury_augmented_with_unknown_report_flags"
+      },
+      "margin_interval": {
+        "lower": -14.2,
+        "upper": 18.7,
+        "nominal_coverage": 0.8
+      },
+      "total_interval": {
+        "lower": 23.3,
+        "upper": 58.0,
+        "interval_note": "Fixed pre-2024 residual quantiles; no coverage guarantee"
+      },
+      "correct": null,
+      "unavailable_reason": null
+    },
+    {
+      "game_id": "2026_09_DAL_IND",
+      "model_id": "experimental_injury_issue",
+      "model_label": "Experimental injury-era issue",
+      "origin": "registered_pre2024_recipe_new_owner_fit",
+      "pick": "DAL",
+      "pick_probability": 0.594,
+      "home_win_probability": 0.406,
+      "home_margin": -1.5,
+      "total": 50.6,
+      "home_score_center": 24.5,
+      "away_score_center": 26.0,
+      "actual_issue_at": "2026-11-04T06:10:07.939230+00:00",
+      "source_asof": "2026-11-04T01:52:35.279297+00:00",
+      "base_feature_asof_at": "2026-11-04T01:52:35.279297+00:00",
+      "injury_cutoff_at": "2026-11-04T06:09:37.320475+00:00",
+      "injury_observed_at": null,
+      "fit_completed": "2026-11-04T06:10:07.371551+00:00",
+      "horizon": "EARLY_BEFORE_T2",
+      "issue_class": "EARLY_FORWARD_RESEARCH_ISSUE",
+      "full_pipeline_selection_qualified": false,
+      "final_hour_qualified_card": false,
+      "injury_inputs_verified": false,
+      "injury_report_status": "NO_CURRENT_REPORTS_ADMITTED",
+      "injury_source_report_team_count": {
+        "DAL": 0,
+        "IND": 0
+      },
+      "injury_source_excluded_rows": null,
+      "announced_starter_verified": false,
+      "reserve_status_verified": false,
+      "target_feature_views": {
+        "winner": "matched_base_no_direct_injury_fields",
+        "margin": "injury_augmented_with_unknown_report_flags",
+        "total": "injury_augmented_with_unknown_report_flags"
+      },
+      "margin_interval": {
+        "lower": -15.6,
+        "upper": 17.3,
+        "nominal_coverage": 0.8
+      },
+      "total_interval": {
+        "lower": 32.0,
+        "upper": 66.7,
+        "interval_note": "Fixed pre-2024 residual quantiles; no coverage guarantee"
+      },
+      "correct": null,
+      "unavailable_reason": null
+    },
+    {
+      "game_id": "2026_09_DEN_CAR",
+      "model_id": "experimental_injury_issue",
+      "model_label": "Experimental injury-era issue",
+      "origin": "registered_pre2024_recipe_new_owner_fit",
+      "pick": "DEN",
+      "pick_probability": 0.55,
+      "home_win_probability": 0.45,
+      "home_margin": -3.1,
+      "total": 47.6,
+      "home_score_center": 22.3,
+      "away_score_center": 25.4,
+      "actual_issue_at": "2026-11-04T06:10:07.939230+00:00",
+      "source_asof": "2026-11-04T01:52:35.279297+00:00",
+      "base_feature_asof_at": "2026-11-04T01:52:35.279297+00:00",
+      "injury_cutoff_at": "2026-11-04T06:09:37.320475+00:00",
+      "injury_observed_at": null,
+      "fit_completed": "2026-11-04T06:10:07.371551+00:00",
+      "horizon": "EARLY_BEFORE_T2",
+      "issue_class": "EARLY_FORWARD_RESEARCH_ISSUE",
+      "full_pipeline_selection_qualified": false,
+      "final_hour_qualified_card": false,
+      "injury_inputs_verified": false,
+      "injury_report_status": "NO_CURRENT_REPORTS_ADMITTED",
+      "injury_source_report_team_count": {
+        "CAR": 0,
+        "DEN": 0
+      },
+      "injury_source_excluded_rows": null,
+      "announced_starter_verified": false,
+      "reserve_status_verified": false,
+      "target_feature_views": {
+        "winner": "matched_base_no_direct_injury_fields",
+        "margin": "injury_augmented_with_unknown_report_flags",
+        "total": "injury_augmented_with_unknown_report_flags"
+      },
+      "margin_interval": {
+        "lower": -17.1,
+        "upper": 15.8,
+        "nominal_coverage": 0.8
+      },
+      "total_interval": {
+        "lower": 29.1,
+        "upper": 63.8,
+        "interval_note": "Fixed pre-2024 residual quantiles; no coverage guarantee"
+      },
+      "correct": null,
+      "unavailable_reason": null
+    },
+    {
+      "game_id": "2026_09_DET_MIA",
+      "model_id": "experimental_injury_issue",
+      "model_label": "Experimental injury-era issue",
+      "origin": "registered_pre2024_recipe_new_owner_fit",
+      "pick": "DET",
+      "pick_probability": 0.654,
+      "home_win_probability": 0.346,
+      "home_margin": -5.3,
+      "total": 47.3,
+      "home_score_center": 21.0,
+      "away_score_center": 26.3,
+      "actual_issue_at": "2026-11-04T06:10:07.939230+00:00",
+      "source_asof": "2026-11-04T01:52:35.279297+00:00",
+      "base_feature_asof_at": "2026-11-04T01:52:35.279297+00:00",
+      "injury_cutoff_at": "2026-11-04T06:09:37.320475+00:00",
+      "injury_observed_at": null,
+      "fit_completed": "2026-11-04T06:10:07.371551+00:00",
+      "horizon": "EARLY_BEFORE_T2",
+      "issue_class": "EARLY_FORWARD_RESEARCH_ISSUE",
+      "full_pipeline_selection_qualified": false,
+      "final_hour_qualified_card": false,
+      "injury_inputs_verified": false,
+      "injury_report_status": "NO_CURRENT_REPORTS_ADMITTED",
+      "injury_source_report_team_count": {
+        "DET": 0,
+        "MIA": 0
+      },
+      "injury_source_excluded_rows": null,
+      "announced_starter_verified": false,
+      "reserve_status_verified": false,
+      "target_feature_views": {
+        "winner": "matched_base_no_direct_injury_fields",
+        "margin": "injury_augmented_with_unknown_report_flags",
+        "total": "injury_augmented_with_unknown_report_flags"
+      },
+      "margin_interval": {
+        "lower": -19.4,
+        "upper": 13.5,
+        "nominal_coverage": 0.8
+      },
+      "total_interval": {
+        "lower": 28.7,
+        "upper": 63.4,
+        "interval_note": "Fixed pre-2024 residual quantiles; no coverage guarantee"
+      },
+      "correct": null,
+      "unavailable_reason": null
+    },
+    {
+      "game_id": "2026_09_GB_NE",
+      "model_id": "experimental_injury_issue",
+      "model_label": "Experimental injury-era issue",
+      "origin": "registered_pre2024_recipe_new_owner_fit",
+      "pick": "NE",
+      "pick_probability": 0.701,
+      "home_win_probability": 0.701,
+      "home_margin": 5.1,
+      "total": 45.8,
+      "home_score_center": 25.4,
+      "away_score_center": 20.4,
+      "actual_issue_at": "2026-11-04T06:10:07.939230+00:00",
+      "source_asof": "2026-11-04T01:52:35.279297+00:00",
+      "base_feature_asof_at": "2026-11-04T01:52:35.279297+00:00",
+      "injury_cutoff_at": "2026-11-04T06:09:37.320475+00:00",
+      "injury_observed_at": null,
+      "fit_completed": "2026-11-04T06:10:07.371551+00:00",
+      "horizon": "EARLY_BEFORE_T2",
+      "issue_class": "EARLY_FORWARD_RESEARCH_ISSUE",
+      "full_pipeline_selection_qualified": false,
+      "final_hour_qualified_card": false,
+      "injury_inputs_verified": false,
+      "injury_report_status": "NO_CURRENT_REPORTS_ADMITTED",
+      "injury_source_report_team_count": {
+        "GB": 0,
+        "NE": 0
+      },
+      "injury_source_excluded_rows": null,
+      "announced_starter_verified": false,
+      "reserve_status_verified": false,
+      "target_feature_views": {
+        "winner": "matched_base_no_direct_injury_fields",
+        "margin": "injury_augmented_with_unknown_report_flags",
+        "total": "injury_augmented_with_unknown_report_flags"
+      },
+      "margin_interval": {
+        "lower": -9.0,
+        "upper": 23.9,
+        "nominal_coverage": 0.8
+      },
+      "total_interval": {
+        "lower": 27.3,
+        "upper": 61.9,
+        "interval_note": "Fixed pre-2024 residual quantiles; no coverage guarantee"
+      },
+      "correct": null,
+      "unavailable_reason": null
+    },
+    {
+      "game_id": "2026_09_HOU_LAC",
+      "model_id": "experimental_injury_issue",
+      "model_label": "Experimental injury-era issue",
+      "origin": "registered_pre2024_recipe_new_owner_fit",
+      "pick": "HOU",
+      "pick_probability": 0.648,
+      "home_win_probability": 0.352,
+      "home_margin": -4.1,
+      "total": 40.4,
+      "home_score_center": 18.2,
+      "away_score_center": 22.2,
+      "actual_issue_at": "2026-11-04T06:10:07.939230+00:00",
+      "source_asof": "2026-11-04T01:52:35.279297+00:00",
+      "base_feature_asof_at": "2026-11-04T01:52:35.279297+00:00",
+      "injury_cutoff_at": "2026-11-04T06:09:37.320475+00:00",
+      "injury_observed_at": null,
+      "fit_completed": "2026-11-04T06:10:07.371551+00:00",
+      "horizon": "EARLY_BEFORE_T2",
+      "issue_class": "EARLY_FORWARD_RESEARCH_ISSUE",
+      "full_pipeline_selection_qualified": false,
+      "final_hour_qualified_card": false,
+      "injury_inputs_verified": false,
+      "injury_report_status": "NO_CURRENT_REPORTS_ADMITTED",
+      "injury_source_report_team_count": {
+        "HOU": 0,
+        "LAC": 0
+      },
+      "injury_source_excluded_rows": null,
+      "announced_starter_verified": false,
+      "reserve_status_verified": false,
+      "target_feature_views": {
+        "winner": "matched_base_no_direct_injury_fields",
+        "margin": "injury_augmented_with_unknown_report_flags",
+        "total": "injury_augmented_with_unknown_report_flags"
+      },
+      "margin_interval": {
+        "lower": -18.1,
+        "upper": 14.8,
+        "nominal_coverage": 0.8
+      },
+      "total_interval": {
+        "lower": 21.8,
+        "upper": 56.5,
+        "interval_note": "Fixed pre-2024 residual quantiles; no coverage guarantee"
+      },
+      "correct": null,
+      "unavailable_reason": null
+    },
+    {
+      "game_id": "2026_09_JAX_BAL",
+      "model_id": "experimental_injury_issue",
+      "model_label": "Experimental injury-era issue",
+      "origin": "registered_pre2024_recipe_new_owner_fit",
+      "pick": "JAX",
+      "pick_probability": 0.642,
+      "home_win_probability": 0.358,
+      "home_margin": -4.5,
+      "total": 46.9,
+      "home_score_center": 21.2,
+      "away_score_center": 25.7,
+      "actual_issue_at": "2026-11-04T06:10:07.939230+00:00",
+      "source_asof": "2026-11-04T01:52:35.279297+00:00",
+      "base_feature_asof_at": "2026-11-04T01:52:35.279297+00:00",
+      "injury_cutoff_at": "2026-11-04T06:09:37.320475+00:00",
+      "injury_observed_at": "2026-11-04T05:35:54.789543+00:00",
+      "fit_completed": "2026-11-04T06:10:07.371551+00:00",
+      "horizon": "EARLY_BEFORE_T2",
+      "issue_class": "EARLY_FORWARD_RESEARCH_ISSUE",
+      "full_pipeline_selection_qualified": false,
+      "final_hour_qualified_card": false,
+      "injury_inputs_verified": false,
+      "injury_report_status": "PARTIAL_LISTED_REPORTS",
+      "injury_source_report_team_count": {
+        "BAL": 9,
+        "JAX": 5
+      },
+      "injury_source_excluded_rows": 14,
+      "announced_starter_verified": false,
+      "reserve_status_verified": false,
+      "target_feature_views": {
+        "winner": "matched_base_no_direct_injury_fields",
+        "margin": "injury_augmented_with_unknown_report_flags",
+        "total": "injury_augmented_with_unknown_report_flags"
+      },
+      "margin_interval": {
+        "lower": -18.6,
+        "upper": 14.3,
+        "nominal_coverage": 0.8
+      },
+      "total_interval": {
+        "lower": 28.3,
+        "upper": 63.0,
+        "interval_note": "Fixed pre-2024 residual quantiles; no coverage guarantee"
+      },
+      "correct": null,
+      "unavailable_reason": null
+    },
+    {
+      "game_id": "2026_09_LA_WAS",
+      "model_id": "experimental_injury_issue",
+      "model_label": "Experimental injury-era issue",
+      "origin": "registered_pre2024_recipe_new_owner_fit",
+      "pick": "LA",
+      "pick_probability": 0.65,
+      "home_win_probability": 0.35,
+      "home_margin": -5.3,
+      "total": 51.1,
+      "home_score_center": 22.9,
+      "away_score_center": 28.2,
+      "actual_issue_at": "2026-11-04T06:10:07.939230+00:00",
+      "source_asof": "2026-11-04T01:52:35.279297+00:00",
+      "base_feature_asof_at": "2026-11-04T01:52:35.279297+00:00",
+      "injury_cutoff_at": "2026-11-04T06:09:37.320475+00:00",
+      "injury_observed_at": null,
+      "fit_completed": "2026-11-04T06:10:07.371551+00:00",
+      "horizon": "EARLY_BEFORE_T2",
+      "issue_class": "EARLY_FORWARD_RESEARCH_ISSUE",
+      "full_pipeline_selection_qualified": false,
+      "final_hour_qualified_card": false,
+      "injury_inputs_verified": false,
+      "injury_report_status": "NO_CURRENT_REPORTS_ADMITTED",
+      "injury_source_report_team_count": {
+        "LA": 0,
+        "WAS": 0
+      },
+      "injury_source_excluded_rows": null,
+      "announced_starter_verified": false,
+      "reserve_status_verified": false,
+      "target_feature_views": {
+        "winner": "matched_base_no_direct_injury_fields",
+        "margin": "injury_augmented_with_unknown_report_flags",
+        "total": "injury_augmented_with_unknown_report_flags"
+      },
+      "margin_interval": {
+        "lower": -19.3,
+        "upper": 13.6,
+        "nominal_coverage": 0.8
+      },
+      "total_interval": {
+        "lower": 32.6,
+        "upper": 67.2,
+        "interval_note": "Fixed pre-2024 residual quantiles; no coverage guarantee"
+      },
+      "correct": null,
+      "unavailable_reason": null
+    },
+    {
+      "game_id": "2026_09_LV_SF",
+      "model_id": "experimental_injury_issue",
+      "model_label": "Experimental injury-era issue",
+      "origin": "registered_pre2024_recipe_new_owner_fit",
+      "pick": "SF",
+      "pick_probability": 0.826,
+      "home_win_probability": 0.826,
+      "home_margin": 9.9,
+      "total": 47.0,
+      "home_score_center": 28.4,
+      "away_score_center": 18.5,
+      "actual_issue_at": "2026-11-04T06:10:07.939230+00:00",
+      "source_asof": "2026-11-04T01:52:35.279297+00:00",
+      "base_feature_asof_at": "2026-11-04T01:52:35.279297+00:00",
+      "injury_cutoff_at": "2026-11-04T06:09:37.320475+00:00",
+      "injury_observed_at": null,
+      "fit_completed": "2026-11-04T06:10:07.371551+00:00",
+      "horizon": "EARLY_BEFORE_T2",
+      "issue_class": "EARLY_FORWARD_RESEARCH_ISSUE",
+      "full_pipeline_selection_qualified": false,
+      "final_hour_qualified_card": false,
+      "injury_inputs_verified": false,
+      "injury_report_status": "NO_CURRENT_REPORTS_ADMITTED",
+      "injury_source_report_team_count": {
+        "LV": 0,
+        "SF": 0
+      },
+      "injury_source_excluded_rows": null,
+      "announced_starter_verified": false,
+      "reserve_status_verified": false,
+      "target_feature_views": {
+        "winner": "matched_base_no_direct_injury_fields",
+        "margin": "injury_augmented_with_unknown_report_flags",
+        "total": "injury_augmented_with_unknown_report_flags"
+      },
+      "margin_interval": {
+        "lower": -4.2,
+        "upper": 28.8,
+        "nominal_coverage": 0.8
+      },
+      "total_interval": {
+        "lower": 28.4,
+        "upper": 63.1,
+        "interval_note": "Fixed pre-2024 residual quantiles; no coverage guarantee"
+      },
+      "correct": null,
+      "unavailable_reason": null
+    },
+    {
+      "game_id": "2026_09_NYG_PHI",
+      "model_id": "experimental_injury_issue",
+      "model_label": "Experimental injury-era issue",
+      "origin": "registered_pre2024_recipe_new_owner_fit",
+      "pick": "PHI",
+      "pick_probability": 0.515,
+      "home_win_probability": 0.515,
+      "home_margin": -0.5,
+      "total": 40.7,
+      "home_score_center": 20.1,
+      "away_score_center": 20.6,
+      "actual_issue_at": "2026-11-04T06:10:07.939230+00:00",
+      "source_asof": "2026-11-04T01:52:35.279297+00:00",
+      "base_feature_asof_at": "2026-11-04T01:52:35.279297+00:00",
+      "injury_cutoff_at": "2026-11-04T06:09:37.320475+00:00",
+      "injury_observed_at": null,
+      "fit_completed": "2026-11-04T06:10:07.371551+00:00",
+      "horizon": "EARLY_BEFORE_T2",
+      "issue_class": "EARLY_FORWARD_RESEARCH_ISSUE",
+      "full_pipeline_selection_qualified": false,
+      "final_hour_qualified_card": false,
+      "injury_inputs_verified": false,
+      "injury_report_status": "NO_CURRENT_REPORTS_ADMITTED",
+      "injury_source_report_team_count": {
+        "NYG": 0,
+        "PHI": 0
+      },
+      "injury_source_excluded_rows": null,
+      "announced_starter_verified": false,
+      "reserve_status_verified": false,
+      "target_feature_views": {
+        "winner": "matched_base_no_direct_injury_fields",
+        "margin": "injury_augmented_with_unknown_report_flags",
+        "total": "injury_augmented_with_unknown_report_flags"
+      },
+      "margin_interval": {
+        "lower": -14.6,
+        "upper": 18.3,
+        "nominal_coverage": 0.8
+      },
+      "total_interval": {
+        "lower": 22.1,
+        "upper": 56.8,
+        "interval_note": "Fixed pre-2024 residual quantiles; no coverage guarantee"
+      },
+      "correct": null,
+      "unavailable_reason": null
+    },
+    {
+      "game_id": "2026_09_NYJ_KC",
+      "model_id": "experimental_injury_issue",
+      "model_label": "Experimental injury-era issue",
+      "origin": "registered_pre2024_recipe_new_owner_fit",
+      "pick": "KC",
+      "pick_probability": 0.716,
+      "home_win_probability": 0.716,
+      "home_margin": 7.0,
+      "total": 42.9,
+      "home_score_center": 24.9,
+      "away_score_center": 17.9,
+      "actual_issue_at": "2026-11-04T06:10:07.939230+00:00",
+      "source_asof": "2026-11-04T01:52:35.279297+00:00",
+      "base_feature_asof_at": "2026-11-04T01:52:35.279297+00:00",
+      "injury_cutoff_at": "2026-11-04T06:09:37.320475+00:00",
+      "injury_observed_at": null,
+      "fit_completed": "2026-11-04T06:10:07.371551+00:00",
+      "horizon": "EARLY_BEFORE_T2",
+      "issue_class": "EARLY_FORWARD_RESEARCH_ISSUE",
+      "full_pipeline_selection_qualified": false,
+      "final_hour_qualified_card": false,
+      "injury_inputs_verified": false,
+      "injury_report_status": "NO_CURRENT_REPORTS_ADMITTED",
+      "injury_source_report_team_count": {
+        "KC": 0,
+        "NYJ": 0
+      },
+      "injury_source_excluded_rows": null,
+      "announced_starter_verified": false,
+      "reserve_status_verified": false,
+      "target_feature_views": {
+        "winner": "matched_base_no_direct_injury_fields",
+        "margin": "injury_augmented_with_unknown_report_flags",
+        "total": "injury_augmented_with_unknown_report_flags"
+      },
+      "margin_interval": {
+        "lower": -7.1,
+        "upper": 25.9,
+        "nominal_coverage": 0.8
+      },
+      "total_interval": {
+        "lower": 24.3,
+        "upper": 59.0,
+        "interval_note": "Fixed pre-2024 residual quantiles; no coverage guarantee"
+      },
+      "correct": null,
+      "unavailable_reason": null
+    },
+    {
+      "game_id": "2026_09_TB_CHI",
+      "model_id": "experimental_injury_issue",
+      "model_label": "Experimental injury-era issue",
+      "origin": "registered_pre2024_recipe_new_owner_fit",
+      "pick": "CHI",
+      "pick_probability": 0.717,
+      "home_win_probability": 0.717,
+      "home_margin": 5.6,
+      "total": 44.1,
+      "home_score_center": 24.8,
+      "away_score_center": 19.3,
+      "actual_issue_at": "2026-11-04T06:10:07.939230+00:00",
+      "source_asof": "2026-11-04T01:52:35.279297+00:00",
+      "base_feature_asof_at": "2026-11-04T01:52:35.279297+00:00",
+      "injury_cutoff_at": "2026-11-04T06:09:37.320475+00:00",
+      "injury_observed_at": null,
+      "fit_completed": "2026-11-04T06:10:07.371551+00:00",
+      "horizon": "EARLY_BEFORE_T2",
+      "issue_class": "EARLY_FORWARD_RESEARCH_ISSUE",
+      "full_pipeline_selection_qualified": false,
+      "final_hour_qualified_card": false,
+      "injury_inputs_verified": false,
+      "injury_report_status": "NO_CURRENT_REPORTS_ADMITTED",
+      "injury_source_report_team_count": {
+        "CHI": 0,
+        "TB": 0
+      },
+      "injury_source_excluded_rows": null,
+      "announced_starter_verified": false,
+      "reserve_status_verified": false,
+      "target_feature_views": {
+        "winner": "matched_base_no_direct_injury_fields",
+        "margin": "injury_augmented_with_unknown_report_flags",
+        "total": "injury_augmented_with_unknown_report_flags"
+      },
+      "margin_interval": {
+        "lower": -8.5,
+        "upper": 24.4,
+        "nominal_coverage": 0.8
+      },
+      "total_interval": {
+        "lower": 25.5,
+        "upper": 60.2,
+        "interval_note": "Fixed pre-2024 residual quantiles; no coverage guarantee"
+      },
+      "correct": null,
+      "unavailable_reason": null
+    },
+    {
+      "game_id": "2026_10_BUF_NYJ",
+      "model_id": "experimental_injury_issue",
+      "model_label": "Experimental injury-era issue",
+      "origin": "registered_pre2024_recipe_new_owner_fit",
+      "pick": "BUF",
+      "pick_probability": 0.638,
+      "home_win_probability": 0.362,
+      "home_margin": -6.1,
+      "total": 47.5,
+      "home_score_center": 20.7,
+      "away_score_center": 26.8,
+      "actual_issue_at": "2026-11-04T06:10:07.939230+00:00",
+      "source_asof": "2026-11-04T01:52:35.279297+00:00",
+      "base_feature_asof_at": "2026-11-04T01:52:35.279297+00:00",
+      "injury_cutoff_at": "2026-11-04T06:09:37.320475+00:00",
+      "injury_observed_at": null,
+      "fit_completed": "2026-11-04T06:10:07.371551+00:00",
+      "horizon": "EARLY_BEFORE_T2",
+      "issue_class": "EARLY_FORWARD_RESEARCH_ISSUE",
+      "full_pipeline_selection_qualified": false,
+      "final_hour_qualified_card": false,
+      "injury_inputs_verified": false,
+      "injury_report_status": "NO_CURRENT_REPORTS_ADMITTED",
+      "injury_source_report_team_count": {
+        "BUF": 0,
+        "NYJ": 0
+      },
+      "injury_source_excluded_rows": null,
+      "announced_starter_verified": false,
+      "reserve_status_verified": false,
+      "target_feature_views": {
+        "winner": "matched_base_no_direct_injury_fields",
+        "margin": "injury_augmented_with_unknown_report_flags",
+        "total": "injury_augmented_with_unknown_report_flags"
+      },
+      "margin_interval": {
+        "lower": -20.2,
+        "upper": 12.7,
+        "nominal_coverage": 0.8
+      },
+      "total_interval": {
+        "lower": 29.0,
+        "upper": 63.7,
+        "interval_note": "Fixed pre-2024 residual quantiles; no coverage guarantee"
+      },
+      "correct": null,
+      "unavailable_reason": null
+    },
+    {
+      "game_id": "2026_10_CAR_NO",
+      "model_id": "experimental_injury_issue",
+      "model_label": "Experimental injury-era issue",
+      "origin": "registered_pre2024_recipe_new_owner_fit",
+      "pick": "CAR",
+      "pick_probability": 0.548,
+      "home_win_probability": 0.452,
+      "home_margin": -0.4,
+      "total": 45.5,
+      "home_score_center": 22.6,
+      "away_score_center": 22.9,
+      "actual_issue_at": "2026-11-04T06:10:07.939230+00:00",
+      "source_asof": "2026-11-04T01:52:35.279297+00:00",
+      "base_feature_asof_at": "2026-11-04T01:52:35.279297+00:00",
+      "injury_cutoff_at": "2026-11-04T06:09:37.320475+00:00",
+      "injury_observed_at": null,
+      "fit_completed": "2026-11-04T06:10:07.371551+00:00",
+      "horizon": "EARLY_BEFORE_T2",
+      "issue_class": "EARLY_FORWARD_RESEARCH_ISSUE",
+      "full_pipeline_selection_qualified": false,
+      "final_hour_qualified_card": false,
+      "injury_inputs_verified": false,
+      "injury_report_status": "NO_CURRENT_REPORTS_ADMITTED",
+      "injury_source_report_team_count": {
+        "CAR": 0,
+        "NO": 0
+      },
+      "injury_source_excluded_rows": null,
+      "announced_starter_verified": false,
+      "reserve_status_verified": false,
+      "target_feature_views": {
+        "winner": "matched_base_no_direct_injury_fields",
+        "margin": "injury_augmented_with_unknown_report_flags",
+        "total": "injury_augmented_with_unknown_report_flags"
+      },
+      "margin_interval": {
+        "lower": -14.4,
+        "upper": 18.5,
+        "nominal_coverage": 0.8
+      },
+      "total_interval": {
+        "lower": 26.9,
+        "upper": 61.6,
+        "interval_note": "Fixed pre-2024 residual quantiles; no coverage guarantee"
+      },
+      "correct": null,
+      "unavailable_reason": null
+    },
+    {
+      "game_id": "2026_10_HOU_CLE",
+      "model_id": "experimental_injury_issue",
+      "model_label": "Experimental injury-era issue",
+      "origin": "registered_pre2024_recipe_new_owner_fit",
+      "pick": "HOU",
+      "pick_probability": 0.631,
+      "home_win_probability": 0.369,
+      "home_margin": -3.1,
+      "total": 40.7,
+      "home_score_center": 18.8,
+      "away_score_center": 21.9,
+      "actual_issue_at": "2026-11-04T06:10:07.939230+00:00",
+      "source_asof": "2026-11-04T01:52:35.279297+00:00",
+      "base_feature_asof_at": "2026-11-04T01:52:35.279297+00:00",
+      "injury_cutoff_at": "2026-11-04T06:09:37.320475+00:00",
+      "injury_observed_at": null,
+      "fit_completed": "2026-11-04T06:10:07.371551+00:00",
+      "horizon": "EARLY_BEFORE_T2",
+      "issue_class": "EARLY_FORWARD_RESEARCH_ISSUE",
+      "full_pipeline_selection_qualified": false,
+      "final_hour_qualified_card": false,
+      "injury_inputs_verified": false,
+      "injury_report_status": "NO_CURRENT_REPORTS_ADMITTED",
+      "injury_source_report_team_count": {
+        "CLE": 0,
+        "HOU": 0
+      },
+      "injury_source_excluded_rows": null,
+      "announced_starter_verified": false,
+      "reserve_status_verified": false,
+      "target_feature_views": {
+        "winner": "matched_base_no_direct_injury_fields",
+        "margin": "injury_augmented_with_unknown_report_flags",
+        "total": "injury_augmented_with_unknown_report_flags"
+      },
+      "margin_interval": {
+        "lower": -17.2,
+        "upper": 15.8,
+        "nominal_coverage": 0.8
+      },
+      "total_interval": {
+        "lower": 22.2,
+        "upper": 56.8,
+        "interval_note": "Fixed pre-2024 residual quantiles; no coverage guarantee"
+      },
+      "correct": null,
+      "unavailable_reason": null
+    },
+    {
+      "game_id": "2026_10_JAX_TEN",
+      "model_id": "experimental_injury_issue",
+      "model_label": "Experimental injury-era issue",
+      "origin": "registered_pre2024_recipe_new_owner_fit",
+      "pick": "JAX",
+      "pick_probability": 0.609,
+      "home_win_probability": 0.391,
+      "home_margin": -5.6,
+      "total": 44.1,
+      "home_score_center": 19.3,
+      "away_score_center": 24.8,
+      "actual_issue_at": "2026-11-04T06:10:07.939230+00:00",
+      "source_asof": "2026-11-04T01:52:35.279297+00:00",
+      "base_feature_asof_at": "2026-11-04T01:52:35.279297+00:00",
+      "injury_cutoff_at": "2026-11-04T06:09:37.320475+00:00",
+      "injury_observed_at": null,
+      "fit_completed": "2026-11-04T06:10:07.371551+00:00",
+      "horizon": "EARLY_BEFORE_T2",
+      "issue_class": "EARLY_FORWARD_RESEARCH_ISSUE",
+      "full_pipeline_selection_qualified": false,
+      "final_hour_qualified_card": false,
+      "injury_inputs_verified": false,
+      "injury_report_status": "NO_CURRENT_REPORTS_ADMITTED",
+      "injury_source_report_team_count": {
+        "JAX": 0,
+        "TEN": 0
+      },
+      "injury_source_excluded_rows": null,
+      "announced_starter_verified": false,
+      "reserve_status_verified": false,
+      "target_feature_views": {
+        "winner": "matched_base_no_direct_injury_fields",
+        "margin": "injury_augmented_with_unknown_report_flags",
+        "total": "injury_augmented_with_unknown_report_flags"
+      },
+      "margin_interval": {
+        "lower": -19.6,
+        "upper": 13.3,
+        "nominal_coverage": 0.8
+      },
+      "total_interval": {
+        "lower": 25.5,
+        "upper": 60.2,
+        "interval_note": "Fixed pre-2024 residual quantiles; no coverage guarantee"
+      },
+      "correct": null,
+      "unavailable_reason": null
+    },
+    {
+      "game_id": "2026_10_KC_ATL",
+      "model_id": "experimental_injury_issue",
+      "model_label": "Experimental injury-era issue",
+      "origin": "registered_pre2024_recipe_new_owner_fit",
+      "pick": "KC",
+      "pick_probability": 0.51,
+      "home_win_probability": 0.49,
+      "home_margin": -0.6,
+      "total": 43.9,
+      "home_score_center": 21.7,
+      "away_score_center": 22.2,
+      "actual_issue_at": "2026-11-04T06:10:07.939230+00:00",
+      "source_asof": "2026-11-04T01:52:35.279297+00:00",
+      "base_feature_asof_at": "2026-11-04T01:52:35.279297+00:00",
+      "injury_cutoff_at": "2026-11-04T06:09:37.320475+00:00",
+      "injury_observed_at": null,
+      "fit_completed": "2026-11-04T06:10:07.371551+00:00",
+      "horizon": "EARLY_BEFORE_T2",
+      "issue_class": "EARLY_FORWARD_RESEARCH_ISSUE",
+      "full_pipeline_selection_qualified": false,
+      "final_hour_qualified_card": false,
+      "injury_inputs_verified": false,
+      "injury_report_status": "NO_CURRENT_REPORTS_ADMITTED",
+      "injury_source_report_team_count": {
+        "ATL": 0,
+        "KC": 0
+      },
+      "injury_source_excluded_rows": null,
+      "announced_starter_verified": false,
+      "reserve_status_verified": false,
+      "target_feature_views": {
+        "winner": "matched_base_no_direct_injury_fields",
+        "margin": "injury_augmented_with_unknown_report_flags",
+        "total": "injury_augmented_with_unknown_report_flags"
+      },
+      "margin_interval": {
+        "lower": -14.6,
+        "upper": 18.3,
+        "nominal_coverage": 0.8
+      },
+      "total_interval": {
+        "lower": 25.4,
+        "upper": 60.0,
+        "interval_note": "Fixed pre-2024 residual quantiles; no coverage guarantee"
+      },
+      "correct": null,
+      "unavailable_reason": null
+    },
+    {
+      "game_id": "2026_10_LAC_BAL",
+      "model_id": "experimental_injury_issue",
+      "model_label": "Experimental injury-era issue",
+      "origin": "registered_pre2024_recipe_new_owner_fit",
+      "pick": "BAL",
+      "pick_probability": 0.668,
+      "home_win_probability": 0.668,
+      "home_margin": 3.4,
+      "total": 41.9,
+      "home_score_center": 22.6,
+      "away_score_center": 19.2,
+      "actual_issue_at": "2026-11-04T06:10:07.939230+00:00",
+      "source_asof": "2026-11-04T01:52:35.279297+00:00",
+      "base_feature_asof_at": "2026-11-04T01:52:35.279297+00:00",
+      "injury_cutoff_at": "2026-11-04T06:09:37.320475+00:00",
+      "injury_observed_at": null,
+      "fit_completed": "2026-11-04T06:10:07.371551+00:00",
+      "horizon": "EARLY_BEFORE_T2",
+      "issue_class": "EARLY_FORWARD_RESEARCH_ISSUE",
+      "full_pipeline_selection_qualified": false,
+      "final_hour_qualified_card": false,
+      "injury_inputs_verified": false,
+      "injury_report_status": "NO_CURRENT_REPORTS_ADMITTED",
+      "injury_source_report_team_count": {
+        "BAL": 0,
+        "LAC": 0
+      },
+      "injury_source_excluded_rows": null,
+      "announced_starter_verified": false,
+      "reserve_status_verified": false,
+      "target_feature_views": {
+        "winner": "matched_base_no_direct_injury_fields",
+        "margin": "injury_augmented_with_unknown_report_flags",
+        "total": "injury_augmented_with_unknown_report_flags"
+      },
+      "margin_interval": {
+        "lower": -10.6,
+        "upper": 22.3,
+        "nominal_coverage": 0.8
+      },
+      "total_interval": {
+        "lower": 23.3,
+        "upper": 58.0,
+        "interval_note": "Fixed pre-2024 residual quantiles; no coverage guarantee"
+      },
+      "correct": null,
+      "unavailable_reason": null
+    },
+    {
+      "game_id": "2026_10_LA_ARI",
+      "model_id": "experimental_injury_issue",
+      "model_label": "Experimental injury-era issue",
+      "origin": "registered_pre2024_recipe_new_owner_fit",
+      "pick": "LA",
+      "pick_probability": 0.632,
+      "home_win_probability": 0.368,
+      "home_margin": -6.2,
+      "total": 50.4,
+      "home_score_center": 22.1,
+      "away_score_center": 28.3,
+      "actual_issue_at": "2026-11-04T06:10:07.939230+00:00",
+      "source_asof": "2026-11-04T01:52:35.279297+00:00",
+      "base_feature_asof_at": "2026-11-04T01:52:35.279297+00:00",
+      "injury_cutoff_at": "2026-11-04T06:09:37.320475+00:00",
+      "injury_observed_at": null,
+      "fit_completed": "2026-11-04T06:10:07.371551+00:00",
+      "horizon": "EARLY_BEFORE_T2",
+      "issue_class": "EARLY_FORWARD_RESEARCH_ISSUE",
+      "full_pipeline_selection_qualified": false,
+      "final_hour_qualified_card": false,
+      "injury_inputs_verified": false,
+      "injury_report_status": "NO_CURRENT_REPORTS_ADMITTED",
+      "injury_source_report_team_count": {
+        "ARI": 0,
+        "LA": 0
+      },
+      "injury_source_excluded_rows": null,
+      "announced_starter_verified": false,
+      "reserve_status_verified": false,
+      "target_feature_views": {
+        "winner": "matched_base_no_direct_injury_fields",
+        "margin": "injury_augmented_with_unknown_report_flags",
+        "total": "injury_augmented_with_unknown_report_flags"
+      },
+      "margin_interval": {
+        "lower": -20.3,
+        "upper": 12.7,
+        "nominal_coverage": 0.8
+      },
+      "total_interval": {
+        "lower": 31.9,
+        "upper": 66.5,
+        "interval_note": "Fixed pre-2024 residual quantiles; no coverage guarantee"
+      },
+      "correct": null,
+      "unavailable_reason": null
+    },
+    {
+      "game_id": "2026_10_MIA_IND",
+      "model_id": "experimental_injury_issue",
+      "model_label": "Experimental injury-era issue",
+      "origin": "registered_pre2024_recipe_new_owner_fit",
+      "pick": "IND",
+      "pick_probability": 0.523,
+      "home_win_probability": 0.523,
+      "home_margin": 0.2,
+      "total": 45.5,
+      "home_score_center": 22.8,
+      "away_score_center": 22.6,
+      "actual_issue_at": "2026-11-04T06:10:07.939230+00:00",
+      "source_asof": "2026-11-04T01:52:35.279297+00:00",
+      "base_feature_asof_at": "2026-11-04T01:52:35.279297+00:00",
+      "injury_cutoff_at": "2026-11-04T06:09:37.320475+00:00",
+      "injury_observed_at": null,
+      "fit_completed": "2026-11-04T06:10:07.371551+00:00",
+      "horizon": "EARLY_BEFORE_T2",
+      "issue_class": "EARLY_FORWARD_RESEARCH_ISSUE",
+      "full_pipeline_selection_qualified": false,
+      "final_hour_qualified_card": false,
+      "injury_inputs_verified": false,
+      "injury_report_status": "NO_CURRENT_REPORTS_ADMITTED",
+      "injury_source_report_team_count": {
+        "IND": 0,
+        "MIA": 0
+      },
+      "injury_source_excluded_rows": null,
+      "announced_starter_verified": false,
+      "reserve_status_verified": false,
+      "target_feature_views": {
+        "winner": "matched_base_no_direct_injury_fields",
+        "margin": "injury_augmented_with_unknown_report_flags",
+        "total": "injury_augmented_with_unknown_report_flags"
+      },
+      "margin_interval": {
+        "lower": -13.8,
+        "upper": 19.1,
+        "nominal_coverage": 0.8
+      },
+      "total_interval": {
+        "lower": 26.9,
+        "upper": 61.6,
+        "interval_note": "Fixed pre-2024 residual quantiles; no coverage guarantee"
+      },
+      "correct": null,
+      "unavailable_reason": null
+    },
+    {
+      "game_id": "2026_10_MIN_GB",
+      "model_id": "experimental_injury_issue",
+      "model_label": "Experimental injury-era issue",
+      "origin": "registered_pre2024_recipe_new_owner_fit",
+      "pick": "GB",
+      "pick_probability": 0.58,
+      "home_win_probability": 0.58,
+      "home_margin": -0.2,
+      "total": 39.3,
+      "home_score_center": 19.6,
+      "away_score_center": 19.7,
+      "actual_issue_at": "2026-11-04T06:10:07.939230+00:00",
+      "source_asof": "2026-11-04T01:52:35.279297+00:00",
+      "base_feature_asof_at": "2026-11-04T01:52:35.279297+00:00",
+      "injury_cutoff_at": "2026-11-04T06:09:37.320475+00:00",
+      "injury_observed_at": null,
+      "fit_completed": "2026-11-04T06:10:07.371551+00:00",
+      "horizon": "EARLY_BEFORE_T2",
+      "issue_class": "EARLY_FORWARD_RESEARCH_ISSUE",
+      "full_pipeline_selection_qualified": false,
+      "final_hour_qualified_card": false,
+      "injury_inputs_verified": false,
+      "injury_report_status": "NO_CURRENT_REPORTS_ADMITTED",
+      "injury_source_report_team_count": {
+        "GB": 0,
+        "MIN": 0
+      },
+      "injury_source_excluded_rows": null,
+      "announced_starter_verified": false,
+      "reserve_status_verified": false,
+      "target_feature_views": {
+        "winner": "matched_base_no_direct_injury_fields",
+        "margin": "injury_augmented_with_unknown_report_flags",
+        "total": "injury_augmented_with_unknown_report_flags"
+      },
+      "margin_interval": {
+        "lower": -14.2,
+        "upper": 18.7,
+        "nominal_coverage": 0.8
+      },
+      "total_interval": {
+        "lower": 20.8,
+        "upper": 55.4,
+        "interval_note": "Fixed pre-2024 residual quantiles; no coverage guarantee"
+      },
+      "correct": null,
+      "unavailable_reason": null
+    },
+    {
+      "game_id": "2026_10_NE_DET",
+      "model_id": "experimental_injury_issue",
+      "model_label": "Experimental injury-era issue",
+      "origin": "registered_pre2024_recipe_new_owner_fit",
+      "pick": "DET",
+      "pick_probability": 0.578,
+      "home_win_probability": 0.578,
+      "home_margin": 0.8,
+      "total": 48.9,
+      "home_score_center": 24.8,
+      "away_score_center": 24.1,
+      "actual_issue_at": "2026-11-04T06:10:07.939230+00:00",
+      "source_asof": "2026-11-04T01:52:35.279297+00:00",
+      "base_feature_asof_at": "2026-11-04T01:52:35.279297+00:00",
+      "injury_cutoff_at": "2026-11-04T06:09:37.320475+00:00",
+      "injury_observed_at": null,
+      "fit_completed": "2026-11-04T06:10:07.371551+00:00",
+      "horizon": "EARLY_BEFORE_T2",
+      "issue_class": "EARLY_FORWARD_RESEARCH_ISSUE",
+      "full_pipeline_selection_qualified": false,
+      "final_hour_qualified_card": false,
+      "injury_inputs_verified": false,
+      "injury_report_status": "NO_CURRENT_REPORTS_ADMITTED",
+      "injury_source_report_team_count": {
+        "DET": 0,
+        "NE": 0
+      },
+      "injury_source_excluded_rows": null,
+      "announced_starter_verified": false,
+      "reserve_status_verified": false,
+      "target_feature_views": {
+        "winner": "matched_base_no_direct_injury_fields",
+        "margin": "injury_augmented_with_unknown_report_flags",
+        "total": "injury_augmented_with_unknown_report_flags"
+      },
+      "margin_interval": {
+        "lower": -13.3,
+        "upper": 19.6,
+        "nominal_coverage": 0.8
+      },
+      "total_interval": {
+        "lower": 30.4,
+        "upper": 65.0,
+        "interval_note": "Fixed pre-2024 residual quantiles; no coverage guarantee"
+      },
+      "correct": null,
+      "unavailable_reason": null
+    },
+    {
+      "game_id": "2026_10_PIT_CIN",
+      "model_id": "experimental_injury_issue",
+      "model_label": "Experimental injury-era issue",
+      "origin": "registered_pre2024_recipe_new_owner_fit",
+      "pick": "CIN",
+      "pick_probability": 0.553,
+      "home_win_probability": 0.553,
+      "home_margin": 0.6,
+      "total": 48.8,
+      "home_score_center": 24.7,
+      "away_score_center": 24.1,
+      "actual_issue_at": "2026-11-04T06:10:07.939230+00:00",
+      "source_asof": "2026-11-04T01:52:35.279297+00:00",
+      "base_feature_asof_at": "2026-11-04T01:52:35.279297+00:00",
+      "injury_cutoff_at": "2026-11-04T06:09:37.320475+00:00",
+      "injury_observed_at": null,
+      "fit_completed": "2026-11-04T06:10:07.371551+00:00",
+      "horizon": "EARLY_BEFORE_T2",
+      "issue_class": "EARLY_FORWARD_RESEARCH_ISSUE",
+      "full_pipeline_selection_qualified": false,
+      "final_hour_qualified_card": false,
+      "injury_inputs_verified": false,
+      "injury_report_status": "NO_CURRENT_REPORTS_ADMITTED",
+      "injury_source_report_team_count": {
+        "CIN": 0,
+        "PIT": 0
+      },
+      "injury_source_excluded_rows": null,
+      "announced_starter_verified": false,
+      "reserve_status_verified": false,
+      "target_feature_views": {
+        "winner": "matched_base_no_direct_injury_fields",
+        "margin": "injury_augmented_with_unknown_report_flags",
+        "total": "injury_augmented_with_unknown_report_flags"
+      },
+      "margin_interval": {
+        "lower": -13.5,
+        "upper": 19.4,
+        "nominal_coverage": 0.8
+      },
+      "total_interval": {
+        "lower": 30.2,
+        "upper": 64.9,
+        "interval_note": "Fixed pre-2024 residual quantiles; no coverage guarantee"
+      },
+      "correct": null,
+      "unavailable_reason": null
+    },
+    {
+      "game_id": "2026_10_SEA_LV",
+      "model_id": "experimental_injury_issue",
+      "model_label": "Experimental injury-era issue",
+      "origin": "registered_pre2024_recipe_new_owner_fit",
+      "pick": "SEA",
+      "pick_probability": 0.756,
+      "home_win_probability": 0.244,
+      "home_margin": -5.6,
+      "total": 49.3,
+      "home_score_center": 21.9,
+      "away_score_center": 27.4,
+      "actual_issue_at": "2026-11-04T06:10:07.939230+00:00",
+      "source_asof": "2026-11-04T01:52:35.279297+00:00",
+      "base_feature_asof_at": "2026-11-04T01:52:35.279297+00:00",
+      "injury_cutoff_at": "2026-11-04T06:09:37.320475+00:00",
+      "injury_observed_at": null,
+      "fit_completed": "2026-11-04T06:10:07.371551+00:00",
+      "horizon": "EARLY_BEFORE_T2",
+      "issue_class": "EARLY_FORWARD_RESEARCH_ISSUE",
+      "full_pipeline_selection_qualified": false,
+      "final_hour_qualified_card": false,
+      "injury_inputs_verified": false,
+      "injury_report_status": "NO_CURRENT_REPORTS_ADMITTED",
+      "injury_source_report_team_count": {
+        "LV": 0,
+        "SEA": 0
+      },
+      "injury_source_excluded_rows": null,
+      "announced_starter_verified": false,
+      "reserve_status_verified": false,
+      "target_feature_views": {
+        "winner": "matched_base_no_direct_injury_fields",
+        "margin": "injury_augmented_with_unknown_report_flags",
+        "total": "injury_augmented_with_unknown_report_flags"
+      },
+      "margin_interval": {
+        "lower": -19.6,
+        "upper": 13.3,
+        "nominal_coverage": 0.8
+      },
+      "total_interval": {
+        "lower": 30.7,
+        "upper": 65.4,
+        "interval_note": "Fixed pre-2024 residual quantiles; no coverage guarantee"
+      },
+      "correct": null,
+      "unavailable_reason": null
+    },
+    {
+      "game_id": "2026_10_SF_DAL",
+      "model_id": "experimental_injury_issue",
+      "model_label": "Experimental injury-era issue",
+      "origin": "registered_pre2024_recipe_new_owner_fit",
+      "pick": "SF",
+      "pick_probability": 0.637,
+      "home_win_probability": 0.363,
+      "home_margin": -4.0,
+      "total": 49.8,
+      "home_score_center": 22.9,
+      "away_score_center": 26.9,
+      "actual_issue_at": "2026-11-04T06:10:07.939230+00:00",
+      "source_asof": "2026-11-04T01:52:35.279297+00:00",
+      "base_feature_asof_at": "2026-11-04T01:52:35.279297+00:00",
+      "injury_cutoff_at": "2026-11-04T06:09:37.320475+00:00",
+      "injury_observed_at": null,
+      "fit_completed": "2026-11-04T06:10:07.371551+00:00",
+      "horizon": "EARLY_BEFORE_T2",
+      "issue_class": "EARLY_FORWARD_RESEARCH_ISSUE",
+      "full_pipeline_selection_qualified": false,
+      "final_hour_qualified_card": false,
+      "injury_inputs_verified": false,
+      "injury_report_status": "NO_CURRENT_REPORTS_ADMITTED",
+      "injury_source_report_team_count": {
+        "DAL": 0,
+        "SF": 0
+      },
+      "injury_source_excluded_rows": null,
+      "announced_starter_verified": false,
+      "reserve_status_verified": false,
+      "target_feature_views": {
+        "winner": "matched_base_no_direct_injury_fields",
+        "margin": "injury_augmented_with_unknown_report_flags",
+        "total": "injury_augmented_with_unknown_report_flags"
+      },
+      "margin_interval": {
+        "lower": -18.1,
+        "upper": 14.8,
+        "nominal_coverage": 0.8
+      },
+      "total_interval": {
+        "lower": 31.3,
+        "upper": 65.9,
+        "interval_note": "Fixed pre-2024 residual quantiles; no coverage guarantee"
+      },
+      "correct": null,
+      "unavailable_reason": null
+    },
+    {
+      "game_id": "2026_10_WAS_NYG",
+      "model_id": "experimental_injury_issue",
+      "model_label": "Experimental injury-era issue",
+      "origin": "registered_pre2024_recipe_new_owner_fit",
+      "pick": "NYG",
+      "pick_probability": 0.626,
+      "home_win_probability": 0.626,
+      "home_margin": 1.9,
+      "total": 43.4,
+      "home_score_center": 22.6,
+      "away_score_center": 20.7,
+      "actual_issue_at": "2026-11-04T06:10:07.939230+00:00",
+      "source_asof": "2026-11-04T01:52:35.279297+00:00",
+      "base_feature_asof_at": "2026-11-04T01:52:35.279297+00:00",
+      "injury_cutoff_at": "2026-11-04T06:09:37.320475+00:00",
+      "injury_observed_at": null,
+      "fit_completed": "2026-11-04T06:10:07.371551+00:00",
+      "horizon": "EARLY_BEFORE_T2",
+      "issue_class": "EARLY_FORWARD_RESEARCH_ISSUE",
+      "full_pipeline_selection_qualified": false,
+      "final_hour_qualified_card": false,
+      "injury_inputs_verified": false,
+      "injury_report_status": "NO_CURRENT_REPORTS_ADMITTED",
+      "injury_source_report_team_count": {
+        "NYG": 0,
+        "WAS": 0
+      },
+      "injury_source_excluded_rows": null,
+      "announced_starter_verified": false,
+      "reserve_status_verified": false,
+      "target_feature_views": {
+        "winner": "matched_base_no_direct_injury_fields",
+        "margin": "injury_augmented_with_unknown_report_flags",
+        "total": "injury_augmented_with_unknown_report_flags"
+      },
+      "margin_interval": {
+        "lower": -12.2,
+        "upper": 20.7,
+        "nominal_coverage": 0.8
+      },
+      "total_interval": {
+        "lower": 24.8,
+        "upper": 59.5,
+        "interval_note": "Fixed pre-2024 residual quantiles; no coverage guarantee"
+      },
+      "correct": null,
+      "unavailable_reason": null
+    }
+  ],
+  "limitations": [
+    "Separate experimental issue series, not replacement of frozen originals or accepted production champion.",
+    "Winner recipe uses matched base features; margin and total recipes include direct injury features.",
+    "Only Jacksonville-Baltimore has current listed injury rows;14 admitted and14 excluded, including Huntley and Fagnano.",
+    "No announced-starter, depth-chart or injured-reserve role was verified.",
+    "Base features and injury observations have separate actual clocks. All cards were issued early, not at final hour.",
+    "No wager recommendation, executable quote, profit or proven betting edge is established."
+  ]
+}

@@ -546,6 +546,8 @@ def build_review(*, check=False):
     recovery, current_n037_receipt = load_current_n037(latest, overlay, reschedule, recovery)
     from primary_issue import load_primary_issue
     primary, primary_receipt = load_primary_issue(latest)
+    from injury_issue import load_injury_issue
+    injury_issue, injury_issue_receipt = load_injury_issue(latest)
     from latest_pregame import load_latest_pregame
     latest_pregame, latest_pregame_receipt = load_latest_pregame(latest)
     from latest_pregame_n037 import load_latest_n037
@@ -561,15 +563,16 @@ def build_review(*, check=False):
     page = page.replace("__RESCHEDULE_JSON__", canonical(reschedule).decode().replace("<", "\\u003c"))
     page = page.replace("__SOURCE_RECOVERY_JSON__", canonical(recovery).decode().replace("<", "\\u003c"))
     page = page.replace("__PRIMARY_ISSUE_JSON__", canonical(primary).decode().replace("<", "\\u003c"))
+    page = page.replace("__INJURY_ISSUE_JSON__", canonical(injury_issue).decode().replace("<", "\\u003c"))
     page = page.replace("__LATEST_PREGAME_JSON__", canonical(latest_pregame).decode().replace("<", "\\u003c"))
     page = page.replace("__LATEST_SCRIPT__", (HERE / "current_coverage.js").read_text())
-    require(all(marker not in page for marker in ("__EVIDENCE_", "__CURRENT_", "__WEEKLY_", "__LATEST_", "__POINTS_", "__SOURCE_OVERLAY_", "__RESCHEDULE_", "__SOURCE_RECOVERY_", "__PRIMARY_ISSUE_", "__LATEST_PREGAME_")), "Unfilled review template")
+    require(all(marker not in page for marker in ("__EVIDENCE_", "__CURRENT_", "__WEEKLY_", "__LATEST_", "__POINTS_", "__SOURCE_OVERLAY_", "__RESCHEDULE_", "__SOURCE_RECOVERY_", "__PRIMARY_ISSUE_", "__INJURY_ISSUE_", "__LATEST_PREGAME_")), "Unfilled review template")
     output = HERE / "review.html"
     if check:
         require(output.is_file() and output.read_text() == page, "Generated review differs; run contracts.py --build-review")
     else:
         output.write_text(page)
-    return {**receipt, **current_receipt, **weekly_receipt, **latest_receipt, **points_receipt, **overlay_receipt, **reschedule_receipt, **recovery_receipt, **primary_receipt, **latest_pregame_receipt, **latest_n037_receipt, **current_n037_receipt, "review": "review.html", "evidence_sha256": digest(data), "generated_page_matches": True}
+    return {**receipt, **current_receipt, **weekly_receipt, **latest_receipt, **points_receipt, **overlay_receipt, **reschedule_receipt, **recovery_receipt, **primary_receipt, **injury_issue_receipt, **latest_pregame_receipt, **latest_n037_receipt, **current_n037_receipt, "review": "review.html", "evidence_sha256": digest(data), "generated_page_matches": True}
 
 
 def demo(*, output):
