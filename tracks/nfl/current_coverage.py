@@ -192,7 +192,10 @@ ALLOWED = {'$': ['active_providers',
                        'provider_right',
                        'season',
                        'week'],
- '$.coverage[]': ['age_le_300_seconds',
+ '$.coverage[]': ['captured_both_contract_games',
+                  'metric_admitted_games',
+                  'settlement_unverified_games',
+                  'age_le_300_seconds',
                   'age_le_3600_seconds',
                   'age_le_60_seconds',
                   'both_contract_games',
@@ -266,6 +269,9 @@ def validate_coverage(data):
         require('original_frozen' in fs, 'Missing original stream must stay explicit')
         for f in fs.values():
             require(f['model_label'] == models[f['model_id']], 'Model identity switched')
+            if f['model_id'] == 'original_saved' and f['pick']:
+                require(f['horizon'] == 'ORIGINAL_HORIZON_UNVERIFIED' and f['actual_issue_at'] is None, 'Saved original horizon cannot be inferred as T2 or T24')
+
             require(f['stake'] == 0 and f['bet_decision'] == 'NO BET' and f['full_pipeline_selection_qualified'] is False, 'Unsupported execution qualification')
             kind = f['issue_class']
             if kind == 'UNAVAILABLE':
@@ -316,6 +322,7 @@ def validate_coverage(data):
         require(r['model_right'] == f['correct'] and r['provider_right'] == pr['correct'] and r['model_right'] != r['provider_right'], 'Disagreement outcome differs')
     require(actual_disagreements == expected_disagreements, 'Disagreement wins or losses omitted')
     for r in data['season_metrics'] + data['weekly_metrics']:
+        require(r['model_id'] != 'original_saved', 'Original horizon unverified; no same-time provider comparison')
         require(r['provider'] in PROVIDERS and r['model_id'] in models and r['season'] in (2024, 2025, 2026), 'Unknown comparison cell')
         require(re.fullmatch('[0-9a-f]{64}', r['cohort_sha256']), 'Missing exact comparison cohort')
         a, b = r['model_metrics'], r['provider_metrics']
@@ -326,6 +333,24 @@ def validate_coverage(data):
                 require(m['log_loss'] >= 0 and 0 <= m['brier'] <= 1, 'Invalid probability loss')
             else:
                 require(r['target'] in ('margin', 'total') and m['mae'] >= 0 and m['rmse'] + 1e-7 >= m['mae'], 'Invalid point-target metric')
+    # Captured history and settlement-qualified metric admission are distinct.
+    # `both_contract_games` remains a compatibility alias for captured history.
+    coverage_ids = set()
+    for row in data['coverage']:
+        identity = row['season'], row['provider'], row['horizon']
+        require(identity not in coverage_ids, 'Duplicate coverage census')
+        coverage_ids.add(identity)
+        captured = row['captured_both_contract_games']
+        admitted = row['metric_admitted_games']
+        settlement_unknown = row['settlement_unverified_games']
+        require(all(type(n) is int and n >= 0 for n in (captured, admitted, settlement_unknown)), 'Invalid coverage count')
+        require(row['both_contract_games'] == captured, 'Captured history confused with admitted metrics')
+        require(admitted + settlement_unknown == captured, 'Settlement exclusions do not reconcile with captured history')
+        require(0 <= row['exact_cutoff_games'] <= row['age_le_60_seconds'] <= row['age_le_300_seconds'] <= row['age_le_3600_seconds'] <= captured, 'Quote-age coverage exceeds captured history')
+        if row['season'] == 2026:
+            actual = sum(g['completed'] and any(p['provider'] == row['provider'] and p['horizon'] == row['horizon'] and p['derived_pick'] for p in g['providers']) for g in games)
+            require(captured == actual, 'Current captured census differs from game inventory')
+    require(coverage_ids == {(y, p, h) for y in (2024, 2025, 2026) for p in ('Kalshi', 'Polymarket') for h in ('T1', 'T2')}, 'Missing historical provider coverage census')
     return {'current_coverage_status': 'PUBLIC_DERIVED_COVERAGE_VALIDATED', 'current_schedule_games': len(games), 'current_completed_games': 121, 'current_disagreement_pairs': len(actual_disagreements), 'private_training_reproduced': False, 'owner_pipeline_accepted': False}
 
 
