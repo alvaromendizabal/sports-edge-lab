@@ -20,7 +20,7 @@ const { chromium } = require(process.env.PLAYWRIGHT_MODULE_DIR || 'playwright');
     probability: ['win', 'LogLoss'], accuracy: ['win', 'Accuracy'],
     margin: ['margin', 'MAE'], total: ['total', 'MAE'],
   };
-  const counts = { viewports: 0, selectorStates: 0, scenarios: 0, keyboardEvents: 0 };
+  const counts = { viewports: 0, selectorStates: 0, scenarios: 0, progressScenarios: 0, executionViews: 0, keyboardEvents: 0 };
   try {
     for (const width of [1440, 390]) {
       await page.setViewportSize({ width, height: 1000 });
@@ -32,6 +32,15 @@ const { chromium } = require(process.env.PLAYWRIGHT_MODULE_DIR || 'playwright');
         assert.equal(await page.locator('#provider-table tr').count(), 3);
         assert.deepEqual(await page.locator('#provider-table tr td:first-child').allTextContents(), ['Kalshi', 'Polymarket', 'DraftKings']);
         assert.match(await page.locator('#current').innerText(), /Current metrics: unavailable/);
+        assert.match(await page.locator('#attempt-summary').innerText(), /108 new target fits across both leagues/);
+        assert.match(await page.locator('#attempt-summary').innerText(), /54 in this track/);
+        assert.equal(await page.locator('#phase-table tr').count(), 4);
+        assert.equal(await page.locator('#phase-table .done').count(), 3);
+        assert.equal(await page.locator('#phase-table .failed').count(), 1);
+        assert.match(await page.locator('#inventory-age').innerText(), /Nov 2, 2026/);
+        assert.match(await page.locator('#coverage-counts').innerText(), /Unverified/);
+        assert.match(await page.locator('#resource-note').innerText(), /simultaneous process-tree peak was not measured/);
+        counts.executionViews++;
         for (const [objective, [target, metric]] of Object.entries(objectiveMap)) {
           await page.selectOption('#objective', objective);
           for (const season of ['pooled', '2025', '2026']) {
@@ -60,6 +69,27 @@ const { chromium } = require(process.env.PLAYWRIGHT_MODULE_DIR || 'playwright');
           assert.equal(await page.locator('#demo-output.blocked').count(), scenario === 'valid' ? 0 : 1);
           counts.scenarios++;
         }
+        const progressExamples = JSON.parse(await page.locator('#progress-evidence').textContent());
+        assert.equal(progressExamples.length, 8);
+        for (const scenario of progressExamples) {
+          await page.locator(`[data-progress="${scenario.id}"]`).click();
+          assert.equal(await page.locator('[data-progress][aria-pressed="true"]').count(), 1);
+          const p = scenario.progress;
+          assert.equal(await page.locator('#progress-count').innerText(), `${p.completed} / ${p.total === null ? 'unknown' : p.total}`);
+          assert.match(await page.locator('#progress-components').innerText(), new RegExp(`${p.newly_committed} newly committed.*${p.reused} reused`));
+          if (p.total === null) {
+            assert.equal(await page.locator('#progress-track').getAttribute('aria-valuenow'), null);
+            assert.match(await page.locator('#progress-eta').innerText(), /Unknown/);
+          } else {
+            assert.equal(await page.locator('#progress-track').getAttribute('aria-valuenow'), String(p.completed));
+          }
+          if (scenario.id === 'measured') assert.equal(await page.locator('#progress-eta').innerText(), '30.0 s');
+          if (scenario.id === 'reused') assert.equal(await page.locator('#progress-eta').innerText(), '40.0 s');
+          if (scenario.id === 'failed') assert.match(await page.locator('#progress-eta').innerText(), /Stopped/);
+          if (scenario.id === 'complete') assert.equal(await page.locator('#progress-eta').innerText(), 'Complete');
+          assert.equal(await page.evaluate(() => document.documentElement.scrollWidth > innerWidth), false, `${league} ${width} ${scenario.id} progress overflow`);
+          counts.progressScenarios++;
+        }
         await page.selectOption('#objective', 'probability');
         await page.selectOption('#season', 'pooled');
         await page.locator('#objective').focus();
@@ -69,6 +99,7 @@ const { chromium } = require(process.env.PLAYWRIGHT_MODULE_DIR || 'playwright');
         counts.keyboardEvents++;
         await page.selectOption('#objective', 'probability');
         await page.locator('[data-scenario="valid"]').click();
+        await page.locator('[data-progress="measured"]').click();
         await page.locator('body').click({ position: { x: 3, y: 3 } });
         await page.evaluate(() => window.scrollTo(0, 0));
         if (process.env.DASHBOARD_SCREENSHOTS) {

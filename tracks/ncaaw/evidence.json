@@ -1,21 +1,64 @@
 {
   "current_owner_attempt": {
-    "completed_at": "2026-11-03T21:24:02.379868+00:00",
-    "failure_class": "A stream context manager returned a raw HTTP reader, hiding the wrapper-specific iterator. The test double returned itself, so the API boundary was not represented.",
+    "attempted_scientific_stages": 4,
+    "completed_at": "2026-11-04T00:18:24.055366+00:00",
+    "completed_scientific_stages": 3,
+    "cpu_seconds": 4589.328836,
+    "current_outcomes_used_for_selection": false,
+    "failure_class": "Foreign-project summary selection stopped current-source refresh before new game or provider acquisition.",
+    "league_new_real_target_fits": 54,
     "new_calibration_fits": 0,
+    "new_empirical_residual_fits": 0,
     "new_orders": 0,
     "new_prediction_rows": 0,
     "new_prospective_issues": 0,
-    "new_real_target_fits": 0,
+    "new_real_target_fits": 108,
     "new_source_refreshes": 0,
+    "next_execution_status": "Replacement under preparation; no subsequent owner run is represented here.",
     "original_monitoring_unchanged": true,
-    "owner_post_close_verification": "failed_on_same_stream_interface",
-    "release": "B032",
+    "owner_peak_rss_bytes": 6571601920,
+    "owner_post_close_verification": "verified_full_final_return_bytes",
+    "phase_seconds": {
+      "admission": 4146.091564976001,
+      "fixtures": 10.069719983000141,
+      "science": 1294.1799582330004
+    },
+    "prediction_row_scope": "Current-season rows only; the completed study produced historical reconstructions.",
+    "release": "B033",
+    "remaining_phases": "Not reached; no overall completion percentage or live ETA is claimed.",
+    "reused_target_fits": 0,
+    "run_scope": "NCAA_MEN_AND_WOMEN_COMBINED",
     "scientific_credit_from_subsequent_readback": 0,
-    "status": "FAILED_BEFORE_PARENT_DATA_RESTORATION",
-    "subsequent_independent_return_readback": "verified_full_bytes_after_owner_failure",
-    "synthetic_test_seconds": 10.460865365000245,
-    "synthetic_tests_passed": 250
+    "simultaneous_process_tree_peak_measured": false,
+    "stages": [
+      {
+        "label": "Restore authenticated parent",
+        "seconds": 101.99768535400017,
+        "status": "COMPLETED"
+      },
+      {
+        "label": "Build historical feature families",
+        "seconds": 12.830268329999853,
+        "status": "COMPLETED"
+      },
+      {
+        "label": "Run registered historical study",
+        "seconds": 1179.099499594,
+        "status": "COMPLETED"
+      },
+      {
+        "label": "Refresh current sources",
+        "seconds": 0.21230741399995168,
+        "status": "FAILED"
+      }
+    ],
+    "status": "FAILED_PARTIAL_WORK_PRESERVED",
+    "study_target_fits_completed": 108,
+    "study_target_fits_registered": 108,
+    "subsequent_independent_return_readback": "verified_full_bytes_after_partial_failure",
+    "synthetic_test_seconds": 10.069719983000141,
+    "synthetic_tests_passed": 371,
+    "total_wall_seconds": 5451.181535214
   },
   "current_season": {
     "label": "2026\u201327",
@@ -887,16 +930,63 @@
     "right": "W-W3",
     "selection_exposed": true
   },
+  "observed_inventory": {
+    "all_official_games_covered": false,
+    "authenticated_current_issues": 0,
+    "candidate_games": 419,
+    "last_week": {
+      "candidate_games": 1,
+      "end": "2026-11-01",
+      "observed_finals": 1,
+      "start": "2026-10-26"
+    },
+    "observed_finals": 51,
+    "official_inventory_reconciled": false,
+    "qualification": "Candidate records are not an official denominator. Unknown phase, opponent division, exact start times and possible duplicates remain unresolved in the private inventory.",
+    "snapshot_at": "2026-11-03T00:48:42+00:00",
+    "status": "INHERITED_OBSERVATION_NOT_REFRESHED",
+    "this_week": {
+      "candidate_games": 418,
+      "end": "2026-11-08",
+      "observed_finals": 50,
+      "start": "2026-11-02"
+    }
+  },
+  "owner_attempt_history": [
+    {
+      "completed_at": "2026-11-03T21:24:02.379868+00:00",
+      "failure_class": "A stream context manager returned a raw HTTP reader, hiding the wrapper-specific iterator. The test double returned itself, so the API boundary was not represented.",
+      "new_calibration_fits": 0,
+      "new_orders": 0,
+      "new_prediction_rows": 0,
+      "new_prospective_issues": 0,
+      "new_real_target_fits": 0,
+      "new_source_refreshes": 0,
+      "original_monitoring_unchanged": true,
+      "owner_post_close_verification": "failed_on_same_stream_interface",
+      "release": "B032",
+      "scientific_credit_from_subsequent_readback": 0,
+      "status": "FAILED_BEFORE_PARENT_DATA_RESTORATION",
+      "subsequent_independent_return_readback": "verified_full_bytes_after_owner_failure",
+      "synthetic_test_seconds": 10.460865365000245,
+      "synthetic_tests_passed": 250
+    }
+  ],
   "provenance": {
     "aggregate_verification": "Historical objective and season metrics were independently recomputed from authenticated per-game exports. Only sanitized aggregates are public.",
-    "failed_owner_return_sha256": "ae14d708cf85615c1c9c57a7891db85261a5b1632ecd70349730bf2dde51d9b0",
+    "failed_owner_return_sha256": "16b58cc6ed5bd4be303d41ae17816af2510f4e52a9bc011811f40e90f3003cfe",
     "historical_accepted_owner_return_sha256": "df98ed0758c29deaed943355349833ab0aeaa23a79693b5efc027e835075e4da",
+    "latest_evidence_qualification": "Partial research progress is authenticated; historical headline selections remain the earlier accepted comparison and current coverage is not established.",
+    "latest_outer_return_sha256": "508f4502b7ccdb4ac2403217c89840cb8e2286fde61f55399bcd7b7478ea9948",
+    "prior_failed_owner_return_sha256": "ae14d708cf85615c1c9c57a7891db85261a5b1632ecd70349730bf2dde51d9b0",
     "public_review_reproduces": "Information-time and evaluation contracts on invented data; not private real-data retraining."
   },
   "providers": [
     {
       "current_log_loss": null,
       "current_matched_games": null,
+      "display_coverage": "NOT_REFRESHED_BY_THIS_ATTEMPT",
+      "eligible_comparison_coverage": "NOT_ESTABLISHED",
       "hypothetical_ROI": null,
       "name": "Kalshi",
       "required_evidence": "Exact event identity, pre-cutoff quote availability, compatible full-game settlement, executable price and applicable fee rules.",
@@ -905,14 +995,28 @@
     {
       "current_log_loss": null,
       "current_matched_games": null,
+      "display_coverage": "NOT_REFRESHED_BY_THIS_ATTEMPT",
+      "eligible_comparison_coverage": "NOT_ESTABLISHED",
       "hypothetical_ROI": null,
       "name": "Polymarket",
+      "products": [
+        {
+          "name": "International",
+          "status": "CURRENT_COVERAGE_UNVERIFIED"
+        },
+        {
+          "name": "US",
+          "status": "NOT_ACQUIRED_UNVERIFIED"
+        }
+      ],
       "required_evidence": "Exact event identity, pre-cutoff quote availability, compatible full-game settlement, executable price and applicable fee rules.",
       "status": "NOT_ESTABLISHED_BY_THIS_FAILED_ATTEMPT"
     },
     {
       "current_log_loss": null,
       "current_matched_games": null,
+      "display_coverage": "NOT_REFRESHED_BY_THIS_ATTEMPT",
+      "eligible_comparison_coverage": "NOT_ESTABLISHED",
       "hypothetical_ROI": null,
       "name": "DraftKings",
       "required_evidence": "Exact event identity, pre-cutoff quote availability, compatible full-game settlement, executable price and applicable fee rules.",
@@ -920,5 +1024,12 @@
     }
   ],
   "published_snapshot_date": "2026-11-03",
+  "quote_display_contract": {
+    "eligible_comparison": "Only an observation available by the declared forecast cutoff may join that forecast comparison.",
+    "latest_captured_pretip": "Newest captured observation with verified pre-tip availability and exact event binding; no claim of an exhaustive provider tick history.",
+    "latest_observed": "Newest captured observation, which may be after a forecast cutoff or after tipoff.",
+    "model_required_to_display_quote": false,
+    "retrospective_recovery": "Retrieval time remains visible; recovery cannot create an earlier issue or prove executable profit."
+  },
   "schema": "sports-edge-lab.public.ncaa-review.v1"
 }
