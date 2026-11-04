@@ -123,3 +123,9 @@ Meaningful tests reject mixed phases, backward counters, zero or backward clock 
 | [test_dashboard_browser.cjs](test_dashboard_browser.cjs) | Real desktop/mobile browser events, accessibility hooks, keyboard controls and offline rendering |
 
 The accepted historical and failed current owner-return digests are included in the public evidence JSON. Raw provider records, private object locations, complete prediction archives, execution handoffs, exact active features and model parameters remain outside this publication. Nothing here changes the repository's existing rights or publication policy.
+
+## Portable validation and honest outcomes
+
+Run `python examples/ncaa_review/preflight.py` for four invented scenarios. A missing optional runtime function is an observation; a required operation still remains blocked. Check completion, successful execution, failures, unexpected errors and skips have separate counts. A skipped integration never becomes a passing test or a model fit. Duplicate check identities and unobserved capabilities fail before any check is invoked. Exception classes are retained without disclosing messages or private tracebacks.
+
+The current public owner evidence records B035's actual preflight failure and zero scientific stages. B033's earlier valid historical study remains separately visible. Neither the invented checks nor a later preserved diagnostic establish fresh game coverage or scientific success.
