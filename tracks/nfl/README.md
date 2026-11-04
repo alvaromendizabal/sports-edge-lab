@@ -9,6 +9,8 @@ Start with **Games to inspect**: choose the current week, any earlier week, all 
 
 **Latest pregame coverage:** All 121 completed games now have separately authenticated Kalshi winner, margin and total references, including Chicago–Seattle. Provider candle times and later acquisition clocks remain visible; original model metrics are unchanged. [Read the N037 market and injury-study update](N037_MARKET_AND_STUDY_UPDATE.md).
 
+**New separate challenger:** Inspect 29 actual early injury-study cards alongside the preserved forecasts. The winner model uses base features; margin/total models include injury features, with partial BAL/JAX inputs and unknown reports elsewhere. [Read the precise scope and clocks](EXPERIMENTAL_INJURY_ISSUES.md).
+
 **Current Week 9 source recovery:** DraftKings 15/15 winner, margin and total references; Kalshi 15/15 for all three; Polymarket 13/15 for all three. The authenticated N036 source-only recovery adds 13 observed reference cells; its public-request budget stopped with two Polymarket games still missing. This is source coverage, not research acceptance. The recovered LV–SF event match retains its November 4 quote and capture times; it is not a fresh acquisition. Kalshi capture clocks remain distinct from unavailable provider quote times. [Inspect coverage and limitations](CURRENT_SOURCE_RECOVERY.md). A separate immutable addendum exposes 29 later genuine early primary-stream issues, with original issue clocks and no new fit or verified injury-input claim.
 
 **Pregame forecasting, honest market comparisons, and recoverable ML systems.** Built by [Alvaro Mendizabal](https://github.com/alvaromendizabal) as one track in the existing [Sports Edge Lab](../../README.md) portfolio.

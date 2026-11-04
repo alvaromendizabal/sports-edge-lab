@@ -23,7 +23,10 @@
  const signed=x=>x==null?'Not available':(x>0?'+':'')+num(x);
  const when=x=>x?new Intl.DateTimeFormat('en-US',{timeZone:'America/Los_Angeles',month:'short',day:'numeric',hour:'numeric',minute:'2-digit',timeZoneName:'short'}).format(new Date(x)):'Not recorded';
  const horizons={T2:'2 hours before kickoff',T1:'1 hour before kickoff',LATEST_PREGAME:'Latest before kickoff',LATEST_OBSERVED:'Latest observed upcoming'};
- const models=new Map(D.model_sets.map(x=>[x.id??x.model_id,x]));
+ const E=JSON.parse(document.getElementById('nfl-injury-issue').textContent);
+ const experimentalIssues=new Map(E.cards.map(f=>[f.game_id,f]));
+ const forecastModels=[...D.model_sets,{id:'experimental_injury_issue',label:'Experimental injury challenger · Nov 4'}];
+ const models=new Map(forecastModels.map(x=>[x.id??x.model_id,x]));
  const modelLabel=id=>models.get(id)?.label??models.get(id)?.model_label??id;
  const modelId=f=>f.model_id??f.model_set_id;
  const I=JSON.parse(document.getElementById('nfl-primary-issue').textContent);
@@ -32,6 +35,9 @@
   const issued=primaryIssues.get(g.game_id);
   if(g.completed||!issued)return g;
   return {...g,forecasts:g.forecasts.map(f=>modelId(f)===issued.model_id&&(!f.actual_issue_at||Date.parse(issued.actual_issue_at)>Date.parse(f.actual_issue_at))?issued:f)};
+  }).map(g=>{
+  const experimental=experimentalIssues.get(g.game_id);
+  return g.completed||!experimental?g:{...g,forecasts:[...g.forecasts,experimental]};
  });
  const providers=D.active_providers;
  const table=(caption,headers,rows)=>'<div class="scroll table-wrap" tabindex="0" role="region" aria-label="'+esc(caption)+'"><table><caption class="table-caption">'+esc(caption)+'</caption><thead><tr>'+headers.map(h=>'<th scope="col">'+esc(h)+'</th>').join('')+'</tr></thead><tbody>'+rows.map(row=>'<tr>'+row.map((v,i)=>(i?'<td>':'<th scope="row">')+v+(i?'</td>':'</th>')).join('')+'</tr>').join('')+'</tbody></table></div>';
@@ -69,7 +75,13 @@
   if(!r||r.line==null)return '<span class="provider-state">Not available</span><br><span class="fine">'+esc(r?.reason??(h==='LATEST_PREGAME'?'Latest-pregame source replay pending.':p==='Kalshi'&&!g.completed?'Current Kalshi capture pending.':'No authenticated equivalent reference.'))+'</span>';
   const probability=r.observed_probability==null?'Quoted line; no contract probability exported':pct(r.observed_probability)+' observed probability';
   const state=r.availability_status==='SAVED_LINE_REFERENCE_CLOCK_UNAVAILABLE'?'Saved line · source clock unavailable':r.contract_count+' captured contract'+(r.contract_count===1?'':'s')+' · '+clockText(r)+(r.sourceRecovery?' · recovered source checkpoint':'');
-  return '<strong>'+esc(r.predicate)+'</strong><br>'+probability+'<br><span class="fine">'+esc(state)+'</span>';
+  const alternate=String(r.reason??'').startsWith('Captured alternate threshold only')?'<br><span class="fine alternate-threshold">Alternate threshold · main line not established</span>':'';
+  return '<strong>'+esc(r.predicate)+'</strong>'+alternate+'<br>'+probability+'<br><span class="fine">'+esc(state)+'</span>';
+ }
+ function experimentalContext(f){
+  const partial=f.injury_report_status==='PARTIAL_LISTED_REPORTS';
+  const report=partial?'Partial listed reports: BAL 9 and JAX 5 admitted rows; 14 rows excluded. Lamar Jackson’s listed DNP was included; Tyler Huntley and Joe Fagnano were excluded by identity matching.':'No current report rows were admitted for this game. Unknown reports do not mean healthy players.';
+  return '<p class="fine injury-status experimental-injury-status"><strong>Experimental injury inputs:</strong> '+esc(report)+' Announced starter, depth chart and injured-reserve status are not verified model inputs.</p><p class="fine experimental-target-views"><strong>Target differences:</strong> Winner uses base features without direct injury fields. Margin and total use injury features with unknown-report flags. These are separate fitted targets; their directions can differ.</p><p class="fine experimental-intervals"><strong>Reference intervals:</strong> home margin '+signed(f.margin_interval.lower)+' to '+signed(f.margin_interval.upper)+' (80% nominal); total '+num(f.total_interval.lower)+' to '+num(f.total_interval.upper)+'. Fixed pre-2024 residual quantiles; no coverage guarantee.</p><p class="fine experimental-clocks">Base features: '+esc(when(f.base_feature_asof_at))+'. Report observed: '+esc(f.injury_observed_at?when(f.injury_observed_at):'No current report admitted')+'. Issued: '+esc(when(f.actual_issue_at))+'. Exact source, injury, fit and issue clocks are in the details below. Early research issue; no final-hour qualification or betting recommendation.</p>';
  }
  function card(g,id,h){
   const actual=g.actual;
@@ -81,7 +93,9 @@
   if(!actual){
    const hasProjection=forecasts.some(f=>f.pick||f.home_margin!=null||f.total!=null);
    html+='<p><span class="forecast-readiness">'+(hasProjection?'Early projection · betting assessment pending':'Forecast unavailable · betting assessment unavailable')+'</span></p>';
-   html+='<p class="fine injury-status"><strong>Current injury/QB information:</strong> Not verified in this forecast.'+(g.game_id==='2026_09_JAX_BAL'?' <a href="#ravens-qb-context">Read the separate Ravens update.</a>':'')+'</p>';
+   const experimental=selected.find(f=>modelId(f)==='experimental_injury_issue'&&f.pick);
+   if(experimental)html+=experimentalContext(experimental);
+   else html+='<p class="fine injury-status"><strong>Current injury/QB information:</strong> Not verified in this forecast.'+(g.game_id==='2026_09_JAX_BAL'?' <a href="#ravens-qb-context">Read the separate Ravens update.</a>':'')+'</p>';
    html+='<p class="fine wager-status"><strong>Personal wager activity:</strong> Not tracked in this dashboard.</p>';
   }
   html+=table('Selected model outputs · '+g.away+' at '+g.home,['Forecast series','Winner','Home margin','Total'],selected.map(f=>[esc(f.model_label??modelLabel(modelId(f)))+'<span class="game-origin">'+esc(f.issue_class==='RECONSTRUCTED_NOT_ORIGINAL_ISSUED'?'Retrospective reconstruction':f.issue_class==='SAVED_OR_RECONSTRUCTED_NOT_ORIGINAL_ISSUED'?'Saved vector · no original issue':f.issue_class==='EARLY_FORWARD_RESEARCH_ISSUE'?'Actual early research issue':f.issue_class==='T1_RESEARCH_ACTUAL_ISSUE'?'Actual 1-hour research issue':'Unavailable')+'</span>',f.pick?'<strong>'+esc(f.pick)+' '+pct(f.pick_probability)+'</strong>'+(actual?'<br>'+esc(actual.winner==='TIE'?'Tie':f.pick===actual.winner?'Correct winner':'Incorrect winner'):''):'Not available',signed(f.home_margin)+(actual&&f.home_margin!=null?'<br><span class="fine">Actual '+signed(actual.home_margin)+' · absolute error '+num(Math.abs(f.home_margin-actual.home_margin))+'</span>':''),num(f.total)+(actual&&f.total!=null?'<br><span class="fine">Actual '+num(actual.total)+' · absolute error '+num(Math.abs(f.total-actual.total))+'</span>':'')]));
@@ -92,6 +106,7 @@
   html+='<p class="fine clock-context">Model information time stays fixed when the market reference changes. '+(h==='T2'?'Same-cutoff comparison only for model rows explicitly labelled T2.':h==='T1'?'A T2 model versus this later T1 market is a supplemental comparison.':h==='LATEST_PREGAME'?'This is a later market benchmark, not a reissued historical prediction.':'This is an observed upcoming reference, not a final pregame quote.')+'</p>';
   html+='<details><summary>Forecast, quote and acquisition clocks</summary><ul>';
   for(const f of selected)html+='<li><strong>'+esc(f.model_label??modelLabel(modelId(f)))+'</strong><br>'+esc(f.unavailable_reason??f.origin??'Selected public output')+'<br>Model horizon: '+esc(f.horizon??'Unavailable')+'; issued: '+esc(f.actual_issue_at??'No original issue; do not backdate')+'; source/feature boundary: '+esc(f.source_asof??'Not separately exported')+'; fit completed: '+esc(f.fit_completed??'Not separately exported')+'.</li>';
+  for(const f of selected)if(modelId(f)==='experimental_injury_issue')html+='<li class="experimental-exact-clocks"><strong>Experimental injury clocks (UTC)</strong><br>Base features: '+esc(f.base_feature_asof_at)+'; injury cutoff: '+esc(f.injury_cutoff_at)+'; report observed: '+esc(f.injury_observed_at??'No current report admitted')+'; fit completed: '+esc(f.fit_completed)+'; issued: '+esc(f.actual_issue_at)+'.</li>';
   for(const p of market)html+='<li><strong>'+esc(p.provider)+' · '+esc(horizons[h])+'</strong><br>Observed quote: '+esc(p.quote_at??'Unavailable')+'; acquired: '+esc(p.acquired_at??'Unavailable')+'; quote age: '+(p.quote_age_seconds==null?'Unavailable':esc(num(p.quote_age_seconds,0))+' seconds')+'; maximum paired age: '+(p.max_age_seconds==null?'Unavailable':esc(num(p.max_age_seconds,0))+' seconds')+'; team-clock skew: '+(p.pair_clock_skew_seconds==null?'Unavailable':esc(num(p.pair_clock_skew_seconds,0))+' seconds')+'; clock type: '+esc(p.quote_clock_kind??'Not recorded')+'. '+esc(p.unavailable_reason??'Derived direction only; no executable price, fee or liquidity claim.')+'</li>';
   for(const p of providers)for(const target of ['margin','total']){const r=pointRow(g,p,target,h);if(r)html+='<li><strong>'+esc(p)+' · '+esc(target)+' reference</strong><br>'+esc(r.predicate??'No parsed predicate')+'; quote: '+esc(r.quote_at??'Not recorded')+'; acquired: '+esc(r.acquired_at??'Not recorded')+'; reference cutoff: '+esc(r.cutoff_at??'Not recorded')+'; quote age: '+esc(r.quote_age_seconds??'Not recorded')+' seconds; clock type: '+esc(r.quote_clock_kind??'Not recorded')+'. '+esc(r.reason??'')+'</li>';}
   html+='</ul></details></article>';
@@ -108,13 +123,14 @@
   document.getElementById('partial-source-status').textContent='Week 9 has captured winner, margin and total references for all 15 games from DraftKings, Kalshi and Polymarket. These are dated early-week observations. Polymarket includes alternate thresholds, not necessarily main lines; threshold prices are not mean-score projections. Historical backfill and additional strikes remain incomplete. Current references are not applied to the selected historical horizon.';
  }
  get('coverage-period').innerHTML='<option value="9">Current week · Week 9 · 15 games</option><option value="completed">All completed games · 121 finals</option><option value="monday">Monday Nov 2 · CHI 34–17 SEA</option>'+[...new Set(allGames.map(g=>g.week))].sort((a,b)=>a-b).map(w=>'<option value="'+w+'">Week '+w+' · '+allGames.filter(g=>g.week===w).length+' games</option>').join('')+'<option value="all">Full season · 272 scheduled games</option>';
- get('coverage-model').innerHTML=D.model_sets.map(m=>'<option value="'+esc(m.id??m.model_id)+'">'+esc(m.label??m.model_label)+'</option>').join('')+'<option value="all">All model streams · include unavailable</option>';
+ get('coverage-model').innerHTML=forecastModels.map(m=>'<option value="'+esc(m.id??m.model_id)+'">'+esc(m.label??m.model_label)+'</option>').join('')+'<option value="all">All model streams · include unavailable</option>';
  get('coverage-model').value=models.has('selected_latest_origin')?'selected_latest_origin':get('coverage-model').options[0].value;
  get('coverage-horizon').innerHTML=Object.entries(horizons).map(([id,label])=>'<option value="'+id+'">'+label+'</option>').join('');
  get('coverage-horizon').value='LATEST_OBSERVED';
  function changePeriod(){const value=get('coverage-period').value;get('coverage-model').value=value==='monday'?'preserved_selected_actual_T1':value==='9'?'selected_latest_origin':'selected_annual';get('coverage-horizon').value=value==='monday'?'T1':value==='9'?'LATEST_OBSERVED':'T2';render();}
  get('coverage-period').addEventListener('change',changePeriod);
  get('show-monday-game').addEventListener('click',()=>{get('coverage-period').value='monday';changePeriod();get('coverage-period').focus();});
+ get('show-injury-challenger').addEventListener('click',()=>{get('coverage-period').value='9';get('coverage-model').value='experimental_injury_issue';get('coverage-horizon').value='LATEST_OBSERVED';render();get('coverage-model').focus();});
  for(const id of ['coverage-model','coverage-horizon'])get(id).addEventListener('change',render);
  get('coverage-asof').textContent='Preserved model/evaluation snapshot '+D.as_of+' · '+allGames.filter(g=>g.completed).length+' completed games retained; '+allGames.filter(g=>g.week===9).length+' current-week games. Owner run status: '+D.owner_run_status+'. A separate primary-stream addendum displays 29 genuine early issues at '+I.as_of+'; no new fit or verified injury input is claimed. Completed artifacts are preserved; this status is not completed-pipeline acceptance.';
  function paired(){
