@@ -1,5 +1,8 @@
 # Sports Edge Lab · NFL
 
+**Current coverage review:** [Explore every game and market clock](review.html#latest-coverage) · [Read the clock policy](CURRENT_MARKET_CLOCKS.md). All 121 completed games and all 15 Week 9 games remain visible. The four market references are independent of the frozen or rolling model's information time. Latest-before-kickoff coverage is shown when authenticated; missing observations stay explicit. The preserved N033 performance scorecards below keep their original cohorts.
+
+
 **Pregame forecasting, honest market comparisons, and recoverable ML systems.** Built by [Alvaro Mendizabal](https://github.com/alvaromendizabal) as one track in the existing [Sports Edge Lab](../../README.md) portfolio.
 
 [**Open the live NFL dashboard →**](https://sports-edge-lab-nfl.alv-mendizabal.chatgpt.site/) · [Model card](CURRENT_MODEL_CARD.md) · [Methods & retraining](CURRENT_METHODOLOGY.md) · [Public evidence](current_evidence.json)

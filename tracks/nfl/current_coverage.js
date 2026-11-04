@@ -1,0 +1,78 @@
+// Offline public derived outputs only. Selecting a clock never changes a model.
+(()=>{
+ 'use strict';
+ const D=JSON.parse(document.getElementById('nfl-latest-evidence').textContent);
+ const get=id=>document.getElementById(id);
+ const esc=x=>String(x??'Not available').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
+ const num=(x,n=1)=>x==null?'Not available':Number(x).toFixed(n);
+ const pct=x=>x==null?'Not available':num(100*x,1)+'%';
+ const signed=x=>x==null?'Not available':(x>0?'+':'')+num(x);
+ const when=x=>x?new Intl.DateTimeFormat('en-US',{timeZone:'America/Los_Angeles',month:'short',day:'numeric',hour:'numeric',minute:'2-digit',timeZoneName:'short'}).format(new Date(x)):'Not recorded';
+ const horizons={T2:'2 hours before kickoff',T1:'1 hour before kickoff',LATEST_PREGAME:'Latest before kickoff',LATEST_OBSERVED:'Latest observed upcoming'};
+ const models=new Map(D.model_sets.map(x=>[x.id??x.model_id,x]));
+ const modelLabel=id=>models.get(id)?.label??models.get(id)?.model_label??id;
+ const modelId=f=>f.model_id??f.model_set_id;
+ const allGames=D.all_games;
+ const providers=D.active_providers;
+ const table=(caption,headers,rows)=>'<div class="scroll table-wrap" tabindex="0" role="region" aria-label="'+esc(caption)+'"><table><caption class="table-caption">'+esc(caption)+'</caption><thead><tr>'+headers.map(h=>'<th scope="col">'+esc(h)+'</th>').join('')+'</tr></thead><tbody>'+rows.map(row=>'<tr>'+row.map((v,i)=>(i?'<td>':'<th scope="row">')+v+(i?'</td>':'</th>')).join('')+'</tr>').join('')+'</tbody></table></div>';
+ function providerRow(g,p,h){
+  return g.providers.find(x=>x.provider===p&&x.horizon===h)??{provider:p,horizon:h,derived_pick:null,availability_status:'UNAVAILABLE',unavailable_reason:h==='LATEST_PREGAME'?'Last-before-kickoff history has not yet been authenticated in this snapshot.':h==='LATEST_OBSERVED'?'No authenticated current winner observation in this snapshot.':'No authenticated equivalent winner record at this cutoff.'};
+ }
+ function selectedGames(){
+  const p=get('coverage-period').value;
+  return allGames.filter(g=>p==='completed'?g.completed:p==='all'?true:g.week===Number(p));
+ }
+ function card(g,id,h){
+  const actual=g.actual;
+  const forecasts=id==='all'?g.forecasts:g.forecasts.filter(f=>modelId(f)===id);
+  const selected=forecasts.length?forecasts:[{model_label:modelLabel(id),issue_class:'UNAVAILABLE',unavailable_reason:'This forecast series has no authenticated output for this game.'}];
+  const market=providers.map(p=>providerRow(g,p,h));
+  const result=actual?esc(g.away)+' '+num(actual.away_score,0)+'–'+num(actual.home_score,0)+' '+esc(g.home):'Upcoming';
+  let html='<article class="card game-card latest-game" data-coverage-game="'+esc(g.game_id)+'" data-state="'+(g.completed?'final':'upcoming')+'"><div class="game-head"><div><span class="tag">Week '+g.week+' · '+(g.completed?'Final':'Scheduled')+'</span><h3>'+esc(g.away)+' at '+esc(g.home)+'</h3></div><div class="game-score">'+result+'</div></div><p class="game-clock">Kickoff '+esc(when(g.kickoff_utc))+'<br><span class="fine">'+esc(g.kickoff_utc)+'</span></p>';
+  html+=table('Selected model outputs · '+g.away+' at '+g.home,['Forecast series','Winner','Home margin','Total'],selected.map(f=>[esc(f.model_label??modelLabel(modelId(f)))+'<span class="game-origin">'+esc(f.issue_class==='RECONSTRUCTED_NOT_ORIGINAL_ISSUED'?'Retrospective reconstruction':f.issue_class==='SAVED_OR_RECONSTRUCTED_NOT_ORIGINAL_ISSUED'?'Saved vector · no original issue':f.issue_class==='EARLY_FORWARD_RESEARCH_ISSUE'?'Actual early research issue':f.issue_class==='T1_RESEARCH_ACTUAL_ISSUE'?'Actual 1-hour research issue':'Unavailable')+'</span>',f.pick?'<strong>'+esc(f.pick)+' '+pct(f.pick_probability)+'</strong>'+(actual?'<br>'+esc(actual.winner==='TIE'?'Tie':f.pick===actual.winner?'Correct winner':'Incorrect winner'):''):'Not available',signed(f.home_margin),num(f.total)]));
+  html+=table(horizons[h]+' · derived provider directions',['Provider','Winner direction','Evidence state'],market.map(p=>[esc(p.provider),p.derived_pick?'<strong>'+esc(p.derived_pick)+'</strong>'+(actual?'<br>'+esc(actual.winner==='TIE'?'Tie':p.correct?'Correct winner':'Incorrect winner'):''):'Not available',p.derived_pick?'<span class="provider-state covered">'+(p.quote_at?'Observed':'Saved reference')+'</span><br>'+esc(when(p.quote_at)):'<span class="provider-state">Coverage gap</span><br>'+esc(p.unavailable_reason??p.availability_status)]));
+  html+='<p class="fine clock-context">Model information time stays fixed when the market reference changes. '+(h==='T2'?'Same-cutoff comparison only for model rows explicitly labelled T2.':h==='T1'?'A T2 model versus this later T1 market is a supplemental comparison.':h==='LATEST_PREGAME'?'This is a later market benchmark, not a reissued historical prediction.':'This is an observed upcoming reference, not a final pregame quote.')+'</p>';
+  if(!actual)html+='<span class="no-bet">NO BET · research forecasts, not execution-qualified recommendations</span>';
+  html+='<details><summary>Forecast, quote and acquisition clocks</summary><ul>';
+  for(const f of selected)html+='<li><strong>'+esc(f.model_label??modelLabel(modelId(f)))+'</strong><br>'+esc(f.unavailable_reason??f.origin??'Selected public output')+'<br>Model horizon: '+esc(f.horizon??'Unavailable')+'; issued: '+esc(f.actual_issue_at??'No original issue; do not backdate')+'; source/feature boundary: '+esc(f.source_asof??'Not separately exported')+'; fit completed: '+esc(f.fit_completed??'Not separately exported')+'.</li>';
+  for(const p of market)html+='<li><strong>'+esc(p.provider)+' · '+esc(horizons[h])+'</strong><br>Observed quote: '+esc(p.quote_at??'Unavailable')+'; acquired: '+esc(p.acquired_at??'Unavailable')+'; quote age: '+(p.quote_age_seconds==null?'Unavailable':esc(num(p.quote_age_seconds,0))+' seconds')+'; maximum paired age: '+(p.max_age_seconds==null?'Unavailable':esc(num(p.max_age_seconds,0))+' seconds')+'; team-clock skew: '+(p.pair_clock_skew_seconds==null?'Unavailable':esc(num(p.pair_clock_skew_seconds,0))+' seconds')+'; clock type: '+esc(p.quote_clock_kind??'Not recorded')+'. '+esc(p.unavailable_reason??'Derived direction only; no executable price, fee or liquidity claim.')+'</li>';
+  html+='</ul></details></article>';
+  return html;
+ }
+ function render(){
+  const games=selectedGames(),id=get('coverage-model').value,h=get('coverage-horizon').value;
+  const available=games.filter(g=>g.forecasts.some(f=>(id==='all'||modelId(f)===id)&&f.pick)).length;
+  get('coverage-count').textContent=games.length+' games shown · '+games.filter(g=>g.completed).length+' completed · '+available+' with a selected model winner output. Games remain visible even when a stream or provider is unavailable.';
+  get('coverage-provider-counts').innerHTML=providers.map(p=>{const n=games.filter(g=>providerRow(g,p,h).derived_pick).length;return '<article class="mini-stat"><span>'+esc(p)+'</span><strong>'+n+' / '+games.length+'</strong><span class="fine">winner directions · '+esc(horizons[h])+'</span></article>';}).join('');
+  get('coverage-clock-note').textContent=h==='T2'?'T2 means two hours before kickoff. Use the last genuine observation at or before that cutoff; an exact-minute quote is not required. Quote age stays visible.':h==='T1'?'T1 means one hour before kickoff. It is a separate market reference. Earlier T2 model outputs retain their original information boundary.':h==='LATEST_PREGAME'?'Latest before kickoff is the last authenticated observation strictly before the game starts. It may be shown even when it is later than T2. Missing latest history is never replaced silently with a T2 quote.':'Latest observed upcoming shows a real observed market state for an unstarted game, when available. Reaching T2 is not a requirement for displaying it. An observation is not an executable bet.';
+  get('coverage-games').innerHTML=games.map(g=>card(g,id,h)).join('');
+ }
+ get('coverage-period').innerHTML='<option value="9">Current week · Week 9 · 15 games</option><option value="completed">All completed games · 121 finals</option>'+[...new Set(allGames.map(g=>g.week))].sort((a,b)=>a-b).map(w=>'<option value="'+w+'">Week '+w+' · '+allGames.filter(g=>g.week===w).length+' games</option>').join('')+'<option value="all">Full season · 272 scheduled games</option>';
+ get('coverage-model').innerHTML=D.model_sets.map(m=>'<option value="'+esc(m.id??m.model_id)+'">'+esc(m.label??m.model_label)+'</option>').join('')+'<option value="all">All model streams · include unavailable</option>';
+ get('coverage-model').value=models.has('selected_latest_origin')?'selected_latest_origin':get('coverage-model').options[0].value;
+ get('coverage-horizon').innerHTML=Object.entries(horizons).map(([id,label])=>'<option value="'+id+'">'+label+'</option>').join('');
+ get('coverage-horizon').value='LATEST_OBSERVED';
+ get('coverage-period').addEventListener('change',()=>{const value=get('coverage-period').value;get('coverage-model').value=value==='9'?'selected_latest_origin':'selected_annual';get('coverage-horizon').value=value==='9'?'LATEST_OBSERVED':'T2';render();});
+ for(const id of ['coverage-model','coverage-horizon'])get(id).addEventListener('change',render);
+ get('coverage-asof').textContent='Evidence snapshot '+D.as_of+' · '+allGames.filter(g=>g.completed).length+' completed games retained; '+allGames.filter(g=>g.week===9).length+' current-week games. Owner run status: '+D.owner_run_status+'. Completed artifacts are preserved; this status is not completed-pipeline acceptance.';
+ function paired(){
+  const year=Number(get('coverage-metric-season').value),week=get('coverage-metric-week').value,id=get('coverage-metric-model').value,provider=get('coverage-metric-provider').value,target=get('coverage-metric-target').value;
+  const rows=(week==='ALL'?D.season_metrics:D.weekly_metrics).filter(r=>r.season===year&&(week==='ALL'||String(r.week)===week)&&r.model_id===id&&(provider==='all'||r.provider===provider)&&r.target===target);
+  const heads=target==='win'?['Provider / cutoff','Common games','Model / provider correct','Model / provider log loss ↓','Model / provider Brier ↓','Model / provider AUC','Model / provider ECE ↓']:['Provider / cutoff','Common games','Model / provider MAE ↓','Model / provider RMSE ↓','Model / provider bias','Distribution coverage'];
+  const out=rows.map(r=>{const a=r.model_metrics,b=r.provider_metrics;return target==='win'?[esc(r.provider)+'<br>'+esc(horizons[r.horizon]??r.horizon),num(a.games,0),num(a.correct,0)+' / '+num(b.correct,0),num(a.log_loss,6)+' / '+num(b.log_loss,6),num(a.brier,6)+' / '+num(b.brier,6),num(a.roc_auc,4)+' / '+num(b.roc_auc,4),num(a.ece_10,4)+' / '+num(b.ece_10,4)]:[esc(r.provider)+'<br>'+esc(horizons[r.horizon]??r.horizon),num(a.games,0),num(a.mae,3)+' / '+num(b.mae,3),num(a.rmse,3)+' / '+num(b.rmse,3),signed(a.bias)+' / '+signed(b.bias),esc(a.distribution_reason??'No registered interval export')];});
+  get('coverage-paired-count').textContent=year+' · '+(week==='ALL'?'season totals':'Week '+week)+' · '+modelLabel(id)+' · '+rows.length+' matched provider rows. Each row uses exactly the same games for model and provider. Provider rows can have different event sets; do not rank across those cohorts.';
+  get('coverage-paired-table').innerHTML=rows.length?table('Matched provider evaluation · '+year,heads,out):'<p class="empty-state">No equivalent authenticated comparison for this selection. Games remain in the full inventory. No missing market is inferred from a player prop or a spread threshold.</p>';
+  const disagreements=D.disagreements.filter(r=>r.season===year&&(week==='ALL'||String(r.week)===week)&&r.model_set_id===id&&(provider==='all'||r.provider===provider));
+  const filter=get('coverage-disagreement-result').value,shown=disagreements.filter(r=>filter==='all'||(filter==='model'?r.model_right:r.provider_right));
+  const won=disagreements.filter(r=>r.model_right).length,lost=disagreements.filter(r=>r.provider_right).length,low=disagreements.filter(r=>r.provider_right&&r.model_probability_in_50s).length;
+  get('coverage-disagreement-count').textContent=disagreements.length+' model/provider disagreement pairs · '+won+' model right · '+lost+' provider right · '+low+' of '+lost+' model losses had model confidence from 50% to below 60%. A game may occur once per provider; these are not independent bets.';
+  get('coverage-disagreements').innerHTML=shown.length?table('Winning and losing disagreements', ['Week / game','Final','Model / provider','Correct side','Model confidence in 50s'], shown.map(r=>{const g=allGames.find(g=>g.game_id===r.game_id),a=g?.actual;return ['W'+r.week+' · '+esc(g?g.away+' at '+g.home:r.game_id),a?num(a.away_score,0)+'–'+num(a.home_score,0):esc(r.actual_winner),esc(r.model_pick)+' / '+esc(r.provider_pick)+' ('+esc(r.provider)+')',r.model_right?'Model':esc(r.provider),r.model_probability_in_50s?'Yes':'No'];})):'<p class="empty-state">No disagreements match this selection. This is not a claim of perfect accuracy or complete provider coverage.</p>';
+ }
+ get('coverage-metric-model').innerHTML=D.model_sets.map(m=>'<option value="'+esc(m.id)+'">'+esc(m.label)+'</option>').join('');
+ get('coverage-metric-model').value='descriptive_feedback';
+ get('coverage-metric-provider').innerHTML='<option value="all">All supported providers</option>'+providers.map(p=>'<option>'+esc(p)+'</option>').join('');
+ get('coverage-metric-week').innerHTML='<option value="ALL">Full season</option>'+Array.from({length:22},(_,i)=>'<option value="'+(i+1)+'">Week '+(i+1)+'</option>').join('');
+ for(const id of ['coverage-metric-season','coverage-metric-week','coverage-metric-model','coverage-metric-provider','coverage-metric-target','coverage-disagreement-result'])get(id).addEventListener('change',paired);
+ paired();
+ render();
+})();
