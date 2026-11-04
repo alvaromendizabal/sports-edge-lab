@@ -2,6 +2,7 @@
 import copy
 import json
 import unittest
+from examples.fbs_contracts.season_transport import pack, unpack
 from examples.fbs_contracts.build_season_review import DATA, OUTPUT, render, validate
 from examples.fbs_contracts.market_time import known_before_prediction, reference_at
 
@@ -9,10 +10,24 @@ from examples.fbs_contracts.market_time import known_before_prediction, referenc
 class SeasonReviewTests(unittest.TestCase):
     @classmethod
     def setUpClass(cls):
-        cls.data = json.loads(DATA.read_text())
+        cls.data = validate(json.loads(DATA.read_text()))
 
     def altered(self):
         return copy.deepcopy(self.data)
+
+    def test_reference_transport_preserves_every_record_and_clock(self):
+        encoded=pack(self.data)
+        self.assertEqual(unpack(encoded),self.data)
+        self.assertLess(len(json.dumps(encoded)),len(json.dumps(self.data)))
+
+    def test_reference_transport_rejects_shifted_or_unknown_columns(self):
+        encoded=pack(self.data);encoded['reference_fields'][0]='unapproved_raw_field'
+        with self.assertRaisesRegex(ValueError,'column identity'):
+            unpack(encoded)
+        encoded=pack(self.data)
+        next(records[0] for game in encoded['report']['games'] for records in game['markets'].values() if records).pop()
+        with self.assertRaisesRegex(ValueError,'column count'):
+            unpack(encoded)
 
     def test_deterministic_page_keeps_all_888_games_without_script(self):
         page = render(self.data)

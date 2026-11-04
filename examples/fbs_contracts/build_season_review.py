@@ -4,6 +4,7 @@ from datetime import timedelta
 from zoneinfo import ZoneInfo
 import argparse, hashlib, html, json, math, re
 from .market_time import instant, reference_at
+from .season_transport import pack, unpack
 
 ROOT=Path(__file__).resolve().parents[2]
 DATA=ROOT/'docs/fbs/season-2026.json'
@@ -11,7 +12,7 @@ TEMPLATE=Path(__file__).with_name('season_template.html.in')
 OUTPUT=ROOT/'docs/fbs/index.html'
 PROVIDERS=('DraftKings','Kalshi','Polymarket US','Polymarket Global')
 GAME_KEYS={'id','season','phase','week','kickoff','kickoff_tbd','home','away','completed','home_points','away_points','population','source_at','replay','rolling','decision','stake_usd','markets'}
-REFERENCE_KEYS={'target','value','picked_home','quote_at','captured_at','reference_kind','product','evidence_kind','identity_basis','join_status','event_url','executable','interval_end_at','price_status','clock_basis','source_status','source_status_field','point_support'}
+REFERENCE_KEYS={'target','value','picked_home','quote_at','captured_at','reference_kind','product','evidence_kind','identity_basis','join_status','event_url','executable','interval_end_at','price_status','clock_basis','source_status','source_status_field','point_support','registered_cutoff_kind','source_query_cutoff_kind'}
 REPLAY_KEYS={'p_home','picked_home','home_points','away_points','home_margin','total','correct','margin_error','total_error','status','issued_at'}
 TOP_KEYS={'schema','season','prepared_at','assessed_at','timezone','owner','inventory','windows','metrics','historical','weekly','matched_draftkings','matched_recovered','provider_coverage','provider_acquisition_summary','reporting_contract','games'}
 
@@ -21,6 +22,7 @@ def require(value,message):
 def finite(x):return isinstance(x,(int,float)) and not isinstance(x,bool) and math.isfinite(x)
 
 def validate(data):
+    data=unpack(data)
     require(set(data)==TOP_KEYS,'Unexpected or missing public root field')
     require(data['schema']=='fbs.public.season-explorer.v1','Wrong public schema')
     require(data['timezone']=='America/Los_Angeles','Wrong display timezone')
@@ -60,6 +62,10 @@ def validate(data):
                 if ref['captured_at']:instant(ref['captured_at'])
                 require(ref['quote_at'] or ref['captured_at'],'Reference has no recorded clock')
                 require(ref['clock_basis']==('provider_quote_at' if ref['quote_at'] else 'retrieved_at'),'Clock basis cannot fabricate a source quote timestamp')
+                require(ref['registered_cutoff_kind'] in [None,'T120','T60','LATEST_BEFORE_KICKOFF'],'Unknown registered proxy window')
+                require(ref['source_query_cutoff_kind'] in [None,'T120','T60','LATEST_BEFORE_KICKOFF','latest_pre_kickoff','current'],'Unknown acquisition query window')
+                if ref['registered_cutoff_kind']:
+                    require(provider!='DraftKings' and ref['target'] in ['margin','total'] and ref['quote_at'] and ref['reference_kind'].startswith('implied_threshold_center_from_'),'Only historical native point proxies are window-specific')
                 support=ref['point_support']
                 if support is not None:
                     require(ref['target'] in ['margin','total'] and ref['quote_at'] is None,'Current point support cannot replace historical quotes or winner probabilities')
@@ -109,7 +115,8 @@ def validate(data):
             for game in games:
                 if not game['completed'] or not game['replay']:continue
                 kind=row['cutoff_kind'];cutoff=instant(game['kickoff'])-timedelta(minutes=120 if kind=='T120' else 60 if kind=='T60' else 0)
-                try:ref=reference_at(game['markets'][row['provider']],row['target'],cutoff.isoformat(),strict_before=kind=='LATEST_BEFORE_KICKOFF')
+                source_rows=[r for r in game['markets'][row['provider']] if r['product']==row['product']]
+                try:ref=reference_at(source_rows,row['target'],cutoff.isoformat(),strict_before=kind=='LATEST_BEFORE_KICKOFF',registered_cutoff_kind=kind)
                 except ValueError:ref=None
                 source_kind=ref['reference_kind'].removeprefix('implied_threshold_center_from_') if ref else None
                 if ref and ref['product']==row['product'] and (group=='provider_summary' or source_kind==row['reference_kind']):cohort.append(game['id'])
@@ -133,7 +140,7 @@ def static_rows(data):
         score=f"{esc(g['away'])} {g['away_points']:.0f} · {esc(g['home'])} {g['home_points']:.0f}" if g['completed'] else 'Scheduled'
         pick=(f"<strong>{esc(winner(g,replay['picked_home']))}</strong><span class='sub'>{fmt((p if replay['picked_home'] else 1-p)*100,1)}% · {'Correct' if replay['correct'] else 'Incorrect'}</span>" if replay else '<span class="muted">No recorded forecast</span>')
         points=(f"{fmt(replay['away_points'])}–{fmt(replay['home_points'])}<span class='sub'>Home margin {replay['home_margin']:+.1f} · Total {fmt(replay['total'])}</span>" if replay else '<span class="muted">Not issued</span>')
-        try:ref=reference_at(g['markets']['DraftKings'],'winner',g['kickoff'],strict_before=True)
+        try:ref=reference_at(g['markets']['DraftKings'],'winner',g['kickoff'],strict_before=True,registered_cutoff_kind='LATEST_BEFORE_KICKOFF')
         except ValueError:ref=None
         market=(f"<strong>{esc(winner(g,ref['picked_home']))}</strong><span class='sub'>{fmt(max(ref['value'],1-ref['value'])*100,1)}% · source {esc(ref['quote_at'])}</span>" if ref else '<span class="muted">No unambiguous stored winner reference</span>')
         local=instant(g['kickoff']).astimezone(ZoneInfo(data['timezone'])).strftime('%b %-d · %-I:%M %p %Z')
@@ -180,12 +187,13 @@ def recovered_point_rows(data):
         sources='; '.join(k.replace('_',' ')+' ('+str(v)+')' for k,v in row['reference_kind_counts'].items())
         interval=row['paired_uncertainty'].get('interval')
         uncertainty=(f'{interval[0]:+.3f} to {interval[1]:+.3f}' if interval else 'Unavailable: fewer than two phase/week blocks')
-        result.append(f'<tr><th scope="row">{esc(row["provider"])}<span class="sub">{esc(sources)}</span></th><td>{esc(row["target"])} · threshold center</td><td>{esc(row["cutoff_kind"].replace("LATEST_BEFORE_KICKOFF","Latest pregame"))}</td><td>{row["n"]}</td><td>{pair("mae")}</td><td>{pair("rmse")}</td><td>{pair("bias")}</td><td>{pair("r2")}</td><td>{uncertainty}</td></tr>')
+        qualification='sportsbook line' if row['provider']=='DraftKings' else 'incomplete-ladder threshold diagnostic'
+        result.append(f'<tr><th scope="row">{esc(row["provider"])}<span class="sub">{esc(sources)}</span></th><td>{esc(row["target"])} · {qualification}</td><td>{esc(row["cutoff_kind"].replace("LATEST_BEFORE_KICKOFF","Latest pregame"))}</td><td>{row["n"]}</td><td>{pair("mae")}</td><td>{pair("rmse")}</td><td>{pair("bias")}</td><td>{pair("r2")}</td><td>{uncertainty}</td></tr>')
     return '\n'.join(result) or '<tr><td colspan="9">No comparable point-ladder diagnostic is included.</td></tr>'
 
 def render(data=None):
     data=validate(data or json.loads(DATA.read_text()))
-    payload=json.dumps(data,ensure_ascii=False,separators=(',',':'),allow_nan=False).replace('<','\\u003c').replace('>','\\u003e').replace('&','\\u0026')
+    payload=json.dumps(pack(data),ensure_ascii=False,separators=(',',':'),allow_nan=False).replace('<','\\u003c').replace('>','\\u003e').replace('&','\\u0026')
     return (TEMPLATE.read_text().replace('__SEASON_DATA__',payload)
             .replace('__GAME_ROWS__',static_rows(data)).replace('__HISTORICAL_ROWS__',historical_rows(data))
             .replace('__WEEKLY_ROWS__',weekly_rows(data)).replace('__COMPLETE_METRICS__',complete_metrics(data))

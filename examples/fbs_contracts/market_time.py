@@ -17,7 +17,21 @@ def instant(value):
     return value.astimezone(timezone.utc)
 
 
-def reference_at(observations, target, cutoff, *, strict_before=False):
+def reference_signature(row):
+    """Recognize only explicitly equivalent sportsbook labels on value/time ties."""
+    target=row.get('target');kind=row.get('reference_kind');product=row.get('product')
+    products={'winner':{'SPORTSBOOK_WINNER_H2H_DEVIGGED','sportsbook_winner','sportsbook_game_market'},
+              'margin':{'SPORTSBOOK_HOME_MARGIN_LINE','sportsbook_home_margin_line','sportsbook_game_market'},
+              'total':{'SPORTSBOOK_TOTAL_LINE','sportsbook_total_line','sportsbook_game_market'}}
+    kinds={'winner':{'archived_devigged_probability','captured_devigged_probability','vig_removed_two_way_probability'},
+           'margin':{'archived_line','captured_line','sportsbook_point_line'},
+           'total':{'archived_line','captured_line','sportsbook_point_line'}}
+    if product in products.get(target,set()) and kind in kinds.get(target,set()):
+        return row['value'],row.get('picked_home'),'equivalent_sportsbook_'+target
+    return row['value'],kind,product
+
+
+def reference_at(observations, target, cutoff, *, strict_before=False, registered_cutoff_kind=None):
     """Latest *stored* event-time observation, not a claim of feed completeness.
 
     A timestamped public historical observation may be recovered after cutoff.
@@ -28,6 +42,8 @@ def reference_at(observations, target, cutoff, *, strict_before=False):
     eligible = []
     for row in observations:
         if row.get('target') != target or row.get('join_status') != 'matched':
+            continue
+        if row.get('registered_cutoff_kind') and row['registered_cutoff_kind']!=registered_cutoff_kind:
             continue
         value = row.get('value')
         if value is None or not isinstance(value, (int, float)) or isinstance(value, bool) or not isfinite(value):
@@ -54,10 +70,10 @@ def reference_at(observations, target, cutoff, *, strict_before=False):
     eligible = timestamped or eligible
     latest = max(clock for clock, _ in eligible)
     candidates = [row for clock, row in eligible if clock == latest]
-    signatures = {(row['value'], row.get('reference_kind'), row.get('product')) for row in candidates}
+    signatures = {reference_signature(row) for row in candidates}
     if len(signatures) != 1:
         raise ValueError('Conflicting observations at the same source clock')
-    return min(candidates, key=lambda row: (row.get('captured_at') or '', row.get('evidence_kind') or ''))
+    return min(candidates, key=lambda row: (not bool(row.get('captured_at')), row.get('captured_at') or '', row.get('evidence_kind') or ''))
 
 
 def known_before_prediction(row, cutoff):
