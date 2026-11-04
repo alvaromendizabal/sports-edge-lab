@@ -1,0 +1,153 @@
+{
+  "as_of": "2026-11-04T03:43:25.091271+00:00",
+  "capture_state": "AUTHENTICATED_RETROSPECTIVE_LATEST_PREGAME_CANDLES",
+  "coverage": [
+    {
+      "available_games": 0,
+      "provider": "DraftKings",
+      "target": "winner",
+      "total_completed_games": 121
+    },
+    {
+      "available_games": 0,
+      "provider": "DraftKings",
+      "target": "margin",
+      "total_completed_games": 121
+    },
+    {
+      "available_games": 0,
+      "provider": "DraftKings",
+      "target": "total",
+      "total_completed_games": 121
+    },
+    {
+      "available_games": 1,
+      "provider": "Kalshi",
+      "target": "winner",
+      "total_completed_games": 121
+    },
+    {
+      "available_games": 1,
+      "provider": "Kalshi",
+      "target": "margin",
+      "total_completed_games": 121
+    },
+    {
+      "available_games": 1,
+      "provider": "Kalshi",
+      "target": "total",
+      "total_completed_games": 121
+    },
+    {
+      "available_games": 0,
+      "provider": "Polymarket",
+      "target": "winner",
+      "total_completed_games": 121
+    },
+    {
+      "available_games": 0,
+      "provider": "Polymarket",
+      "target": "margin",
+      "total_completed_games": 121
+    },
+    {
+      "available_games": 0,
+      "provider": "Polymarket",
+      "target": "total",
+      "total_completed_games": 121
+    }
+  ],
+  "historical_metrics_changed": false,
+  "limitations": [
+    "This addendum authenticates one completed game; the remaining latest-pregame source records are not yet fully replayed for public display.",
+    "Scheduled kickoff is the boundary; actual-start timing is not separately established.",
+    "Historical candles were acquired after completion. They are market benchmarks, not originally possessed predictions or executable historical fills.",
+    "Winner values are zero-tie probability proxies; the binary team contracts settle half on ties.",
+    "No model values, historical scorecards or original forecasts are rescored by this display update."
+  ],
+  "new_fits": 0,
+  "new_forecasts": 0,
+  "owner_pipeline_accepted": false,
+  "owner_return_sha256": "9c4fb9cafcdb20af94af8de8e2f4e304f853e3838e5e4e66c0d75571eb4e3539",
+  "point_rows": [
+    {
+      "acquired_at": "2026-11-04T03:43:19.974380+00:00",
+      "availability_status": "OBSERVED_RETROSPECTIVE_LATEST_PREGAME_REFERENCE",
+      "contract_count": 25,
+      "cutoff_at": "2026-11-03T01:14:59+00:00",
+      "game_id": "2026_08_CHI_SEA",
+      "horizon": "LATEST_PREGAME",
+      "line": 3.5,
+      "line_max": 20.5,
+      "line_min": -14.5,
+      "line_semantics": "NORMALIZED_HOME_MARGIN_THRESHOLD",
+      "metric_eligible": false,
+      "observed_probability": 0.475,
+      "operator": ">",
+      "parsed_contract_count": 25,
+      "point_estimate": null,
+      "predicate": "SEA margin > 3.5",
+      "predicate_variable": "home_margin",
+      "provider": "Kalshi",
+      "quote_age_seconds": 59,
+      "quote_at": "2026-11-03T01:14:00+00:00",
+      "quote_clock_kind": "RETROSPECTIVE_PROVIDER_CANDLE_TIMESTAMP",
+      "reason": "Genuine last available pregame candle within the captured 24-hour search window; acquired after the event. The representative threshold is chosen without outcomes. No original possession, fill or depth claim.",
+      "semantics": "THRESHOLD_CONTRACT_NOT_POINT_PROJECTION",
+      "settlement_note": "Binary threshold payout, not a mean-score forecast or a model cover probability; historical fees/depth are unverified.",
+      "source_observation_count": 25,
+      "target": "margin"
+    },
+    {
+      "acquired_at": "2026-11-04T03:43:25.091271+00:00",
+      "availability_status": "OBSERVED_RETROSPECTIVE_LATEST_PREGAME_REFERENCE",
+      "contract_count": 19,
+      "cutoff_at": "2026-11-03T01:14:59+00:00",
+      "game_id": "2026_08_CHI_SEA",
+      "horizon": "LATEST_PREGAME",
+      "line": 46.5,
+      "line_max": 67.5,
+      "line_min": 25.5,
+      "line_semantics": "TOTAL_THRESHOLD",
+      "metric_eligible": false,
+      "observed_probability": 0.495,
+      "operator": ">",
+      "parsed_contract_count": 19,
+      "point_estimate": null,
+      "predicate": "Total points > 46.5",
+      "predicate_variable": "total",
+      "provider": "Kalshi",
+      "quote_age_seconds": 59,
+      "quote_at": "2026-11-03T01:14:00+00:00",
+      "quote_clock_kind": "RETROSPECTIVE_PROVIDER_CANDLE_TIMESTAMP",
+      "reason": "Genuine last available pregame candle within the captured 24-hour search window; acquired after the event. The representative threshold is chosen without outcomes. No original possession, fill or depth claim.",
+      "semantics": "THRESHOLD_CONTRACT_NOT_POINT_PROJECTION",
+      "settlement_note": "Binary threshold payout, not a mean-score forecast or a model cover probability; historical fees/depth are unverified.",
+      "source_observation_count": 19,
+      "target": "total"
+    }
+  ],
+  "schema": "sports-edge-lab.nfl.latest-pregame-addendum.n037b.v1",
+  "search_window_seconds": 86400,
+  "selection_rule": "Select each contract last genuine candle strictly before scheduled kickoff within the captured window; representative point threshold minimizes distance from 0.5, with fixed deterministic tie-breaking independent of outcomes.",
+  "winner_rows": [
+    {
+      "acquired_at": "2026-11-04T03:43:19.127008+00:00",
+      "availability_status": "OBSERVED_RETROSPECTIVE_LATEST_PREGAME_REFERENCE",
+      "comparison_rule": "Last genuine provider candle strictly before scheduled kickoff; later retrospective acquisition is not original possession.",
+      "correct": false,
+      "derived_pick": "SEA",
+      "game_id": "2026_08_CHI_SEA",
+      "horizon": "LATEST_PREGAME",
+      "max_age_seconds": 60.0,
+      "metric_eligible": false,
+      "p_home": 0.615,
+      "pair_clock_skew_seconds": 0.0,
+      "provider": "Kalshi",
+      "quote_age_seconds": 60.0,
+      "quote_at": "2026-11-03T01:14:00+00:00",
+      "quote_clock_kind": "RETROSPECTIVE_PROVIDER_CANDLE_TIMESTAMP",
+      "unavailable_reason": null
+    }
+  ]
+}
