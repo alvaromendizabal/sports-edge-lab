@@ -2,7 +2,21 @@
 
 [Project](../../README.md) · [Open interactive dashboard](https://alvaro-ncaa-research-review.alv-mendizabal.chatgpt.site/tracks/ncaam/index.html) · [Dashboard source](index.html) · [Methodology and runnable example](../../examples/ncaa_review/README.md) · [Separate women's track](../ncaaw/README.md)
 
-## Current review — November 3, 2026 Pacific
+## Current review — November 4, 2026 Pacific
+
+The authenticated **B036** owner completed all **12 workflow stages** in **35.6 minutes before finalization**. It committed **65 new native reconstruction target fits and 35 scalar calibration fits** across both leagues, including **50 target fits in this track**, and verified/reused **108 historical target fits** without counting them as new. The fixture gate passed 536 cases with one optional integration skipped; there were no fixture errors. The original frozen runtime did not qualify, the selected current monitor deferred, and none of the 8,100 native target prediction rows became an as-issued forecast.
+
+This track's fresh report contains **1,103 distinct source candidates and 327 observed finals** at **November 4, 10:32 a.m. Pacific**. Across both tracks, 788 unmatched official candidates may duplicate other records. The official denominator remains unverified. Market display retains 9,436 observations, of which 9,414 have unresolved native identity. Kalshi requests stopped on HTTP429; Polymarket international remains distinct from unacquired US data. DraftKings historical collection had no configured runtime credential and made zero new paid history calls. No market advantage or profit is established.
+
+### Open the full private game report
+
+Use the [private report viewer](https://alvaro-ncaa-research-review.alv-mendizabal.chatgpt.site/private-report/index.html) and choose your delivered NCAA dashboard JSON. It shows every supplied source game, including missing-model and unmatched official records, with original versus reconstruction labels, Pacific times and precision, actuals, errors, captured pre-tip/observed market fields, and NO BET reasons. The separate market view preserves unresolved observations.
+
+The file is read locally in the browser tab. No report data is uploaded, sent to a provider, stored by the page, or included in this public repository. Clearing or reloading removes the in-memory report. Week and season filters use the file's exact exported membership; they do not infer missing times. A model-stream selection preserves games lacking that stream.
+
+The current nested owner-return SHA-256 is `87531cdaaf0e4df44a715e0977cdadf99d60201d276233ac22f3a3699413f8a9`. The owner fully read back its finalized return. This establishes durable bytes, not complete coverage or prospective performance. Earlier scorecards and failures below remain dated evidence.
+
+## Preserved historical review — November 3, 2026 Pacific
 
 The accepted historical evidence compares objective-specific models on **11,507 exact shared games** across 2024–25 and 2025–26. The latest B033 owner return completed its registered study with **54 new target fits in this track, 108 across both NCAA leagues**. It then failed during current-source refresh after selecting a summary belonging to another project. The run waited 69.1 minutes in admission, then spent 21.6 minutes on scientific work. No fresh current-game or provider corpus, current issue or order was produced.
 
@@ -117,8 +131,9 @@ See the [publication boundary](../../docs/PUBLICATION_BOUNDARY.md) for the disti
 
 </details>
 
-## Latest owner validation and preserved research
+## Prior B035 validation and preserved research
 
 The authenticated B035 owner admitted in 1.005 seconds with seven workers planned, then stopped before science: 510 fixture cases passed, three errored and one skipped. The optional-capability assumption was in the test fixture. No current-source refresh, target fit, checkpoint import or forecast issue occurred, and the owner did not persist its diagnostic remotely. Later recovery evidence cannot change those outcomes.
 
 The prior B033 study remains in the attempt history with 108 committed target fits across both leagues, 54 in this track. Historical scorecards and the dated November 2 inventory are unchanged. The [portable preflight example](../../examples/ncaa_review/preflight.py) demonstrates separate test outcomes and required versus optional capabilities using invented checks, without accessing a process or provider.
+
