@@ -12,7 +12,7 @@ assert.equal(filterGames(data.games,{...state,view:'last'},data.windows,data.pre
 assert.equal(filterGames(data.games,{...state,view:'current'},data.windows,data.prepared_at).length,63);
 assert.equal(filterGames(data.games,{...state,view:'completed',horizon:'T120',disagreements:true},data.windows,data.prepared_at).length,40);
 const current=filterGames(data.games,{...state,view:'current'},data.windows,data.prepared_at);
-for(const [provider,counts] of [['DraftKings',[62,62,62]],['Kalshi',[61,62,62]],['Polymarket Global',[62,62,62]],['Polymarket US',[58,0,0]]]){
+for(const [provider,counts] of [['DraftKings',[62,62,62]],['Kalshi',[62,63,63]],['Polymarket Global',[63,63,63]],['Polymarket US',[59,0,0]]]){
  const actual=['winner','margin','total'].map(target=>current.filter(g=>reference(g,provider,target,'auto',data.prepared_at).row).length);
  assert.deepEqual(actual,counts,'Current snapshot must remain visible before future cutoff windows: '+provider);
 }
