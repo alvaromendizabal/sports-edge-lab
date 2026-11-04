@@ -6,15 +6,19 @@
  const R=JSON.parse(document.getElementById('nfl-source-overlay').textContent);
  const X=JSON.parse(document.getElementById('nfl-reschedule-reference').textContent);
  const H=JSON.parse(document.getElementById('nfl-latest-pregame').textContent);
- const latestWinners=new Map(H.winner_rows.map(r=>[[r.game_id,r.provider].join('|'),{...r,latestHistory:true}]));
- const latestPoints=new Map(H.point_rows.map(r=>[[r.game_id,r.provider,r.target].join('|'),{...r,latestHistory:true}]));
+ const N=JSON.parse(document.getElementById('nfl-n038-source').textContent);
+ const order=(a,b)=>Date.parse(a.quote_at)-Date.parse(b.quote_at)||Date.parse(a.acquired_at)-Date.parse(b.acquired_at);
+ const latestWinners=new Map([...H.winner_rows,...N.winner_rows].sort(order).map(r=>[[r.game_id,r.provider].join('|'),{...r,latestHistory:true}]));
+ const latestPoints=new Map([...H.point_rows,...N.point_rows].sort(order).map(r=>[[r.game_id,r.provider,r.target].join('|'),{...r,latestHistory:true}]));
  const Z=JSON.parse(document.getElementById('nfl-source-recovery').textContent);
  const recoveredWinners=new Map(Z.winner_rows.map(r=>[[r.game_id,r.provider].join('|'),r]));
  const recoveredPoints=new Map(Z.point_rows.map(r=>[[r.game_id,r.provider,r.target].join('|'),r]));
  const mappedWinners=new Map(X.winner_rows.map(r=>[[r.game_id,r.provider].join('|'),{...r,scheduleRecovery:true}]));
  const mappedPoints=new Map(X.point_rows.map(r=>[[r.game_id,r.provider,r.target].join('|'),{...r,scheduleRecovery:true}]));
- const sourceWinners=new Map(R.winner_rows.map(r=>[[r.game_id,r.provider].join('|'),r]));
- const sourcePoints=new Map(R.point_rows.map(r=>[[r.game_id,r.provider,r.target].join('|'),r]));
+ const dkWinners=N.draftkings_week9.map(r=>({...r,scheduleRecovery:r.normalization_role==='DOCUMENTED_KICKOFF_REVISION_RECOVERY',p_home:r.p_home_no_vig,horizon:'LATEST_OBSERVED',quote_clock_kind:'PROVIDER_BOOKMAKER_LAST_UPDATE',availability_status:'OBSERVED_WINNER_REFERENCE'}));
+ const dkPoints=N.draftkings_week9.flatMap(r=>['margin','total'].map(target=>({...r,scheduleRecovery:r.normalization_role==='DOCUMENTED_KICKOFF_REVISION_RECOVERY',target,horizon:'LATEST_OBSERVED',line:target==='margin'?r.home_margin_line_reference:r.total_line_reference,predicate:(target==='margin'?'Home margin > '+r.home_margin_line_reference+' (home handicap '+r.home_spread+')':'Game total > '+r.total_line_reference),observed_probability:null,contract_count:1,quote_clock_kind:'PROVIDER_BOOKMAKER_LAST_UPDATE',reason:'Dated quoted line; not an expected score or executable offer.'})));
+ const sourceWinners=new Map([...R.winner_rows,...dkWinners,...N.current_winner_rows].map(r=>[[r.game_id,r.provider].join('|'),r]));
+ const sourcePoints=new Map([...R.point_rows,...dkPoints,...N.current_point_rows].map(r=>[[r.game_id,r.provider,r.target].join('|'),r]));
  const pointIndex=new Map(P.rows.map(r=>[[r.game_id,r.provider,r.target,r.horizon].join('|'),r]));
  const get=id=>document.getElementById(id);
  const esc=x=>String(x??'Not available').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
@@ -51,7 +55,7 @@
   return b&&(!a||Date.parse(b)>=Date.parse(a))?{...recovered,sourceRecovery:true}:base;
  }
  function clockText(r){
-  if(r.latestHistory)return 'Pregame candle '+when(r.quote_at)+' · retrospectively acquired '+when(r.acquired_at)+' · no original possession or fill claim';
+  if(r.latestHistory)return 'Pregame observation '+when(r.quote_at)+' · retrospectively acquired '+when(r.acquired_at)+' · no original possession or fill claim';
   if(r.scheduleRecovery)return 'Quote '+when(r.quote_at)+' · captured '+when(r.acquired_at)+' · recovered schedule mapping; not a fresh capture';
   if(r.quote_clock_kind===observationOnly)return 'Observed '+when(r.acquired_at)+' · provider quote time unavailable';
   return r.quote_at?'Quote '+when(r.quote_at)+(r.sourceRecovery?' · captured '+when(r.acquired_at):''):'Source clock unavailable';
