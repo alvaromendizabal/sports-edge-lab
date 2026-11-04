@@ -540,6 +540,10 @@ def build_review(*, check=False):
     overlay, overlay_receipt = load_overlay(latest)
     from reschedule_reference import load_reschedule
     reschedule, reschedule_receipt = load_reschedule(latest, overlay)
+    from source_recovery import load_source_recovery
+    recovery, recovery_receipt = load_source_recovery(latest, overlay, reschedule)
+    from primary_issue import load_primary_issue
+    primary, primary_receipt = load_primary_issue(latest)
     template = (HERE / "review.template.html").read_text()
     embedded = canonical(data).decode().replace("<", "\\u003c")
     page = template.replace("__EVIDENCE_JSON__", embedded).replace("__EVIDENCE_SHA__", digest(data))
@@ -549,14 +553,16 @@ def build_review(*, check=False):
     page = page.replace("__POINTS_JSON__", canonical(points).decode().replace("<", "\\u003c"))
     page = page.replace("__SOURCE_OVERLAY_JSON__", canonical(overlay).decode().replace("<", "\\u003c"))
     page = page.replace("__RESCHEDULE_JSON__", canonical(reschedule).decode().replace("<", "\\u003c"))
+    page = page.replace("__SOURCE_RECOVERY_JSON__", canonical(recovery).decode().replace("<", "\\u003c"))
+    page = page.replace("__PRIMARY_ISSUE_JSON__", canonical(primary).decode().replace("<", "\\u003c"))
     page = page.replace("__LATEST_SCRIPT__", (HERE / "current_coverage.js").read_text())
-    require(all(marker not in page for marker in ("__EVIDENCE_", "__CURRENT_", "__WEEKLY_", "__LATEST_", "__POINTS_", "__SOURCE_OVERLAY_", "__RESCHEDULE_")), "Unfilled review template")
+    require(all(marker not in page for marker in ("__EVIDENCE_", "__CURRENT_", "__WEEKLY_", "__LATEST_", "__POINTS_", "__SOURCE_OVERLAY_", "__RESCHEDULE_", "__SOURCE_RECOVERY_", "__PRIMARY_ISSUE_")), "Unfilled review template")
     output = HERE / "review.html"
     if check:
         require(output.is_file() and output.read_text() == page, "Generated review differs; run contracts.py --build-review")
     else:
         output.write_text(page)
-    return {**receipt, **current_receipt, **weekly_receipt, **latest_receipt, **points_receipt, **overlay_receipt, **reschedule_receipt, "review": "review.html", "evidence_sha256": digest(data), "generated_page_matches": True}
+    return {**receipt, **current_receipt, **weekly_receipt, **latest_receipt, **points_receipt, **overlay_receipt, **reschedule_receipt, **recovery_receipt, **primary_receipt, "review": "review.html", "evidence_sha256": digest(data), "generated_page_matches": True}
 
 
 def demo(*, output):
