@@ -1,76 +1,144 @@
 {
+  "current_coverage_gaps": {
+    "both_leagues_observed_finals": 638,
+    "both_leagues_source_records": 2175,
+    "calendar_source_versions": 1387,
+    "completed_game_box_normalization_errors": 417,
+    "market_identity_unresolved": 9414,
+    "market_observations": 9436,
+    "native_reconstruction_status": "65 target and 35 scalar fits; 8100 target prediction rows; no as-issued forecast credit.",
+    "official_denominator": null,
+    "original_frozen_current_status": "Runtime overlay did not qualify; no original frozen current issues.",
+    "selected_monitor_status": "No supported training scenarios; no selected-monitor fits or issues.",
+    "unmatched_official_candidates": 788
+  },
   "current_owner_attempt": {
     "admission": {
       "affinity_cpus": 8,
-      "aggregate_busy_cores": 0.0,
-      "available_memory_bytes": 28977152000,
+      "aggregate_busy_cores": 0.11013767209011238,
+      "available_memory_bytes": 30069108736,
       "capacity_is_observation_not_reservation": true,
+      "descendant_usage_measured": true,
       "foreign_processes_signaled": 0,
+      "later_safe_workers": 6,
       "lock_files_deleted": 0,
-      "observed_at": "2026-11-04T01:27:40.405977+00:00",
+      "observed_at": "2026-11-04T18:09:29.460744+00:00",
       "raw_sample_trajectory_published": false,
-      "sample_seconds": 1.000978572999884,
+      "raw_samples_preserved_in_private_evidence": true,
+      "sample_seconds": 1.0009422829998584,
       "workers_planned": 7
     },
-    "attempted_scientific_stages": 0,
-    "completed_at": "2026-11-04T01:27:53.381993+00:00",
-    "completed_scientific_stages": 0,
-    "cpu_seconds": 12.463603,
+    "attempted_scientific_stages": 12,
+    "completed_at": "2026-11-04T18:45:03.815725+00:00",
+    "completed_scientific_stages": 12,
+    "cost_status": "UNVERIFIED_NO_CURRENT_INSTANCE_RATE_OR_BILLING_ASSUMED",
+    "cpu_seconds": 1848.985465,
     "current_outcomes_used_for_selection": false,
-    "failure_class": "Three validation fixtures assumed an optional runtime capability existed. The fixture gate stopped before data refresh or scientific work.",
-    "failure_phase": "PREFLIGHT_BEFORE_SCIENCE",
-    "handoff": "Prior B033 run was already terminal and remained unchanged; no process was signaled.",
-    "league_new_real_target_fits": 0,
-    "new_calibration_fits": 0,
+    "failure_class": null,
+    "failure_phase": null,
+    "handoff": "Prior B033 was already terminal and unchanged; both optional pidfd APIs were unavailable and no process was signaled.",
+    "league_new_prediction_rows": 3936,
+    "league_new_real_target_fits": 50,
+    "new_calibration_fits": 35,
     "new_empirical_residual_fits": 0,
     "new_orders": 0,
-    "new_prediction_rows": 0,
+    "new_prediction_rows": 8100,
     "new_prospective_issues": 0,
-    "new_provider_requests": 0,
-    "new_real_target_fits": 0,
-    "new_source_refreshes": 0,
-    "next_execution_status": "Portable validation repair is being tested; no successor owner science is claimed.",
+    "new_provider_requests": null,
+    "new_real_target_fits": 65,
+    "new_source_refreshes": 1,
+    "next_execution_status": "Successor repairs are tested separately; no successor owner execution is asserted.",
     "original_monitoring_unchanged": true,
-    "owner_peak_rss_bytes": 293945344,
-    "owner_post_close_verification": "not_persisted_by_owner",
+    "owner_peak_rss_bytes": 7377870848,
+    "owner_post_close_verification": "full_return_bytes_verified",
     "phase_seconds": {
-      "admission": 1.0053939780009387,
-      "fixtures": 12.178590293000525,
-      "science": null
+      "admission": 1.0053192299997136,
+      "fixtures": 12.213294222000059,
+      "science": 2120.14748688
     },
     "planned_scientific_stages": 12,
-    "prediction_row_scope": "No current or historical model stage started.",
-    "release": "B035",
-    "remaining_phases": "All 12 scientific stages were unstarted. No whole-run ETA is supported.",
-    "reused_target_fits": 0,
+    "prediction_row_scope": "Target rows from chronological native reconstructions; not original issues or prospective betting results.",
+    "provider_request_note": "Actual public request receipts are retained; paid historical requests were zero without a configured runtime credential.",
+    "release": "B036",
+    "remaining_phases": "Workflow finished. Exact official reconciliation, source identity, eligible forecasts and historical quote coverage remain incomplete.",
+    "return_finalization_seconds": 6.721754491999491,
+    "return_inner_serialization_seconds": 4.013412943999356,
+    "return_persistence_attempt_seconds": 2.637990128000638,
+    "reused_target_fits": 108,
     "run_scope": "NCAA_MEN_AND_WOMEN_COMBINED",
     "scientific_credit_from_subsequent_readback": 0,
+    "scientific_goal_complete": false,
     "simultaneous_process_tree_peak_measured": false,
     "stages": [
       {
-        "label": "Fixture validation gate",
-        "seconds": 12.178590293000525,
-        "status": "FAILED"
+        "label": "Initial current inventory and sources",
+        "seconds": 451.6505147869998,
+        "status": "COMPLETED"
       },
       {
-        "label": "Initial current inventory",
-        "seconds": null,
-        "status": "NOT_STARTED"
+        "label": "Authenticate inputs and prior work",
+        "seconds": 111.47765289300014,
+        "status": "COMPLETED"
       },
       {
-        "label": "Historical and current science",
-        "seconds": null,
-        "status": "NOT_STARTED"
+        "label": "Historical feature review",
+        "seconds": 13.38661855700002,
+        "status": "COMPLETED"
+      },
+      {
+        "label": "Verify and reuse 108 historical target fits",
+        "seconds": 24.197296572999676,
+        "status": "COMPLETED"
+      },
+      {
+        "label": "Current feature reconstruction",
+        "seconds": 147.3312039960001,
+        "status": "COMPLETED"
+      },
+      {
+        "label": "Original frozen runtime qualification",
+        "seconds": 1.0085169990002214,
+        "status": "COMPLETED"
+      },
+      {
+        "label": "Selected current monitor qualification",
+        "seconds": 141.19988084100032,
+        "status": "COMPLETED"
+      },
+      {
+        "label": "Native chronological model reconstructions",
+        "seconds": 421.40636002699966,
+        "status": "COMPLETED"
+      },
+      {
+        "label": "Preserve immutable issues",
+        "seconds": 0.1372976259999632,
+        "status": "COMPLETED"
+      },
+      {
+        "label": "Final display-only refresh",
+        "seconds": 9.002954187999421,
+        "status": "COMPLETED"
+      },
+      {
+        "label": "Game, week and season reporting",
+        "seconds": 67.69182079999973,
+        "status": "COMPLETED"
+      },
+      {
+        "label": "Historical source inventory and backfill",
+        "seconds": 726.0358804489997,
+        "status": "COMPLETED"
       }
     ],
-    "status": "FAILED_PARTIAL_WORK_PRESERVED",
-    "synthetic_test_errors": 3,
-    "synthetic_test_seconds": 12.178590293000525,
+    "status": "COMPLETED_WITH_EXPLICIT_COVERAGE_STATUS",
+    "synthetic_test_errors": 0,
+    "synthetic_test_seconds": 12.213294222000059,
     "synthetic_tests_failed": 0,
-    "synthetic_tests_passed": 510,
+    "synthetic_tests_passed": 536,
     "synthetic_tests_skipped": 1,
-    "synthetic_tests_total": 514,
-    "total_wall_seconds": 14.015179215999524
+    "synthetic_tests_total": 537,
+    "total_wall_seconds": 2135.3921088240004
   },
   "current_season": {
     "label": "2026\u201327",
@@ -96,6 +164,30 @@
     "2025": "2024\u201325",
     "2026": "2025\u201326"
   },
+  "inventory_history": [
+    {
+      "all_official_games_covered": false,
+      "authenticated_current_issues": 0,
+      "candidate_games": 437,
+      "last_week": {
+        "candidate_games": 2,
+        "end": "2026-11-01",
+        "observed_finals": 2,
+        "start": "2026-10-26"
+      },
+      "observed_finals": 13,
+      "official_inventory_reconciled": false,
+      "qualification": "Candidate records are not an official denominator. Unknown phase, opponent division, exact start times and possible duplicates remain unresolved in the private inventory.",
+      "snapshot_at": "2026-11-03T00:48:42+00:00",
+      "status": "INHERITED_OBSERVATION_NOT_REFRESHED",
+      "this_week": {
+        "candidate_games": 435,
+        "end": "2026-11-08",
+        "observed_finals": 11,
+        "start": "2026-11-02"
+      }
+    }
+  ],
   "league": "ncaam",
   "league_label": "NCAA men's basketball",
   "market_advantage": {
@@ -718,24 +810,25 @@
   "observed_inventory": {
     "all_official_games_covered": false,
     "authenticated_current_issues": 0,
-    "candidate_games": 437,
+    "candidate_games": 1103,
     "last_week": {
       "candidate_games": 2,
       "end": "2026-11-01",
       "observed_finals": 2,
       "start": "2026-10-26"
     },
-    "observed_finals": 13,
+    "observed_finals": 327,
     "official_inventory_reconciled": false,
-    "qualification": "Candidate records are not an official denominator. Unknown phase, opponent division, exact start times and possible duplicates remain unresolved in the private inventory.",
-    "snapshot_at": "2026-11-03T00:48:42+00:00",
-    "status": "INHERITED_OBSERVATION_NOT_REFRESHED",
+    "qualification": "Distinct source/canonical records, including unresolved official candidates, may contain cross-source duplicates. These counts are not an official denominator.",
+    "snapshot_at": "2026-11-04T18:32:51.950861+00:00",
+    "status": "FRESH_OBSERVED_SOURCE_CANDIDATES_WITH_EXPLICIT_GAPS",
     "this_week": {
-      "candidate_games": 435,
+      "candidate_games": 737,
       "end": "2026-11-08",
-      "observed_finals": 11,
+      "observed_finals": 325,
       "start": "2026-11-02"
-    }
+    },
+    "unmatched_official_candidates": 416
   },
   "owner_attempt_history": [
     {
@@ -816,14 +909,88 @@
       "synthetic_test_seconds": 10.069719983000141,
       "synthetic_tests_passed": 371,
       "total_wall_seconds": 5451.181535214
+    },
+    {
+      "admission": {
+        "affinity_cpus": 8,
+        "aggregate_busy_cores": 0.0,
+        "available_memory_bytes": 28977152000,
+        "capacity_is_observation_not_reservation": true,
+        "foreign_processes_signaled": 0,
+        "lock_files_deleted": 0,
+        "observed_at": "2026-11-04T01:27:40.405977+00:00",
+        "raw_sample_trajectory_published": false,
+        "sample_seconds": 1.000978572999884,
+        "workers_planned": 7
+      },
+      "attempted_scientific_stages": 0,
+      "completed_at": "2026-11-04T01:27:53.381993+00:00",
+      "completed_scientific_stages": 0,
+      "cpu_seconds": 12.463603,
+      "current_outcomes_used_for_selection": false,
+      "failure_class": "Three validation fixtures assumed an optional runtime capability existed. The fixture gate stopped before data refresh or scientific work.",
+      "failure_phase": "PREFLIGHT_BEFORE_SCIENCE",
+      "handoff": "Prior B033 run was already terminal and remained unchanged; no process was signaled.",
+      "league_new_real_target_fits": 0,
+      "new_calibration_fits": 0,
+      "new_empirical_residual_fits": 0,
+      "new_orders": 0,
+      "new_prediction_rows": 0,
+      "new_prospective_issues": 0,
+      "new_provider_requests": 0,
+      "new_real_target_fits": 0,
+      "new_source_refreshes": 0,
+      "next_execution_status": "Portable validation repair is being tested; no successor owner science is claimed.",
+      "original_monitoring_unchanged": true,
+      "owner_peak_rss_bytes": 293945344,
+      "owner_post_close_verification": "not_persisted_by_owner",
+      "phase_seconds": {
+        "admission": 1.0053939780009387,
+        "fixtures": 12.178590293000525,
+        "science": null
+      },
+      "planned_scientific_stages": 12,
+      "prediction_row_scope": "No current or historical model stage started.",
+      "release": "B035",
+      "remaining_phases": "All 12 scientific stages were unstarted. No whole-run ETA is supported.",
+      "reused_target_fits": 0,
+      "run_scope": "NCAA_MEN_AND_WOMEN_COMBINED",
+      "scientific_credit_from_subsequent_readback": 0,
+      "simultaneous_process_tree_peak_measured": false,
+      "stages": [
+        {
+          "label": "Fixture validation gate",
+          "seconds": 12.178590293000525,
+          "status": "FAILED"
+        },
+        {
+          "label": "Initial current inventory",
+          "seconds": null,
+          "status": "NOT_STARTED"
+        },
+        {
+          "label": "Historical and current science",
+          "seconds": null,
+          "status": "NOT_STARTED"
+        }
+      ],
+      "status": "FAILED_PARTIAL_WORK_PRESERVED",
+      "synthetic_test_errors": 3,
+      "synthetic_test_seconds": 12.178590293000525,
+      "synthetic_tests_failed": 0,
+      "synthetic_tests_passed": 510,
+      "synthetic_tests_skipped": 1,
+      "synthetic_tests_total": 514,
+      "total_wall_seconds": 14.015179215999524
     }
   ],
   "provenance": {
     "aggregate_verification": "Historical objective and season metrics were independently recomputed from authenticated per-game exports. Only sanitized aggregates are public.",
     "failed_owner_return_sha256": "478294644351927a144146060ab2a48acbf1f12781109fa5127ae404cc6b458c",
     "historical_accepted_owner_return_sha256": "df98ed0758c29deaed943355349833ab0aeaa23a79693b5efc027e835075e4da",
-    "latest_evidence_qualification": "B035 failed validation before science or data refresh. The prior B033 historical study and earlier accepted scorecards remain preserved; current coverage is not established.",
-    "latest_outer_return_sha256": "58f6d60ed3040a9ef2832ca9991765a4e42011e1ac1f3b8b544226e09d738c8f",
+    "latest_evidence_qualification": "B036 completed all 12 workflow stages with explicit coverage gaps. It reused 108 historical targets and committed 65 native reconstruction target fits plus35 scalar calibrations. No original or prospective current issues and no complete official denominator are established.",
+    "latest_nested_return_sha256": "87531cdaaf0e4df44a715e0977cdadf99d60201d276233ac22f3a3699413f8a9",
+    "latest_outer_return_sha256": "7badadf8729528da0709302b6fbf13e9fb389869418927181d33b6c24d9bee47",
     "preserved_b033_return_sha256": "16b58cc6ed5bd4be303d41ae17816af2510f4e52a9bc011811f40e90f3003cfe",
     "prior_failed_owner_return_sha256": "ae14d708cf85615c1c9c57a7891db85261a5b1632ecd70349730bf2dde51d9b0",
     "public_review_reproduces": "Information-time and evaluation contracts on invented data; not private real-data retraining."
@@ -832,17 +999,17 @@
     {
       "current_log_loss": null,
       "current_matched_games": null,
-      "display_coverage": "NOT_REFRESHED_BY_THIS_ATTEMPT",
+      "display_coverage": "Partial catalog observations retained; rate-limit refusal stopped further requests.",
       "eligible_comparison_coverage": "NOT_ESTABLISHED",
       "hypothetical_ROI": null,
       "name": "Kalshi",
       "required_evidence": "Exact event identity, pre-cutoff quote availability, compatible full-game settlement, executable price and applicable fee rules.",
-      "status": "NOT_ESTABLISHED_BY_THIS_FAILED_ATTEMPT"
+      "status": "HTTP429_HALTED_WITH_GAPS"
     },
     {
       "current_log_loss": null,
       "current_matched_games": null,
-      "display_coverage": "NOT_REFRESHED_BY_THIS_ATTEMPT",
+      "display_coverage": "International native observations retained; no exact-bound current quote established. US not acquired.",
       "eligible_comparison_coverage": "NOT_ESTABLISHED",
       "hypothetical_ROI": null,
       "name": "Polymarket",
@@ -857,20 +1024,20 @@
         }
       ],
       "required_evidence": "Exact event identity, pre-cutoff quote availability, compatible full-game settlement, executable price and applicable fee rules.",
-      "status": "NOT_ESTABLISHED_BY_THIS_FAILED_ATTEMPT"
+      "status": "CAPTURED_NATIVE_IDENTITIES_UNRESOLVED"
     },
     {
       "current_log_loss": null,
       "current_matched_games": null,
-      "display_coverage": "NOT_REFRESHED_BY_THIS_ATTEMPT",
+      "display_coverage": "22 retained bound display observations across both leagues; historical credential unavailable, zero paid history requests.",
       "eligible_comparison_coverage": "NOT_ESTABLISHED",
       "hypothetical_ROI": null,
       "name": "DraftKings",
       "required_evidence": "Exact event identity, pre-cutoff quote availability, compatible full-game settlement, executable price and applicable fee rules.",
-      "status": "NOT_ESTABLISHED_BY_THIS_FAILED_ATTEMPT"
+      "status": "RETAINED_CAPTURE_HISTORY_CREDENTIAL_ABSENT"
     }
   ],
-  "published_snapshot_date": "2026-11-03",
+  "published_snapshot_date": "2026-11-04",
   "quote_display_contract": {
     "calendar_inclusion": "Every observed game remains visible when forecasts or provider observations are missing. Candidate records are not a reconciled official denominator.",
     "eligible_comparison": "Only an observation available by the declared forecast cutoff may join that forecast comparison.",

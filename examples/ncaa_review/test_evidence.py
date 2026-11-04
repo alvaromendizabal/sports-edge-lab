@@ -125,7 +125,7 @@ class EvidenceTests(unittest.TestCase):
 
     def test_latest_preflight_outcomes_cannot_be_relabelled_as_science(self):
         for data in self.exports.values():
-            a = data['current_owner_attempt']
+            a = next(x for x in data['owner_attempt_history'] if x['release'] == 'B035')
             self.assertEqual(a['release'], 'B035')
             self.assertEqual(a['status'], 'FAILED_PARTIAL_WORK_PRESERVED')
             self.assertEqual(a['failure_phase'], 'PREFLIGHT_BEFORE_SCIENCE')
@@ -146,13 +146,46 @@ class EvidenceTests(unittest.TestCase):
     def test_inherited_inventory_is_dated_and_unreconciled(self):
         expected = {'ncaam': (437, 13, 2, 435), 'ncaaw': (419, 51, 1, 418)}
         for league, data in self.exports.items():
-            d = data['observed_inventory']
+            d = data['inventory_history'][-1]
             self.assertEqual((d['candidate_games'], d['observed_finals'], d['last_week']['candidate_games'], d['this_week']['candidate_games']), expected[league])
             self.assertEqual(d['candidate_games'], d['last_week']['candidate_games'] + d['this_week']['candidate_games'])
             self.assertEqual(d['snapshot_at'], '2026-11-03T00:48:42+00:00')
             self.assertFalse(d['official_inventory_reconciled'])
             self.assertFalse(d['all_official_games_covered'])
             self.assertEqual(d['authenticated_current_issues'], 0)
+
+    def test_b036_workflow_completed_without_upgrading_reconstructions(self):
+        for league, data in self.exports.items():
+            a = data['current_owner_attempt']
+            self.assertEqual(a['release'], 'B036')
+            self.assertEqual(a['completed_scientific_stages'], 12)
+            self.assertEqual((a['synthetic_tests_passed'], a['synthetic_test_errors'], a['synthetic_tests_skipped']), (536, 0, 1))
+            self.assertEqual((a['new_real_target_fits'], a['new_calibration_fits'], a['new_empirical_residual_fits'], a['reused_target_fits']), (65, 35, 0, 108))
+            self.assertEqual(a['league_new_real_target_fits'], 50 if league == 'ncaam' else 15)
+            self.assertEqual(a['new_prediction_rows'], 8100)
+            self.assertEqual(a['new_prospective_issues'], 0)
+            self.assertFalse(a['scientific_goal_complete'])
+            self.assertEqual(a['owner_post_close_verification'], 'full_return_bytes_verified')
+            self.assertEqual(a['admission']['workers_planned'], 7)
+            self.assertEqual(a['admission']['foreign_processes_signaled'], 0)
+            self.assertTrue(a['admission']['descendant_usage_measured'])
+            self.assertTrue(a['admission']['raw_samples_preserved_in_private_evidence'])
+            self.assertEqual(data['observed_inventory']['candidate_games'], 1103 if league == 'ncaam' else 1072)
+            self.assertEqual(data['observed_inventory']['observed_finals'], 327 if league == 'ncaam' else 311)
+            self.assertFalse(data['observed_inventory']['all_official_games_covered'])
+            self.assertEqual(data['current_coverage_gaps']['market_identity_unresolved'], 9414)
+            self.assertEqual(data['current_coverage_gaps']['completed_game_box_normalization_errors'], 417)
+
+    def test_private_viewer_has_no_upload_or_persistence_path(self):
+        viewer = (build_dashboard.HERE / 'private_report.html.tmpl').read_text()
+        self.assertIn("connect-src 'none'", viewer)
+        self.assertIn('new FileReader()', viewer)
+        self.assertIn('window_event_keys', viewer)
+        self.assertIn('Unresolved identity', viewer)
+        self.assertIn('No record for this game', viewer)
+        for forbidden in ('fetch(', 'XMLHttpRequest', 'WebSocket(', 'sendBeacon(', 'localStorage', 'sessionStorage', 'indexedDB', '.innerHTML', 'eval('):
+            self.assertNotIn(forbidden, viewer)
+        self.assertIn('n.textContent=value', viewer)
 
     def test_quote_display_is_distinct_from_forecast_eligibility(self):
         for data in self.exports.values():
@@ -218,3 +251,4 @@ class EvidenceTests(unittest.TestCase):
 
 if __name__ == '__main__':
     unittest.main()
+

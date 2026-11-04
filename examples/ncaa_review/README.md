@@ -62,7 +62,19 @@ The probability and accuracy selections are compared on exactly matching events,
 
 The probability selections have lower historical proper-score losses. Both accuracy-difference intervals cross zero. These are selection-exposed intervals with no adjustment for the model search; they do not establish future superiority. Resampling weeks also does not eliminate dependence that persists across weeks or seasons. The private per-game inputs are not published, so the public aggregate tables allow inspection of these conclusions, not an independent reconstruction of the bootstrap.
 
-## Current-season status and provider scope
+## Current B036 evidence and private report viewer
+
+The latest actual owner completed all 12 workflow stages with explicit coverage gaps: 65 new native reconstruction target fits, 35 scalar calibrations and 108 verified/reused historical targets. These counts are distinct. Its 536 passing fixtures and one optional skip are software evidence; its 8,100 native target prediction rows are retrospective reconstructions, not original or prospective issues. Current original-runtime and selected-monitor gates remained unresolved.
+
+The public pages now expose fresh sanitized aggregate counts and a [browser-only private report viewer](../../docs/ncaa/private-report/index.html). Its source is [private_report.html.tmpl](private_report.html.tmpl). Users choose their private `sports-edge-lab.private.game-report.v1` JSON; the page uses `FileReader` and text-only DOM construction. It has no upload, network, analytics or browser-persistence path. Its content security policy rejects connection requests. No private sample data is embedded or committed.
+
+The viewer groups source records within each explicit league. It preserves missing-model games under every forecast-stream selection, uses exact exported window memberships, shows reconstructed and original-as-issued roles separately, and exposes all clocks and flags in details. A separate market tab retains unbound observations. It does not reinterpret binary threshold prices as point totals, infer quote availability, or manufacture a wager. The file-size limit is 64 MiB; schema and row inventories are validated before replacing an existing report. Invalid input leaves the existing report intact, and imported strings cannot create HTML elements.
+
+Browser checks use invented records to exercise file import, pagination, exact windows, missing-stream retention, malicious-looking text, unresolved identities, invalid-file handling and clearing. Those tests do not publish or claim to validate private science. All inherited aggregate models and failure history remain unchanged.
+
+## Preserved B033 current-season status and provider scope
+
+The following paragraphs describe the earlier B033 snapshot. They remain historical evidence; the current B036 outcome is reported above.
 
 The latest B033 owner return completed parent restoration, historical feature construction and its registered study: **108 newly committed target-estimator fits across both leagues, 54 per league**. It then failed when current-source refresh selected a shared summary belonging to another project. Admission took **69.1 minutes**; scientific wall time was **21.6 minutes**, including **19.7 minutes** for the study. The **371 passing fixture tests** took 10.1 seconds and remain separate from model fits. The attempt produced no fresh current-game or provider corpus, current issues or orders. A full independent readback verified the returned bytes. The historical headline selections above are preserved; this partial run does not establish a new current-season performance record.
 
@@ -128,4 +140,5 @@ The accepted historical and failed current owner-return digests are included in 
 
 Run `python examples/ncaa_review/preflight.py` for four invented scenarios. A missing optional runtime function is an observation; a required operation still remains blocked. Check completion, successful execution, failures, unexpected errors and skips have separate counts. A skipped integration never becomes a passing test or a model fit. Duplicate check identities and unobserved capabilities fail before any check is invoked. Exception classes are retained without disclosing messages or private tracebacks.
 
-The current public owner evidence records B035's actual preflight failure and zero scientific stages. B033's earlier valid historical study remains separately visible. Neither the invented checks nor a later preserved diagnostic establish fresh game coverage or scientific success.
+The preserved B035 owner evidence records its actual preflight failure and zero scientific stages; the latest B036 workflow completion is shown separately. B033's earlier valid historical study remains separately visible. Neither the invented checks nor a later preserved diagnostic establish fresh game coverage or scientific success.
+

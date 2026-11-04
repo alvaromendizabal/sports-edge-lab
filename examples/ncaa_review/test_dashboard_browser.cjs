@@ -20,7 +20,7 @@ const { chromium } = require(process.env.PLAYWRIGHT_MODULE_DIR || 'playwright');
     probability: ['win', 'LogLoss'], accuracy: ['win', 'Accuracy'],
     margin: ['margin', 'MAE'], total: ['total', 'MAE'],
   };
-  const counts = { viewports: 0, selectorStates: 0, scenarios: 0, progressScenarios: 0, preflightScenarios: 0, executionViews: 0, keyboardEvents: 0 };
+  const counts = { viewports: 0, selectorStates: 0, scenarios: 0, progressScenarios: 0, preflightScenarios: 0, executionViews: 0, keyboardEvents: 0, privateViewerStates: 0 };
   try {
     for (const width of [1440, 390]) {
       await page.setViewportSize({ width, height: 1000 });
@@ -34,15 +34,15 @@ const { chromium } = require(process.env.PLAYWRIGHT_MODULE_DIR || 'playwright');
         assert.match(await page.locator('#current').innerText(), /Current metrics: unavailable/);
         assert.match(await page.locator('#provider-table').innerText(), /International: unverified/);
         assert.match(await page.locator('#provider-table').innerText(), /US: unacquired/);
-        assert.match(await page.locator('#attempt-summary').innerText(), /510 passed.*3 errors.*1 skipped/);
-        assert.match(await page.locator('#attempt-summary').innerText(), /0 of 12 scientific stages started/);
+        assert.match(await page.locator('#attempt-summary').innerText(), /536 passed.*0 errors.*1 skipped/);
+        assert.match(await page.locator('#attempt-summary').innerText(), /12 of 12 workflow stages completed/);
         assert.match(await page.locator('#preserved-study-copy').innerText(), /108 committed target fits across both leagues; 54 in this track/);
-        assert.equal(await page.locator('#phase-table tr').count(), 3);
-        assert.equal(await page.locator('#phase-table .done').count(), 0);
-        assert.equal(await page.locator('#phase-table .failed').count(), 1);
+        assert.equal(await page.locator('#phase-table tr').count(), 12);
+        assert.equal(await page.locator('#phase-table .done').count(), 12);
+        assert.equal(await page.locator('#phase-table .failed').count(), 0);
         assert.equal(await page.locator('#history-phase-table .done').count(), 3);
         assert.equal(await page.locator('#history-phase-table .failed').count(), 1);
-        assert.match(await page.locator('#inventory-age').innerText(), /Nov 2, 2026/);
+        assert.match(await page.locator('#inventory-age').innerText(), /Nov 4, 2026/);
         assert.match(await page.locator('#coverage-counts').innerText(), /Unverified/);
         assert.match(await page.locator('#resource-note').innerText(), /simultaneous process-tree peak was not measured/);
         counts.executionViews++;
@@ -131,6 +131,70 @@ const { chromium } = require(process.env.PLAYWRIGHT_MODULE_DIR || 'playwright');
         await page.screenshot({ path: path.join(process.env.DASHBOARD_SCREENSHOTS, `ncaa-landing-${width}.png`), fullPage: true });
       }
       counts.viewports++;
+      // Only invented rows enter public browser tests. Private files are never fixtures.
+      await page.goto(pathToFileURL(path.join(root, 'docs/ncaa/private-report/index.html')).href);
+      assert.equal(await page.locator('#report').isHidden(), true);
+      const rows = Array.from({ length: 27 }, (_, i) => ({ event_id: `invented-${i}`, league: i < 24 ? 'ncaam' : 'ncaaw',
+        home_team: i === 0 ? '<img src=x onerror="window.privateLeak=true">' : `Home ${i}`, away_team: `Away ${i}`,
+        source_date: '2026-11-04', time_precision: 'unknown', phase: 'unknown', completed: i === 0,
+        ...(i === 0 ? { track: 'native_rolling_weekly_reconstruction', forecast_status: 'RETROSPECTIVE_NOT_AS_ISSUED',
+          prediction_win: .6, prediction_margin: 3, prediction_total: 140, actual_home_points: 70, actual_away_points: 72,
+          model_winner_pick: 'Home 0', model_winner_pick_correct: false } : {}) }));
+      const invented = { schema: 'sports-edge-lab.private.game-report.v1', evidence_release: 'INVENTED', asof_utc: '2026-11-04T20:00:00Z',
+        records: rows, market_observations: [{ provider: 'Kalshi', canonical_identity_verified: false, native_event_id: 'unresolved-fixture', binding_status: 'unknown_identity', quote_time: null },
+          { provider: 'DraftKings', league: 'ncaam', canonical_identity_verified: true, event_id: 'invented-0', target: 'win', prediction: .55 }],
+        window_event_keys: { this_week: rows.slice(0, 5).map(r => [r.league, r.event_id]), season_to_date: rows.slice(0, 1).map(r => [r.league, r.event_id]), last_week: [] },
+        metrics: [], weekly_metrics: [] };
+      await page.locator('#report-file').setInputFiles({ name: 'invented-report.json', mimeType: 'application/json', buffer: Buffer.from(JSON.stringify(invented)) });
+      await page.locator('#report:not([hidden])').waitFor();
+      assert.match(await page.locator('#load-status').innerText(), /Loaded 27 source game records/);
+      assert.equal(await page.locator('[data-game]').count(), 25);
+      assert.match(await page.locator('#results').innerText(), /Original frozen as issued/);
+      assert.match(await page.locator('#results').innerText(), /Wrong/);
+      assert.match(await page.locator('#results').innerText(), /precision: unknown/);
+      assert.equal(await page.locator('#results img').count(), 0);
+      assert.equal(await page.evaluate(() => window.privateLeak), undefined);
+      counts.privateViewerStates++;
+      await page.locator('#next').click();
+      assert.equal(await page.locator('[data-game]').count(), 2);
+      await page.selectOption('#page-size', '100');
+      await page.selectOption('#model', 'native_rolling_weekly_reconstruction');
+      assert.equal(await page.locator('[data-game]').count(), 27);
+      assert.match(await page.locator('#results').innerText(), /No record for this game/);
+      counts.privateViewerStates++;
+      await page.selectOption('#window', 'this_week');
+      assert.equal(await page.locator('[data-game]').count(), 5);
+      await page.selectOption('#window', 'season_to_date');
+      assert.equal(await page.locator('[data-game]').count(), 1);
+      await page.selectOption('#window', 'last_week');
+      assert.equal(await page.locator('[data-game]').count(), 0);
+      await page.selectOption('#window', 'all_observed');
+      await page.selectOption('#league', 'ncaaw');
+      assert.equal(await page.locator('[data-game]').count(), 3);
+      await page.locator('#search').fill('Away 26');
+      assert.equal(await page.locator('[data-game]').count(), 1);
+      counts.privateViewerStates++;
+      await page.locator('#search').fill('');
+      await page.selectOption('#league', 'all');
+      await page.locator('#show-observations').click();
+      assert.equal(await page.locator('.observation').count(), 2);
+      await page.selectOption('#binding', 'unresolved');
+      assert.equal(await page.locator('.observation').count(), 1);
+      assert.match(await page.locator('#results').innerText(), /unresolved-fixture/);
+      await page.locator('#results summary').click();
+      assert.match(await page.locator('#results pre').innerText(), /canonical_identity_verified/);
+      counts.privateViewerStates++;
+      assert.equal(await page.evaluate(() => document.documentElement.scrollWidth > innerWidth), false, `private report ${width} overflow`);
+      await page.locator('#report-file').setInputFiles({ name: 'invalid.json', mimeType: 'application/json', buffer: Buffer.from('{"schema":"wrong"}') });
+      await page.waitForFunction(() => document.getElementById('load-status').classList.contains('error'));
+      assert.match(await page.locator('#load-status').innerText(), /not a supported/);
+      assert.equal(await page.locator('.observation').count(), 1);
+      await page.locator('#clear').click();
+      assert.equal(await page.locator('#report').isHidden(), true);
+      assert.equal(await page.locator('#results').textContent(), '');
+      assert.match(await page.locator('#load-status').innerText(), /cleared/);
+      counts.privateViewerStates++;
+      counts.viewports++;
     }
     assert.deepEqual(failures, []);
     assert.deepEqual(externalRequests, []);
@@ -139,3 +203,4 @@ const { chromium } = require(process.env.PLAYWRIGHT_MODULE_DIR || 'playwright');
     await browser.close();
   }
 })().catch(error => { console.error(error); process.exitCode = 1; });
+
