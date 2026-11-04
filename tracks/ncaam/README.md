@@ -116,3 +116,9 @@ The March tournament Brier records near 0.1028 and 0.1034 use different populati
 See the [publication boundary](../../docs/PUBLICATION_BOUNDARY.md) for the distinction between inspectable aggregate evidence and privately reproducible research.
 
 </details>
+
+## Latest owner validation and preserved research
+
+The authenticated B035 owner admitted in 1.005 seconds with seven workers planned, then stopped before science: 510 fixture cases passed, three errored and one skipped. The optional-capability assumption was in the test fixture. No current-source refresh, target fit, checkpoint import or forecast issue occurred, and the owner did not persist its diagnostic remotely. Later recovery evidence cannot change those outcomes.
+
+The prior B033 study remains in the attempt history with 108 committed target fits across both leagues, 54 in this track. Historical scorecards and the dated November 2 inventory are unchanged. The [portable preflight example](../../examples/ncaa_review/preflight.py) demonstrates separate test outcomes and required versus optional capabilities using invented checks, without accessing a process or provider.

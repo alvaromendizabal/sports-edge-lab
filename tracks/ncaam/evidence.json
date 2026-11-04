@@ -1,64 +1,76 @@
 {
   "current_owner_attempt": {
-    "attempted_scientific_stages": 4,
-    "completed_at": "2026-11-04T00:18:24.055366+00:00",
-    "completed_scientific_stages": 3,
-    "cpu_seconds": 4589.328836,
+    "admission": {
+      "affinity_cpus": 8,
+      "aggregate_busy_cores": 0.0,
+      "available_memory_bytes": 28977152000,
+      "capacity_is_observation_not_reservation": true,
+      "foreign_processes_signaled": 0,
+      "lock_files_deleted": 0,
+      "observed_at": "2026-11-04T01:27:40.405977+00:00",
+      "raw_sample_trajectory_published": false,
+      "sample_seconds": 1.000978572999884,
+      "workers_planned": 7
+    },
+    "attempted_scientific_stages": 0,
+    "completed_at": "2026-11-04T01:27:53.381993+00:00",
+    "completed_scientific_stages": 0,
+    "cpu_seconds": 12.463603,
     "current_outcomes_used_for_selection": false,
-    "failure_class": "Foreign-project summary selection stopped current-source refresh before new game or provider acquisition.",
-    "league_new_real_target_fits": 54,
+    "failure_class": "Three validation fixtures assumed an optional runtime capability existed. The fixture gate stopped before data refresh or scientific work.",
+    "failure_phase": "PREFLIGHT_BEFORE_SCIENCE",
+    "handoff": "Prior B033 run was already terminal and remained unchanged; no process was signaled.",
+    "league_new_real_target_fits": 0,
     "new_calibration_fits": 0,
     "new_empirical_residual_fits": 0,
     "new_orders": 0,
     "new_prediction_rows": 0,
     "new_prospective_issues": 0,
-    "new_real_target_fits": 108,
+    "new_provider_requests": 0,
+    "new_real_target_fits": 0,
     "new_source_refreshes": 0,
-    "next_execution_status": "Replacement under preparation; no subsequent owner run is represented here.",
+    "next_execution_status": "Portable validation repair is being tested; no successor owner science is claimed.",
     "original_monitoring_unchanged": true,
-    "owner_peak_rss_bytes": 6571601920,
-    "owner_post_close_verification": "verified_full_final_return_bytes",
+    "owner_peak_rss_bytes": 293945344,
+    "owner_post_close_verification": "not_persisted_by_owner",
     "phase_seconds": {
-      "admission": 4146.091564976001,
-      "fixtures": 10.069719983000141,
-      "science": 1294.1799582330004
+      "admission": 1.0053939780009387,
+      "fixtures": 12.178590293000525,
+      "science": null
     },
-    "prediction_row_scope": "Current-season rows only; the completed study produced historical reconstructions.",
-    "release": "B033",
-    "remaining_phases": "Not reached; no overall completion percentage or live ETA is claimed.",
+    "planned_scientific_stages": 12,
+    "prediction_row_scope": "No current or historical model stage started.",
+    "release": "B035",
+    "remaining_phases": "All 12 scientific stages were unstarted. No whole-run ETA is supported.",
     "reused_target_fits": 0,
     "run_scope": "NCAA_MEN_AND_WOMEN_COMBINED",
     "scientific_credit_from_subsequent_readback": 0,
     "simultaneous_process_tree_peak_measured": false,
     "stages": [
       {
-        "label": "Restore authenticated parent",
-        "seconds": 101.99768535400017,
-        "status": "COMPLETED"
-      },
-      {
-        "label": "Build historical feature families",
-        "seconds": 12.830268329999853,
-        "status": "COMPLETED"
-      },
-      {
-        "label": "Run registered historical study",
-        "seconds": 1179.099499594,
-        "status": "COMPLETED"
-      },
-      {
-        "label": "Refresh current sources",
-        "seconds": 0.21230741399995168,
+        "label": "Fixture validation gate",
+        "seconds": 12.178590293000525,
         "status": "FAILED"
+      },
+      {
+        "label": "Initial current inventory",
+        "seconds": null,
+        "status": "NOT_STARTED"
+      },
+      {
+        "label": "Historical and current science",
+        "seconds": null,
+        "status": "NOT_STARTED"
       }
     ],
     "status": "FAILED_PARTIAL_WORK_PRESERVED",
-    "study_target_fits_completed": 108,
-    "study_target_fits_registered": 108,
-    "subsequent_independent_return_readback": "verified_full_bytes_after_partial_failure",
-    "synthetic_test_seconds": 10.069719983000141,
-    "synthetic_tests_passed": 371,
-    "total_wall_seconds": 5451.181535214
+    "synthetic_test_errors": 3,
+    "synthetic_test_seconds": 12.178590293000525,
+    "synthetic_tests_failed": 0,
+    "synthetic_tests_passed": 510,
+    "synthetic_tests_skipped": 1,
+    "synthetic_tests_total": 514,
+    "total_wall_seconds": 14.015179215999524
   },
   "current_season": {
     "label": "2026\u201327",
@@ -743,14 +755,76 @@
       "subsequent_independent_return_readback": "verified_full_bytes_after_owner_failure",
       "synthetic_test_seconds": 10.460865365000245,
       "synthetic_tests_passed": 250
+    },
+    {
+      "attempted_scientific_stages": 4,
+      "completed_at": "2026-11-04T00:18:24.055366+00:00",
+      "completed_scientific_stages": 3,
+      "cpu_seconds": 4589.328836,
+      "current_outcomes_used_for_selection": false,
+      "failure_class": "Foreign-project summary selection stopped current-source refresh before new game or provider acquisition.",
+      "league_new_real_target_fits": 54,
+      "new_calibration_fits": 0,
+      "new_empirical_residual_fits": 0,
+      "new_orders": 0,
+      "new_prediction_rows": 0,
+      "new_prospective_issues": 0,
+      "new_real_target_fits": 108,
+      "new_source_refreshes": 0,
+      "next_execution_status": "Replacement under preparation; no subsequent owner run is represented here.",
+      "original_monitoring_unchanged": true,
+      "owner_peak_rss_bytes": 6571601920,
+      "owner_post_close_verification": "verified_full_final_return_bytes",
+      "phase_seconds": {
+        "admission": 4146.091564976001,
+        "fixtures": 10.069719983000141,
+        "science": 1294.1799582330004
+      },
+      "prediction_row_scope": "Current-season rows only; the completed study produced historical reconstructions.",
+      "release": "B033",
+      "remaining_phases": "Not reached; no overall completion percentage or live ETA is claimed.",
+      "reused_target_fits": 0,
+      "run_scope": "NCAA_MEN_AND_WOMEN_COMBINED",
+      "scientific_credit_from_subsequent_readback": 0,
+      "simultaneous_process_tree_peak_measured": false,
+      "stages": [
+        {
+          "label": "Restore authenticated parent",
+          "seconds": 101.99768535400017,
+          "status": "COMPLETED"
+        },
+        {
+          "label": "Build historical feature families",
+          "seconds": 12.830268329999853,
+          "status": "COMPLETED"
+        },
+        {
+          "label": "Run registered historical study",
+          "seconds": 1179.099499594,
+          "status": "COMPLETED"
+        },
+        {
+          "label": "Refresh current sources",
+          "seconds": 0.21230741399995168,
+          "status": "FAILED"
+        }
+      ],
+      "status": "FAILED_PARTIAL_WORK_PRESERVED",
+      "study_target_fits_completed": 108,
+      "study_target_fits_registered": 108,
+      "subsequent_independent_return_readback": "verified_full_bytes_after_partial_failure",
+      "synthetic_test_seconds": 10.069719983000141,
+      "synthetic_tests_passed": 371,
+      "total_wall_seconds": 5451.181535214
     }
   ],
   "provenance": {
     "aggregate_verification": "Historical objective and season metrics were independently recomputed from authenticated per-game exports. Only sanitized aggregates are public.",
-    "failed_owner_return_sha256": "16b58cc6ed5bd4be303d41ae17816af2510f4e52a9bc011811f40e90f3003cfe",
+    "failed_owner_return_sha256": "478294644351927a144146060ab2a48acbf1f12781109fa5127ae404cc6b458c",
     "historical_accepted_owner_return_sha256": "df98ed0758c29deaed943355349833ab0aeaa23a79693b5efc027e835075e4da",
-    "latest_evidence_qualification": "Partial research progress is authenticated; historical headline selections remain the earlier accepted comparison and current coverage is not established.",
-    "latest_outer_return_sha256": "508f4502b7ccdb4ac2403217c89840cb8e2286fde61f55399bcd7b7478ea9948",
+    "latest_evidence_qualification": "B035 failed validation before science or data refresh. The prior B033 historical study and earlier accepted scorecards remain preserved; current coverage is not established.",
+    "latest_outer_return_sha256": "58f6d60ed3040a9ef2832ca9991765a4e42011e1ac1f3b8b544226e09d738c8f",
+    "preserved_b033_return_sha256": "16b58cc6ed5bd4be303d41ae17816af2510f4e52a9bc011811f40e90f3003cfe",
     "prior_failed_owner_return_sha256": "ae14d708cf85615c1c9c57a7891db85261a5b1632ecd70349730bf2dde51d9b0",
     "public_review_reproduces": "Information-time and evaluation contracts on invented data; not private real-data retraining."
   },
@@ -798,6 +872,7 @@
   ],
   "published_snapshot_date": "2026-11-03",
   "quote_display_contract": {
+    "calendar_inclusion": "Every observed game remains visible when forecasts or provider observations are missing. Candidate records are not a reconciled official denominator.",
     "eligible_comparison": "Only an observation available by the declared forecast cutoff may join that forecast comparison.",
     "latest_captured_pretip": "Newest captured observation with verified pre-tip availability and exact event binding; no claim of an exhaustive provider tick history.",
     "latest_observed": "Newest captured observation, which may be after a forecast cutoff or after tipoff.",

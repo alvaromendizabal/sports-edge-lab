@@ -20,7 +20,7 @@ const { chromium } = require(process.env.PLAYWRIGHT_MODULE_DIR || 'playwright');
     probability: ['win', 'LogLoss'], accuracy: ['win', 'Accuracy'],
     margin: ['margin', 'MAE'], total: ['total', 'MAE'],
   };
-  const counts = { viewports: 0, selectorStates: 0, scenarios: 0, progressScenarios: 0, executionViews: 0, keyboardEvents: 0 };
+  const counts = { viewports: 0, selectorStates: 0, scenarios: 0, progressScenarios: 0, preflightScenarios: 0, executionViews: 0, keyboardEvents: 0 };
   try {
     for (const width of [1440, 390]) {
       await page.setViewportSize({ width, height: 1000 });
@@ -34,15 +34,29 @@ const { chromium } = require(process.env.PLAYWRIGHT_MODULE_DIR || 'playwright');
         assert.match(await page.locator('#current').innerText(), /Current metrics: unavailable/);
         assert.match(await page.locator('#provider-table').innerText(), /International: unverified/);
         assert.match(await page.locator('#provider-table').innerText(), /US: unacquired/);
-        assert.match(await page.locator('#attempt-summary').innerText(), /108 new target fits across both leagues/);
-        assert.match(await page.locator('#attempt-summary').innerText(), /54 in this track/);
-        assert.equal(await page.locator('#phase-table tr').count(), 4);
-        assert.equal(await page.locator('#phase-table .done').count(), 3);
+        assert.match(await page.locator('#attempt-summary').innerText(), /510 passed.*3 errors.*1 skipped/);
+        assert.match(await page.locator('#attempt-summary').innerText(), /0 of 12 scientific stages started/);
+        assert.match(await page.locator('#preserved-study-copy').innerText(), /108 committed target fits across both leagues; 54 in this track/);
+        assert.equal(await page.locator('#phase-table tr').count(), 3);
+        assert.equal(await page.locator('#phase-table .done').count(), 0);
         assert.equal(await page.locator('#phase-table .failed').count(), 1);
+        assert.equal(await page.locator('#history-phase-table .done').count(), 3);
+        assert.equal(await page.locator('#history-phase-table .failed').count(), 1);
         assert.match(await page.locator('#inventory-age').innerText(), /Nov 2, 2026/);
         assert.match(await page.locator('#coverage-counts').innerText(), /Unverified/);
         assert.match(await page.locator('#resource-note').innerText(), /simultaneous process-tree peak was not measured/);
         counts.executionViews++;
+        const preflightExamples = JSON.parse(await page.locator('#preflight-evidence').textContent());
+        assert.equal(preflightExamples.length, 4);
+        for (const scenario of preflightExamples) {
+          await page.locator(`[data-preflight="${scenario.id}"]`).click();
+          assert.equal(await page.locator('[data-preflight][aria-pressed="true"]').count(), 1);
+          assert.match(await page.locator('#preflight-output').innerText(), scenario.result.gate_passed ? /Ready:/ : /Blocked:/);
+          assert.equal(await page.locator('#preflight-output.blocked').count(), scenario.result.gate_passed ? 0 : 1);
+          assert.deepEqual(await page.locator('#preflight-counts strong').allTextContents(), Object.values(scenario.result.counts).map(String));
+          assert.equal(await page.evaluate(() => document.documentElement.scrollWidth > innerWidth), false, `${league} ${width} ${scenario.id} preflight overflow`);
+          counts.preflightScenarios++;
+        }
         for (const [objective, [target, metric]] of Object.entries(objectiveMap)) {
           await page.selectOption('#objective', objective);
           for (const season of ['pooled', '2025', '2026']) {

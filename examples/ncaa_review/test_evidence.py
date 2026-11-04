@@ -2,6 +2,7 @@
 import copy
 import json
 import math
+from html.parser import HTMLParser
 from pathlib import Path
 import re
 import unittest
@@ -9,6 +10,7 @@ from unittest.mock import patch
 
 import build_dashboard
 from progress import demo_scenarios
+from preflight import demo_scenarios as preflight_scenarios
 
 
 class EvidenceTests(unittest.TestCase):
@@ -83,7 +85,7 @@ class EvidenceTests(unittest.TestCase):
 
     def test_partial_attempt_preserves_completed_science_and_missing_current_scores(self):
         for data in self.exports.values():
-            attempt = data['current_owner_attempt']
+            attempt = next(a for a in data['owner_attempt_history'] if a['release'] == 'B033')
             self.assertEqual(attempt['release'], 'B033')
             self.assertEqual(attempt['status'], 'FAILED_PARTIAL_WORK_PRESERVED')
             self.assertEqual(attempt['run_scope'], 'NCAA_MEN_AND_WOMEN_COMBINED')
@@ -114,12 +116,32 @@ class EvidenceTests(unittest.TestCase):
 
     def test_resource_clocks_are_separate_and_not_claimed_as_tree_peak(self):
         for data in self.exports.values():
-            a = data['current_owner_attempt']
+            a = next(a for a in data['owner_attempt_history'] if a['release'] == 'B033')
             self.assertAlmostEqual(a['phase_seconds']['admission'], 4146.091564976001)
             self.assertAlmostEqual(a['phase_seconds']['science'], 1294.1799582330004)
             self.assertGreater(a['total_wall_seconds'], sum(a['phase_seconds'].values()))
             self.assertLess(a['total_wall_seconds'] - sum(a['phase_seconds'].values()), 2)
             self.assertFalse(a['simultaneous_process_tree_peak_measured'])
+
+    def test_latest_preflight_outcomes_cannot_be_relabelled_as_science(self):
+        for data in self.exports.values():
+            a = data['current_owner_attempt']
+            self.assertEqual(a['release'], 'B035')
+            self.assertEqual(a['status'], 'FAILED_PARTIAL_WORK_PRESERVED')
+            self.assertEqual(a['failure_phase'], 'PREFLIGHT_BEFORE_SCIENCE')
+            self.assertEqual((a['synthetic_tests_total'], a['synthetic_tests_passed'],
+                a['synthetic_test_errors'], a['synthetic_tests_skipped']), (514, 510, 3, 1))
+            self.assertEqual(a['synthetic_tests_total'], sum(a[k] for k in (
+                'synthetic_tests_passed', 'synthetic_tests_failed', 'synthetic_test_errors', 'synthetic_tests_skipped')))
+            for key in ('new_real_target_fits', 'reused_target_fits', 'new_source_refreshes',
+                'new_provider_requests', 'new_prospective_issues', 'completed_scientific_stages', 'attempted_scientific_stages'):
+                self.assertEqual(a[key], 0)
+            self.assertIsNone(a['phase_seconds']['science'])
+            self.assertEqual(a['planned_scientific_stages'], 12)
+            self.assertEqual(a['admission']['workers_planned'], 7)
+            self.assertEqual(a['admission']['foreign_processes_signaled'], 0)
+            self.assertEqual(a['owner_post_close_verification'], 'not_persisted_by_owner')
+            self.assertAlmostEqual(a['phase_seconds']['admission'], 1.0053939780009387)
 
     def test_inherited_inventory_is_dated_and_unreconciled(self):
         expected = {'ncaam': (437, 13, 2, 435), 'ncaaw': (419, 51, 1, 418)}
@@ -158,7 +180,7 @@ class EvidenceTests(unittest.TestCase):
     def test_generation_is_exact_and_embedded_json_is_unchanged(self):
         for path, output in build_dashboard.outputs().items():
             self.assertEqual(path.read_text(), output)
-            self.assertNotRegex(output, r'__(?:TITLE|EVIDENCE|PROGRESS_DEMO|LEAGUE|SIBLING|SIBLING_LABEL)__')
+            self.assertNotRegex(output, r'__(?:TITLE|EVIDENCE|PROGRESS_DEMO|PREFLIGHT_DEMO|LEAGUE|SIBLING|SIBLING_LABEL)__')
             if path.parent.name in self.exports:
                 embedded = re.search(r'<script type="application/json" id="evidence">(.*?)</script>', output, re.S)
                 self.assertIsNotNone(embedded)
@@ -166,6 +188,21 @@ class EvidenceTests(unittest.TestCase):
                 progress = re.search(r'<script type="application/json" id="progress-evidence">(.*?)</script>', output, re.S)
                 self.assertIsNotNone(progress)
                 self.assertEqual(json.loads(progress.group(1)), demo_scenarios())
+                preflight = re.search(r'<script type="application/json" id="preflight-evidence">(.*?)</script>', output, re.S)
+                self.assertIsNotNone(preflight)
+                self.assertEqual(json.loads(preflight.group(1)), preflight_scenarios())
+
+    def test_generated_pages_have_unique_dom_identities(self):
+        class IdCollector(HTMLParser):
+            def __init__(self):
+                super().__init__()
+                self.ids = []
+            def handle_starttag(self, tag, attrs):
+                self.ids.extend(value for key, value in attrs if key == 'id')
+        for path, output in build_dashboard.outputs().items():
+            parser = IdCollector()
+            parser.feed(output)
+            self.assertEqual(len(parser.ids), len(set(parser.ids)), str(path))
 
     def test_export_validation_rejects_provider_scope_and_cohort_mutation(self):
         for mutation in ('provider', 'cohort'):
