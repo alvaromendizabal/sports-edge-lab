@@ -11,7 +11,7 @@ TEMPLATE=Path(__file__).with_name('season_template.html.in')
 OUTPUT=ROOT/'docs/fbs/index.html'
 PROVIDERS=('DraftKings','Kalshi','Polymarket US','Polymarket Global')
 GAME_KEYS={'id','season','phase','week','kickoff','kickoff_tbd','home','away','completed','home_points','away_points','population','source_at','replay','rolling','decision','stake_usd','markets'}
-REFERENCE_KEYS={'target','value','picked_home','quote_at','captured_at','reference_kind','product','evidence_kind','identity_basis','join_status','event_url','executable','interval_end_at','price_status','clock_basis','source_status','source_status_field'}
+REFERENCE_KEYS={'target','value','picked_home','quote_at','captured_at','reference_kind','product','evidence_kind','identity_basis','join_status','event_url','executable','interval_end_at','price_status','clock_basis','source_status','source_status_field','point_support'}
 REPLAY_KEYS={'p_home','picked_home','home_points','away_points','home_margin','total','correct','margin_error','total_error','status','issued_at'}
 TOP_KEYS={'schema','season','prepared_at','assessed_at','timezone','owner','inventory','windows','metrics','historical','weekly','matched_draftkings','matched_recovered','provider_coverage','provider_acquisition_summary','reporting_contract','games'}
 
@@ -60,6 +60,19 @@ def validate(data):
                 if ref['captured_at']:instant(ref['captured_at'])
                 require(ref['quote_at'] or ref['captured_at'],'Reference has no recorded clock')
                 require(ref['clock_basis']==('provider_quote_at' if ref['quote_at'] else 'retrieved_at'),'Clock basis cannot fabricate a source quote timestamp')
+                support=ref['point_support']
+                if support is not None:
+                    require(ref['target'] in ['margin','total'] and ref['quote_at'] is None,'Current point support cannot replace historical quotes or winner probabilities')
+                    require(set(support)=={'method','status','lower_bound','upper_bound','lower_capture_at','upper_capture_at','support_available_at','diagnostic_probability_band_width'},'Unexpected point-support field')
+                    require(support['method']=='CAPTURED_BID_ASK_HALF_PROBABILITY_SUPPORT','Unknown point support method')
+                    clocks=[]
+                    for side in ['lower','upper']:
+                        value=support[side+'_bound'];at=support[side+'_capture_at']
+                        require((value is None)==(at is None),'Point bound needs its actual support clock')
+                        if value is not None:require(finite(value),'Nonfinite supported point bound');clocks.append(instant(at))
+                    require((not clocks and support['support_available_at'] is None) or (clocks and instant(support['support_available_at'])==max(clocks)),'Point-support availability cannot be backdated')
+                    width=support['diagnostic_probability_band_width']
+                    require(width is None or finite(width) and 0<=width<=1,'Invalid diagnostic probability-band width')
                 if ref['interval_end_at']:
                     require(ref['quote_at'] and instant(ref['interval_end_at'])>=instant(ref['quote_at']),'Invalid observation interval')
                 require(ref['executable'] is False,'Reference cannot become an executable offer')

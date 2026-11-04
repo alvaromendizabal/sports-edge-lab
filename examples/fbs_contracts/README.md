@@ -82,3 +82,5 @@ python -m unittest discover -s examples/fbs_contracts/tests -v
 The separate CI browser test exercises all 888-game inventory views, current/last-week windows, provider switches, exact historical disagreement count, keyboard dialog, CSV analysis download, responsive layouts and an all-888-row no-script fallback. It rejects external requests and browser errors. These checks perform zero owner model fits.
 
 The [static projector](export_site.py) reads an exact Git commit, exports only the public asset allowlist, rewrites repository navigation to that commit and checks that every relative asset is present. Its manifest binds the hosted bytes to the source and evidence clocks. CI runs this projection without publishing or refreshing data; deployment is a separate operation.
+
+The current native point view derives no single final-score estimate from a 50% midpoint. Supported lower and upper threshold bounds retain separate availability clocks; tests reject later support at an earlier cutoff, keep one-sided bounds and flag contradictory intervals. The actual wide-book counterexample remains in expanded diagnostics. Historical price-only proxy cohorts are unchanged.
