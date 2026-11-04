@@ -5,6 +5,9 @@
  const P=JSON.parse(document.getElementById('nfl-point-evidence').textContent);
  const R=JSON.parse(document.getElementById('nfl-source-overlay').textContent);
  const X=JSON.parse(document.getElementById('nfl-reschedule-reference').textContent);
+ const Z=JSON.parse(document.getElementById('nfl-source-recovery').textContent);
+ const recoveredWinners=new Map(Z.winner_rows.map(r=>[[r.game_id,r.provider].join('|'),r]));
+ const recoveredPoints=new Map(Z.point_rows.map(r=>[[r.game_id,r.provider,r.target].join('|'),r]));
  const mappedWinners=new Map(X.winner_rows.map(r=>[[r.game_id,r.provider].join('|'),{...r,scheduleRecovery:true}]));
  const mappedPoints=new Map(X.point_rows.map(r=>[[r.game_id,r.provider,r.target].join('|'),{...r,scheduleRecovery:true}]));
  const sourceWinners=new Map(R.winner_rows.map(r=>[[r.game_id,r.provider].join('|'),r]));
@@ -20,7 +23,13 @@
  const models=new Map(D.model_sets.map(x=>[x.id??x.model_id,x]));
  const modelLabel=id=>models.get(id)?.label??models.get(id)?.model_label??id;
  const modelId=f=>f.model_id??f.model_set_id;
- const allGames=D.all_games;
+ const I=JSON.parse(document.getElementById('nfl-primary-issue').textContent);
+ const primaryIssues=new Map(I.cards.map(f=>[f.game_id,f]));
+ const allGames=D.all_games.map(g=>{
+  const issued=primaryIssues.get(g.game_id);
+  if(g.completed||!issued)return g;
+  return {...g,forecasts:g.forecasts.map(f=>modelId(f)===issued.model_id&&(!f.actual_issue_at||Date.parse(issued.actual_issue_at)>Date.parse(f.actual_issue_at))?issued:f)};
+ });
  const providers=D.active_providers;
  const table=(caption,headers,rows)=>'<div class="scroll table-wrap" tabindex="0" role="region" aria-label="'+esc(caption)+'"><table><caption class="table-caption">'+esc(caption)+'</caption><thead><tr>'+headers.map(h=>'<th scope="col">'+esc(h)+'</th>').join('')+'</tr></thead><tbody>'+rows.map(row=>'<tr>'+row.map((v,i)=>(i?'<td>':'<th scope="row">')+v+(i?'</td>':'</th>')).join('')+'</tr>').join('')+'</tbody></table></div>';
  const observationOnly='OBSERVATION_TIME_ONLY_PROVIDER_QUOTE_CLOCK_UNKNOWN';
@@ -39,7 +48,7 @@
  }
  function providerRow(g,p,h){
   const base=g.providers.find(x=>x.provider===p&&x.horizon===h)??{provider:p,horizon:h,derived_pick:null,availability_status:'UNAVAILABLE',unavailable_reason:h==='LATEST_PREGAME'?'Last-before-kickoff history has not yet been authenticated in this snapshot.':h==='LATEST_OBSERVED'?'No authenticated current winner observation in this snapshot.':'No authenticated equivalent winner record at this cutoff.'};
-  return h==='LATEST_OBSERVED'&&!g.completed?newerReference(newerReference(base,sourceWinners.get([g.game_id,p].join('|')),'derived_pick'),mappedWinners.get([g.game_id,p].join('|')),'derived_pick'):base;
+  return h==='LATEST_OBSERVED'&&!g.completed?newerReference(newerReference(newerReference(base,sourceWinners.get([g.game_id,p].join('|')),'derived_pick'),mappedWinners.get([g.game_id,p].join('|')),'derived_pick'),recoveredWinners.get([g.game_id,p].join('|')),'derived_pick'):base;
  }
  function selectedGames(){
   const p=get('coverage-period').value;
@@ -47,7 +56,7 @@
  }
  function pointRow(g,p,target,h){
   const base=pointIndex.get([g.game_id,p,target,h].join('|'))??null;
-  return h==='LATEST_OBSERVED'&&!g.completed?newerReference(newerReference(base,sourcePoints.get([g.game_id,p,target].join('|')),'line'),mappedPoints.get([g.game_id,p,target].join('|')),'line'):base;
+  return h==='LATEST_OBSERVED'&&!g.completed?newerReference(newerReference(newerReference(base,sourcePoints.get([g.game_id,p,target].join('|')),'line'),mappedPoints.get([g.game_id,p,target].join('|')),'line'),recoveredPoints.get([g.game_id,p,target].join('|')),'line'):base;
  }
  function pointCell(g,p,target,h){
   const r=pointRow(g,p,target,h);
@@ -90,7 +99,7 @@
   get('coverage-clock-note').textContent=h==='T2'?'T2 means two hours before kickoff. Use the last genuine observation at or before that cutoff; an exact-minute quote is not required. Quote age stays visible.':h==='T1'?'T1 means one hour before kickoff. It is a separate market reference. Earlier T2 model outputs retain their original information boundary.':h==='LATEST_PREGAME'?'Latest before kickoff is the last authenticated observation strictly before the game starts. It may be shown even when it is later than T2. Missing latest history is never replaced silently with a T2 quote.':'Latest observed upcoming shows a real observed market state for an unstarted game, when available. Reaching T2 is not a requirement for displaying it. An observation is not an executable bet.';
   get('coverage-point-counts').innerHTML=table('Provider coverage by prediction target',['Provider','Winner direction','Margin reference','Total reference'],providers.map(p=>[esc(p),games.filter(g=>providerRow(g,p,h).derived_pick).length+' / '+games.length,...['margin','total'].map(t=>{const rows=games.map(g=>pointRow(g,p,t,h)).filter(r=>r?.line!=null),saved=rows.filter(r=>r.availability_status==='SAVED_LINE_REFERENCE_CLOCK_UNAVAILABLE').length;return (rows.length-saved)+' / '+games.length+' dated references'+(saved?'<br><span class="fine">'+saved+' saved lines · clocks unavailable</span>':'');})]));
   get('coverage-games').innerHTML=games.map(g=>card(g,id,h)).join('');
-  get('partial-source-status').textContent='Additional current-market evidence recovered from partial N035 source checkpoints; source snapshot through '+when(R.as_of)+'. Final owner completion is not authenticated. '+(h==='LATEST_OBSERVED'?'The latest supported current reference is shown; a missing new capture does not erase an older usable reference. Kalshi capture times are observation clocks where provider quote timestamps are unavailable.':'This recovery is not applied to the selected historical horizon.')+' Model forecasts and historical metrics are unchanged. ';
+  get('partial-source-status').textContent='Authenticated N036 source-only recovery adds 13 current reference cells through '+when(Z.as_of)+'. Combined Week 9 coverage: DraftKings 15/15, Kalshi 15/15, Polymarket 13/15 for winner, margin and total. This source run reached its registered public-request budget; it fitted no models and issued no forecasts. Polymarket TB–CHI and BUF–MIN remain unavailable. '+(h==='LATEST_OBSERVED'?'The latest supported current reference is shown; a missing new capture does not erase an older usable reference. Kalshi capture times are observation clocks where provider quote timestamps are unavailable.':'This recovery is not applied to the selected historical horizon.')+' Source recovery leaves model forecasts and historical metrics unchanged; the separate primary-issue addendum retains its own clocks. ';
  }
  get('coverage-period').innerHTML='<option value="9">Current week · Week 9 · 15 games</option><option value="completed">All completed games · 121 finals</option><option value="monday">Monday Nov 2 · CHI 34–17 SEA</option>'+[...new Set(allGames.map(g=>g.week))].sort((a,b)=>a-b).map(w=>'<option value="'+w+'">Week '+w+' · '+allGames.filter(g=>g.week===w).length+' games</option>').join('')+'<option value="all">Full season · 272 scheduled games</option>';
  get('coverage-model').innerHTML=D.model_sets.map(m=>'<option value="'+esc(m.id??m.model_id)+'">'+esc(m.label??m.model_label)+'</option>').join('')+'<option value="all">All model streams · include unavailable</option>';
@@ -101,7 +110,7 @@
  get('coverage-period').addEventListener('change',changePeriod);
  get('show-monday-game').addEventListener('click',()=>{get('coverage-period').value='monday';changePeriod();get('coverage-period').focus();});
  for(const id of ['coverage-model','coverage-horizon'])get(id).addEventListener('change',render);
- get('coverage-asof').textContent='Preserved model/evaluation snapshot '+D.as_of+' · '+allGames.filter(g=>g.completed).length+' completed games retained; '+allGames.filter(g=>g.week===9).length+' current-week games. Owner run status: '+D.owner_run_status+'. Completed artifacts are preserved; this status is not completed-pipeline acceptance.';
+ get('coverage-asof').textContent='Preserved model/evaluation snapshot '+D.as_of+' · '+allGames.filter(g=>g.completed).length+' completed games retained; '+allGames.filter(g=>g.week===9).length+' current-week games. Owner run status: '+D.owner_run_status+'. A separate primary-stream addendum displays 29 genuine early issues at '+I.as_of+'; no new fit or verified injury input is claimed. Completed artifacts are preserved; this status is not completed-pipeline acceptance.';
  function paired(){
   const year=Number(get('coverage-metric-season').value),week=get('coverage-metric-week').value,id=get('coverage-metric-model').value,provider=get('coverage-metric-provider').value,target=get('coverage-metric-target').value;
   const rows=(week==='ALL'?D.season_metrics:D.weekly_metrics).filter(r=>r.season===year&&(week==='ALL'||String(r.week)===week)&&r.model_id===id&&(provider==='all'||r.provider===provider)&&r.target===target);

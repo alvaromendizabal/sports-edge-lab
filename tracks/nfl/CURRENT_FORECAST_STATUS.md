@@ -35,3 +35,9 @@ The next injury-aware comparison must combine timely injury reports with expecte
 This public snapshot does not yet contain an authenticated trained injury-augmentation result. A news update, source implementation or local test does not establish improved forecasting. Any later model version needs its own input and issue clocks, matched-cohort evaluation and uncertainty report. Existing frozen-model monitoring remains intact.
 
 [How prediction cutoffs and the latest-market views differ](CLOCKS_AND_INJURIES.md).
+
+## Later primary-stream issue: November 4
+
+The [immutable primary addendum](primary_issue_n035.json) exposes 29 genuine early research cards from the authenticated N035 final return. Select **Preserved primary with current parents** to inspect them. They were issued at **01:54:09 UTC**, using source information through **01:52:35 UTC**. The Jacksonville–Baltimore primary card has Jacksonville **67.5%**, by **5.0**, with a **45.8** total. The separate selected-native stream retains its earlier issue and values.
+
+These primary outputs reuse preserved heads with updated inputs; they are not 29 newly fitted models or final-hour betting recommendations. No direct injury/QB input is verified. Only the matching primary stream on still-unstarted games receives the later issue in the display. Earlier payloads, frozen originals, historical results and other forecast streams remain unchanged.
