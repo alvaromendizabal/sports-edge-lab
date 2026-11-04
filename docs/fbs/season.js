@@ -2,6 +2,15 @@
 (() => {
  const providers=['DraftKings','Kalshi','Polymarket US','Polymarket Global'];
  const clock=value=>value?Date.parse(value):NaN;
+ function pointBounds(row,cutoff,assessed,strictBefore=false){
+  const support=row?.point_support;
+  if(!support)return null;
+  const permitted=(value,at)=>Number.isFinite(value)&&clock(at)<=clock(assessed)&&(strictBefore?clock(at)<cutoff:clock(at)<=cutoff);
+  const lower=permitted(support.lower_bound,support.lower_capture_at)?support.lower_bound:null;
+  const upper=permitted(support.upper_bound,support.upper_capture_at)?support.upper_bound:null;
+  const status=lower!==null&&upper!==null?(lower<upper?'bounded':'inconsistent'):lower!==null?'lower_only':upper!==null?'upper_only':'unresolved';
+  return {lower,upper,status,method:support.method};
+ }
  function reference(game,provider,target,horizon,assessed){
   if(horizon==='auto')horizon=game.completed?'latest_pre_kickoff':'current';
   const kick=clock(game.kickoff);
@@ -44,7 +53,7 @@
   if(/^[=+@\t\r]/.test(s)||(/^\-/.test(s)&&!/^\-\d+(?:\.\d+)?$/.test(s)))s="'"+s;
   return '"'+s.replaceAll('"','""')+'"';
  }
- if(typeof module!=='undefined'&&module.exports)module.exports={reference,filterGames,csvCell};
+ if(typeof module!=='undefined'&&module.exports)module.exports={reference,filterGames,csvCell,pointBounds};
  if(typeof document==='undefined')return;
  const data=JSON.parse(document.getElementById('season-data').textContent);
  const state={view:'all',week:'all',query:'',provider:'DraftKings',horizon:'auto',disagreements:false,page:0};
@@ -66,6 +75,16 @@
   implied_threshold_center_from_catalog_bid_ask_midpoint:'Closest-to-50% threshold · diagnostic center',
   display_history:'Public display history'}[k]||String(k||'Reference').replaceAll('_',' '));
  function chosen(g,target,provider=state.provider){return reference(g,provider,target,state.horizon,data.prepared_at);}
+ function bounds(g,result){return pointBounds(result.row,result.cutoff,data.prepared_at,state.horizon==='latest_pre_kickoff'||state.horizon==='auto'&&g.completed);}
+ function pointValue(g,result,target){
+  const row=result.row;if(!row)return target==='margin'?'Margin —':'Total —';
+  const b=bounds(g,result),label=target==='margin'?'Home':'Total',format=target==='margin'?sign:num;
+  if(!b)return label+' '+format(row.value);
+  if(b.status==='bounded')return label+' '+format(b.lower)+' to '+format(b.upper);
+  if(b.status==='lower_only')return label+' > '+format(b.lower);
+  if(b.status==='upper_only')return label+' < '+format(b.upper);
+  return label+(b.status==='inconsistent'?' bounds inconsistent':' center unresolved');
+ }
  function marketCell(g){
   const win=chosen(g,'winner'),margin=chosen(g,'margin'),total=chosen(g,'total');
   const w=win.row,m=margin.row,t=total.row;
@@ -75,8 +94,9 @@
    return `<span class="muted">${message}</span>${known.length?'<span class="sub">See Details for acquisition status</span>':''}`;
   }
   let text=w?`<strong>${esc(pick(g,w.picked_home))}</strong> <span>${num(Math.max(w.value,1-w.value)*100)}%</span>`:'<span class="muted">No winner reference</span>';
-  if(m||t)text+=`<span class="sub">${m?'Home '+sign(m.value):'Margin —'} · ${t?'Total '+num(t.value):'Total —'}</span>`;
-  if([m,t].some(r=>r&&String(r.reference_kind).startsWith('implied_threshold_center')))text+='<span class="sub">Threshold-center diagnostic</span>';
+  if(m||t)text+=`<span class="sub">${esc(pointValue(g,margin,'margin'))} · ${esc(pointValue(g,total,'total'))}</span>`;
+  if([m,t].some(r=>r?.point_support))text+='<span class="sub">Captured probability-band bounds</span>';
+  else if([m,t].some(r=>r&&String(r.reference_kind).startsWith('implied_threshold_center')))text+='<span class="sub">Historical threshold proxy</span>';
   const ref=w||m||t;
   text+=`<span class="sub">${ref.quote_at?esc(local(ref.quote_at)):'Captured '+esc(local(ref.captured_at))+' · quote clock unknown'}</span>`;
   if([win,margin,total].some(x=>x.status==='after_kickoff'))text+='<span class="pill warn">After kickoff</span>';
@@ -121,10 +141,12 @@
      return `<div class="reference"><strong>${target==='winner'?'Winner':target==='margin'?'Home margin':'Total'}</strong><span class="sub">${result.status==='conflict'?'Conflicting stored values at the same clock.':'No comparable reference in the selected window.'}</span>${catalog?`<p>Provider record captured ${esc(local(catalog.captured_at))}. ${catalog.quote_at?'Source event clock: '+esc(local(catalog.quote_at))+'.':'Individual quote timestamp not provided.'} Status: ${esc(String(catalog.price_status||'catalog only').replaceAll('_',' ').toLowerCase())}.</p>${catalog.event_url?`<a href="${esc(catalog.event_url)}" target="_blank" rel="noopener noreferrer">Open provider event ↗</a>`:''}`:''}</div>`;
     }
     seen=true;
-    const value=target==='winner'?`${esc(pick(g,ref.picked_home))} · ${num(Math.max(ref.value,1-ref.value)*100)}%`:target==='margin'?sign(ref.value):num(ref.value);
+    const value=target==='winner'?`${esc(pick(g,ref.picked_home))} · ${num(Math.max(ref.value,1-ref.value)*100)}%`:esc(pointValue(g,result,target));
     const availability=result.pending?'Latest known snapshot; cutoff pending':result.status==='captured_available_by_cutoff'?'Captured snapshot available by cutoff':result.status==='after_kickoff'?'After kickoff; excluded from pregame comparisons':result.clock_basis==='retrieved_at'?'Available at capture; individual quote clock unknown':'Source-timed reference in selected window';
     const sourceStatus=ref.source_status===null||ref.source_status===undefined?'Not supplied':Array.isArray(ref.source_status)?ref.source_status.join(', '):String(ref.source_status);
-    return `<div class="reference"><strong>${target==='winner'?'Winner':target==='margin'?'Home margin':'Total'}: ${value}</strong>${result.status==='after_kickoff'?' <span class="pill warn">After kickoff</span>':''}${result.pending?' <span class="pill warn">Cutoff pending</span>':''}<span class="sub">${esc(labelKind(ref.reference_kind))}</span><dl><dt>Source quote</dt><dd>${ref.quote_at?esc(local(ref.quote_at)):'Not supplied; no individual quote time is invented'}</dd><dt>Captured</dt><dd>${ref.captured_at?esc(local(ref.captured_at)):'Historical possession unproved'}</dd><dt>Availability</dt><dd>${esc(availability)}</dd><dt>Clock basis</dt><dd>${result.clock_basis==='retrieved_at'?'Authenticated capture time':'Provider observation time'}</dd><dt>Source status</dt><dd>${esc(sourceStatus)}${ref.source_status_field?' ('+esc(ref.source_status_field)+')':''}</dd><dt>Use</dt><dd>${ref.evidence_kind==='recovered_historical_observation'?'Recovered historical reference':ref.evidence_kind==='recorded_early_snapshot'?'Recorded early reference':ref.evidence_kind==='current_public_observation'?'Current public snapshot':'Retrospective comparison reference'}</dd><dt>Identity</dt><dd>${esc(String(ref.identity_basis).replaceAll('_',' ').toLowerCase())}</dd></dl>${ref.event_url?`<a href="${esc(ref.event_url)}" target="_blank" rel="noopener noreferrer">Open provider event ↗</a>`:''}</div>`;
+    const support=ref.point_support;
+    const diagnostic=support?`<p>Bounds use captured probability bands lying wholly above or below 50%. They are descriptive market bounds, not projected scores, executable offers or a confidence interval. Each supporting capture must qualify for this window.</p><details><summary>Preserved midpoint diagnostic</summary><p>Nearest-half threshold: ${num(ref.value)}. ${support.diagnostic_probability_band_width!==null?'Its probability-band width is '+num(support.diagnostic_probability_band_width*100)+' percentage points. ':''}A band spanning 50% does not locate a central line. This center is retained for audit, not used as the primary point reference.</p><p>Lower support captured ${esc(local(support.lower_capture_at))}; upper support captured ${esc(local(support.upper_capture_at))}.</p></details>`:'';
+    return `<div class="reference"><strong>${target==='winner'?'Winner':target==='margin'?'Home margin':'Total'}: ${value}</strong>${result.status==='after_kickoff'?' <span class="pill warn">After kickoff</span>':''}${result.pending?' <span class="pill warn">Cutoff pending</span>':''}<span class="sub">${support?'Supported threshold bounds':esc(labelKind(ref.reference_kind))}</span><dl><dt>Source quote</dt><dd>${ref.quote_at?esc(local(ref.quote_at)):'Not supplied; no individual quote time is invented'}</dd><dt>${support?'Diagnostic capture':'Captured'}</dt><dd>${ref.captured_at?esc(local(ref.captured_at)):'Historical possession unproved'}</dd>${support?'<dt>Bounds available</dt><dd>'+esc(local(support.support_available_at))+'</dd>':''}<dt>Availability</dt><dd>${esc(availability)}</dd><dt>Clock basis</dt><dd>${result.clock_basis==='retrieved_at'?'Authenticated capture time':'Provider observation time'}</dd><dt>Source status</dt><dd>${esc(sourceStatus)}${ref.source_status_field?' ('+esc(ref.source_status_field)+')':''}</dd><dt>Use</dt><dd>${ref.evidence_kind==='recovered_historical_observation'?'Recovered historical reference':ref.evidence_kind==='recorded_early_snapshot'?'Recorded early reference':ref.evidence_kind==='current_public_observation'?'Current public snapshot':'Retrospective comparison reference'}</dd><dt>Identity</dt><dd>${esc(String(ref.identity_basis).replaceAll('_',' ').toLowerCase())}</dd></dl>${diagnostic}${ref.event_url?`<a href="${esc(ref.event_url)}" target="_blank" rel="noopener noreferrer">Open provider event ↗</a>`:''}</div>`;
    }).join('');
    return `<section class="market-detail"><h3>${esc(provider)} <span class="pill ${seen?'good':'quiet'}">${seen?'Stored reference':g.markets[provider].length?'Records captured':'Coverage gap'}</span></h3>${parts}</section>`;
   }).join('');
@@ -132,8 +154,8 @@
   $('game-dialog').showModal();
  }
  function exportCSV(){
-  const cols=['game_id','season','phase','native_week','kickoff_utc','away_team','home_team','completed','actual_away_points','actual_home_points','original_evidence','original_p_home','original_winner','original_away_points','original_home_points','original_home_margin','original_total','original_correct','rolling_status','provider','reference_window','market_winner','derived_home_probability','implied_home_margin','implied_total','winner_quote_at','winner_captured_at','winner_reference_kind','winner_clock_basis','winner_window_status','margin_quote_at','margin_captured_at','margin_clock_basis','margin_window_status','total_quote_at','total_captured_at','total_clock_basis','total_window_status','NO_BET'];
-  const rows=filtered().map(g=>{const r=g.replay,wr=chosen(g,'winner'),mr=chosen(g,'margin'),tr=chosen(g,'total'),w=wr.row,m=mr.row,t=tr.row;return [g.id,g.season,g.phase,g.week,g.kickoff,g.away,g.home,g.completed,g.away_points,g.home_points,r?'retrospective_original_replay':'no_recorded_forecast',r?.p_home,r?pick(g,r.picked_home):null,r?.away_points,r?.home_points,r?.home_margin,r?.total,r?.correct,'not_issued',state.provider,state.horizon==='auto'?(g.completed?'latest_pre_kickoff':'current'):state.horizon,w?pick(g,w.picked_home):null,w?.value,m?.value,t?.value,w?.quote_at,w?.captured_at,w?.reference_kind,wr.clock_basis,wr.status,m?.quote_at,m?.captured_at,mr.clock_basis,mr.status,t?.quote_at,t?.captured_at,tr.clock_basis,tr.status,true];});
+  const cols=['game_id','season','phase','native_week','kickoff_utc','away_team','home_team','completed','actual_away_points','actual_home_points','original_evidence','original_p_home','original_winner','original_away_points','original_home_points','original_home_margin','original_total','original_correct','rolling_status','provider','reference_window','market_winner','derived_home_probability','margin_reference_or_preserved_diagnostic','total_reference_or_preserved_diagnostic','winner_quote_at','winner_captured_at','winner_reference_kind','winner_clock_basis','winner_window_status','margin_quote_at','margin_diagnostic_capture_at','margin_clock_basis','margin_window_status','margin_reference_kind','margin_bound_status','margin_lower_bound','margin_upper_bound','margin_support_available_at','total_quote_at','total_diagnostic_capture_at','total_clock_basis','total_window_status','total_reference_kind','total_bound_status','total_lower_bound','total_upper_bound','total_support_available_at','NO_BET'];
+  const rows=filtered().map(g=>{const r=g.replay,wr=chosen(g,'winner'),mr=chosen(g,'margin'),tr=chosen(g,'total'),w=wr.row,m=mr.row,t=tr.row,mb=bounds(g,mr),tb=bounds(g,tr);return [g.id,g.season,g.phase,g.week,g.kickoff,g.away,g.home,g.completed,g.away_points,g.home_points,r?'retrospective_original_replay':'no_recorded_forecast',r?.p_home,r?pick(g,r.picked_home):null,r?.away_points,r?.home_points,r?.home_margin,r?.total,r?.correct,'not_issued',state.provider,state.horizon==='auto'?(g.completed?'latest_pre_kickoff':'current'):state.horizon,w?pick(g,w.picked_home):null,w?.value,m?.value,t?.value,w?.quote_at,w?.captured_at,w?.reference_kind,wr.clock_basis,wr.status,m?.quote_at,m?.captured_at,mr.clock_basis,mr.status,m?.reference_kind,mb?.status,mb?.lower,mb?.upper,m?.point_support?.support_available_at,t?.quote_at,t?.captured_at,tr.clock_basis,tr.status,t?.reference_kind,tb?.status,tb?.lower,tb?.upper,t?.point_support?.support_available_at,true];});
   const csv=[cols,...rows].map(row=>row.map(csvCell).join(',')).join('\r\n')+'\r\n';
   const url=URL.createObjectURL(new Blob([csv],{type:'text/csv;charset=utf-8'}));
   const a=document.createElement('a');a.href=url;a.download=`fbs-2026-${state.view}-comparison.csv`;a.click();setTimeout(()=>URL.revokeObjectURL(url),1000);
@@ -147,7 +169,9 @@
    const window=data.windows.current_calendar_week;
    const current=data.games.filter(g=>clock(g.kickoff)>=clock(window.start_inclusive_utc)&&clock(g.kickoff)<clock(window.end_exclusive_utc));
    const targets=['winner','margin','total'].map(target=>current.filter(g=>reference(g,p.provider,target,'current',data.prepared_at).row).length);
-   return `<article class="coverage-card"><h3>${esc(p.provider)}</h3><div class="coverage-value">${p.observed_games}<span class="measure"> / ${data.inventory.observed_games} games with records</span></div><p>${p.completed_games} completed · ${p.scheduled_games} scheduled</p><p>${p.numeric_observations} numeric references on ${p.numeric_reference_games} games<br>${p.timestamped_reference_games} games with a timestamped reference</p><p><strong>This week’s latest references</strong><br>Winner ${targets[0]} / ${current.length}<br>Margin ${targets[1]} / ${current.length} · total ${targets[2]} / ${current.length}</p><p class="clock">Latest represented capture<br><strong>${esc(newest)}</strong></p></article>`;
+   const supported=['margin','total'].map(target=>current.map(g=>pointBounds(reference(g,p.provider,target,'current',data.prepared_at).row,clock(data.prepared_at),data.prepared_at)).filter(Boolean));
+   const pointNote=['Kalshi','Polymarket Global'].includes(p.provider)?`<p>Supported finite intervals: margin ${supported[0].filter(b=>b.status==='bounded').length} · total ${supported[1].filter(b=>b.status==='bounded').length}<br>One-sided bounds: margin ${supported[0].filter(b=>b.status==='lower_only'||b.status==='upper_only').length} · total ${supported[1].filter(b=>b.status==='lower_only'||b.status==='upper_only').length}</p>`:'';
+   return `<article class="coverage-card"><h3>${esc(p.provider)}</h3><div class="coverage-value">${p.observed_games}<span class="measure"> / ${data.inventory.observed_games} games with records</span></div><p>${p.completed_games} completed · ${p.scheduled_games} scheduled</p><p>${p.numeric_observations} numeric records on ${p.numeric_reference_games} games, including preserved diagnostics<br>${p.timestamped_reference_games} games with a timestamped reference</p><p><strong>This week’s latest records</strong><br>Winner ${targets[0]} / ${current.length}<br>Margin ${targets[1]} / ${current.length} · total ${targets[2]} / ${current.length}</p>${pointNote}<p class="clock">Latest represented capture<br><strong>${esc(newest)}</strong></p></article>`;
   }).join('');
  }
  function weekly(){

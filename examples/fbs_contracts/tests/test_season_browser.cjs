@@ -52,6 +52,19 @@ let browser;
   assert.match(await page.locator('#result-status').innerText(),/^63 games/);
   assert.match(await page.locator('#games-body').innerText(),/No recorded forecast/);
   assert.equal(await page.evaluate(()=>document.documentElement.scrollWidth>innerWidth),false);
+  await page.selectOption('#provider-select','Polymarket Global');
+  assert.match(await page.locator('#reference-status').innerText(),/63 of 63/);
+  await page.locator('#game-search').fill('401869936');
+  const repaired=await page.locator('#games-body').innerText();
+  assert.match(repaired,/Home \+14\.5 to \+16\.5/);
+  assert.match(repaired,/Total 51\.5 to 61\.5/);
+  assert.doesNotMatch(repaired,/31\.5|39\.5/);
+  await page.getByRole('button',{name:'Details for UL Monroe at Arkansas State',exact:true}).click();
+  const globalDetail=page.locator('#dialog-markets .market-detail').nth(3);
+  await globalDetail.locator('details summary').first().click();
+  assert.match(await globalDetail.innerText(),/Nearest-half threshold: 31\.5/);
+  assert.match(await globalDetail.innerText(),/98\.0 percentage points/);
+  await page.keyboard.press('Escape');await page.locator('#game-search').fill('');
   if(process.env.FBS_SCREENSHOTS){fs.mkdirSync(process.env.FBS_SCREENSHOTS,{recursive:true});
    await page.evaluate(()=>window.scrollTo({top:0,behavior:'instant'}));
    await page.screenshot({path:path.join(process.env.FBS_SCREENSHOTS,`season-${width}-top.png`)});
@@ -67,5 +80,6 @@ let browser;
  assert.deepEqual(errors,[]);assert.deepEqual(requests,[]);
  console.log(JSON.stringify({status:'PASS',viewports:[1440,390],inventory_provider_states:states,
    no_script_games:888,current_week:63,disagreement_csv_rows:40,keyboard_dialog:true,
+   supported_current_bounds_verified:true,original_wide_book_diagnostic_preserved:true,
    script_errors:0,external_requests:0}));
 })().catch(error=>{console.error(error);process.exitCode=1;}).finally(async()=>{if(browser)await browser.close();});

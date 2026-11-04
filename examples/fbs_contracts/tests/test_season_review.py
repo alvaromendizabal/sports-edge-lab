@@ -98,6 +98,21 @@ class SeasonReviewTests(unittest.TestCase):
         with self.assertRaisesRegex(ValueError, 'verified prediction clock'):
             validate(data)
 
+    def test_point_support_availability_cannot_precede_its_source_captures(self):
+        data = self.altered()
+        row = next(r for g in data['games'] for r in g['markets']['Polymarket Global']
+                   if r['point_support'] and r['point_support']['support_available_at'])
+        row['point_support']['support_available_at'] = '2000-01-01T00:00:00Z'
+        with self.assertRaisesRegex(ValueError, 'availability cannot be backdated'):
+            validate(data)
+
+    def test_point_support_does_not_expand_the_raw_quote_publication_boundary(self):
+        data = self.altered()
+        row = next(r for g in data['games'] for r in g['markets']['Polymarket Global'] if r['point_support'])
+        row['point_support']['raw_native_bid_array'] = [.01,.99]
+        with self.assertRaisesRegex(ValueError, 'point-support field'):
+            validate(data)
+
 
 if __name__ == '__main__':
     unittest.main()

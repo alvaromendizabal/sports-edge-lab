@@ -2,7 +2,7 @@
 const assert=require('node:assert/strict');
 const fs=require('node:fs');
 const path=require('node:path');
-const {reference,filterGames,csvCell}=require('../../../docs/fbs/season.js');
+const {reference,filterGames,csvCell,pointBounds}=require('../../../docs/fbs/season.js');
 const data=JSON.parse(fs.readFileSync(path.join(__dirname,'../../../docs/fbs/season-2026.json'),'utf8'));
 const state={view:'all',week:'all',query:'',provider:'DraftKings',horizon:'latest_pre_kickoff',disagreements:false};
 for(const provider of ['DraftKings','Kalshi','Polymarket US','Polymarket Global'])
@@ -37,4 +37,19 @@ game.markets.Kalshi=[make('2026-11-03T11:00:00Z'),make('2026-11-03T11:00:00Z',.3
 assert.equal(reference(game,'Kalshi','winner','T120','2026-11-05T00:00:00Z').status,'conflict');
 assert.equal(csvCell('=HYPERLINK("https://example.test")'),'"\'=HYPERLINK(""https://example.test"")"');
 assert.equal(csvCell(-5.5),'"-5.5"');
-console.log(JSON.stringify({status:'PASS',provider_inventory_views:4,calendar_counts:[888,622,56,63],historical_disagreements:40,current_week_provider_targets:12,clock_scenarios:8,formula_injection_escaped:true}));
+const supported={point_support:{lower_bound:14.5,upper_bound:16.5,lower_capture_at:'2026-11-03T11:00:00Z',upper_capture_at:'2026-11-03T12:00:00Z',method:'CAPTURED_BID_ASK_HALF_PROBABILITY_SUPPORT'}};
+assert.deepEqual(pointBounds(supported,Date.parse('2026-11-03T11:30:00Z'),'2026-11-03T13:00:00Z'),{lower:14.5,upper:null,status:'lower_only',method:'CAPTURED_BID_ASK_HALF_PROBABILITY_SUPPORT'});
+assert.equal(pointBounds(supported,Date.parse('2026-11-03T12:00:00Z'),'2026-11-03T13:00:00Z',true).status,'lower_only');
+assert.equal(pointBounds(supported,Date.parse('2026-11-03T12:00:00Z'),'2026-11-03T13:00:00Z').status,'bounded');
+assert.equal(pointBounds(supported,Date.parse('2026-11-03T13:00:00Z'),'2026-11-03T11:30:00Z').status,'lower_only');
+assert.equal(pointBounds({point_support:{...supported.point_support,upper_bound:10.5}},Date.parse('2026-11-03T13:00:00Z'),'2026-11-03T13:00:00Z').status,'inconsistent');
+assert.equal(pointBounds({point_support:{...supported.point_support,lower_bound:null,upper_bound:null}},Date.parse('2026-11-03T13:00:00Z'),'2026-11-03T13:00:00Z').status,'unresolved');
+const restored=current.find(g=>g.id==='401869936');
+const restoredMargin=reference(restored,'Polymarket Global','margin','current',data.prepared_at);
+const restoredTotal=reference(restored,'Polymarket Global','total','current',data.prepared_at);
+assert.equal(restoredMargin.row.value,31.5,'The old diagnostic remains preserved, not substituted for a bound');
+assert.deepEqual([restoredMargin.row.point_support.lower_bound,restoredMargin.row.point_support.upper_bound],[14.5,16.5]);
+assert.deepEqual([restoredTotal.row.point_support.lower_bound,restoredTotal.row.point_support.upper_bound],[51.5,61.5],'Ask exactly .50 cannot supply the stricter 53.5 bound');
+const oneSided=reference(current.find(g=>g.id==='401858290'),'Polymarket Global','total','current',data.prepared_at);
+assert.equal(pointBounds(oneSided.row,oneSided.cutoff,data.prepared_at).status,'lower_only');
+console.log(JSON.stringify({status:'PASS',provider_inventory_views:4,calendar_counts:[888,622,56,63],historical_disagreements:40,current_week_provider_targets:12,clock_scenarios:8,point_support_cutoff_scenarios:6,formula_injection_escaped:true}));
