@@ -84,3 +84,7 @@ No raw source responses, individual actual forecasts, provider quotes, proprieta
 - This publication adds no real fits, new provider acquisitions, promotions or profits. A deployed static projection is a presentation deliverable, not a live model or acquisition service.
 
 The dated [October 29 NBA review](../../../docs/nba/index.html), existing research history and negative findings remain intact.
+
+## Calendar coverage and missing data
+
+The [calendar inventory example](COVERAGE_INVENTORY.md) keeps every observed game while separately reporting requested-date completion, historical reference coverage and original possession. Its invented failure cases cover empty dates, source failures, reschedules, local-week boundaries and separate Polymarket products. Forecast availability never filters the acquisition inventory.
