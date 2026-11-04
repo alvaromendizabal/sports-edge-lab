@@ -542,10 +542,14 @@ def build_review(*, check=False):
     reschedule, reschedule_receipt = load_reschedule(latest, overlay)
     from source_recovery import load_source_recovery
     recovery, recovery_receipt = load_source_recovery(latest, overlay, reschedule)
+    from current_n037 import load_current_n037
+    recovery, current_n037_receipt = load_current_n037(latest, overlay, reschedule, recovery)
     from primary_issue import load_primary_issue
     primary, primary_receipt = load_primary_issue(latest)
     from latest_pregame import load_latest_pregame
     latest_pregame, latest_pregame_receipt = load_latest_pregame(latest)
+    from latest_pregame_n037 import load_latest_n037
+    latest_pregame, latest_n037_receipt = load_latest_n037(latest)
     template = (HERE / "review.template.html").read_text()
     embedded = canonical(data).decode().replace("<", "\\u003c")
     page = template.replace("__EVIDENCE_JSON__", embedded).replace("__EVIDENCE_SHA__", digest(data))
@@ -565,7 +569,7 @@ def build_review(*, check=False):
         require(output.is_file() and output.read_text() == page, "Generated review differs; run contracts.py --build-review")
     else:
         output.write_text(page)
-    return {**receipt, **current_receipt, **weekly_receipt, **latest_receipt, **points_receipt, **overlay_receipt, **reschedule_receipt, **recovery_receipt, **primary_receipt, **latest_pregame_receipt, "review": "review.html", "evidence_sha256": digest(data), "generated_page_matches": True}
+    return {**receipt, **current_receipt, **weekly_receipt, **latest_receipt, **points_receipt, **overlay_receipt, **reschedule_receipt, **recovery_receipt, **primary_receipt, **latest_pregame_receipt, **latest_n037_receipt, **current_n037_receipt, "review": "review.html", "evidence_sha256": digest(data), "generated_page_matches": True}
 
 
 def demo(*, output):
