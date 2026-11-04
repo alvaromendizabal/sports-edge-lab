@@ -237,6 +237,14 @@ class EvidenceTests(unittest.TestCase):
             parser.feed(output)
             self.assertEqual(len(parser.ids), len(set(parser.ids)), str(path))
 
+    def test_new_viewer_navigation_works_at_repository_and_hosted_roots(self):
+        host = 'https://alvaro-ncaa-research-review.alv-mendizabal.chatgpt.site'
+        for league in ('ncaam', 'ncaaw'):
+            self.assertIn('href="' + host + '/private-report/index.html"', build_dashboard.render_track(self.exports[league]))
+        viewer = (build_dashboard.HERE / 'private_report.html.tmpl').read_text()
+        self.assertIn('href="' + host + '/tracks/ncaam/index.html"', viewer)
+        self.assertIn('href="' + host + '/tracks/ncaaw/index.html"', viewer)
+
     def test_export_validation_rejects_provider_scope_and_cohort_mutation(self):
         for mutation in ('provider', 'cohort'):
             corrupted = copy.deepcopy(self.exports['ncaam'])

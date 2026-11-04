@@ -141,10 +141,10 @@ const { chromium } = require(process.env.PLAYWRIGHT_MODULE_DIR || 'playwright');
           prediction_win: .6, prediction_margin: 3, prediction_total: 140, actual_home_points: 70, actual_away_points: 72,
           model_winner_pick: 'Home 0', model_winner_pick_correct: false } : {}) }));
       const invented = { schema: 'sports-edge-lab.private.game-report.v1', evidence_release: 'INVENTED', asof_utc: '2026-11-04T20:00:00Z',
-        records: rows, market_observations: [{ provider: 'Kalshi', canonical_identity_verified: false, native_event_id: 'unresolved-fixture', binding_status: 'unknown_identity', quote_time: null },
+        records: rows, market_observations: [{ provider: 'Kalshi', canonical_identity_verified: false, native_event_id: 'unresolved-fixture', binding_status: 'unknown_identity', quote_time: null, native_yes_probability: .37, value_kind: 'Native Yes probability' },
           { provider: 'DraftKings', league: 'ncaam', canonical_identity_verified: true, event_id: 'invented-0', target: 'win', prediction: .55 }],
         window_event_keys: { this_week: rows.slice(0, 5).map(r => [r.league, r.event_id]), season_to_date: rows.slice(0, 1).map(r => [r.league, r.event_id]), last_week: [] },
-        metrics: [], weekly_metrics: [] };
+        audit_annotations: { 'invented-0': ['Exact time disputed; no replacement inferred.'] }, metrics: [], weekly_metrics: [] };
       await page.locator('#report-file').setInputFiles({ name: 'invented-report.json', mimeType: 'application/json', buffer: Buffer.from(JSON.stringify(invented)) });
       await page.locator('#report:not([hidden])').waitFor();
       assert.match(await page.locator('#load-status').innerText(), /Loaded 27 source game records/);
@@ -152,6 +152,7 @@ const { chromium } = require(process.env.PLAYWRIGHT_MODULE_DIR || 'playwright');
       assert.match(await page.locator('#results').innerText(), /Original frozen as issued/);
       assert.match(await page.locator('#results').innerText(), /Wrong/);
       assert.match(await page.locator('#results').innerText(), /precision: unknown/);
+      assert.match(await page.locator('#results').innerText(), /Exact time disputed/);
       assert.equal(await page.locator('#results img').count(), 0);
       assert.equal(await page.evaluate(() => window.privateLeak), undefined);
       counts.privateViewerStates++;
@@ -181,6 +182,8 @@ const { chromium } = require(process.env.PLAYWRIGHT_MODULE_DIR || 'playwright');
       await page.selectOption('#binding', 'unresolved');
       assert.equal(await page.locator('.observation').count(), 1);
       assert.match(await page.locator('#results').innerText(), /unresolved-fixture/);
+      assert.match(await page.locator('#results').innerText(), /0.3700/);
+      assert.match(await page.locator('#results').innerText(), /Native Yes probability/);
       await page.locator('#results summary').click();
       assert.match(await page.locator('#results pre').innerText(), /canonical_identity_verified/);
       counts.privateViewerStates++;
