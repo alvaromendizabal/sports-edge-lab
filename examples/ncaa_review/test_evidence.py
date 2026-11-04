@@ -8,6 +8,7 @@ import unittest
 from unittest.mock import patch
 
 import build_dashboard
+from progress import demo_scenarios
 
 
 class EvidenceTests(unittest.TestCase):
@@ -80,10 +81,20 @@ class EvidenceTests(unittest.TestCase):
             self.assertFalse(t['multiple_comparison_adjustment'])
             self.assertFalse(t['causal_or_prospective_edge_claimed'])
 
-    def test_failed_attempt_has_no_new_science_or_provider_scores(self):
+    def test_partial_attempt_preserves_completed_science_and_missing_current_scores(self):
         for data in self.exports.values():
             attempt = data['current_owner_attempt']
-            for key in ('new_real_target_fits', 'new_calibration_fits', 'new_source_refreshes', 'new_prediction_rows', 'new_prospective_issues', 'new_orders', 'scientific_credit_from_subsequent_readback'):
+            self.assertEqual(attempt['release'], 'B033')
+            self.assertEqual(attempt['status'], 'FAILED_PARTIAL_WORK_PRESERVED')
+            self.assertEqual(attempt['run_scope'], 'NCAA_MEN_AND_WOMEN_COMBINED')
+            self.assertEqual(attempt['new_real_target_fits'], 108)
+            self.assertEqual(attempt['league_new_real_target_fits'], 54)
+            self.assertEqual(attempt['reused_target_fits'], 0)
+            self.assertEqual(attempt['completed_scientific_stages'], 3)
+            self.assertEqual(attempt['attempted_scientific_stages'], 4)
+            self.assertEqual([s['status'] for s in attempt['stages']], ['COMPLETED'] * 3 + ['FAILED'])
+            self.assertEqual(attempt['study_target_fits_completed'], attempt['study_target_fits_registered'])
+            for key in ('new_calibration_fits', 'new_source_refreshes', 'new_prediction_rows', 'new_prospective_issues', 'new_orders', 'scientific_credit_from_subsequent_readback'):
                 self.assertEqual(attempt[key], 0)
             self.assertTrue(attempt['original_monitoring_unchanged'])
             self.assertEqual([p['name'] for p in data['providers']], ['Kalshi', 'Polymarket', 'DraftKings'])
@@ -92,6 +103,41 @@ class EvidenceTests(unittest.TestCase):
                     self.assertIsNone(provider[key])
             self.assertFalse(data['market_advantage']['demonstrated'])
             self.assertIsNone(data['market_advantage']['realized_betting_profit'])
+
+    def test_prior_failed_attempt_stays_in_history(self):
+        for data in self.exports.values():
+            old = data['owner_attempt_history'][0]
+            self.assertEqual(old['release'], 'B032')
+            self.assertEqual(old['new_real_target_fits'], 0)
+            self.assertEqual(old['synthetic_tests_passed'], 250)
+            self.assertEqual(data['provenance']['prior_failed_owner_return_sha256'], 'ae14d708cf85615c1c9c57a7891db85261a5b1632ecd70349730bf2dde51d9b0')
+
+    def test_resource_clocks_are_separate_and_not_claimed_as_tree_peak(self):
+        for data in self.exports.values():
+            a = data['current_owner_attempt']
+            self.assertAlmostEqual(a['phase_seconds']['admission'], 4146.091564976001)
+            self.assertAlmostEqual(a['phase_seconds']['science'], 1294.1799582330004)
+            self.assertGreater(a['total_wall_seconds'], sum(a['phase_seconds'].values()))
+            self.assertLess(a['total_wall_seconds'] - sum(a['phase_seconds'].values()), 2)
+            self.assertFalse(a['simultaneous_process_tree_peak_measured'])
+
+    def test_inherited_inventory_is_dated_and_unreconciled(self):
+        expected = {'ncaam': (437, 13, 2, 435), 'ncaaw': (419, 51, 1, 418)}
+        for league, data in self.exports.items():
+            d = data['observed_inventory']
+            self.assertEqual((d['candidate_games'], d['observed_finals'], d['last_week']['candidate_games'], d['this_week']['candidate_games']), expected[league])
+            self.assertEqual(d['candidate_games'], d['last_week']['candidate_games'] + d['this_week']['candidate_games'])
+            self.assertEqual(d['snapshot_at'], '2026-11-03T00:48:42+00:00')
+            self.assertFalse(d['official_inventory_reconciled'])
+            self.assertFalse(d['all_official_games_covered'])
+            self.assertEqual(d['authenticated_current_issues'], 0)
+
+    def test_quote_display_is_distinct_from_forecast_eligibility(self):
+        for data in self.exports.values():
+            self.assertFalse(data['quote_display_contract']['model_required_to_display_quote'])
+            polymarket = next(p for p in data['providers'] if p['name'] == 'Polymarket')
+            self.assertEqual([p['name'] for p in polymarket['products']], ['International', 'US'])
+            self.assertEqual(polymarket['products'][1]['status'], 'NOT_ACQUIRED_UNVERIFIED')
 
     def test_public_export_contains_aggregates_not_prediction_records(self):
         disallowed_keys = {'event_id', 'home_id', 'away_id', 'recipe', 'features', 'feature_columns', 'coefficients', 'weights', 's3_key', 'bucket', 'access_key', 'secret', 'predictions'}
@@ -112,11 +158,14 @@ class EvidenceTests(unittest.TestCase):
     def test_generation_is_exact_and_embedded_json_is_unchanged(self):
         for path, output in build_dashboard.outputs().items():
             self.assertEqual(path.read_text(), output)
-            self.assertNotRegex(output, r'__(?:TITLE|EVIDENCE|LEAGUE|SIBLING|SIBLING_LABEL)__')
+            self.assertNotRegex(output, r'__(?:TITLE|EVIDENCE|PROGRESS_DEMO|LEAGUE|SIBLING|SIBLING_LABEL)__')
             if path.parent.name in self.exports:
                 embedded = re.search(r'<script type="application/json" id="evidence">(.*?)</script>', output, re.S)
                 self.assertIsNotNone(embedded)
                 self.assertEqual(json.loads(embedded.group(1)), self.exports[path.parent.name])
+                progress = re.search(r'<script type="application/json" id="progress-evidence">(.*?)</script>', output, re.S)
+                self.assertIsNotNone(progress)
+                self.assertEqual(json.loads(progress.group(1)), demo_scenarios())
 
     def test_export_validation_rejects_provider_scope_and_cohort_mutation(self):
         for mutation in ('provider', 'cohort'):

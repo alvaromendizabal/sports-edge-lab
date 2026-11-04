@@ -2,9 +2,11 @@
 
 [Project](../../README.md) · [Open interactive dashboard](https://alvaro-ncaa-research-review.alv-mendizabal.chatgpt.site/tracks/ncaaw/index.html) · [Dashboard source](index.html) · [Methodology and runnable example](../../examples/ncaa_review/README.md) · [Separate men's track](../ncaam/README.md)
 
-## Current review — November 3, 2026 UTC
+## Current review — November 3, 2026 Pacific
 
-The accepted historical evidence compares objective-specific models on **10,901 exact shared games** across 2024–25 and 2025–26. The latest B032 owner attempt then failed at parent-data restoration: **zero new real fits, source refreshes, forecasts or prospective issues**. The failed return and prior accepted research remain preserved. A later independent full-byte return readback established durability without adding scientific credit.
+The accepted historical evidence compares objective-specific models on **10,901 exact shared games** across 2024–25 and 2025–26. The latest B033 owner return completed its registered study with **54 new target fits in this track, 108 across both NCAA leagues**. It then failed during current-source refresh after selecting a summary belonging to another project. The run waited 69.1 minutes in admission, then spent 21.6 minutes on scientific work. No fresh current-game or provider corpus, current issue or order was produced.
+
+The [interactive dashboard](index.html) now separates completed study work, the failed refresh, waiting time, fixture time and science time. It keeps the inherited game counts dated, the official denominator unverified, and the historical headline selections below unchanged. The earlier B032 zero-science failure and its later durability verification remain in the JSON history. A completed study is not a completed end-to-end current-season run.
 
 ### One fixed selection for each objective
 
@@ -28,13 +30,13 @@ These 2,000 resamples retain whole weeks within seasons and identical games for 
 
 Frozen-original parameters and actual issue timestamps remain unchanged. Rolling reconstruction must use only labels and features released strictly before each training or prediction cutoff, and must remain separate from the original model's season record. More recent training data does not guarantee better future predictions.
 
-The active provider scope is **Kalshi, Polymarket and DraftKings only**. Current-season matched comparisons, executable-price replay, ROI and market edge remain **unavailable**, not zero. Every comparison requires the same event, ordered teams, horizon, target and settlement, plus qualified quote clocks. The failed attempt did not reach these stages. Passing software fixtures never supplies missing game or quote evidence.
+The active provider scope is **Kalshi, Polymarket and DraftKings only**. Current-season matched comparisons, executable-price replay, ROI and market edge remain **unavailable**, not zero. Every comparison requires the same event, ordered teams, horizon, target and settlement, plus qualified quote clocks. The latest attempt stopped at current-source refresh before these current-season evaluation stages. Passing software fixtures never supplies missing game or quote evidence.
 
 ### Reproducible public engineering
 
-The new [credential-free example](../../examples/ncaa_review/README.md) implements exact population pairing, information-clock validation, separate winner/margin/total metrics, an invented chronological baseline, explicit-fee payoff math and complete streamed-byte verification. Negative tests cover future-label poisoning, equal boundaries, wrong settlements, incompatible identities, missing coverage, mixed evaluation tracks and the actual stream-context failure class. Generated pages are checked against the exact aggregate JSON; real browser tests exercise every objective/window state at desktop and mobile widths.
+The [credential-free example](../../examples/ncaa_review/README.md) implements exact population pairing, information-clock validation, separate winner/margin/total metrics, an invented chronological baseline, explicit-fee payoff math and complete streamed-byte verification. Negative tests cover future-label poisoning, equal boundaries, wrong settlements, incompatible identities, missing coverage, mixed evaluation tracks and the actual stream-context failure class. The generic resource-admission and progress examples also demonstrate safe capacity decisions, new-versus-reused work counters, unknown totals and measured phase estimates. Generated pages embed the exact aggregate JSON and invented progress scenarios; real browser tests exercise every objective/window state, all eight progress scenarios and desktop/mobile layouts.
 
-No private model bodies, exact active features, licensed responses, individual forecast archives or execution handoffs are published. The [publication boundary](../../docs/PUBLICATION_BOUNDARY.md) remains in force. The accepted historical return digest is `df98ed0758c29deaed943355349833ab0aeaa23a79693b5efc027e835075e4da`; the failed current return digest is `ae14d708cf85615c1c9c57a7891db85261a5b1632ecd70349730bf2dde51d9b0`.
+No private model bodies, exact active features, licensed responses, individual forecast archives or execution handoffs are published. The [publication boundary](../../docs/PUBLICATION_BOUNDARY.md) remains in force. The accepted historical return digest is `df98ed0758c29deaed943355349833ab0aeaa23a79693b5efc027e835075e4da`; the latest partial return digest is `16b58cc6ed5bd4be303d41ae17816af2510f4e52a9bc011811f40e90f3003cfe`. The earlier B032 failed return digest remains `ae14d708cf85615c1c9c57a7891db85261a5b1632ecd70349730bf2dde51d9b0`.
 
 <details>
 <summary>Earlier published track history — preserved as dated evidence through B030</summary>
