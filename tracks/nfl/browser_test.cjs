@@ -26,6 +26,13 @@ const {chromium}=require(process.env.PLAYWRIGHT_MODULE_DIR||'playwright');
   assert.match(await page.locator('#current-comparison').innerText(),/0\.629080/);
   assert.equal(await page.locator('#current-provider-table tbody tr').count(),3);
   assert.match(await page.locator('#current-providers').innerText(),/incomplete/i);
+  assert.match(await page.locator('#current-providers-heading').innerText(),/Archived provider coverage/);
+  assert.equal(await page.locator('#current-providers').getAttribute('data-as-of'),'2026-11-03T21:24:00+00:00');
+  assert.match(await page.locator('#archived-provider-notice').innerText(),/Superseded provider coverage/);
+  assert.equal(await page.locator('#archived-provider-notice a').getAttribute('href'),'#latest-coverage');
+  assert.match(await page.locator('#current-execution').innerText(),/Prior accepted N033 execution/);
+  assert.match(await page.locator('#current-execution').innerText(),/That N033 execution added 192/);
+  assert.doesNotMatch(await page.locator('#current-execution').innerText(),/This execution added/);
   assert.match(await page.locator('#current-snapshots').innerText(),/Week 8/);
   for(const year of ['2024','2025','2026']){
    await page.selectOption('#current-year',year);

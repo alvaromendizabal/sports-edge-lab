@@ -75,6 +75,21 @@ class PublicSnapshotTests(unittest.TestCase):
     def test_restored_fit_cannot_be_added_to_new_fit_total(self):
         self.reject(lambda d: d['execution'].update(new_owner_fits=1161))
 
+    def test_archived_provider_coverage_has_its_real_snapshot_date(self):
+        template = (Path(__file__).parent / 'review.template.html').read_text()
+        section = template.split('id="current-providers"', 1)[1].split('</section>', 1)[0]
+        self.assertIn('data-snapshot="N033"', section)
+        self.assertIn('data-as-of="' + self.data['as_of'] + '"', section)
+        self.assertIn('Superseded provider coverage', section)
+        self.assertIn('href="#latest-coverage"', section)
+
+    def test_preserved_new_fit_counts_are_attributed_to_n033(self):
+        template = (Path(__file__).parent / 'review.template.html').read_text()
+        execution = template.split("get('current-execution').innerHTML=", 1)[1].split("\n", 1)[0]
+        self.assertIn('Prior accepted N033 execution', execution)
+        self.assertIn('That N033 execution added', execution)
+        self.assertNotIn('This execution added', execution)
+
 
 if __name__ == '__main__':
     unittest.main()
