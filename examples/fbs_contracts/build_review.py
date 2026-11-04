@@ -10,7 +10,7 @@ from .matched_cohort import invented_comparison, score_matched
 from .public_release import release
 
 ROOT = Path(__file__).resolve().parents[2]
-OUTPUT = ROOT / 'docs/fbs/index.html'
+OUTPUT = ROOT / 'docs/fbs/research.html'
 
 
 def evidence():
