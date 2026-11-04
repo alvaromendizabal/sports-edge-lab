@@ -48,6 +48,16 @@ The source-version example shows an invented 70% original issue alongside a late
 
 ## Static-host projection
 
+### Historical recovery and local-view integrity
+
+The [recovered-history contract](HISTORY_PANELS.md) adds a credential-free,
+invented-only demonstration of latest-before-tip versus T60/T120 references,
+historical versus prospective possession eligibility, full-inventory retention,
+unknown settlement and exact-byte local-import checks. Its tests run under the
+existing NBA CI matrix. Recovering a historical quote later is not a reason to
+hide it; the source and acquisition clocks determine which claims it supports.
+This addition does not change the dated public capsule or publish real prices.
+
 The public exporter emits exactly five reviewed assets: the current dashboard, preserved October 29 page, local interaction script, sanitized capsule and hosting provenance. It rewrites repository navigation to an exact public commit. No private workspace, model or source response enters the bundle.
 
 ```bash

@@ -2,7 +2,7 @@
 from pathlib import Path
 from datetime import timedelta
 from zoneinfo import ZoneInfo
-import argparse, html, json, math, re
+import argparse, hashlib, html, json, math, re
 from .market_time import instant, reference_at
 
 ROOT=Path(__file__).resolve().parents[2]
@@ -11,9 +11,9 @@ TEMPLATE=Path(__file__).with_name('season_template.html.in')
 OUTPUT=ROOT/'docs/fbs/index.html'
 PROVIDERS=('DraftKings','Kalshi','Polymarket US','Polymarket Global')
 GAME_KEYS={'id','season','phase','week','kickoff','kickoff_tbd','home','away','completed','home_points','away_points','population','source_at','replay','rolling','decision','stake_usd','markets'}
-REFERENCE_KEYS={'target','value','picked_home','quote_at','captured_at','reference_kind','product','evidence_kind','identity_basis','join_status','event_url','executable','interval_end_at','price_status'}
+REFERENCE_KEYS={'target','value','picked_home','quote_at','captured_at','reference_kind','product','evidence_kind','identity_basis','join_status','event_url','executable','interval_end_at','price_status','clock_basis','source_status','source_status_field'}
 REPLAY_KEYS={'p_home','picked_home','home_points','away_points','home_margin','total','correct','margin_error','total_error','status','issued_at'}
-TOP_KEYS={'schema','season','prepared_at','assessed_at','timezone','owner','inventory','windows','metrics','historical','weekly','matched_draftkings','provider_coverage','provider_acquisition_summary','reporting_contract','games'}
+TOP_KEYS={'schema','season','prepared_at','assessed_at','timezone','owner','inventory','windows','metrics','historical','weekly','matched_draftkings','matched_recovered','provider_coverage','provider_acquisition_summary','reporting_contract','games'}
 
 def require(value,message):
     if not value:raise ValueError(message)
@@ -59,6 +59,7 @@ def validate(data):
                 if ref['quote_at']:instant(ref['quote_at'])
                 if ref['captured_at']:instant(ref['captured_at'])
                 require(ref['quote_at'] or ref['captured_at'],'Reference has no recorded clock')
+                require(ref['clock_basis']==('provider_quote_at' if ref['quote_at'] else 'retrieved_at'),'Clock basis cannot fabricate a source quote timestamp')
                 if ref['interval_end_at']:
                     require(ref['quote_at'] and instant(ref['interval_end_at'])>=instant(ref['quote_at']),'Invalid observation interval')
                 require(ref['executable'] is False,'Reference cannot become an executable offer')
@@ -87,6 +88,23 @@ def validate(data):
         cohort=[g for g in games if g['replay'] and g['phase']==row['phase'] and g['week']==row['week']]
         require(row['games']==len(cohort) and row['correct_winner']==sum(g['replay']['correct'] for g in cohort),'Weekly cohort closure')
     require(sum(r['games'] for r in data['weekly'])==inv['original_replay_games'],'Weekly inventory closure')
+    for group in ('panels','provider_summary'):
+        for row in data['matched_recovered'][group]:
+            require(row['provider'] in PROVIDERS and row['target'] in ['winner','margin','total'] and row['season']==2026,'Recovered panel identity')
+            require(row['descriptive_only'] and not row['same_model_prediction_cutoff_proven'] and row['actual_issued_predictions']==0,'Recovered report cannot claim a verified prediction clock')
+            cohort=[]
+            for game in games:
+                if not game['completed'] or not game['replay']:continue
+                kind=row['cutoff_kind'];cutoff=instant(game['kickoff'])-timedelta(minutes=120 if kind=='T120' else 60 if kind=='T60' else 0)
+                try:ref=reference_at(game['markets'][row['provider']],row['target'],cutoff.isoformat(),strict_before=kind=='LATEST_BEFORE_KICKOFF')
+                except ValueError:ref=None
+                source_kind=ref['reference_kind'].removeprefix('implied_threshold_center_from_') if ref else None
+                if ref and ref['product']==row['product'] and (group=='provider_summary' or source_kind==row['reference_kind']):cohort.append(game['id'])
+            require(len(cohort)==row['n'],'Recovered matched cohort count')
+            pin=hashlib.sha256(json.dumps(sorted(cohort),sort_keys=True,separators=(',',':')).encode()).hexdigest()
+            require(pin==row['cohort_sha256'],'Recovered matched cohort identity pin')
+            require(row['n']==row['model_metrics']['games']==row['provider_metrics']['games'],'Recovered model/provider denominators')
+            if row['target']=='winner':require(row['disagreements']==row['model_correct_on_disagreement']+row['provider_correct_on_disagreement'],'Disagreement outcome closure')
     serialized=json.dumps(data,ensure_ascii=False)
     require(not re.search(r's3://|sagemaker-sports|/home/sagemaker-user|AKIA[0-9A-Z]{16}|secret_access_key|private_model_body|calibration_parameters',serialized),'Private field in public export')
     return data
@@ -127,13 +145,41 @@ def complete_metrics(data):
 def reliability_rows(data):
     return '\n'.join(f'<tr><th scope="row">{r["lower"]:.1f}–{r["upper"]:.1f}</th><td>{r["games"]}</td><td>{r["mean_probability"]:.4f}</td><td>{r["observed_win_rate"]:.4f}</td></tr>' for r in data['metrics']['season']['winner']['reliability_bins'])
 
+def recovered_rows(data,group):
+    result=[]
+    for row in data['matched_recovered'][group]:
+        if row['target']!='winner':continue
+        a,b=row['model_metrics'],row['provider_metrics']
+        kinds=row.get('reference_kind_counts') or {row['reference_kind']:row['n']}
+        source='; '.join(k.replace('_',' ')+' ('+str(v)+')' for k,v in kinds.items())
+        interval=row['paired_uncertainty'].get('interval')
+        uncertainty=(f'{interval[0]:+.4f} to {interval[1]:+.4f}' if interval else 'Unavailable')
+        pair=lambda key:fmt(a.get(key),4)+' / '+fmt(b.get(key),4)
+        result.append(f'<tr><th scope="row">{esc(row["provider"])}<span class="sub">{esc(source)}</span></th><td>{esc(row["cutoff_kind"].replace("LATEST_BEFORE_KICKOFF","Latest pregame"))}</td><td>{row["n"]}</td><td>{pair("logloss")}<span class="sub">Δ interval {uncertainty}</span></td><td>{pair("brier")}</td><td>{fmt(a["accuracy"]*100,2)}% / {fmt(b["accuracy"]*100,2)}%</td><td>{pair("roc_auc")}</td><td>{pair("ece")}</td><td>{row["model_correct_on_disagreement"]} / {row["provider_correct_on_disagreement"]}<span class="sub">{row["disagreements"]} disagreements</span></td></tr>')
+    return '\n'.join(result) or '<tr><td colspan="9">No qualified recovered comparison is included in this snapshot.</td></tr>'
+
+def recovered_point_rows(data):
+    result=[]
+    for row in data['matched_recovered']['provider_summary']:
+        if row['target']=='winner':continue
+        a,b=row['model_metrics'],row['provider_metrics']
+        pair=lambda key:fmt(a.get(key),3)+' / '+fmt(b.get(key),3)
+        sources='; '.join(k.replace('_',' ')+' ('+str(v)+')' for k,v in row['reference_kind_counts'].items())
+        interval=row['paired_uncertainty'].get('interval')
+        uncertainty=(f'{interval[0]:+.3f} to {interval[1]:+.3f}' if interval else 'Unavailable: fewer than two phase/week blocks')
+        result.append(f'<tr><th scope="row">{esc(row["provider"])}<span class="sub">{esc(sources)}</span></th><td>{esc(row["target"])} · threshold center</td><td>{esc(row["cutoff_kind"].replace("LATEST_BEFORE_KICKOFF","Latest pregame"))}</td><td>{row["n"]}</td><td>{pair("mae")}</td><td>{pair("rmse")}</td><td>{pair("bias")}</td><td>{pair("r2")}</td><td>{uncertainty}</td></tr>')
+    return '\n'.join(result) or '<tr><td colspan="9">No comparable point-ladder diagnostic is included.</td></tr>'
+
 def render(data=None):
     data=validate(data or json.loads(DATA.read_text()))
     payload=json.dumps(data,ensure_ascii=False,separators=(',',':'),allow_nan=False).replace('<','\\u003c').replace('>','\\u003e').replace('&','\\u0026')
     return (TEMPLATE.read_text().replace('__SEASON_DATA__',payload)
             .replace('__GAME_ROWS__',static_rows(data)).replace('__HISTORICAL_ROWS__',historical_rows(data))
             .replace('__WEEKLY_ROWS__',weekly_rows(data)).replace('__COMPLETE_METRICS__',complete_metrics(data))
-            .replace('__RELIABILITY_ROWS__',reliability_rows(data)))
+            .replace('__RELIABILITY_ROWS__',reliability_rows(data))
+            .replace('__RECOVERED_ROWS__',recovered_rows(data,'provider_summary'))
+            .replace('__RECOVERED_KIND_ROWS__',recovered_rows(data,'panels'))
+            .replace('__RECOVERED_POINT_ROWS__',recovered_point_rows(data)))
 
 def main():
     p=argparse.ArgumentParser();p.add_argument('--check',action='store_true');a=p.parse_args();out=render()

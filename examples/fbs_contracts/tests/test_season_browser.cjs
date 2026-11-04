@@ -28,7 +28,7 @@ let browser;
   for(const provider of ['DraftKings','Kalshi','Polymarket US','Polymarket Global']){
    await page.selectOption('#provider-select',provider);
    assert.match(await page.locator('#result-status').innerText(),/^888 games/);
-   assert.equal(await page.locator('#market-column').innerText(),provider+' reference');states++;
+   assert.equal(await page.locator('#market-column').innerText(),(provider+' reference').toUpperCase());states++;
   }
   await page.selectOption('#provider-select','DraftKings');
   await page.locator('#game-search').fill('TCU');

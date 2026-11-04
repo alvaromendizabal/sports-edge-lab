@@ -62,6 +62,18 @@ class MarketTimeTests(unittest.TestCase):
         row = self.row(capture='2026-09-05T22:00:01Z')
         self.assertTrue(known_before_prediction(row, '2026-09-05T23:00:00Z'))
 
+    def test_capture_without_source_clock_cannot_reconstruct_an_old_price(self):
+        row = self.row(quote=None)
+        self.assertIsNone(reference_at([row], 'winner', '2026-09-05T23:00:00Z'))
+        self.assertFalse(known_before_prediction(row, '2026-09-05T23:00:00Z'))
+
+    def test_source_timed_history_is_preferred_to_an_early_capture_fallback(self):
+        history = self.row(quote='2026-09-05T21:58:00Z')
+        captured = self.row(quote=None, capture='2026-09-05T22:00:00Z')
+        self.assertIs(reference_at([captured, history], 'winner', '2026-09-05T23:00:00Z'), history)
+        self.assertIs(reference_at([captured], 'winner', '2026-09-05T23:00:00Z'), captured)
+        self.assertTrue(known_before_prediction(captured, '2026-09-05T23:00:00Z'))
+
 
 if __name__ == '__main__':
     unittest.main()

@@ -32,20 +32,26 @@ def reference_at(observations, target, cutoff, *, strict_before=False):
         value = row.get('value')
         if value is None or not isinstance(value, (int, float)) or isinstance(value, bool) or not isfinite(value):
             continue
-        # A catalog acquisition clock does not prove when its numeric quote
-        # changed. Keep such records visible, but outside cutoff comparisons.
-        if not row.get('quote_at'):
+        # An authenticated captured snapshot proves availability at capture,
+        # without fabricating an individual exchange quote timestamp.
+        value_clock = row.get('quote_at') or row.get('captured_at')
+        if not value_clock:
             continue
-        clock = instant(row['quote_at'])
+        clock = instant(value_clock)
         # Candle timestamps denote a bucket start in some provider APIs.
         # A bucket that crosses the decision boundary is not eligible.
-        interval_end = instant(row.get('interval_end_at') or row['quote_at'])
+        interval_end = instant(row.get('interval_end_at') or value_clock)
         if interval_end > end or (strict_before and interval_end == end):
             continue
         if clock < end or (not strict_before and clock == end):
             eligible.append((clock, row))
     if not eligible:
         return None
+    # Timestamped historical observations have the stronger source-time
+    # meaning. Early captured snapshots are a fallback, never a latest-tick
+    # or genuinely issued-forecast claim.
+    timestamped = [(clock,row) for clock,row in eligible if row.get('quote_at')]
+    eligible = timestamped or eligible
     latest = max(clock for clock, _ in eligible)
     candidates = [row for clock, row in eligible if clock == latest]
     signatures = {(row['value'], row.get('reference_kind'), row.get('product')) for row in candidates}
@@ -55,12 +61,17 @@ def reference_at(observations, target, cutoff, *, strict_before=False):
 
 
 def known_before_prediction(row, cutoff):
-    """The separate possession test needed before treating a row as an input."""
-    if row is None or not row.get('captured_at') or not row.get('quote_at'):
+    """Clock-only possession test, not feature-value or forecast admission.
+
+    The caller must separately authenticate the observation and verify the
+    numeric feature path, identities, teachers and causal dependencies.
+    """
+    if row is None or not row.get('captured_at'):
         return False
     end = instant(cutoff)
-    return (instant(row['quote_at']) <= end
-            and instant(row.get('interval_end_at') or row['quote_at']) <= end
+    observed = row.get('quote_at') or row['captured_at']
+    return (instant(observed) <= end
+            and instant(row.get('interval_end_at') or observed) <= end
             and instant(row['captured_at']) <= end)
 
 

@@ -10,6 +10,12 @@ The all-season table includes **622 completed and 266 scheduled games**, with **
 
 V026 is now a completed owner run: **100 new fits, 197 reused states, 297 committed states**, in 70.212253 seconds. The previous V025 failure remains available in the [dated recovery page](recovery.html), and all V024 historical work remains in [the historical explorer](research.html). A dashboard change performs zero owner fits.
 
+The subsequent official schedule capture at **2026-11-03 23:34:51 UTC** confirms the same 888 identities and all 622 completed scores. The fresh DraftKings response contains **186 game-market records on 62 uniquely mapped current-week games**, captured at **23:34:50 UTC** with quote times retained separately. All 63 scheduled games remain visible. Automatic display uses the latest captured reference for scheduled games, even before future T−120/T−60 windows.
+
+Native catalogs now join to **709 Kalshi, 710 Polymarket Global and 675 Polymarket US** observed season games. Catalog presence is not historical price coverage. In the 63-game current calendar week, captured numeric references cover **Kalshi 61 winner / 62 margin / 62 total**, **Polymarket Global 62 / 62 / 62**, and **Polymarket US 58 winner / 0 margin / 0 total**. US/global stay separate. These catalog midpoints have no individual quote timestamps and appear with their actual capture clocks in the current-snapshot view, and qualify on capture time for a later cutoff while the window remains pending until reached. Point-market values are the observed threshold closest to 50% probability, an explicitly labeled diagnostic center rather than a projected final score.
+
+The frozen historical recovery snapshot, retrieved through **2026-11-04 00:11:43 UTC**, adds source-timed winner references on **591 completed Kalshi games, 598 completed Polymarket Global games and 572 completed Polymarket US games**. T−120, T−60 and strictly pregame records preserve their represented source clock and actual recovery clock. This is a partial acquisition wave, not continuous closing-price coverage or evidence that the model possessed these records before kickoff. All observations remain separate from original/rolling forecast admission.
+
 ## Four clocks answer different questions
 
 | Clock or boundary | Meaning | Allowed interpretation |
@@ -21,7 +27,7 @@ V026 is now a completed owner run: **100 new fits, 197 reused states, 297 commit
 
 Historical backfill is valuable. Recovering an old price today does not make it a forecast issued yesterday or prove that the model used it. Conversely, incomplete model feature-value admission does not prohibit collecting or displaying a dated market observation. These are separate operations.
 
-T−120 and T−60 compare observation clocks **at or before** their cutoffs. “Latest stored before kickoff” requires a source time **strictly before** kickoff. “Latest stored observation” can include postgame information and is labeled accordingly. A catalog snapshot with no individual quote timestamp can appear only in the latest-snapshot view, with its actual acquisition time. Candle buckets extending past the boundary are rejected. “Latest stored” is bounded by the available archive; it does not assert continuous feed coverage or the last possible market tick.
+T−120 and T−60 compare observation clocks **at or before** their cutoffs. “Latest stored before kickoff” requires an observation or authenticated capture **strictly before** kickoff. “Latest stored observation” can include postgame information and is labeled accordingly. A catalog snapshot captured before the boundary can qualify on its actual capture clock even when the source omits an individual quote time. It is labeled **captured snapshot available by cutoff**, preserving `quote_at: null` and `clock_basis: retrieved_at`. Future windows show **latest known snapshot; cutoff pending** and are not final cutoff coverage. Valid source-timed historical records are preferred when available. Candle buckets extending past the boundary are rejected. “Latest stored” is bounded by the available archive; it does not assert continuous feed coverage or the last possible market tick.
 
 ## Identity and product matching
 
@@ -54,3 +60,17 @@ CI also exercises the actual HTML in Chromium at desktop and mobile widths, real
 The report has zero admitted rolling forecasts and zero new genuine issues. The remaining raw-to-value feature implementation must pass independent numerical and causal checks before that changes. Data ingestion continues independently. No model, quote, price timestamp, game result, fee, fill, profit or statistical edge is invented to fill a blank. All current decisions remain **NO BET, $0 stake**.
 
 The hosted site is a published snapshot of canonical GitHub source. Publishing the website does not refresh the underlying evidence. Exact source and capture clocks remain visible in the report.
+
+## Recovered provider benchmarks
+
+The complete frozen acquisition snapshot has **6,190 analytical game references** before public duplicate-current filtering. The public report reproduces **27 separate-method and 21 pooled provider/target/window panels** from full-precision owner model outputs and actual provider references. Every displayed cohort independently matches the sorted game-ID SHA-256 in its source scorecard.
+
+| Latest stored strictly pregame winner cohort | Games | Original replay log loss | Provider log loss | Disagreements: model / provider correct |
+|---|---:|---:|---:|---:|
+| Kalshi | 591 | 0.508701 | 0.418094 | 43 / 76 |
+| Polymarket Global | 598 | 0.514062 | 0.424407 | 43 / 78 |
+| Polymarket US | 572 | 0.512559 | 0.432316 | 41 / 73 |
+
+The original replay underperforms each recovered provider on these matched winner cohorts. This does not demonstrate a betting edge. The original replay lacks an authenticated issue clock, so equal model/market prediction timing is unproved; these remain descriptive retrospective comparisons. The dashboard includes all three cutoff panels, complete classification scores and native phase/week resampling intervals, keeping individual reference methods separate.
+
+Partial point-ladder diagnostics use 12 Kalshi margin games, 11 Kalshi totals games and 27 Global games for each point target. Their thresholds are observed centers closest to 50% probability in the recovered ladder subset, not projected final scores. These one-week cohorts do not support resampling intervals. Current point centers use the fuller observed catalog; duplicate current rows derived from a smaller historical-recovery subset do not replace that catalog at the same capture clock. The private original wave and every row are preserved.

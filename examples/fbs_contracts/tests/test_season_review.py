@@ -51,11 +51,14 @@ class SeasonReviewTests(unittest.TestCase):
         with self.assertRaisesRegex(ValueError, 'Private field'):
             validate(data)
 
-    def test_catalog_without_quote_clock_is_preserved_but_not_cutoff_qualified(self):
+    def test_authenticated_capture_proves_availability_without_inventing_quote_clock(self):
         row = {'target':'winner','value':.6,'join_status':'matched',
                'quote_at':None,'captured_at':'2026-11-03T12:00:00Z'}
-        self.assertIsNone(reference_at([row], 'winner', '2026-11-03T13:00:00Z'))
-        self.assertFalse(known_before_prediction(row, '2026-11-03T13:00:00Z'))
+        self.assertIs(reference_at([row], 'winner', '2026-11-03T13:00:00Z'), row)
+        self.assertTrue(known_before_prediction(row, '2026-11-03T13:00:00Z'))
+        self.assertIsNone(row['quote_at'])
+        self.assertIsNone(reference_at([row], 'winner', '2026-11-03T11:59:59Z'))
+        self.assertFalse(known_before_prediction(row, '2026-11-03T11:59:59Z'))
 
     def test_candle_bucket_cannot_cross_cutoff(self):
         row = {'target':'winner','value':.6,'join_status':'matched',
@@ -79,6 +82,20 @@ class SeasonReviewTests(unittest.TestCase):
     def test_replayed_winner_correctness_cannot_be_reversed(self):
         data = self.altered(); data['games'][0]['replay']['correct'] = not data['games'][0]['replay']['correct']
         with self.assertRaisesRegex(ValueError, 'Winner correctness'):
+            validate(data)
+
+    def test_recovered_benchmark_cannot_change_game_population(self):
+        data = self.altered()
+        self.assertTrue(data['matched_recovered']['provider_summary'])
+        data['matched_recovered']['provider_summary'][0]['cohort_sha256'] = '0'*64
+        with self.assertRaisesRegex(ValueError, 'cohort identity pin'):
+            validate(data)
+
+    def test_recovered_source_clock_does_not_prove_model_issue_time(self):
+        data = self.altered()
+        self.assertTrue(data['matched_recovered']['provider_summary'])
+        data['matched_recovered']['provider_summary'][0]['same_model_prediction_cutoff_proven'] = True
+        with self.assertRaisesRegex(ValueError, 'verified prediction clock'):
             validate(data)
 
 

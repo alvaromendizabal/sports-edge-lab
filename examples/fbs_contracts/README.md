@@ -69,7 +69,7 @@ Run `python -m examples.fbs_contracts.certified_resume`. It reuses the shared ex
 
 ## All-game season explorer and independent market clocks
 
-[Current dashboard](../../docs/fbs/index.html) retains the full observed inventory with left-joined provider evidence. [The clock selector](market_time.py) separates a source observation at a historical cutoff from proof of actual historical possession. It excludes missing quote clocks, later prices, incompatible products, ambiguous equal-time values and candles that extend beyond a cutoff. [Adversarial tests](tests/test_market_time.py) preserve valid zeros and all unmatched games.
+[Current dashboard](../../docs/fbs/index.html) retains the full observed inventory with left-joined provider evidence. [The clock selector](market_time.py) separates a source observation at a historical cutoff from proof of actual historical possession. It rejects late prices/captures, incompatible products, ambiguous equal-time values and candles that extend beyond a cutoff. An authenticated snapshot captured before a boundary proves availability at capture even when an individual quote clock is absent; this does not prove the latest tick or admit a model feature. Future cutoff windows remain pending. [Adversarial tests](tests/test_market_time.py) preserve valid zeros and all unmatched games.
 
 The sanitized report contains public game facts and explicitly authorized rounded analytical outputs. It has no raw feeds, private recipes, source credentials or model bodies. [Publication scope](../../docs/PUBLICATION_BOUNDARY.md#fbs-all-game-analytical-report-november-3-extension). Public values do not establish full private retraining reproducibility.
 
@@ -80,3 +80,5 @@ python -m unittest discover -s examples/fbs_contracts/tests -v
 ```
 
 The separate CI browser test exercises all 888-game inventory views, current/last-week windows, provider switches, exact historical disagreement count, keyboard dialog, CSV analysis download, responsive layouts and an all-888-row no-script fallback. It rejects external requests and browser errors. These checks perform zero owner model fits.
+
+The [static projector](export_site.py) reads an exact Git commit, exports only the public asset allowlist, rewrites repository navigation to that commit and checks that every relative asset is present. Its manifest binds the hosted bytes to the source and evidence clocks. CI runs this projection without publishing or refreshing data; deployment is a separate operation.
