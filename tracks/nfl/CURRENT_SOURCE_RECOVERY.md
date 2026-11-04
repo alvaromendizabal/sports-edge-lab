@@ -47,3 +47,11 @@ The original source overlay remains unchanged. [The public contract](reschedule_
 The N036 source-only return is bound by physical SHA-256 `8c95d4eefa2563165add5c318a7977f32b197126e7d1d9f62e7b40d665e3a537`. Its seven new normalized objects, 16 selected raw books and nine rule/metadata objects passed independent full-body SHA/size verification. Selected references were replayed against their event, team/token, quote clock, rule predicate and source prices; no raw feed or order book is redistributed here. The [public validator](source_recovery.py) separately checks the sanitized display, exact coverage, immutable earlier data and non-promotion into historical metrics. These are distinct verification scopes.
 
 This update added zero model fits and zero new forecast issues. The acquisition run made no paid Odds API calls. It does not establish all-provider freshness, an injury-aware trained model or a betting edge.
+
+## Monday: the latest genuine pregame Kalshi references
+
+A separate [historical addendum](latest_pregame_n035.json) now exposes Chicago–Seattle winner, home-margin and total references from **November 3 at 01:14 UTC**, one minute before scheduled kickoff. They were genuinely acquired retrospectively on **November 4 at approximately 03:43 UTC**. Later acquisition is disclosed; these are historical provider benchmarks, not proof that the model possessed them before the game.
+
+Kalshi favored Seattle with a **61.5% home-contract midpoint proxy**. The displayed Seattle margin **>3.5** contract was **47.5%** and the total **>46.5** contract **49.5%**. Chicago won 34–17: Kalshi’s winner direction and the preserved original one-hour model’s Seattle pick were both wrong. Threshold probabilities are not predicted mean scores or executable fills.
+
+The selected references passed complete normalized-object and six historical/rule-object SHA/size checks, exact last-eligible-candle replay, contract/rule binding and strict pre-kickoff clocks. The captured search window is 24 hours. This closes **one of 121 completed games** for the latest-pregame view; broader source-object presence is not presented as completed public replay. T1/T2 views, model forecasts and historical scorecards remain unchanged.
