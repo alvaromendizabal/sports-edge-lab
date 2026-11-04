@@ -1,6 +1,8 @@
 # Sports Edge Lab · NFL
 
-**Current coverage review:** [Explore every game and market clock](review.html#latest-coverage) · [Read the clock policy](CURRENT_MARKET_CLOCKS.md). All 121 completed games and all 15 Week 9 games remain visible. The four market references are independent of the frozen or rolling model's information time. Latest-before-kickoff coverage is shown when authenticated; missing observations stay explicit. The preserved N033 performance scorecards below keep their original cohorts.
+**Current coverage review:** [Explore every game and market clock](review.html#latest-coverage) · [Read the clock policy](CURRENT_MARKET_CLOCKS.md) · [Understand spread/total references](CURRENT_POINT_MARKETS.md). All 121 completed games and all 15 Week 9 games remain visible. The four market references are independent of the frozen or rolling model's information time. Latest-before-kickoff coverage is shown when authenticated; missing observations stay explicit. The preserved N033 performance scorecards below keep their original cohorts.
+
+Start with **Games to inspect**: choose the current week, any earlier week, all completed games, or **Monday Nov 2 · CHI 34–17 SEA**. Each card shows the selected model's winner, margin and total, the actual result when final, and the available DraftKings, Kalshi and Polymarket references. Change **Market reference time** to inspect different observations without changing the model forecast. Captured Kalshi margin and total conditions now appear for all 121 finals at both registered cutoffs; a threshold probability is clearly labelled separately from a projected score.
 
 
 **Pregame forecasting, honest market comparisons, and recoverable ML systems.** Built by [Alvaro Mendizabal](https://github.com/alvaromendizabal) as one track in the existing [Sports Edge Lab](../../README.md) portfolio.
@@ -34,7 +36,7 @@ A winner forecast and a spread bet are different targets. An independently place
 
 [**Weekly forecast explorer →**](review.html#weekly-cards) shows all **14 Week 8 finals** and all **15 Week 9 scheduled games**, with winner probability, margin, total, result and forecast origin. [**Full-season inventory →**](review.html#season-inventory) retains all **272 schedule games**: 121 final and 151 upcoming at the November 3 source observation. Missing or incomparable forecasts remain explicit.
 
-The latest authenticated run added **192 native forward fits** and issued **27,405 early prediction rows across 29 games**, including multiple candidate arms. It reused the complete historical design instead of calling restored work new. All actual issues were early research forecasts at **21:20 UTC on November 3**; there were **zero final-hour-qualified cards**. The upcoming historical-selected heads are not the hindsight leaders in the season table. No qualified executable-price evidence means **NO BET**.
+The prior accepted N033 run added **192 native forward fits** and issued early research predictions. The later authenticated N034 diagnostic run **reused those 192 fitted heads** and issued a distinct **27,405 early target rows across 29 games** at **22:58 UTC on November 3**, including multiple candidate arms. N034 failed overall; its completed evidence is retained without promoting the run to accepted research. Both issue sets had **zero final-hour-qualified cards**. The upcoming historically selected heads are not the hindsight leaders in the season table. No qualified executable-price evidence means **NO BET**.
 
 ### Five-minute employer review
 
