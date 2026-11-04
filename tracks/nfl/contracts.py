@@ -534,20 +534,23 @@ def build_review(*, check=False):
     weekly, weekly_receipt = load_weekly()
     from current_coverage import load_coverage
     latest, latest_receipt = load_coverage()
+    from point_markets import load_point_markets
+    points, points_receipt = load_point_markets(latest)
     template = (HERE / "review.template.html").read_text()
     embedded = canonical(data).decode().replace("<", "\\u003c")
     page = template.replace("__EVIDENCE_JSON__", embedded).replace("__EVIDENCE_SHA__", digest(data))
     page = page.replace("__CURRENT_JSON__", canonical(current).decode().replace("<", "\\u003c"))
     page = page.replace("__WEEKLY_JSON__", canonical(weekly).decode().replace("<", "\\u003c"))
     page = page.replace("__LATEST_JSON__", canonical(latest).decode().replace("<", "\\u003c"))
+    page = page.replace("__POINTS_JSON__", canonical(points).decode().replace("<", "\\u003c"))
     page = page.replace("__LATEST_SCRIPT__", (HERE / "current_coverage.js").read_text())
-    require(all(marker not in page for marker in ("__EVIDENCE_", "__CURRENT_", "__WEEKLY_", "__LATEST_")), "Unfilled review template")
+    require(all(marker not in page for marker in ("__EVIDENCE_", "__CURRENT_", "__WEEKLY_", "__LATEST_", "__POINTS_")), "Unfilled review template")
     output = HERE / "review.html"
     if check:
         require(output.is_file() and output.read_text() == page, "Generated review differs; run contracts.py --build-review")
     else:
         output.write_text(page)
-    return {**receipt, **current_receipt, **weekly_receipt, **latest_receipt, "review": "review.html", "evidence_sha256": digest(data), "generated_page_matches": True}
+    return {**receipt, **current_receipt, **weekly_receipt, **latest_receipt, **points_receipt, "review": "review.html", "evidence_sha256": digest(data), "generated_page_matches": True}
 
 
 def demo(*, output):
