@@ -126,6 +126,25 @@ class CurrentCoverageTests(unittest.TestCase):
     def test_unknown_original_horizon_cannot_enter_matched_metrics(self):
         self.reject(lambda d: d['season_metrics'][0].update(model_id='original_saved'))
 
+    def test_recovered_current_draftkings_uses_actual_fresh_owner_clocks(self):
+        rows = [p for g in self.data['all_games'] for p in g['providers'] if p['provider'] == 'DraftKings' and p['horizon'] == 'LATEST_OBSERVED' and p['derived_pick']]
+        self.assertEqual(len(rows), 28)
+        for row in rows:
+            self.assertEqual(row['comparison_rule'], 'RECOVERED_CURRENT_REFERENCE')
+            self.assertEqual(coverage.instant(row['quote_at']), coverage.instant('2026-11-03T22:55:43Z'))
+            self.assertEqual(coverage.instant(row['acquired_at']), coverage.instant('2026-11-03T22:56:12Z'))
+            self.assertFalse(row['metric_eligible'])
+
+    def test_unjoined_current_source_is_visible_without_metric_credit(self):
+        game = next(g for g in self.data['all_games'] if g['game_id'] == '2026_09_LV_SF')
+        row = next(p for p in game['providers'] if p['provider'] == 'DraftKings' and p['horizon'] == 'LATEST_OBSERVED')
+        self.assertEqual(row['availability_status'], 'UNJOINED_CAPTURED_OBSERVATION')
+        self.assertIsNone(row['derived_pick'])
+        self.assertFalse(row['metric_eligible'])
+        self.assertIn('21:05', row['unavailable_reason'])
+        self.assertIn('21:25', row['unavailable_reason'])
+        self.assertEqual(self.data['summary']['current_week_book_games']['DraftKings'], 14)
+
 
 if __name__ == '__main__':
     unittest.main()
