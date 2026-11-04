@@ -26,7 +26,7 @@ class CurrentCoverageTests(unittest.TestCase):
     def test_all_games_all_weeks_and_new_derived_coverage(self):
         self.assertEqual(self.receipt['current_schedule_games'], 272)
         self.assertEqual(self.receipt['current_completed_games'], 121)
-        self.assertEqual(self.receipt['current_disagreement_pairs'], 302)
+        self.assertEqual(self.receipt['current_disagreement_pairs'], 296)
         self.assertFalse(self.receipt['owner_pipeline_accepted'])
         self.assertEqual(sum(g['week'] == 9 for g in self.data['all_games']), 15)
 
@@ -96,6 +96,35 @@ class CurrentCoverageTests(unittest.TestCase):
     def test_latest_states_are_present_without_fake_quotes(self):
         self.assertEqual(self.data['summary']['latest_pregame_observations'], 0)
         self.assertEqual(sum(p['horizon'] == 'LATEST_PREGAME' for g in self.data['all_games'] for p in g['providers']), 272 * 3)
+
+    def test_captured_history_is_separate_from_settlement_admission(self):
+        for year, expected in [(2024, (188, 186, 2)), (2025, (259, 93, 166)), (2026, (92, 92, 0))]:
+            for horizon in ('T1', 'T2'):
+                row = next(r for r in self.data['coverage'] if (r['season'], r['provider'], r['horizon']) == (year, 'Polymarket', horizon))
+                self.assertEqual(tuple(row[k] for k in ('captured_both_contract_games', 'metric_admitted_games', 'settlement_unverified_games')), expected)
+
+    def test_unverified_settlement_does_not_become_missing_acquisition(self):
+        self.reject(lambda d: next(r for r in d['coverage'] if r['season'] == 2025 and r['provider'] == 'Polymarket').update(both_contract_games=93))
+
+    def test_captured_rows_cannot_all_become_metric_eligible(self):
+        self.reject(lambda d: next(r for r in d['coverage'] if r['season'] == 2025 and r['provider'] == 'Polymarket').update(metric_admitted_games=259))
+
+    def test_historical_coverage_census_cannot_disappear(self):
+        self.reject(lambda d: d['coverage'].pop())
+
+    def test_saved_original_values_remain_without_invented_horizon(self):
+        rows = [f for g in self.data['all_games'] for f in g['forecasts'] if f['model_id'] == 'original_saved' and f['pick']]
+        self.assertEqual(len(rows), 76)
+        self.assertTrue(all(f['horizon'] == 'ORIGINAL_HORIZON_UNVERIFIED' and f['actual_issue_at'] is None for f in rows))
+        self.assertFalse(any(r['model_id'] == 'original_saved' for r in self.data['weekly_metrics'] + self.data['season_metrics']))
+
+    def test_original_saved_horizon_cannot_be_assumed_from_model_name(self):
+        for horizon in ('T2', 'T24'):
+            with self.subTest(horizon=horizon):
+                self.reject(lambda d: next(f for g in d['all_games'] for f in g['forecasts'] if f['model_id'] == 'original_saved' and f['pick']).update(horizon=horizon))
+
+    def test_unknown_original_horizon_cannot_enter_matched_metrics(self):
+        self.reject(lambda d: d['season_metrics'][0].update(model_id='original_saved'))
 
 
 if __name__ == '__main__':
