@@ -92,7 +92,7 @@ const {chromium}=require(process.env.PLAYWRIGHT_MODULE_DIR||'playwright');
   assert.match(await pointCounts.filter({hasText:'DraftKings'}).innerText(),/15 \/ 15[\s\S]*15 \/ 15 dated references[\s\S]*15 \/ 15 dated references/);
   assert.match(await page.locator('#partial-source-status').innerText(),/Authenticated N036 source-only recovery/);
   assert.match(await page.locator('#partial-source-status').innerText(),/fitted no models and issued no forecasts/);
-  assert.match(await page.locator('#partial-source-status').innerText(),/Model forecasts and historical metrics are unchanged/);
+  assert.match(await page.locator('#partial-source-status').innerText(),/Source recovery leaves model forecasts and historical metrics unchanged; the separate primary-issue addendum retains its own clocks/);
   const jaxCard=page.locator('[data-coverage-game="2026_09_JAX_BAL"]');
   assert.match(await jaxCard.innerText(),/JAX 67\.8%/);
   assert.match(await jaxCard.innerText(),/-4\.0/);
