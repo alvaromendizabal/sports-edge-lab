@@ -74,6 +74,30 @@ class MarketTimeTests(unittest.TestCase):
         self.assertIs(reference_at([captured], 'winner', '2026-09-05T23:00:00Z'), captured)
         self.assertTrue(known_before_prediction(captured, '2026-09-05T23:00:00Z'))
 
+    def test_earlier_query_quote_remains_available_for_a_later_window(self):
+        earlier=self.row(source_query_cutoff_kind='T120')
+        self.assertIs(reference_at([earlier],'winner','2026-09-05T23:00:00Z',strict_before=True,registered_cutoff_kind='LATEST_BEFORE_KICKOFF'),earlier)
+
+    def test_point_proxy_stays_in_its_registered_window(self):
+        earlier=self.row(value=14.5,registered_cutoff_kind='T120');earlier['target']='margin'
+        later=self.row(quote='2026-09-05T21:00:00Z',value=16.5,registered_cutoff_kind='LATEST_BEFORE_KICKOFF');later['target']='margin'
+        self.assertIs(reference_at([earlier,later],'margin','2026-09-05T23:00:00Z',strict_before=True,registered_cutoff_kind='LATEST_BEFORE_KICKOFF'),later)
+        self.assertIsNone(reference_at([earlier],'margin','2026-09-05T23:00:00Z',registered_cutoff_kind='T60'))
+
+    def test_equivalent_archived_sportsbook_tie_retains_captured_evidence(self):
+        old=self.row(capture=None);old.update(product='SPORTSBOOK_WINNER_H2H_DEVIGGED',reference_kind='archived_devigged_probability')
+        new=self.row();new.update(product='sportsbook_game_market',reference_kind='vig_removed_two_way_probability')
+        for observations in [[old,new],[new,old]]:
+            self.assertIs(reference_at(observations,'winner','2026-09-05T23:00:00Z'),new)
+        new['value']=.7
+        with self.assertRaisesRegex(ValueError,'Conflicting'):
+            reference_at([old,new],'winner','2026-09-05T23:00:00Z')
+
+    def test_equal_values_do_not_merge_incompatible_products(self):
+        old,new=self.row(),self.row();new['product']='different_settlement_product'
+        with self.assertRaisesRegex(ValueError,'Conflicting'):
+            reference_at([old,new],'winner','2026-09-05T23:00:00Z')
+
 
 if __name__ == '__main__':
     unittest.main()

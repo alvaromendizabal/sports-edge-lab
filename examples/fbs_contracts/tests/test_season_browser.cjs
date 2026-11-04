@@ -41,10 +41,10 @@ let browser;
   await page.keyboard.press('Escape');assert.equal(await page.locator('#game-dialog').isVisible(),false);
   await page.locator('#game-search').fill('');
   await page.locator('#view-disagreements').click();
-  assert.match(await page.locator('#result-status').innerText(),/^40 games/);
-  await page.locator('#next-page').click();assert.equal(await page.locator('#games-body tr').count(),15);
+  assert.match(await page.locator('#result-status').innerText(),/^122 games/);
+  await page.locator('#next-page').click();assert.equal(await page.locator('#games-body tr').count(),25);
   const [download]=await Promise.all([page.waitForEvent('download'),page.locator('#export-csv').click()]);
-  const csv=fs.readFileSync(await download.path(),'utf8');assert.equal(csv.trim().split('\n').length,41);
+  const csv=fs.readFileSync(await download.path(),'utf8');assert.equal(csv.trim().split('\n').length,123);
   assert.match(csv,/retrospective_original_replay/);assert.match(csv,/"not_issued"/);
   assert.doesNotMatch(csv,/s3:\/\/|api_key|raw_bid|model_weights/);
   await page.locator('#disagreements-only').uncheck();await page.locator('[data-view="current"]').click();
@@ -79,7 +79,7 @@ let browser;
  assert.equal(await fallback.evaluate(()=>document.documentElement.scrollWidth>innerWidth),false);
  assert.deepEqual(errors,[]);assert.deepEqual(requests,[]);
  console.log(JSON.stringify({status:'PASS',viewports:[1440,390],inventory_provider_states:states,
-   no_script_games:888,current_week:63,disagreement_csv_rows:40,keyboard_dialog:true,
+   no_script_games:888,current_week:63,disagreement_csv_rows:122,keyboard_dialog:true,
    supported_current_bounds_verified:true,original_wide_book_diagnostic_preserved:true,
    script_errors:0,external_requests:0}));
 })().catch(error=>{console.error(error);process.exitCode=1;}).finally(async()=>{if(browser)await browser.close();});

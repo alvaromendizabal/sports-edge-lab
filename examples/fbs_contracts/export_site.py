@@ -14,6 +14,7 @@ import posixpath
 import re
 import subprocess
 from urllib.parse import urlsplit
+from .season_transport import unpack
 
 ROOT = Path(__file__).resolve().parents[2]
 REPOSITORY = 'https://github.com/alvaromendizabal/sports-edge-lab'
@@ -58,7 +59,7 @@ def export(commit, output):
             text=text.replace('</body>',note+'</body>');body=text.encode()
         (output/name).write_bytes(body)
         files.append({'name':name,'bytes':len(body),'sha256':hashlib.sha256(body).hexdigest()})
-    report=json.loads(committed(commit,'docs/fbs/season-2026.json'))
+    report=unpack(json.loads(committed(commit,'docs/fbs/season-2026.json')))
     manifest={'schema':'sports-edge-lab.public-fbs-snapshot.v2',
               'canonical_repository':REPOSITORY,'source_commit_sha':commit,
               'evidence_prepared_at':report['prepared_at'],

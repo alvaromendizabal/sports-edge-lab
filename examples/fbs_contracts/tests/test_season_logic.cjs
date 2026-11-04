@@ -2,15 +2,15 @@
 const assert=require('node:assert/strict');
 const fs=require('node:fs');
 const path=require('node:path');
-const {reference,filterGames,csvCell,pointBounds}=require('../../../docs/fbs/season.js');
-const data=JSON.parse(fs.readFileSync(path.join(__dirname,'../../../docs/fbs/season-2026.json'),'utf8'));
+const {reference,filterGames,csvCell,pointBounds,unpack}=require('../../../docs/fbs/season.js');
+const data=unpack(JSON.parse(fs.readFileSync(path.join(__dirname,'../../../docs/fbs/season-2026.json'),'utf8')));
 const state={view:'all',week:'all',query:'',provider:'DraftKings',horizon:'latest_pre_kickoff',disagreements:false};
 for(const provider of ['DraftKings','Kalshi','Polymarket US','Polymarket Global'])
  assert.equal(filterGames(data.games,{...state,provider},data.windows,data.prepared_at).length,888);
 assert.equal(filterGames(data.games,{...state,view:'completed'},data.windows,data.prepared_at).length,622);
 assert.equal(filterGames(data.games,{...state,view:'last'},data.windows,data.prepared_at).length,56);
 assert.equal(filterGames(data.games,{...state,view:'current'},data.windows,data.prepared_at).length,63);
-assert.equal(filterGames(data.games,{...state,view:'completed',horizon:'T120',disagreements:true},data.windows,data.prepared_at).length,40);
+assert.equal(filterGames(data.games,{...state,view:'completed',horizon:'T120',disagreements:true},data.windows,data.prepared_at).length,122);
 const current=filterGames(data.games,{...state,view:'current'},data.windows,data.prepared_at);
 for(const [provider,counts] of [['DraftKings',[62,62,62]],['Kalshi',[62,63,63]],['Polymarket Global',[63,63,63]],['Polymarket US',[59,0,0]]]){
  const actual=['winner','margin','total'].map(target=>current.filter(g=>reference(g,provider,target,'auto',data.prepared_at).row).length);
@@ -35,6 +35,13 @@ game.markets.Kalshi=[{...make('2026-11-03T11:59:00Z'),interval_end_at:'2026-11-0
 assert.equal(reference(game,'Kalshi','winner','T120','2026-11-05T00:00:00Z').row,null);
 game.markets.Kalshi=[make('2026-11-03T11:00:00Z'),make('2026-11-03T11:00:00Z',.3)];
 assert.equal(reference(game,'Kalshi','winner','T120','2026-11-05T00:00:00Z').status,'conflict');
+const oldBook={...make('2026-11-03T11:00:00Z'),product:'SPORTSBOOK_WINNER_H2H_DEVIGGED',reference_kind:'archived_devigged_probability',captured_at:null};
+const newBook={...make('2026-11-03T11:00:00Z'),product:'sportsbook_game_market',reference_kind:'vig_removed_two_way_probability',source_query_cutoff_kind:'T120'};
+game.markets.Kalshi=[oldBook,newBook];
+assert.equal(reference(game,'Kalshi','winner','latest_pre_kickoff','2026-11-05T00:00:00Z').row,newBook);
+game.markets.Kalshi=[{...make('2026-11-03T11:00:00Z',14.5),target:'margin',registered_cutoff_kind:'T120'},{...make('2026-11-03T10:00:00Z',16.5),target:'margin',registered_cutoff_kind:'LATEST_BEFORE_KICKOFF'}];
+assert.equal(reference(game,'Kalshi','margin','latest_pre_kickoff','2026-11-05T00:00:00Z').row.value,16.5);
+assert.equal(reference(game,'Kalshi','margin','T60','2026-11-05T00:00:00Z').row,null);
 assert.equal(csvCell('=HYPERLINK("https://example.test")'),'"\'=HYPERLINK(""https://example.test"")"');
 assert.equal(csvCell(-5.5),'"-5.5"');
 const supported={point_support:{lower_bound:14.5,upper_bound:16.5,lower_capture_at:'2026-11-03T11:00:00Z',upper_capture_at:'2026-11-03T12:00:00Z',method:'CAPTURED_BID_ASK_HALF_PROBABILITY_SUPPORT'}};
@@ -52,4 +59,4 @@ assert.deepEqual([restoredMargin.row.point_support.lower_bound,restoredMargin.ro
 assert.deepEqual([restoredTotal.row.point_support.lower_bound,restoredTotal.row.point_support.upper_bound],[51.5,61.5],'Ask exactly .50 cannot supply the stricter 53.5 bound');
 const oneSided=reference(current.find(g=>g.id==='401858290'),'Polymarket Global','total','current',data.prepared_at);
 assert.equal(pointBounds(oneSided.row,oneSided.cutoff,data.prepared_at).status,'lower_only');
-console.log(JSON.stringify({status:'PASS',provider_inventory_views:4,calendar_counts:[888,622,56,63],historical_disagreements:40,current_week_provider_targets:12,clock_scenarios:8,point_support_cutoff_scenarios:6,formula_injection_escaped:true}));
+console.log(JSON.stringify({status:'PASS',provider_inventory_views:4,calendar_counts:[888,622,56,63],historical_disagreements:122,current_week_provider_targets:12,clock_scenarios:8,point_support_cutoff_scenarios:6,earlier_query_fallback_and_proxy_isolation:true,formula_injection_escaped:true}));

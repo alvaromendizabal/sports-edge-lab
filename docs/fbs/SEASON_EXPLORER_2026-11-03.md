@@ -14,7 +14,7 @@ The subsequent official schedule capture at **2026-11-03 23:34:51 UTC** confirms
 
 Native catalogs now join to **710 Kalshi, 711 Polymarket Global and 676 Polymarket US** observed season games. Catalog presence is not historical price coverage. In the 63-game current calendar week, captured numeric references cover **Kalshi 62 winner / 63 margin / 63 total**, **Polymarket Global 63 / 63 / 63**, and **Polymarket US 59 winner / 0 margin / 0 total**. US/global stay separate. These catalog midpoints have no individual quote timestamps and appear with their actual capture clocks in the current-snapshot view, and qualify on capture time for a later cutoff while the window remains pending until reached. Current native point views now display supported probability-band bounds. The original nearest-half threshold remains an expanded diagnostic; historical price-only centers remain separately qualified below.
 
-The frozen historical recovery snapshot, retrieved through **2026-11-04 00:11:43 UTC**, adds source-timed winner references on **591 completed Kalshi games, 598 completed Polymarket Global games and 572 completed Polymarket US games**. T−120, T−60 and strictly pregame records preserve their represented source clock and actual recovery clock. This is a partial acquisition wave, not continuous closing-price coverage or evidence that the model possessed these records before kickoff. All observations remain separate from original/rolling forecast admission.
+The earlier frozen historical recovery snapshot, retrieved through **2026-11-04 00:11:43 UTC**, adds source-timed winner references on **591 completed Kalshi games, 598 completed Polymarket Global games and 572 completed Polymarket US games**. T−120, T−60 and strictly pregame records preserve their represented source clock and actual recovery clock. This is a partial acquisition wave, not continuous closing-price coverage or evidence that the model possessed these records before kickoff. All observations remain separate from original/rolling forecast admission.
 
 ## Four clocks answer different questions
 
@@ -63,7 +63,7 @@ The hosted site is a published snapshot of canonical GitHub source. Publishing t
 
 ## Recovered provider benchmarks
 
-The complete frozen acquisition snapshot has **6,190 analytical game references** before public duplicate-current filtering. The public report reproduces **27 separate-method and 21 pooled provider/target/window panels** from full-precision owner model outputs and actual provider references. Every displayed cohort independently matches the sorted game-ID SHA-256 in its source scorecard.
+The earlier immutable acquisition snapshot has **6,190 analytical game references** before public duplicate-current filtering. The public report reproduces **27 separate-method and 21 pooled provider/target/window panels** from full-precision owner model outputs and actual provider references. Every displayed cohort independently matches the sorted game-ID SHA-256 in its source scorecard.
 
 | Latest stored strictly pregame winner cohort | Games | Original replay log loss | Provider log loss | Disagreements: model / provider correct |
 |---|---:|---:|---:|---:|
@@ -88,3 +88,22 @@ The primary display now reports captured threshold bounds supported by oriented 
 Across the 63-game week, Kalshi has finite brackets for all 63 margin and 63 total references. Global has 63 margin brackets, 62 total brackets and one one-sided total bound. Each lower/upper support has its actual capture clock and is independently qualified for the chosen cutoff. Bracket availability cannot be backdated to an earlier diagnostic-center capture. An informative one-sided bound is retained when only that support was available.
 
 These are descriptive market-implied constraints under a monotone tail/bid-ask interpretation, not statistical confidence intervals, expected final scores or executable offers. Historical price-only point studies and their 48 exact comparison cohorts are unchanged. The rounded comparison CSV distinguishes original diagnostic values, bound statuses, lower/upper support and clocks.
+
+## Final acquired-reference snapshot — 2026-11-04 01:00 UTC
+
+This later snapshot supersedes the earlier 00:11 UTC coverage figures for the current dashboard. The earlier study remains preserved below and in its exact prior public source. The new report validates 42 method panels and 30 pooled provider/target/window panels against independently recomputed sorted game-ID hashes. All 888 games and both original/rolling evidence statuses remain unchanged.
+
+| Provider | Latest stored pregame winner games | Model log loss | Provider log loss | Model / provider correct on disagreements |
+|---|---:|---:|---:|---:|
+| DraftKings | 525 | 0.584471 | 0.485519 | 43 / 78 |
+| Kalshi | 594 | 0.510561 | 0.420193 | 43 / 76 |
+| Polymarket Global | 601 | 0.515873 | 0.426423 | 43 / 78 |
+| Polymarket US | 575 | 0.514460 | 0.434368 | 41 / 73 |
+
+A valid earlier-query winner quote or actual sportsbook line remains available in a later window until a newer eligible observation replaces it. The analysis selected 627 such earlier-query fallbacks without changing their source or capture clocks. The fresh DraftKings latest winner panel therefore contains 525 games, while its current T−120 winner panel contains 522 games and 122 disagreements (45 model-correct, 77 provider-correct). Eight additional legacy-only winner records remain inspectable in the all-data latest view, but are excluded from the new 525-game product-specific panel. The old 192/199-game DraftKings study remains separate.
+
+Historical native point proxies remain tied to their registered cutoff. A threshold selected for one window cannot replace another window’s registered proxy merely because its own trade clock is newer. Source query and registered proxy windows appear in the game details. Equivalent archived/recovered sportsbook labels at an identical clock and numerical value resolve to the captured evidence; genuinely conflicting values or incompatible products still fail.
+
+The registered native headline pass processed 37,405 contracts and preserved 389 failed contract reads (1,165 failed cutoff rows), exit code 2, and 37,733 unprocessed Global alternate contracts. These are explicit acquisition limitations. Native point coverage expanded to 594 Kalshi margin/total games, 601 Global margin games and 603 Global total games; the Global closest-to-half proxy remains an incomplete-ladder diagnostic. Its poor point errors cannot establish that the model beats a credible complete market forecast or possesses a betting advantage.
+
+Fresh DraftKings latest point panels contain 604 games: model/reference margin MAE 14.688468 / 11.649834 and total MAE 13.048916 / 12.114238. Recorded sportsbook lines, historical native threshold diagnostics and current supported probability-band bounds remain distinct products. All results are descriptive because original model issue-time parity is unproved. NO BET and $0 remain in force.
