@@ -5,7 +5,9 @@
 Start with **Games to inspect**: choose the current week, any earlier week, all completed games, or **Monday Nov 2 · CHI 34–17 SEA**. Each card shows the selected model's winner, margin and total, the actual result when final, and the available DraftKings, Kalshi and Polymarket references. Change **Market reference time** to inspect different observations without changing the model forecast. Captured Kalshi margin and total conditions now appear for all 121 finals at both registered cutoffs; a threshold probability is clearly labelled separately from a projected score.
 
 
-**Current Week 9 source recovery:** DraftKings 14/15 winner, margin and total references; Kalshi 14/15 winner and margin, 10/15 total; Polymarket 11/15 for all three. These authenticated partial source checkpoints add observed references while final owner completion remains unverified. Kalshi capture clocks remain distinct from unavailable provider quote times. [Inspect coverage and limitations](CURRENT_SOURCE_RECOVERY.md).
+**Understand the clocks:** T1 is one hour before kickoff, T2 is two hours, and T24 is 24 hours. These are evaluation cutoffs—not limits on collecting newer data. [Read the clock and injury-input guide](CLOCKS_AND_INJURIES.md).
+
+**Current Week 9 source recovery:** DraftKings 15/15 winner, margin and total references; Kalshi 14/15 winner and margin, 10/15 total; Polymarket 11/15 for all three. These authenticated partial source checkpoints add observed references while final owner completion remains unverified. The recovered LV–SF event match retains its November 4 quote and capture times; it is not a fresh acquisition. Kalshi capture clocks remain distinct from unavailable provider quote times. [Inspect coverage and limitations](CURRENT_SOURCE_RECOVERY.md).
 
 **Pregame forecasting, honest market comparisons, and recoverable ML systems.** Built by [Alvaro Mendizabal](https://github.com/alvaromendizabal) as one track in the existing [Sports Edge Lab](../../README.md) portfolio.
 

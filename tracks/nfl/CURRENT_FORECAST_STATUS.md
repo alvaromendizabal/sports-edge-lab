@@ -27,3 +27,11 @@ The saved November 3 DraftKings reference for Jacksonville–Baltimore is Jackso
 That is a six-point difference between the projected margin and the quoted handicap, and a 5.2-point difference between the total projection and quoted total. The two sources agree on the favored winner but differ on the margin. A sportsbook handicap is a contract threshold, not necessarily the provider's expected final margin. The gap alone does not establish a model probability of covering, a fee-adjusted advantage or an executable bet.
 
 Upcoming quotes, final pregame references, model information time and source acquisition time stay separate. Later information may be displayed for comparison; it cannot be inserted into an earlier model forecast or used to backdate a prediction.
+
+## Injury inputs are a research requirement, not a manual point adjustment
+
+The next injury-aware comparison must combine timely injury reports with expected quarterback availability and prior information, then compare that model with an otherwise equivalent baseline on the same games. A missing report is **unknown**, not healthy; a player on injured reserve may be absent from a weekly practice report. New observations cannot be inserted into an already issued forecast.
+
+This public snapshot does not yet contain an authenticated trained injury-augmentation result. A news update, source implementation or local test does not establish improved forecasting. Any later model version needs its own input and issue clocks, matched-cohort evaluation and uncertainty report. Existing frozen-model monitoring remains intact.
+
+[How prediction cutoffs and the latest-market views differ](CLOCKS_AND_INJURIES.md).

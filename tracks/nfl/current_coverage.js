@@ -4,6 +4,9 @@
  const D=JSON.parse(document.getElementById('nfl-latest-evidence').textContent);
  const P=JSON.parse(document.getElementById('nfl-point-evidence').textContent);
  const R=JSON.parse(document.getElementById('nfl-source-overlay').textContent);
+ const X=JSON.parse(document.getElementById('nfl-reschedule-reference').textContent);
+ const mappedWinners=new Map(X.winner_rows.map(r=>[[r.game_id,r.provider].join('|'),{...r,scheduleRecovery:true}]));
+ const mappedPoints=new Map(X.point_rows.map(r=>[[r.game_id,r.provider,r.target].join('|'),{...r,scheduleRecovery:true}]));
  const sourceWinners=new Map(R.winner_rows.map(r=>[[r.game_id,r.provider].join('|'),r]));
  const sourcePoints=new Map(R.point_rows.map(r=>[[r.game_id,r.provider,r.target].join('|'),r]));
  const pointIndex=new Map(P.rows.map(r=>[[r.game_id,r.provider,r.target,r.horizon].join('|'),r]));
@@ -30,12 +33,13 @@
   return b&&(!a||Date.parse(b)>=Date.parse(a))?{...recovered,sourceRecovery:true}:base;
  }
  function clockText(r){
+  if(r.scheduleRecovery)return 'Quote '+when(r.quote_at)+' · captured '+when(r.acquired_at)+' · recovered schedule mapping; not a fresh capture';
   if(r.quote_clock_kind===observationOnly)return 'Observed '+when(r.acquired_at)+' · provider quote time unavailable';
   return r.quote_at?'Quote '+when(r.quote_at)+(r.sourceRecovery?' · captured '+when(r.acquired_at):''):'Source clock unavailable';
  }
  function providerRow(g,p,h){
   const base=g.providers.find(x=>x.provider===p&&x.horizon===h)??{provider:p,horizon:h,derived_pick:null,availability_status:'UNAVAILABLE',unavailable_reason:h==='LATEST_PREGAME'?'Last-before-kickoff history has not yet been authenticated in this snapshot.':h==='LATEST_OBSERVED'?'No authenticated current winner observation in this snapshot.':'No authenticated equivalent winner record at this cutoff.'};
-  return h==='LATEST_OBSERVED'&&!g.completed?newerReference(base,sourceWinners.get([g.game_id,p].join('|')),'derived_pick'):base;
+  return h==='LATEST_OBSERVED'&&!g.completed?newerReference(newerReference(base,sourceWinners.get([g.game_id,p].join('|')),'derived_pick'),mappedWinners.get([g.game_id,p].join('|')),'derived_pick'):base;
  }
  function selectedGames(){
   const p=get('coverage-period').value;
@@ -43,7 +47,7 @@
  }
  function pointRow(g,p,target,h){
   const base=pointIndex.get([g.game_id,p,target,h].join('|'))??null;
-  return h==='LATEST_OBSERVED'&&!g.completed?newerReference(base,sourcePoints.get([g.game_id,p,target].join('|')),'line'):base;
+  return h==='LATEST_OBSERVED'&&!g.completed?newerReference(newerReference(base,sourcePoints.get([g.game_id,p,target].join('|')),'line'),mappedPoints.get([g.game_id,p,target].join('|')),'line'):base;
  }
  function pointCell(g,p,target,h){
   const r=pointRow(g,p,target,h);
@@ -66,9 +70,10 @@
    html+='<p class="fine wager-status"><strong>Personal wager activity:</strong> Not tracked in this dashboard.</p>';
   }
   html+=table('Selected model outputs · '+g.away+' at '+g.home,['Forecast series','Winner','Home margin','Total'],selected.map(f=>[esc(f.model_label??modelLabel(modelId(f)))+'<span class="game-origin">'+esc(f.issue_class==='RECONSTRUCTED_NOT_ORIGINAL_ISSUED'?'Retrospective reconstruction':f.issue_class==='SAVED_OR_RECONSTRUCTED_NOT_ORIGINAL_ISSUED'?'Saved vector · no original issue':f.issue_class==='EARLY_FORWARD_RESEARCH_ISSUE'?'Actual early research issue':f.issue_class==='T1_RESEARCH_ACTUAL_ISSUE'?'Actual 1-hour research issue':'Unavailable')+'</span>',f.pick?'<strong>'+esc(f.pick)+' '+pct(f.pick_probability)+'</strong>'+(actual?'<br>'+esc(actual.winner==='TIE'?'Tie':f.pick===actual.winner?'Correct winner':'Incorrect winner'):''):'Not available',signed(f.home_margin)+(actual&&f.home_margin!=null?'<br><span class="fine">Actual '+signed(actual.home_margin)+' · absolute error '+num(Math.abs(f.home_margin-actual.home_margin))+'</span>':''),num(f.total)+(actual&&f.total!=null?'<br><span class="fine">Actual '+num(actual.total)+' · absolute error '+num(Math.abs(f.total-actual.total))+'</span>':'')]));
-  html+=table(horizons[h]+' · derived provider directions',['Provider','Winner direction','Evidence state'],market.map(p=>[esc(p.provider),p.derived_pick?'<strong>'+esc(p.derived_pick)+'</strong>'+(actual?'<br>'+esc(actual.winner==='TIE'?'Tie':p.correct?'Correct winner':'Incorrect winner'):''):'Not available',p.derived_pick?'<span class="provider-state covered">'+(p.sourceRecovery?'Recovered observation':p.quote_at?'Observed':'Saved reference')+'</span><br>'+esc(clockText(p)):'<span class="provider-state">Coverage gap</span><br>'+esc(p.unavailable_reason??p.availability_status)]));
+  html+=table(horizons[h]+' · derived provider directions',['Provider','Winner direction','Evidence state'],market.map(p=>[esc(p.provider),p.derived_pick?'<strong>'+esc(p.derived_pick)+'</strong>'+(actual?'<br>'+esc(actual.winner==='TIE'?'Tie':p.correct?'Correct winner':'Incorrect winner'):''):'Not available',p.derived_pick?'<span class="provider-state covered">'+(p.scheduleRecovery?'Recovered schedule reference':p.sourceRecovery?'Recovered observation':p.quote_at?'Observed':'Saved reference')+'</span><br>'+esc(clockText(p)):'<span class="provider-state">Coverage gap</span><br>'+esc(p.unavailable_reason??p.availability_status)]));
   html+=table('Market spread and total references · '+g.away+' at '+g.home,['Provider','Home-margin condition','Total condition'],providers.map(p=>[esc(p),pointCell(g,p,'margin',h),pointCell(g,p,'total',h)]));
   html+='<p class="fine">Home margin means '+esc(g.home)+' points minus '+esc(g.away)+' points. A threshold and its probability are not a predicted final margin, mean total or model cover probability.</p>';
+  if(g.game_id===X.event_mapping.game_id&&h==='LATEST_OBSERVED')html+='<p class="fine schedule-mapping-note"><strong>Separately verified event mapping:</strong> provider kickoff '+esc(X.event_mapping.provider_kickoff_utc)+'; canonical kickoff '+esc(X.event_mapping.canonical_kickoff_utc)+'; mapping verified '+esc(X.event_mapping.mapping_observed_at)+'. Schedule-revision first publication is unknown. No original forecast or historical metric changed.</p>';
   html+='<p class="fine clock-context">Model information time stays fixed when the market reference changes. '+(h==='T2'?'Same-cutoff comparison only for model rows explicitly labelled T2.':h==='T1'?'A T2 model versus this later T1 market is a supplemental comparison.':h==='LATEST_PREGAME'?'This is a later market benchmark, not a reissued historical prediction.':'This is an observed upcoming reference, not a final pregame quote.')+'</p>';
   html+='<details><summary>Forecast, quote and acquisition clocks</summary><ul>';
   for(const f of selected)html+='<li><strong>'+esc(f.model_label??modelLabel(modelId(f)))+'</strong><br>'+esc(f.unavailable_reason??f.origin??'Selected public output')+'<br>Model horizon: '+esc(f.horizon??'Unavailable')+'; issued: '+esc(f.actual_issue_at??'No original issue; do not backdate')+'; source/feature boundary: '+esc(f.source_asof??'Not separately exported')+'; fit completed: '+esc(f.fit_completed??'Not separately exported')+'.</li>';
