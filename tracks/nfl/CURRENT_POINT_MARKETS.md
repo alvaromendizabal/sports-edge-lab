@@ -2,7 +2,9 @@
 
 [Open the dashboard](https://sports-edge-lab-nfl.alv-mendizabal.chatgpt.site/#latest-coverage) · [Track overview](README.md) · [Curated data](point_markets.json) · [Executable validation](point_markets.py)
 
-The dashboard now shows captured point-market evidence alongside model predictions. The data was already acquired by the authenticated November 3 N034 owner run. Recovering and displaying it adds no model fits, new forecasts, new provider acquisition or wagering results. The prepared N035 executable remains separate from this report extension.
+**Scope: preserved N034 point-reference export.** Its original coverage counts remain below. The dashboard also includes [separate recovered N035 current references](CURRENT_SOURCE_RECOVERY.md): Week 9 Kalshi margin 14/15 and total 10/15, DraftKings 14/15 for both, and Polymarket 11/15 for both. This later partial source recovery does not imply final owner completion or replace historical rows.
+
+The dashboard shows captured point-market evidence alongside model predictions. The data was already acquired by the authenticated November 3 N034 owner run. Recovering and displaying it adds no model fits, new forecasts, new provider acquisition or wagering results. The prepared N035 executable remains separate from this report extension.
 
 ## Find a game
 
@@ -24,7 +26,7 @@ Home-margin predicates always use the displayed home team. Away-team conditions 
 
 For a compact public view, one predicate-qualified contract is chosen per game, provider, target and horizon by its probability's distance from 50%, with deterministic ties. Selection does not inspect the game outcome. Counts and ranges describe captured evidence, not independent bets. Current two-sided order-book references require compatible clocks. Original raw ladders, provider responses and complete private exports remain outside this repository.
 
-## Coverage at this snapshot
+## Preserved N034 export coverage
 
 - **Kalshi:** margin and total conditions for all 121 completed games at both T1 and T2. Current Week 9 books remain unavailable in this snapshot.
 - **Polymarket:** margin and total conditions for 92 completed games at T1 and T2. Both targets have timestamped current references for 11 of 15 Week 9 games.

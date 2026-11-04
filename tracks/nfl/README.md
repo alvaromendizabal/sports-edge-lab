@@ -5,6 +5,8 @@
 Start with **Games to inspect**: choose the current week, any earlier week, all completed games, or **Monday Nov 2 · CHI 34–17 SEA**. Each card shows the selected model's winner, margin and total, the actual result when final, and the available DraftKings, Kalshi and Polymarket references. Change **Market reference time** to inspect different observations without changing the model forecast. Captured Kalshi margin and total conditions now appear for all 121 finals at both registered cutoffs; a threshold probability is clearly labelled separately from a projected score.
 
 
+**Current Week 9 source recovery:** DraftKings 14/15 winner, margin and total references; Kalshi 14/15 winner and margin, 10/15 total; Polymarket 11/15 for all three. These authenticated partial source checkpoints add observed references while final owner completion remains unverified. Kalshi capture clocks remain distinct from unavailable provider quote times. [Inspect coverage and limitations](CURRENT_SOURCE_RECOVERY.md).
+
 **Pregame forecasting, honest market comparisons, and recoverable ML systems.** Built by [Alvaro Mendizabal](https://github.com/alvaromendizabal) as one track in the existing [Sports Edge Lab](../../README.md) portfolio.
 
 [**Open the live NFL dashboard →**](https://sports-edge-lab-nfl.alv-mendizabal.chatgpt.site/) · [Model card](CURRENT_MODEL_CARD.md) · [Methods & retraining](CURRENT_METHODOLOGY.md) · [Public evidence](current_evidence.json)
@@ -36,7 +38,7 @@ A winner forecast and a spread bet are different targets. An independently place
 
 [**Weekly forecast explorer →**](review.html#weekly-cards) shows all **14 Week 8 finals** and all **15 Week 9 scheduled games**, with winner probability, margin, total, result and forecast origin. [**Full-season inventory →**](review.html#season-inventory) retains all **272 schedule games**: 121 final and 151 upcoming at the November 3 source observation. Missing or incomparable forecasts remain explicit.
 
-The prior accepted N033 run added **192 native forward fits** and issued early research predictions. The later authenticated N034 diagnostic run **reused those 192 fitted heads** and issued a distinct **27,405 early target rows across 29 games** at **22:58 UTC on November 3**, including multiple candidate arms. N034 failed overall; its completed evidence is retained without promoting the run to accepted research. Both issue sets had **zero final-hour-qualified cards**. The upcoming historically selected heads are not the hindsight leaders in the season table. No qualified executable-price evidence means **NO BET**.
+The prior accepted N033 run added **192 native forward fits** and issued early research predictions. The later authenticated N034 diagnostic run **reused those 192 fitted heads** and issued a distinct **27,405 early target rows across 29 games** at **22:58 UTC on November 3**, including multiple candidate arms. N034 failed overall; its completed evidence is retained without promoting the run to accepted research. Both issue sets had **zero final-hour-qualified cards**. The upcoming historically selected heads are not the hindsight leaders in the season table. Current early cards say **Early projection · betting assessment pending**. That describes research readiness, not whether anyone personally wagered. Current injury/QB availability is not verified in these forecasts. [Read the status definitions and separate Ravens update](CURRENT_FORECAST_STATUS.md).
 
 ### Five-minute employer review
 

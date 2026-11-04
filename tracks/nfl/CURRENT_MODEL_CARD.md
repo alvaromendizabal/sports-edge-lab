@@ -1,12 +1,14 @@
-# NFL current model card
+# NFL retained research model card
 
 [Track overview](README.md) · [Offline evidence explorer](review.html) · [Methods](CURRENT_METHODOLOGY.md) · [Public JSON](current_evidence.json)
 
 **Public review: November 3, 2026.** This is an inspectable summary of authenticated private research, not a reproduction of the private training stack.
 
-## Status and coverage
+**Scope: retained accepted N033 research scorecard.** The results and old export-coverage figures on this page keep their original cohorts. They are not a claim that later source recovery found no additional data. [The current dashboard](review.html#latest-coverage), [point-reference review](CURRENT_POINT_MARKETS.md) and [partial current-source recovery](CURRENT_SOURCE_RECOVERY.md) show the separately expanded coverage. In particular, the later point-reference snapshot contains Kalshi margin and total observations for all 121 audited finals at T1/T2. Additional current-market checkpoints do not establish a completed owner return or change the 119-game scorecard below.
 
-The registered historical design is complete and preserved. The latest owner run added **192 native forward fits and 27,405 genuine early prediction rows across 29 games**. It restored 1,152 historical cells, 447 rolling fit uses and nine stacks; these are not new training. There were **zero protected-original refits and zero final-hour-qualified cards**. Full-pipeline selection qualification remains false.
+## Preserved N033 status and coverage
+
+The registered historical design is complete and preserved. The accepted N033 owner run added **192 native forward fits and 27,405 genuine early prediction rows across 29 games**. It restored 1,152 historical cells, 447 rolling fit uses and nine stacks; these are not new training. There were **zero protected-original refits and zero final-hour-qualified cards**. Full-pipeline selection qualification remains false.
 
 The actual owner return is **109,893,690 bytes**, SHA256 `575cbfe4dfed5b918df1c0ec7cbee8adfc59d5d71f8d46c0dfe1052e76104abf`. All 29,663 members and 29,662 manifest payloads passed physical path, CRC, hash, size and closure checks. The exact later completion receipt is bound to those bytes. Public tests do not replace owner acceptance.
 
@@ -53,7 +55,7 @@ The [28 resolved disagreement rows](current_disagreements.csv) include both side
 
 **Week 8:** both research leaders were 11/13 on the common subset; Kalshi was 10/13. The source has 14 finals. Against T−2h Kalshi, the probability model has log loss 0.512343 and Brier 0.166816; Kalshi has 0.504198 and 0.162594. The accuracy model has log loss 0.519881 and Brier 0.169985. **Kalshi’s probabilities scored better that week despite one fewer correct winner.** Each model won two disagreements and lost one.
 
-**Week 9:** [all 15 games and rounded forecasts](review.html#weekly-cards) are visible, with their actual issue clock: **November 3 at 21:20:14 UTC**. They are early research issues, not final-hour selections. The target-specific forward heads were selected on pre-2024 evidence; they are separate from the descriptive current-season leaders above. Updating learned parents leave full-pipeline selection qualification false. No supported executable-price/fee/liquidity comparison means **NO BET**, not an invented expected return. The next kickoff in this snapshot is November 6 at 01:15 UTC (November 5 at 5:15 p.m. Pacific).
+**Week 9:** [all 15 games and rounded forecasts](review.html#weekly-cards) are visible, with their actual issue clock: **November 3 at 21:20:14 UTC**. They are early research issues, not final-hour selections. The target-specific forward heads were selected on pre-2024 evidence; they are separate from the descriptive current-season leaders above. Updating learned parents leave full-pipeline selection qualification false. Current early projections are labeled **Betting assessment pending** because an executable-price/fee/liquidity assessment has not been established. This is separate from personal wager activity, which the public dashboard does not track. Current injury/QB availability is not verified in these forecasts; the [separate Ravens update and status definitions](CURRENT_FORECAST_STATUS.md) do not retroactively change a model output. The next kickoff in this snapshot is November 6 at 01:15 UTC (November 5 at 5:15 p.m. Pacific).
 
 The [complete 272-game inventory](review.html#season-inventory) retains 121 finals and 151 unstarted games. Week 8 contains all 14 final scores, with explicit missing forecasts and the separate CHI–SEA genuine issue. The 13-game common subset is never presented as the full week.
 
@@ -94,7 +96,7 @@ A separately pre-2024 selected tree is evaluated against DraftKings on the prese
 
 Accuracy/Brier and point RMSE/bias are retained in the JSON and explorer. Prediction-interval coverage/width are **unavailable in this compact public export**. Missing statistics remain missing.
 
-| Provider | Current supported scope |
+| Provider | Archived N033 comparison-export scope |
 |---|---|
 | DraftKings | Archived winner, margin and total panels; exact intersections shown above |
 | Kalshi | Audited 120 finals, T−1h/T−2h winner history and both contracts; point history incomplete |
@@ -102,7 +104,7 @@ Accuracy/Brier and point RMSE/bias are retained in the JSON and explorer. Predic
 
 These are coverage statements about the audited export, not assertions that a provider offered no product. Earlier portfolio snapshots remain dated historical records and are not silently substituted. No all-season Kalshi margin/total edge or Polymarket advantage is claimed.
 
-## What actually ran
+## What ran in the accepted N033 parent
 
 | Registered scope / work | Measured outcome |
 |---|---:|
