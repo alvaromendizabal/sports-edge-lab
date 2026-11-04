@@ -2,6 +2,7 @@
 import copy
 import json
 import math
+from html.parser import HTMLParser
 from pathlib import Path
 import re
 import unittest
@@ -190,6 +191,18 @@ class EvidenceTests(unittest.TestCase):
                 preflight = re.search(r'<script type="application/json" id="preflight-evidence">(.*?)</script>', output, re.S)
                 self.assertIsNotNone(preflight)
                 self.assertEqual(json.loads(preflight.group(1)), preflight_scenarios())
+
+    def test_generated_pages_have_unique_dom_identities(self):
+        class IdCollector(HTMLParser):
+            def __init__(self):
+                super().__init__()
+                self.ids = []
+            def handle_starttag(self, tag, attrs):
+                self.ids.extend(value for key, value in attrs if key == 'id')
+        for path, output in build_dashboard.outputs().items():
+            parser = IdCollector()
+            parser.feed(output)
+            self.assertEqual(len(parser.ids), len(set(parser.ids)), str(path))
 
     def test_export_validation_rejects_provider_scope_and_cohort_mutation(self):
         for mutation in ('provider', 'cohort'):
