@@ -202,13 +202,15 @@ const {chromium}=require(process.env.PLAYWRIGHT_MODULE_DIR||'playwright');
   assert.match(await pointCounts.filter({hasText:'Polymarket'}).innerText(),/15 \/ 15[\s\S]*15 \/ 15 dated references[\s\S]*15 \/ 15 dated references/);
   const retainedSource=await page.evaluate(()=>JSON.parse(document.getElementById('nfl-n038-source').textContent));
   assert.equal(retainedSource.current_winner_rows.length,30);
-  const freshSource=await page.evaluate(()=>JSON.parse(document.getElementById('nfl-n039-current-source').textContent));
+  const priorSource=await page.evaluate(()=>JSON.parse(document.getElementById('nfl-n039-current-source').textContent));
+  assert.equal(priorSource.winner_rows.length,58);
+  const freshSource=await page.evaluate(()=>JSON.parse(document.getElementById('nfl-n040-current-source').textContent));
   assert.equal(freshSource.winner_rows.length,58);
   assert.equal(freshSource.point_rows.length,116);
   for(const gid of ['2026_09_TB_CHI','2026_09_BUF_MIN']){
    const card=page.locator('[data-coverage-game="'+gid+'"]');
    for(const r of freshSource.point_rows.filter(r=>r.game_id===gid))assert((await card.innerText()).includes(r.predicate));
-   assert.match(await card.textContent(),/2026-11-05T00:/);
+   assert.match(await card.textContent(),/2026-11-05T01:/);
    assert.equal(await card.locator('.alternate-threshold').count(),0);
   }
   await page.selectOption('#coverage-model','preserved_primary_refresh');

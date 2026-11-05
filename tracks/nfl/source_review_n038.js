@@ -2,7 +2,7 @@
 (()=>{
  'use strict';
  const D=JSON.parse(document.getElementById('nfl-n038-source').textContent);
- const C=JSON.parse(document.getElementById('nfl-n039-current-source').textContent);
+ const C=JSON.parse(document.getElementById('nfl-n040-current-source').textContent);
  const M=JSON.parse(document.getElementById('nfl-latest-evidence').textContent);
  const get=id=>document.getElementById(id);
  const esc=x=>String(x).replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
