@@ -574,6 +574,9 @@ def build_review(*, check=False):
     history_n041, history_n041_receipt = load_history_n041()
     from injury_contribution import load_contribution, render_contribution
     contribution, contribution_receipt = load_contribution()
+    chicago_proof = (HERE / "chicago_seattle_recovery_n042.json").read_bytes()
+    require(hashlib.sha256(chicago_proof).hexdigest() == "1a2360be71a7a89fa8a86099fcfa10ae63df9b80b159a3b24b925b6007aa89c1",
+            "Chicago–Seattle recovery proof differs from reviewed evidence")
     template = (HERE / "review.template.html").read_text()
     embedded = canonical(data).decode().replace("<", "\\u003c")
     page = template.replace("__EVIDENCE_JSON__", embedded).replace("__EVIDENCE_SHA__", digest(data))
@@ -606,7 +609,7 @@ def build_review(*, check=False):
         require(output.is_file() and output.read_text() == page, "Generated review differs; run contracts.py --build-review")
     else:
         output.write_text(page)
-    return {**receipt, **current_receipt, **weekly_receipt, **latest_receipt, **points_receipt, **overlay_receipt, **reschedule_receipt, **recovery_receipt, **primary_receipt, **injury_issue_receipt, **latest_pregame_receipt, **latest_n037_receipt, **current_n037_receipt, **source_n038_receipt, **injury_refresh_receipt, **injury_n040_receipt, **injury_metrics_receipt, **source_n039_receipt, **source_n040_receipt, **history_n040_receipt, **injury_n041_receipt, **source_n041_receipt, **history_n041_receipt, **contribution_receipt, "review": "review.html", "evidence_sha256": digest(data), "generated_page_matches": True}
+    return {**receipt, **current_receipt, **weekly_receipt, **latest_receipt, **points_receipt, **overlay_receipt, **reschedule_receipt, **recovery_receipt, **primary_receipt, **injury_issue_receipt, **latest_pregame_receipt, **latest_n037_receipt, **current_n037_receipt, **source_n038_receipt, **injury_refresh_receipt, **injury_n040_receipt, **injury_metrics_receipt, **source_n039_receipt, **source_n040_receipt, **history_n040_receipt, **injury_n041_receipt, **source_n041_receipt, **history_n041_receipt, **contribution_receipt, "review": "review.html", "evidence_sha256": digest(data), "generated_page_matches": True, "chicago_recovery_proof_validated": True}
 
 
 def demo(*, output):

@@ -14,6 +14,8 @@
 
 T2 means two hours before kickoff; T1 means one hour. These are comparison cutoffs, not collection barriers. Later pregame observations remain visible with their actual timestamps. Threshold contracts are conditions with probabilities, not provider score forecasts.
 
+**Recovered source correction:** Chicago–Seattle already had genuine T1 pregame vectors and a causal label append. The retained updating view had not inherited them; published scores and the original Seattle loss remain unchanged. [Inspect the correction](N041_RESEARCH_UPDATE.md).
+
 ### Five-minute review
 
 | Question | Open | What is inspectable |

@@ -1,5 +1,7 @@
 # NFL retained research model card
 
+**Chicago–Seattle source correction:** genuine T1 pregame vectors and the causal outcome append already existed; the retained updating view did not inherit them. Original forecasts and published cohort metrics remain unchanged. [Recovery explanation](N041_RESEARCH_UPDATE.md) · [Compact proof](chicago_seattle_recovery_n042.json).
+
 **Newer evidence:** [November 4 Pacific owner update](N041_RESEARCH_UPDATE.md) adds a completed 960-recipe contribution study, 266 listed current injury entries and a separate 02:26 UTC issue. The dated results below retain their original cohorts and model identities.
 [Track overview](README.md) · [Offline evidence explorer](review.html) · [Methods](CURRENT_METHODOLOGY.md) · [Public JSON](current_evidence.json)
 
