@@ -26,6 +26,11 @@ const {chromium}=require(process.env.PLAYWRIGHT_MODULE_DIR||'playwright');
   assert.match(await page.locator('#current-headline').innerText(),/DraftKings.*Kalshi.*Polymarket/s);
   assert.equal(await page.locator('#three-provider-cards article').count(),3);
   for(const year of ['2026','week9','2025','2024']){await page.selectOption('#provider-review-period',year);assert.equal(await page.locator('#three-provider-cards article').count(),3);}
+  await page.selectOption('#provider-review-period','2025');
+  const latestHistoricalPoly=page.locator('[data-review-provider="Polymarket"]');
+  assert.equal((await latestHistoricalPoly.innerText()).match(/276/g).length,2);
+  assert.match(await latestHistoricalPoly.innerText(),/275/);
+  assert.equal(await page.locator('#historical-source-delta-rows tbody tr').count(),17);
   await page.selectOption('#provider-review-period','2026');
   assert.equal(await page.locator('#three-provider-performance tbody tr').count(),3);
   assert.match(await page.locator('#three-provider-performance').innerText(),/77 \/ 77/);

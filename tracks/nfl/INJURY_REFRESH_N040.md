@@ -30,7 +30,9 @@ Base features are approximately 23 hours 28 minutes older than the issue. The ne
 
 The separate current capture supplies Kalshi and Polymarket winner/margin/total references for all 15 Week 9 games. DraftKings has 14 fresh Week 9 games plus one retained November 4 LV–SF reference, and 13 fresh Week 10 games. Current source observations span 01:18–01:39 UTC. Some follow the model issue and remain supplemental market comparisons, never retroactive inputs.
 
-N040 preserved this completed current checkpoint before its first later failure in a 2025 Rams historical Kalshi repair: a candle body did not match the exact expected contract ticker. The owner return is **PARTIAL_OWNER_CONTINUATION_REPAIR_REQUIRED**, not completed research acceptance. Completed artifacts and prior successful research remain preserved.
+N040 preserved this completed current checkpoint before its first later failure in a 2025 Rams historical Kalshi repair: the provider deferred requests under an active rate limit. The recorded ticker-error message misclassified the missing response; no mismatched candle body was received. A bounded repair still added **51 qualified source cells across 17 Polymarket 2025 Rams games**: 17 winner, 17 margin and 17 total references. Polymarket 2025 latest-pregame source coverage is now 276/285 winner, 276/285 margin and 275/285 total. These additions do not change model metrics, create historical fills or resolve the 20 Kalshi and three Polymarket failed repair arms. [Inspect the separate source delta](historical_source_delta_n040.json).
+
+The owner return is **PARTIAL_OWNER_CONTINUATION_REPAIR_REQUIRED**, not completed research acceptance. Completed artifacts and prior successful research remain preserved.
 
 ## Evidence boundary
 

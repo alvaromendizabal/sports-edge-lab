@@ -8,6 +8,8 @@
 
 **Injury models are trained, but promotion is not automatic:** the completed 2,304-cell injury study tested paired base and injury representations across eight families. The selected winner head remains a base model; selected point heads incorporate injury fields. Starter, QB depth and reserve-status coverage remain incomplete. [Read the model inventory and promotion requirements](INJURY_MODEL_READINESS.md).
 
+**Historical source repair:** 51 newly qualified Polymarket source cells cover 17 Rams games from 2025. Winner/margin/total reference coverage rises to 276/276/275 of 285 games, with remaining failed arms explicit and model metrics unchanged. [Read the audited source delta](INJURY_REFRESH_N040.md#current-providers-and-historical-repair).
+
 **Three providers, one review:** DraftKings, Kalshi and Polymarket now have equal prominence at the top of the dashboard. Choose a season or the current week to inspect reference coverage, then use the separate matched-performance controls for accuracy, probability losses, margin and total errors.
 
 **2026 completed games:** All **121 finals** have authenticated latest-pregame Kalshi **and Polymarket** winner, margin and total references. Chicago–Seattle is included. These newly recovered observations retain their original pregame quote times and later acquisition times. They do not change the preserved T1/T2 model scorecards or turn retrospective predictions into original issues.
