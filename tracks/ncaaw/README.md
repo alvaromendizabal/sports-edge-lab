@@ -2,7 +2,21 @@
 
 [Project](../../README.md) · [Open interactive dashboard](https://alvaro-ncaa-research-review.alv-mendizabal.chatgpt.site/tracks/ncaaw/index.html) · [Dashboard source](index.html) · [Methodology and runnable example](../../examples/ncaa_review/README.md) · [Separate men's track](../ncaam/README.md)
 
-## Current review — November 4, 2026 Pacific
+## Current review — November 4, 2026 Pacific · B039
+
+The latest authenticated owner completed **10 of 13 workflow stages**, then failed while publishing an oversized weekly HTML report. It committed **156 target fits, 48 scalar calibrations and 60 empirical fits** across the two leagues, including **60 target fits in this track**. The 108 historical target fits were reused separately. All five CSV exports survived. The 827 passed fixtures and one explicit optional skip are software validation, separate from those real fits.
+
+The recovered report contains **1,379 source/candidate records and 364 observed finals in this track** as of November 4 at 9:26 p.m. Pacific. Men and women remain separate. Both tracks together contain 2,821 candidate records, including 1,022 unmatched official candidates and eight unresolved source candidates; four rejected official records are separately visible in the source audit. Unknown identity, phase, division and exact time prevent a complete official-denominator claim.
+
+The private report retains **48,887 game/model rows** and **552,468 market observations** through bounded references. Its original five CSVs are preserved byte for byte. The repaired viewer reads normalized shared context without expanding every repeated field in memory. It separates latest observed, supported pre-tip, actually captured before tip, and T−120/T−60 references. Later recovery never changes earlier inputs, issues, selection or ROI.
+
+Kalshi retained 429,428 observations, but one transient transport disconnect was incorrectly treated as a persistent stop. The next executable retries that narrowly verified public-GET failure with bounded delays; real permission/rate-limit refusals and unknown paid charges remain stops. Polymarket international retained 122,959 observations; the US product remains separately unacquired. DraftKings retained 81 observations, with 166 historical snapshots pending because no runtime credential was configured. These counts describe observations, not distinct complete games or universal closing prices.
+
+Frozen-original weights produced reconstructions or previews for 1,322 games across both leagues; no new as-issued forecast was authenticated. Current outcomes did not choose the models or promote a winner. The public page contains sanitized aggregates; the full private report, active recipes, weights, raw source arrays and cloud paths remain private.
+
+The actual nested return SHA-256 is `3ef40d2cf47c2306064a56b2f437acf119719564b343ce3048fc35c7edf82bc2`. B039 is durable partial research; B036 remains the last completed workflow. No B040 owner success is asserted. The existing [private viewer](https://alvaro-ncaa-research-review.alv-mendizabal.chatgpt.site/private-report/index.html) reads your delivered file locally.
+
+## Preserved B036 review — November 4, 2026 Pacific
 
 The authenticated **B036** owner completed all **12 workflow stages** in **35.6 minutes before finalization**. It committed **65 new native reconstruction target fits and 35 scalar calibration fits** across both leagues, including **15 target fits in this track**, and verified/reused **108 historical target fits** without counting them as new. The fixture gate passed 536 cases with one optional integration skipped; there were no fixture errors. The original frozen runtime did not qualify, the selected current monitor deferred, and none of the 8,100 native target prediction rows became an as-issued forecast.
 

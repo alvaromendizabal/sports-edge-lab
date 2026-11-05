@@ -168,3 +168,12 @@ Run `python examples/ncaa_review/preflight.py` for four invented scenarios. A mi
 
 The preserved B035 owner evidence records its actual preflight failure and zero scientific stages; the latest B036 workflow completion is shown separately. B033's earlier valid historical study remains separately visible. Neither the invented checks nor a later preserved diagnostic establish fresh game coverage or scientific success.
 
+
+
+## B039 evidence and bounded private-report recovery
+
+The latest authenticated NCAA owner completed ten stages and real model work, then failed while publishing dense weekly HTML. Its committed CSVs and model artifacts remain preserved. The updated track pages show the actual 156 target / 48 scalar / 60 empirical fits, separate reuses, measured resources, partial inventory and remaining coverage gaps. Historical selected panels are unchanged.
+
+The browser-only private viewer accepts both the earlier flat format and a normalized format with shared, disjoint contexts. It resolves fields lazily, preserves zero and false, rejects invalid references or overlapping fields, and keeps declared total versus loaded part counts separate. A bounded index can load one local part only after its exact byte count and SHA-256 match. This generic transport contract does not supply private forecasts or reinterpret financial outcomes. Public tests use invented rows only.
+
+Latest observed, latest supported pre-tip, latest actually captured before tip, and supported T−120/T−60 choices retain separate clocks. The public page uploads nothing, makes no provider calls, and grants no earlier forecast or betting eligibility. Unresolved official source records remain inspectable without inventing teams or start times.
