@@ -1,0 +1,34 @@
+{
+  "schema": "sports-edge-lab.nfl.public-current-schedule-recovery.n041.v1",
+  "game_id": "2026_09_LV_SF",
+  "raw_pin": {
+    "bytes": 21851,
+    "sha256": "2a4c1177f7ad928280c3db5ccd9c9f99e6bf4d8f4a11a0ec00b0a2569e1a0017"
+  },
+  "raw_receipt_pin": {
+    "bytes": 1024,
+    "sha256": "9083bdbc2c5809237116f0d4daa867d6f049618e5cae84083903955b3b7c7cd5"
+  },
+  "documented_ancestor_return": {
+    "bytes": 47824710,
+    "sha256": "b52904f3fbdb1e0debb6db277c2ed72c6bfc06a8e8a3ec367044dd0c2cdb1919"
+  },
+  "schedule_source_sha256": "e5d624433e676bcede9ece67395d0024d1a78e1fd64773f0d4594453a0aca5e1",
+  "original_acquisition_at": "2026-11-05T02:25:27Z",
+  "recovered_at_utc": "2026-11-05T03:24:48.429974+00:00",
+  "provider_kickoff_utc": "2026-11-08T21:05:00+00:00",
+  "canonical_kickoff_utc": "2026-11-08T21:25:00+00:00",
+  "registered_scope": "FIXED_2026_WEEK9_LV_SF_EVENT_AND_DOCUMENTED_OLD_NEW_KICKOFF_PAIR_ONLY",
+  "global_time_tolerance_changed": false,
+  "original_normalized_outputs_modified": false,
+  "new_provider_requests": 0,
+  "new_acquisition_credit": 0,
+  "new_forecasts": 0,
+  "new_fits": 0,
+  "historical_metrics_changed": false,
+  "model_feature_input": false,
+  "owner_return_sha256": "144da21ccb8cc133ff68cd9a5e8c048629c4c016ba8ba1e4758a21330ef2541c",
+  "original_full_proof_sha256": "64ad74c9e8bde4b7a5801f0840c52a1546fb282c5d6fcd0f5dc4249f7be24d77",
+  "original_normalized_week9_games": 14,
+  "review_recovered_week9_games": 1
+}

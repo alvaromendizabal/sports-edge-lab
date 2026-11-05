@@ -1,5 +1,6 @@
 # Injury inputs, trained models and promotion
 
+**Newer evidence:** [November 4 Pacific owner update](N041_RESEARCH_UPDATE.md) adds a completed 960-recipe contribution study, 266 listed current injury entries and a separate 02:26 UTC issue. The dated results below retain their original cohorts and model identities.
 [Open the dashboard](review.html#injury-model-readiness) · [Current issue clocks](INJURY_REFRESH_N040.md) · [Retained model card](CURRENT_MODEL_CARD.md)
 
 Injury data has been trained and tested. The completed N037 study contains **2,304 historical native cells**, across eight estimator families, eight rooted feature blocks, three targets, six evaluation seasons, and paired matched-base/injury representations. Selected rolling fits, stacks, calibration and forward heads are separately counted. This is a declared experiment, not a claim to exhaust all possible feature combinations.
