@@ -51,7 +51,12 @@ const { chromium } = require(process.env.PLAYWRIGHT_MODULE_DIR || 'playwright');
         assert.match(currentText, /Reconstruction metrics:\s*separate below/);
         assert.match(currentText, /156 target \+ 48 scalar \+ 60 empirical fits/);
         assert.match(currentText, /Issued forecasts:\s*0/);
-        assert.match(await page.locator('#provider-table').innerText(), /International; US unacquired/);
+        const polymarketRow = page.locator('#provider-table tr').filter({hasText:'Polymarket'});
+        // The separate product column is intentionally hidden on mobile;
+        // its scope is also stated in the visible coverage description.
+        assert.equal(await polymarketRow.locator('.provider-product').textContent(), 'International; US unacquired');
+        assert.equal(await polymarketRow.locator('.provider-product').isHidden(), width === 390);
+        assert.match(await polymarketRow.innerText(), /international observations.*US remains unacquired/s);
         assert.deepEqual(evidence.providers.find(p => p.name === 'Polymarket').products,
           [{name:'International',status:'PARTIAL_INTERNATIONAL_CAPTURE'}, {name:'US',status:'NOT_ACQUIRED_UNVERIFIED'}]);
         for (const provider of evidence.providers) {
