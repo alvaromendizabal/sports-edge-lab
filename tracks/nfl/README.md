@@ -1,16 +1,16 @@
 # Sports Edge Lab · NFL
 
-[**Open the live NFL dashboard →**](https://sports-edge-lab-nfl.alv-mendizabal.chatgpt.site/) · [Latest research update](N041_RESEARCH_UPDATE.md) · [Model card](CURRENT_MODEL_CARD.md)
+[**Open the live NFL dashboard →**](https://sports-edge-lab-nfl.alv-mendizabal.chatgpt.site/) · [Latest research update](N042_RESEARCH_UPDATE.md) · [Model card](CURRENT_MODEL_CARD.md)
 
 **Pregame forecasting, matched market evaluation and recoverable ML systems.** Built by [Alvaro Mendizabal](https://github.com/alvaromendizabal). Review the evidence in your browser; no setup or private credentials required.
 
 ## Latest verified work · November 4, 2026 Pacific
 
-- **New completed research:** 960 registered injury/base contribution recipes, three objective-specific selections and no redundant native refits. The selected derived winner scores 392/569 in 2024/25, with 0.625548 log loss. It is a research result, not a newly promoted champion or issued strategy. [See all targets and uncertainty](review.html#injury-contribution-study).
-- **New genuine issue:** 29 early game cards at 6:26 PM Pacific. Current reports contain 266 listed entries across 26/30 Week 9 teams. Only Tampa Bay–Chicago's margin and total change from the previous issue. Winner probabilities retain their base model; starter/depth completeness is not claimed. [Open current projections](review.html#injury-n041-summary).
-- **Expanded injury acquisition:** 11 historical injury archives and seven depth-chart seasons captured, alongside current roster/depth/report sources. Acquired rows and qualified model inputs are explicitly separated. [Inspect the source inventory](review.html#injury-source-inventory).
-- **Three providers:** DraftKings, Kalshi and Polymarket share equal visibility. All 121 completed games have Kalshi/Polymarket latest-pregame winner/margin/total references. All 15 Week 9 games have fresh exchange references; DraftKings also has all 15 current captures after exact review recovery of one schedule-revised event. The original owner-normalized count remains 14. [Inspect coverage and matched performance](review.html#three-provider-overview).
-- **Preserved limits:** overall owner acceptance remains false after a later historical Kalshi validation error. There are zero final-hour-qualified recommendations and no newly established durable betting edge. Completed study/source/issue outputs survive the failure.
+- **Fresh rolling forecasts:** seven new native components and 261 genuine target rows across three separate streams for 29 upcoming games. The current rolling branch uses all 121 observed finals and newly captured team statistics; its base inputs are 69 seconds old at issue. [Compare the streams](review.html#current-rolling-n042).
+- **Injury-aware research:** 266 listed current entries across 26/30 Week 9 teams. The new mixture streams include injury contributions; complete starter, depth and reserve roles remain unverified. Historical acquisition is still incomplete. [Read the exact coverage and gaps](N042_RESEARCH_UPDATE.md).
+- **Accumulated research:** 180 newly completed cross-version compatibility recipes accompany the earlier 960-recipe injury/base study. No redundant native grid is credited. Exploratory combinations and raw forecast streams have not been promoted.
+- **Three providers:** every Week 9 game has current winner, margin and total references from DraftKings, Kalshi and Polymarket. All 121 finals retain Kalshi/Polymarket latest-pregame references. Historical repair adds 33 source cells without changing old model metrics. [Inspect coverage and matched performance](review.html#three-provider-overview).
+- **Preserved evidence:** frozen originals, older forecast snapshots and the original Chicago–Seattle loss remain visible. A later historical-injury parsing failure leaves the run partial, while all completed fits and issues survive. There are no final-hour-qualified recommendations or newly established durable betting edges.
 
 T2 means two hours before kickoff; T1 means one hour. These are comparison cutoffs, not collection barriers. Later pregame observations remain visible with their actual timestamps. Threshold contracts are conditions with probabilities, not provider score forecasts.
 
