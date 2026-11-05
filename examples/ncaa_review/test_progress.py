@@ -3,7 +3,8 @@ from dataclasses import replace
 import json
 import unittest
 
-from progress import Observation, demo_scenarios, estimate
+from progress import (Observation, QueueIdentity, QueueSnapshot, demo_scenarios,
+                      distinct_queue_demo, estimate, estimate_queues)
 
 
 class ProgressTests(unittest.TestCase):
@@ -152,6 +153,38 @@ class ProgressTests(unittest.TestCase):
         self.assertIn("UNKNOWN_TOTAL", payload)
         self.assertIn("STOPPED_WITH_UNFINISHED_WORK", payload)
         self.assertNotIn("s3://", payload)
+
+    def test_distinct_sources_do_not_share_a_counter_or_denominator(self):
+        rows = distinct_queue_demo()
+        self.assertEqual([x['progress']['completed'] for x in rows], [3, 1])
+        self.assertEqual([x['progress']['total'] for x in rows], [3, 5])
+        self.assertEqual([x['progress']['status'] for x in rows], ['completed', 'running'])
+        self.assertEqual(rows[0]['identity']['operation'], rows[1]['identity']['operation'])
+        self.assertNotEqual(rows[0]['identity']['input_sha256'], rows[1]['identity']['input_sha256'])
+        self.assertEqual(rows[0]['progress']['eta_status'], 'COMPLETED')
+        self.assertEqual(rows[1]['progress']['eta_status'], 'WARMUP')
+
+    def test_separate_source_identity_does_not_waive_backward_counter_rejection(self):
+        identity = QueueIdentity('same operation', 'a'*64)
+        queue = QueueSnapshot(identity, [Observation('same operation', 0, 0),
+            Observation('same operation', 3, 3), Observation('same operation', 4, 1)], 5, 4)
+        with self.assertRaisesRegex(ValueError, 'backward'):
+            estimate_queues([queue])
+
+    def test_duplicate_queue_identity_and_wrong_operation_are_rejected(self):
+        identity = QueueIdentity('inspect', 'a'*64)
+        queue = QueueSnapshot(identity, [Observation('inspect', 0, 0)], 2, 0)
+        with self.assertRaisesRegex(ValueError, 'duplicate queue identity'):
+            estimate_queues([queue, queue])
+        with self.assertRaisesRegex(ValueError, 'operation does not match'):
+            estimate_queues([replace(queue, observations=[Observation('other', 0, 0)])])
+
+    def test_ambiguous_queue_content_identity_is_rejected(self):
+        for digest in ('', 'short', 'g'*64, 'A'*64, None):
+            with self.subTest(digest=digest), self.assertRaises(ValueError):
+                QueueIdentity('inspect', digest)
+        with self.assertRaises(ValueError):
+            QueueIdentity('', 'a'*64)
 
 
 if __name__ == "__main__":

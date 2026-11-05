@@ -4,6 +4,20 @@
 
 This example makes the **evaluation contract** executable without credentials, data subscriptions or a machine-learning environment. It also generates the college basketball review pages from committed, sanitized aggregate evidence. The invented demonstration and the real historical aggregates remain separate: the example does not reproduce the private models or claim a betting record.
 
+## Latest actual owner and inherited observations
+
+B041 stopped during predecessor setup before any of 15 scientific stages.
+Its 982 passing fixtures and one optional Linux integration skip did not produce
+source requests, imports, fits or forecasts. Two different predecessor inputs
+shared a progress counter; the second restarted at one after the first reached
+108. The backward-counter guard correctly stopped the run. The public example
+below demonstrates source-specific queue identities with invented inputs.
+
+B040 remains the latest game/market snapshot at November 5, 10:37 a.m. Pacific:
+557,737 observations and 2,816 source/candidate records, including 738 finals.
+These counts and every prior metric are unchanged. Official completeness, all-
+version injury retesting and an injury performance gain remain unverified.
+
 ## Run the example
 
 Python 3.11 or newer; standard library only:
@@ -62,9 +76,9 @@ The probability and accuracy selections are compared on exactly matching events,
 
 The probability selections have lower historical proper-score losses. Both accuracy-difference intervals cross zero. These are selection-exposed intervals with no adjustment for the model search; they do not establish future superiority. Resampling weeks also does not eliminate dependence that persists across weeks or seasons. The private per-game inputs are not published, so the public aggregate tables allow inspection of these conclusions, not an independent reconstruction of the bootstrap.
 
-## Recovered market inventory and separate update clocks
+## Preserved B037 market inventory and separate update clocks
 
-The latest authenticated owner attempt, B037, failed during source consolidation and committed zero new model fits. Its preserved market array received a complete physical byte/hash readback: **477,340 observations**, consisting of **429,428 Kalshi**, **47,880 Polymarket international**, and **32 DraftKings** records. These are observed source rows, not unique games or qualified comparison pairs. B038's bounded preflight correctly deferred while B037 still owned the canonical lock; it did not run a new research workflow. B036's completed retrospective results above remain preserved. No new model-performance claim follows from recovery or public publication.
+The preserved B037 owner attempt failed during source consolidation and committed zero new model fits. Its preserved market array received a complete physical byte/hash readback: **477,340 observations**, consisting of **429,428 Kalshi**, **47,880 Polymarket international**, and **32 DraftKings** records. These are observed source rows, not unique games or qualified comparison pairs. B038's bounded preflight correctly deferred while B037 still owned the canonical lock; it did not run a new research workflow. B036's completed retrospective results above remain preserved. No new model-performance claim follows from recovery or public publication.
 
 The private viewer now distinguishes the **captured observation inventory** declared in the report from the **observation rows loaded in this tab**. A compact report can carry all game rows and their selected quote references while the full timeline remains in bounded private objects. An empty inline array therefore displays its declared archive count and its missing local rows explicitly. The same distinction applies to unclassified source points. It never turns absent data into a zero-coverage claim.
 
@@ -100,7 +114,7 @@ Browser checks use invented records to exercise file import, pagination, exact w
 
 ## Preserved B033 current-season status and provider scope
 
-The following paragraphs describe the earlier B033 snapshot. They remain historical evidence; the current B036 outcome is reported above.
+The following paragraphs describe the earlier B033 snapshot. They remain historical evidence; the earlier B036 completed workflow remains preserved.
 
 The latest B033 owner return completed parent restoration, historical feature construction and its registered study: **108 newly committed target-estimator fits across both leagues, 54 per league**. It then failed when current-source refresh selected a shared summary belonging to another project. Admission took **69.1 minutes**; scientific wall time was **21.6 minutes**, including **19.7 minutes** for the study. The **371 passing fixture tests** took 10.1 seconds and remain separate from model fits. The attempt produced no fresh current-game or provider corpus, current issues or orders. A full independent readback verified the returned bytes. The historical headline selections above are preserved; this partial run does not establish a new current-season performance record.
 
@@ -148,6 +162,16 @@ The displayed range multiplies remaining units by the fastest and slowest observ
 
 Meaningful tests reject mixed phases, backward counters, zero or backward clock intervals, over-completion, nonfinite readings and unjustified completion status. Other tests verify restored-work accounting, idle-time inclusion, worker changes, stale estimates and finalization. The real browser check exercises all eight scenarios at desktop and mobile widths alongside the actual aggregate execution and coverage panels.
 
+### Independent inputs keep independent progress
+
+`QueueIdentity` combines the operation with the exact input content digest.
+`estimate_queues` keeps each queue's observations, denominator and ETA history
+separate even when operation names repeat. The invented source A completes 3/3;
+source B independently reaches 1/5. Their counts are not a model-fit total.
+Duplicate identities, mismatched operation names and a backward counter within
+either queue remain errors. This example does not access production sources or
+change the existing completion/ETA rules.
+
 ## Review map
 
 | File | What can be inspected |
@@ -166,7 +190,7 @@ The accepted historical and failed current owner-return digests are included in 
 
 Run `python examples/ncaa_review/preflight.py` for four invented scenarios. A missing optional runtime function is an observation; a required operation still remains blocked. Check completion, successful execution, failures, unexpected errors and skips have separate counts. A skipped integration never becomes a passing test or a model fit. Duplicate check identities and unobserved capabilities fail before any check is invoked. Exception classes are retained without disclosing messages or private tracebacks.
 
-The preserved B035 owner evidence records its actual preflight failure and zero scientific stages; the latest B036 workflow completion is shown separately. B033's earlier valid historical study remains separately visible. Neither the invented checks nor a later preserved diagnostic establish fresh game coverage or scientific success.
+The preserved B035 owner evidence records its actual preflight failure and zero scientific stages; the earlier B036 workflow completion is shown separately. B033's earlier valid historical study remains separately visible. Neither the invented checks nor a later preserved diagnostic establish fresh game coverage or scientific success.
 
 
 
@@ -200,4 +224,4 @@ research or publication of generic engineering.
 A useful injury study compares learned challengers and matching no-injury controls
 on identical chronological populations, reports uncertainty and failed experiments,
 and preserves the originals. Current-season outcomes do not choose a promoted model.
-The real next-owner injury study has not run; no performance gain is claimed here.
+The B041 owner never reached the injury study; no performance gain is claimed here.
