@@ -1,16 +1,16 @@
 # Sports Edge Lab · NFL
 
-[**Open the live NFL dashboard →**](https://sports-edge-lab-nfl.alv-mendizabal.chatgpt.site/) · [Latest research update](N042_RESEARCH_UPDATE.md) · [Model card](CURRENT_MODEL_CARD.md)
+[**Open the live NFL dashboard →**](https://sports-edge-lab-nfl.alv-mendizabal.chatgpt.site/) · [Latest research update](N043_RESEARCH_UPDATE.md) · [Model card](CURRENT_MODEL_CARD.md)
 
 **Pregame forecasting, matched market evaluation and recoverable ML systems.** Built by [Alvaro Mendizabal](https://github.com/alvaromendizabal). Review the evidence in your browser; no setup or private credentials required.
 
-## Latest verified work · November 4, 2026 Pacific
+## Latest verified work · November 5, 2026
 
-- **Fresh rolling forecasts:** seven new native components and 261 genuine target rows across three separate streams for 29 upcoming games. The current rolling branch uses all 121 observed finals and newly captured team statistics; its base inputs are 69 seconds old at issue. [Compare the streams](review.html#current-rolling-n042).
-- **Injury-aware research:** 266 listed current entries across 26/30 Week 9 teams. The new mixture streams include injury contributions; complete starter, depth and reserve roles remain unverified. Historical acquisition is still incomplete. [Read the exact coverage and gaps](N042_RESEARCH_UPDATE.md).
-- **Accumulated research:** 180 newly completed cross-version compatibility recipes accompany the earlier 960-recipe injury/base study. No redundant native grid is credited. Exploratory combinations and raw forecast streams have not been promoted.
-- **Three providers:** every Week 9 game has current winner, margin and total references from DraftKings, Kalshi and Polymarket. All 121 finals retain Kalshi/Polymarket latest-pregame references. Historical repair adds 33 source cells without changing old model metrics. [Inspect coverage and matched performance](review.html#three-provider-overview).
-- **Preserved evidence:** frozen originals, older forecast snapshots and the original Chicago–Seattle loss remain visible. A later historical-injury parsing failure leaves the run partial, while all completed fits and issues survive. There are no final-hour-qualified recommendations or newly established durable betting edges.
+- **Complete injury-designation study:** all 1,152 registered historical cells completed across eight estimator families, eight rooted feature blocks, three targets and six seasons. The run preserved 1,605 distinct new native fits and nine stacks. [Inspect the actual study](N043_RESEARCH_UPDATE.md).
+- **Measured performance:** the selected designation winner reconstruction has 0.6258 log loss on 2024–25 and 0.6542 on the current 119-game non-tie cohort. The retained probability leaders remain stronger. No new designation model is promoted or credited with prospective performance.
+- **Current observations:** all 15 Week 9 games have winner, margin and total references from DraftKings, Kalshi and Polymarket, with November 5 capture times. Current injury coverage is 266 listed entries across 26/30 teams; missing reports remain unknown.
+- **Actual issued forecasts:** the retained calibrated and raw shadow heads issued 174 target rows for 29 upcoming games. A separate fresh rolling branch was blocked by a source namespace mismatch. Earlier fresh issues remain visible with their original clocks. [Compare all preserved streams](review.html#designation-study-n043).
+- **Recoverable execution:** zero protected-original refits, zero final-hour-qualified recommendations and no automatic promotion. The declared study completed inside an overall partial continuation; completed work and negative findings remain preserved.
 
 T2 means two hours before kickoff; T1 means one hour. These are comparison cutoffs, not collection barriers. Later pregame observations remain visible with their actual timestamps. Threshold contracts are conditions with probabilities, not provider score forecasts.
 
