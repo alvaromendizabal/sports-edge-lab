@@ -269,11 +269,11 @@ const { chromium } = require(process.env.PLAYWRIGHT_MODULE_DIR || 'playwright');
       assert.match(await page.locator('#load-status').innerText(), /not a supported/);
       assert.equal(await page.locator('.observation').count(), 1);
       // Optional horizon metrics are report-only, with exact paired populations.
-      const horizonReport={...invented,unclassified_market_observations:[{provider:'Polymarket',provider_product:'polymarket_international',
-        native_market_id:'invented-unclassified-token',native_source_value:.4321,native_token_value:.4321,
+      const horizonReport={...invented,unclassified_market_observations:Array.from({length:27},(_,i)=>({provider:'Polymarket',provider_product:'polymarket_international',
+        native_market_id:'invented-unclassified-token-'+i,native_source_value:.4321,native_token_value:.4321,
         timestamp:1700000000,acquired_at:'2026-11-05T01:00:00Z',resolution:0,prediction:null,
         semantic_status:'UNVERIFIED_ZERO_RESOLUTION_POINT_OR_FRACTIONAL_SETTLEMENT',
-        pretip_price_eligible:false,comparison_eligible:false}],comparison_horizons:{schema:'sel.ncaa.b038.horizon_report.v1',
+        pretip_price_eligible:false,comparison_eligible:false})),comparison_horizons:{schema:'sel.ncaa.b038.horizon_report.v1',
         horizons:['T120','T60','LATEST_PRETIP'],rows:3,paired_settled:1,paired_unsettled:1,unavailable:1,
         paired_metrics:[{league:'ncaam',season_end_year:2027,target:'win',horizon:'T60',provider:'Kalshi',
           provider_product:'Kalshi',track:'native_rolling_weekly_reconstruction',model_evidence_mode:'retrospective',
@@ -289,7 +289,7 @@ const { chromium } = require(process.env.PLAYWRIGHT_MODULE_DIR || 'playwright');
       assert.match(await page.locator('#horizon-details').innerText(),/AUC: Unavailable/);
       assert.match(await page.locator('#horizon-details').innerText(),/invented-membership/);
       counts.horizonMetricViews++;
-      assert.match(await page.locator('#unclassified-details > summary').innerText(),/1 supplied.*may include settlement/);
+      assert.match(await page.locator('#unclassified-details > summary').innerText(),/27 supplied.*may include settlement/);
       if(!(await page.locator('#unclassified-details').evaluate(el=>el.open)))await page.locator('#unclassified-details > summary').click();
       await page.locator('#unclassified-details table').waitFor();
       assert.match(await page.locator('#unclassified-details').innerText(),/Source: 0.432100/);
@@ -299,6 +299,13 @@ const { chromium } = require(process.env.PLAYWRIGHT_MODULE_DIR || 'playwright');
       assert.equal(await page.locator('#summary .stat').nth(2).locator('strong').innerText(),'2');
       assert.equal((await page.locator('#results [data-captured-value]').allTextContents()).some(v=>v==='0.4321'),false);
       assert.equal((await page.locator('#results [data-strict-value]').allTextContents()).some(v=>v==='0.4321'),false);
+      assert.equal(await page.locator('#unclassified-details table tbody tr').count(),25);
+      assert.match(await page.locator('#unclassified-count').innerText(),/1–25 of 27/);
+      await page.locator('#unclassified-next').click();
+      assert.equal(await page.locator('#unclassified-details table tbody tr').count(),2);
+      assert.match(await page.locator('#unclassified-count').innerText(),/26–27 of 27/);
+      await page.locator('#unclassified-previous').click();
+      assert.equal(await page.locator('#unclassified-details table tbody tr').count(),25);
       counts.unclassifiedSourceViews++;
       await page.locator('#clear').click();
       assert.equal(await page.locator('#report').isHidden(), true);

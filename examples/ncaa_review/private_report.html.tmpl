@@ -74,16 +74,19 @@
     host.append(node('p','Native source points retained without a classified market price. They may include settlement and are not eligible pre-tip prices, forecasts or comparison pairs. The supplied count is separate from the captured market-observation inventory.','note'));
     if(rows===undefined){host.append(node('p','This report does not supply an unclassified source inventory. Its absence is not a zero-coverage claim.','note'));return;}
     if(!rows.length){host.append(node('p','No unclassified source records were supplied; this does not establish the absence of other provider history.','note'));return;}
-    const populate=()=>{if(!host.open||host.querySelector('table'))return;
+    let nativePage=0;const pager=node('div',undefined,'pager'),count=node('p'),buttons=node('div',undefined,'buttons'),inventoryHost=node('div');
+    const previous=node('button','Previous','secondary'),next=node('button','Next','secondary');previous.type=next.type='button';previous.id='unclassified-previous';next.id='unclassified-next';count.id='unclassified-count';buttons.append(previous,next);pager.append(count,buttons);host.append(pager,inventoryHost);
+    const populate=()=>{if(!host.open)return;const start=nativePage*25,visible=rows.slice(start,start+25);
+      count.textContent=(start+1)+'–'+(start+visible.length)+' of '+rows.length.toLocaleString('en-US')+' unclassified source observations';previous.disabled=nativePage===0;next.disabled=start+25>=rows.length;
       const [inventory,body]=table(['Provider / product','Native market / target','Native source / token value','Source / acquisition clocks','Semantic status / evidence']);
-      for(const r of rows){const provider=node('span',text(r.provider));provider.append(node('small',text(r.provider_product_label||r.provider_product)));
+      for(const r of visible){const provider=node('span',text(r.provider));provider.append(node('small',text(r.provider_product_label||r.provider_product)));
         const market=node('span',text(r.native_market_id));market.append(node('small','Target: '+text(r.target||r.native_target)));
         const native=node('span','Source: '+number(r.native_source_value,6));native.append(node('small','Token: '+number(r.native_token_value,6)));
         const clocks=node('span','Native timestamp: '+text(r.timestamp??r.native_source_timestamp??r.native_timestamp));clocks.append(node('small','Source quote: '+text(r.quote_time)),node('small','Acquired: '+text(r.acquired_at)));
         const evidence=node('span',text(r.semantic_status));evidence.append(details('Complete unclassified source record',r));
         appendRow(body,[provider,market,native,clocks,evidence]);
-      }host.append(inventory);
-    };host.ontoggle=populate;populate();
+      }inventoryHost.replaceChildren(inventory);
+    };previous.addEventListener('click',()=>{if(nativePage>0){nativePage--;populate();}});next.addEventListener('click',()=>{if((nativePage+1)*25<rows.length){nativePage++;populate();}});host.ontoggle=populate;populate();
   }
   function metricValues(target,values){
     const n=node('span');for(const [key,title]of(target==='win'?[['log_loss','Log loss'],['brier','Brier'],['accuracy','Accuracy'],['calibration_bias','Calibration bias'],['auc','AUC']]:[['mae','MAE'],['rmse','RMSE'],['bias','Bias']]))n.append(node('span',title+': '+number(values?.[key],4),'market-metric'));return n;
