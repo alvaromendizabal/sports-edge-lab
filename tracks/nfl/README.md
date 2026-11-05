@@ -1,12 +1,22 @@
 # Sports Edge Lab · NFL
 
-**Latest review: November 5, 2026 — expanded injury study completed.** All 1,152 historical cells and 462 rolling jobs finished; 1,038 new fitted identities and three separately timestamped early forecast lanes are documented. [Read the N045 update](N045_RESEARCH_UPDATE.md). These results are not automatic promotion or a qualified betting recommendation.
+**Later source update, November 5 at 23:28 UTC:** a separately verified official NFL capture now contains **340 listed rows across all 30 Week 9 team tables**, including Buffalo 18 and Minnesota 9. It is later than the N046 issues and **was not an input to those forecasts**. The earlier 295-row/29-team owner snapshot remains unchanged. [Inspect the new source census](injury_source_update_n047.json). This is source coverage, not proof of complete roster health or new model performance.
 
-[**Open the live NFL dashboard →**](https://sports-edge-lab-nfl.alv-mendizabal.chatgpt.site/) · [Latest research update](N045_RESEARCH_UPDATE.md) · [Model card](CURRENT_MODEL_CARD.md)
+**Latest review: November 5, 2026 — four actual forecast lanes and a performance record for every selectable model.** The owner issued 348 target rows for 29 games, fitted 12 new identities and reported 4,384 restored identities. Current formal injury coverage is 29/30 Week 9 teams; the new designation block has narrower, explicit coverage. [Read the actual N046 update](N046_RESEARCH_UPDATE.md).
+
+[**Open the live NFL dashboard →**](https://sports-edge-lab-nfl.alv-mendizabal.chatgpt.site/) · [Latest research update](N046_RESEARCH_UPDATE.md) · [Model evidence registry](review.html#model-evidence-registry) · [Model card](CURRENT_MODEL_CARD.md)
 
 **Pregame forecasting, matched market evaluation and recoverable ML systems.** Built by [Alvaro Mendizabal](https://github.com/alvaromendizabal). Review the evidence in your browser; no setup or private credentials required.
 
-## Latest verified work · November 5, 2026
+## Latest verified work · N046
+
+- **Four distinct forecast lanes:** retained calibrated, contribution shadow, current rolling, and the newly fitted designation lane. Each has actual issue clocks and 29 game cards; issued outcomes are pending, not borrowed from a historical study.
+- **Every model has an evidence record:** verified historical cohorts or an explicit pending/unavailable status for winner, margin, total and spread-cover readiness.
+- **All current-week providers:** 15/15 Week 9 winner/margin/total references for each of DraftKings, Kalshi and Polymarket. Latest genuinely recorded pregame exchange references cover all 121 completed games, separately from timed evaluation cohorts.
+- **Injury limits made visible:** 295 formal listed rows, 29/30 team slots; Buffalo unknown. The extra designation block supports JAX–BAL only. Verified starting-QB and replacement-quality features remain unresolved.
+- **Promotion follows evidence:** new forward issues have no scored outcomes yet. The selected annual reconstruction wins two more games than Kalshi on 119 common non-ties but has worse probability losses. No automatic promotion or demonstrated betting edge.
+
+## Previous verified work · N045 · November 5, 2026
 
 - **Expanded injury study completed:** all 1,152 historical cells and 462 rolling jobs; 1,029 new native fits and nine new stacks. All eight native families were evaluated. [Read the actual study](N045_RESEARCH_UPDATE.md).
 - **Current forecasts refreshed:** three retained forecast lanes issued 261 early target rows for 29 games. The current rolling lane used a roughly 53-second-old base snapshot and a 121-game training view. It remains raw research, separate from the new designation study.
@@ -24,8 +34,8 @@ T2 means two hours before kickoff; T1 means one hour. These are comparison cutof
 |---|---|---|
 | What did the model say about every game? | [Game/week explorer](review.html#latest-coverage) | All 272 scheduled games, 121 finals, every Week 9 game, distinct forecast streams |
 | Does it outperform markets? | [Matched performance and disagreements](review.html#coverage-performance) | Common-event metrics, winning and losing disagreements, coverage limits |
-| What changed scientifically? | [Completed injury study](N045_RESEARCH_UPDATE.md#performance-and-promotion) | New derived experiments, target-specific scores, uncertainty and retained negative findings |
-| What injury inputs are actually used? | [Current injury inputs](N045_RESEARCH_UPDATE.md#current-forecasts-and-injuries) | Acquired versus eligible data, current role gaps, historical publication limits |
+| What changed scientifically? | [Current evidence and promotion](N046_RESEARCH_UPDATE.md#performance-and-promotion) | New derived experiments, target-specific scores, uncertainty and retained negative findings |
+| What injury inputs are actually used? | [Current injury inputs](N046_RESEARCH_UPDATE.md#injuries-acquired-admitted-and-still-unknown) | Acquired versus eligible data, current role gaps, historical publication limits |
 | Can I reproduce the engineering? | [Promotion demonstration](injury_promotion.py) · [Tests](test_injury_promotion.py) | Credential-free invented examples of chronology, paired cohorts and admission failures |
 
 ```bash

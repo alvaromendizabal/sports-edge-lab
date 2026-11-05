@@ -1,0 +1,3290 @@
+{
+  "schema": "sports-edge-lab.nfl.model-performance-registry.v1",
+  "models": [
+    {
+      "id": "original_frozen",
+      "label": "Original timely frozen issue",
+      "kind": "PRESERVED_PUBLIC_STREAM",
+      "record_source": "current_coverage.json",
+      "records": [],
+      "issued_resolved_games": null,
+      "performance_status": "PERFORMANCE_NOT_PUBLISHED",
+      "qualification": "Each row has its own exact event cohort, cutoff and provider. Counts cannot be pooled across provider rows. Missing metrics are unavailable, not zero.",
+      "target_readiness": {
+        "winner": {
+          "status": "PENDING_OR_UNAVAILABLE",
+          "missing_metrics_are_zero": false
+        },
+        "margin": {
+          "status": "PENDING_OR_UNAVAILABLE",
+          "missing_metrics_are_zero": false
+        },
+        "total": {
+          "status": "PENDING_OR_UNAVAILABLE",
+          "missing_metrics_are_zero": false
+        },
+        "spread_cover": {
+          "status": "NOT_CALIBRATED_FOR_EXECUTABLE_LINE",
+          "reason": "A point margin alone is not a cover probability. No verified line-specific cover distribution, settlement/fee evaluation or promoted cover strategy is attached to this stream."
+        }
+      }
+    },
+    {
+      "id": "original_saved",
+      "label": "Original saved baseline \u00b7 horizon unverified",
+      "kind": "PRESERVED_PUBLIC_STREAM",
+      "record_source": "current_coverage.json",
+      "records": [],
+      "issued_resolved_games": null,
+      "performance_status": "PERFORMANCE_NOT_PUBLISHED",
+      "qualification": "Each row has its own exact event cohort, cutoff and provider. Counts cannot be pooled across provider rows. Missing metrics are unavailable, not zero.",
+      "target_readiness": {
+        "winner": {
+          "status": "PENDING_OR_UNAVAILABLE",
+          "missing_metrics_are_zero": false
+        },
+        "margin": {
+          "status": "PENDING_OR_UNAVAILABLE",
+          "missing_metrics_are_zero": false
+        },
+        "total": {
+          "status": "PENDING_OR_UNAVAILABLE",
+          "missing_metrics_are_zero": false
+        },
+        "spread_cover": {
+          "status": "NOT_CALIBRATED_FOR_EXECUTABLE_LINE",
+          "reason": "A point margin alone is not a cover probability. No verified line-specific cover distribution, settlement/fee evaluation or promoted cover strategy is attached to this stream."
+        }
+      }
+    },
+    {
+      "id": "selected_annual",
+      "label": "Selected annual heads",
+      "kind": "PRESERVED_PUBLIC_STREAM",
+      "record_source": "current_coverage.json",
+      "records": [
+        {
+          "cohort_sha256": "3ff720eeb183d3d6981b681f0da1e8990f904dde34988110b4c1fed22b04c424",
+          "comparison_rule": "SAVED_HISTORICAL_REFERENCE",
+          "horizon": "T2",
+          "model_id": "selected_annual",
+          "model_metrics": {
+            "accuracy": 0.70220588,
+            "brier": 0.21541491,
+            "correct": 191,
+            "ece_10": 0.07643912,
+            "games": 272,
+            "log_loss": 0.62160921,
+            "roc_auc": 0.71696986
+          },
+          "provider": "DraftKings",
+          "provider_metrics": {
+            "accuracy": 0.71691176,
+            "brier": 0.20420298,
+            "correct": 195,
+            "ece_10": 0.10468977,
+            "games": 272,
+            "log_loss": 0.59676933,
+            "roc_auc": 0.75354331
+          },
+          "qualification": "Descriptive matched-event/horizon evaluation; original-issue and reconstructed origins remain separate. Not ROI.",
+          "season": 2024,
+          "target": "win",
+          "week": "ALL"
+        },
+        {
+          "cohort_sha256": "4fd24f6f327cb82fc57a3098d3f46dacfae9c2394586ecdb06aa78adca4a22bc",
+          "comparison_rule": "ASOF_PRE_CUTOFF_V2",
+          "horizon": "T2",
+          "model_id": "selected_annual",
+          "model_metrics": {
+            "accuracy": 0.74731183,
+            "brier": 0.19810694,
+            "correct": 139,
+            "ece_10": 0.11580085,
+            "games": 186,
+            "log_loss": 0.58431593,
+            "roc_auc": 0.77623762
+          },
+          "provider": "Polymarket",
+          "provider_metrics": {
+            "accuracy": 0.74731183,
+            "brier": 0.18389753,
+            "correct": 139,
+            "ece_10": 0.09033333,
+            "games": 186,
+            "log_loss": 0.55109685,
+            "roc_auc": 0.80675597
+          },
+          "qualification": "Descriptive matched-event/horizon evaluation; original-issue and reconstructed origins remain separate. Not ROI.",
+          "season": 2024,
+          "target": "win",
+          "week": "ALL"
+        },
+        {
+          "cohort_sha256": "3ff720eeb183d3d6981b681f0da1e8990f904dde34988110b4c1fed22b04c424",
+          "comparison_rule": "SAVED_HISTORICAL_REFERENCE",
+          "horizon": "T2",
+          "model_id": "selected_annual",
+          "model_metrics": {
+            "bias": -1.39847049,
+            "crps": null,
+            "distribution_reason": "Point-only input; no registered predictive distribution supplied.",
+            "games": 272,
+            "interval_coverage": null,
+            "interval_width": null,
+            "mae": 9.89492346,
+            "rmse": 12.95921079
+          },
+          "provider": "DraftKings",
+          "provider_metrics": {
+            "bias": -1.75367647,
+            "crps": null,
+            "distribution_reason": "Point-only input; no registered predictive distribution supplied.",
+            "games": 272,
+            "interval_coverage": null,
+            "interval_width": null,
+            "mae": 9.64705882,
+            "rmse": 12.53451118
+          },
+          "qualification": "Descriptive matched-event/horizon evaluation; original-issue and reconstructed origins remain separate. Not ROI.",
+          "season": 2024,
+          "target": "total",
+          "week": "ALL"
+        },
+        {
+          "cohort_sha256": "3ff720eeb183d3d6981b681f0da1e8990f904dde34988110b4c1fed22b04c424",
+          "comparison_rule": "SAVED_HISTORICAL_REFERENCE",
+          "horizon": "T2",
+          "model_id": "selected_annual",
+          "model_metrics": {
+            "bias": 0.09013363,
+            "crps": null,
+            "distribution_reason": "Point-only input; no registered predictive distribution supplied.",
+            "games": 272,
+            "interval_coverage": null,
+            "interval_width": null,
+            "mae": 10.03156099,
+            "rmse": 13.15934409
+          },
+          "provider": "DraftKings",
+          "provider_metrics": {
+            "bias": -0.33088235,
+            "crps": null,
+            "distribution_reason": "Point-only input; no registered predictive distribution supplied.",
+            "games": 272,
+            "interval_coverage": null,
+            "interval_width": null,
+            "mae": 9.72058824,
+            "rmse": 12.71021764
+          },
+          "qualification": "Descriptive matched-event/horizon evaluation; original-issue and reconstructed origins remain separate. Not ROI.",
+          "season": 2024,
+          "target": "margin",
+          "week": "ALL"
+        },
+        {
+          "cohort_sha256": "28de8dd745c0ca8a3c07ceb8d6ca890100de9db4db751860b2f1cb0255358289",
+          "comparison_rule": "SAVED_HISTORICAL_REFERENCE",
+          "horizon": "T2",
+          "model_id": "selected_annual",
+          "model_metrics": {
+            "accuracy": 0.67491166,
+            "brier": 0.22189503,
+            "correct": 191,
+            "ece_10": 0.06387336,
+            "games": 283,
+            "log_loss": 0.63432609,
+            "roc_auc": 0.6872366
+          },
+          "provider": "DraftKings",
+          "provider_metrics": {
+            "accuracy": 0.64664311,
+            "brier": 0.21662016,
+            "correct": 183,
+            "ece_10": 0.04255578,
+            "games": 283,
+            "log_loss": 0.62001508,
+            "roc_auc": 0.70324102
+          },
+          "qualification": "Descriptive matched-event/horizon evaluation; original-issue and reconstructed origins remain separate. Not ROI.",
+          "season": 2025,
+          "target": "win",
+          "week": "ALL"
+        },
+        {
+          "cohort_sha256": "0fa9adad9ca994156023ed4986f52bca3e07c86bf5441420abfa5356801b383a",
+          "comparison_rule": "ASOF_PRE_CUTOFF_V2",
+          "horizon": "T2",
+          "model_id": "selected_annual",
+          "model_metrics": {
+            "accuracy": 0.6344086,
+            "brier": 0.23197852,
+            "correct": 59,
+            "ece_10": 0.10441057,
+            "games": 93,
+            "log_loss": 0.65447813,
+            "roc_auc": 0.68362627
+          },
+          "provider": "Polymarket",
+          "provider_metrics": {
+            "accuracy": 0.59139785,
+            "brier": 0.21978172,
+            "correct": 55,
+            "ece_10": 0.1811828,
+            "games": 93,
+            "log_loss": 0.62107423,
+            "roc_auc": 0.71947271
+          },
+          "qualification": "Descriptive matched-event/horizon evaluation; original-issue and reconstructed origins remain separate. Not ROI.",
+          "season": 2025,
+          "target": "win",
+          "week": "ALL"
+        },
+        {
+          "cohort_sha256": "6f0cdd01997be7d452ed50cc40011fc23e5e0b4f8bce813a582c75927b6676f8",
+          "comparison_rule": "SAVED_HISTORICAL_REFERENCE",
+          "horizon": "T2",
+          "model_id": "selected_annual",
+          "model_metrics": {
+            "bias": 0.09949874,
+            "crps": null,
+            "distribution_reason": "Point-only input; no registered predictive distribution supplied.",
+            "games": 284,
+            "interval_coverage": null,
+            "interval_width": null,
+            "mae": 10.71408598,
+            "rmse": 13.4762199
+          },
+          "provider": "DraftKings",
+          "provider_metrics": {
+            "bias": -0.87676056,
+            "crps": null,
+            "distribution_reason": "Point-only input; no registered predictive distribution supplied.",
+            "games": 284,
+            "interval_coverage": null,
+            "interval_width": null,
+            "mae": 10.41197183,
+            "rmse": 13.22036947
+          },
+          "qualification": "Descriptive matched-event/horizon evaluation; original-issue and reconstructed origins remain separate. Not ROI.",
+          "season": 2025,
+          "target": "total",
+          "week": "ALL"
+        },
+        {
+          "cohort_sha256": "6f0cdd01997be7d452ed50cc40011fc23e5e0b4f8bce813a582c75927b6676f8",
+          "comparison_rule": "SAVED_HISTORICAL_REFERENCE",
+          "horizon": "T2",
+          "model_id": "selected_annual",
+          "model_metrics": {
+            "bias": -0.07305675,
+            "crps": null,
+            "distribution_reason": "Point-only input; no registered predictive distribution supplied.",
+            "games": 284,
+            "interval_coverage": null,
+            "interval_width": null,
+            "mae": 10.03904897,
+            "rmse": 12.90883447
+          },
+          "provider": "DraftKings",
+          "provider_metrics": {
+            "bias": -0.73943662,
+            "crps": null,
+            "distribution_reason": "Point-only input; no registered predictive distribution supplied.",
+            "games": 284,
+            "interval_coverage": null,
+            "interval_width": null,
+            "mae": 9.80633803,
+            "rmse": 12.51689
+          },
+          "qualification": "Descriptive matched-event/horizon evaluation; original-issue and reconstructed origins remain separate. Not ROI.",
+          "season": 2025,
+          "target": "margin",
+          "week": "ALL"
+        },
+        {
+          "cohort_sha256": "3f579b761bb625277bce4ef32aa8b9a7e7f67fc90bf2a9ad4b2d926e81e25e3c",
+          "comparison_rule": "SAVED_HISTORICAL_REFERENCE",
+          "horizon": "T2",
+          "model_id": "selected_annual",
+          "model_metrics": {
+            "accuracy": 0.63865546,
+            "brier": 0.2313976,
+            "correct": 76,
+            "ece_10": 0.08148761,
+            "games": 119,
+            "log_loss": 0.65394538,
+            "roc_auc": 0.66185625
+          },
+          "provider": "DraftKings",
+          "provider_metrics": {
+            "accuracy": 0.64705882,
+            "brier": 0.22642349,
+            "correct": 77,
+            "ece_10": 0.07533716,
+            "games": 119,
+            "log_loss": 0.64710261,
+            "roc_auc": 0.68123939
+          },
+          "qualification": "Descriptive matched-event/horizon evaluation; original-issue and reconstructed origins remain separate. Not ROI.",
+          "season": 2026,
+          "target": "win",
+          "week": "ALL"
+        },
+        {
+          "cohort_sha256": "3f579b761bb625277bce4ef32aa8b9a7e7f67fc90bf2a9ad4b2d926e81e25e3c",
+          "comparison_rule": "ASOF_PRE_CUTOFF_V2",
+          "horizon": "T2",
+          "model_id": "selected_annual",
+          "model_metrics": {
+            "accuracy": 0.63865546,
+            "brier": 0.2313976,
+            "correct": 76,
+            "ece_10": 0.08148761,
+            "games": 119,
+            "log_loss": 0.65394538,
+            "roc_auc": 0.66185625
+          },
+          "provider": "Kalshi",
+          "provider_metrics": {
+            "accuracy": 0.63865546,
+            "brier": 0.22489727,
+            "correct": 76,
+            "ece_10": 0.05886555,
+            "games": 119,
+            "log_loss": 0.64437705,
+            "roc_auc": 0.68449349
+          },
+          "qualification": "Descriptive matched-event/horizon evaluation; original-issue and reconstructed origins remain separate. Not ROI.",
+          "season": 2026,
+          "target": "win",
+          "week": "ALL"
+        },
+        {
+          "cohort_sha256": "790f486f28b66afff6e8d9b3a3d3aceb70324bc0390a116fc37c2b950db49714",
+          "comparison_rule": "ASOF_PRE_CUTOFF_V2",
+          "horizon": "T2",
+          "model_id": "selected_annual",
+          "model_metrics": {
+            "accuracy": 0.65934066,
+            "brier": 0.22598467,
+            "correct": 60,
+            "ece_10": 0.13055355,
+            "games": 91,
+            "log_loss": 0.64129514,
+            "roc_auc": 0.69584139
+          },
+          "provider": "Polymarket",
+          "provider_metrics": {
+            "accuracy": 0.69230769,
+            "brier": 0.21245357,
+            "correct": 63,
+            "ece_10": 0.10697802,
+            "games": 91,
+            "log_loss": 0.61531736,
+            "roc_auc": 0.74250484
+          },
+          "qualification": "Descriptive matched-event/horizon evaluation; original-issue and reconstructed origins remain separate. Not ROI.",
+          "season": 2026,
+          "target": "win",
+          "week": "ALL"
+        },
+        {
+          "cohort_sha256": "41a1acc2333070ad83cd5f29f3d2488c730fcf0cdb61566e6cd688867ace70f4",
+          "comparison_rule": "SAVED_HISTORICAL_REFERENCE",
+          "horizon": "T2",
+          "model_id": "selected_annual",
+          "model_metrics": {
+            "bias": -0.88226876,
+            "crps": null,
+            "distribution_reason": "Point-only input; no registered predictive distribution supplied.",
+            "games": 120,
+            "interval_coverage": null,
+            "interval_width": null,
+            "mae": 11.43137693,
+            "rmse": 14.03705864
+          },
+          "provider": "DraftKings",
+          "provider_metrics": {
+            "bias": -0.99166667,
+            "crps": null,
+            "distribution_reason": "Point-only input; no registered predictive distribution supplied.",
+            "games": 120,
+            "interval_coverage": null,
+            "interval_width": null,
+            "mae": 10.78333333,
+            "rmse": 13.29348211
+          },
+          "qualification": "Descriptive matched-event/horizon evaluation; original-issue and reconstructed origins remain separate. Not ROI.",
+          "season": 2026,
+          "target": "total",
+          "week": "ALL"
+        },
+        {
+          "cohort_sha256": "41a1acc2333070ad83cd5f29f3d2488c730fcf0cdb61566e6cd688867ace70f4",
+          "comparison_rule": "SAVED_HISTORICAL_REFERENCE",
+          "horizon": "T2",
+          "model_id": "selected_annual",
+          "model_metrics": {
+            "bias": 1.96423794,
+            "crps": null,
+            "distribution_reason": "Point-only input; no registered predictive distribution supplied.",
+            "games": 120,
+            "interval_coverage": null,
+            "interval_width": null,
+            "mae": 10.04513068,
+            "rmse": 12.6251918
+          },
+          "provider": "DraftKings",
+          "provider_metrics": {
+            "bias": 1.17916667,
+            "crps": null,
+            "distribution_reason": "Point-only input; no registered predictive distribution supplied.",
+            "games": 120,
+            "interval_coverage": null,
+            "interval_width": null,
+            "mae": 9.52083333,
+            "rmse": 12.10173886
+          },
+          "qualification": "Descriptive matched-event/horizon evaluation; original-issue and reconstructed origins remain separate. Not ROI.",
+          "season": 2026,
+          "target": "margin",
+          "week": "ALL"
+        }
+      ],
+      "issued_resolved_games": null,
+      "performance_status": "VERIFIED_PUBLISHED_COHORTS",
+      "qualification": "Each row has its own exact event cohort, cutoff and provider. Counts cannot be pooled across provider rows. Missing metrics are unavailable, not zero.",
+      "target_readiness": {
+        "winner": {
+          "status": "VERIFIED_PUBLISHED_COHORTS",
+          "missing_metrics_are_zero": false
+        },
+        "margin": {
+          "status": "VERIFIED_PUBLISHED_COHORTS",
+          "missing_metrics_are_zero": false
+        },
+        "total": {
+          "status": "VERIFIED_PUBLISHED_COHORTS",
+          "missing_metrics_are_zero": false
+        },
+        "spread_cover": {
+          "status": "NOT_CALIBRATED_FOR_EXECUTABLE_LINE",
+          "reason": "A point margin alone is not a cover probability. No verified line-specific cover distribution, settlement/fee evaluation or promoted cover strategy is attached to this stream."
+        }
+      }
+    },
+    {
+      "id": "selected_weekly",
+      "label": "Selected weekly refits",
+      "kind": "PRESERVED_PUBLIC_STREAM",
+      "record_source": "current_coverage.json",
+      "records": [
+        {
+          "cohort_sha256": "3ff720eeb183d3d6981b681f0da1e8990f904dde34988110b4c1fed22b04c424",
+          "comparison_rule": "SAVED_HISTORICAL_REFERENCE",
+          "horizon": "T2",
+          "model_id": "selected_weekly",
+          "model_metrics": {
+            "accuracy": 0.68014706,
+            "brier": 0.21462897,
+            "correct": 185,
+            "ece_10": 0.04759288,
+            "games": 272,
+            "log_loss": 0.62096542,
+            "roc_auc": 0.7175672
+          },
+          "provider": "DraftKings",
+          "provider_metrics": {
+            "accuracy": 0.71691176,
+            "brier": 0.20420298,
+            "correct": 195,
+            "ece_10": 0.10468977,
+            "games": 272,
+            "log_loss": 0.59676933,
+            "roc_auc": 0.75354331
+          },
+          "qualification": "Descriptive matched-event/horizon evaluation; original-issue and reconstructed origins remain separate. Not ROI.",
+          "season": 2024,
+          "target": "win",
+          "week": "ALL"
+        },
+        {
+          "cohort_sha256": "4fd24f6f327cb82fc57a3098d3f46dacfae9c2394586ecdb06aa78adca4a22bc",
+          "comparison_rule": "ASOF_PRE_CUTOFF_V2",
+          "horizon": "T2",
+          "model_id": "selected_weekly",
+          "model_metrics": {
+            "accuracy": 0.7311828,
+            "brier": 0.1962575,
+            "correct": 136,
+            "ece_10": 0.08769245,
+            "games": 186,
+            "log_loss": 0.5807328,
+            "roc_auc": 0.77775189
+          },
+          "provider": "Polymarket",
+          "provider_metrics": {
+            "accuracy": 0.74731183,
+            "brier": 0.18389753,
+            "correct": 139,
+            "ece_10": 0.09033333,
+            "games": 186,
+            "log_loss": 0.55109685,
+            "roc_auc": 0.80675597
+          },
+          "qualification": "Descriptive matched-event/horizon evaluation; original-issue and reconstructed origins remain separate. Not ROI.",
+          "season": 2024,
+          "target": "win",
+          "week": "ALL"
+        },
+        {
+          "cohort_sha256": "3ff720eeb183d3d6981b681f0da1e8990f904dde34988110b4c1fed22b04c424",
+          "comparison_rule": "SAVED_HISTORICAL_REFERENCE",
+          "horizon": "T2",
+          "model_id": "selected_weekly",
+          "model_metrics": {
+            "bias": -1.04477442,
+            "crps": null,
+            "distribution_reason": "Point-only input; no registered predictive distribution supplied.",
+            "games": 272,
+            "interval_coverage": null,
+            "interval_width": null,
+            "mae": 9.85236712,
+            "rmse": 12.88471917
+          },
+          "provider": "DraftKings",
+          "provider_metrics": {
+            "bias": -1.75367647,
+            "crps": null,
+            "distribution_reason": "Point-only input; no registered predictive distribution supplied.",
+            "games": 272,
+            "interval_coverage": null,
+            "interval_width": null,
+            "mae": 9.64705882,
+            "rmse": 12.53451118
+          },
+          "qualification": "Descriptive matched-event/horizon evaluation; original-issue and reconstructed origins remain separate. Not ROI.",
+          "season": 2024,
+          "target": "total",
+          "week": "ALL"
+        },
+        {
+          "cohort_sha256": "3ff720eeb183d3d6981b681f0da1e8990f904dde34988110b4c1fed22b04c424",
+          "comparison_rule": "SAVED_HISTORICAL_REFERENCE",
+          "horizon": "T2",
+          "model_id": "selected_weekly",
+          "model_metrics": {
+            "bias": -0.03471454,
+            "crps": null,
+            "distribution_reason": "Point-only input; no registered predictive distribution supplied.",
+            "games": 272,
+            "interval_coverage": null,
+            "interval_width": null,
+            "mae": 10.06103126,
+            "rmse": 13.1617219
+          },
+          "provider": "DraftKings",
+          "provider_metrics": {
+            "bias": -0.33088235,
+            "crps": null,
+            "distribution_reason": "Point-only input; no registered predictive distribution supplied.",
+            "games": 272,
+            "interval_coverage": null,
+            "interval_width": null,
+            "mae": 9.72058824,
+            "rmse": 12.71021764
+          },
+          "qualification": "Descriptive matched-event/horizon evaluation; original-issue and reconstructed origins remain separate. Not ROI.",
+          "season": 2024,
+          "target": "margin",
+          "week": "ALL"
+        },
+        {
+          "cohort_sha256": "28de8dd745c0ca8a3c07ceb8d6ca890100de9db4db751860b2f1cb0255358289",
+          "comparison_rule": "SAVED_HISTORICAL_REFERENCE",
+          "horizon": "T2",
+          "model_id": "selected_weekly",
+          "model_metrics": {
+            "accuracy": 0.66784452,
+            "brier": 0.22150465,
+            "correct": 189,
+            "ece_10": 0.06440797,
+            "games": 283,
+            "log_loss": 0.63319298,
+            "roc_auc": 0.68949428
+          },
+          "provider": "DraftKings",
+          "provider_metrics": {
+            "accuracy": 0.64664311,
+            "brier": 0.21662016,
+            "correct": 183,
+            "ece_10": 0.04255578,
+            "games": 283,
+            "log_loss": 0.62001508,
+            "roc_auc": 0.70324102
+          },
+          "qualification": "Descriptive matched-event/horizon evaluation; original-issue and reconstructed origins remain separate. Not ROI.",
+          "season": 2025,
+          "target": "win",
+          "week": "ALL"
+        },
+        {
+          "cohort_sha256": "0fa9adad9ca994156023ed4986f52bca3e07c86bf5441420abfa5356801b383a",
+          "comparison_rule": "ASOF_PRE_CUTOFF_V2",
+          "horizon": "T2",
+          "model_id": "selected_weekly",
+          "model_metrics": {
+            "accuracy": 0.6344086,
+            "brier": 0.22979393,
+            "correct": 59,
+            "ece_10": 0.11054503,
+            "games": 93,
+            "log_loss": 0.64916158,
+            "roc_auc": 0.69287697
+          },
+          "provider": "Polymarket",
+          "provider_metrics": {
+            "accuracy": 0.59139785,
+            "brier": 0.21978172,
+            "correct": 55,
+            "ece_10": 0.1811828,
+            "games": 93,
+            "log_loss": 0.62107423,
+            "roc_auc": 0.71947271
+          },
+          "qualification": "Descriptive matched-event/horizon evaluation; original-issue and reconstructed origins remain separate. Not ROI.",
+          "season": 2025,
+          "target": "win",
+          "week": "ALL"
+        },
+        {
+          "cohort_sha256": "6f0cdd01997be7d452ed50cc40011fc23e5e0b4f8bce813a582c75927b6676f8",
+          "comparison_rule": "SAVED_HISTORICAL_REFERENCE",
+          "horizon": "T2",
+          "model_id": "selected_weekly",
+          "model_metrics": {
+            "bias": 0.15223495,
+            "crps": null,
+            "distribution_reason": "Point-only input; no registered predictive distribution supplied.",
+            "games": 284,
+            "interval_coverage": null,
+            "interval_width": null,
+            "mae": 10.69318486,
+            "rmse": 13.44079299
+          },
+          "provider": "DraftKings",
+          "provider_metrics": {
+            "bias": -0.87676056,
+            "crps": null,
+            "distribution_reason": "Point-only input; no registered predictive distribution supplied.",
+            "games": 284,
+            "interval_coverage": null,
+            "interval_width": null,
+            "mae": 10.41197183,
+            "rmse": 13.22036947
+          },
+          "qualification": "Descriptive matched-event/horizon evaluation; original-issue and reconstructed origins remain separate. Not ROI.",
+          "season": 2025,
+          "target": "total",
+          "week": "ALL"
+        },
+        {
+          "cohort_sha256": "6f0cdd01997be7d452ed50cc40011fc23e5e0b4f8bce813a582c75927b6676f8",
+          "comparison_rule": "SAVED_HISTORICAL_REFERENCE",
+          "horizon": "T2",
+          "model_id": "selected_weekly",
+          "model_metrics": {
+            "bias": 0.07989015,
+            "crps": null,
+            "distribution_reason": "Point-only input; no registered predictive distribution supplied.",
+            "games": 284,
+            "interval_coverage": null,
+            "interval_width": null,
+            "mae": 10.04567711,
+            "rmse": 12.90504336
+          },
+          "provider": "DraftKings",
+          "provider_metrics": {
+            "bias": -0.73943662,
+            "crps": null,
+            "distribution_reason": "Point-only input; no registered predictive distribution supplied.",
+            "games": 284,
+            "interval_coverage": null,
+            "interval_width": null,
+            "mae": 9.80633803,
+            "rmse": 12.51689
+          },
+          "qualification": "Descriptive matched-event/horizon evaluation; original-issue and reconstructed origins remain separate. Not ROI.",
+          "season": 2025,
+          "target": "margin",
+          "week": "ALL"
+        },
+        {
+          "cohort_sha256": "3f579b761bb625277bce4ef32aa8b9a7e7f67fc90bf2a9ad4b2d926e81e25e3c",
+          "comparison_rule": "SAVED_HISTORICAL_REFERENCE",
+          "horizon": "T2",
+          "model_id": "selected_weekly",
+          "model_metrics": {
+            "accuracy": 0.6302521,
+            "brier": 0.22937512,
+            "correct": 75,
+            "ece_10": 0.05876083,
+            "games": 119,
+            "log_loss": 0.6498214,
+            "roc_auc": 0.66893039
+          },
+          "provider": "DraftKings",
+          "provider_metrics": {
+            "accuracy": 0.64705882,
+            "brier": 0.22642349,
+            "correct": 77,
+            "ece_10": 0.07533716,
+            "games": 119,
+            "log_loss": 0.64710261,
+            "roc_auc": 0.68123939
+          },
+          "qualification": "Descriptive matched-event/horizon evaluation; original-issue and reconstructed origins remain separate. Not ROI.",
+          "season": 2026,
+          "target": "win",
+          "week": "ALL"
+        },
+        {
+          "cohort_sha256": "3f579b761bb625277bce4ef32aa8b9a7e7f67fc90bf2a9ad4b2d926e81e25e3c",
+          "comparison_rule": "ASOF_PRE_CUTOFF_V2",
+          "horizon": "T2",
+          "model_id": "selected_weekly",
+          "model_metrics": {
+            "accuracy": 0.6302521,
+            "brier": 0.22937512,
+            "correct": 75,
+            "ece_10": 0.05876083,
+            "games": 119,
+            "log_loss": 0.6498214,
+            "roc_auc": 0.66893039
+          },
+          "provider": "Kalshi",
+          "provider_metrics": {
+            "accuracy": 0.63865546,
+            "brier": 0.22489727,
+            "correct": 76,
+            "ece_10": 0.05886555,
+            "games": 119,
+            "log_loss": 0.64437705,
+            "roc_auc": 0.68449349
+          },
+          "qualification": "Descriptive matched-event/horizon evaluation; original-issue and reconstructed origins remain separate. Not ROI.",
+          "season": 2026,
+          "target": "win",
+          "week": "ALL"
+        },
+        {
+          "cohort_sha256": "790f486f28b66afff6e8d9b3a3d3aceb70324bc0390a116fc37c2b950db49714",
+          "comparison_rule": "ASOF_PRE_CUTOFF_V2",
+          "horizon": "T2",
+          "model_id": "selected_weekly",
+          "model_metrics": {
+            "accuracy": 0.65934066,
+            "brier": 0.22543683,
+            "correct": 60,
+            "ece_10": 0.12388829,
+            "games": 91,
+            "log_loss": 0.64013008,
+            "roc_auc": 0.69825919
+          },
+          "provider": "Polymarket",
+          "provider_metrics": {
+            "accuracy": 0.69230769,
+            "brier": 0.21245357,
+            "correct": 63,
+            "ece_10": 0.10697802,
+            "games": 91,
+            "log_loss": 0.61531736,
+            "roc_auc": 0.74250484
+          },
+          "qualification": "Descriptive matched-event/horizon evaluation; original-issue and reconstructed origins remain separate. Not ROI.",
+          "season": 2026,
+          "target": "win",
+          "week": "ALL"
+        },
+        {
+          "cohort_sha256": "41a1acc2333070ad83cd5f29f3d2488c730fcf0cdb61566e6cd688867ace70f4",
+          "comparison_rule": "SAVED_HISTORICAL_REFERENCE",
+          "horizon": "T2",
+          "model_id": "selected_weekly",
+          "model_metrics": {
+            "bias": -0.84378379,
+            "crps": null,
+            "distribution_reason": "Point-only input; no registered predictive distribution supplied.",
+            "games": 120,
+            "interval_coverage": null,
+            "interval_width": null,
+            "mae": 11.48384273,
+            "rmse": 14.06336599
+          },
+          "provider": "DraftKings",
+          "provider_metrics": {
+            "bias": -0.99166667,
+            "crps": null,
+            "distribution_reason": "Point-only input; no registered predictive distribution supplied.",
+            "games": 120,
+            "interval_coverage": null,
+            "interval_width": null,
+            "mae": 10.78333333,
+            "rmse": 13.29348211
+          },
+          "qualification": "Descriptive matched-event/horizon evaluation; original-issue and reconstructed origins remain separate. Not ROI.",
+          "season": 2026,
+          "target": "total",
+          "week": "ALL"
+        },
+        {
+          "cohort_sha256": "41a1acc2333070ad83cd5f29f3d2488c730fcf0cdb61566e6cd688867ace70f4",
+          "comparison_rule": "SAVED_HISTORICAL_REFERENCE",
+          "horizon": "T2",
+          "model_id": "selected_weekly",
+          "model_metrics": {
+            "bias": 1.8359506,
+            "crps": null,
+            "distribution_reason": "Point-only input; no registered predictive distribution supplied.",
+            "games": 120,
+            "interval_coverage": null,
+            "interval_width": null,
+            "mae": 10.02474225,
+            "rmse": 12.59152476
+          },
+          "provider": "DraftKings",
+          "provider_metrics": {
+            "bias": 1.17916667,
+            "crps": null,
+            "distribution_reason": "Point-only input; no registered predictive distribution supplied.",
+            "games": 120,
+            "interval_coverage": null,
+            "interval_width": null,
+            "mae": 9.52083333,
+            "rmse": 12.10173886
+          },
+          "qualification": "Descriptive matched-event/horizon evaluation; original-issue and reconstructed origins remain separate. Not ROI.",
+          "season": 2026,
+          "target": "margin",
+          "week": "ALL"
+        }
+      ],
+      "issued_resolved_games": null,
+      "performance_status": "VERIFIED_PUBLISHED_COHORTS",
+      "qualification": "Each row has its own exact event cohort, cutoff and provider. Counts cannot be pooled across provider rows. Missing metrics are unavailable, not zero.",
+      "target_readiness": {
+        "winner": {
+          "status": "VERIFIED_PUBLISHED_COHORTS",
+          "missing_metrics_are_zero": false
+        },
+        "margin": {
+          "status": "VERIFIED_PUBLISHED_COHORTS",
+          "missing_metrics_are_zero": false
+        },
+        "total": {
+          "status": "VERIFIED_PUBLISHED_COHORTS",
+          "missing_metrics_are_zero": false
+        },
+        "spread_cover": {
+          "status": "NOT_CALIBRATED_FOR_EXECUTABLE_LINE",
+          "reason": "A point margin alone is not a cover probability. No verified line-specific cover distribution, settlement/fee evaluation or promoted cover strategy is attached to this stream."
+        }
+      }
+    },
+    {
+      "id": "selected_event",
+      "label": "Selected event refits",
+      "kind": "PRESERVED_PUBLIC_STREAM",
+      "record_source": "current_coverage.json",
+      "records": [
+        {
+          "cohort_sha256": "3ff720eeb183d3d6981b681f0da1e8990f904dde34988110b4c1fed22b04c424",
+          "comparison_rule": "SAVED_HISTORICAL_REFERENCE",
+          "horizon": "T2",
+          "model_id": "selected_event",
+          "model_metrics": {
+            "accuracy": 0.6875,
+            "brier": 0.21442381,
+            "correct": 187,
+            "ece_10": 0.06345716,
+            "games": 272,
+            "log_loss": 0.62023877,
+            "roc_auc": 0.71789302
+          },
+          "provider": "DraftKings",
+          "provider_metrics": {
+            "accuracy": 0.71691176,
+            "brier": 0.20420298,
+            "correct": 195,
+            "ece_10": 0.10468977,
+            "games": 272,
+            "log_loss": 0.59676933,
+            "roc_auc": 0.75354331
+          },
+          "qualification": "Descriptive matched-event/horizon evaluation; original-issue and reconstructed origins remain separate. Not ROI.",
+          "season": 2024,
+          "target": "win",
+          "week": "ALL"
+        },
+        {
+          "cohort_sha256": "4fd24f6f327cb82fc57a3098d3f46dacfae9c2394586ecdb06aa78adca4a22bc",
+          "comparison_rule": "ASOF_PRE_CUTOFF_V2",
+          "horizon": "T2",
+          "model_id": "selected_event",
+          "model_metrics": {
+            "accuracy": 0.73655914,
+            "brier": 0.19669877,
+            "correct": 137,
+            "ece_10": 0.09278539,
+            "games": 186,
+            "log_loss": 0.58157956,
+            "roc_auc": 0.77565521
+          },
+          "provider": "Polymarket",
+          "provider_metrics": {
+            "accuracy": 0.74731183,
+            "brier": 0.18389753,
+            "correct": 139,
+            "ece_10": 0.09033333,
+            "games": 186,
+            "log_loss": 0.55109685,
+            "roc_auc": 0.80675597
+          },
+          "qualification": "Descriptive matched-event/horizon evaluation; original-issue and reconstructed origins remain separate. Not ROI.",
+          "season": 2024,
+          "target": "win",
+          "week": "ALL"
+        },
+        {
+          "cohort_sha256": "3ff720eeb183d3d6981b681f0da1e8990f904dde34988110b4c1fed22b04c424",
+          "comparison_rule": "SAVED_HISTORICAL_REFERENCE",
+          "horizon": "T2",
+          "model_id": "selected_event",
+          "model_metrics": {
+            "bias": -1.05702576,
+            "crps": null,
+            "distribution_reason": "Point-only input; no registered predictive distribution supplied.",
+            "games": 272,
+            "interval_coverage": null,
+            "interval_width": null,
+            "mae": 9.85144004,
+            "rmse": 12.90381446
+          },
+          "provider": "DraftKings",
+          "provider_metrics": {
+            "bias": -1.75367647,
+            "crps": null,
+            "distribution_reason": "Point-only input; no registered predictive distribution supplied.",
+            "games": 272,
+            "interval_coverage": null,
+            "interval_width": null,
+            "mae": 9.64705882,
+            "rmse": 12.53451118
+          },
+          "qualification": "Descriptive matched-event/horizon evaluation; original-issue and reconstructed origins remain separate. Not ROI.",
+          "season": 2024,
+          "target": "total",
+          "week": "ALL"
+        },
+        {
+          "cohort_sha256": "3ff720eeb183d3d6981b681f0da1e8990f904dde34988110b4c1fed22b04c424",
+          "comparison_rule": "SAVED_HISTORICAL_REFERENCE",
+          "horizon": "T2",
+          "model_id": "selected_event",
+          "model_metrics": {
+            "bias": -0.0338475,
+            "crps": null,
+            "distribution_reason": "Point-only input; no registered predictive distribution supplied.",
+            "games": 272,
+            "interval_coverage": null,
+            "interval_width": null,
+            "mae": 10.07809737,
+            "rmse": 13.17989047
+          },
+          "provider": "DraftKings",
+          "provider_metrics": {
+            "bias": -0.33088235,
+            "crps": null,
+            "distribution_reason": "Point-only input; no registered predictive distribution supplied.",
+            "games": 272,
+            "interval_coverage": null,
+            "interval_width": null,
+            "mae": 9.72058824,
+            "rmse": 12.71021764
+          },
+          "qualification": "Descriptive matched-event/horizon evaluation; original-issue and reconstructed origins remain separate. Not ROI.",
+          "season": 2024,
+          "target": "margin",
+          "week": "ALL"
+        },
+        {
+          "cohort_sha256": "28de8dd745c0ca8a3c07ceb8d6ca890100de9db4db751860b2f1cb0255358289",
+          "comparison_rule": "SAVED_HISTORICAL_REFERENCE",
+          "horizon": "T2",
+          "model_id": "selected_event",
+          "model_metrics": {
+            "accuracy": 0.66077739,
+            "brier": 0.22224662,
+            "correct": 187,
+            "ece_10": 0.06458349,
+            "games": 283,
+            "log_loss": 0.6346409,
+            "roc_auc": 0.6867349
+          },
+          "provider": "DraftKings",
+          "provider_metrics": {
+            "accuracy": 0.64664311,
+            "brier": 0.21662016,
+            "correct": 183,
+            "ece_10": 0.04255578,
+            "games": 283,
+            "log_loss": 0.62001508,
+            "roc_auc": 0.70324102
+          },
+          "qualification": "Descriptive matched-event/horizon evaluation; original-issue and reconstructed origins remain separate. Not ROI.",
+          "season": 2025,
+          "target": "win",
+          "week": "ALL"
+        },
+        {
+          "cohort_sha256": "0fa9adad9ca994156023ed4986f52bca3e07c86bf5441420abfa5356801b383a",
+          "comparison_rule": "ASOF_PRE_CUTOFF_V2",
+          "horizon": "T2",
+          "model_id": "selected_event",
+          "model_metrics": {
+            "accuracy": 0.6344086,
+            "brier": 0.23095485,
+            "correct": 59,
+            "ece_10": 0.11353746,
+            "games": 93,
+            "log_loss": 0.65159924,
+            "roc_auc": 0.68732655
+          },
+          "provider": "Polymarket",
+          "provider_metrics": {
+            "accuracy": 0.59139785,
+            "brier": 0.21978172,
+            "correct": 55,
+            "ece_10": 0.1811828,
+            "games": 93,
+            "log_loss": 0.62107423,
+            "roc_auc": 0.71947271
+          },
+          "qualification": "Descriptive matched-event/horizon evaluation; original-issue and reconstructed origins remain separate. Not ROI.",
+          "season": 2025,
+          "target": "win",
+          "week": "ALL"
+        },
+        {
+          "cohort_sha256": "6f0cdd01997be7d452ed50cc40011fc23e5e0b4f8bce813a582c75927b6676f8",
+          "comparison_rule": "SAVED_HISTORICAL_REFERENCE",
+          "horizon": "T2",
+          "model_id": "selected_event",
+          "model_metrics": {
+            "bias": 0.14790484,
+            "crps": null,
+            "distribution_reason": "Point-only input; no registered predictive distribution supplied.",
+            "games": 284,
+            "interval_coverage": null,
+            "interval_width": null,
+            "mae": 10.70165596,
+            "rmse": 13.45276277
+          },
+          "provider": "DraftKings",
+          "provider_metrics": {
+            "bias": -0.87676056,
+            "crps": null,
+            "distribution_reason": "Point-only input; no registered predictive distribution supplied.",
+            "games": 284,
+            "interval_coverage": null,
+            "interval_width": null,
+            "mae": 10.41197183,
+            "rmse": 13.22036947
+          },
+          "qualification": "Descriptive matched-event/horizon evaluation; original-issue and reconstructed origins remain separate. Not ROI.",
+          "season": 2025,
+          "target": "total",
+          "week": "ALL"
+        },
+        {
+          "cohort_sha256": "6f0cdd01997be7d452ed50cc40011fc23e5e0b4f8bce813a582c75927b6676f8",
+          "comparison_rule": "SAVED_HISTORICAL_REFERENCE",
+          "horizon": "T2",
+          "model_id": "selected_event",
+          "model_metrics": {
+            "bias": 0.07985252,
+            "crps": null,
+            "distribution_reason": "Point-only input; no registered predictive distribution supplied.",
+            "games": 284,
+            "interval_coverage": null,
+            "interval_width": null,
+            "mae": 10.05211809,
+            "rmse": 12.90275682
+          },
+          "provider": "DraftKings",
+          "provider_metrics": {
+            "bias": -0.73943662,
+            "crps": null,
+            "distribution_reason": "Point-only input; no registered predictive distribution supplied.",
+            "games": 284,
+            "interval_coverage": null,
+            "interval_width": null,
+            "mae": 9.80633803,
+            "rmse": 12.51689
+          },
+          "qualification": "Descriptive matched-event/horizon evaluation; original-issue and reconstructed origins remain separate. Not ROI.",
+          "season": 2025,
+          "target": "margin",
+          "week": "ALL"
+        },
+        {
+          "cohort_sha256": "3f579b761bb625277bce4ef32aa8b9a7e7f67fc90bf2a9ad4b2d926e81e25e3c",
+          "comparison_rule": "SAVED_HISTORICAL_REFERENCE",
+          "horizon": "T2",
+          "model_id": "selected_event",
+          "model_metrics": {
+            "accuracy": 0.6302521,
+            "brier": 0.22933397,
+            "correct": 75,
+            "ece_10": 0.0445774,
+            "games": 119,
+            "log_loss": 0.64983745,
+            "roc_auc": 0.6672326
+          },
+          "provider": "DraftKings",
+          "provider_metrics": {
+            "accuracy": 0.64705882,
+            "brier": 0.22642349,
+            "correct": 77,
+            "ece_10": 0.07533716,
+            "games": 119,
+            "log_loss": 0.64710261,
+            "roc_auc": 0.68123939
+          },
+          "qualification": "Descriptive matched-event/horizon evaluation; original-issue and reconstructed origins remain separate. Not ROI.",
+          "season": 2026,
+          "target": "win",
+          "week": "ALL"
+        },
+        {
+          "cohort_sha256": "3f579b761bb625277bce4ef32aa8b9a7e7f67fc90bf2a9ad4b2d926e81e25e3c",
+          "comparison_rule": "ASOF_PRE_CUTOFF_V2",
+          "horizon": "T2",
+          "model_id": "selected_event",
+          "model_metrics": {
+            "accuracy": 0.6302521,
+            "brier": 0.22933397,
+            "correct": 75,
+            "ece_10": 0.0445774,
+            "games": 119,
+            "log_loss": 0.64983745,
+            "roc_auc": 0.6672326
+          },
+          "provider": "Kalshi",
+          "provider_metrics": {
+            "accuracy": 0.63865546,
+            "brier": 0.22489727,
+            "correct": 76,
+            "ece_10": 0.05886555,
+            "games": 119,
+            "log_loss": 0.64437705,
+            "roc_auc": 0.68449349
+          },
+          "qualification": "Descriptive matched-event/horizon evaluation; original-issue and reconstructed origins remain separate. Not ROI.",
+          "season": 2026,
+          "target": "win",
+          "week": "ALL"
+        },
+        {
+          "cohort_sha256": "790f486f28b66afff6e8d9b3a3d3aceb70324bc0390a116fc37c2b950db49714",
+          "comparison_rule": "ASOF_PRE_CUTOFF_V2",
+          "horizon": "T2",
+          "model_id": "selected_event",
+          "model_metrics": {
+            "accuracy": 0.65934066,
+            "brier": 0.22487241,
+            "correct": 60,
+            "ece_10": 0.11027106,
+            "games": 91,
+            "log_loss": 0.63888565,
+            "roc_auc": 0.69777563
+          },
+          "provider": "Polymarket",
+          "provider_metrics": {
+            "accuracy": 0.69230769,
+            "brier": 0.21245357,
+            "correct": 63,
+            "ece_10": 0.10697802,
+            "games": 91,
+            "log_loss": 0.61531736,
+            "roc_auc": 0.74250484
+          },
+          "qualification": "Descriptive matched-event/horizon evaluation; original-issue and reconstructed origins remain separate. Not ROI.",
+          "season": 2026,
+          "target": "win",
+          "week": "ALL"
+        },
+        {
+          "cohort_sha256": "41a1acc2333070ad83cd5f29f3d2488c730fcf0cdb61566e6cd688867ace70f4",
+          "comparison_rule": "SAVED_HISTORICAL_REFERENCE",
+          "horizon": "T2",
+          "model_id": "selected_event",
+          "model_metrics": {
+            "bias": -0.88957376,
+            "crps": null,
+            "distribution_reason": "Point-only input; no registered predictive distribution supplied.",
+            "games": 120,
+            "interval_coverage": null,
+            "interval_width": null,
+            "mae": 11.5149447,
+            "rmse": 14.11772887
+          },
+          "provider": "DraftKings",
+          "provider_metrics": {
+            "bias": -0.99166667,
+            "crps": null,
+            "distribution_reason": "Point-only input; no registered predictive distribution supplied.",
+            "games": 120,
+            "interval_coverage": null,
+            "interval_width": null,
+            "mae": 10.78333333,
+            "rmse": 13.29348211
+          },
+          "qualification": "Descriptive matched-event/horizon evaluation; original-issue and reconstructed origins remain separate. Not ROI.",
+          "season": 2026,
+          "target": "total",
+          "week": "ALL"
+        },
+        {
+          "cohort_sha256": "41a1acc2333070ad83cd5f29f3d2488c730fcf0cdb61566e6cd688867ace70f4",
+          "comparison_rule": "SAVED_HISTORICAL_REFERENCE",
+          "horizon": "T2",
+          "model_id": "selected_event",
+          "model_metrics": {
+            "bias": 1.8323436,
+            "crps": null,
+            "distribution_reason": "Point-only input; no registered predictive distribution supplied.",
+            "games": 120,
+            "interval_coverage": null,
+            "interval_width": null,
+            "mae": 10.04202622,
+            "rmse": 12.62476638
+          },
+          "provider": "DraftKings",
+          "provider_metrics": {
+            "bias": 1.17916667,
+            "crps": null,
+            "distribution_reason": "Point-only input; no registered predictive distribution supplied.",
+            "games": 120,
+            "interval_coverage": null,
+            "interval_width": null,
+            "mae": 9.52083333,
+            "rmse": 12.10173886
+          },
+          "qualification": "Descriptive matched-event/horizon evaluation; original-issue and reconstructed origins remain separate. Not ROI.",
+          "season": 2026,
+          "target": "margin",
+          "week": "ALL"
+        }
+      ],
+      "issued_resolved_games": null,
+      "performance_status": "VERIFIED_PUBLISHED_COHORTS",
+      "qualification": "Each row has its own exact event cohort, cutoff and provider. Counts cannot be pooled across provider rows. Missing metrics are unavailable, not zero.",
+      "target_readiness": {
+        "winner": {
+          "status": "VERIFIED_PUBLISHED_COHORTS",
+          "missing_metrics_are_zero": false
+        },
+        "margin": {
+          "status": "VERIFIED_PUBLISHED_COHORTS",
+          "missing_metrics_are_zero": false
+        },
+        "total": {
+          "status": "VERIFIED_PUBLISHED_COHORTS",
+          "missing_metrics_are_zero": false
+        },
+        "spread_cover": {
+          "status": "NOT_CALIBRATED_FOR_EXECUTABLE_LINE",
+          "reason": "A point margin alone is not a cover probability. No verified line-specific cover distribution, settlement/fee evaluation or promoted cover strategy is attached to this stream."
+        }
+      }
+    },
+    {
+      "id": "selected_stack",
+      "label": "Pre-2024 selected stack",
+      "kind": "PRESERVED_PUBLIC_STREAM",
+      "record_source": "current_coverage.json",
+      "records": [
+        {
+          "cohort_sha256": "3ff720eeb183d3d6981b681f0da1e8990f904dde34988110b4c1fed22b04c424",
+          "comparison_rule": "SAVED_HISTORICAL_REFERENCE",
+          "horizon": "T2",
+          "model_id": "selected_stack",
+          "model_metrics": {
+            "bias": 0.26810792,
+            "crps": null,
+            "distribution_reason": "Point-only input; no registered predictive distribution supplied.",
+            "games": 272,
+            "interval_coverage": null,
+            "interval_width": null,
+            "mae": 10.04275124,
+            "rmse": 13.16922195
+          },
+          "provider": "DraftKings",
+          "provider_metrics": {
+            "bias": -0.33088235,
+            "crps": null,
+            "distribution_reason": "Point-only input; no registered predictive distribution supplied.",
+            "games": 272,
+            "interval_coverage": null,
+            "interval_width": null,
+            "mae": 9.72058824,
+            "rmse": 12.71021764
+          },
+          "qualification": "Descriptive matched-event/horizon evaluation; original-issue and reconstructed origins remain separate. Not ROI.",
+          "season": 2024,
+          "target": "margin",
+          "week": "ALL"
+        },
+        {
+          "cohort_sha256": "3ff720eeb183d3d6981b681f0da1e8990f904dde34988110b4c1fed22b04c424",
+          "comparison_rule": "SAVED_HISTORICAL_REFERENCE",
+          "horizon": "T2",
+          "model_id": "selected_stack",
+          "model_metrics": {
+            "bias": -1.38145995,
+            "crps": null,
+            "distribution_reason": "Point-only input; no registered predictive distribution supplied.",
+            "games": 272,
+            "interval_coverage": null,
+            "interval_width": null,
+            "mae": 9.83237186,
+            "rmse": 12.89874731
+          },
+          "provider": "DraftKings",
+          "provider_metrics": {
+            "bias": -1.75367647,
+            "crps": null,
+            "distribution_reason": "Point-only input; no registered predictive distribution supplied.",
+            "games": 272,
+            "interval_coverage": null,
+            "interval_width": null,
+            "mae": 9.64705882,
+            "rmse": 12.53451118
+          },
+          "qualification": "Descriptive matched-event/horizon evaluation; original-issue and reconstructed origins remain separate. Not ROI.",
+          "season": 2024,
+          "target": "total",
+          "week": "ALL"
+        },
+        {
+          "cohort_sha256": "3ff720eeb183d3d6981b681f0da1e8990f904dde34988110b4c1fed22b04c424",
+          "comparison_rule": "SAVED_HISTORICAL_REFERENCE",
+          "horizon": "T2",
+          "model_id": "selected_stack",
+          "model_metrics": {
+            "accuracy": 0.68382353,
+            "brier": 0.21364201,
+            "correct": 186,
+            "ece_10": 0.06413006,
+            "games": 272,
+            "log_loss": 0.61716089,
+            "roc_auc": 0.72337768
+          },
+          "provider": "DraftKings",
+          "provider_metrics": {
+            "accuracy": 0.71691176,
+            "brier": 0.20420298,
+            "correct": 195,
+            "ece_10": 0.10468977,
+            "games": 272,
+            "log_loss": 0.59676933,
+            "roc_auc": 0.75354331
+          },
+          "qualification": "Descriptive matched-event/horizon evaluation; original-issue and reconstructed origins remain separate. Not ROI.",
+          "season": 2024,
+          "target": "win",
+          "week": "ALL"
+        },
+        {
+          "cohort_sha256": "4fd24f6f327cb82fc57a3098d3f46dacfae9c2394586ecdb06aa78adca4a22bc",
+          "comparison_rule": "ASOF_PRE_CUTOFF_V2",
+          "horizon": "T2",
+          "model_id": "selected_stack",
+          "model_metrics": {
+            "accuracy": 0.71505376,
+            "brier": 0.19733524,
+            "correct": 133,
+            "ece_10": 0.0750135,
+            "games": 186,
+            "log_loss": 0.5818304,
+            "roc_auc": 0.78066395
+          },
+          "provider": "Polymarket",
+          "provider_metrics": {
+            "accuracy": 0.74731183,
+            "brier": 0.18389753,
+            "correct": 139,
+            "ece_10": 0.09033333,
+            "games": 186,
+            "log_loss": 0.55109685,
+            "roc_auc": 0.80675597
+          },
+          "qualification": "Descriptive matched-event/horizon evaluation; original-issue and reconstructed origins remain separate. Not ROI.",
+          "season": 2024,
+          "target": "win",
+          "week": "ALL"
+        },
+        {
+          "cohort_sha256": "6f0cdd01997be7d452ed50cc40011fc23e5e0b4f8bce813a582c75927b6676f8",
+          "comparison_rule": "SAVED_HISTORICAL_REFERENCE",
+          "horizon": "T2",
+          "model_id": "selected_stack",
+          "model_metrics": {
+            "bias": 0.11003333,
+            "crps": null,
+            "distribution_reason": "Point-only input; no registered predictive distribution supplied.",
+            "games": 284,
+            "interval_coverage": null,
+            "interval_width": null,
+            "mae": 10.07944624,
+            "rmse": 12.95687545
+          },
+          "provider": "DraftKings",
+          "provider_metrics": {
+            "bias": -0.73943662,
+            "crps": null,
+            "distribution_reason": "Point-only input; no registered predictive distribution supplied.",
+            "games": 284,
+            "interval_coverage": null,
+            "interval_width": null,
+            "mae": 9.80633803,
+            "rmse": 12.51689
+          },
+          "qualification": "Descriptive matched-event/horizon evaluation; original-issue and reconstructed origins remain separate. Not ROI.",
+          "season": 2025,
+          "target": "margin",
+          "week": "ALL"
+        },
+        {
+          "cohort_sha256": "6f0cdd01997be7d452ed50cc40011fc23e5e0b4f8bce813a582c75927b6676f8",
+          "comparison_rule": "SAVED_HISTORICAL_REFERENCE",
+          "horizon": "T2",
+          "model_id": "selected_stack",
+          "model_metrics": {
+            "bias": -0.05037619,
+            "crps": null,
+            "distribution_reason": "Point-only input; no registered predictive distribution supplied.",
+            "games": 284,
+            "interval_coverage": null,
+            "interval_width": null,
+            "mae": 10.70979758,
+            "rmse": 13.4486103
+          },
+          "provider": "DraftKings",
+          "provider_metrics": {
+            "bias": -0.87676056,
+            "crps": null,
+            "distribution_reason": "Point-only input; no registered predictive distribution supplied.",
+            "games": 284,
+            "interval_coverage": null,
+            "interval_width": null,
+            "mae": 10.41197183,
+            "rmse": 13.22036947
+          },
+          "qualification": "Descriptive matched-event/horizon evaluation; original-issue and reconstructed origins remain separate. Not ROI.",
+          "season": 2025,
+          "target": "total",
+          "week": "ALL"
+        },
+        {
+          "cohort_sha256": "28de8dd745c0ca8a3c07ceb8d6ca890100de9db4db751860b2f1cb0255358289",
+          "comparison_rule": "SAVED_HISTORICAL_REFERENCE",
+          "horizon": "T2",
+          "model_id": "selected_stack",
+          "model_metrics": {
+            "accuracy": 0.66431095,
+            "brier": 0.22371693,
+            "correct": 188,
+            "ece_10": 0.05821241,
+            "games": 283,
+            "log_loss": 0.63841389,
+            "roc_auc": 0.68056392
+          },
+          "provider": "DraftKings",
+          "provider_metrics": {
+            "accuracy": 0.64664311,
+            "brier": 0.21662016,
+            "correct": 183,
+            "ece_10": 0.04255578,
+            "games": 283,
+            "log_loss": 0.62001508,
+            "roc_auc": 0.70324102
+          },
+          "qualification": "Descriptive matched-event/horizon evaluation; original-issue and reconstructed origins remain separate. Not ROI.",
+          "season": 2025,
+          "target": "win",
+          "week": "ALL"
+        },
+        {
+          "cohort_sha256": "0fa9adad9ca994156023ed4986f52bca3e07c86bf5441420abfa5356801b383a",
+          "comparison_rule": "ASOF_PRE_CUTOFF_V2",
+          "horizon": "T2",
+          "model_id": "selected_stack",
+          "model_metrics": {
+            "accuracy": 0.60215054,
+            "brier": 0.23564087,
+            "correct": 56,
+            "ece_10": 0.13580884,
+            "games": 93,
+            "log_loss": 0.66220946,
+            "roc_auc": 0.67483811
+          },
+          "provider": "Polymarket",
+          "provider_metrics": {
+            "accuracy": 0.59139785,
+            "brier": 0.21978172,
+            "correct": 55,
+            "ece_10": 0.1811828,
+            "games": 93,
+            "log_loss": 0.62107423,
+            "roc_auc": 0.71947271
+          },
+          "qualification": "Descriptive matched-event/horizon evaluation; original-issue and reconstructed origins remain separate. Not ROI.",
+          "season": 2025,
+          "target": "win",
+          "week": "ALL"
+        },
+        {
+          "cohort_sha256": "41a1acc2333070ad83cd5f29f3d2488c730fcf0cdb61566e6cd688867ace70f4",
+          "comparison_rule": "SAVED_HISTORICAL_REFERENCE",
+          "horizon": "T2",
+          "model_id": "selected_stack",
+          "model_metrics": {
+            "bias": 2.11587295,
+            "crps": null,
+            "distribution_reason": "Point-only input; no registered predictive distribution supplied.",
+            "games": 120,
+            "interval_coverage": null,
+            "interval_width": null,
+            "mae": 10.0127448,
+            "rmse": 12.57650041
+          },
+          "provider": "DraftKings",
+          "provider_metrics": {
+            "bias": 1.17916667,
+            "crps": null,
+            "distribution_reason": "Point-only input; no registered predictive distribution supplied.",
+            "games": 120,
+            "interval_coverage": null,
+            "interval_width": null,
+            "mae": 9.52083333,
+            "rmse": 12.10173886
+          },
+          "qualification": "Descriptive matched-event/horizon evaluation; original-issue and reconstructed origins remain separate. Not ROI.",
+          "season": 2026,
+          "target": "margin",
+          "week": "ALL"
+        },
+        {
+          "cohort_sha256": "41a1acc2333070ad83cd5f29f3d2488c730fcf0cdb61566e6cd688867ace70f4",
+          "comparison_rule": "SAVED_HISTORICAL_REFERENCE",
+          "horizon": "T2",
+          "model_id": "selected_stack",
+          "model_metrics": {
+            "bias": -1.23643528,
+            "crps": null,
+            "distribution_reason": "Point-only input; no registered predictive distribution supplied.",
+            "games": 120,
+            "interval_coverage": null,
+            "interval_width": null,
+            "mae": 11.3616977,
+            "rmse": 13.99107115
+          },
+          "provider": "DraftKings",
+          "provider_metrics": {
+            "bias": -0.99166667,
+            "crps": null,
+            "distribution_reason": "Point-only input; no registered predictive distribution supplied.",
+            "games": 120,
+            "interval_coverage": null,
+            "interval_width": null,
+            "mae": 10.78333333,
+            "rmse": 13.29348211
+          },
+          "qualification": "Descriptive matched-event/horizon evaluation; original-issue and reconstructed origins remain separate. Not ROI.",
+          "season": 2026,
+          "target": "total",
+          "week": "ALL"
+        },
+        {
+          "cohort_sha256": "3f579b761bb625277bce4ef32aa8b9a7e7f67fc90bf2a9ad4b2d926e81e25e3c",
+          "comparison_rule": "SAVED_HISTORICAL_REFERENCE",
+          "horizon": "T2",
+          "model_id": "selected_stack",
+          "model_metrics": {
+            "accuracy": 0.6302521,
+            "brier": 0.23330501,
+            "correct": 75,
+            "ece_10": 0.09003588,
+            "games": 119,
+            "log_loss": 0.6593265,
+            "roc_auc": 0.65676287
+          },
+          "provider": "DraftKings",
+          "provider_metrics": {
+            "accuracy": 0.64705882,
+            "brier": 0.22642349,
+            "correct": 77,
+            "ece_10": 0.07533716,
+            "games": 119,
+            "log_loss": 0.64710261,
+            "roc_auc": 0.68123939
+          },
+          "qualification": "Descriptive matched-event/horizon evaluation; original-issue and reconstructed origins remain separate. Not ROI.",
+          "season": 2026,
+          "target": "win",
+          "week": "ALL"
+        },
+        {
+          "cohort_sha256": "3f579b761bb625277bce4ef32aa8b9a7e7f67fc90bf2a9ad4b2d926e81e25e3c",
+          "comparison_rule": "ASOF_PRE_CUTOFF_V2",
+          "horizon": "T2",
+          "model_id": "selected_stack",
+          "model_metrics": {
+            "accuracy": 0.6302521,
+            "brier": 0.23330501,
+            "correct": 75,
+            "ece_10": 0.09003588,
+            "games": 119,
+            "log_loss": 0.6593265,
+            "roc_auc": 0.65676287
+          },
+          "provider": "Kalshi",
+          "provider_metrics": {
+            "accuracy": 0.63865546,
+            "brier": 0.22489727,
+            "correct": 76,
+            "ece_10": 0.05886555,
+            "games": 119,
+            "log_loss": 0.64437705,
+            "roc_auc": 0.68449349
+          },
+          "qualification": "Descriptive matched-event/horizon evaluation; original-issue and reconstructed origins remain separate. Not ROI.",
+          "season": 2026,
+          "target": "win",
+          "week": "ALL"
+        },
+        {
+          "cohort_sha256": "790f486f28b66afff6e8d9b3a3d3aceb70324bc0390a116fc37c2b950db49714",
+          "comparison_rule": "ASOF_PRE_CUTOFF_V2",
+          "horizon": "T2",
+          "model_id": "selected_stack",
+          "model_metrics": {
+            "accuracy": 0.65934066,
+            "brier": 0.22980893,
+            "correct": 60,
+            "ece_10": 0.15733054,
+            "games": 91,
+            "log_loss": 0.65080642,
+            "roc_auc": 0.68133462
+          },
+          "provider": "Polymarket",
+          "provider_metrics": {
+            "accuracy": 0.69230769,
+            "brier": 0.21245357,
+            "correct": 63,
+            "ece_10": 0.10697802,
+            "games": 91,
+            "log_loss": 0.61531736,
+            "roc_auc": 0.74250484
+          },
+          "qualification": "Descriptive matched-event/horizon evaluation; original-issue and reconstructed origins remain separate. Not ROI.",
+          "season": 2026,
+          "target": "win",
+          "week": "ALL"
+        }
+      ],
+      "issued_resolved_games": null,
+      "performance_status": "VERIFIED_PUBLISHED_COHORTS",
+      "qualification": "Each row has its own exact event cohort, cutoff and provider. Counts cannot be pooled across provider rows. Missing metrics are unavailable, not zero.",
+      "target_readiness": {
+        "winner": {
+          "status": "VERIFIED_PUBLISHED_COHORTS",
+          "missing_metrics_are_zero": false
+        },
+        "margin": {
+          "status": "VERIFIED_PUBLISHED_COHORTS",
+          "missing_metrics_are_zero": false
+        },
+        "total": {
+          "status": "VERIFIED_PUBLISHED_COHORTS",
+          "missing_metrics_are_zero": false
+        },
+        "spread_cover": {
+          "status": "NOT_CALIBRATED_FOR_EXECUTABLE_LINE",
+          "reason": "A point margin alone is not a cover probability. No verified line-specific cover distribution, settlement/fee evaluation or promoted cover strategy is attached to this stream."
+        }
+      }
+    },
+    {
+      "id": "descriptive_feedback",
+      "label": "Descriptive probability leader",
+      "kind": "PRESERVED_PUBLIC_STREAM",
+      "record_source": "current_coverage.json",
+      "records": [
+        {
+          "cohort_sha256": "3ff720eeb183d3d6981b681f0da1e8990f904dde34988110b4c1fed22b04c424",
+          "comparison_rule": "SAVED_HISTORICAL_REFERENCE",
+          "horizon": "T2",
+          "model_id": "descriptive_feedback",
+          "model_metrics": {
+            "bias": -0.38091445,
+            "crps": null,
+            "distribution_reason": "Point-only input; no registered predictive distribution supplied.",
+            "games": 272,
+            "interval_coverage": null,
+            "interval_width": null,
+            "mae": 10.23963071,
+            "rmse": 13.16343302
+          },
+          "provider": "DraftKings",
+          "provider_metrics": {
+            "bias": -0.33088235,
+            "crps": null,
+            "distribution_reason": "Point-only input; no registered predictive distribution supplied.",
+            "games": 272,
+            "interval_coverage": null,
+            "interval_width": null,
+            "mae": 9.72058824,
+            "rmse": 12.71021764
+          },
+          "qualification": "Descriptive matched-event/horizon evaluation; original-issue and reconstructed origins remain separate. Not ROI.",
+          "season": 2024,
+          "target": "margin",
+          "week": "ALL"
+        },
+        {
+          "cohort_sha256": "3ff720eeb183d3d6981b681f0da1e8990f904dde34988110b4c1fed22b04c424",
+          "comparison_rule": "SAVED_HISTORICAL_REFERENCE",
+          "horizon": "T2",
+          "model_id": "descriptive_feedback",
+          "model_metrics": {
+            "bias": 0.55106764,
+            "crps": null,
+            "distribution_reason": "Point-only input; no registered predictive distribution supplied.",
+            "games": 272,
+            "interval_coverage": null,
+            "interval_width": null,
+            "mae": 10.083799,
+            "rmse": 12.87571529
+          },
+          "provider": "DraftKings",
+          "provider_metrics": {
+            "bias": -1.75367647,
+            "crps": null,
+            "distribution_reason": "Point-only input; no registered predictive distribution supplied.",
+            "games": 272,
+            "interval_coverage": null,
+            "interval_width": null,
+            "mae": 9.64705882,
+            "rmse": 12.53451118
+          },
+          "qualification": "Descriptive matched-event/horizon evaluation; original-issue and reconstructed origins remain separate. Not ROI.",
+          "season": 2024,
+          "target": "total",
+          "week": "ALL"
+        },
+        {
+          "cohort_sha256": "3ff720eeb183d3d6981b681f0da1e8990f904dde34988110b4c1fed22b04c424",
+          "comparison_rule": "SAVED_HISTORICAL_REFERENCE",
+          "horizon": "T2",
+          "model_id": "descriptive_feedback",
+          "model_metrics": {
+            "accuracy": 0.67279412,
+            "brier": 0.21626965,
+            "correct": 183,
+            "ece_10": 0.06515784,
+            "games": 272,
+            "log_loss": 0.62704126,
+            "roc_auc": 0.71197393
+          },
+          "provider": "DraftKings",
+          "provider_metrics": {
+            "accuracy": 0.71691176,
+            "brier": 0.20420298,
+            "correct": 195,
+            "ece_10": 0.10468977,
+            "games": 272,
+            "log_loss": 0.59676933,
+            "roc_auc": 0.75354331
+          },
+          "qualification": "Descriptive matched-event/horizon evaluation; original-issue and reconstructed origins remain separate. Not ROI.",
+          "season": 2024,
+          "target": "win",
+          "week": "ALL"
+        },
+        {
+          "cohort_sha256": "a25cc2d1562268883fc4fa9ada306996c77035b29671ca1dc4b0634d8c2601aa",
+          "comparison_rule": "ASOF_PRE_CUTOFF_V2",
+          "horizon": "T2",
+          "model_id": "descriptive_feedback",
+          "model_metrics": {
+            "accuracy": 0.68715084,
+            "brier": 0.20493496,
+            "correct": 123,
+            "ece_10": 0.08226463,
+            "games": 179,
+            "log_loss": 0.60497356,
+            "roc_auc": 0.75050125
+          },
+          "provider": "Polymarket",
+          "provider_metrics": {
+            "accuracy": 0.74860335,
+            "brier": 0.18392899,
+            "correct": 134,
+            "ece_10": 0.09509497,
+            "games": 179,
+            "log_loss": 0.55145049,
+            "roc_auc": 0.80789474
+          },
+          "qualification": "Descriptive matched-event/horizon evaluation; original-issue and reconstructed origins remain separate. Not ROI.",
+          "season": 2024,
+          "target": "win",
+          "week": "ALL"
+        },
+        {
+          "cohort_sha256": "6f0cdd01997be7d452ed50cc40011fc23e5e0b4f8bce813a582c75927b6676f8",
+          "comparison_rule": "SAVED_HISTORICAL_REFERENCE",
+          "horizon": "T2",
+          "model_id": "descriptive_feedback",
+          "model_metrics": {
+            "bias": -0.24527041,
+            "crps": null,
+            "distribution_reason": "Point-only input; no registered predictive distribution supplied.",
+            "games": 284,
+            "interval_coverage": null,
+            "interval_width": null,
+            "mae": 9.95366162,
+            "rmse": 12.66302432
+          },
+          "provider": "DraftKings",
+          "provider_metrics": {
+            "bias": -0.73943662,
+            "crps": null,
+            "distribution_reason": "Point-only input; no registered predictive distribution supplied.",
+            "games": 284,
+            "interval_coverage": null,
+            "interval_width": null,
+            "mae": 9.80633803,
+            "rmse": 12.51689
+          },
+          "qualification": "Descriptive matched-event/horizon evaluation; original-issue and reconstructed origins remain separate. Not ROI.",
+          "season": 2025,
+          "target": "margin",
+          "week": "ALL"
+        },
+        {
+          "cohort_sha256": "6f0cdd01997be7d452ed50cc40011fc23e5e0b4f8bce813a582c75927b6676f8",
+          "comparison_rule": "SAVED_HISTORICAL_REFERENCE",
+          "horizon": "T2",
+          "model_id": "descriptive_feedback",
+          "model_metrics": {
+            "bias": 1.87625164,
+            "crps": null,
+            "distribution_reason": "Point-only input; no registered predictive distribution supplied.",
+            "games": 284,
+            "interval_coverage": null,
+            "interval_width": null,
+            "mae": 10.67120133,
+            "rmse": 13.41294465
+          },
+          "provider": "DraftKings",
+          "provider_metrics": {
+            "bias": -0.87676056,
+            "crps": null,
+            "distribution_reason": "Point-only input; no registered predictive distribution supplied.",
+            "games": 284,
+            "interval_coverage": null,
+            "interval_width": null,
+            "mae": 10.41197183,
+            "rmse": 13.22036947
+          },
+          "qualification": "Descriptive matched-event/horizon evaluation; original-issue and reconstructed origins remain separate. Not ROI.",
+          "season": 2025,
+          "target": "total",
+          "week": "ALL"
+        },
+        {
+          "cohort_sha256": "28de8dd745c0ca8a3c07ceb8d6ca890100de9db4db751860b2f1cb0255358289",
+          "comparison_rule": "SAVED_HISTORICAL_REFERENCE",
+          "horizon": "T2",
+          "model_id": "descriptive_feedback",
+          "model_metrics": {
+            "accuracy": 0.63250883,
+            "brier": 0.21990849,
+            "correct": 179,
+            "ece_10": 0.11627643,
+            "games": 283,
+            "log_loss": 0.63022467,
+            "roc_auc": 0.70494682
+          },
+          "provider": "DraftKings",
+          "provider_metrics": {
+            "accuracy": 0.64664311,
+            "brier": 0.21662016,
+            "correct": 183,
+            "ece_10": 0.04255578,
+            "games": 283,
+            "log_loss": 0.62001508,
+            "roc_auc": 0.70324102
+          },
+          "qualification": "Descriptive matched-event/horizon evaluation; original-issue and reconstructed origins remain separate. Not ROI.",
+          "season": 2025,
+          "target": "win",
+          "week": "ALL"
+        },
+        {
+          "cohort_sha256": "0fa9adad9ca994156023ed4986f52bca3e07c86bf5441420abfa5356801b383a",
+          "comparison_rule": "ASOF_PRE_CUTOFF_V2",
+          "horizon": "T2",
+          "model_id": "descriptive_feedback",
+          "model_metrics": {
+            "accuracy": 0.6344086,
+            "brier": 0.21406379,
+            "correct": 59,
+            "ece_10": 0.14720575,
+            "games": 93,
+            "log_loss": 0.6058049,
+            "roc_auc": 0.72432932
+          },
+          "provider": "Polymarket",
+          "provider_metrics": {
+            "accuracy": 0.59139785,
+            "brier": 0.21978172,
+            "correct": 55,
+            "ece_10": 0.1811828,
+            "games": 93,
+            "log_loss": 0.62107423,
+            "roc_auc": 0.71947271
+          },
+          "qualification": "Descriptive matched-event/horizon evaluation; original-issue and reconstructed origins remain separate. Not ROI.",
+          "season": 2025,
+          "target": "win",
+          "week": "ALL"
+        },
+        {
+          "cohort_sha256": "41a1acc2333070ad83cd5f29f3d2488c730fcf0cdb61566e6cd688867ace70f4",
+          "comparison_rule": "SAVED_HISTORICAL_REFERENCE",
+          "horizon": "T2",
+          "model_id": "descriptive_feedback",
+          "model_metrics": {
+            "bias": 1.23777123,
+            "crps": null,
+            "distribution_reason": "Point-only input; no registered predictive distribution supplied.",
+            "games": 120,
+            "interval_coverage": null,
+            "interval_width": null,
+            "mae": 9.79710363,
+            "rmse": 12.30944103
+          },
+          "provider": "DraftKings",
+          "provider_metrics": {
+            "bias": 1.17916667,
+            "crps": null,
+            "distribution_reason": "Point-only input; no registered predictive distribution supplied.",
+            "games": 120,
+            "interval_coverage": null,
+            "interval_width": null,
+            "mae": 9.52083333,
+            "rmse": 12.10173886
+          },
+          "qualification": "Descriptive matched-event/horizon evaluation; original-issue and reconstructed origins remain separate. Not ROI.",
+          "season": 2026,
+          "target": "margin",
+          "week": "ALL"
+        },
+        {
+          "cohort_sha256": "41a1acc2333070ad83cd5f29f3d2488c730fcf0cdb61566e6cd688867ace70f4",
+          "comparison_rule": "SAVED_HISTORICAL_REFERENCE",
+          "horizon": "T2",
+          "model_id": "descriptive_feedback",
+          "model_metrics": {
+            "bias": 1.10249443,
+            "crps": null,
+            "distribution_reason": "Point-only input; no registered predictive distribution supplied.",
+            "games": 120,
+            "interval_coverage": null,
+            "interval_width": null,
+            "mae": 10.7957882,
+            "rmse": 13.32177022
+          },
+          "provider": "DraftKings",
+          "provider_metrics": {
+            "bias": -0.99166667,
+            "crps": null,
+            "distribution_reason": "Point-only input; no registered predictive distribution supplied.",
+            "games": 120,
+            "interval_coverage": null,
+            "interval_width": null,
+            "mae": 10.78333333,
+            "rmse": 13.29348211
+          },
+          "qualification": "Descriptive matched-event/horizon evaluation; original-issue and reconstructed origins remain separate. Not ROI.",
+          "season": 2026,
+          "target": "total",
+          "week": "ALL"
+        },
+        {
+          "cohort_sha256": "3f579b761bb625277bce4ef32aa8b9a7e7f67fc90bf2a9ad4b2d926e81e25e3c",
+          "comparison_rule": "SAVED_HISTORICAL_REFERENCE",
+          "horizon": "T2",
+          "model_id": "descriptive_feedback",
+          "model_metrics": {
+            "accuracy": 0.64705882,
+            "brier": 0.21952065,
+            "correct": 77,
+            "ece_10": 0.08258941,
+            "games": 119,
+            "log_loss": 0.62908016,
+            "roc_auc": 0.69864177
+          },
+          "provider": "DraftKings",
+          "provider_metrics": {
+            "accuracy": 0.64705882,
+            "brier": 0.22642349,
+            "correct": 77,
+            "ece_10": 0.07533716,
+            "games": 119,
+            "log_loss": 0.64710261,
+            "roc_auc": 0.68123939
+          },
+          "qualification": "Descriptive matched-event/horizon evaluation; original-issue and reconstructed origins remain separate. Not ROI.",
+          "season": 2026,
+          "target": "win",
+          "week": "ALL"
+        },
+        {
+          "cohort_sha256": "3f579b761bb625277bce4ef32aa8b9a7e7f67fc90bf2a9ad4b2d926e81e25e3c",
+          "comparison_rule": "ASOF_PRE_CUTOFF_V2",
+          "horizon": "T2",
+          "model_id": "descriptive_feedback",
+          "model_metrics": {
+            "accuracy": 0.64705882,
+            "brier": 0.21952065,
+            "correct": 77,
+            "ece_10": 0.08258941,
+            "games": 119,
+            "log_loss": 0.62908016,
+            "roc_auc": 0.69864177
+          },
+          "provider": "Kalshi",
+          "provider_metrics": {
+            "accuracy": 0.63865546,
+            "brier": 0.22489727,
+            "correct": 76,
+            "ece_10": 0.05886555,
+            "games": 119,
+            "log_loss": 0.64437705,
+            "roc_auc": 0.68449349
+          },
+          "qualification": "Descriptive matched-event/horizon evaluation; original-issue and reconstructed origins remain separate. Not ROI.",
+          "season": 2026,
+          "target": "win",
+          "week": "ALL"
+        },
+        {
+          "cohort_sha256": "790f486f28b66afff6e8d9b3a3d3aceb70324bc0390a116fc37c2b950db49714",
+          "comparison_rule": "ASOF_PRE_CUTOFF_V2",
+          "horizon": "T2",
+          "model_id": "descriptive_feedback",
+          "model_metrics": {
+            "accuracy": 0.69230769,
+            "brier": 0.20916475,
+            "correct": 63,
+            "ece_10": 0.0986413,
+            "games": 91,
+            "log_loss": 0.60608267,
+            "roc_auc": 0.74274662
+          },
+          "provider": "Polymarket",
+          "provider_metrics": {
+            "accuracy": 0.69230769,
+            "brier": 0.21245357,
+            "correct": 63,
+            "ece_10": 0.10697802,
+            "games": 91,
+            "log_loss": 0.61531736,
+            "roc_auc": 0.74250484
+          },
+          "qualification": "Descriptive matched-event/horizon evaluation; original-issue and reconstructed origins remain separate. Not ROI.",
+          "season": 2026,
+          "target": "win",
+          "week": "ALL"
+        }
+      ],
+      "issued_resolved_games": null,
+      "performance_status": "VERIFIED_PUBLISHED_COHORTS",
+      "qualification": "Each row has its own exact event cohort, cutoff and provider. Counts cannot be pooled across provider rows. Missing metrics are unavailable, not zero.",
+      "target_readiness": {
+        "winner": {
+          "status": "VERIFIED_PUBLISHED_COHORTS",
+          "missing_metrics_are_zero": false
+        },
+        "margin": {
+          "status": "VERIFIED_PUBLISHED_COHORTS",
+          "missing_metrics_are_zero": false
+        },
+        "total": {
+          "status": "VERIFIED_PUBLISHED_COHORTS",
+          "missing_metrics_are_zero": false
+        },
+        "spread_cover": {
+          "status": "NOT_CALIBRATED_FOR_EXECUTABLE_LINE",
+          "reason": "A point margin alone is not a cover probability. No verified line-specific cover distribution, settlement/fee evaluation or promoted cover strategy is attached to this stream."
+        }
+      }
+    },
+    {
+      "id": "descriptive_accuracy",
+      "label": "Descriptive accuracy leader",
+      "kind": "PRESERVED_PUBLIC_STREAM",
+      "record_source": "current_coverage.json",
+      "records": [
+        {
+          "cohort_sha256": "3ff720eeb183d3d6981b681f0da1e8990f904dde34988110b4c1fed22b04c424",
+          "comparison_rule": "SAVED_HISTORICAL_REFERENCE",
+          "horizon": "T2",
+          "model_id": "descriptive_accuracy",
+          "model_metrics": {
+            "bias": -0.92605306,
+            "crps": null,
+            "distribution_reason": "Point-only input; no registered predictive distribution supplied.",
+            "games": 272,
+            "interval_coverage": null,
+            "interval_width": null,
+            "mae": 10.62230484,
+            "rmse": 13.8394181
+          },
+          "provider": "DraftKings",
+          "provider_metrics": {
+            "bias": -0.33088235,
+            "crps": null,
+            "distribution_reason": "Point-only input; no registered predictive distribution supplied.",
+            "games": 272,
+            "interval_coverage": null,
+            "interval_width": null,
+            "mae": 9.72058824,
+            "rmse": 12.71021764
+          },
+          "qualification": "Descriptive matched-event/horizon evaluation; original-issue and reconstructed origins remain separate. Not ROI.",
+          "season": 2024,
+          "target": "margin",
+          "week": "ALL"
+        },
+        {
+          "cohort_sha256": "3ff720eeb183d3d6981b681f0da1e8990f904dde34988110b4c1fed22b04c424",
+          "comparison_rule": "SAVED_HISTORICAL_REFERENCE",
+          "horizon": "T2",
+          "model_id": "descriptive_accuracy",
+          "model_metrics": {
+            "bias": 0.67400698,
+            "crps": null,
+            "distribution_reason": "Point-only input; no registered predictive distribution supplied.",
+            "games": 272,
+            "interval_coverage": null,
+            "interval_width": null,
+            "mae": 10.41156142,
+            "rmse": 13.37834048
+          },
+          "provider": "DraftKings",
+          "provider_metrics": {
+            "bias": -1.75367647,
+            "crps": null,
+            "distribution_reason": "Point-only input; no registered predictive distribution supplied.",
+            "games": 272,
+            "interval_coverage": null,
+            "interval_width": null,
+            "mae": 9.64705882,
+            "rmse": 12.53451118
+          },
+          "qualification": "Descriptive matched-event/horizon evaluation; original-issue and reconstructed origins remain separate. Not ROI.",
+          "season": 2024,
+          "target": "total",
+          "week": "ALL"
+        },
+        {
+          "cohort_sha256": "3ff720eeb183d3d6981b681f0da1e8990f904dde34988110b4c1fed22b04c424",
+          "comparison_rule": "SAVED_HISTORICAL_REFERENCE",
+          "horizon": "T2",
+          "model_id": "descriptive_accuracy",
+          "model_metrics": {
+            "accuracy": 0.68382353,
+            "brier": 0.20834454,
+            "correct": 186,
+            "ece_10": 0.0621577,
+            "games": 272,
+            "log_loss": 0.61422353,
+            "roc_auc": 0.74004887
+          },
+          "provider": "DraftKings",
+          "provider_metrics": {
+            "accuracy": 0.71691176,
+            "brier": 0.20420298,
+            "correct": 195,
+            "ece_10": 0.10468977,
+            "games": 272,
+            "log_loss": 0.59676933,
+            "roc_auc": 0.75354331
+          },
+          "qualification": "Descriptive matched-event/horizon evaluation; original-issue and reconstructed origins remain separate. Not ROI.",
+          "season": 2024,
+          "target": "win",
+          "week": "ALL"
+        },
+        {
+          "cohort_sha256": "a25cc2d1562268883fc4fa9ada306996c77035b29671ca1dc4b0634d8c2601aa",
+          "comparison_rule": "ASOF_PRE_CUTOFF_V2",
+          "horizon": "T2",
+          "model_id": "descriptive_accuracy",
+          "model_metrics": {
+            "accuracy": 0.7150838,
+            "brier": 0.19572767,
+            "correct": 128,
+            "ece_10": 0.08746722,
+            "games": 179,
+            "log_loss": 0.59376663,
+            "roc_auc": 0.77468672
+          },
+          "provider": "Polymarket",
+          "provider_metrics": {
+            "accuracy": 0.74860335,
+            "brier": 0.18392899,
+            "correct": 134,
+            "ece_10": 0.09509497,
+            "games": 179,
+            "log_loss": 0.55145049,
+            "roc_auc": 0.80789474
+          },
+          "qualification": "Descriptive matched-event/horizon evaluation; original-issue and reconstructed origins remain separate. Not ROI.",
+          "season": 2024,
+          "target": "win",
+          "week": "ALL"
+        },
+        {
+          "cohort_sha256": "6f0cdd01997be7d452ed50cc40011fc23e5e0b4f8bce813a582c75927b6676f8",
+          "comparison_rule": "SAVED_HISTORICAL_REFERENCE",
+          "horizon": "T2",
+          "model_id": "descriptive_accuracy",
+          "model_metrics": {
+            "bias": -0.05391728,
+            "crps": null,
+            "distribution_reason": "Point-only input; no registered predictive distribution supplied.",
+            "games": 284,
+            "interval_coverage": null,
+            "interval_width": null,
+            "mae": 9.79892514,
+            "rmse": 12.51400617
+          },
+          "provider": "DraftKings",
+          "provider_metrics": {
+            "bias": -0.73943662,
+            "crps": null,
+            "distribution_reason": "Point-only input; no registered predictive distribution supplied.",
+            "games": 284,
+            "interval_coverage": null,
+            "interval_width": null,
+            "mae": 9.80633803,
+            "rmse": 12.51689
+          },
+          "qualification": "Descriptive matched-event/horizon evaluation; original-issue and reconstructed origins remain separate. Not ROI.",
+          "season": 2025,
+          "target": "margin",
+          "week": "ALL"
+        },
+        {
+          "cohort_sha256": "6f0cdd01997be7d452ed50cc40011fc23e5e0b4f8bce813a582c75927b6676f8",
+          "comparison_rule": "SAVED_HISTORICAL_REFERENCE",
+          "horizon": "T2",
+          "model_id": "descriptive_accuracy",
+          "model_metrics": {
+            "bias": 2.20520525,
+            "crps": null,
+            "distribution_reason": "Point-only input; no registered predictive distribution supplied.",
+            "games": 284,
+            "interval_coverage": null,
+            "interval_width": null,
+            "mae": 10.96045163,
+            "rmse": 13.61798007
+          },
+          "provider": "DraftKings",
+          "provider_metrics": {
+            "bias": -0.87676056,
+            "crps": null,
+            "distribution_reason": "Point-only input; no registered predictive distribution supplied.",
+            "games": 284,
+            "interval_coverage": null,
+            "interval_width": null,
+            "mae": 10.41197183,
+            "rmse": 13.22036947
+          },
+          "qualification": "Descriptive matched-event/horizon evaluation; original-issue and reconstructed origins remain separate. Not ROI.",
+          "season": 2025,
+          "target": "total",
+          "week": "ALL"
+        },
+        {
+          "cohort_sha256": "28de8dd745c0ca8a3c07ceb8d6ca890100de9db4db751860b2f1cb0255358289",
+          "comparison_rule": "SAVED_HISTORICAL_REFERENCE",
+          "horizon": "T2",
+          "model_id": "descriptive_accuracy",
+          "model_metrics": {
+            "accuracy": 0.64664311,
+            "brier": 0.22454644,
+            "correct": 183,
+            "ece_10": 0.06331748,
+            "games": 283,
+            "log_loss": 0.64568045,
+            "roc_auc": 0.69912703
+          },
+          "provider": "DraftKings",
+          "provider_metrics": {
+            "accuracy": 0.64664311,
+            "brier": 0.21662016,
+            "correct": 183,
+            "ece_10": 0.04255578,
+            "games": 283,
+            "log_loss": 0.62001508,
+            "roc_auc": 0.70324102
+          },
+          "qualification": "Descriptive matched-event/horizon evaluation; original-issue and reconstructed origins remain separate. Not ROI.",
+          "season": 2025,
+          "target": "win",
+          "week": "ALL"
+        },
+        {
+          "cohort_sha256": "0fa9adad9ca994156023ed4986f52bca3e07c86bf5441420abfa5356801b383a",
+          "comparison_rule": "ASOF_PRE_CUTOFF_V2",
+          "horizon": "T2",
+          "model_id": "descriptive_accuracy",
+          "model_metrics": {
+            "accuracy": 0.61290323,
+            "brier": 0.21291399,
+            "correct": 57,
+            "ece_10": 0.13933476,
+            "games": 93,
+            "log_loss": 0.6027631,
+            "roc_auc": 0.73681776
+          },
+          "provider": "Polymarket",
+          "provider_metrics": {
+            "accuracy": 0.59139785,
+            "brier": 0.21978172,
+            "correct": 55,
+            "ece_10": 0.1811828,
+            "games": 93,
+            "log_loss": 0.62107423,
+            "roc_auc": 0.71947271
+          },
+          "qualification": "Descriptive matched-event/horizon evaluation; original-issue and reconstructed origins remain separate. Not ROI.",
+          "season": 2025,
+          "target": "win",
+          "week": "ALL"
+        },
+        {
+          "cohort_sha256": "41a1acc2333070ad83cd5f29f3d2488c730fcf0cdb61566e6cd688867ace70f4",
+          "comparison_rule": "SAVED_HISTORICAL_REFERENCE",
+          "horizon": "T2",
+          "model_id": "descriptive_accuracy",
+          "model_metrics": {
+            "bias": 1.13012409,
+            "crps": null,
+            "distribution_reason": "Point-only input; no registered predictive distribution supplied.",
+            "games": 120,
+            "interval_coverage": null,
+            "interval_width": null,
+            "mae": 10.0443483,
+            "rmse": 12.58812279
+          },
+          "provider": "DraftKings",
+          "provider_metrics": {
+            "bias": 1.17916667,
+            "crps": null,
+            "distribution_reason": "Point-only input; no registered predictive distribution supplied.",
+            "games": 120,
+            "interval_coverage": null,
+            "interval_width": null,
+            "mae": 9.52083333,
+            "rmse": 12.10173886
+          },
+          "qualification": "Descriptive matched-event/horizon evaluation; original-issue and reconstructed origins remain separate. Not ROI.",
+          "season": 2026,
+          "target": "margin",
+          "week": "ALL"
+        },
+        {
+          "cohort_sha256": "41a1acc2333070ad83cd5f29f3d2488c730fcf0cdb61566e6cd688867ace70f4",
+          "comparison_rule": "SAVED_HISTORICAL_REFERENCE",
+          "horizon": "T2",
+          "model_id": "descriptive_accuracy",
+          "model_metrics": {
+            "bias": -0.36027237,
+            "crps": null,
+            "distribution_reason": "Point-only input; no registered predictive distribution supplied.",
+            "games": 120,
+            "interval_coverage": null,
+            "interval_width": null,
+            "mae": 10.95808547,
+            "rmse": 13.72753084
+          },
+          "provider": "DraftKings",
+          "provider_metrics": {
+            "bias": -0.99166667,
+            "crps": null,
+            "distribution_reason": "Point-only input; no registered predictive distribution supplied.",
+            "games": 120,
+            "interval_coverage": null,
+            "interval_width": null,
+            "mae": 10.78333333,
+            "rmse": 13.29348211
+          },
+          "qualification": "Descriptive matched-event/horizon evaluation; original-issue and reconstructed origins remain separate. Not ROI.",
+          "season": 2026,
+          "target": "total",
+          "week": "ALL"
+        },
+        {
+          "cohort_sha256": "3f579b761bb625277bce4ef32aa8b9a7e7f67fc90bf2a9ad4b2d926e81e25e3c",
+          "comparison_rule": "SAVED_HISTORICAL_REFERENCE",
+          "horizon": "T2",
+          "model_id": "descriptive_accuracy",
+          "model_metrics": {
+            "accuracy": 0.66386555,
+            "brier": 0.22705698,
+            "correct": 79,
+            "ece_10": 0.09458219,
+            "games": 119,
+            "log_loss": 0.64682336,
+            "roc_auc": 0.67487267
+          },
+          "provider": "DraftKings",
+          "provider_metrics": {
+            "accuracy": 0.64705882,
+            "brier": 0.22642349,
+            "correct": 77,
+            "ece_10": 0.07533716,
+            "games": 119,
+            "log_loss": 0.64710261,
+            "roc_auc": 0.68123939
+          },
+          "qualification": "Descriptive matched-event/horizon evaluation; original-issue and reconstructed origins remain separate. Not ROI.",
+          "season": 2026,
+          "target": "win",
+          "week": "ALL"
+        },
+        {
+          "cohort_sha256": "3f579b761bb625277bce4ef32aa8b9a7e7f67fc90bf2a9ad4b2d926e81e25e3c",
+          "comparison_rule": "ASOF_PRE_CUTOFF_V2",
+          "horizon": "T2",
+          "model_id": "descriptive_accuracy",
+          "model_metrics": {
+            "accuracy": 0.66386555,
+            "brier": 0.22705698,
+            "correct": 79,
+            "ece_10": 0.09458219,
+            "games": 119,
+            "log_loss": 0.64682336,
+            "roc_auc": 0.67487267
+          },
+          "provider": "Kalshi",
+          "provider_metrics": {
+            "accuracy": 0.63865546,
+            "brier": 0.22489727,
+            "correct": 76,
+            "ece_10": 0.05886555,
+            "games": 119,
+            "log_loss": 0.64437705,
+            "roc_auc": 0.68449349
+          },
+          "qualification": "Descriptive matched-event/horizon evaluation; original-issue and reconstructed origins remain separate. Not ROI.",
+          "season": 2026,
+          "target": "win",
+          "week": "ALL"
+        },
+        {
+          "cohort_sha256": "790f486f28b66afff6e8d9b3a3d3aceb70324bc0390a116fc37c2b950db49714",
+          "comparison_rule": "ASOF_PRE_CUTOFF_V2",
+          "horizon": "T2",
+          "model_id": "descriptive_accuracy",
+          "model_metrics": {
+            "accuracy": 0.67032967,
+            "brier": 0.22112595,
+            "correct": 61,
+            "ece_10": 0.10719934,
+            "games": 91,
+            "log_loss": 0.63164343,
+            "roc_auc": 0.71421663
+          },
+          "provider": "Polymarket",
+          "provider_metrics": {
+            "accuracy": 0.69230769,
+            "brier": 0.21245357,
+            "correct": 63,
+            "ece_10": 0.10697802,
+            "games": 91,
+            "log_loss": 0.61531736,
+            "roc_auc": 0.74250484
+          },
+          "qualification": "Descriptive matched-event/horizon evaluation; original-issue and reconstructed origins remain separate. Not ROI.",
+          "season": 2026,
+          "target": "win",
+          "week": "ALL"
+        }
+      ],
+      "issued_resolved_games": null,
+      "performance_status": "VERIFIED_PUBLISHED_COHORTS",
+      "qualification": "Each row has its own exact event cohort, cutoff and provider. Counts cannot be pooled across provider rows. Missing metrics are unavailable, not zero.",
+      "target_readiness": {
+        "winner": {
+          "status": "VERIFIED_PUBLISHED_COHORTS",
+          "missing_metrics_are_zero": false
+        },
+        "margin": {
+          "status": "VERIFIED_PUBLISHED_COHORTS",
+          "missing_metrics_are_zero": false
+        },
+        "total": {
+          "status": "VERIFIED_PUBLISHED_COHORTS",
+          "missing_metrics_are_zero": false
+        },
+        "spread_cover": {
+          "status": "NOT_CALIBRATED_FOR_EXECUTABLE_LINE",
+          "reason": "A point margin alone is not a cover probability. No verified line-specific cover distribution, settlement/fee evaluation or promoted cover strategy is attached to this stream."
+        }
+      }
+    },
+    {
+      "id": "selected_latest_origin",
+      "label": "Selected current origin",
+      "kind": "PRESERVED_PUBLIC_STREAM",
+      "record_source": "current_coverage.json",
+      "records": [],
+      "issued_resolved_games": null,
+      "performance_status": "PERFORMANCE_NOT_PUBLISHED",
+      "qualification": "Each row has its own exact event cohort, cutoff and provider. Counts cannot be pooled across provider rows. Missing metrics are unavailable, not zero.",
+      "target_readiness": {
+        "winner": {
+          "status": "PENDING_OR_UNAVAILABLE",
+          "missing_metrics_are_zero": false
+        },
+        "margin": {
+          "status": "PENDING_OR_UNAVAILABLE",
+          "missing_metrics_are_zero": false
+        },
+        "total": {
+          "status": "PENDING_OR_UNAVAILABLE",
+          "missing_metrics_are_zero": false
+        },
+        "spread_cover": {
+          "status": "NOT_CALIBRATED_FOR_EXECUTABLE_LINE",
+          "reason": "A point margin alone is not a cover probability. No verified line-specific cover distribution, settlement/fee evaluation or promoted cover strategy is attached to this stream."
+        }
+      }
+    },
+    {
+      "id": "preserved_primary_refresh",
+      "label": "Preserved primary with current parents",
+      "kind": "PRESERVED_PUBLIC_STREAM",
+      "record_source": "current_coverage.json",
+      "records": [],
+      "issued_resolved_games": null,
+      "performance_status": "PERFORMANCE_NOT_PUBLISHED",
+      "qualification": "Each row has its own exact event cohort, cutoff and provider. Counts cannot be pooled across provider rows. Missing metrics are unavailable, not zero.",
+      "target_readiness": {
+        "winner": {
+          "status": "PENDING_OR_UNAVAILABLE",
+          "missing_metrics_are_zero": false
+        },
+        "margin": {
+          "status": "PENDING_OR_UNAVAILABLE",
+          "missing_metrics_are_zero": false
+        },
+        "total": {
+          "status": "PENDING_OR_UNAVAILABLE",
+          "missing_metrics_are_zero": false
+        },
+        "spread_cover": {
+          "status": "NOT_CALIBRATED_FOR_EXECUTABLE_LINE",
+          "reason": "A point margin alone is not a cover probability. No verified line-specific cover distribution, settlement/fee evaluation or promoted cover strategy is attached to this stream."
+        }
+      }
+    },
+    {
+      "id": "preserved_selected_refresh",
+      "label": "Preserved selection with current parents",
+      "kind": "PRESERVED_PUBLIC_STREAM",
+      "record_source": "current_coverage.json",
+      "records": [],
+      "issued_resolved_games": null,
+      "performance_status": "PERFORMANCE_NOT_PUBLISHED",
+      "qualification": "Each row has its own exact event cohort, cutoff and provider. Counts cannot be pooled across provider rows. Missing metrics are unavailable, not zero.",
+      "target_readiness": {
+        "winner": {
+          "status": "PENDING_OR_UNAVAILABLE",
+          "missing_metrics_are_zero": false
+        },
+        "margin": {
+          "status": "PENDING_OR_UNAVAILABLE",
+          "missing_metrics_are_zero": false
+        },
+        "total": {
+          "status": "PENDING_OR_UNAVAILABLE",
+          "missing_metrics_are_zero": false
+        },
+        "spread_cover": {
+          "status": "NOT_CALIBRATED_FOR_EXECUTABLE_LINE",
+          "reason": "A point margin alone is not a cover probability. No verified line-specific cover distribution, settlement/fee evaluation or promoted cover strategy is attached to this stream."
+        }
+      }
+    },
+    {
+      "id": "preserved_selected_actual_T1",
+      "label": "Original T1 research issue",
+      "kind": "PRESERVED_PUBLIC_STREAM",
+      "record_source": "current_coverage.json",
+      "records": [
+        {
+          "cohort_sha256": "dbfe532d4287723f0d69fdcb212cb42206de17747fa3e1a7bfed83055571fd7c",
+          "comparison_rule": "ASOF_PRE_CUTOFF_V2",
+          "horizon": "T1",
+          "model_id": "preserved_selected_actual_T1",
+          "model_metrics": {
+            "accuracy": 0.0,
+            "brier": 0.39520163,
+            "correct": 0,
+            "ece_10": 0.62865064,
+            "games": 1,
+            "log_loss": 0.990612,
+            "roc_auc": null
+          },
+          "provider": "Kalshi",
+          "provider_metrics": {
+            "accuracy": 0.0,
+            "brier": 0.378225,
+            "correct": 0,
+            "ece_10": 0.615,
+            "games": 1,
+            "log_loss": 0.95451194,
+            "roc_auc": null
+          },
+          "qualification": "Descriptive matched-event/horizon evaluation; original-issue and reconstructed origins remain separate. Not ROI.",
+          "season": 2026,
+          "target": "win",
+          "week": "ALL"
+        }
+      ],
+      "issued_resolved_games": null,
+      "performance_status": "VERIFIED_PUBLISHED_COHORTS",
+      "qualification": "Each row has its own exact event cohort, cutoff and provider. Counts cannot be pooled across provider rows. Missing metrics are unavailable, not zero.",
+      "target_readiness": {
+        "winner": {
+          "status": "VERIFIED_PUBLISHED_COHORTS",
+          "missing_metrics_are_zero": false
+        },
+        "margin": {
+          "status": "PENDING_OR_UNAVAILABLE",
+          "missing_metrics_are_zero": false
+        },
+        "total": {
+          "status": "PENDING_OR_UNAVAILABLE",
+          "missing_metrics_are_zero": false
+        },
+        "spread_cover": {
+          "status": "NOT_CALIBRATED_FOR_EXECUTABLE_LINE",
+          "reason": "A point margin alone is not a cover probability. No verified line-specific cover distribution, settlement/fee evaluation or promoted cover strategy is attached to this stream."
+        }
+      }
+    },
+    {
+      "id": "n042_original",
+      "label": "Original calibrated heads \u00b7 Nov 4, 8:35 PM Pacific",
+      "kind": "GENUINELY_ISSUED_EARLY_RESEARCH",
+      "record_source": "current_issues_n042.json",
+      "records": [],
+      "issued_resolved_games": 0,
+      "issued_games": 29,
+      "issue_at": "2026-11-05T04:35:34.585494+00:00",
+      "performance_status": "AWAITING_ISSUED_OUTCOMES",
+      "qualification": "These specific forward issues have no scored outcomes in this snapshot. Related historical reconstructions are different evidence; their scores are not assigned to this stream.",
+      "target_readiness": {
+        "winner": {
+          "status": "PENDING_OR_UNAVAILABLE",
+          "missing_metrics_are_zero": false
+        },
+        "margin": {
+          "status": "PENDING_OR_UNAVAILABLE",
+          "missing_metrics_are_zero": false
+        },
+        "total": {
+          "status": "PENDING_OR_UNAVAILABLE",
+          "missing_metrics_are_zero": false
+        },
+        "spread_cover": {
+          "status": "NOT_CALIBRATED_FOR_EXECUTABLE_LINE",
+          "reason": "A point margin alone is not a cover probability. No verified line-specific cover distribution, settlement/fee evaluation or promoted cover strategy is attached to this stream."
+        }
+      }
+    },
+    {
+      "id": "n042_shadow",
+      "label": "Injury contribution shadow \u00b7 Nov 4, 8:36 PM Pacific",
+      "kind": "GENUINELY_ISSUED_EARLY_RESEARCH",
+      "record_source": "current_issues_n042.json",
+      "records": [],
+      "issued_resolved_games": 0,
+      "issued_games": 29,
+      "issue_at": "2026-11-05T04:36:22.705358+00:00",
+      "performance_status": "AWAITING_ISSUED_OUTCOMES",
+      "qualification": "These specific forward issues have no scored outcomes in this snapshot. Related historical reconstructions are different evidence; their scores are not assigned to this stream.",
+      "target_readiness": {
+        "winner": {
+          "status": "PENDING_OR_UNAVAILABLE",
+          "missing_metrics_are_zero": false
+        },
+        "margin": {
+          "status": "PENDING_OR_UNAVAILABLE",
+          "missing_metrics_are_zero": false
+        },
+        "total": {
+          "status": "PENDING_OR_UNAVAILABLE",
+          "missing_metrics_are_zero": false
+        },
+        "spread_cover": {
+          "status": "NOT_CALIBRATED_FOR_EXECUTABLE_LINE",
+          "reason": "A point margin alone is not a cover probability. No verified line-specific cover distribution, settlement/fee evaluation or promoted cover strategy is attached to this stream."
+        }
+      }
+    },
+    {
+      "id": "n042_fresh",
+      "label": "Current rolling research \u00b7 Nov 4, 8:37 PM Pacific",
+      "kind": "GENUINELY_ISSUED_EARLY_RESEARCH",
+      "record_source": "current_issues_n042.json",
+      "records": [],
+      "issued_resolved_games": 0,
+      "issued_games": 29,
+      "issue_at": "2026-11-05T04:37:51.798005+00:00",
+      "performance_status": "AWAITING_ISSUED_OUTCOMES",
+      "qualification": "These specific forward issues have no scored outcomes in this snapshot. Related historical reconstructions are different evidence; their scores are not assigned to this stream.",
+      "target_readiness": {
+        "winner": {
+          "status": "PENDING_OR_UNAVAILABLE",
+          "missing_metrics_are_zero": false
+        },
+        "margin": {
+          "status": "PENDING_OR_UNAVAILABLE",
+          "missing_metrics_are_zero": false
+        },
+        "total": {
+          "status": "PENDING_OR_UNAVAILABLE",
+          "missing_metrics_are_zero": false
+        },
+        "spread_cover": {
+          "status": "NOT_CALIBRATED_FOR_EXECUTABLE_LINE",
+          "reason": "A point margin alone is not a cover probability. No verified line-specific cover distribution, settlement/fee evaluation or promoted cover strategy is attached to this stream."
+        }
+      }
+    },
+    {
+      "id": "n043_original",
+      "label": "Original calibrated heads \u00b7 Nov 5, 12:03 AM Pacific",
+      "kind": "GENUINELY_ISSUED_EARLY_RESEARCH",
+      "record_source": "current_issues_n043.json",
+      "records": [],
+      "issued_resolved_games": 0,
+      "issued_games": 29,
+      "issue_at": "2026-11-05T08:03:11.419668+00:00",
+      "performance_status": "AWAITING_ISSUED_OUTCOMES",
+      "qualification": "These specific forward issues have no scored outcomes in this snapshot. Related historical reconstructions are different evidence; their scores are not assigned to this stream.",
+      "target_readiness": {
+        "winner": {
+          "status": "PENDING_OR_UNAVAILABLE",
+          "missing_metrics_are_zero": false
+        },
+        "margin": {
+          "status": "PENDING_OR_UNAVAILABLE",
+          "missing_metrics_are_zero": false
+        },
+        "total": {
+          "status": "PENDING_OR_UNAVAILABLE",
+          "missing_metrics_are_zero": false
+        },
+        "spread_cover": {
+          "status": "NOT_CALIBRATED_FOR_EXECUTABLE_LINE",
+          "reason": "A point margin alone is not a cover probability. No verified line-specific cover distribution, settlement/fee evaluation or promoted cover strategy is attached to this stream."
+        }
+      }
+    },
+    {
+      "id": "n043_shadow",
+      "label": "Injury contribution shadow \u00b7 Nov 5, 12:03 AM Pacific",
+      "kind": "GENUINELY_ISSUED_EARLY_RESEARCH",
+      "record_source": "current_issues_n043.json",
+      "records": [],
+      "issued_resolved_games": 0,
+      "issued_games": 29,
+      "issue_at": "2026-11-05T08:03:53.214983+00:00",
+      "performance_status": "AWAITING_ISSUED_OUTCOMES",
+      "qualification": "These specific forward issues have no scored outcomes in this snapshot. Related historical reconstructions are different evidence; their scores are not assigned to this stream.",
+      "target_readiness": {
+        "winner": {
+          "status": "PENDING_OR_UNAVAILABLE",
+          "missing_metrics_are_zero": false
+        },
+        "margin": {
+          "status": "PENDING_OR_UNAVAILABLE",
+          "missing_metrics_are_zero": false
+        },
+        "total": {
+          "status": "PENDING_OR_UNAVAILABLE",
+          "missing_metrics_are_zero": false
+        },
+        "spread_cover": {
+          "status": "NOT_CALIBRATED_FOR_EXECUTABLE_LINE",
+          "reason": "A point margin alone is not a cover probability. No verified line-specific cover distribution, settlement/fee evaluation or promoted cover strategy is attached to this stream."
+        }
+      }
+    },
+    {
+      "id": "n044_original",
+      "label": "Original calibrated heads \u00b7 Nov 5, 2:09 AM Pacific",
+      "kind": "GENUINELY_ISSUED_EARLY_RESEARCH",
+      "record_source": "current_issues_n044.json",
+      "records": [],
+      "issued_resolved_games": 0,
+      "issued_games": 29,
+      "issue_at": "2026-11-05T10:09:44.103818+00:00",
+      "performance_status": "AWAITING_ISSUED_OUTCOMES",
+      "qualification": "These specific forward issues have no scored outcomes in this snapshot. Related historical reconstructions are different evidence; their scores are not assigned to this stream.",
+      "target_readiness": {
+        "winner": {
+          "status": "PENDING_OR_UNAVAILABLE",
+          "missing_metrics_are_zero": false
+        },
+        "margin": {
+          "status": "PENDING_OR_UNAVAILABLE",
+          "missing_metrics_are_zero": false
+        },
+        "total": {
+          "status": "PENDING_OR_UNAVAILABLE",
+          "missing_metrics_are_zero": false
+        },
+        "spread_cover": {
+          "status": "NOT_CALIBRATED_FOR_EXECUTABLE_LINE",
+          "reason": "A point margin alone is not a cover probability. No verified line-specific cover distribution, settlement/fee evaluation or promoted cover strategy is attached to this stream."
+        }
+      }
+    },
+    {
+      "id": "n044_shadow",
+      "label": "Injury contribution shadow \u00b7 Nov 5, 2:10 AM Pacific",
+      "kind": "GENUINELY_ISSUED_EARLY_RESEARCH",
+      "record_source": "current_issues_n044.json",
+      "records": [],
+      "issued_resolved_games": 0,
+      "issued_games": 29,
+      "issue_at": "2026-11-05T10:10:25.915017+00:00",
+      "performance_status": "AWAITING_ISSUED_OUTCOMES",
+      "qualification": "These specific forward issues have no scored outcomes in this snapshot. Related historical reconstructions are different evidence; their scores are not assigned to this stream.",
+      "target_readiness": {
+        "winner": {
+          "status": "PENDING_OR_UNAVAILABLE",
+          "missing_metrics_are_zero": false
+        },
+        "margin": {
+          "status": "PENDING_OR_UNAVAILABLE",
+          "missing_metrics_are_zero": false
+        },
+        "total": {
+          "status": "PENDING_OR_UNAVAILABLE",
+          "missing_metrics_are_zero": false
+        },
+        "spread_cover": {
+          "status": "NOT_CALIBRATED_FOR_EXECUTABLE_LINE",
+          "reason": "A point margin alone is not a cover probability. No verified line-specific cover distribution, settlement/fee evaluation or promoted cover strategy is attached to this stream."
+        }
+      }
+    },
+    {
+      "id": "n044_fresh",
+      "label": "Current rolling research \u00b7 Nov 5, 2:11 AM Pacific",
+      "kind": "GENUINELY_ISSUED_EARLY_RESEARCH",
+      "record_source": "current_issues_n044.json",
+      "records": [],
+      "issued_resolved_games": 0,
+      "issued_games": 29,
+      "issue_at": "2026-11-05T10:11:35.191603+00:00",
+      "performance_status": "AWAITING_ISSUED_OUTCOMES",
+      "qualification": "These specific forward issues have no scored outcomes in this snapshot. Related historical reconstructions are different evidence; their scores are not assigned to this stream.",
+      "target_readiness": {
+        "winner": {
+          "status": "PENDING_OR_UNAVAILABLE",
+          "missing_metrics_are_zero": false
+        },
+        "margin": {
+          "status": "PENDING_OR_UNAVAILABLE",
+          "missing_metrics_are_zero": false
+        },
+        "total": {
+          "status": "PENDING_OR_UNAVAILABLE",
+          "missing_metrics_are_zero": false
+        },
+        "spread_cover": {
+          "status": "NOT_CALIBRATED_FOR_EXECUTABLE_LINE",
+          "reason": "A point margin alone is not a cover probability. No verified line-specific cover distribution, settlement/fee evaluation or promoted cover strategy is attached to this stream."
+        }
+      }
+    },
+    {
+      "id": "n045_original",
+      "label": "Original calibrated heads \u00b7 Nov 5, 12:17 PM Pacific",
+      "kind": "GENUINELY_ISSUED_EARLY_RESEARCH",
+      "record_source": "current_issues_n045.json",
+      "records": [],
+      "issued_resolved_games": 0,
+      "issued_games": 29,
+      "issue_at": "2026-11-05T20:17:56.433898+00:00",
+      "performance_status": "AWAITING_ISSUED_OUTCOMES",
+      "qualification": "These specific forward issues have no scored outcomes in this snapshot. Related historical reconstructions are different evidence; their scores are not assigned to this stream.",
+      "target_readiness": {
+        "winner": {
+          "status": "PENDING_OR_UNAVAILABLE",
+          "missing_metrics_are_zero": false
+        },
+        "margin": {
+          "status": "PENDING_OR_UNAVAILABLE",
+          "missing_metrics_are_zero": false
+        },
+        "total": {
+          "status": "PENDING_OR_UNAVAILABLE",
+          "missing_metrics_are_zero": false
+        },
+        "spread_cover": {
+          "status": "NOT_CALIBRATED_FOR_EXECUTABLE_LINE",
+          "reason": "A point margin alone is not a cover probability. No verified line-specific cover distribution, settlement/fee evaluation or promoted cover strategy is attached to this stream."
+        }
+      }
+    },
+    {
+      "id": "n045_shadow",
+      "label": "Injury contribution shadow \u00b7 Nov 5, 12:18 PM Pacific",
+      "kind": "GENUINELY_ISSUED_EARLY_RESEARCH",
+      "record_source": "current_issues_n045.json",
+      "records": [],
+      "issued_resolved_games": 0,
+      "issued_games": 29,
+      "issue_at": "2026-11-05T20:18:38.423992+00:00",
+      "performance_status": "AWAITING_ISSUED_OUTCOMES",
+      "qualification": "These specific forward issues have no scored outcomes in this snapshot. Related historical reconstructions are different evidence; their scores are not assigned to this stream.",
+      "target_readiness": {
+        "winner": {
+          "status": "PENDING_OR_UNAVAILABLE",
+          "missing_metrics_are_zero": false
+        },
+        "margin": {
+          "status": "PENDING_OR_UNAVAILABLE",
+          "missing_metrics_are_zero": false
+        },
+        "total": {
+          "status": "PENDING_OR_UNAVAILABLE",
+          "missing_metrics_are_zero": false
+        },
+        "spread_cover": {
+          "status": "NOT_CALIBRATED_FOR_EXECUTABLE_LINE",
+          "reason": "A point margin alone is not a cover probability. No verified line-specific cover distribution, settlement/fee evaluation or promoted cover strategy is attached to this stream."
+        }
+      }
+    },
+    {
+      "id": "n045_fresh",
+      "label": "Current rolling research \u00b7 Nov 5, 12:19 PM Pacific",
+      "kind": "GENUINELY_ISSUED_EARLY_RESEARCH",
+      "record_source": "current_issues_n045.json",
+      "records": [],
+      "issued_resolved_games": 0,
+      "issued_games": 29,
+      "issue_at": "2026-11-05T20:19:46.700553+00:00",
+      "performance_status": "AWAITING_ISSUED_OUTCOMES",
+      "qualification": "These specific forward issues have no scored outcomes in this snapshot. Related historical reconstructions are different evidence; their scores are not assigned to this stream.",
+      "target_readiness": {
+        "winner": {
+          "status": "PENDING_OR_UNAVAILABLE",
+          "missing_metrics_are_zero": false
+        },
+        "margin": {
+          "status": "PENDING_OR_UNAVAILABLE",
+          "missing_metrics_are_zero": false
+        },
+        "total": {
+          "status": "PENDING_OR_UNAVAILABLE",
+          "missing_metrics_are_zero": false
+        },
+        "spread_cover": {
+          "status": "NOT_CALIBRATED_FOR_EXECUTABLE_LINE",
+          "reason": "A point margin alone is not a cover probability. No verified line-specific cover distribution, settlement/fee evaluation or promoted cover strategy is attached to this stream."
+        }
+      }
+    },
+    {
+      "id": "n046_original",
+      "label": "Original calibrated heads \u00b7 Nov 5, 2:23 PM Pacific",
+      "kind": "GENUINELY_ISSUED_EARLY_RESEARCH",
+      "record_source": "current_issues_n046.json",
+      "records": [],
+      "issued_resolved_games": 0,
+      "issued_games": 29,
+      "issue_at": "2026-11-05T22:23:55.247408+00:00",
+      "performance_status": "AWAITING_ISSUED_OUTCOMES",
+      "qualification": "These specific forward issues have no scored outcomes in this snapshot. Related historical reconstructions are different evidence; their scores are not assigned to this stream.",
+      "target_readiness": {
+        "winner": {
+          "status": "PENDING_OR_UNAVAILABLE",
+          "missing_metrics_are_zero": false
+        },
+        "margin": {
+          "status": "PENDING_OR_UNAVAILABLE",
+          "missing_metrics_are_zero": false
+        },
+        "total": {
+          "status": "PENDING_OR_UNAVAILABLE",
+          "missing_metrics_are_zero": false
+        },
+        "spread_cover": {
+          "status": "NOT_CALIBRATED_FOR_EXECUTABLE_LINE",
+          "reason": "A point margin alone is not a cover probability. No verified line-specific cover distribution, settlement/fee evaluation or promoted cover strategy is attached to this stream."
+        }
+      }
+    },
+    {
+      "id": "n046_shadow",
+      "label": "Injury contribution shadow \u00b7 Nov 5, 2:24 PM Pacific",
+      "kind": "GENUINELY_ISSUED_EARLY_RESEARCH",
+      "record_source": "current_issues_n046.json",
+      "records": [],
+      "issued_resolved_games": 0,
+      "issued_games": 29,
+      "issue_at": "2026-11-05T22:24:36.908408+00:00",
+      "performance_status": "AWAITING_ISSUED_OUTCOMES",
+      "qualification": "These specific forward issues have no scored outcomes in this snapshot. Related historical reconstructions are different evidence; their scores are not assigned to this stream.",
+      "target_readiness": {
+        "winner": {
+          "status": "PENDING_OR_UNAVAILABLE",
+          "missing_metrics_are_zero": false
+        },
+        "margin": {
+          "status": "PENDING_OR_UNAVAILABLE",
+          "missing_metrics_are_zero": false
+        },
+        "total": {
+          "status": "PENDING_OR_UNAVAILABLE",
+          "missing_metrics_are_zero": false
+        },
+        "spread_cover": {
+          "status": "NOT_CALIBRATED_FOR_EXECUTABLE_LINE",
+          "reason": "A point margin alone is not a cover probability. No verified line-specific cover distribution, settlement/fee evaluation or promoted cover strategy is attached to this stream."
+        }
+      }
+    },
+    {
+      "id": "n046_fresh",
+      "label": "Current rolling research \u00b7 Nov 5, 2:25 PM Pacific",
+      "kind": "GENUINELY_ISSUED_EARLY_RESEARCH",
+      "record_source": "current_issues_n046.json",
+      "records": [],
+      "issued_resolved_games": 0,
+      "issued_games": 29,
+      "issue_at": "2026-11-05T22:25:44.730761+00:00",
+      "performance_status": "AWAITING_ISSUED_OUTCOMES",
+      "qualification": "These specific forward issues have no scored outcomes in this snapshot. Related historical reconstructions are different evidence; their scores are not assigned to this stream.",
+      "target_readiness": {
+        "winner": {
+          "status": "PENDING_OR_UNAVAILABLE",
+          "missing_metrics_are_zero": false
+        },
+        "margin": {
+          "status": "PENDING_OR_UNAVAILABLE",
+          "missing_metrics_are_zero": false
+        },
+        "total": {
+          "status": "PENDING_OR_UNAVAILABLE",
+          "missing_metrics_are_zero": false
+        },
+        "spread_cover": {
+          "status": "NOT_CALIBRATED_FOR_EXECUTABLE_LINE",
+          "reason": "A point margin alone is not a cover probability. No verified line-specific cover distribution, settlement/fee evaluation or promoted cover strategy is attached to this stream."
+        }
+      }
+    },
+    {
+      "id": "n046_designation",
+      "label": "Designation rolling research \u00b7 Nov 5, 2:28 PM Pacific",
+      "kind": "GENUINELY_ISSUED_EARLY_RESEARCH",
+      "record_source": "current_issues_n046.json",
+      "records": [],
+      "issued_resolved_games": 0,
+      "issued_games": 29,
+      "issue_at": "2026-11-05T22:28:10.772462+00:00",
+      "performance_status": "AWAITING_ISSUED_OUTCOMES",
+      "qualification": "These specific forward issues have no scored outcomes in this snapshot. Related historical reconstructions are different evidence; their scores are not assigned to this stream.",
+      "target_readiness": {
+        "winner": {
+          "status": "PENDING_OR_UNAVAILABLE",
+          "missing_metrics_are_zero": false
+        },
+        "margin": {
+          "status": "PENDING_OR_UNAVAILABLE",
+          "missing_metrics_are_zero": false
+        },
+        "total": {
+          "status": "PENDING_OR_UNAVAILABLE",
+          "missing_metrics_are_zero": false
+        },
+        "spread_cover": {
+          "status": "NOT_CALIBRATED_FOR_EXECUTABLE_LINE",
+          "reason": "A point margin alone is not a cover probability. No verified line-specific cover distribution, settlement/fee evaluation or promoted cover strategy is attached to this stream."
+        }
+      }
+    },
+    {
+      "id": "experimental_injury_issue",
+      "label": "Experimental injury challenger \u00b7 Nov 4",
+      "kind": "GENUINELY_ISSUED_EARLY_RESEARCH",
+      "record_source": "injury_issue_n037.json",
+      "records": [],
+      "issued_resolved_games": 0,
+      "performance_status": "AWAITING_ISSUED_OUTCOMES",
+      "qualification": "Historical selected-injury metrics are linked separately; no resolved outcome of these specific forward cards has been added.",
+      "target_readiness": {
+        "winner": {
+          "status": "PENDING_OR_UNAVAILABLE",
+          "missing_metrics_are_zero": false
+        },
+        "margin": {
+          "status": "PENDING_OR_UNAVAILABLE",
+          "missing_metrics_are_zero": false
+        },
+        "total": {
+          "status": "PENDING_OR_UNAVAILABLE",
+          "missing_metrics_are_zero": false
+        },
+        "spread_cover": {
+          "status": "NOT_CALIBRATED_FOR_EXECUTABLE_LINE",
+          "reason": "A point margin alone is not a cover probability. No verified line-specific cover distribution, settlement/fee evaluation or promoted cover strategy is attached to this stream."
+        }
+      }
+    },
+    {
+      "id": "experimental_injury_refresh",
+      "label": "Prior injury refresh \u00b7 Nov 5, 00:10 UTC",
+      "kind": "GENUINELY_ISSUED_EARLY_RESEARCH",
+      "record_source": "injury_refresh_n039.json",
+      "records": [],
+      "issued_resolved_games": 0,
+      "performance_status": "AWAITING_ISSUED_OUTCOMES",
+      "qualification": "Historical selected-injury metrics are linked separately; no resolved outcome of these specific forward cards has been added.",
+      "target_readiness": {
+        "winner": {
+          "status": "PENDING_OR_UNAVAILABLE",
+          "missing_metrics_are_zero": false
+        },
+        "margin": {
+          "status": "PENDING_OR_UNAVAILABLE",
+          "missing_metrics_are_zero": false
+        },
+        "total": {
+          "status": "PENDING_OR_UNAVAILABLE",
+          "missing_metrics_are_zero": false
+        },
+        "spread_cover": {
+          "status": "NOT_CALIBRATED_FOR_EXECUTABLE_LINE",
+          "reason": "A point margin alone is not a cover probability. No verified line-specific cover distribution, settlement/fee evaluation or promoted cover strategy is attached to this stream."
+        }
+      }
+    },
+    {
+      "id": "experimental_injury_n040",
+      "label": "Prior injury refresh \u00b7 Nov 5, 01:21 UTC",
+      "kind": "GENUINELY_ISSUED_EARLY_RESEARCH",
+      "record_source": "injury_refresh_n040.json",
+      "records": [],
+      "issued_resolved_games": 0,
+      "performance_status": "AWAITING_ISSUED_OUTCOMES",
+      "qualification": "Historical selected-injury metrics are linked separately; no resolved outcome of these specific forward cards has been added.",
+      "target_readiness": {
+        "winner": {
+          "status": "PENDING_OR_UNAVAILABLE",
+          "missing_metrics_are_zero": false
+        },
+        "margin": {
+          "status": "PENDING_OR_UNAVAILABLE",
+          "missing_metrics_are_zero": false
+        },
+        "total": {
+          "status": "PENDING_OR_UNAVAILABLE",
+          "missing_metrics_are_zero": false
+        },
+        "spread_cover": {
+          "status": "NOT_CALIBRATED_FOR_EXECUTABLE_LINE",
+          "reason": "A point margin alone is not a cover probability. No verified line-specific cover distribution, settlement/fee evaluation or promoted cover strategy is attached to this stream."
+        }
+      }
+    },
+    {
+      "id": "experimental_injury_n041",
+      "label": "Prior injury refresh \u00b7 Nov 5, 02:26 UTC",
+      "kind": "GENUINELY_ISSUED_EARLY_RESEARCH",
+      "record_source": "injury_refresh_n041.json",
+      "records": [],
+      "issued_resolved_games": 0,
+      "performance_status": "AWAITING_ISSUED_OUTCOMES",
+      "qualification": "Historical selected-injury metrics are linked separately; no resolved outcome of these specific forward cards has been added.",
+      "target_readiness": {
+        "winner": {
+          "status": "PENDING_OR_UNAVAILABLE",
+          "missing_metrics_are_zero": false
+        },
+        "margin": {
+          "status": "PENDING_OR_UNAVAILABLE",
+          "missing_metrics_are_zero": false
+        },
+        "total": {
+          "status": "PENDING_OR_UNAVAILABLE",
+          "missing_metrics_are_zero": false
+        },
+        "spread_cover": {
+          "status": "NOT_CALIBRATED_FOR_EXECUTABLE_LINE",
+          "reason": "A point margin alone is not a cover probability. No verified line-specific cover distribution, settlement/fee evaluation or promoted cover strategy is attached to this stream."
+        }
+      }
+    }
+  ],
+  "related_historical_studies": [
+    {
+      "source": "injury_selected_metrics_n037.json",
+      "scope": "Selected injury reconstruction, separate from later forward issues"
+    },
+    {
+      "source": "designation_metrics_n045.json",
+      "scope": "Selected annual/weekly/event designation reconstructions, T1 designation boundary; base parents retain T2"
+    }
+  ],
+  "rules": [
+    "No metric is reconstructed from rounded cards.",
+    "2024/25 research is development-exposed; 2026 rankings are descriptive monitoring.",
+    "NO BET in older cards is a research eligibility state, not evidence of a personal transaction. Actual bets are not recorded here.",
+    "Provider thresholds are not expected margins or total points.",
+    "Spread-cover study registration is not a completed calibrated cover model."
+  ]
+}
