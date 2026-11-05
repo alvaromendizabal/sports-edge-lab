@@ -225,3 +225,23 @@ A useful injury study compares learned challengers and matching no-injury contro
 on identical chronological populations, reports uncertainty and failed experiments,
 and preserves the originals. Current-season outcomes do not choose a promoted model.
 The B041 owner never reached the injury study; no performance gain is claimed here.
+
+
+### All supplied availability observations
+
+The private report viewer includes a separate, paged availability table for every
+supplied named-player observation, including unresolved identities and unknown
+publication clocks. League, status, source-clock and player/team/source filters
+operate on these source records independently of model and market filters. Exact
+repeated copies are grouped, while conflicting versions remain visible and cannot
+inherit an eligibility label from a shared observation ID. A separate paged panel
+retains source coverage gaps. Missing reports never establish healthy rosters.
+
+The game-specific pregame views still use only their supplied eligibility audits.
+An explicit latest-field map can select an appended display version while preserving
+every earlier cell. An explicitly missing or malformed latest value is shown as
+unavailable; it does not silently revert to an older view. Source rows do not enter
+forecast inputs or change earlier issues, selection or ROI. Source links accept
+plain public HTTP(S) URLs only; credentials, signed links and private cloud object
+links are not rendered. All report rendering remains in the browser tab with no
+network or persistence path. Browser fixtures use invented records only.

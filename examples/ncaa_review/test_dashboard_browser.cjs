@@ -243,6 +243,9 @@ const { chromium } = require(process.env.PLAYWRIGHT_MODULE_DIR || 'playwright');
       rows[0].injury_display_views_json=JSON.stringify({strict_captured_t120:{injury_coverage_status:'UNKNOWN_NO_ELIGIBLE_REPORT',injury_feature_available_at:null},
         source_supported_reconstruction_t0:{injury_coverage_status:'PARTIAL_REPORTED_LOWER_BOUNDS',injury_feature_available_at:'2026-11-04T19:30:00Z'},undocumented_boundary:null});
       rows[1].injury_display_views_json='null';
+      rows[0].b042_injury_display_views_json=JSON.stringify({strict_captured_t120:{injury_coverage_status:'UNKNOWN_NO_ELIGIBLE_REPORT',injury_feature_available_at:null},
+        source_supported_reconstruction_t0:{injury_coverage_status:'PARTIAL_REPORTED_LOWER_BOUNDS',injury_feature_available_at:'2026-11-04T19:45:00Z'},undocumented_boundary:null});
+      rows[0].b042_injury_display_asof='2026-11-05T23:00:00Z';
       const secondStream={...rows[0],track:'original_frozen',durable_issued_before_cutoff:true,
         forecast_status:'INVENTED_ORIGINAL_ISSUE',prediction_win:.4567,kalshi_win_prediction:.2345,
         kalshi_win_status:'INVENTED_OTHER_STREAM_PAIR'};
@@ -250,7 +253,18 @@ const { chromium } = require(process.env.PLAYWRIGHT_MODULE_DIR || 'playwright');
         records: [...rows,secondStream], market_observations: [{ provider: 'Kalshi', canonical_identity_verified: false, native_event_id: 'unresolved-fixture', binding_status: 'unknown_identity', quote_time: null, native_yes_probability: .37, value_kind: 'Native Yes probability' },
           { provider: 'DraftKings', league: 'ncaam', canonical_identity_verified: true, event_id: 'invented-0', target: 'win', prediction: .55 }],
         window_event_keys: { this_week: rows.slice(0, 5).map(r => [r.league, r.event_id]), season_to_date: rows.slice(0, 1).map(r => [r.league, r.event_id]), last_week: [] },
-        audit_annotations: { 'invented-0': ['Exact time disputed; no replacement inferred.'] }, metrics: [], weekly_metrics: [] };
+        audit_annotations: { 'invented-0': ['Exact time disputed; no replacement inferred.'] }, metrics: [], weekly_metrics: [],
+        injury_display_latest_fields:{injury_display_views_json:'b042_injury_display_views_json',injury_display_asof:'b042_injury_display_asof'},
+        injury_research:{schema:'sel.ncaa.b041.private_injury_display.v1',asof:'2026-11-05T20:00:00Z',
+          observations:Array.from({length:27},(_,i)=>({observation_id:'invented-injury-'+i,league:i<24?'ncaam':'ncaaw',
+            player_name:i===0?'<img src=x onerror="window.injuryLeak=true">':'Named Player '+i,team_name:'Availability Team '+i,
+            status:i%2?'questionable':'out',scope:'single_game_date',season_end_year:2026,event_date:'2026-01-07',
+            event_date_precision:'date_only_timezone_unknown',source_printed_report_date:'2026-01-07',
+            source_publication_time:i===1?'2026-01-06T18:00:00Z':null,source_acquired_at:'2026-11-05T19:00:00Z',
+            source_clock_precision:i===1?'exact_publication':'report_date_only_publication_unknown',source_id:'invented-source-'+i,
+            source_url:i===0?'javascript:window.injuryLeak=true':'https://example.invalid/availability',binding_status:'UNRESOLVED_INVENTED'})),
+          source_report:{unresolved_observations:[{observation_id:'unresolved-injury',player_name:'Unresolved Player',team_name:'Unresolved School',status:'out'}],gaps:[{source_id:'invented-source',status:'UNKNOWN_PUBLICATION_CLOCK',http_status:200}]},
+          horizon_reports:[{evidence_tier:'source_supported_reconstruction',horizon_minutes:60,selected_observation_ids:['invented-injury-1']}]}};
       await page.locator('#report-file').setInputFiles({ name: 'invented-report.json', mimeType: 'application/json', buffer: Buffer.from(JSON.stringify(invented)) });
       await page.locator('#report:not([hidden])').waitFor();
       assert.match(await page.locator('#load-status').innerText(), /Loaded 27 source game records/);
@@ -264,6 +278,35 @@ const { chromium } = require(process.env.PLAYWRIGHT_MODULE_DIR || 'playwright');
       assert.match(await page.locator('[data-game]').first().innerText(),/Two hours before tip.*Actually captured by boundary/s);
       assert.match(await page.locator('[data-game]').first().innerText(),/Strictly before tip.*Later recovered source assertion/s);
       assert.match(await page.locator('[data-game]').first().innerText(),/Unrecognized information boundary.*Unrecognized report view/s);
+      assert.equal(await page.locator('[data-injury-source]').count(),25);
+      assert.match(await page.locator('#injury-source-count').innerText(),/1–25 of 28/);
+      assert.match(await page.locator('#injury-source-results').innerText(),/Publication clock unknown or unqualified/);
+      assert.match(await page.locator('#injury-source-results').innerText(),/Not selected in the supplied horizon audits/);
+      assert.match(await page.locator('[data-game]').first().innerText(),/2026-11-04T19:45:00Z/);
+      assert.doesNotMatch(await page.locator('[data-game]').first().innerText(),/2026-11-04T19:30:00Z/);
+      assert.match(await page.locator('#injury-source-gaps > summary').innerText(),/1 supplied/);
+      assert.equal(await page.locator('#injury-source-results img').count(),0);
+      assert.equal(await page.locator('#injury-source-results a[href^="javascript:"]').count(),0);
+      assert.equal(await page.evaluate(()=>window.injuryLeak),undefined);
+      await page.locator('#injury-source-next').click();assert.match(await page.locator('#injury-source-count').innerText(),/26–28 of 28/);
+      await page.locator('#injury-source-league').selectOption('ncaaw');assert.equal(await page.locator('[data-injury-source]').count(),3);
+      await page.locator('#injury-source-search').fill('Named Player 26');assert.equal(await page.locator('[data-injury-source]').count(),1);
+      await page.locator('#injury-source-search').fill('');await page.locator('#injury-source-league').selectOption('all');
+      await page.locator('#injury-source-clock').selectOption('unknown');assert.match(await page.locator('#injury-source-count').innerText(),/of 27/);
+      await page.locator('#injury-source-clock').selectOption('supplied');assert.equal(await page.locator('[data-injury-source]').count(),1);
+      assert.match(await page.locator('#injury-source-results').innerText(),/Source-supported reconstruction at T−60/);
+      await page.locator('#injury-source-clock').selectOption('all');await page.locator('#injury-source-league').selectOption('unknown');
+      assert.equal(await page.locator('[data-injury-source]').count(),1);assert.match(await page.locator('#injury-source-results').innerText(),/Unresolved Player/);
+      await page.locator('#injury-source-league').selectOption('all');
+      assert.match(await page.locator('[data-game]').first().innerText(),/INVENTED_QUALIFIED_PAIR/);
+      const invalidInjuries={...invented,injury_research:{...invented.injury_research,observations:[null]}};
+      await page.locator('#report-file').setInputFiles({name:'invalid-injuries.json',mimeType:'application/json',buffer:Buffer.from(JSON.stringify(invalidInjuries))});
+      await page.waitForFunction(()=>document.getElementById('load-status').textContent.includes('Invalid or oversized availability source inventory'));
+      assert.equal(await page.locator('[data-injury-source]').count(),25);
+      assert.match(await page.locator('[data-game]').first().innerText(),/INVENTED_QUALIFIED_PAIR/);
+      await page.locator('#report-file').setInputFiles({name:'invented-report.json',mimeType:'application/json',buffer:Buffer.from(JSON.stringify(invented))});
+      await page.waitForFunction(()=>document.getElementById('load-status').textContent.startsWith('Loaded 27'));
+
       assert.match(await page.locator('[data-game]').nth(1).innerText(),/unrecognized structure; raw evidence remains/);
 
       counts.privateViewerStates++;
