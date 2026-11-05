@@ -88,3 +88,11 @@ The dated [October 29 NBA review](../../../docs/nba/index.html), existing resear
 ## Calendar coverage and missing data
 
 The [calendar inventory example](COVERAGE_INVENTORY.md) keeps every observed game while separately reporting requested-date completion, historical reference coverage and original possession. Its invented failure cases cover empty dates, source failures, reschedules, local-week boundaries and separate Polymarket products. Forecast availability never filters the acquisition inventory.
+
+## Archive receipts and compatibility
+
+The [offline receipt closure example](RECEIPT_CLOSURE.md) distinguishes logical
+descriptor aliases from physical payload counts. Invented ZIP fixtures exercise
+legacy reference normalization, exact manifest closure, content pins and explicit
+regular-file types, including the manifest. A successful local byte check does
+not establish a fresh provider read, completed computation or source-use grant.
