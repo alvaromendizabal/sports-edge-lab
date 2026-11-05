@@ -96,3 +96,11 @@ descriptor aliases from physical payload counts. Invented ZIP fixtures exercise
 legacy reference normalization, exact manifest closure, content pins and explicit
 regular-file types, including the manifest. A successful local byte check does
 not establish a fresh provider read, completed computation or source-use grant.
+
+## Bounded work and progress evidence
+
+The [bounded acquisition and progress example](WORK_PROGRESS.md) separates verified
+rows and covered games from attempts, empty responses and heartbeats. Its invented
+fixtures demonstrate phase-local cooldowns, conditional ETA, finite priority
+budgets and a preserved history backlog after model/report work.
+
