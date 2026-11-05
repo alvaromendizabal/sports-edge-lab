@@ -115,3 +115,13 @@ python -m unittest examples.fbs_contracts.tests.test_interrupted_work -v
 ```
 
 These are engineering fixtures, not real market observations, successful remote recovery or new football-model fits. Hashes identify unchanged bytes; source authenticity, writer ownership and distribution rights remain separate requirements.
+
+## Later November 4 evidence: current-only captures and visible gaps
+
+The later authenticated collection attempt acquired data and then failed during reporting. Its dated [operations record](../../docs/fbs/operations-2026-11-04.md) preserves that failure; it is not described as successful full acquisition. Independent original-value replay now supports 2,742 official 2024–2026 game rows and 627 completed 2026 results, while preserving every one of the 622 original retrospective model outputs and the previous probability, margin, total and matched-market scorecards. The earlier 624-result snapshot and its qualifications above remain a historical record.
+
+The new display appends 191 rounded DraftKings references and 546 native product records to the 23,911 previously published references. All 63 current-week games remain visible. A separate 567-slot native grid covers each game, the three distinct native providers and winner/margin/total targets. The current-only view has usable winner probabilities for Kalshi 56, Polymarket Global 57 and Polymarket US 52 games. Supported median intervals cover margin/total on 57/57, 57/57 and 50/52 games respectively. These intervals describe quoted medians with an excluded lower threshold and included upper threshold, not expected scores or genuine model forecasts.
+
+The complete grid explicitly retains 21 absent products, 45 after-kickoff-only captures, two unusable winner products and four inconsistent US threshold curves. Missing latest products do not silently fall back to older snapshots. Older observations remain archived and available in their separately qualified historical views. Original native capture clocks are November 4, 9:24–9:28 PM Pacific; the later verification clock is not substituted for them. Individual quote timestamps and latest-pre-kickoff history completeness remain unproved.
+
+`native_current_snapshot.py` requires exact game/provider/product closure and consistent rounded values, clocks and missing states. Its invented tests reject missing/duplicate/foreign slots, fabricated clocks, changed values, scalar-for-median substitution and model-admission claims. The JavaScript selector isolates `CURRENT_SNAPSHOT_ONLY` rows from T120, T60 and both historical pregame selectors. No new model fit, rolling forecast, wager, fee, fill or profit follows from this display update.

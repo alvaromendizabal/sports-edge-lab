@@ -6,6 +6,7 @@ import argparse, hashlib, html, json, math, re
 from .market_time import instant, reference_at, availability_reference_at
 from .season_transport import pack, unpack
 from .source_progress import render_section
+from .native_current_snapshot import REGISTRATION, validate_snapshot
 
 ROOT=Path(__file__).resolve().parents[2]
 DATA=ROOT/'docs/fbs/season-2026.json'
@@ -63,9 +64,12 @@ def validate(data):
                 if ref['captured_at']:instant(ref['captured_at'])
                 require(ref['quote_at'] or ref['captured_at'],'Reference has no recorded clock')
                 require(ref['clock_basis']==('provider_quote_at' if ref['quote_at'] else 'retrieved_at'),'Clock basis cannot fabricate a source quote timestamp')
-                require(ref['registered_cutoff_kind'] in [None,'T120','T60','LATEST_BEFORE_KICKOFF'],'Unknown registered proxy window')
+                require(ref['registered_cutoff_kind'] in [None,'T120','T60','LATEST_BEFORE_KICKOFF',REGISTRATION],'Unknown registered proxy window')
                 require(ref['source_query_cutoff_kind'] in [None,'T120','T60','LATEST_BEFORE_KICKOFF','latest_pre_kickoff','current'],'Unknown acquisition query window')
-                if ref['registered_cutoff_kind']:
+                if ref['registered_cutoff_kind']==REGISTRATION:
+                    require(provider!='DraftKings' and ref['quote_at'] is None and ref['source_query_cutoff_kind']=='current'
+                            and ref['product']=='verified_native_current_snapshot','Current native display must stay outside historical windows')
+                elif ref['registered_cutoff_kind']:
                     require(provider!='DraftKings' and ref['target'] in ['margin','total'] and ref['quote_at'] and ref['reference_kind'].startswith('implied_threshold_center_from_'),'Only historical native point proxies are window-specific')
                 support=ref['point_support']
                 if support is not None:
@@ -86,6 +90,8 @@ def validate(data):
                 require(ref['join_status']=='matched','Unmatched row entered game')
                 if ref['event_url']:require(re.match(r'^https://(?:[a-z0-9-]+\.)?(?:kalshi\.com|polymarket\.com|polymarket\.us)/',ref['event_url']) is not None,'Unexpected event URL')
     require(len(ids)==len(set(ids)),'Duplicate public game ID')
+    validate_snapshot(data['reporting_contract'].get('v031_native_current_snapshot'),games,
+                      prepared_at=data['prepared_at'],current_week=data['windows']['current_calendar_week'])
     inv=data['inventory']
     require(inv['observed_games']==len(games),'Observed inventory denominator')
     require(inv['completed_games']==sum(g['completed'] for g in games),'Completed denominator')

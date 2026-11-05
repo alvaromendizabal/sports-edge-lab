@@ -15,6 +15,10 @@ from zoneinfo import ZoneInfo
 
 INVENTORY_SCHEMA = "fbs.public.official-source-inventory.v1"
 PROGRESS_SCHEMA = "fbs.public.source-stage-progress.v1"
+PROGRESS_SCHEMA_V2 = "fbs.public.source-stage-progress.v2"
+ACQUISITION_KEYS = {"new_native_requests", "new_current_requests", "total_new_requests", "in_call_reuses",
+                    "prior_raw_pending", "prior_failed_observations", "prior_raw_verified_reused",
+                    "derived_report_commits", "source_refresh_seconds", "whole_run_eta_seconds"}
 INVENTORY_KEYS = {"schema", "verified_at", "source_capture_started_at", "source_capture_completed_at",
                   "source", "verification", "qualifications", "seasons", "rows"}
 GAME_KEYS = {"season", "phase", "week", "kickoff", "kickoff_tbd", "home", "away", "population",
@@ -127,7 +131,9 @@ def validate_inventory(doc):
 
 
 def validate_progress(doc):
-    require(isinstance(doc, dict) and set(doc) == PROGRESS_KEYS and doc["schema"] == PROGRESS_SCHEMA,
+    is_v2 = isinstance(doc, dict) and doc.get("schema") == PROGRESS_SCHEMA_V2
+    require(isinstance(doc, dict) and set(doc) == (PROGRESS_KEYS | {"acquisition"} if is_v2 else PROGRESS_KEYS)
+            and doc["schema"] in (PROGRESS_SCHEMA, PROGRESS_SCHEMA_V2),
             "Unexpected public progress schema/fields")
     snapshot = instant(doc["log_snapshot_at"])
     require(doc["evidence_class"] == "ATTACHED_EXECUTION_LOG_SNAPSHOT_NOT_LIVE_PROCESS"
@@ -165,11 +171,27 @@ def validate_progress(doc):
                     ("REGISTERED_PASS_PROCESSED_NOT_FULL_SUCCESS" if full else "PARTIAL_LOG_PROGRESS"),
                     "Stage processed/partial state differs")
     successor = doc["latest_successor"]
-    require(set(successor) == SUCCESSOR_KEYS and successor["release"] == "V028"
+    legacy_successor = set(successor) == SUCCESSOR_KEYS and successor["release"] == "V028" \
             and successor["status"] == "RECOVERABLE_PREDECESSOR_WAIT_DIAGNOSTIC" and successor["exit_code"] == 2
-            and finite(successor["elapsed_seconds"]) and successor["elapsed_seconds"] >= 600
-            and successor["collector_started"] is False
-            and successor["reason"] == "ACTIVE_FBS_PREDECESSOR_PRESERVED", "Successor diagnostic cannot become collection success")
+    if not is_v2:
+        require(legacy_successor and finite(successor["elapsed_seconds"]) and successor["elapsed_seconds"] >= 600
+                and successor["collector_started"] is False
+                and successor["reason"] == "ACTIVE_FBS_PREDECESSOR_PRESERVED", "Successor diagnostic cannot become collection success")
+    else:
+        require(set(successor) == SUCCESSOR_KEYS and successor["release"] == "V030"
+                and successor["status"] == "AUTHENTICATED_PARTIAL_ACQUISITION" and successor["exit_code"] == 2
+                and finite(successor["elapsed_seconds"]) and successor["elapsed_seconds"] > 0
+                and successor["collector_started"] is True
+                and successor["reason"] == "CATALOG_REPORT_SIZE_LIMIT_AND_ERROR_CALLBACK_COLLISION",
+                "Actual failed collection must not be presented as waiting or success")
+        a = doc["acquisition"]
+        require(isinstance(a, dict) and set(a) == ACQUISITION_KEYS, "Unknown acquisition accounting fields")
+        counters = ACQUISITION_KEYS - {"source_refresh_seconds", "whole_run_eta_seconds"}
+        require(all(integer(a[k]) for k in counters) and a["total_new_requests"] == a["new_native_requests"] + a["new_current_requests"],
+                "Request accounting must not double-count reuse or report commits")
+        require(a["prior_raw_verified_reused"] == 0 and a["whole_run_eta_seconds"] is None
+                and finite(a["source_refresh_seconds"]) and a["source_refresh_seconds"] >= 0,
+                "Pending metadata does not prove recovered numerical units or a whole-run ETA")
     _public_only(doc)
     return doc
 
@@ -222,6 +244,19 @@ def render_section(inventory, progress, *, embed_data=True):
             + ('<span class="sub">Away–home · actual result</span>' if row["completed"] else '')
             + '</td><td>' + margin + '</td><td>' + total + '</td><td>' + _clock(row["source_at"]) + '</td></tr>')
     count = len(inventory["rows"])
+    if progress["schema"] == PROGRESS_SCHEMA_V2:
+        a = progress["acquisition"]
+        successor_text = ('<p><strong>The latest authenticated attempt collected data and then exited with a partial diagnostic.</strong> '
+            + _number(a["total_new_requests"]) + ' new requests (' + _number(a["new_native_requests"])
+            + ' native-market reads and ' + _number(a["new_current_requests"]) + ' official/DraftKings refresh reads) completed. '
+            + _number(a["in_call_reuses"]) + ' within-run dependency reuses are not extra acquisitions. The current official refresh took '
+            + f'{a["source_refresh_seconds"]:g}' + ' seconds.</p><p>The Polymarket US catalog was saved, but reporting exceeded its decoded-size bound; '
+            'an error-callback collision then stopped the invocation. The next repair uses bounded reading and retained source replay. '
+            + _number(a["prior_raw_pending"]) + ' older request candidates still require raw verification; '
+            + _number(a["prior_failed_observations"]) + ' historical failed observations remain visible. '
+            'These counts are not admitted forecasts or a whole-run ETA. Numeric feature reconstruction still gates genuine forecasts; it does not block source display.</p>')
+    else:
+        successor_text = '<p>The successor returned a recoverable wait diagnostic after protecting an active predecessor. It began no collection in that invocation. Numeric feature reconstruction still gates genuine forecasts; it does not block source display.</p>'
     section = ('<section id="source-evidence" aria-labelledby="source-evidence-heading">'
         '<div class="section-head"><div><h2 id="source-evidence-heading">All seasons, visible source progress</h2>'
         '<p>Official game inventory and acquisition progress advance independently of live model approval. Every observed game remains visible.</p></div></div>'
@@ -231,9 +266,9 @@ def render_section(inventory, progress, *, embed_data=True):
         + _clock(inventory["source_capture_completed_at"]) + '; numerical review recorded ' + _clock(inventory["verified_at"]) + '.</p>'
         '<p>This inventory contains public schedules and captured final results, not per-game historical model predictions. The original '
         + _number(inventory["qualifications"]["original_replay_cohort_games_unchanged"]) + '-game replay and its model scorecards are unchanged. A later result or price is never relabeled an earlier model input.</p>'
-        '<p><strong>Source progress is not a live-process monitor.</strong> The attached log ends ' + _clock(progress["log_snapshot_at"])
-        + '. It shows the 2026 passes processed while older-season backfill remained partial. Processed contracts can include failed, empty or unavailable cutoff rows. No full owner completion or new forecast is inferred.</p>'
-        '<p>The successor returned a recoverable wait diagnostic after protecting an active predecessor. It began no collection in that invocation. Numeric feature reconstruction still gates genuine forecasts; it does not block source display.</p></div>'
+        '<p><strong>Source progress is not a live-process monitor.</strong> The interrupted predecessor’s intact log observations end ' + _clock(progress["log_snapshot_at"])
+        + '. That earlier log shows the 2026 passes processed while older-season backfill remained partial. Processed contracts can include failed, empty or unavailable cutoff rows. No successful full acquisition or new forecast is inferred.</p>'
+        + successor_text + '</div>'
         '<div class="panel" style="margin-top:16px"><div class="table-wrap" tabindex="0" role="region" aria-label="Recorded source stage progress">'
         '<table class="history-table"><caption class="screenreader">Native market stages from the attached execution log; counts are contracts or cutoff rows, not games or admitted forecasts.</caption>'
         '<thead><tr><th scope="col">Season · pass</th><th scope="col">Contracts processed / registered</th><th scope="col">Available historical cutoff rows</th><th scope="col">Failed / empty cutoff rows</th><th scope="col">Evidence state · observed clock</th></tr></thead>'
