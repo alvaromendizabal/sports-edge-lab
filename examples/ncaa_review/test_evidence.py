@@ -246,6 +246,9 @@ class EvidenceTests(unittest.TestCase):
             self.assertEqual(path.read_text(), output)
             self.assertNotRegex(output, r'__(?:TITLE|EVIDENCE|PROGRESS_DEMO|PREFLIGHT_DEMO|LEAGUE|SIBLING|SIBLING_LABEL)__')
             if path.parent.name in self.exports:
+                self.assertIn('NCAA evidence review · 05 November 2026 Pacific', output)
+                self.assertIn('Latest run is partial; completed work is preserved.', output)
+                self.assertNotIn('Latest run stopped during reporting', output)
                 embedded = re.search(r'<script type="application/json" id="evidence">(.*?)</script>', output, re.S)
                 self.assertIsNotNone(embedded)
                 self.assertEqual(json.loads(embedded.group(1)), self.exports[path.parent.name])
