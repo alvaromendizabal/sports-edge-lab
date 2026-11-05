@@ -554,6 +554,10 @@ def build_review(*, check=False):
     latest_pregame, latest_n037_receipt = load_latest_n037(latest)
     from source_review_n038 import load_source_review
     source_n038, source_n038_receipt = load_source_review(latest)
+    from current_source_n039 import load_current_source
+    source_n039, source_n039_receipt = load_current_source(latest)
+    from injury_refresh import load_injury_refresh
+    injury_refresh, injury_refresh_receipt = load_injury_refresh(latest)
     template = (HERE / "review.template.html").read_text()
     embedded = canonical(data).decode().replace("<", "\\u003c")
     page = template.replace("__EVIDENCE_JSON__", embedded).replace("__EVIDENCE_SHA__", digest(data))
@@ -565,18 +569,20 @@ def build_review(*, check=False):
     page = page.replace("__RESCHEDULE_JSON__", canonical(reschedule).decode().replace("<", "\\u003c"))
     page = page.replace("__SOURCE_RECOVERY_JSON__", canonical(recovery).decode().replace("<", "\\u003c"))
     page = page.replace("__PRIMARY_ISSUE_JSON__", canonical(primary).decode().replace("<", "\\u003c"))
+    page = page.replace("__INJURY_REFRESH_JSON__", canonical(injury_refresh).decode().replace("<", "\\u003c"))
     page = page.replace("__INJURY_ISSUE_JSON__", canonical(injury_issue).decode().replace("<", "\\u003c"))
     page = page.replace("__LATEST_PREGAME_JSON__", canonical(latest_pregame).decode().replace("<", "\\u003c"))
+    page = page.replace("__N039_CURRENT_SOURCE_JSON__", canonical(source_n039).decode().replace("<", "\\u003c"))
     page = page.replace("__N038_SOURCE_JSON__", canonical(source_n038).decode().replace("<", "\\u003c"))
     page = page.replace("__N038_SOURCE_SCRIPT__", (HERE / "source_review_n038.js").read_text())
     page = page.replace("__LATEST_SCRIPT__", (HERE / "current_coverage.js").read_text())
-    require(all(marker not in page for marker in ("__EVIDENCE_", "__CURRENT_", "__WEEKLY_", "__LATEST_", "__POINTS_", "__SOURCE_OVERLAY_", "__RESCHEDULE_", "__SOURCE_RECOVERY_", "__PRIMARY_ISSUE_", "__INJURY_ISSUE_", "__LATEST_PREGAME_", "__N038_SOURCE_")), "Unfilled review template")
+    require(all(marker not in page for marker in ("__EVIDENCE_", "__CURRENT_", "__WEEKLY_", "__LATEST_", "__POINTS_", "__SOURCE_OVERLAY_", "__RESCHEDULE_", "__SOURCE_RECOVERY_", "__PRIMARY_ISSUE_", "__INJURY_ISSUE_", "__LATEST_PREGAME_", "__N038_SOURCE_", "__INJURY_REFRESH_", "__N039_CURRENT_SOURCE_")), "Unfilled review template")
     output = HERE / "review.html"
     if check:
         require(output.is_file() and output.read_text() == page, "Generated review differs; run contracts.py --build-review")
     else:
         output.write_text(page)
-    return {**receipt, **current_receipt, **weekly_receipt, **latest_receipt, **points_receipt, **overlay_receipt, **reschedule_receipt, **recovery_receipt, **primary_receipt, **injury_issue_receipt, **latest_pregame_receipt, **latest_n037_receipt, **current_n037_receipt, **source_n038_receipt, "review": "review.html", "evidence_sha256": digest(data), "generated_page_matches": True}
+    return {**receipt, **current_receipt, **weekly_receipt, **latest_receipt, **points_receipt, **overlay_receipt, **reschedule_receipt, **recovery_receipt, **primary_receipt, **injury_issue_receipt, **latest_pregame_receipt, **latest_n037_receipt, **current_n037_receipt, **source_n038_receipt, **injury_refresh_receipt, **source_n039_receipt, "review": "review.html", "evidence_sha256": digest(data), "generated_page_matches": True}
 
 
 def demo(*, output):

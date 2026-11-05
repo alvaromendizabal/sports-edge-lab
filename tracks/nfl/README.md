@@ -2,6 +2,10 @@
 
 [**Open the live NFL dashboard →**](https://sports-edge-lab-nfl.alv-mendizabal.chatgpt.site/) · [November 4 source review](N038_SOURCE_REVIEW.md) · [Model card](CURRENT_MODEL_CARD.md)
 
+**New market snapshot · November 5, 00:23 UTC:** Week 9 retains all 15 games across DraftKings, Kalshi and Polymarket for winner, margin and total. Kalshi/Polymarket have fresh observations for all 15; DraftKings has 14 fresh games plus one explicitly dated November 4 LV–SF reference. Fresh DraftKings references also cover 13 Week 10 games. Older source snapshots and historical scorecards are unchanged.
+
+**New issue · November 5, 00:10 UTC:** The latest injury refresh adds 29 genuine early cards from reused fitted heads. Listed report inputs now reach 11 of 15 Week 9 games; winner probabilities retain the base-feature target, while margin and total use the new eligible injury observations. The earlier cards remain available. [Read the changes and limitations](INJURY_REFRESH_N039.md).
+
 **Three providers, one review:** DraftKings, Kalshi and Polymarket now have equal prominence at the top of the dashboard. Choose a season or the current week to inspect reference coverage, then use the separate matched-performance controls for accuracy, probability losses, margin and total errors.
 
 **2026 completed games:** All **121 finals** have authenticated latest-pregame Kalshi **and Polymarket** winner, margin and total references. Chicago–Seattle is included. These newly recovered observations retain their original pregame quote times and later acquisition times. They do not change the preserved T1/T2 model scorecards or turn retrospective predictions into original issues.
