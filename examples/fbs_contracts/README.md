@@ -104,3 +104,14 @@ python -m unittest examples.fbs_contracts.tests.test_market_availability example
 ```
 
 No source display change performs a model fit, bypasses the unresolved raw-to-feature reconstruction gate, creates an issued forecast, or authorizes a trade.
+
+## Interrupted work without fabricated success
+
+The [November 4 operations note](../../docs/fbs/operations-2026-11-04.md) preserves V029's actual failed handoff and distinguishes V030's locally tested preparation from an owner result. The new [interrupted-work example](interrupted_work.py) uses only invented bytes and standard-library code. It distinguishes a live process from a reused PID, preserves diagnostic failures, rejects incomplete inventories and conflicting observations, authenticates exact dependencies and replays each accepted derived value. Recovery does not require pretending that the whole prior run succeeded.
+
+```bash
+python -m examples.fbs_contracts.interrupted_work
+python -m unittest examples.fbs_contracts.tests.test_interrupted_work -v
+```
+
+These are engineering fixtures, not real market observations, successful remote recovery or new football-model fits. Hashes identify unchanged bytes; source authenticity, writer ownership and distribution rights remain separate requirements.
