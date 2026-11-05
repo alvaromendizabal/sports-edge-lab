@@ -455,9 +455,28 @@
     }
     host.append(details('Complete supplied paired metrics and horizon qualifications',horizons));
   }
-  function injuryCard(rows){const host=node('section',undefined,'detail');host.append(node('h3','Pregame injury information'));const supplied=rows.filter(r=>r.injury_display_views_json);if(!supplied.length){host.append(node('p','No injury-report view was supplied for this game. This means unknown coverage, not a healthy roster. Earlier forecasts remain unchanged.','note'));return host;}
-    const seen=new Set();for(const row of supplied){let views;try{views=JSON.parse(row.injury_display_views_json);}catch{host.append(node('p','Supplied injury view could not be parsed; raw evidence remains in the record.','note'));continue;}const key=JSON.stringify(views);if(seen.has(key))continue;seen.add(key);const [grid,body]=table(['Information boundary','Evidence basis','Report coverage','Information clock']);for(const [name,v]of Object.entries(views)){const horizon=name.endsWith('_t0')?'Strictly before tip':name.endsWith('_t60')?'One hour before tip':'Two hours before tip';appendRow(body,[horizon,name.startsWith('strict_captured')?'Actually captured by boundary':'Later recovered source assertion',text(v.injury_coverage_status),text(v.injury_feature_available_at)]);}host.append(grid,details('Supplied named-player counts, coverage and report identities',views));}
-    host.append(node('p','Partial reports give named-player lower bounds. Unknown players are not treated as healthy. Displaying a later report does not alter an earlier forecast or establish an injury-model improvement.','note'));return host;}
+  function injuryCard(rows){
+    const host=node('section',undefined,'detail');host.append(node('h3','Pregame injury information'));
+    const supplied=rows.filter(r=>r.injury_display_views_json);
+    if(!supplied.length){host.append(node('p','No injury-report view was supplied for this game. This means unknown coverage, not a healthy roster. Earlier forecasts remain unchanged.','note'));return host;}
+    const seen=new Set();
+    for(const row of supplied){
+      let views;
+      try{views=JSON.parse(row.injury_display_views_json);}catch{host.append(node('p','Supplied injury view could not be parsed; raw evidence remains in the record.','note'));continue;}
+      if(!views||typeof views!=='object'||Array.isArray(views)){host.append(node('p','Supplied injury view has an unrecognized structure; raw evidence remains in the record.','note'));continue;}
+      const key=JSON.stringify(views);if(seen.has(key))continue;seen.add(key);
+      const [grid,body]=table(['Information boundary','Evidence basis','Report coverage','Information clock']);
+      for(const [name,v]of Object.entries(views)){
+        const horizon=name.endsWith('_t0')?'Strictly before tip':name.endsWith('_t60')?'One hour before tip':name.endsWith('_t120')?'Two hours before tip':'Unrecognized information boundary';
+        const basis=name.startsWith('strict_captured_')?'Actually captured by boundary':name.startsWith('source_supported_reconstruction_')?'Later recovered source assertion':'Unrecognized evidence basis';
+        const valid=v&&typeof v==='object'&&!Array.isArray(v);
+        appendRow(body,[horizon,basis,valid?text(v.injury_coverage_status):'Unrecognized report view',valid?text(v.injury_feature_available_at):'Unavailable']);
+      }
+      host.append(grid,details('Supplied named-player counts, coverage and report identities',views));
+    }
+    host.append(node('p','Partial reports give named-player lower bounds. Unknown players are not treated as healthy. Displaying a later report does not alter an earlier forecast or establish an injury-model improvement.','note'));return host;
+  }
+
   function gameCard(g){const r=g.base,card=node('article',undefined,'game');card.dataset.game=g.id;const head=node('div',undefined,'game-head'),title=node('div');title.append(node('span',r.league==='ncaam'?"Men's basketball":r.league==='ncaaw'?"Women's basketball":'League unverified','badge'));if(r.source_binding_status==='UNMATCHED_OFFICIAL_CANDIDATE_RECORD')title.append(node('span','Unmatched official candidate','badge warn'));title.append(node('h3',text(r.away_team)+' at '+text(r.home_team)));const score=node('div',finite(r.actual_away_points)&&finite(r.actual_home_points)?number(r.actual_away_points,0)+' – '+number(r.actual_home_points,0):r.completed?'Final score unavailable':'Result pending','score');score.append(node('span','Away – home'));head.append(title,score);card.append(head);
     card.append(node('p',text(r.tipoff_pacific||r.source_date)+' · Pacific time · precision: '+text(r.time_precision)+' · phase: '+text(r.phase)+' · '+text(r.event_id),'source-note'));
     for(const annotation of (report.audit_annotations?.[r.event_id]||[]))card.append(node('p','Source precision warning: '+String(annotation),'notice'));

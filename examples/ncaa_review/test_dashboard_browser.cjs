@@ -233,6 +233,9 @@ const { chromium } = require(process.env.PLAYWRIGHT_MODULE_DIR || 'playwright');
         polymarket_latest_pretip_total_status:'POINT_MEAN_UNSUPPORTED',polymarket_us_status:'NOT ACQUIRED / UNVERIFIED'});
       Object.assign(rows[1],{kalshi_latest_pretip_win_value:.8123,
         kalshi_latest_pretip_win_status:'CAPTURED_WITHOUT_MODEL',kalshi_latest_pretip_win_value_kind:'Native home probability'});
+      rows[0].injury_display_views_json=JSON.stringify({strict_captured_t120:{injury_coverage_status:'UNKNOWN_NO_ELIGIBLE_REPORT',injury_feature_available_at:null},
+        source_supported_reconstruction_t0:{injury_coverage_status:'PARTIAL_REPORTED_LOWER_BOUNDS',injury_feature_available_at:'2026-11-04T19:30:00Z'},undocumented_boundary:null});
+      rows[1].injury_display_views_json='null';
       const secondStream={...rows[0],track:'original_frozen',durable_issued_before_cutoff:true,
         forecast_status:'INVENTED_ORIGINAL_ISSUE',prediction_win:.4567,kalshi_win_prediction:.2345,
         kalshi_win_status:'INVENTED_OTHER_STREAM_PAIR'};
@@ -251,6 +254,11 @@ const { chromium } = require(process.env.PLAYWRIGHT_MODULE_DIR || 'playwright');
       assert.match(await page.locator('#results').innerText(), /Exact time disputed/);
       assert.equal(await page.locator('#results img').count(), 0);
       assert.equal(await page.evaluate(() => window.privateLeak), undefined);
+      assert.match(await page.locator('[data-game]').first().innerText(),/Two hours before tip.*Actually captured by boundary/s);
+      assert.match(await page.locator('[data-game]').first().innerText(),/Strictly before tip.*Later recovered source assertion/s);
+      assert.match(await page.locator('[data-game]').first().innerText(),/Unrecognized information boundary.*Unrecognized report view/s);
+      assert.match(await page.locator('[data-game]').nth(1).innerText(),/unrecognized structure; raw evidence remains/);
+
       counts.privateViewerStates++;
       assert.equal(await page.locator('#market-clock').inputValue(),'latest_pretip');
       assert.deepEqual(await page.locator('#market-clock option').allTextContents(),
