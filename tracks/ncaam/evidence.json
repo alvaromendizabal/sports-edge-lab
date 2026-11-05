@@ -1,26 +1,26 @@
 {
   "current_coverage_gaps": {
-    "both_leagues_observed_finals": 732,
-    "both_leagues_source_records": 2821,
+    "both_leagues_observed_finals": 738,
+    "both_leagues_source_records": 2816,
     "calendar_source_versions": 1791,
-    "historical_backfill_stage": "NOT_REACHED_AFTER_WEEKLY_PUBLICATION_FAILURE",
-    "market_identity_unresolved": 224172,
-    "market_observations": 552468,
-    "native_reconstruction_status": "66 new target and 36 scalar fits, plus 12 target and 6 scalar reuses; zero new as-issued forecasts.",
+    "historical_backfill_stage": "NOT_REACHED_AFTER_CHECKPOINT_IMPORT_FAILURE",
+    "market_identity_unresolved": 226042,
+    "market_observations": 557737,
+    "native_reconstruction_status": "Not started in this attempt; previous results remain preserved.",
     "official_denominator": null,
-    "original_frozen_current_status": "1322 reconstructed or preview games; zero new as-issued forecasts.",
+    "original_frozen_current_status": "1323 reconstructed or preview games; zero new as-issued forecasts.",
     "rejected_official_records": 4,
-    "selected_monitor_status": "90 new target fits; reconstructed monitoring, never promoted on current outcomes.",
-    "unknown_exact_tipoff_records": 85,
-    "unmatched_official_candidates": 1022,
-    "unresolved_source_candidates": 8
+    "selected_monitor_status": "Failed during checkpoint import before new fit producers started; valid earlier monitoring retained.",
+    "unknown_exact_tipoff_records": 80,
+    "unmatched_official_candidates": 1021,
+    "unresolved_source_candidates": 4
   },
   "current_owner_attempt": {
     "admission": {
       "acquisition_workers_planned": 8,
       "affinity_cpus": 8,
-      "aggregate_busy_cores": 0.14943960149439572,
-      "available_memory_bytes": 27267153920,
+      "aggregate_busy_cores": 0.1594022415940224,
+      "available_memory_bytes": 25522597888,
       "capacity_is_observation_not_reservation": true,
       "descendant_usage_measured": true,
       "foreign_processes_signaled": 0,
@@ -28,43 +28,43 @@
       "raw_samples_preserved_in_private_evidence": true,
       "workers_planned": 7
     },
-    "attempted_scientific_stages": 11,
-    "completed_at": "2026-11-05T05:28:26.792051+00:00",
-    "completed_child_cpu_seconds": 82.881806,
-    "completed_scientific_stages": 10,
+    "attempted_scientific_stages": 7,
+    "completed_at": "2026-11-05T18:47:31.353705+00:00",
+    "completed_child_cpu_seconds": 83.366233,
+    "completed_scientific_stages": 6,
     "cost_status": "UNVERIFIED_NO_CURRENT_INSTANCE_RATE_OR_BILLING_ASSUMED",
-    "cpu_seconds": 3101.734379,
+    "cpu_seconds": 771.733155,
     "current_outcomes_used_for_selection": false,
-    "failure_class": "BOUNDED_OBJECT_SIZE",
-    "failure_description": "Dense weekly HTML exceeded the object bound after all five CSV exports were committed.",
-    "failure_phase": "WEEKLY_DASHBOARD_PUBLICATION",
-    "league_new_real_target_fits": 96,
-    "new_calibration_fits": 48,
-    "new_empirical_residual_fits": 60,
+    "failure_class": "NoSuchKey",
+    "failure_description": "A legacy commit locator was used for a newer immutable checkpoint schema. The canonical checkpoint address is derived from its authenticated identity.",
+    "failure_phase": "CURRENT_MONITOR_CHECKPOINT_IMPORT",
+    "league_new_real_target_fits": 0,
+    "new_calibration_fits": 0,
+    "new_empirical_residual_fits": 0,
     "new_orders": 0,
-    "new_prediction_rows": 11046,
+    "new_prediction_rows": 3969,
     "new_prospective_issues": 0,
-    "new_provider_requests": null,
-    "new_real_target_fits": 156,
-    "next_execution_status": "Replacement engineering validation is separate; no B040 owner run is asserted.",
+    "new_provider_requests": 6351,
+    "new_real_target_fits": 0,
+    "next_execution_status": "Next release repairs reuse and retries and adds separately identified injury research. No next owner execution is asserted.",
     "original_monitoring_unchanged": true,
-    "owner_peak_rss_bytes": 21309140992,
+    "owner_peak_rss_bytes": 6633418752,
     "owner_post_close_verification": "full_return_bytes_verified",
     "phase_seconds": {
-      "admission": 1.0032115569993039,
-      "fixtures": 16.145390559999214,
-      "science": 3361.3501968109995
+      "admission": 1.0033133959950646,
+      "fixtures": 16.85895410500234,
+      "science": 2490.3243649669894
     },
     "planned_scientific_stages": 13,
-    "prediction_row_scope": "Native target reconstruction rows; frozen original adds 3,966 separately. No as-issued credit.",
-    "provider_request_note": "Exact provider dispatch receipts are retained privately; a transient Kalshi disconnect stopped further Kalshi collection.",
-    "release": "B039",
-    "remaining_phases": "Weekly publication repair, archive stage, final secondary display and exact official reconciliation remain pending.",
-    "return_finalization_seconds": 5.551264483998239,
-    "return_inner_serialization_seconds": 3.5366288899967913,
-    "return_persistence_attempt_seconds": 1.9605210750014521,
-    "reused_native_scalar_fits": 6,
-    "reused_native_target_fits": 12,
+    "prediction_row_scope": "Frozen original retrospective or preview target rows, covering 1,323 source games; no as-issued credit.",
+    "provider_request_note": "4,001 Kalshi, 1,592 Polymarket international,758 ESPN dispatches; a separate rule-document GET is not a paid historical-odds call. Zero paid Odds API calls.",
+    "release": "B040",
+    "remaining_phases": "Six later workflow stages were not reached. Exact official reconciliation and historical quote/injury coverage remain incomplete.",
+    "return_finalization_seconds": 0.9252679840137716,
+    "return_inner_serialization_seconds": 0.6599307120050071,
+    "return_persistence_attempt_seconds": 0.25922327701118775,
+    "reused_native_scalar_fits": 0,
+    "reused_native_target_fits": 0,
     "reused_target_fits": 108,
     "run_scope": "NCAA_MEN_AND_WOMEN_COMBINED",
     "scientific_credit_from_subsequent_readback": 0,
@@ -73,58 +73,58 @@
     "stages": [
       {
         "label": "Current inventory and provider acquisition",
-        "seconds": 1129.6502358259968,
+        "seconds": 1906.4260484139959,
         "status": "COMPLETED"
       },
       {
         "label": "Authenticate prior inputs and work",
-        "seconds": 107.48603046599601,
+        "seconds": 107.87398073800432,
         "status": "COMPLETED"
       },
       {
         "label": "Historical feature review",
-        "seconds": 23.784505197996623,
+        "seconds": 9.948498847006704,
         "status": "COMPLETED"
       },
       {
         "label": "Verify and reuse historical targets",
-        "seconds": 22.55329509799776,
+        "seconds": 25.736378510991926,
         "status": "COMPLETED"
       },
       {
         "label": "Current feature reconstruction",
-        "seconds": 139.96844254299504,
+        "seconds": 144.10186408899608,
         "status": "COMPLETED"
       },
       {
         "label": "Original frozen inference",
-        "seconds": 118.00739344200701,
+        "seconds": 119.37307723100821,
         "status": "COMPLETED"
       },
       {
         "label": "Chronological selected current reconstruction",
-        "seconds": 665.9480416989973,
-        "status": "COMPLETED"
+        "seconds": 25.596456661005504,
+        "status": "FAILED"
       },
       {
         "label": "Native chronological reconstruction",
-        "seconds": 433.69228763900173,
-        "status": "COMPLETED"
+        "seconds": null,
+        "status": "NOT_STARTED"
       },
       {
         "label": "Preserve immutable issues",
-        "seconds": 2.9601313950042822,
-        "status": "COMPLETED"
+        "seconds": null,
+        "status": "NOT_STARTED"
       },
       {
         "label": "Final display-only refresh",
-        "seconds": 382.91533069099387,
-        "status": "COMPLETED"
+        "seconds": null,
+        "status": "NOT_STARTED"
       },
       {
         "label": "Game, week and season reporting",
-        "seconds": 214.48534972900234,
-        "status": "FAILED"
+        "seconds": null,
+        "status": "NOT_STARTED"
       },
       {
         "label": "Historical source inventory and backfill",
@@ -139,12 +139,12 @@
     ],
     "status": "FAILED_PARTIAL_WORK_PRESERVED",
     "synthetic_test_errors": 0,
-    "synthetic_test_seconds": 16.145390559999214,
+    "synthetic_test_seconds": 16.85895410500234,
     "synthetic_tests_failed": 0,
-    "synthetic_tests_passed": 827,
+    "synthetic_tests_passed": 892,
     "synthetic_tests_skipped": 1,
-    "synthetic_tests_total": 828,
-    "total_wall_seconds": 3380.756060078995
+    "synthetic_tests_total": 893,
+    "total_wall_seconds": 2510.6765412079985
   },
   "current_reconstructed_comparison": {
     "as_issued": false,
@@ -178,7 +178,7 @@
     "uncertainty_note": "No uncertainty interval for this paired current cohort was supplied; no advantage is established."
   },
   "current_season": {
-    "label": "2026–27",
+    "label": "2026\u201327",
     "season_end_year": 2027
   },
   "evaluation": {
@@ -198,8 +198,17 @@
     "probability_tie_direction": "no directional pick"
   },
   "historical_seasons": {
-    "2025": "2024–25",
-    "2026": "2025–26"
+    "2025": "2024\u201325",
+    "2026": "2025\u201326"
+  },
+  "injury_research": {
+    "active_audit": "Audited active original and historical feature paths have no explicit injury-report feed. This is not a claim about every past track or version.",
+    "all_injuries_complete": false,
+    "clock_policy": "Display latest observed reports separately from information at two hours, one hour and strictly before tip. A newly recovered article is not proof of an earlier captured vintage.",
+    "coverage": "Partial official source acquisition; no complete season injury inventory or measured performance gain.",
+    "new_owner_injury_fits": 0,
+    "next_branch": "Separately identified injury-aware challengers and paired controls; originals preserved.",
+    "promotion": "Historical chronological paired comparisons and future confirmation required; current outcomes do not select the promoted model."
   },
   "inventory_history": [
     {
@@ -246,6 +255,50 @@
         "start": "2026-11-02"
       },
       "unmatched_official_candidates": 416
+    },
+    {
+      "all_official_games_covered": false,
+      "authenticated_current_issues": 0,
+      "candidate_games": 1442,
+      "last_week": {
+        "candidate_games": 2,
+        "end": "2026-11-01",
+        "observed_finals": 2,
+        "records_without_exact_time": 0,
+        "start": "2026-10-26",
+        "unmatched_official_candidates": 0
+      },
+      "next_week": {
+        "candidate_games": 636,
+        "end": "2026-11-15",
+        "observed_finals": 0,
+        "records_without_exact_time": 66,
+        "start": "2026-11-09",
+        "unmatched_official_candidates": 243
+      },
+      "observed_finals": 368,
+      "official_inventory_reconciled": false,
+      "qualification": "Distinct source/candidate records can duplicate other sources; this is not an official denominator.",
+      "records_without_exact_time": 72,
+      "reporting_week_timezone": "America/New_York",
+      "season_to_date": {
+        "candidate_games": 381,
+        "observed_finals": 368,
+        "records_without_exact_time": 2,
+        "unmatched_official_candidates": 142
+      },
+      "snapshot_at": "2026-11-05T05:26:05.199791+00:00",
+      "status": "OBSERVED_SOURCE_AND_CANDIDATE_RECORDS_WITH_EXPLICIT_GAPS",
+      "this_week": {
+        "candidate_games": 738,
+        "end": "2026-11-08",
+        "observed_finals": 366,
+        "records_without_exact_time": 3,
+        "start": "2026-11-02",
+        "unmatched_official_candidates": 268
+      },
+      "tipoff_display_timezone": "America/Los_Angeles",
+      "unmatched_official_candidates": 544
     }
   ],
   "league": "ncaam",
@@ -870,7 +923,7 @@
   "observed_inventory": {
     "all_official_games_covered": false,
     "authenticated_current_issues": 0,
-    "candidate_games": 1442,
+    "candidate_games": 1439,
     "last_week": {
       "candidate_games": 2,
       "end": "2026-11-01",
@@ -880,36 +933,36 @@
       "unmatched_official_candidates": 0
     },
     "next_week": {
-      "candidate_games": 636,
+      "candidate_games": 634,
       "end": "2026-11-15",
       "observed_finals": 0,
-      "records_without_exact_time": 66,
+      "records_without_exact_time": 63,
       "start": "2026-11-09",
       "unmatched_official_candidates": 243
     },
-    "observed_finals": 368,
+    "observed_finals": 370,
     "official_inventory_reconciled": false,
-    "qualification": "Distinct source/candidate records can duplicate other sources; this is not an official denominator.",
-    "records_without_exact_time": 72,
+    "qualification": "Distinct source/candidate records may duplicate other sources; no exact official physical-game denominator.",
+    "records_without_exact_time": 69,
     "reporting_week_timezone": "America/New_York",
     "season_to_date": {
       "candidate_games": 381,
-      "observed_finals": 368,
+      "observed_finals": 370,
       "records_without_exact_time": 2,
       "unmatched_official_candidates": 142
     },
-    "snapshot_at": "2026-11-05T05:26:05.199791+00:00",
+    "snapshot_at": "2026-11-05T18:37:56.495943+00:00",
     "status": "OBSERVED_SOURCE_AND_CANDIDATE_RECORDS_WITH_EXPLICIT_GAPS",
     "this_week": {
-      "candidate_games": 738,
+      "candidate_games": 737,
       "end": "2026-11-08",
-      "observed_finals": 366,
+      "observed_finals": 368,
       "records_without_exact_time": 3,
       "start": "2026-11-02",
-      "unmatched_official_candidates": 268
+      "unmatched_official_candidates": 267
     },
     "tipoff_display_timezone": "America/Los_Angeles",
-    "unmatched_official_candidates": 544
+    "unmatched_official_candidates": 543
   },
   "owner_attempt_history": [
     {
@@ -1191,15 +1244,146 @@
       "synthetic_tests_skipped": 1,
       "synthetic_tests_total": 537,
       "total_wall_seconds": 2135.3921088240004
+    },
+    {
+      "admission": {
+        "acquisition_workers_planned": 8,
+        "affinity_cpus": 8,
+        "aggregate_busy_cores": 0.14943960149439572,
+        "available_memory_bytes": 27267153920,
+        "capacity_is_observation_not_reservation": true,
+        "descendant_usage_measured": true,
+        "foreign_processes_signaled": 0,
+        "lock_files_deleted": 0,
+        "raw_samples_preserved_in_private_evidence": true,
+        "workers_planned": 7
+      },
+      "attempted_scientific_stages": 11,
+      "completed_at": "2026-11-05T05:28:26.792051+00:00",
+      "completed_child_cpu_seconds": 82.881806,
+      "completed_scientific_stages": 10,
+      "cost_status": "UNVERIFIED_NO_CURRENT_INSTANCE_RATE_OR_BILLING_ASSUMED",
+      "cpu_seconds": 3101.734379,
+      "current_outcomes_used_for_selection": false,
+      "failure_class": "BOUNDED_OBJECT_SIZE",
+      "failure_description": "Dense weekly HTML exceeded the object bound after all five CSV exports were committed.",
+      "failure_phase": "WEEKLY_DASHBOARD_PUBLICATION",
+      "league_new_real_target_fits": 96,
+      "new_calibration_fits": 48,
+      "new_empirical_residual_fits": 60,
+      "new_orders": 0,
+      "new_prediction_rows": 11046,
+      "new_prospective_issues": 0,
+      "new_provider_requests": null,
+      "new_real_target_fits": 156,
+      "next_execution_status": "Replacement engineering validation is separate; no B040 owner run is asserted.",
+      "original_monitoring_unchanged": true,
+      "owner_peak_rss_bytes": 21309140992,
+      "owner_post_close_verification": "full_return_bytes_verified",
+      "phase_seconds": {
+        "admission": 1.0032115569993039,
+        "fixtures": 16.145390559999214,
+        "science": 3361.3501968109995
+      },
+      "planned_scientific_stages": 13,
+      "prediction_row_scope": "Native target reconstruction rows; frozen original adds 3,966 separately. No as-issued credit.",
+      "provider_request_note": "Exact provider dispatch receipts are retained privately; a transient Kalshi disconnect stopped further Kalshi collection.",
+      "release": "B039",
+      "remaining_phases": "Weekly publication repair, archive stage, final secondary display and exact official reconciliation remain pending.",
+      "return_finalization_seconds": 5.551264483998239,
+      "return_inner_serialization_seconds": 3.5366288899967913,
+      "return_persistence_attempt_seconds": 1.9605210750014521,
+      "reused_native_scalar_fits": 6,
+      "reused_native_target_fits": 12,
+      "reused_target_fits": 108,
+      "run_scope": "NCAA_MEN_AND_WOMEN_COMBINED",
+      "scientific_credit_from_subsequent_readback": 0,
+      "scientific_goal_complete": false,
+      "simultaneous_process_tree_peak_measured": false,
+      "stages": [
+        {
+          "label": "Current inventory and provider acquisition",
+          "seconds": 1129.6502358259968,
+          "status": "COMPLETED"
+        },
+        {
+          "label": "Authenticate prior inputs and work",
+          "seconds": 107.48603046599601,
+          "status": "COMPLETED"
+        },
+        {
+          "label": "Historical feature review",
+          "seconds": 23.784505197996623,
+          "status": "COMPLETED"
+        },
+        {
+          "label": "Verify and reuse historical targets",
+          "seconds": 22.55329509799776,
+          "status": "COMPLETED"
+        },
+        {
+          "label": "Current feature reconstruction",
+          "seconds": 139.96844254299504,
+          "status": "COMPLETED"
+        },
+        {
+          "label": "Original frozen inference",
+          "seconds": 118.00739344200701,
+          "status": "COMPLETED"
+        },
+        {
+          "label": "Chronological selected current reconstruction",
+          "seconds": 665.9480416989973,
+          "status": "COMPLETED"
+        },
+        {
+          "label": "Native chronological reconstruction",
+          "seconds": 433.69228763900173,
+          "status": "COMPLETED"
+        },
+        {
+          "label": "Preserve immutable issues",
+          "seconds": 2.9601313950042822,
+          "status": "COMPLETED"
+        },
+        {
+          "label": "Final display-only refresh",
+          "seconds": 382.91533069099387,
+          "status": "COMPLETED"
+        },
+        {
+          "label": "Game, week and season reporting",
+          "seconds": 214.48534972900234,
+          "status": "FAILED"
+        },
+        {
+          "label": "Historical source inventory and backfill",
+          "seconds": null,
+          "status": "NOT_STARTED"
+        },
+        {
+          "label": "Final display after secondary history",
+          "seconds": null,
+          "status": "NOT_STARTED"
+        }
+      ],
+      "status": "FAILED_PARTIAL_WORK_PRESERVED",
+      "synthetic_test_errors": 0,
+      "synthetic_test_seconds": 16.145390559999214,
+      "synthetic_tests_failed": 0,
+      "synthetic_tests_passed": 827,
+      "synthetic_tests_skipped": 1,
+      "synthetic_tests_total": 828,
+      "total_wall_seconds": 3380.756060078995
     }
   ],
   "provenance": {
     "aggregate_verification": "Historical objective and season metrics were independently recomputed from authenticated per-game exports. Only sanitized aggregates are public.",
-    "failed_owner_return_sha256": "3ef40d2cf47c2306064a56b2f437acf119719564b343ce3048fc35c7edf82bc2",
+    "failed_owner_return_sha256": "1127a9e404cde4fc58cd2e983d118f7fec9ea00f368884423d42cfd3f96532c2",
     "historical_accepted_owner_return_sha256": "df98ed0758c29deaed943355349833ab0aeaa23a79693b5efc027e835075e4da",
-    "latest_evidence_qualification": "B039 completed 10 stages, committed 156 target / 48 scalar / 60 empirical fits, then failed during weekly dashboard publication. All five CSV windows survived; full coverage and prospective profit remain unverified.",
-    "latest_nested_return_sha256": "3ef40d2cf47c2306064a56b2f437acf119719564b343ce3048fc35c7edf82bc2",
-    "latest_outer_return_sha256": "2abbf30bf1c4fecaa82c867b1b89eedd82ff2231baec252959607938cdb5fdb4",
+    "latest_evidence_qualification": "B040 completed 6 of 13 stages, refreshed 557,737 retained observations, reused 108 historical targets and produced 3,969 frozen-original reconstruction rows. Checkpoint addressing failed before any new fits. B039 results remain preserved; full coverage and prospective profit unverified.",
+    "latest_nested_return_sha256": "1127a9e404cde4fc58cd2e983d118f7fec9ea00f368884423d42cfd3f96532c2",
+    "latest_outer_return_sha256": "924deb723c1ec88f6f5816b5dfc4a665bbce4893ede3b2d0063b7c7eb3e6210a",
     "preserved_b033_return_sha256": "16b58cc6ed5bd4be303d41ae17816af2510f4e52a9bc011811f40e90f3003cfe",
     "prior_failed_owner_return_sha256": "ae14d708cf85615c1c9c57a7891db85261a5b1632ecd70349730bf2dde51d9b0",
     "public_review_reproduces": "Information-time and evaluation contracts on invented data; not private real-data retraining."
@@ -1208,7 +1392,7 @@
     {
       "current_log_loss": null,
       "current_matched_games": null,
-      "display_coverage": "429,428 retained observations across both leagues; 375 exact-bound winner contexts at latest observed, 373 supported pre-tip. A transport disconnect halted 12,013 handles; no 401/403/429 was recorded in this capture.",
+      "display_coverage": "432,356 retained observations across both leagues. 142 completed source records have supported pre-tip winner values; 13 were actually captured before tip. A concurrent transient-stop race left 9,136 history dispositions halted.",
       "eligible_comparison_coverage": "NOT_ESTABLISHED",
       "hypothetical_ROI": null,
       "name": "Kalshi",
@@ -1218,7 +1402,7 @@
     {
       "current_log_loss": null,
       "current_matched_games": null,
-      "display_coverage": "122,959 international observations across both leagues; 788 exact-bound winner contexts. US remains unacquired.",
+      "display_coverage": "125,213 international observations across both leagues. 284 completed source records have supported pre-tip winner values; 21 were captured before tip. US is separate and unacquired.",
       "eligible_comparison_coverage": "RECONSTRUCTED_PAIRED_POPULATION_ONLY",
       "hypothetical_ROI": null,
       "name": "Polymarket",
@@ -1238,7 +1422,7 @@
     {
       "current_log_loss": null,
       "current_matched_games": null,
-      "display_coverage": "81 retained observations across both leagues; 16 exact-bound winner contexts. 166 historical snapshots pending without a runtime credential.",
+      "display_coverage": "168 retained observations across both leagues. 5 completed source records have pre-tip winner values; 12 have numeric spread and total thresholds. No configured historical-odds runtime credential; zero new paid requests.",
       "eligible_comparison_coverage": "NOT_ESTABLISHED",
       "hypothetical_ROI": null,
       "name": "DraftKings",
@@ -1246,7 +1430,7 @@
       "status": "RETAINED_CAPTURE_HISTORY_CREDENTIAL_ABSENT"
     }
   ],
-  "published_snapshot_date": "2026-11-04 America/Los_Angeles",
+  "published_snapshot_date": "2026-11-05",
   "quote_display_contract": {
     "calendar_inclusion": "Every observed game remains visible when forecasts or provider observations are missing. Candidate records are not a reconciled official denominator.",
     "captured_before_tip_separate_from_later_recovered_supported_pretip": true,

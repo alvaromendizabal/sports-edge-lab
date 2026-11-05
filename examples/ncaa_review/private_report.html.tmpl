@@ -455,6 +455,28 @@
     }
     host.append(details('Complete supplied paired metrics and horizon qualifications',horizons));
   }
+  function injuryCard(rows){
+    const host=node('section',undefined,'detail');host.append(node('h3','Pregame injury information'));
+    const supplied=rows.filter(r=>r.injury_display_views_json);
+    if(!supplied.length){host.append(node('p','No injury-report view was supplied for this game. This means unknown coverage, not a healthy roster. Earlier forecasts remain unchanged.','note'));return host;}
+    const seen=new Set();
+    for(const row of supplied){
+      let views;
+      try{views=JSON.parse(row.injury_display_views_json);}catch{host.append(node('p','Supplied injury view could not be parsed; raw evidence remains in the record.','note'));continue;}
+      if(!views||typeof views!=='object'||Array.isArray(views)){host.append(node('p','Supplied injury view has an unrecognized structure; raw evidence remains in the record.','note'));continue;}
+      const key=JSON.stringify(views);if(seen.has(key))continue;seen.add(key);
+      const [grid,body]=table(['Information boundary','Evidence basis','Report coverage','Information clock']);
+      for(const [name,v]of Object.entries(views)){
+        const horizon=name.endsWith('_t0')?'Strictly before tip':name.endsWith('_t60')?'One hour before tip':name.endsWith('_t120')?'Two hours before tip':'Unrecognized information boundary';
+        const basis=name.startsWith('strict_captured_')?'Actually captured by boundary':name.startsWith('source_supported_reconstruction_')?'Later recovered source assertion':'Unrecognized evidence basis';
+        const valid=v&&typeof v==='object'&&!Array.isArray(v);
+        appendRow(body,[horizon,basis,valid?text(v.injury_coverage_status):'Unrecognized report view',valid?text(v.injury_feature_available_at):'Unavailable']);
+      }
+      host.append(grid,details('Supplied named-player counts, coverage and report identities',views));
+    }
+    host.append(node('p','Partial reports give named-player lower bounds. Unknown players are not treated as healthy. Displaying a later report does not alter an earlier forecast or establish an injury-model improvement.','note'));return host;
+  }
+
   function gameCard(g){const r=g.base,card=node('article',undefined,'game');card.dataset.game=g.id;const head=node('div',undefined,'game-head'),title=node('div');title.append(node('span',r.league==='ncaam'?"Men's basketball":r.league==='ncaaw'?"Women's basketball":'League unverified','badge'));if(r.source_binding_status==='UNMATCHED_OFFICIAL_CANDIDATE_RECORD')title.append(node('span','Unmatched official candidate','badge warn'));title.append(node('h3',text(r.away_team)+' at '+text(r.home_team)));const score=node('div',finite(r.actual_away_points)&&finite(r.actual_home_points)?number(r.actual_away_points,0)+' – '+number(r.actual_home_points,0):r.completed?'Final score unavailable':'Result pending','score');score.append(node('span','Away – home'));head.append(title,score);card.append(head);
     card.append(node('p',text(r.tipoff_pacific||r.source_date)+' · Pacific time · precision: '+text(r.time_precision)+' · phase: '+text(r.phase)+' · '+text(r.event_id),'source-note'));
     for(const annotation of (report.audit_annotations?.[r.event_id]||[]))card.append(node('p','Source precision warning: '+String(annotation),'notice'));
@@ -468,7 +490,7 @@
     prices.classList.add('market-table');
     for(const [provider,name]of [['kalshi','Kalshi'],['polymarket','Polymarket international'],['draftkings','DraftKings']]){for(const target of ['win','margin','total'])appendRow(priceBody,[name+' · '+target,capturedValues(g.rows,provider,clock,target),strictValues(selected,provider,target)]);}
     card.append(node('p','The captured price stays visible even when no model comparison qualifies. Strict comparison values belong to the displayed forecast streams; their recorded status governs eligibility. Distinct supplied source versions remain separate.','note'));
-    card.append(prices);card.append(node('p','Polymarket US: '+text(r.polymarket_us_status||'NOT ACQUIRED / UNVERIFIED'),'note'));
+    card.append(prices);card.append(injuryCard(g.rows));card.append(node('p','Polymarket US: '+text(r.polymarket_us_status||'NOT ACQUIRED / UNVERIFIED'),'note'));
     for(const selectionRow of (selected.length?selected:[{}])){const choices=node('p',undefined,'note');choices.append(node('small',label(selectionRow.track)+' · recorded selection evidence: '));for(const [p,n]of [['kalshi','Kalshi'],['polymarket','Polymarket international'],['draftkings','DraftKings']]){choices.append(node('strong',n+': '+(selectionRow[p+'_hypothetical_selection']||'NO BET')+' '),document.createTextNode((selectionRow[p+'_no_bet_reason']||'No qualified pair')+'. '));}card.append(choices);}
     card.append(details('All source, issue, training and quote clocks; differences and NO BET evidence',g.rows));return card;}
   function observationCard(r){const n=node('article',undefined,'observation'),bound=r.canonical_identity_verified===true&&r.event_id;let product=r.provider_product_label||r.provider_product||r.provider||'Unknown provider';if(product==='Polymarket')product='Polymarket international / product detail below';n.append(node('span',bound?'Bound identity':'Unresolved identity','badge'+(bound?'':' warn')),node('h3',product+' · '+text(r.target||r.native_target)),node('p','League: '+text(r.league)+' · source event: '+text(r.event_id||r.native_event_id)+' · '+text(r.binding_status),'source-note'),node('p','Observed value: '+number(r.prediction??r.value??r.native_yes_probability,4)+' · '+text(r.value_kind||(finite(r.native_yes_probability)?'Native Yes probability; identity unresolved':null)),'note'),node('p','Quote: '+text(r.quote_time)+' · Acquired: '+text(r.acquired_at)+' · Support ends: '+text(r.observation_support_end_upper_bound),'note'));n.append(details('Complete captured observation and unresolved source evidence',r));return n;}

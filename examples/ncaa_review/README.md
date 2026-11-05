@@ -172,8 +172,32 @@ The preserved B035 owner evidence records its actual preflight failure and zero 
 
 ## B039 evidence and bounded private-report recovery
 
-The latest authenticated NCAA owner completed ten stages and real model work, then failed while publishing dense weekly HTML. Its committed CSVs and model artifacts remain preserved. The updated track pages show the actual 156 target / 48 scalar / 60 empirical fits, separate reuses, measured resources, partial inventory and remaining coverage gaps. Historical selected panels are unchanged.
+The authenticated B039 NCAA owner completed ten stages and real model work, then failed while publishing dense weekly HTML. Its committed CSVs and model artifacts remain preserved. The updated track pages show the actual 156 target / 48 scalar / 60 empirical fits, separate reuses, measured resources, partial inventory and remaining coverage gaps. Historical selected panels are unchanged.
 
 The browser-only private viewer accepts both the earlier flat format and a normalized format with shared, disjoint contexts. It resolves fields lazily, preserves zero and false, rejects invalid references or overlapping fields, and keeps declared total versus loaded part counts separate. A bounded index can load one local part only after its exact byte count and SHA-256 match. This generic transport contract does not supply private forecasts or reinterpret financial outcomes. Public tests use invented rows only.
 
 Latest observed, latest supported pre-tip, latest actually captured before tip, and supported T−120/T−60 choices retain separate clocks. The public page uploads nothing, makes no provider calls, and grants no earlier forecast or betting eligibility. Unresolved official source records remain inspectable without inventing teams or start times.
+
+## B040 current acquisition and checkpoint recovery
+
+The later B040 owner completed six of 13 workflow stages, retained 557,737 market
+observations, reused 108 historical target results and reconstructed or previewed
+1,323 source games with the frozen original engine. It failed during checkpoint
+address resolution before any new fits. These are observed source records, not a
+reconciled official game denominator. Earlier valid B039 results remain visible
+as separate historical work; publication does not make the next owner run complete.
+
+## Injury reporting and information time
+
+The [availability-time example](injury_time.py) uses invented records to separate
+what can be displayed from what was available at a forecast's information boundary.
+A report recovered later can support a labeled retrospective study while keeping
+its actual acquisition time. Missing injury coverage never means a healthy roster.
+Two-hour, one-hour and latest-pregame forecasts are distinct versions; a later report
+cannot rewrite an earlier issue. These rules do not prevent display, retrospective
+research or publication of generic engineering.
+
+A useful injury study compares learned challengers and matching no-injury controls
+on identical chronological populations, reports uncertainty and failed experiments,
+and preserves the originals. Current-season outcomes do not choose a promoted model.
+The real next-owner injury study has not run; no performance gain is claimed here.
