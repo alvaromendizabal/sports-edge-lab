@@ -28,6 +28,8 @@ jobs:
           python -m examples.fbs_contracts.build_recovery_review --check
           python -m examples.fbs_contracts.build_season_review --check
           node examples/fbs_contracts/tests/test_season_logic.cjs
+          node --test examples/fbs_contracts/tests/test_source_progress.cjs
+          node --test examples/fbs_contracts/tests/test_latest_available_logic.cjs
           python -m examples.fbs_contracts.export_site --commit "$(git rev-parse HEAD)" --output "${RUNNER_TEMP}/fbs-static-projection"
           python -m examples.fbs_contracts.certified_resume
   fbs-notebook:

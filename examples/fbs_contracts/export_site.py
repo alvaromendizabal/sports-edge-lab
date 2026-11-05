@@ -18,8 +18,9 @@ from .season_transport import unpack
 
 ROOT = Path(__file__).resolve().parents[2]
 REPOSITORY = 'https://github.com/alvaromendizabal/sports-edge-lab'
-ASSETS = ('index.html','research.html','recovery.html','season.js','dashboard.js',
+ASSETS = ('index.html','research.html','recovery.html','season.js','source-progress.js','dashboard.js',
           'recovery.js','dashboard.css','season-2026.json','evidence.json',
+          'official-inventory.json','source-progress.json',
           'V024_AGGREGATE_2026-11-03.json','V025_OPERATIONAL_REVIEW_2026-11-03.json',
           'v013-native-research-2026-10-31.json')
 
