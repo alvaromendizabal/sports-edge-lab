@@ -24,7 +24,7 @@ The injury extension must retain report availability, actual acquisition and for
 
 The existing projection remains the original record. Any successor forecast needs a new model/input version and actual issue time. Its improvement must be measured against a matched baseline, including models that combine injury and market information where appropriately registered. More features or more training does not guarantee improvement.
 
-**Current status:** this public snapshot has no authenticated trained injury-augmentation result or demonstrated injury-driven gain. Existing frozen monitoring, rolling reconstructions and genuine issues retain their separate roles. News context and local engineering tests do not count as new model performance.
+**Current status:** the completed N037 injury study tested 2,304 historical native cells and produced target-specific early research cards. The selected winner target retained base features; selected margin and total targets include injury features. That is a trained injury augmentation, but no overall performance improvement or betting edge has been established. Later refreshes reuse fitted heads and issue new dated predictions. Existing frozen monitoring, rolling reconstructions and genuine issues retain their separate roles. News context and local engineering tests do not count as new model performance. [Read the completed study](N037_MARKET_AND_STUDY_UPDATE.md) and [the current injury/promotion inventory](INJURY_MODEL_READINESS.md).
 
 ## Reading incomplete coverage
 
