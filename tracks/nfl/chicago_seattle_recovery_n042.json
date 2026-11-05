@@ -1,0 +1,58 @@
+{
+  "actual_away_points": 34,
+  "actual_home_points": 17,
+  "all_numeric_values_finite": true,
+  "assurance_scope": "The complete later completion receipt was independently read and SHA/size verified; selected replay and append members were independently CRC/SHA/size verified. This review does not claim a new full-return or full-private-archive hash or every model body readback.",
+  "away_team": "CHI",
+  "correction": "The genuine pregame vector and causal label append already existed in N035. The later retained 120-game study input did not inherit that appended view. This is a recovered prior source/view binding, not a newly issued prediction or a reason to rewrite retained T2 performance. A separately registered current rolling view may use it only after all exact owner-side source/body checks pass.",
+  "eligible_horizons": [
+    "T1"
+  ],
+  "evidence_pins": {
+    "CAUSAL_PARENT_APPEND_RECEIPT.json": {
+      "bytes": 3755,
+      "sha256": "3f3060276dd9fcaaf57000c92eb888d139b0277b4f07bc3303101422d0e9272d"
+    },
+    "OBSERVED_LABEL_APPEND.json": {
+      "bytes": 1970,
+      "sha256": "5139356e2be31ba11934cf2460de6c97b0159e001b528612e0006056cff6e7ac"
+    },
+    "replayed_n027_snapshot/QUERY_MATRIX.npy": {
+      "bytes": 149888,
+      "sha256": "b8adf1df7f7569868310a8da55c5f65e20c04cdde9013cda183f2c7e8c6e841c"
+    },
+    "replayed_n027_snapshot/QUERY_ROWS.json": {
+      "bytes": 2405499,
+      "sha256": "791ef1cd97fe029639a99d496c660e208b291794556a79716541ba291a2141cc"
+    },
+    "replayed_n027_snapshot/QUERY_SNAPSHOT_RECEIPT.json": {
+      "bytes": 1060,
+      "sha256": "33588a3c13d77d83cab1bc4266f9bd0680540843689eac2115418ff8e7006441"
+    }
+  },
+  "feature_cutoff_pacific": "2026-11-02T15:56:01.654716-08:00",
+  "feature_cutoff_utc": "2026-11-02T23:56:01.654716+00:00",
+  "game_id": "2026_08_CHI_SEA",
+  "historical_metrics_changed": false,
+  "home_team": "SEA",
+  "kickoff_pacific": "2026-11-02T17:15:00-08:00",
+  "kickoff_utc": "2026-11-03T01:15:00+00:00",
+  "new_fits": 0,
+  "new_forecasts": 0,
+  "not_eligible_horizons": [
+    "T2"
+  ],
+  "original_frozen_models_changed": false,
+  "original_issue_pacific": "2026-11-02T15:56:35.061863-08:00",
+  "original_issue_utc": "2026-11-02T23:56:35.061863+00:00",
+  "outcome_observed_utc": "2026-11-04T01:52:33.889207+00:00",
+  "outcomes_blank_in_original_query": true,
+  "prior_owner_replay_max_absolute_difference": 8.526512829121202e-14,
+  "recovered_target_rows": 3,
+  "replay_tolerance": 1e-09,
+  "replayed_feature_columns": 390,
+  "replayed_rows": 48,
+  "review_status": "VERIFIED_COMPACT_PRIOR_OWNER_EVIDENCE",
+  "reviewed_at_utc": "2026-11-05T03:59:17.506293+00:00",
+  "schema": "N042_CHICAGO_SEATTLE_RECOVERY_PUBLIC_V1"
+}

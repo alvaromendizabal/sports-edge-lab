@@ -60,6 +60,14 @@ The issue uses the same selected ExtraTrees heads: winner 249 fields without dir
 
 The newly completed contribution study is a different research product and has zero new issues. Do not describe its scores as performance of these cards.
 
+## Chicago–Seattle: recovered source, unchanged scores
+
+A later evidence review corrected the explanation for the missing 121st game in the retained model cohort. N035 already contained genuine 390-field pregame vectors for all three targets and an observed-label append. The later retained N037 updating view had not inherited that appended view. This is a source/view propagation gap, not absent pregame information.
+
+The feature cutoff was November 2 at 23:56:01 UTC and the original issue followed at 23:56:35 UTC, before the 01:15 UTC kickoff on November 3. That information is eligible for T1, after the T2 boundary. The final was observed on November 4 at 01:52:33 UTC. The original Seattle forecast lost; Chicago won 34–17. The published 120-game study metrics stay unchanged.
+
+[The compact recovery proof](chicago_seattle_recovery_n042.json) records the exact selected-member and later-receipt assurance scope. Recovery adds zero fits, zero forecasts and no promotion. A separately registered rolling-view repair remains unrun development work until an actual owner return passes review.
+
 ## Three providers, equal visibility
 
 All 121 completed 2026 games retain latest-pregame winner, margin-threshold and total-threshold references from Kalshi and Polymarket, including Chicago–Seattle. A threshold with a probability is not an expected score, margin or total. These observations do not automatically expand a model cohort or produce point-mean error metrics.
