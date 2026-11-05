@@ -240,9 +240,9 @@ const {chromium}=require(process.env.PLAYWRIGHT_MODULE_DIR||'playwright');
   assert.equal(freshSource.review_recovered_week9_games,1);
   for(const gid of ['2026_09_TB_CHI','2026_09_BUF_MIN']){
    const card=page.locator('[data-coverage-game="'+gid+'"]');
-   const newestSource=await page.evaluate(()=>JSON.parse(document.getElementById('nfl-n042-current-source').textContent));
+   const newestSource=await page.evaluate(()=>JSON.parse(document.getElementById('nfl-n043-current-source').textContent));
    for(const r of newestSource.point_rows.filter(r=>r.game_id===gid))assert((await card.innerText()).includes(r.predicate));
-   assert.match(await card.textContent(),/2026-11-05T04:/);
+   assert.match(await card.textContent(),/2026-11-05T08:/);
    assert.equal(await card.locator('.alternate-threshold').count(),0);
   }
   const issue42=await page.evaluate(()=>JSON.parse(document.getElementById('nfl-current-issues-n042').textContent));
@@ -259,6 +259,16 @@ const {chromium}=require(process.env.PLAYWRIGHT_MODULE_DIR||'playwright');
    await page.selectOption('#coverage-period','10');await page.selectOption('#coverage-model','n042_'+role);
    assert.equal(await page.locator('#coverage-games [data-coverage-game]').count(),14);
   }
+  const study43=await page.evaluate(()=>JSON.parse(document.getElementById('nfl-owner-study-n043').textContent));
+  assert.equal(study43.new_total_fits,1614);assert.equal(study43.new_designation_forecasts,0);assert.equal(study43.owner_research_acceptance,false);
+  for(const role of ['original','shadow']){
+   await page.locator('#show-'+role+'-n043').click();
+   assert.equal(await page.locator('#coverage-model').inputValue(),'n043_'+role);
+   assert.equal(await page.locator('#coverage-games [data-coverage-game]').count(),15);
+   assert.match(await page.locator('[data-coverage-game="2026_09_JAX_BAL"]').textContent(),/2026-11-04T01:52:35/);
+   assert.equal(await page.locator('#coverage-metric-model option[value="n043_'+role+'"]').count(),0);
+  }
+  if(process.env.NFL_SCREENSHOTS)await page.locator('#designation-study-n043').screenshot({path:path.join(process.env.NFL_SCREENSHOTS,'nfl-designation-study-'+width+'.png')});
   await page.locator('#show-fresh-n042').click();
   assert.match(await page.locator('[data-coverage-game="2026_09_JAX_BAL"]').textContent(),/2026-11-05T04:36:42\.446281/);
   assert.match(await page.locator('[data-coverage-game="2026_09_JAX_BAL"]').innerText(),/121 earlier current-season training games/);
