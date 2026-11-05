@@ -32,19 +32,78 @@ const { chromium } = require(process.env.PLAYWRIGHT_MODULE_DIR || 'playwright');
         assert.equal(evidence.league, league);
         assert.equal(await page.locator('#provider-table tr').count(), 3);
         assert.deepEqual(await page.locator('#provider-table tr td:first-child strong').allTextContents(), ['Kalshi', 'Polymarket', 'DraftKings']);
-        assert.match(await page.locator('#current').innerText(), /Current metrics: unavailable/);
-        assert.match(await page.locator('#provider-table').innerText(), /International: unverified/);
-        assert.match(await page.locator('#provider-table').innerText(), /US: unacquired/);
-        assert.match(await page.locator('#attempt-summary').innerText(), /536 passed.*0 errors.*1 skipped/);
-        assert.match(await page.locator('#attempt-summary').innerText(), /12 of 12 workflow stages completed/);
+        const attempt = evidence.current_owner_attempt, inventory = evidence.observed_inventory;
+        assert.equal(attempt.release, 'B039');
+        assert.equal(attempt.status, 'FAILED_PARTIAL_WORK_PRESERVED');
+        assert.equal(attempt.failure_class, 'BOUNDED_OBJECT_SIZE');
+        assert.equal(attempt.failure_phase, 'WEEKLY_DASHBOARD_PUBLICATION');
+        assert.deepEqual([attempt.synthetic_tests_passed, attempt.synthetic_test_errors,
+          attempt.synthetic_tests_failed, attempt.synthetic_tests_skipped, attempt.synthetic_tests_total], [827, 0, 0, 1, 828]);
+        assert.deepEqual([attempt.completed_scientific_stages, attempt.attempted_scientific_stages,
+          attempt.planned_scientific_stages], [10, 11, 12]);
+        assert.deepEqual([attempt.new_real_target_fits, attempt.new_calibration_fits,
+          attempt.new_empirical_residual_fits, attempt.reused_target_fits], [156, 48, 60, 108]);
+        assert.equal(attempt.new_prospective_issues, 0);
+        assert.equal(attempt.scientific_goal_complete, false);
+        assert.equal(attempt.current_outcomes_used_for_selection, false);
+        const currentText = await page.locator('#current').innerText();
+        assert.match(currentText, /New issued rows:\s*0/);
+        assert.match(currentText, /Reconstruction metrics:\s*separate below/);
+        assert.match(currentText, /156 target \+ 48 scalar \+ 60 empirical fits/);
+        assert.match(currentText, /Issued forecasts:\s*0/);
+        assert.match(await page.locator('#provider-table').innerText(), /International; US unacquired/);
+        assert.deepEqual(evidence.providers.find(p => p.name === 'Polymarket').products,
+          [{name:'International',status:'PARTIAL_INTERNATIONAL_CAPTURE'}, {name:'US',status:'NOT_ACQUIRED_UNVERIFIED'}]);
+        for (const provider of evidence.providers) {
+          assert.equal(provider.eligible_comparison_coverage, 'NOT_ESTABLISHED');
+          assert.equal(provider.hypothetical_ROI, null);
+          const providerRow = page.locator('#provider-table tr').filter({hasText:provider.name});
+          assert.match(await providerRow.innerText(), /NOT ESTABLISHED/);
+          assert.ok((await providerRow.innerText()).includes(provider.display_coverage));
+        }
+        const reconstructed = evidence.current_reconstructed_comparison;
+        assert.equal(reconstructed.as_issued, false);
+        assert.equal(reconstructed.current_outcomes_selected_model, false);
+        assert.equal(reconstructed.qualified_settled_bets, 0);
+        assert.equal(reconstructed.profit, null);
+        if (league === 'ncaam') {
+          assert.equal(reconstructed.status, 'RETROSPECTIVE_PAIRED_ORIGINAL_VERSUS_POLYMARKET');
+          assert.equal(reconstructed.paired_games, 122);
+          assert.equal(await page.locator('#current-paired-table tbody tr').count(), 5);
+          assert.match(await page.locator('#current-paired-note').innerText(), /122 identical supplied games.*T−60 reference.*Retrospective reconstruction/);
+          assert.match(await page.locator('#current-paired-disagreements').innerText(), /7 model-right \/ provider-wrong disagreements; 2 in the reverse direction/);
+          assert.match(await page.locator('#current-paired-disagreements').innerText(), /Qualified settled bets: 0\. Profit remains unverified/);
+        } else {
+          assert.equal(reconstructed.status, 'NO_EXACT_PAIRED_COHORT_SUPPLIED');
+          assert.equal(await page.locator('#current-paired-table table').count(), 0);
+          assert.match(await page.locator('#current-paired-note').innerText(), /No exact paired current provider cohort was supplied/);
+          assert.match(await page.locator('#current-paired-disagreements').innerText(), /No earlier issue, market advantage or profit is inferred/);
+        }
+        assert.match(await page.locator('#attempt-summary').innerText(), /827 passed.*0 errors.*1 skipped/);
+        assert.match(await page.locator('#attempt-summary').innerText(), /10 of 12 workflow stages completed/);
+        assert.match(await page.locator('#execution-intro').innerText(), /B039 returned.*all five weekly CSV exports, then failed/);
+        assert.doesNotMatch(await page.locator('.status-strip strong').innerText(), /workflow completed/i);
         assert.match(await page.locator('#preserved-study-copy').innerText(), /108 committed target fits across both leagues; 54 in this track/);
         assert.equal(await page.locator('#phase-table tr').count(), 12);
-        assert.equal(await page.locator('#phase-table .done').count(), 12);
-        assert.equal(await page.locator('#phase-table .failed').count(), 0);
+        assert.equal(await page.locator('#phase-table .done').count(), 10);
+        assert.equal(await page.locator('#phase-table .failed').count(), 1);
+        assert.match(await page.locator('#phase-table tr').nth(10).innerText(), /Game, week and season reporting\s+Failed/);
+        assert.match(await page.locator('#phase-table tr').nth(11).innerText(), /Historical source inventory and backfill\s+Not started/);
         assert.equal(await page.locator('#history-phase-table .done').count(), 3);
         assert.equal(await page.locator('#history-phase-table .failed').count(), 1);
-        assert.match(await page.locator('#inventory-age').innerText(), /Nov 4, 2026/);
+        assert.equal(inventory.snapshot_at, '2026-11-05T05:26:05.199791+00:00');
+        const expectedPacificCapture = new Intl.DateTimeFormat('en-US', {timeZone:'America/Los_Angeles',
+          year:'numeric',month:'short',day:'numeric',hour:'numeric',minute:'2-digit',timeZoneName:'short'}).format(new Date(inventory.snapshot_at));
+        assert.equal(await page.locator('#inventory-age').innerText(), 'Current source inventory observed ' + expectedPacificCapture);
+        assert.deepEqual([inventory.candidate_games, inventory.observed_finals], league === 'ncaam' ? [1442, 368] : [1379, 364]);
+        assert.deepEqual(await page.locator('#coverage-counts strong').allTextContents(),
+          [inventory.candidate_games.toLocaleString('en-US'), inventory.observed_finals.toLocaleString('en-US'), 'Unverified']);
+        assert.equal(inventory.official_inventory_reconciled, false);
+        assert.equal(inventory.all_official_games_covered, false);
+        assert.equal(inventory.authenticated_current_issues, 0);
         assert.match(await page.locator('#coverage-counts').innerText(), /Unverified/);
+        assert.match(await page.locator('#week-counts').innerText(), /Reporting weeks use America\/New_York; tipoffs display Pacific/);
+        assert.match(await page.locator('#week-counts').innerText(), /unmatched official candidates remain visible\. Zero authenticated current issues/);
         assert.match(await page.locator('#resource-note').innerText(), /simultaneous process-tree peak was not measured/);
         counts.executionViews++;
         const preflightExamples = JSON.parse(await page.locator('#preflight-evidence').textContent());
@@ -181,6 +240,9 @@ const { chromium } = require(process.env.PLAYWRIGHT_MODULE_DIR || 'playwright');
       assert.equal(await page.evaluate(() => window.privateLeak), undefined);
       counts.privateViewerStates++;
       assert.equal(await page.locator('#market-clock').inputValue(),'latest_pretip');
+      assert.deepEqual(await page.locator('#market-clock option').allTextContents(),
+        ['Price supported by T−120','Price supported by T−60','Latest supported pre-tip',
+          'Latest actually captured before tip','Latest observed']);
       const firstGame=page.locator('[data-game]').first();
       const pairedBefore=await firstGame.locator('[data-strict-value]').allTextContents();
       const forecastBefore=await firstGame.locator('table').first().innerText();
