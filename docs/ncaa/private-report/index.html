@@ -19,7 +19,7 @@
     latest_pretip:{label:'Latest captured before tip',note:'This is the latest captured pre-tip observation in the report. It is not proof of a universal closing price or executable liquidity.'},
     latest_observed:{label:'Latest observed',note:'This observation may be after tip or after settlement. Its source and acquisition clocks remain visible; it cannot become an earlier forecast input.'}
   };
-  const captureFields=['value','status','value_kind','quote_time','acquired_at','clock_tier','observation_support_end_upper_bound','history_resolution_seconds','provider_source_update_at','source_snapshot_time','binding_status','native_market_id','provider_product','provider_product_label'];
+  const captureFields=['value','status','value_kind','quote_time','acquired_at','clock_tier','observation_support_end_upper_bound','history_resolution_seconds','provider_source_update_at','source_snapshot_time','binding_status','native_market_id','provider_product','provider_product_label','provider_product_identity_basis','semantic_status','settlement_semantics_verified','coarse_history_disclosed'];
   function appendRow(body,values){const tr=node('tr');values.forEach(v=>{const td=node('td');td.append(v instanceof Node?v:node('span',v));tr.append(td);});body.append(tr);}
   function table(headers){const wrap=node('div',undefined,'data-scroll'),t=node('table'),head=node('thead'),tr=node('tr'),body=node('tbody');headers.forEach(h=>{const th=node('th',h);th.scope='col';tr.append(th);});head.append(tr);t.append(head,body);wrap.append(t);return [wrap,body];}
   function details(title,value){const d=node('details',undefined,'detail');d.append(node('summary',title));d.addEventListener('toggle',()=>{if(d.open&&!d.querySelector('pre'))d.append(node('pre',JSON.stringify(value,null,2)));});return d;}
@@ -41,6 +41,7 @@
     const key=p+'_'+clock+'_'+target,v=r[key+'_value'],n=node('span',undefined,'market-entry');
     const value=node('strong',finite(v)?number(v,target==='win'||/probability|binary|threshold|contract/i.test(r[key+'_value_kind']||'')?4:2):'Unavailable',finite(v)?'':'missing');value.dataset.capturedValue='';n.append(value);
     n.append(node('small',r[key+'_status']||'No exact-bound observation'),node('small',r[key+'_value_kind']||'Value semantics unverified'));
+    if(present(r[key+'_semantic_status']))n.append(node('small','Semantic status: '+text(r[key+'_semantic_status'])));
     n.append(node('small','Source quote: '+text(r[key+'_quote_time'])),node('small','Acquired: '+text(r[key+'_acquired_at'])));
     n.append(node('small','Support ends: '+text(r[key+'_observation_support_end_upper_bound'])),node('small','History resolution (seconds): '+text(r[key+'_history_resolution_seconds'])));
     n.append(node('small','Clock tier: '+text(r[key+'_clock_tier'])));

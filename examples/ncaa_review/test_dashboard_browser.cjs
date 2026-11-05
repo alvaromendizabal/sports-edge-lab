@@ -291,6 +291,7 @@ const { chromium } = require(process.env.PLAYWRIGHT_MODULE_DIR || 'playwright');
       counts.horizonMetricViews++;
       assert.match(await page.locator('#unclassified-details > summary').innerText(),/1 supplied.*may include settlement/);
       if(!(await page.locator('#unclassified-details').evaluate(el=>el.open)))await page.locator('#unclassified-details > summary').click();
+      await page.locator('#unclassified-details table').waitFor();
       assert.match(await page.locator('#unclassified-details').innerText(),/Source: 0.432100/);
       assert.match(await page.locator('#unclassified-details').innerText(),/Token: 0.432100/);
       assert.match(await page.locator('#unclassified-details').innerText(),/UNVERIFIED_ZERO_RESOLUTION_POINT_OR_FRACTIONAL_SETTLEMENT/);
