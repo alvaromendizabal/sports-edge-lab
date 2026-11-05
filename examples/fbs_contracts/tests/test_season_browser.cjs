@@ -20,7 +20,7 @@ let browser;
   assert.equal(await page.locator('#games-body tr').count(),25);
   assert.match(await page.locator('#result-status').innerText(),/^888 games/);
   assert.equal(await page.evaluate(()=>document.documentElement.scrollWidth>innerWidth),false);
-  for(const [view,count] of [['completed',624],['last',56],['current',63],['all',888]]){
+  for(const [view,count] of [['completed',627],['last',56],['current',63],['all',888]]){
    await page.locator(`[data-view="${view}"]`).click();
    assert.match(await page.locator('#result-status').innerText(),new RegExp(`^${count} games`));
    assert.equal(await page.locator('[data-view][aria-pressed="true"]').count(),1);states++;
@@ -53,8 +53,12 @@ let browser;
   assert.match(await page.locator('#games-body').innerText(),/No recorded forecast/);
   assert.equal(await page.evaluate(()=>document.documentElement.scrollWidth>innerWidth),false);
   await page.selectOption('#provider-select','Polymarket Global');
-  assert.match(await page.locator('#reference-status').innerText(),/63 of 63/);
+  assert.match(await page.locator('#reference-status').innerText(),/57 of 63/);
   await page.locator('#game-search').fill('401869936');
+  const latestMissing=await page.locator('#games-body').innerText();
+  assert.match(latestMissing,/Latest verified capture has no usable reference/);
+  assert.doesNotMatch(latestMissing,/Home \+14\.5 to \+15\.5/);
+  await page.selectOption('#horizon-select','latest_available_pregame');
   const repaired=await page.locator('#games-body').innerText();
   assert.match(repaired,/Home \+14\.5 to \+15\.5/);
   assert.match(repaired,/Total 51\.5 to 55\.5/);
@@ -64,7 +68,21 @@ let browser;
   await globalDetail.locator('details summary').first().click();
   assert.match(await globalDetail.innerText(),/Earlier nearest-half threshold: 31\.5/);
   assert.match(await globalDetail.innerText(),/98\.0 percentage points/);
-  await page.keyboard.press('Escape');await page.locator('#game-search').fill('');
+  await page.keyboard.press('Escape');
+  await page.selectOption('#horizon-select','current');
+  await page.locator('#game-search').fill('401858290');
+  const newMedian=await page.locator('#games-body').innerText();
+  assert.match(newMedian,/Home \+41\.5 to \+48\.5/);
+  assert.match(newMedian,/Total 57\.5 to 59\.5/);
+  assert.match(newMedian,/Captured median intervals/);
+  assert.match(newMedian,/not expected scores/);
+  await page.locator('#game-search').fill('');
+  await page.selectOption('#provider-select','Polymarket US');
+  assert.match(await page.locator('#result-status').innerText(),/^63 games/);
+  const usCard=page.locator('#coverage-cards article').filter({has:page.getByRole('heading',{name:'Polymarket US',exact:true})});
+  assert.match(await usCard.innerText(),/Winner 52 \/ 63/);
+  assert.match(await usCard.innerText(),/Margin 50 \/ 63 · total 52 \/ 63/);
+  assert.match(await usCard.innerText(),/Intervals are not expected scores/);
   await page.selectOption('#horizon-select','latest_available_pregame');
   assert.match(await page.locator('#result-status').innerText(),/^63 games/);
   await page.locator('#source-evidence details summary').click();
@@ -75,7 +93,7 @@ let browser;
   assert.match(await page.locator('#source-inventory-status').innerText(),/934/);
   await page.selectOption('#source-season-filter','2026');
   await page.selectOption('#source-result-filter','completed');
-  assert.match(await page.locator('#source-inventory-status').innerText(),/624/);
+  assert.match(await page.locator('#source-inventory-status').innerText(),/627/);
   await page.locator('#source-clear-filters').click();
   assert.equal(await page.evaluate(()=>document.documentElement.scrollWidth>innerWidth),false);
   await page.locator('#source-evidence details summary').click();
@@ -96,5 +114,6 @@ let browser;
  console.log(JSON.stringify({status:'PASS',viewports:[1440,390],inventory_provider_states:states,
    no_script_games:888,current_week:63,disagreement_csv_rows:122,keyboard_dialog:true,
    supported_current_bounds_verified:true,original_wide_book_diagnostic_preserved:true,
+   current_only_native_grid:true,no_older_snapshot_fill_for_missing_latest:true,
    script_errors:0,external_requests:0}));
 })().catch(error=>{console.error(error);process.exitCode=1;}).finally(async()=>{if(browser)await browser.close();});

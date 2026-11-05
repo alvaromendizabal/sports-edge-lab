@@ -33,4 +33,29 @@ game.markets.Kalshi=[bound,{...bound,point_support:{...support,upper_bound:7.5}}
 assert.equal(reference(game,'Kalshi','margin','current','2026-11-05T02:00:00Z').status,'conflict','Same-clock bound conflicts are visible, not file-order selected');
 game.markets.Kalshi=[{...bound,point_support:{...support,lower_bound:null,upper_bound:null,lower_capture_at:null,upper_capture_at:null}}];
 assert.equal(reference(game,'Kalshi','margin','current','2026-11-05T02:00:00Z').row,null,'Missing bounds stay missing');
-console.log(JSON.stringify({status:'PASS',latest_observation_scenarios:14,no_model_or_provider_calls:true}));
+const currentGame={id:'invented-current',kickoff:'2026-11-06T20:00:00Z',completed:false,markets:{Kalshi:[]}};
+const currentRow={...row(.8,null,'2026-11-04T19:30:00Z'),registered_cutoff_kind:'CURRENT_SNAPSHOT_ONLY',product:'verified_native_current_snapshot'};
+const oldRow=row(.6,'2026-11-04T17:00:00Z','2026-11-04T17:30:00Z');
+currentGame.markets.Kalshi=[oldRow,currentRow];
+const slot={game_id:currentGame.id,provider:'Kalshi',target:'winner',captured_at:currentRow.captured_at,
+ status:'PRE_KICKOFF_CAPTURE_BID_ASK_MIDPOINT_NOT_FINAL_QUOTE'};
+const currentSnapshot={schema:'fbs.public.verified-native-current-snapshot.v1',captured_at_max:currentRow.captured_at,slots:[slot]};
+const assess='2026-11-05T02:00:00Z';
+assert.equal(reference(currentGame,'Kalshi','winner','current',assess,currentSnapshot).row.value,.8);
+assert.equal(reference(currentGame,'Kalshi','winner','auto',assess,currentSnapshot).row.value,.8);
+for(const horizon of ['T120','T60','latest_pre_kickoff','latest_available_pregame'])
+ assert.equal(reference(currentGame,'Kalshi','winner',horizon,assess,currentSnapshot).row.value,.6,'Current-only capture must not alter '+horizon);
+const missingSnapshot={...currentSnapshot,slots:[{...slot,status:'NO_EXACT_BOUND_NATIVE_PRODUCT_IN_VERIFIED_SUBSET',captured_at:null}]};
+assert.equal(reference(currentGame,'Kalshi','winner','current',assess,missingSnapshot).row,null,'Missing latest product cannot be filled by older usable value');
+const unusableSnapshot={...currentSnapshot,slots:[{...slot,status:'CATALOG_PRESENT_NO_USABLE_PREGAME_QUOTE'}]};
+assert.equal(reference(currentGame,'Kalshi','winner','current',assess,unusableSnapshot).row,null,'Unusable latest quote stays unusable');
+const postSnapshot={...currentSnapshot,slots:[{...slot,status:'ONLY_POST_KICKOFF_CURRENT_CAPTURE_NOT_PREGAME_HISTORY'}]};
+assert.equal(reference(currentGame,'Kalshi','winner','current',assess,postSnapshot).row,null,'After-kickoff-only capture does not fill a pregame snapshot');
+const inconsistentSnapshot={...currentSnapshot,slots:[{...slot,status:'INCONSISTENT_QUOTED_THRESHOLD_CURVE'}]};
+assert.equal(reference(currentGame,'Kalshi','winner','current',assess,inconsistentSnapshot).row,null,'An inconsistent latest product never resurrects an old value');
+const missingRefGame={...currentGame,markets:{Kalshi:[oldRow]}};
+assert.equal(reference(missingRefGame,'Kalshi','winner','current',assess,currentSnapshot).status,'native_snapshot_reference_missing');
+assert.equal(reference(currentGame,'Kalshi','winner','current','2026-11-04T18:00:00Z',currentSnapshot).row.value,.6,'A future complete-grid snapshot cannot revise an earlier assessment');
+assert.throws(()=>reference(currentGame,'Kalshi','winner','current',assess,{...currentSnapshot,slots:[slot,slot]}),/Duplicate/);
+assert.throws(()=>reference(currentGame,'Kalshi','winner','current',assess,{...currentSnapshot,captured_at_max:'invalid'}),/clock/);
+console.log(JSON.stringify({status:'PASS',latest_observation_scenarios:14,current_only_scenarios:14,no_model_or_provider_calls:true}));

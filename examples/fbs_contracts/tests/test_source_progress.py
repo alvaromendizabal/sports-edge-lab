@@ -4,7 +4,7 @@ import json
 import unittest
 
 from examples.fbs_contracts.source_progress import (
-    INVENTORY_SCHEMA, PROGRESS_SCHEMA, render_payload, render_section,
+    INVENTORY_SCHEMA, PROGRESS_SCHEMA, PROGRESS_SCHEMA_V2, render_payload, render_section,
     validate_inventory, validate_progress,
 )
 
@@ -198,6 +198,63 @@ class SourceProgressTests(unittest.TestCase):
         doc = fixture_progress(); doc["stages"][0]["observed_at"] = "2026-11-05T02:00:00Z"
         with self.assertRaisesRegex(ValueError, "later than the observed log"):
             validate_progress(doc)
+
+
+def fixture_progress_v2():
+    """Invented counts exercising a collection failure, not an owner result."""
+    doc = fixture_progress()
+    doc["schema"] = PROGRESS_SCHEMA_V2
+    doc["latest_successor"] = {
+        "release": "V030", "status": "AUTHENTICATED_PARTIAL_ACQUISITION",
+        "exit_code": 2, "elapsed_seconds": 100.5, "collector_started": True,
+        "reason": "CATALOG_REPORT_SIZE_LIMIT_AND_ERROR_CALLBACK_COLLISION"}
+    doc["acquisition"] = {
+        "new_native_requests": 20, "new_current_requests": 3,
+        "total_new_requests": 23, "in_call_reuses": 11,
+        "prior_raw_pending": 17, "prior_failed_observations": 5,
+        "prior_raw_verified_reused": 0, "derived_report_commits": 2,
+        "source_refresh_seconds": 8.0, "whole_run_eta_seconds": None}
+    return doc
+
+
+class CollectionFailureProgressTests(unittest.TestCase):
+    def test_actual_collection_failure_has_separate_accounting(self):
+        doc = fixture_progress_v2()
+        self.assertIs(validate_progress(doc), doc)
+        text = render_section(fixture_inventory(), doc)
+        self.assertIn("23 new requests", text)
+        self.assertIn("11 within-run dependency reuses", text)
+        self.assertIn("catalog was saved", text)
+        self.assertNotIn("It began no collection", text)
+        self.assertIn("interrupted predecessor", text)
+
+    def test_reuse_or_commits_cannot_be_counted_as_new_requests(self):
+        for extra in (11, 2):
+            doc = fixture_progress_v2()
+            doc["acquisition"]["total_new_requests"] += extra
+            with self.assertRaisesRegex(ValueError, "double-count"):
+                validate_progress(doc)
+
+    def test_pending_metadata_cannot_become_verified_or_eta(self):
+        for key, value in (("prior_raw_verified_reused", 1), ("whole_run_eta_seconds", 60)):
+            doc = fixture_progress_v2(); doc["acquisition"][key] = value
+            with self.assertRaisesRegex(ValueError, "Pending metadata"):
+                validate_progress(doc)
+
+    def test_v2_cannot_be_success_or_no_collection(self):
+        for key, value in (("exit_code", 0), ("collector_started", False), ("release", "V031")):
+            doc = fixture_progress_v2(); doc["latest_successor"][key] = value
+            with self.assertRaisesRegex(ValueError, "failed collection"):
+                validate_progress(doc)
+
+    def test_v2_rejects_extra_private_fields_and_noninteger_counts(self):
+        doc = fixture_progress_v2(); doc["acquisition"]["private_source"] = "hidden"
+        with self.assertRaisesRegex(ValueError, "Unknown acquisition"):
+            validate_progress(doc)
+        for value in (-1, True, 1.5):
+            doc = fixture_progress_v2(); doc["acquisition"]["in_call_reuses"] = value
+            with self.assertRaisesRegex(ValueError, "accounting"):
+                validate_progress(doc)
 
 
 if __name__ == "__main__":

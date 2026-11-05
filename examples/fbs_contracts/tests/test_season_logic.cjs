@@ -4,18 +4,26 @@ const fs=require('node:fs');
 const path=require('node:path');
 const {reference,filterGames,csvCell,pointBounds,unpack}=require('../../../docs/fbs/season.js');
 const data=unpack(JSON.parse(fs.readFileSync(path.join(__dirname,'../../../docs/fbs/season-2026.json'),'utf8')));
+const nativeSnapshot=data.reporting_contract.v031_native_current_snapshot;
 const state={view:'all',week:'all',query:'',provider:'DraftKings',horizon:'latest_pre_kickoff',disagreements:false};
 for(const provider of ['DraftKings','Kalshi','Polymarket US','Polymarket Global'])
  assert.equal(filterGames(data.games,{...state,provider},data.windows,data.prepared_at).length,888);
-assert.equal(filterGames(data.games,{...state,view:'completed'},data.windows,data.prepared_at).length,624);
+assert.equal(filterGames(data.games,{...state,view:'completed'},data.windows,data.prepared_at).length,627);
 assert.equal(filterGames(data.games,{...state,view:'last'},data.windows,data.prepared_at).length,56);
 assert.equal(filterGames(data.games,{...state,view:'current'},data.windows,data.prepared_at).length,63);
 assert.equal(filterGames(data.games,{...state,view:'completed',horizon:'T120',disagreements:true},data.windows,data.prepared_at).length,122);
 const current=filterGames(data.games,{...state,view:'current'},data.windows,data.prepared_at);
-for(const [provider,counts] of [['DraftKings',[62,62,62]],['Kalshi',[62,63,63]],['Polymarket Global',[63,63,63]],['Polymarket US',[59,0,0]]]){
- const actual=['winner','margin','total'].map(target=>current.filter(g=>reference(g,provider,target,'auto',data.prepared_at).row).length);
+for(const [provider,counts] of [['DraftKings',[62,63,63]],['Kalshi',[61,62,62]],['Polymarket Global',[62,62,62]],['Polymarket US',[57,50,52]]]){
+ const actual=['winner','margin','total'].map(target=>current.filter(g=>reference(g,provider,target,'auto',data.prepared_at,nativeSnapshot).row).length);
  assert.deepEqual(actual,counts,'Current snapshot must remain visible before future cutoff windows: '+provider);
 }
+for(const [provider,counts] of [['Kalshi',[56,57,57]],['Polymarket Global',[57,57,57]],['Polymarket US',[52,50,52]]]){
+ const actual=['winner','margin','total'].map(target=>current.filter(g=>reference(g,provider,target,'current',data.prepared_at,nativeSnapshot).row).length);
+ assert.deepEqual(actual,counts,'Latest native capture must not silently fill missing slots from older snapshots: '+provider);
+}
+assert.equal(nativeSnapshot.slots.length,567);
+assert.equal(nativeSnapshot.slots.filter(s=>s.status==='NO_EXACT_BOUND_NATIVE_PRODUCT_IN_VERIFIED_SUBSET').length,21);
+assert.equal(nativeSnapshot.slots.filter(s=>s.status==='INCONSISTENT_QUOTED_THRESHOLD_CURVE').length,4);
 const game={kickoff:'2026-11-03T14:00:00Z',markets:{Kalshi:[]}};
 const make=(quote_at,value=.7)=>({target:'winner',join_status:'matched',value,picked_home:value>=.5,quote_at,captured_at:'2026-11-04T15:00:00Z',reference_kind:'trade',product:'game_winner',interval_end_at:null});
 game.markets.Kalshi=[make('2026-11-03T11:00:00Z'),make('2026-11-03T14:00:00Z',.9),make('2026-11-03T14:01:00Z',.2)];
@@ -52,13 +60,17 @@ assert.equal(pointBounds(supported,Date.parse('2026-11-03T13:00:00Z'),'2026-11-0
 assert.equal(pointBounds({point_support:{...supported.point_support,upper_bound:10.5}},Date.parse('2026-11-03T13:00:00Z'),'2026-11-03T13:00:00Z').status,'inconsistent');
 assert.equal(pointBounds({point_support:{...supported.point_support,lower_bound:null,upper_bound:null}},Date.parse('2026-11-03T13:00:00Z'),'2026-11-03T13:00:00Z').status,'unresolved');
 const restored=current.find(g=>g.id==='401869936');
-const restoredMargin=reference(restored,'Polymarket Global','margin','current',data.prepared_at);
-const restoredTotal=reference(restored,'Polymarket Global','total','current',data.prepared_at);
+const restoredMargin=reference(restored,'Polymarket Global','margin','latest_available_pregame',data.prepared_at,nativeSnapshot);
+const restoredTotal=reference(restored,'Polymarket Global','total','latest_available_pregame',data.prepared_at,nativeSnapshot);
 assert.equal(restoredMargin.row.value,null,'New bound-only evidence must not invent a point estimate');
 assert.deepEqual([restoredMargin.row.point_support.lower_bound,restoredMargin.row.point_support.upper_bound],[14.5,15.5]);
 assert.deepEqual([restoredTotal.row.point_support.lower_bound,restoredTotal.row.point_support.upper_bound],[51.5,55.5],'New independently replayed bounds keep their Nov4 clock');
 const priorDiagnostic=restored.markets['Polymarket Global'].find(r=>r.target==='margin'&&r.value===31.5&&r.point_support?.upper_bound===16.5);
 assert.ok(priorDiagnostic,'The original Nov3 midpoint diagnostic and its wider bounds remain archived');
-const oneSided=reference(current.find(g=>g.id==='401858290'),'Polymarket Global','total','current',data.prepared_at);
+assert.equal(reference(restored,'Polymarket Global','margin','current',data.prepared_at,nativeSnapshot).row,null,'The missing latest exact product does not erase old evidence or reuse it as a fresh capture');
+const oneSided=reference(current.find(g=>g.id==='401858290'),'Polymarket Global','total','latest_available_pregame',data.prepared_at,nativeSnapshot);
 assert.equal(pointBounds(oneSided.row,oneSided.cutoff,data.prepared_at).status,'lower_only');
-console.log(JSON.stringify({status:'PASS',provider_inventory_views:4,calendar_counts:[888,624,56,63],historical_disagreements:122,current_week_provider_targets:12,clock_scenarios:8,point_support_cutoff_scenarios:6,earlier_query_fallback_and_proxy_isolation:true,formula_injection_escaped:true}));
+const latestBound=reference(current.find(g=>g.id==='401858290'),'Polymarket Global','total','current',data.prepared_at,nativeSnapshot);
+assert.deepEqual([latestBound.row.point_support.lower_bound,latestBound.row.point_support.upper_bound],[57.5,59.5]);
+assert.equal(latestBound.row.value,null,'A new median interval does not invent a mean score');
+console.log(JSON.stringify({status:'PASS',provider_inventory_views:4,calendar_counts:[888,627,56,63],historical_disagreements:122,current_week_provider_targets:12,clock_scenarios:8,point_support_cutoff_scenarios:6,earlier_query_fallback_and_proxy_isolation:true,formula_injection_escaped:true}));
