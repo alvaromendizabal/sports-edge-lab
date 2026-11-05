@@ -146,7 +146,7 @@ class EvidenceTests(unittest.TestCase):
     def test_inherited_inventory_is_dated_and_unreconciled(self):
         expected = {'ncaam': (437, 13, 2, 435), 'ncaaw': (419, 51, 1, 418)}
         for league, data in self.exports.items():
-            d = data['inventory_history'][-1]
+            d = next(x for x in data['inventory_history'] if x['snapshot_at'] == '2026-11-03T00:48:42+00:00')
             self.assertEqual((d['candidate_games'], d['observed_finals'], d['last_week']['candidate_games'], d['this_week']['candidate_games']), expected[league])
             self.assertEqual(d['candidate_games'], d['last_week']['candidate_games'] + d['this_week']['candidate_games'])
             self.assertEqual(d['snapshot_at'], '2026-11-03T00:48:42+00:00')
@@ -156,7 +156,7 @@ class EvidenceTests(unittest.TestCase):
 
     def test_b036_workflow_completed_without_upgrading_reconstructions(self):
         for league, data in self.exports.items():
-            a = data['current_owner_attempt']
+            a = next(x for x in data['owner_attempt_history'] if x['release'] == 'B036')
             self.assertEqual(a['release'], 'B036')
             self.assertEqual(a['completed_scientific_stages'], 12)
             self.assertEqual((a['synthetic_tests_passed'], a['synthetic_test_errors'], a['synthetic_tests_skipped']), (536, 0, 1))
@@ -170,11 +170,12 @@ class EvidenceTests(unittest.TestCase):
             self.assertEqual(a['admission']['foreign_processes_signaled'], 0)
             self.assertTrue(a['admission']['descendant_usage_measured'])
             self.assertTrue(a['admission']['raw_samples_preserved_in_private_evidence'])
-            self.assertEqual(data['observed_inventory']['candidate_games'], 1103 if league == 'ncaam' else 1072)
-            self.assertEqual(data['observed_inventory']['observed_finals'], 327 if league == 'ncaam' else 311)
+            old_inventory = next(x for x in data['inventory_history'] if x['snapshot_at'] == '2026-11-04T18:32:51.950861+00:00')
+            self.assertEqual(old_inventory['candidate_games'], 1103 if league == 'ncaam' else 1072)
+            self.assertEqual(old_inventory['observed_finals'], 327 if league == 'ncaam' else 311)
             self.assertFalse(data['observed_inventory']['all_official_games_covered'])
-            self.assertEqual(data['current_coverage_gaps']['market_identity_unresolved'], 9414)
-            self.assertEqual(data['current_coverage_gaps']['completed_game_box_normalization_errors'], 417)
+            self.assertEqual(data['current_coverage_gaps']['market_identity_unresolved'], 224172)
+            self.assertIsNone(data['current_coverage_gaps']['official_denominator'])
 
     def test_private_viewer_has_no_upload_or_persistence_path(self):
         viewer = (build_dashboard.HERE / 'private_report.html.tmpl').read_text()
@@ -186,6 +187,36 @@ class EvidenceTests(unittest.TestCase):
         for forbidden in ('fetch(', 'XMLHttpRequest', 'WebSocket(', 'sendBeacon(', 'localStorage', 'sessionStorage', 'indexedDB', '.innerHTML', 'eval('):
             self.assertNotIn(forbidden, viewer)
         self.assertIn('n.textContent=value', viewer)
+
+    def test_b039_partial_run_keeps_real_fits_and_all_missing_coverage_explicit(self):
+        for league, data in self.exports.items():
+            attempt = data['current_owner_attempt']
+            self.assertEqual(attempt['release'], 'B039')
+            self.assertEqual(attempt['status'], 'FAILED_PARTIAL_WORK_PRESERVED')
+            self.assertEqual((attempt['completed_scientific_stages'], attempt['planned_scientific_stages']), (10, 12))
+            self.assertEqual([x['status'] for x in attempt['stages']], ['COMPLETED']*10+['FAILED','NOT_STARTED'])
+            self.assertEqual((attempt['new_real_target_fits'], attempt['new_calibration_fits'], attempt['new_empirical_residual_fits']), (156,48,60))
+            self.assertEqual(attempt['league_new_real_target_fits'], 96 if league=='ncaam' else 60)
+            self.assertEqual(attempt['reused_target_fits'],108)
+            self.assertEqual(attempt['new_prospective_issues'],0)
+            self.assertEqual(data['observed_inventory']['candidate_games'],1442 if league=='ncaam' else 1379)
+            self.assertEqual(data['observed_inventory']['observed_finals'],368 if league=='ncaam' else 364)
+            self.assertFalse(data['observed_inventory']['all_official_games_covered'])
+            self.assertEqual(data['current_coverage_gaps']['rejected_official_records'],4)
+            self.assertFalse(attempt['scientific_goal_complete'])
+
+    def test_current_pair_is_retrospective_and_preserves_opposing_metric_results(self):
+        pair=self.exports['ncaam']['current_reconstructed_comparison']
+        self.assertEqual(pair['paired_games'],122)
+        self.assertFalse(pair['as_issued'])
+        self.assertFalse(pair['current_outcomes_selected_model'])
+        self.assertGreater(pair['model_metrics']['accuracy'],pair['provider_metrics']['accuracy'])
+        self.assertGreater(pair['model_metrics']['log_loss'],pair['provider_metrics']['log_loss'])
+        self.assertGreater(pair['model_metrics']['brier'],pair['provider_metrics']['brier'])
+        self.assertEqual((pair['model_right_provider_wrong'],pair['provider_right_model_wrong']),(7,2))
+        self.assertIsNone(pair['profit'])
+        self.assertIsNone(pair['uncertainty_interval'])
+        self.assertEqual(self.exports['ncaaw']['current_reconstructed_comparison']['status'],'NO_EXACT_PAIRED_COHORT_SUPPLIED')
 
     def test_quote_display_is_distinct_from_forecast_eligibility(self):
         for data in self.exports.values():

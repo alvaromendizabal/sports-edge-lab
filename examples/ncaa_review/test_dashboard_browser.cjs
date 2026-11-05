@@ -507,6 +507,115 @@ const { chromium } = require(process.env.PLAYWRIGHT_MODULE_DIR || 'playwright');
       assert.equal(await page.locator('[data-game]').first().locator('table').first().innerText(),forecastAfterImport);
       assert.equal(await page.evaluate(()=>document.documentElement.scrollWidth>innerWidth),false,'bounded preview must fit mobile viewport');
       counts.boundedInventoryViews+=5;
+      // Shared-field rows and report-part indexes use only invented values.
+      // The complete dense game/model universe is never constructed by the UI.
+      const normalizedSchema='sports-edge-lab.private.game-report.normalized.v1';
+      const canonical=value=>JSON.stringify(Object.fromEntries(Object.keys(value).sort().map(k=>[k,value[k]])))+'\n';
+      const normalize=(sourceRows,metadata={})=>{
+        const contexts=[],records=[],known=new Map(),flat=[];
+        for(const input of sourceRows){const row=Object.fromEntries(Object.entries(input).filter(([k,v])=>v!==null&&v!=='')),shared={},own={};
+          for(const [key,value]of Object.entries(row)){
+            if(['league','event_id','home_team','away_team','source_date','time_precision','phase','event_time'].includes(key)||/^(kalshi|polymarket|draftkings)_/.test(key))shared[key]=value;
+            else own[key]=value;
+          }
+          const encoded=canonical(shared);let id=known.get(encoded);if(id===undefined){id=contexts.length;contexts.push(shared);known.set(encoded,id);}
+          records.push({...own,context_ids:[id]});flat.push(Buffer.from(canonical(row)));
+        }
+        const logical=Buffer.concat(flat);
+        return {...metadata,schema:normalizedSchema,record_count:records.length,records,contexts,
+          record_encoding:{schema:'sel.ncaa.b040.shared_fields.v1',context_field:'context_ids',merge_policy:'DISJOINT_CONTEXT_FIELDS_THEN_DISJOINT_RECORD_FIELDS',
+            flat_encoding:'canonical_json_object_per_line_utf8',flat_logical_bytes:logical.length,flat_logical_sha256:digest(logical),fields_recomputed:false,new_forecasts:0,new_fits:0}};
+      };
+      const sourceRows=structuredClone(invented.records);sourceRows[0].prediction_margin=0;sourceRows[0].model_winner_pick_correct=false;
+      sourceRows[0].kalshi_captured_before_tip_win_value=.1234;
+      sourceRows[0].kalshi_captured_before_tip_win_quote_time='2026-11-04T18:00:00Z';
+      sourceRows[0].kalshi_captured_before_tip_win_acquired_at='2026-11-04T18:00:01Z';
+      const unresolved=Array.from({length:4},(_,i)=>({league:i%2?'ncaaw':'ncaam',date:'2026-11-04',row_index:i,
+        reason:'INVENTED_TEAM_ID_MISSING',source_record_retention_status:'AUTHENTICATED_ORIGINAL_RAW_RECORD_RETAINED_REPORT_ONLY',
+        canonical_identity_status:'UNRESOLVED',counted_as_new_physical_game:false,
+        raw_source_record:{contestId:100+i,hasStartTime:false,teams:[{nativeTeamId:null,sourceLabel:'Unresolved invented source '+i,isHome:null}]}}));
+      const normalized=normalize(sourceRows,{...invented,unresolved_official_records:unresolved});
+      await page.locator('#report-file').setInputFiles({name:'invented-normalized.json',mimeType:'application/json',buffer:Buffer.from(JSON.stringify(normalized))});
+      await page.waitForFunction(()=>document.getElementById('record-scope').textContent.includes('28 of 28 game/model rows loaded'));
+      assert.equal(await page.locator('[data-game]').count(),25);
+      assert.equal(await page.locator('#summary .stat').nth(0).locator('strong').innerText(),'27');
+      assert.equal(await page.locator('#summary .stat').nth(1).locator('strong').innerText(),'28');
+      assert.match(await page.locator('[data-game]').first().locator('table').first().innerText(),/0\.00/);
+      assert.match(await page.locator('[data-game]').first().locator('table').first().innerText(),/Wrong/);
+      const sharedMetadata=JSON.parse(await page.locator('#metadata').textContent());
+      assert.equal(sharedMetadata.contexts,undefined);assert.equal(sharedMetadata.records,undefined);
+      assert.equal(sharedMetadata.shared_context_count,normalized.contexts.length);
+      await page.selectOption('#market-clock','captured_before_tip');
+      assert.equal(await page.locator('[data-game]').first().locator('[data-captured-value]').first().innerText(),'0.1234');
+      assert.match(await page.locator('#market-clock-note').innerText(),/actual acquisition to precede/);
+      assert.equal(await page.locator('[data-game]').nth(1).locator('[data-captured-value]').first().innerText(),'Unavailable','missing actual-capture evidence is never filled from historical support');
+      await page.selectOption('#market-clock','latest_pretip');
+      assert.equal(await page.locator('[data-game]').first().locator('[data-captured-value]').first().innerText(),'0.6000');
+      await page.selectOption('#window','this_week');assert.equal(await page.locator('[data-game]').count(),5);
+      await page.selectOption('#window','all_observed');await page.selectOption('#league','ncaaw');assert.equal(await page.locator('[data-game]').count(),3);
+      await page.locator('#search').fill('Home 26');assert.equal(await page.locator('[data-game]').count(),1);
+      await page.locator('#search').fill('');await page.selectOption('#league','all');
+      await page.selectOption('#model','original_frozen');
+      assert.match(await page.locator('[data-game]').first().locator('table').first().innerText(),/45\.7%/);
+      assert.match(await page.locator('[data-game]').nth(1).locator('table').first().innerText(),/No record for this game/);
+      await page.selectOption('#model','all');
+      const rowDetails=page.locator('[data-game]').first().locator('details').filter({has:page.locator('summary', {hasText:'All source, issue, training and quote clocks'})});
+      await rowDetails.locator('summary').click();
+      const flatDetail=JSON.parse(await rowDetails.locator('pre').textContent());
+      assert.equal(flatDetail[0].prediction_margin,0);assert.equal(flatDetail[0].model_winner_pick_correct,false);
+      assert.equal(flatDetail[0].league,'ncaam');assert.equal(flatDetail[0].context_ids,undefined);
+      assert.match(await page.locator('#unresolved-official-details > summary').innerText(),/4 supplied/);
+      if(!(await page.locator('#unresolved-official-details').evaluate(el=>el.open)))await page.locator('#unresolved-official-details > summary').click();
+      assert.equal(await page.locator('[data-unresolved-official]').count(),4);
+      assert.match(await page.locator('#unresolved-official-details').innerText(),/source row 0/);
+      assert.equal(await page.locator('#summary .stat').nth(0).locator('strong').innerText(),'27','unresolved native rows never invent extra physical games');
+      assert.equal(await page.evaluate(()=>window.privateLeak),undefined);
+      const beforeInvalid=await page.locator('[data-game]').first().locator('table').first().innerText();
+      const malformedNormalized=[];
+      for(const ids of [[true],[-1],[normalized.contexts.length],[0,0]]){const bad=structuredClone(normalized);bad.records[0].context_ids=ids;malformedNormalized.push(bad);}
+      const collision=structuredClone(normalized);collision.records[0].league='ncaam';malformedNormalized.push(collision);
+      const sharedCollision=structuredClone(normalized);sharedCollision.contexts.push({league:'ncaam'});sharedCollision.records[0].context_ids.push(sharedCollision.contexts.length-1);malformedNormalized.push(sharedCollision);
+      for(const bad of malformedNormalized){await page.locator('#report-file').setInputFiles({name:'invented-invalid-normalized.json',mimeType:'application/json',buffer:Buffer.from(JSON.stringify(bad))});
+        await page.waitForFunction(()=>document.getElementById('load-status').classList.contains('error'));
+        assert.equal(await page.locator('[data-game]').first().locator('table').first().innerText(),beforeInvalid);}
+      counts.normalizedReportViews=(counts.normalizedReportViews||0)+12;
+
+      const partRows=[sourceRows.slice(0,12),sourceRows.slice(12)];
+      const parts=partRows.map((rs,i)=>normalize(rs,{...invented,part_ordinal:i,global_record_count:28,part_scope:'COMPLETE_ROWS_IN_THIS_PART_ONLY'}));
+      const partBodies=parts.map(p=>Buffer.from(JSON.stringify(p)+'\n'));let start=0;
+      const partRefs=parts.map((p,i)=>{const descriptor={ordinal:i,record_start:start,records:p.record_count,reference:reference('invented-report-part-'+i,partBodies[i]),flat_logical_bytes:p.record_encoding.flat_logical_bytes,flat_logical_sha256:p.record_encoding.flat_logical_sha256};start+=p.record_count;return descriptor;});
+      const reportIndex={...invented,schema:'sports-edge-lab.private.game-report.index.v1',record_count:28,records:[],records_inline_complete:false,
+        record_part_schema:normalizedSchema,record_parts:partRefs,max_part_bytes:64*1024*1024,
+        flat_logical_bytes:partRefs.reduce((sum,p)=>sum+p.flat_logical_bytes,0),flat_logical_sha256:normalized.record_encoding.flat_logical_sha256,
+        unloaded_rows:28,loaded_rows:0};
+      await page.locator('#report-file').setInputFiles({name:'invented-report-index.json',mimeType:'application/json',buffer:Buffer.from(JSON.stringify(reportIndex))});
+      await page.waitForFunction(()=>document.getElementById('record-scope').textContent.includes('0 of 28 game/model rows loaded'));
+      assert.equal(await page.locator('#summary .stat').nth(1).locator('strong').innerText(),'28');
+      assert.equal(await page.locator('[data-game]').count(),0);assert.match(await page.locator('#results').innerText(),/preserved but unloaded/);
+      if(!(await page.locator('#record-part-details').evaluate(el=>el.open)))await page.locator('#record-part-details > summary').click();
+      await page.locator('#record-part-file').setInputFiles({name:'invented-part-0.json',mimeType:'application/json',buffer:partBodies[0]});
+      await page.waitForFunction(()=>document.getElementById('record-part-status').textContent.startsWith('Part 1 / 2 verified'));
+      assert.match(await page.locator('#record-scope').innerText(),/global rows 1–12.*12 of 28.*16 rows unloaded/);
+      assert.equal(await page.locator('[data-game]').count(),12);
+      const firstPartForecast=await page.locator('[data-game]').first().locator('table').first().innerText();
+      await page.locator('#record-part-file').setInputFiles({name:'invented-wrong-part.json',mimeType:'application/json',buffer:partBodies[1]});
+      await page.waitForFunction(()=>document.getElementById('record-part-status').classList.contains('error'));
+      assert.match(await page.locator('#record-part-status').innerText(),/bytes or SHA-256/);
+      assert.equal(await page.locator('[data-game]').first().locator('table').first().innerText(),firstPartForecast);
+      await page.selectOption('#record-part-selection','1');
+      await page.locator('#record-part-file').setInputFiles({name:'invented-part-1.json',mimeType:'application/json',buffer:partBodies[1]});
+      await page.waitForFunction(()=>document.getElementById('record-part-status').textContent.startsWith('Part 2 / 2 verified'));
+      assert.match(await page.locator('#record-scope').innerText(),/global rows 13–28.*16 of 28.*12 rows unloaded/);
+      assert.equal(await page.locator('[data-game]').count(),16);
+      await page.selectOption('#league','ncaaw');assert.equal(await page.locator('[data-game]').count(),3);
+      await page.locator('#clear-record-part').click();assert.equal(await page.locator('[data-game]').count(),0);
+      assert.match(await page.locator('#record-scope').innerText(),/0 of 28.*28 rows unloaded/);
+      const reordered=structuredClone(reportIndex);reordered.record_parts.reverse();
+      await page.locator('#report-file').setInputFiles({name:'invented-invalid-index.json',mimeType:'application/json',buffer:Buffer.from(JSON.stringify(reordered))});
+      await page.waitForFunction(()=>document.getElementById('load-status').classList.contains('error'));
+      assert.match(await page.locator('#load-status').innerText(),/order/);
+      assert.equal(await page.evaluate(()=>document.documentElement.scrollWidth>innerWidth),false,'normalized report and local part chooser fit mobile');
+      counts.reportPartViews=(counts.reportPartViews||0)+7;
       await page.locator('#clear').click();
       assert.equal(await page.locator('#freshness-grid').textContent(),'');
       assert.equal(await page.locator('#observation-scope').textContent(),'');
