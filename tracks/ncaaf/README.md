@@ -3,6 +3,23 @@
 [**Open the browser dashboard →**](https://sports-edge-lab-fbs.alv-mendizabal.chatgpt.site) · [Recovery and 2026 coverage](https://sports-edge-lab-fbs.alv-mendizabal.chatgpt.site/recovery.html)
 
 
+## Verified recovery review — November 5, 2026
+
+[**Explore all 167 retained models and 358 scorecards →**](https://sports-edge-lab-fbs.alv-mendizabal.chatgpt.site/models.html) · [Machine-readable registry](../../docs/fbs/model-registry.json) · [Recovery audit](../../docs/fbs/recovery-review.json)
+
+The latest authenticated owner attempt is **V031, exit 2**, before source collection. Its predecessor guard counted the current launcher/worker family as another owner. No new fits, provider requests, rolling fits, or genuine forecasts came from that attempt. The previous V026 study retains **297 learned-state receipts: 100 new fits and 197 verified reuses**; it is separate from V024's 723-fit study. V033 is the next recovery release, prepared locally and not represented as a completed SageMaker run.
+
+The current retained schedule has **888 observed 2026 games: 627 completed and 261 uncompleted** at its November 5 05:18 UTC capture. Week 14 is absent from that inventory; independent full-season completeness is not proved. The original replay remains **622 games**, 465 correct, log loss **0.5133276378**. New final scores do not create missing predictions. The separate reported 301-game log loss of 0.4655188082 is not substituted for the main cohort and was not independently reproduced in this recovery.
+
+A new independent audit rescored all 48 retained candidates on 1,806 forward-validation games from 2022–2023: **144 target scorecards and 624 numerical comparisons passed**, maximum difference 1.11e-16. This adds zero fits and changes no champion. The model registry exposes all supplied V021, V023, V024 and V026 historical scorecards, source hashes, population hashes, unavailable metrics and development-exposure status. This is a count of retained model identities, not all-time training runs. The recovered V032 preparation verifies 82/173 feature coordinates; 91 coordinates and all 18 teacher-state proofs remain unresolved.
+
+The 2026 replay and recovered market panels are retrospective. Same model/provider information cutoffs are not proved. A quoted midpoint, line or median bracket is not an executable offer; no broad market-beating or profitable edge is established. Injury research separates timestamp-qualified future observations from timing-uncertified historical archives. Unknown availability is never encoded as a healthy roster.
+
+New local injury research tested four fixed alternatives on 154 training and 129 later 2025 games. There are 12 distinct candidate-target models and 24 local fit executions across two preparation invocations. Adding listed-absence features worsened winner log loss from 0.549204 to 0.600443; margin and total MAE also worsened. Missing historical report clocks keep this an exposed, timing-uncertified association study with no promotion. The dashboard provides every alternative and its exact cohort hashes. A separate rounded public-data comparison now puts all four venues and the model on 482 identical latest-pre-kickoff games; all four market references have lower log loss than the model.
+
+### Earlier reports, retained as dated history
+
+
 **Latest owner attempt — V025, November 3, 2026: partial.** It preserved 197 committed fits, one failed forward attempt and 99 final learned states not attempted. V024 remains the last completed owner study. [Inspect the recovery demonstration, all nine replay weeks and three-provider source coverage](../../docs/fbs/recovery.html).
 
 
@@ -64,4 +81,5 @@ Apply the [shared research protocol](../../docs/RESEARCH_PROTOCOL.md). Establish
 **Current phase:** source acquisition and audit. No trained-model performance claim.
 
 </details>
+
 

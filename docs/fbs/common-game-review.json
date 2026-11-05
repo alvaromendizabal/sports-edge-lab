@@ -1,0 +1,149 @@
+{
+  "schema": "fbs.public.common-game-review.v1",
+  "source_sha256": "92459a5835b5f899c4f43d61c8c873dbf104e3d43beb5e0a3fadf05374ddcb6f",
+  "inputs_rounded_to_4_decimal_places": true,
+  "cohorts": [
+    {
+      "horizon": "T120",
+      "games": 479,
+      "identity_sha256": "0f6e3f0200b36a2c8b2f10f035b9f44f642a918218a46f03ec3205ee59bb8b93",
+      "metrics": {
+        "model": {
+          "games": 479,
+          "logloss": 0.5769149146544607,
+          "brier": 0.19635414517745298,
+          "correct": 338,
+          "accuracy": 0.7056367432150313
+        },
+        "DraftKings": {
+          "games": 479,
+          "logloss": 0.4887217509413035,
+          "brier": 0.16261186620041745,
+          "correct": 364,
+          "accuracy": 0.7599164926931107
+        },
+        "Kalshi": {
+          "games": 479,
+          "logloss": 0.4865581729821966,
+          "brier": 0.16238815240083498,
+          "correct": 364,
+          "accuracy": 0.7599164926931107
+        },
+        "Polymarket US": {
+          "games": 479,
+          "logloss": 0.48570262243110757,
+          "brier": 0.16211833246346544,
+          "correct": 362,
+          "accuracy": 0.755741127348643
+        },
+        "Polymarket Global": {
+          "games": 479,
+          "logloss": 0.48600929149679034,
+          "brier": 0.162043628914405,
+          "correct": 362,
+          "accuracy": 0.755741127348643
+        }
+      },
+      "rounded_public_probabilities": true,
+      "same_model_prediction_cutoff_proven": false,
+      "promotion": false,
+      "betting_edge_proven": false
+    },
+    {
+      "horizon": "T60",
+      "games": 481,
+      "identity_sha256": "fbfc08ca3820acc8edf2a4d7997e7f646d32c310bbf1426798bbb0d9c60b866e",
+      "metrics": {
+        "model": {
+          "games": 481,
+          "logloss": 0.5747765622235776,
+          "brier": 0.19555573478170474,
+          "correct": 340,
+          "accuracy": 0.7068607068607069
+        },
+        "DraftKings": {
+          "games": 481,
+          "logloss": 0.4873640434363722,
+          "brier": 0.16222654619542615,
+          "correct": 367,
+          "accuracy": 0.762993762993763
+        },
+        "Kalshi": {
+          "games": 481,
+          "logloss": 0.4854559886850721,
+          "brier": 0.16206746361746352,
+          "correct": 368,
+          "accuracy": 0.7650727650727651
+        },
+        "Polymarket US": {
+          "games": 481,
+          "logloss": 0.484059267257312,
+          "brier": 0.16162654625779618,
+          "correct": 367,
+          "accuracy": 0.762993762993763
+        },
+        "Polymarket Global": {
+          "games": 481,
+          "logloss": 0.4840279599847473,
+          "brier": 0.16162406081081074,
+          "correct": 366,
+          "accuracy": 0.760914760914761
+        }
+      },
+      "rounded_public_probabilities": true,
+      "same_model_prediction_cutoff_proven": false,
+      "promotion": false,
+      "betting_edge_proven": false
+    },
+    {
+      "horizon": "latest_pre_kickoff",
+      "games": 482,
+      "identity_sha256": "01155b427fe962e02f6479575f603ff31abae747496c111aedb9b7ebf5fdbda8",
+      "metrics": {
+        "model": {
+          "games": 482,
+          "logloss": 0.574459073382206,
+          "brier": 0.1953956706224066,
+          "correct": 341,
+          "accuracy": 0.7074688796680498
+        },
+        "DraftKings": {
+          "games": 482,
+          "logloss": 0.48584841253404953,
+          "brier": 0.16168888002074686,
+          "correct": 370,
+          "accuracy": 0.7676348547717843
+        },
+        "Kalshi": {
+          "games": 482,
+          "logloss": 0.48342866582036137,
+          "brier": 0.16126213692946054,
+          "correct": 370,
+          "accuracy": 0.7676348547717843
+        },
+        "Polymarket US": {
+          "games": 482,
+          "logloss": 0.4825526261218159,
+          "brier": 0.16102934387966802,
+          "correct": 371,
+          "accuracy": 0.7697095435684648
+        },
+        "Polymarket Global": {
+          "games": 482,
+          "logloss": 0.4835925277029414,
+          "brier": 0.16127228786307063,
+          "correct": 370,
+          "accuracy": 0.7676348547717843
+        }
+      },
+      "rounded_public_probabilities": true,
+      "same_model_prediction_cutoff_proven": false,
+      "promotion": false,
+      "betting_edge_proven": false
+    }
+  ],
+  "same_model_prediction_cutoff_proven": false,
+  "new_fits": 0,
+  "promotion": false,
+  "betting_edge_proven": false
+}

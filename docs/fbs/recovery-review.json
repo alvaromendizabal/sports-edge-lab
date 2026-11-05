@@ -1,0 +1,70 @@
+{
+  "schema": "fbs.public.recovery-review.v1",
+  "review_date": "2026-11-05 America/Los_Angeles",
+  "source_return": {
+    "bytes": 130206403,
+    "sha256": "d4355440b02bbeaa53586dafcd228354afb42a7bc99a8fdd52db442192883a37"
+  },
+  "latest_owner_release": "V031",
+  "latest_owner_status": "PARTIAL_DIAGNOSTICS_PRESERVED",
+  "owner_exit": 2,
+  "new_owner_fits": 0,
+  "next_owner_release": "V033",
+  "next_owner_status": "PREPARED_NOT_EXECUTED",
+  "independent_scoring": {
+    "games": 1806,
+    "seasons": [
+      2022,
+      2023
+    ],
+    "candidate_target_scorecards": 144,
+    "numerical_checks": 624,
+    "maximum_absolute_error": 1.1102230246251565e-16,
+    "all_checks_passed": true,
+    "new_fits": 0,
+    "champions_changed": false
+  },
+  "recovered_local_feature_study": {
+    "release": "V032",
+    "verified_coordinates": 82,
+    "remaining_coordinates": 91,
+    "teacher_state_proofs_verified": 0,
+    "teacher_state_proofs_required": 18,
+    "new_fits": 0,
+    "new_forecasts": 0,
+    "local_preparation_not_owner_execution": true,
+    "physical_sha256": "86f525a4c00ada9941f7c141eb7e68b81994f85b65980fbc4a9cf3a0ff0433c5"
+  },
+  "injury_ablation_status": "24 local fit executions, 12 distinct candidate-target models; negative 2025 association, not cutoff-qualified historical evidence",
+  "forecast_qualification": "Legacy complete raw-value and teacher-state checks remain unresolved",
+  "current_season_model_selection": false,
+  "profitability_established": false,
+  "new_orders": 0,
+  "new_local_injury_research": {
+    "source_sha256": "8e854c0bef6ca06cfcba723dac0d47ec30672842aa49c3986b7bedc6355748d9",
+    "status": "COMPLETED_EXPOSED_2025_ASSOCIATION_NOT_CUTOFF_VALIDATED",
+    "distinct_candidate_target_fits": 12,
+    "local_fit_executions": 24,
+    "owner_fits": 0,
+    "historical_publication_verified": false,
+    "current_2026_labels_consumed": 0,
+    "promotion": false
+  },
+  "common_game_cohorts": [
+    {
+      "horizon": "T120",
+      "games": 479,
+      "cohort_sha256": "0f6e3f0200b36a2c8b2f10f035b9f44f642a918218a46f03ec3205ee59bb8b93"
+    },
+    {
+      "horizon": "T60",
+      "games": 481,
+      "cohort_sha256": "fbfc08ca3820acc8edf2a4d7997e7f646d32c310bbf1426798bbb0d9c60b866e"
+    },
+    {
+      "horizon": "latest_pre_kickoff",
+      "games": 482,
+      "cohort_sha256": "01155b427fe962e02f6479575f603ff31abae747496c111aedb9b7ebf5fdbda8"
+    }
+  ]
+}
