@@ -12,6 +12,8 @@ The November 4, 2026 evening owner execution fitted seven new native components 
 
 Each stream has 29 games × three targets = 87 rows. The total 261 rows are not 261 independent games, bets or validated recommendations. There are zero protected-original refits, zero new calibrations and zero final-hour-qualified cards.
 
+“Original calibrated heads” denotes the retained N037 selected calibrated stream. It is separate from the earliest frozen champion, whose historical identity and monitoring remain unchanged.
+
 ## What became fresher
 
 The current rolling branch uses team statistics actually observed at 8:36 PM Pacific and a feature boundary 69 seconds before issue. The preserved branch's base snapshot was about 26.7 hours old. Current schedule, statistics and play-by-play were refreshed; the fresh query generator directly consumes team statistics, not that newly collected play-by-play asset.
@@ -24,7 +26,7 @@ The latest league source contains 266 listed entries across 26 of 30 Week 9 team
 
 An injury designation, roster identity, depth rank and announced starter are different facts. Full quarterback-room availability and role verification remain incomplete. The current model therefore does not claim to fully incorporate the Ravens' quarterback situation.
 
-A historical weekly-injury acquisition stage failed on a postseason week label before completing its planned collection. A separate legacy-status repair admitted zero additional rows. The existing 55,940 acquired legacy rows and completed earlier studies remain preserved; acquisition does not automatically extend an eligible training matrix.
+A historical weekly-injury acquisition stage failed on a postseason week label before completing its planned collection. It preserved 18 sitemap captures and 27 unique article bodies; eight articles normalized into 934 current-season rows, of which 696 were eligible at T1 and 683 at T2. Nineteen articles had normalization failures, including 17 postseason-week parsing failures. These captured rows are source progress, not evidence that every row entered a fitted model. A separate legacy-status repair admitted zero additional rows. The existing 55,940 acquired legacy rows and completed earlier studies remain preserved; acquisition does not automatically extend an eligible training matrix.
 
 ## Jacksonville at Baltimore: an honest comparison
 
