@@ -20,7 +20,7 @@ const { chromium } = require(process.env.PLAYWRIGHT_MODULE_DIR || 'playwright');
     probability: ['win', 'LogLoss'], accuracy: ['win', 'Accuracy'],
     margin: ['margin', 'MAE'], total: ['total', 'MAE'],
   };
-  const counts = { viewports: 0, selectorStates: 0, scenarios: 0, progressScenarios: 0, preflightScenarios: 0, executionViews: 0, keyboardEvents: 0, privateViewerStates: 0, captureClockViews: 0, horizonMetricViews: 0 };
+  const counts = { viewports: 0, selectorStates: 0, scenarios: 0, progressScenarios: 0, preflightScenarios: 0, executionViews: 0, keyboardEvents: 0, privateViewerStates: 0, captureClockViews: 0, horizonMetricViews: 0, unclassifiedSourceViews: 0 };
   try {
     for (const width of [1440, 390]) {
       await page.setViewportSize({ width, height: 1000 });
@@ -196,7 +196,9 @@ const { chromium } = require(process.env.PLAYWRIGHT_MODULE_DIR || 'playwright');
         assert.match(await firstGame.locator('.market-table').innerText(),/History resolution \(seconds\): 60/);
         assert.match(await firstGame.locator('.market-table').innerText(),/Model cutoff: 2026-11-04T19:00:00Z/);
         assert.match(await firstGame.innerText(),/NO BET.*Execution and fees unverified/);
-        assert.equal(await page.evaluate(()=>document.documentElement.scrollWidth>innerWidth),false,`private ${width} ${clock} overflow`);
+        const overflow=await page.evaluate(()=>({overflow:document.documentElement.scrollWidth>innerWidth,
+          elements:[...document.querySelectorAll('main,main *')].filter(e=>{const r=e.getBoundingClientRect();return r.width&&r.right>innerWidth+1&&!e.closest('.data-scroll');}).slice(0,12).map(e=>({tag:e.tagName,id:e.id,cls:e.className,right:e.getBoundingClientRect().right,text:(e.textContent||'').slice(0,60)}))}));
+        assert.equal(overflow.overflow,false,`private ${width} ${clock} overflow: ${JSON.stringify(overflow.elements)}`);
         counts.captureClockViews++;
       }
       assert.match(await page.locator('#market-clock-note').innerText(),/may be after tip or after settlement/);
@@ -220,6 +222,11 @@ const { chromium } = require(process.env.PLAYWRIGHT_MODULE_DIR || 'playwright');
       assert.match(await page.locator('#horizon-details').innerText(),/Not evaluated in this report/);
       assert.equal(await page.locator('#horizon-details table').count(),0);
       counts.horizonMetricViews++;
+      assert.match(await page.locator('#unclassified-details > summary').innerText(),/not supplied/);
+      await page.locator('#unclassified-details > summary').click();
+      assert.match(await page.locator('#unclassified-details').innerText(),/absence is not a zero-coverage claim/);
+      assert.equal(await page.locator('#unclassified-details table').count(),0);
+      await page.locator('#unclassified-details > summary').click();counts.unclassifiedSourceViews++;
       await page.locator('#horizon-details > summary').click();
       await page.selectOption('#market-clock','latest_pretip');
       if(process.env.DASHBOARD_SCREENSHOTS)await page.screenshot({path:path.join(process.env.DASHBOARD_SCREENSHOTS,`ncaa-private-clocks-${width}.png`),fullPage:true});
@@ -262,7 +269,11 @@ const { chromium } = require(process.env.PLAYWRIGHT_MODULE_DIR || 'playwright');
       assert.match(await page.locator('#load-status').innerText(), /not a supported/);
       assert.equal(await page.locator('.observation').count(), 1);
       // Optional horizon metrics are report-only, with exact paired populations.
-      const horizonReport={...invented,comparison_horizons:{schema:'sel.ncaa.b038.horizon_report.v1',
+      const horizonReport={...invented,unclassified_market_observations:[{provider:'Polymarket',provider_product:'polymarket_international',
+        native_market_id:'invented-unclassified-token',native_source_value:.4321,native_token_value:.4321,
+        timestamp:1700000000,acquired_at:'2026-11-05T01:00:00Z',resolution:0,prediction:null,
+        semantic_status:'UNVERIFIED_ZERO_RESOLUTION_POINT_OR_FRACTIONAL_SETTLEMENT',
+        pretip_price_eligible:false,comparison_eligible:false}],comparison_horizons:{schema:'sel.ncaa.b038.horizon_report.v1',
         horizons:['T120','T60','LATEST_PRETIP'],rows:3,paired_settled:1,paired_unsettled:1,unavailable:1,
         paired_metrics:[{league:'ncaam',season_end_year:2027,target:'win',horizon:'T60',provider:'Kalshi',
           provider_product:'Kalshi',track:'native_rolling_weekly_reconstruction',model_evidence_mode:'retrospective',
@@ -278,12 +289,23 @@ const { chromium } = require(process.env.PLAYWRIGHT_MODULE_DIR || 'playwright');
       assert.match(await page.locator('#horizon-details').innerText(),/AUC: Unavailable/);
       assert.match(await page.locator('#horizon-details').innerText(),/invented-membership/);
       counts.horizonMetricViews++;
+      assert.match(await page.locator('#unclassified-details > summary').innerText(),/1 supplied.*may include settlement/);
+      if(!(await page.locator('#unclassified-details').evaluate(el=>el.open)))await page.locator('#unclassified-details > summary').click();
+      assert.match(await page.locator('#unclassified-details').innerText(),/Source: 0.432100/);
+      assert.match(await page.locator('#unclassified-details').innerText(),/Token: 0.432100/);
+      assert.match(await page.locator('#unclassified-details').innerText(),/UNVERIFIED_ZERO_RESOLUTION_POINT_OR_FRACTIONAL_SETTLEMENT/);
+      assert.match(await page.locator('#unclassified-details').innerText(),/not eligible pre-tip prices/);
+      assert.equal(await page.locator('#summary .stat').nth(2).locator('strong').innerText(),'2');
+      assert.equal((await page.locator('#results [data-captured-value]').allTextContents()).some(v=>v==='0.4321'),false);
+      assert.equal((await page.locator('#results [data-strict-value]').allTextContents()).some(v=>v==='0.4321'),false);
+      counts.unclassifiedSourceViews++;
       await page.locator('#clear').click();
       assert.equal(await page.locator('#report').isHidden(), true);
       assert.equal(await page.locator('#results').textContent(), '');
       assert.equal(await page.locator('#asof').textContent(), '');
       assert.equal(await page.locator('#metadata').textContent(), '');
       assert.equal(await page.locator('#horizon-details').textContent(),'Paired metrics by market reference horizon');
+      assert.equal(await page.locator('#unclassified-details').textContent(),'Unclassified source observations');
       assert.equal(await page.locator('#market-clock-note').textContent(),'');
       assert.equal(await page.locator('#model option').count(), 1);
       assert.match(await page.locator('#load-status').innerText(), /cleared/);
