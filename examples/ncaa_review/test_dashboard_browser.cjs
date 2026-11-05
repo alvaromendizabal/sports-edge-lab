@@ -20,7 +20,7 @@ const { chromium } = require(process.env.PLAYWRIGHT_MODULE_DIR || 'playwright');
     probability: ['win', 'LogLoss'], accuracy: ['win', 'Accuracy'],
     margin: ['margin', 'MAE'], total: ['total', 'MAE'],
   };
-  const counts = { viewports: 0, selectorStates: 0, scenarios: 0, progressScenarios: 0, preflightScenarios: 0, executionViews: 0, keyboardEvents: 0, privateViewerStates: 0, captureClockViews: 0, horizonMetricViews: 0, unclassifiedSourceViews: 0 };
+  const counts = { viewports: 0, selectorStates: 0, scenarios: 0, progressScenarios: 0, preflightScenarios: 0, executionViews: 0, keyboardEvents: 0, privateViewerStates: 0, captureClockViews: 0, horizonMetricViews: 0, unclassifiedSourceViews: 0, providerComparisonViews: 0 };
   try {
     for (const width of [1440, 390]) {
       await page.setViewportSize({ width, height: 1000 });
@@ -307,6 +307,117 @@ const { chromium } = require(process.env.PLAYWRIGHT_MODULE_DIR || 'playwright');
       await page.locator('#unclassified-previous').click();
       assert.equal(await page.locator('#unclassified-details table tbody tr').count(),25);
       counts.unclassifiedSourceViews++;
+      // Three-provider panels preserve supplied populations rather than deriving rankings.
+      const providers=['Kalshi','Polymarket','DraftKings'];
+      assert.deepEqual(await page.locator('#provider-cards h3').allTextContents(),providers);
+      assert.match(await page.locator('#provider-count').innerText(),/not supplied/);
+      assert.match(await page.locator('#provider-cards').innerText(),/Paired performance: unavailable/);
+      assert.equal(await page.locator('#provider-populations table').count(),0);
+      counts.providerComparisonViews++;
+      const comparisonBase={league:'ncaam',season_end_year:2027,recipe:'invented-public-fixture',track:'original_frozen',
+        implementation_source_sha256:'invented-source',target:'win',horizon_minutes:60,model_evidence_mode:'invented',
+        quote_evidence_mode:'invented-source-observation',cohort_scope:'pairwise_provider'};
+      const pairRows=providers.map((provider,i)=>({...comparisonBase,provider,n_paired:[11,7,5][i],cohort_sha256:'invented-pair-'+i,
+        model_log_loss:.51+i*.01,provider_log_loss:.61+i*.01,model_brier:.16,provider_brier:.21,
+        model_accuracy:.6,provider_accuracy:.5,model_calibration_bias:-.02,provider_calibration_bias:.04,
+        model_ece_10_fixed_bins:.07,provider_ece_10_fixed_bins:.09,model_auc:null,provider_auc:null,
+        n_directional_disagreements:[4,3,0][i],n_model_right_provider_wrong:[3,1,0][i],n_provider_right_model_wrong:[1,2,0][i],
+        model_win_rate_on_disagreements:[.75,1/3,null][i],raw_fields:{model_auc:'',authored_text:'<img src=x onerror="window.providerLeak=true">'}}));
+      const tableSource=(name,data,scope='pairwise_provider')=>({availability:data===null?'NOT_SUPPLIED':data.length?'SUPPLIED':'SUPPLIED_EMPTY',
+        source:data===null?null:{filename:'invented-'+name+'.csv',bytes:123,sha256:'invented-source-pin',columns:['provider','n_paired'],source_rows:data.length},
+        rows:data,cohort_scope:scope,common_provider_set_verified:scope==='all_requested_providers_common'?false:null});
+      const commonRows=pairRows.map(r=>({...r,cohort_scope:'all_requested_providers_common',common_cohort_evidence_mode:'invented-common',n_paired:3,cohort_sha256:'invented-common-membership'}));
+      const exactDisagreements=Array.from({length:27},(_,i)=>({...comparisonBase,provider:providers[i%3],event_id:'invented-disagreement-'+i,
+        week_start_local:'2026-11-02',model_prediction:.6,provider_prediction:.4,model_minus_provider_probability:.2,
+        model_correct:i%2,provider_correct:1-i%2,disagreement_result:i%2?'model_right_provider_wrong':'provider_right_model_wrong',
+        cutoff_time:'2026-11-04T19:00:00Z',quote_time:'2026-11-04T18:59:00Z',quote_acquired_at:'2026-11-04T18:59:01Z',raw_fields:{event_id:'invented-disagreement-'+i}}));
+      const providerReport={...invented,provider_comparisons:{schema:'sel.ncaa.b038.three_provider_report.v1',providers,
+        common_provider_set_verified:false,common_population_status:'UNVERIFIED_ACTIVE_THREE_PROVIDER_SET',polymarket_us:null,
+        tables:{season_provider:tableSource('season-provider',[...pairRows,...Array.from({length:4},(_,i)=>({...pairRows[0],recipe:'invented-context-'+i})),
+          {...pairRows[0],league:'ncaaw',track:'native_rolling_weekly_reconstruction'},
+          {...pairRows[0],target:'margin',model_mae:9.2,provider_mae:10.3,model_rmse:12.2,provider_rmse:13.3,model_bias_prediction_minus_actual:-.2,provider_bias_prediction_minus_actual:.3}]),
+          week_provider:tableSource('week-provider',pairRows.map(r=>({...r,n_paired:3,week_start_local:'2026-11-02'}))),
+          season_common:tableSource('season-common',commonRows,'all_requested_providers_common'),
+          week_common:tableSource('week-common',null,'all_requested_providers_common'),disagreements:tableSource('disagreements',exactDisagreements)},
+        excluded_lineage:[{reason:'old-all-six-is-not-active-three',row:{provider:'MARKET',cohort_scope:'all_six_providers_common'}}]}};
+      await page.locator('#report-file').setInputFiles({name:'invented-provider-report.json',mimeType:'application/json',buffer:Buffer.from(JSON.stringify(providerReport))});
+      await page.locator('#provider-populations table').first().waitFor();
+      assert.deepEqual(await page.locator('#provider-cards h3').allTextContents(),providers);
+      assert.match(await page.locator('#provider-count').innerText(),/1–4 of 6 separate population contexts/);
+      const firstPopulation=page.locator('.comparison-population').first();
+      assert.deepEqual(await firstPopulation.locator('tbody tr td:nth-child(2) > span').allTextContents(),['11Membership: invented-pair-0','7Membership: invented-pair-1','5Membership: invented-pair-2']);
+      assert.match(await firstPopulation.innerText(),/Model right \/ provider wrong: 3/);
+      assert.match(await firstPopulation.innerText(),/Provider right \/ model wrong: 2/);
+      assert.match(await firstPopulation.innerText(),/AUC: Unavailable/);
+      assert.match(await firstPopulation.innerText(),/Directional disagreements: 0/);
+      assert.match(await firstPopulation.innerText(),/Product identity not supplied/);
+      assert.match(await page.locator('#provider-cards').innerText(),/US status: not supplied \/ unverified/);
+      assert.match(await page.locator('#provider-cards').innerText(),/ROI \/ hypothetical profit: not inferred/);
+      await firstPopulation.locator('summary').first().click();
+      await firstPopulation.locator('pre').waitFor();
+      assert.match(await firstPopulation.locator('pre').innerText(),/"model_auc": ""/);
+      assert.equal(await firstPopulation.locator('img').count(),0);
+      assert.equal(await page.evaluate(()=>window.providerLeak),undefined);
+      await page.locator('#provider-next').click();
+      assert.match(await page.locator('#provider-count').innerText(),/5–6 of 6/);
+      await page.locator('#provider-previous').click();
+      assert.equal(await page.locator('#provider-disagreements tbody tr').count(),25);
+      assert.match(await page.locator('#provider-disagreements').innerText(),/model_right_provider_wrong/);
+      assert.match(await page.locator('#provider-disagreements').innerText(),/provider_right_model_wrong/);
+      assert.match(await page.locator('#provider-disagreements').innerText(),/Model: Correct/);
+      assert.match(await page.locator('#provider-disagreements').innerText(),/Provider: Wrong/);
+      await page.locator('#provider-disagreement-next').click();
+      assert.equal(await page.locator('#provider-disagreements tbody tr').count(),2);
+      assert.match(await page.locator('#provider-disagreement-count').innerText(),/26–27 of 27/);
+      await page.locator('#provider-disagreement-previous').click();
+      assert.equal(await page.evaluate(()=>document.documentElement.scrollWidth>innerWidth),false,`provider comparison ${width} overflow`);
+      if(process.env.DASHBOARD_SCREENSHOTS)await page.locator('#provider-review').screenshot({path:path.join(process.env.DASHBOARD_SCREENSHOTS,`ncaa-three-providers-${width}.png`)});
+      counts.providerComparisonViews++;
+      await page.selectOption('#provider-cohort','common');
+      assert.match(await page.locator('#provider-comparison-status').innerText(),/Active three-provider set unverified/);
+      assert.match(await page.locator('#provider-populations').innerText(),/Three-way comparison remains unverified/);
+      assert.equal(await page.locator('#provider-populations tbody tr').count(),3);
+      counts.providerComparisonViews++;
+      await page.selectOption('#provider-period','week');
+      assert.match(await page.locator('#provider-count').innerText(),/not supplied/);
+      await page.selectOption('#provider-cohort','provider');
+      await page.selectOption('#provider-week','2026-11-02');
+      assert.match(await page.locator('#provider-count').innerText(),/1–1 of 1 separate population contexts/);
+      assert.match(await page.locator('#provider-populations').innerText(),/week: 2026-11-02/);
+      await page.selectOption('#provider-league','ncaaw');
+      assert.equal(await page.locator('#provider-populations table').count(),0);
+      assert.match(await page.locator('#provider-disagreements').innerText(),/None in the supplied/);
+      await page.selectOption('#provider-period','season');
+      await page.selectOption('#provider-stream','native_rolling_weekly_reconstruction');
+      assert.match(await page.locator('#provider-populations').innerText(),/Women/);
+      assert.match(await page.locator('#provider-populations').innerText(),/No row supplied/);
+      counts.providerComparisonViews++;
+      await page.selectOption('#provider-stream','all');await page.selectOption('#provider-league','all');
+      await page.locator('#provider-target').focus();await page.keyboard.press('ArrowDown');await page.keyboard.press('Enter');
+      assert.equal(await page.locator('#provider-target').inputValue(),'margin');counts.keyboardEvents++;
+      assert.match(await page.locator('#provider-populations').innerText(),/MAE: 9.2000/);
+      assert.match(await page.locator('#provider-populations').innerText(),/Bias: -0.2000/);
+      assert.match(await page.locator('#provider-disagreements').innerText(),/No comparable point\/threshold disagreement records/);
+      counts.providerComparisonViews++;
+      const commonVerified=structuredClone(providerReport);commonVerified.provider_comparisons.common_provider_set_verified=true;
+      commonVerified.provider_comparisons.tables.season_common.common_provider_set_verified=true;
+      commonVerified.provider_comparisons.tables.week_common=tableSource('week-common',[],'all_requested_providers_common');
+      commonVerified.provider_comparisons.tables.disagreements=tableSource('disagreements',[]);
+      await page.locator('#report-file').setInputFiles({name:'invented-common-report.json',mimeType:'application/json',buffer:Buffer.from(JSON.stringify(commonVerified))});
+      await page.waitForFunction(()=>document.getElementById('provider-disagreement-count').textContent.startsWith('0 of 0'));
+      await page.selectOption('#provider-cohort','common');
+      assert.match(await page.locator('#provider-populations').innerText(),/Supplied common-game membership and paired N match across all three/);
+      await page.selectOption('#provider-period','week');
+      assert.match(await page.locator('#provider-comparison-status').innerText(),/Supplied empty/);
+      assert.match(await page.locator('#provider-cards').innerText(),/None in supplied disagreement rows/);
+      assert.equal(await page.locator('#provider-populations table').count(),0);
+      counts.providerComparisonViews++;
+      const malformed=structuredClone(providerReport);malformed.provider_comparisons.tables.season_provider.rows='invalid';
+      await page.locator('#report-file').setInputFiles({name:'invalid-provider-report.json',mimeType:'application/json',buffer:Buffer.from(JSON.stringify(malformed))});
+      await page.waitForFunction(()=>document.getElementById('load-status').classList.contains('error'));
+      assert.match(await page.locator('#load-status').innerText(),/Invalid comparison row inventory/);
+      assert.match(await page.locator('#provider-comparison-status').innerText(),/Supplied empty/);
+      counts.providerComparisonViews++;
       await page.locator('#clear').click();
       assert.equal(await page.locator('#report').isHidden(), true);
       assert.equal(await page.locator('#results').textContent(), '');
@@ -315,6 +426,7 @@ const { chromium } = require(process.env.PLAYWRIGHT_MODULE_DIR || 'playwright');
       assert.equal(await page.locator('#horizon-details').textContent(),'Paired metrics by market reference horizon');
       assert.equal(await page.locator('#unclassified-details').textContent(),'Unclassified source observations');
       assert.equal(await page.locator('#market-clock-note').textContent(),'');
+      for(const id of ['provider-cards','provider-populations','provider-disagreements','provider-source-audit'])assert.equal(await page.locator('#'+id).textContent(),'');
       assert.equal(await page.locator('#model option').count(), 1);
       assert.match(await page.locator('#load-status').innerText(), /cleared/);
       counts.privateViewerStates++;
