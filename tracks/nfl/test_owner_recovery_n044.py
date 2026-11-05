@@ -43,4 +43,29 @@ class OwnerRecoveryN044(unittest.TestCase):
  def test_saved_quote_clock_cannot_be_invented(self):
   self.common['games'][0]['providers']['DraftKings']['quote_at']='2026-09-01T00:00:00Z'
   with self.assertRaises(ValueError):validate_three_provider(self.common,self.coverage)
+ def test_recovered_quote_after_cutoff_rejected(self):
+  self.common['restored_draftkings_t2']['rows'][0]['quote_at']='2026-11-05T00:00:00Z'
+  with self.assertRaises(ValueError):validate_three_provider(self.common,self.coverage)
+ def test_retroactive_possession_rejected(self):
+  self.common['restored_draftkings_t2']['rows'][0]['contemporaneously_possessed_by_t2']=True
+  with self.assertRaises(ValueError):validate_three_provider(self.common,self.coverage)
+ def test_restored_reference_not_latest_or_profit(self):
+  for field in ['latest_quote_claim','execution_qualified']:
+   d=copy.deepcopy(self.common);d['restored_draftkings_t2'][field]=True
+   with self.assertRaises(ValueError):validate_three_provider(d,self.coverage)
+ def test_restored_reference_not_new_forecast(self):
+  self.common['restored_draftkings_t2']['new_forecasts']=120
+  with self.assertRaises(ValueError):validate_three_provider(self.common,self.coverage)
+ def test_probability_comparison_cannot_change_denominator(self):
+  self.common['restored_probability_review']['metrics'][0]['n']=119
+  with self.assertRaises(ValueError):validate_three_provider(self.common,self.coverage)
+ def test_probability_comparison_cannot_replace_loss(self):
+  self.common['restored_probability_review']['metrics'][0]['log_loss']=.45
+  with self.assertRaises(ValueError):validate_three_provider(self.common,self.coverage)
+ def test_original_label_proxy_cannot_be_upgraded(self):
+  self.common['restored_probability_review']['model_label_clock_publication_proxy_unverified']=False
+  with self.assertRaises(ValueError):validate_three_provider(self.common,self.coverage)
+ def test_probability_interval_cannot_hide_uncertainty(self):
+  self.common['restored_probability_review']['intervals'][0]['ci95_high']=-.001
+  with self.assertRaises(ValueError):validate_three_provider(self.common,self.coverage)
 if __name__=='__main__':unittest.main()

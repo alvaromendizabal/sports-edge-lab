@@ -21,6 +21,8 @@ The November 5 owner execution recovered current team statistics and issued a fr
 
 The original and shadow issues retain their older base-feature timestamp. The fresh rolling stream uses refreshed team-statistics features, 52.7 seconds old at issue, and the separately recovered 121-game training view. Five compatible fitted components were restored without refitting. Refreshing a source or issuing a new forecast does not automatically require new model training.
 
+The upcoming-game view defaults to the latest fresh rolling raw issue, with its raw/uncalibrated label and actual clocks. This display choice does not promote a model; original streams stay selectable and historical metric selection remains unchanged.
+
 The 261 new target rows represent three streams, 29 games and three targets. Outcomes were blank at issue. Every stream's numerical predictions match its respective preceding genuine issue; the new observation and issue clocks are real, but no artificial model improvement is claimed.
 
 ## Injury data and remaining limits
@@ -43,13 +45,13 @@ The dashboard preserves provider-specific historical metrics and adds an identic
 
 | Retained descriptive feedback model vs. | Model / provider correct | Disagreements won / lost | Accuracy difference, 95% week-bootstrap interval |
 |---|---:|---:|---:|
-| DraftKings | 63 / 62 | 4 / 3 | +1.10 pp [-2.30, +4.65] |
-| Kalshi | 63 / 62 | 4 / 3 | +1.10 pp [-2.30, +4.65] |
-| Polymarket | 63 / 63 | 3 / 3 | 0.00 pp [-3.37, +3.33] |
+| DraftKings | 63 / 62 | 4 / 3 | +1.10 pp [-2.30, +4.71] |
+| Kalshi | 63 / 62 | 4 / 3 | +1.10 pp [-2.30, +4.71] |
+| Polymarket | 63 / 63 | 3 / 3 | 0.00 pp [-3.33, +3.33] |
 
 All six retained model records can be inspected on these same games, with both winning and losing disagreements and weekly counts. The feedback model is a descriptive retrospective leader, not an independently confirmed prospective strategy. Intervals resample eight whole week clusters with 5,000 fixed-seed draws.
 
-This compact ledger contains pick directions rather than full-precision provider probabilities. New common-three log loss and Brier are therefore unavailable. DraftKings retains the original saved historical-reference qualification; its exact quote clock is absent from the compact ledger. This report makes no new historical-source-clock validation claim. Existing probability metrics retain their original provider-specific cohorts and qualifications. No missing probability, historical fill, common point mean or P&L is fabricated.
+A separate recovery now scores full-precision retained probabilities on the exact same 91 T2 non-ties. Feedback log loss / Brier is **0.606083 / 0.209165**, compared with DraftKings **0.620322 / 0.214610**, Kalshi **0.616689 / 0.213014**, and Polymarket **0.615317 / 0.212454**. Synergy is **0.631643 / 0.221126** on these games. All 18 paired log-loss, Brier and accuracy intervals cross zero. The fixed N022 report arms retain their original unverified label-publication-clock proxy and retrospective descriptive status; this source recovery is not prospective confirmation or a new strategy. A zero-tie probability proxy is used. A separately authenticated recovery verifies the original DraftKings quote clocks for 120 games against 31 raw source bodies. Eighty were later historical retrievals and 40 were contemporaneous captures. Quotes were 3,204 to 79,549 seconds older than T2; this is retained reference history, not proof of latest prices. The original compact ledger remains unchanged, and game cards add the recovered quote and acquisition clocks. No new paid calls or forecasts were made. Existing probability metrics retain their original provider-specific cohorts and qualifications. No missing probability, historical fill, common point mean or P&L is fabricated.
 
 ## Why the run stopped
 

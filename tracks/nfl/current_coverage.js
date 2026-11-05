@@ -2,6 +2,7 @@
 (()=>{
  'use strict';
  const D=JSON.parse(document.getElementById('nfl-latest-evidence').textContent);
+ const DK2=new Map(JSON.parse(document.getElementById('nfl-three-provider-directions').textContent).restored_draftkings_t2.rows.map(r=>[r.game_id,r]));
  const P=JSON.parse(document.getElementById('nfl-point-evidence').textContent);
  const R=JSON.parse(document.getElementById('nfl-source-overlay').textContent);
  const X=JSON.parse(document.getElementById('nfl-reschedule-reference').textContent);
@@ -74,6 +75,7 @@
   return b&&(!a||Date.parse(b)>=Date.parse(a))?{...recovered,sourceRecovery:true}:base;
  }
  function clockText(r){
+  if(r.restoredDkT2)return 'Restored original quote '+when(r.quote_at)+' · '+(r.contemporaneously_possessed_by_t2?'contemporaneously captured ':'retrospectively acquired ')+when(r.acquired_at)+' · retained earlier reference, not demonstrated latest';
   if(r.latestHistory)return 'Pregame observation '+when(r.quote_at)+' · retrospectively acquired '+when(r.acquired_at)+' · no original possession or fill claim';
   if(r.ownerRecoveredCurrent)return 'Current quote '+when(r.quote_at)+' · captured '+when(r.acquired_at)+' · exact schedule revision recovered on the owner runtime';
   if(r.reviewRecoveredCurrent)return 'Current quote '+when(r.quote_at)+' · captured '+when(r.acquired_at)+' · exact schedule revision recovered during review; original normalizer omitted this event';
@@ -84,6 +86,7 @@
  }
  function providerRow(g,p,h){
   const base=g.providers.find(x=>x.provider===p&&x.horizon===h)??{provider:p,horizon:h,derived_pick:null,availability_status:'UNAVAILABLE',unavailable_reason:h==='LATEST_PREGAME'?'Last-before-kickoff history has not yet been authenticated in this snapshot.':h==='LATEST_OBSERVED'?'No authenticated current winner observation in this snapshot.':'No authenticated equivalent winner record at this cutoff.'};
+  if(h==='T2'&&p==='DraftKings'&&g.completed&&DK2.has(g.game_id)){const r=DK2.get(g.game_id);return {...base,...r,restoredDkT2:true,quote_clock_kind:'ORIGINAL_RAW_PROVIDER_LAST_UPDATE',quote_age_seconds:r.quote_age_at_cutoff_seconds};}
   if(h==='LATEST_PREGAME'&&g.completed)return latestWinners.get([g.game_id,p].join('|'))??{...base,unavailable_reason:'No authenticated latest-pregame reference is published for this game/provider. Earlier T1/T2 records remain separate.'};
   return h==='LATEST_OBSERVED'&&!g.completed?newerReference(newerReference(newerReference(base,sourceWinners.get([g.game_id,p].join('|')),'derived_pick'),mappedWinners.get([g.game_id,p].join('|')),'derived_pick'),recoveredWinners.get([g.game_id,p].join('|')),'derived_pick'):base;
  }
@@ -107,7 +110,7 @@
  function n042Context(f){
   const counts=Object.entries(f.injury_source_report_team_count).map(([team,n])=>team+' '+n).join(' and ');
   const has=Object.values(f.injury_source_report_team_count).some(n=>n>0);
-  return '<p class="fine injury-status n042-injury-status"><strong>'+esc(f.model_label)+' · injury inputs:</strong> '+(has?'Partial listed reports: '+esc(counts)+' rows.':'No current report rows admitted. Unknown reports do not mean healthy players.')+' Announced starters, full quarterback depth and reserve roles are not verified model inputs.</p><p class="fine n042-model-status"><strong>'+esc(f.calibration_applied?'Preserved calibration':'Raw and uncalibrated research')+'</strong> · '+f.current_training_games+' earlier current-season training games. '+(f.model_id.endsWith('_original')?'Winner has no direct injury fields; point heads use injury inputs.':'Fixed historical recipe includes injury contributions; no automatic promotion or new validation claim.')+'</p><p class="fine n042-clocks">Base features: '+esc(when(f.base_feature_asof_at))+'. Injury cutoff: '+esc(when(f.injury_cutoff_at))+'. Fit completed: '+esc(when(f.fit_completed))+'. Issued: '+esc(when(f.actual_issue_at))+'. Later market references are supplemental observations and do not amend the forecast inputs.</p>';
+  return '<p class="fine injury-status n042-injury-status"><strong>'+esc(f.model_label)+' · injury inputs:</strong> '+(has?'Partial listed reports: '+esc(counts)+' rows.':'No current report rows admitted. Unknown reports do not mean healthy players.')+' Announced starters, full quarterback depth and reserve roles are not verified model inputs.</p><p class="fine n042-model-status"><strong>'+esc(f.calibration_applied?'Preserved calibration':'Raw and uncalibrated research')+'</strong> · '+f.current_training_games+' earlier current-season training games. '+(f.model_id==='n044_fresh'?'Latest-issued display default; this is not model promotion. ':'')+(f.model_id.endsWith('_original')?'Winner has no direct injury fields; point heads use injury inputs.':'Fixed historical recipe includes injury contributions; no automatic promotion or new validation claim.')+'</p><p class="fine n042-clocks">Base features: '+esc(when(f.base_feature_asof_at))+'. Injury cutoff: '+esc(when(f.injury_cutoff_at))+'. Fit completed: '+esc(when(f.fit_completed))+'. Issued: '+esc(when(f.actual_issue_at))+'. Later market references are supplemental observations and do not amend the forecast inputs.</p>';
  }
  function experimentalContext(f){
   const partial=f.injury_report_status==='PARTIAL_LISTED_REPORTS';
@@ -162,10 +165,10 @@
  }
  get('coverage-period').innerHTML='<option value="9">Current week · Week 9 · 15 games</option><option value="completed">All completed games · 121 finals</option><option value="monday">Monday Nov 2 · CHI 34–17 SEA</option>'+[...new Set(allGames.map(g=>g.week))].sort((a,b)=>a-b).map(w=>'<option value="'+w+'">Week '+w+' · '+allGames.filter(g=>g.week===w).length+' games</option>').join('')+'<option value="all">Full season · 272 scheduled games</option>';
  get('coverage-model').innerHTML=forecastModels.map(m=>'<option value="'+esc(m.id??m.model_id)+'">'+esc(m.label??m.model_label)+'</option>').join('')+'<option value="all">All model streams · include unavailable</option>';
- get('coverage-model').value=models.has('selected_latest_origin')?'selected_latest_origin':get('coverage-model').options[0].value;
+ get('coverage-model').value=models.has('n044_fresh')?'n044_fresh':get('coverage-model').options[0].value;
  get('coverage-horizon').innerHTML=Object.entries(horizons).map(([id,label])=>'<option value="'+id+'">'+label+'</option>').join('');
  get('coverage-horizon').value='LATEST_OBSERVED';
- function changePeriod(){const value=get('coverage-period').value;get('coverage-model').value=value==='monday'?'preserved_selected_actual_T1':value==='9'?'selected_latest_origin':'selected_annual';get('coverage-horizon').value=value==='monday'?'T1':value==='9'?'LATEST_OBSERVED':'T2';render();}
+ function changePeriod(){const value=get('coverage-period').value;get('coverage-model').value=value==='monday'?'preserved_selected_actual_T1':value==='9'?'n044_fresh':'selected_annual';get('coverage-horizon').value=value==='monday'?'T1':value==='9'?'LATEST_OBSERVED':'T2';render();}
  get('coverage-period').addEventListener('change',changePeriod);
  get('show-monday-game').addEventListener('click',()=>{get('coverage-period').value='monday';changePeriod();get('coverage-period').focus();});
  for(const role of ['fresh','original','shadow'])get('show-'+role+'-n044').addEventListener('click',()=>{get('coverage-period').value='9';get('coverage-model').value='n044_'+role;get('coverage-horizon').value='LATEST_OBSERVED';render();get('coverage-model').focus();});
