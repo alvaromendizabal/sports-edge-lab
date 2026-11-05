@@ -639,11 +639,15 @@ const { chromium } = require(process.env.PLAYWRIGHT_MODULE_DIR || 'playwright');
       await page.selectOption('#model','all');
       const rowDetails=page.locator('[data-game]').first().locator('details').filter({has:page.locator('summary', {hasText:'All source, issue, training and quote clocks'})});
       await rowDetails.locator('summary').click();
+      await rowDetails.locator('pre').waitFor();
       const flatDetail=JSON.parse(await rowDetails.locator('pre').textContent());
       assert.equal(flatDetail[0].prediction_margin,0);assert.equal(flatDetail[0].model_winner_pick_correct,false);
       assert.equal(flatDetail[0].league,'ncaam');assert.equal(flatDetail[0].context_ids,undefined);
       assert.match(await page.locator('#unresolved-official-details > summary').innerText(),/4 supplied/);
       if(!(await page.locator('#unresolved-official-details').evaluate(el=>el.open)))await page.locator('#unresolved-official-details > summary').click();
+      // Native <details> dispatches toggle asynchronously; its source cards
+      // are intentionally constructed by that handler, after the click.
+      await page.locator('[data-unresolved-official]').first().waitFor();
       assert.equal(await page.locator('[data-unresolved-official]').count(),4);
       assert.match(await page.locator('#unresolved-official-details').innerText(),/source row 0/);
       assert.equal(await page.locator('#summary .stat').nth(0).locator('strong').innerText(),'27','unresolved native rows never invent extra physical games');
