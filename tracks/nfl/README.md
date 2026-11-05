@@ -1,16 +1,18 @@
 # Sports Edge Lab · NFL
 
-[**Open the live NFL dashboard →**](https://sports-edge-lab-nfl.alv-mendizabal.chatgpt.site/) · [Latest research update](N044_RESEARCH_UPDATE.md) · [Model card](CURRENT_MODEL_CARD.md)
+**Latest review: November 5, 2026 — expanded injury study completed.** All 1,152 historical cells and 462 rolling jobs finished; 1,038 new fitted identities and three separately timestamped early forecast lanes are documented. [Read the N045 update](N045_RESEARCH_UPDATE.md). These results are not automatic promotion or a qualified betting recommendation.
+
+[**Open the live NFL dashboard →**](https://sports-edge-lab-nfl.alv-mendizabal.chatgpt.site/) · [Latest research update](N045_RESEARCH_UPDATE.md) · [Model card](CURRENT_MODEL_CARD.md)
 
 **Pregame forecasting, matched market evaluation and recoverable ML systems.** Built by [Alvaro Mendizabal](https://github.com/alvaromendizabal). Review the evidence in your browser; no setup or private credentials required.
 
 ## Latest verified work · November 5, 2026
 
-- **Fresh rolling research restored:** the owner admitted current team statistics and play-by-play for all 121 observed finals and issued 87 fresh target rows for 29 upcoming games. Original calibrated and raw shadow streams issued another 174 rows. [Read the actual recovery](N044_RESEARCH_UPDATE.md).
-- **Completed work preserved:** zero new fits, 2,779 fitted identities restored. The earlier eight-family injury-designation study remains complete with 1,152 historical cells and 1,614 new fitted identities from that earlier execution. Expanded designation preparation stopped later on a private-scope check; overall acceptance remains false.
-- **Three-provider comparisons:** all 15 Week 9 games have current winner, margin and total references from DraftKings, Kalshi and Polymarket. Compare provider-specific metrics and a new exact 91-game common winner-direction cohort, with weekly results and both winning and losing disagreements.
-- **Injury data:** 65 official archive articles normalized, with 3,171 T1-qualified rows. Current reports cover 26/30 Week 9 teams. Missing sections and unverified starter/depth roles remain explicit.
-- **Performance governs promotion:** the retained probability leader remains stronger than the new selected injury variant. No automatic promotion, final-hour recommendation or durable betting edge is claimed. Fresh source clocks do not rewrite old scores or make unchanged forecasts new model gains.
+- **Expanded injury study completed:** all 1,152 historical cells and 462 rolling jobs; 1,029 new native fits and nine new stacks. All eight native families were evaluated. [Read the actual study](N045_RESEARCH_UPDATE.md).
+- **Current forecasts refreshed:** three retained forecast lanes issued 261 early target rows for 29 games. The current rolling lane used a roughly 53-second-old base snapshot and a 121-game training view. It remains raw research, separate from the new designation study.
+- **Three-provider coverage:** all 15 Week 9 games have observed winner, margin and total references from DraftKings, Kalshi and Polymarket. Historical comparisons preserve exact event sets, original clocks and winning **and** losing disagreements.
+- **Injury data expanded:** all 72 discovered official archive articles normalized, with 3,671 T1-qualified rows. Current reports cover 28/30 Week 9 teams; Buffalo and Minnesota remain unknown. Announced starter, backup quality, depth and reserve roles are not verified inputs.
+- **Performance governs promotion:** the new selected annual winner reconstruction has 385/569 correct and 0.6252 log loss on 2024/25; 78/119 and 0.6633 on current monitoring. Better accuracy did not mean better probability loss. Retained leaders and adverse paired results stay visible; no automatic promotion or durable betting edge is claimed.
 
 T2 means two hours before kickoff; T1 means one hour. These are comparison cutoffs, not collection barriers. Later pregame observations remain visible with their actual timestamps. Threshold contracts are conditions with probabilities, not provider score forecasts.
 
@@ -22,8 +24,8 @@ T2 means two hours before kickoff; T1 means one hour. These are comparison cutof
 |---|---|---|
 | What did the model say about every game? | [Game/week explorer](review.html#latest-coverage) | All 272 scheduled games, 121 finals, every Week 9 game, distinct forecast streams |
 | Does it outperform markets? | [Matched performance and disagreements](review.html#coverage-performance) | Common-event metrics, winning and losing disagreements, coverage limits |
-| What changed scientifically? | [Contribution study](N041_RESEARCH_UPDATE.md#what-the-new-model-research-shows) | New derived experiments, target-specific scores, uncertainty and retained negative findings |
-| What injury inputs are actually used? | [Source inventory](N041_RESEARCH_UPDATE.md#injury-data-acquisition) | Acquired versus eligible data, current role gaps, historical publication limits |
+| What changed scientifically? | [Completed injury study](N045_RESEARCH_UPDATE.md#performance-and-promotion) | New derived experiments, target-specific scores, uncertainty and retained negative findings |
+| What injury inputs are actually used? | [Current injury inputs](N045_RESEARCH_UPDATE.md#current-forecasts-and-injuries) | Acquired versus eligible data, current role gaps, historical publication limits |
 | Can I reproduce the engineering? | [Promotion demonstration](injury_promotion.py) · [Tests](test_injury_promotion.py) | Credential-free invented examples of chronology, paired cohorts and admission failures |
 
 ```bash
