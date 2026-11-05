@@ -586,6 +586,12 @@ def build_review(*, check=False):
     issues_n043, issues_n043_receipt = load_issues_n043(latest)
     from owner_study_n043 import load_owner_study
     study_n043, study_n043_receipt = load_owner_study()
+    from current_source_n044 import load_current_source as load_source_n044
+    source_n044, source_n044_receipt = load_source_n044(latest)
+    from current_issues_n044 import load_current_issues as load_issues_n044
+    issues_n044, issues_n044_receipt = load_issues_n044(latest)
+    from three_provider_directions import load_three_provider
+    three_provider, three_provider_receipt = load_three_provider(latest)
     chicago_proof = (HERE / "chicago_seattle_recovery_n042.json").read_bytes()
     require(hashlib.sha256(chicago_proof).hexdigest() == "1a2360be71a7a89fa8a86099fcfa10ae63df9b80b159a3b24b925b6007aa89c1",
             "Chicago–Seattle recovery proof differs from reviewed evidence")
@@ -603,6 +609,9 @@ def build_review(*, check=False):
     page = page.replace("__INJURY_METRIC_TABLES__", render_selected_metrics(injury_metrics))
     page = page.replace("__N042_HISTORY_DELTA_JSON__", canonical(history_n042).decode().replace("<", "\\u003c"))
     page = page.replace("__N042_CURRENT_SOURCE_JSON__", canonical(source_n042).decode().replace("<", "\\u003c"))
+    page = page.replace("__N044_CURRENT_SOURCE_JSON__", canonical(source_n044).decode().replace("<", "\\u003c"))
+    page = page.replace("__CURRENT_ISSUES_N044_JSON__", canonical(issues_n044).decode().replace("<", "\\u003c"))
+    page = page.replace("__THREE_PROVIDER_DIRECTIONS_JSON__", canonical(three_provider).decode().replace("<", "\\u003c"))
     page = page.replace("__N043_CURRENT_SOURCE_JSON__", canonical(source_n043).decode().replace("<", "\\u003c"))
     page = page.replace("__CURRENT_ISSUES_N043_JSON__", canonical(issues_n043).decode().replace("<", "\\u003c"))
     page = page.replace("__OWNER_STUDY_N043_JSON__", canonical(study_n043).decode().replace("<", "\\u003c"))
@@ -627,7 +636,7 @@ def build_review(*, check=False):
         require(output.is_file() and output.read_text() == page, "Generated review differs; run contracts.py --build-review")
     else:
         output.write_text(page)
-    return {**receipt, **current_receipt, **weekly_receipt, **latest_receipt, **points_receipt, **overlay_receipt, **reschedule_receipt, **recovery_receipt, **primary_receipt, **injury_issue_receipt, **latest_pregame_receipt, **latest_n037_receipt, **current_n037_receipt, **source_n038_receipt, **injury_refresh_receipt, **injury_n040_receipt, **injury_metrics_receipt, **source_n039_receipt, **source_n040_receipt, **history_n040_receipt, **injury_n041_receipt, **source_n041_receipt, **history_n041_receipt, **contribution_receipt, **issues_n042_receipt, **source_n042_receipt, **history_n042_receipt, **source_n043_receipt, **issues_n043_receipt, **study_n043_receipt, "review": "review.html", "evidence_sha256": digest(data), "generated_page_matches": True, "chicago_recovery_proof_validated": True}
+    return {**receipt, **current_receipt, **weekly_receipt, **latest_receipt, **points_receipt, **overlay_receipt, **reschedule_receipt, **recovery_receipt, **primary_receipt, **injury_issue_receipt, **latest_pregame_receipt, **latest_n037_receipt, **current_n037_receipt, **source_n038_receipt, **injury_refresh_receipt, **injury_n040_receipt, **injury_metrics_receipt, **source_n039_receipt, **source_n040_receipt, **history_n040_receipt, **injury_n041_receipt, **source_n041_receipt, **history_n041_receipt, **contribution_receipt, **issues_n042_receipt, **source_n042_receipt, **history_n042_receipt, **source_n043_receipt, **issues_n043_receipt, **study_n043_receipt, **source_n044_receipt, **issues_n044_receipt, **three_provider_receipt, "review": "review.html", "evidence_sha256": digest(data), "generated_page_matches": True, "chicago_recovery_proof_validated": True}
 
 
 def demo(*, output):

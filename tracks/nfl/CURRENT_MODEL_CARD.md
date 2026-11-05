@@ -1,6 +1,7 @@
 # NFL retained research model card
 
-**Latest dated update:** [N043 completed designation study and partial continuation](N043_RESEARCH_UPDATE.md) records all 1,152 historical cells, 1,605 new native fits plus nine stacks, and two separately issued retained-head streams. A new fresh rolling issue was blocked. Prior N042 streams and the dated scores below remain unchanged.
+**November 5 current-source recovery:** three new early issue streams cover 29 games, including a fresh raw rolling stream using the 121-game training view. All fitted components were restored. No new designation model or promotion is claimed. The expanded preparation later stopped on a private-scope check. [Actual N044 results and limitations](N044_RESEARCH_UPDATE.md).
+**Prior study update:** [N043 completed designation study and partial continuation](N043_RESEARCH_UPDATE.md) records all 1,152 historical cells, 1,605 new native fits plus nine stacks, and two separately issued retained-head streams. A new fresh rolling issue was blocked. Prior N042 streams and the dated scores below remain unchanged.
 
 **Chicago–Seattle source correction:** genuine T1 pregame vectors and the causal outcome append already existed; the retained updating view did not inherit them. Original forecasts and published cohort metrics remain unchanged. [Recovery explanation](N041_RESEARCH_UPDATE.md) · [Compact proof](chicago_seattle_recovery_n042.json).
 

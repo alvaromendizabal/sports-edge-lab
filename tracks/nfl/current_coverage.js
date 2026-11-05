@@ -2,17 +2,19 @@
 (()=>{
  'use strict';
  const D=JSON.parse(document.getElementById('nfl-latest-evidence').textContent);
+ const DK2=new Map(JSON.parse(document.getElementById('nfl-three-provider-directions').textContent).restored_draftkings_t2.rows.map(r=>[r.game_id,r]));
  const P=JSON.parse(document.getElementById('nfl-point-evidence').textContent);
  const R=JSON.parse(document.getElementById('nfl-source-overlay').textContent);
  const X=JSON.parse(document.getElementById('nfl-reschedule-reference').textContent);
  const H=JSON.parse(document.getElementById('nfl-latest-pregame').textContent);
  const N=JSON.parse(document.getElementById('nfl-n038-source').textContent);
  const C=JSON.parse(document.getElementById('nfl-n039-current-source').textContent);
+ const C44=JSON.parse(document.getElementById('nfl-n044-current-source').textContent);
  const C43=JSON.parse(document.getElementById('nfl-n043-current-source').textContent);
  const C42=JSON.parse(document.getElementById('nfl-n042-current-source').textContent);
  const C41=JSON.parse(document.getElementById('nfl-n041-current-source').textContent);
  const C40=JSON.parse(document.getElementById('nfl-n040-current-source').textContent);
- const annotateCurrent=r=>({...r,scheduleRecovery:r.provider==='DraftKings'&&r.game_id==='2026_09_LV_SF',datedRetained:r.provider==='DraftKings'&&r.game_id==='2026_09_LV_SF'&&r.acquired_at.startsWith('2026-11-04'),ownerRecoveredCurrent:r.provider==='DraftKings'&&r.game_id==='2026_09_LV_SF'&&['2026-11-05T04:34:39Z','2026-11-05T08:01:37Z'].includes(r.acquired_at),reviewRecoveredCurrent:r.provider==='DraftKings'&&r.game_id==='2026_09_LV_SF'&&r.acquired_at==='2026-11-05T02:25:27Z'});
+ const annotateCurrent=r=>({...r,scheduleRecovery:r.provider==='DraftKings'&&r.game_id==='2026_09_LV_SF',datedRetained:r.provider==='DraftKings'&&r.game_id==='2026_09_LV_SF'&&r.acquired_at.startsWith('2026-11-04'),ownerRecoveredCurrent:r.provider==='DraftKings'&&r.game_id==='2026_09_LV_SF'&&['2026-11-05T04:34:39Z','2026-11-05T08:01:37Z','2026-11-05T10:08:48Z'].includes(r.acquired_at),reviewRecoveredCurrent:r.provider==='DraftKings'&&r.game_id==='2026_09_LV_SF'&&r.acquired_at==='2026-11-05T02:25:27Z'});
  const order=(a,b)=>Date.parse(a.quote_at)-Date.parse(b.quote_at)||Date.parse(a.acquired_at)-Date.parse(b.acquired_at);
  const latestWinners=new Map([...H.winner_rows,...N.winner_rows].sort(order).map(r=>[[r.game_id,r.provider].join('|'),{...r,latestHistory:true}]));
  const latestPoints=new Map([...H.point_rows,...N.point_rows].sort(order).map(r=>[[r.game_id,r.provider,r.target].join('|'),{...r,latestHistory:true}]));
@@ -23,8 +25,8 @@
  const mappedPoints=new Map(X.point_rows.map(r=>[[r.game_id,r.provider,r.target].join('|'),{...r,scheduleRecovery:true}]));
  const dkWinners=N.draftkings_week9.map(r=>({...r,scheduleRecovery:r.normalization_role==='DOCUMENTED_KICKOFF_REVISION_RECOVERY',p_home:r.p_home_no_vig,horizon:'LATEST_OBSERVED',quote_clock_kind:'PROVIDER_BOOKMAKER_LAST_UPDATE',availability_status:'OBSERVED_WINNER_REFERENCE'}));
  const dkPoints=N.draftkings_week9.flatMap(r=>['margin','total'].map(target=>({...r,scheduleRecovery:r.normalization_role==='DOCUMENTED_KICKOFF_REVISION_RECOVERY',target,horizon:'LATEST_OBSERVED',line:target==='margin'?r.home_margin_line_reference:r.total_line_reference,predicate:(target==='margin'?'Home margin > '+r.home_margin_line_reference+' (home handicap '+r.home_spread+')':'Game total > '+r.total_line_reference),observed_probability:null,contract_count:1,quote_clock_kind:'PROVIDER_BOOKMAKER_LAST_UPDATE',reason:'Dated quoted line; not an expected score or executable offer.'})));
- const sourceWinners=new Map([...R.winner_rows,...dkWinners,...N.current_winner_rows,...C.winner_rows.map(annotateCurrent),...C40.winner_rows.map(annotateCurrent),...C41.winner_rows.map(annotateCurrent),...C42.winner_rows.map(annotateCurrent),...C43.winner_rows.map(annotateCurrent)].map(r=>[[r.game_id,r.provider].join('|'),r]));
- const sourcePoints=new Map([...R.point_rows,...dkPoints,...N.current_point_rows,...C.point_rows.map(annotateCurrent),...C40.point_rows.map(annotateCurrent),...C41.point_rows.map(annotateCurrent),...C42.point_rows.map(annotateCurrent),...C43.point_rows.map(annotateCurrent)].map(r=>[[r.game_id,r.provider,r.target].join('|'),r]));
+ const sourceWinners=new Map([...R.winner_rows,...dkWinners,...N.current_winner_rows,...C.winner_rows.map(annotateCurrent),...C40.winner_rows.map(annotateCurrent),...C41.winner_rows.map(annotateCurrent),...C42.winner_rows.map(annotateCurrent),...C43.winner_rows.map(annotateCurrent),...C44.winner_rows.map(annotateCurrent)].map(r=>[[r.game_id,r.provider].join('|'),r]));
+ const sourcePoints=new Map([...R.point_rows,...dkPoints,...N.current_point_rows,...C.point_rows.map(annotateCurrent),...C40.point_rows.map(annotateCurrent),...C41.point_rows.map(annotateCurrent),...C42.point_rows.map(annotateCurrent),...C43.point_rows.map(annotateCurrent),...C44.point_rows.map(annotateCurrent)].map(r=>[[r.game_id,r.provider,r.target].join('|'),r]));
  const pointIndex=new Map(P.rows.map(r=>[[r.game_id,r.provider,r.target,r.horizon].join('|'),r]));
  const get=id=>document.getElementById(id);
  const esc=x=>String(x??'Not available').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
@@ -43,7 +45,8 @@
  const latestInjuryIssues=new Map(J.cards.map(f=>[f.game_id,f]));
  const Q42=JSON.parse(document.getElementById('nfl-current-issues-n042').textContent);
  const Q43=JSON.parse(document.getElementById('nfl-current-issues-n043').textContent);
- const Q={streams:[...Q42.streams,...Q43.streams]};
+ const Q44=JSON.parse(document.getElementById('nfl-current-issues-n044').textContent);
+ const Q={streams:[...Q42.streams,...Q43.streams,...Q44.streams]};
  const n042Cards=new Map(Q.streams.map(s=>[s.id,new Map(s.cards.map(f=>[f.game_id,f]))]));
  const forecastModels=[...D.model_sets,...Q.streams.map(s=>({id:s.id,label:s.label})),{id:'experimental_injury_issue',label:'Experimental injury challenger · Nov 4'},{id:'experimental_injury_refresh',label:'Prior injury refresh · Nov 5, 00:10 UTC'},{id:'experimental_injury_n040',label:'Prior injury refresh · Nov 5, 01:21 UTC'},{id:'experimental_injury_n041',label:'Prior injury refresh · Nov 5, 02:26 UTC'}];
  const models=new Map(forecastModels.map(x=>[x.id??x.model_id,x]));
@@ -72,6 +75,7 @@
   return b&&(!a||Date.parse(b)>=Date.parse(a))?{...recovered,sourceRecovery:true}:base;
  }
  function clockText(r){
+  if(r.restoredDkT2)return 'Restored original quote '+when(r.quote_at)+' · '+(r.contemporaneously_possessed_by_t2?'contemporaneously captured ':'retrospectively acquired ')+when(r.acquired_at)+' · retained earlier reference, not demonstrated latest';
   if(r.latestHistory)return 'Pregame observation '+when(r.quote_at)+' · retrospectively acquired '+when(r.acquired_at)+' · no original possession or fill claim';
   if(r.ownerRecoveredCurrent)return 'Current quote '+when(r.quote_at)+' · captured '+when(r.acquired_at)+' · exact schedule revision recovered on the owner runtime';
   if(r.reviewRecoveredCurrent)return 'Current quote '+when(r.quote_at)+' · captured '+when(r.acquired_at)+' · exact schedule revision recovered during review; original normalizer omitted this event';
@@ -82,6 +86,7 @@
  }
  function providerRow(g,p,h){
   const base=g.providers.find(x=>x.provider===p&&x.horizon===h)??{provider:p,horizon:h,derived_pick:null,availability_status:'UNAVAILABLE',unavailable_reason:h==='LATEST_PREGAME'?'Last-before-kickoff history has not yet been authenticated in this snapshot.':h==='LATEST_OBSERVED'?'No authenticated current winner observation in this snapshot.':'No authenticated equivalent winner record at this cutoff.'};
+  if(h==='T2'&&p==='DraftKings'&&g.completed&&DK2.has(g.game_id)){const r=DK2.get(g.game_id);return {...base,...r,restoredDkT2:true,quote_clock_kind:'ORIGINAL_RAW_PROVIDER_LAST_UPDATE',quote_age_seconds:r.quote_age_at_cutoff_seconds};}
   if(h==='LATEST_PREGAME'&&g.completed)return latestWinners.get([g.game_id,p].join('|'))??{...base,unavailable_reason:'No authenticated latest-pregame reference is published for this game/provider. Earlier T1/T2 records remain separate.'};
   return h==='LATEST_OBSERVED'&&!g.completed?newerReference(newerReference(newerReference(base,sourceWinners.get([g.game_id,p].join('|')),'derived_pick'),mappedWinners.get([g.game_id,p].join('|')),'derived_pick'),recoveredWinners.get([g.game_id,p].join('|')),'derived_pick'):base;
  }
@@ -105,7 +110,7 @@
  function n042Context(f){
   const counts=Object.entries(f.injury_source_report_team_count).map(([team,n])=>team+' '+n).join(' and ');
   const has=Object.values(f.injury_source_report_team_count).some(n=>n>0);
-  return '<p class="fine injury-status n042-injury-status"><strong>'+esc(f.model_label)+' · injury inputs:</strong> '+(has?'Partial listed reports: '+esc(counts)+' rows.':'No current report rows admitted. Unknown reports do not mean healthy players.')+' Announced starters, full quarterback depth and reserve roles are not verified model inputs.</p><p class="fine n042-model-status"><strong>'+esc(f.calibration_applied?'Preserved calibration':'Raw and uncalibrated research')+'</strong> · '+f.current_training_games+' earlier current-season training games. '+(f.model_id.endsWith('_original')?'Winner has no direct injury fields; point heads use injury inputs.':'Fixed historical recipe includes injury contributions; no automatic promotion or new validation claim.')+'</p><p class="fine n042-clocks">Base features: '+esc(when(f.base_feature_asof_at))+'. Injury cutoff: '+esc(when(f.injury_cutoff_at))+'. Fit completed: '+esc(when(f.fit_completed))+'. Issued: '+esc(when(f.actual_issue_at))+'. Later market references are supplemental observations and do not amend the forecast inputs.</p>';
+  return '<p class="fine injury-status n042-injury-status"><strong>'+esc(f.model_label)+' · injury inputs:</strong> '+(has?'Partial listed reports: '+esc(counts)+' rows.':'No current report rows admitted. Unknown reports do not mean healthy players.')+' Announced starters, full quarterback depth and reserve roles are not verified model inputs.</p><p class="fine n042-model-status"><strong>'+esc(f.calibration_applied?'Preserved calibration':'Raw and uncalibrated research')+'</strong> · '+f.current_training_games+' earlier current-season training games. '+(f.model_id==='n044_fresh'?'Latest-issued display default; this is not model promotion. ':'')+(f.model_id.endsWith('_original')?'Winner has no direct injury fields; point heads use injury inputs.':'Fixed historical recipe includes injury contributions; no automatic promotion or new validation claim.')+'</p><p class="fine n042-clocks">Base features: '+esc(when(f.base_feature_asof_at))+'. Injury cutoff: '+esc(when(f.injury_cutoff_at))+'. Fit completed: '+esc(when(f.fit_completed))+'. Issued: '+esc(when(f.actual_issue_at))+'. Later market references are supplemental observations and do not amend the forecast inputs.</p>';
  }
  function experimentalContext(f){
   const partial=f.injury_report_status==='PARTIAL_LISTED_REPORTS';
@@ -125,11 +130,11 @@
    const hasProjection=forecasts.some(f=>f.pick||f.home_margin!=null||f.total!=null);
    html+='<p><span class="forecast-readiness">'+(hasProjection?'Early projection · betting assessment pending':'Forecast unavailable · betting assessment unavailable')+'</span></p>';
    const experimental=selected.filter(f=>['experimental_injury_issue','experimental_injury_refresh','experimental_injury_n040','experimental_injury_n041'].includes(modelId(f))&&f.pick);
-   const current=selected.filter(f=>/^n04[23]_/.test(String(modelId(f)))&&f.pick);
+   const current=selected.filter(f=>/^n04[234]_/.test(String(modelId(f)))&&f.pick);
    if(current.length)html+=current.map(n042Context).join('');
    else if(experimental.length)html+=experimental.map(experimentalContext).join('');
    else html+='<p class="fine injury-status"><strong>Current injury/QB information:</strong> Not verified in this forecast.'+(g.game_id==='2026_09_JAX_BAL'?' <a href="#ravens-qb-context">Read the separate Ravens update.</a>':'')+'</p>';
-   html+='<p class="fine wager-status"><strong>Personal wager activity:</strong> Not tracked in this dashboard.</p>';
+   html+='<p class="fine wager-status"><strong>Wager status:</strong> Personal bets are not tracked. An early research forecast is not a qualified wagering recommendation; pending assessment is not a blanket recommendation against betting.</p>';
   }
   html+=table('Selected model outputs · '+g.away+' at '+g.home,['Forecast series','Winner','Home margin','Total'],selected.map(f=>[esc(f.model_label??modelLabel(modelId(f)))+'<span class="game-origin">'+esc(f.issue_class==='RECONSTRUCTED_NOT_ORIGINAL_ISSUED'?'Retrospective reconstruction':f.issue_class==='SAVED_OR_RECONSTRUCTED_NOT_ORIGINAL_ISSUED'?'Saved vector · no original issue':f.issue_class==='EARLY_CURRENT_ROLLING_RAW_RESEARCH_ISSUE'?'Actual current rolling research issue · raw':f.issue_class==='EARLY_FORWARD_RAW_SHADOW_ISSUE'?'Actual shadow issue · raw':f.issue_class==='EARLY_FORWARD_RESEARCH_ISSUE'?'Actual early research issue':f.issue_class==='T1_RESEARCH_ACTUAL_ISSUE'?'Actual 1-hour research issue':'Unavailable')+'</span>',f.pick?'<strong>'+esc(f.pick)+' '+pct(f.pick_probability)+'</strong>'+(actual?'<br>'+esc(actual.winner==='TIE'?'Tie':f.pick===actual.winner?'Correct winner':'Incorrect winner'):''):'Not available',signed(f.home_margin)+(actual&&f.home_margin!=null?'<br><span class="fine">Actual '+signed(actual.home_margin)+' · absolute error '+num(Math.abs(f.home_margin-actual.home_margin))+'</span>':''),num(f.total)+(actual&&f.total!=null?'<br><span class="fine">Actual '+num(actual.total)+' · absolute error '+num(Math.abs(f.total-actual.total))+'</span>':'')]));
   const refreshed=selected.find(f=>modelId(f)==='experimental_injury_n041')??selected.find(f=>modelId(f)==='experimental_injury_n040')??selected.find(f=>modelId(f)==='experimental_injury_refresh');
@@ -160,12 +165,13 @@
  }
  get('coverage-period').innerHTML='<option value="9">Current week · Week 9 · 15 games</option><option value="completed">All completed games · 121 finals</option><option value="monday">Monday Nov 2 · CHI 34–17 SEA</option>'+[...new Set(allGames.map(g=>g.week))].sort((a,b)=>a-b).map(w=>'<option value="'+w+'">Week '+w+' · '+allGames.filter(g=>g.week===w).length+' games</option>').join('')+'<option value="all">Full season · 272 scheduled games</option>';
  get('coverage-model').innerHTML=forecastModels.map(m=>'<option value="'+esc(m.id??m.model_id)+'">'+esc(m.label??m.model_label)+'</option>').join('')+'<option value="all">All model streams · include unavailable</option>';
- get('coverage-model').value=models.has('selected_latest_origin')?'selected_latest_origin':get('coverage-model').options[0].value;
+ get('coverage-model').value=models.has('n044_fresh')?'n044_fresh':get('coverage-model').options[0].value;
  get('coverage-horizon').innerHTML=Object.entries(horizons).map(([id,label])=>'<option value="'+id+'">'+label+'</option>').join('');
  get('coverage-horizon').value='LATEST_OBSERVED';
- function changePeriod(){const value=get('coverage-period').value;get('coverage-model').value=value==='monday'?'preserved_selected_actual_T1':value==='9'?'selected_latest_origin':'selected_annual';get('coverage-horizon').value=value==='monday'?'T1':value==='9'?'LATEST_OBSERVED':'T2';render();}
+ function changePeriod(){const value=get('coverage-period').value;get('coverage-model').value=value==='monday'?'preserved_selected_actual_T1':value==='9'?'n044_fresh':'selected_annual';get('coverage-horizon').value=value==='monday'?'T1':value==='9'?'LATEST_OBSERVED':'T2';render();}
  get('coverage-period').addEventListener('change',changePeriod);
  get('show-monday-game').addEventListener('click',()=>{get('coverage-period').value='monday';changePeriod();get('coverage-period').focus();});
+ for(const role of ['fresh','original','shadow'])get('show-'+role+'-n044').addEventListener('click',()=>{get('coverage-period').value='9';get('coverage-model').value='n044_'+role;get('coverage-horizon').value='LATEST_OBSERVED';render();get('coverage-model').focus();});
  for(const role of ['original','shadow'])get('show-'+role+'-n043').addEventListener('click',()=>{get('coverage-period').value='9';get('coverage-model').value='n043_'+role;get('coverage-horizon').value='LATEST_OBSERVED';render();get('coverage-model').focus();});
  for(const role of ['fresh','original','shadow'])get('show-'+role+'-n042').addEventListener('click',()=>{get('coverage-period').value='9';get('coverage-model').value='n042_'+role;get('coverage-horizon').value='LATEST_OBSERVED';render();get('coverage-model').focus();});
  get('show-injury-n041').addEventListener('click',()=>{get('coverage-period').value='9';get('coverage-model').value='experimental_injury_n041';get('coverage-horizon').value='LATEST_OBSERVED';render();get('coverage-model').focus();});

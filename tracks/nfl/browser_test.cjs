@@ -85,13 +85,15 @@ const {chromium}=require(process.env.PLAYWRIGHT_MODULE_DIR||'playwright');
   assert.equal(await page.locator('#coverage-games .injury-status').count(),15);
   assert.equal(await page.locator('#coverage-games .wager-status').count(),15);
   assert.match(await page.locator('#coverage-games').innerText(),/Early projection · betting assessment pending/);
-  assert.match(await page.locator('#coverage-games').innerText(),/Current injury\/QB information: Not verified in this forecast/);
-  assert.match(await page.locator('#coverage-games').innerText(),/Personal wager activity: Not tracked in this dashboard/);
+  assert.match(await page.locator('#coverage-games').innerText(),/Raw and uncalibrated research/);
+  assert.match(await page.locator('#coverage-games').innerText(),/Latest-issued display default; this is not model promotion/);
+  assert.match(await page.locator('#coverage-games').innerText(),/Personal bets are not tracked/);
+  assert.match(await page.locator('#coverage-games').innerText(),/early research forecast is not a qualified wagering recommendation/);
   assert.doesNotMatch(await page.locator('#coverage-games').innerText(),/NO BET|No wager placed/);
   assert.match(await page.locator('#ravens-qb-context').innerText(),/Joe Fagnano will start/);
   assert.match(await page.locator('#ravens-qb-context').innerText(),/no forecast that fully incorporates the quarterback situation is claimed/);
   // The experimental issue is an additional role, never a replacement stream.
-  assert.equal(await page.locator('#coverage-model').inputValue(),'selected_latest_origin');
+  assert.equal(await page.locator('#coverage-model').inputValue(),'n044_fresh');
   assert.equal(await page.locator('#coverage-metric-model option[value="experimental_injury_issue"]').count(),0);
   await page.locator('#show-injury-challenger').click();
   assert.equal(await page.locator('#coverage-model').inputValue(),'experimental_injury_issue');
@@ -240,9 +242,9 @@ const {chromium}=require(process.env.PLAYWRIGHT_MODULE_DIR||'playwright');
   assert.equal(freshSource.review_recovered_week9_games,1);
   for(const gid of ['2026_09_TB_CHI','2026_09_BUF_MIN']){
    const card=page.locator('[data-coverage-game="'+gid+'"]');
-   const newestSource=await page.evaluate(()=>JSON.parse(document.getElementById('nfl-n043-current-source').textContent));
+   const newestSource=await page.evaluate(()=>JSON.parse(document.getElementById('nfl-n044-current-source').textContent));
    for(const r of newestSource.point_rows.filter(r=>r.game_id===gid))assert((await card.innerText()).includes(r.predicate));
-   assert.match(await card.textContent(),/2026-11-05T08:/);
+   assert.match(await card.textContent(),/2026-11-05T10:/);
    assert.equal(await card.locator('.alternate-threshold').count(),0);
   }
   const issue42=await page.evaluate(()=>JSON.parse(document.getElementById('nfl-current-issues-n042').textContent));
@@ -259,6 +261,28 @@ const {chromium}=require(process.env.PLAYWRIGHT_MODULE_DIR||'playwright');
    await page.selectOption('#coverage-period','10');await page.selectOption('#coverage-model','n042_'+role);
    assert.equal(await page.locator('#coverage-games [data-coverage-game]').count(),14);
   }
+  const issue44=await page.evaluate(()=>JSON.parse(document.getElementById('nfl-current-issues-n044').textContent));
+  assert.equal(issue44.actual_target_rows,261);
+  for(const role of ['fresh','original','shadow']){
+   await page.locator('#show-'+role+'-n044').click();
+   assert.equal(await page.locator('#coverage-model').inputValue(),'n044_'+role);
+   assert.equal(await page.locator('#coverage-games [data-coverage-game]').count(),15);
+   assert.equal(await page.locator('#coverage-metric-model option[value="n044_'+role+'"]').count(),0);
+  }
+  for(const mid of ['selected_annual','selected_weekly','selected_event','selected_stack','descriptive_feedback','descriptive_accuracy']){
+   await page.selectOption('#common-three-model',mid);
+   assert.equal(await page.locator('#common-three-summary tbody tr').count(),3);
+  }
+  assert.equal(await page.locator('#common-three-probabilities tbody tr').count(),5);
+  assert.equal(await page.locator('#common-three-probability-intervals tbody tr').count(),18);
+  assert.match(await page.locator('#common-three-probabilities').innerText(),/0\.606083/);
+  if(process.env.NFL_SCREENSHOTS)await page.locator('#owner-recovery-n044').screenshot({path:path.join(process.env.NFL_SCREENSHOTS,'nfl-owner-recovery-'+width+'.png')});
+  if(process.env.NFL_SCREENSHOTS)await page.locator('#common-three-provider').screenshot({path:path.join(process.env.NFL_SCREENSHOTS,'nfl-common-three-'+width+'.png')});
+  await page.selectOption('#coverage-period','completed');
+  await page.selectOption('#coverage-horizon','T2');
+  assert.match(await page.locator('#coverage-games').innerText(),/Restored original quote/);
+  assert.match(await page.locator('#coverage-games').innerText(),/retrospectively acquired/);
+  assert.match(await page.locator('#coverage-games').innerText(),/retained earlier reference, not demonstrated latest/);
   const study43=await page.evaluate(()=>JSON.parse(document.getElementById('nfl-owner-study-n043').textContent));
   assert.equal(study43.new_total_fits,1614);assert.equal(study43.new_designation_forecasts,0);assert.equal(study43.owner_research_acceptance,false);
   for(const role of ['original','shadow']){
