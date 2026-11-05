@@ -604,8 +604,17 @@ const { chromium } = require(process.env.PLAYWRIGHT_MODULE_DIR || 'playwright');
         canonical_identity_status:'UNRESOLVED',counted_as_new_physical_game:false,
         raw_source_record:{contestId:100+i,hasStartTime:false,teams:[{nativeTeamId:null,sourceLabel:'Unresolved invented source '+i,isHome:null}]}}));
       const normalized=normalize(sourceRows,{...invented,unresolved_official_records:unresolved});
+      // Page size is an intentional user preference retained across imports.
+      // Earlier cases selected 100; this case explicitly exercises 25-row paging.
+      await page.selectOption('#page-size','25');
       await page.locator('#report-file').setInputFiles({name:'invented-normalized.json',mimeType:'application/json',buffer:Buffer.from(JSON.stringify(normalized))});
-      await page.waitForFunction(()=>document.getElementById('record-scope').textContent.includes('28 of 28 game/model rows loaded'));
+      await page.waitForFunction(()=>{
+        try{return JSON.parse(document.getElementById('metadata').textContent).schema==='sports-edge-lab.private.game-report.normalized.v1'&&
+          document.getElementById('record-scope').textContent.includes('28 of 28 game/model rows loaded');}catch{return false;}
+      });
+      for(const [selector,expected]of [['#page-size','25'],['#league','all'],['#window','all_observed'],
+        ['#model','all'],['#search',''],['#market-clock','latest_pretip']])assert.equal(await page.locator(selector).inputValue(),expected);
+      assert.equal(await page.locator('#show-games').getAttribute('aria-pressed'),'true');
       assert.equal(await page.locator('[data-game]').count(),25);
       assert.equal(await page.locator('#summary .stat').nth(0).locator('strong').innerText(),'27');
       assert.equal(await page.locator('#summary .stat').nth(1).locator('strong').innerText(),'28');
@@ -645,7 +654,8 @@ const { chromium } = require(process.env.PLAYWRIGHT_MODULE_DIR || 'playwright');
       const collision=structuredClone(normalized);collision.records[0].league='ncaam';malformedNormalized.push(collision);
       const sharedCollision=structuredClone(normalized);sharedCollision.contexts.push({league:'ncaam'});sharedCollision.records[0].context_ids.push(sharedCollision.contexts.length-1);malformedNormalized.push(sharedCollision);
       for(const bad of malformedNormalized){await page.locator('#report-file').setInputFiles({name:'invented-invalid-normalized.json',mimeType:'application/json',buffer:Buffer.from(JSON.stringify(bad))});
-        await page.waitForFunction(()=>document.getElementById('load-status').classList.contains('error'));
+        await page.waitForFunction(()=>document.getElementById('load-status').classList.contains('error')&&
+          document.getElementById('load-status').textContent.startsWith('Cannot open report:'));
         assert.equal(await page.locator('[data-game]').first().locator('table').first().innerText(),beforeInvalid);}
       counts.normalizedReportViews=(counts.normalizedReportViews||0)+12;
 
@@ -681,7 +691,8 @@ const { chromium } = require(process.env.PLAYWRIGHT_MODULE_DIR || 'playwright');
       assert.match(await page.locator('#record-scope').innerText(),/0 of 28.*28 rows unloaded/);
       const reordered=structuredClone(reportIndex);reordered.record_parts.reverse();
       await page.locator('#report-file').setInputFiles({name:'invented-invalid-index.json',mimeType:'application/json',buffer:Buffer.from(JSON.stringify(reordered))});
-      await page.waitForFunction(()=>document.getElementById('load-status').classList.contains('error'));
+      await page.waitForFunction(()=>document.getElementById('load-status').classList.contains('error')&&
+        document.getElementById('load-status').textContent.startsWith('Cannot open report:'));
       assert.match(await page.locator('#load-status').innerText(),/order/);
       assert.equal(await page.evaluate(()=>document.documentElement.scrollWidth>innerWidth),false,'normalized report and local part chooser fit mobile');
       counts.reportPartViews=(counts.reportPartViews||0)+7;
