@@ -284,7 +284,7 @@ const { chromium } = require(process.env.PLAYWRIGHT_MODULE_DIR || 'playwright');
       assert.match(await page.locator('#injury-source-results').innerText(),/Not selected in the supplied horizon audits/);
       assert.match(await page.locator('[data-game]').first().innerText(),/2026-11-04T19:45:00Z/);
       assert.doesNotMatch(await page.locator('[data-game]').first().innerText(),/2026-11-04T19:30:00Z/);
-      assert.match(await page.locator('#injury-source-gaps summary').innerText(),/1 supplied/);
+      assert.match(await page.locator('#injury-source-gaps > summary').innerText(),/1 supplied/);
       assert.equal(await page.locator('#injury-source-results img').count(),0);
       assert.equal(await page.locator('#injury-source-results a[href^="javascript:"]').count(),0);
       assert.equal(await page.evaluate(()=>window.injuryLeak),undefined);
