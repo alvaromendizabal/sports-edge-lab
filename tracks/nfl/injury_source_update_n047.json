@@ -1,0 +1,200 @@
+{
+  "schema": "sports-edge-lab.nfl.review-source-injury.n047.v1",
+  "source_url": "https://www.nfl.com/injuries/",
+  "observed_at": "2026-11-05T23:28:33.955098+00:00",
+  "raw_sha256": "126762ae829d0cc869dbef683adf70b23fefeebb7f626d1248b1b89e9c3dd172",
+  "raw_bytes": 406665,
+  "source_rows": 340,
+  "normalized_rows": 340,
+  "team_slots": 30,
+  "team_tables": 30,
+  "excluded_identity_rows": 0,
+  "coverage": [
+    {
+      "game_id": "2026_09_JAX_BAL",
+      "team": "JAX",
+      "admitted_rows": 10,
+      "status": "OBSERVED_PARTIAL_REPORT"
+    },
+    {
+      "game_id": "2026_09_JAX_BAL",
+      "team": "BAL",
+      "admitted_rows": 18,
+      "status": "OBSERVED_PARTIAL_REPORT"
+    },
+    {
+      "game_id": "2026_09_CIN_ATL",
+      "team": "CIN",
+      "admitted_rows": 6,
+      "status": "OBSERVED_PARTIAL_REPORT"
+    },
+    {
+      "game_id": "2026_09_CIN_ATL",
+      "team": "ATL",
+      "admitted_rows": 8,
+      "status": "OBSERVED_PARTIAL_REPORT"
+    },
+    {
+      "game_id": "2026_09_DAL_IND",
+      "team": "DAL",
+      "admitted_rows": 17,
+      "status": "OBSERVED_PARTIAL_REPORT"
+    },
+    {
+      "game_id": "2026_09_DAL_IND",
+      "team": "IND",
+      "admitted_rows": 10,
+      "status": "OBSERVED_PARTIAL_REPORT"
+    },
+    {
+      "game_id": "2026_09_CLE_NO",
+      "team": "CLE",
+      "admitted_rows": 11,
+      "status": "OBSERVED_PARTIAL_REPORT"
+    },
+    {
+      "game_id": "2026_09_CLE_NO",
+      "team": "NO",
+      "admitted_rows": 10,
+      "status": "OBSERVED_PARTIAL_REPORT"
+    },
+    {
+      "game_id": "2026_09_DEN_CAR",
+      "team": "DEN",
+      "admitted_rows": 8,
+      "status": "OBSERVED_PARTIAL_REPORT"
+    },
+    {
+      "game_id": "2026_09_DEN_CAR",
+      "team": "CAR",
+      "admitted_rows": 10,
+      "status": "OBSERVED_PARTIAL_REPORT"
+    },
+    {
+      "game_id": "2026_09_NYJ_KC",
+      "team": "NYJ",
+      "admitted_rows": 9,
+      "status": "OBSERVED_PARTIAL_REPORT"
+    },
+    {
+      "game_id": "2026_09_NYJ_KC",
+      "team": "KC",
+      "admitted_rows": 9,
+      "status": "OBSERVED_PARTIAL_REPORT"
+    },
+    {
+      "game_id": "2026_09_DET_MIA",
+      "team": "DET",
+      "admitted_rows": 10,
+      "status": "OBSERVED_PARTIAL_REPORT"
+    },
+    {
+      "game_id": "2026_09_DET_MIA",
+      "team": "MIA",
+      "admitted_rows": 12,
+      "status": "OBSERVED_PARTIAL_REPORT"
+    },
+    {
+      "game_id": "2026_09_LA_WAS",
+      "team": "LA",
+      "admitted_rows": 12,
+      "status": "OBSERVED_PARTIAL_REPORT"
+    },
+    {
+      "game_id": "2026_09_LA_WAS",
+      "team": "WAS",
+      "admitted_rows": 10,
+      "status": "OBSERVED_PARTIAL_REPORT"
+    },
+    {
+      "game_id": "2026_09_NYG_PHI",
+      "team": "NYG",
+      "admitted_rows": 15,
+      "status": "OBSERVED_PARTIAL_REPORT"
+    },
+    {
+      "game_id": "2026_09_NYG_PHI",
+      "team": "PHI",
+      "admitted_rows": 19,
+      "status": "OBSERVED_PARTIAL_REPORT"
+    },
+    {
+      "game_id": "2026_09_HOU_LAC",
+      "team": "HOU",
+      "admitted_rows": 7,
+      "status": "OBSERVED_PARTIAL_REPORT"
+    },
+    {
+      "game_id": "2026_09_HOU_LAC",
+      "team": "LAC",
+      "admitted_rows": 11,
+      "status": "OBSERVED_PARTIAL_REPORT"
+    },
+    {
+      "game_id": "2026_09_ARI_SEA",
+      "team": "ARI",
+      "admitted_rows": 13,
+      "status": "OBSERVED_PARTIAL_REPORT"
+    },
+    {
+      "game_id": "2026_09_ARI_SEA",
+      "team": "SEA",
+      "admitted_rows": 15,
+      "status": "OBSERVED_PARTIAL_REPORT"
+    },
+    {
+      "game_id": "2026_09_LV_SF",
+      "team": "LV",
+      "admitted_rows": 5,
+      "status": "OBSERVED_PARTIAL_REPORT"
+    },
+    {
+      "game_id": "2026_09_LV_SF",
+      "team": "SF",
+      "admitted_rows": 14,
+      "status": "OBSERVED_PARTIAL_REPORT"
+    },
+    {
+      "game_id": "2026_09_GB_NE",
+      "team": "GB",
+      "admitted_rows": 10,
+      "status": "OBSERVED_PARTIAL_REPORT"
+    },
+    {
+      "game_id": "2026_09_GB_NE",
+      "team": "NE",
+      "admitted_rows": 14,
+      "status": "OBSERVED_PARTIAL_REPORT"
+    },
+    {
+      "game_id": "2026_09_TB_CHI",
+      "team": "TB",
+      "admitted_rows": 12,
+      "status": "OBSERVED_PARTIAL_REPORT"
+    },
+    {
+      "game_id": "2026_09_TB_CHI",
+      "team": "CHI",
+      "admitted_rows": 8,
+      "status": "OBSERVED_PARTIAL_REPORT"
+    },
+    {
+      "game_id": "2026_09_BUF_MIN",
+      "team": "BUF",
+      "admitted_rows": 18,
+      "status": "OBSERVED_PARTIAL_REPORT"
+    },
+    {
+      "game_id": "2026_09_BUF_MIN",
+      "team": "MIN",
+      "admitted_rows": 9,
+      "status": "OBSERVED_PARTIAL_REPORT"
+    }
+  ],
+  "acquisition_role": "NEW_REVIEW_SOURCE_CAPTURE_NOT_N046_OWNER_INPUT",
+  "new_fits": 0,
+  "new_forecasts": 0,
+  "historical_publication_clock_proven": false,
+  "full_roster_health_proven": false,
+  "earlier_issues_modified": false
+}

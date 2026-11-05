@@ -1,5 +1,19 @@
 # NFL retained research model card
 
+**Later source update, November 5 at 23:28 UTC:** a separately verified official NFL capture now contains **340 listed rows across all 30 Week 9 team tables**, including Buffalo 18 and Minnesota 9. It is later than the N046 issues and **was not an input to those forecasts**. The earlier 295-row/29-team owner snapshot remains unchanged. [Inspect the new source census](injury_source_update_n047.json). This is source coverage, not proof of complete roster health or new model performance.
+
+## Latest issued state · N046
+
+Four separately timestamped forecast streams contain 348 actual target rows for 29 games. Three new designation heads and nine stacks were fitted; 4,384 restored identities were reported. Protected originals were not refitted. All four new forward streams have **0 scored outcomes** in this snapshot. Their retrospective recipe evaluations remain separate; no automatic promotion is implied.
+
+The fourth lane uses selected winner/margin/total heads with 308/386/467 fields. Its additional 32-field listed-designation block supports only JAX–BAL; 28 other forecast games remain unknown for that block. Current formal injury reports independently cover 29/30 Week 9 team slots, 295 rows, with Buffalo unknown. Starting quarterback, replacement quality, depth and reserve roles are not verified features.
+
+[Inspect every selectable model’s performance status](review.html#model-evidence-registry). Winner and point projections are available; calibrated line-specific spread-cover probabilities, fee-adjusted stakes and final-hour qualification are not established. The latest pregame exchange inventory covers all 121 completed current-season games; smaller timed comparison cohorts are a separate evidence boundary.
+
+[Actual N046 update and four-lane clocks](N046_RESEARCH_UPDATE.md) · [Exact public issue cards](current_issues_n046.json)
+
+The N045 reconstruction metrics and earlier dated model cards below remain preserved; they are not new N046 prospective performance.
+
 ## Latest actual N045 study and issue
 
 The expanded designation study completed **1,152/1,152 historical cells**, 462 rolling jobs, 1,029 new native fits and nine new stacking fits. There were no blocked cells, native failures or protected-original refits. Exact compatible designation identities reused: 576; all restored fitted identities across the run: 3,355. Whole-run research acceptance remains false; completion is not promotion.
