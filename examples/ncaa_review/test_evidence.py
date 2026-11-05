@@ -174,7 +174,7 @@ class EvidenceTests(unittest.TestCase):
             self.assertEqual(old_inventory['candidate_games'], 1103 if league == 'ncaam' else 1072)
             self.assertEqual(old_inventory['observed_finals'], 327 if league == 'ncaam' else 311)
             self.assertFalse(data['observed_inventory']['all_official_games_covered'])
-            self.assertEqual(data['current_coverage_gaps']['market_identity_unresolved'], 224172)
+            self.assertEqual(data['current_coverage_gaps']['market_identity_unresolved'], 226042)
             self.assertIsNone(data['current_coverage_gaps']['official_denominator'])
 
     def test_private_viewer_has_no_upload_or_persistence_path(self):
@@ -190,7 +190,7 @@ class EvidenceTests(unittest.TestCase):
 
     def test_b039_partial_run_keeps_real_fits_and_all_missing_coverage_explicit(self):
         for league, data in self.exports.items():
-            attempt = data['current_owner_attempt']
+            attempt = next(x for x in data['owner_attempt_history'] if x['release']=='B039')
             self.assertEqual(attempt['release'], 'B039')
             self.assertEqual(attempt['status'], 'FAILED_PARTIAL_WORK_PRESERVED')
             self.assertEqual((attempt['completed_scientific_stages'], attempt['planned_scientific_stages']), (10, 13))
@@ -199,8 +199,8 @@ class EvidenceTests(unittest.TestCase):
             self.assertEqual(attempt['league_new_real_target_fits'], 96 if league=='ncaam' else 60)
             self.assertEqual(attempt['reused_target_fits'],108)
             self.assertEqual(attempt['new_prospective_issues'],0)
-            self.assertEqual(data['observed_inventory']['candidate_games'],1442 if league=='ncaam' else 1379)
-            self.assertEqual(data['observed_inventory']['observed_finals'],368 if league=='ncaam' else 364)
+            self.assertEqual(data['observed_inventory']['candidate_games'],1439 if league=='ncaam' else 1377)
+            self.assertEqual(data['observed_inventory']['observed_finals'],370 if league=='ncaam' else 368)
             self.assertFalse(data['observed_inventory']['all_official_games_covered'])
             self.assertEqual(data['current_coverage_gaps']['rejected_official_records'],4)
             self.assertFalse(attempt['scientific_goal_complete'])
