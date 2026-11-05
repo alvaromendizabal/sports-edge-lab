@@ -274,6 +274,7 @@ const {chromium}=require(process.env.PLAYWRIGHT_MODULE_DIR||'playwright');
   }
   await page.selectOption('#designation-origin','annual_injury_head');await page.selectOption('#designation-target','winner');
   assert.match(await page.locator('#designation-metric-table').innerText(),/0\.663311/);
+  await page.locator('#show-fresh-n045').click();
   const lvCurrent=page.locator('[data-coverage-game="2026_09_LV_SF"]');
   assert.match(await lvCurrent.innerText(),/exact schedule revision recovered on the owner runtime/);
   const issue45=await page.evaluate(()=>JSON.parse(document.getElementById('nfl-current-issues-n045').textContent));
