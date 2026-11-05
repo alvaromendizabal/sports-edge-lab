@@ -2,6 +2,7 @@
 const assert = require('node:assert/strict');
 const path = require('node:path');
 const fs = require('node:fs');
+const { createHash } = require('node:crypto');
 const { pathToFileURL } = require('node:url');
 const { chromium } = require(process.env.PLAYWRIGHT_MODULE_DIR || 'playwright');
 
@@ -20,7 +21,7 @@ const { chromium } = require(process.env.PLAYWRIGHT_MODULE_DIR || 'playwright');
     probability: ['win', 'LogLoss'], accuracy: ['win', 'Accuracy'],
     margin: ['margin', 'MAE'], total: ['total', 'MAE'],
   };
-  const counts = { viewports: 0, selectorStates: 0, scenarios: 0, progressScenarios: 0, preflightScenarios: 0, executionViews: 0, keyboardEvents: 0, privateViewerStates: 0, captureClockViews: 0, horizonMetricViews: 0, unclassifiedSourceViews: 0, providerComparisonViews: 0 };
+  const counts = { viewports: 0, selectorStates: 0, scenarios: 0, progressScenarios: 0, preflightScenarios: 0, executionViews: 0, keyboardEvents: 0, privateViewerStates: 0, captureClockViews: 0, horizonMetricViews: 0, unclassifiedSourceViews: 0, providerComparisonViews: 0, boundedInventoryViews: 0, freshnessViews: 0 };
   try {
     for (const width of [1440, 390]) {
       await page.setViewportSize({ width, height: 1000 });
@@ -418,7 +419,99 @@ const { chromium } = require(process.env.PLAYWRIGHT_MODULE_DIR || 'playwright');
       assert.match(await page.locator('#load-status').innerText(),/Invalid comparison row inventory/);
       assert.match(await page.locator('#provider-comparison-status').innerText(),/Supplied empty/);
       counts.providerComparisonViews++;
+      // A large captured inventory is not an empty inventory merely because
+      // the small report omits its rows. Source clocks remain independent.
+      const sparseReport={...invented,market_observations:[],market_observation_count:500000,
+        market_observations_inline_complete:false,freshness:{season_label:'2026–27',season_end_year:2027,
+          report_generated_at_utc:'2026-11-05T02:00:00Z',report_asof_utc:'2026-11-04T20:00:00Z',
+          data_acquisition_completed_at_utc:null,last_successful_refresh_at_utc:null,
+          last_attempted_refresh_at_utc:'2026-11-04T21:00:00Z',last_attempt_status:'FAILED_PARTIAL'},
+        unclassified_market_observations:[],unclassified_market_observation_count:3,
+        unclassified_market_observation_dataset:{status:'REFERENCE_ONLY_FIXTURE'},
+        window_event_keys:{...invented.window_event_keys,next_week:[[rows[26].league,rows[26].event_id]]}};
+      sparseReport.records=structuredClone(invented.records);
+      sparseReport.records[0].time_precision='exact';sparseReport.records[0].event_time='2026-11-04T20:30:00Z';
+      sparseReport.records[1].time_precision='exact';sparseReport.records[1].event_time='2026-11-04T20:30:00Z';
+      sparseReport.records[1].kalshi_latest_pretip_win_quote_time='2026-11-04T20:00:00Z';
+      sparseReport.records[1].kalshi_latest_pretip_win_acquired_at='2026-11-04T20:00:01Z';
+      await page.locator('#report-file').setInputFiles({name:'invented-sparse-report.json',mimeType:'application/json',buffer:Buffer.from(JSON.stringify(sparseReport))});
+      await page.waitForFunction(()=>document.querySelector('#summary .stat:nth-child(3) strong').textContent==='500,000');
+      assert.equal(await page.locator('#summary .stat').nth(3).locator('strong').innerText(),'0');
+      assert.match(await page.locator('#observation-scope').innerText(),/0 rows loaded; 500,000 captured observations/);
+      assert.match(await page.locator('#freshness-grid').innerText(),/2026–27.*ends 2027/s);
+      assert.equal(await page.locator('.clock-card').filter({hasText:'Last successful refresh'}).locator('strong').innerText(),'Unavailable');
+      assert.equal(await page.locator('.clock-card').filter({hasText:'Data acquisition completed'}).locator('strong').innerText(),'Unavailable');
+      assert.equal(await page.locator('.clock-card').filter({hasText:'Last attempted refresh'}).locator('strong').innerText(),'2026-11-04T21:00:00Z');
+      assert.equal(await page.locator('.clock-card').filter({hasText:'Report generated'}).locator('strong').innerText(),'2026-11-05T02:00:00Z');
+      assert.equal(await page.locator('#market-clock option:checked').innerText(),'Latest supported pre-tip');
+      assert.match(await page.locator('[data-game]').first().innerText(),/Capture before tip: false.*recovered at or after tip/s);
+      assert.match(await page.locator('[data-game]').nth(1).innerText(),/Capture before tip: true/);
+      assert.match(await page.locator('[data-game]').nth(2).innerText(),/Capture before tip: unverified/);
+      await page.selectOption('#window','next_week');assert.equal(await page.locator('[data-game]').count(),1);
+      await page.selectOption('#window','all_observed');
+      await page.locator('#show-observations').click();
+      assert.match(await page.locator('#results').innerText(),/preserved observations but has no inline rows/);
+      assert.match(await page.locator('#unclassified-details > summary').innerText(),/3 preserved.*0 loaded/);
+      counts.freshnessViews++;counts.boundedInventoryViews++;
+      // Local files are invented. One physical chunk is validated without
+      // claiming that unselected chunks or the full logical archive were read.
+      const digest=b=>createHash('sha256').update(b).digest('hex');
+      const reference=(name,b)=>({key:'invented/'+name,bytes:b.length,sha256:digest(b)});
+      const chunks=[Buffer.from(JSON.stringify({provider:'Kalshi',native_event_id:'invented-local-only',canonical_identity_verified:false,native_source_value:.4321})+'\n'+JSON.stringify({provider:'DraftKings',event_id:'invented-0',league:'ncaam',canonical_identity_verified:true})+'\n'),
+        Buffer.from(JSON.stringify({provider:'Polymarket',provider_product:'polymarket_international',canonical_identity_verified:false})+'\n')];
+      const meta=Buffer.from('{}\n');let byteStart=0,recordStart=0;
+      const descriptors=chunks.map((body,i)=>{const value={schema:'sel.ncaa.b039.chunk_index.v1',ordinal:i,record_start:recordStart,records:i===0?2:1,
+        logical_byte_start:byteStart,reference:reference('data-'+i,body),metadata_reference:reference('metadata-'+i,meta)};
+        byteStart+=body.length;recordStart+=value.records;return value;});
+      const indexBody=Buffer.from(descriptors.map(r=>JSON.stringify(r)).join('\n')+'\n');
+      const manifest={schema:'sel.ncaa.b039.chunked_rows.v1',status:'COMMITTED',logical_encoding:'canonical_json_object_per_line_utf8',
+        records:3,chunks:2,logical_bytes:byteStart,logical_sha256:digest(Buffer.concat(chunks)),chunk_sequence_sha256:digest(indexBody),
+        parts:[{ordinal:0,reference:reference('index-part',indexBody),chunk_start:0,chunks:2,record_start:0,records:3,logical_byte_start:0,logical_bytes:byteStart}]};
+      const chunkedReport={...sparseReport,market_observation_count:3,market_observation_dataset:{manifest},
+        unclassified_market_observation_dataset:{manifest}};
+      await page.locator('#report-file').setInputFiles({name:'invented-chunk-report.json',mimeType:'application/json',buffer:Buffer.from(JSON.stringify(chunkedReport))});
+      await page.waitForFunction(()=>document.querySelector('#summary .stat:nth-child(3) strong').textContent==='3');
+      const forecastAfterImport=await page.locator('[data-game]').first().locator('table').first().innerText();
+      if(!(await page.locator('#chunk-details').evaluate(el=>el.open)))await page.locator('#chunk-details > summary').click();
+      await page.locator('#chunk-index-file').setInputFiles({name:'invented-index.jsonl',mimeType:'application/x-ndjson',buffer:indexBody});
+      await page.waitForFunction(()=>document.getElementById('chunk-status').textContent.startsWith('Index part 1 / 1 verified'));
+      assert.equal(await page.locator('#chunk-data-file').isDisabled(),false);
+      await page.locator('#chunk-data-file').setInputFiles({name:'invented-data.jsonl',mimeType:'application/x-ndjson',buffer:chunks[0]});
+      await page.waitForFunction(()=>document.getElementById('chunk-status').textContent.startsWith('Data chunk 1 / 2 verified'));
+      assert.equal(await page.locator('.observation').count(),2);
+      assert.match(await page.locator('#results').innerText(),/invented-local-only/);
+      assert.equal(await page.locator('#summary .stat').nth(2).locator('strong').innerText(),'3');
+      assert.equal(await page.locator('#summary .stat').nth(3).locator('strong').innerText(),'2');
+      assert.match(await page.locator('#chunk-status').innerText(),/full logical archive have not been verified/);
+      assert.match(await page.locator('#observation-scope').innerText(),/Verified bounded chunk 1 of 2/);
+      const corrupt=Buffer.from(chunks[0]);corrupt[10]^=1;
+      await page.locator('#chunk-data-file').setInputFiles({name:'invented-corrupt.jsonl',mimeType:'application/x-ndjson',buffer:corrupt});
+      await page.waitForFunction(()=>document.getElementById('chunk-status').classList.contains('error'));
+      assert.match(await page.locator('#chunk-status').innerText(),/SHA-256 do not match/);
+      assert.equal(await page.locator('.observation').count(),2,'bad data must retain previous valid view');
+      await page.locator('#show-games').click();
+      assert.equal(await page.locator('[data-game]').first().locator('table').first().innerText(),forecastAfterImport);
+      await page.locator('#restore-inline').click();
+      assert.equal(await page.locator('#summary .stat').nth(3).locator('strong').innerText(),'0');
+      // Unknown or wrong indexes cannot enable a data preview.
+      await page.locator('#chunk-index-file').setInputFiles({name:'invented-wrong-index.jsonl',mimeType:'application/x-ndjson',buffer:Buffer.from('{}\n')});
+      await page.waitForFunction(()=>document.getElementById('chunk-status').classList.contains('error'));
+      assert.equal(await page.locator('#chunk-data-file').isDisabled(),true);
+      await page.selectOption('#chunk-kind','unclassified');
+      await page.locator('#chunk-index-file').setInputFiles({name:'invented-index.jsonl',mimeType:'application/x-ndjson',buffer:indexBody});
+      await page.waitForFunction(()=>document.getElementById('chunk-status').textContent.startsWith('Index part 1 / 1 verified'));
+      await page.locator('#chunk-data-file').setInputFiles({name:'invented-data.jsonl',mimeType:'application/x-ndjson',buffer:chunks[0]});
+      await page.waitForFunction(()=>document.getElementById('chunk-status').textContent.startsWith('Data chunk 1 / 2 verified'));
+      assert.match(await page.locator('#unclassified-details > summary').innerText(),/3 preserved.*2 loaded/);
+      assert.match(await page.locator('#unclassified-details').innerText(),/Source: 0.432100/);
+      assert.equal(await page.locator('[data-game]').first().locator('table').first().innerText(),forecastAfterImport);
+      assert.equal(await page.evaluate(()=>document.documentElement.scrollWidth>innerWidth),false,'bounded preview must fit mobile viewport');
+      counts.boundedInventoryViews+=5;
       await page.locator('#clear').click();
+      assert.equal(await page.locator('#freshness-grid').textContent(),'');
+      assert.equal(await page.locator('#observation-scope').textContent(),'');
+      assert.equal(await page.locator('#chunk-status').textContent(),'');
+      assert.equal(await page.locator('#chunk-data-file').isDisabled(),true);
       assert.equal(await page.locator('#report').isHidden(), true);
       assert.equal(await page.locator('#results').textContent(), '');
       assert.equal(await page.locator('#asof').textContent(), '');
