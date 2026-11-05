@@ -1,5 +1,7 @@
 # Injury inputs, trained models and promotion
 
+**Latest dated update:** [N042 current rolling and injury research](N042_RESEARCH_UPDATE.md) adds separately labeled original, raw shadow and raw current rolling streams. Earlier snapshots below remain unchanged.
+
 **Newer evidence:** [November 4 Pacific owner update](N041_RESEARCH_UPDATE.md) adds a completed 960-recipe contribution study, 266 listed current injury entries and a separate 02:26 UTC issue. The dated results below retain their original cohorts and model identities.
 [Open the dashboard](review.html#injury-model-readiness) · [Current issue clocks](INJURY_REFRESH_N040.md) · [Retained model card](CURRENT_MODEL_CARD.md)
 

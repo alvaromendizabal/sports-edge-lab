@@ -574,6 +574,12 @@ def build_review(*, check=False):
     history_n041, history_n041_receipt = load_history_n041()
     from injury_contribution import load_contribution, render_contribution
     contribution, contribution_receipt = load_contribution()
+    from historical_source_delta_n042 import load_historical_delta as load_history_n042
+    history_n042, history_n042_receipt = load_history_n042()
+    from current_source_n042 import load_current_source as load_source_n042
+    source_n042, source_n042_receipt = load_source_n042(latest)
+    from current_issues_n042 import load_current_issues
+    issues_n042, issues_n042_receipt = load_current_issues(latest)
     chicago_proof = (HERE / "chicago_seattle_recovery_n042.json").read_bytes()
     require(hashlib.sha256(chicago_proof).hexdigest() == "1a2360be71a7a89fa8a86099fcfa10ae63df9b80b159a3b24b925b6007aa89c1",
             "Chicago–Seattle recovery proof differs from reviewed evidence")
@@ -589,6 +595,9 @@ def build_review(*, check=False):
     page = page.replace("__SOURCE_RECOVERY_JSON__", canonical(recovery).decode().replace("<", "\\u003c"))
     page = page.replace("__PRIMARY_ISSUE_JSON__", canonical(primary).decode().replace("<", "\\u003c"))
     page = page.replace("__INJURY_METRIC_TABLES__", render_selected_metrics(injury_metrics))
+    page = page.replace("__N042_HISTORY_DELTA_JSON__", canonical(history_n042).decode().replace("<", "\\u003c"))
+    page = page.replace("__N042_CURRENT_SOURCE_JSON__", canonical(source_n042).decode().replace("<", "\\u003c"))
+    page = page.replace("__CURRENT_ISSUES_N042_JSON__", canonical(issues_n042).decode().replace("<", "\\u003c"))
     page = page.replace("__INJURY_N041_JSON__", canonical(injury_n041).decode().replace("<", "\\u003c"))
     page = page.replace("__N041_CURRENT_SOURCE_JSON__", canonical(source_n041).decode().replace("<", "\\u003c"))
     page = page.replace("__N041_HISTORY_DELTA_JSON__", canonical(history_n041).decode().replace("<", "\\u003c"))
@@ -603,13 +612,13 @@ def build_review(*, check=False):
     page = page.replace("__N038_SOURCE_JSON__", canonical(source_n038).decode().replace("<", "\\u003c"))
     page = page.replace("__N038_SOURCE_SCRIPT__", (HERE / "source_review_n038.js").read_text())
     page = page.replace("__LATEST_SCRIPT__", (HERE / "current_coverage.js").read_text())
-    require(all(marker not in page for marker in ("__EVIDENCE_", "__CURRENT_", "__WEEKLY_", "__LATEST_", "__POINTS_", "__SOURCE_OVERLAY_", "__RESCHEDULE_", "__SOURCE_RECOVERY_", "__PRIMARY_ISSUE_", "__INJURY_ISSUE_", "__LATEST_PREGAME_", "__N038_SOURCE_", "__INJURY_REFRESH_", "__INJURY_N040_", "__INJURY_METRIC_", "__N039_CURRENT_SOURCE_", "__N040_CURRENT_SOURCE_", "__N040_HISTORY_DELTA_", "__INJURY_N041_", "__N041_CURRENT_SOURCE_", "__N041_HISTORY_DELTA_", "__CONTRIBUTION_")), "Unfilled review template")
+    require(all(marker not in page for marker in ("__EVIDENCE_", "__CURRENT_", "__WEEKLY_", "__LATEST_", "__POINTS_", "__SOURCE_OVERLAY_", "__RESCHEDULE_", "__SOURCE_RECOVERY_", "__PRIMARY_ISSUE_", "__INJURY_ISSUE_", "__LATEST_PREGAME_", "__N038_SOURCE_", "__INJURY_REFRESH_", "__INJURY_N040_", "__INJURY_METRIC_", "__N039_CURRENT_SOURCE_", "__N040_CURRENT_SOURCE_", "__N040_HISTORY_DELTA_", "__INJURY_N041_", "__N041_CURRENT_SOURCE_", "__N041_HISTORY_DELTA_", "__CONTRIBUTION_", "__N042_CURRENT_SOURCE_", "__N042_HISTORY_DELTA_")), "Unfilled review template")
     output = HERE / "review.html"
     if check:
         require(output.is_file() and output.read_text() == page, "Generated review differs; run contracts.py --build-review")
     else:
         output.write_text(page)
-    return {**receipt, **current_receipt, **weekly_receipt, **latest_receipt, **points_receipt, **overlay_receipt, **reschedule_receipt, **recovery_receipt, **primary_receipt, **injury_issue_receipt, **latest_pregame_receipt, **latest_n037_receipt, **current_n037_receipt, **source_n038_receipt, **injury_refresh_receipt, **injury_n040_receipt, **injury_metrics_receipt, **source_n039_receipt, **source_n040_receipt, **history_n040_receipt, **injury_n041_receipt, **source_n041_receipt, **history_n041_receipt, **contribution_receipt, "review": "review.html", "evidence_sha256": digest(data), "generated_page_matches": True, "chicago_recovery_proof_validated": True}
+    return {**receipt, **current_receipt, **weekly_receipt, **latest_receipt, **points_receipt, **overlay_receipt, **reschedule_receipt, **recovery_receipt, **primary_receipt, **injury_issue_receipt, **latest_pregame_receipt, **latest_n037_receipt, **current_n037_receipt, **source_n038_receipt, **injury_refresh_receipt, **injury_n040_receipt, **injury_metrics_receipt, **source_n039_receipt, **source_n040_receipt, **history_n040_receipt, **injury_n041_receipt, **source_n041_receipt, **history_n041_receipt, **contribution_receipt, **issues_n042_receipt, **source_n042_receipt, **history_n042_receipt, "review": "review.html", "evidence_sha256": digest(data), "generated_page_matches": True, "chicago_recovery_proof_validated": True}
 
 
 def demo(*, output):
