@@ -49,6 +49,11 @@ class WorkProgressTests(unittest.TestCase):
         with self.assertRaises(ValueError):
             compare(self.first, self.first)
 
+    def test_new_phase_cannot_move_the_observation_clock_backwards(self):
+        earlier = replace(self.first, phase="models", observed_at="2034-12-31T00:00:00Z")
+        with self.assertRaisesRegex(ValueError, "clocks must advance"):
+            compare(earlier, self.first)
+
     def test_exhausted_priority_budget_releases_model_work(self):
         self.assertEqual(select_phase(current_inventory_disposed=True, priority_budget_exhausted=True,
             priority_work_remaining=True, model_report_finished=False), "MODEL_AND_REPORT")

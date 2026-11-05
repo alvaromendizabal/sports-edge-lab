@@ -47,12 +47,14 @@ def compare(current: Snapshot, previous: Snapshot | None = None) -> dict:
               "cooldown_until": current.cooldown_until, "rows_per_second": None,
               "eta_seconds": None, "eta_status": "NOT_ESTIMABLE",
               "meaningful_interval_progress": None}
-    if previous is None or previous.phase != current.phase:
+    if previous is None:
         return result
     elapsed = (datetime.fromisoformat(current.observed_at.replace("Z", "+00:00")) -
                datetime.fromisoformat(previous.observed_at.replace("Z", "+00:00"))).total_seconds()
     if not isfinite(elapsed) or elapsed <= 0:
         raise ValueError("Observation clocks must advance")
+    if previous.phase != current.phase:
+        return result
     for field in ("attempts", "successful_responses", "errors", "completed_items",
                   "verified_new_rows", "covered_games"):
         if getattr(current, field) < getattr(previous, field):
