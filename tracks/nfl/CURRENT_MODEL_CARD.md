@@ -1,5 +1,30 @@
 # NFL retained research model card
 
+## Latest actual N045 study and issue
+
+The expanded designation study completed **1,152/1,152 historical cells**, 462 rolling jobs, 1,029 new native fits and nine new stacking fits. There were no blocked cells, native failures or protected-original refits. Exact compatible designation identities reused: 576; all restored fitted identities across the run: 3,355. Whole-run research acceptance remains false; completion is not promotion.
+
+| Pre-2024-selected annual reconstruction | 2024/25 development-exposed | 2026 descriptive monitoring |
+|---|---:|---:|
+| Winner: ExtraTrees, log loss | 0.625236 (569 games) | 0.663311 (119 non-ties) |
+| Winner: Brier / correct | 0.217420 / 385 | 0.235871 / 78 |
+| Margin: ExtraTrees, MAE | 10.004398 (570 games) | 10.066063 (120 games) |
+| Total: ExtraTrees, MAE | 10.298938 (570 games) | 11.394803 (120 games) |
+
+These are new reconstruction results, not the older N043 scores below. Annual, weekly and event origins are evaluated separately. No designation-study forecasts were issued and no model was automatically promoted. The retained N026 historical probability leader (LL 0.617703) and N022 current feedback record (LL 0.629080) remain better on their stated cohorts.
+
+Three retained current lanes genuinely issued 261 target rows for 29 games: original calibrated at 20:17:56 UTC, raw shadow at 20:18:38 UTC, and fresh rolling raw at 20:19:46 UTC. Current features were about 53 seconds old for the fresh rolling issue; the other lanes retain an older base clock. These are early research forecasts with zero final-hour-qualified betting cards. They do not use the newly completed designation recipes.
+
+Current injury inputs contain 287 listed rows across 28 of 30 Week 9 teams. Buffalo and Minnesota remain unknown. Injury designations do not establish the announced starter, backup quality, complete depth chart or reserve status. No whole-roster-health claim is made. [Actual study accounting](owner_study_n045.json) · [Current issued outputs](current_issues_n045.json) · [Current market reference clocks](current_source_n045.json).
+
+The independent annual source inventory distinguishes 36,403 acquisition-normalized rows from 37,264 resolver-input rows: 28,737 publication-clock rows and 8,527 acquisition-clock-only rows. Their difference is not new acquisition. The repaired archive contains 72/72 discovered articles and 3,671 T1 / 3,562 T2 eligible rows, not complete all-season player coverage.
+
+Against the same-root older injury control, selected current annual winner log loss worsened by 0.006469 (95% week-bootstrap interval +0.001223 to +0.011391); margin MAE worsened by 0.119491 (+0.006014 to +0.213011). Total MAE improved by 0.052204, with uncertainty spanning zero. These descriptive paired comparisons do not support promotion.
+
+The new designation inputs use the T1 cutoff (one hour before kickoff) on top of retained base features with a T2 information boundary. This augmented model is not a T2 forecast. Its scores must not be mixed with the separate 91-game T2 provider comparison.
+
+The following dated sections preserve earlier results and their limitations.
+
 **November 5 current-source recovery:** three new early issue streams cover 29 games, including a fresh raw rolling stream using the 121-game training view. All fitted components were restored. No new designation model or promotion is claimed. The expanded preparation later stopped on a private-scope check. [Actual N044 results and limitations](N044_RESEARCH_UPDATE.md).
 **Prior study update:** [N043 completed designation study and partial continuation](N043_RESEARCH_UPDATE.md) records all 1,152 historical cells, 1,605 new native fits plus nine stacks, and two separately issued retained-head streams. A new fresh rolling issue was blocked. Prior N042 streams and the dated scores below remain unchanged.
 
