@@ -40,7 +40,7 @@ const { chromium } = require(process.env.PLAYWRIGHT_MODULE_DIR || 'playwright');
         assert.deepEqual([attempt.synthetic_tests_passed, attempt.synthetic_test_errors,
           attempt.synthetic_tests_failed, attempt.synthetic_tests_skipped, attempt.synthetic_tests_total], [827, 0, 0, 1, 828]);
         assert.deepEqual([attempt.completed_scientific_stages, attempt.attempted_scientific_stages,
-          attempt.planned_scientific_stages], [10, 11, 12]);
+          attempt.planned_scientific_stages], [10, 11, 13]);
         assert.deepEqual([attempt.new_real_target_fits, attempt.new_calibration_fits,
           attempt.new_empirical_residual_fits, attempt.reused_target_fits], [156, 48, 60, 108]);
         assert.equal(attempt.new_prospective_issues, 0);
@@ -55,10 +55,12 @@ const { chromium } = require(process.env.PLAYWRIGHT_MODULE_DIR || 'playwright');
         assert.deepEqual(evidence.providers.find(p => p.name === 'Polymarket').products,
           [{name:'International',status:'PARTIAL_INTERNATIONAL_CAPTURE'}, {name:'US',status:'NOT_ACQUIRED_UNVERIFIED'}]);
         for (const provider of evidence.providers) {
-          assert.equal(provider.eligible_comparison_coverage, 'NOT_ESTABLISHED');
+          const expectedCoverage = league === 'ncaam' && provider.name === 'Polymarket'
+            ? 'RECONSTRUCTED_PAIRED_POPULATION_ONLY' : 'NOT_ESTABLISHED';
+          assert.equal(provider.eligible_comparison_coverage, expectedCoverage);
           assert.equal(provider.hypothetical_ROI, null);
           const providerRow = page.locator('#provider-table tr').filter({hasText:provider.name});
-          assert.match(await providerRow.innerText(), /NOT ESTABLISHED/);
+          assert.equal(await providerRow.locator('td').last().innerText(), expectedCoverage.replaceAll('_', ' '));
           assert.ok((await providerRow.innerText()).includes(provider.display_coverage));
         }
         const reconstructed = evidence.current_reconstructed_comparison;
@@ -80,15 +82,20 @@ const { chromium } = require(process.env.PLAYWRIGHT_MODULE_DIR || 'playwright');
           assert.match(await page.locator('#current-paired-disagreements').innerText(), /No earlier issue, market advantage or profit is inferred/);
         }
         assert.match(await page.locator('#attempt-summary').innerText(), /827 passed.*0 errors.*1 skipped/);
-        assert.match(await page.locator('#attempt-summary').innerText(), /10 of 12 workflow stages completed/);
+        assert.match(await page.locator('#attempt-summary').innerText(), /10 of 13 workflow stages completed/);
         assert.match(await page.locator('#execution-intro').innerText(), /B039 returned.*all five weekly CSV exports, then failed/);
         assert.doesNotMatch(await page.locator('.status-strip strong').innerText(), /workflow completed/i);
         assert.match(await page.locator('#preserved-study-copy').innerText(), /108 committed target fits across both leagues; 54 in this track/);
-        assert.equal(await page.locator('#phase-table tr').count(), 12);
+        assert.equal(await page.locator('#phase-table tr').count(), 13);
         assert.equal(await page.locator('#phase-table .done').count(), 10);
         assert.equal(await page.locator('#phase-table .failed').count(), 1);
         assert.match(await page.locator('#phase-table tr').nth(10).innerText(), /Game, week and season reporting\s+Failed/);
         assert.match(await page.locator('#phase-table tr').nth(11).innerText(), /Historical source inventory and backfill\s+Not started/);
+        assert.equal(attempt.stages.filter(stage => stage.status === 'NOT_STARTED').length, 2);
+        assert.equal(attempt.stages[12].status, 'NOT_STARTED');
+        assert.equal(attempt.stages[12].seconds, null);
+        assert.match(attempt.stages[12].label, /Final display.*secondary history/i);
+        assert.match(await page.locator('#phase-table tr').nth(12).innerText(), /Final display.*secondary history\s+Not started/i);
         assert.equal(await page.locator('#history-phase-table .done').count(), 3);
         assert.equal(await page.locator('#history-phase-table .failed').count(), 1);
         assert.equal(inventory.snapshot_at, '2026-11-05T05:26:05.199791+00:00');

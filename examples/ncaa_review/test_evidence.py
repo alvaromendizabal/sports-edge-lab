@@ -193,8 +193,8 @@ class EvidenceTests(unittest.TestCase):
             attempt = data['current_owner_attempt']
             self.assertEqual(attempt['release'], 'B039')
             self.assertEqual(attempt['status'], 'FAILED_PARTIAL_WORK_PRESERVED')
-            self.assertEqual((attempt['completed_scientific_stages'], attempt['planned_scientific_stages']), (10, 12))
-            self.assertEqual([x['status'] for x in attempt['stages']], ['COMPLETED']*10+['FAILED','NOT_STARTED'])
+            self.assertEqual((attempt['completed_scientific_stages'], attempt['planned_scientific_stages']), (10, 13))
+            self.assertEqual([x['status'] for x in attempt['stages']], ['COMPLETED']*10+['FAILED','NOT_STARTED','NOT_STARTED'])
             self.assertEqual((attempt['new_real_target_fits'], attempt['new_calibration_fits'], attempt['new_empirical_residual_fits']), (156,48,60))
             self.assertEqual(attempt['league_new_real_target_fits'], 96 if league=='ncaam' else 60)
             self.assertEqual(attempt['reused_target_fits'],108)

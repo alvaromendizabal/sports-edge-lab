@@ -4,7 +4,7 @@
 
 ## Current review — November 4, 2026 Pacific · B039
 
-The latest authenticated owner completed **10 of 12 workflow stages**, then failed while publishing an oversized weekly HTML report. It committed **156 target fits, 48 scalar calibrations and 60 empirical fits** across the two leagues, including **60 target fits in this track**. The 108 historical target fits were reused separately. All five CSV exports survived. The 827 passed fixtures and one explicit optional skip are software validation, separate from those real fits.
+The latest authenticated owner completed **10 of 13 workflow stages**, then failed while publishing an oversized weekly HTML report. It committed **156 target fits, 48 scalar calibrations and 60 empirical fits** across the two leagues, including **60 target fits in this track**. The 108 historical target fits were reused separately. All five CSV exports survived. The 827 passed fixtures and one explicit optional skip are software validation, separate from those real fits.
 
 The recovered report contains **1,379 source/candidate records and 364 observed finals in this track** as of November 4 at 9:26 p.m. Pacific. Men and women remain separate. Both tracks together contain 2,821 candidate records, including 1,022 unmatched official candidates and eight unresolved source candidates; four rejected official records are separately visible in the source audit. Unknown identity, phase, division and exact time prevent a complete official-denominator claim.
 

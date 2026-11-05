@@ -55,7 +55,7 @@
       "fixtures": 16.145390559999214,
       "science": 3361.3501968109995
     },
-    "planned_scientific_stages": 12,
+    "planned_scientific_stages": 13,
     "prediction_row_scope": "Native target reconstruction rows; frozen original adds 3,966 separately. No as-issued credit.",
     "provider_request_note": "Exact provider dispatch receipts are retained privately; a transient Kalshi disconnect stopped further Kalshi collection.",
     "release": "B039",
@@ -130,6 +130,11 @@
         "label": "Historical source inventory and backfill",
         "seconds": null,
         "status": "NOT_STARTED"
+      },
+      {
+        "label": "Final display after secondary history",
+        "seconds": null,
+        "status": "NOT_STARTED"
       }
     ],
     "status": "FAILED_PARTIAL_WORK_PRESERVED",
@@ -149,7 +154,7 @@
     "status": "NO_EXACT_PAIRED_COHORT_SUPPLIED"
   },
   "current_season": {
-    "label": "2026\u201327",
+    "label": "2026–27",
     "season_end_year": 2027
   },
   "evaluation": {
@@ -169,8 +174,8 @@
     "probability_tie_direction": "no directional pick"
   },
   "historical_seasons": {
-    "2025": "2024\u201325",
-    "2026": "2025\u201326"
+    "2025": "2024–25",
+    "2026": "2025–26"
   },
   "inventory_history": [
     {
