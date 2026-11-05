@@ -264,10 +264,12 @@ const {chromium}=require(process.env.PLAYWRIGHT_MODULE_DIR||'playwright');
   await page.selectOption('#coverage-horizon','LATEST_OBSERVED');
 
   assert.match(await page.locator('#coverage-asof').innerText(),/FAILED/);
-  assert.match(await page.locator('#unjoined-provider-note').innerText(),/Six DraftKings/);
+  assert.match(await page.locator('#unjoined-provider-note').innerText(),/Current capture recovered: LV at SF/);
   assert.match(await page.locator('#unjoined-provider-note').innerText(),/21:05 UTC/);
   assert.match(await page.locator('#unjoined-provider-note').innerText(),/21:25 UTC/);
-  assert.match(await page.locator('#unjoined-provider-note').innerText(),/recovery of an already captured reference/);
+  assert.match(await page.locator('#unjoined-provider-note').innerText(),/current references for all 15 Week 9 games/);
+  assert.match(await page.locator('#unjoined-provider-note').innerText(),/original owner normalizer's count remains 14/);
+  assert.match(await page.locator('#unjoined-provider-note').innerText(),/No new provider request/);
   assert.match(await page.locator('#coverage-clock-note').innerText(),/Reaching T2 is not a requirement/);
   assert.match(await page.locator('#monday-game-summary').innerText(),/Chicago 34–17 Seattle/);
   assert.match(await page.locator('#monday-game-summary').innerText(),/Seattle lost/);
