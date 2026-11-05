@@ -155,6 +155,7 @@ const {chromium}=require(process.env.PLAYWRIGHT_MODULE_DIR||'playwright');
   assert.match(await page.locator('#injury-model-readiness').innerText(),/2,304 historical native cells/);
   assert.match(await page.locator('#injury-model-readiness').innerText(),/More injury data has not established an overall gain/);
   await page.selectOption('#coverage-period','10');
+  await page.selectOption('#coverage-model','experimental_injury_n040');
   assert.equal((await page.locator('.experimental-injury-status').allTextContents()).filter(x=>x.includes('No current report rows')).length,14);
   await page.locator('#show-injury-challenger').click();
   await page.selectOption('#coverage-model','original_frozen');
