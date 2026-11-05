@@ -1,4 +1,5 @@
 {
+  "coverage_evidence_release": "B040",
   "current_coverage_gaps": {
     "both_leagues_observed_finals": 738,
     "both_leagues_source_records": 2816,
@@ -19,95 +20,126 @@
     "admission": {
       "acquisition_workers_planned": 8,
       "affinity_cpus": 8,
-      "aggregate_busy_cores": 0.1594022415940224,
-      "available_memory_bytes": 25522597888,
+      "aggregate_busy_cores": 0.2397003745318349,
+      "available_memory_bytes": 24278327296,
       "capacity_is_observation_not_reservation": true,
       "descendant_usage_measured": true,
       "foreign_processes_signaled": 0,
       "lock_files_deleted": 0,
+      "measured_wait_seconds": 1.0016066460084403,
       "raw_samples_preserved_in_private_evidence": true,
-      "workers_planned": 7
+      "workers_planned": 6
     },
-    "attempted_scientific_stages": 7,
-    "completed_at": "2026-11-05T18:47:31.353705+00:00",
-    "completed_child_cpu_seconds": 83.366233,
-    "completed_scientific_stages": 6,
+    "attempted_scientific_stages": 0,
+    "completed_at": "2026-11-05T21:30:39.808779+00:00",
+    "completed_child_cpu_seconds": 0.358848,
+    "completed_scientific_stages": 0,
     "cost_status": "UNVERIFIED_NO_CURRENT_INSTANCE_RATE_OR_BILLING_ASSUMED",
-    "cpu_seconds": 771.733155,
+    "cpu_seconds": 36.868363,
     "current_outcomes_used_for_selection": false,
-    "failure_class": "NoSuchKey",
-    "failure_description": "A legacy commit locator was used for a newer immutable checkpoint schema. The canonical checkpoint address is derived from its authenticated identity.",
-    "failure_phase": "CURRENT_MONITOR_CHECKPOINT_IMPORT",
+    "failure_class": "ValueError",
+    "failure_code": "PROGRESS_COUNTER_WENT_BACKWARD",
+    "failure_description": "Two independently authenticated predecessor queues shared one progress counter. The second queue restarted at one after the first reached 108, so the monotonic guard correctly stopped setup. Source-aware queue identities preserve the guard.",
+    "failure_phase": "PRE_SCIENCE_PREDECESSOR_SETUP",
     "league_new_real_target_fits": 0,
     "new_calibration_fits": 0,
     "new_empirical_residual_fits": 0,
+    "new_injury_fits": 0,
+    "new_injury_requests": 0,
     "new_orders": 0,
-    "new_prediction_rows": 3969,
+    "new_prediction_rows": 0,
     "new_prospective_issues": 0,
-    "new_provider_requests": 6351,
+    "new_provider_requests": 0,
     "new_real_target_fits": 0,
-    "next_execution_status": "Next release repairs reuse and retries and adds separately identified injury research. No next owner execution is asserted.",
+    "new_source_refreshes": 0,
+    "next_execution_status": "The next owner must keep each predecessor progress queue separate while preserving counters, cutoffs, locks and earlier evidence. No later owner success is asserted.",
+    "optional_skip_scope": "Live waiter integration requires both optional Linux pidfd APIs. The individual missing API was not recorded.",
     "original_monitoring_unchanged": true,
-    "owner_peak_rss_bytes": 6633418752,
+    "outcome_summary": "It stopped during predecessor setup before any scientific stage, source refresh, model import or fit. Two source queues shared one counter; the monotonic guard preserved the failure. Earlier valid forecasts and models remain intact.",
+    "owner_peak_rss_bytes": 1150996480,
     "owner_post_close_verification": "full_return_bytes_verified",
+    "phase_scope_note": "The private timer named science included predecessor setup; no scientific stage began. Setup is shown separately.",
     "phase_seconds": {
-      "admission": 1.0033133959950646,
-      "fixtures": 16.85895410500234,
-      "science": 2490.3243649669894
+      "admission": 1.010592467006063,
+      "fixtures": 21.037580015006824,
+      "other": 2.2786933629977284,
+      "science": null,
+      "setup": 18.793449206990772
     },
-    "planned_scientific_stages": 13,
-    "prediction_row_scope": "Frozen original retrospective or preview target rows, covering 1,323 source games; no as-issued credit.",
-    "provider_request_note": "4,001 Kalshi, 1,592 Polymarket international,758 ESPN dispatches; a separate rule-document GET is not a paid historical-odds call. Zero paid Odds API calls.",
-    "release": "B040",
-    "remaining_phases": "Six later workflow stages were not reached. Exact official reconciliation and historical quote/injury coverage remain incomplete.",
-    "return_finalization_seconds": 0.9252679840137716,
-    "return_inner_serialization_seconds": 0.6599307120050071,
-    "return_persistence_attempt_seconds": 0.25922327701118775,
+    "planned_scientific_stages": 15,
+    "prediction_row_scope": "No new predictions or model imports; all prior dated reconstructions remain preserved.",
+    "progress": {
+      "candidate_registrations_are_imports": false,
+      "first_queue_planned_candidates": 108,
+      "first_queue_registered_candidates": 108,
+      "fixture_ETA_absolute_error_seconds": 12.666435550168778,
+      "fixture_ETA_calibrated_samples": 1,
+      "scientific_family_ETA": "UNMEASURED_NO_FAMILY_STARTED",
+      "second_queue_planned_candidates": 460,
+      "second_queue_registered_completions": 0
+    },
+    "provider_request_note": "Only stored predecessor artifacts were read. No game, market or injury source acquisition stage began.",
+    "release": "B041",
+    "remaining_phases": "All 15 scientific stages were unstarted. Source capture, checkpoint imports and the injury study still require actual owner execution.",
+    "return_finalization_seconds": 0.3369001120008761,
+    "return_inner_serialization_seconds": 0.1374195590033196,
+    "return_persistence_attempt_seconds": 0.19640918099321425,
     "reused_native_scalar_fits": 0,
     "reused_native_target_fits": 0,
-    "reused_target_fits": 108,
+    "reused_target_fits": 0,
     "run_scope": "NCAA_MEN_AND_WOMEN_COMBINED",
     "scientific_credit_from_subsequent_readback": 0,
     "scientific_goal_complete": false,
     "simultaneous_process_tree_peak_measured": false,
+    "stage_progress_note": "Setup failed before stage one; all 15 scientific stages remain unstarted.",
     "stages": [
       {
         "label": "Current inventory and provider acquisition",
-        "seconds": 1906.4260484139959,
-        "status": "COMPLETED"
+        "seconds": null,
+        "status": "NOT_STARTED"
       },
       {
         "label": "Authenticate prior inputs and work",
-        "seconds": 107.87398073800432,
-        "status": "COMPLETED"
+        "seconds": null,
+        "status": "NOT_STARTED"
       },
       {
         "label": "Historical feature review",
-        "seconds": 9.948498847006704,
-        "status": "COMPLETED"
+        "seconds": null,
+        "status": "NOT_STARTED"
       },
       {
         "label": "Verify and reuse historical targets",
-        "seconds": 25.736378510991926,
-        "status": "COMPLETED"
+        "seconds": null,
+        "status": "NOT_STARTED"
       },
       {
         "label": "Current feature reconstruction",
-        "seconds": 144.10186408899608,
-        "status": "COMPLETED"
+        "seconds": null,
+        "status": "NOT_STARTED"
+      },
+      {
+        "label": "Timestamped injury and availability acquisition",
+        "seconds": null,
+        "status": "NOT_STARTED"
       },
       {
         "label": "Original frozen inference",
-        "seconds": 119.37307723100821,
-        "status": "COMPLETED"
+        "seconds": null,
+        "status": "NOT_STARTED"
       },
       {
         "label": "Chronological selected current reconstruction",
-        "seconds": 25.596456661005504,
-        "status": "FAILED"
+        "seconds": null,
+        "status": "NOT_STARTED"
       },
       {
         "label": "Native chronological reconstruction",
+        "seconds": null,
+        "status": "NOT_STARTED"
+      },
+      {
+        "label": "Chronological paired injury challengers and controls",
         "seconds": null,
         "status": "NOT_STARTED"
       },
@@ -139,12 +171,12 @@
     ],
     "status": "FAILED_PARTIAL_WORK_PRESERVED",
     "synthetic_test_errors": 0,
-    "synthetic_test_seconds": 16.85895410500234,
+    "synthetic_test_seconds": 21.037580015006824,
     "synthetic_tests_failed": 0,
-    "synthetic_tests_passed": 892,
+    "synthetic_tests_passed": 982,
     "synthetic_tests_skipped": 1,
-    "synthetic_tests_total": 893,
-    "total_wall_seconds": 2510.6765412079985
+    "synthetic_tests_total": 983,
+    "total_wall_seconds": 43.12031505200139
   },
   "current_reconstructed_comparison": {
     "as_issued": false,
@@ -205,7 +237,7 @@
     "active_audit": "Audited active original and historical feature paths have no explicit injury-report feed. This is not a claim about every past track or version.",
     "all_injuries_complete": false,
     "clock_policy": "Display latest observed reports separately from information at two hours, one hour and strictly before tip. A newly recovered article is not proof of an earlier captured vintage.",
-    "coverage": "Partial official source acquisition; no complete season injury inventory or measured performance gain.",
+    "coverage": "Partial official source evidence and continuing archive discovery; no complete season injury inventory or measured performance gain. The latest B041 owner never reached injury acquisition or fitting.",
     "new_owner_injury_fits": 0,
     "next_branch": "Separately identified injury-aware challengers and paired controls; originals preserved.",
     "promotion": "Historical chronological paired comparisons and future confirmation required; current outcomes do not select the promoted model."
@@ -1375,15 +1407,146 @@
       "synthetic_tests_skipped": 1,
       "synthetic_tests_total": 828,
       "total_wall_seconds": 3380.756060078995
+    },
+    {
+      "admission": {
+        "acquisition_workers_planned": 8,
+        "affinity_cpus": 8,
+        "aggregate_busy_cores": 0.1594022415940224,
+        "available_memory_bytes": 25522597888,
+        "capacity_is_observation_not_reservation": true,
+        "descendant_usage_measured": true,
+        "foreign_processes_signaled": 0,
+        "lock_files_deleted": 0,
+        "raw_samples_preserved_in_private_evidence": true,
+        "workers_planned": 7
+      },
+      "attempted_scientific_stages": 7,
+      "completed_at": "2026-11-05T18:47:31.353705+00:00",
+      "completed_child_cpu_seconds": 83.366233,
+      "completed_scientific_stages": 6,
+      "cost_status": "UNVERIFIED_NO_CURRENT_INSTANCE_RATE_OR_BILLING_ASSUMED",
+      "cpu_seconds": 771.733155,
+      "current_outcomes_used_for_selection": false,
+      "failure_class": "NoSuchKey",
+      "failure_description": "A legacy commit locator was used for a newer immutable checkpoint schema. The canonical checkpoint address is derived from its authenticated identity.",
+      "failure_phase": "CURRENT_MONITOR_CHECKPOINT_IMPORT",
+      "league_new_real_target_fits": 0,
+      "new_calibration_fits": 0,
+      "new_empirical_residual_fits": 0,
+      "new_orders": 0,
+      "new_prediction_rows": 3969,
+      "new_prospective_issues": 0,
+      "new_provider_requests": 6351,
+      "new_real_target_fits": 0,
+      "next_execution_status": "Next release repairs reuse and retries and adds separately identified injury research. No next owner execution is asserted.",
+      "original_monitoring_unchanged": true,
+      "owner_peak_rss_bytes": 6633418752,
+      "owner_post_close_verification": "full_return_bytes_verified",
+      "phase_seconds": {
+        "admission": 1.0033133959950646,
+        "fixtures": 16.85895410500234,
+        "science": 2490.3243649669894
+      },
+      "planned_scientific_stages": 13,
+      "prediction_row_scope": "Frozen original retrospective or preview target rows, covering 1,323 source games; no as-issued credit.",
+      "provider_request_note": "4,001 Kalshi, 1,592 Polymarket international,758 ESPN dispatches; a separate rule-document GET is not a paid historical-odds call. Zero paid Odds API calls.",
+      "release": "B040",
+      "remaining_phases": "Six later workflow stages were not reached. Exact official reconciliation and historical quote/injury coverage remain incomplete.",
+      "return_finalization_seconds": 0.9252679840137716,
+      "return_inner_serialization_seconds": 0.6599307120050071,
+      "return_persistence_attempt_seconds": 0.25922327701118775,
+      "reused_native_scalar_fits": 0,
+      "reused_native_target_fits": 0,
+      "reused_target_fits": 108,
+      "run_scope": "NCAA_MEN_AND_WOMEN_COMBINED",
+      "scientific_credit_from_subsequent_readback": 0,
+      "scientific_goal_complete": false,
+      "simultaneous_process_tree_peak_measured": false,
+      "stages": [
+        {
+          "label": "Current inventory and provider acquisition",
+          "seconds": 1906.4260484139959,
+          "status": "COMPLETED"
+        },
+        {
+          "label": "Authenticate prior inputs and work",
+          "seconds": 107.87398073800432,
+          "status": "COMPLETED"
+        },
+        {
+          "label": "Historical feature review",
+          "seconds": 9.948498847006704,
+          "status": "COMPLETED"
+        },
+        {
+          "label": "Verify and reuse historical targets",
+          "seconds": 25.736378510991926,
+          "status": "COMPLETED"
+        },
+        {
+          "label": "Current feature reconstruction",
+          "seconds": 144.10186408899608,
+          "status": "COMPLETED"
+        },
+        {
+          "label": "Original frozen inference",
+          "seconds": 119.37307723100821,
+          "status": "COMPLETED"
+        },
+        {
+          "label": "Chronological selected current reconstruction",
+          "seconds": 25.596456661005504,
+          "status": "FAILED"
+        },
+        {
+          "label": "Native chronological reconstruction",
+          "seconds": null,
+          "status": "NOT_STARTED"
+        },
+        {
+          "label": "Preserve immutable issues",
+          "seconds": null,
+          "status": "NOT_STARTED"
+        },
+        {
+          "label": "Final display-only refresh",
+          "seconds": null,
+          "status": "NOT_STARTED"
+        },
+        {
+          "label": "Game, week and season reporting",
+          "seconds": null,
+          "status": "NOT_STARTED"
+        },
+        {
+          "label": "Historical source inventory and backfill",
+          "seconds": null,
+          "status": "NOT_STARTED"
+        },
+        {
+          "label": "Final display after secondary history",
+          "seconds": null,
+          "status": "NOT_STARTED"
+        }
+      ],
+      "status": "FAILED_PARTIAL_WORK_PRESERVED",
+      "synthetic_test_errors": 0,
+      "synthetic_test_seconds": 16.85895410500234,
+      "synthetic_tests_failed": 0,
+      "synthetic_tests_passed": 892,
+      "synthetic_tests_skipped": 1,
+      "synthetic_tests_total": 893,
+      "total_wall_seconds": 2510.6765412079985
     }
   ],
   "provenance": {
     "aggregate_verification": "Historical objective and season metrics were independently recomputed from authenticated per-game exports. Only sanitized aggregates are public.",
-    "failed_owner_return_sha256": "1127a9e404cde4fc58cd2e983d118f7fec9ea00f368884423d42cfd3f96532c2",
+    "failed_owner_return_sha256": "7eed530e80bbc076e4953b45f049eb3f9fff79f051bbb3da06932a3f3e952947",
     "historical_accepted_owner_return_sha256": "df98ed0758c29deaed943355349833ab0aeaa23a79693b5efc027e835075e4da",
-    "latest_evidence_qualification": "B040 completed 6 of 13 stages, refreshed 557,737 retained observations, reused 108 historical targets and produced 3,969 frozen-original reconstruction rows. Checkpoint addressing failed before any new fits. B039 results remain preserved; full coverage and prospective profit unverified.",
-    "latest_nested_return_sha256": "1127a9e404cde4fc58cd2e983d118f7fec9ea00f368884423d42cfd3f96532c2",
-    "latest_outer_return_sha256": "924deb723c1ec88f6f5816b5dfc4a665bbce4893ede3b2d0063b7c7eb3e6210a",
+    "latest_evidence_qualification": "B041 failed during predecessor progress setup before any of 15 scientific stages. Zero new fits, imports, forecasts or provider calls; 982 fixtures passed and one optional integration skipped. B040 coverage and all B039/B033 results remain dated inherited evidence.",
+    "latest_nested_return_sha256": "7eed530e80bbc076e4953b45f049eb3f9fff79f051bbb3da06932a3f3e952947",
+    "latest_outer_return_sha256": "984066ef723eda2bb44a8440b7011c50d0767153fc26c6e07d19c4d145c622c2",
     "preserved_b033_return_sha256": "16b58cc6ed5bd4be303d41ae17816af2510f4e52a9bc011811f40e90f3003cfe",
     "prior_failed_owner_return_sha256": "ae14d708cf85615c1c9c57a7891db85261a5b1632ecd70349730bf2dde51d9b0",
     "public_review_reproduces": "Information-time and evaluation contracts on invented data; not private real-data retraining."

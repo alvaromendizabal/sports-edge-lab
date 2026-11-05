@@ -205,6 +205,44 @@ class EvidenceTests(unittest.TestCase):
             self.assertEqual(data['current_coverage_gaps']['rejected_official_records'],4)
             self.assertFalse(attempt['scientific_goal_complete'])
 
+    def test_b041_setup_failure_does_not_create_science_or_refresh_the_display(self):
+        for data in self.exports.values():
+            attempt = data['current_owner_attempt']
+            self.assertEqual(attempt['release'], 'B041')
+            self.assertEqual(attempt['failure_phase'], 'PRE_SCIENCE_PREDECESSOR_SETUP')
+            self.assertEqual(attempt['failure_code'], 'PROGRESS_COUNTER_WENT_BACKWARD')
+            self.assertEqual((attempt['synthetic_tests_passed'], attempt['synthetic_tests_skipped'],
+                              attempt['synthetic_test_errors']), (982, 1, 0))
+            self.assertEqual((attempt['completed_scientific_stages'], attempt['attempted_scientific_stages'],
+                              attempt['planned_scientific_stages']), (0, 0, 15))
+            self.assertEqual(len(attempt['stages']), 15)
+            self.assertTrue(all(s['status'] == 'NOT_STARTED' and s['seconds'] is None for s in attempt['stages']))
+            self.assertIsNone(attempt['phase_seconds']['science'])
+            self.assertAlmostEqual(attempt['phase_seconds']['setup'], 18.793449206990772)
+            self.assertAlmostEqual(sum(v for v in attempt['phase_seconds'].values() if v is not None),
+                                   attempt['total_wall_seconds'])
+            for key in ('new_real_target_fits', 'new_calibration_fits', 'new_empirical_residual_fits',
+                        'reused_target_fits', 'reused_native_target_fits', 'new_provider_requests',
+                        'new_injury_requests', 'new_injury_fits', 'new_prediction_rows', 'new_prospective_issues'):
+                self.assertEqual(attempt[key], 0)
+            self.assertFalse(attempt['progress']['candidate_registrations_are_imports'])
+            self.assertEqual(attempt['progress']['first_queue_registered_candidates'], 108)
+            self.assertEqual(attempt['progress']['second_queue_registered_completions'], 0)
+            self.assertEqual(data['coverage_evidence_release'], 'B040')
+            self.assertEqual(data['observed_inventory']['snapshot_at'], '2026-11-05T18:37:56.495943+00:00')
+
+    def test_b040_attempt_and_its_actual_acquisition_survive_in_history(self):
+        for data in self.exports.values():
+            attempt = next(x for x in data['owner_attempt_history'] if x['release'] == 'B040')
+            self.assertEqual((attempt['completed_scientific_stages'], attempt['planned_scientific_stages']), (6, 13))
+            self.assertEqual(attempt['failure_class'], 'NoSuchKey')
+            self.assertEqual(attempt['reused_target_fits'], 108)
+            self.assertEqual(attempt['new_prediction_rows'], 3969)
+            self.assertEqual(attempt['new_provider_requests'], 6351)
+            self.assertEqual(attempt['new_real_target_fits'], 0)
+            self.assertAlmostEqual(attempt['phase_seconds']['science'], 2490.3243649669894)
+            self.assertEqual(data['current_coverage_gaps']['market_observations'], 557737)
+
     def test_current_pair_is_retrospective_and_preserves_opposing_metric_results(self):
         pair=self.exports['ncaam']['current_reconstructed_comparison']
         self.assertEqual(pair['paired_games'],122)
@@ -247,7 +285,7 @@ class EvidenceTests(unittest.TestCase):
             self.assertNotRegex(output, r'__(?:TITLE|EVIDENCE|PROGRESS_DEMO|PREFLIGHT_DEMO|LEAGUE|SIBLING|SIBLING_LABEL)__')
             if path.parent.name in self.exports:
                 self.assertIn('NCAA evidence review · 05 November 2026 Pacific', output)
-                self.assertIn('Latest run is partial; completed work is preserved.', output)
+                self.assertIn('Latest run stopped before science; earlier work is preserved.', output)
                 self.assertNotIn('Latest run stopped during reporting', output)
                 embedded = re.search(r'<script type="application/json" id="evidence">(.*?)</script>', output, re.S)
                 self.assertIsNotNone(embedded)

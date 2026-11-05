@@ -8,6 +8,7 @@ from __future__ import annotations
 from dataclasses import asdict, dataclass
 import json
 import math
+import re
 from typing import Literal, Sequence
 
 
@@ -19,6 +20,28 @@ class Observation:
     reused: int = 0
     failed_attempts: int = 0
     workers: int | None = None
+
+
+@dataclass(frozen=True)
+class QueueIdentity:
+    """An operation and exact input digest identify one independent queue."""
+    operation: str
+    input_sha256: str
+
+    def __post_init__(self):
+        if not isinstance(self.operation, str) or not self.operation.strip():
+            raise ValueError("queue operation is required")
+        if not isinstance(self.input_sha256, str) or not re.fullmatch(r"[0-9a-f]{64}", self.input_sha256):
+            raise ValueError("queue input requires an exact SHA-256 identity")
+
+
+@dataclass(frozen=True)
+class QueueSnapshot:
+    identity: QueueIdentity
+    observations: Sequence[Observation]
+    total: int | None
+    observed_at: float
+    status: Literal["running", "completed", "failed", "cancelled"] = "running"
 
 
 @dataclass(frozen=True)
@@ -191,8 +214,48 @@ def demo_scenarios() -> list[dict]:
             for key, label, note, samples, total, t, status in cases]
 
 
+def estimate_queues(queues: Sequence[QueueSnapshot]) -> list[dict]:
+    """Keep denominators, counters and ETA histories bound to their own input.
+
+    Queue names alone are insufficient when the same operation processes more
+    than one immutable source. Duplicate identities remain an error; separating
+    sources must not weaken the monotonic counter checks within either source.
+    """
+    seen = set()
+    results = []
+    for queue in queues:
+        if not isinstance(queue.identity, QueueIdentity):
+            raise ValueError("explicit queue identity is required")
+        if queue.identity in seen:
+            raise ValueError("duplicate queue identity")
+        seen.add(queue.identity)
+        if any(point.phase != queue.identity.operation for point in queue.observations):
+            raise ValueError("observation operation does not match queue identity")
+        result = estimate(queue.observations, total=queue.total,
+                          observed_at=queue.observed_at, status=queue.status)
+        results.append({"identity": asdict(queue.identity), "progress": asdict(result)})
+    return results
+
+
+def distinct_queue_demo() -> list[dict]:
+    """Two invented source bodies use the same operation, independent counts."""
+    from hashlib import sha256
+    operation = "inspect invented inventory"
+    first = QueueSnapshot(
+        QueueIdentity(operation, sha256(b"invented source A").hexdigest()),
+        [Observation(operation, 0, 0), Observation(operation, 2, 1),
+         Observation(operation, 4, 2), Observation(operation, 6, 3)],
+        3, 6, "completed")
+    second = QueueSnapshot(
+        QueueIdentity(operation, sha256(b"invented source B").hexdigest()),
+        [Observation(operation, 0, 0), Observation(operation, 1, 1)],
+        5, 1)
+    return estimate_queues([first, second])
+
+
 def main() -> int:
-    print(json.dumps({"source": "INVENTED_EXAMPLE", "scenarios": demo_scenarios()}, indent=2, allow_nan=False))
+    print(json.dumps({"source": "INVENTED_EXAMPLE", "scenarios": demo_scenarios(),
+                      "independent_source_queues": distinct_queue_demo()}, indent=2, allow_nan=False))
     return 0
 
 

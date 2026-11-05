@@ -2,7 +2,42 @@
 
 [Project](../../README.md) · [Open interactive dashboard](https://alvaro-ncaa-research-review.alv-mendizabal.chatgpt.site/tracks/ncaaw/index.html) · [Dashboard source](index.html) · [Methodology and runnable example](../../examples/ncaa_review/README.md) · [Separate men's track](../ncaam/README.md)
 
-## Current review — November 4, 2026 Pacific · B039
+## Current review — November 5, 2026 Pacific · B041
+
+The latest authenticated owner stopped during predecessor setup, before any of
+**15 scientific stages**. Two independently authenticated source queues shared
+one progress counter: after the first reached 108, the second emitted one. The
+monotonic guard stopped the run. **982 fixture cases passed and one optional
+Linux integration was skipped**; zero source requests, imports, fits or forecasts
+were completed. Earlier models and data remain intact.
+
+Admission used measured aggregate CPU, memory and canonical locks: six fitting
+workers and eight acquisition lanes were planned in 1.002 seconds. No fit began.
+Owner wall time was 43.12 seconds: 21.04 for fixtures, 18.79 for predecessor setup,
+1.01 in the admission phase and 2.28 other overhead. Setup is separate from
+completed science. Finalization through exact return readback took 0.337 seconds.
+No foreign process was interrupted; actual billing remains unverified.
+
+The actual nested return SHA-256 is
+`7eed530e80bbc076e4953b45f049eb3f9fff79f051bbb3da06932a3f3e952947`.
+Durability preserves the failed outcome. The [interactive dashboard](index.html)
+keeps the latest B040 game/market capture clock and all earlier metric cohorts;
+it does not label those observations newly acquired by B041. A generic
+[independent-queue example](../../examples/ncaa_review/progress.py) preserves
+monotonic checks while keeping different source denominators separate.
+
+### Preserved B040 acquisition and original-model output
+
+B040 completed six of thirteen stages, retained 557,737 market observations and
+reused 108 historical target results before a checkpoint-address failure. Its
+original frozen engine produced 1,323 reconstructed or preview games / 3,969
+target rows; no earlier issue credit is inferred. The November 5 10:37 a.m. Pacific
+snapshot contains 2,816 source/candidate records and 738 finals across both leagues,
+including unresolved official records. These are not a reconciled physical-game
+denominator. Partial injury source discovery continues separately; no completed
+all-model injury retest or measured injury improvement is claimed.
+
+## Preserved review — November 4, 2026 Pacific · B039
 
 The latest authenticated owner completed **10 of 13 workflow stages**, then failed while publishing an oversized weekly HTML report. It committed **156 target fits, 48 scalar calibrations and 60 empirical fits** across the two leagues, including **60 target fits in this track**. The 108 historical target fits were reused separately. All five CSV exports survived. The 827 passed fixtures and one explicit optional skip are software validation, separate from those real fits.
 
@@ -58,7 +93,7 @@ These 2,000 resamples retain whole weeks within seasons and identical games for 
 
 Frozen-original parameters and actual issue timestamps remain unchanged. Rolling reconstruction must use only labels and features released strictly before each training or prediction cutoff, and must remain separate from the original model's season record. More recent training data does not guarantee better future predictions.
 
-The active provider scope is **Kalshi, Polymarket and DraftKings only**. Current-season matched comparisons, executable-price replay, ROI and market edge remain **unavailable**, not zero. Every comparison requires the same event, ordered teams, horizon, target and settlement, plus qualified quote clocks. The latest attempt stopped at current-source refresh before these current-season evaluation stages. Passing software fixtures never supplies missing game or quote evidence.
+The active provider scope is **Kalshi, Polymarket and DraftKings only**. Current-season matched comparisons, executable-price replay, ROI and market edge remain **unavailable**, not zero. Every comparison requires the same event, ordered teams, horizon, target and settlement, plus qualified quote clocks. The dated B033 attempt stopped at current-source refresh before these current-season evaluation stages; later owner outcomes are listed above. Passing software fixtures never supplies missing game or quote evidence.
 
 ### Reproducible public engineering
 
