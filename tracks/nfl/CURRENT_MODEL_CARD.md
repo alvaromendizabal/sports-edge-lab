@@ -1,5 +1,6 @@
 # NFL retained research model card
 
+**Newer evidence:** [November 4 Pacific owner update](N041_RESEARCH_UPDATE.md) adds a completed 960-recipe contribution study, 266 listed current injury entries and a separate 02:26 UTC issue. The dated results below retain their original cohorts and model identities.
 [Track overview](README.md) · [Offline evidence explorer](review.html) · [Methods](CURRENT_METHODOLOGY.md) · [Public JSON](current_evidence.json)
 
 **Public review: November 3, 2026.** This is an inspectable summary of authenticated private research, not a reproduction of the private training stack.

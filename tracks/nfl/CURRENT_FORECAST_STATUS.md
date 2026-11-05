@@ -1,5 +1,6 @@
 # Reading forecast status and market lines
 
+**Newer evidence:** [November 4 Pacific owner update](N041_RESEARCH_UPDATE.md) adds a completed 960-recipe contribution study, 266 listed current injury entries and a separate 02:26 UTC issue. The dated results below retain their original cohorts and model identities.
 [NFL overview](README.md) · [All-game dashboard](review.html#latest-coverage) · [Model card](CURRENT_MODEL_CARD.md)
 
 ## Three separate questions

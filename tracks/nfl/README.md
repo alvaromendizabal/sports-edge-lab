@@ -1,28 +1,38 @@
 # Sports Edge Lab · NFL
 
-[**Open the live NFL dashboard →**](https://sports-edge-lab-nfl.alv-mendizabal.chatgpt.site/) · [November 4 source review](N038_SOURCE_REVIEW.md) · [Model card](CURRENT_MODEL_CARD.md)
+[**Open the live NFL dashboard →**](https://sports-edge-lab-nfl.alv-mendizabal.chatgpt.site/) · [Latest research update](N041_RESEARCH_UPDATE.md) · [Model card](CURRENT_MODEL_CARD.md)
 
-**Latest issue · November 5, 01:21 UTC:** 29 genuine early cards preserve the previous fitted heads. The official injury capture admits all 258 listed rows across 25 of 30 Week 9 team sections; five missing teams remain unknown. Seven margin forecasts and eight totals change, while winner probabilities retain the selected base model. [Inspect the issue, clocks and limitations](INJURY_REFRESH_N040.md).
+**Pregame forecasting, matched market evaluation and recoverable ML systems.** Built by [Alvaro Mendizabal](https://github.com/alvaromendizabal). Review the evidence in your browser; no setup or private credentials required.
 
-**Latest provider capture · November 5, 01:39 UTC:** All 15 Week 9 games retain winner/margin/total references from DraftKings, Kalshi and Polymarket. Kalshi/Polymarket have fresh observations for all 15; DraftKings has 14 fresh games plus one explicitly dated November 4 LV–SF reference. Thirteen Week 10 games have fresh DraftKings references. Current references do not replace earlier evaluation cutoffs or alter historical scores.
+## Latest verified work · November 4, 2026 Pacific
 
-**Injury models are trained, but promotion is not automatic:** the completed 2,304-cell injury study tested paired base and injury representations across eight families. The selected winner head remains a base model; selected point heads incorporate injury fields. Starter, QB depth and reserve-status coverage remain incomplete. [Read the model inventory and promotion requirements](INJURY_MODEL_READINESS.md).
+- **New completed research:** 960 registered injury/base contribution recipes, three objective-specific selections and no redundant native refits. The selected derived winner scores 392/569 in 2024/25, with 0.625548 log loss. It is a research result, not a newly promoted champion or issued strategy. [See all targets and uncertainty](review.html#injury-contribution-study).
+- **New genuine issue:** 29 early game cards at 6:26 PM Pacific. Current reports contain 266 listed entries across 26/30 Week 9 teams. Only Tampa Bay–Chicago's margin and total change from the previous issue. Winner probabilities retain their base model; starter/depth completeness is not claimed. [Open current projections](review.html#injury-n041-summary).
+- **Expanded injury acquisition:** 11 historical injury archives and seven depth-chart seasons captured, alongside current roster/depth/report sources. Acquired rows and qualified model inputs are explicitly separated. [Inspect the source inventory](review.html#injury-source-inventory).
+- **Three providers:** DraftKings, Kalshi and Polymarket share equal visibility. All 121 completed games have Kalshi/Polymarket latest-pregame winner/margin/total references. All 15 Week 9 games have fresh exchange references; DraftKings also has all 15 current captures after exact review recovery of one schedule-revised event. The original owner-normalized count remains 14. [Inspect coverage and matched performance](review.html#three-provider-overview).
+- **Preserved limits:** overall owner acceptance remains false after a later historical Kalshi validation error. There are zero final-hour-qualified recommendations and no newly established durable betting edge. Completed study/source/issue outputs survive the failure.
 
-**Historical source repair:** 51 newly qualified Polymarket source cells cover 17 Rams games from 2025. Winner/margin/total reference coverage rises to 276/276/275 of 285 games, with remaining failed arms explicit and model metrics unchanged. [Read the audited source delta](INJURY_REFRESH_N040.md#current-providers-and-historical-repair).
+T2 means two hours before kickoff; T1 means one hour. These are comparison cutoffs, not collection barriers. Later pregame observations remain visible with their actual timestamps. Threshold contracts are conditions with probabilities, not provider score forecasts.
 
-**Three providers, one review:** DraftKings, Kalshi and Polymarket now have equal prominence at the top of the dashboard. Choose a season or the current week to inspect reference coverage, then use the separate matched-performance controls for accuracy, probability losses, margin and total errors.
+### Five-minute review
 
-**2026 completed games:** All **121 finals** have authenticated latest-pregame Kalshi **and Polymarket** winner, margin and total references. Chicago–Seattle is included. These newly recovered observations retain their original pregame quote times and later acquisition times. They do not change the preserved T1/T2 model scorecards or turn retrospective predictions into original issues.
+| Question | Open | What is inspectable |
+|---|---|---|
+| What did the model say about every game? | [Game/week explorer](review.html#latest-coverage) | All 272 scheduled games, 121 finals, every Week 9 game, distinct forecast streams |
+| Does it outperform markets? | [Matched performance and disagreements](review.html#coverage-performance) | Common-event metrics, winning and losing disagreements, coverage limits |
+| What changed scientifically? | [Contribution study](N041_RESEARCH_UPDATE.md#what-the-new-model-research-shows) | New derived experiments, target-specific scores, uncertainty and retained negative findings |
+| What injury inputs are actually used? | [Source inventory](N041_RESEARCH_UPDATE.md#injury-data-acquisition) | Acquired versus eligible data, current role gaps, historical publication limits |
+| Can I reproduce the engineering? | [Promotion demonstration](injury_promotion.py) · [Tests](test_injury_promotion.py) | Credential-free invented examples of chronology, paired cohorts and admission failures |
 
-**Week 9:** All **15 games** remain inspectable with three-provider references. DraftKings' November 4 capture has 14 direct event joins plus one documented LV–SF kickoff-revision recovery from that same capture. Every displayed reference retains its own observation clock. Threshold markets are conditions with probabilities, not projected final scores or executable betting recommendations.
+```bash
+python tracks/nfl/injury_promotion.py --demo
+python -m unittest discover -s tracks/nfl -p 'test_*.py'
+python tracks/nfl/contracts.py --check-review
+```
 
-**A source advance, with a scientific failure preserved:** N038 processed 691 completed games across 2024–2026 and delivered its evidence, but its isolated injury-continuation runtime failed. No new N038 fit or forecast is credited in this public update. The 29 earlier experimental injury-study cards remain dated, separate challengers. Missing reports do not mean healthy players; announced starters and complete quarterback-room availability remain unverified model inputs.
+The public repository contains generic engineering, sanitized evidence and selected rounded issued cards. Proprietary transforms, production weights and licensed raw feeds remain private. [Read the publication boundary](../../docs/PUBLICATION_BOUNDARY.md).
 
-T1 means one hour before kickoff, T2 means two hours, and T24 means 24 hours. They are comparison cutoffs, not limits on data collection. The **Latest before kickoff** view is separate from those registered evaluations. [Read the clock and injury guide](CLOCKS_AND_INJURIES.md).
-
-**Pregame forecasting, honest market comparisons, and recoverable ML systems.** Built by [Alvaro Mendizabal](https://github.com/alvaromendizabal) as one track in the existing [Sports Edge Lab](../../README.md) portfolio.
-
-[**Open the live NFL dashboard →**](https://sports-edge-lab-nfl.alv-mendizabal.chatgpt.site/) · [Model card](CURRENT_MODEL_CARD.md) · [Methods & retraining](CURRENT_METHODOLOGY.md) · [Public evidence](current_evidence.json)
+The dated scorecards and prior research history below remain preserved. They are not silently replaced by a newer source capture.
 
 ## Current NFL evidence · November 3, 2026
 
