@@ -76,6 +76,71 @@ def reference_at(observations, target, cutoff, *, strict_before=False, registere
     return min(candidates, key=lambda row: (not bool(row.get('captured_at')), row.get('captured_at') or '', row.get('evidence_kind') or ''))
 
 
+def availability_reference_at(observations, target, cutoff, *, strict_before=False,
+                              registered_cutoff_kind=None, assessed_at=None,
+                              max_observations=100000):
+    """Latest supported observation clock, without preferring older source time.
+
+    This is a separate descriptive display selector. Existing ``reference_at``
+    and its benchmark cohorts are unchanged. A provider-timestamped historical
+    observation may have been recovered after kickoff: its source quote and
+    complete interval must qualify before the chosen boundary, but its later
+    retrieval clock is retained, not backdated. A capture-only record qualifies
+    using that actual capture time; a postgame capture cannot reconstruct an
+    earlier price. If supplied, ``assessed_at`` excludes observations/captures
+    not yet available in that report snapshot.
+
+    The caller must authenticate raw values, identities and clocks separately.
+    This function proves neither feed completeness, possession before a past
+    forecast, an executable offer, nor model/feature admission. Use the distinct
+    ``known_before_prediction`` clock test when historical possession matters.
+    Pass ``strict_before=True`` for latest strictly pre-kickoff displays.
+
+    Conflicting latest-clock values or non-equivalent products raise ValueError
+    instead of selecting by file order. An exceeded scan bound also raises;
+    no partial-inventory result is returned. All input rows remain untouched.
+    """
+    if type(max_observations) is not int or not 1 <= max_observations <= 1000000:
+        raise ValueError('Invalid bounded availability observation limit')
+    end = instant(cutoff)
+    assessed = instant(assessed_at) if assessed_at is not None else None
+    latest, candidates = None, []
+    for count, row in enumerate(observations, 1):
+        if count > max_observations:
+            raise ValueError('Availability observation bound exceeded; no partial selection')
+        if row.get('target') != target or row.get('join_status') != 'matched':
+            continue
+        if row.get('registered_cutoff_kind') and row['registered_cutoff_kind'] != registered_cutoff_kind:
+            continue
+        value = row.get('value')
+        if value is None or not isinstance(value, (int, float)) or isinstance(value, bool) or not isfinite(value):
+            continue
+        value_clock = row.get('quote_at') or row.get('captured_at')
+        if not value_clock:
+            continue
+        observed = instant(value_clock)
+        interval_end = instant(row.get('interval_end_at') or value_clock)
+        if interval_end < observed:
+            raise ValueError('Invalid availability observation interval')
+        if observed > end or interval_end > end or (strict_before and (observed == end or interval_end == end)):
+            continue
+        captured = instant(row['captured_at']) if row.get('captured_at') else None
+        if assessed is not None and (observed > assessed or interval_end > assessed or captured is not None and captured > assessed):
+            continue
+        if latest is None or observed > latest:
+            latest, candidates = observed, [row]
+        elif observed == latest:
+            candidates.append(row)
+    if not candidates:
+        return None
+    # Ordered home-team identity cannot silently change when numeric values
+    # coincide. Equivalent sportsbook aliases remain equivalent as before.
+    signatures = {(reference_signature(row), row.get('picked_home')) for row in candidates}
+    if len(signatures) != 1:
+        raise ValueError('Conflicting availability observations at the same supported clock')
+    return min(candidates, key=lambda row: (not bool(row.get('captured_at')), row.get('captured_at') or '', row.get('evidence_kind') or ''))
+
+
 def known_before_prediction(row, cutoff):
     """Clock-only possession test, not feature-value or forecast admission.
 

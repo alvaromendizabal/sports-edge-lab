@@ -3,8 +3,9 @@ from pathlib import Path
 from datetime import timedelta
 from zoneinfo import ZoneInfo
 import argparse, hashlib, html, json, math, re
-from .market_time import instant, reference_at
+from .market_time import instant, reference_at, availability_reference_at
 from .season_transport import pack, unpack
+from .source_progress import render_section
 
 ROOT=Path(__file__).resolve().parents[2]
 DATA=ROOT/'docs/fbs/season-2026.json'
@@ -140,7 +141,7 @@ def static_rows(data):
         score=f"{esc(g['away'])} {g['away_points']:.0f} · {esc(g['home'])} {g['home_points']:.0f}" if g['completed'] else 'Scheduled'
         pick=(f"<strong>{esc(winner(g,replay['picked_home']))}</strong><span class='sub'>{fmt((p if replay['picked_home'] else 1-p)*100,1)}% · {'Correct' if replay['correct'] else 'Incorrect'}</span>" if replay else '<span class="muted">No recorded forecast</span>')
         points=(f"{fmt(replay['away_points'])}–{fmt(replay['home_points'])}<span class='sub'>Home margin {replay['home_margin']:+.1f} · Total {fmt(replay['total'])}</span>" if replay else '<span class="muted">Not issued</span>')
-        try:ref=reference_at(g['markets']['DraftKings'],'winner',g['kickoff'],strict_before=True,registered_cutoff_kind='LATEST_BEFORE_KICKOFF')
+        try:ref=None if g['kickoff_tbd'] else availability_reference_at(g['markets']['DraftKings'],'winner',g['kickoff'],strict_before=True,registered_cutoff_kind='LATEST_BEFORE_KICKOFF',assessed_at=data['prepared_at'])
         except ValueError:ref=None
         market=(f"<strong>{esc(winner(g,ref['picked_home']))}</strong><span class='sub'>{fmt(max(ref['value'],1-ref['value'])*100,1)}% · source {esc(ref['quote_at'])}</span>" if ref else '<span class="muted">No unambiguous stored winner reference</span>')
         local=instant(g['kickoff']).astimezone(ZoneInfo(data['timezone'])).strftime('%b %-d · %-I:%M %p %Z')
@@ -194,7 +195,18 @@ def recovered_point_rows(data):
 def render(data=None):
     data=validate(data or json.loads(DATA.read_text()))
     payload=json.dumps(pack(data),ensure_ascii=False,separators=(',',':'),allow_nan=False).replace('<','\\u003c').replace('>','\\u003e').replace('&','\\u0026')
+    source_section=render_section(json.loads((ROOT/'docs/fbs/official-inventory.json').read_text()),
+                                  json.loads((ROOT/'docs/fbs/source-progress.json').read_text()))
+    inv=data['inventory']
+    source_clock=instant(max(g['source_at'] for g in data['games'])).astimezone(ZoneInfo(data['timezone'])).strftime('%b %-d, %Y · %-I:%M %p %Z')
     return (TEMPLATE.read_text().replace('__SEASON_DATA__',payload)
+            .replace('__SOURCE_PROGRESS_SECTION__',source_section)
+            .replace('__OBSERVED_GAMES__',str(inv['observed_games']))
+            .replace('__COMPLETED_GAMES__',str(inv['completed_games']))
+            .replace('__SCHEDULED_GAMES__',str(inv['scheduled_games']))
+            .replace('__CURRENT_WEEK_GAMES__',str(inv['current_week_games']))
+            .replace('__COMPLETED_UNSCORED__',str(sum(g['completed'] and not g['replay'] for g in data['games'])))
+            .replace('__SCHEDULE_CAPTURE__',esc(source_clock))
             .replace('__GAME_ROWS__',static_rows(data)).replace('__HISTORICAL_ROWS__',historical_rows(data))
             .replace('__WEEKLY_ROWS__',weekly_rows(data)).replace('__COMPLETE_METRICS__',complete_metrics(data))
             .replace('__RELIABILITY_ROWS__',reliability_rows(data))

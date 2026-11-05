@@ -1,0 +1,36 @@
+'use strict';
+const assert=require('node:assert/strict');
+const {reference,pointBounds}=require('../../../docs/fbs/season.js');
+const game={kickoff:'2026-11-04T20:00:00Z',kickoff_tbd:false,completed:true,markets:{Kalshi:[]}};
+const row=(value,quote_at,captured_at)=>({target:'winner',join_status:'matched',value,picked_home:value>=.5,
+ quote_at,captured_at,reference_kind:'catalog_bid_ask_midpoint',product:'game_winner',interval_end_at:null});
+game.markets.Kalshi=[row(.6,'2026-11-04T17:00:00Z','2026-11-05T01:00:00Z'),row(.7,null,'2026-11-04T19:30:00Z')];
+assert.equal(reference(game,'Kalshi','winner','latest_available_pregame','2026-11-05T02:00:00Z').row.value,.7);
+assert.equal(reference(game,'Kalshi','winner','auto','2026-11-05T02:00:00Z').row.value,.7);
+assert.equal(reference(game,'Kalshi','winner','latest_pre_kickoff','2026-11-05T02:00:00Z').row.value,.6,'Preserved benchmark preference is not silently changed');
+game.markets.Kalshi=[row(.65,'2026-11-04T19:59:00Z','2026-11-05T01:00:00Z')];
+assert.equal(reference(game,'Kalshi','winner','latest_available_pregame','2026-11-05T02:00:00Z').row.value,.65,'Recovered source history is not discarded merely because retrieved later');
+assert.equal(reference(game,'Kalshi','winner','latest_available_pregame','2026-11-04T19:59:30Z').row,null,'Future retrieval is not already in this snapshot');
+game.markets.Kalshi=[row(.7,null,'2026-11-04T20:00:00Z')];
+assert.equal(reference(game,'Kalshi','winner','latest_available_pregame','2026-11-05T02:00:00Z').row,null,'Strictly earlier means kickoff itself is excluded');
+game.markets.Kalshi=[{...row(.7,'2026-11-04T19:59:00Z','2026-11-05T01:00:00Z'),interval_end_at:'2026-11-04T20:00:01Z'}];
+assert.equal(reference(game,'Kalshi','winner','latest_available_pregame','2026-11-05T02:00:00Z').row,null,'Crossing candle excluded');
+game.markets.Kalshi=[{...row(.7,'2026-11-04T19:59:00Z','2026-11-05T01:00:00Z'),interval_end_at:'2026-11-04T19:58:00Z'}];
+assert.equal(reference(game,'Kalshi','winner','current','2026-11-05T02:00:00Z').row,null,'Reversed interval rejected');
+game.markets.Kalshi=[row(.7,null,'2026-11-04T19:30:00Z'),row(.8,null,'2026-11-04T19:30:00Z')];
+assert.equal(reference(game,'Kalshi','winner','latest_available_pregame','2026-11-05T02:00:00Z').status,'conflict');
+game.kickoff_tbd=true;
+assert.equal(reference(game,'Kalshi','winner','latest_available_pregame','2026-11-05T02:00:00Z').status,'kickoff_tbd');
+game.kickoff_tbd=false;
+const support={method:'CAPTURED_BID_ASK_HALF_PROBABILITY_SUPPORT',status:'bounded',lower_bound:3.5,upper_bound:5.5,
+ lower_capture_at:'2026-11-04T18:00:00Z',upper_capture_at:'2026-11-04T18:10:00Z',support_available_at:'2026-11-04T18:10:00Z',diagnostic_probability_band_width:null};
+const bound={...row(null,null,'2026-11-04T18:10:00Z'),target:'margin',picked_home:null,value:null,product:'game_home_margin',point_support:support};
+game.markets.Kalshi=[bound];
+const selected=reference(game,'Kalshi','margin','latest_available_pregame','2026-11-05T02:00:00Z');
+assert.equal(selected.row.value,null,'Do not invent a native point scalar');
+assert.equal(pointBounds(selected.row,selected.cutoff,'2026-11-05T02:00:00Z',true).status,'bounded');
+game.markets.Kalshi=[bound,{...bound,point_support:{...support,upper_bound:7.5}}];
+assert.equal(reference(game,'Kalshi','margin','current','2026-11-05T02:00:00Z').status,'conflict','Same-clock bound conflicts are visible, not file-order selected');
+game.markets.Kalshi=[{...bound,point_support:{...support,lower_bound:null,upper_bound:null,lower_capture_at:null,upper_capture_at:null}}];
+assert.equal(reference(game,'Kalshi','margin','current','2026-11-05T02:00:00Z').row,null,'Missing bounds stay missing');
+console.log(JSON.stringify({status:'PASS',latest_observation_scenarios:14,no_model_or_provider_calls:true}));

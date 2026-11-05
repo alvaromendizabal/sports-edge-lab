@@ -88,3 +88,19 @@ The current native point view derives no single final-score estimate from a 50% 
 The final historical-reference refresh verifies 72 named/pooled cohort identities. Earlier-query actual quotes remain valid at later windows, while historical native point proxies retain their exact registered window. Explicit equivalent sportsbook labels resolve only on equal value/time ties; conflicting values and incompatible settlements remain rejected. The all-data explorer preserves 533 latest DraftKings winner records, including eight legacy-only records outside the newly acquired 525-game panel.
 
 The expanded public report uses a lossless reference-column transport: column names occur once, and every original value and clock is reconstructed before validation and rendering. `season_transport.unpack` restores ordinary reference objects; the browser has the equivalent decoder. This keeps the complete report within delivery limits without deleting games, references, failures or outcomes. The standalone HTML still makes zero external data requests and retains all 888 no-script rows.
+
+## November 4 source refresh and incremental visibility
+
+The source-only inventory now retains all 2,742 observed 2024–2026 games, including 624 completed 2026 results. The original 622-game replay, prior references, weekly scorecards and historical matched metrics are unchanged; the two additional completed results have no invented model forecast. `source_progress.py` validates the separate inventory and the dated execution-log stage counters. Every source row remains in the no-JavaScript fallback. A processed source pass can contain failed requests and is not a completed owner result or complete market coverage.
+
+The latest source refresh adds 180 independently reconstructed DraftKings references and 660 native references. Native point products have no invented scalar score: verified probability-band bounds are displayed separately. Their November 4 capture clocks are not a claim of continuously refreshed prices or finalized future cutoffs. The public export contains only sanitized analytical observations, not raw provider payloads.
+
+`availability_reference_at` and the separate latest-supported-pregame display choose the latest eligible observation across source-timestamped history and capture-only snapshots. Historical records retrieved later remain valid descriptive source evidence, not proof of earlier model possession. The original `reference_at` selector and its benchmark panels are preserved. Same-clock value or bound conflicts, reversed/crossing intervals, later-than-assessment captures and TBD kickoff qualification are tested explicitly.
+
+```bash
+node examples/fbs_contracts/tests/test_latest_available_logic.cjs
+node --test examples/fbs_contracts/tests/test_source_progress.cjs
+python -m unittest examples.fbs_contracts.tests.test_market_availability examples.fbs_contracts.tests.test_source_progress -v
+```
+
+No source display change performs a model fit, bypasses the unresolved raw-to-feature reconstruction gate, creates an issued forecast, or authorizes a trade.
