@@ -240,9 +240,9 @@ const {chromium}=require(process.env.PLAYWRIGHT_MODULE_DIR||'playwright');
   assert.equal(freshSource.review_recovered_week9_games,1);
   for(const gid of ['2026_09_TB_CHI','2026_09_BUF_MIN']){
    const card=page.locator('[data-coverage-game="'+gid+'"]');
-   const newestSource=await page.evaluate(()=>JSON.parse(document.getElementById('nfl-n043-current-source').textContent));
+   const newestSource=await page.evaluate(()=>JSON.parse(document.getElementById('nfl-n044-current-source').textContent));
    for(const r of newestSource.point_rows.filter(r=>r.game_id===gid))assert((await card.innerText()).includes(r.predicate));
-   assert.match(await card.textContent(),/2026-11-05T08:/);
+   assert.match(await card.textContent(),/2026-11-05T10:/);
    assert.equal(await card.locator('.alternate-threshold').count(),0);
   }
   const issue42=await page.evaluate(()=>JSON.parse(document.getElementById('nfl-current-issues-n042').textContent));
@@ -259,6 +259,20 @@ const {chromium}=require(process.env.PLAYWRIGHT_MODULE_DIR||'playwright');
    await page.selectOption('#coverage-period','10');await page.selectOption('#coverage-model','n042_'+role);
    assert.equal(await page.locator('#coverage-games [data-coverage-game]').count(),14);
   }
+  const issue44=await page.evaluate(()=>JSON.parse(document.getElementById('nfl-current-issues-n044').textContent));
+  assert.equal(issue44.actual_target_rows,261);
+  for(const role of ['fresh','original','shadow']){
+   await page.locator('#show-'+role+'-n044').click();
+   assert.equal(await page.locator('#coverage-model').inputValue(),'n044_'+role);
+   assert.equal(await page.locator('#coverage-games [data-coverage-game]').count(),15);
+   assert.equal(await page.locator('#coverage-metric-model option[value="n044_'+role+'"]').count(),0);
+  }
+  for(const mid of ['selected_annual','selected_weekly','selected_event','selected_stack','descriptive_feedback','descriptive_accuracy']){
+   await page.selectOption('#common-three-model',mid);
+   assert.equal(await page.locator('#common-three-summary tbody tr').count(),3);
+  }
+  if(process.env.NFL_SCREENSHOTS)await page.locator('#owner-recovery-n044').screenshot({path:path.join(process.env.NFL_SCREENSHOTS,'nfl-owner-recovery-'+width+'.png')});
+  if(process.env.NFL_SCREENSHOTS)await page.locator('#common-three-provider').screenshot({path:path.join(process.env.NFL_SCREENSHOTS,'nfl-common-three-'+width+'.png')});
   const study43=await page.evaluate(()=>JSON.parse(document.getElementById('nfl-owner-study-n043').textContent));
   assert.equal(study43.new_total_fits,1614);assert.equal(study43.new_designation_forecasts,0);assert.equal(study43.owner_research_acceptance,false);
   for(const role of ['original','shadow']){
