@@ -1,22 +1,26 @@
 # Sports Edge Lab · NFL
 
-**Latest actual owner review · November 6, 2026:** all 288 injury-only native fits completed. The weak selected result exposed missing historical injury support: the 75-field block is entirely zero in 2025/2026, not evidence of healthy teams. Four current forecast lanes and 78 threshold references were genuinely issued; the official source refresh failed separately. [Read the N048 results](N048_RESEARCH_UPDATE.md).
+**Latest actual owner review · November 6, 2026:** N049 added **zero native fits and 168 genuinely issued target forecasts** across two retained lanes. The official mixed-page repair admitted 312 future injury rows and excluded 28 started-event rows. The fresh causal-history branch stopped when the final census reached 122. Whole-run acceptance remains false. [Read the actual N049 evidence and N050 plan](N050_RESEARCH_UPDATE.md).
 
-**Next continuation · N049 is prepared, not owner-executed:** 144 native cells are planned for a narrow missingness-aware designation study; zero new N049 owner fits or forecasts are claimed. Event-specific temporal exclusions, immutable completion reentry and oriented conditional metadata have credential-free public tests. [Read the N049 continuation](N049_RESEARCH_UPDATE.md).
+**Next continuation · N050 is prepared, not owner-executed:** repair the causal parent-history append and keep the independent 144-cell missingness-aware annual designation study resumable. Zero N050 owner fits or forecasts are claimed.
 
-[**Open the live NFL dashboard →**](https://sports-edge-lab-nfl.alv-mendizabal.chatgpt.site/) · [Next continuation](N049_RESEARCH_UPDATE.md) · [Latest owner results](N048_RESEARCH_UPDATE.md) · [Model evidence registry](review.html#model-evidence-registry) · [Model card](CURRENT_MODEL_CARD.md)
+[**Open the live NFL dashboard →**](https://sports-edge-lab-nfl.alv-mendizabal.chatgpt.site/) · [Current review](review_n050.html) · [Actual evidence and next study](N050_RESEARCH_UPDATE.md) · [Complete dated history](review.html#latest-coverage) · [Model card](CURRENT_MODEL_CARD.md)
 
-**Publication status:** the hosted dashboard is a separately deployed snapshot whose visible provenance identifies its canonical commit. This repository preserves the [N048 results](N048_RESEARCH_UPDATE.md) and [complete review](review.html), and adds the [N049 readiness record](readiness_n049.json). Source publication, hosted deployment and owner execution remain separate states.
+**Publication status:** the hosted dashboard is a separately deployed snapshot with visible canonical provenance. Source publication, hosted deployment and owner execution remain separate states. The current review contains 272 schedule rows, 56 selected issued cards and all 261 current provider target cells including missing states; the full prior review retains 39 streams and historical metrics.
 
-**Pregame forecasting, matched market evaluation and recoverable ML systems.** Built by [Alvaro Mendizabal](https://github.com/alvaromendizabal). Review the evidence in your browser; no setup or private credentials required.
+**Pregame forecasting, matched market evaluation and recoverable ML systems.** Built by [Alvaro Mendizabal](https://github.com/alvaromendizabal). Inspect the public evidence without setup or private credentials.
 
-## Latest verified work · N048
+## Latest verified work · N049
 
-- **Complete schedule explorer:** all 272 games, 39 public forecast streams, three providers and every target remain visible, with downloadable missing-state and clock records.
-- **A useful negative result:** all eight families completed 288 injury-only fits. A historical source-availability collapse explains the constant selected winner; no improvement or promotion is asserted.
-- **Current issues preserved:** 112 game cards / 336 target rows and 78 threshold references retain their actual issue clocks. The new injury-only candidates were not issued prospectively.
-- **Substantial source acquisition:** 172,373 timed in-game observations / 936 contracts; Kalshi 121 games, Polymarket 113, DraftKings explicitly unavailable. Latest-pregame histories are a different source view.
-- **Source failure is visible:** the N048 league refresh failed; its current forecast inputs contain partial separate observations. The dated N047 340-row snapshot remains available and unchanged.
+- **Actual outputs:** 84 retained calibrated and 84 raw shadow target rows, each across 28 future games. Old base-feature clocks remain visible; no new native fit or fresh-lane success is inferred.
+- **A real causal stopping point:** the newly observed JAX–BAL final requires a parent-history append before the fresh joint forecast. Current designation, cover and the separate annual study remain blocked in this returned execution.
+- **Successful event-specific source admission:** 312 future injury rows / 28 teams survive the exclusion of 28 started-event rows on the same official page. Missing roster and starter roles remain unknown.
+- **Completed source windows:** 121 frozen games / 936 contracts / 172,373 timed feature rows, expanded to 689,492 views at 1/3/5/10 minutes. No market-path model fit or performance credit.
+- **Dated provider comparisons:** all three providers cover 14/15 Week 9 games; DraftKings covers 13/14 Week 10 games. Acquisition, provider quote and model-issue clocks stay separate.
+
+## Preserved negative result · N048
+
+All 288 injury-only native fits completed. The selected winner was constant because the late-period historical block had no observed injury support. The all-zero 2025/2026 block is not evidence of healthy teams. Four earlier forecast lanes and 78 threshold references remain preserved with their original clocks. [Read the unchanged N048 result](N048_RESEARCH_UPDATE.md).
 
 ## Prior verified work · N047
 
