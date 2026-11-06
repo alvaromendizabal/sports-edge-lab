@@ -17,6 +17,8 @@ let browser;
  for(const width of [1440,390]){
   await page.setViewportSize({width,height:1000});await page.goto(url);
   assert.equal(await page.locator('h1').count(),1);
+  assert.match(await page.locator('#latest-owner-note').innerText(),/V035 failed before resource admission/);
+  assert.match(await page.locator('#latest-owner-note').innerText(),/separate interpreter exit is unobserved/);
   assert.equal(await page.locator('#games-body tr').count(),25);
   assert.match(await page.locator('#result-status').innerText(),/^888 games/);
   assert.equal(await page.evaluate(()=>document.documentElement.scrollWidth>innerWidth),false);

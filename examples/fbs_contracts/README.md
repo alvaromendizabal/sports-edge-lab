@@ -125,3 +125,16 @@ The new display appends 191 rounded DraftKings references and 546 native product
 The complete grid explicitly retains 21 absent products, 45 after-kickoff-only captures, two unusable winner products and four inconsistent US threshold curves. Missing latest products do not silently fall back to older snapshots. Older observations remain archived and available in their separately qualified historical views. Original native capture clocks are November 4, 9:24–9:28 PM Pacific; the later verification clock is not substituted for them. Individual quote timestamps and latest-pre-kickoff history completeness remain unproved.
 
 `native_current_snapshot.py` requires exact game/provider/product closure and consistent rounded values, clocks and missing states. Its invented tests reject missing/duplicate/foreign slots, fabricated clocks, changed values, scalar-for-median substitution and model-admission claims. The JavaScript selector isolates `CURRENT_SNAPSHOT_ONLY` rows from T120, T60 and both historical pregame selectors. No new model fit, rolling forecast, wager, fee, fill or profit follows from this display update.
+
+## Required releases and partial completion receipts
+
+The November 6 [owner audit](../../docs/fbs/execution-2026-11-06.md) identifies a predecessor release omitted from the actual invocation's allowlist. The credential-free [handoff receipt example](handoff_receipts.py) uses invented releases and payloads to demonstrate a single registry shared by seed validation and receipt admission. Required older releases cannot disappear when a new one is added; duplicate source registrations, changed bytes, conflicting run identities and invalid completion chronology fail validation.
+
+A partial handoff diagnostic preserves zero-work evidence without claiming writer ownership or successful collection. A later partial collector preserves its completed source-unit count without becoming a full success. A recorded diagnostic integer and an independently observed child-process exit are separate fields. The subprocess regression demonstrates that ignoring `main()`'s returned integer produces process exit 0, while `raise SystemExit(main())` propagates the returned status. Missing process status remains unknown.
+
+```bash
+python -m examples.fbs_contracts.handoff_receipts
+python -m unittest examples.fbs_contracts.tests.test_handoff_receipts -v
+```
+
+These are standard-library engineering fixtures, not production owner execution, source authentication by a trusted third party, model fitting or remote process control. The verifier grants no new writer lease. An unchanged content hash alone cannot establish source authenticity, acquisition rights, historical availability or a betting edge.

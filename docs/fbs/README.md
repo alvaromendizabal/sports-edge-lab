@@ -1,6 +1,20 @@
 # NCAA FBS: an independent research branch
 
-## V035 review: authenticated resource deferral and qualified current source features
+## November 6 owner audit: V035 failed before resource admission
+
+The actual **V035 invocation failed during predecessor handoff**. Its source requires V034 history, but the completion-probe allowlist omitted V034. The first stopping condition is therefore the version admission bug. No resource phase was reached and neither the full-research nor independent memory/S3 acquisition phase started. Source requests, new fits and forecast issues were all **zero**.
+
+The uploaded 84,837,823-byte return, its exact embedded source, every member manifest, the separate terminal log and the independent external completion agree. They record **diagnostic status 2**. The original entrypoint does not independently establish the interpreter exit; that observation remains unavailable. V034's earlier disk deferral is preserved separately: 60 checks over 300.155903329 seconds, ending 1,770,766,336 bytes below the unchanged full-work threshold after verified temporary-copy reclamation.
+
+The owner audit adds independent verification. It retains all 888 identified fixtures, the ten separate unbound championship slots, the 622-game retrospective replay, all earlier fits and negative findings, and the dated local availability features. It does not refresh source clocks or certify a new forecast. **NO BET, zero stake.** The next handoff is prepared code until a new actual return proves execution.
+
+New local V036 preparation completed **four fresh official availability reads at 06:13 UTC**. All four bodies are byte-identical to the earlier capture, with zero new status or feature changes; the prior 108 changes remain preserved. Separately, an independent audit checked 905 original game-state objects and 1,256,960 fields with zero projection mismatches. Its 22 conservative recorded-state candidates are not a strict market-path cohort or historical-possession proof. Nine of 31 inherited strict-clock flags need revision review: five score decreases and four within-period clock increases. No new fits, predictions, forecast issues or wagers occurred.
+
+The [dated execution audit](https://github.com/alvaromendizabal/sports-edge-lab/blob/main/docs/fbs/execution-2026-11-06.md) links the exact public source/return commitments to the evidence limits. A new [invented registry and receipt example](https://github.com/alvaromendizabal/sports-edge-lab/blob/main/examples/fbs_contracts/handoff_receipts.py) demonstrates the admission regression, partial-result preservation and independently captured process exits without exposing private production code or data.
+
+[**Open the latest FBS review →**](https://sports-edge-lab-fbs.alv-mendizabal.chatgpt.site/frontier.html)
+
+## Retained V035 preparation: V034 resource deferral and current source features
 
 [**Open the latest FBS review →**](https://sports-edge-lab-fbs.alv-mendizabal.chatgpt.site/frontier.html)
 
