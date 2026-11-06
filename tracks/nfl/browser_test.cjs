@@ -413,7 +413,7 @@ const {chromium}=require(process.env.PLAYWRIGHT_MODULE_DIR||'playwright');
   assert.match(await jaxCard.innerText(),/JAX 67\.8%/);
   await page.selectOption('#coverage-horizon','LATEST_OBSERVED');
 
-  assert.match(await page.locator('#coverage-asof').innerText(),/Current N047 early research issues/);
+  assert.match(await page.locator('#coverage-asof').innerText(),/Current N048 early research issues/);
   assert.match(await page.locator('#coverage-asof').innerText(),/Whole-pipeline acceptance is not claimed/);
   assert.doesNotMatch(await page.locator('#coverage-asof').innerText(),/FAILED/);
   assert.match(await page.locator('#unjoined-provider-note').innerText(),/Current capture recovered: LV at SF/);
