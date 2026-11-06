@@ -93,7 +93,7 @@ const {chromium}=require(process.env.PLAYWRIGHT_MODULE_DIR||'playwright');
   assert.match(await page.locator('#ravens-qb-context').innerText(),/Joe Fagnano will start/);
   assert.match(await page.locator('#ravens-qb-context').innerText(),/no forecast that fully incorporates the quarterback situation is claimed/);
   // The experimental issue is an additional role, never a replacement stream.
-  assert.equal(await page.locator('#coverage-model').inputValue(),'n046_fresh');
+  assert.equal(await page.locator('#coverage-model').inputValue(),'n047_fresh');
   assert.equal(await page.locator('#coverage-metric-model option[value="experimental_injury_issue"]').count(),0);
   await page.locator('#show-injury-challenger').click();
   assert.equal(await page.locator('#coverage-model').inputValue(),'experimental_injury_issue');
@@ -210,7 +210,8 @@ const {chromium}=require(process.env.PLAYWRIGHT_MODULE_DIR||'playwright');
   assert.match(await jaxCard.innerText(),/JAX 67\.8%/);
   assert.match(await jaxCard.innerText(),/-4\.0/);
   assert.match(await jaxCard.innerText(),/45\.7/);
-  assert.match(await jaxCard.innerText(),/provider quote time unavailable/);
+  const liveJaxSource=await page.evaluate(()=>JSON.parse(document.getElementById('nfl-n047-current-source').textContent));
+  for(const r of liveJaxSource.point_rows.filter(r=>r.game_id==='2026_09_JAX_BAL'))assert((await jaxCard.innerText()).includes(r.predicate));
   assert.match(await jaxCard.innerText(),/Recovered observation/);
   const lvCard=page.locator('[data-coverage-game="2026_09_LV_SF"]');
   assert.match(await lvCard.innerText(),/Recovered schedule reference/);
@@ -218,8 +219,8 @@ const {chromium}=require(process.env.PLAYWRIGHT_MODULE_DIR||'playwright');
   assert.match(await lvCard.innerText(),/exact schedule revision recovered on the owner runtime/);
   assert.match(await lvCard.innerText(),/Separately verified event mapping/);
   assert.match(await lvCard.innerText(),/Home margin > 10 \(home handicap -10\)/);
-  const currentLvTotal=await page.evaluate(()=>JSON.parse(document.getElementById('nfl-n046-current-source').textContent).point_rows.find(r=>r.game_id==='2026_09_LV_SF'&&r.provider==='DraftKings'&&r.target==='total'));
-  assert.equal(currentLvTotal.line,51.5);
+  const currentLvTotal=await page.evaluate(()=>JSON.parse(document.getElementById('nfl-n047-current-source').textContent).point_rows.find(r=>r.game_id==='2026_09_LV_SF'&&r.provider==='DraftKings'&&r.target==='total'));
+  assert.equal(typeof currentLvTotal.line,'number');
   assert((await lvCard.innerText()).includes(currentLvTotal.predicate),'Latest captured DraftKings total must be displayed');
   assert.match(await lvCard.locator('.schedule-mapping-note').innerText(),/2026-11-08T21:05:00Z[\s\S]*2026-11-08T21:25:00/);
   const mapping=await page.evaluate(()=>JSON.parse(document.getElementById('nfl-reschedule-reference').textContent));
@@ -246,9 +247,9 @@ const {chromium}=require(process.env.PLAYWRIGHT_MODULE_DIR||'playwright');
   assert.equal(freshSource.review_recovered_week9_games,1);
   for(const gid of ['2026_09_TB_CHI','2026_09_BUF_MIN']){
    const card=page.locator('[data-coverage-game="'+gid+'"]');
-   const newestSource=await page.evaluate(()=>JSON.parse(document.getElementById('nfl-n046-current-source').textContent));
+   const newestSource=await page.evaluate(()=>JSON.parse(document.getElementById('nfl-n047-current-source').textContent));
    for(const r of newestSource.point_rows.filter(r=>r.game_id===gid))assert((await card.innerText()).includes(r.predicate));
-   assert.match(await card.textContent(),/2026-11-05T2[23]:/);
+   assert.match(await card.textContent(),/2026-11-06T00:/);
    assert.equal(await card.locator('.alternate-threshold').count(),0);
   }
   const issue42=await page.evaluate(()=>JSON.parse(document.getElementById('nfl-current-issues-n042').textContent));
@@ -295,12 +296,12 @@ const {chromium}=require(process.env.PLAYWRIGHT_MODULE_DIR||'playwright');
   assert.equal(issue46.actual_target_rows,348);assert.equal(issue46.new_native_fits,3);assert.equal(issue46.source_census.team_sections,29);
   assert.match(await page.locator('#owner-current-n046').innerText(),/28 other forecast games remain unknown/);
   const registry=await page.evaluate(()=>JSON.parse(document.getElementById('nfl-model-registry').textContent));
-  assert.equal(registry.models.length,31);
+  assert.equal(registry.models.length,35);
   assert.equal(await page.locator('#model-evidence-select option').count(),await page.locator('#coverage-model option').count()-1);
   for(const model of registry.models){
    await page.selectOption('#model-evidence-select',model.id);
    if(model.kind==='GENUINELY_ISSUED_EARLY_RESEARCH')assert.match(await page.locator('#model-evidence-status').innerText(),/AWAITING ISSUED OUTCOMES/);
-   assert.match(await page.locator('#model-evidence-readiness').innerText(),/NOT CALIBRATED FOR EXECUTABLE LINE/);
+   assert.match(await page.locator('#model-evidence-readiness').innerText(),model.id==='n047_designation'?/ISSUED UNVALIDATED DISTRIBUTION TRANSFER/:/NOT CALIBRATED FOR EXECUTABLE LINE/);
   }
   for(const role of ['designation','fresh','original','shadow']){
    await page.locator('#show-'+role+'-n046').click();
@@ -318,6 +319,30 @@ const {chromium}=require(process.env.PLAYWRIGHT_MODULE_DIR||'playwright');
   }
   await page.selectOption('#model-evidence-select','n046_designation');
   if(process.env.NFL_SCREENSHOTS){await page.locator('#owner-current-n046').screenshot({path:path.join(process.env.NFL_SCREENSHOTS,'nfl-current-n046-'+width+'.png')});await page.locator('#model-evidence-registry').screenshot({path:path.join(process.env.NFL_SCREENSHOTS,'nfl-model-evidence-'+width+'.png')});}
+  const issue47=await page.evaluate(()=>JSON.parse(document.getElementById('nfl-current-issues-n047').textContent));
+  assert.equal(issue47.actual_target_rows,336);assert.equal(issue47.new_native_fits,0);assert.equal(issue47.source_census.team_slots,28);
+  for(const role of ['designation','fresh','original','shadow']){
+   await page.locator('#show-'+role+'-n047').click();
+   assert.equal(await page.locator('#coverage-games [data-coverage-game]').count(),15);
+   assert.match(await page.locator('#coverage-count').innerText(),/JAX–BAL had passed T1/);
+   assert.match(await page.locator('[data-coverage-game="2026_09_JAX_BAL"]').innerText(),/Forecast unavailable/);
+   assert.match(await page.locator('[data-coverage-game="2026_09_BUF_MIN"]').innerText(),/BUF 18 and MIN 9|MIN 9 and BUF 18/);
+   assert.equal(await page.locator('[data-coverage-game="2026_09_BUF_MIN"] .latest-injury-source-context').count(),0);
+   if(role==='designation')assert.equal(await page.locator('#coverage-games .designation-coverage').count(),14);
+  }
+  const cover47=await page.evaluate(()=>JSON.parse(document.getElementById('nfl-cover-n047').textContent));
+  assert.equal(cover47.cards.length,28);assert.equal(cover47.threshold_rows.length,82);assert.equal(cover47.historical_games.length,636);
+  assert.match(await page.locator('#cover-provider-metrics').innerText(),/50 \/ 64/);
+  assert.match(await page.locator('#cover-provider-metrics').innerText(),/0.7596 \/ 0.6861/);
+  for(const season of ['2024','2025']){await page.selectOption('#cover-season',season);assert.match(await page.locator('#cover-history-status').innerText(),/0 resolved contract comparisons/);assert.match(await page.locator('#cover-history-games').innerText(),/No qualified historical threshold cohort/);}
+  await page.selectOption('#cover-season','2026');await page.selectOption('#cover-history-week','all');
+  assert.equal(await page.locator('#cover-history-games tbody tr').count(),120);
+  await page.selectOption('#cover-history-provider','polymarket');assert.equal(await page.locator('#cover-history-games tbody tr').count(),92);
+  await page.selectOption('#cover-history-provider','draftkings');assert.match(await page.locator('#cover-history-games').innerText(),/No qualified historical threshold cohort/);
+  assert.match(await page.locator('#cover-current-providers').innerText(),/Settlement unknown/);
+  for(const policy of ['annual_injury_head','event_expanding','weekly_expanding']){await page.selectOption('#cover-policy',policy);assert.match(await page.locator('#cover-distribution-metrics').innerText(),/120/);}
+  await page.selectOption('#cover-policy','annual_injury_head');await page.selectOption('#cover-history-provider','kalshi');await page.selectOption('#cover-history-week','8');
+  if(process.env.NFL_SCREENSHOTS){await page.locator('#owner-current-n047').screenshot({path:path.join(process.env.NFL_SCREENSHOTS,'nfl-current-n047-'+width+'.png')});await page.locator('#cover-research-n047').screenshot({path:path.join(process.env.NFL_SCREENSHOTS,'nfl-cover-n047-'+width+'.png')});}
   const issue44=await page.evaluate(()=>JSON.parse(document.getElementById('nfl-current-issues-n044').textContent));
   assert.equal(issue44.actual_target_rows,261);
   for(const role of ['fresh','original','shadow']){
@@ -375,7 +400,7 @@ const {chromium}=require(process.env.PLAYWRIGHT_MODULE_DIR||'playwright');
   assert.match(await jaxCard.innerText(),/JAX 67\.8%/);
   await page.selectOption('#coverage-horizon','LATEST_OBSERVED');
 
-  assert.match(await page.locator('#coverage-asof').innerText(),/Current N046 early research issues/);
+  assert.match(await page.locator('#coverage-asof').innerText(),/Current N047 early research issues/);
   assert.match(await page.locator('#coverage-asof').innerText(),/Whole-pipeline acceptance is not claimed/);
   assert.doesNotMatch(await page.locator('#coverage-asof').innerText(),/FAILED/);
   assert.match(await page.locator('#unjoined-provider-note').innerText(),/Current capture recovered: LV at SF/);

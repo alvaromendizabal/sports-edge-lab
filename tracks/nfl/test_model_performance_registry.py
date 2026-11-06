@@ -17,7 +17,7 @@ class ModelEvidenceTests(unittest.TestCase):
   self.assertEqual(new["new_forecasts"],0)
  def test_every_selectable_stream_has_record(self):
   d=load_registry()[0];expected={m['id']for m in self.coverage['model_sets']}
-  for version in ('042','043','044','045','046'):expected.update(s['id']for s in json.loads((HERE/f'current_issues_n{version}.json').read_text())['streams'])
+  for version in ('042','043','044','045','046','047'):expected.update(s['id']for s in json.loads((HERE/f'current_issues_n{version}.json').read_text())['streams'])
   expected.update(('experimental_injury_issue','experimental_injury_refresh','experimental_injury_n040','experimental_injury_n041'))
   self.assertEqual(expected,{m['id']for m in d['models']})
  def test_actual_forward_issues_do_not_borrow_retrospective_metrics(self):
@@ -27,7 +27,7 @@ class ModelEvidenceTests(unittest.TestCase):
   for m in build_registry()['models']:
    if m['kind']=='PRESERVED_PUBLIC_STREAM':self.assertEqual(m['records'],[x for x in self.coverage['season_metrics']if x['model_id']==m['id']])
  def test_no_unverified_cover_probabilities(self):
-  self.assertTrue(all(m['target_readiness']['spread_cover']['status']=='NOT_CALIBRATED_FOR_EXECUTABLE_LINE'for m in build_registry()['models']))
+  self.assertTrue(all(m['target_readiness']['spread_cover']['status']==('ISSUED_UNVALIDATED_DISTRIBUTION_TRANSFER' if m['id']=='n047_designation'else 'NOT_CALIBRATED_FOR_EXECUTABLE_LINE')for m in build_registry()['models']))
  def test_current_and_historical_provider_census(self):
   self.assertEqual(len(load_current_source(self.coverage)[0]['coverage']),9);self.assertEqual(load_historical_reference(self.coverage)[1]['latest_kalshi_polymarket_games_each'],121)
  def test_designation_unknown_block_cannot_become_complete(self):

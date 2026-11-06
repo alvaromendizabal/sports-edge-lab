@@ -1,0 +1,323 @@
+{
+  "schema": "sports-edge-lab.nfl.latest-pregame.n047.v1",
+  "owner_return_sha256": "fc5be739c1cd193e74e63c5eff27fba277e23775910858a53436d9491d18e30b",
+  "winner_rows": [
+    {
+      "acquired_at": "2026-11-06T00:33:59.327781+00:00",
+      "derived_pick": "SEA",
+      "execution_qualified": false,
+      "game_id": "2025_18_SEA_SF",
+      "horizon": "LATEST_PREGAME",
+      "metric_eligible": false,
+      "p_home": 0.415,
+      "pair_clock_skew_seconds": 6.0,
+      "provider": "Polymarket",
+      "quote_at": "2026-01-04T00:59:12+00:00",
+      "quote_clock_kind": "RETROSPECTIVE_PROVIDER_PRICE_TIMESTAMP",
+      "season": 2025,
+      "source_price_role": "ZERO_TIE_BINARY_PAYOUT_PROXY",
+      "week": "18"
+    },
+    {
+      "acquired_at": "2026-11-06T00:33:38.035433+00:00",
+      "derived_pick": "TB",
+      "execution_qualified": false,
+      "game_id": "2025_18_CAR_TB",
+      "horizon": "LATEST_PREGAME",
+      "metric_eligible": false,
+      "p_home": 0.605,
+      "pair_clock_skew_seconds": 0.0,
+      "provider": "Polymarket",
+      "quote_at": "2026-01-03T21:29:10+00:00",
+      "quote_clock_kind": "RETROSPECTIVE_PROVIDER_PRICE_TIMESTAMP",
+      "season": 2025,
+      "source_price_role": "ZERO_TIE_BINARY_PAYOUT_PROXY",
+      "week": "18"
+    }
+  ],
+  "point_rows": [
+    {
+      "acquired_at": "2026-11-06T00:34:05.323939+00:00",
+      "contract_count": 3,
+      "execution_qualified": false,
+      "game_id": "2025_18_SEA_SF",
+      "horizon": "LATEST_PREGAME",
+      "line": -2.5,
+      "metric_eligible": false,
+      "observed_probability": 0.465,
+      "operator": ">=",
+      "parsed_contract_count": 6,
+      "point_estimate": null,
+      "predicate": "Home margin >= -2.5",
+      "predicate_variable": "home_margin",
+      "provider": "Polymarket",
+      "quote_at": "2026-01-04T00:59:23+00:00",
+      "quote_clock_kind": "RETROSPECTIVE_PROVIDER_PRICE_TIMESTAMP",
+      "season": 2025,
+      "source_price_role": "BINARY_THRESHOLD_PROBABILITY_NOT_MEAN_SCORE",
+      "target": "margin",
+      "week": "18"
+    },
+    {
+      "acquired_at": "2026-11-06T00:34:00.713253+00:00",
+      "contract_count": 3,
+      "execution_qualified": false,
+      "game_id": "2025_18_SEA_SF",
+      "horizon": "LATEST_PREGAME",
+      "line": 48.5,
+      "metric_eligible": false,
+      "observed_probability": 0.495,
+      "operator": ">",
+      "parsed_contract_count": 6,
+      "point_estimate": null,
+      "predicate": "Total points > 48.5",
+      "predicate_variable": "total",
+      "provider": "Polymarket",
+      "quote_at": "2026-01-04T00:59:14+00:00",
+      "quote_clock_kind": "RETROSPECTIVE_PROVIDER_PRICE_TIMESTAMP",
+      "season": 2025,
+      "source_price_role": "BINARY_THRESHOLD_PROBABILITY_NOT_MEAN_SCORE",
+      "target": "total",
+      "week": "18"
+    },
+    {
+      "acquired_at": "2026-11-06T00:33:38.508740+00:00",
+      "contract_count": 2,
+      "execution_qualified": false,
+      "game_id": "2025_18_CAR_TB",
+      "horizon": "LATEST_PREGAME",
+      "line": 3.5,
+      "metric_eligible": false,
+      "observed_probability": 0.445,
+      "operator": ">",
+      "parsed_contract_count": 4,
+      "point_estimate": null,
+      "predicate": "Home margin > 3.5",
+      "predicate_variable": "home_margin",
+      "provider": "Polymarket",
+      "quote_at": "2026-01-03T21:29:07+00:00",
+      "quote_clock_kind": "RETROSPECTIVE_PROVIDER_PRICE_TIMESTAMP",
+      "season": 2025,
+      "source_price_role": "BINARY_THRESHOLD_PROBABILITY_NOT_MEAN_SCORE",
+      "target": "margin",
+      "week": "18"
+    },
+    {
+      "acquired_at": "2026-11-06T00:33:39.417212+00:00",
+      "contract_count": 2,
+      "execution_qualified": false,
+      "game_id": "2025_18_CAR_TB",
+      "horizon": "LATEST_PREGAME",
+      "line": 43.5,
+      "metric_eligible": false,
+      "observed_probability": 0.455,
+      "operator": ">",
+      "parsed_contract_count": 4,
+      "point_estimate": null,
+      "predicate": "Total points > 43.5",
+      "predicate_variable": "total",
+      "provider": "Polymarket",
+      "quote_at": "2026-01-03T21:29:09+00:00",
+      "quote_clock_kind": "RETROSPECTIVE_PROVIDER_PRICE_TIMESTAMP",
+      "season": 2025,
+      "source_price_role": "BINARY_THRESHOLD_PROBABILITY_NOT_MEAN_SCORE",
+      "target": "total",
+      "week": "18"
+    }
+  ],
+  "coverage": [
+    {
+      "available_games": 0,
+      "provider": "Kalshi",
+      "season": 2024,
+      "target": "winner",
+      "total_completed_games": 285
+    },
+    {
+      "available_games": 0,
+      "provider": "Kalshi",
+      "season": 2024,
+      "target": "margin",
+      "total_completed_games": 285
+    },
+    {
+      "available_games": 0,
+      "provider": "Kalshi",
+      "season": 2024,
+      "target": "total",
+      "total_completed_games": 285
+    },
+    {
+      "available_games": 188,
+      "provider": "Polymarket",
+      "season": 2024,
+      "target": "winner",
+      "total_completed_games": 285
+    },
+    {
+      "available_games": 0,
+      "provider": "Polymarket",
+      "season": 2024,
+      "target": "margin",
+      "total_completed_games": 285
+    },
+    {
+      "available_games": 0,
+      "provider": "Polymarket",
+      "season": 2024,
+      "target": "total",
+      "total_completed_games": 285
+    },
+    {
+      "available_games": 0,
+      "provider": "Draftkings",
+      "season": 2024,
+      "target": "winner",
+      "total_completed_games": 285
+    },
+    {
+      "available_games": 0,
+      "provider": "Draftkings",
+      "season": 2024,
+      "target": "margin",
+      "total_completed_games": 285
+    },
+    {
+      "available_games": 0,
+      "provider": "Draftkings",
+      "season": 2024,
+      "target": "total",
+      "total_completed_games": 285
+    },
+    {
+      "available_games": 275,
+      "provider": "Kalshi",
+      "season": 2025,
+      "target": "winner",
+      "total_completed_games": 285
+    },
+    {
+      "available_games": 278,
+      "provider": "Kalshi",
+      "season": 2025,
+      "target": "margin",
+      "total_completed_games": 285
+    },
+    {
+      "available_games": 282,
+      "provider": "Kalshi",
+      "season": 2025,
+      "target": "total",
+      "total_completed_games": 285
+    },
+    {
+      "available_games": 281,
+      "provider": "Polymarket",
+      "season": 2025,
+      "target": "winner",
+      "total_completed_games": 285
+    },
+    {
+      "available_games": 281,
+      "provider": "Polymarket",
+      "season": 2025,
+      "target": "margin",
+      "total_completed_games": 285
+    },
+    {
+      "available_games": 280,
+      "provider": "Polymarket",
+      "season": 2025,
+      "target": "total",
+      "total_completed_games": 285
+    },
+    {
+      "available_games": 0,
+      "provider": "Draftkings",
+      "season": 2025,
+      "target": "winner",
+      "total_completed_games": 285
+    },
+    {
+      "available_games": 0,
+      "provider": "Draftkings",
+      "season": 2025,
+      "target": "margin",
+      "total_completed_games": 285
+    },
+    {
+      "available_games": 0,
+      "provider": "Draftkings",
+      "season": 2025,
+      "target": "total",
+      "total_completed_games": 285
+    },
+    {
+      "available_games": 121,
+      "provider": "Kalshi",
+      "season": 2026,
+      "target": "winner",
+      "total_completed_games": 121
+    },
+    {
+      "available_games": 121,
+      "provider": "Kalshi",
+      "season": 2026,
+      "target": "margin",
+      "total_completed_games": 121
+    },
+    {
+      "available_games": 121,
+      "provider": "Kalshi",
+      "season": 2026,
+      "target": "total",
+      "total_completed_games": 121
+    },
+    {
+      "available_games": 121,
+      "provider": "Polymarket",
+      "season": 2026,
+      "target": "winner",
+      "total_completed_games": 121
+    },
+    {
+      "available_games": 121,
+      "provider": "Polymarket",
+      "season": 2026,
+      "target": "margin",
+      "total_completed_games": 121
+    },
+    {
+      "available_games": 121,
+      "provider": "Polymarket",
+      "season": 2026,
+      "target": "total",
+      "total_completed_games": 121
+    },
+    {
+      "available_games": 0,
+      "provider": "Draftkings",
+      "season": 2026,
+      "target": "winner",
+      "total_completed_games": 121
+    },
+    {
+      "available_games": 0,
+      "provider": "Draftkings",
+      "season": 2026,
+      "target": "margin",
+      "total_completed_games": 121
+    },
+    {
+      "available_games": 0,
+      "provider": "Draftkings",
+      "season": 2026,
+      "target": "total",
+      "total_completed_games": 121
+    }
+  ],
+  "historical_metrics_changed": false,
+  "new_forecasts": 0,
+  "selection_reads_outcomes": false,
+  "qualification": "Six newly recovered Polymarket latest-pregame cells only; combine with immutable historical_reference_n046.json. Coverage table describes the complete combined export; no model metric or prior source row is overwritten."
+}
