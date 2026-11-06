@@ -4,6 +4,8 @@
 
 [**Open the live NFL dashboard →**](https://sports-edge-lab-nfl.alv-mendizabal.chatgpt.site/) · [Latest research update](N048_RESEARCH_UPDATE.md) · [Model evidence registry](review.html#model-evidence-registry) · [Model card](CURRENT_MODEL_CARD.md)
 
+**Publication status:** the hosted dashboard is a separately deployed snapshot. The N048 update in this commit is available in the [research report](N048_RESEARCH_UPDATE.md) and [self-contained HTML](review.html); its hosted deployment has not yet been verified.
+
 **Pregame forecasting, matched market evaluation and recoverable ML systems.** Built by [Alvaro Mendizabal](https://github.com/alvaromendizabal). Review the evidence in your browser; no setup or private credentials required.
 
 ## Latest verified work · N048
