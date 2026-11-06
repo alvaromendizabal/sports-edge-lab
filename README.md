@@ -51,6 +51,26 @@ Python 3.11+; no credentials, data subscriptions or cloud account. The demonstra
 
 For ML engineering roles, follow [recovery](docs/RECOVERABLE_OPERATIONS.md), [serving lineage](docs/CASE_STUDY_SERVING_LINEAGE.md) and the tests. For data science, inspect [matched uncertainty](tracks/nfl/paired_evaluation.py), calibration and negative findings. For AI engineering, the evidence here is dependable model orchestration and evaluation; this repository does not claim an implemented LLM/RAG product.
 
+## NCAA basketball update · November 6, 2026 UTC
+
+**B043 preserved baseline reporting before its injury-checkpoint failure.** Nine
+of sixteen stages completed, with 101 new target fits, 45 scalar calibrators and
+24 empirical fits. The recovered private report retains 84,195 target rows and
+46,529 browser rows; independent arithmetic reconciles 944 metric panels with
+zero mismatches. B043 issued no new qualifying forecasts, while 339 earlier
+issue rows across five games remain preserved and unscored.
+
+A new 129-game men's Polymarket international comparison gives the original
+reconstruction higher winner accuracy (86.05% versus 82.17%) but worse log loss
+(0.3444 versus 0.3212). This is reconstructed evidence, with no established
+betting advantage. The dated 122-game comparison and historical selections remain
+unchanged. Injury and market-path research are still incomplete; B044 prepares
+a narrow missing-clock checkpoint repair.
+
+[Open the NCAA dashboards](https://alvaro-ncaa-research-review.alv-mendizabal.chatgpt.site/)
+· [Men's evidence](tracks/ncaam/README.md) · [Women's evidence](tracks/ncaaw/README.md)
+· [Methods and reproducible contracts](examples/ncaa_review/README.md)
+
 ## Separate projects, shared engineering
 
 | Track | Entry point | Publication boundary |

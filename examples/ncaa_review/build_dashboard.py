@@ -29,7 +29,13 @@ def evidence(league):
     result = data['current_results_status']
     if result['new_issues_created_by_recovery'] != 0 or result['new_fits_created_by_recovery'] != 0:raise ValueError('recovery creates scientific credit')
     if result['authenticated_issue_rows_this_league'] != data['observed_inventory']['authenticated_current_issues']:raise ValueError('issue scope')
-    if result['authenticated_issue_rows_both_leagues'] != attempt['new_prospective_issues']:raise ValueError('owner issue count')
+    if result['authenticated_issue_rows_both_leagues'] != attempt['retained_prior_prospective_issues']:raise ValueError('retained issue count')
+    if result['new_owner_issues'] != attempt['new_prospective_issues']:raise ValueError('new owner issue count')
+    if result['pre_study_target_rows'] != sum(result['prediction_rows'].values()) + result['retained_prior_issue_rows']:raise ValueError('pre-study target closure')
+    if result['browser_display_rows'] != result['pre_study_game_model_rows'] + data['current_coverage_gaps']['unresolved_source_candidates']:raise ValueError('display row closure')
+    pair = data['latest_reconstructed_comparison']
+    if pair['as_issued'] or pair['current_outcomes_selected_model'] or pair['qualified_settled_bets'] != 0 or pair['profit'] is not None:raise ValueError('unqualified current comparison claim')
+    if pair['release'] != attempt['release'] or pair['evidence_snapshot_at'] != data['freshness']['pre_study_report_asof']:raise ValueError('current comparison clock')
     if data['coverage_evidence_release'] != data['freshness']['owner_release']:raise ValueError('capture release')
     for model in data['models']:
         if set(model['panels'])!={'pooled','2025','2026'}:raise ValueError('season closure')
@@ -70,10 +76,11 @@ def landing_status(data):
     return (f'<strong>{release}: {a["completed_scientific_stages"]} of {a["planned_scientific_stages"]} stages completed; injury study failed.</strong>'
             f'<p>{a["new_real_target_fits"]:,} new target estimators, {a["new_calibration_fits"]:,} scalar calibrations and {a["new_empirical_residual_fits"]:,} empirical residual fits were committed in {a["total_wall_seconds"] / 60:.2f} minutes. '
             f'{a["reused_target_fits"]:,} historical and {a["reused_native_target_fits"]:,} native target fits, plus {a["reused_native_scalar_fits"]:,} native scalar fits, were reused. '
-            f'{result["authenticated_issue_rows_both_leagues"]:,} existing research issue rows across {result["authenticated_issue_games_both_leagues"]} games were independently authenticated; recovery created no new issues. Final {release} paired scorecards remain unavailable.</p>'
+            f'{result["authenticated_issue_rows_both_leagues"]:,} existing research issue rows across {result["authenticated_issue_games_both_leagues"]} games remain preserved; {release} created zero new qualifying issues. '
+            f'Durable pre-study reporting retained {result["pre_study_target_rows"]:,} target rows and {result["browser_display_rows"]:,} browser rows. Final post-study reporting remains unfinished.</p>'
             f'<p>The retained inventory contains {gaps["market_observations"]:,} market observations and {gaps["both_leagues_source_records"]:,} source/candidate records with {gaps["both_leagues_observed_finals"]:,} reported finals. '
             f'Source acquisition completed {capture}; this is a static evidence snapshot. These counts are not a reconciled physical-game denominator or executable quotes.</p>'
-            '<p>B043 prepares the exact-reduction repair, injury retesting and a separate chronological market-path study. No B043 owner execution, new issue, injury improvement or market-path gain is claimed. Historical scores remain unchanged; original, reconstructed and issued forecasts retain their separate clocks.</p>')
+            '<p>The new 129-game men’s Polymarket international comparison remains reconstructed: the original model has higher pick accuracy but worse log loss and Brier. The prior 122-game panel and historical scores remain preserved. B044 prepares the missing-clock checkpoint repair; no B044 owner execution, injury improvement or market-path gain is claimed.</p>')
 
 
 def render_landing(data):

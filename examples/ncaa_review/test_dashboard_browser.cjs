@@ -33,34 +33,35 @@ const { chromium } = require(process.env.PLAYWRIGHT_MODULE_DIR || 'playwright');
         assert.equal(await page.locator('#provider-table tr').count(), 3);
         assert.deepEqual(await page.locator('#provider-table tr td:first-child strong').allTextContents(), ['Kalshi', 'Polymarket', 'DraftKings']);
         const attempt = evidence.current_owner_attempt, inventory = evidence.observed_inventory;
-        assert.equal(attempt.release, 'B042');
+        assert.equal(attempt.release, 'B043');
         assert.equal(attempt.status, 'FAILED_PARTIAL_WORK_PRESERVED');
-        assert.equal(attempt.failure_class, 'ValueError');
-        assert.equal(attempt.failure_code, 'B041_BASE_DETERMINISTIC_BLEND_MISMATCH');
-        assert.equal(attempt.failure_phase, 'PAIRED_INJURY_BASE_VERIFICATION');
+        assert.equal(attempt.failure_class, 'TypeError');
+        assert.equal(attempt.failure_code, 'MISSING_MEMBERSHIP_CLOCK_NOT_JSON_SERIALIZABLE');
+        assert.equal(attempt.failure_phase, 'PAIRED_INJURY_CHECKPOINT_IDENTITY');
         assert.deepEqual([attempt.synthetic_tests_passed, attempt.synthetic_test_errors,
-          attempt.synthetic_tests_failed, attempt.synthetic_tests_skipped, attempt.synthetic_tests_total], [1029, 0, 0, 1, 1030]);
+          attempt.synthetic_tests_failed, attempt.synthetic_tests_skipped, attempt.synthetic_tests_total], [1089, 0, 0, 1, 1090]);
         assert.deepEqual([attempt.completed_scientific_stages, attempt.attempted_scientific_stages,
-          attempt.planned_scientific_stages], [9, 10, 15]);
+          attempt.planned_scientific_stages], [9, 10, 16]);
         assert.deepEqual([attempt.new_real_target_fits, attempt.new_calibration_fits,
-          attempt.new_empirical_residual_fits, attempt.reused_target_fits], [102, 46, 24, 108]);
-        assert.equal(attempt.league_new_real_target_fits, league === 'ncaam' ? 69 : 33);
+          attempt.new_empirical_residual_fits, attempt.reused_target_fits], [101, 45, 24, 108]);
+        assert.equal(attempt.league_new_real_target_fits, league === 'ncaam' ? 68 : 33);
         assert.deepEqual([attempt.reused_native_target_fits, attempt.reused_native_scalar_fits], [12, 6]);
-        assert.equal(attempt.new_provider_requests, 13683);
-        assert.equal(attempt.new_prediction_rows, 85885);
+        assert.equal(attempt.new_provider_requests, 3146);
+        assert.equal(attempt.new_prediction_rows, 83856);
         assert.match(await page.locator('#time-legend').innerText(), /Scientific stages/);
-        assert.equal(attempt.new_prospective_issues, 339);
+        assert.equal(attempt.new_prospective_issues, 0);
+        assert.equal(attempt.retained_prior_prospective_issues, 339);
         assert.equal(attempt.scientific_goal_complete, false);
         assert.equal(attempt.current_outcomes_used_for_selection, false);
         const currentText = await page.locator('#current').innerText();
         assert.match(currentText, /Original as-issued credit:\s*0/);
-        assert.match(currentText, /3,936 target rows.*unchanged original weights/);
-        assert.match(currentText, /71,260 current-monitor and 10,689 native-replay target rows/);
-        assert.match(currentText, /New B042 paired metrics:\s*Unavailable/);
+        assert.match(currentText, /3,816 target rows.*unchanged original weights/);
+        assert.match(currentText, /69,600 current-monitor and 10,440 native-replay target rows/);
+        assert.match(currentText, /Pre-study metrics:\s*Recovered/);
         const result = evidence.current_results_status;
         assert.equal(result.new_issues_created_by_recovery, 0);
         assert.equal(result.new_fits_created_by_recovery, 0);
-        assert.equal(result.new_paired_metrics, null);
+        assert.equal(result.new_paired_metrics, 'PRE_STUDY_RETROSPECTIVE_AGGREGATES_AVAILABLE');
         assert.equal(result.new_model_winner, null);
         assert.match(await page.locator('#issue-recovery-copy').innerText(), league === 'ncaam'
           ? /132 existing B042 issue rows across 2 games/ : /207 existing B042 issue rows across 3 games/);
@@ -68,7 +69,7 @@ const { chromium } = require(process.env.PLAYWRIGHT_MODULE_DIR || 'playwright');
         const polymarketRow = page.locator('#provider-table tr').filter({hasText:'Polymarket'});
         assert.equal(await polymarketRow.locator('.provider-product').textContent(), 'International; US unacquired');
         assert.equal(await polymarketRow.locator('.provider-product').isHidden(), width === 390);
-        assert.match(await polymarketRow.innerText(), /149,412 international observations.*US is separate and unacquired/s);
+        assert.match(await polymarketRow.innerText(), /161,903 international observations.*US is separate and unacquired/s);
         assert.deepEqual(evidence.providers.find(p => p.name === 'Polymarket').products,
           [{name:'International',status:'PARTIAL_INTERNATIONAL_CAPTURE'}, {name:'US',status:'NOT_ACQUIRED_UNVERIFIED'}]);
         for (const provider of evidence.providers) {
@@ -90,35 +91,55 @@ const { chromium } = require(process.env.PLAYWRIGHT_MODULE_DIR || 'playwright');
           assert.equal(reconstructed.status, 'RETROSPECTIVE_PAIRED_ORIGINAL_VERSUS_POLYMARKET');
           assert.equal(reconstructed.paired_games, 122);
           assert.equal(await page.locator('#current-paired-table tbody tr').count(), 5);
-          assert.match(await page.locator('#current-paired-note').innerText(), /Preserved in B040; not a new B042 result.*122 identical supplied games.*T−60 reference/);
+          assert.match(await page.locator('#current-paired-note').innerText(), /Preserved in B040; not a new B043 result.*122 identical supplied games.*T−60 reference/);
           assert.match(await page.locator('#current-paired-disagreements').innerText(), /7 model-right \/ provider-wrong disagreements; 2 in the reverse direction/);
           assert.match(await page.locator('#current-paired-disagreements').innerText(), /Qualified settled bets: 0\. Profit remains unverified/);
         } else {
           assert.equal(reconstructed.status, 'NO_EXACT_PAIRED_COHORT_SUPPLIED');
           assert.equal(await page.locator('#current-paired-table table').count(), 0);
-          assert.match(await page.locator('#current-paired-note').innerText(), /New B042 paired metrics remain unavailable/);
+          assert.match(await page.locator('#current-paired-note').innerText(), /This earlier gap remains dated evidence/);
           assert.match(await page.locator('#current-paired-disagreements').innerText(), /authenticated B042 issues are reported separately/);
         }
-        assert.match(await page.locator('#attempt-summary').innerText(), /1029 passed.*0 errors.*1 skipped/);
-        assert.match(await page.locator('#attempt-summary').innerText(), /9 of 15 workflow stages completed/);
-        assert.match(await page.locator('#execution-intro').innerText(), /B042 returned.*Nine of 15 stages completed.*injury base verification failed/);
+        const latest = evidence.latest_reconstructed_comparison;
+        assert.equal(latest.as_issued, false);
+        assert.equal(latest.current_outcomes_selected_model, false);
+        assert.equal(latest.qualified_settled_bets, 0);
+        assert.equal(latest.profit, null);
+        assert.equal(latest.latest_owner_result, true);
+        assert.match(await page.locator('#durable-report-copy').innerText(), /84,195 target rows and 46,529 browser rows.*944 model metric panels with 0 mismatches/);
+        if (league === 'ncaam') {
+          assert.equal(latest.paired_games, 129);
+          assert.equal(await page.locator('#latest-paired-table tbody tr').count(), 5);
+          assert.match(await page.locator('#latest-paired-note').innerText(), /B043 pre-study report.*129 identical supplied games.*T−60 reference/);
+          assert.match(await page.locator('#latest-paired-disagreements').innerText(), /7 model-right.*2 in the reverse direction.*worse log loss, Brier and AUC/);
+          assert.match(await page.locator('#latest-paired-disagreements').innerText(), /earlier 122-game panel above keeps its original values/);
+          const values = await page.locator('#latest-paired-table tbody tr').first().innerText();
+          assert.match(values, /86.05%.*82.17%/s);
+        } else {
+          assert.equal(latest.paired_games, 0);
+          assert.equal(await page.locator('#latest-paired-table table').count(), 0);
+          assert.match(await page.locator('#latest-paired-note').innerText(), /No exact paired women’s provider cohort is admitted/);
+        }
+        assert.match(await page.locator('#attempt-summary').innerText(), /1089 passed.*0 errors.*1 skipped/);
+        assert.match(await page.locator('#attempt-summary').innerText(), /9 of 16 workflow stages completed/);
+        assert.match(await page.locator('#execution-intro').innerText(), /B043 returned.*Nine of 16 stages completed.*injury checkpoint serialization failed/);
         assert.match(await page.locator('.status-strip strong').innerText(), /injury study failed/);
         assert.doesNotMatch(await page.locator('.status-strip strong').innerText(), /stopped before science/);
         assert.match(await page.locator('#preserved-study-copy').innerText(), /108 committed target fits across both leagues; 54 in this track/);
-        assert.equal(await page.locator('#phase-table tr').count(), 15);
+        assert.equal(await page.locator('#phase-table tr').count(), 16);
         assert.equal(await page.locator('#phase-table .done').count(), 9);
         assert.equal(await page.locator('#phase-table .failed').count(), 1);
         assert.match(await page.locator('#phase-table tr').nth(5).innerText(), /Timestamped injury.*Completed/);
         assert.match(await page.locator('#phase-table tr').nth(9).innerText(), /paired injury.*Failed/);
-        assert.equal(attempt.stages.filter(stage => stage.status === 'NOT_STARTED').length, 5);
-        assert.match(await page.locator('#phase-table tr').nth(14).innerText(), /Final display.*secondary history\s+Not started/i);
+        assert.equal(attempt.stages.filter(stage => stage.status === 'NOT_STARTED').length, 6);
+        assert.match(await page.locator('#phase-table tr').nth(15).innerText(), /Final display.*secondary history\s+Not started/i);
         assert.equal(await page.locator('#history-phase-table .done').count(), 3);
         assert.equal(await page.locator('#history-phase-table .failed').count(), 1);
-        assert.equal(inventory.snapshot_at, '2026-11-06T00:25:57.094181+00:00');
+        assert.equal(inventory.snapshot_at, '2026-11-06T02:14:03.087794+00:00');
         const expectedPacificCapture = new Intl.DateTimeFormat('en-US', {timeZone:'America/Los_Angeles',
           year:'numeric',month:'short',day:'numeric',hour:'numeric',minute:'2-digit',timeZoneName:'short'}).format(new Date(inventory.snapshot_at));
-        assert.equal(await page.locator('#inventory-age').innerText(), 'Retained B042 source acquisition completed ' + expectedPacificCapture);
-        assert.deepEqual([inventory.candidate_games, inventory.observed_finals], league === 'ncaam' ? [1439, 370] : [1379, 385]);
+        assert.equal(await page.locator('#inventory-age').innerText(), 'Retained B043 source acquisition completed ' + expectedPacificCapture);
+        assert.deepEqual([inventory.candidate_games, inventory.observed_finals], league === 'ncaam' ? [1439, 395] : [1379, 434]);
         assert.deepEqual(await page.locator('#coverage-counts strong').allTextContents(),
           [inventory.candidate_games.toLocaleString('en-US'), inventory.observed_finals.toLocaleString('en-US'), 'Unverified']);
         assert.equal(inventory.official_inventory_reconciled, false);
@@ -127,7 +148,7 @@ const { chromium } = require(process.env.PLAYWRIGHT_MODULE_DIR || 'playwright');
         assert.match(await page.locator('#week-counts').innerText(), /Reporting weeks use America\/New_York; tipoffs display Pacific/);
         assert.match(await page.locator('#week-counts').innerText(), /recovery created zero new issues/);
         assert.match(await page.locator('#official-counts').innerText(), /1,797 accepted official contest records, 775 exact matches, 1,022 unmatched official candidates, 44 conflicts/);
-        assert.equal(await page.locator('#freshness-table tr').count(), 5);
+        assert.equal(await page.locator('#freshness-table tr').count(), 7);
         assert.match(await page.locator('#freshness-note').innerText(), /publication does not refresh any provider/);
         assert.match(await page.locator('#resource-note').innerText(), /simultaneous process-tree peak was not measured/);
         assert.match(await page.locator('#injury-copy').innerText(), /All 1,320 historical snapshot versions remain unverified/);
@@ -214,8 +235,8 @@ const { chromium } = require(process.env.PLAYWRIGHT_MODULE_DIR || 'playwright');
       }
       await page.goto(pathToFileURL(path.join(root, 'docs/ncaa/index.html')).href);
       assert.equal(await page.locator('.cards a').count(), 2);
-      assert.match(await page.locator('.status').innerText(), /B042: 9 of 15 stages completed; injury study failed/);
-      assert.match(await page.locator('.status').innerText(), /711,001 market observations.*2,818 source\/candidate records.*755 reported finals/s);
+      assert.match(await page.locator('.status').innerText(), /B043: 9 of 16 stages completed; injury study failed/);
+      assert.match(await page.locator('.status').innerText(), /723,492 market observations.*2,818 source\/candidate records.*829 reported finals/s);
       assert.match(await page.locator('.status').innerText(), /339 existing research issue rows across 5 games/);
       assert.doesNotMatch(await page.locator('.status').innerText(), /Latest owner stopped before science/);
       assert.equal(await page.evaluate(() => document.documentElement.scrollWidth > innerWidth), false, `landing ${width} overflow`);
