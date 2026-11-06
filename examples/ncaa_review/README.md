@@ -4,19 +4,83 @@
 
 This example makes the **evaluation contract** executable without credentials, data subscriptions or a machine-learning environment. It also generates the college basketball review pages from committed, sanitized aggregate evidence. The invented demonstration and the real historical aggregates remain separate: the example does not reproduce the private models or claim a betting record.
 
-## Latest actual owner and inherited observations
+## Current review — November 6, 2026 UTC · B042 returned; B043 prepared
 
-B041 stopped during predecessor setup before any of 15 scientific stages.
-Its 982 passing fixtures and one optional Linux integration skip did not produce
-source requests, imports, fits or forecasts. Two different predecessor inputs
-shared a progress counter; the second restarted at one after the first reached
-108. The backward-counter guard correctly stopped the run. The public example
-below demonstrates source-specific queue identities with invented inputs.
+B042 completed **9 of 15 scientific stages** before the injury base-verification
+stage failed. It committed **102 new target estimators, 46 scalar calibrations
+and 24 empirical residual fits** across the two leagues in **92.61 minutes**.
+It reused 108 historical target fits and 12 native target fits plus six native
+scalar calibrations; those are separate from new work. The fixture gate passed
+1,029 cases with one optional integration skip and no errors.
 
-B040 remains the latest game/market snapshot at November 5, 10:37 a.m. Pacific:
-557,737 observations and 2,816 source/candidate records, including 738 finals.
-These counts and every prior metric are unchanged. Official completeness, all-
-version injury retesting and an injury performance gain remain unverified.
+Current source acquisition, original-model inference, chronological monitoring
+and native replay completed. The injury verifier used a floating-point reduction
+that differed in its last bits from the historical producer. B043 prepares a
+repair that reproduces the producer exactly and retains the equality check.
+The injury study committed no challenger fits. Final issue reconciliation and
+scorecards were among the five later stages that did not start.
+
+Independent recovery authenticated **339 existing B042 issue rows across five
+games**: 132 rows / two men's games and 207 rows / three women's games. Recovery
+preserved their original bytes and issue clocks and created **zero new issues
+or model fits**. These target/stream rows repeat games; they are not 339 distinct
+games or settled wagers. The original frozen reconstruction covers 1,312 games /
+3,936 target rows and receives zero original as-issued credit. The current
+monitor and native replay contain 71,260 and 10,689 target rows respectively.
+**New B042 paired scores and a new model winner remain unavailable.** Earlier
+historical selections and the preserved current comparison keep their exact
+values and cohorts.
+
+### Updated capture, with explicit denominators
+
+Source acquisition completed **November 6, 00:25:57 UTC** (November 5, 4:25 p.m.
+Pacific). The retained display inventory contains **711,001 observations**:
+561,323 Kalshi, 149,412 Polymarket international and 266 DraftKings. The increase
+of 153,264 over B040 is a retained-observation increase, not newly requested
+quotes, independent games or executable liquidity. Polymarket US remains
+separately unacquired. The latest source quote and acquisition clocks remain
+separate; publishing this review refreshes neither.
+
+The visible inventory has **2,818 source/candidate records and 755 reported
+finals**, while the ESPN source separately contains **1,792 game versions and
+491 finals**. The official inventory has 1,797 accepted contest records, 775
+exact matches, 1,022 unmatched official candidates, 44 conflicts and four rejected
+records/date failures. These populations can overlap or duplicate one another;
+complete physical-game coverage remains unverified. CBBD remains paused after
+HTTP 429. Retained provider refusals and uncertain transport results are not
+cleared by a new release. The Odds API found no configured runtime credential
+and made zero new calls or credit charges.
+
+### Injury evidence and prepared market-path research
+
+There are **1,320 injury observations**, 643 men and 677 women: 1,306 bound and
+14 unresolved. Seventy-four have a supported source-availability upper bound
+(12 exact publication clocks and 62 date bounds). The other 1,246 lack one:
+1,244 recovered image observations and two current PDF observations. **All
+1,320 historical snapshot versions remain unverified.** More observations do
+not establish complete injury coverage or a measured injury effect.
+
+B043 prepares a separate market-path extraction, path-clock validation and
+chronological paired study. Actual in-game observations and timestamp-supported
+game-state windows are required. The B042 retained observation count does not
+establish that support: its history collection ended at tip. No successor
+owner execution, new B043 issue, injury improvement or market-path gain is
+claimed. Original, rolling and issued tracks keep their separate semantics.
+
+The actual nested B042 return SHA-256 is
+`1550fbe4c1a1bd459e7117121444928c3be002c02fbb5fd37c7c79fc7362d618`.
+The [men's aggregate evidence](../../tracks/ncaam/evidence.json) and
+[women's aggregate evidence](../../tracks/ncaaw/evidence.json) provide stage
+counts, source freshness, missing results and the preserved prior history.
+
+### Preserved B041 and B040 evidence
+
+B041 stopped during predecessor setup before any of its 15 scientific stages.
+Its 982 passing fixtures and one optional skip produced no source requests,
+imports, fits or forecasts. The independent-source progress repair preserves
+the backward-counter guard. B040's dated inventory remains in history with
+557,737 observations, 2,816 source/candidate records and 738 reported finals.
+The new capture does not revise those earlier snapshots.
 
 ## Run the example
 
