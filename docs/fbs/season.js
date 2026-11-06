@@ -109,6 +109,7 @@
  }
  if(typeof module!=='undefined'&&module.exports)module.exports={reference,filterGames,csvCell,pointBounds,unpack,currentSnapshotSlot};
  if(typeof document==='undefined')return;
+ const v034Notice=document.createElement('aside');v034Notice.style.cssText='padding:16px 22px;background:#e9f5f1;border-left:4px solid #08796a;margin:18px';const v034Link=document.createElement('a');v034Link.href='frontier.html';v034Link.textContent='Latest verified acquisition and all-game report →';v034Notice.append(v034Link,document.createTextNode(' V033 captured new source data at November 6, 2026 00:25 UTC and returned partial diagnostics. The historical metrics below keep their original cohorts and clocks.'));(document.querySelector('main')||document.body).prepend(v034Notice);
  const data=unpack(JSON.parse(document.getElementById('season-data').textContent));
  const nativeSnapshot=data.reporting_contract.v031_native_current_snapshot||null;
  const state={view:'all',week:'all',query:'',provider:'DraftKings',horizon:'auto',disagreements:false,page:0};

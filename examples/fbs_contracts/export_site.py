@@ -22,7 +22,10 @@ ASSETS = ('index.html','research.html','recovery.html','season.js','source-progr
           'recovery.js','dashboard.css','season-2026.json','evidence.json',
           'official-inventory.json','source-progress.json',
           'V024_AGGREGATE_2026-11-03.json','V025_OPERATIONAL_REVIEW_2026-11-03.json',
-          'v013-native-research-2026-10-31.json')
+          'v013-native-research-2026-10-31.json',
+          'models.html','models.js','model-registry.json','recovery-review.json',
+          'injury-association.json','common-game-review.json',
+          'frontier.html','frontier.js','frontier-games.json','frontier-review.json')
 
 
 def committed(commit, path):
@@ -88,3 +91,4 @@ if __name__ == '__main__':
     result=export(args.commit,args.output)
     print(json.dumps({'source_commit':args.commit,'public_assets':len(result['public_files']),
                       'new_provider_calls':0,'owner_model_fits':0}))
+

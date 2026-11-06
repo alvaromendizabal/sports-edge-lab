@@ -2,14 +2,14 @@
   "schema": "fbs.public.recovery-review.v1",
   "review_date": "2026-11-05 America/Los_Angeles",
   "source_return": {
-    "bytes": 130206403,
-    "sha256": "d4355440b02bbeaa53586dafcd228354afb42a7bc99a8fdd52db442192883a37"
+    "bytes": 147634338,
+    "sha256": "85d1b724493c6057f2bd688dd10f3e0018231a7082db5bdb36fdc13809774962"
   },
-  "latest_owner_release": "V031",
+  "latest_owner_release": "V033",
   "latest_owner_status": "PARTIAL_DIAGNOSTICS_PRESERVED",
   "owner_exit": 2,
   "new_owner_fits": 0,
-  "next_owner_release": "V033",
+  "next_owner_release": "V034",
   "next_owner_status": "PREPARED_NOT_EXECUTED",
   "independent_scoring": {
     "games": 1806,
@@ -66,5 +66,28 @@
       "games": 482,
       "cohort_sha256": "01155b427fe962e02f6479575f603ff31abae747496c111aedb9b7ebf5fdbda8"
     }
-  ]
+  ],
+  "preserved_v031_owner": {
+    "source_return": {
+      "bytes": 130206403,
+      "sha256": "d4355440b02bbeaa53586dafcd228354afb42a7bc99a8fdd52db442192883a37"
+    },
+    "latest_owner_release": "V031",
+    "latest_owner_status": "PARTIAL_DIAGNOSTICS_PRESERVED",
+    "owner_exit": 2
+  },
+  "owner_provider_calls": 669,
+  "owner_native_calls": 654,
+  "owner_current_paid_and_stats_calls": 15,
+  "owner_new_forecast_issues": 0,
+  "receipt_inventory_checked": 5030,
+  "receipt_inventory_listed": 5038,
+  "first_defer": "DISK_HEADROOM",
+  "headroom_shortfall_bytes": 6909952,
+  "terminal_error": "Closed original receipt inventory required for deferred recovery",
+  "source_objects_independently_reread_current": 15,
+  "official_raw_rows_independently_reconstructed": 2742,
+  "current_draftkings_matched_rows": 188,
+  "current_draftkings_quarantined_rows": 24,
+  "current_game_report": "frontier-games.json"
 }

@@ -111,9 +111,12 @@ let browser;
  assert.equal(await fallback.locator('#source-inventory-body [data-source-row]').count(),2742);
  assert.equal(await fallback.evaluate(()=>document.documentElement.scrollWidth>innerWidth),false);
  assert.deepEqual(errors,[]);assert.deepEqual(requests,[]);
+ const frontier=await require('./frontier_browser_cases.cjs').run({browser,root,screenshots:process.env.FBS_SCREENSHOTS});
+ console.log(JSON.stringify({frontier}));
  console.log(JSON.stringify({status:'PASS',viewports:[1440,390],inventory_provider_states:states,
    no_script_games:888,current_week:63,disagreement_csv_rows:122,keyboard_dialog:true,
    supported_current_bounds_verified:true,original_wide_book_diagnostic_preserved:true,
    current_only_native_grid:true,no_older_snapshot_fill_for_missing_latest:true,
    script_errors:0,external_requests:0}));
 })().catch(error=>{console.error(error);process.exitCode=1;}).finally(async()=>{if(browser)await browser.close();});
+
