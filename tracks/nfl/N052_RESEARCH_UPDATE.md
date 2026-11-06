@@ -66,7 +66,7 @@ The fixed completed source inventory remains 121 games, 936 contracts, 242 provi
 
 ## N052 is prepared, not executed
 
-The negative result motivates a narrower question: whether report availability or designation content adds incremental information to a fixed, already fitted baseline. N052 prepares 150 correction states across five annual folds,three targets and ten prespecified variants. The variants separate an intercept correction, support availability, designation content with support, and interaction with baseline confidence. Exact active transforms and coefficients remain private.
+The negative result motivates a narrower question: whether report availability or designation content adds incremental information to a fixed, already fitted baseline. N052 prepares 150 correction states across five annual folds,three targets and ten prespecified variants. The variants separate an intercept correction, support availability, designation content with support, and support-by-baseline-prediction interaction. Exact active transforms and coefficients remain private.
 
 Only 2022–2023 may select a correction.2024–2025 remain exposed, 2026 remains descriptive. The 144-cell designation study, 288-cell predecessor and eight existing current native components are reused without repeated native fitting. This prepared study adds no issuance lane and cannot promote itself. **Zero N052 owner fits, correction states or forecasts are claimed by this publication.**
 
