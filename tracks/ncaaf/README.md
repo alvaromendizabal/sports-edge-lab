@@ -1,5 +1,22 @@
 # Sports Edge Lab · NCAA football
 
+## V034 evidence review - actual V033 acquisition and new frontier research
+
+[**Latest acquisition, research and every observed game →**](https://sports-edge-lab-fbs.alv-mendizabal.chatgpt.site/frontier.html) · [Retained model registry](https://sports-edge-lab-fbs.alv-mendizabal.chatgpt.site/models.html)
+
+V033 is now authenticated as an actual partial owner run. It recorded **669 source requests** (654 native-market and 15 CFBD/Odds), zero learned fits and zero forecast issues. The historical receipt scan checked **5,030 of 5,038** listed records before measured disk headroom fell **6,909,952 bytes below the preserved admission threshold**. Calling the closed-inventory installer on that unfinished scan caused the final exception. This was an admission deferral, not a physically full disk. The next runtime preserves the cause, resumes exact receipts, reuses the completed RAW73 study and lets independent acquisition continue.
+
+All **2,742 official rows** across 2024-2026 were independently reconstructed from original current source bytes. The November 6, 2026 00:25 UTC snapshot retains **888 observed 2026 games: 627 completed, 261 uncompleted**. Two future kickoff revisions are preserved. Week 14 exists in the calendar but has no game rows; full-universe completeness is not claimed. The main 622-game retrospective replay remains unchanged: 465 correct, log loss 0.5133276378, no historical issuance.
+
+The fresh DraftKings capture yields **188 exactly matched rows across 63 games**; 24 rows across eight events remain quarantined for kickoff conflicts. The complete current native grid contains **567 slots**. Informative pregame winner/margin/total coverage is Kalshi **57/57/57**, Polymarket Global **56/56/56**, and Polymarket US **51/52/52**. Native point values remain supported median intervals, with separate bound clocks; they are never converted into expected scores or executable prices. All **25,330** retained/new references and **1,425** retained provider/horizon winner disagreements remain in the private complete exports.
+
+The public review includes all 888 observed games, the full previous 56-game week and current 63-game week, source clocks, period/provider filters, keyboard access and CSV export. A separate historical market-path study retains raw successes, retries, actual-game-boundary checks, fixed chronological alternatives and explicit historical-possession limits. The displayed research checkpoint distinguishes local work from SageMaker execution. The earlier injury study remains a negative, timing-uncertified association result and is not refitted unchanged. No model promotion or qualified betting edge is claimed: **NO BET, zero stake**.
+
+The new page has explicit population, missingness, source-revision and export tests. The existing FBS browser workflow also exercises its desktop/mobile views, filters, keyboard access and downloads. Private source archives, model recipes, execution packages and cloud identifiers remain excluded. Earlier dated evidence is preserved below.
+
+### Previous recovery review - retained as dated history
+
+
 [**Open the browser dashboard →**](https://sports-edge-lab-fbs.alv-mendizabal.chatgpt.site) · [Recovery and 2026 coverage](https://sports-edge-lab-fbs.alv-mendizabal.chatgpt.site/recovery.html)
 
 
@@ -81,5 +98,6 @@ Apply the [shared research protocol](../../docs/RESEARCH_PROTOCOL.md). Establish
 **Current phase:** source acquisition and audit. No trained-model performance claim.
 
 </details>
+
 
 

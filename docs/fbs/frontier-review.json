@@ -1,0 +1,233 @@
+{
+  "schema": "fbs.public.v034.frontier-review.v1",
+  "review_date": "2026-11-05 America/Los_Angeles",
+  "owner": {
+    "release": "V033",
+    "exit": 2,
+    "status": "PARTIAL_DIAGNOSTICS_PRESERVED",
+    "provider_requests": 669,
+    "model_fits": 0,
+    "forecast_issues": 0,
+    "return_sha256": "85d1b724493c6057f2bd688dd10f3e0018231a7082db5bdb36fdc13809774962"
+  },
+  "current_source_review": {
+    "schema": "fbs.v034.actual-current-report.v1",
+    "generated_at": "2026-11-06T01:19:32.113630+00:00",
+    "current_capture_started_at": "2026-11-06T00:25:14Z",
+    "current_capture_completed_at": "2026-11-06T00:25:48Z",
+    "all_official_games": 2742,
+    "current_games": 888,
+    "completed_current_games": 627,
+    "native_weeks_observed": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12,
+      13,
+      15
+    ],
+    "absent_regular_calendar_weeks": [
+      14
+    ],
+    "original_game_rows_independently_reconstructed": 2742,
+    "original_source_objects_checked": 15,
+    "draftkings_raw_rows": 212,
+    "draftkings_source_events": 71,
+    "draftkings_exact_rows": 188,
+    "draftkings_exact_games": 63,
+    "draftkings_exact_targets": {
+      "winner": 62,
+      "margin": 63,
+      "total": 63
+    },
+    "draftkings_quarantine_rows": 24,
+    "draftkings_quarantine_reasons": {
+      "EXACT_KICKOFF_CONFLICT": 24
+    },
+    "draftkings_pregame_rows": 188,
+    "new_fits": 0,
+    "new_forecasts": 0,
+    "new_provider_calls_here": 0,
+    "orders": 0,
+    "stake_usd": 0,
+    "historical_replay_unchanged": true,
+    "all_games_complete_universe_proven": false,
+    "note": "New owner source capture, independently read back. Reconciliation is local. Archived market/model panels retain their own clocks and cohorts."
+  },
+  "research": {
+    "title": "Registered historical path acquisition",
+    "summary": "The fixed inventory contains 3,683 provider/contract requests. At the saved checkpoint, 398 responses yielded 64,003 source observations. This is local acquisition, separate from SageMaker execution.",
+    "variants": [],
+    "evaluation_status": "Acquisition is continuing; no new model result is claimed in this checkpoint.",
+    "limitations": [
+      "The 2025 study is exposed retrospective development. Historical source possession and score/possession alignment are not proved.",
+      "No continuous-duration, full-game dominance, executable-price, player-impact or betting-edge claim follows from sampled prices.",
+      "The earlier injury association study is preserved without refitting. Current-season outcomes cannot select a model."
+    ]
+  },
+  "research_checkpoint": {
+    "as_of_utc": "2026-11-06T01:23:17.510273Z",
+    "betting_edge_claim": false,
+    "execution_environment": "LOCAL_PREPARATION_NOT_OWNER_EXECUTION",
+    "failed_request_receipts": 0,
+    "full_game_path_claim": false,
+    "historical_source_possession_proved": false,
+    "metrics": [],
+    "new_distinct_candidate_target_fits": 0,
+    "new_forecast_issues": 0,
+    "new_local_estimator_fit_executions": 0,
+    "new_owner_estimator_fits": 0,
+    "normalization_failures": 0,
+    "orders": 0,
+    "paired_uncertainty": [],
+    "per_provider_target": [
+      {
+        "eligible_observed_window_paths": 285,
+        "nonempty_responses": 358,
+        "planned_requests": 901,
+        "provider": "Kalshi",
+        "source_observations": 60072,
+        "status": "IN_PROGRESS",
+        "successful_responses": 358,
+        "target": "winner"
+      },
+      {
+        "eligible_observed_window_paths": 0,
+        "nonempty_responses": 12,
+        "planned_requests": 748,
+        "provider": "Kalshi",
+        "source_observations": 398,
+        "status": "IN_PROGRESS",
+        "successful_responses": 12,
+        "target": "margin"
+      },
+      {
+        "eligible_observed_window_paths": 1,
+        "nonempty_responses": 14,
+        "planned_requests": 751,
+        "provider": "Kalshi",
+        "source_observations": 593,
+        "status": "IN_PROGRESS",
+        "successful_responses": 14,
+        "target": "total"
+      },
+      {
+        "eligible_observed_window_paths": 14,
+        "nonempty_responses": 14,
+        "planned_requests": 381,
+        "provider": "Polymarket Global",
+        "source_observations": 2940,
+        "status": "IN_PROGRESS",
+        "successful_responses": 14,
+        "target": "winner"
+      },
+      {
+        "eligible_observed_window_paths": 0,
+        "nonempty_responses": 0,
+        "planned_requests": 406,
+        "provider": "Polymarket Global",
+        "source_observations": 0,
+        "status": "IN_PROGRESS",
+        "successful_responses": 0,
+        "target": "margin"
+      },
+      {
+        "eligible_observed_window_paths": 0,
+        "nonempty_responses": 0,
+        "planned_requests": 442,
+        "provider": "Polymarket Global",
+        "source_observations": 0,
+        "status": "IN_PROGRESS",
+        "successful_responses": 0,
+        "target": "total"
+      },
+      {
+        "eligible_observed_window_paths": 0,
+        "nonempty_responses": 0,
+        "planned_requests": 54,
+        "provider": "Polymarket US",
+        "source_observations": 0,
+        "status": "IN_PROGRESS",
+        "successful_responses": 0,
+        "target": "winner"
+      },
+      {
+        "eligible_observed_window_paths": 0,
+        "nonempty_responses": 0,
+        "planned_requests": 0,
+        "provider": "Polymarket US",
+        "source_observations": 0,
+        "status": "INVENTORY_EMPTY",
+        "successful_responses": 0,
+        "target": "margin"
+      },
+      {
+        "eligible_observed_window_paths": 0,
+        "nonempty_responses": 0,
+        "planned_requests": 0,
+        "provider": "Polymarket US",
+        "source_observations": 0,
+        "status": "INVENTORY_EMPTY",
+        "successful_responses": 0,
+        "target": "total"
+      },
+      {
+        "eligible_observed_window_paths": 0,
+        "nonempty_responses": 0,
+        "planned_requests": 0,
+        "provider": "DraftKings",
+        "source_observations": 0,
+        "status": "NOT_ACQUIRED_AUTHORIZED_ADAPTER_NOT_PASSED",
+        "successful_responses": 0,
+        "target": "winner"
+      },
+      {
+        "eligible_observed_window_paths": 0,
+        "nonempty_responses": 0,
+        "planned_requests": 0,
+        "provider": "DraftKings",
+        "source_observations": 0,
+        "status": "NOT_ACQUIRED_AUTHORIZED_ADAPTER_NOT_PASSED",
+        "successful_responses": 0,
+        "target": "margin"
+      },
+      {
+        "eligible_observed_window_paths": 0,
+        "nonempty_responses": 0,
+        "planned_requests": 0,
+        "provider": "DraftKings",
+        "source_observations": 0,
+        "status": "NOT_ACQUIRED_AUTHORIZED_ADAPTER_NOT_PASSED",
+        "successful_responses": 0,
+        "target": "total"
+      }
+    ],
+    "planned_requests": 3683,
+    "previous_injury_distinct_candidate_target_fits": 12,
+    "previous_injury_fit_execution_count": 24,
+    "previous_injury_study_refitted": false,
+    "promotion_allowed": false,
+    "registered_maximum_candidate_target_fits_if_both_cohorts_sufficient": 33,
+    "registry_version": "V034",
+    "same_game_path_allowed_for_pregame_forecast": false,
+    "schema": "fbs.v034.frontier-public-aggregate.v1",
+    "scientific_status": "EXPOSED_2025_RETROSPECTIVE_DEVELOPMENT_ONLY",
+    "score_possession_alignment_verified": false,
+    "source_observations": 64003,
+    "status": "ACQUISITION_IN_PROGRESS",
+    "successful_response_receipts": 398,
+    "true_continuous_duration_measured": false
+  },
+  "new_owner_execution": false,
+  "new_genuine_forecasts": 0,
+  "orders": 0,
+  "stake_usd": 0
+}
