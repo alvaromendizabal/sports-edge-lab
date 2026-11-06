@@ -595,11 +595,18 @@ const { chromium } = require(process.env.PLAYWRIGHT_MODULE_DIR || 'playwright');
       assert.match(await page.locator('#provider-disagreements').innerText(),/No comparable point\/threshold disagreement records/);
       counts.providerComparisonViews++;
       const commonVerified=structuredClone(providerReport);commonVerified.provider_comparisons.common_provider_set_verified=true;
+      commonVerified.evidence_release='INVENTED_COMMON_VERIFIED_FIXTURE';
       commonVerified.provider_comparisons.tables.season_common.common_provider_set_verified=true;
       commonVerified.provider_comparisons.tables.week_common=tableSource('week-common',[],'all_requested_providers_common');
       commonVerified.provider_comparisons.tables.disagreements=tableSource('disagreements',[]);
       await page.locator('#report-file').setInputFiles({name:'invented-common-report.json',mimeType:'application/json',buffer:Buffer.from(JSON.stringify(commonVerified))});
-      await page.waitForFunction(()=>document.getElementById('provider-disagreement-count').textContent.startsWith('0 of 0'));
+      // The preceding margin view already displays zero disagreements. Wait for
+      // the new fixture's own metadata, not a stale count from the prior report.
+      await page.waitForFunction(()=>{
+        try{return JSON.parse(document.getElementById('metadata').textContent).evidence_release==='INVENTED_COMMON_VERIFIED_FIXTURE'&&
+          document.getElementById('load-status').textContent.startsWith('Loaded ')&&document.getElementById('provider-target').value==='win';}
+        catch{return false;}
+      });
       await page.selectOption('#provider-cohort','common');
       assert.match(await page.locator('#provider-populations').innerText(),/Supplied common-game membership and paired N match across all three/);
       await page.selectOption('#provider-period','week');
