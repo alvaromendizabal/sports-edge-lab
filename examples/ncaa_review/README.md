@@ -23,12 +23,24 @@ memory. They are observations, not a diagnosis or a resource reservation.
 
 A separately authenticated B045 baseline has **87,003 target rows and 47,940
 browser display rows**, as of 2026-11-06 21:23:19 UTC. Independent arithmetic
-reconciled **1,220 model metric panels** (417 season / 803 weekly) through
-4,132 scalar checks with zero mismatches; calibration slopes/intercepts were not
-independently refitted. Its 549 B045-labeled unsettled prospective rows across
-eight games and 339 B042-labeled settled rows across five games await complete
-immutable-ledger admission in this public snapshot. Report labels alone cannot
-create new issue credit or establish a performance gain.
+now reconciles **1,223 metric panels / 4,147 checks, with zero mismatches**.
+The previous 1,220 model panels (417 season / 803 weekly) and 4,132 checks remain
+preserved; the extension adds three provider panels and 15 checks. Calibration
+slopes/intercepts were not independently refitted.
+
+The **255 returned immutable journal objects examined** contain **552 distinct
+verified B045-source issues across eight games**. All 549 B045 prospective rows
+in the dated baseline exactly match original journal predictions, identities
+and clocks. Three additional journal-only rows remain separate; the baseline is
+not rewritten. The **339 B042 issues across five games remain unchanged**.
+Every admitted issue passes the original validator, contains no outcome fields,
+and has an original server timestamp interval ending by its target cutoff.
+The audit conservatively uses server LastModified plus one second as that
+interval's exclusive upper bound; new retrieval time supplies no old availability.
+This is source-version evidence: the journal has no owner run IDs, and the
+supplied listing does not independently prove complete remote inventory. The
+read-only audit creates no new issues and proves neither model-input closure,
+forecast accuracy nor profit. Both genders are included in these aggregate counts.
 
 B043 retains scientific authority for the dated panels below: **101 target /
 45 scalar / 24 empirical fits**, 84,195 pre-study target rows, 46,529 display

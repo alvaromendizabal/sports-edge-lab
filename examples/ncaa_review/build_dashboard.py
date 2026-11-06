@@ -58,7 +58,24 @@ def evidence(league):
         if attempt['out_of_memory_proved'] or attempt['kill_cause'] != 'UNKNOWN':raise ValueError('unproved signal-exit cause')
     baseline = data['b045_baseline_observation']
     if baseline['source_release'] != 'B045' or baseline['new_issue_credit'] is not None or baseline['new_fit_credit_from_report_recovery'] != 0:raise ValueError('report labels receive unverified issue or fit credit')
-    if baseline['independent_metric_panels_checked'] != baseline['independent_season_panels_checked'] + baseline['independent_weekly_panels_checked'] or baseline['calibration_slope_intercept_independently_refit'] is not False:raise ValueError('unsupported metric reconciliation claim')
+    if (baseline['independent_model_panels_checked'] != baseline['independent_season_panels_checked'] + baseline['independent_weekly_panels_checked']
+            or baseline['independent_metric_panels_checked'] != baseline['independent_model_panels_checked'] + baseline['independent_provider_panels_checked']
+            or baseline['independent_scalar_checks'] != baseline['independent_model_scalar_checks'] + baseline['independent_provider_scalar_checks']
+            or baseline['calibration_slope_intercept_independently_refit'] is not False):raise ValueError('unsupported metric reconciliation claim')
+    journal = data['b045_forecast_journal_observation']
+    if (journal['source_scope'] != 'B045_SOURCE_VERSION_NOT_OWNER_RUN_ID'
+            or journal['b045_verified_issue_rows'] != journal['b045_distinct_issue_fingerprints']
+            or journal['b045_verified_issue_rows'] != journal['b045_baseline_exact_match_rows'] + journal['b045_journal_only_rows']
+            or journal['b045_baseline_exact_match_rows'] != baseline['source_labeled_b045_prospective_unsettled_rows']
+            or journal['b045_games'] != baseline['source_labeled_b045_games']
+            or journal['b042_retained_issue_rows'] != baseline['source_labeled_b042_prospective_settled_rows']
+            or journal['baseline_prospective_exact_matches'] != journal['b045_baseline_exact_match_rows'] + journal['b042_retained_issue_rows']):raise ValueError('journal source and baseline population mismatch')
+    if any(journal[key] is not True for key in ('original_issue_validation_passed', 'original_prediction_identity_and_clocks_unchanged', 'outcome_fields_absent_at_issue', 'issue_before_server_interval_upper', 'server_interval_upper_at_or_before_cutoff')):raise ValueError('unsupported original issue availability')
+    if (journal['new_issues_created_by_audit'] != 0 or journal['baseline_rewritten'] is not False
+            or journal['global_remote_inventory_exhaustion_proved'] is not False
+            or journal['owner_run_identity_proved_by_journal'] is not False
+            or journal['full_model_input_closure_proved'] is not False
+            or journal['forecast_performance_or_profit_proved'] is not False):raise ValueError('journal audit grants unsupported scope or scientific credit')
     readback = dated_readback(data)
     if readback['source_release'] != scientific['release'] or readback['observations'] != data['current_coverage_gaps']['market_observations']:raise ValueError('readback evidence population')
     if readback['new_provider_requests'] != 0 or readback['new_fit_credit'] != 0 or readback['earlier_availability_credit'] is not False or readback['source_clocks_unchanged'] is not True:raise ValueError('readback grants unsupported credit')
@@ -114,8 +131,11 @@ def landing_status(data):
     release = escape(a['release'])
     capture = datetime.fromisoformat(data[0]['freshness']['source_acquisition_completed_at']).strftime('%d %b %Y, %H:%M UTC')
     previous = scientific_attempt(data[0])
+    baseline = data[0]['b045_baseline_observation']; journal = data[0]['b045_forecast_journal_observation']
+    if any(d['b045_forecast_journal_observation'] != journal for d in data):raise ValueError('landing journal population disagreement')
     return (f'<strong>{release}: {a["completed_scientific_stages"]} of {a["planned_scientific_stages"]} stages completed; child exited without its terminal return.</strong>'
             '<p>The injury stage exhausted a bounded resource wait. The wrapper later recorded child exit −9 and an unpersisted return; the cause of that exit is unknown. Complete new-fit counts, final CPU/peak-memory totals and the external shell exit remain unavailable in this public snapshot. Unknown work is not zero work. B046 is prepared; no B046 owner execution or model gain is claimed.</p>'
+            f'<p>The independently checked B045 baseline now has {baseline["independent_metric_panels_checked"]:,} metric panels / {baseline["independent_scalar_checks"]:,} checks with zero mismatches, preserving the earlier {baseline["independent_model_panels_checked"]:,} model panels / {baseline["independent_model_scalar_checks"]:,} checks. Across {journal["inventory_objects_examined"]} returned immutable journal objects examined, {journal["b045_verified_issue_rows"]} verified B045-source issues cover {journal["b045_games"]} games: all {journal["b045_baseline_exact_match_rows"]} dated baseline rows match exactly, and {journal["b045_journal_only_rows"]} additional journal rows remain separate. Original server clocks support pre-cutoff, outcome-free issuance; source-version evidence does not identify an owner run, establish complete remote inventory, or prove forecast performance.</p>'
             f'<p>Dated B044 readback verified 90 preserved chunks, {gaps["market_observations"]:,} observations and 1,504,058,360 logical bytes through 182 full storage GETs. Those remain B044 reads of earlier evidence with unchanged clocks; they are not B045 provider acquisition or earlier availability proof.</p>'
             f'<p>Preserved {previous["release"]} research: {previous["completed_scientific_stages"]}/{previous["planned_scientific_stages"]} stages, {previous["new_real_target_fits"]} target / {previous["new_calibration_fits"]} scalar / {previous["new_empirical_residual_fits"]} empirical fits. {result["authenticated_issue_rows_both_leagues"]:,} existing research issue rows across {result["authenticated_issue_games_both_leagues"]} games retain their B042 identity. Its durable pre-study report contains {result["pre_study_target_rows"]:,} target rows and {result["browser_display_rows"]:,} browser rows.</p>'
             f'<p>The dated inventory contains {gaps["market_observations"]:,} market observations and {gaps["both_leagues_source_records"]:,} source/candidate records with {gaps["both_leagues_observed_finals"]:,} numeric finals. Source acquisition completed {capture}; this is a static evidence snapshot, not a reconciled physical-game denominator.</p>'

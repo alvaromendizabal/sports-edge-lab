@@ -403,6 +403,26 @@ class EvidenceTests(unittest.TestCase):
                 with self.assertRaises(ValueError):
                     build_dashboard.evidence('ncaam')
 
+    def test_verified_source_journal_preserves_baseline_and_prior_reconciliation_scope(self):
+        for data in self.exports.values():
+            baseline=data['b045_baseline_observation'];journal=data['b045_forecast_journal_observation']
+            self.assertEqual((baseline['independent_metric_panels_checked'],baseline['independent_scalar_checks']),(1223,4147))
+            self.assertEqual((baseline['independent_model_panels_checked'],baseline['independent_model_scalar_checks']),(1220,4132))
+            self.assertEqual((baseline['independent_provider_panels_checked'],baseline['independent_provider_scalar_checks']),(3,15))
+            self.assertEqual((journal['b045_verified_issue_rows'],journal['b045_baseline_exact_match_rows'],journal['b045_journal_only_rows']),(552,549,3))
+            self.assertEqual((journal['b045_games'],journal['b042_retained_issue_rows'],journal['b042_games']),(8,339,5))
+            self.assertEqual(journal['baseline_prospective_exact_matches'],888)
+            previous=data['b045_baseline_observation_history'][-1]
+            self.assertEqual((previous['independent_metric_panels_checked'],previous['independent_scalar_checks']),(1220,4132))
+            self.assertEqual(previous['immutable_issue_admission'],'PENDING_COMPLETE_LEDGER_RECONCILIATION_AT_PUBLIC_SNAPSHOT')
+
+    def test_journal_audit_cannot_rewrite_baseline_or_expand_its_proof_scope(self):
+        for key,value in [('b045_verified_issue_rows',549),('b045_baseline_exact_match_rows',552),('new_issues_created_by_audit',552),('baseline_rewritten',True),('global_remote_inventory_exhaustion_proved',True),('owner_run_identity_proved_by_journal',True),('full_model_input_closure_proved',True),('forecast_performance_or_profit_proved',True),('server_interval_upper_at_or_before_cutoff',False),('outcome_fields_absent_at_issue',False)]:
+            corrupted=copy.deepcopy(self.exports['ncaam'])
+            corrupted['b045_forecast_journal_observation'][key]=value
+            with self.subTest(key=key),patch.object(Path,'read_text',return_value=json.dumps(corrupted)):
+                with self.assertRaises(ValueError):build_dashboard.evidence('ncaam')
+
     def test_spread_example_is_generated_from_executable_invented_contract(self):
         from spread_ats import demo
         for data in self.exports.values():
