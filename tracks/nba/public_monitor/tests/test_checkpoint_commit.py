@@ -1,6 +1,8 @@
 """Invented failure cases; no sports data, credentials, fits or forecasts."""
 import json
+import os
 from pathlib import Path
+import stat
 import tempfile
 import unittest
 from unittest.mock import patch
@@ -160,5 +162,139 @@ class CheckpointCommitTests(unittest.TestCase):
             self.run_one()
 
 
+class MarkerAcknowledgementTests(unittest.TestCase):
+    """Exercise real temporary files and sync calls, with invented results."""
+
+    setUp = CheckpointCommitTests.setUp
+    action = CheckpointCommitTests.action
+    run_one = CheckpointCommitTests.run_one
+
+    def marker(self):
+        return self.root / "example.marker.json"
+
+    def test_missing_marker_is_reconciled_without_action_or_new_get(self):
+        self.run_one()
+        self.marker().unlink()
+        result = self.run_one()
+        self.assertTrue(result["marker_reconciled"])
+        self.assertEqual(result["new_gets"], 0)
+        self.assertEqual(self.calls, 1)
+        self.assertEqual(self.marker().read_bytes(),
+                         (self.root / "example.commit.json").read_bytes())
+
+    def test_failed_marker_is_retained_before_exact_committed_reconciliation(self):
+        self.run_one()
+        old = b'{"status":"FAILED","original_clock":"2035-01-01T12:00:00Z"}'
+        self.marker().write_bytes(old)
+        result = self.run_one()
+        self.assertTrue(result["marker_reconciled"])
+        self.assertEqual(self.calls, 1)
+        history = list((self.root / "marker_history").glob("*.json"))
+        self.assertEqual(len(history), 1)
+        self.assertEqual(history[0].read_bytes(), old)
+
+    def test_changed_commit_cannot_authorize_marker_repair(self):
+        self.run_one()
+        self.marker().write_text('{"status":"FAILED"}')
+        (self.root / "example.commit.json").write_text('{"status":"COMPLETE"}')
+        with self.assertRaisesRegex(ValueError, "committed result changed"):
+            self.run_one()
+        self.assertEqual(json.loads(self.marker().read_text())["status"], "FAILED")
+        self.assertFalse((self.root / "marker_history").exists())
+
+    def test_corrupt_marker_refuses_repair_and_preserves_bytes(self):
+        self.run_one()
+        self.marker().write_bytes(b"invalid")
+        with self.assertRaises(ValueError):
+            self.run_one()
+        self.assertEqual(self.marker().read_bytes(), b"invalid")
+        self.assertEqual(self.calls, 1)
+
+    def test_valid_json_non_object_marker_is_not_a_recovery_record(self):
+        self.run_one()
+        self.marker().write_bytes(b'[]')
+        with self.assertRaisesRegex(ValueError, "JSON object"):
+            self.run_one()
+        self.assertEqual(self.marker().read_bytes(), b'[]')
+
+    def test_acknowledgement_failure_reuses_exact_committed_output(self):
+        with patch.object(checkpoint_commit, "_acknowledge", side_effect=OSError("invented acknowledgement failure")):
+            with self.assertRaisesRegex(OSError, "acknowledgement failure"):
+                self.run_one()
+        self.assertTrue((self.root / "example.commit.json").is_file())
+        self.assertFalse(self.marker().exists())
+        result = self.run_one()
+        self.assertEqual((self.calls, self.remote.gets, result["new_gets"]), (1, 1, 0))
+        self.assertTrue(result["marker_reconciled"])
+
+    def test_marker_alone_cannot_authorize_action_or_completion(self):
+        self.marker().write_text('{"status":"COMPLETE"}')
+        with self.assertRaisesRegex(ValueError, "without intent"):
+            self.run_one()
+        self.assertEqual((self.calls, self.remote.gets), (0, 0))
+
+    def test_directory_sync_precedes_fresh_marker_readback_on_exact_reuse(self):
+        self.run_one()
+        events = []
+        real_sync, real_read = os.fsync, Path.read_bytes
+        def sync(fd):
+            if stat.S_ISDIR(os.fstat(fd).st_mode):
+                events.append("directory_sync")
+            return real_sync(fd)
+        def read(path):
+            if path == self.marker():
+                events.append("marker_read")
+            return real_read(path)
+        with patch.object(checkpoint_commit.os, "fsync", side_effect=sync), \
+             patch.object(Path, "read_bytes", read):
+            self.run_one()
+        self.assertEqual(events, ["marker_read", "directory_sync", "marker_read"])
+
+    def test_directory_sync_failure_is_not_acknowledged(self):
+        self.run_one()
+        real_sync = os.fsync
+        def sync(fd):
+            if stat.S_ISDIR(os.fstat(fd).st_mode):
+                raise OSError("invented marker directory sync failure")
+            return real_sync(fd)
+        with patch.object(checkpoint_commit.os, "fsync", side_effect=sync):
+            with self.assertRaisesRegex(OSError, "directory sync failure"):
+                self.run_one()
+        self.assertEqual(self.calls, 1)
+        self.assertTrue(self.run_one()["marker_acknowledged"])
+
+    def test_changed_independent_readback_is_not_acknowledged(self):
+        self.run_one()
+        real_read = Path.read_bytes
+        marker_reads = []
+        def read(path):
+            if path == self.marker():
+                marker_reads.append(True)
+                if len(marker_reads) == 2:
+                    return b'{"status":"FAILED"}'
+            return real_read(path)
+        with patch.object(Path, "read_bytes", read):
+            with self.assertRaisesRegex(ValueError, "independent readback mismatch"):
+                self.run_one()
+        self.assertEqual((self.calls, self.remote.gets), (1, 1))
+
+    def test_symlink_marker_is_rejected_before_reconciliation(self):
+        self.run_one()
+        self.marker().unlink()
+        target = self.root / "unchanged.json"
+        target.write_bytes(b'{"status":"FAILED"}')
+        self.marker().symlink_to(target)
+        with self.assertRaisesRegex(ValueError, "symbolic link"):
+            self.run_one()
+        self.assertEqual(target.read_bytes(), b'{"status":"FAILED"}')
+
+    def test_dangling_symlink_marker_cannot_start_an_action(self):
+        self.marker().symlink_to(self.root / "absent.json")
+        with self.assertRaisesRegex(ValueError, "symbolic link"):
+            self.run_one()
+        self.assertEqual((self.calls, self.remote.gets), (0, 0))
+
+
 if __name__ == "__main__":
     unittest.main()
+

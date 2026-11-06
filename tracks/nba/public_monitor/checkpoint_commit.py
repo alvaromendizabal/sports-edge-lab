@@ -12,6 +12,7 @@ import json
 import os
 from pathlib import Path
 import re
+import uuid
 
 
 class UncertainAction(RuntimeError):
@@ -47,6 +48,47 @@ def _create(path, raw):
         os.close(fd)
 
 
+def _acknowledge(root, stage, committed):
+    """Publish a derived marker only from the exact validated commit bytes.
+
+    The immutable commit is the authority. A missing or older JSON marker is
+    recoverable without an action or a remote request; corrupt marker bytes
+    fail closed. Previous markers remain in an immutable local history.
+    """
+    marker = root / (stage + ".marker.json")
+    def sync_and_read():
+        fd = os.open(root, os.O_RDONLY | getattr(os, "O_DIRECTORY", 0))
+        try:
+            os.fsync(fd)
+        finally:
+            os.close(fd)
+        if marker.read_bytes() != committed:
+            raise ValueError("marker independent readback mismatch")
+    if marker.is_symlink():
+        raise ValueError("marker must not be a symbolic link")
+    previous = marker.read_bytes() if marker.exists() else None
+    if previous is not None:
+        if not isinstance(json.loads(previous), dict):
+            raise ValueError("marker must be a JSON object")
+        if previous == committed:
+            sync_and_read()
+            return False
+        history = root / "marker_history"
+        history.mkdir(exist_ok=True)
+        _create(history / (stage + "-" + _digest(previous) + ".json"), previous)
+    temporary = marker.with_name(marker.name + ".pending-" + uuid.uuid4().hex)
+    try:
+        with temporary.open("xb") as stream:
+            stream.write(committed)
+            stream.flush()
+            os.fsync(stream.fileno())
+        os.replace(temporary, marker)
+        sync_and_read()
+    finally:
+        temporary.unlink(missing_ok=True)
+    return True
+
+
 def run_stage(directory, stage, action, remote):
     """Commit one JSON-only invented result; never infer success from intent.
 
@@ -62,8 +104,11 @@ def run_stage(directory, stage, action, remote):
     result = root / (stage + ".result.json")
     prepared = root / (stage + ".prepared.json")
     commit = root / (stage + ".commit.json")
+    marker = root / (stage + ".marker.json")
+    if marker.is_symlink():
+        raise ValueError("marker must not be a symbolic link")
     expected_intent = _canonical({"stage": stage, "status": "INTENT"})
-    if result.exists() or prepared.exists() or commit.exists():
+    if result.exists() or prepared.exists() or commit.exists() or marker.exists():
         if not intent.exists():
             raise ValueError("saved state without intent")
         if intent.read_bytes() != expected_intent:
@@ -75,9 +120,12 @@ def run_stage(directory, stage, action, remote):
             raise ValueError("prepared result changed")
         json.loads(raw)
         if commit.exists():
-            if commit.read_bytes() != _receipt(stage, "COMPLETE", raw):
+            committed = commit.read_bytes()
+            if committed != _receipt(stage, "COMPLETE", raw):
                 raise ValueError("committed result changed")
-            return {"result": json.loads(raw), "action_reused": True, "new_gets": 0}
+            repaired = _acknowledge(root, stage, committed)
+            return {"result": json.loads(raw), "action_reused": True, "new_gets": 0,
+                    "marker_reconciled": repaired, "marker_acknowledged": True}
         reused = True
     else:
         if intent.exists():
@@ -94,5 +142,9 @@ def run_stage(directory, stage, action, remote):
     readback = remote.get_full(key)
     if readback != raw:
         raise ValueError("independent full readback mismatch")
-    _create(commit, _receipt(stage, "COMPLETE", raw))
-    return {"result": json.loads(raw), "action_reused": reused, "new_gets": 1}
+    committed = _receipt(stage, "COMPLETE", raw)
+    _create(commit, committed)
+    _acknowledge(root, stage, committed)
+    return {"result": json.loads(raw), "action_reused": reused, "new_gets": 1,
+            "marker_reconciled": False, "marker_acknowledged": True}
+
