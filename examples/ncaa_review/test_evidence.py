@@ -323,9 +323,54 @@ class EvidenceTests(unittest.TestCase):
         self.assertIsNone(pair['uncertainty_interval'])
         self.assertEqual(self.exports['ncaaw']['current_reconstructed_comparison']['status'],'NO_EXACT_PAIRED_COHORT_SUPPLIED')
 
+    def test_b044_execution_is_separate_from_dated_b043_scientific_evidence(self):
+        for data in self.exports.values():
+            current = data['current_owner_attempt']
+            self.assertEqual(current['release'], 'B044')
+            self.assertEqual((current['completed_scientific_stages'], current['attempted_scientific_stages'], current['planned_scientific_stages']), (0, 1, 16))
+            self.assertEqual([s['status'] for s in current['stages']], ['FAILED'] + ['NOT_STARTED'] * 15)
+            for key in ('new_real_target_fits', 'new_calibration_fits', 'new_empirical_residual_fits', 'new_injury_fits', 'new_prospective_issues', 'new_prediction_rows', 'new_provider_requests', 'reused_target_fits'):
+                self.assertEqual(current[key], 0, key)
+            self.assertEqual(current['failure_code'], 'UNSUPPORTED_PRODUCER_HANDOFF')
+            self.assertEqual(current['delivery_status'], 'RETURN_FULL_READBACK_VERIFIED')
+            self.assertAlmostEqual(sum(current['phase_seconds'].values()), current['total_wall_seconds'])
+            readback = current['storage_readback']
+            self.assertEqual((readback['chunks'], readback['observations'], readback['logical_bytes'], readback['new_full_storage_GETs']), (90, 723492, 1504058360, 182))
+            self.assertFalse(readback['earlier_availability_credit'])
+            self.assertTrue(readback['source_clocks_unchanged'])
+            self.assertEqual(readback['new_provider_requests'], 0)
+            self.assertEqual(data['prepared_execution']['release'], 'B045')
+            self.assertFalse(data['prepared_execution']['owner_execution_observed'])
+            self.assertEqual(data['prepared_execution']['new_scientific_credit'], 0)
+            old = next(r for r in data['review_history'] if r['release'] == 'B043')
+            self.assertEqual(data['freshness'], old['freshness'])
+            self.assertEqual(data['current_results_status'], old['current_results_status'])
+            self.assertEqual(data['latest_reconstructed_comparison']['model_metrics'], old['latest_reconstructed_comparison']['model_metrics'])
+            self.assertEqual(data['latest_reconstructed_comparison']['provider_metrics'], old['latest_reconstructed_comparison']['provider_metrics'])
+            self.assertEqual(build_dashboard.scientific_attempt(data)['release'], 'B043')
+
+    def test_readback_preparation_and_duplicate_owner_cannot_gain_credit(self):
+        for mutation in ('fit', 'readback_provider', 'readback_availability', 'readback_clock', 'prepared', 'duplicate_owner'):
+            corrupted = copy.deepcopy(self.exports['ncaam'])
+            if mutation == 'fit':
+                corrupted['current_owner_attempt']['new_real_target_fits'] = 1
+            elif mutation == 'readback_provider':
+                corrupted['current_owner_attempt']['storage_readback']['new_provider_requests'] = 182
+            elif mutation == 'readback_availability':
+                corrupted['current_owner_attempt']['storage_readback']['earlier_availability_credit'] = True
+            elif mutation == 'readback_clock':
+                corrupted['current_owner_attempt']['storage_readback']['source_clocks_unchanged'] = False
+            elif mutation == 'prepared':
+                corrupted['prepared_execution']['owner_execution_observed'] = True
+            else:
+                corrupted['owner_attempt_history'].append(copy.deepcopy(build_dashboard.scientific_attempt(corrupted)))
+            with patch.object(Path, 'read_text', return_value=json.dumps(corrupted)):
+                with self.assertRaises(ValueError):
+                    build_dashboard.evidence('ncaam')
+
     def test_b043_durable_reports_separate_new_and_inherited_issue_credit(self):
         for league, data in self.exports.items():
-            a, r = data['current_owner_attempt'], data['current_results_status']
+            a, r = build_dashboard.scientific_attempt(data), data['current_results_status']
             self.assertEqual(a['release'], 'B043')
             self.assertEqual((a['completed_scientific_stages'], a['attempted_scientific_stages'], a['planned_scientific_stages']), (9, 10, 16))
             self.assertEqual([x['status'] for x in a['stages']], ['COMPLETED'] * 9 + ['FAILED'] + ['NOT_STARTED'] * 6)
@@ -390,10 +435,10 @@ class EvidenceTests(unittest.TestCase):
     def test_generation_is_exact_and_embedded_json_is_unchanged(self):
         for path, output in build_dashboard.outputs().items():
             self.assertEqual(path.read_text(), output)
-            self.assertNotRegex(output, r'__(?:TITLE|EVIDENCE|PROGRESS_DEMO|PREFLIGHT_DEMO|LEAGUE|SIBLING|SIBLING_LABEL)__')
+            self.assertNotRegex(output, r'__(?:TITLE|EVIDENCE|PROGRESS_DEMO|PREFLIGHT_DEMO|HANDOFF_DEMO|LEAGUE|SIBLING|SIBLING_LABEL)__')
             if path.parent.name in self.exports:
                 self.assertIn('NCAA evidence review · 06 November 2026 UTC', output)
-                self.assertIn('Latest run preserved valid work; the injury study failed.', output)
+                self.assertIn('Latest run stopped at the source handoff.', output)
                 self.assertNotIn('Latest run stopped before science', output)
                 self.assertNotIn('Latest run stopped during reporting', output)
                 embedded = re.search(r'<script type="application/json" id="evidence">(.*?)</script>', output, re.S)
@@ -444,7 +489,7 @@ class EvidenceTests(unittest.TestCase):
             elif mutation == 'new_owner_issue':
                 corrupted['current_owner_attempt']['new_prospective_issues'] = 339
             elif mutation == 'retained_issue':
-                corrupted['current_owner_attempt']['retained_prior_prospective_issues'] = 0
+                build_dashboard.scientific_attempt(corrupted)['retained_prior_prospective_issues'] = 0
             elif mutation == 'target_rows':
                 corrupted['current_results_status']['pre_study_target_rows'] += 1
             elif mutation == 'display_rows':
@@ -462,7 +507,7 @@ class EvidenceTests(unittest.TestCase):
     def test_landing_uses_current_evidence_and_rejects_mixed_league_snapshots(self):
         exports = list(self.exports.values())
         landing = build_dashboard.render_landing(exports)
-        self.assertIn('B043: 9 of 16 stages completed; injury study failed.', landing)
+        self.assertIn('B044: 0 of 16 stages completed; source handoff failed.', landing)
         self.assertIn('723,492 market observations', landing)
         self.assertIn('339 existing research issue rows across 5 games', landing)
         self.assertNotIn('Latest owner stopped before science', landing)
