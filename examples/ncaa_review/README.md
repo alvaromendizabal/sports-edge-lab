@@ -4,7 +4,87 @@
 
 This example makes the **evaluation contract** executable without credentials, data subscriptions or a machine-learning environment. It also generates the college basketball review pages from committed, sanitized aggregate evidence. The invented demonstration and the real historical aggregates remain separate: the example does not reproduce the private models or claim a betting record.
 
-## Current review — November 6, 2026 UTC · B042 returned; B043 prepared
+## Current review — November 6, 2026 UTC · B043 returned; B044 prepared
+
+The actual B043 owner completed **9 of 16 scientific stages**, committed
+**101 new target estimators, 45 scalar calibrators and 24 empirical residual
+fits**, and preserved its baseline report before an injury-checkpoint failure.
+It ran for **56.60 minutes**; 1,089 fixture cases passed with one optional skip.
+Historical reuse remains separate: 108 historical targets, plus 12 native
+targets and six native scalar calibrators. Current outcomes select no champion.
+
+The failure was a legitimate unknown prediction-row result clock reaching strict
+checkpoint JSON as `NaT`. B044 prepares a narrow missing-clock normalization to
+JSON null. Training still requires released labels, and no date is invented.
+The earlier exact-reduction repair passed the actual B043 owner. Injury ablation
+and market-path gains remain unavailable; historical archive, in-game acquisition
+and the chronological path study were not reached.
+
+### What survived before the failure
+
+The durable pre-study report contains **84,195 target rows**: 69,600 current,
+10,440 native, 3,816 original frozen and 339 inherited issue rows. Its checkpoint
+has 46,525 game/model rows; four unresolved display rows make **46,529 browser
+rows**. Independent arithmetic checked **944 model metric panels with zero
+mismatches**. These are model/version counts, not distinct physical games.
+
+B043 issued **zero new qualifying forecasts**. The earlier 339 B042 issue rows
+across five games preserve their original bytes and clocks, with no admitted
+settled issue outcome at this cutoff. Original frozen inference covers 1,272
+games and receives no earlier issue credit. All 296 previously scored original
+games retain exactly the same predictions and results; the scored cohort's
+growth to 329 games changes its aggregate population without improving weights.
+
+### New dated provider comparison; prior history retained
+
+The pre-study report at **November 6, 02:46:42 UTC** (November 5, 6:46 p.m.
+Pacific) supplies a new **129-game men's Polymarket international** T−60 cohort.
+The fixed original model and the provider are evaluated on identical games:
+
+| Metric | Original reconstruction | Polymarket international |
+|---|---:|---:|
+| Log loss | 0.344407 | 0.321226 |
+| Brier | 0.106121 | 0.100567 |
+| Winner accuracy | 86.0465% | 82.1705% |
+| AUC | 0.821101 | 0.848853 |
+
+Nine directional disagreements split seven model-right and two provider-right.
+Higher pick accuracy coexists with worse probability losses and ranking. No
+paired uncertainty interval is supplied, no executable edge is established,
+and all hypothetical ROI panels have zero settled bets and unavailable profit.
+There is no admitted women's provider cohort, Kalshi/DraftKings paired cohort
+or all-three-provider common cohort. **The earlier dated 122-game panel remains
+unchanged on the dashboard and in the aggregate export.**
+
+### Capture and research limits
+
+Source acquisition ended **November 6, 02:14:03 UTC** (November 5, 6:14 p.m.
+Pacific); model inputs use 02:21:58 UTC. The retained inventory now has
+**723,492 observations**: 561,323 Kalshi, 161,903 Polymarket international and
+266 DraftKings. The 12,491-observation increase is entirely international
+Polymarket; it does not establish complete in-game paths. Polymarket US remains
+separate and unacquired. Actual new source dispatches were 3,146; 2,456 exact
+historical requests were reused. Kalshi made zero actual new requests under its
+preserved 429. No paid odds call or known credit charge occurred.
+
+There are still **2,818 source/candidate identities**, including 1,022 unmatched
+official candidates and 44 conflicts. Only **829 records have both numeric final
+scores**; a separate 830 completed-status count includes one record with missing
+scores. This week contains 1,479 candidates and 826 supplied finals; next week
+has 1,218 candidates and 68 missing exact times. These are not an authenticated
+complete Division I denominator. The 1,320 injury observations have unchanged
+semantic content: 39 recaptures change acquisition identity, not the injury
+facts. All historical injury content versions remain unverified.
+
+The observed source-stage time fell 69.13%, but request plans and provider stops
+also changed. It is not an isolated caching benchmark or a completed end-to-end
+speedup result. B044 runtime, cost and scientific gains remain unmeasured.
+The nested B043 return SHA-256 is
+`277a05131c48629231bf7919101ee1a8a4a10b35269193f5a611a405525bc0ee`.
+Only aggregate evidence and generic contracts are public. Private records,
+recipes, model weights and runtime handoffs remain excluded.
+
+## Preserved review — November 6, 2026 UTC · B042 returned; B043 prepared
 
 B042 completed **9 of 15 scientific stages** before the injury base-verification
 stage failed. It committed **102 new target estimators, 46 scalar calibrations

@@ -249,7 +249,7 @@ class EvidenceTests(unittest.TestCase):
 
     def test_b042_partial_completion_preserves_distinct_fit_and_issue_credit(self):
         for league, data in self.exports.items():
-            attempt = data['current_owner_attempt']
+            attempt = next(x for x in data['owner_attempt_history'] if x['release'] == 'B042')
             self.assertEqual(attempt['release'], 'B042')
             self.assertEqual(attempt['status'], 'FAILED_PARTIAL_WORK_PRESERVED')
             self.assertEqual(attempt['failure_code'], 'B041_BASE_DETERMINISTIC_BLEND_MISMATCH')
@@ -259,7 +259,7 @@ class EvidenceTests(unittest.TestCase):
             self.assertEqual((attempt['reused_target_fits'], attempt['reused_native_target_fits'], attempt['reused_native_scalar_fits']), (108, 12, 6))
             self.assertEqual((attempt['synthetic_tests_passed'], attempt['synthetic_tests_skipped'], attempt['synthetic_test_errors']), (1029, 1, 0))
             self.assertAlmostEqual(sum(attempt['phase_seconds'].values()), attempt['total_wall_seconds'])
-            result = data['current_results_status']
+            result = next(x for x in data['review_history'] if x['release'] == 'B042')['current_results_status']
             self.assertEqual((result['authenticated_issue_rows_both_leagues'], result['authenticated_issue_games_both_leagues']), (339, 5))
             self.assertEqual((result['authenticated_issue_rows_this_league'], result['authenticated_issue_games_this_league']), (132, 2) if league == 'ncaam' else (207, 3))
             self.assertEqual((result['new_issues_created_by_recovery'], result['new_fits_created_by_recovery']), (0, 0))
@@ -271,15 +271,15 @@ class EvidenceTests(unittest.TestCase):
 
     def test_retained_provider_counts_and_capture_clocks_do_not_claim_complete_coverage(self):
         for league, data in self.exports.items():
-            self.assertEqual([p['retained_observations_both_leagues'] for p in data['providers']], [561323, 149412, 266])
-            self.assertEqual(sum(p['retained_observations_both_leagues'] for p in data['providers']), 711001)
+            self.assertEqual([p['retained_observations_both_leagues'] for p in data['providers']], [561323, 161903, 266])
+            self.assertEqual(sum(p['retained_observations_both_leagues'] for p in data['providers']), 723492)
             inventory = data['observed_inventory']
-            self.assertEqual((inventory['candidate_games'], inventory['observed_finals']), (1439, 370) if league == 'ncaam' else (1379, 385))
+            self.assertEqual((inventory['candidate_games'], inventory['observed_finals']), (1439, 395) if league == 'ncaam' else (1379, 434))
             self.assertFalse(inventory['all_official_games_covered'])
             self.assertIsNone(data['current_coverage_gaps']['official_denominator'])
-            self.assertEqual(data['freshness']['source_acquisition_completed_at'], '2026-11-06T00:25:57.094181+00:00')
-            self.assertEqual(data['freshness']['retained_quote_time_range_utc']['maximum_utc'], '2026-11-06T00:20:00+00:00')
-            self.assertEqual(data['freshness']['retained_observation_acquisition_range_utc']['maximum_utc'], '2026-11-06T00:24:58.312894+00:00')
+            self.assertEqual(data['freshness']['source_acquisition_completed_at'], '2026-11-06T02:14:03.087794+00:00')
+            self.assertEqual(data['freshness']['retained_quote_time_range_utc']['maximum_utc'], '2026-11-06T02:11:54.749000+00:00')
+            self.assertEqual(data['freshness']['retained_observation_acquisition_range_utc']['maximum_utc'], '2026-11-06T02:13:35.659420+00:00')
             for provider in data['providers']:
                 for row in provider['numeric_display_coverage']:
                     self.assertEqual(row['denominator'], inventory['observed_finals'])
@@ -297,7 +297,7 @@ class EvidenceTests(unittest.TestCase):
             self.assertFalse(injury['injury_improvement_measured'])
             self.assertFalse(injury['all_injuries_complete'])
             frontier = data['frontier_research']
-            self.assertEqual(frontier['status'], 'PREPARED_NOT_EXECUTED')
+            self.assertEqual(frontier['status'], 'NOT_REACHED_AFTER_INJURY_CHECKPOINT_FAILURE')
             self.assertEqual(frontier['new_model_fits'], 0)
             self.assertIsNone(frontier['measured_gain'])
 
@@ -322,6 +322,47 @@ class EvidenceTests(unittest.TestCase):
         self.assertIsNone(pair['profit'])
         self.assertIsNone(pair['uncertainty_interval'])
         self.assertEqual(self.exports['ncaaw']['current_reconstructed_comparison']['status'],'NO_EXACT_PAIRED_COHORT_SUPPLIED')
+
+    def test_b043_durable_reports_separate_new_and_inherited_issue_credit(self):
+        for league, data in self.exports.items():
+            a, r = data['current_owner_attempt'], data['current_results_status']
+            self.assertEqual(a['release'], 'B043')
+            self.assertEqual((a['completed_scientific_stages'], a['attempted_scientific_stages'], a['planned_scientific_stages']), (9, 10, 16))
+            self.assertEqual([x['status'] for x in a['stages']], ['COMPLETED'] * 9 + ['FAILED'] + ['NOT_STARTED'] * 6)
+            self.assertEqual((a['new_real_target_fits'], a['new_calibration_fits'], a['new_empirical_residual_fits']), (101, 45, 24))
+            self.assertEqual(a['league_new_real_target_fits'], 68 if league == 'ncaam' else 33)
+            self.assertEqual((a['new_prospective_issues'], a['retained_prior_prospective_issues']), (0, 339))
+            self.assertEqual((r['pre_study_target_rows'], r['pre_study_game_model_rows'], r['browser_display_rows']), (84195, 46525, 46529))
+            self.assertEqual(sum(r['prediction_rows'].values()), a['new_prediction_rows'])
+            self.assertEqual(a['new_prediction_rows'], 83856)
+            self.assertEqual((r['independent_metric_panels_checked'], r['independent_metric_mismatches']), (944, 0))
+            self.assertEqual(r['admitted_settled_issue_rows'], 0)
+            self.assertEqual(data['current_coverage_gaps']['completed_status_records'], 830)
+            self.assertEqual(data['current_coverage_gaps']['both_leagues_observed_finals'], 829)
+            self.assertTrue(data['observed_inventory']['numeric_final_score_required'])
+            self.assertAlmostEqual(sum(a['phase_seconds'].values()), a['total_wall_seconds'])
+            self.assertEqual(data['injury_research']['new_semantic_injury_records'], 0)
+            self.assertTrue(data['injury_research']['semantic_inventory_unchanged_excluding_capture_fields'])
+
+    def test_new_129_game_pair_appends_to_preserved_122_game_evidence(self):
+        d = self.exports['ncaam']; latest = d['latest_reconstructed_comparison']
+        self.assertEqual((d['current_reconstructed_comparison']['paired_games'], latest['paired_games']), (122, 129))
+        self.assertEqual(latest['cohort_sha256'], '1b6f46a326919243344214018fb5b5d10a66cdc94edf0a70722bb705ad400753')
+        self.assertAlmostEqual(latest['model_metrics']['log_loss'], .34440721423736326)
+        self.assertAlmostEqual(latest['provider_metrics']['log_loss'], .32122632357105746)
+        self.assertGreater(latest['model_metrics']['accuracy'], latest['provider_metrics']['accuracy'])
+        for metric in ('log_loss', 'brier'):
+            self.assertGreater(latest['model_metrics'][metric], latest['provider_metrics'][metric])
+        self.assertLess(latest['model_metrics']['auc'], latest['provider_metrics']['auc'])
+        self.assertFalse(latest['as_issued'])
+        self.assertFalse(latest['current_outcomes_selected_model'])
+        self.assertEqual((latest['model_right_provider_wrong'], latest['provider_right_model_wrong']), (7, 2))
+        self.assertEqual(latest['qualified_settled_bets'], 0)
+        self.assertIsNone(latest['profit'])
+        self.assertIsNone(latest['uncertainty_interval'])
+        self.assertEqual(self.exports['ncaaw']['latest_reconstructed_comparison']['paired_games'], 0)
+        self.assertIsNone(self.exports['ncaaw']['latest_reconstructed_comparison']['model_metrics'])
+        self.assertNotEqual(latest['evidence_snapshot_at'], d['current_reconstructed_comparison']['evidence_snapshot_at'])
 
     def test_quote_display_is_distinct_from_forecast_eligibility(self):
         for data in self.exports.values():
@@ -386,7 +427,7 @@ class EvidenceTests(unittest.TestCase):
         self.assertIn('href="' + host + '/tracks/ncaaw/index.html"', viewer)
 
     def test_export_validation_rejects_provider_scope_and_cohort_mutation(self):
-        for mutation in ('provider', 'cohort', 'stage', 'observation', 'issue_credit', 'issue_scope', 'capture_release'):
+        for mutation in ('provider', 'cohort', 'stage', 'observation', 'issue_credit', 'issue_scope', 'capture_release', 'new_owner_issue', 'retained_issue', 'target_rows', 'display_rows', 'pair_profit', 'pair_clock'):
             corrupted = copy.deepcopy(self.exports['ncaam'])
             if mutation == 'provider':
                 corrupted['providers'][0]['name'] = 'invented-unregistered-provider'
@@ -400,6 +441,18 @@ class EvidenceTests(unittest.TestCase):
                 corrupted['current_results_status']['new_issues_created_by_recovery'] = 339
             elif mutation == 'issue_scope':
                 corrupted['current_results_status']['authenticated_issue_rows_this_league'] += 1
+            elif mutation == 'new_owner_issue':
+                corrupted['current_owner_attempt']['new_prospective_issues'] = 339
+            elif mutation == 'retained_issue':
+                corrupted['current_owner_attempt']['retained_prior_prospective_issues'] = 0
+            elif mutation == 'target_rows':
+                corrupted['current_results_status']['pre_study_target_rows'] += 1
+            elif mutation == 'display_rows':
+                corrupted['current_results_status']['browser_display_rows'] += 1
+            elif mutation == 'pair_profit':
+                corrupted['latest_reconstructed_comparison']['profit'] = 1
+            elif mutation == 'pair_clock':
+                corrupted['latest_reconstructed_comparison']['evidence_snapshot_at'] = '2026-11-05T00:00:00Z'
             else:
                 corrupted['freshness']['owner_release'] = 'B041'
             with patch.object(Path, 'read_text', return_value=json.dumps(corrupted)):
@@ -409,8 +462,8 @@ class EvidenceTests(unittest.TestCase):
     def test_landing_uses_current_evidence_and_rejects_mixed_league_snapshots(self):
         exports = list(self.exports.values())
         landing = build_dashboard.render_landing(exports)
-        self.assertIn('B042: 9 of 15 stages completed; injury study failed.', landing)
-        self.assertIn('711,001 market observations', landing)
+        self.assertIn('B043: 9 of 16 stages completed; injury study failed.', landing)
+        self.assertIn('723,492 market observations', landing)
         self.assertIn('339 existing research issue rows across 5 games', landing)
         self.assertNotIn('Latest owner stopped before science', landing)
         changed = copy.deepcopy(exports)
