@@ -47,6 +47,33 @@ class FrontierReportTests(unittest.TestCase):
                             seen+=1
         self.assertGreater(seen,0)
 
+    def test_latest_owner_and_local_work_remain_distinct(self):
+        review=json.loads((PUBLIC/'frontier-review.json').read_text())
+        owner=review['owner']; local=review['new_local_source_review']
+        self.assertEqual((owner['release'],owner['exit']),('V034',2))
+        self.assertEqual((owner['provider_requests'],owner['model_fits'],owner['forecast_issues']),(0,0,0))
+        self.assertEqual(owner['research_disk_reserve_bytes']+owner['work_headroom_bytes']-owner['final_free_disk_bytes'],owner['disk_shortfall_bytes'])
+        self.assertEqual(local['new_predictive_fits'],0)
+        self.assertFalse(local['prior_study_refitted'])
+        self.assertEqual(local['prior_predictive_fits_preserved'],33)
+
+    def test_unbound_slots_do_not_inflate_game_population(self):
+        review=json.loads((PUBLIC/'frontier-review.json').read_text())
+        schedule=review['new_local_source_review']['schedule']
+        self.assertEqual(len(schedule['slots']),10)
+        self.assertEqual(len(self.rows),888)
+        self.assertTrue(all(s['home_team'] is None and s['away_team'] is None and not s['join_eligible'] for s in schedule['slots']))
+        self.assertEqual(schedule['calendar_interval_conflicts_count'],1)
+
+    def test_availability_unknowns_and_clocks_are_preserved(self):
+        data=json.loads((PUBLIC/'frontier-review.json').read_text())['new_local_source_review']['availability']
+        self.assertEqual(sum(data['identity_states'].values()),data['public_report_rows'])
+        self.assertEqual(data['players_with_observed_usage']+data['players_without_observed_usage'],data['public_report_rows'])
+        self.assertEqual(data['clock_qualified_team_rows_by_horizon'],{'120':58,'60':58})
+        self.assertFalse(data['estimated_player_effects_available'])
+        self.assertFalse(data['historical_pregame_certification'])
+        self.assertEqual(data['new_predictive_fits'],0)
+
     def test_javascript_filtering_and_csv_failure_cases(self):
         code=r"""
 const assert=require('node:assert/strict'),fs=require('node:fs');
