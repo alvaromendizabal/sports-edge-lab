@@ -9,6 +9,31 @@
     "reused_raw_bytes": 11727710,
     "zero_new_Kalshi_dispatches": true
   },
+  "ats_research": {
+    "clock_policy": "Only earlier completed games with results and exact supported line references known before the target cutoff can enter prior ATS features.",
+    "cohort_policy": "Keep gender, provider, US/international product, evidence tier, horizon, orientation and settlement separate.",
+    "current_outcomes_used_for_selection": false,
+    "probability_policy": "Cover, push and loss require an admissible margin distribution at the actual quoted spread; winner probability or a point margin is insufficient.",
+    "profit": null,
+    "public_example": "INVENTED_ONLY",
+    "real_ats_record_published": false,
+    "real_cover_probability_champion": null,
+    "status": "EXPLICIT_CONTRACT_IMPLEMENTED_NO_REAL_GAIN_CLAIM"
+  },
+  "b045_baseline_observation": {
+    "browser_display_rows": 47940,
+    "immutable_issue_admission": "PENDING_COMPLETE_LEDGER_RECONCILIATION_AT_PUBLIC_SNAPSHOT",
+    "new_fit_credit_from_report_recovery": 0,
+    "new_issue_credit": null,
+    "qualification": "Source-labeled prospective rows are not independently admitted new issues until original immutable ledger bytes and issue clocks are reconciled. Report recovery creates no fitting credit.",
+    "report_asof": "2026-11-06T21:23:19.935195+00:00",
+    "source_labeled_b042_games": 5,
+    "source_labeled_b042_prospective_settled_rows": 339,
+    "source_labeled_b045_games": 8,
+    "source_labeled_b045_prospective_unsettled_rows": 549,
+    "source_release": "B045",
+    "target_rows": 87003
+  },
   "coverage_evidence_release": "B043",
   "coverage_history": [
     {
@@ -491,119 +516,129 @@
   },
   "current_owner_attempt": {
     "admission": {
-      "acquisition_workers_planned": 8,
-      "affinity_cpus": 8,
-      "aggregate_busy_cores": 0.010012515644556075,
-      "available_memory_bytes": 30438477824,
+      "acquisition_workers_planned": null,
+      "bounded_fit_wait_seconds": 120,
       "capacity_is_observation_not_reservation": true,
       "foreign_processes_signaled": 0,
-      "lock_files_deleted": 0,
-      "measured_wait_seconds": 1.0025737879999497,
-      "workers_planned": 7
+      "workers_planned": null
     },
-    "attempted_scientific_stages": 1,
-    "completed_at": "2026-11-06T04:06:54.663720+00:00",
-    "completed_scientific_stages": 0,
+    "attempted_scientific_stages": 10,
+    "child_exit_code": -9,
+    "completed_at": null,
+    "completed_scientific_stages": 9,
     "cost_status": "UNVERIFIED_NO_CURRENT_INSTANCE_RATE_OR_BILLING_ASSUMED",
-    "cpu_seconds": 114.923351,
+    "cpu_seconds": null,
+    "cumulative_owner_peak_rss_at_stage_failure_bytes": 16140840960,
     "current_outcomes_used_for_selection": false,
-    "delivery_status": "RETURN_FULL_READBACK_VERIFIED",
-    "failure_class": "ValueError",
-    "failure_code": "UNSUPPORTED_PRODUCER_HANDOFF",
-    "failure_description": "The acquisition consumer rejected the predecessor release before source refresh. Separate component checks had passed, but the actual producer-to-consumer handoff was incompatible.",
-    "failure_phase": "SOURCE_REFRESH_PREFLIGHT",
-    "league_new_real_target_fits": 0,
-    "new_calibration_fits": 0,
-    "new_empirical_residual_fits": 0,
-    "new_injury_fits": 0,
-    "new_injury_requests": 0,
+    "delivery_status": "ATTACHED_RETURN_AUTHENTICATED_NOT_PERSISTED",
+    "durable_return_verified": false,
+    "evidence_limits": [
+      "Attached execution log is a 1,000,000-byte tail.",
+      "Earlier fixture totals and full-run timings are unavailable in that tail.",
+      "Checkpoint contracts, latest role counts and fit-attempt counts are different populations.",
+      "A signal exit does not prove out-of-memory termination.",
+      "No externally observed owner-terminal or shell-exit line is supplied."
+    ],
+    "external_shell_exit_code": null,
+    "failure_class": "AdmissionDeferred",
+    "failure_code": "BOUNDED_RESOURCE_ADMISSION_EXHAUSTED_THEN_UNEXPECTED_CHILD_EXIT",
+    "failure_description": "The injury stage exhausted its bounded resource-admission wait. A later wrapper return recorded child exit -9. The cause of the kill is not established.",
+    "failure_phase": "PAIRED_INJURY_CHALLENGERS",
+    "fit_count_status": "UNKNOWN_PENDING_COMPLETE_DURABLE_PRODUCER_AUDIT",
+    "injury_stage_owner_cpu_seconds": 1561.92262,
+    "kill_cause": "UNKNOWN",
+    "last_observed_available_memory_gib_rounded": 5.05,
+    "last_observed_owner_rss_gib_rounded": 19.26,
+    "league_new_real_target_fits": null,
+    "new_calibration_fits": null,
+    "new_empirical_residual_fits": null,
+    "new_injury_fits": null,
+    "new_injury_requests": null,
     "new_orders": 0,
-    "new_prediction_rows": 0,
-    "new_prospective_issues": 0,
-    "new_provider_requests": 0,
-    "new_real_target_fits": 0,
-    "new_source_refreshes": 0,
-    "next_execution_status": "B045 prepares an exact producer-consumer compatibility check and acquisition handoff repair. No B045 owner completion, new forecast, injury gain or path gain is claimed.",
+    "new_prediction_rows": null,
+    "new_prospective_issues": null,
+    "new_provider_requests": null,
+    "new_real_target_fits": null,
+    "new_source_refreshes": null,
+    "next_execution_status": "B046 prepares bounded disk-backed recovery and spread/ATS reporting. No B046 owner completion or new scientific gain is claimed.",
     "original_monitoring_unchanged": true,
-    "outcome_summary": "Zero of 16 stages completed. The first source-refresh stage failed at predecessor compatibility before new provider acquisition or model work.",
-    "owner_peak_rss_bytes": 1633349632,
-    "phase_scope_note": "The scientific timer includes predecessor setup and the failed first stage; it is elapsed time, not completed science.",
+    "out_of_memory_proved": false,
+    "outcome_summary": "Nine of 16 stages completed in the recorded progress. The injury stage failed after a bounded capacity wait, and the child later exited -9 without its normal terminal return.",
+    "owner_peak_rss_bytes": null,
+    "phase_scope_note": "Only the injury-stage duration is available in this attached log tail; the final wall/CPU totals and owner peak are not established.",
     "phase_seconds": {
-      "admission": 1.0056047079999644,
-      "fixtures": 37.105146778000005,
-      "other": 2.4604318479999847,
-      "science": 102.705096164
+      "injury_stage": 1527.417660635
     },
     "planned_scientific_stages": 16,
     "preserved_evidence_release": "B043",
     "progress": {
       "fixture_checks_are_model_fits": false,
       "recovery_creates_new_issue_credit": false,
-      "scientific_stages_completed": 0,
+      "scientific_stages_completed": 9,
       "scientific_stages_failed": 1,
-      "scientific_stages_not_started": 15
+      "scientific_stages_not_started": 6
     },
-    "release": "B044",
-    "remaining_phases": "All model, injury, archive, in-game path and final-report stages remain unstarted in B044. Dated B043 evidence remains available separately.",
+    "release": "B045",
+    "remaining_phases": "Issue reconciliation, final display refresh, reporting, historical backfill, market paths and the final post-history display were not reached.",
     "return_finalization_seconds": null,
-    "reused_native_scalar_fits": 0,
-    "reused_native_target_fits": 0,
-    "reused_target_fits": 0,
+    "reused_native_scalar_fits": null,
+    "reused_native_target_fits": null,
+    "reused_target_fits": null,
     "run_scope": "NCAA_MEN_AND_WOMEN_COMBINED",
     "scientific_credit_from_subsequent_readback": 0,
     "scientific_goal_complete": false,
     "simultaneous_process_tree_peak_measured": false,
-    "stage_progress_note": "Zero completed; first source refresh failed; fifteen later stages were not started.",
+    "stage_progress_note": "Nine completed; injury challengers failed; six later stages not started.",
     "stages": [
       {
         "label": "Current inventory and provider acquisition",
-        "seconds": 68.93088238500002,
-        "status": "FAILED"
+        "seconds": null,
+        "status": "COMPLETED"
       },
       {
         "label": "Authenticate prior inputs and work",
         "seconds": null,
-        "status": "NOT_STARTED"
+        "status": "COMPLETED"
       },
       {
         "label": "Historical feature review",
         "seconds": null,
-        "status": "NOT_STARTED"
+        "status": "COMPLETED"
       },
       {
         "label": "Verify and reuse historical targets",
         "seconds": null,
-        "status": "NOT_STARTED"
+        "status": "COMPLETED"
       },
       {
         "label": "Current feature reconstruction",
         "seconds": null,
-        "status": "NOT_STARTED"
+        "status": "COMPLETED"
       },
       {
         "label": "Timestamped injury and availability acquisition",
         "seconds": null,
-        "status": "NOT_STARTED"
+        "status": "COMPLETED"
       },
       {
         "label": "Original frozen inference",
         "seconds": null,
-        "status": "NOT_STARTED"
+        "status": "COMPLETED"
       },
       {
         "label": "Chronological selected current reconstruction",
         "seconds": null,
-        "status": "NOT_STARTED"
+        "status": "COMPLETED"
       },
       {
         "label": "Native chronological reconstruction",
         "seconds": null,
-        "status": "NOT_STARTED"
+        "status": "COMPLETED"
       },
       {
         "label": "Chronological paired injury challengers and controls",
-        "seconds": null,
-        "status": "NOT_STARTED"
+        "seconds": 1527.417660635,
+        "status": "FAILED"
       },
       {
         "label": "Preserve immutable issues",
@@ -636,28 +671,17 @@
         "status": "NOT_STARTED"
       }
     ],
-    "started_at": "2026-11-06T04:04:31.403012+00:00",
-    "status": "FAILED_PARTIAL_WORK_PRESERVED",
-    "storage_readback": {
-      "chunks": 90,
-      "earlier_availability_credit": false,
-      "giant_reconstruction_created": false,
-      "logical_bytes": 1504058360,
-      "new_fit_credit": 0,
-      "new_full_storage_GETs": 182,
-      "new_provider_requests": 0,
-      "object_size_guard_relaxed": false,
-      "observations": 723492,
-      "source_clocks_unchanged": true,
-      "source_release": "B043",
-      "status": "COMPLETE_BOUNDED_SNAPSHOT_CLOSURE_VERIFIED"
-    },
-    "synthetic_test_errors": 0,
-    "synthetic_tests_failed": 0,
-    "synthetic_tests_passed": 1134,
-    "synthetic_tests_skipped": 1,
-    "synthetic_tests_total": 1135,
-    "total_wall_seconds": 143.27627949799995
+    "stages_evidence": "AUTHENTICATED_ATTACHED_TAIL_PROGRESS_AND_FAILURE_EVENT",
+    "started_at": null,
+    "status": "WORKER_EXITED_WITHOUT_TERMINAL_RETURN",
+    "status_clock": "2026-11-06T21:53:15.821851+00:00",
+    "status_clock_scope": "INJURY_STAGE_FAILURE_EVENT_NOT_TERMINAL_COMPLETION",
+    "synthetic_test_errors": null,
+    "synthetic_tests_failed": null,
+    "synthetic_tests_passed": null,
+    "synthetic_tests_skipped": null,
+    "synthetic_tests_total": null,
+    "total_wall_seconds": null
   },
   "current_reconstructed_comparison": {
     "as_issued": false,
@@ -766,7 +790,7 @@
     "measured_gain": null,
     "new_model_fits": 0,
     "release": "B043",
-    "scope": "Separate market-path extraction, clock validation and chronological paired ablation were not reached in B043. B044 stopped at the first source handoff. B045 continuation is prepared; no new owner execution or measured path gain is claimed.",
+    "scope": "The dated B043 path study was not reached. B044 stopped at the source handoff; B045 stopped in injury research before the later archive and market-path stages. B046 is prepared; no completed path gain is claimed.",
     "status": "NOT_REACHED_AFTER_INJURY_CHECKPOINT_FAILURE"
   },
   "historical_seasons": {
@@ -791,9 +815,10 @@
     "new_capture_identities": 39,
     "new_owner_injury_fits": 0,
     "new_semantic_injury_records": 0,
-    "next_branch": "B045 prepares the acquisition handoff repair before injury challengers can resume. B044 produced no new injury fit; original and rolling forecast semantics remain unchanged.",
+    "next_branch": "B045 later reached the injury stage but ended after bounded admission exhaustion and an unexpected child exit. Its complete producer-fit count remains unaudited in this public snapshot. B046 is prepared; no injury gain is asserted.",
     "observations_both_leagues": 1320,
     "promotion": "Historical chronological paired comparisons and future confirmation required; current outcomes do not select the promoted model.",
+    "release": "B043",
     "semantic_inventory_unchanged_excluding_capture_fields": true,
     "source_availability_upper_bound_unknown": 1246,
     "supported_source_availability_upper_bounds": 74,
@@ -1685,6 +1710,13 @@
     },
     "tipoff_display_timezone": "America/Los_Angeles",
     "unmatched_official_candidates": 542
+  },
+  "older_dashboard_assertion": {
+    "claimed_files": 2,
+    "claimed_rows": 60906,
+    "exact_two_file_membership_verified": false,
+    "source_versions_must_not_be_summed": true,
+    "status": "UNRESOLVED_OLDER_DASHBOARD_ASSERTION"
   },
   "owner_attempt_history": [
     {
@@ -2720,13 +2752,183 @@
       "synthetic_tests_skipped": 1,
       "synthetic_tests_total": 1090,
       "total_wall_seconds": 3395.8953146959975
+    },
+    {
+      "admission": {
+        "acquisition_workers_planned": 8,
+        "affinity_cpus": 8,
+        "aggregate_busy_cores": 0.010012515644556075,
+        "available_memory_bytes": 30438477824,
+        "capacity_is_observation_not_reservation": true,
+        "foreign_processes_signaled": 0,
+        "lock_files_deleted": 0,
+        "measured_wait_seconds": 1.0025737879999497,
+        "workers_planned": 7
+      },
+      "attempted_scientific_stages": 1,
+      "completed_at": "2026-11-06T04:06:54.663720+00:00",
+      "completed_scientific_stages": 0,
+      "cost_status": "UNVERIFIED_NO_CURRENT_INSTANCE_RATE_OR_BILLING_ASSUMED",
+      "cpu_seconds": 114.923351,
+      "current_outcomes_used_for_selection": false,
+      "delivery_status": "RETURN_FULL_READBACK_VERIFIED",
+      "failure_class": "ValueError",
+      "failure_code": "UNSUPPORTED_PRODUCER_HANDOFF",
+      "failure_description": "The acquisition consumer rejected the predecessor release before source refresh. Separate component checks had passed, but the actual producer-to-consumer handoff was incompatible.",
+      "failure_phase": "SOURCE_REFRESH_PREFLIGHT",
+      "league_new_real_target_fits": 0,
+      "new_calibration_fits": 0,
+      "new_empirical_residual_fits": 0,
+      "new_injury_fits": 0,
+      "new_injury_requests": 0,
+      "new_orders": 0,
+      "new_prediction_rows": 0,
+      "new_prospective_issues": 0,
+      "new_provider_requests": 0,
+      "new_real_target_fits": 0,
+      "new_source_refreshes": 0,
+      "next_execution_status": "B045 prepares an exact producer-consumer compatibility check and acquisition handoff repair. No B045 owner completion, new forecast, injury gain or path gain is claimed.",
+      "original_monitoring_unchanged": true,
+      "outcome_summary": "Zero of 16 stages completed. The first source-refresh stage failed at predecessor compatibility before new provider acquisition or model work.",
+      "owner_peak_rss_bytes": 1633349632,
+      "phase_scope_note": "The scientific timer includes predecessor setup and the failed first stage; it is elapsed time, not completed science.",
+      "phase_seconds": {
+        "admission": 1.0056047079999644,
+        "fixtures": 37.105146778000005,
+        "other": 2.4604318479999847,
+        "science": 102.705096164
+      },
+      "planned_scientific_stages": 16,
+      "preserved_evidence_release": "B043",
+      "progress": {
+        "fixture_checks_are_model_fits": false,
+        "recovery_creates_new_issue_credit": false,
+        "scientific_stages_completed": 0,
+        "scientific_stages_failed": 1,
+        "scientific_stages_not_started": 15
+      },
+      "release": "B044",
+      "remaining_phases": "All model, injury, archive, in-game path and final-report stages remain unstarted in B044. Dated B043 evidence remains available separately.",
+      "return_finalization_seconds": null,
+      "reused_native_scalar_fits": 0,
+      "reused_native_target_fits": 0,
+      "reused_target_fits": 0,
+      "run_scope": "NCAA_MEN_AND_WOMEN_COMBINED",
+      "scientific_credit_from_subsequent_readback": 0,
+      "scientific_goal_complete": false,
+      "simultaneous_process_tree_peak_measured": false,
+      "stage_progress_note": "Zero completed; first source refresh failed; fifteen later stages were not started.",
+      "stages": [
+        {
+          "label": "Current inventory and provider acquisition",
+          "seconds": 68.93088238500002,
+          "status": "FAILED"
+        },
+        {
+          "label": "Authenticate prior inputs and work",
+          "seconds": null,
+          "status": "NOT_STARTED"
+        },
+        {
+          "label": "Historical feature review",
+          "seconds": null,
+          "status": "NOT_STARTED"
+        },
+        {
+          "label": "Verify and reuse historical targets",
+          "seconds": null,
+          "status": "NOT_STARTED"
+        },
+        {
+          "label": "Current feature reconstruction",
+          "seconds": null,
+          "status": "NOT_STARTED"
+        },
+        {
+          "label": "Timestamped injury and availability acquisition",
+          "seconds": null,
+          "status": "NOT_STARTED"
+        },
+        {
+          "label": "Original frozen inference",
+          "seconds": null,
+          "status": "NOT_STARTED"
+        },
+        {
+          "label": "Chronological selected current reconstruction",
+          "seconds": null,
+          "status": "NOT_STARTED"
+        },
+        {
+          "label": "Native chronological reconstruction",
+          "seconds": null,
+          "status": "NOT_STARTED"
+        },
+        {
+          "label": "Chronological paired injury challengers and controls",
+          "seconds": null,
+          "status": "NOT_STARTED"
+        },
+        {
+          "label": "Preserve immutable issues",
+          "seconds": null,
+          "status": "NOT_STARTED"
+        },
+        {
+          "label": "Final display-only refresh",
+          "seconds": null,
+          "status": "NOT_STARTED"
+        },
+        {
+          "label": "Game, week and season reporting",
+          "seconds": null,
+          "status": "NOT_STARTED"
+        },
+        {
+          "label": "Historical source inventory and backfill",
+          "seconds": null,
+          "status": "NOT_STARTED"
+        },
+        {
+          "label": "Historical in-game acquisition and chronological path study",
+          "seconds": null,
+          "status": "NOT_STARTED"
+        },
+        {
+          "label": "Final display after secondary history",
+          "seconds": null,
+          "status": "NOT_STARTED"
+        }
+      ],
+      "started_at": "2026-11-06T04:04:31.403012+00:00",
+      "status": "FAILED_PARTIAL_WORK_PRESERVED",
+      "storage_readback": {
+        "chunks": 90,
+        "earlier_availability_credit": false,
+        "giant_reconstruction_created": false,
+        "logical_bytes": 1504058360,
+        "new_fit_credit": 0,
+        "new_full_storage_GETs": 182,
+        "new_provider_requests": 0,
+        "object_size_guard_relaxed": false,
+        "observations": 723492,
+        "source_clocks_unchanged": true,
+        "source_release": "B043",
+        "status": "COMPLETE_BOUNDED_SNAPSHOT_CLOSURE_VERIFIED"
+      },
+      "synthetic_test_errors": 0,
+      "synthetic_tests_failed": 0,
+      "synthetic_tests_passed": 1134,
+      "synthetic_tests_skipped": 1,
+      "synthetic_tests_total": 1135,
+      "total_wall_seconds": 143.27627949799995
     }
   ],
   "prepared_execution": {
     "new_scientific_credit": 0,
     "owner_execution_observed": false,
-    "release": "B045",
-    "scope": "Validate the actual acquisition handoff against exact registered provenance before acquisition, preserve the failed B044 outcome, and prefer B043 scientific evidence with older lineage retained.",
+    "release": "B046",
+    "scope": "Bound recovery memory and preserve exact scientific identity, then report line-conditioned cover probabilities and earlier-known ATS records with explicit gaps.",
     "status": "PREPARED_NOT_EXECUTED"
   },
   "provenance": {
@@ -3355,6 +3557,326 @@
       },
       "release": "B043",
       "superseded_by_actual_owner": "B044"
+    },
+    {
+      "current_coverage_gaps": {
+        "both_leagues_observed_finals": 829,
+        "both_leagues_source_records": 2818,
+        "calendar_source_versions": 1792,
+        "completed_status_records": 830,
+        "espn_source_finals": 540,
+        "historical_backfill_stage": "NOT_REACHED_AFTER_INJURY_STUDY_FAILURE",
+        "market_identity_note": "Full retained-inventory identity gaps were not rescored in the final reporting stage; previous counts remain in coverage history.",
+        "market_identity_unresolved": null,
+        "market_observations": 723492,
+        "native_reconstruction_status": "Completed 10,440 target rows, 65 new target fits and 35 scalar calibrations; zero new qualifying issues.",
+        "numeric_final_score_note": "One completed-status official candidate has no numeric final scores; it remains a gap rather than an invented final.",
+        "official_accepted_contests": 1797,
+        "official_conflicts": 44,
+        "official_denominator": null,
+        "official_exact_matches": 775,
+        "original_frozen_current_status": "1,272 games / 3,816 reconstructed target rows; zero original as-issued credit; original weights unchanged.",
+        "rejected_official_records": 4,
+        "selected_monitor_status": "Completed 69,600 target rows, 36 new target fits, 10 scalar and 24 empirical fits; zero new qualifying issues.",
+        "unknown_exact_tipoff_records": 75,
+        "unmatched_official_candidates": 1022,
+        "unresolved_source_candidates": 4
+      },
+      "current_owner_attempt": {
+        "admission": {
+          "acquisition_workers_planned": 8,
+          "affinity_cpus": 8,
+          "aggregate_busy_cores": 0.010012515644556075,
+          "available_memory_bytes": 30438477824,
+          "capacity_is_observation_not_reservation": true,
+          "foreign_processes_signaled": 0,
+          "lock_files_deleted": 0,
+          "measured_wait_seconds": 1.0025737879999497,
+          "workers_planned": 7
+        },
+        "attempted_scientific_stages": 1,
+        "completed_at": "2026-11-06T04:06:54.663720+00:00",
+        "completed_scientific_stages": 0,
+        "cost_status": "UNVERIFIED_NO_CURRENT_INSTANCE_RATE_OR_BILLING_ASSUMED",
+        "cpu_seconds": 114.923351,
+        "current_outcomes_used_for_selection": false,
+        "delivery_status": "RETURN_FULL_READBACK_VERIFIED",
+        "failure_class": "ValueError",
+        "failure_code": "UNSUPPORTED_PRODUCER_HANDOFF",
+        "failure_description": "The acquisition consumer rejected the predecessor release before source refresh. Separate component checks had passed, but the actual producer-to-consumer handoff was incompatible.",
+        "failure_phase": "SOURCE_REFRESH_PREFLIGHT",
+        "league_new_real_target_fits": 0,
+        "new_calibration_fits": 0,
+        "new_empirical_residual_fits": 0,
+        "new_injury_fits": 0,
+        "new_injury_requests": 0,
+        "new_orders": 0,
+        "new_prediction_rows": 0,
+        "new_prospective_issues": 0,
+        "new_provider_requests": 0,
+        "new_real_target_fits": 0,
+        "new_source_refreshes": 0,
+        "next_execution_status": "B045 prepares an exact producer-consumer compatibility check and acquisition handoff repair. No B045 owner completion, new forecast, injury gain or path gain is claimed.",
+        "original_monitoring_unchanged": true,
+        "outcome_summary": "Zero of 16 stages completed. The first source-refresh stage failed at predecessor compatibility before new provider acquisition or model work.",
+        "owner_peak_rss_bytes": 1633349632,
+        "phase_scope_note": "The scientific timer includes predecessor setup and the failed first stage; it is elapsed time, not completed science.",
+        "phase_seconds": {
+          "admission": 1.0056047079999644,
+          "fixtures": 37.105146778000005,
+          "other": 2.4604318479999847,
+          "science": 102.705096164
+        },
+        "planned_scientific_stages": 16,
+        "preserved_evidence_release": "B043",
+        "progress": {
+          "fixture_checks_are_model_fits": false,
+          "recovery_creates_new_issue_credit": false,
+          "scientific_stages_completed": 0,
+          "scientific_stages_failed": 1,
+          "scientific_stages_not_started": 15
+        },
+        "release": "B044",
+        "remaining_phases": "All model, injury, archive, in-game path and final-report stages remain unstarted in B044. Dated B043 evidence remains available separately.",
+        "return_finalization_seconds": null,
+        "reused_native_scalar_fits": 0,
+        "reused_native_target_fits": 0,
+        "reused_target_fits": 0,
+        "run_scope": "NCAA_MEN_AND_WOMEN_COMBINED",
+        "scientific_credit_from_subsequent_readback": 0,
+        "scientific_goal_complete": false,
+        "simultaneous_process_tree_peak_measured": false,
+        "stage_progress_note": "Zero completed; first source refresh failed; fifteen later stages were not started.",
+        "stages": [
+          {
+            "label": "Current inventory and provider acquisition",
+            "seconds": 68.93088238500002,
+            "status": "FAILED"
+          },
+          {
+            "label": "Authenticate prior inputs and work",
+            "seconds": null,
+            "status": "NOT_STARTED"
+          },
+          {
+            "label": "Historical feature review",
+            "seconds": null,
+            "status": "NOT_STARTED"
+          },
+          {
+            "label": "Verify and reuse historical targets",
+            "seconds": null,
+            "status": "NOT_STARTED"
+          },
+          {
+            "label": "Current feature reconstruction",
+            "seconds": null,
+            "status": "NOT_STARTED"
+          },
+          {
+            "label": "Timestamped injury and availability acquisition",
+            "seconds": null,
+            "status": "NOT_STARTED"
+          },
+          {
+            "label": "Original frozen inference",
+            "seconds": null,
+            "status": "NOT_STARTED"
+          },
+          {
+            "label": "Chronological selected current reconstruction",
+            "seconds": null,
+            "status": "NOT_STARTED"
+          },
+          {
+            "label": "Native chronological reconstruction",
+            "seconds": null,
+            "status": "NOT_STARTED"
+          },
+          {
+            "label": "Chronological paired injury challengers and controls",
+            "seconds": null,
+            "status": "NOT_STARTED"
+          },
+          {
+            "label": "Preserve immutable issues",
+            "seconds": null,
+            "status": "NOT_STARTED"
+          },
+          {
+            "label": "Final display-only refresh",
+            "seconds": null,
+            "status": "NOT_STARTED"
+          },
+          {
+            "label": "Game, week and season reporting",
+            "seconds": null,
+            "status": "NOT_STARTED"
+          },
+          {
+            "label": "Historical source inventory and backfill",
+            "seconds": null,
+            "status": "NOT_STARTED"
+          },
+          {
+            "label": "Historical in-game acquisition and chronological path study",
+            "seconds": null,
+            "status": "NOT_STARTED"
+          },
+          {
+            "label": "Final display after secondary history",
+            "seconds": null,
+            "status": "NOT_STARTED"
+          }
+        ],
+        "started_at": "2026-11-06T04:04:31.403012+00:00",
+        "status": "FAILED_PARTIAL_WORK_PRESERVED",
+        "storage_readback": {
+          "chunks": 90,
+          "earlier_availability_credit": false,
+          "giant_reconstruction_created": false,
+          "logical_bytes": 1504058360,
+          "new_fit_credit": 0,
+          "new_full_storage_GETs": 182,
+          "new_provider_requests": 0,
+          "object_size_guard_relaxed": false,
+          "observations": 723492,
+          "source_clocks_unchanged": true,
+          "source_release": "B043",
+          "status": "COMPLETE_BOUNDED_SNAPSHOT_CLOSURE_VERIFIED"
+        },
+        "synthetic_test_errors": 0,
+        "synthetic_tests_failed": 0,
+        "synthetic_tests_passed": 1134,
+        "synthetic_tests_skipped": 1,
+        "synthetic_tests_total": 1135,
+        "total_wall_seconds": 143.27627949799995
+      },
+      "current_results_status": {
+        "admitted_settled_issue_rows": 0,
+        "authenticated_issue_games_both_leagues": 5,
+        "authenticated_issue_games_this_league": 2,
+        "authenticated_issue_rows_both_leagues": 339,
+        "authenticated_issue_rows_this_league": 132,
+        "browser_display_rows": 46529,
+        "final_scorecards": "NOT_PRODUCED_BEFORE_OWNER_FAILURE",
+        "independent_metric_mismatches": 0,
+        "independent_metric_panels_checked": 944,
+        "new_fits_created_by_recovery": 0,
+        "new_issues_created_by_recovery": 0,
+        "new_model_winner": null,
+        "new_owner_issues": 0,
+        "new_paired_metrics": "PRE_STUDY_RETROSPECTIVE_AGGREGATES_AVAILABLE",
+        "original_as_issued_credit": 0,
+        "original_frozen_games": 1272,
+        "pre_study_game_model_rows": 46525,
+        "pre_study_target_rows": 84195,
+        "prediction_rows": {
+          "current_monitor": 69600,
+          "native_replay": 10440,
+          "original_frozen": 3816
+        },
+        "qualification": "B043 preserved these earlier B042 issue bytes and clocks and created zero new qualifying issues; recovery created no new issues or model fits. Durable pre-study scorecards survived the failure. The issues have no admitted settled labels at this cutoff.",
+        "recovery_preserved_original_issue_bytes": true,
+        "release": "B043",
+        "retained_prior_issue_rows": 339
+      },
+      "freshness": {
+        "clock_note": "Review publication, data capture, supported source time and original issue time remain separate. Retained observations include earlier captures; publication does not refresh any provider.",
+        "model_input_asof": "2026-11-06T02:21:58.808774+00:00",
+        "owner_completed_at": "2026-11-06T02:54:26.840410+00:00",
+        "owner_release": "B043",
+        "owner_started_at": "2026-11-06T01:57:50.959904+00:00",
+        "pre_study_report_asof": "2026-11-06T02:46:42.778381+00:00",
+        "retained_observation_acquisition_range_utc": {
+          "maximum_utc": "2026-11-06T02:13:35.659420+00:00",
+          "minimum_utc": "2026-11-04T21:07:23+00:00"
+        },
+        "retained_quote_time_range_utc": {
+          "maximum_utc": "2026-11-06T02:11:54.749000+00:00",
+          "minimum_utc": "2026-10-14T20:00:00+00:00"
+        },
+        "source_acquisition_completed_at": "2026-11-06T02:14:03.087794+00:00",
+        "static_snapshot_not_live_feed": true
+      },
+      "frontier_research": {
+        "current_outcomes_used_for_selection": false,
+        "evidence_limit": "The 723,492 retained observations do not establish in-game trajectory coverage. Actual in-game observations and independently timestamped game-state windows must qualify before fitting; no completed market-path study or performance gain is claimed.",
+        "measured_gain": null,
+        "new_model_fits": 0,
+        "release": "B043",
+        "scope": "Separate market-path extraction, clock validation and chronological paired ablation were not reached in B043. B044 stopped at the first source handoff. B045 continuation is prepared; no new owner execution or measured path gain is claimed.",
+        "status": "NOT_REACHED_AFTER_INJURY_CHECKPOINT_FAILURE"
+      },
+      "injury_research": {
+        "active_audit": "Audited active original and historical feature paths have no explicit injury-report feed. This is not a claim about every past track or version.",
+        "all_injuries_complete": false,
+        "bound_observations": 1306,
+        "clock_coverage": "74 observations have a source-availability upper bound: 12 exact publication clocks and 62 date bounds. The other 1,246 lack one: 1,244 recovered image observations and two current PDF observations. A publication claim alone does not verify the historical body version.",
+        "clock_policy": "Display latest observed reports separately from information at two hours, one hour and strictly before tip. A newly recovered article is not proof of an earlier captured vintage.",
+        "coverage": "1,320 observations across both leagues; 643 in this track. 1,306 are bound and 14 unresolved. All 1,320 historical snapshot versions remain unverified. B043 acquired source evidence but its injury comparison failed during checkpoint serialization; no completed injury gain is measured.",
+        "current_pdf_publication_unknown": 2,
+        "date_upper_bound_observations": 62,
+        "exact_publication_timestamp_observations": 12,
+        "full_records_unchanged": 1281,
+        "historical_image_publication_unverified": 1244,
+        "historical_snapshot_versions_verified": 0,
+        "injury_improvement_measured": false,
+        "league_observations": 643,
+        "new_capture_identities": 39,
+        "new_owner_injury_fits": 0,
+        "new_semantic_injury_records": 0,
+        "next_branch": "B045 prepares the acquisition handoff repair before injury challengers can resume. B044 produced no new injury fit; original and rolling forecast semantics remain unchanged.",
+        "observations_both_leagues": 1320,
+        "promotion": "Historical chronological paired comparisons and future confirmation required; current outcomes do not select the promoted model.",
+        "semantic_inventory_unchanged_excluding_capture_fields": true,
+        "source_availability_upper_bound_unknown": 1246,
+        "supported_source_availability_upper_bounds": 74,
+        "unresolved_observations": 14
+      },
+      "latest_reconstructed_comparison": {
+        "as_issued": false,
+        "cohort_sha256": "1b6f46a326919243344214018fb5b5d10a66cdc94edf0a70722bb705ad400753",
+        "current_outcomes_selected_model": false,
+        "evidence_mode": "Retrospective reconstruction; later historical quote recovery does not create earlier issuance.",
+        "evidence_snapshot_at": "2026-11-06T02:46:42.778381+00:00",
+        "horizon_minutes": 60,
+        "latest_owner_result": false,
+        "latest_scientific_result": true,
+        "model_label": "Frozen original probability model",
+        "model_metrics": {
+          "accuracy": 0.8604651162790697,
+          "auc": 0.8211009174311926,
+          "brier": 0.10612122852152936,
+          "calibration_bias": -0.014256032520031483,
+          "log_loss": 0.34440721423736326
+        },
+        "model_right_provider_wrong": 7,
+        "paired_games": 129,
+        "profit": null,
+        "provider": "Polymarket international",
+        "provider_metrics": {
+          "accuracy": 0.8217054263565892,
+          "auc": 0.8488532110091743,
+          "brier": 0.10056722868217055,
+          "calibration_bias": 0.006596899224806208,
+          "log_loss": 0.32122632357105746
+        },
+        "provider_right_model_wrong": 2,
+        "qualified_settled_bets": 0,
+        "release": "B043",
+        "status": "RETROSPECTIVE_PAIRED_ORIGINAL_VERSUS_POLYMARKET",
+        "uncertainty_interval": null,
+        "uncertainty_note": "No current paired uncertainty interval is supplied. No betting advantage is established."
+      },
+      "prepared_execution": {
+        "new_scientific_credit": 0,
+        "owner_execution_observed": false,
+        "release": "B045",
+        "scope": "Validate the actual acquisition handoff against exact registered provenance before acquisition, preserve the failed B044 outcome, and prefer B043 scientific evidence with older lineage retained.",
+        "status": "PREPARED_NOT_EXECUTED"
+      },
+      "release": "B044"
     }
   ],
   "schema": "sports-edge-lab.public.ncaa-review.v1"

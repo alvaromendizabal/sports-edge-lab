@@ -4,7 +4,67 @@
 
 This example makes the **evaluation contract** executable without credentials, data subscriptions or a machine-learning environment. It also generates the college basketball review pages from committed, sanitized aggregate evidence. The invented demonstration and the real historical aggregates remain separate: the example does not reproduce the private models or claim a betting record.
 
-## Latest execution — November 6, 2026 UTC · B044 returned; B045 prepared
+## Latest execution — November 6, 2026 UTC · B045 partial return; B046 prepared
+
+The actual B045 attachment records **9 of 16 completed scientific stages**.
+The paired injury stage exhausted its bounded resource-admission wait after
+**1,527.42 seconds**. The wrapper then recorded **child exit −9 without the
+worker's normal terminal return** and a return that was **not persisted**.
+The signal does not establish why the process stopped; an out-of-memory cause
+is not proved. An external owner-terminal or shell-exit line is not supplied.
+
+Complete new-fit counts remain **unknown pending a full durable producer audit**
+in this public snapshot. Latest role counts and checkpoint contract counts are
+not physical fitting attempts. Unknown work must not become zero work. The
+attached execution evidence is a one-megabyte log tail; earlier fixture totals,
+full-run CPU/wall totals and the final owner peak are not established here.
+The last rounded observations show 19.26 GiB owner RSS and 5.05 GiB available
+memory. They are observations, not a diagnosis or a resource reservation.
+
+B043 retains scientific authority for the dated panels below: **101 target /
+45 scalar / 24 empirical fits**, 84,195 pre-study target rows, 46,529 display
+rows and 944 independently checked metric panels. B042's 339 issues across five
+games retain their original identity. B044's **182 full storage GETs** remain
+B044 work. The older assertion of 60,906 dashboard rows in two files remains
+`UNRESOLVED_OLDER_DASHBOARD_ASSERTION`; adding counts from different source
+versions cannot establish it.
+
+**B046 is prepared, not owner-executed.** It targets bounded recovery memory and
+explicit spread/ATS reporting. No new injury improvement, path-study gain,
+current-season model promotion or profitable betting result is established.
+The earlier B044/B045 prepared description below is retained as a dated version.
+
+### Cover probability and a team's ATS record
+
+A home spread is the number added to the home-minus-away final margin. If home
+is −3.5, it must win by more than 3.5 to cover. An exact integer line can push.
+A valid margin distribution produces three probabilities: cover, push and loss.
+A point margin or a game's winner probability does not supply that distribution.
+An away cover exchanges home cover and home loss while preserving the push mass.
+
+A historical ATS record counts earlier eligible wins, losses and pushes against
+one explicit line policy. Its win rate uses wins / (wins + losses); the report
+also shows pushes, eligible games and excluded observations. That descriptive
+rate is not the next game's cover probability. Historical ATS features can only
+use earlier completed games whose results and supported line versions were known
+before the target cutoff. Later retrieval does not become earlier availability.
+Provider, US/international product, gender, horizon, home/away orientation,
+evidence tier and overtime settlement stay separate.
+
+The public `spread_ats.py` example uses invented inputs, exact rational masses
+and exact decimal spreads. A fixed 75% home win probability yields 55% cover at
+−3.5; at −3 it gives 55% cover, 20% push and 25% loss. Its separate invented ATS
+record is 2–1–1: 66.67% across three decisions and four settled games, with one
+unknown-clock record excluded. Those numbers describe only the invented fixture.
+Tests reject late or missing clocks, incompatible identities and settlement,
+invalid probability mass and conflicting game versions. No real NCAA spread
+probability champion, real ATS result or profit is published by the example.
+
+Run `python examples/ncaa_review/spread_ats.py` from the repository root. The
+interactive pages embed the exact executable output and let a reviewer change
+the quoted line. The example never sends a request or places an order.
+
+## Preserved review — November 6, 2026 UTC · B044 returned; B045 prepared at that time
 
 The actual B044 owner completed **0 of 16 scientific stages**. Its first source
 refresh rejected an unsupported predecessor at the producer-to-consumer handoff,
