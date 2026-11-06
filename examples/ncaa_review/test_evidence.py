@@ -1,5 +1,6 @@
 """Check the actual sanitized export and its rendered review contract."""
 import copy
+import hashlib
 import json
 import math
 from html.parser import HTMLParser
@@ -174,7 +175,8 @@ class EvidenceTests(unittest.TestCase):
             self.assertEqual(old_inventory['candidate_games'], 1103 if league == 'ncaam' else 1072)
             self.assertEqual(old_inventory['observed_finals'], 327 if league == 'ncaam' else 311)
             self.assertFalse(data['observed_inventory']['all_official_games_covered'])
-            self.assertEqual(data['current_coverage_gaps']['market_identity_unresolved'], 226042)
+            preserved = next(x for x in data['coverage_history'] if x['release'] == 'B040')
+            self.assertEqual(preserved['current_coverage_gaps']['market_identity_unresolved'], 226042)
             self.assertIsNone(data['current_coverage_gaps']['official_denominator'])
 
     def test_private_viewer_has_no_upload_or_persistence_path(self):
@@ -199,15 +201,16 @@ class EvidenceTests(unittest.TestCase):
             self.assertEqual(attempt['league_new_real_target_fits'], 96 if league=='ncaam' else 60)
             self.assertEqual(attempt['reused_target_fits'],108)
             self.assertEqual(attempt['new_prospective_issues'],0)
-            self.assertEqual(data['observed_inventory']['candidate_games'],1439 if league=='ncaam' else 1377)
-            self.assertEqual(data['observed_inventory']['observed_finals'],370 if league=='ncaam' else 368)
+            inventory = next(x for x in data['inventory_history'] if x['snapshot_at'] == '2026-11-05T18:37:56.495943+00:00')
+            self.assertEqual(inventory['candidate_games'],1439 if league=='ncaam' else 1377)
+            self.assertEqual(inventory['observed_finals'],370 if league=='ncaam' else 368)
             self.assertFalse(data['observed_inventory']['all_official_games_covered'])
             self.assertEqual(data['current_coverage_gaps']['rejected_official_records'],4)
             self.assertFalse(attempt['scientific_goal_complete'])
 
     def test_b041_setup_failure_does_not_create_science_or_refresh_the_display(self):
         for data in self.exports.values():
-            attempt = data['current_owner_attempt']
+            attempt = next(x for x in data['owner_attempt_history'] if x['release'] == 'B041')
             self.assertEqual(attempt['release'], 'B041')
             self.assertEqual(attempt['failure_phase'], 'PRE_SCIENCE_PREDECESSOR_SETUP')
             self.assertEqual(attempt['failure_code'], 'PROGRESS_COUNTER_WENT_BACKWARD')
@@ -228,8 +231,8 @@ class EvidenceTests(unittest.TestCase):
             self.assertFalse(attempt['progress']['candidate_registrations_are_imports'])
             self.assertEqual(attempt['progress']['first_queue_registered_candidates'], 108)
             self.assertEqual(attempt['progress']['second_queue_registered_completions'], 0)
-            self.assertEqual(data['coverage_evidence_release'], 'B040')
-            self.assertEqual(data['observed_inventory']['snapshot_at'], '2026-11-05T18:37:56.495943+00:00')
+            inventory = next(x for x in data['inventory_history'] if x['snapshot_at'] == '2026-11-05T18:37:56.495943+00:00')
+            self.assertEqual(inventory['authenticated_current_issues'], 0)
 
     def test_b040_attempt_and_its_actual_acquisition_survive_in_history(self):
         for data in self.exports.values():
@@ -241,7 +244,71 @@ class EvidenceTests(unittest.TestCase):
             self.assertEqual(attempt['new_provider_requests'], 6351)
             self.assertEqual(attempt['new_real_target_fits'], 0)
             self.assertAlmostEqual(attempt['phase_seconds']['science'], 2490.3243649669894)
-            self.assertEqual(data['current_coverage_gaps']['market_observations'], 557737)
+            preserved = next(x for x in data['coverage_history'] if x['release'] == 'B040')
+            self.assertEqual(preserved['current_coverage_gaps']['market_observations'], 557737)
+
+    def test_b042_partial_completion_preserves_distinct_fit_and_issue_credit(self):
+        for league, data in self.exports.items():
+            attempt = data['current_owner_attempt']
+            self.assertEqual(attempt['release'], 'B042')
+            self.assertEqual(attempt['status'], 'FAILED_PARTIAL_WORK_PRESERVED')
+            self.assertEqual(attempt['failure_code'], 'B041_BASE_DETERMINISTIC_BLEND_MISMATCH')
+            self.assertEqual([s['status'] for s in attempt['stages']], ['COMPLETED'] * 9 + ['FAILED'] + ['NOT_STARTED'] * 5)
+            self.assertEqual((attempt['new_real_target_fits'], attempt['new_calibration_fits'], attempt['new_empirical_residual_fits']), (102, 46, 24))
+            self.assertEqual(attempt['league_new_real_target_fits'], 69 if league == 'ncaam' else 33)
+            self.assertEqual((attempt['reused_target_fits'], attempt['reused_native_target_fits'], attempt['reused_native_scalar_fits']), (108, 12, 6))
+            self.assertEqual((attempt['synthetic_tests_passed'], attempt['synthetic_tests_skipped'], attempt['synthetic_test_errors']), (1029, 1, 0))
+            self.assertAlmostEqual(sum(attempt['phase_seconds'].values()), attempt['total_wall_seconds'])
+            result = data['current_results_status']
+            self.assertEqual((result['authenticated_issue_rows_both_leagues'], result['authenticated_issue_games_both_leagues']), (339, 5))
+            self.assertEqual((result['authenticated_issue_rows_this_league'], result['authenticated_issue_games_this_league']), (132, 2) if league == 'ncaam' else (207, 3))
+            self.assertEqual((result['new_issues_created_by_recovery'], result['new_fits_created_by_recovery']), (0, 0))
+            self.assertEqual(result['original_as_issued_credit'], 0)
+            self.assertTrue(result['recovery_preserved_original_issue_bytes'])
+            self.assertIsNone(result['new_paired_metrics'])
+            self.assertIsNone(result['new_model_winner'])
+            self.assertFalse(data['current_reconstructed_comparison']['latest_owner_result'])
+
+    def test_retained_provider_counts_and_capture_clocks_do_not_claim_complete_coverage(self):
+        for league, data in self.exports.items():
+            self.assertEqual([p['retained_observations_both_leagues'] for p in data['providers']], [561323, 149412, 266])
+            self.assertEqual(sum(p['retained_observations_both_leagues'] for p in data['providers']), 711001)
+            inventory = data['observed_inventory']
+            self.assertEqual((inventory['candidate_games'], inventory['observed_finals']), (1439, 370) if league == 'ncaam' else (1379, 385))
+            self.assertFalse(inventory['all_official_games_covered'])
+            self.assertIsNone(data['current_coverage_gaps']['official_denominator'])
+            self.assertEqual(data['freshness']['source_acquisition_completed_at'], '2026-11-06T00:25:57.094181+00:00')
+            self.assertEqual(data['freshness']['retained_quote_time_range_utc']['maximum_utc'], '2026-11-06T00:20:00+00:00')
+            self.assertEqual(data['freshness']['retained_observation_acquisition_range_utc']['maximum_utc'], '2026-11-06T00:24:58.312894+00:00')
+            for provider in data['providers']:
+                for row in provider['numeric_display_coverage']:
+                    self.assertEqual(row['denominator'], inventory['observed_finals'])
+                    self.assertLessEqual(row['numeric_observation_rows'], row['denominator'])
+                    self.assertLessEqual(row['semantics_verified_rows'], row['numeric_observation_rows'])
+
+    def test_injury_clock_gaps_and_prepared_research_are_not_measured_gains(self):
+        for data in self.exports.values():
+            injury = data['injury_research']
+            self.assertEqual(injury['bound_observations'] + injury['unresolved_observations'], 1320)
+            self.assertEqual(injury['supported_source_availability_upper_bounds'] + injury['source_availability_upper_bound_unknown'], 1320)
+            self.assertEqual(injury['historical_image_publication_unverified'] + injury['current_pdf_publication_unknown'], 1246)
+            self.assertEqual(injury['historical_snapshot_versions_verified'], 0)
+            self.assertEqual(injury['new_owner_injury_fits'], 0)
+            self.assertFalse(injury['injury_improvement_measured'])
+            self.assertFalse(injury['all_injuries_complete'])
+            frontier = data['frontier_research']
+            self.assertEqual(frontier['status'], 'PREPARED_NOT_EXECUTED')
+            self.assertEqual(frontier['new_model_fits'], 0)
+            self.assertIsNone(frontier['measured_gain'])
+
+    def test_historical_scores_and_selection_contract_are_unchanged(self):
+        pins = {
+            'ncaam': ('45351ee25d6eaa787f649964085a68292ea0a6c84c11346b5e95e16bd47b15b1', '94ffa143fb5ac5741a1912180fbc7a949e9b5d6d73db8647879a60aee8c94618'),
+            'ncaaw': ('608f962efb925fa2df36fbe899be1123d914c017180be02c0fc4b4050ee7151b', '6b1e7d544535d1a44a03a22d80227881f4fa57e899e4dec23c6cfe5c0c21bd3b'),
+        }
+        for league, data in self.exports.items():
+            for key, pin in zip(('models', 'objective_tradeoff'), pins[league]):
+                self.assertEqual(hashlib.sha256(json.dumps(data[key], sort_keys=True, separators=(',', ':')).encode()).hexdigest(), pin)
 
     def test_current_pair_is_retrospective_and_preserves_opposing_metric_results(self):
         pair=self.exports['ncaam']['current_reconstructed_comparison']
@@ -284,8 +351,9 @@ class EvidenceTests(unittest.TestCase):
             self.assertEqual(path.read_text(), output)
             self.assertNotRegex(output, r'__(?:TITLE|EVIDENCE|PROGRESS_DEMO|PREFLIGHT_DEMO|LEAGUE|SIBLING|SIBLING_LABEL)__')
             if path.parent.name in self.exports:
-                self.assertIn('NCAA evidence review · 05 November 2026 Pacific', output)
-                self.assertIn('Latest run stopped before science; earlier work is preserved.', output)
+                self.assertIn('NCAA evidence review · 06 November 2026 UTC', output)
+                self.assertIn('Latest run preserved valid work; the injury study failed.', output)
+                self.assertNotIn('Latest run stopped before science', output)
                 self.assertNotIn('Latest run stopped during reporting', output)
                 embedded = re.search(r'<script type="application/json" id="evidence">(.*?)</script>', output, re.S)
                 self.assertIsNotNone(embedded)
@@ -318,15 +386,41 @@ class EvidenceTests(unittest.TestCase):
         self.assertIn('href="' + host + '/tracks/ncaaw/index.html"', viewer)
 
     def test_export_validation_rejects_provider_scope_and_cohort_mutation(self):
-        for mutation in ('provider', 'cohort'):
+        for mutation in ('provider', 'cohort', 'stage', 'observation', 'issue_credit', 'issue_scope', 'capture_release'):
             corrupted = copy.deepcopy(self.exports['ncaam'])
             if mutation == 'provider':
                 corrupted['providers'][0]['name'] = 'invented-unregistered-provider'
-            else:
+            elif mutation == 'cohort':
                 corrupted['models'][0]['panels']['pooled']['N'] += 1
+            elif mutation == 'stage':
+                corrupted['current_owner_attempt']['stages'][9]['status'] = 'COMPLETED'
+            elif mutation == 'observation':
+                corrupted['providers'][0]['retained_observations_both_leagues'] += 1
+            elif mutation == 'issue_credit':
+                corrupted['current_results_status']['new_issues_created_by_recovery'] = 339
+            elif mutation == 'issue_scope':
+                corrupted['current_results_status']['authenticated_issue_rows_this_league'] += 1
+            else:
+                corrupted['freshness']['owner_release'] = 'B041'
             with patch.object(Path, 'read_text', return_value=json.dumps(corrupted)):
                 with self.assertRaises(ValueError):
                     build_dashboard.evidence('ncaam')
+
+    def test_landing_uses_current_evidence_and_rejects_mixed_league_snapshots(self):
+        exports = list(self.exports.values())
+        landing = build_dashboard.render_landing(exports)
+        self.assertIn('B042: 9 of 15 stages completed; injury study failed.', landing)
+        self.assertIn('711,001 market observations', landing)
+        self.assertIn('339 existing research issue rows across 5 games', landing)
+        self.assertNotIn('Latest owner stopped before science', landing)
+        changed = copy.deepcopy(exports)
+        changed[1]['observed_inventory']['candidate_games'] += 1
+        with self.assertRaisesRegex(ValueError, 'source inventory closure'):
+            build_dashboard.render_landing(changed)
+        changed = copy.deepcopy(exports)
+        changed[1]['current_owner_attempt']['release'] = 'B041'
+        with self.assertRaisesRegex(ValueError, 'release disagreement'):
+            build_dashboard.render_landing(changed)
 
 
 if __name__ == '__main__':

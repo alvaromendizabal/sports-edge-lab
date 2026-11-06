@@ -1,147 +1,213 @@
 {
-  "coverage_evidence_release": "B040",
+  "coverage_evidence_release": "B042",
+  "coverage_history": [
+    {
+      "current_coverage_gaps": {
+        "both_leagues_observed_finals": 738,
+        "both_leagues_source_records": 2816,
+        "calendar_source_versions": 1791,
+        "historical_backfill_stage": "NOT_REACHED_AFTER_CHECKPOINT_IMPORT_FAILURE",
+        "market_identity_unresolved": 226042,
+        "market_observations": 557737,
+        "native_reconstruction_status": "Not started in this attempt; previous results remain preserved.",
+        "official_denominator": null,
+        "original_frozen_current_status": "1323 reconstructed or preview games; zero new as-issued forecasts.",
+        "rejected_official_records": 4,
+        "selected_monitor_status": "Failed during checkpoint import before new fit producers started; valid earlier monitoring retained.",
+        "unknown_exact_tipoff_records": 80,
+        "unmatched_official_candidates": 1021,
+        "unresolved_source_candidates": 4
+      },
+      "providers": [
+        {
+          "current_log_loss": null,
+          "current_matched_games": null,
+          "display_coverage": "432,356 retained observations across both leagues. 142 completed source records have supported pre-tip winner values; 13 were actually captured before tip. A concurrent transient-stop race left 9,136 history dispositions halted.",
+          "eligible_comparison_coverage": "NOT_ESTABLISHED",
+          "hypothetical_ROI": null,
+          "name": "Kalshi",
+          "required_evidence": "Exact event identity, pre-cutoff quote availability, compatible full-game settlement, executable price and applicable fee rules.",
+          "status": "TRANSIENT_DISCONNECT_STOP_WITH_GAPS"
+        },
+        {
+          "current_log_loss": null,
+          "current_matched_games": null,
+          "display_coverage": "125,213 international observations across both leagues. 284 completed source records have supported pre-tip winner values; 21 were captured before tip. US is separate and unacquired.",
+          "eligible_comparison_coverage": "RECONSTRUCTED_PAIRED_POPULATION_ONLY",
+          "hypothetical_ROI": null,
+          "name": "Polymarket",
+          "products": [
+            {
+              "name": "International",
+              "status": "PARTIAL_INTERNATIONAL_CAPTURE"
+            },
+            {
+              "name": "US",
+              "status": "NOT_ACQUIRED_UNVERIFIED"
+            }
+          ],
+          "required_evidence": "Exact event identity, pre-cutoff quote availability, compatible full-game settlement, executable price and applicable fee rules.",
+          "status": "INTERNATIONAL_PARTIAL_HISTORY_RETAINED"
+        },
+        {
+          "current_log_loss": null,
+          "current_matched_games": null,
+          "display_coverage": "168 retained observations across both leagues. 5 completed source records have pre-tip winner values; 12 have numeric spread and total thresholds. No configured historical-odds runtime credential; zero new paid requests.",
+          "eligible_comparison_coverage": "NOT_ESTABLISHED",
+          "hypothetical_ROI": null,
+          "name": "DraftKings",
+          "required_evidence": "Exact event identity, pre-cutoff quote availability, compatible full-game settlement, executable price and applicable fee rules.",
+          "status": "RETAINED_CAPTURE_HISTORY_CREDENTIAL_ABSENT"
+        }
+      ],
+      "release": "B040"
+    }
+  ],
   "current_coverage_gaps": {
-    "both_leagues_observed_finals": 738,
-    "both_leagues_source_records": 2816,
-    "calendar_source_versions": 1791,
-    "historical_backfill_stage": "NOT_REACHED_AFTER_CHECKPOINT_IMPORT_FAILURE",
-    "market_identity_unresolved": 226042,
-    "market_observations": 557737,
-    "native_reconstruction_status": "Not started in this attempt; previous results remain preserved.",
+    "both_leagues_observed_finals": 755,
+    "both_leagues_source_records": 2818,
+    "calendar_source_versions": 1792,
+    "espn_source_finals": 491,
+    "historical_backfill_stage": "NOT_REACHED_AFTER_INJURY_STUDY_FAILURE",
+    "market_identity_note": "Full retained-inventory identity gaps were not rescored in the final reporting stage; previous counts remain in coverage history.",
+    "market_identity_unresolved": null,
+    "market_observations": 711001,
+    "native_reconstruction_status": "Completed 10,689 target rows, 66 new target fits and 36 scalar calibrations; 39 rows independently verified as real B042 issues.",
+    "official_accepted_contests": 1797,
+    "official_conflicts": 44,
     "official_denominator": null,
-    "original_frozen_current_status": "1323 reconstructed or preview games; zero new as-issued forecasts.",
+    "official_exact_matches": 775,
+    "original_frozen_current_status": "1,312 games / 3,936 reconstructed target rows; zero original as-issued credit; original weights unchanged.",
     "rejected_official_records": 4,
-    "selected_monitor_status": "Failed during checkpoint import before new fit producers started; valid earlier monitoring retained.",
-    "unknown_exact_tipoff_records": 80,
-    "unmatched_official_candidates": 1021,
+    "selected_monitor_status": "Completed 71,260 target rows, 36 new target fits, 10 scalar and 24 empirical fits; 300 rows independently verified as real B042 issues.",
+    "unknown_exact_tipoff_records": 75,
+    "unmatched_official_candidates": 1022,
     "unresolved_source_candidates": 4
   },
   "current_owner_attempt": {
     "admission": {
       "acquisition_workers_planned": 8,
       "affinity_cpus": 8,
-      "aggregate_busy_cores": 0.2397003745318349,
-      "available_memory_bytes": 24278327296,
+      "aggregate_busy_cores": 0.12967581047381582,
+      "available_memory_bytes": 24282378240,
       "capacity_is_observation_not_reservation": true,
       "descendant_usage_measured": true,
       "foreign_processes_signaled": 0,
       "lock_files_deleted": 0,
-      "measured_wait_seconds": 1.0016066460084403,
+      "measured_wait_seconds": 1.0016072869912023,
       "raw_samples_preserved_in_private_evidence": true,
-      "workers_planned": 6
+      "workers_planned": 7
     },
-    "attempted_scientific_stages": 0,
-    "completed_at": "2026-11-05T21:30:39.808779+00:00",
-    "completed_child_cpu_seconds": 0.358848,
-    "completed_scientific_stages": 0,
+    "attempted_scientific_stages": 10,
+    "authenticated_issue_games": 5,
+    "completed_at": "2026-11-06T01:02:14.740589+00:00",
+    "completed_child_cpu_seconds": 84.259056,
+    "completed_scientific_stages": 9,
     "cost_status": "UNVERIFIED_NO_CURRENT_INSTANCE_RATE_OR_BILLING_ASSUMED",
-    "cpu_seconds": 36.868363,
+    "cpu_seconds": 2542.35074,
     "current_outcomes_used_for_selection": false,
     "failure_class": "ValueError",
-    "failure_code": "PROGRESS_COUNTER_WENT_BACKWARD",
-    "failure_description": "Two independently authenticated predecessor queues shared one progress counter. The second queue restarted at one after the first reached 108, so the monotonic guard correctly stopped setup. Source-aware queue identities preserve the guard.",
-    "failure_phase": "PRE_SCIENCE_PREDECESSOR_SETUP",
-    "league_new_real_target_fits": 0,
-    "new_calibration_fits": 0,
-    "new_empirical_residual_fits": 0,
+    "failure_code": "B041_BASE_DETERMINISTIC_BLEND_MISMATCH",
+    "failure_description": "The deterministic base verifier used a floating-point reduction different from its historical producer. Last-bit disagreement stopped the injury study before challenger fits. B043 restores the exact producer reduction and retains strict equality.",
+    "failure_phase": "PAIRED_INJURY_BASE_VERIFICATION",
+    "issue_verification": "B042 immutable issue bytes independently read back and original issue gates reverified during B043 recovery; no new B043 issue credit.",
+    "league_new_real_target_fits": 69,
+    "new_calibration_fits": 46,
+    "new_empirical_residual_fits": 24,
     "new_injury_fits": 0,
-    "new_injury_requests": 0,
+    "new_injury_requests": 261,
     "new_orders": 0,
-    "new_prediction_rows": 0,
-    "new_prospective_issues": 0,
-    "new_provider_requests": 0,
-    "new_real_target_fits": 0,
-    "new_source_refreshes": 0,
-    "next_execution_status": "The next owner must keep each predecessor progress queue separate while preserving counters, cutoffs, locks and earlier evidence. No later owner success is asserted.",
-    "optional_skip_scope": "Live waiter integration requires both optional Linux pidfd APIs. The individual missing API was not recorded.",
+    "new_prediction_rows": 85885,
+    "new_prospective_issues": 339,
+    "new_provider_requests": 13683,
+    "new_real_target_fits": 102,
+    "new_source_refreshes": 1,
+    "next_execution_status": "B043 repair and a separate chronological market-path study are prepared; no B043 owner execution, new issues or measured model gain is asserted.",
+    "optional_skip_scope": "Optional live-waiter integration requires both Linux pidfd APIs.",
     "original_monitoring_unchanged": true,
-    "outcome_summary": "It stopped during predecessor setup before any scientific stage, source refresh, model import or fit. Two source queues shared one counter; the monotonic guard preserved the failure. Earlier valid forecasts and models remain intact.",
-    "owner_peak_rss_bytes": 1150996480,
+    "outcome_summary": "Nine of 15 stages completed before the injury base verification failed. Current capture, original reconstruction, chronological monitoring and native replay committed valid work. Final scorecards and the final issue-reconciliation stage did not run.",
+    "owner_peak_rss_bytes": 8915197952,
     "owner_post_close_verification": "full_return_bytes_verified",
-    "phase_scope_note": "The private timer named science included predecessor setup; no scientific stage began. Setup is shown separately.",
+    "phase_scope_note": "The science timer includes predecessor setup and the ten attempted stages. Phase totals are owner wall time before return finalization.",
     "phase_seconds": {
-      "admission": 1.010592467006063,
-      "fixtures": 21.037580015006824,
-      "other": 2.2786933629977284,
-      "science": null,
-      "setup": 18.793449206990772
+      "admission": 1.003053827007534,
+      "fixtures": 25.824243729002774,
+      "other": 2.329208609997295,
+      "science": 5527.519155364003
     },
     "planned_scientific_stages": 15,
-    "prediction_row_scope": "No new predictions or model imports; all prior dated reconstructions remain preserved.",
+    "prediction_row_scope": "3,936 original frozen, 71,260 current-monitor and 10,689 native-replay target rows. Streams repeat games; row counts are not independent games or fit counts.",
     "progress": {
-      "candidate_registrations_are_imports": false,
-      "first_queue_planned_candidates": 108,
-      "first_queue_registered_candidates": 108,
-      "fixture_ETA_absolute_error_seconds": 12.666435550168778,
-      "fixture_ETA_calibrated_samples": 1,
-      "scientific_family_ETA": "UNMEASURED_NO_FAMILY_STARTED",
-      "second_queue_planned_candidates": 460,
-      "second_queue_registered_completions": 0
+      "fixture_checks_are_model_fits": false,
+      "recovery_creates_new_issue_credit": false,
+      "scientific_stages_completed": 9,
+      "scientific_stages_failed": 1,
+      "scientific_stages_not_started": 5
     },
-    "provider_request_note": "Only stored predecessor artifacts were read. No game, market or injury source acquisition stage began.",
-    "release": "B041",
-    "remaining_phases": "All 15 scientific stages were unstarted. Source capture, checkpoint imports and the injury study still require actual owner execution.",
-    "return_finalization_seconds": 0.3369001120008761,
-    "return_inner_serialization_seconds": 0.1374195590033196,
-    "return_persistence_attempt_seconds": 0.19640918099321425,
-    "reused_native_scalar_fits": 0,
-    "reused_native_target_fits": 0,
-    "reused_target_fits": 0,
+    "provider_request_note": "13,683 game/market calls in the returned source-summary counters; the 261 injury dispatches are counted separately. Retained observations are not request counts.",
+    "release": "B042",
+    "remaining_phases": "The injury study failed; five later phases, including final issue reconciliation and scorecards, were not started.",
+    "return_finalization_seconds": 2.2564393030042993,
+    "return_inner_serialization_seconds": 1.799392799002817,
+    "return_persistence_attempt_seconds": 0.44627135001064744,
+    "reused_native_scalar_fits": 6,
+    "reused_native_target_fits": 12,
+    "reused_target_fits": 108,
     "run_scope": "NCAA_MEN_AND_WOMEN_COMBINED",
     "scientific_credit_from_subsequent_readback": 0,
     "scientific_goal_complete": false,
     "simultaneous_process_tree_peak_measured": false,
-    "stage_progress_note": "Setup failed before stage one; all 15 scientific stages remain unstarted.",
+    "stage_progress_note": "Nine completed; the injury study failed; five later stages unstarted.",
     "stages": [
       {
         "label": "Current inventory and provider acquisition",
-        "seconds": null,
-        "status": "NOT_STARTED"
+        "seconds": 3509.787642687006,
+        "status": "COMPLETED"
       },
       {
         "label": "Authenticate prior inputs and work",
-        "seconds": null,
-        "status": "NOT_STARTED"
+        "seconds": 118.771880100001,
+        "status": "COMPLETED"
       },
       {
         "label": "Historical feature review",
-        "seconds": null,
-        "status": "NOT_STARTED"
+        "seconds": 13.545111512008589,
+        "status": "COMPLETED"
       },
       {
         "label": "Verify and reuse historical targets",
-        "seconds": null,
-        "status": "NOT_STARTED"
+        "seconds": 37.90258632399491,
+        "status": "COMPLETED"
       },
       {
         "label": "Current feature reconstruction",
-        "seconds": null,
-        "status": "NOT_STARTED"
+        "seconds": 143.9485867760086,
+        "status": "COMPLETED"
       },
       {
         "label": "Timestamped injury and availability acquisition",
-        "seconds": null,
-        "status": "NOT_STARTED"
+        "seconds": 268.1977697370021,
+        "status": "COMPLETED"
       },
       {
         "label": "Original frozen inference",
-        "seconds": null,
-        "status": "NOT_STARTED"
+        "seconds": 121.2223922550038,
+        "status": "COMPLETED"
       },
       {
         "label": "Chronological selected current reconstruction",
-        "seconds": null,
-        "status": "NOT_STARTED"
+        "seconds": 625.8491946809954,
+        "status": "COMPLETED"
       },
       {
         "label": "Native chronological reconstruction",
-        "seconds": null,
-        "status": "NOT_STARTED"
+        "seconds": 458.6165567559947,
+        "status": "COMPLETED"
       },
       {
         "label": "Chronological paired injury challengers and controls",
-        "seconds": null,
-        "status": "NOT_STARTED"
+        "seconds": 60.6750010609976,
+        "status": "FAILED"
       },
       {
         "label": "Preserve immutable issues",
@@ -169,21 +235,24 @@
         "status": "NOT_STARTED"
       }
     ],
+    "started_at": "2026-11-05T23:29:38.079450+00:00",
     "status": "FAILED_PARTIAL_WORK_PRESERVED",
     "synthetic_test_errors": 0,
-    "synthetic_test_seconds": 21.037580015006824,
+    "synthetic_test_seconds": 25.824243729002774,
     "synthetic_tests_failed": 0,
-    "synthetic_tests_passed": 982,
+    "synthetic_tests_passed": 1029,
     "synthetic_tests_skipped": 1,
-    "synthetic_tests_total": 983,
-    "total_wall_seconds": 43.12031505200139
+    "synthetic_tests_total": 1030,
+    "total_wall_seconds": 5556.675661530011
   },
   "current_reconstructed_comparison": {
     "as_issued": false,
     "cohort_sha256": "3e5937769b056feb3d1149f8741323828f695539a7f57da7c2b7fc70d6a423a9",
     "current_outcomes_selected_model": false,
     "evidence_mode": "Retrospective reconstruction; later historical quote recovery is not earlier issue evidence.",
+    "evidence_snapshot_at": "2026-11-05T18:37:56.495943+00:00",
     "horizon_minutes": 60,
+    "latest_owner_result": false,
     "model_label": "Frozen original probability model",
     "model_metrics": {
       "accuracy": 0.8524590163934426,
@@ -194,6 +263,7 @@
     },
     "model_right_provider_wrong": 7,
     "paired_games": 122,
+    "preserved_in_release": "B040",
     "profit": null,
     "provider": "Polymarket international",
     "provider_metrics": {
@@ -209,8 +279,29 @@
     "uncertainty_interval": null,
     "uncertainty_note": "No uncertainty interval for this paired current cohort was supplied; no advantage is established."
   },
+  "current_results_status": {
+    "authenticated_issue_games_both_leagues": 5,
+    "authenticated_issue_games_this_league": 2,
+    "authenticated_issue_rows_both_leagues": 339,
+    "authenticated_issue_rows_this_league": 132,
+    "final_scorecards": "NOT_PRODUCED_BEFORE_OWNER_FAILURE",
+    "new_fits_created_by_recovery": 0,
+    "new_issues_created_by_recovery": 0,
+    "new_model_winner": null,
+    "new_paired_metrics": null,
+    "original_as_issued_credit": 0,
+    "original_frozen_games": 1312,
+    "prediction_rows": {
+      "current_monitor": 71260,
+      "native_replay": 10689,
+      "original_frozen": 3936
+    },
+    "qualification": "Independent recovery verified existing B042 issues; it created no new issues or model fits. Final B042 paired scorecards remain unavailable. The earlier comparison below retains its original cohort and values.",
+    "recovery_preserved_original_issue_bytes": true,
+    "release": "B042"
+  },
   "current_season": {
-    "label": "2026\u201327",
+    "label": "2026–27",
     "season_end_year": 2027
   },
   "evaluation": {
@@ -229,18 +320,57 @@
     "probability_tie_accuracy_credit": 0.5,
     "probability_tie_direction": "no directional pick"
   },
+  "freshness": {
+    "clock_note": "Review publication, data capture, supported source time and original issue time remain separate. Retained observations include earlier captures; publication does not refresh any provider.",
+    "initial_report_asof": "2026-11-06T00:28:50.927605+00:00",
+    "owner_completed_at": "2026-11-06T01:02:14.740589+00:00",
+    "owner_release": "B042",
+    "owner_started_at": "2026-11-05T23:29:38.079450+00:00",
+    "retained_observation_acquisition_range_utc": {
+      "maximum_utc": "2026-11-06T00:24:58.312894+00:00",
+      "minimum_utc": "2026-11-04T21:07:23+00:00"
+    },
+    "retained_quote_time_range_utc": {
+      "maximum_utc": "2026-11-06T00:20:00+00:00",
+      "minimum_utc": "2026-10-14T20:00:00+00:00"
+    },
+    "source_acquisition_completed_at": "2026-11-06T00:25:57.094181+00:00",
+    "static_snapshot_not_live_feed": true
+  },
+  "frontier_research": {
+    "current_outcomes_used_for_selection": false,
+    "evidence_limit": "The 711,001 retained observations do not establish in-game trajectory coverage. The B042 history collection ended at tip; no completed market-path study or performance gain is claimed.",
+    "measured_gain": null,
+    "new_model_fits": 0,
+    "release": "B043",
+    "scope": "Separate market-path extraction, path-clock validation and chronological paired ablation are prepared. Actual in-game observations and timestamp-supported game-state windows are required before the study can qualify.",
+    "status": "PREPARED_NOT_EXECUTED"
+  },
   "historical_seasons": {
-    "2025": "2024\u201325",
-    "2026": "2025\u201326"
+    "2025": "2024–25",
+    "2026": "2025–26"
   },
   "injury_research": {
     "active_audit": "Audited active original and historical feature paths have no explicit injury-report feed. This is not a claim about every past track or version.",
     "all_injuries_complete": false,
+    "bound_observations": 1306,
+    "clock_coverage": "74 observations have a source-availability upper bound: 12 exact publication clocks and 62 date bounds. The other 1,246 lack one: 1,244 recovered image observations and two current PDF observations. A publication claim alone does not verify the historical body version.",
     "clock_policy": "Display latest observed reports separately from information at two hours, one hour and strictly before tip. A newly recovered article is not proof of an earlier captured vintage.",
-    "coverage": "Partial official source evidence and continuing archive discovery; no complete season injury inventory or measured performance gain. The latest B041 owner never reached injury acquisition or fitting.",
+    "coverage": "1,320 observations across both leagues; 643 in this track. 1,306 are bound and 14 unresolved. All 1,320 historical snapshot versions remain unverified. B042 acquired source evidence but its injury study failed before challenger fits; no injury improvement is measured.",
+    "current_pdf_publication_unknown": 2,
+    "date_upper_bound_observations": 62,
+    "exact_publication_timestamp_observations": 12,
+    "historical_image_publication_unverified": 1244,
+    "historical_snapshot_versions_verified": 0,
+    "injury_improvement_measured": false,
+    "league_observations": 643,
     "new_owner_injury_fits": 0,
-    "next_branch": "Separately identified injury-aware challengers and paired controls; originals preserved.",
-    "promotion": "Historical chronological paired comparisons and future confirmation required; current outcomes do not select the promoted model."
+    "next_branch": "B043 exact-reduction repair and separately identified injury challengers are prepared; original and rolling forecast semantics remain unchanged.",
+    "observations_both_leagues": 1320,
+    "promotion": "Historical chronological paired comparisons and future confirmation required; current outcomes do not select the promoted model.",
+    "source_availability_upper_bound_unknown": 1246,
+    "supported_source_availability_upper_bounds": 74,
+    "unresolved_observations": 14
   },
   "inventory_history": [
     {
@@ -331,6 +461,50 @@
       },
       "tipoff_display_timezone": "America/Los_Angeles",
       "unmatched_official_candidates": 544
+    },
+    {
+      "all_official_games_covered": false,
+      "authenticated_current_issues": 0,
+      "candidate_games": 1439,
+      "last_week": {
+        "candidate_games": 2,
+        "end": "2026-11-01",
+        "observed_finals": 2,
+        "records_without_exact_time": 0,
+        "start": "2026-10-26",
+        "unmatched_official_candidates": 0
+      },
+      "next_week": {
+        "candidate_games": 634,
+        "end": "2026-11-15",
+        "observed_finals": 0,
+        "records_without_exact_time": 63,
+        "start": "2026-11-09",
+        "unmatched_official_candidates": 243
+      },
+      "observed_finals": 370,
+      "official_inventory_reconciled": false,
+      "qualification": "Distinct source/candidate records may duplicate other sources; no exact official physical-game denominator.",
+      "records_without_exact_time": 69,
+      "reporting_week_timezone": "America/New_York",
+      "season_to_date": {
+        "candidate_games": 381,
+        "observed_finals": 370,
+        "records_without_exact_time": 2,
+        "unmatched_official_candidates": 142
+      },
+      "snapshot_at": "2026-11-05T18:37:56.495943+00:00",
+      "status": "OBSERVED_SOURCE_AND_CANDIDATE_RECORDS_WITH_EXPLICIT_GAPS",
+      "this_week": {
+        "candidate_games": 737,
+        "end": "2026-11-08",
+        "observed_finals": 368,
+        "records_without_exact_time": 3,
+        "start": "2026-11-02",
+        "unmatched_official_candidates": 267
+      },
+      "tipoff_display_timezone": "America/Los_Angeles",
+      "unmatched_official_candidates": 543
     }
   ],
   "league": "ncaam",
@@ -338,7 +512,7 @@
   "market_advantage": {
     "demonstrated": false,
     "realized_betting_profit": null,
-    "reason": "No qualified three-provider current-season pairing or executable-price replay was produced by this attempt. Historical model quality alone does not establish profitability."
+    "reason": "Final B042 paired scorecards were not produced before failure. Preserved earlier comparisons remain retrospective; authenticated research issue counts do not establish predictive superiority or executable profit."
   },
   "models": [
     {
@@ -954,8 +1128,10 @@
   },
   "observed_inventory": {
     "all_official_games_covered": false,
-    "authenticated_current_issues": 0,
+    "authenticated_current_issue_games": 2,
+    "authenticated_current_issues": 132,
     "candidate_games": 1439,
+    "issue_count_scope": "Authenticated B042 target/stream issue rows, not independent games; B043 recovery adds zero issues.",
     "last_week": {
       "candidate_games": 2,
       "end": "2026-11-01",
@@ -965,28 +1141,28 @@
       "unmatched_official_candidates": 0
     },
     "next_week": {
-      "candidate_games": 634,
+      "candidate_games": 633,
       "end": "2026-11-15",
       "observed_finals": 0,
-      "records_without_exact_time": 63,
+      "records_without_exact_time": 60,
       "start": "2026-11-09",
-      "unmatched_official_candidates": 243
+      "unmatched_official_candidates": 242
     },
     "observed_finals": 370,
     "official_inventory_reconciled": false,
     "qualification": "Distinct source/candidate records may duplicate other sources; no exact official physical-game denominator.",
-    "records_without_exact_time": 69,
+    "records_without_exact_time": 66,
     "reporting_week_timezone": "America/New_York",
     "season_to_date": {
-      "candidate_games": 381,
+      "candidate_games": 434,
       "observed_finals": 370,
       "records_without_exact_time": 2,
-      "unmatched_official_candidates": 142
+      "unmatched_official_candidates": 159
     },
-    "snapshot_at": "2026-11-05T18:37:56.495943+00:00",
+    "snapshot_at": "2026-11-06T00:25:57.094181+00:00",
     "status": "OBSERVED_SOURCE_AND_CANDIDATE_RECORDS_WITH_EXPLICIT_GAPS",
     "this_week": {
-      "candidate_games": 737,
+      "candidate_games": 738,
       "end": "2026-11-08",
       "observed_finals": 368,
       "records_without_exact_time": 3,
@@ -994,7 +1170,7 @@
       "unmatched_official_candidates": 267
     },
     "tipoff_display_timezone": "America/Los_Angeles",
-    "unmatched_official_candidates": 543
+    "unmatched_official_candidates": 542
   },
   "owner_attempt_history": [
     {
@@ -1538,37 +1714,424 @@
       "synthetic_tests_skipped": 1,
       "synthetic_tests_total": 893,
       "total_wall_seconds": 2510.6765412079985
+    },
+    {
+      "admission": {
+        "acquisition_workers_planned": 8,
+        "affinity_cpus": 8,
+        "aggregate_busy_cores": 0.2397003745318349,
+        "available_memory_bytes": 24278327296,
+        "capacity_is_observation_not_reservation": true,
+        "descendant_usage_measured": true,
+        "foreign_processes_signaled": 0,
+        "lock_files_deleted": 0,
+        "measured_wait_seconds": 1.0016066460084403,
+        "raw_samples_preserved_in_private_evidence": true,
+        "workers_planned": 6
+      },
+      "attempted_scientific_stages": 0,
+      "completed_at": "2026-11-05T21:30:39.808779+00:00",
+      "completed_child_cpu_seconds": 0.358848,
+      "completed_scientific_stages": 0,
+      "cost_status": "UNVERIFIED_NO_CURRENT_INSTANCE_RATE_OR_BILLING_ASSUMED",
+      "cpu_seconds": 36.868363,
+      "current_outcomes_used_for_selection": false,
+      "failure_class": "ValueError",
+      "failure_code": "PROGRESS_COUNTER_WENT_BACKWARD",
+      "failure_description": "Two independently authenticated predecessor queues shared one progress counter. The second queue restarted at one after the first reached 108, so the monotonic guard correctly stopped setup. Source-aware queue identities preserve the guard.",
+      "failure_phase": "PRE_SCIENCE_PREDECESSOR_SETUP",
+      "league_new_real_target_fits": 0,
+      "new_calibration_fits": 0,
+      "new_empirical_residual_fits": 0,
+      "new_injury_fits": 0,
+      "new_injury_requests": 0,
+      "new_orders": 0,
+      "new_prediction_rows": 0,
+      "new_prospective_issues": 0,
+      "new_provider_requests": 0,
+      "new_real_target_fits": 0,
+      "new_source_refreshes": 0,
+      "next_execution_status": "The next owner must keep each predecessor progress queue separate while preserving counters, cutoffs, locks and earlier evidence. No later owner success is asserted.",
+      "optional_skip_scope": "Live waiter integration requires both optional Linux pidfd APIs. The individual missing API was not recorded.",
+      "original_monitoring_unchanged": true,
+      "outcome_summary": "It stopped during predecessor setup before any scientific stage, source refresh, model import or fit. Two source queues shared one counter; the monotonic guard preserved the failure. Earlier valid forecasts and models remain intact.",
+      "owner_peak_rss_bytes": 1150996480,
+      "owner_post_close_verification": "full_return_bytes_verified",
+      "phase_scope_note": "The private timer named science included predecessor setup; no scientific stage began. Setup is shown separately.",
+      "phase_seconds": {
+        "admission": 1.010592467006063,
+        "fixtures": 21.037580015006824,
+        "other": 2.2786933629977284,
+        "science": null,
+        "setup": 18.793449206990772
+      },
+      "planned_scientific_stages": 15,
+      "prediction_row_scope": "No new predictions or model imports; all prior dated reconstructions remain preserved.",
+      "progress": {
+        "candidate_registrations_are_imports": false,
+        "first_queue_planned_candidates": 108,
+        "first_queue_registered_candidates": 108,
+        "fixture_ETA_absolute_error_seconds": 12.666435550168778,
+        "fixture_ETA_calibrated_samples": 1,
+        "scientific_family_ETA": "UNMEASURED_NO_FAMILY_STARTED",
+        "second_queue_planned_candidates": 460,
+        "second_queue_registered_completions": 0
+      },
+      "provider_request_note": "Only stored predecessor artifacts were read. No game, market or injury source acquisition stage began.",
+      "release": "B041",
+      "remaining_phases": "All 15 scientific stages were unstarted. Source capture, checkpoint imports and the injury study still require actual owner execution.",
+      "return_finalization_seconds": 0.3369001120008761,
+      "return_inner_serialization_seconds": 0.1374195590033196,
+      "return_persistence_attempt_seconds": 0.19640918099321425,
+      "reused_native_scalar_fits": 0,
+      "reused_native_target_fits": 0,
+      "reused_target_fits": 0,
+      "run_scope": "NCAA_MEN_AND_WOMEN_COMBINED",
+      "scientific_credit_from_subsequent_readback": 0,
+      "scientific_goal_complete": false,
+      "simultaneous_process_tree_peak_measured": false,
+      "stage_progress_note": "Setup failed before stage one; all 15 scientific stages remain unstarted.",
+      "stages": [
+        {
+          "label": "Current inventory and provider acquisition",
+          "seconds": null,
+          "status": "NOT_STARTED"
+        },
+        {
+          "label": "Authenticate prior inputs and work",
+          "seconds": null,
+          "status": "NOT_STARTED"
+        },
+        {
+          "label": "Historical feature review",
+          "seconds": null,
+          "status": "NOT_STARTED"
+        },
+        {
+          "label": "Verify and reuse historical targets",
+          "seconds": null,
+          "status": "NOT_STARTED"
+        },
+        {
+          "label": "Current feature reconstruction",
+          "seconds": null,
+          "status": "NOT_STARTED"
+        },
+        {
+          "label": "Timestamped injury and availability acquisition",
+          "seconds": null,
+          "status": "NOT_STARTED"
+        },
+        {
+          "label": "Original frozen inference",
+          "seconds": null,
+          "status": "NOT_STARTED"
+        },
+        {
+          "label": "Chronological selected current reconstruction",
+          "seconds": null,
+          "status": "NOT_STARTED"
+        },
+        {
+          "label": "Native chronological reconstruction",
+          "seconds": null,
+          "status": "NOT_STARTED"
+        },
+        {
+          "label": "Chronological paired injury challengers and controls",
+          "seconds": null,
+          "status": "NOT_STARTED"
+        },
+        {
+          "label": "Preserve immutable issues",
+          "seconds": null,
+          "status": "NOT_STARTED"
+        },
+        {
+          "label": "Final display-only refresh",
+          "seconds": null,
+          "status": "NOT_STARTED"
+        },
+        {
+          "label": "Game, week and season reporting",
+          "seconds": null,
+          "status": "NOT_STARTED"
+        },
+        {
+          "label": "Historical source inventory and backfill",
+          "seconds": null,
+          "status": "NOT_STARTED"
+        },
+        {
+          "label": "Final display after secondary history",
+          "seconds": null,
+          "status": "NOT_STARTED"
+        }
+      ],
+      "status": "FAILED_PARTIAL_WORK_PRESERVED",
+      "synthetic_test_errors": 0,
+      "synthetic_test_seconds": 21.037580015006824,
+      "synthetic_tests_failed": 0,
+      "synthetic_tests_passed": 982,
+      "synthetic_tests_skipped": 1,
+      "synthetic_tests_total": 983,
+      "total_wall_seconds": 43.12031505200139
     }
   ],
   "provenance": {
     "aggregate_verification": "Historical objective and season metrics were independently recomputed from authenticated per-game exports. Only sanitized aggregates are public.",
-    "failed_owner_return_sha256": "7eed530e80bbc076e4953b45f049eb3f9fff79f051bbb3da06932a3f3e952947",
+    "failed_owner_return_sha256": "1550fbe4c1a1bd459e7117121444928c3be002c02fbb5fd37c7c79fc7362d618",
     "historical_accepted_owner_return_sha256": "df98ed0758c29deaed943355349833ab0aeaa23a79693b5efc027e835075e4da",
-    "latest_evidence_qualification": "B041 failed during predecessor progress setup before any of 15 scientific stages. Zero new fits, imports, forecasts or provider calls; 982 fixtures passed and one optional integration skipped. B040 coverage and all B039/B033 results remain dated inherited evidence.",
-    "latest_nested_return_sha256": "7eed530e80bbc076e4953b45f049eb3f9fff79f051bbb3da06932a3f3e952947",
-    "latest_outer_return_sha256": "984066ef723eda2bb44a8440b7011c50d0767153fc26c6e07d19c4d145c622c2",
+    "latest_evidence_qualification": "B042 failed during injury base verification after nine of 15 stages. It committed 102 target, 46 scalar and 24 empirical fits; 108 historical and 12 native target fits plus six native scalar fits were reused. Independent recovery authenticated 339 existing issue rows across five games and created zero new B043 issues. Earlier scores remain dated evidence.",
+    "latest_nested_return_sha256": "1550fbe4c1a1bd459e7117121444928c3be002c02fbb5fd37c7c79fc7362d618",
+    "latest_outer_return_sha256": "eaedb7ca2a29032d8c5b573f0d3d0a39bd3214fc15b4f542268014d5cdc07482",
     "preserved_b033_return_sha256": "16b58cc6ed5bd4be303d41ae17816af2510f4e52a9bc011811f40e90f3003cfe",
     "prior_failed_owner_return_sha256": "ae14d708cf85615c1c9c57a7891db85261a5b1632ecd70349730bf2dde51d9b0",
     "public_review_reproduces": "Information-time and evaluation contracts on invented data; not private real-data retraining."
+  },
+  "provider_access": {
+    "CBBD": "PAUSED_AFTER_PROVIDER_429",
+    "Kalshi": "RETAINED_REFUSAL_OR_UNCERTAIN_TRANSPORT_STOP_NOT_CLEARED",
+    "OddsAPI": "NO_CONFIGURED_RUNTIME_ODDS_CREDENTIAL",
+    "Polymarket_US": "NOT_ACQUIRED_UNVERIFIED",
+    "new_paid_odds_calls": 0,
+    "new_paid_odds_credits": 0
   },
   "providers": [
     {
       "current_log_loss": null,
       "current_matched_games": null,
-      "display_coverage": "432,356 retained observations across both leagues. 142 completed source records have supported pre-tip winner values; 13 were actually captured before tip. A concurrent transient-stop race left 9,136 history dispositions halted.",
+      "display_coverage": "561,323 retained observations across both leagues. In this track, 80 of 370 reported-final source records have supported pre-tip winner values; 6 were captured before tip. Provider refusal and uncertain transport outcomes remain unresolved; complete history is unverified.",
       "eligible_comparison_coverage": "NOT_ESTABLISHED",
       "hypothetical_ROI": null,
       "name": "Kalshi",
+      "numeric_display_coverage": [
+        {
+          "denominator": 370,
+          "numeric_observation_rows": 80,
+          "semantics_verified_rows": 0,
+          "target": "win",
+          "vintage": "latest_observed"
+        },
+        {
+          "denominator": 370,
+          "numeric_observation_rows": 80,
+          "semantics_verified_rows": 0,
+          "target": "win",
+          "vintage": "latest_pretip"
+        },
+        {
+          "denominator": 370,
+          "numeric_observation_rows": 6,
+          "semantics_verified_rows": 0,
+          "target": "win",
+          "vintage": "captured_before_tip"
+        },
+        {
+          "denominator": 370,
+          "numeric_observation_rows": 72,
+          "semantics_verified_rows": 0,
+          "target": "win",
+          "vintage": "captured_t120"
+        },
+        {
+          "denominator": 370,
+          "numeric_observation_rows": 66,
+          "semantics_verified_rows": 0,
+          "target": "win",
+          "vintage": "captured_t60"
+        },
+        {
+          "denominator": 370,
+          "numeric_observation_rows": 0,
+          "semantics_verified_rows": 0,
+          "target": "margin",
+          "vintage": "latest_observed"
+        },
+        {
+          "denominator": 370,
+          "numeric_observation_rows": 0,
+          "semantics_verified_rows": 0,
+          "target": "margin",
+          "vintage": "latest_pretip"
+        },
+        {
+          "denominator": 370,
+          "numeric_observation_rows": 0,
+          "semantics_verified_rows": 0,
+          "target": "margin",
+          "vintage": "captured_before_tip"
+        },
+        {
+          "denominator": 370,
+          "numeric_observation_rows": 0,
+          "semantics_verified_rows": 0,
+          "target": "margin",
+          "vintage": "captured_t120"
+        },
+        {
+          "denominator": 370,
+          "numeric_observation_rows": 0,
+          "semantics_verified_rows": 0,
+          "target": "margin",
+          "vintage": "captured_t60"
+        },
+        {
+          "denominator": 370,
+          "numeric_observation_rows": 0,
+          "semantics_verified_rows": 0,
+          "target": "total",
+          "vintage": "latest_observed"
+        },
+        {
+          "denominator": 370,
+          "numeric_observation_rows": 0,
+          "semantics_verified_rows": 0,
+          "target": "total",
+          "vintage": "latest_pretip"
+        },
+        {
+          "denominator": 370,
+          "numeric_observation_rows": 0,
+          "semantics_verified_rows": 0,
+          "target": "total",
+          "vintage": "captured_before_tip"
+        },
+        {
+          "denominator": 370,
+          "numeric_observation_rows": 0,
+          "semantics_verified_rows": 0,
+          "target": "total",
+          "vintage": "captured_t120"
+        },
+        {
+          "denominator": 370,
+          "numeric_observation_rows": 0,
+          "semantics_verified_rows": 0,
+          "target": "total",
+          "vintage": "captured_t60"
+        }
+      ],
+      "numeric_display_population": "Reported-final source/candidate records in this league; not a reconciled physical-game denominator, qualified paired scorecard, or executable-price population.",
       "required_evidence": "Exact event identity, pre-cutoff quote availability, compatible full-game settlement, executable price and applicable fee rules.",
-      "status": "TRANSIENT_DISCONNECT_STOP_WITH_GAPS"
+      "retained_observations_both_leagues": 561323,
+      "status": "PARTIAL_CAPTURE_WITH_RETAINED_PROVIDER_HALT"
     },
     {
       "current_log_loss": null,
       "current_matched_games": null,
-      "display_coverage": "125,213 international observations across both leagues. 284 completed source records have supported pre-tip winner values; 21 were captured before tip. US is separate and unacquired.",
+      "display_coverage": "149,412 international observations across both leagues. In this track, 153 of 370 reported-final source records have supported pre-tip winner values; 13 were captured before tip. US is separate and unacquired.",
       "eligible_comparison_coverage": "RECONSTRUCTED_PAIRED_POPULATION_ONLY",
       "hypothetical_ROI": null,
       "name": "Polymarket",
+      "numeric_display_coverage": [
+        {
+          "denominator": 370,
+          "numeric_observation_rows": 153,
+          "semantics_verified_rows": 153,
+          "target": "win",
+          "vintage": "latest_observed"
+        },
+        {
+          "denominator": 370,
+          "numeric_observation_rows": 153,
+          "semantics_verified_rows": 153,
+          "target": "win",
+          "vintage": "latest_pretip"
+        },
+        {
+          "denominator": 370,
+          "numeric_observation_rows": 13,
+          "semantics_verified_rows": 13,
+          "target": "win",
+          "vintage": "captured_before_tip"
+        },
+        {
+          "denominator": 370,
+          "numeric_observation_rows": 152,
+          "semantics_verified_rows": 152,
+          "target": "win",
+          "vintage": "captured_t120"
+        },
+        {
+          "denominator": 370,
+          "numeric_observation_rows": 152,
+          "semantics_verified_rows": 152,
+          "target": "win",
+          "vintage": "captured_t60"
+        },
+        {
+          "denominator": 370,
+          "numeric_observation_rows": 0,
+          "semantics_verified_rows": 0,
+          "target": "margin",
+          "vintage": "latest_observed"
+        },
+        {
+          "denominator": 370,
+          "numeric_observation_rows": 0,
+          "semantics_verified_rows": 0,
+          "target": "margin",
+          "vintage": "latest_pretip"
+        },
+        {
+          "denominator": 370,
+          "numeric_observation_rows": 0,
+          "semantics_verified_rows": 0,
+          "target": "margin",
+          "vintage": "captured_before_tip"
+        },
+        {
+          "denominator": 370,
+          "numeric_observation_rows": 0,
+          "semantics_verified_rows": 0,
+          "target": "margin",
+          "vintage": "captured_t120"
+        },
+        {
+          "denominator": 370,
+          "numeric_observation_rows": 0,
+          "semantics_verified_rows": 0,
+          "target": "margin",
+          "vintage": "captured_t60"
+        },
+        {
+          "denominator": 370,
+          "numeric_observation_rows": 0,
+          "semantics_verified_rows": 0,
+          "target": "total",
+          "vintage": "latest_observed"
+        },
+        {
+          "denominator": 370,
+          "numeric_observation_rows": 0,
+          "semantics_verified_rows": 0,
+          "target": "total",
+          "vintage": "latest_pretip"
+        },
+        {
+          "denominator": 370,
+          "numeric_observation_rows": 0,
+          "semantics_verified_rows": 0,
+          "target": "total",
+          "vintage": "captured_before_tip"
+        },
+        {
+          "denominator": 370,
+          "numeric_observation_rows": 0,
+          "semantics_verified_rows": 0,
+          "target": "total",
+          "vintage": "captured_t120"
+        },
+        {
+          "denominator": 370,
+          "numeric_observation_rows": 0,
+          "semantics_verified_rows": 0,
+          "target": "total",
+          "vintage": "captured_t60"
+        }
+      ],
+      "numeric_display_population": "Reported-final source/candidate records in this league; not a reconciled physical-game denominator, qualified paired scorecard, or executable-price population.",
       "products": [
         {
           "name": "International",
@@ -1580,20 +2143,130 @@
         }
       ],
       "required_evidence": "Exact event identity, pre-cutoff quote availability, compatible full-game settlement, executable price and applicable fee rules.",
+      "retained_observations_both_leagues": 149412,
       "status": "INTERNATIONAL_PARTIAL_HISTORY_RETAINED"
     },
     {
       "current_log_loss": null,
       "current_matched_games": null,
-      "display_coverage": "168 retained observations across both leagues. 5 completed source records have pre-tip winner values; 12 have numeric spread and total thresholds. No configured historical-odds runtime credential; zero new paid requests.",
+      "display_coverage": "266 retained observations across both leagues. In this track, 5 of 370 reported-final source records have supported pre-tip winner values; 5 were captured before tip. 7 have numeric spread and total thresholds. No configured runtime odds credential; zero new paid calls or credits.",
       "eligible_comparison_coverage": "NOT_ESTABLISHED",
       "hypothetical_ROI": null,
       "name": "DraftKings",
+      "numeric_display_coverage": [
+        {
+          "denominator": 370,
+          "numeric_observation_rows": 5,
+          "semantics_verified_rows": 0,
+          "target": "win",
+          "vintage": "latest_observed"
+        },
+        {
+          "denominator": 370,
+          "numeric_observation_rows": 5,
+          "semantics_verified_rows": 0,
+          "target": "win",
+          "vintage": "latest_pretip"
+        },
+        {
+          "denominator": 370,
+          "numeric_observation_rows": 5,
+          "semantics_verified_rows": 0,
+          "target": "win",
+          "vintage": "captured_before_tip"
+        },
+        {
+          "denominator": 370,
+          "numeric_observation_rows": 5,
+          "semantics_verified_rows": 0,
+          "target": "win",
+          "vintage": "captured_t120"
+        },
+        {
+          "denominator": 370,
+          "numeric_observation_rows": 5,
+          "semantics_verified_rows": 0,
+          "target": "win",
+          "vintage": "captured_t60"
+        },
+        {
+          "denominator": 370,
+          "numeric_observation_rows": 7,
+          "semantics_verified_rows": 0,
+          "target": "margin",
+          "vintage": "latest_observed"
+        },
+        {
+          "denominator": 370,
+          "numeric_observation_rows": 7,
+          "semantics_verified_rows": 0,
+          "target": "margin",
+          "vintage": "latest_pretip"
+        },
+        {
+          "denominator": 370,
+          "numeric_observation_rows": 7,
+          "semantics_verified_rows": 0,
+          "target": "margin",
+          "vintage": "captured_before_tip"
+        },
+        {
+          "denominator": 370,
+          "numeric_observation_rows": 7,
+          "semantics_verified_rows": 0,
+          "target": "margin",
+          "vintage": "captured_t120"
+        },
+        {
+          "denominator": 370,
+          "numeric_observation_rows": 7,
+          "semantics_verified_rows": 0,
+          "target": "margin",
+          "vintage": "captured_t60"
+        },
+        {
+          "denominator": 370,
+          "numeric_observation_rows": 7,
+          "semantics_verified_rows": 0,
+          "target": "total",
+          "vintage": "latest_observed"
+        },
+        {
+          "denominator": 370,
+          "numeric_observation_rows": 7,
+          "semantics_verified_rows": 0,
+          "target": "total",
+          "vintage": "latest_pretip"
+        },
+        {
+          "denominator": 370,
+          "numeric_observation_rows": 7,
+          "semantics_verified_rows": 0,
+          "target": "total",
+          "vintage": "captured_before_tip"
+        },
+        {
+          "denominator": 370,
+          "numeric_observation_rows": 7,
+          "semantics_verified_rows": 0,
+          "target": "total",
+          "vintage": "captured_t120"
+        },
+        {
+          "denominator": 370,
+          "numeric_observation_rows": 7,
+          "semantics_verified_rows": 0,
+          "target": "total",
+          "vintage": "captured_t60"
+        }
+      ],
+      "numeric_display_population": "Reported-final source/candidate records in this league; not a reconciled physical-game denominator, qualified paired scorecard, or executable-price population.",
       "required_evidence": "Exact event identity, pre-cutoff quote availability, compatible full-game settlement, executable price and applicable fee rules.",
+      "retained_observations_both_leagues": 266,
       "status": "RETAINED_CAPTURE_HISTORY_CREDENTIAL_ABSENT"
     }
   ],
-  "published_snapshot_date": "2026-11-05",
+  "published_snapshot_date": "2026-11-06",
   "quote_display_contract": {
     "calendar_inclusion": "Every observed game remains visible when forecasts or provider observations are missing. Candidate records are not a reconciled official denominator.",
     "captured_before_tip_separate_from_later_recovered_supported_pretip": true,

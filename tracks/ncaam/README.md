@@ -2,7 +2,54 @@
 
 [Project](../../README.md) · [Open interactive dashboard](https://alvaro-ncaa-research-review.alv-mendizabal.chatgpt.site/tracks/ncaam/index.html) · [Dashboard source](index.html) · [Methodology and runnable example](../../examples/ncaa_review/README.md) · [Separate women's track](../ncaaw/README.md)
 
-## Current review — November 5, 2026 Pacific · B041
+## Current review — November 6, 2026 UTC · B042 returned; B043 prepared
+
+The authenticated B042 owner completed **9 of 15 scientific stages** and then
+failed during injury base verification. It committed **69 new target fits in
+this track; 102 target, 46 scalar and 24 empirical fits across both tracks**.
+The 108 reused historical targets and 12 reused native targets plus six native
+scalar fits are not new fits. The run took **92.61 minutes** before return
+finalization; 1,029 fixture checks passed, with one optional skip and no errors.
+
+The latest source capture completed November 6 at 00:25:57 UTC (November 5,
+4:25 p.m. Pacific). This track has **1,439 source/candidate records and
+370 reported finals**. Across both leagues the retained market inventory
+contains 711,001 observations: 561,323 Kalshi, 149,412 Polymarket international
+and 266 DraftKings. Candidate records and quote observations are different
+populations; neither establishes complete physical-game coverage. The official
+inventory remains incomplete, with 1,022 unmatched candidates and 44 conflicts
+across both leagues. Polymarket US is separate and unacquired; CBBD's rate-limit
+pause remains; the Odds API made zero new paid calls or credit charges.
+
+Independent recovery authenticated **132 existing B042 issue rows across
+2 games in this track**, within 339 rows / five games across both leagues.
+These are target/stream rows, not distinct games or settled bets. Original
+issue bytes and clocks remain unchanged. Recovery created **zero new B043
+issues or fits**. Original frozen weights reconstructed 1,312 games / 3,936
+target rows across both leagues and receive no earlier issue credit. The
+current-monitor and native-replay stages completed, but **new B042 paired
+scorecards and a new model winner remain unavailable**. The earlier scores
+below and the dashboard's explicitly dated comparison retain their exact
+cohorts and values.
+
+Injury acquisition has 643 observations in this track and 1,320 across
+both tracks; 1,306 are bound and 14 unresolved. All historical snapshot
+versions remain unverified. Seventy-four observations have a supported source
+availability upper bound; 1,244 recovered image observations and two current
+PDF observations do not. No injury challenger fit or measured injury gain
+completed. The failure arose from different last-bit floating-point reductions
+in producer and verifier. B043 prepares an exact producer-matching repair
+without loosening the guard. Its separate market-path and chronological study
+also remain prepared research, with no execution or measured gain claimed.
+
+The [dashboard](index.html) shows separate source, quote, owner and publication
+clocks. The [aggregate JSON](evidence.json) preserves the full stage and snapshot
+history; the [methodology](../../examples/ncaa_review/README.md) explains the
+counts and research limits. The nested B042 return SHA-256 is
+`1550fbe4c1a1bd459e7117121444928c3be002c02fbb5fd37c7c79fc7362d618`.
+Private records, recipes, weights and execution packages remain excluded.
+
+## Preserved review — November 5, 2026 Pacific · B041
 
 The latest authenticated owner stopped during predecessor setup, before any of
 **15 scientific stages**. Two independently authenticated source queues shared
