@@ -112,3 +112,9 @@ prepared output and committed completion separate. Invented failures show why a
 retry must verify the retained result pin and full readback before publishing
 COMPLETE, while an ambiguous action is never replayed automatically.
 
+The [bounded checkpoint example](BOUNDED_CHECKPOINT.md) extends that distinction
+to outputs that exceed a single envelope. Bounded content-addressed shards retain
+the exact ordered record sequence, independently verified publication and strict
+capacity limits. Partial uploads can reuse immutable returned output without
+calling its producer; corrupt or incomplete closure never becomes completion.
+
