@@ -1,8 +1,21 @@
 # NFL retained research model card
 
+## Latest actual state · N047
+
+Four new native issue streams cover **28 games / 336 target rows**. The registered cover study fitted **15 distribution states**, issued **82 threshold rows** and **28 interval cards**, and selected a Student-t residual family using eligible pre-2024 evidence. No new native estimator, calibration or stack was fitted; 4,396 restored identities were reported. All new forward outcomes remain pending.
+
+The full current injury source has **340 listed rows / 30 Week 9 teams**. The Week 9 forecast subset uses **312 rows / 28 team slots**; all 28 new games have unknown support for the additional 32-field designation block. Earlier injury fields remain separate. JAX–BAL passed T1 before the run and retains earlier genuine forecasts rather than a backdated new issue.
+
+**Cover probability is now research output, not validated betting readiness.** Annual reconstruction on 120 Kalshi T1 strict-margin contracts has LL **0.759621 vs 0.686094**, Brier **0.280523 vs 0.246482**, and 50 vs 64 correct. All six pooled Kalshi loss intervals favor the provider. Polymarket's favorable point estimates on 92 games remain uncertain; DraftKings historical T1 cover comparison is unavailable. Annual-to-current residual transfer remains unvalidated, and 54 current DraftKings rows lack settlement metadata.
+
+[Actual study and clocks](N047_RESEARCH_UPDATE.md) · [Interactive uncertainty and disagreements](review.html#cover-research-n047) · [35 model evidence records](review.html#model-evidence-registry)
+
+The following source observations, native model scores and dated issues are preserved historical evidence.
+
+
 **Later source update, November 5 at 23:28 UTC:** a separately verified official NFL capture now contains **340 listed rows across all 30 Week 9 team tables**, including Buffalo 18 and Minnesota 9. It is later than the N046 issues and **was not an input to those forecasts**. The earlier 295-row/29-team owner snapshot remains unchanged. [Inspect the new source census](injury_source_update_n047.json). This is source coverage, not proof of complete roster health or new model performance.
 
-## Latest issued state · N046
+## Preserved issued state · N046
 
 Four separately timestamped forecast streams contain 348 actual target rows for 29 games. Three new designation heads and nine stacks were fitted; 4,384 restored identities were reported. Protected originals were not refitted. All four new forward streams have **0 scored outcomes** in this snapshot. Their retrospective recipe evaluations remain separate; no automatic promotion is implied.
 

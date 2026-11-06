@@ -3158,6 +3158,126 @@
       }
     },
     {
+      "id": "n047_original",
+      "label": "Retained calibrated research \u00b7 Nov 5, 4:27 PM Pacific",
+      "kind": "GENUINELY_ISSUED_EARLY_RESEARCH",
+      "record_source": "current_issues_n047.json",
+      "records": [],
+      "issued_resolved_games": 0,
+      "issued_games": 28,
+      "issue_at": "2026-11-06T00:27:16.041671+00:00",
+      "performance_status": "AWAITING_ISSUED_OUTCOMES",
+      "qualification": "These specific forward issues have no scored outcomes in this snapshot. Related historical reconstructions are different evidence; their scores are not assigned to this stream.",
+      "target_readiness": {
+        "winner": {
+          "status": "PENDING_OR_UNAVAILABLE",
+          "missing_metrics_are_zero": false
+        },
+        "margin": {
+          "status": "PENDING_OR_UNAVAILABLE",
+          "missing_metrics_are_zero": false
+        },
+        "total": {
+          "status": "PENDING_OR_UNAVAILABLE",
+          "missing_metrics_are_zero": false
+        },
+        "spread_cover": {
+          "status": "NOT_CALIBRATED_FOR_EXECUTABLE_LINE",
+          "reason": "A point margin alone is not a cover probability. No verified line-specific cover distribution, settlement/fee evaluation or promoted cover strategy is attached to this stream."
+        }
+      }
+    },
+    {
+      "id": "n047_shadow",
+      "label": "Injury contribution shadow \u00b7 Nov 5, 4:27 PM Pacific",
+      "kind": "GENUINELY_ISSUED_EARLY_RESEARCH",
+      "record_source": "current_issues_n047.json",
+      "records": [],
+      "issued_resolved_games": 0,
+      "issued_games": 28,
+      "issue_at": "2026-11-06T00:27:58.268856+00:00",
+      "performance_status": "AWAITING_ISSUED_OUTCOMES",
+      "qualification": "These specific forward issues have no scored outcomes in this snapshot. Related historical reconstructions are different evidence; their scores are not assigned to this stream.",
+      "target_readiness": {
+        "winner": {
+          "status": "PENDING_OR_UNAVAILABLE",
+          "missing_metrics_are_zero": false
+        },
+        "margin": {
+          "status": "PENDING_OR_UNAVAILABLE",
+          "missing_metrics_are_zero": false
+        },
+        "total": {
+          "status": "PENDING_OR_UNAVAILABLE",
+          "missing_metrics_are_zero": false
+        },
+        "spread_cover": {
+          "status": "NOT_CALIBRATED_FOR_EXECUTABLE_LINE",
+          "reason": "A point margin alone is not a cover probability. No verified line-specific cover distribution, settlement/fee evaluation or promoted cover strategy is attached to this stream."
+        }
+      }
+    },
+    {
+      "id": "n047_fresh",
+      "label": "Current rolling research \u00b7 Nov 5, 4:29 PM Pacific",
+      "kind": "GENUINELY_ISSUED_EARLY_RESEARCH",
+      "record_source": "current_issues_n047.json",
+      "records": [],
+      "issued_resolved_games": 0,
+      "issued_games": 28,
+      "issue_at": "2026-11-06T00:29:06.665477+00:00",
+      "performance_status": "AWAITING_ISSUED_OUTCOMES",
+      "qualification": "These specific forward issues have no scored outcomes in this snapshot. Related historical reconstructions are different evidence; their scores are not assigned to this stream.",
+      "target_readiness": {
+        "winner": {
+          "status": "PENDING_OR_UNAVAILABLE",
+          "missing_metrics_are_zero": false
+        },
+        "margin": {
+          "status": "PENDING_OR_UNAVAILABLE",
+          "missing_metrics_are_zero": false
+        },
+        "total": {
+          "status": "PENDING_OR_UNAVAILABLE",
+          "missing_metrics_are_zero": false
+        },
+        "spread_cover": {
+          "status": "NOT_CALIBRATED_FOR_EXECUTABLE_LINE",
+          "reason": "A point margin alone is not a cover probability. No verified line-specific cover distribution, settlement/fee evaluation or promoted cover strategy is attached to this stream."
+        }
+      }
+    },
+    {
+      "id": "n047_designation",
+      "label": "Designation rolling research \u00b7 Nov 5, 4:31 PM Pacific",
+      "kind": "GENUINELY_ISSUED_EARLY_RESEARCH",
+      "record_source": "current_issues_n047.json",
+      "records": [],
+      "issued_resolved_games": 0,
+      "issued_games": 28,
+      "issue_at": "2026-11-06T00:31:39.233412+00:00",
+      "performance_status": "AWAITING_ISSUED_OUTCOMES",
+      "qualification": "These specific forward issues have no scored outcomes in this snapshot. Related historical reconstructions are different evidence; their scores are not assigned to this stream.",
+      "target_readiness": {
+        "winner": {
+          "status": "PENDING_OR_UNAVAILABLE",
+          "missing_metrics_are_zero": false
+        },
+        "margin": {
+          "status": "PENDING_OR_UNAVAILABLE",
+          "missing_metrics_are_zero": false
+        },
+        "total": {
+          "status": "PENDING_OR_UNAVAILABLE",
+          "missing_metrics_are_zero": false
+        },
+        "spread_cover": {
+          "status": "ISSUED_UNVALIDATED_DISTRIBUTION_TRANSFER",
+          "reason": "Separate actual N047 derived intervals and threshold probabilities are published in cover_research_n047.json. Historical study metrics are separate from these unresolved forward issues; no executable, calibration or promotion claim."
+        }
+      }
+    },
+    {
       "id": "experimental_injury_issue",
       "label": "Experimental injury challenger \u00b7 Nov 4",
       "kind": "GENUINELY_ISSUED_EARLY_RESEARCH",
@@ -3272,6 +3392,10 @@
   ],
   "related_historical_studies": [
     {
+      "source": "cover_research_n047.json",
+      "scope": "Selected margin distribution: 2024\u201326 annual/event/weekly retrospective evaluation and exact 2026 T1 strict-contract comparison, separate from unresolved current issues"
+    },
+    {
       "source": "injury_selected_metrics_n037.json",
       "scope": "Selected injury reconstruction, separate from later forward issues"
     },
@@ -3285,6 +3409,6 @@
     "2024/25 research is development-exposed; 2026 rankings are descriptive monitoring.",
     "NO BET in older cards is a research eligibility state, not evidence of a personal transaction. Actual bets are not recorded here.",
     "Provider thresholds are not expected margins or total points.",
-    "Spread-cover study registration is not a completed calibrated cover model."
+    "The N047 spread-cover study completed its registered research; transfer calibration and prospective promotion remain unvalidated."
   ]
 }
