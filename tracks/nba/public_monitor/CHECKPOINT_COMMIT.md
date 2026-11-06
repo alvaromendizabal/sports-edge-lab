@@ -31,3 +31,37 @@ validity, current coverage, provider rights, an issued prediction or an executed
 
 Historical test receipts remain dated. Passing this example does not retroactively
 complete any failed owner run or establish the success of a private successor.
+
+## Durable acknowledgements and exact recovery
+
+The immutable commit is authoritative; the current marker is a derived
+acknowledgement. Marker publication writes and fsyncs a temporary file, replaces
+the owned marker, fsyncs its containing directory, then independently reads the
+published bytes. A directory-sync error or changed readback does not count as an
+acknowledged stage. An already matching marker still receives directory sync and
+fresh readback on reentry.
+
+If a marker is missing or contains an older valid JSON object, reentry first
+verifies the original intent, result, prepared record and immutable commit. Only
+then can it recreate the exact committed marker without running the action or
+claiming a new remote GET. The previous marker bytes remain in an immutable
+history. Changed commit bytes, malformed marker JSON and symbolic links fail
+closed. A standalone COMPLETE marker cannot authorize an action or completion.
+
+This small example establishes one local commit boundary. It does not implement
+a production recovery graph or prove the cause of any historical failure. File
+and directory sync guarantees remain subject to the caller's actual filesystem.
+
+## Named selftest evidence
+
+The [named unittest example](selftest_evidence.py) records test identities,
+failure details and the full runner log even when class setup fails before any
+test starts. Class teardown errors receive their own records and preserve prior
+passing cases. Record count and executed-test count stay separate. Empty suites,
+skips, expected failures and unexpected successes do not satisfy the all-PASS
+gate. The caller must retain these outputs durably before reporting its own
+stage outcome; this in-memory example makes no owner-completion claim.
+
+The added tests use invented results, dates and test failures. Existing research
+capsules, prior test receipts and other sports tracks remain unchanged.
+
