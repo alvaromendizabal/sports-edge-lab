@@ -4,7 +4,34 @@
 
 This example makes the **evaluation contract** executable without credentials, data subscriptions or a machine-learning environment. It also generates the college basketball review pages from committed, sanitized aggregate evidence. The invented demonstration and the real historical aggregates remain separate: the example does not reproduce the private models or claim a betting record.
 
-## Current review — November 6, 2026 UTC · B043 returned; B044 prepared
+## Latest execution — November 6, 2026 UTC · B044 returned; B045 prepared
+
+The actual B044 owner completed **0 of 16 scientific stages**. Its first source
+refresh rejected an unsupported predecessor at the producer-to-consumer handoff,
+before new provider acquisition or model work. It committed **zero new target,
+scalar, empirical or injury fits and zero new forecasts**. The run stopped after
+143.28 seconds; delivery of its return was independently verified. Separate
+component checks passing did not establish that this real handoff was compatible.
+
+Before that rejection, bounded storage readback verified the preserved B043
+snapshot: **90 chunks, 723,492 observations and 1,504,058,360 logical bytes**,
+using **182 new full storage GETs**. These are storage reads of earlier evidence,
+not new provider requests, cache hits, new forecasts or proof of earlier
+availability. Original source clocks and size limits remain unchanged.
+
+**B045 is prepared, not executed.** It targets the acquisition handoff and adds
+an exact producer-consumer preflight while retaining B043-first scientific
+lineage. No owner completion, all-version injury retest, path gain or profitable
+betting result follows from this preparation. The dated B043 research below,
+including the 129-game and older 122-game comparisons, remains unchanged.
+
+The [invented handoff example](handoff.py) demonstrates why two independently
+passing components can still fail together. A reviewed, complete registration
+binds project, release, run, source digest, artifact prefix, wire format and
+content pins; a mixture of individually valid fields is rejected before work.
+It includes no private source identity, cloud location, provider record or model.
+
+## Preserved review — November 6, 2026 UTC · B043 returned; B044 prepared at that time
 
 The actual B043 owner completed **9 of 16 scientific stages**, committed
 **101 new target estimators, 45 scalar calibrators and 24 empirical residual
@@ -316,10 +343,33 @@ Duplicate identities, mismatched operation names and a backward counter within
 either queue remain errors. This example does not access production sources or
 change the existing completion/ETA rules.
 
+## Validate the joined handoff before work
+
+Run `python examples/ncaa_review/handoff.py --demo`. The current producer passes
+its own fixture and the older consumer passes its own earlier fixture. Joining
+the current producer to that consumer is still blocked. The action callback is
+not invoked until the actual producer output and the actual consumer agree.
+
+The reviewed registry is the example's trust anchor. Each complete registration
+binds project, release, run, source SHA-256, canonical artifact prefix, wire
+version, artifact kind and exact content byte/hash pins. The code never relabels
+an unsupported release to fit a consumer, permits a wildcard prefix, or mixes
+fields from two valid registrations. Rehashing a changed payload cannot promote
+it into the reviewed registry. Conflicting registrations have no last writer.
+
+The tests use invented bytes and identities. They reject unknown lineages,
+cross-project substitution, mixed source/run/prefix tuples, prefix traversal,
+format changes, same-length payload tampering, forged rehashed receipts and
+conflicting registry records before any action begins. Exact accepted handoffs
+invoke the action once with the validated immutable bytes. This public example
+assumes an authenticated registry; it does not authenticate a real archive,
+execute private models, reproduce private scientific work or prove B045 success.
+
 ## Review map
 
 | File | What can be inspected |
 |---|---|
+| [handoff.py](handoff.py) and [test_handoff.py](test_handoff.py) | Joined producer-consumer preflight, exact provenance tuples, independently pinned bytes and side-effect exclusion on rejection |
 | [contracts.py](contracts.py) | Information clocks, exact identity pairing, separate metrics, invented baseline, explicit-fee payoff and stream verification |
 | [test_contracts.py](test_contracts.py) | Future-outcome poisoning, equal-boundary exclusion, reordered identities, missing coverage, mixed-track rejection, stream-interface failures |
 | [admission.py](admission.py) and [test_admission.py](test_admission.py) | Aggregate resource headroom, child accounting, canonical lock ownership, bounded waits, late-result rejection and explicit diagnostics using invented fixtures |

@@ -9,10 +9,26 @@ from pathlib import Path
 
 from progress import demo_scenarios
 from preflight import demo_scenarios as preflight_scenarios
+from handoff import demo as handoff_demo
 
 ROOT=Path(__file__).resolve().parents[2]
 HERE=Path(__file__).resolve().parent
 HOST='https://alvaro-ncaa-research-review.alv-mendizabal.chatgpt.site'
+
+
+def scientific_attempt(data):
+    """Resolve the dated owner of displayed scientific evidence independently."""
+    release = data['current_results_status']['release']
+    attempts = [data['current_owner_attempt'], *data['owner_attempt_history']]
+    matches = [attempt for attempt in attempts if attempt['release'] == release]
+    if len(matches) != 1:raise ValueError('scientific evidence owner is not unique')
+    return matches[0]
+
+
+def validate_stages(attempt):
+    if len(attempt['stages']) != attempt['planned_scientific_stages']:raise ValueError('stage inventory')
+    if sum(s['status'] == 'COMPLETED' for s in attempt['stages']) != attempt['completed_scientific_stages']:raise ValueError('completed stage count')
+    if sum(s['status'] != 'NOT_STARTED' for s in attempt['stages']) != attempt['attempted_scientific_stages']:raise ValueError('attempted stage count')
 
 
 def evidence(league):
@@ -22,20 +38,25 @@ def evidence(league):
     if data['market_advantage']['demonstrated'] is not False:raise ValueError('unqualified market claim')
     if data['evaluation']['current_outcomes_used_for_selection'] is not False:raise ValueError('current selection leakage')
     attempt = data['current_owner_attempt']
-    if len(attempt['stages']) != attempt['planned_scientific_stages']:raise ValueError('stage inventory')
-    if sum(s['status'] == 'COMPLETED' for s in attempt['stages']) != attempt['completed_scientific_stages']:raise ValueError('completed stage count')
-    if sum(s['status'] != 'NOT_STARTED' for s in attempt['stages']) != attempt['attempted_scientific_stages']:raise ValueError('attempted stage count')
+    validate_stages(attempt)
+    scientific = scientific_attempt(data)
+    validate_stages(scientific)
+    if attempt['completed_scientific_stages'] == 0 and any(attempt[k] != 0 for k in ('new_real_target_fits', 'new_calibration_fits', 'new_empirical_residual_fits', 'new_prospective_issues', 'new_prediction_rows')):raise ValueError('unstarted science receives credit')
+    readback = attempt['storage_readback']
+    if readback['source_release'] != scientific['release'] or readback['observations'] != data['current_coverage_gaps']['market_observations']:raise ValueError('readback evidence population')
+    if readback['new_provider_requests'] != 0 or readback['new_fit_credit'] != 0 or readback['earlier_availability_credit'] is not False or readback['source_clocks_unchanged'] is not True:raise ValueError('readback grants unsupported credit')
+    if data['prepared_execution']['owner_execution_observed'] is not False or data['prepared_execution']['new_scientific_credit'] != 0:raise ValueError('prepared execution receives credit')
     if sum(p['retained_observations_both_leagues'] for p in data['providers']) != data['current_coverage_gaps']['market_observations']:raise ValueError('provider observation closure')
     result = data['current_results_status']
     if result['new_issues_created_by_recovery'] != 0 or result['new_fits_created_by_recovery'] != 0:raise ValueError('recovery creates scientific credit')
     if result['authenticated_issue_rows_this_league'] != data['observed_inventory']['authenticated_current_issues']:raise ValueError('issue scope')
-    if result['authenticated_issue_rows_both_leagues'] != attempt['retained_prior_prospective_issues']:raise ValueError('retained issue count')
-    if result['new_owner_issues'] != attempt['new_prospective_issues']:raise ValueError('new owner issue count')
+    if result['authenticated_issue_rows_both_leagues'] != scientific['retained_prior_prospective_issues']:raise ValueError('retained issue count')
+    if result['new_owner_issues'] != scientific['new_prospective_issues']:raise ValueError('new owner issue count')
     if result['pre_study_target_rows'] != sum(result['prediction_rows'].values()) + result['retained_prior_issue_rows']:raise ValueError('pre-study target closure')
     if result['browser_display_rows'] != result['pre_study_game_model_rows'] + data['current_coverage_gaps']['unresolved_source_candidates']:raise ValueError('display row closure')
     pair = data['latest_reconstructed_comparison']
     if pair['as_issued'] or pair['current_outcomes_selected_model'] or pair['qualified_settled_bets'] != 0 or pair['profit'] is not None:raise ValueError('unqualified current comparison claim')
-    if pair['release'] != attempt['release'] or pair['evidence_snapshot_at'] != data['freshness']['pre_study_report_asof']:raise ValueError('current comparison clock')
+    if pair['release'] != scientific['release'] or pair['evidence_snapshot_at'] != data['freshness']['pre_study_report_asof']:raise ValueError('current comparison clock')
     if data['coverage_evidence_release'] != data['freshness']['owner_release']:raise ValueError('capture release')
     for model in data['models']:
         if set(model['panels'])!={'pooled','2025','2026'}:raise ValueError('season closure')
@@ -55,6 +76,7 @@ def render_track(data):
         '__SIBLING_LABEL__':"women's basketball" if sibling=='ncaaw' else "men's basketball",
         '__LEAGUE__':league,'__EVIDENCE__':embedded,
         '__REVIEW_DATE__':date.fromisoformat(data['published_snapshot_date']).strftime('%d %B %Y')+' UTC',
+        '__HANDOFF_DEMO__':json.dumps(handoff_demo(),sort_keys=True,separators=(',',':'),allow_nan=False).replace('<','\\u003c'),
         '__PREFLIGHT_DEMO__':json.dumps(preflight_scenarios(),sort_keys=True,separators=(',',':'),allow_nan=False).replace('<','\\u003c'),
         '__PROGRESS_DEMO__':json.dumps(demo_scenarios(),sort_keys=True,separators=(',',':'),allow_nan=False).replace('<','\\u003c')}.items():template=template.replace(key,value)
     return template
@@ -73,14 +95,13 @@ def landing_status(data):
         raise ValueError('landing issue population closure')
     release = escape(a['release'])
     capture = datetime.fromisoformat(data[0]['freshness']['source_acquisition_completed_at']).strftime('%d %b %Y, %H:%M UTC')
-    return (f'<strong>{release}: {a["completed_scientific_stages"]} of {a["planned_scientific_stages"]} stages completed; injury study failed.</strong>'
-            f'<p>{a["new_real_target_fits"]:,} new target estimators, {a["new_calibration_fits"]:,} scalar calibrations and {a["new_empirical_residual_fits"]:,} empirical residual fits were committed in {a["total_wall_seconds"] / 60:.2f} minutes. '
-            f'{a["reused_target_fits"]:,} historical and {a["reused_native_target_fits"]:,} native target fits, plus {a["reused_native_scalar_fits"]:,} native scalar fits, were reused. '
-            f'{result["authenticated_issue_rows_both_leagues"]:,} existing research issue rows across {result["authenticated_issue_games_both_leagues"]} games remain preserved; {release} created zero new qualifying issues. '
-            f'Durable pre-study reporting retained {result["pre_study_target_rows"]:,} target rows and {result["browser_display_rows"]:,} browser rows. Final post-study reporting remains unfinished.</p>'
-            f'<p>The retained inventory contains {gaps["market_observations"]:,} market observations and {gaps["both_leagues_source_records"]:,} source/candidate records with {gaps["both_leagues_observed_finals"]:,} reported finals. '
-            f'Source acquisition completed {capture}; this is a static evidence snapshot. These counts are not a reconciled physical-game denominator or executable quotes.</p>'
-            '<p>The new 129-game men’s Polymarket international comparison remains reconstructed: the original model has higher pick accuracy but worse log loss and Brier. The prior 122-game panel and historical scores remain preserved. B044 prepares the missing-clock checkpoint repair; no B044 owner execution, injury improvement or market-path gain is claimed.</p>')
+    previous = scientific_attempt(data[0])
+    return (f'<strong>{release}: {a["completed_scientific_stages"]} of {a["planned_scientific_stages"]} stages completed; source handoff failed.</strong>'
+            f'<p>The first source refresh stopped before new provider acquisition or model work. {release} committed zero new target, scalar or empirical fits and zero new forecasts. Its verified return preserves the failed outcome. B045 prepares the exact producer-consumer preflight and handoff repair; no B045 execution or scientific gain is claimed.</p>'
+            f'<p>Bounded readback verified 90 preserved chunks, {gaps["market_observations"]:,} observations and 1,504,058,360 logical bytes through 182 full storage GETs. These are earlier observations with unchanged clocks; storage readback is not a provider refresh or earlier availability proof.</p>'
+            f'<p>Preserved {previous["release"]} research: {previous["completed_scientific_stages"]}/{previous["planned_scientific_stages"]} stages, {previous["new_real_target_fits"]} target / {previous["new_calibration_fits"]} scalar / {previous["new_empirical_residual_fits"]} empirical fits. {result["authenticated_issue_rows_both_leagues"]:,} existing research issue rows across {result["authenticated_issue_games_both_leagues"]} games retain their B042 identity. Its durable pre-study report contains {result["pre_study_target_rows"]:,} target rows and {result["browser_display_rows"]:,} browser rows.</p>'
+            f'<p>The dated inventory contains {gaps["market_observations"]:,} market observations and {gaps["both_leagues_source_records"]:,} source/candidate records with {gaps["both_leagues_observed_finals"]:,} numeric finals. Source acquisition completed {capture}; this is a static evidence snapshot, not a reconciled physical-game denominator.</p>'
+            '<p>The B043 129-game men’s Polymarket international comparison remains reconstructed: the model has higher pick accuracy but worse log loss and Brier. The earlier 122-game panel and historical selections remain unchanged. No injury improvement, market-path gain or profitable betting record is established.</p>')
 
 
 def render_landing(data):

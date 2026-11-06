@@ -2,7 +2,34 @@
 
 [Project](../../README.md) · [Open interactive dashboard](https://alvaro-ncaa-research-review.alv-mendizabal.chatgpt.site/tracks/ncaaw/index.html) · [Dashboard source](index.html) · [Methodology and runnable example](../../examples/ncaa_review/README.md) · [Separate men's track](../ncaam/README.md)
 
-## Current review — November 6, 2026 UTC · B043 returned; B044 prepared
+## Latest execution — November 6, 2026 UTC · B044 returned; B045 prepared
+
+The actual B044 owner completed **0 of 16 scientific stages**. Its first source
+refresh rejected an unsupported predecessor at the producer-to-consumer handoff,
+before new provider acquisition or model work. It committed **zero new target,
+scalar, empirical or injury fits and zero new forecasts**. The run stopped after
+143.28 seconds; delivery of its return was independently verified. Separate
+component checks passing did not establish that this real handoff was compatible.
+
+Before that rejection, bounded storage readback verified the preserved B043
+snapshot: **90 chunks, 723,492 observations and 1,504,058,360 logical bytes**,
+using **182 new full storage GETs**. These are storage reads of earlier evidence,
+not new provider requests, cache hits, new forecasts or proof of earlier
+availability. Original source clocks and size limits remain unchanged.
+
+**B045 is prepared, not executed.** It targets the acquisition handoff and adds
+an exact producer-consumer preflight while retaining B043-first scientific
+lineage. No owner completion, all-version injury retest, path gain or profitable
+betting result follows from this preparation. The dated B043 research below,
+including the 129-game and older 122-game comparisons, remains unchanged.
+
+The [invented handoff example](../../examples/ncaa_review/handoff.py) demonstrates why two independently
+passing components can still fail together. A reviewed, complete registration
+binds project, release, run, source digest, artifact prefix, wire format and
+content pins; a mixture of individually valid fields is rejected before work.
+It includes no private source identity, cloud location, provider record or model.
+
+## Preserved review — November 6, 2026 UTC · B043 returned; B044 prepared at that time
 
 This track accounts for **33 of the 101 new target fits**, **1,379 source/candidate records and 434 numeric finals**, and **207 retained B042 issue rows across 3 games**. Its 677 injury observations remain partial evidence. The new 129-game comparison below belongs to the separate men’s track; no women’s provider performance is inferred from it.
 
