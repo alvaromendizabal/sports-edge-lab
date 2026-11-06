@@ -244,7 +244,7 @@ const { chromium } = require(process.env.PLAYWRIGHT_MODULE_DIR || 'playwright');
       await page.goto(pathToFileURL(path.join(root, 'docs/ncaa/index.html')).href);
       assert.equal(await page.locator('.cards a').count(), 2);
       assert.match(await page.locator('.status').innerText(), /B044: 0 of 16 stages completed; source handoff failed/);
-      assert.match(await page.locator('.status').innerText(), /723,492 market observations.*2,818 source\/candidate records.*829 reported finals/s);
+      assert.match(await page.locator('.status').innerText(), /723,492 market observations.*2,818 source\/candidate records.*829 numeric finals/s);
       assert.match(await page.locator('.status').innerText(), /339 existing research issue rows across 5 games/);
       assert.doesNotMatch(await page.locator('.status').innerText(), /Latest owner stopped before science/);
       assert.equal(await page.evaluate(() => document.documentElement.scrollWidth > innerWidth), false, `landing ${width} overflow`);
