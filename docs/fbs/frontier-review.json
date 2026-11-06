@@ -1456,7 +1456,7 @@
     "execution_class": "LOCAL_SOURCE_ACQUISITION_AND_FEATURE_PREPARATION",
     "source_games_capture_utc": "2026-11-06T00:25:17Z",
     "availability": {
-      "as_of": "2026-11-06T03:13:06.805440Z",
+      "as_of": "2026-11-06T03:17:52.686855Z",
       "clock_qualified_games": 29,
       "clock_qualified_status_changes": 108,
       "clock_qualified_team_horizon_rows": 116,
@@ -1470,11 +1470,13 @@
         "KICKOFF_TIME_TBD": 392,
         "MISSING_REPORT": 528
       },
-      "elapsed_seconds": 1.2389886349992594,
+      "effective_prepared_at": "2026-11-06T03:17:53.689357Z",
+      "elapsed_seconds": 1.054733290002332,
       "estimated_player_effects_available": false,
       "failure_count": 0,
+      "feature_construction_completed_at": "2026-11-06T03:17:53.689357Z",
       "future_known_official_games": 259,
-      "generated_at": "2026-11-06T03:13:08.022776Z",
+      "generated_at": "2026-11-06T03:17:53.732537Z",
       "historical_pregame_certification": false,
       "identity_states": {
         "EXACT_TEAM_NAME_UNIQUE_ID": 6499,
