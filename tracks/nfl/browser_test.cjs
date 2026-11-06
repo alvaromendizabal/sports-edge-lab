@@ -334,6 +334,7 @@ const {chromium}=require(process.env.PLAYWRIGHT_MODULE_DIR||'playwright');
   assert.equal(cover47.cards.length,28);assert.equal(cover47.threshold_rows.length,82);assert.equal(cover47.historical_games.length,636);
   assert.match(await page.locator('#cover-provider-metrics').innerText(),/50 \/ 64/);
   assert.match(await page.locator('#cover-provider-metrics').innerText(),/0.7596 \/ 0.6861/);
+  await page.locator('#cover-research-n047 details summary').click();
   for(const season of ['2024','2025']){await page.selectOption('#cover-season',season);assert.match(await page.locator('#cover-history-status').innerText(),/0 resolved contract comparisons/);assert.match(await page.locator('#cover-history-games').innerText(),/No qualified historical threshold cohort/);}
   await page.selectOption('#cover-season','2026');await page.selectOption('#cover-history-week','all');
   assert.equal(await page.locator('#cover-history-games tbody tr').count(),120);
