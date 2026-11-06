@@ -1,5 +1,15 @@
 # NFL retained research model card
 
+## Latest N048 evidence
+
+The new injury-only study completed all 288 native fits. Its pre-2024 selected CatBoost 75-field winner has 62/119 correct, log loss 0.693899 and AUC 0.5 on the retained current cohort. Every historical 75-field input vector in 2025/2026 is zero because report support is absent; the selected current probability is constant 0.5495069073. This is a material source-availability limitation, not a finding that injuries lack predictive value. Current forward injury observations are separate.
+
+Four N048 current lanes contain 336 target rows for 28 future games, using restored fitted models. The new historical injury-only fits issued no forward forecasts and earned no promotion. An additional 78 actual threshold references reuse 15 distribution states; correctly oriented predicate probabilities are displayed, while unknown DraftKings settlement remains explicit. Overall owner status is partial because official league ingestion failed after one game had started.
+
+[Full N048 study and current coverage](N048_RESEARCH_UPDATE.md) · [All native aggregate metrics](injury_only_n048.json) · [Full-schedule coverage explorer](review.html#full-coverage).
+
+The following earlier evidence remains dated and unchanged.
+
 ## Latest actual state · N047
 
 Four new native issue streams cover **28 games / 336 target rows**. The registered cover study fitted **15 distribution states**, issued **82 threshold rows** and **28 interval cards**, and selected a Student-t residual family using eligible pre-2024 evidence. No new native estimator, calibration or stack was fitted; 4,396 restored identities were reported. All new forward outcomes remain pending.

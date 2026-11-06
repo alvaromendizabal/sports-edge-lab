@@ -10,7 +10,7 @@ def build_registry():
     for model in d['model_sets']:
         mid=model.get('id',model.get('model_id')); records=[r for r in d['season_metrics'] if r['model_id']==mid]
         models.append({'id':mid,'label':model.get('label',model.get('model_label')),'kind':'PRESERVED_PUBLIC_STREAM','record_source':'current_coverage.json','records':records,'issued_resolved_games':None,'performance_status':'VERIFIED_PUBLISHED_COHORTS' if records else 'PERFORMANCE_NOT_PUBLISHED','qualification':'Each row has its own exact event cohort, cutoff and provider. Counts cannot be pooled across provider rows. Missing metrics are unavailable, not zero.'})
-    for version in ('042','043','044','045','046','047'):
+    for version in ('042','043','044','045','046','047','048'):
         name=f'current_issues_n{version}.json';p=HERE/name
         if not p.exists():continue
         for stream in json.loads(p.read_text())['streams']:
@@ -23,6 +23,7 @@ def build_registry():
         if any(r['target']=='win' for r in m['records']):m['target_readiness']['winner']['status']='VERIFIED_PUBLISHED_COHORTS'
         m['target_readiness']['spread_cover']={'status':'NOT_CALIBRATED_FOR_EXECUTABLE_LINE','reason':'A point margin alone is not a cover probability. No verified line-specific cover distribution, settlement/fee evaluation or promoted cover strategy is attached to this stream.'}
     for m in models:
+        if m['id']=='n048_designation':m['target_readiness']['spread_cover']={'status':'ISSUED_UNVALIDATED_DISTRIBUTION_TRANSFER','reason':'Separate actual N048 derived intervals and correctly oriented threshold probabilities are published in current_cover_n048.json. States were restored; historical metrics are separate from unresolved current issues. No calibration, executable price or promotion claim.'}
         if m['id']=='n047_designation':m['target_readiness']['spread_cover']={'status':'ISSUED_UNVALIDATED_DISTRIBUTION_TRANSFER','reason':'Separate actual N047 derived intervals and threshold probabilities are published in cover_research_n047.json. Historical study metrics are separate from these unresolved forward issues; no executable, calibration or promotion claim.'}
     return {'schema':'sports-edge-lab.nfl.model-performance-registry.v1','models':models,'related_historical_studies':[{'source':'cover_research_n047.json','scope':'Selected margin distribution: 2024–26 annual/event/weekly retrospective evaluation and exact 2026 T1 strict-contract comparison, separate from unresolved current issues'},{'source':'injury_selected_metrics_n037.json','scope':'Selected injury reconstruction, separate from later forward issues'},{'source':'designation_metrics_n045.json','scope':'Selected annual/weekly/event designation reconstructions, T1 designation boundary; base parents retain T2'}],'rules':['No metric is reconstructed from rounded cards.','2024/25 research is development-exposed; 2026 rankings are descriptive monitoring.','NO BET in older cards is a research eligibility state, not evidence of a personal transaction. Actual bets are not recorded here.','Provider thresholds are not expected margins or total points.','The N047 spread-cover study completed its registered research; transfer calibration and prospective promotion remain unvalidated.']}
 
@@ -32,7 +33,7 @@ def load_registry():
     ids=[m['id'] for m in d['models']];require(len(ids)==len(set(ids)),'Duplicate public model identity')
     for m in d['models']:
         if m['kind']=='GENUINELY_ISSUED_EARLY_RESEARCH':require(not m['records'] and m['issued_resolved_games']==0,'Forward stream borrowed historical scores')
-        require(m['target_readiness']['spread_cover']['status']==('ISSUED_UNVALIDATED_DISTRIBUTION_TRANSFER' if m['id']=='n047_designation' else 'NOT_CALIBRATED_FOR_EXECUTABLE_LINE'),'Unsupported cover readiness')
+        require(m['target_readiness']['spread_cover']['status']==('ISSUED_UNVALIDATED_DISTRIBUTION_TRANSFER' if m['id'] in ('n047_designation','n048_designation') else 'NOT_CALIBRATED_FOR_EXECUTABLE_LINE'),'Unsupported cover readiness')
     return d,{'model_registry_validation':'PASS','public_model_count':len(ids),'registry_sha256':hashlib.sha256(p.read_bytes()).hexdigest()}
 
 if __name__=='__main__':

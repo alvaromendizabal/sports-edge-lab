@@ -1,6 +1,7 @@
 // Sanitized owner-issued uncertainty research. No betting or execution logic.
 (()=>{
  'use strict';
+ const C48=JSON.parse(document.getElementById('nfl-current-cover-n048').textContent);
  const D=JSON.parse(document.getElementById('nfl-cover-n047').textContent),get=id=>document.getElementById(id);
  const esc=x=>String(x??'Unavailable').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
  const num=(x,n=4)=>x==null?'Unavailable':Number(x).toFixed(n),pct=x=>x==null?'Unavailable':num(100*x,1)+'%';
@@ -14,10 +15,12 @@
   get('cover-provider-metrics').innerHTML=table(['Provider','Exact common games','Model / provider correct','Model / provider LL ↓','Model / provider Brier ↓','Disagreements / uncertainty'],rows);
   get('cover-metric-scope').textContent=season+' · '+label[policy]+'. Selected residual family; retrospective research, not outcomes of the new current issues. Provider comparisons exist only for the separately qualified 2026 T1 strict-contract cohorts. No common three-provider historical cover cohort is available.';
  }
- get('cover-game').innerHTML=D.cards.map(c=>'<option value="'+c.game_id+'">'+esc(c.away_team+' at '+c.home_team)+' · '+c.game_id+'</option>').join('');
- function current(){const id=get('cover-game').value,c=D.cards.find(x=>x.game_id===id);get('cover-current-clock').textContent='Actual derived issue '+c.actual_issue_at_utc+'; parent point issue '+c.parent_point_issue_at_utc+'; parent features '+c.parent_feature_asof_at_utc+'. Intervals refer to home-team final margin. Transfer calibration is unvalidated; no stake or price advantage is asserted.';
+ const currentData=()=>get('cover-current-issue').value==='n048'?C48:D;
+ function fillCurrentGames(){get('cover-game').innerHTML=currentData().cards.map(c=>'<option value="'+c.game_id+'">'+esc(c.away_team+' at '+c.home_team)+' · '+c.game_id+'</option>').join('');}
+ fillCurrentGames();
+ function current(){const CD=currentData(),id=get('cover-game').value,c=CD.cards.find(x=>x.game_id===id);get('cover-current-clock').textContent='Actual derived issue '+c.actual_issue_at_utc+'; parent point issue '+c.parent_point_issue_at_utc+'; parent features '+c.parent_feature_asof_at_utc+'. Intervals refer to home-team final margin. Transfer calibration is unvalidated; no stake or price advantage is asserted.';
   get('cover-current-intervals').innerHTML=table(['Home margin center','50% interval','80% interval','90% interval','95% interval'],[[num(c.home_margin,1),...[50,80,90,95].map(q=>'['+c.intervals[q].join(', ')+']')]]);
-  const rows=['kalshi','polymarket','draftkings'].flatMap(p=>{const rs=D.threshold_rows.filter(r=>r.game_id===id&&r.provider===p);if(!rs.length)return[[provider[p],'Unavailable','No issued threshold reference','Unavailable','Unavailable']];return rs.map(r=>[provider[p],'Home margin '+(r.orientation.endsWith('LESS_THAN')?'&lt;':'&gt;')+' '+num(r.threshold,1),pct(r.probability_of_observed_margin_predicate)+(r.settlement_policy==='UNKNOWN'?'<br><strong>Settlement unknown: pure margin predicate only</strong>':'<br>Strict binary proposition'),pct(r.probability_equal_threshold)+' equality mass',esc(r.quote_at_utc??'Provider quote clock unknown')+'<br><span class="fine">Observed '+esc(r.observed_at_utc)+'</span>']);});
+  const rows=['kalshi','polymarket','draftkings'].flatMap(p=>{const rs=CD.threshold_rows.filter(r=>r.game_id===id&&r.provider===p);if(!rs.length)return[[provider[p],'Unavailable','No issued threshold reference','Unavailable','Unavailable']];return rs.map(r=>[provider[p],'Home margin '+(r.orientation.endsWith('LESS_THAN')?'&lt;':'&gt;')+' '+num(r.threshold,1),pct(r.probability_of_observed_margin_predicate)+(r.settlement_policy==='UNKNOWN'?'<br><strong>Settlement unknown: pure margin predicate only</strong>':'<br>Strict binary proposition'),pct(r.probability_equal_threshold)+' equality mass',esc(r.quote_at_utc??'Provider quote clock unknown')+'<br><span class="fine">Observed '+esc(r.observed_at_utc)+'</span>']);});
   get('cover-current-providers').innerHTML=table(['Provider','Observed margin predicate','Research probability','Equality / push distinction','Quote / observation clocks'],rows);
  }
  get('cover-history-provider').innerHTML=['kalshi','polymarket','draftkings'].map(p=>'<option value="'+p+'">'+provider[p]+'</option>').join('');
@@ -26,5 +29,5 @@
   get('cover-history-status').textContent=get('cover-season').value+' · '+rs.length+' resolved contract comparisons shown; one selected strict contract per provider/game. Rounded display probabilities are not used to recompute headline metrics. Wins and losses are both retained.';
   get('cover-history-games').innerHTML=rs.length?table(['Week / game','Actual home margin','Predicate','Model / provider probability','Correct side','Quote cutoff'],rs.map(r=>['W'+r.week+' · '+esc(r.away_team+' at '+r.home_team),num(r.actual_home_margin,0),'Home margin '+(r.orientation.endsWith('LESS_THAN')?'&lt;':'&gt;')+' '+num(r.threshold,1),pct(r.scoring_probability)+' / '+pct(r.provider_probability),r.model_right_provider_wrong?'Model only':r.provider_right_model_wrong?provider[p]+' only':r.correct?'Both':'Neither',esc(r.quote_at_utc)+'<br><span class="fine">'+esc(r.horizon)+'</span>'])):'<p class="empty-state">No qualified historical threshold cohort for this selection. DraftKings remains visible as unavailable; it is not replaced by another provider or by a winner market.</p>';
  }
- for(const id of ['cover-policy','cover-season'])get(id).addEventListener('change',()=>{history();games();});get('cover-game').addEventListener('change',current);for(const id of ['cover-history-provider','cover-history-week'])get(id).addEventListener('change',games);history();current();games();
+ for(const id of ['cover-policy','cover-season'])get(id).addEventListener('change',()=>{history();games();});get('cover-game').addEventListener('change',current);get('cover-current-issue').addEventListener('change',()=>{fillCurrentGames();current();});for(const id of ['cover-history-provider','cover-history-week'])get(id).addEventListener('change',games);history();current();games();
 })();
