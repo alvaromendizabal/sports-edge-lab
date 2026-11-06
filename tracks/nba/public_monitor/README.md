@@ -104,3 +104,11 @@ rows and covered games from attempts, empty responses and heartbeats. Its invent
 fixtures demonstrate phase-local cooldowns, conditional ETA, finite priority
 budgets and a preserved history backlog after model/report work.
 
+
+## Stage completion and publication retries
+
+The [checkpoint commit example](CHECKPOINT_COMMIT.md) keeps action success,
+prepared output and committed completion separate. Invented failures show why a
+retry must verify the retained result pin and full readback before publishing
+COMPLETE, while an ambiguous action is never replayed automatically.
+
