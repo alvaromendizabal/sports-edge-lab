@@ -1,0 +1,49 @@
+{
+  "schema": "nfl.public.n050-actual-n051-readiness.v1",
+  "retained_snapshot": {
+    "file": "current_review_n050.json",
+    "bytes": 332745,
+    "sha256": "2af8d392db9769b87c7b701306fcd625adfa125ac245f623484c462a1a5fff87",
+    "evidence_as_of": "2026-11-06T06:17:17.122290+00:00"
+  },
+  "latest_owner_attempt": {
+    "milestone": "N050",
+    "status": "FAILED",
+    "owner_research_accepted": false,
+    "started_at": "2026-11-06T08:22:35.605628+00:00",
+    "finished_at": "2026-11-06T08:23:03.315123+00:00",
+    "elapsed_seconds": 27.709462099,
+    "failure_class": "EXACT_SCIENTIFIC_PARENT_IDENTITY_MISMATCH_BEFORE_HYDRATION",
+    "completed_scientific_stages": 0,
+    "new_native_fits": 0,
+    "new_target_forecasts": 0,
+    "new_source_acquisitions": 0,
+    "paid_provider_calls": 0,
+    "protected_original_refits": 0,
+    "actual_orders": 0,
+    "return_archive": {
+      "bytes": 951839,
+      "sha256": "173c84452261fda39d84433df7a7fab1c3d8c5ddb83835ecfd6c5f05c8beb0b5",
+      "safe_regular_members": 346,
+      "payload_members": 345,
+      "crc_and_manifest_closure": "PASS"
+    },
+    "later_external_completion": {
+      "bytes": 1220,
+      "sha256": "5adf28de10df8d4f6de1acb8552f116c200319a6b8baadfb35b5cb83effcfc6d",
+      "final_return_readback_at": "2026-11-06T08:23:04.534079+00:00",
+      "binding": "PASS_EXACT_FINAL_RETURN_AND_STATUS"
+    }
+  },
+  "next": {
+    "milestone": "N051",
+    "status": "PREPARED_NOT_OWNER_EXECUTED",
+    "owner_native_fits": 0,
+    "owner_forecasts": 0,
+    "annual_designation_cells_planned": 144,
+    "paired_control_comparisons_if_complete": 864,
+    "automatic_promotion": false,
+    "repeated_completed_injury_study": false,
+    "unrestricted_history_acquisition": false
+  }
+}

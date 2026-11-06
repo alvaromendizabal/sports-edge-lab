@@ -1,16 +1,16 @@
 # Sports Edge Lab · NFL
 
-**Latest actual owner review · November 6, 2026:** N049 added **zero native fits and 168 genuinely issued target forecasts** across two retained lanes. The official mixed-page repair admitted 312 future injury rows and excluded 28 started-event rows. The fresh causal-history branch stopped when the final census reached 122. Whole-run acceptance remains false. [Read the actual N049 evidence and N050 plan](N050_RESEARCH_UPDATE.md).
+**Latest actual owner review · November 6, 2026:** N050 failed after **27.709 seconds**, before scientific stages, with **zero new fits, forecasts or source acquisitions**. The exact physical return, manifest closure and later external receipt are authenticated. An exact scientific-parent adapter contract caused the stop. [Read the verified N050 result and N051 preparation](N051_RESEARCH_UPDATE.md).
 
-**Next continuation · N050 is prepared, not owner-executed:** repair the causal parent-history append and keep the independent 144-cell missingness-aware annual designation study resumable. Zero N050 owner fits or forecasts are claimed.
+**Next continuation · N051 is prepared, not owner-executed:** separate the failed invocation from the exact scientific carrier; validate full schema, cycle and selected-member bindings before all three reuse stages; make current-source namespaces explicit. The independent 144-cell annual designation study remains pending. Prior science is preserved; no automatic promotion is claimed.
 
-[**Open the live NFL dashboard →**](https://sports-edge-lab-nfl.alv-mendizabal.chatgpt.site/) · [Current review](review_n050.html) · [Actual evidence and next study](N050_RESEARCH_UPDATE.md) · [Complete dated history](review.html#latest-coverage) · [Model card](CURRENT_MODEL_CARD.md)
+[**Open the live NFL dashboard →**](https://sports-edge-lab-nfl.alv-mendizabal.chatgpt.site/) · [Current review](review_n051.html) · [Verified result and next work](N051_RESEARCH_UPDATE.md) · [Complete dated history](review.html#latest-coverage) · [Model card](CURRENT_MODEL_CARD.md)
 
 **Publication status:** the hosted dashboard is a separately deployed snapshot with visible canonical provenance. Source publication, hosted deployment and owner execution remain separate states. The current review contains 272 schedule rows, 56 selected issued cards and all 261 current provider target cells including missing states; the full prior review retains 39 streams and historical metrics.
 
 **Pregame forecasting, matched market evaluation and recoverable ML systems.** Built by [Alvaro Mendizabal](https://github.com/alvaromendizabal). Inspect the public evidence without setup or private credentials.
 
-## Latest verified work · N049
+## Retained scientific work · N049
 
 - **Actual outputs:** 84 retained calibrated and 84 raw shadow target rows, each across 28 future games. Old base-feature clocks remain visible; no new native fit or fresh-lane success is inferred.
 - **A real causal stopping point:** the newly observed JAX–BAL final requires a parent-history append before the fresh joint forecast. Current designation, cover and the separate annual study remain blocked in this returned execution.
