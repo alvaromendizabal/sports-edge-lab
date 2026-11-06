@@ -159,6 +159,13 @@ class ATSRecordTests(unittest.TestCase):
         self.assertEqual(r["exact_duplicates_collapsed"], 2)
         self.assertEqual(r["settled_record_denominator"], 4)
 
+    def test_other_provider_same_game_does_not_quarantine_the_selected_contract(self):
+        reference = replace(self.rows[0].quote.reference, provider="Kalshi")
+        other = replace(self.rows[0], quote=replace(self.rows[0].quote, reference=reference))
+        r = self.record([*self.rows, other])
+        self.assertEqual(r["settled_record_denominator"], 4)
+        self.assertEqual(r["excluded"], {"COHORT_CONTRACT_MISMATCH": 1})
+
     def test_impossible_result_clock_is_rejected(self):
         r = self.record([replace(self.rows[0], completed_at="2025-03-01T17:00:00Z")])
         self.assertEqual(r["excluded"], {"IMPOSSIBLE_RESULT_CLOCK_ORDER": 1})

@@ -46,6 +46,8 @@ const { chromium } = require(process.env.PLAYWRIGHT_MODULE_DIR || 'playwright');
         assert.deepEqual([attempt.completed_scientific_stages, attempt.attempted_scientific_stages, attempt.planned_scientific_stages], [9, 10, 16]);
         for (const key of ['new_real_target_fits','league_new_real_target_fits','new_calibration_fits','new_empirical_residual_fits','new_injury_fits','new_prediction_rows','new_prospective_issues','reused_target_fits','synthetic_tests_total','completed_at','total_wall_seconds','cpu_seconds','owner_peak_rss_bytes']) assert.equal(attempt[key], null, key);
         assert.equal(attempt.durable_return_verified, false);
+        assert.match(await page.locator('#latest-baseline-copy').innerText(), /87,003 target rows and 47,940 browser display rows.*1,220 model metric panels.*417 season \/ 803 weekly.*4,132 checks with zero mismatches/);
+        assert.match(await page.locator('#latest-baseline-issues').innerText(), /549 unsettled prospective rows across 8 games.*339 settled prospective rows across 5 games.*admission remains pending/);
         assert.equal(earlier.completed_scientific_stages, 0);
         assert.equal(earlier.storage_readback.new_full_storage_GETs, 182);
         assert.equal(earlier.new_real_target_fits, 0);

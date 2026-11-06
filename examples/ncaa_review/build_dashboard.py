@@ -58,6 +58,7 @@ def evidence(league):
         if attempt['out_of_memory_proved'] or attempt['kill_cause'] != 'UNKNOWN':raise ValueError('unproved signal-exit cause')
     baseline = data['b045_baseline_observation']
     if baseline['source_release'] != 'B045' or baseline['new_issue_credit'] is not None or baseline['new_fit_credit_from_report_recovery'] != 0:raise ValueError('report labels receive unverified issue or fit credit')
+    if baseline['independent_metric_panels_checked'] != baseline['independent_season_panels_checked'] + baseline['independent_weekly_panels_checked'] or baseline['calibration_slope_intercept_independently_refit'] is not False:raise ValueError('unsupported metric reconciliation claim')
     readback = dated_readback(data)
     if readback['source_release'] != scientific['release'] or readback['observations'] != data['current_coverage_gaps']['market_observations']:raise ValueError('readback evidence population')
     if readback['new_provider_requests'] != 0 or readback['new_fit_credit'] != 0 or readback['earlier_availability_credit'] is not False or readback['source_clocks_unchanged'] is not True:raise ValueError('readback grants unsupported credit')

@@ -19,6 +19,15 @@ full-run CPU/wall totals and the final owner peak are not established here.
 The last rounded observations show 19.26 GiB owner RSS and 5.05 GiB available
 memory. They are observations, not a diagnosis or a resource reservation.
 
+A separately authenticated B045 baseline has **87,003 target rows and 47,940
+browser display rows**, as of 2026-11-06 21:23:19 UTC. Independent arithmetic
+reconciled **1,220 model metric panels** (417 season / 803 weekly) through
+4,132 scalar checks with zero mismatches; calibration slopes/intercepts were not
+independently refitted. Its 549 B045-labeled unsettled prospective rows across
+eight games and 339 B042-labeled settled rows across five games await complete
+immutable-ledger admission in this public snapshot. Report labels alone cannot
+create new issue credit or establish a performance gain.
+
 B043 retains scientific authority for the dated panels below: **101 target /
 45 scalar / 24 empirical fits**, 84,195 pre-study target rows, 46,529 display
 rows and 944 independently checked metric panels. B042's 339 issues across five

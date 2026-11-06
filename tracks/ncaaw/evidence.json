@@ -22,7 +22,13 @@
   },
   "b045_baseline_observation": {
     "browser_display_rows": 47940,
+    "calibration_slope_intercept_independently_refit": false,
     "immutable_issue_admission": "PENDING_COMPLETE_LEDGER_RECONCILIATION_AT_PUBLIC_SNAPSHOT",
+    "independent_metric_mismatches": 0,
+    "independent_metric_panels_checked": 1220,
+    "independent_scalar_checks": 4132,
+    "independent_season_panels_checked": 417,
+    "independent_weekly_panels_checked": 803,
     "new_fit_credit_from_report_recovery": 0,
     "new_issue_credit": null,
     "qualification": "Source-labeled prospective rows are not independently admitted new issues until original immutable ledger bytes and issue clocks are reconciled. Report recovery creates no fitting credit.",

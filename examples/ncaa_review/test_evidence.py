@@ -395,6 +395,14 @@ class EvidenceTests(unittest.TestCase):
                 with self.assertRaises(ValueError):
                     build_dashboard.evidence('ncaam')
 
+    def test_report_labels_and_metric_panel_counts_do_not_gain_unproved_credit(self):
+        for key, value in [('new_issue_credit', 549), ('independent_metric_panels_checked', 1221), ('calibration_slope_intercept_independently_refit', True)]:
+            corrupted = copy.deepcopy(self.exports['ncaam'])
+            corrupted['b045_baseline_observation'][key] = value
+            with self.subTest(key=key), patch.object(Path, 'read_text', return_value=json.dumps(corrupted)):
+                with self.assertRaises(ValueError):
+                    build_dashboard.evidence('ncaam')
+
     def test_spread_example_is_generated_from_executable_invented_contract(self):
         from spread_ats import demo
         for data in self.exports.values():

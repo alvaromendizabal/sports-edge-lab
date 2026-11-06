@@ -177,14 +177,17 @@ def ats_record(results, *, team: str, target: Reference, target_cutoff: str,
         raise ContractError("TARGET_TEAM_MISMATCH")
     raw = list(results)
     unique = list(dict.fromkeys(raw))
-    by_game = Counter(r.quote.reference.game for r in unique)
+    def game_contract(row):
+        r = row.quote.reference
+        return (r.game, r.league, r.provider, r.product, r.horizon_minutes, r.settlement)
+    by_game = Counter(game_contract(row) for row in unique)
     excluded = Counter()
     eligible = []
     for result in unique:
         q = result.quote
         r = q.reference
         try:
-            if by_game[r.game] > 1:
+            if by_game[game_contract(result)] > 1:
                 raise ContractError("CONFLICTING_GAME_VERSIONS")
             if r.game == target.game:
                 raise ContractError("TARGET_GAME_EXCLUDED")
