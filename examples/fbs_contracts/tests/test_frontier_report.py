@@ -50,12 +50,72 @@ class FrontierReportTests(unittest.TestCase):
     def test_latest_owner_and_local_work_remain_distinct(self):
         review=json.loads((PUBLIC/'frontier-review.json').read_text())
         owner=review['owner']; local=review['new_local_source_review']
-        self.assertEqual((owner['release'],owner['exit']),('V034',2))
+        self.assertEqual((owner['release'],owner['exit']),('V035',2))
         self.assertEqual((owner['provider_requests'],owner['model_fits'],owner['forecast_issues']),(0,0,0))
-        self.assertEqual(owner['research_disk_reserve_bytes']+owner['work_headroom_bytes']-owner['final_free_disk_bytes'],owner['disk_shortfall_bytes'])
+        self.assertEqual(owner['first_error_stage'],'QUEUED_PREDECESSOR_HANDOFF')
+        self.assertIn('V034',owner['first_error'])
+        self.assertIn('allowlist',owner['first_error'])
+        self.assertEqual(owner['resource_phase_decision'],'NOT_REACHED')
+        self.assertFalse(owner['owner_admission_attempted'])
+        self.assertFalse(owner['collector_started'])
+        self.assertFalse(owner['full_research_admitted'])
+        self.assertFalse(owner['memory_s3_acquisition_admitted'])
+        self.assertFalse(owner['writer_lock_held_during_finalization'])
+        self.assertTrue(owner['queue_singleton_held_during_finalization'])
+        self.assertEqual(owner['exit_evidence'],'RUNTIME_DECLARED_DIAGNOSTIC_STATUS')
+        self.assertIsNone(owner['interpreter_exit_status'])
+        self.assertFalse(owner['interpreter_exit_independently_observed'])
+        self.assertFalse(review['prepared_successor_execution_observed'])
+        self.assertFalse(review['next_handoff']['owner_execution_observed'])
+        self.assertEqual((owner['return_bytes'],owner['source_bytes']),(84837823,84730490))
         self.assertEqual(local['new_predictive_fits'],0)
         self.assertFalse(local['prior_study_refitted'])
         self.assertEqual(local['prior_predictive_fits_preserved'],33)
+
+    def test_prior_resource_failure_is_not_reassigned_to_latest_owner(self):
+        review=json.loads((PUBLIC/'frontier-review.json').read_text())
+        prior=review['prior_owner']
+        self.assertEqual(prior['release'],'V034')
+        self.assertEqual(prior['research_disk_reserve_bytes']+prior['work_headroom_bytes']-prior['final_free_disk_bytes'],prior['disk_shortfall_bytes'])
+        self.assertEqual(prior['disk_shortfall_bytes'],1770766336)
+        self.assertEqual(prior['admission_attempts'],60)
+        self.assertNotIn('final_free_disk_bytes',review['owner'])
+        self.assertEqual([(o['release'],o['provider_requests']) for o in review['earlier_owners']],[('V033',669)])
+
+    def test_owner_audit_is_distinct_from_new_local_source_reads(self):
+        review=json.loads((PUBLIC/'frontier-review.json').read_text())
+        audit=review['new_independent_verification']
+        self.assertEqual(audit['execution_class'],'LOCAL_READ_ONLY_EVIDENCE_AUDIT')
+        self.assertEqual((audit['new_fits'],audit['new_forecast_issues']),(0,0))
+        self.assertTrue(review['new_local_source_acquisition'])
+        self.assertEqual(review['owner']['provider_requests'],0)
+        self.assertFalse(audit['original_evidence_recomputed_by_fitting'])
+        self.assertEqual(audit['retained_current_http_receipt_body_pairs'],16)
+        for prefix in ('owner_return','exact_source','retained_market_seed','retained_current_evidence'):
+            self.assertEqual(audit[prefix+'_members'],audit[prefix+'_manifested_members']+1)
+
+    def test_fresh_local_capture_preserves_unchanged_reports_and_prior_changes(self):
+        review=json.loads((PUBLIC/'frontier-review.json').read_text())
+        increment=review['new_local_science'];capture=increment['fresh_availability']
+        self.assertEqual(increment['attribution'],'LOCAL_INDEPENDENT_AUDIT_AND_CURRENT_SOURCE_PREPARATION_NOT_SAGEMAKER')
+        self.assertEqual((capture['fresh_official_requests'],capture['original_bodies_identical_to_prior_capture']),(4,4))
+        self.assertEqual((capture['new_status_changes'],capture['prior_status_changes_preserved']),(0,108))
+        self.assertEqual(capture['clock_qualified_team_cutoff_rows'],116)
+        self.assertLess(capture['capture_start'],capture['capture_end'])
+        self.assertLess(capture['capture_end'],capture['prepared_at'])
+        for name in ('new_fits','new_scalers','new_model_states','new_predictions','genuine_forecast_issues','orders','stake'):
+            self.assertEqual(increment[name],0)
+
+    def test_recorded_state_candidates_are_not_promoted_to_strict_paths(self):
+        increment=json.loads((PUBLIC/'frontier-review.json').read_text())['new_local_science']
+        audit=increment['game_state_audit'];counts=audit['counts']
+        self.assertEqual((audit['states_audited'],audit['retained_play_rows']),(905,157120))
+        self.assertEqual((audit['independently_compared_projection_fields'],audit['projection_field_mismatches']),(1256960,0))
+        self.assertEqual(counts['inherited_strict_flag'],audit['inherited_strict_conservative_support_pass']+audit['inherited_strict_needs_additional_state_review'])
+        self.assertEqual(counts['conservative_complete_state_support_candidate'],22)
+        self.assertEqual(audit['inherited_strict_issue_games']['score_decreases'],5)
+        self.assertEqual(audit['inherited_strict_issue_games']['within_period_clock_increases'],4)
+        self.assertIn('not a strict market-path cohort',' '.join(increment['game_state_limits']))
 
     def test_unbound_slots_do_not_inflate_game_population(self):
         review=json.loads((PUBLIC/'frontier-review.json').read_text())

@@ -1,31 +1,41 @@
 {
-  "schema": "fbs.public.v035.frontier-review.v1",
-  "review_date": "2026-11-05 America/Los_Angeles",
+  "schema": "fbs.public.v036.frontier-review.v1",
+  "review_date": "2026-11-06 UTC / 2026-11-05 America/Los_Angeles",
   "owner": {
-    "release": "V034",
+    "release": "V035",
     "exit": 2,
-    "status": "RESOURCE_DEFERRED_BEFORE_COLLECTION",
+    "exit_evidence": "RUNTIME_DECLARED_DIAGNOSTIC_STATUS",
+    "interpreter_exit_status": null,
+    "interpreter_exit_independently_observed": false,
+    "status": "PREDECESSOR_HANDOFF_FAILED_BEFORE_RESOURCE_ADMISSION",
     "provider_requests": 0,
     "model_fits": 0,
     "forecast_issues": 0,
-    "return_bytes": 84384265,
-    "return_sha256": "ce6a3fcca4aa7d4379e9689367d49d843a7ee6c0428651931f229f83a5ff5637",
-    "source_bytes": 84271008,
-    "source_sha256": "521a10843175a1ff4fd4f8ec2f3d2ccc113e291a5b80583653a522678bf9ca6e",
-    "canonical_return_full_stream_verified": true,
+    "return_bytes": 84837823,
+    "return_sha256": "61e88b9f55ec0a734de374573b40f8c7632b01fd915c801ed6bbae4a535e618b",
+    "source_bytes": 84730490,
+    "source_sha256": "ab1f34ab1f931f441f7a0619472fd05f2fd7cab02fae2acbd41d6d69ce79fe1b",
+    "uploaded_return_full_stream_verified": true,
+    "all_return_and_source_members_verified": true,
     "external_completion_verified": true,
-    "admission_attempts": 60,
-    "admission_wait_seconds": 300.155903329,
-    "initial_free_disk_bytes": 6166437888,
-    "final_free_disk_bytes": 6546800640,
-    "research_disk_reserve_bytes": 8049131520,
-    "work_headroom_bytes": 268435456,
-    "disk_shortfall_bytes": 1770766336,
-    "verified_temporary_replicas_removed": 10,
-    "verified_temporary_bytes_removed": 258194352,
-    "unrelated_processes_signalled": 0,
-    "snapshot_at_utc": "2026-11-06T02:57:56.397074Z",
-    "live_sagemaker_filesystem_is_not_measured_by_publication": true
+    "separate_terminal_log_verified": true,
+    "first_error_stage": "QUEUED_PREDECESSOR_HANDOFF",
+    "first_error": "Required V034 predecessor omitted from the completion-probe allowlist.",
+    "owner_admission_attempted": false,
+    "resource_phase_decision": "NOT_REACHED",
+    "collector_started": false,
+    "full_research_admitted": false,
+    "memory_s3_acquisition_admitted": false,
+    "writer_lock_held_during_finalization": false,
+    "queue_singleton_held_during_finalization": true,
+    "queue_wait_seconds": 0.35948365599995213,
+    "elapsed_seconds_before_packaging": 0.7108389320000015,
+    "started_at_utc": "2026-11-06T04:05:26.049347Z",
+    "finished_before_packaging_at_utc": "2026-11-06T04:05:26.762260Z",
+    "external_completion_at_utc": "2026-11-06T04:05:32.022953Z",
+    "snapshot_at_utc": "2026-11-06T04:05:32.107490Z",
+    "live_sagemaker_filesystem_is_not_measured_by_publication": true,
+    "qualification": "Authentic partial invocation before owner admission. The runtime and external completion declare status 2; a separately captured interpreter exit is unavailable."
   },
   "current_source_review": {
     "schema": "fbs.v034.actual-current-report.v1",
@@ -77,11 +87,11 @@
     "stake_usd": 0,
     "historical_replay_unchanged": true,
     "all_games_complete_universe_proven": false,
-    "note": "New owner source capture, independently read back. Reconciliation is local. Archived market/model panels retain their own clocks and cohorts."
+    "note": "Dated V033 owner source capture, independently read back. Reconciliation was local. This V035 owner audit does not refresh archived market/model clocks or cohorts."
   },
   "research": {
     "title": "Retained chronological market-path study: 33 completed local fits, reused unchanged",
-    "summary": "33 retained predictive model fits across 11 fixed alternatives, plus 11 separately counted training-only standardizers. V035 reuses their states and predictions without refitting. The path cohort has 257 training and 312 test games; the separate availability/path cohort has 115 training and 125 test games. These are exposed-2025 local development experiments, with no current-season model selection or promotion.",
+    "summary": "33 retained predictive model fits across 11 fixed alternatives, plus 11 separately counted training-only standardizers. The retained V035 local preparation reused their states and predictions without refitting; the actual V035 owner stopped before research admission. The path cohort has 257 training and 312 test games; the separate availability/path cohort has 115 training and 125 test games. These are exposed-2025 local development experiments, with no current-season model selection or promotion.",
     "evaluation_status": "Completed local exposed-2025 development; no new SageMaker execution, genuine forecast, or order.",
     "cohorts": [
       {
@@ -438,7 +448,7 @@
       }
     ],
     "limitations": [
-      "V035 adds current source and feature evidence. It makes zero new fits and preserves all 33 prior predictive fits plus 11 separately counted standardizers; no SageMaker execution is inferred from this local work.",
+      "Retained local V035 preparation added current source and feature evidence. It makes zero new fits and preserves all 33 prior predictive fits plus 11 separately counted standardizers; no SageMaker execution is inferred from this local work.",
       "Compare variants within each cohort: the path study uses 257 training / 312 test games, while the availability/path study uses 115 training / 125 test games. Both use a fixed November 1, 2025 boundary on a previously exposed season. No season-2026 outcomes were consumed.",
       "The fixed inventory contains 3,683 historical requests: 3,682 successful responses from 3,743 HTTP calls, with all 61 rate-limit failures and one unresolved request preserved. DraftKings historical in-game paths were unavailable through an authorized adapter. Fixed-strike probability paths are not point-spread or total trajectories.",
       "Of 904 game-state responses, 324 pass the broad explicit-boundary identity gate, 46 have monotone play clocks, and 31 also have complete wallclock coverage. The broader fitted study remains timing uncertified; historical source possession, continuous-duration coverage and executable liquidity are not proved.",
@@ -1439,18 +1449,35 @@
       }
     ]
   },
-  "new_owner_execution": false,
+  "new_owner_execution": true,
   "new_genuine_forecasts": 0,
   "orders": 0,
   "stake_usd": 0,
   "prior_owner": {
-    "release": "V033",
+    "release": "V034",
     "exit": 2,
-    "status": "PARTIAL_DIAGNOSTICS_PRESERVED",
-    "provider_requests": 669,
+    "status": "RESOURCE_DEFERRED_BEFORE_COLLECTION",
+    "provider_requests": 0,
     "model_fits": 0,
     "forecast_issues": 0,
-    "return_sha256": "85d1b724493c6057f2bd688dd10f3e0018231a7082db5bdb36fdc13809774962"
+    "return_bytes": 84384265,
+    "return_sha256": "ce6a3fcca4aa7d4379e9689367d49d843a7ee6c0428651931f229f83a5ff5637",
+    "source_bytes": 84271008,
+    "source_sha256": "521a10843175a1ff4fd4f8ec2f3d2ccc113e291a5b80583653a522678bf9ca6e",
+    "canonical_return_full_stream_verified": true,
+    "external_completion_verified": true,
+    "admission_attempts": 60,
+    "admission_wait_seconds": 300.155903329,
+    "initial_free_disk_bytes": 6166437888,
+    "final_free_disk_bytes": 6546800640,
+    "research_disk_reserve_bytes": 8049131520,
+    "work_headroom_bytes": 268435456,
+    "disk_shortfall_bytes": 1770766336,
+    "verified_temporary_replicas_removed": 10,
+    "verified_temporary_bytes_removed": 258194352,
+    "unrelated_processes_signalled": 0,
+    "snapshot_at_utc": "2026-11-06T02:57:56.397074Z",
+    "live_sagemaker_filesystem_is_not_measured_by_publication": true
   },
   "new_local_source_review": {
     "execution_class": "LOCAL_SOURCE_ACQUISITION_AND_FEATURE_PREPARATION",
@@ -1803,5 +1830,102 @@
     "orders": 0,
     "stake_usd": 0,
     "no_automatic_model_promotion": true
+  },
+  "earlier_owners": [
+    {
+      "release": "V033",
+      "exit": 2,
+      "status": "PARTIAL_DIAGNOSTICS_PRESERVED",
+      "provider_requests": 669,
+      "model_fits": 0,
+      "forecast_issues": 0,
+      "return_sha256": "85d1b724493c6057f2bd688dd10f3e0018231a7082db5bdb36fdc13809774962"
+    }
+  ],
+  "new_owner_collection": false,
+  "prepared_successor_execution_observed": false,
+  "new_local_source_acquisition": true,
+  "new_independent_verification": {
+    "execution_class": "LOCAL_READ_ONLY_EVIDENCE_AUDIT",
+    "new_fits": 0,
+    "new_forecast_issues": 0,
+    "owner_return_members": 14,
+    "owner_return_manifested_members": 13,
+    "exact_source_members": 516,
+    "exact_source_manifested_members": 515,
+    "retained_market_seed_members": 9367,
+    "retained_market_seed_manifested_members": 9366,
+    "retained_current_evidence_members": 61,
+    "retained_current_evidence_manifested_members": 60,
+    "retained_current_http_receipt_body_pairs": 16,
+    "all_checked_member_hashes_and_crc_passed": true,
+    "original_evidence_recomputed_by_fitting": false,
+    "qualification": "Physical bytes and receipt consistency are verified; publication creates no new source capture, model state or historical issuance."
+  },
+  "next_handoff": {
+    "status": "LOCAL_PREPARATION",
+    "owner_execution_observed": false,
+    "required_behavior": "Preserve every required predecessor source identity, retain authentic partial diagnostics and remeasure resources before admitting any work.",
+    "full_research_reserve_unchanged": true,
+    "independent_acquisition_requires_fresh_resource_and_writer_admission": true
+  },
+  "new_local_science": {
+    "attribution": "LOCAL_INDEPENDENT_AUDIT_AND_CURRENT_SOURCE_PREPARATION_NOT_SAGEMAKER",
+    "decision": "NO BET",
+    "fresh_availability": {
+      "capture_end": "2026-11-06T06:13:35.265250Z",
+      "capture_start": "2026-11-06T06:13:19.460113Z",
+      "clock_qualified_team_cutoff_rows": 116,
+      "fresh_official_requests": 4,
+      "jersey_conflicts": 71,
+      "missing_roster_names": 55,
+      "new_status_changes": 0,
+      "observed_usage_missing_rows": 3270,
+      "original_bodies_identical_to_prior_capture": 4,
+      "player_rows": 6625,
+      "prepared_at": "2026-11-06T06:13:35.816585Z",
+      "prior_status_changes_preserved": 108,
+      "report_games": 29,
+      "team_reports": 58,
+      "unknown_position_group_conflicts": 36
+    },
+    "game_state_audit": {
+      "counts": {
+        "boundary_verified": 325,
+        "coherent_score_clock_without_unreviewed_revisions": 252,
+        "complete_recorded_possession_support": 736,
+        "conservative_complete_state_support_candidate": 22,
+        "inherited_strict_flag": 31
+      },
+      "independently_compared_projection_fields": 1256960,
+      "inherited_strict_conservative_support_pass": 22,
+      "inherited_strict_issue_games": {
+        "clock_missing_or_invalid": 0,
+        "period_missing_or_invalid": 0,
+        "period_regressions": 0,
+        "possession_missing": 0,
+        "score_decreases": 5,
+        "score_missing_or_invalid": 0,
+        "within_period_clock_increases": 4
+      },
+      "inherited_strict_needs_additional_state_review": 9,
+      "projection_field_mismatches": 0,
+      "retained_play_rows": 157120,
+      "states_audited": 905
+    },
+    "game_state_limits": [
+      "22 games pass a conservative complete recorded-state support screen. They are not a strict market-path cohort or a new predictive result.",
+      "Nine of the 31 inherited strict-clock flags have unreviewed scoreboard decreases (five games) or within-period clock increases (four games). Such transitions may be source corrections; retain and review them before strict path use.",
+      "No historical source-availability claim; no fit, model selection, promotion, forecast or wager."
+    ],
+    "generated_at": "2026-11-06T06:15:44.958750+00:00",
+    "genuine_forecast_issues": 0,
+    "new_fits": 0,
+    "new_model_states": 0,
+    "new_predictions": 0,
+    "new_scalers": 0,
+    "orders": 0,
+    "schema": "fbs.v036.public-science-increment.v1",
+    "stake": 0
   }
 }
