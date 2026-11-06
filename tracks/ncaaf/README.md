@@ -1,5 +1,20 @@
 # Sports Edge Lab · NCAA football
 
+## V035 review: authenticated resource deferral and qualified current source features
+
+[**Open the latest FBS review →**](https://sports-edge-lab-fbs.alv-mendizabal.chatgpt.site/frontier.html)
+
+The actual V034 owner return is authenticated from its uploaded bytes, embedded source, complete member manifests, terminal log and independently read external completion. It performed **zero provider collection, fits or forecast issues**. Reclaiming ten exact temporary replicas removed **258,194,352 bytes**, but the final measured **6,546,800,640 free bytes** remained **1,770,766,336 bytes below** the unchanged research reserve plus work headroom. All 60 admission attempts deferred. No unrelated process was signalled. The next prepared runtime separates measured memory/S3 acquisition from full-work admission; preparation is not owner execution.
+
+New local evidence consists of **four official availability captures**, 29 exactly matched games, 58 team reports and 6,625 player rows. Unique team/name/roster matches cover 6,499 rows; 55 unmatched names and 71 jersey conflicts remain visible. Report and roster positions agree for 6,421 rows, while 36 position-group conflicts stay unknown. Observed cumulative usage exists for 3,355 rows and is unavailable for 3,270; it is not expected snaps, starter designation or replacement value. The capture comparison records **108 status changes**. Capture, source-declared update and preparation clocks qualify **116 current team–cutoff feature rows** across T−120/T−60. No historical availability is inferred and no new model is fitted or promoted.
+
+The Week 14 investigation documents **ten official championship event slots with unbound participants**, separately from the unchanged **888 identified fixtures**. All ten announcements were checked; six conferences also have successful original HTTP copies and four failed original fetches remain recorded. The retained Army–Navy native-week/calendar interval conflict is explicitly flagged. These slots are not fabricated game IDs or market matches.
+
+The completed **33-fit historical market-path/availability experiment and 11 training-only standardizers are reused unchanged**. Its negative findings, 7,491 predictions and paired uncertainty remain visible. The 622-game retrospective replay, 48-candidate independent historical audit and 167-identity registry retain their original populations and evidence classes. Current-season labels choose no champion. **NO BET, zero stake**.
+
+The browser review exposes the actual owner stop, current availability qualification, all ten official event-slot links, full game filters and the retained alternatives. Private source payloads, player-level records, active model recipes, cloud paths and executable handoffs remain private. Earlier dated evidence is preserved below.
+
+
 ## V034 evidence review - actual V033 acquisition and new frontier research
 
 [**Latest acquisition, research and every observed game →**](https://sports-edge-lab-fbs.alv-mendizabal.chatgpt.site/frontier.html) · [Retained model registry](https://sports-edge-lab-fbs.alv-mendizabal.chatgpt.site/models.html)
