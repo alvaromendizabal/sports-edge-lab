@@ -1,12 +1,22 @@
+## Latest: actual N052 correction results; N053 prepared
+
+[Open the current review](review_n053.html) · [Scientific update](N053_RESEARCH_UPDATE.md) · [Sanitized complete current export](current_review_n053.json) · [Earlier N051 view](review_n052.html)
+
+The authenticated N052 run completed **150 correction states (50 binary, 100 point)**, **41,503 report rows**, **165 season metrics**, **255 paired comparisons** and **three nested checks**. Pre-2024 selection chose no designation-content model. Pooled 2024–2025 selected winner and total losses were higher than the unchanged baseline, with intervals including zero; margin retained the baseline exactly. These are historical, exposed development results, with no prospective edge or promotion claim.
+
+All **144 N051 designation cells / 864 comparisons** and the prior **288-cell injury-only negative study** remain unchanged. N052 adds **418 real issue rows**, reuses eight current native components and creates **zero native, control or protected-original refits**. Every current game retains three provider slots, real clocks and explicit missingness. Completed market work is source-only.
+
+N053 is **prepared, not owner-executed**: 70 train-only error-scale states, 140 planned distribution-season variants and 35,252 expected report rows. It holds original point centers fixed and selects on 2022–2023 CRPS. No new N053 fits, issues or promotion are claimed.
+
 # Sports Edge Lab · NFL
 
-**Latest actual owner review · November 6, 2026:** N050 failed after **27.709 seconds**, before scientific stages, with **zero new fits, forecasts or source acquisitions**. The exact physical return, manifest closure and later external receipt are authenticated. An exact scientific-parent adapter contract caused the stop. [Read the verified N050 result and N051 preparation](N051_RESEARCH_UPDATE.md).
+**Latest actual owner review · November 6, 2026:** N051 completed **144/144 designation-only cells, 864 paired comparisons, 152 native fits and 418 issue rows**. The selected models do not justify promotion: negative control comparisons remain explicit. Research acceptance stays false; no protected-original refits or wagers occurred. [Read the actual N051 evidence and N052 preparation](N052_RESEARCH_UPDATE.md).
 
-**Next continuation · N051 is prepared, not owner-executed:** separate the failed invocation from the exact scientific carrier; validate full schema, cycle and selected-member bindings before all three reuse stages; make current-source namespaces explicit. The independent 144-cell annual designation study remains pending. Prior science is preserved; no automatic promotion is claimed.
+**Next continuation · N052 is prepared, not owner-executed:** a separately registered 150-state correction study asks whether report availability/content adds value beyond an unchanged baseline. Selection is restricted to 2022–2023; current-season outcomes cannot choose a recipe. No new issue lane or automatic promotion is claimed.
 
-[**Open the live NFL dashboard →**](https://sports-edge-lab-nfl.alv-mendizabal.chatgpt.site/) · [Current review](review_n051.html) · [Verified result and next work](N051_RESEARCH_UPDATE.md) · [Complete dated history](review.html#latest-coverage) · [Model card](CURRENT_MODEL_CARD.md)
+[**Open the live NFL dashboard →**](https://sports-edge-lab-nfl.alv-mendizabal.chatgpt.site/) · [Current review](review_n052.html) · [Actual evidence and next work](N052_RESEARCH_UPDATE.md) · [Prior N050 attempt/N049 retained review](review_n051.html) · [Complete dated history](review.html#latest-coverage) · [Model card](CURRENT_MODEL_CARD.md)
 
-**Publication status:** the hosted dashboard is a separately deployed snapshot with visible canonical provenance. Source publication, hosted deployment and owner execution remain separate states. The current review contains 272 schedule rows, 56 selected issued cards and all 261 current provider target cells including missing states; the full prior review retains 39 streams and historical metrics.
+**Publication status:** source publication, web deployment and owner execution remain separate. The current review contains 272 schedule rows, 112 selected issued cards, 82 oriented cover references and all 261 current provider target cells including missing states. Its CSV contains 679 records. The full prior review retains 39 streams and unchanged historical metrics. Canonical commit and evidence time are visible on the deployed snapshot.
 
 **Pregame forecasting, matched market evaluation and recoverable ML systems.** Built by [Alvaro Mendizabal](https://github.com/alvaromendizabal). Inspect the public evidence without setup or private credentials.
 
