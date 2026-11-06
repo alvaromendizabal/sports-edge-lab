@@ -2,9 +2,11 @@
 
 **Latest actual owner review · November 6, 2026:** all 288 injury-only native fits completed. The weak selected result exposed missing historical injury support: the 75-field block is entirely zero in 2025/2026, not evidence of healthy teams. Four current forecast lanes and 78 threshold references were genuinely issued; the official source refresh failed separately. [Read the N048 results](N048_RESEARCH_UPDATE.md).
 
-[**Open the live NFL dashboard →**](https://sports-edge-lab-nfl.alv-mendizabal.chatgpt.site/) · [Latest research update](N048_RESEARCH_UPDATE.md) · [Model evidence registry](review.html#model-evidence-registry) · [Model card](CURRENT_MODEL_CARD.md)
+**Next continuation · N049 is prepared, not owner-executed:** 144 native cells are planned for a narrow missingness-aware designation study; zero new N049 owner fits or forecasts are claimed. Event-specific temporal exclusions, immutable completion reentry and oriented conditional metadata have credential-free public tests. [Read the N049 continuation](N049_RESEARCH_UPDATE.md).
 
-**Publication status:** the hosted dashboard is a separately deployed snapshot. The N048 update in this commit is available in the [research report](N048_RESEARCH_UPDATE.md) and [self-contained HTML](review.html); its hosted deployment has not yet been verified.
+[**Open the live NFL dashboard →**](https://sports-edge-lab-nfl.alv-mendizabal.chatgpt.site/) · [Next continuation](N049_RESEARCH_UPDATE.md) · [Latest owner results](N048_RESEARCH_UPDATE.md) · [Model evidence registry](review.html#model-evidence-registry) · [Model card](CURRENT_MODEL_CARD.md)
+
+**Publication status:** the hosted dashboard is a separately deployed snapshot whose visible provenance identifies its canonical commit. This repository preserves the [N048 results](N048_RESEARCH_UPDATE.md) and [complete review](review.html), and adds the [N049 readiness record](readiness_n049.json). Source publication, hosted deployment and owner execution remain separate states.
 
 **Pregame forecasting, matched market evaluation and recoverable ML systems.** Built by [Alvaro Mendizabal](https://github.com/alvaromendizabal). Review the evidence in your browser; no setup or private credentials required.
 
