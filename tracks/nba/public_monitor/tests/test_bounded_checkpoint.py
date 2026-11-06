@@ -144,3 +144,12 @@ class BoundedCheckpointTests(unittest.TestCase):
         changed = self.mutate_manifest(ref, lambda m: m.update(extra="unbound"))
         with self.assertRaisesRegex(ValueError, "schema"):
             self.restore(changed)
+
+    def test_duplicate_json_keys_cannot_create_ambiguous_manifest(self):
+        ref = self.publish()
+        original = self.remote.objects[ref["sha256"]]
+        body = b'{"records":999,' + original[1:]
+        key = hashlib.sha256(body).hexdigest()
+        self.remote.objects[key] = body
+        with self.assertRaisesRegex(ValueError, "duplicate JSON key"):
+            self.restore({"sha256": key, "bytes": len(body)})

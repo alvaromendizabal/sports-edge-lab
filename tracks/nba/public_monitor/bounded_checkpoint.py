@@ -20,6 +20,17 @@ def _hash(raw):
     return hashlib.sha256(raw).hexdigest()
 
 
+def _load(raw):
+    def unique(pairs):
+        result = {}
+        for key, value in pairs:
+            if key in result:
+                raise ValueError("duplicate JSON key")
+            result[key] = value
+        return result
+    return json.loads(raw, object_pairs_hook=unique)
+
+
 def _pin(raw, records):
     return {"sha256": _hash(raw), "bytes": len(raw), "records": records}
 
@@ -107,7 +118,7 @@ def restore_records(reference, remote, *, max_shard_bytes=65536,
     raw = remote.get_full(reference["sha256"])
     if len(raw) != reference["bytes"] or _hash(raw) != reference["sha256"]:
         raise ValueError("manifest pin mismatch")
-    manifest = json.loads(raw)
+    manifest = _load(raw)
     if (not isinstance(manifest, dict)
             or set(manifest) != {"schema", "shards", "records", "bytes", "payload_sha256"}
             or manifest["schema"] != "invented.bounded-records.v1"
@@ -137,7 +148,7 @@ def restore_records(reference, remote, *, max_shard_bytes=65536,
             raise ValueError("shard pin mismatch")
         if not body.endswith(b"\n"):
             raise ValueError("record boundary mismatch")
-        rows = [json.loads(line) for line in body.splitlines()]
+        rows = [_load(line) for line in body.splitlines()]
         if (len(rows) != shard["records"]
                 or not all(isinstance(row, dict) for row in rows)
                 or b"".join(_json(row) + b"\n" for row in rows) != body):
