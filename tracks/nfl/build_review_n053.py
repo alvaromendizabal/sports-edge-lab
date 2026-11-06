@@ -49,6 +49,10 @@ def validate(data):
     expected={'actual_completed_correction_states':150,'binary_states':50,'point_states':100,'report_rows':41503,'baseline_rows':3773,'corrected_prediction_rows':37730,'season_metrics':165,'weekly_metrics':3168,'support_metrics':825,'paired_comparisons':255,'nested_checks':3,'independent_remote_states_verified':150,'independent_remote_receipts_verified':150}
     if any(correction[k]!=v for k,v in expected.items()):raise ValueError('correction closure')
     if len(correction['paired_rows'])!=255 or len(correction['season_metric_rows'])!=165 or len(correction['nested_rows'])!=3:raise ValueError('correction aggregate closure')
+    periods={'2022_2023','2024','2025','2024_2025','2026'}
+    if {r['period'] for r in correction['selected_pairs']}!=periods or len(correction['selected_pairs'])!=15:raise ValueError('correction period labels')
+    for period in periods:
+        if len([r for r in correction['selected_metrics'] if r['period']==period])!=6 or {r['target'] for r in correction['selected_pairs'] if r['period']==period}!={'win','margin','total'}:raise ValueError('correction period closure')
     pairs=correction['paired_rows']
     if len({(r['season'],r['target'],r['left_id'],r['right_id'],r['contrast']) for r in pairs})!=255:raise ValueError('correction duplicate comparisons')
     if correction['selection']['seasons']!=[2022,2023] or correction['current_season_selection'] or correction['selection']['selected_designation_content_targets']!=0:raise ValueError('correction selection boundary')

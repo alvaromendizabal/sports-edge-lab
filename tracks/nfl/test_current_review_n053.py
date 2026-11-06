@@ -82,6 +82,12 @@ class CurrentReviewN053Tests(unittest.TestCase):
         d=copy.deepcopy(self.data);d['correction']['selection']['seasons'].append(2026)
         with self.assertRaisesRegex(ValueError,'selection boundary'):validate(d)
 
+    def test_pooled_period_labels_are_not_converted_to_numbers(self):
+        d=copy.deepcopy(self.data)
+        for row in d['correction']['selected_pairs']:
+            if row['period']=='2024_2025':row['period']=20242025
+        with self.assertRaisesRegex(ValueError,'period labels'):validate(d)
+
     def test_prior_studies_cannot_be_refitted(self):
         for key in ['repeated_designation_only_fits','repeated_injury_only_fits']:
             d=copy.deepcopy(self.data);d['science'][key]=1
