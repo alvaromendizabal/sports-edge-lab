@@ -55,7 +55,9 @@ jobs:
       - name: Install pinned browser test dependency
         run: |
           npm install --prefix "${RUNNER_TEMP}/fbs-browser" --ignore-scripts --no-audit --no-fund playwright@1.56.1
-          node "${RUNNER_TEMP}/fbs-browser/node_modules/playwright/cli.js" install --with-deps chromium
+          # Ubuntu 24.04 already supplies the shared libraries used by these headless tests.
+          # Avoid unrelated font downloads that exhausted the job before any assertion ran.
+          node "${RUNNER_TEMP}/fbs-browser/node_modules/playwright/cli.js" install --only-shell chromium
       - name: Verify every aggregate selector, keyboard, mobile and download state
         env:
           PLAYWRIGHT_MODULE_DIR: ${{ runner.temp }}/fbs-browser/node_modules/playwright
