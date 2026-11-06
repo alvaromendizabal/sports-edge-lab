@@ -325,7 +325,7 @@ class EvidenceTests(unittest.TestCase):
 
     def test_b044_execution_is_separate_from_dated_b043_scientific_evidence(self):
         for data in self.exports.values():
-            current = data['current_owner_attempt']
+            current = next(a for a in data['owner_attempt_history'] if a['release'] == 'B044')
             self.assertEqual(current['release'], 'B044')
             self.assertEqual((current['completed_scientific_stages'], current['attempted_scientific_stages'], current['planned_scientific_stages']), (0, 1, 16))
             self.assertEqual([s['status'] for s in current['stages']], ['FAILED'] + ['NOT_STARTED'] * 15)
@@ -339,7 +339,7 @@ class EvidenceTests(unittest.TestCase):
             self.assertFalse(readback['earlier_availability_credit'])
             self.assertTrue(readback['source_clocks_unchanged'])
             self.assertEqual(readback['new_provider_requests'], 0)
-            self.assertEqual(data['prepared_execution']['release'], 'B045')
+            self.assertEqual(data['prepared_execution']['release'], 'B046')
             self.assertFalse(data['prepared_execution']['owner_execution_observed'])
             self.assertEqual(data['prepared_execution']['new_scientific_credit'], 0)
             old = next(r for r in data['review_history'] if r['release'] == 'B043')
@@ -355,11 +355,11 @@ class EvidenceTests(unittest.TestCase):
             if mutation == 'fit':
                 corrupted['current_owner_attempt']['new_real_target_fits'] = 1
             elif mutation == 'readback_provider':
-                corrupted['current_owner_attempt']['storage_readback']['new_provider_requests'] = 182
+                build_dashboard.dated_readback(corrupted)['new_provider_requests'] = 182
             elif mutation == 'readback_availability':
-                corrupted['current_owner_attempt']['storage_readback']['earlier_availability_credit'] = True
+                build_dashboard.dated_readback(corrupted)['earlier_availability_credit'] = True
             elif mutation == 'readback_clock':
-                corrupted['current_owner_attempt']['storage_readback']['source_clocks_unchanged'] = False
+                build_dashboard.dated_readback(corrupted)['source_clocks_unchanged'] = False
             elif mutation == 'prepared':
                 corrupted['prepared_execution']['owner_execution_observed'] = True
             else:
@@ -367,6 +367,72 @@ class EvidenceTests(unittest.TestCase):
             with patch.object(Path, 'read_text', return_value=json.dumps(corrupted)):
                 with self.assertRaises(ValueError):
                     build_dashboard.evidence('ncaam')
+
+    def test_b045_unknown_work_is_not_zero_or_terminal_success(self):
+        for data in self.exports.values():
+            current = data['current_owner_attempt']
+            self.assertEqual(current['release'], 'B045')
+            self.assertEqual(current['status'], 'WORKER_EXITED_WITHOUT_TERMINAL_RETURN')
+            self.assertEqual((current['completed_scientific_stages'], current['attempted_scientific_stages'], current['planned_scientific_stages']), (9, 10, 16))
+            self.assertEqual([s['status'] for s in current['stages']], ['COMPLETED'] * 9 + ['FAILED'] + ['NOT_STARTED'] * 6)
+            self.assertEqual(current['child_exit_code'], -9)
+            for key in ('new_real_target_fits', 'new_calibration_fits', 'new_empirical_residual_fits', 'new_injury_fits', 'new_prospective_issues', 'completed_at', 'external_shell_exit_code', 'total_wall_seconds', 'cpu_seconds', 'owner_peak_rss_bytes', 'synthetic_tests_total'):
+                self.assertIsNone(current[key], key)
+            self.assertFalse(current['durable_return_verified'])
+            self.assertFalse(current['out_of_memory_proved'])
+            self.assertEqual(current['phase_seconds'], {'injury_stage': 1527.417660635})
+            self.assertNotIn('storage_readback', current)
+            self.assertEqual((data['b045_baseline_observation']['target_rows'], data['b045_baseline_observation']['browser_display_rows']), (87003, 47940))
+            self.assertIsNone(data['b045_baseline_observation']['new_issue_credit'])
+            self.assertEqual(data['older_dashboard_assertion']['status'], 'UNRESOLVED_OLDER_DASHBOARD_ASSERTION')
+            self.assertFalse(data['older_dashboard_assertion']['exact_two_file_membership_verified'])
+
+    def test_unproved_terminal_success_and_signal_cause_are_rejected(self):
+        for key, value in [('completed_at', '2026-11-06T22:00:00Z'), ('external_shell_exit_code', 0), ('durable_return_verified', True), ('out_of_memory_proved', True), ('kill_cause', 'OOM')]:
+            corrupted = copy.deepcopy(self.exports['ncaam'])
+            corrupted['current_owner_attempt'][key] = value
+            with self.subTest(key=key), patch.object(Path, 'read_text', return_value=json.dumps(corrupted)):
+                with self.assertRaises(ValueError):
+                    build_dashboard.evidence('ncaam')
+
+    def test_report_labels_and_metric_panel_counts_do_not_gain_unproved_credit(self):
+        for key, value in [('new_issue_credit', 549), ('independent_metric_panels_checked', 1221), ('calibration_slope_intercept_independently_refit', True)]:
+            corrupted = copy.deepcopy(self.exports['ncaam'])
+            corrupted['b045_baseline_observation'][key] = value
+            with self.subTest(key=key), patch.object(Path, 'read_text', return_value=json.dumps(corrupted)):
+                with self.assertRaises(ValueError):
+                    build_dashboard.evidence('ncaam')
+
+    def test_verified_source_journal_preserves_baseline_and_prior_reconciliation_scope(self):
+        for data in self.exports.values():
+            baseline=data['b045_baseline_observation'];journal=data['b045_forecast_journal_observation']
+            self.assertEqual((baseline['independent_metric_panels_checked'],baseline['independent_scalar_checks']),(1223,4147))
+            self.assertEqual((baseline['independent_model_panels_checked'],baseline['independent_model_scalar_checks']),(1220,4132))
+            self.assertEqual((baseline['independent_provider_panels_checked'],baseline['independent_provider_scalar_checks']),(3,15))
+            self.assertEqual((journal['b045_verified_issue_rows'],journal['b045_baseline_exact_match_rows'],journal['b045_journal_only_rows']),(552,549,3))
+            self.assertEqual((journal['b045_games'],journal['b042_retained_issue_rows'],journal['b042_games']),(8,339,5))
+            self.assertEqual(journal['baseline_prospective_exact_matches'],888)
+            previous=data['b045_baseline_observation_history'][-1]
+            self.assertEqual((previous['independent_metric_panels_checked'],previous['independent_scalar_checks']),(1220,4132))
+            self.assertEqual(previous['immutable_issue_admission'],'PENDING_COMPLETE_LEDGER_RECONCILIATION_AT_PUBLIC_SNAPSHOT')
+
+    def test_journal_audit_cannot_rewrite_baseline_or_expand_its_proof_scope(self):
+        for key,value in [('b045_verified_issue_rows',549),('b045_baseline_exact_match_rows',552),('new_issues_created_by_audit',552),('baseline_rewritten',True),('global_remote_inventory_exhaustion_proved',True),('owner_run_identity_proved_by_journal',True),('full_model_input_closure_proved',True),('forecast_performance_or_profit_proved',True),('server_interval_upper_at_or_before_cutoff',False),('outcome_fields_absent_at_issue',False)]:
+            corrupted=copy.deepcopy(self.exports['ncaam'])
+            corrupted['b045_forecast_journal_observation'][key]=value
+            with self.subTest(key=key),patch.object(Path,'read_text',return_value=json.dumps(corrupted)):
+                with self.assertRaises(ValueError):build_dashboard.evidence('ncaam')
+
+    def test_spread_example_is_generated_from_executable_invented_contract(self):
+        from spread_ats import demo
+        for data in self.exports.values():
+            self.assertFalse(data['ats_research']['real_ats_record_published'])
+            self.assertIsNone(data['ats_research']['real_cover_probability_champion'])
+            output = build_dashboard.render_track(data)
+            embedded = re.search(r'<script type="application/json" id="spread-ats-evidence">(.*?)</script>', output, re.S)
+            self.assertIsNotNone(embedded)
+            self.assertEqual(json.loads(embedded.group(1)), demo())
+            self.assertIn('A point margin or winner probability alone cannot supply it.', output)
 
     def test_b043_durable_reports_separate_new_and_inherited_issue_credit(self):
         for league, data in self.exports.items():
@@ -435,10 +501,10 @@ class EvidenceTests(unittest.TestCase):
     def test_generation_is_exact_and_embedded_json_is_unchanged(self):
         for path, output in build_dashboard.outputs().items():
             self.assertEqual(path.read_text(), output)
-            self.assertNotRegex(output, r'__(?:TITLE|EVIDENCE|PROGRESS_DEMO|PREFLIGHT_DEMO|HANDOFF_DEMO|LEAGUE|SIBLING|SIBLING_LABEL)__')
+            self.assertNotRegex(output, r'__(?:TITLE|EVIDENCE|PROGRESS_DEMO|PREFLIGHT_DEMO|HANDOFF_DEMO|SPREAD_ATS_DEMO|LEAGUE|SIBLING|SIBLING_LABEL)__')
             if path.parent.name in self.exports:
                 self.assertIn('NCAA evidence review · 06 November 2026 UTC', output)
-                self.assertIn('Latest run stopped at the source handoff.', output)
+                self.assertIn('Latest run stopped during injury research.', output)
                 self.assertNotIn('Latest run stopped before science', output)
                 self.assertNotIn('Latest run stopped during reporting', output)
                 embedded = re.search(r'<script type="application/json" id="evidence">(.*?)</script>', output, re.S)
@@ -507,7 +573,7 @@ class EvidenceTests(unittest.TestCase):
     def test_landing_uses_current_evidence_and_rejects_mixed_league_snapshots(self):
         exports = list(self.exports.values())
         landing = build_dashboard.render_landing(exports)
-        self.assertIn('B044: 0 of 16 stages completed; source handoff failed.', landing)
+        self.assertIn('B045: 9 of 16 stages completed; child exited without its terminal return.', landing)
         self.assertIn('723,492 market observations', landing)
         self.assertIn('339 existing research issue rows across 5 games', landing)
         self.assertNotIn('Latest owner stopped before science', landing)

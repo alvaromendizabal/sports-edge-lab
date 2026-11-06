@@ -10,6 +10,7 @@ from pathlib import Path
 from progress import demo_scenarios
 from preflight import demo_scenarios as preflight_scenarios
 from handoff import demo as handoff_demo
+from spread_ats import demo as spread_ats_demo
 
 ROOT=Path(__file__).resolve().parents[2]
 HERE=Path(__file__).resolve().parent
@@ -23,6 +24,14 @@ def scientific_attempt(data):
     matches = [attempt for attempt in attempts if attempt['release'] == release]
     if len(matches) != 1:raise ValueError('scientific evidence owner is not unique')
     return matches[0]
+
+
+def dated_readback(data):
+    """The 182 storage GETs belong to B044, never a later owner's work."""
+    attempts = [data['current_owner_attempt'], *data['owner_attempt_history']]
+    matches = [attempt for attempt in attempts if attempt['release'] == 'B044']
+    if len(matches) != 1:raise ValueError('dated readback owner is not unique')
+    return matches[0]['storage_readback']
 
 
 def validate_stages(attempt):
@@ -42,7 +51,32 @@ def evidence(league):
     scientific = scientific_attempt(data)
     validate_stages(scientific)
     if attempt['completed_scientific_stages'] == 0 and any(attempt[k] != 0 for k in ('new_real_target_fits', 'new_calibration_fits', 'new_empirical_residual_fits', 'new_prospective_issues', 'new_prediction_rows')):raise ValueError('unstarted science receives credit')
-    readback = attempt['storage_readback']
+    if attempt['fit_count_status'] == 'UNKNOWN_PENDING_COMPLETE_DURABLE_PRODUCER_AUDIT':
+        if any(attempt[k] is not None for k in ('new_real_target_fits', 'league_new_real_target_fits', 'new_calibration_fits', 'new_empirical_residual_fits', 'new_injury_fits', 'new_prediction_rows', 'new_prospective_issues', 'reused_target_fits')):raise ValueError('unknown owner work receives invented counts')
+    if attempt['status'] == 'WORKER_EXITED_WITHOUT_TERMINAL_RETURN':
+        if attempt['completed_at'] is not None or attempt['external_shell_exit_code'] is not None or attempt['durable_return_verified'] is not False:raise ValueError('unexpected exit receives unsupported terminal completion')
+        if attempt['out_of_memory_proved'] or attempt['kill_cause'] != 'UNKNOWN':raise ValueError('unproved signal-exit cause')
+    baseline = data['b045_baseline_observation']
+    if baseline['source_release'] != 'B045' or baseline['new_issue_credit'] is not None or baseline['new_fit_credit_from_report_recovery'] != 0:raise ValueError('report labels receive unverified issue or fit credit')
+    if (baseline['independent_model_panels_checked'] != baseline['independent_season_panels_checked'] + baseline['independent_weekly_panels_checked']
+            or baseline['independent_metric_panels_checked'] != baseline['independent_model_panels_checked'] + baseline['independent_provider_panels_checked']
+            or baseline['independent_scalar_checks'] != baseline['independent_model_scalar_checks'] + baseline['independent_provider_scalar_checks']
+            or baseline['calibration_slope_intercept_independently_refit'] is not False):raise ValueError('unsupported metric reconciliation claim')
+    journal = data['b045_forecast_journal_observation']
+    if (journal['source_scope'] != 'B045_SOURCE_VERSION_NOT_OWNER_RUN_ID'
+            or journal['b045_verified_issue_rows'] != journal['b045_distinct_issue_fingerprints']
+            or journal['b045_verified_issue_rows'] != journal['b045_baseline_exact_match_rows'] + journal['b045_journal_only_rows']
+            or journal['b045_baseline_exact_match_rows'] != baseline['source_labeled_b045_prospective_unsettled_rows']
+            or journal['b045_games'] != baseline['source_labeled_b045_games']
+            or journal['b042_retained_issue_rows'] != baseline['source_labeled_b042_prospective_settled_rows']
+            or journal['baseline_prospective_exact_matches'] != journal['b045_baseline_exact_match_rows'] + journal['b042_retained_issue_rows']):raise ValueError('journal source and baseline population mismatch')
+    if any(journal[key] is not True for key in ('original_issue_validation_passed', 'original_prediction_identity_and_clocks_unchanged', 'outcome_fields_absent_at_issue', 'issue_before_server_interval_upper', 'server_interval_upper_at_or_before_cutoff')):raise ValueError('unsupported original issue availability')
+    if (journal['new_issues_created_by_audit'] != 0 or journal['baseline_rewritten'] is not False
+            or journal['global_remote_inventory_exhaustion_proved'] is not False
+            or journal['owner_run_identity_proved_by_journal'] is not False
+            or journal['full_model_input_closure_proved'] is not False
+            or journal['forecast_performance_or_profit_proved'] is not False):raise ValueError('journal audit grants unsupported scope or scientific credit')
+    readback = dated_readback(data)
     if readback['source_release'] != scientific['release'] or readback['observations'] != data['current_coverage_gaps']['market_observations']:raise ValueError('readback evidence population')
     if readback['new_provider_requests'] != 0 or readback['new_fit_credit'] != 0 or readback['earlier_availability_credit'] is not False or readback['source_clocks_unchanged'] is not True:raise ValueError('readback grants unsupported credit')
     if data['prepared_execution']['owner_execution_observed'] is not False or data['prepared_execution']['new_scientific_credit'] != 0:raise ValueError('prepared execution receives credit')
@@ -77,6 +111,7 @@ def render_track(data):
         '__LEAGUE__':league,'__EVIDENCE__':embedded,
         '__REVIEW_DATE__':date.fromisoformat(data['published_snapshot_date']).strftime('%d %B %Y')+' UTC',
         '__HANDOFF_DEMO__':json.dumps(handoff_demo(),sort_keys=True,separators=(',',':'),allow_nan=False).replace('<','\\u003c'),
+        '__SPREAD_ATS_DEMO__':json.dumps(spread_ats_demo(),sort_keys=True,separators=(',',':'),allow_nan=False).replace('<','\\u003c'),
         '__PREFLIGHT_DEMO__':json.dumps(preflight_scenarios(),sort_keys=True,separators=(',',':'),allow_nan=False).replace('<','\\u003c'),
         '__PROGRESS_DEMO__':json.dumps(demo_scenarios(),sort_keys=True,separators=(',',':'),allow_nan=False).replace('<','\\u003c')}.items():template=template.replace(key,value)
     return template
@@ -96,12 +131,16 @@ def landing_status(data):
     release = escape(a['release'])
     capture = datetime.fromisoformat(data[0]['freshness']['source_acquisition_completed_at']).strftime('%d %b %Y, %H:%M UTC')
     previous = scientific_attempt(data[0])
-    return (f'<strong>{release}: {a["completed_scientific_stages"]} of {a["planned_scientific_stages"]} stages completed; source handoff failed.</strong>'
-            f'<p>The first source refresh stopped before new provider acquisition or model work. {release} committed zero new target, scalar or empirical fits and zero new forecasts. Its verified return preserves the failed outcome. B045 prepares the exact producer-consumer preflight and handoff repair; no B045 execution or scientific gain is claimed.</p>'
-            f'<p>Bounded readback verified 90 preserved chunks, {gaps["market_observations"]:,} observations and 1,504,058,360 logical bytes through 182 full storage GETs. These are earlier observations with unchanged clocks; storage readback is not a provider refresh or earlier availability proof.</p>'
+    baseline = data[0]['b045_baseline_observation']; journal = data[0]['b045_forecast_journal_observation']
+    if any(d['b045_forecast_journal_observation'] != journal for d in data):raise ValueError('landing journal population disagreement')
+    return (f'<strong>{release}: {a["completed_scientific_stages"]} of {a["planned_scientific_stages"]} stages completed; child exited without its terminal return.</strong>'
+            '<p>The injury stage exhausted a bounded resource wait. The wrapper later recorded child exit −9 and an unpersisted return; the cause of that exit is unknown. Complete new-fit counts, final CPU/peak-memory totals and the external shell exit remain unavailable in this public snapshot. Unknown work is not zero work. B046 is prepared; no B046 owner execution or model gain is claimed.</p>'
+            f'<p>The independently checked B045 baseline now has {baseline["independent_metric_panels_checked"]:,} metric panels / {baseline["independent_scalar_checks"]:,} checks with zero mismatches, preserving the earlier {baseline["independent_model_panels_checked"]:,} model panels / {baseline["independent_model_scalar_checks"]:,} checks. Across {journal["inventory_objects_examined"]} returned immutable journal objects examined, {journal["b045_verified_issue_rows"]} verified B045-source issues cover {journal["b045_games"]} games: all {journal["b045_baseline_exact_match_rows"]} dated baseline rows match exactly, and {journal["b045_journal_only_rows"]} additional journal rows remain separate. Original server clocks support pre-cutoff, outcome-free issuance; source-version evidence does not identify an owner run, establish complete remote inventory, or prove forecast performance.</p>'
+            f'<p>Dated B044 readback verified 90 preserved chunks, {gaps["market_observations"]:,} observations and 1,504,058,360 logical bytes through 182 full storage GETs. Those remain B044 reads of earlier evidence with unchanged clocks; they are not B045 provider acquisition or earlier availability proof.</p>'
             f'<p>Preserved {previous["release"]} research: {previous["completed_scientific_stages"]}/{previous["planned_scientific_stages"]} stages, {previous["new_real_target_fits"]} target / {previous["new_calibration_fits"]} scalar / {previous["new_empirical_residual_fits"]} empirical fits. {result["authenticated_issue_rows_both_leagues"]:,} existing research issue rows across {result["authenticated_issue_games_both_leagues"]} games retain their B042 identity. Its durable pre-study report contains {result["pre_study_target_rows"]:,} target rows and {result["browser_display_rows"]:,} browser rows.</p>'
             f'<p>The dated inventory contains {gaps["market_observations"]:,} market observations and {gaps["both_leagues_source_records"]:,} source/candidate records with {gaps["both_leagues_observed_finals"]:,} numeric finals. Source acquisition completed {capture}; this is a static evidence snapshot, not a reconciled physical-game denominator.</p>'
-            '<p>The B043 129-game men’s Polymarket international comparison remains reconstructed: the model has higher pick accuracy but worse log loss and Brier. The earlier 122-game panel and historical selections remain unchanged. No injury improvement, market-path gain or profitable betting record is established.</p>')
+            '<p>The B043 129-game men’s Polymarket international comparison remains reconstructed: the model has higher pick accuracy but worse log loss and Brier. The earlier 122-game panel and historical selections remain unchanged. No injury improvement, market-path gain or profitable betting record is established.</p>'
+            '<p>The new <a href="'+HOST+'/tracks/ncaam/index.html#spread-review">spread and ATS example</a> separates a quoted-line cover probability from a past win–loss–push record. It uses invented inputs with explicit clocks, orientation, pushes and missing-data denominators.</p>')
 
 
 def render_landing(data):

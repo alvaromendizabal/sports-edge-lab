@@ -21,7 +21,7 @@ const { chromium } = require(process.env.PLAYWRIGHT_MODULE_DIR || 'playwright');
     probability: ['win', 'LogLoss'], accuracy: ['win', 'Accuracy'],
     margin: ['margin', 'MAE'], total: ['total', 'MAE'],
   };
-  const counts = { viewports: 0, selectorStates: 0, scenarios: 0, progressScenarios: 0, preflightScenarios: 0, executionViews: 0, keyboardEvents: 0, privateViewerStates: 0, captureClockViews: 0, horizonMetricViews: 0, unclassifiedSourceViews: 0, providerComparisonViews: 0, boundedInventoryViews: 0, freshnessViews: 0 };
+  const counts = { viewports: 0, selectorStates: 0, scenarios: 0, progressScenarios: 0, preflightScenarios: 0, executionViews: 0, keyboardEvents: 0, privateViewerStates: 0, captureClockViews: 0, horizonMetricViews: 0, unclassifiedSourceViews: 0, providerComparisonViews: 0, boundedInventoryViews: 0, freshnessViews: 0, spreadScenarios: 0, atsRecordViews: 0 };
   try {
     for (const width of [1440, 390]) {
       await page.setViewportSize({ width, height: 1000 });
@@ -33,25 +33,25 @@ const { chromium } = require(process.env.PLAYWRIGHT_MODULE_DIR || 'playwright');
         assert.equal(await page.locator('#provider-table tr').count(), 3);
         assert.deepEqual(await page.locator('#provider-table tr td:first-child strong').allTextContents(), ['Kalshi', 'Polymarket', 'DraftKings']);
         const attempt = evidence.current_owner_attempt, inventory = evidence.observed_inventory;
-        assert.equal(attempt.release, 'B044');
+        assert.equal(attempt.release, 'B045');
         const scientific = evidence.owner_attempt_history.find(a => a.release === 'B043');
+        const earlier = evidence.owner_attempt_history.find(a => a.release === 'B044');
         assert.deepEqual([scientific.completed_scientific_stages, scientific.new_real_target_fits, scientific.new_calibration_fits, scientific.new_empirical_residual_fits], [9, 101, 45, 24]);
-        assert.equal(attempt.status, 'FAILED_PARTIAL_WORK_PRESERVED');
-        assert.equal(attempt.failure_class, 'ValueError');
-        assert.equal(attempt.failure_code, 'UNSUPPORTED_PRODUCER_HANDOFF');
-        assert.equal(attempt.failure_phase, 'SOURCE_REFRESH_PREFLIGHT');
-        assert.deepEqual([attempt.synthetic_tests_passed, attempt.synthetic_test_errors,
-          attempt.synthetic_tests_failed, attempt.synthetic_tests_skipped, attempt.synthetic_tests_total], [1134, 0, 0, 1, 1135]);
-        assert.deepEqual([attempt.completed_scientific_stages, attempt.attempted_scientific_stages,
-          attempt.planned_scientific_stages], [0, 1, 16]);
-        assert.deepEqual([attempt.new_real_target_fits, attempt.new_calibration_fits,
-          attempt.new_empirical_residual_fits, attempt.reused_target_fits], [0, 0, 0, 0]);
-        assert.equal(attempt.league_new_real_target_fits, 0);
-        assert.deepEqual([attempt.reused_native_target_fits, attempt.reused_native_scalar_fits], [0, 0]);
-        assert.equal(attempt.new_provider_requests, 0);
-        assert.equal(attempt.new_prediction_rows, 0);
-        assert.match(await page.locator('#time-legend').innerText(), /Scientific stages/);
-        assert.equal(attempt.new_prospective_issues, 0);
+        assert.equal(attempt.status, 'WORKER_EXITED_WITHOUT_TERMINAL_RETURN');
+        assert.equal(attempt.failure_class, 'AdmissionDeferred');
+        assert.equal(attempt.child_exit_code, -9);
+        assert.equal(attempt.external_shell_exit_code, null);
+        assert.equal(attempt.kill_cause, 'UNKNOWN');
+        assert.equal(attempt.out_of_memory_proved, false);
+        assert.deepEqual([attempt.completed_scientific_stages, attempt.attempted_scientific_stages, attempt.planned_scientific_stages], [9, 10, 16]);
+        for (const key of ['new_real_target_fits','league_new_real_target_fits','new_calibration_fits','new_empirical_residual_fits','new_injury_fits','new_prediction_rows','new_prospective_issues','reused_target_fits','synthetic_tests_total','completed_at','total_wall_seconds','cpu_seconds','owner_peak_rss_bytes']) assert.equal(attempt[key], null, key);
+        assert.equal(attempt.durable_return_verified, false);
+        assert.match(await page.locator('#latest-baseline-copy').innerText(), /87,003 target rows and 47,940 browser display rows.*1,223 metric panels.*4,147 checks with zero mismatches.*1,220 model metric panels.*417 season \/ 803 weekly; 4,132 checks.*3 provider panels \/ 15 checks/);
+        assert.match(await page.locator('#latest-baseline-issues').innerText(), /255 returned immutable journal objects.*552 distinct verified B045-source issues across 8 games.*549 B045 prospective rows.*3 additional journal rows.*339 B042 issues across 5 games.*does not identify an owner run/);
+        assert.equal(earlier.completed_scientific_stages, 0);
+        assert.equal(earlier.storage_readback.new_full_storage_GETs, 182);
+        assert.equal(earlier.new_real_target_fits, 0);
+        assert.match(await page.locator('#time-legend').innerText(), /Injury stage.*other intervals unavailable/);
         assert.equal(scientific.retained_prior_prospective_issues, 339);
         assert.equal(attempt.scientific_goal_complete, false);
         assert.equal(attempt.current_outcomes_used_for_selection, false);
@@ -93,7 +93,7 @@ const { chromium } = require(process.env.PLAYWRIGHT_MODULE_DIR || 'playwright');
           assert.equal(reconstructed.status, 'RETROSPECTIVE_PAIRED_ORIGINAL_VERSUS_POLYMARKET');
           assert.equal(reconstructed.paired_games, 122);
           assert.equal(await page.locator('#current-paired-table tbody tr').count(), 5);
-          assert.match(await page.locator('#current-paired-note').innerText(), /Preserved in B040; not a new B044 result.*122 identical supplied games.*T−60 reference/);
+          assert.match(await page.locator('#current-paired-note').innerText(), /Preserved in B040; not a new B045 result.*122 identical supplied games.*T−60 reference/);
           assert.match(await page.locator('#current-paired-disagreements').innerText(), /7 model-right \/ provider-wrong disagreements; 2 in the reverse direction/);
           assert.match(await page.locator('#current-paired-disagreements').innerText(), /Qualified settled bets: 0\. Profit remains unverified/);
         } else {
@@ -123,23 +123,24 @@ const { chromium } = require(process.env.PLAYWRIGHT_MODULE_DIR || 'playwright');
           assert.equal(await page.locator('#latest-paired-table table').count(), 0);
           assert.match(await page.locator('#latest-paired-note').innerText(), /No exact paired women’s provider cohort is admitted/);
         }
-        assert.match(await page.locator('#attempt-summary').innerText(), /1134 passed.*0 errors.*1 skipped/);
-        assert.match(await page.locator('#attempt-summary').innerText(), /0 of 16 workflow stages completed/);
-        assert.match(await page.locator('#execution-intro').innerText(), /B044 returned.*Zero of 16 stages completed.*first source-refresh stage failed/);
-        assert.match(await page.locator('.status-strip strong').innerText(), /source handoff/);
+        assert.match(await page.locator('#attempt-summary').innerText(), /New fit totals are unavailable.*unknown is not zero/);
+        assert.match(await page.locator('#attempt-summary').innerText(), /9 of 16 workflow stages completed/);
+        assert.match(await page.locator('#execution-intro').innerText(), /B045 recorded an injury-stage failure.*Nine of 16 stages completed/);
+        assert.match(await page.locator('.status-strip strong').innerText(), /during injury research/);
         assert.doesNotMatch(await page.locator('.status-strip strong').innerText(), /stopped before science/);
         assert.match(await page.locator('#preserved-study-copy').innerText(), /108 committed target fits across both leagues; 54 in this track/);
         assert.equal(await page.locator('#phase-table tr').count(), 16);
-        assert.equal(await page.locator('#phase-table .done').count(), 0);
+        assert.equal(await page.locator('#phase-table .done').count(), 9);
+        assert.equal(await page.locator('#phase-table tr').first().locator('td').last().innerText(), 'Unavailable');
         assert.equal(await page.locator('#recent-phase-table .done').count(), 9);
         assert.match(await page.locator('#recent-study-copy').innerText(), /101 target \/ 45 scalar \/ 24 empirical fits/);
         assert.match(await page.locator('#readback-copy').innerText(), /90 chunks \/ 723,492 earlier observations \/ 1,504,058,360 logical bytes.*182 storage GETs/);
-        assert.match(await page.locator('#prepared-copy').innerText(), /B045.*No B045 owner completion/);
+        assert.match(await page.locator('#prepared-copy').innerText(), /B046.*No B046 owner completion/);
         assert.deepEqual(await page.locator('#handoff-table tr td:last-child').allTextContents(), ['2 passed', 'Blocked before work', '0', 'ADMITTED', '0']);
         assert.equal(await page.locator('#phase-table .failed').count(), 1);
-        assert.match(await page.locator('#phase-table tr').nth(5).innerText(), /Timestamped injury.*Not started/);
-        assert.match(await page.locator('#phase-table tr').nth(9).innerText(), /paired injury.*Not started/);
-        assert.equal(attempt.stages.filter(stage => stage.status === 'NOT_STARTED').length, 15);
+        assert.match(await page.locator('#phase-table tr').nth(5).innerText(), /Timestamped injury.*Completed/);
+        assert.match(await page.locator('#phase-table tr').nth(9).innerText(), /paired injury.*Failed/);
+        assert.equal(attempt.stages.filter(stage => stage.status === 'NOT_STARTED').length, 6);
         assert.match(await page.locator('#phase-table tr').nth(15).innerText(), /Final display.*secondary history\s+Not started/i);
         assert.equal(await page.locator('#history-phase-table .done').count(), 3);
         assert.equal(await page.locator('#history-phase-table .failed').count(), 1);
@@ -158,10 +159,29 @@ const { chromium } = require(process.env.PLAYWRIGHT_MODULE_DIR || 'playwright');
         assert.match(await page.locator('#official-counts').innerText(), /1,797 accepted official contest records, 775 exact matches, 1,022 unmatched official candidates, 44 conflicts/);
         assert.equal(await page.locator('#freshness-table tr').count(), 8);
         assert.match(await page.locator('#freshness-note').innerText(), /publication does not refresh any provider/);
-        assert.match(await page.locator('#resource-note').innerText(), /simultaneous process-tree peak was not measured/);
+        assert.match(await page.locator('#resource-note').innerText(), /simultaneous process-tree peak were not established/);
         assert.match(await page.locator('#injury-copy').innerText(), /All 1,320 historical snapshot versions remain unverified/);
         assert.match(await page.locator('#injury-clocks').innerText(), /1,246 lack one: 1,244 recovered image observations and two current PDF/);
         assert.match(await page.locator('#frontier-limit').innerText(), /no completed market-path study or performance gain is claimed/);
+        const spreadExample = JSON.parse(await page.locator('#spread-ats-evidence').textContent());
+        assert.equal(spreadExample.scope, 'INVENTED_EXAMPLE_NOT_NCAA_PERFORMANCE');
+        for (const [name, values] of Object.entries(spreadExample.probabilities)) {
+          await page.locator('[data-spread="' + name + '"]').click();
+          assert.equal(await page.locator('[data-spread][aria-pressed="true"]').count(), 1);
+          assert.deepEqual(await page.locator('#spread-probabilities strong').allTextContents(), ['cover','push','loss'].map(key => (values.home[key]*100).toFixed(2)+'%'));
+          assert.ok((await page.locator('#spread-orientation').innerText()).includes('Away covers '+(values.away.cover*100).toFixed(2)+'%'));
+          assert.equal(await page.evaluate(() => document.documentElement.scrollWidth > innerWidth), false, league+' '+width+' spread overflow');
+          counts.spreadScenarios++;
+        }
+        assert.deepEqual(await page.locator('#ats-record strong').allTextContents(), ['2','1','1']);
+        assert.match(await page.locator('#ats-denominator').innerText(), /4 eligible settled games; 66.67% across 3 decisions, excluding pushes. 1 unknown-clock record excluded/);
+        assert.match(await page.locator('#spread-clock-proof').innerText(), /Late capture is rejected.*17:01.*not captured before cutoff.*Zero orders/s);
+        assert.equal(evidence.ats_research.real_cover_probability_champion, null);
+        assert.equal(evidence.ats_research.real_ats_record_published, false);
+        await page.locator('[data-spread="favorite_half"]').focus();
+        await page.keyboard.press('Enter');
+        assert.equal(await page.locator('[data-spread="favorite_half"]').getAttribute('aria-pressed'), 'true');
+        counts.atsRecordViews++;
         counts.executionViews++;
         const preflightExamples = JSON.parse(await page.locator('#preflight-evidence').textContent());
         assert.equal(preflightExamples.length, 4);
@@ -243,7 +263,7 @@ const { chromium } = require(process.env.PLAYWRIGHT_MODULE_DIR || 'playwright');
       }
       await page.goto(pathToFileURL(path.join(root, 'docs/ncaa/index.html')).href);
       assert.equal(await page.locator('.cards a').count(), 2);
-      assert.match(await page.locator('.status').innerText(), /B044: 0 of 16 stages completed; source handoff failed/);
+      assert.match(await page.locator('.status').innerText(), /B045: 9 of 16 stages completed; child exited without its terminal return/);
       assert.match(await page.locator('.status').innerText(), /723,492 market observations.*2,818 source\/candidate records.*829 numeric finals/s);
       assert.match(await page.locator('.status').innerText(), /339 existing research issue rows across 5 games/);
       assert.doesNotMatch(await page.locator('.status').innerText(), /Latest owner stopped before science/);
@@ -575,11 +595,18 @@ const { chromium } = require(process.env.PLAYWRIGHT_MODULE_DIR || 'playwright');
       assert.match(await page.locator('#provider-disagreements').innerText(),/No comparable point\/threshold disagreement records/);
       counts.providerComparisonViews++;
       const commonVerified=structuredClone(providerReport);commonVerified.provider_comparisons.common_provider_set_verified=true;
+      commonVerified.evidence_release='INVENTED_COMMON_VERIFIED_FIXTURE';
       commonVerified.provider_comparisons.tables.season_common.common_provider_set_verified=true;
       commonVerified.provider_comparisons.tables.week_common=tableSource('week-common',[],'all_requested_providers_common');
       commonVerified.provider_comparisons.tables.disagreements=tableSource('disagreements',[]);
       await page.locator('#report-file').setInputFiles({name:'invented-common-report.json',mimeType:'application/json',buffer:Buffer.from(JSON.stringify(commonVerified))});
-      await page.waitForFunction(()=>document.getElementById('provider-disagreement-count').textContent.startsWith('0 of 0'));
+      // The preceding margin view already displays zero disagreements. Wait for
+      // the new fixture's own metadata, not a stale count from the prior report.
+      await page.waitForFunction(()=>{
+        try{return JSON.parse(document.getElementById('metadata').textContent).evidence_release==='INVENTED_COMMON_VERIFIED_FIXTURE'&&
+          document.getElementById('load-status').textContent.startsWith('Loaded ')&&document.getElementById('provider-target').value==='win';}
+        catch{return false;}
+      });
       await page.selectOption('#provider-cohort','common');
       assert.match(await page.locator('#provider-populations').innerText(),/Supplied common-game membership and paired N match across all three/);
       await page.selectOption('#provider-period','week');

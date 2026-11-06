@@ -1,3 +1,13 @@
+## Latest: actual N052 correction results; N053 prepared
+
+[Open the current review](review_n053.html) · [Scientific update](N053_RESEARCH_UPDATE.md) · [Sanitized complete current export](current_review_n053.json) · [Earlier N051 view](review_n052.html)
+
+The authenticated N052 run completed **150 correction states (50 binary, 100 point)**, **41,503 report rows**, **165 season metrics**, **255 paired comparisons** and **three nested checks**. Pre-2024 selection chose no designation-content model. Pooled 2024–2025 selected winner and total losses were higher than the unchanged baseline, with intervals including zero; margin retained the baseline exactly. These are historical, exposed development results, with no prospective edge or promotion claim.
+
+All **144 N051 designation cells / 864 comparisons** and the prior **288-cell injury-only negative study** remain unchanged. N052 adds **418 real issue rows**, reuses eight current native components and creates **zero native, control or protected-original refits**. Every current game retains three provider slots, real clocks and explicit missingness. Completed market work is source-only.
+
+N053 is **prepared, not owner-executed**: 70 train-only error-scale states, 140 planned distribution-season variants and 35,252 expected report rows. It holds original point centers fixed and selects on 2022–2023 CRPS. No new N053 fits, issues or promotion are claimed.
+
 # Sports Edge Lab · NFL
 
 **Latest actual owner review · November 6, 2026:** N051 completed **144/144 designation-only cells, 864 paired comparisons, 152 native fits and 418 issue rows**. The selected models do not justify promotion: negative control comparisons remain explicit. Research acceptance stays false; no protected-original refits or wagers occurred. [Read the actual N051 evidence and N052 preparation](N052_RESEARCH_UPDATE.md).
