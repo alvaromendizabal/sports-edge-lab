@@ -93,7 +93,7 @@ const {chromium}=require(process.env.PLAYWRIGHT_MODULE_DIR||'playwright');
   assert.match(await page.locator('#ravens-qb-context').innerText(),/Joe Fagnano will start/);
   assert.match(await page.locator('#ravens-qb-context').innerText(),/no forecast that fully incorporates the quarterback situation is claimed/);
   // The experimental issue is an additional role, never a replacement stream.
-  assert.equal(await page.locator('#coverage-model').inputValue(),'n047_fresh');
+  assert.equal(await page.locator('#coverage-model').inputValue(),'n048_fresh');
   assert.equal(await page.locator('#coverage-metric-model option[value="experimental_injury_issue"]').count(),0);
   await page.locator('#show-injury-challenger').click();
   assert.equal(await page.locator('#coverage-model').inputValue(),'experimental_injury_issue');
@@ -247,9 +247,9 @@ const {chromium}=require(process.env.PLAYWRIGHT_MODULE_DIR||'playwright');
   assert.equal(freshSource.review_recovered_week9_games,1);
   for(const gid of ['2026_09_TB_CHI','2026_09_BUF_MIN']){
    const card=page.locator('[data-coverage-game="'+gid+'"]');
-   const newestSource=await page.evaluate(()=>JSON.parse(document.getElementById('nfl-n047-current-source').textContent));
+   const newestSource=await page.evaluate(()=>JSON.parse(document.getElementById('nfl-n048-current-source').textContent));
    for(const r of newestSource.point_rows.filter(r=>r.game_id===gid))assert((await card.innerText()).includes(r.predicate));
-   assert.match(await card.textContent(),/2026-11-06T00:/);
+   assert.match(await card.textContent(),/2026-11-06T0[12]:/);
    assert.equal(await card.locator('.alternate-threshold').count(),0);
   }
   const issue42=await page.evaluate(()=>JSON.parse(document.getElementById('nfl-current-issues-n042').textContent));
@@ -296,12 +296,12 @@ const {chromium}=require(process.env.PLAYWRIGHT_MODULE_DIR||'playwright');
   assert.equal(issue46.actual_target_rows,348);assert.equal(issue46.new_native_fits,3);assert.equal(issue46.source_census.team_sections,29);
   assert.match(await page.locator('#owner-current-n046').innerText(),/28 other forecast games remain unknown/);
   const registry=await page.evaluate(()=>JSON.parse(document.getElementById('nfl-model-registry').textContent));
-  assert.equal(registry.models.length,35);
+  assert.equal(registry.models.length,39);
   assert.equal(await page.locator('#model-evidence-select option').count(),await page.locator('#coverage-model option').count()-1);
   for(const model of registry.models){
    await page.selectOption('#model-evidence-select',model.id);
    if(model.kind==='GENUINELY_ISSUED_EARLY_RESEARCH')assert.match(await page.locator('#model-evidence-status').innerText(),/AWAITING ISSUED OUTCOMES/);
-   assert.match(await page.locator('#model-evidence-readiness').innerText(),model.id==='n047_designation'?/ISSUED UNVALIDATED DISTRIBUTION TRANSFER/:/NOT CALIBRATED FOR EXECUTABLE LINE/);
+   assert.match(await page.locator('#model-evidence-readiness').innerText(),['n047_designation','n048_designation'].includes(model.id)?/ISSUED UNVALIDATED DISTRIBUTION TRANSFER/:/NOT CALIBRATED FOR EXECUTABLE LINE/);
   }
   for(const role of ['designation','fresh','original','shadow']){
    await page.locator('#show-'+role+'-n046').click();
@@ -344,6 +344,18 @@ const {chromium}=require(process.env.PLAYWRIGHT_MODULE_DIR||'playwright');
   for(const policy of ['annual_injury_head','event_expanding','weekly_expanding']){await page.selectOption('#cover-policy',policy);assert.match(await page.locator('#cover-distribution-metrics').innerText(),/120/);}
   await page.selectOption('#cover-policy','annual_injury_head');await page.selectOption('#cover-history-provider','kalshi');await page.selectOption('#cover-history-week','8');
   if(process.env.NFL_SCREENSHOTS){await page.locator('#owner-current-n047').screenshot({path:path.join(process.env.NFL_SCREENSHOTS,'nfl-current-n047-'+width+'.png')});await page.locator('#cover-research-n047').screenshot({path:path.join(process.env.NFL_SCREENSHOTS,'nfl-cover-n047-'+width+'.png')});}
+  const issue48=await page.evaluate(()=>JSON.parse(document.getElementById('nfl-current-issues-n048').textContent));
+  assert.equal(issue48.actual_target_rows,336);assert.equal(issue48.new_native_fits,0);assert.equal(issue48.source_census.team_sections,24);
+  for(const role of ['original','shadow','fresh','designation']){await page.locator('#show-'+role+'-n048').click();assert.equal(await page.locator('#coverage-model').inputValue(),'n048_'+role);assert.match(await page.locator('#coverage-count').innerText(),/JAX–BAL had passed T1/);assert.match(await page.locator('[data-coverage-game="2026_09_BUF_MIN"] .n042-injury-status').innerText(),/Unknown reports do not mean healthy/);}
+  assert.equal(await page.locator('#cover-current-issue').inputValue(),'n048');assert.match(await page.locator('#cover-current-clock').innerText(),/01:46:21/);
+  await page.selectOption('#cover-current-issue','n047');assert.match(await page.locator('#cover-current-clock').innerText(),/2026-11-06T00:/);await page.selectOption('#cover-current-issue','n048');
+  for(const season of ['2024','2025','2026'])for(const target of ['winner','margin','total']){await page.selectOption('#injury-only-season',season);await page.selectOption('#injury-only-target',target);assert.equal(await page.locator('#injury-only-metrics tbody tr').count(),16);}
+  await page.selectOption('#injury-only-target','winner');assert.match(await page.locator('#injury-only-study').innerText(),/source|unavailable/);assert.match(await page.locator('#injury-only-metrics').innerText(),/0.693899/);
+  assert.equal(await page.locator('#ledger-table [data-ledger-game]').count(),20);assert.match(await page.locator('#ledger-proof').innerText(),/2448 provider status cells/);assert.match(await page.locator('#ledger-proof').innerText(),/31824 model status cells/);
+  await page.selectOption('#ledger-week','9');assert.equal(await page.locator('#ledger-table [data-ledger-game]').count(),15);await page.selectOption('#ledger-team','BAL');assert.equal(await page.locator('#ledger-table [data-ledger-game]').count(),1);assert.match(await page.locator('#ledger-table').innerText(),/NOT_PUBLISHED_IN_THIS_SNAPSHOT/);
+  await page.selectOption('#ledger-team','all');await page.selectOption('#ledger-week','all');await page.locator('#ledger-next').click();assert.equal(await page.locator('#ledger-table [data-ledger-game]').count(),20);await page.locator('#ledger-prev').click();
+  const closure=await page.evaluate(()=>{const E=window.NFL_EVIDENCE_VIEW,F=window.NFL_FULL_COVERAGE,rows=E.games.flatMap(g=>E.providers.flatMap(p=>['winner','margin','total'].map(t=>F.reference(g,p,t))));return{n:rows.length,unique:new Set(rows.map(r=>[r.game_id,r.provider,r.target].join('|'))).size,bad:rows.filter(r=>r.value!=null&&!(Date.parse(r.quote_at??r.acquired_at)<Date.parse(E.games.find(g=>g.game_id===r.game_id).kickoff_utc))).length};});assert.deepEqual(closure,{n:2448,unique:2448,bad:0});
+  if(process.env.NFL_SCREENSHOTS){await page.locator('#injury-only-study').screenshot({path:path.join(process.env.NFL_SCREENSHOTS,'nfl-injury-only-n048-'+width+'.png')});await page.locator('#full-coverage').screenshot({path:path.join(process.env.NFL_SCREENSHOTS,'nfl-full-coverage-n049-'+width+'.png')});}
   const issue44=await page.evaluate(()=>JSON.parse(document.getElementById('nfl-current-issues-n044').textContent));
   assert.equal(issue44.actual_target_rows,261);
   for(const role of ['fresh','original','shadow']){
@@ -401,7 +413,7 @@ const {chromium}=require(process.env.PLAYWRIGHT_MODULE_DIR||'playwright');
   assert.match(await jaxCard.innerText(),/JAX 67\.8%/);
   await page.selectOption('#coverage-horizon','LATEST_OBSERVED');
 
-  assert.match(await page.locator('#coverage-asof').innerText(),/Current N047 early research issues/);
+  assert.match(await page.locator('#coverage-asof').innerText(),/Current N048 early research issues/);
   assert.match(await page.locator('#coverage-asof').innerText(),/Whole-pipeline acceptance is not claimed/);
   assert.doesNotMatch(await page.locator('#coverage-asof').innerText(),/FAILED/);
   assert.match(await page.locator('#unjoined-provider-note').innerText(),/Current capture recovered: LV at SF/);

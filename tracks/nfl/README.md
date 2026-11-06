@@ -1,12 +1,22 @@
 # Sports Edge Lab · NFL
 
-**Latest actual owner review · November 6, 2026:** 15 new margin-distribution states, four newly issued forecast lanes, 28 interval cards and 82 threshold rows. Native fits were reused. The new strict-spread comparison underperformed Kalshi; the dashboard shows that negative result alongside all wins and losses. [Read the N047 study](N047_RESEARCH_UPDATE.md).
+**Latest actual owner review · November 6, 2026:** all 288 injury-only native fits completed. The weak selected result exposed missing historical injury support: the 75-field block is entirely zero in 2025/2026, not evidence of healthy teams. Four current forecast lanes and 78 threshold references were genuinely issued; the official source refresh failed separately. [Read the N048 results](N048_RESEARCH_UPDATE.md).
 
-[**Open the live NFL dashboard →**](https://sports-edge-lab-nfl.alv-mendizabal.chatgpt.site/) · [Latest research update](N047_RESEARCH_UPDATE.md) · [Model evidence registry](review.html#model-evidence-registry) · [Model card](CURRENT_MODEL_CARD.md)
+[**Open the live NFL dashboard →**](https://sports-edge-lab-nfl.alv-mendizabal.chatgpt.site/) · [Latest research update](N048_RESEARCH_UPDATE.md) · [Model evidence registry](review.html#model-evidence-registry) · [Model card](CURRENT_MODEL_CARD.md)
+
+**Publication status:** the hosted dashboard is a separately deployed snapshot. The N048 update in this commit is available in the [research report](N048_RESEARCH_UPDATE.md) and [self-contained HTML](review.html); its hosted deployment has not yet been verified.
 
 **Pregame forecasting, matched market evaluation and recoverable ML systems.** Built by [Alvaro Mendizabal](https://github.com/alvaromendizabal). Review the evidence in your browser; no setup or private credentials required.
 
-## Latest verified work · N047
+## Latest verified work · N048
+
+- **Complete schedule explorer:** all 272 games, 39 public forecast streams, three providers and every target remain visible, with downloadable missing-state and clock records.
+- **A useful negative result:** all eight families completed 288 injury-only fits. A historical source-availability collapse explains the constant selected winner; no improvement or promotion is asserted.
+- **Current issues preserved:** 112 game cards / 336 target rows and 78 threshold references retain their actual issue clocks. The new injury-only candidates were not issued prospectively.
+- **Substantial source acquisition:** 172,373 timed in-game observations / 936 contracts; Kalshi 121 games, Polymarket 113, DraftKings explicitly unavailable. Latest-pregame histories are a different source view.
+- **Source failure is visible:** the N048 league refresh failed; its current forecast inputs contain partial separate observations. The dated N047 340-row snapshot remains available and unchanged.
+
+## Prior verified work · N047
 
 - **Uncertainty is now measured:** inspect 50/80/90/95% margin intervals, RPS, weighted interval scores and exact-contract provider comparisons. The research is completed; calibration and promotion remain unvalidated.
 - **Every forecast has a record:** 35 model streams preserve historical evidence or explicitly pending forward outcomes. Four new lanes contain 112 game cards; JAX–BAL remains visible with no new post-T1 native issue.
