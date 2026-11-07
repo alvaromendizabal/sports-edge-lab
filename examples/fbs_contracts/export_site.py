@@ -26,7 +26,7 @@ ASSETS = ('index.html','research.html','recovery.html','season.js','source-progr
           'injury-association.json','common-game-review.json',
           'frontier.html','frontier.js','frontier-games.json','frontier-review.json',
           'complete.html','complete.js','complete.css','complete-season.json',
-          'complete-data.js','complete-history.js','development-data.js','development-2026.json','season-archive.html','three-season.json','three-season-data.js')
+          'complete-data.js','complete-history.js','development-data.js','development-2026.json','season-archive.html','three-season.json','three-season-data.js','optional-study.json','optional-study-data.js')
 SOURCE_FILES = {'index.html':'complete.html','season-archive.html':'index.html'}
 
 
@@ -69,6 +69,7 @@ def export(commit, output):
     report=json.loads(committed(commit,'docs/fbs/complete-season.json'))
     development=json.loads(committed(commit,'docs/fbs/development-2026.json'))
     three=json.loads(committed(commit,'docs/fbs/three-season.json'))
+    optional=json.loads(committed(commit,'docs/fbs/optional-study.json'))
     manifest={'schema':'sports-edge-lab.public-fbs-snapshot.v3',
               'canonical_repository':REPOSITORY,'source_commit_sha':commit,
               'evidence_prepared_at':report['projection_prepared_at'],
@@ -78,6 +79,7 @@ def export(commit, output):
               'report_source_sha256':report['source_report_sha256'],
               'counts':report['counts'],'new_fits':0,'new_issues':0,'new_provider_requests':0,
               'development_reconstruction':{'counts':development['counts'],'computed_at':development['computed_at'],'evidence_class':development['evidence_class'],'resume_work':development['resume_work'],'cumulative_work':development['cumulative_work'],'season_coverage':development['season_coverage'],'scientific_results_generated_at':development['scientific_results_generated_at'],'sources':development['sources']},
+              'v039_optional_study':{k:optional[k] for k in ('counts','sources','generated_at','evidence_class','forecast_issued','promotion_allowed')},
               'three_season_explorer':{k:three[k] for k in ('identified_games','predicted_games','seasons','sources','new_fits','new_provider_requests','new_issues')},
               'publication_is_not_source_refresh':True,'public_files':files}
     (output/'published-snapshot.json').write_text(json.dumps(manifest,indent=2)+'\n')
