@@ -53,4 +53,22 @@ class N054RecoveredScienceTests(unittest.TestCase):
   self.assertIsNone(re.search(r's3://|arn:aws:|X-Amz-|model_sha256|component_bindings|lambda=|direct201_',json.dumps(self.data)))
  def test_deterministic_lossless_publication(self):
   self.assertEqual((HERE/'current_season_n054.json.gz').read_bytes(),pack(self.data));self.assertEqual(build(self.data),(HERE/'season_review_n054.html').read_text());self.assertLess((HERE/'current_season_n054.json.gz').stat().st_size,10_000_000)
+class N054StaticPublicationTests(unittest.TestCase):
+ def test_runtime_links_are_preserved_and_static_links_are_pinned(self):
+  from export_season_site_n054 import projection
+  commit='748ae11daa69bb114460dd30a96cf414f72c5936'
+  source='<a href="README.md">source</a><script>const link=`<a href="${esc(u)}">official source</a>`;</script>'
+  result=projection(source,commit)
+  self.assertIn('/blob/'+commit+'/tracks/nfl/README.md',result)
+  self.assertIn('href="${esc(u)}"',result)
+ def test_missing_static_file_still_blocks_publication(self):
+  from export_season_site_n054 import projection
+  with self.assertRaisesRegex(ValueError,'Unresolved public link'):
+   projection('<a href="missing-unregistered-public-file.json">missing</a>','748ae11daa69bb114460dd30a96cf414f72c5936')
+ def test_complete_real_page_has_no_unresolved_static_links(self):
+  from export_season_site_n054 import projection
+  result=projection((HERE/'season_review_n054.html').read_text(),'748ae11daa69bb114460dd30a96cf414f72c5936')
+  self.assertIn('href="${esc(u)}"',result)
+  self.assertTrue('href="previous.html"' in result,'Previous dated archive link was not mapped')
+  self.assertIn('forecast: 28 nearer games plus 122',result)
 if __name__=='__main__':unittest.main()

@@ -17,7 +17,8 @@ def projection(current,commit):
   if not path.is_relative_to(ROOT) or not path.is_file():raise ValueError('Unresolved public link: '+target)
   relative=path.relative_to(ROOT).as_posix();prefix=('https://raw.githubusercontent.com/alvaromendizabal/sports-edge-lab/' if path.suffix in ['.csv','.json'] else REPO+'/blob/')
   return 'href="'+prefix+commit+'/'+relative+('#'+parsed.fragment if parsed.fragment else '')+'"'
- current=re.sub(r'href="([^"]+)"',link,current)
+ sections=re.split(r'(<script\b[^>]*>.*?</script\s*>)',current,flags=re.I|re.S)
+ current=''.join(part if index%2 else re.sub(r'href="([^"]+)"',link,part) for index,part in enumerate(sections))
  return current.replace('Canonical source and dated reports are preserved in the NFL repository.','Canonical commit: <a href="'+REPO+'/commit/'+commit+'">'+commit+'</a>. <a href="provenance.json">Publication provenance</a>.')
 
 def export(output,commit):
