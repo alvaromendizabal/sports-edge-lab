@@ -4,6 +4,61 @@ Reproducible NBA forecasts, complete released-game inventories, chronological mo
 
 This NBA track belongs to the shared [Sports Edge Lab](../../README.md) repository. Its public material contains sanitized aggregate evidence and invented engineering examples. Actual game-level forecasts, feature recipes, model weights, source responses, full journals, and execution packages remain private.
 
+
+## B051R1 recovery and coverage audit — November 6, 2026 Pacific
+
+**Release status: local engineering qualification is in progress.** This recovery preserves the already completed B051 research, including its 216 estimators and 216 calibration records. It adds no model fits, provider observations, or forecast issues. The B050 owner remains a failed run; a successful software rehearsal cannot replace the required sixteen-stage owner execution.
+
+The separate stage-10 input failure has now been reproduced with the retained source archive. An inherited reader expected a filesystem path but received archive bytes. Both the rolling loader and its frozen fallback used that same reader. The R1 repair validates the archive's exact content, creates or reuses an immutable local file, and passes a copied parent mapping with the correct path type. Original archive bytes and earlier completion records remain intact. This input repair is separate from B051's placeholder-identity correction for stage 11. Final qualification and actual owner completion are reported separately.
+
+### Every released game, every available model view
+
+The inventory remains **1,200 assigned regular-season matchups**, **six official regular-season placeholders**, **67 preseason entries**, and **one championship placeholder**. Three secondary observations remain separately identified. The nominal regular-season schedule has 1,230 slots; 30 pairings remain unassigned, including the six published placeholders. The dashboard does not manufacture the other 24 identities.
+
+The recovered private dashboard audits **57,600 saved model-view rows** across 1,200 assigned games, twelve retained model/ensemble views, two horizons, and season-frozen versus weekly tracks. Ordinary least squares is explicitly regression-only; it does not acquire an invented winner or probability output. Saved current reconstructions and early future outlooks retain their original meaning. Weekly retraining origins are distinct from each game's T60/T120 cutoff; this is not a claim that a new model was fitted immediately before every game.
+
+A separate readiness export accounts for **28,800 game/provider/target/cutoff cells**: 1,200 assigned games × four providers × three targets × two horizons.
+
+| Readiness state | Cells |
+|---|---:|
+| Qualified saved model/provider comparison | 2,314 |
+| Past comparison not qualified | 806 |
+| Awaiting a qualified official final | 48 |
+| Future cutoff not yet reached | 25,632 |
+| **Total** | **28,800** |
+
+These are accounting cells, not unique games or new predictions. The coverage ledger distinguishes schedule membership, saved model outputs, observed source products, and strictly matched comparisons. It retains explicit source/season/target/horizon denominators instead of treating a discovery count as full scientific coverage.
+
+### Current strict comparison coverage
+
+The following counts deduplicate canonical game identity across models, calibration views, and provider methods. The denominator is the **130 verified regular-season finals at the retained source clock**, not all 1,200 assigned matchups. Margin and total columns refer to exact line-threshold comparisons; a binary product probability is not a point-margin or total-point mean.
+
+| Provider | Winner T120 / T60 | Margin threshold T120 / T60 | Total threshold T120 / T60 |
+|---|---:|---:|---:|
+| Kalshi | 130 / 130 | 130 / 130 | 129 / 129 |
+| Polymarket US | 130 / 130 | 130 / 130 | 130 / 130 |
+| Polymarket international | 126 / 126 | 126 / 126 | 126 / 126 |
+| DraftKings | No admitted rows in this strict cohort | No admitted rows in this strict cohort | No admitted rows in this strict cohort |
+
+Kalshi's two total-threshold horizons omit different games: their union reaches 130, while each individual horizon remains 129. Polymarket international lacks four finals at both horizons. The existing 69,911 model/provider pairs are repeated comparisons on these game sets; they are not 69,911 independent games. Retained DraftKings observations and earlier diagnostic comparisons remain available in their own evidence classes; they do not establish current exact-cutoff coverage, and no paid historical acquisition was performed in this recovery.
+
+### Prior-season source coverage and limits
+
+The available Polymarket international historical comparison panel comes from **secondary retrospective sampled history**, with no claim of original project possession. The following regular-season counts are the union of available matched comparator cohorts; individual model comparisons can have smaller common support. Each season's full regular-season denominator is 1,230 games.
+
+| Season | Target | T120 games | T60 games |
+|---|---|---:|---:|
+| 2024–25 | Winner | 1,221 | 1,223 |
+| 2024–25 | Margin threshold | 143 | 143 |
+| 2024–25 | Total threshold | 183 | 183 |
+| 2025–26 | Winner | 1,212 | 1,212 |
+| 2025–26 | Margin threshold | 1,202 | 1,203 |
+| 2025–26 | Total threshold | 1,205 | 1,206 |
+
+These available secondary cohorts must remain visible alongside the separate absence of a complete primary-source history. Complete prior-season Kalshi, Polymarket US, and DraftKings panels are not established by this audit. Quote availability, exact event matching, model availability, settlement, and metric eligibility remain separate checks.
+
+The remaining research gaps are specific: complete source/cutoff histories; original historical possession and first-news clocks; player identity, minutes, replacement and lineup impact; verified game-end and possession alignment for in-game features; and untouched prospective validation. The bounded historical injury study remains an 83-game evaluation, with no current injury evaluation cohort. Favorable feature ablations, adverse calibration effects, and the failed Ridge total arm all remain visible. No current outcome selects a new champion.
+
 ## Current research — November 6, 2026 Pacific
 
 **Model breadth is now measured.** B050 completed 156 estimator fits, 156 training-only calibration records, and nine separately journaled prior-season blend optimizations. The study used six matched training origins and richer basketball/context inputs while preserving all earlier completed fits. It trained logistic/Ridge, ordinary least squares, Extra Trees, histogram gradient boosting, XGBoost, LightGBM, CatBoost, native CPU PyTorch, and native CPU TensorFlow. Neural results that underperformed remain in the same score tables.
