@@ -1,5 +1,27 @@
 # NCAA evidence review
 
+## B050 dashboard preparation — November 7, 2026 UTC
+
+### Latest reported startup attempt
+
+The owner supplied terminal text for a B049 attempt showing `SyntaxError: source code cannot contain null bytes` at the leading `PK` archive bytes, followed by the literal `OBSERVED_SHELL_EXIT=1`. No B049 program `RETURN_STATUS`, `RETURN_BYTES`, `RETURN_SHA256`, `RETURN_ZIP`, or owner-terminal line accompanies that attempt. The bytes on the owner's machine have not been authenticated. A validated prepared archive does not establish that those same bytes reached the owner machine, and this startup failure does not establish a completed program run or new scientific work.
+
+The authenticated B048 return described below remains the latest physical owner return in the retained handoff; it stopped at the fixture gate, before scientific stage entry, at 0/16. B046 remains the latest retained scientific partial execution at 9/16. Preserve the program's recorded state, worker terminal, observed shell exit, and scientific stage completion as separate fields. New local tests and dashboard changes add no owner fits, provider calls, issued forecasts, or season-completeness credit.
+
+### Viewer changes in this preparation
+
+The private report viewer now includes an **Original vs per-game rolling** comparison. Each cell retains one supplied forecast row's winner, home probability, score centers, margin, total, cover/push/away-cover candidate when supplied, model identity, and pregame cutoff. Original frozen records, reconstructed originals, and per-game rolling reconstructions occupy separate columns. An absent arm stays visibly absent; weekly and latest-available reconstructions remain available in the detailed game view. The viewer does not select a champion or assemble targets from different forecast rows.
+
+The coverage queue displays the filtered population alongside the full loaded population, the number of games hidden by filters, and loaded versus preserved game/model rows. **Show all loaded games** clears all game-membership filters. Each capability card opens the corresponding missing-capability queue. The rolling-winner count now respects the selected stream and recipe, fixing cross-model count credit. This is a supplied-record count; it does not independently authenticate a fitted artifact, complete pregame training membership, or full official-season coverage.
+
+**Export filtered game inventory** downloads the exact visible game membership, selected row identities, per-target presence, and recovery actions as JSON. The export records the loaded report pin and preserves the full identity-overlay denominator separately from the filtered source-game count. It does not create a paired evaluation cohort or recompute metrics.
+
+For the delivered retained evidence, first choose `B046_PRIVATE_DASHBOARD_DATA.json`, then choose `B047R1_PRIVATE_IDENTITY_OVERLAY.json` in the overlay section. **Show all loaded games** recovers the unfiltered source inventory; the identity-overlay panel reports the separately grouped inventory. These files retain their original dates.
+
+Selecting a ZIP/PYZ archive, invalid UTF-8, or incomplete JSON now produces a specific correction in the report loader. Parsing and validation happen before replacing the current report. No network request or browser persistence is introduced; the existing `connect-src 'none'` policy remains in force. Public delivery remains generic viewer code and sanitized evidence. Private source rows and active forecast values remain in the owner's selected files.
+
+The preserved 47,130 game/model rows, exact identity overlay, historical metrics, provider clocks, source classifications, unresolved gaps, and retained versions remain separate evidence. Displaying every loaded source game or overlay group does not certify the complete current season, all three provider histories, qualified cover probabilities, or completed rolling research. Every missing output still requires its exact input, eligibility, fitted-artifact, and evaluation proof.
+
 ## B048 season workspace — current review
 
 ### Actual B048 return authenticated — November 7, 2026 UTC

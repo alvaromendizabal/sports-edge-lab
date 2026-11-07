@@ -6,6 +6,7 @@ import math
 from html.parser import HTMLParser
 from pathlib import Path
 import re
+import subprocess
 import unittest
 from unittest.mock import patch
 
@@ -19,6 +20,28 @@ class EvidenceTests(unittest.TestCase):
     def setUpClass(cls):
         cls.exports = {league: build_dashboard.evidence(league)
                        for league in ('ncaam', 'ncaaw')}
+
+    def test_private_viewer_model_scoped_inventory(self):
+        result = subprocess.run(['node', str(build_dashboard.HERE / 'test_private_viewer.cjs')],
+                                check=True, capture_output=True, text=True, timeout=20)
+        receipt = json.loads(result.stdout)
+        self.assertEqual(receipt['status'], 'PASS')
+        self.assertEqual(receipt['checks'], 16)
+        self.assertEqual(receipt['template_sha256'], hashlib.sha256(
+            (build_dashboard.HERE / 'private_report.html.tmpl').read_bytes()).hexdigest())
+
+    def test_reported_startup_does_not_replace_authenticated_science(self):
+        pages = build_dashboard.outputs()
+        for path, output in pages.items():
+            if 'private-report' in path.parts:
+                continue
+            self.assertIn('Latest reported startup', output)
+            self.assertIn('observed shell exit 1', output)
+            self.assertIn('No program return was supplied', output)
+            self.assertIn('Current B048 return', output)
+            self.assertIn('Dated B047R1 return', output)
+        self.assertEqual(self.exports['ncaam']['current_results_status']['release'], 'B043')
+        self.assertEqual(self.exports['ncaaw']['current_results_status']['release'], 'B043')
 
     def test_exact_separate_population_counts(self):
         expected = {'ncaam': (5758, 5749), 'ncaaw': (5280, 5621)}

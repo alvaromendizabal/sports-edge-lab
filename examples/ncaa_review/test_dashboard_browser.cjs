@@ -16,7 +16,7 @@ const { fixture: identityOverlayFixture } = require('./test_identity_overlay.cjs
   const page = await browser.newPage();
   page.on('pageerror', error => failures.push(error.message));
   page.on('request', request => {
-    if (!/^(file|data):/.test(request.url())) externalRequests.push(request.url());
+    if (!/^(file|data|blob):/.test(request.url())) externalRequests.push(request.url());
   });
   const root = path.resolve(__dirname, '../..');
   const objectiveMap = {
@@ -363,6 +363,35 @@ const { fixture: identityOverlayFixture } = require('./test_identity_overlay.cjs
       assert.doesNotMatch(await page.locator('#metric-details').innerText(),/hypothetical_ROI/);
       await page.locator('#metric-details > summary').click();
       counts.modelMetricViews=(counts.modelMetricViews||0)+3;
+      // Generic fixture only: compare separate arms, inspect complete membership,
+      // and download local inventory without invoking a provider or owner run.
+      await page.locator('#show-comparison').click();
+      assert.equal(await page.locator('[data-comparison-game]').count(),25);
+      assert.match(await page.locator('#results').innerText(),/Original frozen record/);
+      assert.match(await page.locator('#results').innerText(),/Per-game rolling record not supplied/);
+      await page.selectOption('#completion-filter','final');
+      assert.equal(await page.locator('[data-comparison-game]').count(),1);
+      assert.match(await page.locator('#filter-scope').innerText(),/1.*27.*26/s);
+      const inventoryDownloadEvent=page.waitForEvent('download');
+      await page.locator('#export-game-inventory').click();
+      const inventoryDownload=await inventoryDownloadEvent;
+      assert.equal(inventoryDownload.suggestedFilename(),'ncaa_filtered_game_inventory.json');
+      const inventoryExport=JSON.parse(fs.readFileSync(await inventoryDownload.path(),'utf8'));
+      assert.equal(inventoryExport.schema,'sports-edge-lab.private.game-inventory-export.v1');
+      assert.equal(inventoryExport.filtered_source_game_count,1);
+      assert.equal(inventoryExport.loaded_source_game_count,27);
+      assert.equal(inventoryExport.hidden_by_filters,26);
+      assert.equal(inventoryExport.games.length,1);
+      assert.equal(inventoryExport.games[0].event_id,'invented-0');
+      assert.match(inventoryExport.report_physical_pin.sha256,/^[a-f0-9]{64}$/);
+      await page.locator('#reset-game-filters').click();
+      assert.equal(await page.locator('#completion-filter').inputValue(),'all');
+      assert.match(await page.locator('#filter-scope').innerText(),/27.*27.*0/s);
+      await page.locator('#report-file').setInputFiles({name:'wrong-archive.pyz',mimeType:'application/zip',buffer:Buffer.from([80,75,3,4,0,0])});
+      await page.waitForFunction(()=>document.querySelector('#load-status').textContent.includes('ZIP/PYZ'));
+      assert.match(await page.locator('#load-status').innerText(),/Existing report remains unchanged/);
+      assert.equal(await page.locator('[data-comparison-game]').count(),25);
+      counts.comparisonInventoryViews=(counts.comparisonInventoryViews||0)+5;
       await page.locator('#show-games').click();
       counts.seasonTableViews=(counts.seasonTableViews||0)+4;
       assert.equal(await page.locator('[data-game]').count(), 25);
