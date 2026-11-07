@@ -2,7 +2,7 @@
 
 The active [NFL season dashboard](season_review_n054.html) accounts for **272 scheduled games, all 32 teams, 122 verified finals and 150 future games**. Chicago–Seattle and Jacksonville–Baltimore are visible with their actual outcomes, preserved earlier issues and new rolling reconstructions. Every game has a row for every model role and each of DraftKings, Kalshi and Polymarket; absence reasons and source horizons are explicit.
 
-**N053R1 is an actual partial owner run with substantial completed science. N054 is prepared, not owner-executed.** A final summary serialization error left the owner's top-level totals null. Independent state, receipt and CSV verification recovers the actual completed work without repeating any model fit. The separate source-reuse parent-admission failure remains recorded.
+**N053R1 is an actual partial owner run with substantial completed science. N054 was owner-executed and returned a diagnostic packaging failure.** The latest N055 publication audit retains the verified N053R1 science while the next continuation authenticates the incomplete N054 durable closure. The embedded original N054 preparation is a dated plan, not the latest execution status. See [the N055 completeness audit](PUBLICATION_AUDIT_N055.md). A final summary serialization error left the owner's top-level totals null. Independent state, receipt and CSV verification recovers the actual completed work without repeating any model fit. The separate source-reuse parent-admission failure remains recorded.
 
 ## Active reports and complete exports
 
@@ -71,8 +71,8 @@ All three providers use the same scheduled-event inventory and 122-game complete
 |---|---|
 | Logistic and ridge raw football models | Actual N053R1 states verified; cutoff reuse and numerical diagnostics retained |
 | Extra Trees and retained component blends | Existing components reused with original fit clocks; no new component-fit credit |
-| Linear regression and histogram gradient boosting | New N054 breadth comparison prepared; no owner result claimed |
-| XGBoost, LightGBM and CatBoost classifiers / regressors | Earlier dated family evidence retained; new annual-forward breadth comparison prepared |
+| Linear regression and histogram gradient boosting | N054 breadth continuation attempted; no newly closed result admitted from the diagnostic |
+| XGBoost, LightGBM and CatBoost classifiers / regressors | Earlier dated family evidence retained; annual-forward breadth continuation awaits complete durable recovery |
 | PyTorch and TensorFlow classifiers / regressors | Earlier evidence remains dated; actual next-run dependency, optimizer and state receipts required |
 | Ensembles, blends and probability calibration | Retained versions remain distinct; new variants require earlier-only validation |
 | Fixed market support/content arms | 318 support-blocked jobs; zero completed states or predictive credit |
