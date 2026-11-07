@@ -69,6 +69,6 @@ class N054StaticPublicationTests(unittest.TestCase):
   from export_season_site_n054 import projection
   result=projection((HERE/'season_review_n054.html').read_text(),'748ae11daa69bb114460dd30a96cf414f72c5936')
   self.assertIn('href="${esc(u)}"',result)
-  self.assertIn('prepared-archive.html',result)
+  self.assertTrue('href="previous.html"' in result,'Previous dated archive link was not mapped')
   self.assertIn('forecast: 28 nearer games plus 122',result)
 if __name__=='__main__':unittest.main()
