@@ -7,7 +7,7 @@ class N054RecoveredScienceTests(unittest.TestCase):
  def setUpClass(cls):
   cls.data=validate(load());cls.games={g['game_id']:g for g in cls.data['games']}
  def test_every_game_team_and_role_is_present(self):
-  d=self.data;self.assertEqual(len(d['games']),272);self.assertEqual(sum(g['completed'] for g in d['games']),122);self.assertEqual(len(d['lanes']),59);self.assertEqual(len(d['model_rows']),48144);self.assertEqual(sum(r['available'] for r in d['model_rows']),7457)
+  d=self.data;self.assertEqual(len(d['games']),272);self.assertEqual(sum(g['completed'] for g in d['games']),122);self.assertEqual(len(d['lanes']),63);self.assertEqual(len(d['model_rows']),51408);self.assertEqual(sum(r['available'] for r in d['model_rows']),8921)
   self.assertEqual(len({g['away'] for g in d['games']}|{g['home'] for g in d['games']}),32)
   for g in ['2026_08_CHI_SEA','2026_09_JAX_BAL']:
    self.assertTrue(self.games[g]['completed']);self.assertEqual(len([r for r in d['model_rows'] if r['game_id']==g and r['lane_id'].startswith('n053r1_raw_') and r['available']]),12)
@@ -15,7 +15,9 @@ class N054RecoveredScienceTests(unittest.TestCase):
   o=self.data['owner_execution'];self.assertEqual(o['completed_cutoff_jobs'],o['unique_native_states']+o['exact_reused_cutoff_jobs']);self.assertEqual(o['optimizer_starts'],3432);self.assertEqual(o['optimizer_returns'],3432);self.assertEqual(o['durable_commits'],3432);self.assertIsNone(o['top_level_fit_counter']);self.assertIsNone(o['top_level_issue_counter']);self.assertEqual(self.data['new_owner_fits'],3502)
  def test_new_current_issues_and_original_clocks(self):
   rows=[r for r in self.data['model_rows'] if r['lane_id'].startswith('n053r1_issued_') and r['available']];self.assertEqual(len(rows),672);self.assertEqual(len({r['game_id'] for r in rows}),28);self.assertTrue(all(r['actual_issue_eligible'] and r['issued_at'] and r['fit_completed_at'] for r in rows));self.assertEqual(self.data['new_owner_issues'],len(rows)+len(self.data['conditional_rows']))
-  self.assertEqual(len(self.data['prior_conditional_rows']),82);self.assertEqual({r['conditional_semantics_version'] for r in self.data['conditional_rows']},{'N049 v1'})
+  self.assertEqual(self.data['current_raw_numerical_replay']['forecast_rows_replayed'],336);self.assertLess(self.data['current_raw_numerical_replay']['maximum_absolute_prediction_error'],1e-12);self.assertEqual(len(self.data['prior_conditional_rows']),82);self.assertEqual({r['conditional_semantics_version'] for r in self.data['conditional_rows']},{'N049 v1'})
+ def test_every_future_game_has_a_separately_dated_forecast(self):
+  d=self.data;rows=[r for r in d['model_rows'] if r['lane_id'].startswith('n054_outlook_') and r['available']];self.assertEqual(len(rows),1464);self.assertEqual(len({r['game_id'] for r in rows}),122);self.assertTrue(all(r['new_owner_issue_credit']==0 and r['new_review_issue_credit']==1 and not r['long_horizon_accuracy_validated'] for r in rows));self.assertEqual(d['future_game_forecast_coverage']['covered_future_games'],150);self.assertEqual(len(d['raw_provider_timing_exclusions']),8)
  def test_zero_repeated_protected_studies_and_source_credit(self):
   for k in ['protected_refits','repeated_designation_cells','repeated_injury_cells','repeated_correction_states','controls_changed','source_only_predictive_credit']:self.assertEqual(self.data['owner_execution'][k],0)
   self.assertFalse(self.data['original_evidence_modified']);self.assertEqual(self.data['next']['actual_owner_results'],0);self.assertEqual(len(self.data['correction_comparisons']),255)
@@ -25,12 +27,14 @@ class N054RecoveredScienceTests(unittest.TestCase):
   for r in self.data['raw_season_metrics']:
    if r['season']>=2024:self.assertFalse(r['selection_period_eligible'])
  def test_complete_equal_provider_horizons_and_exact_metrics(self):
-  d=self.data;self.assertEqual(len(d['provider_rows']),272*3*3*len(d['provider_horizons']));self.assertIn('N053R1_LATEST_OBSERVED',d['provider_horizons']);self.assertEqual(d['current_source_readback']['verified_objects'],181)
+  d=self.data;self.assertEqual(len(d['provider_rows']),272*3*3*len(d['provider_horizons']));self.assertIn('N054_REVIEW_LATEST_AVAILABLE',d['provider_horizons']);self.assertIn('N053R1_LATEST_OBSERVED',d['provider_horizons']);self.assertEqual(d['current_source_readback']['verified_objects'],181)
   for c in d['coverage_rows']:
    rs=[r for r in d['provider_rows'] if r['horizon']==c['horizon'] and r['provider']==c['provider'] and r['target']==c['target'] and self.games[r['game_id']]['completed']];self.assertEqual(len(rs),122);self.assertEqual(sum(r['available'] for r in rs),c['available']);self.assertEqual(sum(r['eligible'] for r in rs),c['eligible'])
   self.assertEqual(len(d['matched_current_metrics']),35);self.assertEqual(len(d['matched_current_comparisons']),56);self.assertEqual({r['games'] for r in d['matched_current_metrics'] if r['cohort']=='EXACT91_T2'},{91});self.assertEqual({r['games'] for r in d['matched_current_metrics'] if r['cohort']=='COMMON119_T2_PROVIDERS'},{119})
  def test_scale_negative_findings_and_complete_exports(self):
-  d=self.data;self.assertEqual(len(d['scale_per_game']),35252);self.assertEqual(len(d['scale_season_metrics']),140);self.assertEqual(len(d['scale_comparisons']),260);self.assertTrue(all(r['primary_p_holm']>=.05 for r in d['scale_comparisons']));self.assertEqual(len(d['raw_per_game']),18889);self.assertEqual(len(d['all_model_metrics']),638)
+  d=self.data;self.assertEqual(len(d['scale_per_game']),35252);self.assertEqual(len(d['scale_season_metrics']),140);self.assertEqual(len(d['scale_comparisons']),260);self.assertTrue(all(r['primary_p_holm']>=.05 for r in d['scale_comparisons']));self.assertEqual(len(d['raw_current_issues']),336);self.assertEqual(len(d['raw_per_game']),18889);self.assertEqual(len(d['all_model_metrics']),638)
+ def test_dated_week10_recovery_preserves_real_gaps(self):
+  d=self.data;c={(r['provider'],r['target']):r['available_games'] for r in d['current_provider_counts'] if r['week']==10};self.assertEqual((c['DraftKings','winner'],c['Kalshi','winner'],c['Polymarket','winner']),(13,14,14));self.assertEqual((c['Kalshi','margin'],c['Kalshi','total'],c['Polymarket','margin'],c['Polymarket','total']),(1,1,14,14));self.assertEqual(sum(r.get('one_sided_known_threshold_games',0) for r in d['current_provider_counts'] if r['week']==10),5);self.assertEqual(d['draftkings_sea_lv_gap']['exact_event_matches'],0);self.assertEqual(d['review_provider_capture']['predictive_credit'],0);self.assertTrue(d['review_provider_capture']['acquired_after_N053R1_issues'])
  def test_original_minute_registration_unchanged(self):
   s=self.data['source_diagnostics'];self.assertEqual(s['registered_games'],121);self.assertEqual(s['feature_rows'],172373);self.assertEqual(s['expanded_window_rows'],689492);self.assertFalse(s['completed_study_recomputed'])
  def test_additive_rams_paths_never_rewrite_original_scope(self):
