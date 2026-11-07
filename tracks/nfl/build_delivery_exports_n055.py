@@ -2,6 +2,7 @@
 import argparse,csv,hashlib,json,pathlib
 from build_season_review_n054 import load,validate,build
 from publication_audit_n055 import audit
+from actual_recovery_n055 import enrich
 
 COLUMNS=['record_type','record_number','game_id','season','target','provider','lane_id','horizon','value','available','eligible','record_json']
 
@@ -19,7 +20,7 @@ def records(data):
 
 def export(output):
  output=pathlib.Path(output);output.mkdir(parents=True,exist_ok=True)
- data=validate(load());audited=audit(data)
+ data=enrich(validate(load()));audited=audit(data)
  html=output/'Sports_Edge_Lab_NFL_N055.html';html.write_text(build(data),encoding='utf-8')
  full=output/'Sports_Edge_Lab_NFL_N055_full.csv'
  counts={}
@@ -29,7 +30,7 @@ def export(output):
    writer.writerow(row);counts[row['record_type']]=counts.get(row['record_type'],0)+1
  a=output/'Sports_Edge_Lab_NFL_N055_audit.json';a.write_text(json.dumps(audited,indent=2),encoding='utf-8')
  outputs=[html,full,a]
- manifest={'schema':'nfl.public.delivery.n055.v1','source_projection_sha256':audited['source_projection_sha256'],'record_counts':counts,'csv_rows':sum(counts.values()),'new_fits':0,'new_issues':0,'new_numeric_source_values':0,'files':{f.name:{'bytes':f.stat().st_size,'sha256':hashlib.sha256(f.read_bytes()).hexdigest()} for f in outputs}}
+ manifest={'schema':'nfl.public.delivery.n055.v1','source_projection_sha256':audited['source_projection_sha256'],'record_counts':counts,'csv_rows':sum(counts.values()),'publication_new_fits':0,'publication_new_issues':0,'recovered_N054_market_native_states':102,'recovered_N054_owner_issue_rows':2233,'new_numeric_source_values':0,'files':{f.name:{'bytes':f.stat().st_size,'sha256':hashlib.sha256(f.read_bytes()).hexdigest()} for f in outputs}}
  (output/'Sports_Edge_Lab_NFL_N055_export_manifest.json').write_text(json.dumps(manifest,indent=2),encoding='utf-8')
  return manifest
 

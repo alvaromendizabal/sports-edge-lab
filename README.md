@@ -8,21 +8,27 @@
 
 [**Open the FBS browser dashboard →**](https://sports-edge-lab-fbs.alv-mendizabal.chatgpt.site) · [FBS clock and coverage methodology](docs/fbs/SEASON_EXPLORER_2026-11-03.md) · [FBS source and model card](tracks/ncaaf/README.md)
 
-## Current NFL evidence · November 3, 2026
+## Current NFL evidence · November 7, 2026
 
-**Eight model families. Three targets. One auditable comparison.** The latest authenticated owner execution passed all 63 stages, fitted 192 forward models and issued early research forecasts for 29 games. It reused the completed historical 1,152-cell design across eight feature blocks. The dashboard accounts for all 272 scheduled games, every game last week and every game this week. Early forecasts remain separate from final-hour-qualified recommendations, of which there are zero.
+**All 272 scheduled games, 32 teams and 73 retained model roles are accounted for.** The retained season snapshot contains 122 completed games, 121 decisive results and 150 future games. Chicago–Seattle and Jacksonville–Baltimore are included, and historical `LA` team identifiers resolve to the Los Angeles Rams. Every game has the same model and three-provider inventory, with available values, timing and specific reasons for unavailable numerical outputs.
 
-| Matched 2026 monitoring | Model | Kalshi | What the difference means |
+The latest verified recovery admits **102 completed native market states and 2,233 actual N054 issue rows** with their original source, model and issue clocks. Four football lanes cover all 150 future games through 28 nearer owner-issued games and 122 long-range owner outlooks. Earlier review outlooks remain in history. This publication adds no fits, source values or forecasts, and full N054 owner-package closure remains incomplete. The three unresolved model-family starts receive no completed-fit credit.
+
+| Frozen 119-game 2026 monitoring cohort | Model | Kalshi | Interpretation |
 |---|---:|---:|---|
 | Winner accuracy, 119 non-ties | **79/119 · 66.4%** | 76/119 · 63.9% | Accuracy-focused research model: three additional correct picks |
 | Winner log loss, same 119 games | **0.6291** | 0.6444 | Probability-focused model: lower loss; different model from the accuracy row |
-| Last completed week, common 13 of 14 finals | **11/13** | 10/13 | Both highlighted models picked one more winner; Kalshi had better probability scores that week |
+| Previously reported completed week, common 13 of 14 finals | **11/13** | 10/13 | Both highlighted models picked one more winner; Kalshi had better probability scores that week |
 
-These are **descriptive reconstructions**, not an originally issued betting record. Primary comparisons use T−2h inputs and quotes, the same events and the declared non-tie proxy. Paired week-bootstrap intervals cross zero. No durable or prospective advantage is established. Full source coverage is **121 finals**; the scored model panel remains **120 finals for points / 119 non-ties for winner scoring**. Polymarket history is unavailable for this NFL cohort, so no unsupported comparison is shown.
+These frozen results are descriptive reconstructions using T−2h inputs and quotes on matching events with the declared non-tie probability target. Their paired week-bootstrap intervals cross zero. They do not establish a durable or prospective advantage, and they are not the full current-season schedule.
+
+**Coverage and evaluation cohorts remain separate:** restored source coverage includes **122 completed games**; the protected model benchmark has **120 point-target / 119 winner games**; original Polymarket timed metrics retain **92 timed reference games including the tie / 91 decisive winner games**. Restored **common119 T2 provider** comparisons and **exact91 T2 model** comparisons are separately labeled. No source-only restoration is counted as a predictive improvement, and no horizon substitutes for another.
+
+The recovered fixed market study adds 448 historical prediction rows. Its paired comparisons use 73 point-target and 72 winner games: margin point estimates improve, winner log loss and total-point error worsen, and all six Holm-adjusted p-values equal 1. No model is promoted. The dashboard and [complete recovery report](tracks/nfl/ACTUAL_N054_RECOVERY_N055.md) preserve the prior negative studies, six controls, actual state reuse and every source limitation.
 
 [Season and weekly results](tracks/nfl/README.md) · [Open interactive dashboard](https://sports-edge-lab-nfl.alv-mendizabal.chatgpt.site/) · [Model card](tracks/nfl/CURRENT_MODEL_CARD.md) · [Methodology](tracks/nfl/CURRENT_METHODOLOGY.md) · [Resolved examples](tracks/nfl/current_disagreements.csv)
 
-The dashboard opens directly in a browser. It is an explicitly published, dated snapshot of this repository, with its source commit visible; it is not a live price feed or automatic GitHub sync. The [self-contained HTML](tracks/nfl/review.html) also works offline. Current NFL provider comparisons are limited to DraftKings, Kalshi and Polymarket. Older studies retain their original provider definitions in a closed historical section.
+The dashboard opens directly in a browser. It is an explicitly published, dated snapshot of this repository, with its source commit visible; it is not a live price feed or automatic GitHub sync. The [complete season HTML](tracks/nfl/season_review_n054.html) also works offline. Current NFL provider comparisons are limited to DraftKings, Kalshi and Polymarket. Older studies retain their original provider definitions in a closed historical section.
 
 ## Review the work in five minutes
 
@@ -157,13 +163,13 @@ The [serving-lineage case study](docs/CASE_STUDY_SERVING_LINEAGE.md) connects th
 
 Raw MARKET is archived bookmaker consensus after paired de-vig. A fitted MARKET-only model is a separate learned baseline. Kalshi and Polymarket US are separate venue diagnostics, with contract-specific payout targets and execution requirements.
 
-| 2026 monitoring archive | NFL games | FBS games |
+| Frozen 2026 multi-sport archive (historical cohorts) | NFL games | FBS games |
 |---|---:|---:|
 | Kalshi intersection | 77 | 177 |
 | Polymarket US intersection | 59 | 272 |
 | Both venues | 59 | 174 |
 
-These are intersection counts, not completed-wager counts. NFL midpoint comparisons remain conditional-non-tie proxies. A historical quote does not establish an available ask, depth, correct fees, a fill or a contract-aligned payoff. Historical net profit remains unavailable. The illustrative public ledger permits unspent cash, rejects invalid execution evidence, and never accepts outcomes during selection.
+These are frozen historical intersection counts. The NFL values above belong to an earlier study; current NFL schedule, source restoration and scored cohorts are described in the dated NFL section above. NFL midpoint comparisons retain the conditional-non-tie probability target. Recorded source values do not establish unobserved fields or a different target definition. The illustrative public ledger preserves its original constraints and never accepts outcomes during selection.
 
 ## Engineering decisions worth inspecting
 
