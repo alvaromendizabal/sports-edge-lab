@@ -373,7 +373,7 @@ These historical seasons are **development-exposed**: they contributed to model 
 
 The log-loss selection minus the accuracy selection has pooled log-loss difference **-0.005184**, with descriptive week-block interval **[-0.006486, -0.003840]**. Its accuracy difference is **-0.0695 percentage points**, with interval **[-0.4308, +0.2912]**. The latter crosses zero.
 
-These 2,000 resamples retain whole weeks within seasons and identical games for the two selections. They are not adjusted for the prior model search or dependence across weeks. A descriptive historical difference does not establish future advantage or profitability.
+These 2,000 resamples retain whole weeks within seasons and identical games for the two selections. They are not adjusted for the prior model search or dependence across weeks. A descriptive historical difference does not establish validated future forecast performance.
 
 ### Original monitoring, rolling research and provider comparisons
 
