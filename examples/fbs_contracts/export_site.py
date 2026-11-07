@@ -14,7 +14,6 @@ import posixpath
 import re
 import subprocess
 from urllib.parse import urlsplit
-from .season_transport import unpack
 
 ROOT = Path(__file__).resolve().parents[2]
 REPOSITORY = 'https://github.com/alvaromendizabal/sports-edge-lab'
@@ -25,7 +24,10 @@ ASSETS = ('index.html','research.html','recovery.html','season.js','source-progr
           'v013-native-research-2026-10-31.json',
           'models.html','models.js','model-registry.json','recovery-review.json',
           'injury-association.json','common-game-review.json',
-          'frontier.html','frontier.js','frontier-games.json','frontier-review.json')
+          'frontier.html','frontier.js','frontier-games.json','frontier-review.json',
+          'complete.html','complete.js','complete.css','complete-season.json',
+          'complete-data.js','complete-history.js','season-archive.html')
+SOURCE_FILES = {'index.html':'complete.html','season-archive.html':'index.html'}
 
 
 def committed(commit, path):
@@ -52,7 +54,8 @@ def export(commit, output):
     output=Path(output);output.mkdir(parents=True,exist_ok=True)
     files=[]
     for name in ASSETS:
-        body=committed(commit,'docs/fbs/'+name)
+        source_name=SOURCE_FILES.get(name,name)
+        body=committed(commit,'docs/fbs/'+source_name)
         if name.endswith('.html'):
             text=body.decode()
             text=re.sub(r'href="([^"]+)"',lambda m:'href="'+navigation(m.group(1),commit)+'"',text)
@@ -62,13 +65,16 @@ def export(commit, output):
                   '<a href="published-snapshot.json">Publication provenance</a></div>')
             text=text.replace('</body>',note+'</body>');body=text.encode()
         (output/name).write_bytes(body)
-        files.append({'name':name,'bytes':len(body),'sha256':hashlib.sha256(body).hexdigest()})
-    report=unpack(json.loads(committed(commit,'docs/fbs/season-2026.json')))
-    manifest={'schema':'sports-edge-lab.public-fbs-snapshot.v2',
+        files.append({'name':name,'source_path':'docs/fbs/'+source_name,'bytes':len(body),'sha256':hashlib.sha256(body).hexdigest()})
+    report=json.loads(committed(commit,'docs/fbs/complete-season.json'))
+    manifest={'schema':'sports-edge-lab.public-fbs-snapshot.v3',
               'canonical_repository':REPOSITORY,'source_commit_sha':commit,
-              'evidence_prepared_at':report['prepared_at'],
-              'owner_release':report['owner']['release'],
-              'owner_return_sha256':report['owner']['return_sha256'],
+              'evidence_prepared_at':report['projection_prepared_at'],
+              'schedule_observed_at':report['source_observed_at'],
+              'schedule_capture_completed_at':report['capture_completed_at'],
+              'retained_model_report_at':report['retained_model_report_at'],
+              'report_source_sha256':report['source_report_sha256'],
+              'counts':report['counts'],'new_fits':0,'new_issues':0,'new_provider_requests':0,
               'publication_is_not_source_refresh':True,'public_files':files}
     (output/'published-snapshot.json').write_text(json.dumps(manifest,indent=2)+'\n')
     class Assets(HTMLParser):

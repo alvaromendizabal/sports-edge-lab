@@ -1,5 +1,43 @@
 # NCAA FBS: an independent research branch
 
+## November 7 · V038 complete season review
+
+[**Open the FBS season & model lab →**](https://sports-edge-lab-fbs.alv-mendizabal.chatgpt.site) · [Public page source](complete.html) · [All-game data](complete-season.json)
+
+The main dashboard now opens on **all 888 identified 2026 fixtures**. It includes the complete cumulative capture, the 56-game previous Pacific week and the 63-game current Pacific week, team/ID search, result and model-coverage filters, native-week selection, pagination, downloadable data and keyboard-accessible game details. The active review uses analytical terminology throughout.
+
+The latest authenticated schedule observation is **2026-11-06T20:28:52Z**, with capture completion at **20:29:25Z**. It contains **629 observed completions** and 259 fixtures without an observed final. This is a dated capture, not live state. The two additional finals relative to the older public snapshot are UTSA 29–60 Florida Atlantic and James Madison 54–23 Southern Miss. Seven current-week games were observed complete.
+
+| Scope | Identified games | Observed complete | Retained model replays | Authenticated rolling issues |
+|---|---:|---:|---:|---:|
+| Cumulative 2026 | 888 | 629 | 622 | 0 |
+| Previous Pacific week, Oct 26–Nov 1 | 56 | 56 | 56 | 0 |
+| Current Pacific week, Nov 2–8 | 63 | 7 | 0 | 0 |
+
+Every fixture has visible winner, probability, home-margin, cover-likelihood and total fields. **266 games still lack retained model projections**, and no qualified cover probability, prediction interval or injury-adjusted forecast is admitted. The page gives the reason for these missing outputs rather than silently dropping the game. A retrospective replay does not become a pregame issue through republication. The 622-game replay retains 465 correct winners and log loss 0.5133276378012555; the separate 301-game claim remains unauthenticated here.
+
+### Four-provider comparisons and historical models
+
+Each matchup exposes DraftKings, Kalshi, Polymarket US and Polymarket Global separately, with winner probabilities, point lines or supported median intervals, native statuses, quote/acquisition clocks, declared cutoff, interval end, product and identity status. Numeric winner-reference counts are 600, 708, 680 and 702, respectively. These counts include descriptive and quote-clock-unresolved references; they do not prove qualification or historical possession. Polymarket US margin/total support is retained as **52 intervals for each target**, not scalar expected scores. Fees, depth and liquidity are absent from this projection.
+
+The comparison panel reuses the exact-common-game winner diagnostics for T−120 (479 games), T−60 (481) and latest pre-kickoff (482). All four providers have lower log loss than the retained model on those cohorts. Inputs were rounded to four decimals, the matching model prediction cutoff is unproven, and these diagnostics do not select a model. No metrics were regenerated from rounded values in V038.
+
+The historical explorer exposes **167 retained identities and 358 scorecards** across 2024/2025, with separate exact cohort hashes, family filters and target views. Winner metrics include accuracy, log loss, Brier, ECE, MCC and ROC/PR AUC when recorded. Point targets include MAE, RMSE and bias when recorded. The source does not report cover metrics. Full historical per-game provider matrices and authenticated per-game rolling retraining/issuance remain incomplete and are explicitly marked.
+
+The 33-fit market-path study, its 11 training-only standardizers, the negative timing-uncertified injury study, the 48-candidate audit and all retained model identities are reused. The 257/312 path cohort remains distinct from 115/125 availability/path. Requested classifier/regressor coverage for every named framework still requires linked fit receipts; generic family labels are not evidence that every requested implementation ran. No current-season tuning or automatic promotion occurred.
+
+### Provenance, execution and publication
+
+The public whitelist builder authenticates its private input at **22,685,842 bytes**, SHA-256 `93333d34a4f337cf436938717950173f8fd05f0b5d81eb8e58b85a33871c5ad0`, before projecting only allowed fields. Original source, provider quote, acquisition, model-report and publication clocks remain distinct. Both kickoff revisions are quarantined; Army–Navy's native week/calendar conflict and ten unbound championship slots remain metadata.
+
+The supplied V037 owner observation deferred at the ownership gate while V036 was active. This dashboard change generated **zero provider requests, zero model fits and zero forecast issues**. Full-workload performance remains **NO_GO** until a qualified bounded owner benchmark measures new durable individual completions. V032's 91 unresolved coordinates and 18 teacher-state proofs remain open.
+
+`examples/fbs_contracts/build_complete_review.py` builds the whitelisted report. `export_site.py` publishes only allowlisted files from an exact Git commit, maps `complete.html` to the existing Site's home page and records per-file source paths, byte counts and SHA-256 digests. The prior season page remains a dated archive. Public data tests check the fixture/period census, new finals, null preservation, quarantines, provider separation, interval semantics, model cohort integrity and private-field exclusion. The existing browser CI now also exercises the new desktop/mobile experience, filters, dialogs, CSV export and metrics panels.
+
+## Earlier dated reports (retained history)
+
+The entries below describe their original observation dates and are not current execution or current coverage claims.
+
 ## November 6 owner audit: V035 failed before resource admission
 
 The actual **V035 invocation failed during predecessor handoff**. Its source requires V034 history, but the completion-probe allowlist omitted V034. The first stopping condition is therefore the version admission bug. No resource phase was reached and neither the full-research nor independent memory/S3 acquisition phase started. Source requests, new fits and forecast issues were all **zero**.
