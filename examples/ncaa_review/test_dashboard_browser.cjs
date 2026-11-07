@@ -170,7 +170,7 @@ const { chromium } = require(process.env.PLAYWRIGHT_MODULE_DIR || 'playwright');
         assert.match(await page.locator('#official-counts').innerText(), /1,797 accepted official contest records, 775 exact matches, 1,022 unmatched official candidates, 44 conflicts/);
         assert.equal(await page.locator('#freshness-table tr').count(), 8);
         assert.match(await page.locator('#freshness-note').innerText(), /publication does not refresh any provider/);
-        assert.match(await page.locator('#resource-note').innerText(), /simultaneous process-tree peak were not established/);
+        assert.match(await page.locator('#resource-note').innerText(), /not the simultaneous process-tree peak/);
         assert.match(await page.locator('#injury-copy').innerText(), /All 1,320 historical snapshot versions remain unverified/);
         assert.match(await page.locator('#injury-clocks').innerText(), /1,246 lack one: 1,244 recovered image observations and two current PDF/);
         assert.match(await page.locator('#frontier-limit').innerText(), /no completed market-path study or performance gain is claimed/);
@@ -186,7 +186,7 @@ const { chromium } = require(process.env.PLAYWRIGHT_MODULE_DIR || 'playwright');
         }
         assert.deepEqual(await page.locator('#ats-record strong').allTextContents(), ['2','1','1']);
         assert.match(await page.locator('#ats-denominator').innerText(), /4 eligible settled games; 66.67% across 3 decisions, excluding pushes. 1 unknown-clock record excluded/);
-        assert.match(await page.locator('#spread-clock-proof').innerText(), /Late capture is rejected.*17:01.*not captured before cutoff.*Zero orders/s);
+        assert.match(await page.locator('#spread-clock-proof').innerText(), /Late capture is rejected.*17:01.*not captured before cutoff.*No additional scientific credit/s);
         assert.equal(evidence.ats_research.real_cover_probability_champion, null);
         assert.equal(evidence.ats_research.real_ats_record_published, false);
         await page.locator('[data-spread="favorite_half"]').focus();
