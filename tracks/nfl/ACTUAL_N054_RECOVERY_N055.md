@@ -53,6 +53,14 @@ Another **336 actual component forecasts** retain original, shadow, fresh rollin
 
 The complete current-season presentation contains **272 games, 73 model roles, 59,568 model-role/target cells, 10,041 numerical model values and 647 seasonal metric records**. All three providers keep equal **8,160-cell inventories**, including explicit missing-value reasons. The 272/122/121 schedule snapshot, original 92/91 Polymarket timed metrics, restored 122-game source coverage, common119 T2 provider comparisons and exact91 T2 model comparisons remain distinct.
 
+## Active status and the prepared N055 continuation
+
+The current family table distinguishes retained earlier models from the actual N054 broad-family attempt. HistGradientBoosting, ridge and Extra Trees each have one unresolved support-control winner STARTED record. A start marker does not establish optimizer entry, a returned model or completion. No completed N054 broad-family fit is admitted. The other broad families have no authenticated completed N054 result; prior negative studies and retained components keep their original identities.
+
+N055 local reconciliation and the unchanged registered continuation are **prepared and not owner-executed**. The active publication counters therefore remain zero. Named accounting separately retains N053R1's 3,432 raw states, 70 scale states and 754 owner issues, and the recovered N054 102 market states and 2,233 owner issues. The active future-coverage object uses 28 nearer plus 122 later owner-issued games, with 336 raw, 1,464 long-range, 336 component and 97 conditional rows. Earlier review rows are not added to that owner total.
+
+`original_n054_preparation_snapshot` preserves the previous family, capability, future-coverage, next-plan and counter objects with their dated scope. Active capability counts are reconciled against the recovered arrays; the original compressed carrier and scientific recovery payload remain unchanged.
+
 ## Reproduction and validation
 
 `actual_recovery_n055.py` validates and overlays `n054_actual_recovery_n055.json.gz` onto the byte-preserved original public carrier. Its checks reject inflated fit accounting, later training labels, issue times at or after kickoff, missing output rows and promotion claims. It preserves the complete 272-game Cartesian grid and the unchanged provider/source arrays. The export builder writes full CSV and JSON records, with PDF and XLSX companions built from the same enriched projection.
