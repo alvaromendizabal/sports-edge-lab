@@ -1,6 +1,6 @@
 # Sports Edge Lab · NCAA women's basketball
 
-## B047 season workspace — current review
+## B047R1 season workspace — current review
 
 The NCAA workspace now starts with the complete **supplied source-game inventory**, using the NFL dashboard's season-to-game navigation pattern. The [private local viewer](https://alvaro-ncaa-research-review.alv-mendizabal.chatgpt.site/private-report/index.html) exposes winner, home win probability, projected home/away scores, point margin, total and line-conditioned cover/push/loss in one table. Model/version and evidence clocks stay attached. A fixed display order is used when all models are selected; it does not rank on current outcomes.
 
@@ -30,7 +30,7 @@ The latest men’s reconstructed T−60 Polymarket international cohort contains
 
 ### Model and feature research
 
-Requested families have explicit implementation, dependency and evidence states: sklearn logistic regression; linear and ridge regression; histogram gradient boosting; XGBoost, LightGBM and CatBoost classifiers/regressors; PyTorch and TensorFlow classification/regression; fixed ensembles/blends; chronological calibration and residual-distribution candidates. Implemented code, installed dependencies, an admitted job, a committed fit, an evaluated model and a promoted champion are separate states. B047 owner execution remains pending.
+Requested families have explicit implementation, dependency and evidence states: sklearn logistic regression; linear and ridge regression; Extra Trees classifiers and regressors; histogram gradient boosting; XGBoost, LightGBM and CatBoost classifiers/regressors; PyTorch and TensorFlow classification/regression; fixed ensembles/blends; chronological calibration and residual-distribution candidates. Implemented code, installed dependencies, an admitted job, a committed fit, an evaluated model and a promoted champion are separate states. The prepared B047R1 registry contains **10 base estimator families and 26 target heads**; fixed ensembles, blends and calibration are separate candidates. B047 and B047R1 owner execution remain pending. Local implementation tests do not establish a new committed fit or improved NCAA result.
 
 New frontier outputs keep historical monthly development, per-game rolling reconstruction and latest available previews separate. Existing weekly streams retain their original labels. Earlier-completed game histories, home/away windows, EWM/shrinkage, basketball form, availability versions and genuine in-play paths require original availability before each target cutoff. Current 2026–27 outcomes cannot select families, weights, blends, calibrators or promotions. The two historical seasons remain development-exposed.
 
@@ -39,6 +39,8 @@ Cover probability is conditioned on an exact provider line, event, ordered home/
 ### Bounded private artifacts
 
 The viewer accepts the existing report schemas and their bounded local record parts. A separate **Frontier and spread research** area accepts `sel.ncaa.b047.frontier.v1` summaries and B047 or retained B046 gzip JSONL manifests. Choose a stream and its exact pinned part. The browser checks safe unique names, compressed byte count and SHA256, bounded decoded size and declared row count. Only the loaded part receives display credit; this UI does not claim full-root logical closure from a partial view. A failed part leaves the prior valid rows intact. Empty manifests and unloaded parts are distinct.
+
+The optional **Source identity links** panel loads `sel.ncaa.b047r1.identity_overlay.v1` against the exact baseline file byte count and SHA256. It validates row/source counts and direct, same-league, one-to-one links; duplicate, conflicting, chained and cyclic mappings are rejected. The table shows original source IDs alongside their linked existing records and preserves all original game/model rows, numbers, clocks, issue classes and metric populations. Group counts describe the supplied links, without certifying the entire official schedule. A failed overlay leaves the current valid report and overlay intact.
 
 No imported report is uploaded or persisted by the page. Public pages contain only aggregate results and invented examples. Actual per-game data, source feeds, recipes, weights, cloud locations and individuals stay private. Other sports and the existing audience are unchanged.
 
@@ -49,7 +51,7 @@ The following sections preserve earlier research scope and implementation histor
 
 [Project](../../README.md) · [Open interactive dashboard](https://alvaro-ncaa-research-review.alv-mendizabal.chatgpt.site/tracks/ncaaw/index.html) · [Dashboard source](index.html) · [Methodology and runnable example](../../examples/ncaa_review/README.md) · [Separate men's track](../ncaam/README.md)
 
-## Latest execution — November 6, 2026 UTC · B045 partial return; B046 prepared
+## Preserved review — November 6, 2026 UTC · B045 partial return; B046 prepared at that time
 
 The actual B045 attachment records **9 of 16 completed scientific stages**.
 The paired injury stage exhausted its bounded resource-admission wait after
@@ -95,7 +97,7 @@ B044 work. The older assertion of 60,906 dashboard rows in two files remains
 `UNRESOLVED_OLDER_DASHBOARD_ASSERTION`; adding counts from different source
 versions cannot establish it.
 
-**B046 is prepared, not owner-executed.** It targets bounded recovery memory and
+**At that earlier handoff, B046 was prepared and had not been owner-executed.** It targets bounded recovery memory and
 explicit spread/ATS reporting. No new injury improvement, path-study gain,
 current-season model promotion or validated deployment result is established.
 The earlier B044/B045 prepared description below is retained as a dated version.

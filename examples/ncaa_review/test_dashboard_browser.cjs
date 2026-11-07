@@ -6,6 +6,7 @@ const { createHash } = require('node:crypto');
 const { gzipSync } = require('node:zlib');
 const { pathToFileURL } = require('node:url');
 const { chromium } = require(process.env.PLAYWRIGHT_MODULE_DIR || 'playwright');
+const { fixture: identityOverlayFixture } = require('./test_identity_overlay.cjs');
 
 (async () => {
   const browser = await chromium.launch({ headless: true,
@@ -54,7 +55,10 @@ const { chromium } = require(process.env.PLAYWRIGHT_MODULE_DIR || 'playwright');
         assert.deepEqual([attempt.new_real_target_fits,attempt.new_calibration_fits,attempt.new_empirical_residual_fits],[4033,701,24]);
         assert.match(await page.locator('#b046-panels').innerText(),/85,466.*47,127.*47,130.*1,499.*4,699/);
         assert.equal(await page.locator('#season-inventory tr').count(),5);
-        assert.equal(await page.locator('#capability-table tr').count(),10);
+        assert.equal(await page.locator('#capability-table tr').count(),11);
+        assert.match(await page.locator('#capability-caption').innerText(),/B047R1.*10 base estimator families \/ 26 target heads.*owner execution pending/);
+        assert.match(await page.locator('#capability-table').innerText(),/Extra Trees.*Classification \/ margin and total regression/s);
+        assert.match(await page.locator('#frontier-copy').innerText(),/actual B046.*not reached.*B047R1.*prepared/);
         assert.doesNotMatch(await page.locator('body').innerText(),/\b(?:betting|wagers?|ROI|profit|NO BET)\b/i);
         assert.match(await page.locator('#ats-repair-summary').innerText(),/1,793.*43,032.*Zero qualified/);
         assert.match(await page.locator('#latest-baseline-copy').innerText(), /87,003 target rows and 47,940 browser display rows.*1,223 metric panels.*4,147 checks with zero mismatches.*1,220 model metric panels.*417 season \/ 803 weekly; 4,132 checks.*3 provider panels \/ 15 checks/);
@@ -146,7 +150,7 @@ const { chromium } = require(process.env.PLAYWRIGHT_MODULE_DIR || 'playwright');
         assert.equal(await page.locator('#recent-phase-table .done').count(), 9);
         assert.match(await page.locator('#recent-study-copy').innerText(), /101 target \/ 45 scalar \/ 24 empirical fits/);
         assert.match(await page.locator('#readback-copy').innerText(), /90 chunks \/ 723,492 earlier observations \/ 1,504,058,360 logical bytes.*182 storage GETs/);
-        assert.match(await page.locator('#prepared-copy').innerText(), /B047.*no owner-execution/);
+        assert.match(await page.locator('#prepared-copy').innerText(), /B047R1.*no owner-execution/);
         assert.deepEqual(await page.locator('#handoff-table tr td:last-child').allTextContents(), ['2 passed', 'Blocked before work', '0', 'ADMITTED', '0']);
         assert.equal(await page.locator('#phase-table .failed').count(), 1);
         assert.match(await page.locator('#phase-table tr').nth(5).innerText(), /Timestamped injury.*Completed/);
@@ -908,6 +912,44 @@ const { chromium } = require(process.env.PLAYWRIGHT_MODULE_DIR || 'playwright');
       assert.equal(await page.locator('#research-part-file').isDisabled(),true);
       assert.equal(await page.evaluate(()=>document.documentElement.scrollWidth>innerWidth),false,'bounded research viewer fits mobile');
       counts.researchPartViews=(counts.researchPartViews||0)+6;
+      }
+      {
+        const identityFixture=identityOverlayFixture();
+        await page.locator('#report-file').setInputFiles({name:'invented-identity-baseline.json',mimeType:'application/json',buffer:identityFixture.body});
+        await page.waitForFunction(()=>document.getElementById('load-status').textContent.startsWith('Loaded 3 source game records'));
+        await page.locator('#show-games').click();
+        const sourceIdsBefore=await page.locator('[data-game]').evaluateAll(nodes=>nodes.map(n=>n.dataset.game));
+        const predictionsBefore=await page.locator('[data-game] table:first-of-type').allTextContents();
+        const metricsBefore=await page.locator('#model-metrics').innerText();
+        await page.locator('#identity-overlay-file').setInputFiles({name:'invented-identity-overlay.json',mimeType:'application/json',buffer:Buffer.from(JSON.stringify(identityFixture.overlay))});
+        await page.waitForFunction(()=>document.getElementById('identity-overlay-status').textContent.startsWith('Verified baseline binding'));
+        assert.match(await page.locator('#identity-overlay-count').innerText(),/3 original source-game IDs → 2 groups.*1 supplied identity links.*4 original game\/model rows retained/);
+        assert.equal(await page.locator('[data-identity-link]').count(),1);
+        assert.deepEqual(await page.locator('[data-game]').evaluateAll(nodes=>nodes.map(n=>n.dataset.game)),sourceIdsBefore);
+        assert.deepEqual(await page.locator('[data-game] table:first-of-type').allTextContents(),predictionsBefore);
+        assert.equal(await page.locator('#model-metrics').innerText(),metricsBefore);
+        for(const change of ['pin','duplicate','conflict','cycle']){
+          const broken=structuredClone(identityFixture.overlay);
+          if(change==='pin')broken.baseline.sha256='0'.repeat(64);
+          if(change==='duplicate')broken.links.push({...broken.links[0]});
+          if(change==='conflict')broken.links.push({...broken.links[0],canonical_event_id:'another-source'});
+          if(change==='cycle')broken.links.push({...broken.links[0],source_event_id:'source-invented',canonical_event_id:'official-invented'});
+          await page.locator('#identity-overlay-file').setInputFiles({name:'invented-invalid-'+change+'.json',mimeType:'application/json',buffer:Buffer.from(JSON.stringify(broken))});
+          await page.waitForFunction(()=>document.getElementById('identity-overlay-status').classList.contains('error'));
+          assert.match(await page.locator('#identity-overlay-status').innerText(),/Existing report and prior valid overlay remain unchanged/);
+          assert.equal(await page.locator('[data-identity-link]').count(),1);
+          assert.deepEqual(await page.locator('[data-game] table:first-of-type').allTextContents(),predictionsBefore);
+        }
+        await page.getByRole('button',{name:'Inspect source-invented',exact:true}).click();
+        assert.equal(await page.locator('[data-game]').count(),1);
+        assert.match(await page.locator('#results').innerText(),/Linked official source: official-invented/);
+        await page.locator('#clear-identity-overlay').click();
+        assert.equal(await page.locator('[data-identity-link]').count(),0);
+        assert.match(await page.locator('#identity-overlay-count').innerText(),/No identity links loaded/);
+        assert.doesNotMatch(await page.locator('#results').innerText(),/Linked official source/);
+        assert.equal(await page.evaluate(()=>document.documentElement.scrollWidth>innerWidth),false,'identity overlay fits mobile');
+        await page.locator('#clear').click();
+        counts.identityOverlayViews=(counts.identityOverlayViews||0)+8;
       }
       counts.viewports++;
     }

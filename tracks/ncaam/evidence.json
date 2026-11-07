@@ -283,7 +283,7 @@
         "status": "NO_ADMITTED_MATCHED_ROW_SUPPLIED"
       }
     ],
-    "season": "2026\u201327",
+    "season": "2026–27",
     "source_release": "B046",
     "us_status": "SEPARATE_UNACQUIRED"
   },
@@ -339,70 +339,77 @@
   },
   "capability_registry": [
     {
-      "evidence_status": "No B047 owner fits or promotion credited",
+      "evidence_status": "No B047 or B047R1 owner fits or promotion credited",
       "family": "Logistic regression",
       "implementation": "IMPLEMENTED_CANDIDATE_OWNER_EXECUTION_PENDING",
       "next_action": "Require cutoff-bound training membership and calibration evidence.",
       "targets": "Winner / probability"
     },
     {
-      "evidence_status": "No B047 owner fits or promotion credited",
+      "evidence_status": "No B047 or B047R1 owner fits or promotion credited",
       "family": "Linear regression / ridge",
       "implementation": "IMPLEMENTED_CANDIDATE_OWNER_EXECUTION_PENDING",
       "next_action": "Require earlier-known labels and error distribution evidence.",
       "targets": "Margin / total"
     },
     {
-      "evidence_status": "No B047 owner fits or promotion credited",
+      "evidence_status": "No B047 or B047R1 owner fits or promotion credited",
+      "family": "Extra Trees",
+      "implementation": "IMPLEMENTED_CANDIDATE_OWNER_EXECUTION_PENDING",
+      "next_action": "Require cutoff-bound training membership, measured resource admission and paired chronological evaluation.",
+      "targets": "Classification / margin and total regression"
+    },
+    {
+      "evidence_status": "No B047 or B047R1 owner fits or promotion credited",
       "family": "Histogram gradient boosting",
       "implementation": "IMPLEMENTED_CANDIDATE_OWNER_EXECUTION_PENDING",
       "next_action": "Retain fixed registration and paired chronological comparison.",
       "targets": "Classification / regression"
     },
     {
-      "evidence_status": "No B047 owner fits or promotion credited",
+      "evidence_status": "No B047 or B047R1 owner fits or promotion credited",
       "family": "XGBoost",
       "implementation": "IMPLEMENTED_CANDIDATE_OWNER_EXECUTION_PENDING",
       "next_action": "Verify the actual dependency and admitted contract in the owner environment.",
       "targets": "Classification / regression"
     },
     {
-      "evidence_status": "No B047 owner fits or promotion credited",
+      "evidence_status": "No B047 or B047R1 owner fits or promotion credited",
       "family": "LightGBM",
       "implementation": "IMPLEMENTED_CANDIDATE_OWNER_EXECUTION_PENDING",
       "next_action": "Verify the actual dependency and admitted contract in the owner environment.",
       "targets": "Classification / regression"
     },
     {
-      "evidence_status": "No B047 owner fits or promotion credited",
+      "evidence_status": "No B047 or B047R1 owner fits or promotion credited",
       "family": "CatBoost",
       "implementation": "IMPLEMENTED_CANDIDATE_OWNER_EXECUTION_PENDING",
       "next_action": "Verify the actual dependency and admitted contract in the owner environment.",
       "targets": "Classification / regression"
     },
     {
-      "evidence_status": "No B047 owner fits or promotion credited",
+      "evidence_status": "No B047 or B047R1 owner fits or promotion credited",
       "family": "PyTorch",
       "implementation": "IMPLEMENTED_CANDIDATE_OWNER_EXECUTION_PENDING",
       "next_action": "Use measured capacity and a fixed registered candidate before fitting.",
       "targets": "Classification / regression"
     },
     {
-      "evidence_status": "No B047 owner fits or promotion credited",
+      "evidence_status": "No B047 or B047R1 owner fits or promotion credited",
       "family": "TensorFlow",
       "implementation": "IMPLEMENTED_CANDIDATE_OWNER_EXECUTION_PENDING",
       "next_action": "Use measured capacity and a fixed registered candidate before fitting.",
       "targets": "Classification / regression"
     },
     {
-      "evidence_status": "No B047 owner fits or promotion credited",
+      "evidence_status": "No B047 or B047R1 owner fits or promotion credited",
       "family": "Ensembles / blends",
       "implementation": "IMPLEMENTED_CANDIDATE_OWNER_EXECUTION_PENDING",
       "next_action": "Require common held-out membership and a separate blend-fitting cutoff.",
       "targets": "Winner / margin / total"
     },
     {
-      "evidence_status": "No B047 owner fits or promotion credited",
+      "evidence_status": "No B047 or B047R1 owner fits or promotion credited",
       "family": "Calibration / margin distribution",
       "implementation": "IMPLEMENTED_CANDIDATE_OWNER_EXECUTION_PENDING",
       "next_action": "Require independent out-of-fold or integer-PMF evidence; retain discrete pushes.",
@@ -889,6 +896,14 @@
     "unmatched_official_candidates": 1022,
     "unresolved_source_candidates": 4
   },
+  "current_frontier_research": {
+    "completed_paired_study": false,
+    "current_outcomes_used_for_selection": false,
+    "measured_gain": null,
+    "release": "B046",
+    "scope": "The actual B046 market-path stages were not reached after injury research deferred at its shared-memory gate. The B047R1 path and feature candidates are prepared; no completed paired path study or measured gain is credited. The dated B043 research record remains unchanged.",
+    "status": "NOT_REACHED_AFTER_INJURY_RESOURCE_DEFERRAL"
+  },
   "current_owner_attempt": {
     "admission": {
       "acquisition_workers_planned": null,
@@ -1147,7 +1162,7 @@
     "retained_prior_issue_rows": 339
   },
   "current_season": {
-    "label": "2026\u201327",
+    "label": "2026–27",
     "season_end_year": 2027
   },
   "evaluation": {
@@ -1216,8 +1231,8 @@
     "status": "NOT_REACHED_AFTER_INJURY_CHECKPOINT_FAILURE"
   },
   "historical_seasons": {
-    "2025": "2024\u201325",
-    "2026": "2025\u201326"
+    "2025": "2024–25",
+    "2026": "2025–26"
   },
   "injury_research": {
     "active_audit": "Audited active original and historical feature paths have no explicit injury-report feed. This is not a claim about every past track or version.",
@@ -1467,7 +1482,7 @@
   "market_advantage": {
     "demonstrated": false,
     "realized_betting_profit": null,
-    "reason": "The pre-study 129-game men\u2019s comparison has higher original-model pick accuracy but worse log loss, Brier and AUC than the matched Polymarket international reference. The comparison is reconstructed; no prospective superiority, executable edge or profit is established."
+    "reason": "The pre-study 129-game men’s comparison has higher original-model pick accuracy but worse log loss, Brier and AUC than the matched Polymarket international reference. The comparison is reconstructed; no prospective superiority, executable edge or profit is established."
   },
   "models": [
     {
@@ -3518,9 +3533,106 @@
   "prepared_execution": {
     "new_scientific_credit": 0,
     "owner_execution_observed": false,
-    "release": "B047",
-    "scope": "Bounded exact recovery, complete explicit game/capability inventory, source identity repair and leakage-aware per-game candidate training. No B047 owner execution is claimed.",
+    "release": "B047R1",
+    "scope": "B047R1 is prepared to extend the candidate registry with Extra Trees classification and margin/total regression, while retaining bounded exact recovery, explicit game/capability inventory and cutoff-aware per-game training. Prepared code has no owner-execution or model-promotion credit.",
     "status": "PREPARED_NOT_EXECUTED"
+  },
+  "prepared_execution_history": [
+    {
+      "new_scientific_credit": 0,
+      "owner_execution_observed": false,
+      "release": "B047",
+      "scope": "Bounded exact recovery, complete explicit game/capability inventory, source identity repair and leakage-aware per-game candidate training. No B047 owner execution is claimed.",
+      "status": "PREPARED_NOT_EXECUTED"
+    }
+  ],
+  "prepared_model_registry": {
+    "current_outcomes_used_for_selection": false,
+    "families": [
+      {
+        "family": "Logistic regression",
+        "targets": [
+          "win"
+        ]
+      },
+      {
+        "family": "Linear regression",
+        "targets": [
+          "margin",
+          "total"
+        ]
+      },
+      {
+        "family": "Ridge regression",
+        "targets": [
+          "margin",
+          "total"
+        ]
+      },
+      {
+        "family": "Extra Trees",
+        "targets": [
+          "win",
+          "margin",
+          "total"
+        ]
+      },
+      {
+        "family": "Histogram gradient boosting",
+        "targets": [
+          "win",
+          "margin",
+          "total"
+        ]
+      },
+      {
+        "family": "XGBoost",
+        "targets": [
+          "win",
+          "margin",
+          "total"
+        ]
+      },
+      {
+        "family": "LightGBM",
+        "targets": [
+          "win",
+          "margin",
+          "total"
+        ]
+      },
+      {
+        "family": "CatBoost",
+        "targets": [
+          "win",
+          "margin",
+          "total"
+        ]
+      },
+      {
+        "family": "PyTorch",
+        "targets": [
+          "win",
+          "margin",
+          "total"
+        ]
+      },
+      {
+        "family": "TensorFlow",
+        "targets": [
+          "win",
+          "margin",
+          "total"
+        ]
+      }
+    ],
+    "family_count": 10,
+    "measured_gain": null,
+    "new_owner_fits_credited": 0,
+    "postprocessing_scope": "Fixed ensembles/blends, chronological calibration and residual-distribution candidates are separate from the ten base estimator families.",
+    "release": "B047R1",
+    "status": "IMPLEMENTED_CANDIDATE_OWNER_EXECUTION_PENDING",
+    "target_head_count": 26
   },
   "provenance": {
     "aggregate_verification": "Historical objective and season metrics were independently recomputed from authenticated per-game exports. Only sanitized aggregates are public.",
@@ -4135,7 +4247,7 @@
       "market_advantage": {
         "demonstrated": false,
         "realized_betting_profit": null,
-        "reason": "The pre-study 129-game men\u2019s comparison has higher original-model pick accuracy but worse log loss, Brier and AUC than the matched Polymarket international reference. The comparison is reconstructed; no prospective superiority, executable edge or profit is established."
+        "reason": "The pre-study 129-game men’s comparison has higher original-model pick accuracy but worse log loss, Brier and AUC than the matched Polymarket international reference. The comparison is reconstructed; no prospective superiority, executable edge or profit is established."
       },
       "provenance": {
         "aggregate_verification": "Historical objective and season metrics were independently recomputed from authenticated per-game exports. Only sanitized aggregates are public.",
