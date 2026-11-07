@@ -1,6 +1,6 @@
 {
-  "schema": "fbs.public.v036.frontier-review.v1",
-  "review_date": "2026-11-06 UTC / 2026-11-05 America/Los_Angeles",
+  "schema": "fbs.public.v037.frontier-review.v1",
+  "review_date": "November 6, 2026 America/Los_Angeles; running-log observation November 6, 2026 23:59 UTC",
   "owner": {
     "release": "V035",
     "exit": 2,
@@ -1863,11 +1863,12 @@
     "qualification": "Physical bytes and receipt consistency are verified; publication creates no new source capture, model state or historical issuance."
   },
   "next_handoff": {
-    "status": "LOCAL_PREPARATION",
+    "status": "LOCAL_PREPARATION_WITH_OWNER_AND_PERFORMANCE_GATES",
     "owner_execution_observed": false,
-    "required_behavior": "Preserve every required predecessor source identity, retain authentic partial diagnostics and remeasure resources before admitting any work.",
+    "required_behavior": "Preserve active V036, verify completed units independently with original assessment clocks, benchmark compatible batching under measured provider/resource admission, and defer a full workload while unqualified.",
     "full_research_reserve_unchanged": true,
-    "independent_acquisition_requires_fresh_resource_and_writer_admission": true
+    "independent_acquisition_requires_fresh_resource_and_writer_admission": true,
+    "release": "V037"
   },
   "new_local_science": {
     "attribution": "LOCAL_INDEPENDENT_AUDIT_AND_CURRENT_SOURCE_PREPARATION_NOT_SAGEMAKER",
@@ -1927,5 +1928,172 @@
     "orders": 0,
     "schema": "fbs.v036.public-science-increment.v1",
     "stake": 0
+  },
+  "owner_role": "LAST_COMPLETED_DIAGNOSTIC_OWNER_RETURN; LATER_RUNNING_OBSERVATION_SEPARATE",
+  "running_owner_observation": {
+    "release": "V036",
+    "evidence_class": "ATTACHED_EXECUTION_LOG_SNAPSHOT_NOT_LIVE_STATE",
+    "observed_at_utc": "2026-11-06T23:59:22.459441Z",
+    "observed_at_pacific": "2026-11-06T15:59:22.459441-08:00",
+    "original_history_assessed_at": "2026-11-06T20:58:41.228954Z",
+    "log_bytes": 16902943,
+    "log_sha256": "0dd23a14d92bbe8edbb818a669efe0a8b3645cdaf2bf12d842b75fba7e5f03d9",
+    "valid_log_events": 3876,
+    "log_parse_failures": 0,
+    "pasted_events_duplicate_full_log": true,
+    "registered_contracts": 79240,
+    "log_reported_completed_contracts": 25318,
+    "log_reported_remaining_contracts": 53922,
+    "log_reported_failed_contracts": 0,
+    "log_cumulative_contracts_per_second": 2.33944,
+    "stage_elapsed_seconds": 10822.254,
+    "every_contract_independently_reauthenticated_in_this_publication": false,
+    "completed_owner_return_supplied": false,
+    "terminal_exit_observed": false,
+    "live_state_checked": false,
+    "new_owner_model_fits_reported": 0,
+    "new_genuine_forecasts_reported": 0,
+    "orders_reported": 0,
+    "last_native_reader_heartbeat_at": "2026-11-06T23:59:08.837003Z",
+    "native_http_attempts": 29882,
+    "native_fresh_verified_requests": 29881,
+    "native_sink_put_calls": 59767,
+    "native_sink_readback_calls": 59765,
+    "native_sink_counts_are_not_total_project_s3_cost": true,
+    "resource_heartbeats": 419,
+    "detailed_resource_snapshots": 210,
+    "admitted_io_capacities": {
+      "0": 13,
+      "1": 16,
+      "2": 22,
+      "3": 22,
+      "4": 44,
+      "5": 16,
+      "6": 10,
+      "7": 147,
+      "8": 129
+    },
+    "io_pressure_reduction_samples": 17,
+    "severe_io_pressure_samples": 5,
+    "memory_deferral_samples": 13,
+    "io_pressure_interpretation": "INTERMITTENT_NOT_CONTINUOUSLY_SEVERE",
+    "samples_are_not_continuous_time_shares": true,
+    "all_existing_processes_preserved": true,
+    "log_requests_are_not_contract_completions": true,
+    "qualification": "Dated log counts require independent per-unit receipt, raw-byte and reduction authentication before recovery credit."
+  },
+  "prepared_optimization_review": {
+    "release": "V037",
+    "status": "LOCAL_IMPLEMENTATION_AND_PROTOCOL_COMPATIBILITY_REVIEW_NOT_OWNER_EXECUTION",
+    "owner_execution_observed": false,
+    "active_owner_must_be_preserved": true,
+    "target_verified_contracts_per_second": 10.0,
+    "full_run_decision": "NO_GO",
+    "qualified_verified_contracts_per_second": null,
+    "benchmark_rows": [
+      {
+        "scope": "TRANSPORT_ONLY_PROTOCOL_PROBE",
+        "label": "First single request; cold connection",
+        "tickers_requested": 1,
+        "tickers_returned": 1,
+        "http_seconds": 7.975828644001012,
+        "http_status": 200,
+        "new_verified_contracts": 0
+      },
+      {
+        "scope": "TRANSPORT_ONLY_PROTOCOL_PROBE",
+        "label": "Second single request; reused connection",
+        "tickers_requested": 1,
+        "tickers_returned": 1,
+        "http_seconds": 0.03475253299984615,
+        "http_status": 200,
+        "new_verified_contracts": 0
+      },
+      {
+        "scope": "TRANSPORT_ONLY_PROTOCOL_PROBE",
+        "label": "Genuine batch; reused connection",
+        "tickers_requested": 16,
+        "tickers_returned": 16,
+        "http_seconds": 0.0478037039974879,
+        "http_status": 200,
+        "new_verified_contracts": 0
+      }
+    ],
+    "rate_limit_entitlement_claimed": false,
+    "universal_speed_guarantee": false,
+    "source_findings": [
+      "The running stage uses a durable per-contract adapter that passes one contract into the grouped Kalshi engine. Batch support exists but cross-contract batching is disabled on this path.",
+      "The provider ticket remains held during compression, local receipt work and canonical persistence/readback.",
+      "The actual transport repeats the rate interval table; changing only the runtime default table would leave dispatch unchanged.",
+      "The two-GiB worker reserve and other measured workloads reduce admission independently of intermittent I/O pressure.",
+      "The executed durable fingerprint binds the source closure and complete cutoff state. The legacy literal assessment-equality shortcut is not the active adapter."
+    ],
+    "qualification_requirements": [
+      "Exact previous-owner identity is inactive and the writer boundary is independently acquired.",
+      "Each reused unit passes original-byte, receipt, cutoff and independent-replay verification.",
+      "Provider/access-mode-specific limits and cooldowns remain authoritative.",
+      "A bounded benchmark includes canonical commit/readback and fresh shared-resource admission.",
+      "Synthetic or local replay speed does not qualify a provider workload."
+    ],
+    "new_predictive_fits": 0,
+    "new_genuine_forecasts": 0,
+    "orders": 0,
+    "stake_usd": 0,
+    "protocol_probe": {
+      "execution_environment": "LOCAL_PREPARATION_NOT_SAGEMAKER",
+      "access_mode": "ANONYMOUS_PUBLIC_READ_ONLY",
+      "requests": 3,
+      "request_http_statuses": [
+        200,
+        200,
+        200
+      ],
+      "provider_retries": 0,
+      "max_dispatch_requests_per_second": 2,
+      "requested_tickers_per_request": [
+        1,
+        1,
+        16
+      ],
+      "returned_tickers_per_request": [
+        1,
+        1,
+        16
+      ],
+      "paired_single_batch_original_candle_arrays_equal": 2,
+      "new_verified_contracts": 0,
+      "account_specific_entitlement_established": false,
+      "canonical_contract_commits_in_timed_scope": false,
+      "cold_and_warm_requests_not_a_sustainable_speed_comparison": true,
+      "observed_at_utc": "2026-11-07T00:16:05.809674Z",
+      "observed_at_pacific": "2026-11-06T16:16:05.809674-08:00"
+    }
+  },
+  "independent_recovery_sample": {
+    "execution_class": "LOCAL_VERIFICATION_OF_CANONICAL_ORIGINALS_NOT_NEW_OWNER_WORK",
+    "completed_history_units_checked": 8,
+    "units_passing_independent_original_selector_replay": 8,
+    "original_dependencies_checked": 20,
+    "raw_and_receipt_gets": 40,
+    "history_commit_gets": 8,
+    "provider_calls_for_replay": 0,
+    "new_completed_unit_credit": 0,
+    "new_model_fits": 0,
+    "whole_workload_certified": false,
+    "selection": "Bounded lexicographic shard sample; not a population estimate.",
+    "receipt_sample": {
+      "original_receipts": 24,
+      "kalshi_live_batch_requests": 13,
+      "kalshi_tickers_per_live_batch": {
+        "1": 13
+      },
+      "kalshi_archived_individual_requests": 1,
+      "polymarket_us_requests": 9,
+      "polymarket_global_requests": 1,
+      "all_http_status_200": true,
+      "all_one_transport_attempt": true,
+      "fallback_frequency_population_estimated": false,
+      "source_authentication_mode": "Public requests; no authenticated provider entitlement inferred."
+    }
   }
 }
