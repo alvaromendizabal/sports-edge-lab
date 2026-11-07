@@ -13,6 +13,12 @@ The active [NFL season dashboard](season_review_n054.html) accounts for **272 sc
 
 The metric explorer includes retained champion comparisons, matched provider comparisons, the earlier negative injury study and the new raw rolling study. It exposes 2024, 2025 and 2026 alongside earlier selection periods. Each record retains its target, horizon, denominator and scientific role. Future issues have no scored performance until a final outcome is admitted. All150 future games now have dated current-knowledge forecasts:28 nearer-game owner issues plus122 separately issued long-range review outlooks. The latter add1,464 rows across four football roles with zero fits; their12.9–64.0-day horizon is unvalidated, and future injuries or intervening results are not assumed. The original754 owner issue rows remain unchanged.
 
+## Conditional margin probabilities
+
+The selected-game detail table displays all **82 retained conditional records across 27 games**: 48 less-than and 34 greater-than conditions. The condition probability follows the original direction. A separate column conditions on home margin differing from the stated threshold; equality probability and the actual issue timestamp remain visible. These probabilities are unvalidated research outputs. Games without a retained conditional record show a specific absence statement; winner probabilities and point margins are not substituted.
+
+The display reads the retained predicate-probability field directly. A focused desktop/mobile regression checks every retained row against the published data, including both directions and all three probability columns. This presentation repair changes no source, model, issue, metric or owner-execution evidence.
+
 ## What actually completed
 
 | Evidence | Actual count | Interpretation |

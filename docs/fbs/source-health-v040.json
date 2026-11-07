@@ -1,0 +1,133 @@
+{
+  "canonical_return_verified": true,
+  "canonical_verification_at": "2026-11-07T06:12:01.240365+00:00",
+  "current_owner_recovery_authorized_by_this_evidence": false,
+  "cutoff_row_statuses": {
+    "available_historical_reference": 136739,
+    "history_read_failed": 242412,
+    "not_yet_due": 38646,
+    "these_are_rows_not_unique_contracts": true
+  },
+  "exact_trades": {
+    "derived_rows": 0,
+    "failed_attempt_records": 4152,
+    "registered": 4696,
+    "separate_from_quotes_and_candles": true
+  },
+  "full_workload_performance": "NO_GO",
+  "independently_observed_owner_OS_exit": false,
+  "last_observed_at": "2026-11-07T05:11:28.995828Z",
+  "native_contract_units": {
+    "independently_verified_total_successes": null,
+    "new_independently_verified_successes_in_this_audit": 0,
+    "producer_complete_is_not_independent_durable_completion": true,
+    "producer_reported_complete": 60620,
+    "producer_reported_failed": 80804,
+    "registered": 141424
+  },
+  "native_failure_reason_counts": [
+    {
+      "reason": "HISTORY_READ_FAILED",
+      "records": 80797
+    },
+    {
+      "reason": "HistoryCheckpointError: Independent derived interval proof differs",
+      "records": 6
+    },
+    {
+      "reason": "PersistenceUnavailable: Canonical persistence failed; no further public HTTP dispatch in this invocation",
+      "records": 1
+    }
+  ],
+  "native_provider_failure_counts": {
+    "Kalshi": 29486,
+    "Polymarket Global": 36984,
+    "Polymarket US": 14334
+  },
+  "new_paid_acquisition_reported_in_v036": {
+    "calls": 12,
+    "credits_are_not_dollars": true,
+    "odds_credits": 360
+  },
+  "new_provider_calls_by_this_audit": 0,
+  "observed_state_is_live": false,
+  "owner_declared_exit": 2,
+  "project": "ncaa_fbs",
+  "provider_coverage_expansion_credited": false,
+  "public_schedule_capture_unchanged": "2026-11-06T20:28:52Z",
+  "report_stage_failure": "Legacy report sink rejected a valid inherited v034 report prefix.",
+  "return_is_full": false,
+  "return_pin": {
+    "bytes": 103007502,
+    "sha256": "f41e933e29ee80e675f60f031e196ad75928f948079381c44ced75a9bf3f0665"
+  },
+  "return_status": "V036_PARTIAL_DIAGNOSTICS_PRESERVED",
+  "sampled_original_failure_findings": {
+    "authenticated_failure_attempts": 5,
+    "http_403_or_429_cause_established_by_samples": false,
+    "observed_causes": [
+      "Resource admission timeout",
+      "Canonical S3 PutObject internal error after configured retries",
+      "Persistent dispatch stop after canonical persistence failed",
+      "Independent interval proof mismatch"
+    ],
+    "sampling": "Purpose-selected diagnostic examples; no prevalence inference."
+  },
+  "schema": "fbs.v040.public-source-health.v1",
+  "source_pin": {
+    "bytes": 85164120,
+    "sha256": "0098b70567f0b94794c422c6e226ec863ca9353dc2fb6285c65a61033c80c3ea"
+  },
+  "source_run": "20261106T202809Z-22abf1e124-fbs036",
+  "source_started_at": "2026-11-06T20:28:12.847142Z",
+  "waves": [
+    {
+      "empty_registration": false,
+      "registered": 79240,
+      "reported_complete": 54646,
+      "reported_failed": 24594,
+      "season": 2026,
+      "wave": "headline"
+    },
+    {
+      "empty_registration": false,
+      "registered": 37991,
+      "reported_complete": 5942,
+      "reported_failed": 32049,
+      "season": 2026,
+      "wave": "alternates"
+    },
+    {
+      "empty_registration": false,
+      "registered": 421,
+      "reported_complete": 1,
+      "reported_failed": 420,
+      "season": 2024,
+      "wave": "headline"
+    },
+    {
+      "empty_registration": true,
+      "registered": 0,
+      "reported_complete": 0,
+      "reported_failed": 0,
+      "season": 2024,
+      "wave": "alternates"
+    },
+    {
+      "empty_registration": false,
+      "registered": 22025,
+      "reported_complete": 30,
+      "reported_failed": 21995,
+      "season": 2025,
+      "wave": "headline"
+    },
+    {
+      "empty_registration": false,
+      "registered": 1747,
+      "reported_complete": 1,
+      "reported_failed": 1746,
+      "season": 2025,
+      "wave": "alternates"
+    }
+  ]
+}

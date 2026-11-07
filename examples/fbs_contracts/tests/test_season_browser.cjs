@@ -39,7 +39,7 @@ let browser;
   await page.locator('#games-body button').first().focus();await page.keyboard.press('Enter');
   assert.equal(await page.locator('#game-dialog').isVisible(),true);
   assert.equal(await page.locator('#dialog-markets .market-detail').count(),4);
-  assert.match(await page.locator('#dialog-footer').innerText(),/Decision: NO BET; stake \$0/);
+  assert.match(await page.locator('#dialog-footer').innerText(),/Source timing, fees, depth and liquidity remain separate evidence requirements/);
   await page.keyboard.press('Escape');assert.equal(await page.locator('#game-dialog').isVisible(),false);
   await page.locator('#game-search').fill('');
   await page.locator('#view-disagreements').click();

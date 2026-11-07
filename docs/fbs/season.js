@@ -219,7 +219,7 @@
    }).join('');
    return `<section class="market-detail"><h3>${esc(provider)} <span class="pill ${seen?'good':'quiet'}">${seen?'Stored reference':g.markets[provider].length?'Records captured':'Coverage gap'}</span></h3>${parts}</section>`;
   }).join('');
-  $('dialog-footer').textContent=`Schedule source observed ${local(g.source_at)}. Every reference retains its source and acquisition clocks. None is a verified executable offer; no fee, liquidity, settlement, P&L or ROI claim is inferred. Decision: NO BET; stake $0.`;
+  $('dialog-footer').textContent=`Schedule source observed ${local(g.source_at)}. Every reference retains its source and acquisition clocks. None is a verified executable offer. Source timing, fees, depth and liquidity remain separate evidence requirements.`;
   $('game-dialog').showModal();
  }
  function exportCSV(){

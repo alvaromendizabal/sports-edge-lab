@@ -1,6 +1,6 @@
 # NCAA FBS · every fixture, every recorded model target
 
-[**Open the FBS season and model lab →**](https://sports-edge-lab-fbs.alv-mendizabal.chatgpt.site) · [Current page source](complete.html) · [Three-season game data](three-season.json) · [Full-precision V039 comparison](optional-study.json)
+[**Open the FBS season and model lab →**](https://sports-edge-lab-fbs.alv-mendizabal.chatgpt.site) · [Current page source](complete.html) · [Three-season game data](three-season.json) · [Full-precision V039 comparison](optional-study.json) · [New CatBoost comparison](catboost-study.json)
 
 ## Current review · V040
 
@@ -20,6 +20,62 @@ The existing dashboard accounts for **2,742 identified fixtures** across 2024, 2
 DraftKings, Kalshi, Polymarket US and Polymarket Global retain separate identities and denominators. Their historical matrices and comparable quote clocks are not filled from an unverified owner log. **No qualified cover probability** is created without a matching signed line, product, settlement and cutoff. All 99 kickoff gaps and 240 prior-history gaps stay visible. Original V038/V039 forecasts, full-precision scores, defaults and negative findings are unchanged by this reporting work.
 
 V038 retains **2,497 base fits + 681 calibrations and 33,642 outputs**. V039 adds **1,362 base fits + 454 calibrations and 21,627 outputs** on the same 2,403 games. The combined 55,269 outputs are not twice as many game identities. Publication itself performs no model fits or provider requests. New owner-return and scientific facts are admitted only through separately authenticated evidence; earlier dated notes below retain their original scope.
+
+### Model and feature coverage
+
+| Requested family | Winner / probability | Point margin / total | Evidence status |
+|---|---|---|---|
+| scikit-learn logistic regression | Executed | Not this model type | Original V038 chronological development |
+| scikit-learn linear regression and ridge | Not fitted for winner here | Executed | Original V038 chronological development |
+| scikit-learn Extra Trees and histogram gradient boosting | Classifiers executed | Regressors executed | Original V038 chronological development |
+| XGBoost and LightGBM | Classifiers executed | Regressors executed | Separate V039 study; original values retained |
+| CatBoost | Separate V040 classifier | Separate V040 regressors | Counts, final closure and exact metrics in the CatBoost section |
+| PyTorch and TensorFlow | No completed new study | No completed new study | Dependency-backed execution not admitted; adapters do not count as fits |
+| Fixed blends and calibration | Separate V038/V039 presets and held-out calibration | Separate fixed point blends; saved residual intervals on individual regressors | No new blend or default selection from current-season scores |
+
+All families retain **zero qualified exact-line cover probabilities**. A point interval is not a cover distribution. Original retained ensembles, pools and calibrators remain in their dated model registry with their own cohorts; they are not recounted as new fits.
+
+| Feature group | Retained evidence | Remaining modeling qualification |
+|---|---|---|
+| Outcome history | 145-feature chronological development input reused by the completed studies | Retrospective result-availability proxy; historical possession is unproved |
+| Provider winner references | DraftKings, Kalshi, Polymarket US and Global stay separate, with displayed/missing counts and clocks | Exact common-game cutoff, product and possession admission; incomplete historical matrices |
+| Margin/total lines and threshold intervals | Original line or median-support semantics retained | A quoted median bracket does not establish expected points or conditional cover probability |
+| Market paths and interactions | Original 33-fit study and 11 training-only standardizers, including negative findings | Strict in-game clocks, possession, supported intervals and original availability; the 257/312 and 115/125 cohorts stay separate |
+| Fees, depth and liquidity | Not retained in the public projection | Qualified source observations are still required |
+| Availability and injury chronology | Dated current source/feature records; older negative timing-uncertified study retained | No historical 2024/2025 injury cohort or admitted injury-adjusted forecast is established here |
+| Player impact and replacement | No completed contribution model represented | Expected snaps, starter role, contribution and replacement quality require their own evidence |
+
+All rendered review pages use neutral forecast and evidence language. The dated underlying audit records remain intact.
+
+### Newly executed CatBoost study
+
+The separate frozen V040 CatBoost candidate completed **680 new base fits and 226 calibrations**, producing **7,206 new target outputs across 2,403 games**. Target-level coverage is shown below; incomplete optimizer intents stay unresolved and are not refitted to force a complete count. The original V038/V039 coverage of 2,403 games remains unchanged. The earlier V038 and V039 fits were retained. No blend was changed and the V038 fixed equal blend remains the dashboard default.
+
+The [separate CatBoost data and full-precision comparison](catboost-study.json) authenticate the original prediction rows and exact fixture/team/cutoff identities. The V040 comparison includes all V038 and V039 baseline families for both weekly periods and every season. Only matching exact game-ID cohorts admit a displayed metric difference. These rounded table values summarize the original full-precision CatBoost metrics:
+
+| Season | Winner games | Point games | Accuracy | Log loss | Brier | Margin MAE | Total MAE |
+|---|---:|---:|---:|---:|---:|---:|---:|
+| 2024 | 678 | 678 | 0.6681 | 0.615111 | 0.213395 | 13.5162 | 13.4276 |
+| 2025 | 934 | 934 | 0.6991 | 0.550545 | 0.187077 | 14.0730 | 13.0992 |
+| 2026 | 626 | 629 | 0.7300 | 0.530988 | 0.179151 | 14.6055 | 12.9827 |
+
+| Season | Winner probabilities | Margins | Totals | Prior admitted games |
+|---|---:|---:|---:|---:|
+| 2024 | 679 | 679 | 679 | 679 |
+| 2025 | 934 | 934 | 934 | 934 |
+| 2026 | 787 | 790 | 790 | 790 |
+
+The comparison was prepared at **2026-11-07T06:52:33.634501Z**. These are timing-uncertified development reconstructions, not authenticated pregame issues. The seven current-week outcomes cannot establish improvement or select parameters. No champion promotion, qualified cover probability or historical source-availability claim follows. PyTorch and TensorFlow have no completed new study in this release; a registered adapter is not a fit.
+
+Memory-reserve deferrals, an unobserved worker exit and the saved work from each attempt are preserved separately. An optimizer intent without its completed state remains pending. The bounded resume reused completed identities rather than repeating or silently retrying them. These model runs are separate from provider collection and do not qualify full-workload acquisition speed. No dollar cost is assigned without an attributable workspace rate.
+
+### Authenticated source-health update
+
+The actual V036 owner return is authenticated against its original canonical bytes and independent post-return completion record. It is **partial**, with a final dated log observation at **2026-11-07 05:11:28.995828 UTC**. The first final report error rejected an inherited report prefix. The worker declared status 2; a separately observed operating-system exit is not available. This is dated evidence, not live process state.
+
+The six native-history waves registered **141,424 contracts**, with **60,620 producer-reported completions and 80,804 producer-reported failures**. The audit credits **zero new independently verified individual completions**; these totals do not expand public provider coverage. The 2024 alternate wave registered zero units. Its empty registration does not certify a complete history.
+
+Five authenticated diagnostic examples identify resource-admission timeout, canonical persistence errors, dispatch stopping after persistence failure, and independent interval-proof mismatch. This selected sample does not establish prevalence or prove HTTP 403/429 restrictions. The **242,412 failed cutoff rows** and the separate exact-trade stage (**4,696 registered units, 4,152 failed-attempt records, zero derived rows**) retain their own denominators. [Inspect the compact source-health record](source-health-v040.json) and all six wave counts in the dashboard's Evidence section. The official schedule clock stays **2026-11-06 20:28:52 UTC**, and full-workload performance stays **NO_GO**.
 
 ### Verification
 
