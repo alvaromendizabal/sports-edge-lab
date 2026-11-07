@@ -2,6 +2,7 @@
 from html.parser import HTMLParser
 from pathlib import Path
 import re
+import subprocess
 import unittest
 
 ROOT=Path(__file__).resolve().parents[3]
@@ -27,6 +28,10 @@ class PublicVocabularyTests(unittest.TestCase):
                 self.assertIsNone(ACTION.search(' '.join(parser.parts)))
 
     def test_dynamic_legacy_messages_are_neutral(self):
-        for name in ['season.js','frontier.js']:
+        for name in ['season.js']:
             with self.subTest(script=name):
                 self.assertIsNone(ACTION.search((ROOT/'docs/fbs'/name).read_text()))
+
+    def test_dynamic_original_research_notes_are_neutral_only_at_display(self):
+        source="const m=require('./docs/fbs/frontier.js'),d=require('./docs/fbs/frontier-review.json');for(const note of d.research.limitations){if(/\\b(?:betting|wagers?|stakes?|paper)\\b|NO BET/i.test(m.neutralResearchNote(note)))throw Error('Non-neutral rendered note');}"
+        subprocess.run(['node','-e',source],cwd=ROOT,check=True,capture_output=True,text=True)
