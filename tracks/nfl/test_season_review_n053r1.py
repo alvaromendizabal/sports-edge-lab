@@ -61,6 +61,14 @@ class FullSeasonTests(unittest.TestCase):
     def test_no_wagering_vocabulary_on_active_surfaces(self):
         for file in ['season_review_n053r1.template.html','season_review_n053r1.html','README.md','SEASON_REVIEW_N053R1.md']:
             self.assertIsNone(RETIRED.search(re.sub(r'<script id="nfl-season-payload"[^>]*>.*?</script>','',(HERE/file).read_text(),flags=re.S)),file)
+    def test_preserved_archive_navigation_and_payload(self):
+        from export_season_site_n053r1 import archive_previous
+        original=(HERE/'review_n053.html').read_text();commit='a'*40
+        archived,_=archive_previous(original,(HERE/'review.html').read_text(),json.loads((HERE/'readiness_n049.json').read_text()),commit)
+        self.assertNotIn('href="previous.html"',archived)
+        self.assertIn('/blob/'+commit+'/tracks/nfl/review_n052.html',archived)
+        pattern=r'<script[^>]+type="application/json"[^>]*>(.*?)</script>'
+        self.assertGreater(len(re.findall(pattern,original,re.S)),0);self.assertEqual(re.findall(pattern,original,re.S),re.findall(pattern,archived,re.S))
     def test_lossless_deterministic_compressed_data(self):
         import gzip
         raw=(HERE/'current_season_n053r1.json.gz').read_bytes();self.assertEqual(raw,pack(self.data));self.assertEqual(json.loads(gzip.decompress(raw)),self.data);self.assertLess(len(raw),8_000_000)

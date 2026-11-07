@@ -20,6 +20,11 @@ def projection(current,commit):
     current=re.sub(r'href="([^"]+)"',link,current)
     return current.replace('Canonical source and dated reports are preserved in the NFL repository.','Canonical commit: <a href="'+REPO+'/commit/'+commit+'">'+commit+'</a>. <a href="provenance.json">Publication provenance</a>.')
 
+def archive_previous(current,history,readiness,commit):
+    previous,history=previous_projection(current,history,readiness,commit)
+    previous=previous.replace('href="previous.html"','href="'+REPO+'/blob/'+commit+'/tracks/nfl/review_n052.html"')
+    return previous,history
+
 def export(output,commit):
     inputs=['season_review_n053r1.html','current_season_n053r1.json.gz','season_review_n053r1.template.html','build_season_review_n053r1.py','export_season_site_n053r1.py','test_season_review_n053r1.py','browser_season_n053r1.cjs','README.md','SEASON_REVIEW_N053R1.md','review_n053.html','current_review_n053.json','export_site_n053.py','export_site_n050.py','export_site_n049.py','review.html','readiness_n049.json']
     pins={}
@@ -30,7 +35,7 @@ def export(output,commit):
     data=validate(load());current=(HERE/'season_review_n053r1.html').read_text()
     if current!=build(data):raise ValueError('Generated season review drift')
     current=projection(current,commit)
-    previous,history=previous_projection((HERE/'review_n053.html').read_text(),(HERE/'review.html').read_text(),json.loads((HERE/'readiness_n049.json').read_text()),commit)
+    previous,history=archive_previous((HERE/'review_n053.html').read_text(),(HERE/'review.html').read_text(),json.loads((HERE/'readiness_n049.json').read_text()),commit)
     banner='<aside aria-label="Historical snapshot" style="padding:18px;background:#fff1d8;color:#39260b;text-align:center"><strong>Dated research archive. The complete current-season view is separate.</strong> <a href="index.html" style="color:#175442">Open all272games and actual N052 evidence →</a></aside>'
     previous=re.sub(r'(<body[^>]*>)',lambda m:m.group(1)+banner,previous,count=1)
     history=re.sub(r'(<body[^>]*>)',lambda m:m.group(1)+banner,history,count=1)
