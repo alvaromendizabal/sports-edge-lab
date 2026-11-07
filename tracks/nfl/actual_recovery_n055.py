@@ -38,6 +38,12 @@ def validate_recovery(r):
 def enrich(original):
  if 'n054_actual_recovery' in original:return original
  r=validate_recovery(load_recovery());d=copy.deepcopy(original);games={g['game_id']:g for g in d['games']}
+ # Label retained historical gaps as dated snapshots; preserve the source carrier.
+ for bridge in d['denominator_bridge']:
+  if bridge['label']=='Polymarket minute-path support':
+   bridge.update(label='Original minute-path support before Rams restoration',reason='Original snapshot: 113 of 121 registered games had minute paths; eight Rams event identities were unresolved then. All eight were subsequently restored, giving the separately listed 121/121 path inventory. Source-only support does not create predictive credit.')
+  elif bridge['label']=='Restored Polymarket vs exact native T1 models':
+   bridge.update(label='Restored Polymarket versus protected original native T1 benchmark',reason='The protected original benchmark contains 119 decisive games and excludes CHI/SEA and JAX/BAL. New standalone raw predictions cover all 121 decisive finals in a separate role; later provider observations are not substituted into their earlier model cutoffs.')
  old_rows={(x['game_id'],x['lane_id'],x['target']):x for x in original['model_rows']}
  lookup={(x['game_id'],x['arm'],x['target']):x for x in r['market_per_game'] if x['arm'] in MARKET_ARMS}
  near={(x['game_id'],x['arm'],x['target']):x for x in r['owner_raw_issues']}

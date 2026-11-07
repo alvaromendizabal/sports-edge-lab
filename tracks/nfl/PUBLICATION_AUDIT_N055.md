@@ -28,7 +28,7 @@ The ambiguous historical `LA` identities are the Los Angeles Rams, as supported 
 
 ## Cohorts must remain distinct
 
-The 120 point-target / 119 winner protected benchmark is a dated scoring cohort. The original Polymarket timed metrics use 92 point-target / 91 winner observations. Restored source coverage reaches all 122 completed games, while common119 T2 provider comparisons and exact91 T2 model comparisons remain separately labeled. No later observation is substituted into an earlier horizon. All 121 standalone raw winner predictions remain represented; the common T1 pairing remains 119 because the two recent games have model cutoffs earlier than their provider snapshots.
+The 120 point-target / 119 winner protected benchmark is a dated scoring cohort. The original Polymarket timed metrics use 92 timed reference games including the tie / 91 decisive winner games. Restored source coverage reaches all 122 completed games, while common119 T2 provider comparisons and exact91 T2 model comparisons remain separately labeled. No later observation is substituted into an earlier horizon. All 121 standalone raw winner predictions remain represented; the common T1 pairing remains 119 because the two recent games have model cutoffs earlier than their provider snapshots.
 
 ## Scientific accounting retained
 
