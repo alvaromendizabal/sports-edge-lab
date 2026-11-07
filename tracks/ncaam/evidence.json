@@ -93,6 +93,322 @@
     "server_timestamp_interval_upper_seconds": 1,
     "source_scope": "B045_SOURCE_VERSION_NOT_OWNER_RUN_ID"
   },
+  "b046_baseline_observation": {
+    "browser_display_rows": 47130,
+    "calibration_slope_intercept_independently_refit": false,
+    "display_timezone": "America/Los_Angeles",
+    "game_model_rows": 47127,
+    "independent_metric_panels_checked": 1499,
+    "independent_model_panels_checked": 1496,
+    "independent_model_scalar_checks": 4684,
+    "independent_provider_panels_checked": 3,
+    "independent_provider_scalar_checks": 15,
+    "independent_scalar_checks": 4699,
+    "independent_season_panels_checked": 555,
+    "independent_weekly_panels_checked": 941,
+    "mismatches": 0,
+    "new_fit_credit_from_report_recovery": 0,
+    "physical_universe_certified": false,
+    "report_asof": "2026-11-07T00:31:40.401523+00:00",
+    "reporting_week_timezone": "America/New_York",
+    "source_acquisition_completed_at": "2026-11-06T23:55:27+00:00",
+    "source_event_ids_both_leagues": 2808,
+    "source_release": "B046",
+    "target_rows": 85466,
+    "unresolved_source_candidate_rows": 3,
+    "windows": {
+      "all_observed": {
+        "events": 1430,
+        "finals": 469,
+        "margin_missing": 9476,
+        "missing_tip": 49,
+        "official_unmatched": 533,
+        "rows": 22307,
+        "source_unresolved": 1,
+        "total_missing": 9476,
+        "win_missing": 5996
+      },
+      "last_week": {
+        "events": 2,
+        "finals": 2,
+        "margin_missing": 20,
+        "missing_tip": 0,
+        "official_unmatched": 0,
+        "rows": 50,
+        "source_unresolved": 0,
+        "total_missing": 20,
+        "win_missing": 12
+      },
+      "next_week": {
+        "events": 625,
+        "finals": 0,
+        "margin_missing": 4937,
+        "missing_tip": 43,
+        "official_unmatched": 234,
+        "rows": 11713,
+        "source_unresolved": 1,
+        "total_missing": 4937,
+        "win_missing": 3089
+      },
+      "season_to_date": {
+        "events": 537,
+        "finals": 469,
+        "margin_missing": 2534,
+        "missing_tip": 2,
+        "official_unmatched": 194,
+        "rows": 5850,
+        "source_unresolved": 0,
+        "total_missing": 2534,
+        "win_missing": 1648
+      },
+      "this_week": {
+        "events": 737,
+        "finals": 467,
+        "margin_missing": 4131,
+        "missing_tip": 3,
+        "official_unmatched": 266,
+        "rows": 9650,
+        "source_unresolved": 0,
+        "total_missing": 4131,
+        "win_missing": 2645
+      }
+    }
+  },
+  "b046_descriptive_original_metrics": [
+    {
+      "accuracy": "0.8195876288659794",
+      "brier": "0.121945301027372",
+      "current_outcomes_selected_model": false,
+      "horizon_minutes": "60.0",
+      "log_loss": "0.38160567386737954",
+      "mae": "",
+      "model_evidence_mode": "retrospective_reconstructed",
+      "n": "194",
+      "n_forecast_rows": "653",
+      "public_model_id": "Original frozen reconstruction",
+      "rmse": "",
+      "target": "win",
+      "track": "original_B003_frozen_reconstructed"
+    },
+    {
+      "accuracy": "",
+      "brier": "",
+      "current_outcomes_selected_model": false,
+      "horizon_minutes": "60.0",
+      "log_loss": "",
+      "mae": "10.985231333220867",
+      "model_evidence_mode": "retrospective_reconstructed",
+      "n": "194",
+      "n_forecast_rows": "653",
+      "public_model_id": "Original frozen reconstruction",
+      "rmse": "13.999183595117437",
+      "target": "margin",
+      "track": "original_B003_frozen_reconstructed"
+    },
+    {
+      "accuracy": "",
+      "brier": "",
+      "current_outcomes_selected_model": false,
+      "horizon_minutes": "60.0",
+      "log_loss": "",
+      "mae": "14.225127164403748",
+      "model_evidence_mode": "retrospective_reconstructed",
+      "n": "194",
+      "n_forecast_rows": "653",
+      "public_model_id": "Original frozen reconstruction",
+      "rmse": "17.67047471974596",
+      "target": "total",
+      "track": "original_B003_frozen_reconstructed"
+    }
+  ],
+  "b046_forecast_journal_observation": {
+    "all_original_predictions_identities_and_clocks_match": true,
+    "b042_source_games": 5,
+    "b042_source_issues": 339,
+    "b045_source_games": 8,
+    "b045_source_issues": 552,
+    "b046_baseline_rows": 1002,
+    "b046_journal_only_rows": 30,
+    "b046_source_games": 18,
+    "b046_source_issues": 1032,
+    "baseline_issued_rows": 1893,
+    "complete_remote_inventory_proved": false,
+    "distinct_immutable_issues": 1923,
+    "new_issues_created_by_audit": 0,
+    "original_outcomes_absent": true,
+    "original_server_intervals_end_by_cutoff": true,
+    "owner_run_identity_proved": false,
+    "returned_objects_examined": 382
+  },
+  "b046_provider_comparison": {
+    "evidence_mode": "retrospective_reconstructed",
+    "general_superiority_proved": false,
+    "horizon_minutes": 60,
+    "new_model_selection_credit": 0,
+    "provider_rows": [
+      {
+        "model_accuracy": null,
+        "model_brier": null,
+        "model_log_loss": null,
+        "n": null,
+        "product": "Full-game market reference",
+        "provider": "Kalshi",
+        "provider_accuracy": null,
+        "provider_brier": null,
+        "provider_log_loss": null,
+        "status": "NO_ADMITTED_MATCHED_ROW_SUPPLIED"
+      },
+      {
+        "model_accuracy": 0.8271604938271605,
+        "model_brier": 0.12277218461495693,
+        "model_log_loss": 0.3836569103624253,
+        "n": 162,
+        "product": "International",
+        "provider": "Polymarket",
+        "provider_accuracy": 0.8240740740740741,
+        "provider_brier": 0.10698541975308642,
+        "provider_log_loss": 0.335342660506594,
+        "status": "MATCHED_RECONSTRUCTION"
+      },
+      {
+        "model_accuracy": null,
+        "model_brier": null,
+        "model_log_loss": null,
+        "n": null,
+        "product": "Full-game market reference",
+        "provider": "DraftKings",
+        "provider_accuracy": null,
+        "provider_brier": null,
+        "provider_log_loss": null,
+        "status": "NO_ADMITTED_MATCHED_ROW_SUPPLIED"
+      }
+    ],
+    "season": "2026\u201327",
+    "source_release": "B046",
+    "us_status": "SEPARATE_UNACQUIRED"
+  },
+  "b046_source_coverage": {
+    "closed_history_replays": 2924,
+    "complete_official_denominator": false,
+    "completed": 643,
+    "current_source_http": 4728,
+    "draftkings": "CURRENT_PAID_FEED_NOT_CONFIGURED; one new rules-page request",
+    "espn_extra_or_unverified": 1007,
+    "injury_http_302": 1,
+    "injury_http_406": 84,
+    "injury_http_success": 176,
+    "injury_new_http": 261,
+    "injury_recaptured_identities": 39,
+    "injury_semantic_observations_unchanged": 1320,
+    "kalshi": "RETAINED_429_STOP_NO_QUALIFIED_CURRENT_PREGAME_COVERAGE",
+    "official_conflicts": 40,
+    "official_daily_http": 278,
+    "official_inventory": 1798,
+    "official_matched": 786,
+    "official_only": 1012,
+    "official_source_proof_http": 4,
+    "polymarket_international_men_denominator": 889,
+    "polymarket_international_qualified_men": 225,
+    "polymarket_international_qualified_women": 0,
+    "polymarket_international_women_denominator": 895,
+    "polymarket_us": "UNACQUIRED_SEPARATE_PRODUCT",
+    "schema_ambiguity_dates": 4,
+    "source_games": 1793,
+    "validated_boxscores": 635
+  },
+  "b047_source_identity_repair": {
+    "analysis_release": "B047",
+    "canonical_source_games_after": 1793,
+    "canonical_source_games_before": 0,
+    "comparison_contexts": 43032,
+    "evidence_tiers": 2,
+    "horizons": 3,
+    "identity_exclusions_after": 0,
+    "new_issues": 0,
+    "new_model_fits": 0,
+    "numeric_source_margin_rows": 165,
+    "official_denominator_certified": false,
+    "provider_products": 4,
+    "qualified_ats_records": 0,
+    "qualified_probabilities": 0,
+    "scope": "Exact same-league team identity aliases repaired. These are comparison contexts, not new provider markets or admitted probabilities.",
+    "source_bytes_and_clocks_unchanged": true,
+    "source_game_versions": 1793,
+    "source_release": "B046",
+    "unavailable_contexts": 43032
+  },
+  "capability_registry": [
+    {
+      "evidence_status": "No B047 owner fits or promotion credited",
+      "family": "Logistic regression",
+      "implementation": "IMPLEMENTED_CANDIDATE_OWNER_EXECUTION_PENDING",
+      "next_action": "Require cutoff-bound training membership and calibration evidence.",
+      "targets": "Winner / probability"
+    },
+    {
+      "evidence_status": "No B047 owner fits or promotion credited",
+      "family": "Linear regression / ridge",
+      "implementation": "IMPLEMENTED_CANDIDATE_OWNER_EXECUTION_PENDING",
+      "next_action": "Require earlier-known labels and error distribution evidence.",
+      "targets": "Margin / total"
+    },
+    {
+      "evidence_status": "No B047 owner fits or promotion credited",
+      "family": "Histogram gradient boosting",
+      "implementation": "IMPLEMENTED_CANDIDATE_OWNER_EXECUTION_PENDING",
+      "next_action": "Retain fixed registration and paired chronological comparison.",
+      "targets": "Classification / regression"
+    },
+    {
+      "evidence_status": "No B047 owner fits or promotion credited",
+      "family": "XGBoost",
+      "implementation": "IMPLEMENTED_CANDIDATE_OWNER_EXECUTION_PENDING",
+      "next_action": "Verify the actual dependency and admitted contract in the owner environment.",
+      "targets": "Classification / regression"
+    },
+    {
+      "evidence_status": "No B047 owner fits or promotion credited",
+      "family": "LightGBM",
+      "implementation": "IMPLEMENTED_CANDIDATE_OWNER_EXECUTION_PENDING",
+      "next_action": "Verify the actual dependency and admitted contract in the owner environment.",
+      "targets": "Classification / regression"
+    },
+    {
+      "evidence_status": "No B047 owner fits or promotion credited",
+      "family": "CatBoost",
+      "implementation": "IMPLEMENTED_CANDIDATE_OWNER_EXECUTION_PENDING",
+      "next_action": "Verify the actual dependency and admitted contract in the owner environment.",
+      "targets": "Classification / regression"
+    },
+    {
+      "evidence_status": "No B047 owner fits or promotion credited",
+      "family": "PyTorch",
+      "implementation": "IMPLEMENTED_CANDIDATE_OWNER_EXECUTION_PENDING",
+      "next_action": "Use measured capacity and a fixed registered candidate before fitting.",
+      "targets": "Classification / regression"
+    },
+    {
+      "evidence_status": "No B047 owner fits or promotion credited",
+      "family": "TensorFlow",
+      "implementation": "IMPLEMENTED_CANDIDATE_OWNER_EXECUTION_PENDING",
+      "next_action": "Use measured capacity and a fixed registered candidate before fitting.",
+      "targets": "Classification / regression"
+    },
+    {
+      "evidence_status": "No B047 owner fits or promotion credited",
+      "family": "Ensembles / blends",
+      "implementation": "IMPLEMENTED_CANDIDATE_OWNER_EXECUTION_PENDING",
+      "next_action": "Require common held-out membership and a separate blend-fitting cutoff.",
+      "targets": "Winner / margin / total"
+    },
+    {
+      "evidence_status": "No B047 owner fits or promotion credited",
+      "family": "Calibration / margin distribution",
+      "implementation": "IMPLEMENTED_CANDIDATE_OWNER_EXECUTION_PENDING",
+      "next_action": "Require independent out-of-fold or integer-PMF evidence; retain discrete pushes.",
+      "targets": "Probability / spread / totals"
+    }
+  ],
   "coverage_evidence_release": "B043",
   "coverage_history": [
     {
@@ -582,51 +898,76 @@
       "workers_planned": null
     },
     "attempted_scientific_stages": 10,
-    "child_exit_code": -9,
-    "completed_at": null,
+    "child_exit_code": null,
+    "committed_contract_objects": 4851,
+    "completed_at": "2026-11-07T02:08:29.540864+00:00",
     "completed_scientific_stages": 9,
     "cost_status": "UNVERIFIED_NO_CURRENT_INSTANCE_RATE_OR_BILLING_ASSUMED",
-    "cpu_seconds": null,
-    "cumulative_owner_peak_rss_at_stage_failure_bytes": 16140840960,
+    "cpu_seconds": 8674.880947,
+    "cumulative_owner_peak_rss_at_stage_failure_bytes": 16714358784,
     "current_outcomes_used_for_selection": false,
-    "delivery_status": "ATTACHED_RETURN_AUTHENTICATED_NOT_PERSISTED",
-    "durable_return_verified": false,
+    "delivery_status": "DURABLE_FINAL_RETURN_VERIFIED",
+    "durable_return_verified": true,
     "evidence_limits": [
-      "Attached execution log is a 1,000,000-byte tail.",
-      "Earlier fixture totals and full-run timings are unavailable in that tail.",
-      "Checkpoint contracts, latest role counts and fit-attempt counts are different populations.",
-      "A signal exit does not prove out-of-memory termination.",
-      "No externally observed owner-terminal or shell-exit line is supplied."
+      "Separate literal owner-terminal and observed shell-exit lines were not supplied.",
+      "Physical typed counts are committed fits, not progress units or latest role counts.",
+      "The complete model chain was not freshly imported by this review.",
+      "Recorded fit counts do not establish paired injury/path gains."
     ],
     "external_shell_exit_code": null,
     "failure_class": "AdmissionDeferred",
-    "failure_code": "BOUNDED_RESOURCE_ADMISSION_EXHAUSTED_THEN_UNEXPECTED_CHILD_EXIT",
-    "failure_description": "The injury stage exhausted its bounded resource-admission wait. A later wrapper return recorded child exit -9. The cause of the kill is not established.",
+    "failure_code": "BOUNDED_RESOURCE_ADMISSION_EXHAUSTED",
+    "failure_description": "The injury stage exhausted a bounded resource admission wait; committed work and the final return were preserved.",
     "failure_phase": "PAIRED_INJURY_CHALLENGERS",
-    "fit_count_status": "UNKNOWN_PENDING_COMPLETE_DURABLE_PRODUCER_AUDIT",
-    "injury_stage_owner_cpu_seconds": 1561.92262,
-    "kill_cause": "UNKNOWN",
-    "last_observed_available_memory_gib_rounded": 5.05,
-    "last_observed_owner_rss_gib_rounded": 19.26,
+    "fit_count_status": "EXACT_COMMITTED_TYPED_COUNTS_RECONCILED_TO_OWNER_READBACK",
+    "fit_proof_scope": "Authenticated returned physical ledger and original owner readback receipts independently reconciled; this review has not reimported all remote models or rehashed all remote receipt bodies.",
+    "injury_stage_owner_cpu_seconds": 5371.54789,
+    "kill_cause": "NO_KILL_DIAGNOSIS_ASSERTED",
+    "last_observed_available_memory_gib_rounded": 8.79,
+    "last_observed_owner_rss_gib_rounded": null,
     "league_new_real_target_fits": null,
-    "new_calibration_fits": null,
-    "new_empirical_residual_fits": null,
-    "new_injury_fits": null,
+    "new_calibration_fits": 701,
+    "new_empirical_residual_fits": 24,
+    "new_injury_fit_scope": "TARGET_ESTIMATORS_ONLY; 656 additional injury scalar fits remain separate",
+    "new_injury_fits": 3932,
     "new_injury_requests": null,
     "new_orders": 0,
     "new_prediction_rows": null,
     "new_prospective_issues": null,
     "new_provider_requests": null,
-    "new_real_target_fits": null,
+    "new_real_target_fits": 4033,
     "new_source_refreshes": null,
-    "next_execution_status": "B046 prepares bounded disk-backed recovery and spread/ATS reporting. No B046 owner completion or new scientific gain is claimed.",
+    "next_execution_status": "B047 is prepared to repair source identity, extend per-game model inventory and reduce bounded recovery overhead. Prepared code has no owner-execution or model-promotion credit.",
     "original_monitoring_unchanged": true,
     "out_of_memory_proved": false,
-    "outcome_summary": "Nine of 16 stages completed in the recorded progress. The injury stage failed after a bounded capacity wait, and the child later exited -9 without its normal terminal return.",
-    "owner_peak_rss_bytes": null,
-    "phase_scope_note": "Only the injury-stage duration is available in this attached log tail; the final wall/CPU totals and owner peak are not established.",
+    "outcome_summary": "Nine of 16 stages completed. Injury research deferred when measured shared memory headroom was below the required reserves; the final partial return is durable.",
+    "owner_peak_rss_bytes": 16714358784,
+    "phase_scope_note": "Individual stage durations and final owner wall/CPU/high-water memory are recorded. The process-tree simultaneous peak is not measured.",
     "phase_seconds": {
-      "injury_stage": 1527.417660635
+      "injury_stage": 4904.503311787999
+    },
+    "physical_family_totals": {
+      "current_and_baseline": {
+        "contract_objects": 178,
+        "empirical_residual_fits": 24,
+        "scalar_calibration_fits": 10,
+        "target_estimator_fits": 36,
+        "unclassified_committed_model_artifacts": 0
+      },
+      "injury": {
+        "contract_objects": 4588,
+        "empirical_residual_fits": 0,
+        "scalar_calibration_fits": 656,
+        "target_estimator_fits": 3932,
+        "unclassified_committed_model_artifacts": 0
+      },
+      "native": {
+        "contract_objects": 85,
+        "empirical_residual_fits": 0,
+        "scalar_calibration_fits": 35,
+        "target_estimator_fits": 65,
+        "unclassified_committed_model_artifacts": 0
+      }
     },
     "planned_scientific_stages": 16,
     "preserved_evidence_release": "B043",
@@ -637,66 +978,66 @@
       "scientific_stages_failed": 1,
       "scientific_stages_not_started": 6
     },
-    "release": "B045",
+    "release": "B046",
     "remaining_phases": "Issue reconciliation, final display refresh, reporting, historical backfill, market paths and the final post-history display were not reached.",
     "return_finalization_seconds": null,
-    "reused_native_scalar_fits": null,
-    "reused_native_target_fits": null,
-    "reused_target_fits": null,
+    "reused_native_scalar_fits": 6,
+    "reused_native_target_fits": 12,
+    "reused_target_fits": 108,
     "run_scope": "NCAA_MEN_AND_WOMEN_COMBINED",
     "scientific_credit_from_subsequent_readback": 0,
     "scientific_goal_complete": false,
     "simultaneous_process_tree_peak_measured": false,
-    "stage_progress_note": "Nine completed; injury challengers failed; six later stages not started.",
+    "stage_progress_note": "Nine completed; injury research deferred; six later stages not reached.",
     "stages": [
       {
         "label": "Current inventory and provider acquisition",
-        "seconds": null,
+        "seconds": 1395.6126604370002,
         "status": "COMPLETED"
       },
       {
         "label": "Authenticate prior inputs and work",
-        "seconds": null,
+        "seconds": 114.27111086100012,
         "status": "COMPLETED"
       },
       {
         "label": "Historical feature review",
-        "seconds": null,
+        "seconds": 6.420084695999321,
         "status": "COMPLETED"
       },
       {
         "label": "Verify and reuse historical targets",
-        "seconds": null,
+        "seconds": 24.893142721000913,
         "status": "COMPLETED"
       },
       {
         "label": "Current feature reconstruction",
-        "seconds": null,
+        "seconds": 150.53871038999932,
         "status": "COMPLETED"
       },
       {
         "label": "Timestamped injury and availability acquisition",
-        "seconds": null,
+        "seconds": 260.23802845299906,
         "status": "COMPLETED"
       },
       {
         "label": "Original frozen inference",
-        "seconds": null,
+        "seconds": 125.82760748400142,
         "status": "COMPLETED"
       },
       {
         "label": "Chronological selected current reconstruction",
-        "seconds": null,
+        "seconds": 615.8864432350001,
         "status": "COMPLETED"
       },
       {
         "label": "Native chronological reconstruction",
-        "seconds": null,
+        "seconds": 471.27907417200004,
         "status": "COMPLETED"
       },
       {
         "label": "Chronological paired injury challengers and controls",
-        "seconds": 1527.417660635,
+        "seconds": 4904.503311787999,
         "status": "FAILED"
       },
       {
@@ -730,17 +1071,17 @@
         "status": "NOT_STARTED"
       }
     ],
-    "stages_evidence": "AUTHENTICATED_ATTACHED_TAIL_PROGRESS_AND_FAILURE_EVENT",
-    "started_at": null,
-    "status": "WORKER_EXITED_WITHOUT_TERMINAL_RETURN",
-    "status_clock": "2026-11-06T21:53:15.821851+00:00",
-    "status_clock_scope": "INJURY_STAGE_FAILURE_EVENT_NOT_TERMINAL_COMPLETION",
+    "stages_evidence": "AUTHENTICATED_RETURN_STAGE_REPORT_AND_RECORDED_COMPLETION",
+    "started_at": "2026-11-06T23:33:23.388051+00:00",
+    "status": "RESOURCE_DEFERRED_PARTIAL_WORK_PRESERVED",
+    "status_clock": "2026-11-07T02:08:29.540864+00:00",
+    "status_clock_scope": "RECORDED_RETURN_COMPLETION_NOT_EXTERNAL_SHELL_EXIT",
     "synthetic_test_errors": null,
     "synthetic_tests_failed": null,
     "synthetic_tests_passed": null,
     "synthetic_tests_skipped": null,
     "synthetic_tests_total": null,
-    "total_wall_seconds": null
+    "total_wall_seconds": 9306.168638689
   },
   "current_reconstructed_comparison": {
     "as_issued": false,
@@ -843,6 +1184,28 @@
     "source_acquisition_completed_at": "2026-11-06T02:14:03.087794+00:00",
     "static_snapshot_not_live_feed": true
   },
+  "frontier_capabilities": [
+    {
+      "area": "Basketball form",
+      "gate": "Each feature must be known before the target cutoff. Current outcomes cannot select models.",
+      "scope": "Earlier-completed previous 1/3/5/10; home and away 1/3/5; EWM and shrinkage; opponent and schedule context"
+    },
+    {
+      "area": "Market paths",
+      "gate": "Exact completed game, gender, team, endpoint semantics, source/completion availability and settlement-tail exclusion are required.",
+      "scope": "First/last in-play states, movement, volatility, sparse-gap support and score-conditioned surprise"
+    },
+    {
+      "area": "Injury and availability",
+      "gate": "Missing is not healthy. Historical image publication gaps and unresolved observations remain explicit; no DNP inference.",
+      "scope": "Versioned status, timing, persistence, source disagreement and uncertainty-aware team context"
+    },
+    {
+      "area": "Rolling evaluation",
+      "gate": "Training membership ends at earlier-known completed games. Each target/game/version receives an admitted, reused or deferred state.",
+      "scope": "Frozen baseline, weekly reconstruction and independently labeled per-game candidate output"
+    }
+  ],
   "frontier_research": {
     "current_outcomes_used_for_selection": false,
     "evidence_limit": "The 723,492 retained observations do not establish in-game trajectory coverage. Actual in-game observations and independently timestamped game-state windows must qualify before fitting; no completed market-path study or performance gain is claimed.",
@@ -2981,13 +3344,182 @@
       "synthetic_tests_skipped": 1,
       "synthetic_tests_total": 1135,
       "total_wall_seconds": 143.27627949799995
+    },
+    {
+      "admission": {
+        "acquisition_workers_planned": null,
+        "bounded_fit_wait_seconds": 120,
+        "capacity_is_observation_not_reservation": true,
+        "foreign_processes_signaled": 0,
+        "workers_planned": null
+      },
+      "attempted_scientific_stages": 10,
+      "child_exit_code": -9,
+      "completed_at": null,
+      "completed_scientific_stages": 9,
+      "cost_status": "UNVERIFIED_NO_CURRENT_INSTANCE_RATE_OR_BILLING_ASSUMED",
+      "cpu_seconds": null,
+      "cumulative_owner_peak_rss_at_stage_failure_bytes": 16140840960,
+      "current_outcomes_used_for_selection": false,
+      "delivery_status": "ATTACHED_RETURN_AUTHENTICATED_NOT_PERSISTED",
+      "durable_return_verified": false,
+      "evidence_limits": [
+        "Attached execution log is a 1,000,000-byte tail.",
+        "Earlier fixture totals and full-run timings are unavailable in that tail.",
+        "Checkpoint contracts, latest role counts and fit-attempt counts are different populations.",
+        "A signal exit does not prove out-of-memory termination.",
+        "No externally observed owner-terminal or shell-exit line is supplied."
+      ],
+      "external_shell_exit_code": null,
+      "failure_class": "AdmissionDeferred",
+      "failure_code": "BOUNDED_RESOURCE_ADMISSION_EXHAUSTED_THEN_UNEXPECTED_CHILD_EXIT",
+      "failure_description": "The injury stage exhausted its bounded resource-admission wait. A later wrapper return recorded child exit -9. The cause of the kill is not established.",
+      "failure_phase": "PAIRED_INJURY_CHALLENGERS",
+      "fit_count_status": "UNKNOWN_PENDING_COMPLETE_DURABLE_PRODUCER_AUDIT",
+      "injury_stage_owner_cpu_seconds": 1561.92262,
+      "kill_cause": "UNKNOWN",
+      "last_observed_available_memory_gib_rounded": 5.05,
+      "last_observed_owner_rss_gib_rounded": 19.26,
+      "league_new_real_target_fits": null,
+      "new_calibration_fits": null,
+      "new_empirical_residual_fits": null,
+      "new_injury_fits": null,
+      "new_injury_requests": null,
+      "new_orders": 0,
+      "new_prediction_rows": null,
+      "new_prospective_issues": null,
+      "new_provider_requests": null,
+      "new_real_target_fits": null,
+      "new_source_refreshes": null,
+      "next_execution_status": "B046 prepares bounded disk-backed recovery and spread/ATS reporting. No B046 owner completion or new scientific gain is claimed.",
+      "original_monitoring_unchanged": true,
+      "out_of_memory_proved": false,
+      "outcome_summary": "Nine of 16 stages completed in the recorded progress. The injury stage failed after a bounded capacity wait, and the child later exited -9 without its normal terminal return.",
+      "owner_peak_rss_bytes": null,
+      "phase_scope_note": "Only the injury-stage duration is available in this attached log tail; the final wall/CPU totals and owner peak are not established.",
+      "phase_seconds": {
+        "injury_stage": 1527.417660635
+      },
+      "planned_scientific_stages": 16,
+      "preserved_evidence_release": "B043",
+      "progress": {
+        "fixture_checks_are_model_fits": false,
+        "recovery_creates_new_issue_credit": false,
+        "scientific_stages_completed": 9,
+        "scientific_stages_failed": 1,
+        "scientific_stages_not_started": 6
+      },
+      "release": "B045",
+      "remaining_phases": "Issue reconciliation, final display refresh, reporting, historical backfill, market paths and the final post-history display were not reached.",
+      "return_finalization_seconds": null,
+      "reused_native_scalar_fits": null,
+      "reused_native_target_fits": null,
+      "reused_target_fits": null,
+      "run_scope": "NCAA_MEN_AND_WOMEN_COMBINED",
+      "scientific_credit_from_subsequent_readback": 0,
+      "scientific_goal_complete": false,
+      "simultaneous_process_tree_peak_measured": false,
+      "stage_progress_note": "Nine completed; injury challengers failed; six later stages not started.",
+      "stages": [
+        {
+          "label": "Current inventory and provider acquisition",
+          "seconds": null,
+          "status": "COMPLETED"
+        },
+        {
+          "label": "Authenticate prior inputs and work",
+          "seconds": null,
+          "status": "COMPLETED"
+        },
+        {
+          "label": "Historical feature review",
+          "seconds": null,
+          "status": "COMPLETED"
+        },
+        {
+          "label": "Verify and reuse historical targets",
+          "seconds": null,
+          "status": "COMPLETED"
+        },
+        {
+          "label": "Current feature reconstruction",
+          "seconds": null,
+          "status": "COMPLETED"
+        },
+        {
+          "label": "Timestamped injury and availability acquisition",
+          "seconds": null,
+          "status": "COMPLETED"
+        },
+        {
+          "label": "Original frozen inference",
+          "seconds": null,
+          "status": "COMPLETED"
+        },
+        {
+          "label": "Chronological selected current reconstruction",
+          "seconds": null,
+          "status": "COMPLETED"
+        },
+        {
+          "label": "Native chronological reconstruction",
+          "seconds": null,
+          "status": "COMPLETED"
+        },
+        {
+          "label": "Chronological paired injury challengers and controls",
+          "seconds": 1527.417660635,
+          "status": "FAILED"
+        },
+        {
+          "label": "Preserve immutable issues",
+          "seconds": null,
+          "status": "NOT_STARTED"
+        },
+        {
+          "label": "Final display-only refresh",
+          "seconds": null,
+          "status": "NOT_STARTED"
+        },
+        {
+          "label": "Game, week and season reporting",
+          "seconds": null,
+          "status": "NOT_STARTED"
+        },
+        {
+          "label": "Historical source inventory and backfill",
+          "seconds": null,
+          "status": "NOT_STARTED"
+        },
+        {
+          "label": "Historical in-game acquisition and chronological path study",
+          "seconds": null,
+          "status": "NOT_STARTED"
+        },
+        {
+          "label": "Final display after secondary history",
+          "seconds": null,
+          "status": "NOT_STARTED"
+        }
+      ],
+      "stages_evidence": "AUTHENTICATED_ATTACHED_TAIL_PROGRESS_AND_FAILURE_EVENT",
+      "started_at": null,
+      "status": "WORKER_EXITED_WITHOUT_TERMINAL_RETURN",
+      "status_clock": "2026-11-06T21:53:15.821851+00:00",
+      "status_clock_scope": "INJURY_STAGE_FAILURE_EVENT_NOT_TERMINAL_COMPLETION",
+      "synthetic_test_errors": null,
+      "synthetic_tests_failed": null,
+      "synthetic_tests_passed": null,
+      "synthetic_tests_skipped": null,
+      "synthetic_tests_total": null,
+      "total_wall_seconds": null
     }
   ],
   "prepared_execution": {
     "new_scientific_credit": 0,
     "owner_execution_observed": false,
-    "release": "B046",
-    "scope": "Bound recovery memory and preserve exact scientific identity, then report line-conditioned cover probabilities and earlier-known ATS records with explicit gaps.",
+    "release": "B047",
+    "scope": "Bounded exact recovery, complete explicit game/capability inventory, source identity repair and leakage-aware per-game candidate training. No B047 owner execution is claimed.",
     "status": "PREPARED_NOT_EXECUTED"
   },
   "provenance": {
@@ -3381,7 +3913,9 @@
       "status": "RETAINED_CAPTURE_HISTORY_CREDENTIAL_ABSENT"
     }
   ],
-  "published_snapshot_date": "2026-11-06",
+  "published_display_timezone": "America/Los_Angeles",
+  "published_snapshot_at": "2026-11-07T02:30:00+00:00",
+  "published_snapshot_date": "2026-11-07",
   "quote_display_contract": {
     "calendar_inclusion": "Every observed game remains visible when forecasts or provider observations are missing. Candidate records are not a reconciled official denominator.",
     "captured_before_tip_separate_from_later_recovered_supported_pretip": true,

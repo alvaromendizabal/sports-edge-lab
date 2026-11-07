@@ -339,7 +339,7 @@ class EvidenceTests(unittest.TestCase):
             self.assertFalse(readback['earlier_availability_credit'])
             self.assertTrue(readback['source_clocks_unchanged'])
             self.assertEqual(readback['new_provider_requests'], 0)
-            self.assertEqual(data['prepared_execution']['release'], 'B046')
+            self.assertEqual(data['prepared_execution']['release'], 'B047')
             self.assertFalse(data['prepared_execution']['owner_execution_observed'])
             self.assertEqual(data['prepared_execution']['new_scientific_credit'], 0)
             old = next(r for r in data['review_history'] if r['release'] == 'B043')
@@ -353,7 +353,7 @@ class EvidenceTests(unittest.TestCase):
         for mutation in ('fit', 'readback_provider', 'readback_availability', 'readback_clock', 'prepared', 'duplicate_owner'):
             corrupted = copy.deepcopy(self.exports['ncaam'])
             if mutation == 'fit':
-                corrupted['current_owner_attempt']['new_real_target_fits'] = 1
+                next(a for a in corrupted['owner_attempt_history'] if a['release']=='B045')['new_real_target_fits'] = 1
             elif mutation == 'readback_provider':
                 build_dashboard.dated_readback(corrupted)['new_provider_requests'] = 182
             elif mutation == 'readback_availability':
@@ -370,7 +370,7 @@ class EvidenceTests(unittest.TestCase):
 
     def test_b045_unknown_work_is_not_zero_or_terminal_success(self):
         for data in self.exports.values():
-            current = data['current_owner_attempt']
+            current = next(a for a in data['owner_attempt_history'] if a['release']=='B045')
             self.assertEqual(current['release'], 'B045')
             self.assertEqual(current['status'], 'WORKER_EXITED_WITHOUT_TERMINAL_RETURN')
             self.assertEqual((current['completed_scientific_stages'], current['attempted_scientific_stages'], current['planned_scientific_stages']), (9, 10, 16))
@@ -390,7 +390,7 @@ class EvidenceTests(unittest.TestCase):
     def test_unproved_terminal_success_and_signal_cause_are_rejected(self):
         for key, value in [('completed_at', '2026-11-06T22:00:00Z'), ('external_shell_exit_code', 0), ('durable_return_verified', True), ('out_of_memory_proved', True), ('kill_cause', 'OOM')]:
             corrupted = copy.deepcopy(self.exports['ncaam'])
-            corrupted['current_owner_attempt'][key] = value
+            next(a for a in corrupted['owner_attempt_history'] if a['release']=='B045')[key] = value
             with self.subTest(key=key), patch.object(Path, 'read_text', return_value=json.dumps(corrupted)):
                 with self.assertRaises(ValueError):
                     build_dashboard.evidence('ncaam')
@@ -503,7 +503,7 @@ class EvidenceTests(unittest.TestCase):
             self.assertEqual(path.read_text(), output)
             self.assertNotRegex(output, r'__(?:TITLE|EVIDENCE|PROGRESS_DEMO|PREFLIGHT_DEMO|HANDOFF_DEMO|SPREAD_ATS_DEMO|LEAGUE|SIBLING|SIBLING_LABEL)__')
             if path.parent.name in self.exports:
-                self.assertIn('NCAA evidence review · 06 November 2026 UTC', output)
+                self.assertIn('NCAA evidence review · 06 November 2026 PST', output)
                 self.assertIn('Latest run stopped during injury research.', output)
                 self.assertNotIn('Latest run stopped before science', output)
                 self.assertNotIn('Latest run stopped during reporting', output)
@@ -573,9 +573,9 @@ class EvidenceTests(unittest.TestCase):
     def test_landing_uses_current_evidence_and_rejects_mixed_league_snapshots(self):
         exports = list(self.exports.values())
         landing = build_dashboard.render_landing(exports)
-        self.assertIn('B045: 9 of 16 stages completed; child exited without its terminal return.', landing)
-        self.assertIn('723,492 market observations', landing)
-        self.assertIn('339 existing research issue rows across 5 games', landing)
+        self.assertIn('B046: 9/16 stages completed; partial work and final return preserved.', landing)
+        self.assertIn('85,466 target rows, 47,127 game-model rows and 47,130 display rows', landing)
+        self.assertIn('339 B042 immutable issues', landing)
         self.assertNotIn('Latest owner stopped before science', landing)
         changed = copy.deepcopy(exports)
         changed[1]['observed_inventory']['candidate_games'] += 1
@@ -585,6 +585,51 @@ class EvidenceTests(unittest.TestCase):
         changed[1]['current_owner_attempt']['release'] = 'B041'
         with self.assertRaisesRegex(ValueError, 'release disagreement'):
             build_dashboard.render_landing(changed)
+
+    def test_b046_physical_typed_counts_and_source_journal_are_separate(self):
+        for data in self.exports.values():
+            a=data['current_owner_attempt'];j=data['b046_forecast_journal_observation']
+            self.assertEqual((a['new_real_target_fits'],a['new_calibration_fits'],a['new_empirical_residual_fits']),(4033,701,24))
+            self.assertIsNone(a['new_prospective_issues'])
+            self.assertEqual((j['b046_source_issues'],j['b046_baseline_rows'],j['b046_journal_only_rows']),(1032,1002,30))
+            self.assertFalse(j['owner_run_identity_proved'])
+            self.assertTrue(a['durable_return_verified'])
+            self.assertIsNone(a['external_shell_exit_code'])
+
+    def test_b046_baseline_window_and_display_populations_stay_distinct(self):
+        for data in self.exports.values():
+            b=data['b046_baseline_observation']
+            self.assertEqual((b['target_rows'],b['game_model_rows'],b['browser_display_rows']),(85466,47127,47130))
+            self.assertEqual((b['independent_metric_panels_checked'],b['independent_scalar_checks']),(1499,4699))
+            self.assertEqual(set(b['windows']),{'all_observed','last_week','this_week','next_week','season_to_date'})
+            self.assertFalse(b['physical_universe_certified'])
+
+    def test_source_repair_is_coverage_inventory_without_probability_credit(self):
+        for data in self.exports.values():
+            r=data['b047_source_identity_repair']
+            self.assertEqual((r['canonical_source_games_after'],r['comparison_contexts']),(1793,43032))
+            self.assertEqual(r['qualified_probabilities'],0)
+            self.assertEqual(r['qualified_ats_records'],0)
+            self.assertTrue(r['source_bytes_and_clocks_unchanged'])
+
+    def test_latest_source_journal_rejects_scope_or_clock_invention(self):
+        for key,value in [('b046_journal_only_rows',0),('owner_run_identity_proved',True),('complete_remote_inventory_proved',True),('original_outcomes_absent',False),('original_server_intervals_end_by_cutoff',False),('new_issues_created_by_audit',1032)]:
+            corrupted=copy.deepcopy(self.exports['ncaam']);corrupted['b046_forecast_journal_observation'][key]=value
+            with patch.object(Path,'read_text',return_value=json.dumps(corrupted)):
+                with self.assertRaises(ValueError):build_dashboard.evidence('ncaam')
+
+    def test_identity_fix_cannot_manufacture_probabilities_or_changed_clocks(self):
+        for key,value in [('qualified_probabilities',1),('qualified_ats_records',1),('new_model_fits',1),('new_issues',1),('source_bytes_and_clocks_unchanged',False),('comparison_contexts',43031)]:
+            corrupted=copy.deepcopy(self.exports['ncaam']);corrupted['b047_source_identity_repair'][key]=value
+            with patch.object(Path,'read_text',return_value=json.dumps(corrupted)):
+                with self.assertRaises(ValueError):build_dashboard.evidence('ncaam')
+
+    def test_current_model_capabilities_do_not_select_or_promote(self):
+        for data in self.exports.values():
+            self.assertEqual(len(data['capability_registry']),10)
+            self.assertTrue(all('OWNER_EXECUTION_PENDING' in r['implementation'] for r in data['capability_registry']))
+            self.assertTrue(all(not r['current_outcomes_selected_model'] for r in data['b046_descriptive_original_metrics']))
+            self.assertFalse(data['b046_provider_comparison']['general_superiority_proved'])
 
 
 if __name__ == '__main__':
