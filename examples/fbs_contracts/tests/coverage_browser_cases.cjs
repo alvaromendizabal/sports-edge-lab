@@ -30,6 +30,7 @@ exports.run=async page=>{
   assert.match(await page.locator('#coverage-accounting').innerText(),/0 partial outputs/);
   await page.selectOption('#model-view','fixed_equal_blend');
   await page.locator('.hero-actions a').filter({hasText:'Current week'}).click();
+  await page.waitForFunction(()=>document.getElementById('result-status')?.textContent.startsWith('63 games'));
   assert.match(await page.locator('#result-status').innerText(),/^63 games · 7 observed complete/);
   await page.locator('[data-period="all"]').click();
   const invalid=new URL(await page.url());invalid.search='?season=2099&model=unregistered&target=not-a-target&period=current';
