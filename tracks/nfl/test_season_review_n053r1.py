@@ -51,7 +51,7 @@ class FullSeasonTests(unittest.TestCase):
         for m in [1,3,5,10]:
             c=source['minute_window_census'];self.assertEqual(c[f'window_{m}_complete']+c[f'window_{m}_censored'],172373)
     def test_conditional_orientation_and_existing_component_clocks(self):
-        rows=self.data['conditional_rows'];self.assertEqual(len(rows),82);self.assertEqual(sum('LESS' in r['orientation'] for r in rows),48);self.assertEqual(sum('GREATER' in r['orientation'] for r in rows),34)
+        rows=self.data['conditional_rows'];self.assertEqual(len(rows),82);self.assertEqual({r['conditional_semantics_version'] for r in rows},{'N049 v1'});self.assertEqual(sum('LESS' in r['orientation'] for r in rows),48);self.assertEqual(sum('GREATER' in r['orientation'] for r in rows),34)
         current=[r for r in self.data['model_rows'] if r['lane_id'].startswith('n052_') and r['available']]
         self.assertEqual(len(current),336);self.assertTrue(all(r.get('fit_completed_at') and r.get('maximum_training_label_available_at') for r in current))
     def test_available_and_eligible_counts_recompute(self):

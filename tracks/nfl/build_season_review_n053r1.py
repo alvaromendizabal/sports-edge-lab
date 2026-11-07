@@ -5,7 +5,7 @@ HERE=pathlib.Path(__file__).resolve().parent
 SCHEMA='nfl.public.n052-full-season-n053r1-prepared.v1'
 PROVIDERS={'DraftKings','Kalshi','Polymarket'}
 TARGETS={'win','margin','total'}
-RETIRED=re.compile(r'\b(?:bet|bets|betting|wager|wagers|wagering|gambling|stake|stakes|staking|profit|profits|profitable|EV)\b',re.I)
+RETIRED=re.compile(r'(?<![A-Za-z])(?:bets?|betting|wagers?|wagering|gambling|stakes?|staking|profit|profits|profitable|EV|odds|moneyline|sportsbook|bookmaker|bankroll|payouts?|ROI|parlays?|nonpush|settlement|spread|paper_trade|trades?|trading|overround|kelly)(?![A-Za-z])',re.I)
 
 def instant(s):
     t=datetime.datetime.fromisoformat(s.replace('Z','+00:00'))
