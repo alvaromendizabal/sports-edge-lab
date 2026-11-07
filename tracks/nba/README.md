@@ -15,6 +15,12 @@ Large score tables are paginated in groups of fifty, with full filtered exports 
 
 The older strict provider comparison remains a **130-final historical snapshot**. It is not automatically expanded to 132 by refreshing game results. DraftKings still has no admitted rows in that strict current cohort; prior-season primary-provider history, the native historical matrix and genuinely continuous all-family operation remain separate requirements. The completed model catalog does not establish a running per-game forecasting service. Existing studies, unfavorable results and the independent prior-data quote-age experiment below remain unchanged.
 
+The independent current monitoring overlay scores **6,336 saved family/track/horizon/game views** across all 132 finals, preserving separate inherited-130, new-two and combined-132 cohorts in **144 groups**. It reports accuracy, natural-log loss, Brier, AUC, calibration ECE, margin/total MAE, RMSE and bias. These remain reconstructed and unissued-outlook results; model completion by the nominal cutoff and actual forecast issuance are tracked separately. No champion is promoted.
+
+A source-level review restored omitted DraftKings qualification flags on **1,092 displayed references across 122 games**. Retained possession, model-input eligibility, actual feature admission and comparison qualification remain distinct; absent flags remain absent. Stale or incomplete-rule references are visible for provenance but do not become strict model/provider comparisons.
+
+The latest official injury observation was independently parsed from the **November 7, 4 PM Eastern** NBA report: **87 rows over six pages**, all matching an official game and team, including **13 explicitly unsubmitted team reports**. The body was acquired at **21:21:57 UTC**, after the earliest game's T60 cutoff; publication does not backdate custody. The earlier 69-report, 8,065-row research panel and its fitted models remain unchanged. Current observation ingestion does not claim newly trained injury effects.
+
 Official result evidence uses [NBA game pages](https://www.nba.com/games?date=2026-11-06). Exact bodies, identities, derived game views and private release records remain access-controlled. No production model fitting, new forecast issuance, paid provider acquisition or owner completion is credited to this dashboard update.
 
 ## Independent prior-data quote-age stability — November 7, 2026
