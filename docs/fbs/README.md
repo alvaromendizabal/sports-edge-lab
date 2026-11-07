@@ -1,5 +1,33 @@
-## V038 reconstructed development outputs
+# NCAA FBS · every fixture, every recorded model target
 
+[**Open the FBS season and model lab →**](https://sports-edge-lab-fbs.alv-mendizabal.chatgpt.site) · [Current page source](complete.html) · [Three-season game data](three-season.json) · [Full-precision V039 comparison](optional-study.json)
+
+## Current review · V040
+
+The existing dashboard accounts for **2,742 identified fixtures** across 2024, 2025 and 2026. **2,403 games have saved development projections**; 240 early-2024 fixtures lack admitted prior history and 99 exact kickoffs remain unresolved. All **790 known-kickoff 2026 games**, including all **63 current-week games**, have winner/probability, margin and total outputs in the retained fixed blend. These are dated reconstructed results; this publication does not refresh schedule, results or market quotes, and it does not authenticate historical pregame issuance.
+
+### What is easier to inspect in V040
+
+- **Every saved family for one game:** open a matchup to compare the original replay and all existing V038/V039 family outputs side by side, with winner probability, home margin, total, saved intervals and observed errors. Export that comparison as CSV. The default remains the original V038 fixed equal blend.
+- **Derived score centers:** the comparison shows away/home centers from `(total − margin) / 2` and `(total + margin) / 2`. These may be fractional; negative unconstrained values remain visible. They are arithmetic from displayed point centers, not a new fitted target or a discrete predicted final score. Display errors never rescore headline metrics.
+- **Target-specific coverage:** the selected game filters show separate counts for winner/probability, margin, total, saved interval pairs and qualified cover probability. A points-only family no longer looks like a complete winner model.
+- **Exact-cohort differences:** compare recorded log loss or MAE against a chosen baseline only when target, game count and the exact game-ID hash agree. The interface preserves unfavorable differences and does not choose or promote a champion.
+- **Saved calibration diagnostics:** inspect original full-precision reliability bins as a curve and a table. Families without stored bins are explicitly unavailable; no curve is regenerated from rounded public predictions. Both 80% and 95% interval widths are visible where recorded.
+- **Full-precision metric export:** export the selected original metric rows, cohort identity, calibration bins and descriptive baseline differences. The export retains all recorded accuracy/log-loss/Brier/ECE/AUC and point-error/distribution fields, rather than the rounded cells shown on screen.
+
+### Evidence that remains incomplete
+
+DraftKings, Kalshi, Polymarket US and Polymarket Global retain separate identities and denominators. Their historical matrices and comparable quote clocks are not filled from an unverified owner log. **No qualified cover probability** is created without a matching signed line, product, settlement and cutoff. All 99 kickoff gaps and 240 prior-history gaps stay visible. Original V038/V039 forecasts, full-precision scores, defaults and negative findings are unchanged by this reporting work.
+
+V038 retains **2,497 base fits + 681 calibrations and 33,642 outputs**. V039 adds **1,362 base fits + 454 calibrations and 21,627 outputs** on the same 2,403 games. The combined 55,269 outputs are not twice as many game identities. Publication itself performs no model fits or provider requests. New owner-return and scientific facts are admitted only through separately authenticated evidence; earlier dated notes below retain their original scope.
+
+### Verification
+
+The presentation's numeric failure tests reject missing point targets, unobserved outcomes, mismatched cohorts, absent metrics and inferred cover probabilities. Responsive browser tests cover all three seasons, the complete 63-game current week, model/target filters, stored-bin availability, per-game and metric CSVs, keyboard dialogs, and missing-output reasons. `examples/fbs_contracts/export_site.py` publishes an allowlisted exact Git source with per-file hashes; source publication and live served-byte verification are recorded separately in the private publication ledger.
+
+## Preserved release notes
+
+The following entries describe their original release and observation dates. Their older feature limitations do not override the current capability summary above. The immutable underlying model and provider artifacts remain separately accessible.
 
 ## V039 · all three seasons in the game center
 
@@ -51,9 +79,9 @@ These are **RETROSPECTIVE_DEVELOPMENT_TIMING_UNCERTIFIED** results using 145 out
 
 The public build script validates exact official ID, ordered teams, kickoff, input cutoff, source bytes and hashes before projecting. Each source artifact is pinned in the development download. The earlier retained scorecards and provider comparisons remain separate.
 
-# NCAA FBS: an independent research branch
+## Earlier V038 reporting snapshot
 
-## November 7 · V038 complete season review
+### November 7 · V038 dated all-game review
 
 [**Open the FBS season & model lab →**](https://sports-edge-lab-fbs.alv-mendizabal.chatgpt.site) · [Public page source](complete.html) · [All-game data](complete-season.json)
 
