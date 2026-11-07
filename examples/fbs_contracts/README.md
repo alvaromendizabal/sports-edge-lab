@@ -138,3 +138,15 @@ python -m unittest examples.fbs_contracts.tests.test_handoff_receipts -v
 ```
 
 These are standard-library engineering fixtures, not production owner execution, source authentication by a trusted third party, model fitting or remote process control. The verifier grants no new writer lease. An unchanged content hash alone cannot establish source authenticity, acquisition rights, historical availability or a betting edge.
+
+## November 6 running-owner and acquisition qualification review
+
+The later [acquisition audit](../../docs/fbs/acquisition-performance-2026-11-06.md) distinguishes a running V036 log snapshot from a completed owner return. The latest supplied observation records 25,318 of 79,240 contracts processed successfully according to the log, at 2.33944 contracts per second; per-unit recovery still requires original evidence authentication. Intermittent I/O pressure and independent memory limits are visible. A grouped provider API exists, but the executed caller supplies one contract per group.
+
+The [credential-free qualification example](acquisition_qualification.py) uses invented identities to plan compatible batches without changing windows, retain valid members when others are missing, and reject ambiguous identity sets. A performance gate separates verified-contract throughput, requests, tickers, storage operations and attributed cost. Active owners, stale resources, missing provider authority, errors, integrity failures and synthetic-only timing block full-workload admission. Passing a bounded sample does not guarantee future speed.
+
+```bash
+python -m unittest examples.fbs_contracts.tests.test_acquisition_qualification -v
+```
+
+The target of ten verified contracts per second is not represented by the invented test timings. The example cannot contact a provider, change ownership, access private data, fit a football model or place an order. Production handoffs and raw evidence remain private.

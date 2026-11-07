@@ -72,6 +72,52 @@ class FrontierReportTests(unittest.TestCase):
         self.assertFalse(local['prior_study_refitted'])
         self.assertEqual(local['prior_predictive_fits_preserved'],33)
 
+    def test_running_observation_is_not_a_completed_owner_or_live_claim(self):
+        review=json.loads((PUBLIC/'frontier-review.json').read_text())
+        running=review['running_owner_observation'];prepared=review['prepared_optimization_review']
+        self.assertEqual(review['owner']['release'],'V035')
+        self.assertEqual(running['release'],'V036')
+        self.assertEqual(running['log_reported_completed_contracts']+running['log_reported_remaining_contracts'],running['registered_contracts'])
+        self.assertEqual((running['log_reported_completed_contracts'],running['registered_contracts']),(25318,79240))
+        self.assertFalse(running['completed_owner_return_supplied'])
+        self.assertFalse(running['terminal_exit_observed'])
+        self.assertFalse(running['live_state_checked'])
+        self.assertFalse(running['every_contract_independently_reauthenticated_in_this_publication'])
+        self.assertGreater(running['observed_at_utc'],'2026-11-06T23:50:27Z')
+        self.assertEqual(prepared['release'],'V037')
+        self.assertFalse(prepared['owner_execution_observed'])
+        self.assertFalse(prepared['universal_speed_guarantee'])
+        self.assertEqual(prepared['full_run_decision'],'NO_GO')
+        self.assertEqual((prepared['new_predictive_fits'],prepared['new_genuine_forecasts'],prepared['orders'],prepared['stake_usd']),(0,0,0,0))
+
+    def test_public_protocol_probe_is_not_a_qualified_contract_rate(self):
+        review=json.loads((PUBLIC/'frontier-review.json').read_text())
+        prepared=review['prepared_optimization_review'];probe=prepared['protocol_probe']
+        self.assertEqual(probe['execution_environment'],'LOCAL_PREPARATION_NOT_SAGEMAKER')
+        self.assertEqual(probe['request_http_statuses'],[200,200,200])
+        self.assertEqual(probe['requested_tickers_per_request'],[1,1,16])
+        self.assertEqual(probe['returned_tickers_per_request'],[1,1,16])
+        self.assertEqual(probe['paired_single_batch_original_candle_arrays_equal'],2)
+        self.assertEqual(probe['new_verified_contracts'],0)
+        self.assertFalse(probe['account_specific_entitlement_established'])
+        self.assertFalse(probe['canonical_contract_commits_in_timed_scope'])
+        self.assertIsNone(prepared['qualified_verified_contracts_per_second'])
+        self.assertEqual(prepared['full_run_decision'],'NO_GO')
+
+    def test_resource_samples_and_recovery_denominators_remain_explicit(self):
+        review=json.loads((PUBLIC/'frontier-review.json').read_text())
+        running=review['running_owner_observation'];sample=review['independent_recovery_sample']
+        self.assertEqual(sum(running['admitted_io_capacities'].values()),419)
+        self.assertEqual((running['io_pressure_reduction_samples'],running['memory_deferral_samples']),(17,13))
+        self.assertGreater(running['native_http_attempts'],running['native_fresh_verified_requests'])
+        self.assertEqual((sample['completed_history_units_checked'],sample['units_passing_independent_original_selector_replay']),(8,8))
+        self.assertEqual((sample['provider_calls_for_replay'],sample['new_completed_unit_credit']),(0,0))
+        self.assertFalse(sample['whole_workload_certified'])
+        receipts=sample['receipt_sample']
+        self.assertEqual(receipts['original_receipts'],24)
+        self.assertEqual(receipts['kalshi_tickers_per_live_batch'],{'1':13})
+        self.assertFalse(receipts['fallback_frequency_population_estimated'])
+
     def test_prior_resource_failure_is_not_reassigned_to_latest_owner(self):
         review=json.loads((PUBLIC/'frontier-review.json').read_text())
         prior=review['prior_owner']
