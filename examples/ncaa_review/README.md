@@ -151,7 +151,7 @@ availability. Original source clocks and size limits remain unchanged.
 
 **B045 is prepared, not executed.** It targets the acquisition handoff and adds
 an exact producer-consumer preflight while retaining B043-first scientific
-lineage. No owner completion, all-version injury retest, path gain or profitable
+lineage. No owner completion, all-version injury retest, path gain or
 validated deployment result follows from this preparation. The dated B043 research below,
 including the 129-game and older 122-game comparisons, remains unchanged.
 
