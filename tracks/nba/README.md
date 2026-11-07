@@ -17,6 +17,12 @@ The inventory remains **1,200 assigned regular-season matchups**, **six official
 
 The recovered private dashboard audits **57,600 saved model-view rows** across 1,200 assigned games, twelve retained model/ensemble views, two horizons, and season-frozen versus weekly tracks. Ordinary least squares is explicitly regression-only; it does not acquire an invented winner or probability output. Saved current reconstructions and early future outlooks retain their original meaning. Weekly retraining origins are distinct from each game's T60/T120 cutoff; this is not a claim that a new model was fitted immediately before every game.
 
+The newer B051 market/injury feature study has a smaller evaluation cohort: 121 original current-season games and 126 after later results, against 130 observed finals. Complete saved dashboard coverage does not mean that these newer feature models have been fitted or evaluated for every assigned matchup.
+
+**Operational training scope remains narrower than the saved model catalog.** Eligible new native work consists of a logistic winner model, joint Ridge margin/total model, and held-out winner calibration. The broader family, market, injury, ensemble, and blend studies are adopted from completed artifacts. Future-origin execution adapters for every family and continuous all-family retraining remain unimplemented. A scheduled research-review task preserves the manual owner-execution boundary.
+
+Fresh native forecasts also lack a registered point residual distribution. Their outputs alone do not provide margin-cover probabilities, total-threshold probabilities, or point intervals; the dashboard obtains those views from the separately qualified saved research distributions. This repair does not add those missing operational modeling capabilities.
+
 A separate readiness export accounts for **28,800 game/provider/target/cutoff cells**: 1,200 assigned games × four providers × three targets × two horizons.
 
 | Readiness state | Cells |
