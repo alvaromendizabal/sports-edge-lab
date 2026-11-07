@@ -30,6 +30,15 @@ class EvidenceTests(unittest.TestCase):
         self.assertEqual(receipt['template_sha256'], hashlib.sha256(
             (build_dashboard.HERE / 'private_report.html.tmpl').read_bytes()).hexdigest())
 
+    def test_private_full_season_schedule_import_is_separate(self):
+        result = subprocess.run(['node', str(build_dashboard.HERE / 'test_schedule_viewer.cjs')],
+                                check=True, capture_output=True, text=True, timeout=30)
+        receipt = json.loads(result.stdout)
+        self.assertEqual(receipt['status'], 'PASS')
+        self.assertGreaterEqual(receipt['checks'], 60)
+        self.assertEqual(receipt['template_sha256'], hashlib.sha256(
+            (build_dashboard.HERE / 'private_report.html.tmpl').read_bytes()).hexdigest())
+
     def test_reported_startup_does_not_replace_authenticated_science(self):
         pages = build_dashboard.outputs()
         for path, output in pages.items():

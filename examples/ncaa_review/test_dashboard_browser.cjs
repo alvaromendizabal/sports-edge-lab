@@ -7,6 +7,7 @@ const { gzipSync } = require('node:zlib');
 const { pathToFileURL } = require('node:url');
 const { chromium } = require(process.env.PLAYWRIGHT_MODULE_DIR || 'playwright');
 const { fixture: identityOverlayFixture } = require('./test_identity_overlay.cjs');
+const { fixture: scheduleFixture, referenceFixture: scheduleReferenceFixture } = require('./test_schedule_viewer.cjs');
 
 (async () => {
   const browser = await chromium.launch({ headless: true,
@@ -979,6 +980,79 @@ const { fixture: identityOverlayFixture } = require('./test_identity_overlay.cjs
         assert.equal(await page.evaluate(()=>document.documentElement.scrollWidth>innerWidth),false,'identity overlay fits mobile');
         await page.locator('#clear').click();
         counts.identityOverlayViews=(counts.identityOverlayViews||0)+8;
+      }
+      {
+        // This schedule export contains only invented native source records.
+        const schedule=scheduleFixture();
+        schedule.value.records[0].home_team='<img src=x onerror="window.scheduleLeak=true">';
+        const scheduleBytes=Buffer.from(JSON.stringify(schedule.value));
+        const schedulePin=createHash('sha256').update(scheduleBytes).digest('hex');
+        assert.equal(await page.locator('#report').isHidden(),true,'schedule works without a baseline');
+        await page.locator('#schedule-file').setInputFiles({name:'invented-schedule.json',mimeType:'application/json',buffer:scheduleBytes});
+        await page.waitForFunction(()=>document.getElementById('schedule-load-status').textContent.startsWith('Loaded 27 of 27 declared'));
+        assert.equal(await page.locator('[data-schedule-record]').count(),25);
+        assert.match(await page.locator('#schedule-summary').innerText(),/All 27 records.*does not certify a complete physical season/);
+        assert.match(await page.locator('#schedule-provider-counts').innerText(),/ESPN.*Men/s);
+        assert.match(await page.locator('#schedule-source-proof').innerText(),new RegExp(schedulePin));
+        assert.equal(await page.locator('#schedule-records img').count(),0);
+        assert.equal(await page.evaluate(()=>window.scheduleLeak),undefined);
+        await page.locator('#schedule-next').click();
+        assert.equal(await page.locator('[data-schedule-record]').count(),2);
+        assert.match(await page.locator('#schedule-count').innerText(),/26–27 of 27 filtered.*27 loaded.*0 hidden/);
+        await page.selectOption('#schedule-provider','espn');
+        assert.equal(await page.locator('[data-schedule-record]').count(),14);
+        await page.selectOption('#schedule-league','ncaaw');
+        assert.equal(await page.locator('[data-schedule-record]').count(),7);
+        await page.selectOption('#schedule-date','missing');
+        assert.equal(await page.locator('[data-schedule-record]').count(),1);
+        assert.match(await page.locator('#schedule-records').innerText(),/Exact tip time unavailable/);
+        assert.match(await page.locator('#schedule-records').innerText(),/Winner: null · win probability: null/);
+        assert.match(await page.locator('#schedule-records').innerText(),/NOT_JOINED_SCHEDULE_ONLY/);
+        await page.locator('#reset-schedule-filters').click();
+        await page.selectOption('#schedule-date','2027-02-01');
+        assert.equal(await page.locator('[data-schedule-record]').count(),2);
+        await page.locator('#reset-schedule-filters').click();
+        await page.locator('#schedule-search').fill('SOURCE_IDENTITY_CHANGE_REQUIRES_REVIEW');
+        assert.equal(await page.locator('[data-schedule-record]').count(),1);
+        await page.locator('#reset-schedule-filters').click();
+        assert.match(await page.locator('#schedule-count').innerText(),/27 loaded.*0 hidden/);
+        const baseline=identityOverlayFixture();
+        await page.locator('#report-file').setInputFiles({name:'invented-independent-baseline.json',mimeType:'application/json',buffer:baseline.body});
+        await page.waitForFunction(()=>document.getElementById('load-status').textContent.startsWith('Loaded 3 source game records'));
+        await page.locator('#show-games').click();
+        await page.locator('#identity-overlay-file').setInputFiles({name:'invented-independent-overlay.json',mimeType:'application/json',buffer:Buffer.from(JSON.stringify(baseline.overlay))});
+        await page.waitForFunction(()=>document.getElementById('identity-overlay-status').textContent.startsWith('Verified baseline binding'));
+        const baseForecasts=await page.locator('[data-game] table:first-of-type').allTextContents(),baseMetrics=await page.locator('#model-metrics').innerText(),baseOverlay=await page.locator('#identity-overlay-count').innerText();
+        const invalid=structuredClone(schedule.value);invalid.records[0].win_probability=.9;
+        await page.locator('#schedule-file').setInputFiles({name:'invented-forecast-not-schedule.json',mimeType:'application/json',buffer:Buffer.from(JSON.stringify(invalid))});
+        await page.waitForFunction(()=>document.getElementById('schedule-load-status').classList.contains('error'));
+        assert.match(await page.locator('#schedule-load-status').innerText(),/Previous schedule, baseline and overlay remain unchanged/);
+        assert.equal(await page.locator('[data-schedule-record]').count(),25);
+        const references=scheduleReferenceFixture();
+        await page.locator('#schedule-file').setInputFiles({name:'invented-reference-only-schedule.json',mimeType:'application/json',buffer:references.body});
+        await page.waitForFunction(()=>document.getElementById('schedule-records').textContent.includes('This file contains references only'));
+        assert.equal(await page.locator('[data-schedule-record]').count(),0);
+        assert.match(await page.locator('#schedule-summary').innerText(),/27 provider-native IDs; zero rows/);
+        assert.match(await page.locator('#schedule-records').innerText(),/not an empty season/);
+        const sourceReferences=scheduleReferenceFixture('source');
+        await page.locator('#schedule-file').setInputFiles({name:'invented-source-index-limit.json',mimeType:'application/json',buffer:sourceReferences.body});
+        await page.waitForFunction(()=>document.getElementById('schedule-summary').textContent.includes('SOURCE_INDEX_BOUND_REACHED'));
+        assert.equal(await page.locator('[data-schedule-record]').count(),0);
+        assert.deepEqual(await page.locator('[data-game] table:first-of-type').allTextContents(),baseForecasts);
+        assert.equal(await page.locator('#model-metrics').innerText(),baseMetrics);
+        assert.equal(await page.locator('#identity-overlay-count').innerText(),baseOverlay);
+        await page.locator('#clear-schedule').click();
+        assert.equal(await page.locator('#schedule-content').isHidden(),true);
+        assert.deepEqual(await page.locator('[data-game] table:first-of-type').allTextContents(),baseForecasts);
+        assert.equal(await page.locator('#identity-overlay-count').innerText(),baseOverlay);
+        await page.locator('#schedule-file').setInputFiles({name:'invented-schedule-again.json',mimeType:'application/json',buffer:scheduleBytes});
+        await page.waitForFunction(()=>document.getElementById('schedule-load-status').textContent.startsWith('Loaded 27 of 27 declared'));
+        await page.locator('#clear').click();
+        assert.equal(await page.locator('#report').isHidden(),true);
+        assert.equal(await page.locator('[data-schedule-record]').count(),25,'clearing baseline leaves schedule independent');
+        assert.equal(await page.evaluate(()=>document.documentElement.scrollWidth>innerWidth),false,'schedule panel fits mobile');
+        await page.locator('#clear-schedule').click();
+        counts.scheduleViews=(counts.scheduleViews||0)+15;
       }
       counts.viewports++;
     }
