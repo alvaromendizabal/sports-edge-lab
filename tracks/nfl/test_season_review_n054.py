@@ -18,6 +18,16 @@ class N054RecoveredScienceTests(unittest.TestCase):
   self.assertEqual(self.data['current_raw_numerical_replay']['forecast_rows_replayed'],336);self.assertLess(self.data['current_raw_numerical_replay']['maximum_absolute_prediction_error'],1e-12);self.assertEqual(len(self.data['prior_conditional_rows']),82);self.assertEqual({r['conditional_semantics_version'] for r in self.data['conditional_rows']},{'N049 v1'})
  def test_every_future_game_has_a_separately_dated_forecast(self):
   d=self.data;rows=[r for r in d['model_rows'] if r['lane_id'].startswith('n054_outlook_') and r['available']];self.assertEqual(len(rows),1464);self.assertEqual(len({r['game_id'] for r in rows}),122);self.assertTrue(all(r['new_owner_issue_credit']==0 and r['new_review_issue_credit']==1 and not r['long_horizon_accuracy_validated'] for r in rows));self.assertEqual(d['future_game_forecast_coverage']['covered_future_games'],150);self.assertEqual(len(d['raw_provider_timing_exclusions']),8)
+ def test_all_conditional_display_fields_preserve_oriented_probabilities(self):
+  rows=self.data['conditional_rows'];self.assertEqual(len(rows),82);self.assertEqual(len({r['game_id'] for r in rows}),27)
+  self.assertEqual(sum(r['orientation']=='HOME_MARGIN_STRICTLY_LESS_THAN' for r in rows),48);self.assertEqual(sum(r['orientation']=='HOME_MARGIN_STRICTLY_GREATER_THAN' for r in rows),34)
+  for r in rows:
+   side='probability_below' if r['orientation']=='HOME_MARGIN_STRICTLY_LESS_THAN' else 'probability_above'
+   self.assertEqual(r['probability_of_predicate'],r[side]);self.assertAlmostEqual(r['probability_given_not_equal'],r['probability_of_predicate']/(1-r['probability_equal']),delta=.00015)
+ def test_wrong_or_absent_conditional_display_field_is_rejected(self):
+  for mutation in [{'probability_of_predicate':None},{'probability_of_predicate':.1234},{'probability_given_not_equal':.1234}]:
+   d=dict(self.data);d['conditional_rows']=[dict(r) for r in self.data['conditional_rows']];d['conditional_rows'][0].update(mutation)
+   with self.assertRaisesRegex(ValueError,'conditional (display probability|predicate orientation|unequal probability)'):validate(d)
  def test_zero_repeated_protected_studies_and_source_credit(self):
   for k in ['protected_refits','repeated_designation_cells','repeated_injury_cells','repeated_correction_states','controls_changed','source_only_predictive_credit']:self.assertEqual(self.data['owner_execution'][k],0)
   self.assertFalse(self.data['original_evidence_modified']);self.assertEqual(self.data['next']['actual_owner_results'],0);self.assertEqual(len(self.data['correction_comparisons']),255)

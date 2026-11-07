@@ -50,6 +50,15 @@ def validate(data):
         if instant(r['issued_at'])>=instant(index[r['game_id']]['kickoff_utc']):raise ValueError('conditional issue chronology')
         if abs(r['probability_above']+r['probability_below']+r['probability_equal']-1)>.002:raise ValueError('conditional probability mass')
         if r['calibration_validated'] or r['automatic_promotion']:raise ValueError('conditional qualification')
+        side={'HOME_MARGIN_STRICTLY_LESS_THAN':'probability_below','HOME_MARGIN_STRICTLY_GREATER_THAN':'probability_above'}.get(r['orientation'])
+        if side is None:raise ValueError('conditional orientation identity')
+        for field in ['probability_of_predicate','probability_given_not_equal','probability_equal',side]:
+            value=r.get(field)
+            if not isinstance(value,(int,float)) or not math.isfinite(value) or not 0<=value<=1:raise ValueError('conditional display probability')
+        if r['probability_of_predicate']!=r[side]:raise ValueError('conditional predicate orientation')
+        unequal=1-r['probability_equal']
+        # Public fields are rounded to four decimals; these are display checks, not rescoring.
+        if unequal<=0 or abs(r['probability_given_not_equal']-r['probability_of_predicate']/unequal)>.00015:raise ValueError('conditional unequal probability')
     if any(r['denominator']!=122 for r in data['coverage_rows']):raise ValueError('equal completed provider denominator')
     if {r['provider'] for r in data['coverage_rows']}!=PROVIDERS:raise ValueError('equal provider coverage')
     for r in data['coverage_rows']:
