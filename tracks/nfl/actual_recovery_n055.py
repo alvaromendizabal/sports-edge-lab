@@ -8,6 +8,72 @@ LABELS={'football_support_control':'Football support control','passing_qb_intera
 def instant(s):return datetime.datetime.fromisoformat(s.replace('Z','+00:00'))
 def load_recovery():return json.loads(gzip.decompress((HERE/'n054_actual_recovery_n055.json.gz').read_bytes()))
 
+LEGACY_COUNTERS=['new_owner_fits','new_owner_issues','new_source_acquisitions','new_native_states','new_scale_states','new_correction_states','new_review_issue_rows']
+UNRESOLVED_FAMILIES={'Logistic regression / ridge':'ridge','Extra Trees':'extratrees','Histogram gradient boosting':'histgb'}
+
+def refresh_active_status(d,original):
+ """Separate the actual recovery, retained snapshots and unexecuted continuation."""
+ s=d['n054_actual_recovery'];near=d['n054_owner_raw_issues'];far=d['n054_owner_long_range_issues'];components=d['n054_owner_component_issues'];conditional=d['n054_owner_conditional_issues']
+ ng={x['game_id'] for x in near};fg={x['game_id'] for x in far};total=len(near)+len(far)+len(components)+len(conditional)
+ d['original_n054_preparation_snapshot']={'status':'DATED_ORIGINAL_SNAPSHOT_SUPERSEDED_BY_ACTUAL_N054_RECOVERY','as_of':original['as_of'],'owner_evidence_as_of':original['owner_evidence_as_of'],'review_outlook_issue_at':original['review_outlook_summary']['actual_issue_at_utc'],'family_status':copy.deepcopy(original['family_status']),'future_game_forecast_coverage':copy.deepcopy(original['future_game_forecast_coverage']),'capabilities':copy.deepcopy(original['capabilities']),'next':copy.deepcopy(original['next']),'legacy_counter_scope':'N053R1 owner results and earlier N054 review work; not N055 publication results','legacy_counters':{k:original[k] for k in LEGACY_COUNTERS}}
+ for row in d['family_status']:
+  family=row['family'];prior=row['evidence'];started=family in UNRESOLVED_FAMILIES
+  row.update(retained_prior_evidence=prior,n054_start_recorded=started,n054_completed_family_fit_credit=0,n055_status='PREPARED_NOT_OWNER_EXECUTED')
+  if started:
+   backend=UNRESOLVED_FAMILIES[family]
+   retained=(f"The {original['owner_execution']['unique_native_states']:,} completed raw football states remain N053R1 evidence. " if backend=='ridge' else 'Earlier fresh, designation, original and shadow components retain their separate identities. ' if backend=='extratrees' else '')
+   row.update(status='N054_START_UNRESOLVED_N055_RECOVERY_PREPARED',status_label='N054 start unresolved; N055 recovery prepared',backend=backend,evidence=retained+'One N054 '+backend+' support-control winner STARTED record has no authenticated returned model or completed receipt. A start marker does not prove optimizer entry or completion. N055 local reconciliation is prepared; no completed family fit is credited.')
+  elif family=='Ensembles, blends and probability calibration':
+   row.update(status='RETAINED_COMPONENTS_NO_COMPLETED_N054_META_RESULT_N055_PREPARED',status_label='Retained components; no completed N054 meta result',evidence='Actual N054 original and shadow issues reuse their retained model roles. No completed new N054 ensemble, blend or calibration study is admitted. N055 continuation remains prepared; no automatic promotion.')
+  else:
+   row.update(status='NO_COMPLETED_N054_FAMILY_RESULT_N055_PREPARED',status_label='No completed N054 family result; N055 prepared',evidence=('Earlier family results, including retained negative injury studies, remain dated evidence. ' if family!='Linear regression' else '')+'No authenticated completed N054 broad-family result is admitted for this family. Synthetic runtime admission is a capability check, not a scientific fit. N055 continuation remains prepared.')
+ d['future_game_forecast_coverage']={'scope':'ACTUAL_N054_OWNER_ISSUES','scheduled_future_games':sum(not g['completed'] for g in d['games']),'owner_nearer_game_issue_games':len(ng),'owner_long_range_outlook_games':len(fg),'covered_future_games':len(ng|fg),'owner_issue_rows':total,'owner_raw_nearer_issue_rows':len(near),'owner_long_range_issue_rows':len(far),'owner_component_issue_rows':len(components),'owner_conditional_issue_rows':len(conditional),'owner_component_rows_by_role':{role:sum(x['component_role']==role for x in components) for role in ['original','shadow','fresh','designation']},'new_raw_fits_for_owner_issues':0,'new_N055_owner_issues':0,'near_term_T1_equivalence_claimed':False,'long_horizon_accuracy_validated':False,'original_review_snapshot':'original_n054_preparation_snapshot','original_review_rows_in_owner_total':0}
+ counts={
+  'Complete season and versioned models':{'games':len(d['games']),'model_roles':len(d['lanes'])},
+  'Actual rolling research issues':{'N054_owner_issue_rows':total,'component_rows':len(components),'conditional_rows':len(conditional)},
+  'Current football issues':{'owner_raw_issue_rows':len(near),'nearer_games':len(ng),'new_raw_fits':0},
+  'Fixed market context arms':{'native_states':s['new_native_fits'],'completed_cutoff_jobs':s['completed_cutoff_jobs'],'reused_jobs':s['reused_cutoff_jobs'],'support_blocked_jobs':s['support_blocked_cutoff_jobs'],'registered_jobs':s['cutoff_jobs']},
+  'Every future game has a dated outlook':{'owner_long_range_issue_rows':len(far),'later_games':len(fg),'nearer_games':len(ng),'covered_future_games':len(ng|fg),'new_raw_fits':0}
+ }
+ for card in d['capabilities']:
+  name=card['name']
+  if name in counts:card['evidence_counts']=counts[name]
+  if name=='Complete season and versioned models':card['evidence']=f"{len(d['games'])} games with all {len(d['lanes'])} retained, reconstructed or issued model roles; annual, weekly and event reconstructions remain separately selectable."
+  elif name=='Actual rolling research issues':card.update(status_label='Actual N054 owner issues',evidence=f"{total:,} recovered N054 owner issue rows: {len(near)} nearer-game raw, {len(far):,} long-range, {len(components)} retained-component and {len(conditional)} conditional rows. Original source, model and issue clocks remain separate.",limit='These recovered N054 rows are not new N055 issues. Retained N053R1 issues and earlier review outlooks stay in dated history.')
+  elif name=='Current football issues':card.update(status_label=f'{len(near)} N054 owner raw issue rows',evidence=f"Four arms × three targets × {len(ng)} nearer future games; source, model and actual N054 issue clocks verified. No new raw fit.",limit=f'The {len(fg)} later games have separate actual N054 owner long-range outlooks. Future injuries and intervening outcomes are not assumed; long-horizon accuracy is unvalidated.')
+  elif name=='Fixed market context arms':card.update(status='ACTUAL_N054_RECOVERED_DESCRIPTIVE_STUDY',status_label=f"{s['new_native_fits']} completed market states",evidence=f"Two fixed 80 / 96-column arms with a shared 96-field missingness basis completed {s['completed_cutoff_jobs']} cutoff jobs: {s['new_native_fits']} native states plus {s['reused_cutoff_jobs']} exact reuses. {s['support_blocked_cutoff_jobs']} of {s['cutoff_jobs']} registered jobs remain support-blocked.",limit='No supported pre-2024 market selection cohort. All six adjusted paired tests remain negative; no promotion. The original 318 blocked jobs remain dated N053R1 evidence; source-only restoration earns zero predictive credit.')
+  elif name=='Every future game has a dated outlook':card.update(status='ACTUAL_N054_OWNER_ISSUED_UNVALIDATED_LONG_RANGE',status_label=f'{len(fg)} owner outlook games · zero new fits',evidence=f"{len(far):,} actual N054 owner-issued rows cover {len(fg)} later games in four football lanes using 12 retained states. Together with {len(ng)} nearer games, all {len(ng|fg)} future games have dated owner forecasts. The earlier {len(original['review_long_range_issues']):,} review issues are preserved separately.",limit='Long-horizon accuracy and event-specific T1 equivalence are unvalidated. No future injury persistence, intervening result or unsupported conditional probability is invented.')
+  elif name=='Position and line continuity frontier':card.update(status='RETAINED_FIXED_POSITION_INTERACTIONS',status_label='Retained clock-qualified position interactions',evidence='Fixed clock-qualified QB, RB/FB and OL status-count interactions are retained in the completed football arms, including the 60/72-column running and combined arms.',limit='Individual talent, lineup continuity, depth and injury causation remain unsupported. Reusing retained features creates no new state or predictive-performance credit.')
+ d['next']={'cycle':'N055','status':'PREPARED_NOT_OWNER_EXECUTED','actual_owner_results':0,'title':'N055 reconciles the actual N054 partial and continues the unchanged registered study.','paragraphs':[
+  'Authenticate the exact N054 diagnostic and recovered objects, preserve the 102 completed market states and 2,233 actual owner issue rows, and reuse completed N053R1 raw and scale states without refitting.',
+  'Reconcile the three unresolved N054 histgb, ridge and Extra Trees starts against exact local model, state, marker and receipt bytes. Recover completed bytes without repeating optimization; otherwise preserve and quarantine the unresolved start. This N055 work is prepared, not executed.',
+  'Continue the unchanged nine-family specification only with supported runtime capabilities, earlier-only labels, train-only transformations, complete 2022/23 comparisons and later-fold recipe freeze. Native worker isolation and measured headroom limits preserve other workloads. Synthetic capability checks are not scientific fits.',
+  'Issue future outputs only at actual eligible clocks, retain source-only work and unsupported fields separately, and return an authenticated compact actual N055 owner package. No N055 owner result, current-season recipe selection or automatic promotion is claimed.'
+ ]}
+ d['active_accounting']={'scope':'N055_REVIEW_PUBLICATION_ONLY','retained_N053R1':{'raw_native_states':original['owner_execution']['unique_native_states'],'scale_states':original['owner_execution']['scale_states'],'owner_issue_rows':original['new_owner_issues']},'recovered_N054':{'market_native_states':s['new_native_fits'],'completed_market_cutoff_jobs':s['completed_cutoff_jobs'],'market_reused_jobs':s['reused_cutoff_jobs'],'market_support_blocked_jobs':s['support_blocked_cutoff_jobs'],'owner_issue_rows':total,'family_starts_unresolved':s['family_starts_unresolved'],'completed_family_fit_credit':s['completed_family_fit_credit']},'N055':{'status':'PREPARED_NOT_OWNER_EXECUTED','new_native_fits':0,'new_scale_fits':0,'new_correction_fits':0,'new_owner_issues':0,'new_numeric_source_values':0}}
+ for key in LEGACY_COUNTERS:d[key]=0
+ d['n055_active_status_revision']=1
+ return validate_active_status(d)
+
+def validate_active_status(d):
+ """Reject stale active labels even when all retained scientific rows are present."""
+ s=d['n054_actual_recovery'];f=d['future_game_forecast_coverage'];near=d['n054_owner_raw_issues'];far=d['n054_owner_long_range_issues'];components=d['n054_owner_component_issues'];conditional=d['n054_owner_conditional_issues']
+ ng={x['game_id'] for x in near};fg={x['game_id'] for x in far};future={g['game_id'] for g in d['games'] if not g['completed']}
+ if ng&fg or ng|fg!=future:raise ValueError('active future-game owner coverage')
+ expected={'scheduled_future_games':len(future),'owner_nearer_game_issue_games':len(ng),'owner_long_range_outlook_games':len(fg),'covered_future_games':len(future),'owner_issue_rows':len(near)+len(far)+len(components)+len(conditional),'owner_raw_nearer_issue_rows':len(near),'owner_long_range_issue_rows':len(far),'owner_component_issue_rows':len(components),'owner_conditional_issue_rows':len(conditional),'original_review_rows_in_owner_total':0}
+ if any(f.get(k)!=v for k,v in expected.items()) or f['scope']!='ACTUAL_N054_OWNER_ISSUES':raise ValueError('active future issue accounting')
+ if f['owner_issue_rows']!=s['independently_recovered_owner_issue_rows']:raise ValueError('active owner issue summary closure')
+ if {x['family'] for x in d['family_status'] if x['n054_start_recorded']}!=set(UNRESOLVED_FAMILIES) or sum(x['n054_start_recorded'] for x in d['family_status'])!=s['family_starts_unresolved']:raise ValueError('active unresolved family starts')
+ if any(x['n054_completed_family_fit_credit'] or x['n055_status']!='PREPARED_NOT_OWNER_EXECUTED' or 'PREPARED_N054' in x['status'] for x in d['family_status']) or s['completed_family_fit_credit']:raise ValueError('active family completion credit')
+ cards={x['name']:x for x in d['capabilities']};market=cards['Fixed market context arms']['evidence_counts']
+ if market!={'native_states':s['new_native_fits'],'completed_cutoff_jobs':s['completed_cutoff_jobs'],'reused_jobs':s['reused_cutoff_jobs'],'support_blocked_jobs':s['support_blocked_cutoff_jobs'],'registered_jobs':s['cutoff_jobs']}:raise ValueError('active market capability accounting')
+ if cards['Complete season and versioned models']['evidence_counts']!={'games':len(d['games']),'model_roles':len(d['lanes'])}:raise ValueError('active capability role count')
+ if cards['Every future game has a dated outlook']['evidence_counts']!={'owner_long_range_issue_rows':len(far),'later_games':len(fg),'nearer_games':len(ng),'covered_future_games':len(future),'new_raw_fits':0}:raise ValueError('active outlook capability accounting')
+ if d['next'].get('cycle')!='N055' or d['next']['status']!='PREPARED_NOT_OWNER_EXECUTED' or d['next']['actual_owner_results']:raise ValueError('active prepared continuation')
+ if any(d[k] for k in LEGACY_COUNTERS) or d['active_accounting']['scope']!='N055_REVIEW_PUBLICATION_ONLY':raise ValueError('active publication counter scope')
+ if d['active_accounting']['recovered_N054']['owner_issue_rows']!=expected['owner_issue_rows'] or d['active_accounting']['recovered_N054']['market_native_states']!=s['new_native_fits']:raise ValueError('active recovered counter scope')
+ return d
+
 def validate_recovery(r):
  s=r['summary'];ledger=r['market_cutoff_ledger']
  if (s['cutoff_jobs'],s['completed_cutoff_jobs'],s['new_native_fits'],s['reused_cutoff_jobs'],s['support_blocked_cutoff_jobs'])!=(318,216,102,114,102):raise ValueError('N054 actual market job/state accounting')
@@ -36,7 +102,7 @@ def validate_recovery(r):
  return r
 
 def enrich(original):
- if 'n054_actual_recovery' in original:return original
+ if 'n054_actual_recovery' in original:return validate_active_status(original)
  r=validate_recovery(load_recovery());d=copy.deepcopy(original);games={g['game_id']:g for g in d['games']}
  # Label retained historical gaps as dated snapshots; preserve the source carrier.
  for bridge in d['denominator_bridge']:
@@ -95,4 +161,4 @@ def enrich(original):
  d['n054_actual_recovery']=r['summary'];d['n054_market_per_game']=r['market_per_game'];d['n054_market_metrics']=r['market_metrics'];d['n054_market_comparisons']=r['market_comparisons'];d['n054_market_cutoff_ledger']=r['market_cutoff_ledger'];d['n054_market_numerical_diagnostics']=r['market_numerical_diagnostics'];d['n054_market_blocked_rows']=r['market_blocked_rows'];d['n054_owner_raw_issues']=r['owner_raw_issues'];d['n054_owner_long_range_issues']=r['owner_long_range_issues']
  d['n054_recovery_projection_sha256']=hashlib.sha256((HERE/'n054_actual_recovery_n055.json.gz').read_bytes()).hexdigest()
  if len(d['lanes'])!=73 or len(d['model_rows'])!=59568 or sum(x['available'] for x in d['model_rows'])!=10041:raise ValueError('N055 recovered complete role grid')
- return d
+ return refresh_active_status(d,original)

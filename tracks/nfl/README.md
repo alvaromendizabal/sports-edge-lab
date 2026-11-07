@@ -99,3 +99,7 @@ The full NFL suite and desktop/mobile browser checks preserve earlier views as w
 ## Dated archives
 
 The [N053R1 preparation snapshot](season_review_n053r1.html), [N052 audit / N053 preparation](review_n053.html), [N051 audit](review_n052.html) and [full earlier review](review.html) retain their original scientific objects and wording. Their counts describe those dated cohorts. The active dashboard is the N054 page linked above.
+
+### Active status reconciliation in N055
+
+The current capability and family tables use independently recovered N054 evidence: 102 completed market states, three unresolved broad-family starts with zero completed-family credit, and 2,233 actual owner issue rows covering 28 nearer plus 122 later future games. N055 owner execution remains prepared. Publication counters are zero and separately named N053R1/N054 accounting retains actual historical results. The original preparation metadata remains available as a dated snapshot.
