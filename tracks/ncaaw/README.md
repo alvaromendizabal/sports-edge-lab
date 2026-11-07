@@ -2,6 +2,10 @@
 
 ## B047R1 season workspace — current review
 
+### B047R1 cloud-archive status
+
+An independently verified B047R1 cloud archive records **FAILED_PARTIAL_WORK_PRESERVED** at a pre-stage predecessor guard: **0/16 scientific stages**, **zero new target/scalar/empirical fits or committed contract objects**, and **zero reuses**. The owner fixtures recorded **1,368 passed / 1 skipped / 0 failures**; the prepared **1,369/1,369** result remains dated implementation evidence. The worker summary records **52.8182 seconds**, separately from shell duration. Cloud archive and embedded-source member, CRC and manifest closure passed. The physical uploaded outer ZIP remains unread, and literal worker-terminal and observed shell-exit closure remain unverified. This cloud audit does not complete attachment or terminal authentication. Earlier preparation statements below remain dated source versions.
+
 The NCAA workspace now starts with the complete **supplied source-game inventory**, using the NFL dashboard's season-to-game navigation pattern. The [private local viewer](https://alvaro-ncaa-research-review.alv-mendizabal.chatgpt.site/private-report/index.html) exposes winner, home win probability, projected home/away scores, point margin, total and line-conditioned cover/push/loss in one table. Model/version and evidence clocks stay attached. A fixed display order is used when all models are selected; it does not rank on current outcomes.
 
 Use the season, reporting window, gender, stream, model version, completion and missing-capability filters. Open **Detailed games** for every supplied forecast version. The recovery queue explains missing model rows, exact source identity, margin/total outputs, per-game refits, spread contracts and numeric finals. A completed flag cannot manufacture a final score. Source versions and unmatched official candidates remain visible; the official physical-game universe is not certified.
