@@ -1,6 +1,6 @@
 # N055 publication completeness audit
 
-The latest owner attempt is **N054, actually executed, with a diagnostic packaging failure**. Its diagnostic reports `return_packaging`, `ValueError`, and “Return manifest and essential payload exceed bounded delivery capacity.” Full durable evidence closure is incomplete. The N054 preparation remains preserved as a dated plan; it is no longer the active execution status. No additional scientific result is credited from the diagnostic alone. This is not a claim that no owner work occurred.
+The latest owner attempt is **N054, actually executed, with a diagnostic packaging failure**. Its diagnostic reports `return_packaging`, `ValueError`, and “Return manifest and essential payload exceed bounded delivery capacity.” Full durable evidence closure is incomplete. The N054 preparation remains preserved as a dated plan; it is no longer the active execution status. The diagnostic alone earns no scientific credit. Independently recovered state bodies and scientific outputs now establish the completed N054 study and owner issues described in [the recovery report](ACTUAL_N054_RECOVERY_N055.md); full owner-package closure remains incomplete.
 
 ## Complete reporting inventory
 
@@ -8,17 +8,17 @@ The latest owner attempt is **N054, actually executed, with a diagnostic packagi
 |---|---:|---|
 | Current season schedule | 272 | All 32 teams; 122 completed and 150 future at the retained snapshot |
 | Decisive completed outcomes | 121 | One completed game was tied |
-| Model roles and targets | 51,408 | 272 games × 63 retained roles × three targets |
-| Numeric model outputs | 8,921 | Every other cell retains its explicit reason and eligibility |
+| Model roles and targets | 59,568 | 272 games × 73 retained roles × three targets |
+| Numeric model outputs | 10,041 | Every other cell retains its explicit reason and eligibility |
 | Equal provider inventory | 24,480 | 272 games × three providers × three targets × ten horizons |
 | DraftKings numeric references | 689 / 8,160 | Same inventory as the other providers |
 | Kalshi numeric references | 1,107 / 8,160 | Same inventory as the other providers |
 | Polymarket numeric references | 1,710 / 8,160 | Same inventory as the other providers |
-| All-model seasonal metric records | 638 | Preserved cohort, horizon, target and selection qualifications |
+| All-model seasonal metric records | 647 | Preserved cohort, horizon, target and selection qualifications |
 | Raw historical reconstruction rows | 18,889 | 15,116 new reconstruction rows plus 3,773 unchanged baseline rows |
 | Conditional scale distribution rows | 35,252 | 70 states, 140 season metrics, 260 comparisons and two nested checks |
 
-An inventory cell does not establish a numerical value, source availability before cutoff, or eligibility for a score. The active audit exposes these distinctions and never fills a missing value with a synthetic forecast. All 150 future games have a separately dated forecast in at least one supported lane: 28 nearer games have owner-issued coverage, and the other 122 have 1,464 review outlook rows. Those review outlooks create zero model fits, are not evidence of validated long-range accuracy, and do not replace earlier original issues.
+An inventory cell does not establish a numerical value, source availability before cutoff, or eligibility for a score. The active audit exposes these distinctions and never fills a missing value with a synthetic forecast. All 150 future games have a separately dated forecast in at least one supported lane: 28 nearer games have owner-issued coverage, and the other 122 have 1,464 recovered N054 owner outlook rows. Those outlooks use retained states, create zero raw model fits and do not establish validated long-range accuracy. Earlier review outlooks and original issues remain separately preserved.
 
 ## Recent games and Los Angeles identity
 
@@ -32,12 +32,14 @@ The 120 point-target / 119 winner protected benchmark is a dated scoring cohort.
 
 ## Scientific accounting retained
 
-The independently recovered N053R1 public evidence retains 7,184 completed cutoff jobs, 3,432 actual raw native states and 3,752 exact-input reuse jobs. Starts, returns and durable commits are each 3,432. The 7,172 historical jobs are not a fit count. Seventy conditional scale states and 754 owner issue rows remain separate. The 318 market jobs are support-blocked and create no native state credit. The completed 150 correction states, 144-cell designation study, 288-cell injury study and all six controls remain unchanged. All negative studies remain available. The scale study has no Holm-confirmed improvement; no candidate is promoted by this audit.
+The independently recovered N053R1 public evidence retains 7,184 completed cutoff jobs, 3,432 actual raw native states and 3,752 exact-input reuse jobs. Starts, returns and durable commits are each 3,432. The 7,172 historical jobs are not a fit count. Seventy conditional scale states and 754 owner issue rows remain separate. The original N053R1 318 market support blocks remain preserved. The separate recovered N054 study completed 216 jobs with 102 new native states and 114 reuses, leaving 102 support blocks. It adds 448 historical market prediction rows and 9 metrics, with all six Holm-adjusted comparisons negative. The 336 nearer-game and 1,464 later-game N054 owner issues are separately counted. The completed 150 correction states, 144-cell designation study, 288-cell injury study and all six controls remain unchanged. All negative studies remain available. The scale study has no Holm-confirmed improvement; no candidate is promoted by this audit.
 
 ## Exports and validation
 
-`build_delivery_exports_n055.py` writes a self-contained HTML page, a complete row-wise CSV, additive audit JSON and an authenticated export manifest. The CSV includes every top-level table and each non-table metadata object from the preserved public projection. Its `record_json` column preserves all original fields and their values; structured key columns aid filtering. Empty values remain empty. This is the sanitized public projection; original private model and source payloads are excluded. PDF and XLSX delivery companions are rendered from the same authenticated projection. No new proper score is computed from rounded display values.
+`build_delivery_exports_n055.py` writes a self-contained HTML page, a complete row-wise CSV, additive audit JSON and an authenticated export manifest. The CSV includes every top-level table and each non-table metadata object from the preserved carrier plus independently verified recovery overlay. Its `record_json` column preserves all original fields and their values; structured key columns aid filtering. Empty values remain empty. This is the sanitized public projection; original private model and source payloads are excluded. PDF and XLSX delivery companions are rendered from the same authenticated projection. No new proper score is computed from rounded display values.
 
 The audit validates exact game/model/target and game/provider/target/horizon Cartesian closure, rejects duplicate cells, checks the two recent results, verifies the retained 272/122/121 snapshot, and tests that the original preparation object and scientific data remain untouched. The publication creates zero fits, zero new issues and zero new numerical source values.
 
 GitHub changes remain limited to NFL. Publication requires passing exact PR-head CI, an authorized merge, a final-main readback and a Site export whose provenance names that final canonical commit. Earlier review pages remain dated archives.
+
+The recovered N054 issue inventory is 2,233: original 84, shadow 84, fresh rolling 84, designation 84, conditional 97, raw football 336, and long-range 1,464. Every row preserves its actual source/model/issue timing. The original 82 conditional records and earlier 1,464 review outlooks remain unchanged in history. The four additional component roles expand the grid to 73 roles; they are not new independent fits.
