@@ -1,17 +1,18 @@
 'use strict';
 const assert=require('node:assert/strict');
 exports.run=async page=>{
-  assert.match(await page.locator('#coverage-accounting').innerText(),/888 fixtures accounted for/);
+  const accounting=async()=>(await page.locator('#coverage-accounting').innerText()).replace(/\s+/g,' ');
+  assert.match(await accounting(),/888 fixtures accounted for/);
   await page.selectOption('#model-view','v040_catboost');
-  assert.match(await page.locator('#coverage-accounting').innerText(),/787 all family targets/);
-  assert.match(await page.locator('#coverage-accounting').innerText(),/3 partial outputs/);
+  assert.match(await accounting(),/787 all family targets/);
+  assert.match(await accounting(),/3 partial outputs/);
   await page.locator('[data-coverage="partial"]').click();
   assert.match(await page.locator('#result-status').innerText(),/^3 games/);
   assert.match(await page.locator('#game-rows').innerText(),/Winner state missing after interrupted computation/);
   assert.equal(await page.locator('#game-rows tr').count(),3);
   await page.selectOption('#coverage-target','winner');await page.selectOption('#model-filter','missing');
   assert.match(await page.locator('#result-status').innerText(),/^101 games/);
-  assert.match(await page.locator('#coverage-accounting').innerText(),/787 available · 101 unavailable/);
+  assert.match(await accounting(),/787 available · 101 unavailable/);
   const selected=await page.locator('#view-link').getAttribute('href');
   await page.goto(selected);
   assert.equal(await page.locator('#model-view').inputValue(),'v040_catboost');
@@ -24,10 +25,10 @@ exports.run=async page=>{
   await page.selectOption('#model-view','linear');await page.selectOption('#coverage-target','winner');await page.selectOption('#model-filter','missing');
   assert.match(await page.locator('#result-status').innerText(),/^888 games/);
   await page.locator('#coverage-accounting summary').click();
-  assert.match(await page.locator('#coverage-accounting').innerText(),/Not a target of this model family/);
+  assert.match(await accounting(),/Not a target of this model family/);
   await page.locator('#clear-game-filters').click();await page.selectOption('#model-view','logistic');
-  assert.match(await page.locator('#coverage-accounting').innerText(),/790 all family targets/);
-  assert.match(await page.locator('#coverage-accounting').innerText(),/0 partial outputs/);
+  assert.match(await accounting(),/790 all family targets/);
+  assert.match(await accounting(),/0 partial outputs/);
   await page.selectOption('#model-view','fixed_equal_blend');
   await page.locator('.hero-actions a').filter({hasText:'Current week'}).click();
   await page.waitForFunction(()=>document.getElementById('result-status')?.textContent.startsWith('63 games'));
