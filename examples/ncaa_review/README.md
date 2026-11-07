@@ -89,7 +89,7 @@ interval's exclusive upper bound; new retrieval time supplies no old availabilit
 This is source-version evidence: the journal has no owner run IDs, and the
 supplied listing does not independently prove complete remote inventory. The
 read-only audit creates no new issues and proves neither model-input closure,
-forecast accuracy nor operational return. Both genders are included in these aggregate counts.
+forecast accuracy nor reliability on future games. Both genders are included in these aggregate counts.
 
 B043 retains scientific authority for the dated panels below: **101 target /
 45 scalar / 24 empirical fits**, 84,195 pre-study target rows, 46,529 display
@@ -128,11 +128,11 @@ record is 2–1–1: 66.67% across three decisions and four settled games, with 
 unknown-clock record excluded. Those numbers describe only the invented fixture.
 Tests reject late or missing clocks, incompatible identities and settlement,
 invalid probability mass and conflicting game versions. No real NCAA spread
-probability champion, real ATS result or operational return is published by the example.
+probability champion, real ATS result or validated prospective forecast performance is published by the example.
 
 Run `python examples/ncaa_review/spread_ats.py` from the repository root. The
 interactive pages embed the exact executable output and let a reviewer change
-the quoted line. The example never sends a request or places an order.
+the quoted line. The example runs locally without external requests.
 
 ## Preserved review — November 6, 2026 UTC · B044 returned; B045 prepared at that time
 
@@ -207,8 +207,8 @@ The fixed original model and the provider are evaluated on identical games:
 
 Nine directional disagreements split seven model-right and two provider-right.
 Higher pick accuracy coexists with worse probability losses and ranking. No
-paired uncertainty interval is supplied, no executable edge is established,
-and all hypothetical operational performance panels have zero qualified settled action records and unavailable operational return.
+paired uncertainty interval is supplied and no validated predictive advantage is established.
+The separate hypothetical panels retain zero qualified settled records and establish no prospective forecast performance.
 There is no admitted women's provider cohort, Kalshi/DraftKings paired cohort
 or all-three-provider common cohort. **The earlier dated 122-game panel remains
 unchanged on the dashboard and in the aggregate export.**
@@ -222,7 +222,7 @@ Pacific); model inputs use 02:21:58 UTC. The retained inventory now has
 Polymarket; it does not establish complete in-game paths. Polymarket US remains
 separate and unacquired. Actual new source dispatches were 3,146; 2,456 exact
 historical requests were reused. Kalshi made zero actual new requests under its
-preserved 429. No paid odds call or known credit charge occurred.
+preserved 429. No paid source request or known credit charge occurred.
 
 There are still **2,818 source/candidate identities**, including 1,022 unmatched
 official candidates and 44 conflicts. Only **829 records have both numeric final
@@ -261,7 +261,7 @@ Independent recovery authenticated **339 existing B042 issue rows across five
 games**: 132 rows / two men's games and 207 rows / three women's games. Recovery
 preserved their original bytes and issue clocks and created **zero new issues
 or model fits**. These target/stream rows repeat games; they are not 339 distinct
-games or qualified settled action records. The original frozen reconstruction covers 1,312 games /
+games or qualified outcome evaluations. The original frozen reconstruction covers 1,312 games /
 3,936 target rows and receives zero original as-issued credit. The current
 monitor and native replay contain 71,260 and 10,689 target rows respectively.
 **New B042 paired scores and a new model winner remain unavailable.** Earlier
@@ -274,7 +274,7 @@ Source acquisition completed **November 6, 00:25:57 UTC** (November 5, 4:25 p.m.
 Pacific). The retained display inventory contains **711,001 observations**:
 561,323 Kalshi, 149,412 Polymarket international and 266 DraftKings. The increase
 of 153,264 over B040 is a retained-observation increase, not newly requested
-quotes, independent games or executable liquidity. Polymarket US remains
+quotes, independent games or complete historical source coverage. Polymarket US remains
 separately unacquired. The latest source quote and acquisition clocks remain
 separate; publishing this review refreshes neither.
 
@@ -331,7 +331,7 @@ python -m unittest discover -s examples/ncaa_review -p 'test_*.py' -v
 python examples/ncaa_review/build_dashboard.py --check
 ```
 
-The demo creates deterministic invented history, fits a three-intercept baseline at a chronological origin, and scores completed invented events separately by league, target and provider. Its result includes missing comparisons and both winning and losing directional disagreements. A pure payoff function demonstrates how explicit executable prices and fees affect an invented one-unit decision. It has no placement API and emits **zero orders**. Fixture fee values are not estimates of any provider's real fees.
+The demo creates deterministic invented history, fits a three-intercept baseline at a chronological origin, and scores completed invented events separately by league, target and provider. Its result includes missing comparisons and both winning and losing directional disagreements. All calculations are synthetic. The example sends **zero external requests** and establishes no real NCAA forecast performance.
 
 The browser check exercises generated pages in real Chromium at desktop and mobile widths, every objective/window selector, all clock scenarios and keyboard navigation. It rejects JavaScript errors, unexpected external requests and page overflow. CI uses its separately pinned Playwright installation:
 
@@ -385,13 +385,13 @@ The private viewer now distinguishes the **captured observation inventory** decl
 
 A separate panel shows the season label/end year, report generation time, report observation time, data acquisition completion, last successful refresh, last attempted refresh and its status. Missing timestamps say unavailable. The 2027 season end year never becomes a 2027 update timestamp. Quote and forecast issue clocks remain attached to each record.
 
-“Latest supported pre-tip” means the observation's supported source time precedes the exact start. It may have been recovered after the game. Where exact game, source quote and acquisition clocks are all supplied, the viewer separately shows whether capture occurred before tip; otherwise capture-before-tip remains unverified. T−120 and T−60 references disclose whether actual capture preceded that reference. These display diagnostics cannot change a model value, qualified pair, original issue, selection or operational performance.
+“Latest supported pre-tip” means the observation's supported source time precedes the exact start. It may have been recovered after the game. Where exact game, source quote and acquisition clocks are all supplied, the viewer separately shows whether capture occurred before tip; otherwise capture-before-tip remains unverified. T−120 and T−60 references disclose whether actual capture preceded that reference. These display diagnostics cannot change a model value, qualified pair, original issue, selection or recorded forecast evaluation.
 
 The optional **local bounded-file inspector** accepts one index part up to 16 MiB and one data chunk up to 32 MiB. It verifies physical bytes and SHA-256 against the imported manifest/index, checks order and record-count closure for the selected index part, and displays one validated data chunk at a time. Imported values use text-only DOM construction. A wrong hash, wrong count, missing part or malformed file preserves the last valid view. The page explicitly states that unselected chunks, metadata objects and the full logical archive were not verified in the browser. It never requests a cloud URL, uploads a file, persists data or grants model eligibility. The entire archive is not assembled in browser memory.
 
 An optional **next-week** selector becomes usable when the report supplies exact next-week event membership. Existing report and metric week cohorts keep their established Eastern calendar definition; the expanded acquisition plan's Pacific current/next-week schedule scope is separately disclosed. The viewer does not recompute either membership from dates.
 
-The additional browser checks use invented sparse inventories, deliberately different season/update clocks, a retrospectively recovered source quote, an on-time capture, exact bounded index/data hashes, corrupt data, an unknown index, unclassified observations and clear/reset behavior at desktop and mobile widths. Runtime fixture passes and viewer checks remain separate from owner science, new provider capture, complete coverage and operational return.
+The additional browser checks use invented sparse inventories, deliberately different season/update clocks, a retrospectively recovered source quote, an on-time capture, exact bounded index/data hashes, corrupt data, an unknown index, unclassified observations and clear/reset behavior at desktop and mobile widths. Runtime fixture passes and viewer checks remain separate from owner science, new provider capture, complete coverage and validated forecast performance.
 
 ## Preserved B036 evidence and private report viewer
 
@@ -399,17 +399,17 @@ The last completed workflow evidence, B036, completed all 12 stages with explici
 
 The public pages now expose fresh sanitized aggregate counts and a [browser-only private report viewer](../../docs/ncaa/private-report/index.html). Its source is [private_report.html.tmpl](private_report.html.tmpl). Users choose their private `sports-edge-lab.private.game-report.v1` JSON; the page uses `FileReader` and text-only DOM construction. It has no upload, network, analytics or browser-persistence path. Its content security policy rejects connection requests. No private sample data is embedded or committed.
 
-The captured-price selector provides four separate references: **price supported by T−120**, **price supported by T−60**, **latest supported pre-tip**, and **latest observed**. Each value keeps its source quote, acquisition, support-end and history-resolution clocks. A later recovery can be visible without becoming an earlier model input. The latest observed value may be after tip or settlement; the latest supported pre-tip value is not a claim of a universal closing price or executable liquidity. The recorded strict T−60 model comparison uses the separately exported `provider_target_prediction` and status for each selected forecast stream. Changing a captured-price reference never changes that pair, a forecast, a selection or return. Identical captured observations can be displayed once across streams, while differing supplied source versions remain visible. Missing horizon values do not fall back to a later quote or a different stream's qualified pair.
+The captured-price selector provides four separate references: **price supported by T−120**, **price supported by T−60**, **latest supported pre-tip**, and **latest observed**. Each value keeps its source quote, acquisition, support-end and history-resolution clocks. A later recovery can be visible without becoming an earlier model input. The latest observed value may be after tip or settlement; the latest supported pre-tip value is source-specific and does not establish a universal final pre-tip reference. The recorded strict T−60 model comparison uses the separately exported `provider_target_prediction` and status for each selected forecast stream. Changing a captured-price reference never changes that pair, a forecast, a selection or a recorded evaluation result. Identical captured observations can be displayed once across streams, while differing supplied source versions remain visible. Missing horizon values do not fall back to a later quote or a different stream's qualified pair.
 
-An optional unclassified-source section retains native values and clocks separately when source semantics may include settlement, including ambiguous zero-resolution points. These records have their own supplied count and bounded 25-row paging, and cannot fill a captured pre-tip price, forecast, paired comparison or operational performance. Older files without this inventory say **not supplied**, rather than asserting that no such observations exist.
+An optional unclassified-source section retains native values and clocks separately when source semantics may include settlement, including ambiguous zero-resolution points. These records have their own supplied count and bounded 25-row paging, and cannot fill a captured pre-tip price, forecast, paired comparison or validated forecast result. Older files without this inventory say **not supplied**, rather than asserting that no such observations exist.
 
-An optional report-only horizon section shows the supplied T−120, T−60 and latest pre-tip paired populations, with the model and provider metrics side by side. Each population retains its explicit league, season, target, stream, evidence mode and membership digest. The later quote is compared with the fixed earlier model; this is neither a new fit nor evidence of execution or operational return. Older reports without this section show **not evaluated**, with no invented zero or inferred result. These viewer capabilities do not establish completion of a newer owner run or replace the last authenticated B036 evidence above.
+An optional report-only horizon section shows the supplied T−120, T−60 and latest pre-tip paired populations, with the model and provider metrics side by side. Each population retains its explicit league, season, target, stream, evidence mode and membership digest. The later quote is compared with the fixed earlier model; this is neither a new fit nor validation of prospectively issued forecasts. Older reports without this section show **not evaluated**, with no invented zero or inferred result. These viewer capabilities do not establish completion of a newer owner run or replace the last authenticated B036 evidence above.
 
 The optional three-provider comparison section gives **Kalshi, Polymarket and DraftKings equal visibility**. Season and weekly selectors expose each provider's paired population and the supplied common-game population separately. Model and provider log loss, Brier, accuracy, calibration, AUC and supported point-error metrics retain their original definitions, paired N and membership digest. The viewer does not pool recipes, overlapping weeks, leagues, streams or evidence modes, or compute missing metrics. A common-game comparison requires source metadata naming exactly the active three providers; legacy all-six-provider records remain in separate lineage. Unverified or incomplete common populations cannot establish a three-way ranking.
 
-Each population keeps both supplied directional-disagreement counts: model right/provider wrong and provider right/model wrong. The exact supplied disagreement inventory has bounded paging and retains predictions, correctness, probability difference, cutoff, quote and acquisition clocks. It is a separate source table: selecting common metrics does not invent common membership for its records. Missing tables say **not supplied**; present empty tables say **supplied empty**. No rows under a filter means none in that supplied inventory, without asserting complete game or quote coverage. Unlabeled Polymarket products stay unverified, international and US are not combined, binary thresholds remain distinct from point forecasts, and paired scores do not establish operational performance. Original raw CSV fields and source byte/hash pins remain available in details.
+Each population keeps both supplied directional-disagreement counts: model right/provider wrong and provider right/model wrong. The exact supplied disagreement inventory has bounded paging and retains predictions, correctness, probability difference, cutoff, quote and acquisition clocks. It is a separate source table: selecting common metrics does not invent common membership for its records. Missing tables say **not supplied**; present empty tables say **supplied empty**. No rows under a filter means none in that supplied inventory, without asserting complete game or quote coverage. Unlabeled Polymarket products stay unverified, international and US are not combined, binary thresholds remain distinct from point forecasts, and paired scores alone do not establish future forecast performance. Original raw CSV fields and source byte/hash pins remain available in details.
 
-The viewer groups source records within each explicit league. It preserves missing-model games under every forecast-stream selection, uses exact exported window memberships, shows reconstructed and original-as-issued roles separately, and exposes all clocks and flags in details. A separate market tab retains unbound observations. It does not reinterpret binary threshold prices as point totals, infer quote availability, or manufacture a deployed decision. The file-size limit is 64 MiB; schema and row inventories are validated before replacing an existing report. Invalid input leaves the existing report intact, and imported strings cannot create HTML elements.
+The viewer groups source records within each explicit league. It preserves missing-model games under every forecast-stream selection, uses exact exported window memberships, shows reconstructed and original-as-issued roles separately, and exposes all clocks and flags in details. A separate market tab retains unbound observations. It does not reinterpret binary threshold prices as point totals, infer quote availability, or manufacture an original forecast issue. The file-size limit is 64 MiB; schema and row inventories are validated before replacing an existing report. Invalid input leaves the existing report intact, and imported strings cannot create HTML elements.
 
 Browser checks use invented records to exercise file import, pagination, exact windows, missing-stream retention, malicious-looking text, unresolved identities, invalid-file handling and clearing. Those tests do not publish or claim to validate private science. All inherited aggregate models and failure history remain unchanged.
 
@@ -417,15 +417,15 @@ Browser checks use invented records to exercise file import, pagination, exact w
 
 The following paragraphs describe the earlier B033 snapshot. They remain historical evidence; the earlier B036 completed workflow remains preserved.
 
-The latest B033 owner return completed parent restoration, historical feature construction and its registered study: **108 newly committed target-estimator fits across both leagues, 54 per league**. It then failed when current-source refresh selected a shared summary belonging to another project. Admission took **69.1 minutes**; scientific wall time was **21.6 minutes**, including **19.7 minutes** for the study. The **371 passing fixture tests** took 10.1 seconds and remain separate from model fits. The attempt produced no fresh current-game or provider corpus, current issues or orders. A full independent readback verified the returned bytes. The historical headline selections above are preserved; this partial run does not establish a new current-season performance record.
+The latest B033 owner return completed parent restoration, historical feature construction and its registered study: **108 newly committed target-estimator fits across both leagues, 54 per league**. It then failed when current-source refresh selected a shared summary belonging to another project. Admission took **69.1 minutes**; scientific wall time was **21.6 minutes**, including **19.7 minutes** for the study. The **371 passing fixture tests** took 10.1 seconds and remain separate from model fits. The attempt produced no fresh current-game or provider corpus or current issues. A full independent readback verified the returned bytes. The historical headline selections above are preserved; this partial run does not establish a new current-season performance record.
 
 The earlier B032 attempt stopped at parent-data restoration with zero completed science. Its original failure, 250 passing fixtures and later durability verification remain in the JSON history. Neither an overall failed status nor a later readback erases valid committed work or manufactures additional scientific credit.
 
 The retained current inventory is dated **November 2, 2026, 4:48 p.m. Pacific**: 437 men’s candidate records with 13 observed finals, and 419 women’s candidate records with 51 observed finals. The public pages show those counts and their age. They are not a reconciled official season denominator. The refresh failed before resolving missing phase, opponent-division, exact-time and potential duplicate cases.
 
-The active comparison scope is **Kalshi, Polymarket and DraftKings**. Missing current-season paired coverage, log loss and operational performance remain `null`/unavailable. Neither a high winner accuracy nor a low historical log loss demonstrates an executable economic edge. The public example compares model and reference on the exact same provider-specific population, preserving target, horizon, ordered teams, settlement, quote availability and outcome-release clocks. It deliberately refuses to merge evaluation tracks or substitute one provider's population for another's.
+The active comparison scope is **Kalshi, Polymarket and DraftKings**. Missing current-season paired coverage, log loss and prospective forecast performance remain `null`/unavailable. Neither a high winner accuracy nor a low historical log loss establishes validated prospective superiority. The public example compares model and reference on the exact same provider-specific population, preserving target, horizon, ordered teams, settlement, quote availability and outcome-release clocks. It deliberately refuses to merge evaluation tracks or substitute one provider's population for another's.
 
-Quote display has its own evidence contract. A missing model forecast must not hide an otherwise bound observation. Latest captured pre-tip, latest observed, and eligible-at-forecast-cutoff prices remain separate, with actual acquisition clocks. A quote recovered later cannot create an earlier issue or prove executable operational return. Polymarket international and US are separate products; US coverage remains unacquired and unverified. The current attempt did not refresh either product.
+Quote display has its own evidence contract. A missing model forecast must not hide an otherwise bound observation. Latest captured pre-tip, latest observed, and eligible-at-forecast-cutoff prices remain separate, with actual acquisition clocks. A quote recovered later cannot create an earlier issue or establish prospective forecast performance. Polymarket international and US are separate products; US coverage remains unacquired and unverified. The current attempt did not refresh either product.
 
 Frozen-original evaluation, rolling reconstruction, and genuinely issued prospective forecasts remain separate. A reconstruction can use an auditable historical information set; it cannot claim an earlier issuance time. A real prospective issue must be created with the model and features already available, within the declared one-to-two-hour horizon. Retraining on more released data can help or harm; it must earn its result in a separately reported chronological evaluation.
 
@@ -449,7 +449,7 @@ Waiting has an explicit positive budget measured by a monotonic clock. Each samp
 
 Actual adapters must honor their timeouts, sample the same resource scope as the workload, and account for applicable CPU affinity/quotas and memory limits. This loop cannot interrupt arbitrary blocking adapter code. Resource readings are a snapshot, not a reservation against future activity; production demand and reserves need workload measurements and ongoing supervision. The toy sizes and budgets in this example are not production recommendations.
 
-Admission changes **when computation may start**, not which information a forecast may use. Original forecasts remain frozen; rolling models still need eligible training labels and inputs at each historical origin. The example makes no new source, fit, forecast, coverage or operational return claim and changes none of the committed historical evidence or generated dashboards.
+Admission changes **when computation may start**, not which information a forecast may use. Original forecasts remain frozen; rolling models still need eligible training labels and inputs at each historical origin. The example makes no new source, fit, forecast, coverage or model-performance claim and changes none of the committed historical evidence or generated dashboards.
 
 ## Progress counts and empirical time estimates
 
@@ -500,7 +500,7 @@ execute private models, reproduce private scientific work or prove B045 success.
 | File | What can be inspected |
 |---|---|
 | [handoff.py](handoff.py) and [test_handoff.py](test_handoff.py) | Joined producer-consumer preflight, exact provenance tuples, independently pinned bytes and side-effect exclusion on rejection |
-| [contracts.py](contracts.py) | Information clocks, exact identity pairing, separate metrics, invented baseline, explicit-fee payoff and stream verification |
+| [contracts.py](contracts.py) | Information clocks, exact identity pairing, separate metrics, invented baseline, synthetic outcome calculations and stream verification |
 | [test_contracts.py](test_contracts.py) | Future-outcome poisoning, equal-boundary exclusion, reordered identities, missing coverage, mixed-track rejection, stream-interface failures |
 | [admission.py](admission.py) and [test_admission.py](test_admission.py) | Aggregate resource headroom, child accounting, canonical lock ownership, bounded waits, late-result rejection and explicit diagnostics using invented fixtures |
 | [progress.py](progress.py) and [test_progress.py](test_progress.py) | Committed-versus-reused counters, known and unknown totals, phase clocks, empirical pace windows, worker changes and explicit unavailable estimates |
@@ -522,7 +522,7 @@ The preserved B035 owner evidence records its actual preflight failure and zero 
 
 The authenticated B039 NCAA owner completed ten stages and real model work, then failed while publishing dense weekly HTML. Its committed CSVs and model artifacts remain preserved. The updated track pages show the actual 156 target / 48 scalar / 60 empirical fits, separate reuses, measured resources, partial inventory and remaining coverage gaps. Historical selected panels are unchanged.
 
-The browser-only private viewer accepts both the earlier flat format and a normalized format with shared, disjoint contexts. It resolves fields lazily, preserves zero and false, rejects invalid references or overlapping fields, and keeps declared total versus loaded part counts separate. A bounded index can load one local part only after its exact byte count and SHA-256 match. This generic transport contract does not supply private forecasts or reinterpret financial outcomes. Public tests use invented rows only.
+The browser-only private viewer accepts both the earlier flat format and a normalized format with shared, disjoint contexts. It resolves fields lazily, preserves zero and false, rejects invalid references or overlapping fields, and keeps declared total versus loaded part counts separate. A bounded index can load one local part only after its exact byte count and SHA-256 match. This generic transport contract does not supply private forecasts or change recorded model evaluation results. Public tests use invented rows only.
 
 Latest observed, latest supported pre-tip, latest actually captured before tip, and supported T−120/T−60 choices retain separate clocks. The public page uploads nothing, makes no provider calls, and grants no earlier forecast or forecast eligibility. Unresolved official source records remain inspectable without inventing teams or start times.
 
@@ -565,7 +565,7 @@ The game-specific pregame views still use only their supplied eligibility audits
 An explicit latest-field map can select an appended display version while preserving
 every earlier cell. An explicitly missing or malformed latest value is shown as
 unavailable; it does not silently revert to an older view. Source rows do not enter
-forecast inputs or change earlier issues, selection or operational performance. Source links accept
+forecast inputs or change earlier issues, selection or recorded evaluation results. Source links accept
 plain public HTTP(S) URLs only; credentials, signed links and private cloud object
 links are not rendered. All report rendering remains in the browser tab with no
 network or persistence path. Browser fixtures use invented records only.
