@@ -1,5 +1,48 @@
 ## V038 reconstructed development outputs
 
+
+## V039 · all three seasons in the game center
+
+The [existing FBS dashboard](complete.html) now exposes the same season inventory for game search, model views, details and CSV exports. Select 2024, 2025, 2026 or all three seasons. The default remains the complete identified 2026 schedule, with previous/current Pacific-week views. Provider coverage never removes a game.
+
+| Season | Identified fixtures | Observed finals | Reconstructed games | Explicit gaps |
+|---|---:|---:|---:|---|
+| 2024 | 920 | 919 | 679 | 240 early fixtures lack admitted prior outcomes; one exact kickoff unresolved |
+| 2025 | 934 | 934 | 934 | None in this retained identified cohort |
+| 2026 | 888 | 629 | 790 | 98 exact kickoffs unresolved; all 63 current-week games have reconstructed values |
+| **Total** | **2,742** | **2,482** | **2,403** | **240 prior-history gaps + 99 exact-kickoff gaps** |
+
+[Download the sanitized three-season report](three-season.json). Winner probabilities, signed home margins, total centers and saved 80%/95% residual intervals are projected from authenticated original V038 outputs. Each detail panel keeps the model computation time, reconstructed cutoff and source capture separate. The fixed equal blend remains the preset default; it has no saved interval, and the interface does not invent one. Interval support and negative distribution findings remain visible. Numeric display is rounded; no headline metric is recalculated from display values.
+
+The 99 unresolved kickoffs have `kickoff: null` and `kickoff_exact: false`; the original source placeholder is retained separately as `reported_kickoff`. Native weeks, two kickoff-revision quarantines, the Army–Navy week conflict and ten unbound championship slots keep their earlier meaning. The 2024 Robert Morris–Utah State placeholder is not presented as an authenticated 04:00 kickoff.
+
+A twelve-row season/provider matrix makes projected and missing winner, margin and total references visible for DraftKings, Kalshi, Polymarket US and Polymarket Global separately. Quote/interval eligibility at T−60 is only a clock check. Historical possession, source entitlement, exact model-cutoff matching, fees, depth and liquidity require their own evidence. The 2024/2025 provider matrices are not imported into this public projection; their absence is not evidence that no product existed. Cover probabilities remain absent without a separately authenticated exact-line cohort.
+
+This is **new reporting work that reuses the completed V038 scientific study**: 2,497 unique base fits, 681 calibrations, 1,232 compatible state reuses, 33,642 target outputs, and zero duplicate completed fit identities. V039's explorer itself performs zero fits and makes zero provider requests. Historical availability and genuine pregame issuance remain unproved; no automatic promotion or current-season selection follows.
+
+### Newly executed V039 families
+
+V039 completed **1,362 new XGBoost/LightGBM base fits and 454 calibrations**, producing **21,627 additional target outputs on the same 2,403 games**. Its full-cohort pass reused 24 compatible states from the earlier current-week pass. None of the original V038 scikit-learn fits were repeated. New classifiers, point regressors, held-out calibration and a fixed equal optional-family blend are selectable in the game center. The V038 fixed blend remains the default, with original values unchanged.
+
+[Download the sanitized V039 study](optional-study.json). Its model comparison joins the original V038 baselines on exact cohort hashes and denominators. Per-game values are rounded displays; metrics retain the supplied full-precision calculations. The following rows describe the separately prespecified **V039 fixed equal optional-family blend**, with no score-based selection:
+
+| Season | Observed games | Accuracy | Log loss | Brier | Margin MAE | Total MAE |
+|---|---:|---:|---:|---:|---:|---:|
+| 2024 | 678 | 0.6549 | 0.632021 | 0.220037 | 13.9362 | 13.4229 |
+| 2025 | 934 | 0.7099 | 0.549703 | 0.186105 | 14.0713 | 13.1449 |
+| 2026 | 629 | 0.7250 | 0.539265 | 0.181548 | 14.5565 | 13.2813 |
+
+The new model study finished at **2026-11-07 03:41:02.446496 UTC**. It reused the sealed 145-feature outcome-history input and its declared 24-hour result-availability proxy; original acquisition clocks are not rewritten as earlier possession. The 2026 season is monitoring, and the seven current-week observed outcomes are too small to establish improvement. No new strict-qualified fit, genuine issue or champion promotion is claimed. Original 622-game replay metrics remain separate from the optional study's descriptive matched-subset comparison.
+
+XGBoost CPU 3.4.1 and LightGBM 4.7.0 executed on one CPU thread. The science process measured about 672.01 seconds elapsed and 671.71 CPU seconds, with 390,708 KiB maximum process RSS. These are scientific-process measurements, not dashboard or full-workload acquisition benchmarks. Dollar cost is unavailable without a workspace rate; sports-provider refresh requests were zero. CatBoost, PyTorch and TensorFlow remain unexecuted because their dependencies were not admitted under the shared storage budget.
+
+### Latest authenticated owner observation
+
+The separate V038 owner observation at **2026-11-07 02:45:33.919003 UTC** deferred while V036 was active. It reused the 888/56/63 game reports and completed zero new fits, provider requests or recoveries. Its supervisor recorded worker exit 2; a separate parent-interpreter exit remains unproved. This is distinct from the newly completed local model study. Full-workload acquisition qualification remains **NO_GO**.
+
+The generic projector `examples/fbs_contracts/build_three_season_review.py` authenticates the original prediction, result, input and fixture-source bytes before projecting permitted fields. It verifies exact official ID, ordered teams and kickoff for every admitted prediction; rejects duplicate targets, non-finite outputs, malformed intervals and unadmitted cover values; and excludes private feature arrays, model-state IDs and cloud paths. The earlier 2026 report and all original metrics remain unchanged.
+
+
 The all-game view defaults to the preregistered fixed equal blend. It now includes 790 exact-kickoff 2026 games, including all 63 current-week games, with winner probability, winner, home margin and total points. All 888 identified games remain visible; 98 fixtures lack exact kickoff admission. The original 622-game replay remains separately selectable.
 
 [Development forecast data](development-2026.json) is a whitelist projection of the completed local study, computed 2026-11-07T01:51:51.403891Z against the schedule observed 2026-11-06T20:28:52Z. The full-season resume added 214 base fits and 58 calibrations and reused 358 hash-verified states. Its 11,060 target predictions cover logistic, linear, ridge, Extra Trees, histogram gradient boosting and fixed equal blends. It used zero provider and S3 requests. XGBoost, LightGBM, CatBoost, PyTorch and TensorFlow dependencies were unavailable in this execution; adapters do not count as completed fits.
@@ -54,9 +97,9 @@ The actual **V035 invocation failed during predecessor handoff**. Its source req
 
 The uploaded 84,837,823-byte return, its exact embedded source, every member manifest, the separate terminal log and the independent external completion agree. They record **diagnostic status 2**. The original entrypoint does not independently establish the interpreter exit; that observation remains unavailable. V034's earlier disk deferral is preserved separately: 60 checks over 300.155903329 seconds, ending 1,770,766,336 bytes below the unchanged full-work threshold after verified temporary-copy reclamation.
 
-The owner audit adds independent verification. It retains all 888 identified fixtures, the ten separate unbound championship slots, the 622-game retrospective replay, all earlier fits and negative findings, and the dated local availability features. It does not refresh source clocks or certify a new forecast. **NO BET, zero stake.** The next handoff is prepared code until a new actual return proves execution.
+The owner audit adds independent verification. It retains all 888 identified fixtures, the ten separate unbound championship slots, the 622-game retrospective replay, all earlier fits and negative findings, and the dated local availability features. It does not refresh source clocks or certify a new forecast. The next handoff is prepared code until a new actual return proves execution.
 
-New local V036 preparation completed **four fresh official availability reads at 06:13 UTC**. All four bodies are byte-identical to the earlier capture, with zero new status or feature changes; the prior 108 changes remain preserved. Separately, an independent audit checked 905 original game-state objects and 1,256,960 fields with zero projection mismatches. Its 22 conservative recorded-state candidates are not a strict market-path cohort or historical-possession proof. Nine of 31 inherited strict-clock flags need revision review: five score decreases and four within-period clock increases. No new fits, predictions, forecast issues or wagers occurred.
+New local V036 preparation completed **four fresh official availability reads at 06:13 UTC**. All four bodies are byte-identical to the earlier capture, with zero new status or feature changes; the prior 108 changes remain preserved. Separately, an independent audit checked 905 original game-state objects and 1,256,960 fields with zero projection mismatches. Its 22 conservative recorded-state candidates are not a strict market-path cohort or historical-possession proof. Nine of 31 inherited strict-clock flags need revision review: five score decreases and four within-period clock increases. No new fits, predictions, forecast issues or new action authorizations occurred.
 
 The [dated execution audit](https://github.com/alvaromendizabal/sports-edge-lab/blob/main/docs/fbs/execution-2026-11-06.md) links the exact public source/return commitments to the evidence limits. A new [invented registry and receipt example](https://github.com/alvaromendizabal/sports-edge-lab/blob/main/examples/fbs_contracts/handoff_receipts.py) demonstrates the admission regression, partial-result preservation and independently captured process exits without exposing private production code or data.
 
@@ -72,7 +115,7 @@ New local evidence consists of **four official availability captures**, 29 exact
 
 The Week 14 investigation documents **ten official championship event slots with unbound participants**, separately from the unchanged **888 identified fixtures**. All ten announcements were checked; six conferences also have successful original HTTP copies and four failed original fetches remain recorded. The retained Army–Navy native-week/calendar interval conflict is explicitly flagged. These slots are not fabricated game IDs or market matches.
 
-The completed **33-fit historical market-path/availability experiment and 11 training-only standardizers are reused unchanged**. Its negative findings, 7,491 predictions and paired uncertainty remain visible. The 622-game retrospective replay, 48-candidate independent historical audit and 167-identity registry retain their original populations and evidence classes. Current-season labels choose no champion. **NO BET, zero stake**.
+The completed **33-fit historical market-path/availability experiment and 11 training-only standardizers are reused unchanged**. Its negative findings, 7,491 predictions and paired uncertainty remain visible. The 622-game retrospective replay, 48-candidate independent historical audit and 167-identity registry retain their original populations and evidence classes. Current-season labels choose no champion.
 
 The browser review exposes the actual owner stop, current availability qualification, all ten official event-slot links, full game filters and the retained alternatives. Private source payloads, player-level records, active model recipes, cloud paths and executable handoffs remain private. Earlier dated evidence is preserved below.
 
@@ -89,7 +132,7 @@ The fresh DraftKings capture yields **188 exactly matched rows across 63 games**
 
 The public review includes all 888 observed games, the full previous 56-game week and current 63-game week, source clocks, period/provider filters, keyboard access and CSV export. The newly registered historical study completed **33 local predictive fits across 11 fixed variants**, plus 11 separately counted training-only standardizers, with zero failed fits. All 33 fitted states, 7,491 predictions, 121 metrics and 27 paired uncertainty comparisons were independently reproduced without refitting. The path cohort (257 train / 312 test) and availability/path cohort (115 train / 125 test) remain separate. All tested path additions worsened their matched controls; the full availability/path interaction also worsened all three losses. No season-2026 outcomes selected a model.
 
-The fixed market inventory retained 3,682 successful responses from 3,743 HTTP calls, including all 61 rate-limit attempts and one unresolved request. Of 904 game-state captures, 324 passed a broad boundary-marker gate, 46 had monotone play clocks, and 31 also had complete clocks. Historical possession and full-game continuous coverage remain unproved. A separate official MAC extension adds 32 PDFs and 1,597 player rows; 161 of 171 team-report pages match 112 games, ten remain unresolved, and no positional or certified publication-time coverage is invented. The new rows did not alter either frozen study. These are local, exposed-2025 experiments, not SageMaker execution or historical forecast issuance. The earlier negative injury study was preserved without refitting. **NO BET, zero stake**.
+The fixed market inventory retained 3,682 successful responses from 3,743 HTTP calls, including all 61 rate-limit attempts and one unresolved request. Of 904 game-state captures, 324 passed a broad boundary-marker gate, 46 had monotone play clocks, and 31 also had complete clocks. Historical possession and full-game continuous coverage remain unproved. A separate official MAC extension adds 32 PDFs and 1,597 player rows; 161 of 171 team-report pages match 112 games, ten remain unresolved, and no positional or certified publication-time coverage is invented. The new rows did not alter either frozen study. These are local, exposed-2025 experiments, not SageMaker execution or historical forecast issuance. The earlier negative injury study was preserved without refitting.
 
 The new page has explicit population, missingness, source-revision and export tests. The existing FBS browser workflow also exercises its desktop/mobile views, filters, keyboard access and downloads. Private source archives, model recipes, execution packages and cloud identifiers remain excluded. Earlier dated evidence is preserved below.
 
@@ -124,7 +167,7 @@ The public explorer retains **888 observed FBS-involving games: 622 completed an
 
 V026 completed the registered recovery: **100 new learned fits plus 197 independently checked reused states, 297 committed states total**, in 70.212253 seconds. The V025 failure remains preserved below. V026 did not issue a new forecast or fit a rolling model. Mixed exposed historical results do not promote a champion.
 
-The season view includes all nine native-week scorecards, original winner/margin/total outputs, final scores, full replay metrics and calibration bins. Market controls separate T−120, T−60, the latest stored observation strictly before kickoff, and the latest stored snapshot. Recovered historical data keeps its actual retrieval clock; an authenticated snapshot captured before a cutoff can qualify on its capture clock even when an individual quote timestamp is absent. Future cutoff windows remain pending. Polymarket US and Global are separate products. All decisions remain NO BET with zero stake.
+The season view includes all nine native-week scorecards, original winner/margin/total outputs, final scores, full replay metrics and calibration bins. Market controls separate T−120, T−60, the latest stored observation strictly before kickoff, and the latest stored snapshot. Recovered historical data keeps its actual retrieval clock; an authenticated snapshot captured before a cutoff can qualify on its capture clock even when an individual quote timestamp is absent. Future cutoff windows remain pending. Polymarket US and Global are separate products.
 
 **Preserved prior attempt — V025, November 3, 2026: partial.** It preserved 197 committed fits, one failed forward attempt and 99 final learned states not attempted. At that attempt, V024 was the last completed owner study. [Inspect the recovery demonstration, all nine replay weeks and three-provider source coverage](recovery.html).
 
@@ -161,7 +204,7 @@ Eight 2024/2025 MARKET and retained-minimax scorecards were independently recomp
 
 On 740 matched 2024 games, MARKET log loss is 0.554096; orthogonal innovation is 0.555551. On 748 matched 2025 games, MARKET log loss is 0.538547; innovation is 0.539946. Lower loss is better. Calibration improves 2025 to 0.537568 but regresses slightly in 2024 to 0.554364. No learned replacement qualified across both seasons.
 
-The 301-game 2026 monitoring panel shows lower descriptive innovation loss, but it has already been exposed and cannot select models, calibrators, feature families or thresholds. Repeated historical examination also means 2024/2025 are not untouched holdouts. Operational MARKET remains selected; the FBS paper policy retains all $100 as cash. No realized profit, orders or fills are claimed.
+The 301-game 2026 monitoring panel shows lower descriptive innovation loss, but it has already been exposed and cannot select models, calibrators, feature families or thresholds. Repeated historical examination also means 2024/2025 are not untouched holdouts. Operational MARKET remains selected. This remains a dated analytical record.
 
 ## Prepared work is not completed work
 
