@@ -102,6 +102,17 @@ def evidence(league):
     if readback['source_release'] != scientific['release'] or readback['observations'] != data['current_coverage_gaps']['market_observations']:raise ValueError('readback evidence population')
     if readback['new_provider_requests'] != 0 or readback['new_fit_credit'] != 0 or readback['earlier_availability_credit'] is not False or readback['source_clocks_unchanged'] is not True:raise ValueError('readback grants unsupported credit')
     if data['prepared_execution']['owner_execution_observed'] is not False or data['prepared_execution']['new_scientific_credit'] != 0:raise ValueError('prepared execution receives credit')
+    registry = data['prepared_model_registry']
+    if (registry['release'] != data['prepared_execution']['release']
+            or registry['family_count'] != len(registry['families'])
+            or len({row['family'] for row in registry['families']}) != registry['family_count']
+            or registry['target_head_count'] != sum(len(row['targets']) for row in registry['families'])
+            or registry['new_owner_fits_credited'] != 0 or registry['measured_gain'] is not None
+            or registry['current_outcomes_used_for_selection']):raise ValueError('prepared model registry receives unsupported scope or credit')
+    frontier = data['current_frontier_research']
+    if (frontier['release'] != data['current_owner_attempt']['release']
+            or frontier['completed_paired_study'] or frontier['measured_gain'] is not None
+            or frontier['current_outcomes_used_for_selection']):raise ValueError('uncompleted current frontier study receives credit')
     if sum(p['retained_observations_both_leagues'] for p in data['providers']) != data['current_coverage_gaps']['market_observations']:raise ValueError('provider observation closure')
     result = data['current_results_status']
     if result['new_issues_created_by_recovery'] != 0 or result['new_fits_created_by_recovery'] != 0:raise ValueError('recovery creates scientific credit')
@@ -162,7 +173,7 @@ def landing_status(data):
             '<p>The private report opens with a filterable season table: winner, home probability, projected scores, margin, total, spread qualification and all three providers. Detailed games preserve every supplied model/version. Readable season/week metrics, a recovery queue and a bounded frontier/ATS viewer keep each missing capability visible with an action.</p>'
             f'<p>The exact team-identity repair restores {repair["source_game_versions"]:,} source-game bindings and {repair["comparison_contexts"]:,} explicit comparison contexts. All remain unavailable under their retained evidence gates: zero qualified spread probabilities, zero admitted ATS records and zero model fits from this repair.</p>'
             f'<p>Dated B045 baseline evidence remains {baseline["target_rows"]:,} target / {baseline["browser_display_rows"]:,} display rows and {baseline["independent_metric_panels_checked"]:,} metric panels. Its {journal["b045_verified_issue_rows"]} source-version issues and {journal["b045_journal_only_rows"]} journal-only rows remain separate. The 339 B042 immutable issues, B043 scientific results and 129/122-game comparisons are retained unchanged.</p>'
-            '<p>Historical 2024–25 and 2025–26 evaluations are development-exposed. Current 2026–27 data cannot select or promote a model. B047 is prepared code; it has not been executed by the owner. Exact missing clocks, official denominator gaps and unfinished injury/path comparisons remain open.</p>')
+            '<p>Historical 2024–25 and 2025–26 evaluations are development-exposed. Current 2026–27 data cannot select or promote a model. B047R1 is prepared code with ten base estimator families and 26 target heads, including Extra Trees classification and regression; it has not been executed by the owner. Exact missing clocks, official denominator gaps and unfinished injury/path comparisons remain open.</p>')
 
 
 def render_landing(data):

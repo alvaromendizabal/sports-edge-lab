@@ -182,7 +182,7 @@ class EvidenceTests(unittest.TestCase):
     def test_private_viewer_has_no_upload_or_persistence_path(self):
         viewer = (build_dashboard.HERE / 'private_report.html.tmpl').read_text()
         self.assertIn("connect-src 'none'", viewer)
-        self.assertIn('new FileReader()', viewer)
+        self.assertIn('await file.arrayBuffer()', viewer)
         self.assertIn('window_event_keys', viewer)
         self.assertIn('Unresolved identity', viewer)
         self.assertIn('No record for this game', viewer)
@@ -339,7 +339,8 @@ class EvidenceTests(unittest.TestCase):
             self.assertFalse(readback['earlier_availability_credit'])
             self.assertTrue(readback['source_clocks_unchanged'])
             self.assertEqual(readback['new_provider_requests'], 0)
-            self.assertEqual(data['prepared_execution']['release'], 'B047')
+            self.assertEqual(data['prepared_execution']['release'], 'B047R1')
+            self.assertEqual(data['prepared_execution_history'][0]['release'], 'B047')
             self.assertFalse(data['prepared_execution']['owner_execution_observed'])
             self.assertEqual(data['prepared_execution']['new_scientific_credit'], 0)
             old = next(r for r in data['review_history'] if r['release'] == 'B043')
@@ -626,10 +627,29 @@ class EvidenceTests(unittest.TestCase):
 
     def test_current_model_capabilities_do_not_select_or_promote(self):
         for data in self.exports.values():
-            self.assertEqual(len(data['capability_registry']),10)
+            self.assertEqual(len(data['capability_registry']),11)
+            registry=data['prepared_model_registry']
+            self.assertEqual((registry['family_count'],registry['target_head_count']),(10,26))
+            self.assertEqual(next(r['targets'] for r in registry['families'] if r['family']=='Extra Trees'),['win','margin','total'])
             self.assertTrue(all('OWNER_EXECUTION_PENDING' in r['implementation'] for r in data['capability_registry']))
             self.assertTrue(all(not r['current_outcomes_selected_model'] for r in data['b046_descriptive_original_metrics']))
             self.assertFalse(data['b046_provider_comparison']['general_superiority_proved'])
+
+
+    def test_prepared_registry_and_current_frontier_reject_invented_scope(self):
+        for section, key, value in [
+            ('prepared_model_registry','family_count',11),
+            ('prepared_model_registry','target_head_count',27),
+            ('prepared_model_registry','new_owner_fits_credited',1),
+            ('prepared_model_registry','measured_gain',0.01),
+            ('prepared_model_registry','current_outcomes_used_for_selection',True),
+            ('current_frontier_research','release','B047R1'),
+            ('current_frontier_research','completed_paired_study',True),
+            ('current_frontier_research','measured_gain',0.01),
+        ]:
+            corrupted=copy.deepcopy(self.exports['ncaam']);corrupted[section][key]=value
+            with patch.object(Path,'read_text',return_value=json.dumps(corrupted)):
+                with self.assertRaises(ValueError):build_dashboard.evidence('ncaam')
 
 
 if __name__ == '__main__':
