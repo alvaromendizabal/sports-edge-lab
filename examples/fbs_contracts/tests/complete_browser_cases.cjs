@@ -7,7 +7,7 @@ exports.run=async({browser,root,screenshots})=>{
  for(const width of [1440,390]){
   await page.setViewportSize({width,height:1000});await page.goto('file://'+path.join(root,'docs/fbs/complete.html'));
   assert.match(await page.locator('#result-status').innerText(),/^888 games · 629 observed complete · 622 retained replays$/);
-  assert.equal(await page.locator('#game-rows tr').count(),30);assert.equal(await page.evaluate(()=>document.documentElement.scrollWidth>innerWidth),false);
+  assert.equal(await page.locator('#game-rows tr').count(),30);assert.deepEqual(await page.evaluate(()=>({width:innerWidth,scrollWidth:document.documentElement.scrollWidth,overflow:[...document.querySelectorAll('body *')].filter(e=>{const r=e.getBoundingClientRect();return r.width>0&&(r.left<0||r.right>innerWidth)&&getComputedStyle(e).position!=='absolute'&&!e.closest('.table-wrap')}).slice(0,15).map(e=>({tag:e.tagName,id:e.id,cls:e.className,right:e.getBoundingClientRect().right}))})),{width,scrollWidth:width,overflow:[]});
   assert.doesNotMatch(await page.locator('body').innerText(),/\bbetting\b|\bwagers?\b|\bstakes?\b|NO BET|\bpaper\b/i);
   for(const [period,count,complete,replays] of [['previous',56,56,56],['current',63,7,0],['all',888,629,622]]){
    await page.locator(`[data-period="${period}"]`).click();assert.equal(await page.locator('#result-status').innerText(),`${count} games · ${complete} observed complete · ${replays} retained replays`);
@@ -21,7 +21,7 @@ exports.run=async({browser,root,screenshots})=>{
   for(const horizon of ['T120','T60','latest_pre_kickoff']){await page.selectOption('#comparison-horizon',horizon);assert.equal(await page.locator('#comparison-rows tr').count(),5);}
   for(const target of ['winner','margin','total','cover']){await page.selectOption('#target-filter',target);assert.equal(await page.locator('#registry-rows tr').count(),20);}
   assert.match(await page.locator('#registry-rows').innerText(),/No qualified cover forecast/);
-  assert.equal(await page.evaluate(()=>document.documentElement.scrollWidth>innerWidth),false);
+  assert.deepEqual(await page.evaluate(()=>({width:innerWidth,scrollWidth:document.documentElement.scrollWidth,overflow:[...document.querySelectorAll('body *')].filter(e=>{const r=e.getBoundingClientRect();return r.width>0&&(r.left<0||r.right>innerWidth)&&getComputedStyle(e).position!=='absolute'&&!e.closest('.table-wrap')}).slice(0,15).map(e=>({tag:e.tagName,id:e.id,cls:e.className,right:e.getBoundingClientRect().right}))})),{width,scrollWidth:width,overflow:[]});
   if(screenshots){fs.mkdirSync(screenshots,{recursive:true});await page.selectOption('#model-filter','all');await page.selectOption('#target-filter','winner');await page.evaluate(()=>window.scrollTo({top:0,behavior:'instant'}));await page.screenshot({path:path.join(screenshots,`complete-${width}.png`)});}
  }
  assert.deepEqual(errors,[]);assert.deepEqual(external,[]);await context.close();return{status:'PASS',games:888,complete:629,current_week:63,current_complete:7,retained_replays:622,viewports:[1440,390],external_requests:0,script_errors:0};
