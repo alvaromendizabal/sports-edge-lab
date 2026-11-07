@@ -11,10 +11,15 @@ def build(source, output):
     source=Path(source);output=Path(output)
     prediction=source/'full2026_resume/FULL2026_PREDICTIONS.json.gz'
     summary=source/'full2026_resume/FULL2026_RESULTS.json'
-    historical=source/'ACTUAL_STUDY_RESULTS.json'
+    historical=source/'COMPLETE_SCIENTIFIC_RESULTS.json'
     current=source/'current_week/CURRENT_WEEK_RESULTS.json'
     dataset=source/'RETAINED_INPUT_DATASET.json.gz'
     rows=json.load(gzip.open(prediction,'rt'));s=json.loads(summary.read_text());h=json.loads(historical.read_text());c=json.loads(current.read_text());inputs=json.load(gzip.open(dataset,'rt'))
+    assert h['evidence_class']==EVIDENCE and h['forecast_issued'] is False and h['historical_availability_proved'] is False and h['promotion_allowed'] is False
+    seasons={str(x['season']):x for x in h['seasons']}
+    cumulative=dict(h['unique_fit_accounting'])
+    cumulative.update(compatible_fit_state_reuses=sum(x['reused_fit_states'] for x in h['run_metrics'].values()), target_outputs=sum(x['output_count'] for x in h['seasons']), games_with_predictions=sum(x['games_with_all_available_predictions'] for x in h['seasons']))
+    coverage=[{'season':x['season'],'identified':x['identified_games'],'predicted':x['games_with_all_available_predictions'],'observed_evaluation_games':sorted({m['games'] for m in x['metrics']}),'insufficient_history':len(x['known_kickoff_without_predictions']),'exact_kickoff_unresolved':len(x['TBD_records'])} for x in h['seasons']]
     assert s['status']=='BOUNDED_REGISTERED_WORK_COMPLETE' and s['target_games_requested']==790
     original=json.loads((output/'complete-season.json').read_text())
     games={r[0]:dict(zip(original['columns'],r)) for r in original['rows']}
@@ -49,9 +54,10 @@ def build(source, output):
         'sources':[physical(p) for p in (prediction,summary,historical,current,dataset)],
         'counts':{'identified':888,'predicted':790,'current_week':63,'kickoff_unresolved':98,'observed_outcomes':629},
         'resume_work':{k:s[k] for k in ('new_base_fits','new_calibration_fits','reused_fit_states','failed_fits','elapsed_seconds','cpu_seconds','maxrss_kib','provider_requests','s3_requests')},
+        'scientific_results_generated_at':h['generated_at'],'cumulative_work':cumulative,'season_coverage':coverage,
         'families':{k:sorted(v) for k,v in families.items()},'rows':list(output_rows.values()),'unresolved':missing,
-        'metrics':{'2026':s['metrics'],'current_week':c['metrics'],'2024':h.get('metrics_by_season',{}).get('2024',[]),'2025':h.get('metrics_by_season',{}).get('2025',[])},
-        'metric_note':'Development reconstruction only. 2024/2025 are bounded evaluated subsets; compare exact cohort IDs and game counts. Current week has only seven observed outcomes. No champion improvement claim.'}
+        'metrics':{'2026':s['metrics'],'current_week':c['metrics'],'2024':seasons['2024']['metrics'],'2025':seasons['2025']['metrics']},
+        'metric_note':'Development reconstruction only. 2024 has 679 predicted games and 678 observed evaluation outcomes; 240 early games lack admitted history and one has unresolved kickoff. 2025 covers all 934 identified games and outcomes. 2026 covers all 790 exact-kickoff games and 629 observed outcomes, with 98 kickoff-unresolved fixtures. Current week has only seven observed outcomes. Compare exact cohort IDs; no champion improvement claim.'}
     text=json.dumps(report,separators=(',',':'),sort_keys=True)
     (output/'development-2026.json').write_text(text+'\n')
     (output/'development-data.js').write_text('window.FBS_DEVELOPMENT_STUDY='+text+';\n')
