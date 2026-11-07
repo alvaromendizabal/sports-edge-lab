@@ -5,6 +5,18 @@ Reproducible NBA forecasts, complete released-game inventories, chronological mo
 This NBA track belongs to the shared [Sports Edge Lab](../../README.md) repository. Its public material contains sanitized aggregate evidence and invented engineering examples. Actual game-level forecasts, feature recipes, model weights, source responses, full journals, and execution packages remain private.
 
 
+## November 7 dashboard verification and game-level model comparison
+
+The private NBA dashboard now retains **132 verified regular-season finals**, after two games in the preceding 130-final snapshot were reconciled to their official final box scores. The latest of those two result bodies was retrieved at **2026-11-07 21:13:16 UTC**. All **1,200 assigned regular-season matchups** remain in the inventory, alongside the separately identified preseason entries, official placeholders and secondary observations. Full-season schedule acquisition and individual result refreshes keep separate source clocks.
+
+Game details now compare all **twelve saved model and ensemble views** on the same matchup, selected T60/T120 cutoff and frozen/weekly track. They show winner probability, projected score, home margin, total, available exact-line probabilities, supported point intervals, observed errors and actual training/input clocks. Ordinary least squares stays regression-only. Unsupported mixture quantiles and unavailable line/distribution pairs remain explicit. Loading a saved model view performs no fit and issues no forecast.
+
+Large score tables are paginated in groups of fifty, with full filtered exports and retained row counts. Family data reads are shared and limited to three concurrent requests. This improves inspection without dropping scientific rows or repeating any completed fit.
+
+The older strict provider comparison remains a **130-final historical snapshot**. It is not automatically expanded to 132 by refreshing game results. DraftKings still has no admitted rows in that strict current cohort; prior-season primary-provider history, the native historical matrix and genuinely continuous all-family operation remain separate requirements. The completed model catalog does not establish a running per-game forecasting service. Existing studies, unfavorable results and the independent prior-data quote-age experiment below remain unchanged.
+
+Official result evidence uses [NBA game pages](https://www.nba.com/games?date=2026-11-06). Exact bodies, identities, derived game views and private release records remain access-controlled. No production model fitting, new forecast issuance, paid provider acquisition or owner completion is credited to this dashboard update.
+
 ## Independent prior-data quote-age stability — November 7, 2026
 
 **New, bounded private review study; not an owner execution or new issued forecast.** Starting from the qualified B051R1 release, four newly fitted historical Ridge total-point estimators and four prior-only residual calibration records compared a recipe without numerical quote ages with an otherwise matched, source-cadence-robust age recipe. Frozen 2024–25 training and calibration were separated chronologically with a label embargo. Both arms were scored on the identical **1,212 2025–26 regular-season games at each horizon**; current-season outcomes did not select a model.
