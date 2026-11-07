@@ -1,8 +1,16 @@
 # Sports Edge Lab · NCAA men's basketball
 
-## B047R1 season workspace — current review
+## B048 season workspace — current review
 
-### Physical B047R1 return authenticated — November 7, 2026 UTC
+### Actual B048 return authenticated — November 7, 2026 UTC
+
+B048 was owner-executed and recorded **FAILED_PARTIAL_WORK_PRESERVED** at its fresh-package fixture gate, before scientific stage entry: **0/16 stages completed**, all 16 unreached. The owner summary records **zero new owner fits**. No new forecast, provider coverage, model improvement or complete-season certification is credited.
+
+The actual owner suite recorded **1,456 parent cases: 1,454 passed, 1 skipped and one errored case**. That single unsuccessful case emitted **one error event and one failure event** across its subtests; these are not two separate failed cases. The regression concerns mutation detection in the predecessor-worker liveness guard. The earlier local **1,456/1,456 passed** result remains dated preparation evidence, separately from this failed owner attempt.
+
+Independent physical inspection verifies **4 outer members, 99 nested owner-return members and 434 embedded-source members**: safe casefold-unique explicit regular-file names, every CRC and exact active-manifest closure. The **12,404,420-byte** outer has SHA-256 `3bbe21fe4e3a618fe121026ab9dd3ccbf58e0e4417348ec45fd3aa5c460c00bc`; its embedded source exactly matches the prepared B048 package. The retained final-return full-readback receipt agrees with the enclosed bytes. This confirms the returned diagnostic artifact, not scientific execution or current remote availability. Separate literal **worker-terminal and observed shell-exit receipts remain unobserved**.
+
+### Dated physical B047R1 return — authenticated November 7, 2026 UTC
 
 Independent inspection of the uploaded return now verifies **4 outer members, 105 nested owner-return members and 416 embedded-source members**: safe casefold-unique explicit regular-file names, every CRC and exact active-manifest closure. The **12,088,538-byte** physical outer has SHA-256 `39f09317dbecae94440100922743fc1f380d5ee8b1bd9a533eab6d5b94ca1cd3`. Its nested return exactly matches the previously verified cloud bytes. The physical-attachment comparison is complete.
 
@@ -36,7 +44,7 @@ The latest men’s reconstructed T−60 Polymarket international cohort contains
 
 ### Model and feature research
 
-Requested families have explicit implementation, dependency and evidence states: sklearn logistic regression; linear and ridge regression; Extra Trees classifiers and regressors; histogram gradient boosting; XGBoost, LightGBM and CatBoost classifiers/regressors; PyTorch and TensorFlow classification/regression; fixed ensembles/blends; chronological calibration and residual-distribution candidates. Implemented code, installed dependencies, an admitted job, a committed fit, an evaluated model and a promoted champion are separate states. The prepared B047R1 registry contains **10 base estimator families and 26 target heads**; fixed ensembles, blends and calibration are separate candidates. B047 remains a dated prepared source version. B047R1 was owner-executed and failed before scientific stage entry, with zero newly committed scientific results. Local implementation tests do not establish a new committed fit or improved NCAA result.
+Requested families have explicit implementation, dependency and evidence states: sklearn logistic regression; linear and ridge regression; Extra Trees classifiers and regressors; histogram gradient boosting; XGBoost, LightGBM and CatBoost classifiers/regressors; PyTorch and TensorFlow classification/regression; fixed ensembles/blends; chronological calibration and residual-distribution candidates. Implemented code, installed dependencies, an admitted job, a committed fit, an evaluated model and a promoted champion are separate states. The prepared B047R1 registry contains **10 base estimator families and 26 target heads**; fixed ensembles, blends and calibration are separate candidates. B047 remains a dated prepared source version. B047R1 and B048 were subsequently owner-executed on November 7, 2026 UTC and failed before scientific stage entry, with no new scientific results credited. The B048 owner fixture failure is the current execution status. Local implementation tests do not establish a new committed fit or improved NCAA result.
 
 New frontier outputs keep historical monthly development, per-game rolling reconstruction and latest available previews separate. Existing weekly streams retain their original labels. Earlier-completed game histories, home/away windows, EWM/shrinkage, basketball form, availability versions and genuine in-play paths require original availability before each target cutoff. Current 2026–27 outcomes cannot select families, weights, blends, calibrators or promotions. The two historical seasons remain development-exposed.
 
