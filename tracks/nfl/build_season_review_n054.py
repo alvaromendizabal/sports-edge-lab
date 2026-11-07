@@ -98,7 +98,9 @@ def build(data):
     source=(HERE/'season_review_n054.template.html').read_text()
     if RETIRED.search(source):raise ValueError('active template terminology')
     payload=base64.b64encode(pack(data)).decode()
-    return source.replace('__SEASON_GZIP_BASE64__',payload)
+    from publication_audit_n055 import audit
+    audited=audit(data)
+    return source.replace('__SEASON_GZIP_BASE64__',payload).replace('__PUBLICATION_AUDIT_JSON__',json.dumps(audited,separators=(',',':'),ensure_ascii=False).replace('<','\\u003c'))
 
 def main():
     p=argparse.ArgumentParser();p.add_argument('--check',action='store_true');a=p.parse_args()
