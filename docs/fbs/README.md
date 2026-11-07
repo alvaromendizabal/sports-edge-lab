@@ -1,5 +1,28 @@
 ## V038 reconstructed development outputs
 
+
+## V039 · all three seasons in the game center
+
+The [existing FBS dashboard](complete.html) now exposes the same season inventory for game search, model views, details and CSV exports. Select 2024, 2025, 2026 or all three seasons. The default remains the complete identified 2026 schedule, with previous/current Pacific-week views. Provider coverage never removes a game.
+
+| Season | Identified fixtures | Observed finals | Reconstructed games | Explicit gaps |
+|---|---:|---:|---:|---|
+| 2024 | 920 | 919 | 679 | 240 early fixtures lack admitted prior outcomes; one exact kickoff unresolved |
+| 2025 | 934 | 934 | 934 | None in this retained identified cohort |
+| 2026 | 888 | 629 | 790 | 98 exact kickoffs unresolved; all 63 current-week games have reconstructed values |
+| **Total** | **2,742** | **2,482** | **2,403** | **240 prior-history gaps + 99 exact-kickoff gaps** |
+
+[Download the sanitized three-season report](three-season.json). Winner probabilities, signed home margins, total centers and saved 80%/95% residual intervals are projected from authenticated original V038 outputs. Each detail panel keeps the model computation time, reconstructed cutoff and source capture separate. The fixed equal blend remains the preset default; it has no saved interval, and the interface does not invent one. Interval support and negative distribution findings remain visible. Numeric display is rounded; no headline metric is recalculated from display values.
+
+The 99 unresolved kickoffs have `kickoff: null` and `kickoff_exact: false`; the original source placeholder is retained separately as `reported_kickoff`. Native weeks, two kickoff-revision quarantines, the Army–Navy week conflict and ten unbound championship slots keep their earlier meaning. The 2024 Robert Morris–Utah State placeholder is not presented as an authenticated 04:00 kickoff.
+
+A twelve-row season/provider matrix makes projected and missing winner, margin and total references visible for DraftKings, Kalshi, Polymarket US and Polymarket Global separately. Quote/interval eligibility at T−60 is only a clock check. Historical possession, source entitlement, exact model-cutoff matching, fees, depth and liquidity require their own evidence. The 2024/2025 provider matrices are not imported into this public projection; their absence is not evidence that no product existed. Cover probabilities remain absent without a separately authenticated exact-line cohort.
+
+This is **new reporting work that reuses the completed V038 scientific study**: 2,497 unique base fits, 681 calibrations, 1,232 compatible state reuses, 33,642 target outputs, and zero duplicate completed fit identities. V039's explorer itself performs zero fits and makes zero provider requests. Historical availability and genuine pregame issuance remain unproved; no automatic promotion or current-season selection follows.
+
+The generic projector `examples/fbs_contracts/build_three_season_review.py` authenticates the original prediction, result, input and fixture-source bytes before projecting permitted fields. It verifies exact official ID, ordered teams and kickoff for every admitted prediction; rejects duplicate targets, non-finite outputs, malformed intervals and unadmitted cover values; and excludes private feature arrays, model-state IDs and cloud paths. The earlier 2026 report and all original metrics remain unchanged.
+
+
 The all-game view defaults to the preregistered fixed equal blend. It now includes 790 exact-kickoff 2026 games, including all 63 current-week games, with winner probability, winner, home margin and total points. All 888 identified games remain visible; 98 fixtures lack exact kickoff admission. The original 622-game replay remains separately selectable.
 
 [Development forecast data](development-2026.json) is a whitelist projection of the completed local study, computed 2026-11-07T01:51:51.403891Z against the schedule observed 2026-11-06T20:28:52Z. The full-season resume added 214 base fits and 58 calibrations and reused 358 hash-verified states. Its 11,060 target predictions cover logistic, linear, ridge, Extra Trees, histogram gradient boosting and fixed equal blends. It used zero provider and S3 requests. XGBoost, LightGBM, CatBoost, PyTorch and TensorFlow dependencies were unavailable in this execution; adapters do not count as completed fits.
