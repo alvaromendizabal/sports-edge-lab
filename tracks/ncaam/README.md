@@ -2,9 +2,11 @@
 
 ## B047R1 season workspace — current review
 
-### B047R1 cloud-archive status
+### Physical B047R1 return authenticated — November 7, 2026 UTC
 
-An independently verified B047R1 cloud archive records **FAILED_PARTIAL_WORK_PRESERVED** at a pre-stage predecessor guard: **0/16 scientific stages**, **zero new target/scalar/empirical fits or committed contract objects**, and **zero reuses**. The owner fixtures recorded **1,368 passed / 1 skipped / 0 failures**; the prepared **1,369/1,369** result remains dated implementation evidence. The worker summary records **52.8182 seconds**, separately from shell duration. Cloud archive and embedded-source member, CRC and manifest closure passed. The physical uploaded outer ZIP remains unread, and literal worker-terminal and observed shell-exit closure remain unverified. This cloud audit does not complete attachment or terminal authentication. Earlier preparation statements below remain dated source versions.
+Independent inspection of the uploaded return now verifies **4 outer members, 105 nested owner-return members and 416 embedded-source members**: safe casefold-unique explicit regular-file names, every CRC and exact active-manifest closure. The **12,088,538-byte** physical outer has SHA-256 `39f09317dbecae94440100922743fc1f380d5ee8b1bd9a533eab6d5b94ca1cd3`. Its nested return exactly matches the previously verified cloud bytes. The physical-attachment comparison is complete.
+
+B047R1 was owner-executed and recorded **FAILED_PARTIAL_WORK_PRESERVED** before scientific stage entry: **0/16 stages completed**, **zero newly committed target/scalar/empirical fits or contract objects**, and **zero reuses**. All 16 stages are unreached. The owner fixtures recorded **1,368 passed / 1 skipped / 0 failures / 0 errors**, separately from the earlier prepared **1,369/1,369** result. The retained durable-return record agrees with the enclosed bytes; separate literal **worker-terminal and observed shell-exit receipts remain unobserved**. Physical authentication supplies no new forecast, provider coverage, model improvement or complete-season certification.
 
 The NCAA workspace now starts with the complete **supplied source-game inventory**, using the NFL dashboard's season-to-game navigation pattern. The [private local viewer](https://alvaro-ncaa-research-review.alv-mendizabal.chatgpt.site/private-report/index.html) exposes winner, home win probability, projected home/away scores, point margin, total and line-conditioned cover/push/loss in one table. Model/version and evidence clocks stay attached. A fixed display order is used when all models are selected; it does not rank on current outcomes.
 
@@ -34,7 +36,7 @@ The latest men’s reconstructed T−60 Polymarket international cohort contains
 
 ### Model and feature research
 
-Requested families have explicit implementation, dependency and evidence states: sklearn logistic regression; linear and ridge regression; Extra Trees classifiers and regressors; histogram gradient boosting; XGBoost, LightGBM and CatBoost classifiers/regressors; PyTorch and TensorFlow classification/regression; fixed ensembles/blends; chronological calibration and residual-distribution candidates. Implemented code, installed dependencies, an admitted job, a committed fit, an evaluated model and a promoted champion are separate states. The prepared B047R1 registry contains **10 base estimator families and 26 target heads**; fixed ensembles, blends and calibration are separate candidates. B047 and B047R1 owner execution remain pending. Local implementation tests do not establish a new committed fit or improved NCAA result.
+Requested families have explicit implementation, dependency and evidence states: sklearn logistic regression; linear and ridge regression; Extra Trees classifiers and regressors; histogram gradient boosting; XGBoost, LightGBM and CatBoost classifiers/regressors; PyTorch and TensorFlow classification/regression; fixed ensembles/blends; chronological calibration and residual-distribution candidates. Implemented code, installed dependencies, an admitted job, a committed fit, an evaluated model and a promoted champion are separate states. The prepared B047R1 registry contains **10 base estimator families and 26 target heads**; fixed ensembles, blends and calibration are separate candidates. B047 remains a dated prepared source version. B047R1 was owner-executed and failed before scientific stage entry, with zero newly committed scientific results. Local implementation tests do not establish a new committed fit or improved NCAA result.
 
 New frontier outputs keep historical monthly development, per-game rolling reconstruction and latest available previews separate. Existing weekly streams retain their original labels. Earlier-completed game histories, home/away windows, EWM/shrinkage, basketball form, availability versions and genuine in-play paths require original availability before each target cutoff. Current 2026–27 outcomes cannot select families, weights, blends, calibrators or promotions. The two historical seasons remain development-exposed.
 
@@ -51,6 +53,16 @@ No imported report is uploaded or persisted by the page. Public pages contain on
 ### Dated evidence below
 
 The following sections preserve earlier research scope and implementation history. Their release labels and clocks remain authoritative; later recovery does not rewrite earlier fit, issue or coverage totals. The older 60,906-row/two-file dashboard assertion remains `UNRESOLVED_OLDER_DASHBOARD_ASSERTION`.
+
+#### Preserved cloud-only audit — November 7, 2026 UTC, before physical inspection
+
+The following unchanged audit paragraph records the earlier evidence boundary; the physical comparison above supersedes its pending attachment status.
+
+An independently verified B047R1 cloud archive records **FAILED_PARTIAL_WORK_PRESERVED** at a pre-stage predecessor guard: **0/16 scientific stages**, **zero new target/scalar/empirical fits or committed contract objects**, and **zero reuses**. The owner fixtures recorded **1,368 passed / 1 skipped / 0 failures**; the prepared **1,369/1,369** result remains dated implementation evidence. The worker summary records **52.8182 seconds**, separately from shell duration. Cloud archive and embedded-source member, CRC and manifest closure passed. The physical uploaded outer ZIP remains unread, and literal worker-terminal and observed shell-exit closure remain unverified. This cloud audit does not complete attachment or terminal authentication. Earlier preparation statements below remain dated source versions.
+
+#### Preserved preparation status — November 7, 2026 UTC, before the owner return
+
+At that earlier prepared handoff, the status was: “B047 and B047R1 owner execution remain pending.” The later B047R1 failure above supplies the observed execution outcome.
 
 
 [Project](../../README.md) · [Open interactive dashboard](https://alvaro-ncaa-research-review.alv-mendizabal.chatgpt.site/tracks/ncaam/index.html) · [Dashboard source](index.html) · [Methodology and runnable example](../../examples/ncaa_review/README.md) · [Separate women's track](../ncaaw/README.md)
