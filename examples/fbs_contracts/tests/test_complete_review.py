@@ -59,4 +59,31 @@ class CompleteReviewTests(unittest.TestCase):
         self.assertEqual(D['replay_headline']['correct'],465)
         self.assertEqual(D['replay_headline']['log_loss'],0.5133276378012555)
 
+class DevelopmentReviewTests(unittest.TestCase):
+    @classmethod
+    def setUpClass(cls):
+        cls.r=json.loads((ROOT/'docs/fbs/development-2026.json').read_text())
+    def test_every_known_kickoff_and_current_week_has_three_targets(self):
+        r=self.r;ids={x['id'] for x in r['rows']}
+        self.assertEqual(len(ids),790);self.assertEqual(len(r['unresolved']),98)
+        self.assertEqual(ids|{x['id'] for x in r['unresolved']},set(BY_ID))
+        self.assertEqual(sum(BY_ID[x]['period']=='current' for x in ids),63)
+        for row in r['rows']:
+            self.assertEqual(row['kickoff'],BY_ID[row['id']]['kickoff'])
+            self.assertLess(row['cutoff'],row['kickoff'])
+            self.assertEqual(set(row['models']['fixed_equal_blend']),{'winner','margin','total'})
+            self.assertTrue(0<=row['models']['fixed_equal_blend']['winner']['prediction']<=1)
+    def test_reconstruction_is_separate_and_sources_are_pinned(self):
+        r=self.r
+        self.assertFalse(r['forecast_issued']);self.assertFalse(r['historical_availability_proved']);self.assertFalse(r['promotion_allowed'])
+        self.assertEqual(r['default_family'],'fixed_equal_blend')
+        self.assertEqual(r['sources'][0]['sha256'],'e7355603e26518de437456f30f7011573f2847f24fe4aa8234628caee886dcb2')
+        self.assertEqual(r['sources'][0]['bytes'],2039312)
+        self.assertEqual(r['schedule_observed_at'],'2026-11-06T20:28:52Z')
+        self.assertEqual(r['computed_at'],'2026-11-07T01:51:51.403891Z')
+        self.assertEqual({x['games'] for x in r['metrics']['2026']},{629})
+        self.assertEqual({x['games'] for x in r['metrics']['current_week']},{7})
+        for forbidden in ['s3://','api_key','state_file','access_token','raw_bid']:
+            self.assertNotIn(forbidden,json.dumps(r))
+
 if __name__=='__main__':unittest.main()

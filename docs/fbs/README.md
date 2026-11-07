@@ -1,3 +1,13 @@
+## V038 reconstructed development outputs
+
+The all-game view defaults to the preregistered fixed equal blend. It now includes 790 exact-kickoff 2026 games, including all 63 current-week games, with winner probability, winner, home margin and total points. All 888 identified games remain visible; 98 fixtures lack exact kickoff admission. The original 622-game replay remains separately selectable.
+
+[Development forecast data](development-2026.json) is a whitelist projection of the completed local study, computed 2026-11-07T01:51:51.403891Z against the schedule observed 2026-11-06T20:28:52Z. The full-season resume added 214 base fits and 58 calibrations and reused 358 hash-verified states. Its 11,060 target predictions cover logistic, linear, ridge, Extra Trees, histogram gradient boosting and fixed equal blends. It used zero provider and S3 requests. XGBoost, LightGBM, CatBoost, PyTorch and TensorFlow dependencies were unavailable in this execution; adapters do not count as completed fits.
+
+These are **RETROSPECTIVE_DEVELOPMENT_TIMING_UNCERTIFIED** results using 145 outcome-history features and retrospective event-time proxies. Historical availability, genuine pregame issuance and qualified improvement remain unproved. No current-season score-selected promotion occurred. The dashboard presents separate 2024 and 2025 bounded evaluated subsets, the 629 observed 2026 outcomes, and the small seven-outcome current-week cohort. No cover probability is manufactured without an authenticated comparable line cohort.
+
+The public build script validates exact official ID, ordered teams, kickoff, input cutoff, source bytes and hashes before projecting. Each source artifact is pinned in the development download. The earlier retained scorecards and provider comparisons remain separate.
+
 # NCAA FBS: an independent research branch
 
 ## November 7 · V038 complete season review
