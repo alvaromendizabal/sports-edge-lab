@@ -502,7 +502,7 @@ class EvidenceTests(unittest.TestCase):
     def test_generation_is_exact_and_embedded_json_is_unchanged(self):
         for path, output in build_dashboard.outputs().items():
             self.assertEqual(path.read_text(), output)
-            self.assertNotRegex(output, r'__(?:TITLE|EVIDENCE|PROGRESS_DEMO|PREFLIGHT_DEMO|HANDOFF_DEMO|SPREAD_ATS_DEMO|B047R1_PHYSICAL_STATUS|LEAGUE|SIBLING|SIBLING_LABEL)__')
+            self.assertNotRegex(output, r'__(?:TITLE|EVIDENCE|PROGRESS_DEMO|PREFLIGHT_DEMO|HANDOFF_DEMO|SPREAD_ATS_DEMO|B048_OWNER_STATUS|B047R1_PHYSICAL_STATUS|LEAGUE|SIBLING|SIBLING_LABEL)__')
             if path.parent.name in self.exports:
                 self.assertIn('NCAA evidence review · 06 November 2026 PST', output)
                 self.assertIn('Dated B046 run stopped during injury research.', output)
