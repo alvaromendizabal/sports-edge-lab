@@ -1,12 +1,50 @@
 # NCAA FBS · every fixture, every recorded model target
 
-[**Open the FBS season and model lab →**](https://sports-edge-lab-fbs.alv-mendizabal.chatgpt.site) · [Current page source](complete.html) · [Three-season game data](three-season.json) · [Full-precision V039 comparison](optional-study.json) · [New CatBoost comparison](catboost-study.json)
+[**Open the FBS season and model lab →**](https://sports-edge-lab-fbs.alv-mendizabal.chatgpt.site) · [Current page source](complete.html) · [Three-season game data](three-season.json) · [Full-precision V039 comparison](optional-study.json) · [CatBoost comparison](catboost-study.json) · [Owner neural comparison](owner-neural-study.json)
 
-## Current review · V040
+## Current review · V041
+
+The [season and model lab](https://sports-edge-lab-fbs.alv-mendizabal.chatgpt.site) keeps every identified fixture visible and now distinguishes **complete family output, partial output and no saved output**. A saved margin never conceals a missing winner forecast. The default remains the original V038 fixed equal blend.
+
+- **Find a missing target directly.** Choose winner/probability, margin, total or qualified cover, then select available or missing. The retained CatBoost view exposes its three September winner gaps alongside its 98 unresolved-kickoff games: 101 missing winner outputs, while the three affected point forecasts remain inspectable.
+- **Reconcile every denominator.** The game-center summary accounts for all fixtures in the chosen season, week, search and result filters before applying a coverage filter. Complete, partial and absent groups are disjoint. Winner-only logistic and points-only linear/ridge families use their declared target scope.
+- **Keep and reopen a view.** Current-week, previous-week and all-season links open directly. The view link preserves season, period, model, target, coverage, provider, result, native week and team search. Clear game filters retains the selected season, period, model and provider.
+- **Export the reason as well as the number.** The filtered CSV includes selected target, family completeness, target availability and missing reason. Missing forecasts stay empty; neither errors nor probabilities are replaced with zero.
+- **Reach the games sooner.** Source downloads and detailed study execution notes are grouped in expandable sections. All original evidence and model comparisons remain available.
+
+These interface changes do not create forecasts, revise source clocks, expand provider coverage or promote a model. Six new browser-independent regression cases cover partial targets, unsupported family targets, invalid values, independent cover qualification, disjoint fixture accounting and the actual three-game CatBoost winner gap. Desktop/mobile browser checks exercise the new filters and direct links.
+
+### Original owner neural results, authenticated in V041
+
+The separate owner run computed **21,627 PyTorch, TensorFlow and neural fixed-blend outputs across 2,403 games**, from **1,362 base fits and 454 calibrations**. The original output clocks span **2026-11-07 07:36:18.311218–08:23:37.658850 UTC**; reconciliation was prepared at **21:26:09.881767 UTC**. V041 reporting performs **zero new fits, zero predictions and zero provider requests**. The default remains V038. Each neural selector covers 679 / 934 / 790 games in 2024 / 2025 / 2026, including all 56 previous-week and 63 current-week games. The 240 early-history gaps and 99 unresolved kickoffs remain visible.
+
+The [owner neural report](owner-neural-study.json) preserves original full-precision aggregate metrics and rounded per-game output with original clocks. Its exact target cohorts include the earlier V038/V039 and partial CatBoost baselines. The 2026 CatBoost winner cohort has 626 outcomes, versus 629 for the neural families; the dashboard rejects a metric difference across those unequal cohorts. Point-target cohorts still match.
+
+| Season | Family | Observed games | Accuracy | Log loss | Brier | Margin MAE | Total MAE |
+|---|---|---:|---:|---:|---:|---:|---:|
+| 2024 | Retained V038 fixed blend | 678 | 0.6504 | 0.623803 | 0.217158 | 22.1712 | 20.3165 |
+| 2024 | PyTorch | 678 | 0.6401 | 0.631506 | 0.220077 | 16.3664 | 17.3551 |
+| 2024 | TensorFlow | 678 | 0.6313 | 0.644995 | 0.226552 | 21.3986 | 16.8466 |
+| 2024 | Separate neural fixed blend | 678 | 0.6431 | 0.632898 | 0.221124 | 17.4554 | 16.3489 |
+| 2025 | Retained V038 fixed blend | 934 | 0.6991 | 0.547181 | 0.185850 | 14.0030 | 13.4660 |
+| 2025 | PyTorch | 934 | 0.7002 | 0.559124 | 0.190985 | 14.5842 | 13.7302 |
+| 2025 | TensorFlow | 934 | 0.6638 | 0.610880 | 0.210876 | 15.5013 | 13.7678 |
+| 2025 | Separate neural fixed blend | 934 | 0.6949 | 0.573820 | 0.196309 | 14.1809 | 13.5479 |
+| 2026 | Retained V038 fixed blend | 629 | 0.7154 | 0.532053 | 0.180475 | 14.3225 | 12.9870 |
+| 2026 | PyTorch | 629 | 0.7154 | 0.530441 | 0.179224 | 14.4022 | 13.2093 |
+| 2026 | TensorFlow | 629 | 0.6852 | 0.585056 | 0.200028 | 16.5273 | 13.7074 |
+| 2026 | Separate neural fixed blend | 629 | 0.7075 | 0.544899 | 0.184420 | 15.0691 | 13.2829 |
+
+The findings are mixed. On 2026 outcomes, PyTorch has slightly lower log loss and Brier than the retained default, with the same winner accuracy and higher margin/total MAE. TensorFlow and the neural blend have higher 2026 probability losses and point MAE. The 2024 point comparisons improve while probability losses worsen. Seven current-week observed outcomes are too few to establish improvement. **No promotion or current-season selection occurs.**
+
+Completed owner fits are preserved and are not rerun by this reporting work. Reconstructed outcome-availability proxies still do not establish historical source possession or pregame issuance. No exact-line cover forecast is created.
+
+### Retained V040 evidence and model coverage
+
 
 The existing dashboard accounts for **2,742 identified fixtures** across 2024, 2025 and 2026. **2,403 games have saved development projections**; 240 early-2024 fixtures lack admitted prior history and 99 exact kickoffs remain unresolved. All **790 known-kickoff 2026 games**, including all **63 current-week games**, have winner/probability, margin and total outputs in the retained fixed blend. These are dated reconstructed results; this publication does not refresh schedule, results or market quotes, and it does not authenticate historical pregame issuance.
 
-### What is easier to inspect in V040
+### Retained V040 inspection capabilities
 
 - **Every saved family for one game:** open a matchup to compare the original replay and all existing V038/V039 family outputs side by side, with winner probability, home margin, total, saved intervals and observed errors. Export that comparison as CSV. The default remains the original V038 fixed equal blend.
 - **Derived score centers:** the comparison shows away/home centers from `(total − margin) / 2` and `(total + margin) / 2`. These may be fractional; negative unconstrained values remain visible. They are arithmetic from displayed point centers, not a new fitted target or a discrete predicted final score. Display errors never rescore headline metrics.
@@ -30,8 +68,8 @@ V038 retains **2,497 base fits + 681 calibrations and 33,642 outputs**. V039 add
 | scikit-learn Extra Trees and histogram gradient boosting | Classifiers executed | Regressors executed | Original V038 chronological development |
 | XGBoost and LightGBM | Classifiers executed | Regressors executed | Separate V039 study; original values retained |
 | CatBoost | Separate V040 classifier | Separate V040 regressors | Counts, final closure and exact metrics in the CatBoost section |
-| PyTorch and TensorFlow | No completed new study | No completed new study | Dependency-backed execution not admitted; adapters do not count as fits |
-| Fixed blends and calibration | Separate V038/V039 presets and held-out calibration | Separate fixed point blends; saved residual intervals on individual regressors | No new blend or default selection from current-season scores |
+| PyTorch and TensorFlow | Original owner classifiers | Original owner regressors | Separately authenticated owner reconstruction; study counts and exact cohorts below |
+| Fixed blends and calibration | Separate V038, V039 and owner neural presets; held-out calibration | Separate fixed point blends; saved residual intervals on individual regressors | No blend or default selection from current-season scores |
 
 All families retain **zero qualified exact-line cover probabilities**. A point interval is not a cover distribution. Original retained ensembles, pools and calibrators remain in their dated model registry with their own cohorts; they are not recounted as new fits.
 
@@ -65,7 +103,7 @@ The [separate CatBoost data and full-precision comparison](catboost-study.json) 
 | 2025 | 934 | 934 | 934 | 934 |
 | 2026 | 787 | 790 | 790 | 790 |
 
-The comparison was prepared at **2026-11-07T06:52:33.634501Z**. These are timing-uncertified development reconstructions, not authenticated pregame issues. The seven current-week outcomes cannot establish improvement or select parameters. No champion promotion, qualified cover probability or historical source-availability claim follows. PyTorch and TensorFlow have no completed new study in this release; a registered adapter is not a fit.
+The comparison was prepared at **2026-11-07T06:52:33.634501Z**. These are timing-uncertified development reconstructions, not authenticated pregame issues. The seven current-week outcomes cannot establish improvement or select parameters. No champion promotion, qualified cover probability or historical source-availability claim follows. This dated local CatBoost report preceded the separately authenticated owner PyTorch/TensorFlow execution described in the current V041 review. Its original dependency status remains in its immutable source report.
 
 Memory-reserve deferrals, an unobserved worker exit and the saved work from each attempt are preserved separately. An optimizer intent without its completed state remains pending. The bounded resume reused completed identities rather than repeating or silently retrying them. These model runs are separate from provider collection and do not qualify full-workload acquisition speed. No dollar cost is assigned without an attributable workspace rate.
 

@@ -47,8 +47,8 @@
   if (typeof module !== 'undefined' && module.exports) module.exports = api;
   if (typeof window === 'undefined') return;
   window.FBSDiagnostics = api;
-  const G = window.FBSCompleteReview, R = window.FBS_DEVELOPMENT_STUDY, O = window.FBS_OPTIONAL_STUDY, C = window.FBS_CATBOOST_STUDY;
-  if (!G || !R || !O || !C) return;
+  const G = window.FBSCompleteReview, R = window.FBS_DEVELOPMENT_STUDY, O = window.FBS_OPTIONAL_STUDY, C = window.FBS_CATBOOST_STUDY, N = window.FBS_OWNER_NEURAL_STUDY;
+  if (!G || !R || !O || !C || !N) return;
   const $ = id => document.getElementById(id);
   const esc = value => String(value ?? '').replace(/[&<>"']/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
   const number = (value, digits = 2) => finite(value) ? value.toFixed(digits) : 'Not recorded';
@@ -58,7 +58,7 @@
   const option = (value, label) => `<option value="${esc(value)}">${esc(label)}</option>`;
   const small = value => `<span class="cell-sub">${esc(value)}</span>`;
   let openGameId = null;
-  const metricColumns = ['study','evaluation_cohort','family','display_name','target','games','exact_game_ids_sha256',
+  const metricColumns = ['study','evaluation_cohort','family','display_name','target','games','exact_game_ids_sha256','cohort_basis','matches_complete_neural_scored_cohort',
     'accuracy','correct_winners','log_loss','brier','ece_10_equal_width','roc_auc','mae','rmse','bias','empirical_crps',
     'interval80_coverage','interval95_coverage','interval80_mean_width','interval95_mean_width','calibration_bins',
     'cover_eligible_games','cover_evaluation_nonpush_games','cover_metric_status','comparison_baseline','primary_metric',
@@ -68,7 +68,7 @@
     link.href = url; link.download = name; link.click(); setTimeout(() => URL.revokeObjectURL(url), 1000);
   }
   function rows() {
-    return ((({v040:C,v039:O,v038:R}[$('development-study').value])).metrics[$('development-cohort').value] || [])
+    return ((({v041:N,v040:C,v039:O,v038:R}[$('development-study').value])).metrics[$('development-cohort').value] || [])
       .filter(row => row.target === $('development-target').value);
   }
   function renderTargetCoverage() {
@@ -128,13 +128,13 @@
     $('delta-metric-name').textContent = key === 'log_loss' ? 'Log loss ↓' : 'MAE ↓';
     $('delta-note').textContent = baseline ? `Baseline: ${familyLabel(baseline)}. Negative differences mean lower ${key === 'log_loss' ? 'log loss' : 'MAE'}, with matching target, game count and exact game-ID hash required. Cohort ${baseline.exact_game_ids_sha256}. These stored reconstruction metrics cannot establish pregame issuance or select a champion.` : 'There is no valid baseline for this study, target and cohort. Unavailable scores are not zero.';
     $('export-metrics').disabled = list.length === 0;
-    const winnerRows = ((({v040:C,v039:O,v038:R}[$('development-study').value])).metrics[cohort] || []).filter(row => row.target === 'winner');
+    const winnerRows = ((({v041:N,v040:C,v039:O,v038:R}[$('development-study').value])).metrics[cohort] || []).filter(row => row.target === 'winner');
     selectOptions($('calibration-model'),winnerRows,preferred);
     renderCalibration(winnerRows);
   }
   $('diagnostic-baseline').addEventListener('change',renderMetricDiagnostics);
   $('calibration-model').addEventListener('change',() => {
-    const source = ({v040:C,v039:O,v038:R}[$('development-study').value]);
+    const source = ({v041:N,v040:C,v039:O,v038:R}[$('development-study').value]);
     renderCalibration((source.metrics[$('development-cohort').value] || []).filter(row => row.target === 'winner'));
   });
   ['development-study','development-cohort','development-target'].forEach(id => $(id).addEventListener('change',renderMetricDiagnostics));
