@@ -373,7 +373,7 @@ These historical seasons are **development-exposed**: they contributed to model 
 
 The log-loss selection minus the accuracy selection has pooled log-loss difference **-0.002887**, with descriptive week-block interval **[-0.005578, -0.000172]**. Its accuracy difference is **-0.3257 percentage points**, with interval **[-0.7948, +0.0640]**. The latter crosses zero.
 
-These 2,000 resamples retain whole weeks within seasons and identical games for the two selections. They are not adjusted for the prior model search or dependence across weeks. A descriptive historical difference does not establish future advantage or profitability.
+These 2,000 resamples retain whole weeks within seasons and identical games for the two selections. They are not adjusted for the prior model search or dependence across weeks. A descriptive historical difference does not establish validated future forecast performance.
 
 ### Original monitoring, rolling research and provider comparisons
 
@@ -453,7 +453,7 @@ The current observation snapshot is November 2 at 05:17 UTC. Stored odds remain 
 
 The inherited MARKET populations contain **235 games** from the season ending in 2025 and **260 games** from the season ending in 2026. In the latter cohort, one B030 calibrated variant scored Brier **0.178195**, natural-log loss **0.518839** and accuracy **71.54%**, versus MARKET's **0.178801**, **0.523213** and **70.38%**. The Brier difference was about **−0.000606**, with descriptive block interval **[−0.007442, +0.005911]**. The interval includes zero.
 
-A retained earlier gradient model scored Brier **0.175054** and log loss **0.512560** on the same 260 games. Its Brier interval includes zero. Its descriptive log-loss interval favors the retained model: the model-minus-MARKET difference is about −0.010653, with interval [−0.026373, −0.000947]. Prior exposure and unadjusted multiple comparisons prevent a confirmatory or prospective profitability claim. The newest batch is not automatically the best retained model.
+A retained earlier gradient model scored Brier **0.175054** and log loss **0.512560** on the same 260 games. Its Brier interval includes zero. Its descriptive log-loss interval favors the retained model: the model-minus-MARKET difference is about −0.010653, with interval [−0.026373, −0.000947]. Prior exposure and unadjusted multiple comparisons prevent a confirmatory claim of future forecast performance. The newest batch is not automatically the best retained model.
 
 Two other calibration variants improved Brier slightly while worsening log loss because exact endpoint probabilities encountered losses. Those negative results remain in the record; favorable Brier alone does not qualify the calibrator.
 
