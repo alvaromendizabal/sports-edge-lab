@@ -87,7 +87,7 @@ interval's exclusive upper bound; new retrieval time supplies no old availabilit
 This is source-version evidence: the journal has no owner run IDs, and the
 supplied listing does not independently prove complete remote inventory. The
 read-only audit creates no new issues and proves neither model-input closure,
-forecast accuracy nor operational return. Both genders are included in these aggregate counts.
+forecast accuracy nor reliability on future games. Both genders are included in these aggregate counts.
 
 B043 retains scientific authority for the dated panels below: **101 target /
 45 scalar / 24 empirical fits**, 84,195 pre-study target rows, 46,529 display
@@ -126,11 +126,11 @@ record is 2–1–1: 66.67% across three decisions and four settled games, with 
 unknown-clock record excluded. Those numbers describe only the invented fixture.
 Tests reject late or missing clocks, incompatible identities and settlement,
 invalid probability mass and conflicting game versions. No real NCAA spread
-probability champion, real ATS result or operational return is published by the example.
+probability champion, real ATS result or validated prospective forecast performance is published by the example.
 
 Run `python examples/ncaa_review/spread_ats.py` from the repository root. The
 interactive pages embed the exact executable output and let a reviewer change
-the quoted line. The example never sends a request or places an order.
+the quoted line. The example runs locally without external requests.
 
 ## Preserved review — November 6, 2026 UTC · B044 returned; B045 prepared at that time
 
@@ -207,8 +207,8 @@ The fixed original model and the provider are evaluated on identical games:
 
 Nine directional disagreements split seven model-right and two provider-right.
 Higher pick accuracy coexists with worse probability losses and ranking. No
-paired uncertainty interval is supplied, no executable edge is established,
-and all hypothetical operational performance panels have zero qualified settled action records and unavailable operational return.
+paired uncertainty interval is supplied and no validated predictive advantage is established.
+The separate hypothetical panels retain zero qualified settled records and establish no prospective forecast performance.
 There is no admitted women's provider cohort, Kalshi/DraftKings paired cohort
 or all-three-provider common cohort. **The earlier dated 122-game panel remains
 unchanged on the dashboard and in the aggregate export.**
@@ -222,7 +222,7 @@ Pacific); model inputs use 02:21:58 UTC. The retained inventory now has
 Polymarket; it does not establish complete in-game paths. Polymarket US remains
 separate and unacquired. Actual new source dispatches were 3,146; 2,456 exact
 historical requests were reused. Kalshi made zero actual new requests under its
-preserved 429. No paid odds call or known credit charge occurred.
+preserved 429. No paid source request or known credit charge occurred.
 
 There are still **2,818 source/candidate identities**, including 1,022 unmatched
 official candidates and 44 conflicts. Only **829 records have both numeric final
@@ -262,7 +262,7 @@ pause remains; the Odds API made zero new paid calls or credit charges.
 
 Independent recovery authenticated **132 existing B042 issue rows across
 2 games in this track**, within 339 rows / five games across both leagues.
-These are target/stream rows, not distinct games or qualified settled action records. Original
+These are target/stream rows, not distinct games or qualified outcome evaluations. Original
 issue bytes and clocks remain unchanged. Recovery created **zero new B043
 issues or fits**. Original frozen weights reconstructed 1,312 games / 3,936
 target rows across both leagues and receive no earlier issue credit. The
@@ -329,9 +329,9 @@ The latest authenticated owner completed **10 of 13 workflow stages**, then fail
 
 The recovered report contains **1,442 source/candidate records and 368 observed finals in this track** as of November 4 at 9:26 p.m. Pacific. Men and women remain separate. Both tracks together contain 2,821 candidate records, including 1,022 unmatched official candidates and eight unresolved source candidates; four rejected official records are separately visible in the source audit. Unknown identity, phase, division and exact time prevent a complete official-denominator claim.
 
-The private report retains **48,887 game/model rows** and **552,468 market observations** through bounded references. Its original five CSVs are preserved byte for byte. The repaired viewer reads normalized shared context without expanding every repeated field in memory. It separates latest observed, supported pre-tip, actually captured before tip, and T−120/T−60 references. Later recovery never changes earlier inputs, issues, selection or operational performance.
+The private report retains **48,887 game/model rows** and **552,468 market observations** through bounded references. Its original five CSVs are preserved byte for byte. The repaired viewer reads normalized shared context without expanding every repeated field in memory. It separates latest observed, supported pre-tip, actually captured before tip, and T−120/T−60 references. Later recovery never changes earlier inputs, issues, selection or recorded evaluation results.
 
-Kalshi retained 429,428 observations, but one transient transport disconnect was incorrectly treated as a persistent stop. The next executable retries that narrowly verified public-GET failure with bounded delays; real permission/rate-limit refusals and unknown paid charges remain stops. Polymarket international retained 122,959 observations; the US product remains separately unacquired. DraftKings retained 81 observations, with 166 historical snapshots pending because no runtime credential was configured. These counts describe observations, not distinct complete games or universal closing prices.
+Kalshi retained 429,428 observations, but one transient transport disconnect was incorrectly treated as a persistent stop. The next executable retries that narrowly verified public-GET failure with bounded delays; real permission/rate-limit refusals and unknown paid charges remain stops. Polymarket international retained 122,959 observations; the US product remains separately unacquired. DraftKings retained 81 observations, with 166 historical snapshots pending because no runtime credential was configured. These counts describe observations, not distinct complete games or universal final pre-tip references.
 
 Frozen-original weights produced reconstructions or previews for 1,322 games across both leagues; no new as-issued forecast was authenticated. Current outcomes did not choose the models or promote a winner. The public page contains sanitized aggregates; the full private report, active recipes, weights, raw source arrays and cloud paths remain private.
 
@@ -341,7 +341,7 @@ The actual nested return SHA-256 is `3ef40d2cf47c2306064a56b2f437acf119719564b34
 
 The authenticated **B036** owner completed all **12 workflow stages** in **35.6 minutes before finalization**. It committed **65 new native reconstruction target fits and 35 scalar calibration fits** across both leagues, including **50 target fits in this track**, and verified/reused **108 historical target fits** without counting them as new. The fixture gate passed 536 cases with one optional integration skipped; there were no fixture errors. The original frozen runtime did not qualify, the selected current monitor deferred, and none of the 8,100 native target prediction rows became an as-issued forecast.
 
-This track's fresh report contains **1,103 distinct source candidates and 327 observed finals** at **November 4, 10:32 a.m. Pacific**. Across both tracks, 788 unmatched official candidates may duplicate other records. The official denominator remains unverified. Market display retains 9,436 observations, of which 9,414 have unresolved native identity. Kalshi requests stopped on HTTP429; Polymarket international remains distinct from unacquired US data. DraftKings historical collection had no configured runtime credential and made zero new paid history calls. No market advantage or operational return is established.
+This track's fresh report contains **1,103 distinct source candidates and 327 observed finals** at **November 4, 10:32 a.m. Pacific**. Across both tracks, 788 unmatched official candidates may duplicate other records. The official denominator remains unverified. Market display retains 9,436 observations, of which 9,414 have unresolved native identity. Kalshi requests stopped on HTTP429; Polymarket international remains distinct from unacquired US data. DraftKings historical collection had no configured runtime credential and made zero new paid history calls. No general predictive advantage is established.
 
 ### Open the full private game report
 
@@ -353,7 +353,7 @@ The current nested owner-return SHA-256 is `87531cdaaf0e4df44a715e0977cdadf99d60
 
 ## Preserved historical review — November 3, 2026 Pacific
 
-The accepted historical evidence compares objective-specific models on **11,507 exact shared games** across 2024–25 and 2025–26. The latest B033 owner return completed its registered study with **54 new target fits in this track, 108 across both NCAA leagues**. It then failed during current-source refresh after selecting a summary belonging to another project. The run waited 69.1 minutes in admission, then spent 21.6 minutes on scientific work. No fresh current-game or provider corpus, current issue or order was produced.
+The accepted historical evidence compares objective-specific models on **11,507 exact shared games** across 2024–25 and 2025–26. The latest B033 owner return completed its registered study with **54 new target fits in this track, 108 across both NCAA leagues**. It then failed during current-source refresh after selecting a summary belonging to another project. The run waited 69.1 minutes in admission, then spent 21.6 minutes on scientific work. No fresh current-game or provider corpus or current issue was produced.
 
 The [interactive dashboard](index.html) now separates completed study work, the failed refresh, waiting time, fixture time and science time. It keeps the inherited game counts dated, the official denominator unverified, and the historical headline selections below unchanged. The earlier B032 zero-science failure and its later durability verification remain in the JSON history. A completed study is not a completed end-to-end current-season run.
 
@@ -379,11 +379,11 @@ These 2,000 resamples retain whole weeks within seasons and identical games for 
 
 Frozen-original parameters and actual issue timestamps remain unchanged. Rolling reconstruction must use only labels and features released strictly before each training or prediction cutoff, and must remain separate from the original model's season record. More recent training data does not guarantee better future predictions.
 
-The active provider scope is **Kalshi, Polymarket and DraftKings only**. Current-season matched comparisons, executable-price replay, operational performance and market edge remain **unavailable**, not zero. Every comparison requires the same event, ordered teams, horizon, target and settlement, plus qualified quote clocks. The dated B033 attempt stopped at current-source refresh before these current-season evaluation stages; later owner outcomes are listed above. Passing software fixtures never supplies missing game or quote evidence.
+The active provider scope is **Kalshi, Polymarket and DraftKings only**. Current-season matched comparisons, time-qualified quote replay, prospective forecast performance and general predictive advantage remain **unavailable**, not zero. Every comparison requires the same event, ordered teams, horizon, target and settlement, plus qualified quote clocks. The dated B033 attempt stopped at current-source refresh before these current-season evaluation stages; later owner outcomes are listed above. Passing software fixtures never supplies missing game or quote evidence.
 
 ### Reproducible public engineering
 
-The [credential-free example](../../examples/ncaa_review/README.md) implements exact population pairing, information-clock validation, separate winner/margin/total metrics, an invented chronological baseline, explicit-fee payoff math and complete streamed-byte verification. Negative tests cover future-label poisoning, equal boundaries, wrong settlements, incompatible identities, missing coverage, mixed evaluation tracks and the actual stream-context failure class. The generic resource-admission and progress examples also demonstrate safe capacity decisions, new-versus-reused work counters, unknown totals and measured phase estimates. Generated pages embed the exact aggregate JSON and invented progress scenarios; real browser tests exercise every objective/window state, all eight progress scenarios and desktop/mobile layouts.
+The [credential-free example](../../examples/ncaa_review/README.md) implements exact population pairing, information-clock validation, separate winner/margin/total metrics, an invented chronological baseline, synthetic outcome calculations and complete streamed-byte verification. Negative tests cover future-label poisoning, equal boundaries, wrong settlements, incompatible identities, missing coverage, mixed evaluation tracks and the actual stream-context failure class. The generic resource-admission and progress examples also demonstrate safe capacity decisions, new-versus-reused work counters, unknown totals and measured phase estimates. Generated pages embed the exact aggregate JSON and invented progress scenarios; real browser tests exercise every objective/window state, all eight progress scenarios and desktop/mobile layouts.
 
 No private model bodies, exact active features, licensed responses, individual forecast archives or execution handoffs are published. The [publication boundary](../../docs/PUBLICATION_BOUNDARY.md) remains in force. The accepted historical return digest is `df98ed0758c29deaed943355349833ab0aeaa23a79693b5efc027e835075e4da`; the latest partial return digest is `16b58cc6ed5bd4be303d41ae17816af2510f4e52a9bc011811f40e90f3003cfe`. The earlier B032 failed return digest remains `ae14d708cf85615c1c9c57a7891db85261a5b1632ecd70349730bf2dde51d9b0`.
 
@@ -416,7 +416,7 @@ This track lives in the shared [Sports Edge Lab](../../README.md) repository and
 
 - CollegeBasketballData games, plays, player/team statistics and rosters.
 - audited ESPN/NCAA and public archive interfaces.
-- The Odds API historical moneylines, spreads and totals.
+- The Odds API historical winner prices, spreads and totals.
 
 These are acquisition and research targets, not assertions of complete coverage. The source/season audit determines which observations may enter each experiment.
 
@@ -426,7 +426,7 @@ CollegeBasketballData season labels use ending years. Post-tournament ratings an
 
 ## Acceptance criteria
 
-Apply the [shared research protocol](../../docs/RESEARCH_PROTOCOL.md). Establish sport-specific identity mappings and source coverage before feature development. A market backtest requires an actual bookmaker quote and a recorded availability time. Track quality with log loss, Brier score, calibration and distribution coverage, then separately assess simulated market returns, closing-line value and uncertainty.
+Apply the [shared research protocol](../../docs/RESEARCH_PROTOCOL.md). Establish sport-specific identity mappings and source coverage before feature development. A retrospective provider comparison requires an actual source quote and a recorded availability time. Evaluate exact matched game populations using log loss, Brier score, calibration, point errors, distribution coverage and uncertainty; report source timing and missing coverage separately.
 
 Current phase: B030 historical research and exact-cohort analysis completed; provider completeness and prospective forecast qualification remain unresolved.
 
@@ -438,7 +438,7 @@ Read the [basketball study](../../docs/BASKETBALL_FOUNDATION.md), [generated lea
 
 ## Verified B030 follow-up — November 2, 2026 UTC
 
-The independently authenticated B030 owner return completed 32 earlier-origin winner fits and 40 scalar calibration fits across the two separate NCAA tracks, with 141 fresh owner fixture tests. Those counts are split evenly by sex. No current-season forecast, promotion or order was issued. Independent full-byte verification covered the final return and all 436 declared checkpoint objects.
+The independently authenticated B030 owner return completed 32 earlier-origin winner fits and 40 scalar calibration fits across the two separate NCAA tracks, with 141 fresh owner fixture tests. Those counts are split evenly by sex. No current-season forecast or promotion was issued. Independent full-byte verification covered the final return and all 436 declared checkpoint objects.
 
 The historical review combines 94 retained recipes and 22,408 represented games across the two tracks. Its 1,487,164 model/game rows repeat games across recipes; they are not 1,487,164 independent games. Full-source, exact common-population and matched MARKET comparisons retain separate denominators. The 22,426-game feature census leaves 18 cases without a supplied prediction; their exact exclusion reasons were not established by the compact evidence.
 
@@ -446,13 +446,13 @@ The historical review combines 94 retained recipes and 22,408 represented games 
 
 Winner comparisons use natural-log loss, Brier score on the original probabilities, accuracy with half credit at probability 0.5, calibration bias and fixed-bin calibration. Probability ties produce no directional pick. Margin and total predictions use MAE and RMSE in points. Every paired comparison uses the same games, targets and reference observations. Historical evaluation is development-exposed reconstruction, not a record of prospectively issued picks or untouched confirmation.
 
-MARKET is the inherited qualified bookmaker-consensus source. It is separate from each named provider and from the later stored median-consensus definition. No historical named-provider comparison or historical spread/total settlement is inferred from that consensus. Winner accuracy, probabilistic scores and executable economic value answer different questions.
+MARKET is the inherited qualified consensus of provider quotes. It is separate from each named provider and from the later stored median-consensus definition. No historical named-provider comparison or historical spread/total settlement is inferred from that consensus. Winner accuracy, probability quality and point-error quality require separate evaluations.
 
-The current observation snapshot is November 2 at 05:17 UTC. Stored odds remain observations from November 1 at about 21:07 UTC. Public scoreboard monitoring did not refresh the odds feed. Provider completeness, current model-provider disagreement wins, operational return, operational performance and closing-line value remain unestablished. CollegeBasketballData's rate-limit pause remains in force.
+The current observation snapshot is November 2 at 05:17 UTC. Stored provider quotes remain observations from November 1 at about 21:07 UTC. Public scoreboard monitoring did not refresh the quote feed. Provider completeness, current model-provider disagreement wins and validated prospective forecast performance remain unestablished. CollegeBasketballData's rate-limit pause remains in force.
 
 ### Men's matched historical result
 
-On 1,633 matched games from the season ending in 2026, the fixed B029 linear model scored Brier **0.200258**, natural-log loss **0.581203** and accuracy **68.28%**. MARKET scored **0.195786**, **0.570362** and **67.18%**, respectively. The model made more correct directional picks while assigning worse probabilities by both proper scoring rules. Its directional disagreements contained **62 model-right / MARKET-wrong** outcomes and **44 reverse** outcomes; these are reconstructed historical comparisons, not deployed decisions.
+On 1,633 matched games from the season ending in 2026, the fixed B029 linear model scored Brier **0.200258**, natural-log loss **0.581203** and accuracy **68.28%**. MARKET scored **0.195786**, **0.570362** and **67.18%**, respectively. The model made more correct directional picks while assigning worse probabilities by both proper scoring rules. Its directional disagreements contained **62 model-right / MARKET-wrong** outcomes and **44 reverse** outcomes; these are reconstructed historical comparisons, not prospectively issued forecasts.
 
 A B030 calibrated variant improved this model comparison to Brier **0.199150** and log loss **0.578396**, still worse than MARKET on those metrics. There is no inherited matched men's MARKET cohort for the season ending in 2025. Missing quotes are not zero market performance.
 
