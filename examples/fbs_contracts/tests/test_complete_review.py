@@ -83,6 +83,15 @@ class DevelopmentReviewTests(unittest.TestCase):
         self.assertEqual(r['computed_at'],'2026-11-07T01:51:51.403891Z')
         self.assertEqual({x['games'] for x in r['metrics']['2026']},{629})
         self.assertEqual({x['games'] for x in r['metrics']['current_week']},{7})
+        self.assertEqual({x['games'] for x in r['metrics']['2024']},{678})
+        self.assertEqual({x['games'] for x in r['metrics']['2025']},{934})
+        self.assertEqual(len(r['metrics']['2025']),14)
+        self.assertEqual(r['cumulative_work']['total_successful_base_plus_calibration_fits'],3178)
+        self.assertEqual(r['cumulative_work']['compatible_fit_state_reuses'],1232)
+        self.assertEqual(r['cumulative_work']['target_outputs'],33642)
+        self.assertEqual(r['cumulative_work']['games_with_predictions'],2403)
+        self.assertEqual(r['cumulative_work']['unchanged_completed_fit_ids_duplicated'],0)
+        self.assertEqual(r['season_coverage'][1]['predicted'],934)
         for forbidden in ['s3://','api_key','state_file','access_token','raw_bid']:
             self.assertNotIn(forbidden,json.dumps(r))
 

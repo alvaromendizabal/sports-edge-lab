@@ -76,7 +76,7 @@ def export(commit, output):
               'retained_model_report_at':report['retained_model_report_at'],
               'report_source_sha256':report['source_report_sha256'],
               'counts':report['counts'],'new_fits':0,'new_issues':0,'new_provider_requests':0,
-              'development_reconstruction':{'counts':development['counts'],'computed_at':development['computed_at'],'evidence_class':development['evidence_class'],'resume_work':development['resume_work'],'sources':development['sources']},
+              'development_reconstruction':{'counts':development['counts'],'computed_at':development['computed_at'],'evidence_class':development['evidence_class'],'resume_work':development['resume_work'],'cumulative_work':development['cumulative_work'],'season_coverage':development['season_coverage'],'scientific_results_generated_at':development['scientific_results_generated_at'],'sources':development['sources']},
               'publication_is_not_source_refresh':True,'public_files':files}
     (output/'published-snapshot.json').write_text(json.dumps(manifest,indent=2)+'\n')
     class Assets(HTMLParser):
