@@ -9,6 +9,7 @@ exports.run=async({browser,root,screenshots})=>{
   assert.match(await page.locator('#result-status').innerText(),/^888 games · 629 observed complete · 790 development projections$/);
   assert.equal(await page.locator('#game-rows tr').count(),30);assert.deepEqual(await page.evaluate(()=>({width:innerWidth,scrollWidth:document.documentElement.scrollWidth,overflow:[...document.querySelectorAll('body *')].filter(e=>{const r=e.getBoundingClientRect();return r.width>0&&(r.left<0||r.right>innerWidth)&&getComputedStyle(e).position!=='absolute'&&!e.closest('.table-wrap')}).slice(0,15).map(e=>({tag:e.tagName,id:e.id,cls:e.className,right:e.getBoundingClientRect().right}))})),{width,scrollWidth:width,overflow:[]});
   assert.doesNotMatch(await page.locator('body').innerText(),/\bbetting\b|\bwagers?\b|\bstakes?\b|NO BET|\bpaper\b/i);
+  await require('./coverage_browser_cases.cjs').run(page);
   for(const [period,count,complete,replays] of [['previous',56,56,56],['current',63,7,63],['all',888,629,790]]){
    await page.locator(`[data-period="${period}"]`).click();assert.equal(await page.locator('#result-status').innerText(),`${count} games · ${complete} observed complete · ${replays} development projections`);
   }

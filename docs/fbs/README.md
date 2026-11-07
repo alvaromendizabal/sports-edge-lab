@@ -2,11 +2,24 @@
 
 [**Open the FBS season and model lab →**](https://sports-edge-lab-fbs.alv-mendizabal.chatgpt.site) · [Current page source](complete.html) · [Three-season game data](three-season.json) · [Full-precision V039 comparison](optional-study.json) · [New CatBoost comparison](catboost-study.json)
 
-## Current review · V040
+## Current review · V041
+
+The [season and model lab](https://sports-edge-lab-fbs.alv-mendizabal.chatgpt.site) keeps every identified fixture visible and now distinguishes **complete family output, partial output and no saved output**. A saved margin never conceals a missing winner forecast. The default remains the original V038 fixed equal blend.
+
+- **Find a missing target directly.** Choose winner/probability, margin, total or qualified cover, then select available or missing. The retained CatBoost view exposes its three September winner gaps alongside its 98 unresolved-kickoff games: 101 missing winner outputs, while the three affected point forecasts remain inspectable.
+- **Reconcile every denominator.** The game-center summary accounts for all fixtures in the chosen season, week, search and result filters before applying a coverage filter. Complete, partial and absent groups are disjoint. Winner-only logistic and points-only linear/ridge families use their declared target scope.
+- **Keep and reopen a view.** Current-week, previous-week and all-season links open directly. The view link preserves season, period, model, target, coverage, provider, result, native week and team search. Clear game filters retains the selected season, period, model and provider.
+- **Export the reason as well as the number.** The filtered CSV includes selected target, family completeness, target availability and missing reason. Missing forecasts stay empty; neither errors nor probabilities are replaced with zero.
+- **Reach the games sooner.** Source downloads and detailed study execution notes are grouped in expandable sections. All original evidence and model comparisons remain available.
+
+These interface changes do not create forecasts, revise source clocks, expand provider coverage or promote a model. Six new browser-independent regression cases cover partial targets, unsupported family targets, invalid values, independent cover qualification, disjoint fixture accounting and the actual three-game CatBoost winner gap. Desktop/mobile browser checks exercise the new filters and direct links.
+
+### Retained V040 evidence and model coverage
+
 
 The existing dashboard accounts for **2,742 identified fixtures** across 2024, 2025 and 2026. **2,403 games have saved development projections**; 240 early-2024 fixtures lack admitted prior history and 99 exact kickoffs remain unresolved. All **790 known-kickoff 2026 games**, including all **63 current-week games**, have winner/probability, margin and total outputs in the retained fixed blend. These are dated reconstructed results; this publication does not refresh schedule, results or market quotes, and it does not authenticate historical pregame issuance.
 
-### What is easier to inspect in V040
+### Retained V040 inspection capabilities
 
 - **Every saved family for one game:** open a matchup to compare the original replay and all existing V038/V039 family outputs side by side, with winner probability, home margin, total, saved intervals and observed errors. Export that comparison as CSV. The default remains the original V038 fixed equal blend.
 - **Derived score centers:** the comparison shows away/home centers from `(total − margin) / 2` and `(total + margin) / 2`. These may be fractional; negative unconstrained values remain visible. They are arithmetic from displayed point centers, not a new fitted target or a discrete predicted final score. Display errors never rescore headline metrics.
