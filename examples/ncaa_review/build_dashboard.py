@@ -17,6 +17,13 @@ ROOT=Path(__file__).resolve().parents[2]
 HERE=Path(__file__).resolve().parent
 HOST='https://alvaro-ncaa-research-review.alv-mendizabal.chatgpt.site'
 
+B047R1_PHYSICAL_STATUS=(
+    '<strong>Current B047R1 return · authenticated November 7, 2026 UTC.</strong>'
+    '<p>B047R1 ran and recorded <b>FAILED_PARTIAL_WORK_PRESERVED</b> before scientific stage entry: <b>0/16 stages completed</b>, all 16 unreached, zero newly committed target/scalar/empirical fits or contract objects, and zero reuses. No new forecast, provider coverage, model improvement or complete-season certification is credited.</p>'
+    '<p>The uploaded physical return now passes safe casefold-unique regular-file names, all CRCs and exact active-manifest closure across 4 outer, 105 nested owner-return and 416 embedded-source members. Its nested bytes match the previously verified cloud return. Owner fixtures recorded 1,368 passed / 1 skipped / 0 failures / 0 errors, separately from the earlier prepared 1,369/1,369 result.</p>'
+    '<p>The retained durable-return record matches the enclosed bytes. Separate literal worker-terminal and observed shell-exit receipts remain unobserved. Earlier B046 results and the B047R1 prepared registry below retain their dated scope.</p>'
+)
+
 def review_date(data):
     return datetime.fromisoformat(data['published_snapshot_at']).astimezone(ZoneInfo('America/Los_Angeles')).strftime('%d %B %Y %Z')
 
@@ -143,6 +150,7 @@ def render_track(data):
         '__SIBLING_LABEL__':"women's basketball" if sibling=='ncaaw' else "men's basketball",
         '__LEAGUE__':league,'__EVIDENCE__':embedded,
         '__REVIEW_DATE__':review_date(data),
+        '__B047R1_PHYSICAL_STATUS__':B047R1_PHYSICAL_STATUS,
         '__HANDOFF_DEMO__':json.dumps(handoff_demo(),sort_keys=True,separators=(',',':'),allow_nan=False).replace('<','\\u003c'),
         '__SPREAD_ATS_DEMO__':json.dumps(spread_ats_demo(),sort_keys=True,separators=(',',':'),allow_nan=False).replace('<','\\u003c'),
         '__PREFLIGHT_DEMO__':json.dumps(preflight_scenarios(),sort_keys=True,separators=(',',':'),allow_nan=False).replace('<','\\u003c'),
@@ -167,13 +175,14 @@ def landing_status(data):
     baseline = data[0]['b045_baseline_observation']; journal = data[0]['b045_forecast_journal_observation']
     if any(d['b045_forecast_journal_observation'] != journal for d in data):raise ValueError('landing journal population disagreement')
     b=data[0]['b046_baseline_observation']; repair=data[0]['b047_source_identity_repair']
-    return (f'<strong>{release}: {a["completed_scientific_stages"]}/{a["planned_scientific_stages"]} stages completed; partial work and final return preserved.</strong>'
+    return (B047R1_PHYSICAL_STATUS
+            + f'<p><strong>Dated {release}: {a["completed_scientific_stages"]}/{a["planned_scientific_stages"]} stages completed; partial work and final return preserved.</strong></p>'
             f'<p>The authenticated physical ledger reconciles {a["new_real_target_fits"]:,} target, {a["new_calibration_fits"]:,} scalar and {a["new_empirical_residual_fits"]:,} empirical fits across {a["committed_contract_objects"]:,} contract objects. Injury research deferred at its bounded shared-memory admission gate. Full model import and new scientific superiority are not established by that accounting.</p>'
             f'<p>The B046 pre-study view contains {b["target_rows"]:,} target rows, {b["game_model_rows"]:,} game-model rows and {b["browser_display_rows"]:,} display rows, including three unresolved source candidates. Independent arithmetic reconciles {b["independent_metric_panels_checked"]:,} model/provider panels through {b["independent_scalar_checks"]:,} checks with zero mismatches. These source/version populations do not certify every official physical game.</p>'
             '<p>The private report opens with a filterable season table: winner, home probability, projected scores, margin, total, spread qualification and all three providers. Detailed games preserve every supplied model/version. Readable season/week metrics, a recovery queue and a bounded frontier/ATS viewer keep each missing capability visible with an action.</p>'
             f'<p>The exact team-identity repair restores {repair["source_game_versions"]:,} source-game bindings and {repair["comparison_contexts"]:,} explicit comparison contexts. All remain unavailable under their retained evidence gates: zero qualified spread probabilities, zero admitted ATS records and zero model fits from this repair.</p>'
             f'<p>Dated B045 baseline evidence remains {baseline["target_rows"]:,} target / {baseline["browser_display_rows"]:,} display rows and {baseline["independent_metric_panels_checked"]:,} metric panels. Its {journal["b045_verified_issue_rows"]} source-version issues and {journal["b045_journal_only_rows"]} journal-only rows remain separate. The 339 B042 immutable issues, B043 scientific results and 129/122-game comparisons are retained unchanged.</p>'
-            '<p>Historical 2024–25 and 2025–26 evaluations are development-exposed. Current 2026–27 data cannot select or promote a model. B047R1 is prepared code with ten base estimator families and 26 target heads, including Extra Trees classification and regression; it has not been executed by the owner. Exact missing clocks, official denominator gaps and unfinished injury/path comparisons remain open.</p>')
+            '<p>Historical 2024–25 and 2025–26 evaluations are development-exposed. Current 2026–27 data cannot select or promote a model. The dated B047R1 preparation registered ten base estimator families and 26 target heads, including Extra Trees classification and regression. Its later owner attempt failed before scientific stage entry, with zero newly committed scientific results. Exact missing clocks, official denominator gaps and unfinished injury/path comparisons remain open.</p>')
 
 
 def render_landing(data):
