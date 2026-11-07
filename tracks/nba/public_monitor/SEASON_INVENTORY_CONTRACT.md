@@ -26,8 +26,8 @@ also remain evidence claims that require upstream raw-body and causal-input
 authentication. No private data, model state, credentials, deployment identity,
 historical performance result, or live provider request is included.
 
-Run the synthetic contract tests from this directory:
+Run the synthetic contract tests from the repository root:
 
 ```text
-PYTHONPATH=. python3 -B -m unittest discover -s tests -v
+python3 -B -m unittest discover -s tracks/nba/public_monitor/tests -v
 ```

@@ -2,7 +2,7 @@
 import copy
 import unittest
 
-from season_inventory_contract import InventoryContractError, comparison_key, reconcile_season_inventory
+from tracks.nba.public_monitor.season_inventory_contract import InventoryContractError, comparison_key, reconcile_season_inventory
 
 
 class SeasonInventoryContractTests(unittest.TestCase):
