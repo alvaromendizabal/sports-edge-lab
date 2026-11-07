@@ -325,7 +325,7 @@ const { chromium } = require(process.env.PLAYWRIGHT_MODULE_DIR || 'playwright');
         records: [...rows,secondStream], market_observations: [{ provider: 'Kalshi', canonical_identity_verified: false, native_event_id: 'unresolved-fixture', binding_status: 'unknown_identity', quote_time: null, native_yes_probability: .37, value_kind: 'Native Yes probability' },
           { provider: 'DraftKings', league: 'ncaam', canonical_identity_verified: true, event_id: 'invented-0', target: 'win', prediction: .55 }],
         window_event_keys: { this_week: rows.slice(0, 5).map(r => [r.league, r.event_id]), season_to_date: rows.slice(0, 1).map(r => [r.league, r.event_id]), last_week: [] },
-        audit_annotations: { 'invented-0': ['Exact time disputed; no replacement inferred.'] }, metrics: [], weekly_metrics: [],
+        audit_annotations: { 'invented-0': ['Exact time disputed; no replacement inferred.'] }, metrics: [{league:'ncaam',season_end_year:2027,target:'win',recipe:'invented original',track:'original_frozen',n:1,n_forecast_rows:2,accuracy:'0.5',log_loss:'0.7',brier:'0.2',horizon_minutes:60,model_evidence_mode:'invented',hypothetical_ROI:0.08},{league:'ncaam',season_end_year:2027,target:'margin',recipe:'invented original',track:'original_frozen',n:1,n_forecast_rows:2,mae:'3.25',rmse:'4.5',bias_prediction_minus_actual:'0.25'}], weekly_metrics: [],
         injury_display_latest_fields:{injury_display_views_json:'b042_injury_display_views_json',injury_display_asof:'b042_injury_display_asof'},
         injury_research:{schema:'sel.ncaa.b041.private_injury_display.v1',asof:'2026-11-05T20:00:00Z',
           observations:Array.from({length:27},(_,i)=>({observation_id:'invented-injury-'+i,league:i<24?'ncaam':'ncaaw',
@@ -342,7 +342,7 @@ const { chromium } = require(process.env.PLAYWRIGHT_MODULE_DIR || 'playwright');
       assert.match(await page.locator('#load-status').innerText(), /Loaded 27 source game records/);
       assert.equal(await page.locator('[data-season-game]').count(),25);
       assert.equal(await page.locator('[data-game]').count(),0);
-      assert.match(await page.locator('#coverage-workspace').innerText(),/Admitted spread candidate/);
+      assert.match(await page.locator('#coverage-workspace').innerText(),/Supplied spread candidate/);
       assert.match(await page.locator('#results').innerText(),/Home probability|home/);
       await page.selectOption('#coverage-filter','cover');
       assert.equal(await page.locator('[data-season-game]').count(),25);
@@ -350,6 +350,15 @@ const { chromium } = require(process.env.PLAYWRIGHT_MODULE_DIR || 'playwright');
       await page.selectOption('#completion-filter','final');
       assert.equal(await page.locator('[data-season-game]').count(),1);
       await page.selectOption('#completion-filter','all');
+      assert.match(await page.locator('#model-metrics').innerText(),/log_loss: 0.7000/);
+      await page.selectOption('#metric-target','margin');
+      assert.match(await page.locator('#model-metrics').innerText(),/mae: 3.2500.*rmse: 4.5000/s);
+      assert.match(await page.locator('#metric-count').innerText(),/1–1 of 1/);
+      await page.selectOption('#metric-target','all');
+      await page.locator('#metric-details > summary').click();
+      assert.doesNotMatch(await page.locator('#metric-details').innerText(),/hypothetical_ROI/);
+      await page.locator('#metric-details > summary').click();
+      counts.modelMetricViews=(counts.modelMetricViews||0)+3;
       await page.locator('#show-games').click();
       counts.seasonTableViews=(counts.seasonTableViews||0)+4;
       assert.equal(await page.locator('[data-game]').count(), 25);
