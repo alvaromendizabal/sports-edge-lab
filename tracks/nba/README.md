@@ -5,6 +5,19 @@ Reproducible NBA forecasts, complete released-game inventories, chronological mo
 This NBA track belongs to the shared [Sports Edge Lab](../../README.md) repository. Its public material contains sanitized aggregate evidence and invented engineering examples. Actual game-level forecasts, feature recipes, model weights, source responses, full journals, and execution packages remain private.
 
 
+## Independent prior-data quote-age stability — November 7, 2026
+
+**New, bounded private review study; not an owner execution or new issued forecast.** Starting from the qualified B051R1 release, four newly fitted historical Ridge total-point estimators and four prior-only residual calibration records compared a recipe without numerical quote ages with an otherwise matched, source-cadence-robust age recipe. Frozen 2024–25 training and calibration were separated chronologically with a label embargo. Both arms were scored on the identical **1,212 2025–26 regular-season games at each horizon**; current-season outcomes did not select a model.
+
+| Historical prior-only common cohort | Without numeric quote age RMSE | With robust numeric age RMSE | Paired age-minus-no-age RMSE delta (95% Pacific-week interval) |
+|---|---:|---:|---:|
+| T60, 1,212 games across 25 Pacific weeks | **18.890154** | 18.898960 | **+0.008806** [+0.004234, +0.013969] |
+| T120, 1,212 games across 25 Pacific weeks | **18.983589** | 18.993232 | **+0.009643** [+0.004264, +0.015285] |
+
+The quote-age model avoided gross numerical extrapolation in this **new** design, but age **slightly worsened** performance versus its paired no-age control. The original B051 market-only Ridge total failure (RMSE 77.285900) remains a separate, **not directly matched** historical result; its cohorts and feature recipe differ. The source is secondary, retrospectively acquired sampled Polymarket international history, not original pregame possession or primary full-tick coverage. Only 104 2024–25 total-product observations qualified for each new base fit; this is a material source limitation. The 1,212-game evaluations share games across horizons, so they are not independent studies. No prospective advantage or promotion is established.
+
+Independent local readback reproduced all **4,848 saved prediction values** from frozen coefficients and training-base-only transforms, with max absolute error **2.85e−14**; verification performed zero extra fits. The new study produced **zero** NBA provider calls, paid usage, forward forecasts, cloud writes or owner-stage completions. B051R1 remains owner-pending, its three exact historical native training tables remain unavailable, and its new canonical private S3 publication still requires explicit user approval. The original release receipts, failed owner state and approved source-embedded presentation delta are unchanged; detailed line-level features, coefficients, predictions and audit bodies stay private.
+
 ## B051R1 recovery and coverage audit — November 6, 2026 Pacific
 
 **Recovery status: local input and reader checks passed; native training remains blocked.** This recovery preserves the already completed B051 research, including its 216 estimators and 216 calibration records. It adds no model fits, provider observations, or forecast issues. The B050 owner remains a failed run, and R1 has not undergone the required sixteen-stage owner execution.
