@@ -388,7 +388,7 @@ const { fixture: identityOverlayFixture } = require('./test_identity_overlay.cjs
       assert.equal(await page.locator('#completion-filter').inputValue(),'all');
       assert.match(await page.locator('#filter-scope').innerText(),/27.*27.*0/s);
       await page.locator('#report-file').setInputFiles({name:'wrong-archive.pyz',mimeType:'application/zip',buffer:Buffer.from([80,75,3,4,0,0])});
-      await page.waitForFunction(()=>document.querySelector('#load-status').textContent.includes('ZIP/PYZ'));
+      await page.waitForFunction(()=>document.querySelector('#load-status').textContent.includes('ZIP or PYZ'));
       assert.match(await page.locator('#load-status').innerText(),/Existing report remains unchanged/);
       assert.equal(await page.locator('[data-comparison-game]').count(),25);
       counts.comparisonInventoryViews=(counts.comparisonInventoryViews||0)+5;
