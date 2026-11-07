@@ -1,5 +1,71 @@
 # Sports Edge Lab · NBA
 
+Reproducible NBA forecasts, complete released-game inventories, chronological model comparisons, and source-qualified market and player-availability research.
+
+This NBA track belongs to the shared [Sports Edge Lab](../../README.md) repository. Its public material contains sanitized aggregate evidence and invented engineering examples. Actual game-level forecasts, feature recipes, model weights, source responses, full journals, and execution packages remain private.
+
+## Current research — November 6, 2026 Pacific
+
+**Model breadth is now measured.** B050 completed 156 estimator fits, 156 training-only calibration records, and nine separately journaled prior-season blend optimizations. The study used six matched training origins and richer basketball/context inputs while preserving all earlier completed fits. It trained logistic/Ridge, ordinary least squares, Extra Trees, histogram gradient boosting, XGBoost, LightGBM, CatBoost, native CPU PyTorch, and native CPU TensorFlow. Neural results that underperformed remain in the same score tables.
+
+The independent real-data qualification passed 4,450 assertions, including numerical reload and inference for every one of the 156 serialized models. No model was refitted during validation. Summed model wall time was 201.687 seconds, summed CPU time 366.682 seconds, and peak measured process memory about 1.26 GB, with a two-thread cap. A measured disk-reserve interruption retained completed outputs; continuation reused them.
+
+**This is completed review research, not a completed owner execution.** The actual B049 owner failed one of its 2,695 selftests and committed zero owner stages. Its failure, source clocks, and historical records remain unchanged. B050 repairs content validation for same-size file changes and represents the preserved parent through an explicit checksum-bound external ancestry contract. Source validation and an offline rehearsal do not establish a successful SageMaker run.
+
+### Three-season scientific scorecard
+
+[Download the complete sanitized aggregate model scores](public_monitor/evidence-b050-models.json): all 576 metric rows across the two previous seasons and current monitoring sample, with season, target, horizon, model version, cohort size, track, calibration class, uncertainty-support counts, and selection restrictions. Winner metrics include accuracy, log loss, Brier, ROC-AUC and calibration; margin/total metrics include MAE, RMSE, bias and supported distribution diagnostics. Full regular seasons and postseason are separate.
+
+The table below is the **2025–26 regular season, all 1,230 games, T60, season-frozen, calibrated retrospective reconstruction**. Historical periods were development-exposed. Preprocessing and calibration used training data; current-season outcomes did not select families, recipes or blend weights. These results are not historical forecast issues or a promoted leaderboard.
+
+| Model version | Games | Accuracy | Log loss | Brier | ROC-AUC | ECE |
+|---|---:|---:|---:|---:|---:|---:|
+| B050/catboost | 1230 | 0.6935 | 0.596426 | 0.204515 | 0.7408 | 0.0231 |
+| B050/extra_trees | 1230 | 0.6886 | 0.597888 | 0.204925 | 0.7389 | 0.0292 |
+| B050/hist_gradient_boosting | 1230 | 0.6846 | 0.599427 | 0.205862 | 0.7353 | 0.0159 |
+| B050/lightgbm | 1230 | 0.6846 | 0.598619 | 0.205457 | 0.7364 | 0.0187 |
+| B050/logistic_ridge | 1230 | 0.6837 | 0.597362 | 0.204838 | 0.7410 | 0.0387 |
+| B050/pytorch | 1230 | 0.6683 | 0.609178 | 0.210381 | 0.7241 | 0.0187 |
+| B050/reused_B049_strength15_score25 | 1230 | 0.6894 | 0.597875 | 0.205003 | 0.7407 | 0.0313 |
+| B050/tensorflow | 1230 | 0.6545 | 0.619486 | 0.215203 | 0.7095 | 0.0291 |
+| B050/xgboost | 1230 | 0.6959 | 0.595671 | 0.204108 | 0.7417 | 0.0284 |
+| B050/ensemble_fixed_uniform_calibrated | 1230 | 0.6919 | 0.597047 | 0.204765 | 0.7411 | 0.0361 |
+| B050/ensemble_prior_oof_raw_components | 1230 | 0.6862 | 0.596853 | 0.204641 | 0.7413 | 0.0329 |
+
+The fixed equal-weight total ensemble also improved descriptively on an exact legacy pairing: on the same 1,156 games, ordered teams, T60 boundaries and final labels, its RMSE was **19.193719**, versus **19.221416** for the retained B035 predictions on that same subset. MAE was **15.235265 versus 15.349016**. The MAE difference was −0.113751, with a paired 25-week 95% interval of **[−0.291676, +0.060594]**. The interval crosses zero; no promotion follows. B035's original 1,164-game RMSE of **19.2345356111** remains a different, unchanged denominator.
+
+Current-season tables are monitoring, with 123 verified regular-season finals at the study clock. More favorable current results cannot select a challenger or revise an earlier forecast. Whole-season NBA log loss near 0.45/0.46 has not been established.
+
+## Complete released inventory and forecast classes
+
+The private calendar-led dashboard retains 1,274 observed current-season entries: 1,200 assigned regular matchups, six regular-season team/time placeholders, 67 preseason entries and one Cup championship placeholder. All 1,200 assigned regular matchups have model projections; the six unresolved regular entries stay visible. The released schedule still lacks 30 assigned regular matchup slots, including six published placeholders and 24 slots without assigned pairings. Missing provider prices never remove a game.
+
+The same event universe drives private tables, downloads and comparisons. Each row separates a genuine historical issue, a retrospective reconstruction and a present early outlook. Season-frozen and weekly rolling views preserve their own origins and game-specific T60/T120 cutoffs. Future early outlooks are not final pregame forecasts. The existing five genuine T60 forecasts remain a separate immutable cohort, including the loss.
+
+The [public season inventory contract](public_monitor/SEASON_INVENTORY_CONTRACT.md) and its invented negative examples demonstrate membership, duplicate and missing-field gates without disclosing real private game rows.
+
+## Provider and injury research
+
+DraftKings, Kalshi, Polymarket US and Polymarket international remain four distinct source identities. Product discovery is independent of model eligibility. Full-game winner, signed spread and total products require exact event, side, line, horizon and settlement checks; a contract probability is not a point-margin or total-point mean. Opening, latest-before-tip, T60, T120 and closing observations retain separate clocks. Minute observations do not claim every tick.
+
+B050 fixed a concrete US discovery gap: list responses supplied primary products, while the documented event-detail request exposes the remaining groups. An actual 601-product response validated one full-game winner, 33 full-game spreads and 31 full-game totals; 536 other-period or unsupported products were retained in raw evidence and excluded from these full-game comparisons. Discovery is not itself a qualified pregame comparison.
+
+The injury recovery contains 139 verified report versions and 14,910 parsed observations. Every T60/T120 report cutoff for the 123 scored current-season finals has a recovered publication. Seventeen team-cutoff entries are explicitly omitted by the source; absence is not imputed as a healthy roster. Publication, update and later retrieval clocks are distinct. This evidence does not yet establish a trained causal injury ablation across both historical seasons.
+
+The frontier program covers opponent-adjusted basketball form, possessions and pace, rest/travel, replacement and rotation uncertainty, historical probability paths, control duration, volatility, reversals, cross-provider divergence and personnel reactions. A future game's model may use only earlier game paths and information available by its cutoff. Missing verified game-end, possession, lineup and archived publication evidence remains a concrete admission condition; additional feature names are not treated as completed causal tests.
+
+## Reproducibility and access boundary
+
+NBA keeps immutable action intent, returned output, checkpoint preparation, independent publication readback, committed completion and final acknowledgement separate. Complete operation outputs survive a later persistence failure; unresolved intent without authenticated output fails closed. Earlier failed owners and unfinished originals remain failed or unfinished. Cached file statistics alone cannot authenticate changed bytes.
+
+The public [offline engineering example](public_monitor/README.md), [research protocol](../../docs/RESEARCH_PROTOCOL.md) and [publication boundary](../../docs/PUBLICATION_BOUNDARY.md) explain the reproducibility contract. Real runtime handoffs and data remain private. Active dashboard labels describe science and source comparisons; historical financial controls are retained privately.
+
+The public browser dashboard below remains a **dated November 3 aggregate snapshot**. The new model metrics in this README and its JSON companion are newer; this change does not claim a public game-data refresh or a new owner completion.
+
+<details>
+<summary>Preserved earlier NBA snapshots and their original qualifications</summary>
+
+
 Player-minute and usage distributions, rotation-aware game forecasts, pace, spreads and totals.
 
 This track lives in the shared [Sports Edge Lab](../../README.md) repository. NBA owns its experiments, checkpoints and derived outputs. Shared raw evidence is read-only and must pass NBA-specific identity and timing checks before use.
@@ -66,3 +132,6 @@ At the preserved October 29 snapshot, B009 NBA research completed without promot
 NBA added 19 new estimator units and retained the 15-predictor regularized strength probability model: pooled historical log loss 0.607468 across 2,497 games. The new adjusted and rich arms do not beat it. The selected point head is a separate Ridge model, with total bias still +2.66 points in ending 2026. Matched T−60 MARKET cohorts expanded to nine ending-2025 and 16 ending-2026 games; no advantage is established. The 41 upcoming games have later-version early outlooks, no qualified current prices and no settled prospective scores at the snapshot.
 
 Read the [basketball study](../../docs/BASKETBALL_FOUNDATION.md), [generated league leaderboards](../../docs/BASKETBALL_RESULTS.md), [model card](../../docs/BASKETBALL_MODEL_CARD.md) and [executed notebook](../../notebooks/basketball_review.ipynb). The [public contracts](../../examples/basketball_contracts/README.md) use invented fixtures separate from actual aggregate results. B002 evidence and B001’s pre-modeling failure remain preserved. [B004 executed but stopped at its public-request ceiling](../../docs/BASKETBALL_B004_EXECUTION.md); no challenger was promoted. That dated B004 result is preserved; the authenticated B009 NBA follow-up is reported above.
+
+
+</details>
