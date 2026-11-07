@@ -1,52 +1,87 @@
 # Sports Edge Lab NFL — complete season research
 
-The active [complete-season dashboard](season_review_n053r1.html) starts from the authenticated **272-game 2026 schedule: 122 completed games and 150 future games**. It includes Chicago–Seattle and Jacksonville–Baltimore, the actual earlier issues for those games, all retained model versions, and equal event coverage for DraftKings, Kalshi and Polymarket.
+The active [NFL season dashboard](season_review_n054.html) accounts for **272 scheduled games, all 32 teams, 122 verified finals and 150 future games**. Chicago–Seattle and Jacksonville–Baltimore are visible with their actual outcomes, preserved earlier issues and new rolling reconstructions. Every game has a row for every model role and each of DraftKings, Kalshi and Polymarket; absence reasons and source horizons are explicit.
 
-The actual scientific parent remains **N052**. **N053R1 is prepared, not owner-executed.** The earlier prepared N053 handoff and all original scientific evidence remain preserved. This reporting revision creates zero native fits, zero owner issues and zero source acquisitions.
+**N053R1 is an actual partial owner run with substantial completed science. N054 is prepared, not owner-executed.** A final summary serialization error left the owner's top-level totals null. Independent state, receipt and CSV verification recovers the actual completed work without repeating any model fit. The separate source-reuse parent-admission failure remains recorded.
 
-## Read the evidence
+## Active reports and complete exports
 
-- [Complete 2026 season dashboard](season_review_n053r1.html): every game, selectable model version, explicit provider horizon, actual clocks, specific absence reasons and downloads.
-- [Complete season public data](current_season_n053r1.json.gz): all 272 schedule records, full model/game/target cells, full provider/game/target/horizon cells, source-path support and denominator bridges. The compact source decompresses losslessly; the dashboard exports complete ordinary JSON and CSV.
-- [Cohort and capability explanation](SEASON_REVIEW_N053R1.md): why the complete season differs from the frozen scientific cohorts.
-- [Coverage, chronology and publication contracts](test_season_review_n053r1.py).
+- [Complete interactive season dashboard](season_review_n054.html): every game, 59 model roles, winner probabilities, point margins, total points, oriented conditional margin probabilities, actual clocks and equal provider grids.
+- [Complete public data](current_season_n054.json.gz): the dashboard exports ordinary JSON and full CSV without row truncation. Per-game display predictions are rounded; all proper scores come from validated full-precision evidence.
+- [Cohort, chronology and capability guide](SEASON_REVIEW_N054.md).
+- [Scientific and coverage contracts](test_season_review_n054.py).
 
-## Denominators have explicit roles
+The metric explorer includes retained champion comparisons, matched provider comparisons, the earlier negative injury study and the new raw rolling study. It exposes 2024, 2025 and 2026 alongside earlier selection periods. Each record retains its target, horizon, denominator and scientific role. Future issues have no scored performance until a final outcome is admitted.
 
-| Evidence role | Count | Explanation |
+## What actually completed
+
+| Evidence | Actual count | Interpretation |
 |---|---:|---|
-| Complete 2026 schedule | 272 | All 32 teams and every retained scheduled game |
-| Completed games at the N052 snapshot | 122 | Includes CHI/SEA, JAX/BAL and one tie |
-| Future games at the same snapshot | 150 | A future game remains visible without an invented result or forecast |
-| Frozen historical point benchmark | 120 | Excludes CHI/SEA and JAX/BAL; their actual issue evidence is separate |
-| Frozen historical winner benchmark | 119 | Excludes the tie from the 120-game point cohort |
-| Retained Polymarket T1/T2 reference support | 92 | Includes the tie; this is an older fixed-horizon cohort |
-| Retained Polymarket decisive comparisons | 91 | Removes the tie from those 92 supported games |
-| Completed minute-path registration | 121 | Excludes JAX/BAL; Kalshi 121 and Polymarket 113 supported paths |
+| Historical football cutoff jobs | 7,172 | Jobs, not unique fits |
+| Current football jobs | 12 | Four arms × three targets |
+| Completed raw cutoff jobs | 7,184 | Fully reconciled with state and issue outputs |
+| Unique raw native states | 3,432 | 3,432 starts, returns and durable commits |
+| Exact-input cutoff state reuses | 3,752 | Compatible cutoffs reuse the same admitted state |
+| New reconstructed prediction rows | 15,116 | Independently replayed; no original historical issue claim |
+| Reused unchanged baseline rows | 3,773 | Preserved baseline, zero new fits |
+| Actual raw future-game issue rows | 336 | Four arms × three targets × 28 future games |
+| Actual reused-component target issue rows | 336 | Original, shadow, fresh and designation roles remain distinct |
+| Actual oriented conditional issue rows | 82 | 48 less-than and 34 greater-than orientations; not validated calibration |
+| New conditional scale states | 70 | 35 margin and 35 total states; fixed point locations |
+| Scale distribution rows | 35,252 | 140 season-variant metrics, 260 comparisons, two nested checks |
+| Market context jobs blocked by support | 318 | Zero completed market states; no predictive credit |
+| Repeated designation / injury / correction fits | 0 / 0 / 0 | Protected 144-cell, 288-cell and 150-state studies remain unchanged |
 
-The 29 older Polymarket source gaps have been recovered under exact pinned scope. A separate restored view now covers all 122 completed games, with T1 comparisons on the 119-game native cohort and a matched 119-game three-provider T2 cohort. Its older 92-source / 91-decisive record and 113-game minute paths remain unchanged.
+The 150 N052 correction states, completed N051 144-cell / 864-comparison negative result, prior 288-cell injury study and all six controls remain unchanged. N052 and N051 are completed ancestors; N050 is a distinct failed invocation; N049 remains the scientific carrier with exact N048 ancestry. The first N053 was prepared and never owner-executed.
 
-The dashboard presents each provider on the same **122-game completed denominator** and shows its available observations, numeric values and eligible scored records separately. Later source restoration keeps its actual collection time. Direction-only records do not become numeric probabilities.
+## Selection and scientific findings
 
-## Scientific findings remain intact
+The four football arms use 46 / 58 / 60 / 72 columns with a shared 72-field missingness basis. Training labels precede their cutoffs, transformations are fit on training rows only, and exact ordered inputs determine state reuse. Identical full 2022/23 cohorts include the unchanged baseline. Choices were frozen before later-season execution: **winner retains the unchanged baseline; margin selects combined football; total selects quarterback/passing**. These historical reconstructions do not establish original source publication or possession.
 
-N052 completed 150 support-versus-content correction states, 41,503 report rows, 165 season metrics, 255 paired comparisons and three nested checks. Selection used 2022–2023; no designation-content variant was chosen. The N051 144-cell / 864-comparison negative result and prior 288-cell injury-only negative result remain unchanged. Neither study was refitted.
+The scale study uses fixed point locations, train-only RMS normalization, explicit safeguards, Gaussian and standardized Student-t5 tails. **Zero of its 260 comparisons passes the full Holm family.** Continuous density is not exact integer-score probability, and negative-total mass remains a disclosed limitation. It creates zero future issues and supports no automatic promotion.
 
-Annual, weekly and event reconstructions are historical analyses with their registered earlier-data boundaries. A later reconstruction is not evidence of a real historical issue. Genuine issue timestamps, current feature assembly and reused fit components remain separate fields.
+## Denominators have separate roles
 
-## Active capabilities and frontier
+| Role | Games | Meaning |
+|---|---:|---|
+| Current retained regular-season schedule | 272 | All 32 teams; every event stays visible |
+| Completed snapshot | 122 | Includes CHI/SEA, JAX/BAL and one tie |
+| New raw current-season point reconstruction | 122 | All completed games, separate from protected benchmark |
+| New raw current-season winner reconstruction | 121 | Excludes the tie only |
+| Protected point / winner benchmark | 120 / 119 | Original exclusions and metric identities unchanged |
+| Original Polymarket fixed-horizon support / decisive metrics | 92 / 91 | Dated timed cohort, not the current source inventory |
+| Restored completed Polymarket winner references | 122 | Exact later recovery with original quote clocks retained |
+| Common three-provider T2 comparison | 119 | Exact common decisive cohort; no horizon substitution |
+| Retained T2 model comparison | 91 | Separate retained model cohort, not relabeled 119 |
+| Completed registered minute-path study | 121 | 172,373 path rows, four 1 / 3 / 5 / 10-minute windows |
+| New raw future issue coverage | 28 / 150 | Remaining future events have an explicit pending issue reason |
 
-The current view exposes versioned historical models, current original / shadow / fresh / designation issues, injury timing and missingness, three-provider references, source identity gaps and 1 / 3 / 5 / 10-minute path diagnostics. Research preparation is shown separately from completed evidence. Candidate quarterback, rushing, personnel, matchup and market-context features require explicit source-time admission and preregistered validation; listing a candidate does not claim an implemented or successful model.
+All three providers use the same scheduled-event inventory and 122-game completed denominator. Observed source coverage, numeric support, time-qualified observations and matched scoring eligibility are different quantities. Later restoration never becomes proof of earlier possession. The two historical “LA” postseason identities refer to the Rams; identity resolution and source-value restoration remain separately counted. Separately, eight current-season Rams minute paths are restored from all32 exact registered contracts:5,911 new observations with full readback, four minute-window diagnostics and35 internal gaps retained. Additive Polymarket path coverage is now113+8=121 within the original121-game registration; JAX/BAL remains outside that scope. This review-time source work creates zero fits, issues or predictive credit.
 
-## Reproduce the active presentation
+## Model-family status
+
+| Family or role | Current evidence status |
+|---|---|
+| Logistic and ridge raw football models | Actual N053R1 states verified; cutoff reuse and numerical diagnostics retained |
+| Extra Trees and retained component blends | Existing components reused with original fit clocks; no new component-fit credit |
+| Linear regression and histogram gradient boosting | New N054 breadth comparison prepared; no owner result claimed |
+| XGBoost, LightGBM and CatBoost classifiers / regressors | Earlier dated family evidence retained; new annual-forward breadth comparison prepared |
+| PyTorch and TensorFlow classifiers / regressors | Earlier evidence remains dated; actual next-run dependency, optimizer and state receipts required |
+| Ensembles, blends and probability calibration | Retained versions remain distinct; new variants require earlier-only validation |
+| Fixed market support/content arms | 318 support-blocked jobs; zero completed states or predictive credit |
+| Conditional error-scale models | 70 completed states; no Holm-significant improvement |
+
+NFL feature research covers quarterback/passing, running/personnel, injury support versus content, matchup interactions and market-path context. Historical source-time reconstruction is separate from actual knowledge at issue. Missing injury support is not interpreted as healthy; causation, personnel depth or game-state alignment is never inferred from an absent source. All admitted families receive annual forward out-of-fold evaluation for2021–2026. The full2022/23 comparison includes the unchanged baseline; only the frozen selected procedure is retrained per event in2024–2026 and for fresh future issues. Four sklearn families are locally demonstrated. XGBoost, LightGBM, CatBoost, PyTorch and TensorFlow require the existing owner runtime and concrete synthetic admission; local optional-dependency availability is not claimed. No dependency installation or owner execution occurs in this preparation. New breadth work is bounded by registered cohorts and measured resource admission; no other workload is interrupted.
+
+## Reproduce and release
 
 ```bash
-python tracks/nfl/build_season_review_n053r1.py --check
-python -m unittest discover -s tracks/nfl -p 'test_season_review_n053r1.py'
+python tracks/nfl/build_season_review_n054.py --check
+python -m unittest discover -s tracks/nfl -p 'test_season_review_n054.py'
 ```
 
-The full NFL suite and browser workflow also validate the unchanged historical views. Release requires exact PR-head checks, a permitted merge, final-main checks and publication provenance. No other sport or shared CI gate is changed by this NFL revision.
+The full NFL suite and desktop/mobile browser checks preserve earlier views as well. Public release requires exact PR-head CI, a permitted merge, final-main checks and source-matched Site publication. No other sport, shared CI gate, infrastructure or access configuration is changed.
 
 ## Dated archives
 
-The [N052 audit / N053 preparation view](review_n053.html), [earlier N051 audit](review_n052.html) and [complete historical review](review.html) retain their dated scientific objects and wording. Their cohort counts and preparation labels describe those snapshots; they are not the current season inventory. The active presentation is the complete-season page linked above.
+The [N053R1 preparation snapshot](season_review_n053r1.html), [N052 audit / N053 preparation](review_n053.html), [N051 audit](review_n052.html) and [full earlier review](review.html) retain their original scientific objects and wording. Their counts describe those dated cohorts. The active dashboard is the N054 page linked above.
