@@ -9,6 +9,7 @@ const { chromium } = require(process.env.PLAYWRIGHT_MODULE_DIR || 'playwright');
 const { fixture: identityOverlayFixture } = require('./test_identity_overlay.cjs');
 const { fixture: scheduleFixture, referenceFixture: scheduleReferenceFixture } = require('./test_schedule_viewer.cjs');
 const { compactFixture: compactScheduleFixture } = require('./test_schedule_compact.cjs');
+const { fixture: eligibilityFixture } = require('./test_eligibility_viewer.cjs');
 
 (async () => {
   const browser = await chromium.launch({ headless: true,
@@ -34,7 +35,8 @@ const { compactFixture: compactScheduleFixture } = require('./test_schedule_comp
         await page.locator('#model-table tbody tr').first().waitFor();
         const evidence = JSON.parse(await page.locator('#evidence').textContent());
         assert.equal(evidence.league, league);
-        assert.match(await page.locator('#b051-current-return').innerText(), /Current B051 return.*1\/16 stages completed.*B035_REUSE_SCIENTIFIC_IMPLEMENTATION_CHANGED:b032_resume.py/s);
+        assert.match(await page.locator('#b052-current-return').innerText(), /Current B052 return.*5\/16 stages completed.*zero stages recorded failed.*11 not entered.*B048_SUMMARY_EXCEEDS_REPORT_PART_BOUND/s);
+        assert.match(await page.locator('#b051-current-return').innerText(), /Dated B051 return.*1\/16 stages completed.*B035_REUSE_SCIENTIFIC_IMPLEMENTATION_CHANGED:b032_resume.py/s);
         assert.equal(await page.locator('#provider-table tr').count(), 3);
         assert.deepEqual(await page.locator('#provider-table tr td:first-child strong').allTextContents(), ['Kalshi', 'Polymarket', 'DraftKings']);
         const attempt = evidence.current_owner_attempt, inventory = evidence.observed_inventory;
@@ -1067,6 +1069,42 @@ const { compactFixture: compactScheduleFixture } = require('./test_schedule_comp
         assert.equal(await page.evaluate(()=>document.documentElement.scrollWidth>innerWidth),false,'schedule panel fits mobile');
         await page.locator('#clear-schedule').click();
         counts.scheduleViews=(counts.scheduleViews||0)+21;
+      }
+      {
+        // Every row here is invented; exact private owner data is never committed.
+        const eligibility=eligibilityFixture();
+        assert.match(await page.locator('#source-report-choice').innerText(),/B052_SOURCE_SNAPSHOT_DASHBOARD_DATA.json.*2,446 source game rows.*zero supplied model predictions.*58 missing event clocks/s);
+        assert.equal(await page.locator('#report').isHidden(),true,'eligibility works without a baseline');
+        await page.locator('#eligibility-file').setInputFiles({name:'invented-eligibility.json',mimeType:'application/json',buffer:eligibility.body});
+        await page.waitForFunction(()=>document.getElementById('eligibility-load-status').textContent.startsWith('Loaded 29 exact'));
+        assert.equal(await page.locator('[data-eligibility-record]').count(),25);
+        assert.match(await page.locator('#eligibility-summary').innerText(),/29 source identities = 25 passed.*2 rejected.*2 without a feature row/);
+        assert.match(await page.locator('#eligibility-source-proof').innerText(),/unrecognized owner provenance/);
+        assert.match(await page.locator('#eligibility-source-proof').innerText(),new RegExp(eligibility.pin.sha256));
+        await page.locator('#eligibility-next').click();
+        assert.equal(await page.locator('[data-eligibility-record]').count(),4);
+        assert.match(await page.locator('#eligibility-records').innerText(),/FEATURE_AVAILABILITY_KNOWN/);
+        assert.match(await page.locator('#eligibility-records').innerText(),/FEATURE_STRICTLY_BEFORE_CUTOFF/);
+        assert.match(await page.locator('#eligibility-records').innerText(),/Not supplied · null retained/);
+        await page.selectOption('#eligibility-league','ncaaw');
+        await page.selectOption('#eligibility-status','CURRENT_MODEL_GATE_REJECTED');
+        assert.equal(await page.locator('[data-eligibility-record]').count(),1);
+        assert.match(await page.locator('#eligibility-count').innerText(),/28 hidden by filters/);
+        await page.locator('#reset-eligibility-filters').click();
+        await page.selectOption('#eligibility-reason','NO_CURRENT_FEATURE_ROW');
+        assert.equal(await page.locator('[data-eligibility-record]').count(),2);
+        await page.locator('#reset-eligibility-filters').click();
+        await page.locator('#eligibility-search').fill('outside_frozen_inclusion_cohort');
+        assert.equal(await page.locator('[data-eligibility-record]').count(),2);
+        const malformed=JSON.parse(JSON.stringify(eligibility.value));malformed.rows[0].win_probability=.8;
+        await page.locator('#eligibility-file').setInputFiles({name:'rejected-eligibility.json',mimeType:'application/json',buffer:Buffer.from(JSON.stringify(malformed))});
+        await page.waitForFunction(()=>document.getElementById('eligibility-load-status').textContent.startsWith('Cannot open eligibility ledger:'));
+        assert.equal(await page.locator('[data-eligibility-record]').count(),2,'invalid replacement preserves the previous ledger');
+        assert.equal(await page.evaluate(()=>document.documentElement.scrollWidth>innerWidth),false,'eligibility panel fits mobile');
+        await page.locator('#clear-eligibility').click();
+        assert.equal(await page.locator('#eligibility-content').isHidden(),true);
+        assert.equal(await page.locator('[data-eligibility-record]').count(),0);
+        counts.eligibilityViews=(counts.eligibilityViews||0)+13;
       }
       counts.viewports++;
     }

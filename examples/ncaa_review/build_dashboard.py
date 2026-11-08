@@ -17,8 +17,18 @@ ROOT=Path(__file__).resolve().parents[2]
 HERE=Path(__file__).resolve().parent
 HOST='https://alvaro-ncaa-research-review.alv-mendizabal.chatgpt.site'
 
+B052_OWNER_STATUS=(
+    '<strong>Current B052 return · authenticated November 8, 2026 UTC.</strong>'
+    '<p><b>Source inventory, parent restoration and current feature work were preserved.</b> Owner run <code>20261108T063651Z_d7a6c2ff</code> recorded <b>FAILED_PARTIAL_WORK_PRESERVED</b>: <b>5/16 stages completed</b>, <b>zero stages recorded failed</b> and <b>11 not entered</b>. The run stopped between stages 05 and 05b while serializing its coverage summary, with <code>B048_SUMMARY_EXCEEDS_REPORT_PART_BOUND</code>. The stage ledger and run-level failure are separate evidence; no hardware or connection cause is asserted.</p>'
+    '<p>The actual owner-produced <code>B052_FULL_SEASON_SCHEDULE_COMPACT.json</code> contains all <b>23,603 retained provider-native IDs</b> in <b>4,744,902 bytes</b>, with the original B051 source-index owner, source version and clocks. The earlier 4,744,935-byte assistant projection remains dated evidence. <b>2,520 exact tip times remain null</b>; 39 ambiguous date responses and 110 rejected source records still prevent a complete-season claim. Schedule observations do not supply missing forecasts or change the older model denominators.</p>'
+    '<p>The new <a href="'+HOST+'/private-report/index.html#eligibility-review">per-game input eligibility view</a> accounts for <b>1,793 exact source identities = 1,322 input-gate passes + 445 rejected feature rows + 26 without a feature row</b>. It retains every overlapping failure reason, original input clocks and source references. Input-gate passes are not forecast issues. The old 447 per-game rejection causes remain unretained and are not inferred.</p>'
+    '<p>The owner fixture suite recorded <b>1,819 passed, 1 skipped, zero failures and zero errors</b>; this is fixture validation, not new scientific work. The typed physical ledger verifies <b>zero newly committed target, scalar, empirical or unclassified model artifacts</b> and <b>108 reused historical target fits</b>; uncommitted estimation remains unasserted. Recorded wall time is <b>748.452 seconds</b>. No new rolling forecast, cover probability, injury/path gain or model improvement is credited.</p>'
+    '<p>Authentication verifies safe unique regular names, CRCs and exact manifest closure across <b>4 outer, 201 nested-return and 501 embedded-source members</b>, active B052/runtime b052. Recorded completion and the final-return readback receipt remain separate from absent literal RETURN, worker-terminal, bootstrap-terminal, source-preflight, source-retrieval and observed shell-exit lines.</p>'
+    '<p>B046 remains the last scientific partial execution at 9/16. The older 47,130-row baseline and 2,445 display groups retain zero supplied per-game rolling winner records and zero qualified cover/push/loss groups. All 1,923 immutable issues and the 52-context priority-calibration and all-family paired-study gaps remain unchanged. Current-season outcomes cannot select or promote a model.</p>'
+)
+
 B051_OWNER_STATUS=(
-    '<strong>Current B051 return · authenticated November 8, 2026 UTC.</strong>'
+    '<strong>Dated B051 return · authenticated November 8, 2026 UTC.</strong>'
     '<p><b>Source refresh completed; model restoration stopped.</b> Owner run <code>20261108T015946Z_d34f8020</code> recorded <b>FAILED_PARTIAL_WORK_PRESERVED</b>: <b>1/16 stages completed</b>, parent restoration failed, and 14 stages were not entered. The exact error is <code>B035_REUSE_SCIENTIFIC_IMPLEMENTATION_CHANGED:b032_resume.py</code>. The preserved return identifies this compatibility guard; it does not establish a hardware or connection cause.</p>'
     '<p>The owner produced a full-season collection report accounting for <b>1,460/1,460 provider, gender and date slots</b>: 458 validated responses, 963 empty responses and 39 ambiguous responses. Its retained index has <b>23,603 provider-native IDs</b> and 110 rejected source records. These are source-specific identities, not a cross-provider count of physical games or forecasts. The original 25 MiB display export contains references and zero rows. The private <code>B052_FULL_SEASON_SCHEDULE_COMPACT.json</code> losslessly exposes all <b>23,603 retained index records</b> in <b>4,744,935 bytes</b>, below the unchanged limit. It is a review-derived projection of that owner capture, with no new owner run or forecast.</p>'
     '<p>The initialized physical ledger verifies <b>zero newly committed target, scalar, empirical or unclassified model artifacts</b>; uncommitted estimation remains unasserted. Owner fixtures passed <b>1,686 cases with 1 skipped</b>, zero failures and zero errors. The earlier local 1,687/1,687 result remains preparation evidence. No new rolling forecast, cover probability, injury/path gain or model improvement is credited.</p>'
@@ -27,7 +37,7 @@ B051_OWNER_STATUS=(
 )
 
 B050_OWNER_STATUS=(
-    '<strong>Current B050 return · authenticated November 8, 2026 UTC.</strong>'
+    '<strong>Dated B050 return · authenticated November 8, 2026 UTC.</strong>'
     '<p>The actual owner run <code>20261107T235154Z_0a962d1c</code> recorded <b>FAILED_PARTIAL_WORK_PRESERVED</b>: <b>0/16 stages completed</b>, the first source-refresh stage failed, and the other 15 stages were not entered. Its owner fixture gate passed <b>1,578 cases with 1 skipped</b>, zero failures and zero errors. The earlier local 1,579/1,579 result remains preparation evidence.</p>'
     '<p>Source acquisition and bounded observation queues were preserved before a schedule-input validation failure. The exact acquisition-report reference is <b>113,330,820 bytes</b>, exceeding the schedule reader\'s <b>48 MiB</b> bound. The recorded error is <code>B050_SCHEDULE_REFERENCE_SCHEMA_OR_BOUND</code>. The full-season collector had not initialized; this return supplies no authenticated full-season schedule export to load. The evidence identifies this input-bound failure, not a hardware or connection cause.</p>'
     '<p>The initialized physical ledger verifies <b>zero newly committed target, scalar or empirical fits and zero committed model artifacts</b>. That does not assert zero uncommitted fit attempts. No new owner forecast, rolling result, injury gain, cover probability, model improvement or complete-season claim is credited. B046 remains the last scientific partial execution at 9/16; the historical metrics below retain their original scientific source.</p>'
@@ -181,6 +191,7 @@ def render_track(data):
         '__SIBLING_LABEL__':"women's basketball" if sibling=='ncaaw' else "men's basketball",
         '__LEAGUE__':league,'__EVIDENCE__':embedded,
         '__REVIEW_DATE__':review_date(data),
+        '__B052_OWNER_STATUS__':B052_OWNER_STATUS,
         '__B051_OWNER_STATUS__':B051_OWNER_STATUS,
         '__B050_OWNER_STATUS__':B050_OWNER_STATUS,
         '__B048_OWNER_STATUS__':LATEST_OWNER_STARTUP+B048_OWNER_STATUS,
@@ -209,7 +220,7 @@ def landing_status(data):
     baseline = data[0]['b045_baseline_observation']; journal = data[0]['b045_forecast_journal_observation']
     if any(d['b045_forecast_journal_observation'] != journal for d in data):raise ValueError('landing journal population disagreement')
     b=data[0]['b046_baseline_observation']; repair=data[0]['b047_source_identity_repair']
-    return (B051_OWNER_STATUS + '<details><summary>Earlier dated owner returns</summary>' + B050_OWNER_STATUS + LATEST_OWNER_STARTUP + B048_OWNER_STATUS + B047R1_PHYSICAL_STATUS + '</details>'
+    return (B052_OWNER_STATUS + '<details><summary>Earlier dated owner returns</summary>' + B051_OWNER_STATUS + B050_OWNER_STATUS + LATEST_OWNER_STARTUP + B048_OWNER_STATUS + B047R1_PHYSICAL_STATUS + '</details>'
             + f'<p><strong>Dated {release}: {a["completed_scientific_stages"]}/{a["planned_scientific_stages"]} stages completed; partial work and final return preserved.</strong></p>'
             f'<p>The authenticated physical ledger reconciles {a["new_real_target_fits"]:,} target, {a["new_calibration_fits"]:,} scalar and {a["new_empirical_residual_fits"]:,} empirical fits across {a["committed_contract_objects"]:,} contract objects. Injury research deferred at its bounded shared-memory admission gate. Full model import and new scientific superiority are not established by that accounting.</p>'
             f'<p>The B046 pre-study view contains {b["target_rows"]:,} target rows, {b["game_model_rows"]:,} game-model rows and {b["browser_display_rows"]:,} display rows, including three unresolved source candidates. Independent arithmetic reconciles {b["independent_metric_panels_checked"]:,} model/provider panels through {b["independent_scalar_checks"]:,} checks with zero mismatches. These source/version populations do not certify every official physical game.</p>'
