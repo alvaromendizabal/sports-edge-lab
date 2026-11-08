@@ -32,12 +32,14 @@ exports.run=async page=>{
   await page.selectOption('#model-view','fixed_equal_blend');
   await page.locator('.hero-actions a').filter({hasText:'Current week'}).click();
   await page.waitForFunction(()=>document.getElementById('result-status')?.textContent.startsWith('63 games'));
-  assert.match(await page.locator('#result-status').innerText(),/^63 games · 25 observed complete/);
+  assert.match(await page.locator('#result-status').innerText(),/^63 games · 45 observed complete/);
+  await page.selectOption('#game-layout','table');
   await page.selectOption('#capture-view','original');
   await page.locator('[data-period="all"]').click();
   const invalid=new URL(await page.url());invalid.search='?season=2099&model=unregistered&target=not-a-target&period=current';
   await page.goto(invalid.href);assert.equal(await page.locator('#season-filter').inputValue(),'2026');
   assert.equal(await page.locator('#model-view').inputValue(),'fixed_equal_blend');assert.equal(await page.locator('#coverage-target').inputValue(),'any');
+  await page.selectOption('#game-layout','table');
   await page.selectOption('#capture-view','original');
   await page.selectOption('#development-study','v039');
   await page.locator('[data-period="all"]').click();

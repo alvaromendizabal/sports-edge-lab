@@ -1,9 +1,9 @@
 'use strict';
 (()=>{
- const D=window.FBS_COMPLETE_DATA,H=window.FBS_COMPLETE_HISTORY,R=window.FBS_DEVELOPMENT_STUDY,T=window.FBS_THREE_SEASONS,O=window.FBS_OPTIONAL_STUDY,C=window.FBS_CATBOOST_STUDY,N=window.FBS_OWNER_NEURAL_STUDY,X=window.FBS_CURRENT_CAPTURE,U=window.FBSCurrentCapture,A=window.FBSCoverage,$=id=>document.getElementById(id);
- if(!D||!H||!R||!T||!O||!C||!N||!X||!U||!A){$('result-status').textContent='The report could not be loaded. Use the full season JSON.';return;}
+ const D=window.FBS_COMPLETE_DATA,H=window.FBS_COMPLETE_HISTORY,R=window.FBS_DEVELOPMENT_STUDY,T=window.FBS_THREE_SEASONS,O=window.FBS_OPTIONAL_STUDY,C=window.FBS_CATBOOST_STUDY,N=window.FBS_OWNER_NEURAL_STUDY,P=window.FBS_CURRENT_CAPTURE,X=window.FBS_CURRENT_CAPTURE_V043||P,U=window.FBSCurrentCapture,A=window.FBSCoverage,B=window.FBSGameCenter,$=id=>document.getElementById(id);
+ if(!D||!H||!R||!T||!O||!C||!N||!X||!U||!A||!B){$('result-status').textContent='The report could not be loaded. Use the full season JSON.';return;}
  const current=new Map(D.rows.map(row=>{const g=Object.fromEntries(D.columns.map((key,index)=>[key,row[index]]));return[g.id,g];}));
- const originalGames=T.rows.map(row=>({...current.get(row.id),...row})),latestRows=U.indexRows(X.rows);
+ const originalGames=T.rows.map(row=>({...current.get(row.id),...row})),latestRows=U.indexRows(X.rows),priorRows=U.indexRows(P.rows);
  const games=originalGames.map(g=>U.resultView(g,latestRows.get(g.id),'latest',D.source_observed_at));
  const originalDevelopment=new Map(R.rows.map(r=>[r.id,r]));
  const optionalDevelopment=new Map(O.rows.map(r=>[r.id,r]));
@@ -40,13 +40,13 @@
  $('season-filter').addEventListener('change',()=>{state.season=$('season-filter').value;state.period='all';state.page=0;syncSeason();renderGames();});
  function filtered(ignoreCoverage=false){
   const q=$('game-search').value.trim().toLowerCase(),result=$('result-filter').value,model=$('model-filter').value,week=$('week-filter').value;
-  return selectedSeasonGames().filter(g=>(state.period==='all'||g.period===state.period)&&(!q||`${g.id} ${g.away} ${g.home}`.toLowerCase().includes(q))&&(result==='all'||result==='new'&&g.newly_observed_final||result==='complete'&&g.completed||result==='scheduled'&&!g.completed)&&(week==='all'||g.week===Number(week))&&(ignoreCoverage||A.matches(projection(g),$('model-view').value,$('coverage-target').value,model,quarantined(g))));
+  return B.orderGames(selectedSeasonGames().filter(g=>(state.period==='all'||g.period===state.period)&&(!q||`${g.id} ${g.away} ${g.home}`.toLowerCase().includes(q))&&(result==='all'||result==='new'&&g.newly_observed_final||result==='complete'&&g.completed||result==='scheduled'&&!g.completed)&&(week==='all'||g.week===Number(week))&&(ignoreCoverage||A.matches(projection(g),$('model-view').value,$('coverage-target').value,model,quarantined(g)))),$('game-sort').value);
  }
  function renderAccounting(){
   const family=$('model-view').value,target=$('coverage-target').value,counts=A.reconcile(filtered(true),projection,family,target);
   $('coverage-accounting').innerHTML=`<div><strong>${counts.games.toLocaleString()} fixtures accounted for</strong><span>Expected for this family: ${counts.expected_targets.map(k=>A.names[k]).join(' · ')}.</span></div><div class="coverage-actions" role="group" aria-label="Find incomplete forecasts"><button data-coverage="complete"><b>${counts.complete.toLocaleString()}</b> all family targets</button><button data-coverage="partial"><b>${counts.partial.toLocaleString()}</b> partial outputs</button><button data-coverage="missing"><b>${counts.missing.toLocaleString()}</b> no saved output</button></div>${target!=='any'?`<p><strong>${esc(A.names[target])}:</strong> ${counts.target_present.toLocaleString()} available · ${counts.target_missing.toLocaleString()} unavailable in this selection.</p>`:''}${counts.missing_reasons.length?`<details><summary>Why ${counts.target_missing.toLocaleString()} games have no ${target==='any'?'saved output':esc(A.names[target].toLowerCase())}</summary><ul>${counts.missing_reasons.map(r=>`<li><strong>${r.games.toLocaleString()}</strong> · ${esc(r.reason)}</li>`).join('')}</ul></details>`:''}`;
  }
- const viewFields={snapshot:'capture-view',season:'season-filter',model:'model-view',target:'coverage-target',coverage:'model-filter',provider:'provider-filter',result:'result-filter',week:'week-filter'};
+ const viewFields={view:'game-layout',order:'game-sort',snapshot:'capture-view',season:'season-filter',model:'model-view',target:'coverage-target',coverage:'model-filter',provider:'provider-filter',result:'result-filter',week:'week-filter'};
  function syncViewLink(){
   const url=new URL(location.href);url.search='';url.hash='game-heading';
   for(const [key,id] of Object.entries(viewFields))url.searchParams.set(key,$(id).value);
@@ -73,7 +73,7 @@
   $('reference-heading').innerHTML=esc(p)+'<br><small>retained reference</small>';
   const cov=t=>list.filter(g=>reference(g,p,t).present).length;
   $('provider-coverage').innerHTML=`<span><b>${esc(p)}</b> in this selection</span><span>Winner <b>${cov('winner')} / ${list.length}</b></span><span>Margin line or interval <b>${cov('margin')} / ${list.length}</b></span><span>Total line or interval <b>${cov('total')} / ${list.length}</b></span><span>Historical possession verified: <b>0</b></span>`;
-  $('game-rows').innerHTML=page.map(g=>{
+  if($('game-layout').value==='table')$('game-rows').innerHTML=page.map(g=>{
    const r=reference(g,p,'winner'),m=reference(g,p,'margin'),t=reference(g,p,'total'),v=projection(g),has=v.p!=null;
    const picked=has?Math.max(v.p,1-v.p):null;
    const actual=g.completed?`<span class="cell-value">${esc(g.away_score)} – ${esc(g.home_score)}</span>${small(g.winner+' won')}`:'<span class="chip">No observed final</span>';
@@ -85,7 +85,7 @@
   document.dispatchEvent(new Event('fbs:games-rendered'));
  }
  document.querySelectorAll('[data-period]').forEach(button=>button.addEventListener('click',()=>{state.period=button.dataset.period;state.page=0;document.querySelectorAll('[data-period]').forEach(b=>b.setAttribute('aria-pressed',String(b===button)));renderGames();}));
- ['game-search','result-filter','model-filter','model-view','provider-filter','week-filter','coverage-target'].forEach(id=>$(id).addEventListener(id==='game-search'?'input':'change',()=>{state.page=0;renderGames();}));
+ ['game-search','result-filter','model-filter','model-view','provider-filter','week-filter','coverage-target','game-sort'].forEach(id=>$(id).addEventListener(id==='game-search'?'input':'change',()=>{state.page=0;renderGames();}));
  $('prev-page').addEventListener('click',()=>{state.page--;renderGames();});$('next-page').addEventListener('click',()=>{state.page++;renderGames();});
  function modelCard(label,value,reason){return `<article><span>${esc(label)}</span><strong>${esc(value)}</strong><span>${esc(reason)}</span></article>`;}
  function openGame(id){
@@ -125,12 +125,13 @@
  const targets={winner:[['winner_accuracy','Accuracy ↑'],['winner_logloss','Log loss ↓'],['winner_brier','Brier ↓'],['winner_ece','ECE ↓'],['winner_mcc','MCC ↑'],['winner_roc_auc','ROC AUC ↑'],['winner_pr_auc','PR AUC ↑']],margin:[['margin_mae','MAE ↓'],['margin_rmse','RMSE ↓'],['margin_bias','Bias']],total:[['total_mae','MAE ↓'],['total_rmse','RMSE ↓'],['total_bias','Bias']],cover:[]};
  function renderRegistry(){const hash=$('cohort-filter').value,family=$('family-filter').value,target=$('target-filter').value,metric=target==='winner'?'winner_logloss':target+'_mae';let list=registry.filter(r=>r.cohort_sha256===hash&&(family==='all'||r.family===family));list.sort((a,b)=>(a[metric]??Infinity)-(b[metric]??Infinity)||a.model_id.localeCompare(b.model_id));state.registryPage=Math.max(0,Math.min(state.registryPage,Math.ceil(list.length/20)-1));const current=list.slice(state.registryPage*20,state.registryPage*20+20),cols=targets[target];$('registry-status').textContent=`${list.length} retained scorecards in this exact cohort. `+(target==='cover'?'Cover probability was not evaluated in this source.':'Ordered by '+(target==='winner'?'log loss':'MAE')+' within this cohort only. Unreported metrics do not receive zero values.');$('registry-head').innerHTML='<tr><th>Model identity</th><th>Family / release</th><th>Games</th>'+cols.map(([,title])=>'<th>'+title+'</th>').join('')+(target==='cover'?'<th>Cover likelihood</th>':'')+'</tr>';$('registry-rows').innerHTML=current.map(r=>`<tr><td>${esc(r.model_id)}</td><td>${esc(pretty(r.family))}${small(r.evidence_release)}</td><td>${r.games}</td>${cols.map(([k])=>'<td>'+(r[k]==null?'<span class="subtle">Not reported</span>':k==='winner_accuracy'?pct(r[k]):num(r[k],4))+'</td>').join('')}${target==='cover'?'<td>No qualified cover forecast or metric</td>':''}</tr>`).join('');$('registry-page').textContent=`${list.length?state.registryPage+1:0} / ${Math.ceil(list.length/20)}`;$('registry-prev').disabled=state.registryPage===0;$('registry-next').disabled=(state.registryPage+1)*20>=list.length;}
  ['cohort-filter','family-filter','target-filter'].forEach(id=>$(id).addEventListener('change',()=>{state.registryPage=0;renderRegistry();}));$('registry-prev').addEventListener('click',()=>{state.registryPage--;renderRegistry();});$('registry-next').addEventListener('click',()=>{state.registryPage++;renderRegistry();});
- function renderDevelopment(){updateCohortLabels();const cohort=$('development-cohort').value,target=$('development-target').value,study=$('development-study').value,newStudy=study!=='v038',list=(({v042:X,v041:N,v040:C,v039:O,v038:R}[study]).metrics[cohort]||[]).filter(m=>m.target===target),cols=target==='cover'?[]:target==='winner'?[['accuracy','Accuracy ↑'],['log_loss','Log loss ↓'],['brier','Brier ↓'],['ece_10_equal_width','ECE ↓'],['roc_auc','ROC AUC ↑']]:[['mae','MAE ↓'],['rmse','RMSE ↓'],['bias','Bias'],['empirical_crps','CRPS ↓'],['interval80_coverage','80% coverage'],['interval95_coverage','95% coverage'],['interval80_mean_width','80% width'],['interval95_mean_width','95% width']];$('development-status').textContent=`${list.length} evaluated entries · ${new Set(list.map(m=>m.games)).size>1?'different cohort sizes shown per row':(list[0]?.games??0)+' observed games'}${cohort==='current_week'?'; very small sample':''} · ${study==='v042'?'Saved original models evaluated on the latest observed results':study==='v041'?'Original owner neural outputs with exact-cohort baselines':study==='v040'?'V040 CatBoost with exact-cohort V038/V039 baselines':newStudy?'V039 with exact-cohort V038 baselines where retained':'original V038'} · timing-uncertified development only`+(list.length?'':target==='cover'?' · No authenticated exact-line cover cohort or saved cover probability.':' · No original metric exists for this study/cohort; choose V040 for complete previous-week baselines.');$('development-head').innerHTML='<tr><th>Family</th><th>Games</th>'+cols.map(([,label])=>'<th>'+label+'</th>').join('')+'<th>Exact cohort</th></tr>';$('development-rows').innerHTML=list.map(m=>`<tr><td>${esc(m.display_name||pretty(m.family))}</td><td>${m.games}</td>${cols.map(([k])=>'<td>'+(m[k]==null?'Not reported':k==='accuracy'||k==='interval80_coverage'||k==='interval95_coverage'?pct(m[k]):num(m[k],4))+'</td>').join('')}<td><code title="${esc(m.exact_game_ids_sha256)}">${esc(m.exact_game_ids_sha256?.slice(0,12))}</code></td></tr>`).join('');}
+ function renderDevelopment(){updateCohortLabels();const cohort=$('development-cohort').value,target=$('development-target').value,study=$('development-study').value,newStudy=study!=='v038',list=(({v043:X,v042:P,v041:N,v040:C,v039:O,v038:R}[study]).metrics[cohort]||[]).filter(m=>m.target===target),cols=target==='cover'?[]:target==='winner'?[['accuracy','Accuracy ↑'],['log_loss','Log loss ↓'],['brier','Brier ↓'],['ece_10_equal_width','ECE ↓'],['roc_auc','ROC AUC ↑']]:[['mae','MAE ↓'],['rmse','RMSE ↓'],['bias','Bias'],['empirical_crps','CRPS ↓'],['interval80_coverage','80% coverage'],['interval95_coverage','95% coverage'],['interval80_mean_width','80% width'],['interval95_mean_width','95% width']];$('development-status').textContent=`${list.length} evaluated entries · ${new Set(list.map(m=>m.games)).size>1?'different cohort sizes shown per row':(list[0]?.games??0)+' observed games'}${cohort==='current_week'?'; very small sample':''} · ${['v043','v042'].includes(study)?'Saved original models evaluated on the selected dated result capture':study==='v041'?'Original owner neural outputs with exact-cohort baselines':study==='v040'?'V040 CatBoost with exact-cohort V038/V039 baselines':newStudy?'V039 with exact-cohort V038 baselines where retained':'original V038'} · timing-uncertified development only`+(list.length?'':target==='cover'?' · No authenticated exact-line cover cohort or saved cover probability.':' · No original metric exists for this study/cohort; choose V040 for complete previous-week baselines.');$('development-head').innerHTML='<tr><th>Family</th><th>Games</th>'+cols.map(([,label])=>'<th>'+label+'</th>').join('')+'<th>Exact cohort</th></tr>';$('development-rows').innerHTML=list.map(m=>`<tr><td>${esc(m.display_name||pretty(m.family))}</td><td>${m.games}</td>${cols.map(([k])=>'<td>'+(m[k]==null?'Not reported':k==='accuracy'||k==='interval80_coverage'||k==='interval95_coverage'?pct(m[k]):num(m[k],4))+'</td>').join('')}<td><code title="${esc(m.exact_game_ids_sha256)}">${esc(m.exact_game_ids_sha256?.slice(0,12))}</code></td></tr>`).join('');}
  ['development-study','development-cohort','development-target'].forEach(id=>$(id).addEventListener('change',renderDevelopment));
 
  function applyCapture(){
   const selected=$('capture-view').value;
-  games.splice(0,games.length,...originalGames.map(g=>U.resultView(g,latestRows.get(g.id),selected,D.source_observed_at)));
+  const rows=selected==='prior'?priorRows:latestRows;
+  games.splice(0,games.length,...originalGames.map(g=>U.resultView(g,rows.get(g.id),selected,D.source_observed_at)));
  }
  $('capture-view').addEventListener('change',()=>{applyCapture();state.page=0;syncSeason();renderGames();});
  $('show-new-finals').addEventListener('click',()=>{
@@ -138,19 +139,22 @@
   $('game-search').value='';$('result-filter').value='new';$('model-filter').value='all';$('coverage-target').value='any';syncSeason();state.page=0;renderGames();$('game-heading').scrollIntoView({block:'start'});
  });
  $('show-latest-metrics').addEventListener('click',()=>{
-  $('development-study').value='v042';$('development-cohort').value='current_week';$('development-target').value='winner';
+  $('development-study').value='v043';$('development-cohort').value='current_week';$('development-target').value='winner';
   $('development-study').dispatchEvent(new Event('change'));$('development').scrollIntoView({block:'start'});
  });
  function updateCohortLabels(){
-  const latest=$('development-study').value==='v042';
-  const labels={'2026':latest?'2026 · 647 latest outcomes':'2026 · 629 original outcomes',current_week:latest?'Current week · 25 latest outcomes':'Current week · 7 original outcomes',previous_week:'Previous week · 56 outcomes',newly_observed:'Newly observed · 18 finals'};
+  const study=$('development-study').value,latest=['v043','v042'].includes(study),report=study==='v043'?X:P;
+  const labels={'2026':latest?`2026 · ${report.counts.seasons['2026'].completed} dated outcomes`:'2026 · 629 original outcomes',current_week:latest?`Current week · ${report.counts.periods.current_week.completed} dated outcomes`:'Current week · 7 original outcomes',previous_week:'Previous week · 56 outcomes',newly_observed:`Newly observed · ${report.counts.newly_observed} finals`};
   for(const o of $('development-cohort').options){if(labels[o.value])o.textContent=labels[o.value];if(['newly_observed','cumulative'].includes(o.value))o.disabled=!latest;}
   if(!latest&&['newly_observed','cumulative'].includes($('development-cohort').value))$('development-cohort').value='2026';
  }
  function renderLatestCapture(){
+  $('capture-view').querySelector('[value=latest]').textContent='Latest · '+time(X.capture.observed_at);
   $('capture-clock').textContent=time(X.capture.observed_at)+' · '+X.capture.observed_at;
   $('latest-evidence-clock').textContent=X.capture.observed_at+' · completed '+X.capture.completed_at;
-  $('capture-update-summary').textContent='2026 now has 647 observed finals, including 25 of the current week’s 63 games. All 2,742 fixture identities and the saved forecasts are unchanged. Switch the result snapshot below to inspect the earlier 629 / 7 counts.';
+  $('capture-heading').textContent=`${X.counts.newly_observed} more finals since the prior capture`;
+  $('show-new-finals').textContent=`Show the ${X.counts.newly_observed} added finals`;
+  $('capture-update-summary').textContent=`2026 has ${X.counts.seasons['2026'].completed} observed finals, including ${X.counts.periods.current_week.completed} of the current week’s 63 games. All 2,742 fixture identities and saved forecasts are unchanged. There are ${X.counts.newly_observed} new finals since the prior November 7 capture (647 / 25), and ${X.counts.newly_observed_since_original_snapshot} since November 6 (629 / 7). Both earlier result snapshots remain selectable.`;
   const d=X.draftkings;
   $('latest-source-summary').textContent=d.summary;
   $('latest-source-counts').innerHTML=`<span><b>${d.event_count}</b> captured events</span><span><b>${d.target_rows}</b> target observations</span><span><b>${d.source_clock_qualified_rows}</b> source-clock checks passed</span><span><b>${d.post_kickoff_rows}</b> after kickoff</span><span><b>${d.exact_game_events}</b> exact official event joins</span>`;
@@ -161,5 +165,5 @@
  }
  $('latest-source-rows').addEventListener('click',event=>{const button=event.target.closest('[data-capture-game]');if(button)openGame(button.dataset.captureGame);});
  renderLatestCapture();restoreView();renderDevelopment();renderGames();renderComparison();renderCoverageMatrix();renderRegistry();
- window.FBSCompleteReview={filtered,reference,games,projection,selectedSeasonGames};
+ window.FBSCompleteReview={filtered,reference,games,projection,selectedSeasonGames,openGame,renderGames,get page(){return state.page;},pageSize:PAGE};
 })();

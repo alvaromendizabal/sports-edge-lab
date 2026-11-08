@@ -6,6 +6,7 @@ exports.run=async({browser,root,screenshots})=>{
  page.on('pageerror',e=>errors.push(e.message));page.on('request',r=>{if(!/^(file|data|blob):/.test(r.url()))external.push(r.url());});
  for(const width of [1440,390]){
   await page.setViewportSize({width,height:1000});await page.goto('file://'+path.join(root,'docs/fbs/complete.html'));
+  await require('./game_center_browser_cases.cjs').run(page,{width,screenshots});
   await require('./current_capture_browser_cases.cjs').run(page);
   assert.match(await page.locator('#result-status').innerText(),/^888 games · 629 observed complete · 790 development projections$/);
   assert.equal(await page.locator('#game-rows tr').count(),30);assert.deepEqual(await page.evaluate(()=>({width:innerWidth,scrollWidth:document.documentElement.scrollWidth,overflow:[...document.querySelectorAll('body *')].filter(e=>{const r=e.getBoundingClientRect();return r.width>0&&(r.left<0||r.right>innerWidth)&&getComputedStyle(e).position!=='absolute'&&!e.closest('.table-wrap')}).slice(0,15).map(e=>({tag:e.tagName,id:e.id,cls:e.className,right:e.getBoundingClientRect().right}))})),{width,scrollWidth:width,overflow:[]});
