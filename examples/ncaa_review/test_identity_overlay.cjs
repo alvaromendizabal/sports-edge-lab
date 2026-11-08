@@ -7,7 +7,9 @@ const { createHash } = require('node:crypto');
 
 function shippedIdentityValidator() {
   const html = fs.readFileSync(path.join(__dirname, 'private_report.html.tmpl'), 'utf8');
-  let source = [...html.matchAll(/<script(?:\s[^>]*)?>([\s\S]*?)<\/script>/g)].map(x => x[1]).join('\n');
+  const scripts = [...html.matchAll(/<script(?:\s[^>]*)?>([\s\S]*?)<\/script>/g)].map(x => x[1]).filter(source => source.includes('function validateIdentityOverlay('));
+  assert.equal(scripts.length, 1, 'Exactly one main identity script is exercised; the independent V4 script has its own contract.');
+  let source = scripts[0];
   source = source.replace(/\}\)\(\);\s*$/, 'globalThis.identityAudit={validateIdentityOverlay,validate,recordAdapter};})();');
   const stub = { addEventListener() {}, value: 'all' };
   const context = { document: { getElementById() { return stub; } } };
