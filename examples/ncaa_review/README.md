@@ -1,5 +1,48 @@
 # NCAA evidence review
 
+## B053 recovery and current dashboard use — November 8, 2026 UTC
+
+**B053 is prepared and tested; its next authenticated owner run is still required.** The latest actual owner result is B052: **5/16 stages completed, zero recorded failed stages and 11 not entered**, with `B048_SUMMARY_EXCEEDS_REPORT_PART_BOUND` between stages 05 and 05b. B053 repairs bounded coverage-report serialization while preserving the model calculations, eligibility decisions, scientific identities and stage order. **B046 remains scientific authority at 9/16.** No B053 fit, forecast, paired gain or promotion is credited.
+
+### Restore the views after a disconnected session
+
+Open the [NCAA report viewer](https://alvaro-ncaa-research-review.alv-mendizabal.chatgpt.site/private-report/index.html). Imported files live in the browser tab; reloading or clearing removes the in-memory view. A reopened page therefore requires the files to be selected again.
+
+1. Under **Choose your NCAA dashboard JSON file**, load `B052_SOURCE_SNAPSHOT_DASHBOARD_DATA.json` to inspect the current source snapshot. Select **Season table**, then **Show all loaded games**. The table exposes the supplied winner/probability, margin, total and line-result fields with their availability states.
+2. Under **Full-season schedule observations**, load the actual owner-produced `B052_FULL_SEASON_SCHEDULE_COMPACT.json` identified below by its `48a05041…` pin. Select **Show all schedule records**, then use the gender, provider, exact-date and search controls or page through every loaded record. **Missing exact tip time** exposes records excluded by exact-date filters.
+3. Under **Why a source game has no current forecast**, load `B052_CURRENT_ELIGIBILITY_LEDGER.json`, the delivered copy of the actual B052 member `B047R1_current_eligibility_ledger.json`. Select **Show every loaded eligibility row** to inspect every source identity; narrow by the recorded gate state or failure reason only when investigating a particular gap.
+4. To inspect retained scientific results, replace the main report with `B046_PRIVATE_DASHBOARD_DATA.json` and select its matching `B047R1_PRIVATE_IDENTITY_OVERLAY.json`. The schedule and eligibility panels remain independent. Do not attach that older identity overlay to the source-only main report.
+5. Continue computation with the authenticated private B053 package and its matching delivered command file. Use the final private instructions, preserve every terminal and retrieval receipt separately, and return the actual owner archive. The public viewer is an inspection surface; selecting files does not run training. Execution handoffs and their private storage locations remain outside this repository's [publication boundary](../../docs/PUBLICATION_BOUNDARY.md).
+
+### What each input accounts for
+
+| Selected input | Retained population | Remaining coverage boundary |
+|---|---|---|
+| Actual B052 schedule compact | **23,603 provider-native IDs for 2026–27 only** | **2,520 null exact tip times**, 39 ambiguous date responses and 110 rejected records. Provider IDs are not unique physical games; complete physical-season coverage is unproved. |
+| Current source-only main report | **2,446 source game rows**, 1,113 numeric-final rows and 58 missing event clocks | **Zero supplied winner, margin or total predictions.** Loading these rows cannot fill a missing model issue. |
+| `B052_CURRENT_ELIGIBILITY_LEDGER.json` (original member `B047R1_current_eligibility_ledger.json`) | **1,793 source identities:** 1,322 input-gate passes, 445 rejected feature rows and 26 missing feature rows | A gate pass is not an admitted forecast, fit or matched provider comparison. The old 447 unretained historical reasons remain a separate gap. |
+| Retained scientific baseline with its matching overlay | **47,130 game/model rows / 2,445 display groups** | **Zero supplied per-game rolling winner records and zero qualified cover/push/loss groups.** Original dates, cohorts and metrics remain unchanged. |
+
+The requested two historical seasons and current season still need separate, matched data and evaluation coverage. The 23,603 schedule IDs establish neither three-season modeling coverage nor cross-provider uniqueness. Showing every loaded row resolves hidden filters and pagination; it cannot establish that an absent source game or forecast exists.
+
+### Remaining modeling and evaluation work
+
+| Requested output | Required evidence and metrics |
+|---|---|
+| Winner and win probability | Accuracy, natural-log loss, Brier, calibration/reliability and supported AUC/uncertainty on exact matched games, horizons and information sets. Every comparison retains its membership count. |
+| Point margin, score centers and total points | MAE, RMSE and signed bias on matching completed outcomes, plus supported interval/distribution diagnostics. Point centers do not establish line-conditioned probabilities. |
+| Cover, push and loss | Exact signed line, provider/product, issue and availability times, settlement and overtime rules, with admitted purged empirical out-of-fold evidence or an integer margin distribution that preserves push mass. |
+| DraftKings, Kalshi and Polymarket comparisons | Separate provider cohorts and a proved common cohort, preserving US/international products, availability clocks, refusals and rights limits. Complete three-provider coverage is not established. |
+| Every-team, every-game rolling models | Chronological per-game membership, earlier completed-game and source availability, fitted-artifact identity, issue time, prediction and later outcome. Dated recovery never gains earlier availability or prospective issue credit. |
+
+The unchanged registry retains **10 base families, 26 heads and five study arms**: sklearn logistic and linear/ridge regression, Extra Trees, histogram gradient boosting, XGBoost, LightGBM, CatBoost, PyTorch and TensorFlow classification/regression candidates, plus all retained ensembles, blends and calibrations. Registration, installed dependencies, executed fits, evaluated predictions and promotion remain distinct. The final private package audit records **1,927/1,927 local tests**; optional XGBoost, LightGBM, CatBoost, PyTorch and TensorFlow were absent in that assistant fixture environment, so no optional owner fit is inferred.
+
+Basketball, injury/availability and market-feature expansions require their original clocks, identities and matched ablation evidence. **52 priority calibration contexts and the all-family paired monthly studies remain open.** The retained 162-game men's market cohort still favors Polymarket International on log loss and Brier. **No 2026–27 outcome-based selection or promotion is permitted.** The detailed dated provider, model, injury and cohort findings below retain their original scope.
+
+Known missing references must fail explicitly; they do not authorize provider retries, cache-miss substitution or refitting. Resource-aware execution must measure the current instance and shared limits before choosing concurrency. The dated B052 owner wall time was **748.452 seconds** with **six fit workers**. Current live owner state, next-run ETA and attributable cost remain unmeasured; the assistant's local package tests establish no owner speedup. Generic browser CI and source publication checks do not establish the layout of the actual private files in a browser.
+
+The sections below preserve earlier findings as dated evidence. The current actual execution status is B052, while the prepared next continuation is B053.
+
 ## Actual B052 owner return and per-game eligibility — November 8, 2026 UTC
 
 Authenticated run **20261108T063651Z_d7a6c2ff** preserved **5/16 completed stages, zero recorded failed stages and 11 not entered**. The run-level result is **FAILED_PARTIAL_WORK_PRESERVED**: it stopped between stage 05 and stage 05b while serializing the coverage summary, with `B048_SUMMARY_EXCEEDS_REPORT_PART_BOUND`. The recorded wall time is **748.452 seconds**. This identifies a bounded report-writing failure, without attributing a hardware or connection cause. The physical ledger verifies **zero newly committed target, scalar, empirical or unclassified model artifacts** and **108 reused historical target fits**; uncommitted estimation is not asserted. No new forecast or scientific improvement is credited.
@@ -73,7 +116,7 @@ The loaded source populations remain **ESPN men 6,010; ESPN women 5,772; NCAA of
 
 The earlier B050, B049, B048, B047R1 and scientific sections below are retained as dated evidence. Later source capture does not replace their original availability clocks, provider populations, physical fit totals or immutable issues.
 
-## B052 compact schedule viewer and current capability ledger
+## B052 compact schedule viewer and dated capability ledger
 
 The optional schedule importer now also accepts `sel.ncaa.b052.schedule_display.compact.v1`. This lossless column-and-dictionary representation reconstructs the unchanged `sel.ncaa.b050.schedule_display.v1` records, preserving every original source identity, clock, reference, null prediction and eligibility reason. It retains the **25 MiB physical input limit**, the **100,000 source-ID bound** and the **800,000,000-byte decoded object bound**. The browser processes bounded JSON tokens instead of constructing one large canonical string. Duplicate columns, overlapping constants, invalid dictionary indices, duplicate identities, mismatched owner/source/reference bindings, missing fields, nonfinite numbers and forecast-bearing schedule records are rejected before replacing a valid view.
 
@@ -151,7 +194,7 @@ Selecting a ZIP/PYZ archive, invalid UTF-8, or incomplete JSON now produces a sp
 
 The preserved 47,130 game/model rows, exact identity overlay, historical metrics, provider clocks, source classifications, unresolved gaps, and retained versions remain separate evidence. Displaying every loaded source game or overlay group does not certify the complete current season, all three provider histories, qualified cover probabilities, or completed rolling research. Every missing output still requires its exact input, eligibility, fitted-artifact, and evaluation proof.
 
-## B048 season workspace — current review
+## B048 season workspace — dated review
 
 ### Actual B048 return authenticated — November 7, 2026 UTC
 
@@ -195,7 +238,7 @@ The latest men’s reconstructed T−60 Polymarket international cohort contains
 
 ### Model and feature research
 
-Requested families have explicit implementation, dependency and evidence states: sklearn logistic regression; linear and ridge regression; Extra Trees classifiers and regressors; histogram gradient boosting; XGBoost, LightGBM and CatBoost classifiers/regressors; PyTorch and TensorFlow classification/regression; fixed ensembles/blends; chronological calibration and residual-distribution candidates. Implemented code, installed dependencies, an admitted job, a committed fit, an evaluated model and a promoted champion are separate states. The prepared B047R1 registry contains **10 base estimator families and 26 target heads**; fixed ensembles, blends and calibration are separate candidates. B047 remains a dated prepared source version. B047R1 and B048 were subsequently owner-executed on November 7, 2026 UTC and failed before scientific stage entry, with no new scientific results credited. The B048 owner fixture failure is the current execution status. Local implementation tests do not establish a new committed fit or improved NCAA result.
+Requested families have explicit implementation, dependency and evidence states: sklearn logistic regression; linear and ridge regression; Extra Trees classifiers and regressors; histogram gradient boosting; XGBoost, LightGBM and CatBoost classifiers/regressors; PyTorch and TensorFlow classification/regression; fixed ensembles/blends; chronological calibration and residual-distribution candidates. Implemented code, installed dependencies, an admitted job, a committed fit, an evaluated model and a promoted champion are separate states. The prepared B047R1 registry contains **10 base estimator families and 26 target heads**; fixed ensembles, blends and calibration are separate candidates. B047 remains a dated prepared source version. B047R1 and B048 were subsequently owner-executed on November 7, 2026 UTC and failed before scientific stage entry, with no new scientific results credited. At that dated checkpoint, the B048 owner fixture failure was the latest execution result; the actual B052 return above supersedes its operational status. Local implementation tests do not establish a new committed fit or improved NCAA result.
 
 New frontier outputs keep historical monthly development, per-game rolling reconstruction and latest available previews separate. Existing weekly streams retain their original labels. Earlier-completed game histories, home/away windows, EWM/shrinkage, basketball form, availability versions and genuine in-play paths require original availability before each target cutoff. Current 2026–27 outcomes cannot select families, weights, blends, calibrators or promotions. The two historical seasons remain development-exposed.
 
