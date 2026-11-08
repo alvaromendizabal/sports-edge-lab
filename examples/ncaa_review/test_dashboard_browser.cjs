@@ -8,6 +8,7 @@ const { pathToFileURL } = require('node:url');
 const { chromium } = require(process.env.PLAYWRIGHT_MODULE_DIR || 'playwright');
 const { fixture: identityOverlayFixture } = require('./test_identity_overlay.cjs');
 const { fixture: scheduleFixture, referenceFixture: scheduleReferenceFixture } = require('./test_schedule_viewer.cjs');
+const { compactFixture: compactScheduleFixture } = require('./test_schedule_compact.cjs');
 
 (async () => {
   const browser = await chromium.launch({ headless: true,
@@ -33,6 +34,7 @@ const { fixture: scheduleFixture, referenceFixture: scheduleReferenceFixture } =
         await page.locator('#model-table tbody tr').first().waitFor();
         const evidence = JSON.parse(await page.locator('#evidence').textContent());
         assert.equal(evidence.league, league);
+        assert.match(await page.locator('#b051-current-return').innerText(), /Current B051 return.*1\/16 stages completed.*B035_REUSE_SCIENTIFIC_IMPLEMENTATION_CHANGED:b032_resume.py/s);
         assert.equal(await page.locator('#provider-table tr').count(), 3);
         assert.deepEqual(await page.locator('#provider-table tr td:first-child strong').allTextContents(), ['Kalshi', 'Polymarket', 'DraftKings']);
         const attempt = evidence.current_owner_attempt, inventory = evidence.observed_inventory;
@@ -60,7 +62,7 @@ const { fixture: scheduleFixture, referenceFixture: scheduleReferenceFixture } =
         assert.match(await page.locator('#capability-caption').innerText(),/B047R1.*10 base estimator families \/ 26 target heads.*owner execution pending/);
         assert.match(await page.locator('#capability-table').innerText(),/Extra Trees.*Classification \/ margin and total regression/s);
         assert.match(await page.locator('#frontier-copy').innerText(),/actual B046.*not reached.*B047R1.*prepared/);
-        assert.doesNotMatch(await page.locator('body').innerText(),/\b(?:betting|wagers?|ROI|profit|NO BET)\b/i);
+        assert.doesNotMatch(await page.locator('body').innerText(),/\b(?:bets?|betting|wagers?|wagering|stakes?|staking|ROI|profit|recommendations?|NO BET)\b/i);
         assert.match(await page.locator('#ats-repair-summary').innerText(),/1,793.*43,032.*Zero qualified/);
         assert.match(await page.locator('#latest-baseline-copy').innerText(), /87,003 target rows and 47,940 browser display rows.*1,223 metric panels.*4,147 checks with zero mismatches.*1,220 model metric panels.*417 season \/ 803 weekly; 4,132 checks.*3 provider panels \/ 15 checks/);
         assert.match(await page.locator('#latest-baseline-issues').innerText(), /255 returned immutable journal objects.*552 distinct verified B045-source issues across 8 games.*549 B045 prospective rows.*3 additional journal rows.*339 B042 issues across 5 games.*does not identify an owner run/);
@@ -1041,6 +1043,18 @@ const { fixture: scheduleFixture, referenceFixture: scheduleReferenceFixture } =
         assert.deepEqual(await page.locator('[data-game] table:first-of-type').allTextContents(),baseForecasts);
         assert.equal(await page.locator('#model-metrics').innerText(),baseMetrics);
         assert.equal(await page.locator('#identity-overlay-count').innerText(),baseOverlay);
+        const compactSchedule=compactScheduleFixture();
+        await page.locator('#schedule-file').setInputFiles({name:'invented-compact-schedule.json',mimeType:'application/json',buffer:compactSchedule.body});
+        await page.waitForFunction(()=>document.getElementById('schedule-load-status').textContent.startsWith('Loaded 27 of 27 declared'));
+        assert.equal(await page.locator('[data-schedule-record]').count(),25);
+        assert.match(await page.locator('#schedule-source-proof').innerText(),new RegExp(compactSchedule.pin.sha256));
+        assert.match(await page.locator('#schedule-source-proof').innerText(),/not a new owner execution/);
+        assert.match(await page.locator('#schedule-source-proof').innerText(),/not reverified in this browser/);
+        await page.locator('#schedule-next').click();
+        assert.equal(await page.locator('[data-schedule-record]').count(),2);
+        assert.deepEqual(await page.locator('[data-game] table:first-of-type').allTextContents(),baseForecasts);
+        assert.equal(await page.locator('#model-metrics').innerText(),baseMetrics);
+        assert.equal(await page.locator('#identity-overlay-count').innerText(),baseOverlay);
         await page.locator('#clear-schedule').click();
         assert.equal(await page.locator('#schedule-content').isHidden(),true);
         assert.deepEqual(await page.locator('[data-game] table:first-of-type').allTextContents(),baseForecasts);
@@ -1052,7 +1066,7 @@ const { fixture: scheduleFixture, referenceFixture: scheduleReferenceFixture } =
         assert.equal(await page.locator('[data-schedule-record]').count(),25,'clearing baseline leaves schedule independent');
         assert.equal(await page.evaluate(()=>document.documentElement.scrollWidth>innerWidth),false,'schedule panel fits mobile');
         await page.locator('#clear-schedule').click();
-        counts.scheduleViews=(counts.scheduleViews||0)+15;
+        counts.scheduleViews=(counts.scheduleViews||0)+21;
       }
       counts.viewports++;
     }

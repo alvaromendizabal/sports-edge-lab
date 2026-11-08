@@ -1,5 +1,55 @@
 # NCAA evidence review
 
+## Publication availability — November 8, 2026 UTC
+
+This repository contains the compact importer and its tested generic viewer. The existing public Site was last rechecked at **2026-11-08T03:06:46Z** and remains on **version 23**, before this importer was deployed. The private compact artifact was produced and validated locally, but its delivery is pending. No new Site deployment or working private download is claimed by this source update. The authenticated B051 findings below remain valid independently of publication availability.
+
+## Actual B051 owner return — authenticated November 8, 2026 UTC
+
+**Source refresh completed, including the full-season collection plan. Model restoration then stopped at an exact implementation-identity guard.** Authenticated owner run **20261108T015946Z_d34f8020** recorded **FAILED_PARTIAL_WORK_PRESERVED**: **1/16 stages completed**, `01_authenticate_and_restore_parent` failed, and the remaining 14 stages were not entered. The recorded error is `B035_REUSE_SCIENTIFIC_IMPLEMENTATION_CHANGED:b032_resume.py`. This is an identified compatibility failure, without a new hardware, operating-system or connection-cause claim.
+
+The owner-produced schedule report accounts for **1,460/1,460 provider/gender/date slots** across the full-season query interval. It records **458 validated responses, 963 empty responses and 39 ambiguous responses**, with **110 rejected source records** and **23,603 provider-native IDs** in the retained index. An index ID is not a verified cross-provider physical game. Empty and ambiguous responses do not prove that a date has no games. The collector retains `full_season_complete=false` and `complete_official_denominator=false`.
+
+The original owner display export is **REFERENCE_ONLY_DISPLAY_BYTE_BOUND**: **23,603 records expected and zero included**, because the complete index exceeded its unchanged 25 MiB display-file bound. Its report and exact source-index references are preserved. Loading that reference-only file does not load 23,603 games. No new forecast is joined to schedule-only records, and the older 47,130-row baseline / 2,445 display groups retain their separate denominators.
+
+The prepared private **B052_FULL_SEASON_SCHEDULE_COMPACT.json** makes all **23,603 retained index records** loadable in the existing private viewer. Its **4,744,935 bytes** have SHA-256 `13580d79b75255fee79bd66524a7f3aa93640f28eee34406bc93d24228869ea2`. This is a lossless review-derived projection of the authenticated B051 owner index, not a new owner execution. The exact viewer contract loaded every row in a private Node audit. An independent streamed reconstruction matched the **51,300,443-byte** canonical expanded JSON and SHA-256 `f50f68e8b45c9c5ee75329aca3ab9d7b0baf31a7e3c69a19d9b4a19fda880996`, without joining one large canonical string. A real private browser layout is not claimed.
+
+The loaded source populations remain **ESPN men 6,010; ESPN women 5,772; NCAA official men 6,049; NCAA official women 5,772**. Exactly **2,520 records retain null exact tip times**; query dates do not replace them. The loaded index reports zero identity-change flags, which does not resolve the separate 39 ambiguous date responses, 110 rejected source records or older cross-provider identity gaps. Every schedule-only forecast field remains null with its retained reason. The baseline, identity overlay, metrics and model denominators are unchanged.
+
+| Evidence layer | Authenticated B051 observation |
+|---|---|
+| Physical outer ZIP | 17,447,175 bytes; SHA-256 `507cea7ee679c64fc44211770770fe48dbc91896c319fecfc54acdb47fdb9eb7` |
+| Nested owner return | 17,546,374 bytes; SHA-256 `0c1801e4070992b32771cd6c92128be4ab8013c0e13901222dee173bef9e1e90` |
+| Executed source | 12,276,860 bytes; SHA-256 `00a1540ac2766c30089e4a8cc1d856bcbf7d699ae4706aa32f06a08d2706ee73` |
+| ZIP and manifest closure | 4 outer / 178 nested / 478 source members; safe unique explicit regular names, CRCs, exact active B051/runtime b051 manifest |
+| Owner fixture gate | 1,686 passed / 1 optional Linux pidfd skip / 0 failures / 0 errors; fixtures are not scientific fits |
+| Initialized physical fit ledger | 0 newly committed target / scalar / empirical / unclassified model artifacts; uncommitted estimation is not asserted zero |
+| Recorded completion | 2026-11-08T02:31:06.721488+00:00; owner wall time 1,880.066 seconds |
+| Final-return readback receipt | Nested full bytes verified at 2026-11-08T02:31:07.845135+00:00 |
+| Literal terminal evidence | Current RETURN, worker-terminal, bootstrap-terminal, source-preflight, source-retrieval and observed shell-exit lines not supplied |
+
+**B046 remains the scientific partial authority at 9/16.** No new owner fit, per-game rolling forecast, cover/push/loss probability, injury/path gain or scientific improvement is credited to B051. The older baseline still supplies zero per-game rolling winner records and zero qualified cover groups. The 52-context priority-calibration gap and all-family paired monthly study gap remain open. Registered model families, dependencies, admitted physical fits, forecasts and evaluated gains remain separate states. Current 2026–27 outcomes cannot select or promote a model. B052 is implementation preparation until authenticated owner work establishes otherwise.
+
+The earlier B050, B049, B048, B047R1 and scientific sections below are retained as dated evidence. Later source capture does not replace their original availability clocks, provider populations, physical fit totals or immutable issues.
+
+## B052 compact schedule viewer and current capability ledger
+
+The optional schedule importer now also accepts `sel.ncaa.b052.schedule_display.compact.v1`. This lossless column-and-dictionary representation reconstructs the unchanged `sel.ncaa.b050.schedule_display.v1` records, preserving every original source identity, clock, reference, null prediction and eligibility reason. It retains the **25 MiB physical input limit**, the **100,000 source-ID bound** and the **800,000,000-byte decoded object bound**. The browser processes bounded JSON tokens instead of constructing one large canonical string. Duplicate columns, overlapping constants, invalid dictionary indices, duplicate identities, mismatched owner/source/reference bindings, missing fields, nonfinite numbers and forecast-bearing schedule records are rejected before replacing a valid view.
+
+A compact projection derived during review is labeled **assistant-derived from an authenticated owner index**, with the original run and source version retained. It is not a newly executed owner run. The browser computes the selected compact file's physical SHA-256 and enforces the decoded schedule contracts. The separately declared decoded canonical digest remains generator evidence; the browser does not claim to reverify that digest or fetch the referenced private raw bodies. A failed import leaves the prior schedule, baseline and overlay intact. All records can be reached through pagination, provider/gender/date filters and the reset control.
+
+| Capability | Current evidence and remaining requirement |
+|---|---|
+| Current-season source inventory | B051 retained 23,603 provider-native IDs; exact loaded-row counts remain visible. The 39 ambiguous date responses, 110 rejected records and unproved physical denominator prevent a complete-season claim. |
+| Winner, win probability, margin and total | Existing baseline values retain their authored model and information clocks. B051 adds no prediction; parent-model restoration stopped before the scientific stages. |
+| Per-game rolling winner forecasts | The retained baseline supplies zero such records. Complete pregame memberships, source availability and admitted fit/forecast receipts are required. |
+| Cover, push and loss probabilities | Zero qualified baseline groups. Exact line/provider/product/time/rules and a qualified integer distribution or purged empirical out-of-fold evidence remain required. |
+| DraftKings, Kalshi and Polymarket comparisons | Original provider products, cohorts and clocks remain separate. New source observations do not enlarge a paired forecast denominator; Polymarket US and international remain distinct. |
+| Model families and target heads | Ten registered base families / 26 heads, with existing ensembles and five study arms. B051 commits zero new physical model artifacts. Dependency, admission, fitting, evaluation and promotion states are separate. |
+| Calibration, basketball, path and injury gains | The 52 priority calibration contexts and all-family paired monthly analysis remain open. No new current-season selection or improvement is credited. |
+
+The compact decoder's tests use invented records. Hosted browser validation exercises actual file selection, physical hashing, bounded pagination and baseline preservation at desktop/mobile widths. Actual private-file validation is reported separately in the delivery; it does not imply that a private browser layout was observed.
+
 ## Actual B050 return — authenticated November 8, 2026 UTC
 
 The actual owner run **20261107T235154Z_0a962d1c** recorded **FAILED_PARTIAL_WORK_PRESERVED** with **0/16 completed stages**. `04_latest_source_refresh` failed after preserving acquired source work; the other 15 stages were not entered. The run passed its owner fixture gate: **1,578 passed, 1 skipped, zero failures and zero errors** across 1,579 planned cases. The earlier local 1,579/1,579 suite remains dated preparation evidence, not an owner scientific result.
