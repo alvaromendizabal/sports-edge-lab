@@ -28,6 +28,6 @@ class PublicationAuditTests(unittest.TestCase):
   source={'table':[{'game_id':'x','value':None,'detail':{'clock':None,'x':.123456789123}}],'metadata':{'status':'dated'}}
   rows=list(records(source));self.assertEqual(len(rows),2);self.assertEqual(rows[0]['value'],'');self.assertEqual(json.loads(rows[0]['record_json']),source['table'][0]);self.assertEqual(json.loads(rows[1]['record_json']),source['metadata'])
  def test_active_page_has_audit_and_explicit_team_labels(self):
-  html=build(self.data);self.assertNotIn('__PUBLICATION_AUDIT_JSON__',html);self.assertTrue('N055 actual partial' in html);self.assertIn('Los Angeles Rams',html);self.assertIn('Los Angeles Chargers',html);self.assertTrue('N056 repairs source routing' in html);self.assertTrue('Original base snapshot time:' in html)
+  html=build(self.data);self.assertNotIn('__PUBLICATION_AUDIT_JSON__',html);self.assertTrue('N056 actual partial' in html);self.assertIn('Los Angeles Rams',html);self.assertIn('Los Angeles Chargers',html);self.assertTrue('N057 repairs the final census parser' in html);self.assertTrue('Original base snapshot time:' in html)
 
 if __name__=='__main__':unittest.main()
