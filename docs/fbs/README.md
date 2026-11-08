@@ -1,8 +1,22 @@
 # NCAA FBS · every fixture, every recorded model target
 
-[**Open the FBS season and model lab →**](https://sports-edge-lab-fbs.alv-mendizabal.chatgpt.site) · [Current page source](complete.html) · [Three-season game data](three-season.json) · [Full-precision V039 comparison](optional-study.json) · [CatBoost comparison](catboost-study.json) · [Owner neural comparison](owner-neural-study.json)
+[**Open the FBS season and model lab →**](https://sports-edge-lab-fbs.alv-mendizabal.chatgpt.site) · [Current page source](complete.html) · [Three-season game data](three-season.json) · [Full-precision V039 comparison](optional-study.json) · [CatBoost comparison](catboost-study.json) · [Owner neural comparison](owner-neural-study.json) · [Latest observed results and evaluation](current-capture.json)
 
-## Current review · V041
+## Current review · V042
+
+The dashboard now opens on the **latest authenticated result capture**, completed **2026-11-07 22:24:04 UTC**. It includes **18 additional 2026 finals**: **647 of 888** current-season fixtures have an observed final, and **25 of 63** current-week games have a final. The previous week remains **56 of 56**. Every one of the **2,742** official fixture IDs, ordered team identities and reported kickoff values is unchanged from the prior three-season inventory.
+
+The first source observation is **2026-11-07 22:23:11 UTC**; DraftKings was observed at **22:23:12 UTC**. The new **Observed results** selector switches between this capture and the original November 6 snapshot. **Show the 18 new finals** opens those games directly. Their original winner probabilities, point margins, totals, intervals and computation cutoffs remain unchanged. Per-game comparisons and CSV exports identify the selected result snapshot and original result-observation clock. The original `three-season.json`, all original model studies and all previous provider reports are retained byte for byte.
+
+**Latest outcomes · saved models** evaluates the original full-precision forecasts on the newly observed results. It has separate all-season, cumulative-2026, current-week, previous-week and 18-new-final cohorts. Earlier study scores remain independently selectable. A model difference requires the same target, game count and exact game-ID cohort; the three missing CatBoost winner outputs still prevent a whole-season equal-cohort claim. No fit, prediction, calibration, blend selection or champion promotion is performed by this update.
+
+The new **DraftKings capture** is separate from the older DraftKings, Kalshi, Polymarket US and Polymarket Global reference report. It contains **113 target observations across 39 source events**. **54 rows pass source-clock checks** and **59 were observed after kickoff**; these counts alone do not establish an official game join or compatibility with an earlier model cutoff. Exact registered-name, ordered-team and kickoff checks admit **11 events / 32 targets** for display; **28 events remain unbound**. Of the matched rows, **27 were captured by T−120**, while strict model-input and cover qualification remain unproved. The capture table shows the independently reconciled identity and timing states, target missingness and any permitted rounded derived values. No new Kalshi or Polymarket acquisition is claimed. Fees, depth and liquidity remain unavailable in this projection.
+
+The baseline still provides predictions for **790 current-season games** and **2,403 across all seasons**. The **99 unresolved kickoffs** (98 current-season, one historical) and **240 early-history gaps** remain explicit. Unchanged TBD placeholders are not labeled as new kickoff revisions. Qualified exact-line cover probabilities, authenticated pregame issuance and historical possession remain absent. All requested model families remain visible with their actual executed targets: logistic, linear/ridge, Extra Trees, histogram boosting, XGBoost, LightGBM, CatBoost, PyTorch, TensorFlow and separate fixed blends/calibrators.
+
+The FBS-only publication adds identity and snapshot-isolation regressions, latest-result CSV checks and desktop/mobile browser cases for the new finals, old/new counts and exact evaluation cohorts. It does not alter another sport, refresh source data on page load, publish raw provider records or treat rounded display values as inputs to headline rescoring.
+
+## Previous interface review · V041
 
 The [season and model lab](https://sports-edge-lab-fbs.alv-mendizabal.chatgpt.site) keeps every identified fixture visible and now distinguishes **complete family output, partial output and no saved output**. A saved margin never conceals a missing winner forecast. The default remains the original V038 fixed equal blend.
 
