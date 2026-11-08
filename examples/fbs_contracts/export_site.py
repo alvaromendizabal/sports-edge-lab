@@ -26,7 +26,7 @@ ASSETS = ('index.html','research.html','recovery.html','season.js','source-progr
           'injury-association.json','common-game-review.json',
           'frontier.html','frontier.js','frontier-games.json','frontier-review.json',
           'complete.html','complete.js','coverage.js','diagnostics.js','complete.css','complete-season.json',
-          'complete-data.js','complete-history.js','development-data.js','development-2026.json','season-archive.html','three-season.json','three-season-data.js','optional-study.json','optional-study-data.js','catboost-study.json','catboost-study-data.js','source-health-v040.json','owner-neural-study.json','owner-neural-study-data.js','current-capture.json','current-capture-data.js','current-capture.js','game-center.js','current-capture-v043.json','current-capture-v043-data.js')
+          'complete-data.js','complete-history.js','development-data.js','development-2026.json','season-archive.html','three-season.json','three-season-data.js','optional-study.json','optional-study-data.js','catboost-study.json','catboost-study-data.js','source-health-v040.json','owner-neural-study.json','owner-neural-study-data.js','current-capture.json','current-capture-data.js','current-capture.js','game-center.js','current-capture-v043.json','current-capture-v043-data.js','current-capture-v044.json','current-capture-v044-data.js','changed-input-study-v044.json','changed-input-study-v044-data.js')
 SOURCE_FILES = {'index.html':'complete.html','season-archive.html':'index.html'}
 
 
@@ -74,7 +74,9 @@ def export(commit, output):
     health=json.loads(committed(commit,'docs/fbs/source-health-v040.json'))
     neural=json.loads(committed(commit,'docs/fbs/owner-neural-study.json'))
     prior=json.loads(committed(commit,'docs/fbs/current-capture.json'))
-    latest=json.loads(committed(commit,'docs/fbs/current-capture-v043.json'))
+    late=json.loads(committed(commit,'docs/fbs/current-capture-v043.json'))
+    latest=json.loads(committed(commit,'docs/fbs/current-capture-v044.json'))
+    refresh=json.loads(committed(commit,'docs/fbs/changed-input-study-v044.json'))
     manifest={'schema':'sports-edge-lab.public-fbs-snapshot.v3',
               'canonical_repository':REPOSITORY,'source_commit_sha':commit,
               'evidence_prepared_at':report['projection_prepared_at'],
@@ -85,7 +87,9 @@ def export(commit, output):
               'counts':report['counts'],'new_fits':0,'new_issues':0,'new_provider_requests':0,
               'development_reconstruction':{'counts':development['counts'],'computed_at':development['computed_at'],'evidence_class':development['evidence_class'],'resume_work':development['resume_work'],'cumulative_work':development['cumulative_work'],'season_coverage':development['season_coverage'],'scientific_results_generated_at':development['scientific_results_generated_at'],'sources':development['sources']},
               'v042_retained_capture':{k:prior[k] for k in ('capture','counts','sources','new_fits','new_predictions','new_provider_requests','forecast_issued','promotion_allowed')},
-              'v043_latest_capture':{k:latest[k] for k in ('capture','counts','sources','new_fits','new_predictions','new_provider_requests','forecast_issued','promotion_allowed')},
+              'v043_retained_capture':{k:late[k] for k in ('capture','counts','sources','new_fits','new_predictions','new_provider_requests','forecast_issued','promotion_allowed')},
+              'v044_latest_capture':{k:latest[k] for k in ('capture','counts','sources','new_fits','new_predictions','new_provider_requests','forecast_issued','promotion_allowed')},
+              'v044_recovered_changed_input_study':{k:refresh[k] for k in ('counts','sources','generated_at','evidence_class','forecast_issued','promotion_allowed')},
               'v041_original_owner_neural':{k:neural[k] for k in ('counts','sources','generated_at','evidence_class','forecast_issued','promotion_allowed')},
               'v040_catboost_study':{k:catboost[k] for k in ('counts','sources','generated_at','evidence_class','forecast_issued','promotion_allowed')},
               'v040_source_health':{k:health[k] for k in ('source_pin','return_pin','return_status','last_observed_at','provider_coverage_expansion_credited')},

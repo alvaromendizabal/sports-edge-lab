@@ -54,3 +54,18 @@ test('paired comparison rejects wrong baseline, target, family, count and cohort
   assert.equal(D.pairedMetricDelta({...cat,...change},base,'log_loss').value,null);
  assert.equal(D.pairedMetricDelta({...cat,paired_reference_metrics:{...cat.paired_reference_metrics,exact_game_ids_sha256:'different'}},base,'log_loss').value,null);
 });
+test('weekly inventories fit one page while full seasons stay bounded',()=>{
+ assert.equal(G.pageSize('2026','current'),63);assert.equal(G.pageSize('2026','previous'),63);
+ for(const scope of [['2026','all'],['2024','all'],['all','all'],['2025','current']])assert.equal(G.pageSize(...scope),30);
+});
+test('period result and target counts retain missing outputs without excluding fixtures',()=>{
+ const rows=[{completed:true,p:.7,margin:3,total:50},{completed:false,margin:2,total:42},{completed:false}];
+ assert.deepEqual(G.periodSummary(rows,r=>r,'v040_catboost',A),{games:3,completed:1,without_final:2,winner:1,margin:2,total:2,cover:0,complete:1,partial:1,missing:1});
+});
+test('period comparison follows the selected dated snapshot without inventing cumulative original scores',()=>{
+ assert.deepEqual(G.comparisonRoute('2026','current','latest'),{study:'v044',cohort:'current_week'});
+ assert.deepEqual(G.comparisonRoute('2026','previous','nov7_late'),{study:'v043',cohort:'previous_week'});
+ assert.deepEqual(G.comparisonRoute('2025','all','prior'),{study:'v042',cohort:'2025'});
+ assert.deepEqual(G.comparisonRoute('2026','current','original'),{study:'v041',cohort:'current_week'});
+ assert.equal(G.comparisonRoute('all','all','original'),null);
+});

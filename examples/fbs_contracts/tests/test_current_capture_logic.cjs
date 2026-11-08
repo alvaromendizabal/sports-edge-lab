@@ -41,3 +41,9 @@ test('separate prior snapshot and explicit newest-delta flags stay distinct',()=
  const addition=resultView(game,{...row,newly_observed:true},'latest','old');assert.equal(addition.newly_observed_final,true);assert.equal(addition.models,game.models);
  assert.equal(resultView(game,row,'unrecognized','old').result_snapshot,'original');
 });
+
+test('the intermediate late-Nov7 snapshot keeps its own scores, clock and delta',()=>{
+ const prior=resultView(game,{...row,newly_observed:true},'nov7_late','old');
+ assert.equal(prior.result_snapshot,'nov7_late');assert.equal(prior.result_observed_at,row.observed_at);
+ assert.equal(prior.models,game.models);assert.equal(prior.newly_observed_final,true);
+});

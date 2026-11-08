@@ -3,8 +3,36 @@ const assert=require('node:assert/strict'),fs=require('node:fs'),path=require('n
 exports.run=async(page,{width,screenshots})=>{
  await page.waitForFunction(()=>document.querySelectorAll('#game-cards .game-card').length===30);
  assert.equal(await page.locator('#game-layout').inputValue(),'cards');
+ assert.equal(await page.locator('#advanced-game-filters').getAttribute('open'),null);
+ await page.locator('[data-period="current"]').click();
+ assert.equal(await page.locator('#game-cards .game-card').count(),63);
+ assert.match(await page.locator('#visible-game-range').innerText(),/All 63 matching weekly games.*no hidden pages/);
+ assert.match(await page.locator('#period-overview-status').innerText(),/63 games · 48 observed finals · 15 without a final/);
+ assert.equal(await page.locator('#next-page').isDisabled(),true);
+ await page.locator('#game-search').fill('401856745');
+ assert.equal(await page.locator('#game-cards .game-card').count(),1);
+ assert.match(await page.locator('#period-overview-status').innerText(),/63 games/);
+ await page.locator('#compare-selected-period').click();
+ assert.equal(await page.locator('#development-study').inputValue(),'v044');
+ assert.equal(await page.locator('#development-cohort').inputValue(),'current_week');
+ assert.match(await page.locator('#development-status').innerText(),/48 observed games/);
+ await page.locator('#game-search').fill('');await page.locator('[data-period="previous"]').click();
+ assert.equal(await page.locator('#game-cards .game-card').count(),56);
+ assert.match(await page.locator('#visible-game-range').innerText(),/All 56 matching weekly games/);
+ await page.locator('[data-period="all"]').click();
+ assert.equal(await page.locator('#game-cards .game-card').count(),30);
+ await page.locator('#advanced-game-filters > summary').click();
+ await page.locator('[data-period="current"]').click();await page.selectOption('#model-view','v043_refresh_extra_trees');
+ assert.match(await page.locator('#period-overview-note').innerText(),/14 winner \/ probability · 14 margin · 14 total/);
+ assert.match(await page.locator('#coverage-accounting').innerText(),/49.*Outside the registered 119-game/s);
+ await page.selectOption('#model-filter','present');assert.equal(await page.locator('#game-cards .game-card').count(),14);
+ assert.doesNotMatch(await page.locator('#game-cards .game-card .card-intervals').first().innerText(),/Not saved/);
+ await page.locator('#compare-selected-period').click();assert.equal(await page.locator('#development-study').inputValue(),'v044_refresh');
+ assert.match(await page.locator('#development-status').innerText(),/performance is pending/);assert.equal(await page.locator('#development-rows tr').count(),0);assert.equal(await page.locator('#export-metrics').isDisabled(),true);
+ await page.locator('#clear-game-filters').click();await page.selectOption('#model-view','fixed_equal_blend');await page.locator('[data-period="all"]').click();
+
  assert.equal(await page.locator('#game-table-view').isVisible(),false);
- assert.equal(await page.locator('#family-coverage-rows tr').count(),14);
+ assert.equal(await page.locator('#family-coverage-rows tr').count(),26);
  assert.equal(await page.evaluate(()=>FBSCompleteReview.filtered().slice(0,63).every(g=>g.period==='current'&&g.season===2026)),true);
  assert.match(await page.locator('#active-result-snapshot').innerText(),/Latest/);
  assert.match(await page.locator('#game-cards .game-card').first().innerText(),/Home margin.*Total points.*Cover probability.*Unavailable.*Margin intervals.*80%.*95%/s);
@@ -13,7 +41,7 @@ exports.run=async(page,{width,screenshots})=>{
  await page.locator('#game-cards .card-clocks summary').first().click();
  assert.match(await page.locator('#game-cards .card-clocks').first().innerText(),/Reconstructed cutoff.*Output computed.*Result observed/s);
  await page.locator('#game-cards .card-details').first().click();
- assert.equal(await page.locator('#game-dialog').isVisible(),true);assert.equal(await page.locator('#game-model-comparison tr').count(),14);await page.keyboard.press('Escape');
+ assert.equal(await page.locator('#game-dialog').isVisible(),true);assert.equal(await page.locator('#game-model-comparison tr').count(),26);await page.keyboard.press('Escape');
  if(screenshots){fs.mkdirSync(screenshots,{recursive:true});await page.evaluate(()=>{document.documentElement.style.scrollBehavior='auto';document.getElementById('game-cards').scrollIntoView({block:'start'});});await page.evaluate(()=>new Promise(r=>requestAnimationFrame(()=>requestAnimationFrame(r))));await page.screenshot({path:path.join(screenshots,`game-center-${width}-cards.png`)});}
  await page.selectOption('#game-sort','kickoff_asc');assert.match(await page.locator('#game-cards .game-card').first().innerText(),/Aug 29/);
  await page.selectOption('#game-sort','kickoff_desc');assert.equal(await page.evaluate(()=>FBSCompleteReview.filtered().at(-1).kickoff_exact),false);
