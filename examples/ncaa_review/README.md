@@ -1,5 +1,15 @@
 # NCAA evidence review
 
+## B050 optional full-season schedule viewer
+
+The separate **Full-season schedule observations** panel accepts `B050_FULL_SEASON_SCHEDULE_DATA.json` from an owner return when that export is supplied. It works independently of the retained baseline dashboard and its identity overlay. No owner execution, newly captured schedule or model result is implied by preparing this viewer.
+
+The panel preserves provider-native records from ESPN and the NCAA official source, with separate provider and gender counts, exact-event-date filters, missing-tip-time counts, source conflicts, original source clocks and raw-reference details. It does not join records across providers or count two provider observations as two distinct official games. Missing event times remain null; a source query date or an unverified reported time does not replace an exact tipoff. Every schedule-only forecast field remains null with its supplied reason.
+
+The import verifies the selected file's physical byte count and SHA-256, its schema, declared counts, provider-native identities, reference bindings and null-forecast safeguards. Files are limited to 25 MiB and 100,000 provider-native IDs; rows are paginated. A reference-only export shows the retained index's expected population and the explicit byte/index-limit reason, with zero loaded records. It never renders unloaded rows as an empty or complete season. Supplied proof flags are retained as claims from the file; the browser does not retrieve or independently authenticate their referenced raw bodies.
+
+Schedule filters, clearing and import failures leave baseline arrays, the optional identity overlay, model forecasts and scientific metric populations unchanged. The local page performs no uploads or provider requests. Generic Node and hosted Chromium fixtures cover provider separation, time/null semantics, source conflicts, reference-only states, physical-file hashing, stale-load rejection and unchanged baseline content. These are software checks, not scientific results or an observation of the actual private browser layout.
+
 ## B050 dashboard preparation — November 7, 2026 UTC
 
 ### Latest reported startup attempt
