@@ -62,7 +62,7 @@ const { compactFixture: compactScheduleFixture } = require('./test_schedule_comp
         assert.match(await page.locator('#capability-caption').innerText(),/B047R1.*10 base estimator families \/ 26 target heads.*owner execution pending/);
         assert.match(await page.locator('#capability-table').innerText(),/Extra Trees.*Classification \/ margin and total regression/s);
         assert.match(await page.locator('#frontier-copy').innerText(),/actual B046.*not reached.*B047R1.*prepared/);
-        assert.doesNotMatch(await page.locator('body').innerText(),/\b(?:betting|wagers?|ROI|profit|NO BET)\b/i);
+        assert.doesNotMatch(await page.locator('body').innerText(),/\b(?:bets?|betting|wagers?|wagering|stakes?|staking|ROI|profit|recommendations?|NO BET)\b/i);
         assert.match(await page.locator('#ats-repair-summary').innerText(),/1,793.*43,032.*Zero qualified/);
         assert.match(await page.locator('#latest-baseline-copy').innerText(), /87,003 target rows and 47,940 browser display rows.*1,223 metric panels.*4,147 checks with zero mismatches.*1,220 model metric panels.*417 season \/ 803 weekly; 4,132 checks.*3 provider panels \/ 15 checks/);
         assert.match(await page.locator('#latest-baseline-issues').innerText(), /255 returned immutable journal objects.*552 distinct verified B045-source issues across 8 games.*549 B045 prospective rows.*3 additional journal rows.*339 B042 issues across 5 games.*does not identify an owner run/);
