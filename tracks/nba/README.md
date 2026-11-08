@@ -5,6 +5,45 @@ Reproducible NBA forecasts, complete released-game inventories, chronological mo
 This NBA track belongs to the shared [Sports Edge Lab](../../README.md) repository. Its public material contains sanitized aggregate evidence and invented engineering examples. Actual game-level forecasts, feature recipes, model weights, source responses, full journals, and execution packages remain private.
 
 
+## November 8 V4 owner execution — completed fits, support-export failure and recovery
+
+**The authenticated B056 owner return records 600 new native NBA estimator fits and 624 completed prediction tasks across 12 distinct regular-season games.** The outputs comprise **600 base forecasts and 24 fixed point blends**; the blends required no additional estimator fits. The separate earlier replay remains unchanged at **1,746 outputs on 37 games**. Completing this bounded pass does not complete the historical research queue, select a champion or establish full-season current issuance.
+
+| New V4 owner work | Recorded count |
+|---|---:|
+| Native estimator fits | **600** |
+| Preprocessing fits | **600** |
+| Base forecasts / fixed point blends | **600 / 24** |
+| Distinct games | **12** |
+| Calibration fits / learned stack fits | **0 / 0** |
+| Separate synthetic runtime canaries | **27** |
+| Newly reported model-fit failures / runtime blockers | **0 / 0** |
+
+The physical compact archive and its embedded executable were authenticated. All 624 returned forecast identities and the fixed-blend arithmetic were independently checked. **The complete scientific-support export nevertheless failed after fitting**, because the ensemble support collector received a task wrapper where it needed the underlying forecast's parent-snapshot bindings. This is a packaging defect, separate from a model-fit crash. The archive retains compact forecasts, comparison tables, input/runtime receipts and omitted-checkpoint pins, but not the full local result, training-list, snapshot and progress bodies. A hash field or pathname does not independently verify an omitted body. The actual outer shell exit remains unobserved because no literal terminal transcript was supplied.
+
+### What the first rolling-origin pass establishes
+
+All 600 native fits used expanding eligible history. The separately registered lookback and recency alternatives still await execution. Earlier-origin support ranges from zero to five outcomes per forecast, below the registered calibration, residual-distribution and learned-stack gates. All **160 selector decisions remain blocked**: 144 for insufficient matched evidence and 16 for missing required season-completion evidence. No selected champion, calibrated probability improvement or prospective superiority is claimed.
+
+The owner reported materializing **86 new history feature columns** in two horizon-specific tables of **15,265 rows each**. The 30,530 row views are not distinct games or distinct features. These transforms were used in the combined feature arm; their materialized table and dependency bodies remain subject to support recovery. The preserved registry still has **225 candidate definitions, 94 implementations and 131 source-dependent proposals**. A materialized column, a combined-arm test and an individually validated predictive gain remain different evidence stages.
+
+The current-season portion contains **108 outputs on two games**: 54 were completed after tip, and 54 before tip using an older source snapshot. Neither class establishes a fresh near-term issue. The feature clock remains November 7 at **01:03:14.928809 UTC**, while the actual fit/issue clocks remain later. The 108 current outputs have no observed result in this return. All saved season projections and original forecasts remain preserved separately; inventory coverage does not imply complete rolling-model coverage.
+
+### The paired feature pilot is mixed and remains descriptive
+
+The return supports **309 paired output records**, of which **255 have labels across nine distinct games**. Compact training counts, training-set hashes, cutoffs, phases and horizons match. Full training-list bodies are absent, and actual CPU thread allocations differ in **84 of the 309 pairs**, despite matching package versions. These qualifications prevent the pilot from being presented as an independently established feature effect or broad season result.
+
+Excluding the uncalibrated Ridge sigmoid diagnostics, the native winner comparison has **72 labeled pairs**: mean log loss worsens from **0.532491 to 0.662510**. Across **81 labeled pairs** for each point target, mean margin absolute error improves from **9.932246 to 9.188276**, and total absolute error improves from **15.429861 to 14.195637**. Fixed point-blend results remain separate and mixed. These are descriptive averages over correlated family views and separately retained event/horizon strata. No confidence interval, statistical superiority or promotion follows. The nineteen labeled Ridge probability-score diagnostics remain preserved and explicitly qualified; the selector does not admit them as calibrated probabilities.
+
+The original **516 metric groups**, **2,568 frozen-control comparisons on four prior target games**, and **516 simple-prior baseline comparisons on ten games** remain available. They are reused saved controls and reported calculations, not newly acquired provider histories or exact replays of a promoted model's private recipe. DraftKings, Kalshi, Polymarket US and international coverage gaps remain explicit. No unavailable reference line or residual support is manufactured into a cover probability or interval.
+
+### Next execution: recover evidence, preserve completed work and advance missing support
+
+The B057 engineering continuation is being prepared to authenticate and recover existing scientific support before any additional fitting, repair ensemble dependency traversal, and resume outcome-blind matched training-window work. Its dispatch design gives approaching current games priority within the bounded pass while preserving historical-origin chronology and compatible completed checkpoints. These are prepared execution changes, not new owner scientific results; they do not alter the existing V4 scientific identity or retroactively refresh old features. Final executable qualification remains separate from this documentation update.
+
+The owner run reports **68.149 seconds** for input preparation, **1,234.859 seconds** for research and **1,395.813 seconds** before final packaging. These internal measurements do not supply an observed outer shell duration or a future time guarantee. Actual cost is not stated without billing evidence. Every new native return remains one compact archive directly in the executing user's home folder. Manual owner execution, original-versus-reconstructed forecasts, public/private boundaries and the unresolved inherited owner gates remain unchanged.
+
+
 ## November 8 V4 continuation — actual paired results and a new rolling research branch
 
 **The latest authenticated B055 owner return adds 572 completed prediction tasks on 22 games, including ten games without earlier replay outputs.** It records **988 new NBA estimator fits, 128 calibration optimizer fits and 156 exact calibration-estimator reuses**. The selected pass had 624 tasks; the other **52 stopped before fitting because their eligible prior cohorts were too small**. There were no newly reported fit failures or runtime blockers. Twenty-six native synthetic canaries remain separate from real NBA fits.
