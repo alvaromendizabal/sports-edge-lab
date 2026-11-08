@@ -1123,6 +1123,7 @@ const { fixture: v4Fixture } = require('./test_v4_review.cjs');
         await page.waitForFunction(()=>document.getElementById('v4-part-status').textContent.startsWith('Verified compressed'));
         assert.equal(await page.locator('[data-v4-record]').count(),25);
         await page.locator('[data-v4-record] details').first().locator('summary').click();
+        await page.locator('[data-v4-record] details pre').first().waitFor({state:'visible'});
         assert.match(await page.locator('[data-v4-record]').first().innerText(),/<img src=x/);
         assert.equal(await page.locator('#v4-part-rows img').count(),0);
         await page.locator('#v4-part-next').click();
