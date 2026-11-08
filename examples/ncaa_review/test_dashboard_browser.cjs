@@ -1073,6 +1073,7 @@ const { fixture: eligibilityFixture } = require('./test_eligibility_viewer.cjs')
       {
         // Every row here is invented; exact private owner data is never committed.
         const eligibility=eligibilityFixture();
+        assert.match(await page.locator('#source-report-choice').innerText(),/B052_SOURCE_SNAPSHOT_DASHBOARD_DATA.json.*2,446 source game rows.*zero supplied model predictions.*58 missing event clocks/s);
         assert.equal(await page.locator('#report').isHidden(),true,'eligibility works without a baseline');
         await page.locator('#eligibility-file').setInputFiles({name:'invented-eligibility.json',mimeType:'application/json',buffer:eligibility.body});
         await page.waitForFunction(()=>document.getElementById('eligibility-load-status').textContent.startsWith('Loaded 29 exact'));

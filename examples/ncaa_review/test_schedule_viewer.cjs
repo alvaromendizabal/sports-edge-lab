@@ -57,7 +57,7 @@ function createHarness(input,extraApi=''){
     get options(){return this.children;}
     querySelector(){return null;}
     setAttribute(name,value){this[name]=value;}
-    get classList(){return {contains:name=>this.className.split(' ').includes(name)};}
+    get classList(){return {contains:name=>this.className.split(' ').includes(name),add:name=>{if(!this.className.split(' ').includes(name))this.className=(this.className+' '+name).trim();}};}
   }
   const nodes=new Map(),get=id=>{if(!nodes.has(id)){const n=new Element(/(?:provider|league|date)$/.test(id)?'select':'div');if(id.endsWith('search'))n.value='';nodes.set(id,n);}return nodes.get(id);};
   const context={Node:Element,Option:function(label,value){this.textContent=label;this.value=value;},document:{getElementById:get,createElement:tag=>new Element(tag),createTextNode:text=>{const n=new Element('text');n.textContent=text;return n;}},TextDecoder,TextEncoder,Uint8Array,ArrayBuffer,crypto:webcrypto};
