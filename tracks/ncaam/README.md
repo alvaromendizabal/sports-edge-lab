@@ -8,6 +8,10 @@ The owner-produced schedule report accounts for **1,460/1,460 provider/gender/da
 
 The original owner display export is **REFERENCE_ONLY_DISPLAY_BYTE_BOUND**: **23,603 records expected and zero included**, because the complete index exceeded its unchanged 25 MiB display-file bound. Its report and exact source-index references are preserved. Loading that reference-only file does not load 23,603 games. No new forecast is joined to schedule-only records, and the older 47,130-row baseline / 2,445 display groups retain their separate denominators.
 
+The separately supplied **B052_FULL_SEASON_SCHEDULE_COMPACT.json** now makes all **23,603 retained index records** loadable in the existing private viewer. Its **4,744,935 bytes** have SHA-256 `13580d79b75255fee79bd66524a7f3aa93640f28eee34406bc93d24228869ea2`. This is a lossless review-derived projection of the authenticated B051 owner index, not a new owner execution. The exact viewer contract loaded every row in a private Node audit. An independent streamed reconstruction matched the **51,300,443-byte** canonical expanded JSON and SHA-256 `f50f68e8b45c9c5ee75329aca3ab9d7b0baf31a7e3c69a19d9b4a19fda880996`, without joining one large canonical string. A real private browser layout is not claimed.
+
+The loaded source populations remain **ESPN men 6,010; ESPN women 5,772; NCAA official men 6,049; NCAA official women 5,772**. Exactly **2,520 records retain null exact tip times**; query dates do not replace them. The loaded index reports zero identity-change flags, which does not resolve the separate 39 ambiguous date responses, 110 rejected source records or older cross-provider identity gaps. Every schedule-only forecast field remains null with its retained reason. The baseline, identity overlay, metrics and model denominators are unchanged.
+
 | Evidence layer | Authenticated B051 observation |
 |---|---|
 | Physical outer ZIP | 17,447,175 bytes; SHA-256 `507cea7ee679c64fc44211770770fe48dbc91896c319fecfc54acdb47fdb9eb7` |
