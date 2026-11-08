@@ -1,10 +1,14 @@
 'use strict';
 (()=>{
- const D=window.FBS_COMPLETE_DATA,H=window.FBS_COMPLETE_HISTORY,R=window.FBS_DEVELOPMENT_STUDY,T=window.FBS_THREE_SEASONS,O=window.FBS_OPTIONAL_STUDY,C=window.FBS_CATBOOST_STUDY,N=window.FBS_OWNER_NEURAL_STUDY,P=window.FBS_CURRENT_CAPTURE,Q=window.FBS_CURRENT_CAPTURE_V043||P,W=window.FBS_CURRENT_CAPTURE_V044||Q,X=window.FBS_CURRENT_CAPTURE_V045,U=window.FBSCurrentCapture,A=window.FBSCoverage,B=window.FBSGameCenter,$=id=>document.getElementById(id);
+ const D=window.FBS_COMPLETE_DATA,H=window.FBS_COMPLETE_HISTORY,R=window.FBS_DEVELOPMENT_STUDY,T=window.FBS_THREE_SEASONS,O=window.FBS_OPTIONAL_STUDY,C=window.FBS_CATBOOST_STUDY,N=window.FBS_OWNER_NEURAL_STUDY,P=window.FBS_CURRENT_CAPTURE,Q=window.FBS_CURRENT_CAPTURE_V043||P,W=window.FBS_CURRENT_CAPTURE_V044||Q,X=window.FBS_CURRENT_CAPTURE_V045,U=window.FBSCurrentCapture,A=window.FBSCoverage,B=window.FBSGameCenter,M=window.FBSResearchMethod,$=id=>document.getElementById(id);
+ const Y=M.captureProjection(window.FBS_OBSERVATION_STATUS_V046);
  if(!D||!H||!R||!T||!O||!C||!N||!X||!window.FBS_REFRESH_EVALUATION_V045||!U||!A||!B){$('result-status').textContent='The report could not be loaded. Use the full season JSON.';return;}
  const current=new Map(D.rows.map(row=>{const g=Object.fromEntries(D.columns.map((key,index)=>[key,row[index]]));return[g.id,g];}));
- const originalGames=T.rows.map(row=>({...current.get(row.id),...row})),latestRows=U.indexRows(X.rows),eveningRows=U.indexRows(W.rows),lateRows=U.indexRows(Q.rows),priorRows=U.indexRows(P.rows);
- const games=originalGames.map(g=>U.resultView(g,latestRows.get(g.id),'latest',D.source_observed_at));
+ const originalGames=T.rows.map(row=>({...current.get(row.id),...row})),latestRows=U.indexRows(Y.rows),nightRows=U.indexRows(X.rows),eveningRows=U.indexRows(W.rows),lateRows=U.indexRows(Q.rows),priorRows=U.indexRows(P.rows);
+ const games=originalGames.map(g=>({...U.resultView(g,latestRows.get(g.id),'latest',D.source_observed_at),period:M.periodFor(U.resultView(g,latestRows.get(g.id),'latest',D.source_observed_at),Y.capture.observed_at)}));
+ const weekWindows=M.weekWindows(Y.capture.observed_at);
+ D.periods.upcoming={label:'Upcoming Pacific week · '+weekWindows.upcoming.label};
+ $('upcoming-week-count').textContent=games.filter(g=>g.season===2026&&g.period==='upcoming').length;
  const originalDevelopment=new Map(R.rows.map(r=>[r.id,r]));
  const optionalDevelopment=new Map(O.rows.map(r=>[r.id,r]));
  const catboostDevelopment=new Map(C.rows.map(r=>[r.id,r]));
@@ -20,11 +24,12 @@
  const signed=v=>v==null?'Not recorded':(v>0?'+':'')+Number(v).toFixed(1);
  const time=v=>v?new Intl.DateTimeFormat('en-US',{timeZone:'America/Los_Angeles',month:'short',day:'numeric',hour:'numeric',minute:'2-digit',timeZoneName:'short'}).format(new Date(v)):'Time not retained';
  const pretty=v=>String(v||'No retained record').replaceAll('_',' ').toLowerCase().replace(/sportsbook/g,'source').replace(/vig removed|no vig|devigged/g,'normalized').replace(/^./,c=>c.toUpperCase());
- const missingModel=g=>refreshIds.has($('model-view').value)?'Outside the registered 119-game changed-input study':$('model-view').value==='retained'?(g.season!==2026?'Original replay is not projected for this season':g.completed?'No retained replay for this completed game':'No authenticated pregame projection'):g.projection_status==='INSUFFICIENT_PRIOR_OUTCOMES'?'Insufficient admitted prior outcomes':!g.kickoff_exact?'Exact kickoff unresolved · reconstruction not admitted':'No authenticated saved targets for this game and family';
- function projection(g,modelId=$('model-view').value){if(modelId==='retained')return {p:g.replay_p_home,margin:g.replay_margin,total:g.replay_total,winner:g.replay_winner,label:'Retained retrospective replay',available:g.replay_p_home!=null};const refreshStudy=refreshIds.has(modelId),newStudy=modelId.startsWith('v039_'),catboostStudy=modelId==='v040_catboost',neuralStudy=modelId.startsWith('v041_'),rec=(refreshStudy?refreshDevelopment:neuralStudy?neuralDevelopment:catboostStudy?catboostDevelopment:newStudy?optionalDevelopment:development).get(g.id),saved=rec?.models[modelId],original=originalDevelopment.get(g.id)?.models[modelId],m=saved?Object.fromEntries(Object.entries(saved).map(([target,v])=>[target,{...v,...original?.[target],interval_computed_at_utc:v.computed_at_utc}])):undefined,p=m?.winner?.prediction;return {p,margin:m?.margin?.prediction,total:m?.total?.prediction,winner:p==null?null:p>=.5?g.home:g.away,label:refreshStudy?'Changed-input reconstruction · timing uncertified':neuralStudy?'Owner neural reconstruction · timing uncertified':catboostStudy?'V040 CatBoost · timing uncertified':newStudy?'V039 development · timing uncertified':'Development · timing uncertified',available:!!m,record:rec,model:m,missing:rec?.missing_targets,scope_reason:refreshStudy&&!rec?'Outside the registered 119-game changed-input study':null};}
+ const missingModel=g=>g.new_fixture_epoch?'Exact kickoff newly resolved · new prediction pending':refreshIds.has($('model-view').value)?'Outside the registered 119-game changed-input study':$('model-view').value==='retained'?(g.season!==2026?'Original replay is not projected for this season':g.completed?'No retained replay for this completed game':'No authenticated pregame projection'):g.projection_status==='INSUFFICIENT_PRIOR_OUTCOMES'?'Insufficient admitted prior outcomes':!g.kickoff_exact?'Exact kickoff unresolved · reconstruction not admitted':'No authenticated saved targets for this game and family';
+ function projection(g,modelId=$('model-view').value){if(g.new_fixture_epoch)return {available:false,p:null,margin:null,total:null,winner:null,label:'New fixture epoch · prediction pending',scope_reason:'Exact kickoff newly resolved; new forecast identity required',missing:{winner:'New fixture epoch prediction pending',margin:'New fixture epoch prediction pending',total:'New fixture epoch prediction pending'}};if(modelId==='retained')return {p:g.replay_p_home,margin:g.replay_margin,total:g.replay_total,winner:g.replay_winner,label:'Retained retrospective replay',available:g.replay_p_home!=null};const refreshStudy=refreshIds.has(modelId),newStudy=modelId.startsWith('v039_'),catboostStudy=modelId==='v040_catboost',neuralStudy=modelId.startsWith('v041_'),rec=(refreshStudy?refreshDevelopment:neuralStudy?neuralDevelopment:catboostStudy?catboostDevelopment:newStudy?optionalDevelopment:development).get(g.id),saved=rec?.models[modelId],original=originalDevelopment.get(g.id)?.models[modelId],m=saved?Object.fromEntries(Object.entries(saved).map(([target,v])=>[target,{...v,...original?.[target],interval_computed_at_utc:v.computed_at_utc}])):undefined,p=m?.winner?.prediction;return {p,margin:m?.margin?.prediction,total:m?.total?.prediction,winner:p==null?null:p>=.5?g.home:g.away,label:refreshStudy?'Changed-input reconstruction · timing uncertified':neuralStudy?'Owner neural reconstruction · timing uncertified':catboostStudy?'V040 CatBoost · timing uncertified':newStudy?'V039 development · timing uncertified':'Development · timing uncertified',available:!!m,record:rec,model:m,missing:rec?.missing_targets,scope_reason:refreshStudy&&!rec?'Outside the registered 119-game changed-input study':null};}
  const quarantined=g=>/QUARANTINED/.test(g.schedule_join||'');
  const support=(g,p,t)=>{try{return JSON.parse(g[`${p}_${t}_point_support`]||'null');}catch{return null;}};
  function reference(g,p,t){
+  if(g.new_fixture_epoch)return {value:'New fixture epoch',kind:'Older references cannot bind to this newly resolved kickoff',present:false};
   if(g.season!==2026)return {value:'Not projected for this season',kind:'Historical provider matrix not imported into this public report',present:false};
   const v=g[`${p}_${t}_value`],s=support(g,p,t);
   if(quarantined(g))return {value:'Identity quarantine',kind:'Older kickoff reference excluded from the current join',present:false};
@@ -40,7 +45,7 @@
  if(refreshed){const group=document.createElement('optgroup');group.label='Changed-input refresh · 119 registered games';group.innerHTML=refreshed.families.map(f=>option(f.id,f.label)).join('');$('model-view').append(group);}
  $('provider-filter').innerHTML=providers.map(p=>option(p,p)).join('');
  function selectedSeasonGames(){return games.filter(g=>state.season==='all'||g.season===Number(state.season));}
- function syncSeason(){const selected=selectedSeasonGames();$('week-filter').innerHTML=option('all','All weeks')+[...new Set(selected.map(g=>g.week))].sort((a,b)=>a-b).map(w=>option(w,'Week '+w)).join('');$('game-heading').textContent=(state.season==='all'?'2024–2026':state.season)+' fixtures & projections';$('all-season-count').textContent=selected.length;$('stat-identified').textContent=selected.length.toLocaleString();$('stat-complete').textContent=selected.filter(g=>g.completed).length.toLocaleString();$('stat-projected').textContent=selected.filter(g=>Object.keys(g.models).length).length.toLocaleString();$('stat-season').textContent=(state.season==='all'?'All three seasons':state.season+' selected')+' · 2,742 total fixtures';$('stat-incomplete').textContent=selected.filter(g=>!g.completed).length+' without an observed final';const missing=selected.filter(g=>!g.kickoff_exact).length,history=selected.filter(g=>g.projection_status==='INSUFFICIENT_PRIOR_OUTCOMES').length;$('stat-missing').textContent=missing+' exact kickoffs unresolved'+(history?' · '+history+' history gaps':'');document.querySelectorAll('[data-period]').forEach(b=>{b.disabled=b.dataset.period!=='all'&&state.season!=='2026';b.setAttribute('aria-pressed',String(b.dataset.period===state.period));});}
+ function syncSeason(){const selected=selectedSeasonGames();$('week-filter').innerHTML=option('all','All weeks')+[...new Set(selected.map(g=>g.week))].sort((a,b)=>a-b).map(w=>option(w,'Week '+w)).join('');$('game-heading').textContent=(state.season==='all'?'2024–2026':state.season)+' fixtures & projections';$('all-season-count').textContent=selected.length;$('stat-identified').textContent=selected.length.toLocaleString();$('stat-complete').textContent=selected.filter(g=>g.completed).length.toLocaleString();$('stat-projected').textContent=selected.filter(g=>Object.keys(g.models).length).length.toLocaleString();$('stat-season').textContent=(state.season==='all'?'All three seasons':state.season+' selected')+' · 2,742 total fixtures';$('stat-incomplete').textContent=selected.filter(g=>!g.completed).length+' without an observed final';const missing=selected.filter(g=>!g.kickoff_exact).length,history=selected.filter(g=>g.projection_status==='INSUFFICIENT_PRIOR_OUTCOMES').length;const epochs=selected.filter(g=>g.new_fixture_epoch).length;$('stat-missing').textContent=missing+' exact kickoffs unresolved'+(epochs?' · '+epochs+' new epochs pending':'')+(history?' · '+history+' history gaps':'');document.querySelectorAll('[data-period]').forEach(b=>{b.disabled=b.dataset.period!=='all'&&state.season!=='2026';b.setAttribute('aria-pressed',String(b.dataset.period===state.period));});}
  $('season-filter').addEventListener('change',()=>{state.season=$('season-filter').value;state.period='all';state.page=0;syncSeason();renderGames();});
  function filtered(ignoreCoverage=false){
   const q=$('game-search').value.trim().toLowerCase(),result=$('result-filter').value,model=$('model-filter').value,week=$('week-filter').value,timing=$('timing-filter').value,referenceTarget=$('reference-target').value,referenceCoverage=$('reference-coverage').value;
@@ -48,7 +53,7 @@
  }
  function periodGames(){return selectedSeasonGames().filter(g=>state.period==='all'||g.period===state.period);}
  function renderPeriodOverview(){
-  const rows=periodGames(),counts=B.periodSummary(rows,projection,$('model-view').value,A),label=state.period==='all'?(state.season==='all'?'All three seasons':state.season+' season'):state.period==='current'?'Current Pacific week':'Previous Pacific week';
+  const rows=periodGames(),counts=B.periodSummary(rows,projection,$('model-view').value,A),label=state.period==='all'?(state.season==='all'?'All three seasons':state.season+' season'):state.period==='current'?'Dated current Pacific week':state.period==='upcoming'?'Upcoming Pacific week':'Previous Pacific week';
   $('period-overview-title').textContent=label+' · full fixture inventory';
   $('period-overview-status').textContent=`${counts.games} games · ${counts.completed} observed finals · ${counts.without_final} without a final in this capture`;
   $('period-overview-note').textContent=`Selected model: ${counts.winner} winner / probability · ${counts.margin} margin · ${counts.total} total · ${counts.cover} qualified cover. Counts above include the whole period before team, result, output, timing or reference filters.`;
@@ -59,7 +64,7 @@
   const route=B.comparisonRoute(state.season,state.period,$('capture-view').value);
   const refreshChoice=refreshIds.has($('model-view').value);
   const refreshSnapshot=['latest','nov7_evening'].includes($('capture-view').value);
-  $('compare-selected-period').disabled=!route||(refreshChoice&&(['2024','2025'].includes(state.season)||!refreshSnapshot));$('compare-selected-period').textContent=refreshChoice?(refreshSnapshot?'Compare refreshed study outcomes':'No refresh evaluation for this snapshot'):route?'Compare '+label.toLowerCase():'No stored all-season original comparison';
+  $('compare-selected-period').disabled=!route||(refreshChoice&&(['2024','2025'].includes(state.season)||!refreshSnapshot));$('compare-selected-period').textContent=refreshChoice?(refreshSnapshot?'Compare refreshed study outcomes':'No refresh evaluation for this snapshot'):route?'Compare '+label.toLowerCase():state.period==='upcoming'?'Upcoming results not yet observed':'No stored all-season original comparison';
  }
  function renderAccounting(){
   const family=$('model-view').value,target=$('coverage-target').value,counts=A.reconcile(filtered(true),projection,family,target);
@@ -76,7 +81,7 @@
  function restoreView(){
   const params=new URLSearchParams(location.search),apply=(key,id)=>{const value=params.get(key);if(value!==null&&[...$(id).options].some(o=>o.value===value))$(id).value=value;};
   apply('snapshot','capture-view');applyCapture();apply('season','season-filter');state.season=$('season-filter').value;
-  state.period=state.season==='2026'&&['all','previous','current'].includes(params.get('period'))?params.get('period'):'all';syncSeason();
+  state.period=state.season==='2026'&&['all','previous','current','upcoming'].includes(params.get('period'))?params.get('period'):'all';syncSeason();
   for(const [key,id] of Object.entries(viewFields))if(key!=='season'&&key!=='snapshot')apply(key,id);
   $('game-search').value=(params.get('q')||'').slice(0,120);state.page=0;
   $('advanced-game-filters').open=params.get('filters')==='open'||['result','coverage','target','week','snapshot','timing','reference_coverage'].some(key=>params.has(key)&&!['all','any','latest'].includes(params.get(key)));
@@ -131,7 +136,7 @@
    return `<div class="provider-target"><strong>${t==='winner'?'Home probability':t==='margin'?'Home margin reference':'Total reference'}: ${esc(r.value)}</strong><p>${esc(r.kind)}</p><details><summary>Inspect product, cutoff & source clocks</summary><dl>${details.map(([key,value])=>`<dt>${esc(key)}</dt><dd>${esc(value||'No retained evidence')}</dd>`).join('')}</dl></details></div>`;
   }).join('')}</article>`).join('');
   const fresh=X.draftkings.events.find(e=>e.id===g.id);
-  $('dialog-current-source').innerHTML=fresh?`<section class="notice"><strong>Separate latest DraftKings capture</strong><span>Home probability ${pct(fresh.targets.winner.value)} · margin ${signed(fresh.targets.margin.value)} · total ${num(fresh.targets.total.value)}.</span><span>Captured ${esc(fresh.captured_at)} · quote ${esc(fresh.quote_at)}. ${esc(fresh.status_text)}. ${esc(fresh.model_cutoff_status)}.</span></section>`:'<p class="footnote">No exact official-game association is admitted for this game in the latest DraftKings capture. Older provider references remain separate above.</p>';
+  $('dialog-current-source').innerHTML=fresh?`<section class="notice"><strong>Separate retained DraftKings capture</strong><span>Home probability ${pct(fresh.targets.winner.value)} · margin ${signed(fresh.targets.margin.value)} · total ${num(fresh.targets.total.value)}.</span><span>Captured ${esc(fresh.captured_at)} · quote ${esc(fresh.quote_at)}. ${esc(fresh.status_text)}. ${esc(fresh.model_cutoff_status)}.</span></section>`:'<p class="footnote">No exact official-game association is admitted for this game in the retained evaluated DraftKings capture. Older provider references remain separate above.</p>';
   $('game-dialog').showModal();
   document.dispatchEvent(new CustomEvent('fbs:game-opened',{detail:{id:g.id}}));
  }
@@ -160,8 +165,8 @@
 
  function applyCapture(){
   const selected=$('capture-view').value;
-  const rows=selected==='prior'?priorRows:selected==='nov7_late'?lateRows:selected==='nov7_evening'?eveningRows:latestRows;
-  games.splice(0,games.length,...originalGames.map(g=>U.resultView(g,rows.get(g.id),selected,D.source_observed_at)));
+  const rows=selected==='nov7_night'?nightRows:selected==='prior'?priorRows:selected==='nov7_late'?lateRows:selected==='nov7_evening'?eveningRows:latestRows;
+  games.splice(0,games.length,...originalGames.map(g=>{const view=U.resultView(g,rows.get(g.id),selected,D.source_observed_at);return {...view,period:M.periodFor(view,Y.capture.observed_at)};}));
  }
  $('capture-view').addEventListener('change',()=>{applyCapture();state.page=0;syncSeason();renderGames();});
  $('show-new-finals').addEventListener('click',()=>{
@@ -189,17 +194,18 @@
   if(!latest&&['newly_observed','cumulative'].includes($('development-cohort').value))$('development-cohort').value='2026';
  }
  function renderLatestCapture(){
-  $('capture-view').querySelector('[value=latest]').textContent='Latest · '+time(X.capture.observed_at);
+  $('capture-view').querySelector('[value=latest]').textContent='Latest · '+time(Y.capture.observed_at);
+  $('capture-view').querySelector('[value=nov7_night]').textContent=time(X.capture.observed_at);
   $('capture-view').querySelector('[value=nov7_evening]').textContent=time(W.capture.observed_at);
   const refreshScope=refreshEvaluation.coverage['2026'],refreshWeek=refreshEvaluation.coverage.current_week;
   $('refresh-evaluation-summary').textContent=`The separate changed-input study retains 3,808 saved outputs on 119 registered 2026 games, including 14 current-week games and 105 later games. ${refreshScope.observed_completed} registered games now have observed finals (${refreshWeek.observed_completed} in the current week); ${refreshScope.registered_target_games-refreshScope.observed_completed} remain unscored. Compare its recorded metrics on exact matched target/game cohorts, or retain the earlier pending evaluation. All scored refresh outputs were computed at or after cutoff. These are small-sample reconstructions; no authenticated issues, default or champion changes.`;
-  $('capture-clock').textContent=time(X.capture.observed_at)+' · '+X.capture.observed_at;
-  $('latest-evidence-clock').textContent=X.capture.observed_at+' · completed '+X.capture.completed_at;
-  $('capture-heading').textContent=`${X.counts.newly_observed} more finals since the prior capture`;
-  $('show-new-finals').textContent=`Show the ${X.counts.newly_observed} added finals`;
-  $('capture-update-summary').textContent=`2026 has ${X.counts.seasons['2026'].completed} observed finals, including ${X.counts.periods.current_week.completed} of the current week’s 63 games. All 2,742 fixture identities and saved forecasts are unchanged. There are ${X.counts.newly_observed} new finals since ${time(W.capture.observed_at)} (${W.counts.seasons['2026'].completed} / ${W.counts.periods.current_week.completed}), and ${X.counts.newly_observed_since_original_snapshot} since November 6 (629 / 7). All four earlier result snapshots remain selectable.`;
+  $('capture-clock').textContent=time(Y.capture.observed_at)+' · '+Y.capture.observed_at;
+  $('latest-evidence-clock').textContent=Y.capture.observed_at+' · capture completed '+Y.capture.completed_at;
+  $('capture-heading').textContent=`${Y.counts.newly_observed} more finals · current week complete`;
+  $('show-new-finals').textContent=`Show the ${Y.counts.newly_observed} added finals`;
+  $('capture-update-summary').textContent=`2026 has ${Y.counts.seasons['2026'].completed} observed finals, including all ${Y.counts.periods.current_week.completed} current-week games. The upcoming Pacific week has ${Y.counts.periods.upcoming_week.identified} exact-kickoff fixtures. There are ${Y.counts.newly_observed} new finals since ${time(X.capture.observed_at)} and ${Y.counts.newly_observed_since_original_snapshot} since November 6. Three previously unresolved kickoffs create new fixture epochs with predictions pending. All five earlier snapshots and original forecast values remain available. Latest-outcome evaluation is pending; stored scores retain their earlier date.`;
   const d=X.draftkings;
-  $('latest-source-summary').textContent=d.summary;
+  $('latest-source-summary').textContent='Retained exact associations from '+time(X.capture.observed_at)+'. '+d.summary+' The newer '+time(Y.capture.observed_at)+' capture contains 201 target observations across 67 events, with 33 exact event / 99 target associations and 99 source-available rows by both T−120 and T−60. These are source associations, not new qualified model inputs; its metadata remains separate from the older numerical values below.';
   $('latest-source-counts').innerHTML=`<span><b>${d.event_count}</b> captured events</span><span><b>${d.target_rows}</b> target observations</span><span><b>${d.source_clock_qualified_rows}</b> source-clock checks passed</span><span><b>${d.post_kickoff_rows}</b> after kickoff</span><span><b>${d.exact_game_events}</b> exact official event joins</span>`;
   $('latest-source-rows').innerHTML=d.events.map(e=>{
    const field=t=>{const r=e.targets[t];return r?.value==null?absent(r?.reason||'No captured target'):t==='winner'?pct(r.value):t==='margin'?signed(r.value):num(r.value);};
@@ -208,5 +214,5 @@
  }
  $('latest-source-rows').addEventListener('click',event=>{const button=event.target.closest('[data-capture-game]');if(button)openGame(button.dataset.captureGame);});
  renderLatestCapture();restoreView();renderDevelopment();renderGames();renderComparison();renderCoverageMatrix();renderRegistry();
- window.FBSCompleteReview={filtered,reference,games,projection,selectedSeasonGames,openGame,renderGames,get page(){return state.page;},get pageSize(){return pageSize();}};
+ window.FBSCompleteReview={filtered,reference,games,projection,selectedSeasonGames,openGame,renderGames,get captureClock(){return Y.capture.completed_at;},get page(){return state.page;},get pageSize(){return pageSize();}};
 })();
