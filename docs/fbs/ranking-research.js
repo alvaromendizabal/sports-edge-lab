@@ -110,5 +110,6 @@
     });
     render();
   }
-  if(document.readyState==='loading')document.addEventListener('DOMContentLoaded',init,{once:true});else init();
+  // Deferred scripts run with readyState=interactive before later dependencies.
+  if(window.FBSCompleteReview)init();else document.addEventListener('DOMContentLoaded',init,{once:true});
 })();

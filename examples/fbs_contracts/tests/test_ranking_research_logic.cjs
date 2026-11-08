@@ -43,3 +43,10 @@ test('the captured census does not invent missing historical rating counts',()=>
  assert.equal(absent.length,8);assert.ok(absent.every(r=>r.records===null&&r.editions===null&&r.teams===null));
  assert.equal(p.request_count,9);assert.deepEqual(p.feature_counts,{admitted:0,evaluated:0,promoted:0});
 });
+test('interactive document readiness cannot outrun the deferred game explorer',()=>{
+ const fs=require('node:fs'),vm=require('node:vm'),events=[];
+ const document={readyState:'interactive',addEventListener:(name,fn,options)=>events.push({name,fn,options}),getElementById:()=>{throw Error('Premature initialization')}};
+ const window={};vm.runInNewContext(fs.readFileSync(require.resolve('../../../docs/fbs/ranking-research.js'),'utf8'),{window,document});
+ assert.equal(events.length,1);assert.equal(events[0].name,'DOMContentLoaded');assert.equal(events[0].options.once,true);
+ assert.equal(typeof window.FBSRankingResearch.gameStatus,'function');
+});
