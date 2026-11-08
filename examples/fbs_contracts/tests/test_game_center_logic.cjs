@@ -63,9 +63,29 @@ test('period result and target counts retain missing outputs without excluding f
  assert.deepEqual(G.periodSummary(rows,r=>r,'v040_catboost',A),{games:3,completed:1,without_final:2,winner:1,margin:2,total:2,cover:0,complete:1,partial:1,missing:1});
 });
 test('period comparison follows the selected dated snapshot without inventing cumulative original scores',()=>{
- assert.deepEqual(G.comparisonRoute('2026','current','latest'),{study:'v044',cohort:'current_week'});
+ assert.deepEqual(G.comparisonRoute('2026','current','latest'),{study:'v045',cohort:'current_week'});
  assert.deepEqual(G.comparisonRoute('2026','previous','nov7_late'),{study:'v043',cohort:'previous_week'});
  assert.deepEqual(G.comparisonRoute('2025','all','prior'),{study:'v042',cohort:'2025'});
  assert.deepEqual(G.comparisonRoute('2026','current','original'),{study:'v041',cohort:'current_week'});
+ assert.deepEqual(G.comparisonRoute('2026','current','nov7_evening'),{study:'v044',cohort:'current_week'});
  assert.equal(G.comparisonRoute('all','all','original'),null);
+});
+test('saved output timing uses precise original clocks and treats the cutoff boundary as late',()=>{
+ const make=computed=>({p:.6,record:{cutoff:'2026-11-08T01:00:00.000001Z'},model:{winner:{computed_at_utc:computed}}});
+ assert.equal(G.timing(make('2026-11-08T01:00:00.000000Z')).status,'before');
+ assert.equal(G.timing(make('2026-11-08T01:00:00.000001Z')).status,'at_or_after');
+ assert.equal(G.timing(make('2026-11-08T01:00:00.000002Z')).status,'at_or_after');
+});
+test('missing, malformed or conflicting clocks remain unverified instead of implying availability',()=>{
+ const value={p:.7,record:{cutoff:'2026-11-08T02:00:00Z'},model:{winner:{computed_at_utc:'2026-11-08T01:00:00Z',computed_before_cutoff:false}}};
+ assert.equal(G.timing(value).status,'unverified');
+ for(const clock of [null,'invalid','2026-02-30T01:00:00Z','2026-11-08T01:00:00','2026-11-08T01:00:00.1234567890Z'])assert.equal(G.timing({...value,model:{winner:{computed_at_utc:clock}}}).status,'unverified');
+ assert.equal(G.timing({p:.6}).status,'unverified');
+ assert.equal(G.timing({}).status,'none');
+});
+test('mixed targets are accounted individually and missing family targets are not counted as clocks',()=>{
+ const value={margin:2,total:45,record:{cutoff:'2026-11-08T02:00:00Z'},model:{winner:{computed_at_utc:'2026-11-09T00:00:00Z'},margin:{computed_at_utc:'2026-11-08T01:00:00Z'},total:{computed_at_utc:'2026-11-08T03:00:00Z'}}};
+ const result=G.timing(value);assert.equal(result.status,'at_or_after');assert.equal(result.saved,2);assert.deepEqual(result.counts,{before:1,at_or_after:1,unverified:0});
+ assert.equal(G.timing({...value,model:{...value.model,total:{}}}).status,'unverified');
+ assert.deepEqual(G.timingSummary([value,{p:.7},{}],v=>v),{games:3,before:0,at_or_after:1,unverified:1,none:1});
 });

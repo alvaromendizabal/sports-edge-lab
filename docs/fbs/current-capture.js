@@ -18,7 +18,7 @@
   function resultView(game, row, snapshot, originalClock) {
     const out = {...game, result_snapshot: 'original', result_observed_at: originalClock,
       newly_observed_final: false, latest_identity_status: sameIdentity(game, row) ? 'Exact unchanged identity' : 'Current capture identity not admitted'};
-    if (!['latest','nov7_late','prior'].includes(snapshot) || !sameIdentity(game, row)) return out;
+    if (!['latest','nov7_evening','nov7_late','prior'].includes(snapshot) || !sameIdentity(game, row)) return out;
     if (row.completed && (!finite(row.home_score) || !finite(row.away_score) ||
         row.home_score < 0 || row.away_score < 0)) return out;
     // The overlay changes observed outcomes only. Forecasts, cutoff, kickoff and

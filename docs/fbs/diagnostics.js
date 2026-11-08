@@ -60,7 +60,7 @@
   if (typeof module !== 'undefined' && module.exports) module.exports = api;
   if (typeof window === 'undefined') return;
   window.FBSDiagnostics = api;
-  const G = window.FBSCompleteReview, R = window.FBS_DEVELOPMENT_STUDY, O = window.FBS_OPTIONAL_STUDY, C = window.FBS_CATBOOST_STUDY, N = window.FBS_OWNER_NEURAL_STUDY, P = window.FBS_CURRENT_CAPTURE, Q = window.FBS_CURRENT_CAPTURE_V043 || P, X = window.FBS_CURRENT_CAPTURE_V044 || Q, F = window.FBS_CHANGED_INPUT_STUDY;
+  const G = window.FBSCompleteReview, R = window.FBS_DEVELOPMENT_STUDY, O = window.FBS_OPTIONAL_STUDY, C = window.FBS_CATBOOST_STUDY, N = window.FBS_OWNER_NEURAL_STUDY, P = window.FBS_CURRENT_CAPTURE, Q = window.FBS_CURRENT_CAPTURE_V043 || P, W = window.FBS_CURRENT_CAPTURE_V044 || Q, X = window.FBS_CURRENT_CAPTURE_V045, F = window.FBS_CHANGED_INPUT_STUDY, E = window.FBS_REFRESH_EVALUATION_V045;
   if (!G || !R || !O || !C || !N || !X) return;
   const $ = id => document.getElementById(id);
   const esc = value => String(value ?? '').replace(/[&<>"']/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
@@ -81,7 +81,7 @@
     link.href = url; link.download = name; link.click(); setTimeout(() => URL.revokeObjectURL(url), 1000);
   }
   function rows() {
-    return ((({v044_refresh:F,v044:X,v043:Q,v042:P,v041:N,v040:C,v039:O,v038:R}[$('development-study').value])).metrics[$('development-cohort').value] || [])
+    return ((({v045_refresh:E,v044_refresh:F,v045:X,v044:W,v043:Q,v042:P,v041:N,v040:C,v039:O,v038:R}[$('development-study').value])).metrics[$('development-cohort').value] || [])
       .filter(row => row.target === $('development-target').value);
   }
   function renderTargetCoverage() {
@@ -102,7 +102,7 @@
         const saved = value.model?.[target];
         return saved?.interval80 && saved?.interval95 ? `${target}: 80% ${saved.interval80.map(v => number(v,1)).join(' to ')}; 95% ${saved.interval95.map(v => number(v,1)).join(' to ')}` : `${target}: no saved intervals`;
       }).join(' · ');
-      return `<tr${model.value === selected ? ' class="selected-model"' : ''}><td><strong>${esc(model.text)}</strong>${small(model.value === selected ? 'Selected in game center' : value.label)}</td><td>${esc(winner)}${small('Home ' + percent(value.p))}</td><td>${signed(value.margin)}</td><td>${number(value.total)}</td><td>${score ? `${number(score.away,1)} – ${number(score.home,1)}${small(score.negative ? 'Unconstrained center below zero; retained without clipping' : 'Away – home · derived from displayed point centers')}` : 'Both point targets required'}</td><td>${esc(result)}${small('Margin error ' + signed(errors?.margin_error))}${small('Total error ' + signed(errors?.total_error))}</td><td>${esc(intervals)}</td></tr>`;
+      return `<tr${model.value === selected ? ' class="selected-model"' : ''}><td><strong>${esc(model.text)}</strong>${small(model.value === selected ? 'Selected in game center' : value.label)}${small(window.FBSGameCenter.timing(value).label)}</td><td>${esc(winner)}${small('Home ' + percent(value.p))}</td><td>${signed(value.margin)}</td><td>${number(value.total)}</td><td>${score ? `${number(score.away,1)} – ${number(score.home,1)}${small(score.negative ? 'Unconstrained center below zero; retained without clipping' : 'Away – home · derived from displayed point centers')}` : 'Both point targets required'}</td><td>${esc(result)}${small('Margin error ' + signed(errors?.margin_error))}${small('Total error ' + signed(errors?.total_error))}</td><td>${esc(intervals)}</td></tr>`;
     }).join('');
     $('game-comparison-note').textContent = 'Same official game identity across saved model families. Score centers are (total ± home margin) / 2 and may be fractional or unconstrained. Errors use the rounded displayed points and are not used to rescore headline metrics. Cover probability is not inferred from these outputs.';
   }
@@ -143,18 +143,18 @@
     $('metric-deltas').innerHTML = list.map(row => {
       const delta = paired?pairedMetricDelta(row,baseline,key):metricDelta(row,baseline,key);
       return `<tr><td>${esc(familyLabel(row))}</td><td>${paired?(delta.games??'Not admitted'):row.games}</td><td>${number(paired?delta.model_value:row[key],4)}${paired?small('Paired baseline '+number(delta.baseline_value,4)):''}</td><td>${finite(delta.value)?signed(delta.value,4):esc(delta.reason)}</td><td>${esc(delta.value==null?delta.reason:delta.value===0?'Baseline / equal metric':delta.value<0?'Lower on this cohort':'Higher on this cohort')}${paired&&delta.cohort?small('Exact common cohort '+delta.cohort.slice(0,12)):''}</td></tr>`;
-    }).join('') || '<tr><td colspan="5">No authenticated comparable cover cohort or recorded cover probabilities. No score is assigned.</td></tr>';
+    }).join('') || `<tr><td colspan="5">${target==='cover'?'No authenticated comparable cover cohort or recorded cover probabilities.':'No recorded evaluation for this study, target and cohort.'} No score is assigned.</td></tr>`;
     $('delta-metric-name').textContent = key === 'log_loss' ? 'Log loss ↓' : 'MAE ↓';
     $('delta-note').textContent = paired ? 'Each row uses its already-recorded paired model and fixed-baseline metrics on exactly the same target and game IDs. A family with missing targets keeps its smaller common cohort; the full-season metric above remains unchanged. No rounded game value is rescored, and this descriptive view cannot establish issuance or select a champion.' : baseline ? `Baseline: ${familyLabel(baseline)}. Negative differences mean lower ${key === 'log_loss' ? 'log loss' : 'MAE'}, with matching target, game count and exact game-ID hash required. Cohort ${baseline.exact_game_ids_sha256}. These stored reconstruction metrics cannot establish pregame issuance or select a champion.` : 'There is no valid baseline for this study, target and cohort. Unavailable scores are not zero.';
     $('export-metrics').disabled = list.length === 0;
-    const winnerRows = ((({v044_refresh:F,v044:X,v043:Q,v042:P,v041:N,v040:C,v039:O,v038:R}[$('development-study').value])).metrics[cohort] || []).filter(row => row.target === 'winner');
+    const winnerRows = ((({v045_refresh:E,v044_refresh:F,v045:X,v044:W,v043:Q,v042:P,v041:N,v040:C,v039:O,v038:R}[$('development-study').value])).metrics[cohort] || []).filter(row => row.target === 'winner');
     selectOptions($('calibration-model'),winnerRows,preferred);
     renderCalibration(winnerRows);
   }
   $('diagnostic-baseline').addEventListener('change',renderMetricDiagnostics);
   $('comparison-scope').addEventListener('change',renderMetricDiagnostics);
   $('calibration-model').addEventListener('change',() => {
-    const source = ({v044_refresh:F,v044:X,v043:Q,v042:P,v041:N,v040:C,v039:O,v038:R}[$('development-study').value]);
+    const source = ({v045_refresh:E,v044_refresh:F,v045:X,v044:W,v043:Q,v042:P,v041:N,v040:C,v039:O,v038:R}[$('development-study').value]);
     renderCalibration((source.metrics[$('development-cohort').value] || []).filter(row => row.target === 'winner'));
   });
   ['development-study','development-cohort','development-target'].forEach(id => $(id).addEventListener('change',renderMetricDiagnostics));
@@ -166,7 +166,7 @@
   });
   $('export-game-models').addEventListener('click',() => {
     const game = G.games.find(row => row.id === openGameId);if(!game)return;
-    const records = [...$('model-view').options].map(model => {const p=G.projection(game,model.value),s=scoreCenters(p.margin,p.total),e=observedErrors(game,p);return {result_snapshot:game.result_snapshot,result_observed_at:game.result_observed_at,newly_observed_final:game.newly_observed_final,season:game.season,game_id:game.id,away:game.away,home:game.home,model:model.value,evidence:p.label,p_home:p.p,margin:p.margin,total:p.total,derived_away_score:s?.away,derived_home_score:s?.home,observed_winner_correct:e?.winner_correct,display_margin_error:e?.margin_error,display_total_error:e?.total_error,margin_interval80:p.model?.margin?.interval80,margin_interval95:p.model?.margin?.interval95,total_interval80:p.model?.total?.interval80,total_interval95:p.model?.total?.interval95,cover_status:p.model?.margin?.cover_status || 'NO_QUALIFIED_COVER_PROBABILITY',cutoff:p.record?.cutoff,computed_at:p.model?.winner?.computed_at_utc || p.model?.margin?.computed_at_utc};});
+    const records = [...$('model-view').options].map(model => {const p=G.projection(game,model.value),s=scoreCenters(p.margin,p.total),e=observedErrors(game,p);return {result_snapshot:game.result_snapshot,result_observed_at:game.result_observed_at,newly_observed_final:game.newly_observed_final,season:game.season,game_id:game.id,away:game.away,home:game.home,model:model.value,evidence:p.label,p_home:p.p,margin:p.margin,total:p.total,derived_away_score:s?.away,derived_home_score:s?.home,observed_winner_correct:e?.winner_correct,display_margin_error:e?.margin_error,display_total_error:e?.total_error,margin_interval80:p.model?.margin?.interval80,margin_interval95:p.model?.margin?.interval95,total_interval80:p.model?.total?.interval80,total_interval95:p.model?.total?.interval95,cover_status:p.model?.margin?.cover_status || 'NO_QUALIFIED_COVER_PROBABILITY',cutoff:p.record?.cutoff,computation_timing:window.FBSGameCenter.timing(p).status,computed_last:window.FBSGameCenter.chronology(p).computed_last,computed_at:p.model?.winner?.computed_at_utc || p.model?.margin?.computed_at_utc};});
     download(`fbs-${game.id}-saved-model-comparison.csv`,csv(records,Object.keys(records[0])));
   });
   document.addEventListener('fbs:games-rendered',renderTargetCoverage);
