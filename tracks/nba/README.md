@@ -5,7 +5,7 @@ Reproducible NBA forecasts, complete released-game inventories, chronological mo
 This NBA track belongs to the shared [Sports Edge Lab](../../README.md) repository. Its public material contains sanitized aggregate evidence and invented engineering examples. Actual game-level forecasts, feature recipes, model weights, source responses, full journals, and execution packages remain private.
 
 
-## November 8 ## November 8 V4 continuation — actual paired results and a new rolling research branch
+## November 8 V4 continuation — actual paired results and a new rolling research branch
 
 **The latest authenticated B055 owner return adds 572 completed prediction tasks on 22 games, including ten games without earlier replay outputs.** It records **988 new NBA estimator fits, 128 calibration optimizer fits and 156 exact calibration-estimator reuses**. The selected pass had 624 tasks; the other **52 stopped before fitting because their eligible prior cohorts were too small**. There were no newly reported fit failures or runtime blockers. Twenty-six native synthetic canaries remain separate from real NBA fits.
 
@@ -47,7 +47,8 @@ The complete private comparison catalog now retains **19,688 metric/reference re
 Every native final return remains **one compact archive directly in the executing user's home folder**, including partial work and handled failure. Actual shell exit, internal status, omitted checkpoint bodies and cloud durability remain separate evidence. The user manually launches the owner command; the daily research review is not unattended AWS training. Public documentation contains sanitized aggregates only. Private source, features, prompts, weights, current game-level grids and execution artifacts remain private. Earlier sections below preserve their dated evidence and then-current limits.
 
 
-distinct-game replay — actual progress and remaining coverage
+
+## November 8 distinct-game replay — actual progress and remaining coverage
 
 **The authenticated B054 native return completes all 624 prediction tasks selected for its bounded pass, adding 24 distinct games: eight in each of the three registered seasons.** It records **1,196 new NBA estimator fits and 176 new prior-only calibration optimizer fits**. Another **550 completed prediction tasks were reused**, preserving the earlier work. Cumulative replay coverage is now **1,174 completed prediction tasks across 27 distinct games**. These are separate counts: a family, objective or cutoff variant is not another game. Completing the selected pass does not complete the full registered research queue or the inherited owner workflow.
 
