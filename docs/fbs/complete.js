@@ -1,7 +1,7 @@
 'use strict';
 (()=>{
- const D=window.FBS_COMPLETE_DATA,H=window.FBS_COMPLETE_HISTORY,R=window.FBS_DEVELOPMENT_STUDY,T=window.FBS_THREE_SEASONS,O=window.FBS_OPTIONAL_STUDY,C=window.FBS_CATBOOST_STUDY,N=window.FBS_OWNER_NEURAL_STUDY,X=window.FBS_CURRENT_CAPTURE,U=window.FBSCurrentCapture,A=window.FBSCoverage,$=id=>document.getElementById(id);
- if(!D||!H||!R||!T||!O||!C||!N||!X||!U||!A){$('result-status').textContent='The report could not be loaded. Use the full season JSON.';return;}
+ const D=window.FBS_COMPLETE_DATA,H=window.FBS_COMPLETE_HISTORY,R=window.FBS_DEVELOPMENT_STUDY,T=window.FBS_THREE_SEASONS,O=window.FBS_OPTIONAL_STUDY,C=window.FBS_CATBOOST_STUDY,N=window.FBS_OWNER_NEURAL_STUDY,X=window.FBS_CURRENT_CAPTURE,U=window.FBSCurrentCapture,A=window.FBSCoverage,B=window.FBSGameCenter,$=id=>document.getElementById(id);
+ if(!D||!H||!R||!T||!O||!C||!N||!X||!U||!A||!B){$('result-status').textContent='The report could not be loaded. Use the full season JSON.';return;}
  const current=new Map(D.rows.map(row=>{const g=Object.fromEntries(D.columns.map((key,index)=>[key,row[index]]));return[g.id,g];}));
  const originalGames=T.rows.map(row=>({...current.get(row.id),...row})),latestRows=U.indexRows(X.rows);
  const games=originalGames.map(g=>U.resultView(g,latestRows.get(g.id),'latest',D.source_observed_at));
@@ -40,13 +40,13 @@
  $('season-filter').addEventListener('change',()=>{state.season=$('season-filter').value;state.period='all';state.page=0;syncSeason();renderGames();});
  function filtered(ignoreCoverage=false){
   const q=$('game-search').value.trim().toLowerCase(),result=$('result-filter').value,model=$('model-filter').value,week=$('week-filter').value;
-  return selectedSeasonGames().filter(g=>(state.period==='all'||g.period===state.period)&&(!q||`${g.id} ${g.away} ${g.home}`.toLowerCase().includes(q))&&(result==='all'||result==='new'&&g.newly_observed_final||result==='complete'&&g.completed||result==='scheduled'&&!g.completed)&&(week==='all'||g.week===Number(week))&&(ignoreCoverage||A.matches(projection(g),$('model-view').value,$('coverage-target').value,model,quarantined(g))));
+  return B.orderGames(selectedSeasonGames().filter(g=>(state.period==='all'||g.period===state.period)&&(!q||`${g.id} ${g.away} ${g.home}`.toLowerCase().includes(q))&&(result==='all'||result==='new'&&g.newly_observed_final||result==='complete'&&g.completed||result==='scheduled'&&!g.completed)&&(week==='all'||g.week===Number(week))&&(ignoreCoverage||A.matches(projection(g),$('model-view').value,$('coverage-target').value,model,quarantined(g)))),$('game-sort').value);
  }
  function renderAccounting(){
   const family=$('model-view').value,target=$('coverage-target').value,counts=A.reconcile(filtered(true),projection,family,target);
   $('coverage-accounting').innerHTML=`<div><strong>${counts.games.toLocaleString()} fixtures accounted for</strong><span>Expected for this family: ${counts.expected_targets.map(k=>A.names[k]).join(' · ')}.</span></div><div class="coverage-actions" role="group" aria-label="Find incomplete forecasts"><button data-coverage="complete"><b>${counts.complete.toLocaleString()}</b> all family targets</button><button data-coverage="partial"><b>${counts.partial.toLocaleString()}</b> partial outputs</button><button data-coverage="missing"><b>${counts.missing.toLocaleString()}</b> no saved output</button></div>${target!=='any'?`<p><strong>${esc(A.names[target])}:</strong> ${counts.target_present.toLocaleString()} available · ${counts.target_missing.toLocaleString()} unavailable in this selection.</p>`:''}${counts.missing_reasons.length?`<details><summary>Why ${counts.target_missing.toLocaleString()} games have no ${target==='any'?'saved output':esc(A.names[target].toLowerCase())}</summary><ul>${counts.missing_reasons.map(r=>`<li><strong>${r.games.toLocaleString()}</strong> · ${esc(r.reason)}</li>`).join('')}</ul></details>`:''}`;
  }
- const viewFields={snapshot:'capture-view',season:'season-filter',model:'model-view',target:'coverage-target',coverage:'model-filter',provider:'provider-filter',result:'result-filter',week:'week-filter'};
+ const viewFields={view:'game-layout',order:'game-sort',snapshot:'capture-view',season:'season-filter',model:'model-view',target:'coverage-target',coverage:'model-filter',provider:'provider-filter',result:'result-filter',week:'week-filter'};
  function syncViewLink(){
   const url=new URL(location.href);url.search='';url.hash='game-heading';
   for(const [key,id] of Object.entries(viewFields))url.searchParams.set(key,$(id).value);
@@ -73,7 +73,7 @@
   $('reference-heading').innerHTML=esc(p)+'<br><small>retained reference</small>';
   const cov=t=>list.filter(g=>reference(g,p,t).present).length;
   $('provider-coverage').innerHTML=`<span><b>${esc(p)}</b> in this selection</span><span>Winner <b>${cov('winner')} / ${list.length}</b></span><span>Margin line or interval <b>${cov('margin')} / ${list.length}</b></span><span>Total line or interval <b>${cov('total')} / ${list.length}</b></span><span>Historical possession verified: <b>0</b></span>`;
-  $('game-rows').innerHTML=page.map(g=>{
+  if($('game-layout').value==='table')$('game-rows').innerHTML=page.map(g=>{
    const r=reference(g,p,'winner'),m=reference(g,p,'margin'),t=reference(g,p,'total'),v=projection(g),has=v.p!=null;
    const picked=has?Math.max(v.p,1-v.p):null;
    const actual=g.completed?`<span class="cell-value">${esc(g.away_score)} – ${esc(g.home_score)}</span>${small(g.winner+' won')}`:'<span class="chip">No observed final</span>';
@@ -85,7 +85,7 @@
   document.dispatchEvent(new Event('fbs:games-rendered'));
  }
  document.querySelectorAll('[data-period]').forEach(button=>button.addEventListener('click',()=>{state.period=button.dataset.period;state.page=0;document.querySelectorAll('[data-period]').forEach(b=>b.setAttribute('aria-pressed',String(b===button)));renderGames();}));
- ['game-search','result-filter','model-filter','model-view','provider-filter','week-filter','coverage-target'].forEach(id=>$(id).addEventListener(id==='game-search'?'input':'change',()=>{state.page=0;renderGames();}));
+ ['game-search','result-filter','model-filter','model-view','provider-filter','week-filter','coverage-target','game-sort'].forEach(id=>$(id).addEventListener(id==='game-search'?'input':'change',()=>{state.page=0;renderGames();}));
  $('prev-page').addEventListener('click',()=>{state.page--;renderGames();});$('next-page').addEventListener('click',()=>{state.page++;renderGames();});
  function modelCard(label,value,reason){return `<article><span>${esc(label)}</span><strong>${esc(value)}</strong><span>${esc(reason)}</span></article>`;}
  function openGame(id){
@@ -161,5 +161,5 @@
  }
  $('latest-source-rows').addEventListener('click',event=>{const button=event.target.closest('[data-capture-game]');if(button)openGame(button.dataset.captureGame);});
  renderLatestCapture();restoreView();renderDevelopment();renderGames();renderComparison();renderCoverageMatrix();renderRegistry();
- window.FBSCompleteReview={filtered,reference,games,projection,selectedSeasonGames};
+ window.FBSCompleteReview={filtered,reference,games,projection,selectedSeasonGames,openGame,renderGames,get page(){return state.page;},pageSize:PAGE};
 })();

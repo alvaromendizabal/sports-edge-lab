@@ -26,7 +26,7 @@ ASSETS = ('index.html','research.html','recovery.html','season.js','source-progr
           'injury-association.json','common-game-review.json',
           'frontier.html','frontier.js','frontier-games.json','frontier-review.json',
           'complete.html','complete.js','coverage.js','diagnostics.js','complete.css','complete-season.json',
-          'complete-data.js','complete-history.js','development-data.js','development-2026.json','season-archive.html','three-season.json','three-season-data.js','optional-study.json','optional-study-data.js','catboost-study.json','catboost-study-data.js','source-health-v040.json','owner-neural-study.json','owner-neural-study-data.js','current-capture.json','current-capture-data.js','current-capture.js')
+          'complete-data.js','complete-history.js','development-data.js','development-2026.json','season-archive.html','three-season.json','three-season-data.js','optional-study.json','optional-study-data.js','catboost-study.json','catboost-study-data.js','source-health-v040.json','owner-neural-study.json','owner-neural-study-data.js','current-capture.json','current-capture-data.js','current-capture.js','game-center.js')
 SOURCE_FILES = {'index.html':'complete.html','season-archive.html':'index.html'}
 
 
