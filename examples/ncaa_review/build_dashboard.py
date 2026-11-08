@@ -17,14 +17,23 @@ ROOT=Path(__file__).resolve().parents[2]
 HERE=Path(__file__).resolve().parent
 HOST='https://alvaro-ncaa-research-review.alv-mendizabal.chatgpt.site'
 
+B050_OWNER_STATUS=(
+    '<strong>Current B050 return · authenticated November 8, 2026 UTC.</strong>'
+    '<p>The actual owner run <code>20261107T235154Z_0a962d1c</code> recorded <b>FAILED_PARTIAL_WORK_PRESERVED</b>: <b>0/16 stages completed</b>, the first source-refresh stage failed, and the other 15 stages were not entered. Its owner fixture gate passed <b>1,578 cases with 1 skipped</b>, zero failures and zero errors. The earlier local 1,579/1,579 result remains preparation evidence.</p>'
+    '<p>Source acquisition and bounded observation queues were preserved before a schedule-input validation failure. The exact acquisition-report reference is <b>113,330,820 bytes</b>, exceeding the schedule reader\'s <b>48 MiB</b> bound. The recorded error is <code>B050_SCHEDULE_REFERENCE_SCHEMA_OR_BOUND</code>. The full-season collector had not initialized; this return supplies no authenticated full-season schedule export to load. The evidence identifies this input-bound failure, not a hardware or connection cause.</p>'
+    '<p>The initialized physical ledger verifies <b>zero newly committed target, scalar or empirical fits and zero committed model artifacts</b>. That does not assert zero uncommitted fit attempts. No new owner forecast, rolling result, injury gain, cover probability, model improvement or complete-season claim is credited. B046 remains the last scientific partial execution at 9/16; the historical metrics below retain their original scientific source.</p>'
+    '<p>Physical authentication verifies safe unique regular names, CRCs and manifest closure across <b>4 outer, 151 nested-return and 459 embedded-source members</b>, with active release B050/runtime b050. Recorded completion and final-return receipts are retained separately from literal terminal evidence; no separate worker-terminal, bootstrap-terminal, source-preflight or observed shell-exit lines accompanied this attachment.</p>'
+    '<p>The retained baseline still has 47,130 rows and 2,445 separate display groups, with zero supplied per-game rolling winner records and zero qualified cover/push/loss groups. The 52-context priority-calibration gap and all-family paired-study gap remain open. B051 is successor preparation until authenticated owner work establishes otherwise; current-season outcomes cannot select or promote a model. Earlier dated startup and owner records follow.</p>'
+)
+
 LATEST_OWNER_STARTUP=(
-    '<strong>Latest reported startup · November 7, 2026 UTC.</strong>'
+    '<strong>Dated reported B049 startup · November 7, 2026 UTC.</strong>'
     '<p>The reported B049 command stopped before the research program started, with a Python archive-reading error and observed shell exit 1. No program return was supplied for that attempt, and the file on the owner machine has not been authenticated. No new game forecasts, provider data or model improvements are credited to it.</p>'
     '<p>The B050 viewer preparation makes original and per-game rolling records easier to compare, exposes hidden-game counts and exports the exact filtered inventory. Load the supplied baseline dashboard JSON and its matching identity overlay to inspect the retained evidence. Earlier source dates and scientific results remain in force.</p>'
 )
 
 B048_OWNER_STATUS=(
-    '<strong>Current B048 return · authenticated November 7, 2026 UTC.</strong>'
+    '<strong>Dated B048 return · authenticated November 7, 2026 UTC.</strong>'
     '<p>B048 ran and recorded <b>FAILED_PARTIAL_WORK_PRESERVED</b> at its fresh-package fixture gate, before scientific stage entry: <b>0/16 stages completed</b>, all 16 unreached. The owner summary records zero new owner fits. No new forecast, provider coverage, model improvement or complete-season certification is credited.</p>'
     '<p>The actual owner suite recorded <b>1,456 parent cases: 1,454 passed, 1 skipped and one errored case</b>. That single unsuccessful case emitted one error event and one failure event across its subtests. The regression concerns mutation detection in the predecessor-worker liveness guard. The earlier local <b>1,456/1,456 passed</b> result remains dated preparation evidence.</p>'
     '<p>The physical return passes safe casefold-unique regular-file names, every CRC and exact active-manifest closure across <b>4 outer, 99 nested owner-return and 434 embedded-source members</b>. Its source exactly matches the prepared B048 package, and the retained final-return full-readback receipt matches the enclosed bytes. Separate literal worker-terminal and observed shell-exit receipts remain unobserved. Earlier B047R1 and B046 evidence below retains its dated scope.</p>'
@@ -163,6 +172,7 @@ def render_track(data):
         '__SIBLING_LABEL__':"women's basketball" if sibling=='ncaaw' else "men's basketball",
         '__LEAGUE__':league,'__EVIDENCE__':embedded,
         '__REVIEW_DATE__':review_date(data),
+        '__B050_OWNER_STATUS__':B050_OWNER_STATUS,
         '__B048_OWNER_STATUS__':LATEST_OWNER_STARTUP+B048_OWNER_STATUS,
         '__B047R1_PHYSICAL_STATUS__':B047R1_PHYSICAL_STATUS,
         '__HANDOFF_DEMO__':json.dumps(handoff_demo(),sort_keys=True,separators=(',',':'),allow_nan=False).replace('<','\\u003c'),
@@ -189,7 +199,7 @@ def landing_status(data):
     baseline = data[0]['b045_baseline_observation']; journal = data[0]['b045_forecast_journal_observation']
     if any(d['b045_forecast_journal_observation'] != journal for d in data):raise ValueError('landing journal population disagreement')
     b=data[0]['b046_baseline_observation']; repair=data[0]['b047_source_identity_repair']
-    return (LATEST_OWNER_STARTUP + B048_OWNER_STATUS + B047R1_PHYSICAL_STATUS
+    return (B050_OWNER_STATUS + LATEST_OWNER_STARTUP + B048_OWNER_STATUS + B047R1_PHYSICAL_STATUS
             + f'<p><strong>Dated {release}: {a["completed_scientific_stages"]}/{a["planned_scientific_stages"]} stages completed; partial work and final return preserved.</strong></p>'
             f'<p>The authenticated physical ledger reconciles {a["new_real_target_fits"]:,} target, {a["new_calibration_fits"]:,} scalar and {a["new_empirical_residual_fits"]:,} empirical fits across {a["committed_contract_objects"]:,} contract objects. Injury research deferred at its bounded shared-memory admission gate. Full model import and new scientific superiority are not established by that accounting.</p>'
             f'<p>The B046 pre-study view contains {b["target_rows"]:,} target rows, {b["game_model_rows"]:,} game-model rows and {b["browser_display_rows"]:,} display rows, including three unresolved source candidates. Independent arithmetic reconciles {b["independent_metric_panels_checked"]:,} model/provider panels through {b["independent_scalar_checks"]:,} checks with zero mismatches. These source/version populations do not certify every official physical game.</p>'
