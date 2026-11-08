@@ -1,5 +1,31 @@
 # NCAA evidence review
 
+## Actual B050 return — authenticated November 8, 2026 UTC
+
+The actual owner run **20261107T235154Z_0a962d1c** recorded **FAILED_PARTIAL_WORK_PRESERVED** with **0/16 completed stages**. `04_latest_source_refresh` failed after preserving acquired source work; the other 15 stages were not entered. The run passed its owner fixture gate: **1,578 passed, 1 skipped, zero failures and zero errors** across 1,579 planned cases. The earlier local 1,579/1,579 suite remains dated preparation evidence, not an owner scientific result.
+
+The failure is identified by the authenticated source, exact traceback and published acquisition-reference receipt: `B050_SCHEDULE_REFERENCE_SCHEMA_OR_BOUND`. The acquisition report is **113,330,820 bytes**, while the schedule reader admits references no larger than **50,331,648 bytes (48 MiB)**. Source acquisition and bounded observation queues were preserved, but the full-season collector did not initialize. **No authenticated full-season schedule report or display export was produced by this return.** Do not load an invented or prepared replacement into the optional schedule panel. This identifies an input-bound defect; it does not establish an instance, operating-system or ChatGPT connection cause.
+
+### Separate evidence layers
+
+| Layer | Authenticated result |
+|---|---|
+| Physical uploaded outer return | 14,648,993 bytes; SHA-256 `048fc2149f4fb90a3b3e62146cce04486ec9667fbe4c6e6422f60e86c7c68d3d` |
+| Nested owner return | 14,667,509 bytes; SHA-256 `5a1dd316af310187d060e4dc87f81d2a54cfed91148d2f9b08973a10bd798ab7` |
+| Embedded executable source | 12,070,577 bytes; SHA-256 `7cbd06145e51a12859ef6f9796874e24ecd2f559f5996f0dedb008a8ec675dd8` |
+| Archive and release authentication | 4 outer, 151 nested and 459 source members; safe unique explicit regular names, all CRCs, exact manifest closure, active B050/runtime b050 |
+| Recorded owner completion | `FAILED_PARTIAL_WORK_PRESERVED`; 0 completed, 1 failed and 15 unentered stages |
+| Physical model accounting | Initialized and verified ledger: zero newly committed target, scalar and empirical fits, zero unclassified committed model artifacts, and zero verified committed contracts |
+| Separate literal terminal receipts | Worker terminal, bootstrap terminal, source preflight and observed shell exit not supplied with this attachment; archive completion receipts do not replace them |
+
+The zero physical counts apply to verified commits. Unconfirmed or uncommitted estimation is not asserted to be zero. Acquisition progress units, newly captured provider HTTP, fresh storage reads, verified cache and historical replay also remain separate. Current order books, later retrievals, metadata and failed calls create no earlier availability or historical forecasting credit.
+
+**B046 remains the last scientific partial authority at 9/16.** Its 4,033 target, 701 scalar and 24 empirical physical fits across 4,851 contracts remain dated evidence. The unchanged baseline retains 47,130 rows, 2,808 source IDs and 2,445 separately grouped displays, 363 archived identity links, 649 remaining official-source gaps, 1,923 immutable issues, zero supplied per-game rolling winner records and zero qualified cover/push/loss groups. Preserved source versions, original forecasts, native reconstructions, training and availability clocks, and historical model/provider cohorts are not replaced by the new acquisition queues.
+
+The **52-context priority-calibration gap** and **all-family paired monthly study gap** remain open. Ten registered families and 26 target heads describe implemented capability; B050 supplies no new admitted owner family fit, rolling output, injury/path gain or model superiority. Current 2026–27 outcomes remain ineligible for selecting or promoting a model. B051 is successor preparation until authenticated owner work proves otherwise; software checks and fixture fits cannot establish scientific improvement.
+
+The current dashboard prepends this actual B050 status and keeps earlier startup/owner evidence below with dated labels. Its optional schedule importer remains available for a future authenticated export. Every existing baseline value, metric population, source clock and missing-capability reason remains intact. The sections below preserve the earlier preparation and owner-return history in its original dated scope.
+
 ## B050 optional full-season schedule viewer
 
 The separate **Full-season schedule observations** panel accepts `B050_FULL_SEASON_SCHEDULE_DATA.json` from an owner return when that export is supplied. It works independently of the retained baseline dashboard and its identity overlay. No owner execution, newly captured schedule or model result is implied by preparing this viewer.

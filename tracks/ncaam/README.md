@@ -1,5 +1,15 @@
 # Sports Edge Lab · NCAA men's basketball
 
+## Actual B050 owner return — November 8, 2026 UTC
+
+Authenticated owner run **20261107T235154Z_0a962d1c** recorded **FAILED_PARTIAL_WORK_PRESERVED**, **0/16 completed stages**: the first source-refresh stage failed and the other 15 were not entered. Its owner fixtures recorded **1,578 passed / 1 skipped / 0 failures / 0 errors**. Those fixture results are separate from both the earlier 1,579/1,579 local preparation and actual scientific fitting.
+
+Acquisition work and bounded observation queues were saved before the schedule reader rejected a **113,330,820-byte** acquisition-report reference against its unchanged **48 MiB** limit. The exact error is `B050_SCHEDULE_REFERENCE_SCHEMA_OR_BOUND`. The full-season collector had not initialized, and this return produced **no authenticated full-season schedule export**. No current-season forecast, complete-season coverage, injury/path improvement or new model superiority is credited. The initialized physical ledger verifies zero newly committed target, scalar or empirical fits and zero committed model artifacts; unconfirmed or uncommitted attempts remain a separate unasserted quantity.
+
+Physical inspection verifies **4 outer / 151 nested / 459 source members**, safe unique regular names, CRCs and active B050/runtime b050 manifest closure. Recorded completion and final-return receipts remain separate from the unsupplied literal worker-terminal, bootstrap-terminal, preflight and shell-exit lines. The [NCAA methodology README](../../examples/ncaa_review/README.md) records the exact physical pins and evidence layers.
+
+**B046 remains the scientific partial authority at 9/16**, with historical results and the existing men's cohorts unchanged. The shared retained baseline remains 47,130 rows and 2,445 display groups; its zero supplied per-game rolling winner records and zero qualified cover/push/loss groups remain explicit. The 52-context priority-calibration gap and all-family paired-study gap remain open. B051 is preparation until authenticated owner work establishes new results. Current-season outcomes cannot select or promote a model. Earlier dated sections below retain their original evidence scope.
+
 ## B050 viewer preparation — November 7, 2026 UTC
 
 The latest owner-reported B049 command stopped before program entry with a Python archive-reading error and `OBSERVED_SHELL_EXIT=1`; no program return accompanies it. The owner-machine file remains unauthenticated. The authenticated B048 fixture-gate return and B046 scientific partial result below retain their separate dated meanings. No new scientific work is credited to this preparation.
