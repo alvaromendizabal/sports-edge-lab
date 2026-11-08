@@ -6,6 +6,14 @@ The [NFL dashboard](season_review_n054.html) accounts for **272 scheduled games,
 
 The default per-game view points to an existing, clearly labeled evidence role: the preserved N055 selected reconstruction for its original completed cohort, the separate N056 two-game retrospective supplement for CHI/SEA and JAX/BAL, and actual N056 frozen-selected issues for the 150 owner-future games. This display mapping adds **zero models, fits or issues**. Historical `LA` means the Los Angeles Rams; `LAC` remains the Chargers. Missing numerical values retain a specific cause and are never filled with a synthetic estimate.
 
+## Planned rolling-champion research — not yet an owner result
+
+The existing historical policy-selection record remains fixed to the previously selected seasons. The next distinct study will compare it with a **rolling two-completed-season selector** (for the 2026 NFL season, 2024 and 2025) and longer/recency-weighted alternatives. Candidates must be refitted on data actually available before each historical game, with strictly out-of-fold stacking, dated calibration and an immutable record of original versus reconstructed versus genuinely issued forecasts.
+
+The proposed live protocol refreshes fitted base models after newly verified outcomes, avoids duplicate fits when the training snapshot is unchanged, and issues a new near-game forecast as fresh pregame information becomes available. The historical and source-only comparisons cannot be called prospective validation. Every scheduled game, winner/margin/total/cover target and provider reference must have an exact coverage status; unsupported values are reported, never invented.
+
+The research plan also requires substantial new time-valid feature families, position/availability and market-dynamics studies, competitive sklearn/boosted-tree/neural/ensemble evaluations, and complete dated analytical dashboards. **Nothing in this planned section claims new fits, improvements, model promotion, repaired source coverage, or deployed UI.** [Public/private boundaries](../../docs/PUBLICATION_BOUNDARY.md) and all prior N055–N057 evidence remain unchanged.
+
 ## Complete reports and data
 
 - [Interactive full-season dashboard](season_review_n054.html): every current-season game and model role, winner probability, point margin, total points, oriented conditional margin probabilities, source/model/issue clocks and equal provider grids.
