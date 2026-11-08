@@ -1,23 +1,29 @@
 """Meaningful public privacy, evidence, complete-grid and regression contracts."""
 import base64,copy,gzip,json,pathlib,re,tempfile,unittest
 from build_season_review_n054 import load,validate,build,HERE
-class PublicSeasonN058(unittest.TestCase):
+class PublicSeasonN059(unittest.TestCase):
  @classmethod
  def setUpClass(cls):cls.data=load()
  def rejected(self,mutate):
   value=copy.deepcopy(self.data);mutate(value)
   with self.assertRaises(ValueError):validate(value)
  def test_complete_equal_inventory(self):
-  d=self.data;self.assertEqual(len(d['games']),272);self.assertEqual(d['counts']['private_model_cells'],93840);self.assertEqual(d['counts']['private_provider_cells'],39168)
-  self.assertEqual(sum(len(r['horizons']) for g in d['games'] for r in g['source_coverage']),39168)
+  d=self.data;self.assertEqual(len(d['games']),272);self.assertEqual(d['counts']['private_model_cells'],104448);self.assertEqual(d['counts']['private_provider_cells'],46512)
+  self.assertEqual(sum(len(r['horizons']) for g in d['games'] for r in g['source_coverage']),46512)
  def test_all_three_season_aggregates(self):
-  self.assertEqual(len(self.data['scoreboards']),1139)
+  self.assertEqual(len(self.data['scoreboards']),1214)
   self.assertTrue({2024,2025,2026}.issubset({r['season'] for r in self.data['scoreboards']}))
   self.assertTrue(any(r.get('log_loss')==0.6551848899532826 or (r.get('log_loss') is not None and abs(r['log_loss']-.655184889953)<1e-10) for r in self.data['scoreboards']))
  def test_precise_counts_not_fit_counts(self):
-  d=self.data;self.assertEqual((d['counts']['actual_latest_native_fits'],d['counts']['actual_latest_meta_fits'],d['counts']['actual_latest_issue_rows']),(0,0,117))
-  self.assertEqual((d['counts']['latest_reused_raw_states'],d['counts']['latest_reused_cutoff_jobs'],d['counts']['synthetic_smoke_operations']),(3396,7148,18))
-  self.assertIsNone(d['active_research_status']['top_level_fit_total']);self.assertIsNone(d['active_research_status']['top_level_issue_total'])
+  d=self.data;self.assertEqual((d['counts']['actual_latest_native_fits'],d['counts']['actual_latest_meta_fits'],d['counts']['actual_latest_issue_rows']),(27,0,2286))
+  self.assertEqual((d['counts']['latest_reused_raw_states'],d['counts']['latest_reused_cutoff_jobs'],d['counts']['synthetic_smoke_operations']),(3420,7172,18))
+  self.assertIsNone(d['active_research_status']['top_level_fit_total']);self.assertEqual(d['active_research_status']['top_level_issue_total'],2286)
+ def test_halftime_is_preserved_and_not_scheduled(self):
+  d=self.data;self.assertEqual((d['snapshot']['completed'],d['snapshot']['in_progress'],d['snapshot']['halftime'],d['snapshot']['scheduled']),(130,3,1,138));self.assertEqual(d['snapshot']['live'],4)
+  self.assertEqual(sum(g['phase']=='STATUS_HALFTIME' for g in d['games']),1)
+ def test_missing_halftime_rejected(self):self.rejected(lambda d:next(g for g in d['games'] if g['phase']=='STATUS_HALFTIME').update(phase='STATUS_SCHEDULED'))
+ def test_new_owner_fit_not_confused_with_v4_fit(self):
+  self.assertEqual(self.data['counts']['actual_latest_native_fits'],27);self.assertEqual(self.data['rolling_policy']['actual_new_V4_owner_fits'],0)
  def test_deterministic_self_contained_payload(self):
   html=(HERE/'season_review_n054.html').read_text();self.assertEqual(html,build(self.data));payload=re.search(r'<script id="nfl-public-payload"[^>]*>([^<]+)</script>',html)[1]
   self.assertEqual(json.loads(gzip.decompress(base64.b64decode(payload))),self.data)

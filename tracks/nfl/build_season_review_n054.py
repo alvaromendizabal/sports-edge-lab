@@ -1,7 +1,7 @@
 """Validate and render the bounded NFL public contract, without private inputs."""
 import argparse,base64,collections,datetime,gzip,json,math,pathlib,re
 HERE=pathlib.Path(__file__).resolve().parent
-SCHEMA='nfl.public.n058.bounded-evidence.v1'
+SCHEMA='nfl.public.n059.bounded-evidence.v1'
 TOP={'schema','publication_cycle','observed_at','snapshot','counts','identity_notes','games','provider_horizons','scoreboards','issued_cards','cohorts','rolling_policy','frontier_feature_status','distribution_scoreboards','source_summary','source_historical_coverage','active_research_status','reason_catalog','public_scope','qualifications'}
 GAME={'game_id','week','home','away','kickoff_utc','completed','phase','result','timing_status','model_coverage','source_coverage'}
 MODEL={'target','roles','with_value','actual_issue','eligible_in_original_cohort','no_authenticated_value'}
@@ -22,7 +22,7 @@ def validate(d):
  only(d,TOP,'root')
  if d['schema']!=SCHEMA:raise ValueError('Public schema')
  nested={
- 'snapshot':'as_of games completed decisive ties remaining in_progress scheduled status remaining_does_not_mean_all_kickoffs_are_in_the_future',
+ 'snapshot':'as_of games completed decisive ties remaining in_progress halftime live scheduled status remaining_does_not_mean_all_kickoffs_are_in_the_future',
  'counts':'games teams private_model_roles private_model_cells private_provider_cells provider_horizons season_metric_rows distribution_metric_rows actual_latest_issue_rows actual_latest_issue_games actual_latest_native_fits actual_latest_meta_fits synthetic_smoke_operations protected_raw_states latest_reused_raw_states latest_reused_cutoff_jobs publication_new_fits publication_new_issues',
  'rolling_policy':'status original_fixed_control_preserved initial_selector annual_examples per_game_fit meta_layers history_classification issue_classes actual_new_V4_owner_fits actual_new_V4_owner_issues automatic_promotion',
  'frontier_feature_status':'status proposed implemented materialized preflight_passed admitted evaluated promoted blocked portable_synthetic_tests_passed implemented_by_source qualification',
@@ -43,7 +43,8 @@ def validate(d):
  if len(games)!=272 or len(index)!=272 or len(teams)!=32 or set(teams.values())!={17}:raise ValueError('All games and teams')
  counts=d['counts'];snap=d['snapshot']
  if (sum(g['completed'] for g in games),sum(not g['completed'] for g in games))!=(snap['completed'],snap['remaining']):raise ValueError('Dated schedule denominator')
- if sum(g['phase']=='STATUS_IN_PROGRESS' for g in games)!=snap['in_progress'] or sum(g['phase']=='STATUS_SCHEDULED' for g in games)!=snap['scheduled']:raise ValueError('Dated phase inventory')
+ if any(g['phase'] not in {'STATUS_FINAL','STATUS_IN_PROGRESS','STATUS_HALFTIME','STATUS_SCHEDULED'} for g in games):raise ValueError('Unsupported phase needs explicit review')
+ if any(sum(g['phase']==phase for g in games)!=snap[field] for phase,field in [('STATUS_FINAL','completed'),('STATUS_IN_PROGRESS','in_progress'),('STATUS_HALFTIME','halftime'),('STATUS_SCHEDULED','scheduled')]) or snap['live']!=snap['in_progress']+snap['halftime'] or snap['completed']+snap['live']+snap['scheduled']!=272:raise ValueError('Dated phase inventory')
  if {x['code']:x['label'] for x in d['identity_notes']}!={'LA':'Los Angeles Rams','LAC':'Los Angeles Chargers'}:raise ValueError('Legacy Rams identity')
  for gid,away,home in [('2026_08_CHI_SEA',34,17),('2026_09_JAX_BAL',33,10),('2026_09_CIN_ATL',34,17)]:
   g=index[gid]
@@ -90,10 +91,11 @@ def validate(d):
   only(r,{'public_variant_id','season','target','games','mean_crps','mean_wis','mean_log_score','mean_covered_90','mean_width_90','mean_negative_total_mass','maximum_negative_total_mass','qualification'},'distribution aggregate')
   if not re.fullmatch(r'Distribution \d{2}',r['public_variant_id']):raise ValueError('Anonymous distribution identity')
  if counts['actual_latest_issue_rows']!=sum(r['rows'] for r in d['active_research_status']['new_issue_roles']):raise ValueError('Issue role reconciliation')
- if any(counts[k] for k in ('actual_latest_native_fits','actual_latest_meta_fits','publication_new_fits','publication_new_issues')):raise ValueError('No fabricated fit or publication credit')
- if d['rolling_policy']['status']!='PREPARED_NOT_OWNER_EXECUTED' or d['rolling_policy']['actual_new_V4_owner_fits'] or d['rolling_policy']['actual_new_V4_owner_issues']:raise ValueError('Prepared methodology status')
+ if (counts['actual_latest_native_fits'],counts['actual_latest_meta_fits'])!=(27,0) or any(counts[k] for k in ('publication_new_fits','publication_new_issues')):raise ValueError('Exact independently audited fits and zero publication credit')
+ if d['active_research_status']['top_level_fit_total'] is not None or d['active_research_status']['top_level_issue_total']!=2286:raise ValueError('Original partial aggregate counters')
+ if d['rolling_policy']['status']!='N058_ATTEMPT_BLOCKED_N059_PREPARED' or d['rolling_policy']['actual_new_V4_owner_fits'] or d['rolling_policy']['actual_new_V4_owner_issues']:raise ValueError('Prepared methodology status')
  f=d['frontier_feature_status']
- if f['status']!='PREPARED_NOT_OWNER_EXECUTED' or f['proposed']!=f['implemented']+f['blocked'] or sum(f['implemented_by_source'].values())!=f['implemented']:raise ValueError('Prepared feature inventory reconciliation')
+ if f['status']!='N058_ATTEMPT_BLOCKED_N059_PREPARED' or f['proposed']!=f['implemented']+f['blocked'] or sum(f['implemented_by_source'].values())!=f['implemented']:raise ValueError('Prepared feature inventory reconciliation')
  if any(f[k] for k in ('materialized','preflight_passed','admitted','evaluated','promoted')):raise ValueError('No owner feature admission from synthetic tests')
  if d['source_summary']['source_only_predictive_credit'] or d['source_summary']['frozen_horizon_records_modified']:raise ValueError('Source-only boundary')
  if d['public_scope']['complete_candidate_predictions_included'] or d['public_scope']['active_recipes_included'] or d['public_scope']['raw_provider_payloads_included']:raise ValueError('Public/private boundary')
@@ -101,7 +103,7 @@ def validate(d):
  if FORBIDDEN.search(raw) or RETIRED.search(raw):raise ValueError('Private or transaction-language payload')
  return d
 def pack(d):return gzip.compress(json.dumps(d,separators=(',',':'),ensure_ascii=False).encode(),compresslevel=9,mtime=0)
-def load(path=HERE/'public_projection_n058.json.gz'):return validate(json.loads(gzip.decompress(path.read_bytes())))
+def load(path=HERE/'public_projection_n059.json.gz'):return validate(json.loads(gzip.decompress(path.read_bytes())))
 def build(d):
  validate(d);s=(HERE/'season_review_n054.template.html').read_text()
  if FORBIDDEN.search(s) or RETIRED.search(s):raise ValueError('Public template boundary')
@@ -110,6 +112,6 @@ def main():
  p=argparse.ArgumentParser();p.add_argument('--check',action='store_true');a=p.parse_args();body=build(load());out=HERE/'season_review_n054.html'
  if a.check:
   if out.read_text()!=body:raise SystemExit('Public render differs from reviewed projection')
-  print('N058 bounded public content and complete inventory: PASS')
+  print('N059 bounded public content and complete inventory: PASS')
  else:out.write_text(body)
 if __name__=='__main__':main()

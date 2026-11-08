@@ -6,7 +6,7 @@
 
 The retained B046 baseline, original issues and dated cohorts remain unchanged. B053's current dashboard is a partial pre-study checkpoint, not proof of complete season coverage or a completed V4 study. All earlier preparation and failure reports below remain dated records.
 
-Open the [private NCAA viewer](https://alvaro-ncaa-research-review.alv-mendizabal.chatgpt.site/private-report/index.html) and choose **`B053_CURRENT_DASHBOARD_DATA.json`** in the main report picker for the current owner checkpoint. The existing schedule and eligibility pickers remain independent. The new **V4 rolling-model review** accepts the separate **`B054_PRIVATE_REVIEW.json`** only when an actual owner return supplies it; a prepared package or an invented test file provides no owner result.
+Open the [private NCAA viewer](https://alvaro-ncaa-research-review.alv-mendizabal.chatgpt.site/private-report/index.html) and choose **`B053_CURRENT_DASHBOARD_DATA.json`** in the main report picker for the current owner checkpoint. The existing schedule and eligibility pickers remain independent. The new **V4 rolling-model review** accepts the separate **`B054_V4_PRIVATE_REVIEW.json`** only when an actual owner return supplies it; a prepared package or an invented test file provides no owner result.
 
 | V4 evidence track | What the viewer preserves |
 |---|---|

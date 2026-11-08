@@ -18,8 +18,10 @@ Meta layers use earlier genuine out-of-fold predictions. No row may train a base
 
 ## Current continuation limit
 
-Actual N057 stopped refreshed fitting because the source lacked the completed Cincinnati–Atlanta game and the attempted fallback history changed a protected causal append. It nevertheless preserved 117 actual early component issues from older source/model states. The next owner program prepares supported continuity recovery and the new rolling policy; this publication provides no V4 execution credit.
+Actual N058 restored the exact causal append and completed 27 current-origin native states under retained configurations. It issued 2,286 separately classified output rows. The independently registered V4 historical phase stopped at safe-file validation before any verified fitting; the future V4 phase correctly stayed blocked. N059 repairs exact authenticated source-adapter binding, retains path/symlink guards, binds all label clocks into state identity and revalidates warm checkpoints. Prepared fixes do not earn owner execution credit.
+
+The latest owner schedule has 130 finals, three in progress, one halftime and 138 scheduled. Every not-final game retains a cutoff-ordered next action in the private report. A live or completed game cannot receive a backdated pregame issue, and a far-future current-knowledge outlook cannot claim exact T1 validity.
 
 All three providers receive the same game/target/horizon inventory. A recorded source observation can remain ineligible for model admission or proper scoring. Missing quote clocks, sparse conditions and unsupported source fields retain specific reasons. No source-only result is evidence of predictive improvement.
 
-See [current results and coverage](README.md) and [public/private reporting scope](PUBLIC_BOUNDARY_N058.md).
+See [current results and coverage](README.md) and [public/private reporting scope](PUBLIC_BOUNDARY_N059.md).
