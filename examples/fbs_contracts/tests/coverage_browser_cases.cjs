@@ -32,7 +32,7 @@ exports.run=async page=>{
   await page.selectOption('#model-view','fixed_equal_blend');
   await page.locator('.hero-actions a').filter({hasText:'Current week'}).click();
   await page.waitForFunction(()=>document.getElementById('result-status')?.textContent.startsWith('63 games'));
-  assert.match(await page.locator('#result-status').innerText(),/^63 games · 25 observed complete/);
+  assert.match(await page.locator('#result-status').innerText(),/^63 games · 45 observed complete/);
   await page.selectOption('#game-layout','table');
   await page.selectOption('#capture-view','original');
   await page.locator('[data-period="all"]').click();
