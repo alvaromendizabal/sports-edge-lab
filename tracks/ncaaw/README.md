@@ -1,8 +1,23 @@
 # Sports Edge Lab · NCAA women's basketball
 
+## Current compact schedule file — November 8, 2026 UTC
+
+Load **B052_FULL_SEASON_SCHEDULE_COMPACT.json** in the [private NCAA viewer](https://alvaro-ncaa-research-review.alv-mendizabal.chatgpt.site/private-report/index.html). The current private delivery preserves all **23,603 provider-native records** from the authenticated B051 index. Its **4,744,935 bytes** have SHA-256 `3902194e3cde3321380270c4d742b6f895554b98938df56ec367af48c29b6407`. The expanded canonical display JSON is **51,300,443 bytes**, SHA-256 `c7a70ac520b7993120daa2ead0dccc6ef4ac456434543e3e0a46b8e3c207782e`; the exact viewer functions loaded every record and an independent Node stream verified that digest.
+
+The underlying source-index logical bytes remain **51,286,695**, SHA-256 `b7948455cc9d8336b66c45229b6a7486cba2be9c7991cbfd4b68bddeaa280d93`. This is a rebuilt, independently validated review projection of owner **20261108T015946Z_d34f8020**, with the index's original source version and clocks. It adds no owner execution, forecast or model improvement. **2,520 exact tip times remain null**, and the 39 ambiguous date responses / 110 rejected source records still prevent a complete-season claim. Provider-native IDs remain separate from physical games and model evaluation cohorts.
+
+The earlier pre-interruption projection pins are retained below as dated audit evidence. Its physical file became unavailable with the workspace loss, so no direct byte comparison or exact explanation of the difference between those two projection variants is claimed. Use the current `3902194e…` file pin above for this delivery. The older **47,130-row baseline and its matching identity overlay** remain separate inputs; importing the schedule does not change their forecasts, metrics or denominators.
+
+The [Site publication receipt](https://alvaro-ncaa-research-review.alv-mendizabal.chatgpt.site/publication.json) identifies the published source and preserves earlier releases. GitHub source validation and Site deployment retain separate receipts. Actual private-file validation is through the exact Node viewer contract; actual private browser layout is not claimed.
+
+<details>
+<summary>Dated publication interruption — recorded before recovery</summary>
+
 ## Publication availability — November 8, 2026 UTC
 
 This repository contains the compact importer and its tested generic viewer. The existing public Site was last rechecked at **2026-11-08T03:06:46Z** and remains on **version 23**, before this importer was deployed. The private compact artifact was produced and validated locally, but its delivery is pending. No new Site deployment or working private download is claimed by this source update. The authenticated B051 findings below remain valid independently of publication availability.
+
+</details>
 
 ## Actual B051 owner return — authenticated November 8, 2026 UTC
 
@@ -12,9 +27,14 @@ The owner-produced schedule report accounts for **1,460/1,460 provider/gender/da
 
 The original owner display export is **REFERENCE_ONLY_DISPLAY_BYTE_BOUND**: **23,603 records expected and zero included**, because the complete index exceeded its unchanged 25 MiB display-file bound. Its report and exact source-index references are preserved. Loading that reference-only file does not load 23,603 games. No new forecast is joined to schedule-only records, and the older 47,130-row baseline / 2,445 display groups retain their separate denominators.
 
+<details>
+<summary>Pre-interruption projection audit — retained earlier variant</summary>
+
 The prepared private **B052_FULL_SEASON_SCHEDULE_COMPACT.json** makes all **23,603 retained index records** loadable in the existing private viewer. Its **4,744,935 bytes** have SHA-256 `13580d79b75255fee79bd66524a7f3aa93640f28eee34406bc93d24228869ea2`. This is a lossless review-derived projection of the authenticated B051 owner index, not a new owner execution. The exact viewer contract loaded every row in a private Node audit. An independent streamed reconstruction matched the **51,300,443-byte** canonical expanded JSON and SHA-256 `f50f68e8b45c9c5ee75329aca3ab9d7b0baf31a7e3c69a19d9b4a19fda880996`, without joining one large canonical string. A real private browser layout is not claimed.
 
 The loaded source populations remain **ESPN men 6,010; ESPN women 5,772; NCAA official men 6,049; NCAA official women 5,772**. Exactly **2,520 records retain null exact tip times**; query dates do not replace them. The loaded index reports zero identity-change flags, which does not resolve the separate 39 ambiguous date responses, 110 rejected source records or older cross-provider identity gaps. Every schedule-only forecast field remains null with its retained reason. The baseline, identity overlay, metrics and model denominators are unchanged.
+
+</details>
 
 | Evidence layer | Authenticated B051 observation |
 |---|---|
