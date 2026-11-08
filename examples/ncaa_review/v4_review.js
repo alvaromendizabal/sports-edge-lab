@@ -1,6 +1,8 @@
 /* Generic private-file inspector. No model code, provider requests or embedded owner data. */
 (() => {
   'use strict';
+  const refresh = typeof module !== 'undefined' && module.exports ? require('./refresh_review.js') : window.NCAARefreshReview;
+  const projection = typeof module !== 'undefined' && module.exports ? require('./projection_review.js') : window.NCAAProjectionReview;
   const TRACKS = Object.freeze([
     'original_frozen_issued', 'historically_reconstructed_rolling',
     'genuinely_future_issued_rolling', 'model_market_source_only_reference',
@@ -40,7 +42,7 @@
     return value;
   }
   function validateV4(value) {
-    if(!object(value)||value.schema!=='sel.ncaa.b054.private_review.v1'||value.project!=='ncaa_basketball'||value.release!=='B054'||value.audience!=='private')throw Error('Choose the separate V4 private review JSON.');
+    if(!object(value)||!['B054','B055'].includes(value.release)||value.schema!=='sel.ncaa.'+value.release.toLowerCase()+'.private_review.v1'||value.project!=='ncaa_basketball'||value.audience!=='private')throw Error('Choose the separate V4 private review JSON for B054 or B055.');
     if(!Array.isArray(value.tracks)||JSON.stringify(value.tracks)!==JSON.stringify(TRACKS))throw Error('The four evidence tracks are incomplete or reordered.');
     if(value.historical_reconstruction_is_not_as_issued!==true||value.original_issue_mutation!==false||value.automatic_promotion!==false||value.all_physical_season_games_complete!==false)throw Error('V4 evidence qualifications are missing or changed.');
     if(!object(value.report)||!object(value.metrics)||value.metrics.schema!=='sel.ncaa.b054.metrics.v1'||!Array.isArray(value.metrics.rows)||value.metrics.rows.length>200000||!object(value.metrics.dispositions)||!object(value.streams))throw Error('V4 report inventories are missing.');
@@ -52,6 +54,14 @@
       for(const field of ['log_loss','mae','rmse'])if(row[field]!==undefined&&row[field]!==null&&row[field]<0)throw Error('V4 loss must be nonnegative.');
     }
     for(const stream of Object.values(value.streams))validateStream(stream);
+    if(value.report.refresh_coverage!==undefined&&value.report.refresh_coverage!==null){
+      if(value.release!=='B055')throw Error('Refresh coverage requires the B055 review contract.');
+      refresh.validate(value.report.refresh_coverage,value.streams,validateStream);
+    }else if(value.streams.refresh_plan||value.streams.refresh_audit){throw Error('Refresh streams require their coverage manifest.');}
+    if(value.report.score_projection_coverage!==undefined&&value.report.score_projection_coverage!==null){
+      if(value.release!=='B055')throw Error('Expected scores require the B055 review contract.');
+      projection.validate(value.report.score_projection_coverage,value.streams,validateStream);
+    }else if(value.streams.score_projections){throw Error('Expected-score stream requires its coverage manifest.');}
     return value;
   }
   async function digest(bytes){return [...new Uint8Array(await crypto.subtle.digest('SHA-256',bytes))].map(x=>x.toString(16).padStart(2,'0')).join('');}
@@ -80,14 +90,56 @@
   function renderMetrics(){if(!current)return;const rows=filteredMetrics(),pages=Math.max(1,Math.ceil(rows.length/25));metricPage=Math.min(metricPage,pages-1);const shown=rows.slice(metricPage*25,metricPage*25+25),body=$('v4-metric-rows');body.replaceChildren();for(const r of shown){const tr=node('tr');for(const v of [r.league,r.season_end_year,r.target,LABELS[r.evaluation_track],r.selector,r.horizon_minutes,r.n,...METRICS.map(k=>r[k])])tr.append(node('td',display(v)));body.append(tr);}$('v4-metric-count').textContent=rows.length+' supplied metric populations; '+(current.metrics.rows.length-rows.length)+' hidden by filters. '+(rows.length?'Showing '+(metricPage*25+1)+'–'+(metricPage*25+shown.length)+'.':'No evaluated population was supplied for this selection.');$('v4-metric-previous').disabled=metricPage===0;$('v4-metric-next').disabled=metricPage+1>=pages;}
   function selectedStream(){return current?.streams[$('v4-stream').value];}
   function selectedPart(){return selectedStream()?.parts[Number($('v4-part').value)];}
-  function renderParts(){const rows=partRows.filter(r=>$('v4-track').value==='all'||r.evaluation_track===$('v4-track').value),pages=Math.max(1,Math.ceil(rows.length/25));partPage=Math.min(partPage,pages-1);$('v4-part-count').textContent=partProof?'Showing '+rows.length+' matching rows from '+partRows.length+' verified rows in one part. Other parts remain unloaded; full stream closure is not claimed.':'No evidence part loaded. A manifest and its row count are references, not loaded game records.';const target=$('v4-part-rows');target.replaceChildren();for(const r of rows.slice(partPage*25,partPage*25+25)){const card=node('article');card.className='eligibility-card';card.dataset.v4Record='';const identity=r.event_id??r.target_game?.event_id??r.game?.event_id;card.append(node('h3',[display(r.league??r.target_game?.league),display(identity),display(r.target)].join(' · ')),node('p','Track: '+(LABELS[r.evaluation_track]||display(r.evaluation_track))+' · State: '+display(r.status)),node('p','Prediction: '+display(r.prediction)+' · Outcome: '+display(r.actual)),detail('Exact supplied record and clocks',r));target.append(card);}$('v4-part-previous').disabled=partPage===0;$('v4-part-next').disabled=partPage+1>=pages;}
-  function resetPart(){generation++;partRows=[];partPage=0;partProof=null;$('v4-part-file').value='';$('v4-part-status').textContent='';renderParts();}
+  function renderParts(){
+    const isPlan=$('v4-stream').value==='refresh_plan'&&refresh.active();
+    const isScore=$('v4-stream').value==='score_projections'&&projection.active();
+    const isOperational=['refresh_audit','refresh_state'].includes($('v4-stream').value);
+    const trackRows=partRows.filter(r=>$('v4-track').value==='all'||r.evaluation_track===$('v4-track').value);
+    const rows=isPlan?refresh.filtered(partRows):isOperational?partRows:isScore?projection.filtered(trackRows):trackRows;
+    const pages=Math.max(1,Math.ceil(rows.length/25));partPage=Math.min(partPage,pages-1);
+    $('v4-part-count').textContent=partProof?'Showing '+rows.length+' matching rows from '+partRows.length+' verified rows in one part; '+(partRows.length-rows.length)+' hidden by filters. Other parts remain unloaded; full stream closure is not claimed.':'No evidence part loaded. A manifest and its row count are references, not loaded game records.';
+    const target=$('v4-part-rows');target.replaceChildren();
+    for(const r of rows.slice(partPage*25,partPage*25+25)){
+      const card=node('article');card.className='eligibility-card';card.dataset.v4Record='';
+      const identity=r.event_id??r.target_game?.event_id??r.game?.event_id;
+      card.append(node('h3',isOperational?'Refresh evidence · '+display(r.kind)+' · '+display(r.identity??r.event_key??r.recipe_id??r.snapshot_id??'See exact record'):[display(r.league??r.target_game?.league),display(identity),isScore?'Expected scores':display(r.target)].join(' · ')));
+      if(isPlan){
+        card.dataset.refreshState=r.state;
+        card.append(node('p','Recorded plan state: '+refresh.LABELS[r.state]),
+          node('p','Reason: '+r.reason),node('p','Next action: '+r.next_action),
+          node('p','Window opens: '+display(r.window_open_at)+' · Cutoff: '+display(r.cutoff_time)),
+          node('p','Declared role: '+display(r.role)+'. This row is a plan disposition, not a new forecast.'));
+      }else if(isOperational){
+        card.append(node('p','Record kind: '+display(r.kind)),node('p','Recorded disposition: '+display(r.disposition??r.last_execution_disposition??r.fit_reused_or_new??'No execution disposition supplied for this record kind')),
+          node('p','Plan state: '+display(r.planned_state??'Not a per-context plan record')),
+          node('p',$('v4-stream').value==='refresh_state'?'Persisted trigger-comparison state; it does not authenticate a current model or server-issued forecast.':'A separate execution record; it does not replace the immutable plan denominator.'));
+      }else if(isScore){
+        card.dataset.scoreStatus=r.status;
+        card.append(node('p','Disposition: '+projection.LABELS[r.status]),
+          node('p','Home: '+display(r.home_team??r.home_id)+' · Expected score: '+display(r.mean_home_score)),
+          node('p','Away: '+display(r.away_team??r.away_id)+' · Expected score: '+display(r.mean_away_score)),
+          node('p','Retained margin input: '+display(r.expected_home_minus_away)+' · Total input: '+display(r.expected_total)),
+          node('p','Origin: '+display(r.prediction_origin)+' · Cutoff: '+display(r.cutoff_time)+' · Horizon minutes: '+display(r.horizon_minutes)),
+          node('p','Margin prediction ID: '+display(r.margin_prediction_id)),
+          node('p','Total prediction ID: '+display(r.total_prediction_id)),
+          node('p','Supplied context: '+display(r.model_context?.family)+' / '+display(r.model_context?.arm)+' / '+display(r.model_context?.training_history)),
+          node('p','Fractional derived means only; no joint score distribution, line-result probability or new issue.'));
+      }else{
+        card.append(node('p','Track: '+(LABELS[r.evaluation_track]||display(r.evaluation_track))+' · State: '+display(r.status??r.disposition)),node('p','Prediction: '+display(r.prediction)+' · Outcome: '+display(r.actual)));
+      }
+      card.append(detail('Exact supplied record and clocks',r));target.append(card);
+    }
+    $('v4-part-previous').disabled=partPage===0;$('v4-part-next').disabled=partPage+1>=pages;
+  }
+  function resetPart(){generation++;partRows=[];partPage=0;partProof=null;refresh.setPart([],null,null);$('v4-part-file').value='';$('v4-part-status').textContent='';renderParts();}
   function resetStream(){resetPart();const stream=selectedStream();$('v4-part').replaceChildren(...(stream?.parts||[]).map((p,i)=>new Option('Part '+(i+1)+' · '+p.rows+' rows',String(i))));$('v4-part-file').disabled=!stream?.parts.length;$('v4-stream-proof').replaceChildren(...(stream?[detail('Declared full stream and exact part pins',stream)]:[]));}
-  function load(value,pin){current=validateV4(value);physical=pin;generation++;metricPage=0;$('v4-content').hidden=false;$('clear-v4').disabled=false;$('v4-track').value='all';$('v4-league').value='all';$('v4-target').value='all';options('v4-season',current.metrics.rows.map(r=>String(r.season_end_year)),'All supplied seasons');$('v4-summary-cards').replaceChildren(...TRACKS.map(track=>{const n=node('div');n.className='clock-card';n.append(node('strong',LABELS[track]),node('span',current.metrics.rows.filter(r=>r.evaluation_track===track).length+' metric populations supplied'));return n;}));$('v4-execution').replaceChildren(node('p','Recorded status: '+display(current.status)),detail('Execution, typed counts and remaining work',current.report),detail('Selected file identity and retained qualifications',{physical_pin:physical,source_sha256:current.source_sha256,run_id:current.run_id,created_at:current.created_at,automatic_promotion:current.automatic_promotion,all_physical_season_games_complete:current.all_physical_season_games_complete,metric_dispositions:current.metrics.dispositions}));$('v4-stream').replaceChildren(...Object.entries(current.streams).map(([name,stream])=>new Option(name+' · '+stream.rows+' declared rows',name)));resetStream();renderMetrics();$('v4-status').className='status';$('v4-status').textContent='V4 review loaded. Four evidence tracks remain separate; no game stream is automatically loaded and no promotion is implied.';}
+  function load(value,pin){current=validateV4(value);physical=pin;refresh.render(current.report.refresh_coverage,physical);projection.render(current.report.score_projection_coverage);generation++;metricPage=0;$('v4-content').hidden=false;$('clear-v4').disabled=false;$('v4-track').value='all';$('v4-league').value='all';$('v4-target').value='all';options('v4-season',current.metrics.rows.map(r=>String(r.season_end_year)),'All supplied seasons');$('v4-summary-cards').replaceChildren(...TRACKS.map(track=>{const n=node('div');n.className='clock-card';n.append(node('strong',LABELS[track]),node('span',current.metrics.rows.filter(r=>r.evaluation_track===track).length+' metric populations supplied'));return n;}));$('v4-execution').replaceChildren(node('p','Recorded status: '+display(current.status)),detail('Execution, typed counts and remaining work',current.report),detail('Selected file identity and retained qualifications',{physical_pin:physical,source_sha256:current.source_sha256,run_id:current.run_id,created_at:current.created_at,automatic_promotion:current.automatic_promotion,all_physical_season_games_complete:current.all_physical_season_games_complete,metric_dispositions:current.metrics.dispositions}));$('v4-stream').replaceChildren(...Object.entries(current.streams).map(([name,stream])=>new Option(name+' · '+stream.rows+' declared rows',name)));resetStream();renderMetrics();$('v4-status').className='status';$('v4-status').textContent='V4 review loaded. Four evidence tracks remain separate; no game stream is automatically loaded and no promotion is implied.';}
   $('v4-summary-file').addEventListener('change',async()=>{const file=$('v4-summary-file').files[0],token=++generation;if(!file)return;try{if(file.size>LIMIT)throw Error('Review summary exceeds 16 MiB.');const bytes=await file.arrayBuffer(),value=strictJSON(new TextDecoder('utf-8',{fatal:true}).decode(bytes));validateV4(value);const sha=await digest(bytes);if(token!==generation)return;load(value,{bytes:bytes.byteLength,sha256:sha});}catch(e){if(token===generation){$('v4-status').className='status error';$('v4-status').textContent='Cannot open V4 review: '+e.message+' The previous valid view remains.';}}});
-  $('v4-part-file').addEventListener('change',async()=>{const file=$('v4-part-file').files[0],part=selectedPart(),token=++generation;if(!file||!part)return;try{if(file.size!==part.reference.bytes)throw Error('Selected file size differs from the pinned part.');const rows=await decodePart(await file.arrayBuffer(),part);if(token!==generation)return;partRows=rows;partPage=0;partProof=part;$('v4-part-status').className='status';$('v4-part-status').textContent='Verified compressed and decoded SHA-256, exact sizes and '+rows.length+' rows for this selected part.';renderParts();}catch(e){if(token===generation){$('v4-part-status').className='status error';$('v4-part-status').textContent='Cannot open V4 part: '+e.message+' Previous valid rows remain.';}}});
+  $('v4-part-file').addEventListener('change',async()=>{const file=$('v4-part-file').files[0],part=selectedPart(),token=++generation;if(!file||!part)return;try{if(file.size!==part.reference.bytes)throw Error('Selected file size differs from the pinned part.');const rows=await decodePart(await file.arrayBuffer(),part);if($('v4-stream').value==='refresh_plan'&&refresh.active())refresh.validatePlanRows(rows,refresh.asof());if($('v4-stream').value==='score_projections'&&projection.active())projection.validateRows(rows);if(token!==generation)return;partRows=rows;partPage=0;partProof=part;refresh.setPart(rows,part,$('v4-stream').value);$('v4-part-status').className='status';$('v4-part-status').textContent='Verified compressed and decoded SHA-256, exact sizes and '+rows.length+' rows for this selected part.';renderParts();}catch(e){if(token===generation){$('v4-part-status').className='status error';$('v4-part-status').textContent='Cannot open V4 part: '+e.message+' Previous valid rows remain.';}}});
+  const inspectionCallbacks={changed:()=>{partPage=0;renderParts();},inspect:name=>{if(!current?.streams[name])return;$('v4-stream').value=name;resetStream();$('v4-part-file').scrollIntoView({block:'center'});}};
+  refresh.setup(inspectionCallbacks);projection.setup(inspectionCallbacks);
   for(const id of ['v4-track','v4-league','v4-target','v4-season'])$(id).addEventListener('change',()=>{metricPage=0;partPage=0;renderMetrics();renderParts();});
   $('v4-stream').addEventListener('change',resetStream);$('v4-part').addEventListener('change',resetPart);
   $('v4-metric-previous').addEventListener('click',()=>{metricPage--;renderMetrics();});$('v4-metric-next').addEventListener('click',()=>{metricPage++;renderMetrics();});$('v4-part-previous').addEventListener('click',()=>{partPage--;renderParts();});$('v4-part-next').addEventListener('click',()=>{partPage++;renderParts();});
-  $('clear-v4').addEventListener('click',()=>{generation++;current=null;physical=null;partRows=[];partProof=null;$('v4-content').hidden=true;$('clear-v4').disabled=true;for(const id of ['v4-summary-cards','v4-execution','v4-metric-rows','v4-part-rows','v4-stream-proof'])$(id).replaceChildren();$('v4-summary-file').value='';$('v4-part-file').value='';$('v4-status').textContent='V4 review cleared. The independent game, schedule and eligibility views are unchanged.';});
+  $('clear-v4').addEventListener('click',()=>{generation++;current=null;physical=null;partRows=[];partProof=null;refresh.render(null,null);projection.render(null);$('v4-content').hidden=true;$('clear-v4').disabled=true;for(const id of ['v4-summary-cards','v4-execution','v4-metric-rows','v4-part-rows','v4-stream-proof'])$(id).replaceChildren();$('v4-summary-file').value='';$('v4-part-file').value='';$('v4-status').textContent='V4 review cleared. The independent game, schedule and eligibility views are unchanged.';});
 })();
