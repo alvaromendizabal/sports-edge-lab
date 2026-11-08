@@ -1,0 +1,32 @@
+'use strict';
+const assert=require('node:assert/strict'),fs=require('node:fs');
+exports.run=async page=>{
+ assert.equal(await page.locator('#ranking-source-rows tr').count(),21);
+ assert.equal(await page.locator('#ranking-selection-history tr').count(),6);
+ assert.match(await page.locator('#source-recheck-summary').innerText(),/2026-11-08T22:12:26Z/);
+ assert.match(await page.locator('#latest-market-census-summary').innerText(),/33 events \/ 99 targets/);
+ assert.match(await page.locator('#latest-market-census-summary').innerText(),/201 raw source-clock checks are a different denominator/);
+ assert.match(await page.locator('#ranking-stage-capture').innerText(),/9 verified source requests/);
+ assert.match(await page.locator('#ranking-stage-admitted').innerText(),/^0 admitted definitions$/);
+ assert.match(await page.locator('#ranking-stage-evaluated').innerText(),/^0 evaluated definitions$/);
+ assert.match(await page.locator('#ranking-stage-promoted').innerText(),/^0 promoted definitions$/);
+ await page.locator('nav a[href="#ranking-research"]').click();
+ await page.selectOption('#ranking-season','2026');assert.equal(await page.locator('#ranking-source-rows tr').count(),7);
+ await page.selectOption('#ranking-kind','poll');assert.equal(await page.locator('#ranking-source-rows tr').count(),3);
+ assert.match(await page.locator('#ranking-source-rows').innerText(),/AP/);assert.match(await page.locator('#ranking-source-rows').innerText(),/Coaches/);assert.match(await page.locator('#ranking-source-rows').innerText(),/CFP/);
+ await page.selectOption('#ranking-kind','rating');assert.equal(await page.locator('#ranking-source-rows tr').count(),4);
+ for(const season of ['2024','2025']){await page.selectOption('#ranking-season',season);assert.equal(await page.locator('#ranking-source-rows tr').count(),4);assert.match(await page.locator('#ranking-source-rows').innerText(),/Not captured in this run/);assert.match(await page.locator('#ranking-source-rows').innerText(),/Not independently enumerated/);}
+ await page.selectOption('#ranking-season','all');await page.selectOption('#ranking-kind','all');
+ const [download]=await Promise.all([page.waitForEvent('download'),page.locator('#ranking-download-csv').click()]);
+ const csv=fs.readFileSync(await download.path(),'utf8');assert.equal(csv.trim().split(/\r?\n/).length,22);assert.match(csv,/publication_clock_status/);assert.doesNotMatch(csv,/s3:\/\/|prediction_identity_sha256|state_key|firstPlaceVotes/);
+ await page.locator('#game-search').fill('401858519');await page.locator('#game-cards [data-card-details]').click();
+ assert.equal(await page.locator('#dialog-ranking-evidence tbody tr').count(),7);
+ assert.match(await page.locator('#dialog-ranking-evidence').innerText(),/NEW_FIXTURE_EPOCH_REQUIRES_NEW_MODEL/);
+ await page.locator('[data-ranking-overview]').click();assert.equal(await page.locator('#game-dialog').isVisible(),false);assert.equal(await page.locator('#ranking-season').inputValue(),'2026');
+ await page.locator('#game-search').fill('401862817');await page.locator('#game-cards [data-card-details]').click();
+ assert.match(await page.locator('#dialog-ranking-evidence').innerText(),/Captured at or after this clock/);
+ assert.match(await page.locator('#dialog-ranking-evidence').innerText(),/NOT_INCLUDED_IN_SELECTED_SAVED_MODEL/);
+ await page.keyboard.press('Escape');await page.locator('#game-search').fill('');
+ await page.selectOption('#ranking-season','all');
+ assert.equal(await page.locator('#result-status').innerText(),'888 games · 685 observed complete · 790 development projections');
+};
