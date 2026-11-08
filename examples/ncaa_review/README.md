@@ -1,5 +1,55 @@
 # NCAA evidence review
 
+## Current B053 result and V4 review — November 8, 2026 UTC
+
+**The latest authenticated owner execution is B053, with real partial scientific work: 9/16 stages completed, one failed wrapper stage and six stages not entered.** The injury-study work recorded an inner `AdmissionDeferred` disposition; that is separate from the enclosing stage failure. New committed work comprises **145 target fits, 45 scalar fits and 24 empirical fits across 360 new contracts**. The **108 reused historical target fits**, **13 reused native fits** and **seven reused scalar fits** remain separate categories. The receipt's **557 roles and 577 contracts** are not a fit total. No champion promotion or model-improvement claim follows from these counts.
+
+The retained B046 baseline, original issues and dated cohorts remain unchanged. B053's current dashboard is a partial pre-study checkpoint, not proof of complete season coverage or a completed V4 study. All earlier preparation and failure reports below remain dated records.
+
+Open the [private NCAA viewer](https://alvaro-ncaa-research-review.alv-mendizabal.chatgpt.site/private-report/index.html) and choose **`B053_CURRENT_DASHBOARD_DATA.json`** in the main report picker for the current owner checkpoint. The existing schedule and eligibility pickers remain independent. The new **V4 rolling-model review** accepts the separate **`B054_PRIVATE_REVIEW.json`** only when an actual owner return supplies it; a prepared package or an invented test file provides no owner result.
+
+| V4 evidence track | What the viewer preserves |
+|---|---|
+| Original frozen issues | Original record identity and issue/availability proof; no rewriting by a later reconstruction. |
+| Historical rolling reconstruction | Earlier-data selection and per-game model evidence, explicitly development-exposed and not as issued. |
+| Genuinely future rolling issues | Actual fit, cutoff, issue and immutable-record proof; absent records remain absent. |
+| Model, market and source references | Observations and comparison support, excluded from numeric model metric populations. |
+
+The V4 panel keeps each supplied metric population's league, season, target, selector, horizon and sample count. It displays accuracy, natural-log loss, Brier, MAE, RMSE, signed bias and calibration error where supplied. Exact referenced game/fit parts must be selected separately; the browser verifies both compressed and decoded bytes and hashes before rendering a bounded part. Loading one part does not certify every referenced part or the whole physical season.
+
+AP, other ranking systems and the March project transfer remain explicitly source-qualified work. The private transfer inventory separates reused mechanisms, new implementations, proposed candidates and source-blocked inputs. A ranking row needs the correct league, season, team mapping, source authorization and publication/original-availability proof before a game cutoff. An unranked AP team does not receive an invented last-place rank. Men's and women's NET remain separate, with no invented preseason NET. No transfer inventory or implementation test is evidence that every March feature was fitted or improved these models.
+
+**No 2026–27 outcome-based feature/model selection or promotion is permitted.** Missing forecasts, source clocks, ranking admission, provider coverage, qualified line-result distributions and the older calibration/paired-study gaps remain explicit until admitted owner work closes them. Private execution packages, active feature recipes and raw sources remain outside this public repository.
+
+### Load the current and retained evidence
+
+1. Load `B053_CURRENT_DASHBOARD_DATA.json` in the main report picker. Use **Season table**, **Show all loaded games**, the season/gender/model controls and complete pagination. Its supplied predictions and source-only rows retain their original identities, clocks and missing-capability reasons.
+2. Load the retained `B052_FULL_SEASON_SCHEDULE_COMPACT.json` in **Full-season schedule observations**. All **23,603 provider-native IDs relate to 2026–27 only**. Its **2,520 null tip times**, 39 ambiguous date responses and 110 rejected records remain unresolved; provider IDs do not certify unique physical games.
+3. Load `B052_CURRENT_ELIGIBILITY_LEDGER.json`, the delivered copy of member `B047R1_current_eligibility_ledger.json`, in **Why a source game has no current forecast**. Its dated **1,793 identities / 1,322 gate passes / 445 rejected feature rows / 26 missing rows** do not become B053 or V4 prediction counts.
+4. To inspect the older science, replace the main report with `B046_PRIVATE_DASHBOARD_DATA.json` and its exact matching `B047R1_PRIVATE_IDENTITY_OVERLAY.json`. The **47,130 rows / 2,445 display groups** remain that baseline's population. Do not attach that identity overlay to a different main report.
+5. When the actual B054 owner return provides `B054_PRIVATE_REVIEW.json`, select it in **V4 rolling-model review**. Choose a supplied metric population or select a named evidence stream and its pinned local gzip part. Empty populations, unloaded references, failed imports and missing predictions are different states. A rejected replacement preserves the previous valid view.
+
+The viewer performs local file inspection only. It makes no provider request, starts no training, uploads no selected file and changes no audience. The V4 panel can be cleared independently of the main report, schedule and eligibility views. Reloading the page clears in-memory imports; select the files again to restore the views.
+
+### Selection, ranking and comparison requirements
+
+Rolling study windows use verified season calendars and completed earlier seasons. Two-season, three-season, expanding and recency-weighted selectors require their own chronological membership and training-only preprocessing, tuning, calibration and ensemble evidence. Calendar reconstruction supplies formal season boundaries; it does not prove original possession of any game label, ranking or source record. A current season's results cannot select the recipe evaluated on that season.
+
+The March transfer audit retains old negative findings and treats a source catalog as an inventory, not an executed feature bank. Pinned existing ranking bytes may be checked without granting historical availability or a team-ID mapping. AP native editions, AP rows delivered through an ordinal archive and other systems keep distinct product identities. Missing authorization, edition clocks or exact team mapping blocks numeric admission. The [AP describes its weekly ranking points](https://www.ap.org/media-center/press-releases/2023/ap-to-release-first-all-time-college-basketball-ranking/); the [NCAA explains NET's December start, absence of preseason inputs and different men's/women's algorithms](https://www.ncaa.org/news/march-basketball/media-center-how-do-net-rankings-work-in-ncaa-tournament-selection/). Neither description supplies the historical input records required for a model.
+
+The retained registry still accounts for logistic regression, linear/ridge regression, Extra Trees, histogram gradient boosting, XGBoost, LightGBM, CatBoost, PyTorch, TensorFlow, ensembles, blends and calibration. Installed dependencies, a registered candidate, a committed fit, an eligible forecast, a matched evaluation and a promoted champion are distinct states. The V4 file displays the owner report's typed counts and remaining support gaps; it does not infer model execution from a family label or a stream's row count.
+
+Winner/probability comparisons require matched outcomes and natural-log loss, Brier, accuracy and calibration support. Point margin and total require MAE, RMSE and bias; supported uncertainty distributions need their own diagnostics. Cover/push/loss requires the exact signed line, provider/product, time, settlement/overtime rules and admitted purged empirical evidence or an integer distribution retaining push mass. No winner-to-cover substitution is allowed. DraftKings, Kalshi and Polymarket cohorts remain separate, including US/international products, with no claim of complete provider or three-season coverage.
+
+Known missing references fail explicitly. They do not authorize cache-miss replacement, provider retries or refits. Source HTTP, object retrieval, verified cache, replay, original availability, fixtures and actual owner science retain separate receipts. Resource measurement must precede concurrency choices on the current owner instance; a prior measurement does not establish present resources, whole-history cost or the next-run ETA. The earlier dated B052 wall time and worker count remain recorded below.
+
+### Public validation scope
+
+The added checks use invented files to verify four-track separation, cohort qualifications, null preservation, strict JSON, bounded gzip decoding, exact compressed/logical pins and failure preservation. Real Chromium checks exercise desktop/mobile imports, filters, pagination and literal text rendering. These are engineering checks, not owner fits, evaluations or scientific improvement. The actual owner file is validated privately and is never committed as a public fixture.
+
+<details>
+<summary>Dated B053 recovery instructions — before the actual B053 owner return</summary>
+
 ## B053 recovery and current dashboard use — November 8, 2026 UTC
 
 **B053 is prepared and tested; its next authenticated owner run is still required.** The latest actual owner result is B052: **5/16 stages completed, zero recorded failed stages and 11 not entered**, with `B048_SUMMARY_EXCEEDS_REPORT_PART_BOUND` between stages 05 and 05b. B053 repairs bounded coverage-report serialization while preserving the model calculations, eligibility decisions, scientific identities and stage order. **B046 remains scientific authority at 9/16.** No B053 fit, forecast, paired gain or promotion is credited.
@@ -42,6 +92,9 @@ Basketball, injury/availability and market-feature expansions require their orig
 Known missing references must fail explicitly; they do not authorize provider retries, cache-miss substitution or refitting. Resource-aware execution must measure the current instance and shared limits before choosing concurrency. The dated B052 owner wall time was **748.452 seconds** with **six fit workers**. Current live owner state, next-run ETA and attributable cost remain unmeasured; the assistant's local package tests establish no owner speedup. Generic browser CI and source publication checks do not establish the layout of the actual private files in a browser.
 
 The sections below preserve earlier findings as dated evidence. The current actual execution status is B052, while the prepared next continuation is B053.
+
+
+</details>
 
 ## Actual B052 owner return and per-game eligibility — November 8, 2026 UTC
 

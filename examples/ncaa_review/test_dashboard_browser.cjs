@@ -10,6 +10,7 @@ const { fixture: identityOverlayFixture } = require('./test_identity_overlay.cjs
 const { fixture: scheduleFixture, referenceFixture: scheduleReferenceFixture } = require('./test_schedule_viewer.cjs');
 const { compactFixture: compactScheduleFixture } = require('./test_schedule_compact.cjs');
 const { fixture: eligibilityFixture } = require('./test_eligibility_viewer.cjs');
+const { fixture: v4Fixture } = require('./test_v4_review.cjs');
 
 (async () => {
   const browser = await chromium.launch({ headless: true,
@@ -35,7 +36,8 @@ const { fixture: eligibilityFixture } = require('./test_eligibility_viewer.cjs')
         await page.locator('#model-table tbody tr').first().waitFor();
         const evidence = JSON.parse(await page.locator('#evidence').textContent());
         assert.equal(evidence.league, league);
-        assert.match(await page.locator('#b052-current-return').innerText(), /Current B052 return.*5\/16 stages completed.*zero stages recorded failed.*11 not entered.*B048_SUMMARY_EXCEEDS_REPORT_PART_BOUND/s);
+        assert.match(await page.locator('#b053-current-return').innerText(), /Current B053 owner result.*9\/16 stages completed.*one failed wrapper stage.*six not entered.*145 new target fits, 45 new scalar fits and 24 new empirical fits/s);
+        assert.match(await page.locator('#b052-current-return').innerText(), /Dated B052 return.*5\/16 stages completed.*zero stages recorded failed.*11 not entered.*B048_SUMMARY_EXCEEDS_REPORT_PART_BOUND/s);
         assert.match(await page.locator('#b051-current-return').innerText(), /Dated B051 return.*1\/16 stages completed.*B035_REUSE_SCIENTIFIC_IMPLEMENTATION_CHANGED:b032_resume.py/s);
         assert.equal(await page.locator('#provider-table tr').count(), 3);
         assert.deepEqual(await page.locator('#provider-table tr td:first-child strong').allTextContents(), ['Kalshi', 'Polymarket', 'DraftKings']);
@@ -1105,6 +1107,35 @@ const { fixture: eligibilityFixture } = require('./test_eligibility_viewer.cjs')
         assert.equal(await page.locator('#eligibility-content').isHidden(),true);
         assert.equal(await page.locator('[data-eligibility-record]').count(),0);
         counts.eligibilityViews=(counts.eligibilityViews||0)+13;
+      }
+      {
+        const v4=v4Fixture();
+        await page.locator('#v4-summary-file').setInputFiles({name:'invented-v4.json',mimeType:'application/json',buffer:Buffer.from(JSON.stringify(v4.value))});
+        await page.waitForFunction(()=>document.getElementById('v4-status').textContent.startsWith('V4 review loaded.'));
+        assert.equal(await page.locator('#v4-summary-cards .clock-card').count(),4);
+        assert.equal(await page.locator('#v4-metric-rows tr').count(),1);
+        assert.match(await page.locator('#v4-part-count').innerText(),/No evidence part loaded/);
+        await page.selectOption('#v4-track','genuinely_future_issued_rolling');
+        assert.equal(await page.locator('#v4-metric-rows tr').count(),0);
+        assert.match(await page.locator('#v4-metric-count').innerText(),/No evaluated population/);
+        await page.selectOption('#v4-track','all');
+        await page.locator('#v4-part-file').setInputFiles({name:'invented-part.jsonl.gz',mimeType:'application/gzip',buffer:v4.body});
+        await page.waitForFunction(()=>document.getElementById('v4-part-status').textContent.startsWith('Verified compressed'));
+        assert.equal(await page.locator('[data-v4-record]').count(),25);
+        await page.locator('[data-v4-record] details').first().locator('summary').click();
+        assert.match(await page.locator('[data-v4-record]').first().innerText(),/<img src=x/);
+        assert.equal(await page.locator('#v4-part-rows img').count(),0);
+        await page.locator('#v4-part-next').click();
+        assert.equal(await page.locator('[data-v4-record]').count(),2);
+        assert.match(await page.locator('#v4-part-rows').innerText(),/Prediction: Unavailable/);
+        const bad=JSON.parse(JSON.stringify(v4.value));bad.automatic_promotion=true;
+        await page.locator('#v4-summary-file').setInputFiles({name:'rejected-v4.json',mimeType:'application/json',buffer:Buffer.from(JSON.stringify(bad))});
+        await page.waitForFunction(()=>document.getElementById('v4-status').textContent.startsWith('Cannot open V4 review:'));
+        assert.equal(await page.locator('[data-v4-record]').count(),2);
+        assert.equal(await page.evaluate(()=>document.documentElement.scrollWidth>innerWidth),false,'V4 controls fit viewport');
+        await page.locator('#clear-v4').click();
+        assert.equal(await page.locator('#v4-content').isHidden(),true);
+        counts.v4ReviewViews=(counts.v4ReviewViews||0)+12;
       }
       counts.viewports++;
     }
