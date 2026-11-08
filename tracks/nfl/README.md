@@ -1,21 +1,76 @@
 # Sports Edge Lab NFL — complete season research
 
-The [NFL dashboard](season_review_n054.html) accounts for **272 scheduled games, all 32 teams, 122 completed games, one tie and 150 future games**. Every game has all **99 retained, reconstructed or issued model roles** and an equal DraftKings, Kalshi and Polymarket target/horizon inventory. Chicago–Seattle and Jacksonville–Baltimore are present. Historical `LA` identifiers refer to the Los Angeles Rams. A missing numerical value has a specific evidence reason; it is never replaced with a fabricated estimate.
+The [NFL dashboard](season_review_n054.html) accounts for **272 scheduled games, all 32 teams and 113 distinct model roles**. The authenticated N056 owner snapshot remains **122 completed games, 121 decisive results, one tie and 150 future games**. A later official result, **Cincinnati 34–Atlanta 17**, was observed at **18:01:55 UTC on November 8, 2026**. The dated display therefore has **123 finals and 149 games without a captured final**. This observation timestamp is not an asserted final-whistle time. [Official Week 9 schedule](https://www.nfl.com/schedules/2026/by-week/week-9).
 
-**N055 is an actual partial owner run. N056 is the prepared continuation.** The completed family study has **1,378 native states and 45 fitted meta states**, with 1,423 separate optimizer starts, returns and durable commits. Independent state, training-input, chronological and numerical audits preserve the completed work. The failed core source refresh and dependent fresh forecast stages remain visible; the owner's global fit/forecast totals remain null and owner research acceptance remains false. [Actual N055 results and limits](ACTUAL_N055_RESULTS_N056.md).
+**N056 is an actual partial owner run. N057 is prepared.** N056 completed the refreshed core source, **21 new native states**, **zero new meta fits** and **2,683 actual issue rows** before its final coverage census failed on the postseason week token `WC`. The partial acceptance and exact error remain recorded. The owner source marks 24 late-season exact start times as TBD; their registered timestamps are explicitly labeled placeholders, with original issue and cutoff bytes unchanged. Completed work is admitted from authenticated bodies and independent source, state, chronology and scientific audits. [Actual N056 results and limits](ACTUAL_N056_RESULTS_N057.md).
+
+The default per-game view points to an existing, clearly labeled evidence role: the preserved N055 selected reconstruction for its original completed cohort, the separate N056 two-game retrospective supplement for CHI/SEA and JAX/BAL, and actual N056 frozen-selected issues for the 150 owner-future games. This display mapping adds **zero models, fits or issues**. Historical `LA` means the Los Angeles Rams; `LAC` remains the Chargers. Missing numerical values retain a specific cause and are never filled with a synthetic estimate.
 
 ## Complete reports and data
 
-- [Interactive full-season dashboard](season_review_n054.html): 99 roles, winner probabilities, home margins, total points, versioned conditional margin probabilities, source/model/issue clocks and all three provider grids.
-- [Preserved original carrier](current_season_n054.json.gz), [N054 recovery](n054_actual_recovery_n055.json.gz) and [actual N055 overlay](n055_actual_results_n056.json.gz): additive, versioned public evidence. The dashboard downloads their complete combined JSON and full CSV.
-- [Delivery export builder](build_delivery_exports_n056.py): all public records, with exact CSV readback and manifest pins. The paired PDF and workbook use the same reviewed projection.
-- [N056 evidence contracts](test_actual_n055_n056.py), [earlier full-season contracts](test_season_review_n054.py) and [chronology guide](SEASON_REVIEW_N054.md).
+- [Interactive full-season dashboard](season_review_n054.html): every current-season game and model role, winner probability, point margin, total points, oriented conditional margin probabilities, source/model/issue clocks and equal provider grids.
+- [Original carrier](current_season_n054.json.gz), [N054 recovery](n054_actual_recovery_n055.json.gz), [actual N055 overlay](n055_actual_results_n056.json.gz) and [actual N056 overlay](n056_actual_results_n057.json.gz): additive public evidence; each original carrier is unchanged.
+- [Complete export builder](build_delivery_exports_n057.py): lossless JSON, full CSV and exact record readback. The paired PDF and workbook use this same reviewed projection.
+- [N057 evidence contracts](test_actual_n056_n057.py), [preserved N056 contracts](test_actual_n055_n056.py) and [chronology guide](SEASON_REVIEW_N054.md).
 
-The per-game PDF pages and 99-role/provider grid cover the 272 current-season games. Historical 2024–2026 per-game outputs and earlier retained periods remain fully available in the HTML downloads, workbook and full CSV; the PDF includes all seasonal metric records. Historical provider populations retain their original source coverage and scoring cohorts rather than borrowing the current-season denominator.
+The active projection contains **92,208 model cells**, **21,417 numerical model values**, **31,824 provider cells across 13 horizons**, and **1,064 seasonal metric records**. All inventory cells remain present, including explicit evidence reasons where a number is unsupported.
 
-The active projection has **80,784 model cells**, **18,825 numerical model values**, **26,928 provider cells across 11 explicit horizons**, **3,729 numerical provider values**, and **1,058 seasonal metric records**. Every inventory cell remains available even when no source or forecast supports a number. Public per-game predictions are rounded display values; proper scores and error metrics come from authenticated, unrounded evidence.
+The per-game PDF covers all **272 current-season games**, every model role, every provider horizon and retained conditional probabilities. Its appendices include every seasonal metric and every captured N056 curve point. The **full CSV, workbook and HTML full-data downloads include every historical per-game record for 2024–2026 and earlier supported periods**, including 105,075 family rows, 18,889 raw reconstruction rows and 35,252 scale rows. The PDF does not claim to reproduce every raw historical record. Metrics are calculated from authenticated unrounded evidence; public game values are rounded for display and are never rescored.
 
-## Actual N055 model research
+## Actual N056 completed work
+
+| New owner output | Rows | Exact scope |
+|---|---:|---|
+| Original, shadow, fresh and designation components | 336 | Four roles × 28 nearer games × 3 targets |
+| Four-arm nearer raw issues | 336 | Four retained raw arms × 28 games × 3 targets; zero new raw fits |
+| Four-arm long-range raw outlooks | 1,464 | Four retained arms × 122 later games × 3 targets |
+| Frozen-selected family issues | 450 | 150 owner-future games × 3 targets |
+| Oriented conditional margin probabilities | 97 | Real parent, reference and issue clocks; no calibration-success claim |
+| **New actual issues** | **2,683** | Distinct from all retained N054/N055 histories |
+| Separate two-game retrospective supplement | 6 | CHI/SEA and JAX/BAL × 3 targets; zero original-issue credit |
+
+The **21 native starts, optimizer returns and durable commits** comprise **seven current-origin states** and **fourteen states for the two retrospective cutoffs**. Two earlier OOF meta states are reused. Nine runtime-admission processes also executed 18 synthetic smoke fits; those receive zero NFL scientific fit credit. No historical annual family job is rerun. The 1,423 completed N055 native/meta states and three quarantined legacy starts stay separate. Every new fitted model was reloaded in a separate owner prediction process, with input arrays, train-only transforms and exact output values independently checked.
+
+| Family | New N056 native states |
+|---|---:|
+| Regularized logistic / ridge | 6 |
+| Histogram gradient boosting | 6 |
+| Extra Trees | 6 |
+| CatBoost | 3 |
+| Linear/logistic | 0 |
+| XGBoost | 0 |
+| LightGBM | 0 |
+| PyTorch | 0 |
+| TensorFlow | 0 |
+| **Total** | **21** |
+
+The other five supported native families retain their completed N055 studies; zero additional N056 states does not mean the runtime or earlier research is absent. The current pass follows the previously frozen selected procedure. Native workers retain one framework thread each and bounded parallel execution; no other workload is interrupted.
+
+## Two formerly missing games: separate completed supplement
+
+**CHI 34–SEA 17** and **JAX 33–BAL 10** are present in the complete schedule, retained earlier issue histories and raw causal append. N056 also completed their six-row frozen-policy family supplement. The fresh source view has **5,445 rows / 1,815 games**, including the two-game append, and **244 team-stat rows cover both teams in all 122 owner-snapshot finals**.
+
+These two games were evaluated retrospectively under the frozen 2022/23 procedure. Their supplement retains its own metrics and creates **zero original pregame-issue credit**. The old N055 **120 point / 119 winner** cohort, its **105,075 historical rows** and all 411 seasonal metrics remain unchanged.
+
+| Separate retrospective target | Games | Metric | Value |
+|---|---:|---|---:|
+| win | 2 | Log loss | 0.7221321571 |
+| margin | 2 | MAE | 20.1675844660 |
+| total | 2 | MAE | 3.7666166561 |
+
+## A separately observed prospective final
+
+The actual N056 selected forecast for CIN/ATL was issued before the registered cutoff and before the later **CIN 34–ATL 17** final. It has its own three full-precision metric records, outside the old benchmark and the retrospective supplement.
+
+| Actual issued target, CIN/ATL only | Games | Metric | Value |
+|---|---:|---|---:|
+| win | 1 | Log loss | 0.4129706486 |
+| margin | 1 | MAE | 11.9082757580 |
+| total | 1 | MAE | 3.2319117980 |
+
+This is one game. It does not establish superiority, calibrated probability performance or a reason to change the selected model. No model is promoted.
+
+## Preserved actual N055 historical research
 
 | Family | New native states | Completed native cutoff jobs | Exact-state reuse jobs |
 |---|---:|---:|---:|
@@ -46,43 +101,35 @@ The frozen choice is an OOF stack for winner and total points, and CatBoost's fo
 
 All three primary selected-event intervals include zero and their Holm-adjusted p-values are 1.0. Of all 339 adjusted comparisons, the two below 0.05 are adverse annual PyTorch results: 2024 total points in the support arm and 2025 margin in the combined arm. These are monitoring findings. **No model is promoted.**
 
-## Why two games are outside this family cohort
+## Source capture and expanded condition curves
 
-The retained full season includes **CHI 34–SEA 17** and **JAX 33–BAL 10**. The separate raw causal append contains their reconstructed outputs. N055's source refresh failed because a dynamically loaded source component retained the earlier namespace and was rejected by the current source boundary. Family preparation consequently used the preserved 5,439-row view instead of the 5,445-row view with those two games. Its frozen 2026 evaluation therefore remains **120 point / 119 winner games**.
+The actual N056 bounded capture contains **6,987 normalized observations**: **660 representative rows** and **6,327 alternate-curve rows**. Exact normalized-body readbacks support **223 of 252 representative target cells**, plus **2,123 captured conditional curve points**, of which **1,679 have a complete paired reference**.
 
-The active per-game family cells explain that exact cause. N056 prepares a guarded source-routing repair and a separate six-target retrospective supplement under the frozen 2022/23 choices. It has not executed. That supplement would leave the 105,075 original family rows and all original metrics unchanged and would create zero original pregame-issue credit.
+`N056_CURRENT_CAPTURE` and `N056_ALTERNATE_CURVE_CAPTURE` are separate horizons. Every one of the 272 games receives the same three-provider/three-target inventory at each horizon. The bounded acquisition covers 28 owner-future games; later games and unsupported provider products retain precise scope reasons. The curve inventory includes every provider equally even where no alternate capture exists. This is **not a claim that all historical or current provider data was acquired**.
 
-## Forecast chronology and source coverage
+Each captured condition retains its original threshold and greater/less orientation. Home versus away conditions are normalized only from exact contract evidence. A source threshold is not a point prediction. One-sided or absent paired references remain explicit; no midpoint is invented. **1,450 normalized observations lack an individual quote-update clock**; actual capture time is retained separately. These source-only references have **zero metric eligibility and zero predictive credit** and do not replace any frozen historical T1/T2 observation or enter a model feature without separate admission.
 
-The 150 future games retain four-lane N054 owner forecasts: 336 nearer-game rows across 28 games and 1,464 long-range rows across 122 games. Another 336 component rows and 97 conditional rows make **2,233 actual N054 issue rows**. N055 adds **84 original and 84 shadow early research issues** on the same 28 nearer games, giving **2,401 rows across these two owner histories**. Their base football source remains November 4; November 8 issue timestamps do not establish a fresh source refresh. Each lane has 42 injury-qualified and 42 gap rows. N055 produced zero fresh four-lane raw issues and zero family future issues. Earlier N053R1 owner rows and the old review outlooks remain separately dated; no review row is added to the owner total.
-
-Long-range forecasts do not assume future injuries or intervening results. Their long-horizon accuracy and equivalence to an event-specific final-hour forecast remain unvalidated. The original source, model and issue clocks remain intact.
-
-The separate **N055_CURRENT_CAPTURE** horizon adds authenticated current references from 660 normalized provider rows: 172 Kalshi, 326 Polymarket and 162 DraftKings. There are **223 numerical target cells out of 252** within the bounded 28-game capture. All 272 games retain the same provider grid. These are source observations with **zero metric eligibility and zero predictive credit**. Capture time is distinct from quote time; all 172 Kalshi rows lack a recorded quote-update clock, and that absence remains explicit.
-
-| Week 10 provider support | Winner | Margin threshold | Total threshold | Complete conditional pairs |
-|---|---:|---:|---:|---|
-| DraftKings | 13/14 | 13/14 | 13/14 | Present for the 13 supported games; SEA/LV absent |
-| Kalshi | 14/14 | 1/14 | 1/14 | Thirteen point-target catalogs lack a supported contract |
-| Polymarket | 14/14 | 14/14 | 14/14 | Margin 13/14, total 10/14; five one-sided thresholds remain explicit |
-
-Week 9 has all 14 scoped games for each provider and target. Binary contract thresholds are not converted into point forecasts. Home/away conditional direction, original half-point thresholds and source-clock limitations remain visible. No current capture replaces a protected historical T1 or T2 observation.
+The older N055 horizon remains unchanged: 660 normalized rows and 223 derived target references. Original/shadow N056 issues still retain the November 4 base football source, while fresh/designation/raw/family roles expose their actual refreshed source clocks. A new issue timestamp alone is not evidence of a fresh source or model. The public per-game personnel view preserves 42 target queries with actual game-specific report rows and 408 without supported reports, including all 366 long-range target rows. Missing personnel support is not treated as healthy, depth or individual talent; source acquisition time and historical publication remain distinct.
 
 ## Denominators and retained studies
 
-| Role | Games or records | Meaning |
+| Evidence role | Games or rows | Meaning |
 |---|---:|---|
-| Retained regular-season schedule | 272 | All 32 teams; 122 completed and 150 future |
-| Separate raw current point / winner reconstruction | 122 / 121 | Includes the two-game causal append; tie excluded from binary scoring |
-| Protected original and N055 family point / winner cohorts | 120 / 119 | Each retains its own declared role and metric identity |
-| Original Polymarket timed support / decisive metrics | 92 / 91 | 92 timed reference games including the tie; 91 decisive winner games |
-| Restored completed Polymarket winner references | 122 | Later source recovery with original quote clocks |
+| Complete current schedule | 272 | All 32 teams, 17 games each |
+| Authenticated owner snapshot | 122 finals / 121 decisive / 150 future | Preserved independently from the later display result |
+| Later official display | 123 finals / 122 decisive / 149 without a captured final | One dated Cincinnati final append |
+| Retained raw current point / winner reconstruction | 122 / 121 | Includes the causal two-game append |
+| Protected original and N055 family point / winner cohorts | 120 / 119 | Each retains its own original role and metric identity |
+| New N056 retrospective supplement | 2 games / 6 targets | Separate frozen-policy reconstruction, no original issue |
+| New N056 prospective review | 1 game / 3 targets | Separately scored actual current-origin issue |
+| Original Polymarket timed support / decisive metrics | 92 / 91 | 92 timed reference games including the tie / 91 decisive winner games |
+| Restored completed Polymarket source coverage | 122 | Later source recovery with original clocks |
 | Common three-provider T2 comparison | 119 | Exact common decisive cohort |
-| Retained T2 model comparison | 91 | Separate model cohort; never relabeled 119 |
-| Registered minute-path scope | 121 | Eight Rams paths restored: 113 + 8; JAX/BAL outside the registration |
-| Conditional margin records | 179 | 82 retained plus 97 N054 owner records; 107 less-than and 72 greater-than |
+| Retained T2 model comparison | 91 | Separate model cohort, never relabeled 119 |
+| Registered minute-path scope | 121 | Eight Rams paths restored: 113 + 8; JAX/BAL and later finals outside that registration |
+| Conditional margin records | 276 | 82 retained +97 N054 +97 N056, with each real issue clock and orientation |
 
-The conditional table retains the exact predicate probability, probability conditional on unequal margin, equality probability and issue time. Missing conditional outputs are not replaced with winner probabilities or point centers. These remain unvalidated research probabilities.
+The N054 and N055 histories retain **2,233** and **168** actual owner issue rows. N056 adds 2,683, yielding **5,084 rows across these three distinct histories**. Earlier N053R1 owner 754 and review-only 1,464 remain separately dated and are not added to this new-work total. Current and long-range issue cohorts remain explicit; event-specific future injury status and intervening results are not assumed.
 
 N053R1 preserves 3,432 raw native states, 7,184 completed raw jobs, 3,752 exact-input reuses, four 46/58/60/72-column arms and a shared 72-field missingness basis. The 70-state conditional error-scale study keeps fixed point locations, train-only RMS normalization, Gaussian and standardized Student-t5 tails, 35,252 distribution rows, 140 metric records, 260 comparisons and two nested checks. No scale comparison passes the full Holm family. Continuous density is not exact integer-score probability, and negative-total mass remains disclosed.
 
@@ -95,10 +142,11 @@ The completed 144-cell designation, 288-cell injury and 150-state correction stu
 ```bash
 python tracks/nfl/build_season_review_n054.py --check
 python -m unittest discover -s tracks/nfl -p 'test_*.py'
+python tracks/nfl/build_delivery_exports_n057.py /tmp/nfl-n057-exports
 ```
 
-Release requires the exact PR head to pass every required CI workflow, a permitted merge, a final-main file readback and matching deployed Site content. The dashboard is a dated publication with a visible source commit, not an automatic live feed. This NFL update changes no other sport, shared CI gate, infrastructure or access configuration. The N056 preparation performs no new owner optimization or source acquisition.
+Release requires exact PR-head success for every required CI workflow, a permitted merge, final-main file readbacks and matching deployed Site content. The dashboard is a dated publication with a visible canonical commit. N057 is prepared owner work; publication creates no new scientific fit or forecast issue. This NFL update changes no other sport, shared CI gate, infrastructure or access configuration.
 
 ## Dated archives
 
-The [N053R1 preparation](season_review_n053r1.html), [N052 audit / N053 preparation](review_n053.html), [N051 audit](review_n052.html) and [earlier review](review.html) retain their original scientific objects and dated language. Their counts are not substituted for the active N056 review of actual N055 evidence.
+The [N055 results note](ACTUAL_N055_RESULTS_N056.md), [N054 recovery note](ACTUAL_N054_RECOVERY_N055.md), [N053R1 preparation](season_review_n053r1.html), [N052 audit / N053 preparation](review_n053.html), [N051 audit](review_n052.html) and [earlier review](review.html) retain their original dated evidence. Their counts are not substituted for the active N057 review of actual N056 results.
