@@ -6,7 +6,7 @@ exports.run=async(page,{width,screenshots})=>{
  assert.equal(await page.locator('#game-table-view').isVisible(),false);
  assert.equal(await page.locator('#family-coverage-rows tr').count(),14);
  assert.equal(await page.evaluate(()=>FBSCompleteReview.filtered().slice(0,63).every(g=>g.period==='current'&&g.season===2026)),true);
- assert.match(await page.locator('#active-result-snapshot').innerText(),/Nov 7/);
+ assert.match(await page.locator('#active-result-snapshot').innerText(),/Latest/);
  assert.match(await page.locator('#game-cards .game-card').first().innerText(),/Home margin.*Total points.*Cover probability.*Unavailable.*Margin intervals.*80%.*95%/s);
  await page.selectOption('#model-view','extra_trees');
  assert.doesNotMatch(await page.locator('#game-cards .game-card .card-intervals').first().innerText(),/Not saved/);

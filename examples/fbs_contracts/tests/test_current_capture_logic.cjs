@@ -34,3 +34,10 @@ test('invalid final scores and duplicate official identities fail closed',()=>{
  for(const score of [null,NaN,-1,'26'])assert.equal(resultView(game,{...row,home_score:score},'latest','old').completed,false);
  assert.throws(()=>indexRows([row,row]),/Duplicate/);
 });
+
+test('separate prior snapshot and explicit newest-delta flags stay distinct',()=>{
+ const prior=resultView(game,row,'prior','old');assert.equal(prior.result_snapshot,'prior');assert.equal(prior.newly_observed_final,true);
+ const newest=resultView(game,{...row,newly_observed:false},'latest','old');assert.equal(newest.completed,true);assert.equal(newest.newly_observed_final,false);
+ const addition=resultView(game,{...row,newly_observed:true},'latest','old');assert.equal(addition.newly_observed_final,true);assert.equal(addition.models,game.models);
+ assert.equal(resultView(game,row,'unrecognized','old').result_snapshot,'original');
+});
