@@ -1109,10 +1109,14 @@ const { fixture: v4Fixture } = require('./test_v4_review.cjs');
         counts.eligibilityViews=(counts.eligibilityViews||0)+13;
       }
       {
+        assert.match(await page.locator('#v4-review > .note').first().innerText(),/B054_V4_PRIVATE_REVIEW\.json/);
         const v4=v4Fixture();
+        v4.value.status='INVENTED_LONG_MACHINE_STATUS_'+ 'X'.repeat(96);
         await page.locator('#v4-summary-file').setInputFiles({name:'invented-v4.json',mimeType:'application/json',buffer:Buffer.from(JSON.stringify(v4.value))});
         await page.waitForFunction(()=>document.getElementById('v4-status').textContent.startsWith('V4 review loaded.'));
         assert.equal(await page.locator('#v4-summary-cards .clock-card').count(),4);
+        assert.equal(await page.locator('#v4-execution > p').innerText(),'Recorded status: '+v4.value.status);
+        assert.equal(await page.evaluate(()=>document.documentElement.scrollWidth>innerWidth),false,'long V4 execution status fits the viewport without truncation');
         assert.equal(await page.locator('#v4-metric-rows tr').count(),1);
         assert.match(await page.locator('#v4-part-count').innerText(),/No evidence part loaded/);
         await page.selectOption('#v4-track','genuinely_future_issued_rolling');
