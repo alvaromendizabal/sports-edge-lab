@@ -23,6 +23,25 @@
     const clocks = [...new Set(['winner','margin','total'].map(t=>value.model?.[t]?.computed_at_utc).filter(Boolean))].sort();
     return {cutoff:value.record?.cutoff || null,computed_first:clocks[0] || null,computed_last:clocks.at(-1) || null};
   }
+  // Weekly scopes are small enough to show every fixture without a page break.
+  // Full-season and multi-season views retain a bounded 30-card page.
+  function pageSize(season, period) {
+    return String(season) === '2026' && ['current','previous'].includes(period) ? 63 : 30;
+  }
+  function periodSummary(rows, project, family, contracts) {
+    const output={games:rows.length,completed:0,without_final:0,winner:0,margin:0,total:0,cover:0,complete:0,partial:0,missing:0};
+    for(const game of rows){
+      output[game.completed?'completed':'without_final']++;
+      const value=project(game,family);
+      for(const target of ['winner','margin','total','cover'])output[target]+=Number(contracts.hasTarget(value,target));
+      output[contracts.completeness(value,family)]++;
+    }
+    return output;
+  }
+  function comparisonRoute(season, period, snapshot) {
+    if(snapshot==='original'&&season==='all')return null;
+    return {study:snapshot==='original'?'v041':snapshot==='prior'?'v042':snapshot==='nov7_late'?'v043':'v044',cohort:String(season)==='2026'&&period!=='all'?period+'_week':season==='all'?'cumulative':String(season)};
+  }
   function familyCoverage(rows, families, project, contracts) {
     return families.map(family => {
       const counts = {family:family.id,label:family.label,games:rows.length,winner:0,margin:0,total:0,margin_intervals:0,total_intervals:0,cover:0,complete:0,partial:0,missing:0};
@@ -35,7 +54,7 @@
       return {...counts,expected_targets:contracts.expectedTargets(family.id)};
     });
   }
-  const api = {orderGames, interval, intervals, chronology, familyCoverage};
+  const api = {orderGames, interval, intervals, chronology, familyCoverage, pageSize, periodSummary, comparisonRoute};
   if (typeof module !== 'undefined' && module.exports) module.exports = api;
   if (typeof window === 'undefined') return;
   window.FBSGameCenter = api;
@@ -57,11 +76,11 @@
       if(!records){records=familyCoverage(scope,families,G.projection,A);coverageCache.set(key,records);if(coverageCache.size>16)coverageCache.delete(coverageCache.keys().next().value);}
       $('family-coverage-summary').textContent=`${scope.length.toLocaleString()} fixtures in the selected season, period, result and team filters. Every family uses this same inventory before a model-coverage filter is applied.`;
       const show=(r,t)=>r.expected_targets.includes(t)?`${r[t]} / ${r.games}`:'Outside family scope';
-      $('family-coverage-rows').innerHTML=records.map(r=>`<tr${r.family===$('model-view').value?' class="selected-model"':''}><td><button class="model-choice" data-model-choice="${esc(r.family)}">${esc(r.label)}</button>${small(r.family==='retained'?'Separate original replay':'Reconstructed development; original issuance unproved')}</td><td>${show(r,'winner')}</td><td>${show(r,'margin')}</td><td>${show(r,'total')}</td><td>${r.margin_intervals} / ${r.games}${small('margin · 80% + 95%')}</td><td>${r.total_intervals} / ${r.games}${small('total · 80% + 95%')}</td><td>${r.cover} qualified</td><td>${r.complete} complete${small(r.partial+' partial · '+r.missing+' absent')}</td></tr>`).join('');
+      $('family-coverage-rows').innerHTML=records.map(r=>`<tr${r.family===$('model-view').value?' class="selected-model"':''}><td><button class="model-choice" data-model-choice="${esc(r.family)}">${esc(r.label)}</button>${small(r.family==='retained'?'Separate original replay':r.family.includes('_refresh_')?'Separate changed-input 119-game reconstruction':'Reconstructed development; original issuance unproved')}</td><td>${show(r,'winner')}</td><td>${show(r,'margin')}</td><td>${show(r,'total')}</td><td>${r.margin_intervals} / ${r.games}${small('margin · 80% + 95%')}</td><td>${r.total_intervals} / ${r.games}${small('total · 80% + 95%')}</td><td>${r.cover} qualified</td><td>${r.complete} complete${small(r.partial+' partial · '+r.missing+' absent')}</td></tr>`).join('');
     }
     function renderCards() {
       const list=G.filtered(),rows=list.slice(G.page*G.pageSize,(G.page+1)*G.pageSize),family=$('model-view').value,provider=$('provider-filter').value;
-      $('visible-game-range').textContent=list.length?`Showing ${G.page*G.pageSize+1}–${Math.min((G.page+1)*G.pageSize,list.length)} of ${list.length.toLocaleString()} selected games · every matching fixture remains in the page sequence.`:'No matching games in this selection';
+      $('visible-game-range').textContent=list.length?G.pageSize===63?`All ${list.length.toLocaleString()} matching weekly games are shown below · no hidden pages.`:`Showing ${G.page*G.pageSize+1}–${Math.min((G.page+1)*G.pageSize,list.length)} of ${list.length.toLocaleString()} selected games · every matching fixture remains in the page sequence.`:'No matching games in this selection';
       $('game-table-view').hidden=$('game-layout').value!=='table';$('game-cards').hidden=$('game-layout').value!=='cards';
       if(!$('game-cards').hidden)$('game-cards').innerHTML=rows.map(game=>{
         const value=G.projection(game),hasWinner=A.hasTarget(value,'winner'),clock=chronology(value),mi=intervals(value,'margin'),ti=intervals(value,'total');

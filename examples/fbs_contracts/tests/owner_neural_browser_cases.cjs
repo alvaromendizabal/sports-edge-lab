@@ -12,7 +12,7 @@ exports.run=async page=>{
   await page.locator('#game-rows button').first().click();
   assert.equal(await page.locator('#dialog-model a').getAttribute('href'),'owner-neural-study.json');
   assert.match(await page.locator('#dialog-model').innerText(),/2026-11-07T/);
-  assert.equal(await page.locator('#game-model-comparison tr').count(),14);
+  assert.equal(await page.locator('#game-model-comparison tr').count(),26);
   await page.keyboard.press('Escape');
   await page.selectOption('#development-study','v041');
   for(const cohort of ['2024','2025','2026','previous_week','current_week']){

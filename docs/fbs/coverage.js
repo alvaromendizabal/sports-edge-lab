@@ -3,8 +3,8 @@
   const finite = value => typeof value === 'number' && Number.isFinite(value);
   const names = {winner:'Winner & probability', margin:'Point margin', total:'Total points', cover:'Qualified cover probability'};
   function expectedTargets(family) {
-    if (family === 'logistic') return ['winner'];
-    if (family === 'linear' || family === 'ridge') return ['margin','total'];
+    if (family === 'logistic' || /_refresh_logistic$/.test(family)) return ['winner'];
+    if (family === 'linear' || family === 'ridge' || /_refresh_(linear|ridge)$/.test(family)) return ['margin','total'];
     return ['winner','margin','total'];
   }
   function hasTarget(value, target) {
@@ -23,6 +23,7 @@
     if (target !== 'any' && !expectedTargets(family).includes(target)) return 'Not a target of this model family';
     if (target !== 'any' && value.missing?.[target]) return value.missing[target];
     if (family === 'retained') return game.season !== 2026 ? 'Original replay is not projected for this season' : 'No original replay retained for this game';
+    if (value.scope_reason) return value.scope_reason;
     if (!game.kickoff_exact) return 'Exact kickoff unresolved';
     if (game.projection_status === 'INSUFFICIENT_PRIOR_OUTCOMES') return 'Prior history or training/calibration separation not admitted';
     if (completeness(value,family) === 'partial') return 'One or more expected model targets are missing';
