@@ -8,27 +8,31 @@
 
 [**Open the FBS browser dashboard →**](https://sports-edge-lab-fbs.alv-mendizabal.chatgpt.site) · [FBS clock and coverage methodology](docs/fbs/SEASON_EXPLORER_2026-11-03.md) · [FBS source and model card](tracks/ncaaf/README.md)
 
-## Current NFL evidence · November 7, 2026
+## Current NFL evidence · November 8, 2026
 
-**All 272 scheduled games, 32 teams and 73 retained model roles are accounted for.** The retained season snapshot contains 122 completed games, 121 decisive results and 150 future games. Chicago–Seattle and Jacksonville–Baltimore are included, and historical `LA` team identifiers resolve to the Los Angeles Rams. Every game has the same model and three-provider inventory, with available values, timing and specific reasons for unavailable numerical outputs.
+**All 272 scheduled games, 32 teams and 99 model roles are accounted for.** The retained snapshot includes 122 completed games, 121 decisive results and 150 future games. Chicago–Seattle and Jacksonville–Baltimore are included, and historical `LA` identifiers resolve to the Rams. Every game has an equal model and three-provider inventory with precise reasons where numerical evidence is absent.
 
-The latest verified recovery admits **102 completed native market states and 2,233 actual N054 issue rows** with their original source, model and issue clocks. Four football lanes cover all 150 future games through 28 nearer owner-issued games and 122 long-range owner outlooks. Earlier review outlooks remain in history. This publication adds no fits, source values or forecasts, and full N054 owner-package closure remains incomplete. The three unresolved model-family starts receive no completed-fit credit.
+The actual partial N055 owner run completed **1,378 native states and 45 meta states**, with 1,423 optimizer starts, returns and durable commits. Its **105,075 historical rows**, 411 seasonal metrics, 8,034 weekly metrics, 339 paired comparisons and three nested 2023 checks have independent state, input and arithmetic verification. All 23 annual procedures include the unchanged baseline on identical 2022/23 cohorts. [Complete actual N055 results](tracks/nfl/ACTUAL_N055_RESULTS_N056.md).
 
-| Frozen 119-game 2026 monitoring cohort | Model | Kalshi | Interpretation |
-|---|---:|---:|---|
-| Winner accuracy, 119 non-ties | **79/119 · 66.4%** | 76/119 · 63.9% | Accuracy-focused research model: three additional correct picks |
-| Winner log loss, same 119 games | **0.6291** | 0.6444 | Probability-focused model: lower loss; different model from the accuracy row |
-| Previously reported completed week, common 13 of 14 finals | **11/13** | 10/13 | Both highlighted models picked one more winner; Kalshi had better probability scores that week |
+| Frozen selected event procedure, 2026 | Games | Metric | Difference against the unchanged baseline |
+|---|---:|---:|---:|
+| Winner log loss | 119 | 0.6551848900 | −0.0036297599 |
+| Home margin MAE | 120 | 9.9167425287 | −0.2045472779 |
+| Total points MAE | 120 | 11.3714075322 | +0.0856984987 |
 
-These frozen results are descriptive reconstructions using T−2h inputs and quotes on matching events with the declared non-tie probability target. Their paired week-bootstrap intervals cross zero. They do not establish a durable or prospective advantage, and they are not the full current-season schedule.
+Winner accuracy is 58.82% and Brier score is 0.2319119963 on the same 119-game family cohort. All three primary paired intervals include zero and their adjusted p-values equal 1.0. The only two adjusted findings below 0.05 across the full 339-comparison family are adverse annual PyTorch results. No model is promoted.
 
-**Coverage and evaluation cohorts remain separate:** restored source coverage includes **122 completed games**; the protected model benchmark has **120 point-target / 119 winner games**; original Polymarket timed metrics retain **92 timed reference games including the tie / 91 decisive winner games**. Restored **common119 T2 provider** comparisons and **exact91 T2 model** comparisons are separately labeled. No source-only restoration is counted as a predictive improvement, and no horizon substitutes for another.
+**The 120/119 family cohort is not the complete schedule.** A source-routing failure made N055 retain the original input view without CHI/SEA and JAX/BAL. Those games remain in the schedule and separate 122/121 raw causal append. N056 prepares a guarded repair and an explicitly separate retrospective supplement; neither a missing output nor an earlier issue is invented. The owner global totals remain null, fresh four-lane and family forecast stages produced no new issues, and N056 remains prepared.
 
-The recovered fixed market study adds 448 historical prediction rows. Its paired comparisons use 73 point-target and 72 winner games: margin point estimates improve, winner log loss and total-point error worsen, and all six Holm-adjusted p-values equal 1. No model is promoted. The dashboard and [complete recovery report](tracks/nfl/ACTUAL_N054_RECOVERY_N055.md) preserve the prior negative studies, six controls, actual state reuse and every source limitation.
+The dated N054 forecasts still cover all 150 future games, through 28 nearer games and 122 long-range outlooks. N055 adds 168 original/shadow early research issue rows with the November 4 base source preserved. New issue timestamps do not establish fresh inputs. Separately, 660 captured provider rows support 223 current reference cells under a new explicit horizon, with zero scoring eligibility or predictive credit.
 
-[Season and weekly results](tracks/nfl/README.md) · [Open interactive dashboard](https://sports-edge-lab-nfl.alv-mendizabal.chatgpt.site/) · [Model card](tracks/nfl/CURRENT_MODEL_CARD.md) · [Methodology](tracks/nfl/CURRENT_METHODOLOGY.md) · [Resolved examples](tracks/nfl/current_disagreements.csv)
+**Coverage and evaluation cohorts remain separate:** restored completed source coverage includes **122 games**; protected model benchmarks retain **120 point-target / 119 winner games**; original Polymarket timed metrics retain **92 timed reference games including the tie / 91 decisive winner games**. Restored **common119 T2 provider** comparisons and **exact91 T2 model** comparisons remain separately labeled. No horizon substitutes for another.
 
-The dashboard opens directly in a browser. It is an explicitly published, dated snapshot of this repository, with its source commit visible; it is not a live price feed or automatic GitHub sync. The [complete season HTML](tracks/nfl/season_review_n054.html) also works offline. Current NFL provider comparisons are limited to DraftKings, Kalshi and Polymarket. Older studies retain their original provider definitions in a closed historical section.
+The earlier 102-state fixed market study, 70-state scale study, 3,432-state raw football study, six controls and all negative studies remain unchanged. Three prior unresolved family starts were quarantined without another optimization. State counts, cutoff jobs, reuse events, source values, reconstructed predictions and actual issues have separate accounting.
+
+[Complete NFL evidence](tracks/nfl/README.md) · [Open interactive dashboard](https://sports-edge-lab-nfl.alv-mendizabal.chatgpt.site/) · [Full offline HTML](tracks/nfl/season_review_n054.html)
+
+The dashboard is an explicitly published, dated snapshot of this repository, with its source commit visible. It is not a live price feed or automatic GitHub sync. Active NFL presentation remains research-only; DraftKings, Kalshi and Polymarket are reference sources. Older studies preserve their own provider definitions in dated archives.
 
 ## Review the work in five minutes
 
@@ -81,7 +85,7 @@ a narrow missing-clock checkpoint repair.
 
 | Track | Entry point | Publication boundary |
 |---|---|---|
-| NFL | [Current evidence](tracks/nfl/README.md) | Updated November 3; authenticated forward execution and explicit coverage gaps |
+| NFL | [Current evidence](tracks/nfl/README.md) | Updated November 8; actual family research, preserved issue clocks and explicit coverage gaps |
 | NCAA FBS | [Browser dashboard](https://sports-edge-lab-fbs.alv-mendizabal.chatgpt.site) · [Track](tracks/ncaaf/README.md) | V026 recovery completed; all 888 observed season games; dated provider coverage |
 | NBA | [Research view](docs/NBA_RESEARCH_CARD.md) | Separately dated basketball evidence |
 | NCAA basketball | [Open dashboards](https://alvaro-ncaa-research-review.alv-mendizabal.chatgpt.site/) · [Men's evidence](tracks/ncaam/README.md) · [Women's evidence](tracks/ncaaw/README.md) · [Runnable contracts](examples/ncaa_review/README.md) | Separate historical selections, current execution gaps and three-provider qualification |
