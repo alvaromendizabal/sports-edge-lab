@@ -1,6 +1,25 @@
 # NCAA evidence review
 
-## Current compact schedule file — November 8, 2026 UTC
+## Actual B052 owner return and per-game eligibility — November 8, 2026 UTC
+
+Authenticated run **20261108T063651Z_d7a6c2ff** preserved **5/16 completed stages, zero recorded failed stages and 11 not entered**. The run-level result is **FAILED_PARTIAL_WORK_PRESERVED**: it stopped between stage 05 and stage 05b while serializing the coverage summary, with `B048_SUMMARY_EXCEEDS_REPORT_PART_BOUND`. The recorded wall time is **748.452 seconds**. This identifies a bounded report-writing failure, without attributing a hardware or connection cause. The physical ledger verifies **zero newly committed target, scalar, empirical or unclassified model artifacts** and **108 reused historical target fits**; uncommitted estimation is not asserted. No new forecast or scientific improvement is credited.
+
+The actual owner-produced **B052_FULL_SEASON_SCHEDULE_COMPACT.json** now contains all **23,603 provider-native records** in **4,744,902 bytes**, SHA-256 `48a0504151d2993195f2ced268f256895ad1d5cc5affda27587c84f28ff5f766`. Its underlying B051 index, source version and original clocks are unchanged. Expanded canonical display: **51,300,443 bytes**, SHA-256 `c7a70ac520b7993120daa2ead0dccc6ef4ac456434543e3e0a46b8e3c207782e`. Source-index logical content: **51,286,695 bytes**, SHA-256 `b7948455cc9d8336b66c45229b6a7486cba2be9c7991cbfd4b68bddeaa280d93`. The earlier assistant projection and its `3902194e…` physical pin remain dated evidence below. **2,520 exact tip times remain null**. All 1,460 date slots have dispositions, but 39 ambiguous responses and 110 rejected records still prevent certification of a complete physical season. Source IDs, physical games and model-evaluation cohorts remain different populations.
+
+Open the [private NCAA viewer](https://alvaro-ncaa-research-review.alv-mendizabal.chatgpt.site/private-report/index.html#eligibility-review) and select **B047R1_current_eligibility_ledger.json** from this owner return to inspect every current gate reason. Its exact file pin is **1,694,450 bytes**, SHA-256 `37ca6772f442e23d9c4c4469534d0cf70f4802524aed482b73cf83a5e91ef964`. The local importer verifies schema, exact identities, count conservation, overlapping reasons and observable gate decisions. It retains null clocks, computes the selected file hash and distinguishes this authenticated B052 pin from an unrecognized local file. Files stay in the tab; the public Site does not contain these private records.
+
+| Gender | Source identities | Input gate passed | Feature row rejected | No feature row |
+|---|---:|---:|---:|---:|
+| Men | 896 | 649 | 226 | 21 |
+| Women | 897 | 673 | 219 | 5 |
+| Both | 1,793 | 1,322 | 445 | 26 |
+
+**A gate pass is not a forecast, admitted model issue or eligible provider comparison.** The 1,767 feature rows retain **932 null outcome-availability clocks**. Overlapping reasons account for 439 away-history failures, nine home-history failures, 26 missing feature rows, 17 source-status failures and nine unconfirmed source tip times. The viewer shows every reason, raw gate input and recorded parser reason, with gender/status/reason filters, exact-ID search and complete pagination. It does not borrow forecasts or infer aliases. The old **447 historical per-game rejection reasons were not retained**; the new 445 rejected feature rows do not replace or reconstruct them.
+
+B046 remains scientific authority at 9/16. The **47,130-row baseline / 2,445 display groups**, **1,923 immutable issues**, **zero supplied per-game rolling winner records**, **zero qualified cover/push/loss groups**, 52 priority-calibration contexts and all-family paired-study gap remain unchanged. The new schedule and eligibility views neither expand model denominators nor fill unsupported probabilities. Current-season outcomes cannot select or promote models. Literal owner/worker/bootstrap/source-preflight/source-retrieval/RETURN/shell-exit lines were not supplied with this return; recorded completion and return-readback receipts remain separate evidence.
+
+
+## Dated assistant compact schedule file — before the B052 owner return
 
 Load **B052_FULL_SEASON_SCHEDULE_COMPACT.json** in the [private NCAA viewer](https://alvaro-ncaa-research-review.alv-mendizabal.chatgpt.site/private-report/index.html). The current private delivery preserves all **23,603 provider-native records** from the authenticated B051 index. Its **4,744,935 bytes** have SHA-256 `3902194e3cde3321380270c4d742b6f895554b98938df56ec367af48c29b6407`. The expanded canonical display JSON is **51,300,443 bytes**, SHA-256 `c7a70ac520b7993120daa2ead0dccc6ef4ac456434543e3e0a46b8e3c207782e`; the exact viewer functions loaded every record and an independent Node stream verified that digest.
 

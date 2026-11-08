@@ -41,11 +41,11 @@ function fixture(count=27){
 function referenceFixture(kind='byte',count=27){const value=clone(fixture(count).value);value.status=kind==='source'?'REFERENCE_ONLY_SOURCE_INDEX_BOUND':'REFERENCE_ONLY_DISPLAY_BYTE_BOUND';value.records=[];value.records_included=0;value.reference_only_reason=kind==='source'?'SOURCE_INDEX_BOUND_REACHED':'COMPLETE_DISPLAY_EXCEEDS_UTF8_BOUND';if(kind==='source'){value.summary.source_versions_beyond_display_index_bound=1;value.summary.display_index_complete_for_observed_ids=false;value.summary.provider_native_game_ids=null;}const body=Buffer.from(JSON.stringify(value));return {value,body,pin:{bytes:body.length,sha256:sha(body)}};}
 module.exports={fixture,referenceFixture,createHarness};
 
-function createHarness(input){
+function createHarness(input,extraApi=''){
   const html=fs.readFileSync(input||path.join(__dirname,'private_report.html.tmpl'),'utf8');
   let script=[...html.matchAll(/<script\b[^>]*>([\s\S]*?)<\/script>/gi)].map(m=>m[1]).join('\n');
   assert(/\}\)\(\);\s*$/.test(script));
-  script=script.replace(/\}\)\(\);\s*$/,`globalThis.api={decodeScheduleCompact,scheduleJsonBudget,validateScheduleDisplay,parseScheduleBytes,loadScheduleDisplay,clearScheduleDisplay,resetScheduleFilters,filteredScheduleRecords,renderScheduleRows,scheduleEventDate,state:()=>scheduleState,pin:()=>schedulePhysicalPin,setBaseline(value){report=value;recordRows=value.records;games=value.records;identityOverlay={value:{fixture:'baseline-overlay'}};},baseline:()=>({report,recordRows,games,identityOverlay})};})();`);
+  script=script.replace(/\}\)\(\);\s*$/,`globalThis.api={decodeScheduleCompact,scheduleJsonBudget,validateScheduleDisplay,parseScheduleBytes,loadScheduleDisplay,clearScheduleDisplay,resetScheduleFilters,filteredScheduleRecords,renderScheduleRows,scheduleEventDate,state:()=>scheduleState,pin:()=>schedulePhysicalPin,setBaseline(value){report=value;recordRows=value.records;games=value.records;identityOverlay={value:{fixture:'baseline-overlay'}};},baseline:()=>({report,recordRows,games,identityOverlay}),${extraApi}};})();`);
   class Element{
     constructor(tag='div'){this.tagName=tag;this.children=[];this.events={};this.dataset={};this.value='all';this.hidden=false;this.disabled=false;this.own='';this.className='';this.files=[];}
     append(...items){this.children.push(...items);}
