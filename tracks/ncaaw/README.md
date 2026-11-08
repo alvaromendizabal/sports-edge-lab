@@ -1,5 +1,29 @@
 # Sports Edge Lab · NCAA women's basketball
 
+## Actual B051 owner return — authenticated November 8, 2026 UTC
+
+**Source refresh completed, including the full-season collection plan. Model restoration then stopped at an exact implementation-identity guard.** Authenticated owner run **20261108T015946Z_d34f8020** recorded **FAILED_PARTIAL_WORK_PRESERVED**: **1/16 stages completed**, `01_authenticate_and_restore_parent` failed, and the remaining 14 stages were not entered. The recorded error is `B035_REUSE_SCIENTIFIC_IMPLEMENTATION_CHANGED:b032_resume.py`. This is an identified compatibility failure, without a new hardware, operating-system or connection-cause claim.
+
+The owner-produced schedule report accounts for **1,460/1,460 provider/gender/date slots** across the full-season query interval. It records **458 validated responses, 963 empty responses and 39 ambiguous responses**, with **110 rejected source records** and **23,603 provider-native IDs** in the retained index. An index ID is not a verified cross-provider physical game. Empty and ambiguous responses do not prove that a date has no games. The collector retains `full_season_complete=false` and `complete_official_denominator=false`.
+
+The original owner display export is **REFERENCE_ONLY_DISPLAY_BYTE_BOUND**: **23,603 records expected and zero included**, because the complete index exceeded its unchanged 25 MiB display-file bound. Its report and exact source-index references are preserved. Loading that reference-only file does not load 23,603 games. No new forecast is joined to schedule-only records, and the older 47,130-row baseline / 2,445 display groups retain their separate denominators.
+
+| Evidence layer | Authenticated B051 observation |
+|---|---|
+| Physical outer ZIP | 17,447,175 bytes; SHA-256 `507cea7ee679c64fc44211770770fe48dbc91896c319fecfc54acdb47fdb9eb7` |
+| Nested owner return | 17,546,374 bytes; SHA-256 `0c1801e4070992b32771cd6c92128be4ab8013c0e13901222dee173bef9e1e90` |
+| Executed source | 12,276,860 bytes; SHA-256 `00a1540ac2766c30089e4a8cc1d856bcbf7d699ae4706aa32f06a08d2706ee73` |
+| ZIP and manifest closure | 4 outer / 178 nested / 478 source members; safe unique explicit regular names, CRCs, exact active B051/runtime b051 manifest |
+| Owner fixture gate | 1,686 passed / 1 optional Linux pidfd skip / 0 failures / 0 errors; fixtures are not scientific fits |
+| Initialized physical fit ledger | 0 newly committed target / scalar / empirical / unclassified model artifacts; uncommitted estimation is not asserted zero |
+| Recorded completion | 2026-11-08T02:31:06.721488+00:00; owner wall time 1,880.066 seconds |
+| Final-return readback receipt | Nested full bytes verified at 2026-11-08T02:31:07.845135+00:00 |
+| Literal terminal evidence | Current RETURN, worker-terminal, bootstrap-terminal, source-preflight, source-retrieval and observed shell-exit lines not supplied |
+
+**B046 remains the scientific partial authority at 9/16.** No new owner fit, per-game rolling forecast, cover/push/loss probability, injury/path gain or scientific improvement is credited to B051. The older baseline still supplies zero per-game rolling winner records and zero qualified cover groups. The 52-context priority-calibration gap and all-family paired monthly study gap remain open. Registered model families, dependencies, admitted physical fits, forecasts and evaluated gains remain separate states. Current 2026–27 outcomes cannot select or promote a model. B052 is implementation preparation until authenticated owner work establishes otherwise.
+
+The earlier B050, B049, B048, B047R1 and scientific sections below are retained as dated evidence. Later source capture does not replace their original availability clocks, provider populations, physical fit totals or immutable issues.
+
 ## Actual B050 owner return — November 8, 2026 UTC
 
 Authenticated owner run **20261107T235154Z_0a962d1c** recorded **FAILED_PARTIAL_WORK_PRESERVED**, **0/16 completed stages**: the first source-refresh stage failed and the other 15 were not entered. Its owner fixtures recorded **1,578 passed / 1 skipped / 0 failures / 0 errors**. Those fixture results are separate from both the earlier 1,579/1,579 local preparation and actual scientific fitting.

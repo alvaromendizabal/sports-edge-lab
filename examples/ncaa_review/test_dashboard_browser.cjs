@@ -8,6 +8,7 @@ const { pathToFileURL } = require('node:url');
 const { chromium } = require(process.env.PLAYWRIGHT_MODULE_DIR || 'playwright');
 const { fixture: identityOverlayFixture } = require('./test_identity_overlay.cjs');
 const { fixture: scheduleFixture, referenceFixture: scheduleReferenceFixture } = require('./test_schedule_viewer.cjs');
+const { compactFixture: compactScheduleFixture } = require('./test_schedule_compact.cjs');
 
 (async () => {
   const browser = await chromium.launch({ headless: true,
@@ -33,6 +34,7 @@ const { fixture: scheduleFixture, referenceFixture: scheduleReferenceFixture } =
         await page.locator('#model-table tbody tr').first().waitFor();
         const evidence = JSON.parse(await page.locator('#evidence').textContent());
         assert.equal(evidence.league, league);
+        assert.match(await page.locator('#b051-current-return').innerText(), /Current B051 return.*1\/16 stages completed.*B035_REUSE_SCIENTIFIC_IMPLEMENTATION_CHANGED:b032_resume.py/s);
         assert.equal(await page.locator('#provider-table tr').count(), 3);
         assert.deepEqual(await page.locator('#provider-table tr td:first-child strong').allTextContents(), ['Kalshi', 'Polymarket', 'DraftKings']);
         const attempt = evidence.current_owner_attempt, inventory = evidence.observed_inventory;
@@ -1041,6 +1043,18 @@ const { fixture: scheduleFixture, referenceFixture: scheduleReferenceFixture } =
         assert.deepEqual(await page.locator('[data-game] table:first-of-type').allTextContents(),baseForecasts);
         assert.equal(await page.locator('#model-metrics').innerText(),baseMetrics);
         assert.equal(await page.locator('#identity-overlay-count').innerText(),baseOverlay);
+        const compactSchedule=compactScheduleFixture();
+        await page.locator('#schedule-file').setInputFiles({name:'invented-compact-schedule.json',mimeType:'application/json',buffer:compactSchedule.body});
+        await page.waitForFunction(()=>document.getElementById('schedule-load-status').textContent.startsWith('Loaded 27 of 27 declared'));
+        assert.equal(await page.locator('[data-schedule-record]').count(),25);
+        assert.match(await page.locator('#schedule-source-proof').innerText(),new RegExp(compactSchedule.pin.sha256));
+        assert.match(await page.locator('#schedule-source-proof').innerText(),/not a new owner execution/);
+        assert.match(await page.locator('#schedule-source-proof').innerText(),/not reverified in this browser/);
+        await page.locator('#schedule-next').click();
+        assert.equal(await page.locator('[data-schedule-record]').count(),2);
+        assert.deepEqual(await page.locator('[data-game] table:first-of-type').allTextContents(),baseForecasts);
+        assert.equal(await page.locator('#model-metrics').innerText(),baseMetrics);
+        assert.equal(await page.locator('#identity-overlay-count').innerText(),baseOverlay);
         await page.locator('#clear-schedule').click();
         assert.equal(await page.locator('#schedule-content').isHidden(),true);
         assert.deepEqual(await page.locator('[data-game] table:first-of-type').allTextContents(),baseForecasts);
@@ -1052,7 +1066,7 @@ const { fixture: scheduleFixture, referenceFixture: scheduleReferenceFixture } =
         assert.equal(await page.locator('[data-schedule-record]').count(),25,'clearing baseline leaves schedule independent');
         assert.equal(await page.evaluate(()=>document.documentElement.scrollWidth>innerWidth),false,'schedule panel fits mobile');
         await page.locator('#clear-schedule').click();
-        counts.scheduleViews=(counts.scheduleViews||0)+15;
+        counts.scheduleViews=(counts.scheduleViews||0)+21;
       }
       counts.viewports++;
     }

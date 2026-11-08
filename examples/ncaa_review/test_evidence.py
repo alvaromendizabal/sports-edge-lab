@@ -39,11 +39,25 @@ class EvidenceTests(unittest.TestCase):
         self.assertEqual(receipt['template_sha256'], hashlib.sha256(
             (build_dashboard.HERE / 'private_report.html.tmpl').read_bytes()).hexdigest())
 
+    def test_compact_schedule_lossless_projection_keeps_source_and_baseline_separate(self):
+        result = subprocess.run(['node', str(build_dashboard.HERE / 'test_schedule_compact.cjs')],
+                                check=True, capture_output=True, text=True, timeout=30)
+        receipt = json.loads(result.stdout)
+        self.assertEqual(receipt['status'], 'PASS')
+        self.assertGreaterEqual(receipt['checks'], 35)
+        self.assertEqual(receipt['template_sha256'], hashlib.sha256(
+            (build_dashboard.HERE / 'private_report.html.tmpl').read_bytes()).hexdigest())
+
     def test_reported_startup_does_not_replace_authenticated_science(self):
         pages = build_dashboard.outputs()
         for path, output in pages.items():
             if 'private-report' in path.parts:
                 continue
+            self.assertIn('Current B051 return', output)
+            self.assertIn('1/16 stages completed', output)
+            self.assertIn('B035_REUSE_SCIENTIFIC_IMPLEMENTATION_CHANGED:b032_resume.py', output)
+            self.assertIn('1,686 cases with 1 skipped', output)
+            self.assertIn('23,603 provider-native IDs', output)
             self.assertIn('Current B050 return', output)
             self.assertIn('1,578 cases with 1 skipped', output)
             self.assertIn('B050_SCHEDULE_REFERENCE_SCHEMA_OR_BOUND', output)
