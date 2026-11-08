@@ -63,10 +63,11 @@ test('period result and target counts retain missing outputs without excluding f
  assert.deepEqual(G.periodSummary(rows,r=>r,'v040_catboost',A),{games:3,completed:1,without_final:2,winner:1,margin:2,total:2,cover:0,complete:1,partial:1,missing:1});
 });
 test('period comparison follows the selected dated snapshot without inventing cumulative original scores',()=>{
- assert.deepEqual(G.comparisonRoute('2026','current','latest'),{study:'v044',cohort:'current_week'});
+ assert.deepEqual(G.comparisonRoute('2026','current','latest'),{study:'v045',cohort:'current_week'});
  assert.deepEqual(G.comparisonRoute('2026','previous','nov7_late'),{study:'v043',cohort:'previous_week'});
  assert.deepEqual(G.comparisonRoute('2025','all','prior'),{study:'v042',cohort:'2025'});
  assert.deepEqual(G.comparisonRoute('2026','current','original'),{study:'v041',cohort:'current_week'});
+ assert.deepEqual(G.comparisonRoute('2026','current','nov7_evening'),{study:'v044',cohort:'current_week'});
  assert.equal(G.comparisonRoute('all','all','original'),null);
 });
 test('saved output timing uses precise original clocks and treats the cutoff boundary as late',()=>{

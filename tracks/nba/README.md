@@ -5,6 +5,28 @@ Reproducible NBA forecasts, complete released-game inventories, chronological mo
 This NBA track belongs to the shared [Sports Edge Lab](../../README.md) repository. Its public material contains sanitized aggregate evidence and invented engineering examples. Actual game-level forecasts, feature recipes, model weights, source responses, full journals, and execution packages remain private.
 
 
+## November 8 official refresh — complete assigned schedule and home-folder return contract
+
+**A fresh, bounded official-calendar audit now rechecks all 1,200 assigned regular-season games.** The captured NBA pages cover every date from October 1 through April 11, with responses acquired on November 8 between **18:00:52 and 18:05:11 UTC**. The inventory retains **1,274 official rows: 1,200 assigned regular-season games, 67 preseason games and seven official placeholders**. The three separately identified secondary observations remain outside this official-source count. All prior official event identities and ordered teams match; no newly assigned regular-season matchup appears in this captured inventory. The remaining **30 unassigned regular-season matchups** are therefore a fresh, bounded observation, rather than an inference from the earlier November 6 release.
+
+| Assigned regular-season status | Fresh official count |
+|---|---:|
+| Final | **139** |
+| Live | **0** |
+| Scheduled | **1,061** |
+| Total assigned | **1,200** |
+
+The six additional finals are retained separately from the preserved 132-final monitoring cohort and the subsequent 133-final snapshot. Existing final scores are unchanged. The audit also detects **five revised scheduled tip times**. Current schedule displays can use the new observations while the saved predictions keep their original feature clocks, target cutoffs and issuance status. A later schedule or result update does not establish that an earlier forecast used it, and does not increase a provider-comparison denominator without separate exact-source qualification.
+
+All **193 date responses** were retained and authenticated. Four initially failed local normalization because their official placeholder cards have null team objects; reading those same bodies with explicit placeholder handling resolved all seven rows. No retry or replacement source was needed. The bounded acquisition pass took **132 seconds**, with at most six concurrent public reads and two same-refresh responses reused. The audit performed zero model fits, forecast issues, paid calls or market-provider requests.
+
+The latest injury report linked in the captured official index was published **November 8 at 12:45 PM Eastern** and acquired at **18:04:40 UTC**. It contains **71 rows across five pages**, including **17 explicitly unsubmitted team reports**. Every row rejoins an official game and team in the fresh calendar. These are current observations; they do not alter the frozen historical injury matrix or prove newly fitted player effects. Unsubmitted or omitted reports remain missing evidence, and player identity, projected minutes, replacement impact and timestamped first-news reactions retain their separate source requirements.
+
+The native delivery contract now requires **one compact return archive directly in the user's home folder**, including partial or failed runs. Completed compatible checkpoints remain reusable and separately authenticated; large model weights remain explicitly omitted from compact returns. The return's internal research status, the process exit and any supplied terminal transcript remain distinct evidence. This contract does not imply that a new native run has occurred, that omitted weights have cloud persistence, or that the inherited owner workflow is complete.
+
+Source observations: [NBA game pages](https://www.nba.com/games?date=2026-11-08), the [official injury-report index](https://official.nba.com/nba-injury-report-2026-27-season), and its captured [12:45 PM Eastern report](https://ak-static.cms.nba.com/referee/injury/Injury-Report_2026-11-08_12_45PM.pdf). The bounded observation ends at the recorded acquisition times; later changes require another authorized capture. The dated research and source snapshots below remain preserved.
+
+
 ## November 8 bounded replay — authenticated partial research return
 
 An independent, read-only audit of the physical **B053 native research return** (recorded November 8 at 06:15 UTC) confirms a **partial, resumable** result: the return records **208 newly completed prediction-task variants, 416 new game-specific estimator fits and 64 new prior-only calibration optimizer fits**. Another **342 completed variants were reused**, not retrained. Cumulative registered progress is **550 completed variants, 649 explicitly input-blocked variants and 1,591,665 pending** out of 1,592,864 family/objective/task slots. The blocked variants preserve 450 exact injury/cutoff gaps and 199 missing registered-arm snapshots. The return describes 26 successful native synthetic head canaries across ten families; synthetic canaries are **not NBA fits**.

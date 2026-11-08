@@ -7,15 +7,15 @@ exports.run=async(page,{width,screenshots})=>{
  await page.locator('[data-period="current"]').click();
  assert.equal(await page.locator('#game-cards .game-card').count(),63);
  assert.match(await page.locator('#visible-game-range').innerText(),/All 63 matching weekly games.*no hidden pages/);
- assert.match(await page.locator('#period-overview-status').innerText(),/63 games · 48 observed finals · 15 without a final/);
+ assert.match(await page.locator('#period-overview-status').innerText(),/63 games · 61 observed finals · 2 without a final/);
  assert.equal(await page.locator('#next-page').isDisabled(),true);
  await page.locator('#game-search').fill('401856745');
  assert.equal(await page.locator('#game-cards .game-card').count(),1);
  assert.match(await page.locator('#period-overview-status').innerText(),/63 games/);
  await page.locator('#compare-selected-period').click();
- assert.equal(await page.locator('#development-study').inputValue(),'v044');
+ assert.equal(await page.locator('#development-study').inputValue(),'v045');
  assert.equal(await page.locator('#development-cohort').inputValue(),'current_week');
- assert.match(await page.locator('#development-status').innerText(),/48 observed games/);
+ assert.match(await page.locator('#development-status').innerText(),/61 observed games/);
  await page.locator('#game-search').fill('');await page.locator('[data-period="previous"]').click();
  assert.equal(await page.locator('#game-cards .game-card').count(),56);
  assert.match(await page.locator('#visible-game-range').innerText(),/All 56 matching weekly games/);
@@ -44,8 +44,10 @@ exports.run=async(page,{width,screenshots})=>{
  assert.match(await page.locator('#coverage-accounting').innerText(),/49.*Outside the registered 119-game/s);
  await page.selectOption('#model-filter','present');assert.equal(await page.locator('#game-cards .game-card').count(),14);
  assert.doesNotMatch(await page.locator('#game-cards .game-card .card-intervals').first().innerText(),/Not saved/);
- await page.locator('#compare-selected-period').click();assert.equal(await page.locator('#development-study').inputValue(),'v044_refresh');
- assert.match(await page.locator('#development-status').innerText(),/performance is pending/);assert.equal(await page.locator('#development-rows tr').count(),0);assert.equal(await page.locator('#export-metrics').isDisabled(),true);
+ await page.locator('#compare-selected-period').click();assert.equal(await page.locator('#development-study').inputValue(),'v045_refresh');
+ assert.match(await page.locator('#development-status').innerText(),/12 observed games/);assert.equal(await page.locator('#export-metrics').isDisabled(),false);
+ await page.selectOption('#development-study','v044_refresh');assert.match(await page.locator('#development-status').innerText(),/performance is pending/);assert.equal(await page.locator('#development-rows tr').count(),0);assert.equal(await page.locator('#export-metrics').isDisabled(),true);
+ await page.selectOption('#capture-view','prior');assert.equal(await page.locator('#compare-selected-period').isDisabled(),true);await page.selectOption('#capture-view','latest');
  await page.locator('#clear-game-filters').click();await page.selectOption('#model-view','fixed_equal_blend');await page.locator('[data-period="all"]').click();
 
  assert.equal(await page.locator('#game-table-view').isVisible(),false);

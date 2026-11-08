@@ -1,5 +1,13 @@
 # Sports Edge Lab · NCAA men's basketball
 
+## B053 readiness — November 8, 2026 UTC
+
+The tested B053 continuation awaits an authenticated owner run. The latest actual execution is **B052: 5/16 completed, zero recorded failed stages and 11 not entered**, ending with `B048_SUMMARY_EXCEEDS_REPORT_PART_BOUND` between stages 05 and 05b. B053 repairs bounded report serialization; it does not change scientific identity or add a model result. **B046 remains scientific authority at 9/16.**
+
+For NCAA men's basketball, the actual current eligibility ledger contains **896 source identities: 649 input-gate passes, 226 rejected feature rows and 21 missing feature rows**. A pass is not a prediction. The combined 23,603 provider-native schedule IDs cover the registered **2026–27 season only** and are not a count of unique physical games or evidence of complete three-season model coverage.
+
+See the [NCAA recovery instructions and current capability summary](../../examples/ncaa_review/README.md#b053-recovery-and-current-dashboard-use--november-8-2026-utc) for the separate schedule, source-only, eligibility and historical-science views; prediction and metric requirements; the unchanged 10-family/26-head registry; and remaining rolling-model, provider, calibration and injury work. The retained package audit reports 1,927/1,927 local implementation tests, with no B053 owner execution or scientific improvement credited. All prior counts, cohorts and original clocks below remain dated evidence. **No 2026–27 outcome-based selection or promotion is permitted.**
+
 ## Actual B052 owner return and per-game eligibility — November 8, 2026 UTC
 
 Authenticated run **20261108T063651Z_d7a6c2ff** preserved **5/16 completed stages, zero recorded failed stages and 11 not entered**. The run-level result is **FAILED_PARTIAL_WORK_PRESERVED**: it stopped between stage 05 and stage 05b while serializing the coverage summary, with `B048_SUMMARY_EXCEEDS_REPORT_PART_BOUND`. The recorded wall time is **748.452 seconds**. This identifies a bounded report-writing failure, without attributing a hardware or connection cause. The physical ledger verifies **zero newly committed target, scalar, empirical or unclassified model artifacts** and **108 reused historical target fits**; uncommitted estimation is not asserted. No new forecast or scientific improvement is credited.
@@ -91,7 +99,7 @@ The generic private viewer adds an **Original vs per-game rolling** comparison, 
 
 Load the separately delivered baseline dashboard JSON, then its matching identity overlay. Their original source dates remain in force. The [NCAA methodology README](../../examples/ncaa_review/README.md) records the startup limitation, exact viewer behavior and validation scope. Public pages contain generic code and sanitized aggregates; private game data stays in the selected local files.
 
-## B047R1 season workspace — current review
+## B047R1 season workspace — dated review
 
 ### Physical B047R1 return authenticated — November 7, 2026 UTC
 

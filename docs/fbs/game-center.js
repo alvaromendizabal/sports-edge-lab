@@ -72,7 +72,7 @@
   }
   function comparisonRoute(season, period, snapshot) {
     if(snapshot==='original'&&season==='all')return null;
-    return {study:snapshot==='original'?'v041':snapshot==='prior'?'v042':snapshot==='nov7_late'?'v043':'v044',cohort:String(season)==='2026'&&period!=='all'?period+'_week':season==='all'?'cumulative':String(season)};
+    return {study:snapshot==='original'?'v041':snapshot==='prior'?'v042':snapshot==='nov7_late'?'v043':snapshot==='nov7_evening'?'v044':'v045',cohort:String(season)==='2026'&&period!=='all'?period+'_week':season==='all'?'cumulative':String(season)};
   }
   function familyCoverage(rows, families, project, contracts) {
     return families.map(family => {
