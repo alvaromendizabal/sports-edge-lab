@@ -44,10 +44,14 @@ class EvidenceTests(unittest.TestCase):
         for path, output in pages.items():
             if 'private-report' in path.parts:
                 continue
-            self.assertIn('Latest reported startup', output)
+            self.assertIn('Current B050 return', output)
+            self.assertIn('1,578 cases with 1 skipped', output)
+            self.assertIn('B050_SCHEDULE_REFERENCE_SCHEMA_OR_BOUND', output)
+            self.assertIn('no authenticated full-season schedule export to load', output)
+            self.assertIn('Dated reported B049 startup', output)
             self.assertIn('observed shell exit 1', output)
             self.assertIn('No program return was supplied', output)
-            self.assertIn('Current B048 return', output)
+            self.assertIn('Dated B048 return', output)
             self.assertIn('Dated B047R1 return', output)
         self.assertEqual(self.exports['ncaam']['current_results_status']['release'], 'B043')
         self.assertEqual(self.exports['ncaaw']['current_results_status']['release'], 'B043')
