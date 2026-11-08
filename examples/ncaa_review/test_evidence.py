@@ -21,6 +21,13 @@ class EvidenceTests(unittest.TestCase):
         cls.exports = {league: build_dashboard.evidence(league)
                        for league in ('ncaam', 'ncaaw')}
 
+    def test_v4_review_tracks_metrics_and_exact_bounded_parts(self):
+        result = subprocess.run(['node', str(build_dashboard.HERE / 'test_v4_review.cjs')],
+                                check=True, capture_output=True, text=True, timeout=30)
+        receipt = json.loads(result.stdout)
+        self.assertEqual(receipt['status'], 'PASS')
+        self.assertGreaterEqual(receipt['checks'], 30)
+
     def test_private_viewer_model_scoped_inventory(self):
         result = subprocess.run(['node', str(build_dashboard.HERE / 'test_private_viewer.cjs')],
                                 check=True, capture_output=True, text=True, timeout=20)
@@ -62,7 +69,9 @@ class EvidenceTests(unittest.TestCase):
         for path, output in pages.items():
             if 'private-report' in path.parts:
                 continue
-            self.assertIn('Current B052 return', output)
+            self.assertIn('Current B053 owner result', output)
+            self.assertIn('145 new target fits, 45 new scalar fits and 24 new empirical fits', output)
+            self.assertIn('Dated B052 return', output)
             self.assertIn('5/16 stages completed', output)
             self.assertIn('zero stages recorded failed', output)
             self.assertIn('11 not entered', output)

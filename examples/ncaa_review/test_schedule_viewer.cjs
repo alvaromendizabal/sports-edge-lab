@@ -43,7 +43,9 @@ module.exports={fixture,referenceFixture,createHarness};
 
 function createHarness(input,extraApi=''){
   const html=fs.readFileSync(input||path.join(__dirname,'private_report.html.tmpl'),'utf8');
-  let script=[...html.matchAll(/<script\b[^>]*>([\s\S]*?)<\/script>/gi)].map(m=>m[1]).join('\n');
+  const scripts=[...html.matchAll(/<script\b[^>]*>([\s\S]*?)<\/script>/gi)].map(m=>m[1]).filter(s=>s.includes('function decodeScheduleCompact('));
+  assert.equal(scripts.length,1,'Exactly one main report/schedule script is exercised; the independent V4 script has its own contract.');
+  let script=scripts[0];
   assert(/\}\)\(\);\s*$/.test(script));
   script=script.replace(/\}\)\(\);\s*$/,`globalThis.api={decodeScheduleCompact,scheduleJsonBudget,validateScheduleDisplay,parseScheduleBytes,loadScheduleDisplay,clearScheduleDisplay,resetScheduleFilters,filteredScheduleRecords,renderScheduleRows,scheduleEventDate,state:()=>scheduleState,pin:()=>schedulePhysicalPin,setBaseline(value){report=value;recordRows=value.records;games=value.records;identityOverlay={value:{fixture:'baseline-overlay'}};},baseline:()=>({report,recordRows,games,identityOverlay}),${extraApi}};})();`);
   class Element{

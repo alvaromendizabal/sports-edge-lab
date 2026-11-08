@@ -1,5 +1,29 @@
 # Sports Edge Lab · NCAA women's basketball
 
+## Current B053 result and V4 review — November 8, 2026 UTC
+
+**The latest authenticated owner execution is B053, with real partial scientific work: 9/16 stages completed, one failed wrapper stage and six stages not entered.** The injury-study work recorded an inner `AdmissionDeferred` disposition; that is separate from the enclosing stage failure. New committed work comprises **145 target fits, 45 scalar fits and 24 empirical fits across 360 new contracts**. The **108 reused historical target fits**, **13 reused native fits** and **seven reused scalar fits** remain separate categories. The receipt's **557 roles and 577 contracts** are not a fit total. No champion promotion or model-improvement claim follows from these counts.
+
+The retained B046 baseline, original issues and dated cohorts remain unchanged. B053's current dashboard is a partial pre-study checkpoint, not proof of complete season coverage or a completed V4 study. All earlier preparation and failure reports below remain dated records.
+
+Open the [private NCAA viewer](https://alvaro-ncaa-research-review.alv-mendizabal.chatgpt.site/private-report/index.html) and choose **`B053_CURRENT_DASHBOARD_DATA.json`** in the main report picker for the current owner checkpoint. The existing schedule and eligibility pickers remain independent. The new **V4 rolling-model review** accepts the separate **`B054_PRIVATE_REVIEW.json`** only when an actual owner return supplies it; a prepared package or an invented test file provides no owner result.
+
+| V4 evidence track | What the viewer preserves |
+|---|---|
+| Original frozen issues | Original record identity and issue/availability proof; no rewriting by a later reconstruction. |
+| Historical rolling reconstruction | Earlier-data selection and per-game model evidence, explicitly development-exposed and not as issued. |
+| Genuinely future rolling issues | Actual fit, cutoff, issue and immutable-record proof; absent records remain absent. |
+| Model, market and source references | Observations and comparison support, excluded from numeric model metric populations. |
+
+The V4 panel keeps each supplied metric population's league, season, target, selector, horizon and sample count. It displays accuracy, natural-log loss, Brier, MAE, RMSE, signed bias and calibration error where supplied. Exact referenced game/fit parts must be selected separately; the browser verifies both compressed and decoded bytes and hashes before rendering a bounded part. Loading one part does not certify every referenced part or the whole physical season.
+
+AP, other ranking systems and the March project transfer remain explicitly source-qualified work. The private transfer inventory separates reused mechanisms, new implementations, proposed candidates and source-blocked inputs. A ranking row needs the correct league, season, team mapping, source authorization and publication/original-availability proof before a game cutoff. An unranked AP team does not receive an invented last-place rank. Men's and women's NET remain separate, with no invented preseason NET. No transfer inventory or implementation test is evidence that every March feature was fitted or improved these models.
+
+See the [NCAA V4 usage and remaining requirements](../../examples/ncaa_review/README.md#current-b053-result-and-v4-review--november-8-2026-utc). **No 2026–27 outcome-based feature/model selection or promotion is permitted.** Missing forecasts, source clocks, ranking admission, provider coverage, qualified line-result distributions and the older calibration/paired-study gaps remain explicit until admitted owner work closes them. Private execution packages, active feature recipes and raw sources remain outside this public repository.
+
+<details>
+<summary>Dated B053 preparation — before the actual B053 owner return</summary>
+
 ## B053 readiness — November 8, 2026 UTC
 
 The tested B053 continuation awaits an authenticated owner run. The latest actual execution is **B052: 5/16 completed, zero recorded failed stages and 11 not entered**, ending with `B048_SUMMARY_EXCEEDS_REPORT_PART_BOUND` between stages 05 and 05b. B053 repairs bounded report serialization; it does not change scientific identity or add a model result. **B046 remains scientific authority at 9/16.**
@@ -7,6 +31,9 @@ The tested B053 continuation awaits an authenticated owner run. The latest actua
 For NCAA women's basketball, the actual current eligibility ledger contains **897 source identities: 673 input-gate passes, 219 rejected feature rows and 5 missing feature rows**. A pass is not a prediction. The combined 23,603 provider-native schedule IDs cover the registered **2026–27 season only** and are not a count of unique physical games or evidence of complete three-season model coverage.
 
 See the [NCAA recovery instructions and current capability summary](../../examples/ncaa_review/README.md#b053-recovery-and-current-dashboard-use--november-8-2026-utc) for the separate schedule, source-only, eligibility and historical-science views; prediction and metric requirements; the unchanged 10-family/26-head registry; and remaining rolling-model, provider, calibration and injury work. The retained package audit reports 1,927/1,927 local implementation tests, with no B053 owner execution or scientific improvement credited. All prior counts, cohorts and original clocks below remain dated evidence. **No 2026–27 outcome-based selection or promotion is permitted.**
+
+
+</details>
 
 ## Actual B052 owner return and per-game eligibility — November 8, 2026 UTC
 
