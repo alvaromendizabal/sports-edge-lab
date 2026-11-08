@@ -6,7 +6,7 @@
 
 The retained B046 baseline, original issues and dated cohorts remain unchanged. B053's current dashboard is a partial pre-study checkpoint, not proof of complete season coverage or a completed V4 study. All earlier preparation and failure reports below remain dated records.
 
-Open the [private NCAA viewer](https://alvaro-ncaa-research-review.alv-mendizabal.chatgpt.site/private-report/index.html) and choose **`B053_CURRENT_DASHBOARD_DATA.json`** in the main report picker for the current owner checkpoint. The existing schedule and eligibility pickers remain independent. The new **V4 rolling-model review** accepts the separate **`B054_PRIVATE_REVIEW.json`** only when an actual owner return supplies it; a prepared package or an invented test file provides no owner result.
+Open the [private NCAA viewer](https://alvaro-ncaa-research-review.alv-mendizabal.chatgpt.site/private-report/index.html) and choose **`B053_CURRENT_DASHBOARD_DATA.json`** in the main report picker for the current owner checkpoint. The existing schedule and eligibility pickers remain independent. The new **V4 rolling-model review** accepts the separate **`B054_V4_PRIVATE_REVIEW.json`** only when an actual owner return supplies it; a prepared package or an invented test file provides no owner result.
 
 | V4 evidence track | What the viewer preserves |
 |---|---|
@@ -27,7 +27,7 @@ AP, other ranking systems and the March project transfer remain explicitly sourc
 2. Load the retained `B052_FULL_SEASON_SCHEDULE_COMPACT.json` in **Full-season schedule observations**. All **23,603 provider-native IDs relate to 2026–27 only**. Its **2,520 null tip times**, 39 ambiguous date responses and 110 rejected records remain unresolved; provider IDs do not certify unique physical games.
 3. Load `B052_CURRENT_ELIGIBILITY_LEDGER.json`, the delivered copy of member `B047R1_current_eligibility_ledger.json`, in **Why a source game has no current forecast**. Its dated **1,793 identities / 1,322 gate passes / 445 rejected feature rows / 26 missing rows** do not become B053 or V4 prediction counts.
 4. To inspect the older science, replace the main report with `B046_PRIVATE_DASHBOARD_DATA.json` and its exact matching `B047R1_PRIVATE_IDENTITY_OVERLAY.json`. The **47,130 rows / 2,445 display groups** remain that baseline's population. Do not attach that identity overlay to a different main report.
-5. When the actual B054 owner return provides `B054_PRIVATE_REVIEW.json`, select it in **V4 rolling-model review**. Choose a supplied metric population or select a named evidence stream and its pinned local gzip part. Empty populations, unloaded references, failed imports and missing predictions are different states. A rejected replacement preserves the previous valid view.
+5. When the actual B054 owner return provides `B054_V4_PRIVATE_REVIEW.json`, select it in **V4 rolling-model review**. Choose a supplied metric population or select a named evidence stream and its pinned local gzip part. Empty populations, unloaded references, failed imports and missing predictions are different states. A rejected replacement preserves the previous valid view.
 
 The viewer performs local file inspection only. It makes no provider request, starts no training, uploads no selected file and changes no audience. The V4 panel can be cleared independently of the main report, schedule and eligibility views. Reloading the page clears in-memory imports; select the files again to restore the views.
 
