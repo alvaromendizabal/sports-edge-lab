@@ -22,7 +22,7 @@ The B055 review contract adds a dated refresh manifest. It keeps source-event ke
 | Recorded plan state | What it represents |
 |---|---|
 | Model / feature / issue refresh due | Separate pending actions; a plan does not claim a newly committed fit or forecast. |
-| Early outlook | A dated estimate that still needs qualification nearer its decision window. |
+| Early outlook | Outside the registered refresh window; no eligible issue is implied. |
 | Current, owner classified | A supplied current-state classification whose original fit/source/issue proof remains required. |
 | Decision window missed | A retained missed context; a later reconstruction cannot repair the original issue time. |
 | Source blocked / no registered recipe | Specific recoverable or unresolved evidence requirements, preserved in each row. |
