@@ -5,6 +5,40 @@ Reproducible NBA forecasts, complete released-game inventories, chronological mo
 This NBA track belongs to the shared [Sports Edge Lab](../../README.md) repository. Its public material contains sanitized aggregate evidence and invented engineering examples. Actual game-level forecasts, feature recipes, model weights, source responses, full journals, and execution packages remain private.
 
 
+## November 8 distinct-game replay — actual progress and remaining coverage
+
+**The authenticated B054 native return completes all 624 prediction tasks selected for its bounded pass, adding 24 distinct games: eight in each of the three registered seasons.** It records **1,196 new NBA estimator fits and 176 new prior-only calibration optimizer fits**. Another **550 completed prediction tasks were reused**, preserving the earlier work. Cumulative replay coverage is now **1,174 completed prediction tasks across 27 distinct games**. These are separate counts: a family, objective or cutoff variant is not another game. Completing the selected pass does not complete the full registered research queue or the inherited owner workflow.
+
+| Evidence | Authenticated replay scope |
+|---|---:|
+| Newly completed selected prediction tasks | **624 / 624** |
+| Newly covered distinct games | **24** |
+| New game-specific NBA estimator fits | **1,196** |
+| New prior-only calibration optimizer fits | **176** |
+| Earlier completed predictions reused | **550** |
+| Cumulative completed predictions / distinct games | **1,174 / 27** |
+
+Of the cumulative outputs, **52 are source-aged early outlooks for two future current-season games**. Their retained feature acquisition, target cutoff and actual model-completion clocks remain explicit; they are not fresh final-hour issues. The other completed replay outputs are retrospective. **Zero original pregame issues are established by this replay.** Its research phase reports **1,120.776 seconds**; preparation, runtime admission, packaging and unobserved terminal duration are separate. This is measured bounded progress, not an end-to-end speed or cost guarantee.
+
+The source-ready, distinct-event-first scheduler has now produced actual broader game coverage. Known source-blocked targets remain in the full denominator and reason ledger while compatible completed tasks are reused. The B055 preparation adds a preregistered paired prior-season comparison allocation and fuller bounded attempt-support packaging. Those prepared changes have not been executed as new NBA training by this documentation review. No new champion is promoted, current-season outcomes cannot tune recipes or blend weights, and the original incomplete owner gates remain unresolved.
+
+### Full season views and scientific comparisons remain separate
+
+The private saved-projection view retains all **1,200 assigned regular-season games** and all twelve saved family/ensemble views, including regression-only ordinary least squares. Winner probability, point margin, total points and exact-line threshold probabilities retain their distinct output types and eligibility. A missing source reference does not remove a matchup or turn a binary contract probability into a point forecast. The separate per-game research view reports the **27 actually covered games**, without presenting those fits as full-season rolling training.
+
+The full **193-date official calendar audit** remains bound to its November 8 **18:05 UTC** completion. A separate bounded refresh of November 7–9, acquired around **19:33 UTC**, rechecks **22 games** and leaves the assigned regular-season counts unchanged at **139 finals, zero live and 1,061 scheduled**. The newly observed official injury PDF was published at **19:30 UTC / 2:30 PM Eastern** and acquired at **19:33:58 UTC**: **78 rows across five pages**, including **16 explicitly unsubmitted team reports**, all joined to official games and teams. This is observed context, with zero newly admitted injury-feature rows. The replay itself does not acquire these observations. Original monitoring cohorts and provider comparison sets remain immutable; further scores use separately identified exact shared events, phase, horizon, target, side, threshold and settlement. DraftKings, Kalshi, Polymarket US and Polymarket international keep distinct histories and evidence layers. Incomplete histories, unsubmitted injury reports and unqualified line pairs remain explicit source gaps.
+
+The lineage audit accounts for all **12 saved model/ensemble views** and identifies **nine connections at the algorithm-family level**, but **zero verified replays of the exact saved recipes**. The native fixed-recipe research models therefore cannot be labeled retrained versions of promoted champions. Exact preprocessing, feature, calibration and model-version lineage still require proof. The saved views and their earlier favorable and unfavorable evaluations remain preserved.
+
+### Rankings and March Madness transfer: implemented subset, further tests required
+
+NBA already has native strength, opponent adjustment, efficiency, pace, rest and schedule features. The new research registry extends candidate coverage to strength consensus and disagreement, independently dated NBA rating editions, rating trajectories, coach changes, player/lineup availability, travel and market-versus-strength comparisons. Each requires its own source and cutoff evidence and matched prior-only tests. These are registered candidates, with **zero new fits or newly acquired ranking histories from this audit**. AP college polls, NCAA NET and tournament selection information require NCAA-specific handling; they are not automatic NBA features.
+
+A read-only review of the separate [March Madness ranking study](https://github.com/alvaromendizabal/march-machine-learning-mania-2026/blob/e3c943daf49b968ac5251347297494a7462e47f7/reports/ranking_systems/README.md) and retained NCAA evidence confirms a real, historically tested native NCAA adaptation, including a **123-feature arm**. It does **not** establish complete transfer of every March feature, dated ranking system, coach/encoding lineage, original champion recipe or current-game prediction. The March ranking study includes AP among **105 historical systems** and evaluates **112 fits on 334 matched men's games**; it retains compact consensus without a new promotion. Men and women require their own source support. The NCAA transfer, current execution and missing-source states remain independently tracked in the [men's](../ncaam/README.md) and [women's](../ncaaw/README.md) projects; this NBA change performs no other-sport training or code changes.
+
+Every new native final return must remain **one compact archive directly in the executing user's home folder**, including bounded partial work and handled failure. Checkpoints and explicitly omitted weights retain their separate authenticated local evidence. The ordinary NBA command is user-initiated on the canonical instance; the daily research review is not unattended training. This public update contains sanitized aggregates only. Private source, forecasts, exact recipes, weights, prompts and execution handoffs remain private, and earlier dated sections below remain preserved.
+
+
 ## November 8 official refresh — complete assigned schedule and home-folder return contract
 
 **A fresh, bounded official-calendar audit now rechecks all 1,200 assigned regular-season games.** The captured NBA pages cover every date from October 1 through April 11, with responses acquired on November 8 between **18:00:52 and 18:05:11 UTC**. The inventory retains **1,274 official rows: 1,200 assigned regular-season games, 67 preseason games and seven official placeholders**. The three separately identified secondary observations remain outside this official-source count. All prior official event identities and ordered teams match; no newly assigned regular-season matchup appears in this captured inventory. The remaining **30 unassigned regular-season matchups** are therefore a fresh, bounded observation, rather than an inference from the earlier November 6 release.
