@@ -8,6 +8,18 @@
 
 [**Open the FBS browser dashboard →**](https://sports-edge-lab-fbs.alv-mendizabal.chatgpt.site) · [FBS clock and coverage methodology](docs/fbs/SEASON_EXPLORER_2026-11-03.md) · [FBS source and model card](tracks/ncaaf/README.md)
 
+## Planned next research program · rolling champions and full game coverage
+
+**Design status: planned; no new owner training, model promotion, dashboard deployment, or historical rescore is claimed in this README update.** The existing authenticated and originally issued results below remain the scientific record.
+
+- **Rolling-origin selection and refitting:** compare the original fixed historical selector with season-by-season selectors based on the most recent eligible completed seasons. Refit selected estimators on all time-eligible historical games, including earlier completed current-season games, and preserve every original forecast and cutoff. A newly designed retrospective replay is not relabeled as prospective validation.
+- **Full historical reassessment:** independently evaluate winner probabilities, margins, totals, calibrated spread-cover distributions, stacking, calibration and model-family challengers on exact matched event/time cohorts. Preserve failed studies and prohibit postgame information in any earlier prediction.
+- **Continuing frontier research:** maintain a substantial registered backlog of new football/basketball, personnel, injury, opponent, game-state and historical market-path hypotheses; materialize and ablate only genuinely new, supported, cutoff-safe features. Compare sklearn, boosted trees, neural models, ensembles and calibrated blends.
+- **All-game analytics:** account for every current-season event, with honest qualified forecast or explicit missingness per target; display last two seasons and current-season champion scorecards, and compare DraftKings, Kalshi and Polymarket on genuinely equivalent products, timestamps and common games. An inventory row is not proof that a forecast or market quote exists.
+- **Presentation contract:** browser dashboards should be complete, accessible, dated analytical reports without gambling-related recommendations or action-oriented UI. Publishing this plan does not itself update existing hosted dashboards or authorize any additional source spend.
+
+These are **next-stage requirements**, not newly completed scientific results. Model and source details remain within the established [publication boundary](docs/PUBLICATION_BOUNDARY.md).
+
 ## Current NFL evidence · November 8, 2026
 
 **All 272 games, 32 teams and 113 model roles are accounted for.** The authenticated N056 owner snapshot remains 122 finals / 121 decisive results / 150 future games. A separately observed **CIN 34–ATL 17** final brings the dated official display to **123 finals and 149 games without a captured final**. **CHI 34–SEA 17** and **JAX 33–BAL 10** have the completed separate frozen-policy family supplement. Historical `LA` identifies the Rams; `LAC` remains the Chargers.
