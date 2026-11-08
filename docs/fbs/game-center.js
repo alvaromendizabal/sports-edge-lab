@@ -23,6 +23,38 @@
     const clocks = [...new Set(['winner','margin','total'].map(t=>value.model?.[t]?.computed_at_utc).filter(Boolean))].sort();
     return {cutoff:value.record?.cutoff || null,computed_first:clocks[0] || null,computed_last:clocks.at(-1) || null};
   }
+  // Compare the retained UTC clocks without discarding their fractional precision.
+  // A reconstructed cutoff is not proof of historical input possession or issuance.
+  function utcClock(value) {
+    if(typeof value!=='string')return null;
+    const match=/^(\d{4}-\d\d-\d\dT\d\d:\d\d:\d\d)(?:\.(\d{1,9}))?Z$/.exec(value);
+    if(!match)return null;
+    const milliseconds=Date.parse(match[1]+'Z');
+    if(!Number.isFinite(milliseconds)||new Date(milliseconds).toISOString().slice(0,19)!==match[1])return null;
+    return BigInt(milliseconds)*1000000n+BigInt((match[2]||'').padEnd(9,'0'));
+  }
+  function timing(value) {
+    const available={winner:finite(value.p)&&value.p>=0&&value.p<=1,margin:finite(value.margin),total:finite(value.total)};
+    const cutoff=utcClock(value.record?.cutoff),counts={before:0,at_or_after:0,unverified:0},targets={};
+    for(const target of ['winner','margin','total']){
+      if(!available[target])continue;
+      const saved=value.model?.[target],computed=utcClock(saved?.computed_at_utc);
+      let status='unverified';
+      if(cutoff!==null&&computed!==null){
+        const before=computed<cutoff;
+        if(typeof saved?.computed_before_cutoff!=='boolean'||saved.computed_before_cutoff===before)status=before?'before':'at_or_after';
+      }
+      targets[target]=status;counts[status]++;
+    }
+    const saved=Object.keys(targets).length,status=!saved?'none':counts.unverified?'unverified':counts.at_or_after?'at_or_after':'before';
+    const labels={none:'No saved output',unverified:'Output timing unverified',at_or_after:'Output computed at or after cutoff',before:'All saved outputs computed before cutoff'};
+    return {status,label:labels[status],saved,counts,targets};
+  }
+  function timingSummary(rows, project) {
+    const counts={games:rows.length,before:0,at_or_after:0,unverified:0,none:0};
+    for(const game of rows)counts[timing(project(game)).status]++;
+    return counts;
+  }
   // Weekly scopes are small enough to show every fixture without a page break.
   // Full-season and multi-season views retain a bounded 30-card page.
   function pageSize(season, period) {
@@ -54,7 +86,7 @@
       return {...counts,expected_targets:contracts.expectedTargets(family.id)};
     });
   }
-  const api = {orderGames, interval, intervals, chronology, familyCoverage, pageSize, periodSummary, comparisonRoute};
+  const api = {orderGames, interval, intervals, chronology, timing, timingSummary, familyCoverage, pageSize, periodSummary, comparisonRoute};
   if (typeof module !== 'undefined' && module.exports) module.exports = api;
   if (typeof window === 'undefined') return;
   window.FBSGameCenter = api;
@@ -74,7 +106,7 @@
       const scope=G.filtered(true),key=scope.map(g=>g.id).sort().join(',');
       let records=coverageCache.get(key);
       if(!records){records=familyCoverage(scope,families,G.projection,A);coverageCache.set(key,records);if(coverageCache.size>16)coverageCache.delete(coverageCache.keys().next().value);}
-      $('family-coverage-summary').textContent=`${scope.length.toLocaleString()} fixtures in the selected season, period, result and team filters. Every family uses this same inventory before a model-coverage filter is applied.`;
+      $('family-coverage-summary').textContent=`${scope.length.toLocaleString()} fixtures after the selected season, period, result, team, timing and retained-reference filters. Every family uses this same inventory before a model-coverage filter is applied.`;
       const show=(r,t)=>r.expected_targets.includes(t)?`${r[t]} / ${r.games}`:'Outside family scope';
       $('family-coverage-rows').innerHTML=records.map(r=>`<tr${r.family===$('model-view').value?' class="selected-model"':''}><td><button class="model-choice" data-model-choice="${esc(r.family)}">${esc(r.label)}</button>${small(r.family==='retained'?'Separate original replay':r.family.includes('_refresh_')?'Separate changed-input 119-game reconstruction':'Reconstructed development; original issuance unproved')}</td><td>${show(r,'winner')}</td><td>${show(r,'margin')}</td><td>${show(r,'total')}</td><td>${r.margin_intervals} / ${r.games}${small('margin · 80% + 95%')}</td><td>${r.total_intervals} / ${r.games}${small('total · 80% + 95%')}</td><td>${r.cover} qualified</td><td>${r.complete} complete${small(r.partial+' partial · '+r.missing+' absent')}</td></tr>`).join('');
     }
@@ -83,10 +115,10 @@
       $('visible-game-range').textContent=list.length?G.pageSize===63?`All ${list.length.toLocaleString()} matching weekly games are shown below · no hidden pages.`:`Showing ${G.page*G.pageSize+1}–${Math.min((G.page+1)*G.pageSize,list.length)} of ${list.length.toLocaleString()} selected games · every matching fixture remains in the page sequence.`:'No matching games in this selection';
       $('game-table-view').hidden=$('game-layout').value!=='table';$('game-cards').hidden=$('game-layout').value!=='cards';
       if(!$('game-cards').hidden)$('game-cards').innerHTML=rows.map(game=>{
-        const value=G.projection(game),hasWinner=A.hasTarget(value,'winner'),clock=chronology(value),mi=intervals(value,'margin'),ti=intervals(value,'total');
+        const value=G.projection(game),hasWinner=A.hasTarget(value,'winner'),clock=chronology(value),computed=timing(value),mi=intervals(value,'margin'),ti=intervals(value,'total');
         const refs=['winner','margin','total'].map(t=>G.reference(game,provider,t));
         const why=target=>A.missingReason(game,value,target,family);
-        return `<article class="game-card" data-card-game="${esc(game.id)}"><div class="game-card-meta"><span>${esc(game.season+' · Week '+game.week)}</span><span class="chip ${game.completed?'final-chip':''}">${game.completed?'Observed final':'No observed final'}</span></div><h3>${esc(game.away)} <span>at</span> ${esc(game.home)}</h3><p class="card-kickoff">${esc(game.kickoff_exact?date(game.kickoff):'Exact kickoff TBD')}${game.newly_observed_final?' · newly observed final':''}</p><p class="card-result">${game.completed?esc(game.away_score+' – '+game.home_score+' · '+game.winner+' won'):esc('Result snapshot: '+game.result_snapshot)}${small('Official ID '+game.id)}</p><div class="card-pick"><span>${esc($('model-view').selectedOptions[0].text)}</span><strong>${hasWinner?esc(value.winner):'Winner unavailable'}</strong><div>${hasWinner?percent(Math.max(value.p,1-value.p))+small('Home '+percent(value.p)):small(why('winner'))}</div></div><div class="card-targets"><div><span>Home margin</span><b>${signed(value.margin)}</b>${!A.hasTarget(value,'margin')?small(why('margin')):''}</div><div><span>Total points</span><b>${number(value.total)}</b>${!A.hasTarget(value,'total')?small(why('total')):''}</div><div class="cover-cell"><span>Cover probability</span><b>${A.hasTarget(value,'cover')?percent(value.model.margin.cover_probability):'Unavailable'}</b>${small('Requires an admitted exact line and cutoff')}</div></div><div class="card-intervals"><div><span>Margin intervals</span><p><b>80%</b> ${pairText(mi.interval80)}<br><b>95%</b> ${pairText(mi.interval95)}</p></div><div><span>Total intervals</span><p><b>80%</b> ${pairText(ti.interval80)}<br><b>95%</b> ${pairText(ti.interval95)}</p></div></div><p class="card-reference"><b>${esc(provider)} · retained reference</b><span>Home ${esc(refs[0].value)} · Margin ${esc(refs[1].value)} · Total ${esc(refs[2].value)}</span></p><details class="card-clocks"><summary>Model and source clocks</summary><dl><dt>Reconstructed cutoff</dt><dd>${esc(clock.cutoff||'No retained reconstructed cutoff')}</dd><dt>Output computed</dt><dd>${esc(clock.computed_first||'No retained output clock')}${clock.computed_last&&clock.computed_last!==clock.computed_first?' through '+esc(clock.computed_last):''}</dd><dt>Reference quote</dt><dd>${esc(game[provider+'_winner_quote_at']||'No retained quote clock')}</dd><dt>Result observed</dt><dd>${esc(game.result_observed_at)}</dd></dl><p>Earlier-data reconstruction does not authenticate historical source possession or pregame issuance.</p></details><button class="secondary card-details" data-card-details="${esc(game.id)}">Inspect all models &amp; source evidence</button></article>`;
+        return `<article class="game-card" data-card-game="${esc(game.id)}"><div class="game-card-meta"><span>${esc(game.season+' · Week '+game.week)}</span><span class="chip ${game.completed?'final-chip':''}">${game.completed?'Observed final':'No observed final'}</span></div><h3>${esc(game.away)} <span>at</span> ${esc(game.home)}</h3><p class="card-kickoff">${esc(game.kickoff_exact?date(game.kickoff):'Exact kickoff TBD')}${game.newly_observed_final?' · newly observed final':''}</p><p class="card-result">${game.completed?esc(game.away_score+' – '+game.home_score+' · '+game.winner+' won'):esc('Result snapshot: '+game.result_snapshot)}${small('Official ID '+game.id)}</p><div class="card-pick"><span>${esc($('model-view').selectedOptions[0].text)}</span><strong>${hasWinner?esc(value.winner):'Winner unavailable'}</strong><div>${hasWinner?percent(Math.max(value.p,1-value.p))+small('Home '+percent(value.p)):small(why('winner'))}</div></div><div class="card-targets"><div><span>Home margin</span><b>${signed(value.margin)}</b>${!A.hasTarget(value,'margin')?small(why('margin')):''}</div><div><span>Total points</span><b>${number(value.total)}</b>${!A.hasTarget(value,'total')?small(why('total')):''}</div><div class="cover-cell"><span>Cover probability</span><b>${A.hasTarget(value,'cover')?percent(value.model.margin.cover_probability):'Unavailable'}</b>${small('Requires an admitted exact line and cutoff')}</div></div><div class="card-intervals"><div><span>Margin intervals</span><p><b>80%</b> ${pairText(mi.interval80)}<br><b>95%</b> ${pairText(mi.interval95)}</p></div><div><span>Total intervals</span><p><b>80%</b> ${pairText(ti.interval80)}<br><b>95%</b> ${pairText(ti.interval95)}</p></div></div><p class="card-reference"><b>${esc(provider)} · retained reference</b><span>Home ${esc(refs[0].value)} · Margin ${esc(refs[1].value)} · Total ${esc(refs[2].value)}</span></p><p class="output-timing" data-output-timing="${computed.status}">${esc(computed.label)}${small('Computation timing does not authenticate issuance')}</p><details class="card-clocks"><summary>Model and source clocks</summary><dl><dt>Reconstructed cutoff</dt><dd>${esc(clock.cutoff||'No retained reconstructed cutoff')}</dd><dt>Output computed</dt><dd>${esc(clock.computed_first||'No retained output clock')}${clock.computed_last&&clock.computed_last!==clock.computed_first?' through '+esc(clock.computed_last):''}</dd><dt>Reference quote</dt><dd>${esc(game[provider+'_winner_quote_at']||'No retained quote clock')}</dd><dt>Result observed</dt><dd>${esc(game.result_observed_at)}</dd></dl><p>Earlier-data reconstruction does not authenticate historical source possession or pregame issuance.</p></details><button class="secondary card-details" data-card-details="${esc(game.id)}">Inspect all models &amp; source evidence</button></article>`;
       }).join('')||'<p class="card-empty">No games match these filters. Clear game filters to restore the fixture list.</p>';
       $('active-result-snapshot').textContent=$('capture-view').selectedOptions[0].text.replace(/^/,'Results: ');
       renderCoverage();
