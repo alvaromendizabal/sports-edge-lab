@@ -24,6 +24,7 @@ exports.run=async(page,{width,screenshots})=>{
  await page.locator('#advanced-game-filters > summary').click();
  await page.locator('[data-period="current"]').click();await page.selectOption('#model-view','v043_refresh_extra_trees');
  assert.match(await page.locator('#period-overview-note').innerText(),/14 winner \/ probability · 14 margin · 14 total/);
+ await page.locator('#coverage-accounting summary').click();
  assert.match(await page.locator('#coverage-accounting').innerText(),/49.*Outside the registered 119-game/s);
  await page.selectOption('#model-filter','present');assert.equal(await page.locator('#game-cards .game-card').count(),14);
  assert.doesNotMatch(await page.locator('#game-cards .game-card .card-intervals').first().innerText(),/Not saved/);
