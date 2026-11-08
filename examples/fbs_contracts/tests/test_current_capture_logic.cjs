@@ -47,3 +47,16 @@ test('the intermediate late-Nov7 snapshot keeps its own scores, clock and delta'
  assert.equal(prior.result_snapshot,'nov7_late');assert.equal(prior.result_observed_at,row.observed_at);
  assert.equal(prior.models,game.models);assert.equal(prior.newly_observed_final,true);
 });
+
+test('a verified TBD resolution creates a new empty forecast epoch without changing the old snapshot',()=>{
+ const old={...game,kickoff_exact:false,kickoff:null,reported_kickoff:'2026-11-15T00:00:00Z',replay_p_home:.6};
+ const resolved={...row,completed:false,kickoff:'2026-11-15T00:30:00Z',reported_kickoff:'2026-11-15T00:30:00Z',identity_status:'TBD_RESOLUTION_NEW_FIXTURE_EPOCH',owner_original_identity_status:'NEW_OBSERVED_FIXTURE_REVISION_OLD_PREDICTION_NOT_REBOUND'};
+ const next=resultView(old,resolved,'latest','old');
+ assert.equal(next.kickoff,resolved.kickoff);assert.equal(next.kickoff_exact,true);assert.equal(next.new_fixture_epoch,true);
+ assert.deepEqual(next.models,{});assert.equal(next.replay_p_home,null);assert.equal(next.projection_status,'NEW_FIXTURE_EPOCH_PREDICTION_PENDING');
+ assert.equal(old.kickoff,null);assert.equal(old.replay_p_home,.6);assert.equal(old.models,game.models);
+ assert.equal(resultView(old,resolved,'original','old').kickoff,null);
+ for(const change of [{home_id:'3',away_id:'2'},{id:'9'},{identity_status:'UNVERIFIED'},{kickoff:'invalid'}]){
+  const rejected=resultView(old,{...resolved,...change},'latest','old');assert.equal(rejected.kickoff,null);assert.equal(rejected.new_fixture_epoch,undefined);
+ }
+});

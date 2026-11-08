@@ -26,7 +26,7 @@ ASSETS = ('index.html','research.html','recovery.html','season.js','source-progr
           'injury-association.json','common-game-review.json',
           'frontier.html','frontier.js','frontier-games.json','frontier-review.json',
           'complete.html','complete.js','coverage.js','diagnostics.js','complete.css','complete-season.json',
-          'complete-data.js','complete-history.js','development-data.js','development-2026.json','season-archive.html','three-season.json','three-season-data.js','optional-study.json','optional-study-data.js','catboost-study.json','catboost-study-data.js','source-health-v040.json','owner-neural-study.json','owner-neural-study-data.js','current-capture.json','current-capture-data.js','current-capture.js','game-center.js','current-capture-v043.json','current-capture-v043-data.js','current-capture-v044.json','current-capture-v044-data.js','changed-input-study-v044.json','changed-input-study-v044-data.js','current-capture-v045.json','current-capture-v045-data.js','changed-input-evaluation-v045.json','changed-input-evaluation-v045-data.js')
+          'complete-data.js','complete-history.js','development-data.js','development-2026.json','season-archive.html','three-season.json','three-season-data.js','optional-study.json','optional-study-data.js','catboost-study.json','catboost-study-data.js','source-health-v040.json','owner-neural-study.json','owner-neural-study-data.js','current-capture.json','current-capture-data.js','current-capture.js','game-center.js','current-capture-v043.json','current-capture-v043-data.js','current-capture-v044.json','current-capture-v044-data.js','changed-input-study-v044.json','changed-input-study-v044-data.js','current-capture-v045.json','current-capture-v045-data.js','changed-input-evaluation-v045.json','changed-input-evaluation-v045-data.js','research-method.js','observation-status-v046.json','observation-status-v046-data.js','market-status-v046.json','market-status-v046-data.js')
 SOURCE_FILES = {'index.html':'complete.html','season-archive.html':'index.html'}
 
 
@@ -79,6 +79,8 @@ def export(commit, output):
     latest=json.loads(committed(commit,'docs/fbs/current-capture-v045.json'))
     refresh=json.loads(committed(commit,'docs/fbs/changed-input-study-v044.json'))
     refresh_evaluation=json.loads(committed(commit,'docs/fbs/changed-input-evaluation-v045.json'))
+    observation_status=json.loads(committed(commit,'docs/fbs/observation-status-v046.json'))
+    market_status=json.loads(committed(commit,'docs/fbs/market-status-v046.json'))
     manifest={'schema':'sports-edge-lab.public-fbs-snapshot.v3',
               'canonical_repository':REPOSITORY,'source_commit_sha':commit,
               'evidence_prepared_at':report['projection_prepared_at'],
@@ -91,7 +93,9 @@ def export(commit, output):
               'v042_retained_capture':{k:prior[k] for k in ('capture','counts','sources','new_fits','new_predictions','new_provider_requests','forecast_issued','promotion_allowed')},
               'v043_retained_capture':{k:late[k] for k in ('capture','counts','sources','new_fits','new_predictions','new_provider_requests','forecast_issued','promotion_allowed')},
               'v044_retained_capture':{k:evening[k] for k in ('capture','counts','sources','new_fits','new_predictions','new_provider_requests','forecast_issued','promotion_allowed')},
-              'v045_latest_capture':{k:latest[k] for k in ('capture','counts','sources','new_fits','new_predictions','new_provider_requests','forecast_issued','promotion_allowed')},
+              'v046_current_market_census':{k:market_status[k] for k in ('schema','source_capture_physical','source_observed_at','target_rows','event_count','exact_display_bound_events','exact_display_bound_target_rows','source_available_t120_exact_identity_rows','source_available_t60_exact_identity_rows','qualified_model_cover_rows','new_scientific_evaluations')},
+              'v046_latest_observation_status':{k:observation_status[k] for k in ('schema','counts','source_observed_at','original2026_source_observed_at','capture_completed_at','scientific_metrics','original_numeric_assets_modified','new_unissued_numeric_grids_public','actual_new_fits_in_this_export')},
+              'v045_latest_evaluated_capture':{k:latest[k] for k in ('capture','counts','sources','new_fits','new_predictions','new_provider_requests','forecast_issued','promotion_allowed')},
               'v045_refresh_evaluation':{k:refresh_evaluation[k] for k in ('counts','sources','generated_at','evidence_class','forecast_issued','promotion_allowed')},
               'v044_recovered_changed_input_study':{k:refresh[k] for k in ('counts','sources','generated_at','evidence_class','forecast_issued','promotion_allowed')},
               'v041_original_owner_neural':{k:neural[k] for k in ('counts','sources','generated_at','evidence_class','forecast_issued','promotion_allowed')},
