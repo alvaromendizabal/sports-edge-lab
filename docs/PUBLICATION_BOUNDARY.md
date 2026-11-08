@@ -33,7 +33,7 @@ This publication does not create a data redistribution entitlement or expand any
 
 The current NFL examples contain resolved game identities, public scores, model/provider pick directions, rounded derived model probabilities and evaluation qualifications. They expose winning **and losing** disagreements. They omit raw order books, bids/asks, historical candle arrays, active forecast recipes, feature-column lists, private storage locations and owner execution packages. Rounded display values are never the basis of headline rescoring.
 
-The current JSON is derived from the authenticated owner evidence identified by its physical SHA-256, plus preserved exact-cohort comparison audits. It is a sanitized report, not a substitute for a complete original forecast or provider archive. The acquisition time does not become a historical issue time. Early issued research cards, final-hour-qualified recommendations and retrospective reconstructions remain separate.
+The current JSON is derived from the authenticated owner evidence identified by its physical SHA-256, plus preserved exact-cohort comparison audits. It is a sanitized report, not a substitute for a complete original forecast or provider archive. The acquisition time does not become a historical issue time. Early issued research cards, final-hour-qualified research issues and retrospective reconstructions remain separate.
 
 ## Rights and review scope
 
@@ -41,9 +41,9 @@ This repository is publicly inspectable; it does not currently provide a blanket
 
 ## Selected early NFL research cards: November 3 extension
 
-The owner explicitly authorized current-week projections in the browser dashboard. The narrow public export includes selected, already issued winner/margin/total outputs, rounded derived probabilities and point centers, public schedule identities, real source/fit/issue clocks, availability flags and NO BET reasons. It distinguishes genuine early issues from reconstructed historical rows and final-hour recommendations. No early card is upgraded to a validated betting signal or prospective performance result.
+The owner explicitly authorized current-week projections in the browser dashboard. The narrow public export includes selected, already issued winner/margin/total outputs, rounded derived probabilities and point centers, public schedule identities, real source/fit/issue clocks, availability flags and scientific evidence reasons. It distinguishes genuine early issues from reconstructed historical rows and final-hour-qualified issues. No early card is upgraded to a validated decision signal or prospective performance result.
 
-Do not publish candidate-level forecast grids, exact recipe identifiers, feature-column lists, transforms, calibration parameters, production weights, raw feeds, private storage paths, credentials or personal conversations. Provider content stays within the permitted derived reporting scope; this exception creates no raw-data redistribution right. The 2026 outcomes cannot select a model, blend or stake policy.
+Do not publish candidate-level forecast grids, exact recipe identifiers, feature-column lists, transforms, calibration parameters, production weights, raw feeds, private storage paths, credentials or personal conversations. Provider content stays within the permitted derived reporting scope; this exception creates no raw-data redistribution right. The original fixed NFL studies retain their prior prohibition on later-season selection. The separately authorized V4 challenger may use genuinely earlier current-season outcomes for cutoff refitting and earlier completed seasons for selection; exposed retrospective development and untouched future issues remain separate. No automatic promotion is authorized.
 
 Current NFL comparison views use DraftKings, Kalshi and Polymarket exclusively. Historical studies remain immutable with dated original scopes. The public host is an explicitly published snapshot of canonical GitHub source; source commit and evidence time are visible. Deployment does not refresh research or prices.
 
