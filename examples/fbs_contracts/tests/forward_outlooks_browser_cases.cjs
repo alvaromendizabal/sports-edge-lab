@@ -32,6 +32,7 @@ exports.run=async page=>{
  await page.selectOption('#forward-scope','unresolved');const link=await page.locator('#forward-view-link').getAttribute('href');
  const reopened=new URL(link);reopened.searchParams.set('snapshot','original');await page.goto(reopened.href);await page.locator('#forward-outlook-summary').filter({hasText:/fixtures shown/}).waitFor();
  assert.equal(await page.locator('#forward-scope').inputValue(),'unresolved');assert.equal(await page.locator('#forward-outlook-total').innerText(),'203');assert.equal(await page.locator('#forward-outlook-rows tr').count(),expected.all.unresolved);
- await page.selectOption('#forward-scope','upcoming');await page.selectOption('#capture-view','latest');
+ const clean=new URL(page.url());clean.search='';clean.hash='';await page.goto(clean.href);
+ await page.waitForFunction(()=>document.querySelectorAll('#game-cards .game-card').length===30);
  return {status:'PASS',remaining_fixtures:expected.all.games,original_outlooks:expected.all.issued,unresolved_kickoffs:expected.all.unresolved,close_horizon_games:expected.all.close_horizon_games,private_grid_published:false};
 };
