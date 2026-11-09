@@ -5,6 +5,20 @@ Reproducible NBA forecasts, complete released-game inventories, chronological mo
 This NBA track belongs to the shared [Sports Edge Lab](../../README.md) repository. Its public material contains sanitized aggregate evidence and invented engineering examples. Actual game-level forecasts, feature recipes, model weights, source responses, full journals, and execution packages remain private.
 
 
+## November 9 B062 support recovery and current-week navigation
+
+**B062 advances the recovery implementation; the latest actual owner invocation still added zero NBA fits, zero feature materializations and zero forecasts.** The locally reverified completed work and the failed portable-support gate remain separate. The earlier pilot scores, original journals and dated source observations are preserved without claiming another experiment or a completed nonlinear study.
+
+The successor adds a lossless support format that shares repeated evidence while reconstructing original scientific JSON bytes exactly. It verifies the reconstructed content before admitting new fitting. Newly returned external result and state identities anchor recovery of the previously completed work; an identity or local verification receipt is not described as a physically delivered model body. Missing or changed required evidence continues to block fitting.
+
+Support-export diagnostics now distinguish local authentication, complete portable evidence, size limits, interruption and partial recovery. Detailed failure receipts and usable completed evidence are retained when a bounded export cannot finish. Engineering checks cover byte-exact reconstruction, corrupted or missing dependencies, external recovery bindings and failure reporting. These are implementation checks, not new NBA experiments or proof that the successor has already completed recovery on the canonical owner.
+
+The private dashboard's current-week navigation now follows the **Pacific calendar week**. Navigation uses the current display date without moving historical acquisition, feature, prediction or official-status clocks. A current-week view does not imply refreshed source data. All assigned-game saved projections, previous research tables and the complete comparison catalog remain available with their original qualifications.
+
+The next scientific stage remains the same registered nonlinear comparison on matched prior origins, followed by compatible coverage work within the shared execution bounds. It is still pending actual owner execution. No new champion, fresh forecast issue, provider acquisition or continuous training service is established.
+
+Every new native final archive must be written directly in the executing user's home directory, including partial progress, handled failure and interruption. The runner checks that destination before expensive work and does not fall back to another folder. Checkpoints remain in the existing project work area. Execution stays a manual owner action with measured resource admission; internal phase timings are not a terminal-duration or cost guarantee.
+
 ## November 9 independent B060 recovery and release-qualification update
 
 The next actual canonical NBA invocation authenticated **270 previously completed task bodies, 246 immutable forecast journals, 210 saved model bodies and 174,184 transitive feature-state dependencies**. It then stopped at a separate scientific-support export gate. The resulting return is an authenticated **partial failure**, with **zero new NBA fits, zero new NBA feature materializations and no newly completed nonlinear comparison or new forecast issue**. The surrounding shell's exit was not supplied; an internal intended exit is not a substitute.
