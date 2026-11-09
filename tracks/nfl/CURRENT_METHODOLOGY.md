@@ -18,9 +18,9 @@ Meta layers use earlier genuine out-of-fold predictions. No row may train a base
 
 ## Current continuation limit
 
-Actual N058 restored the exact causal append and completed 27 current-origin native states under retained configurations. It issued 2,286 separately classified output rows. The independently registered V4 historical phase stopped at safe-file validation before any verified fitting; the future V4 phase correctly stayed blocked. The later actual N059 invocation failed at inherited durable-state closure before any research stage, with zero fits and forecasts. N060 preserves that failure, repairs the integrity boundary and implements the next V5 comparison contracts. Prepared fixes do not earn owner execution credit.
+Actual N060 completed 27 native states and 2,294 separately classified issue rows under retained configurations. The bounded census later failed at its source-body limit, and both V5 phases failed on a missing resource dependency before optimizer entry. The original-issued monitor committed zero evaluations. Its supported result-pointer failures and unsupported conditional identity collisions remain separate counts. N061 repairs these boundaries while preserving original failures and every completed state.
 
-The latest owner schedule has 130 finals, three in progress, one halftime and 138 scheduled. Every not-final game retains a cutoff-ordered next action in the private report. A live or completed game cannot receive a backdated pregame issue, and a far-future current-knowledge outlook cannot claim exact T1 validity.
+The latest owner schedule has 134 finals, one game in progress and 137 scheduled. All 137 scheduled games have three selected-family current-origin targets. Every game without a captured final retains a specific next action. A live or completed game cannot receive a backdated issue; a far-future outlook cannot claim exact T1 validity.
 
 All three providers receive the same game/target/horizon inventory. A recorded source observation can remain ineligible for model admission or proper scoring. Missing quote clocks, sparse conditions and unsupported source fields retain specific reasons. No source-only result is evidence of predictive improvement.
 
@@ -33,3 +33,5 @@ V5 compares the market-free foundation and current-regime specialist with an ear
 Winner probability, score, margin and total distributions must preserve orientation and coherence. Cover, equality/push and fail probabilities remain distinct from probability conditional on no equality. Sources cannot be silently carried forward as fresh injury, lineup or depth evidence.
 
 The first V5 implementation is shadow research. Current-season inspection, retrospective replay or a synthetic test does not authorize promotion. Every result carries its exposure class; a historical cohort cannot become untouched again by changing its seed or split.
+
+PrizePicks and Underdog are separately inventoried as having no admitted comparable game-level source in this actual return. The three primary equal-provider grids and all original denominators remain unchanged.
