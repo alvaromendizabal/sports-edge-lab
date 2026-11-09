@@ -28,7 +28,7 @@
 <p class="note">These are fractional expected home/away scores supplied by the owner from an exactly matched margin/total pair. They are not rounded outcome predictions, a new score model, an integer score distribution or a line-conditioned probability. No fit, immutable issue or promotion is created by displaying the derived means. Unsupported selected, meta-model or ensemble pairing stays explicit.</p>
 <div id="score-content" hidden><p id="score-contexts" class="note"></p>
 <div class="data-scroll"><table><thead><tr><th>Expected-score disposition</th><th>Emitted rows</th></tr></thead><tbody id="score-counts"></tbody></table></div>
-<div class="toolbar"><div class="control"><label for="score-state">Loaded score-pair disposition</label><select id="score-state"><option value="all">Every supplied disposition</option></select></div><div class="control"><label for="score-league">Loaded score-pair league</label><select id="score-league"><option value="all">Both leagues, kept separate</option><option value="ncaam">Men</option><option value="ncaaw">Women</option></select></div><div class="control search"><label for="score-search">Source ID, team or supplied family</label><input id="score-search" type="search" placeholder="Search the loaded score part"></div></div>
+<div class="toolbar"><div class="control"><label for="score-state">Loaded score-pair disposition</label><select id="score-state"><option value="all">Every supplied disposition</option></select></div><div class="control"><label for="score-league">Loaded score-pair league</label><select id="score-league"><option value="all">All supplied rows; leagues kept separate</option><option value="ncaam">Men</option><option value="ncaaw">Women</option><option value="unavailable">League unavailable in source disposition</option></select></div><div class="control search"><label for="score-search">Source ID, team, family or missing-input reason</label><input id="score-search" type="search" placeholder="Search the loaded score part"></div></div>
 <div class="buttons"><button id="score-inspect" class="secondary" type="button">Inspect expected scores</button><button id="score-reset" class="secondary" type="button">Show all loaded score rows</button></div>
 <p class="note">Select the named gzip part below. Its cards retain both original target prediction IDs, ordered teams, cutoff, origin, horizon and model context. These controls and the evidence-track selector affect only the loaded part. A missing name is shown by its exact supplied team ID; no alias is inferred.</p>
 </div></section>
@@ -1332,6 +1332,8 @@
   const count = v => Number.isSafeInteger(v) && v >= 0;
   const finite = v => typeof v === 'number' && Number.isFinite(v);
   const id = v => typeof v === 'string' && v.length > 0;
+  const sourcePin = v => typeof v === 'string' && /^[a-f0-9]{64}$/.test(v);
+  const history = v => id(v) || (object(v) && Object.keys(v).length > 0);
   function validate(value, streams, validateStream) {
     if (!object(value) || value.schema !== 'sel.ncaa.b055.score_projection_coverage.v1' ||
         !object(value.status_counts) || Object.keys(value.status_counts).some(s => !STATES.includes(s)) ||
@@ -1368,8 +1370,26 @@
     for (const row of rows) {
       if (!object(row) || row.schema !== 'sel.ncaa.b055.score_projection.v1' ||
           !id(row.projection_id) || !STATES.includes(row.status) ||
-          !['ncaam', 'ncaaw'].includes(row.league) || !id(row.event_key) || !id(row.event_id)) {
+          !id(row.event_key)) {
         throw Error('Invalid expected-score row identity or status.');
+      }
+      const completeIdentity = ['ncaam', 'ncaaw'].includes(row.league) && id(row.event_id);
+      const minimalSource = row.status === 'NON_NUMERIC_OR_SOURCE_ONLY' &&
+        row.league === null && row.event_id === null &&
+        ['home_id', 'away_id', 'season_end_year', 'event_time', 'cutoff_time',
+          'prediction_origin', 'horizon_minutes', 'model_context',
+          'expected_home_minus_away', 'expected_total', 'margin_prediction_id',
+          'total_prediction_id'].every(key => row[key] === null) &&
+        ['margin', 'total'].includes(row.input_target) &&
+        id(row.input_disposition) && sourcePin(row.input_record_sha256);
+      if (!completeIdentity && !minimalSource) {
+        throw Error('Incomplete expected-score identity requires an exact pinned non-numeric source disposition.');
+      }
+      if (row.status === 'NON_NUMERIC_OR_SOURCE_ONLY' &&
+          ['mean_home_score', 'mean_away_score', 'expected_home_minus_away',
+            'expected_total', 'margin_prediction_id', 'total_prediction_id',
+            'model_context'].some(key => row[key] !== null)) {
+        throw Error('A non-numeric source disposition must retain null score inputs and model context.');
       }
       if (seen.has(row.projection_id)) throw Error('Duplicate expected-score record in this part.');
       seen.add(row.projection_id);
@@ -1385,7 +1405,8 @@
           row.mean_away_score < 0 || row.expected_total < 0 ||
           !id(row.margin_prediction_id) || !id(row.total_prediction_id) ||
           !object(row.model_context) ||
-          ['family', 'arm', 'training_history'].some(k => !id(row.model_context[k]))) {
+          ['family', 'arm'].some(k => !id(row.model_context[k])) ||
+          !history(row.model_context.training_history)) {
           throw Error('Derived scores require both exact target identities and finite supported means.');
         }
         // The owner computes these operations in binary64 and serializes their
@@ -1410,9 +1431,11 @@
   function filterRows(rows, filters) {
     const query = String(filters.search || '').trim().toLowerCase();
     return rows.filter(row => (filters.state === 'all' || row.status === filters.state) &&
-      (filters.league === 'all' || row.league === filters.league) &&
+      (filters.league === 'all' || row.league === filters.league ||
+        (filters.league === 'unavailable' && row.league === null)) &&
       (!query || [row.event_id, row.event_key, row.home_team, row.away_team,
-        row.home_id, row.away_id, row.model_context?.family, row.status]
+        row.home_id, row.away_id, row.model_context?.family, row.status,
+        row.input_disposition, row.input_target, row.input_record_sha256]
         .some(value => String(value ?? '').toLowerCase().includes(query))));
   }
   const api = {STATES, LABELS, validate, validateRows, filterRows};
@@ -1571,6 +1594,12 @@
           node('p',$('v4-stream').value==='refresh_state'?'Persisted trigger-comparison state; it does not authenticate a current model or server-issued forecast.':'A separate execution record; it does not replace the immutable plan denominator.'));
       }else if(isScore){
         card.dataset.scoreStatus=r.status;
+        if(r.status==='NON_NUMERIC_OR_SOURCE_ONLY'){
+          card.append(node('p','Exact source event key: '+display(r.event_key)),
+            node('p','Input disposition: '+display(r.input_disposition)+' · Input target: '+display(r.input_target)),
+            node('p','Input record SHA-256: '+display(r.input_record_sha256)),
+            node('p','Missing league, event ID or source clocks remain unavailable; this view never derives them from the source key.'));
+        }
         card.append(node('p','Disposition: '+projection.LABELS[r.status]),
           node('p','Home: '+display(r.home_team??r.home_id)+' · Expected score: '+display(r.mean_home_score)),
           node('p','Away: '+display(r.away_team??r.away_id)+' · Expected score: '+display(r.mean_away_score)),
@@ -1578,7 +1607,7 @@
           node('p','Origin: '+display(r.prediction_origin)+' · Cutoff: '+display(r.cutoff_time)+' · Horizon minutes: '+display(r.horizon_minutes)),
           node('p','Margin prediction ID: '+display(r.margin_prediction_id)),
           node('p','Total prediction ID: '+display(r.total_prediction_id)),
-          node('p','Supplied context: '+display(r.model_context?.family)+' / '+display(r.model_context?.arm)+' / '+display(r.model_context?.training_history)),
+          node('p','Supplied context: '+display(r.model_context?.family)+' / '+display(r.model_context?.arm)+' / '+(object(r.model_context?.training_history)?JSON.stringify(r.model_context.training_history):display(r.model_context?.training_history))),
           node('p','Fractional derived means only; no joint score distribution, line-result probability or new issue.'));
       }else{
         card.append(node('p','Track: '+(LABELS[r.evaluation_track]||display(r.evaluation_track))+' · State: '+display(r.status??r.disposition)),node('p','Prediction: '+display(r.prediction)+' · Outcome: '+display(r.actual)));

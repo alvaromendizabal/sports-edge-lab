@@ -1210,6 +1210,17 @@ const { fixture: projectionFixture } = require('./test_projection_review.cjs');
         assert.match(await page.locator('[data-score-status="DERIVED_EXPECTED_SCORES"]').innerText(),/Expected score: 80.250000.*Expected score: 70.750000/s);
         assert.match(await page.locator('[data-score-status="DERIVED_EXPECTED_SCORES"]').innerText(),new RegExp(scores.rows[0].margin_prediction_id));
         assert.match(await page.locator('[data-score-status="DERIVED_EXPECTED_SCORES"]').innerText(),new RegExp(scores.rows[0].total_prediction_id));
+        assert.ok((await page.locator('[data-score-status="DERIVED_EXPECTED_SCORES"]').innerText()).includes(JSON.stringify(scores.rows[0].model_context.training_history)));
+        await page.selectOption('#score-league','unavailable');
+        assert.equal(await page.locator('[data-score-status]').count(),1);
+        assert.match(await page.locator('#v4-part-rows').innerText(),/Exact source event key:.*INVENTED_MISSING_SOURCE_INPUT.*Input target: margin/s);
+        assert.ok((await page.locator('#v4-part-rows').innerText()).includes(scores.rows[4].input_record_sha256));
+        await page.locator('#score-search').fill('missing_source_input');
+        assert.equal(await page.locator('[data-score-status]').count(),1);
+        await page.selectOption('#score-league','ncaam');
+        assert.equal(await page.locator('[data-score-status]').count(),0);
+        await page.locator('#score-reset').click();
+        assert.equal(await page.locator('[data-score-status]').count(),5);
         await page.selectOption('#score-state','MISSING_COMPANION_HEAD');
         assert.equal(await page.locator('[data-score-status]').count(),1);
         assert.match(await page.locator('#v4-part-rows').innerText(),/Expected score: Unavailable/);
@@ -1224,7 +1235,7 @@ const { fixture: projectionFixture } = require('./test_projection_review.cjs');
         assert.equal(await page.evaluate(()=>document.documentElement.scrollWidth>innerWidth),false,'expected-score IDs and controls fit viewport');
         await page.locator('#clear-v4').click();
         assert.equal(await page.locator('#v4-content').isHidden(),true);
-        counts.expectedScoreViews=(counts.expectedScoreViews||0)+10;
+        counts.expectedScoreViews=(counts.expectedScoreViews||0)+14;
 
 
       }

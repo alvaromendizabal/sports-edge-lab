@@ -14,6 +14,8 @@
   const count = v => Number.isSafeInteger(v) && v >= 0;
   const finite = v => typeof v === 'number' && Number.isFinite(v);
   const id = v => typeof v === 'string' && v.length > 0;
+  const sourcePin = v => typeof v === 'string' && /^[a-f0-9]{64}$/.test(v);
+  const history = v => id(v) || (object(v) && Object.keys(v).length > 0);
   function validate(value, streams, validateStream) {
     if (!object(value) || value.schema !== 'sel.ncaa.b055.score_projection_coverage.v1' ||
         !object(value.status_counts) || Object.keys(value.status_counts).some(s => !STATES.includes(s)) ||
@@ -50,8 +52,26 @@
     for (const row of rows) {
       if (!object(row) || row.schema !== 'sel.ncaa.b055.score_projection.v1' ||
           !id(row.projection_id) || !STATES.includes(row.status) ||
-          !['ncaam', 'ncaaw'].includes(row.league) || !id(row.event_key) || !id(row.event_id)) {
+          !id(row.event_key)) {
         throw Error('Invalid expected-score row identity or status.');
+      }
+      const completeIdentity = ['ncaam', 'ncaaw'].includes(row.league) && id(row.event_id);
+      const minimalSource = row.status === 'NON_NUMERIC_OR_SOURCE_ONLY' &&
+        row.league === null && row.event_id === null &&
+        ['home_id', 'away_id', 'season_end_year', 'event_time', 'cutoff_time',
+          'prediction_origin', 'horizon_minutes', 'model_context',
+          'expected_home_minus_away', 'expected_total', 'margin_prediction_id',
+          'total_prediction_id'].every(key => row[key] === null) &&
+        ['margin', 'total'].includes(row.input_target) &&
+        id(row.input_disposition) && sourcePin(row.input_record_sha256);
+      if (!completeIdentity && !minimalSource) {
+        throw Error('Incomplete expected-score identity requires an exact pinned non-numeric source disposition.');
+      }
+      if (row.status === 'NON_NUMERIC_OR_SOURCE_ONLY' &&
+          ['mean_home_score', 'mean_away_score', 'expected_home_minus_away',
+            'expected_total', 'margin_prediction_id', 'total_prediction_id',
+            'model_context'].some(key => row[key] !== null)) {
+        throw Error('A non-numeric source disposition must retain null score inputs and model context.');
       }
       if (seen.has(row.projection_id)) throw Error('Duplicate expected-score record in this part.');
       seen.add(row.projection_id);
@@ -67,7 +87,8 @@
           row.mean_away_score < 0 || row.expected_total < 0 ||
           !id(row.margin_prediction_id) || !id(row.total_prediction_id) ||
           !object(row.model_context) ||
-          ['family', 'arm', 'training_history'].some(k => !id(row.model_context[k]))) {
+          ['family', 'arm'].some(k => !id(row.model_context[k])) ||
+          !history(row.model_context.training_history)) {
           throw Error('Derived scores require both exact target identities and finite supported means.');
         }
         // The owner computes these operations in binary64 and serializes their
@@ -92,9 +113,11 @@
   function filterRows(rows, filters) {
     const query = String(filters.search || '').trim().toLowerCase();
     return rows.filter(row => (filters.state === 'all' || row.status === filters.state) &&
-      (filters.league === 'all' || row.league === filters.league) &&
+      (filters.league === 'all' || row.league === filters.league ||
+        (filters.league === 'unavailable' && row.league === null)) &&
       (!query || [row.event_id, row.event_key, row.home_team, row.away_team,
-        row.home_id, row.away_id, row.model_context?.family, row.status]
+        row.home_id, row.away_id, row.model_context?.family, row.status,
+        row.input_disposition, row.input_target, row.input_record_sha256]
         .some(value => String(value ?? '').toLowerCase().includes(query))));
   }
   const api = {STATES, LABELS, validate, validateRows, filterRows};

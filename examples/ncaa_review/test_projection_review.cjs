@@ -13,7 +13,7 @@ function fixture(){
     prediction_origin:'2026-11-08T12:00:00Z',horizon_minutes:60,
     evaluation_track:review.TRACKS[3],forecast_scope:'INVENTED_REFERENCE_ONLY',
     model_context:status==='DERIVED_EXPECTED_SCORES'||status==='INCOHERENT_NEGATIVE_EXPECTED_SCORE'
-      ?{family:'invented-family',arm:'invented-arm',training_history:'invented-history'}:null,
+      ?{family:'invented-family',arm:'invented-arm',training_history:{mode:'invented-history',seasons:[2001,2002]}}:null,
     status,mean_home_score:status==='DERIVED_EXPECTED_SCORES'?80.25:null,
     mean_away_score:status==='DERIVED_EXPECTED_SCORES'?70.75:null,
     expected_home_minus_away:status==='DERIVED_EXPECTED_SCORES'?9.5:status==='INCOHERENT_NEGATIVE_EXPECTED_SCORE'?100:null,
@@ -24,6 +24,10 @@ function fixture(){
     integer_pmf_qualified:false,cover_push_loss_qualified:false,
     derived_mean_not_a_separate_score_model:true,original_issue_mutation:false,automatic_promotion:false,
   }));
+  Object.assign(rows[4],{league:null,event_id:null,home_id:null,away_id:null,
+    season_end_year:null,event_time:null,cutoff_time:null,prediction_origin:null,
+    horizon_minutes:null,input_target:'margin',input_disposition:'INVENTED_MISSING_SOURCE_INPUT',
+    input_record_sha256:sha('invented-blocked-input-record')});
   const logical=Buffer.from(rows.map(row=>JSON.stringify(row)+'\n').join('')),body=gzipSync(logical);
   const part={ordinal:0,rows:rows.length,logical:{bytes:logical.length,sha256:sha(logical)},
     reference:{key:'invented/score_projections.jsonl.gz',bytes:body.length,sha256:sha(body)},
@@ -49,6 +53,39 @@ function run(){
   check('fractional supplied means and exact target IDs remain unchanged',()=>{
     const f=copy();projection.validateRows(f.rows);assert.equal(f.rows[0].mean_home_score,80.25);
     assert.equal(f.rows[0].mean_away_score,70.75);assert.notEqual(f.rows[0].margin_prediction_id,f.rows[0].total_prediction_id);
+  });
+  check('structured training history is retained without conversion or selection',()=>{
+    const row=copy().rows[0],before=JSON.stringify(row.model_context.training_history);
+    projection.validateRows([row]);assert.equal(JSON.stringify(row.model_context.training_history),before);
+    row.model_context.training_history={};assert.throws(()=>projection.validateRows([row]),/supported means/);
+  });
+  check('pinned non-numeric source disposition preserves unknown identity',()=>{
+    const row=copy().rows[4];projection.validateRows([row]);
+    assert.equal(row.league,null);assert.equal(row.event_id,null);assert.equal(row.mean_home_score,null);
+    assert.equal(row.input_target,'margin');
+  });
+  check('minimal source disposition requires its exact source pin reason and target',()=>{
+    for(const [key,value] of [['input_record_sha256','unproved'],['input_disposition',null],
+      ['input_target','win'],['event_key',null]]){
+      const row=copy().rows[4];row[key]=value;
+      assert.throws(()=>projection.validateRows([row]),/identity|non-numeric source disposition/);
+    }
+  });
+  check('minimal source shape cannot invent numeric or partial canonical identity',()=>{
+    for(const [key,value] of [['league','ncaam'],['event_id','guessed-id'],['expected_total',0],
+      ['mean_home_score',0],['status','DERIVED_EXPECTED_SCORES'],['status','MISSING_COMPANION_HEAD']]){
+      const row=copy().rows[4];row[key]=value;
+      assert.throws(()=>projection.validateRows([row]),/identity|non-numeric source disposition|remain null/);
+    }
+  });
+  check('unavailable-league filter retains the pinned disposition without guessing a league',()=>{
+    const f=copy(),row=f.rows[4];
+    assert.equal(projection.filterRows(f.rows,{state:'all',league:'unavailable',search:'missing_source'}).length,1);
+    assert.equal(projection.filterRows([row],{state:'all',league:'ncaam',search:''}).length,0);
+  });
+  check('non-numeric source cannot carry numeric score inputs even with complete identity',()=>{
+    const row=copy().rows[4];row.league='ncaam';row.event_id='invented-complete-id';row.expected_total=1;
+    assert.throws(()=>projection.validateRows([row]),/non-numeric source disposition/);
   });
   check('finite but inconsistent supplied score means reject',()=>{
     for(const key of ['mean_home_score','mean_away_score']){

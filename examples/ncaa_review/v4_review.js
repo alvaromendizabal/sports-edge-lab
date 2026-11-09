@@ -115,6 +115,12 @@
           node('p',$('v4-stream').value==='refresh_state'?'Persisted trigger-comparison state; it does not authenticate a current model or server-issued forecast.':'A separate execution record; it does not replace the immutable plan denominator.'));
       }else if(isScore){
         card.dataset.scoreStatus=r.status;
+        if(r.status==='NON_NUMERIC_OR_SOURCE_ONLY'){
+          card.append(node('p','Exact source event key: '+display(r.event_key)),
+            node('p','Input disposition: '+display(r.input_disposition)+' · Input target: '+display(r.input_target)),
+            node('p','Input record SHA-256: '+display(r.input_record_sha256)),
+            node('p','Missing league, event ID or source clocks remain unavailable; this view never derives them from the source key.'));
+        }
         card.append(node('p','Disposition: '+projection.LABELS[r.status]),
           node('p','Home: '+display(r.home_team??r.home_id)+' · Expected score: '+display(r.mean_home_score)),
           node('p','Away: '+display(r.away_team??r.away_id)+' · Expected score: '+display(r.mean_away_score)),
@@ -122,7 +128,7 @@
           node('p','Origin: '+display(r.prediction_origin)+' · Cutoff: '+display(r.cutoff_time)+' · Horizon minutes: '+display(r.horizon_minutes)),
           node('p','Margin prediction ID: '+display(r.margin_prediction_id)),
           node('p','Total prediction ID: '+display(r.total_prediction_id)),
-          node('p','Supplied context: '+display(r.model_context?.family)+' / '+display(r.model_context?.arm)+' / '+display(r.model_context?.training_history)),
+          node('p','Supplied context: '+display(r.model_context?.family)+' / '+display(r.model_context?.arm)+' / '+(object(r.model_context?.training_history)?JSON.stringify(r.model_context.training_history):display(r.model_context?.training_history))),
           node('p','Fractional derived means only; no joint score distribution, line-result probability or new issue.'));
       }else{
         card.append(node('p','Track: '+(LABELS[r.evaluation_track]||display(r.evaluation_track))+' · State: '+display(r.status??r.disposition)),node('p','Prediction: '+display(r.prediction)+' · Outcome: '+display(r.actual)));
