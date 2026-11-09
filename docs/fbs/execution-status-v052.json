@@ -1,0 +1,124 @@
+{
+  "classification": "AUTHENTICATED_PHYSICAL_PARTIAL_OWNER_DIAGNOSTIC",
+  "current_source_observed_at": "2026-11-09T03:22:14Z",
+  "display_calendar": {
+    "as_of_utc": "2026-11-09T08:00:00Z",
+    "evidence_class": "DATED_DISPLAY_CALENDAR_USING_UNCHANGED_SOURCE",
+    "periods": {
+      "current": {
+        "end_exclusive": "2026-11-16",
+        "games": 53,
+        "games_class": "EXACT_KICKOFF_FIXTURES",
+        "observed_finals": 0,
+        "schedule_associated_games": 67,
+        "source_dated_unresolved_games": 14,
+        "start": "2026-11-09"
+      },
+      "previous": {
+        "end_exclusive": "2026-11-09",
+        "games": 63,
+        "games_class": "EXACT_KICKOFF_FIXTURES",
+        "observed_finals": 63,
+        "schedule_associated_games": 63,
+        "source_dated_unresolved_games": 0,
+        "start": "2026-11-02"
+      },
+      "upcoming": {
+        "end_exclusive": "2026-11-23",
+        "games": 30,
+        "games_class": "EXACT_KICKOFF_FIXTURES",
+        "observed_finals": 0,
+        "schedule_associated_games": 70,
+        "source_dated_unresolved_games": 40,
+        "start": "2026-11-16"
+      }
+    },
+    "source_observed_at": "2026-11-09T03:22:14Z",
+    "timezone": "America/Los_Angeles",
+    "unresolved_note": "Source-reported placeholder dates locate 14 unresolved fixtures in the November 9\u201315 window and 40 in November 16\u201322. These dates do not establish exact kickoff times or forecast eligibility. All 95 unresolved fixtures remain visible in the full inventory and separate unresolved ledger.",
+    "week_navigation_population": "EXACT_KICKOFF_ONLY_WITH_UNRESOLVED_FIXTURES_RETAINED_SEPARATELY"
+  },
+  "exact_failed_resource_reason": null,
+  "live_process_state_claimed": false,
+  "new_base_fits": 0,
+  "new_calibration_fits": 0,
+  "new_feature_materializations": 0,
+  "new_genuine_issues": 0,
+  "new_metric_evaluations": 0,
+  "new_prediction_records": 0,
+  "new_scientific_metrics_computed_in_publication": 0,
+  "new_source_captures": 0,
+  "outer_observer_shell_exit_independently_proved": false,
+  "owner_release": "V051",
+  "phase": "ORIGINAL_REGISTRY_SEAL_PREFLIGHT_BEFORE_RESEARCH",
+  "prepared_successor": {
+    "admission": "Preserve the actual registry phase decision before refusal; keep all resource and ownership gates.",
+    "checkpoint_policy": "Reuse verified unchanged scientific identities; retain old issues and source clocks.",
+    "observability": "Immediate phase start, monotonic elapsed time, observed work counts and a heartbeat at most 30 seconds apart. ETA remains unknown until the current phase has a denominator and measured completion intervals; no cross-phase ETA or artificial waits.",
+    "release": "V052",
+    "research_followup": "R12 and R13 remain unexecuted by the failed V051 run. A prepared continuation is not evidence of successful fitting or improved forecasts. V052 also prepares an executable schedule-support ablation with earlier-season comparisons, completed-season selection, eligible pregame refits and immutable checkpoint reuse; R14 remains unexecuted on the owner runtime and establishes neither predictive improvement nor completion of the requested novelty target.",
+    "status": "PREPARED_NOT_OWNER_EXECUTED"
+  },
+  "prepared_successor_execution_claimed": false,
+  "prior_readme": {
+    "bytes": 24654,
+    "sha256": "9d7da3b613649c10035a54f7f79acc0b8a2dd0e17b7808f51684964524c7fdd2"
+  },
+  "provider_requests": 0,
+  "provider_requests_by_phase": {
+    "current_cfbd_draftkings": 0,
+    "native_history": 0,
+    "rankings_and_prior_selection_years": 0
+  },
+  "public_summary": "The V051 owner run stopped at the registry resource gate before source refresh or research. It added zero fits, calibrators, feature materializations, forecasts and provider requests. The worker measured 4.12 seconds before packaging; the independent launch observer measured 20.10 seconds overall. The earlier 108 original current-origin outlooks and 03:22:14 UTC source observation remain unchanged. V052 is a prepared repair with measured phase progress; it is not an executed scientific result.",
+  "resource_reason_status": "FAILED_REGISTRY_SNAPSHOT_NOT_RECORDED; NEIGHBORING_SNAPSHOTS_ARE_NOT_SUBSTITUTES",
+  "retained_work": {
+    "current_saved_scalar_outputs": 92692,
+    "earlier_ancestral_studies_not_added_again": true,
+    "family_views": 216,
+    "named_horizon_issues": {
+      "T120": 0,
+      "T1440": 0,
+      "T60": 0
+    },
+    "original_current_origin_issues": 108,
+    "retained_work_is_not_new_V051_work": true,
+    "scope": "V038_ONWARD_NATIVE_SUITE_PLUS_DISTINCT_V049_ADAPTIVE_STUDY",
+    "separate_development_scalar_outputs": 4932,
+    "successful_base_fits": 6014,
+    "successful_calibrators": 1836,
+    "successful_total": 7850
+  },
+  "return_physical": {
+    "bytes": 149150020,
+    "sha256": "c45105db3d4f84d81f6d67045a1425cf057b73ade78ad3daa339f43076c10841"
+  },
+  "schema": "fbs.v052.public-execution-attempt.v1",
+  "scientific_stages": {
+    "adaptive_research": "NOT_REACHED",
+    "joint_calibration": "NOT_REACHED",
+    "source_refresh": "NOT_REACHED",
+    "temporal_feature_ablation": "NOT_REACHED"
+  },
+  "source_physical": {
+    "bytes": 149284324,
+    "sha256": "27cb05ae627e84e9a664ef354e171c29661b09b0a1c7434ffd42d0d828487866"
+  },
+  "started_at": "2026-11-09T20:51:24.114281Z",
+  "static_reports": {
+    "fresh_game_ledger": "DEFERRED_BY_ITS_SEPARATE_RESOURCE_GATE",
+    "new_report_generations": 0,
+    "preserved_reconstruction_locators": 6
+  },
+  "stop_reason": "Fresh registry preflight resource admission unavailable",
+  "stopped_at": "2026-11-09T20:51:28.166181Z",
+  "supervisor_exit_observed": 2,
+  "timing": {
+    "elapsed_time_is_not_scientific_progress": true,
+    "intervals_are_different_scopes_not_additive": true,
+    "launch_observer_seconds": 20.101540407005814,
+    "observer_completed_at": "2026-11-09T20:51:40.017820Z",
+    "worker_before_packaging_seconds": 4.116728016990237
+  },
+  "worker_exit_observed": 2
+}

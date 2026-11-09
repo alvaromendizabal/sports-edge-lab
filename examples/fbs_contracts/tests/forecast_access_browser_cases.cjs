@@ -1,6 +1,12 @@
 'use strict';
 const assert=require('node:assert/strict'),fs=require('node:fs');
 exports.run=async page=>{
+ await page.locator('#execution-attempt-heading').filter({hasText:'V051 stopped before research'}).waitFor();
+ assert.equal(await page.locator('#execution-work-tally [role="listitem"]').count(),6);
+ assert.match(await page.locator('#execution-work-tally').innerText(),/4\.12 s/);
+ assert.match(await page.locator('#execution-work-tally').innerText(),/20\.10 s/);
+ assert.match(await page.locator('#execution-timing-note').innerText(),/does not monitor a live process/);
+ assert.match(await page.locator('#execution-attempt-clock').innerText(),/2026-11-09T03:22:14Z/);
  await page.locator('#forecast-access-summary').filter({hasText:'203 remaining fixtures'}).waitFor();
  assert.equal(await page.locator('#forecast-readiness button').count(),8);
  assert.match(await page.locator('[data-readiness-gap="saved_intervals"]').innerText(),/108\s*\/ 203/);
