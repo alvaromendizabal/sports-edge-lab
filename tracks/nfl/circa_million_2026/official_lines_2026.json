@@ -1,0 +1,1150 @@
+{
+  "contest": "Circa Million VIII",
+  "season": 2026,
+  "source": "Official Circa Sports contest weekly selections and fixed point-spreads PDFs",
+  "retrieved": "2026-11-08",
+  "weeks": {
+    "1": {
+      "source_selection_pdf": "https://www.circasports.com/wp-content/uploads/2026/09/Circa-Sports-Million-VIII-Week-1-Selections.pdf",
+      "source_point_spreads_pdf": "https://www.circasports.com/wp-content/uploads/2026/09/Circa-Sports-Million-VIII-Contest-Point-Spreads-Week-1.pdf",
+      "picks": {
+        "1": {
+          "team": "SEAHAWKS",
+          "spread": "-3"
+        },
+        "2": {
+          "team": "PATRIOTS",
+          "spread": "+3"
+        },
+        "3": {
+          "team": "RAMS",
+          "spread": "-4"
+        },
+        "4": {
+          "team": "49ERS",
+          "spread": "+4"
+        },
+        "5": {
+          "team": "JAGUARS",
+          "spread": "-8½"
+        },
+        "6": {
+          "team": "BROWNS",
+          "spread": "+8½"
+        },
+        "7": {
+          "team": "BENGALS",
+          "spread": "-3½"
+        },
+        "8": {
+          "team": "BUCS",
+          "spread": "+3½"
+        },
+        "9": {
+          "team": "RAVENS",
+          "spread": "-3½"
+        },
+        "10": {
+          "team": "COLTS",
+          "spread": "+3½"
+        },
+        "11": {
+          "team": "STEELERS",
+          "spread": "-3½"
+        },
+        "12": {
+          "team": "FALCONS",
+          "spread": "+3½"
+        },
+        "13": {
+          "team": "BILLS",
+          "spread": "-½"
+        },
+        "14": {
+          "team": "TEXANS",
+          "spread": "+½"
+        },
+        "15": {
+          "team": "BEARS",
+          "spread": "-3"
+        },
+        "16": {
+          "team": "PANTHERS",
+          "spread": "+3"
+        },
+        "17": {
+          "team": "TITANS",
+          "spread": "-1½"
+        },
+        "18": {
+          "team": "JETS",
+          "spread": "+1½"
+        },
+        "19": {
+          "team": "LIONS",
+          "spread": "-7"
+        },
+        "20": {
+          "team": "SAINTS",
+          "spread": "+7"
+        },
+        "21": {
+          "team": "CHARGERS",
+          "spread": "-8½"
+        },
+        "22": {
+          "team": "CARDINALS",
+          "spread": "+8½"
+        },
+        "23": {
+          "team": "RAIDERS",
+          "spread": "-3½"
+        },
+        "24": {
+          "team": "DOLPHINS",
+          "spread": "+3½"
+        },
+        "25": {
+          "team": "EAGLES",
+          "spread": "-4½"
+        },
+        "26": {
+          "team": "COMMANDERS",
+          "spread": "+4½"
+        },
+        "27": {
+          "team": "VIKINGS",
+          "spread": "-1½"
+        },
+        "28": {
+          "team": "PACKERS",
+          "spread": "+1½"
+        },
+        "29": {
+          "team": "COWBOYS",
+          "spread": "-3"
+        },
+        "30": {
+          "team": "GIANTS",
+          "spread": "+3"
+        },
+        "31": {
+          "team": "CHIEFS",
+          "spread": "-3"
+        },
+        "32": {
+          "team": "BRONCOS",
+          "spread": "+3"
+        }
+      }
+    },
+    "2": {
+      "source_selection_pdf": "https://www.circasports.com/wp-content/uploads/2026/09/Circa-Sports-Million-VIII-Week-2-Selections.pdf",
+      "source_point_spreads_pdf": "https://www.circasports.com/wp-content/uploads/2026/09/Circa-Sports-Million-VIII-Contest-Point-Spreads-Week-2.pdf",
+      "picks": {
+        "1": {
+          "team": "BILLS",
+          "spread": "-5½"
+        },
+        "2": {
+          "team": "LIONS",
+          "spread": "+5½"
+        },
+        "3": {
+          "team": "PACKERS",
+          "spread": "-3½"
+        },
+        "4": {
+          "team": "JETS",
+          "spread": "+3½"
+        },
+        "5": {
+          "team": "BEARS",
+          "spread": "-4½"
+        },
+        "6": {
+          "team": "VIKINGS",
+          "spread": "+4½"
+        },
+        "7": {
+          "team": "PATRIOTS",
+          "spread": "-5½"
+        },
+        "8": {
+          "team": "STEELERS",
+          "spread": "+5½"
+        },
+        "9": {
+          "team": "PANTHERS",
+          "spread": "-2½"
+        },
+        "10": {
+          "team": "FALCONS",
+          "spread": "+2½"
+        },
+        "11": {
+          "team": "BUCS",
+          "spread": "-8½"
+        },
+        "12": {
+          "team": "BROWNS",
+          "spread": "+8½"
+        },
+        "13": {
+          "team": "TEXANS",
+          "spread": "-2½"
+        },
+        "14": {
+          "team": "BENGALS",
+          "spread": "+2½"
+        },
+        "15": {
+          "team": "RAVENS",
+          "spread": "-8½"
+        },
+        "16": {
+          "team": "SAINTS",
+          "spread": "+8½"
+        },
+        "17": {
+          "team": "EAGLES",
+          "spread": "-7"
+        },
+        "18": {
+          "team": "TITANS",
+          "spread": "+7"
+        },
+        "19": {
+          "team": "CHARGERS",
+          "spread": "-6½"
+        },
+        "20": {
+          "team": "RAIDERS",
+          "spread": "+6½"
+        },
+        "21": {
+          "team": "BRONCOS",
+          "spread": "-2½"
+        },
+        "22": {
+          "team": "JAGUARS",
+          "spread": "+2½"
+        },
+        "23": {
+          "team": "COWBOYS",
+          "spread": "-4"
+        },
+        "24": {
+          "team": "COMMANDERS",
+          "spread": "+4"
+        },
+        "25": {
+          "team": "SEAHAWKS",
+          "spread": "-4"
+        },
+        "26": {
+          "team": "CARDINALS",
+          "spread": "+4"
+        },
+        "27": {
+          "team": "49ERS",
+          "spread": "-13"
+        },
+        "28": {
+          "team": "DOLPHINS",
+          "spread": "+13"
+        },
+        "29": {
+          "team": "CHIEFS",
+          "spread": "-6½"
+        },
+        "30": {
+          "team": "COLTS",
+          "spread": "+6½"
+        },
+        "31": {
+          "team": "RAMS",
+          "spread": "-7"
+        },
+        "32": {
+          "team": "GIANTS",
+          "spread": "+7"
+        }
+      }
+    },
+    "3": {
+      "source_selection_pdf": "https://www.circasports.com/wp-content/uploads/2026/09/Circa-Sports-Million-VIII-Week-3-Selections.pdf",
+      "source_point_spreads_pdf": "https://www.circasports.com/wp-content/uploads/2026/09/Circa-Sports-Million-VIII-Contest-Point-Spreads-Week-3.pdf",
+      "picks": {
+        "1": {
+          "team": "PACKERS",
+          "spread": "-4½"
+        },
+        "2": {
+          "team": "FALCONS",
+          "spread": "+4½"
+        },
+        "3": {
+          "team": "SEAHAWKS",
+          "spread": "-7½"
+        },
+        "4": {
+          "team": "COMMANDERS",
+          "spread": "+7½"
+        },
+        "5": {
+          "team": "BENGALS",
+          "spread": "-3½"
+        },
+        "6": {
+          "team": "STEELERS",
+          "spread": "+3½"
+        },
+        "7": {
+          "team": "LIONS",
+          "spread": "-6½"
+        },
+        "8": {
+          "team": "JETS",
+          "spread": "+6½"
+        },
+        "9": {
+          "team": "GIANTS",
+          "spread": "-2½"
+        },
+        "10": {
+          "team": "TITANS",
+          "spread": "+2½"
+        },
+        "11": {
+          "team": "JAGUARS",
+          "spread": "-3"
+        },
+        "12": {
+          "team": "PATRIOTS",
+          "spread": "+3"
+        },
+        "13": {
+          "team": "CHIEFS",
+          "spread": "-11½"
+        },
+        "14": {
+          "team": "DOLPHINS",
+          "spread": "+11½"
+        },
+        "15": {
+          "team": "TEXANS",
+          "spread": "-1½"
+        },
+        "16": {
+          "team": "COLTS",
+          "spread": "+1½"
+        },
+        "17": {
+          "team": "PANTHERS",
+          "spread": "-2½"
+        },
+        "18": {
+          "team": "BROWNS",
+          "spread": "+2½"
+        },
+        "19": {
+          "team": "BILLS",
+          "spread": "-7"
+        },
+        "20": {
+          "team": "CHARGERS",
+          "spread": "+7"
+        },
+        "21": {
+          "team": "VIKINGS",
+          "spread": "-1"
+        },
+        "22": {
+          "team": "BUCS",
+          "spread": "+1"
+        },
+        "23": {
+          "team": "49ERS",
+          "spread": "-8½"
+        },
+        "24": {
+          "team": "CARDINALS",
+          "spread": "+8½"
+        },
+        "25": {
+          "team": "SAINTS",
+          "spread": "-3"
+        },
+        "26": {
+          "team": "RAIDERS",
+          "spread": "+3"
+        },
+        "27": {
+          "team": "RAVENS",
+          "spread": "-3"
+        },
+        "28": {
+          "team": "COWBOYS",
+          "spread": "+3"
+        },
+        "29": {
+          "team": "RAMS",
+          "spread": "-2½"
+        },
+        "30": {
+          "team": "BRONCOS",
+          "spread": "+2½"
+        },
+        "31": {
+          "team": "EAGLES",
+          "spread": "-4½"
+        },
+        "32": {
+          "team": "BEARS",
+          "spread": "+4½"
+        }
+      }
+    },
+    "4": {
+      "source_selection_pdf": "https://www.circasports.com/wp-content/uploads/2026/10/Circa-Sports-Million-VIII-Week-4-Selections.pdf",
+      "source_point_spreads_pdf": "https://www.circasports.com/wp-content/uploads/2026/10/Circa-Sports-Million-VIII-Contest-Point-Spreads-Week-4.pdf",
+      "picks": {
+        "1": {
+          "team": "STEELERS",
+          "spread": "-3"
+        },
+        "2": {
+          "team": "BROWNS",
+          "spread": "+3"
+        },
+        "3": {
+          "team": "COLTS",
+          "spread": "-3½"
+        },
+        "4": {
+          "team": "COMMANDERS",
+          "spread": "+3½"
+        },
+        "5": {
+          "team": "BILLS",
+          "spread": "-6½"
+        },
+        "6": {
+          "team": "PATRIOTS",
+          "spread": "+6½"
+        },
+        "7": {
+          "team": "BEARS",
+          "spread": "-3"
+        },
+        "8": {
+          "team": "JETS",
+          "spread": "+3"
+        },
+        "9": {
+          "team": "CARDINALS",
+          "spread": "-2½"
+        },
+        "10": {
+          "team": "GIANTS",
+          "spread": "+2½"
+        },
+        "11": {
+          "team": "TEXANS",
+          "spread": "-3"
+        },
+        "12": {
+          "team": "COWBOYS",
+          "spread": "+3"
+        },
+        "13": {
+          "team": "BENGALS",
+          "spread": "-2½"
+        },
+        "14": {
+          "team": "JAGUARS",
+          "spread": "+2½"
+        },
+        "15": {
+          "team": "PACKERS",
+          "spread": "-3½"
+        },
+        "16": {
+          "team": "BUCS",
+          "spread": "+3½"
+        },
+        "17": {
+          "team": "RAMS",
+          "spread": "-3"
+        },
+        "18": {
+          "team": "EAGLES",
+          "spread": "+3"
+        },
+        "19": {
+          "team": "RAVENS",
+          "spread": "-11½"
+        },
+        "20": {
+          "team": "TITANS",
+          "spread": "+11½"
+        },
+        "21": {
+          "team": "VIKINGS",
+          "spread": "-10½"
+        },
+        "22": {
+          "team": "DOLPHINS",
+          "spread": "+10½"
+        },
+        "23": {
+          "team": "49ERS",
+          "spread": "-2½"
+        },
+        "24": {
+          "team": "BRONCOS",
+          "spread": "+2½"
+        },
+        "25": {
+          "team": "CHIEFS",
+          "spread": "-4½"
+        },
+        "26": {
+          "team": "RAIDERS",
+          "spread": "+4½"
+        },
+        "27": {
+          "team": "SEAHAWKS",
+          "spread": "-7"
+        },
+        "28": {
+          "team": "CHARGERS",
+          "spread": "+7"
+        },
+        "29": {
+          "team": "LIONS",
+          "spread": "-3½"
+        },
+        "30": {
+          "team": "PANTHERS",
+          "spread": "+3½"
+        },
+        "31": {
+          "team": "SAINTS",
+          "spread": "-2½"
+        },
+        "32": {
+          "team": "FALCONS",
+          "spread": "+2½"
+        }
+      }
+    },
+    "5": {
+      "source_selection_pdf": "https://www.circasports.com/wp-content/uploads/2026/10/Circa-Sports-Million-VIII-Week-5-Selections.pdf",
+      "source_point_spreads_pdf": "https://www.circasports.com/wp-content/uploads/2026/10/Circa-Sports-Million-VIII-Contest-Point-Spreads-Week-5.pdf",
+      "picks": {
+        "1": {
+          "team": "COWBOYS",
+          "spread": "-8"
+        },
+        "2": {
+          "team": "BUCS",
+          "spread": "+8"
+        },
+        "3": {
+          "team": "JAGUARS",
+          "spread": "-7½"
+        },
+        "4": {
+          "team": "EAGLES",
+          "spread": "+7½"
+        },
+        "5": {
+          "team": "STEELERS",
+          "spread": "-2½"
+        },
+        "6": {
+          "team": "COLTS",
+          "spread": "+2½"
+        },
+        "7": {
+          "team": "VIKINGS",
+          "spread": "-2"
+        },
+        "8": {
+          "team": "SAINTS",
+          "spread": "+2"
+        },
+        "9": {
+          "team": "JETS",
+          "spread": "-1½"
+        },
+        "10": {
+          "team": "BROWNS",
+          "spread": "+1½"
+        },
+        "11": {
+          "team": "BENGALS",
+          "spread": "-7"
+        },
+        "12": {
+          "team": "DOLPHINS",
+          "spread": "+7"
+        },
+        "13": {
+          "team": "PATRIOTS",
+          "spread": "-3½"
+        },
+        "14": {
+          "team": "RAIDERS",
+          "spread": "+3½"
+        },
+        "15": {
+          "team": "COMMANDERS",
+          "spread": "-4"
+        },
+        "16": {
+          "team": "GIANTS",
+          "spread": "+4"
+        },
+        "17": {
+          "team": "TEXANS",
+          "spread": "-7½"
+        },
+        "18": {
+          "team": "TITANS",
+          "spread": "+7½"
+        },
+        "19": {
+          "team": "BRONCOS",
+          "spread": "-3½"
+        },
+        "20": {
+          "team": "CHARGERS",
+          "spread": "+3½"
+        },
+        "21": {
+          "team": "SEAHAWKS",
+          "spread": "-3"
+        },
+        "22": {
+          "team": "49ERS",
+          "spread": "+3"
+        },
+        "23": {
+          "team": "LIONS",
+          "spread": "-5½"
+        },
+        "24": {
+          "team": "CARDINALS",
+          "spread": "+5½"
+        },
+        "25": {
+          "team": "BEARS",
+          "spread": "-1½"
+        },
+        "26": {
+          "team": "PACKERS",
+          "spread": "+1½"
+        },
+        "27": {
+          "team": "FALCONS",
+          "spread": "-3½"
+        },
+        "28": {
+          "team": "RAVENS",
+          "spread": "+3½"
+        },
+        "29": {
+          "team": "RAMS",
+          "spread": "-3"
+        },
+        "30": {
+          "team": "BILLS",
+          "spread": "+3"
+        }
+      }
+    },
+    "6": {
+      "source_selection_pdf": "https://www.circasports.com/wp-content/uploads/2026/10/Circa-Sports-Million-VIII-Week-6-Selections.pdf",
+      "source_point_spreads_pdf": "https://www.circasports.com/wp-content/uploads/2026/10/Circa-Sports-Million-VIII-Contest-Point-Spreads-Week-6.pdf",
+      "picks": {
+        "1": {
+          "team": "SEAHAWKS",
+          "spread": "-2½"
+        },
+        "2": {
+          "team": "BRONCOS",
+          "spread": "+2½"
+        },
+        "3": {
+          "team": "JAGUARS",
+          "spread": "-2½"
+        },
+        "4": {
+          "team": "TEXANS",
+          "spread": "+2½"
+        },
+        "5": {
+          "team": "PATRIOTS",
+          "spread": "-7"
+        },
+        "6": {
+          "team": "JETS",
+          "spread": "+7"
+        },
+        "7": {
+          "team": "STEELERS",
+          "spread": "-2½"
+        },
+        "8": {
+          "team": "BUCS",
+          "spread": "+2½"
+        },
+        "9": {
+          "team": "RAVENS",
+          "spread": "-5½"
+        },
+        "10": {
+          "team": "BROWNS",
+          "spread": "+5½"
+        },
+        "11": {
+          "team": "BEARS",
+          "spread": "PK"
+        },
+        "12": {
+          "team": "FALCONS",
+          "spread": "PK"
+        },
+        "13": {
+          "team": "COLTS",
+          "spread": "-7"
+        },
+        "14": {
+          "team": "TITANS",
+          "spread": "+7"
+        },
+        "15": {
+          "team": "PANTHERS",
+          "spread": "-1"
+        },
+        "16": {
+          "team": "EAGLES",
+          "spread": "+1"
+        },
+        "17": {
+          "team": "SAINTS",
+          "spread": "-1"
+        },
+        "18": {
+          "team": "GIANTS",
+          "spread": "+1"
+        },
+        "19": {
+          "team": "RAMS",
+          "spread": "-12½"
+        },
+        "20": {
+          "team": "CARDINALS",
+          "spread": "+12½"
+        },
+        "21": {
+          "team": "BILLS",
+          "spread": "-4½"
+        },
+        "22": {
+          "team": "RAIDERS",
+          "spread": "+4½"
+        },
+        "23": {
+          "team": "CHIEFS",
+          "spread": "-8"
+        },
+        "24": {
+          "team": "CHARGERS",
+          "spread": "+8"
+        },
+        "25": {
+          "team": "PACKERS",
+          "spread": "-1"
+        },
+        "26": {
+          "team": "COWBOYS",
+          "spread": "+1"
+        },
+        "27": {
+          "team": "49ERS",
+          "spread": "-7½"
+        },
+        "28": {
+          "team": "COMMANDERS",
+          "spread": "+7½"
+        }
+      }
+    },
+    "7": {
+      "source_selection_pdf": "https://www.circasports.com/wp-content/uploads/2026/10/Circa-Sports-Million-VIII-Week-7-Selections.pdf",
+      "source_point_spreads_pdf": "https://www.circasports.com/wp-content/uploads/2026/10/Circa-Sports-Million-VIII-Contest-Point-Spreads-Week-7.pdf",
+      "picks": {
+        "1": {
+          "team": "BEARS",
+          "spread": "-3"
+        },
+        "2": {
+          "team": "PATRIOTS",
+          "spread": "+3"
+        },
+        "3": {
+          "team": "STEELERS",
+          "spread": "-3"
+        },
+        "4": {
+          "team": "SAINTS",
+          "spread": "+3"
+        },
+        "5": {
+          "team": "PANTHERS",
+          "spread": "-3"
+        },
+        "6": {
+          "team": "BUCS",
+          "spread": "+3"
+        },
+        "7": {
+          "team": "JETS",
+          "spread": "-4"
+        },
+        "8": {
+          "team": "DOLPHINS",
+          "spread": "+4"
+        },
+        "9": {
+          "team": "BROWNS",
+          "spread": "-2½"
+        },
+        "10": {
+          "team": "TITANS",
+          "spread": "+2½"
+        },
+        "11": {
+          "team": "TEXANS",
+          "spread": "-10"
+        },
+        "12": {
+          "team": "GIANTS",
+          "spread": "+10"
+        },
+        "13": {
+          "team": "49ERS",
+          "spread": "-2½"
+        },
+        "14": {
+          "team": "FALCONS",
+          "spread": "+2½"
+        },
+        "15": {
+          "team": "VIKINGS",
+          "spread": "-6½"
+        },
+        "16": {
+          "team": "COLTS",
+          "spread": "+6½"
+        },
+        "17": {
+          "team": "RAVENS",
+          "spread": "-1½"
+        },
+        "18": {
+          "team": "BENGALS",
+          "spread": "+1½"
+        },
+        "19": {
+          "team": "BRONCOS",
+          "spread": "-4½"
+        },
+        "20": {
+          "team": "CARDINALS",
+          "spread": "+4½"
+        },
+        "21": {
+          "team": "LIONS",
+          "spread": "-3"
+        },
+        "22": {
+          "team": "PACKERS",
+          "spread": "+3"
+        },
+        "23": {
+          "team": "RAMS",
+          "spread": "-4"
+        },
+        "24": {
+          "team": "RAIDERS",
+          "spread": "+4"
+        },
+        "25": {
+          "team": "SEAHAWKS",
+          "spread": "-2½"
+        },
+        "26": {
+          "team": "CHIEFS",
+          "spread": "+2½"
+        },
+        "27": {
+          "team": "COWBOYS",
+          "spread": "-3½"
+        },
+        "28": {
+          "team": "EAGLES",
+          "spread": "+3½"
+        }
+      }
+    },
+    "8": {
+      "source_selection_pdf": "https://www.circasports.com/wp-content/uploads/2026/11/Circa-Sports-Million-VIII-Week-8-Selections.pdf",
+      "source_point_spreads_pdf": "https://www.circasports.com/wp-content/uploads/2026/10/Circa-Sports-Million-VIII-Contest-Point-Spreads-Week-8.pdf",
+      "picks": {
+        "1": {
+          "team": "PACKERS",
+          "spread": "-3½"
+        },
+        "2": {
+          "team": "PANTHERS",
+          "spread": "+3½"
+        },
+        "3": {
+          "team": "LIONS",
+          "spread": "-3½"
+        },
+        "4": {
+          "team": "VIKINGS",
+          "spread": "+3½"
+        },
+        "5": {
+          "team": "JETS",
+          "spread": "-1½"
+        },
+        "6": {
+          "team": "RAIDERS",
+          "spread": "+1½"
+        },
+        "7": {
+          "team": "COWBOYS",
+          "spread": "-7"
+        },
+        "8": {
+          "team": "CARDINALS",
+          "spread": "+7"
+        },
+        "9": {
+          "team": "BUCS",
+          "spread": "-2½"
+        },
+        "10": {
+          "team": "FALCONS",
+          "spread": "+2½"
+        },
+        "11": {
+          "team": "BILLS",
+          "spread": "-3"
+        },
+        "12": {
+          "team": "RAVENS",
+          "spread": "+3"
+        },
+        "13": {
+          "team": "JAGUARS",
+          "spread": "-10"
+        },
+        "14": {
+          "team": "COLTS",
+          "spread": "+10"
+        },
+        "15": {
+          "team": "BENGALS",
+          "spread": "-12½"
+        },
+        "16": {
+          "team": "TITANS",
+          "spread": "+12½"
+        },
+        "17": {
+          "team": "STEELERS",
+          "spread": "-3"
+        },
+        "18": {
+          "team": "BROWNS",
+          "spread": "+3"
+        },
+        "19": {
+          "team": "RAMS",
+          "spread": "-6½"
+        },
+        "20": {
+          "team": "CHARGERS",
+          "spread": "+6½"
+        },
+        "21": {
+          "team": "CHIEFS",
+          "spread": "-1½"
+        },
+        "22": {
+          "team": "BRONCOS",
+          "spread": "+1½"
+        },
+        "23": {
+          "team": "PATRIOTS",
+          "spread": "-7"
+        },
+        "24": {
+          "team": "DOLPHINS",
+          "spread": "+7"
+        },
+        "25": {
+          "team": "COMMANDERS",
+          "spread": "-6"
+        },
+        "26": {
+          "team": "EAGLES",
+          "spread": "+6"
+        },
+        "27": {
+          "team": "SEAHAWKS",
+          "spread": "-3"
+        },
+        "28": {
+          "team": "BEARS",
+          "spread": "+3"
+        }
+      }
+    },
+    "9": {
+      "source_selection_pdf": "https://www.circasports.com/wp-content/uploads/2026/11/Circa-Sports-Million-VIII-Week-9-Selections.pdf",
+      "source_point_spreads_pdf": "https://www.circasports.com/wp-content/uploads/2026/11/Circa-Sports-Million-VIII-Contest-Point-Spreads-Week-9.pdf",
+      "picks": {
+        "1": {
+          "team": "JAGUARS",
+          "spread": "-10"
+        },
+        "2": {
+          "team": "RAVENS",
+          "spread": "+10"
+        },
+        "3": {
+          "team": "BENGALS",
+          "spread": "-3"
+        },
+        "4": {
+          "team": "FALCONS",
+          "spread": "+3"
+        },
+        "5": {
+          "team": "SAINTS",
+          "spread": "-3"
+        },
+        "6": {
+          "team": "BROWNS",
+          "spread": "+3"
+        },
+        "7": {
+          "team": "LIONS",
+          "spread": "-7"
+        },
+        "8": {
+          "team": "DOLPHINS",
+          "spread": "+7"
+        },
+        "9": {
+          "team": "RAMS",
+          "spread": "-4"
+        },
+        "10": {
+          "team": "COMMANDERS",
+          "spread": "+4"
+        },
+        "11": {
+          "team": "COWBOYS",
+          "spread": "-4½"
+        },
+        "12": {
+          "team": "COLTS",
+          "spread": "+4½"
+        },
+        "13": {
+          "team": "GIANTS",
+          "spread": "-3½"
+        },
+        "14": {
+          "team": "EAGLES",
+          "spread": "+3½"
+        },
+        "15": {
+          "team": "CHIEFS",
+          "spread": "-10"
+        },
+        "16": {
+          "team": "JETS",
+          "spread": "+10"
+        },
+        "17": {
+          "team": "BRONCOS",
+          "spread": "-2½"
+        },
+        "18": {
+          "team": "PANTHERS",
+          "spread": "+2½"
+        },
+        "19": {
+          "team": "49ERS",
+          "spread": "-10"
+        },
+        "20": {
+          "team": "RAIDERS",
+          "spread": "+10"
+        },
+        "21": {
+          "team": "TEXANS",
+          "spread": "-4½"
+        },
+        "22": {
+          "team": "CHARGERS",
+          "spread": "+4½"
+        },
+        "23": {
+          "team": "PATRIOTS",
+          "spread": "-3"
+        },
+        "24": {
+          "team": "PACKERS",
+          "spread": "+3"
+        },
+        "25": {
+          "team": "SEAHAWKS",
+          "spread": "-8½"
+        },
+        "26": {
+          "team": "CARDINALS",
+          "spread": "+8½"
+        },
+        "27": {
+          "team": "BEARS",
+          "spread": "-6"
+        },
+        "28": {
+          "team": "BUCS",
+          "spread": "+6"
+        },
+        "29": {
+          "team": "BILLS",
+          "spread": "-3½"
+        },
+        "30": {
+          "team": "VIKINGS",
+          "spread": "+3½"
+        }
+      }
+    }
+  }
+}
