@@ -117,6 +117,8 @@ let browser;
  console.log(JSON.stringify({frontier}));
  const complete=await require('./complete_browser_cases.cjs').run({browser,root,screenshots:process.env.FBS_SCREENSHOTS});
  console.log(JSON.stringify({complete}));
+ const currentEvidence=await require('./current_evidence_browser_cases.cjs').run({browser,root,screenshots:process.env.FBS_SCREENSHOTS});
+ console.log(JSON.stringify({currentEvidence}));
  console.log(JSON.stringify({status:'PASS',viewports:[1440,390],inventory_provider_states:states,
    no_script_games:888,current_week:63,disagreement_csv_rows:122,keyboard_dialog:true,
    supported_current_bounds_verified:true,original_wide_book_diagnostic_preserved:true,

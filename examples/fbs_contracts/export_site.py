@@ -7,6 +7,7 @@ provider archive is traversed, and this does not refresh any observation.
 from pathlib import Path
 import argparse
 import hashlib
+import gzip
 import html
 from html.parser import HTMLParser
 import json
@@ -27,7 +28,10 @@ ASSETS = ('index.html','research.html','recovery.html','season.js','source-progr
           'frontier.html','frontier.js','frontier-games.json','frontier-review.json',
           'complete.html','complete.js','coverage.js','diagnostics.js','complete.css','complete-season.json',
           'complete-data.js','complete-history.js','development-data.js','development-2026.json','season-archive.html','three-season.json','three-season-data.js','optional-study.json','optional-study-data.js','catboost-study.json','catboost-study-data.js','source-health-v040.json','owner-neural-study.json','owner-neural-study-data.js','current-capture.json','current-capture-data.js','current-capture.js','game-center.js','current-capture-v043.json','current-capture-v043-data.js','current-capture-v044.json','current-capture-v044-data.js','changed-input-study-v044.json','changed-input-study-v044-data.js','current-capture-v045.json','current-capture-v045-data.js','changed-input-evaluation-v045.json','changed-input-evaluation-v045-data.js','research-method.js','observation-status-v046.json','observation-status-v046-data.js','market-status-v046.json','market-status-v046-data.js','ranking-research.js','ranking-research-v047.json','ranking-research-v047-data.js','market-status-v047.json','market-status-v047-data.js','source-status.js','source-status-v048.json','source-status-v048-data.js','market-status-v048.json','market-status-v048-data.js','forecast-evidence.js','source-status-v049.json','source-status-v049-data.js','market-status-v049.json','market-status-v049-data.js','evaluation-v049.json','evaluation-v049-data.js','forward-outlooks.js','forecast-access.js','execution-status-v051.json','execution-status-v051-data.js','execution-status-v052.json','execution-status-v052-data.js','forward-outlooks-v050.json','forward-outlooks-v050-data.js','source-status-v050.json','source-status-v050-data.js','market-status-v050.json','market-status-v050-data.js')
-SOURCE_FILES = {'index.html':'complete.html','season-archive.html':'index.html'}
+ASSETS += ('current.html','current-evidence.css','current-evidence.js',
+           'current-evidence-v053.json.gz','current-evidence-v053-data.js',
+           'execution-status-v053.json','execution-status-v053-data.js')
+SOURCE_FILES = {'index.html':'current.html','season-archive.html':'index.html'}
 
 
 def committed(commit, path):
@@ -91,6 +95,7 @@ def export(commit, output):
     current_outlooks=json.loads(committed(commit,'docs/fbs/forward-outlooks-v050.json'))
     newest_v050=json.loads(committed(commit,'docs/fbs/source-status-v050.json'))
     market_v050=json.loads(committed(commit,'docs/fbs/market-status-v050.json'))
+    current_v053=json.loads(gzip.decompress(committed(commit,'docs/fbs/current-evidence-v053.json.gz')))
     manifest={'schema':'sports-edge-lab.public-fbs-snapshot.v3',
               'canonical_repository':REPOSITORY,'source_commit_sha':commit,
               'evidence_prepared_at':report['projection_prepared_at'],
@@ -126,6 +131,11 @@ def export(commit, output):
               'v039_optional_study':{k:optional[k] for k in ('counts','sources','generated_at','evidence_class','forecast_issued','promotion_allowed')},
               'three_season_explorer':{k:three[k] for k in ('identified_games','predicted_games','seasons','sources','new_fits','new_provider_requests','new_issues')},
               'publication_is_not_source_refresh':True,'public_files':files}
+    manifest['primary_dashboard_source']='docs/fbs/current.html'
+    manifest['current_evidence_v053']={k:current_v053[k] for k in ('as_of','source_observed_at',
+        'source_capture_completed_at','source_owner_delivery_accepted','source_authenticated',
+        'official_games','season_counts','execution','provider_capture','saved_r12_comparison')}
+    manifest['earlier_dashboard_retained_at']='complete.html'
     (output/'published-snapshot.json').write_text(json.dumps(manifest,indent=2)+'\n')
     class Assets(HTMLParser):
         def handle_starttag(self,tag,attrs):
