@@ -83,7 +83,7 @@ class OwnerEvaluationV049ReviewTests(unittest.TestCase):
 
     def test_preserved_readme_history_is_not_rewritten_as_current(self):
         history=(PUBLIC/'README-history-v048.md').read_text()
-        current=(PUBLIC/'README.md').read_text()
+        current=(PUBLIC/'README-history-v049.md').read_text()  # Exact historical V049 README retained by the successor.
         self.assertIn('## Current state · V048',history)
         self.assertIn('## Current state · V049',current)
         self.assertIn('evaluation of the two',history.lower())

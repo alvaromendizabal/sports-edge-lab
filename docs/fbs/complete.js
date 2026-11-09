@@ -6,10 +6,11 @@
  const current=new Map(D.rows.map(row=>{const g=Object.fromEntries(D.columns.map((key,index)=>[key,row[index]]));return[g.id,g];}));
  const originalGames=T.rows.map(row=>({...current.get(row.id),...row})),latestRows=U.indexRows(Y.rows),nightRows=U.indexRows(X.rows),eveningRows=U.indexRows(W.rows),lateRows=U.indexRows(Q.rows),priorRows=U.indexRows(P.rows);
  const games=originalGames.map(g=>({...U.resultView(g,latestRows.get(g.id),'latest',D.source_observed_at),period:M.periodFor(U.resultView(g,latestRows.get(g.id),'latest',D.source_observed_at),Y.capture.observed_at)}));
- const periodAnchor=window.FBS_SOURCE_STATUS_V049?.capture?.official_current_season_observed_at||window.FBS_SOURCE_STATUS_V048?.capture?.official_current_season_observed_at||Y.capture.observed_at;
+ const periodAnchor=window.FBS_SOURCE_STATUS_V050?.capture?.official_current_season_observed_at||window.FBS_SOURCE_STATUS_V049?.capture?.official_current_season_observed_at||window.FBS_SOURCE_STATUS_V048?.capture?.official_current_season_observed_at||Y.capture.observed_at;
  const weekWindows=M.weekWindows(periodAnchor);
  for(const key of ['previous','current','upcoming'])D.periods[key]={...D.periods[key],label:({previous:'Previous',current:'Dated current',upcoming:'Upcoming'}[key])+' Pacific week · '+weekWindows[key].label};
  for(const game of games)game.period=M.periodFor(game,periodAnchor);
+ const currentFixtureSnapshot=games.map(game=>({...game}));
  $('upcoming-week-count').textContent=games.filter(g=>g.season===2026&&g.period==='upcoming').length;
  const originalDevelopment=new Map(R.rows.map(r=>[r.id,r]));
  const optionalDevelopment=new Map(O.rows.map(r=>[r.id,r]));
@@ -227,5 +228,5 @@
  }
  $('latest-source-rows').addEventListener('click',event=>{const button=event.target.closest('[data-capture-game]');if(button)openGame(button.dataset.captureGame);});
  renderLatestCapture();restoreView();renderDevelopment();renderGames();renderComparison();renderCoverageMatrix();renderRegistry();
- window.FBSCompleteReview={filtered,reference,games,projection,selectedSeasonGames,openGame,renderGames,get captureClock(){return window.FBS_SOURCE_STATUS_V049?.capture?.completed_at||window.FBS_SOURCE_STATUS_V048?.capture?.completed_at||Y.capture.completed_at;},get page(){return state.page;},get pageSize(){return pageSize();}};
+ window.FBSCompleteReview={filtered,reference,games,currentFixtureSnapshot,projection,selectedSeasonGames,openGame,renderGames,get captureClock(){return window.FBS_SOURCE_STATUS_V050?.capture?.completed_at||window.FBS_SOURCE_STATUS_V049?.capture?.completed_at||window.FBS_SOURCE_STATUS_V048?.capture?.completed_at||Y.capture.completed_at;},get page(){return state.page;},get pageSize(){return pageSize();}};
 })();

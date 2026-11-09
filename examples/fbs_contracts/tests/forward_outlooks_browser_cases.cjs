@@ -1,0 +1,36 @@
+'use strict';
+const assert=require('node:assert/strict'),fs=require('node:fs');
+exports.run=async page=>{
+ await page.locator('#forward-outlook-summary').filter({hasText:/fixtures shown/}).waitFor();
+ const expected=await page.evaluate(()=>{
+  const rows=FBSForwardOutlooks.inventory(FBSCompleteReview.currentFixtureSnapshot,FBS_FORWARD_OUTLOOKS_V050);
+  return {all:FBSForwardOutlooks.summarize(rows),upcoming:FBSForwardOutlooks.summarize(FBSForwardOutlooks.select(rows)),first:FBSForwardOutlooks.select(rows)[0].id};
+ });
+ assert.equal(expected.all.games,203);assert.equal(expected.all.issued,108);assert.equal(expected.upcoming.games,53);
+ assert.equal(Number(await page.locator('#forward-outlook-total').innerText()),expected.all.games);
+ assert.equal(Number(await page.locator('#stat-forward-issued').innerText()),expected.all.issued);
+ assert.equal(await page.locator('#forward-outlook-rows tr').count(),expected.upcoming.games);
+ assert.match(await page.locator('#forward-target-counts').innerText(),/Exact-line cover 0/);
+ await page.selectOption('#capture-view','original');
+ await page.locator(`[data-forward-game="${expected.first}"]`).click();
+ assert.equal(await page.locator('#capture-view').inputValue(),'latest');
+ assert.equal(await page.locator('#game-dialog').isVisible(),true);
+ assert.match(await page.locator('#dialog-current-outlook').innerText(),/Current owner outlook.*Information cutoff.*Computed.*Original issue/s);
+ assert.match(await page.locator('#dialog-current-outlook').innerText(),/private.*legacy/s);
+ await page.keyboard.press('Escape');
+ await page.selectOption('#forward-scope','all');assert.equal(await page.locator('#forward-outlook-rows tr').count(),expected.all.games);
+ await page.selectOption('#forward-status','missing');assert.equal(await page.locator('#forward-outlook-rows tr').count(),expected.all.games-expected.all.issued);
+ assert.match(await page.locator('#forward-outlook-rows').innerText(),/Kickoff unresolved/);
+ const [download]=await Promise.all([page.waitForEvent('download'),page.locator('#forward-export').click()]);
+ const csv=fs.readFileSync(await download.path(),'utf8');assert.equal(csv.split('\r\n').length,expected.all.games-expected.all.issued+1);
+ assert.match(csv,/information_cutoff_utc.*computed_at_utc.*issued_at_utc/);assert.match(csv,/EXACT_KICKOFF_UNRESOLVED/);assert.doesNotMatch(csv,/prediction_value|s3:\/\/|recipe|undefined|NaN/);
+ await page.selectOption('#forward-status','all');await page.selectOption('#forward-scope','exact');await page.selectOption('#forward-target','cover');
+ assert.equal(await page.locator('#forward-outlook-rows tr').count(),expected.all.exact);
+ await page.locator('#forward-search').fill('no matching fixture');assert.equal(await page.locator('#forward-export').isDisabled(),true);
+ await page.locator('#forward-reset').click();assert.equal(await page.locator('#forward-scope').inputValue(),'all');assert.equal(await page.locator('#forward-outlook-rows tr').count(),expected.all.games);
+ await page.selectOption('#forward-scope','unresolved');const link=await page.locator('#forward-view-link').getAttribute('href');
+ const reopened=new URL(link);reopened.searchParams.set('snapshot','original');await page.goto(reopened.href);await page.locator('#forward-outlook-summary').filter({hasText:/fixtures shown/}).waitFor();
+ assert.equal(await page.locator('#forward-scope').inputValue(),'unresolved');assert.equal(await page.locator('#forward-outlook-total').innerText(),'203');assert.equal(await page.locator('#forward-outlook-rows tr').count(),expected.all.unresolved);
+ await page.selectOption('#forward-scope','upcoming');await page.selectOption('#capture-view','latest');
+ return {status:'PASS',remaining_fixtures:expected.all.games,original_outlooks:expected.all.issued,unresolved_kickoffs:expected.all.unresolved,close_horizon_games:expected.all.close_horizon_games,private_grid_published:false};
+};

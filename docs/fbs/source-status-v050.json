@@ -1,0 +1,147 @@
+{
+  "capture": {
+    "completed_at": "2026-11-09T03:23:08Z",
+    "observation_started_at": "2026-11-09T03:22:13Z",
+    "official_current_season_observed_at": "2026-11-09T03:22:14Z",
+    "physical": {
+      "bytes": 322007,
+      "sha256": "a72b80f07b9835bd9f1c885aaa60b8ad9b20624216c913c27fddc48c2c556028"
+    }
+  },
+  "counts": {
+    "current_season_completed": 685,
+    "current_season_exact_unplayed": 108,
+    "current_season_fixtures": 888,
+    "current_season_unresolved_kickoff": 95,
+    "exact_kickoff": 2646,
+    "identified_fixtures": 2742,
+    "unresolved_kickoff": 96
+  },
+  "fixture_result_equivalence": {
+    "changed_game_count": 0,
+    "changed_game_ids": [],
+    "encoding": "JSON sorted keys UTF-8 indentation2 final LF; date/number values unchanged",
+    "fields": [
+      "game_id",
+      "season",
+      "season_type",
+      "home_id",
+      "away_id",
+      "kickoff_utc",
+      "kickoff_tbd",
+      "completed",
+      "home_points",
+      "away_points"
+    ],
+    "new_vector_sha256": "3b2798f21587e30313d2667daead2d7d13bc1253802639cd12b8e7fd60f6e270",
+    "old_vector_sha256": "3b2798f21587e30313d2667daead2d7d13bc1253802639cd12b8e7fd60f6e270"
+  },
+  "new_forecasts_in_local_export": 0,
+  "new_metric_calculations_in_local_export": 0,
+  "new_provider_requests_in_owner": 15,
+  "original_evidence": {
+    "all_official_selectors_replayed": 2742,
+    "current_request_indices_independently_reread": 15,
+    "source_bodies_authenticated": 15,
+    "source_receipts_authenticated": 15
+  },
+  "owner_evidence": {
+    "automatic_promotion": false,
+    "completion_extent": "Original owner controls authenticated; scientific states, outputs and individual issuance readback reported separately by modeling.",
+    "current_owner_live_state_claimed": false,
+    "current_source_requests": 15,
+    "elapsed_seconds": 954.0063830029994,
+    "evidence_observed_at": "2026-11-09T03:37:15.186412Z",
+    "failed_fit_attempts_reported": 0,
+    "genuine_future_joint_issues_reported": 108,
+    "identified_fixtures": 2742,
+    "native_history_requests": 0,
+    "new_calibrators": 0,
+    "new_current_scalar_predictions_reported": 1422,
+    "new_development_scalar_outputs_separate": 4932,
+    "new_fits_reported": 44,
+    "new_ranking_fits": 0,
+    "new_ranking_materialized_snapshots_reported": 4452,
+    "new_retained_policy_fits_reported": 27,
+    "new_retained_policy_scalar_predictions_reported": 1098,
+    "new_v5_current_scalar_predictions_reported": 324,
+    "new_v5_development_origin_records": 4,
+    "new_v5_fits_reported": 17,
+    "new_v5_selector_record": 1,
+    "original_issue_readback_status": "PASS_ALL_108_ORIGINAL_FUTURE_OUTLOOK_ISSUES",
+    "original_prediction_outputs_retained": 91270,
+    "original_shadow_outlook_games_verified": 108,
+    "public_market_strategy_or_owner_cloud_identifiers_included": false,
+    "public_summary": "The owner completed 44 base fits (17 adaptive and 27 retained-policy), preserved 1,422 target outputs plus 4,932 separate retrospective-development outputs, and issued 108 original future shadow outlooks. It reused 245 earlier metric cohorts and 36 selector records. A later report-storage admission limit stopped report assembly; the scientific records survived and were independently authenticated. No production promotion or full-workload qualification followed. This is a dated partial execution, not live process state.",
+    "ranking_cases_with_explicit_training_support_gaps": 16836,
+    "recovery_index_or_progress_completion_credit": 0,
+    "retained_metric_cohorts_reused": 245,
+    "retained_selector_records_reused": 36,
+    "saved_state_readback_status": "PASS_ALL44_SAVED_STATES_AND_OUTPUT_LINEAGE",
+    "schema": "fbs.v050.public-safe-owner-evidence.v1",
+    "season_game_counts": {
+      "2024": 920,
+      "2025": 934,
+      "2026": 888
+    },
+    "source_observation_started_at": "2026-11-09T03:22:13Z",
+    "source_revision_quarantines": 3,
+    "status": "PARTIAL_OWNER_RETURN_WITH_PRESERVED_RESEARCH",
+    "stop_reason": "ALLOCATED_REPORT_STORAGE_CAP",
+    "stopped_phase": "CHECKPOINT_RECOVERY_AND_PERFORMANCE_QUALIFICATION"
+  },
+  "periods": {
+    "cumulative": {
+      "completed": 2538,
+      "games": 2742,
+      "window": null
+    },
+    "current_week": {
+      "completed": 63,
+      "games": 63,
+      "window": {
+        "end_local_exclusive": "2026-11-09T00:00:00-08:00",
+        "start_local": "2026-11-02T00:00:00-08:00",
+        "timezone": "America/Los_Angeles"
+      }
+    },
+    "previous_week": {
+      "completed": 56,
+      "games": 56,
+      "window": {
+        "end_local_exclusive": "2026-11-02T00:00:00-08:00",
+        "start_local": "2026-10-26T00:00:00-07:00",
+        "timezone": "America/Los_Angeles"
+      }
+    },
+    "upcoming_week": {
+      "completed": 0,
+      "games": 53,
+      "window": {
+        "end_local_exclusive": "2026-11-16T00:00:00-08:00",
+        "start_local": "2026-11-09T00:00:00-08:00",
+        "timezone": "America/Los_Angeles"
+      }
+    }
+  },
+  "schema": "fbs.v050.public-current-source-check.v1",
+  "source_raw_receipt_closure": "PASS_15_ORIGINAL_BODIES_15_STANDALONE_RECEIPTS_15_REQUEST_INDICES",
+  "windows": {
+    "cumulative": null,
+    "current_week": {
+      "end_local_exclusive": "2026-11-09T00:00:00-08:00",
+      "start_local": "2026-11-02T00:00:00-08:00",
+      "timezone": "America/Los_Angeles"
+    },
+    "previous_week": {
+      "end_local_exclusive": "2026-11-02T00:00:00-08:00",
+      "start_local": "2026-10-26T00:00:00-07:00",
+      "timezone": "America/Los_Angeles"
+    },
+    "upcoming_week": {
+      "end_local_exclusive": "2026-11-16T00:00:00-08:00",
+      "start_local": "2026-11-09T00:00:00-08:00",
+      "timezone": "America/Los_Angeles"
+    }
+  }
+}

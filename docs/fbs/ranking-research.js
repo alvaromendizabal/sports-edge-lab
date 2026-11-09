@@ -77,7 +77,16 @@
   function init(){
     const source=window.FBS_RANKING_RESEARCH_V047,$=id=>document.getElementById(id),G=window.FBSCompleteReview;
     if(!source||!$('ranking-source-rows')||!G)return;
-    const data=presentation(source);
+    const data=presentation(source), current=window.FBS_FORWARD_OUTLOOKS_V050, ranking=current?.ranking_research;
+    if(ranking){
+      data.owner_summary='The latest owner materialized '+count(ranking.materialized_snapshots)+' ranking snapshots with '+count(ranking.observed_feature_values)+' observed source cells. Ranking-model fits remain '+count(ranking.new_model_fits)+': all '+count(ranking.registered_case_count)+' registered case/horizon records retain an explicit earlier-training-support gap. These counts describe snapshots and cells, not novel feature definitions or measured gains.';
+      data.feature_groups[0]={label:'Outcome history and rolling policy',actual_evidence:'The current owner completed 44 base fits and 1,422 target outputs; 4,932 retrospective-development outputs are counted separately. Prior 91,270 outputs are preserved.',qualification_gap:'Current-origin shadow outlooks have no observed outcomes here; later close-horizon updates and production promotion remain separate.',next_action:'Evaluate only after original outcomes become observable; refresh each later eligible horizon under its own source and issue clocks.'};
+      data.feature_groups[1].actual_evidence='Separate original poll captures for 2022–2026; the current owner materialized dated ranking snapshots.';
+      data.feature_groups[1].qualification_gap='Original publication clocks are absent. Earlier eligible training support remains insufficient for the registered ranking ablations.';
+      data.feature_groups[2].actual_evidence='Four preserved 2026 rating captures; current snapshots retain exact source and team bindings.';
+      data.feature_groups[2].qualification_gap='Historical source availability and eligible earlier training support remain unproved. No ranking-model fit or gain is established.';
+      if($('ranking-current-materialization'))$('ranking-current-materialization').textContent=count(ranking.materialized_snapshots)+' materialized snapshots · '+count(ranking.observed_feature_values)+' observed source cells · '+count(ranking.new_model_fits)+' ranking-model fits · '+count(ranking.new_evaluated_ranking_gains)+' evaluated ranking gains. The source/season census below keeps its original capture clocks and definition-level qualification.';
+    }
     function render(){
       const rows=rowsFor(data,$('ranking-season').value,$('ranking-kind').value),summary=sourceSummary(rows);
       $('ranking-status-summary').textContent=`${summary.source_season_cells} source / season cells · ${summary.verified_source_season_cells} captured · ${count(summary.admitted_feature_values)} admitted feature values · ${count(summary.evaluated_feature_values)} evaluated feature values`;
@@ -97,7 +106,7 @@
     $('ranking-stage-promoted').textContent=count(data.feature_counts.promoted)+' promoted definitions';
     $('ranking-selection-history').innerHTML=data.selection_history.map(row=>`<tr><td>${row.season} · ${escape(row.source_label)}</td><td>${count(row.editions)}</td><td>${count(row.records)}</td><td>${count(row.teams)}</td><td>${escape(row.source_observed_at)}</td><td>Original publication time absent</td></tr>`).join('');
     $('source-recheck-summary').textContent=`Latest authenticated source check: ${source.capture.observed_at} (capture completed ${source.capture.completed_at}). All ${source.counts.fixtures.toLocaleString()} fixture, team, kickoff and result coordinates match the earlier snapshot: ${source.counts.current_season_completed} season finals, 96 unresolved kickoffs, no new or changed results. The original result clocks below and 683-game evaluation remain unchanged.`;
-    const market=window.FBS_MARKET_STATUS_V049||window.FBS_MARKET_STATUS_V047;
+    const market=window.FBS_MARKET_STATUS_V050||window.FBS_MARKET_STATUS_V049||window.FBS_MARKET_STATUS_V047;
     if(market&&$('latest-market-census-summary'))$('latest-market-census-summary').textContent=`Latest source check ${market.source_observed_at}: ${market.target_rows} raw target observations across ${market.event_count} events; ${market.exact_display_bound_events} events / ${market.exact_display_bound_target_rows} targets have exact registered ordered-team and kickoff associations. ${market.source_available_t120_exact_identity_rows} exact targets meet T−120 and ${market.source_available_t60_exact_identity_rows} meet T−60. The ${market.raw_source_available_t120_rows} raw source-clock checks are a different denominator. Qualified cover: ${market.qualified_model_cover_rows}. No new probability scores or historical feature admission follow from this metadata check.`;
     $('ranking-excluded-summary').textContent=Object.entries(source.excluded_non_fbs_poll_rows).map(([name,n])=>`${name}: ${n.toLocaleString()}`).join(' · ')+'. These source records are excluded from the FBS poll census.';
     const groups=data.feature_groups||[];
