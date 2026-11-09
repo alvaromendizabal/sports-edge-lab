@@ -7,8 +7,8 @@ exports.run=async page=>{
  assert.match(await page.locator('#forecast-evidence-issued').innerText(),/forward-issued games: 0/);
  assert.match(await page.locator('#refresh-priority-summary').innerText(),/53 upcoming fixtures · 2 new kickoff identities.*51 with saved legacy outlooks.*0 authenticated near-term issues/);
  assert.equal(await page.locator('#refresh-priority-rows tr').count(),53);
- assert.match(await page.locator('#refresh-priority-rows tr').first().innerText(),/Massachusetts at Toledo/);
  await page.locator('#refresh-priority details > summary').click();
+ assert.match(await page.locator('#refresh-priority-rows tr').first().innerText(),/Massachusetts at Toledo/);
  await page.locator('[data-refresh-game="401866463"]').click();assert.match(await page.locator('#dialog-model').innerText(),/No winner projection/);await page.keyboard.press('Escape');
  await page.locator('#refresh-priority details > summary').click();
  for(const period of ['2024','2025','2026','previous_week','current_week']){
