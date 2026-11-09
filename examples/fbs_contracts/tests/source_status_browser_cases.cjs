@@ -3,7 +3,7 @@ const assert=require('node:assert/strict'),fs=require('node:fs');
 exports.run=async page=>{
  await page.locator('#source-status-summary').filter({hasText:/67 events/}).waitFor();
  assert.match(await page.locator('#source-clock-gap').innerText(),/685 observed 2026 finals.*685.*0 later finals/);
- assert.match(await page.locator('#source-clock-checked').getAttribute('title'),/^2026-11-09T01:35:19Z$/);
+ assert.match(await page.locator('#source-clock-checked').getAttribute('title'),/^2026-11-09T03:22:14Z$/);
  assert.match(await page.locator('#source-clock-results').getAttribute('title'),/^2026-11-08T19:34:42Z$/);
  assert.match(await page.locator('#source-clock-evaluated').getAttribute('title'),/^2026-11-09T01:35:19Z$/);
  assert.equal(await page.locator('#source-week-navigation a').count(),3);

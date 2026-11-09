@@ -9,6 +9,7 @@ exports.run=async({browser,root,screenshots})=>{
   await require('./ranking_research_browser_cases.cjs').run(page);
   await require('./source_status_browser_cases.cjs').run(page);
   await require('./forecast_evidence_browser_cases.cjs').run(page);
+  await require('./forward_outlooks_browser_cases.cjs').run(page);
   await require('./game_center_browser_cases.cjs').run(page,{width,screenshots});
   await require('./current_capture_browser_cases.cjs').run(page);
   assert.match(await page.locator('#result-status').innerText(),/^888 games · 629 observed complete · 790 development projections$/);

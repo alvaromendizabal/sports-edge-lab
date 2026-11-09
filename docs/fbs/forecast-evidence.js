@@ -81,7 +81,7 @@
     const label=family=>report.families?.[family]?.label||family.replaceAll('_',' ').replaceAll('/',' · ');
     $('forecast-evidence-clock').textContent=`Outcome source ${time(report.capture.source_observed_at)} · evaluation ${time(report.evaluated_at)}. Original forecasts and their computation clocks are unchanged.`;
     $('evidence-lane-foundation').textContent=`${scoredGames(report)??'No recorded'} current-season outcomes in the unchanged fixed-blend cohort. Retrospective evaluation; no new forecast issue.`;
-    $('evidence-lane-adaptive').textContent='Current-regime specialist and adaptive mixtures are prepared V5 research. No new-policy forward issues or promotion are authenticated.';
+    $('evidence-lane-adaptive').textContent='Current-origin adaptive research is reported in the outlook ledger above. These older numerical evaluation banks remain separate; a new issue does not create an observed forward performance result.';
     $('evidence-lane-market').textContent='Four separate source references remain available. Quote association alone does not establish an equivalent, contemporaneous probability benchmark.';
     $('evidence-lane-residual').textContent='Market-residual comparison awaits exact quote, contract, horizon and state qualification. No residual score or probability is substituted.';
     function render(){
@@ -111,7 +111,7 @@
     $('refresh-priority-summary').textContent=`${queue.length} upcoming fixtures · ${pendingEpochs} new kickoff identities awaiting forecasts · ${queue.filter(row=>row.baseline_saved).length} with saved legacy outlooks · 0 authenticated near-term issues. Scope: ${windows.upcoming.label}.`;
     $('refresh-priority-rows').innerHTML=queue.map(row=>`<tr><td><b>${row.priority}</b></td><td><button class="row-button" data-refresh-game="${esc(row.id)}">${esc(row.away)} at ${esc(row.home)}</button><small>${esc(time(row.kickoff))} · ${esc(row.id)}</small></td><td><span class="chip">${row.baseline_saved?'Saved legacy outlook':'New output required'}</span><small>${esc(row.reason)}</small></td><td>${esc(row.next_action)}<small>Source, training, computation and original issue clocks remain separate</small></td></tr>`).join('');
     $('refresh-priority-rows').addEventListener('click',event=>{const button=event.target.closest('[data-refresh-game]');if(button)G.openGame(button.dataset.refreshGame);});
-    $('forecast-evidence-issued').textContent='New-policy forward-issued games: 0. These exposed retrospective outcomes can inform later research; they cannot independently confirm a policy designed after viewing them.';
+    $('forecast-evidence-issued').textContent='Original issued forecasts in these legacy evaluation banks: 0. New current-origin outlooks are recorded separately above. These exposed retrospective outcomes cannot independently confirm a policy designed after viewing them.';
     document.addEventListener('fbs:open-current-evaluation',event=>{
       const q=event.detail||{};if(q.scope)$('evidence-scope').value=q.scope;if(q.period)$('evidence-period').value=q.period;if(q.target)$('evidence-target').value=q.target;
       render();$('forecast-evidence').scrollIntoView({block:'start'});

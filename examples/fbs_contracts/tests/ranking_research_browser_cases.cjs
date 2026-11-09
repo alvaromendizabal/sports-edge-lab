@@ -3,14 +3,16 @@ const assert=require('node:assert/strict'),fs=require('node:fs');
 exports.run=async page=>{
  assert.equal(await page.locator('#ranking-source-rows tr').count(),21);
  assert.equal(await page.locator('#ranking-selection-history tr').count(),6);
- assert.match(await page.locator('#source-recheck-summary').innerText(),/2026-11-09T01:35:19Z/);
+ assert.match(await page.locator('#source-recheck-summary').innerText(),/2026-11-09T03:22:14Z/);
  assert.match(await page.locator('#latest-market-census-summary').innerText(),/33 events \/ 99 targets/);
- assert.match(await page.locator('#latest-market-census-summary').innerText(),/2026-11-09T01:35:19Z/);
+ assert.match(await page.locator('#latest-market-census-summary').innerText(),/2026-11-09T03:22:14Z/);
  assert.match(await page.locator('#latest-market-census-summary').innerText(),/201 raw source-clock checks are a different denominator/);
  assert.match(await page.locator('#ranking-stage-capture').innerText(),/9 verified source requests/);
  assert.match(await page.locator('#ranking-stage-admitted').innerText(),/^0 admitted definitions$/);
  assert.match(await page.locator('#ranking-stage-evaluated').innerText(),/^0 evaluated definitions$/);
  assert.match(await page.locator('#ranking-stage-promoted').innerText(),/^0 promoted definitions$/);
+ assert.match(await page.locator('#ranking-current-materialization').innerText(),/4,452 materialized snapshots.*19,120 observed source cells.*0 ranking-model fits.*0 evaluated ranking gains/);
+ assert.match(await page.locator('#ranking-owner-status').innerText(),/16,836 registered case/);
  await page.locator('nav a[href="#ranking-research"]').click();
  await page.selectOption('#ranking-season','2026');assert.equal(await page.locator('#ranking-source-rows tr').count(),7);
  await page.selectOption('#ranking-kind','poll');assert.equal(await page.locator('#ranking-source-rows tr').count(),3);
