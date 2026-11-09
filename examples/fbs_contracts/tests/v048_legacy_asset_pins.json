@@ -1,0 +1,255 @@
+{
+  "source_commit": "0cba266e88b73f2486fba885ca98fd3a299693c5",
+  "files": [
+    {
+      "path": "docs/fbs/README-history-v044.md",
+      "bytes": 68889,
+      "sha256": "65769734ed2d5dc090be31e02b167c896e64ca7e50061dad2bddd31c067d1272"
+    },
+    {
+      "path": "docs/fbs/README-history-v045.md",
+      "bytes": 14915,
+      "sha256": "18b9a10d95f6800f378e1e1b2afd0597c439740eba5ef8d6824a1ad6c63c26f0"
+    },
+    {
+      "path": "docs/fbs/README-history-v046.md",
+      "bytes": 15417,
+      "sha256": "53a64b29b8cf1c57f1a3c5b3dc4b560e814fd485ebb1f64ec5802de50293dfba"
+    },
+    {
+      "path": "docs/fbs/V024_AGGREGATE_2026-11-03.json",
+      "bytes": 16426,
+      "sha256": "cd9c731fd44cd67644d497b2ff812f59c4d9b2716234b0a61bbc8ca99151f91b"
+    },
+    {
+      "path": "docs/fbs/V025_OPERATIONAL_REVIEW_2026-11-03.json",
+      "bytes": 9850,
+      "sha256": "b855fb58cfe3733c247d216cb075430a9fa5ea52b2910a54420e0a581fd09242"
+    },
+    {
+      "path": "docs/fbs/catboost-study-data.js",
+      "bytes": 2209147,
+      "sha256": "9a3529bbc35ab2c5a1e2c425b259733b76d141413d7b9a19624f19b216119c7e"
+    },
+    {
+      "path": "docs/fbs/catboost-study.json",
+      "bytes": 2209120,
+      "sha256": "bd1084e8cc9a97c5769b6199a1a72de7302d347a5cce9ced4abbef89a2f47937"
+    },
+    {
+      "path": "docs/fbs/changed-input-evaluation-v045-data.js",
+      "bytes": 641115,
+      "sha256": "ddb481977fb72b601ea84f8a8798518f167c653da834535e36aa4d38a52da63b"
+    },
+    {
+      "path": "docs/fbs/changed-input-evaluation-v045.json",
+      "bytes": 641079,
+      "sha256": "00cc2abe986f9e9294d389d3398a04fb65a0733e8c29ded0c90e6b93ada46ace"
+    },
+    {
+      "path": "docs/fbs/changed-input-study-v044-data.js",
+      "bytes": 1082145,
+      "sha256": "ffe2e9e2c76e67581b3a6380ffa0f8099469fec737b17b8b89c4cbaf2c7d8376"
+    },
+    {
+      "path": "docs/fbs/changed-input-study-v044.json",
+      "bytes": 1082113,
+      "sha256": "e5f6d1453755a7cd75df7f54581195b08138fad66957c0de23abe12ac1a17ebf"
+    },
+    {
+      "path": "docs/fbs/common-game-review.json",
+      "bytes": 4442,
+      "sha256": "b14c15024912915afdd1d511c1d42e69f0d553bf563321f08bd6e17d9354103e"
+    },
+    {
+      "path": "docs/fbs/complete-data.js",
+      "bytes": 3265300,
+      "sha256": "cf959e8c543c870103ebd292ce37908162b2cc99ec74e425c8ec370596651065"
+    },
+    {
+      "path": "docs/fbs/complete-history.js",
+      "bytes": 327994,
+      "sha256": "8c376a72aa78c70491b83139ac344df0200ad38432a975862a65a5c30af67dd5"
+    },
+    {
+      "path": "docs/fbs/complete-season.json",
+      "bytes": 3265261,
+      "sha256": "dc94b0bb7671ef87b0e1c2f3e747e8251b08e9faab75173059fa1d47838b3afa"
+    },
+    {
+      "path": "docs/fbs/current-capture-data.js",
+      "bytes": 1352705,
+      "sha256": "83055ba31adcd72e3754094dae6fcf997811f6235d9ccefc00534662cbe04698"
+    },
+    {
+      "path": "docs/fbs/current-capture-v043-data.js",
+      "bytes": 1409528,
+      "sha256": "d46dc6ed1aa2dfd36f434a93c8d342dfbf5e555aa8899708713403f6aaf5acc3"
+    },
+    {
+      "path": "docs/fbs/current-capture-v043.json",
+      "bytes": 1409495,
+      "sha256": "522e671776407a4d0c81760c3449654d172d9b082358f1934db3631aa42f757c"
+    },
+    {
+      "path": "docs/fbs/current-capture-v044-data.js",
+      "bytes": 1397291,
+      "sha256": "d5b1ced79af46df1a3325a4b734c11fd73c59fdca2aab615f2b140d2176354e3"
+    },
+    {
+      "path": "docs/fbs/current-capture-v044.json",
+      "bytes": 1397258,
+      "sha256": "b7c1787d482694814de0dc3d3b4c2ac048d45b7bd69235b8fb6ddd135a9d0fd4"
+    },
+    {
+      "path": "docs/fbs/current-capture-v045-data.js",
+      "bytes": 1416336,
+      "sha256": "6a3aebd588998fb387b29ea0b3eb9efef8dbae430ad45f637bef2d19d1b4fbbf"
+    },
+    {
+      "path": "docs/fbs/current-capture-v045.json",
+      "bytes": 1416303,
+      "sha256": "d7456e49220a50a45628c4508ed568d740d8d89fd1975f5c4e724681f82ba069"
+    },
+    {
+      "path": "docs/fbs/current-capture.json",
+      "bytes": 1352677,
+      "sha256": "25fb5bd406967a61d20d0830799c332dceb77d5daf509c274c40d3d1a859bd07"
+    },
+    {
+      "path": "docs/fbs/development-2026.json",
+      "bytes": 1842437,
+      "sha256": "1b01f9e4fc85fca1bd641088fccc71e22811d6a3ccad75f520fbf3b032316a1a"
+    },
+    {
+      "path": "docs/fbs/development-data.js",
+      "bytes": 1842467,
+      "sha256": "84ad4d8f57073c088ff831fc918bd090131f0ea297b1104e05cb0c1602711e99"
+    },
+    {
+      "path": "docs/fbs/evidence.json",
+      "bytes": 6523,
+      "sha256": "15e8ffa0c29bf211c759c899ca9b3318da23d331746ac5cfa66848ae016bbb35"
+    },
+    {
+      "path": "docs/fbs/frontier-games.json",
+      "bytes": 1530047,
+      "sha256": "d3dc673097b03a4a8f9771af42eeb72c636c0118fdedc72b4d3e98564bc46890"
+    },
+    {
+      "path": "docs/fbs/frontier-review.json",
+      "bytes": 87413,
+      "sha256": "d7b61a546e7e7a1c4da72d469ea19b2c0f77401ae5f84374df02eb3c7a456210"
+    },
+    {
+      "path": "docs/fbs/injury-association.json",
+      "bytes": 9563,
+      "sha256": "c8b10f64cbc20ee612b2a414e446c2551af2e346fd8a9a751e523bd954a3b986"
+    },
+    {
+      "path": "docs/fbs/market-status-v046-data.js",
+      "bytes": 101469,
+      "sha256": "638d3cdfd73cf7d8f4ab9dddf14ee16540c234b90a3a5770104e4a2177022cf5"
+    },
+    {
+      "path": "docs/fbs/market-status-v046.json",
+      "bytes": 101437,
+      "sha256": "b4911cba6409e5719cf109d7421cf9602d0d06d1cab3295fa8c956082ef1c732"
+    },
+    {
+      "path": "docs/fbs/market-status-v047-data.js",
+      "bytes": 101881,
+      "sha256": "42e463e89399055593259be5e024d7dec06f29cc3a0f61b805a620dd4b5e5824"
+    },
+    {
+      "path": "docs/fbs/market-status-v047.json",
+      "bytes": 101849,
+      "sha256": "1b1ce96abeb3d1d559ac76508afc7a330f2d30f872837d313758e0d13ad57d21"
+    },
+    {
+      "path": "docs/fbs/model-registry.json",
+      "bytes": 325064,
+      "sha256": "7e54f9356f977b9de2b8a3e373bfeb40b77f1c4cd248bbcb754e8b684887d653"
+    },
+    {
+      "path": "docs/fbs/observation-status-v046-data.js",
+      "bytes": 4265745,
+      "sha256": "bcac360251f9a1d3428ccedcfe3bac41eb7ecd56cd18390f2c2315e289b860a9"
+    },
+    {
+      "path": "docs/fbs/observation-status-v046.json",
+      "bytes": 4265556,
+      "sha256": "4a1db5f4243993789fbeee7e71791702e0cfc9c49c0eadc514ac51dd6f3d00b0"
+    },
+    {
+      "path": "docs/fbs/official-inventory.json",
+      "bytes": 942832,
+      "sha256": "70512312fd178bc9197382f3efbc42183307d0d339b7c44178f66217913d426f"
+    },
+    {
+      "path": "docs/fbs/optional-study-data.js",
+      "bytes": 4783730,
+      "sha256": "a471b210b9b836c18a4be873c2b93559b9598ae75109519ea72fab0125464843"
+    },
+    {
+      "path": "docs/fbs/optional-study.json",
+      "bytes": 4783703,
+      "sha256": "cf31e332cd6f12d00fc26f30d7328b0b1aafd5948e74762df668c87dd19bb1b6"
+    },
+    {
+      "path": "docs/fbs/owner-neural-study-data.js",
+      "bytes": 4947807,
+      "sha256": "ec11fee591ef8f9089aceda2bf769e5433e31d098166e6d970f1794a0f35913c"
+    },
+    {
+      "path": "docs/fbs/owner-neural-study.json",
+      "bytes": 4947776,
+      "sha256": "79f3f8e9eab86b63d2dc4a31afc1c523a4ed70400634d986007389c6d6cb0d9f"
+    },
+    {
+      "path": "docs/fbs/ranking-research-v047-data.js",
+      "bytes": 13681,
+      "sha256": "0cd58a71fb6b04241c6784b69296c927fe5abbcecad4e5658bcd6ebd151e7882"
+    },
+    {
+      "path": "docs/fbs/ranking-research-v047.json",
+      "bytes": 13646,
+      "sha256": "fee6a8726277cf31d4ff33c7c4fe5ac719b79ecf2a3f2a99517dce6f49275441"
+    },
+    {
+      "path": "docs/fbs/recovery-review.json",
+      "bytes": 3298,
+      "sha256": "7b71383640dd7dc5b91e1744121ea67c3da888d6e1370499ebc5675fe3132445"
+    },
+    {
+      "path": "docs/fbs/season-2026.json",
+      "bytes": 11202186,
+      "sha256": "92459a5835b5f899c4f43d61c8c873dbf104e3d43beb5e0a3fadf05374ddcb6f"
+    },
+    {
+      "path": "docs/fbs/source-health-v040.json",
+      "bytes": 4044,
+      "sha256": "5457a0832ac79f1bce6f1d0ee9044d3cbc371912024618b5b62eeb479b2a2a70"
+    },
+    {
+      "path": "docs/fbs/source-progress.json",
+      "bytes": 3090,
+      "sha256": "a80d1222be803fef19093a2831ed1c18b72d4cbd7323f0e781d8daf877870afa"
+    },
+    {
+      "path": "docs/fbs/three-season-data.js",
+      "bytes": 9949785,
+      "sha256": "2abe53e42b5a66ada733a1954f4250f220bff520a3667535ba9ddf939ee06fa2"
+    },
+    {
+      "path": "docs/fbs/three-season.json",
+      "bytes": 9949759,
+      "sha256": "6591144e964efbceb1353fd01b4dcc60551662719282b8cbf75404030efc5ac6"
+    },
+    {
+      "path": "docs/fbs/v013-native-research-2026-10-31.json",
+      "bytes": 8242,
+      "sha256": "313a3c0e501025a83a7682f767ed025f5c8a46665f088d981c14de48035d8688"
+    }
+  ]
+}

@@ -70,9 +70,25 @@
     }
     return output;
   }
-  function comparisonRoute(season, period, snapshot) {
-    if(period==='upcoming'||snapshot==='original'&&season==='all')return null;
-    return {study:snapshot==='original'?'v041':snapshot==='prior'?'v042':snapshot==='nov7_late'?'v043':snapshot==='nov7_evening'?'v044':'v045',cohort:String(season)==='2026'&&period!=='all'?period+'_week':season==='all'?'cumulative':String(season)};
+  function comparisonRoute(season, period, snapshot, windows) {
+    if(snapshot==='original'&&season==='all')return null;
+    let cohort=season==='all'?'cumulative':String(season);
+    if(String(season)==='2026'&&period!=='all'){
+      // Relative names move on Monday; stored evaluation cohorts do not.
+      // Compare their exact Pacific date boundaries before offering a route.
+      if(windows){
+        const selected=windows.selected?.[period];
+        if(!selected)return null;
+        const matched=Object.entries(windows.evaluated||{}).find(([name,range])=>
+          ['previous','current'].includes(name)&&range.start===selected.start&&range.end_exclusive===selected.end_exclusive);
+        if(!matched)return null;
+        cohort=matched[0]+'_week';
+      }else{
+        if(period==='upcoming')return null;
+        cohort=period+'_week';
+      }
+    }
+    return {study:snapshot==='original'?'v041':snapshot==='prior'?'v042':snapshot==='nov7_late'?'v043':snapshot==='nov7_evening'?'v044':'v045',cohort};
   }
   function familyCoverage(rows, families, project, contracts) {
     return families.map(family => {

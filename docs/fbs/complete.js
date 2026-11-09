@@ -6,8 +6,10 @@
  const current=new Map(D.rows.map(row=>{const g=Object.fromEntries(D.columns.map((key,index)=>[key,row[index]]));return[g.id,g];}));
  const originalGames=T.rows.map(row=>({...current.get(row.id),...row})),latestRows=U.indexRows(Y.rows),nightRows=U.indexRows(X.rows),eveningRows=U.indexRows(W.rows),lateRows=U.indexRows(Q.rows),priorRows=U.indexRows(P.rows);
  const games=originalGames.map(g=>({...U.resultView(g,latestRows.get(g.id),'latest',D.source_observed_at),period:M.periodFor(U.resultView(g,latestRows.get(g.id),'latest',D.source_observed_at),Y.capture.observed_at)}));
- const weekWindows=M.weekWindows(Y.capture.observed_at);
- D.periods.upcoming={label:'Upcoming Pacific week · '+weekWindows.upcoming.label};
+ const periodAnchor=window.FBS_SOURCE_STATUS_V048?.capture?.official_current_season_observed_at||Y.capture.observed_at;
+ const weekWindows=M.weekWindows(periodAnchor);
+ for(const key of ['previous','current','upcoming'])D.periods[key]={...D.periods[key],label:({previous:'Previous',current:'Dated current',upcoming:'Upcoming'}[key])+' Pacific week · '+weekWindows[key].label};
+ for(const game of games)game.period=M.periodFor(game,periodAnchor);
  $('upcoming-week-count').textContent=games.filter(g=>g.season===2026&&g.period==='upcoming').length;
  const originalDevelopment=new Map(R.rows.map(r=>[r.id,r]));
  const optionalDevelopment=new Map(O.rows.map(r=>[r.id,r]));
@@ -52,6 +54,10 @@
   return B.orderGames(selectedSeasonGames().filter(g=>(state.period==='all'||g.period===state.period)&&(!q||`${g.id} ${g.away} ${g.home}`.toLowerCase().includes(q))&&(result==='all'||result==='new'&&g.newly_observed_final||result==='complete'&&g.completed||result==='scheduled'&&!g.completed)&&(week==='all'||g.week===Number(week))&&(timing==='all'||B.timing(projection(g)).status===timing)&&(referenceCoverage==='all'||reference(g,$('provider-filter').value,referenceTarget).present===(referenceCoverage==='present'))&&(ignoreCoverage||A.matches(projection(g),$('model-view').value,$('coverage-target').value,model,quarantined(g)))),$('game-sort').value);
  }
  function periodGames(){return selectedSeasonGames().filter(g=>state.period==='all'||g.period===state.period);}
+ function selectedComparisonRoute(){
+  const snapshot=$('capture-view').value,report=snapshot==='original'?null:snapshot==='prior'?P:snapshot==='nov7_late'?Q:snapshot==='nov7_evening'?W:X;
+  return B.comparisonRoute(state.season,state.period,snapshot,{selected:weekWindows,evaluated:M.weekWindows(report?.capture.observed_at||D.source_observed_at)});
+ }
  function renderPeriodOverview(){
   const rows=periodGames(),counts=B.periodSummary(rows,projection,$('model-view').value,A),label=state.period==='all'?(state.season==='all'?'All three seasons':state.season+' season'):state.period==='current'?'Dated current Pacific week':state.period==='upcoming'?'Upcoming Pacific week':'Previous Pacific week';
   $('period-overview-title').textContent=label+' · full fixture inventory';
@@ -61,10 +67,12 @@
   $('period-timing-summary').textContent=`Saved-output timing in this full period: ${clocks.before} games with all saved targets before cutoff · ${clocks.at_or_after} with a target at or after · ${clocks.unverified} with unverified clocks · ${clocks.none} without outputs. This does not establish historical input possession or issuance.`;
   const active=Number($('timing-filter').value!=='all')+Number($('reference-coverage').value!=='all')+Number($('result-filter').value!=='all')+Number($('model-filter').value!=='all')+Number($('coverage-target').value!=='any')+Number($('week-filter').value!=='all')+Number($('capture-view').value!=='latest');
   $('active-filter-count').textContent=active?`· ${active} active`:'';
-  const route=B.comparisonRoute(state.season,state.period,$('capture-view').value);
+  const route=selectedComparisonRoute();
   const refreshChoice=refreshIds.has($('model-view').value);
   const refreshSnapshot=['latest','nov7_evening'].includes($('capture-view').value);
-  $('compare-selected-period').disabled=!route||(refreshChoice&&(['2024','2025'].includes(state.season)||!refreshSnapshot));$('compare-selected-period').textContent=refreshChoice?(refreshSnapshot?'Compare refreshed study outcomes':'No refresh evaluation for this snapshot'):route?'Compare '+label.toLowerCase():state.period==='upcoming'?'Upcoming results not yet observed':'No stored all-season original comparison';
+  $('compare-selected-period').disabled=!route||(refreshChoice&&(['2024','2025'].includes(state.season)||!refreshSnapshot));$('compare-selected-period').textContent=!route?'No stored evaluation for these dates':refreshChoice?(refreshSnapshot?'Compare refreshed study outcomes':'No refresh evaluation for this snapshot'):'Compare '+label.toLowerCase();
+  const evaluationNote=$('period-evaluation-note');
+  if(evaluationNote)evaluationNote.textContent=route?`The linked scorecard retains its original dated cohort (${route.cohort.replaceAll('_',' ')}). Newer result observations do not update its metrics.`:'No recorded evaluation matches this exact date window. Another week’s scorecard is not substituted.';
  }
  function renderAccounting(){
   const family=$('model-view').value,target=$('coverage-target').value,counts=A.reconcile(filtered(true),projection,family,target);
@@ -116,7 +124,7 @@
  $('prev-page').addEventListener('click',()=>{state.page--;renderGames();});$('next-page').addEventListener('click',()=>{state.page++;renderGames();});
  $('advanced-game-filters').addEventListener('toggle',syncViewLink);
  $('compare-selected-period').addEventListener('click',()=>{
-  const route=B.comparisonRoute(state.season,state.period,$('capture-view').value);if(!route)return;
+  const route=selectedComparisonRoute();if(!route)return;
   if(refreshIds.has($('model-view').value)){route.study=$('capture-view').value==='latest'?'v045_refresh':'v044_refresh';if(route.cohort==='cumulative')route.cohort='2026';}
   $('development-study').value=route.study;$('development-cohort').value=route.cohort;
   $('development-target').value=['winner','margin','total','cover'].includes($('coverage-target').value)?$('coverage-target').value:'winner';
@@ -166,7 +174,7 @@
  function applyCapture(){
   const selected=$('capture-view').value;
   const rows=selected==='nov7_night'?nightRows:selected==='prior'?priorRows:selected==='nov7_late'?lateRows:selected==='nov7_evening'?eveningRows:latestRows;
-  games.splice(0,games.length,...originalGames.map(g=>{const view=U.resultView(g,rows.get(g.id),selected,D.source_observed_at);return {...view,period:M.periodFor(view,Y.capture.observed_at)};}));
+  games.splice(0,games.length,...originalGames.map(g=>{const view=U.resultView(g,rows.get(g.id),selected,D.source_observed_at);return {...view,period:M.periodFor(view,periodAnchor)};}));
  }
  $('capture-view').addEventListener('change',()=>{applyCapture();state.page=0;syncSeason();renderGames();});
  $('show-new-finals').addEventListener('click',()=>{
@@ -214,5 +222,5 @@
  }
  $('latest-source-rows').addEventListener('click',event=>{const button=event.target.closest('[data-capture-game]');if(button)openGame(button.dataset.captureGame);});
  renderLatestCapture();restoreView();renderDevelopment();renderGames();renderComparison();renderCoverageMatrix();renderRegistry();
- window.FBSCompleteReview={filtered,reference,games,projection,selectedSeasonGames,openGame,renderGames,get captureClock(){return Y.capture.completed_at;},get page(){return state.page;},get pageSize(){return pageSize();}};
+ window.FBSCompleteReview={filtered,reference,games,projection,selectedSeasonGames,openGame,renderGames,get captureClock(){return window.FBS_SOURCE_STATUS_V048?.capture?.completed_at||Y.capture.completed_at;},get page(){return state.page;},get pageSize(){return pageSize();}};
 })();
