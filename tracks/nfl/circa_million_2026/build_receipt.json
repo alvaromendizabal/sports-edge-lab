@@ -17,6 +17,8 @@
   "compiled_at_utc": "2026-11-09T01:33:03.123356+00:00",
   "asof_note": "Scoreboard only includes games designated Final by public live sports feed Nov 8 PT. Never grade ongoing scores.",
   "integrity_checks": "all 136 Weeks 1-9 games matched exact official Circa pair; all issue clocks before kickoff, none before Saturday Circa deadline",
-  "html_sha256": "1468515c94db0a47a4f2854086ac9a0a40a0a60abacac065b8c4d978fa303e4e",
-  "html_bytes": 617268
+  "html_sha256": "26e5e30f0da3eeb75ec1e745aefebffa3e586b4ae51aef9b3680da4b47a42dba",
+  "html_bytes": 617602,
+  "presentation_rendered_at_utc": "2026-11-09T01:53:08.692874+00:00",
+  "render_mode": "preserved_evidence_json_no_forecast_changes"
 }

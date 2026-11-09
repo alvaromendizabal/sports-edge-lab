@@ -116,11 +116,14 @@ class CircaReportContracts(unittest.TestCase):
         self.assertEqual(receipt["html_sha256"], hashlib.sha256(html).hexdigest())
         self.assertEqual(receipt["html_bytes"], len(html))
         self.assertIn("id=\"model-choice\"", html.decode())
-        self.assertIn("23 margin models", html.decode())
+        self.assertIn("all 23 available margin configurations", html.decode())
         self.assertIn("# 2026 NFL models vs. Circa Million VIII", readme)
-        self.assertIn("### Ranking A", readme)
-        self.assertIn("### Ranking B", readme)
+        self.assertIn("### Ranking A · five-pick Circa-style points", readme)
+        self.assertIn("### Ranking B · every-game ATS accuracy", readme)
+        self.assertIn("Four of the 23 archived margin-model configurations", readme)
         self.assertIn("**Week 9 uses actual original N056 issues", readme)
+        self.assertIn("activeModel=FAMILIES.by_card[0]", html.decode())
+        self.assertIn("Four models tied at", html.decode())
 
 
 if __name__ == "__main__":

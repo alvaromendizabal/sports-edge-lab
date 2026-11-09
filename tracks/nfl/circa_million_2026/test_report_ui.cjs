@@ -34,14 +34,24 @@ const sandbox = vm.createContext({
 vm.runInContext(code[1], sandbox, { timeout: 2000 });
 assert.match(element('ats-leaders').innerHTML, /tensorflow mlp/);
 assert.match(element('card-leaders').innerHTML, /oof convex blend/);
-assert.equal(element('model-choice').disabled, false, 'Historical leader is the default view');
+assert.equal(element('model-choice').disabled, false, 'Circa card leader must be the default view');
 assert.match(element('week-heading').textContent, /Week 8/);
-assert.match(element('kpis').innerHTML, /67–47–6/);
+assert.match(element('kpis').innerHTML, /23\.0 \/ 40/);
+assert.match(element('kpis').innerHTML, /21–15–4/);
+assert.match(element('kpis').innerHTML, /T-1,054/);
+assert.equal(element('model-choice').value, parsed.model_comparison.by_card[0]);
+assert.match(element('model-choice').innerHTML, /Circa #1T/);
+
+for (const leader of parsed.model_comparison.by_card.slice(0, 4)) {
+  vm.runInContext(`selectModel(${JSON.stringify(leader)})`, sandbox, { timeout: 2000 });
+  assert.match(element('kpis').innerHTML, /23\.0 \/ 40/, leader);
+  assert.equal(vm.runInContext('modelGames(1).filter(g=>g.top_five).length', sandbox), 5);
+}
 
 vm.runInContext('selectModel("tensorflow_mlp::football_support_control")', sandbox, { timeout: 2000 });
 assert.equal(element('model-choice').disabled, false);
 assert.match(element('kpis').innerHTML, /67–47–6/);
-assert.match(element('kpis').innerHTML, /19\.0 pts/);
+assert.match(element('kpis').innerHTML, /19\.0 \/ 40/);
 assert.match(element('week-heading').textContent, /Week 8/);
 assert.match(element('game-grid').innerHTML, /game/);
 assert.equal(vm.runInContext('modelGames(1).filter(g=>g.top_five).length', sandbox), 5);
@@ -49,10 +59,10 @@ assert.equal(vm.runInContext('modelGames(1).filter(g=>g.top_five).length', sandb
 vm.runInContext('selectModel("torch_mlp::football_support_control")', sandbox, { timeout: 2000 });
 assert.match(element('kpis').innerHTML, /63–51–6/);
 vm.runInContext('selectModel("catboost::football_support_control")', sandbox, { timeout: 2000 });
-assert.match(element('kpis').innerHTML, /23\.0 pts/);
+assert.match(element('kpis').innerHTML, /23\.0 \/ 40/);
 
 vm.runInContext('selectWeek(9)', sandbox, { timeout: 2000 });
 assert.equal(element('model-choice').disabled, true);
 assert.match(element('week-heading').textContent, /Week 9 · 6–4–0/);
 assert.match(element('model-choice-hint').textContent, /original issues/);
-console.log('PASS: embedded data, two leaderboards, 23 family selector, model scoring, original Week 9 isolation');
+console.log('PASS: Circa-first default, four tied card leaders, full-slate ATS comparator, 23 family selector, Week 9 original isolation');

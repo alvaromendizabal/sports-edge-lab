@@ -33,8 +33,8 @@
 <body>
   <header><div class="shell hero">
     <div class="brand"><span class="mark">↗</span> Sports Edge Lab <span style="color:#668995">/</span> NFL research</div>
-    <div class="hero-flex"><div><p class="eyebrow">Season-long matchup review · Weeks 01–09</p><h1>My NFL models <em>vs. Circa.</em></h1><p>Every scheduled matchup so far. Actual Circa Million VIII point spreads, my models' predicted winners and margins, what really happened, and a transparent look at the five strongest spread edges each week.</p></div><div class="hero-aside"><div class="year">2026</div><span>Season to date</span></div></div>
-    <div class="pills"><span class="pill">Official Circa contest spreads</span><span class="pill">All 136 games · Weeks 1–9</span><span class="pill gold">No backdated picks</span><span class="pill warn">Separate historical vs original forecasts</span></div>
+    <div class="hero-flex"><div><p class="eyebrow">Circa five-pick model comparison · Weeks 01–09</p><h1>Four models tied at <em>23 / 40 Circa points.</em></h1><p>The highest-scoring reconstructed five-pick cards across all 23 available margin configurations, with every model's picks, official Circa spreads, the separate full-slate ATS results, and the original Week 9 forecasts.</p></div><div class="hero-aside"><div class="year">2026</div><span>Season to date</span></div></div>
+    <div class="pills"><span class="pill gold">4 tied Circa leaders · 21–15–4</span><span class="pill">Hypothetical T-1,054 · top ~18.2%</span><span class="pill">23 models · 136 games</span><span class="pill warn">Reconstructed Weeks 1–8 · issued Week 9 separate</span></div>
   </div></header>
 
   <main>
@@ -43,7 +43,7 @@
     <div class="shell">
       <section aria-label="At-a-glance performance"><div class="section-bar"><div><h2>The honest scoreboard</h2><p>Historical reconstruction and documented pregame forecasts are never mixed in a headline win rate.</p></div></div><div id="kpis" class="kpi-grid"></div></section>
 
-      <section id="model-rankings"><div class="section-bar"><div><h2>Best of 23 margin models · two rankings</h2><p>Every model faces the same 120 reconstructed Week 1–8 games. Ranking by all-game ATS accuracy gives a different winner from ranking five-pick Circa card points.</p></div></div><div class="model-rank-grid"><div class="section-card"><h3>Who covered more spreads?</h3><p>Ranked by full-slate ATS rate, ignoring pushes. Ties preserved; best 2026 description, <b>not</b> a verified forward champion.</p><div id="ats-leaders" class="table-scroll"></div></div><div class="section-card"><h3>Who scored more in Circa's format?</h3><p>Ranked by 8 weekly five-side cards (40 selections), chosen by largest projected edge. This is a hypothetical contest reconstruction.</p><div id="card-leaders" class="table-scroll"></div></div></div><div class="note"><b>Leaderboard context:</b> 23.0 hypothetical points after Week 8 would match <strong>a tie for 1,054th</strong> on <a href="https://www.circasports.com/wp-content/uploads/2026/11/Circa-Sports-Million-VIII-Full-Season-Standings-After-Week-8.pdf" target="_blank" rel="noopener">Circa's official Week 8 standings</a>, around the top fifth of the reported 5,790 entries. This is <strong>not</strong> an actual submitted entry or guaranteed contest rank. The winning leaders had 30.5 points. Four different models tie at 23.0 here.</div></section>
+      <section id="model-rankings"><div class="section-bar"><div><h2>Circa performance first · all 23 model configurations</h2><p>Circa rewards five sides per week. The four-way lead is ranked by that exact scoring rule, with full-slate ATS accuracy shown separately. All models face the same 120 reconstructed Week 1–8 games.</p></div></div><div class="model-rank-grid"><div class="section-card"><h3>Best five-pick Circa cards</h3><p>Ranked by 8 weekly five-side cards (40 selections) using each model's largest projected edges. Four models tie at 23.0; the next distinct tiers are 22.5 and 22.0. This is a retrospective contest reconstruction.</p><div id="card-leaders" class="table-scroll"></div></div><div class="section-card"><h3>Best across all spreads</h3><p>Ranked by full-slate ATS rate, ignoring pushes. TensorFlow MLP leads at 58.8%, but scored 19.0 five-pick points. The two metrics have different leaders; neither is a verified forward champion.</p><div id="ats-leaders" class="table-scroll"></div></div></div><div class="note"><b>Leaderboard context:</b> 23.0 hypothetical points after Week 8 would match <strong>a tie for 1,054th</strong> on <a href="https://www.circasports.com/wp-content/uploads/2026/11/Circa-Sports-Million-VIII-Full-Season-Standings-After-Week-8.pdf" target="_blank" rel="noopener">Circa's official Week 8 standings</a>, approximately the top 18.2% of 5,790 entries, not the top 500. This is <strong>not</strong> an actual submitted entry or authenticated predeadline record. The leading entrants had 30.5 points.</div></section>
 
       <section id="weekly"><div class="section-bar"><div><h2>Week-by-week results</h2><p>Every week is clickable. W/L/P means against Circa's fixed spread, not outright wins.</p></div><span class="tag">1–8 reconstructed · 9 original</span></div><div class="table-scroll"><table><thead><tr><th>Week</th><th>Forecast lane</th><th>Coverage</th><th>ATS W–L–P</th><th>ATS hit rate</th><th>5 biggest edges*</th><th>Winner calls</th><th>Margin MAE</th><th>Total MAE</th><th>Brier / log loss</th></tr></thead><tbody id="weekly-rows"></tbody></table></div><p class="fineprint">* Five largest model-versus-Circa spread differences, selected after the fact for illustration. <strong>Never an actual Circa entry.</strong> In Week 9, some games remain ungraded as of this snapshot. ATS rate excludes pushes; ties excluded from winner/Brier/log-loss metrics.</p></section>
     </div>
@@ -76,7 +76,7 @@
     const FAMILIES=DATA.model_comparison;
     const PROFILE=Object.fromEntries(FAMILIES.profiles.map(p=>[p.model,p]));
     const byId=id=>document.getElementById(id);
-    let currentWeek=8, filter='ALL', activeModel=FAMILIES.by_ats[0];
+    let currentWeek=8, filter='ALL', activeModel=FAMILIES.by_card[0];
     const fmt=(x,d=1)=>typeof x==='number'&&Number.isFinite(x)?x.toFixed(d):'—';
     const signed=(x,d=1)=>typeof x==='number'?`${x>0?'+':''}${Number(x.toFixed(d))}`:'—';
     const pct=(x,d=1)=>x===null||x===undefined?'—':(x*100).toFixed(d)+'%';
@@ -109,8 +109,9 @@
       makeKpis();makeWeekly();makeRankings();selectWeek(Math.min(currentWeek,8));
     }
     function makeSelector(){
-      byId('model-choice').innerHTML=FAMILIES.by_ats.map(model=>{
-        const p=PROFILE[model];const label=`ATS #${p.ats_rank} · ${modelName(model)} · ${pct(p.ats_pct)} · ${fmt(p.top_five_points)} card pts${p.research_champion?' · research baseline':''}`;
+      byId('model-choice').innerHTML=FAMILIES.by_card.map(model=>{
+        const p=PROFILE[model];const tie=FAMILIES.profiles.some(x=>x.model!==model&&x.card_rank===p.card_rank);
+        const label=`Circa #${p.card_rank}${tie?'T':''} · ${modelName(model)} · ${fmt(p.top_five_points)} / 40 pts · ATS ${pct(p.ats_pct)}${p.research_champion?' · research baseline':''}`;
         return `<option value="${escapeHtml(model)}">${escapeHtml(label)}</option>`;
       }).join('');
       byId('model-choice').value=activeModel;
@@ -136,10 +137,10 @@
     function makeKpis(){
       const h=PROFILE[activeModel],o=DATA.original_week9;
       const labels=[
-        ['Weeks 1–8 · selected historical lens',''+trip(h),`${modelName(activeModel)} · ${h.model_covered} reconstructed margins`,'aqua'],
-        ['Weeks 1–8 · five-pick cards',fmt(h.top_five_points)+' pts',`40 retrospective selections · ${h.top_five_w}–${h.top_five_l}–${h.top_five_p} · ATS ${pct(h.ats_pct)}`,'green'],
-        ['Week 9 · original forecasts',trip(o),`${o.model_covered} saved before kickoff · ${o.completed} final games`,'gold'],
-        ['Week 9 · winner calls',`${o.winner_hits}/${o.winner_count}`,`${o.margin_n} scored margin forecasts · ${o.total_n} total forecasts`,'aqua']
+        ['Circa card · selected model',fmt(h.top_five_points)+' / 40',`${modelName(activeModel)} · ${h.top_five_w}–${h.top_five_l}–${h.top_five_p} · retrospective`,'green'],
+        ['Best Circa card · leaderboard','T-1,054',`Four models at 23.0 points · hypothetical top 18.2% of 5,790`,'gold'],
+        ['All-game ATS · selected model',trip(h),`${h.model_covered} reconstructed margins · ${pct(h.ats_pct)} excluding pushes`,'aqua'],
+        ['Week 9 · original winner calls',`${o.winner_hits}/${o.winner_count}`,`${trip(o)} ATS on ${o.completed} final games · pre-kickoff, late for Circa`,'aqua']
       ];
       byId('kpis').innerHTML=labels.map(([name,v,hint,tone])=>`<div class="kpi"><div class="label">${name}</div><div class="value ${tone} mono">${v}</div><div class="hint">${hint}</div></div>`).join('');
       byId('hash').textContent=DATA.archive_sha256;

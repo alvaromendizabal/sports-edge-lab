@@ -11,6 +11,7 @@ All Circa spreads are sourced from official contest PDFs.
 from __future__ import annotations
 
 import base64
+import argparse
 from collections import defaultdict
 from datetime import datetime, timezone
 import gzip
@@ -496,7 +497,9 @@ def build_github_readme(data: dict) -> str:
     comp = data["model_comparison"]
     families = {p["model"]: p for p in comp["profiles"]}
     overlay = comp["game_predictions"]
-    featured = comp["by_ats"][:3]
+    # Circa scores five selected sides, so its ranking owns the headline and
+    # the week-by-week comparison. Full-slate ATS #1 is an explicit comparator.
+    featured = comp["by_card"][:4] + comp["by_ats"][:1]
     leaderboard = data["leaderboard_benchmark"]
 
     def named(model: str) -> str:
@@ -521,23 +524,24 @@ def build_github_readme(data: dict) -> str:
         "",
         "The native GitHub tables below show every result **without downloading anything**, even if the interactive preview service is unavailable.",
         "",
-        "## The headline, with honest denominators",
+        "## Circa-first headline · best available five-pick results",
         "",
-        f"- **Weeks 1–8, retrospective:** {data['retrospective']['winner_hits']}/{data['retrospective']['winner_count']} outright winners ({100*data['retrospective']['winner_pct']:.1f}%). Against official Circa spreads: **{tri(data['retrospective'])}**, {100*data['retrospective']['ats_pct']:.1f}% excluding pushes. The illustrative five-per-week shortlist totals **{n(data['retrospective']['top_five_points'])} Circa-style points out of 40 picks** (21 wins, 15 losses, four pushes). All 121 games included; 120 have reconstructed margin forecasts.",
+        "- **Circa's actual scoring objective:** Four of the 23 archived margin-model configurations are **tied for the best reconstructed five-pick result: 23.0 of 40 points**, each at **21 wins, 15 losses, 4 pushes** across Weeks 1–8. They are CatBoost · football support control, ExtraTrees · combined personnel interaction, ExtraTrees · football support control, and the OOF convex blend. There is **no unique first-place model** on this metric.",
+        "- **Next distinct Circa scores:** unchanged frozen201 mean at **22.5**; LightGBM · football support control and OOF stack tied at **22.0**. These are score tiers, not proof of predeadline predictive superiority.",
+        f"- **Separate all-game evaluation:** TensorFlow MLP · football support control leads on spread sides at **{tri(families[comp['by_ats'][0]])}** ({n(100*families[comp['by_ats'][0]]['ats_pct'])}% excluding pushes), but its own five-pick cards scored **{n(families[comp['by_ats'][0]]['top_five_points'])}**, below the Circa leaders. The original research baseline had {data['retrospective']['winner_hits']}/{data['retrospective']['winner_count']} outright winners ({100*data['retrospective']['winner_pct']:.1f}%). All 121 historical games are listed; 120 have reconstructed margin forecasts.",
         f"- **Week 9, genuine pregame outputs:** {data['original_week9']['winner_hits']}/{data['original_week9']['winner_count']} outright winners; against Circa: **{tri(data['original_week9'])}** ({100*data['original_week9']['ats_pct']:.1f}% excluding pushes), with {data['original_week9']['completed']}/15 games final and four not yet graded. These outputs were **after the Saturday contest deadline**.",
         "- A hypothetical five-largest-edge shortlist is shown every week. It is a post-hoc diagnostic, **not a contest submission**. Circa itself scores only five selected sides against fixed spreads (win = 1, push = 0.5, loss = 0).",
         "- Circa Million has **no over/under component**. This report scores projected combined points against final combined points; independently documented market totals appear only for eight Week 9 games.",
         "",
-        "## The best-performing models — two different definitions of 'best'",
+        "## Best-performing Circa cards first · ATS accuracy second",
         "",
         "**All 23 available reconstructed margin-model families were evaluated against the same 120 Circa-lined games in Weeks 1–8.** The rankings below deliberately use this season's known results and are therefore **post-hoc descriptions, not models known to be best before those games**. Week 9 original saved forecasts remain a separate evidence lane.",
         "",
-        "**Best at picking against-the-spread sides across all games:** "
-        f"**{named(comp['by_ats'][0])}** ({tri(families[comp['by_ats'][0]])}, "
-        f"{n(100*families[comp['by_ats'][0]]['ats_pct'])}% excluding pushes). "
-        "**Best at a five-picks-per-week Circa-style card:** **four model configurations tied at 23.0 points**, "
-        "including the existing CatBoost baseline; the high-ATS TensorFlow MLP scored only **19.0 card points**. "
-        "So the full-slate winner and the best five-pick card are **not** the same model. "
+        "**Best in Circa's five-picks-per-week format:** **four model configurations tied at 23.0 points**, "
+        "including, but not restricted to, the old CatBoost research baseline. "
+        "**Best across all spreads:** TensorFlow MLP · football support control (67–47–6; 58.8% excluding pushes), "
+        "but it scored only **19.0 five-pick points**. The all-game ATS winner and highest-scoring Circa cards "
+        "are **different**. "
         "These cards choose the five biggest absolute projected spread edges *for each model*, without using outcomes to choose those five, but model ranking across the season is performed after outcomes are known.",
         "",
         f"**Official standings comparison:** [Circa's after-Week-8 leaderboard]({leaderboard['official_standings']}) "
@@ -545,23 +549,11 @@ def build_github_readme(data: dict) -> str:
         f"and the leaders at **{n(leaderboard['leader_points'])}**. "
         "A 23-point reconstructed card would have matched that score **only hypothetically**; these were not contest entries or authenticated pre-deadline selections.",
         "",
-        "### Ranking A · every-game ATS accuracy (after-the-fact)",
-        "",
-        "| ATS place* | Reconstructed margin model | ATS W–L–P | Rate excluding pushes | Five-pick card | Margin MAE |",
-        "|---:|---|---:|---:|---:|---:|",
-    ]
-    for model in comp["by_ats"]:
-        p = families[model]
-        lines.append(f"| {p['ats_rank']}{'T' if sum(x['ats_rank']==p['ats_rank'] for x in comp['profiles'])>1 else ''} | "
-                     f"{named(model)}{' ★ research baseline' if p['research_champion'] else ''} | {tri(p)} | "
-                     f"{n(100*p['ats_pct'])}% | {n(p['top_five_points'])} / 40 | {n(p['margin_mae'],2)} |")
-    lines.extend([
-        "",
-        "### Ranking B · five-pick Circa-style points (after-the-fact)",
+        "### Ranking A · five-pick Circa-style points (after-the-fact)",
         "",
         "| Card place* | Reconstructed margin model | Card W–L–P | Points / 40 | Full-slate ATS rate |",
         "|---:|---|---:|---:|---:|",
-    ])
+    ]
     for model in comp["by_card"]:
         p = families[model]
         lines.append(f"| {p['card_rank']}{'T' if sum(x['card_rank']==p['card_rank'] for x in comp['profiles'])>1 else ''} | "
@@ -570,15 +562,27 @@ def build_github_readme(data: dict) -> str:
                      f"{n(p['top_five_points'])} | {n(100*p['ats_pct'])}% |")
     lines.extend([
         "",
+        "### Ranking B · every-game ATS accuracy (after-the-fact)",
+        "",
+        "| ATS place* | Reconstructed margin model | ATS W–L–P | Rate excluding pushes | Five-pick card | Margin MAE |",
+        "|---:|---|---:|---:|---:|---:|",
+    ])
+    for model in comp["by_ats"]:
+        p = families[model]
+        lines.append(f"| {p['ats_rank']}{'T' if sum(x['ats_rank']==p['ats_rank'] for x in comp['profiles'])>1 else ''} | "
+                     f"{named(model)}{' ★ research baseline' if p['research_champion'] else ''} | {tri(p)} | "
+                     f"{n(100*p['ats_pct'])}% | {n(p['top_five_points'])} / 40 | {n(p['margin_mae'],2)} |")
+    lines.extend([
+        "",
         "*Ranks use competition-style ties (four configurations can all be #1). Rankings cannot be used as an honest 'we picked the best in advance' claim. The historical source-publication/as-of archive is not verified.*",
         "",
-        "### Weekly five-pick comparisons · ATS leaders and existing baseline",
+        "### Weekly five-pick comparisons · all four Circa leaders plus the ATS leader",
         "",
-        "| Week | TensorFlow MLP (ATS #1) | PyTorch MLP (ATS #2) | XGBoost (ATS #3 tied) | CatBoost baseline (card #1 tied) |",
-        "|---:|---:|---:|---:|---:|",
+        "| Week | CatBoost (card #1T) | ExtraTrees combined (card #1T) | ExtraTrees support (card #1T) | OOF convex blend (card #1T) | TensorFlow MLP (ATS #1) |",
+        "|---:|---:|---:|---:|---:|---:|",
     ])
     for w in range(1,9):
-        vals = [families[k]["weekly"][str(w)] for k in (featured+[SELECTED_RESEARCH_MODELS["margin"]])]
+        vals = [families[k]["weekly"][str(w)] for k in featured]
         cards = [f"{s['top_five_w']}–{s['top_five_l']}–{s['top_five_p']} ({n(s['top_five_points'])} pts)" for s in vals]
         lines.append(f"| [{w}](#week-{w}) | " + " | ".join(cards) + " |")
     lines.extend([
@@ -608,14 +612,14 @@ def build_github_readme(data: dict) -> str:
             "",
             f"[Official Week {w} fixed spreads]({wp['source']}) · [Official entrant selection records]({wp['selections']})",
             "",
-            f"**Illustrative top five by absolute projected spread edge ({n(s['top_five_points'])} Circa-style points from {s['top_five_graded']}/5 graded):** "+" · ".join(
+            f"**{'Research baseline' if w<=8 else 'Original issued model'} top five by projected spread edge ({n(s['top_five_points'])} Circa-style points from {s['top_five_graded']}/5 graded):** "+" · ".join(
                 f"#{r['top_five_rank']} {r['model_ats_pick']} {sign(r['line_home'] if r['model_ats_pick']==r['home'] else r['line_away'])} ({n(r['ats_edge_absolute'])} pts, {r['ats_grade'] or 'pending'})"
                 for r in sorted((g for g in games if g['top_five']),key=lambda x:x['top_five_rank'])),
             "",
         ])
         if w <= 8:
             lines.extend([
-                "**Separate five-pick cards for the three highest full-slate ATS models:**",
+                "**Separate five-pick cards for all four Circa leaders and the ATS leader:**",
                 "",
             ])
             for i,model in enumerate(featured, start=1):
@@ -624,11 +628,12 @@ def build_github_readme(data: dict) -> str:
                                 if overlay[model].get(g["game_id"], {}).get("top_rank")),
                                key=lambda pair:pair[0]["top_rank"])
                 description = " · ".join(f"#{r['top_rank']} {family_pick(g,model)}" for r,g in picks)
-                lines.append(f"- **ATS model #{i}: {named(model)} · {n(best['top_five_points'])} points:** {description}")
+                role = "Circa card #1T" if i <= 4 else "Full-slate ATS #1"
+                lines.append(f"- **{role}: {named(model)} · {n(best['top_five_points'])} points:** {description}")
             lines.extend([
                 "",
-                "| Game (away @ home) | Final | Official Circa (away / home) | CatBoost baseline ATS | TensorFlow MLP ATS | PyTorch MLP ATS | XGBoost ATS | Model winner (prob.) | Baseline margin / actual | Total forecast / actual |",
-                "|---|---:|---|---|---|---|---|---|---|---|",
+                "| Game (away @ home) | Final | Official Circa (away / home) | CatBoost card #1T | ExtraTrees combined #1T | ExtraTrees support #1T | OOF convex #1T | TensorFlow ATS #1 | Model winner (prob.) | Baseline margin / actual | Total forecast / actual |",
+                "|---|---:|---|---|---|---|---|---|---|---|---|",
             ])
         else:
             lines.extend([
@@ -648,7 +653,7 @@ def build_github_readme(data: dict) -> str:
             marker = " ★" if g["top_five"] else ""
             if w <= 8:
                 family_cols = " | ".join(family_pick(g, model) for model in featured)
-                lines.append(f"| {g['away']} @ {g['home']}{marker} | {final} | {spread} | {pick} ({g['ats_grade'] or 'Pending'}) | {family_cols} | {win} | {sign(g['projected_margin'])} / {actual_margin} | {n(g['projected_total'])} / {total_actual} |")
+                lines.append(f"| {g['away']} @ {g['home']}{marker} | {final} | {spread} | {family_cols} | {win} | {sign(g['projected_margin'])} / {actual_margin} | {n(g['projected_total'])} / {total_actual} |")
             else:
                 lines.append(f"| {g['away']} @ {g['home']}{marker} | {final} | {spread} | {pick} ({g['ats_grade'] or 'Pending'}) | {win} | {sign(g['projected_margin'])} / {actual_margin} | {n(g['projected_total'])} / {total_actual} |")
         lines.append("")
@@ -670,13 +675,33 @@ def build_github_readme(data: dict) -> str:
 
 
 def main() -> None:
-    payload, receipt = build()
+    parser = argparse.ArgumentParser(description="Build the Circa report from N057, or rerender saved verified evidence")
+    parser.add_argument("--render-only", action="store_true",
+                        help="Regenerate presentation from existing evidence.json without changing forecast data")
+    args = parser.parse_args()
+    if args.render_only:
+        payload = json.loads((HERE/"evidence.json").read_text(encoding="utf-8"))
+        receipt = json.loads((HERE/"build_receipt.json").read_text(encoding="utf-8"))
+        assert payload["archive_sha256"] == receipt["source_archive_sha256"]
+        assert len(payload["games"]) == receipt["number_of_games"] == 136
+        assert len(payload["model_comparison"]["profiles"]) == receipt["historical_margin_families_compared"] == 23
+        assert payload["model_comparison"]["by_card"][:4] == [
+            "catboost::football_support_control",
+            "extratrees::combined_personnel_interaction",
+            "extratrees::football_support_control",
+            "oof_convex_blend",
+        ]
+        receipt["presentation_rendered_at_utc"] = datetime.now(timezone.utc).isoformat()
+        receipt["render_mode"] = "preserved_evidence_json_no_forecast_changes"
+    else:
+        payload, receipt = build()
     json_text = json.dumps(payload,separators=(",",":"),ensure_ascii=False).replace("</", "<\\/")
     page = TEMPLATE.read_text().replace("__INLINE_REPORT_JSON__",json_text)
     assert page.count('id="report-data"') == 1
     assert page.count("__INLINE_REPORT_JSON__") == 0
     OUT.write_text(page,encoding="utf-8")
-    (HERE/"evidence.json").write_text(json.dumps(payload,indent=2,ensure_ascii=False)+"\n",encoding="utf-8")
+    if not args.render_only:
+        (HERE/"evidence.json").write_text(json.dumps(payload,indent=2,ensure_ascii=False)+"\n",encoding="utf-8")
     (HERE/"README.md").write_text(build_github_readme(payload),encoding="utf-8")
     receipt["html_sha256"]=hashlib.sha256(OUT.read_bytes()).hexdigest()
     receipt["html_bytes"]=OUT.stat().st_size
