@@ -35,6 +35,15 @@ class EvidenceTests(unittest.TestCase):
         self.assertEqual(receipt['status'], 'PASS')
         self.assertGreaterEqual(receipt['checks'], 23)
 
+    def test_bounded_execution_review_keeps_work_and_units_distinct(self):
+        result = subprocess.run(['node', str(build_dashboard.HERE / 'test_execution_review.cjs')],
+                                check=True, capture_output=True, text=True, timeout=30)
+        receipt = json.loads(result.stdout)
+        self.assertEqual(receipt['status'], 'PASS')
+        self.assertGreaterEqual(receipt['checks'], 36)
+        self.assertEqual(receipt['evidence_kind'], 'LOCAL_FIXTURE_ONLY')
+        self.assertEqual(receipt['new_owner_work'], 0)
+
     def test_expected_scores_preserve_both_heads_and_explicit_blocks(self):
         result = subprocess.run(['node', str(build_dashboard.HERE / 'test_projection_review.cjs')],
                                 check=True, capture_output=True, text=True, timeout=30)
@@ -93,6 +102,7 @@ class EvidenceTests(unittest.TestCase):
             self.assertIn('5/16 stages completed', output)
             self.assertIn('zero stages recorded failed', output)
             self.assertIn('11 not entered', output)
+
             self.assertIn('B048_SUMMARY_EXCEEDS_REPORT_PART_BOUND', output)
             self.assertIn('108 reused historical target fits', output)
             self.assertIn('1,793 exact source identities = 1,322 input-gate passes + 445 rejected feature rows + 26 without a feature row', output)
@@ -113,6 +123,19 @@ class EvidenceTests(unittest.TestCase):
             self.assertIn('Dated B047R1 return', output)
         self.assertEqual(self.exports['ncaam']['current_results_status']['release'], 'B043')
         self.assertEqual(self.exports['ncaaw']['current_results_status']['release'], 'B043')
+
+    def test_b055_partial_work_is_visible_without_contract_or_game_substitution(self):
+        for output in build_dashboard.outputs().values():
+            self.assertIn('Latest owner result · B055', output)
+            self.assertIn('2,583 new physical fits: 2,514 target, 45 scalar and 24 empirical', output)
+            self.assertIn('28,798 committed contracts', output)
+            self.assertIn('26,122 prediction commits with zero new physical fits', output)
+            self.assertIn('18 new issued forecasts', output)
+            self.assertIn('5,949 reconstructed rows', output)
+            self.assertIn('6,093 numeric unissued reference rows', output)
+            self.assertIn('4,032 source-only blocked rows', output)
+            self.assertIn('zero newly admitted ranking features', output)
+            self.assertLess(output.index('Latest owner result · B055'), output.index('Latest owner check · B054'))
 
     def test_exact_separate_population_counts(self):
         expected = {'ncaam': (5758, 5749), 'ncaaw': (5280, 5621)}

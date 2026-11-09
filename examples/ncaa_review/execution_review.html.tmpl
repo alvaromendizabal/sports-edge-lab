@@ -1,0 +1,16 @@
+<section id="execution-review" class="provider-review" aria-labelledby="execution-title">
+<h2 id="execution-title">Execution progress · admitted work and recorded outcomes</h2>
+<p class="note">Open a separate B056 execution-review JSON to inspect its bounded batch, committed work and measured resources. This panel preserves the original owner report, the current-source inventory and the rolling metric populations as separate evidence.</p>
+<label for="execution-file">Choose B056_EXECUTION_REVIEW.json</label>
+<div class="upload-row"><input id="execution-file" type="file" accept=".json,application/json"><button id="execution-clear" class="secondary" type="button" disabled>Clear execution review</button></div>
+<p id="execution-status" class="status" role="status" aria-live="polite">No execution review loaded. Missing evidence does not mean zero work.</p>
+<div id="execution-content" hidden>
+<p id="execution-kind" class="note"></p><p id="execution-identity" class="note"></p><p id="execution-file-pin" class="note"></p>
+<h3>Bounded batch</h3><p id="execution-progress-copy"></p><progress id="execution-progress" aria-label="Admitted batch contexts with recorded dispositions" value="0" max="1"></progress><p id="execution-registered" class="note"></p>
+<div class="data-scroll"><table><thead><tr><th>Recorded completed disposition</th><th>Contexts</th></tr></thead><tbody id="execution-dispositions"></tbody></table></div>
+<h3>Execution ledger · distinct units</h3><p class="note">Fit accesses can reuse an existing physical model. Prediction records, immutable issues and context dispositions have separate denominators; these counts are never added into a model-fit total. A disposition marked complete may record a source block, unavailable dependency or failure.</p>
+<div class="data-scroll"><table><thead><tr><th>Declared unit</th><th>Count</th></tr></thead><tbody id="execution-ledger"></tbody></table></div>
+<h3>Measured resources</h3><div class="data-scroll"><table><thead><tr><th>Measurement</th><th>Value</th></tr></thead><tbody id="execution-resources"></tbody></table></div>
+<h3>Evidence limits</h3><ul id="execution-limitations"></ul><p id="execution-streams" class="note"></p>
+</div>
+</section>

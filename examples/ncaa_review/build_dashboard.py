@@ -17,6 +17,15 @@ ROOT=Path(__file__).resolve().parents[2]
 HERE=Path(__file__).resolve().parent
 HOST='https://alvaro-ncaa-research-review.alv-mendizabal.chatgpt.site'
 
+B055_OWNER_STATUS=(
+    '<strong>Latest owner result · B055 · November 9, 2026 UTC.</strong>'
+    '<p><b>New rolling work was committed before shared-resource admission deferred the run.</b> The recorded result is <code>RESOURCE_DEFERRED_PARTIAL_WORK_PRESERVED</code>, with <code>AdmissionDeferred</code> and <code>WITHIN_STAGE_RESOURCE_HEADROOM_UNAVAILABLE</code>. The run completed <b>9/17 stages</b>; <b>one failed wrapper stage</b> and <b>seven unentered stages</b> remain separate from its inner resource disposition. Recorded owner wall time is <b>71,209.031 seconds</b>. No platform root cause, measured speedup, attributable cost or remaining-run ETA is inferred.</p>'
+    '<p>The authenticated typed ledger contains <b>2,583 new physical fits: 2,514 target, 45 scalar and 24 empirical</b>. The rolling subset accounts for <b>2,413 target fits</b> and <b>26,122 prediction commits with zero new physical fits</b>. The full ledger has <b>28,798 committed contracts</b>. These contracts, reused accesses, prediction records and fits are different units; the compact checkpoint inventory still requires full remote closure at actual use.</p>'
+    '<p>The separate owner rolling report records <b>18 new issued forecasts</b>, <b>5,949 reconstructed rows</b>, <b>6,093 numeric unissued reference rows</b> and <b>4,032 source-only blocked rows</b>. These are report populations, not unique physical games or a complete-season certificate. It records <b>zero promotions</b>. B055 is the latest partial owner work; earlier scientific baselines and immutable issues remain dated evidence. No new model-improvement claim follows from the work counts.</p>'
+    '<p><a href="'+HOST+'/private-report/index.html#v4-review">Open the actual B055 rolling review</a> to keep original issues, reconstruction, future issues and source references separate. The additive <a href="'+HOST+'/private-report/index.html#execution-review">B056 execution-review panel</a> reports a bounded admitted batch, completed dispositions, remaining work and explicit resource scope. Registered research contexts never become a physical-fit count or whole-project ETA.</p>'
+    '<p><b>AP and other ranking transfer remains incomplete.</b> The actual B055 ranking report retains four source-catalog entries but <b>zero qualified editions, zero mapped ranking rows and zero newly admitted ranking features</b>. March Madness remains at its reviewed source revision; reusable transforms and a transfer crosswalk do not prove every feature has been acquired, admitted, fit or tested on NCAA games. Both ranking requests returned HTTP 200, but the native league-identity gate rejected their bodies before edition parsing; the source-authorization contract was also absent. The isolated B056 reader has now parsed four candidate editions and 100 edition-scoped native team mappings in local replay of those exact bytes. Publication clocks remain null and all four editions remain authorization-blocked; this replay supplies no owner fit or forecast credit.</p>'
+)
+
 B054_OWNER_STATUS=(
     '<strong>Latest owner check · B054 · November 8, 2026 UTC.</strong>'
     '<p><b>The required package checks stopped the run before research began.</b> All <b>17 research stages were unentered</b>: zero completed and zero numbered stages failed. The run-level result is <code>FAILED_PARTIAL_WORK_PRESERVED</code>. The owner suite recorded <b>2,314 passed, one failed, one optional skip and zero errors</b> across 2,316 cases. A required mutation-rejection assertion failed; this is an implementation check, not a scientific model loss or an established platform fault.</p>'
@@ -206,6 +215,7 @@ def render_track(data):
         '__SIBLING_LABEL__':"women's basketball" if sibling=='ncaaw' else "men's basketball",
         '__LEAGUE__':league,'__EVIDENCE__':embedded,
         '__REVIEW_DATE__':review_date(data),
+        '__B055_OWNER_STATUS__':B055_OWNER_STATUS,
         '__B054_OWNER_STATUS__':B054_OWNER_STATUS,
         '__B053_OWNER_STATUS__':B053_OWNER_STATUS,
         '__B052_OWNER_STATUS__':B052_OWNER_STATUS,
@@ -237,7 +247,7 @@ def landing_status(data):
     baseline = data[0]['b045_baseline_observation']; journal = data[0]['b045_forecast_journal_observation']
     if any(d['b045_forecast_journal_observation'] != journal for d in data):raise ValueError('landing journal population disagreement')
     b=data[0]['b046_baseline_observation']; repair=data[0]['b047_source_identity_repair']
-    return (B054_OWNER_STATUS + B053_OWNER_STATUS + '<details><summary>Earlier dated owner returns</summary>' + B052_OWNER_STATUS + B051_OWNER_STATUS + B050_OWNER_STATUS + LATEST_OWNER_STARTUP + B048_OWNER_STATUS + B047R1_PHYSICAL_STATUS + '</details>'
+    return (B055_OWNER_STATUS + '<details><summary>Dated B054 startup result</summary>' + B054_OWNER_STATUS + '</details>' + B053_OWNER_STATUS + '<details><summary>Earlier dated owner returns</summary>' + B052_OWNER_STATUS + B051_OWNER_STATUS + B050_OWNER_STATUS + LATEST_OWNER_STARTUP + B048_OWNER_STATUS + B047R1_PHYSICAL_STATUS + '</details>'
             + f'<p><strong>Dated {release}: {a["completed_scientific_stages"]}/{a["planned_scientific_stages"]} stages completed; partial work and final return preserved.</strong></p>'
             f'<p>The authenticated physical ledger reconciles {a["new_real_target_fits"]:,} target, {a["new_calibration_fits"]:,} scalar and {a["new_empirical_residual_fits"]:,} empirical fits across {a["committed_contract_objects"]:,} contract objects. Injury research deferred at its bounded shared-memory admission gate. Full model import and new scientific superiority are not established by that accounting.</p>'
             f'<p>The B046 pre-study view contains {b["target_rows"]:,} target rows, {b["game_model_rows"]:,} game-model rows and {b["browser_display_rows"]:,} display rows, including three unresolved source candidates. Independent arithmetic reconciles {b["independent_metric_panels_checked"]:,} model/provider panels through {b["independent_scalar_checks"]:,} checks with zero mismatches. These source/version populations do not certify every official physical game.</p>'
@@ -264,7 +274,12 @@ def outputs():
     data=[evidence(league) for league in ('ncaam','ncaaw')]
     return {**{ROOT/'tracks'/d['league']/'index.html':render_track(d) for d in data},
             ROOT/'docs/ncaa/index.html':render_landing(data),
-            ROOT/'docs/ncaa/private-report/index.html':(HERE/'private_report.html.tmpl').read_text().replace('__B054_OWNER_STATUS__',B054_OWNER_STATUS).replace('__V4_REVIEW_PANEL__',(HERE/'v4_review.html.tmpl').read_text().replace('__REFRESH_REVIEW_PANEL__',(HERE/'refresh_review.html.tmpl').read_text()).replace('__PROJECTION_REVIEW_PANEL__',(HERE/'projection_review.html.tmpl').read_text())).replace('__V4_REVIEW_SCRIPT__',(HERE/'refresh_review.js').read_text()+'\n'+(HERE/'projection_review.js').read_text()+'\n'+(HERE/'v4_review.js').read_text())}
+            ROOT/'docs/ncaa/private-report/index.html':(HERE/'private_report.html.tmpl').read_text()
+                .replace('__B055_OWNER_STATUS__',B055_OWNER_STATUS)
+                .replace('__B054_OWNER_STATUS__',B054_OWNER_STATUS)
+                .replace('__EXECUTION_REVIEW_PANEL__',(HERE/'execution_review.html.tmpl').read_text())
+                .replace('__V4_REVIEW_PANEL__',(HERE/'v4_review.html.tmpl').read_text().replace('__REFRESH_REVIEW_PANEL__',(HERE/'refresh_review.html.tmpl').read_text()).replace('__PROJECTION_REVIEW_PANEL__',(HERE/'projection_review.html.tmpl').read_text()))
+                .replace('__V4_REVIEW_SCRIPT__',(HERE/'refresh_review.js').read_text()+'\n'+(HERE/'projection_review.js').read_text()+'\n'+(HERE/'v4_review.js').read_text()+'\n'+(HERE/'execution_review.js').read_text())}
 
 
 def main():

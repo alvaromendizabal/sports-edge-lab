@@ -1,5 +1,46 @@
 # NCAA evidence review
 
+## Latest actual owner result and bounded execution review — November 9, 2026 UTC
+
+**B055 committed new rolling work and then deferred for shared-resource headroom.** Its recorded status is `RESOURCE_DEFERRED_PARTIAL_WORK_PRESERVED`, with inner `AdmissionDeferred` / `WITHIN_STAGE_RESOURCE_HEADROOM_UNAVAILABLE`. The stage ledger records **9 completed, one failed wrapper stage and seven unentered out of 17**. The inner resource disposition and the wrapper outcome remain separate. Recorded owner wall time is **71,209.031 seconds**; whole-run remaining time and attributable cost are unknown. No platform root cause or measured speedup is inferred.
+
+### Work that the authenticated ledger actually records
+
+| Evidence population | Recorded count and meaning |
+|---|---|
+| New physical fits | **2,583**: 2,514 target, 45 scalar and 24 empirical fits. |
+| Rolling target-fit subset | **2,413** of the 2,514 target fits. |
+| Rolling prediction commits with zero new physical fits | **26,122**, kept separate from the physical-fit count. |
+| Committed typed contracts | **28,798**; contracts are not a second physical-fit total. |
+| Compact checkpoint inventory | 29,015 distinct contracts / 28,995 latest roles, with 20 overwrites. Full remote closure remains mandatory when a checkpoint is used. |
+| Owner rolling report | **18 new issued forecasts**, **5,949 reconstructed rows**, **6,093 numeric unissued reference rows**, and **4,032 source-only blocked rows**. These populations are not unique physical games. |
+| Promotions | **0**. Work counts do not establish a new model improvement. |
+
+B055 is the latest partial owner work. B053, B046 and the earlier source clocks, issue journals, scientific baselines and unfavorable comparisons remain dated evidence. Partial reconstruction does not repair a missed original issue time or certify every game in a physical season.
+
+Open **`B055_V4_PRIVATE_REVIEW.json`** in the [private rolling-review picker](https://alvaro-ncaa-research-review.alv-mendizabal.chatgpt.site/private-report/index.html#v4-review). The existing reader accepts the actual B055 summary, including its 18 metric populations and seven declared streams. A manifest is not a loaded stream: select the exact referenced gzip part to check physical bytes, logical bytes, hashes, order and row counts. All parts remain required at actual use. The retained `B053_CURRENT_DASHBOARD_DATA.json` is a separate pre-study checkpoint; the B052 schedule and eligibility exports retain their own dates and denominators.
+
+### B056 progress reports the admitted batch
+
+The additive [execution-review panel](https://alvaro-ncaa-research-review.alv-mendizabal.chatgpt.site/private-report/index.html#execution-review) accepts a separately supplied **`B056_EXECUTION_REVIEW.json`**. It validates `completed + remaining = admitted ≤ registered`; completed disposition counts must also reconcile. A completed disposition can record new work, reuse, a source block, an unavailable dependency or a failure. The registered research universe is displayed separately and never used as an automatic whole-project ETA or a physical-fit count.
+
+New target fits, reused fit accesses, new prediction records, reused prediction accesses, immutable issues and promotions have separate counters. Measured wall time, process CPU, peak RSS and the peak's scope are displayed independently. The initial schema keeps both cost and ETA explicitly unknown and requires an ETA reason. Empty or missing evidence never becomes “zero work” or “100% complete.”
+
+Prepared files, local fixtures and owner-runtime declarations retain visible evidence labels. A loaded file hash and internally consistent counts do not independently authenticate an owner run. The inspector does not fetch remote parts, fit models or create forecasts. Invalid replacements preserve the previous valid view; clearing this panel leaves the rolling review and other imports intact. Source recipes and cloud paths are not rendered by the execution panel.
+
+### AP, other rankings and the March Madness transfer
+
+The March Madness repository remains at reviewed revision [`e3c943daf49b968ac5251347297494a7462e47f7`](https://github.com/alvaromendizabal/march-machine-learning-mania-2026/commit/e3c943daf49b968ac5251347297494a7462e47f7), with no newer open work found during this review. That establishes the transfer reference, not completion of the transfer.
+
+**Actual B055 ranking support remains missing.** It retains four AP/Coaches catalog entries, **zero qualified editions, zero native ranking rows, zero team-mapping records and zero newly admitted ranking features**. Its 118,886 retained ranking-transform rows are all null; these are transform rows, not unique physical-season games. Both current ranking requests returned HTTP 200 and retained exact raw-body pins. The existing parser rejected both at `NATIVE_RANKING_LEAGUE_ID_AND_SLUG_UNPROVED`, before interpreting editions; the source-authorization contract was also absent. The isolated B056 reader now accepts the observed native ID, UID and exact reference-path shape without rewriting the raw response or inferring a missing slug. Local replay of both exact B055 bodies yields **four candidate editions and 100 edition-scoped native team mappings**. The old rejection is reproduced, original capture clocks remain unchanged, publication times remain null and downstream validation still blocks all four editions on missing source authorization. This is actual-input parser validation, with zero new provider calls, admitted ranking features, owner fits or forecasts. No missing rank is filled with an invented number. Source authorization, exact team mapping, publication or explicit capture-bound availability, and game-specific cutoff checks remain required before modeling.
+
+Reusable March transforms and a transfer crosswalk are implemented preparation. They do not prove that every March feature has been acquired, fitted, ablated or shown to improve the current NCAA models. The pending ranking acquisition and paired scientific studies remain explicit. The current public review makes no new all-family improvement, complete-season, common-provider-cohort or qualified line-conditioned probability claim.
+
+All earlier text below is preserved as dated evidence. It does not supersede the latest actual result or a later, separately registered methodology.
+
+<details>
+<summary>Dated B054 check, B055 viewer preparation and earlier evidence</summary>
+
 ## Latest owner check and refresh review — November 8, 2026 UTC
 
 **B054 ran and stopped at its required package checks before research began.** All **17 research stages were unentered**: zero completed and zero numbered stages failed, alongside the run-level `FAILED_PARTIAL_WORK_PRESERVED` result. The owner checks recorded **2,314 passed, one failed, one optional skip and zero errors out of 2,316 cases**. The failed assertion concerned rejection of a file changed while being read. This operational check does not establish a model loss or a platform root cause.
@@ -885,3 +926,5 @@ forecast inputs or change earlier issues, selection or recorded evaluation resul
 plain public HTTP(S) URLs only; credentials, signed links and private cloud object
 links are not rendered. All report rendering remains in the browser tab with no
 network or persistence path. Browser fixtures use invented records only.
+
+</details>
