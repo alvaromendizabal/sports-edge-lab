@@ -1,3 +1,11 @@
+## Latest N062 review — actual N061 partial evidence
+
+The dated source snapshot has 135 final games and 137 scheduled games. Actual N061 adds 90 original/shadow issue rows, with retained November 4 base-source age, and 405 owner-computed evaluations of frozen original issues across 13 games. All 60 monitored metric groups retain their original cycles, horizons and exact precision; historical benchmark cohorts remain unchanged.
+
+The current V5 source gate remains blocked by missing TB–CHI team statistics. Historical partial evidence retains six starts, optimizer entries, returns and validations, four durable commits and two returned states awaiting exact commit recovery; its missing response and original aggregate nulls remain preserved. No refitting, automatic promotion or new V5 issue is inferred. N062 is a prepared continuation, with a separate result-only opponent/schedule graph research lane. See [the N062 review](N062_REVIEW.md) and [updated dashboard](season_review_n054.html).
+
+Earlier dated model and methodology records follow unchanged.
+
 # NFL model card — current research status
 
 This card describes generic model roles and evidence limits. Active private selections, exact feature columns, tuned settings and complete candidate forecast archives are withheld under the publication boundary.

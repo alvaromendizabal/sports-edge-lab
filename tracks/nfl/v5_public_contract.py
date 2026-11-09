@@ -22,13 +22,14 @@ def validate_additions(data, only, instant):
         raise ValueError("Actual failure clocks")
     v5 = data["v5_scope"]
     only(v5,V5_FIELDS,"V5 scope")
+    newest = data.get("publication_cycle") == "N062"
     current = data.get("publication_cycle") == "N061"
-    expected_status = "N060_OWNER_FAILED_N061_PREPARED" if current else "PREPARED_NOT_OWNER_EXECUTED"
-    expected_cycle = "N061" if current else "N060"
-    expected_row_status = "N060_OWNER_V5_FAILED_N061_REPAIR_PREPARED" if current else "PREPARED_NOT_OWNER_EXECUTED"
+    expected_status = "N061_OWNER_PARTIAL_N062_PREPARED" if newest else "N060_OWNER_FAILED_N061_PREPARED" if current else "PREPARED_NOT_OWNER_EXECUTED"
+    expected_cycle = "N062" if newest else "N061" if current else "N060"
+    expected_row_status = "N061_OWNER_V5_BLOCKED_N062_REPAIR_PREPARED" if newest else "N060_OWNER_V5_FAILED_N061_REPAIR_PREPARED" if current else "PREPARED_NOT_OWNER_EXECUTED"
     if v5["status"] != expected_status or v5["prepared_cycle"] != expected_cycle or v5["automatic_promotion"]:
         raise ValueError("Prepared V5 cannot be relabeled as owner execution")
-    if v5["actual_new_fits"] or v5["actual_new_forecasts"]:
+    if v5["actual_new_fits"] != (6 if newest else 0) or v5["actual_new_forecasts"]:
         raise ValueError("Prepared V5 cannot create real science")
     rows = v5["comparison_lanes"]
     if len(rows) != 15 or {(r["lane"],r["target"]) for r in rows} != {(lane,target) for lane in LANES for target in ("win","margin","total")}:
