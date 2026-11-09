@@ -37,7 +37,8 @@
         "top_five_graded": 5,
         "top_five_w": 2,
         "top_five_l": 2,
-        "top_five_p": 1
+        "top_five_p": 1,
+        "top_five_points": 2.5
       },
       "source": "https://www.circasports.com/wp-content/uploads/2026/09/Circa-Sports-Million-VIII-Contest-Point-Spreads-Week-1.pdf",
       "selections": "https://www.circasports.com/wp-content/uploads/2026/09/Circa-Sports-Million-VIII-Week-1-Selections.pdf"
@@ -66,7 +67,8 @@
         "top_five_graded": 5,
         "top_five_w": 2,
         "top_five_l": 3,
-        "top_five_p": 0
+        "top_five_p": 0,
+        "top_five_points": 2.0
       },
       "source": "https://www.circasports.com/wp-content/uploads/2026/09/Circa-Sports-Million-VIII-Contest-Point-Spreads-Week-2.pdf",
       "selections": "https://www.circasports.com/wp-content/uploads/2026/09/Circa-Sports-Million-VIII-Week-2-Selections.pdf"
@@ -95,7 +97,8 @@
         "top_five_graded": 5,
         "top_five_w": 4,
         "top_five_l": 1,
-        "top_five_p": 0
+        "top_five_p": 0,
+        "top_five_points": 4.0
       },
       "source": "https://www.circasports.com/wp-content/uploads/2026/09/Circa-Sports-Million-VIII-Contest-Point-Spreads-Week-3.pdf",
       "selections": "https://www.circasports.com/wp-content/uploads/2026/09/Circa-Sports-Million-VIII-Week-3-Selections.pdf"
@@ -124,7 +127,8 @@
         "top_five_graded": 5,
         "top_five_w": 4,
         "top_five_l": 0,
-        "top_five_p": 1
+        "top_five_p": 1,
+        "top_five_points": 4.5
       },
       "source": "https://www.circasports.com/wp-content/uploads/2026/10/Circa-Sports-Million-VIII-Contest-Point-Spreads-Week-4.pdf",
       "selections": "https://www.circasports.com/wp-content/uploads/2026/10/Circa-Sports-Million-VIII-Week-4-Selections.pdf"
@@ -153,7 +157,8 @@
         "top_five_graded": 5,
         "top_five_w": 3,
         "top_five_l": 1,
-        "top_five_p": 1
+        "top_five_p": 1,
+        "top_five_points": 3.5
       },
       "source": "https://www.circasports.com/wp-content/uploads/2026/10/Circa-Sports-Million-VIII-Contest-Point-Spreads-Week-5.pdf",
       "selections": "https://www.circasports.com/wp-content/uploads/2026/10/Circa-Sports-Million-VIII-Week-5-Selections.pdf"
@@ -182,7 +187,8 @@
         "top_five_graded": 5,
         "top_five_w": 1,
         "top_five_l": 3,
-        "top_five_p": 1
+        "top_five_p": 1,
+        "top_five_points": 1.5
       },
       "source": "https://www.circasports.com/wp-content/uploads/2026/10/Circa-Sports-Million-VIII-Contest-Point-Spreads-Week-6.pdf",
       "selections": "https://www.circasports.com/wp-content/uploads/2026/10/Circa-Sports-Million-VIII-Week-6-Selections.pdf"
@@ -211,7 +217,8 @@
         "top_five_graded": 5,
         "top_five_w": 1,
         "top_five_l": 4,
-        "top_five_p": 0
+        "top_five_p": 0,
+        "top_five_points": 1.0
       },
       "source": "https://www.circasports.com/wp-content/uploads/2026/10/Circa-Sports-Million-VIII-Contest-Point-Spreads-Week-7.pdf",
       "selections": "https://www.circasports.com/wp-content/uploads/2026/10/Circa-Sports-Million-VIII-Week-7-Selections.pdf"
@@ -240,7 +247,8 @@
         "top_five_graded": 5,
         "top_five_w": 4,
         "top_five_l": 1,
-        "top_five_p": 0
+        "top_five_p": 0,
+        "top_five_points": 4.0
       },
       "source": "https://www.circasports.com/wp-content/uploads/2026/10/Circa-Sports-Million-VIII-Contest-Point-Spreads-Week-8.pdf",
       "selections": "https://www.circasports.com/wp-content/uploads/2026/11/Circa-Sports-Million-VIII-Week-8-Selections.pdf"
@@ -269,7 +277,8 @@
         "top_five_graded": 4,
         "top_five_w": 3,
         "top_five_l": 1,
-        "top_five_p": 0
+        "top_five_p": 0,
+        "top_five_points": 3.0
       },
       "source": "https://www.circasports.com/wp-content/uploads/2026/11/Circa-Sports-Million-VIII-Contest-Point-Spreads-Week-9.pdf",
       "selections": "https://www.circasports.com/wp-content/uploads/2026/11/Circa-Sports-Million-VIII-Week-9-Selections.pdf"
@@ -7076,7 +7085,8 @@
     "top_five_graded": 40,
     "top_five_w": 21,
     "top_five_l": 15,
-    "top_five_p": 4
+    "top_five_p": 4,
+    "top_five_points": 23.0
   },
   "original_week9": {
     "total_games": 15,
@@ -7101,7 +7111,8 @@
     "top_five_graded": 4,
     "top_five_w": 3,
     "top_five_l": 1,
-    "top_five_p": 0
+    "top_five_p": 0,
+    "top_five_points": 3.0
   },
   "alternatives": [
     {

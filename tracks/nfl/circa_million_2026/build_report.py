@@ -110,6 +110,8 @@ def prob_stats(rows: list[dict]) -> dict:
         "top_five_w": sum(x["ats_grade"] == "WIN" for x in top_ats),
         "top_five_l": sum(x["ats_grade"] == "LOSS" for x in top_ats),
         "top_five_p": sum(x["ats_grade"] == "PUSH" for x in top_ats),
+        "top_five_points": sum(x["ats_grade"] == "WIN" for x in top_ats)
+                           + 0.5 * sum(x["ats_grade"] == "PUSH" for x in top_ats),
     }
 
 
@@ -359,7 +361,7 @@ def build_github_readme(data: dict) -> str:
         "",
         "## The headline, with honest denominators",
         "",
-        f"- **Weeks 1–8, retrospective:** {data['retrospective']['winner_hits']}/{data['retrospective']['winner_count']} outright winners ({100*data['retrospective']['winner_pct']:.1f}%). Against official Circa spreads: **{tri(data['retrospective'])}**, {100*data['retrospective']['ats_pct']:.1f}% excluding pushes. All 121 games included; 120 have reconstructed margin forecasts.",
+        f"- **Weeks 1–8, retrospective:** {data['retrospective']['winner_hits']}/{data['retrospective']['winner_count']} outright winners ({100*data['retrospective']['winner_pct']:.1f}%). Against official Circa spreads: **{tri(data['retrospective'])}**, {100*data['retrospective']['ats_pct']:.1f}% excluding pushes. The illustrative five-per-week shortlist totals **{n(data['retrospective']['top_five_points'])} Circa-style points out of 40 picks** (21 wins, 15 losses, four pushes). All 121 games included; 120 have reconstructed margin forecasts.",
         f"- **Week 9, genuine pregame outputs:** {data['original_week9']['winner_hits']}/{data['original_week9']['winner_count']} outright winners; against Circa: **{tri(data['original_week9'])}** ({100*data['original_week9']['ats_pct']:.1f}% excluding pushes), with {data['original_week9']['completed']}/15 games final and four not yet graded. These outputs were **after the Saturday contest deadline**.",
         "- A hypothetical five-largest-edge shortlist is shown every week. It is a post-hoc diagnostic, **not a contest submission**. Circa itself scores only five selected sides against fixed spreads (win = 1, push = 0.5, loss = 0).",
         "- Circa Million has **no over/under component**. This report scores projected combined points against final combined points; independently documented market totals appear only for eight Week 9 games.",
@@ -370,12 +372,12 @@ def build_github_readme(data: dict) -> str:
         "",
         "## Season scorecard",
         "",
-        "| Week | Evidence lane | Forecast coverage | ATS W–L–P | ATS rate* | Hypothetical five | Winner calls | Margin MAE | Total MAE | Brier | Log loss |",
+        "| Week | Evidence lane | Forecast coverage | ATS W–L–P | ATS rate* | Hypothetical five (points) | Winner calls | Margin MAE | Total MAE | Brier | Log loss |",
         "|---:|---|---:|---:|---:|---:|---:|---:|---:|---:|---:|",
     ]
     for w in range(1,10):
         s = data["weekly"][str(w)]["stats"]
-        lines.append(f"| [{w}](#week-{w}) | {'Reconstructed' if w<=8 else 'Issued; late for contest'} | {s['model_covered']}/{s['total_games']} | {tri(s)} | {n(100*s['ats_pct'])+'%' if s['ats_pct'] is not None else '—'} | {s['top_five_w']}–{s['top_five_l']}–{s['top_five_p']} ({s['top_five_graded']}/5 scored) | {s['winner_hits']}/{s['winner_count']} | {n(s['margin_mae'])} | {n(s['total_mae'])} | {n(s['brier'],3)} | {n(s['log_loss'],3)} |")
+        lines.append(f"| [{w}](#week-{w}) | {'Reconstructed' if w<=8 else 'Issued; late for contest'} | {s['model_covered']}/{s['total_games']} | {tri(s)} | {n(100*s['ats_pct'])+'%' if s['ats_pct'] is not None else '—'} | {s['top_five_w']}–{s['top_five_l']}–{s['top_five_p']} ({n(s['top_five_points'])} pts; {s['top_five_graded']}/5 scored) | {s['winner_hits']}/{s['winner_count']} | {n(s['margin_mae'])} | {n(s['total_mae'])} | {n(s['brier'],3)} | {n(s['log_loss'],3)} |")
     lines.extend(["", "*ATS rate excludes pushes. Tied games are not counted for outright winner/probability grades. No pending game is counted as a result.", ""])
     for w in range(1,10):
         s = data["weekly"][str(w)]["stats"]
@@ -387,7 +389,7 @@ def build_github_readme(data: dict) -> str:
             "",
             f"[Official Week {w} fixed spreads]({wp['source']}) · [Official entrant selection records]({wp['selections']})",
             "",
-            f"**Illustrative top five by absolute projected spread edge:** "+" · ".join(
+            f"**Illustrative top five by absolute projected spread edge ({n(s['top_five_points'])} Circa-style points from {s['top_five_graded']}/5 graded):** "+" · ".join(
                 f"#{r['top_five_rank']} {r['model_ats_pick']} {sign(r['line_home'] if r['model_ats_pick']==r['home'] else r['line_away'])} ({n(r['ats_edge_absolute'])} pts, {r['ats_grade'] or 'pending'})"
                 for r in sorted((g for g in games if g['top_five']),key=lambda x:x['top_five_rank'])),
             "",

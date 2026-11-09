@@ -10,7 +10,7 @@ The native GitHub tables below show every result **without downloading anything*
 
 ## The headline, with honest denominators
 
-- **Weeks 1–8, retrospective:** 73/119 outright winners (61.3%). Against official Circa spreads: **59–55–6**, 51.8% excluding pushes. All 121 games included; 120 have reconstructed margin forecasts.
+- **Weeks 1–8, retrospective:** 73/119 outright winners (61.3%). Against official Circa spreads: **59–55–6**, 51.8% excluding pushes. The illustrative five-per-week shortlist totals **23.0 Circa-style points out of 40 picks** (21 wins, 15 losses, four pushes). All 121 games included; 120 have reconstructed margin forecasts.
 - **Week 9, genuine pregame outputs:** 10/10 outright winners; against Circa: **6–4–0** (60.0% excluding pushes), with 11/15 games final and four not yet graded. These outputs were **after the Saturday contest deadline**.
 - A hypothetical five-largest-edge shortlist is shown every week. It is a post-hoc diagnostic, **not a contest submission**. Circa itself scores only five selected sides against fixed spreads (win = 1, push = 0.5, loss = 0).
 - Circa Million has **no over/under component**. This report scores projected combined points against final combined points; independently documented market totals appear only for eight Week 9 games.
@@ -21,17 +21,17 @@ The native GitHub tables below show every result **without downloading anything*
 
 ## Season scorecard
 
-| Week | Evidence lane | Forecast coverage | ATS W–L–P | ATS rate* | Hypothetical five | Winner calls | Margin MAE | Total MAE | Brier | Log loss |
+| Week | Evidence lane | Forecast coverage | ATS W–L–P | ATS rate* | Hypothetical five (points) | Winner calls | Margin MAE | Total MAE | Brier | Log loss |
 |---:|---|---:|---:|---:|---:|---:|---:|---:|---:|---:|
-| [1](#week-1) | Reconstructed | 16/16 | 6–9–1 | 40.0% | 2–2–1 (5/5 scored) | 10/16 | 12.4 | 12.8 | 0.241 | 0.675 |
-| [2](#week-2) | Reconstructed | 16/16 | 9–7–0 | 56.2% | 2–3–0 (5/5 scored) | 9/16 | 12.3 | 11.3 | 0.238 | 0.669 |
-| [3](#week-3) | Reconstructed | 16/16 | 11–4–1 | 73.3% | 4–1–0 (5/5 scored) | 10/16 | 8.3 | 11.3 | 0.214 | 0.611 |
-| [4](#week-4) | Reconstructed | 16/16 | 10–5–1 | 66.7% | 4–0–1 (5/5 scored) | 10/16 | 6.8 | 11.3 | 0.203 | 0.587 |
-| [5](#week-5) | Reconstructed | 15/15 | 7–7–1 | 50.0% | 3–1–1 (5/5 scored) | 9/14 | 10.2 | 11.4 | 0.230 | 0.651 |
-| [6](#week-6) | Reconstructed | 14/14 | 3–10–1 | 23.1% | 1–3–1 (5/5 scored) | 7/14 | 8.8 | 10.9 | 0.296 | 0.800 |
-| [7](#week-7) | Reconstructed | 14/14 | 5–8–1 | 38.5% | 1–4–0 (5/5 scored) | 7/14 | 11.4 | 10.0 | 0.261 | 0.720 |
-| [8](#week-8) | Reconstructed | 13/14 | 8–5–0 | 61.5% | 4–1–0 (5/5 scored) | 11/13 | 9.4 | 11.8 | 0.172 | 0.530 |
-| [9](#week-9) | Issued; late for contest | 14/15 | 6–4–0 | 60.0% | 3–1–0 (4/5 scored) | 10/10 | 5.9 | 8.6 | 0.119 | 0.416 |
+| [1](#week-1) | Reconstructed | 16/16 | 6–9–1 | 40.0% | 2–2–1 (2.5 pts; 5/5 scored) | 10/16 | 12.4 | 12.8 | 0.241 | 0.675 |
+| [2](#week-2) | Reconstructed | 16/16 | 9–7–0 | 56.2% | 2–3–0 (2.0 pts; 5/5 scored) | 9/16 | 12.3 | 11.3 | 0.238 | 0.669 |
+| [3](#week-3) | Reconstructed | 16/16 | 11–4–1 | 73.3% | 4–1–0 (4.0 pts; 5/5 scored) | 10/16 | 8.3 | 11.3 | 0.214 | 0.611 |
+| [4](#week-4) | Reconstructed | 16/16 | 10–5–1 | 66.7% | 4–0–1 (4.5 pts; 5/5 scored) | 10/16 | 6.8 | 11.3 | 0.203 | 0.587 |
+| [5](#week-5) | Reconstructed | 15/15 | 7–7–1 | 50.0% | 3–1–1 (3.5 pts; 5/5 scored) | 9/14 | 10.2 | 11.4 | 0.230 | 0.651 |
+| [6](#week-6) | Reconstructed | 14/14 | 3–10–1 | 23.1% | 1–3–1 (1.5 pts; 5/5 scored) | 7/14 | 8.8 | 10.9 | 0.296 | 0.800 |
+| [7](#week-7) | Reconstructed | 14/14 | 5–8–1 | 38.5% | 1–4–0 (1.0 pts; 5/5 scored) | 7/14 | 11.4 | 10.0 | 0.261 | 0.720 |
+| [8](#week-8) | Reconstructed | 13/14 | 8–5–0 | 61.5% | 4–1–0 (4.0 pts; 5/5 scored) | 11/13 | 9.4 | 11.8 | 0.172 | 0.530 |
+| [9](#week-9) | Issued; late for contest | 14/15 | 6–4–0 | 60.0% | 3–1–0 (3.0 pts; 4/5 scored) | 10/10 | 5.9 | 8.6 | 0.119 | 0.416 |
 
 *ATS rate excludes pushes. Tied games are not counted for outright winner/probability grades. No pending game is counted as a result.
 
@@ -41,7 +41,7 @@ The native GitHub tables below show every result **without downloading anything*
 
 [Official Week 1 fixed spreads](https://www.circasports.com/wp-content/uploads/2026/09/Circa-Sports-Million-VIII-Contest-Point-Spreads-Week-1.pdf) · [Official entrant selection records](https://www.circasports.com/wp-content/uploads/2026/09/Circa-Sports-Million-VIII-Week-1-Selections.pdf)
 
-**Illustrative top five by absolute projected spread edge:** #1 DEN +3 (5.6 pts, LOSS) · #2 MIA +3.5 (5.5 pts, LOSS) · #3 SEA -3 (5.3 pts, PUSH) · #4 NYG +3 (3.7 pts, WIN) · #5 JAX -8.5 (2.8 pts, WIN)
+**Illustrative top five by absolute projected spread edge (2.5 Circa-style points from 5/5 graded):** #1 DEN +3 (5.6 pts, LOSS) · #2 MIA +3.5 (5.5 pts, LOSS) · #3 SEA -3 (5.3 pts, PUSH) · #4 NYG +3 (3.7 pts, WIN) · #5 JAX -8.5 (2.8 pts, WIN)
 
 | Game (away @ home) | Final | Official Circa (away / home) | Model ATS side | Grade | Model winner (prob.) | Predicted margin / actual | Total forecast / actual |
 |---|---:|---|---|---|---|---|---|
@@ -68,7 +68,7 @@ The native GitHub tables below show every result **without downloading anything*
 
 [Official Week 2 fixed spreads](https://www.circasports.com/wp-content/uploads/2026/09/Circa-Sports-Million-VIII-Contest-Point-Spreads-Week-2.pdf) · [Official entrant selection records](https://www.circasports.com/wp-content/uploads/2026/09/Circa-Sports-Million-VIII-Week-2-Selections.pdf)
 
-**Illustrative top five by absolute projected spread edge:** #1 ATL +2.5 (7.1 pts, LOSS) · #2 JAX +2.5 (4.5 pts, LOSS) · #3 TEN +7 (3.7 pts, WIN) · #4 MIN +4.5 (3.1 pts, WIN) · #5 WAS +4 (3.1 pts, LOSS)
+**Illustrative top five by absolute projected spread edge (2.0 Circa-style points from 5/5 graded):** #1 ATL +2.5 (7.1 pts, LOSS) · #2 JAX +2.5 (4.5 pts, LOSS) · #3 TEN +7 (3.7 pts, WIN) · #4 MIN +4.5 (3.1 pts, WIN) · #5 WAS +4 (3.1 pts, LOSS)
 
 | Game (away @ home) | Final | Official Circa (away / home) | Model ATS side | Grade | Model winner (prob.) | Predicted margin / actual | Total forecast / actual |
 |---|---:|---|---|---|---|---|---|
@@ -95,7 +95,7 @@ The native GitHub tables below show every result **without downloading anything*
 
 [Official Week 3 fixed spreads](https://www.circasports.com/wp-content/uploads/2026/09/Circa-Sports-Million-VIII-Contest-Point-Spreads-Week-3.pdf) · [Official entrant selection records](https://www.circasports.com/wp-content/uploads/2026/09/Circa-Sports-Million-VIII-Week-3-Selections.pdf)
 
-**Illustrative top five by absolute projected spread edge:** #1 MIA +11.5 (7.7 pts, LOSS) · #2 CHI +4.5 (6.2 pts, WIN) · #3 NYG -2.5 (5.9 pts, WIN) · #4 WAS +7.5 (4.3 pts, WIN) · #5 BUF -7 (4.0 pts, WIN)
+**Illustrative top five by absolute projected spread edge (4.0 Circa-style points from 5/5 graded):** #1 MIA +11.5 (7.7 pts, LOSS) · #2 CHI +4.5 (6.2 pts, WIN) · #3 NYG -2.5 (5.9 pts, WIN) · #4 WAS +7.5 (4.3 pts, WIN) · #5 BUF -7 (4.0 pts, WIN)
 
 | Game (away @ home) | Final | Official Circa (away / home) | Model ATS side | Grade | Model winner (prob.) | Predicted margin / actual | Total forecast / actual |
 |---|---:|---|---|---|---|---|---|
@@ -122,7 +122,7 @@ The native GitHub tables below show every result **without downloading anything*
 
 [Official Week 4 fixed spreads](https://www.circasports.com/wp-content/uploads/2026/10/Circa-Sports-Million-VIII-Contest-Point-Spreads-Week-4.pdf) · [Official entrant selection records](https://www.circasports.com/wp-content/uploads/2026/10/Circa-Sports-Million-VIII-Week-4-Selections.pdf)
 
-**Illustrative top five by absolute projected spread edge:** #1 CHI -3 (9.3 pts, WIN) · #2 JAX +2.5 (6.2 pts, WIN) · #3 NYG +2.5 (5.9 pts, WIN) · #4 SEA -7 (5.9 pts, PUSH) · #5 TB +3.5 (3.8 pts, WIN)
+**Illustrative top five by absolute projected spread edge (4.5 Circa-style points from 5/5 graded):** #1 CHI -3 (9.3 pts, WIN) · #2 JAX +2.5 (6.2 pts, WIN) · #3 NYG +2.5 (5.9 pts, WIN) · #4 SEA -7 (5.9 pts, PUSH) · #5 TB +3.5 (3.8 pts, WIN)
 
 | Game (away @ home) | Final | Official Circa (away / home) | Model ATS side | Grade | Model winner (prob.) | Predicted margin / actual | Total forecast / actual |
 |---|---:|---|---|---|---|---|---|
@@ -149,7 +149,7 @@ The native GitHub tables below show every result **without downloading anything*
 
 [Official Week 5 fixed spreads](https://www.circasports.com/wp-content/uploads/2026/10/Circa-Sports-Million-VIII-Contest-Point-Spreads-Week-5.pdf) · [Official entrant selection records](https://www.circasports.com/wp-content/uploads/2026/10/Circa-Sports-Million-VIII-Week-5-Selections.pdf)
 
-**Illustrative top five by absolute projected spread edge:** #1 BAL +3.5 (5.4 pts, WIN) · #2 TEN +7.5 (5.3 pts, LOSS) · #3 NE -3.5 (4.6 pts, WIN) · #4 MIA +7 (3.4 pts, PUSH) · #5 BUF +3 (3.3 pts, WIN)
+**Illustrative top five by absolute projected spread edge (3.5 Circa-style points from 5/5 graded):** #1 BAL +3.5 (5.4 pts, WIN) · #2 TEN +7.5 (5.3 pts, LOSS) · #3 NE -3.5 (4.6 pts, WIN) · #4 MIA +7 (3.4 pts, PUSH) · #5 BUF +3 (3.3 pts, WIN)
 
 | Game (away @ home) | Final | Official Circa (away / home) | Model ATS side | Grade | Model winner (prob.) | Predicted margin / actual | Total forecast / actual |
 |---|---:|---|---|---|---|---|---|
@@ -175,7 +175,7 @@ The native GitHub tables below show every result **without downloading anything*
 
 [Official Week 6 fixed spreads](https://www.circasports.com/wp-content/uploads/2026/10/Circa-Sports-Million-VIII-Contest-Point-Spreads-Week-6.pdf) · [Official entrant selection records](https://www.circasports.com/wp-content/uploads/2026/10/Circa-Sports-Million-VIII-Week-6-Selections.pdf)
 
-**Illustrative top five by absolute projected spread edge:** #1 SF -7.5 (6.0 pts, LOSS) · #2 JAX -2.5 (5.7 pts, LOSS) · #3 PHI +1 (5.4 pts, LOSS) · #4 NE -7 (4.7 pts, PUSH) · #5 KC -8 (3.4 pts, WIN)
+**Illustrative top five by absolute projected spread edge (1.5 Circa-style points from 5/5 graded):** #1 SF -7.5 (6.0 pts, LOSS) · #2 JAX -2.5 (5.7 pts, LOSS) · #3 PHI +1 (5.4 pts, LOSS) · #4 NE -7 (4.7 pts, PUSH) · #5 KC -8 (3.4 pts, WIN)
 
 | Game (away @ home) | Final | Official Circa (away / home) | Model ATS side | Grade | Model winner (prob.) | Predicted margin / actual | Total forecast / actual |
 |---|---:|---|---|---|---|---|---|
@@ -200,7 +200,7 @@ The native GitHub tables below show every result **without downloading anything*
 
 [Official Week 7 fixed spreads](https://www.circasports.com/wp-content/uploads/2026/10/Circa-Sports-Million-VIII-Contest-Point-Spreads-Week-7.pdf) · [Official entrant selection records](https://www.circasports.com/wp-content/uploads/2026/10/Circa-Sports-Million-VIII-Week-7-Selections.pdf)
 
-**Illustrative top five by absolute projected spread edge:** #1 CAR -3 (4.9 pts, LOSS) · #2 PHI +3.5 (4.3 pts, LOSS) · #3 NE +3 (3.7 pts, LOSS) · #4 MIA +4 (3.7 pts, WIN) · #5 BAL -1.5 (2.8 pts, LOSS)
+**Illustrative top five by absolute projected spread edge (1.0 Circa-style points from 5/5 graded):** #1 CAR -3 (4.9 pts, LOSS) · #2 PHI +3.5 (4.3 pts, LOSS) · #3 NE +3 (3.7 pts, LOSS) · #4 MIA +4 (3.7 pts, WIN) · #5 BAL -1.5 (2.8 pts, LOSS)
 
 | Game (away @ home) | Final | Official Circa (away / home) | Model ATS side | Grade | Model winner (prob.) | Predicted margin / actual | Total forecast / actual |
 |---|---:|---|---|---|---|---|---|
@@ -225,7 +225,7 @@ The native GitHub tables below show every result **without downloading anything*
 
 [Official Week 8 fixed spreads](https://www.circasports.com/wp-content/uploads/2026/10/Circa-Sports-Million-VIII-Contest-Point-Spreads-Week-8.pdf) · [Official entrant selection records](https://www.circasports.com/wp-content/uploads/2026/11/Circa-Sports-Million-VIII-Week-8-Selections.pdf)
 
-**Illustrative top five by absolute projected spread edge:** #1 BUF -3 (7.0 pts, WIN) · #2 PHI +6 (4.6 pts, LOSS) · #3 DEN +1.5 (4.4 pts, WIN) · #4 LA -6.5 (4.3 pts, WIN) · #5 PIT -3 (2.9 pts, WIN)
+**Illustrative top five by absolute projected spread edge (4.0 Circa-style points from 5/5 graded):** #1 BUF -3 (7.0 pts, WIN) · #2 PHI +6 (4.6 pts, LOSS) · #3 DEN +1.5 (4.4 pts, WIN) · #4 LA -6.5 (4.3 pts, WIN) · #5 PIT -3 (2.9 pts, WIN)
 
 | Game (away @ home) | Final | Official Circa (away / home) | Model ATS side | Grade | Model winner (prob.) | Predicted margin / actual | Total forecast / actual |
 |---|---:|---|---|---|---|---|---|
@@ -250,7 +250,7 @@ The native GitHub tables below show every result **without downloading anything*
 
 [Official Week 9 fixed spreads](https://www.circasports.com/wp-content/uploads/2026/11/Circa-Sports-Million-VIII-Contest-Point-Spreads-Week-9.pdf) · [Official entrant selection records](https://www.circasports.com/wp-content/uploads/2026/11/Circa-Sports-Million-VIII-Week-9-Selections.pdf)
 
-**Illustrative top five by absolute projected spread edge:** #1 MIN +3.5 (3.1 pts, pending) · #2 NYJ +10 (2.3 pts, LOSS) · #3 CIN -3 (2.1 pts, WIN) · #4 DEN -2.5 (1.9 pts, WIN) · #5 LA -4 (1.8 pts, WIN)
+**Illustrative top five by absolute projected spread edge (3.0 Circa-style points from 4/5 graded):** #1 MIN +3.5 (3.1 pts, pending) · #2 NYJ +10 (2.3 pts, LOSS) · #3 CIN -3 (2.1 pts, WIN) · #4 DEN -2.5 (1.9 pts, WIN) · #5 LA -4 (1.8 pts, WIN)
 
 | Game (away @ home) | Final | Official Circa (away / home) | Model ATS side | Grade | Model winner (prob.) | Predicted margin / actual | Total forecast / actual |
 |---|---:|---|---|---|---|---|---|
