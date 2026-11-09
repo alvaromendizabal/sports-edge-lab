@@ -1,115 +1,117 @@
-"""Validate and render an evidence-complete schedule without filling absent values."""
-import argparse,base64,datetime,gzip,json,math,pathlib,re
-
+"""Validate and render the bounded NFL public contract, without private inputs."""
+import argparse,base64,collections,datetime,gzip,json,math,pathlib,re
 HERE=pathlib.Path(__file__).resolve().parent
-SCHEMA='nfl.public.n053r1-actual-n054-prepared.v1'
-PROVIDERS={'DraftKings','Kalshi','Polymarket'}
-TARGETS={'win','margin','total'}
-RETIRED=re.compile(r'(?<![A-Za-z])(?:bets?|betting|wagers?|wagering|gambling|stakes?|staking|profit|profits|profitable|EV|odds|moneyline|sportsbook|bookmaker|bankroll|payouts?|ROI|parlays?|nonpush|settlement|spread|paper_trade|trades?|trading|overround|kelly)(?![A-Za-z])',re.I)
-
+SCHEMA='nfl.public.n059.bounded-evidence.v1'
+TOP={'schema','publication_cycle','observed_at','snapshot','counts','identity_notes','games','provider_horizons','scoreboards','issued_cards','cohorts','rolling_policy','frontier_feature_status','distribution_scoreboards','source_summary','source_historical_coverage','active_research_status','reason_catalog','public_scope','qualifications'}
+GAME={'game_id','week','home','away','kickoff_utc','completed','phase','result','timing_status','model_coverage','source_coverage'}
+MODEL={'target','roles','with_value','actual_issue','eligible_in_original_cohort','no_authenticated_value'}
+SOURCE={'provider','target','horizons'}
+CELL={'horizon','status','quote_clock_present','capture_clock_present','pregame_possession_established','reason_code','reason','quote_at','captured_at'}
+SCORE={'public_model_id','study','season','target','horizon','qualification','provider','games','mae','rmse','bias','crps','log_loss','brier','accuracy','correct','roc_auc','ece_10_fixed_bins','coverage_90','mean_width_90','r2','median_absolute_error'}
+CARD={'game_id','role','pick','pick_probability','home_probability','home_margin','total_points','projected_home_points','projected_away_points','issue_at','source_as_of','model_completed_at','classification','qualification','uncertainty_status','conditional_status'}
+PROVIDERS={'DraftKings','Kalshi','Polymarket'};TARGETS={'win','margin','total'}
+FORBIDDEN=re.compile(r's3://|arn:aws:|X-Amz-|/workspace/|/home/|sagemaker|component_bindings|model_sha256|recipe_sha256|feature_columns|best_params|learning_rate|private_s3|access_token|secret_key|chatgpt\.com/c/|@gmail\.com',re.I)
+RETIRED=re.compile(r'(?<![A-Za-z])(?:bets?|betting|wagers?|wagering|bankroll|parlays?|stakes?|staking)(?![A-Za-z])',re.I)
+def only(row,allowed,label):
+ if not isinstance(row,dict) or set(row)-allowed:raise ValueError('Unexpected public '+label+' field')
 def instant(s):
-    t=datetime.datetime.fromisoformat(s.replace('Z','+00:00'))
-    if t.tzinfo is None:raise ValueError('clock timezone')
-    return t
+ t=datetime.datetime.fromisoformat(s.replace('Z','+00:00'))
+ if t.tzinfo is None:raise ValueError('Public clock timezone')
+ return t
+def validate(d):
+ only(d,TOP,'root')
+ if d['schema']!=SCHEMA:raise ValueError('Public schema')
+ nested={
+ 'snapshot':'as_of games completed decisive ties remaining in_progress halftime live scheduled status remaining_does_not_mean_all_kickoffs_are_in_the_future',
+ 'counts':'games teams private_model_roles private_model_cells private_provider_cells provider_horizons season_metric_rows distribution_metric_rows actual_latest_issue_rows actual_latest_issue_games actual_latest_native_fits actual_latest_meta_fits synthetic_smoke_operations protected_raw_states latest_reused_raw_states latest_reused_cutoff_jobs publication_new_fits publication_new_issues',
+ 'rolling_policy':'status original_fixed_control_preserved initial_selector annual_examples per_game_fit meta_layers history_classification issue_classes actual_new_V4_owner_fits actual_new_V4_owner_issues automatic_promotion',
+ 'frontier_feature_status':'status proposed implemented materialized preflight_passed admitted evaluated promoted blocked portable_synthetic_tests_passed implemented_by_source qualification',
+ 'source_summary':'status logical_inputs distinct_body_pins normalized_rows representative_normalized_rows alternate_curve_normalized_rows recovered_history_normalized_rows normalized_rows_by_provider scope_games derived_target_cells observed_target_cells current_captures_before_kickoff current_captures_after_kickoff curve_points curve_points_with_complete_pair curve_pairs_with_different_clocks curve_inventory_cells retained_restored_historical_rows historical_winner_rows historical_point_rows capture_clock_min capture_clock_max quote_clock_min quote_clock_max quote_clock_missing_rows every_known_quote_not_after_capture source_only_predictive_credit probability_side_clocks_bound_to_used_rows new_provider_requests frozen_horizon_records_modified all_current_provider_coverage_claimed all_history_complete',
+ 'active_research_status':'status new_issue_roles first_blocker next_action top_level_fit_total top_level_issue_total top_level_null_reason no_promotion',
+ 'public_scope':'complete_game_inventory equal_provider_status_inventory aggregate_scoreboards_anonymized bounded_already_issued_cards complete_candidate_predictions_included active_recipes_included raw_provider_payloads_included private_full_reports_preserved description'}
+ for key,fields in nested.items():only(d[key],set(fields.split()),key)
+ for r in d['rolling_policy']['annual_examples']:only(r,{'evaluation_season','initial_selection_seasons'},'selector example')
+ for r in d['active_research_status']['new_issue_roles']:only(r,{'role','rows','games'},'actual issue role')
+ only(d['frontier_feature_status'].get('implemented_by_source',{}),{'pbp','team_stats','compact72'},'implemented source categories')
+ for r in d['cohorts']:only(r,{'label','count','denominator','reason','excluded_games'},'cohort')
+ for r in d['identity_notes']:only(r,{'code','label'},'identity note')
+ for r in d['reason_catalog']:only(r,{'code','meaning'},'reason catalogue')
+ for r in d['source_historical_coverage']:only(r,{'season','provider','target','available_games','total_completed_games'},'historical source coverage')
+ only(d['source_summary']['normalized_rows_by_provider'],{'kalshi','polymarket','draftkings'},'normalized provider count')
 
-def validate(data):
-    if data['schema']!=SCHEMA:raise ValueError('schema')
-    games=data['games'];index={g['game_id']:g for g in games}
-    if len(games)!=272 or len(index)!=272 or sum(g['completed'] for g in games)!=122:raise ValueError('complete season closure')
-    if sum(not g['completed'] for g in games)!=150:raise ValueError('future season closure')
-    if sum(g['completed'] and g['actual']['home_score']==g['actual']['away_score'] for g in games)!=1:raise ValueError('tie closure')
-    for g in games:
-        if g['season']!=2026 or g['completed']!=(g['actual'] is not None):raise ValueError('schedule status')
-        if g['completed'] and (g['actual']['home_margin']!=g['actual']['home_score']-g['actual']['away_score'] or g['actual']['total']!=g['actual']['home_score']+g['actual']['away_score']):raise ValueError('actual score closure')
-    recent=[index[x] for x in data['recent_final_ids']]
-    if len(recent)!=2 or {frozenset([g['away'],g['home']]) for g in recent}!={frozenset(['JAX','BAL']),frozenset(['CHI','SEA'])} or not all(g['completed'] for g in recent):raise ValueError('recent finals must remain visible')
-    lanes={l['id']:l for l in data['lanes']}
-    if len(lanes)!=len(data['lanes']) or data['default_lane_id'] not in lanes:raise ValueError('lane identities')
-    model_keys={(r['game_id'],r['lane_id'],r['target']) for r in data['model_rows']}
-    expected_model={(g,l,t) for g in index for l in lanes for t in TARGETS}
-    if model_keys!=expected_model or len(data['model_rows'])!=len(expected_model):raise ValueError('model complete grid')
-    horizons=set(data['provider_horizons'])
-    if not {'T1','T2','LATEST_PREGAME','LATEST_OBSERVED','RETAINED_OBSERVED'}.issubset(horizons) or len(horizons)!=len(data['provider_horizons']) or data['default_provider_horizon'] not in horizons:raise ValueError('provider horizon identities')
-    provider_keys={(r['game_id'],r['provider'],r['target'],r['horizon']) for r in data['provider_rows']}
-    expected_provider={(g,p,t,h) for g in index for p in PROVIDERS for t in TARGETS for h in horizons}
-    if provider_keys!=expected_provider or len(data['provider_rows'])!=len(expected_provider):raise ValueError('provider complete grid')
-    for kind,rows in [('model',data['model_rows']),('provider',data['provider_rows'])]:
-        for row in rows:
-            if type(row['available']) is not bool or type(row['eligible']) is not bool:raise ValueError('availability type')
-            if not isinstance(row['reason'],str) or len(row['reason'].strip())<15 or row['reason'].strip().lower() in {'unknown','unavailable','missing','no data'}:raise ValueError('specific evidence reason')
-            if not row['available'] and row.get('value') is not None:raise ValueError('fabricated absent value')
-            if row.get('value') is not None and (not isinstance(row['value'],(int,float)) or not math.isfinite(row['value'])):raise ValueError('finite value')
-            if row['target']=='win' and row.get('value') is not None and not 0<=row['value']<=1:raise ValueError('winner probability')
-            if row['eligible'] and (not row['available'] or not index[row['game_id']]['completed']):raise ValueError('scoring eligibility')
-            if kind=='model' and row.get('actual_issue_eligible') and row.get('issued_at'):
-                if instant(row['issued_at'])>=instant(index[row['game_id']]['kickoff_utc']):raise ValueError('backdated or postgame issue')
-                for field in ['feature_asof','fit_completed_at']:
-                    if row.get(field) and instant(row[field])>instant(row['issued_at']):raise ValueError('model information clock')
-    if len(data['conditional_rows'])!=82 or sum('LESS' in r['orientation'] for r in data['conditional_rows'])!=48 or sum('GREATER' in r['orientation'] for r in data['conditional_rows'])!=34:raise ValueError('conditional orientation closure')
-    for r in data['conditional_rows']:
-        if instant(r['issued_at'])>=instant(index[r['game_id']]['kickoff_utc']):raise ValueError('conditional issue chronology')
-        if abs(r['probability_above']+r['probability_below']+r['probability_equal']-1)>.002:raise ValueError('conditional probability mass')
-        if r['calibration_validated'] or r['automatic_promotion']:raise ValueError('conditional qualification')
-        side={'HOME_MARGIN_STRICTLY_LESS_THAN':'probability_below','HOME_MARGIN_STRICTLY_GREATER_THAN':'probability_above'}.get(r['orientation'])
-        if side is None:raise ValueError('conditional orientation identity')
-        for field in ['probability_of_predicate','probability_given_not_equal','probability_equal',side]:
-            value=r.get(field)
-            if not isinstance(value,(int,float)) or not math.isfinite(value) or not 0<=value<=1:raise ValueError('conditional display probability')
-        if r['probability_of_predicate']!=r[side]:raise ValueError('conditional predicate orientation')
-        unequal=1-r['probability_equal']
-        # Public fields are rounded to four decimals; these are display checks, not rescoring.
-        if unequal<=0 or abs(r['probability_given_not_equal']-r['probability_of_predicate']/unequal)>.00015:raise ValueError('conditional unequal probability')
-    if any(r['denominator']!=122 for r in data['coverage_rows']):raise ValueError('equal completed provider denominator')
-    if {r['provider'] for r in data['coverage_rows']}!=PROVIDERS:raise ValueError('equal provider coverage')
-    for r in data['coverage_rows']:
-        if not 0<=r['eligible']<=r['available']<=122:raise ValueError('coverage accounting')
-    if data['new_owner_fits']!=3502 or data['new_native_states']!=3432 or data['new_scale_states']!=70 or data['new_correction_states']!=0 or data['new_owner_issues']!=754:raise ValueError('actual owner accounting')
-    owner=data['owner_execution']
-    if owner['status']!='PARTIAL_OWNER_CONTINUATION_REPAIR_REQUIRED' or owner['top_level_fit_counter'] is not None or owner['top_level_issue_counter'] is not None:raise ValueError('partial owner status preserved')
-    if (owner['completed_cutoff_jobs'],owner['unique_native_states'],owner['exact_reused_cutoff_jobs'],owner['market_jobs_blocked'])!=(7184,3432,3752,318):raise ValueError('jobs are not fits')
-    if any(owner[k] for k in ['protected_refits','repeated_designation_cells','repeated_injury_cells','repeated_correction_states','controls_changed','source_only_predictive_credit']):raise ValueError('protected evidence or source credit')
-    if len(lanes)!=63 or sum(r['available'] for r in data['model_rows'])!=8921:raise ValueError('all model roles')
-    if (len(data['raw_per_game']),len(data['raw_season_metrics']),len(data['raw_comparisons']),len(data['raw_nested_checks']))!=(18889,75,144,3):raise ValueError('raw completed closure')
-    if (len(data['scale_per_game']),len(data['scale_season_metrics']),len(data['scale_comparisons']),len(data['scale_nested_checks']))!=(35252,140,260,2):raise ValueError('scale completed closure')
-    if any(r['selection_period_eligible'] for r in data['raw_season_metrics'] if r['season']>=2024):raise ValueError('later season selection')
-    if sum(r['primary_p_holm']<.05 for r in data['scale_comparisons'] if r.get('primary_p_holm') is not None):raise ValueError('preserve negative scale result')
-    if {g['away'] for g in games}|{g['home'] for g in games} != {'ARI','ATL','BAL','BUF','CAR','CHI','CIN','CLE','DAL','DEN','DET','GB','HOU','IND','JAX','KC','LA','LAC','LV','MIA','MIN','NE','NO','NYG','NYJ','PHI','PIT','SEA','SF','TB','TEN','WAS'}:raise ValueError('all 32 teams')
-    if len(data['review_long_range_issues'])!=1464 or data['new_review_issue_rows']!=1464 or data['review_outlook_summary']['new_fits'] or data['review_outlook_summary']['new_N054_owner_issues']:raise ValueError('review outlook credit')
-    if len({r['game_id'] for r in data['model_rows'] if r['available'] and r['actual_issue_eligible'] and not index[r['game_id']]['completed']})!=150:raise ValueError('every future forecast accounted')
-    if len(data['raw_provider_timing_exclusions'])!=8 or any(r['provider_quote_later_than_model_cutoff_seconds']<=0 for r in data['raw_provider_timing_exclusions']):raise ValueError('121 standalone is not119 matched')
-    if len(data['all_model_metrics'])<603 or {str(r['season']) for r in data['all_model_metrics']} < {'2024','2025','2026'}:raise ValueError('historic model metrics')
-    if data['next']['status']!='PREPARED_NOT_OWNER_EXECUTED' or data['next']['actual_owner_results']!=0:raise ValueError('prepared scope')
-    if len(data['correction_comparisons'])!=255 or len(data['correction_summary'])!=3:raise ValueError('preserved correction closure')
-    raw=json.dumps(data,ensure_ascii=False)
-    if RETIRED.search(raw):raise ValueError('active terminology boundary')
-    if re.search(r's3://|arn:aws:|sagemaker|/workspace/|/home/|X-Amz-|model_sha256|component_bindings|lambda=|direct201_',raw):raise ValueError('private publication boundary')
-    return data
-
-def pack(data):
-    body=json.dumps(data,separators=(',',':'),ensure_ascii=False).encode()
-    compressed=gzip.compress(body,compresslevel=9,mtime=0)
-    return compressed[:9]+bytes([255])+compressed[10:]
-
-def load(path=HERE/'current_season_n054.json.gz'):
-    return json.loads(gzip.decompress(path.read_bytes()))
-
-def build(data):
-    from actual_n056_n057 import enrich
-    if "n054_actual_recovery" not in data:validate(data)
-    data=enrich(data)
-    source=(HERE/'season_review_n054.template.html').read_text()
-    if RETIRED.search(source):raise ValueError('active template terminology')
-    payload=base64.b64encode(pack(data)).decode()
-    from publication_audit_n057 import audit
-    audited=audit(data)
-    return source.replace('__SEASON_GZIP_BASE64__',payload).replace('__PUBLICATION_AUDIT_JSON__',json.dumps(audited,separators=(',',':'),ensure_ascii=False).replace('<','\\u003c'))
-
+ games=d['games'];index={g['game_id']:g for g in games};teams=collections.Counter(t for g in games for t in (g['home'],g['away']))
+ if len(games)!=272 or len(index)!=272 or len(teams)!=32 or set(teams.values())!={17}:raise ValueError('All games and teams')
+ counts=d['counts'];snap=d['snapshot']
+ if (sum(g['completed'] for g in games),sum(not g['completed'] for g in games))!=(snap['completed'],snap['remaining']):raise ValueError('Dated schedule denominator')
+ if any(g['phase'] not in {'STATUS_FINAL','STATUS_IN_PROGRESS','STATUS_HALFTIME','STATUS_SCHEDULED'} for g in games):raise ValueError('Unsupported phase needs explicit review')
+ if any(sum(g['phase']==phase for g in games)!=snap[field] for phase,field in [('STATUS_FINAL','completed'),('STATUS_IN_PROGRESS','in_progress'),('STATUS_HALFTIME','halftime'),('STATUS_SCHEDULED','scheduled')]) or snap['live']!=snap['in_progress']+snap['halftime'] or snap['completed']+snap['live']+snap['scheduled']!=272:raise ValueError('Dated phase inventory')
+ if {x['code']:x['label'] for x in d['identity_notes']}!={'LA':'Los Angeles Rams','LAC':'Los Angeles Chargers'}:raise ValueError('Legacy Rams identity')
+ for gid,away,home in [('2026_08_CHI_SEA',34,17),('2026_09_JAX_BAL',33,10),('2026_09_CIN_ATL',34,17)]:
+  g=index[gid]
+  if not g['completed'] or (g['result']['away_score'],g['result']['home_score'])!=(away,home):raise ValueError('Protected completed game')
+ horizons=d['provider_horizons']
+ if len(horizons)!=len(set(horizons)) or len(horizons)!=counts['provider_horizons']:raise ValueError('Horizon closure')
+ cells=0
+ for g in games:
+  only(g,GAME,'game');instant(g['kickoff_utc'])
+  if g['completed']!=(g['result'] is not None):raise ValueError('Unsupported result')
+  if g['result']:
+   only(g['result'],{'home_score','away_score','home_margin','total'},'result');r=g['result']
+   if r['home_margin']!=r['home_score']-r['away_score'] or r['total']!=r['home_score']+r['away_score']:raise ValueError('Result arithmetic')
+  if {r['target'] for r in g['model_coverage']}!=TARGETS or len(g['model_coverage'])!=3:raise ValueError('All model targets')
+  for r in g['model_coverage']:
+   only(r,MODEL,'model coverage')
+   if r['roles']!=counts['private_model_roles'] or r['with_value']+r['no_authenticated_value']!=r['roles']:raise ValueError('Precise role inventory')
+   if not 0<=r['actual_issue']<=r['with_value'] or not 0<=r['eligible_in_original_cohort']<=r['with_value']:raise ValueError('Model evidence bounds')
+  if {(r['provider'],r['target']) for r in g['source_coverage']}!={(p,t) for p in PROVIDERS for t in TARGETS} or len(g['source_coverage'])!=9:raise ValueError('Equal provider target inventory')
+  for r in g['source_coverage']:
+   only(r,SOURCE,'source coverage')
+   if [x['horizon'] for x in r['horizons']]!=horizons:raise ValueError('Equal source horizon inventory')
+   for cell in r['horizons']:
+    only(cell,CELL,'source status');cells+=1
+    if any(type(cell[k]) is not bool for k in ('quote_clock_present','capture_clock_present','pregame_possession_established')):raise ValueError('Source clock type')
+    if cell['status'] not in {'MATCHED_COHORT_REFERENCE','SOURCE_ONLY_REFERENCE','NO_AUTHENTICATED_REFERENCE','CONDITIONAL_SOURCE_REFERENCE'}:raise ValueError('Source evidence class')
+    if cell['status']=='NO_AUTHENTICATED_REFERENCE' and cell['pregame_possession_established']:raise ValueError('No invented source possession')
+ if cells!=counts['private_provider_cells'] or counts['private_model_cells']!=272*3*counts['private_model_roles']:raise ValueError('Full inventory reconciliation')
+ if len(d['scoreboards'])!=counts['season_metric_rows'] or not {2024,2025,2026}.issubset({r['season'] for r in d['scoreboards']}):raise ValueError('All three-season metrics')
+ for r in d['scoreboards']:
+  only(r,SCORE,'scoreboard')
+  if r['target'] not in TARGETS:raise ValueError('Normalized public target')
+  if not re.fullmatch(r'Model \d{3}',r['public_model_id']):raise ValueError('Anonymous aggregate identity')
+  if any(isinstance(v,float) and not math.isfinite(v) for v in r.values()):raise ValueError('Non-finite aggregate')
+ if not 0<len(d['issued_cards'])<=8 or len({r['game_id'] for r in d['issued_cards']})!=len(d['issued_cards']):raise ValueError('Bounded issued-card exception')
+ for c in d['issued_cards']:
+  only(c,CARD,'issued card');g=index[c['game_id']];cutoff=instant(g['kickoff_utc'])-datetime.timedelta(hours=1)
+  if not instant(c['source_as_of'])<=instant(c['issue_at'])<cutoff:raise ValueError('Card source/issue chronology')
+  if c['model_completed_at'] and not instant(c['model_completed_at'])<=instant(c['issue_at']):raise ValueError('Card model chronology')
+  if abs(c['pick_probability']-max(c['home_probability'],1-c['home_probability']))>.00011:raise ValueError('Derived probability')
+  if abs(c['projected_home_points']+c['projected_away_points']-c['total_points'])>.02:raise ValueError('Projected score arithmetic')
+ if len(d['distribution_scoreboards'])!=counts['distribution_metric_rows'] or len({(r['public_variant_id'],r['season'],r['target']) for r in d['distribution_scoreboards']})!=len(d['distribution_scoreboards']):raise ValueError('All distribution metrics')
+ for r in d['distribution_scoreboards']:
+  only(r,{'public_variant_id','season','target','games','mean_crps','mean_wis','mean_log_score','mean_covered_90','mean_width_90','mean_negative_total_mass','maximum_negative_total_mass','qualification'},'distribution aggregate')
+  if not re.fullmatch(r'Distribution \d{2}',r['public_variant_id']):raise ValueError('Anonymous distribution identity')
+ if counts['actual_latest_issue_rows']!=sum(r['rows'] for r in d['active_research_status']['new_issue_roles']):raise ValueError('Issue role reconciliation')
+ if (counts['actual_latest_native_fits'],counts['actual_latest_meta_fits'])!=(27,0) or any(counts[k] for k in ('publication_new_fits','publication_new_issues')):raise ValueError('Exact independently audited fits and zero publication credit')
+ if d['active_research_status']['top_level_fit_total'] is not None or d['active_research_status']['top_level_issue_total']!=2286:raise ValueError('Original partial aggregate counters')
+ if d['rolling_policy']['status']!='N058_ATTEMPT_BLOCKED_N059_PREPARED' or d['rolling_policy']['actual_new_V4_owner_fits'] or d['rolling_policy']['actual_new_V4_owner_issues']:raise ValueError('Prepared methodology status')
+ f=d['frontier_feature_status']
+ if f['status']!='N058_ATTEMPT_BLOCKED_N059_PREPARED' or f['proposed']!=f['implemented']+f['blocked'] or sum(f['implemented_by_source'].values())!=f['implemented']:raise ValueError('Prepared feature inventory reconciliation')
+ if any(f[k] for k in ('materialized','preflight_passed','admitted','evaluated','promoted')):raise ValueError('No owner feature admission from synthetic tests')
+ if d['source_summary']['source_only_predictive_credit'] or d['source_summary']['frozen_horizon_records_modified']:raise ValueError('Source-only boundary')
+ if d['public_scope']['complete_candidate_predictions_included'] or d['public_scope']['active_recipes_included'] or d['public_scope']['raw_provider_payloads_included']:raise ValueError('Public/private boundary')
+ raw=json.dumps(d,ensure_ascii=False,allow_nan=False)
+ if FORBIDDEN.search(raw) or RETIRED.search(raw):raise ValueError('Private or transaction-language payload')
+ return d
+def pack(d):return gzip.compress(json.dumps(d,separators=(',',':'),ensure_ascii=False).encode(),compresslevel=9,mtime=0)
+def load(path=HERE/'public_projection_n059.json.gz'):return validate(json.loads(gzip.decompress(path.read_bytes())))
+def build(d):
+ validate(d);s=(HERE/'season_review_n054.template.html').read_text()
+ if FORBIDDEN.search(s) or RETIRED.search(s):raise ValueError('Public template boundary')
+ return s.replace('__PUBLIC_GZIP_BASE64__',base64.b64encode(pack(d)).decode())
 def main():
-    p=argparse.ArgumentParser();p.add_argument('--check',action='store_true');a=p.parse_args()
-    html=build(load());out=HERE/'season_review_n054.html'
-    if a.check:
-        if out.read_text()!=html:raise SystemExit('Season page differs from the validated complete grid')
-        print('N054 complete-season deterministic render: PASS')
-    else:out.write_text(html)
-
+ p=argparse.ArgumentParser();p.add_argument('--check',action='store_true');a=p.parse_args();body=build(load());out=HERE/'season_review_n054.html'
+ if a.check:
+  if out.read_text()!=body:raise SystemExit('Public render differs from reviewed projection')
+  print('N059 bounded public content and complete inventory: PASS')
+ else:out.write_text(body)
 if __name__=='__main__':main()

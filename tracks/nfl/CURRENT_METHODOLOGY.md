@@ -1,71 +1,27 @@
-# NFL evaluation and retraining policy
+# NFL methodology — fixed control and prepared rolling challenger
 
-[Current results](README.md) · [Offline evidence explorer](review.html) · [Current model card](CURRENT_MODEL_CARD.md)
+## Preserve separate evidence classes
 
-A credible scorecard starts with the event set, target and information cutoff. The public examples reproduce those checks with invented data. They do not recreate the private feature pipeline or obtain paid data.
+Original issued forecasts retain their original source, model and issue bytes. Rolling historical reconstructions, genuinely future-issued forecasts and source-only retrospective recoveries remain separate classes. Publication does not reissue old forecasts or turn later retrieval into earlier possession. Label timing can be proven while historical source publication or possession remains unverified.
 
-## Three questions, three records
+## Original fixed control
 
-| Record | What it measures | What it does not establish |
-|---|---|---|
-| Protected original monitoring | Performance of an unchanged historical model on later games | The benefit of retraining |
-| Registered expanding reconstruction | Performance when eligible earlier outcomes update parameters under a predeclared recipe | That a forecast was issued at the time |
-| Genuinely issued prediction | A timestamped forecast produced before its cutoff, with the model available then | Profit without execution, price and settlement evidence |
+The completed studies retain their original identical 2022/23 selection cohorts and frozen later-season choices, unchanged baseline, negative findings and original full comparison families. Their 2024–2026 metrics are not rewritten by the new rolling design. The 120-point/119-winner benchmark, 92/91 timed Polymarket support, common 119 provider comparison and exact91 model comparison remain distinct.
 
-The original monitoring record remains intact. A separately registered weekly or event expanding policy may use earlier current-season labels only when their actual availability precedes the prediction cutoff. It cannot use current-season outcomes to choose a better recipe after the fact. More data may help or hurt; the comparison must measure the result.
+## Prepared rolling-origin challenger
 
-## Time is a data contract
+At each evaluation origin, select using genuinely earlier completed seasons. The initial two-season windows are 2022–2023 for 2024, 2023–2024 for 2025 and 2024–2025 for 2026. Compare three-season, longer, expanding and fixed-recency alternatives through earlier-only nested checks. Newly designed methods that replay previously examined seasons are development evidence, not untouched holdouts.
 
-Source publication or historical availability, label availability, model completion and forecast issue time are different facts. The primary current winner reference uses the registered T−2h reconstruction and T−2h Kalshi quotes. The late-appended resolved event passed exact T−2h input/quote/model-availability checks; its post-result reconstruction is not original issuance. T−1h quotes are a separately labeled later-reference sensitivity, not a reissued model forecast. Original T−24h evaluations remain separate. A modern acquisition time does not by itself prove a historical quote was available; genuine historical arrays and their clock evidence are required.
+At every game cutoff, fit using all admissible earlier outcomes and source values, including already settled current-season games. Transformations are learned only on training rows. Reuse an exact state only if effective inputs, labels, configuration and timing support are unchanged. Do not count a scheduled job, reuse event or synthetic smoke check as a new native fit.
 
-For a rolling fit, only outcomes available strictly before its registered cutoff enter training. An outcome from the game being predicted never enters its purported out-of-sample forecast. A retrospective reconstruction is labeled as such, even if its inputs were historically admissible. An expired pregame probability is not a live wagering forecast.
+Meta layers use earlier genuine out-of-fold predictions. No row may train a base model on its own outcome and then present that prediction as OOF input. Feature refresh, changed-history refit, champion reselection and forecast issue are separate actions with separate counts and clocks. Interruption recovery authenticates durable bodies before reuse.
 
-The [rolling chronology demonstration](rolling_chronology.py) rejects late labels and confused issue clocks. The [information-time controls](review.html#timing) make those checks interactive using invented times.
+## Current continuation limit
 
-## Selection, uncertainty and monitoring
+Actual N058 restored the exact causal append and completed 27 current-origin native states under retained configurations. It issued 2,286 separately classified output rows. The independently registered V4 historical phase stopped at safe-file validation before any verified fitting; the future V4 phase correctly stayed blocked. N059 repairs exact authenticated source-adapter binding, retains path/symlink guards, binds all label clocks into state identity and revalidates warm checkpoints. Prepared fixes do not earn owner execution credit.
 
-Recipes, tuning, calibration and ensemble weights must be selected on eligible **pre-2024 out-of-fold evidence**. The 2024 and 2025 seasons have been repeatedly inspected during development and are reported as development-exposed retrospective evaluations. The 2026 results are descriptive monitoring, with no claim of an untouched model-selection holdout.
+The latest owner schedule has 130 finals, three in progress, one halftime and 138 scheduled. Every not-final game retains a cutoff-ordered next action in the private report. A live or completed game cannot receive a backdated pregame issue, and a far-future current-knowledge outlook cannot claim exact T1 validity.
 
-A retrospectively best accuracy model may differ from the best log-loss, margin or total model. The public scorecard labels this distinction and retains the pre-2024 selected model as a separate reference. A hindsight leader is not an ex-ante profitable strategy.
+All three providers receive the same game/target/horizon inventory. A recorded source observation can remain ineligible for model admission or proper scoring. Missing quote clocks, sparse conditions and unsupported source fields retain specific reasons. No source-only result is evidence of predictive improvement.
 
-Paired uncertainty uses the same games for model and reference, resampling entire weeks to preserve within-week dependence. Point estimates and intervals should be read together. The current historical Kalshi comparisons have intervals crossing zero; the result does not establish a durable edge.
-
-## Uniform metric definitions
-
-| Target | Required evaluation | Comparison boundary |
-|---|---|---|
-| Winner probability | Log loss, Brier, accuracy and calibration | Same resolved games, same horizon, same tie policy |
-| Home points margin | MAE, RMSE, signed bias; interval coverage/width when intervals exist | Same home-minus-away score definition and events |
-| Game total | MAE, RMSE, signed bias; interval coverage/width when intervals exist | Same sum-of-scores definition and events |
-| Exact spread/total contract | Line-specific settlement distribution including pushes; proper scoring when qualified | A point forecast alone is insufficient |
-| Hypothetical economics | Declared price, fees, settlement, stake and predeclared selection | Separate from originally issued picks and realized profit |
-
-Unavailable metrics remain unavailable. The complete 120-final Kalshi winner audit includes one tied game; the 119-non-tie headline uses the declared zero-tie probability proxy. Half-tie settlement and fixed tie-rate sensitivities remain separate analyses. Player props are never converted to game-winner probabilities. Historical point-contract coverage is incomplete and cannot support an all-season Kalshi margin/total claim.
-
-## Learning from earlier mistakes
-
-Error and disagreement features are valid only when they use genuinely earlier issued or forward out-of-fold predictions plus outcomes already available. Residual histories, calibration summaries and disagreement interactions must be recomputed inside chronological training folds. In-sample residuals and future outcomes would contaminate the feature.
-
-The registered design covers eight native estimator families, eight rooted feature blocks, 224 fixed pairwise blends, family/all-family means and causal out-of-fold stacking. This is the declared search space, not every imaginable subset. Earlier negative findings are retained; later feature interactions require a new registered test. Planned arms, newly fitted arms, restored fits and blocked arms are reported separately.
-
-## Public reproduction and private evidence
-
-The public code exposes evaluation contracts, recovery behavior, disclosure checks and invented demonstrations. Sanitized result aggregates and resolved examples can be inspected. The owner explicitly authorized publication of rounded current per-game outputs. The public weekly export may contain game identity, rounded win probability/margin/total, a public model-series label, actual issue/source/fit clocks, outcomes and explicit missingness. This is a narrow output-disclosure exception, not permission to publish the model recipe or provider feed.
-
-Exact production features, feature-level values, fitted weights, tuned recipes, licensed raw quote arrays, credentials and private cloud locations remain private. Unknown public fields fail closed in the disclosure validator. Only DraftKings, Kalshi and Polymarket are active comparison providers. Earlier immutable evidence and its original provider universe remain inside the dated archive.
-
-Current early issues remain distinct from final-hour cards. “Issued before T−2h” means the output was available earlier; it does not mean the inputs were captured at T−2h or that a final-hour selection passed. The interface displays the actual clock, research classification and **Early projection · betting assessment pending** wherever a current forecast exists without a qualified price/fee/liquidity assessment. Missing forecasts remain explicitly unavailable. Personal wager activity is not tracked; a forecast status must not be treated as a wager ledger. Underlying historical `bet_decision` and zero-stake fields remain unchanged, with their original meaning and clocks. Current injury/QB availability is not verified in the early forecast inputs; separately cited team updates are context, not a retroactive model adjustment. Target-specific historically selected forward heads are never replaced by the retrospectively strongest current-season model.
-
-From the repository root:
-
-```bash
-python tracks/nfl/paired_evaluation.py --demo
-python -m unittest discover -s tracks/nfl -p 'test_*.py'
-python tracks/nfl/contracts.py --check-review
-```
-
-These commands require only Python's standard library. A separate Chromium check exercises actual page interactions at desktop and mobile widths. Passing public tests is engineering evidence; it is not acceptance of a private owner run.
-
-## Independent market display clocks
-
-The [all-game coverage review](review.html#latest-coverage) separates two-hour, one-hour, latest-before-kickoff and latest-observed-upcoming references. T2 is a registered evaluation boundary, not a publication embargo. A genuine last observation at or before a cutoff need not be recorded on the exact minute; its age and source clock remain visible. Later quotes never change the model's training or original issue. See [the clock policy and executable examples](CURRENT_MARKET_CLOCKS.md) for the full distinction. The N034 provider-history failure remains a failure even when its completed, authenticated outputs are displayed.
+See [current results and coverage](README.md) and [public/private reporting scope](PUBLIC_BOUNDARY_N059.md).
