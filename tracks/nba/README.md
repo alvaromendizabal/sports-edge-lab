@@ -5,6 +5,57 @@ Reproducible NBA forecasts, complete released-game inventories, chronological mo
 This NBA track belongs to the shared [Sports Edge Lab](../../README.md) repository. Its public material contains sanitized aggregate evidence and invented engineering examples. Actual game-level forecasts, feature recipes, model weights, source responses, full journals, and execution packages remain private.
 
 
+## November 9 B063 review — actual research resumed; matched study remains partial
+
+**The authenticated B062 owner return adds 108 NBA estimator fits, 54 exact snapshot reuses and 162 forecasts.** It also records 16 completed joint-score diagnostics, all still lacking the earlier paired residual support required for a qualified joint distribution. No completed forecast is replaced or counted as a new fit merely because it was recovered.
+
+| Actual evidence | New invocation | Cumulative V5 branch |
+|---|---:|---:|
+| NBA estimator / preprocessing fits | 108 / 108 | 318 / 318 |
+| Exact fitted-snapshot reuses | 54 | 90 |
+| Native forecast records | 162 | 408 |
+| Separate joint-score diagnostic records | 16 | 40 |
+| Completed task records | 178 | 448 |
+| Distinct games represented | No additional games | 24 |
+| Reported failed tasks / unconfirmed in-flight completions | 0 / 0 | Preserved separately by invocation |
+| New calibration / learned-stack fits | 0 / 0 | 0 / 0 |
+| Newly promoted champions / qualified fresh issues | 0 / 0 | 0 / 0 |
+
+The new work adds horizons and revisions on already represented games. Cumulative V5 evidence contains **264 prior-season forecast records on 16 games** and **144 source-aged current-season records on eight games**. All **1,200 assigned current-season games** retain the twelve saved family views, but this does not make V5 rolling coverage complete: **1,192 assigned games still lack a V5 research forecast**, and no fresh V5 near-game issue is established. The earlier rolling branch and immutable original-issued cohorts remain separate.
+
+### Physical scientific support recovered
+
+All 53 outer return members, 52 payload pins, CRCs and exact closure passed. The embedded executable matches its independently retained release identity. Three physically returned scientific-support components reconstruct **2,954 file occurrences and 3,259,637,694 original JSON bytes**, with overlap explicitly included in those totals. Independent reconciliation verifies all **448 completed task bodies, 408 immutable forecast journals and 318 snapshot commits**, along with transitive state references and named, ordered feature schemas. Every earlier accepted task and forecast retains its original scientific values.
+
+Full model-weight files and raw feature-cache bodies remain outside the compact return. Their local verification receipts and pins are not described as independent physical inspection of those omitted bodies. The actual outer shell exit was not supplied. Internal partial status, intended exit, worker exits and physical archive authentication remain distinct.
+
+The recovered historical diagnostic now establishes the earlier support-export failure: the old component exceeded its assigned compressed-size budget. This deeper cause was unavailable in the earlier review and is newly evidenced here. The lossless format subsequently returned the required scientific records without weakening their identity checks.
+
+### New scores retain the adverse findings
+
+The following descriptive scores pool eight shared regular-season games at the newly evaluated horizons: four games from each of the two completed seasons and four origins at each of T60 and T120. They are exposed research evidence, not eight new game identities or a promotion result. Lower values are better.
+
+| Target | Historical foundation | Foundation with adaptive state | Current-season specialist |
+|---|---:|---:|---:|
+| Winner log loss | 0.70984 | 0.69885 | 0.77423 |
+| Margin mean absolute error | 9.4524 | 9.2760 | 10.5938 |
+| Total mean absolute error | 9.1432 | 8.9952 | 8.8305 |
+
+Adaptive-state improvements remain small; the specialist again worsens winner and margin error. On seven exactly shared retained international raw-reference games, the offset model is slightly worse than the reference: log loss **0.61828 versus 0.61778**, and Brier **0.21572 versus 0.21545**. Direct-model log loss is **0.71336**. These later-retrieved single-token references are not strict two-sided fair probabilities or originally possessed live observations.
+
+The registered nonlinear comparison completed **four of 48 fits** before a shared-CPU contention deferral. It has one completed total-point pair and one margin pair with unequal admitted thread counts; the latter remains descriptive. Winner tasks have not completed in that study. The remaining 44 tasks are pending, and the question cannot yet be closed or used to promote a champion.
+
+### Prepared continuation and dashboard
+
+The separately prepared B063 successor resumes unfinished matched work, rechecks resources after bounded CPU-only deferrals, retains compatible thread settings within new matched pairs, and prioritizes eligible games without completed V5 forecasts. Existing recipes and completed task identities remain unchanged. This preparation is separate from owner execution; results above come from the actual B062 return.
+
+The private dashboard now integrates all 408 authenticated forecast records as separate research revisions and retains the complete saved season inventory. Its comparison export appends four datasets and 153 explicitly scoped review rows, preserving all earlier records: **67 datasets and 44,115 overlapping metric/reference records**. Record counts are not independent games. Current and previous weeks follow the Pacific calendar; official status and feature clocks remain their actual dated observations. No official, injury or provider acquisition occurred in this review.
+
+The actual owner reports **271.4 seconds of research** and **536.6 seconds in the internal pre-finalization interval**. Support recovery and packaging have separately recorded, overlapping timing scopes; these are not an independently observed terminal duration. Resource admission observed eight effective CPUs and two initially allocated threads. Dollar cost remains unestablished without billing-rate evidence. Twenty-seven native synthetic canaries are separate from the 108 NBA fits; all requested native family capabilities remain retained. The three reported materializations are worker input loads across two existing cohorts, not three new feature candidates.
+
+Every new native final archive remains directly in the executing user's home directory, including partial, interrupted and handled-failure outcomes. Manual owner execution, checkpoint reuse, resource gates, scientific exposure rules and the public/private boundary remain in force. No continuous training service or completed original-owner workflow is claimed.
+
+
 ## November 9 B062 support recovery and current-week navigation
 
 **B062 advances the recovery implementation; the latest actual owner invocation still added zero NBA fits, zero feature materializations and zero forecasts.** The locally reverified completed work and the failed portable-support gate remain separate. The earlier pilot scores, original journals and dated source observations are preserved without claiming another experiment or a completed nonlinear study.
