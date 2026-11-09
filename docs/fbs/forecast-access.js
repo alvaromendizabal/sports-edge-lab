@@ -52,8 +52,8 @@
     const G=window.FBSCompleteReview,F=window.FBSForwardOutlooks,report=window.FBS_FORWARD_OUTLOOKS_V050,$=id=>document.getElementById(id);
     if(!G||!F||!report||!$('forecast-access-summary'))return;
     const rows=F.inventory(G.currentFixtureSnapshot,report),counts=summary(rows),observedAt=report.source_observed_at;
-    const attempt=window.FBS_EXECUTION_STATUS_V052||window.FBS_EXECUTION_STATUS_V051;
-    if(attempt){$('execution-attempt-summary').textContent=attempt.public_summary;$('execution-attempt-clock').textContent='Stopped '+attempt.stopped_at+' · source remains '+attempt.current_source_observed_at+' · '+attempt.stop_reason+'.';}
+    const attempt=window.FBS_EXECUTION_STATUS_V053||window.FBS_EXECUTION_STATUS_V052||window.FBS_EXECUTION_STATUS_V051;
+    if(attempt){$('execution-attempt-summary').textContent=attempt.public_summary;$('execution-attempt-clock').textContent='Stopped '+attempt.stopped_at+' · source observed '+attempt.current_source_observed_at+' · '+attempt.stop_reason+'.';}
     const esc=value=>String(value??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
     if(attempt&&$('execution-work-tally')){
       const execution=executionReadout(attempt);

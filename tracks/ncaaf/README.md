@@ -1,6 +1,16 @@
 # Sports Edge Lab · NCAA football
 
-## Actual V051 owner result and prepared V052 continuation · November 9
+## Actual V052 science and failed return · November 9
+
+The latest authenticated V052 owner completed **46 base fits, 2 calibration fits, 4,466 feature snapshots and 408 current scalar prediction outputs**. Its **136 new issue records** comprise **14 new foundation game issues plus 122 separately issued calibrated revisions**. The 108 earlier foundation issues retain their exact original clocks; there are **122 unique current foundation games**, not 136 new games. The temporal ablation stage preserved 298 development scalar outputs and 74 paired-origin evaluations before the shared 48-optimizer admission budget ended.
+
+Delivery then failed: the complete, CRC-verified 333-member archive was **150,820,499 bytes**, exceeding the strict 150,000,000-byte ceiling by **820,499 bytes**. Worker and supervisor exits are both 1; the outer shell exit remains unproved. The worker recorded **520.01 seconds before packaging**, and the observer recorded **538.32 seconds** through its failure receipt. These scopes overlap. **V053 is prepared and has not run as an owner.**
+
+[Current all-game evidence](../../docs/fbs/current.html) · [Actual execution counts](../../docs/fbs/execution-status-v053.json) · [Full FBS evidence and limits](../../docs/fbs/README.md). The new source was observed at 2026-11-09T22:01:45Z and completed at 22:02:36Z. Current coverage is 888 games, 685 finals, 807 exact kickoffs and 81 unresolved kickoff times. No named-horizon issue or qualified four-provider baseline is claimed. Saved calibration results are mixed exposed development, with no promotion or prospective performance claim.
+
+The same previously reported native scope now contains **6,060 base fits + 1,838 calibrators = 7,898 completed records**, after adding the actual V052 completions to the preserved 7,850. Earlier ancestral studies are not added again. Globally certified novel feature concepts remain zero; the wider frontier request is incomplete.
+
+## Dated V051 attempt and V052 preparation · superseded by the V052 evidence above
 
 The latest authenticated **V051 owner run stopped at 2026-11-09T20:51:28.166181Z** at the registry resource gate, before source refresh or research. It added **zero base fits, calibrators, feature materializations, predictions, original issues, evaluations and provider requests**. Worker elapsed time before packaging was **4.12 seconds**; the independent launch observer measured **20.10 seconds overall**. These overlapping scopes are not added together. Worker and supervisor exits are independently observed as 2; the outer observer/shell exit remains unproved. [Execution evidence](../../docs/fbs/execution-status-v052.json) · [Complete current FBS account](../../docs/fbs/README.md).
 
