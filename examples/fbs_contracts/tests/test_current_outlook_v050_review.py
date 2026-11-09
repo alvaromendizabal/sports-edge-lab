@@ -104,7 +104,8 @@ class CurrentOutlookV050ReviewTests(unittest.TestCase):
         history = (PUBLIC/'README-history-v049.md').read_bytes()
         self.assertEqual(hashlib.sha256(history).hexdigest(),'ce8fc3ea30376fdf76cf2654157fb220b9df4a8b798f78f5370fbf6ec7e2f179')
         current = (PUBLIC/'README.md').read_text()
-        self.assertIn('## Current state · V050',current)
+        self.assertIn('## Retained V049 scientific work · reported in the V050 review',current)
+        self.assertIn('## Current state · V050',(PUBLIC/'README-history-v051.md').read_text())
         self.assertIn('216 role views are not 216 independent forecasts',current)
 
 
