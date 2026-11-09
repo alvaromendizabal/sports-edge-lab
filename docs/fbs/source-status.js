@@ -40,23 +40,24 @@
   window.FBSSourceStatus=api;
   function init(){
     const G=window.FBSCompleteReview,M=window.FBSResearchMethod,$=id=>document.getElementById(id);
-    const raw=window.FBS_SOURCE_STATUS_V048,market=window.FBS_MARKET_STATUS_V048;
+    const raw=window.FBS_SOURCE_STATUS_V049||window.FBS_SOURCE_STATUS_V048,market=window.FBS_MARKET_STATUS_V049||window.FBS_MARKET_STATUS_V048;
     const status=raw?{...raw,capture:{...raw.capture,observed_at:raw.capture.official_current_season_observed_at},counts:{...raw.counts,fixtures:raw.counts.identified_fixtures}}:null;
     if(!G||!M||!status||!market||!$('source-status-rows'))return;
     const esc=value=>String(value??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
     const time=value=>value&&Number.isFinite(Date.parse(value))?new Intl.DateTimeFormat('en-US',{timeZone:'America/Los_Angeles',month:'short',day:'numeric',hour:'numeric',minute:'2-digit',second:'2-digit',timeZoneName:'short'}).format(new Date(value)):'Clock not retained';
-    const metric=window.FBS_CURRENT_CAPTURE_V045,changed=window.FBS_OBSERVATION_STATUS_V046;
+    const metric=window.FBS_EVALUATION_V049,changed=window.FBS_OBSERVATION_STATUS_V046;
+    const evaluatedGames=window.FBSForecastEvidence.scoredGames(metric),evaluatedClock=metric.capture.source_observed_at;
     $('source-clock-checked').textContent=time(status.capture.observed_at);
     $('source-clock-results').textContent=time(changed.original2026_source_observed_at);
-    $('source-clock-evaluated').textContent=time(metric.capture.observed_at);
-    $('source-clock-metrics-computed').textContent='Metric calculation completed '+time(metric.capture.evaluated_at)+'.';
+    $('source-clock-evaluated').textContent=time(evaluatedClock);
+    $('source-clock-metrics-computed').textContent='Latest retained aggregate computed '+time(metric.evaluated_at)+'.';
     $('source-clock-checked').title=status.capture.observed_at;
     $('source-clock-results').title=changed.original2026_source_observed_at;
-    $('source-clock-evaluated').title=metric.capture.observed_at;
-    const finals=status.counts.current_season_completed,gap=resultGap(finals,metric.counts.seasons['2026'].completed);
-    $('source-clock-gap').textContent=`${finals} observed 2026 finals · ${metric.counts.seasons['2026'].completed} in the latest evaluated snapshot${gap===null?'':` · ${gap} later finals awaiting owner evaluation`}. No metrics are recomputed from displayed values.`;
+    $('source-clock-evaluated').title=evaluatedClock;
+    const finals=status.counts.current_season_completed,gap=resultGap(finals,evaluatedGames);
+    $('source-clock-gap').textContent=`${finals} observed 2026 finals · ${evaluatedGames} in the latest evaluated baseline snapshot${gap===null?'':` · ${gap} later finals awaiting owner evaluation`}. Family and target gaps retain their own denominators. No metrics are recomputed from displayed values.`;
     $('source-recheck-summary').textContent=`Latest authenticated source check: ${status.capture.observed_at}; completed ${status.capture.completed_at}. All ${status.counts.fixtures.toLocaleString()} fixture, ordered-team, kickoff and result coordinates match the prior capture. Zero new results or model outputs; the original result and metric clocks remain separate.`;
-    $('source-owner-summary').textContent='The owner preserved '+status.new_provider_requests_in_owner+' current-source requests, then stopped at source-selector authentication before new fits, forecasts or metric evaluation. Original source records and retained model outputs remain intact. This is a dated partial execution, not current process state.';
+    $('source-owner-summary').textContent='The owner preserved '+status.new_provider_requests_in_owner+' current-source requests and completed 175 baseline plus 70 changed-input metric cohorts from saved forecasts. The later 105-game outlook has no observed outcomes. A subsequent ranking-data conflict stopped the rolling-policy stage; zero new fits, predictions or genuine issues were produced. Original records remain intact. This is a dated partial execution, not current process state.';
     const windows=M.weekWindows(status.capture.observed_at),all=changed.rows;
     $('source-week-navigation').innerHTML=['previous','current','upcoming'].map(key=>{
       const games=all.filter(g=>g.season===2026&&M.periodFor(g,status.capture.observed_at)===key),finals=games.filter(g=>g.completed).length;
