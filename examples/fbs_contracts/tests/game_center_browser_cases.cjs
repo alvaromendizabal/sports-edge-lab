@@ -6,6 +6,7 @@ exports.run=async(page,{width,screenshots})=>{
  assert.equal(await page.locator('#advanced-game-filters').getAttribute('open'),null);
  assert.equal(await page.locator('#research-method .method-grid article').count(),4);
  assert.match(await page.locator('#display-calendar-clock').innerText(),/2026-11-09 Pacific.*source remains 2026-11-09T03:22:14Z/);
+ assert.match(await page.locator('#display-calendar-clock').innerText(),/14 additional source-dated unresolved fixtures.*all 95 unresolved fixtures/s);
  assert.equal(await page.locator('#previous-week-count').innerText(),'63');assert.equal(await page.locator('#current-week-count').innerText(),'53');assert.equal(await page.locator('#upcoming-week-count').innerText(),'30');
  assert.equal(await page.locator('#game-cards .forecast-age').count(),30);
  await page.locator('[data-period="current"]').click();

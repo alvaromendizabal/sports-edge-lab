@@ -37,17 +37,19 @@ A later **report-storage admission limit** stopped checkpoint recovery and repor
 
 The default view includes **all 888 current-season fixtures**. Cards and the table retain available winner, home/winner probability, home margin, total, and saved 80%/95% intervals. Each family/target gap has a reason. CatBoost retains its three protected missing winner outputs on **401858225, 401858226 and 401856811**; their point targets remain available. An interval is not converted into a cover probability. [Original three-season inventory](three-season.json) · [Latest identity and clock metadata](observation-status-v046.json).
 
-| Display calendar, dated November 9 Pacific | Games | Observed finals in the unchanged source | Coverage interpretation |
-|---|---:|---:|---|
-| Previous week, November 2–8 | 63 | 63 | The stored November 2–8 evaluation remains the same exact cohort |
-| Current week, November 9–15 | 53 | 0 | 53 authenticated current-origin shadow outlooks; zero qualified later close-horizon updates |
-| Upcoming week, November 16–22 | 30 | 0 | 30 identified exact-kickoff fixtures in the retained source |
+| Display calendar, dated November 9 Pacific | Exact-kickoff fixtures in week tabs | Additional source-dated unresolved fixtures | Observed finals | Coverage interpretation |
+|---|---:|---:|---:|---|
+| Previous week, November 2–8 | 63 | 0 | 63 | The stored November 2–8 evaluation remains the same exact cohort |
+| Current week, November 9–15 | 53 | 14 | 0 | 67 schedule-associated fixtures; 53 original shadow outlooks, no qualified later-horizon updates |
+| Upcoming week, November 16–22 | 30 | 40 | 0 | 70 schedule-associated fixtures; only 30 have admitted exact kickoffs |
+
+The week tabs contain **exact-kickoff fixtures only**. Source-reported placeholder dates associate another **14 unresolved fixtures with November 9–15**, giving **67 schedule-associated games**, and another 40 with November 16–22. A source-reported date does not establish an exact kickoff or admit a forecast. **All 95 unresolved current-season fixtures remain visible** in the full inventory and the unresolved-game ledger.
 
 The display uses a separately declared **November 9 Pacific calendar** while the source observation stays at **03:22:14 UTC**. It does not use the viewer's browser clock or create a data refresh. Earlier evaluations retain their original **October 26–November 1** and **November 2–8** dates: the previous-week button can link to the exact November 2–8 scorecard, while the November 9–15 and November 16–22 windows have no stored evaluation. Exact Pacific date boundaries, including DST, must match before a comparison link is enabled. Cumulative inventories keep bounded pages; every small weekly scope is shown without hidden pages. Team, result, timing and provider filters do not erase the full-period denominator.
 
 ### Complete remaining-game outlook ledger
 
-The new tracker retains **all 203 remaining current-season fixtures: 108 exact future kickoffs and 95 unresolved kickoffs**. It starts with the **53-game current Pacific week, November 9–15** and offers all-remaining, exact-kickoff and unresolved views. Each game has separate winner/probability, margin, total, interval evidence, original information cutoff, computation clock, original issue clock, horizon and next action. Filters identify missing targets without hiding the denominator. The metadata CSV preserves the same fields and explicit gaps.
+The new tracker retains **all 203 remaining current-season fixtures: 108 exact future kickoffs and 95 unresolved kickoffs**. It starts with the **53 exact-kickoff games in the current Pacific week, November 9–15** and offers all-remaining, exact-kickoff and unresolved views. Each game has separate winner/probability, margin, total, interval evidence, original information cutoff, computation clock, original issue clock, horizon and next action. Filters identify missing targets without hiding the denominator. The metadata CSV preserves the same fields and explicit gaps.
 
 All 108 exact future games have original current-origin shadow outlooks for the three scalar targets. These include **Massachusetts at Toledo (401866463; November 12, 00:30 UTC)**, **Purdue at Iowa (401858519; November 15, 00:30 UTC)**, and **Central Michigan at Buffalo (401866469; November 19, 00:30 UTC)** under their new exact fixture identities. No older forecast is rebound to those resolved times. The 95 current-season TBD fixtures stay visible with `EXACT_KICKOFF_UNRESOLVED`.
 

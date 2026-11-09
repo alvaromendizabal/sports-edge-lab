@@ -14,7 +14,7 @@
  for(const game of games)game.period=M.periodFor(game,periodAnchor);
  const currentFixtureSnapshot=games.map(game=>({...game}));
  for(const key of ['previous','current','upcoming'])$(key+'-week-count').textContent=games.filter(g=>g.season===2026&&g.period===key).length;
- $('display-calendar-clock').textContent=`Dated display calendar: ${M.pacificDate(periodAnchor)} Pacific. Fixture source remains ${sourcePeriodAnchor}; this calendar change does not refresh results or forecasts. Stored evaluations retain their exact original dates.`;
+ $('display-calendar-clock').textContent=`Dated display calendar: ${M.pacificDate(periodAnchor)} Pacific. Fixture source remains ${sourcePeriodAnchor}; this calendar change does not refresh results or forecasts. Week tabs contain exact-kickoff fixtures. There are 14 additional source-dated unresolved fixtures for November 9–15; all 95 unresolved fixtures remain in the full inventory and unresolved ledger. Reported placeholder dates do not establish an exact kickoff or forecast eligibility. Stored evaluations retain their exact original dates.`;
  const originalDevelopment=new Map(R.rows.map(r=>[r.id,r]));
  const optionalDevelopment=new Map(O.rows.map(r=>[r.id,r]));
  const catboostDevelopment=new Map(C.rows.map(r=>[r.id,r]));
@@ -69,7 +69,7 @@
  }
  function renderPeriodOverview(){
   const rows=periodGames(),counts=B.periodSummary(rows,projection,$('model-view').value,A),label=state.period==='all'?(state.season==='all'?'All three seasons':state.season+' season'):state.period==='current'?'Current Pacific week':state.period==='upcoming'?'Upcoming Pacific week':'Previous Pacific week';
-  $('period-overview-title').textContent=label+' · full fixture inventory';
+  $('period-overview-title').textContent=label+(state.period==='all'?' · full fixture inventory':' · exact-kickoff fixture inventory');
   $('period-overview-status').textContent=`${counts.games} games · ${counts.completed} observed finals · ${counts.without_final} without a final in this capture`;
   $('period-overview-note').textContent=`Selected model: ${counts.winner} winner / probability · ${counts.margin} margin · ${counts.total} total · ${counts.cover} qualified cover. Counts above include the whole period before team, result, output, timing or reference filters.`;
   const clocks=B.timingSummary(rows,projection);

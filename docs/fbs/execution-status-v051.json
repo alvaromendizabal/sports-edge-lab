@@ -39,20 +39,31 @@
         "start": "2026-11-02",
         "end_exclusive": "2026-11-09",
         "games": 63,
-        "observed_finals": 63
+        "observed_finals": 63,
+        "source_dated_unresolved_games": 0,
+        "schedule_associated_games": 63,
+        "games_class": "EXACT_KICKOFF_FIXTURES"
       },
       "current": {
         "start": "2026-11-09",
         "end_exclusive": "2026-11-16",
         "games": 53,
-        "observed_finals": 0
+        "observed_finals": 0,
+        "source_dated_unresolved_games": 14,
+        "schedule_associated_games": 67,
+        "games_class": "EXACT_KICKOFF_FIXTURES"
       },
       "upcoming": {
         "start": "2026-11-16",
         "end_exclusive": "2026-11-23",
         "games": 30,
-        "observed_finals": 0
+        "observed_finals": 0,
+        "source_dated_unresolved_games": 40,
+        "schedule_associated_games": 70,
+        "games_class": "EXACT_KICKOFF_FIXTURES"
       }
-    }
+    },
+    "week_navigation_population": "EXACT_KICKOFF_ONLY_WITH_UNRESOLVED_FIXTURES_RETAINED_SEPARATELY",
+    "unresolved_note": "Source-reported placeholder dates locate 14 unresolved fixtures in the November 9–15 window and 40 in November 16–22. These dates do not establish exact kickoff times or forecast eligibility. All 95 unresolved fixtures remain visible in the full inventory and separate unresolved ledger."
   }
 }

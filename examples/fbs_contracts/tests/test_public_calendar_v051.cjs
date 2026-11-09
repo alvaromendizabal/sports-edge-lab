@@ -22,6 +22,22 @@ test('separate dated display calendar accounts for all latest fixtures without c
  assert.deepEqual([remaining.length,F.summarize(remaining).issued,F.summarize(remaining).unresolved],[203,108,95]);
 });
 
+test('source-dated unresolved fixtures remain visible without becoming exact-kickoff weekly forecasts',()=>{
+ const windows=M.weekWindows(status.display_calendar.as_of_utc);
+ for(const [period,expected] of [['previous',0],['current',14],['upcoming',40]]){
+  const range=windows[period];
+  const rows=source.rows.filter(row=>row.season===2026&&!row.kickoff_exact&&
+   M.pacificDate(row.reported_kickoff)>=range.start&&M.pacificDate(row.reported_kickoff)<range.end_exclusive);
+  assert.equal(rows.length,expected);
+  assert.equal(status.display_calendar.periods[period].source_dated_unresolved_games,expected);
+  for(const row of rows){
+   assert.equal(M.periodFor(row,status.display_calendar.as_of_utc),'unresolved');
+   assert.equal(F.coverage(row,report).original_issue_verified,false);
+  }
+ }
+ assert.equal(status.display_calendar.periods.current.schedule_associated_games,67);
+});
+
 test('Monday rollover routes only the exact stored date cohort and never a same-named week',()=>{
  const windows={selected:M.weekWindows(status.display_calendar.as_of_utc),evaluated:M.weekWindows(evaluation.capture.source_observed_at)};
  assert.deepEqual(B.comparisonRoute('2026','previous','latest',windows),{study:'v045',cohort:'current_week'});
