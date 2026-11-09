@@ -80,6 +80,7 @@
     return rows;
   }
   if(typeof module!=='undefined'&&module.exports){module.exports={TRACKS,LABELS,strictJSON,validateV4,validateStream,decodePart};return;}
+  window.NCAAReviewContracts=Object.freeze({strictJSON,validateStream});
   if(typeof document==='undefined')return;
   const $=id=>document.getElementById(id), node=(tag,text)=>{const n=document.createElement(tag);if(text!==undefined)n.textContent=String(text);return n;};
   let current=null,physical=null,generation=0,metricPage=0,partRows=[],partPage=0,partProof=null;
