@@ -17,8 +17,15 @@ ROOT=Path(__file__).resolve().parents[2]
 HERE=Path(__file__).resolve().parent
 HOST='https://alvaro-ncaa-research-review.alv-mendizabal.chatgpt.site'
 
+B054_OWNER_STATUS=(
+    '<strong>Latest owner check · B054 · November 8, 2026 UTC.</strong>'
+    '<p><b>The required package checks stopped the run before research began.</b> All <b>17 research stages were unentered</b>: zero completed and zero numbered stages failed. The run-level result is <code>FAILED_PARTIAL_WORK_PRESERVED</code>. The owner suite recorded <b>2,314 passed, one failed, one optional skip and zero errors</b> across 2,316 cases. A required mutation-rejection assertion failed; this is an implementation check, not a scientific model loss or an established platform fault.</p>'
+    '<p>The typed scientific ledger was not initialized. The return reports <b>zero new owner fits</b>; it does not supply an empty committed-fit ledger. No new source acquisition, forecast or model improvement is credited. Diagnostic-return persistence is separate from research acquisition. Recorded wall time is <b>270.817 seconds</b>; literal external terminal lines were not supplied.</p>'
+    '<p><b>B053 remains the latest admitted partial scientific work.</b> Load <code>B053_CURRENT_DASHBOARD_DATA.json</code> for its existing game/model report. B054 supplied no completed V4 study to load. The next <a href="'+HOST+'/private-report/index.html#refresh-review">refresh-coverage view</a> accepts the separately supplied B055 owner manifest: plans, missed windows, source blocks and actual issue evidence remain separate.</p>'
+)
+
 B053_OWNER_STATUS=(
-    '<strong>Current B053 owner result · authenticated November 8, 2026 UTC.</strong>'
+    '<strong>Retained B053 scientific result · authenticated November 8, 2026 UTC.</strong>'
     '<p><b>Real partial scientific work is preserved.</b> The owner recorded <b>9/16 stages completed</b>, <b>one failed wrapper stage</b> and <b>six not entered</b>. Shared-resource admission deferred within the injury stage. The outer wrapper failure and the inner <code>AdmissionDeferred</code> state remain distinct; no platform root cause is inferred.</p>'
     '<p>The typed ledger records <b>145 new target fits, 45 new scalar fits and 24 new empirical fits</b>, with <b>360 newly committed contracts</b>. It separately retains <b>108 reused historical target fits</b>, <b>13 reused native fits</b> and <b>7 reused scalar fits</b>. The broader accounting contains <b>557 receipt roles and 577 contracts</b>; roles, contracts, forecasts and physical fits are different counts.</p>'
     '<p>The current private pre-study game report is available for inspection. It is a partial owner checkpoint, not a completed rolling frontier study. B046 remains preserved as the earlier scientific baseline. No new champion, complete-season certificate, qualified spread-probability population or current-season promotion is asserted.</p>'
@@ -199,6 +206,7 @@ def render_track(data):
         '__SIBLING_LABEL__':"women's basketball" if sibling=='ncaaw' else "men's basketball",
         '__LEAGUE__':league,'__EVIDENCE__':embedded,
         '__REVIEW_DATE__':review_date(data),
+        '__B054_OWNER_STATUS__':B054_OWNER_STATUS,
         '__B053_OWNER_STATUS__':B053_OWNER_STATUS,
         '__B052_OWNER_STATUS__':B052_OWNER_STATUS,
         '__B051_OWNER_STATUS__':B051_OWNER_STATUS,
@@ -229,7 +237,7 @@ def landing_status(data):
     baseline = data[0]['b045_baseline_observation']; journal = data[0]['b045_forecast_journal_observation']
     if any(d['b045_forecast_journal_observation'] != journal for d in data):raise ValueError('landing journal population disagreement')
     b=data[0]['b046_baseline_observation']; repair=data[0]['b047_source_identity_repair']
-    return (B053_OWNER_STATUS + '<details><summary>Earlier dated owner returns</summary>' + B052_OWNER_STATUS + B051_OWNER_STATUS + B050_OWNER_STATUS + LATEST_OWNER_STARTUP + B048_OWNER_STATUS + B047R1_PHYSICAL_STATUS + '</details>'
+    return (B054_OWNER_STATUS + B053_OWNER_STATUS + '<details><summary>Earlier dated owner returns</summary>' + B052_OWNER_STATUS + B051_OWNER_STATUS + B050_OWNER_STATUS + LATEST_OWNER_STARTUP + B048_OWNER_STATUS + B047R1_PHYSICAL_STATUS + '</details>'
             + f'<p><strong>Dated {release}: {a["completed_scientific_stages"]}/{a["planned_scientific_stages"]} stages completed; partial work and final return preserved.</strong></p>'
             f'<p>The authenticated physical ledger reconciles {a["new_real_target_fits"]:,} target, {a["new_calibration_fits"]:,} scalar and {a["new_empirical_residual_fits"]:,} empirical fits across {a["committed_contract_objects"]:,} contract objects. Injury research deferred at its bounded shared-memory admission gate. Full model import and new scientific superiority are not established by that accounting.</p>'
             f'<p>The B046 pre-study view contains {b["target_rows"]:,} target rows, {b["game_model_rows"]:,} game-model rows and {b["browser_display_rows"]:,} display rows, including three unresolved source candidates. Independent arithmetic reconciles {b["independent_metric_panels_checked"]:,} model/provider panels through {b["independent_scalar_checks"]:,} checks with zero mismatches. These source/version populations do not certify every official physical game.</p>'
@@ -256,7 +264,7 @@ def outputs():
     data=[evidence(league) for league in ('ncaam','ncaaw')]
     return {**{ROOT/'tracks'/d['league']/'index.html':render_track(d) for d in data},
             ROOT/'docs/ncaa/index.html':render_landing(data),
-            ROOT/'docs/ncaa/private-report/index.html':(HERE/'private_report.html.tmpl').read_text().replace('__V4_REVIEW_PANEL__',(HERE/'v4_review.html.tmpl').read_text()).replace('__V4_REVIEW_SCRIPT__',(HERE/'v4_review.js').read_text())}
+            ROOT/'docs/ncaa/private-report/index.html':(HERE/'private_report.html.tmpl').read_text().replace('__B054_OWNER_STATUS__',B054_OWNER_STATUS).replace('__V4_REVIEW_PANEL__',(HERE/'v4_review.html.tmpl').read_text().replace('__REFRESH_REVIEW_PANEL__',(HERE/'refresh_review.html.tmpl').read_text()).replace('__PROJECTION_REVIEW_PANEL__',(HERE/'projection_review.html.tmpl').read_text())).replace('__V4_REVIEW_SCRIPT__',(HERE/'refresh_review.js').read_text()+'\n'+(HERE/'projection_review.js').read_text()+'\n'+(HERE/'v4_review.js').read_text())}
 
 
 def main():

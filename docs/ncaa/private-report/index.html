@@ -2,13 +2,37 @@
 <html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="description" content="Inspect a private NCAA game report in your browser, with explicit original, rolling and market evidence clocks."><meta http-equiv="Content-Security-Policy" content="default-src 'none'; script-src 'unsafe-inline'; style-src 'unsafe-inline'; img-src data:; connect-src 'none'; form-action 'none'; base-uri 'none'; object-src 'none'"><title>Private NCAA Game Report · Sports Edge Lab</title><style>
 :root{--ink:#172723;--muted:#586c61;--green:#136a55;--line:#cad8cc;--paper:#f4f3ed;--white:#fffefb;--amber:#79521c}*{box-sizing:border-box}body{margin:0;background:var(--paper);color:var(--ink);font:15px/1.6 system-ui,sans-serif}main{max-width:1240px;margin:auto;padding:30px 28px 50px}header{display:flex;justify-content:space-between;gap:20px;flex-wrap:wrap;padding-bottom:24px;border-bottom:1px solid var(--line)}a{color:var(--green);text-underline-offset:4px}.brand{font-size:19px;letter-spacing:-.04em;font-weight:750;text-decoration:none;color:var(--ink)}.eyebrow{font-size:11px;letter-spacing:.16em;text-transform:uppercase;color:var(--green);font-weight:700;margin:42px 0 14px}h1{font-size:clamp(35px,5.8vw,66px);letter-spacing:-.055em;line-height:1.09;margin:0 0 23px}h2{font-size:24px;letter-spacing:-.035em;line-height:1.2;margin:0 0 14px}h3{font-size:17px;line-height:1.4;margin:0 0 12px}.intro{max-width:820px;color:var(--muted);font-size:18px}.upload{border:1px solid var(--line);border-radius:16px;padding:25px;background:var(--white);margin:25px 0}.upload label{display:block;font-weight:700;margin-bottom:10px}.upload-row{display:flex;align-items:center;gap:18px;flex-wrap:wrap}input[type=file]{max-width:100%;font:inherit}input[type=file]::file-selector-button,button{background:var(--green);color:white;border:1px solid var(--green);padding:11px 16px;font:650 13px system-ui,sans-serif;border-radius:8px;cursor:pointer}button.secondary{color:var(--green);background:transparent}button:disabled{opacity:.45;cursor:default}button:focus-visible,a:focus-visible,input:focus-visible,select:focus-visible,summary:focus-visible{outline:3px solid #39729c;outline-offset:3px}.fine{font-size:12px;color:var(--muted)}.status{margin-top:14px;overflow-wrap:anywhere;font-size:13px}.error{color:#a12f2f}.freshness-grid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:10px;margin:18px 0}.clock-card{padding:13px;background:#eef2e9;border:1px solid var(--line);border-radius:10px;min-width:0}.clock-card span{font-size:11px;color:var(--muted);display:block}.clock-card strong{display:block;font-size:12px;font-weight:600;overflow-wrap:anywhere}.chunk-controls{display:flex;gap:16px;flex-wrap:wrap;align-items:end}.chunk-controls>div{flex:1;min-width:180px;max-width:100%}.chunk-controls input{width:100%}@media(max-width:680px){.freshness-grid{grid-template-columns:repeat(2,minmax(0,1fr))}}.summary-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:13px;margin:25px 0}.stat{padding:18px;border:1px solid var(--line);background:var(--white);border-radius:12px}.stat strong{font-size:30px;letter-spacing:-.04em;display:block;font-variant-numeric:tabular-nums}.stat span{font-size:12px;color:var(--muted)}.notice{border-left:4px solid #c49340;background:#fbefd7;padding:16px 19px;font-size:13px;margin:22px 0}.notice p{margin:5px 0}.toolbar{display:flex;flex-wrap:wrap;gap:14px;align-items:end;margin:23px 0}.control{min-width:150px;flex:1}.control.search{flex:2;min-width:210px}label{font-size:12px;font-weight:650;display:block;margin-bottom:6px}select,input[type=search]{width:100%;padding:10px 11px;font:inherit;color:var(--ink);background:var(--white);border:1px solid #a9bfae;border-radius:8px;min-height:43px}.tabs{display:flex;gap:10px;flex-wrap:wrap;margin:22px 0}.tabs button[aria-pressed=false]{background:transparent;color:var(--green)}.pager{display:flex;align-items:center;justify-content:space-between;gap:12px;flex-wrap:wrap;margin:19px 0}.pager p{margin:0;font-size:13px;color:var(--muted)}.buttons{display:flex;gap:9px}.game{background:var(--white);border:1px solid var(--line);border-radius:14px;padding:22px;margin:16px 0}.game-head{display:flex;justify-content:space-between;gap:18px;align-items:start}.game-head>div{min-width:0}.game-head h3{overflow-wrap:anywhere;font-size:21px;letter-spacing:-.03em;margin:4px 0}.badge{display:inline-block;font-size:10px;letter-spacing:.045em;text-transform:uppercase;font-weight:750;color:var(--green);background:#e8f0e8;border-radius:5px;padding:4px 7px;margin-right:7px}.badge.warn{color:var(--amber);background:#faefd8}.score{text-align:right;font-size:24px;letter-spacing:-.03em;font-variant-numeric:tabular-nums;min-width:100px}.score span{font-size:11px;display:block;color:var(--muted);letter-spacing:0}.source-note{font-size:12px;color:var(--muted);overflow-wrap:anywhere;margin:10px 0 16px}.data-scroll{overflow:auto;max-width:100%;border:1px solid #e1e6de;border-radius:8px;margin:13px 0}table{border-collapse:collapse;width:100%;font-size:12px}th,td{padding:10px 11px;border-bottom:1px solid #e0e6df;text-align:left;vertical-align:top}th{font-size:10px;text-transform:uppercase;letter-spacing:.035em;background:#f0f3eb;color:#50645a}tbody tr:last-child td{border:0}td{min-width:90px}td:first-child{min-width:165px}td small{display:block;font-size:10px;color:var(--muted);max-width:230px;overflow-wrap:anywhere}.market-entry+.market-entry{border-top:1px solid var(--line);margin-top:11px;padding-top:11px}.market-entry{display:block}.market-clock-note{border:1px solid var(--line);background:#edf3ec;padding:13px 16px;border-radius:10px;font-size:12px;color:var(--muted)}.market-clock-note strong{color:var(--ink)}.market-metric{display:block;white-space:nowrap}.missing{color:#79521c}.note{font-size:12px;color:var(--muted);margin:9px 0}.detail{border-top:1px solid var(--line);margin-top:15px;padding-top:13px}summary{color:var(--green);font-weight:650;font-size:13px;cursor:pointer}pre{white-space:pre-wrap;overflow-wrap:anywhere;font:11px/1.6 ui-monospace,monospace;max-height:480px;overflow:auto;background:#f1f3ec;padding:14px;border-radius:8px}.empty{padding:40px 20px;text-align:center;border:1px dashed var(--line);border-radius:13px;color:var(--muted)}.observation{padding:18px;background:var(--white);border:1px solid var(--line);border-radius:11px;margin:12px 0}.observation h3{overflow-wrap:anywhere}.provider-review{border-top:1px solid var(--line);border-bottom:1px solid var(--line);padding:24px 0;margin:25px 0}.provider-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:13px}.provider-card{border:1px solid var(--line);border-radius:12px;background:var(--white);padding:17px;min-width:0}.provider-card h3{margin:0 0 9px}.provider-availability{color:var(--green);font-size:13px}.comparison-population{border:1px solid var(--line);border-radius:12px;padding:17px;margin:14px 0;background:var(--white)}.comparison-population h3{overflow-wrap:anywhere}.provider-review .source-note{overflow-wrap:anywhere}@media(max-width:680px){.provider-grid{grid-template-columns:1fr}.provider-card{padding:14px}.comparison-population{padding:13px}}.foot{border-top:1px solid var(--line);font-size:11px;color:var(--muted);margin-top:36px;padding-top:22px}.sr{position:absolute;width:1px;height:1px;padding:0;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0}[hidden]{display:none!important}@media(max-width:680px){main{padding:23px 17px 35px}.intro{font-size:16px}.summary-grid{grid-template-columns:repeat(2,1fr)}.stat{padding:14px}.stat strong{font-size:26px}.game{padding:16px}.game-head{flex-direction:column;gap:10px}.score{text-align:left}.score span{display:inline;margin-left:9px}.toolbar{gap:10px}.control{min-width:135px}.upload{padding:19px}.eyebrow{margin-top:30px}h1{font-size:40px}.tabs button{flex:1}td:first-child{min-width:140px}}
 .workspace-nav{display:flex;gap:14px;flex-wrap:wrap;margin:20px 0;padding:12px 0;border-bottom:1px solid var(--line);font-size:12px;font-weight:650}.coverage-workspace{padding-top:24px;margin-top:22px;border-top:1px solid var(--line)}.coverage-kpis{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:10px}.coverage-kpis strong{font-size:21px}.coverage-shortcut{font-size:11px;padding:6px 9px;margin-top:8px}.comparison-forecast{min-width:220px;max-width:300px}.comparison-forecast p{margin:6px 0}.comparison-forecast .missing{font-weight:650}.comparison-forecast strong{font-size:13px}.comparison-table td{min-width:230px}.comparison-table th{position:sticky;top:0}.comparison-table .detail-button{font-size:11px;padding:7px 9px;margin-top:8px}.season-table th{position:sticky;top:0;z-index:1}.season-table td{max-width:250px;min-width:130px}.season-table td:first-child{min-width:220px}.season-table td:last-child{min-width:240px;line-height:1.5}.season-table strong{display:block}.season-table{max-height:720px}#model-scorecards{scroll-margin-top:20px}#model-metrics td:first-child{max-width:250px;overflow-wrap:anywhere}@media(max-width:680px){.coverage-kpis{grid-template-columns:repeat(2,minmax(0,1fr))}.workspace-nav{gap:10px}.coverage-workspace h2{font-size:22px}}code{overflow-wrap:anywhere}.eligibility-card{overflow-wrap:anywhere}#v4-review{overflow-wrap:anywhere}
-</style></head><body><main><header><a class="brand" href="../index.html">Sports Edge Lab</a><nav aria-label="Basketball reviews"><a href="https://alvaro-ncaa-research-review.alv-mendizabal.chatgpt.site/tracks/ncaam/index.html">Men's review</a> · <a href="https://alvaro-ncaa-research-review.alv-mendizabal.chatgpt.site/tracks/ncaaw/index.html">Women's review</a></nav></header><p class="eyebrow">NCAA · Personal report viewer</p><h1>Every supplied game.<br>Every forecast visible.</h1><p class="intro">Open your NCAA report for the season inventory, an original-versus-rolling comparison, three-provider evidence, and a specific recovery action for each missing capability. Every supplied game remains inspectable. Your data stays in this browser tab.</p><section id="v4-review" class="provider-review" aria-labelledby="v4-title">
+</style></head><body><main><header><a class="brand" href="../index.html">Sports Edge Lab</a><nav aria-label="Basketball reviews"><a href="https://alvaro-ncaa-research-review.alv-mendizabal.chatgpt.site/tracks/ncaam/index.html">Men's review</a> · <a href="https://alvaro-ncaa-research-review.alv-mendizabal.chatgpt.site/tracks/ncaaw/index.html">Women's review</a></nav></header><p class="eyebrow">NCAA · Personal report viewer</p><h1>Every supplied game.<br>Every forecast visible.</h1><p class="intro">Open your NCAA report for the season inventory, an original-versus-rolling comparison, three-provider evidence, and a specific recovery action for each missing capability. Every supplied game remains inspectable. Your data stays in this browser tab.</p><section class="provider-review" aria-label="Latest owner check"><strong>Latest owner check · B054 · November 8, 2026 UTC.</strong><p><b>The required package checks stopped the run before research began.</b> All <b>17 research stages were unentered</b>: zero completed and zero numbered stages failed. The run-level result is <code>FAILED_PARTIAL_WORK_PRESERVED</code>. The owner suite recorded <b>2,314 passed, one failed, one optional skip and zero errors</b> across 2,316 cases. A required mutation-rejection assertion failed; this is an implementation check, not a scientific model loss or an established platform fault.</p><p>The typed scientific ledger was not initialized. The return reports <b>zero new owner fits</b>; it does not supply an empty committed-fit ledger. No new source acquisition, forecast or model improvement is credited. Diagnostic-return persistence is separate from research acquisition. Recorded wall time is <b>270.817 seconds</b>; literal external terminal lines were not supplied.</p><p><b>B053 remains the latest admitted partial scientific work.</b> Load <code>B053_CURRENT_DASHBOARD_DATA.json</code> for its existing game/model report. B054 supplied no completed V4 study to load. The next <a href="https://alvaro-ncaa-research-review.alv-mendizabal.chatgpt.site/private-report/index.html#refresh-review">refresh-coverage view</a> accepts the separately supplied B055 owner manifest: plans, missed windows, source blocks and actual issue evidence remain separate.</p></section><section id="v4-review" class="provider-review" aria-labelledby="v4-title">
 <h2 id="v4-title">Rolling research · four evidence tracks</h2>
-<p class="note">Open the separately supplied <strong>B054_V4_PRIVATE_REVIEW.json</strong> from an actual owner return to inspect rolling research, typed operation counts, metrics and source gaps. A prepared package or a successful local test does not establish owner execution. The original game report, full-season schedule and input eligibility views below remain independent.</p>
+<p class="note">Open the separately supplied <strong>B055_V4_PRIVATE_REVIEW.json</strong> when an actual owner return provides it; the dated B054 review schema remains supported to inspect rolling research, typed operation counts, metrics and source gaps. A prepared package or a successful local test does not establish owner execution. The original game report, full-season schedule and input eligibility views below remain independent.</p>
 <div class="upload-row"><div><label for="v4-summary-file">Private V4 review JSON · up to 16 MiB</label><input id="v4-summary-file" type="file" accept=".json,application/json"></div><button id="clear-v4" class="secondary" type="button" disabled>Clear rolling review</button></div>
 <p id="v4-status" class="status" role="status" aria-live="polite">No V4 owner review loaded. Compiled capabilities still require authenticated owner evidence.</p>
 <div id="v4-content" hidden>
 <div id="v4-summary-cards" class="freshness-grid"></div><div id="v4-execution"></div>
+<section id="refresh-review" aria-labelledby="refresh-title">
+<h3 id="refresh-title">Refresh coverage · decisions and missing work</h3>
+<p id="refresh-status" class="status" role="status" aria-live="polite">No refresh-coverage manifest supplied. This does not mean that zero games need an update.</p>
+<div id="refresh-content" hidden>
+<p id="refresh-asof" class="note"></p><div id="refresh-cards" class="freshness-grid"></div>
+<p class="note">Source keys are not a certificate of unique physical-season games. A plan row is an instruction or disposition, not a forecast, a completed fit or an immutable issue. A current state is the producer's recorded classification and requires its original proof. The browser does not acquire sources or schedule work.</p>
+<div class="data-scroll"><table><thead><tr><th>Recorded state</th><th>All target contexts</th><th>Winner probability</th><th>Point margin</th><th>Total points</th></tr></thead><tbody id="refresh-counts"></tbody></table></div>
+<h4>Execution outcomes · separate from the original plan</h4><p id="refresh-execution-note" class="note"></p><div class="data-scroll"><table><thead><tr><th>Recorded execution disposition</th><th>Target contexts</th></tr></thead><tbody id="refresh-execution-counts"></tbody></table></div><p id="refresh-work" class="note"></p><p id="refresh-stream-counts" class="note"></p>
+<div class="toolbar"><div class="control"><label for="refresh-state">Loaded plan state</label><select id="refresh-state"><option value="all">Every recorded state</option></select></div><div class="control"><label for="refresh-league">Loaded plan league</label><select id="refresh-league"><option value="all">Both leagues, kept separate</option><option value="ncaam">Men</option><option value="ncaaw">Women</option></select></div><div class="control"><label for="refresh-target">Loaded plan target</label><select id="refresh-target"><option value="all">Every target</option><option value="win">Winner probability</option><option value="margin">Point margin</option><option value="total">Total points</option></select></div><div class="control search"><label for="refresh-search">Source ID or recovery reason</label><input id="refresh-search" type="search" placeholder="Search the loaded plan part"></div></div>
+<div class="buttons"><button id="refresh-inspect" class="secondary" type="button">Inspect the refresh-plan stream</button><button id="refresh-reset" class="secondary" type="button">Show all loaded plan rows</button><button id="refresh-export" class="secondary" type="button" disabled>Export loaded refresh rows</button></div>
+<p class="note">Select a matching gzip part in the evidence picker below. These filters affect only the loaded refresh-plan part; the metric filters remain separate. The export preserves exact supplied rows and file pins, with an explicit one-part scope. The audit stream has a separate operation denominator.</p>
+</div></section>
+
+<section id="score-review" aria-labelledby="score-title">
+<h3 id="score-title">Expected scores · matched margin and total heads</h3>
+<p id="score-status" class="status" role="status" aria-live="polite">No expected-score projection inventory supplied. Missing pairs are not filled from other model rows.</p>
+<p class="note">These are fractional expected home/away scores supplied by the owner from an exactly matched margin/total pair. They are not rounded outcome predictions, a new score model, an integer score distribution or a line-conditioned probability. No fit, immutable issue or promotion is created by displaying the derived means. Unsupported selected, meta-model or ensemble pairing stays explicit.</p>
+<div id="score-content" hidden><p id="score-contexts" class="note"></p>
+<div class="data-scroll"><table><thead><tr><th>Expected-score disposition</th><th>Emitted rows</th></tr></thead><tbody id="score-counts"></tbody></table></div>
+<div class="toolbar"><div class="control"><label for="score-state">Loaded score-pair disposition</label><select id="score-state"><option value="all">Every supplied disposition</option></select></div><div class="control"><label for="score-league">Loaded score-pair league</label><select id="score-league"><option value="all">All supplied rows; leagues kept separate</option><option value="ncaam">Men</option><option value="ncaaw">Women</option><option value="unavailable">League unavailable in source disposition</option></select></div><div class="control search"><label for="score-search">Source ID, team, family or missing-input reason</label><input id="score-search" type="search" placeholder="Search the loaded score part"></div></div>
+<div class="buttons"><button id="score-inspect" class="secondary" type="button">Inspect expected scores</button><button id="score-reset" class="secondary" type="button">Show all loaded score rows</button></div>
+<p class="note">Select the named gzip part below. Its cards retain both original target prediction IDs, ordered teams, cutoff, origin, horizon and model context. These controls and the evidence-track selector affect only the loaded part. A missing name is shown by its exact supplied team ID; no alias is inferred.</p>
+</div></section>
+
 <div class="toolbar"><div class="control"><label for="v4-track">Evidence track</label><select id="v4-track"><option value="all">All four, kept separate</option><option value="original_frozen_issued">Original frozen issues</option><option value="historically_reconstructed_rolling">Historical rolling reconstruction</option><option value="genuinely_future_issued_rolling">Genuinely future rolling issues</option><option value="model_market_source_only_reference">Model, market and source references</option></select></div><div class="control"><label for="v4-league">Metric league</label><select id="v4-league"><option value="all">Both leagues, kept separate</option><option value="ncaam">Men</option><option value="ncaaw">Women</option></select></div><div class="control"><label for="v4-target">Metric target</label><select id="v4-target"><option value="all">Every supplied target</option><option value="win">Winner probability</option><option value="margin">Point margin</option><option value="total">Total points</option></select></div><div class="control"><label for="v4-season">Metric season end year</label><select id="v4-season"><option value="all">All supplied seasons</option></select></div></div>
 <p class="note">Only supplied evaluated populations receive numeric metrics. Selection policy, target, horizon and evidence track remain separate. Missing values stay unavailable; source-only rows cannot become scores. Counts below are the authored population N and do not establish one common physical-game cohort, a model improvement or promotion.</p>
 <div class="data-scroll"><table><thead><tr><th>League</th><th>Season</th><th>Target</th><th>Evidence track</th><th>Selector</th><th>Horizon minutes</th><th>Authored N</th><th>Accuracy</th><th>Log loss</th><th>Brier</th><th>MAE</th><th>RMSE</th><th>Mean error</th><th>ECE · ten bins</th></tr></thead><tbody id="v4-metric-rows"></tbody></table></div>
@@ -1058,9 +1082,406 @@
   for(const id of ['league','window','model','binding','page-size','market-clock','season-filter','recipe-filter','completion-filter','coverage-filter'])$(id).addEventListener('change',()=>{page=0;render();});$('search').addEventListener('input',()=>{page=0;render();});$('show-comparison').addEventListener('click',()=>{view='games';layout='comparison';page=0;render();});$('show-games').addEventListener('click',()=>{view='games';layout='detail';page=0;render();});$('show-season').addEventListener('click',()=>{view='games';layout='table';page=0;render();});$('show-observations').addEventListener('click',()=>{view='observations';page=0;render();});$('previous').addEventListener('click',()=>{page--;render();});$('next').addEventListener('click',()=>{page++;render();});
 })();
 </script><script>
+/* Generic inspection of a supplied refresh plan. No scheduling, fitting or network access. */
+(() => {
+  'use strict';
+  const STATES = Object.freeze([
+    'DUE_MODEL_REFRESH', 'DUE_FEATURE_REFRESH', 'DUE_ISSUE_REFRESH',
+    'EARLY_OUTLOOK', 'CURRENT_VERIFIED', 'MISSED_WINDOW', 'SOURCE_BLOCKED',
+    'NO_REGISTERED_RECIPE', 'TERMINAL_EVENT',
+  ]);
+  const TARGETS = Object.freeze(['win', 'margin', 'total']);
+  const LABELS = Object.freeze({
+    DUE_MODEL_REFRESH: 'Model refresh due',
+    DUE_FEATURE_REFRESH: 'Feature refresh due',
+    DUE_ISSUE_REFRESH: 'Issue refresh due',
+    EARLY_OUTLOOK: 'Early outlook',
+    CURRENT_VERIFIED: 'Current · owner classified',
+    MISSED_WINDOW: 'Decision window missed',
+    SOURCE_BLOCKED: 'Source evidence blocked',
+    NO_REGISTERED_RECIPE: 'No registered recipe',
+    TERMINAL_EVENT: 'Terminal event',
+  });
+  const object = v => v !== null && typeof v === 'object' && !Array.isArray(v);
+  const count = v => Number.isSafeInteger(v) && v >= 0;
+  const nonempty = v => typeof v === 'string' && v.length > 0;
+  const clock = v => typeof v === 'string' &&
+    /^\d{4}-\d{2}-\d{2}T.*(?:Z|[+-]\d{2}:\d{2})$/.test(v) &&
+    Number.isFinite(Date.parse(v));
+  function canonical(value) {
+    if (Array.isArray(value)) return '[' + value.map(canonical).join(',') + ']';
+    if (object(value)) return '{' + Object.keys(value).sort().map(
+      key => JSON.stringify(key) + ':' + canonical(value[key])).join(',') + '}';
+    return JSON.stringify(value);
+  }
+  function stateCounts(value) {
+    if (!object(value) || Object.keys(value).some(k => !STATES.includes(k)) ||
+        Object.values(value).some(v => !count(v))) throw Error('Invalid refresh state counts.');
+    const total=STATES.reduce((n, state) => n+(value[state]||0),0);
+    if(!Number.isSafeInteger(total))throw Error('Refresh totals exceed safe integer bounds.');
+    return total;
+  }
+  function validate(value, streams, validateStream) {
+    if (!object(value) || value.schema !== 'sel.ncaa.b055.refresh_coverage.v1' ||
+        !clock(value.asof) || !nonempty(value.policy_id)) {
+      throw Error('Invalid refresh coverage identity or declared clock.');
+    }
+    for (const key of ['schedule_rows', 'unique_event_keys', 'target_contexts',
+      'missed_contexts', 'blocked_contexts', 'new_fit_groups', 'reused_fit_groups',
+      'feature_only_refreshes', 'verified_issue_count']) {
+      if (!count(value[key])) throw Error('Invalid refresh count: ' + key);
+    }
+    const expectedContexts = TARGETS.length * value.unique_event_keys;
+    if (!Number.isSafeInteger(expectedContexts) || value.target_contexts !== expectedContexts) {
+      throw Error('Refresh contexts must conserve three target contexts per exact source event key.');
+    }
+    if(value.full_physical_season_coverage!==false||value.background_scheduler_created!==false||
+        value.original_issue_mutation!==false||value.new_promotions!==0||
+        value.plan_counts_describe_registered_asof_not_wall_clock_at_report!==true){
+      throw Error('Refresh plan qualifications are missing or changed.');
+    }
+    if(value.unclassified_verified_fit_groups!==undefined&&!count(value.unclassified_verified_fit_groups))throw Error('Invalid unclassified execution-group count.');
+    if(value.execution_context_dispositions!==undefined&&(!object(value.execution_context_dispositions)||
+        Object.values(value.execution_context_dispositions).some(n=>!count(n))||
+        Object.values(value.execution_context_dispositions).reduce((a,b)=>a+b,0)!==value.target_contexts)){
+      throw Error('Refresh execution dispositions do not conserve target contexts.');
+    }
+    if (value.next_refresh_at !== null && !clock(value.next_refresh_at)) {
+      throw Error('Invalid next refresh clock; missing is null.');
+    }
+    if (stateCounts(value.counts_by_state) !== value.target_contexts ||
+        !object(value.counts_by_target) ||
+        Object.keys(value.counts_by_target).sort().join(',') !== [...TARGETS].sort().join(',')) {
+      throw Error('Refresh state totals do not conserve target contexts.');
+    }
+    const byTarget = TARGETS.reduce((total, target) =>
+      total + stateCounts(value.counts_by_target[target]), 0);
+    if (byTarget !== value.target_contexts) throw Error('Refresh target totals differ.');
+    if (TARGETS.some(target => stateCounts(value.counts_by_target[target]) !== value.unique_event_keys)) {
+      throw Error('Every refresh target must account for each exact source event key.');
+    }
+    for (const state of STATES) {
+      if (TARGETS.reduce((n, target) => n + (value.counts_by_target[target][state] || 0), 0) !==
+          (value.counts_by_state[state] || 0)) throw Error('Refresh state and target cells differ.');
+    }
+    if (value.missed_contexts !== (value.counts_by_state.MISSED_WINDOW || 0) ||
+        value.blocked_contexts !== (value.counts_by_state.SOURCE_BLOCKED || 0) +
+          (value.counts_by_state.NO_REGISTERED_RECIPE || 0)) {
+      throw Error('Refresh missed or blocked subtotal differs.');
+    }
+    if (!object(value.streams) || !object(streams)) throw Error('Refresh streams are missing.');
+    for (const name of ['plan', 'audit']) {
+      const stream = value.streams[name], top = streams['refresh_' + name];
+      if (!object(stream) || !object(top) || canonical(stream) !== canonical(top)) {
+        throw Error('Refresh ' + name + ' descriptor differs from the top-level stream.');
+      }
+      validateStream(stream);
+    }
+    if (value.streams.plan.rows !== value.target_contexts) {
+      throw Error('Refresh plan rows differ from target contexts.');
+    }
+    return value;
+  }
+  function validatePlanRows(rows, expectedAsOf) {
+    const seen = new Set();
+    for (const row of rows) {
+      if (!object(row) || !nonempty(row.event_key) || !nonempty(row.event_id) ||
+          !['ncaam', 'ncaaw'].includes(row.league) || !TARGETS.includes(row.target) ||
+          !STATES.includes(row.state) || !nonempty(row.reason) || !nonempty(row.next_action)) {
+        throw Error('Invalid supplied refresh plan row identity, state or recovery action.');
+      }
+      if(row.new_forecast_credit!==0||row.previous_state_is_not_current_server_issue_proof!==true||
+          row.missed_window_is_evidence_gap_not_proof_no_legacy_issue!==(row.state==='MISSED_WINDOW')){
+        throw Error('Refresh plan row has unsupported forecast or issue credit.');
+      }
+      if(!clock(row.asof)||(expectedAsOf!==undefined&&row.asof!==expectedAsOf))throw Error('Refresh row and manifest clocks differ.');
+      const key = canonical([row.event_key, row.target]);
+      if (seen.has(key)) throw Error('Duplicate source-event/target in this refresh part.');
+      seen.add(key);
+      for (const field of ['event_time', 'window_open_at', 'cutoff_time']) {
+        if (row[field] !== null && row[field] !== undefined && !clock(row[field])) {
+          throw Error('Invalid supplied refresh row clock: ' + field);
+        }
+      }
+    }
+    return rows;
+  }
+  function filterRows(rows, filters) {
+    const query = String(filters.search || '').trim().toLowerCase();
+    return rows.filter(row =>
+      (filters.state === 'all' || row.state === filters.state) &&
+      (filters.league === 'all' || row.league === filters.league) &&
+      (filters.target === 'all' || row.target === filters.target) &&
+      (!query || ['event_key', 'event_id', 'league', 'target', 'state', 'reason', 'next_action']
+        .some(key => String(row[key] ?? '').toLowerCase().includes(query))));
+  }
+  const api = {STATES, TARGETS, LABELS, validate, validatePlanRows, filterRows, canonical};
+  if (typeof module !== 'undefined' && module.exports) { module.exports = api; return; }
+  window.NCAARefreshReview = api;
+  if (typeof document === 'undefined') return;
+  const $ = id => document.getElementById(id);
+  const node = (tag, text) => {
+    const n = document.createElement(tag);
+    if (text !== undefined) n.textContent = String(text);
+    return n;
+  };
+  let coverage = null, loadedRows = [], loadedPin = null, filePin = null;
+  let changed = () => {}, inspect = () => {};
+  function filters() {
+    return {state: $('refresh-state').value, league: $('refresh-league').value,
+      target: $('refresh-target').value, search: $('refresh-search').value};
+  }
+  api.filtered = rows => filterRows(rows, filters());
+  api.active = () => coverage !== null;
+  api.asof = () => coverage?.asof;
+  api.setPart = (rows, pin, name) => {
+    loadedRows = name === 'refresh_plan' ? rows : [];
+    loadedPin = name === 'refresh_plan' ? pin : null;
+    $('refresh-export').disabled = loadedPin === null;
+  };
+  api.render = (value, pin) => {
+    coverage = value || null; filePin = pin || null;
+    $('refresh-content').hidden = !coverage;
+    $('refresh-status').textContent = coverage
+      ? 'A dated refresh plan is loaded. Its classifications are supplied owner evidence, not browser decisions or new forecasts.'
+      : 'No refresh-coverage manifest supplied. This does not mean that zero games need an update.';
+    for (const id of ['refresh-state', 'refresh-league', 'refresh-target']) $(id).value = 'all';
+    $('refresh-search').value = '';
+    api.setPart([], null, null);
+    if (!coverage) return;
+    $('refresh-asof').textContent = 'Plan as of ' + coverage.asof +
+      ' · Next recorded refresh: ' + (coverage.next_refresh_at ?? 'Not supplied') +
+      '. This view never uses the browser clock to change a state.';
+    const cards = [
+      ['Supplied schedule rows', coverage.schedule_rows],
+      ['Exact source event keys', coverage.unique_event_keys],
+      ['Event × target contexts', coverage.target_contexts],
+      ['Missed contexts', coverage.missed_contexts],
+      ['Blocked contexts', coverage.blocked_contexts],
+      ['Authored verified-issue count', coverage.verified_issue_count],
+    ];
+    $('refresh-cards').replaceChildren(...cards.map(([label, value]) => {
+      const card = node('div'); card.className = 'clock-card';
+      card.append(node('strong', label), node('span', value)); return card;
+    }));
+    $('refresh-counts').replaceChildren(...STATES.map(state => {
+      const tr = node('tr');
+      for (const cell of [LABELS[state], coverage.counts_by_state[state] || 0,
+        ...TARGETS.map(target => coverage.counts_by_target[target][state] || 0)]) {
+        tr.append(node('td', cell));
+      }
+      return tr;
+    }));
+    $('refresh-execution-counts').replaceChildren(...Object.entries(coverage.execution_context_dispositions||{}).map(([state,n])=>{
+      const tr=node('tr');tr.append(node('td',state),node('td',n));return tr;
+    }));
+    $('refresh-execution-note').textContent=coverage.execution_context_dispositions===undefined?'No execution-disposition inventory was supplied. Missing is not zero.':'These are separately recorded execution outcomes; they do not rewrite the original plan states.';
+    $('refresh-work').textContent = 'Recorded execution groups: ' +
+      coverage.new_fit_groups + ' new-fit groups; ' + coverage.reused_fit_groups +
+      ' reused groups; ' + coverage.feature_only_refreshes +
+      ' feature-only refreshes; ' + (coverage.unclassified_verified_fit_groups??'unavailable') +
+      ' verified groups with unclassified new/reuse status. Group counts are separate from the typed physical-fit ledger. No background scheduler is created by this report.';
+    $('refresh-stream-counts').textContent = 'Plan: ' + coverage.streams.plan.rows +
+      ' event/target rows in ' + coverage.streams.plan.parts.length + ' parts. Execution audit: ' +
+      coverage.streams.audit.rows + ' separate operation records in ' +
+      coverage.streams.audit.parts.length + ' parts. No part is loaded automatically.';
+  };
+  api.setup = callbacks => {
+    changed = callbacks.changed; inspect = callbacks.inspect;
+    $('refresh-state').replaceChildren(new Option('Every recorded state', 'all'),
+      ...STATES.map(state => new Option(LABELS[state], state)));
+    for (const id of ['refresh-state', 'refresh-league', 'refresh-target']) {
+      $(id).addEventListener('change', changed);
+    }
+    $('refresh-search').addEventListener('input', changed);
+    $('refresh-reset').addEventListener('click', () => {
+      for (const id of ['refresh-state', 'refresh-league', 'refresh-target']) $(id).value = 'all';
+      $('refresh-search').value = ''; changed();
+    });
+    $('refresh-inspect').addEventListener('click', () => inspect('refresh_plan'));
+    $('refresh-export').addEventListener('click', () => {
+      if (!coverage || !loadedPin) return;
+      const value = {
+        schema: 'sel.ncaa.review.loaded_refresh_part_export.v1',
+        scope: 'FILTERED_ROWS_FROM_ONE_VERIFIED_PART_NOT_FULL_STREAM_OR_PHYSICAL_SEASON',
+        plan_asof: coverage.asof, review_file_pin: filePin, part: loadedPin,
+        filters: filters(), loaded_part_rows: loadedRows.length,
+        rows: filterRows(loadedRows, filters()),
+      };
+      const url = URL.createObjectURL(new Blob([JSON.stringify(value, null, 2) + '\n'],
+        {type: 'application/json'}));
+      const link = node('a'); link.href = url; link.download = 'ncaa_loaded_refresh_rows.json';
+      link.click(); setTimeout(() => URL.revokeObjectURL(url), 0);
+    });
+  };
+})();
+
+/* Read-only display of supplied matched-head score means; never derives or fits a model. */
+(() => {
+  'use strict';
+  const STATES = Object.freeze(['DERIVED_EXPECTED_SCORES', 'MISSING_COMPANION_HEAD',
+    'INCOHERENT_NEGATIVE_EXPECTED_SCORE', 'UNSUPPORTED_SELECTOR_PAIRING', 'NON_NUMERIC_OR_SOURCE_ONLY']);
+  const LABELS = Object.freeze({
+    DERIVED_EXPECTED_SCORES: 'Derived expected scores',
+    MISSING_COMPANION_HEAD: 'Matching margin or total head missing',
+    INCOHERENT_NEGATIVE_EXPECTED_SCORE: 'Paired inputs imply a negative score',
+    UNSUPPORTED_SELECTOR_PAIRING: 'Selector pairing is unsupported',
+    NON_NUMERIC_OR_SOURCE_ONLY: 'No numerical companion input',
+  });
+  const object = v => v !== null && typeof v === 'object' && !Array.isArray(v);
+  const count = v => Number.isSafeInteger(v) && v >= 0;
+  const finite = v => typeof v === 'number' && Number.isFinite(v);
+  const id = v => typeof v === 'string' && v.length > 0;
+  const sourcePin = v => typeof v === 'string' && /^[a-f0-9]{64}$/.test(v);
+  const history = v => id(v) || (object(v) && Object.keys(v).length > 0);
+  function validate(value, streams, validateStream) {
+    if (!object(value) || value.schema !== 'sel.ncaa.b055.score_projection_coverage.v1' ||
+        !object(value.status_counts) || Object.keys(value.status_counts).some(s => !STATES.includes(s)) ||
+        Object.values(value.status_counts).some(n => !count(n))) {
+      throw Error('Invalid expected-score coverage or status inventory.');
+    }
+    for (const key of ['input_rows', 'contexts', 'derived_pairs', 'missing_companion_heads', 'paired_contexts']) {
+      if (!count(value[key])) throw Error('Invalid expected-score count: ' + key);
+    }
+    const c = value.status_counts, n = state => c[state] || 0;
+    if (value.derived_pairs !== n('DERIVED_EXPECTED_SCORES') ||
+        value.missing_companion_heads !== n('MISSING_COMPANION_HEAD') ||
+        value.paired_contexts !== n('DERIVED_EXPECTED_SCORES') + n('INCOHERENT_NEGATIVE_EXPECTED_SCORE') ||
+        value.contexts !== 2*value.paired_contexts + value.missing_companion_heads ||
+        value.count_closure !== 'contexts=2*paired_contexts+missing_companion_heads') {
+      throw Error('Expected-score head/context closure differs.');
+    }
+    for (const key of ['all_physical_season_games_complete', 'joint_distribution_qualified',
+      'integer_pmf_qualified', 'cover_push_loss_qualified']) {
+      if (value[key] !== false) throw Error('Unsupported expected-score qualification.');
+    }
+    if (value.new_fits !== 0 || value.new_immutable_issues !== 0) {
+      throw Error('A derived expected score cannot create a fit or issue.');
+    }
+    const stream = streams?.score_projections;
+    validateStream(stream);
+    if (stream.rows !== Object.values(c).reduce((a, b) => a+b, 0)) {
+      throw Error('Expected-score emitted rows differ from the stream.');
+    }
+    return value;
+  }
+  function validateRows(rows) {
+    const seen = new Set();
+    for (const row of rows) {
+      if (!object(row) || row.schema !== 'sel.ncaa.b055.score_projection.v1' ||
+          !id(row.projection_id) || !STATES.includes(row.status) ||
+          !id(row.event_key)) {
+        throw Error('Invalid expected-score row identity or status.');
+      }
+      const completeIdentity = ['ncaam', 'ncaaw'].includes(row.league) && id(row.event_id);
+      const minimalSource = row.status === 'NON_NUMERIC_OR_SOURCE_ONLY' &&
+        row.league === null && row.event_id === null &&
+        ['home_id', 'away_id', 'season_end_year', 'event_time', 'cutoff_time',
+          'prediction_origin', 'horizon_minutes', 'model_context',
+          'expected_home_minus_away', 'expected_total', 'margin_prediction_id',
+          'total_prediction_id'].every(key => row[key] === null) &&
+        ['margin', 'total'].includes(row.input_target) &&
+        id(row.input_disposition) && sourcePin(row.input_record_sha256);
+      if (!completeIdentity && !minimalSource) {
+        throw Error('Incomplete expected-score identity requires an exact pinned non-numeric source disposition.');
+      }
+      if (row.status === 'NON_NUMERIC_OR_SOURCE_ONLY' &&
+          ['mean_home_score', 'mean_away_score', 'expected_home_minus_away',
+            'expected_total', 'margin_prediction_id', 'total_prediction_id',
+            'model_context'].some(key => row[key] !== null)) {
+        throw Error('A non-numeric source disposition must retain null score inputs and model context.');
+      }
+      if (seen.has(row.projection_id)) throw Error('Duplicate expected-score record in this part.');
+      seen.add(row.projection_id);
+      if (row.new_fit_credit !== 0 || row.new_immutable_issue_credit !== 0 ||
+          row.joint_distribution_qualified !== false || row.integer_pmf_qualified !== false ||
+          row.cover_push_loss_qualified !== false || row.derived_mean_not_a_separate_score_model !== true ||
+          row.original_issue_mutation !== false || row.automatic_promotion !== false) {
+        throw Error('Expected-score record has unsupported scientific credit.');
+      }
+      if (row.status === 'DERIVED_EXPECTED_SCORES') {
+        if (![row.mean_home_score, row.mean_away_score, row.expected_home_minus_away,
+          row.expected_total].every(finite) || row.mean_home_score < 0 ||
+          row.mean_away_score < 0 || row.expected_total < 0 ||
+          !id(row.margin_prediction_id) || !id(row.total_prediction_id) ||
+          !object(row.model_context) ||
+          ['family', 'arm'].some(k => !id(row.model_context[k])) ||
+          !history(row.model_context.training_history)) {
+          throw Error('Derived scores require both exact target identities and finite supported means.');
+        }
+        // The owner computes these operations in binary64 and serializes their
+        // round-trip values. Check the same operation order, including signed
+        // zero, without a decimal tolerance or replacement of supplied values.
+        const home = (row.expected_total + row.expected_home_minus_away) / 2;
+        const away = (row.expected_total - row.expected_home_minus_away) / 2;
+        if (row.expected_total < Math.abs(row.expected_home_minus_away) ||
+            !Number.isFinite(home) || !Number.isFinite(away) ||
+            !Object.is(row.mean_home_score, home) || !Object.is(row.mean_away_score, away)) {
+          throw Error('Derived scores differ from the exact retained margin/total arithmetic.');
+        }
+      } else if (row.mean_home_score !== null || row.mean_away_score !== null) {
+        throw Error('Blocked expected scores must remain null.');
+      }
+      for (const field of ['expected_home_minus_away', 'expected_total']) {
+        if (row[field] !== null && !finite(row[field])) throw Error('Invalid retained expected-score input.');
+      }
+    }
+    return rows;
+  }
+  function filterRows(rows, filters) {
+    const query = String(filters.search || '').trim().toLowerCase();
+    return rows.filter(row => (filters.state === 'all' || row.status === filters.state) &&
+      (filters.league === 'all' || row.league === filters.league ||
+        (filters.league === 'unavailable' && row.league === null)) &&
+      (!query || [row.event_id, row.event_key, row.home_team, row.away_team,
+        row.home_id, row.away_id, row.model_context?.family, row.status,
+        row.input_disposition, row.input_target, row.input_record_sha256]
+        .some(value => String(value ?? '').toLowerCase().includes(query))));
+  }
+  const api = {STATES, LABELS, validate, validateRows, filterRows};
+  if (typeof module !== 'undefined' && module.exports) {module.exports = api; return;}
+  window.NCAAProjectionReview = api;
+  if (typeof document === 'undefined') return;
+  const $ = id => document.getElementById(id);
+  const node = (tag, text) => {const n=document.createElement(tag);n.textContent=String(text);return n;};
+  let current = null;
+  api.active = () => current !== null;
+  api.filtered = rows => filterRows(rows, {state:$('score-state').value,
+    league:$('score-league').value, search:$('score-search').value});
+  api.render = value => {
+    current = value || null; $('score-content').hidden = !current;
+    $('score-status').textContent = current
+      ? 'The supplied expected-score inventory is loaded. Select its exact part to inspect pairs and blocked contexts.'
+      : 'No expected-score projection inventory supplied. Missing pairs are not filled from other model rows.';
+    $('score-state').value='all';$('score-league').value='all';$('score-search').value='';
+    if (!current) return;
+    $('score-counts').replaceChildren(...STATES.map(state => {
+      const tr=document.createElement('tr');tr.append(node('td',LABELS[state]),
+        node('td',current.status_counts[state]||0));return tr;
+    }));
+    $('score-contexts').textContent = current.input_rows + ' supplied input rows; ' +
+      current.contexts + ' admitted head contexts = twice ' + current.paired_contexts +
+      ' matched pair contexts + ' + current.missing_companion_heads +
+      ' missing companion heads. Emitted dispositions and input/head counts are different denominators.';
+  };
+  api.setup = callbacks => {
+    $('score-state').replaceChildren(new Option('Every supplied disposition','all'),
+      ...STATES.map(state=>new Option(LABELS[state],state)));
+    for(const key of ['score-state','score-league'])$(key).addEventListener('change',callbacks.changed);
+    $('score-search').addEventListener('input',callbacks.changed);
+    $('score-inspect').addEventListener('click',()=>callbacks.inspect('score_projections'));
+    $('score-reset').addEventListener('click',()=>{
+      $('score-state').value='all';$('score-league').value='all';$('score-search').value='';
+      callbacks.changed();
+    });
+  };
+})();
+
 /* Generic private-file inspector. No model code, provider requests or embedded owner data. */
 (() => {
   'use strict';
+  const refresh = typeof module !== 'undefined' && module.exports ? require('./refresh_review.js') : window.NCAARefreshReview;
+  const projection = typeof module !== 'undefined' && module.exports ? require('./projection_review.js') : window.NCAAProjectionReview;
   const TRACKS = Object.freeze([
     'original_frozen_issued', 'historically_reconstructed_rolling',
     'genuinely_future_issued_rolling', 'model_market_source_only_reference',
@@ -1100,7 +1521,7 @@
     return value;
   }
   function validateV4(value) {
-    if(!object(value)||value.schema!=='sel.ncaa.b054.private_review.v1'||value.project!=='ncaa_basketball'||value.release!=='B054'||value.audience!=='private')throw Error('Choose the separate V4 private review JSON.');
+    if(!object(value)||!['B054','B055'].includes(value.release)||value.schema!=='sel.ncaa.'+value.release.toLowerCase()+'.private_review.v1'||value.project!=='ncaa_basketball'||value.audience!=='private')throw Error('Choose the separate V4 private review JSON for B054 or B055.');
     if(!Array.isArray(value.tracks)||JSON.stringify(value.tracks)!==JSON.stringify(TRACKS))throw Error('The four evidence tracks are incomplete or reordered.');
     if(value.historical_reconstruction_is_not_as_issued!==true||value.original_issue_mutation!==false||value.automatic_promotion!==false||value.all_physical_season_games_complete!==false)throw Error('V4 evidence qualifications are missing or changed.');
     if(!object(value.report)||!object(value.metrics)||value.metrics.schema!=='sel.ncaa.b054.metrics.v1'||!Array.isArray(value.metrics.rows)||value.metrics.rows.length>200000||!object(value.metrics.dispositions)||!object(value.streams))throw Error('V4 report inventories are missing.');
@@ -1112,6 +1533,14 @@
       for(const field of ['log_loss','mae','rmse'])if(row[field]!==undefined&&row[field]!==null&&row[field]<0)throw Error('V4 loss must be nonnegative.');
     }
     for(const stream of Object.values(value.streams))validateStream(stream);
+    if(value.report.refresh_coverage!==undefined&&value.report.refresh_coverage!==null){
+      if(value.release!=='B055')throw Error('Refresh coverage requires the B055 review contract.');
+      refresh.validate(value.report.refresh_coverage,value.streams,validateStream);
+    }else if(value.streams.refresh_plan||value.streams.refresh_audit){throw Error('Refresh streams require their coverage manifest.');}
+    if(value.report.score_projection_coverage!==undefined&&value.report.score_projection_coverage!==null){
+      if(value.release!=='B055')throw Error('Expected scores require the B055 review contract.');
+      projection.validate(value.report.score_projection_coverage,value.streams,validateStream);
+    }else if(value.streams.score_projections){throw Error('Expected-score stream requires its coverage manifest.');}
     return value;
   }
   async function digest(bytes){return [...new Uint8Array(await crypto.subtle.digest('SHA-256',bytes))].map(x=>x.toString(16).padStart(2,'0')).join('');}
@@ -1140,16 +1569,64 @@
   function renderMetrics(){if(!current)return;const rows=filteredMetrics(),pages=Math.max(1,Math.ceil(rows.length/25));metricPage=Math.min(metricPage,pages-1);const shown=rows.slice(metricPage*25,metricPage*25+25),body=$('v4-metric-rows');body.replaceChildren();for(const r of shown){const tr=node('tr');for(const v of [r.league,r.season_end_year,r.target,LABELS[r.evaluation_track],r.selector,r.horizon_minutes,r.n,...METRICS.map(k=>r[k])])tr.append(node('td',display(v)));body.append(tr);}$('v4-metric-count').textContent=rows.length+' supplied metric populations; '+(current.metrics.rows.length-rows.length)+' hidden by filters. '+(rows.length?'Showing '+(metricPage*25+1)+'–'+(metricPage*25+shown.length)+'.':'No evaluated population was supplied for this selection.');$('v4-metric-previous').disabled=metricPage===0;$('v4-metric-next').disabled=metricPage+1>=pages;}
   function selectedStream(){return current?.streams[$('v4-stream').value];}
   function selectedPart(){return selectedStream()?.parts[Number($('v4-part').value)];}
-  function renderParts(){const rows=partRows.filter(r=>$('v4-track').value==='all'||r.evaluation_track===$('v4-track').value),pages=Math.max(1,Math.ceil(rows.length/25));partPage=Math.min(partPage,pages-1);$('v4-part-count').textContent=partProof?'Showing '+rows.length+' matching rows from '+partRows.length+' verified rows in one part. Other parts remain unloaded; full stream closure is not claimed.':'No evidence part loaded. A manifest and its row count are references, not loaded game records.';const target=$('v4-part-rows');target.replaceChildren();for(const r of rows.slice(partPage*25,partPage*25+25)){const card=node('article');card.className='eligibility-card';card.dataset.v4Record='';const identity=r.event_id??r.target_game?.event_id??r.game?.event_id;card.append(node('h3',[display(r.league??r.target_game?.league),display(identity),display(r.target)].join(' · ')),node('p','Track: '+(LABELS[r.evaluation_track]||display(r.evaluation_track))+' · State: '+display(r.status)),node('p','Prediction: '+display(r.prediction)+' · Outcome: '+display(r.actual)),detail('Exact supplied record and clocks',r));target.append(card);}$('v4-part-previous').disabled=partPage===0;$('v4-part-next').disabled=partPage+1>=pages;}
-  function resetPart(){generation++;partRows=[];partPage=0;partProof=null;$('v4-part-file').value='';$('v4-part-status').textContent='';renderParts();}
+  function renderParts(){
+    const isPlan=$('v4-stream').value==='refresh_plan'&&refresh.active();
+    const isScore=$('v4-stream').value==='score_projections'&&projection.active();
+    const isOperational=['refresh_audit','refresh_state'].includes($('v4-stream').value);
+    const trackRows=partRows.filter(r=>$('v4-track').value==='all'||r.evaluation_track===$('v4-track').value);
+    const rows=isPlan?refresh.filtered(partRows):isOperational?partRows:isScore?projection.filtered(trackRows):trackRows;
+    const pages=Math.max(1,Math.ceil(rows.length/25));partPage=Math.min(partPage,pages-1);
+    $('v4-part-count').textContent=partProof?'Showing '+rows.length+' matching rows from '+partRows.length+' verified rows in one part; '+(partRows.length-rows.length)+' hidden by filters. Other parts remain unloaded; full stream closure is not claimed.':'No evidence part loaded. A manifest and its row count are references, not loaded game records.';
+    const target=$('v4-part-rows');target.replaceChildren();
+    for(const r of rows.slice(partPage*25,partPage*25+25)){
+      const card=node('article');card.className='eligibility-card';card.dataset.v4Record='';
+      const identity=r.event_id??r.target_game?.event_id??r.game?.event_id;
+      card.append(node('h3',isOperational?'Refresh evidence · '+display(r.kind)+' · '+display(r.identity??r.event_key??r.recipe_id??r.snapshot_id??'See exact record'):[display(r.league??r.target_game?.league),display(identity),isScore?'Expected scores':display(r.target)].join(' · ')));
+      if(isPlan){
+        card.dataset.refreshState=r.state;
+        card.append(node('p','Recorded plan state: '+refresh.LABELS[r.state]),
+          node('p','Reason: '+r.reason),node('p','Next action: '+r.next_action),
+          node('p','Window opens: '+display(r.window_open_at)+' · Cutoff: '+display(r.cutoff_time)),
+          node('p','Declared role: '+display(r.role)+'. This row is a plan disposition, not a new forecast.'));
+      }else if(isOperational){
+        card.append(node('p','Record kind: '+display(r.kind)),node('p','Recorded disposition: '+display(r.disposition??r.last_execution_disposition??r.fit_reused_or_new??'No execution disposition supplied for this record kind')),
+          node('p','Plan state: '+display(r.planned_state??'Not a per-context plan record')),
+          node('p',$('v4-stream').value==='refresh_state'?'Persisted trigger-comparison state; it does not authenticate a current model or server-issued forecast.':'A separate execution record; it does not replace the immutable plan denominator.'));
+      }else if(isScore){
+        card.dataset.scoreStatus=r.status;
+        if(r.status==='NON_NUMERIC_OR_SOURCE_ONLY'){
+          card.append(node('p','Exact source event key: '+display(r.event_key)),
+            node('p','Input disposition: '+display(r.input_disposition)+' · Input target: '+display(r.input_target)),
+            node('p','Input record SHA-256: '+display(r.input_record_sha256)),
+            node('p','Missing league, event ID or source clocks remain unavailable; this view never derives them from the source key.'));
+        }
+        card.append(node('p','Disposition: '+projection.LABELS[r.status]),
+          node('p','Home: '+display(r.home_team??r.home_id)+' · Expected score: '+display(r.mean_home_score)),
+          node('p','Away: '+display(r.away_team??r.away_id)+' · Expected score: '+display(r.mean_away_score)),
+          node('p','Retained margin input: '+display(r.expected_home_minus_away)+' · Total input: '+display(r.expected_total)),
+          node('p','Origin: '+display(r.prediction_origin)+' · Cutoff: '+display(r.cutoff_time)+' · Horizon minutes: '+display(r.horizon_minutes)),
+          node('p','Margin prediction ID: '+display(r.margin_prediction_id)),
+          node('p','Total prediction ID: '+display(r.total_prediction_id)),
+          node('p','Supplied context: '+display(r.model_context?.family)+' / '+display(r.model_context?.arm)+' / '+(object(r.model_context?.training_history)?JSON.stringify(r.model_context.training_history):display(r.model_context?.training_history))),
+          node('p','Fractional derived means only; no joint score distribution, line-result probability or new issue.'));
+      }else{
+        card.append(node('p','Track: '+(LABELS[r.evaluation_track]||display(r.evaluation_track))+' · State: '+display(r.status??r.disposition)),node('p','Prediction: '+display(r.prediction)+' · Outcome: '+display(r.actual)));
+      }
+      card.append(detail('Exact supplied record and clocks',r));target.append(card);
+    }
+    $('v4-part-previous').disabled=partPage===0;$('v4-part-next').disabled=partPage+1>=pages;
+  }
+  function resetPart(){generation++;partRows=[];partPage=0;partProof=null;refresh.setPart([],null,null);$('v4-part-file').value='';$('v4-part-status').textContent='';renderParts();}
   function resetStream(){resetPart();const stream=selectedStream();$('v4-part').replaceChildren(...(stream?.parts||[]).map((p,i)=>new Option('Part '+(i+1)+' · '+p.rows+' rows',String(i))));$('v4-part-file').disabled=!stream?.parts.length;$('v4-stream-proof').replaceChildren(...(stream?[detail('Declared full stream and exact part pins',stream)]:[]));}
-  function load(value,pin){current=validateV4(value);physical=pin;generation++;metricPage=0;$('v4-content').hidden=false;$('clear-v4').disabled=false;$('v4-track').value='all';$('v4-league').value='all';$('v4-target').value='all';options('v4-season',current.metrics.rows.map(r=>String(r.season_end_year)),'All supplied seasons');$('v4-summary-cards').replaceChildren(...TRACKS.map(track=>{const n=node('div');n.className='clock-card';n.append(node('strong',LABELS[track]),node('span',current.metrics.rows.filter(r=>r.evaluation_track===track).length+' metric populations supplied'));return n;}));$('v4-execution').replaceChildren(node('p','Recorded status: '+display(current.status)),detail('Execution, typed counts and remaining work',current.report),detail('Selected file identity and retained qualifications',{physical_pin:physical,source_sha256:current.source_sha256,run_id:current.run_id,created_at:current.created_at,automatic_promotion:current.automatic_promotion,all_physical_season_games_complete:current.all_physical_season_games_complete,metric_dispositions:current.metrics.dispositions}));$('v4-stream').replaceChildren(...Object.entries(current.streams).map(([name,stream])=>new Option(name+' · '+stream.rows+' declared rows',name)));resetStream();renderMetrics();$('v4-status').className='status';$('v4-status').textContent='V4 review loaded. Four evidence tracks remain separate; no game stream is automatically loaded and no promotion is implied.';}
+  function load(value,pin){current=validateV4(value);physical=pin;refresh.render(current.report.refresh_coverage,physical);projection.render(current.report.score_projection_coverage);generation++;metricPage=0;$('v4-content').hidden=false;$('clear-v4').disabled=false;$('v4-track').value='all';$('v4-league').value='all';$('v4-target').value='all';options('v4-season',current.metrics.rows.map(r=>String(r.season_end_year)),'All supplied seasons');$('v4-summary-cards').replaceChildren(...TRACKS.map(track=>{const n=node('div');n.className='clock-card';n.append(node('strong',LABELS[track]),node('span',current.metrics.rows.filter(r=>r.evaluation_track===track).length+' metric populations supplied'));return n;}));$('v4-execution').replaceChildren(node('p','Recorded status: '+display(current.status)),detail('Execution, typed counts and remaining work',current.report),detail('Selected file identity and retained qualifications',{physical_pin:physical,source_sha256:current.source_sha256,run_id:current.run_id,created_at:current.created_at,automatic_promotion:current.automatic_promotion,all_physical_season_games_complete:current.all_physical_season_games_complete,metric_dispositions:current.metrics.dispositions}));$('v4-stream').replaceChildren(...Object.entries(current.streams).map(([name,stream])=>new Option(name+' · '+stream.rows+' declared rows',name)));resetStream();renderMetrics();$('v4-status').className='status';$('v4-status').textContent='V4 review loaded. Four evidence tracks remain separate; no game stream is automatically loaded and no promotion is implied.';}
   $('v4-summary-file').addEventListener('change',async()=>{const file=$('v4-summary-file').files[0],token=++generation;if(!file)return;try{if(file.size>LIMIT)throw Error('Review summary exceeds 16 MiB.');const bytes=await file.arrayBuffer(),value=strictJSON(new TextDecoder('utf-8',{fatal:true}).decode(bytes));validateV4(value);const sha=await digest(bytes);if(token!==generation)return;load(value,{bytes:bytes.byteLength,sha256:sha});}catch(e){if(token===generation){$('v4-status').className='status error';$('v4-status').textContent='Cannot open V4 review: '+e.message+' The previous valid view remains.';}}});
-  $('v4-part-file').addEventListener('change',async()=>{const file=$('v4-part-file').files[0],part=selectedPart(),token=++generation;if(!file||!part)return;try{if(file.size!==part.reference.bytes)throw Error('Selected file size differs from the pinned part.');const rows=await decodePart(await file.arrayBuffer(),part);if(token!==generation)return;partRows=rows;partPage=0;partProof=part;$('v4-part-status').className='status';$('v4-part-status').textContent='Verified compressed and decoded SHA-256, exact sizes and '+rows.length+' rows for this selected part.';renderParts();}catch(e){if(token===generation){$('v4-part-status').className='status error';$('v4-part-status').textContent='Cannot open V4 part: '+e.message+' Previous valid rows remain.';}}});
+  $('v4-part-file').addEventListener('change',async()=>{const file=$('v4-part-file').files[0],part=selectedPart(),token=++generation;if(!file||!part)return;try{if(file.size!==part.reference.bytes)throw Error('Selected file size differs from the pinned part.');const rows=await decodePart(await file.arrayBuffer(),part);if($('v4-stream').value==='refresh_plan'&&refresh.active())refresh.validatePlanRows(rows,refresh.asof());if($('v4-stream').value==='score_projections'&&projection.active())projection.validateRows(rows);if(token!==generation)return;partRows=rows;partPage=0;partProof=part;refresh.setPart(rows,part,$('v4-stream').value);$('v4-part-status').className='status';$('v4-part-status').textContent='Verified compressed and decoded SHA-256, exact sizes and '+rows.length+' rows for this selected part.';renderParts();}catch(e){if(token===generation){$('v4-part-status').className='status error';$('v4-part-status').textContent='Cannot open V4 part: '+e.message+' Previous valid rows remain.';}}});
+  const inspectionCallbacks={changed:()=>{partPage=0;renderParts();},inspect:name=>{if(!current?.streams[name])return;$('v4-stream').value=name;resetStream();$('v4-part-file').scrollIntoView({block:'center'});}};
+  refresh.setup(inspectionCallbacks);projection.setup(inspectionCallbacks);
   for(const id of ['v4-track','v4-league','v4-target','v4-season'])$(id).addEventListener('change',()=>{metricPage=0;partPage=0;renderMetrics();renderParts();});
   $('v4-stream').addEventListener('change',resetStream);$('v4-part').addEventListener('change',resetPart);
   $('v4-metric-previous').addEventListener('click',()=>{metricPage--;renderMetrics();});$('v4-metric-next').addEventListener('click',()=>{metricPage++;renderMetrics();});$('v4-part-previous').addEventListener('click',()=>{partPage--;renderParts();});$('v4-part-next').addEventListener('click',()=>{partPage++;renderParts();});
-  $('clear-v4').addEventListener('click',()=>{generation++;current=null;physical=null;partRows=[];partProof=null;$('v4-content').hidden=true;$('clear-v4').disabled=true;for(const id of ['v4-summary-cards','v4-execution','v4-metric-rows','v4-part-rows','v4-stream-proof'])$(id).replaceChildren();$('v4-summary-file').value='';$('v4-part-file').value='';$('v4-status').textContent='V4 review cleared. The independent game, schedule and eligibility views are unchanged.';});
+  $('clear-v4').addEventListener('click',()=>{generation++;current=null;physical=null;partRows=[];partProof=null;refresh.render(null,null);projection.render(null);$('v4-content').hidden=true;$('clear-v4').disabled=true;for(const id of ['v4-summary-cards','v4-execution','v4-metric-rows','v4-part-rows','v4-stream-proof'])$(id).replaceChildren();$('v4-summary-file').value='';$('v4-part-file').value='';$('v4-status').textContent='V4 review cleared. The independent game, schedule and eligibility views are unchanged.';});
 })();
 
 </script></body></html>
