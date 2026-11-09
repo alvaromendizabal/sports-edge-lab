@@ -7,6 +7,7 @@ exports.run=async({browser,root,screenshots})=>{
  for(const width of [1440,390]){
   await page.setViewportSize({width,height:1000});await page.goto('file://'+path.join(root,'docs/fbs/complete.html'));
   await require('./ranking_research_browser_cases.cjs').run(page);
+  await require('./source_status_browser_cases.cjs').run(page);
   await require('./game_center_browser_cases.cjs').run(page,{width,screenshots});
   await require('./current_capture_browser_cases.cjs').run(page);
   assert.match(await page.locator('#result-status').innerText(),/^888 games · 629 observed complete · 790 development projections$/);

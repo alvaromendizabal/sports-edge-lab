@@ -3,7 +3,7 @@ const assert=require('node:assert/strict'),fs=require('node:fs');
 exports.run=async page=>{
  assert.equal(await page.locator('#ranking-source-rows tr').count(),21);
  assert.equal(await page.locator('#ranking-selection-history tr').count(),6);
- assert.match(await page.locator('#source-recheck-summary').innerText(),/2026-11-08T22:12:26Z/);
+ assert.match(await page.locator('#source-recheck-summary').innerText(),/2026-11-08T23:57:41Z/);
  assert.match(await page.locator('#latest-market-census-summary').innerText(),/33 events \/ 99 targets/);
  assert.match(await page.locator('#latest-market-census-summary').innerText(),/201 raw source-clock checks are a different denominator/);
  assert.match(await page.locator('#ranking-stage-capture').innerText(),/9 verified source requests/);
