@@ -1,7 +1,7 @@
 'use strict';
 const assert=require('node:assert/strict');
 exports.run=async page=>{
-  await page.locator('[data-period="current"]').click();
+  await page.locator('[data-period="previous"]').click();
   for(const family of ['v041_pytorch','v041_tensorflow','v041_neural_fixed_equal_blend']){
     await page.selectOption('#model-view',family);
     assert.match(await page.locator('#result-status').innerText(),/^63 games · 7 observed complete · 63 development projections$/);

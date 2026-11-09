@@ -5,7 +5,7 @@ exports.run=async page=>{
  assert.equal(await page.locator('.evidence-lanes article').count(),4);
  assert.match(await page.locator('#evidence-lane-foundation').innerText(),/685 current-season outcomes/);
  assert.match(await page.locator('#forecast-evidence-issued').innerText(),/Original issued forecasts in these legacy evaluation banks: 0/);
- assert.match(await page.locator('#refresh-priority-summary').innerText(),/53 upcoming fixtures · 2 new kickoff identities.*51 with saved legacy outlooks.*0 authenticated near-term issues/);
+ assert.match(await page.locator('#refresh-priority-summary').innerText(),/53 archived November 9–15 fixtures · 2 new kickoff identities.*51 with saved legacy outlooks.*0 authenticated near-term issues/);
  assert.equal(await page.locator('#refresh-priority-rows tr').count(),53);
  await page.locator('#refresh-priority details > summary').click();
  assert.match(await page.locator('#refresh-priority-rows tr').first().innerText(),/Massachusetts at Toledo/);

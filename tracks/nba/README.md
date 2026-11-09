@@ -5,6 +5,75 @@ Reproducible NBA forecasts, complete released-game inventories, chronological mo
 This NBA track belongs to the shared [Sports Edge Lab](../../README.md) repository. Its public material contains sanitized aggregate evidence and invented engineering examples. Actual game-level forecasts, feature recipes, model weights, source responses, full journals, and execution packages remain private.
 
 
+## November 9 independent B060 recovery and release-qualification update
+
+The next actual canonical NBA invocation authenticated **270 previously completed task bodies, 246 immutable forecast journals, 210 saved model bodies and 174,184 transitive feature-state dependencies**. It then stopped at a separate scientific-support export gate. The resulting return is an authenticated **partial failure**, with **zero new NBA fits, zero new NBA feature materializations and no newly completed nonlinear comparison or new forecast issue**. The surrounding shell's exit was not supplied; an internal intended exit is not a substitute.
+
+A subsequent release engineering review added and tested a strictly bounded distinction between locally reverified scientific bodies and size-limited return export. Missing, corrupted or unconfirmed scientific inputs continue to block new fitting. **114 exact-source synthetic/contract tests passed**, but the change has not run on the canonical NBA owner, so it does not establish new fitted results, export completeness, a champion, a paid-service refresh or continuous operation.
+
+These evidence classes remain distinct from the previously reported **210 actual B059 fits and 36 unchanged-weight reuses**, the 16-game exposed prior-season pilot, the original-issued ledger and the full official current-game inventory. The owner-private research dashboard retains its dated observation and source clocks.
+
+## November 8 V5 actual pilot — adaptive evidence, recovery and nonlinear continuation
+
+**The authenticated B059 owner return reports 210 new NBA estimator fits and 36 exact snapshot reuses, producing 246 native projections on 24 games. Its final return was a packaging diagnostic, so detailed fit evidence still needs recovery.** Independent review verified the archive and recomputed every reported metric from the returned projection values. The distinction between those checks and full training validation is retained throughout this update.
+
+| Latest actual owner evidence | Count / status |
+|---|---:|
+| Completed tasks reported | 270 |
+| Native forecast projections / separate joint diagnostic tasks | 246 / 24 |
+| New estimator fits / exact snapshot reuses reported | 210 / 36 |
+| Distinct selected regular-season games | 24: eight per season |
+| Labeled prior-season projections / games | 174 / 16 |
+| Source-aged current-season projections / games | 72 / 8 |
+| New calibration / learned-stack fits | 0 / 0 |
+| Reported new fit failures / runtime blockers | 0 / 0 |
+| Separate native synthetic canaries | 27 |
+| Independently recomputed metric groups / matched rows | 44 / 126 |
+| Newly promoted champions / qualified fresh issues | 0 / 0 |
+
+The 1,872 earlier rolling outputs on 22 games remain preserved as a separate branch. Branch game counts are not added together without a distinct-event union. All 1,200 assigned regular-season games retain their saved projections and all twelve saved family views; OLS remains regression-only. The new V5 view is explicitly a review of returned display evidence, with the current feature clock preserved. Completion before a scheduled tip does not establish a fresh horizon-specific source observation or original live issuance.
+
+### What the actual pilot shows
+
+The following scores use the same 16 prior regular-season games. Lower values are better. Both prior seasons are retained, including unfavorable findings.
+
+| Target | Historical foundation | Foundation with adaptive state | Current-season specialist |
+|---|---:|---:|---:|
+| Winner log loss | 0.61575 | 0.60786 | 0.65740 |
+| Margin mean absolute error | 9.2363 | 9.2026 | 9.6094 |
+| Total mean absolute error | 10.9329 | 10.7564 | 10.3854 |
+
+Adaptive-state improvements are small. The specialist worsened winner and margin scores in both prior seasons while improving total-point error. These exposed research origins and the missing full training-support bodies cannot establish a champion or an isolated causal feature effect. The next admissible question is whether the same fixed adaptive bundle helps a separately registered nonlinear family on matched prior origins.
+
+The winner-residual comparison covers 15 shared prior games with retained international reference observations. Direct-model log loss is **0.58999**, raw-reference log loss **0.54708**, and offset-model log loss **0.53520**. Offset Brier is **0.17916** versus reference **0.18463**. These single-token observations were retrieved later; they do not establish strict fair prices or original live possession. The comparison is retrospective and exposure-qualified. A binary reference probability does not supply a point-margin or total mean.
+
+### A packaging failure does not erase completed research
+
+The original return and executable passed their external source bindings, safe-member checks, CRCs and exact manifest closure. The worker reports a successful exit, while the actual outer shell exit remains unknown because no terminal transcript was supplied.
+
+The authenticated control flow shows that a large display export reached the return-size limit before scientific support collection. The resulting compact diagnostic contains the projections and score tables, but omits completed task bodies, immutable forecast JSON, snapshot commits, training lists and state dependency closure. Full model weights also remain outside the export. Numeric score verification therefore is not described as full fitted-body verification.
+
+The B060 successor separates compact presentation data from lossless scientific evidence, reserves support-export headroom, and recovers existing completed results before admitting new fitting. It validates content identities and accepted-return bindings; a corrupted body cannot pass by retaining an old identifier. Recovery has its own count and does not receive new-fit credit. The proposed bounded study compares foundation and adaptive-state inputs using native histogram gradient boosting at fixed prior origins, with the earlier recipes and journals preserved.
+
+Every new native final ZIP remains directly in the executing user's home directory, including bounded partial and handled-failure returns. The runner does not silently use another directory. Preparation, recovery, research and packaging have separate time measurements. Execution remains a manual owner action on the canonical environment, with bounded resource admission and no automatic cloud training claim.
+
+### Completeness, publication and remaining dependencies
+
+The private comparison catalog retains all 57 earlier datasets and adds six qualified evidence datasets: **63 datasets and 43,962 records**. Repeated verification and overlapping comparison rows are not independent games or new experiments. The complete current-game readiness register retains all 1,200 assigned games, exact saved status clocks, source-dependent gaps and the separate V4/V5 evidence counts. Older full reports remain available through lossless compressed bodies at their original URLs.
+
+No new official schedule, injury or provider acquisition occurred in this review. DraftKings, Kalshi, Polymarket US and international sources retain their own coverage and qualification layers. Dated schedule observations must not be presented as newly refreshed results. Current injury-effect admission, exact promoted-recipe lineage, fresh forecast issuance and original-owner closure remain separate requirements.
+
+The reported owner research interval was **259.2 seconds**, with **5.2 seconds** of preparation and **88.9 seconds** of parent recovery. The internal prepackaging interval was **391.0 seconds**; it is not an independently observed terminal duration. Eight effective CPUs were observed and two threads admitted. Actual dollar cost is not established without billing-rate evidence. Engineering review and score recomputation performed **zero real NBA fits**.
+
+The existing daily NBA research review retains its schedule and evidence limits. It is not an unattended fitting service. Public documentation contains sanitized aggregate findings only; private recipes, prompts, game-level records, model weights and execution paths remain private.
+
+---
+
+### Preserved earlier November 8 review
+
+The following material describes its original dated evidence state. The latest actual V5 return and its support limitation are documented above.
+
+
 ## November 8 V5 continuation — exact reuse, recency evidence and adaptive research
 
 **The authenticated B058 owner return adds 624 completed prediction tasks: 458 new NBA estimator fits, 142 exact fitted-snapshot reuses and 24 fixed derivations.** This is a completed bounded selection within an unfinished research program. It preserves all 1,248 earlier rolling forecasts and does not establish a promoted champion or a fresh current-season forecasting service.
@@ -581,3 +650,4 @@ Read the [basketball study](../../docs/BASKETBALL_FOUNDATION.md), [generated lea
 
 
 </details>
+

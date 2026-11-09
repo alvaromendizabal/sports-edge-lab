@@ -54,9 +54,9 @@
     const indexed=recordIndex(report);
     return games.filter(game=>game.season===2026 && !game.completed).map(game=>coverage(game,report,indexed));
   }
-  function select(rows,{scope='upcoming',query='',status='all',target='all'}={}) {
+  function select(rows,{scope='current',query='',status='all',target='all'}={}) {
     const q=query.trim().toLowerCase();
-    return rows.filter(row=>(scope==='all'||scope==='upcoming'&&row.game.period==='upcoming'||scope==='exact'&&row.game.kickoff_exact||scope==='unresolved'&&!row.game.kickoff_exact)
+    return rows.filter(row=>(scope==='all'||scope==='current'&&row.game.period==='current'||scope==='upcoming'&&row.game.period==='upcoming'||scope==='exact'&&row.game.kickoff_exact||scope==='unresolved'&&!row.game.kickoff_exact)
       &&(!q||`${row.id} ${row.game.away} ${row.game.home}`.toLowerCase().includes(q))
       &&(status==='all'||status==='issued'&&row.original_issue_verified||status==='missing'&&!row.original_issue_verified)
       &&(target==='all'||(targets.includes(target)||target==='cover'?row.targets[target]!=='AUTHENTICATED_PRIVATE_OUTLOOK':

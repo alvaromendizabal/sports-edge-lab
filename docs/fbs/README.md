@@ -2,9 +2,9 @@
 
 [**Open the game center →**](https://sports-edge-lab-fbs.alv-mendizabal.chatgpt.site) · [Remaining-game outlook status](forward-outlooks-v050.json) · [Latest completed outcome evaluations](evaluation-v049.json) · [Newest source check](source-status-v050.json) · [Source association census](market-status-v050.json) · [V5 publication boundary](PUBLICATION_BOUNDARY_V5.md) · [Latest attempt](execution-status-v051.json) · [Unchanged V050 README](README-history-v050.md) · [V049 README](README-history-v049.md)
 
-## Latest execution and coverage navigation · V051
+## Latest execution, prepared repair and coverage · V051
 
-The latest actual **V050 owner attempt stopped at 2026-11-09T07:04:39.025098Z (November 8, 11:04 PM PST)** during the separate saved-prediction schema-preflight reserve check, before provider transport or new research. It added **zero fits, calibrators, predictions, captures and provider requests**. Worker exit 2 and supervisor exit 2 are separately observed; the outer observer/shell exit remains unproved. This dated failure is separate from the successful earlier V049 scientific work reported in V050 below. The new handoff's guarded repair is prepared; publication does not claim it executed. [Latest attempt evidence](execution-status-v051.json).
+The latest actual **V050 owner attempt stopped at 2026-11-09T07:04:39.025098Z (November 8, 11:04 PM PST)** during the separate saved-prediction schema-preflight reserve check, before provider transport or new research. It added **zero fits, calibrators, predictions, captures and provider requests**. Worker exit 2 and supervisor exit 2 are separately observed; the outer observer/shell exit remains unproved. This dated failure is separate from the successful earlier V049 scientific work reported in V050 below. The V051 handoff is prepared; publication does not claim owner execution. [Latest attempt evidence](execution-status-v051.json).
 
 The official source clock is still **2026-11-09T03:22:14Z**. The failed attempt does not refresh the dashboard to 07:04 UTC. All **108 original current-origin outlooks**, **203 remaining fixtures**, **95 current-season unresolved kickoffs**, earlier metrics, negative studies and exact forecast identities remain unchanged. Ranking fits and qualified exact-line outputs remain zero.
 
@@ -12,7 +12,11 @@ The new [forecast access panel](https://sports-edge-lab-fbs.alv-mendizabal.chatg
 
 The [horizon timing inventory](https://sports-edge-lab-fbs.alv-mendizabal.chatgpt.site/#refresh-deadlines) lists day-ahead, two-hour and one-hour boundaries for all remaining fixtures, with exact UTC CSV timestamps and Pacific display. It retains all 95 unresolved current-season kickoffs without fabricated dates. Boundaries are assessed at the original source observation; a future boundary is not counted as a missed issue. These metadata calculations neither run a scheduler nor create a prediction. There are **zero individually qualified later-horizon updates** in the retained export.
 
-This FBS-only presentation change performs no scientific fit, feature materialization, forecast creation or outcome rescoring. All prior numerical/status assets are preserved. The [complete preceding README](README-history-v050.md) is retained byte for byte; the status below records its original evidence generation.
+The prepared repair persists the complete admission decision before a refusal, retains the same resource gates and permits bounded reobservation only for eligible transient pressure. It records reason-specific outcomes and independent observation clocks. Verified unchanged scientific identities remain reusable across invocation versions, so a version change alone does not justify another fit. The [invented admission example](../../examples/fbs_contracts/phase_admission.py) demonstrates durable decision evidence and bounded recovery without private thresholds, telemetry or estimator code.
+
+A separate **R13 research continuation is prepared and unexecuted**. Its generic scope is additional leakage-safe feature research and ablations, frozen selection on completed seasons, eligible pregame refitting, ensemble/calibration comparisons and explicit missingness. No new candidate count, fitted result, superiority claim or numerical forecast is established by this public update. Original forecasts, retrospective reconstructions and later issues retain separate evidence.
+
+This FBS-only update adds implementation evidence and clearer calendar navigation. It performs no scientific fit, source acquisition, feature materialization, forecast creation or outcome rescoring. All prior numerical/status assets are preserved. The [complete preceding README](README-history-v050.md) is retained byte for byte; the status below records its original evidence generation.
 
 ## Current state · V050 (retained earlier scientific work)
 
@@ -33,17 +37,17 @@ A later **report-storage admission limit** stopped checkpoint recovery and repor
 
 The default view includes **all 888 current-season fixtures**. Cards and the table retain available winner, home/winner probability, home margin, total, and saved 80%/95% intervals. Each family/target gap has a reason. CatBoost retains its three protected missing winner outputs on **401858225, 401858226 and 401856811**; their point targets remain available. An interval is not converted into a cover probability. [Original three-season inventory](three-season.json) · [Latest identity and clock metadata](observation-status-v046.json).
 
-| Dated Pacific scope | Games | Observed finals | Coverage interpretation |
+| Display calendar, dated November 9 Pacific | Games | Observed finals in the unchanged source | Coverage interpretation |
 |---|---:|---:|---|
-| Previous week, October 26–November 1 | 56 | 56 | Complete identified scope; its own evaluation dates |
-| Current week, November 2–8 | 63 | 63 | Complete identified scope; 63 baseline outcomes now evaluated |
-| Upcoming week, November 9–15 | 53 | 0 | 53 authenticated current-origin shadow outlooks; zero qualified later close-horizon updates |
+| Previous week, November 2–8 | 63 | 63 | The stored November 2–8 evaluation remains the same exact cohort |
+| Current week, November 9–15 | 53 | 0 | 53 authenticated current-origin shadow outlooks; zero qualified later close-horizon updates |
+| Upcoming week, November 16–22 | 30 | 0 | 30 identified exact-kickoff fixtures in the retained source |
 
-Week windows are anchored to the source observation, not the browser clock. A comparison link matches exact Pacific date boundaries, including DST. Moving relative week names cannot select a different scorecard silently. Cumulative inventories keep bounded pages; every small weekly scope is shown without hidden pages. Team, result, timing and provider filters do not erase the full-period denominator.
+The display uses a separately declared **November 9 Pacific calendar** while the source observation stays at **03:22:14 UTC**. It does not use the viewer's browser clock or create a data refresh. Earlier evaluations retain their original **October 26–November 1** and **November 2–8** dates: the previous-week button can link to the exact November 2–8 scorecard, while the November 9–15 and November 16–22 windows have no stored evaluation. Exact Pacific date boundaries, including DST, must match before a comparison link is enabled. Cumulative inventories keep bounded pages; every small weekly scope is shown without hidden pages. Team, result, timing and provider filters do not erase the full-period denominator.
 
 ### Complete remaining-game outlook ledger
 
-The new tracker retains **all 203 remaining current-season fixtures: 108 exact future kickoffs and 95 unresolved kickoffs**. It starts with the **53-game upcoming Pacific week** and offers all-remaining, exact-kickoff and unresolved views. Each game has separate winner/probability, margin, total, interval evidence, original information cutoff, computation clock, original issue clock, horizon and next action. Filters identify missing targets without hiding the denominator. The metadata CSV preserves the same fields and explicit gaps.
+The new tracker retains **all 203 remaining current-season fixtures: 108 exact future kickoffs and 95 unresolved kickoffs**. It starts with the **53-game current Pacific week, November 9–15** and offers all-remaining, exact-kickoff and unresolved views. Each game has separate winner/probability, margin, total, interval evidence, original information cutoff, computation clock, original issue clock, horizon and next action. Filters identify missing targets without hiding the denominator. The metadata CSV preserves the same fields and explicit gaps.
 
 All 108 exact future games have original current-origin shadow outlooks for the three scalar targets. These include **Massachusetts at Toledo (401866463; November 12, 00:30 UTC)**, **Purdue at Iowa (401858519; November 15, 00:30 UTC)**, and **Central Michigan at Buffalo (401866469; November 19, 00:30 UTC)** under their new exact fixture identities. No older forecast is rebound to those resolved times. The 95 current-season TBD fixtures stay visible with `EXACT_KICKOFF_UNRESOLVED`.
 
@@ -53,7 +57,7 @@ The preceding 53-game priority queue remains visible as an **archived prior-sour
 
 ## Retained outcome evaluation view
 
-The primary comparison view displays the **authenticated owner-computed aggregates** on their exact season, date window and target. It offers five scored date scopes—2024, 2025, 2026, previous week and current week—and separate original, 119-game changed-input, and 105-game later-outlook archives. The last scope reports its absence of outcomes explicitly; unavailable performance is not zero.
+The primary comparison view displays the **authenticated owner-computed aggregates** on their exact season, date window and target. It offers five scored date scopes—2024, 2025, 2026, October 26–November 1 and November 2–8—and separate original, 119-game changed-input, and 105-game later-outlook archives. The last scope reports its absence of outcomes explicitly; unavailable performance is not zero.
 
 **Own-cohort results** retain each family's actual count. **Matched-control results** require the original recorded common-game hash, equal candidate/control counts and authenticated paired aggregates. CatBoost's 682-game 2026 winner cohort therefore stays distinct from the 685-game full baseline. The same game count alone does not prove a common comparison. [All 245 aggregate rows](evaluation-v049.json).
 

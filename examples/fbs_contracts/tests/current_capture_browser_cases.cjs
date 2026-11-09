@@ -30,7 +30,7 @@ exports.run=async page=>{
   await page.selectOption('#capture-view',snapshot);assert.match(await page.locator('#game-rows').innerText(),/No observed final/);
   assert.deepEqual(await page.evaluate(id=>{const g=window.FBSCompleteReview.games.find(r=>r.id===id);const p=window.FBSCompleteReview.projection(g);return[p.p,p.margin,p.total,p.record.cutoff];},added.id),originalPrediction);
  }
- await page.locator('#game-search').fill('');await page.locator('[data-period="current"]').click();
+ await page.locator('#game-search').fill('');await page.locator('[data-period="previous"]').click();
  for(const [snapshot,n] of [['original',7],['prior',25],['nov7_late',45],['nov7_evening',48],['nov7_night',61],['latest',63]]){
   await page.selectOption('#capture-view',snapshot);assert.equal(await page.locator('#result-status').innerText(),`63 games · ${n} observed complete · 63 development projections`);
  }

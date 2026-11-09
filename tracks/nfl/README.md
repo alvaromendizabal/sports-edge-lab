@@ -1,93 +1,71 @@
 # Sports Edge Lab NFL — complete research accounting
 
-The [NFL dashboard](season_review_n054.html) accounts for **272 scheduled games and all 32 teams**, including CHI 34–SEA 17, JAX 33–BAL 10 and CIN 34–ATL 17. Historical `LA` means the Los Angeles Rams; `LAC` means the Chargers. The latest authenticated N060 owner observation is **November 9, 2026 at 03:31:24 UTC**: **134 finals, 133 decisive results and one tie**, with **one game in progress and 137 scheduled**. Earlier 272/122/121, 272/123/122 and 272/130/129 snapshots remain dated evidence.
+The [NFL dashboard](season_review_n054.html) accounts for **all 272 games and all 32 teams**. It includes CHI–SEA, JAX–BAL and the newly final TB–CHI observation. Historical `LA` means the Los Angeles Rams; `LAC` means the Chargers. The current report is a dated snapshot with **135 final games, including one tie, and 137 scheduled games**. Every earlier schedule snapshot remains in the private canonical records.
 
-**Actual N060 is a partial owner result. N061 is a prepared repair and research continuation.** N060 completed **27 new native states and 2,294 actual issue rows** before later failures. The native components are five fresh, three designation, twelve raw football and seven selected-family states, with zero new meta fits. Original aggregate fit/native/meta/issue totals remain **null**; independently verified physical partials and the original pre-V5 counters establish the separate useful-work counts.
+**Actual N061 is a partial owner result. N062 is a prepared continuation.** N061 produced **90 new original/shadow issue rows** and completed **405 evaluations of previously issued forecasts across 13 games**, with **60 separate metric groups**. The new [original-issued monitoring view](season_review_n054.html#performance) preserves original forecast values, actual issue clocks and group denominators. It does not change the old historical benchmarks or select a new model.
 
-The latest training arrays retain the unchanged 5,445-row prefix and admit the supported 12-game causal append: **1,827 games and 5,481 target rows**. All **137 then-scheduled games** have three selected-family outputs: **411 rows**, comprising 45 nearer current-origin rows and 366 long-range outlooks. Actual source, model and issue clocks precede the registered cutoff. Current-origin issues are not exact T1 reconstructions; long-horizon accuracy remains unvalidated.
+## What the latest owner run established
 
-## What is available
+| Evidence | Actual result | Qualification |
+|---|---:|---|
+| Original/shadow issues | 45 + 45 | Actual new issue clocks; retained November 4 base features remain age-qualified |
+| New original-issued evaluations | 405 | Distinct original issue identities across 13 completed games |
+| Original-issued metric groups | 60 | Separate owner cycle, target, model role and current-origin horizon |
+| Monitor input accounting | 7,380 | 405 evaluated, 180 unsupported conditionals, 6,795 without a captured final |
+| Fresh source-dependent lanes | Blocked | Required team-stat capture omits the newly final TB–CHI game |
+| V5 current | Source-gate block | No stale feature substitution and no verified new V5 fit or issue |
+| V5 historical partial | 6 starts / entries / returns / validations | 4 durable commits; 2 returned states await exact commit recovery; aggregate nulls remain |
+| Retained V5 partial reconstructions | 19 rows / 15 games | Development-exposed 2024 evidence across three recipes; no complete comparison or original-issue credit |
+| Backend admission processes | 9 outcomes | 8 complete; 1 isolated failure; process counts do not imply scientific fits |
+| New model promotion | None | No current-season selection or superiority claim from the monitor |
 
-| Scope | Complete private delivery | Public dashboard |
+The historical parent recorded a path-guard error before cancelling its own child; the exact launch evidence records one owned-child cleanup signal and zero signals to existing workloads. The response remained absent. The original aggregate fit/native/meta/issue totals remain **null**. Independently observed component counts are reported separately. An absent historical child response is not an authorization to erase or repeat an unresolved optimizer start. Original source, model, issue, checkpoint and evaluation bodies remain private and immutable.
+
+## Complete inventory and numerical support
+
+The private delivery composes every dated model role and provider horizon from one reviewed projection. The active public dashboard exposes the permitted schedule, aggregate metrics, coverage states and eight bounded already-issued examples. Complete candidate histories, active features, weights, exact recipes and raw provider responses remain private under the [publication boundary](PUBLIC_BOUNDARY_N059.md).
+
+| Scope | Complete private report | Public dashboard |
 |---|---|---|
-| Current schedule | 272 games, 32 teams, dated phases and qualified source TBD times | Every game and phase |
-| Model inventory | 141 dated roles, 115,056 game/role/target cells | Per-game coverage and explicit absence accounting |
-| Primary source inventory | 53,856 cells, three providers, three targets, 22 separate horizons | Equal status grid for every game |
-| Scientific metrics | 1,289 dated seasonal metrics, complete retained weekly and paired records | Anonymized seasonal aggregates |
-| Actual N060 outputs | 180 component, 59 conditional, 180 raw, 1,464 long-range raw and 411 selected-family rows | Eight bounded already-issued examples |
-| Next work | 414 target actions across 138 games without a captured final | Current blockers and prepared next actions |
-| Canonical records | 444,858 records; all 393,685 previous records remain unchanged | Only the explicit public allowlist |
+| Schedule | 272 games, 32 teams, exact source phases and qualified times | Every game and phase |
+| Models | 143 dated roles, 116,688 game/role/target cells | Per-game numerical coverage and explicit missing states |
+| Primary providers | 61,200 cells across 25 separate horizons | Equal DraftKings, Kalshi and Polymarket status grids |
+| Metrics | 1,349 dated season or original-issued metric rows | Anonymized aggregate scores with original cohorts |
+| Default forecast view | 271 binary winner probabilities; 272 margin and total outputs | Eight permitted already-issued numerical examples |
+| Conditional outputs | Every retained supported threshold and orientation | Explicit support qualifications; no substituted point mean |
 
-The private HTML, PDF, XLSX set and full CSV use one reviewed projection. The default opens on Buffalo–Minnesota, the earliest scheduled game with an authenticated new selected-family issue. The five bounded data workbooks retain every original JSON record, with a typed overview workbook for games, metrics and actions. The [publication boundary](PUBLIC_BOUNDARY_N059.md) keeps complete candidate histories, active exact recipes, private features and raw provider feeds private. Public scope restrictions and absent observations are different states.
+The historical tie remains outside the registered binary-winner output. Missing intervals, unsupported exact lines, absent quote clocks and noncomparable contracts are explicit reasons. A complete inventory does not imply that every required numerical output is supported.
 
-## Actual failures and the prepared repairs
+The default private view retains N060 selected-family issues for the remaining schedule. It does not replace them with the stale-qualified N061 original/shadow updates. Long-range outlooks, nearer current-origin forecasts and exact T1 issues are separate horizons; long-horizon accuracy remains unvalidated. Each scheduled game has a target-specific next action for a genuinely eligible refresh.
 
-| Actual N060 stage | Observed outcome | N061 continuation |
-|---|---|---|
-| Complete-season census | Stopped at a bounded source-body read | Repair the narrowly scoped bound while preserving exact physical verification |
-| V5 current and historical children | Both exited before optimizer entry because a required resource module was unavailable | Package and verify the complete runtime dependency closure |
-| Original-issued monitor | Zero new evaluations committed from 5,086 input rows | Repair qualified result-source closure and separate unsupported targets before identity matching |
+## Results that remain unchanged
 
-The monitor's original 453-row repair count needs a precise qualification: **345 supported winner/point rows** failed result-pointer validation; **108 unsupported conditional rows** collided under an incomplete identity. Another **13 conditional rows** are unsupported and **4,620 rows** lack a captured final. These populations remain separate. A repaired implementation is not a completed owner evaluation, and no new score is computed by publication.
+The original **120/119 point/winner benchmarks**, **92/91 timed Polymarket support**, **common119 T2 provider comparison** and **exact91 T2 model comparison** retain their original denominators. New source captures or newly scored original issues cannot enlarge these cohorts. Rounded display values are never used for proper scores.
 
-The prior actual N059 invocation remains a failure before research stages, with zero fits and forecasts. N058's earlier partial work and all original errors remain intact. No failure is erased by the next preparation, and no protected optimizer identity is fitted again.
-
-## Latest source capture
-
-Exact source-body readbacks support **10,204 normalized observations**: **2,980 Kalshi, 7,134 Polymarket and 90 DraftKings rows**. The representative current scope spans **16 games**, with **133 observed target cells in a 144-cell equal-provider grid**. All 133 were captured before kickoff. The full-season grid still includes every event and provider, with explicit absence outside that bounded capture.
-
-The separate alternate capture contains **2,538 conditions**. **1,258** have complete paired probabilities; **1,151 pairs** have different side clocks, preventing a simultaneous midpoint. Other conditions are sparse or one-sided. **1,300 normalized rows** lack a retained quote clock. Capture time is not substituted for a missing quote time, and a conditional threshold is not a point prediction.
-
-The restored latest-pregame horizon contains **2,669 references**: **1,012 winner and 1,657 point/threshold records**. It remains separate from originally possessed timed evidence and original model issues. No claim of complete provider history or predictive improvement follows from source restoration.
-
-| Required provider | Current capability |
-|---|---|
-| DraftKings | Qualified game-level references or explicit reasons in the primary grid |
-| Kalshi | Qualified game-level references or explicit reasons in the primary grid |
-| Polymarket | Qualified game-level references or explicit reasons in the primary grid |
-| PrizePicks | No admitted comparable game-level source in this actual return |
-| Underdog | No admitted comparable game-level source in this actual return |
-
-The two additional providers do not receive invented probabilities, substitute products or equal-cohort metrics. The original three-provider comparison denominators remain unchanged.
-
-## Retained scientific results
-
-The actual N055 study retains **1,378 native and 45 meta states**, 105,075 historical rows, 411 seasonal metrics, 8,034 weekly metrics, 339 paired comparisons and three nested checks. Actual N056 retains **21 native states** and **2,683 issue rows**. Its separate six-row CHI/SEA and JAX/BAL retrospective supplement and one-game CIN/ATL prospective evaluation do not replace historical cohorts.
-
-The protected 3,432-state raw study and full 18,889-row reconstruction remain preserved. The narrower N057 attempt is a separate dated result. N060's returned raw output has 18,889 reconstruction rows, 75 seasonal metrics, 144 paired comparisons and three nested checks. Reused states, reused cutoff jobs, newly fitted states and reconstructed rows are different counts.
-
-The 102-state fixed source-feature study, 70-state conditional scale study, completed designation/injury/correction studies, six controls and all negative findings remain intact. No protected study is repeated. Native states, meta states, actual issue rows, reuse events, synthetic smoke operations and source-only work are reported separately.
-
-| Preserved fixed-control procedure, original 2026 cohort | Games | Metric | Paired difference against unchanged baseline |
+| Original fixed-control procedure, 2026 cohort | Games | Metric | Paired difference from unchanged baseline |
 |---|---:|---:|---:|
 | Winner log loss | 119 | 0.6551848900 | −0.0036297599 |
 | Home margin MAE | 120 | 9.9167425287 | −0.2045472779 |
 | Total points MAE | 120 | 11.3714075322 | +0.0856984987 |
 
-Original winner accuracy is **58.82%**, and Brier score is **0.2319119963**. The selected 2026 paired intervals include zero and all adjusted p-values are 1.0. The only two adjusted findings below 0.05 in the full 339-comparison family are adverse annual neural results. **No model is promoted.** A one-game prospective review cannot establish calibrated probabilities or superiority.
+Original winner accuracy is **58.82%** and Brier score **0.2319119963**. Selected 2026 paired intervals include zero; all adjusted p-values are 1.0. The only two adjusted findings below 0.05 in the full 339-comparison family are adverse annual neural results. **No model is promoted.** The new monitored groups contain only 1–13 games each and cannot independently validate the new V5 policy.
 
-The original **120/119 point/winner benchmarks**, **92/91 timed Polymarket support**, **common 119 T2 provider comparison** and **exact 91 T2 model comparison** remain distinct. New source coverage does not enlarge them, and rounded displays are never used to calculate proper scores.
+Completed N055 retains 1,378 native and 45 meta states, 105,075 historical rows, 411 seasonal metrics, 8,034 weekly metrics, 339 paired comparisons and three nested checks. Actual N056 retains 21 native states and 2,683 issued rows. Actual N060 retains 27 native states and 2,294 issued rows. Its 411 selected-family rows cover all 137 then-scheduled games; 366 are long-range outlooks and 45 nearer current-origin rows. Protected designation, injury, correction, raw, market and scale studies, six controls, all negative results and quarantined starts remain preserved.
 
-## V5 rolling-origin implementation
+## Rolling-origin research and the next continuation
 
-Five research lanes are separately accounted for across all three targets: market-free foundation, current-regime specialist, online gated blend, market-only control and market residual challenger. Their new V5 scores remain absent because the actual N060 children failed before fitting. The retained scientific metrics remain visible without being presented as V5 results.
+V5 compares earlier-completed-season selection policies, policy-defined training memories, current-regime adaptation and source-qualified residual heads. Selection, refitting, state updates and actual forecast issuance remain separate activities. Every transformation and learned parameter must use eligible earlier information; inspected historical and current-season outcomes remain exposed development evidence.
 
-The full verified history stays available. Each candidate selects or weights its eligible fitting memory through nested earlier-origin evidence. Recent two-season, three-season, longer, expanding and recency-weighted policies are candidates, not a fixed window preference. Fitting may use earlier settled current-season outcomes under the registered policy. Transformations and meta inputs remain train-only and genuinely earlier out-of-fold or prequential evidence.
+The five accounted-for lanes are market-free foundation, current-regime specialist, online gated blend, market-only control and market residual challenger. No authenticated V5 score is displayed where source or execution evidence is missing. The supported model-family contract retains scikit-learn, XGBoost, LightGBM, CatBoost, PyTorch, TensorFlow, ensembles, strictly earlier-origin stacks and calibrations. Queue definitions are not fitted models.
 
-Original frozen issues, historical rolling reconstructions, genuinely future-issued forecasts and source-only references retain separate exposure classes. Source refresh, fitting, compatible-state reuse, champion selection, issue creation and evaluation are distinct actions. Examined historical seasons remain development-exposed.
+N062 prepares recovery from actual source-readiness and historical-response failures while protecting completed identities and useful partials. Fresh required inputs cannot silently become stale. Originally issued forecasts remain immutable. Owner execution, returned evaluation recovery, newly committed evaluation records, native/meta fits and source-only work are separate counters.
 
-The retained broader registry has **211 proposed candidates, 159 implemented extractors and 52 blocked candidates**. N060 added **34 distinct concepts expanding to 60 columns**; N061 adds **10 new concepts expanding to 19 columns**. The combined 44 concepts are not 79 discoveries. The **51 registered recipes** are a prepared queue, not a fit count. This bounded continuation does not claim to complete a new 200-plus-candidate research generation.
+N062 prepares 12 new result-only feature concepts expanded into 17 channels and a separately registered research lane. The cumulative V5 registry now has 56 concepts and 96 expanded columns, leaving 144 concepts before a 200-concept major generation. The retained full family study resumes separately under its exact scientific identity. A separately registered schema compatibility continuation remains pending actual installed owner admission. It adds no new feature-concept credit. Proposed, implemented, materialized, admitted, evaluated and promoted states remain distinct. The original feature-schema warnings remain historical evidence; new schema contracts validate named, ordered and typed model inputs rather than suppressing warnings.
 
-Actual new V5 feature materialization, admission, evaluation and promotion remain **zero**. Synthetic engineering tests are reported separately. The next owner execution must establish actual availability, fitting and issue clocks. The initial V5 study remains shadow research pending prior-origin and forward promotion evidence.
+## Sources, reproduction and publication
 
-## Validate and publish
+DraftKings, Kalshi and Polymarket receive the same game/target/horizon inventory. Source capture and quote times remain separate; one-sided conditions and differing side clocks do not create a simultaneous probability pair. Historical restoration earns zero predictive credit. PrizePicks and Underdog retain explicit **no admitted comparable game-level source in this return** statuses; no product or probability is invented.
 
-```bash
-python tracks/nfl/build_season_review_n054.py --check
-python -m unittest discover -s tracks/nfl -p 'test_*.py'
-python tracks/nfl/contracts.py --check-review
-```
+[Current methodology](CURRENT_METHODOLOGY.md), [model card](CURRENT_MODEL_CARD.md), [N062 review](N062_REVIEW.md) and the [bounded public evidence carrier](public_projection_n062.json.gz) describe the dated evidence. Full private HTML, PDF, XLSX and lossless CSV retain the complete canonical record set. Public synthetic checks establish engineering behavior, not real NFL accuracy.
 
-Existing CI workflows remain unchanged. Publication requires successful checks on the exact PR head, a permitted merge, final-main readbacks and actual deployed content matching that main commit. The dashboard identifies its canonical commit and evidence time. Publication creates zero scientific fits, issues or source acquisitions.
-
-[Current bounded evidence](public_projection_n061.json.gz) · [N061 review](N061_REVIEW.md) · [Retained N060 evidence](public_projection_n060.json.gz) · [Retained N059 evidence](public_projection_n059.json.gz) · [Model card](CURRENT_MODEL_CARD.md) · [Methodology](CURRENT_METHODOLOGY.md) · [Public boundary](PUBLIC_BOUNDARY_N059.md)
+Publication requires passing checks on the exact PR head, a permitted merge, final-main readback, and a separately verified deployment of the same content. The public host is a static research snapshot; a deployment does not refresh sources, fit models or produce new forecasts.

@@ -9,6 +9,8 @@ exports.run=async page=>{
  }
  await page.locator('#refresh-deadlines > summary').click();
  assert.equal(await page.locator('#deadline-rows tr').count(),53);assert.match(await page.locator('#deadline-summary').innerText(),/159 future horizon boundaries · 0 boundaries already reached/);
+ assert.equal(await page.locator('#deadline-scope').inputValue(),'current');
+ await page.selectOption('#deadline-scope','upcoming');assert.equal(await page.locator('#deadline-rows tr').count(),30);assert.match(await page.locator('#deadline-summary').innerText(),/90 future horizon boundaries · 0 boundaries already reached/);
  await page.selectOption('#deadline-scope','all');assert.equal(await page.locator('#deadline-rows tr').count(),203);
  await page.selectOption('#deadline-scope','unresolved');assert.equal(await page.locator('#deadline-rows tr').count(),95);assert.match(await page.locator('#deadline-rows').innerText(),/Cannot assign a horizon/);
  const [download]=await Promise.all([page.waitForEvent('download'),page.locator('#deadline-export').click()]);const csv=fs.readFileSync(await download.path(),'utf8');assert.equal(csv.split('\r\n').length,286);assert.match(csv,/EXACT_KICKOFF_UNRESOLVED/);

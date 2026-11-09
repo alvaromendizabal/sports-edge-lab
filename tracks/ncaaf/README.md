@@ -1,5 +1,17 @@
 # Sports Edge Lab · NCAA football
 
+## Latest owner evidence and prepared V051 continuation · November 9
+
+The latest actual **V050 owner attempt stopped at 2026-11-09T07:04:39.025098Z** during the separate saved-prediction schema-preflight reserve check. It reached no source refresh or new research: **zero new base fits, calibrators, predictions, captures and provider requests**. Worker exit 2 and supervisor exit 2 are separately observed; an independent outer observer/shell exit is not established. This failure does not erase the earlier completed V049 research reported in V050. [Execution evidence](../../docs/fbs/execution-status-v051.json) · [Complete current FBS account](../../docs/fbs/README.md).
+
+**V051 is prepared, not owner executed.** The repair retains measured admission evidence before refusal, applies bounded reobservation only to eligible transient pressure under unchanged resource gates, and preserves verified scientific identities for checkpoint reuse. A separately prepared R13 research continuation retains leakage-safe selection, eligible pregame refitting, ablation and calibration requirements; no new fitted result, feature count, improved performance or forecast is claimed. The public [invented admission contract](../../examples/fbs_contracts/phase_admission.py) and synthetic tests expose generic engineering behavior without private recipes or production telemetry.
+
+The retained source observation remains **2026-11-09T03:22:14Z**, with **2,742 fixtures across 2024–2026**, including **888 current-season fixtures, 685 observed finals, 108 exact future kickoffs and 95 unresolved kickoffs**. The 108 authenticated original current-origin shadow outlooks remain separate from displayed historical numerical projections; qualified later-horizon issues and exact-line outputs remain zero. Saved intervals and coherent score records do not prove empirical calibration or promotion.
+
+The separately dated **November 9 Pacific display calendar** shows **63 previous-week, 53 current-week and 30 upcoming-week fixtures** from the unchanged source. Evaluated October 26–November 1 and November 2–8 cohorts keep their exact dates; a calendar change never supplies a new scorecard. The current game center includes all-game inventories, eight target-readiness views, source-qualified provider gaps and horizon-timing metadata. [Open the game center](https://sports-edge-lab-fbs.alv-mendizabal.chatgpt.site) · [V5 publication boundary](../../docs/fbs/PUBLICATION_BOUNDARY_V5.md).
+
+The sections below are preserved dated history. Their original evidence and scope are not relabeled as the current execution state.
+
 ## November 6 owner audit: V035 failed before resource admission
 
 The actual **V035 invocation failed during predecessor handoff**. Its source requires V034 history, but the completion-probe allowlist omitted V034. The first stopping condition is therefore the version admission bug. No resource phase was reached and neither the full-research nor independent memory/S3 acquisition phase started. Source requests, new fits and forecast issues were all **zero**.

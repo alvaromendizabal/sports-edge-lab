@@ -21,5 +21,38 @@
     "bytes": 19787,
     "sha256": "4dc222f8dd1f8a4ce129ec36682c269b87a1cab9f39ad0409f7064c84162d85b"
   },
-  "public_summary": "The latest owner execution stopped during saved-prediction schema preflight before any source refresh or new scientific work. It added zero fits, calibrators, predictions, captures or provider requests. The earlier 108 current-origin outlooks and the 03:22:14 UTC source observation remain the latest retained records. A prepared repair is not evidence of its future owner execution."
+  "public_summary": "The latest owner execution stopped during saved-prediction schema preflight before any source refresh or new scientific work. It added zero fits, calibrators, predictions, captures or provider requests. The earlier 108 current-origin outlooks and the 03:22:14 UTC source observation remain the latest retained records. V051 prepares durable admission evidence, bounded pressure reobservation and a separate research continuation; it has not been owner executed. The dated November 9 Pacific calendar reorganizes unchanged fixtures without refreshing data or relabeling scored cohorts.",
+  "prepared_successor": {
+    "release": "V051",
+    "status": "PREPARED_NOT_OWNER_EXECUTED",
+    "schema_preflight": "Persist the measured plan before admission or refusal; reobserve only bounded transient pressure under unchanged gates.",
+    "checkpoint_policy": "Reuse verified unchanged scientific identities across invocation versions.",
+    "research_followup": "R13 generic research continuation is prepared; no new fitted state, result or forecast is claimed by this publication."
+  },
+  "display_calendar": {
+    "as_of_utc": "2026-11-09T08:00:00Z",
+    "timezone": "America/Los_Angeles",
+    "evidence_class": "DATED_DISPLAY_CALENDAR_USING_UNCHANGED_SOURCE",
+    "source_observed_at": "2026-11-09T03:22:14Z",
+    "periods": {
+      "previous": {
+        "start": "2026-11-02",
+        "end_exclusive": "2026-11-09",
+        "games": 63,
+        "observed_finals": 63
+      },
+      "current": {
+        "start": "2026-11-09",
+        "end_exclusive": "2026-11-16",
+        "games": 53,
+        "observed_finals": 0
+      },
+      "upcoming": {
+        "start": "2026-11-16",
+        "end_exclusive": "2026-11-23",
+        "games": 30,
+        "observed_finals": 0
+      }
+    }
+  }
 }

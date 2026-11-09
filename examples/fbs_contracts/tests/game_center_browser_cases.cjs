@@ -5,12 +5,14 @@ exports.run=async(page,{width,screenshots})=>{
  assert.equal(await page.locator('#game-layout').inputValue(),'cards');
  assert.equal(await page.locator('#advanced-game-filters').getAttribute('open'),null);
  assert.equal(await page.locator('#research-method .method-grid article').count(),4);
+ assert.match(await page.locator('#display-calendar-clock').innerText(),/2026-11-09 Pacific.*source remains 2026-11-09T03:22:14Z/);
+ assert.equal(await page.locator('#previous-week-count').innerText(),'63');assert.equal(await page.locator('#current-week-count').innerText(),'53');assert.equal(await page.locator('#upcoming-week-count').innerText(),'30');
  assert.equal(await page.locator('#game-cards .forecast-age').count(),30);
- await page.locator('[data-period="upcoming"]').click();
+ await page.locator('[data-period="current"]').click();
  assert.equal(await page.locator('#game-cards .game-card').count(),53);
  assert.match(await page.locator('#result-status').innerText(),/53 games · 0 observed complete · 51 development projections/);
  assert.equal(await page.locator('#compare-selected-period').isDisabled(),true);
- const upcomingLink=await page.locator('#view-link').getAttribute('href');assert.match(upcomingLink,/period=upcoming/);
+ const upcomingLink=await page.locator('#view-link').getAttribute('href');assert.match(upcomingLink,/period=current/);
  await page.goto(upcomingLink);assert.equal(await page.locator('#game-cards .game-card').count(),53);
  await page.locator('#game-search').fill('401858519');
  assert.match(await page.locator('#game-cards').innerText(),/new fixture epoch; prediction pending/);
@@ -23,7 +25,7 @@ exports.run=async(page,{width,screenshots})=>{
  assert.match(await page.locator('#dialog-latest-research').innerText(),/Saved privately · not issued/);
  await page.keyboard.press('Escape');await page.locator('#game-search').fill('');
 
- await page.locator('[data-period="current"]').click();
+ await page.locator('[data-period="previous"]').click();
  assert.equal(await page.locator('#game-cards .game-card').count(),63);
  assert.match(await page.locator('#visible-game-range').innerText(),/All 63 matching weekly games.*no hidden pages/);
  assert.match(await page.locator('#period-overview-status').innerText(),/63 games · 63 observed finals · 0 without a final/);
@@ -34,14 +36,15 @@ exports.run=async(page,{width,screenshots})=>{
  await page.locator('#compare-selected-period').click();
  assert.equal(await page.locator('#evidence-scope').inputValue(),'baseline');
  assert.equal(await page.locator('#evidence-period').inputValue(),'current_week');
+ assert.match(await page.locator('#evidence-period option:checked').innerText(),/November 2–8.*recorded cohort/);
  assert.match(await page.locator('#forecast-evidence-rows').innerText(),/63/);
- await page.locator('#game-search').fill('');await page.locator('[data-period="previous"]').click();
- assert.equal(await page.locator('#game-cards .game-card').count(),56);
- assert.match(await page.locator('#visible-game-range').innerText(),/All 56 matching weekly games/);
+ await page.locator('#game-search').fill('');await page.locator('[data-period="upcoming"]').click();
+ assert.equal(await page.locator('#game-cards .game-card').count(),30);
+ assert.match(await page.locator('#visible-game-range').innerText(),/All 30 matching weekly games/);
  await page.locator('[data-period="all"]').click();
  assert.equal(await page.locator('#game-cards .game-card').count(),30);
  await page.locator('#advanced-game-filters > summary').click();
- await page.locator('[data-period="current"]').click();
+ await page.locator('[data-period="previous"]').click();
  assert.match(await page.locator('#period-timing-summary').innerText(),/51 games with all saved targets before cutoff · 12 with a target at or after · 0 with unverified clocks · 0 without outputs/);
  await page.selectOption('#timing-filter','before');assert.equal(await page.locator('#game-cards .game-card').count(),51);
  assert.equal(await page.locator('#game-cards [data-output-timing="before"]').count(),51);
@@ -57,7 +60,7 @@ exports.run=async(page,{width,screenshots})=>{
  const referenceCsv=fs.readFileSync(await referenceDownload.path(),'utf8');assert.match(referenceCsv,/selected_reference_available/);assert.match(referenceCsv,/selected_timing_status/);assert.equal(referenceCsv.trim().split('\r\n').length,2);
  await page.goto(referenceLink);assert.equal(await page.locator('#reference-coverage').inputValue(),'missing');assert.equal(await page.locator('#game-cards .game-card').count(),1);
  await page.locator('#clear-game-filters').click();assert.equal(await page.locator('#reference-coverage').inputValue(),'all');assert.equal(await page.locator('#timing-filter').inputValue(),'all');assert.equal(await page.locator('#game-cards .game-card').count(),63);
- await page.locator('[data-period="current"]').click();await page.selectOption('#model-view','v043_refresh_extra_trees');
+ await page.locator('[data-period="previous"]').click();await page.selectOption('#model-view','v043_refresh_extra_trees');
  assert.match(await page.locator('#period-overview-note').innerText(),/14 winner \/ probability · 14 margin · 14 total/);
  await page.locator('#coverage-accounting summary').click();
  assert.match(await page.locator('#coverage-accounting').innerText(),/49.*Outside the registered 119-game/s);
@@ -71,7 +74,7 @@ exports.run=async(page,{width,screenshots})=>{
 
  assert.equal(await page.locator('#game-table-view').isVisible(),false);
  assert.equal(await page.locator('#family-coverage-rows tr').count(),26);
- assert.equal(await page.evaluate(()=>FBSCompleteReview.filtered().slice(0,63).every(g=>g.period==='current'&&g.season===2026)),true);
+ assert.equal(await page.evaluate(()=>FBSCompleteReview.filtered().slice(0,53).every(g=>g.period==='current'&&g.season===2026)),true);
  assert.match(await page.locator('#active-result-snapshot').innerText(),/Latest/);
  assert.match(await page.locator('#game-cards .game-card').first().innerText(),/Home margin.*Total points.*Cover probability.*Unavailable.*Margin intervals.*80%.*95%/s);
  await page.selectOption('#model-view','extra_trees');
@@ -93,7 +96,7 @@ exports.run=async(page,{width,screenshots})=>{
  assert.equal(await page.locator('#game-cards .game-card').count(),3);assert.match(await page.locator('#game-cards').innerText(),/Winner unavailable/);
  await page.locator('#clear-game-filters').click();await page.selectOption('#model-view','fixed_equal_blend');
  await page.selectOption('#season-filter','all');assert.match(await page.locator('#family-coverage-summary').innerText(),/2,742 fixtures/);
- await page.selectOption('#season-filter','2026');await page.locator('[data-period="current"]').click();assert.match(await page.locator('#family-coverage-summary').innerText(),/63 fixtures/);
+ await page.selectOption('#season-filter','2026');await page.locator('[data-period="current"]').click();assert.match(await page.locator('#family-coverage-summary').innerText(),/53 fixtures/);
  await page.selectOption('#development-study','v042');await page.selectOption('#development-cohort','2026');await page.selectOption('#development-target','winner');
  const cat=page.locator('#metric-deltas tr').filter({hasText:/catboost/i});
  assert.match(await cat.innerText(),/Different or unverified game cohort/);
