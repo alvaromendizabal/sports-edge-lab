@@ -355,7 +355,7 @@ def build_github_readme(data: dict) -> str:
         "",
         "> **Important:** This is research, not an entered Circa contest card. Weeks 1–8 are retrospectively reconstructed after the games, with unverified historical source-possession clocks. Week 9 forecasts were actually saved before Sunday's kickoffs, but after Circa's Saturday 4 p.m. contest cutoff. Thursday's Week 9 game has no N056 original issue. No backdated live-pick claims are made.",
         "",
-        "**Read the interactive HTML:** [Open via HTML preview](https://raw.githack.com/alvaromendizabal/sports-edge-lab/main/tracks/nfl/circa_million_2026/index.html) · [View the HTML source in GitHub](./index.html) · [Official Circa Million](https://www.circasports.com/circa-million)",
+        "**You're already viewing the full report on GitHub — no download needed.** For optional interactive filtering: [open the HTML in a third-party preview](https://raw.githack.com/alvaromendizabal/sports-edge-lab/main/tracks/nfl/circa_million_2026/index.html) (the preview service may show a safety notice first) · [view HTML source](./index.html) · [official Circa Million](https://www.circasports.com/circa-million).",
         "",
         "The native GitHub tables below show every result **without downloading anything**, even if the interactive preview service is unavailable.",
         "",
