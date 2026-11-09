@@ -1,5 +1,48 @@
 # Sports Edge Lab · NCAA men's basketball
 
+## Latest owner check and refresh review — November 8, 2026 UTC
+
+**B054 ran and stopped at its required package checks before research began.** All **17 research stages were unentered**: zero completed and zero numbered stages failed, alongside the run-level `FAILED_PARTIAL_WORK_PRESERVED` result. The owner checks recorded **2,314 passed, one failed, one optional skip and zero errors out of 2,316 cases**. The failed assertion concerned rejection of a file changed while being read. This operational check does not establish a model loss or a platform root cause.
+
+The typed scientific ledger was **not initialized**, while the return reports **zero new owner fits**. Those are separate facts; an absent ledger is not presented as an empty ledger. No new research source acquisition, forecast, evaluated improvement or champion promotion is credited. Diagnostic-return persistence remains separate from research acquisition. The recorded owner wall time is **270.817 seconds**. Literal external terminal lines were not supplied.
+
+**B053 remains the latest admitted partial scientific work**, and B046 retains its historical baseline and champion lineage. The actual B053 game report, original issue archive, source clocks, missing coverage and unfavorable comparisons remain available unchanged. B054 did not produce a completed V4 study file.
+
+### Open the evidence that actually exists
+
+- In the [private NCAA viewer](https://alvaro-ncaa-research-review.alv-mendizabal.chatgpt.site/private-report/index.html), select **`B053_CURRENT_DASHBOARD_DATA.json`** in the main report picker for the latest admitted game/model checkpoint.
+- The separate **`B052_FULL_SEASON_SCHEDULE_COMPACT.json`** and **`B052_CURRENT_ELIGIBILITY_LEDGER.json`** retain their own dates and independent denominators. The schedule contains **23,603 provider-native 2026–27 IDs**, with **2,520 null exact tip times**, 39 ambiguous date responses and 110 rejected records. These are not unique physical-season game counts.
+- When an actual B055 owner return provides **`B055_V4_PRIVATE_REVIEW.json`**, open it in the rolling-review picker. The earlier B054 review schema remains supported. A local test file or prepared executable provides no owner result.
+- Select the exact named gzip part to inspect its rows. Compressed/decoded hashes, byte counts and row counts are checked locally. A rejected replacement preserves the previous valid view. Reloading clears imports; selecting the saved files restores them.
+
+### Refresh coverage is inspectable separately from forecasts
+
+The B055 review contract adds a dated refresh manifest. It keeps source-event keys, target contexts and per-recipe execution records separate, with an explicit reason and next action for every supplied plan row. The browser displays the plan's declared clock and never advances a state using its own clock.
+
+| Recorded plan state | What it represents |
+|---|---|
+| Model / feature / issue refresh due | Separate pending actions; a plan does not claim a newly committed fit or forecast. |
+| Early outlook | Outside the registered refresh window; no eligible issue is implied. |
+| Current, owner classified | A supplied current-state classification whose original fit/source/issue proof remains required. |
+| Decision window missed | A retained missed context; a later reconstruction cannot repair the original issue time. |
+| Source blocked / no registered recipe | Specific recoverable or unresolved evidence requirements, preserved in each row. |
+| Terminal event | A supplied terminal disposition, separate from an evaluated forecast outcome. |
+
+Use the state, league, target and source-ID/reason filters on a loaded refresh-plan part. **Export loaded refresh rows** saves the exact selected rows and file pins with an explicit one-part scope. Plan totals must conserve both state and target counts. The execution-audit stream keeps its own denominator. Loading one part does not certify the full stream, every scheduled game, or complete near-term forecast coverage.
+
+### Expected home and away scores
+
+The separate **Expected scores** view reads the owner's matched margin/total pairs. Both heads must share the registered model context, ordered source game, forecast origin, cutoff, horizon and admitted source/training evidence. Each displayed record retains both original target prediction IDs. Supplied fractional means are displayed without integer rounding or missing-head substitution.
+
+Missing companion heads, incoherent negative-score pairs, unsupported selector pairings and non-numeric/source-only inputs remain distinct dispositions. Matched pair counts, individual head contexts and emitted disposition rows have separate denominators. These derived means do not create a new score model, fit, immutable issue, joint integer score distribution or qualified line-conditioned probability. No champion or prospective performance claim follows from the view.
+
+The four evaluation tracks remain **original frozen issues, historical rolling reconstruction, genuine future rolling issues, and model/market/source references**. Source-only rows cannot become numerical model metrics. Current-season outcomes cannot select or promote a model. AP/Coaches and other ranking systems still need authorized, correctly mapped and time-qualified source evidence; a witnessed capture may support later games under its explicit future-only bound without inventing publication time or historical availability.
+
+This publication is an inspection surface. Owner execution, admitted features, physical fits, real issues, scored predictions and promotion remain separately evidenced. Complete physical-season coverage, all-provider common cohorts, qualified line-conditioned probabilities and the registered calibration/paired-study gaps remain unresolved until admitted owner evidence closes them. Private active recipes, raw inputs, weights, execution archives and cloud identifiers stay outside the public repository.
+
+<details>
+<summary>Dated B053 result and B054 viewer preparation</summary>
+
 ## Current B053 result and V4 review — November 8, 2026 UTC
 
 **The latest authenticated owner execution is B053, with real partial scientific work: 9/16 stages completed, one failed wrapper stage and six stages not entered.** The injury-study work recorded an inner `AdmissionDeferred` disposition; that is separate from the enclosing stage failure. New committed work comprises **145 target fits, 45 scalar fits and 24 empirical fits across 360 new contracts**. The **108 reused historical target fits**, **13 reused native fits** and **seven reused scalar fits** remain separate categories. The receipt's **557 roles and 577 contracts** are not a fit total. No champion promotion or model-improvement claim follows from these counts.
@@ -20,6 +63,8 @@ The V4 panel keeps each supplied metric population's league, season, target, sel
 AP, other ranking systems and the March project transfer remain explicitly source-qualified work. The private transfer inventory separates reused mechanisms, new implementations, proposed candidates and source-blocked inputs. A ranking row needs the correct league, season, team mapping, source authorization and publication/original-availability proof before a game cutoff. An unranked AP team does not receive an invented last-place rank. Men's and women's NET remain separate, with no invented preseason NET. No transfer inventory or implementation test is evidence that every March feature was fitted or improved these models.
 
 See the [NCAA V4 usage and remaining requirements](../../examples/ncaa_review/README.md#current-b053-result-and-v4-review--november-8-2026-utc). **No 2026–27 outcome-based feature/model selection or promotion is permitted.** Missing forecasts, source clocks, ranking admission, provider coverage, qualified line-result distributions and the older calibration/paired-study gaps remain explicit until admitted owner work closes them. Private execution packages, active feature recipes and raw sources remain outside this public repository.
+
+</details>
 
 <details>
 <summary>Dated B053 preparation — before the actual B053 owner return</summary>

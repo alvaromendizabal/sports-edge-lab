@@ -28,6 +28,20 @@ class EvidenceTests(unittest.TestCase):
         self.assertEqual(receipt['status'], 'PASS')
         self.assertGreaterEqual(receipt['checks'], 30)
 
+    def test_refresh_review_conserves_states_and_keeps_plan_scope(self):
+        result = subprocess.run(['node', str(build_dashboard.HERE / 'test_refresh_review.cjs')],
+                                check=True, capture_output=True, text=True, timeout=30)
+        receipt = json.loads(result.stdout)
+        self.assertEqual(receipt['status'], 'PASS')
+        self.assertGreaterEqual(receipt['checks'], 23)
+
+    def test_expected_scores_preserve_both_heads_and_explicit_blocks(self):
+        result = subprocess.run(['node', str(build_dashboard.HERE / 'test_projection_review.cjs')],
+                                check=True, capture_output=True, text=True, timeout=30)
+        receipt = json.loads(result.stdout)
+        self.assertEqual(receipt['status'], 'PASS')
+        self.assertGreaterEqual(receipt['checks'], 14)
+
     def test_private_viewer_model_scoped_inventory(self):
         result = subprocess.run(['node', str(build_dashboard.HERE / 'test_private_viewer.cjs')],
                                 check=True, capture_output=True, text=True, timeout=20)
@@ -69,7 +83,11 @@ class EvidenceTests(unittest.TestCase):
         for path, output in pages.items():
             if 'private-report' in path.parts:
                 continue
-            self.assertIn('Current B053 owner result', output)
+            self.assertIn('Latest owner check · B054', output)
+            self.assertIn('17 research stages were unentered', output)
+            self.assertIn('typed scientific ledger was not initialized', output)
+            self.assertIn('2,314 passed, one failed, one optional skip and zero errors', output)
+            self.assertIn('Retained B053 scientific result', output)
             self.assertIn('145 new target fits, 45 new scalar fits and 24 new empirical fits', output)
             self.assertIn('Dated B052 return', output)
             self.assertIn('5/16 stages completed', output)
