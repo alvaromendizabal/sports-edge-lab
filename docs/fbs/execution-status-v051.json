@@ -1,0 +1,69 @@
+{
+  "schema": "fbs.v051.public-execution-attempt.v1",
+  "owner_release": "V050",
+  "classification": "AUTHENTICATED_PHYSICAL_PARTIAL_OWNER_DIAGNOSTIC_CANONICAL_READBACK_PENDING",
+  "stopped_at": "2026-11-09T07:04:39.025098Z",
+  "phase": "FULL_SAVED_PREDICTION_SCHEMA_PREFLIGHT_BEFORE_PROVIDER_REQUESTS",
+  "stop_reason": "Separate saved-prediction schema preflight reserve unavailable",
+  "new_base_fits": 0,
+  "new_calibration_fits": 0,
+  "new_prediction_records": 0,
+  "new_source_captures": 0,
+  "provider_requests": 0,
+  "current_source_observed_at": "2026-11-09T03:22:14Z",
+  "worker_exit_observed": 2,
+  "supervisor_exit_observed": 2,
+  "outer_observer_shell_exit_independently_proved": false,
+  "live_process_state_claimed": false,
+  "new_scientific_metrics_computed_in_publication": 0,
+  "prepared_successor_execution_claimed": false,
+  "prior_readme": {
+    "bytes": 19787,
+    "sha256": "4dc222f8dd1f8a4ce129ec36682c269b87a1cab9f39ad0409f7064c84162d85b"
+  },
+  "public_summary": "The latest owner execution stopped during saved-prediction schema preflight before any source refresh or new scientific work. It added zero fits, calibrators, predictions, captures or provider requests. The earlier 108 current-origin outlooks and the 03:22:14 UTC source observation remain the latest retained records. V051 prepares durable admission evidence, bounded pressure reobservation and a separate research continuation; it has not been owner executed. The dated November 9 Pacific calendar reorganizes unchanged fixtures without refreshing data or relabeling scored cohorts.",
+  "prepared_successor": {
+    "release": "V051",
+    "status": "PREPARED_NOT_OWNER_EXECUTED",
+    "schema_preflight": "Persist the measured plan before admission or refusal; reobserve only bounded transient pressure under unchanged gates.",
+    "checkpoint_policy": "Reuse verified unchanged scientific identities across invocation versions.",
+    "research_followup": "R13 generic research continuation is prepared; no new fitted state, result or forecast is claimed by this publication."
+  },
+  "display_calendar": {
+    "as_of_utc": "2026-11-09T08:00:00Z",
+    "timezone": "America/Los_Angeles",
+    "evidence_class": "DATED_DISPLAY_CALENDAR_USING_UNCHANGED_SOURCE",
+    "source_observed_at": "2026-11-09T03:22:14Z",
+    "periods": {
+      "previous": {
+        "start": "2026-11-02",
+        "end_exclusive": "2026-11-09",
+        "games": 63,
+        "observed_finals": 63,
+        "source_dated_unresolved_games": 0,
+        "schedule_associated_games": 63,
+        "games_class": "EXACT_KICKOFF_FIXTURES"
+      },
+      "current": {
+        "start": "2026-11-09",
+        "end_exclusive": "2026-11-16",
+        "games": 53,
+        "observed_finals": 0,
+        "source_dated_unresolved_games": 14,
+        "schedule_associated_games": 67,
+        "games_class": "EXACT_KICKOFF_FIXTURES"
+      },
+      "upcoming": {
+        "start": "2026-11-16",
+        "end_exclusive": "2026-11-23",
+        "games": 30,
+        "observed_finals": 0,
+        "source_dated_unresolved_games": 40,
+        "schedule_associated_games": 70,
+        "games_class": "EXACT_KICKOFF_FIXTURES"
+      }
+    },
+    "week_navigation_population": "EXACT_KICKOFF_ONLY_WITH_UNRESOLVED_FIXTURES_RETAINED_SEPARATELY",
+    "unresolved_note": "Source-reported placeholder dates locate 14 unresolved fixtures in the November 9–15 window and 40 in November 16–22. These dates do not establish exact kickoff times or forecast eligibility. All 95 unresolved fixtures remain visible in the full inventory and separate unresolved ledger."
+  }
+}

@@ -6,12 +6,15 @@
  const current=new Map(D.rows.map(row=>{const g=Object.fromEntries(D.columns.map((key,index)=>[key,row[index]]));return[g.id,g];}));
  const originalGames=T.rows.map(row=>({...current.get(row.id),...row})),latestRows=U.indexRows(Y.rows),nightRows=U.indexRows(X.rows),eveningRows=U.indexRows(W.rows),lateRows=U.indexRows(Q.rows),priorRows=U.indexRows(P.rows);
  const games=originalGames.map(g=>({...U.resultView(g,latestRows.get(g.id),'latest',D.source_observed_at),period:M.periodFor(U.resultView(g,latestRows.get(g.id),'latest',D.source_observed_at),Y.capture.observed_at)}));
- const periodAnchor=window.FBS_SOURCE_STATUS_V050?.capture?.official_current_season_observed_at||window.FBS_SOURCE_STATUS_V049?.capture?.official_current_season_observed_at||window.FBS_SOURCE_STATUS_V048?.capture?.official_current_season_observed_at||Y.capture.observed_at;
+ const sourcePeriodAnchor=window.FBS_SOURCE_STATUS_V050?.capture?.official_current_season_observed_at||window.FBS_SOURCE_STATUS_V049?.capture?.official_current_season_observed_at||window.FBS_SOURCE_STATUS_V048?.capture?.official_current_season_observed_at||Y.capture.observed_at;
+ const displayCalendar=window.FBS_EXECUTION_STATUS_V051?.display_calendar;
+ const periodAnchor=M.pacificDate(displayCalendar?.as_of_utc)?displayCalendar.as_of_utc:sourcePeriodAnchor;
  const weekWindows=M.weekWindows(periodAnchor);
- for(const key of ['previous','current','upcoming'])D.periods[key]={...D.periods[key],label:({previous:'Previous',current:'Dated current',upcoming:'Upcoming'}[key])+' Pacific week · '+weekWindows[key].label};
+ for(const key of ['previous','current','upcoming'])D.periods[key]={...D.periods[key],label:({previous:'Previous',current:'Current',upcoming:'Upcoming'}[key])+' Pacific week · '+weekWindows[key].label};
  for(const game of games)game.period=M.periodFor(game,periodAnchor);
  const currentFixtureSnapshot=games.map(game=>({...game}));
- $('upcoming-week-count').textContent=games.filter(g=>g.season===2026&&g.period==='upcoming').length;
+ for(const key of ['previous','current','upcoming'])$(key+'-week-count').textContent=games.filter(g=>g.season===2026&&g.period===key).length;
+ $('display-calendar-clock').textContent=`Dated display calendar: ${M.pacificDate(periodAnchor)} Pacific. Fixture source remains ${sourcePeriodAnchor}; this calendar change does not refresh results or forecasts. Week tabs contain exact-kickoff fixtures. There are 14 additional source-dated unresolved fixtures for November 9–15; all 95 unresolved fixtures remain in the full inventory and unresolved ledger. Reported placeholder dates do not establish an exact kickoff or forecast eligibility. Stored evaluations retain their exact original dates.`;
  const originalDevelopment=new Map(R.rows.map(r=>[r.id,r]));
  const optionalDevelopment=new Map(O.rows.map(r=>[r.id,r]));
  const catboostDevelopment=new Map(C.rows.map(r=>[r.id,r]));
@@ -65,8 +68,8 @@
   return B.comparisonRoute(state.season,state.period,snapshot,{selected:weekWindows,evaluated:M.weekWindows(report?.capture.observed_at||D.source_observed_at)});
  }
  function renderPeriodOverview(){
-  const rows=periodGames(),counts=B.periodSummary(rows,projection,$('model-view').value,A),label=state.period==='all'?(state.season==='all'?'All three seasons':state.season+' season'):state.period==='current'?'Dated current Pacific week':state.period==='upcoming'?'Upcoming Pacific week':'Previous Pacific week';
-  $('period-overview-title').textContent=label+' · full fixture inventory';
+  const rows=periodGames(),counts=B.periodSummary(rows,projection,$('model-view').value,A),label=state.period==='all'?(state.season==='all'?'All three seasons':state.season+' season'):state.period==='current'?'Current Pacific week':state.period==='upcoming'?'Upcoming Pacific week':'Previous Pacific week';
+  $('period-overview-title').textContent=label+(state.period==='all'?' · full fixture inventory':' · exact-kickoff fixture inventory');
   $('period-overview-status').textContent=`${counts.games} games · ${counts.completed} observed finals · ${counts.without_final} without a final in this capture`;
   $('period-overview-note').textContent=`Selected model: ${counts.winner} winner / probability · ${counts.margin} margin · ${counts.total} total · ${counts.cover} qualified cover. Counts above include the whole period before team, result, output, timing or reference filters.`;
   const clocks=B.timingSummary(rows,projection);
@@ -196,14 +199,15 @@
    const chosen=$('development-study').value==='v045_refresh'?refreshEvaluation:refreshed;
    for(const o of $('development-cohort').options){
     const coverage=chosen.coverage?.[o.value],registered=coverage?.registered_target_games,observed=coverage?.observed_completed;
+    const datedLabel=({current_week:'Nov 2–8',previous_week:'Oct 26–Nov 1'})[o.value]||pretty(o.value);
     o.disabled=!Number.isInteger(registered)||registered===0;
-    o.textContent=Number.isInteger(registered)?`${pretty(o.value)} · ${registered} registered / ${Number.isInteger(observed)?observed:'unverified'} observed finals`:`${pretty(o.value)} · no recorded refresh cohort`;
+    o.textContent=Number.isInteger(registered)?`${datedLabel} · ${registered} registered / ${Number.isInteger(observed)?observed:'unverified'} observed finals`:`${datedLabel} · no recorded refresh cohort`;
    }
    if($('development-cohort').selectedOptions[0].disabled)$('development-cohort').value='2026';return;
   }
   for(const o of $('development-cohort').options)o.disabled=false;
   const study=$('development-study').value,latest=['v045','v044','v043','v042'].includes(study),report=study==='v045'?X:study==='v044'?W:study==='v043'?Q:P;
-  const labels={'2026':latest?`2026 · ${report.counts.seasons['2026'].completed} dated outcomes`:'2026 · 629 original outcomes',current_week:latest?`Current week · ${report.counts.periods.current_week.completed} dated outcomes`:'Current week · 7 original outcomes',previous_week:'Previous week · 56 outcomes','2024':'2024 · 678 observed outcomes','2025':'2025 · 934 observed outcomes',cumulative:'All seasons · exact target cohorts',newly_observed:`Newly observed · ${report.counts.newly_observed} finals`};
+  const labels={'2026':latest?`2026 · ${report.counts.seasons['2026'].completed} dated outcomes`:'2026 · 629 original outcomes',current_week:latest?`Nov 2–8 · ${report.counts.periods.current_week.completed} dated outcomes`:'Nov 2–8 · 7 original outcomes',previous_week:'Oct 26–Nov 1 · 56 outcomes','2024':'2024 · 678 observed outcomes','2025':'2025 · 934 observed outcomes',cumulative:'All seasons · exact target cohorts',newly_observed:`Newly observed · ${report.counts.newly_observed} finals`};
   for(const o of $('development-cohort').options){if(labels[o.value])o.textContent=labels[o.value];if(['newly_observed','cumulative'].includes(o.value))o.disabled=!latest;}
   if(!latest&&['newly_observed','cumulative'].includes($('development-cohort').value))$('development-cohort').value='2026';
  }
@@ -212,12 +216,12 @@
   $('capture-view').querySelector('[value=nov7_night]').textContent=time(X.capture.observed_at);
   $('capture-view').querySelector('[value=nov7_evening]').textContent=time(W.capture.observed_at);
   const refreshScope=refreshEvaluation.coverage['2026'],refreshWeek=refreshEvaluation.coverage.current_week;
-  $('refresh-evaluation-summary').textContent=`The separate changed-input study retains 3,808 saved outputs on 119 registered 2026 games, including 14 current-week games and 105 later games. ${refreshScope.observed_completed} registered games had observed finals in the archived evaluation (${refreshWeek.observed_completed} in the current week); ${refreshScope.registered_target_games-refreshScope.observed_completed} remain unscored. Compare its recorded metrics on exact matched target/game cohorts, or retain the earlier pending evaluation. All scored refresh outputs were computed at or after cutoff. These are small-sample reconstructions; no authenticated issues, default or champion changes.`;
+  $('refresh-evaluation-summary').textContent=`The separate changed-input study retains 3,808 saved outputs on 119 registered 2026 games, including 14 November 2–8 games and 105 later games. ${refreshScope.observed_completed} registered games had observed finals in the archived evaluation (${refreshWeek.observed_completed} in November 2–8); ${refreshScope.registered_target_games-refreshScope.observed_completed} remain unscored. Compare its recorded metrics on exact matched target/game cohorts, or retain the earlier pending evaluation. All scored refresh outputs were computed at or after cutoff. These are small-sample reconstructions; no authenticated issues, default or champion changes.`;
   $('capture-clock').textContent=time(Y.capture.observed_at)+' · '+Y.capture.observed_at;
   $('latest-evidence-clock').textContent=Y.capture.observed_at+' · capture completed '+Y.capture.completed_at;
-  $('capture-heading').textContent=`${Y.counts.newly_observed} more finals · current week complete`;
+  $('capture-heading').textContent=`${Y.counts.newly_observed} more finals · November 2–8 complete`;
   $('show-new-finals').textContent=`Show the ${Y.counts.newly_observed} added finals`;
-  $('capture-update-summary').textContent=`2026 has ${Y.counts.seasons['2026'].completed} observed finals, including all ${Y.counts.periods.current_week.completed} current-week games. The upcoming Pacific week has ${Y.counts.periods.upcoming_week.identified} exact-kickoff fixtures. There are ${Y.counts.newly_observed} new finals since ${time(X.capture.observed_at)} and ${Y.counts.newly_observed_since_original_snapshot} since November 6. Three previously unresolved kickoffs create new fixture epochs with predictions pending. All five earlier snapshots and original forecast values remain available. The latest owner evaluation now includes all 685 observed season finals and all 63 current-week outcomes in its baseline cohort; each family retains its own exact target count. Earlier scorecards keep their original date.`;
+  $('capture-update-summary').textContent=`2026 has ${Y.counts.seasons['2026'].completed} observed finals, including all ${Y.counts.periods.current_week.completed} November 2–8 games. The November 9–15 Pacific window has ${Y.counts.periods.upcoming_week.identified} exact-kickoff fixtures. There are ${Y.counts.newly_observed} new finals since ${time(X.capture.observed_at)} and ${Y.counts.newly_observed_since_original_snapshot} since November 6. Three previously unresolved kickoffs create new fixture epochs with predictions pending. All five earlier snapshots and original forecast values remain available. The latest owner evaluation now includes all 685 observed season finals and all 63 November 2–8 outcomes in its baseline cohort; each family retains its own exact target count. Earlier scorecards keep their original date.`;
   const d=X.draftkings;
   $('latest-source-summary').textContent='Retained exact associations from '+time(X.capture.observed_at)+'. '+d.summary+' The newer '+time(Y.capture.observed_at)+' capture contains 201 target observations across 67 events, with 33 exact event / 99 target associations and 99 source-available rows by both T−120 and T−60. These are source associations, not new qualified model inputs; its metadata remains separate from the older numerical values below.';
   $('latest-source-counts').innerHTML=`<span><b>${d.event_count}</b> captured events</span><span><b>${d.target_rows}</b> target observations</span><span><b>${d.source_clock_qualified_rows}</b> source-clock checks passed</span><span><b>${d.post_kickoff_rows}</b> after kickoff</span><span><b>${d.exact_game_events}</b> exact official event joins</span>`;

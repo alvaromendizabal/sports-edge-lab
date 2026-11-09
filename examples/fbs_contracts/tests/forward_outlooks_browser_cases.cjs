@@ -10,6 +10,9 @@ exports.run=async page=>{
  assert.equal(Number(await page.locator('#forward-outlook-total').innerText()),expected.all.games);
  assert.equal(Number(await page.locator('#stat-forward-issued').innerText()),expected.all.issued);
  assert.equal(await page.locator('#forward-outlook-rows tr').count(),expected.upcoming.games);
+ assert.equal(await page.locator('#forward-scope').inputValue(),'current');
+ await page.selectOption('#forward-scope','upcoming');assert.equal(await page.locator('#forward-outlook-rows tr').count(),30);
+ await page.selectOption('#forward-scope','current');
  assert.match(await page.locator('#forward-target-counts').innerText(),/Exact-line cover 0/);
  if(!await page.locator('#advanced-game-filters').evaluate(element=>element.open))await page.locator('#advanced-game-filters > summary').click();
  await page.selectOption('#capture-view','original');

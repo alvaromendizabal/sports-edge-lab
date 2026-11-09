@@ -1,7 +1,7 @@
 'use strict';
 const test=require('node:test'),assert=require('node:assert/strict');
 const F=require('../../../docs/fbs/forward-outlooks.js');
-const game={id:'invented-1',season:2026,home_id:'h',away_id:'a',home:'Home',away:'Away',kickoff:'2026-11-15T01:00:00Z',kickoff_exact:true,completed:false,period:'upcoming'};
+const game={id:'invented-1',season:2026,home_id:'h',away_id:'a',home:'Home',away:'Away',kickoff:'2026-11-15T01:00:00Z',kickoff_exact:true,completed:false,period:'current'};
 const record={id:game.id,season:2026,home_id:'h',away_id:'a',kickoff:game.kickoff,original_issue_verified:true,horizon:'CURRENT_ORIGIN_OUTLOOK',information_cutoff_utc:'2026-11-09T01:00:00Z',computed_at_utc:'2026-11-09T02:00:00Z',issued_at_utc:'2026-11-09T02:01:00Z',targets:{winner:{available:true},margin:{available:true},total:{available:true}},interval_status:'SAVED_NOT_EMPIRICALLY_CALIBRATED',distribution_status:'JOINT_SCORE_DISTRIBUTION_SAVED'};
 test('original issue requires exact ordered identity, original clocks and a declared horizon',()=>{
  assert.equal(F.coverage(game,{rows:[record]}).original_issue_verified,true);

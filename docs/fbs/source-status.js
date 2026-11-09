@@ -58,13 +58,14 @@
     $('source-clock-gap').textContent=`${finals} observed 2026 finals · ${evaluatedGames} in the latest evaluated baseline snapshot${gap===null?'':` · ${gap} later finals awaiting owner evaluation`}. Family and target gaps retain their own denominators. No metrics are recomputed from displayed values.`;
     $('source-recheck-summary').textContent=`Latest authenticated source check: ${status.capture.observed_at}; completed ${status.capture.completed_at}. All ${status.counts.fixtures.toLocaleString()} fixture, ordered-team, kickoff and result coordinates match the prior capture. No result coordinates changed in this source capture. New owner forecast work is accounted for separately; the original result and metric clocks remain separate.`;
     $('source-owner-summary').textContent=status.owner_evidence?.public_summary || 'The latest owner evidence is recorded separately from source capture and earlier metric cohorts. A partial execution is not live process state.';
-    const windows=M.weekWindows(status.capture.observed_at),all=changed.rows;
+    const displayClock=window.FBS_EXECUTION_STATUS_V051?.display_calendar?.as_of_utc,anchor=M.pacificDate(displayClock)?displayClock:status.capture.observed_at;
+    const windows=M.weekWindows(anchor),all=changed.rows;
     $('source-week-navigation').innerHTML=['previous','current','upcoming'].map(key=>{
-      const games=all.filter(g=>g.season===2026&&M.periodFor(g,status.capture.observed_at)===key),finals=games.filter(g=>g.completed).length;
-      const label={previous:'Previous week',current:'Dated current week',upcoming:'Upcoming week'}[key];
-      return `<a class="source-week-link" href="?season=2026&amp;period=${key}#game-heading"><strong>${label}</strong><span>${windows[key].label}</span><b>${games.length} games · ${finals} observed finals</b><small>${key==='upcoming'?'Inspect saved targets, source associations and explicit gaps':'Open the full dated game inventory'}</small></a>`;
+      const games=all.filter(g=>g.season===2026&&M.periodFor(g,anchor)===key),finals=games.filter(g=>g.completed).length;
+      const label={previous:'Previous week',current:'Current week',upcoming:'Upcoming week'}[key];
+      return `<a class="source-week-link" href="?season=2026&amp;period=${key}#game-heading"><strong>${label}</strong><span>${windows[key].label}</span><b>${games.length} exact-kickoff games · ${finals} observed finals</b><small>${key==='upcoming'?'Inspect saved targets, source associations and explicit gaps':'Open the full dated game inventory'}</small></a>`;
     }).join('');
-    $('source-week-anchor').textContent='Pacific date windows are anchored to the authenticated source check, not today’s browser clock. Stored metric cohorts keep their own exact date windows.';
+    $('source-week-anchor').textContent='These exact-kickoff links use the separately dated November 9 Pacific display calendar. Source observation and scored cohorts are unchanged. All 95 unresolved fixtures remain in the full inventory; 14 have source-reported dates within November 9–15 but no exact kickoff.';
     $('source-status-clock').textContent=`DraftKings observed ${time(market.source_observed_at)}. This view contains association and timing metadata only. Older numeric reference values remain dated separately below.`;
     function render(){
       const provider=$('source-status-provider').value,rows=sourceRows(market,{provider,binding:$('source-status-binding').value,query:$('source-status-search').value}),s=sourceSummary(rows);

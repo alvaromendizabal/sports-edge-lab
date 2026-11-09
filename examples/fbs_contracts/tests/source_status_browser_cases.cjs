@@ -7,7 +7,9 @@ exports.run=async page=>{
  assert.match(await page.locator('#source-clock-results').getAttribute('title'),/^2026-11-08T19:34:42Z$/);
  assert.match(await page.locator('#source-clock-evaluated').getAttribute('title'),/^2026-11-09T01:35:19Z$/);
  assert.equal(await page.locator('#source-week-navigation a').count(),3);
- assert.match(await page.locator('#source-week-navigation').innerText(),/53 games · 0 observed finals/);
+ assert.match(await page.locator('#source-week-navigation a').first().innerText(),/2026-11-02 to 2026-11-08.*63 exact-kickoff games/s);
+ assert.match(await page.locator('#source-week-navigation a').last().innerText(),/2026-11-16 to 2026-11-22.*30 exact-kickoff games/s);
+ assert.match(await page.locator('#source-week-navigation').innerText(),/53 exact-kickoff games · 0 observed finals/);
  assert.match(await page.locator('#source-week-navigation a').last().getAttribute('href'),/period=upcoming/);
  assert.equal(await page.locator('#source-status-rows tr').count(),67);
  await page.selectOption('#source-status-binding','exact');assert.equal(await page.locator('#source-status-rows tr').count(),33);
