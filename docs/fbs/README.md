@@ -1,8 +1,20 @@
 # NCAA FBS · complete game inventory and forecast evidence
 
-[**Open the game center →**](https://sports-edge-lab-fbs.alv-mendizabal.chatgpt.site) · [Remaining-game outlook status](forward-outlooks-v050.json) · [Latest completed outcome evaluations](evaluation-v049.json) · [Newest source check](source-status-v050.json) · [Source association census](market-status-v050.json) · [V5 publication boundary](PUBLICATION_BOUNDARY_V5.md) · [Unchanged V049 README](README-history-v049.md)
+[**Open the game center →**](https://sports-edge-lab-fbs.alv-mendizabal.chatgpt.site) · [Remaining-game outlook status](forward-outlooks-v050.json) · [Latest completed outcome evaluations](evaluation-v049.json) · [Newest source check](source-status-v050.json) · [Source association census](market-status-v050.json) · [V5 publication boundary](PUBLICATION_BOUNDARY_V5.md) · [Latest attempt](execution-status-v051.json) · [Unchanged V050 README](README-history-v050.md) · [V049 README](README-history-v049.md)
 
-## Current state · V050
+## Latest execution and coverage navigation · V051
+
+The latest actual **V050 owner attempt stopped at 2026-11-09T07:04:39.025098Z (November 8, 11:04 PM PST)** during the separate saved-prediction schema-preflight reserve check, before provider transport or new research. It added **zero fits, calibrators, predictions, captures and provider requests**. Worker exit 2 and supervisor exit 2 are separately observed; the outer observer/shell exit remains unproved. This dated failure is separate from the successful earlier V049 scientific work reported in V050 below. The new handoff's guarded repair is prepared; publication does not claim it executed. [Latest attempt evidence](execution-status-v051.json).
+
+The official source clock is still **2026-11-09T03:22:14Z**. The failed attempt does not refresh the dashboard to 07:04 UTC. All **108 original current-origin outlooks**, **203 remaining fixtures**, **95 current-season unresolved kickoffs**, earlier metrics, negative studies and exact forecast identities remain unchanged. Ranking fits and qualified exact-line outputs remain zero.
+
+The new [forecast access panel](https://sports-edge-lab-fbs.alv-mendizabal.chatgpt.site/#forecast-access) makes three different destinations explicit: displayed historical winner/probability/margin/total/interval values; the private original-outlook presence and timing ledger; and owner-computed evaluations. It never substitutes an old displayed prediction for a later private issue. Eight readiness cells use the same 203-fixture denominator and link directly to winner, margin, total, saved-interval, joint-score, calibration, later-horizon and exact-line gaps. Saved intervals and coherent score records do not establish empirical calibration.
+
+The [horizon timing inventory](https://sports-edge-lab-fbs.alv-mendizabal.chatgpt.site/#refresh-deadlines) lists day-ahead, two-hour and one-hour boundaries for all remaining fixtures, with exact UTC CSV timestamps and Pacific display. It retains all 95 unresolved current-season kickoffs without fabricated dates. Boundaries are assessed at the original source observation; a future boundary is not counted as a missed issue. These metadata calculations neither run a scheduler nor create a prediction. There are **zero individually qualified later-horizon updates** in the retained export.
+
+This FBS-only presentation change performs no scientific fit, feature materialization, forecast creation or outcome rescoring. All prior numerical/status assets are preserved. The [complete preceding README](README-history-v050.md) is retained byte for byte; the status below records its original evidence generation.
+
+## Current state · V050 (retained earlier scientific work)
 
 The newest authenticated official observation is **2026-11-09T03:22:14Z (November 8, 7:22 PM PST)**. The capture began at 03:22:13Z and completed at 03:23:08Z. All **2,742 fixture, ordered-team, kickoff and result coordinates** match the preceding capture: **685 completed 2026 games**, **2,646 exact kickoffs**, and **96 unresolved kickoffs** across the three seasons. All 15 original current-source bodies, 15 standalone receipts and 15 request-index records were independently authenticated. This is a dated observation, not live scores. The last observation that changed results remains **November 8, 19:34:42Z**. [Source and exact-equivalence proof](source-status-v050.json).
 

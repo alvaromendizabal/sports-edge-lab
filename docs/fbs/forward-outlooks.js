@@ -59,7 +59,9 @@
     return rows.filter(row=>(scope==='all'||scope==='upcoming'&&row.game.period==='upcoming'||scope==='exact'&&row.game.kickoff_exact||scope==='unresolved'&&!row.game.kickoff_exact)
       &&(!q||`${row.id} ${row.game.away} ${row.game.home}`.toLowerCase().includes(q))
       &&(status==='all'||status==='issued'&&row.original_issue_verified||status==='missing'&&!row.original_issue_verified)
-      &&(target==='all'||row.targets[target]!=='AUTHENTICATED_PRIVATE_OUTLOOK'))
+      &&(target==='all'||(targets.includes(target)||target==='cover'?row.targets[target]!=='AUTHENTICATED_PRIVATE_OUTLOOK':
+        target==='saved_intervals'?!row.original_issue_verified||row.interval_status!=='SAVED_MODEL_INTERVALS_CALIBRATION_UNPROVED':
+        target==='coherent_scores'?!row.original_issue_verified||row.distribution_status!=='JOINT_SCORE_COHERENCE_CHECKED':true)))
       .sort((a,b)=>(time(a.game.kickoff)??Infinity)-(time(b.game.kickoff)??Infinity)||a.id.localeCompare(b.id));
   }
   function summarize(rows) {
