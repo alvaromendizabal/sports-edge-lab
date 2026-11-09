@@ -2,10 +2,10 @@
 const assert=require('node:assert/strict'),fs=require('node:fs');
 exports.run=async page=>{
  await page.locator('#source-status-summary').filter({hasText:/67 events/}).waitFor();
- assert.match(await page.locator('#source-clock-gap').innerText(),/685 observed 2026 finals.*683.*2 later finals/);
- assert.match(await page.locator('#source-clock-checked').getAttribute('title'),/^2026-11-08T23:57:41Z$/);
+ assert.match(await page.locator('#source-clock-gap').innerText(),/685 observed 2026 finals.*685.*0 later finals/);
+ assert.match(await page.locator('#source-clock-checked').getAttribute('title'),/^2026-11-09T01:35:19Z$/);
  assert.match(await page.locator('#source-clock-results').getAttribute('title'),/^2026-11-08T19:34:42Z$/);
- assert.match(await page.locator('#source-clock-evaluated').getAttribute('title'),/^2026-11-08T06:27:42Z$/);
+ assert.match(await page.locator('#source-clock-evaluated').getAttribute('title'),/^2026-11-09T01:35:19Z$/);
  assert.equal(await page.locator('#source-week-navigation a').count(),3);
  assert.match(await page.locator('#source-week-navigation').innerText(),/53 games · 0 observed finals/);
  assert.match(await page.locator('#source-week-navigation a').last().getAttribute('href'),/period=upcoming/);
@@ -26,5 +26,5 @@ exports.run=async page=>{
  await page.locator('#source-status-search').fill('no matching team');assert.equal(await page.locator('#source-status-export').isDisabled(),true);
  await page.locator('#source-status-search').fill('');await page.locator('.source-status-details summary').click();
  assert.doesNotMatch(await page.locator('#latest-source-capture .eyebrow').innerText(),/LATEST/);
- return{status:'PASS',source_events:67,exact_events:33,unmatched_events:34,metadata_csv_rows:99,metric_gap:2,unbound_game_links:0};
+ return{status:'PASS',source_events:67,exact_events:33,unmatched_events:34,metadata_csv_rows:99,metric_gap:0,unbound_game_links:0};
 };

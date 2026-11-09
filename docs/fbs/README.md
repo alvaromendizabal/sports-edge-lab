@@ -1,138 +1,111 @@
-# NCAA FBS · game coverage, model evidence and ranking research
+# NCAA FBS · complete game inventory and forecast evidence
 
-[**Open the FBS game center →**](https://sports-edge-lab-fbs.alv-mendizabal.chatgpt.site) · [Newest source check](source-status-v048.json) · [Retained ranking census](ranking-research-v047.json) · [Latest changed observations and research clocks](observation-status-v046.json) · [Latest evaluated 683-game snapshot](current-capture-v045.json) · [V4 publication boundary](PUBLICATION_BOUNDARY_V4.md) · [Exact V047 README history](README-history-v047.md) · [V046 history](README-history-v046.md) · [V045 history](README-history-v045.md)
+[**Open the game center →**](https://sports-edge-lab-fbs.alv-mendizabal.chatgpt.site) · [Latest owner evaluations](evaluation-v049.json) · [Newest source check](source-status-v049.json) · [Source association census](market-status-v049.json) · [V5 publication boundary](PUBLICATION_BOUNDARY_V5.md) · [Unchanged V048 README](README-history-v048.md)
 
-## Current state · V048
+## Current state · V049
 
-The newest authenticated **2026-11-08T23:57:41Z (November 8, 3:57 PM PST)** source observation preserves exactly the earlier **2,742 fixture, ordered-team, kickoff and result coordinates**. The capture ran from 23:57:39Z to 23:58:07Z. It adds **zero new finals, fixture changes, fits, forecasts or metric evaluations**. Source check, original result observations and the existing 683-game evaluation keep separate clocks. The preceding 22:12 recheck and its original source census remain unchanged. [Newest source-check evidence](source-status-v048.json) · [Prior recheck and ranking census](ranking-research-v047.json).
+The newest authenticated official observation is **2026-11-09T01:35:19Z (November 8, 5:35 PM PST)**. The capture began at 01:35:18Z and completed at 01:35:51Z. All **2,742 fixture, ordered-team, kickoff and result coordinates** match the preceding capture: **685 completed 2026 games**, **2,646 exact kickoffs**, and **96 unresolved kickoffs** across the three seasons. This is a dated observation, not live scores. The last observation that changed results remains **November 8, 19:34:42Z**. [Source and exact-equivalence proof](source-status-v049.json).
 
-The dashboard accounts for **all 2,742 identified fixtures** across 2024, 2025 and 2026. The authenticated 2026 result observation at **2026-11-08T19:34:42Z (November 8, 11:34 AM PST)** contains **685 observed finals**. All **63 dated current-week games** and **56 previous-week games** have observed finals. The separate upcoming Pacific week, **November 9–15**, has **53 identified exact-kickoff fixtures**, with no observed finals at this capture. These are dated observations, not live scores. The source capture began at 19:34:40Z and completed at 19:35:24Z. [Exact observations and clocks](observation-status-v046.json).
+The actual owner also completed **175 baseline and 70 changed-input evaluation cohorts** from unchanged saved forecasts. Its separate **105-game outlook has no observed outcomes** and an explicitly empty evaluation. These are real completed evaluations, not new forecasts. A later conflicting-rating-data error stopped the rolling-policy phase. The partial run preserved **15 current-source requests**, **36 reported selector-evaluation records**, and **zero new fits, predictions or genuine issues**. The dashboard does not classify that partial execution as a completed pilot. [Public-safe owner status](source-status-v049.json) · [Original aggregate evidence](evaluation-v049.json).
 
-The earlier 19:34 capture added **two finals** relative to the 683/61 snapshot and resolved **three previously TBD kickoffs**. It did not change official game IDs or ordered teams. The newest recheck retains **2,646 exact kickoffs and 96 unresolved kickoffs**. Resolved times create new fixture epochs with predictions pending; no older forecast is rebound.
+## Every identified game is accounted for
 
-| Season | Identified fixtures | Original baseline forecast games | Current explicit output gap |
+| Season | Fixtures | Original baseline forecast games | Explicit remaining output gap |
 |---|---:|---:|---|
-| 2024 | 920 | 679 | 240 early-history gaps and one unresolved kickoff |
+| 2024 | 920 | 679 | 240 early-history games and one unresolved kickoff |
 | 2025 | 934 | 934 | No missing baseline targets in this identified inventory |
-| 2026 | 888 | 790 | 95 unresolved kickoffs plus three newly resolved fixture epochs awaiting predictions |
-| Total | 2,742 | 2,403 | 240 history gaps, 96 unresolved kickoffs and three new prediction identities pending |
+| 2026 | 888 | 790 | 95 unresolved kickoffs and three newly resolved kickoff identities awaiting forecasts |
+| Total | 2,742 | 2,403 | 240 history gaps, 96 unresolved kickoffs and three new forecast identities |
 
-The newly resolved games are **Purdue at Iowa (401858519, November 15 00:30 UTC)**, **Massachusetts at Toledo (401866463, November 12 00:30 UTC)** and **Central Michigan at Buffalo (401866469, November 19 00:30 UTC)**. The owner originally labeled these as fixture revisions; the correction preserves that label and identifies each as a TBD resolution. Two fall in the upcoming Pacific week. The original 99-TBD inventory remains selectable unchanged. [Metadata and epoch status](observation-status-v046.json).
+The default view includes **all 888 current-season fixtures**. Cards and the table retain available winner, home/winner probability, home margin, total, and saved 80%/95% intervals. Each family/target gap has a reason. CatBoost retains its three protected missing winner outputs on **401858225, 401858226 and 401856811**; their point targets remain available. An interval is not converted into a cover probability. [Original three-season inventory](three-season.json) · [Latest identity and clock metadata](observation-status-v046.json).
 
-## What changed in the dashboard
-
-The source navigator puts **source-check time, last changed result observation and the source date used by the latest metrics** side by side. It shows the two later finals awaiting owner evaluation without computing a score from rounded public values. Previous, dated current and upcoming weeks have full date ranges and direct links, with their complete fixture and observed-final denominators. The default still accounts for all 888 current-season games.
-
-Weekly comparison links now match **exact Pacific date boundaries** to the stored evaluation cohort. When a later capture crosses Monday, the newly previous week may correctly match an older current-week cohort; a new current or upcoming week without matching evaluation stays unavailable. Relative week labels cannot silently select another date range. Sunday/Monday, DST, missing-window and changed-boundary cases are tested.
-
-A new **provider association explorer** exposes every event and target in the newest metadata-only capture, with exact versus unbound identity, original quote/acquisition clocks, separate raw and exact cutoff counts, source eligibility limits, search, filtered CSV and game-detail links. Unmatched source events never receive an inferred official game ID. The other three providers explicitly show that this owner run did not refresh their captures, while all earlier four-provider comparisons remain available. The older numeric DraftKings panel is now labeled as retained dated evidence. No new quote values or unissued numerical prediction grid is published.
-
-The new **Rankings** view separates source capture, feature admission, evaluation and promotion. Its three-season inventory shows **21 source/season cells: 13 authenticated captures and eight explicitly uncaptured historical rating cells**. AP, Coaches, CFP, Elo, SRS, SP+ and FPI have separate coverage and timing rows. Six earlier 2022/2023 poll cells remain in a separate selection-history section. Filters and a metadata-only CSV preserve missing counts as missing; none are silently filled with zero. [Exact 19-row native source census](ranking-research-v047.json).
-
-Each game now includes a ranking-input audit against the selected saved model's **original computation clock and registered cutoff**. A capture before a future cutoff does not become an input to an already computed forecast. New fixture epochs, unresolved kickoffs, missing saved models and uncaptured source seasons have different reasons. These source records supplied **zero new admitted, materialized or evaluated features** in the observed owner run. The broad readiness table links each requested feature group to its evidence gap and next admissible action, without publishing private transformations.
-
-The default all-season view retains all 888 current-season fixtures. Previous, dated current and upcoming Pacific weeks are separate controls. Their full fixture denominators remain visible while team, result, target, computation-time or provider filters narrow the display. Each small weekly scope fits on one page; cumulative views retain bounded 30-game pages. A shareable URL and filtered CSV preserve the selected state.
-
-Game cards and the compact table retain available legacy winner, home/winner probability, home margin, total and saved 80%/95% intervals. New **forecast-age and original lead-time labels** explain whether a displayed value was a long-range saved outlook, a nearer-origin snapshot, computed after its game, or lacks sufficient clock evidence. Age is measured against the dated capture, never the browser's current clock. An unissued snapshot is never relabeled as an issued forecast.
-
-Game details retain the **private research availability and clocks** for the separate 105-game changed-input study. Its numerical grid remains private under V4; the existing public numerical controls are preserved byte for byte. The target/status table carries safe family names, computation time, registered target cutoff, original horizon and training/calibration availability. A future registered cutoff is not a claim that future information was available at computation.
-
-## Six independent observation snapshots
-
-| Observation | 2026 finals | Dated current-week finals | Source |
+| Dated Pacific scope | Games | Observed finals | Coverage interpretation |
 |---|---:|---:|---|
-| November 6 original | 629 | 7 | [Original inventory](complete-season.json) |
-| November 7, 2:23 PM PST | 647 | 25 | [V042 capture](current-capture.json) |
-| November 7, 5:08 PM PST | 667 | 45 | [V043 capture](current-capture-v043.json) |
-| November 7, 7:17 PM PST | 670 | 48 | [V044 capture](current-capture-v044.json) |
-| November 7, 10:27 PM PST | 683 | 61 | [V045 evaluated capture](current-capture-v045.json) |
-| November 8, 11:34 AM PST | 685 | 63 | [V046 observation and status](observation-status-v046.json) |
+| Previous week, October 26–November 1 | 56 | 56 | Complete identified scope; its own evaluation dates |
+| Current week, November 2–8 | 63 | 63 | Complete identified scope; 63 baseline outcomes now evaluated |
+| Upcoming week, November 9–15 | 53 | 0 | 51 saved legacy outlooks, two new fixture epochs; no authenticated near-term issues |
 
-The later November 8, 2:12 PM and 3:57 PM PST source rechecks are separate from these six changed-result snapshots: they confirm their latest coordinates without rewriting their original clocks. **Latest result coverage and latest evaluated coverage are different.** The original full-precision 683-game/61-current-week metrics remain dated at their earlier observation. Evaluation of the two later finals awaits an admitted owner execution. V048 reporting performs **zero new fits, forecasts or scientific evaluations**. It never computes a headline score from rounded public values. Older evaluations and their exact target/game cohorts remain selectable.
+Week windows are anchored to the source observation, not the browser clock. A comparison link matches exact Pacific date boundaries, including DST. Moving relative week names cannot select a different scorecard silently. Cumulative inventories keep bounded pages; every small weekly scope is shown without hidden pages. Team, result, timing and provider filters do not erase the full-period denominator.
 
-## Recovered owner work and retained model families
+### Upcoming refresh priorities
 
-The latest authenticated **V047 owner run** preserved a new 15-request current-source capture, then stopped during source-selector authentication before new optimization, predictions or scientific evaluation. The failure did not invalidate the original source bodies or saved forecasts. Correcting the source serializer is an engineering repair; it does not count as a completed rolling-policy pilot. [Dated source and execution status](source-status-v048.json).
+A new **53-game priority queue** identifies the next missing action for every upcoming fixture. The newly resolved **Massachusetts at Toledo (401866463; November 12, 00:30 UTC)** and **Purdue at Iowa (401858519; November 15, 00:30 UTC)** require fresh forecast identities and rank first. The remaining 51 retain older outlooks that require an admitted approaching-game refresh and an actual pre-cutoff issue. **Central Michigan at Buffalo (401866469; November 19, 00:30 UTC)** is the third resolved epoch, outside this upcoming-week window. No original forecast is rebound to a newly resolved time. [Whitelisted epoch and private-study status](observation-status-v046.json).
 
-The earlier authenticated **V046 owner run** preserved 24 provider requests: **15 current-source requests and nine ranking/rating requests**. Its registered rolling-policy stage stopped at an input-identity contract before a new verified fit, forecast or evaluation. The nine original ranking captures remain retained; this later current-source capture does not refresh their editions or publication evidence. A separate read-only observer's zero-request count is a different execution scope. V048 dashboard work adds no provider calls, fits or scientific evaluations. [Retained ranking-source census](ranking-research-v047.json).
+## New forecast evidence view
 
-The authenticated V045 owner completed **23 base fits and seven calibrations**, producing **3,360 new private outputs on 105 changed-input games** across nine families and three fixed blends. This is actual earlier owner work, not a V046 refit. All 23 original states and standalone fit receipts were authenticated; no local estimator was restored or trained. Original results and timing records remain intact. The owner completed 15 current-source requests and zero native-history provider requests, then deferred further work at the original sustained resource-pressure admission gate; this was not simply a free-RAM claim. [Whitelisted research-status metadata](observation-status-v046.json).
+The primary comparison view now displays the **authenticated owner-computed aggregates** on their exact season, date window and target. It offers five scored date scopes—2024, 2025, 2026, previous week and current week—and separate original, 119-game changed-input, and 105-game later-outlook archives. The last scope reports its absence of outcomes explicitly; unavailable performance is not zero.
 
-Across retained studies there are **5,970 base fits, 1,836 calibrations and 91,270 saved target outputs**. These counts preserve successful work and do not turn outputs into issues or prove model quality. The prior **84,102 original outputs** and **3,808 earlier changed-input outputs** remain separate from the 3,360 newly recovered outputs. The original 2,403-game universe is unchanged; the new study is a later version for 105 of those games. It contains **51 of the 53 upcoming-week fixtures**; the two newly resolved fixtures require new target identities.
+**Own-cohort results** retain each family's actual count. **Matched-control results** require the original recorded common-game hash, equal candidate/control counts and authenticated paired aggregates. CatBoost's 682-game 2026 winner cohort therefore stays distinct from the 685-game full baseline. The same game count alone does not prove a common comparison. [All 245 aggregate rows](evaluation-v049.json).
 
-| Family | Winner / probability | Margin / total | Evidence status |
-|---|---|---|---|
-| Logistic regression | Executed | Outside family scope | Original and separate changed-input owner studies |
-| Linear regression and ridge | Outside family scope | Executed | Original and separate changed-input owner studies |
-| Extra Trees and histogram gradient boosting | Classifiers executed | Regressors executed | Original and separate changed-input owner studies |
-| XGBoost and LightGBM | Classifiers executed | Regressors executed | Original and separate changed-input owner studies |
-| CatBoost | Executed with three protected missing 2026 winner outputs | Regressors executed | Separate retained candidate; protected pending work not forced to refit |
-| PyTorch and TensorFlow | Owner classifiers executed | Owner regressors executed | Original neural and separate changed-input studies |
-| Fixed blends and calibration | Separate fixed presets and dated held-out calibration | Fixed point blends; saved intervals on individual regressors | Saved reconstruction controls; no automatic champion promotion |
+The view includes winner accuracy, log loss, Brier, calibration error, ROC AUC and original reliability bins; point MAE, RMSE, bias, interval coverage and mean widths; and saved CRPS where it belongs to the recorded outcome. Interval and CRPS denominators are shown separately. A saved score for an earlier outcome is not silently applied to a new final. Paired diagnostics retain the owner's descriptive week-block intervals and multiplicity adjustment. Small one-week cohorts retain `INSUFFICIENT_DISTINCT_WEEK_BLOCKS` rather than invented uncertainty. Full-precision CSV exports preserve missing values and cohort qualification. No browser or local dashboard code computes a scientific metric from displayed forecasts.
 
-Retained original counts are **V038 2,497 base + 681 calibrations / 33,642 outputs**, **V039 1,362 + 454 / 21,627**, **CatBoost 680 + 226 / 7,206**, and **original owner neural 1,362 + 454 / 21,627**. The separate first changed-input study retains **46 + 14 / 3,808**. CatBoost winner gaps remain **401858225, 401858226 and 401856811**; their point targets remain available. No completed unchanged study is repeated to increase counts. [Original study assets](three-season.json) · [Earlier changed-input study](changed-input-study-v044.json).
+### Dated fixed-blend control
 
-The original retrospective replay remains **622 games, 465 correct winners and log loss 0.5133276378012555**, separate from issuance and the other model families. The independent 301-game claim is not authenticated by this dashboard. [Retained replay](complete-season.json).
+These are **exposed retrospective evaluations**, not prospective issues or evidence that the control should be promoted. Values below are display-rounded from the original owner aggregates. The interactive table and download preserve full precision.
 
-## V4 methodology and evidence classes
+| Season | Scored games | Accuracy | Log loss | Brier | Margin MAE | Total MAE |
+|---|---:|---:|---:|---:|---:|---:|
+| 2024 | 678 | 65.04% | 0.623803 | 0.217158 | 22.171170 | 20.316455 |
+| 2025 | 934 | 69.91% | 0.547181 | 0.185850 | 14.003027 | 13.465992 |
+| 2026 | 685 | 70.80% | 0.543116 | 0.185227 | 14.262569 | 13.059545 |
 
-The selected fixed blend is a **legacy comparison control**, not an automatic permanent production champion. A candidate recipe, selection policy, fitted snapshot and issued forecast are distinct records. V4 prepares registered prior-season window comparisons and nested rolling origins: every origin may use only admitted earlier labels and features, with earlier-origin calibration and combination evidence. A changed admitted input requires a compatible new snapshot; an exact compatible state is reused. Feature refresh, parameter refit, calibration retention and new issue creation remain separate.
+The separate 119-game changed-input archive now has **14 observed games and 448 evaluated original target outputs**; **105 games / 3,360 outputs remain unscored**. Its 70 metric rows include season/current-week views and matching fixed-control rows. Those 14 games belong to the original outputs computed at or after their reconstructed cutoffs. They are not genuine issues. The later 105-game/3,360-output archive has **zero observed outcomes**. Both archives retain their original computation and source clocks. [Separate scope coverage](evaluation-v049.json).
 
-| Evaluation class | Current state |
-|---|---|
-| Original frozen issued | Zero independently authenticated issues represented here |
-| Historical rolling reconstruction | Saved fixed-recipe chronological controls and separate changed-input studies; nested rolling selection not established by those controls |
-| Genuine future-issued rolling | Prepared owner methodology; no authenticated future-issued record produced by this publication |
-| Source-only reference | Four separate providers with their own identity, product, clock and missingness qualifications |
+## Four roles, four evidence states
 
-Long-range outlooks preserve their original horizons and need a later admitted refresh as kickoff approaches. Current results cannot retroactively repair earlier training or authorize an unregistered recipe change. Historical development remains exposed development. [Full scoped V4 method and publication boundary](PUBLICATION_BOUNDARY_V4.md).
-
-## Metrics and four-provider comparison
-
-Available scorecards retain accuracy, log loss, Brier, calibration error, ROC AUC and saved reliability bins for winner probabilities; MAE, RMSE, bias, empirical CRPS, interval coverage and width for points where recorded. Missing scores are unavailable, never zero. Exact target/game cohort hashes and already recorded paired comparisons preserve CatBoost's smaller winner cohort. Earlier current/previous/cumulative/historical cohorts remain distinct. The separate first changed-input study retains its dated 12-game/384-target evaluation; those scored outputs were computed at or after their reconstructed cutoff. [Stored evaluation](changed-input-evaluation-v045.json).
-
-DraftKings, Kalshi, Polymarket US and Polymarket Global remain separate throughout the reference ledger and three-season coverage matrix. The older retained winner references have **600 / 708 / 680 / 702 values** among 888 fixtures before join qualification. The exact-common descriptive cohorts remain **479 / 481 / 482 games** at T−120 / T−60 / latest pre-kickoff. They use rounded historical inputs and do not prove a matching forecast cutoff. The retained replay trails all four references on that diagnostic; no unfavorable finding is removed. [Common-game evidence](common-game-review.json).
-
-The newest DraftKings observation at **2026-11-08T23:57:41Z** contains **201 target observations across 67 events**. The strict registered-name, ordered-team and exact-kickoff selectors were independently replayed against all 67 original events and every target clock before being applied to this capture. They bind **33 events / 99 target rows** for display association; **99 exact rows meet T−120 and 99 meet T−60**. All **201 raw rows** meet the source-clock checks, a separate denominator that does not establish exact identity. The other **34 events remain unbound**. These associations do not prove historical model-input eligibility, fees, depth, liquidity or qualified cover. No new numeric quotes or scores are published. [Newest metadata](market-status-v048.json) · [Prior 22:12 metadata](market-status-v047.json) · [Unchanged 19:34 metadata](market-status-v046.json).
-
-The earlier evaluated capture separately retains **11 exact events / 33 target rows**, with 33 exact rows available by T−120 and T−60. Its **81 raw source-clock checks** are another dated denominator and must not be labeled exact qualified rows. [Earlier exact associations](current-capture-v045.json).
-
-Full 2024/2025 provider matrices remain incomplete. Fees, depth and liquidity lack qualified evidence in this public report. Source-only lines and median-support intervals are not expected scores. **Qualified exact-line cover probabilities remain zero** in all three seasons. **Authenticated pregame issues remain zero.** An interval or point estimate never substitutes for an admitted signed-line/product/settlement/cutoff/distribution join.
-
-## Feature readiness and missingness
-
-The V4 registry contains **246 proposed feature contracts**, with **zero newly materialized, admitted or evaluated definitions** in this cycle. Proposal counts are not implementation, model performance or promotion evidence. Exact active feature recipes remain private.
-
-| Group | Retained evidence | Next qualification requirement |
+| Role | Current evidence | What is still required |
 |---|---|---|
-| Outcome history | Existing chronological studies and separate changed-input snapshots | Original availability and rolling-origin policy qualification |
-| AP / Coaches / CFP and ratings | Nine canonical responses and their standalone receipts authenticated; 19 distinct source/season cells enumerated | Canonical team/edition binding, original publication/possession clock, exact historical vintage and controlled materialization |
-| Coaching / temporal encoding transfer | Source methodology reviewed without changing basketball | Football-specific identities, effective and known-at clocks, strictly earlier labels and origin-fitted transformations |
-| Market levels, paths and interactions | Older RAW73/path studies, including negative findings | Provider/product/cutoff coverage, original selectors and historical possession |
-| Injury / availability | Dated records plus older timing-uncertified negative study | Chronological player/team binding; no inferred historical contribution |
-| Player role and replacement quality | Requested scope remains unqualified | Qualified starter, snap expectation, contribution and replacement evidence |
-| Weather, travel and context | Proposed V4 contracts | Source/time/unit and historical-vintage admission before evaluation |
+| Historical foundation | Original fixed-recipe chronological controls, now evaluated on the latest observed outcomes | Historical input qualification and genuine future issues remain separate gates |
+| Current-regime specialist | V5 challenger and adaptive-selection work prepared; no authenticated new-policy forward issues | Owner execution using eligible prior information, separate policy and issued-forecast records |
+| Market-only reference | Four providers retained separately; newest source association is metadata only | Equivalent event, product, target, cutoff, quote type, fees and liquidity conditions |
+| Market-residual specialist | Prepared research; no qualified new residual score | Exact source/state qualification and genuine forward evaluation |
 
-AP, Coaches and CFP are distinct sources. An unlisted team is not automatically rank 26, and vote points are not win probabilities. A public API range does not establish authenticated entitlement or historical availability. The 257/312 path cohort stays separate from 115/125 availability/path. Current rosters or cumulative usage do not prove historical injuries, expected snaps or replacement quality.
+The displayed fixed blend remains a **legacy comparison control**. Recipe, selection policy, fitted state and issued forecast are different objects. Exposed historical and current-season outcomes may inform later development; they cannot independently confirm a policy designed after observing them. **New-policy forward-issued games remain zero.** There is no automatic promotion or new champion claim. The new methodology view publishes generic status and aggregate evidence, not private active transformations, search grids, model weights or numerical forecast archives. [V5 boundary](PUBLICATION_BOUNDARY_V5.md) · [Retained V4 method](PUBLICATION_BOUNDARY_V4.md).
 
-### Authenticated ranking source inventory
+## Models already executed and work retained
 
-Each poll cell below is **editions / source records / distinct team IDs**. Counts describe the returned objects; they do not prove complete historical availability. No original publication timestamp is present in these records. The owner observed the ranking sources at **22:13:10–22:13:14 UTC on November 8**. [Exact source census and clocks](ranking-research-v047.json).
+Retained successful work remains **5,970 base fits + 1,836 calibrations = 7,806 fitted/calibrated records**, with **91,270 saved target outputs**. The newest owner adds **zero fits or outputs**. Counts preserve work; they do not imply forecast issuance or scientific superiority.
 
-| Season | AP Top 25 | Coaches Poll | CFP committee |
-|---|---:|---:|---:|
-| 2022 · selection history | 16 / 400 / 51 | 16 / 400 / 50 | 6 / 150 / 35 |
-| 2023 · selection history | 16 / 400 / 45 | 16 / 400 / 45 | 7 / 175 / 32 |
-| 2024 | 17 / 426 / 48 | 17 / 425 / 46 | 6 / 150 / 32 |
-| 2025 | 17 / 425 / 49 | 17 / 425 / 47 | 6 / 150 / 35 |
-| 2026 | 11 / 275 / 39 | 11 / 276 / 40 | 1 / 25 / 25 |
+| Family | Winner / probability | Margin / total | Status |
+|---|---|---|---|
+| Logistic regression | Executed | Outside family scope | Original and changed-input reconstructions |
+| Linear regression and ridge | Outside family scope | Executed | Original and changed-input reconstructions |
+| Extra Trees and histogram gradient boosting | Classifiers executed | Regressors executed | Original and changed-input reconstructions |
+| XGBoost and LightGBM | Classifiers executed | Regressors executed | Original and changed-input reconstructions |
+| CatBoost | Executed; three protected 2026 winner gaps | Regressors executed | Separate candidate, incomplete protected fit not restarted |
+| PyTorch and TensorFlow | Owner classifiers executed | Owner regressors executed | Original and changed-input reconstructions |
+| Fixed blends and calibration | Separate fixed presets; earlier-held-out calibration where saved | Separate point blends and recorded individual-regressor intervals | No automatic selection from current-season scores |
 
-The four **2026** rating captures contain Elo **138 records / 138 teams**, FPI **138 / 138**, SP+ **139 / 139** and SRS **268 / 266**. SRS is not silently reduced to one row per team. Separate 2024/2025 rating captures were not made in this run; their displayed counts remain missing. The poll census excludes **4,757 non-FBS source records**: 1,577 Division II, 1,452 Division III and 1,728 FCS Coaches records. Those records do not expand the FBS fixture population.
+The preserved partitions are **84,102 original outputs**, **3,808 first changed-input outputs**, and **3,360 later private outputs**. The 13 original families/presets are distinct from the retained **622-game replay**. That older replay remains **465 correct winners and log loss 0.5133276378012555**; it is not issuance. The separate 301-game claim is not authenticated by this dashboard. [Original inventory](three-season.json) · [First changed-input study](changed-input-study-v044.json) · [Later private-study metadata](observation-status-v046.json) · [Retained replay](complete-season.json).
 
-Actual acquisition availability can support only later eligible origins after identity and vintage admission. It never proves a historical poll publication time or qualifies the source as an input to an older saved forecast. The official [rankings interface](https://api.collegefootballdata.com/api/rankings), [ratings interface](https://api.collegefootballdata.com/api/ratings) and [documented data ranges](https://api.collegefootballdata.com/data-availability) describe the source contracts; the authenticated local census establishes what this run actually returned.
+No unchanged completed study is rerun to increase counts. Prior failures, negative findings, saved states and protected gaps remain in their original records. The original fixed-control metrics, prior evaluated captures and all numerical assets are preserved byte for byte.
 
-## Verification and remaining next action
+## Four-provider coverage and missingness
 
-All 50 earlier data and README-history assets are pinned and preserved byte for byte; the preceding active README is preserved exactly as V047 history. FBS changes are restricted to `docs/fbs` and `examples/fbs_contracts`; other projects and shared policy files remain unchanged. Tests cover dated Pacific week boundaries, future and missing clocks, strict fixture epochs, historical snapshot stability, public/private field exclusion, all-game coverage, keyboard/mobile/browser states and downloads. Export uses the exact merged source and publishes an asset SHA/byte manifest to the existing Site.
+DraftKings, Kalshi, Polymarket US and Polymarket Global remain separate throughout the provider ledger and 2024/2025/2026 matrix. Products, cutoffs, quote types, fees, depth, liquidity and missingness cannot be treated as interchangeable. Full-game model results remain visible separately from exact matched provider cohorts.
 
-The next owner action is to apply the tested source-serializer correction, revalidate the original source/receipt closure, reuse the authenticated ranking captures and completed model work, then run only the unfinished registered V4 question under the original admission gates. Qualified feature materialization, the three new fixture epochs, nearer-origin snapshots, independent issue evidence, evaluation of the two pending finals and bounded source recovery remain to complete. Production acquisition performance remains **NO_GO** until the required owner-side benchmark qualifies. A dated public dashboard does not establish live ownership, complete provider archives or production speed.
+The newest DraftKings capture, observed **2026-11-09T01:35:19Z**, contains **201 raw target observations / 67 provider events**. Exact registered names, ordered team IDs and kickoff bind **33 events / 99 targets**. All **99 exact-identity targets** were source-available by T−120 and T−60. All 201 raw rows meet those source clocks, but the other 102 rows remain unbound. These are distinct denominators. The other three providers had **no new capture in this owner run**. [Newest identity-only census](market-status-v049.json).
+
+A source association does not insert a value into an older saved model. Historical model-input possession, fees, depth and liquidity remain unqualified here. **Qualified exact-line cover outputs remain zero**; no conditional probability is manufactured from a point margin or residual interval. The association explorer supplies all source events, exact/unbound filters, acquisition/quote clocks, game-detail links and metadata CSV, without publishing new quote values.
+
+The older retained winner-reference counts remain **600 / 708 / 680 / 702** among 888 games before join qualification. Their exact-common descriptive diagnostic cohorts remain **479 / 481 / 482 games** at T−120 / T−60 / latest pre-kickoff. They use rounded historical inputs and do not establish equivalent forecast availability. The retained replay trails all four references on that diagnostic; this negative result is preserved. [Common-game evidence](common-game-review.json).
+
+## Ranking and frontier feature readiness
+
+The ranking view retains AP, Coaches and CFP as separate poll sources, plus Elo, SRS, SP+ and FPI. Its three-season display has **21 source/season cells: 13 authenticated captures and eight uncaptured historical rating cells**; six earlier 2022/2023 poll cells remain a separate selection-history section. Original publication timestamps are absent. A later capture cannot prove earlier historical availability or become an input to an already computed forecast. The nine original ranking/rating sources retain their original acquisition clocks. [Ranking census](ranking-research-v047.json).
+
+The latest owner stopped at conflicting rating-team rows before a new verified optimizer or model forecast. Repairing that input contract does not count as a successful model study. The broad feature contract inventory retains **246 proposed definitions, zero materialized/evaluated/promoted by these observations**; that count is not a claim of 246 novel scientific findings. Football form, schedule/context, temporal encodings, ranking, injury, market-path, interaction and contribution features each retain separate readiness and timing gaps. No missing historical player contribution, expected snaps, starter status or replacement quality is inferred from a current report. [Feature readiness view](https://sports-edge-lab-fbs.alv-mendizabal.chatgpt.site/#ranking-research).
+
+## Clocks, snapshots and publication
+
+The six changed-result views remain selectable: **629/7**, **647/25**, **667/45**, **670/48**, **683/61**, and **685/63** season/current-week finals. Later source rechecks at November 8 22:12, 23:57 and November 9 01:35 UTC are retained separately; they do not rewrite the clock of the last result change. The earlier 683-game evaluation is still available. The new owner evaluation uses the 685-game source and retains its original aggregate computation timestamps. Publication does not refresh any source, issue a forecast, or prove historical possession.
+
+The latest result inventory, evaluated baseline, narrower family targets, and qualified source comparisons have different denominators for explicit reasons. Full native-history collection is incomplete. The retained V036 six-wave diagnostic reports 141,424 registered contracts, 60,620 producer-reported complete and 80,804 producer-reported failed; these statuses do not create independently verified individual-completion credit. A qualified owner-side production benchmark is still required. **Full-workload performance remains NO_GO.** [Original source-health evidence](source-health-v040.json).
+
+The repository change is restricted to FBS presentation, tests, documentation and sanitized aggregate/status assets. The static exporter pins the exact merged commit and every published file. Existing CI executes data contracts, real-kernel notebook checks and desktop/mobile browser flows. Native publication and independent served-body verification are recorded separately in the private handoff; a native version receipt is not proof of an independently downloaded backend archive.
+
+### History and navigation
+
+[2024 games](https://sports-edge-lab-fbs.alv-mendizabal.chatgpt.site/?season=2024#game-heading) · [2025 games](https://sports-edge-lab-fbs.alv-mendizabal.chatgpt.site/?season=2025#game-heading) · [Current week](https://sports-edge-lab-fbs.alv-mendizabal.chatgpt.site/?season=2026&period=current#game-heading) · [Previous week](https://sports-edge-lab-fbs.alv-mendizabal.chatgpt.site/?season=2026&period=previous#game-heading) · [Upcoming week](https://sports-edge-lab-fbs.alv-mendizabal.chatgpt.site/?season=2026&period=upcoming#game-heading) · [Forecast evidence](https://sports-edge-lab-fbs.alv-mendizabal.chatgpt.site/#forecast-evidence)
+
+[Exact V048 README](README-history-v048.md) · [V047 history](README-history-v047.md) · [V046 history](README-history-v046.md) · [V045 history](README-history-v045.md) · [Older history index](README-history-v044.md)

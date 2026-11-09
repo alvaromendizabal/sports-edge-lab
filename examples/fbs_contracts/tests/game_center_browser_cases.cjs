@@ -32,9 +32,9 @@ exports.run=async(page,{width,screenshots})=>{
  assert.equal(await page.locator('#game-cards .game-card').count(),1);
  assert.match(await page.locator('#period-overview-status').innerText(),/63 games/);
  await page.locator('#compare-selected-period').click();
- assert.equal(await page.locator('#development-study').inputValue(),'v045');
- assert.equal(await page.locator('#development-cohort').inputValue(),'current_week');
- assert.match(await page.locator('#development-status').innerText(),/61 observed games/);
+ assert.equal(await page.locator('#evidence-scope').inputValue(),'baseline');
+ assert.equal(await page.locator('#evidence-period').inputValue(),'current_week');
+ assert.match(await page.locator('#forecast-evidence-rows').innerText(),/63/);
  await page.locator('#game-search').fill('');await page.locator('[data-period="previous"]').click();
  assert.equal(await page.locator('#game-cards .game-card').count(),56);
  assert.match(await page.locator('#visible-game-range').innerText(),/All 56 matching weekly games/);
@@ -63,8 +63,8 @@ exports.run=async(page,{width,screenshots})=>{
  assert.match(await page.locator('#coverage-accounting').innerText(),/49.*Outside the registered 119-game/s);
  await page.selectOption('#model-filter','present');assert.equal(await page.locator('#game-cards .game-card').count(),14);
  assert.doesNotMatch(await page.locator('#game-cards .game-card .card-intervals').first().innerText(),/Not saved/);
- await page.locator('#compare-selected-period').click();assert.equal(await page.locator('#development-study').inputValue(),'v045_refresh');
- assert.match(await page.locator('#development-status').innerText(),/12 observed games/);assert.equal(await page.locator('#export-metrics').isDisabled(),false);
+ await page.locator('#compare-selected-period').click();assert.equal(await page.locator('#evidence-scope').inputValue(),'two_epoch');
+ assert.match(await page.locator('#forecast-evidence-rows').innerText(),/14/);assert.equal(await page.locator('#forecast-evidence-export').isDisabled(),false);
  await page.selectOption('#development-study','v044_refresh');assert.match(await page.locator('#development-status').innerText(),/performance is pending/);assert.equal(await page.locator('#development-rows tr').count(),0);assert.equal(await page.locator('#export-metrics').isDisabled(),true);
  await page.selectOption('#capture-view','prior');assert.equal(await page.locator('#compare-selected-period').isDisabled(),true);await page.selectOption('#capture-view','latest');
  await page.locator('#clear-game-filters').click();await page.selectOption('#model-view','fixed_equal_blend');await page.locator('[data-period="all"]').click();
