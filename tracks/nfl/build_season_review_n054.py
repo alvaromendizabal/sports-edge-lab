@@ -18,7 +18,7 @@ def instant(s):
  t=datetime.datetime.fromisoformat(s.replace('Z','+00:00'))
  if t.tzinfo is None:raise ValueError('Public clock timezone')
  return t
-def validate_retained(d):
+def validate_retained(d,actual_cycle='N058'):
  only(d,TOP,'root')
  if d['schema']!=SCHEMA:raise ValueError('Public schema')
  nested={
@@ -92,10 +92,12 @@ def validate_retained(d):
   if not re.fullmatch(r'Distribution \d{2}',r['public_variant_id']):raise ValueError('Anonymous distribution identity')
  if counts['actual_latest_issue_rows']!=sum(r['rows'] for r in d['active_research_status']['new_issue_roles']):raise ValueError('Issue role reconciliation')
  if (counts['actual_latest_native_fits'],counts['actual_latest_meta_fits'])!=(27,0) or any(counts[k] for k in ('publication_new_fits','publication_new_issues')):raise ValueError('Exact independently audited fits and zero publication credit')
- if d['active_research_status']['top_level_fit_total'] is not None or d['active_research_status']['top_level_issue_total']!=2286:raise ValueError('Original partial aggregate counters')
- if d['rolling_policy']['status']!='N058_ATTEMPT_BLOCKED_N059_PREPARED' or d['rolling_policy']['actual_new_V4_owner_fits'] or d['rolling_policy']['actual_new_V4_owner_issues']:raise ValueError('Prepared methodology status')
+ expected_issue_total=None if actual_cycle=='N060' else 2286
+ expected_status='N060_V5_BLOCKED_N061_REPAIR_PREPARED' if actual_cycle=='N060' else 'N058_ATTEMPT_BLOCKED_N059_PREPARED'
+ if d['active_research_status']['top_level_fit_total'] is not None or d['active_research_status']['top_level_issue_total']!=expected_issue_total:raise ValueError('Original partial aggregate counters')
+ if d['rolling_policy']['status']!=expected_status or d['rolling_policy']['actual_new_V4_owner_fits'] or d['rolling_policy']['actual_new_V4_owner_issues']:raise ValueError('Prepared methodology status')
  f=d['frontier_feature_status']
- if f['status']!='N058_ATTEMPT_BLOCKED_N059_PREPARED' or f['proposed']!=f['implemented']+f['blocked'] or sum(f['implemented_by_source'].values())!=f['implemented']:raise ValueError('Prepared feature inventory reconciliation')
+ if f['status']!=expected_status or f['proposed']!=f['implemented']+f['blocked'] or sum(f['implemented_by_source'].values())!=f['implemented']:raise ValueError('Prepared feature inventory reconciliation')
  if any(f[k] for k in ('materialized','preflight_passed','admitted','evaluated','promoted')):raise ValueError('No owner feature admission from synthetic tests')
  if d['source_summary']['source_only_predictive_credit'] or d['source_summary']['frozen_horizon_records_modified']:raise ValueError('Source-only boundary')
  if d['public_scope']['complete_candidate_predictions_included'] or d['public_scope']['active_recipes_included'] or d['public_scope']['raw_provider_payloads_included']:raise ValueError('Public/private boundary')
@@ -103,6 +105,18 @@ def validate_retained(d):
  if FORBIDDEN.search(raw) or RETIRED.search(raw):raise ValueError('Private or transaction-language payload')
  return d
 def validate(d):
+ if d.get('schema')=='nfl.public.n061.bounded-evidence.v1':
+  from v5_public_contract import validate_additions
+  from n061_public_contract import validate_n061
+  only(d,TOP|{'n060_owner_status','n061_owner_status','v5_scope','provider_capabilities'},'N061 root')
+  retained={k:v for k,v in d.items() if k not in {'n060_owner_status','n061_owner_status','v5_scope','provider_capabilities'}}
+  retained=dict(retained,schema=SCHEMA,publication_cycle='N059')
+  validate_retained(retained,actual_cycle='N060')
+  validate_additions(d,only,instant)
+  validate_n061(d,only,instant)
+  raw=json.dumps(d,ensure_ascii=False,allow_nan=False)
+  if FORBIDDEN.search(raw) or RETIRED.search(raw):raise ValueError('Private or transaction-language N061 payload')
+  return d
  if d.get('schema')=='nfl.public.n060.bounded-evidence.v1':
   from v5_public_contract import validate_additions
   only(d,TOP|{'n060_owner_status','v5_scope'},'N060 root')
@@ -115,7 +129,7 @@ def validate(d):
   return d
  return validate_retained(d)
 def pack(d):return gzip.compress(json.dumps(d,separators=(',',':'),ensure_ascii=False).encode(),compresslevel=9,mtime=0)
-def load(path=HERE/'public_projection_n060.json.gz'):return validate(json.loads(gzip.decompress(path.read_bytes())))
+def load(path=HERE/'public_projection_n061.json.gz'):return validate(json.loads(gzip.decompress(path.read_bytes())))
 def build(d):
  validate(d);s=(HERE/'season_review_n054.template.html').read_text()
  if FORBIDDEN.search(s) or RETIRED.search(s):raise ValueError('Public template boundary')
@@ -124,6 +138,6 @@ def main():
  p=argparse.ArgumentParser();p.add_argument('--check',action='store_true');a=p.parse_args();body=build(load());out=HERE/'season_review_n054.html'
  if a.check:
   if out.read_text()!=body:raise SystemExit('Public render differs from reviewed projection')
-  print('N060 bounded public content, V5 exposure and complete inventory: PASS')
+  print('N061 bounded public content, V5 exposure and complete inventory: PASS')
  else:out.write_text(body)
 if __name__=='__main__':main()

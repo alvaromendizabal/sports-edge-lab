@@ -4,7 +4,7 @@ from build_season_review_n054 import HERE,load,validate,build
 
 class V5PublicN060(unittest.TestCase):
     @classmethod
-    def setUpClass(cls): cls.data=load()
+    def setUpClass(cls): cls.data=load(HERE/'public_projection_n060.json.gz')
     def rejects(self,mutate):
         data=copy.deepcopy(self.data);mutate(data)
         with self.assertRaises(ValueError):validate(data)
@@ -39,6 +39,6 @@ class V5PublicN060(unittest.TestCase):
         body=build(self.data)
         for marker in ['id="v5-target"','id="v5-comparison-table"','id="v5-exposure-table"','id="v5-feature-counts"']:
             self.assertIn(marker,body)
-        self.assertIn('N060 adds the V5 continuation',body)
+        self.assertIn('Evaluation exposure',body)
 
 if __name__=='__main__':unittest.main()

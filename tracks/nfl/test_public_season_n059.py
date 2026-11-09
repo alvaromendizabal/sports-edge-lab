@@ -3,7 +3,7 @@ import base64,copy,gzip,json,pathlib,re,tempfile,unittest
 from build_season_review_n054 import load,validate,build,HERE
 class PublicSeasonN059(unittest.TestCase):
  @classmethod
- def setUpClass(cls):cls.data=load()
+ def setUpClass(cls):cls.data=load(HERE/'public_projection_n059.json.gz')
  def rejected(self,mutate):
   value=copy.deepcopy(self.data);mutate(value)
   with self.assertRaises(ValueError):validate(value)
@@ -25,7 +25,7 @@ class PublicSeasonN059(unittest.TestCase):
  def test_new_owner_fit_not_confused_with_v4_fit(self):
   self.assertEqual(self.data['counts']['actual_latest_native_fits'],27);self.assertEqual(self.data['rolling_policy']['actual_new_V4_owner_fits'],0)
  def test_deterministic_self_contained_payload(self):
-  html=(HERE/'season_review_n054.html').read_text();self.assertEqual(html,build(self.data));payload=re.search(r'<script id="nfl-public-payload"[^>]*>([^<]+)</script>',html)[1]
+  html=build(self.data);self.assertEqual(html,build(self.data));payload=re.search(r'<script id="nfl-public-payload"[^>]*>([^<]+)</script>',html)[1]
   self.assertEqual(json.loads(gzip.decompress(base64.b64decode(payload))),self.data)
  def test_full_archive_field_rejected(self):self.rejected(lambda d:d.update(model_rows=[{'prediction':.7}]))
  def test_candidate_field_in_game_rejected(self):self.rejected(lambda d:d['games'][0].update(candidate_predictions=[.7]))

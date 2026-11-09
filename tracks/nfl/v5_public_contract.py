@@ -22,7 +22,11 @@ def validate_additions(data, only, instant):
         raise ValueError("Actual failure clocks")
     v5 = data["v5_scope"]
     only(v5,V5_FIELDS,"V5 scope")
-    if v5["status"] != "PREPARED_NOT_OWNER_EXECUTED" or v5["prepared_cycle"] != "N060" or v5["automatic_promotion"]:
+    current = data.get("publication_cycle") == "N061"
+    expected_status = "N060_OWNER_FAILED_N061_PREPARED" if current else "PREPARED_NOT_OWNER_EXECUTED"
+    expected_cycle = "N061" if current else "N060"
+    expected_row_status = "N060_OWNER_V5_FAILED_N061_REPAIR_PREPARED" if current else "PREPARED_NOT_OWNER_EXECUTED"
+    if v5["status"] != expected_status or v5["prepared_cycle"] != expected_cycle or v5["automatic_promotion"]:
         raise ValueError("Prepared V5 cannot be relabeled as owner execution")
     if v5["actual_new_fits"] or v5["actual_new_forecasts"]:
         raise ValueError("Prepared V5 cannot create real science")
@@ -31,7 +35,7 @@ def validate_additions(data, only, instant):
         raise ValueError("Every prepared comparison lane and target must remain visible")
     for row in rows:
         only(row,COMPARISON_FIELDS,"V5 comparison")
-        if row["status"] != "PREPARED_NOT_OWNER_EXECUTED" or row["evaluated_games"] != 0 or row["eligible_games"] is not None:
+        if row["status"] != expected_row_status or row["evaluated_games"] != 0 or row["eligible_games"] is not None:
             raise ValueError("V5 evaluated population requires actual execution")
         if any(row[k] is not None for k in ("accuracy","log_loss","brier","mae","rmse","crps")):
             raise ValueError("No synthetic, substituted or invented V5 proper score")
