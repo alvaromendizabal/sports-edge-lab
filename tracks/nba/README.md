@@ -5,6 +5,66 @@ Reproducible NBA forecasts, complete released-game inventories, chronological mo
 This NBA track belongs to the shared [Sports Edge Lab](../../README.md) repository. Its public material contains sanitized aggregate evidence and invented engineering examples. Actual game-level forecasts, feature recipes, model weights, source responses, full journals, and execution packages remain private.
 
 
+## November 8 V4 follow-up — recovered support and first matched window results
+
+**The authenticated B057 owner return adds 600 native NBA estimator fits and 624 completed prediction tasks, while successfully recovering the detailed scientific evidence omitted by the previous return.** This is a new bounded owner pass. It preserves all earlier forecasts and advances a separate rolling-origin research branch; it does not complete the original inherited owner or establish a promoted champion.
+
+| Evidence | New owner pass | Cumulative V4 branch |
+|---|---:|---:|
+| Native NBA estimator fits | **600** | **1,200** |
+| Preprocessing fits | **600** | **1,200** |
+| Native forecasts / fixed point blends | **600 / 24** | **1,200 / 48** |
+| Completed prediction tasks | **624** | **1,248** |
+| Distinct games worked on | **12** | **15** |
+| Games without any previous V4 output | **3** | — |
+| Calibration / learned-stack fits | **0 / 0** | **0 / 0** |
+| Reported new fit failures / runtime blockers | **0 / 0** | — |
+
+Twenty-seven runtime canaries were synthetic and remain separate from real NBA fits. The 15 cumulative games comprise **seven older development origins, four prior target-season games and four current-season games**. Therefore the three-season target coverage is **eight of 3,829 games**, and current research coverage is **four of 1,200 assigned games**. The full assigned-game saved projection inventory remains intact; a saved projection is not a newly qualified rolling issue. The legacy replay stays separate at 1,746 outputs on 37 games.
+
+### Detailed scientific support is now physically recoverable
+
+The recovery phase authenticated every prior task and forecast anchor and reported hashing all 600 required old local model bodies before permitting new fitting. The compact return now includes a deduplicated scientific component from which **7,486 original JSON files reconstruct byte-identically**, representing approximately **3.56 GB** of original JSON. Independent review checked all **1,248 result, attempt, progress and forecast records**, all **1,200 snapshot commits**, and their cache-key-to-snapshot bindings. All 624 previous forecasts preserve their original scientific values.
+
+The training lists were then joined to retained metadata across **9,105,636 row occurrences and 14,154 distinct events**. Their historical label-availability assumptions, chronology, training-window membership, sample weights and current possession clocks passed. All 1,032 simple-prior comparisons were independently rebuilt from the actual retained training IDs, weights and outcomes.
+
+This resolves the earlier missing-training-JSON limitation. It does **not** establish independent inspection of omitted model-weight bodies, regeneration of raw feature-cache values, complete closure over every excluded training row, or cloud durability. The owner-side old-weight checks and the independent exported-JSON checks are different evidence. The literal terminal transcript and actual outer shell exit remain unavailable; internal partial-research status and worker exits do not supply that missing observation.
+
+### The new training-window comparison is mixed
+
+The first matched expanding-versus-three-season study covers **eight older games** at retained matching origins. The native winner summaries exclude diagnostic Ridge sigmoid scores. Point blends remain separate.
+
+| Descriptive native-family average | Expanding history | Three-season window | Observed direction |
+|---|---:|---:|---|
+| Winner log loss | 0.571258 | 0.645101 | Worse |
+| Margin mean absolute error | 7.971594 | 8.331739 | Worse |
+| Total mean absolute error | 15.443882 | 14.289342 | Better |
+
+These are correlated family-level views over a small, exposed sample, with exact phase, event, horizon, target and origin strata preserved. Training-cohort differences are the intended window contrast. Actual runtime thread differences remain visible; a same-thread sensitivity check retains these directions. No confidence interval, statistical superiority or champion promotion is claimed.
+
+The cumulative baseline-versus-history feature comparison now covers **ten older games**. Native winner mean log loss worsens from **0.560133 to 0.703203**; margin mean absolute error improves from **9.239641 to 8.286624**, and total mean absolute error improves from **15.455524 to 13.799109**. Fixed point-blend margin performance worsens and is retained separately. The study reuses previously reported forecasts as well as new companion outputs. It is not a new independent evaluation of every feature or an all-new fitting experiment.
+
+The comparison catalog preserves all 23,912 earlier records and adds 5,096 records under explicit identities: new owner metric groups, new retained-control comparisons, new matched feature/window pairs, reverified prior pairs, overlapping descriptive strata, and existing Ridge qualification annotations. It now contains **46 datasets and 29,008 records**. Counts of records, metrics, models and horizons must never be summed as independent games. The 5,136 cumulative frozen-control comparison groups still rely on only **48 distinct scored original control rows on four games**; more candidate windows did not create more source observations.
+
+### What remains incomplete, and what B058 implements next
+
+The new pass adds **572 three-season-window outputs and 52 expanding-window outputs**, including blends. Recency-weighted companions remain unexecuted. The current V4 branch has 1,086 retrospective reconstructions and 162 pre-event computations using older source vectors. There are **zero newly qualified fresh original issues and zero promoted champions**. Earlier-origin calibration and learned-ensemble support remains below its registered gates.
+
+The next private engineering release implements outcome-blind completion of missing registered windows at exact prior origins, together with additional distinct chronological origins. It retains current-game priorities, unchanged scientific task identities and authenticated checkpoint reuse. The source/target/origin panel is recorded before fitting. The goal is to obtain the missing recency comparison and grow usable earlier-origin evidence, not repeat completed fits or select favorable pilot errors. Actual B058 owner execution remains a separate manual step.
+
+The previous owner materialized 86 history features; this pass reused those prepared inputs and materialized **zero new features**. The registry remains **225 distinct candidates, 94 implementations and 131 proposals with specific unmet source requirements**. Zero warnings were recorded in the 1,200 physical snapshot receipts under the named, ordered and typed feature contract. Earlier warning failures and all adverse studies remain preserved.
+
+The return is already close enough to its compact-size ceiling that the successor also implements measured compressed support budgeting. It retains complete current-invocation evidence and its transitive dependencies when full cumulative support will not fit, with exact inclusion/omission accounting. Every new native final archive stays directly in the executing user's home folder. A support omission must never be mislabeled as a complete export.
+
+Official schedule, injury and provider displays retain their actual observation clocks. This review made no new schedule or provider acquisition. DraftKings, Kalshi, Polymarket US and international histories remain separately qualified, and missing line/residual evidence remains a visible blocker for cover probabilities. The dashboard preserves all saved season views and adds window/origin filtering for actual V4 research. No automatic training service or complete current-season fresh forecast service is asserted.
+
+Owner-reported research took **691.215 seconds**, checkpoint recovery **95.769 seconds**, input preparation **11.441 seconds**, and the internal interval before final packaging **924.148 seconds**. These overlapping internal measurements are not an independently observed outer runtime or a future guarantee. No dollar cost is inferred without billing evidence.
+
+The chronology follows [rolling forecasting-origin evaluation](https://otexts.com/fpp3/tscv.html): each held-out event uses eligible earlier information. The NBA implementation additionally enforces actual event and label-availability cutoffs; irregularly spaced games are not treated as equally spaced row-index folds. See the [time-series split documentation](https://scikit-learn.org/stable/modules/generated/sklearn.model_selection.TimeSeriesSplit.html) for that distinction. The inspected current documentation is not a runtime upgrade or a change to the owner's installed library versions.
+
+<details>
+<summary>Preserved preceding V4 review — support failure before the successful recovery above</summary>
+
 ## November 8 V4 owner execution — completed fits, support-export failure and recovery
 
 **The authenticated B056 owner return records 600 new native NBA estimator fits and 624 completed prediction tasks across 12 distinct regular-season games.** The outputs comprise **600 base forecasts and 24 fixed point blends**; the blends required no additional estimator fits. The separate earlier replay remains unchanged at **1,746 outputs on 37 games**. Completing this bounded pass does not complete the historical research queue, select a champion or establish full-season current issuance.
@@ -43,6 +103,8 @@ The B057 engineering continuation is being prepared to authenticate and recover 
 
 The owner run reports **68.149 seconds** for input preparation, **1,234.859 seconds** for research and **1,395.813 seconds** before final packaging. These internal measurements do not supply an observed outer shell duration or a future time guarantee. Actual cost is not stated without billing evidence. Every new native return remains one compact archive directly in the executing user's home folder. Manual owner execution, original-versus-reconstructed forecasts, public/private boundaries and the unresolved inherited owner gates remain unchanged.
 
+
+</details>
 
 ## November 8 V4 continuation — actual paired results and a new rolling research branch
 
