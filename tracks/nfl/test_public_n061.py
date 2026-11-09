@@ -12,7 +12,7 @@ from build_season_review_n054 import HERE, build, load, validate
 class PublicN061(unittest.TestCase):
     @classmethod
     def setUpClass(cls):
-        cls.data = load()
+        cls.data = load(HERE/'public_projection_n061.json.gz')
 
     def rejected(self, mutate):
         value = copy.deepcopy(self.data)
@@ -76,7 +76,7 @@ class PublicN061(unittest.TestCase):
         self.assertTrue(all(counts[key]==0 for key in ('owner_materialized','owner_admitted','owner_evaluated','owner_promoted')))
 
     def test_current_render_exactly_matches_payload(self):
-        body = (HERE/'season_review_n054.html').read_text()
+        body = (HERE/'season_review_n061.html').read_text()
         self.assertEqual(body,build(self.data))
         raw = re.search(r'<script id="nfl-public-payload"[^>]*>([^<]+)</script>',body)[1]
         self.assertEqual(json.loads(gzip.decompress(base64.b64decode(raw))),self.data)
