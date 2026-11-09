@@ -5,10 +5,18 @@
   "number_of_games": 136,
   "scoreboard_final_overrides": 11,
   "historical_2026_reconstructed_predictions": 121,
+  "historical_margin_families_compared": 23,
+  "posthoc_ats_leader": "tensorflow_mlp::football_support_control",
+  "posthoc_card_leaders": [
+    "catboost::football_support_control",
+    "extratrees::combined_personnel_interaction",
+    "extratrees::football_support_control",
+    "oof_convex_blend"
+  ],
   "actual_N056_Week9_pre_kickoff_forecasts": 14,
-  "compiled_at_utc": "2026-11-09T00:58:42.776144+00:00",
+  "compiled_at_utc": "2026-11-09T01:23:29.348602+00:00",
   "asof_note": "Scoreboard only includes games designated Final by public live sports feed Nov 8 PT. Never grade ongoing scores.",
   "integrity_checks": "all 136 Weeks 1-9 games matched exact official Circa pair; all issue clocks before kickoff, none before Saturday Circa deadline",
-  "html_sha256": "ca0230cfbe319ca794ab6c294a5aaf19bfafc508764e7331d0e9c69061ce1f95",
-  "html_bytes": 199472
+  "html_sha256": "cc71b00f7beec718a93c52a3ed253b9cd692053860e3ac98df61831f77ffb299",
+  "html_bytes": 617277
 }

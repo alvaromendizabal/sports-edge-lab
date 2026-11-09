@@ -1,9 +1,11 @@
 #!/usr/bin/env python3
 """Build an evidence-labelled, entirely self-contained NFL / Circa 2026 report.
 
-No forecasting, refitting, backdating, or new model selection occurs here. The
-read-only N057 owner HTML supplies both annual reconstructed and original N056
-issues. All Circa spread numbers are sourced from official contest PDFs.
+No refitting, backdating, or prospective champion selection occurs here. The
+read-only N057 owner HTML supplies annual retrospective model reconstructions
+and the separate original N056 issues. Ranking model families on 2026 results
+is an explicitly POST-HOC comparison, never a prospective validation claim.
+All Circa spreads are sourced from official contest PDFs.
 """
 
 from __future__ import annotations
@@ -50,6 +52,11 @@ SELECTED_RESEARCH_MODELS = {
     "margin": "catboost::football_support_control",
     "total": "oof_stack",
 }
+
+OFFICIAL_WEEK8_STANDINGS = (
+    "https://www.circasports.com/wp-content/uploads/2026/11/"
+    "Circa-Sports-Million-VIII-Full-Season-Standings-After-Week-8.pdf"
+)
 
 
 def load_dashboard() -> dict:
@@ -122,6 +129,125 @@ def grade_total(forecast: float | None, total: float | None, line: float | None)
     actual = "OVER" if total > line else "UNDER" if total < line else "PUSH"
     return {"market_total_pick": pred,
             "market_total_grade": "PUSH" if pred == "PASS" or actual == "PUSH" else "WIN" if pred == actual else "LOSS"}
+
+
+def score_margin_families(predictions: dict, games: list[dict], champion: str) -> dict:
+    """Report every available margin family, with two separate post-hoc rankings.
+
+    ATS hit rate across all eligible games and five-largest-edge weekly Circa
+    points are different objectives. Scores are calculated from archived 2026
+    reconstructions only; original Week 9 issues remain entirely separate.
+    """
+    historical = [g for g in games if g["week"] <= 8]
+    lookup = {g["game_id"]: g for g in historical}
+    assert len(lookup) == len(historical) == 121
+    profiles = []
+    game_predictions = {}
+    observed_cohort = None
+
+    for model in sorted(predictions):
+        raw = predictions[model]
+        covered = set(raw) & set(lookup)
+        assert covered, (model, "no 2026 historical forecasts")
+        if observed_cohort is None:
+            observed_cohort = covered
+        else:
+            assert covered == observed_cohort, (model, "not comparable game cohort")
+
+        per_game = {}
+        for game_id in sorted(covered):
+            g = lookup[game_id]
+            margin = float(raw[game_id])
+            assert math.isfinite(margin)
+            edge = margin + g["line_home"]
+            # A precisely zero forecast edge is a PASS, not a Circa push.
+            side = g["home"] if edge > 0 else g["away"] if edge < 0 else None
+            cover = g["actual_ats_cover"]
+            grade = ("PUSH" if cover == "PUSH" else
+                     "WIN" if side == cover else "LOSS") if side and g["completed"] else None
+            per_game[game_id] = {
+                "margin": margin, "edge": edge, "pick": side,
+                "grade": grade, "margin_error": abs(margin - g["final"]["home_margin"]),
+                "top_rank": None,
+            }
+
+        def summarize(gids: list[str]) -> dict:
+            entries = [per_game[k] for k in gids if k in per_game]
+            graded = [r for r in entries if r["grade"] in {"WIN", "LOSS", "PUSH"}]
+            selected = [r for r in entries if r["top_rank"] is not None]
+            card = [r for r in selected if r["grade"] in {"WIN", "LOSS", "PUSH"}]
+            w = sum(r["grade"] == "WIN" for r in graded)
+            l = sum(r["grade"] == "LOSS" for r in graded)
+            p = sum(r["grade"] == "PUSH" for r in graded)
+            fw = sum(r["grade"] == "WIN" for r in card)
+            fl = sum(r["grade"] == "LOSS" for r in card)
+            fp = sum(r["grade"] == "PUSH" for r in card)
+            return {
+                "model_covered": len(entries), "ats_win": w, "ats_loss": l,
+                "ats_push": p, "ats_decisions": w+l,
+                "ats_pct": w/(w+l) if w+l else None,
+                "margin_mae": sum(r["margin_error"] for r in entries)/len(entries) if entries else None,
+                "margin_n": len(entries),
+                "top_five_picks": len(selected), "top_five_graded": len(card),
+                "top_five_w": fw, "top_five_l": fl, "top_five_p": fp,
+                "top_five_points": fw+0.5*fp,
+            }
+
+        weeks = {}
+        for week in range(1, 9):
+            game_ids = [g["game_id"] for g in historical if g["week"] == week]
+            candidates = sorted(
+                (k for k in game_ids if k in per_game and per_game[k]["pick"] is not None),
+                key=lambda k: (-abs(per_game[k]["edge"]), k),
+            )
+            assert len(candidates) >= 5, (model, week, "insufficient Circa card candidates")
+            for index, game_id in enumerate(candidates[:5], start=1):
+                per_game[game_id]["top_rank"] = index
+            weeks[str(week)] = summarize(game_ids)
+            assert weeks[str(week)]["top_five_picks"] == 5
+
+        all_stats = summarize([g["game_id"] for g in historical])
+        assert all_stats["top_five_picks"] == all_stats["top_five_graded"] == 40
+        assert all_stats["ats_win"]+all_stats["ats_loss"]+all_stats["ats_push"] == len(covered), model
+        profiles.append({"model": model, "research_champion": model == champion,
+                         "historical_lane": "RETROSPECTIVE_W1_W8",
+                         **all_stats, "weekly": weeks})
+        game_predictions[model] = per_game
+
+    for profile in profiles:
+        profile["ats_rank"] = 1+sum(
+            other["ats_pct"] > profile["ats_pct"] for other in profiles)
+        profile["card_rank"] = 1+sum(
+            other["top_five_points"] > profile["top_five_points"] for other in profiles)
+    by_ats = sorted(profiles, key=lambda p: (-p["ats_pct"], p["margin_mae"], p["model"]))
+    by_card = sorted(profiles, key=lambda p: (-p["top_five_points"], -p["ats_pct"], p["model"]))
+
+    name_lookup = {p["model"]: p for p in profiles}
+    assert len(profiles) == 23, (len(profiles), "unexpected family roster change")
+    assert (name_lookup["tensorflow_mlp::football_support_control"]["ats_win"],
+            name_lookup["tensorflow_mlp::football_support_control"]["ats_loss"],
+            name_lookup["tensorflow_mlp::football_support_control"]["top_five_points"]) == (67, 47, 19.0)
+    assert name_lookup[champion]["top_five_points"] == 23.0
+    assert sum(p["top_five_points"] == 23.0 for p in profiles) == 4
+    # Tie ranks are preserved; no arbitrarily declared unique 1st/2nd/3rd.
+    assert by_ats[0]["ats_rank"] == 1 and by_ats[1]["ats_rank"] == 2
+    assert by_card[0]["card_rank"] == by_card[3]["card_rank"] == 1
+    for g in historical:
+        record = game_predictions[champion].get(g["game_id"])
+        if record:
+            assert abs(record["margin"]-g["projected_margin"]) < 1e-10
+            assert record["grade"] == g["ats_grade"]
+            assert record["top_rank"] == g["top_five_rank"]
+
+    return {
+        "scope": "Retrospective 2026 Weeks 1–8 only; 120 common scored games per family",
+        "rank_warning": "Both rankings are chosen AFTER seeing the 2026 outcomes; not a pregame or out-of-sample champion-selection result",
+        "ats_definition": "Full slate: wins / (wins+losses), pushes excluded; all common games",
+        "card_definition": "Five per week by absolute projected margin versus fixed Circa line, chosen retrospectively; win 1 / push 0.5 / loss 0",
+        "profiles": profiles, "by_ats": [p["model"] for p in by_ats],
+        "by_card": [p["model"] for p in by_card],
+        "game_predictions": game_predictions,
+    }
 
 
 def build() -> tuple[dict, dict]:
@@ -300,6 +426,17 @@ def build() -> tuple[dict, dict]:
                                 "research_champion":False})
     alt_metrics.sort(key=lambda r:(r["cohort"], -1 if r["research_champion"] else 0, r["margin_mae"] or 9999))
 
+    comparison = score_margin_families(alts, games, asserted["margin"])
+    leaderboard_benchmark = {
+        "week": 8,
+        "official_standings": OFFICIAL_WEEK8_STANDINGS,
+        "rank_at_23_points": 1054,
+        "rank_tied": True,
+        "leader_points": 30.5,
+        "entries_reported": 5790,
+        "qualifier": "Illustrative comparison only: no Circa entry, original submitted picks, or authenticated historical as-of card",
+    }
+
     data = {
         "title":"Sports Edge Lab | NFL 2026 vs Circa Million VIII",
         "asof":"2026-11-08 — Sunday afternoon Pacific",
@@ -314,6 +451,8 @@ def build() -> tuple[dict, dict]:
         "retrospective":prob_stats(hist_games),
         "original_week9":prob_stats(week9_games),
         "alternatives":alt_metrics,
+        "model_comparison":comparison,
+        "leaderboard_benchmark":leaderboard_benchmark,
         "sources":{
             "circa_weekly_fixed_lines":"Circa Sports official weekly contest point-spread PDF (links in week details)",
             "circa_weekly_selections":"Official Circa entrant selections PDF used as machine-readable cross-check of point spreads",
@@ -322,6 +461,9 @@ def build() -> tuple[dict, dict]:
         },
         "audit":{"circa_weeks_matched":9,"circa_games_matched":len(games),
                  "circa_teams_normalized":len(TEAM),
+                 "historical_margin_families_compared":len(comparison["profiles"]),
+                 "common_games_per_historical_margin_family":120,
+                 "five_pick_cards_per_historical_family":8,
                  "original_week9_timed_issues":sum(g["model_lane"]=="ORIGINAL_PRE_KICKOFF" for g in week9_games),
                  "failed_gates":0},
     }
@@ -330,6 +472,9 @@ def build() -> tuple[dict, dict]:
              "official_lines_sha256":hashlib.sha256(LINES.read_bytes()).hexdigest(),
              "number_of_games":len(games),"scoreboard_final_overrides":len(final_overrides),
              "historical_2026_reconstructed_predictions":len(hist_games),
+             "historical_margin_families_compared":len(comparison["profiles"]),
+             "posthoc_ats_leader":comparison["by_ats"][0],
+             "posthoc_card_leaders":[p["model"] for p in comparison["profiles"] if p["card_rank"]==1],
              "actual_N056_Week9_pre_kickoff_forecasts":data["audit"]["original_week9_timed_issues"],
              "compiled_at_utc":datetime.now(timezone.utc).isoformat(),
              "asof_note":"Scoreboard only includes games designated Final by public live sports feed Nov 8 PT. Never grade ongoing scores.",
@@ -347,6 +492,23 @@ def build_github_readme(data: dict) -> str:
 
     def tri(s: dict) -> str:
         return f"{s['ats_win']}–{s['ats_loss']}–{s['ats_push']}"
+
+    comp = data["model_comparison"]
+    families = {p["model"]: p for p in comp["profiles"]}
+    overlay = comp["game_predictions"]
+    featured = comp["by_ats"][:3]
+    leaderboard = data["leaderboard_benchmark"]
+
+    def named(model: str) -> str:
+        return model.replace("::", " · ").replace("_", " ")
+
+    def family_pick(g: dict, model: str) -> str:
+        row = overlay[model].get(g["game_id"])
+        if not row or not row["pick"]:
+            return "—"
+        side = row["pick"]
+        return (f"**{side} {sign(g['line_home'] if side==g['home'] else g['line_away'])}** "
+                f"({row['grade'] or 'pending'}; edge {n(abs(row['edge']))})")
 
     lines = [
         "# 2026 NFL models vs. Circa Million VIII",
@@ -366,6 +528,63 @@ def build_github_readme(data: dict) -> str:
         "- A hypothetical five-largest-edge shortlist is shown every week. It is a post-hoc diagnostic, **not a contest submission**. Circa itself scores only five selected sides against fixed spreads (win = 1, push = 0.5, loss = 0).",
         "- Circa Million has **no over/under component**. This report scores projected combined points against final combined points; independently documented market totals appear only for eight Week 9 games.",
         "",
+        "## The best-performing models — two different definitions of 'best'",
+        "",
+        "**All 23 available reconstructed margin-model families were evaluated against the same 120 Circa-lined games in Weeks 1–8.** The rankings below deliberately use this season's known results and are therefore **post-hoc descriptions, not models known to be best before those games**. Week 9 original saved forecasts remain a separate evidence lane.",
+        "",
+        "**Best at picking against-the-spread sides across all games:** "
+        f"**{named(comp['by_ats'][0])}** ({tri(families[comp['by_ats'][0]])}, "
+        f"{n(100*families[comp['by_ats'][0]]['ats_pct'])}% excluding pushes). "
+        "**Best at a five-picks-per-week Circa-style card:** **four model configurations tied at 23.0 points**, "
+        "including the existing CatBoost baseline; the high-ATS TensorFlow MLP scored only **19.0 card points**. "
+        "So the full-slate winner and the best five-pick card are **not** the same model. "
+        "These cards choose the five biggest absolute projected spread edges *for each model*, without using outcomes to choose those five, but model ranking across the season is performed after outcomes are known.",
+        "",
+        f"**Official standings comparison:** [Circa's after-Week-8 leaderboard]({leaderboard['official_standings']}) "
+        f"shows **{n(leaderboard['rank_at_23_points'],0)}th place (tie)** at **23.0 points** "
+        f"and the leaders at **{n(leaderboard['leader_points'])}**. "
+        "A 23-point reconstructed card would have matched that score **only hypothetically**; these were not contest entries or authenticated pre-deadline selections.",
+        "",
+        "### Ranking A · every-game ATS accuracy (after-the-fact)",
+        "",
+        "| ATS place* | Reconstructed margin model | ATS W–L–P | Rate excluding pushes | Five-pick card | Margin MAE |",
+        "|---:|---|---:|---:|---:|---:|",
+    ]
+    for model in comp["by_ats"]:
+        p = families[model]
+        lines.append(f"| {p['ats_rank']}{'T' if sum(x['ats_rank']==p['ats_rank'] for x in comp['profiles'])>1 else ''} | "
+                     f"{named(model)}{' ★ research baseline' if p['research_champion'] else ''} | {tri(p)} | "
+                     f"{n(100*p['ats_pct'])}% | {n(p['top_five_points'])} / 40 | {n(p['margin_mae'],2)} |")
+    lines.extend([
+        "",
+        "### Ranking B · five-pick Circa-style points (after-the-fact)",
+        "",
+        "| Card place* | Reconstructed margin model | Card W–L–P | Points / 40 | Full-slate ATS rate |",
+        "|---:|---|---:|---:|---:|",
+    ])
+    for model in comp["by_card"]:
+        p = families[model]
+        lines.append(f"| {p['card_rank']}{'T' if sum(x['card_rank']==p['card_rank'] for x in comp['profiles'])>1 else ''} | "
+                     f"{named(model)}{' ★ research baseline' if p['research_champion'] else ''} | "
+                     f"{p['top_five_w']}–{p['top_five_l']}–{p['top_five_p']} | "
+                     f"{n(p['top_five_points'])} | {n(100*p['ats_pct'])}% |")
+    lines.extend([
+        "",
+        "*Ranks use competition-style ties (four configurations can all be #1). Rankings cannot be used as an honest 'we picked the best in advance' claim. The historical source-publication/as-of archive is not verified.*",
+        "",
+        "### Weekly five-pick comparisons · ATS leaders and existing baseline",
+        "",
+        "| Week | TensorFlow MLP (ATS #1) | PyTorch MLP (ATS #2) | XGBoost (ATS #3 tied) | CatBoost baseline (card #1 tied) |",
+        "|---:|---:|---:|---:|---:|",
+    ])
+    for w in range(1,9):
+        vals = [families[k]["weekly"][str(w)] for k in (featured+[SELECTED_RESEARCH_MODELS["margin"]])]
+        cards = [f"{s['top_five_w']}–{s['top_five_l']}–{s['top_five_p']} ({n(s['top_five_points'])} pts)" for s in vals]
+        lines.append(f"| [{w}](#week-{w}) | " + " | ".join(cards) + " |")
+    lines.extend([
+        "",
+        "**Interactive HTML:** choose any of the 23 historical margin models to inspect its **individual game picks, edge sizes, grades, and five-pick cards**. On GitHub, the full native tables remain readable below without downloading or opening HTML source. The HTML preview is optional.",
+        "",
         "## Jump to a week",
         "",
         " · ".join(f"[Week {w}](#week-{w})" for w in range(1,10)),
@@ -374,7 +593,7 @@ def build_github_readme(data: dict) -> str:
         "",
         "| Week | Evidence lane | Forecast coverage | ATS W–L–P | ATS rate* | Hypothetical five (points) | Winner calls | Margin MAE | Total MAE | Brier | Log loss |",
         "|---:|---|---:|---:|---:|---:|---:|---:|---:|---:|---:|",
-    ]
+    ])
     for w in range(1,10):
         s = data["weekly"][str(w)]["stats"]
         lines.append(f"| [{w}](#week-{w}) | {'Reconstructed' if w<=8 else 'Issued; late for contest'} | {s['model_covered']}/{s['total_games']} | {tri(s)} | {n(100*s['ats_pct'])+'%' if s['ats_pct'] is not None else '—'} | {s['top_five_w']}–{s['top_five_l']}–{s['top_five_p']} ({n(s['top_five_points'])} pts; {s['top_five_graded']}/5 scored) | {s['winner_hits']}/{s['winner_count']} | {n(s['margin_mae'])} | {n(s['total_mae'])} | {n(s['brier'],3)} | {n(s['log_loss'],3)} |")
@@ -393,9 +612,31 @@ def build_github_readme(data: dict) -> str:
                 f"#{r['top_five_rank']} {r['model_ats_pick']} {sign(r['line_home'] if r['model_ats_pick']==r['home'] else r['line_away'])} ({n(r['ats_edge_absolute'])} pts, {r['ats_grade'] or 'pending'})"
                 for r in sorted((g for g in games if g['top_five']),key=lambda x:x['top_five_rank'])),
             "",
-            "| Game (away @ home) | Final | Official Circa (away / home) | Model ATS side | Grade | Model winner (prob.) | Predicted margin / actual | Total forecast / actual |",
-            "|---|---:|---|---|---|---|---|---|",
         ])
+        if w <= 8:
+            lines.extend([
+                "**Separate five-pick cards for the three highest full-slate ATS models:**",
+                "",
+            ])
+            for i,model in enumerate(featured, start=1):
+                best = families[model]["weekly"][str(w)]
+                picks = sorted(((overlay[model].get(g["game_id"]), g) for g in games
+                                if overlay[model].get(g["game_id"], {}).get("top_rank")),
+                               key=lambda pair:pair[0]["top_rank"])
+                description = " · ".join(f"#{r['top_rank']} {family_pick(g,model)}" for r,g in picks)
+                lines.append(f"- **ATS model #{i}: {named(model)} · {n(best['top_five_points'])} points:** {description}")
+            lines.extend([
+                "",
+                "| Game (away @ home) | Final | Official Circa (away / home) | CatBoost baseline ATS | TensorFlow MLP ATS | PyTorch MLP ATS | XGBoost ATS | Model winner (prob.) | Baseline margin / actual | Total forecast / actual |",
+                "|---|---:|---|---|---|---|---|---|---|---|",
+            ])
+        else:
+            lines.extend([
+                "**Week 9 uses actual original N056 issues, not the historical model ranking.**",
+                "",
+                "| Game (away @ home) | Final | Official Circa (away / home) | Original model ATS | Model winner (prob.) | Predicted margin / actual | Total forecast / actual |",
+                "|---|---:|---|---|---|---|---|",
+            ])
         for g in games:
             final = f"{g['final']['away_score']}–{g['final']['home_score']}" if g["completed"] else "Pending"
             spread = f"{g['away']} {sign(g['line_away'])} / {g['home']} {sign(g['line_home'])}"
@@ -405,12 +646,16 @@ def build_github_readme(data: dict) -> str:
             actual_margin = sign(g["final"]["home_margin"]) if g["completed"] else "pending"
             total_actual = str(g["final"]["total"]) if g["completed"] else "pending"
             marker = " ★" if g["top_five"] else ""
-            lines.append(f"| {g['away']} @ {g['home']}{marker} | {final} | {spread} | {pick} | {g['ats_grade'] or 'Pending'} | {win} | {sign(g['projected_margin'])} / {actual_margin} | {n(g['projected_total'])} / {total_actual} |")
+            if w <= 8:
+                family_cols = " | ".join(family_pick(g, model) for model in featured)
+                lines.append(f"| {g['away']} @ {g['home']}{marker} | {final} | {spread} | {pick} ({g['ats_grade'] or 'Pending'}) | {family_cols} | {win} | {sign(g['projected_margin'])} / {actual_margin} | {n(g['projected_total'])} / {total_actual} |")
+            else:
+                lines.append(f"| {g['away']} @ {g['home']}{marker} | {final} | {spread} | {pick} ({g['ats_grade'] or 'Pending'}) | {win} | {sign(g['projected_margin'])} / {actual_margin} | {n(g['projected_total'])} / {total_actual} |")
         lines.append("")
     lines.extend([
         "## Methodology, evidence & limitations", "",
         "1. **Fixed lines:** The 2026 Circa Million VIII contest PDFs supply each week's locked side spreads. The official entrant selections were independently parsed to cross-check all 136 pairings, including Week 6 Bears/Falcons **PK**.",
-        "2. **Model configurations:** Outright probability and total use the saved research `oof_stack` champion; margin uses `catboost::football_support_control`. These configurations were selected by the existing research process, not optimized for the results printed here.",
+        "2. **Model configurations:** Outright probability and total use the saved research `oof_stack` champion. The original comparison margin is `catboost::football_support_control`; all 23 archived annual-forward margin families are now scored separately and ranked on both ATS accuracy and Circa-style five-game card points. The 2026-ranking leaders are post-hoc diagnostics, **not** historically selected champions. They are not substituted into original Week 9 issues.",
         "3. **Prediction lane:** Weeks 1–8 are annual-forward reconstructed model outputs, but historical feature-publication and possession timing is not authenticated; therefore they are **descriptive**, not proof of what was knowable or pickable then. Week 9 N056 owner issues were saved around 11:32 p.m. Pacific Nov. 7, before kickoff but after the contest deadline.",
         "4. **ATS decision:** For home margin *m* and home Circa spread *s*, the model prefers home when *m+s>0*, away when *m+s<0*. Actual outcome replaces *m* with final home margin. Exact landing on the spread is a push.",
         "5. **No false O/U:** Circa Million is ATS-only. Eight Week 9 games separately have Saturday [cross-book consensus totals](https://www.sharpfootballanalysis.com/betting/nfl-odds-picks-predictions/); no unverified totals are imputed for Weeks 1–8.",
