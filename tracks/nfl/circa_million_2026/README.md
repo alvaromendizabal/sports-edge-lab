@@ -100,7 +100,7 @@ The native GitHub tables below show every result **without downloading anything*
 
 [Week 1](#week-1) · [Week 2](#week-2) · [Week 3](#week-3) · [Week 4](#week-4) · [Week 5](#week-5) · [Week 6](#week-6) · [Week 7](#week-7) · [Week 8](#week-8) · [Week 9](#week-9)
 
-## Season scorecard
+## Existing research baseline season scorecard · CatBoost margin
 
 | Week | Evidence lane | Forecast coverage | ATS W–L–P | ATS rate* | Hypothetical five (points) | Winner calls | Margin MAE | Total MAE | Brier | Log loss |
 |---:|---|---:|---:|---:|---:|---:|---:|---:|---:|---:|

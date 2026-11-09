@@ -589,7 +589,7 @@ def build_github_readme(data: dict) -> str:
         "",
         " · ".join(f"[Week {w}](#week-{w})" for w in range(1,10)),
         "",
-        "## Season scorecard",
+        "## Existing research baseline season scorecard · CatBoost margin",
         "",
         "| Week | Evidence lane | Forecast coverage | ATS W–L–P | ATS rate* | Hypothetical five (points) | Winner calls | Margin MAE | Total MAE | Brier | Log loss |",
         "|---:|---|---:|---:|---:|---:|---:|---:|---:|---:|---:|",

@@ -14,9 +14,9 @@
     "oof_convex_blend"
   ],
   "actual_N056_Week9_pre_kickoff_forecasts": 14,
-  "compiled_at_utc": "2026-11-09T01:23:29.348602+00:00",
+  "compiled_at_utc": "2026-11-09T01:33:03.123356+00:00",
   "asof_note": "Scoreboard only includes games designated Final by public live sports feed Nov 8 PT. Never grade ongoing scores.",
   "integrity_checks": "all 136 Weeks 1-9 games matched exact official Circa pair; all issue clocks before kickoff, none before Saturday Circa deadline",
-  "html_sha256": "cc71b00f7beec718a93c52a3ed253b9cd692053860e3ac98df61831f77ffb299",
-  "html_bytes": 617277
+  "html_sha256": "1468515c94db0a47a4f2854086ac9a0a40a0a60abacac065b8c4d978fa303e4e",
+  "html_bytes": 617268
 }

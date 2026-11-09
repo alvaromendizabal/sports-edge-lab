@@ -76,7 +76,7 @@
     const FAMILIES=DATA.model_comparison;
     const PROFILE=Object.fromEntries(FAMILIES.profiles.map(p=>[p.model,p]));
     const byId=id=>document.getElementById(id);
-    let currentWeek=9, filter='ALL', activeModel=DATA.selected_models.margin;
+    let currentWeek=8, filter='ALL', activeModel=FAMILIES.by_ats[0];
     const fmt=(x,d=1)=>typeof x==='number'&&Number.isFinite(x)?x.toFixed(d):'—';
     const signed=(x,d=1)=>typeof x==='number'?`${x>0?'+':''}${Number(x.toFixed(d))}`:'—';
     const pct=(x,d=1)=>x===null||x===undefined?'—':(x*100).toFixed(d)+'%';
@@ -181,7 +181,7 @@
     function exportWeek(){const games=modelGames(currentWeek);const fields=['week','game_id','away','home','kickoff_utc','model_lane','model_variant','model_issue_utc','line_away','line_home','circa_pick_away','circa_pick_home','projected_margin','projected_total','home_win_prob','model_win_pick','model_ats_pick','ats_edge_home','ats_grade','actual_ats_cover','winner_correct','margin_error','total_error','market_total_line','market_total_pick','market_total_grade'];const csv=[fields.join(','),...games.map(g=>fields.map(k=>{const v=g[k]??'';return '"'+String(v).replace(/"/g,'""')+'"'}).join(','))].join('\n');const blob=new Blob([csv],{type:'text/csv;charset=utf-8'}),url=URL.createObjectURL(blob),a=document.createElement('a');a.href=url;a.download=`sports_edge_lab_circa_2026_week_${currentWeek}.csv`;a.click();setTimeout(()=>URL.revokeObjectURL(url),1500)}
     byId('filter-buttons').addEventListener('click',e=>{const b=e.target.closest('[data-filter]');if(!b)return;filter=b.dataset.filter;byId('filter-buttons').querySelectorAll('button').forEach(x=>x.classList.toggle('active',x===b));renderGames()});byId('search').addEventListener('input',renderGames);byId('export').addEventListener('click',exportWeek);
     byId('model-choice').addEventListener('change',e=>selectModel(e.target.value));
-    makeSelector();makeRankings();makeKpis();makeWeekly();makeAlternatives();selectWeek(9);
+    makeSelector();makeRankings();makeKpis();makeWeekly();makeAlternatives();selectWeek(8);
   </script>
 </body>
 </html>

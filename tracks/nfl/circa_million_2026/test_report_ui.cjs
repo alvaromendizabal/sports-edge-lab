@@ -34,8 +34,9 @@ const sandbox = vm.createContext({
 vm.runInContext(code[1], sandbox, { timeout: 2000 });
 assert.match(element('ats-leaders').innerHTML, /tensorflow mlp/);
 assert.match(element('card-leaders').innerHTML, /oof convex blend/);
-assert.equal(element('model-choice').disabled, true, 'Week 9 must stay on original issues');
-assert.match(element('week-heading').textContent, /Week 9/);
+assert.equal(element('model-choice').disabled, false, 'Historical leader is the default view');
+assert.match(element('week-heading').textContent, /Week 8/);
+assert.match(element('kpis').innerHTML, /67–47–6/);
 
 vm.runInContext('selectModel("tensorflow_mlp::football_support_control")', sandbox, { timeout: 2000 });
 assert.equal(element('model-choice').disabled, false);
