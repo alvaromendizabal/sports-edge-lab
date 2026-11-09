@@ -5,6 +5,14 @@ Reproducible NBA forecasts, complete released-game inventories, chronological mo
 This NBA track belongs to the shared [Sports Edge Lab](../../README.md) repository. Its public material contains sanitized aggregate evidence and invented engineering examples. Actual game-level forecasts, feature recipes, model weights, source responses, full journals, and execution packages remain private.
 
 
+## November 9 independent B060 recovery and release-qualification update
+
+The next actual canonical NBA invocation authenticated **270 previously completed task bodies, 246 immutable forecast journals, 210 saved model bodies and 174,184 transitive feature-state dependencies**. It then stopped at a separate scientific-support export gate. The resulting return is an authenticated **partial failure**, with **zero new NBA fits, zero new NBA feature materializations and no newly completed nonlinear comparison or new forecast issue**. The surrounding shell's exit was not supplied; an internal intended exit is not a substitute.
+
+A subsequent release engineering review added and tested a strictly bounded distinction between locally reverified scientific bodies and size-limited return export. Missing, corrupted or unconfirmed scientific inputs continue to block new fitting. **114 exact-source synthetic/contract tests passed**, but the change has not run on the canonical NBA owner, so it does not establish new fitted results, export completeness, a champion, a paid-service refresh or continuous operation.
+
+These evidence classes remain distinct from the previously reported **210 actual B059 fits and 36 unchanged-weight reuses**, the 16-game exposed prior-season pilot, the original-issued ledger and the full official current-game inventory. The owner-private research dashboard retains its dated observation and source clocks.
+
 ## November 8 V5 actual pilot — adaptive evidence, recovery and nonlinear continuation
 
 **The authenticated B059 owner return reports 210 new NBA estimator fits and 36 exact snapshot reuses, producing 246 native projections on 24 games. Its final return was a packaging diagnostic, so detailed fit evidence still needs recovery.** Independent review verified the archive and recomputed every reported metric from the returned projection values. The distinction between those checks and full training validation is retained throughout this update.
