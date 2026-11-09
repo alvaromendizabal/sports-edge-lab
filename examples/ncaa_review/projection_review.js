@@ -70,6 +70,16 @@
           ['family', 'arm', 'training_history'].some(k => !id(row.model_context[k]))) {
           throw Error('Derived scores require both exact target identities and finite supported means.');
         }
+        // The owner computes these operations in binary64 and serializes their
+        // round-trip values. Check the same operation order, including signed
+        // zero, without a decimal tolerance or replacement of supplied values.
+        const home = (row.expected_total + row.expected_home_minus_away) / 2;
+        const away = (row.expected_total - row.expected_home_minus_away) / 2;
+        if (row.expected_total < Math.abs(row.expected_home_minus_away) ||
+            !Number.isFinite(home) || !Number.isFinite(away) ||
+            !Object.is(row.mean_home_score, home) || !Object.is(row.mean_away_score, away)) {
+          throw Error('Derived scores differ from the exact retained margin/total arithmetic.');
+        }
       } else if (row.mean_home_score !== null || row.mean_away_score !== null) {
         throw Error('Blocked expected scores must remain null.');
       }

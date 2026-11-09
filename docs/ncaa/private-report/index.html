@@ -1131,6 +1131,10 @@
       'feature_only_refreshes', 'verified_issue_count']) {
       if (!count(value[key])) throw Error('Invalid refresh count: ' + key);
     }
+    const expectedContexts = TARGETS.length * value.unique_event_keys;
+    if (!Number.isSafeInteger(expectedContexts) || value.target_contexts !== expectedContexts) {
+      throw Error('Refresh contexts must conserve three target contexts per exact source event key.');
+    }
     if(value.full_physical_season_coverage!==false||value.background_scheduler_created!==false||
         value.original_issue_mutation!==false||value.new_promotions!==0||
         value.plan_counts_describe_registered_asof_not_wall_clock_at_report!==true){
@@ -1153,6 +1157,9 @@
     const byTarget = TARGETS.reduce((total, target) =>
       total + stateCounts(value.counts_by_target[target]), 0);
     if (byTarget !== value.target_contexts) throw Error('Refresh target totals differ.');
+    if (TARGETS.some(target => stateCounts(value.counts_by_target[target]) !== value.unique_event_keys)) {
+      throw Error('Every refresh target must account for each exact source event key.');
+    }
     for (const state of STATES) {
       if (TARGETS.reduce((n, target) => n + (value.counts_by_target[target][state] || 0), 0) !==
           (value.counts_by_state[state] || 0)) throw Error('Refresh state and target cells differ.');
@@ -1380,6 +1387,16 @@
           !object(row.model_context) ||
           ['family', 'arm', 'training_history'].some(k => !id(row.model_context[k]))) {
           throw Error('Derived scores require both exact target identities and finite supported means.');
+        }
+        // The owner computes these operations in binary64 and serializes their
+        // round-trip values. Check the same operation order, including signed
+        // zero, without a decimal tolerance or replacement of supplied values.
+        const home = (row.expected_total + row.expected_home_minus_away) / 2;
+        const away = (row.expected_total - row.expected_home_minus_away) / 2;
+        if (row.expected_total < Math.abs(row.expected_home_minus_away) ||
+            !Number.isFinite(home) || !Number.isFinite(away) ||
+            !Object.is(row.mean_home_score, home) || !Object.is(row.mean_away_score, away)) {
+          throw Error('Derived scores differ from the exact retained margin/total arithmetic.');
         }
       } else if (row.mean_home_score !== null || row.mean_away_score !== null) {
         throw Error('Blocked expected scores must remain null.');

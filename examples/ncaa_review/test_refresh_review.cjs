@@ -91,6 +91,15 @@ function run() {
     const value = copy(); value.report.refresh_coverage.target_contexts++;
     assert.throws(() => review.validateV4(value), /conserve/);
   });
+  check('exact source key count cannot disagree with the three target contexts', () => {
+    const value=copy();value.report.refresh_coverage.unique_event_keys++;
+    assert.throws(()=>review.validateV4(value),/three target contexts/);
+  });
+  check('each target must cover all source keys even when state totals still agree', () => {
+    const value=copy(), counts=value.report.refresh_coverage.counts_by_target;
+    counts.win.DUE_MODEL_REFRESH++;counts.margin.DUE_MODEL_REFRESH--;
+    assert.throws(()=>review.validateV4(value),/Every refresh target/);
+  });
   check('equal target sum cannot conceal different state cells', () => {
     const value = copy(), counts = value.report.refresh_coverage.counts_by_target.win;
     counts.DUE_MODEL_REFRESH++; counts.SOURCE_BLOCKED--;

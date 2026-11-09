@@ -47,6 +47,10 @@
       'feature_only_refreshes', 'verified_issue_count']) {
       if (!count(value[key])) throw Error('Invalid refresh count: ' + key);
     }
+    const expectedContexts = TARGETS.length * value.unique_event_keys;
+    if (!Number.isSafeInteger(expectedContexts) || value.target_contexts !== expectedContexts) {
+      throw Error('Refresh contexts must conserve three target contexts per exact source event key.');
+    }
     if(value.full_physical_season_coverage!==false||value.background_scheduler_created!==false||
         value.original_issue_mutation!==false||value.new_promotions!==0||
         value.plan_counts_describe_registered_asof_not_wall_clock_at_report!==true){
@@ -69,6 +73,9 @@
     const byTarget = TARGETS.reduce((total, target) =>
       total + stateCounts(value.counts_by_target[target]), 0);
     if (byTarget !== value.target_contexts) throw Error('Refresh target totals differ.');
+    if (TARGETS.some(target => stateCounts(value.counts_by_target[target]) !== value.unique_event_keys)) {
+      throw Error('Every refresh target must account for each exact source event key.');
+    }
     for (const state of STATES) {
       if (TARGETS.reduce((n, target) => n + (value.counts_by_target[target][state] || 0), 0) !==
           (value.counts_by_state[state] || 0)) throw Error('Refresh state and target cells differ.');

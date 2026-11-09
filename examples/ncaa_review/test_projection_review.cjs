@@ -50,6 +50,28 @@ function run(){
     const f=copy();projection.validateRows(f.rows);assert.equal(f.rows[0].mean_home_score,80.25);
     assert.equal(f.rows[0].mean_away_score,70.75);assert.notEqual(f.rows[0].margin_prediction_id,f.rows[0].total_prediction_id);
   });
+  check('finite but inconsistent supplied score means reject',()=>{
+    for(const key of ['mean_home_score','mean_away_score']){
+      const r=copy().rows[0];r[key]=90;
+      assert.throws(()=>projection.validateRows([r]),/exact retained.*arithmetic/);
+    }
+  });
+  check('binary64 round-trip means pass without decimal tolerance',()=>{
+    const r=copy().rows[0];r.expected_total=0.2;r.expected_home_minus_away=0.1;
+    r.mean_home_score=0.15000000000000002;r.mean_away_score=0.05;
+    projection.validateRows([r]);r.mean_home_score=0.15;
+    assert.throws(()=>projection.validateRows([r]),/exact retained.*arithmetic/);
+  });
+  check('signed zero preserves the supplied operation result',()=>{
+    const r=copy().rows[0];r.expected_total=-0;r.expected_home_minus_away=-0;
+    r.mean_home_score=-0;r.mean_away_score=0;projection.validateRows([r]);
+    r.mean_home_score=0;assert.throws(()=>projection.validateRows([r]),/exact retained.*arithmetic/);
+  });
+  check('finite inputs with arithmetic overflow cannot claim derived scores',()=>{
+    const r=copy().rows[0];r.expected_total=Number.MAX_VALUE;r.expected_home_minus_away=Number.MAX_VALUE;
+    r.mean_home_score=Number.MAX_VALUE;r.mean_away_score=0;
+    assert.throws(()=>projection.validateRows([r]),/exact retained.*arithmetic/);
+  });
   check('incoherent pair keeps original inputs but has no scores',()=>{
     const r=copy().rows[2];projection.validateRows([r]);
     assert.equal(r.expected_home_minus_away,100);assert.equal(r.expected_total,50);assert.equal(r.mean_home_score,null);
