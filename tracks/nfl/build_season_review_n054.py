@@ -18,7 +18,7 @@ def instant(s):
  t=datetime.datetime.fromisoformat(s.replace('Z','+00:00'))
  if t.tzinfo is None:raise ValueError('Public clock timezone')
  return t
-def validate(d):
+def validate_retained(d):
  only(d,TOP,'root')
  if d['schema']!=SCHEMA:raise ValueError('Public schema')
  nested={
@@ -102,8 +102,20 @@ def validate(d):
  raw=json.dumps(d,ensure_ascii=False,allow_nan=False)
  if FORBIDDEN.search(raw) or RETIRED.search(raw):raise ValueError('Private or transaction-language payload')
  return d
+def validate(d):
+ if d.get('schema')=='nfl.public.n060.bounded-evidence.v1':
+  from v5_public_contract import validate_additions
+  only(d,TOP|{'n060_owner_status','v5_scope'},'N060 root')
+  retained={k:v for k,v in d.items() if k not in {'n060_owner_status','v5_scope'}}
+  retained=dict(retained,schema=SCHEMA,publication_cycle='N059')
+  validate_retained(retained)
+  validate_additions(d,only,instant)
+  raw=json.dumps(d,ensure_ascii=False,allow_nan=False)
+  if FORBIDDEN.search(raw) or RETIRED.search(raw):raise ValueError('Private or transaction-language V5 payload')
+  return d
+ return validate_retained(d)
 def pack(d):return gzip.compress(json.dumps(d,separators=(',',':'),ensure_ascii=False).encode(),compresslevel=9,mtime=0)
-def load(path=HERE/'public_projection_n059.json.gz'):return validate(json.loads(gzip.decompress(path.read_bytes())))
+def load(path=HERE/'public_projection_n060.json.gz'):return validate(json.loads(gzip.decompress(path.read_bytes())))
 def build(d):
  validate(d);s=(HERE/'season_review_n054.template.html').read_text()
  if FORBIDDEN.search(s) or RETIRED.search(s):raise ValueError('Public template boundary')
@@ -112,6 +124,6 @@ def main():
  p=argparse.ArgumentParser();p.add_argument('--check',action='store_true');a=p.parse_args();body=build(load());out=HERE/'season_review_n054.html'
  if a.check:
   if out.read_text()!=body:raise SystemExit('Public render differs from reviewed projection')
-  print('N059 bounded public content and complete inventory: PASS')
+  print('N060 bounded public content, V5 exposure and complete inventory: PASS')
  else:out.write_text(body)
 if __name__=='__main__':main()

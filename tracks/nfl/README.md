@@ -2,7 +2,7 @@
 
 The [NFL dashboard](season_review_n054.html) accounts for **272 scheduled games and all 32 teams**, including CHI 34–SEA 17, JAX 33–BAL 10 and CIN 34–ATL 17. Historical `LA` means the Los Angeles Rams; `LAC` means the Chargers. The latest authenticated owner observation has **130 finals, 129 decisive results and one tie**, plus **three games in progress, one at halftime and 138 scheduled**. Earlier 272/122/121 and 272/123/122 snapshots remain dated and unchanged. A halftime game is explicitly live; it is never mislabeled as scheduled.
 
-**Actual N058 is partial. N059 is prepared.** Completed current-origin work contains **27 new native states and 2,286 actual issue rows**. The native states are five fresh, three designation, twelve raw football and seven selected-family states. Original aggregate fit, native and meta counters remain null; independently verified component counts are shown separately. No new meta fit is credited. The separate V4 historical preparation stopped at its safe-file validation boundary before a verified optimizer start, and its dependent future phase stayed blocked.
+**Actual N059 failed before research stages. N058 remains the latest scientific result. N060 is the prepared V5 continuation.** The N059 invocation stopped at a durable-state integrity guard on November 9 at 02:00:37 UTC, with **zero new fits and zero forecasts**. Completed current-origin work contains **27 new native states and 2,286 actual issue rows**. The native states are five fresh, three designation, twelve raw football and seven selected-family states. Original aggregate fit, native and meta counters remain null; independently verified component counts are shown separately. No new meta fit is credited. The separate V4 historical preparation stopped at its safe-file validation boundary before a verified optimizer start, and its dependent future phase stayed blocked.
 
 The refreshed training arrays include the exact eight-game causal append, with **1,823 games and 5,469 target rows**. Every one of the **138 then-scheduled games** has three new selected-family outputs: **414 rows**, of which 48 are nearer-game current-origin outputs and 366 are long-range current-knowledge outlooks. Their actual source, model and issue clocks precede the registered game cutoff. These forecasts are not exact T1 reconstructions, and long-horizon accuracy remains unvalidated. No missing current statistic, injury report or historical possession clock is invented.
 
@@ -47,7 +47,7 @@ The separate alternate capture contains **1,780 conditions**. Only 676 have a co
 
 The restored latest-pregame horizon contains **2,645 historical references**: 1,004 winner and 1,641 point/threshold records. Kalshi and Polymarket cover all 130 current finals for each target in that retrospective source-time horizon. DraftKings has no reference in this particular restored horizon; its older authenticated T2 and current capture rows remain separate. This is not a claim of complete provider history or original possession. Source-only work creates zero predictive credit and changes no original timed score.
 
-## V4 rolling-origin implementation and exact remaining failure
+## Retained V4 implementation and its dated N058 failure
 
 V4 authorizes a separately registered rolling challenger while preserving the original fixed selector as a control. Initial 2026 selection uses the most recent completed seasons, 2024–2025; recent three-season, longer, expanding and fixed-recency alternatives require earlier-only comparison. At each game cutoff, fitting uses all admissible earlier outcomes and source values, including completed earlier current-season games. Transformations remain train-only. Exact reuse requires identical effective training inputs, labels, configuration and timing support.
 
@@ -56,6 +56,18 @@ Calibration, blends and stacks use genuinely earlier out-of-fold predictions. So
 Actual N058 V4 preparation encountered a safe-file check when an archived source module was treated as an ordinary filesystem file. The next continuation binds the exact authenticated adapter before requesting sources, while retaining path and symlink guards. It adds strict label-clock indexing, reuse of unchanged training transformations, full label-clock identity binding, warm-checkpoint revalidation and measured family/target runtime estimates. These are **prepared N059 changes**, not completed V4 owner research.
 
 The retained frontier registry has **211 distinct proposed candidates, 159 implemented extractors and 52 blocked by additional source/method requirements**. Its 107 play-by-play, 32 team-stat and 20 compact-interaction candidates preserve source timing and missingness. Actual new candidate materialization, admission, evaluation and promotion remain zero. Inherited controls, home/away channels, window variants and missingness flags do not inflate discovery counts. Synthetic tests do not establish NFL predictive value.
+
+## N060 V5 implementation and exposure-aware comparisons
+
+The active dashboard now separates the latest execution status from the latest scientific source snapshot. Its V5 view accounts for **five research lanes and all three targets**: market-free foundation, current-regime specialist, online gated blend, market-only control and market residual challenger. Every unexecuted comparison has an explicit reason and absent metrics. The retained 1,214 season metrics and all original cohorts are unchanged.
+
+V5 makes the full verified historical pool available while each registered candidate selects or weights its own fitting memory. Recent two-, three- and longer-season windows, expanding history and recency weighting are selection candidates. Nested earlier-origin evidence governs selection; already examined historical results remain development-exposed. A current-regime specialist can become useful through valid forward evidence, while small-sample shrinkage and market-free fallback remain explicit.
+
+The new presentation preserves four evidence classes: original frozen issued forecasts, historical rolling reconstructions, genuinely future-issued rolling forecasts, and source-only references. Source refresh, fitting, checkpoint reuse, champion selection, issue creation and evaluation exposure are separate operations. Conditional threshold probabilities retain their own orientation and outcome definitions; no market threshold becomes a point prediction.
+
+N060 is prepared for owner execution. It does not supply new real-game scores or promote a challenger. The first V5 comparison phase remains shadow research until its registered prior-origin and forward evidence gates are met. The actual failed N059 run is retained separately from portable verification and from N058's completed current-origin work. The public page exposes only permitted aggregate/status evidence and the same bounded already-issued examples; full private reports remain private.
+
+See [V5 comparison and exposure contract](V5_COMPARISON_N060.md) for the new behavior and validation scope.
 
 ## Validate and publish
 
@@ -67,4 +79,4 @@ python tracks/nfl/contracts.py --check-review
 
 Existing CI workflows stay unchanged. Publication requires success on the exact PR head, permitted merge, final-main file readbacks and matching deployed Site content. Until those gates are observed, code preparation is not live publication. The page identifies its canonical commit and evidence time. Publication creates zero scientific fits, issue rows or source acquisitions.
 
-[Bounded public evidence carrier](public_projection_n059.json.gz) · [Model card](CURRENT_MODEL_CARD.md) · [Methodology](CURRENT_METHODOLOGY.md) · [Public scope and preservation](PUBLIC_BOUNDARY_N059.md)
+[Current bounded public evidence carrier](public_projection_n060.json.gz) · [Retained N059 carrier](public_projection_n059.json.gz) · [Model card](CURRENT_MODEL_CARD.md) · [Methodology](CURRENT_METHODOLOGY.md) · [Public scope and preservation](PUBLIC_BOUNDARY_N059.md)

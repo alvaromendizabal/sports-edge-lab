@@ -10,6 +10,10 @@ The original and shadow streams retain their older November 4 base source. Fresh
 
 Winner probabilities are evaluated with log loss, Brier score, accuracy and calibration diagnostics. Margin and total targets use MAE, RMSE and bias; distribution studies retain CRPS, coverage and numerical limitations. Conditional margin probabilities require a compatible threshold and oriented distribution. Binary threshold markets are not score means. All matched comparisons retain their original game set and source horizon.
 
-The complete private delivery has all 128 dated roles and 272 current-season games. The public view has all-game coverage, anonymous aggregate comparisons and eight already-issued examples. The original fixed-selector study remains the control. N058 V4 preparation was attempted and blocked. Its N059 repair is prepared; no V4 owner fit, future issue or automatic promotion is claimed.
+The complete private delivery has all 128 dated roles and 272 current-season games. The public view has all-game coverage, anonymous aggregate comparisons and eight already-issued examples. The original fixed-selector study remains the control. N058 V4 preparation was attempted and blocked. The actual N059 invocation later failed before research stages with zero new fits and forecasts. N060 is the prepared V5 continuation; no new owner evaluation or automatic promotion is claimed.
 
 See the [research README](README.md), [methodology](CURRENT_METHODOLOGY.md) and [publication correction](PUBLIC_BOUNDARY_N059.md).
+
+## V5 prepared model roles
+
+The foundation, current-regime specialist, online gated blend, market-only control and market residual challenger are separately visible for winner, margin and total targets. Their new evaluation counts are zero and their new scores are absent until authenticated owner execution. The retained fixed-selector metrics remain the original dated evidence. Full-history access, registered memory selection, exact compatible reuse, train-only transformations and earlier-origin meta inputs are required for the new comparisons.
