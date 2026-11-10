@@ -1,5 +1,10 @@
 <p align="center"><img src="docs/assets/masthead.svg" alt="Sports Edge Lab — probabilistic forecasting, scientific evaluation, reliable ML systems" width="1100"></p>
 
+## FBS update — November 10, 2026 UTC
+
+**NCAA FBS — authenticated V053 partial results; V054 prepared.** The latest owner completed three base fits and six mixture fits, preserving 256 new issue records and 768 current scalar outputs. Legacy recovery continued for approximately 130 minutes before console-control exhaustion interrupted reporting; the partial return is authenticated, and the complete workload remains unfinished. The public game report distinguishes 500 saved issue records from 122 unique games, preserves original forecasts separately from later revisions, and retains negative findings from the 211-game mixture comparison. V054 prepares broad frozen 2024/2025 comparisons, metric-specific champions and rolling retraining only for selected champions; new owner execution is pending. [FBS evidence and limitations](docs/fbs/README.md) · [All-game analytical view](docs/fbs/current.html).
+
+
 # Forecasts you can interrogate
 
 **Sports Edge Lab** connects probabilistic sports modeling with reliable ML infrastructure: chronological training, immutable forecasts, matched market comparisons and recoverable cloud execution. Built by [Alvaro Mendizabal](https://github.com/alvaromendizabal).
@@ -219,3 +224,4 @@ Public material includes evaluation mechanisms, synthetic fitting, tests, notebo
 
 
 </details>
+

@@ -1,3 +1,21 @@
+# NCAA FBS — V054 frozen-first continuation
+
+**Latest actual owner: V053, partial. Next executable: V054, prepared; owner execution pending.**
+
+The authenticated V053 owner completed three base fits and six learned-mixture fits and preserved 768 current scalar outputs / 256 new issue contexts. Legacy checkpoint recovery then consumed 7,796.822 seconds before console-control exhaustion interrupted reporting. The full evidence bundle is recovered and verified. Resource observations account for 198.385 recorded seconds, not the entire delay. Worker and supervisor exits were both 2.
+
+V054 implements frozen comparisons on completed 2024 and 2025 seasons, separate metric-specific champion selection and expensive rolling fits only for qualified champions. Current 2026 outcomes are excluded from historical selection. Registered feature combinations and native model families are unexecuted until the authorized owner runs them; they are not claimed as completed research or certified novel concepts. Negative experiments remain eligible in other contexts.
+
+The new recovery path uses bounded slices, exact immutable reuse, current checkpoint visit order, a lossless event journal, sampled repetitive console output and a finalization reserve. It preserves incomplete frozen and champion records for the next run. No live AWS speedup is claimed from synthetic tests or replay.
+
+The saved analytical report retains 2,742 fixtures and 500 issue records across 122 games, with original, revised, calibrated, mixture and reconstructed layers kept separate. The exposed 211-game 2025 comparison found a global mixture equivalent to the foundation and a conditional mixture worse on the main winner, margin and total metrics. No prospective advantage or promotion is proved.
+
+See [the complete dated FBS evidence and limitations](../../docs/fbs/README.md), [the all-game report](../../docs/fbs/current.html), [the observed execution tally](../../docs/fbs/execution-status-v054.json) and [the saved mixture comparison](../../docs/fbs/learned-mixture-evaluation-v054.json). Private executables, raw feeds, source transforms and owner-return packages remain outside this public repository.
+
+The complete preceding track README follows unchanged. Other sport tracks are preserved.
+
+---
+
 # Sports Edge Lab · NCAA football
 
 ## Actual V052 science and failed return · November 9
@@ -153,6 +171,7 @@ Apply the [shared research protocol](../../docs/RESEARCH_PROTOCOL.md). Establish
 **Current phase:** source acquisition and audit. No trained-model performance claim.
 
 </details>
+
 
 
 
