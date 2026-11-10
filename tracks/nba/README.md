@@ -4,6 +4,37 @@ Reproducible NBA forecasts, complete released-game inventories, chronological mo
 
 This NBA track belongs to the shared [Sports Edge Lab](../../README.md) repository. Its public material contains sanitized aggregate evidence and invented engineering examples. Actual game-level forecasts, feature recipes, model weights, source responses, full journals, and execution packages remain private.
 
+## November 10 — B069 prepares V6 historical market-response research
+
+**B069 implements a new source-qualified research path and prioritizes near-game forecasts before optional market-history experiments. The latest authenticated actual owner execution remains B067.** B068 is the preserved engineering parent; it is not relabeled as a completed owner run. This update reports tested software and inspection of saved source evidence, with zero new real NBA fits, predictions or scientific rescoring in the publication environment.
+
+### What changed
+
+- Historical market-response research now has explicit source-clock and product-equivalence contracts, a complete venue/recency coverage register, state-adjusted comparisons, and prior-origin ensemble qualification. Missing observations remain missing, and failed combinations remain available for later justified experiments.
+- Source-supported experiments run under frozen chronological comparisons with shared preprocessing and verified state reuse. The initial screening budget is bounded; experimental models do not receive an exhaustive rolling-retraining grid. New research remains shadow evidence until the existing qualification and forward-evidence gates pass.
+- The first issuance pass targets the next 48 hours before optional market collection or experiments. A second pass can issue subsequently qualified historical champions. All deferred schedule entries remain explicit. Immutable pass receipts preserve original forecasts, distinguish newly issued records from reuse, and recover counters after interruption.
+- Adversarial tests mutate a target game's live path and inject unavailable future data. Pregame features and predictions must remain invariant. Earlier-game completion, publication, source rights, clock precision and original issue times are separately checked.
+- Optional source collection reuses fresh verified observations, stays within existing authorized public sources, and creates descriptive evidence only. It does not create a live prediction product, a paid data subscription or an unattended owner training service.
+
+### What the saved sources actually support
+
+| Saved source evidence | Observed count | Scientific limitation |
+| --- | ---: | --- |
+| Kalshi catalog observations | 5,770 | Catalog/receipt clocks do not establish exact quote-event history |
+| Polymarket US catalog observations | 4,278 | Separate venue and settlement identity retained |
+| Polymarket international observations | 1,218 | Separate venue and settlement identity retained |
+| DraftKings current catalog observations | 0 | No verified authorized current feed in this saved return |
+| Preserved live-state/market pairs | 614 | Exact individual quote and possession alignment unproven |
+| Retained play-by-play actions | 3,504 across 8 games | No authenticated action UTC clocks in the retained actions |
+| Strict source-qualified quote records / exact checkpoint cells | 0 / 0 | Historical response effects cannot be inferred from this inventory |
+
+The new R13–R20 research contracts therefore have no newly demonstrated real-data effect from this preparation pass. Authentic historical tick and event-clock evidence remains a source blocker. The runner records the missingness before expensive work and continues other eligible frozen and legacy research. Formula counts and synthetic tests are engineering evidence, not measured predictive improvements.
+
+The original approximately 0.58 log-loss model and every earlier raw/calibrated result, negative experiment and issued forecast remain preserved. It must be reevaluated against current contenders on matched games, horizons and source clocks. A narrower old cohort does not automatically outrank a different full-season cohort, and current-season outcomes cannot retroactively select an independent historical champion.
+
+The private review adds V6 source coverage and acceptance evidence while retaining earlier views. Public material remains limited to this sanitized NBA narrative. No new AWS execution, automatic promotion, independent confirmation, verified dollar cost, complete backlog ETA or completion of another sport is claimed.
+
+
 ## November 10 — actual B067 research and recovered legacy contenders
 
 **The actual B067 owner run produced new science but hit its worker time limit. B068 restores original legacy model evidence and prepares a more productive bounded continuation.** The original failure status and every prior dated result remain preserved. This publication is a saved-evidence review, with no new real model fitting or current-season scoring in the publication environment.
