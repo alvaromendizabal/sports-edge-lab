@@ -9,6 +9,13 @@ async function actualOwnerCases(page, baseUrl, screenshotDirectory) {
     await page.setViewportSize(viewport);
     await page.goto(baseUrl + '/current.html');
     await page.locator('#game-rows tr').first().waitFor();
+    await page.locator('#actual-owner-v056-title').waitFor();
+    assert.match(await page.locator('#actual-owner-v056').innerText(), /67 \/ 5,858/);
+    assert.match(await page.locator('#actual-owner-v056').innerText(), /unknown \(null\)/);
+    assert.match(await page.locator('#historical-contenders').innerText(), /301 games/);
+    assert.match(await page.locator('#historical-contenders').innerText(), /0\.465519/);
+    assert.match(await page.locator('#historical-contenders').innerText(), /0\.493465/);
+    assert.match(await page.locator('#historical-contenders').innerText(), /cannot rank them head to head/);
     await page.locator('#actual-owner-v055-title').waitFor();
     assert.match(await page.locator('#actual-owner-v055').innerText(), /unknown \(null\)/);
     assert.match(await page.locator('#actual-owner-v055').innerText(), /33,336/);
