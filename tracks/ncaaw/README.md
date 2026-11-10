@@ -1,5 +1,36 @@
 # Sports Edge Lab · NCAA women's basketball
 
+## Actual B056 result and prepared B057 work — November 10, 2026 UTC
+
+**B056 is the latest authenticated owner result: 9 of 17 stages completed, one failed and seven unentered.** It preserved **132 new target fits, 54 calibration fits and 36 empirical-residual fits across 330 newly committed contracts**, plus separately counted reused work. Its status is `FAILED_PARTIAL_WORK_PRESERVED`; recorded wall time is **6,081.551 seconds**. Attributable cost and a complete successor ETA remain unknown.
+
+Frozen-research recipe registration requested ranking columns that were absent from the model frame, while ranking support correctly reported zero qualified editions and zero admitted ranking features. This schema failure prevented completion of the V5 research comparison. It is not evidence that a fitted ranking model performed poorly.
+
+**40 new baseline issued target/recipe rows covered two men's source events**: 16 winner, 12 margin and 12 total rows. These are distinct from **zero new V5 issues, zero completed V5 candidate ablations and zero promotions**. V5 champion selection, selected-champion rolling and market-residual results remain incomplete. The materialized feature bank is not credited as evaluated model improvement.
+
+| Current B056 evidence population | Count and qualification |
+|---|---|
+| Source and feature coverage | 2,498 source identities; 2,427 feature rows; 1,911 eligible, 516 rejected and 71 source events without a feature row |
+| Official reconciliation | 2,511 official records; 1,564 exactly reconciled source identities; 934 source identities without qualified official binding |
+| Latest full-season display index | **14,319 provider-native identifiers**, not a complete unique physical-game denominator |
+| Retained older display snapshot | **23,603 provider-native identifiers in B052**, preserved with its original scope; no direct physical-game change is inferred |
+| Qualified provider metrics | Saved men's winner comparison for Polymarket international; no qualified numeric DraftKings/Kalshi comparison rows; Polymarket US unacquired |
+
+Complete season coverage, admitted ranking inputs, all-provider common cohorts, qualified line-conditioned distributions and older family/calibration studies remain open. The [full aggregate review](../../examples/ncaa_review/evidence/B056_ACTUAL_B057_PREPARED.md) retains a matched 265-game retrospective comparison where the original frozen control has **higher log loss and Brier score than Polymarket international**. It also separates new work, reuse, source gaps, owner fixture checks and the limits of return completion evidence. The [JSON export](../../examples/ncaa_review/evidence/B056_ACTUAL_B057_PREPARED.json) contains the exact aggregate values and qualifications.
+
+### Prepared B057 engineering
+
+B057 addresses early named-schema validation and exact checkpoint recovery, adds an explicit historical-research inventory, and prepares registered **R02 training-memory comparisons, separate interaction/synergy studies, bounded dispatch and resumable task accounting**. Negative feature results remain available for other models, complementary features, seasons and research generations. Historical preservation does not mean every old configuration has been translated or reevaluated.
+
+Efficient frozen research selects metric-specific champions on **2024–25 and 2025–26**. **Only qualified champions and precommitted champion-ensemble components advance to costly rolling fitting.** Current **2026–27 outcomes do not select or promote champions**. Original frozen forecasts, historical reconstructions and genuinely issued rolling forecasts remain separate.
+
+This is prepared engineering under local validation, **not a completed B057 owner result**. Final packaged validation counts remain pending; no new owner fits, forecasts or predictive gains are credited to this documentation update. A source update and a hosted deployment remain separate deliverables.
+
+Earlier sections below retain their original dates and claims. The latest actual result is the B056 evidence above.
+
+<details>
+<summary>Dated B056 preparation, B055 actual result and earlier records</summary>
+
 ## Prepared B056 policy — November 10, 2026 UTC
 
 The next methodology separates **frozen completed-season research** from **per-game rolling execution of the selected metric champions**. It retains all **10 registered model families and 26 target heads** in the research comparison on **2024–25 and 2025–26**, with fixed evaluation rules and separate men’s/women’s populations. Registration does not establish backend availability, a successful fit or a model win.
@@ -727,5 +758,7 @@ The authenticated B035 owner admitted in 1.005 seconds with seven workers planne
 
 The prior B033 study remains in the attempt history with 108 committed target fits across both leagues, 54 in this track. Historical scorecards and the dated November 2 inventory are unchanged. The [portable preflight example](../../examples/ncaa_review/preflight.py) demonstrates separate test outcomes and required versus optional capabilities using invented checks, without accessing a process or provider.
 
+
+</details>
 
 </details>

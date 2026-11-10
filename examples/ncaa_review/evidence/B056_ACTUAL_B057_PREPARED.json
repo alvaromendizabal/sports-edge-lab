@@ -1,0 +1,193 @@
+{
+  "schema": "sel.ncaa.public.actual_and_prepared.v1",
+  "as_of_utc": "2026-11-10T02:45:25.390600+00:00",
+  "public_scope": "SANITIZED_AGGREGATES_ONLY",
+  "latest_actual_owner": {
+    "release": "B056",
+    "evidence_kind": "AUTHENTICATED_ACTUAL_OWNER_RETURN",
+    "status": "FAILED_PARTIAL_WORK_PRESERVED",
+    "owner_return_sha256": "13d888eceac68fa0b77bf8e6d02487346e5d8114e0a02173818fe861419d71a7",
+    "stages": {
+      "total": 17,
+      "completed": 9,
+      "failed": 1,
+      "unentered": 7
+    },
+    "elapsed_seconds": 6081.551121537006,
+    "new_committed_fits": {
+      "target_estimator": 132,
+      "scalar_calibration": 54,
+      "empirical_residual": 36,
+      "unclassified": 0
+    },
+    "new_committed_contracts": 330,
+    "reused_historical_target_fits": 108,
+    "separately_reused_native_fits": {
+      "target_estimator": 12,
+      "scalar_calibration": 6
+    },
+    "unconfirmed_or_uncommitted_estimation": "UNKNOWN_NOT_ASSERTED_ZERO",
+    "failure": {
+      "class": "KeyError",
+      "category": "REQUIRED_RANKING_COLUMNS_ABSENT_FROM_MODEL_FRAME",
+      "qualified_ranking_editions": 0,
+      "admitted_ranking_features": 0,
+      "dependent_study": "FROZEN_V5_RECIPE_REGISTRATION",
+      "scientific_improvement_implied": false
+    },
+    "baseline_new_issued_forecasts": {
+      "target_recipe_rows": 40,
+      "distinct_source_events": 2,
+      "league": "ncaam",
+      "winner_rows": 16,
+      "margin_rows": 12,
+      "total_rows": 12,
+      "settled_in_saved_report": false,
+      "V5_champion_issues": false
+    },
+    "V5": {
+      "materialized_dynamic_state_columns": 44,
+      "materialized_scalar_interaction_candidates": 202,
+      "interaction_families": 7,
+      "registered_group_ablations": 44,
+      "completed_candidate_ablations": 0,
+      "completed_champion_selection": false,
+      "selected_champion_rolling_completed": false,
+      "market_residual_study_completed": false,
+      "new_immutable_issues": 0,
+      "promotions": 0
+    },
+    "owner_fixture_validation": {
+      "planned": 2848,
+      "passed": 2847,
+      "skipped": 1,
+      "failed": 0,
+      "errors": 0,
+      "scope": "FIXTURE_VALIDATION_NOT_MODEL_PERFORMANCE"
+    },
+    "return_closure": {
+      "complete_nested_return_verified": true,
+      "separate_current_terminal_transcript_supplied": false,
+      "observed_shell_exit": null,
+      "missing_external_receipt_authorizes_repeat_science": false
+    },
+    "cost": {
+      "attributable_amount_usd": null,
+      "status": "INSTANCE_RATE_AND_ATTRIBUTABLE_BILLING_UNVERIFIED"
+    },
+    "successor_complete_run_eta_seconds": null
+  },
+  "current_source_coverage": {
+    "snapshot_release": "B056",
+    "source_distinct_identities": 2498,
+    "current_feature_rows": 2427,
+    "eligible_feature_rows": 1911,
+    "rejected_feature_rows": 516,
+    "source_events_without_feature_rows": 71,
+    "official_records": 2511,
+    "exact_reconciled_source_identities": 1564,
+    "source_identities_without_qualified_official_binding": 934,
+    "full_season_provider_native_display_identifiers": 14319,
+    "complete_unique_physical_season_claim": false,
+    "prior_snapshot": {
+      "release": "B052",
+      "provider_native_display_identifiers": 23603,
+      "preserved_as_dated_evidence": true,
+      "direct_change_in_physical_games_inferred": false
+    },
+    "qualified_line_conditioned_models": 0,
+    "all_model_common_cohort_metric_rows": 0,
+    "provider_metric_export": {
+      "Polymarket_international": {
+        "eligible_mens_winner_cohort": 265,
+        "evidence_mode": "RETROSPECTIVE_RECONSTRUCTED"
+      },
+      "Polymarket_US": {
+        "status": "NOT_ACQUIRED",
+        "international_substituted_for_US": false
+      },
+      "DraftKings": {
+        "numeric_qualified_comparison_rows_in_saved_export": 0
+      },
+      "Kalshi": {
+        "numeric_qualified_comparison_rows_in_saved_export": 0
+      }
+    },
+    "limitations": [
+      "Source identities, feature rows, official records, forecast rows and physical games have separate denominators.",
+      "A complete season and complete provider coverage remain unproven.",
+      "A source outage or missing observation is not a zero-valued observation."
+    ]
+  },
+  "saved_matched_probability_comparison": {
+    "league": "ncaam",
+    "season": "2026–27",
+    "n": 265,
+    "target": "winner_probability",
+    "horizon_minutes": 60,
+    "model_role": "ORIGINAL_FROZEN_CONTROL_RECONSTRUCTION",
+    "provider": "Polymarket international",
+    "model_evidence_mode": "RETROSPECTIVE_RECONSTRUCTED",
+    "provider_evidence_mode": "RETROSPECTIVE_RECONSTRUCTED",
+    "model_log_loss": 0.39902307677518306,
+    "provider_log_loss": 0.34674054331324794,
+    "model_brier": 0.12711906046150181,
+    "provider_brier": 0.1102024320754717,
+    "probability_score_direction": "LOWER_IS_BETTER",
+    "provider_has_lower_proper_scores": true,
+    "independent_confirmation": false,
+    "new_champion_selected": false,
+    "economic_advantage_claim": false
+  },
+  "prepared_engineering": {
+    "release": "B057",
+    "status": "IMPLEMENTATION_AND_LOCAL_VALIDATION_IN_PROGRESS_NOT_OWNER_EXECUTED",
+    "new_owner_fits_credited": 0,
+    "new_owner_forecasts_credited": 0,
+    "new_model_improvement_claim": false,
+    "frozen_selection_seasons": [
+      "2024–25",
+      "2025–26"
+    ],
+    "prospective_monitoring_season": "2026–27",
+    "rolling_fit_admission": "QUALIFIED_METRIC_CHAMPIONS_AND_PRECOMMITTED_CHAMPION_ENSEMBLE_COMPONENTS_ONLY",
+    "current_season_outcomes_select_champions": false,
+    "scope": [
+      "Early inference-shaped named-schema checks and explicit dependent-source gaps.",
+      "Exact prior checkpoint and source-evidence recovery with original clocks retained.",
+      "Historical definition and adverse-result inventory, with exact translations distinguished from preservation.",
+      "Registered R02 effective-training-memory comparisons and separate feature-interaction/synergy analyses within the frozen evaluation policy.",
+      "Bounded dispatch, shared immutable feature work and recoverable per-task progress.",
+      "Separate counters for new fits, reused fits, forecast records, ablations and unsupported contexts."
+    ],
+    "negative_result_policy": "RETAIN_FOR_DIFFERENT_MODELS_COMPLEMENTARY_FEATURES_SEASONS_AND_GENERATIONS",
+    "all_historical_configurations_translated_or_reevaluated": false,
+    "final_packaged_validation": {
+      "status": "PENDING_EXACT_FINAL_PACKAGE",
+      "passed": null,
+      "failed": null,
+      "errors": null,
+      "skipped": null
+    },
+    "public_document_update_proves_owner_execution": false,
+    "public_document_update_proves_hosted_deployment": false
+  },
+  "provenance": {
+    "basis": "Byte-authenticated private owner return, typed commit ledger, stage ledger, immutable issue reconciliation, coverage reports and saved matched metric exports.",
+    "public_contains": [
+      "Aggregate counts",
+      "Qualified aggregate metrics",
+      "Operational failure category",
+      "Prepared engineering scope",
+      "Explicit remaining gaps"
+    ],
+    "public_excludes": [
+      "Individual forecast values and event identities",
+      "Active feature definitions and tuned parameters",
+      "Private source bodies or model states",
+      "Execution packages and handoffs",
+      "Cloud identifiers and private object paths",
+      "Personal correspondence"
+    ]
+  }
+}
