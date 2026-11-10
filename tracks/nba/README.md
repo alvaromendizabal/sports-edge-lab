@@ -51,6 +51,14 @@ B063 recorded **317.7 seconds of research** and **1,999.5 seconds of packaging b
 
 All other sports and earlier NBA dated evidence below remain unchanged.
 
+### Additional historical recovery — November 10 UTC
+
+The B064 review subsequently recovered and authenticated the original B050 research export and its retained B049 ancestry. This closes a specific missing-evidence gap: the original ordered feature schemas, preprocessing and calibration definitions, model intents, saved predictions, ensemble definitions and adverse findings are available again. Their original outcomes and evidence classes remain unchanged.
+
+The two completed seasons contain **2,629 distinct games**: 1,314 in 2024–25 and 1,315 in 2025–26. A compact, independently verified evidence selection preserves **63,096 original family/game/horizon rows across 12 model or ensemble lineages**, including **52 historical native fitted components**, two earlier baseline origin states and all nine original ensemble weight profiles. These row counts expand the same games across models and horizons; they are not independent sample counts. The original regression-only family still has no winner classifier.
+
+The recovery and saved-output rescoring perform **zero new model fits**. The recovered predictions remain previously exposed historical reconstructions under their original release-time assumption. Rescoring does not establish original live issuance, historical provider possession, independent confirmation or automatic champion promotion. Newly evaluated configurations, exact historical recipes and parameter comparisons under a changed protocol retain separate identities. The broader B064 owner execution, current-source acquisition and fresh qualified forecasts remain pending their actual execution evidence.
+
 ## Preserved November 9 B063 review — actual research resumed; matched study remains partial
 
 **The authenticated B062 owner return adds 108 NBA estimator fits, 54 exact snapshot reuses and 162 forecasts.** It also records 16 completed joint-score diagnostics, all still lacking the earlier paired residual support required for a qualified joint distribution. No completed forecast is replaced or counted as a new fit merely because it was recovered.
