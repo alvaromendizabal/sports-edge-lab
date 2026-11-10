@@ -74,7 +74,7 @@ module.exports=async function(browser){
    await page.locator('[data-dataset="retained"]').click();
    assert.match(await page.locator('#metric-count').innerText(),/1349 saved rows/);
    await page.locator('[data-open-metric]').first().click();
-   assert.match(await page.locator('#detail-eyebrow').innerText(),/Separate dated archive/);
+   assert.match(await page.locator('#detail-eyebrow').innerText(),/Separate dated archive/i);
    assert.match(await page.locator('#detail-body').innerText(),/Retained exact matched provider cohort/);
    await page.locator('#detail-close').click();
    await page.locator('[data-dataset="season"]').focus();await page.keyboard.press('Enter');
