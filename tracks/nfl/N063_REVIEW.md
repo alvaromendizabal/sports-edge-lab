@@ -8,9 +8,9 @@ The latest owner run is `20261109T190135Z_N062_4d54d5f1b8`. Its physical return 
 
 N062 completed 25,030 new fits, including 20,886 native and 4,144 meta, and 3,650 issued rows. There were 15 new guarded paid calls, zero orders and zero signals to unrelated workloads. Its two historical target-population checks failed after saving useful outputs; the separately attempted CatBoost native admission also failed. None of these failures is erased. The original source ledger records 14 HTTP failures separately from scientific completion.
 
-The retained native model-zoo queue accounts for 20,815 fits and 101,498 historical rows; the score-history queue accounts for 4,176 fits and 18,708 rows. Twelve current score fits produced 1,356 issues across 113 eligible future games, and 27 other current native fits produced 2,294 issues. Cumulative committed V5 states and current-run optimizer credit are distinct counts.
+The retained native model-zoo queue accounts for 20,815 fits and 101,498 historical rows; the score-history queue accounts for 4,176 fits and 18,708 rows. Twelve current score fits produced 1,356 issues across 113 eligible future games. The remaining non-V5 lanes recorded 27 new native fits and 2,294 issues, including issues generated from retained states: the long-range lane issued 1,464 rows using 12 retained states and zero new fits. Cumulative committed V5 states, new optimizer credit and issue counts remain distinct.
 
-The complete new metric/comparison inventory has 540 season metrics and 252 paired rows, with 18 isolated graph contrasts as a subset. All 18 adjusted p-values are 1. Different 121/122 and 134/135 cohorts are not ranked against each other. Exposed retrospective results cannot establish future confirmation or an improved production champion.
+The complete new metric/comparison inventory has 540 saved season metrics across 2021–2026 (97 for 2026) and 252 paired rows, with 18 isolated graph contrasts as a subset. All 18 adjusted p-values are 1. Different 121/122 and 134/135 cohorts are not ranked against each other. Exposed retrospective results cannot establish future confirmation or an improved production champion. The six additive train/cutoff/label checks do not establish contemporaneous possession of historical sources or their original publisher-release clocks.
 
 ## New engineering
 
