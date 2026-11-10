@@ -1,3 +1,9 @@
+## N063 additive review · November 9, 2026
+
+Actual N062 remains partial after 25,030 new fits and 3,650 issued rows. The new current report separates the 121/122 and 134/135 target cohorts, all 18 negative isolated graph comparisons, dated source coverage and original issue clocks. N063 prepares current-first incremental refresh, separate pregame/live frontier materialization and paired studies, exact no-refit tie checks and native CBM compatibility admission. It has not run on the owner. No 200-concept gate, complete injury/lineup coverage, qualified current market comparison, coherent new V5 score distribution or promotion is established.
+
+[Current review](N063_REVIEW.md) · [All-game evidence](season_review_n063.html) · [Latest evidence and limits](README.md). The preceding methodology/card remains below as dated historical context.
+
 ## Latest N062 review — actual N061 partial evidence
 
 The dated source snapshot has 135 final games and 137 scheduled games. Actual N061 adds 90 original/shadow issue rows, with retained November 4 base-source age, and 405 owner-computed evaluations of frozen original issues across 13 games. All 60 monitored metric groups retain their original cycles, horizons and exact precision; historical benchmark cohorts remain unchanged.

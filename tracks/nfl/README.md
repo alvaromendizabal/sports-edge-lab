@@ -1,3 +1,53 @@
+# Sports Edge Lab NFL · actual N062 evidence and N063 continuation
+
+[Current all-game evidence](season_review_n063.html) · [Methodology](CURRENT_METHODOLOGY.md) · [Model card](CURRENT_MODEL_CARD.md) · [N063 review](N063_REVIEW.md) · [Unchanged preceding README](README_N062_PREPARED_SNAPSHOT.md)
+
+## Latest authenticated owner result
+
+Actual **N062 is partial**. It completed **25,030 new fits: 20,886 native and 4,144 meta**, and preserved **3,650 newly issued research rows**. Its elapsed time was **2 hours 46 minutes 18 seconds**. These are actual saved owner results, not work performed while preparing N063. The original partial status, first errors, source clocks and issued values remain unchanged.
+
+The two historical output checks rejected a real tied game because the binary-winner population was compared with all emitted rows. An additive saved-output audit preserves the tie with a null winner label and validates the target-specific populations without fitting: retained model-zoo **121 winner / 122 point** games; score-history **134 winner / 135 point** games. This does not retroactively turn the whole owner invocation into a successful run.
+
+The separate CatBoost admission failed before its scientific queue. N063 prepares a separately registered public-CBM serialization path with full native JSON, exact input schema and prediction-parity gates. Native owner admission remains pending; local synthetic checks do not prove it passed.
+
+| 2026 saved selection | Winner cohort | Correct | Log loss | Margin MAE / games | Total MAE / games |
+|---|---:|---:|---:|---:|---:|
+| Retained model-zoo selection | 121 | 78 | 0.6501322995 | 9.997408896 / 122 | 11.344694675 / 122 |
+| Fixed score-history control | 134 | 84 | 0.6417667885 | 9.890009314 / 135 | 11.586291885 / 135 |
+
+These cohorts differ and must not be directly ranked. They are **development-exposed rolling reconstructions**, not untouched future confirmation. All **18 isolated score-graph comparisons have Holm-adjusted p = 1**. No graph improvement or model promotion is established.
+
+## Every current-season game and target
+
+The latest authenticated current census contains **272 regular-season games, 32 teams, 135 finals including one tie, and 137 scheduled games**. The schedule was captured at **2026-11-09 19:16 UTC**. Team statistics and play-by-play each cover all **135 completed games** at their separate **19:21 UTC** captures. This proves completeness for those two captured assets; it does not establish current player, injury, depth-chart or lineup completeness.
+
+There are **113 eligible future game cards** with original fixed-control winner, home-margin and total outputs, plus **24 scheduled games without admitted exact kickoff cutoffs**. TBD dates are displayed as unconfirmed and do not admit exact-cutoff forecasts. The public projection preserves original source, model and issue clocks, all **540 new season metric rows**, **252 paired comparison rows**, and the separately retained **1,349-row earlier scoreboard**. Original issue rows and historical reconstructions remain distinct.
+
+DraftKings, Kalshi and Polymarket have equal game/target coverage grids. **Current qualified market comparisons remain zero.** Quote age, unavailable quote timestamps, bid/ask semantics and tie-outcome definition mismatches remain explicit. The exact saved DraftKings body/receipt replay validates **90 normalized rows / 45 target pairs / 15 games**, with zero new source, fit or forecast credit; stale observations do not become fresh prices.
+
+The captured league injury report contains **362 rows**: **32 admitted pregame rows for two teams and one future game**, and **330 post-start monitoring rows excluded from pregame features**. This is not a complete roster, starter, depth-chart or injured-reserve coverage claim.
+
+Separate earlier evidence retains **59 legacy margin-threshold issue rows and 15 legacy distribution cards**. No newly admitted V5 coherent conditional or joint-score distribution is claimed. A point margin or total is not substituted for a line probability.
+
+## N063 implementation and its execution boundary
+
+N063 prepares incremental current-first schedule, score, team/player-stat and play-by-play refresh, explicit source-age and coverage alerts, verified cache reuse, immutable issue preservation, and a finite owner-started refresh watcher. Default invocation creates a new refresh cycle; exact completed-cycle replay requires an explicit retry identity. A hosted dashboard remains a dated snapshot and does not refresh data by being published.
+
+Both frontier tracks remain active: prior-game market patterns for later pregame modeling and separate timestamp-qualified current-game observations for live research. Available authorized histories are restored, gaps remain visible, and new live collection requires verified current game state. The feature registry has **109 definitions**, including **12 retained concepts and 97 without a completed global novelty verification**. It does not establish the 200-distinct-concept gate. Materialization, admission, ablation, fitting, evaluation and promotion have separate evidence states.
+
+Neither completed historical optimizer queue is dispatched again. New frontier and CatBoost studies use separate registrations and state namespaces while preserving all old states, failures and outcomes. Current-phase collection and forecasts precede historical research. Existing owner, cost, entitlement, native-runtime and process-ownership gates remain binding; no installations, infrastructure changes or orders are introduced.
+
+The review workspace disconnected during preparation. Reconstructed sources receive new pins and fresh verification; the interrupted candidate is not a delivered or successful owner executable. **N063 remains prepared and has not been owner executed.** No new source capture, materialization, fit, original issue, prospective accuracy result or promotion is attributed to this publication.
+
+## Publication and complete private evidence
+
+The active interface uses research language and preserves all games, supported numerical values and missing-data reasons. Exact recipes, model states, full candidate forecast grids, raw licensed quotes, private cloud paths and owner handoff packages remain private under the [publication boundary](../../docs/PUBLICATION_BOUNDARY.md).
+
+The private delivery includes a complete evidence explorer and lossless record carriers, with PDF and workbook companions. Public changes require passing checks on the exact PR head, a permitted merge, a final-main readback and a separately verified Site deployment. Local validation, hosted validation, preparation and actual owner execution are different claims.
+
+<details>
+<summary>Retained dated N061 result and N062 preparation account — superseded by the evidence above</summary>
+
 # Sports Edge Lab NFL — complete research accounting
 
 The [NFL dashboard](season_review_n054.html) accounts for **all 272 games and all 32 teams**. It includes CHI–SEA, JAX–BAL and the newly final TB–CHI observation. Historical `LA` means the Los Angeles Rams; `LAC` means the Chargers. The current report is a dated snapshot with **135 final games, including one tie, and 137 scheduled games**. Every earlier schedule snapshot remains in the private canonical records.
@@ -69,3 +119,5 @@ DraftKings, Kalshi and Polymarket receive the same game/target/horizon inventory
 [Current methodology](CURRENT_METHODOLOGY.md), [model card](CURRENT_MODEL_CARD.md), [N062 review](N062_REVIEW.md) and the [bounded public evidence carrier](public_projection_n062.json.gz) describe the dated evidence. Full private HTML, PDF, XLSX and lossless CSV retain the complete canonical record set. Public synthetic checks establish engineering behavior, not real NFL accuracy.
 
 Publication requires passing checks on the exact PR head, a permitted merge, final-main readback, and a separately verified deployment of the same content. The public host is a static research snapshot; a deployment does not refresh sources, fit models or produce new forecasts.
+
+</details>
