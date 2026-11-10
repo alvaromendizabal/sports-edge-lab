@@ -1,3 +1,16 @@
+## Complete comparisons across interrupted pages · November 10, 2026
+
+The [paged comparison demonstration](paged_comparison.py) uses three fictional candidates and two invented events. It requires all declared pages and candidate-event results before selection, retains the earliest-page winner across bounded resumptions, and performs zero new comparisons after completion. Twelve tests reject missing pages, altered receipts, conflicting or duplicate rows and changed input. These are generic engineering fixtures, not the private FBS algorithm or real football results.
+
+```bash
+python -m examples.fbs_contracts.paged_comparison
+python -m unittest examples.fbs_contracts.tests.test_paged_comparison -v
+```
+
+[Prepared V055 scope and limitations](../../docs/fbs/PAGED_COMPARISON_2026-11-10.md). The complete prior example documentation follows unchanged.
+
+---
+
 # Independent FBS chronology and recovery example
 
 [Public FBS evidence](../../docs/fbs/index.html) · [Study notes](../../docs/fbs/README.md) · [Source](core.py) · [Tests](tests/test_fbs_contracts.py)
@@ -150,3 +163,4 @@ python -m unittest examples.fbs_contracts.tests.test_acquisition_qualification -
 ```
 
 The target of ten verified contracts per second is not represented by the invented test timings. The example cannot contact a provider, change ownership, access private data, fit a football model or place an order. Production handoffs and raw evidence remain private.
+

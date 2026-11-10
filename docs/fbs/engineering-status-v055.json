@@ -1,0 +1,38 @@
+{
+  "schema": "sports-edge-lab.public-fbs-v055-engineering.v1",
+  "release": "V055",
+  "status": "PREPARED_OWNER_EXECUTION_PENDING",
+  "latest_actual_owner": "V053",
+  "source_capture_completed_at": "2026-11-09T23:30:27Z",
+  "preserved_evidence": {
+    "issue_contexts": 500,
+    "unique_issue_games": 122,
+    "fixtures": 2742,
+    "original_forecasts_modified": false,
+    "saved_metric_rows_modified": false,
+    "negative_experiments_retained": true
+  },
+  "public_invented_example": {
+    "candidate_count": 3,
+    "event_count": 2,
+    "pages": 3,
+    "focused_tests_passed": 12,
+    "test_failures": 0,
+    "early_page_winner_preserved": true,
+    "completed_reentry_new_comparisons": 0,
+    "real_model_fits": 0,
+    "evidence_class": "INVENTED_ENGINEERING_DEMONSTRATION"
+  },
+  "private_implementation_verification": {
+    "status": "PENDING_FINAL_VERIFICATION",
+    "new_owner_science_credited": false
+  },
+  "publication_work": {
+    "new_real_model_fits": 0,
+    "new_forecast_issues": 0,
+    "new_provider_requests": 0,
+    "historical_rescoring": false,
+    "live_AWS_speed_claim": false,
+    "prospective_advantage_claim": false
+  }
+}
