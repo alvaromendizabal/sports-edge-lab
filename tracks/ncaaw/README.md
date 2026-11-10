@@ -1,5 +1,31 @@
 # Sports Edge Lab · NCAA women's basketball
 
+## Prepared B056 policy — November 10, 2026 UTC
+
+The next methodology separates **frozen completed-season research** from **per-game rolling execution of the selected metric champions**. It retains all **10 registered model families and 26 target heads** in the research comparison on **2024–25 and 2025–26**, with fixed evaluation rules and separate men’s/women’s populations. Registration does not establish backend availability, a successful fit or a model win.
+
+| Champion role | Selection objective |
+|---|---|
+| Winner accuracy | Maximize accuracy on the eligible completed-season evaluation cohort |
+| Winner log loss | Minimize log loss |
+| Winner Brier | Minimize Brier score |
+| Point-margin MAE | Minimize margin mean absolute error |
+| Point-margin RMSE | Minimize margin root mean squared error |
+| Total-points MAE | Minimize total mean absolute error |
+| Total-points RMSE | Minimize total root mean squared error |
+
+**Only qualified native champions and the selected, precommitted components of a champion ensemble receive current rolling fits.** The entire registered research grid is not retrained for every current game. The selected configurations use all eligible information available strictly before each game, with the original source, completion, availability and calibration gates intact. **No 2026–27 outcome-based model selection or promotion is permitted.** A missing or unqualified champion stays an explicit gap.
+
+Current-season historical rolling reconstructions are implemented for the selected native/component recipes and remain separate from original frozen predictions, numeric unissued references and genuine future issues. Reconstruction never creates an earlier forecast-issue timestamp. Existing forecasts and earlier negative feature findings remain preserved.
+
+The prepared V5 feature bank contains **202 scalar interaction/nonlinear candidates across 44 state columns**, organized into **seven groups with 44 group-ablation plans**. The **202 individual scalar ablations are registered and pending**. These are engineering and study-plan counts, not completed owner ablations or demonstrated gains. The historical configuration registry remains incomplete; not every earlier model variant has been recovered or retested. AP/Coaches still has **zero admitted ranking features**.
+
+### One PYZ to upload
+
+Upload the **final PYZ**, then copy the **matching one-line command from its handoff or chat**. A command TXT upload is **not required**. The plain Python command checks the delivered bytes and SHA-256 before ZIP imports, then runs the sealed gate. An optional saved TXT is only a convenience. Use the command supplied for that exact final release; this public viewer does not run owner research.
+
+These changes remain prepared implementation. Final-package test outcomes, actual owner execution, feature admission and model improvements require their own evidence. The actual B055 counts below remain the latest owner result displayed here. See the [NCAA policy and evidence model card](../../examples/ncaa_review/MODEL_CARD.md). The execution-review JSON projection and its strict local reader are unchanged.
+
 ## Latest actual owner result and bounded execution review — November 9, 2026 UTC
 
 **B055 committed new rolling work and then deferred for shared-resource headroom.** Its recorded status is `RESOURCE_DEFERRED_PARTIAL_WORK_PRESERVED`, with inner `AdmissionDeferred` / `WITHIN_STAGE_RESOURCE_HEADROOM_UNAVAILABLE`. The stage ledger records **9 completed, one failed wrapper stage and seven unentered out of 17**. The inner resource disposition and the wrapper outcome remain separate. Recorded owner wall time is **71,209.031 seconds**; whole-run remaining time and attributable cost are unknown. No platform root cause or measured speedup is inferred.
