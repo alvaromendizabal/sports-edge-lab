@@ -1,0 +1,352 @@
+{
+  "schema": "sports-edge-lab.fbs.historical-contenders.v057.v1",
+  "evidence_review_date": "2026-11-10",
+  "scope": "SAVED_AUTHENTICATED_AGGREGATES_NOT_NEW_OWNER_EXECUTION",
+  "legacy_probability_model": [
+    {
+      "season": 2024,
+      "policy": "fixed through 2023",
+      "games": 740,
+      "cohort_sha256": "cffc17f607bfd760c39babd6ed541038fc64f2b6efe8784ee305ada9e794f4f1",
+      "model": {
+        "log_loss": 0.5591220790763239,
+        "accuracy": 0.6972972972972973,
+        "brier": 0.1907958867129969
+      },
+      "market_same_cohort": {
+        "log_loss": 0.5540956643676985,
+        "accuracy": 0.6945945945945946,
+        "brier": 0.18863068608334832
+      },
+      "metrics_recomputed_for_publication": false,
+      "genuine_issues_established": false,
+      "evaluation_exposed": true,
+      "promotion_authorized": false
+    },
+    {
+      "season": 2025,
+      "policy": "fixed through 2023",
+      "games": 748,
+      "cohort_sha256": "a5d492811adbd31c95713ac4af3ba761e951da10dedb857c8f7f1e29a3ce5495",
+      "model": {
+        "log_loss": 0.5454858389212919,
+        "accuracy": 0.7205882352941176,
+        "brier": 0.18484631753795283
+      },
+      "market_same_cohort": {
+        "log_loss": 0.5385469987134486,
+        "accuracy": 0.7299465240641712,
+        "brier": 0.18167809734361764
+      },
+      "metrics_recomputed_for_publication": false,
+      "genuine_issues_established": false,
+      "evaluation_exposed": true,
+      "promotion_authorized": false
+    },
+    {
+      "season": 2025,
+      "policy": "annual prior-season origin",
+      "games": 748,
+      "cohort_sha256": "a5d492811adbd31c95713ac4af3ba761e951da10dedb857c8f7f1e29a3ce5495",
+      "model": {
+        "log_loss": 0.5417176404897063,
+        "accuracy": 0.7179144385026738,
+        "brier": 0.1833832382450003
+      },
+      "market_same_cohort": {
+        "log_loss": 0.5385469987134486,
+        "accuracy": 0.7299465240641712,
+        "brier": 0.18167809734361764
+      },
+      "metrics_recomputed_for_publication": false,
+      "genuine_issues_established": false,
+      "evaluation_exposed": true,
+      "promotion_authorized": false
+    },
+    {
+      "season": 2026,
+      "policy": "2026 saved monitor",
+      "games": 301,
+      "cohort_sha256": "c4fecad28a1918eb49db385f4ee0ae5af8ecaaf11c79deb70f2480f55d697e6e",
+      "model": {
+        "log_loss": 0.46551880819770836,
+        "accuracy": 0.7873754152823921,
+        "brier": 0.15263011173024493
+      },
+      "market_same_cohort": {
+        "log_loss": 0.47484296692463795,
+        "accuracy": 0.770764119601329,
+        "brier": 0.1561530724452904
+      },
+      "metrics_recomputed_for_publication": false,
+      "genuine_issues_established": false,
+      "evaluation_exposed": true,
+      "promotion_authorized": false
+    }
+  ],
+  "legacy_convex_ensemble": [
+    {
+      "season": 2024,
+      "games": 918,
+      "metrics": {
+        "margin": {
+          "bias": -1.784570310751446,
+          "games": 918,
+          "mae": 13.524613052468696,
+          "r2": 0.3939330563663497,
+          "rmse": 16.99449613718884
+        },
+        "total": {
+          "bias": -0.5484950849788871,
+          "games": 918,
+          "mae": 12.760269585270736,
+          "r2": 0.05147759030589427,
+          "rmse": 16.235136498425028
+        },
+        "winner": {
+          "accuracy": 0.7331154684095861,
+          "brier": 0.17831145587904187,
+          "class_metrics": {
+            "0": {
+              "f1": 0.6129541864139021,
+              "precision": 0.6576271186440678,
+              "recall": 0.5739644970414202,
+              "support": 338
+            },
+            "1": {
+              "f1": 0.7963424771404821,
+              "precision": 0.7688603531300161,
+              "recall": 0.8258620689655173,
+              "support": 580
+            }
+          },
+          "correct": 673,
+          "ece": 0.058052704989679293,
+          "games": 918,
+          "incorrect": 245,
+          "logloss": 0.525229512429143,
+          "mcc": 0.412941910302663,
+          "pr_auc": 0.8793936375077032,
+          "reliability_bins": [
+            {
+              "games": 7,
+              "lower": 0.0,
+              "mean_probability": 0.0922508704460914,
+              "observed_win_rate": 0.14285714285714285,
+              "upper": 0.1
+            },
+            {
+              "games": 40,
+              "lower": 0.1,
+              "mean_probability": 0.1368435013758714,
+              "observed_win_rate": 0.225,
+              "upper": 0.2
+            },
+            {
+              "games": 56,
+              "lower": 0.2,
+              "mean_probability": 0.2536911980927309,
+              "observed_win_rate": 0.375,
+              "upper": 0.3
+            },
+            {
+              "games": 84,
+              "lower": 0.3,
+              "mean_probability": 0.3506847950525087,
+              "observed_win_rate": 0.39285714285714285,
+              "upper": 0.4
+            },
+            {
+              "games": 108,
+              "lower": 0.4,
+              "mean_probability": 0.4533876012456772,
+              "observed_win_rate": 0.3425925925925926,
+              "upper": 0.5
+            },
+            {
+              "games": 139,
+              "lower": 0.5,
+              "mean_probability": 0.5497353429976956,
+              "observed_win_rate": 0.539568345323741,
+              "upper": 0.6
+            },
+            {
+              "games": 114,
+              "lower": 0.6,
+              "mean_probability": 0.6477338376937276,
+              "observed_win_rate": 0.7017543859649122,
+              "upper": 0.7
+            },
+            {
+              "games": 94,
+              "lower": 0.7,
+              "mean_probability": 0.7484659087861442,
+              "observed_win_rate": 0.8085106382978723,
+              "upper": 0.8
+            },
+            {
+              "games": 136,
+              "lower": 0.8,
+              "mean_probability": 0.8502621609968162,
+              "observed_win_rate": 0.8014705882352942,
+              "upper": 0.9
+            },
+            {
+              "games": 140,
+              "lower": 0.9,
+              "mean_probability": 0.9410083241250754,
+              "observed_win_rate": 0.9928571428571429,
+              "upper": 1.0
+            }
+          ],
+          "roc_auc": 0.7932921852683126
+        }
+      },
+      "cohort_sha256": "3bff93d71831a7e552c4d722c74a5b1a13f8d413870b055e728465778355052c",
+      "metrics_recomputed_for_publication": false,
+      "evaluation_exposed": true,
+      "promotion_authorized": false
+    },
+    {
+      "season": 2025,
+      "games": 934,
+      "metrics": {
+        "margin": {
+          "bias": -1.196835890221126,
+          "games": 934,
+          "mae": 12.773164092254234,
+          "r2": 0.4680097537848624,
+          "rmse": 16.199393698249626
+        },
+        "total": {
+          "bias": 0.8758712346162854,
+          "games": 934,
+          "mae": 12.682275317942075,
+          "r2": 0.06886048780072418,
+          "rmse": 15.716500451512
+        },
+        "winner": {
+          "accuracy": 0.7494646680942184,
+          "brier": 0.16468562011805069,
+          "class_metrics": {
+            "0": {
+              "f1": 0.6332288401253918,
+              "precision": 0.6579804560260586,
+              "recall": 0.6102719033232629,
+              "support": 331
+            },
+            "1": {
+              "f1": 0.8097560975609757,
+              "precision": 0.7942583732057417,
+              "recall": 0.8258706467661692,
+              "support": 603
+            }
+          },
+          "correct": 700,
+          "ece": 0.0371446521720903,
+          "games": 934,
+          "incorrect": 234,
+          "logloss": 0.4934646960040869,
+          "mcc": 0.4441177729281013,
+          "pr_auc": 0.8942823409901524,
+          "reliability_bins": [
+            {
+              "games": 5,
+              "lower": 0.0,
+              "mean_probability": 0.08530037830050903,
+              "observed_win_rate": 0.0,
+              "upper": 0.1
+            },
+            {
+              "games": 40,
+              "lower": 0.1,
+              "mean_probability": 0.14320551439744458,
+              "observed_win_rate": 0.15,
+              "upper": 0.2
+            },
+            {
+              "games": 72,
+              "lower": 0.2,
+              "mean_probability": 0.2599118613456351,
+              "observed_win_rate": 0.3055555555555556,
+              "upper": 0.3
+            },
+            {
+              "games": 68,
+              "lower": 0.3,
+              "mean_probability": 0.3514475144396028,
+              "observed_win_rate": 0.29411764705882354,
+              "upper": 0.4
+            },
+            {
+              "games": 122,
+              "lower": 0.4,
+              "mean_probability": 0.45345762986946764,
+              "observed_win_rate": 0.4672131147540984,
+              "upper": 0.5
+            },
+            {
+              "games": 128,
+              "lower": 0.5,
+              "mean_probability": 0.5565085195630883,
+              "observed_win_rate": 0.5703125,
+              "upper": 0.6
+            },
+            {
+              "games": 120,
+              "lower": 0.6,
+              "mean_probability": 0.6431779681131697,
+              "observed_win_rate": 0.7166666666666667,
+              "upper": 0.7
+            },
+            {
+              "games": 123,
+              "lower": 0.7,
+              "mean_probability": 0.7492447541974099,
+              "observed_win_rate": 0.7723577235772358,
+              "upper": 0.8
+            },
+            {
+              "games": 103,
+              "lower": 0.8,
+              "mean_probability": 0.845671826483182,
+              "observed_win_rate": 0.912621359223301,
+              "upper": 0.9
+            },
+            {
+              "games": 153,
+              "lower": 0.9,
+              "mean_probability": 0.9489697564450967,
+              "observed_win_rate": 0.9803921568627451,
+              "upper": 1.0
+            }
+          ],
+          "roc_auc": 0.8204496149664566
+        }
+      },
+      "cohort_sha256": "e329167cb959d345e33773ab3d88be6b104ccad7d005ae425cc318399872cbf9",
+      "metrics_recomputed_for_publication": false,
+      "evaluation_exposed": true,
+      "promotion_authorized": false
+    }
+  ],
+  "monitor_coverage": {
+    "games": 301,
+    "first_kickoff": "2026-08-29T16:00:00+00:00",
+    "last_kickoff": "2026-10-16T00:00:00+00:00",
+    "current_full_season": false,
+    "selection_allowed": false,
+    "contemporaneous_issue_established": false
+  },
+  "comparison_limits": [
+    "Older native market model is mostly T\u221260 minutes; newer frozen research and convex ensemble use T\u2212120 minutes.",
+    "Different game cohorts and horizons cannot establish a head-to-head winner.",
+    "2024 and 2025 are exposed development; 2026 never selects an independent champion.",
+    "An actual late reconstruction fit does not establish pregame information possession.",
+    "The archived 301-game feature bank ends October 16; later games require refreshed full input coverage."
+  ],
+  "new_fits": 0,
+  "new_forecast_issues": 0,
+  "new_real_scoring": 0,
+  "automatic_promotion": false
+}
