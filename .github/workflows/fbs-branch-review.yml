@@ -35,6 +35,14 @@ jobs:
           node --test examples/fbs_contracts/tests/test_latest_available_logic.cjs
           python -m examples.fbs_contracts.export_site --commit "$(git rev-parse HEAD)" --output "${RUNNER_TEMP}/fbs-static-projection"
           python -m examples.fbs_contracts.certified_resume
+      - name: Preserve the exact public static projection
+        if: matrix.python-version == '3.12'
+        uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02
+        with:
+          name: fbs-public-site-projection
+          path: ${{ runner.temp }}/fbs-static-projection/
+          if-no-files-found: error
+          retention-days: 14
   fbs-notebook:
     runs-on: ubuntu-24.04
     steps:

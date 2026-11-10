@@ -22,7 +22,7 @@ let browser;
   await page.selectOption('#period','all');
   for(const [layer,count] of [['original',122],['latest_foundation',122],['first_calibrated',122],['calibrated',122],['mixture_global',114],['mixture_gated',114],['historical',790]]){
    await page.selectOption('#layer',layer);
-   assert.match(await page.locator('#game-summary').innerText(),new RegExp('888 source games shown · '+count+' with saved issue values'));layerStates++;
+   assert.match(await page.locator('#game-summary').innerText(),new RegExp('888 source games · '+count+' with saved values in this layer'));layerStates++;
   }
   await page.selectOption('#season','all');assert.match(await page.locator('#game-summary').innerText(),/^2,742 source games|^2742 source games/);
   await page.selectOption('#season','2026');await page.selectOption('#period','tbd');
