@@ -5,7 +5,53 @@ Reproducible NBA forecasts, complete released-game inventories, chronological mo
 This NBA track belongs to the shared [Sports Edge Lab](../../README.md) repository. Its public material contains sanitized aggregate evidence and invented engineering examples. Actual game-level forecasts, feature recipes, model weights, source responses, full journals, and execution packages remain private.
 
 
-## November 9 B063 review — actual research resumed; matched study remains partial
+## November 9 B064 review — completed computation, incomplete returned evidence
+
+**The actual B063 owner run reports 138 new NBA estimator fits, 66 exact snapshot reuses and 204 new forecast records.** The registered nonlinear workers completed their remaining 44 tasks, and the coverage worker completed 176 tasks including 16 joint-score diagnostics. No previously completed task needs to be refitted solely to recover its evidence.
+
+| Actual B063 evidence | New invocation | Cumulative V5 branches |
+|---|---:|---:|
+| Reported estimator fits | 138 | 456 |
+| Exact fitted-snapshot reuses | 66 | 156 |
+| Forecast records | 204 | 612 |
+| Separate joint-score diagnostic tasks | 16 | 56 |
+| Completed task records | 220 | 668 |
+| Distinct games | 16 additional | 40 |
+| Promoted champions / fresh original issues | 0 / 0 | 0 / 0 |
+
+### Execution and evidence are separate gates
+
+The actual archive passes all 85 member checks, 84 payload hashes, CRCs and exact manifest closure. Its executable matches the independently retained release. The accepted prior 448 completed tasks remain supported, but the new bounded export includes complete bodies for only **9 of 220 newly completed tasks**; **211 are explicitly omitted**. Across the combined evidence, 423 forecast journals are physically reconstructable and 189 remain represented by exact omission pins.
+
+The worker-recorded 48-task nonlinear study is therefore computationally complete while its complete scientific evidence is still awaiting recovery. This is a transport failure, not evidence that the workers never ran. Exact checkpoint recovery must precede final scientific closure; no repeat fit is justified by a missing export. All original forecasts, negative findings, thread-binding exclusions and source clocks remain unchanged.
+
+### The nonlinear findings differ by target
+
+The following are provisional, exposed development diagnostics recomputed from manifest-authenticated returned projection rows. Their forecast pins match the external checkpoint index, but the missing full task dependencies prevent a complete independent scientific close.
+
+| Matched target | Games | Foundation | Adaptive features |
+|---|---:|---:|---:|
+| Winner log loss | 8 | 0.51260 | 0.48687 |
+| Winner Brier score | 8 | 0.16307 | 0.15195 |
+| Winner accuracy | 8 | 87.5% | 87.5% |
+| Margin MAE, equal-runtime pairs | 7 | 10.3704 | 11.8086 |
+| Total-points MAE | 8 | 12.2505 | 13.2620 |
+
+Adaptive features improve the reported probability scores but worsen point-error scores in this small exposed sample. The earlier unequal-runtime margin pair remains excluded from the controlled margin summary. No result promotes a champion, establishes a provider advantage, or permanently disqualifies a feature from a different combination.
+
+Current V5 projections cover **16 current-season games**, with **216 source-aged records**. The complete 1,200 assigned-game saved inventory remains separate. Current feature observations are still dated November 7; this owner run made no new official, injury or provider acquisitions and issued no qualified fresh forecasts.
+
+### Prepared continuation: freeze research, then roll qualified champions
+
+The separately prepared B064 implementation uses fixed historical comparison origins for the 2024–25 and 2025–26 seasons. It preserves available old definitions and unresolved historical-recipe dispositions, evaluates feature groups and interactions, retains failed configurations, and selects separate probability and point-target candidates. Only qualified metric-specific champion configurations and their precommitted ensemble components may enter the expensive rolling refit path. Historical development exposure and untouched future monitoring remain explicitly separate.
+
+The execution path adds incremental source collection, timestamped source and feature revisions, freshness alerts, immutable forecast journals, and bounded resource scheduling. It reuses the exact predecessor already present in the owner workspace, freeing compact-return capacity for scientific evidence. Complete prior support is recovered once under a strict size gate; the earlier repeated subset-export search is removed. This is implemented engineering, with final package qualification and owner execution recorded separately in the private handoff. No new B064 NBA fit or fresh-data result is claimed here.
+
+B063 recorded **317.7 seconds of research** and **1,999.5 seconds of packaging before the final write**. Its earlier summary completion clock did not include that later packaging interval. The next runner reports stage and total elapsed time, completed/reused/deferred work, measured throughput and conditional ETA, and hard execution bounds. No measured dollar charge is asserted without verified billing evidence.
+
+All other sports and earlier NBA dated evidence below remain unchanged.
+
+## Preserved November 9 B063 review — actual research resumed; matched study remains partial
 
 **The authenticated B062 owner return adds 108 NBA estimator fits, 54 exact snapshot reuses and 162 forecasts.** It also records 16 completed joint-score diagnostics, all still lacking the earlier paired residual support required for a qualified joint distribution. No completed forecast is replaced or counted as a new fit merely because it was recovered.
 
