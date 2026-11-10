@@ -1,3 +1,21 @@
+# NCAA FBS · authenticated partial V055 and prepared V056
+
+**Latest actual owner: V055, partial. V056 is prepared; owner execution remains pending.**
+
+The authenticated November 10 V055 run completed **36 new base fits and 33,336 scalar prediction outputs**. Its frozen comparison completed **36 of 5,858 registered cases**, with **5,822 remaining**. There are **zero authorized rolling champions and zero new rolling fits**. Complete comparison and 2024 season closure remain unproved. The root summary leaves new genuine forecasts **null (unknown)**; the frozen and champion stages separately record zero. Prediction-output counts are not forecast-issue counts.
+
+Worker and supervisor exits were both **2**; the outer shell exit is unproved. Worker time before packaging was **535.050 seconds** and independent observer elapsed time was **587.865 seconds**, with overlapping scopes. The run recorded **15 provider requests and three known odds credits**. All **401 complete-evidence manifest payloads** were verified. This is a bounded recovery checkpoint, not completed research or a live throughput benchmark.
+
+The new source capture began **2026-11-10T07:04:10Z** and completed **07:04:37Z**, retaining **888 current fixtures, 685 observed finals, 807 exact kickoffs and 81 unresolved kickoff times**. It does not update the earlier forecast or metric clocks. The existing interactive evidence retains **500 issue contexts across 122 games**, all **2,742 fixtures**, and the **211-game negative V053 mixture finding** with its original November 9 computation time and exposed 2025 development scope.
+
+V056 prepares earlier-fold calibration and residual distribution comparisons, with at most **eight starts / 120 seconds** inside the existing **36-start / 420-second frozen** and **48-start / 600-second shared** budgets. It separates task visits from completed scientific cases, constrains ETA to comparable observed work, and resumes the newest authenticated recovery checkpoint while preserving exact source bytes. A narrow completion-evidence adapter covers one 2024 Utah State–Robert Morris fixture with unresolved exact kickoff; original forecasts remain unchanged. New tests use fictional software fixtures. No V056 owner science or speedup is claimed. **Certified novel feature concepts remain zero; the target of 200 remains open.**
+
+[Current analytical dashboard](current.html) · [Authenticated V055 aggregates](actual-owner-v055.json) · [Preserved negative mixture evaluation](learned-mixture-evaluation-v054.json).
+
+The complete preceding accounts below are retained as dated history. Their statements about the latest owner or pending releases describe their original publication dates.
+
+---
+
 # NCAA FBS · V055 engineering continuation prepared
 
 **Latest actual owner: V053, partial. V055 prepares complete comparisons across bounded pages; owner execution remains pending.**
@@ -227,5 +245,6 @@ The newest authenticated official observation is **2026-11-09T03:22:14Z (Novembe
 The actual owner completed **44 base fits: 17 adaptive and 27 retained-policy fits**, with **zero new calibrators**. It preserved **324 adaptive scalar targets for 108 future games**, **1,098 separate retained-policy scalar outputs**, and **4,932 separate retrospective-development outputs**. Its 108 original current-origin shadow outlooks now have independently authenticated original issue evidence. The foundation and selected current-regime views share those same 108 forecast identities; **216 role views are not 216 independent forecasts**. No outcome is yet observed for these future outlooks in this capture. Their numerical candidate values remain private. [Original outlook metadata and qualification](forward-outlooks-v050.json).
 
 A later **report-storage admission limit** stopped checkpoint recovery and report assembly. The compact partial return preserved the scientific work; it is not a completed full-workload run. The owner reused the **245 earlier metric cohorts** and **36 earlier selector records** without recalculating them. It made 15 current-source requests and zero native-history requests. This dashboard publication performs **zero fits, forecast creation or scientific score calculations**. No automatic production promotion followed. [Dated execution evidence](source-status-v050.json).
+
 
 

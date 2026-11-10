@@ -1,3 +1,21 @@
+# NCAA FBS · authenticated partial V055 and prepared V056
+
+**Latest actual owner: V055, partial. V056 is prepared; owner execution remains pending.**
+
+The authenticated November 10 V055 run completed **36 new base fits and 33,336 scalar prediction outputs**. Its frozen comparison completed **36 of 5,858 registered cases**, with **5,822 remaining**. There are **zero authorized rolling champions and zero new rolling fits**. Complete comparison and 2024 season closure remain unproved. The root summary leaves new genuine forecasts **null (unknown)**; the frozen and champion stages separately record zero. Prediction-output counts are not forecast-issue counts.
+
+Worker and supervisor exits were both **2**; the outer shell exit is unproved. Worker time before packaging was **535.050 seconds** and independent observer elapsed time was **587.865 seconds**, with overlapping scopes. The run recorded **15 provider requests and three known odds credits**. All **401 complete-evidence manifest payloads** were verified. This is a bounded recovery checkpoint, not completed research or a live throughput benchmark.
+
+The new source capture began **2026-11-10T07:04:10Z** and completed **07:04:37Z**, retaining **888 current fixtures, 685 observed finals, 807 exact kickoffs and 81 unresolved kickoff times**. It does not update the earlier forecast or metric clocks. The existing interactive evidence retains **500 issue contexts across 122 games**, all **2,742 fixtures**, and the **211-game negative V053 mixture finding** with its original November 9 computation time and exposed 2025 development scope.
+
+V056 prepares earlier-fold calibration and residual distribution comparisons, with at most **eight starts / 120 seconds** inside the existing **36-start / 420-second frozen** and **48-start / 600-second shared** budgets. It separates task visits from completed scientific cases, constrains ETA to comparable observed work, and resumes the newest authenticated recovery checkpoint while preserving exact source bytes. A narrow completion-evidence adapter covers one 2024 Utah State–Robert Morris fixture with unresolved exact kickoff; original forecasts remain unchanged. New tests use fictional software fixtures. No V056 owner science or speedup is claimed. **Certified novel feature concepts remain zero; the target of 200 remains open.**
+
+[Current analytical dashboard](../../docs/fbs/current.html) · [Authenticated V055 aggregates](../../docs/fbs/actual-owner-v055.json) · [Full evidence and historical limits](../../docs/fbs/README.md).
+
+The complete preceding accounts below are retained as dated history. Their statements about the latest owner or pending releases describe their original publication dates.
+
+---
+
 # NCAA FBS — V055 complete frozen-comparison continuation
 
 **V055 is prepared; no V055 owner execution, new research result or prospective advantage is claimed. V053 remains the latest authenticated actual owner.**
@@ -183,6 +201,7 @@ Apply the [shared research protocol](../../docs/RESEARCH_PROTOCOL.md). Establish
 **Current phase:** source acquisition and audit. No trained-model performance claim.
 
 </details>
+
 
 
 

@@ -35,6 +35,7 @@ ASSETS += ('current-v053.html','current-evidence-v054.json.gz','current-evidence
            'current-evidence-v054.js','current-evidence-v054.css','execution-status-v054.json',
            'execution-status-v054-data.js','learned-mixture-evaluation-v054.json','README-history-v053.md')
 ASSETS += ('engineering-v055.html','engineering-status-v055.json')
+ASSETS += ('actual-owner-v055.json','actual-owner-v055-data.js')
 SOURCE_FILES = {'index.html':'current.html','season-archive.html':'index.html'}
 
 
@@ -142,6 +143,7 @@ def export(commit, output):
     current_v054=json.loads(gzip.decompress(committed(commit,'docs/fbs/current-evidence-v054.json.gz')))
     manifest['current_evidence_v054']={k:current_v054[k] for k in ('as_of','source_observed_at',
         'source_capture_completed_at','official_games','season_counts','execution','provider_capture')}
+    manifest['v055_actual_owner']=json.loads(committed(commit,'docs/fbs/actual-owner-v055.json'))
     manifest['v055_engineering_preparation']=json.loads(committed(commit,'docs/fbs/engineering-status-v055.json'))
     manifest['v053_preserved_interactive_view']='current-v053.html'
     manifest['earlier_dashboard_retained_at']='complete.html'
@@ -166,6 +168,7 @@ if __name__ == '__main__':
     result=export(args.commit,args.output)
     print(json.dumps({'source_commit':args.commit,'public_assets':len(result['public_files']),
                       'new_provider_calls':0,'owner_model_fits':0}))
+
 
 
 
