@@ -1,5 +1,29 @@
 # Sports Edge Lab · NBA
 
+
+## November 10 — authenticated B066 bounded owner pass and early shadow issues
+
+**B066's actual manual NBA owner run made new forecast progress after the prepared engineering release.** The original return archive was authenticated with nine regular-file members and eight verified payload pins. Its complete declared scientific support reconstructed 3,476 original files; the single required previously authenticated support component was independently recovered and verified. The actual calling-shell exit transcript remains unavailable, so the internal successful supervisor exit and bounded-completion status are not a claim of external shell verification.
+
+| New owner result, November 10 UTC | Verified count or status |
+|---|---:|
+| New NBA champion estimator fits | 24 |
+| Earlier frozen estimator fits authenticated and reused | 245 |
+| Exact already-fitted snapshot reuses in forward issue work | 56 |
+| New calibration optimizer fits / exact calibrator reuses | 3 / 2 |
+| Genuinely timestamped early-outlook shadow forecast records | 688 |
+| Distinct upcoming 2026–27 regular-season games with those issues | 64 |
+| New nominal T60/T120 final-hour issues | 0 |
+| Deferred future game-by-recipe views | 10,367 |
+| Outstanding registered frozen research tasks | 2,083 |
+| Newly evaluated complementarity experiments / newly promoted champions | 0 / 0 |
+
+The 688 issues cover 64 of the 1,200 assigned regular-season games and 688 of 11,055 currently eligible game-by-recipe views. Each has a retained issue, training and source clock and a future tip; all are **early outlooks**, approximately 18 hours to 11.5 days before tip, rather than forecasts issued at the labeled final-hour horizon. Independent offline readback compared all 688 saved issue bodies to the owner summary, verified the corresponding 688 engine-journal hashes, and reconciled 24 fitted-snapshot commit records. All original 57,600 saved family/horizon/track views remain separate and unchanged; this new activity did not overwrite prior issues.
+
+A bounded owner source refresh reported 7,864 provider-observation inventory rows, but **zero strictly admitted fair-contract comparisons**, zero parsed injury rows, and no justified line-based cover probabilities. Observations are not qualified two-sided prices. Its 486 derived columns were evaluated jointly in preserved frozen research, not individually proven improvements. The new saved-prediction complementarity program and remaining family comparisons were not evaluated in this invocation. The 2024–25 and 2025–26 selection results remain development-exposed; no new independent common-cohort performance interval or model superiority was established, and current-season outcomes did not select a new recipe.
+
+The lossless export remains **dependent on a separately pinned earlier support component** and explicitly omits owner-local model or matrix bodies. Archive readback is stronger than a receipt-only claim but does not establish that every omitted fitted-weight body was exported or that the full backlog completed. The previously deployed owner-private dashboard is a dated earlier publication, **not a deployment of these new B066 issues**. No new private Site deployment, public game-level forecast release, paid provider entitlement, continuous trainer or automatic champion promotion is claimed by this README update.
+
 Reproducible NBA forecasts, complete released-game inventories, chronological model comparisons, and source-qualified market and player-availability research.
 
 This NBA track belongs to the shared [Sports Edge Lab](../../README.md) repository. Its public material contains sanitized aggregate evidence and invented engineering examples. Actual game-level forecasts, feature recipes, model weights, source responses, full journals, and execution packages remain private.
