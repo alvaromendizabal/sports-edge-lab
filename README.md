@@ -1,3 +1,11 @@
+## NCAA basketball: actual B058, V7 continuation prepared
+
+The latest authenticated owner return preserved **90 new target fits** and **seven exact prior frozen-fit reuses** before its work budget ended. It completed 65 of 6,216 core contexts and 25 of 14,544 scalar contexts; those context totals are not model-fit counts. It issued **zero new current forecasts** and promoted **zero models**. The older research, including stronger complete-model scorecards, remains preserved.
+
+The prepared V7 continuation prioritizes current forecasts, restores exact old fits, compares a bounded set of metric-specific contenders, and runs independent work under a shared CPU/memory coordinator. It returns at bounded work checkpoints instead of requiring the entire nominal frontier first. Local regression tests establish software behavior; actual owner throughput and new model results remain pending.
+
+[Authenticated B058 evidence and prepared V7 limits](examples/ncaa_review/evidence/B058_ACTUAL_B059_PREPARED.md) · [Men’s evidence](tracks/ncaam/README.md) · [Women’s evidence](tracks/ncaaw/README.md)
+
 <p align="center"><img src="docs/assets/masthead.svg" alt="Sports Edge Lab — probabilistic forecasting, scientific evaluation, reliable ML systems" width="1100"></p>
 
 ## FBS engineering continuation — November 10, 2026 UTC
