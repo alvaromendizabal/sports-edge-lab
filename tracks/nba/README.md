@@ -4,6 +4,24 @@ Reproducible NBA forecasts, complete released-game inventories, chronological mo
 
 This NBA track belongs to the shared [Sports Edge Lab](../../README.md) repository. Its public material contains sanitized aggregate evidence and invented engineering examples. Actual game-level forecasts, feature recipes, model weights, source responses, full journals, and execution packages remain private.
 
+## November 10 — prepared B067 continuation and deployed B066 owner evidence
+
+**B067 adds substantial source and execution engineering; its real NBA owner run remains pending.** The completed source changes preserve the authenticated B066 record below. No new NBA acquisition, historical evaluation, estimator fit, champion promotion or current-season score was produced in this preparation environment.
+
+The continuation addresses concrete failures in the returned owner evidence:
+
+- The latest injury PDF contained reversed layout coordinates and word-by-word extraction. A bounded coordinate-aware decoder preserves publication clocks, exact game and team identity, wrapped reasons, unsubmitted teams and failure diagnostics. Actual repaired report coverage must be measured by the owner run.
+- Winner-market source qualification is now distinct from spread or total line requirements. Exact two-sided winner semantics, overtime and settlement, source-body identity, and observation cutoffs remain required. A raw bid/ask reference does not become a fair probability.
+- Previously observed price/live-state pairs survive a later refresh that sees a final game. Their original clocks, conflicts and missing coverage remain explicit. The 614 pairs reported by B066 are contemporaneous inventory, without a verified full in-game path or fitted-feature claim.
+- Frozen prediction reuse requires earlier source, label and fitting origins. Complementarity hypotheses and negative results remain registered; expensive rolling work remains limited to qualified champions. Return admission accounts for marginal evidence and retained dependencies.
+- Prospective monitoring keeps original issues, actual early/nominal/late classes, revisions and lead-time groups separate. Only causally observed final results can score a prior issue; current-season outcomes cannot select the historical champions.
+
+Focused source qualification passed **26 synthetic checks** for availability parsing, source-clock safety, pair retention, winner-reference contracts and complete dashboard exports. This is engineering evidence. Real eligibility, newly scored experiment counts and forecast performance remain owner-run results; the final executable has its own broader release qualification.
+
+**The existing owner-private NBA Site is now version 46**, deployed successfully at **2026-11-10 18:09:08 UTC** from source commit `ead7456ea75267cec886a9c9ab2dc23236053fcf`. The deployment exposes the actual B066 owner evidence privately: all 1,277 display entries, all 688 immutable early-outlook records across 64 games, and the complete provider inventory with source clocks. All 57,600 prior saved views and earlier live report links remain available. Fourteen deterministic checks and browser checks verified the complete table, the issued-game filter, original forecast details, observed final scores and the interactive target chart. The private publication remains dated evidence, with no automatic data refresh or training. The access policy remained owner-only.
+
+The earlier B066 review below records the publication state at its own date; this section supersedes only that publication-status statement. Historical 2024–25 and 2025–26 results remain development-exposed, and all unresolved source, nominal-horizon, backlog and external-shell evidence limitations remain explicit. Public GitHub receives this aggregate narrative only. Private source, exact active recipes, game-level forecasts, provider responses, model bodies and execution packages remain outside the public repository.
+
 ## November 10 — authenticated B066 bounded owner pass and early shadow issues
 
 **B066's actual manual NBA owner run made new forecast progress after the prepared engineering release.** The original return archive was authenticated with nine regular-file members and eight verified payload pins. Its complete declared scientific support reconstructed 3,476 original files; the single required previously authenticated support component was independently recovered and verified. The actual calling-shell exit transcript remains unavailable, so the internal successful supervisor exit and bounded-completion status are not a claim of external shell verification.
