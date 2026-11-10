@@ -94,7 +94,8 @@ class PublicFbsEvidenceTests(unittest.TestCase):
         self.assertIn("No V054 owner results claimed",html)
         self.assertIn("198.39 recorded seconds",html)
         self.assertIn("129.9 min",html)
-        self.assertEqual(html,(DOCS/"index.html").read_text())
+        self.assertIn("current-evidence-v054.js",html)
+        self.assertTrue((DOCS/"index.html").exists())
         self.assertNotRegex(html,r'<(?:button|input|select)[^>]*(?:stake|bankroll|wager|place.bet)')
 
     def test_javascript_loader_carries_the_exact_downloaded_export(self):

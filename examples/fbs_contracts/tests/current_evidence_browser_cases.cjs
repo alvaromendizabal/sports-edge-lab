@@ -3,7 +3,7 @@ const assert=require('node:assert/strict'),fs=require('node:fs'),path=require('n
 exports.run=async({browser,root,screenshots})=>{
  const context=await browser.newContext({acceptDownloads:true}),page=await context.newPage();
  const errors=[],requests=[];page.on('pageerror',e=>errors.push(e.message));page.on('request',r=>{if(!/^(file|data|blob):/.test(r.url()))requests.push(r.url())});
- const url='file://'+path.join(root,'docs/fbs/current.html');
+ const url='file://'+path.join(root,'docs/fbs/current-v053.html');
  for(const width of [1440,390]){
   await page.setViewportSize({width,height:1000});await page.goto(url);await page.locator('#game-rows [data-game]').first().waitFor();
   assert.match(await page.locator('#game-summary').innerText(),/67 source games shown · 67 with saved issue values/);
@@ -35,3 +35,4 @@ exports.run=async({browser,root,screenshots})=>{
  return {status:'PASS',viewports:[1440,390],current_games:67,unresolved_current_season:81,all_source_games:2742,
   distinct_layers:3,keyboard_dialog:true,csv_rows:67,script_errors:0,external_requests:0};
 };
+

@@ -19,7 +19,10 @@ jobs:
         with:
           python-version: ${{ matrix.python-version }}
       - name: Check timing, population, content closure and fit reentry
-        run: python -m unittest discover -s examples/fbs_contracts/tests -v
+        run: |
+          python -m unittest discover -s examples/fbs_contracts/tests -v
+          python tests/test_fbs_v054_public_evidence.py
+          node tests/fbs_v054_public_view.test.cjs
       - name: Execute twice and verify deterministic evidence page
         run: |
           python -m examples.fbs_contracts --output "${RUNNER_TEMP}/fbs-review"
@@ -66,6 +69,7 @@ jobs:
           node examples/fbs_contracts/tests/test_dashboard_browser.cjs
           node examples/fbs_contracts/tests/test_recovery_browser.cjs
           node examples/fbs_contracts/tests/test_season_browser.cjs
+          node tests/fbs_v054_browser.test.cjs
       - name: Preserve desktop and mobile evidence views
         uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02
         with:
@@ -73,3 +77,4 @@ jobs:
           path: ${{ runner.temp }}/fbs-screenshots/*.png
           if-no-files-found: error
           retention-days: 14
+
