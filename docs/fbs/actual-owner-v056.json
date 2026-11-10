@@ -1,0 +1,158 @@
+{
+  "schema": "sports-edge-lab.fbs.actual-owner.v056.public.v1",
+  "evidence_review_date": "2026-11-10",
+  "source_observation_started_at": "2026-11-10T19:01:06Z",
+  "execution": {
+    "status": "V056_PARTIAL_BOUNDED_RECOVERY_CHECKPOINTED_NO_LIVE_BENCHMARK",
+    "worker_exit": 2,
+    "supervisor_exit": 2,
+    "outer_shell_exit": null,
+    "new_base_fits": 31,
+    "new_statistical_states": 5,
+    "calibration_optimizers": 3,
+    "empirical_residual_states": 2,
+    "residual_states_are_subset_of_statistical_states": true,
+    "new_total_statistical_fits": 36,
+    "new_scalar_prediction_outputs": 44408,
+    "new_genuine_forecasts": null,
+    "frozen_and_champion_genuine_issues": 0,
+    "failed_fit_attempts": 0,
+    "registered_frozen_cases": 5858,
+    "cumulative_completed_frozen_cases": 67,
+    "new_frozen_cases": 31,
+    "reused_frozen_cases": 36,
+    "remaining_frozen_cases": 5791,
+    "qualified_rolling_champions": 0,
+    "global_comparison_complete": false,
+    "provider_requests": 15,
+    "known_odds_credits": 3,
+    "committed_legacy_recovery_chunks": 0,
+    "full_workload_complete": false,
+    "worker_seconds_before_packaging": 465.90605147399947,
+    "independent_observer_elapsed_seconds": 520.846977171,
+    "elapsed_scopes_overlap": true
+  },
+  "completed_season_proof": {
+    "2024": "VERIFIED",
+    "2025": "VERIFIED"
+  },
+  "source_inventory": {
+    "2024": 920,
+    "2025": 934,
+    "2026": 888
+  },
+  "saved_game_layer_remains_separately_dated": true,
+  "cost": {
+    "basis": "TOTAL_INSTANCE_WALL_TIME_EQUIVALENT_NOT_MARGINAL_FBS_CHARGE",
+    "estimate_usd": 0.06443746788705104,
+    "elapsed_seconds": 479.2869512259995,
+    "hourly_list_rate_usd": 0.484,
+    "actual_invoiced_cost_usd": null,
+    "provider_and_storage_costs_included": false,
+    "other_workloads_apportioned": false
+  },
+  "earlier_oof": {
+    "new_statistical_states": 5,
+    "verified_base_state_reuses": 3,
+    "new_scalar_outputs": 15710,
+    "completed_units": 20,
+    "registered_units": 21,
+    "failed_fit_attempts": 0,
+    "gap": "2024 isotonic comparison lacks required earlier out-of-fold support",
+    "selected_saved_findings": [
+      {
+        "season": 2024,
+        "variant": "half_sigmoid",
+        "target": "winner",
+        "games": 918,
+        "metrics": {
+          "accuracy": 0.7047930283224401,
+          "brier": 0.19073004925799023,
+          "ece10": 0.05474813164594566,
+          "log_loss": 0.5579354770992907
+        },
+        "control_metrics": {
+          "accuracy": 0.7124183006535948,
+          "brier": 0.18969974585714916,
+          "ece10": 0.04808718985321042,
+          "log_loss": 0.5565274320751737
+        },
+        "delta": {
+          "accuracy": -0.007625272331154731,
+          "brier": 0.001030303400841065,
+          "ece10": 0.006660941792735235,
+          "log_loss": 0.001408045024116955
+        },
+        "promotion_allowed": false
+      },
+      {
+        "season": 2025,
+        "variant": "half_sigmoid",
+        "target": "winner",
+        "games": 934,
+        "metrics": {
+          "accuracy": 0.7237687366167024,
+          "brier": 0.18194495308143044,
+          "ece10": 0.033107660672548916,
+          "log_loss": 0.5370893020301135
+        },
+        "control_metrics": {
+          "accuracy": 0.7269807280513919,
+          "brier": 0.1821436800010672,
+          "ece10": 0.03285675797817777,
+          "log_loss": 0.538104301200244
+        },
+        "delta": {
+          "accuracy": -0.0032119914346895317,
+          "brier": -0.0001987269196367658,
+          "ece10": 0.00025090269437114815,
+          "log_loss": -0.0010149991701304817
+        },
+        "promotion_allowed": false
+      },
+      {
+        "season": 2025,
+        "variant": "isotonic",
+        "target": "winner",
+        "games": 934,
+        "metrics": {
+          "accuracy": 0.7184154175588865,
+          "brier": 0.1825349718314013,
+          "ece10": 0.023486018499125023,
+          "log_loss": 0.5529848715804085
+        },
+        "control_metrics": {
+          "accuracy": 0.7269807280513919,
+          "brier": 0.1821436800010672,
+          "ece10": 0.03285675797817777,
+          "log_loss": 0.538104301200244
+        },
+        "delta": {
+          "accuracy": -0.008565310492505418,
+          "brier": 0.0003912918303340951,
+          "ece10": -0.009370739479052745,
+          "log_loss": 0.014880570380164548
+        },
+        "promotion_allowed": false
+      }
+    ],
+    "uncertainty_limit": "Exposed development; 2,000 draws do not resolve the registered 96-contrast tail.",
+    "promotion_authorized": false
+  },
+  "authentication": {
+    "complete_evidence_payloads_verified": 478,
+    "owner_return_sha256": "965dbada66dcb62ecda319c8b1b26a933f9b336044d287e34029314cc9098af8"
+  },
+  "v057_preparation": {
+    "actual_owner_execution_observed": false,
+    "historical_contender_recovery": true,
+    "interim_cards_before_full_closure": true,
+    "smaller_durable_recovery_chunks": 64,
+    "maximum_chunks": 8,
+    "effective_maximum_recovery_units": 512,
+    "local_complete_population_cache_is_not_source_completion_credit": true,
+    "global_champion_policy_unchanged": true,
+    "new_certified_feature_concepts": 0,
+    "complete_research_eta_seconds": null
+  }
+}
