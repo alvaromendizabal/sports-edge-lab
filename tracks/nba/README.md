@@ -5,6 +5,49 @@ Reproducible NBA forecasts, complete released-game inventories, chronological mo
 This NBA track belongs to the shared [Sports Edge Lab](../../README.md) repository. Its public material contains sanitized aggregate evidence and invented engineering examples. Actual game-level forecasts, feature recipes, model weights, source responses, full journals, and execution packages remain private.
 
 
+## November 10 UTC / November 9 Pacific — B065 continuation from the actual B064 failure
+
+**B064 completed 245 new frozen model fits, but its final scientific return exceeded the size limit.** The authenticated final archive is a diagnostic, with status `RETURN_EVIDENCE_SIZE_OR_WRITE_BLOCKED`. Its eight members, seven payload hashes, CRCs and exact closure passed; its embedded executable matches the issued release. A successful bounded research stage and a failed final evidence export remain separate facts. The actual outer shell exit was not supplied.
+
+| Actual B064 owner evidence | Observed or reported result |
+|---|---:|
+| New frozen estimator fits / completed tasks | 245 / 245 |
+| Calibrator fits / ensemble optimizer fits | 168 / 36 |
+| Failed research tasks / deferred registered tasks | 0 / 2,083 |
+| Selected metric-specific configurations | 11 |
+| Champion rolling fits / fresh original issues | 0 / 0 |
+| New source requests | 94 |
+| Completed-summary metric arithmetic checks | 1,674; no disagreement |
+
+The actual per-task prediction bodies and refreshed feature snapshots were omitted from the diagnostic archive. They remain pinned to existing owner checkpoints and must be recovered before independent row-level scientific closure. Summary arithmetic is not an independent rescore of those missing rows. The prepared B065 continuation authenticates completed work instead of fitting it again.
+
+### Findings remain target-specific and historically exposed
+
+The regular-season comparisons share 2,460 games: 1,230 in each completed historical season. These are development-exposed selections, with no current-season outcomes used for selection and no independent production confirmation.
+
+| Selected development metric | T60 | T120 |
+|---|---:|---:|
+| Winner accuracy | 68.09% | 68.29% |
+| Winner log loss | 0.60224 | 0.60196 |
+| Winner Brier score | 0.20729 | 0.20716 |
+| Margin MAE | 11.16351 | 11.16291 |
+| Total-points MAE | 14.99000 | 15.01623 |
+
+The metric rows favor different configurations; they are not the performance vector of a single model. At T60, a grouped interaction arm improves histogram boosting margin and total MAE by about 0.158 and 0.154 points, respectively. At T120, its total MAE improves while margin MAE slightly worsens. Winner probability effects also depend on calibration. Adverse linear, logistic and other combinations remain in the research registry for future complementary tests. No feature is permanently discarded and no champion is promoted from these exposed comparisons.
+
+### Repairs address the observed failure paths
+
+B065 preserves the exact frozen policy, task identities, original code, runtime bindings and completed result/model dependencies. It verifies prior ensemble slices before admitting new work, then prioritizes unfinished matched recipes and postseason core groups. Expensive rolling refits remain limited to qualified metric champions and precommitted ensemble members; calibration rows must match the exact constructor configuration.
+
+The return path now measures full scientific evidence before new fits, reuses verified compressed objects, reserves capacity for refresh and selected champions, and has a separately bounded finalizer. Required previous evidence is explicitly identified as an external dependency, never counted as newly included bytes. Any size failure retains the full inventory and omission ledger. A handled interruption cannot silently turn a partial package into a completed scientific result.
+
+Refresh repair preserves valid per-horizon snapshots when a later refresh fails, retains their original clocks, and invalidates them when their result or box-score dependencies change. It adds ordered identity normalization, bounded PDF parsing, explicit play-by-play revision handling and deadlines before cached processing. Exact market scoring now requires physically verified line, quote, orientation and settlement evidence plus a supported distribution. Missing contracts do not become invented probabilities or validated cover champions.
+
+The private dashboard preserves all 1,277 inventory entries and restores both original tracks, totaling 57,600 saved views. Old forecasts, newly observed facts, historical reconstructions and genuinely issued forecasts remain distinct. Publication does not refresh sources or issue forecasts.
+
+**B065 is prepared engineering, not an already completed owner run.** Its final private qualification ledger records packaged tests, observed review-only execution, precise source identity and publication evidence. Real B065 acquisition, feature materialization, fitting and issuance require the established manual owner invocation. The default 30-minute pipeline and separate ten-minute finalization limits are safety bounds, not an ETA for the entire queue. Dollar cost remains unknown without a verified billing rate. All other sport tracks and the earlier dated NBA evidence below remain unchanged.
+
+
 ## November 9 B064 review — completed computation, incomplete returned evidence
 
 **The actual B063 owner run reports 138 new NBA estimator fits, 66 exact snapshot reuses and 204 new forecast records.** The registered nonlinear workers completed their remaining 44 tasks, and the coverage worker completed 176 tasks including 16 joint-score diagnostics. No previously completed task needs to be refitted solely to recover its evidence.
