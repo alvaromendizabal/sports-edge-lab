@@ -1,5 +1,28 @@
 # Sports Edge Lab · NCAA women's basketball
 
+## Actual B057 result and prepared B058 work — November 10, 2026 UTC
+
+**B057 is the latest authenticated owner result: 9 of 17 stages completed, one failed and seven unentered.** It preserved **7 new target fits and three completed frozen contexts containing 16,787 prediction rows**. It recorded **zero new fresh source game rows, zero new current forecasts and zero promotions**. These operational totals cover NCAA men and women; they are not per-league physical-game totals. Recorded wall time was **3,227.064 seconds**, with attributable AWS cost and the remaining whole-study ETA unknown.
+
+Frozen research stopped at a fitted-estimator feature-width validation error. The preserved fits and predictions remain recoverable. This failure does not establish a feature's predictive value or a connection/platform root cause. The full candidate comparison, metric-specific champion selection and selected-champion rolling work remain incomplete.
+
+The owner fixture suite recorded **3,030 passed, one skipped, zero failed and zero errors**. Two Jupyter cells executed in the actual owner environment. Engineering validation is distinct from model performance. The [full aggregate review](../../examples/ncaa_review/evidence/B057_ACTUAL_B058_PREPARED.md) and [JSON export](../../examples/ncaa_review/evidence/B057_ACTUAL_B058_PREPARED.json) keep new fits, reuse, frozen predictions, source freshness and current issues separate.
+
+The latest schedule display records **11,821 provider-native identifiers**, with 1,460 date-query dispositions: 234 valid, 480 empty, 730 halted and 16 ambiguous. The canonical refresh produced **zero new source-game rows and zero new current feature rows**; 2,498 prior canonical identities retain their older clocks. The latest injury inventory has 1,320 observations and zero bound observations, and ranking support has zero qualified editions. Display IDs, source identities, feature rows and physical games are separate denominators.
+
+### Prepared B058 engineering
+
+B058 adds early synthetic native-model serialization checks, exact prior-fit recovery, bounded scalar research, partial-result reporting and explicit deferred-family gates. It registers standalone, additive and removal investigations of **202 inherited scalar candidates**, preserving every negative or unavailable feature for other combinations and future research. It claims **zero newly engineered features** and no owner-executed model gain. Fixed blend and error-correlation diagnostics reuse existing predictions.
+
+The frozen historical comparison uses **2024–25 and 2025–26**. Only qualified metric-specific champions and precommitted selected ensemble components advance to expensive rolling retraining. **2026–27 outcomes do not select champions.** Original forecasts, reconstructed forecasts and genuine rolling issues keep their own identities and clocks.
+
+A targeted frozen/memory/interaction regression passed **54 cases**; a later focused frontier/native-family-gate run passed **16 cases**. The runs overlap and must not be added. These local synthetic checks are separate from final package review and from an actual B058 owner result. No new current forecast is credited to this documentation update.
+
+The earlier [B056 aggregate review](../../examples/ncaa_review/evidence/B056_ACTUAL_B057_PREPARED.md) remains unchanged, including its unfavorable retrospective comparison against Polymarket international. Fresh acquisition, complete coverage, complete historical recipe recovery, qualified provider cohorts, distributional metrics and successor owner execution remain open. Publication does not refresh data or execute research.
+
+<details>
+<summary>Dated B056 actual result, B057 preparation and earlier records</summary>
+
 ## Actual B056 result and prepared B057 work — November 10, 2026 UTC
 
 **B056 is the latest authenticated owner result: 9 of 17 stages completed, one failed and seven unentered.** It preserved **132 new target fits, 54 calibration fits and 36 empirical-residual fits across 330 newly committed contracts**, plus separately counted reused work. Its status is `FAILED_PARTIAL_WORK_PRESERVED`; recorded wall time is **6,081.551 seconds**. Attributable cost and a complete successor ETA remain unknown.
@@ -758,6 +781,8 @@ The authenticated B035 owner admitted in 1.005 seconds with seven workers planne
 
 The prior B033 study remains in the attempt history with 108 committed target fits across both leagues, 54 in this track. Historical scorecards and the dated November 2 inventory are unchanged. The [portable preflight example](../../examples/ncaa_review/preflight.py) demonstrates separate test outcomes and required versus optional capabilities using invented checks, without accessing a process or provider.
 
+
+</details>
 
 </details>
 
