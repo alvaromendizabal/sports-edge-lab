@@ -31,6 +31,9 @@ ASSETS = ('index.html','research.html','recovery.html','season.js','source-progr
 ASSETS += ('current.html','current-evidence.css','current-evidence.js',
            'current-evidence-v053.json.gz','current-evidence-v053-data.js',
            'execution-status-v053.json','execution-status-v053-data.js')
+ASSETS += ('current-v053.html','current-evidence-v054.json.gz','current-evidence-v054-data.js',
+           'current-evidence-v054.js','current-evidence-v054.css','execution-status-v054.json',
+           'execution-status-v054-data.js','learned-mixture-evaluation-v054.json','README-history-v053.md')
 SOURCE_FILES = {'index.html':'current.html','season-archive.html':'index.html'}
 
 
@@ -135,6 +138,10 @@ def export(commit, output):
     manifest['current_evidence_v053']={k:current_v053[k] for k in ('as_of','source_observed_at',
         'source_capture_completed_at','source_owner_delivery_accepted','source_authenticated',
         'official_games','season_counts','execution','provider_capture','saved_r12_comparison')}
+    current_v054=json.loads(gzip.decompress(committed(commit,'docs/fbs/current-evidence-v054.json.gz')))
+    manifest['current_evidence_v054']={k:current_v054[k] for k in ('as_of','source_observed_at',
+        'source_capture_completed_at','official_games','season_counts','execution','provider_capture')}
+    manifest['v053_preserved_interactive_view']='current-v053.html'
     manifest['earlier_dashboard_retained_at']='complete.html'
     (output/'published-snapshot.json').write_text(json.dumps(manifest,indent=2)+'\n')
     class Assets(HTMLParser):
@@ -157,4 +164,5 @@ if __name__ == '__main__':
     result=export(args.commit,args.output)
     print(json.dumps({'source_commit':args.commit,'public_assets':len(result['public_files']),
                       'new_provider_calls':0,'owner_model_fits':0}))
+
 
