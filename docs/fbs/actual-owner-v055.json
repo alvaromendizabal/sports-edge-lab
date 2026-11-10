@@ -1,0 +1,96 @@
+{
+  "schema": "sports-edge-lab.public-fbs-owner-status.v1",
+  "owner_release": "V055",
+  "status": "V055_PARTIAL_BOUNDED_RECOVERY_CHECKPOINTED_NO_LIVE_BENCHMARK",
+  "started_at": "2026-11-10T07:03:55.884608Z",
+  "finished_at": "2026-11-10T07:12:50.828254Z",
+  "owner_return_sha256": "42c46fb827e3327249e8765c9b39c75ea68cc2bd0f8f0bf2d77e6e6777022798",
+  "evidence_authentication": {
+    "manifest_payloads_verified": 401,
+    "all_manifest_payloads_verified": true
+  },
+  "execution": {
+    "new_base_fits": 36,
+    "new_calibration_fits": 0,
+    "new_mixture_fits": 0,
+    "new_scalar_prediction_outputs": 33336,
+    "new_rolling_fits": 0,
+    "new_genuine_forecasts": null,
+    "frozen_stage_new_genuine_forecasts": 0,
+    "champion_stage_new_genuine_forecasts": 0,
+    "worker_exit": 2,
+    "supervisor_exit": 2,
+    "outer_shell_exit": null,
+    "worker_seconds_before_packaging": 535.050208,
+    "observer_elapsed_seconds": 587.865,
+    "timing_scopes_overlap": true,
+    "provider_requests": 15,
+    "known_odds_credits": 3,
+    "full_research_complete": false,
+    "live_throughput_benchmark": false
+  },
+  "frozen_comparison": {
+    "registered_cases": 5858,
+    "completed_cases": 36,
+    "remaining_cases": 5822,
+    "global_comparison_complete": false,
+    "rolling_champions_authorized": 0,
+    "completed_season_gate": "UNPROVED_2024_COMPLETION",
+    "selection_seasons": [
+      2024,
+      2025
+    ],
+    "current_season_used_for_selection": false,
+    "evidence_class": "EXPOSED_DEVELOPMENT_SELECTION_NOT_INDEPENDENT_CONFIRMATION",
+    "certified_novel_feature_concepts": 0,
+    "requested_novel_concept_target": 200
+  },
+  "current_capture": {
+    "observed_at": "2026-11-10T07:04:10Z",
+    "completed_at": "2026-11-10T07:04:37Z",
+    "fixtures": 888,
+    "observed_finals": 685,
+    "exact_kickoffs": 807,
+    "unresolved_exact_kickoffs": 81,
+    "all_season_fixtures": 2742,
+    "changes_saved_game_layer": false,
+    "refreshes_prior_metrics": false
+  },
+  "preserved_evidence": {
+    "owner_release": "V053",
+    "source_capture_completed_at": "2026-11-09T23:30:27Z",
+    "issue_contexts": 500,
+    "unique_issue_games": 122,
+    "fixtures": 2742,
+    "negative_mixture_evaluation_games": 211,
+    "negative_mixture_evaluation_season": 2025,
+    "negative_mixture_computed_at": "2026-11-09T23:32:53.345756Z",
+    "original_forecasts_modified": false,
+    "saved_metrics_rescored": false
+  },
+  "prepared_successor": {
+    "release": "V056",
+    "status": "PREPARED_OWNER_EXECUTION_PENDING",
+    "owner_execution_observed": false,
+    "new_owner_science_credited": false,
+    "method": "Earlier-fold calibration and residual distribution comparisons",
+    "study_maximum_starts": 8,
+    "study_scheduling_budget_seconds": 120,
+    "existing_frozen_maximum_starts": 36,
+    "existing_frozen_scheduling_budget_seconds": 420,
+    "existing_shared_maximum_starts": 48,
+    "existing_shared_scheduling_budget_seconds": 600,
+    "progress_policy": "Task visits and completed scientific cases stay separate; ETA requires observed progress within comparable work strata.",
+    "recovery_policy": "Resume the newest authenticated recovery checkpoint and preserve exact source bytes.",
+    "completion_adapter_scope": "One 2024 Utah State–Robert Morris fixture with unresolved exact kickoff; original forecasts are unchanged.",
+    "validation_class": "FICTIONAL_SOFTWARE_FIXTURES_ONLY_NO_OWNER_RESEARCH"
+  },
+  "publication": {
+    "new_model_fits": 0,
+    "new_forecast_issues": 0,
+    "new_provider_requests": 0,
+    "historical_rescoring": false,
+    "prospective_advantage_claim": false,
+    "automatic_promotion": false
+  }
+}

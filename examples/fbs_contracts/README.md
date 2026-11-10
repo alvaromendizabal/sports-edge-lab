@@ -1,3 +1,17 @@
+## Partial owner evidence and completed-case accounting · November 10, 2026
+
+The [authenticated V055 aggregate](../../docs/fbs/actual-owner-v055.json) reports 36 completed frozen cases out of 5,858, 5,822 remaining, 36 new base fits and 33,336 scalar prediction outputs. It preserves unknown root forecast issuance as null and keeps zero frozen/champion-stage issues separate. V056 remains prepared; its owner execution is unobserved. Earlier game and negative-mixture evidence keep their original dates.
+
+The [public status contract](actual_owner_status.py) validates the sanitized report and rejects extra fields, inconsistent scientific-case accounting, conflated task visits, unknown-to-zero coercion, unsupported success claims and a capture used to redates older metrics. These are deterministic publication checks, not new football research or authentication by themselves. The retained evidence commitments check that original game data and negative evaluations remain byte-identical.
+
+```bash
+python -m unittest examples.fbs_contracts.tests.test_actual_owner_status -v
+```
+
+The previous demonstrations and their dated preparation statements follow unchanged.
+
+---
+
 ## Complete comparisons across interrupted pages · November 10, 2026
 
 The [paged comparison demonstration](paged_comparison.py) uses three fictional candidates and two invented events. It requires all declared pages and candidate-event results before selection, retains the earliest-page winner across bounded resumptions, and performs zero new comparisons after completion. Twelve tests reject missing pages, altered receipts, conflicting or duplicate rows and changed input. These are generic engineering fixtures, not the private FBS algorithm or real football results.
@@ -163,4 +177,5 @@ python -m unittest examples.fbs_contracts.tests.test_acquisition_qualification -
 ```
 
 The target of ten verified contracts per second is not represented by the invented test timings. The example cannot contact a provider, change ownership, access private data, fit a football model or place an order. Production handoffs and raw evidence remain private.
+
 
