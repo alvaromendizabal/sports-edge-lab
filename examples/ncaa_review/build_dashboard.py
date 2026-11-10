@@ -17,6 +17,15 @@ ROOT=Path(__file__).resolve().parents[2]
 HERE=Path(__file__).resolve().parent
 HOST='https://alvaro-ncaa-research-review.alv-mendizabal.chatgpt.site'
 
+B056_CHAMPION_POLICY=(
+    '<strong>Prepared B056 policy · completed-season research, then metric champions · November 10, 2026 UTC.</strong>'
+    '<p>The registered research comparison retains <b>10 model families and 26 target heads</b> on the completed <b>2024–25 and 2025–26 seasons</b>, with frozen evaluation rules and separate men’s and women’s populations. Seven metric roles select eligible champions: <b>winner accuracy, winner log loss, winner Brier, margin MAE, margin RMSE, total MAE and total RMSE</b>. Current <b>2026–27 outcomes cannot select or promote a model</b>.</p>'
+    '<p><b>Current rolling fits are limited to qualified native champions and the selected, precommitted components of a champion ensemble.</b> The full research registry is not refit for every current game. Each selected configuration uses only eligible information available before that game. Current-season historical rolling reconstructions stay separate from original frozen forecasts, numeric unissued references and genuinely issued future forecasts; an old game never acquires a retroactive issue timestamp.</p>'
+    '<details><summary>Feature research and remaining evidence</summary><p>The prepared V5 bank registers <b>202 scalar interaction and nonlinear candidates across 44 state columns</b>, with <b>seven groups and 44 group-ablation plans</b>. The 202 individual scalar ablations remain registered and pending. These are implementation and study-plan counts, with <b>no new owner results or improvement credit</b>. The historical configuration registry is still incomplete; no claim is made that every earlier variant has been recovered. Earlier negative findings and original forecasts remain preserved. AP/Coaches still has <b>zero admitted ranking features</b>. Package-validation and actual-owner evidence stay separate.</p></details>'
+    '<p><b>One-PYZ handoff:</b> upload the final PYZ, then copy the matching one-line command from its handoff or chat. No command TXT upload is required. The plain Python command checks the delivered bytes and SHA-256 before ZIP imports and then runs the sealed gate; an optional saved TXT is only a convenience. Use the command matched to that exact delivered release. This public viewer does not start the owner workflow.</p>'
+    '<p><a href="https://github.com/alvaromendizabal/sports-edge-lab/blob/main/examples/ncaa_review/MODEL_CARD.md">Read the NCAA policy and evidence model card</a>. The policy is prepared implementation; the authenticated B055 result below remains the latest actual owner evidence displayed here.</p>'
+)
+
 B055_OWNER_STATUS=(
     '<strong>Latest owner result · B055 · November 9, 2026 UTC.</strong>'
     '<p><b>New rolling work was committed before shared-resource admission deferred the run.</b> The recorded result is <code>RESOURCE_DEFERRED_PARTIAL_WORK_PRESERVED</code>, with <code>AdmissionDeferred</code> and <code>WITHIN_STAGE_RESOURCE_HEADROOM_UNAVAILABLE</code>. The run completed <b>9/17 stages</b>; <b>one failed wrapper stage</b> and <b>seven unentered stages</b> remain separate from its inner resource disposition. Recorded owner wall time is <b>71,209.031 seconds</b>. No platform root cause, measured speedup, attributable cost or remaining-run ETA is inferred.</p>'
@@ -215,6 +224,7 @@ def render_track(data):
         '__SIBLING_LABEL__':"women's basketball" if sibling=='ncaaw' else "men's basketball",
         '__LEAGUE__':league,'__EVIDENCE__':embedded,
         '__REVIEW_DATE__':review_date(data),
+        '__B056_CHAMPION_POLICY__':B056_CHAMPION_POLICY,
         '__B055_OWNER_STATUS__':B055_OWNER_STATUS,
         '__B054_OWNER_STATUS__':B054_OWNER_STATUS,
         '__B053_OWNER_STATUS__':B053_OWNER_STATUS,
@@ -247,7 +257,7 @@ def landing_status(data):
     baseline = data[0]['b045_baseline_observation']; journal = data[0]['b045_forecast_journal_observation']
     if any(d['b045_forecast_journal_observation'] != journal for d in data):raise ValueError('landing journal population disagreement')
     b=data[0]['b046_baseline_observation']; repair=data[0]['b047_source_identity_repair']
-    return (B055_OWNER_STATUS + '<details><summary>Dated B054 startup result</summary>' + B054_OWNER_STATUS + '</details>' + B053_OWNER_STATUS + '<details><summary>Earlier dated owner returns</summary>' + B052_OWNER_STATUS + B051_OWNER_STATUS + B050_OWNER_STATUS + LATEST_OWNER_STARTUP + B048_OWNER_STATUS + B047R1_PHYSICAL_STATUS + '</details>'
+    return (B056_CHAMPION_POLICY + B055_OWNER_STATUS + '<details><summary>Dated B054 startup result</summary>' + B054_OWNER_STATUS + '</details>' + B053_OWNER_STATUS + '<details><summary>Earlier dated owner returns</summary>' + B052_OWNER_STATUS + B051_OWNER_STATUS + B050_OWNER_STATUS + LATEST_OWNER_STARTUP + B048_OWNER_STATUS + B047R1_PHYSICAL_STATUS + '</details>'
             + f'<p><strong>Dated {release}: {a["completed_scientific_stages"]}/{a["planned_scientific_stages"]} stages completed; partial work and final return preserved.</strong></p>'
             f'<p>The authenticated physical ledger reconciles {a["new_real_target_fits"]:,} target, {a["new_calibration_fits"]:,} scalar and {a["new_empirical_residual_fits"]:,} empirical fits across {a["committed_contract_objects"]:,} contract objects. Injury research deferred at its bounded shared-memory admission gate. Full model import and new scientific superiority are not established by that accounting.</p>'
             f'<p>The B046 pre-study view contains {b["target_rows"]:,} target rows, {b["game_model_rows"]:,} game-model rows and {b["browser_display_rows"]:,} display rows, including three unresolved source candidates. Independent arithmetic reconciles {b["independent_metric_panels_checked"]:,} model/provider panels through {b["independent_scalar_checks"]:,} checks with zero mismatches. These source/version populations do not certify every official physical game.</p>'
@@ -275,6 +285,7 @@ def outputs():
     return {**{ROOT/'tracks'/d['league']/'index.html':render_track(d) for d in data},
             ROOT/'docs/ncaa/index.html':render_landing(data),
             ROOT/'docs/ncaa/private-report/index.html':(HERE/'private_report.html.tmpl').read_text()
+                .replace('__B056_CHAMPION_POLICY__',B056_CHAMPION_POLICY)
                 .replace('__B055_OWNER_STATUS__',B055_OWNER_STATUS)
                 .replace('__B054_OWNER_STATUS__',B054_OWNER_STATUS)
                 .replace('__EXECUTION_REVIEW_PANEL__',(HERE/'execution_review.html.tmpl').read_text())
