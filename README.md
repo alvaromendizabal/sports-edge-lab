@@ -229,4 +229,13 @@ Public material includes evaluation mechanisms, synthetic fitting, tests, notebo
 
 </details>
 
+## FBS V057: historical contenders restored; actual V056 partial execution
+
+The exact earlier probability model with saved 0.465519 log loss is recovered. That value covers 301 2026 games through October 16, not the full current season. Its matched market reference scored 0.474843. The same model's exposed 2024 fixed-origin log loss was 0.559122 (740 games), versus 0.554096 for the matched market; its 2025 annual-origin score was 0.541718 (748 games), versus 0.538547. The older convex ensemble's authenticated saved log losses are 0.525230 on 918 games in 2024 and 0.493465 on 934 games in 2025. Different cohorts and one-hour versus two-hour horizons prevent an unqualified head-to-head ranking.
+
+The latest authenticated V056 owner added 31 base fits and five statistical states, producing 44,408 scalar research outputs. Cumulative frozen-case completion is 67/5,858; 5,791 cases remain. Both completed-season proofs now verify. There are zero qualified rolling champions, zero failed fit attempts, and zero committed legacy recovery chunks. Worker/supervisor exits were 2/2; the root genuine-forecast count remains unknown. Original issues and all dated unfavorable studies are preserved.
+
+V057 prepares exact historical-recipe recovery, reusable per-candidate metrics before global closure, and bounded recovery that can advance after interruption. Its 64-unit chunks retain the eight-chunk ceiling, for an effective maximum of 512 units per recovery slice. Complete-population cache reuse requires independent canonical receipt, source and selector verification. No V057 AWS execution, new model improvement or automatic promotion is claimed. The requirement for hundreds of certified new feature concepts remains unmet.
+
+Evidence: [latest saved owner counts](docs/fbs/actual-owner-v056.json), [historical scorecards and qualifications](docs/fbs/historical-contenders-v057.json), and [FBS evidence dashboard](docs/fbs/current.html). Publication is not a data refresh or model run. NFL, NBA and NCAA basketball retain their independent owners and evidence.
 
