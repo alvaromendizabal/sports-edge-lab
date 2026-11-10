@@ -24,8 +24,35 @@
     "evidence_class": "INVENTED_ENGINEERING_DEMONSTRATION"
   },
   "private_implementation_verification": {
-    "status": "PENDING_FINAL_VERIFICATION",
-    "new_owner_science_credited": false
+    "status": "VERIFIED_PREPARED_OWNER_EXECUTION_PENDING",
+    "targeted_core_tests": {
+      "passed": 37,
+      "failures": 0,
+      "errors": 0,
+      "skips": 0,
+      "elapsed_seconds": 13.152,
+      "input_class": "FICTIONAL_SOFTWARE_FIXTURES"
+    },
+    "canonical_package_gates": {
+      "status": "PASS",
+      "total_tests": 3427,
+      "passed": 3425,
+      "skipped": 2,
+      "failures": 0,
+      "errors": 0,
+      "distinct_v055_tests": 48,
+      "elapsed_seconds": 124.1685,
+      "wrong_source_rejected_before_tests_or_launch": true,
+      "scope": "PACKAGED_SOFTWARE_CHECKS_NO_OWNER_RESEARCH"
+    },
+    "new_owner_science_credited": false,
+    "behavior": [
+      "All declared pages participate in one complete comparison.",
+      "Candidate working sets and verified source-manifest chunks remain bounded.",
+      "Matched cohorts, the declared comparison population and source/time/calibration gates are retained.",
+      "Complete ablation, synergy and blend accounting is required before champion admission.",
+      "Durable comparison checkpoints resume without repeating completed fits; deleting a disposable cache does not erase canonical progress."
+    ]
   },
   "publication_work": {
     "new_real_model_fits": 0,

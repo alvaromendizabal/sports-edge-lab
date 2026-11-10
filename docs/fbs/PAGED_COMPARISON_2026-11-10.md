@@ -29,4 +29,10 @@ The current public report retains **500 saved issue contexts across 122 unique g
 
 V053's saved mixture comparison remains negative or neutral under its original exposed 2025 evaluation. The global mixture is equivalent to its foundation within the stated tolerance; the conditional mixture is worse on the principal reported losses. The new engineering continuation does not alter those findings or establish a prospective champion.
 
-The V055 private implementation and its acceptance results will be recorded separately when verified. A prepared executable, synthetic checks, a merged public PR and a deployed static page are distinct from an actual owner research run. Exact active recipes, private feature transforms, model states, source arrays and cloud handoffs remain outside this repository.
+## Separate implementation verification
+
+The private V055 core passes **37 targeted software tests**, with zero failures, errors or skips, in **13.152 seconds**. These use fictional fixtures; they do not add real sports research results. The fixtures retain an earlier-page winner across repeated bounded visits and recover canonical progress after a disposable cache is removed.
+
+The implementation combines all declared pages into a complete global comparison while bounding candidate working sets and verified source-manifest chunks. It retains true common historical cohorts, the full declared comparison population, and source, time and calibration gates. Complete ablation, synergy and blend accounting is required before champion admission. Negative feature combinations retain their context for later research.
+
+The exact canonical package completed **3,427 software tests: 3,425 passed, two documented optional fixture checks skipped, and zero failures or errors**. The suite includes **48 distinct V055 tests** and took **124.1685 seconds**. The wrong-source integrity test rejected execution before tests or launch. No owner research ran in these checks. A prepared executable, fictional checks, a merged public PR and a deployed static page are distinct from an actual owner research run. Exact active recipes, private feature transforms, model states, source arrays and cloud handoffs remain outside this repository.
