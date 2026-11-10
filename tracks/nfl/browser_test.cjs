@@ -617,6 +617,7 @@ const {chromium}=require(process.env.PLAYWRIGHT_MODULE_DIR||'playwright');
   await require('./browser_current_n053.cjs')(browser);
   await require('./browser_season_n053r1.cjs')(browser);
   await require('./browser_season_n054.cjs')(browser);
+  await require('./browser_n063.cjs')(browser);
  } finally {
   await browser.close();
  }
