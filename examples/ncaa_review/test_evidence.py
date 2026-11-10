@@ -21,6 +21,41 @@ class EvidenceTests(unittest.TestCase):
         cls.exports = {league: build_dashboard.evidence(league)
                        for league in ('ncaam', 'ncaaw')}
 
+    def test_b057_actual_and_b058_preparation_are_separate_on_all_pages(self):
+        value=build_dashboard.latest_review_evidence()
+        actual=value['latest_actual_owner'];prepared=value['prepared_engineering']
+        self.assertEqual(actual['new_committed_fits']['target_estimator'],7)
+        self.assertEqual(actual['frozen_research']['prediction_rows'],16787)
+        self.assertEqual(actual['frozen_research']['completed_contexts'],3)
+        self.assertEqual(actual['fresh_source_game_rows'],0)
+        self.assertEqual(actual['frozen_research']['new_current_forecasts'],0)
+        self.assertEqual(actual['owner_fixture_validation']['passed'],3030)
+        self.assertEqual(actual['owner_notebook_validation']['executed_jupyter_cells'],2)
+        self.assertEqual(prepared['inherited_scalar_candidates'],202)
+        self.assertEqual(prepared['new_feature_count'],0)
+        self.assertTrue(prepared['local_validation']['runs_overlap_and_must_not_be_added'])
+        for output in build_dashboard.outputs().values():
+            self.assertIn('Latest actual owner result · B057',output)
+            self.assertIn('7 new target fits',output)
+            self.assertIn('3 completed frozen contexts with 16,787 prediction rows',output)
+            self.assertIn('0 new fresh source game rows; 0 new current forecasts; 0 promotions',output)
+            self.assertIn('Prepared B058 engineering',output)
+            self.assertIn('202 inherited candidates; 0 newly engineered features',output)
+            self.assertNotIn('__B058_LATEST_REVIEW__',output)
+            self.assertLess(output.index('Latest actual owner result · B057'),output.index('Latest owner result · B055'))
+
+    def test_prepared_result_cannot_be_relabelled_as_new_owner_science(self):
+        value=build_dashboard.latest_review_evidence()
+        value['prepared_engineering']['new_owner_fits_credited']=1
+        with patch.object(build_dashboard.json,'loads',return_value=value):
+            with self.assertRaisesRegex(ValueError,'cannot acquire owner science credit'):
+                build_dashboard.latest_review_evidence()
+        value=build_dashboard.latest_review_evidence()
+        value['latest_actual_owner']['stages']['completed']=10
+        with patch.object(build_dashboard.json,'loads',return_value=value):
+            with self.assertRaisesRegex(ValueError,'stage closure'):
+                build_dashboard.latest_review_evidence()
+
     def test_v4_review_tracks_metrics_and_exact_bounded_parts(self):
         result = subprocess.run(['node', str(build_dashboard.HERE / 'test_v4_review.cjs')],
                                 check=True, capture_output=True, text=True, timeout=30)

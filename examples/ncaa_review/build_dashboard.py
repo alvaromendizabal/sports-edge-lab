@@ -17,6 +17,63 @@ ROOT=Path(__file__).resolve().parents[2]
 HERE=Path(__file__).resolve().parent
 HOST='https://alvaro-ncaa-research-review.alv-mendizabal.chatgpt.site'
 
+
+def latest_review_evidence():
+    """Read the dated aggregate update without rewriting older model exports."""
+    value=json.loads((HERE/'evidence/B057_ACTUAL_B058_PREPARED.json').read_text())
+    actual=value['latest_actual_owner'];prepared=value['prepared_engineering'];stages=actual['stages']
+    if (value['public_scope']!='SANITIZED_AGGREGATES_ONLY' or actual['release']!='B057'
+            or prepared['release']!='B058' or sum(stages[k] for k in ('completed','failed','unentered'))!=stages['total']):
+        raise ValueError('latest NCAA aggregate identity or stage closure')
+    checks=actual['owner_fixture_validation']
+    if sum(checks[k] for k in ('passed','skipped','failed','errors'))!=checks['planned']:
+        raise ValueError('latest NCAA fixture population closure')
+    coverage=value['latest_source_coverage'];dates=coverage['date_query_dispositions']
+    if (sum(dates[k] for k in ('valid','empty','halted','ambiguous'))!=dates['total']
+            or coverage['new_canonical_source_game_rows']!=actual['fresh_source_game_rows']):
+        raise ValueError('latest NCAA source population closure')
+    if (prepared['new_owner_fits_credited']!=0 or prepared['new_owner_forecasts_credited']!=0
+            or prepared['new_model_improvement_claim'] or prepared['current_season_outcomes_select_champions']):
+        raise ValueError('prepared NCAA work cannot acquire owner science credit')
+    return value
+
+
+def latest_review_html():
+    value=latest_review_evidence();a=value['latest_actual_owner'];p=value['prepared_engineering']
+    coverage=value['latest_source_coverage'];dates=coverage['date_query_dispositions']
+    s=a['stages'];f=a['frozen_research'];checks=a['owner_fixture_validation']
+    link='https://github.com/alvaromendizabal/sports-edge-lab/blob/main/examples/ncaa_review/evidence/B057_ACTUAL_B058_PREPARED.md'
+    return (
+        '<strong>Latest actual owner result · B057 · November 10, 2026 UTC.</strong>'
+        f'<p><b>{s["completed"]}/{s["total"]} stages completed, {s["failed"]} failed and {s["unentered"]} unentered.</b> '
+        f'The partial run preserved <b>{a["new_committed_fits"]["target_estimator"]} new target fits</b> and '
+        f'<b>{f["completed_contexts"]} completed frozen contexts with {f["prediction_rows"]:,} prediction rows</b>. '
+        f'The full frozen registry contains {f["registered_contexts"]:,} contexts. These are population/recipe/season contexts and prediction records, not unique physical games or current issues. '
+        'The preserved manifests contain no completed metric-comparison or candidate-eligibility rows; they do not establish a new performance score.</p>'
+        f'<p><b>{a["fresh_source_game_rows"]} new fresh source game rows; {f["new_current_forecasts"]} new current forecasts; '
+        f'{f["promotions"]} promotions.</b> Restoration and provider request counts remain separate. '
+        f'Recorded owner time: <b>{a["elapsed_seconds"]:,.3f} seconds</b>. Attributable cost and a defensible whole-successor ETA remain unknown.</p>'
+        f'<p>Frozen research stopped at <code>{escape(a["failure"]["category"])}</code>. '
+        'Committed work remains recoverable. The full comparison, metric-specific champion selection and selected rolling work remain incomplete; a validation failure does not establish a feature loss or a platform root cause.</p>'
+        f'<p>The actual owner checks recorded <b>{checks["passed"]:,} passed, {checks["skipped"]} skipped, '
+        f'{checks["failed"]} failed and {checks["errors"]} errors</b>. '
+        f'<b>{a["owner_notebook_validation"]["executed_jupyter_cells"]} Jupyter cells</b> executed in the owner environment. '
+        'Those engineering checks are distinct from predictive performance.</p>'
+        f'<p>The latest schedule display records <b>{coverage["provider_native_fullseason_display_identifiers"]:,} provider-native identifiers</b>. '
+        f'Its {dates["total"]:,} date-query dispositions comprise {dates["valid"]} valid, {dates["empty"]} empty, {dates["halted"]} halted and {dates["ambiguous"]} ambiguous results. '
+        'Display IDs do not certify unique games, complete seasons or qualified model inputs. '
+        f'The {coverage["retained_prior_canonical_source_identities"]:,} prior canonical identities retain their older clocks. '
+        f'Latest injury inventory: {coverage["injury_observations"]:,} observations, {coverage["bound_injury_observations"]} bound. '
+        f'Ranking support: {coverage["qualified_ranking_editions"]} qualified editions. Missing data never becomes an observed zero.</p>'
+        '<h3>Prepared B058 engineering</h3><p>Early native-model serialization checks, verified prior-fit recovery, bounded scalar comparisons and partial-result reports are implemented preparation. '
+        f'<b>{p["inherited_scalar_candidates"]} inherited candidates; {p["new_feature_count"]} newly engineered features.</b> '
+        'Standalone, additive and removal studies retain negative findings and unavailable features. Fixed blend and cross-family error diagnostics reuse predictions; they do not create extra fits or automatic champions.</p>'
+        '<p><b>2024–25 and 2025–26 supply frozen historical evaluation; 2026–27 remains prospective monitoring.</b> '
+        'Only qualified metric champions and precommitted selected ensemble components advance to expensive rolling fits. Current-season outcomes do not select champions. Original issues and reconstructions remain separate.</p>'
+        '<p>B058 local synthetic tests are separate from an actual successor owner result. No new owner forecast or model improvement is claimed. '
+        f'<a href="{link}">Read the actual-versus-prepared aggregate evidence</a>, including the preserved earlier unfavorable comparison and open coverage gaps.</p>'
+        '<p><b>Earlier dated evidence follows.</b> Its original clocks, populations and status labels are retained; the latest actual owner result is B057 above.</p>')
+
 B056_CHAMPION_POLICY=(
     '<strong>Prepared B056 policy · completed-season research, then metric champions · November 10, 2026 UTC.</strong>'
     '<p>The registered research comparison retains <b>10 model families and 26 target heads</b> on the completed <b>2024–25 and 2025–26 seasons</b>, with frozen evaluation rules and separate men’s and women’s populations. Seven metric roles select eligible champions: <b>winner accuracy, winner log loss, winner Brier, margin MAE, margin RMSE, total MAE and total RMSE</b>. Current <b>2026–27 outcomes cannot select or promote a model</b>.</p>'
@@ -224,6 +281,7 @@ def render_track(data):
         '__SIBLING_LABEL__':"women's basketball" if sibling=='ncaaw' else "men's basketball",
         '__LEAGUE__':league,'__EVIDENCE__':embedded,
         '__REVIEW_DATE__':review_date(data),
+        '__B058_LATEST_REVIEW__':latest_review_html(),
         '__B056_CHAMPION_POLICY__':B056_CHAMPION_POLICY,
         '__B055_OWNER_STATUS__':B055_OWNER_STATUS,
         '__B054_OWNER_STATUS__':B054_OWNER_STATUS,
@@ -257,7 +315,7 @@ def landing_status(data):
     baseline = data[0]['b045_baseline_observation']; journal = data[0]['b045_forecast_journal_observation']
     if any(d['b045_forecast_journal_observation'] != journal for d in data):raise ValueError('landing journal population disagreement')
     b=data[0]['b046_baseline_observation']; repair=data[0]['b047_source_identity_repair']
-    return (B056_CHAMPION_POLICY + B055_OWNER_STATUS + '<details><summary>Dated B054 startup result</summary>' + B054_OWNER_STATUS + '</details>' + B053_OWNER_STATUS + '<details><summary>Earlier dated owner returns</summary>' + B052_OWNER_STATUS + B051_OWNER_STATUS + B050_OWNER_STATUS + LATEST_OWNER_STARTUP + B048_OWNER_STATUS + B047R1_PHYSICAL_STATUS + '</details>'
+    return (latest_review_html() + '<details><summary>Dated B056 preparation and B055 owner result</summary>' + B056_CHAMPION_POLICY + B055_OWNER_STATUS + '</details><details><summary>Dated B054 startup result</summary>' + B054_OWNER_STATUS + '</details>' + B053_OWNER_STATUS + '<details><summary>Earlier dated owner returns</summary>' + B052_OWNER_STATUS + B051_OWNER_STATUS + B050_OWNER_STATUS + LATEST_OWNER_STARTUP + B048_OWNER_STATUS + B047R1_PHYSICAL_STATUS + '</details>'
             + f'<p><strong>Dated {release}: {a["completed_scientific_stages"]}/{a["planned_scientific_stages"]} stages completed; partial work and final return preserved.</strong></p>'
             f'<p>The authenticated physical ledger reconciles {a["new_real_target_fits"]:,} target, {a["new_calibration_fits"]:,} scalar and {a["new_empirical_residual_fits"]:,} empirical fits across {a["committed_contract_objects"]:,} contract objects. Injury research deferred at its bounded shared-memory admission gate. Full model import and new scientific superiority are not established by that accounting.</p>'
             f'<p>The B046 pre-study view contains {b["target_rows"]:,} target rows, {b["game_model_rows"]:,} game-model rows and {b["browser_display_rows"]:,} display rows, including three unresolved source candidates. Independent arithmetic reconciles {b["independent_metric_panels_checked"]:,} model/provider panels through {b["independent_scalar_checks"]:,} checks with zero mismatches. These source/version populations do not certify every official physical game.</p>'
@@ -285,6 +343,7 @@ def outputs():
     return {**{ROOT/'tracks'/d['league']/'index.html':render_track(d) for d in data},
             ROOT/'docs/ncaa/index.html':render_landing(data),
             ROOT/'docs/ncaa/private-report/index.html':(HERE/'private_report.html.tmpl').read_text()
+                .replace('__B058_LATEST_REVIEW__',latest_review_html())
                 .replace('__B056_CHAMPION_POLICY__',B056_CHAMPION_POLICY)
                 .replace('__B055_OWNER_STATUS__',B055_OWNER_STATUS)
                 .replace('__B054_OWNER_STATUS__',B054_OWNER_STATUS)

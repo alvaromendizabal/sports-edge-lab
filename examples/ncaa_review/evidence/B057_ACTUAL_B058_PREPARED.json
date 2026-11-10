@@ -1,0 +1,188 @@
+{
+  "schema": "sel.ncaa.public.actual_and_prepared.v1",
+  "as_of_utc": "2026-11-10T06:53:12.983552+00:00",
+  "public_scope": "SANITIZED_AGGREGATES_ONLY",
+  "latest_actual_owner": {
+    "release": "B057",
+    "evidence_kind": "AUTHENTICATED_ACTUAL_OWNER_RETURN",
+    "status": "FAILED_PARTIAL_WORK_PRESERVED",
+    "owner_return_sha256": "2dc258084ab2382bc52f400bc1fedc060ea44f2c93afdc348dac63e2c6b53c20",
+    "started_at": "2026-11-10T05:59:26.128324+00:00",
+    "completed_at": "2026-11-10T06:53:12.983552+00:00",
+    "stages": {
+      "total": 17,
+      "completed": 9,
+      "failed": 1,
+      "unentered": 7
+    },
+    "elapsed_seconds": 3227.0636104949954,
+    "new_committed_fits": {
+      "target_estimator": 7,
+      "scalar_calibration": 0,
+      "empirical_residual": 0
+    },
+    "reused_historical_target_fits": 108,
+    "frozen_research": {
+      "completed_contexts": 3,
+      "prediction_rows": 16787,
+      "prediction_rows_are_unique_physical_games": false,
+      "complete_registry_comparison": false,
+      "completed_champion_selection": false,
+      "selected_champion_rolling_completed": false,
+      "new_current_forecasts": 0,
+      "new_immutable_issues": 0,
+      "promotions": 0,
+      "registered_contexts": 6216,
+      "metric_comparison_rows": 0,
+      "candidate_eligibility_rows": 0,
+      "prediction_manifest_parts": 5,
+      "prediction_evidence_mode": "FROZEN_HISTORICAL_RECONSTRUCTION",
+      "remote_prediction_body_closure": "REQUIRED_AT_ACTUAL_USE_MANIFEST_COUNTS_ARE_NOT_RESCORING"
+    },
+    "fresh_source_game_rows": 0,
+    "fresh_source_game_rows_scope": "New canonical source-game rows; provider-native schedule display IDs, restored populations and requests use separate denominators.",
+    "failure": {
+      "category": "FITTED_ESTIMATOR_FEATURE_WIDTH_MISMATCH",
+      "affected_stage": "FROZEN_COMPLETED_SEASON_RESEARCH",
+      "committed_models_discarded": false,
+      "predictive_model_loss_implied": false,
+      "connection_or_platform_root_cause_established": false
+    },
+    "owner_fixture_validation": {
+      "planned": 3031,
+      "passed": 3030,
+      "skipped": 1,
+      "failed": 0,
+      "errors": 0,
+      "scope": "OWNER_FIXTURE_VALIDATION_NOT_MODEL_PERFORMANCE"
+    },
+    "owner_notebook_validation": {
+      "executed_jupyter_cells": 2,
+      "scope": "ACTUAL_OWNER_NOTEBOOK_EXECUTION_NOT_NEW_SPORTS_RESEARCH"
+    },
+    "cost": {
+      "attributable_amount_usd": null,
+      "status": "INSTANCE_RATE_AND_ATTRIBUTABLE_BILLING_UNVERIFIED"
+    },
+    "successor_complete_run_eta_seconds": null,
+    "subsequent_exact_proof_readback": {
+      "verified_fit_proof_records": 7,
+      "verified_context_disposition_records": 3,
+      "complete_physical_and_logical_bytes_verified": true,
+      "new_fit_credit": 0,
+      "prediction_body_parts_rescored": 0
+    }
+  },
+  "preserved_prior_evidence": {
+    "B056": {
+      "aggregate_export": "B056_ACTUAL_B057_PREPARED.json",
+      "unchanged": true,
+      "retrospective_provider_comparison_retained": true,
+      "source_coverage_not_relabelled_as_B057_fresh_capture": true
+    },
+    "older_dated_owner_returns_retained": true,
+    "original_forecast_mutations": 0,
+    "current_season_outcomes_select_champions": false
+  },
+  "prepared_engineering": {
+    "release": "B058",
+    "status": "PREPARED_ENGINEERING_NOT_OWNER_EXECUTED",
+    "new_owner_fits_credited": 0,
+    "new_owner_forecasts_credited": 0,
+    "new_model_improvement_claim": false,
+    "frozen_selection_seasons": [
+      "2024–25",
+      "2025–26"
+    ],
+    "prospective_monitoring_season": "2026–27",
+    "current_season_outcomes_select_champions": false,
+    "rolling_fit_admission": "QUALIFIED_METRIC_CHAMPIONS_AND_PRECOMMITTED_CHAMPION_ENSEMBLE_COMPONENTS_ONLY",
+    "inherited_scalar_candidates": 202,
+    "new_feature_count": 0,
+    "candidate_contexts_are_completed_results": false,
+    "scope": [
+      "Early synthetic fit, serialization and prediction checks for installed model families; unavailable or deferred families remain explicit gaps.",
+      "Preserve exact earlier models and verify fit inputs, source evidence, runtime, membership and artifact bytes before reuse.",
+      "Bounded, outcome-independent scalar standalone/additive/removal research across complementary model families; all inherited candidates retain explicit dispositions.",
+      "Partial completed-context metrics and matched descriptive ablations survive interruption; fixed blend diagnostics reuse existing predictions.",
+      "Preserve original champion research universe, earlier group studies, historical negative findings and original frozen results.",
+      "Separate admission limits, actual fit counts, reused work, elapsed time and unknown whole-study ETA."
+    ],
+    "local_validation": {
+      "final_package_owner_execution": false,
+      "runs": [
+        {
+          "scope": "FROZEN_FRONTIER_MEMORY_AND_INTERACTION_REGRESSION",
+          "passed": 54,
+          "failed": 0,
+          "errors": 0,
+          "wall_seconds": 13.967
+        },
+        {
+          "scope": "FINAL_FOCUSED_FRONTIER_AND_NATIVE_FAMILY_GATE",
+          "passed": 16,
+          "failed": 0,
+          "errors": 0,
+          "wall_seconds": 3.115
+        }
+      ],
+      "runs_overlap_and_must_not_be_added": true,
+      "whole_successor_test_total": "REQUIRES_SEPARATE_FINAL_PACKAGE_RECEIPT"
+    },
+    "open_work": [
+      "Owner execution of the successor and measured scalar/model improvements.",
+      "Completion of the original frozen comparison, metric-specific champion qualification and selected rolling forecasts.",
+      "Fresh completed games, upcoming schedules, availability and provider observations with real capture clocks.",
+      "Complete historical configuration recovery and exact eligible recipe translations; preservation alone is insufficient.",
+      "Qualified ranking inputs, complete provider common cohorts, line-conditioned spread probabilities, CRPS and prediction intervals."
+    ]
+  },
+  "scientific_qualifications": {
+    "historical_research_is_development_exposed": true,
+    "independent_confirmation_claim": false,
+    "negative_feature_results_permanently_discarded": false,
+    "current_season_reconstruction_creates_prior_issue_time": false,
+    "public_source_update_is_owner_execution": false,
+    "repository_update_is_hosted_deployment": false
+  },
+  "method_sources": [
+    {
+      "title": "Cawley and Talbot (2010), selection overfit and evaluation bias",
+      "url": "https://jmlr.org/papers/v11/cawley10a.html"
+    },
+    {
+      "title": "scikit-learn: consistent preprocessing and data leakage",
+      "url": "https://scikit-learn.org/stable/common_pitfalls.html"
+    }
+  ],
+  "latest_source_coverage": {
+    "snapshot_release": "B057",
+    "provider_native_fullseason_display_identifiers": 11821,
+    "unique_physical_game_claim": false,
+    "complete_season_claim": false,
+    "date_query_dispositions": {
+      "total": 1460,
+      "valid": 234,
+      "empty": 480,
+      "halted": 730,
+      "ambiguous": 16
+    },
+    "halt_category": "SHARED_HTTP_None",
+    "halt_implies_known_http_status": false,
+    "new_canonical_source_game_rows": 0,
+    "new_current_feature_rows": 0,
+    "retained_prior_canonical_source_identities": 2498,
+    "prior_snapshot_clocks_retained": true,
+    "injury_observations": 1320,
+    "bound_injury_observations": 0,
+    "injury_tasks_completed": 261,
+    "injury_tasks_total": 261,
+    "qualified_ranking_editions": 0,
+    "limitations": [
+      "Provider-native display IDs are not unique physical games or model-admitted canonical source rows.",
+      "The prior B056 and B052 display populations keep their dates; their different counts do not imply games disappeared.",
+      "An empty source response, a halted request and an ambiguous response are separate states.",
+      "No unavailable injury, ranking, source or market value is imputed as an observed zero."
+    ]
+  }
+}
