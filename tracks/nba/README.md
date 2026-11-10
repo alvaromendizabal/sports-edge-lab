@@ -5,6 +5,45 @@ Reproducible NBA forecasts, complete released-game inventories, chronological mo
 This NBA track belongs to the shared [Sports Edge Lab](../../README.md) repository. Its public material contains sanitized aggregate evidence and invented engineering examples. Actual game-level forecasts, feature recipes, model weights, source responses, full journals, and execution packages remain private.
 
 
+## November 10 — actual B065 capacity failure and prepared B066 continuation
+
+**B065 verified and reused 245 prior frozen fits, but produced no new estimator fits or current forecasts.** The authenticated owner run ended with `RETURN_EVIDENCE_SIZE_OR_WRITE_BLOCKED`. Its source refresh succeeded, while evidence-capacity admission blocked further research and the eleven qualified champion jobs. The final complete-return package also exceeded its size bound. The returned diagnostic preserves summary evidence and an output index; it is not complete portable scientific closure.
+
+| Actual B065 owner evidence | Recorded result |
+|---|---:|
+| Prior frozen estimator fits verified and reused | 245 |
+| New frozen fits / champion fits / current forecasts | 0 / 0 / 0 |
+| Deferred research tasks / reported failed tasks | 2,083 / 0 |
+| New source requests | 33 |
+| Eligible refreshed rows at T60 / T120 | 1,005 / 1,005 |
+| Cumulative team boxes / player boxes / lineup records | 88 / 1,162 / 88 |
+| Cumulative provider observations | 4,462 |
+| Parsed injury rows / exact settlement contracts | 0 / 0 |
+| Recorded pipeline elapsed time | 251.144 seconds |
+
+Both refresh passes preserved their valid feature contexts. The initial pass took 30.527 seconds with 31 source requests and 39 verified cache reuses; the late pass took 16.011 seconds with two requests and 21 cache reuses. This differs from the earlier B064 empty-context handoff. B065's measured scientific baseline left only 245,982 bytes of headroom. A refreshed source inventory does not imply successful issuance or complete injury, lineup, or market coverage.
+
+### Prepared B066 evidence transport and bounded continuation
+
+B066 measures distinct verified evidence objects and their incremental compressed contribution before admitting new work. The complete selected scientific inventory is reconciled again at stage boundaries and final sealing. Lossless reconstruction must reproduce the exact original bytes and hashes; incompatible compression reconstruction retains an explicit raw representation. A size failure preserves checkpoints and the complete inventory instead of selecting a smaller result subset. Declared owner-local model-body omissions and required prior-artifact dependencies remain explicit. This is implemented capacity control, not an observed B066 owner success or a measured cloud speedup.
+
+The continuation preserves the completed historical policy, original task identities, calibrated results, prior ensembles, and negative experiments. A separate registered complementarity study can compare saved prediction combinations and conditional blends without fitting new estimators. Its source bindings, matched event sets, prior-only calibration boundaries, paired differences, repeated-selection controls, and adverse results remain inspectable in private evidence. These are prepared research capabilities; no new B066 real-data improvement is claimed here.
+
+Expensive forward fitting remains restricted to qualified metric-specific champions and precommitted ensemble components. Upcoming prediction targets advance in bounded batches, with fitted-state reuse and an explicit remaining-game queue. An early outlook, a nominal-horizon issue, a historical reconstruction, and a saved original forecast keep separate evidence classes. Current-season outcomes can update later eligible forecasts but cannot rewrite earlier issues or establish independent historical champion confirmation.
+
+### Causal refresh, preservation, and remaining gaps
+
+Both authenticated prior refresh histories seed the incremental cache. Reuse checks follow the original regular-season model-input scope while retaining all preseason, unresolved-team, and secondary display entries. Real result revisions, missing dependent boxes, changed inputs, and aged snapshots still require rebuilding. Unknown teams remain explicit deferred collection entries rather than causing URL construction to discard otherwise valid feature contexts.
+
+Bounded injury decoding retains actual publication headers and failed parsing evidence. Missing reports do not imply health. Availability, prior lineups, player minutes, previous-game states, and market observations are prepared as separately dated research inputs; they do not silently change an already selected feature recipe. Exact market probabilities remain unavailable without verified game identity, line orientation, quote time, settlement evidence, and an appropriate predictive distribution. Prospective collection does not create missing historical in-game observations.
+
+All 1,277 display entries and 57,600 original saved views across both tracks remain preserved. The latest diagnostic does not contain the full owner-local raw and feature bodies, so physical pin verification is still required before reuse. Historical evaluation remains confined to the completed 2024–25 and 2025–26 seasons with selection exposure identified; 2026–27 remains a forward-monitoring season.
+
+**B066 is tested preparation, not an executed NBA owner continuation or complete standing-program acceptance.** Its exact packaged suite passed 89 checks with zero failures, errors, or skips. One observed normal non-AWS invocation produced a verified review-only return, with zero NBA fits, source requests, or owner runs. Actual owner execution, complete historical-family coverage, newly measured scientific gains, current forecast issuance, and missing provider coverage remain pending. Original B029 and B051 owner acceptance gates remain unresolved. Runtime bounds are not completion ETAs; unknown billing evidence is not a zero-dollar cost claim.
+
+Only this NBA documentation update is published here. No private recipes, source bodies, cloud paths, per-game forecasts, model weights, owner packages, or standing prompts are disclosed. The earlier dated NBA evidence below is preserved byte-for-byte, and the other sport tracks remain unchanged.
+
+
 ## November 10 UTC / November 9 Pacific — B065 continuation from the actual B064 failure
 
 **B064 completed 245 new frozen model fits, but its final scientific return exceeded the size limit.** The authenticated final archive is a diagnostic, with status `RETURN_EVIDENCE_SIZE_OR_WRITE_BLOCKED`. Its eight members, seven payload hashes, CRCs and exact closure passed; its embedded executable matches the issued release. A successful bounded research stage and a failed final evidence export remain separate facts. The actual outer shell exit was not supplied.
