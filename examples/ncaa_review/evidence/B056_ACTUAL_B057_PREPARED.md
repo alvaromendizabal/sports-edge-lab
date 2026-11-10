@@ -59,7 +59,7 @@ Lower values are better for both metrics. Both sides are **retrospective reconst
 
 ## Prepared B057 engineering scope
 
-B057 is undergoing implementation and local validation. It has **no new owner-executed results** in this update, and the exact final-package test counts remain pending. Its prepared work addresses the observed failure and expands efficient frozen research:
+B057 is a locally validated prepared continuation with **no new owner-executed results**. Across the final-package broad run and a targeted resolution of one external review-wrapper error, **3,029 unique cases passed and one cgroup-related case skipped**. The package registers 3,031 owner checks; one separate native-kernel case was excluded locally after the environment denied its socket. Saved report cells executed in process with durable outputs, while separate-kernel execution remains unverified. The failed local harness receipt is preserved and rerun cases are not double-counted. Its prepared work addresses the observed failure and expands efficient frozen research:
 
 - Validate named training and inference schemas before expensive execution, with explicit dispositions for source-dependent features that are not available.
 - Recover exact prior checkpoints and source receipts while preserving their original clocks and identities.

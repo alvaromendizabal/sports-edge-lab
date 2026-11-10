@@ -24,7 +24,7 @@ B057 addresses early named-schema validation and exact checkpoint recovery, adds
 
 Efficient frozen research selects metric-specific champions on **2024–25 and 2025–26**. **Only qualified champions and precommitted champion-ensemble components advance to costly rolling fitting.** Current **2026–27 outcomes do not select or promote champions**. Original frozen forecasts, historical reconstructions and genuinely issued rolling forecasts remain separate.
 
-This is prepared engineering under local validation, **not a completed B057 owner result**. Final packaged validation counts remain pending; no new owner fits, forecasts or predictive gains are credited to this documentation update. A source update and a hosted deployment remain separate deliverables.
+This is prepared engineering under local validation, **not a completed B057 owner result**. Final package review resolves 3,029 passing cases and one cgroup-related skip; a separate native-kernel case remains unverified locally. One external review-harness error was resolved by an unpatched targeted rerun, with the original receipt preserved. No new owner fits, forecasts or predictive gains are credited to this documentation update. A source update and a hosted deployment remain separate deliverables.
 
 Earlier sections below retain their original dates and claims. The latest actual result is the B056 evidence above.
 

@@ -163,11 +163,18 @@
     "negative_result_policy": "RETAIN_FOR_DIFFERENT_MODELS_COMPLEMENTARY_FEATURES_SEASONS_AND_GENERATIONS",
     "all_historical_configurations_translated_or_reevaluated": false,
     "final_packaged_validation": {
-      "status": "PENDING_EXACT_FINAL_PACKAGE",
-      "passed": null,
-      "failed": null,
-      "errors": null,
-      "skipped": null
+      "status": "SOURCE_CHECKS_PASSED_WITH_EXPLICIT_ENVIRONMENT_LIMITS",
+      "registered_owner_cases": 3031,
+      "locally_selected_cases": 3030,
+      "unique_passed_after_targeted_harness_resolution": 3029,
+      "skipped": 1,
+      "unresolved_failures": 0,
+      "unresolved_errors": 0,
+      "separate_native_kernel_case_excluded": 1,
+      "native_kernel_execution_verified": false,
+      "in_process_report_cells_verified": true,
+      "case_accounting": "One local review-wrapper error resolved by an unpatched targeted rerun; broad-run receipt preserved; repeated tests not added to unique count.",
+      "owner_execution_claim": false
     },
     "public_document_update_proves_owner_execution": false,
     "public_document_update_proves_hosted_deployment": false
