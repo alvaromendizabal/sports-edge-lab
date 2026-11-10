@@ -1,5 +1,8 @@
 # Sports Edge Lab · NBA
 
+Reproducible NBA forecasts, complete released-game inventories, chronological model comparisons, and source-qualified market and player-availability research.
+
+This NBA track belongs to the shared [Sports Edge Lab](../../README.md) repository. Its public material contains sanitized aggregate evidence and invented engineering examples. Actual game-level forecasts, feature recipes, model weights, source responses, full journals, and execution packages remain private.
 
 ## November 10 — authenticated B066 bounded owner pass and early shadow issues
 
@@ -23,11 +26,6 @@ The 688 issues cover 64 of the 1,200 assigned regular-season games and 688 of 11
 A bounded owner source refresh reported 7,864 provider-observation inventory rows, but **zero strictly admitted fair-contract comparisons**, zero parsed injury rows, and no justified line-based cover probabilities. Observations are not qualified two-sided prices. Its 486 derived columns were evaluated jointly in preserved frozen research, not individually proven improvements. The new saved-prediction complementarity program and remaining family comparisons were not evaluated in this invocation. The 2024–25 and 2025–26 selection results remain development-exposed; no new independent common-cohort performance interval or model superiority was established, and current-season outcomes did not select a new recipe.
 
 The lossless export remains **dependent on a separately pinned earlier support component** and explicitly omits owner-local model or matrix bodies. Archive readback is stronger than a receipt-only claim but does not establish that every omitted fitted-weight body was exported or that the full backlog completed. The previously deployed owner-private dashboard is a dated earlier publication, **not a deployment of these new B066 issues**. No new private Site deployment, public game-level forecast release, paid provider entitlement, continuous trainer or automatic champion promotion is claimed by this README update.
-
-Reproducible NBA forecasts, complete released-game inventories, chronological model comparisons, and source-qualified market and player-availability research.
-
-This NBA track belongs to the shared [Sports Edge Lab](../../README.md) repository. Its public material contains sanitized aggregate evidence and invented engineering examples. Actual game-level forecasts, feature recipes, model weights, source responses, full journals, and execution packages remain private.
-
 
 ## November 10 — actual B065 capacity failure and prepared B066 continuation
 
