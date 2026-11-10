@@ -4,6 +4,66 @@ Reproducible NBA forecasts, complete released-game inventories, chronological mo
 
 This NBA track belongs to the shared [Sports Edge Lab](../../README.md) repository. Its public material contains sanitized aggregate evidence and invented engineering examples. Actual game-level forecasts, feature recipes, model weights, source responses, full journals, and execution packages remain private.
 
+## November 10 — actual B067 research and recovered legacy contenders
+
+**The actual B067 owner run produced new science but hit its worker time limit. B068 restores original legacy model evidence and prepares a more productive bounded continuation.** The original failure status and every prior dated result remain preserved. This publication is a saved-evidence review, with no new real model fitting or current-season scoring in the publication environment.
+
+### Recovered historical probability evidence
+
+An original raw probability candidate recorded **0.576549 log loss and 70.2145% winner accuracy on 1,212 eligible 2025–26 regular-season games**. Its calibrated variant scored worse on exactly the same games: 0.589851 log loss. Original fit states, calibration states, predictions and study code have now been recovered and authenticated; raw and calibrated variants remain separate contenders.
+
+The same original study covered only **505 late-origin games in 2024–25**, with raw log loss 0.555957. That is not a full-season result. Its preserved 126-game 2026–27 settlement overlay gives raw log loss 0.552295, calibrated log loss 0.546983, and 86 correct winners. The saved matched Kalshi midpoint-reference comparison had 90 correct winners and 0.554655 log loss. Probability loss and winner accuracy therefore favor different sides of this comparison. The paired log-loss interval crossed zero, and only three weekly blocks were available.
+
+These earlier results are development-exposed retrospective evidence. The 121-game original settlement and later 126-game overlay remain separate. They are not newly issued prospective results, whole-current-season coverage or an automatic promotion decision. A matched comparison against the current historical champions must preserve the same games, horizon, source availability and evaluation policy. A missing earlier market-history cohort remains an explicit limitation.
+
+### What the actual B067 owner completed
+
+| Work or evidence | Observed result |
+| --- | ---: |
+| New frozen estimator fits / prior fits reused | 256 / 245 |
+| New research calibration / preprocessing fits | 174 / 216 |
+| Original frozen tasks complete / pending | 501 / 1,827 |
+| Blend experiments / evaluated season slices | 504 / 987 |
+| Blend experiments with both seasons complete | 483 |
+| New analytic weighting states / base fits for those blends | 282 / 0 |
+| New early outlooks / new champion estimator fits | 1,709 / 0 |
+| Cumulative original issues / settled issues scored | 2,397 / 0 |
+| New nominal / late issues | 0 / 0 |
+| Failed research tasks / automatic promotions | 0 / 0 |
+
+The 22 regular-season champion roles were unchanged; 22 additional postseason roles were recorded with a separate 169-game support. The blend study had favorable and adverse matched-parent results, but no tested slice had a positive multiplicity-adjusted interval against both parents. All features, failed combinations and deferred candidates remain registered. One earlier ablation result expanded from one season to two; its original narrower result is still retained.
+
+The worker spent about 152 seconds on the new frozen fits, 54 seconds on the blend study and 1,242 seconds issuing early outlooks. It reached its 30-minute limit during another complete evidence reconstruction. The scientific handoff was subsequently sealed and verified, but that does not change the interrupted worker status. The caller's outer shell exit was not supplied.
+
+### Separate historical champion metrics
+
+These two-hour-horizon regular-season scores cover 1,230 games in each completed season. Each row has its own selected metric-specific model; the rows do not describe one universal champion.
+
+| Selected metric | 2024–25 | 2025–26 |
+| --- | ---: | ---: |
+| Winner accuracy | 67.0732% | 69.5122% |
+| Winner log loss | 0.607894 | 0.596031 |
+| Winner Brier score | 0.209980 | 0.204330 |
+| Margin MAE | 10.983158 | 11.342669 |
+| Margin RMSE | 14.046827 | 14.492024 |
+| Total MAE | 14.779658 | 15.252807 |
+| Total RMSE | 18.509278 | 19.162914 |
+
+Both historical seasons have evaluation-selection exposure. These full-season results cannot be ranked directly against a different 1,212-game one-hour legacy cohort. Qualified historical champions remain prospective research candidates; independently supported production superiority has not been established.
+
+### Prepared B068 changes and limits
+
+- Recover and reuse the original legacy numerical states and source-bound predictions, with original-policy results and new-policy evaluations kept separate.
+- Advance pending blend pairs instead of repeatedly selecting the first already completed pair window. Preserve each reused interval's original inference scope; an expanded registry does not retroactively create global error control.
+- Raise the bounded frozen-fit ceiling and reserve most available scientific time for unfinished frozen research. Limit early-outlook issuance and reserve time for monitoring, matched comparisons and reporting.
+- Replace repeated worker archive construction with guarded complete-inventory measurement. Finalization still performs full physical integrity verification. A measured unchanged check over 12,487 returned files took about 4.5 seconds without repeated source hashing or payload decoding.
+- Add source-qualified winner-reference comparisons with complete-group deadline handling, explicit matched denominators, paired correct/wrong cases and raw-price versus fair-probability distinctions.
+- Preserve the research-only private dashboard, original forecasts, source gaps, all negative experiments and exact checkpoint recovery. The next manual owner execution remains required for new B068 scientific findings.
+
+The latest actual refresh recorded 27 provider requests, 73 cache uses, 46 injury rows and 11,266 provider observations; 5,898 observations had exact game binding. These are source-coverage counts, not demonstrated incremental predictive gains. All 2,397 original issues were still awaiting final outcomes at the recorded monitor clock. Missing historical in-game paths, strict line-probability support and nominal-horizon coverage remain visible.
+
+The NBA continuation preserves the independent NFL, FBS and NCAA basketball tracks. Private execution packages, exact recipes, feature transforms, native model bodies, complete forecasts and raw provider evidence remain outside this public repository.
+
 ## November 10 — prepared B067 continuation and deployed B066 owner evidence
 
 **B067 adds substantial source and execution engineering; its real NBA owner run remains pending.** The completed source changes preserve the authenticated B066 record below. No new NBA acquisition, historical evaluation, estimator fit, champion promotion or current-season score was produced in this preparation environment.
