@@ -1,5 +1,9 @@
 <p align="center"><img src="docs/assets/masthead.svg" alt="Sports Edge Lab — probabilistic forecasting, scientific evaluation, reliable ML systems" width="1100"></p>
 
+## FBS engineering continuation — November 10, 2026 UTC
+
+**V055 prepared; latest actual owner remains V053.** The continuation addresses complete comparisons across bounded pages, preserving early-page candidates and resuming beyond completed work. A credential-free example uses invented inputs and passes 12 focused tests; it establishes no new FBS result or AWS speed claim. The saved all-game report and its 500 issue contexts across 122 games remain unchanged. [Engineering note and limitations](docs/fbs/PAGED_COMPARISON_2026-11-10.md) · [Current FBS evidence](docs/fbs/current.html).
+
 ## FBS update — November 10, 2026 UTC
 
 **NCAA FBS — authenticated V053 partial results; V054 prepared.** The latest owner completed three base fits and six mixture fits, preserving 256 new issue records and 768 current scalar outputs. Legacy recovery continued for approximately 130 minutes before console-control exhaustion interrupted reporting; the partial return is authenticated, and the complete workload remains unfinished. The public game report distinguishes 500 saved issue records from 122 unique games, preserves original forecasts separately from later revisions, and retains negative findings from the 211-game mixture comparison. V054 prepares broad frozen 2024/2025 comparisons, metric-specific champions and rolling retraining only for selected champions; new owner execution is pending. [FBS evidence and limitations](docs/fbs/README.md) · [All-game analytical view](docs/fbs/current.html).
@@ -83,7 +87,7 @@ a narrow missing-clock checkpoint repair.
 | Track | Entry point | Publication boundary |
 |---|---|---|
 | NFL | [Current evidence](tracks/nfl/README.md) | Updated November 8; actual family research, preserved issue clocks and explicit coverage gaps |
-| NCAA FBS | [Browser dashboard](https://sports-edge-lab-fbs.alv-mendizabal.chatgpt.site) · [Track](tracks/ncaaf/README.md) | V026 recovery completed; all 888 observed season games; dated provider coverage |
+| NCAA FBS | [Browser dashboard](https://sports-edge-lab-fbs.alv-mendizabal.chatgpt.site) · [Track](tracks/ncaaf/README.md) | Actual V053 partial; V055 prepared; 500 saved issue contexts across 122 games, with dated provider coverage |
 | NBA | [Research view](docs/NBA_RESEARCH_CARD.md) | Separately dated basketball evidence |
 | NCAA basketball | [Open dashboards](https://alvaro-ncaa-research-review.alv-mendizabal.chatgpt.site/) · [Men's evidence](tracks/ncaam/README.md) · [Women's evidence](tracks/ncaaw/README.md) · [Runnable contracts](examples/ncaa_review/README.md) | Separate historical selections, current execution gaps and three-provider qualification |
 
@@ -224,4 +228,5 @@ Public material includes evaluation mechanisms, synthetic fitting, tests, notebo
 
 
 </details>
+
 

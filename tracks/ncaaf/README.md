@@ -1,3 +1,15 @@
+# NCAA FBS — V055 complete frozen-comparison continuation
+
+**V055 is prepared; no V055 owner execution, new research result or prospective advantage is claimed. V053 remains the latest authenticated actual owner.**
+
+This continuation addresses complete comparison coverage across bounded pages and preservation of candidates evaluated on earlier pages. Saved compatible work can be reused without granting new fit credit, and resumed comparisons must move beyond already completed candidates. Metric-specific champions still require the declared completed-season evidence before expensive rolling retraining.
+
+See [the dated engineering note](../../docs/fbs/PAGED_COMPARISON_2026-11-10.md), [the invented public example](../../examples/fbs_contracts/paged_comparison.py), and [the unchanged analytical game evidence](../../docs/fbs/current.html). The example's 12 focused tests use no real football data, provider access or fitted model.
+
+The full preceding V054 account is preserved below. Its 500 issue contexts, 122 unique games, 2,742 fixtures and negative mixture findings retain their original evidence dates and classifications.
+
+---
+
 # NCAA FBS — V054 frozen-first continuation
 
 **Latest actual owner: V053, partial. Next executable: V054, prepared; owner execution pending.**
@@ -171,6 +183,7 @@ Apply the [shared research protocol](../../docs/RESEARCH_PROTOCOL.md). Establish
 **Current phase:** source acquisition and audit. No trained-model performance claim.
 
 </details>
+
 
 
 
