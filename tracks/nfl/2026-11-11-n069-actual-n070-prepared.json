@@ -1,0 +1,161 @@
+{
+  "actual_owner_return": {
+    "actual_cpu_capacity": 48,
+    "compute_estimate_is_actual_bill": false,
+    "compute_time_estimate_usd": 1.168350609266414,
+    "current_invocation_closure": false,
+    "diagnostic_payload_authentication": "228 payloads and 229 archive members verified",
+    "elapsed_seconds": 1636.600075237,
+    "failure_pressure_snapshot_available": false,
+    "finished_at_utc": "2026-11-11T02:53:53.191209+00:00",
+    "last_scientific_release": "N067",
+    "new_forecast_issues": 0,
+    "new_meta_fits": 0,
+    "new_native_fits": 0,
+    "observed_native_fit_concurrency": 0,
+    "project_cpu_cap": 12,
+    "quote_rate_whole_instance_usd_hour": 2.57,
+    "release": "N069",
+    "reported_resource_refusal": "CPU_MEASUREMENT_CONFIRMATION_REQUIRED, EXTERNAL_IO_PRESSURE",
+    "return_sha256": "70baa328ce44e8564f7fccd752da59bed8ab0f1140626b07d0a30d4daa663755",
+    "scientific_result": "NO_NEW_MODEL_COMPARISON_OR_PROMOTION",
+    "started_at_utc": "2026-11-11T02:26:36.591139+00:00",
+    "status": "PARTIAL_RESOURCE_RETURN_CURRENT_DIAGNOSTIC_PRESERVED"
+  },
+  "automatic_promotion": false,
+  "counts": {
+    "completed_games": 136,
+    "current_selected_games": 112,
+    "current_selected_rows": 448,
+    "distinct_selected_model_aliases": 9,
+    "future_games": 136,
+    "games_with_any_preserved_evidence": 248,
+    "games_without_prediction_evidence_in_this_projection": 24,
+    "official_time_tbd_games": 24,
+    "primary_metric_roles": 9,
+    "rows_after_display_cutoff_not_shown": 0,
+    "schedule_games": 272,
+    "unmapped_nonselected_issue_rows_not_shown": 0
+  },
+  "historical_recovery": {
+    "additional_bytes_not_reread_after_full_hash": 131768123150,
+    "bytes_fully_hashed": 24180924437,
+    "elapsed_seconds": 1299.804622781001,
+    "full_sha_reads": 744744,
+    "unchanged_same_invocation_hash_reuses": 1631653
+  },
+  "historical_recovery_elapsed_qualification": "Elapsed interval of the recovery collector; not profiler-measured hashing CPU time.",
+  "latest_source_refresh": {
+    "all_sources_complete": false,
+    "draftkings": {
+      "all_live_coverage_claimed": false,
+      "current_postgame_quotes_not_backdated": true,
+      "new_forecasts": 0,
+      "new_model_fits": 0,
+      "new_paid_calls": 15,
+      "new_provider_calls": 16
+    },
+    "model_predictions_refreshed": false,
+    "new_normalized_market_rows": 465,
+    "observed_schedule_from_utc": "2026-11-11T02:28:05.569236+00:00",
+    "observed_schedule_through_utc": "2026-11-11T02:28:15.484808+00:00",
+    "outcome_or_confirmed_schedule_changes_from_previous_display": 0,
+    "provider_coverage": [
+      {
+        "by_target": {
+          "margin": {
+            "normalized_rows": 28,
+            "valid_price_rows": 28
+          },
+          "total": {
+            "normalized_rows": 28,
+            "valid_price_rows": 28
+          },
+          "winner": {
+            "normalized_rows": 108,
+            "valid_price_rows": 108
+          }
+        },
+        "games": 27,
+        "metric_eligible_cells": 0,
+        "normalized_rows": 164,
+        "provider": "kalshi",
+        "states": {
+          "NO_USABLE_QUOTES_RETRYABLE": 26,
+          "QUOTES_PRESENT_NOT_FULL_TARGET_ADMISSION": 55
+        },
+        "target_cells": 81
+      },
+      {
+        "by_target": {
+          "margin": {
+            "normalized_rows": 94,
+            "valid_price_rows": 94
+          },
+          "total": {
+            "normalized_rows": 99,
+            "valid_price_rows": 99
+          },
+          "winner": {
+            "normalized_rows": 108,
+            "valid_price_rows": 108
+          }
+        },
+        "games": 27,
+        "metric_eligible_cells": 0,
+        "normalized_rows": 301,
+        "provider": "polymarket",
+        "states": {
+          "QUOTES_PRESENT_NOT_FULL_TARGET_ADMISSION": 81
+        },
+        "target_cells": 81
+      }
+    ],
+    "qualified_current_market_winner_baseline_rows": 0,
+    "source_gaps": [
+      "Official league current injury body did not match the requested season/week.",
+      "An announced-quarterback context was observed after its game kickoff and excluded.",
+      "Nine player rows lacked usable identities and were quarantined; 9,455 valid rows retained.",
+      "Available Kalshi and Polymarket observations did not establish full target/settlement admission.",
+      "DraftKings refresh used 15 paid requests and 16 provider calls; complete live coverage was not established.",
+      "Exact historical live checkpoints and qualified score/clock residual studies were not executed in N069."
+    ]
+  },
+  "new_scientific_scores": 0,
+  "original_forecast_values_changed": 0,
+  "prepared_status": "ENGINEERING_IN_PROGRESS_NO_OWNER_EXECUTION_CLAIM",
+  "prepared_successor": "N070",
+  "prior_selected_projection": {
+    "bytes": 2551758,
+    "filename": "selected_forecasts_n069.json",
+    "sha256": "382fb73b1181ccfe1c00611f3fe3cffe9bdd5a3e220f3a9988532e64ab13800b"
+  },
+  "public_page": {
+    "bytes": 1923275,
+    "filename": "season_review_n070.html",
+    "sha256": "0952ce244516826f2275ccb43e062aae86075c7cf62cec7fa551a233102ace2d"
+  },
+  "schema": "nfl.n070.public-actual-n069-evidence.v1",
+  "selected_projection": {
+    "bytes": 2830468,
+    "filename": "selected_forecasts_n070.json",
+    "sha256": "ccbf190f1f2f6be1d011a3b3103ecb510c556c46805e567514ae162c31bbaaa4"
+  },
+  "source_counters": {
+    "additional_schedule_injury_dispatch_attempts": 6,
+    "blocked_before_transport": 0,
+    "direct_official_dispatch_attempts": 95,
+    "early_current_counts_separate_not_double_credited": true,
+    "early_current_public_requests": 21,
+    "final_current_counts_separate_not_double_credited": true,
+    "final_current_public_requests": 0,
+    "http_failures": 7,
+    "new_s3_uploads": 1402,
+    "original_store_request_counter": 367,
+    "provider_http_dispatch_attempts": 468,
+    "reused_requests": 20,
+    "s3_full_readbacks": 1490,
+    "s3_readback_bytes": 156815723
+  },
+  "source_publication_is_not_deployment": true
+}
