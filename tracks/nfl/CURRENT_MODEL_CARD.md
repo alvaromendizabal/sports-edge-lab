@@ -1,3 +1,29 @@
+# Current NFL metric roles · November 11, 2026 UTC
+
+[All-game view and annual scorecards](season_review_n069.html#leaders) · [Exact public projection](selected_forecasts_n069.json) · [Current research evidence](README.md)
+
+N067 provides the latest authenticated completed research. Actual N068 performed no science. Nine primary objectives map to seven distinct candidates; two additional fallback candidates make nine distinct selected model aliases. The saved frozen 2024/2025 selection remains **development exposed**, the registered queue was incomplete, and independent production promotion is not established.
+
+| Selected objective | Pooled value | Support |
+|---|---:|---:|
+| Winner accuracy | 67.8383% | 569 |
+| Winner log loss | 0.626705 | 569 |
+| Winner Brier | 0.218122 | 569 |
+| Margin MAE | 10.129322 | 570 |
+| Margin RMSE | 13.033484 | 570 |
+| Margin marginal CRPS | 7.320996 | 570 |
+| Total MAE | 10.342478 | 570 |
+| Total RMSE | 13.198054 | 570 |
+| Total marginal CRPS | 7.445988 | 570 |
+
+Each metric can have a different selected candidate. Annual results follow that same candidate in the interactive scorecard. Marginal CRPS does not establish a coherent joint score distribution or qualified spread-cover model. Missing primary forecasts remain unavailable even when a fallback has an original issue.
+
+N069 adds prior-origin 2023 OOF complementary pairs and disagreement weighting, preserves exact earlier recipes and negative experiments, and limits expensive rolling fitting to selected metric roles and their precommitted components. These are prepared methods until an actual N069 return establishes results; portable invented-data checks are not NFL performance.
+
+---
+
+## Preserved earlier model card (unchanged text)
+
 ## N063 additive review · November 9, 2026
 
 Actual N062 remains partial after 25,030 new fits and 3,650 issued rows. The new current report separates the 121/122 and 134/135 target cohorts, all 18 negative isolated graph comparisons, dated source coverage and original issue clocks. N063 prepares current-first incremental refresh, separate pregame/live frontier materialization and paired studies, exact no-refit tie checks and native CBM compatibility admission. It has not run on the owner. No 200-concept gate, complete injury/lineup coverage, qualified current market comparison, coherent new V5 score distribution or promotion is established.
