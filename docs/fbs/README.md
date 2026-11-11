@@ -1,3 +1,5 @@
+> **Latest complete future baseline coverage — November 11, 01:29 UTC capture:** [All 888 games and all 145 future baseline forecasts](latest-games-v061.html) · [Actual V060 output and V061 correction](V061_LATEST_GAMES_AND_OWNER_2026-11-11.md). Forty issues are genuinely new; 105 retain their earlier issue clocks. No new model promotion.
+
 > **Latest games and champions — November 11, 2026:** [All 888 current-season games, upcoming forecasts and source gaps](latest-games-v060.html) · [V059 actual owner and V060 preparation](V060_LATEST_GAMES_AND_OWNER_2026-11-11.md). The latest owner completed 36 new fits; no metric-specific rolling champion was authorized.
 
 > **Latest actual owner review — November 10, 2026:** [V058 early failure and prepared V059 correction](V059_OWNER_FAILURE_PREPARATION_2026-11-10.md). Earlier dated accounts remain unchanged.
