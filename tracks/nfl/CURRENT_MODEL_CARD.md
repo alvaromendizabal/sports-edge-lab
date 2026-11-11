@@ -1,8 +1,8 @@
-# NFL selected model card · N070 actual return
+# NFL selected model card · N071 actual return
 
-[All-game selected forecasts](season_review_n071.html) · [Owner evidence](2026-11-11-n070-actual-n071-prepared.json) · [Prior model card](CURRENT_MODEL_CARD_N070_SNAPSHOT.md)
+[All-game selected forecasts](season_review_n072.html) · [Owner evidence](2026-11-11-n071-actual-n072-prepared.json) · [Prior model card](CURRENT_MODEL_CARD_N071_SNAPSHOT.md)
 
-**N067 remains the latest authenticated scientific result.** N070 encountered package-metadata errors in both current-model phases and deferred on I/O pressure before historical/frontier research. It establishes no new model comparison, champion or independent promotion. Top-level new-fit counts remain unresolved, with a verified minimum of zero.
+**N067 remains the latest historical champion selection. N071 completed four current native fits and refreshed the latest 448 selected rows for 112 upcoming games.** The wider research remains incomplete after fresh-source namespace failure, measured I/O deferral and a historical-parent recovery block. It establishes no new historical comparison, champion or independent promotion. The authenticated ledgers contain 1,344 distinct issue events across three refreshes of the same 448 game/model/target combinations; they are not independent outcome trials.
 
 Separate historical roles are retained for accuracy, log loss, Brier, margin MAE/RMSE/marginal CRPS and total MAE/RMSE/marginal CRPS. Each row below follows the same candidate across both seasons; different objectives can select different candidates.
 
@@ -22,6 +22,7 @@ Winner support is 285 games in 2024 and 284 in 2025; one tie is excluded. Point 
 
 The remembered approximately 0.40 log-loss model is unresolved. The bounded six-bank search found a **0.456838 / 13-of-15** saved early snapshot, which is not a full-season result, and a distinct **0.6240925 / 51-of-77** neural replay whose fits occurred after the games. Exact old weight and ordered-input evidence remains incomplete. Neither result may be extended to unpredicted games by inference.
 
-The separate archived 119-game Kalshi panel retains **79 correct for the accuracy combination versus 76 for Kalshi**, while the probability combination scored **77 correct / 0.629080 log loss**. The accuracy combination's log loss was 0.646823; Kalshi's saved T1/T2 values were 0.644579/0.644377. Horizon, non-tie and exposure qualifications remain. These are not freshly scored full-season N070 comparisons.
+The separate archived 119-game Kalshi panel retains **79 correct for the accuracy combination versus 76 for Kalshi**, while the probability combination scored **77 correct / 0.629080 log loss**. The accuracy combination's log loss was 0.646823; Kalshi's saved T1/T2 values were 0.644579/0.644377. Horizon, non-tie and exposure qualifications remain. These are not freshly scored full-season N071 comparisons.
 
 Current display values retain their original issue times. Missing primary-role outputs remain missing even when a fallback has a forecast. No 2026 outcome selects a historical role. Authentic prior-game market paths remain candidate features only; the target game's later live data cannot enter its pregame inputs, fit, calibration, selection or prediction. Exact tick history gaps still block unsupported R13–R20 comparisons.
+
