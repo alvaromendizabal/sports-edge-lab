@@ -1,78 +1,122 @@
-# Sports Edge Lab NFL · restored historical research and frozen-first execution
+# Sports Edge Lab NFL · actual N067 results and N068 preparation
 
-[Retained numerical game history](season_review_n063.html) · [N066 prepared account](README_N066_PREPARED_SNAPSHOT.md) · [Earlier N067 prepared account](README_N067_EARLIER_PREPARED_SNAPSHOT.md) · [Retained cohort/reuse example](examples/n067_cohort_contract.py) · [Publication boundary](../../docs/PUBLICATION_BOUNDARY.md)
+[Aggregate evidence](2026-11-10-n067-actual-n068-prepared.json) · [Preserved expanded N067 account](README_N067_EXPANDED_PREPARED_SNAPSHOT.md) · [Earlier N067 account](README_N067_EARLIER_PREPARED_SNAPSHOT.md) · [Retained numerical history](season_review_n063.html) · [Publication boundary](../../docs/PUBLICATION_BOUNDARY.md)
 
-## Actual N066 result and why it did not advance the models
+## Actual executable and execution outcome
 
-The latest authenticated owner invocation is **N066, PARTIAL_OWNER_CONTINUATION_REPAIR_REQUIRED**. It ran from **2026-11-10 17:46:31.833339 UTC to 18:31:42.096920 UTC**, recording **2,710.264 seconds**. A separate completion verified the final return at **18:34:48.084721 UTC**. Its physical return contains **53,134,863 bytes**, SHA-256 `a8537e0faea38d61542ee0e6af224069fa0fb5d80b42e6f5f2776bd2ffd1c251`.
+**The owner executed a different N067 build from the larger prepared revision previously described here. The actual run made substantial research progress and remains partial.** Its verified science phase committed **1,167 fitted states** and issued **448 forward research rows for 112 unique future games**. The later return readback completed **50 minutes 54.135 seconds after the invocation began**. The exact sealed N068 successor passed all **1,456 portable software tests**; a separate owner execution remains pending.
 
-All 33,764 included payload checksums and the declared paged logical graph passed the review. The graph covers 380,511 logical files. Full membership of every remote ancestor was not downloaded and revalidated locally; mandatory owner recovery checks remain in force. **N066's aggregate new-fit and new-forecast totals remain null.** Its verified durable new V5-fit minimum is zero. These two different statements must not be collapsed into an invented complete zero count.
+| N067 artifact | Bytes | SHA-256 | Credit in this return |
+|---|---:|---|---|
+| Actually executed build | 26,262,480 | `9c6fd23ad24ddb5e434ead4ffcba107ebe35aa4b45c268ac6ef403c40d14dc66` | Actual execution |
+| Earlier expanded prepared build | 46,017,570 | `3dc27dc2da2fc9135b8f7b89cdd189cdfb5385594ad994e345578e391d012694` | Not executed by this return |
+| Actual owner return | 41,774,501 | `7551beeaf68ff5a01a6cf6662169af7f496a7a816c7ebd2dc0555c718ac5878f` | Authenticated evidence |
 
-Three production failures blocked progress: the feature builder omitted metadata required by its assembler, nullable source-capture metadata was treated as a mapping, and nine rows without published player identities aborted the player-statistics lane. Recovery validated 3,468 retained states and spent **1,238.592 seconds** in its measured hash/reuse scope. Those operational failures and costs do not establish that older models lost their predictive value.
+All 14,687 declared included payloads passed checksum, length and archive integrity checks. The paged logical graph closes 396,161 declared files. Selected small remote evidence bundles and the external completion receipt were fully read back and matched to the graph. This does not claim that every remote ancestor body was downloaded again.
 
-The original forecast monitor successfully reconciled **492 unique eligible evaluations across 14 final games**, comprising **87 newly calculated evaluations and 405 exact reuses**. Its 87 metric groups are not 87 games. Original probabilities, issue times and earlier scores were preserved.
+The run began at **20:35:41.977888 UTC on November 10, 2026**. Its summary closed at **21:19:05.288005 UTC**, reporting **2,603.310 seconds**. Final return readback was verified later, at **21:26:36.113297 UTC**. Packaging and final delivery therefore belong in the elapsed-time account.
 
-## Recovered historical results
+| Verified actual work | Count |
+|---|---:|
+| Optimizer starts and returns, including later validation failures | 1,230 |
+| Durable new native fitted states | 1,149 |
+| Durable new calibration or combination states | 18 |
+| Durable total in the verified phase | 1,167 |
+| Native state reuse events | 16 |
+| Returned CatBoost states lacking a durable receipt after reload validation | 63 |
+| Frozen historical comparison rows | 232,416 |
+| Forward research rows | 448 |
+| Unique future games with those outputs | 112 |
+| Unselected experimental rolling fits | 0 |
 
-Read-only rescoring of exact original saved N022/N026 capsules recovered **71,478 prediction rows, 333 scorecards and 1,737 matched comparisons**, with zero real-data fits or new forecast issues. The original capsules passed all 7,823 member hash/length checks. Their identities are `b905f21162d744aaf67e8b4d591538e2063f4884a070b289184d039602a062a4` and `d3692521812e99d3c2340e10393fb0083e0f2d71b30921f35e7e9bbb152488b4`.
+The overall status is **PARTIAL_OWNER_CONTINUATION_REPAIR_REQUIRED**. Whole-invocation new-fit and new-forecast totals remain null because a separate frontier path did not close. The verified phase counts above are evidence of completed work; they are not a complete-success declaration. [Source: authenticated aggregate audit](2026-11-10-n067-actual-n068-prepared.json).
 
-The earlier historical mean ensemble reproduces the approximately **0.62 log loss** result:
+## Completed 2024 and 2025 comparisons
 
-| Saved evaluation | Correct / non-ties | Log loss | Brier | Margin MAE | Total MAE |
+The following roles were selected from combined 2024–2025 results. A role keeps the same candidate across both season rows; these are not separately chosen per-season minima. The **nine primary metric slots use seven distinct candidates**. The fallback selection also covers nine metric slots with four distinct candidates, two of which are additional to the primary set. The tables therefore contain **18 annual scorecards over nine distinct candidates**, including the two additional controls with admissible current inputs. Winner evaluation contains **285 non-tied games in 2024 and 284 in 2025**. Point targets contain **285 games in each season**, including the tied game.
+
+### Winner probabilities
+
+| Selected role | Season | Correct / games | Accuracy | Log loss | Brier |
 |---|---:|---:|---:|---:|---:|
-| 2024 original reconstructed event-expanding study | 196 / 285 | 0.616324 | 0.213016 | 10.064 | 9.878 |
-| 2025 original reconstructed event-expanding study | 183 / 284 | 0.619087 | 0.215585 | 10.062 | 10.675 |
-| 2024–2025 combined | 379 / 569 | 0.617703 | 0.214298 | 10.063 | 10.277 |
-| Archived 2026 cohort | 73 / 119 | 0.640404 | 0.225438 | 9.588 | 11.226 |
+| Accuracy leader | 2024 | 205/285 | 71.930% | 0.606050 | 0.208257 |
+| Accuracy leader | 2025 | 181/284 | 63.732% | 0.654368 | 0.230862 |
+| Probability-loss leader | 2024 | 201/285 | 70.526% | 0.614125 | 0.212046 |
+| Probability-loss leader | 2025 | 179/284 | 63.028% | 0.639330 | 0.224894 |
+| Brier leader | 2024 | 202/285 | 70.877% | 0.603957 | 0.206877 |
+| Brier leader | 2025 | 182/284 | 64.085% | 0.651609 | 0.229407 |
+| Available probability control | 2024 | 191/285 | 67.018% | 0.618839 | 0.214527 |
+| Available probability control | 2025 | 182/284 | 64.085% | 0.639673 | 0.224924 |
 
-The separate original annual-frozen version has combined 2024–2025 log loss **0.618576** and archived 2026 log loss **0.641801**. Historical point-target populations include ties and therefore differ from the winner non-tie counts in this table. These are original saved reconstructed outputs, not new-policy frozen results, unchanged original issued forecasts or independent prospective validation. The archived 119-game 2026 cohort does not cover all 136 finals in N066's latest captured schedule.
+The pooled selected accuracy is **67.838% (386/569)**. The separate pooled log-loss leader scores **0.626705**, and the separate Brier leader scores **0.218122**. The probability control that had admissible current inputs scores **0.629237 pooled log loss**. This distinction matters: the best historical candidate and the candidate with complete current inputs can differ.
 
-The later primary comparison scorecard records **79/119 correct versus 76/119 for Kalshi**. The model's log loss is **0.646823** and Brier score **0.227057**; Kalshi's corresponding T1/T2 values are **0.644579/0.644377** and **0.225107/0.224897**. The lower probability losses belong to Kalshi, not to this accuracy-leading model. A different preserved feedback model scored **77/119 correct, 0.629080 log loss and 0.219521 Brier**. These four provider comparisons were recovered from primary saved scorecards, not newly recomputed from 119 game-level rows in this review. The exact earlier source capsule contains **78/118 correct** for the accuracy combination; those cohorts must not be silently equated. Previously reported paired uncertainty includes zero. Cross-model selection requires identical games, targets, forecast horizons, source eligibility and outcome definitions, including the model's conditional non-tie semantics versus the market's raw midpoint zero-tie proxy.
+### Point forecasts and distributions
 
-### The remembered 0.62409 neural result
+| Selected role | Season | Games | MAE | RMSE | CRPS | 90% interval coverage | 90% interval width |
+|---|---:|---:|---:|---:|---:|---:|---:|
+| Margin absolute-error and distribution leader | 2024 | 285 | 10.043549 | 13.146063 | 7.326400 | 90.526% | 46.771071 |
+| Margin absolute-error and distribution leader | 2025 | 285 | 10.215094 | 13.023930 | 7.315591 | 92.632% | 46.771071 |
+| Margin squared-error leader | 2024 | 285 | 10.064897 | 13.034695 | 7.299818 | 89.123% | 44.943348 |
+| Margin squared-error leader | 2025 | 285 | 10.247663 | 13.032274 | 7.362962 | 90.526% | 44.943348 |
+| Total absolute- and squared-error leader | 2024 | 285 | 9.955067 | 12.900565 | 7.283704 | 89.825% | 42.272596 |
+| Total absolute- and squared-error leader | 2025 | 285 | 10.729888 | 13.488984 | 7.648320 | 88.421% | 42.272596 |
+| Total distribution leader | 2024 | 285 | 10.262668 | 13.185113 | 7.285066 | 90.175% | 42.532119 |
+| Total distribution leader | 2025 | 285 | 10.630513 | 13.452953 | 7.606911 | 89.123% | 42.532119 |
+| Available total-points control | 2024 | 285 | 9.979989 | 12.973247 | 7.395389 | 89.123% | 41.735321 |
+| Available total-points control | 2025 | 285 | 10.724306 | 13.435581 | 7.672473 | 90.175% | 41.735321 |
 
-The original 77-game result was recovered and independently recalculated from the authenticated original parquet and CSV evidence. The weekly neural model scored **51/77 correct, 0.624092500 log loss and 0.217288155 Brier**, compared with the same panel's raw market reference at **47/77, 0.660022307 and 0.233300749**. Its six retained aliases have identical probability vectors and are not six independent model improvements.
+The pooled margin MAE and RMSE leaders score **10.129322** and **13.033484**, respectively. The pooled total MAE and RMSE leader scores **10.342478** and **13.198054**. The margin and total CRPS leaders score **7.320996** and **7.445988**. Full-precision values, additional calibration diagnostics and all **18 season scorecards** are in the [aggregate export](2026-11-10-n067-actual-n068-prepared.json).
 
-The original related fixed-policy neural control scored **197/280 correct, 0.582976261 log loss and 0.198800417 Brier in 2024**, and **180/277, 0.625050772 and 0.219133658 in 2025**. On those same panels the raw market log losses were 0.590011221 and 0.611923223, respectively. The fixed control beat that reference on 2024 probability loss and trailed it in 2025. These are different cohorts and a different update policy from the weekly 2026 replay, so they cannot be presented as one frozen three-season study.
+**No production promotion follows from these tables.** Both seasons are development and repeated-selection exposed; the registered queue was incomplete, and the exact older named contenders were not restored by the executed build. The selected roles are provisional candidates for forward shadow monitoring. Current-season outcomes did not select them. Earlier out-of-sample residual support supplies the saved interval and CRPS diagnostics; these values do not establish current-season interval performance.
 
-The original clock evidence is consequential: all six weekly fits actually finished on **October 24, 2026**, after the 77 evaluated games played September 10 through October 16. Sixty-three predictions used earlier 2026 outcomes under nominal weekly cutoffs. This is exposed retrospective replay, not proved pregame issuance. The 0.62409 result remains a preserved probability contender; it does not automatically become an independent current-season champion. Its exact original weight bodies and executable training/feature bindings still require admission before a new frozen or selected rolling execution. No generic neural recipe was substituted for it.
+## What was actually issued, and what failed
 
-All inspected 2024–2025 evidence is development/selection exposed. The current season is excluded from the historical selector. No production champion is promoted by this review.
+The 448 rows comprise **112 winner outputs, 112 margin outputs and 224 total-points outputs** across the same **112 games**. Two distinct selected total-points candidates account for the larger total row count. The source summary’s “272 new issued games” field is incorrect: 272 is the complete schedule census, not the union of issued game identities. Of that schedule, 136 games were final and 112 future games received outputs. The remaining **24 future games all had official kickoff time TBD**: four in week 16, four in week 17 and 16 in week 18. There were no other future games missing from the issued-game union in this saved census.
 
-### Newly reconciled saved forward cohort
+Issues were created between **21:16:37.575024 and 21:16:52.781004 UTC**, using an information cutoff of **21:04:58.564670 UTC**. They are actual current-origin long-range research outlooks. They are not historical 2026 scores or final-hour forecasts. No individual future forecast grid is published here.
 
-The original November 2 early-forward snapshot contains 135 rows: three variants, three targets and 15 games. All 15 games can now be joined to the authenticated N066 final-game census, with no changed probabilities, exclusions, model fits or new issues. The saved feedback variant scored **13/15 correct, 0.456838 log loss**, with margin MAE **8.829** and total MAE **9.679**; the saved synergy variant scored **12/15 correct, 0.468755 log loss**. This is a separate small monitoring cohort, not a stitched full-season result. Its original records explicitly state that the full legacy forward feature set was unavailable, the exact old model was not retrained, and independent durable pregame delivery was not proved. These qualifications remain attached to the scores; this is not evidence of a newly revived full-feature current model or automatic promotion.
+The 63 CatBoost failures occurred after native optimization and model/state serialization, during reload validation. All 63 retain their original model bodies, state records and optimizer journals. They are candidates for strict saved-state compatibility recovery; recovery has not yet been established on the owner runtime and must not be replaced by blind refitting. Five selected current feature configurations also lacked admitted current inputs.
 
-## Substantive N067 implementation
+A raw-result pointer scope failure blocked **492 supported original-forecast monitor rows**. N067 performed **zero new scoring calculations and zero scoring reuses** in that monitor. The earlier N066 account’s 87 newly calculated and 405 reused evaluations remain separate. A frontier study namespace mismatch prevented full completion. The source census preserved **9,455 identifiable player rows and nine explicit identity gaps**; missing identities were not fabricated.
 
-**N067 is prepared and tested; it has not been owner-executed.** New code preserves the entire preceding executable's source bytes and adds a separate execution namespace.
+## Why the remembered 0.624 result still matters
 
-This expanded prepared revision reconciles the concurrent NFL update merged at `3205999b5fc7672becb8c0c1a34fb9c6fdcfcb11`. Its preceding README and public cohort/reuse example remain preserved. The earlier revision's 1,096-test and browser-rendering results apply to that artifact; the distinct exact-package and report validation below apply to this expanded handoff. No result from either prepared revision is counted as owner science.
+The remembered neural result is real: exact original saved evidence was previously reconciled at **51/77 correct, 0.624092500 log loss and 0.217288155 Brier**. The same archived panel’s raw reference scored **47/77, 0.660022307 and 0.233300749**. Six aliases repeat the same prediction vector; they do not represent six independent improvements.
 
-- The isolated preflight exercises the real feature-builder/assembler seam, worker source-binding contract, safe hashing and writable compressed-source parsing before provider dispatch or optimization. Portable integration tests separately cover nullable capture metadata.
-- Identifiable player rows are retained while anonymous rows are quarantined with exact locators. Saved-source replay retains **9,455 valid rows across 136 games**, explicitly records nine identity gaps and preserves the original raw body. It does not claim complete player or injury coverage.
-- A descriptor-bound, no-follow hash cache reduces repeated path work and uses a measured memory bound. Full SHA verification occurs on first access in each invocation; persistent metadata-only trust is prohibited. Local synthetic speed measurements are not an owner speed or ETA claim.
-- Every admitted model family receives an initial bounded frozen comparison before deeper expansion. Unavailable dependencies, resource deferrals, failed combinations and unfinished custom configurations remain visible. Independent source lanes can continue when another lane is blocked.
-- Exact earlier model components and original saved predictions have dedicated restoration adapters. Custom parameters and target-specific feature matrices are preserved. Reuse requires proof of matching inputs, cutoffs, targets, horizons and configuration; prediction-only reuse is distinguished from a loadable fitted state. Generic defaults do not replace old discoveries.
-- A guarded source-only bridge rebuilds the restored models' future-facing feature state from newly captured final results and statistics, when the exact older raw statistics and original builders are also available. Historical matrices remain unchanged. Newly completed games without proved pregame feature history are not invented as training rows; the latest observed state and admitted training population are reported separately. Actual early issue horizons remain distinct from the original shorter-horizon historical evaluation.
-- Train-only preprocessing, cohort identities and exact completed predictions are cached. Earlier out-of-sample calibration and ensembles precede metric-specific, horizon-matched shadow selection, including CRPS and 90% interval diagnostics where strictly earlier OOS residual support is sufficient. Expensive current refits are limited to selected champions and their precommitted ensemble dependencies. No experimental rolling sweep is enabled.
-- If a later fit exceeds a worker's budget, independently completed seasonal outputs are recovered only after checking the exact request and saved output hashes. The failed work remains visible and unresolved optimizer starts are not repeated. A late worker failure no longer discards already verified research from that invocation.
-- A complete frozen batch can bypass worker launch only after current training/query matrices, cutoffs, configuration, dependency identity and every saved seasonal output match. A partial or changed batch falls back to the guarded worker path; reused predictions never earn new fit or inference credit.
-- Current source refresh, original-issue monitoring and the separate final source census retain their own clocks. Missing current feature schemas block affected forecasts explicitly; a source-supported score-history fallback can proceed. Rendering and source refresh never become forecast or fit credit.
-- A historical export whose census prerequisite is intentionally deferred is now recorded as unfinished. Its unconditional invocation previously would have produced a false route failure after an otherwise successful current-only pass. Genuine errors in admitted historical exports still propagate unchanged.
+Its clock and policy qualifications remain decisive. All six weekly fits actually completed on **October 24, 2026**, after the 77 evaluated games from September 10 through October 16. Sixty-three predictions used earlier 2026 outcomes under nominal weekly cutoffs. This is exposed retrospective replay, with no proved pregame issue claim. That 77-game result has not been extended to all 136 finals in the latest captured census.
 
-### Validation
+| Preserved original fixed-policy neural control | Games | Correct | Log loss | Brier | Same-panel raw-reference log loss |
+|---|---:|---:|---:|---:|---:|
+| 2024 | 280 | 197 | 0.582976261 | 0.198800417 | 0.590011221 |
+| 2025 | 277 | 180 | 0.625050772 | 0.219133658 | 0.611923223 |
 
-Exact expanded executable identity: **46,017,570 bytes**, SHA-256 `3dc27dc2da2fc9135b8f7b89cdd189cdfb5385594ad994e345578e391d012694`. The same-generation earlier prepared executable has a different identity; its test receipts cannot validate these bytes.
+Those fixed-policy controls use different cohorts and a different update policy from the weekly 2026 replay. The older neural control improved probability loss against its raw reference in 2024 and trailed it in 2025. The three seasons therefore cannot be presented as one independent frozen study.
 
-The exact sealed N067 package passed **1,216 portable synthetic tests**, including **1,039 retained tests and 177 new tests**, with **0 failures, 0 errors and 0 skips**. Two inherited external-artifact checks remain outside the portable suite and require their own real evidence. Production-shaped invented-data integration covers isolated workers, legacy restoration, horizon separation, selected-only current fitting, immutable snapshots and resume without additional optimizers. These tests earn zero real NFL fit, forecast or accuracy credit.
+Another preserved mean ensemble has original event-expansion log loss **0.616324 in 2024**, **0.619087 in 2025**, and **0.640404 on its archived 119-game 2026 cohort**. Its distinct original annual-freeze version scores **0.618576 across 2024–2025** and **0.641801 on archived 2026**. These valuable contenders retain their original policies and source evidence; they are not new N067 results. Their current eligibility requires the same games, information cutoffs, forecast horizons, target definitions and exact input configuration to be proved.
 
-The private review notebook executed eight code cells in a fresh child process using actual IPython/nbclient output capture, with zero errors and three saved Plotly outputs. Its self-contained report includes all 272 captured schedule games, archived forecast values, target metrics, legacy comparisons and explicit missingness. Fifteen embedded-controller checks passed. **Desktop/mobile visual rendering was blocked by the review environment's socket restriction**, so visual or hosted acceptance is not claimed. No private report was uploaded to an external viewer.
+The preserved **79/119 versus 76/119** comparison is a correct-winner count, not a 79% accuracy claim. The accuracy combination’s log loss is **0.646823**; Kalshi’s saved T1 and T2 reference values are **0.644579 and 0.644377**. A different probability feedback contender scores **77/119 and 0.629080**. These source-specific horizons and outcome conventions remain separate. Their saved comparisons do not establish automatic promotion or a new full-season score.
 
-### Execution and remaining work
+The [preserved prepared account](README_N067_EXPANDED_PREPARED_SNAPSHOT.md) retains the earlier capsule rescoring, original annual and event policies, small saved-forward cohort, prior failures and validation history byte-for-byte. Preserving those discoveries and admitting exact comparisons is part of N068; a family name or generic neural control does not replace an older model.
 
-The verified existing instance has eight CPUs, 32 GiB RAM and no GPU. Its dated current compute list rate is **$0.484/hour**: 30/60/90 minutes correspond to approximately $0.242/$0.484/$0.726 of instance time, excluding storage, requests, provider charges, idle time and unrelated activity. Runtime must reverify the actual instance before using that rate. The inherited 90-minute work limit is a budget bound, not an ETA. Logs report actual stage/total elapsed time, new/reused work, resource use, checkpoints and measured per-family ETA only when sufficiently supported.
+## N068 implementation prepared for the next owner run
 
-The highest-value next milestone is an **actual successful frozen comparison containing revived historical candidates, followed by eligible selected-champion current issues**. Full custom-history restoration, owner validation of current legacy source bindings, the separate modern joint-feature current view, complete injuries/provider coverage, exact-line cover calibration, coherent joint distributions, validated forward CRPS/interval quality and production promotion remain explicit open work. The full V5 program is not declared complete.
+**The exact sealed N068 build passed all 1,456 portable software tests. Owner execution remains pending.** The successor restores verified prior selection for an early current-forecast pass, reuses exact prior historical predictions and fitted states before entering new optimizers, and attempts saved native-state compatibility recovery without granting new optimization credit. Exact historical contenders remain separate from generic model families.
 
-No real-data fit, new forecast, infrastructure launch or hosted deployment was performed in this review. The existing numerical dashboard remains an earlier dated snapshot. Public documentation, executed private reports, prepared code and actual owner science are separate deliverables. This update is NFL-scoped and preserves the preceding README byte-for-byte; other tracks and the separate shared planning PR remain independent.
+The implementation also adds coordinated resource scheduling, interruption checkpoints, current-source freshness admission and additional source-qualified response research. A read-only capacity observation at **00:07:54 UTC on November 11, 2026** reports **48 virtual CPUs and 96 GiB RAM**, supporting a **nominal project ceiling of 12 CPUs**. Effective admission remains subject to measured owner-runtime CPU limits, memory and competing work; neither 12-way operation nor a speedup is assumed. Historical inputs and earlier issues remain immutable. Unsupported source history and unadmitted configurations remain explicit. Only selected metric champions and precommitted components can enter expensive forward refitting. No exhaustive experimental rolling sweep is enabled.
+
+| Final N068 acceptance field | Status at preparation |
+|---|---|
+| Sealed build fingerprint | 48,185,600 bytes; SHA-256 `24dbc39fc018053298c56bd852bcf9e8ddec9ddab71117e55f5a89e611f5ab5e` |
+| Portable test inventory | 1,456 passed: 1,096 retained and 360 new |
+| Source preservation | All 1,129 actual-predecessor payloads preserved in 1,384 archive members |
+| Package integrity prechecks | Verification-only passed; deliberately wrong fingerprint rejected |
+| Exact sealed test result | **PASS**; zero failures, errors or skipped tests |
+| Exact sealed verification elapsed | 333.400 seconds overall; 332.080 seconds in the portable self-test |
+| Public exact-commit CI | Separate repository checks; no result claimed in this evidence |
+| Owner N068 execution | Not executed |
+| New N068 scientific fits or forecast issues | None claimed |
+| Owner speedup or completion ETA | Not measured |
+
+The complete acceptance run finished at **00:17:04.261572 UTC on November 11, 2026**, and the sealed bytes remained unchanged during testing. Synthetic software validation does not establish better NFL accuracy, log loss, point error or throughput. Actual resource use, completed versus remaining work, elapsed time and ETA uncertainty must come from the owner invocation. A later authenticated N068 return will establish what completed. Public documentation does not refresh the numerical dashboard or deploy a site.
+
+This update is NFL-scoped. The preceding expanded account is preserved exactly, the older dated evidence remains linked, and other tracks retain their independent research and publication history.
