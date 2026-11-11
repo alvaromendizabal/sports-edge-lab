@@ -1,0 +1,99 @@
+{
+  "automatic_promotion": false,
+  "compute_estimate": {
+    "actual_bill": false,
+    "exclusions": [
+      "Existing volume storage",
+      "S3 storage and requests",
+      "Data-provider charges",
+      "Idle time outside invocation",
+      "Other-project activity"
+    ],
+    "usd": 0.3189576193648582,
+    "whole_instance_hourly_usd": 2.57
+  },
+  "counts_known": true,
+  "counts_qualification": "All three current-model stages failed before child dispatch with explicit terminal receipts. The original-model runtime preflight also failed with known zero work. Zero is known, not an unknown total or missing value.",
+  "cpu_contract": {
+    "effective_vcpus": 48,
+    "new_fit_worker_dispatches": 0,
+    "per_project_ceiling": 12,
+    "scientific_fit_concurrency_proved": false
+  },
+  "current_census": {
+    "completed": 136,
+    "confirmed_future": 112,
+    "games": 272,
+    "kickoff_tbd": 24,
+    "season": 2026
+  },
+  "elapsed_seconds": 446.7888831569999,
+  "failures": [
+    {
+      "class": "saved_fit_state_contract",
+      "effect": "Saved fit-state metadata was rejected before every current-model dispatch; no new fit or issue was produced.",
+      "stage": "urgent_current_main_and_final_refresh"
+    },
+    {
+      "class": "original_runtime_unavailable",
+      "effect": "The required original runtime was unavailable or resolved through an unacceptable alias; original-model inference did not launch.",
+      "stage": "original_forward_shadow"
+    }
+  ],
+  "finished_at_utc": "2026-11-11T22:37:19.877783+00:00",
+  "latest_execution": "N074",
+  "new_fits": 0,
+  "new_forecasts": 0,
+  "new_meta_fits": 0,
+  "new_native_fits": 0,
+  "new_release": {
+    "governing_policy": "V8",
+    "owner_executed": false,
+    "purpose": "Repair the authentic saved-state reuse path before model dispatch; retain completed fits and original issues; prioritize full current-season champion and former-champion comparisons under V8.",
+    "release": "N075",
+    "status": "ENGINEERING_CONTINUATION_PENDING_OWNER_EVIDENCE"
+  },
+  "original_predictions_changed": false,
+  "owner_research_acceptance": false,
+  "publication": {
+    "private_model_details_included": false,
+    "raw_provider_values_included": false,
+    "website_deployed": false
+  },
+  "retained_forecasts": {
+    "failed_run_fallback_rows_not_substituted": 448,
+    "fallback_roles": 9,
+    "future_games": 112,
+    "historical_primary_roles": 18,
+    "new_fit_credit": 0,
+    "new_inference_credit": 0,
+    "new_issue_credit": 0,
+    "original_issue_clocks_preserved": true,
+    "owner_execution": "N072",
+    "publication_file": "selected_forecasts_n073.json",
+    "reissued": false,
+    "selected_rows": 772,
+    "sha256": "61edc9fb9fe518299b2c70259163cc42a7c73830288129a36ba98ee46a03b013"
+  },
+  "return_sha256": "ea9ca73ce501d482d40aa0b882ee21f0872d4a07e81e08a38e5f0e8dfb154493",
+  "schema": "nfl.n075.latest-execution-retained-forecasts.v1",
+  "source_activity": {
+    "draftkings_replay_rows": 162,
+    "earlier_game_response_studies_executed": 0,
+    "full_historical_market_inventory_complete": false,
+    "kalshi_rows": 164,
+    "known_credits": 71,
+    "last_remaining_credits": 4931898,
+    "new_paid_calls": 15,
+    "normalized_market_rows": 468,
+    "polymarket_rows": 304,
+    "qualified_current_winner_probabilities": 0,
+    "source_rows_are_not_training_examples": true,
+    "winner_candidate_rows": 270
+  },
+  "sport": "NFL",
+  "started_at_utc": "2026-11-11T22:29:53.088911+00:00",
+  "status": "PARTIAL_OWNER_CONTINUATION_REPAIR_REQUIRED",
+  "verified_new_fit_minimum": 0,
+  "verified_new_issue_minimum": 0
+}
