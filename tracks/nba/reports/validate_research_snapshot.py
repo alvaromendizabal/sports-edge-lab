@@ -71,7 +71,126 @@ def validate_public_report(data):
         raise ValueError("This snapshot must explicitly retain its non-live research status")
     return checks
 
+
+import collections
+
+_validate_original_projection = validate_public_report
+
+def validate_public_report(data):
+    if data.get("schema") != "sports-edge-lab-nba-public-schedule-complete-research-outputs-v3":
+        raise ValueError("Unexpected complete-schedule schema")
+    games, champions, issues = data["games"], data["champions"], data["issues"]
+    original_ids = data["forecast_inventory_game_ids"]
+    if len(original_ids) != len(set(original_ids)) or not set(original_ids) <= set(games):
+        raise ValueError("Original issue game inventory changed")
+    previous = dict(data)
+    previous["schema"] = "sports-edge-lab-nba-public-selected-research-outputs-v2"
+    previous["games"] = {key: games[key] for key in original_ids}
+    previous["coverage"] = dict(data["coverage"], distinct_observed_games=len(original_ids))
+    _validate_original_projection(previous)
+    asof = timestamp(data["evidence_as_of_utc"])
+    observation = data["schedule_observation"]
+    if timestamp(observation["snapshot_finished_at_utc"]) > asof or observation["future_full_schedule_complete"] is not False:
+        raise ValueError("Schedule clock or future-completeness claim invalid")
+    expected_groups = {phase: sorted(key for key, role in champions.items() if role["phase"] == phase)
+                       for phase in ("regular", "postseason")}
+    expected_groups["none"] = []
+    if data["role_groups"] != expected_groups:
+        raise ValueError("Role group changed")
+    coverage = data["game_coverage"]
+    if set(coverage) != set(games):
+        raise ValueError("Official game coverage denominator incomplete")
+    views = {(row["game_id"], row["champion_role"]): row for row in data["role_views"]}
+    target_keys = {f"{target}_T{horizon}" for target in ("winner", "margin", "total") for horizon in (60,120)}
+    opportunities = available = 0
+    for gid, game in games.items():
+        if not re.fullmatch(r"[0-9]{1,20}", gid):
+            raise ValueError("Invalid public game identifier")
+        if game["schedule_membership"] == "CANONICAL_OFFICIAL":
+            if timestamp(game["schedule_source_asof_utc"]) > timestamp(observation["snapshot_finished_at_utc"]):
+                raise ValueError("Individual source clock exceeds snapshot")
+            if game["source_status"] == "FINAL" and game["source_status_group"] != "COMPLETED_AS_OBSERVED":
+                raise ValueError("Observed final status changed")
+            if game["source_status"] != "FINAL" and game["source_status_group"] == "COMPLETED_AS_OBSERVED":
+                raise ValueError("Time passage fabricated a final status")
+            expected_status_group = "COMPLETED_AS_OBSERVED" if game["source_status"] == "FINAL" else "SCHEDULED_AS_OBSERVED" if game["source_status"] == "SCHEDULED" else "UNRESOLVED_AS_OBSERVED" if game["source_status"] == "TBD" else game["source_status"]
+            if game["source_status_group"] != expected_status_group or game["official_status_at_source"] != game["source_status"]:
+                raise ValueError("Official observed status changed")
+        expected_identity = "RESOLVED_MATCHUP" if game["home_team"] and game["away_team"] else "UNRESOLVED_OFFICIAL_MATCHUP"
+        if game["identity_status"] != expected_identity:
+            raise ValueError("Matchup identity status changed")
+        tip = game["scheduled_start_utc"]
+        expected_time = "TIP_UNKNOWN" if tip is None else "FUTURE_TIP" if timestamp(tip) > asof else "START_TIME_PASSED_STATUS_NOT_INFERRED"
+        if game["tip_time_relation_at_report"] != expected_time:
+            raise ValueError("Game time relation inconsistent")
+        row = coverage[gid]
+        group = game["phase"] if game["phase"] in expected_groups else "none"
+        aliases = expected_groups[group]
+        if row["applicable_role_group"] != group:
+            raise ValueError("Game applicable phase group changed")
+        current = [alias for alias in aliases if views.get((gid, alias), {}).get("current_issue_ref")]
+        at_issue = [alias for alias in aliases if views.get((gid, alias), {}).get("at_issue_ref")]
+        missing = sorted(set(aliases) - set(current))
+        missing_repr = "ALL_APPLICABLE_ROLES" if missing and len(missing) == len(aliases) else missing
+        if (row["current_role_ids_available"] != current or row["at_issue_role_ids_available"] != at_issue
+                or row["current_role_ids_missing"] != missing_repr):
+            raise ValueError("Missing or available role denominator changed")
+        if set(row["target_horizon"]) != target_keys:
+            raise ValueError("Game target/horizon denominator incomplete")
+        for key, cell in row["target_horizon"].items():
+            target, horizon = key.rsplit("_T",1)
+            matched = [alias for alias in aliases if champions[alias]["target"] == target and champions[alias]["horizon_minutes"] == int(horizon)]
+            nc, na = len(set(matched) & set(current)), len(set(matched) & set(at_issue))
+            if (cell["expected_roles"],cell["current_roles_available"],cell["at_issue_roles_available"]) != (len(matched),nc,na):
+                raise ValueError("Target/horizon role counts inconsistent")
+            if cell["status"] not in data["gap_reason_definitions"]:
+                raise ValueError("Unknown gap reason")
+            if cell["status"] == "AVAILABLE_ORIGINAL_ISSUES" and (not matched or nc != len(matched)):
+                raise ValueError("Unissued target marked available")
+            expected_reason = "AVAILABLE_ORIGINAL_ISSUES" if matched and nc == len(matched) else \
+                "OFFICIAL_MATCHUP_NOT_ASSIGNED" if game["identity_status"] != "RESOLVED_MATCHUP" else \
+                "OFFICIAL_PHASE_NOT_ADMITTED_TO_REGISTERED_MODEL_TARGETS" if game["phase"] not in ("regular","postseason") else \
+                "NO_ACTIVE_CHAMPION_FOR_TARGET_HORIZON" if not matched else \
+                "SOME_CURRENT_ROLE_ISSUES_MISSING" if nc else \
+                "NO_ORIGINAL_ISSUE_FOR_CURRENT_CHAMPION" if na else \
+                "OFFICIAL_TARGET_NOT_ADMITTED_AT_SOURCE" if game.get("target_registry_member_at_source") is False else \
+                "NO_RECOVERED_ORIGINAL_PREGAME_FORECAST"
+            if cell["status"] != expected_reason:
+                raise ValueError("Gap reason differs from exact available role evidence")
+        opportunities += len(aliases)
+        available += len(current)
+    official = {gid: game for gid, game in games.items() if game["schedule_membership"] == "CANONICAL_OFFICIAL"}
+    regular = [game for game in official.values() if game["phase"] == "regular"]
+    if observation["regular_season_observed_count"] != len(regular):
+        raise ValueError("Regular-season denominator changed")
+    expected_full = observation["regular_season_expected_full_count"]
+    if expected_full is not None and observation["regular_season_not_observed_count"] != max(0,expected_full-len(regular)):
+        raise ValueError("Unobserved regular-season slots changed")
+    checks = {
+        "distinct_observed_games": len(games), "games_in_original_issued_inventory": len(original_ids),
+        "official_schedule_games": len(official), "official_games_without_original_issues": len(set(official)-set(original_ids)),
+        "official_games_by_saved_status":dict(sorted(collections.Counter(g["source_status"] for g in official.values()).items())),
+        "official_games_by_phase":dict(sorted(collections.Counter(g["phase"] for g in official.values()).items())),
+        "official_resolved_matchups":sum(g["identity_status"]=="RESOLVED_MATCHUP" for g in official.values()),
+        "official_unresolved_matchups":sum(g["identity_status"]!="RESOLVED_MATCHUP" for g in official.values()),
+        "official_future_tips_at_report":sum(g["tip_time_relation_at_report"]=="FUTURE_TIP" for g in official.values()),
+        "official_scheduled_start_passed_without_final_observation":sum(g["source_status"]=="SCHEDULED" and g["tip_time_relation_at_report"]=="START_TIME_PASSED_STATUS_NOT_INFERRED" for g in official.values()),
+        "original_issue_games_absent_from_official_inventory": len(set(original_ids)-set(official)),
+        "separate_secondary_observations": len(data["secondary_schedule_observations"]),
+        "all_game_target_horizon_cells": len(games)*6,
+        "all_game_applicable_role_opportunities": opportunities,
+        "all_game_current_role_forecasts_available": available,
+        "all_game_current_role_forecasts_missing": opportunities-available,
+    }
+    if any(data["coverage"][key] != value for key,value in checks.items()):
+        raise ValueError("Complete-schedule coverage count differs from actual records")
+    encoded = json.dumps(data,sort_keys=True)
+    for field in ('"recipe_id"','"feature_names"','"calibration"','"source_snapshot_pin"','"engine_journal_pin"','"training_cutoff_utc"','"prediction_distribution"','"weights"','"sigmas"','"means"','/home/sagemaker-user','s3://','AKIA','AWS_SECRET_ACCESS_KEY'):
+        if field in encoded:
+            raise ValueError("Private field or path in public snapshot")
+    return checks
+
 if __name__ == "__main__":
-    path = Path(sys.argv[1]) if len(sys.argv) > 1 else Path(__file__).with_name("latest_research_outputs.json")
+    path = Path(sys.argv[1]) if len(sys.argv)>1 else Path(__file__).with_name("latest_research_outputs.json")
     body = path.read_bytes()
-    print(json.dumps({"status": "PASS", "sha256": hashlib.sha256(body).hexdigest(), **validate_public_report(json.loads(body))}, sort_keys=True))
+    print(json.dumps({"status":"PASS","sha256":hashlib.sha256(body).hexdigest(),**validate_public_report(json.loads(body))},sort_keys=True))
