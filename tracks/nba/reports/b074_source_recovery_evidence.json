@@ -1,0 +1,220 @@
+{
+  "actual_owner": {
+    "actual_billed_cost_usd": null,
+    "automatic_promotions": 0,
+    "cost_scope": "Verified-rate whole-instance elapsed-time estimate; not invoice, not a project allocation, and not additive to overlapping pipeline estimates",
+    "elapsed_seconds": 416.1707807040002,
+    "estimated_whole_instance_invocation_usd": 0.29709969622480015,
+    "failure_class": "OUTER_REFRESH_STRICT_JSON_REJECTED_NONFINITE_TIME_POLICY",
+    "finished_at_utc": "2026-11-11T03:11:50.277100Z",
+    "new_estimator_fits": 0,
+    "new_forecasts": 0,
+    "new_historical_evaluations": 0,
+    "observed_concurrent_new_fits": 0,
+    "observed_effective_vcpus": 48,
+    "observed_exit_code": 2,
+    "per_project_cpu_cap": 12,
+    "prior_frozen_fits_authenticated": 776,
+    "progress_bytes": 330065,
+    "progress_records": 53,
+    "release": "B073",
+    "remaining_registered_frozen_tasks": 1552,
+    "return_bytes": 72949938,
+    "return_sha256": "b3f79cf834b3f9b6ec472f8fc8ef85e6d35104e8920d1b928b99c3d4f8a94076",
+    "started_at_utc": "2026-11-11T03:04:54.106626Z",
+    "status": "PARTIAL_RESUMABLE_OWNER_PIPELINE"
+  },
+  "prepared_continuation": {
+    "new_predictive_improvement_claim": false,
+    "owner_execution": "PENDING_MANUAL_OWNER_EXECUTION",
+    "real_NBA_execution_during_preparation": false,
+    "release": "B074",
+    "repair_classes": [
+      "Nullable strict-JSON representation of unbounded policies; finite socket-stall controls remain separate",
+      "Recovery and reuse of authenticated durable lower-layer work after an outer-stage failure",
+      "Finalizer reconciliation of actual current-invocation source work without reattributing old requests",
+      "Explicit admission of preserved source-projection protocol versions with all content and clock pins retained",
+      "Tests through the actual refresh and publication paths using invented fixtures"
+    ],
+    "run_or_stage_elapsed_cutoff_seconds": null
+  },
+  "publication": {
+    "coverage": {
+      "active_research_champion_roles": 44,
+      "all_game_applicable_role_opportunities": 26532,
+      "all_game_current_role_forecasts_available": 2641,
+      "all_game_current_role_forecasts_missing": 23891,
+      "all_game_target_horizon_cells": 7644,
+      "current_champion_forecast_available_views": 2641,
+      "current_champion_forecast_missing_views": 813,
+      "current_role_issue_horizon_classes": {
+        "EARLY_OUTLOOK": 2630,
+        "LATE": 11
+      },
+      "distinct_observed_games": 1274,
+      "distinct_public_selected_issues": 1711,
+      "distinct_public_selected_issues_with_intervals": 1086,
+      "games_in_original_issued_inventory": 157,
+      "latest_at_issue_champion_differs_from_current_views": 775,
+      "latest_at_issue_forecast_available_views": 3416,
+      "observed_games_without_applicable_champion_roles": 68,
+      "official_future_tips_at_report": 1048,
+      "official_games_by_phase": {
+        "ist_championship": 1,
+        "preseason": 67,
+        "regular": 1206
+      },
+      "official_games_by_saved_status": {
+        "FINAL": 222,
+        "LIVE": 3,
+        "SCHEDULED": 1042,
+        "TBD": 7
+      },
+      "official_games_without_original_issues": 1117,
+      "official_resolved_matchups": 1267,
+      "official_schedule_games": 1274,
+      "official_scheduled_start_passed_without_final_observation": 1,
+      "official_unresolved_matchups": 7,
+      "original_issue_games_absent_from_official_inventory": 0,
+      "original_issue_horizon_classes": {
+        "EARLY_OUTLOOK": 2478,
+        "LATE": 7,
+        "NOMINAL": 5
+      },
+      "original_issued_records_recovered": 2490,
+      "original_issued_records_with_intervals": 1563,
+      "selected_champion_role_views": 3454,
+      "separate_secondary_observations": 3
+    },
+    "current_outcomes_used_for_model_selection": false,
+    "evidence_class": "RECOVERED_B073_SCHEDULE_PROJECTION_WITH_PRESERVED_ORIGINAL_ISSUES",
+    "latest_forecast_issue_at_utc": "2026-11-10T22:52:05.759412+00:00",
+    "latest_forecast_source_asof_utc": "2026-11-10T22:50:51.862036+00:00",
+    "new_model_promotions": 0,
+    "new_predictions_during_preparation": 0,
+    "new_projection_pins": {
+      "latest_research_outputs.html": {
+        "bytes": 4440293,
+        "sha256": "42956ed558ae519aeefb1e1416a560f35e45bd5b43649a08a2cc373c2f205c00"
+      },
+      "latest_research_outputs.json": {
+        "bytes": 4421712,
+        "sha256": "e5998004bd983100728418fd94784f6a2570ea3e9f395d7b614c296730cf4a21"
+      }
+    },
+    "new_provider_acquisitions_during_preparation": 0,
+    "newest_actual_owner_release": "B073",
+    "newest_owner_status": "PARTIAL_RESUMABLE_OWNER_PIPELINE",
+    "original_forecasts_modified": 0,
+    "original_owner_emitted_B074_dataset": false,
+    "prediction_rescoring": 0,
+    "preserved_original_component_pins": {
+      "champions": {
+        "bytes": 54484,
+        "sha256": "394ae440d187669569524d224fa5b7d8c742b8be7918b57cf3fbcf03faaa2bd2"
+      },
+      "game_coverage": {
+        "bytes": 1513386,
+        "sha256": "aa2289db976dd2656205ed1b902089d711a47e2f03c432768454fe23748af07a"
+      },
+      "issues": {
+        "bytes": 1010916,
+        "sha256": "2c607c1e88ad608d3674c05d42c2b0ed0fca9a80f2bbd8e3e170eb8681a0482b"
+      },
+      "role_views": {
+        "bytes": 871537,
+        "sha256": "c27aed06b7a1a87cbebafa3ecb63ff20e5480a753b1d579fcb1cf5cff4337ad4"
+      }
+    },
+    "website_deployment_performed": false
+  },
+  "publication_boundary": "Authorized selected rounded NBA role outputs and sanitized aggregate evidence only; private numerical recipes, model bodies, raw feeds, full journals, cloud paths and execution packages excluded.",
+  "published_date_utc": "2026-11-11",
+  "saved_source_work": {
+    "contexts_are_not_estimator_fits": true,
+    "latest_individual_source_clock": "2026-11-11T03:09:18.858015+00:00",
+    "materialized_feature_contexts": [
+      {
+        "eligible_rows": 999,
+        "horizon_minutes": 60,
+        "status": "REBUILT_FROM_OBSERVED_FULL_HISTORY"
+      },
+      {
+        "eligible_rows": 999,
+        "horizon_minutes": 120,
+        "status": "REBUILT_FROM_OBSERVED_FULL_HISTORY"
+      }
+    ],
+    "new_snapshot_official_status_counts": {
+      "FINAL": 222,
+      "LIVE": 3,
+      "SCHEDULED": 1042,
+      "TBD": 7
+    },
+    "saved_schedule_status_changes": {
+      "scheduled_to_final": 1,
+      "scheduled_to_live": 3
+    },
+    "snapshot_finished_at_utc": "2026-11-11T03:09:27.752242+00:00",
+    "source_gaps": [
+      {
+        "date": "2026-11-11",
+        "provider": "NBA_OFFICIAL_CALENDAR",
+        "reason": "Previous request response time bound",
+        "status": "UNAVAILABLE"
+      },
+      {
+        "date": "2026-11-14",
+        "provider": "NBA_OFFICIAL_CALENDAR",
+        "reason": "Previous request response time bound",
+        "status": "UNAVAILABLE"
+      },
+      {
+        "provider": "DRAFTKINGS",
+        "status": "DEFERRED_NO_VERIFIED_ZERO_COST_CURRENT_FEED_ENTITLEMENT"
+      },
+      {
+        "provider": "KALSHI",
+        "status": "OBSERVED_INVENTORY_WITH_ZERO_STRICT_FAIR_QUOTES"
+      },
+      {
+        "provider": "POLYMARKET_US",
+        "status": "OBSERVED_INVENTORY_NO_COMPLETENESS_CLAIM_ZERO_STRICT_FAIR_QUOTES"
+      },
+      {
+        "provider": "POLYMARKET_INTERNATIONAL",
+        "status": "OBSERVED_INVENTORY_NO_COMPLETENESS_CLAIM_ZERO_STRICT_FAIR_QUOTES"
+      }
+    ],
+    "strict_fair_market_quotes": 0
+  },
+  "schema": "sports-edge-lab-nba-b074-source-recovery-evidence-v1",
+  "scope": "Recovered projection of already returned B073 source evidence, preserved selected original NBA issues and champion aggregates, and prepared B074 engineering; no B074 owner execution is claimed.",
+  "source_count_reconciliation": {
+    "basis": "Authenticated returned durable request and lower-layer refresh receipts, exact saved snapshot and newly changed raw-source hashes; no fresh provider calls.",
+    "completed_lower_layer_receipt_verified": true,
+    "downloaded_bytes": 18150218,
+    "network_requests": 25,
+    "new_unique_raw_bytes": 18150218,
+    "original_owner_summary_modified": false,
+    "original_owner_summary_reported_network_requests": 0,
+    "outer_refresh_completed": false,
+    "paid_provider_calls": 0,
+    "recovered_lower_layer_receipt_network_requests": 25,
+    "request_statuses": {
+      "OBSERVED": 23,
+      "UNAVAILABLE": 2
+    },
+    "requests_by_kind": {
+      "KALSHI": 3,
+      "NBA_OFFICIAL_BOX": 1,
+      "NBA_OFFICIAL_CALENDAR": 14,
+      "NBA_OFFICIAL_INJURY_INDEX": 1,
+      "NBA_OFFICIAL_INJURY_PDF": 3,
+      "NBA_OFFICIAL_PBP": 1,
+      "POLYMARKET_INTERNATIONAL": 1,
+      "POLYMARKET_US": 1
+    },
+    "verified_cache_reuses": 50
+  }
+}

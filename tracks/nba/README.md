@@ -4,6 +4,32 @@ Reproducible NBA forecasts, complete released-game inventories, chronological mo
 
 This NBA track belongs to the shared [Sports Edge Lab](../../README.md) repository. Its public material contains sanitized aggregate evidence, selected rounded already-issued research forecasts, complete observed schedule coverage, and invented engineering examples. Exact feature recipes, model weights, source responses, full journals, candidate forecast grids, and execution packages remain private under the [NBA publication boundary](../../docs/PUBLICATION_BOUNDARY.md#selected-nba-research-outputs-november-11-extension).
 
+## November 11 — recovered B073 source work and prepared B074 continuation
+
+**B073 reached the source refresh, made 25 requests and rebuilt two feature contexts, then failed before fitting or issuing forecasts. Its authenticated elapsed time was 6 minutes 56.171 seconds. B074 repairs the two observed failures and preserves the completed source work for reuse; manual owner execution is pending.** This section supersedes the latest-owner statements in the preserved dated history below.
+
+The [season forecast report](reports/latest_research_outputs.html), [complete observed-game data](reports/latest_research_outputs.json) and [source recovery evidence](reports/b074_source_recovery_evidence.json) now include the newest saved B073 schedule observation, finished **November 11 at 03:09:27.752242 UTC**. This is a recovered projection of returned evidence. It is not a dataset emitted by a B074 owner execution. It retains **1,274 official games**, now observed as **222 final, 3 live, 1,042 scheduled and 7 TBD**. One formerly scheduled game became final and three became live in the saved observation. Later time passage does not update those statuses.
+
+Every original selected forecast, interval, champion aggregate and role view is unchanged: **1,711 issue objects, 44 metric roles and 3,454 saved role views**. The newest retained forecast remains **November 10 at 22:52:05.759412 UTC**, with its original source cutoff **22:50:51.862036 UTC**. The later schedule observation does not become a later forecast issue or an input to an old forecast. There are still **1,117 official games without a recovered original issue**, seven unresolved matchups and 24 regular-season slots absent from the saved inventory. Missing predictions remain explicit across every target and horizon.
+
+### What the failed owner run actually completed
+
+The original top-level B073 summary reported zero provider requests because an outer refresh exception occurred before its return value reached the summary. The preserved lower-layer receipt and saved bodies establish **25 requests: 23 observed and 2 unavailable, 50 verified cache reuses, and 18,150,218 downloaded bytes**. No paid provider calls occurred. The audit preserves the original failed summary and reports this reconciliation separately.
+
+The run also materialized **999 eligible rows at T60 and 999 at T120**. These are feature contexts, not estimator fits. B073 completed **zero new fits, forecasts, historical metric evaluations or model promotions**. The **776 previously completed frozen fits** remain authenticated; **1,552 registered frozen tasks** remain. B073's progress log shrank to **330,065 bytes in 53 records**, confirming the preceding logging repair on the actual owner run. The observed host had **48 effective logical CPUs and an NBA cap of 12**; because no new fits started, it supplies no new scientific parallel-throughput result.
+
+Two official calendar requests, for November 11 and November 14, failed under the inherited response time bound. DraftKings still lacks a verified zero-cost current-feed entitlement. Kalshi and the separate Polymarket products returned inventory observations but **zero strict fair-market quotes** were admitted. This recovery does not establish full provider coverage or historical tick-path eligibility.
+
+### Why it stopped and what is ready next
+
+The outer refresh attempted to serialize an infinite time-policy value into strict JSON. Strict JSON correctly rejected it after the durable source work had already completed. A separate publication guard rejected a preserved B072 schedule projection because the B073 adapter expected a renamed protocol. B074 represents unbounded policy values with JSON null, distinguishes finite socket-stall protection from run or stage duration, and admits explicitly supported original projection versions while retaining the exact source, clock and content checks. **No run or stage elapsed-time cutoff is added.**
+
+B074 also recovers authenticated lower-layer refresh receipts for reuse and reconciles durable source requests if a later outer stage fails. Earlier requests retain their original clocks and are counted as reused history rather than new work. Real refresh and publication paths are exercised with invented fixtures during preparation. Local tests establish engineering behavior; owner AWS fitting, throughput, prediction quality and promotion remain unmeasured for B074.
+
+The failed B073 invocation's verified-rate whole-instance cost estimate is **$0.2971**. Actual billed cost is unknown. This estimate is neither an NBA CPU-share allocation nor an amount to add to overlapping pipeline estimates.
+
+The data validator, independent all-cell census and exact-head hosted browser checks are recorded on this NBA-only change's pull request. This source publication does not deploy a website or perform new provider acquisition, fitting, inference or rescoring. The prior season comparisons, failed research, remembered low-loss lead and all dated evidence remain below.
+
 ## November 10 Pacific / November 11 UTC — actual B072 failure and prepared B073 recovery
 
 **B072 ran for 19 minutes 19.627 seconds and exited before new model work: zero fits, forecasts, provider requests or metric evaluations. B073 repairs the observed transport and progress-logging defects; its manual owner execution is pending.** This update supersedes the latest-owner statements in the preserved dated sections below. It does not claim improved model performance from software tests.
