@@ -4,6 +4,52 @@ Reproducible NBA forecasts, complete released-game inventories, chronological mo
 
 This NBA track belongs to the shared [Sports Edge Lab](../../README.md) repository. Its public material contains sanitized aggregate evidence, selected rounded already-issued research forecasts, complete observed schedule coverage, and invented engineering examples. Exact feature recipes, model weights, source responses, full journals, candidate forecast grids, and execution packages remain private under the [NBA publication boundary](../../docs/PUBLICATION_BOUNDARY.md#selected-nba-research-outputs-november-11-extension).
 
+
+## November 11 — authenticated B074 work, recovered issues and prepared B075 repair
+
+**B074 completed 73 estimator fits and issued 196 original early research outlooks across 14 games, then failed while sealing its return. Its 48-CPU host correctly discovered an NBA cap of 12. The failure remains explicit; the completed work and original issue clocks are preserved.** The fit total reconciles 45 native legacy estimator fits and 28 champion estimator fits. Calibration optimizers and synthetic concurrency tasks are counted separately.
+
+The [season forecast report](reports/latest_research_outputs.html) and [selected-output JSON](reports/latest_research_outputs.json) now summarize **2,686 recovered original records** through **1,753 selected public issue objects**, **44 active historical champion roles**, and **3,454 saved role views** across the complete **1,274-game observed official inventory**. The latest recovered issue is **2026-11-11T04:34:10.667171+00:00**, using sources through **2026-11-11T04:28:17.037275+00:00**. The 44 champion-role bodies and saved aggregates are unchanged from the previous public snapshot. The current champion has an authenticated original issue for **2,711 role views**. Publication performs no new prediction, model selection or rescoring.
+
+The original full schedule still has its saved **B073 November 11 03:09:27.752242 UTC** snapshot clock and **222 final, 3 live, 1,042 scheduled and 7 TBD** status observations. A separate source-bound B074 result layer contains 39 saved final observations and confirms four additional finals, producing a latest row-backed display of **226 final, zero identified live, 1,041 scheduled and 7 TBD**. B074 separately reported an aggregate of **226 final, 1 live, 1,040 scheduled and 7 TBD**. Its complete 103 MB schedule body and exact compact schedule projection were absent from the returned package, so the additional live game's identity is unavailable. The display does not guess that identity or rewrite the old schedule's clocks.
+
+Every role's missing forecast remains explicit. There are **1,117 official games without a recovered original issue**, seven unresolved matchups and 24 regular-season slots absent from the saved inventory. A newer source observation never becomes an input to an already-issued forecast, and an older champion's issue does not fill a missing current-champion issue.
+
+Local preparation passed the standalone public validator, six source-separation regression tests, and an independent data-only census covering **28,028 expected metric rows, 7,644 game/target/horizon cells, all 3,454 saved role views and all 1,753 selected issue objects**. Inline JavaScript and the browser acceptance script passed syntax checks. Hosted desktop/mobile browser validation and publication/deployment status must be reported from the exact GitHub revision; local data checks are not a browser or deployment claim.
+
+### Recovered science, remaining failures, and promotion
+
+The full owner invocation lasted **82 minutes 26.28 seconds** and exited with a packaging failure. Alongside the 73 estimator fits it completed **18 calibration fits**, **216 saved-array recovery checkpoints**, **156 historical array evaluations**, and **1,288 saved same-game incumbent comparisons**. These are separate work types. The baseline lane reused **776 fits**, admitted **zero new fits**, and left **1,552 registered tasks deferred by return-size admission**. The 1,302 prediction-frontier season slices were reused, not newly scored. All 20,255 previously indexed paths retain their pins.
+
+The new native comparison produced **32 candidate views and 112 metric comparisons**. Eighty-eight comparisons met the basic support/recipe/stability gates, but **none passed the registered multiplicity-adjusted improvement bound**. No new native role or production model was promoted. The 44 research shadow roles remain. The frozen regular-season T60 roles retain these saved results, with **1,230 games in each season**:
+
+| Metric-specific role | 2024–25 | 2025–26 |
+|---|---:|---:|
+| Winner accuracy, XGBoost | 66.5854% | 69.5935% |
+| Probability log loss, logistic | 0.606708 | 0.595258 |
+| Probability Brier, logistic | 0.209916 | 0.204533 |
+| Margin MAE, selected ensemble | 10.981526 | 11.345493 |
+| Margin RMSE, selected ensemble | 14.046087 | 14.494245 |
+| Total MAE, selected ensemble | 14.749734 | 15.230264 |
+| Total RMSE, separately selected ensemble | 18.461521 | 19.199729 |
+
+These historical results have already been examined for research and selection. They support registered prospective shadow monitoring, not a claim of untouched confirmation. The remembered near-0.40 lead remains **0.426446 reported log loss on two historical postseason games**; the original two-game prediction bodies have not been independently recovered. It is not a verified full-season 0.40 model. Earlier strong candidates remain in the recovery inventory.
+
+The preserved current-season HGB basketball-plus-market reconstructions have **0.548686 T60 log loss with 91/128 correct** and **0.538644 T120 with 90/128 correct**. On the separate 126-game, later-retrieved Kalshi reference cohort, the T60 model had **89 correct versus Kalshi's 90**; T120 had **89 versus 89**. T120 log loss was **0.539754 versus 0.554904**, with a favorable saved paired interval, but only three weekly blocks and exposed retrospective selection. The fresh B074 strict market comparison admitted **zero matched games**. These populations cannot be combined into a new forward win-rate or promotion claim.
+
+Authentic original-issue monitoring now has **five distinct completed games**. The historical T60 and T120 accuracy roles each recorded **4/5 correct** in the comparable early-outlook group, with log losses **0.454632 and 0.432744**. There were 172 scored revisions across those games; revisions do not increase the independent game count. No V6 historical market-response feature or experiment qualified from the available timestamp evidence.
+
+### B075 engineering prepared for the next manual owner run
+
+B075 adopts the exact B074 native, saved-array and paired-comparison caches before recovery. It corrects the misleading fallback fit count, includes older original journals in settled comparisons, and binds historical horizons from their authenticated context headers. The missing horizon metadata had caused 644,520 historical comparison-record rejections; the repaired scorer has not yet run on owner data.
+
+Source normalization now indexes known game identities and authenticates a reusable normalization cache. On invented inputs with 1,274 games and 300 catalog entries, the median normalization time fell from **30.3027 seconds to 0.026307 seconds**, with identical normalized hashes in all three paired repetitions. This is a parser measurement, not a model-fit speedup or owner ETA. Optional catalog collection now follows independent frozen research. Lossless scientific transport, compact report references, measured compressed index size, and source-refresh accounting address the observed return-budget failure. Final owner capacity still requires measurement against the actual saved bodies.
+
+The shared CPU scheduler retains the actual per-project cap and atomic leases. The B074 synthetic benchmark observed at most **seven concurrent tasks**; its frozen lane supplies no observed concurrent scientific fits. B075 introduces **no owner run or stage elapsed-time cutoff**. The existing 1,800-fit, $100 and strict 150 MB return bounds remain. No AWS resource was created, stopped or resized during this preparation.
+
+The verified-rate whole-host estimate for the observed B074 invocation is **$3.5311**. Actual billed cost remains unknown; overlapping stage estimates must not be added. The [sanitized B074 evidence](reports/b075_owner_evidence.json) records work counts, preserved metric cohorts, promotion outcome and precise source gaps. The next canonical B075 execution is prepared; owner execution and its scientific results remain pending. This GitHub update does not deploy a website.
+
+
 ## November 11 — recovered B073 source work and prepared B074 continuation
 
 **B073 reached the source refresh, made 25 requests and rebuilt two feature contexts, then failed before fitting or issuing forecasts. Its authenticated elapsed time was 6 minutes 56.171 seconds. B074 repairs the two observed failures and preserves the completed source work for reuse; manual owner execution is pending.** This section supersedes the latest-owner statements in the preserved dated history below.

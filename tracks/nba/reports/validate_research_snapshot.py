@@ -190,7 +190,55 @@ def validate_public_report(data):
             raise ValueError("Private field or path in public snapshot")
     return checks
 
-if __name__ == "__main__":
-    path = Path(sys.argv[1]) if len(sys.argv)>1 else Path(__file__).with_name("latest_research_outputs.json")
-    body = path.read_bytes()
-    print(json.dumps({"status":"PASS","sha256":hashlib.sha256(body).hexdigest(),**validate_public_report(json.loads(body))},sort_keys=True))
+
+_validate_schedule_projection=validate_public_report
+
+def validate_public_report(data):
+    if data.get('schema')!='sports-edge-lab-nba-public-source-separated-research-outputs-v4':
+        raise ValueError('Unexpected source-separated schema')
+    base=dict(data);base['schema']='sports-edge-lab-nba-public-schedule-complete-research-outputs-v3'
+    checks=_validate_schedule_projection(base);asof=timestamp(data['evidence_as_of_utc'])
+    result_fields={'status','home_points','away_points','ended_at_utc','observed_at_utc','available_at_utc',
+        'published_at_utc','owner_release','evidence_track','original_historical_possession_claim','new_score_calculation'}
+    attached=[];new_finals=[]
+    for gid,game in data['games'].items():
+        result=game.get('result_observation')
+        if result:
+            if set(result)!=result_fields or result['status']!='FINAL':raise ValueError('Result field allowlist changed')
+            if result['original_historical_possession_claim'] is not False or result['new_score_calculation'] is not False:
+                raise ValueError('Result evidence scope changed')
+            if any(type(result[k]) is not int or result[k]<0 for k in ('home_points','away_points')):
+                raise ValueError('Invalid saved final score')
+            if (not timestamp(result['observed_at_utc'])<=timestamp(result['available_at_utc'])<=asof or
+                    result['ended_at_utc'] is not None and timestamp(result['ended_at_utc'])>timestamp(result['observed_at_utc'])):
+                raise ValueError('Saved result information clock changed')
+            attached.append(gid)
+            if game['source_status']!='FINAL':new_finals.append(gid)
+        expected_status=result['status'] if result else game['source_status']
+        expected_source='SAVED_RESULT_OBSERVATION' if result else 'SAVED_SCHEDULE_OBSERVATION'
+        expected_clock=result['observed_at_utc'] if result else game['schedule_source_asof_utc']
+        if (game['last_confirmed_status'],game['last_confirmed_status_source'],game['last_confirmed_status_asof_utc'])!=(expected_status,expected_source,expected_clock):
+            raise ValueError('Latest status is not supported by its row')
+    official={gid:g for gid,g in data['games'].items() if g['schedule_membership']=='CANONICAL_OFFICIAL'}
+    row_counts=dict(sorted(collections.Counter(g['last_confirmed_status'] for g in official.values()).items()))
+    if data['coverage']['official_games_by_latest_row_backed_status']!=row_counts:
+        raise ValueError('Latest row-backed status denominator changed')
+    recovery=data['result_observation_recovery'];aggregate=recovery.get('source_reported_status_counts')
+    differences={key:{'row_backed':row_counts.get(key,0),'source_aggregate':aggregate.get(key,0)}
+        for key in sorted(set(row_counts)|set(aggregate or {})) if aggregate is not None and row_counts.get(key,0)!=aggregate.get(key,0)}
+    if data['coverage']['latest_row_and_source_aggregate_difference']!=differences:
+        raise ValueError('Aggregate-only status discrepancy hidden')
+    if recovery['status']!='NO_SEPARATE_RESULT_OVERLAY_SUPPLIED':
+        if recovery['result_rows_attached']!=len(attached) or recovery['newly_confirmed_final_game_ids']!=sorted(new_finals):
+            raise ValueError('Result overlay row denominator changed')
+        if (recovery['full_B074_schedule_projection_reconstructed'] is not False or
+                recovery['source_clock_rewritten'] is not False or recovery['original_forecast_values_or_clocks_changed'] is not False):
+            raise ValueError('Result overlay misrepresents source or original forecasts')
+        if aggregate is not None and sum(aggregate.values())!=recovery['source_reported_official_games']:
+            raise ValueError('Saved aggregate denominator changed')
+    return dict(checks,latest_row_backed_status_counts=row_counts)
+
+if __name__=='__main__':
+    path=Path(sys.argv[1]) if len(sys.argv)>1 else Path(__file__).with_name('latest_research_outputs.json')
+    body=path.read_bytes()
+    print(json.dumps({'status':'PASS','sha256':hashlib.sha256(body).hexdigest(),**validate_public_report(json.loads(body))},sort_keys=True))
