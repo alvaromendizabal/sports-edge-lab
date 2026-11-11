@@ -1,72 +1,104 @@
-# NFL · complete season forecasts and preserved research
+# NFL · latest owner evidence, selected forecasts and preserved research
 
-[All-game interactive review](season_review_n069.html) · [Selected rounded forecasts](selected_forecasts_n069.json) · [Actual N068 / prepared N069 evidence](2026-11-11-n068-actual-n069-prepared.json) · [Current forecast status](CURRENT_FORECAST_STATUS.md) · [Current model card](CURRENT_MODEL_CARD.md)
+[All-game interactive review](season_review_n070.html) · [Selected rounded forecasts](selected_forecasts_n070.json) · [Actual N069 evidence](2026-11-11-n069-actual-n070-prepared.json) · [Forecast status](CURRENT_FORECAST_STATUS.md) · [Model card](CURRENT_MODEL_CARD.md)
 
-## Latest authenticated state
+## Latest authenticated execution
 
-**The supplied N068 run failed before provider acquisition or science. It added zero fits and zero forecasts.** All 18 declared payloads authenticate, but its diagnostic return does not establish full historical source closure. N067 remains the latest authenticated scientific run. N069 is a distinct prepared successor; an actual N069 owner execution has not been supplied.
+**N069 refreshed sources but produced zero new model fits and zero new forecasts.** Its 27-minute, 16.600-second owner invocation ended with a resource refusal when the current scientific stage tried to start. N067 remains the latest authenticated scientific result. The selected forecasts and historical leaders on this page are preserved N067 evidence, with earlier evidence classes kept separate.
 
-The original refusal was `LeaseDeferred / CPU_PRESSURE_OR_SHARED_RESERVATIONS`. Its exact rejected resource snapshot is absent. The earlier warmup snapshot reported 48 effective CPUs and a 12-CPU project cap; it does not prove CPU exhaustion. Source review reproduced a very-short-interval counter bug and a guard-reason reporting bug. Packaging then independently failed because a durable publisher had not initialized while the old finalizer tried to inventory 339,143 historical files.
+The executed N069 package matches the delivered canonical executable. All **228 declared payloads and 229 archive members** pass checksum, length, CRC and unique-member authentication. The return is a bounded diagnostic: it does not establish complete current-invocation or historical-source closure. Its return digest is `70baa328ce44e8564f7fccd752da59bed8ab0f1140626b07d0a30d4daa663755`.
 
-N069 repairs stable observation and exact guard reasons, preserves mixed-version shared leases, adds current-first incremental evidence packaging and direct-home resource-failure returns, and replaces report-wide historical rescans with authenticated current roots and pinned historical references. It adds prior-origin OOF complementary pair and disagreement ensembles, selected-role all-game exports, and complete component training/readiness clocks. All original N068 and N067 payloads remain byte-exact. Scientific fits and stages have no artificial elapsed deadline; source cutoffs, resource/lease safeguards and the existing budget remain.
+The run began November 10 at **6:26:36 p.m. Pacific** and reached the recorded termination at **6:53:53 p.m. Pacific** (November 11, 02:26:36–02:53:53 UTC). The refusal combined CPU measurement confirmation and reported IO pressure. The finalizer also refused IO work. Its detailed failure-time measurement body was omitted from the diagnostic ZIP, so the supplied bytes do **not** prove CPU or storage saturation. The earlier snapshot discovered **48 effective CPUs and a 12-CPU project ceiling**, but no native model fit started and no 12-worker owner benchmark was produced.
 
-## Every season game is visible
+Historical recovery recorded **744,744 full hash reads**, **24.18 GB read**, and 1,631,653 additional same-invocation hash reuses. Its elapsed collection interval was **1,299.805 seconds**. That interval is not profiler-measured hashing CPU time, but it occupied much of the invocation before scientific progress. Repeated ancestry work remains a material efficiency failure.
 
-The saved census contains **272 games**: **136 completed**, **112 confirmed future games with current selected original issues**, and **24 future games whose official kickoff time remains TBD**. There are **448 current selected rows**. The view exposes winner probabilities, expected home margin and total points, original clocks, selected role aliases and every unavailable role.
+The saved whole-instance time estimate is **$1.168351 at $2.57/hour**. It is not an actual bill and excludes storage, requests, provider charges, other-project attribution and idle time outside this invocation. There is no measured N069 model throughput from which to predict scientific completion.
 
-The preserved union covers **248 games** across distinct evidence classes. It includes genuine original issues, qualified timestamped early snapshots and historical reconstructions. These panels overlap; their union is not a prospective scoring cohort. The remaining 24 games have no admitted selected forecast in the export. The provider's placeholder time is suppressed. Primary historical leaders and operational fallbacks remain separate; unavailable leaders are never relabeled with a fallback's output.
+N070 now contains implemented and locally tested changes addressing this actual failure. Its owner execution remains pending, and it has produced **zero new real forecasts or demonstrated NFL model improvements**. N067's scientific evidence remains unchanged. The [prior N069 preparation page](README_N069_PREPARED_SNAPSHOT.md) remains as a dated record; passing its software checks did not establish successful owner research.
 
-DraftKings, Kalshi and Polymarket quote values are not carried in this selected-output export. The page states each source gap explicitly. The earlier [market and historical evidence review](review.html) retains its original dated provider comparisons and coverage. Opening either page does not refresh scores, injuries, markets or predictions.
+## N070 implementation prepared for owner execution
 
-## The earlier probability and accuracy results
+The next runner changes the execution path as well as the reporting. These behaviors have been implemented and exercised locally; a later actual owner return must establish their effect on real throughput and forecasting.
 
-No exact **0.40 full-season NFL log loss** was located in the enumerated saved banks, including all 819 original N019 winner scorecard rows. This bounded search is not a claim that every historical source has been recovered.
+- **Targeted historical recovery:** verify the exact prior-return identities and the selected states, inputs and dependencies needed by current work. Older science and its original proofs remain preserved, without requiring every unrelated historical body to be hydrated and rehashed before an urgent forecast can run.
+- **Selected-champion early issuance:** attempt qualified retained champion outputs after the core schedule/team/player refresh, before optional market collection and broader historical work. Only selected roles and their admitted dependencies enter expensive current fitting. Unavailable inputs remain explicit gaps; later captures never backfill an earlier issue.
+- **Shared-leased native fitting:** independent selected fitting tasks now run concurrently under the existing shared CPU/RAM coordinator, with one native thread per process. Local invented-data tests observed actual optimizer overlap at widths **1, 2 and 4**, with identical predictions, scientific states and serialized model bytes across all three widths. This is software and deterministic-output evidence, not measured AWS utilization or NFL improvement. The owner ceiling remains 12 on an effective 48-CPU host, subject to current shared pressure and stricter limits.
+- **Fresh resource confirmation:** current Linux pressure-counter deltas distinguish a stale averaged signal, partial IO pressure and a full stall. An initially unknown CPU measurement receives confirmation. Safe compute can be throttled while IO-heavy work remains deferred; genuine pressure, memory, disk and shared-owner guards remain enforced.
+- **Critical failure receipts:** first terminal and latest complete admission decisions take priority in partial returns. Their measurement bodies and exact refusal reasons remain available even when large old recovery reports exceed diagnostic limits.
+- **All nine metric-role comparisons:** winner accuracy, log loss and Brier; margin MAE, RMSE and marginal CRPS; and total MAE, RMSE and marginal CRPS each retain their own comparison reference. Comparisons require matched games, target, orientation, outcome rules and horizon, with separate annual support and full-versus-matched denominators. Week-grouped uncertainty and repeated-comparison controls are applied to eligible evidence. Missing distribution evidence remains missing; no comparison automatically establishes independent promotion.
 
-The closest concrete saved early-forward control scored **13/15 correct and 0.456838 log loss**. It has timestamped rows, but durable original delivery and exact legacy retraining are unproved. It is a 15-game qualified snapshot, not a full-season champion. Another saved control scored 12/15 and 0.468755; the equal combination scored 13/15 and 0.487875. All remain preserved.
+Local tests use invented inputs. They do not create new real model fits, forecasts, historical scorecards or source rights. Final package identity and the complete sealed acceptance tally are recorded separately after sealing; neither is asserted by this preparation note. There is still no measured real-owner completion ETA.
 
-The remembered weekly neural vector remains **51/77 and 0.624092500 log loss** against the same latest saved labels. Its six fits actually completed after all 77 evaluated games, so it retains exposed retrospective replay status. It provides no prediction for the other 59 completed games. Missing original weights/ordered inputs remain explicit eligibility blockers rather than permission to substitute a generic network.
+## What the source refresh completed
 
-On the preserved **119-game** Kalshi panel, the accuracy combination scored **79 correct**, versus Kalshi's **76**. That combination's log loss was **0.646823**, while the distinct probability combination scored **77 correct and 0.629080**. Kalshi T1 and T2 remain separate at **0.644579** and **0.644377**. This archived comparison has its original horizon and conditional-non-tie qualifications; it is not new prospective performance.
+The early schedule and core-source capture completed before the extended historical recovery. The later source pass retained **465 normalized market observations** across two providers and explicit coverage gaps. The following are acquisition counts, not fitted models or valid predictive comparisons.
 
-## Same selected candidates on 2024 and 2025
+| Source or target | Actual N069 observation | Qualification |
+|---|---|---|
+| Schedule | 272 games; 136 completed, including one tie | No final-score or confirmed-time change from the previous selected public census |
+| Kalshi | 164 normalized rows across 27 games | 55 target cells had observations without full admission; 26 had no usable observations |
+| Polymarket | 301 normalized rows across 27 games | All 81 target cells had observations without full target admission |
+| DraftKings | 15 paid requests; 16 provider calls | Complete live coverage unproved; game-specific availability is not inferred from a global request count |
+| Qualified current winner benchmark | 0 rows | Observations did not establish an admissible two-sided, equivalent current winner comparison |
+| Player state | 9,455 valid rows retained; 9 quarantined | Missing identities are explicit and are not treated as healthy or unavailable players |
+| Official league current injury body | Failed season/week check | A mismatched body cannot become the requested week's report |
+| Announced-quarterback context | Rejected after its game's kickoff | Later observation cannot enter the earlier pregame forecast |
 
-Each row tracks its own pooled-selected candidate through both completed seasons. These are the latest actual N067 selected objective scores, not a newly fitted N069 result. The complete role table and same-candidate additional metrics are available in the [interactive review](season_review_n069.html#leaders).
+The main source counters record 468 provider dispatch attempts, 1,402 new private-store uploads and 1,490 full readbacks. Early current capture, direct official calls and the paid adapter have separately defined counters; they are not added into a fabricated combined total. The private source return preserves their original definitions.
+
+The page shows **latest schedule observation** separately from **original forecast-input source time**. Refreshing a score, injury or quote does not revise an issued forecast. Historical exact-time live checkpoints and new score/clock-normalized response experiments were not executed in N069. R13–R20 remain unfinished research with missing source histories, not validated improvements.
+
+## All current-season games and selected outputs
+
+The observed census has **272 games**: **136 completed**, **112 confirmed future games with preserved current selected issues**, and **24 future games with official kickoff time TBD**. There are **448 selected current rows**. Every game remains visible with winner, expected home margin and total target availability. No provider placeholder timestamp is displayed as a confirmed kickoff.
+
+The preserved union covers **248 games** across genuine original issues, qualified early snapshots and historical reconstructions. Those panels overlap and are never pooled into a prospective season score. Primary historical metric leaders remain separate from operational fallbacks. An unavailable primary leader is not relabeled with a fallback output. No N069 source refresh created a new selected prediction.
+
+DraftKings, Kalshi and Polymarket have separate coverage labels on every game. Raw quotes, provider payloads and candidate grids are excluded. The [earlier selected view](season_review_n069.html) and [dated market research review](review.html) retain their original evidence and clocks. Opening a page does not refresh a source or model.
+
+## The earlier probability and accuracy findings
+
+No exact **0.40 full-season NFL log loss** was found in the six enumerated saved banks. This bounded search does not establish that every historical artifact has been recovered. All 819 original N019 winner scorecard rows were retained; that bank's lowest score was **0.575083 on 280 games in 2024**, under its original exposed policy.
+
+The favorable **0.456838** result belongs to a **15-game** saved early feedback snapshot: **13 correct**, margin MAE **8.828520**, total MAE **9.679069**. Its timestamped probabilities remain preserved. Durable original delivery and exact legacy retraining were unproved; it cannot establish whole-season performance or independent promotion. The other saved controls scored 12/15 with 0.468755 and 13/15 with 0.487875.
+
+The remembered weekly neural vector remains **51/77 with 0.624092500 log loss** against its same latest saved labels. Its six fits actually completed after those games. It therefore retains exposed retrospective replay status. It supplies no predictions for the other 59 completed games. Missing original weights and ordered inputs remain exact-revival blockers; a generic replacement would not reproduce that model.
+
+The archived **119-game Kalshi comparison** preserves **79 correct for the accuracy combination versus 76 for Kalshi**. That combination's log loss was **0.646823**. The distinct probability combination scored **77 correct with 0.629080**. Kalshi's T1 and T2 scores were **0.644579** and **0.644377**. The original conditional-non-tie and horizon qualifications remain; the separate 118-game panel is not substituted into these counts. These are archived comparisons, not a newly scored N069 season.
+
+## Selected candidates across completed 2024 and 2025
+
+Each row follows the candidate selected for that objective through both completed seasons. The rows can represent different candidates. These are actual N067 frozen-development results; N068 and N069 added no research scores.
 
 | Selected objective | 2024 | 2025 | Pooled | Games |
 |---|---:|---:|---:|---:|
 | Winner accuracy | 71.93% | 63.73% | 67.84% | 569 |
-| Winner log-loss | 0.614125 | 0.639330 | 0.626705 | 569 |
+| Winner log loss | 0.614125 | 0.639330 | 0.626705 | 569 |
 | Winner Brier | 0.206877 | 0.229407 | 0.218122 | 569 |
-| Point-margin absolute-error | 10.043549 | 10.215094 | 10.129322 | 570 |
-| Point-margin squared-error | 13.034695 | 13.032274 | 13.033484 | 570 |
-| Point-margin distribution | 7.326400 | 7.315591 | 7.320996 | 570 |
-| Total-points absolute-error | 9.955067 | 10.729888 | 10.342478 | 570 |
-| Total-points squared-error | 12.900565 | 13.488984 | 13.198054 | 570 |
-| Total-points distribution | 7.285066 | 7.606911 | 7.445988 | 570 |
+| Point-margin MAE | 10.043549 | 10.215094 | 10.129322 | 570 |
+| Point-margin RMSE | 13.034695 | 13.032274 | 13.033484 | 570 |
+| Point-margin marginal CRPS | 7.326400 | 7.315591 | 7.320996 | 570 |
+| Total-points MAE | 9.955067 | 10.729888 | 10.342478 | 570 |
+| Total-points RMSE | 12.900565 | 13.488984 | 13.198054 | 570 |
+| Total-points marginal CRPS | 7.285066 | 7.606911 | 7.445988 | 570 |
 
-Winner support excludes the tied target; point targets retain 570 games. Marginal CRPS does not establish a coherent joint score distribution. Comparable threshold-event probabilities, joint CRPS and interval promotion require their own target, source and distribution evidence.
+The one tie is excluded from the binary winner denominator and retained for point targets. Marginal CRPS is not evidence of a coherent joint score distribution. These seasons are **development and repeated-selection exposed**, the registered queue was incomplete, and **independent production promotion is not established**. Current outcomes cannot turn them into untouched confirmation.
 
-**Independent production promotion is not established.** The seasons are repeatedly examined development evidence, the registered queue was incomplete, and eligible older contenders were not all admitted. Selected candidates remain forward-shadow roles. A smaller log-loss number from a different cohort or issue policy cannot establish an independent season champion.
+### Older point discoveries remain visible
 
-## Engineering acceptance and remaining owner evidence
+These are descriptive minima within their saved banks, under their original policies. Different game coverage prevents direct ranking against the N067 table without a matched comparison. The margin and total minima can belong to different models.
 
-The sealed successor declares **1593 portable tests: 1456 retained and 137 new**. Current sealed-suite status: **PASS_EXACT_SEALED_PACKAGE**. Portable tests use invented data and produce no real NFL fit or issue credit.
+| Saved bank / season | Games | Preserved margin MAE | Preserved total MAE |
+|---|---:|---:|---:|
+| N022 / 2024 | 272 | 9.820087 | 9.683160 |
+| N022 / 2025 | 284 | 9.789125 | 10.422096 |
+| N026 / 2024 | 285 | 9.960954 | 9.875074 |
+| N026 / 2025 | 285 | 10.045175 | 10.634129 |
 
-A substantive local HistGradientBoosting workload executed 12 invented native fits at each width. Actual optimizer overlap was 1/2/4. Dispatch wall time was 38.594/23.675/16.934 seconds, with exact prediction and serialized-state equality: 1.00/1.63/2.28 times the sequential wall-time rate. This is a measured local benchmark, not owner AWS throughput or a 12-worker benchmark. The actual N069 coordinator also passed 2023-OOF ensemble fitting, frozen 2024/2025 selection, champion-only current forecasts and an exact rerun with zero optimizer starts.
+Archived 2026 panels remain separate: N022's margin leader was **9.564046** and total leader **10.858596** over 119 games; N026's margin leader was **9.511259** and total leader **11.153212** over 120 games. These are saved monitoring comparisons, not new independent selections or full 136-game current-season scores.
 
-Historical market-response R13–R20 machinery and adversarial leakage gates are preserved. Exact historical tick/possession checkpoints remain incomplete. The failed N068 run produced no new findings for those experiments. Missing paths are not zeros, five-minute snapshots are not precise two-minute checkpoints, and target-game live movement cannot enter its own pregame predictor.
+## Scientific and publication status
 
-The private owner package, handoff and return archives are not published here. Canonical prepared package SHA256: `3180861d9eeb241dd23e84d432a4706aea781fff3710c39b87b30b6b5ee2e956`. Current provider refresh, genuine N069 forecasts, eligible original-model refits, actual AWS utilization/cost and a throughput-based owner ETA still require the manual owner execution and authenticated return. This publication does not deploy the separate website snapshot.
+Preserve all prior positive and negative results, original forecasts and failed feature combinations. Recipe-compatible revival requires exact training/source evidence. Efficient frozen comparisons and genuine prior-origin OOF ensemble work precede metric-specific champion selection; only qualified champions and their precommitted components advance to expensive rolling fits. No target game's live path can change its pregame features or prediction.
 
-## Reproduce the public view
-
-```bash
-python tracks/nfl/selected_review_page.py --check
-python -m unittest discover -s tracks/nfl -p 'test_*.py' -v
-```
-
-The NFL workflow also opens the saved page in Chromium at desktop/mobile widths, exercises filters/role selectors/downloads and reloads it. The original review and its tests remain intact. Local and hosted results are recorded separately in the PR.
-
-## Preserved earlier evidence
-
-The complete previous README remains byte-for-byte in [README_N068_PREPARED_SNAPSHOT.md](README_N068_PREPARED_SNAPSHOT.md), including links to earlier model, source, market, execution and uncertainty studies. Earlier results and negative findings were not removed. This update follows the NFL-only [publication boundary](../../docs/PUBLICATION_BOUNDARY.md).
+This revision publishes the actual failure evidence, preserved selected all-game outputs and the implemented N070 changes awaiting owner execution. Public source preparation, GitHub merge, hosted page deployment and owner scientific execution are distinct events. The next actual owner return must establish fresh forecast issuance, measured fitting concurrency, historical comparisons and any promotion evidence. Public presentation remains research only.
