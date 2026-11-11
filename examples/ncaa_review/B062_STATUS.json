@@ -1,0 +1,281 @@
+{
+  "schema": "sel.ncaa.public.b062.evidence.v1",
+  "project": "ncaa_basketball",
+  "release": "B062",
+  "evidence_asof_utc": "2026-11-11T06:29:49.601626+00:00",
+  "scope": [
+    "ncaam",
+    "ncaaw"
+  ],
+  "canonical_source": {
+    "bytes": 18126079,
+    "sha256": "b1d87b63f6755af7059212961a9d0fa60a79fb7ead0c4001bfa1c27c2c517503",
+    "status": "FINAL_VALIDATED_SOURCE"
+  },
+  "preparation": {
+    "owner_execution_performed": false,
+    "new_owner_fits": 0,
+    "new_issued_forecasts": 0,
+    "new_promotions": 0,
+    "aws_speedup_measured": false,
+    "source_qualification_upgraded": false,
+    "original_issued_values_modified": false
+  },
+  "publication": {
+    "status_at_preparation": "PREPARED_LOCAL_NOT_COMMITTED",
+    "head_commit": null,
+    "merged": false,
+    "deployed": false
+  },
+  "actual_owner": {
+    "release": "B060",
+    "status": "RESOURCE_DEFERRED_PARTIAL_WORK_PRESERVED",
+    "elapsed_seconds": 8101.620773345003,
+    "process_usage_wall_seconds": 8101.526073082001,
+    "accounted_cpu_seconds": 5043.558846,
+    "average_accounted_cpu_cores": 0.6225442960379585,
+    "requested_max_cores": 12,
+    "twelve_concurrent_fits_observed": false,
+    "source_stage_seconds": 5415.842637,
+    "verified_fit_lower_bounds": {
+      "target_estimator": 9,
+      "scalar_calibration": 3,
+      "empirical_residual": 6
+    },
+    "complete_new_physical_fit_count": null,
+    "reused_historical_target_fits": 108
+  },
+  "b061_launch_failure": {
+    "boundary": "BEFORE_ARCHIVE_CODE",
+    "reason": "SOURCE_SIZE_OR_TYPE_MISMATCH",
+    "observed_shell_exit": 1,
+    "local_file_observed_pin": null,
+    "owner_entrypoint_started": false,
+    "model_fits_started": 0,
+    "canonical_file_pin_verified_in_preparation": true,
+    "local_file_cause_determined": false
+  },
+  "current_frozen_reference": {
+    "season_end_year": 2027,
+    "mode": "EXPOSED_RETROSPECTIVE_RECONSTRUCTION",
+    "original_issue_credit": 0,
+    "completed_games": 814,
+    "independent_official_finals_verified": false,
+    "original_publication_vintages_verified": false,
+    "rows": [
+      {
+        "league": "ncaam",
+        "games": 415,
+        "correct_winners": 337,
+        "accuracy": 0.8120481927710843,
+        "log_loss": 0.39480662720368886,
+        "brier": 0.12688327066747543,
+        "margin": {
+          "mae": 10.749813139663539,
+          "rmse": 13.735164547905798,
+          "bias": -3.5719696504846414
+        },
+        "total": {
+          "mae": 13.96827807001922,
+          "rmse": 17.6091803052415,
+          "bias": -2.728446789667569
+        }
+      },
+      {
+        "league": "ncaaw",
+        "games": 399,
+        "correct_winners": 340,
+        "accuracy": 0.8521303258145363,
+        "log_loss": 0.318015307605635,
+        "brier": 0.10017893982274186,
+        "margin": {
+          "mae": 12.582279887678009,
+          "rmse": 16.350503786281152,
+          "bias": -3.4751394036264767
+        },
+        "total": {
+          "mae": 14.42040097194618,
+          "rmse": 18.010008679019215,
+          "bias": 1.3518462574021362
+        }
+      }
+    ]
+  },
+  "preserved_issues": {
+    "mode": "ORIGINAL_ISSUES_WITH_LATER_OBSERVED_LABELS",
+    "preserved_games": 32,
+    "preserved_target_outputs": 96,
+    "scored_games": 30,
+    "scored_target_outputs": 90,
+    "unscored_games": 2,
+    "unscored_reason": "UNRESOLVED_RECORDED_TIP_TIME_ALIASES",
+    "independent_official_finals_verified": false,
+    "rows": [
+      {
+        "league": "ncaam",
+        "games": 16,
+        "correct_winners": 16,
+        "accuracy": 1.0,
+        "log_loss": 0.17669122487255026,
+        "brier": 0.041296552412613444,
+        "margin": {
+          "mae": 13.524883805431688,
+          "rmse": 16.333914476585754,
+          "bias": -9.051295186570096
+        },
+        "total": {
+          "mae": 11.3106917373466,
+          "rmse": 13.468171259087306,
+          "bias": -1.5363368385307634
+        }
+      },
+      {
+        "league": "ncaaw",
+        "games": 14,
+        "correct_winners": 10,
+        "accuracy": 0.7142857142857143,
+        "log_loss": 0.44518998446140173,
+        "brier": 0.15962258566262202,
+        "margin": {
+          "mae": 14.834829486198092,
+          "rmse": 20.723722236152202,
+          "bias": -5.000075322906417
+        },
+        "total": {
+          "mae": 11.628331877994839,
+          "rmse": 14.1948273744223,
+          "bias": -1.82308048069239
+        }
+      }
+    ]
+  },
+  "historical_leaders": {
+    "mode": "EXPOSED_COMPLETED_SEASON_RESEARCH",
+    "paired_cohorts_reverified_from_aggregates": false,
+    "same_model_across_metric_columns": false,
+    "source_native_fit_jobs": 108,
+    "rows": [
+      {
+        "league": "ncaam",
+        "season_end_year": 2025,
+        "games": 5758,
+        "accuracy": 0.7269885376866968,
+        "log_loss": 0.5214815135867005,
+        "brier": 0.17645292984627586,
+        "margin_mae": 8.979033825234044,
+        "margin_rmse": 11.484606185214982,
+        "total_mae": 12.929473421062825,
+        "total_rmse": 16.520374748166137
+      },
+      {
+        "league": "ncaam",
+        "season_end_year": 2026,
+        "games": 5749,
+        "accuracy": 0.7201252391720299,
+        "log_loss": 0.5238873160433043,
+        "brier": 0.1778399915620509,
+        "margin_mae": 9.162618730992724,
+        "margin_rmse": 11.60028301302509,
+        "total_mae": 13.687858425800115,
+        "total_rmse": 17.268824574154003
+      },
+      {
+        "league": "ncaaw",
+        "season_end_year": 2025,
+        "games": 5280,
+        "accuracy": 0.7689393939393939,
+        "log_loss": 0.45211932742946104,
+        "brier": 0.15041605997115878,
+        "margin_mae": 9.691400394381871,
+        "margin_rmse": 12.240095478214267,
+        "total_mae": 12.57927939843677,
+        "total_rmse": 15.92629891862978
+      },
+      {
+        "league": "ncaaw",
+        "season_end_year": 2026,
+        "games": 5621,
+        "accuracy": 0.7680128091086995,
+        "log_loss": 0.45473728543321623,
+        "brier": 0.1510691738106431,
+        "margin_mae": 9.671339695146882,
+        "margin_rmse": 12.270989387703258,
+        "total_mae": 12.597916463977597,
+        "total_rmse": 15.99313198559537
+      }
+    ]
+  },
+  "metric_role_extension": {
+    "status": "PREPARED_OWNER_EXECUTION_PENDING",
+    "league_count": 2,
+    "metrics_per_league": [
+      "winner_accuracy",
+      "probability_log_loss",
+      "probability_brier",
+      "margin_mae",
+      "margin_rmse",
+      "total_mae",
+      "total_rmse"
+    ],
+    "registered_role_count": 14,
+    "full_historical_row_selection_executed": false,
+    "promotion_authority": false,
+    "current_season_outcomes_select_roles": false,
+    "unavailable_roles": [
+      "comparable_spread_cover_probability",
+      "joint_distribution_crps",
+      "interval_quality"
+    ]
+  },
+  "source_inventory": {
+    "unit": "SOURCE_RECORDS_NOT_CERTIFIED_UNIQUE_GAMES",
+    "observed_records": 3457,
+    "normalized_espn_records": 2498,
+    "unmatched_official_candidates": 934,
+    "unresolved_candidates": 25,
+    "normalized_observed_completed_records": 1165,
+    "original_reference_scored_games": 814,
+    "certified_complete_season_denominator": false
+  },
+  "unissued_previews": {
+    "games": 1139,
+    "public_prediction_values": null,
+    "original_issue_credit": 0
+  },
+  "market_comparisons": {
+    "kalshi": {
+      "qualified_current_season_result": null
+    },
+    "historical_matched_provider": "polymarket_international",
+    "historical_matched_games": 265,
+    "historical_market_comparison_is_new_b062_result": false,
+    "historical_tick_histories_complete": false,
+    "r13_r20_new_real_data_findings": 0
+  },
+  "publication_boundary": {
+    "raw_provider_records": false,
+    "private_recipes": false,
+    "model_bodies": false,
+    "private_cloud_locations": false,
+    "execution_packages": false,
+    "unissued_prediction_values": false
+  },
+  "evidence_sources": [
+    "authenticated B060 owner return",
+    "preserved B061 recovery aggregates",
+    "B062 recalculation of preserved aggregate evidence"
+  ],
+  "local_validation": {
+    "tests": 3624,
+    "passed": 3623,
+    "failures": 0,
+    "errors": 0,
+    "skipped": 1,
+    "seconds": 770.2098663659999,
+    "source_bytes_unchanged": true,
+    "scope": "LOCAL_INVENTED_FIXTURES_NOT_OWNER_SCIENCE",
+    "native_external_jupyter_kernel_success": false,
+    "actual_twelve_cpu_owner_benchmark": false,
+    "older_protected_scientific_identities_preserved": 7
+  }
+}

@@ -1,3 +1,13 @@
+## B062 continuation and preserved scientific results — November 11, 2026 UTC
+
+[Read B062 findings](B062_EVIDENCE.md), [inspect the exact status](B062_STATUS.json), or [reconstruct the saved executed notebook and offline interactive report](B062_SAVED_REPORTS.md). The report displays all 3,457 saved source records, separate original replay and issued predictions, exact same-game comparisons, four completed-season scorecards, six preserved selected roles and the fourteen-role extension awaiting owner execution.
+
+The interactive report filters **814 completed-game B003 replay triplets** and **30 matched original-issue triplets** separately. Two original issues with unresolved tip-time changes remain visible and unscored. **1,139 unissued future previews have no public prediction values.** Source inventory and later prediction-reconciliation clocks remain distinct.
+
+B062 repairs the failed pre-archive launch path, a captured concurrent native-import startup hazard, fit preparation latency and large-return delivery. It preserves the strict ancestral resume reader, original predictions and seven older scientific identities. The next owner execution must establish actual shared-resource throughput, new forecasts and any scientific improvement. No B062 owner execution or promotion is claimed here.
+
+The prior [B061 interactive report](B061_EVIDENCE_REPORT.html) and its data exports remain dated preserved evidence. Source publication does not refresh games, prices, models or deployment.
+
 ## B061 evidence recovery — November 11, 2026 UTC
 
 [Open the interactive report](B061_EVIDENCE_REPORT.html) for saved current-season frozen-model results, exact-game comparisons with original issues, 2024–25/2025–26 exposed historical leaders, the full observed source census and unresolved coverage. [Read the evidence note](evidence/B060_ACTUAL_B061_PREPARED.md) for qualifications and the actual B060 interruption. Data files under `data/` retain rounded display values; full-precision private predictions determine headline metrics.

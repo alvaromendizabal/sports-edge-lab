@@ -1,3 +1,13 @@
+## NCAA basketball B062: execution repaired, earlier models retained — November 11, 2026 UTC
+
+**B060 remains the latest actual owner run; B062 is prepared and locally validated.** B061's reported launch stopped before archive code. The new continuation provides measured source diagnostics, earlier durable fit output, a native-library startup fix, fourteen separate metric roles, and lossless authenticated return splitting. The original checkpoint authority and seven older scientific identities are preserved. Actual twelve-core throughput and fresh future forecasts still require the next owner execution.
+
+The preserved current-season frozen replay reports **men: 0.394807 log loss, 337/415 correct; women: 0.318015, 340/399 correct**. These are exposed reconstructions. The latest saved exports retain **814 completed-game replay triplets**, **30 matched original-issue triplets**, two unscored original issues and six preserved selected roles. All 1,139 unissued future previews stay blank. The 3,457-record inventory is not a certified unique-game denominator.
+
+[B062 findings and execution evidence](examples/ncaa_review/B062_EVIDENCE.md) · [Machine-readable status](examples/ncaa_review/B062_STATUS.json) · [Reconstruct the executed notebook and interactive report](examples/ncaa_review/B062_SAVED_REPORTS.md) · [Preserved issued forecasts](examples/ncaa_review/data/ncaa_preserved_selected_issues_scored_b061.json) · [Saved selected roles](examples/ncaa_review/data/ncaa_metric_role_status_b061.json)
+
+No new promotion, fresh provider comparison, owner training result or website deployment is implied. Earlier dated evidence below remains preserved.
+
 ## NCAA basketball: frozen model recovered and prior forecasts scored — November 11, 2026 UTC
 
 The preserved original frozen reference now has authenticated current-season replay scores: **men 0.394807 log loss and 337/415 correct winners (81.20%); women 0.318015 and 340/399 (85.21%)**. Its original weights are unchanged. These are exposed retrospective reconstructions, with independent official-final and historical publication-vintage qualification still unresolved. The improvement over an earlier smaller saved cohort is not a newly trained model improvement.
