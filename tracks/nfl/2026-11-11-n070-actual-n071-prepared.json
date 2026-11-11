@@ -1,0 +1,154 @@
+{
+  "actual_owner_return": {
+    "actual_cpu_capacity": 48,
+    "compute_estimate_is_actual_bill": false,
+    "compute_time_estimate_usd": 0.22472282253217515,
+    "current_invocation_closure": true,
+    "diagnostic_payload_authentication": "1,621 payloads and 1,622 archive members verified",
+    "elapsed_scope": "Reported owner summary interval; later ZIP publication excluded",
+    "elapsed_seconds": 314.7868331190002,
+    "external_final_return_completion_checked": false,
+    "failure_pressure_interpretation": "Measured brief IO stall; external cause and persistent saturation unproved",
+    "failure_pressure_snapshot_available": true,
+    "finished_at_utc": "2026-11-11T04:09:32.763213+00:00",
+    "full_historical_source_closure": false,
+    "last_scientific_release": "N067",
+    "new_forecast_issues": null,
+    "new_meta_fits": null,
+    "new_native_fits": null,
+    "new_owner_science_acceptance": false,
+    "observed_native_fit_concurrency": 0,
+    "project_cpu_cap": 12,
+    "public_export_failure": "RETAINED_SOURCE_VERSION_PREFIX_MISMATCH",
+    "quote_rate_whole_instance_usd_hour": 2.57,
+    "release": "N070",
+    "reported_resource_refusal": "EXTERNAL_IO_PRESSURE",
+    "return_sha256": "ba2f126123f8672a7941c7972b348b82c3f202dc5409d714bd9672a0e2f5559b",
+    "scientific_result": "NO_NEW_VERIFIED_MODEL_COMPARISON_OR_PROMOTION",
+    "selected_model_failure": "BUNDLED_SELECTION_METADATA_CONTRACT_MISMATCH",
+    "selected_model_phase_failures": 2,
+    "started_at_utc": "2026-11-11T04:04:17.976386+00:00",
+    "status": "RESOURCE_DEFERRED_RESUMABLE",
+    "unknown_totals_preserved": true,
+    "verified_new_fit_minimum": 0,
+    "verified_new_issue_minimum": 0
+  },
+  "automatic_promotion": false,
+  "counts": {
+    "completed_games": 136,
+    "current_selected_games": 112,
+    "current_selected_rows": 448,
+    "distinct_selected_model_aliases": 9,
+    "future_games": 136,
+    "games_with_any_preserved_evidence": 248,
+    "games_without_prediction_evidence_in_this_projection": 24,
+    "official_time_tbd_games": 24,
+    "primary_metric_roles": 9,
+    "rows_after_display_cutoff_not_shown": 0,
+    "schedule_games": 272,
+    "unmapped_nonselected_issue_rows_not_shown": 0
+  },
+  "latest_source_refresh": {
+    "all_sources_complete": false,
+    "draftkings": {
+      "all_current_coverage_complete": false,
+      "paid_requests": 15,
+      "provider_calls": 16
+    },
+    "model_predictions_refreshed": false,
+    "new_normalized_market_rows": 464,
+    "observed_schedule_from_utc": "2026-11-11T04:05:21.230082+00:00",
+    "observed_schedule_through_utc": "2026-11-11T04:05:29.628542+00:00",
+    "outcome_or_confirmed_schedule_changes_from_previous_display": 0,
+    "provider_coverage": [
+      {
+        "all_target_coverage_complete": false,
+        "games": 27,
+        "normalized_rows": 164,
+        "provider": "kalshi"
+      },
+      {
+        "all_target_coverage_complete": false,
+        "games": 27,
+        "normalized_rows": 300,
+        "provider": "polymarket"
+      }
+    ],
+    "qualified_current_market_winner_baseline_rows": 0,
+    "source_gaps": [
+      "Official league current injury body did not match the requested season/week.",
+      "An announced-quarterback context was observed after its game kickoff and excluded.",
+      "Nine player rows lacked usable identities and were quarantined; 9,455 valid rows retained.",
+      "Available Kalshi and Polymarket observations did not establish all target and outcome-rule requirements.",
+      "DraftKings refresh used 15 paid requests and 16 provider calls; complete live coverage was not established.",
+      "Exact historical live checkpoints and qualified score/clock residual studies were not executed in N070."
+    ]
+  },
+  "new_scientific_scores": 0,
+  "original_forecast_values_changed": 0,
+  "package_sha256": "3eefcac898dd7514772d0b5576e09c8f9f7f4ebf62b7048a30d41ebcdddf291e",
+  "prepared_evidence": {
+    "build_status_receipt": {
+      "bytes": 4450,
+      "filename": "N071_BUILD_STATUS_PREPUBLICATION.json",
+      "sha256": "72f8bfd8c017e5e836147825f73c12b01c7b9b1da9e7b226dbd739173f1a4ed3"
+    },
+    "new_real_forecasts": 0,
+    "new_real_model_fits": 0,
+    "owner_executed": false,
+    "package": {
+      "bytes": 66960624,
+      "filename": "sports_edge_lab_nfl_n071.pyz",
+      "sha256": "3eefcac898dd7514772d0b5576e09c8f9f7f4ebf62b7048a30d41ebcdddf291e"
+    },
+    "release": "N071",
+    "sealed_test_receipt": {
+      "bytes": 8607,
+      "filename": "N071_EXACT_PACKAGE_SELFTEST.json",
+      "sha256": "51e8814754e56434773eb4513daccced2b50449121093e7d8cff5762f1bb165d"
+    },
+    "sealed_tests": {
+      "errors": 0,
+      "failures": 0,
+      "skipped": 0,
+      "tests_run": 1791
+    },
+    "status": "PREPARED_AND_SEALED_TESTED_OWNER_EXECUTION_PENDING"
+  },
+  "prepared_status": "PREPARED_AND_SEALED_TESTED_OWNER_EXECUTION_PENDING",
+  "prepared_successor": "N071",
+  "prior_selected_projection": {
+    "bytes": 2830468,
+    "filename": "selected_forecasts_n070.json",
+    "sha256": "ccbf190f1f2f6be1d011a3b3103ecb510c556c46805e567514ae162c31bbaaa4"
+  },
+  "public_page": {
+    "bytes": 1924490,
+    "filename": "season_review_n071.html",
+    "sha256": "6009329bbabc78902f6e60daad19f2d6002da6c3623a4e9e5f42ce15385cf062"
+  },
+  "schema": "nfl.n071.public-actual-n070-evidence.v1",
+  "selected_projection": {
+    "bytes": 2831254,
+    "filename": "selected_forecasts_n071.json",
+    "sha256": "30d800ade91534810c3d9d84aa315d72d95524f3226f5e2b1362823e802659b8"
+  },
+  "source_counters": {
+    "additional_schedule_injury_dispatch_attempts": 6,
+    "blocked_before_transport": 0,
+    "direct_official_dispatch_attempts": 95,
+    "early_current_counts_separate_not_double_credited": true,
+    "early_current_public_requests": 21,
+    "final_current_counts_separate_not_double_credited": true,
+    "final_current_public_requests": 0,
+    "http_failures": 7,
+    "new_s3_uploads": 1402,
+    "original_store_request_counter": 367,
+    "provider_http_dispatch_attempts": 468,
+    "reused_requests": 20,
+    "s3_full_readbacks": 1484,
+    "s3_readback_bytes": 156943189
+  },
+  "source_counters_not_all_additive": true,
+  "source_publication_is_not_deployment": true
+}

@@ -1,8 +1,8 @@
 # NFL selected metric roles · November 10, 2026 Pacific
 
-[Annual scorecards and all-game view](season_review_n070.html#leaders) · [Selected rounded outputs](selected_forecasts_n070.json) · [Current research evidence](README.md) · [Earlier card preserved](CURRENT_MODEL_CARD_N069_SNAPSHOT.md)
+[Annual scorecards and all-game view](season_review_n071.html#leaders) · [Selected rounded outputs](selected_forecasts_n071.json) · [Current research evidence](README.md) · [Earlier card preserved](CURRENT_MODEL_CARD_N070_SNAPSHOT.md)
 
-**N067 remains the latest authenticated scientific run. Actual N068 and N069 each produced zero new fits and forecasts.** N069 captured newer source observations but did not reach model comparisons or champion retraining. Its prepared complementary research therefore receives no execution or improvement credit.
+**N067 remains the latest verified scientific phase. N070 added no verified model comparisons, forecasts or promotions.** Its current-model counters remain unknown, with verified minima of zero. Both selected-model calls failed on a catalog metadata mismatch. The later I/O refusal is separate from that implementation fault.
 
 Nine primary objectives map to seven distinct candidates; two additional fallback candidates make nine distinct selected public aliases. Each annual scorecard follows the same objective-selected candidate through 2024 and 2025. These seasons are **development exposed** and repeatedly examined; the registered queue was incomplete. No independent production promotion is established.
 
@@ -20,14 +20,18 @@ Nine primary objectives map to seven distinct candidates; two additional fallbac
 
 The one tie remains in point evaluation and is excluded from binary winner scoring. Different metrics can select different candidates. Marginal CRPS does not establish a coherent joint score distribution, a qualified threshold-event model or prediction-interval promotion. Unavailable primary outputs remain missing even if a fallback issued an original forecast.
 
-Earlier favorable results are preserved with their scope: 0.456838 log loss over a qualified 15-game snapshot; 0.624092500 over a 77-game neural replay whose fits happened later; and the archived 119-game accuracy comparison of 79 correct versus Kalshi's 76. None is silently relabeled a new full-season independent champion. The [README](README.md) retains their precise qualifications and older margin/total minima.
+Earlier favorable results are preserved with their scope: 0.456838 log loss over a 15-game saved early snapshot with incomplete original-issue proof; 0.624092500 over a 77-game neural replay whose fits happened later; and the archived 119-game accuracy comparison of 79 correct versus Kalshi's 76. None is silently relabeled a new full-season independent champion. The [README](README.md) retains their precise qualifications and older margin/total minima.
 
-## Implemented N070 model-work controls
+## Historical revival and successor evidence
 
-N070's historical comparison path now preserves **all nine objective-specific references** in the table above. It does not substitute the accuracy leader for the probability-loss leader or use one point model as every metric's reference. Eligible comparisons match game/opponent identity, target and orientation, settlement, horizon and information cutoffs; they retain separate season support and full-versus-matched cohort sizes. Week-grouped uncertainty and repeated-comparison corrections accompany the results. Missing CRPS or interval evidence remains unavailable, and development comparisons cannot create independent promotion.
+The next continuation retains distinct references for all nine winner, point-error and marginal-distribution objectives. Eligible comparisons must match game/opponent identity, target orientation, outcome rules, forecast horizon and information cutoffs, while reporting annual/full/matched support. Clustered uncertainty and repeated-comparison controls cannot convert exposed development seasons into independent confirmation.
 
-Targeted historical recovery verifies source-bound selected states and required dependencies while preserving unrelated prior science by its authenticated records. Qualified retained champions are attempted after the early core refresh. Independent selected native fits run under shared leases with controlled native threads; only admitted selected roles and precommitted dependencies receive expensive current fitting.
+The old catalog's selected model definitions and content pins remain preserved. N070 failed because its reuse wrapper treated nonbundled metadata references as bundled selection inputs. It did not demonstrate that those models had disappeared or that their previous scores had worsened. A production-shaped source-map preflight and exact reference binding are required before the successor's fitting begins.
 
-Local tests on invented data demonstrated real concurrent optimizer work at widths **1, 2 and 4**, with identical prediction values, scientific states and serialized model bytes. Fresh CPU/IO pressure confirmation and prioritized complete denial receipts preserve meaningful resource and failure evidence. These tests establish implementation behavior; they do not demonstrate an AWS speedup or a real-sport metric improvement.
+No approximately .40 full-season model has been established by the bounded recovered evidence. Earlier narrow-cohort results and lower point-error minima remain priority revival candidates. Missing original weights and ordered feature evidence remain exact-replay blockers. They are not grounds to discard the research or to give a replacement model its identity.
 
-Exact eligible recipes, negative experiments, earlier-origin OOF ensembles and the no-target-game-future rule remain preserved. **Zero new real forecasts or model-promotion results were produced by this preparation.** N067's original scorecards and champion identities remain unchanged. Final package identity and the complete sealed test tally will be bound separately; actual N070 owner execution is still pending.
+N071 is successor preparation; actual owner execution and new scientific performance are pending. Only selected metric-specific champions and admitted precommitted components enter expensive rolling fits. The preserved scorecards, original issues and promotion gates remain unchanged. The public update performs no model inference or new outcome rescoring.
+
+## Exact N071 prepared package
+
+The canonical prepared executable is **sports_edge_lab_nfl_n071.pyz** (66,960,624 bytes), SHA-256 `3eefcac898dd7514772d0b5576e09c8f9f7f4ebf62b7048a30d41ebcdddf291e`. Its sealed local acceptance receipt reports **1791 tests**, **0 failures** and **0 errors**. These are implementation checks with synthetic fixtures and read-only saved-evidence admission. Actual N071 owner execution, new forecasts, model performance and observed AWS fit concurrency remain unproved. This source update is prepared for repository review; its GitHub commit/merge and any website deployment require their own receipts.
