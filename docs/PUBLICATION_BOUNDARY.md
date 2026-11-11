@@ -68,3 +68,14 @@ The current champion's available original issue and the latest champion-at-issue
 This scope excludes complete immutable journal archives, candidate-level prediction grids, private recipe identifiers, calibration parameters, feature transforms, model bodies, raw provider feeds or tick histories, private storage paths, credentials and execution packages. It creates no new provider redistribution right. Per-game values are rounded only for display; no headline metric is recalculated from rounded public values. Source code publication, website deployment and source refresh remain separate events.
 
 The extension applies only to NBA selected-role analytical outputs. It does not change any NFL, FBS or NCAA basketball scientific/publication policy, relicense historical research, or create a wagering interface.
+
+
+## Selected NFL all-game research outputs: November 11 extension
+
+The owner explicitly requested the latest NFL predictions for upcoming and current-season games and the latest champions on GitHub. The integration owner reviewed current main and active PRs and applied this NFL-only extension. It permits public game identities and saved schedule/result facts, selected already-issued winner/margin/total outputs, rounded derived probabilities and point centers, original source/model/issue clocks, selected metric-role aliases, saved same-candidate annual and pooled aggregates, and complete unavailable-role/TBD/source-gap reasons.
+
+Previously selected historical reconstructions and qualified timestamped early snapshots may be displayed in separately labeled panels. A reconstruction fitted after kickoff never receives original issue credit. A timestamp without proven durable original delivery remains qualified. A current operational fallback cannot be relabeled as the unavailable primary historical leader. Current outcomes cannot select published historical champions or rewrite issued predictions. Failed later invocations preserve earlier authenticated outputs without calling them newly issued.
+
+This extension excludes complete immutable forecast journals, candidate-level grids, exact private recipe identifiers, active transforms or calibration parameters, model bodies, raw provider/tick arrays, private cloud paths, credentials and owner execution archives. It creates no new provider redistribution right or license. Rounded display values never recompute headline metrics; mixed original/snapshot/reconstruction panels never become a combined prospective score. Research-only presentation remains non-wagering.
+
+The extension applies only to selected NFL analytical outputs and preserves every other track's publication scope and dated evidence. Source publication, website deployment and provider refresh remain separate events.

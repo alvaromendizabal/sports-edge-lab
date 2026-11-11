@@ -1,3 +1,19 @@
+# Latest selected NFL forecast evidence · November 11, 2026 UTC
+
+[Complete season view](season_review_n069.html) · [Selected rounded output](selected_forecasts_n069.json) · [Current NFL evidence](README.md)
+
+The latest authenticated scientific output remains N067. The supplied actual N068 invocation failed before provider acquisition, fitting or forecast issuance; it adds **zero** forecasts. This update publishes preserved source-bound outputs and prepares N069 engineering. It does not claim a new owner run.
+
+The saved 2026 census has **272 games: 136 completed, 112 future games with current selected original issues, and 24 future games with official kickoff time TBD**. There are **448 current selected rows**, covering winner, margin and total targets across the 112 confirmed future games. Primary metric leaders and operational fallbacks remain separate. The primary winner accuracy/log-loss/Brier leaders have no admitted current output in this saved run; a selected market-free fallback supplies the displayed original winner forecast.
+
+Across all evidence classes, **248 of 272 games** have some preserved forecast or reconstruction. The panels retain original issues, qualified timestamped early snapshots and late-fitted reconstructions separately. This union is not a prospective season-performance denominator. Source and original issue times appear on every game card. No provider quote is inserted into the selected export; DraftKings, Kalshi and Polymarket remain explicit separate gaps there.
+
+The HTML is offline and contains the exact rounded JSON projection. It is tested for filtering, role availability, all-game counts, private-field exclusion and desktop/mobile reopen rendering. GitHub publication, a hosted deployment and an owner data refresh are separate events.
+
+---
+
+## Preserved earlier status (unchanged text)
+
 # Reading forecast status and market lines
 
 **Latest dated update:** [N042 current rolling and injury research](N042_RESEARCH_UPDATE.md) adds separately labeled original, raw shadow and raw current rolling streams. Earlier snapshots below remain unchanged.
