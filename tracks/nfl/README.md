@@ -1,4 +1,29 @@
-# NFL · latest owner evidence, selected forecasts and preserved research
+# NFL · latest execution and preserved model evidence
+
+[Latest all-game review](season_review_n074.html) · [Retained selected forecasts](selected_forecasts_n073.json) · [Actual N073 status](2026-11-11-n073-actual-n074-continuation.json) · [Model card](CURRENT_MODEL_CARD.md)
+
+## N073 stopped before the intended modeling work
+
+**The November 11 N073 owner run failed to verify any new model fits or forecasts. The latest authenticated selected forecasts remain the N072 issues: 772 selected rows for 112 confirmed upcoming games, with all 272 season games visible.** This publication retains those predictions and their original clocks. N073's smaller 448-row fallback export does not replace the richer earlier evidence.
+
+N073 ran from **1:28:13 to 1:35:45 p.m. Pacific on November 11, 2026**, taking **452.140 seconds (7m 32s)**. An urgent-phase directory error prevented dispatch; a cache-scope error blocked both main and final-refresh dispatch; the restored neural-model worker was launched through a path the interpreter could not execute inside the packaged archive. Main and final stages have explicit pre-dispatch zero-work receipts. Whole-run totals remain **unknown**, with **zero verified new fits or issues**, because the other terminal accounting is incomplete. A local acceptance suite had passed before this run; it did not cover these owner-shaped failures. No research-completion or promotion claim is made.
+
+The run did refresh sources: **466 normalized Kalshi/Polymarket rows** (164/302), a separate DraftKings capture, official schedule and original-model source inputs. These records are not admitted training examples or new forecasts. The current winner comparison bridge still has **zero qualified probabilities**, and historical response studies R13–R20 were **not executed**. Sixteen paid calls used 74 known credits; the final reported balance was 4,931,969. The **$0.322778** whole-instance compute-time estimate excludes storage, requests, providers, idle time and allocation among projects; it is not an AWS bill.
+
+## Forecast and champion continuity
+
+The latest saved season census remains **136 completed games, 112 confirmed future games and 24 official kickoff times TBD**. The preserved forecast view retains **18 primary metric/horizon roles and nine operational fallbacks**. Missing primary-role outputs stay missing. N073 produced no evidence that could legitimately replace the historical leaders, alter original issue times or promote a new model.
+
+The [model card](CURRENT_MODEL_CARD.md) retains exact-candidate 2024 and 2025 accuracy, log loss, Brier, margin and total results. Strong original Torch/TF models remain visible beside newer selections. The remembered approximately **0.40 full-season NFL log loss remains unauthenticated**; N073 did not resolve that missing provenance or evaluate the old models on the complete current season. DraftKings, Kalshi and Polymarket remain separate comparators with explicit unsupported targets and cutoffs.
+
+N074 is the V8 engineering continuation. Its owner execution and scientific results are pending. It must repair these actual entry failures, reuse authenticated completed fits, recover historical market data before duplicate requests, and demonstrate useful shared-CPU concurrency. Prepared or tested code is not owner-run model improvement.
+
+Public source publication does not update the separately hosted Site. Only selected rounded outputs, saved scores and aggregate execution evidence are included.
+
+<details>
+<summary>Preserved N072 actual / N073 prepared evidence</summary>
+
+# N072 evidence recorded before the N073 owner run
 
 [All-game interactive review](season_review_n073.html) · [Latest selected forecasts](selected_forecasts_n073.json) · [Actual N072 evidence](2026-11-11-n072-actual-n073-prepared.json) · [Forecast status](CURRENT_FORECAST_STATUS.md) · [Model card](CURRENT_MODEL_CARD.md)
 
@@ -58,3 +83,5 @@ N073 is the next engineering continuation. It repairs partial-run accounting, ho
 Public source contains selected rounded forecasts and aggregate evidence only. Raw feeds, weights, private recipes, complete candidate grids, cloud paths and owner archives are excluded. GitHub publication, website deployment and scientific execution are separate events. Public presentation remains research only.
 
 Earlier evidence remains available: [N071 actual / N072 prepared record](README_N072_SNAPSHOT.md), [prior selected view](season_review_n072.html), [N070 actual / N071 prepared record](README_N071_SNAPSHOT.md), and [dated market review](review.html).
+
+</details>
