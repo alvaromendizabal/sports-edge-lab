@@ -79,3 +79,11 @@ Previously selected historical reconstructions and qualified timestamped early s
 This extension excludes complete immutable forecast journals, candidate-level grids, exact private recipe identifiers, active transforms or calibration parameters, model bodies, raw provider/tick arrays, private cloud paths, credentials and owner execution archives. It creates no new provider redistribution right or license. Rounded display values never recompute headline metrics; mixed original/snapshot/reconstruction panels never become a combined prospective score. Research-only presentation remains non-wagering.
 
 The extension applies only to selected NFL analytical outputs and preserves every other track's publication scope and dated evidence. Source publication, website deployment and provider refresh remain separate events.
+
+## Selected NCAA basketball all-game research outputs: November 11 extension
+
+The owner explicitly requested the latest NCAA basketball predictions for upcoming and current-season games and the latest champions on GitHub. This NCAA men/women-only extension permits public game identities, saved schedule/result facts, selected already-issued winner/margin/total outputs, rounded derived probabilities and point estimates, original source/model/issue clocks, metric-role aliases, saved aggregate metrics and complete unavailable-role/source-gap reasons. It also permits the observed all-game inventory when forecast values are unavailable, with its true report time and incomplete denominator disclosed.
+
+Original issues, exposed retrospective reconstructions and newly issued rolling forecasts remain separate. Missing selected-role outputs stay blank; an older issue does not become a current champion's issue. This reporting permission does not authorize automatic model promotion or re-date any source observation.
+
+Complete immutable forecast journals, candidate grids, exact active private recipes/transforms, calibration parameters, model bodies, raw provider/tick records, private cloud addresses, credentials and owner execution packages remain excluded. This extension applies only to NCAA basketball reporting and creates no new provider redistribution right, license or wagering interface. Other sports' policies remain unchanged.
