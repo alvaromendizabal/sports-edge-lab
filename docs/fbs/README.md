@@ -1,3 +1,15 @@
+# FBS · actual V062 research and forecast continuity
+
+[**Open all 888 current-season games →**](latest-games-v063.html) · [Actual owner and model comparison](V063_LATEST_GAMES_AND_OWNER_2026-11-11.md) · [All six forecast layers](latest-games-v063.csv) · [Rounded evidence](latest-games-v063.json.gz)
+
+The latest authenticated V062 owner completed **36 new frozen fits / 33,336 outputs** and reused 36 completed cases. Its 19 new comparison cards preserve the old selected references: all 84 new-fit/season/primary-metric comparisons favored those restored controls. All 250 native probability variants retain unchanged metrics on the same 301-game panel. **Zero metric champions were authorized.**
+
+The source capture at **11:24:15–11:24:46 p.m. Pacific on November 10** records **688 finals, 145 future timed games and 55 unresolved kickoffs**. All 145 current-origin baseline refresh tasks failed exact-existing-state lookup. The actual V062 ledger retains 119 future originals, omits 26 earlier originals and selects an older issue for 14 more games. A separately labeled authenticated V061 archive preserves all 145 earlier future issues with their original clocks; it receives no new V062 issuance or refresh credit. All six layers and explicit gaps remain downloadable.
+
+The partial exit preserved a resumable checkpoint without a recorded application exception. Full research, refreshed forecast coverage and promotion remain incomplete. This is a draft publication of actual V062 evidence, not a V063 owner result or a deployed website. Earlier dated research and pages remain below.
+
+---
+
 > **Latest actual FBS owner — November 10, 6:26 p.m. Pacific (November 11, 02:26 UTC):** [All 888 games and all 145 future baseline forecasts](latest-games-v062.html) · [Actual V061 research, restored controls and current monitoring](V062_LATEST_GAMES_AND_OWNER_2026-11-11.md). V061 completed 36 new frozen fits and 250 saved-probability evaluations. None of the new alternatives beat their restored selected references on the matched main metrics. Forty new forecast contexts update already-covered games; 105 immutable issues were reused. Zero rolling champions were authorized. The run returned a bounded resumable checkpoint with no recorded application error. Earlier dated reports remain below.
 
 > **Latest complete future baseline coverage — November 11, 01:29 UTC capture:** [All 888 games and all 145 future baseline forecasts](latest-games-v061.html) · [Actual V060 output and V061 correction](V061_LATEST_GAMES_AND_OWNER_2026-11-11.md). Forty issues are genuinely new; 105 retain their earlier issue clocks. No new model promotion.
