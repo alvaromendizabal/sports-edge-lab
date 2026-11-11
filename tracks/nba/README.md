@@ -5,6 +5,44 @@ Reproducible NBA forecasts, complete released-game inventories, chronological mo
 This NBA track belongs to the shared [Sports Edge Lab](../../README.md) repository. Its public material contains sanitized aggregate evidence, selected rounded already-issued research forecasts, complete observed schedule coverage, and invented engineering examples. Exact feature recipes, model weights, source responses, full journals, candidate forecast grids, and execution packages remain private under the [NBA publication boundary](../../docs/PUBLICATION_BOUNDARY.md#selected-nba-research-outputs-november-11-extension).
 
 
+## November 11 — B075 returned no new fits or forecasts; prior science preserved
+
+**The authenticated B075 invocation exited 3 after 48 minutes 12.73 seconds, with zero new NBA estimator fits, zero new forecast issues, zero newly scored frontier slices and zero promotions.** The [B076 review of the actual B075 owner evidence](reports/b076_owner_evidence.json) records the failure and preserves the preceding work. B074's 73 fits and 196 issues are still B074 work; this later return does not receive those counts.
+
+The main blockage was already present before model admission: the measured scientific return inventory was **89,568,817 bytes** against an **87,728,146-byte allowance**, so all **1,552 pending frozen tasks** were deferred without attempting a new fit. The invocation reused **776 frozen fits** and **1,302 frontier slices** and made **38 source requests**. It spent **24 minutes 44.68 seconds** in eight full return-inventory reconciliations. Two issue stages separately reported a native-thread admission failure, recovery reported an ambiguous refresh clock, and sealing again exceeded the return budget. These are execution and transport failures, not evidence that the pending models performed badly.
+
+The observed host had **48 effective vCPUs** and a **12-token NBA cap**. No model fits overlapped. The separate synthetic benchmark requested 1/2/4/8/12 workers but observed at most eight concurrent synthetic tasks; it does not demonstrate 12-fit throughput or a model speedup. Time-weighted host CPU telemetry averaged **2.551%** over the recorded pipeline interval. The external receipt estimates **$2.065085 for the whole-host invocation** using the verified rate and measured interval; actual billed cost and NBA-only cost allocation are unknown. The overlapping internal estimate is not added again.
+
+### Latest recoverable season display
+
+The [season report](reports/latest_research_outputs.html) and [selected-output JSON](reports/latest_research_outputs.json) retain all **1,274 observed official game identities**, **2,686 recovered original records**, **1,753 selected public issue objects**, **44 historical shadow roles**, and **3,454 saved role views**. The current champion has **2,711 available role views**; **743 are missing** in the saved issue-game inventory, and **23,821 of 26,532 applicable role opportunities** are missing across the whole observed season. **1,117 official games have no recovered original issue.** Seven unresolved matchups and 24 unobserved regular-season slots remain explicit.
+
+The public review adds one exactly identified saved final observation: **OKC 103 at POR 123**, observed by the B075 owner at **2026-11-11 17:55:42.066367 UTC**. The earlier 39 result overlays remain unchanged. Latest row-backed status is now **227 final, 1,040 scheduled and 7 TBD**, agreeing with B075's saved aggregate. The complete newer schedule and prepared owner-publication bodies were not physically included in the return. Accordingly, the earlier B073 schedule values keep their original clocks; this review does not claim to reconstruct all B075 schedule changes or fetch new provider data.
+
+All original selected issue objects, champion bodies, role views and game/target coverage objects retain their independently checked pre-review digests. The latest original issue remains **2026-11-11 04:34:10.667171 UTC**, from B074, with forecast sources through **04:28:17.037275 UTC**. The B075 execution time does not re-date those forecasts.
+
+### Models and promotion remain separately qualified
+
+The registered T60 roles retain the full regular-season evidence below, **1,230 games per season**. They are the same selected recipes in both columns, rather than a new minimum chosen separately from each season.
+
+| Registered research role | 2024–25 | 2025–26 |
+|---|---:|---:|
+| Winner accuracy, XGBoost | 66.5854% | 69.5935% |
+| Winner log loss, logistic | 0.606708 | 0.595258 |
+| Winner Brier, logistic | 0.209916 | 0.204533 |
+| Margin MAE, preserved OOF ensemble | 10.981526 | 11.345493 |
+| Margin RMSE, preserved OOF ensemble | 14.046087 | 14.494245 |
+| Total MAE, precommitted ensemble | 14.749734 | 15.230264 |
+| Total RMSE, separately selected ensemble | 18.461521 | 19.199729 |
+
+These already-examined historical results qualify registered prospective shadow roles; they do not establish untouched confirmation or authorize automatic production promotion. The near-0.40 lead is still **XGBoost T60 log loss 0.426446 over two historical postseason games**, authenticated at the earlier report level. The underlying paired forecasts have not been independently recovered. A two-game result cannot establish the user's broader full-season 0.40 claim, and the earlier candidate remains a recovery item.
+
+The separate preserved current-season HGB basketball-plus-market reconstruction has **90/128 correct winners and 0.538644 log loss at T120**. On the later-retrieved **126-game Kalshi bid/ask-midpoint cohort**, both model and reference have **89 correct**, with model log loss **0.539754** versus **0.554904** and Brier **0.182735** versus **0.188500**. There are ten model-only correct and ten Kalshi-only correct outcomes. This is exposed retrospective evidence across three weekly blocks, not independent forward superiority. B075's separate stricter reference comparison has only **six distinct matched games across 44 saved-view rows**; these populations remain separate.
+
+Historical market-response R13–R20 still has **zero new fitted experiments and zero materialized feature columns** because no source-qualified historical quote-and-play population was admitted. Missing source clocks and tick histories remain blockers. Proposed feature definitions, preserved negative experiments and synthetic concurrency checks do not count as successful model research.
+
+This update prepares NBA-only sanitized reporting. It performs no new fitting, inference, source acquisition, metric rescoring or automatic promotion. GitHub review/merge and website deployment remain separate events; exact revision evidence determines their status. Earlier dated NBA evidence follows unchanged.
+
 ## November 11 — authenticated B074 work, recovered issues and prepared B075 repair
 
 **B074 completed 73 estimator fits and issued 196 original early research outlooks across 14 games, then failed while sealing its return. Its 48-CPU host correctly discovered an NBA cap of 12. The failure remains explicit; the completed work and original issue clocks are preserved.** The fit total reconciles 45 native legacy estimator fits and 28 champion estimator fits. Calibration optimizers and synthetic concurrency tasks are counted separately.
@@ -1248,4 +1286,3 @@ No new B071 real NBA fitting, inference, source refresh, rescoring or production
 Historical market-response R13–R20 remains source-blocked: the accepted record has **0 strictly qualified response quotes and 0 event-clock records**. The **99,372 venue/recency cells** are a missingness inventory, not materialized predictive features. Raw and score/clock-adjusted historical response cannot yet be compared empirically. Missing licensed tick histories and exact checkpoint clocks remain explicit; no synthetic values fill them.
 
 The public files contain selected rounded derived issues, real source/issue clocks, role coverage and coarse champion-family/metric summaries. Complete journals, recipe identifiers, tuned parameters, weights, exact feature transforms, raw feeds, private cloud paths and owner executable/return packages remain private under the [NBA publication extension](../../docs/PUBLICATION_BOUNDARY.md#selected-nba-research-outputs-november-11-extension). This snapshot is research-only and non-wagering. A repository commit is separate from a website deployment or a fresh owner execution.
-

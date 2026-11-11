@@ -1,0 +1,315 @@
+{
+  "actual_owner_release": "B075",
+  "cpu_evidence": {
+    "cpu_scope": "Host-wide diagnostic over the 2420.187219-second pipeline telemetry interval, not NBA-exclusive billing.",
+    "effective_vcpus": 48,
+    "observed_peak_concurrent_model_fits": 0,
+    "per_project_cap": 12,
+    "real_model_speedup_demonstrated": false,
+    "reported_host_cpu_time_weighted_percent": 2.551087,
+    "synthetic_benchmark_observed_concurrency": [
+      1,
+      2,
+      4,
+      8,
+      8
+    ],
+    "synthetic_benchmark_requested_workers": [
+      1,
+      2,
+      4,
+      8,
+      12
+    ]
+  },
+  "evidence_as_of_utc": "2026-11-11T18:34:16.163189Z",
+  "failure_evidence": {
+    "final_archive_error": "B067_TRANSPORT_BUDGET_EXCEEDED_NO_SCIENTIFIC_FILES_DROPPED",
+    "meaning": "New research was prevented by the transport admission guard before any new model task was attempted. Reused counts and prepared exports are not new model improvement.",
+    "priority_and_generic_issue_stage_error": "EXACT_NATIVE_THREAD_STAGE_NOT_ADMITTED:2",
+    "recovery_error": "B074_RECOVERY_AMBIGUOUS_REFRESH_CLOCK",
+    "research_admission": {
+      "allowance_bytes": 87728146,
+      "attempted_new_fit_admissions": 0,
+      "baseline_bytes": 89568817,
+      "completed_frozen_tasks_reused": 776,
+      "deferred_frozen_tasks": 1552,
+      "failed_new_model_tasks": 0,
+      "headroom_bytes": -1840671,
+      "registered_frozen_tasks": 2328,
+      "status": "COMPLETE_INVENTORY_OVER_CAP_NEW_FITS_BLOCKED"
+    },
+    "return_inventory_reconciliation_passes": 8,
+    "return_inventory_reconciliation_seconds": 1484.676956
+  },
+  "outcome": {
+    "actual_billed_cost_usd": null,
+    "automatic_production_promotions": 0,
+    "cost_note": "Measured whole-host invocation interval times the verified rate; overlaps the internal pipeline estimate and is not added to it. Actual billed cost and an NBA-only cost allocation are unknown.",
+    "elapsed_seconds": 2892.7265700810003,
+    "estimated_whole_host_cost_usd": 2.065085,
+    "new_estimator_fits": 0,
+    "new_forecasts": 0,
+    "new_saved_historical_array_evaluations": 0,
+    "new_source_requests": 38,
+    "newly_scored_frontier_slices": 0,
+    "observed_effective_vcpus": 48,
+    "observed_exit_code": 3,
+    "observed_peak_concurrent_model_fits": 0,
+    "per_project_cpu_cap": 12,
+    "release": "B075",
+    "reused_frontier_slices": 1302,
+    "reused_frozen_fits": 776,
+    "status": "PARTIAL_RESUMABLE_SCIENCE_TRANSPORT_PENDING"
+  },
+  "owner_return": {
+    "all_11_payload_member_pins_verified": true,
+    "bytes": 60428839,
+    "decoded_full_report_pin_verified": true,
+    "sha256": "e91350d04811c6589bc39352c0bca52a1d823bae0400115a1217e0ee69a4242f"
+  },
+  "preserved_science": {
+    "R13_R20": {
+      "completed_ablations": 0,
+      "materialized_feature_columns": 0,
+      "new_fits": 0,
+      "state_reference_blocker": "NO_SOURCE_QUALIFIED_HISTORICAL_GAME_QUOTE_AND_PLAY_POPULATION",
+      "status": "SOURCE_OR_PAIRED_RESULT_PENDING"
+    },
+    "automatic_promotions": 0,
+    "distinct_games_with_original_issues": 157,
+    "historical_exposure": "Previously examined development evidence; no untouched confirmation claimed.",
+    "new_prediction_frontier_slices": 0,
+    "original_issued_records_recovered": 2686,
+    "regular_season_T60_registered_roles": [
+      {
+        "automatic_production_promotion": false,
+        "family": "Preserved ensemble",
+        "metric": "mae",
+        "role": "regular_margin_mae_t60",
+        "season_values": {
+          "2024-25": {
+            "games": 1230,
+            "value": 10.981526
+          },
+          "2025-26": {
+            "games": 1230,
+            "value": 11.345493
+          }
+        },
+        "status": "Exposed historical research role; prospective shadow use only",
+        "target": "margin"
+      },
+      {
+        "automatic_production_promotion": false,
+        "family": "Preserved ensemble",
+        "metric": "rmse",
+        "role": "regular_margin_rmse_t60",
+        "season_values": {
+          "2024-25": {
+            "games": 1230,
+            "value": 14.046087
+          },
+          "2025-26": {
+            "games": 1230,
+            "value": 14.494245
+          }
+        },
+        "status": "Exposed historical research role; prospective shadow use only",
+        "target": "margin"
+      },
+      {
+        "automatic_production_promotion": false,
+        "family": "Precommitted ensemble",
+        "metric": "mae",
+        "role": "regular_total_mae_t60",
+        "season_values": {
+          "2024-25": {
+            "games": 1230,
+            "value": 14.749734
+          },
+          "2025-26": {
+            "games": 1230,
+            "value": 15.230264
+          }
+        },
+        "status": "Exposed historical research role; prospective shadow use only",
+        "target": "total"
+      },
+      {
+        "automatic_production_promotion": false,
+        "family": "Precommitted ensemble",
+        "metric": "rmse",
+        "role": "regular_total_rmse_t60",
+        "season_values": {
+          "2024-25": {
+            "games": 1230,
+            "value": 18.461521
+          },
+          "2025-26": {
+            "games": 1230,
+            "value": 19.199729
+          }
+        },
+        "status": "Exposed historical research role; prospective shadow use only",
+        "target": "total"
+      },
+      {
+        "automatic_production_promotion": false,
+        "family": "XGBoost",
+        "metric": "accuracy",
+        "role": "regular_winner_accuracy_t60",
+        "season_values": {
+          "2024-25": {
+            "games": 1230,
+            "value": 0.665854
+          },
+          "2025-26": {
+            "games": 1230,
+            "value": 0.695935
+          }
+        },
+        "status": "Exposed historical research role; prospective shadow use only",
+        "target": "winner"
+      },
+      {
+        "automatic_production_promotion": false,
+        "family": "Logistic regression",
+        "metric": "brier",
+        "role": "regular_winner_brier_t60",
+        "season_values": {
+          "2024-25": {
+            "games": 1230,
+            "value": 0.209916
+          },
+          "2025-26": {
+            "games": 1230,
+            "value": 0.204533
+          }
+        },
+        "status": "Exposed historical research role; prospective shadow use only",
+        "target": "winner"
+      },
+      {
+        "automatic_production_promotion": false,
+        "family": "Logistic regression",
+        "metric": "log_loss",
+        "role": "regular_winner_log_loss_t60",
+        "season_values": {
+          "2024-25": {
+            "games": 1230,
+            "value": 0.606708
+          },
+          "2025-26": {
+            "games": 1230,
+            "value": 0.595258
+          }
+        },
+        "status": "Exposed historical research role; prospective shadow use only",
+        "target": "winner"
+      }
+    ],
+    "reported_near_040_lead": {
+      "comparator_family": "Logistic",
+      "comparator_reported_log_loss": 0.527164,
+      "family": "XGBoost",
+      "games": 2,
+      "horizon_minutes": 60,
+      "phase": "postseason",
+      "reported_log_loss": 0.426446,
+      "scope": "Authenticated earlier report-level, exposed two-game reconstruction. Original paired prediction bodies have not been independently recovered; no full-season 0.40 claim or promotion.",
+      "target": "winner"
+    },
+    "reused_prediction_frontier_slices": 1302,
+    "saved_current_kalshi_comparison": {
+      "games": 126,
+      "horizon_minutes": 120,
+      "model_brier": 0.1827348447986732,
+      "model_correct": 89,
+      "model_log_loss": 0.5397536830775042,
+      "model_only_correct": 10,
+      "provider": "Kalshi",
+      "reference": "Historical bid/ask midpoint, later retrieval",
+      "reference_brier": 0.1885,
+      "reference_correct": 89,
+      "reference_log_loss": 0.5549042432407375,
+      "reference_only_correct": 10,
+      "scope": "Separate exposed retrospective matched cohort; neither original model/provider possession nor independent forward superiority claimed.",
+      "week_blocks": 3
+    },
+    "saved_current_winner_example": {
+      "brier": 0.18248349989772294,
+      "correct_winners": 90,
+      "family": "Histogram gradient boosting, basketball plus market",
+      "games": 128,
+      "horizon_minutes": 120,
+      "log_loss": 0.5386438763556466,
+      "scope": "Original saved B051 frozen reconstruction; retrospective, not a new B075 forward issue."
+    },
+    "selected_shadow_roles": 44,
+    "strict_B075_winner_reference_comparison": {
+      "distinct_matched_games": 6,
+      "matched_rows_across_saved_views": 44,
+      "scope": "Source-qualified current comparison only; different from the 126-game later-retrieved historical cohort; no promotion."
+    }
+  },
+  "public_snapshot": {
+    "added_result": {
+      "away_points": 103,
+      "away_team": "OKC",
+      "home_points": 123,
+      "home_team": "POR",
+      "observed_at_utc": "2026-11-11T17:55:42.066367+00:00",
+      "official_game_id": "0022600216",
+      "owner_report_source_reference_matched": true,
+      "raw_provider_body_reprocessed_for_this_review": false,
+      "source_url": "https://www.nba.com/games?date=2026-11-10"
+    },
+    "all_game_applicable_role_opportunities": 26532,
+    "all_game_current_role_forecasts_missing": 23821,
+    "current_champion_role_views_available": 2711,
+    "current_champion_role_views_missing": 743,
+    "earlier_result_observations_preserved": 39,
+    "exact_owner_export_reconstruction_claim": false,
+    "latest_original_issue_at_utc": "2026-11-11T04:34:10.667171+00:00",
+    "latest_original_issue_owner_release": "B074",
+    "latest_row_backed_status_counts": {
+      "FINAL": 227,
+      "SCHEDULED": 1040,
+      "TBD": 7
+    },
+    "missing_body_policy": "Keep the prior complete official inventory and original source clocks. Add only an exactly identified, source-bound saved result; do not fabricate the unavailable full newer schedule or any forecast.",
+    "new_final_observations_added": 1,
+    "new_fitting_inference_acquisition_or_metric_rescoring_in_publication": false,
+    "official_game_denominator": 1274,
+    "official_games_without_original_issues": 1117,
+    "original_issues_champions_role_views_and_coverage_preserved_sha256": {
+      "champions": "394ae440d187669569524d224fa5b7d8c742b8be7918b57cf3fbcf03faaa2bd2",
+      "forecast_inventory_game_ids": "02fd22a4b03cd18213a4055623f6bfdb29746ef0bd63a9329071ef9a98db3c93",
+      "game_coverage": "f6e9fb6194d2ddf1bd506679e5e52d998d86b7219d6d8c6e5d5567b103aa4333",
+      "issues": "cab529d0821d88a31f1d07a3680a0d7c26bdb1a756c6a2db6aee9d778f5a55b9",
+      "role_views": "14f4cd8d7512a51909223cfa6dd7d1fb275c411d41f499f7042f80e81d380f55"
+    },
+    "owner_B075_full_schedule_body_physically_available": false,
+    "owner_B075_publication_body_physically_available": false,
+    "regular_season_observed_count": 1206,
+    "retained_schedule_owner_release": "B073",
+    "retained_schedule_snapshot_at_utc": "2026-11-11T03:09:27.752242+00:00",
+    "selected_public_issue_objects": 1753,
+    "unobserved_regular_season_slots": 24,
+    "unresolved_official_matchups": 7
+  },
+  "publication_status": {
+    "owner_run": "PREPARED_EXPORT_NO_GITHUB_WRITE",
+    "this_review": "PREPARED_FOR_SCOPED_GITHUB_REVIEW",
+    "website_deployment": "NOT_PERFORMED_BY_THIS_REVIEW"
+  },
+  "review_release": "B076",
+  "schema": "sports-edge-lab-nba-b076-review-of-b075-owner-evidence-v1",
+  "source_fields": [
+    "Authenticated B075 full report: tally, research, return_budget_preflight, return_budget_final, stage_ledger, publication, refresh/observed_results, refresh_attempts/source_receipts.",
+    "External B075 execution receipt: observed_exit_code, total_elapsed_seconds, cost.",
+    "Authenticated earlier B054 report: two-game log-loss lead.",
+    "Prior public selected-output snapshot at Git commit 40ebb0c9daa89c256a873f0448ddbb87c424c245."
+  ]
+}
