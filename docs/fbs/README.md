@@ -1,3 +1,5 @@
+> **V063 delivery update — November 11:** [Tested executable delivery and verified return parts](V063_AUTHORIZED_DELIVERY_2026-11-11.md). The owner replaced the 150 MB packaging restriction with a 512 MB per-return-file limit and splitting for larger returns. The latest actual research and predictions remain the dated V062 evidence below.
+
 # FBS · actual V062 research and forecast continuity
 
 [**Open all 888 current-season games →**](latest-games-v063.html) · [Actual owner and model comparison](V063_LATEST_GAMES_AND_OWNER_2026-11-11.md) · [All six forecast layers](latest-games-v063.csv) · [Rounded evidence](latest-games-v063.json.gz)
