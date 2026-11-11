@@ -67,11 +67,11 @@ The prepared V7 continuation prioritizes current forecasts, restores exact old f
 
 ## Current NFL evidence · November 11, 2026
 
-**N073 failed before verifying new model fits or forecasts. The latest valid selected outputs remain N072's 772 rows for 112 upcoming games.** The [updated all-game research view](tracks/nfl/season_review_n074.html) preserves all 272 season games, 18 primary historical metric/horizon roles and nine operational fallback roles. Original prediction values and issue clocks are unchanged; the failed run's smaller fallback export does not replace richer evidence.
+**N074 produced zero new fits and zero new forecasts after failing before model dispatch.** The [latest all-game research view](tracks/nfl/season_review_n075.html) preserves N072's 772 selected rows across 112 confirmed future games, all 272 saved season games, 18 metric/horizon roles and nine distinct fallbacks. Original values and issue clocks remain unchanged.
 
-The [actual N073 report](tracks/nfl/2026-11-11-n073-actual-n074-continuation.json) records 7m 32s elapsed, three orchestration failure classes, zero verified new fits/issues and unknown whole-run totals. Sources were refreshed, but the new raw captures are not validated forecasts or completed market-response experiments. N074 is the V8 engineering continuation; owner execution is pending.
+The [actual N074 report](tracks/nfl/2026-11-11-n074-actual-n075-continuation.json) records 7m 27s elapsed, the saved-state contract failure and unavailable original runtime. Terminal receipts establish known zero work. The 48-vCPU host's 12-CPU NFL ceiling did not yield model parallelism because no fit workers launched. N075 is the V8 engineering continuation; owner execution is pending.
 
-[Metric-specific 2024/2025 scorecards and old-model comparisons](tracks/nfl/CURRENT_MODEL_CARD.md) remain available. The remembered approximately 0.40 full-season NFL log loss is unresolved, and **no independent production promotion is established**. [Prior N072 actual evidence](tracks/nfl/README_N073_SNAPSHOT.md) retains at least 69 completed fits, all 1,251 cached native annual cases, and the original partial-run qualifications. This source update does not refresh the separately deployed Site.
+[Metric-specific 2024/2025 scorecards, former-model leaders and promotion gates](tracks/nfl/CURRENT_MODEL_CARD.md) remain visible. Torch AB leads the saved original accuracy panel; Torch B leads original log loss and Brier. Full-season 2026 former-champion scoring and complete matched DraftKings/Kalshi/Polymarket comparisons remain incomplete. **No production promotion is established.** This source update does not refresh the separately deployed Site.
 
 <details>
 <summary>Preserved November 8 NFL evidence</summary>
@@ -147,7 +147,7 @@ a narrow missing-clock checkpoint repair.
 
 | Track | Entry point | Publication boundary |
 |---|---|---|
-| NFL | [Current evidence](tracks/nfl/README.md) | N073 blocked; latest valid N072 outputs retained: 772 selected rows across 112 future games, 18 metric/horizon selections and old-model comparisons |
+| NFL | [Current evidence](tracks/nfl/README.md) | N074 blocked with known zero model work; N072 outputs retained: 772 selected rows across 112 future games, metric-specific roles and former-model comparisons |
 | NCAA FBS | [Browser dashboard](https://sports-edge-lab-fbs.alv-mendizabal.chatgpt.site) · [Track](tracks/ncaaf/README.md) | Actual V053 partial; V055 prepared; 500 saved issue contexts across 122 games, with dated provider coverage |
 | NBA | [Research view](docs/NBA_RESEARCH_CARD.md) | Separately dated basketball evidence |
 | NCAA basketball | [Open dashboards](https://alvaro-ncaa-research-review.alv-mendizabal.chatgpt.site/) · [Men's evidence](tracks/ncaam/README.md) · [Women's evidence](tracks/ncaaw/README.md) · [Runnable contracts](examples/ncaa_review/README.md) | Separate historical selections, current execution gaps and three-provider qualification |
@@ -299,6 +299,7 @@ The latest authenticated V056 owner added 31 base fits and five statistical stat
 V057 prepares exact historical-recipe recovery, reusable per-candidate metrics before global closure, and bounded recovery that can advance after interruption. Its 64-unit chunks retain the eight-chunk ceiling, for an effective maximum of 512 units per recovery slice. Complete-population cache reuse requires independent canonical receipt, source and selector verification. No V057 AWS execution, new model improvement or automatic promotion is claimed. The requirement for hundreds of certified new feature concepts remains unmet.
 
 Evidence: [latest saved owner counts](docs/fbs/actual-owner-v056.json), [historical scorecards and qualifications](docs/fbs/historical-contenders-v057.json), and [FBS evidence dashboard](docs/fbs/current.html). Publication is not a data refresh or model run. NFL, NBA and NCAA basketball retain their independent owners and evidence.
+
 
 
 

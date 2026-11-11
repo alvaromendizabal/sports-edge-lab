@@ -1,8 +1,8 @@
 # NFL selected model card · N072 actual return
 
-[Latest all-game selected forecasts](season_review_n074.html) · [Owner evidence](2026-11-11-n072-actual-n073-prepared.json) · [Prior model card](CURRENT_MODEL_CARD_N072_SNAPSHOT.md)
+[Latest all-game selected forecasts](season_review_n075.html) · [Owner evidence](2026-11-11-n072-actual-n073-prepared.json) · [Prior model card](CURRENT_MODEL_CARD_N072_SNAPSHOT.md)
 
-**Latest execution: N073 failed before verifying new model work.** No newer selection or promotion supersedes the scorecards below. [Actual execution status](2026-11-11-n073-actual-n074-continuation.json). The 772 selected N072 rows and original issue clocks remain intact.
+**Latest execution: N074 produced known zero fits and forecasts after failing before dispatch.** No newer selection or promotion supersedes the scorecards below. [Actual execution status](2026-11-11-n074-actual-n075-continuation.json). The 772 selected N072 rows and original issue clocks remain intact.
 
 **N072 retains 18 metric/horizon-specific primary selections and nine operational fallback roles. No independent production promotion is established.** The verified completed phases contain at least 69 new fits; original whole-run counters remain null after the final refresh failed. The selected display contains 772 already-issued rows for 112 confirmed future games.
 
@@ -72,3 +72,28 @@ The archived 2026 Torch B replay remains **0.649255 log loss, 49/77 correct**; T
 The saved **119-game Kalshi panel** still has **79 correct for the accuracy combination versus 76 for Kalshi**; its model log loss is 0.646823. The probability combination has **77 correct / 0.629080 log loss**; Kalshi's saved one-hour/two-hour values are 0.644579/0.644377. Event, target, horizon, non-tie and exposure qualifications remain. N072 does not establish a fresh full-season Kalshi comparison.
 
 Current issues and missing-role reasons retain their original clocks. Current-season outcomes do not select these historical roles. Authentic earlier-game market paths can be candidate inputs only when fully available before the later game's cutoff; target-game live data cannot change its own pregame model or forecast. R13–R20 remain unexecuted source-gated studies.
+
+
+## Promotion decision and current-season gaps
+
+**No production promotion is established.** Better saved scores make a model a serious research finalist, not an automatically validated deployment. The registered evaluation requires:
+
+| Gate | Required evidence | Current status |
+|---|---|---|
+| Identity and availability | Matched games, target, settlement, horizon, fit population and authentic information cutoffs | Partial; full original-model source-clock qualification remains pending |
+| Historical comparison | Nested chronological selection, prior-origin OOF calibration/stacking and paired errors against the fixed incumbent | Exposed 2024/2025 development evidence is retained; it is not untouched confirmation |
+| Uncertainty and stability | Predeclared support, season/week clustering, multiplicity control, calibration and stability checks | N072's 478 paired Holm comparisons yielded zero adjusted p-values below 0.05; no independent promotion is established |
+| Forward confirmation | Unchanged precommitted policy evaluated on genuinely newly issued games after registration | Full current-season former-champion evidence is incomplete; exposed 2026 replays cannot supply this gate |
+| Operational quality | Full-denominator coverage, source-gap truth, reproducible state, resource cost and rollback criteria | N074 failed before model dispatch; N075 owner validation remains pending |
+
+There is no universal log-loss or MAE number that bypasses these gates. Any new practical improvement threshold and minimum support must be registered before examining the confirmation cohort.
+
+| Evidence requested | Available support | Limitation |
+|---|---|---|
+| Current-season selected champions | 136 completed games in the saved census | No complete newly evaluated champion/former-champion scorecard; 16 completed games lack the required original pregame vectors |
+| Recovered original variants | Archived 77-game 2026 cohort | Exposed partial replay; not full-season or originally issued evidence |
+| Kalshi comparison | Archived 119-game matched panel | Retained target, horizon and non-tie qualifications; not a refreshed complete-season comparison |
+| DraftKings comparison | Source captures and qualified historical subsets only | Complete matched winner/margin/cover/total evaluation is not established |
+| Polymarket comparison | Source captures and coverage diagnostics | Complete comparable target/horizon evaluation is not established |
+
+The best saved original 2026 variant is displayed descriptively and does not select the next forward model. A missing primary champion issue is never filled with an operational fallback under the primary label.
