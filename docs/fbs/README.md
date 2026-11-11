@@ -1,3 +1,5 @@
+> **V064 recovery review — November 11:** [Launch failure, preserved model leaders and remaining forecast gaps](V064_RECOVERY_2026-11-11.md). The attempted V063 command stopped before owner execution after losing Python indentation. Actual science remains V062: 36 new fits, stronger restored controls, zero newly authorized champions and 145 current-refresh gaps. The existing all-game view preserves all 888 fixtures and a separate archive of 145 earlier future forecasts. V064 passed its complete 773-test local package suite; no new owner result is claimed.
+
 > **V063 delivery update — November 11:** [Tested executable delivery and verified return parts](V063_AUTHORIZED_DELIVERY_2026-11-11.md). The owner replaced the 150 MB packaging restriction with a 512 MB per-return-file limit and splitting for larger returns. The latest actual research and predictions remain the dated V062 evidence below.
 
 # FBS · actual V062 research and forecast continuity
