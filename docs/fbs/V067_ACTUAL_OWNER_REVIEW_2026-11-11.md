@@ -40,7 +40,7 @@ The recovered low-loss model remains in the preserved evidence: **0.416199 log l
 
 These copied findings favor the saved models on that archived intersection. They do not establish a currently qualified horizon/source-clock comparison, original pregame issuance or independent promotion evidence. They are not a Kalshi comparison.
 
-The 301-game bank retains 250 aliases and 212 distinct probability vectors. Its probability/Brier leader has 0.465519 log loss and 0.152630 Brier; its accuracy leader has 238 correct. Another 387 of the 688 completed games are outside that bank. V066's failed inference did not expand those validated metrics.
+The 301-game bank retains 250 aliases and 212 distinct probability vectors. Its probability/Brier leader has 0.465519 log loss and 0.152630 Brier; its accuracy leader has 238 correct. Another 387 of the 688 completed games are outside that bank. V066 revalidated all 250 saved cards against the latest 22:22:44 UTC label snapshot and found every primary metric unchanged. Their original computation and label clocks remain recorded separately; the invocation receives zero new metric-evaluation credit. The separate failed 301-row inference did not expand that validated bank.
 
 The current 688-game retained baseline reports show a winner accuracy leader of 0.716570, probability log loss of 0.540922, Brier of 0.183784, margin MAE/RMSE of 14.261799/18.091150 and total MAE/RMSE of 13.002524/16.236819. These reports compare 10 winner families and 12 point families; they do not complete the replay of every historical contender. Their original computation clock remains November 11 at 07:24:15 UTC, verified unchanged by V064 at 19:38:28 UTC. No sports metric was recomputed for this publication.
 

@@ -17,6 +17,18 @@ LAYERS = ("original", "retained_v061", "calibrated", "mixture_global", "mixture_
 
 
 class PublicProjectionTests(unittest.TestCase):
+    def test_latest_label_revalidation_does_not_redate_the_saved_metric(self):
+        proof=self.data['latest_saved_bank_verification']
+        self.assertEqual(proof['owner_release'],'V066')
+        self.assertEqual(proof['latest_verified_label_snapshot_as_of'],'2026-11-11T22:22:44Z')
+        self.assertEqual(proof['original_metric_computed_at'],'2026-11-11T19:40:04.678181+00:00')
+        self.assertEqual(proof['original_label_snapshot_as_of'],'2026-11-11T19:38:54Z')
+        self.assertEqual((proof['matched_games'],proof['reused_metric_cards'],proof['new_metric_evaluations']),(301,250,0))
+        self.assertTrue(proof['all_250_saved_metric_sets_unchanged'])
+        self.assertFalse(proof['original_probabilities_modified'])
+        self.assertFalse(proof['promotion_authorized'])
+        self.assertFalse(proof['separate_301_inference_attempt_passed_parity'])
+
     @classmethod
     def setUpClass(cls):
         cls.compressed = (PUBLIC / "latest-games-v067.json.gz").read_bytes()
