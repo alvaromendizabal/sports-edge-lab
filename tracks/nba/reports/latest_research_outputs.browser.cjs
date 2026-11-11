@@ -1,4 +1,4 @@
-/* Hosted Playwright acceptance for the complete saved NBA schedule, schema v3.
+/* Hosted Playwright acceptance for the source-separated saved NBA schedule, schema v4.
  * Run only in the authorized GitHub Actions browser job using its pinned
  * Playwright installation. No local browser launch, NBA fit, or rescoring is
  * part of preparation. --data-only runs the independent JSON census without
@@ -70,10 +70,32 @@ function referenceInventory(data) {
   for (const id of gameIds) {
     const game = data.games[id];
     statusGames.all.add(id);
-    if (game.source_status_group === "COMPLETED_AS_OBSERVED") statusGames.completed.add(id);
-    if (game.tip_time_relation_at_report === "FUTURE_TIP" && !new Set(["FINAL", "CANCELLED"]).has(game.source_status)) statusGames.upcoming.add(id);
+    // The schedule fields retain their original source clock/status. The
+    // optional final-result layer has an independent authenticated clock.
+    const result = game.result_observation;
+    const expectedStatus = result ? "FINAL" : game.source_status;
+    assert.equal(game.last_confirmed_status, expectedStatus);
+    assert.equal(game.last_confirmed_status_source, result ? "SAVED_RESULT_OBSERVATION" : "SAVED_SCHEDULE_OBSERVATION");
+    assert.equal(game.last_confirmed_status_asof_utc, result ? result.observed_at_utc : game.schedule_source_asof_utc);
+    if (game.schedule_membership === "CANONICAL_OFFICIAL") {
+      assert.equal(game.official_status_at_source, game.source_status);
+      assert.ok(Date.parse(game.schedule_source_asof_utc) <= Date.parse(data.schedule_observation.snapshot_finished_at_utc));
+    }
+    if (result) {
+      assert.equal(result.status, "FINAL");
+      assert.equal(result.original_historical_possession_claim, false);
+      assert.equal(result.new_score_calculation, false);
+      assert.ok(Number.isInteger(result.home_points) && result.home_points >= 0);
+      assert.ok(Number.isInteger(result.away_points) && result.away_points >= 0);
+      assert.ok(Date.parse(result.observed_at_utc) <= Date.parse(result.available_at_utc));
+      assert.ok(Date.parse(result.available_at_utc) <= Date.parse(data.evidence_as_of_utc));
+      if (result.ended_at_utc !== null) assert.ok(Date.parse(result.ended_at_utc) <= Date.parse(result.observed_at_utc));
+    }
+
+    if (game.last_confirmed_status === "FINAL") statusGames.completed.add(id);
+    if (game.tip_time_relation_at_report === "FUTURE_TIP" && !new Set(["FINAL", "CANCELLED"]).has(game.last_confirmed_status)) statusGames.upcoming.add(id);
     if (game.identity_status !== "RESOLVED_MATCHUP") statusGames.unresolved.add(id);
-    if (game.source_status === "SCHEDULED" && game.tip_time_relation_at_report === "START_TIME_PASSED_STATUS_NOT_INFERRED") statusGames.pending.add(id);
+    if (game.last_confirmed_status === "SCHEDULED" && game.tip_time_relation_at_report === "START_TIME_PASSED_STATUS_NOT_INFERRED") statusGames.pending.add(id);
     gameFacts.set(id, {
       date: game.scheduled_start_utc ? game.scheduled_start_utc.substring(0, 10) : "unknown",
       timestamp: game.scheduled_start_utc ? Date.parse(game.scheduled_start_utc) : Infinity,
@@ -81,7 +103,7 @@ function referenceInventory(data) {
     });
   }
   assert.equal(official.filter(id => statusGames.unresolved.has(id)).length, data.coverage.official_unresolved_matchups);
-  assert.equal(official.filter(id => statusGames.pending.has(id)).length, data.coverage.official_scheduled_start_passed_without_final_observation);
+  assert.equal(official.filter(id => data.games[id].source_status === "SCHEDULED" && data.games[id].tip_time_relation_at_report === "START_TIME_PASSED_STATUS_NOT_INFERRED").length, data.coverage.official_scheduled_start_passed_without_final_observation);
   assert.equal(official.filter(id => data.games[id].tip_time_relation_at_report === "FUTURE_TIP").length, data.coverage.official_future_tips_at_report);
   assert.equal(official.filter(id => !data.games[id].original_issue_inventory_present).length, data.coverage.official_games_without_original_issues);
   for (const [phase, count] of Object.entries(data.coverage.official_games_by_phase)) {
@@ -89,6 +111,30 @@ function referenceInventory(data) {
   }
   for (const [status, count] of Object.entries(data.coverage.official_games_by_saved_status)) {
     assert.equal(official.filter(id => data.games[id].source_status === status).length, count);
+  }
+
+  const latestCounts = {};
+  for (const id of official) {
+    const status = data.games[id].last_confirmed_status;
+    latestCounts[status] = (latestCounts[status] || 0) + 1;
+  }
+  assert.deepEqual(latestCounts, data.coverage.official_games_by_latest_row_backed_status);
+  const recovery = data.result_observation_recovery;
+  const aggregate = recovery.source_reported_status_counts;
+  const differences = {};
+  if (aggregate) {
+    assert.equal(Object.values(aggregate).reduce((a, b) => a + b, 0), recovery.source_reported_official_games);
+    for (const key of new Set([...Object.keys(latestCounts), ...Object.keys(aggregate)])) {
+      if ((latestCounts[key] || 0) !== (aggregate[key] || 0)) differences[key] = { row_backed: latestCounts[key] || 0, source_aggregate: aggregate[key] || 0 };
+    }
+  }
+  assert.deepEqual(differences, data.coverage.latest_row_and_source_aggregate_difference);
+  if (recovery.status !== "NO_SEPARATE_RESULT_OVERLAY_SUPPLIED") {
+    assert.equal(recovery.full_B074_schedule_projection_reconstructed, false);
+    assert.equal(recovery.source_clock_rewritten, false);
+    assert.equal(recovery.original_forecast_values_or_clocks_changed, false);
+    assert.equal(recovery.result_rows_attached, official.filter(id => data.games[id].result_observation).length);
+    assert.deepEqual(sorted(recovery.newly_confirmed_final_game_ids), sorted(official.filter(id => data.games[id].result_observation && data.games[id].source_status !== "FINAL")));
   }
 
   let cellCount = 0;
@@ -196,7 +242,7 @@ function expectedRow(row, data) {
   return { gameId: row.gameId, roleId: row.roleId || "none", cells: [
     normalized([(row.game.away_team || "TBD") + " @ " + (row.game.home_team || "TBD"),
       timestamp(row.game.scheduled_start_utc), "NBA game " + row.gameId + " · " + words(row.game.phase),
-      words(row.game.source_status_group), "Schedule source " + timestamp(row.game.schedule_source_asof_utc)].join(" ")),
+      words(row.game.last_confirmed_status), ...(row.game.result_observation ? ["Saved final: " + row.game.result_observation.away_points + " – " + row.game.result_observation.home_points + " (away – home)", "Result observed " + timestamp(row.game.result_observation.observed_at_utc)] : []), "Schedule source " + timestamp(row.game.schedule_source_asof_utc)].join(" ")),
     normalized(words(row.metric) + " · T" + row.horizon + " " + (row.role?.family || "No registered role for this phase")),
     normalized(issueText(row.current, row.target, true) + (row.current ? "" : " " + reason)),
     issueText(row.atIssue, row.target, Boolean(row.view?.at_issue_matches_current_champion)),
@@ -214,7 +260,7 @@ function expectedRow(row, data) {
   const htmlPath = path.join(__dirname, "latest_research_outputs.html");
   const jsonBytes = fs.readFileSync(jsonPath), htmlBytes = fs.readFileSync(htmlPath);
   const data = JSON.parse(jsonBytes), url = pathToFileURL(htmlPath).href;
-  assert.equal(data.schema, "sports-edge-lab-nba-public-schedule-complete-research-outputs-v3");
+  assert.equal(data.schema, "sports-edge-lab-nba-public-source-separated-research-outputs-v4");
   const reference = referenceInventory(data);
   if (process.argv.includes("--data-only")) {
     const combinations = [];
@@ -417,6 +463,10 @@ function expectedRow(row, data) {
     for (const [id, expected] of Object.entries(optionExpectations)) {
       assert.deepEqual(await page.locator("#" + id + " option").evaluateAll(options => options.map(option => option.value)), expected);
     }
+    const resultNote = normalized(await page.locator("#result-status").innerText());
+    assert.ok(resultNote.includes("Latest row-backed status counts: " + JSON.stringify(data.coverage.official_games_by_latest_row_backed_status)));
+    assert.ok(resultNote.includes("Saved owner aggregate: " + JSON.stringify(data.result_observation_recovery.source_reported_status_counts || {})));
+    checks.push("independent_result_status_clocks_and_aggregate_discrepancy_visible");
     await checkChampionTable(page);
     await checkFilter(page, {}, "desktop_default_complete_inventory");
     await noOverflow(page, "desktop_no_page_horizontal_overflow");

@@ -1,0 +1,530 @@
+{
+  "actual_billed_cost_usd": null,
+  "actual_owner_release": "B074",
+  "blend_frontier": {
+    "new_season_slices": 0,
+    "reused_season_slices": 1302
+  },
+  "cost_estimates_overlap_do_not_add": true,
+  "current128_saved_reconstructions": [
+    {
+      "evidence_class": "ORIGINAL_B051_SAVED_FROZEN_RECONSTRUCTION",
+      "horizon_minutes": 60,
+      "label": "T60 basketball + market \u00b7 raw",
+      "metrics": {
+        "accuracy": 0.7109375,
+        "accuracy_tie_rule": "HALF_CREDIT_AT_EXACT_0_5",
+        "brier": 0.1876016184827083,
+        "ece_10_bins": 0.09553445355964224,
+        "games": 128,
+        "log_loss": 0.5532368182790914,
+        "roc_auc": 0.7948717948717949
+      },
+      "original_predictions_modified": false
+    },
+    {
+      "evidence_class": "ORIGINAL_B051_SAVED_FROZEN_RECONSTRUCTION",
+      "horizon_minutes": 60,
+      "label": "T60 basketball + market \u00b7 calibrated",
+      "metrics": {
+        "accuracy": 0.7109375,
+        "accuracy_tie_rule": "HALF_CREDIT_AT_EXACT_0_5",
+        "brier": 0.18645307276972134,
+        "ece_10_bins": 0.089351187438902,
+        "games": 128,
+        "log_loss": 0.5486856901720564,
+        "roc_auc": 0.7948717948717949
+      },
+      "original_predictions_modified": false
+    },
+    {
+      "evidence_class": "ORIGINAL_B051_SAVED_FROZEN_RECONSTRUCTION",
+      "horizon_minutes": 120,
+      "label": "T120 basketball + market \u00b7 calibrated",
+      "metrics": {
+        "accuracy": 0.703125,
+        "accuracy_tie_rule": "HALF_CREDIT_AT_EXACT_0_5",
+        "brier": 0.18248349989772294,
+        "ece_10_bins": 0.07312418598258495,
+        "games": 128,
+        "log_loss": 0.5386438763556466,
+        "roc_auc": 0.8012210012210013
+      },
+      "original_predictions_modified": false
+    },
+    {
+      "evidence_class": "ORIGINAL_B051_SAVED_FROZEN_RECONSTRUCTION",
+      "horizon_minutes": 60,
+      "label": "T60 earlier market-only \u00b7 raw",
+      "metrics": {
+        "accuracy": 0.6875,
+        "accuracy_tie_rule": "HALF_CREDIT_AT_EXACT_0_5",
+        "brier": 0.18673610367571394,
+        "ece_10_bins": 0.13373533773204385,
+        "games": 128,
+        "log_loss": 0.5488564066439823,
+        "roc_auc": 0.793894993894994
+      },
+      "original_predictions_modified": false
+    },
+    {
+      "evidence_class": "ORIGINAL_B051_SAVED_FROZEN_RECONSTRUCTION",
+      "horizon_minutes": 60,
+      "label": "T60 earlier market-only \u00b7 calibrated",
+      "metrics": {
+        "accuracy": 0.6875,
+        "accuracy_tie_rule": "HALF_CREDIT_AT_EXACT_0_5",
+        "brier": 0.18543521588606476,
+        "ece_10_bins": 0.13541078148695526,
+        "games": 128,
+        "log_loss": 0.5433883452436744,
+        "roc_auc": 0.793894993894994
+      },
+      "original_predictions_modified": false
+    }
+  ],
+  "deployment": "NOT_DEPLOYED",
+  "estimated_whole_instance_invocation_usd": 3.5310956587158877,
+  "forecast_coverage": {
+    "active_research_champion_roles": 44,
+    "all_game_applicable_role_opportunities": 26532,
+    "all_game_current_role_forecasts_available": 2711,
+    "all_game_current_role_forecasts_missing": 23821,
+    "all_game_target_horizon_cells": 7644,
+    "current_champion_forecast_available_views": 2711,
+    "current_champion_forecast_missing_views": 743,
+    "current_role_issue_horizon_classes": {
+      "EARLY_OUTLOOK": 2700,
+      "LATE": 11
+    },
+    "distinct_observed_games": 1274,
+    "distinct_public_selected_issues": 1753,
+    "distinct_public_selected_issues_with_intervals": 1114,
+    "games_in_original_issued_inventory": 157,
+    "latest_at_issue_champion_differs_from_current_views": 705,
+    "latest_at_issue_forecast_available_views": 3416,
+    "latest_row_and_source_aggregate_difference": {
+      "LIVE": {
+        "row_backed": 0,
+        "source_aggregate": 1
+      },
+      "SCHEDULED": {
+        "row_backed": 1041,
+        "source_aggregate": 1040
+      }
+    },
+    "observed_games_without_applicable_champion_roles": 68,
+    "official_future_tips_at_report": 1047,
+    "official_games_by_latest_row_backed_status": {
+      "FINAL": 226,
+      "SCHEDULED": 1041,
+      "TBD": 7
+    },
+    "official_games_by_phase": {
+      "ist_championship": 1,
+      "preseason": 67,
+      "regular": 1206
+    },
+    "official_games_by_saved_status": {
+      "FINAL": 222,
+      "LIVE": 3,
+      "SCHEDULED": 1042,
+      "TBD": 7
+    },
+    "official_games_without_original_issues": 1117,
+    "official_resolved_matchups": 1267,
+    "official_schedule_games": 1274,
+    "official_scheduled_start_passed_without_final_observation": 2,
+    "official_unresolved_matchups": 7,
+    "original_issue_games_absent_from_official_inventory": 0,
+    "original_issue_horizon_classes": {
+      "EARLY_OUTLOOK": 2674,
+      "LATE": 7,
+      "NOMINAL": 5
+    },
+    "original_issued_records_recovered": 2686,
+    "original_issued_records_with_intervals": 1689,
+    "selected_champion_role_views": 3454,
+    "separate_secondary_observations": 3
+  },
+  "fresh_exact_cutoff_matched_market_games": 0,
+  "frozen_frontier": {
+    "new_fits": 0,
+    "pending_registered_tasks": 1552,
+    "reason": "RESOURCE_OR_RETURN_BUDGET_ADMISSION",
+    "reused_fits": 776
+  },
+  "historical_T60_roles": [
+    {
+      "2024_25": 0.6658536585365854,
+      "2025_26": 0.6959349593495935,
+      "family": "xgboost",
+      "games_each_season": 1230,
+      "horizon_minutes": 60,
+      "independent_confirmation": false,
+      "metric": "accuracy",
+      "objective": "winner",
+      "status": "QUALIFIED_EXPOSED_DEVELOPMENT_CHAMPION_FOR_PROSPECTIVE_SHADOW"
+    },
+    {
+      "2024_25": 0.606708413724464,
+      "2025_26": 0.5952575687676004,
+      "family": "logistic",
+      "games_each_season": 1230,
+      "horizon_minutes": 60,
+      "independent_confirmation": false,
+      "metric": "log_loss",
+      "objective": "winner",
+      "status": "QUALIFIED_EXPOSED_DEVELOPMENT_CHAMPION_FOR_PROSPECTIVE_SHADOW"
+    },
+    {
+      "2024_25": 0.20991645334531794,
+      "2025_26": 0.20453317109856728,
+      "family": "logistic",
+      "games_each_season": 1230,
+      "horizon_minutes": 60,
+      "independent_confirmation": false,
+      "metric": "brier",
+      "objective": "winner",
+      "status": "QUALIFIED_EXPOSED_DEVELOPMENT_CHAMPION_FOR_PROSPECTIVE_SHADOW"
+    },
+    {
+      "2024_25": 10.981526026498694,
+      "2025_26": 11.345493303164028,
+      "family": "preserved_ensemble_prior_oof_raw_components",
+      "games_each_season": 1230,
+      "horizon_minutes": 60,
+      "independent_confirmation": false,
+      "metric": "mae",
+      "objective": "margin",
+      "status": "QUALIFIED_EXPOSED_DEVELOPMENT_CHAMPION_FOR_PROSPECTIVE_SHADOW"
+    },
+    {
+      "2024_25": 14.046086568041249,
+      "2025_26": 14.494244852810198,
+      "family": "preserved_ensemble_prior_oof_raw_components",
+      "games_each_season": 1230,
+      "horizon_minutes": 60,
+      "independent_confirmation": false,
+      "metric": "rmse",
+      "objective": "margin",
+      "status": "QUALIFIED_EXPOSED_DEVELOPMENT_CHAMPION_FOR_PROSPECTIVE_SHADOW"
+    },
+    {
+      "2024_25": 14.749733647619037,
+      "2025_26": 15.230263844363737,
+      "family": "precommitted_ensemble",
+      "games_each_season": 1230,
+      "horizon_minutes": 60,
+      "independent_confirmation": false,
+      "metric": "mae",
+      "objective": "total",
+      "status": "QUALIFIED_EXPOSED_DEVELOPMENT_CHAMPION_FOR_PROSPECTIVE_SHADOW"
+    },
+    {
+      "2024_25": 18.461521393096188,
+      "2025_26": 19.199729347167825,
+      "family": "precommitted_ensemble",
+      "games_each_season": 1230,
+      "horizon_minutes": 60,
+      "independent_confirmation": false,
+      "metric": "rmse",
+      "objective": "total",
+      "status": "QUALIFIED_EXPOSED_DEVELOPMENT_CHAMPION_FOR_PROSPECTIVE_SHADOW"
+    }
+  ],
+  "historical_evidence_exposed": true,
+  "latest_original_issue_at_utc": "2026-11-11T04:34:10.667171+00:00",
+  "latest_original_issue_source_asof_utc": "2026-11-11T04:28:17.037275+00:00",
+  "near_0_40_report_lead": {
+    "evidence_class": "DESCRIPTIVE_EXPOSED_RETROSPECTIVE_REPLAY_REPORTED_IN_B054",
+    "full_season_winner_log_loss_near_0_40_verified": false,
+    "model_family": "XGBoost",
+    "nominal_horizon_minutes": 60,
+    "original_raw_two_game_prediction_bodies_independently_verified_this_turn": false,
+    "promotion_eligible_from_this_evidence": false,
+    "reported_log_loss": 0.426446,
+    "reported_logistic_comparator_log_loss": 0.527164,
+    "reported_support_games": 2,
+    "status": "EARLIER_REPORT_RECOVERED_TWO_GAME_WINNER_RESULT_NOT_FULL_SEASON"
+  },
+  "new_local_NBA_fits": 0,
+  "new_local_inference_calls": 0,
+  "new_local_metric_evaluations": 0,
+  "no_current_outcome_model_selection": true,
+  "observed_external_elapsed_seconds": 4946.281856567,
+  "observed_external_exit_code": 3,
+  "original_five_game_accuracy_role_monitor": [
+    {
+      "distinct_games": 5,
+      "horizon_minutes": 60.0,
+      "issue_horizon_class": "EARLY_OUTLOOK",
+      "lead_bucket": "SIX_TO_TWENTY_FOUR_HOURS",
+      "metrics": {
+        "accuracy": 0.8,
+        "brier": 0.14326851255546585,
+        "ece_10_fixed_bins": 0.18053841195935044,
+        "log_loss": 0.45463225537987767,
+        "roc_auc": 1.0
+      },
+      "primary_revision_policy": "LATEST_ORIGINAL_ISSUED_IN_SAME_CLASS_AND_LEAD_BUCKET",
+      "retained_scored_revisions": 9
+    },
+    {
+      "distinct_games": 5,
+      "horizon_minutes": 120.0,
+      "issue_horizon_class": "EARLY_OUTLOOK",
+      "lead_bucket": "SIX_TO_TWENTY_FOUR_HOURS",
+      "metrics": {
+        "accuracy": 0.8,
+        "brier": 0.13433157528479633,
+        "ece_10_fixed_bins": 0.33586035543519266,
+        "log_loss": 0.43274417825385536,
+        "roc_auc": 1.0
+      },
+      "primary_revision_policy": "LATEST_ORIGINAL_ISSUED_IN_SAME_CLASS_AND_LEAD_BUCKET",
+      "retained_scored_revisions": 9
+    }
+  ],
+  "original_top_level_fit_count": 0,
+  "owner_return_sha256": "187c0f6dbd20f5631b12a6ff47a778760b0349c816ccaa8e5aa0f0df28b323ac",
+  "owner_status": "FINALIZER_FAILED_CHECKPOINTS_PRESERVED",
+  "prepared_owner_execution": "PENDING_MANUAL_OWNER_RUN",
+  "prepared_release": "B075",
+  "promotion": {
+    "automatic_production_promotions": 0,
+    "current_outcomes_used_for_selection": 0,
+    "eligible_for_nomination": 88,
+    "gate_failures_across_comparisons": {
+      "both_frozen_seasons_minimum_support": 12,
+      "exact_baseline_game_set": 12,
+      "season_stability": 24
+    },
+    "historical_evidence_exposed": true,
+    "interpretation": "88 native comparisons meet support/recipe/stability gates, but none has a positive adjusted lower bound; no native metric champion was selected and the prior 44 shadow roles remain.",
+    "native_metric_comparisons": 112,
+    "new_native_catalog_views": 32,
+    "new_native_selected_metric_roles": 0,
+    "positive_familywise_lower_bound_comparisons": 0,
+    "registered_multiple_comparisons": 8312,
+    "retained_metric_roles": 44
+  },
+  "publication_status": "SOURCE_PREPARED_FOR_EXACT_HEAD_REVIEW; see pull request and publication receipt for commit/merge status",
+  "reconciled_stage_fits": {
+    "champion_calibrations": 2,
+    "champion_rolling_estimators": 28,
+    "native_calibrations": 16,
+    "native_legacy_estimators": 45,
+    "total_estimators": 73
+  },
+  "result_source_separation": {
+    "full_B074_schedule_projection_reconstructed": false,
+    "latest_result_observation_at_utc": "2026-11-11T05:29:17.403448+00:00",
+    "newly_confirmed_final_game_ids": [
+      "0022600212",
+      "0022600213",
+      "0022600214",
+      "0022600215"
+    ],
+    "original_forecast_values_or_clocks_changed": false,
+    "owner_release": "B074",
+    "owner_return_sha256": "187c0f6dbd20f5631b12a6ff47a778760b0349c816ccaa8e5aa0f0df28b323ac",
+    "owner_summary_sha256": "145ff9cf8e4a4a75f154a6c4c77eee1388b32f481365f0c928984d9e587a6960",
+    "remaining_live_game_identity_recovered": false,
+    "result_rows_attached": 39,
+    "source_clock_rewritten": false,
+    "source_reported_official_games": 1274,
+    "source_reported_status_counts": {
+      "FINAL": 226,
+      "LIVE": 1,
+      "SCHEDULED": 1040,
+      "TBD": 7
+    },
+    "status": "SOURCE_BOUND_SAVED_RESULTS_ADDED_WITH_SCHEDULE_CLOCKS_PRESERVED",
+    "status_note": "Saved result rows update only their identified games. The B074 aggregate reports one additional live game whose row identity is unavailable; no game is guessed from that count."
+  },
+  "saved_array_recovery": {
+    "historical_array_evaluations": 156,
+    "new_checkpoints": 216,
+    "saved_paired_comparisons": 1288
+  },
+  "schema": "sports-edge-lab-nba-b075-actual-b074-public-evidence-v1",
+  "scope": "NBA ONLY; saved research aggregates and selected original issues; research-only non-wagering",
+  "separate_older_Kalshi126_replay": [
+    {
+      "comparison_class": "EXACT_GAME_ORDERED_TEAMS_TIP_CUTOFF_SIDE_LINE_SETTLEMENT",
+      "directions": {
+        "agree_negative": 43,
+        "agree_positive": 66,
+        "either_probability_tie": 0,
+        "first_negative_second_positive": 14,
+        "first_positive_second_negative": 3,
+        "first_right_second_wrong": 8,
+        "first_wrong_second_right": 9
+      },
+      "first_metrics": {
+        "AUC": 0.7918346774193549,
+        "Brier": 0.18787378850516642,
+        "ECE10": 0.0935169584619962,
+        "LogLoss": 0.5521957643889016,
+        "LogLoss_clipping_epsilon": 1e-07,
+        "accuracy": 0.7063492063492064,
+        "accuracy_tie_rule": "HALF_CREDIT_AT_EXACT_0_5",
+        "probability_bias": 0.029038688074613194,
+        "probability_ties": 0
+      },
+      "horizon_minutes": 60,
+      "n": 126,
+      "paired_week_block_intervals": {
+        "Brier": {
+          "high95": 0.004160428857856014,
+          "low95": -0.009017729143001486,
+          "mean_difference": -0.0006248226059447103,
+          "method": "PAIRED_PACIFIC_WEEK_BLOCK_BOOTSTRAP",
+          "metric": "Brier",
+          "resamples": 2000,
+          "sign": "FIRST_MINUS_SECOND",
+          "status": "ESTIMABLE",
+          "weeks": 3
+        },
+        "LogLoss": {
+          "high95": 0.010461863038849797,
+          "low95": -0.022259021496047724,
+          "mean_difference": -0.002459521875077062,
+          "method": "PAIRED_PACIFIC_WEEK_BLOCK_BOOTSTRAP",
+          "metric": "LogLoss",
+          "resamples": 2000,
+          "sign": "FIRST_MINUS_SECOND",
+          "status": "ESTIMABLE",
+          "weeks": 3
+        },
+        "accuracy": {
+          "high95": 0.02631578947368421,
+          "low95": -0.046511627906976744,
+          "mean_difference": -0.007936507936507936,
+          "method": "PAIRED_PACIFIC_WEEK_BLOCK_BOOTSTRAP",
+          "metric": "accuracy",
+          "resamples": 2000,
+          "sign": "FIRST_MINUS_SECOND",
+          "status": "ESTIMABLE",
+          "weeks": 3
+        },
+        "probability_bias": {
+          "high95": -0.018557622494994444,
+          "low95": -0.024157190235231888,
+          "mean_difference": -0.020762899226974104,
+          "method": "PAIRED_PACIFIC_WEEK_BLOCK_BOOTSTRAP",
+          "metric": "probability_bias",
+          "resamples": 2000,
+          "sign": "FIRST_MINUS_SECOND",
+          "status": "ESTIMABLE",
+          "weeks": 3
+        }
+      },
+      "provider_original_possession_qualified": false,
+      "second_metrics": {
+        "AUC": 0.8001512096774194,
+        "Brier": 0.1884986111111111,
+        "ECE10": 0.11440476190476187,
+        "LogLoss": 0.5546552862639785,
+        "LogLoss_clipping_epsilon": 1e-07,
+        "accuracy": 0.7142857142857143,
+        "accuracy_tie_rule": "HALF_CREDIT_AT_EXACT_0_5",
+        "probability_bias": 0.04980158730158729,
+        "probability_ties": 0
+      }
+    },
+    {
+      "comparison_class": "EXACT_GAME_ORDERED_TEAMS_TIP_CUTOFF_SIDE_LINE_SETTLEMENT",
+      "directions": {
+        "agree_negative": 41,
+        "agree_positive": 65,
+        "either_probability_tie": 0,
+        "first_negative_second_positive": 16,
+        "first_positive_second_negative": 4,
+        "first_right_second_wrong": 10,
+        "first_wrong_second_right": 10
+      },
+      "first_metrics": {
+        "AUC": 0.8024193548387097,
+        "Brier": 0.1827348447986732,
+        "ECE10": 0.07811441783381447,
+        "LogLoss": 0.5397536830775042,
+        "LogLoss_clipping_epsilon": 1e-07,
+        "accuracy": 0.7063492063492064,
+        "accuracy_tie_rule": "HALF_CREDIT_AT_EXACT_0_5",
+        "probability_bias": 0.023966016425856065,
+        "probability_ties": 0
+      },
+      "horizon_minutes": 120,
+      "n": 126,
+      "paired_week_block_intervals": {
+        "Brier": {
+          "high95": -0.0001413819456963147,
+          "low95": -0.010540104887286527,
+          "mean_difference": -0.005765155201326794,
+          "method": "PAIRED_PACIFIC_WEEK_BLOCK_BOOTSTRAP",
+          "metric": "Brier",
+          "resamples": 2000,
+          "sign": "FIRST_MINUS_SECOND",
+          "status": "ESTIMABLE",
+          "weeks": 3
+        },
+        "LogLoss": {
+          "high95": -0.003423266636152355,
+          "low95": -0.02831173684269541,
+          "mean_difference": -0.015150560163233425,
+          "method": "PAIRED_PACIFIC_WEEK_BLOCK_BOOTSTRAP",
+          "metric": "LogLoss",
+          "resamples": 2000,
+          "sign": "FIRST_MINUS_SECOND",
+          "status": "ESTIMABLE",
+          "weeks": 3
+        },
+        "accuracy": {
+          "high95": 0.022222222222222223,
+          "low95": -0.023255813953488372,
+          "mean_difference": 0.0,
+          "method": "PAIRED_PACIFIC_WEEK_BLOCK_BOOTSTRAP",
+          "metric": "accuracy",
+          "resamples": 2000,
+          "sign": "FIRST_MINUS_SECOND",
+          "status": "ESTIMABLE",
+          "weeks": 3
+        },
+        "probability_bias": {
+          "high95": -0.022073061087744008,
+          "low95": -0.0289659197583571,
+          "mean_difference": -0.025160967701128058,
+          "method": "PAIRED_PACIFIC_WEEK_BLOCK_BOOTSTRAP",
+          "metric": "probability_bias",
+          "resamples": 2000,
+          "sign": "FIRST_MINUS_SECOND",
+          "status": "ESTIMABLE",
+          "weeks": 3
+        }
+      },
+      "provider_original_possession_qualified": false,
+      "second_metrics": {
+        "AUC": 0.8016633064516129,
+        "Brier": 0.1885,
+        "ECE10": 0.09698412698412696,
+        "LogLoss": 0.5549042432407375,
+        "LogLoss_clipping_epsilon": 1e-07,
+        "accuracy": 0.7063492063492064,
+        "accuracy_tie_rule": "HALF_CREDIT_AT_EXACT_0_5",
+        "probability_bias": 0.04912698412698412,
+        "probability_ties": 0
+      }
+    }
+  ],
+  "source_gaps": {
+    "V6_evaluated_experiments": 0,
+    "V6_materialized_features": 0,
+    "latest_full_schedule_body_missing_from_failure_return": true,
+    "new_final_updates_vs_prior_schedule": 4,
+    "partial_saved_result_rows": 39,
+    "pbp_actions": 4343,
+    "pbp_actions_with_actual_UTC": 0
+  }
+}

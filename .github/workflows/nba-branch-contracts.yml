@@ -47,6 +47,8 @@ jobs:
         run: python -m tracks.nba.public_monitor.build --check
       - name: Validate complete selected NBA research output coverage and clocks
         run: python tracks/nba/reports/validate_research_snapshot.py tracks/nba/reports/latest_research_outputs.json
+      - name: Reject unsupported NBA status and source-clock substitutions
+        run: python -m unittest discover -s tracks/nba/reports -p test_research_snapshot.py -v
       - name: Test progressive-enhancement interaction logic
         run: node --test docs/nba/monitor.test.cjs
 
