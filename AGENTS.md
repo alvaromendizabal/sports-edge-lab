@@ -8,8 +8,9 @@ Track-specific work belongs in its established track or example directory. NFL w
 
 ## Public/private boundary
 
-Only publish sanitized aggregates, the explicitly permitted resolved examples, selected rounded early NFL research cards, the authorized FBS all-game analytical report, generic engineering implementations and invented fixtures. The FBS extension is defined in docs/PUBLICATION_BOUNDARY.md and does not expand other tracks. Never publish owner PYZ/return/continuation packages, credentials, private cloud paths, licensed feed arrays, active model weights or exact private feature transforms. Keep private outreach recipients and recruiting conversations out of all public content.
+Only publish sanitized aggregates, the explicitly permitted resolved examples, selected rounded early NFL research cards, the authorized FBS all-game analytical report, the authorized selected NBA research outputs, generic engineering implementations and invented fixtures. The FBS and NBA extensions are defined separately in docs/PUBLICATION_BOUNDARY.md and do not expand other tracks. Never publish owner PYZ/return/continuation packages, credentials, private cloud paths, licensed feed arrays, active model weights or exact private feature transforms. Keep private outreach recipients and recruiting conversations out of all public content.
 
 ## Scientific and merge checks
 
 Retain original/rolling/issued distinctions, event/horizon/target/settlement matching, information clocks, missing-coverage labels and negative findings. Do not claim prospective profit from reconstructed metrics. Run affected tests and render checks, inspect exact-head CI, reconcile concurrent base changes, and merge without bypassing rules or forcing refs. Report local and hosted validation separately.
+
