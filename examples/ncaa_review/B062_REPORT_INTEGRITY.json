@@ -1,0 +1,72 @@
+{
+  "canonical_source": {
+    "bytes": 18126079,
+    "file": "sports_edge_lab_ncaa_b062.pyz",
+    "sha256": "b1d87b63f6755af7059212961a9d0fa60a79fb7ead0c4001bfa1c27c2c517503"
+  },
+  "notebook_placeholders": {
+    "cell": 1,
+    "output": 0,
+    "source_line": 1
+  },
+  "outputs": {
+    "B062_EVIDENCE_REPORT.html": {
+      "bytes": 10077890,
+      "delivered_filename": "NCAA_B062_EVIDENCE_REPORT.html",
+      "sha256": "23cb463f9c9d0560d2c0ca5e0b570e5f442a238bd4bcb166663c6584252ee16a"
+    },
+    "B062_EVIDENCE_REPORT.ipynb": {
+      "bytes": 10807659,
+      "delivered_filename": "NCAA_B062_EVIDENCE_REPORT.ipynb",
+      "sha256": "a9f1841e5a4355f979a475670c6fb0816f5bda3473ffc594cbfe01a2a35512bc"
+    }
+  },
+  "publication_review": {
+    "census_records": 3457,
+    "new_issued_forecasts": 0,
+    "new_owner_fits": 0,
+    "prepared_metric_roles": 14,
+    "private_path_recipe_weight_raw_provider_key_scan": "NO_MATCHES",
+    "promotions": 0,
+    "qualifications": "Automated checks supplement the source publication review; they do not create provider redistribution rights.",
+    "scope": "Saved public aggregates, existing authorized census, and invented engineering fixture telemetry"
+  },
+  "reconstruction": {
+    "executes_notebook": false,
+    "new_model_fits": 0,
+    "preserves_saved_outputs_and_execution_metadata": true,
+    "provider_requests": 0,
+    "source_evidence_refreshed": false
+  },
+  "saved_evidence_created_at": "2026-11-11T19:23:10.443715+00:00",
+  "schema": "sel.ncaa.b062.saved_report_reconstruction.v1",
+  "templates": {
+    "B062_EVIDENCE_REPORT.template.html": {
+      "bytes": 68454,
+      "sha256": "d030fea346770f1c384716be06991cf6da3508438852e35a6b50d54ffb07aa08"
+    },
+    "B062_EVIDENCE_REPORT.template.ipynb": {
+      "bytes": 186765,
+      "sha256": "22d02f7d2a16e546103679ab8babc89ef346304bee70f07e9159059656d5fc16"
+    },
+    "B062_REPORT_DATA.json": {
+      "bytes": 49179,
+      "sha256": "aa891f20d5cb2834b93a47bd9bdafc9740c319675528e5ac8171c1878a7b90cc"
+    }
+  },
+  "upstream": {
+    "census": {
+      "bytes": 5146024,
+      "records": 3457,
+      "repository_path": "examples/ncaa_review/data/ncaa_observed_games_b060.json",
+      "sha256": "4277d81a79e8252d528fa735164bb94f4da4cfd2bc4584300e2f39658d6c77be"
+    },
+    "plotly": {
+      "javascript": {
+        "bytes": 4815814,
+        "sha256": "3b6e15d45dbb7fca5bd2094291e961ddc5472cd887009e6009a56dab668d721f"
+      },
+      "repository_path": "examples/ncaa_review/B061_EVIDENCE_REPORT.html"
+    }
+  }
+}
