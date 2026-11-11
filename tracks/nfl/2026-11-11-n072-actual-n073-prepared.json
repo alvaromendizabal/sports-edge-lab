@@ -1,0 +1,228 @@
+{
+  "counts": {
+    "completed_games": 136,
+    "current_selected_games": 112,
+    "current_selected_rows": 772,
+    "distinct_selected_model_aliases": 16,
+    "future_games": 136,
+    "games_with_any_preserved_evidence": 248,
+    "games_without_prediction_evidence_in_this_projection": 24,
+    "official_time_tbd_games": 24,
+    "primary_metric_roles": 18,
+    "rows_after_display_cutoff_not_shown": 0,
+    "schedule_games": 272,
+    "unmapped_nonselected_issue_rows_not_shown": 297
+  },
+  "fresh_n073_owner_execution": false,
+  "owner_execution": {
+    "actual_cpu_capacity": 48,
+    "compute_estimate_is_actual_bill": false,
+    "compute_time_estimate_usd": 1.001394754501575,
+    "distinct_game_model_target_combinations": 1069,
+    "duplicate_issue_references": 475,
+    "elapsed_seconds": 1402.731951831,
+    "exact_matched_old_new_descriptive_comparisons": 144,
+    "finished_at_utc": "2026-11-11T19:55:39.307309+00:00",
+    "forecast_count_qualification": "Verified returned ledgers contain at least 1,517 unique issue IDs over 112 games and 1,069 game/model/target combinations. Repeated refreshes are not independent outcome trials. The final refresh failed and original whole-run counts remain null.",
+    "frozen_native_cases_reused": 1251,
+    "frozen_prediction_rows_reused": 275706,
+    "historical_champions_changed": true,
+    "historical_selection_release": "N072",
+    "latest_selected_games": 112,
+    "latest_selected_rows": 772,
+    "local_integrity_verification": {
+      "current_invocation_closure": true,
+      "declared_direct_return_members": 4427,
+      "full_historical_source_closure": false,
+      "logical_records": 10032,
+      "proof_records": 148,
+      "remote_completion_independently_checked": false
+    },
+    "neutral_benchmark": [
+      {
+        "actual_peak_concurrent_workers": 1,
+        "completed_units": 24,
+        "identical_neutral_results_vs_one": true,
+        "measured_cpu_equivalent_cores_over_work_span": 0.6804460593364899,
+        "measured_speedup_vs_one": 1.0,
+        "peak_overlapping_cpu_work_intervals": 1,
+        "requested_workers": 1,
+        "wall_seconds": 7.437560648999806
+      },
+      {
+        "actual_peak_concurrent_workers": 2,
+        "completed_units": 24,
+        "identical_neutral_results_vs_one": true,
+        "measured_cpu_equivalent_cores_over_work_span": 1.134093040073113,
+        "measured_speedup_vs_one": 1.7717732082627868,
+        "peak_overlapping_cpu_work_intervals": 2,
+        "requested_workers": 2,
+        "wall_seconds": 4.1978062509999745
+      },
+      {
+        "actual_peak_concurrent_workers": 4,
+        "completed_units": 24,
+        "identical_neutral_results_vs_one": true,
+        "measured_cpu_equivalent_cores_over_work_span": 2.184380013734855,
+        "measured_speedup_vs_one": 3.3338850775878797,
+        "peak_overlapping_cpu_work_intervals": 4,
+        "requested_workers": 4,
+        "wall_seconds": 2.230898928999977
+      },
+      {
+        "actual_peak_concurrent_workers": 8,
+        "completed_units": 24,
+        "identical_neutral_results_vs_one": true,
+        "measured_cpu_equivalent_cores_over_work_span": 3.2877620358459057,
+        "measured_speedup_vs_one": 4.8241989102606855,
+        "peak_overlapping_cpu_work_intervals": 6,
+        "requested_workers": 8,
+        "wall_seconds": 1.5417193170001156
+      },
+      {
+        "actual_peak_concurrent_workers": 12,
+        "completed_units": 24,
+        "identical_neutral_results_vs_one": true,
+        "measured_cpu_equivalent_cores_over_work_span": 3.492322241337848,
+        "measured_speedup_vs_one": 5.039432008532596,
+        "peak_overlapping_cpu_work_intervals": 6,
+        "requested_workers": 12,
+        "wall_seconds": 1.4758728039998914
+      }
+    ],
+    "neutral_benchmark_is_model_fit_speedup": false,
+    "new_champion_promotion": false,
+    "new_fits": null,
+    "new_forecasts": null,
+    "new_meta_fits": null,
+    "new_native_fits": null,
+    "noncomparable_old_new_comparisons": 240,
+    "observed_leased_process_concurrency": 7,
+    "observed_native_fit_concurrency": null,
+    "original_model_scorecards": 192,
+    "original_models_preserved": 144,
+    "original_monitor_completed_games": 14,
+    "original_monitor_new_score_computations": 0,
+    "original_monitor_unique_evaluations_reused": 492,
+    "original_saved_prediction_rows_reviewed": 28512,
+    "owner_12_worker_benchmark_completed": true,
+    "owner_research_acceptance": false,
+    "phase_statuses": {
+      "v5_current": {
+        "new_meta_fits": 48,
+        "new_native_fits": 17,
+        "reported_forecast_rows": 1069,
+        "status": "N070_FROZEN_RESEARCH_AND_CHAMPIONS_REPORTED_WITH_EXPLICIT_GAPS"
+      },
+      "v5_final_refresh": {
+        "new_meta_fits": null,
+        "new_native_fits": null,
+        "reported_forecast_rows": null,
+        "status": "FINAL_FORECAST_REFRESH_FAILED_PRESERVED"
+      },
+      "v5_urgent_current": {
+        "new_meta_fits": 0,
+        "new_native_fits": 4,
+        "reported_forecast_rows": 448,
+        "status": "N070_FROZEN_RESEARCH_AND_CHAMPIONS_REPORTED_WITH_EXPLICIT_GAPS"
+      }
+    },
+    "project_cpu_cap": 12,
+    "publication_recovery": "All 27 historical roles kept with horizon-qualified IDs; original forecast values and issue clocks unchanged.",
+    "quote_rate_whole_instance_usd_hour": 2.57,
+    "r13_r20_completed_comparisons": 0,
+    "release": "N072",
+    "research_execution_summary": "All 1,251 registered native annual cases are available from cache or retained evidence; this is not 1,251 new fits. The owner reviewed 28,512 old saved rows with 192 scorecards and 144 exact matched descriptive comparisons; 240 comparisons were non-comparable.",
+    "return_sha256": "38c40d60dd1e4e23aacf6efda3f621776a965006e50d558a71f437766d372ae9",
+    "selected_projection_sha256": "e586509bf7dd408c2da0329ab33d8f49cec6e4daa8f6d12b65971137bbbda7c4",
+    "started_at_utc": "2026-11-11T19:32:16.575369+00:00",
+    "status": "PARTIAL_OWNER_CONTINUATION_REPAIR_REQUIRED",
+    "verified_distinct_new_forecast_issue_minimum": 1517,
+    "verified_issue_row_references": 1992,
+    "verified_new_fit_minimum": 69,
+    "verified_new_meta_fit_minimum": 48,
+    "verified_new_native_fit_minimum": 21
+  },
+  "previous_selected_output": "selected_forecasts_n072.json",
+  "promotion_status": "NOT_ESTABLISHED",
+  "publication_scope": "Selected rounded already-issued forecasts, separate retained evidence classes, saved metric/horizon historical roles and source/execution aggregates.",
+  "schema": "nfl.n073.public-owner-evidence.v1",
+  "selected_output": "selected_forecasts_n073.json",
+  "source_refresh": {
+    "all_sources_complete": false,
+    "draftkings": {
+      "all_live_coverage_claimed": false,
+      "current_postgame_quotes_not_backdated": true,
+      "new_forecasts": 0,
+      "new_model_fits": 0,
+      "new_paid_calls": 15,
+      "new_provider_calls": 16
+    },
+    "model_predictions_refreshed": true,
+    "new_normalized_market_rows": 468,
+    "observed_schedule_from_utc": "2026-11-11T19:33:46.212968+00:00",
+    "observed_schedule_through_utc": "2026-11-11T19:33:51.138547+00:00",
+    "provider_coverage": [
+      {
+        "by_target": {
+          "margin": {
+            "normalized_rows": 28,
+            "valid_price_rows": 28
+          },
+          "total": {
+            "normalized_rows": 28,
+            "valid_price_rows": 28
+          },
+          "winner": {
+            "normalized_rows": 108,
+            "valid_price_rows": 108
+          }
+        },
+        "games": 27,
+        "metric_eligible_cells": 0,
+        "normalized_rows": 164,
+        "provider": "kalshi",
+        "states": {
+          "NO_USABLE_QUOTES_RETRYABLE": 26,
+          "QUOTES_PRESENT_NOT_FULL_TARGET_ADMISSION": 55
+        },
+        "target_cells": 81
+      },
+      {
+        "by_target": {
+          "margin": {
+            "normalized_rows": 94,
+            "valid_price_rows": 94
+          },
+          "total": {
+            "normalized_rows": 102,
+            "valid_price_rows": 102
+          },
+          "winner": {
+            "normalized_rows": 108,
+            "valid_price_rows": 108
+          }
+        },
+        "games": 27,
+        "metric_eligible_cells": 0,
+        "normalized_rows": 304,
+        "provider": "polymarket",
+        "states": {
+          "QUOTES_PRESENT_NOT_FULL_TARGET_ADMISSION": 81
+        },
+        "target_cells": 81
+      }
+    ],
+    "qualified_current_market_winner_baseline_rows": 0,
+    "source_gaps": [
+      "Seventeen primary metric/horizon roles have current issues for 27 of 112 confirmed future games; the one-hour total CRPS role and operational fallbacks cover all 112. Missing primary outputs are explicit.",
+      "Current target-equivalent two-sided market winner benchmarks remain unavailable; raw quote values are excluded.",
+      "The announced-QB context observed after kickoff was rejected for the earlier pregame cutoff.",
+      "Legacy recent training rows still require authentic pregame covariate snapshots; known finals alone do not supply them.",
+      "Historical market paths retain 136 missing-time parsing failures and unresolved legacy parent/source gates.",
+      "R13\u2013R20 have no completed source-admitted comparison; exact tick, possession and two-minute checkpoint coverage remains incomplete.",
+      "All 24 official kickoff times marked TBD remain null."
+    ]
+  },
+  "sport": "NFL"
+}
