@@ -1,0 +1,132 @@
+{
+  "actual_owner": {
+    "actual_billed_cost_usd": null,
+    "automatic_promotions": 0,
+    "cost_scope": "Verified-rate whole-instance elapsed-time estimate; not invoice, not project allocation, and not additive to overlapping pipeline estimate",
+    "elapsed_seconds": 1159.6265762499997,
+    "estimated_whole_instance_invocation_usd": 0.8278445280451388,
+    "failure_class": "MUTABLE_COST_LEDGER_PIN_CHANGED_DURING_RETURN_BUDGET_MEASUREMENT",
+    "new_estimator_fits": 0,
+    "new_forecasts": 0,
+    "new_metric_evaluations": 0,
+    "new_provider_requests": 0,
+    "observed_concurrent_new_fits": 0,
+    "observed_effective_vcpus": 48,
+    "observed_exit_code": 2,
+    "per_project_cpu_cap": 12,
+    "release": "B072",
+    "return_sha256": "6b7dcd49c4e37e1d22d9e12ee8006aeb64df26f0129d869f520a6d2f56fd0f2e",
+    "status": "PARTIAL_RESUMABLE_OWNER_PIPELINE"
+  },
+  "isolated_synthetic_telemetry_benchmark": {
+    "after": {
+      "AWS_requests": 0,
+      "callbacks": 36264,
+      "console_lines": 1,
+      "cost_provider_calls_and_atomic_writes": 2,
+      "durable_records": 2,
+      "elapsed_seconds": 0.08973685499950079,
+      "label": "after",
+      "last_received_completed": 36263,
+      "max_sample_window": 128,
+      "progress_jsonl_bytes": 9559,
+      "real_NBA_estimator_fits": 0,
+      "scope": "LOCAL_SYNTHETIC_TELEMETRY_ONLY_NOT_SCIENTIFIC_THROUGHPUT"
+    },
+    "before": {
+      "AWS_requests": 0,
+      "callbacks": 36264,
+      "console_lines": 4,
+      "cost_provider_calls_and_atomic_writes": 36264,
+      "durable_records": 36264,
+      "elapsed_seconds": 52.92641937100052,
+      "label": "before",
+      "last_received_completed": 36263,
+      "max_sample_window": null,
+      "progress_jsonl_bytes": 165215293,
+      "real_NBA_estimator_fits": 0,
+      "scope": "LOCAL_SYNTHETIC_TELEMETRY_ONLY_NOT_SCIENTIFIC_THROUGHPUT"
+    },
+    "new_predictive_improvement_claim": false,
+    "observed_callback_workload_speedup": 589.795790941135,
+    "progress_byte_reduction_factor": 17283.742337064545,
+    "schema": "sel.nba.b073.local_telemetry_benchmark.v1",
+    "wall_clock_run_limit_seconds": null
+  },
+  "legacy_plan": {
+    "deferred_reasons": {
+      "INSUFFICIENT_TRAIN_CALIBRATION_OR_EVALUATION_SUPPORT": 168,
+      "NO_PRIOR_CALIBRATION_SEASON": 168
+    },
+    "deferred_tasks": 336,
+    "minimums_or_source_gates_relaxed": false,
+    "missing_source_is_not_zero": true,
+    "new_native_fits_completed_in_b072": 0,
+    "ready_scope": "Basketball-only variants across both completed seasons, horizons, phases and winner/margin/total targets",
+    "ready_tasks": 48,
+    "registered_is_not_executable": true,
+    "registered_tasks": 384
+  },
+  "prepared_continuation": {
+    "actual_owner_parallelism_or_throughput_claim": false,
+    "deployment_performed": false,
+    "exact_assembled_synthetic_tests": {
+      "elapsed_seconds": 103.217,
+      "errors": 0,
+      "failures": 0,
+      "scope": "Preparation and recovery behavior only; no real NBA fitting, inference or new source acquisition",
+      "skips": 0,
+      "tests": 527
+    },
+    "new_model_improvement_claim": false,
+    "owner_execution": "PENDING_MANUAL_OWNER_EXECUTION",
+    "release": "B073",
+    "repair_classes": [
+      "Content-stable transport snapshots for mutable telemetry; original scientific pins remain mandatory",
+      "Coalesced bounded progress telemetry with preserved terminal state",
+      "Source-bound executable native task allocation and precise support blockers",
+      "Independent eligible frozen work retains unchanged source and qualification gates"
+    ],
+    "run_or_stage_elapsed_cutoff_seconds": null
+  },
+  "publication_boundary": "Selected rounded NBA role outputs and sanitized aggregate evidence only; private numerical recipes, model bodies, raw feeds, full journals and execution packages excluded",
+  "published_date_pacific": "2026-11-10",
+  "recovered_low_loss_report_lead": {
+    "broad_season_approximately_040_claim_confirmed": false,
+    "comparator_family": "logistic",
+    "comparator_log_loss": 0.527164,
+    "evidence_class": "SAVED_REPORT_LEVEL_CLAIM",
+    "games": 2,
+    "horizon_minutes": 60,
+    "log_loss": 0.426446,
+    "model_family": "xgboost",
+    "new_independent_evidence": false,
+    "phase": "postseason",
+    "promotion_from_this_result": false,
+    "source_release": "B054",
+    "source_report_sha256": "38955bcca5d3f5514aec106059960e85e0c2ac30390b15600e86833813efbe1b",
+    "target": "winner",
+    "underlying_paired_forecast_bodies_authenticated_here": false
+  },
+  "saved_selected_output_preservation": {
+    "champion_roles": 44,
+    "issues": 1711,
+    "latest_forecast_issue_at_utc": "2026-11-10T22:52:05.759412+00:00",
+    "latest_forecast_source_asof_utc": "2026-11-10T22:50:51.862036+00:00",
+    "observed_games": 1274,
+    "official_games_without_original_issues": 1117,
+    "only_observation_relative_game_change": "One saved scheduled start passed the newer report evidence time; no final result was inferred",
+    "original_values_and_clocks_unchanged": true,
+    "role_views": 3454,
+    "source_observations_refreshed": false,
+    "unchanged_component_sha256": {
+      "champions": "394ae440d187669569524d224fa5b7d8c742b8be7918b57cf3fbcf03faaa2bd2",
+      "game_coverage": "aa2289db976dd2656205ed1b902089d711a47e2f03c432768454fe23748af07a",
+      "issues": "2c607c1e88ad608d3674c05d42c2b0ed0fca9a80f2bbd8e3e170eb8681a0482b",
+      "role_views": "c27aed06b7a1a87cbebafa3ecb63ff20e5480a753b1d579fcb1cf5cff4337ad4",
+      "schedule_observation": "da03508c82d52da94df0a907e275f94a9d835e19e47b407c6f7b4cb688f01240"
+    }
+  },
+  "schema": "sports-edge-lab-nba-b073-public-recovery-evidence-v1",
+  "scope": "NBA-only authenticated execution review and prepared engineering; no new scientific results from publication"
+}
