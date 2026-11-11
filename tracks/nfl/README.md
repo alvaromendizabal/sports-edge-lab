@@ -44,7 +44,7 @@ Each row tracks its own pooled-selected candidate through both completed seasons
 | Total-points squared-error | 12.900565 | 13.488984 | 13.198054 | 570 |
 | Total-points distribution | 7.285066 | 7.606911 | 7.445988 | 570 |
 
-Winner support excludes the tied target; point targets retain 570 games. Marginal CRPS does not establish a coherent joint score distribution. Qualified spread-cover, joint CRPS and interval promotion require their own comparable target/source/distribution evidence.
+Winner support excludes the tied target; point targets retain 570 games. Marginal CRPS does not establish a coherent joint score distribution. Comparable threshold-event probabilities, joint CRPS and interval promotion require their own target, source and distribution evidence.
 
 **Independent production promotion is not established.** The seasons are repeatedly examined development evidence, the registered queue was incomplete, and eligible older contenders were not all admitted. Selected candidates remain forward-shadow roles. A smaller log-loss number from a different cohort or issue policy cannot establish an independent season champion.
 
