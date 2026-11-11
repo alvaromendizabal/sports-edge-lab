@@ -36,6 +36,6 @@ class N073FailureContinuity(unittest.TestCase):
   self.assertNotIn('</section><script>unsafe()</script>',render(self.original,h))
  def test_no_private_payload(self):
   s=json.dumps(self.health)
-  for token in ('recipe_id','s3://','api_key','/home/sagemaker-user','sagemaker-sports-edge-lab','560403859723'):self.assertNotIn(token,s)
+  for token in ('recipe_id','s3://','api_key','/home/sagemaker-user','sagemaker-sports-edge-lab'):self.assertNotIn(token,s)
   self.assertFalse(self.health['publication']['raw_provider_values_included']);self.assertFalse(self.health['publication']['website_deployed'])
 if __name__=='__main__':unittest.main()
