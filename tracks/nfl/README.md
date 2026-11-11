@@ -16,6 +16,8 @@ The latest saved season census remains **136 completed games, 112 confirmed futu
 
 The [model card](CURRENT_MODEL_CARD.md) retains exact-candidate 2024 and 2025 accuracy, log loss, Brier, margin and total results. Strong original Torch/TF models remain visible beside newer selections. The remembered approximately **0.40 full-season NFL log loss remains unauthenticated**; N073 did not resolve that missing provenance or evaluate the old models on the complete current season. DraftKings, Kalshi and Polymarket remain separate comparators with explicit unsupported targets and cutoffs.
 
+The additional [original-model leaderboard](CURRENT_MODEL_CARD.md#distinct-recovered-original-accuracy-and-probability-leaders) distinguishes **Torch AB accuracy: 388/557 correct** from **Torch B probability quality: 0.595426 log loss and 0.204637 Brier**, using the original annual rolling-origin states. TF AB has 387/557 correct. The separate archived 77-game 2026 ranking favors TF A descriptively; it is exposed, incomplete and unpromoted. None of these recovered aggregates changes the retained forecasts.
+
 N074 is the V8 engineering continuation. Its owner execution and scientific results are pending. It must repair these actual entry failures, reuse authenticated completed fits, recover historical market data before duplicate requests, and demonstrate useful shared-CPU concurrency. Prepared or tested code is not owner-run model improvement.
 
 Public source publication does not update the separately hosted Site. Only selected rounded outputs, saved scores and aggregate execution evidence are included.
