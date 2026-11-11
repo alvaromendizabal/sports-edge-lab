@@ -1,0 +1,149 @@
+{
+  "counts": {
+    "completed_games": 136,
+    "current_selected_games": 112,
+    "current_selected_rows": 448,
+    "distinct_selected_model_aliases": 9,
+    "future_games": 136,
+    "games_with_any_preserved_evidence": 248,
+    "games_without_prediction_evidence_in_this_projection": 24,
+    "official_time_tbd_games": 24,
+    "primary_metric_roles": 9,
+    "rows_after_display_cutoff_not_shown": 0,
+    "schedule_games": 272,
+    "unmapped_nonselected_issue_rows_not_shown": 0
+  },
+  "fresh_n071_owner_execution": false,
+  "owner_execution": {
+    "actual_cpu_capacity": 48,
+    "compute_estimate_is_actual_bill": false,
+    "compute_time_estimate_usd": 0.22472282253217515,
+    "current_invocation_closure": false,
+    "elapsed_basis": "INVOCATION_MONOTONIC_BEFORE_PACKAGE_AUTHENTICATION",
+    "elapsed_seconds": 314.7868331190002,
+    "failure_pressure_snapshot_available": true,
+    "finished_at_utc": "2026-11-11T04:09:32.763213+00:00",
+    "historical_and_frontier_stages_invoked": false,
+    "last_scientific_release": "N067",
+    "local_integrity_verification": {
+      "declared_direct_return_members": 1621,
+      "logical_records": 2765,
+      "proof_records": 11,
+      "remote_completion_independently_checked": false
+    },
+    "new_forecast_issues": null,
+    "new_meta_fits": null,
+    "new_native_fits": null,
+    "observed_native_fit_concurrency": null,
+    "owner_12_worker_benchmark_completed": false,
+    "phase_failures": [
+      {
+        "phase": "v5_urgent_current",
+        "reason": "'bundled_name'",
+        "type": "KeyError"
+      },
+      {
+        "phase": "v5_current",
+        "reason": "'bundled_name'",
+        "type": "KeyError"
+      }
+    ],
+    "project_cpu_cap": 12,
+    "publication_failure": {
+      "reason": "N070_PUBLICATION_EMBEDDED_NAME",
+      "type": "ValueError"
+    },
+    "quote_rate_whole_instance_usd_hour": 2.57,
+    "release": "N070",
+    "reported_resource_refusal": "EXTERNAL_IO_PRESSURE",
+    "return_sha256": "ba2f126123f8672a7941c7972b348b82c3f202dc5409d714bd9672a0e2f5559b",
+    "scientific_result": "NO_NEW_MODEL_COMPARISON_OR_PROMOTION_ESTABLISHED",
+    "started_at_utc": "2026-11-11T04:04:17.976386+00:00",
+    "status": "RESOURCE_DEFERRED_RESUMABLE",
+    "unresolved_counts_are_not_zero": true,
+    "verified_new_fit_minimum": 0,
+    "verified_new_issue_minimum": 0
+  },
+  "previous_selected_output": "selected_forecasts_n070.json",
+  "promotion_status": "NOT_ESTABLISHED",
+  "publication_scope": "Rounded previously selected forecasts, original clocks, metric-specific historical leaders, current source coverage and explicit missingness. No raw provider arrays or private recipes.",
+  "schema": "nfl.n071.public-owner-evidence.v1",
+  "selected_output": "selected_forecasts_n071.json",
+  "source_refresh": {
+    "all_sources_complete": false,
+    "draftkings": {
+      "all_live_coverage_claimed": false,
+      "current_postgame_quotes_not_backdated": true,
+      "new_forecasts": 0,
+      "new_model_fits": 0,
+      "new_paid_calls": 15,
+      "new_provider_calls": 16
+    },
+    "model_predictions_refreshed": false,
+    "new_normalized_market_rows": 464,
+    "observed_schedule_from_utc": "2026-11-11T04:05:21.230082+00:00",
+    "observed_schedule_through_utc": "2026-11-11T04:05:29.628542+00:00",
+    "outcome_or_confirmed_schedule_changes_from_previous_display": 0,
+    "provider_coverage": [
+      {
+        "by_target": {
+          "margin": {
+            "normalized_rows": 28,
+            "valid_price_rows": 28
+          },
+          "total": {
+            "normalized_rows": 28,
+            "valid_price_rows": 28
+          },
+          "winner": {
+            "normalized_rows": 108,
+            "valid_price_rows": 108
+          }
+        },
+        "games": 27,
+        "metric_eligible_cells": 0,
+        "normalized_rows": 164,
+        "provider": "kalshi",
+        "states": {
+          "NO_USABLE_QUOTES_RETRYABLE": 26,
+          "QUOTES_PRESENT_NOT_FULL_TARGET_ADMISSION": 55
+        },
+        "target_cells": 81
+      },
+      {
+        "by_target": {
+          "margin": {
+            "normalized_rows": 94,
+            "valid_price_rows": 94
+          },
+          "total": {
+            "normalized_rows": 98,
+            "valid_price_rows": 98
+          },
+          "winner": {
+            "normalized_rows": 108,
+            "valid_price_rows": 108
+          }
+        },
+        "games": 27,
+        "metric_eligible_cells": 0,
+        "normalized_rows": 300,
+        "provider": "polymarket",
+        "states": {
+          "QUOTES_PRESENT_NOT_FULL_TARGET_ADMISSION": 81
+        },
+        "target_cells": 81
+      }
+    ],
+    "qualified_current_market_winner_baseline_rows": 0,
+    "source_gaps": [
+      "Official league current injury body did not match the requested season/week.",
+      "An announced-quarterback context was observed after its game kickoff and excluded.",
+      "Nine player rows lacked usable identities and were quarantined; 9,455 valid rows retained.",
+      "Available Kalshi and Polymarket observations did not establish full target/settlement admission.",
+      "DraftKings refresh used 15 paid requests and 16 provider calls; complete live coverage was not established.",
+      "Exact historical live checkpoints and qualified score/clock residual studies were not executed in N070."
+    ]
+  },
+  "sport": "NFL"
+}

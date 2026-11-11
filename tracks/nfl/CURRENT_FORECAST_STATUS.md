@@ -1,32 +1,24 @@
-# Latest NFL forecast status · November 10, 2026 Pacific
+# Latest NFL forecast status · November 11, 2026 Pacific
 
-[All-game review](season_review_n070.html) · [Selected outputs](selected_forecasts_n070.json) · [Actual N069 evidence](2026-11-11-n069-actual-n070-prepared.json) · [Earlier status preserved](CURRENT_FORECAST_STATUS_N069_SNAPSHOT.md)
+[All-game review](season_review_n071.html) · [Selected forecasts](selected_forecasts_n071.json) · [Actual N070 evidence](2026-11-11-n070-actual-n071-prepared.json) · [Prior status](CURRENT_FORECAST_STATUS_N070_SNAPSHOT.md)
 
-**Actual N069 issued no new forecast.** It refreshed schedule, team/player and provider observations, then the scientific stage was refused for CPU measurement confirmation and reported IO pressure. Its failure-time resource snapshot is missing from the bounded return. The 448 current selected rows remain N067's original issues, with their original model/input/issue clocks unchanged.
+**N070 established no new forecast issuance.** Both current-model phases failed on missing package metadata (`bundled_name`); the publication step also failed its embedded-source name check. A later optional original-issue monitor was deferred for measured I/O pressure before historical or frontier research ran. The new-fit and issue totals remain **unresolved**, with verified minima **zero**. Unknown totals are not relabeled as exact zeros.
 
-| Denominator | Games or rows | Meaning |
+The latest admissible selected outputs remain the preserved N067 issues and historical roles. Every original forecast value, model alias, input clock, fit clock and issue clock is unchanged. The new view reports the actual N070 failure and newer source observations separately.
+
+| Coverage | Count | Interpretation |
 |---|---:|---|
-| Observed 2026 schedule | 272 games | Every game remains in the view |
-| Completed games | 136 games | One tie; binary and point cohorts remain separate |
-| Confirmed future games with selected issues | 112 games | 448 preserved current selected rows |
-| Official kickoff time TBD | 24 games | No admitted precise-horizon forecast; placeholders suppressed |
-| Any preserved selected evidence | 248 games | Overlapping original, qualified early and reconstruction panels; not one prospective cohort |
-| New N069 forecast issues | 0 rows | Source acquisition did not refresh model outputs |
+| Current-season schedule | 272 games | Complete saved regular-season denominator |
+| Completed | 136 games | Includes one tie; binary and point targets remain separate |
+| Confirmed future games with selected issues | 112 games | 448 preserved selected rows |
+| Official kickoff time TBD | 24 games | Precise issue horizon unavailable; placeholder times suppressed |
+| Games with any preserved evidence | 248 games | Original issues, early snapshots and reconstruction panels overlap |
+| Verified minimum new N070 issues | 0 | Complete issue accounting did not finish |
 
-The new owner schedule was observed November 11 at **02:28:05–02:28:15 UTC** (November 10, **6:28:05–6:28:15 p.m. Pacific**). Final scores and confirmed times match the previous selected census. Its source-observation clock appears separately from the earlier forecast-input clock. The 24 official-TBD provider timestamps remain unconfirmed.
+The N070 schedule observations span **November 10, 8:05:21–8:05:29 p.m. Pacific** (November 11, 04:05:21–04:05:29 UTC). All final scores, confirmed kickoff times and game identities match the prior selected display. A source refresh does not make an older forecast newly issued.
 
-Historical primary winner accuracy, probability-loss and Brier leaders still have no admitted current output in this saved run. The selected operational fallback supplies the displayed original winner forecast; it does not become the primary historical leader. Point targets retain the same primary/fallback distinctions and exact missingness.
+Kalshi supplied **164 normalized observations across 27 games** and Polymarket supplied **300 across 27 games**. None established a fully qualified current winner benchmark. DraftKings used 15 paid requests and 16 provider calls, with complete live coverage unproved. Every game retains separate provider coverage and missingness. Raw prices are not published in this selected-output view.
 
-N069 saved 164 Kalshi and 301 Polymarket observations across 27 games each, but no fully qualified current winner benchmark. DraftKings refresh used 15 paid requests and 16 provider calls, without proving complete live coverage. These observations are not republished as raw quotes or silently substituted into an earlier forecast. Sources outside that captured scope remain explicitly unrefreshed.
+Historical primary winner accuracy, log-loss and Brier leaders still lack admitted current outputs in this evidence. The operational fallback is labeled separately. Cover probabilities and joint score-distribution quality remain unestablished; a conditional threshold contract is not an expected margin.
 
-Current source gaps include the official league season/week mismatch, a post-kickoff quarterback context excluded from pregame use, and nine player rows quarantined for missing identities. No all-source-complete claim is supported. Exact historical live checkpoints and R13–R20 improvement findings remain incomplete.
-
-## Implemented N070 continuation, owner execution pending
-
-N070 now attempts qualified retained selected-champion issuance immediately after the core schedule/team/player refresh, before optional market collection and broad historical work. It verifies the exact required historical dependencies without eagerly rehydrating every unrelated old artifact. Existing forecasts retain their original input and issue clocks; unavailable selected states or source inputs remain explicit gaps.
-
-Independent selected native fits use shared CPU/RAM leases and controlled native threads. Actual optimizer overlap at widths 1, 2 and 4 was demonstrated locally on invented inputs with identical predictions, scientific states and serialized model bytes. The 12-CPU owner ceiling on a 48-CPU host remains subject to discovered capacity and shared pressure. Local concurrency does not establish owner AWS throughput or a new forecast.
-
-Fresh pressure-counter confirmation and prioritized complete denial receipts address the resource-refusal and diagnostic gaps in N069. Historical comparison reporting preserves distinct references for all nine winner, point-error and marginal-distribution objectives, with matched games/horizons and explicit missingness. Those comparisons do not rewrite issued forecasts or establish automatic promotion.
-
-**N070 has issued zero new real forecasts in this review. N067 remains the latest scientific evidence.** The offline view is prepared from authenticated saved evidence. Opening it does not acquire data, fit a model, issue a prediction or deploy a website. Final sealed package identity and acceptance totals are pending separate binding; new N070 scientific performance remains unmeasured until its actual owner execution.
+N071 is being prepared to correct the package-metadata defects and prevent an optional source-monitor deferral from aborting independent research lanes. Its local tests will establish software behavior only. Fresh model predictions and any new performance claim require an actual completed owner execution. No website deployment is implied by updating these source files.
