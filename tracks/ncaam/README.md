@@ -1,3 +1,15 @@
+## Men’s NCAA basketball: B059 actual / B060 prepared — November 11, 2026 UTC
+
+**B059 is now the latest authenticated owner result.** It preserved 107 target-estimator fits, 17 scalar calibrations, 36 empirical-residual fits and 108 historical fit reuses across both NCAA tracks. It produced zero newly eligible current forecasts or promotions. The twelve-CPU ceiling masked serial execution averaging approximately 0.81 CPU cores; a transient I/O deferral ended the run before the new full-model frontier.
+
+The original frozen T−60 reconstruction retains **0.412659 log loss on 329 games**, with **80.5471% accuracy**. Those are exposed saved scores, not a fresh current-season rescore. Earlier strong models, negative findings and immutable original issues remain preserved. No new accuracy, probability, margin, total, cover or joint-distribution champion is promoted by this preparation.
+
+B060 removes the serial-admission bottlenecks, preserves verified B059 fits, attempts one evidenced recovery from the inherited ESPN timeout, and evaluates 104 full-baseline contexts plus 264 grouped diagnostic contexts. Current selected forecasts run before diagnostics; selected rolling work is bounded to 192 new fits under resource/source/cost gates. Eight unresolved scalar features advance per tranche. The earlier arbitrary elapsed-time ceiling is removed.
+
+[Authenticated evidence and qualifications](../../examples/ncaa_review/evidence/B059_ACTUAL_B060_PREPARED.md) · [Observed games and forecast availability](../../examples/ncaa_review/data/ncaa_observed_games_b059.csv) · [Machine-readable status](../../examples/ncaa_review/evidence/B059_ACTUAL_B060_PREPARED.json)
+
+The game export includes every supplied official record at the saved report time, with source gaps retained. It is not complete season coverage or newly issued predictions. Real owner execution is required for new forecast values, measured twelve-fit concurrency, fresh matched Kalshi comparisons and promotion evidence. Earlier dated sections below remain historical.
+
 ## Actual B058 result and prepared B059 V7 work — November 10, 2026 UTC
 
 **B058 is the latest authenticated owner result.** Its budget-limited return preserves **90 new target fits**, **seven exact B057 frozen-fit reuses**, and **108 other historical fit reuses**. Nine of seventeen stages completed; the frozen research stage deferred and seven stages remained unentered. The measured run lasted **10,816.862 seconds**. No new current-season issue or model promotion is established.
