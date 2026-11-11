@@ -55,6 +55,17 @@ The prepared V7 continuation prioritizes current forecasts, restores exact old f
 
 [**Open the FBS browser dashboard →**](https://sports-edge-lab-fbs.alv-mendizabal.chatgpt.site) · [FBS clock and coverage methodology](docs/fbs/SEASON_EXPLORER_2026-11-03.md) · [FBS source and model card](tracks/ncaaf/README.md)
 
+## Current NFL evidence · November 11, 2026
+
+**Actual N071 completed four native fits and refreshed selected forecasts for 112 upcoming games.** The [latest all-game research view](tracks/nfl/season_review_n072.html) and [selected rounded outputs](tracks/nfl/selected_forecasts_n072.json) retain all 272 games: 136 completed, 112 confirmed future games with 448 selected rows, and 24 official kickoff times still TBD. Original fit/issue clocks, historical reconstructions and earlier issues stay separate.
+
+The broader research remains incomplete after a fresh team-stat source-namespace error, an I/O deferral and a historical-parent recovery block. The three refresh batches contain 1,344 distinct issue events for the same 448 game/model/target combinations; they are not independent outcome support. N067 remains the historical champion selection; no new performance improvement or independent promotion is established. [Actual N071 and prepared N072 evidence](tracks/nfl/README.md) · [Metric-specific 2024/2025 scorecards](tracks/nfl/CURRENT_MODEL_CARD.md).
+
+The owner ran for 14m 5s on 48 effective vCPUs with a 12-CPU NFL ceiling. Three processes held leases concurrently, but the measured optimizer overlap peaked at one; the 1/2/4/8/12 benchmark did not complete. The latest publication body was recovered and SHA-256 verified before export. Source publication and website deployment remain separate; this change does not refresh the previously deployed Site.
+
+<details>
+<summary>Preserved November 8 NFL evidence</summary>
+
 ## Current NFL evidence · November 8, 2026
 
 **All 272 games and 32 teams are accounted for.** The latest authenticated NFL owner snapshot has **130 finals, 129 decisive results and one tie**, plus **three in progress, one at halftime and 138 scheduled**. Earlier snapshots remain preserved. CHI 34–SEA 17, JAX 33–BAL 10 and CIN 34–ATL 17 are present. Historical `LA` identifies the Rams; `LAC` identifies the Chargers.
@@ -72,6 +83,8 @@ The latest bounded source capture has **7,125 normalized observations, 78 observ
 [Complete NFL evidence](tracks/nfl/README.md) · [Open interactive dashboard](https://sports-edge-lab-nfl.alv-mendizabal.chatgpt.site/) · [Bounded offline public HTML](tracks/nfl/season_review_n054.html)
 
 The Site is a dated publication of an exact canonical commit. Publication requires exact PR-head CI, a permitted merge, final-main readbacks and deployment/content verification. Active NFL presentation is research-only.
+
+</details>
 
 ## Review the work in five minutes
 
@@ -124,7 +137,7 @@ a narrow missing-clock checkpoint repair.
 
 | Track | Entry point | Publication boundary |
 |---|---|---|
-| NFL | [Current evidence](tracks/nfl/README.md) | Updated November 8; actual family research, preserved issue clocks and explicit coverage gaps |
+| NFL | [Current evidence](tracks/nfl/README.md) | Actual N071: four current fits, 448 latest selected rows across 112 future games; historical roles and research gaps preserved |
 | NCAA FBS | [Browser dashboard](https://sports-edge-lab-fbs.alv-mendizabal.chatgpt.site) · [Track](tracks/ncaaf/README.md) | Actual V053 partial; V055 prepared; 500 saved issue contexts across 122 games, with dated provider coverage |
 | NBA | [Research view](docs/NBA_RESEARCH_CARD.md) | Separately dated basketball evidence |
 | NCAA basketball | [Open dashboards](https://alvaro-ncaa-research-review.alv-mendizabal.chatgpt.site/) · [Men's evidence](tracks/ncaam/README.md) · [Women's evidence](tracks/ncaaw/README.md) · [Runnable contracts](examples/ncaa_review/README.md) | Separate historical selections, current execution gaps and three-provider qualification |
@@ -276,5 +289,6 @@ The latest authenticated V056 owner added 31 base fits and five statistical stat
 V057 prepares exact historical-recipe recovery, reusable per-candidate metrics before global closure, and bounded recovery that can advance after interruption. Its 64-unit chunks retain the eight-chunk ceiling, for an effective maximum of 512 units per recovery slice. Complete-population cache reuse requires independent canonical receipt, source and selector verification. No V057 AWS execution, new model improvement or automatic promotion is claimed. The requirement for hundreds of certified new feature concepts remains unmet.
 
 Evidence: [latest saved owner counts](docs/fbs/actual-owner-v056.json), [historical scorecards and qualifications](docs/fbs/historical-contenders-v057.json), and [FBS evidence dashboard](docs/fbs/current.html). Publication is not a data refresh or model run. NFL, NBA and NCAA basketball retain their independent owners and evidence.
+
 
 

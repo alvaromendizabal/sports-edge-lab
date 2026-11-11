@@ -39,6 +39,7 @@ jobs:
           python tracks/nfl/selected_review_page.py --check
           python tracks/nfl/selected_review_n070.py --check
           python tracks/nfl/selected_review_n071.py --check
+          python tracks/nfl/selected_review_n072.py --check
       - name: Reenter the credential-free demonstration
         run: |
           python tracks/nfl/contracts.py --demo --output "${{ runner.temp }}/nfl-review-demo.json"
@@ -62,6 +63,7 @@ jobs:
           node tracks/nfl/selected_review_browser_test.cjs
           node tracks/nfl/selected_review_browser_n070.cjs
           node tracks/nfl/selected_review_browser_n071.cjs
+          node tracks/nfl/selected_review_browser_n072.cjs
       - name: Preserve rendered NFL evidence review
         uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02
         with:
@@ -69,4 +71,5 @@ jobs:
           path: ${{ runner.temp }}/nfl-review-screenshots/*.png
           if-no-files-found: error
           retention-days: 14
+
 
