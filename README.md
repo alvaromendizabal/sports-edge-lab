@@ -67,13 +67,11 @@ The prepared V7 continuation prioritizes current forecasts, restores exact old f
 
 ## Current NFL evidence · November 11, 2026
 
-**Actual N072 completed at least 69 real fits and recovered 18 metric/horizon-specific historical selections.** The [latest all-game research view](tracks/nfl/season_review_n073.html) and [selected rounded outputs](tracks/nfl/selected_forecasts_n073.json) retain all 272 games: 136 completed, 112 confirmed future games with **772 selected rows**, and 24 official kickoff times still TBD. Original fit/issue clocks and retrospective evidence remain separate. Most primary leaders now have outputs for 27 games; operational fallbacks cover all 112 confirmed future games.
+**N073 failed before verifying new model fits or forecasts. The latest valid selected outputs remain N072's 772 rows for 112 upcoming games.** The [updated all-game research view](tracks/nfl/season_review_n074.html) preserves all 272 season games, 18 primary historical metric/horizon roles and nine operational fallback roles. Original prediction values and issue clocks are unchanged; the failed run's smaller fallback export does not replace richer evidence.
 
-Verified completed phases contain **21 native and 48 meta fits**, while original whole-run totals remain **null** after the final refresh failed. The returned ledgers contain at least **1,517 unique issue IDs**; repeated refreshes are not independent outcome support. All 1,251 registered native annual cases are available from cache or retained results, not new-fit credit. A horizon-ID publication collision was repaired without dropping any of the 27 primary/fallback roles or changing predictions.
+The [actual N073 report](tracks/nfl/2026-11-11-n073-actual-n074-continuation.json) records 7m 32s elapsed, three orchestration failure classes, zero verified new fits/issues and unknown whole-run totals. Sources were refreshed, but the new raw captures are not validated forecasts or completed market-response experiments. N074 is the V8 engineering continuation; owner execution is pending.
 
-[Metric-specific 2024/2025 scorecards](tracks/nfl/CURRENT_MODEL_CARD.md) now separate one-hour and two-hour historical cohorts. Strong older Torch/TF predictions are preserved and descriptively outperform the new one-hour probability selection on exact saved matched subsets; their source-clock audit and promotion gates remain open. The remembered full-season approximately 0.40 log-loss result is unresolved. **No independent production promotion is established.** [Actual N072 and prepared N073 evidence](tracks/nfl/README.md).
-
-The owner ran for **23m 23s** on 48 effective vCPUs with a 12-CPU NFL ceiling. The owner 1/2/4/8/12 neutral benchmark completed, with 5.04× measured width-12 speedup; it is not scientific fit speedup. Exact current market winner admission remains zero, and R13–R20 remain source-gated. This source update does not refresh the separately deployed Site.
+[Metric-specific 2024/2025 scorecards and old-model comparisons](tracks/nfl/CURRENT_MODEL_CARD.md) remain available. The remembered approximately 0.40 full-season NFL log loss is unresolved, and **no independent production promotion is established**. [Prior N072 actual evidence](tracks/nfl/README_N073_SNAPSHOT.md) retains at least 69 completed fits, all 1,251 cached native annual cases, and the original partial-run qualifications. This source update does not refresh the separately deployed Site.
 
 <details>
 <summary>Preserved November 8 NFL evidence</summary>
@@ -149,7 +147,7 @@ a narrow missing-clock checkpoint repair.
 
 | Track | Entry point | Publication boundary |
 |---|---|---|
-| NFL | [Current evidence](tracks/nfl/README.md) | Actual N072: at least 69 fits, 772 selected rows across 112 future games; 18 historical metric/horizon selections, old-model comparisons and explicit gaps |
+| NFL | [Current evidence](tracks/nfl/README.md) | N073 blocked; latest valid N072 outputs retained: 772 selected rows across 112 future games, 18 metric/horizon selections and old-model comparisons |
 | NCAA FBS | [Browser dashboard](https://sports-edge-lab-fbs.alv-mendizabal.chatgpt.site) · [Track](tracks/ncaaf/README.md) | Actual V053 partial; V055 prepared; 500 saved issue contexts across 122 games, with dated provider coverage |
 | NBA | [Research view](docs/NBA_RESEARCH_CARD.md) | Separately dated basketball evidence |
 | NCAA basketball | [Open dashboards](https://alvaro-ncaa-research-review.alv-mendizabal.chatgpt.site/) · [Men's evidence](tracks/ncaam/README.md) · [Women's evidence](tracks/ncaaw/README.md) · [Runnable contracts](examples/ncaa_review/README.md) | Separate historical selections, current execution gaps and three-provider qualification |
@@ -301,6 +299,7 @@ The latest authenticated V056 owner added 31 base fits and five statistical stat
 V057 prepares exact historical-recipe recovery, reusable per-candidate metrics before global closure, and bounded recovery that can advance after interruption. Its 64-unit chunks retain the eight-chunk ceiling, for an effective maximum of 512 units per recovery slice. Complete-population cache reuse requires independent canonical receipt, source and selector verification. No V057 AWS execution, new model improvement or automatic promotion is claimed. The requirement for hundreds of certified new feature concepts remains unmet.
 
 Evidence: [latest saved owner counts](docs/fbs/actual-owner-v056.json), [historical scorecards and qualifications](docs/fbs/historical-contenders-v057.json), and [FBS evidence dashboard](docs/fbs/current.html). Publication is not a data refresh or model run. NFL, NBA and NCAA basketball retain their independent owners and evidence.
+
 
 
 

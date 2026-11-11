@@ -1,6 +1,8 @@
 # NFL selected model card · N072 actual return
 
-[All-game selected forecasts](season_review_n073.html) · [Owner evidence](2026-11-11-n072-actual-n073-prepared.json) · [Prior model card](CURRENT_MODEL_CARD_N072_SNAPSHOT.md)
+[Latest all-game selected forecasts](season_review_n074.html) · [Owner evidence](2026-11-11-n072-actual-n073-prepared.json) · [Prior model card](CURRENT_MODEL_CARD_N072_SNAPSHOT.md)
+
+**Latest execution: N073 failed before verifying new model work.** No newer selection or promotion supersedes the scorecards below. [Actual execution status](2026-11-11-n073-actual-n074-continuation.json). The 772 selected N072 rows and original issue clocks remain intact.
 
 **N072 retains 18 metric/horizon-specific primary selections and nine operational fallback roles. No independent production promotion is established.** The verified completed phases contain at least 69 new fits; original whole-run counters remain null after the final refresh failed. The selected display contains 772 already-issued rows for 112 confirmed future games.
 
