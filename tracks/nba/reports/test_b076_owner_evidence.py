@@ -15,7 +15,7 @@ def digest(value):
 class B075OwnerEvidenceTests(unittest.TestCase):
     @classmethod
     def setUpClass(cls):
-        cls.data = json.loads((ROOT / 'latest_research_outputs.json').read_bytes())
+        cls.data = json.loads((ROOT / 'history/b076_selected_outputs.json').read_bytes())
         cls.audit = json.loads((ROOT / 'b076_owner_evidence.json').read_bytes())
 
     def test_original_forecasts_roles_and_denominators_preserve_prior_public_bytes(self):

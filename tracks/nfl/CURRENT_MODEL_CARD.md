@@ -1,6 +1,8 @@
 # NFL selected model card · N072 actual return
 
-[All-game selected forecasts](season_review_n073.html) · [Owner evidence](2026-11-11-n072-actual-n073-prepared.json) · [Prior model card](CURRENT_MODEL_CARD_N072_SNAPSHOT.md)
+[Latest all-game selected forecasts](season_review_n074.html) · [Owner evidence](2026-11-11-n072-actual-n073-prepared.json) · [Prior model card](CURRENT_MODEL_CARD_N072_SNAPSHOT.md)
+
+**Latest execution: N073 failed before verifying new model work.** No newer selection or promotion supersedes the scorecards below. [Actual execution status](2026-11-11-n073-actual-n074-continuation.json). The 772 selected N072 rows and original issue clocks remain intact.
 
 **N072 retains 18 metric/horizon-specific primary selections and nine operational fallback roles. No independent production promotion is established.** The verified completed phases contain at least 69 new fits; original whole-run counters remain null after the final refresh failed. The selected display contains 772 already-issued rows for 112 confirmed future games.
 
@@ -35,6 +37,22 @@ Every table row follows the same selected candidate across 2024 and 2025. Object
 | Total points marginal CRPS | Selected model 13 | 7.151308 | 7.607862 | 7.379585 | 570 |
 
 Winner support is 285 games in 2024 and 284 in 2025; one tie is excluded. Point targets retain 285 games each season. Selection and repeated research expose these completed seasons. The results support forward shadow monitoring; no independent confirmation or automatic promotion is claimed. Marginal CRPS does not establish joint-score quality or calibrated cover probabilities.
+
+## Distinct recovered original accuracy and probability leaders
+
+A follow-up review aggregated **72 saved annual scorecards from 24 original variants** without fitting or inferring a model. Under the original annual rolling-origin policy, each variant uses its state fitted through 2023 for the 280 saved 2024 games and its state fitted through 2024 for the 277 saved 2025 games. The combined cohort has **557 games**; it is different from the 569-game newer winner-selection cohort above.
+
+| Best objective among the 24 saved original variants | Original model | 2024: 280 games | 2025: 277 games | Combined: 557 games |
+|---|---|---:|---:|---:|
+| Winner accuracy | Torch AB | 200/280 (71.43%) | 188/277 (67.87%) | **388/557 (69.66%)** |
+| Probability log loss | Torch B | 0.578881 | 0.612150 | **0.595426** |
+| Probability Brier | Torch B | 0.196388 | 0.212976 | **0.204637** |
+
+TF AB has **387/557 correct, 0.595542 log loss and 0.204919 Brier** under the same annual fit-origin policy. It is a strong comparator, but Torch AB has the highest saved combined accuracy and Torch B has the lowest saved combined log loss and Brier. The objective-specific leaders must not be collapsed into one universal champion. The matched-subset table below remains the valid old-versus-new comparison; unequal full cohorts are not ranked against each other.
+
+On the separate **77-game archived 2026 cohort**, original **TF A** has the lowest saved log loss (**0.641820**) and Brier (**0.225116**) among the 24 variants, with **50/77 correct**, tied for the highest accuracy. This is a **post-hoc descriptive ranking of already-exposed outcomes**, not a current-season selection, complete 136-game score or newly issued result. The archived 2026 ranking does not choose the next forward model or alter existing forecasts.
+
+These recovered results are winner-head metrics only. They do not establish new original-model margin, total, cover or joint-score leaders. Full historical source-clock auditing remains pending, original issuance is not established by saved predictions alone, and **no promotion is authorized by this aggregation**.
 
 ## Earlier models are preserved and compared
 
