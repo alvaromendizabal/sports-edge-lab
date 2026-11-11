@@ -1035,3 +1035,51 @@ Read the [basketball study](../../docs/BASKETBALL_FOUNDATION.md), [generated lea
 
 </details>
 
+
+
+
+## 2026-11-11 · B070 actual failure, B071 repair, latest saved NBA issues
+
+The actual B070 owner run failed before new model work. Its external receipt observed exit 3 after **367.705 seconds**. It produced **0 new estimator fits, 0 new issues, 0 provider refreshes and 0 promotions**. The last authenticated research queue remains B069: **776 completed of 2,328 registered frozen tasks, with 1,552 pending**. B070's unenumerated queue is not a completed zero-backlog state.
+
+### Latest available predictions and active research champions
+
+The owner explicitly authorized publishing the latest NBA predictions and champions. The saved projection is now available as a [standalone offline HTML report](reports/latest_research_outputs.html), [complete selected-role JSON](reports/latest_research_outputs.json), and [credential-free public validator](reports/validate_research_snapshot.py).
+
+It recovers **2,490 original issues across 157 observed games** from the authenticated B066/B067/B069 reports. The newest issue is **2026-11-10 22:52:05.759412 UTC**. There are **44 active historical research champion roles**, covering regular season/postseason, T60/T120, and separate winner, margin and total objectives. These are research roles, not 44 independently promoted models.
+
+All **3,454 applicable game/role views** remain visible. The current champion has an original issue for **2,641 views**; **813 remain explicitly missing**. An older champion's available issue appears in a separate column and never fills a missing current-champion value. The compact export stores **1,711 distinct selected issue objects** without dropping any role view. It rounds home-win probabilities to four decimals and point estimates to two; headline research metrics retain their saved precision.
+
+Issue classes are preserved: **2,478 early outlooks, 5 nominal-horizon issues and 7 late-horizon issues** in the complete recovered journal inventory. A nominal T60/T120 research label does not imply that an issue was actually made exactly 60/120 minutes before tip. Late-horizon issues passed the original pregame clock check. These are saved observations; this publication is not a fresh schedule or source download. The newest actual owner execution remains the failed B070 run.
+
+### Why earlier model scores appear stronger
+
+The remembered **0.40 broad winner log loss is not yet authenticated** by the recovered NBA evidence. It remains an unresolved recovery item, not a rejected model. A preserved 0.486871 result has only eight exposed games and cannot replace a full-season probability champion. Cover/total probabilities are distinct targets and cannot establish a general winner champion.
+
+The preserved market-only logistic probability model has log loss **0.555957 on 505 eligible late-origin 2024–25 games**, **0.576549 on 1,212 eligible 2025–26 games**, and **0.548856 on 128 current-season reconstructed rows**. The current reconstruction has **88/128 correct winners**. Current histogram-boosting reconstructions reach **91/128 correct at T60**, calibrated log loss **0.548686**, and **90/128 at T120**, calibrated log loss **0.538644**. Those cohorts differ from the full-universe, market-free frozen comparison; they must not be ranked as if the games, source support and horizons were identical.
+
+| Matched current-season comparison | T60, 126 games | T120, 126 games |
+|---|---:|---:|
+| Model correct winners | 89 | 89 |
+| Kalshi correct winners | 90 | 89 |
+| Model log loss | 0.552196 | 0.539754 |
+| Kalshi log loss | 0.554655 | 0.554904 |
+| Model-only / Kalshi-only correct | 8 / 9 | 10 / 10 |
+
+These are later-recovered historical midpoint comparisons spanning only three weekly blocks. They are exposed retrospective evidence, not independent live superiority or a promotion gate. The complete private evidence retains exact source/product/cutoff and calibration distinctions.
+
+### Restored total-model comparison and execution repairs
+
+B071 restores three authenticated saved ensemble prediction sets omitted by the later legacy qualification enumerator. The actual active generic issuer registry had retained those stronger incumbents. For example, the retained T60 total-MAE ensemble scored **14.989999** on the pooled full two-season frozen cohort; the restricted later comparison listed **15.037909**. Restoring the missing prediction evidence makes challengers compete against the real incumbent. It is not a new fit or a retrospective promotion.
+
+The private B071 executable preserves the original numerical sources and frozen policy. It adds a verified physical-source bootstrap before scientific imports, corrects the official AWS price CSV's date-only effective-date parsing, and establishes authenticated ancestry before adoption so an early failure does not try to re-encode all older evidence. New-only diagnostic packaging retains explicit prior references when complete ancestry cannot be verified. Exporting the latest saved prediction/role views is now part of both normal and failure finalization.
+
+The actual owner host was **48 effective vCPUs**, giving an NBA maximum of **12 combined CPU tokens** under V7. B070 ran no concurrent fits; no observed 12-fit speedup is claimed. B071's tested admission uses current pressure-counter deltas, atomic shared leases, RAM/disk/foreign-load guards, and controlled native threads. It can grow and drain between fits, preserves existing three-thread cached states, and gives new one-thread executions distinct identities. The next manual owner run must establish actual fit overlap and throughput. There is no fixed elapsed-time run/stage cutoff; the stricter existing budget, transport and source gates remain.
+
+### Scientific and publication limits
+
+No new B071 real NBA fitting, inference, source refresh, rescoring or production promotion occurred during preparation. Historical 2024–25/2025–26 evidence is exposed development. Earlier credible models, recipes, negative findings and original issues remain preserved. Current outcomes do not select displayed issues or historical champions.
+
+Historical market-response R13–R20 remains source-blocked: the accepted record has **0 strictly qualified response quotes and 0 event-clock records**. The **99,372 venue/recency cells** are a missingness inventory, not materialized predictive features. Raw and score/clock-adjusted historical response cannot yet be compared empirically. Missing licensed tick histories and exact checkpoint clocks remain explicit; no synthetic values fill them.
+
+The public files contain selected rounded derived issues, real source/issue clocks, role coverage and coarse champion-family/metric summaries. Complete journals, recipe identifiers, tuned parameters, weights, exact feature transforms, raw feeds, private cloud paths and owner executable/return packages remain private under the [NBA publication extension](../../docs/PUBLICATION_BOUNDARY.md#selected-nba-research-outputs-november-11-extension). This snapshot is research-only and non-wagering. A repository commit is separate from a website deployment or a fresh owner execution.
