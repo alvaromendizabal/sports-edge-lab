@@ -1,3 +1,19 @@
+# NCAA FBS · actual V065 admission failure; V064 science retained
+
+**Latest actual owner: V065, failed before source acquisition or science. V066 is prepared; no V066 AWS run is observed.**
+
+[Open the latest dated all-game report](latest-games-v066.html) · [Actual execution and preserved science](V066_ACTUAL_OWNER_REVIEW_2026-11-11.md) · [Complete rounded layer CSV](latest-games-v066.csv)
+
+V065 reported zero new fits, prediction outputs, genuine forecasts or provider requests and returned exit code 2 after resource admission deferred. Its fallback display used a November 9 capture. The new report preserves the latest valid V064 November 11, 19:38:28–19:38:54 UTC evidence instead: **888 games, 688 finals, 146 timed future games and 54 unresolved kickoffs**, with **148 selected original game records** (145 future and three completed) drawn from 216 retained private issue records. All six earlier report layers and 5,328 CSV rows remain available with their original clocks and explicit empty values.
+
+The last measured V064 forward refresh blocked all 146 timed games because the exact new training-pool state was absent under the no-refit policy; V065 did not retry it. Rutgers at Penn State is the single timed game without an admitted original. There are zero authorized rolling champions. V064's 36 new fits and all 84 unfavorable comparisons against restored controls remain dated V064 evidence. The recovered 231-game low-loss result, separate 301-game native leaders and 688-game saved point metrics retain their original cohorts, clocks and promotion limits. No verified Kalshi-only winner comparison is claimed.
+
+V066 prepares admission recovery, exact latest-evidence continuity and owned-source inventory qualification without new scientific authority. Report preparation creates no new forecast or source capture. Source publication, exact-head CI, merging and deployment remain separate.
+
+The complete preceding dated evidence follows unchanged.
+
+---
+
 # Latest FBS evidence — actual V064 owner, V065 preparation
 
 [Current all-game report](latest-games-v065.html) · [Comparison CSV](latest-games-v065.csv) · [Actual owner findings](V065_ACTUAL_OWNER_REVIEW_2026-11-11.md) · [Aggregate evidence](recovery-v065.json)

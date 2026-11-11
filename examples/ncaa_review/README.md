@@ -1,3 +1,33 @@
+## B062 continuation and preserved scientific results — November 11, 2026 UTC
+
+[Read B062 findings](B062_EVIDENCE.md), [inspect the exact status](B062_STATUS.json), or [reconstruct the saved executed notebook and offline interactive report](B062_SAVED_REPORTS.md). The report displays all 3,457 saved source records, separate original replay and issued predictions, exact same-game comparisons, four completed-season scorecards, six preserved selected roles and the fourteen-role extension awaiting owner execution.
+
+The interactive report filters **814 completed-game B003 replay triplets** and **30 matched original-issue triplets** separately. Two original issues with unresolved tip-time changes remain visible and unscored. **1,139 unissued future previews have no public prediction values.** Source inventory and later prediction-reconciliation clocks remain distinct.
+
+B062 repairs the failed pre-archive launch path, a captured concurrent native-import startup hazard, fit preparation latency and large-return delivery. It preserves the strict ancestral resume reader, original predictions and seven older scientific identities. The next owner execution must establish actual shared-resource throughput, new forecasts and any scientific improvement. No B062 owner execution or promotion is claimed here.
+
+The prior [B061 interactive report](B061_EVIDENCE_REPORT.html) and its data exports remain dated preserved evidence. Source publication does not refresh games, prices, models or deployment.
+
+## B061 evidence recovery — November 11, 2026 UTC
+
+[Open the interactive report](B061_EVIDENCE_REPORT.html) for saved current-season frozen-model results, exact-game comparisons with original issues, 2024–25/2025–26 exposed historical leaders, the full observed source census and unresolved coverage. [Read the evidence note](evidence/B060_ACTUAL_B061_PREPARED.md) for qualifications and the actual B060 interruption. Data files under `data/` retain rounded display values; full-precision private predictions determine headline metrics.
+
+The latest preparation does not create a newly issued forecast, qualified promotion or measured AWS speedup. Research-only, non-wagering.
+
+## Actual B058 result and prepared B059 V7 work — November 10, 2026 UTC
+
+**B058 is the latest authenticated owner result.** Its budget-limited return preserves **90 new target fits**, **seven exact B057 frozen-fit reuses**, and **108 other historical fit reuses**. Nine of seventeen stages completed; the frozen research stage deferred and seven stages remained unentered. The measured run lasted **10,816.862 seconds**. No new current-season issue or model promotion is established.
+
+The core frozen queue completed **65 / 6,216 contexts**; the scalar queue completed **25 / 14,544 contexts**. The return contains 209 metric records and 518,828 model/game prediction records. Neither records nor rolling checkpoint counts are distinct games or estimator fits. Of 36 complete scalar paired metric comparisons, 26 have favorable and ten unfavorable point estimates; eight descriptive intervals exclude zero on the favorable side. Two comparisons remain incomplete. These exposed, selected comparisons do not qualify a champion by themselves.
+
+The approximately 0.63–0.67 winner log losses in the new partial tranche belong to home-only and single-feature controls. They do not replace the retained complete-model evaluations. The older men’s current-season reconstruction retains **0.412659 log loss on 329 games**. On a separate **265-game Polymarket international** cohort, its log loss is **0.399023**, versus **0.346741** for the market; accuracy is **82.2642% versus 81.6981%** under the saved half-credit tie convention. This is exposed reconstructed evidence, not originally issued evidence, not a new score through today, and not a Kalshi comparison. No qualified numeric Kalshi comparison has been recovered.
+
+**Prepared B059** adds shared leased process scheduling, whole-project CPU caps, adaptive admissions, exact prior-fit bridging, persistent verified byte reuse, priority current reporting, bounded frozen/scalar tranches, and cooperative checkpoint-and-return handling. The project ceiling is four CPUs on an effective 16-CPU host, eight on 32, twelve on 48 and sixteen on 64, reduced by memory, quotas and competing work. An instance upgrade alone establishes no measured speedup.
+
+Historical comparisons use **2024–25 and 2025–26**. Only qualified metric-specific champions and precommitted champion components advance to bounded rolling reconstruction. **2026–27 outcomes cannot select those historical champions.** Negative results and unresolved candidates remain registered. Historical market-response features require completed earlier games and authentic availability clocks; the target game’s live path never enters its pregame features. A limited transfer of source-pinned March research methods is separate from recreating or promoting the full March champion.
+
+[Full aggregate review](evidence/B058_ACTUAL_B059_PREPARED.md) · [Machine-readable evidence](evidence/B058_ACTUAL_B059_PREPARED.json). Fresh source coverage, complete old-recipe comparisons, actual V7 benchmarks, eligible market-response findings and the B059 owner return remain open. Documentation and fixture tests claim no new predictive gain. Earlier dated records below remain unchanged.
+
 # NCAA evidence review
 
 ## Actual B057 result and prepared B058 work — November 10, 2026 UTC
@@ -1012,3 +1042,4 @@ network or persistence path. Browser fixtures use invented records only.
 </details>
 
 </details>
+

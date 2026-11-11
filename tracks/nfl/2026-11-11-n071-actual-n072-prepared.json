@@ -1,0 +1,155 @@
+{
+  "counts": {
+    "completed_games": 136,
+    "current_selected_games": 112,
+    "current_selected_rows": 448,
+    "distinct_selected_model_aliases": 9,
+    "future_games": 136,
+    "games_with_any_preserved_evidence": 248,
+    "games_without_prediction_evidence_in_this_projection": 24,
+    "official_time_tbd_games": 24,
+    "primary_metric_roles": 9,
+    "rows_after_display_cutoff_not_shown": 0,
+    "schedule_games": 272,
+    "unmapped_nonselected_issue_rows_not_shown": 0
+  },
+  "fresh_n072_owner_execution": false,
+  "owner_execution": {
+    "actual_cpu_capacity": 48,
+    "compute_estimate_is_actual_bill": false,
+    "compute_time_estimate_usd": 0.6035329833518389,
+    "distinct_game_model_target_combinations": 448,
+    "distinct_new_forecast_issues": 1344,
+    "elapsed_seconds": 845.4158521660001,
+    "finished_at_utc": "2026-11-11T18:16:11.331889+00:00",
+    "forecast_count_qualification": "The authenticated ledgers contain 1,344 unique issue events in three 448-row batches for the same 112 games and four fitted states. These are repeated refreshes, not independent outcome support. The latest display contains 448 rows.",
+    "historical_champions_changed": false,
+    "historical_recovery_error": "AUTHENTICATED_ACTUAL_N062_PARENT_REQUIRED",
+    "historical_selection_release": "N067",
+    "issue_batches": 3,
+    "latest_selected_games": 112,
+    "latest_selected_rows": 448,
+    "local_integrity_verification": {
+      "current_invocation_closure": true,
+      "declared_direct_return_members": 1454,
+      "logical_records": 4880,
+      "proof_records": 47,
+      "remote_completion_independently_checked": false
+    },
+    "new_champion_promotion": false,
+    "new_meta_fits": 0,
+    "new_native_fits": 4,
+    "observed_leased_process_concurrency": 3,
+    "observed_native_fit_concurrency": 1,
+    "owner_12_worker_benchmark_completed": false,
+    "owner_research_acceptance": false,
+    "phase_statuses": {
+      "v5_current": {
+        "new_native_fits": 0,
+        "reported_forecast_rows": 448,
+        "status": "N070_RESOURCE_DEFERRED_RESUMABLE"
+      },
+      "v5_final_refresh": {
+        "new_native_fits": 0,
+        "reported_forecast_rows": 448,
+        "status": "N070_FROZEN_RESEARCH_AND_CHAMPIONS_REPORTED_WITH_EXPLICIT_GAPS"
+      },
+      "v5_urgent_current": {
+        "new_native_fits": 4,
+        "reported_forecast_rows": 448,
+        "status": "N070_FROZEN_RESEARCH_AND_CHAMPIONS_REPORTED_WITH_EXPLICIT_GAPS"
+      }
+    },
+    "project_cpu_cap": 12,
+    "quote_rate_whole_instance_usd_hour": 2.57,
+    "raw_phase_sum_forecast_rows": 1344,
+    "release": "N071",
+    "research_deferral": "EXTERNAL_IO_PRESSURE",
+    "return_sha256": "1d9871339782ca480fd36e63148dcdb6ca72fc28bc53c428aee8102817277ded",
+    "selected_projection_sha256": "cc8cd226492d365054ab682c78807b6a11d12bef33e9890f4bafe0d1292e0596",
+    "source_capture_error": "Fresh team-stat source write rejected its immutable namespace.",
+    "started_at_utc": "2026-11-11T18:02:05.916052+00:00",
+    "status": "PARTIAL_OWNER_CONTINUATION_REPAIR_REQUIRED"
+  },
+  "previous_selected_output": "selected_forecasts_n071.json",
+  "promotion_status": "NOT_ESTABLISHED",
+  "publication_scope": "Selected rounded already-issued forecasts, separate retained evidence classes, saved metric-specific historical roles and source/execution aggregates.",
+  "schema": "nfl.n072.public-owner-evidence.v1",
+  "selected_output": "selected_forecasts_n072.json",
+  "source_refresh": {
+    "all_sources_complete": false,
+    "draftkings": {
+      "all_live_coverage_claimed": false,
+      "current_postgame_quotes_not_backdated": true,
+      "new_forecasts": 0,
+      "new_model_fits": 0,
+      "new_paid_calls": 15,
+      "new_provider_calls": 16
+    },
+    "model_predictions_refreshed": true,
+    "new_normalized_market_rows": 468,
+    "observed_schedule_from_utc": "2026-11-11T18:03:19.396778+00:00",
+    "observed_schedule_through_utc": "2026-11-11T18:03:24.490307+00:00",
+    "provider_coverage": [
+      {
+        "by_target": {
+          "margin": {
+            "normalized_rows": 28,
+            "valid_price_rows": 28
+          },
+          "total": {
+            "normalized_rows": 28,
+            "valid_price_rows": 28
+          },
+          "winner": {
+            "normalized_rows": 108,
+            "valid_price_rows": 108
+          }
+        },
+        "games": 27,
+        "metric_eligible_cells": 0,
+        "normalized_rows": 164,
+        "provider": "kalshi",
+        "states": {
+          "NO_USABLE_QUOTES_RETRYABLE": 26,
+          "QUOTES_PRESENT_NOT_FULL_TARGET_ADMISSION": 55
+        },
+        "target_cells": 81
+      },
+      {
+        "by_target": {
+          "margin": {
+            "normalized_rows": 94,
+            "valid_price_rows": 94
+          },
+          "total": {
+            "normalized_rows": 102,
+            "valid_price_rows": 102
+          },
+          "winner": {
+            "normalized_rows": 108,
+            "valid_price_rows": 108
+          }
+        },
+        "games": 27,
+        "metric_eligible_cells": 0,
+        "normalized_rows": 304,
+        "provider": "polymarket",
+        "states": {
+          "QUOTES_PRESENT_NOT_FULL_TARGET_ADMISSION": 81
+        },
+        "target_cells": 81
+      }
+    ],
+    "qualified_current_market_winner_baseline_rows": 0,
+    "source_gaps": [
+      "Fresh team-stat capture failed its immutable source-namespace check; fresh football and exact legacy current feature views were unavailable.",
+      "Primary historical winner accuracy, log-loss and Brier leaders have no admitted current forecast; the operational fallback remains separately labeled.",
+      "A source observed after kickoff cannot establish an earlier pregame information cutoff.",
+      "Current target-equivalent two-sided winner benchmarks remain unavailable; raw quote values are excluded.",
+      "Exact historical tick, possession and two-minute checkpoint coverage remains incomplete.",
+      "All 24 official kickoff times marked TBD remain null."
+    ]
+  },
+  "sport": "NFL"
+}

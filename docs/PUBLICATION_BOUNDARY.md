@@ -56,3 +56,34 @@ DraftKings, Kalshi, Polymarket US and Polymarket Global have separate product id
 Per-game values are rounded for analytical display. Headline metrics retain their original full-precision cohort calculations. The optional comparison CSV combines model replay, outcomes, coverage and derived references; it does not distribute raw quotes, order books, candles, provider identifiers or provider payload arrays. The Odds API permits dashboard display, derived-value use and storage in its [August 31, 2026 terms](https://the-odds-api.com/terms-and-conditions.html); these permissions do not authorize a repackaged raw-data service. Other source terms and rights remain applicable.
 
 Private recipes, weights, candidate prediction grids, exact feature transforms, complete immutable issue archives, owner packages, cloud identifiers and credentials remain excluded. This FBS scope does not modify the NFL exceptions or any basketball track. Earlier dated aggregate reports remain available as historical records.
+
+
+
+## Selected NBA research outputs: November 11 extension
+
+The owner explicitly requested the latest NBA predictions and champions on GitHub. The integration owner reviewed current main and open changes and approved this narrowly scoped NBA extension. It permits public game identities and observed schedule times, selected already-issued winner/margin/total forecasts, rounded derived probabilities, point estimates and original issued interval endpoints, original source/issue clocks and issue-horizon classes, metric-specific champion-role aliases, coarse model families, saved season/pooled aggregate metrics and complete role-coverage/missingness reasons.
+
+The current champion's available original issue and the latest champion-at-issue record remain separate. A missing current-champion issue is never backfilled by an older model. Early outlooks keep their actual lead time; nominal T60/T120 labels do not establish nominal issuance. Current outcomes do not select displayed issues or historical champions. Failed later owner runs retain prior authenticated issues without relabeling them as newly issued. Historical development remains exposed and does not authorize automatic promotion.
+
+This scope excludes complete immutable journal archives, candidate-level prediction grids, private recipe identifiers, calibration parameters, feature transforms, model bodies, raw provider feeds or tick histories, private storage paths, credentials and execution packages. It creates no new provider redistribution right. Per-game values are rounded only for display; no headline metric is recalculated from rounded public values. Source code publication, website deployment and source refresh remain separate events.
+
+The extension applies only to NBA selected-role analytical outputs. It does not change any NFL, FBS or NCAA basketball scientific/publication policy, relicense historical research, or create a wagering interface.
+
+
+## Selected NFL all-game research outputs: November 11 extension
+
+The owner explicitly requested the latest NFL predictions for upcoming and current-season games and the latest champions on GitHub. The integration owner reviewed current main and active PRs and applied this NFL-only extension. It permits public game identities and saved schedule/result facts, selected already-issued winner/margin/total outputs, rounded derived probabilities and point centers, original source/model/issue clocks, selected metric-role aliases, saved same-candidate annual and pooled aggregates, and complete unavailable-role/TBD/source-gap reasons.
+
+Previously selected historical reconstructions and qualified timestamped early snapshots may be displayed in separately labeled panels. A reconstruction fitted after kickoff never receives original issue credit. A timestamp without proven durable original delivery remains qualified. A current operational fallback cannot be relabeled as the unavailable primary historical leader. Current outcomes cannot select published historical champions or rewrite issued predictions. Failed later invocations preserve earlier authenticated outputs without calling them newly issued.
+
+This extension excludes complete immutable forecast journals, candidate-level grids, exact private recipe identifiers, active transforms or calibration parameters, model bodies, raw provider/tick arrays, private cloud paths, credentials and owner execution archives. It creates no new provider redistribution right or license. Rounded display values never recompute headline metrics; mixed original/snapshot/reconstruction panels never become a combined prospective score. Research-only presentation remains non-wagering.
+
+The extension applies only to selected NFL analytical outputs and preserves every other track's publication scope and dated evidence. Source publication, website deployment and provider refresh remain separate events.
+
+## Selected NCAA basketball all-game research outputs: November 11 extension
+
+The owner explicitly requested the latest NCAA basketball predictions for upcoming and current-season games and the latest champions on GitHub. This NCAA men/women-only extension permits public game identities, saved schedule/result facts, selected already-issued winner/margin/total outputs, rounded derived probabilities and point estimates, original source/model/issue clocks, metric-role aliases, saved aggregate metrics and complete unavailable-role/source-gap reasons. It also permits the observed all-game inventory when forecast values are unavailable, with its true report time and incomplete denominator disclosed.
+
+Original issues, exposed retrospective reconstructions and newly issued rolling forecasts remain separate. Missing selected-role outputs stay blank; an older issue does not become a current champion's issue. This reporting permission does not authorize automatic model promotion or re-date any source observation.
+
+Complete immutable forecast journals, candidate grids, exact active private recipes/transforms, calibration parameters, model bodies, raw provider/tick records, private cloud addresses, credentials and owner execution packages remain excluded. This extension applies only to NCAA basketball reporting and creates no new provider redistribution right, license or wagering interface. Other sports' policies remain unchanged.

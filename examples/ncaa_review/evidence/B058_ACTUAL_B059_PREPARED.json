@@ -1,0 +1,150 @@
+{
+  "schema": "sports-edge-lab.ncaa.b058-actual.b059-prepared.public.v1",
+  "evidence_date": "2026-11-10",
+  "scope": "NCAA basketball men and women; sanitized aggregate evidence",
+  "latest_actual_owner": {
+    "release": "B058",
+    "return_sha256": "0e75ef7c62c8b7b3bc3bd7fe07bdb58de217ea48086ea26b02d034e10f60e196",
+    "status": "WORK_BUDGET_DEFERRED_PARTIAL_WORK_PRESERVED",
+    "completed_stages": 9,
+    "total_stages": 17,
+    "deferred_stages": 1,
+    "unentered_stages": 7,
+    "elapsed_seconds": 10816.861688,
+    "new_target_fits": 90,
+    "reused_prior_frozen_fits": 7,
+    "reused_other_historical_target_fits": 108,
+    "new_prediction_commits": 2060,
+    "exported_contracts": 2265,
+    "core_contexts_completed": 65,
+    "core_contexts_registered": 6216,
+    "scalar_contexts_completed": 25,
+    "scalar_contexts_registered": 14544,
+    "metric_records": 209,
+    "prediction_records": 518828,
+    "new_current_issues": 0,
+    "promotions": 0,
+    "attributable_aws_cost_usd": null,
+    "whole_campaign_eta_seconds": null,
+    "owner_fixture_tests": {
+      "passed": 3183,
+      "skipped": 1,
+      "failures": 0,
+      "errors": 0
+    }
+  },
+  "scalar_diagnostics": {
+    "rows": 38,
+    "complete": 36,
+    "incomplete": 2,
+    "favorable_point_estimates": 26,
+    "unfavorable_point_estimates": 10,
+    "descriptive_intervals_wholly_favorable": 8,
+    "descriptive_intervals_including_zero": 28,
+    "independent_confirmation": false,
+    "qualification": "Point-estimate signs and interval decisions are different counts. Exposed research does not establish promotion."
+  },
+  "retained_current_season_original_reconstruction": {
+    "season": "2026-27",
+    "horizon": "T-60",
+    "evidence_kind": "EXPOSED_RECONSTRUCTION_NOT_ORIGINAL_ISSUES",
+    "fresh_rescore_through_publication_date": false,
+    "men": {
+      "n": 329,
+      "log_loss": 0.41265944449669606,
+      "brier": 0.13288170239830935,
+      "accuracy": 0.8054711246200608,
+      "margin_mae": 10.83430904572797,
+      "margin_rmse": 13.83946549806233,
+      "total_mae": 14.054999510689244,
+      "total_rmse": 17.560431986767806
+    },
+    "women": {
+      "n": 345,
+      "log_loss": 0.31914903687525753,
+      "brier": 0.10079628804951535,
+      "accuracy": 0.8521739130434782,
+      "margin_mae": 12.778113939804875,
+      "margin_rmse": 16.51020645198777,
+      "total_mae": 14.555540479482978,
+      "total_rmse": 18.166328032109888
+    }
+  },
+  "retained_matched_comparison": {
+    "provider": "Polymarket international",
+    "league": "men",
+    "n": 265,
+    "horizon": "T-60",
+    "model_log_loss": 0.3990230768,
+    "market_log_loss": 0.3467405433,
+    "model_accuracy": 0.8226415094339623,
+    "market_accuracy": 0.8169811320754717,
+    "model_accuracy_credits": 218,
+    "market_accuracy_credits": 216.5,
+    "accuracy_definition": "Saved half-credit tie convention; credits are not integer correct-winner counts.",
+    "kalshi_comparison": false,
+    "originally_issued_claim": false
+  },
+  "retained_historical_full_model_comparisons": {
+    "season_ends": [
+      2025,
+      2026
+    ],
+    "selection_exposure": "EXPOSED_POOLED_COMPLETED_SEASON_COMPARISON",
+    "same_recipe_as_original_reconstruction": false,
+    "men": {
+      "n": 11507,
+      "log_loss": 0.5226834739867191,
+      "margin_mae": 9.071597437410928,
+      "total_mae": 13.30836934460803
+    },
+    "women": {
+      "n": 10901,
+      "log_loss": 0.4534692533022348,
+      "margin_mae": 9.681861907287805,
+      "total_mae": 12.588942480883004,
+      "total_uses_separate_recipe": true
+    }
+  },
+  "prepared_successor": {
+    "release": "B059",
+    "status": "ENGINEERED_LOCAL_VALIDATION_IN_PROGRESS_OWNER_EXECUTION_PENDING",
+    "owner_execution": false,
+    "new_owner_fits": 0,
+    "new_owner_forecasts": 0,
+    "model_improvement_claim": false,
+    "old_scientific_identities_preserved": 7,
+    "full_feature_recipes_per_bounded_substudy": 24,
+    "core_contexts_per_bounded_substudy": 96,
+    "full_feature_columns": 123,
+    "scalar_feature_candidates_per_tranche": 2,
+    "selected_rolling_new_fit_admission_limit": 24,
+    "selected_rolling_seconds_admission_limit": 900,
+    "cpu_project_caps": {
+      "16": 4,
+      "32": 8,
+      "48": 12,
+      "64": 16
+    },
+    "other_cpu_cap": "max(1,floor(effective_vcpus/4)), reduced by quotas, RAM and shared live leases",
+    "elastic_admission": true,
+    "actual_owner_speedup": null,
+    "old_champion_exact_recipe_equivalence": "UNRESOLVED_WHERE_PROOF_ABSENT; older full-model paths and evidence remain preserved",
+    "negative_features_permanently_removed": 0,
+    "complete_march_champion_recreated": false
+  },
+  "remaining": [
+    "Fresh source and pregame issue coverage",
+    "Complete historical recipe recovery and matched qualification",
+    "Actual V7 owner throughput, cost and return",
+    "Eligible historical live-market paths and R13–R20 owner findings",
+    "Qualified numeric Kalshi/DraftKings matched cohorts",
+    "Full March champion source/training-state equivalence",
+    "CRPS and line-conditioned distributional evidence"
+  ],
+  "publication": {
+    "public_aggregate_only": true,
+    "private_runtime_or_raw_provider_data_included": false,
+    "prepared_not_owner_executed": true
+  }
+}

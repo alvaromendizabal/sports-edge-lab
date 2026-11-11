@@ -1,0 +1,790 @@
+{
+  "schema": "sel.public.ncaa.b060.recovery_evidence.v1",
+  "status": "ACTUAL_B059_RECOVERED_B060_PREPARED_OWNER_EXECUTION_PENDING",
+  "research_only": true,
+  "automatic_promotion": false,
+  "new_owner_execution": false,
+  "actual_owner": {
+    "release": "B059",
+    "source_sha256": "6ec2f4c53c8f05f0c6e738fa10e5a557f27ad61f42de98b3b258dc96a3c434f0",
+    "return_sha256": "1653ef617d7c4907b2c31fc8c14b1b8b969aa524e8f100537ed67435d5c0058e",
+    "started_at": "2026-11-11T00:18:12.424239+00:00",
+    "completed_at": "2026-11-11T02:29:48.010785+00:00",
+    "status": "RESOURCE_DEFERRED_PARTIAL_WORK_PRESERVED",
+    "elapsed_seconds": 7895.837747852,
+    "newly_committed_fit_counts": {
+      "empirical_residual_fits": 36,
+      "scalar_calibration_fits": 17,
+      "target_estimator_fits": 107,
+      "unclassified_committed_model_artifacts": 0
+    },
+    "historical_target_fit_reuses": 108,
+    "physical_committed_contracts": 232,
+    "indexed_distinct_contracts": 340,
+    "completed_stages": 9,
+    "failed_stages": 1,
+    "unentered_stages": 7,
+    "average_tree_cpu_cores": 0.811186394086044,
+    "observed_effective_vcpus": 48,
+    "observed_project_cap": 12,
+    "new_current_forecasts": 0,
+    "new_promotions": 0,
+    "terminal_error": {
+      "message": "V7_IO_DEFERRAL_ALREADY_LATCHED",
+      "type": "AdmissionDeferred"
+    },
+    "stage_measurements": [
+      {
+        "completed_children_cpu_seconds": 4.440892098500626e-16,
+        "memory_scope": "CUMULATIVE_OWNER_HIGH_WATER_MARK_NOT_STAGE_OR_SIMULTANEOUS_TREE_PEAK",
+        "owner_cpu_seconds": 349.053639,
+        "owner_cumulative_peak_rss_bytes_at_stage_end": 5002321920,
+        "seconds": 601.5129699380004,
+        "stage": "04_latest_source_refresh",
+        "status": "COMPLETED"
+      },
+      {
+        "completed_children_cpu_seconds": 4.440892098500626e-16,
+        "memory_scope": "CUMULATIVE_OWNER_HIGH_WATER_MARK_NOT_STAGE_OR_SIMULTANEOUS_TREE_PEAK",
+        "owner_cpu_seconds": 116.90146899999982,
+        "owner_cumulative_peak_rss_bytes_at_stage_end": 5215166464,
+        "seconds": 118.63545347500076,
+        "stage": "01_authenticate_and_restore_parent",
+        "status": "COMPLETED"
+      },
+      {
+        "completed_children_cpu_seconds": 4.440892098500626e-16,
+        "memory_scope": "CUMULATIVE_OWNER_HIGH_WATER_MARK_NOT_STAGE_OR_SIMULTANEOUS_TREE_PEAK",
+        "owner_cpu_seconds": 5.367479999999972,
+        "owner_cumulative_peak_rss_bytes_at_stage_end": 6102056960,
+        "seconds": 7.264762607999728,
+        "stage": "02_new_feature_families",
+        "status": "COMPLETED"
+      },
+      {
+        "completed_children_cpu_seconds": 4.440892098500626e-16,
+        "memory_scope": "CUMULATIVE_OWNER_HIGH_WATER_MARK_NOT_STAGE_OR_SIMULTANEOUS_TREE_PEAK",
+        "owner_cpu_seconds": 58.980660999999884,
+        "owner_cumulative_peak_rss_bytes_at_stage_end": 7166464000,
+        "seconds": 128.3321780740007,
+        "stage": "03_parallel_108_target_study",
+        "status": "COMPLETED"
+      },
+      {
+        "completed_children_cpu_seconds": 4.440892098500626e-16,
+        "memory_scope": "CUMULATIVE_OWNER_HIGH_WATER_MARK_NOT_STAGE_OR_SIMULTANEOUS_TREE_PEAK",
+        "owner_cpu_seconds": 0.1278379999999686,
+        "owner_cumulative_peak_rss_bytes_at_stage_end": 7166464000,
+        "seconds": 0.12966487900030188,
+        "stage": "05_current_feature_reconstruction",
+        "status": "COMPLETED"
+      },
+      {
+        "completed_children_cpu_seconds": 0.24090999999999996,
+        "memory_scope": "CUMULATIVE_OWNER_HIGH_WATER_MARK_NOT_STAGE_OR_SIMULTANEOUS_TREE_PEAK",
+        "owner_cpu_seconds": 64.6102589999999,
+        "owner_cumulative_peak_rss_bytes_at_stage_end": 7166464000,
+        "seconds": 282.3906662640002,
+        "stage": "05b_timestamped_injury_acquisition",
+        "status": "COMPLETED"
+      },
+      {
+        "completed_children_cpu_seconds": 72.12469299999998,
+        "memory_scope": "CUMULATIVE_OWNER_HIGH_WATER_MARK_NOT_STAGE_OR_SIMULTANEOUS_TREE_PEAK",
+        "owner_cpu_seconds": 34.25082900000001,
+        "owner_cumulative_peak_rss_bytes_at_stage_end": 8314945536,
+        "seconds": 109.66909298300016,
+        "stage": "06_original_frozen_runtime_and_inference",
+        "status": "COMPLETED"
+      },
+      {
+        "completed_children_cpu_seconds": -6.217248937900877e-15,
+        "memory_scope": "CUMULATIVE_OWNER_HIGH_WATER_MARK_NOT_STAGE_OR_SIMULTANEOUS_TREE_PEAK",
+        "owner_cpu_seconds": 1.6600609999999563,
+        "owner_cumulative_peak_rss_bytes_at_stage_end": 8314945536,
+        "seconds": 1.6797255159999622,
+        "stage": "07_frozen_and_weekly_current_monitor",
+        "status": "COMPLETED"
+      },
+      {
+        "completed_children_cpu_seconds": -6.217248937900877e-15,
+        "memory_scope": "CUMULATIVE_OWNER_HIGH_WATER_MARK_NOT_STAGE_OR_SIMULTANEOUS_TREE_PEAK",
+        "owner_cpu_seconds": 0.03936600000017165,
+        "owner_cumulative_peak_rss_bytes_at_stage_end": 8314945536,
+        "seconds": 0.059735107999586035,
+        "stage": "08_native_accuracy_leader_replays",
+        "status": "COMPLETED"
+      },
+      {
+        "completed_children_cpu_seconds": -6.217248937900877e-15,
+        "error_type": "AdmissionDeferred",
+        "memory_scope": "CUMULATIVE_OWNER_HIGH_WATER_MARK_NOT_STAGE_OR_SIMULTANEOUS_TREE_PEAK",
+        "owner_cpu_seconds": 4533.822088,
+        "owner_cumulative_peak_rss_bytes_at_stage_end": 15961026560,
+        "seconds": 5217.028555408001,
+        "stage": "08b_paired_injury_challengers",
+        "status": "FAILED"
+      }
+    ]
+  },
+  "current_game_report": {
+    "asof_utc": "2026-11-11T00:40:01.035541+00:00",
+    "observed_official_records": 2512,
+    "by_league": {
+      "ncaam": 1268,
+      "ncaaw": 1244
+    },
+    "forecast_status_counts": {
+      "NO_ELIGIBLE_MODEL_ISSUE": 2512
+    },
+    "full_season_or_all_upcoming_completeness": false,
+    "canonical_source_records": 0,
+    "reconciled_canonical_games": 0,
+    "missingness_reason_counts": {
+      "NO_UNIQUE_RECONCILED_SOURCE_MATCH": 2512,
+      "NO_VERIFIED_EXACT_IDENTITY_AND_TIME_MATCH": 2426,
+      "OFFICIAL_EXACT_TIPOFF_UNAVAILABLE": 86
+    },
+    "csv": "../data/ncaa_observed_games_b059.csv",
+    "csv_sha256": "8a96dc58fa07b2e4bd2fea68b90da6d4e900263fb360dc25f5a24e142bf1c5b0",
+    "csv_is_observed_schedule_and_source_gap_export_not_forecasts": true,
+    "producer_reported_missing_source_dates": 7,
+    "league_date_responses_with_schema_or_identity_gap": 7,
+    "rejected_source_records_on_these_dates": 7,
+    "gap_interpretation": "Returned source responses contain rejected records; these are not wholly unobserved date responses. Qualified official denominator remains incomplete."
+  },
+  "retained_original_frozen": {
+    "evidence_kind": "EXPOSED_SAVED_CURRENT_SEASON_T60_RECONSTRUCTION",
+    "fresh_rescore": false,
+    "originally_issued_evidence": false,
+    "scores": [
+      {
+        "league": "ncaam",
+        "support_games": 329,
+        "log_loss": 0.4126594445,
+        "brier": 0.1328817024,
+        "accuracy": 0.8054711246,
+        "margin_mae": 10.8343090457,
+        "margin_rmse": 13.8394654981,
+        "total_mae": 14.0549995107,
+        "total_rmse": 17.5604319868
+      },
+      {
+        "league": "ncaaw",
+        "support_games": 345,
+        "log_loss": 0.3191490369,
+        "brier": 0.100796288,
+        "accuracy": 0.852173913,
+        "margin_mae": 12.7781139398,
+        "margin_rmse": 16.510206452,
+        "total_mae": 14.5555404795,
+        "total_rmse": 18.1663280321
+      }
+    ]
+  },
+  "retained_matched_market": {
+    "league": "ncaam",
+    "support_games": 265,
+    "provider_product": "polymarket_international",
+    "horizon": "T60",
+    "model_log_loss": 0.3990230768,
+    "market_log_loss": 0.3467405433,
+    "model_accuracy": 0.8226415094,
+    "market_accuracy": 0.8169811321,
+    "model_accuracy_credits": 218,
+    "market_accuracy_credits": 216.5,
+    "accuracy_credits_are_not_integer_correct_winner_counts": true,
+    "kalshi_comparison": false,
+    "fresh_rescore": false,
+    "independent_confirmation": false
+  },
+  "kalshi_matched_winner_comparison": {
+    "authenticated_numeric_support_recovered": false,
+    "reason": "NO_AUTHENTICATED_NUMERIC_MATCHED_KALSHI_COHORT_RECOVERED"
+  },
+  "metric_champion_role_status": {
+    "winner_accuracy": "NO_NEW_PROMOTION_OR_FRESH_CURRENT_QUALIFICATION_FROM_B059",
+    "winner_log_loss": "NO_NEW_PROMOTION_OR_FRESH_CURRENT_QUALIFICATION_FROM_B059",
+    "winner_brier": "NO_NEW_PROMOTION_OR_FRESH_CURRENT_QUALIFICATION_FROM_B059",
+    "margin_mae": "NO_NEW_PROMOTION_OR_FRESH_CURRENT_QUALIFICATION_FROM_B059",
+    "margin_rmse": "NO_NEW_PROMOTION_OR_FRESH_CURRENT_QUALIFICATION_FROM_B059",
+    "total_mae": "NO_NEW_PROMOTION_OR_FRESH_CURRENT_QUALIFICATION_FROM_B059",
+    "total_rmse": "NO_NEW_PROMOTION_OR_FRESH_CURRENT_QUALIFICATION_FROM_B059",
+    "cover_probability": "NO_NEW_PROMOTION_OR_FRESH_CURRENT_QUALIFICATION_FROM_B059",
+    "joint_score_distribution": "NO_NEW_PROMOTION_OR_FRESH_CURRENT_QUALIFICATION_FROM_B059"
+  },
+  "prepared_b060": {
+    "baseline_recipes": 26,
+    "baseline_gender_season_contexts": 104,
+    "grouped_diagnostic_recipes": 66,
+    "grouped_diagnostic_contexts": 264,
+    "unresolved_scalar_features_per_tranche": 8,
+    "selected_rolling_new_fit_ceiling": 192,
+    "arbitrary_wall_time_cap_seconds": null,
+    "owner_cpu_request": 12,
+    "all_previous_source_bytes_reconstructible": true,
+    "protected_previous_scientific_identities": 7,
+    "training_or_forecast_gains_from_preparation": 0,
+    "actual_owner_throughput_not_measured": true
+  },
+  "source_recovery": {
+    "espn": "One exact authenticated ancestral timeout recovery, durable consumed credit and new-failure latch",
+    "kalshi": "Prior HTTP 429 retained",
+    "cbbd": "Prior HTTP 429 retained",
+    "historical_tick_checkpoint_completeness": "NOT_ESTABLISHED",
+    "R13_R20": "NO_NEW_ACTUAL_B059_FINDINGS; REQUIRED_STAGES_NOT_ENTERED"
+  },
+  "cost": {
+    "actual_billed_cost": null,
+    "b059_owner_rate_verification": "IAM_DENIED",
+    "separately_observed_public_sagemaker_rate_usd_per_hour": 2.57,
+    "public_quote_observed_at": "2026-11-11T02:36:39.054419+00:00",
+    "b059_elapsed_host_cost_estimate_usd": 5.636750836661011,
+    "exclusive_ncaa_cost_attribution": false,
+    "new_paid_resource_created": false,
+    "prepared_owner_budget_usd": 200,
+    "actual_next_run_eta_seconds": null
+  },
+  "publication_limits": [
+    "No private recipe, feature transform, credential, account identifier, object path, model body or raw provider quote exported.",
+    "Observed schedule rows preserve original report time and missingness. A missing model issue remains blank.",
+    "Earlier exposed reconstructions are not a newly issued current-season performance record."
+  ],
+  "recovered_completed_season_metric_leaders": [
+    {
+      "comparison_basis": "DESCRIPTIVE_RANK_OF_REPORTED_FROZEN_ESTIMATOR_METRICS; EXACT_LEDGER_MATCHING_IS_SEPARATE",
+      "direction": "minimize",
+      "league": "ncaam",
+      "metric": "MAE",
+      "promotion_authority": false,
+      "registered_estimator_recipes_compared": 9,
+      "reported_n_test": [
+        5758
+      ],
+      "season_end_year": 2025,
+      "season_label": "2024\u201325",
+      "target": "margin",
+      "value": 8.979033825234044,
+      "historical_metric_role_alias": "historical_ncaam_2025_margin_mae",
+      "current_champion_promotion": false
+    },
+    {
+      "comparison_basis": "DESCRIPTIVE_RANK_OF_REPORTED_FROZEN_ESTIMATOR_METRICS; EXACT_LEDGER_MATCHING_IS_SEPARATE",
+      "direction": "minimize",
+      "league": "ncaam",
+      "metric": "RMSE",
+      "promotion_authority": false,
+      "registered_estimator_recipes_compared": 9,
+      "reported_n_test": [
+        5758
+      ],
+      "season_end_year": 2025,
+      "season_label": "2024\u201325",
+      "target": "margin",
+      "value": 11.484606185214982,
+      "historical_metric_role_alias": "historical_ncaam_2025_margin_rmse",
+      "current_champion_promotion": false
+    },
+    {
+      "comparison_basis": "DESCRIPTIVE_RANK_OF_REPORTED_FROZEN_ESTIMATOR_METRICS; EXACT_LEDGER_MATCHING_IS_SEPARATE",
+      "direction": "minimize",
+      "league": "ncaam",
+      "metric": "MAE",
+      "promotion_authority": false,
+      "registered_estimator_recipes_compared": 9,
+      "reported_n_test": [
+        5758
+      ],
+      "season_end_year": 2025,
+      "season_label": "2024\u201325",
+      "target": "total",
+      "value": 12.929473421062825,
+      "historical_metric_role_alias": "historical_ncaam_2025_total_mae",
+      "current_champion_promotion": false
+    },
+    {
+      "comparison_basis": "DESCRIPTIVE_RANK_OF_REPORTED_FROZEN_ESTIMATOR_METRICS; EXACT_LEDGER_MATCHING_IS_SEPARATE",
+      "direction": "minimize",
+      "league": "ncaam",
+      "metric": "RMSE",
+      "promotion_authority": false,
+      "registered_estimator_recipes_compared": 9,
+      "reported_n_test": [
+        5758
+      ],
+      "season_end_year": 2025,
+      "season_label": "2024\u201325",
+      "target": "total",
+      "value": 16.520374748166137,
+      "historical_metric_role_alias": "historical_ncaam_2025_total_rmse",
+      "current_champion_promotion": false
+    },
+    {
+      "comparison_basis": "DESCRIPTIVE_RANK_OF_REPORTED_FROZEN_ESTIMATOR_METRICS; EXACT_LEDGER_MATCHING_IS_SEPARATE",
+      "direction": "maximize",
+      "league": "ncaam",
+      "metric": "Accuracy",
+      "promotion_authority": false,
+      "registered_estimator_recipes_compared": 9,
+      "reported_n_test": [
+        5758
+      ],
+      "season_end_year": 2025,
+      "season_label": "2024\u201325",
+      "target": "win",
+      "value": 0.7269885376866968,
+      "historical_metric_role_alias": "historical_ncaam_2025_win_accuracy",
+      "current_champion_promotion": false,
+      "direction_counts_derived_from_metrics": [
+        {
+          "basis": "DEDUCED_EXACTLY_FROM_REPORTED_N_AND_HALF_CREDIT_ACCURACY_AND_EXPLICIT_PROBABILITY_TIES; NOT_RECOMPUTED_FROM_GAME_LEDGER",
+          "integer_direction_counts": {
+            "correct_direction": 4186,
+            "incorrect_direction": 1572,
+            "no_direction_probability_half": 0
+          },
+          "n_test": 5758,
+          "probability_ties": 0
+        }
+      ]
+    },
+    {
+      "comparison_basis": "DESCRIPTIVE_RANK_OF_REPORTED_FROZEN_ESTIMATOR_METRICS; EXACT_LEDGER_MATCHING_IS_SEPARATE",
+      "direction": "minimize",
+      "league": "ncaam",
+      "metric": "LogLoss",
+      "promotion_authority": false,
+      "registered_estimator_recipes_compared": 9,
+      "reported_n_test": [
+        5758
+      ],
+      "season_end_year": 2025,
+      "season_label": "2024\u201325",
+      "target": "win",
+      "value": 0.5214815135867005,
+      "historical_metric_role_alias": "historical_ncaam_2025_win_logloss",
+      "current_champion_promotion": false
+    },
+    {
+      "comparison_basis": "DESCRIPTIVE_RANK_OF_REPORTED_FROZEN_ESTIMATOR_METRICS; EXACT_LEDGER_MATCHING_IS_SEPARATE",
+      "direction": "minimize",
+      "league": "ncaam",
+      "metric": "Brier",
+      "promotion_authority": false,
+      "registered_estimator_recipes_compared": 9,
+      "reported_n_test": [
+        5758
+      ],
+      "season_end_year": 2025,
+      "season_label": "2024\u201325",
+      "target": "win",
+      "value": 0.17645292984627586,
+      "historical_metric_role_alias": "historical_ncaam_2025_win_brier",
+      "current_champion_promotion": false
+    },
+    {
+      "comparison_basis": "DESCRIPTIVE_RANK_OF_REPORTED_FROZEN_ESTIMATOR_METRICS; EXACT_LEDGER_MATCHING_IS_SEPARATE",
+      "direction": "minimize",
+      "league": "ncaam",
+      "metric": "MAE",
+      "promotion_authority": false,
+      "registered_estimator_recipes_compared": 9,
+      "reported_n_test": [
+        5749
+      ],
+      "season_end_year": 2026,
+      "season_label": "2025\u201326",
+      "target": "margin",
+      "value": 9.162618730992724,
+      "historical_metric_role_alias": "historical_ncaam_2026_margin_mae",
+      "current_champion_promotion": false
+    },
+    {
+      "comparison_basis": "DESCRIPTIVE_RANK_OF_REPORTED_FROZEN_ESTIMATOR_METRICS; EXACT_LEDGER_MATCHING_IS_SEPARATE",
+      "direction": "minimize",
+      "league": "ncaam",
+      "metric": "RMSE",
+      "promotion_authority": false,
+      "registered_estimator_recipes_compared": 9,
+      "reported_n_test": [
+        5749
+      ],
+      "season_end_year": 2026,
+      "season_label": "2025\u201326",
+      "target": "margin",
+      "value": 11.60028301302509,
+      "historical_metric_role_alias": "historical_ncaam_2026_margin_rmse",
+      "current_champion_promotion": false
+    },
+    {
+      "comparison_basis": "DESCRIPTIVE_RANK_OF_REPORTED_FROZEN_ESTIMATOR_METRICS; EXACT_LEDGER_MATCHING_IS_SEPARATE",
+      "direction": "minimize",
+      "league": "ncaam",
+      "metric": "MAE",
+      "promotion_authority": false,
+      "registered_estimator_recipes_compared": 9,
+      "reported_n_test": [
+        5749
+      ],
+      "season_end_year": 2026,
+      "season_label": "2025\u201326",
+      "target": "total",
+      "value": 13.687858425800115,
+      "historical_metric_role_alias": "historical_ncaam_2026_total_mae",
+      "current_champion_promotion": false
+    },
+    {
+      "comparison_basis": "DESCRIPTIVE_RANK_OF_REPORTED_FROZEN_ESTIMATOR_METRICS; EXACT_LEDGER_MATCHING_IS_SEPARATE",
+      "direction": "minimize",
+      "league": "ncaam",
+      "metric": "RMSE",
+      "promotion_authority": false,
+      "registered_estimator_recipes_compared": 9,
+      "reported_n_test": [
+        5749
+      ],
+      "season_end_year": 2026,
+      "season_label": "2025\u201326",
+      "target": "total",
+      "value": 17.268824574154003,
+      "historical_metric_role_alias": "historical_ncaam_2026_total_rmse",
+      "current_champion_promotion": false
+    },
+    {
+      "comparison_basis": "DESCRIPTIVE_RANK_OF_REPORTED_FROZEN_ESTIMATOR_METRICS; EXACT_LEDGER_MATCHING_IS_SEPARATE",
+      "direction": "maximize",
+      "league": "ncaam",
+      "metric": "Accuracy",
+      "promotion_authority": false,
+      "registered_estimator_recipes_compared": 9,
+      "reported_n_test": [
+        5749
+      ],
+      "season_end_year": 2026,
+      "season_label": "2025\u201326",
+      "target": "win",
+      "value": 0.7201252391720299,
+      "historical_metric_role_alias": "historical_ncaam_2026_win_accuracy",
+      "current_champion_promotion": false,
+      "direction_counts_derived_from_metrics": [
+        {
+          "basis": "DEDUCED_EXACTLY_FROM_REPORTED_N_AND_HALF_CREDIT_ACCURACY_AND_EXPLICIT_PROBABILITY_TIES; NOT_RECOMPUTED_FROM_GAME_LEDGER",
+          "integer_direction_counts": {
+            "correct_direction": 4140,
+            "incorrect_direction": 1609,
+            "no_direction_probability_half": 0
+          },
+          "n_test": 5749,
+          "probability_ties": 0
+        }
+      ]
+    },
+    {
+      "comparison_basis": "DESCRIPTIVE_RANK_OF_REPORTED_FROZEN_ESTIMATOR_METRICS; EXACT_LEDGER_MATCHING_IS_SEPARATE",
+      "direction": "minimize",
+      "league": "ncaam",
+      "metric": "LogLoss",
+      "promotion_authority": false,
+      "registered_estimator_recipes_compared": 9,
+      "reported_n_test": [
+        5749
+      ],
+      "season_end_year": 2026,
+      "season_label": "2025\u201326",
+      "target": "win",
+      "value": 0.5238873160433043,
+      "historical_metric_role_alias": "historical_ncaam_2026_win_logloss",
+      "current_champion_promotion": false
+    },
+    {
+      "comparison_basis": "DESCRIPTIVE_RANK_OF_REPORTED_FROZEN_ESTIMATOR_METRICS; EXACT_LEDGER_MATCHING_IS_SEPARATE",
+      "direction": "minimize",
+      "league": "ncaam",
+      "metric": "Brier",
+      "promotion_authority": false,
+      "registered_estimator_recipes_compared": 9,
+      "reported_n_test": [
+        5749
+      ],
+      "season_end_year": 2026,
+      "season_label": "2025\u201326",
+      "target": "win",
+      "value": 0.1778399915620509,
+      "historical_metric_role_alias": "historical_ncaam_2026_win_brier",
+      "current_champion_promotion": false
+    },
+    {
+      "comparison_basis": "DESCRIPTIVE_RANK_OF_REPORTED_FROZEN_ESTIMATOR_METRICS; EXACT_LEDGER_MATCHING_IS_SEPARATE",
+      "direction": "minimize",
+      "league": "ncaaw",
+      "metric": "MAE",
+      "promotion_authority": false,
+      "registered_estimator_recipes_compared": 9,
+      "reported_n_test": [
+        5280
+      ],
+      "season_end_year": 2025,
+      "season_label": "2024\u201325",
+      "target": "margin",
+      "value": 9.691400394381871,
+      "historical_metric_role_alias": "historical_ncaaw_2025_margin_mae",
+      "current_champion_promotion": false
+    },
+    {
+      "comparison_basis": "DESCRIPTIVE_RANK_OF_REPORTED_FROZEN_ESTIMATOR_METRICS; EXACT_LEDGER_MATCHING_IS_SEPARATE",
+      "direction": "minimize",
+      "league": "ncaaw",
+      "metric": "RMSE",
+      "promotion_authority": false,
+      "registered_estimator_recipes_compared": 9,
+      "reported_n_test": [
+        5280
+      ],
+      "season_end_year": 2025,
+      "season_label": "2024\u201325",
+      "target": "margin",
+      "value": 12.240095478214267,
+      "historical_metric_role_alias": "historical_ncaaw_2025_margin_rmse",
+      "current_champion_promotion": false
+    },
+    {
+      "comparison_basis": "DESCRIPTIVE_RANK_OF_REPORTED_FROZEN_ESTIMATOR_METRICS; EXACT_LEDGER_MATCHING_IS_SEPARATE",
+      "direction": "minimize",
+      "league": "ncaaw",
+      "metric": "MAE",
+      "promotion_authority": false,
+      "registered_estimator_recipes_compared": 9,
+      "reported_n_test": [
+        5280
+      ],
+      "season_end_year": 2025,
+      "season_label": "2024\u201325",
+      "target": "total",
+      "value": 12.57927939843677,
+      "historical_metric_role_alias": "historical_ncaaw_2025_total_mae",
+      "current_champion_promotion": false
+    },
+    {
+      "comparison_basis": "DESCRIPTIVE_RANK_OF_REPORTED_FROZEN_ESTIMATOR_METRICS; EXACT_LEDGER_MATCHING_IS_SEPARATE",
+      "direction": "minimize",
+      "league": "ncaaw",
+      "metric": "RMSE",
+      "promotion_authority": false,
+      "registered_estimator_recipes_compared": 9,
+      "reported_n_test": [
+        5280
+      ],
+      "season_end_year": 2025,
+      "season_label": "2024\u201325",
+      "target": "total",
+      "value": 15.92629891862978,
+      "historical_metric_role_alias": "historical_ncaaw_2025_total_rmse",
+      "current_champion_promotion": false
+    },
+    {
+      "comparison_basis": "DESCRIPTIVE_RANK_OF_REPORTED_FROZEN_ESTIMATOR_METRICS; EXACT_LEDGER_MATCHING_IS_SEPARATE",
+      "direction": "maximize",
+      "league": "ncaaw",
+      "metric": "Accuracy",
+      "promotion_authority": false,
+      "registered_estimator_recipes_compared": 9,
+      "reported_n_test": [
+        5280
+      ],
+      "season_end_year": 2025,
+      "season_label": "2024\u201325",
+      "target": "win",
+      "value": 0.7689393939393939,
+      "historical_metric_role_alias": "historical_ncaaw_2025_win_accuracy",
+      "current_champion_promotion": false,
+      "direction_counts_derived_from_metrics": [
+        {
+          "basis": "DEDUCED_EXACTLY_FROM_REPORTED_N_AND_HALF_CREDIT_ACCURACY_AND_EXPLICIT_PROBABILITY_TIES; NOT_RECOMPUTED_FROM_GAME_LEDGER",
+          "integer_direction_counts": {
+            "correct_direction": 4060,
+            "incorrect_direction": 1220,
+            "no_direction_probability_half": 0
+          },
+          "n_test": 5280,
+          "probability_ties": 0
+        }
+      ]
+    },
+    {
+      "comparison_basis": "DESCRIPTIVE_RANK_OF_REPORTED_FROZEN_ESTIMATOR_METRICS; EXACT_LEDGER_MATCHING_IS_SEPARATE",
+      "direction": "minimize",
+      "league": "ncaaw",
+      "metric": "LogLoss",
+      "promotion_authority": false,
+      "registered_estimator_recipes_compared": 9,
+      "reported_n_test": [
+        5280
+      ],
+      "season_end_year": 2025,
+      "season_label": "2024\u201325",
+      "target": "win",
+      "value": 0.45211932742946104,
+      "historical_metric_role_alias": "historical_ncaaw_2025_win_logloss",
+      "current_champion_promotion": false
+    },
+    {
+      "comparison_basis": "DESCRIPTIVE_RANK_OF_REPORTED_FROZEN_ESTIMATOR_METRICS; EXACT_LEDGER_MATCHING_IS_SEPARATE",
+      "direction": "minimize",
+      "league": "ncaaw",
+      "metric": "Brier",
+      "promotion_authority": false,
+      "registered_estimator_recipes_compared": 9,
+      "reported_n_test": [
+        5280
+      ],
+      "season_end_year": 2025,
+      "season_label": "2024\u201325",
+      "target": "win",
+      "value": 0.15041605997115878,
+      "historical_metric_role_alias": "historical_ncaaw_2025_win_brier",
+      "current_champion_promotion": false
+    },
+    {
+      "comparison_basis": "DESCRIPTIVE_RANK_OF_REPORTED_FROZEN_ESTIMATOR_METRICS; EXACT_LEDGER_MATCHING_IS_SEPARATE",
+      "direction": "minimize",
+      "league": "ncaaw",
+      "metric": "MAE",
+      "promotion_authority": false,
+      "registered_estimator_recipes_compared": 9,
+      "reported_n_test": [
+        5621
+      ],
+      "season_end_year": 2026,
+      "season_label": "2025\u201326",
+      "target": "margin",
+      "value": 9.671339695146882,
+      "historical_metric_role_alias": "historical_ncaaw_2026_margin_mae",
+      "current_champion_promotion": false
+    },
+    {
+      "comparison_basis": "DESCRIPTIVE_RANK_OF_REPORTED_FROZEN_ESTIMATOR_METRICS; EXACT_LEDGER_MATCHING_IS_SEPARATE",
+      "direction": "minimize",
+      "league": "ncaaw",
+      "metric": "RMSE",
+      "promotion_authority": false,
+      "registered_estimator_recipes_compared": 9,
+      "reported_n_test": [
+        5621
+      ],
+      "season_end_year": 2026,
+      "season_label": "2025\u201326",
+      "target": "margin",
+      "value": 12.270989387703258,
+      "historical_metric_role_alias": "historical_ncaaw_2026_margin_rmse",
+      "current_champion_promotion": false
+    },
+    {
+      "comparison_basis": "DESCRIPTIVE_RANK_OF_REPORTED_FROZEN_ESTIMATOR_METRICS; EXACT_LEDGER_MATCHING_IS_SEPARATE",
+      "direction": "minimize",
+      "league": "ncaaw",
+      "metric": "MAE",
+      "promotion_authority": false,
+      "registered_estimator_recipes_compared": 9,
+      "reported_n_test": [
+        5621
+      ],
+      "season_end_year": 2026,
+      "season_label": "2025\u201326",
+      "target": "total",
+      "value": 12.597916463977597,
+      "historical_metric_role_alias": "historical_ncaaw_2026_total_mae",
+      "current_champion_promotion": false
+    },
+    {
+      "comparison_basis": "DESCRIPTIVE_RANK_OF_REPORTED_FROZEN_ESTIMATOR_METRICS; EXACT_LEDGER_MATCHING_IS_SEPARATE",
+      "direction": "minimize",
+      "league": "ncaaw",
+      "metric": "RMSE",
+      "promotion_authority": false,
+      "registered_estimator_recipes_compared": 9,
+      "reported_n_test": [
+        5621
+      ],
+      "season_end_year": 2026,
+      "season_label": "2025\u201326",
+      "target": "total",
+      "value": 15.99313198559537,
+      "historical_metric_role_alias": "historical_ncaaw_2026_total_rmse",
+      "current_champion_promotion": false
+    },
+    {
+      "comparison_basis": "DESCRIPTIVE_RANK_OF_REPORTED_FROZEN_ESTIMATOR_METRICS; EXACT_LEDGER_MATCHING_IS_SEPARATE",
+      "direction": "maximize",
+      "league": "ncaaw",
+      "metric": "Accuracy",
+      "promotion_authority": false,
+      "registered_estimator_recipes_compared": 9,
+      "reported_n_test": [
+        5621
+      ],
+      "season_end_year": 2026,
+      "season_label": "2025\u201326",
+      "target": "win",
+      "value": 0.7680128091086995,
+      "historical_metric_role_alias": "historical_ncaaw_2026_win_accuracy",
+      "current_champion_promotion": false,
+      "direction_counts_derived_from_metrics": [
+        {
+          "basis": "DEDUCED_EXACTLY_FROM_REPORTED_N_AND_HALF_CREDIT_ACCURACY_AND_EXPLICIT_PROBABILITY_TIES; NOT_RECOMPUTED_FROM_GAME_LEDGER",
+          "integer_direction_counts": {
+            "correct_direction": 4317,
+            "incorrect_direction": 1304,
+            "no_direction_probability_half": 0
+          },
+          "n_test": 5621,
+          "probability_ties": 0
+        },
+        {
+          "basis": "DEDUCED_EXACTLY_FROM_REPORTED_N_AND_HALF_CREDIT_ACCURACY_AND_EXPLICIT_PROBABILITY_TIES; NOT_RECOMPUTED_FROM_GAME_LEDGER",
+          "integer_direction_counts": {
+            "correct_direction": 4317,
+            "incorrect_direction": 1304,
+            "no_direction_probability_half": 0
+          },
+          "n_test": 5621,
+          "probability_ties": 0
+        }
+      ]
+    },
+    {
+      "comparison_basis": "DESCRIPTIVE_RANK_OF_REPORTED_FROZEN_ESTIMATOR_METRICS; EXACT_LEDGER_MATCHING_IS_SEPARATE",
+      "direction": "minimize",
+      "league": "ncaaw",
+      "metric": "LogLoss",
+      "promotion_authority": false,
+      "registered_estimator_recipes_compared": 9,
+      "reported_n_test": [
+        5621
+      ],
+      "season_end_year": 2026,
+      "season_label": "2025\u201326",
+      "target": "win",
+      "value": 0.45473728543321623,
+      "historical_metric_role_alias": "historical_ncaaw_2026_win_logloss",
+      "current_champion_promotion": false
+    },
+    {
+      "comparison_basis": "DESCRIPTIVE_RANK_OF_REPORTED_FROZEN_ESTIMATOR_METRICS; EXACT_LEDGER_MATCHING_IS_SEPARATE",
+      "direction": "minimize",
+      "league": "ncaaw",
+      "metric": "Brier",
+      "promotion_authority": false,
+      "registered_estimator_recipes_compared": 9,
+      "reported_n_test": [
+        5621
+      ],
+      "season_end_year": 2026,
+      "season_label": "2025\u201326",
+      "target": "win",
+      "value": 0.1510691738106431,
+      "historical_metric_role_alias": "historical_ncaaw_2026_win_brier",
+      "current_champion_promotion": false
+    }
+  ],
+  "same_original_B003_completed_season_scores": "ABSENT_FROM_RECOVERED_108_JOB_REPORT; OTHER_RECIPES_ARE_NOT_SUBSTITUTES"
+}

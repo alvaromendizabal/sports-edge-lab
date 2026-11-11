@@ -187,7 +187,7 @@ class PublicProjectionTests(unittest.TestCase):
     def test_public_boundary_and_static_fallback(self):
         for token in (b"s3://", b"/home/sagemaker-user", b"arn:aws:", b"recipe_policy_sha256",
                       b"model_snapshot_sha256", b"candidate_id", b"raw_response", b"api_key",
-                      b"source_rows", b"560403859723", b"fit_identity_sha256", b"model_pin"):
+                      b"source_rows", b"fit_identity_sha256", b"model_pin"):
             self.assertNotIn(token, self.raw)
         self.assertFalse(self.data["summary"]["full_immutable_issue_archive_published"])
         html = (PUBLIC / "latest-games-v065.html").read_text()

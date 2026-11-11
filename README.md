@@ -1,3 +1,51 @@
+## NCAA basketball B062: execution repaired, earlier models retained — November 11, 2026 UTC
+
+**B060 remains the latest actual owner run; B062 is prepared and locally validated.** B061's reported launch stopped before archive code. The new continuation provides measured source diagnostics, earlier durable fit output, a native-library startup fix, fourteen separate metric roles, and lossless authenticated return splitting. The original checkpoint authority and seven older scientific identities are preserved. Actual twelve-core throughput and fresh future forecasts still require the next owner execution.
+
+The preserved current-season frozen replay reports **men: 0.394807 log loss, 337/415 correct; women: 0.318015, 340/399 correct**. These are exposed reconstructions. The latest saved exports retain **814 completed-game replay triplets**, **30 matched original-issue triplets**, two unscored original issues and six preserved selected roles. All 1,139 unissued future previews stay blank. The 3,457-record inventory is not a certified unique-game denominator.
+
+[B062 findings and execution evidence](examples/ncaa_review/B062_EVIDENCE.md) · [Machine-readable status](examples/ncaa_review/B062_STATUS.json) · [Reconstruct the executed notebook and interactive report](examples/ncaa_review/B062_SAVED_REPORTS.md) · [Preserved issued forecasts](examples/ncaa_review/data/ncaa_preserved_selected_issues_scored_b061.json) · [Saved selected roles](examples/ncaa_review/data/ncaa_metric_role_status_b061.json)
+
+No new promotion, fresh provider comparison, owner training result or website deployment is implied. Earlier dated evidence below remains preserved.
+
+## NCAA basketball: frozen model recovered and prior forecasts scored — November 11, 2026 UTC
+
+The preserved original frozen reference now has authenticated current-season replay scores: **men 0.394807 log loss and 337/415 correct winners (81.20%); women 0.318015 and 340/399 (85.21%)**. Its original weights are unchanged. These are exposed retrospective reconstructions, with independent official-final and historical publication-vintage qualification still unresolved. The improvement over an earlier smaller saved cohort is not a newly trained model improvement.
+
+**90 of 96 previously published target outputs now have matched observed outcomes, covering 30 of 32 games.** Original issue values and clocks are preserved. On those same games the selected original issues have lower log loss than the frozen replay in both leagues; two men’s games with changed recorded tip times remain unscored. No new promotion or fresh future issue is claimed.
+
+[Interactive B061 evidence and game census](examples/ncaa_review/B061_EVIDENCE_REPORT.html) · [Scientific results and qualifications](examples/ncaa_review/evidence/B060_ACTUAL_B061_PREPARED.md) · [All observed records CSV](examples/ncaa_review/data/ncaa_observed_games_b060.csv) · [Latest saved metric roles and missing roles](examples/ncaa_review/data/ncaa_metric_role_status_b061.json)
+
+The census contains **3,457 source records**, including unmatched candidates; it is not a certified complete-game universe. Public values include completed frozen replays and preserved selected issues. The **1,139 unissued future replay previews stay blank**. Current Kalshi/DraftKings/Polymarket performance comparisons remain unavailable pending exact same-game, cutoff and product matching.
+
+The actual B060 owner run preserved work before a coordination failure after **2h 15m 02s**, averaging approximately **0.62 CPU cores**. B061 prepares atomic lease/affinity handling, bounded concurrent league work, source reuse and earlier durable reporting. Owner execution, twelve-core throughput and fresh next-game coverage remain pending. Earlier dated records below retain their original scope.
+
+## NCAA: selected prior forecasts recovered — November 11, 2026 UTC
+
+The authenticated archive now supplies **96 preserved selected target forecasts for 32 games (18 men’s and 14 women’s)**, covering home-win probability, home-minus-away margin and total points. The six saved historical selections determine the exported roles; the latest eligible original issue is retained without consulting current outcomes. Three additional games in the wider issued archive have no matching selected-role issue and receive no substitute.
+
+[Preserved selected forecasts and qualifications](examples/ncaa_review/evidence/B059_PRESERVED_SELECTED_ISSUES.md) · [CSV](examples/ncaa_review/data/ncaa_preserved_selected_issues_b059.csv) · [JSON](examples/ncaa_review/data/ncaa_preserved_selected_issues_b059.json)
+
+These are actual earlier issues for games scheduled November 6–10, with original clocks and ordered ESPN team IDs. They are separate from the unmatched official-game inventory, newly issued upcoming forecasts and freshly qualified current champions. No original B003 issue, outcome join, new model fit, fresh performance score or promotion is claimed. Earlier dated evidence remains below.
+
+## NCAA basketball: actual B059 recovered; B060 prepared
+
+The latest authenticated NCAA owner run completed **107 target fits, 17 calibrations and 36 residual fits**, then stopped on an I/O deferral after **2 hours 11 minutes 36 seconds**. Although its project ceiling was twelve CPUs, measured CPU usage averaged approximately **0.81 cores**. B060 fixes the serial admission paths, coordinates atomic NCAA/FBS leases, preserves the completed work, prioritizes selected forecasts, and expands the finite full-model and ablation tranches. Actual B060 owner execution and measured throughput remain pending.
+
+The saved approximately **0.40 log-loss** model evidence is preserved. It has not been replaced by weak standalone controls or freshly rescored by this engineering update. No new promotion is claimed.
+
+[Actual B059 evidence and prepared B060 changes](examples/ncaa_review/evidence/B059_ACTUAL_B060_PREPARED.md) · [All 2,512 supplied official game records and explicit forecast gaps](examples/ncaa_review/data/ncaa_observed_games_b059.csv) · [Men](tracks/ncaam/README.md) · [Women](tracks/ncaaw/README.md)
+
+The observed game report retains its original time. Its canonical source stream was empty, so all selected forecast fields remain unavailable; seven date gaps also prevent a complete-season claim. The source repair permits one authenticated recovery from an inherited ESPN timeout while preserving provider rate-limit refusals. Earlier dated updates below remain historical.
+
+## NCAA basketball: actual B058, V7 continuation prepared
+
+The latest authenticated owner return preserved **90 new target fits** and **seven exact prior frozen-fit reuses** before its work budget ended. It completed 65 of 6,216 core contexts and 25 of 14,544 scalar contexts; those context totals are not model-fit counts. It issued **zero new current forecasts** and promoted **zero models**. The older research, including stronger complete-model scorecards, remains preserved.
+
+The prepared V7 continuation prioritizes current forecasts, restores exact old fits, compares a bounded set of metric-specific contenders, and runs independent work under a shared CPU/memory coordinator. It returns at bounded work checkpoints instead of requiring the entire nominal frontier first. Local regression tests establish software behavior; actual owner throughput and new model results remain pending.
+
+[Authenticated B058 evidence and prepared V7 limits](examples/ncaa_review/evidence/B058_ACTUAL_B059_PREPARED.md) · [Men’s evidence](tracks/ncaam/README.md) · [Women’s evidence](tracks/ncaaw/README.md)
+
 <p align="center"><img src="docs/assets/masthead.svg" alt="Sports Edge Lab — probabilistic forecasting, scientific evaluation, reliable ML systems" width="1100"></p>
 
 ## FBS engineering continuation — November 10, 2026 UTC
@@ -17,6 +65,19 @@
 
 [**Open the FBS browser dashboard →**](https://sports-edge-lab-fbs.alv-mendizabal.chatgpt.site) · [FBS clock and coverage methodology](docs/fbs/SEASON_EXPLORER_2026-11-03.md) · [FBS source and model card](tracks/ncaaf/README.md)
 
+## Current NFL evidence · November 11, 2026
+
+**Actual N072 completed at least 69 real fits and recovered 18 metric/horizon-specific historical selections.** The [latest all-game research view](tracks/nfl/season_review_n073.html) and [selected rounded outputs](tracks/nfl/selected_forecasts_n073.json) retain all 272 games: 136 completed, 112 confirmed future games with **772 selected rows**, and 24 official kickoff times still TBD. Original fit/issue clocks and retrospective evidence remain separate. Most primary leaders now have outputs for 27 games; operational fallbacks cover all 112 confirmed future games.
+
+Verified completed phases contain **21 native and 48 meta fits**, while original whole-run totals remain **null** after the final refresh failed. The returned ledgers contain at least **1,517 unique issue IDs**; repeated refreshes are not independent outcome support. All 1,251 registered native annual cases are available from cache or retained results, not new-fit credit. A horizon-ID publication collision was repaired without dropping any of the 27 primary/fallback roles or changing predictions.
+
+[Metric-specific 2024/2025 scorecards](tracks/nfl/CURRENT_MODEL_CARD.md) now separate one-hour and two-hour historical cohorts. Strong older Torch/TF predictions are preserved and descriptively outperform the new one-hour probability selection on exact saved matched subsets; their source-clock audit and promotion gates remain open. The remembered full-season approximately 0.40 log-loss result is unresolved. **No independent production promotion is established.** [Actual N072 and prepared N073 evidence](tracks/nfl/README.md).
+
+The owner ran for **23m 23s** on 48 effective vCPUs with a 12-CPU NFL ceiling. The owner 1/2/4/8/12 neutral benchmark completed, with 5.04× measured width-12 speedup; it is not scientific fit speedup. Exact current market winner admission remains zero, and R13–R20 remain source-gated. This source update does not refresh the separately deployed Site.
+
+<details>
+<summary>Preserved November 8 NFL evidence</summary>
+
 ## Current NFL evidence · November 8, 2026
 
 **All 272 games and 32 teams are accounted for.** The latest authenticated NFL owner snapshot has **130 finals, 129 decisive results and one tie**, plus **three in progress, one at halftime and 138 scheduled**. Earlier snapshots remain preserved. CHI 34–SEA 17, JAX 33–BAL 10 and CIN 34–ATL 17 are present. Historical `LA` identifies the Rams; `LAC` identifies the Chargers.
@@ -34,6 +95,8 @@ The latest bounded source capture has **7,125 normalized observations, 78 observ
 [Complete NFL evidence](tracks/nfl/README.md) · [Open interactive dashboard](https://sports-edge-lab-nfl.alv-mendizabal.chatgpt.site/) · [Bounded offline public HTML](tracks/nfl/season_review_n054.html)
 
 The Site is a dated publication of an exact canonical commit. Publication requires exact PR-head CI, a permitted merge, final-main readbacks and deployment/content verification. Active NFL presentation is research-only.
+
+</details>
 
 ## Review the work in five minutes
 
@@ -86,7 +149,7 @@ a narrow missing-clock checkpoint repair.
 
 | Track | Entry point | Publication boundary |
 |---|---|---|
-| NFL | [Current evidence](tracks/nfl/README.md) | Updated November 8; actual family research, preserved issue clocks and explicit coverage gaps |
+| NFL | [Current evidence](tracks/nfl/README.md) | Actual N072: at least 69 fits, 772 selected rows across 112 future games; 18 historical metric/horizon selections, old-model comparisons and explicit gaps |
 | NCAA FBS | [Browser dashboard](https://sports-edge-lab-fbs.alv-mendizabal.chatgpt.site) · [Track](tracks/ncaaf/README.md) | Actual V053 partial; V055 prepared; 500 saved issue contexts across 122 games, with dated provider coverage |
 | NBA | [Research view](docs/NBA_RESEARCH_CARD.md) | Separately dated basketball evidence |
 | NCAA basketball | [Open dashboards](https://alvaro-ncaa-research-review.alv-mendizabal.chatgpt.site/) · [Men's evidence](tracks/ncaam/README.md) · [Women's evidence](tracks/ncaaw/README.md) · [Runnable contracts](examples/ncaa_review/README.md) | Separate historical selections, current execution gaps and three-provider qualification |
@@ -238,4 +301,6 @@ The latest authenticated V056 owner added 31 base fits and five statistical stat
 V057 prepares exact historical-recipe recovery, reusable per-candidate metrics before global closure, and bounded recovery that can advance after interruption. Its 64-unit chunks retain the eight-chunk ceiling, for an effective maximum of 512 units per recovery slice. Complete-population cache reuse requires independent canonical receipt, source and selector verification. No V057 AWS execution, new model improvement or automatic promotion is claimed. The requirement for hundreds of certified new feature concepts remains unmet.
 
 Evidence: [latest saved owner counts](docs/fbs/actual-owner-v056.json), [historical scorecards and qualifications](docs/fbs/historical-contenders-v057.json), and [FBS evidence dashboard](docs/fbs/current.html). Publication is not a data refresh or model run. NFL, NBA and NCAA basketball retain their independent owners and evidence.
+
+
 

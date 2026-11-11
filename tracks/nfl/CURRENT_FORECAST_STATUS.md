@@ -1,48 +1,24 @@
-# Reading forecast status and market lines
+# Latest NFL forecast status · November 11, 2026
 
-**Latest dated update:** [N042 current rolling and injury research](N042_RESEARCH_UPDATE.md) adds separately labeled original, raw shadow and raw current rolling streams. Earlier snapshots below remain unchanged.
+[All-game review](season_review_n073.html) · [Selected forecasts](selected_forecasts_n073.json) · [Actual N072 evidence](2026-11-11-n072-actual-n073-prepared.json)
 
-**Chicago–Seattle source correction:** genuine T1 pregame vectors and the causal outcome append already existed; the retained updating view did not inherit them. Original forecasts and published cohort metrics remain unchanged. [Recovery explanation](N041_RESEARCH_UPDATE.md) · [Compact proof](chicago_seattle_recovery_n042.json).
+**N072 supplies 772 selected already-issued rows for 112 confirmed upcoming games.** Original issue times are approximately 19:44–19:52 UTC; the preserved display cutoff is 19:55:36 UTC. This publication repair performs no fitting or inference and changes no prediction value or issue clock.
 
-**Newer evidence:** [November 4 Pacific owner update](N041_RESEARCH_UPDATE.md) adds a completed 960-recipe contribution study, 266 listed current injury entries and a separate 02:26 UTC issue. The dated results below retain their original cohorts and model identities.
-[NFL overview](README.md) · [All-game dashboard](review.html#latest-coverage) · [Model card](CURRENT_MODEL_CARD.md)
+| Coverage | Count | Interpretation |
+|---|---:|---|
+| Current-season schedule | 272 games | Complete saved regular-season denominator |
+| Completed | 136 games | Includes one tie; binary and point targets remain separate |
+| Confirmed future games with selected issues | 112 games | 220 winner, 220 margin and 332 total rows |
+| Official kickoff time TBD | 24 games | No invented kickoff or forecast |
+| Games with any preserved evidence | 248 games | Original, early-snapshot and reconstruction panels overlap |
+| Verified distinct N072 issue IDs | At least 1,517 | 1,992 references include 475 duplicates; repeated refreshes are not independent outcomes |
+| Primary historical metric/horizon roles | 18 | Nine one-hour and nine two-hour selections |
+| Operational fallback roles | 9 | Separate availability and historical scorecards |
 
-## Three separate questions
+Seventeen primary roles have admitted outputs for 27 games; the one-hour total-CRPS role and operational fallbacks cover all 112 confirmed future games. Every missing primary output remains explicit. Historical horizon labels never replace each new forecast's actual days-ahead issue clock.
 
-| Question | What this snapshot establishes |
-|---|---|
-| What does the model predict? | The displayed winner probability, home margin and total, with the original issue and input clocks. |
-| Has a particular bet been assessed? | **Betting assessment pending** for the early cards. A price, payoff, fees, liquidity and uncertainty comparison has not established an actionable recommendation. |
-| Did anyone actually place a wager? | **Not tracked in this dashboard.** A zero model allocation or research status is not a personal transaction record. |
+The authenticated completed phases establish at least 21 native and 48 meta fits. Whole-run totals remain null because the final refresh/accounting failed. All 27 selected roles were recovered from exact byte/SHA-bound saved sources after the original exporter collided on horizonless role IDs. No role or horizon was dropped.
 
-The current interface replaces the blanket **NO BET** badge with **Early projection · betting assessment pending**. A stream with no forecast says **Forecast unavailable · betting assessment unavailable**. This corrects the presentation; it does not approve a wager or establish that every offered bet has negative expected value. Earlier audit records and their `bet_decision` and stake values remain unchanged.
+Kalshi supplied 164 normalized observations across 27 games, Polymarket 304 across 27 games, and DraftKings used 15 paid / 16 provider calls. Zero fully qualified current winner benchmark rows are available. Official schedule observations span 19:33:46–19:33:51 UTC. Raw quote observations do not establish target-equivalent admission.
 
-## Jacksonville at Baltimore: separate injury context
-
-Baltimore's [November 3 team report](https://www.baltimoreravens.com/news/joe-fagnano-ravens-quarterbacks-practice-report-tyler-huntley) says Joe Fagnano will start against Jacksonville on Thursday. The [November 1 report](https://www.baltimoreravens.com/news/lamar-jackson-thumb-injured-ravens-bills-2026) described Lamar Jackson's right-thumb injury, planned surgery and intended injured-reserve move. Planned actions are not represented here as completed transactions.
-
-The [official Week 9 practice report](https://www.baltimoreravens.com/team/injury-report/week/REG-9) is a separate changing source. Article publication dates above do not supply an invented precise UTC publication time. The source context is dated November 3, 2026; it is not proof of a continuous live feed.
-
-**Current injury/QB information is not verified in the displayed model forecasts.** A team-news update does not demonstrate that an earlier model input contained it. The preserved forecast values and actual issue times remain intact. This update neither retrains a model nor manually adjusts its predicted points.
-
-## A market line is not a model forecast
-
-The saved November 3 DraftKings reference for Jacksonville–Baltimore is Jacksonville **−10**, equivalent to Baltimore **+10**, with a **40.5** total. Its provider quote time is **22:55:43 UTC**. The selected early model output displayed in the current view has Jacksonville by **4.0** and a total of **45.7**, issued at **22:58:32 UTC**. These are saved observations, not assertions about the current available price.
-
-That is a six-point difference between the projected margin and the quoted handicap, and a 5.2-point difference between the total projection and quoted total. The two sources agree on the favored winner but differ on the margin. A sportsbook handicap is a contract threshold, not necessarily the provider's expected final margin. The gap alone does not establish a model probability of covering, a fee-adjusted advantage or an executable bet.
-
-Upcoming quotes, final pregame references, model information time and source acquisition time stay separate. Later information may be displayed for comparison; it cannot be inserted into an earlier model forecast or used to backdate a prediction.
-
-## Injury inputs are a research requirement, not a manual point adjustment
-
-The next injury-aware comparison must combine timely injury reports with expected quarterback availability and prior information, then compare that model with an otherwise equivalent baseline on the same games. A missing report is **unknown**, not healthy; a player on injured reserve may be absent from a weekly practice report. New observations cannot be inserted into an already issued forecast.
-
-This public snapshot does not yet contain an authenticated trained injury-augmentation result. A news update, source implementation or local test does not establish improved forecasting. Any later model version needs its own input and issue clocks, matched-cohort evaluation and uncertainty report. Existing frozen-model monitoring remains intact.
-
-[How prediction cutoffs and the latest-market views differ](CLOCKS_AND_INJURIES.md).
-
-## Later primary-stream issue: November 4
-
-The [immutable primary addendum](primary_issue_n035.json) exposes 29 genuine early research cards from the authenticated N035 final return. Select **Preserved primary with current parents** to inspect them. They were issued at **01:54:09 UTC**, using source information through **01:52:35 UTC**. The Jacksonville–Baltimore primary card has Jacksonville **67.5%**, by **5.0**, with a **45.8** total. The separate selected-native stream retains its earlier issue and values.
-
-These primary outputs reuse preserved heads with updated inputs; they are not 29 newly fitted models or final-hour betting recommendations. No direct injury/QB input is verified. Only the matching primary stream on still-unstarted games receives the later issue in the display. Earlier payloads, frozen originals, historical results and other forecast streams remain unchanged.
+Completed-season selections remain development exposed. The original-issued monitor reuses 492 evaluations across 14 week-nine games; it does not supply an all-season score. The recovered strong older model comparisons remain separately qualified in the model card. No production promotion or website deployment is implied.

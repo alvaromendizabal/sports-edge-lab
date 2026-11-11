@@ -1,0 +1,908 @@
+{
+  "actual_n068": {
+    "actual_cpu_exhaustion_established": false,
+    "clock_bases_preserved_separately": true,
+    "declared_payloads_verified": 18,
+    "exact_failing_resource_snapshot_available": false,
+    "first_error_reason": "CPU_PRESSURE_OR_SHARED_RESERVATIONS",
+    "first_error_type": "LeaseDeferred",
+    "full_historical_source_closure": false,
+    "new_fits": 0,
+    "new_forecasts": 0,
+    "package_sha256": "24dbc39fc018053298c56bd852bcf9e8ddec9ddab71117e55f5a89e611f5ab5e",
+    "paid_calls": 0,
+    "provider_dispatch": 0,
+    "return_sha256": "cbeec8ca4033030b75b2466ae3b162d70538d0e580c935e34111e99775109826",
+    "saved_elapsed_seconds": 37.79355153400047,
+    "saved_wall_timestamp_span_seconds": 31.891822,
+    "science_lanes_not_invoked": 8,
+    "status": "PARTIAL_PACKAGING_FAILED_LOCAL_EVIDENCE_PRESERVED",
+    "zip_members": 19
+  },
+  "current_selected_publication_counts": {
+    "completed_games": 136,
+    "current_selected_games": 112,
+    "current_selected_rows": 448,
+    "distinct_selected_model_aliases": 9,
+    "future_games": 136,
+    "games_with_any_preserved_evidence": 248,
+    "games_without_prediction_evidence_in_this_projection": 24,
+    "official_time_tbd_games": 24,
+    "primary_metric_roles": 9,
+    "rows_after_display_cutoff_not_shown": 0,
+    "schedule_games": 272,
+    "unmapped_nonselected_issue_rows_not_shown": 0
+  },
+  "engineering_acceptance": {
+    "current_package_unchanged": true,
+    "original_payload_preservation": {
+      "all_original_member_bodies_preserved": true,
+      "retained_members": 1382,
+      "retained_python_members": 982,
+      "status": "PASS",
+      "total_original_member_bodies_preserved": 1384
+    },
+    "sealed_test_elapsed_seconds": 350.8561084819994,
+    "sealed_tests": {
+      "errors": 0,
+      "failures": 0,
+      "fixture_only": true,
+      "new": 137,
+      "passed": 1593,
+      "retained": 1456,
+      "run": 1593,
+      "skipped": 0
+    },
+    "status": "PASS_EXACT_SEALED_PACKAGE",
+    "verify_only_passed": true,
+    "wrong_sha_rejected": true
+  },
+  "local_native_benchmark": {
+    "aws_throughput_established": false,
+    "data": "Invented only",
+    "dispatch_wall_seconds": [
+      38.594,
+      23.675,
+      16.934
+    ],
+    "native_fits_per_width": 12,
+    "native_fits_total": 36,
+    "observed_local_ratios": [
+      1.0,
+      1.63,
+      2.28
+    ],
+    "observed_optimizer_overlap": [
+      1,
+      2,
+      4
+    ],
+    "owner_eta": null,
+    "predictions_and_serialized_models_identical": true,
+    "widths": [
+      1,
+      2,
+      4
+    ]
+  },
+  "market_response_status": "R13\u2013R20 and exact checkpoint/venue/recency machinery preserved; authentic tick histories remain incomplete; N068 executed no experiments",
+  "new_real_fits_in_preparation": 0,
+  "new_real_forecasts_in_preparation": 0,
+  "owner_execution_of_n069_verified": false,
+  "prepared_n069": {
+    "actual_N067_payloads_preserved": 1129,
+    "actual_N068_payloads_preserved": 1383,
+    "bytes": 51878925,
+    "declared_portable_tests": 1593,
+    "members": 1491,
+    "new_tests": 137,
+    "retained_tests": 1456,
+    "scientific_time_limit_seconds": null,
+    "sha256": "3180861d9eeb241dd23e84d432a4706aea781fff3710c39b87b30b6b5ee2e956"
+  },
+  "preserved_119_game_kalshi_comparisons": [
+    {
+      "cohort_sha256": "5be9da68e53699785c25d8ed24f07c5d6e95f1185ae232cc2c12899bd6bb0496",
+      "comparison_class": "ARCHIVED_N029_RECONSTRUCTED_COMPARISON_NOT_NEW_ISSUED",
+      "durable_edge_established": false,
+      "evidence_class": "PRIMARY_SOURCE_SAVED_SCORECARD_NOT_N067_ROW_RESCORED",
+      "games": 119,
+      "model": "N022 market_legacy_synergy",
+      "model_brier": 0.2270569759604353,
+      "model_correct": 79,
+      "model_horizon_relabelled": false,
+      "model_log_loss": 0.6468233623572283,
+      "model_right_disagreements": 11,
+      "new_forecasts": 0,
+      "probability_semantics": "Model conditional non-tie; Kalshi raw midpoint zero-tie proxy",
+      "provider": "Kalshi",
+      "provider_brier": 0.22510735294117648,
+      "provider_correct": 76,
+      "provider_horizon": "T1",
+      "provider_log_loss": 0.6445785203688722,
+      "provider_right_disagreements": 8
+    },
+    {
+      "cohort_sha256": "5be9da68e53699785c25d8ed24f07c5d6e95f1185ae232cc2c12899bd6bb0496",
+      "comparison_class": "ARCHIVED_N029_RECONSTRUCTED_COMPARISON_NOT_NEW_ISSUED",
+      "durable_edge_established": false,
+      "evidence_class": "PRIMARY_SOURCE_SAVED_SCORECARD_NOT_N067_ROW_RESCORED",
+      "games": 119,
+      "model": "N022 market_error_feedback",
+      "model_brier": 0.2195206465608185,
+      "model_correct": 77,
+      "model_horizon_relabelled": false,
+      "model_log_loss": 0.6290801572659865,
+      "model_right_disagreements": 5,
+      "new_forecasts": 0,
+      "probability_semantics": "Model conditional non-tie; Kalshi raw midpoint zero-tie proxy",
+      "provider": "Kalshi",
+      "provider_brier": 0.22510735294117648,
+      "provider_correct": 76,
+      "provider_horizon": "T1",
+      "provider_log_loss": 0.6445785203688722,
+      "provider_right_disagreements": 4
+    },
+    {
+      "cohort_sha256": "5be9da68e53699785c25d8ed24f07c5d6e95f1185ae232cc2c12899bd6bb0496",
+      "comparison_class": "ARCHIVED_N029_RECONSTRUCTED_COMPARISON_NOT_NEW_ISSUED",
+      "durable_edge_established": false,
+      "evidence_class": "PRIMARY_SOURCE_SAVED_SCORECARD_NOT_N067_ROW_RESCORED",
+      "games": 119,
+      "model": "N022 market_legacy_synergy",
+      "model_brier": 0.2270569759604353,
+      "model_correct": 79,
+      "model_horizon_relabelled": false,
+      "model_log_loss": 0.6468233623572283,
+      "model_right_disagreements": 11,
+      "new_forecasts": 0,
+      "probability_semantics": "Model conditional non-tie; Kalshi raw midpoint zero-tie proxy",
+      "provider": "Kalshi",
+      "provider_brier": 0.22489726890756304,
+      "provider_correct": 76,
+      "provider_horizon": "T2",
+      "provider_log_loss": 0.6443770478492419,
+      "provider_right_disagreements": 8
+    },
+    {
+      "cohort_sha256": "5be9da68e53699785c25d8ed24f07c5d6e95f1185ae232cc2c12899bd6bb0496",
+      "comparison_class": "ARCHIVED_N029_RECONSTRUCTED_COMPARISON_NOT_NEW_ISSUED",
+      "durable_edge_established": false,
+      "evidence_class": "PRIMARY_SOURCE_SAVED_SCORECARD_NOT_N067_ROW_RESCORED",
+      "games": 119,
+      "model": "N022 market_error_feedback",
+      "model_brier": 0.2195206465608185,
+      "model_correct": 77,
+      "model_horizon_relabelled": false,
+      "model_log_loss": 0.6290801572659865,
+      "model_right_disagreements": 5,
+      "new_forecasts": 0,
+      "probability_semantics": "Model conditional non-tie; Kalshi raw midpoint zero-tie proxy",
+      "provider": "Kalshi",
+      "provider_brier": 0.22489726890756304,
+      "provider_correct": 76,
+      "provider_horizon": "T2",
+      "provider_log_loss": 0.6443770478492419,
+      "provider_right_disagreements": 4
+    }
+  ],
+  "promotion": {
+    "automatic": false,
+    "full_current_exact_legacy_coverage_established": false,
+    "independent_confirmation_established": false,
+    "registered_research_queue_complete_in_actual_n067": false,
+    "selection_exposure": "DEVELOPMENT_EXPOSED"
+  },
+  "public_projection_qualifications": [
+    "Current operational fallback can differ from the historical leader; role availability remains explicit.",
+    "Historical reconstruction, timestamped early snapshots and genuine original issues are separate panels.",
+    "Source observations are saved snapshots, not a claim of fresh acquisition by this export.",
+    "No cross-policy combined season score or coherent joint-score distribution is constructed.",
+    "A TBD kickoff retains a null time; provider placeholder midnight is not a verified kickoff."
+  ],
+  "publication_scope": "Selected rounded role outputs and aggregates; no full private forecast journals or candidate grids",
+  "remembered_probability": {
+    "closest_saved_forward_correct": 13,
+    "closest_saved_forward_games": 15,
+    "closest_saved_forward_log_loss": 0.45683838994206133,
+    "exact_full_season_0_40_located": false,
+    "exact_legacy_model_retrained": false,
+    "neural_role": "EXPOSED_RETROSPECTIVE_REPLAY_ACTUALLY_FITTED_AFTER_EVALUATED_GAMES",
+    "no_prediction_for_other_completed_games": 59,
+    "original_durable_delivery_proved": false,
+    "remembered_neural_correct": 51,
+    "remembered_neural_games": 77,
+    "remembered_neural_log_loss": 0.6240925001208946,
+    "scope": "Enumerated saved NFL banks; recovery not claimed universal"
+  },
+  "schema": "nfl.n069.actual-parent-prepared-successor-public-evidence.v1",
+  "selected_historical_roles": [
+    {
+      "label": "Winner accuracy historical leader",
+      "metric": "accuracy",
+      "model_alias": "Selected model 1",
+      "qualification": "Development-exposed selection for forward shadow monitoring; no production promotion.",
+      "role_id": "primary_win_accuracy",
+      "season_metrics": [
+        {
+          "games": 285,
+          "metrics": {
+            "accuracy": 0.719298,
+            "brier": 0.208257,
+            "log_loss": 0.60605
+          },
+          "season": 2024,
+          "selection_exposure": "DEVELOPMENT_EXPOSED",
+          "status": "SAVED_SAME_SELECTED_CANDIDATE_SEASON_SCORECARD"
+        },
+        {
+          "games": 284,
+          "metrics": {
+            "accuracy": 0.637324,
+            "brier": 0.230862,
+            "log_loss": 0.654368
+          },
+          "season": 2025,
+          "selection_exposure": "DEVELOPMENT_EXPOSED",
+          "status": "SAVED_SAME_SELECTED_CANDIDATE_SEASON_SCORECARD"
+        }
+      ],
+      "selection_games": 569,
+      "selection_seasons": [
+        2024,
+        2025
+      ],
+      "selection_value": 0.678383,
+      "target": "win"
+    },
+    {
+      "label": "Winner log-loss historical leader",
+      "metric": "log_loss",
+      "model_alias": "Selected model 2",
+      "qualification": "Development-exposed selection for forward shadow monitoring; no production promotion.",
+      "role_id": "primary_win_log_loss",
+      "season_metrics": [
+        {
+          "games": 285,
+          "metrics": {
+            "accuracy": 0.705263,
+            "brier": 0.212046,
+            "log_loss": 0.614125
+          },
+          "season": 2024,
+          "selection_exposure": "DEVELOPMENT_EXPOSED",
+          "status": "SAVED_SAME_SELECTED_CANDIDATE_SEASON_SCORECARD"
+        },
+        {
+          "games": 284,
+          "metrics": {
+            "accuracy": 0.630282,
+            "brier": 0.224894,
+            "log_loss": 0.63933
+          },
+          "season": 2025,
+          "selection_exposure": "DEVELOPMENT_EXPOSED",
+          "status": "SAVED_SAME_SELECTED_CANDIDATE_SEASON_SCORECARD"
+        }
+      ],
+      "selection_games": 569,
+      "selection_seasons": [
+        2024,
+        2025
+      ],
+      "selection_value": 0.626705,
+      "target": "win"
+    },
+    {
+      "label": "Winner Brier historical leader",
+      "metric": "brier",
+      "model_alias": "Selected model 3",
+      "qualification": "Development-exposed selection for forward shadow monitoring; no production promotion.",
+      "role_id": "primary_win_brier",
+      "season_metrics": [
+        {
+          "games": 285,
+          "metrics": {
+            "accuracy": 0.708772,
+            "brier": 0.206877,
+            "log_loss": 0.603957
+          },
+          "season": 2024,
+          "selection_exposure": "DEVELOPMENT_EXPOSED",
+          "status": "SAVED_SAME_SELECTED_CANDIDATE_SEASON_SCORECARD"
+        },
+        {
+          "games": 284,
+          "metrics": {
+            "accuracy": 0.640845,
+            "brier": 0.229407,
+            "log_loss": 0.651609
+          },
+          "season": 2025,
+          "selection_exposure": "DEVELOPMENT_EXPOSED",
+          "status": "SAVED_SAME_SELECTED_CANDIDATE_SEASON_SCORECARD"
+        }
+      ],
+      "selection_games": 569,
+      "selection_seasons": [
+        2024,
+        2025
+      ],
+      "selection_value": 0.218122,
+      "target": "win"
+    },
+    {
+      "label": "Point-margin absolute-error historical leader",
+      "metric": "mae",
+      "model_alias": "Selected model 4",
+      "qualification": "Development-exposed selection for forward shadow monitoring; no production promotion.",
+      "role_id": "primary_margin_mae",
+      "season_metrics": [
+        {
+          "games": 285,
+          "metrics": {
+            "crps": 7.3264,
+            "mae": 10.043549,
+            "rmse": 13.146063
+          },
+          "season": 2024,
+          "selection_exposure": "DEVELOPMENT_EXPOSED",
+          "status": "SAVED_SAME_SELECTED_CANDIDATE_SEASON_SCORECARD"
+        },
+        {
+          "games": 285,
+          "metrics": {
+            "crps": 7.315591,
+            "mae": 10.215094,
+            "rmse": 13.02393
+          },
+          "season": 2025,
+          "selection_exposure": "DEVELOPMENT_EXPOSED",
+          "status": "SAVED_SAME_SELECTED_CANDIDATE_SEASON_SCORECARD"
+        }
+      ],
+      "selection_games": 570,
+      "selection_seasons": [
+        2024,
+        2025
+      ],
+      "selection_value": 10.129322,
+      "target": "margin"
+    },
+    {
+      "label": "Point-margin squared-error historical leader",
+      "metric": "rmse",
+      "model_alias": "Selected model 5",
+      "qualification": "Development-exposed selection for forward shadow monitoring; no production promotion.",
+      "role_id": "primary_margin_rmse",
+      "season_metrics": [
+        {
+          "games": 285,
+          "metrics": {
+            "crps": 7.299818,
+            "mae": 10.064897,
+            "rmse": 13.034695
+          },
+          "season": 2024,
+          "selection_exposure": "DEVELOPMENT_EXPOSED",
+          "status": "SAVED_SAME_SELECTED_CANDIDATE_SEASON_SCORECARD"
+        },
+        {
+          "games": 285,
+          "metrics": {
+            "crps": 7.362962,
+            "mae": 10.247663,
+            "rmse": 13.032274
+          },
+          "season": 2025,
+          "selection_exposure": "DEVELOPMENT_EXPOSED",
+          "status": "SAVED_SAME_SELECTED_CANDIDATE_SEASON_SCORECARD"
+        }
+      ],
+      "selection_games": 570,
+      "selection_seasons": [
+        2024,
+        2025
+      ],
+      "selection_value": 13.033484,
+      "target": "margin"
+    },
+    {
+      "label": "Point-margin distribution historical leader",
+      "metric": "crps",
+      "model_alias": "Selected model 4",
+      "qualification": "Development-exposed selection for forward shadow monitoring; no production promotion.",
+      "role_id": "primary_margin_crps",
+      "season_metrics": [
+        {
+          "games": 285,
+          "metrics": {
+            "crps": 7.3264,
+            "mae": 10.043549,
+            "rmse": 13.146063
+          },
+          "season": 2024,
+          "selection_exposure": "DEVELOPMENT_EXPOSED",
+          "status": "SAVED_SAME_SELECTED_CANDIDATE_SEASON_SCORECARD"
+        },
+        {
+          "games": 285,
+          "metrics": {
+            "crps": 7.315591,
+            "mae": 10.215094,
+            "rmse": 13.02393
+          },
+          "season": 2025,
+          "selection_exposure": "DEVELOPMENT_EXPOSED",
+          "status": "SAVED_SAME_SELECTED_CANDIDATE_SEASON_SCORECARD"
+        }
+      ],
+      "selection_games": 570,
+      "selection_seasons": [
+        2024,
+        2025
+      ],
+      "selection_value": 7.320996,
+      "target": "margin"
+    },
+    {
+      "label": "Total-points absolute-error historical leader",
+      "metric": "mae",
+      "model_alias": "Selected model 6",
+      "qualification": "Development-exposed selection for forward shadow monitoring; no production promotion.",
+      "role_id": "primary_total_mae",
+      "season_metrics": [
+        {
+          "games": 285,
+          "metrics": {
+            "crps": 7.283704,
+            "mae": 9.955067,
+            "rmse": 12.900565
+          },
+          "season": 2024,
+          "selection_exposure": "DEVELOPMENT_EXPOSED",
+          "status": "SAVED_SAME_SELECTED_CANDIDATE_SEASON_SCORECARD"
+        },
+        {
+          "games": 285,
+          "metrics": {
+            "crps": 7.64832,
+            "mae": 10.729888,
+            "rmse": 13.488984
+          },
+          "season": 2025,
+          "selection_exposure": "DEVELOPMENT_EXPOSED",
+          "status": "SAVED_SAME_SELECTED_CANDIDATE_SEASON_SCORECARD"
+        }
+      ],
+      "selection_games": 570,
+      "selection_seasons": [
+        2024,
+        2025
+      ],
+      "selection_value": 10.342478,
+      "target": "total"
+    },
+    {
+      "label": "Total-points squared-error historical leader",
+      "metric": "rmse",
+      "model_alias": "Selected model 6",
+      "qualification": "Development-exposed selection for forward shadow monitoring; no production promotion.",
+      "role_id": "primary_total_rmse",
+      "season_metrics": [
+        {
+          "games": 285,
+          "metrics": {
+            "crps": 7.283704,
+            "mae": 9.955067,
+            "rmse": 12.900565
+          },
+          "season": 2024,
+          "selection_exposure": "DEVELOPMENT_EXPOSED",
+          "status": "SAVED_SAME_SELECTED_CANDIDATE_SEASON_SCORECARD"
+        },
+        {
+          "games": 285,
+          "metrics": {
+            "crps": 7.64832,
+            "mae": 10.729888,
+            "rmse": 13.488984
+          },
+          "season": 2025,
+          "selection_exposure": "DEVELOPMENT_EXPOSED",
+          "status": "SAVED_SAME_SELECTED_CANDIDATE_SEASON_SCORECARD"
+        }
+      ],
+      "selection_games": 570,
+      "selection_seasons": [
+        2024,
+        2025
+      ],
+      "selection_value": 13.198054,
+      "target": "total"
+    },
+    {
+      "label": "Total-points distribution historical leader",
+      "metric": "crps",
+      "model_alias": "Selected model 7",
+      "qualification": "Development-exposed selection for forward shadow monitoring; no production promotion.",
+      "role_id": "primary_total_crps",
+      "season_metrics": [
+        {
+          "games": 285,
+          "metrics": {
+            "crps": 7.285066,
+            "mae": 10.262668,
+            "rmse": 13.185113
+          },
+          "season": 2024,
+          "selection_exposure": "DEVELOPMENT_EXPOSED",
+          "status": "SAVED_SAME_SELECTED_CANDIDATE_SEASON_SCORECARD"
+        },
+        {
+          "games": 285,
+          "metrics": {
+            "crps": 7.606911,
+            "mae": 10.630513,
+            "rmse": 13.452953
+          },
+          "season": 2025,
+          "selection_exposure": "DEVELOPMENT_EXPOSED",
+          "status": "SAVED_SAME_SELECTED_CANDIDATE_SEASON_SCORECARD"
+        }
+      ],
+      "selection_games": 570,
+      "selection_seasons": [
+        2024,
+        2025
+      ],
+      "selection_value": 7.445988,
+      "target": "total"
+    },
+    {
+      "label": "Winner accuracy operational fallback",
+      "metric": "accuracy",
+      "model_alias": "Selected model 8",
+      "qualification": "Development-exposed selection for forward shadow monitoring; no production promotion.",
+      "role_id": "fallback_win_accuracy",
+      "season_metrics": [
+        {
+          "games": 285,
+          "metrics": {
+            "accuracy": 0.670175,
+            "brier": 0.214527,
+            "log_loss": 0.618839
+          },
+          "season": 2024,
+          "selection_exposure": "DEVELOPMENT_EXPOSED",
+          "status": "SAVED_SAME_SELECTED_CANDIDATE_SEASON_SCORECARD"
+        },
+        {
+          "games": 284,
+          "metrics": {
+            "accuracy": 0.640845,
+            "brier": 0.224924,
+            "log_loss": 0.639673
+          },
+          "season": 2025,
+          "selection_exposure": "DEVELOPMENT_EXPOSED",
+          "status": "SAVED_SAME_SELECTED_CANDIDATE_SEASON_SCORECARD"
+        }
+      ],
+      "selection_games": 569,
+      "selection_seasons": [
+        2024,
+        2025
+      ],
+      "selection_value": 0.655536,
+      "target": "win"
+    },
+    {
+      "label": "Winner log-loss operational fallback",
+      "metric": "log_loss",
+      "model_alias": "Selected model 8",
+      "qualification": "Development-exposed selection for forward shadow monitoring; no production promotion.",
+      "role_id": "fallback_win_log_loss",
+      "season_metrics": [
+        {
+          "games": 285,
+          "metrics": {
+            "accuracy": 0.670175,
+            "brier": 0.214527,
+            "log_loss": 0.618839
+          },
+          "season": 2024,
+          "selection_exposure": "DEVELOPMENT_EXPOSED",
+          "status": "SAVED_SAME_SELECTED_CANDIDATE_SEASON_SCORECARD"
+        },
+        {
+          "games": 284,
+          "metrics": {
+            "accuracy": 0.640845,
+            "brier": 0.224924,
+            "log_loss": 0.639673
+          },
+          "season": 2025,
+          "selection_exposure": "DEVELOPMENT_EXPOSED",
+          "status": "SAVED_SAME_SELECTED_CANDIDATE_SEASON_SCORECARD"
+        }
+      ],
+      "selection_games": 569,
+      "selection_seasons": [
+        2024,
+        2025
+      ],
+      "selection_value": 0.629237,
+      "target": "win"
+    },
+    {
+      "label": "Winner Brier operational fallback",
+      "metric": "brier",
+      "model_alias": "Selected model 8",
+      "qualification": "Development-exposed selection for forward shadow monitoring; no production promotion.",
+      "role_id": "fallback_win_brier",
+      "season_metrics": [
+        {
+          "games": 285,
+          "metrics": {
+            "accuracy": 0.670175,
+            "brier": 0.214527,
+            "log_loss": 0.618839
+          },
+          "season": 2024,
+          "selection_exposure": "DEVELOPMENT_EXPOSED",
+          "status": "SAVED_SAME_SELECTED_CANDIDATE_SEASON_SCORECARD"
+        },
+        {
+          "games": 284,
+          "metrics": {
+            "accuracy": 0.640845,
+            "brier": 0.224924,
+            "log_loss": 0.639673
+          },
+          "season": 2025,
+          "selection_exposure": "DEVELOPMENT_EXPOSED",
+          "status": "SAVED_SAME_SELECTED_CANDIDATE_SEASON_SCORECARD"
+        }
+      ],
+      "selection_games": 569,
+      "selection_seasons": [
+        2024,
+        2025
+      ],
+      "selection_value": 0.219717,
+      "target": "win"
+    },
+    {
+      "label": "Point-margin absolute-error operational fallback",
+      "metric": "mae",
+      "model_alias": "Selected model 4",
+      "qualification": "Development-exposed selection for forward shadow monitoring; no production promotion.",
+      "role_id": "fallback_margin_mae",
+      "season_metrics": [
+        {
+          "games": 285,
+          "metrics": {
+            "crps": 7.3264,
+            "mae": 10.043549,
+            "rmse": 13.146063
+          },
+          "season": 2024,
+          "selection_exposure": "DEVELOPMENT_EXPOSED",
+          "status": "SAVED_SAME_SELECTED_CANDIDATE_SEASON_SCORECARD"
+        },
+        {
+          "games": 285,
+          "metrics": {
+            "crps": 7.315591,
+            "mae": 10.215094,
+            "rmse": 13.02393
+          },
+          "season": 2025,
+          "selection_exposure": "DEVELOPMENT_EXPOSED",
+          "status": "SAVED_SAME_SELECTED_CANDIDATE_SEASON_SCORECARD"
+        }
+      ],
+      "selection_games": 570,
+      "selection_seasons": [
+        2024,
+        2025
+      ],
+      "selection_value": 10.129322,
+      "target": "margin"
+    },
+    {
+      "label": "Point-margin squared-error operational fallback",
+      "metric": "rmse",
+      "model_alias": "Selected model 4",
+      "qualification": "Development-exposed selection for forward shadow monitoring; no production promotion.",
+      "role_id": "fallback_margin_rmse",
+      "season_metrics": [
+        {
+          "games": 285,
+          "metrics": {
+            "crps": 7.3264,
+            "mae": 10.043549,
+            "rmse": 13.146063
+          },
+          "season": 2024,
+          "selection_exposure": "DEVELOPMENT_EXPOSED",
+          "status": "SAVED_SAME_SELECTED_CANDIDATE_SEASON_SCORECARD"
+        },
+        {
+          "games": 285,
+          "metrics": {
+            "crps": 7.315591,
+            "mae": 10.215094,
+            "rmse": 13.02393
+          },
+          "season": 2025,
+          "selection_exposure": "DEVELOPMENT_EXPOSED",
+          "status": "SAVED_SAME_SELECTED_CANDIDATE_SEASON_SCORECARD"
+        }
+      ],
+      "selection_games": 570,
+      "selection_seasons": [
+        2024,
+        2025
+      ],
+      "selection_value": 13.085139,
+      "target": "margin"
+    },
+    {
+      "label": "Point-margin distribution operational fallback",
+      "metric": "crps",
+      "model_alias": "Selected model 4",
+      "qualification": "Development-exposed selection for forward shadow monitoring; no production promotion.",
+      "role_id": "fallback_margin_crps",
+      "season_metrics": [
+        {
+          "games": 285,
+          "metrics": {
+            "crps": 7.3264,
+            "mae": 10.043549,
+            "rmse": 13.146063
+          },
+          "season": 2024,
+          "selection_exposure": "DEVELOPMENT_EXPOSED",
+          "status": "SAVED_SAME_SELECTED_CANDIDATE_SEASON_SCORECARD"
+        },
+        {
+          "games": 285,
+          "metrics": {
+            "crps": 7.315591,
+            "mae": 10.215094,
+            "rmse": 13.02393
+          },
+          "season": 2025,
+          "selection_exposure": "DEVELOPMENT_EXPOSED",
+          "status": "SAVED_SAME_SELECTED_CANDIDATE_SEASON_SCORECARD"
+        }
+      ],
+      "selection_games": 570,
+      "selection_seasons": [
+        2024,
+        2025
+      ],
+      "selection_value": 7.320996,
+      "target": "margin"
+    },
+    {
+      "label": "Total-points absolute-error operational fallback",
+      "metric": "mae",
+      "model_alias": "Selected model 9",
+      "qualification": "Development-exposed selection for forward shadow monitoring; no production promotion.",
+      "role_id": "fallback_total_mae",
+      "season_metrics": [
+        {
+          "games": 285,
+          "metrics": {
+            "crps": 7.395389,
+            "mae": 9.979989,
+            "rmse": 12.973247
+          },
+          "season": 2024,
+          "selection_exposure": "DEVELOPMENT_EXPOSED",
+          "status": "SAVED_SAME_SELECTED_CANDIDATE_SEASON_SCORECARD"
+        },
+        {
+          "games": 285,
+          "metrics": {
+            "crps": 7.672473,
+            "mae": 10.724306,
+            "rmse": 13.435581
+          },
+          "season": 2025,
+          "selection_exposure": "DEVELOPMENT_EXPOSED",
+          "status": "SAVED_SAME_SELECTED_CANDIDATE_SEASON_SCORECARD"
+        }
+      ],
+      "selection_games": 570,
+      "selection_seasons": [
+        2024,
+        2025
+      ],
+      "selection_value": 10.352147,
+      "target": "total"
+    },
+    {
+      "label": "Total-points squared-error operational fallback",
+      "metric": "rmse",
+      "model_alias": "Selected model 9",
+      "qualification": "Development-exposed selection for forward shadow monitoring; no production promotion.",
+      "role_id": "fallback_total_rmse",
+      "season_metrics": [
+        {
+          "games": 285,
+          "metrics": {
+            "crps": 7.395389,
+            "mae": 9.979989,
+            "rmse": 12.973247
+          },
+          "season": 2024,
+          "selection_exposure": "DEVELOPMENT_EXPOSED",
+          "status": "SAVED_SAME_SELECTED_CANDIDATE_SEASON_SCORECARD"
+        },
+        {
+          "games": 285,
+          "metrics": {
+            "crps": 7.672473,
+            "mae": 10.724306,
+            "rmse": 13.435581
+          },
+          "season": 2025,
+          "selection_exposure": "DEVELOPMENT_EXPOSED",
+          "status": "SAVED_SAME_SELECTED_CANDIDATE_SEASON_SCORECARD"
+        }
+      ],
+      "selection_games": 570,
+      "selection_seasons": [
+        2024,
+        2025
+      ],
+      "selection_value": 13.206437,
+      "target": "total"
+    },
+    {
+      "label": "Total-points distribution operational fallback",
+      "metric": "crps",
+      "model_alias": "Selected model 7",
+      "qualification": "Development-exposed selection for forward shadow monitoring; no production promotion.",
+      "role_id": "fallback_total_crps",
+      "season_metrics": [
+        {
+          "games": 285,
+          "metrics": {
+            "crps": 7.285066,
+            "mae": 10.262668,
+            "rmse": 13.185113
+          },
+          "season": 2024,
+          "selection_exposure": "DEVELOPMENT_EXPOSED",
+          "status": "SAVED_SAME_SELECTED_CANDIDATE_SEASON_SCORECARD"
+        },
+        {
+          "games": 285,
+          "metrics": {
+            "crps": 7.606911,
+            "mae": 10.630513,
+            "rmse": 13.452953
+          },
+          "season": 2025,
+          "selection_exposure": "DEVELOPMENT_EXPOSED",
+          "status": "SAVED_SAME_SELECTED_CANDIDATE_SEASON_SCORECARD"
+        }
+      ],
+      "selection_games": 570,
+      "selection_seasons": [
+        2024,
+        2025
+      ],
+      "selection_value": 7.445988,
+      "target": "total"
+    }
+  ],
+  "separate_host_deployment_performed": false,
+  "sport": "NFL",
+  "updated_at_utc": "2026-11-11T01:52:01.243398+00:00"
+}

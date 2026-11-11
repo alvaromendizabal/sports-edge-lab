@@ -1,0 +1,34 @@
+{
+  "schema": "sel.ncaa.b061.public_report_integrity.v1",
+  "status": "EXECUTED_AND_STRUCTURALLY_VALIDATED_HOSTED_BROWSER_CHECK_PENDING",
+  "generated_at_utc": "2026-11-11T07:53:26.719740+00:00",
+  "artifact": {
+    "filename": "B061_EVIDENCE_REPORT.html",
+    "bytes": 7365089,
+    "sha256": "2f16eebdf57d2029bd03abc19acb4d9e729b0a6658e8aa1a7d2eb41e2f20c161"
+  },
+  "code_cells_executed": 6,
+  "plotly_figures": 4,
+  "javascript_embedded": true,
+  "external_assets": [],
+  "structural_validation": {
+    "status": "PASS",
+    "notebook_reopened_and_validated": true,
+    "executed_code_cells": 6,
+    "plotly_figures": 4,
+    "native_plotly_mime_outputs": 4,
+    "embedded_javascript_scripts_syntax_checked": 7,
+    "source_citation_anchors_valid": true,
+    "external_script_or_stylesheet_assets": [],
+    "visual_browser_execution_inferred_from_structural_checks": false
+  },
+  "model_identifiers": "COARSE_ALIASES",
+  "private_cloud_paths": 0,
+  "private_model_parameters": 0,
+  "future_unissued_forecasts": 0,
+  "new_forecast_issues_from_report_generation": 0,
+  "new_model_promotions": 0,
+  "browser_visual_validation": "PENDING_HOSTED_EXACT_ARTIFACT_CHECK",
+  "private_notebook_visual_validation_implied": false,
+  "scope": "PUBLIC_DERIVATIVE_WITH_SAME_PLOTLY_CODE_AND_LAYOUT_SEPARATE_FROM_PRIVATE_NOTEBOOK"
+}

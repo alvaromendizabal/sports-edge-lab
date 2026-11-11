@@ -1,33 +1,56 @@
-## N063 additive review · November 9, 2026
+# NFL selected model card · N072 actual return
 
-Actual N062 remains partial after 25,030 new fits and 3,650 issued rows. The new current report separates the 121/122 and 134/135 target cohorts, all 18 negative isolated graph comparisons, dated source coverage and original issue clocks. N063 prepares current-first incremental refresh, separate pregame/live frontier materialization and paired studies, exact no-refit tie checks and native CBM compatibility admission. It has not run on the owner. No 200-concept gate, complete injury/lineup coverage, qualified current market comparison, coherent new V5 score distribution or promotion is established.
+[All-game selected forecasts](season_review_n073.html) · [Owner evidence](2026-11-11-n072-actual-n073-prepared.json) · [Prior model card](CURRENT_MODEL_CARD_N072_SNAPSHOT.md)
 
-[Current review](N063_REVIEW.md) · [All-game evidence](season_review_n063.html) · [Latest evidence and limits](README.md). The preceding methodology/card remains below as dated historical context.
+**N072 retains 18 metric/horizon-specific primary selections and nine operational fallback roles. No independent production promotion is established.** The verified completed phases contain at least 69 new fits; original whole-run counters remain null after the final refresh failed. The selected display contains 772 already-issued rows for 112 confirmed future games.
 
-## Latest N062 review — actual N061 partial evidence
+Every table row follows the same selected candidate across 2024 and 2025. Objectives and historical horizons are separate; a days-ahead current issue is not relabeled as a one-hour or two-hour forecast.
 
-The dated source snapshot has 135 final games and 137 scheduled games. Actual N061 adds 90 original/shadow issue rows, with retained November 4 base-source age, and 405 owner-computed evaluations of frozen original issues across 13 games. All 60 monitored metric groups retain their original cycles, horizons and exact precision; historical benchmark cohorts remain unchanged.
+## Historical comparison: 1 hour(s) before kickoff
 
-The current V5 source gate remains blocked by missing TB–CHI team statistics. Historical partial evidence retains six starts, optimizer entries, returns and validations, four durable commits and two returned states awaiting exact commit recovery; its missing response and original aggregate nulls remain preserved. No refitting, automatic promotion or new V5 issue is inferred. N062 is a prepared continuation, with a separate result-only opponent/schedule graph research lane. See [the N062 review](N062_REVIEW.md) and [updated dashboard](season_review_n054.html).
+| Selected objective | Public alias | 2024 | 2025 | Pooled | Games |
+|---|---|---:|---:|---:|---:|
+| Winner accuracy | Selected model 1 | 71.93% | 63.73% | 67.84% | 569 |
+| Winner log loss | Selected model 3 | 0.605012 | 0.638486 | 0.621719 | 569 |
+| Winner Brier | Selected model 3 | 0.207684 | 0.223769 | 0.215712 | 569 |
+| Point margin MAE | Selected model 5 | 10.008260 | 10.018003 | 10.013132 | 570 |
+| Point margin RMSE | Selected model 5 | 13.057690 | 12.800020 | 12.929497 | 570 |
+| Point margin marginal CRPS | Selected model 5 | 7.283699 | 7.199146 | 7.241423 | 570 |
+| Total points MAE | Selected model 9 | 9.955067 | 10.729888 | 10.342478 | 570 |
+| Total points RMSE | Selected model 9 | 12.900565 | 13.488984 | 13.198054 | 570 |
+| Total points marginal CRPS | Selected model 12 | 7.285066 | 7.606911 | 7.445988 | 570 |
 
-Earlier dated model and methodology records follow unchanged.
+## Historical comparison: 2 hour(s) before kickoff
 
-# NFL model card — current research status
+| Selected objective | Public alias | 2024 | 2025 | Pooled | Games |
+|---|---|---:|---:|---:|---:|
+| Winner accuracy | Selected model 2 | 69.12% | 65.49% | 67.31% | 569 |
+| Winner log loss | Selected model 4 | 0.620667 | 0.616461 | 0.618568 | 569 |
+| Winner Brier | Selected model 4 | 0.215025 | 0.214361 | 0.214694 | 569 |
+| Point margin MAE | Selected model 6 | 9.960953 | 10.076034 | 10.018494 | 570 |
+| Point margin RMSE | Selected model 7 | 13.016251 | 12.807722 | 12.912407 | 570 |
+| Point margin marginal CRPS | Selected model 8 | 7.303503 | 7.198659 | 7.251081 | 570 |
+| Total points MAE | Selected model 10 | 9.870659 | 10.635246 | 10.252952 | 570 |
+| Total points RMSE | Selected model 11 | 12.752940 | 13.425951 | 13.093771 | 570 |
+| Total points marginal CRPS | Selected model 13 | 7.151308 | 7.607862 | 7.379585 | 570 |
 
-This card describes generic model roles and evidence limits. Active private selections, exact feature columns, tuned settings and complete candidate forecast archives are withheld under the publication boundary.
+Winner support is 285 games in 2024 and 284 in 2025; one tie is excluded. Point targets retain 285 games each season. Selection and repeated research expose these completed seasons. The results support forward shadow monitoring; no independent confirmation or automatic promotion is claimed. Marginal CRPS does not establish joint-score quality or calibrated cover probabilities.
 
-The retained owner studies support regularized logistic and linear models, ridge regression, Extra Trees, histogram gradient boosting, XGBoost, LightGBM, CatBoost, PyTorch and TensorFlow classifier/regressor families. Earlier-only out-of-fold blends, stacks and calibration are separately counted fitted procedures; a fixed equal blend is not a fit. A completed prior family study does not mean every later cutoff has a new fit or valid issue.
+## Earlier models are preserved and compared
 
-Actual N060 completed 27 native states and 2,294 current-origin, conditional and outlook rows before later failures. Four component streams have 45 rows each, raw football has 180, long-range raw has 1,464, selected family has 411 and conditional margin has 59. The selected-family rows cover all 137 then-scheduled games. Original aggregate fit/native/meta/issue counters remain null; exact physical partials are counted separately.
+The owner reviewed **144 original fitted states, 28,512 saved prediction rows and 192 scorecards**. Of 384 attempted old-versus-new comparisons, **144 have exact matched game, target and information-cutoff cohorts; 240 are non-comparable**. These are exposed descriptive replay results with a full source-clock audit still pending. Recovery is not new training or proof of original issuance.
 
-The original and shadow streams retain the November 4 base football source. Fresh, designation, raw and selected-family streams use newly observed inputs and the supported twelve-game causal append. Missing personnel reports do not establish health, depth, individual talent or injury causation. Current-origin outputs remain distinct from exact T1 predictions, and long-range outlooks lack validated long-horizon accuracy.
+| Saved older model / fit origin | Season | Matched games | Older log loss | New one-hour probability selection, same games | Older / new correct |
+|---|---:|---:|---:|---:|---:|
+| TF AB / through 2023 | 2024 | 280 | 0.581692 | 0.606415 | 201 / 199 |
+| TF AB / through 2024 | 2025 | 277 | 0.609542 | 0.641206 | 186 / 176 |
+| Torch B / through 2023 | 2024 | 280 | 0.578881 | 0.606415 | 199 / 199 |
+| Torch B / through 2024 | 2025 | 277 | 0.612150 | 0.641206 | 186 / 176 |
 
-Winner probabilities are evaluated with log loss, Brier score, accuracy and calibration diagnostics. Margin and total targets use MAE, RMSE and bias; distribution studies retain CRPS, coverage and numerical limitations. Conditional margin probabilities require a compatible threshold and oriented distribution. Binary threshold markets are not score means. All matched comparisons retain their original game set and source horizon.
+Those older models remain serious candidates: on these saved matched cohorts they have lower log loss than the new one-hour selection. Torch B’s original rolling-origin **0.595426 over 557 games** remains separate from the fixed-through-2023 **0.598780** result. Neither becomes a current-season champion solely from these exposed comparisons.
 
-The complete private delivery has all 141 dated roles and 272 current-season games. The public view retains all-game coverage, anonymous aggregate comparisons and eight already-issued examples. The original fixed selector remains the control. Both actual N060 V5 children failed before optimizer entry, and the original-issue monitor committed zero new evaluations. N061 prepares the repairs; no new N061 owner execution or automatic promotion is claimed.
+The archived 2026 Torch B replay remains **0.649255 log loss, 49/77 correct**; TF AB is **0.662046, 47/77**. These are 77-game replay cohorts, not all 136 completed 2026 games. A qualified 15-game early snapshot has **0.456838 log loss, 13/15 correct**. An exact approximately **0.40 full-season NFL result has not been authenticated**; the remembered result remains unresolved rather than discarded.
 
-See the [research README](README.md), [methodology](CURRENT_METHODOLOGY.md) and [publication correction](PUBLIC_BOUNDARY_N059.md).
+The saved **119-game Kalshi panel** still has **79 correct for the accuracy combination versus 76 for Kalshi**; its model log loss is 0.646823. The probability combination has **77 correct / 0.629080 log loss**; Kalshi's saved one-hour/two-hour values are 0.644579/0.644377. Event, target, horizon, non-tie and exposure qualifications remain. N072 does not establish a fresh full-season Kalshi comparison.
 
-## V5 prepared model roles
-
-The foundation, current-regime specialist, online gated blend, market-only control and market residual challenger are separately visible for winner, margin and total targets. Their new evaluation counts are zero and their new scores are absent until authenticated owner execution. The retained fixed-selector metrics remain the original dated evidence. Full-history access, registered memory selection, exact compatible reuse, train-only transformations and earlier-origin meta inputs are required for the new comparisons.
+Current issues and missing-role reasons retain their original clocks. Current-season outcomes do not select these historical roles. Authentic earlier-game market paths can be candidate inputs only when fully available before the later game's cutoff; target-game live data cannot change its own pregame model or forecast. R13–R20 remain unexecuted source-gated studies.

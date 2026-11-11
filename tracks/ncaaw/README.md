@@ -1,3 +1,47 @@
+## Women’s NCAA basketball: B060 actual / B061 prepared — November 11, 2026 UTC
+
+The preserved original frozen reference has now been rescored from the exact saved B060 predictions: **399 completed games, 340 correct winners and .3180153076 log loss**. Margin MAE/RMSE is **12.582280 / 16.350504**; total-points MAE/RMSE is **14.420401 / 18.010009**. Original weights are unchanged. These are exposed retrospective results, with independent official-final and historical source-vintage qualification unresolved; they do not receive original-issue credit or automatic promotion.
+
+The report also retains the 2024–25 and 2025–26 historical metric leaders, all six saved men/women selected roles, and explicitly missing accuracy/Brier/RMSE/cover/distribution selections. The matched comparison with preserved original issues is scored separately. Current-season outcomes do not select public historical champions or rewrite any issue.
+
+[Interactive B061 report](../../examples/ncaa_review/B061_EVIDENCE_REPORT.html) · [Results, source gaps and execution evidence](../../examples/ncaa_review/evidence/B060_ACTUAL_B061_PREPARED.md) · [Game census CSV](../../examples/ncaa_review/data/ncaa_observed_games_b060.csv) · [Role status](../../examples/ncaa_review/data/ncaa_metric_role_status_b061.json)
+
+B061 is prepared for the owner’s existing manual execution workflow. Fresh upcoming selected forecasts and measured twelve-core throughput are pending. Unissued future replay previews are withheld; missing values remain explicit. Earlier dated evidence remains below.
+
+## NCAA: selected prior forecasts recovered — November 11, 2026 UTC
+
+The authenticated archive now supplies **96 preserved selected target forecasts for 32 games: 18 men’s and 14 women’s**, covering home-win probability, home-minus-away margin and total points. The six saved historical selections determine the exported roles; the latest eligible original issue is retained without consulting current outcomes. Three additional games in the wider issued archive have no matching selected-role issue and receive no substitute.
+
+[Preserved selected forecasts and qualifications](../../examples/ncaa_review/evidence/B059_PRESERVED_SELECTED_ISSUES.md) · [CSV](../../examples/ncaa_review/data/ncaa_preserved_selected_issues_b059.csv) · [JSON](../../examples/ncaa_review/data/ncaa_preserved_selected_issues_b059.json)
+
+These are actual earlier issues for games scheduled November 6–10, with original clocks and ordered ESPN team IDs. They are separate from the unmatched official-game inventory, newly issued upcoming forecasts and freshly qualified current champions. No original B003 issue, outcome join, new model fit, fresh performance score or promotion is claimed. Earlier dated evidence remains below.
+
+## Women’s NCAA basketball: B059 actual / B060 prepared — November 11, 2026 UTC
+
+**B059 is now the latest authenticated owner result.** It preserved 107 target-estimator fits, 17 scalar calibrations, 36 empirical-residual fits and 108 historical fit reuses across both NCAA tracks. It produced zero newly eligible current forecasts or promotions. The twelve-CPU ceiling masked serial execution averaging approximately 0.81 CPU cores; a transient I/O deferral ended the run before the new full-model frontier.
+
+The original frozen T−60 reconstruction retains **0.319149 log loss on 345 games**, with **85.2174% accuracy**. Those are exposed saved scores, not a fresh current-season rescore. Earlier strong models, negative findings and immutable original issues remain preserved. No new accuracy, probability, margin, total, cover or joint-distribution champion is promoted by this preparation.
+
+B060 removes the serial-admission bottlenecks, preserves verified B059 fits, attempts one evidenced recovery from the inherited ESPN timeout, and evaluates 104 full-baseline contexts plus 264 grouped diagnostic contexts. Current selected forecasts run before diagnostics; selected rolling work is bounded to 192 new fits under resource/source/cost gates. Eight unresolved scalar features advance per tranche. The earlier arbitrary elapsed-time ceiling is removed.
+
+[Authenticated evidence and qualifications](../../examples/ncaa_review/evidence/B059_ACTUAL_B060_PREPARED.md) · [Observed games and forecast availability](../../examples/ncaa_review/data/ncaa_observed_games_b059.csv) · [Machine-readable status](../../examples/ncaa_review/evidence/B059_ACTUAL_B060_PREPARED.json)
+
+The game export includes every supplied official record at the saved report time, with source gaps retained. It is not complete season coverage or newly issued predictions. Real owner execution is required for new forecast values, measured twelve-fit concurrency, fresh matched Kalshi comparisons and promotion evidence. Earlier dated sections below remain historical.
+
+## Actual B058 result and prepared B059 V7 work — November 10, 2026 UTC
+
+**B058 is the latest authenticated owner result.** Its budget-limited return preserves **90 new target fits**, **seven exact B057 frozen-fit reuses**, and **108 other historical fit reuses**. Nine of seventeen stages completed; the frozen research stage deferred and seven stages remained unentered. The measured run lasted **10,816.862 seconds**. No new current-season issue or model promotion is established.
+
+The core frozen queue completed **65 / 6,216 contexts**; the scalar queue completed **25 / 14,544 contexts**. The return contains 209 metric records and 518,828 model/game prediction records. Neither records nor rolling checkpoint counts are distinct games or estimator fits. Of 36 complete scalar paired metric comparisons, 26 have favorable and ten unfavorable point estimates; eight descriptive intervals exclude zero on the favorable side. Two comparisons remain incomplete. These exposed, selected comparisons do not qualify a champion by themselves.
+
+The approximately 0.63–0.67 winner log losses in the new partial tranche belong to home-only and single-feature controls. They do not replace the retained complete-model evaluations. The older men’s current-season reconstruction retains **0.412659 log loss on 329 games**. On a separate **265-game Polymarket international** cohort, its log loss is **0.399023**, versus **0.346741** for the market; accuracy is **82.2642% versus 81.6981%** under the saved half-credit tie convention. This is exposed reconstructed evidence, not originally issued evidence, not a new score through today, and not a Kalshi comparison. No qualified numeric Kalshi comparison has been recovered.
+
+**Prepared B059** adds shared leased process scheduling, whole-project CPU caps, adaptive admissions, exact prior-fit bridging, persistent verified byte reuse, priority current reporting, bounded frozen/scalar tranches, and cooperative checkpoint-and-return handling. The project ceiling is four CPUs on an effective 16-CPU host, eight on 32, twelve on 48 and sixteen on 64, reduced by memory, quotas and competing work. An instance upgrade alone establishes no measured speedup.
+
+Historical comparisons use **2024–25 and 2025–26**. Only qualified metric-specific champions and precommitted champion components advance to bounded rolling reconstruction. **2026–27 outcomes cannot select those historical champions.** Negative results and unresolved candidates remain registered. Historical market-response features require completed earlier games and authentic availability clocks; the target game’s live path never enters its pregame features. A limited transfer of source-pinned March research methods is separate from recreating or promoting the full March champion.
+
+[Full aggregate review](../../examples/ncaa_review/evidence/B058_ACTUAL_B059_PREPARED.md) · [Machine-readable evidence](../../examples/ncaa_review/evidence/B058_ACTUAL_B059_PREPARED.json). Fresh source coverage, complete old-recipe comparisons, actual V7 benchmarks, eligible market-response findings and the B059 owner return remain open. Documentation and fixture tests claim no new predictive gain. Earlier dated records below remain unchanged.
+
 # Sports Edge Lab · NCAA women's basketball
 
 ## Actual B057 result and prepared B058 work — November 10, 2026 UTC
@@ -787,3 +831,4 @@ The prior B033 study remains in the attempt history with 108 committed target fi
 </details>
 
 </details>
+

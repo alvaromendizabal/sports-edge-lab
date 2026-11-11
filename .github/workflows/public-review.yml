@@ -103,6 +103,9 @@ jobs:
         run: |
           node examples/review_lab/tests/test_dashboard_browser.cjs
           node examples/ncaa_review/test_dashboard_browser.cjs
+          node examples/ncaa_review/test_b061_report_browser.cjs
+          python examples/ncaa_review/build_b062_saved_reports.py --output-dir examples/ncaa_review
+          node examples/ncaa_review/test_b062_report_browser.cjs
       - name: Preserve rendered public dashboard for visual review
         uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02
         with:
@@ -110,5 +113,18 @@ jobs:
           path: ${{ runner.temp }}/dashboard-screenshots/*.png
           if-no-files-found: error
           retention-days: 14
+      - name: Preserve NCAA B062 saved reports and render evidence
+        uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02
+        with:
+          name: ncaa-b062-saved-reports
+          path: |
+            examples/ncaa_review/B062_EVIDENCE_REPORT.html
+            examples/ncaa_review/B062_EVIDENCE_REPORT.ipynb
+            examples/ncaa_review/B062_REPORT_INTEGRITY.json
+            ${{ runner.temp }}/dashboard-screenshots/B062_REPORT_BROWSER_RECEIPT.json
+            ${{ runner.temp }}/dashboard-screenshots/B062_REPORT_*.png
+          if-no-files-found: error
+          retention-days: 14
+
 
 
