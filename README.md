@@ -1,3 +1,11 @@
+## NCAA: selected prior forecasts recovered — November 11, 2026 UTC
+
+The authenticated archive now supplies **96 preserved selected target forecasts for 32 games (18 men’s and 14 women’s)**, covering home-win probability, home-minus-away margin and total points. The six saved historical selections determine the exported roles; the latest eligible original issue is retained without consulting current outcomes. Three additional games in the wider issued archive have no matching selected-role issue and receive no substitute.
+
+[Preserved selected forecasts and qualifications](examples/ncaa_review/evidence/B059_PRESERVED_SELECTED_ISSUES.md) · [CSV](examples/ncaa_review/data/ncaa_preserved_selected_issues_b059.csv) · [JSON](examples/ncaa_review/data/ncaa_preserved_selected_issues_b059.json)
+
+These are actual earlier issues for games scheduled November 6–10, with original clocks and ordered ESPN team IDs. They are separate from the unmatched official-game inventory, newly issued upcoming forecasts and freshly qualified current champions. No original B003 issue, outcome join, new model fit, fresh performance score or promotion is claimed. Earlier dated evidence remains below.
+
 ## NCAA basketball: actual B059 recovered; B060 prepared
 
 The latest authenticated NCAA owner run completed **107 target fits, 17 calibrations and 36 residual fits**, then stopped on an I/O deferral after **2 hours 11 minutes 36 seconds**. Although its project ceiling was twelve CPUs, measured CPU usage averaged approximately **0.81 cores**. B060 fixes the serial admission paths, coordinates atomic NCAA/FBS leases, preserves the completed work, prioritizes selected forecasts, and expands the finite full-model and ablation tranches. Actual B060 owner execution and measured throughput remain pending.

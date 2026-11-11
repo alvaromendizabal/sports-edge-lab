@@ -1,3 +1,11 @@
+## NCAA: selected prior forecasts recovered — November 11, 2026 UTC
+
+The authenticated archive now supplies **96 preserved selected target forecasts for 32 games: 18 men’s and 14 women’s**, covering home-win probability, home-minus-away margin and total points. The six saved historical selections determine the exported roles; the latest eligible original issue is retained without consulting current outcomes. Three additional games in the wider issued archive have no matching selected-role issue and receive no substitute.
+
+[Preserved selected forecasts and qualifications](../../examples/ncaa_review/evidence/B059_PRESERVED_SELECTED_ISSUES.md) · [CSV](../../examples/ncaa_review/data/ncaa_preserved_selected_issues_b059.csv) · [JSON](../../examples/ncaa_review/data/ncaa_preserved_selected_issues_b059.json)
+
+These are actual earlier issues for games scheduled November 6–10, with original clocks and ordered ESPN team IDs. They are separate from the unmatched official-game inventory, newly issued upcoming forecasts and freshly qualified current champions. No original B003 issue, outcome join, new model fit, fresh performance score or promotion is claimed. Earlier dated evidence remains below.
+
 ## Women’s NCAA basketball: B059 actual / B060 prepared — November 11, 2026 UTC
 
 **B059 is now the latest authenticated owner result.** It preserved 107 target-estimator fits, 17 scalar calibrations, 36 empirical-residual fits and 108 historical fit reuses across both NCAA tracks. It produced zero newly eligible current forecasts or promotions. The twelve-CPU ceiling masked serial execution averaging approximately 0.81 CPU cores; a transient I/O deferral ended the run before the new full-model frontier.
