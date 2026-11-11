@@ -1,3 +1,15 @@
+# Latest FBS evidence — actual V064 owner, V065 preparation
+
+[Current all-game report](latest-games-v065.html) · [Comparison CSV](latest-games-v065.csv) · [Actual owner findings](V065_ACTUAL_OWNER_REVIEW_2026-11-11.md) · [Aggregate evidence](recovery-v065.json)
+
+The latest authenticated V064 capture contains **888 fixtures: 688 finals, 146 timed future games and 54 unresolved kickoffs**. Original forecast continuity is restored for **148 games** (145 future and three completed), with original issue times preserved. Rutgers–Penn State is the one timed future game without a selected original issue. All 146 still lack a newly issued exact-current-pool V064 forecast; no new champion was promoted.
+
+V064 completed 36 new frozen fits, restored 9 additional native states and produced 40,947 new scalar outputs, but all 84 primary comparisons trail stronger preserved controls on matched 2024/2025 games. The old .416199 result remains available on its 231-game cohort; its 301-game value is .466946. Newly recovered saved 688-game point reports show margin MAE 14.261799 and total MAE 13.002524; these retrospective evaluations remain separate from original-issued evidence. Full findings and limitations are linked above.
+
+Source capture: **November 11, 2026, 11:38:28 a.m. Pacific / 19:38:28 UTC**. V065 is tested software preparation, not a newly executed owner result. The existing draft PR preserves all earlier reports; source publication, merge and deployment are separate.
+
+---
+
 > **V064 recovery review — November 11:** [Launch failure, preserved model leaders and remaining forecast gaps](V064_RECOVERY_2026-11-11.md). The attempted V063 command stopped before owner execution after losing Python indentation. Actual science remains V062: 36 new fits, stronger restored controls, zero newly authorized champions and 145 current-refresh gaps. The existing all-game view preserves all 888 fixtures and a separate archive of 145 earlier future forecasts. V064 passed its complete 773-test local package suite; no new owner result is claimed.
 
 > **V063 delivery update — November 11:** [Tested executable delivery and verified return parts](V063_AUTHORIZED_DELIVERY_2026-11-11.md). The owner replaced the 150 MB packaging restriction with a 512 MB per-return-file limit and splitting for larger returns. The latest actual research and predictions remain the dated V062 evidence below.
@@ -281,6 +293,7 @@ The latest authenticated V056 owner added 31 base fits and five statistical stat
 V057 prepares exact historical-recipe recovery, reusable per-candidate metrics before global closure, and bounded recovery that can advance after interruption. Its 64-unit chunks retain the eight-chunk ceiling, for an effective maximum of 512 units per recovery slice. Complete-population cache reuse requires independent canonical receipt, source and selector verification. No V057 AWS execution, new model improvement or automatic promotion is claimed. The requirement for hundreds of certified new feature concepts remains unmet.
 
 Evidence: [latest saved owner counts](actual-owner-v056.json), [historical scorecards and qualifications](historical-contenders-v057.json), and [FBS evidence dashboard](current.html). Publication is not a data refresh or model run. NFL, NBA and NCAA basketball retain their independent owners and evidence.
+
 
 
 

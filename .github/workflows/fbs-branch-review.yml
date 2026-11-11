@@ -22,6 +22,7 @@ jobs:
         run: |
           python -m unittest discover -s examples/fbs_contracts/tests -v
           python tests/test_fbs_v054_public_evidence.py
+          python tests/test_fbs_v065_public.py
           node tests/fbs_v054_public_view.test.cjs
       - name: Execute twice and verify deterministic evidence page
         run: |
@@ -78,6 +79,7 @@ jobs:
           node examples/fbs_contracts/tests/test_recovery_browser.cjs
           node examples/fbs_contracts/tests/test_season_browser.cjs
           node tests/fbs_v054_browser.test.cjs
+          node tests/fbs_v065_browser.test.cjs
       - name: Preserve desktop and mobile evidence views
         uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02
         with:
@@ -85,4 +87,5 @@ jobs:
           path: ${{ runner.temp }}/fbs-screenshots/*.png
           if-no-files-found: error
           retention-days: 14
+
 
