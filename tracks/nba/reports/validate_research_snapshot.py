@@ -2,7 +2,9 @@
 import datetime as dt
 import hashlib
 import json
+import math
 from pathlib import Path
+import re
 import sys
 
 def timestamp(value):
@@ -26,6 +28,14 @@ def validate_public_report(data):
             raise ValueError("Original source/pregame clock violation")
         if issue["target"] == "winner" and not 0 <= issue["prediction"] <= 1:
             raise ValueError("Invalid probability")
+        if "prediction_intervals" in issue:
+            if issue["target"] not in ("margin", "total") or not isinstance(issue["prediction_intervals"], dict) or not issue["prediction_intervals"]:
+                raise ValueError("Invalid issued interval target/body")
+            for level, bounds in issue["prediction_intervals"].items():
+                if not re.fullmatch(r"[1-9][0-9]?", level) or not isinstance(bounds, list) or len(bounds) != 2:
+                    raise ValueError("Invalid issued interval coverage/bounds")
+                if any(isinstance(value, bool) or not isinstance(value, (int, float)) or not math.isfinite(value) for value in bounds) or bounds[0] > bounds[1]:
+                    raise ValueError("Invalid issued interval endpoints")
     for row in views:
         if row["game_id"] not in games or row["champion_role"] not in roles:
             raise ValueError("Unknown game or champion role")
@@ -52,6 +62,7 @@ def validate_public_report(data):
         raise ValueError("Game/role denominator is incomplete")
     checks = {"distinct_observed_games": len(games), "active_research_champion_roles": len(roles),
         "distinct_public_selected_issues": len(issues), "selected_champion_role_views": len(views),
+        "distinct_public_selected_issues_with_intervals": sum("prediction_intervals" in issue for issue in issues.values()),
         "current_champion_forecast_available_views": sum(r["current_issue_ref"] is not None for r in views),
         "current_champion_forecast_missing_views": sum(r["current_issue_ref"] is None for r in views)}
     if any(data["coverage"][key] != value for key, value in checks.items()):

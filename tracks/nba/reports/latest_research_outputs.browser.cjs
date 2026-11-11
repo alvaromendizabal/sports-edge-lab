@@ -25,6 +25,11 @@ const { chromium } = require(process.env.PLAYWRIGHT_MODULE_DIR || "playwright");
   const browser = await chromium.launch({ headless: true });
   const contexts = [];
   const snapshots = [];
+  const screenshots = ["nba-publication-desktop.png", "nba-publication-mobile.png"];
+  const intervalView = data.role_views.find(view =>
+    data.issues[view.current_issue_ref]?.prediction_intervals || data.issues[view.at_issue_ref]?.prediction_intervals);
+  assert.equal(Object.values(data.issues).filter(issue => issue.prediction_intervals).length,
+    data.coverage.distinct_public_selected_issues_with_intervals);
   async function context(viewport) {
     const value = await browser.newContext({ viewport, reducedMotion: "reduce" });
     await value.route(/^https?:\/\//, async route => { remoteRequests += 1; await route.abort(); });
@@ -68,6 +73,27 @@ const { chromium } = require(process.env.PLAYWRIGHT_MODULE_DIR || "playwright");
     checks.push(name);
     return expected;
   }
+  async function checkIssuedIntervals(page, name) {
+    if (!intervalView) return;
+    const role = data.champions[intervalView.champion_role];
+    const game = data.games[intervalView.game_id];
+    const useCurrent = Boolean(data.issues[intervalView.current_issue_ref]?.prediction_intervals);
+    const issue = data.issues[useCurrent ? intervalView.current_issue_ref : intervalView.at_issue_ref];
+    const filter = { target: role.target, metric: role.selected_metric,
+      horizon: String(role.horizon_minutes), date: game.scheduled_start_utc.slice(0, 10), team: game.home_team };
+    await select(page, filter);
+    await checkRows(page, filter, name + "_matching_game_role");
+    const gameRow = page.locator("#forecast-rows tr").filter({ hasText: intervalView.game_id });
+    assert.equal(await gameRow.count(), 1);
+    const cell = gameRow.locator("td").nth(useCurrent ? 2 : 3);
+    assert.equal(await cell.locator(".issued-intervals").isVisible(), true);
+    const text = await cell.locator(".issued-intervals").innerText();
+    for (const [level, bounds] of Object.entries(issue.prediction_intervals)) {
+      assert.ok(text.includes(level + "% issued interval: " + bounds[0].toFixed(2) + " to " + bounds[1].toFixed(2) + " points"));
+    }
+    assert.equal(issue.game_id, intervalView.game_id);
+    checks.push(name + "_original_issued_endpoints_and_coverage_levels_visible");
+  }
   try {
     const desktop = await context({ width: 1366, height: 1000 });
     const page = await pageFor(desktop);
@@ -110,6 +136,7 @@ const { chromium } = require(process.env.PLAYWRIGHT_MODULE_DIR || "playwright");
       await select(page, filter);
       await checkRows(page, filter, "target_metric_horizon_" + filter.target + "_" + filter.metric);
     }
+    await checkIssuedIntervals(page, "desktop");
     const first = data.role_views[0];
     if (first) {
       const game = data.games[first.game_id], role = data.champions[first.champion_role];
@@ -153,6 +180,11 @@ const { chromium } = require(process.env.PLAYWRIGHT_MODULE_DIR || "playwright");
     await select(small, { target: "total", metric: "mae", horizon: "60" });
     await checkRows(small, { target: "total", metric: "mae", horizon: "60" }, "mobile_actual_target_metric_horizon_controls");
     checks.push("mobile_390px_render_without_page_horizontal_overflow");
+    await checkIssuedIntervals(small, "mobile");
+    if (intervalView) {
+      await small.screenshot({ path: path.join(output, "nba-publication-mobile-intervals.png"), fullPage: true });
+      screenshots.push("nba-publication-mobile-intervals.png");
+    }
 
     // Reopen in a fresh context: the page must reconstruct its view entirely
     // from the saved artifact, without prior tab state or external resources.
@@ -163,6 +195,7 @@ const { chromium } = require(process.env.PLAYWRIGHT_MODULE_DIR || "playwright");
     assert.equal(await again.locator("#target").inputValue(), "winner");
     assert.equal(await again.locator("#metric").inputValue(), "log_loss");
     assert.equal(await again.locator("#champion-rows tr").count(), data.coverage.active_research_champion_roles);
+    await checkIssuedIntervals(again, "reopened");
     assert.deepEqual(errors, []);
     assert.equal(remoteRequests, 0);
     checks.push("no_javascript_page_errors", "zero_remote_page_requests");
@@ -172,7 +205,7 @@ const { chromium } = require(process.env.PLAYWRIGHT_MODULE_DIR || "playwright");
       source_html_sha256: crypto.createHash("sha256").update(fs.readFileSync(htmlPath)).digest("hex"),
       evidence_as_of_utc: data.evidence_as_of_utc, coverage: data.coverage, checks, rendered_cases: snapshots,
       remote_page_requests: remoteRequests, external_accessibility_audit: false, cross_browser_coverage: false,
-      screenshots: ["nba-publication-desktop.png", "nba-publication-mobile.png"] };
+      screenshots };
     fs.writeFileSync(path.join(output, "nba-publication-browser-result.json"), JSON.stringify(result, null, 2) + "\n");
     console.log(JSON.stringify(result, null, 2));
   } catch (error) {
