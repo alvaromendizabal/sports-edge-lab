@@ -6,7 +6,7 @@
 
 The owner explicitly removed the former 150 MB packaging restriction on November 11. Each owner return file is now limited to **512,000,000 bytes**, inclusive. Larger returns are divided into verified parts with payload and part identities retained. The private executable and owner archives are delivered privately and are not published in this repository.
 
-The canonical V063 package passed **616** software tests with zero failures, errors or skips. An independent test using the exact embedded return modules and fictional payloads also verified multipart reconstruction, rejection of a changed required part, and observer/supervisor reporting. These are engineering tests, not new sports performance observations.
+The canonical V063 package passed **622** software tests with zero failures, errors or skips. An independent test using the exact embedded return modules and fictional payloads also verified multipart reconstruction, rejection of a changed required part, and observer/supervisor reporting. These are engineering tests, not new sports performance observations. A full local process check also caught an owner-evidence lineage lookup defect; the dependency was corrected, six regression tests were added, and the corrected diagnostic launch completed without a human-review error. This process check did not run the AWS owner or acquire sports data.
 
 ## Runtime repairs
 
