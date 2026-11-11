@@ -47,7 +47,7 @@ The owner reviewed **144 original fitted states, 28,512 saved prediction rows an
 | Torch B / through 2023 | 2024 | 280 | 0.578881 | 0.606415 | 199 / 199 |
 | Torch B / through 2024 | 2025 | 277 | 0.612150 | 0.641206 | 186 / 176 |
 
-Those older models remain serious candidates: on these saved matched cohorts they have lower log loss than the new one-hour selection. Their original rolling-origin **0.595426 over 557 games** remains separate from the fixed-through-2023 **0.598780** result. Neither becomes a current-season champion solely from these exposed comparisons.
+Those older models remain serious candidates: on these saved matched cohorts they have lower log loss than the new one-hour selection. Torch B’s original rolling-origin **0.595426 over 557 games** remains separate from the fixed-through-2023 **0.598780** result. Neither becomes a current-season champion solely from these exposed comparisons.
 
 The archived 2026 Torch B replay remains **0.649255 log loss, 49/77 correct**; TF AB is **0.662046, 47/77**. These are 77-game replay cohorts, not all 136 completed 2026 games. A qualified 15-game early snapshot has **0.456838 log loss, 13/15 correct**. An exact approximately **0.40 full-season NFL result has not been authenticated**; the remembered result remains unresolved rather than discarded.
 
