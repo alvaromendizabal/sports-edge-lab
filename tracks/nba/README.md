@@ -4,6 +4,52 @@ Reproducible NBA forecasts, complete released-game inventories, chronological mo
 
 This NBA track belongs to the shared [Sports Edge Lab](../../README.md) repository. Its public material contains sanitized aggregate evidence, selected rounded already-issued research forecasts, complete observed schedule coverage, and invented engineering examples. Exact feature recipes, model weights, source responses, full journals, candidate forecast grids, and execution packages remain private under the [NBA publication boundary](../../docs/PUBLICATION_BOUNDARY.md#selected-nba-research-outputs-november-11-extension).
 
+## November 10 Pacific / November 11 UTC — actual B072 failure and prepared B073 recovery
+
+**B072 ran for 19 minutes 19.627 seconds and exited before new model work: zero fits, forecasts, provider requests or metric evaluations. B073 repairs the observed transport and progress-logging defects; its manual owner execution is pending.** This update supersedes the latest-owner statements in the preserved dated sections below. It does not claim improved model performance from software tests.
+
+The [selected season forecast report](reports/latest_research_outputs.html), [complete observed-game data](reports/latest_research_outputs.json) and [sanitized recovery evidence](reports/b073_recovery_evidence.json) now reflect the actual B072 return. They retain **all 1,711 selected issue objects, 44 champion roles, 3,454 role views and 1,274 observed games**. Every original forecast value, interval and issue/source clock is unchanged. The newest retained forecast is still **November 10 at 22:52:05.759412 UTC**, using sources through **22:50:51.862036 UTC**. This update is not a source refresh or a new forecast issue.
+
+### What failed and what changed
+
+The runner pinned a live cost ledger while preparing its return inventory. A later telemetry update changed that ledger, so the integrity check correctly rejected the now-stale pin. B072 also wrote 36,264 progress records, producing about 205 MB of progress logging before science began. The failure and unchanged scientific history remain visible.
+
+B073 captures content-stable snapshots of mutable operational records while keeping scientific source and checkpoint integrity checks mandatory. It also coalesces repetitive progress events, preserves terminal counters, and bounds telemetry history. In one **isolated local synthetic telemetry benchmark**, the same 36,264 callbacks took **52.9264 seconds before and 0.08974 seconds after** the change; written progress data fell from **165,215,293 bytes to 9,559 bytes**. These figures measure logging overhead only. They are not an AWS research throughput measurement, a fit-speed claim, or a predictive improvement. The exact assembled B073 package passed **527 synthetic engineering tests in 103.217 seconds**, with zero failures, errors or skips. Those tests cover preparation and recovery behavior; the owner has not yet executed this package against NBA sources.
+
+The actual B072 host exposed **48 effective logical CPUs**, giving NBA a **maximum combined cap of 12**. It reached no new fits, so that invocation establishes no concurrent scientific fitting. The continuation keeps shared leases, native-thread accounting, cooperative interruption and cache reuse. **No run or stage elapsed-time cutoff is added.** Actual owner concurrency, throughput and completion estimates require the next authenticated execution.
+
+The verified-rate whole-instance estimate for the observed failed invocation is **$0.8278**. It is not an invoice, an allocation to NBA's CPU share, or an amount to add to overlapping pipeline estimates. Actual billed cost remains unknown.
+
+### The remembered low-loss result has a concrete, narrow lead
+
+An earlier saved B054 report states **XGBoost T60 winner log loss 0.426446 versus logistic 0.527164 on two postseason games**. That report explicitly calls it a descriptive two-game result, not a promoted winner. This is an authenticated report-level lead; this review has not authenticated the underlying paired forecast bodies. It does not establish a general season model with approximately 0.40 loss and cannot be ranked directly against full-season results.
+
+The broader recovered evidence remains intact and keeps each cohort separate:
+
+| Saved evidence | Support | Result | Qualification |
+| --- | ---: | --- | --- |
+| Earlier one-hour probability model, 2025–26 | 1,212 games | Log loss 0.576549 | Original exposed historical cohort |
+| Same earlier model, current raw / calibrated reconstruction | 128 games | Log loss 0.548856 / 0.543388 | Saved retrospective monitoring |
+| Current one-hour accuracy leader | 128 games | 91 correct, 71.0938% | Descriptive current reconstruction |
+| Separate one-hour model / Kalshi comparison | 126 matched games | 89 / 90 correct; loss 0.552196 / 0.554655 | Later-retrieved provider history |
+| Separate two-hour model / Kalshi comparison | 126 matched games | 89 / 89 correct; loss 0.539754 / 0.554904 | Three exposed weekly blocks |
+
+Winner accuracy, probability loss and point errors retain separate metric roles. The detailed two-season tables below remain unchanged. No result in this publication selects a model using current outcomes, replaces an immutable original forecast, or establishes an automatic production promotion.
+
+### Registered work and executable work are different
+
+The authenticated native replay plan has **384 registered tasks, of which 48 are READY and 336 are source-blocked**. The 48 ready tasks cover basketball-only variants across both completed seasons, horizons, phases and winner/margin/total targets. Of the blocked tasks, 168 lack the preceding calibration season and 168 lack sufficient training/calibration/evaluation support. These are source gaps, not negative model findings.
+
+For example, the 2025–26 market-only regular-season fold has **zero eligible training rows, 1,223 calibration rows and 1,212 evaluation rows** under the unchanged frozen policy. Retained market history begins in October 2024, and the full preceding season is held out for calibration. Later prices cannot manufacture earlier training evidence. The new admission plan records exact executable task identities and these blockers; it grows the native allowance only when authentic eligible source support justifies it.
+
+The last substantive science remains B069: **776 of 2,328 frozen tasks completed, leaving 1,552**, with 216 saved-array replays still recorded as unfinished. B070, B071 and B072 added no new scientific fits. The prepared continuation prioritizes due forecasts and exact saved-model recovery, preserves completed work, and advances independent eligible frozen tasks. R13–R20 remain source-qualified research; the saved audit admitted zero strict quote and event records, and no historical response benefit is claimed.
+
+### Coverage and publication status
+
+The observed schedule still has **1,117 games without a recovered original issue**, seven unresolved matchups and 24 regular-season slots not established by that saved observation. All known games and target/horizon gaps remain visible. At the B072 publication evidence time, two saved scheduled starts had passed without a later observed final result; their statuses remain unchanged. Time passage never supplies a score or forecast.
+
+The complete data validator, independent page census and exact-head hosted browser checks verify the publication. Local engineering validation and hosted rendering are reported separately on this change's pull request. This NBA-only source update performs no owner AWS launch, provider acquisition, fitting, inference, rescoring, website deployment or changes to another sport. Earlier dated evidence is preserved below.
+
 ## November 11 — B071 launch failure, B072 repair, complete observed season inventory
 
 **The actual B071 owner command failed before the application started. No new model work occurred. The updated report now includes all 1,274 official games in the latest authenticated saved schedule, all retained selected forecasts and 44 champion roles, with every missing forecast explicit. B072 is the tested continuation prepared for the next manual owner execution.** This section supersedes the latest-execution statements in the preserved dated sections below.
