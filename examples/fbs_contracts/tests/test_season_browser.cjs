@@ -117,6 +117,8 @@ let browser;
  console.log(JSON.stringify({frontier}));
  const complete=await require('./complete_browser_cases.cjs').run({browser,root,screenshots:process.env.FBS_SCREENSHOTS});
  console.log(JSON.stringify({complete}));
+ const latestGamesV060=await require('./latest_games_v060_browser_cases.cjs').run({browser,root,screenshots:process.env.FBS_SCREENSHOTS});
+ console.log(JSON.stringify({latestGamesV060}));
  const currentEvidence=await require('./current_evidence_browser_cases.cjs').run({browser,root,screenshots:process.env.FBS_SCREENSHOTS});
  console.log(JSON.stringify({currentEvidence}));
  console.log(JSON.stringify({status:'PASS',viewports:[1440,390],inventory_provider_states:states,
@@ -125,4 +127,5 @@ let browser;
    current_only_native_grid:true,no_older_snapshot_fill_for_missing_latest:true,
    script_errors:0,external_requests:0}));
 })().catch(error=>{console.error(error);process.exitCode=1;}).finally(async()=>{if(browser)await browser.close();});
+
 

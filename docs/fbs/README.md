@@ -1,3 +1,5 @@
+> **Latest games and champions — November 11, 2026:** [All 888 current-season games, upcoming forecasts and source gaps](latest-games-v060.html) · [V059 actual owner and V060 preparation](V060_LATEST_GAMES_AND_OWNER_2026-11-11.md). The latest owner completed 36 new fits; no metric-specific rolling champion was authorized.
+
 > **Latest actual owner review — November 10, 2026:** [V058 early failure and prepared V059 correction](V059_OWNER_FAILURE_PREPARATION_2026-11-10.md). Earlier dated accounts remain unchanged.
 
 > **Latest recovery review — November 10, 2026:** [Authenticated V057 partial results and prepared V058 continuation](V058_RECOVERY_PREPARATION_2026-11-10.md). Earlier accounts below retain their original publication dates.
@@ -259,4 +261,5 @@ The latest authenticated V056 owner added 31 base fits and five statistical stat
 V057 prepares exact historical-recipe recovery, reusable per-candidate metrics before global closure, and bounded recovery that can advance after interruption. Its 64-unit chunks retain the eight-chunk ceiling, for an effective maximum of 512 units per recovery slice. Complete-population cache reuse requires independent canonical receipt, source and selector verification. No V057 AWS execution, new model improvement or automatic promotion is claimed. The requirement for hundreds of certified new feature concepts remains unmet.
 
 Evidence: [latest saved owner counts](actual-owner-v056.json), [historical scorecards and qualifications](historical-contenders-v057.json), and [FBS evidence dashboard](current.html). Publication is not a data refresh or model run. NFL, NBA and NCAA basketball retain their independent owners and evidence.
+
 
