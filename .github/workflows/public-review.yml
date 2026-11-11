@@ -103,6 +103,7 @@ jobs:
         run: |
           node examples/review_lab/tests/test_dashboard_browser.cjs
           node examples/ncaa_review/test_dashboard_browser.cjs
+          node examples/ncaa_review/test_b061_report_browser.cjs
       - name: Preserve rendered public dashboard for visual review
         uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02
         with:
@@ -110,5 +111,6 @@ jobs:
           path: ${{ runner.temp }}/dashboard-screenshots/*.png
           if-no-files-found: error
           retention-days: 14
+
 
 

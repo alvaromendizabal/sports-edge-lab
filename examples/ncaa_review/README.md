@@ -1,3 +1,9 @@
+## B061 evidence recovery — November 11, 2026 UTC
+
+[Open the interactive report](B061_EVIDENCE_REPORT.html) for saved current-season frozen-model results, exact-game comparisons with original issues, 2024–25/2025–26 exposed historical leaders, the full observed source census and unresolved coverage. [Read the evidence note](evidence/B060_ACTUAL_B061_PREPARED.md) for qualifications and the actual B060 interruption. Data files under `data/` retain rounded display values; full-precision private predictions determine headline metrics.
+
+The latest preparation does not create a newly issued forecast, qualified promotion or measured AWS speedup. Research-only, non-wagering.
+
 ## Actual B058 result and prepared B059 V7 work — November 10, 2026 UTC
 
 **B058 is the latest authenticated owner result.** Its budget-limited return preserves **90 new target fits**, **seven exact B057 frozen-fit reuses**, and **108 other historical fit reuses**. Nine of seventeen stages completed; the frozen research stage deferred and seven stages remained unentered. The measured run lasted **10,816.862 seconds**. No new current-season issue or model promotion is established.
@@ -1026,3 +1032,4 @@ network or persistence path. Browser fixtures use invented records only.
 </details>
 
 </details>
+

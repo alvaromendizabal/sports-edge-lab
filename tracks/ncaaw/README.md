@@ -1,3 +1,13 @@
+## Women’s NCAA basketball: B060 actual / B061 prepared — November 11, 2026 UTC
+
+The preserved original frozen reference has now been rescored from the exact saved B060 predictions: **399 completed games, 340 correct winners and .3180153076 log loss**. Margin MAE/RMSE is **12.582280 / 16.350504**; total-points MAE/RMSE is **14.420401 / 18.010009**. Original weights are unchanged. These are exposed retrospective results, with independent official-final and historical source-vintage qualification unresolved; they do not receive original-issue credit or automatic promotion.
+
+The report also retains the 2024–25 and 2025–26 historical metric leaders, all six saved men/women selected roles, and explicitly missing accuracy/Brier/RMSE/cover/distribution selections. The matched comparison with preserved original issues is scored separately. Current-season outcomes do not select public historical champions or rewrite any issue.
+
+[Interactive B061 report](../../examples/ncaa_review/B061_EVIDENCE_REPORT.html) · [Results, source gaps and execution evidence](../../examples/ncaa_review/evidence/B060_ACTUAL_B061_PREPARED.md) · [Game census CSV](../../examples/ncaa_review/data/ncaa_observed_games_b060.csv) · [Role status](../../examples/ncaa_review/data/ncaa_metric_role_status_b061.json)
+
+B061 is prepared for the owner’s existing manual execution workflow. Fresh upcoming selected forecasts and measured twelve-core throughput are pending. Unissued future replay previews are withheld; missing values remain explicit. Earlier dated evidence remains below.
+
 ## NCAA: selected prior forecasts recovered — November 11, 2026 UTC
 
 The authenticated archive now supplies **96 preserved selected target forecasts for 32 games: 18 men’s and 14 women’s**, covering home-win probability, home-minus-away margin and total points. The six saved historical selections determine the exported roles; the latest eligible original issue is retained without consulting current outcomes. Three additional games in the wider issued archive have no matching selected-role issue and receive no substitute.
@@ -821,3 +831,4 @@ The prior B033 study remains in the attempt history with 108 committed target fi
 </details>
 
 </details>
+
