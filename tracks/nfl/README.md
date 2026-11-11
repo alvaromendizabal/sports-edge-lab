@@ -48,6 +48,6 @@ N071 is being prepared to repair package-metadata compatibility and isolate opti
 
 No new R13–R20 findings are established by N070. Exact historical tick/possession histories and score/clock-normalized market responses remain incomplete. Prior completed-game paths may be tested when available before the next game's cutoff; the target game's live path cannot change its own pregame forecast.
 
-This revision prepares the actual N070 failure record, current source truth and preserved all-game selected forecasts. GitHub source publication, website deployment and owner scientific execution are separate events. Public presentation remains research-only and non-wagering. Raw provider payloads, private model recipes, full candidate grids, credentials and owner archives are excluded.
+This revision prepares the actual N070 failure record, current source truth and preserved all-game selected forecasts. GitHub source publication, website deployment and owner scientific execution are separate events. Public presentation remains research only. Raw provider payloads, private model recipes, full candidate grids, credentials and owner archives are excluded.
 
 Earlier snapshots remain available: [N070 selected view](season_review_n070.html), [N070 preparation README](README_N070_PREPARED_SNAPSHOT.md), and [dated market review](review.html).
