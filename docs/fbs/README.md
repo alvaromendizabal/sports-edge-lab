@@ -1,3 +1,5 @@
+> **Latest actual FBS owner — November 10, 6:26 p.m. Pacific (November 11, 02:26 UTC):** [All 888 games and all 145 future baseline forecasts](latest-games-v062.html) · [Actual V061 research, restored controls and current monitoring](V062_LATEST_GAMES_AND_OWNER_2026-11-11.md). V061 completed 36 new frozen fits and 250 saved-probability evaluations. None of the new alternatives beat their restored selected references on the matched main metrics. Forty new forecast contexts update already-covered games; 105 immutable issues were reused. Zero rolling champions were authorized. The run returned a bounded resumable checkpoint with no recorded application error. Earlier dated reports remain below.
+
 > **Latest complete future baseline coverage — November 11, 01:29 UTC capture:** [All 888 games and all 145 future baseline forecasts](latest-games-v061.html) · [Actual V060 output and V061 correction](V061_LATEST_GAMES_AND_OWNER_2026-11-11.md). Forty issues are genuinely new; 105 retain their earlier issue clocks. No new model promotion.
 
 > **Latest games and champions — November 11, 2026:** [All 888 current-season games, upcoming forecasts and source gaps](latest-games-v060.html) · [V059 actual owner and V060 preparation](V060_LATEST_GAMES_AND_OWNER_2026-11-11.md). The latest owner completed 36 new fits; no metric-specific rolling champion was authorized.
@@ -263,5 +265,6 @@ The latest authenticated V056 owner added 31 base fits and five statistical stat
 V057 prepares exact historical-recipe recovery, reusable per-candidate metrics before global closure, and bounded recovery that can advance after interruption. Its 64-unit chunks retain the eight-chunk ceiling, for an effective maximum of 512 units per recovery slice. Complete-population cache reuse requires independent canonical receipt, source and selector verification. No V057 AWS execution, new model improvement or automatic promotion is claimed. The requirement for hundreds of certified new feature concepts remains unmet.
 
 Evidence: [latest saved owner counts](actual-owner-v056.json), [historical scorecards and qualifications](historical-contenders-v057.json), and [FBS evidence dashboard](current.html). Publication is not a data refresh or model run. NFL, NBA and NCAA basketball retain their independent owners and evidence.
+
 
 

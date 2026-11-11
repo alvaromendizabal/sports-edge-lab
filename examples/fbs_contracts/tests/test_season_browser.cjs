@@ -121,6 +121,8 @@ let browser;
  console.log(JSON.stringify({latestGamesV060}));
  const latestGamesV061=await require('./latest_games_v061_browser_cases.cjs').run({browser,root,screenshots:process.env.FBS_SCREENSHOTS});
  console.log(JSON.stringify({latestGamesV061}));
+ const latestGamesV062=await require('./latest_games_v062_browser_cases.cjs').run({browser,root,screenshots:process.env.FBS_SCREENSHOTS});
+ console.log(JSON.stringify({latestGamesV062}));
  const currentEvidence=await require('./current_evidence_browser_cases.cjs').run({browser,root,screenshots:process.env.FBS_SCREENSHOTS});
  console.log(JSON.stringify({currentEvidence}));
  console.log(JSON.stringify({status:'PASS',viewports:[1440,390],inventory_provider_states:states,
