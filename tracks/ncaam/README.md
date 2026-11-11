@@ -1,6 +1,6 @@
 ## NCAA: selected prior forecasts recovered — November 11, 2026 UTC
 
-The authenticated archive now supplies **96 preserved selected target forecasts for 32 games (18 men’s)**, covering home-win probability, home-minus-away margin and total points. The six saved historical selections determine the exported roles; the latest eligible original issue is retained without consulting current outcomes. Three additional games in the wider issued archive have no matching selected-role issue and receive no substitute.
+The authenticated archive now supplies **96 preserved selected target forecasts for 32 games: 18 men’s and 14 women’s**, covering home-win probability, home-minus-away margin and total points. The six saved historical selections determine the exported roles; the latest eligible original issue is retained without consulting current outcomes. Three additional games in the wider issued archive have no matching selected-role issue and receive no substitute.
 
 [Preserved selected forecasts and qualifications](../../examples/ncaa_review/evidence/B059_PRESERVED_SELECTED_ISSUES.md) · [CSV](../../examples/ncaa_review/data/ncaa_preserved_selected_issues_b059.csv) · [JSON](../../examples/ncaa_review/data/ncaa_preserved_selected_issues_b059.json)
 
