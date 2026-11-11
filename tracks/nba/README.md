@@ -5,6 +5,59 @@ Reproducible NBA forecasts, complete released-game inventories, chronological mo
 This NBA track belongs to the shared [Sports Edge Lab](../../README.md) repository. Its public material contains sanitized aggregate evidence, selected rounded already-issued research forecasts, complete observed schedule coverage, and invented engineering examples. Exact feature recipes, model weights, source responses, full journals, candidate forecast grids, and execution packages remain private under the [NBA publication boundary](../../docs/PUBLICATION_BOUNDARY.md#selected-nba-research-outputs-november-11-extension).
 
 
+## November 11 — B076 completed 822 fits and 196 issues; transport and selection limits remain explicit
+
+**B076 performed substantial new research: 791 frozen estimator fits, 3 legacy estimator fits and 28 champion estimator fits, plus 196 immutable early outlooks for 14 games.** Its [authenticated owner review](reports/b077_owner_evidence.json) records exit 3 after **1 hour 56 minutes 56.12 seconds**, when final packaging exceeded its scientific transport allowance. Completed science remains preserved. The latest selected forecasts are from **20:00:36.717077 UTC**, with original source cutoff **19:53:01.747439 UTC**. They remain early outlooks, not nominal final-hour issues.
+
+The [all-game report](reports/latest_research_outputs.html) and [selected-output JSON](reports/latest_research_outputs.json) now retain **2,882 recovered original records**, displayed through **1,753 selected public issue objects**, **44 historical shadow roles**, and the complete **1,274-game observed official inventory**. Later selected issues replace earlier role selections; they are not additional independent games. Every unchanged public issue ID retains its exact body. The [preceding public snapshot](reports/history/b076_selected_outputs.json) is preserved separately with its prior clocks and tests.
+
+There are still **157 games with any original issue and 1,117 without**. Across **26,532 applicable role opportunities**, **2,711 are available and 23,821 are missing**. Seven unresolved matchups and 24 regular-season slots absent from the saved inventory remain explicit. The saved schedule observation keeps its original clock. Forty source-bound result observations confirm a row-backed total of **227 final, 1,040 scheduled and 7 TBD**; no aggregate count supplies an unobserved game identity. Publication uses saved evidence and does not perform a fresh provider refresh.
+
+### What the additional research established
+
+The frozen registry is now **1,567 of 2,328 tasks complete**, with **761 pending**. It reused **776 earlier frozen fits**, **216 saved prediction arrays** and **1,302 frontier slices** without refitting old completed tasks. Reported calibration and preprocessor fits are separate from the 822-estimator count.
+
+Candidate metric views increased **842 → 1,510**, and paired comparisons **2,892 → 5,156**. Among **2,264 comparisons for new views**, **916 met nomination eligibility** and **509 had favorable point estimates**, but **none had a positive multiplicity-adjusted lower bound**. All **44 selected champion recipes and pooled saved scores stayed unchanged**. This is useful negative or inconclusive research, not evidence of a promoted improvement. Current-season outcomes were excluded from historical selection.
+
+### Metric-specific historical roles
+
+Each regular-season column below has **1,230 evaluated games**. Each row uses the same registered recipe across the two seasons; the values are saved owner metrics, not a newly chosen per-season minimum. Full phase-specific roles and denominator qualifications remain in the selected report.
+
+| Registered research role | Family | 2024–25 | 2025–26 |
+|---|---|---:|---:|
+| T60 Winner accuracy | xgboost | 66.5854% | 69.5935% |
+| T60 Probability log loss | logistic | 0.606708 | 0.595258 |
+| T60 Probability Brier | logistic | 0.209916 | 0.204533 |
+| T60 Margin MAE | preserved ensemble prior oof raw components | 10.981526 | 11.345493 |
+| T60 Margin RMSE | preserved ensemble prior oof raw components | 14.046087 | 14.494245 |
+| T60 Total MAE | precommitted ensemble | 14.749734 | 15.230264 |
+| T60 Total RMSE | precommitted ensemble | 18.461521 | 19.199729 |
+| T120 Winner accuracy | extra trees | 67.0732% | 69.5122% |
+| T120 Probability log loss | logistic | 0.606375 | 0.595389 |
+| T120 Probability Brier | preserved catboost | 0.209980 | 0.204330 |
+| T120 Margin MAE | preserved ensemble prior oof raw components | 10.983158 | 11.342669 |
+| T120 Margin RMSE | preserved ensemble prior oof raw components | 14.046827 | 14.492024 |
+| T120 Total MAE | precommitted ensemble | 14.779658 | 15.252807 |
+| T120 Total RMSE | extra trees | 18.509278 | 19.162914 |
+
+These historical seasons are exposed development evidence. The roles qualify for prospective shadow monitoring, with **zero automatic production promotions**. The remembered near-0.40 lead remains **0.426446 on two postseason games**, established at the old report level; no independently recovered full-season 0.40 model or new current-season test of that exact two-game recipe is claimed.
+
+### Current forward comparisons and earlier replay stay separate
+
+Only **six distinct settled games** currently qualify for original-issue monitoring; **205 scored revisions are not 205 games**. On the six-game T60 accuracy-role/Kalshi cohort, the model got **4/6 correct** with **0.539540 log loss and 0.183181 Brier**, versus **5/6**, **0.445000** and **0.138992** for the saved Kalshi midpoint reference. On the five-game Polymarket US subset, both got **4/5 correct**, with model log loss **0.493268** versus **0.431224**, and Brier **0.162058** versus **0.134945**. These are one-week, descriptive reference comparisons. Raw midpoint references are not fair no-vig probabilities or executable prices. **DraftKings and Polymarket international have zero admitted matched games.**
+
+The older, later-retrieved 126-game Kalshi replay remains separate: **89 correct for each**, model log loss **0.539754** versus **0.554904**, and Brier **0.182735** versus **0.188500**. It is exposed retrospective evidence over three weekly blocks. Neither cohort establishes independent forward superiority or a promotion gate.
+
+### Throughput, logging and historical source recovery
+
+B076 discovered **48 effective vCPUs** with an NBA cap of **12**, and independent native-fit timing confirms **12 simultaneous fits**. Its time-weighted host-wide pipeline CPU average was only **3.709%**; that is host telemetry, not an isolated NBA utilization measure. Ten inventory reconciliations consumed **22 minutes 36.04 seconds**. The final scientific container was **161,268,581 bytes** against **80,817,176 bytes** of allowance. Repeated telemetry embedded the same **266,089,459-byte** parallel history twice in the report. No scientific originals were deleted; **1,777 model/matrix bodies remain explicit owner-local dependencies**.
+
+The measured invocation has an estimated whole-host cost of **$5.008729**. Actual billed cost and NBA-only allocation are unknown; overlapping stage estimates are not added. The prepared V8 continuation uses the updated **512 MB return bound**, authenticated baseline reuse, reusable leased archive frames, bounded immutable telemetry, visible terminal phase counters, invocation-wide timing, and resumable owned historical-market recovery. These are prepared engineering changes; their next owner-run scientific and throughput results are pending.
+
+R13–R20 historical market-response experiments remain source-blocked: **zero admitted exact historical quote/play population, zero materialized response features and zero completed ablations**. This is not a negative finding about the feature hypothesis. The continuation must authenticate owned history and source clocks, preserve missingness, and pass leakage/rights/quota gates before treating it as model input.
+
+This update is NBA-only saved-evidence publication. It performs no new fitting, inference, metric rescoring, acquisition, model promotion or website deployment. Earlier dated evidence follows unchanged.
+
 ## November 11 — B075 returned no new fits or forecasts; prior science preserved
 
 **The authenticated B075 invocation exited 3 after 48 minutes 12.73 seconds, with zero new NBA estimator fits, zero new forecast issues, zero newly scored frontier slices and zero promotions.** The [B076 review of the actual B075 owner evidence](reports/b076_owner_evidence.json) records the failure and preserves the preceding work. B074's 73 fits and 196 issues are still B074 work; this later return does not receive those counts.
