@@ -1,3 +1,13 @@
+## NCAA basketball: actual B059 recovered; B060 prepared
+
+The latest authenticated NCAA owner run completed **107 target fits, 17 calibrations and 36 residual fits**, then stopped on an I/O deferral after **2 hours 11 minutes 36 seconds**. Although its project ceiling was twelve CPUs, measured CPU usage averaged approximately **0.81 cores**. B060 fixes the serial admission paths, coordinates atomic NCAA/FBS leases, preserves the completed work, prioritizes selected forecasts, and expands the finite full-model and ablation tranches. Actual B060 owner execution and measured throughput remain pending.
+
+The saved approximately **0.40 log-loss** model evidence is preserved. It has not been replaced by weak standalone controls or freshly rescored by this engineering update. No new promotion is claimed.
+
+[Actual B059 evidence and prepared B060 changes](examples/ncaa_review/evidence/B059_ACTUAL_B060_PREPARED.md) · [All 2,512 supplied official game records and explicit forecast gaps](examples/ncaa_review/data/ncaa_observed_games_b059.csv) · [Men](tracks/ncaam/README.md) · [Women](tracks/ncaaw/README.md)
+
+The observed game report retains its original time. Its canonical source stream was empty, so all selected forecast fields remain unavailable; seven date gaps also prevent a complete-season claim. The source repair permits one authenticated recovery from an inherited ESPN timeout while preserving provider rate-limit refusals. Earlier dated updates below remain historical.
+
 ## NCAA basketball: actual B058, V7 continuation prepared
 
 The latest authenticated owner return preserved **90 new target fits** and **seven exact prior frozen-fit reuses** before its work budget ended. It completed 65 of 6,216 core contexts and 25 of 14,544 scalar contexts; those context totals are not model-fit counts. It issued **zero new current forecasts** and promoted **zero models**. The older research, including stronger complete-model scorecards, remains preserved.
