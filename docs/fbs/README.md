@@ -1,3 +1,18 @@
+<!-- FBS_V070_LATEST_ATTEMPT_START -->
+# NCAA FBS · latest actual V069 attempt and preserved forecasts
+
+**The November 12 V069 invocation failed during current-price verification before source refresh or training.** Its summary reports zero new fits, issues and outputs. The independent worker and supervisor both exited 2; all 73 return-manifest pins verified. Unreached optimizer counters remain unobserved.
+
+[Open latest execution, annual leaders and full saved game view](latest-games-v068.html#latest-attempt) · [Download status, leaders and coverage](latest-attempt-v070.json) · [Read the failure and evidence review](V070_ACTUAL_V069_REVIEW_2026-11-12.md).
+
+The actual saved price catalog was 42 hours, 4 minutes and 38 seconds old when its 24-hour guard rejected it, after the live request was denied. V070 is being prepared to repair current-price verification without widening that gate or changing model-selection rules. No V070 owner results are claimed.
+
+The latest verified selected forecasts remain the 146 V067 outlooks issued November 11. The saved inventory contains 888 games, 688 observed finals and 54 unresolved kickoffs. All 21 saved annual leader roles, earlier forecasts and metric comparisons remain unchanged. Last completed rolling-champion authorization: V064, zero. Full-current-season refresh of every former model and strict full-season named-provider comparisons remain incomplete. The separately recovered 55 original issues remain distinct from the 301-game reconstruction.
+
+The reports below are dated history. This update changes public source on the existing draft PR; it is not a new source capture, model run, promotion or website deployment.
+
+<!-- FBS_V070_LATEST_ATTEMPT_END -->
+
 # NCAA FBS · actual V067 forecasts and restored-model evidence
 
 **V067 completed one registered foundation fit, 146 current forecast contexts and a 301-game former-model evaluation, then failed during final ledger assembly.** All completed issue values and clocks are preserved in the [new game explorer](latest-games-v068.html), alongside all 888 observed current-season games, earlier originals, separate reconstructions, provider gaps and metric-specific saved leaders for 2024, 2025 and 2026.

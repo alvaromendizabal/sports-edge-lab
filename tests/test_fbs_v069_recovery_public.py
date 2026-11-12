@@ -73,7 +73,9 @@ class RecoveredOriginalPublic(unittest.TestCase):
     def test_existing_html_is_byte_preserved_outside_new_section(self):
         marker=r'<!-- FBS_V069_RECOVERED_ORIGINAL_START -->[\s\S]*?<!-- FBS_V069_RECOVERED_ORIGINAL_END -->\n'
         self.assertEqual(len(re.findall(marker,self.page)),1)
-        old=re.sub(marker,'',self.page).encode()
+        prior=re.sub(r'<!-- FBS_V070_LATEST_ATTEMPT_START -->[\s\S]*?<!-- FBS_V070_LATEST_ATTEMPT_END -->\n','',self.page)
+        prior=prior.replace('<main>\n\n','<main>\n',1).replace('<a href="#latest-attempt">Latest execution</a>','<a href="#execution">Latest execution</a>')
+        old=re.sub(marker,'',prior).encode()
         blob=hashlib.sha1(b'blob '+str(len(old)).encode()+b'\x00'+old).hexdigest()
         self.assertEqual(blob,'61b315ad682117f1e3d4f4f205bce1c5c458c69d')
         self.assertEqual(self.page.count('data-recovered-game='),55)

@@ -7,6 +7,7 @@ const {chromium}=require(process.env.PLAYWRIGHT_MODULE_DIR||'playwright');
 const root=path.resolve(__dirname,'..');
 const url=pathToFileURL(path.join(root,'docs/fbs/latest-games-v068.html')).href;
 const recovered=JSON.parse(fs.readFileSync(path.join(root,'docs/fbs/recovered-original-v069.json'),'utf8'));
+const latestAttempt=JSON.parse(fs.readFileSync(path.join(root,'docs/fbs/latest-attempt-v070.json'),'utf8'));
 let browser;
 (async()=>{
  browser=await chromium.launch({headless:true,...(process.env.FBS_BROWSER_EXECUTABLE?{executablePath:process.env.FBS_BROWSER_EXECUTABLE}:{})});
@@ -18,6 +19,16 @@ let browser;
  const summary=async(n,p)=>{assert.equal(await page.locator('#game-summary').innerText(),`${n} of 888 source games shown · ${p} with retained probability · ${n-p} explicit gaps`);assertions++;};
  for(const width of [1440,390]){
   await page.setViewportSize({width,height:1000});await page.goto(url);await page.evaluate(async()=>{await window.FBS_LATEST_READY;});
+  assert.match(await page.locator('#latest-attempt-outcome').innerText(),/V069 exited with code 2 before source refresh or model training/);
+  assert.match(await page.locator('#latest-attempt-outcome').innerText(),/0 new model fits, 0 new forecast issues and 0 new prediction outputs/);
+  assert.match(await page.locator('#latest-attempt-freshness').innerText(),/No November 12 forecast refresh is claimed/);
+  assert.equal(await page.locator('nav a[href="#latest-attempt"]').count(),1);
+  const providerRows=await page.locator('#latest-provider-cohorts tr').evaluateAll(rows=>rows.map(r=>({key:r.dataset.providerCohort,cells:[...r.cells].map(c=>c.textContent)})));
+  const expectedProviders=latestAttempt.qualified_named_provider_cohorts.map(r=>({key:`${r.season}|${r.venue}`,cells:[`${r.season}`,r.venue,`${r.observed_games}`,`${r.observed_finals}`,...['winner','margin','total','cover_probability'].map(k=>`${r.qualified_games_by_target[k]}`)]}));
+  assert.deepEqual(providerRows,expectedProviders);
+  const [statusDownload]=await Promise.all([page.waitForEvent('download'),page.locator('#latest-attempt-download').click()]);
+  assert.deepEqual(JSON.parse(fs.readFileSync(await statusDownload.path(),'utf8')),latestAttempt);
+  if(process.env.FBS_SCREENSHOTS){fs.mkdirSync(process.env.FBS_SCREENSHOTS,{recursive:true});await page.locator('#latest-attempt').screenshot({path:path.join(process.env.FBS_SCREENSHOTS,`fbs-latest-attempt-v070-${width}.png`)});}
   await summary(146,146);assert.equal(await page.locator('#game-rows tr[data-game]').count(),30);
   assert.equal(await page.locator('#annual-rows tr').count(),21);
   assert.equal(await page.locator('#champion-rows td.gap').count(),9);

@@ -27,6 +27,7 @@ jobs:
           python tests/test_fbs_v067_public.py
           python tests/test_fbs_v068_public.py
           python tests/test_fbs_v069_recovery_public.py
+          python tests/test_fbs_v070_public.py
           node tests/fbs_v054_public_view.test.cjs
       - name: Execute twice and verify deterministic evidence page
         run: |
