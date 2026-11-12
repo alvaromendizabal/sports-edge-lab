@@ -1,3 +1,13 @@
+# NFL selected model card · N077 actual return
+
+[Latest all-game review](season_review_n078.html) · [Latest selected forecasts](selected_forecasts_n078.json)
+
+N077 completed five native fits and zero meta fits. Latest publication contains 448 selected issues for 112 future games, with all 272 observed season games retained. The historical selection and primary/fallback availability below remain unchanged. Current 2026 replay recovered 4,657 rows across 136 games, but its scorecard bodies are absent from the delivered return; full-season 2026 metric values cannot be verified from this artifact. No independent rolling promotion is established.
+
+The following dated N076 model card is preserved as the historical metric source. It is not a claim that N076 remains the latest execution.
+
+---
+
 # NFL selected model card · N076 actual return
 
 [Latest all-game review](season_review_n077.html) · [Selected forecasts](selected_forecasts_n077.json) · [Actual N076 evidence](2026-11-12-n076-actual-n077-review.json) · [Model card](CURRENT_MODEL_CARD.md)
