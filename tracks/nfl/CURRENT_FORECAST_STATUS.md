@@ -9,7 +9,7 @@
 | Saved 2026 schedule | 272 games | 136 completed, 112 timed future, 24 kickoff times TBD |
 | Binary completed winner outcomes | 135 games | One completed game is a tie |
 | Latest selected forecasts | 448 rows | 112 winner, 112 margin, 224 total |
-| Historical primary roles / fallback roles | 18 / 9 | Availability is explicit; fallback does not impersonate a primary leader |
+| Historical primary roles / fallback roles | 18 / 9 | Only one primary role (one-hour total CRPS) and all nine fallbacks have current outputs; 17 primary roles remain unavailable |
 | N076 new native / meta fits | 32 / 30 | 62 distinct durable fit IDs |
 | N076 unique issue events | 1,008 | 560 game/recipe pairs plus 448 later issue events on existing pairs |
 | Latest nonselected issues excluded from public projection | 112 | No qualified current role binding in this projection |

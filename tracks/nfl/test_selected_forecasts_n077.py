@@ -28,6 +28,8 @@ class N077SelectedEvidenceTests(unittest.TestCase):
         self.assertEqual(value['counts']['current_selected_rows'],448)
         self.assertEqual(value['counts']['current_selected_games'],112)
         self.assertEqual(value['counts']['official_time_tbd_games'],24)
+        available={r['role_id'] for g in value['games'] for t in g['targets'].values() for r in t['roles'] if r['current_forecast_available'] and r['role_id'].startswith('primary_')}
+        self.assertEqual(available,{'primary_total_crps_h3600s'})
         self.assertEqual(self.health['owner_return_sha256'],'fa14f87830a98198c25cf7653d1468ad869b7533583f23a8402e9c026e5263af')
 
     def test_forecast_body_changed_is_rejected(self):

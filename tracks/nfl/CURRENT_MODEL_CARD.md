@@ -4,7 +4,7 @@
 
 **N076 produced 62 new fits and 1,008 unique issue events. The latest selected projection contains 448 rows for 112 future games. Full current-season champion/former-champion replay remains incomplete; no independent production promotion is established.**
 
-The returned registry retains 18 primary metric/horizon selections and nine fallback roles. The following saved 2024/2025 scorecards follow each selected model through both seasons. Historical comparison labels do not change a current issue’s true lead time.
+The returned registry retains 18 primary metric/horizon selections and nine fallback roles. Only the one-hour total-CRPS primary role has current outputs on all 112 timed future games; the other 17 primary roles are unavailable. All nine operational fallback roles have outputs for 112 games. The following saved 2024/2025 scorecards follow each selected model through both seasons. Historical comparison labels do not change a current issue’s true lead time.
 
 ## Historical comparison: 1 hour(s) before kickoff
 
