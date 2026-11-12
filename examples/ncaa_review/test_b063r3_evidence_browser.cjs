@@ -47,7 +47,7 @@ async function verifyR3(browser, filename) {
       assert.equal(await page.locator('#candidate-next').isDisabled(), true);
       await page.locator('#reset').click();
       assert.equal(await page.locator('#season-leaders tbody tr').count(), 28);
-      assert.equal(await page.evaluate(() => document.documentElement.scrollWidth > innerWidth + 1), false);
+      assert.equal(await page.evaluate(() => document.documentElement.scrollWidth > innerWidth + 1), false, `Evidence page exceeds ${width}px viewport`);
       for (const href of await page.locator('a[download]').evaluateAll(nodes => nodes.map(n => n.getAttribute('href')))) {
         assert.ok(fs.existsSync(path.resolve(path.dirname(filename),href)), href);
       }
