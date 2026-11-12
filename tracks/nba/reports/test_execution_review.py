@@ -99,11 +99,14 @@ class ExecutionReviewTests(unittest.TestCase):
         self.assertFalse(expected["actual_NBA_fits"])
         package = self.data["replacement_engineering"]["package_verification"]
         self.assertEqual(package["status"], "PASS")
-        self.assertEqual(package["packaged_tests"], 338)
-        self.assertEqual(package["passed"], 338)
+        self.assertEqual(package["packaged_tests"], 342)
+        self.assertEqual(package["passed"], 342)
         self.assertEqual(package["failures"] + package["errors"] + package["skipped"] + package["module_errors"], 0)
-        self.assertEqual(package["exact_package_sha256"], "6938ded9c716d012b2007f39a244b5655a6752bb4d557ffaa2a95e8525be6094")
+        self.assertEqual(package["exact_package_sha256"], "3eb157877a6fa47844cd65a2fe50a8db00af0e66d0eb59441d97b918d5435ec6")
         self.assertFalse(package["owner_execution_performed"])
+        self.assertEqual(package["post_test_source_cache_pyc_files"], 0)
+        self.assertEqual(package["warm_executable_local_review"]["execution_scope"], "PREPARED_REVIEW_ONLY_NON_AWS")
+        self.assertFalse(package["warm_executable_local_review"]["owner_AWS_execution"])
 
 
 if __name__ == "__main__":

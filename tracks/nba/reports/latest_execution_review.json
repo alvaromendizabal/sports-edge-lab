@@ -70,7 +70,8 @@
       "Keep heartbeat identity fields separate from payload metadata; bind the active process by invocation, boot identity, process ID and process start time.",
       "Capture child stdout and stderr, preserve append-only per-invocation human logs and JSONL telemetry, and periodically flush status independently of training progress.",
       "Detect stalled progress with process-tree and stack diagnostics; preserve failed child exit codes and recoverable checkpoints.",
-      "Request bounded resources for real independent work and report measured CPU separately from reservation and scientific fit concurrency."
+      "Request bounded resources for real independent work and report measured CPU separately from reservation and scientific fit concurrency.",
+      "Reject a completed-substantive-science claim when native fit proof is absent or zero; reused fits and prediction rows do not manufacture new native fits."
     ],
     "integrated_replacement_project": "NBA",
     "logging_verification": {
@@ -122,22 +123,35 @@
     "owner_execution_completed": false,
     "package_verification": {
       "all_payload_sha256_verified": true,
-      "elapsed_seconds": 42.051969707,
+      "elapsed_seconds": 42.089715128,
       "errors": 0,
-      "exact_package_bytes": 101168160,
-      "exact_package_sha256": "6938ded9c716d012b2007f39a244b5655a6752bb4d557ffaa2a95e8525be6094",
+      "exact_package_bytes": 101170011,
+      "exact_package_sha256": "3eb157877a6fa47844cd65a2fe50a8db00af0e66d0eb59441d97b918d5435ec6",
       "failures": 0,
       "launcher_process_fixtures_included": 11,
       "module_errors": 0,
       "original_B078_members_preserved": 1077,
       "owner_execution_performed": false,
-      "package_members": 1113,
-      "packaged_tests": 338,
-      "passed": 338,
+      "package_members": 1115,
+      "packaged_tests": 342,
+      "passed": 342,
+      "post_test_source_cache_pyc_files": 0,
       "real_NBA_fits": 0,
       "shared_logging_unit_tests_included": 18,
       "skipped": 0,
-      "status": "PASS"
+      "status": "PASS",
+      "warm_executable_local_review": {
+        "elapsed_seconds": 3.061,
+        "execution_scope": "PREPARED_REVIEW_ONLY_NON_AWS",
+        "exit_code": 0,
+        "new_scientific_fits": 0,
+        "outer_exit_verified": true,
+        "owner_AWS_execution": false,
+        "return_log_and_JSONL_verified": true,
+        "return_zip_bytes": 104152310,
+        "return_zip_sha256": "ffc068603e8cdf0a8188bfba2af98576d0221f3981abd662fcbd2787588e0e91",
+        "status": "PASS"
+      }
     },
     "release": "B079",
     "shared_logging_framework_projects": [
@@ -153,7 +167,8 @@
       "Supervision: 9 local tests passed with real operating-system children, silent-stall stack capture, exit-7 preservation and append across restarts.",
       "Shared logging: 18 regression tests passed, including a real child-registration log-write failure. Source-pinned blocked and failed child executions lasted 33.055 seconds overall; maximum measured heartbeat gaps were 10.016 and 10.016 seconds, with four and three tail-F observations while the respective children were alive.",
       "Fixture validation does not count as real NBA fitting or establish owner-host twelve-core training throughput.",
-      "The exact replacement package passed all 338 packaged tests in 42.052 seconds, with zero failures, errors, skips or module errors. All 1,113 members were read back and SHA-256 verified; all 1,077 original B078 members were preserved. The tests include 18 shared logger regressions and 11 launcher process fixtures, with zero real NBA fits."
+      "The exact replacement package passed all 342 packaged tests in 42.090 seconds, with zero failures, errors, skips or module errors. All 1,115 members were read back and SHA-256 verified; all 1,077 original B078 members were preserved. The tests include 18 logger regressions, 11 launcher process fixtures and the native-fit completion gate, with zero real NBA fits.",
+      "A clean warm whole-executable local review exited 0 in 3.061 seconds and authenticated a 104,152,310-byte return with logs, JSONL and the outer exit. Its explicit scope is PREPARED_REVIEW_ONLY_NON_AWS; it is not an owner execution or scientific throughput benchmark. No bytecode files remained in the authenticated source cache after packaged testing."
     ],
     "verified_new_owner_scientific_fits": 0
   },
