@@ -22,7 +22,7 @@ The [model card](CURRENT_MODEL_CARD.md) retains separate 2024/2025 accuracy, log
 
 The archived original-model panel covers **77 games**, and the archived Kalshi panel covers **119 games**. Neither is a refreshed full-season score against the **136 completed-game census**, which contains 135 binary winner outcomes. Sixteen completed games lack required original pregame vectors. The approximately **0.40 full-season NFL result remains unauthenticated**, not discarded.
 
-DraftKings, Kalshi and Polymarket are separate products with separate target, settlement and cutoff requirements. Complete matched comparisons across all seasons/targets/horizons are unavailable; R13–R20 have no completed source-admitted comparison. Missing data is not zero error or evidence of an edge.
+DraftKings, Kalshi and Polymarket are separate products with separate target definitions, resolution rules and cutoff requirements. Complete matched comparisons across all seasons/targets/horizons are unavailable; R13–R20 have no completed source-admitted comparison. Missing data is not zero error or evidence of an edge.
 
 ## Forecast policy and promotion
 
