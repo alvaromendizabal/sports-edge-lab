@@ -6,6 +6,7 @@ const {pathToFileURL}=require('node:url');
 const {chromium}=require(process.env.PLAYWRIGHT_MODULE_DIR||'playwright');
 const root=path.resolve(__dirname,'..');
 const url=pathToFileURL(path.join(root,'docs/fbs/latest-games-v068.html')).href;
+const recovered=JSON.parse(fs.readFileSync(path.join(root,'docs/fbs/recovered-original-v069.json'),'utf8'));
 let browser;
 (async()=>{
  browser=await chromium.launch({headless:true,...(process.env.FBS_BROWSER_EXECUTABLE?{executablePath:process.env.FBS_BROWSER_EXECUTABLE}:{})});
@@ -23,6 +24,19 @@ let browser;
   assert.match(await page.locator('#execution').innerText(),/1 new fit, 146 genuine current forecast contexts and 739 scalar outputs/);
   assert.match(await page.locator('#execution').innerText(),/12-CPU project ceiling did not become 12 parallel fits/);
   assert.match(await page.locator('#continuation-status').innerText(),/pending owner execution/);
+  assert.match(await page.locator('#recovered-original').innerText(),/356 distinct games out of 688 observed finals/);
+  assert.match(await page.locator('#recovered-original').innerText(),/no combined prospective score/);
+  await page.locator('#recovered-original-details summary').click();
+  assert.equal(await page.locator('#recovered-original-rows tr').count(),55);
+  const recoveredRows=await page.locator('#recovered-original-rows tr').evaluateAll(rows=>rows.map(row=>({id:row.dataset.recoveredGame,cells:[...row.cells].map(c=>c.textContent)})));
+  const expectedRecovered=[...recovered.games].sort((a,b)=>a.kickoff_utc.localeCompare(b.kickoff_utc)||a.game_id.localeCompare(b.game_id)).map(row=>({id:row.game_id,cells:[`${row.away} at ${row.home}`,`${(row.home_probability*100).toFixed(4)}%`,row.kickoff_utc,row.original_issue_at_utc,row.original_input_cutoff_at_utc]}));
+  assert.deepEqual(recoveredRows,expectedRecovered);
+  const [recoveredDownload]=await Promise.all([page.waitForEvent('download'),page.locator('#recovered-original a[download]').click()]);
+  assert.deepEqual(JSON.parse(fs.readFileSync(await recoveredDownload.path(),'utf8')),recovered);
+  const recoveryLayout=await page.evaluate(()=>({viewport:innerWidth,width:document.documentElement.scrollWidth}));
+  assert.ok(recoveryLayout.width<=width,`expanded recovery table overflow: ${JSON.stringify(recoveryLayout)}`);
+  if(process.env.FBS_SCREENSHOTS){fs.mkdirSync(process.env.FBS_SCREENSHOTS,{recursive:true});await page.locator('#recovered-original').screenshot({path:path.join(process.env.FBS_SCREENSHOTS,`fbs-recovered-v069-${width}.png`)});}
+  await page.locator('#recovered-original-details summary').click();
   await page.locator('#next').click();assert.equal(await page.locator('#page-status').innerText(),'Page 2 of 5');await page.locator('#previous').click();
   await page.locator('#game-rows button[data-detail]').first().focus();await page.keyboard.press('Enter');
   assert.equal(await page.locator('#game-detail').isVisible(),true);
