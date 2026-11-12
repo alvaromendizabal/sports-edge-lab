@@ -511,7 +511,7 @@ function verifyVenueDisplayEvidence(htmlBytes, jsonBytes) {
     })));
     assert.deepEqual(actualWinner, comparisons.map((row, i) => ({
       source: i, cells: [
-        names[row.provider], row.selected_metric_roles.length ? row.selected_metric_roles.join(", ") : "Role association not exported",
+        names[row.provider], row.selected_metric_roles.length ? row.selected_metric_roles.map(words).join(", ") : "Role association not exported",
         "T" + row.horizon_minutes + " " + words(row.issue_horizon_class),
         row.model_on_same_reference_games.games + " / " + row.full_universe_games,
         ...["accuracy", "log_loss", "brier", "ece_10_fixed_bins"].map(metric =>
@@ -525,7 +525,7 @@ function verifyVenueDisplayEvidence(htmlBytes, jsonBytes) {
     })));
     assert.deepEqual(actualMonitor, monitor.map((row, i) => ({
       source: i, cells: [
-        row.objective + " " + (row.selected_metric_roles.length ? row.selected_metric_roles.join(", ") : "Role association not exported"),
+        row.objective + " " + (row.selected_metric_roles.length ? row.selected_metric_roles.map(words).join(", ") : "Role association not exported"),
         "T" + row.horizon_minutes + " · " + words(row.issue_horizon_class) + " " + words(row.lead_bucket),
         String(row.distinct_games), ...["accuracy", "log_loss", "brier", "mae", "rmse"].map(metric => score(row.metrics[metric], metric)),
       ],
