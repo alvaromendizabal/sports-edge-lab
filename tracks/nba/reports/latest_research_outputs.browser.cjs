@@ -262,6 +262,8 @@ function expectedRow(row, data) {
   const data = JSON.parse(jsonBytes), url = pathToFileURL(htmlPath).href;
   assert.equal(data.schema, "sports-edge-lab-nba-public-source-separated-research-outputs-v4");
   const reference = referenceInventory(data);
+  const v9Review = require('./v9_review.browser.cjs');
+  const v9Evidence = v9Review.verify(htmlBytes);
   const b077Review = require('./b077_review.browser.cjs');
   const b077Evidence = b077Review.verify(htmlBytes);
   if (process.argv.includes("--data-only")) {
@@ -295,6 +297,7 @@ function expectedRow(row, data) {
       target_horizon_cells: reference.cells.size, sparse_saved_role_views: seenViews.size,
       public_selected_issues: seenIssues.size,
       b077_saved_metrics_and_venue_evidence: b077Evidence,
+      v9_saved_coverage_acceptance_evidence: v9Evidence,
       compact_all_missing_sentinels_verified: Object.values(data.game_coverage).filter(value => value.current_role_ids_missing === "ALL_APPLICABLE_ROLES").length,
       expected_metric_rows: reference.rows.length,
       expected_browser_pages: combinations.reduce((sum, value) => sum + value.expected_pages, 0),
@@ -457,6 +460,7 @@ function expectedRow(row, data) {
     assert.equal(page.url(), url);
     checks.push('nba_entry_point_opens_current_standalone_report_and_labels_archive');
     await b077Review.validatePage(page, 'desktop', true);
+    await v9Review.validatePage(page, 'desktop', true);
     assert.equal(await page.locator("h1").isVisible(), true);
     assert.equal(await page.locator("h1").innerText(), "Season coverage, issued forecasts and champion roles");
     for (const id of CONTROLS) {
@@ -577,6 +581,7 @@ function expectedRow(row, data) {
     const mobile = await context({ width: 390, height: 844 });
     const small = await pageFor(mobile);
     await b077Review.validatePage(small, 'mobile', false);
+    await v9Review.validatePage(small, 'mobile', false);
     await checkFilter(small, {}, "mobile_default_all_observed_games");
     await checkChampionTable(small);
     await noOverflow(small, "mobile_390px_no_page_horizontal_overflow");
@@ -596,6 +601,7 @@ function expectedRow(row, data) {
     const reopened = await context({ width: 1366, height: 1000 });
     const again = await pageFor(reopened);
     await b077Review.validatePage(again, 'offline_reopen', false);
+    await v9Review.validatePage(again, 'offline_reopen', false);
     assert.deepEqual(await again.evaluate(() => window.NBA_PUBLIC_REPORT), data);
     await assertPage(again, matching(reference), 0, "fresh_context_reopen_default_without_prior_state");
     for (const [id, expected] of Object.entries({ "game-status": "all", phase: "all", target: "winner", metric: "log_loss",
@@ -619,6 +625,7 @@ function expectedRow(row, data) {
       oracle: "Independent target/horizon coverage grid joined to shared role groups and sparse original issues; no renderer functions invoked",
       observed_games_checked: reference.gameIds.length, target_horizon_cells_checked: visitedCells.size,
       b077_saved_metrics_and_venue_evidence: b077Evidence,
+      v9_saved_coverage_acceptance_evidence: v9Evidence,
       saved_role_views_checked: visitedViews.size, distinct_issued_bodies_checked: seenIssues.size,
       exhaustive_displayed_rows_checked: exhaustiveRows, exhaustive_pages_checked: exhaustivePages,
       evidence_as_of_utc: data.evidence_as_of_utc, coverage: data.coverage, checks, rendered_cases: snapshots,

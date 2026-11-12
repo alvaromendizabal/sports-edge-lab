@@ -258,5 +258,15 @@ class B077HistoricalPeakTests(unittest.TestCase):
         self.assertEqual(hashlib.sha1(f'blob {len(archive)}\0'.encode()+archive).hexdigest(),'e56159f92a39c0bf73385914aa824025b3bb6436')
 
 
+from test_v9_publication import V9PublicationTests
+
+class V9SavedEvidenceTests(unittest.TestCase):
+    def test_v9_cached_display_is_deterministic(self):
+        import build_v9_review
+        result=build_v9_review.build(check=True)
+        self.assertEqual(result['status'],'PASS')
+        self.assertEqual(result['observed_games'],1274)
+        self.assertFalse(result['new_owner_execution_claim'])
+
 if __name__=='__main__':unittest.main()
 
