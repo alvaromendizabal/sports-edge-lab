@@ -1,3 +1,17 @@
+<!-- FBS_V071_ACTUAL_V070_START -->
+# NCAA FBS · actual V070 results · November 12, 2026
+
+**V070 completed one registered foundation refit and issued 104 current-origin forecasts, then stopped on a changed fixture identity.** The broad historical/frontier/champion stages were not reached. The completed forecast values and their original information and issue clocks are retained.
+
+[Open the latest FBS dashboard](latest-v071.html) · [Download the selected report](latest-v071.json) · [104 newly issued forecasts](issued-v070-selected.csv) · [All 2,742 observed game identities](season-inventory-v071.csv) · [Read the actual result](V071_ACTUAL_V070_REVIEW_2026-11-12.md).
+
+The current source snapshot contains 888 observed 2026 games, including 691 finals, 143 timed upcoming fixtures and 54 unresolved kickoffs. V070 issued 104 of the 143 eligible current-origin tasks; one failed and 38 were not attempted. Across retained original issues, 135 upcoming games have an authenticated outlook. The dashboard keeps new V070 issues, retained dated research issues and 55 recovered earlier originals separate. Rounded values are for display only.
+
+Saved leaders cover all seven metric roles in each of 2024, 2025 and 2026. The 2026 larger common metric bank covers 688 games, not all 691 newly observed finals. DraftKings, Kalshi, Polymarket Global and Polymarket US have explicit annual denominator/gap rows; the recovered 231-game DraftKings comparison remains a separate exposed retrospective cohort. No new champion or rolling champion is authorized.
+
+This source update does not retrain a model, refresh source data or deploy a website. Earlier dated research remains preserved below.
+<!-- FBS_V071_ACTUAL_V070_END -->
+
 # NCAA FBS · authenticated partial V055 and prepared V056
 
 **Latest actual owner: V055, partial. V056 is prepared; owner execution remains pending.**
