@@ -24,9 +24,9 @@ An exact approximately 0.40 full-season NFL result remains unauthenticated. A st
 
 | Provider | Captured current winner rows | Games | Newly qualified benchmark cells | Remaining qualification |
 |---|---:|---:|---:|---|
-| DraftKings | 54 | 27 | 0 | Receipt adapter and frozen ties-void settlement not admitted |
-| Kalshi | 108 | 27 | 0 | Tie settlement mismatch, unregistered bid/ask probability and missing provider quote clock |
-| Polymarket | 108 | 27 | 0 | Tie settlement mismatch and unregistered bid/ask probability; quote timestamp verified |
+| DraftKings | 54 | 27 | 0 | Receipt adapter and frozen ties-void resolution rules not admitted |
+| Kalshi | 108 | 27 | 0 | Tie resolution rules mismatch, unregistered bid/ask probability and missing provider quote clock |
+| Polymarket | 108 | 27 | 0 | Tie resolution rules mismatch and unregistered bid/ask probability; quote timestamp verified |
 
 Each provider has no captured current winner row for 245 of the 272 census games. Current quotes cannot backfill a completed game's historical pregame cutoff. Available quotes and admitted comparable benchmarks are different counts. Complete matched winner, margin, cover and total comparisons against all three providers are not established. R13–R20 have no adapted play rows or materialized market-response features; no measured market-path benefit is claimed.
 
