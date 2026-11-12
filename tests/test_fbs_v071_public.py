@@ -110,15 +110,17 @@ class ActualV070Publication(unittest.TestCase):
     def test_prior_landing_content_preserved_outside_latest_link(self):
         for name,sha in [('complete.html','4feef263ab5f1ec44fd2ab21a7aa8c9f8f4273fc'),('current.html','8bfe5b333e8eb448218a79662fadf65bc06e4a2a')]:
             txt=(P/name).read_text()
+            txt=re.sub(r'<!-- FBS_V072_LATEST_LINK_START -->.*?<!-- FBS_V072_LATEST_LINK_END -->','',txt,flags=re.S)
             stripped=re.sub(r'<!-- FBS_V071_LATEST_LINK_START -->.*?<!-- FBS_V071_LATEST_LINK_END -->','',txt,flags=re.S)
             self.assertEqual(blob(stripped.encode()),sha)
         txt=(P/'README.md').read_text()
+        txt=re.sub(r'<!-- FBS_V072_ACTUAL_V071_START -->.*?<!-- FBS_V072_ACTUAL_V071_END -->\n\n','',txt,flags=re.S)
         stripped=re.sub(r'<!-- FBS_V071_ACTUAL_V070_START -->.*?<!-- FBS_V071_ACTUAL_V070_END -->\n\n','',txt,flags=re.S)
         self.assertEqual(blob(stripped.encode()),'2ec8304db6b43b29667afa8f31997082ad4dd048')
 
     def test_host_export_contains_current_report_and_keeps_earlier_entrypoints(self):
         export=runpy.run_path(str(ROOT/'examples/fbs_contracts/export_site.py'))
-        self.assertEqual(export['SOURCE_FILES']['index.html'],'latest-v071.html')
+        self.assertEqual(export['SOURCE_FILES']['index.html'],'latest-v072.html')
         self.assertEqual(export['SOURCE_FILES']['season-archive.html'],'index.html')
         for name in ('latest-v071.html','latest-v071.js','latest-v071.css','latest-v071.json','issued-v070-selected.csv','season-inventory-v071.csv','current.html','complete.html'):
             self.assertIn(name,export['ASSETS'])

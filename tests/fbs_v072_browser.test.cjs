@@ -1,0 +1,62 @@
+'use strict';
+const assert=require('node:assert/strict'),fs=require('node:fs'),path=require('node:path');
+const {pathToFileURL}=require('node:url');
+const {chromium}=require(process.env.PLAYWRIGHT_MODULE_DIR||'playwright');
+const root=path.resolve(__dirname,'..');
+const data=JSON.parse(fs.readFileSync(path.join(root,'docs/fbs/latest-v072.json'),'utf8'));
+let browser;
+(async()=>{
+  browser=await chromium.launch({headless:true,...(process.env.FBS_BROWSER_EXECUTABLE?{executablePath:process.env.FBS_BROWSER_EXECUTABLE}:{}),args:['--no-sandbox']});
+  const context=await browser.newContext({acceptDownloads:true}),page=await context.newPage(),errors=[],external=[];
+  page.on('pageerror',e=>errors.push(e.message));page.on('request',r=>{if(!/^(file|blob|data):/.test(r.url()))external.push(r.url())});
+  const summary=async(n,p)=>assert.equal(await page.locator('#game-summary').innerText(),`${n} games shown · ${p} with selected issue · ${n-p} explicit gaps`);
+  for(const width of [1440,390]){
+    await page.setViewportSize({width,height:1000});
+    await page.goto(pathToFileURL(path.join(root,'docs/fbs/latest-v072.html')).href);await page.evaluate(async()=>await window.FBS_V072_READY);
+    await summary(888,142);
+    assert.equal(await page.locator('#metric-rows tr').count(),21);assert.equal(await page.locator('#fresh-monitor-rows tr').count(),4);
+    assert.equal(await page.locator('#champion-role-rows tr').count(),8);assert.equal(await page.locator('#provider-rows tr').count(),12);
+    assert.equal(await page.locator('#cohort-select option').count(),33);
+    await page.locator('#retained-cohort-details summary').click();
+    for(let i=0;i<33;i++){await page.selectOption('#cohort-select',String(i));assert.ok([2,3].includes(await page.locator('#cohort-rows tr').count()));assert.match(await page.locator('#cohort-note').innerText(),/not newly evaluated in V071/);}
+    await page.locator('#retained-cohort-details summary').click();
+    assert.equal(await page.locator('#game-rows tr[data-game]').count(),30);
+    assert.match(await page.locator('#refresh-accounting').innerText(),/72 new issues, 70 reused issues and one explicit fixture gap/);
+    assert.match(await page.locator('#output-accounting').innerText(),/216 newly issued winner\/margin\/total outputs and 301 historical contender outputs/);
+    await page.locator('#show-upcoming').click();await summary(197,142);
+    await page.selectOption('#layer','latest');await summary(197,72);
+    await page.selectOption('#layer','saved');await summary(197,142);
+    await page.selectOption('#period','all');await summary(888,148);
+    await page.selectOption('#period','final');await summary(691,6);
+    await page.selectOption('#layer','recovered_original');await summary(691,55);
+    await page.selectOption('#layer','current');await summary(691,0);
+    await page.selectOption('#period','refresh_gap');await summary(1,0);
+    assert.match(await page.locator('#game-rows').innerText(),/fixture revision quarantined/);
+    await page.selectOption('#period','tbd');await summary(54,0);
+    await page.selectOption('#period','all');await page.selectOption('#season','2024');await summary(920,0);
+    await page.selectOption('#season','2025');await summary(934,0);
+    await page.selectOption('#season','all');await summary(2742,142);
+    await page.selectOption('#season','2026');await summary(888,142);
+    await page.locator('#next').click();assert.equal(await page.locator('#page-status').innerText(),'Page 2 of 30');await page.locator('#previous').click();
+    await page.locator('#search').fill('401862824');await summary(1,1);
+    assert.match(await page.locator('#game-rows').innerText(),/reused original issue/);
+    await page.locator('#game-rows button[data-detail]').first().focus();await page.keyboard.press('Enter');
+    assert.equal(await page.locator('#game-detail').isVisible(),true);
+    const detail=await page.locator('#detail-content').innerText();
+    assert.match(detail,/2026-11-12T19:39:03/);assert.match(detail,/2026-11-12T21:00:20/);
+    assert.match(detail,/current fixture observation is not an original input clock/);
+    assert.match(detail,/interval80/);assert.match(detail,/errors not scored/);
+    assert.equal(await page.locator('#detail-content table').last().locator('tbody tr').count(),16);
+    await page.keyboard.press('Escape');assert.equal(await page.locator('#game-detail').isVisible(),false);
+    await page.selectOption('#layer','latest');await summary(1,0);assert.match(await page.locator('#game-rows').innerText(),/no new v071 issue/);
+    await page.locator('#search').fill('');await page.selectOption('#layer','current');await summary(888,142);
+    const [jsonDownload]=await Promise.all([page.waitForEvent('download'),page.locator('#report-download').click()]);assert.deepEqual(JSON.parse(fs.readFileSync(await jsonDownload.path(),'utf8')),data);
+    const [csvDownload]=await Promise.all([page.waitForEvent('download'),page.locator('#download-view').click()]);
+    const csv=fs.readFileSync(await csvDownload.path(),'utf8');assert.equal(csv.split('\r\n').length,890);assert.match(csv,/NEW_V071_ISSUE/);assert.match(csv,/REUSED_ORIGINAL_ISSUE/);
+    await page.locator('#search').fill('no-matching-fbs-game');await summary(0,0);assert.equal(await page.locator('#download-view').isDisabled(),true);await page.locator('#search').fill('');
+    const layout=await page.evaluate(()=>({width:document.documentElement.scrollWidth,viewport:innerWidth}));assert.ok(layout.width<=width,`Page overflow at ${width}: ${JSON.stringify(layout)}`);
+    if(process.env.FBS_SCREENSHOTS){fs.mkdirSync(process.env.FBS_SCREENSHOTS,{recursive:true});await page.screenshot({path:path.join(process.env.FBS_SCREENSHOTS,`fbs-v072-${width}.png`),fullPage:true});}
+  }
+  assert.deepEqual(errors,[]);assert.deepEqual(external,[]);
+  console.log(JSON.stringify({status:'PASS',viewports:[1440,390],allSeasonGames:2742,currentSeasonGames:888,currentContexts:142,newIssues:72,retainedIssues:148,annualRows:21,newMonitorRows:4,championRoleRows:8,providerRows:12,scriptErrors:errors.length,externalRequests:external.length}));
+})().catch(e=>{console.error(e);process.exitCode=1;}).finally(async()=>{if(browser)await browser.close();});

@@ -1,3 +1,17 @@
+<!-- FBS_V072_ACTUAL_V071_START -->
+# NCAA FBS · actual V071 results · November 12, 2026
+
+**V071 completed the priority forecast sweep: 72 new issues, 70 compatible issues reused and one explicit fixture gap across all 143 eligible tasks.** It also completed 251 probability evaluations on a 301-game historical bank, then stopped at a registration-integrity check. Zero new fits completed; full frozen training and champion selection remain unfinished.
+
+[Open the latest FBS dashboard](latest-v072.html) · [Selected report](latest-v072.json) · [142 current-origin outlooks with original clocks](issued-v071-selected.csv) · [All 2,742 observed game identities](season-inventory-v072.csv) · [Actual V071 review](V072_ACTUAL_V071_REVIEW_2026-11-12.md).
+
+The dashboard defaults to **all 888 observed 2026 games**, including 691 finals and 197 without an observed final. It keeps 142 current-origin contexts, 72 genuinely new V071 issues, 148 latest retained eligible foundation issues and 55 previously recovered originals in distinct views. The one quarantined fixture and 54 unresolved kickoff times remain explicit. Forecast scores, original intervals, source/model/issue clocks, missing saved errors and all four venue qualification states remain inspectable.
+
+The seven saved annual metric roles for 2024, 2025 and 2026 remain separate from the fresh 301-game former-model monitor. The larger 2026 common bank still covers 688 games; no best model across all 691 finals has been established. New current/rolling champion authorizations and qualified last-1/2/4-week tables remain unavailable. The earlier 231-game DraftKings comparison remains a dated, exposed retrospective cohort.
+
+This publication copies owner evidence. It does not fit, infer, refresh a provider, calculate a new sports metric or automatically promote a model. Earlier reports remain preserved below.
+<!-- FBS_V072_ACTUAL_V071_END -->
+
 <!-- FBS_V071_ACTUAL_V070_START -->
 # NCAA FBS · actual V070 results · November 12, 2026
 
