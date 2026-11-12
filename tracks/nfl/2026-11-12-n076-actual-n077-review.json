@@ -201,6 +201,54 @@
     "No complete matched full-season comparison against DraftKings, Kalshi or Polymarket is established. Missing data is not zero error.",
     "No independent production promotion, complete V8 compliance, parallel speedup, or deployed Site refresh is claimed."
   ],
+  "runner_preparation": {
+    "aws_owner_run_executed": false,
+    "canonical_source_recovery": "COMPLETE_AUTHENTICATED",
+    "engineering_changes": [
+      "Immutable source namespace and final-result monitor scope",
+      "Selected current-feature contracts before fitting",
+      "Explicit incomplete replay metadata and dependency recovery",
+      "Shared-leased independent selected work",
+      "Verified owned-history export reuse",
+      "Bounded pinned reporting",
+      "Cooperative interruption, resource and budget evidence"
+    ],
+    "forecast_export_changed": false,
+    "fresh_source_collection": false,
+    "latest_actual_owner_release": "N076",
+    "model_performance_improvement_demonstrated": false,
+    "new_real_forecast_issues": 0,
+    "new_real_model_fits": 0,
+    "owner_speedup_demonstrated": false,
+    "prepared_on_utc": "2026-11-12",
+    "production_promotion": false,
+    "promotion_policy_gap_audit": {
+      "candidate_failure_of_complete_promotion_gate_claimed": false,
+      "diagnostics_wired_as_promotion_pass_rule": false,
+      "implemented_selection_scope": "HISTORICAL_CANDIDATE_AND_FORWARD_SHADOW_ROLE_RANKING",
+      "numerical_independent_forward_thresholds_registered": false,
+      "numerical_production_promotion_rule_implemented": false,
+      "reported_diagnostics": [
+        "Paired intervals",
+        "Holm multiplicity adjustments",
+        "Calibration"
+      ]
+    },
+    "release": "N077",
+    "remaining_owner_evidence": [
+      "Complete current-season champion and former-champion comparisons",
+      "Exact original neural runtime or separately registered reconstruction",
+      "Qualified historical market and play clocks and actual fitted market-response ablations",
+      "Measured owner concurrency, throughput, current source coverage and cost"
+    ],
+    "site_deployed": false,
+    "status": "PREPARED_LOCALLY_VALIDATED_OWNER_EXECUTION_PENDING",
+    "validation": {
+      "class": "LOCAL_INVENTED_FIXTURES_AND_PRESERVED_EVIDENCE_NO_REAL_MODEL_WORK",
+      "new_tests_passed": 162,
+      "total_tests_passed": 2626
+    }
+  },
   "schema": "nfl.n077.actual-n076-public-review.v1",
   "selected_export_unchanged": true,
   "selected_forecasts_sha256": "bf2317f128b5d195e40e41090e36bc988ab9afb49256b9ea4dcc41ac9db6f566",
