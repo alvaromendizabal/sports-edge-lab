@@ -2,17 +2,33 @@
 'use strict';
 const assert=require('node:assert/strict'),fs=require('node:fs'),path=require('node:path');
 function evidence(){return JSON.parse(fs.readFileSync(path.join(__dirname,'b078_recovered_b077_evidence.json')));}
+function peaks(){return JSON.parse(fs.readFileSync(path.join(__dirname,'b077_historical_peaks_and_gates.json')));}
 function verify(htmlBytes){const r=evidence();assert.equal(r.schema,'sports-edge-lab.nba.recovered-b077-review.v1');
  const match=htmlBytes.toString('utf8').match(/<script id="b077-evidence" type="application\/json">([\s\S]*?)<\/script>/);
  assert.ok(match,'Saved aggregate evidence must be embedded for offline reopen');assert.deepEqual(JSON.parse(match[1]),r);
  assert.equal(r.metric_rows.length,248);assert.equal(r.provider_comparisons.length,24);
  assert.equal(r.publication_has_new_scoring,false);assert.equal(r.distinct_original_issue_monitor_games,6);
  assert.ok(r.metric_rows.every(x=>x.promotion_allowed===false));
- return {metric_rows:r.metric_rows.length,provider_rows:r.provider_comparisons.length};}
+ const p=peaks(),peakMatch=htmlBytes.toString('utf8').match(/<script id="b077-peak-evidence" type="application\/json">([\s\S]*?)<\/script>/);
+ assert.ok(peakMatch);assert.deepEqual(JSON.parse(peakMatch[1]),p);assert.equal(p.historical_peaks.length,28);
+ assert.equal(p.selection_or_promotion_allowed,false);assert.equal(p.new_metric_scoring,false);
+ return {metric_rows:r.metric_rows.length,provider_rows:r.provider_comparisons.length,historical_peak_groups:p.historical_peaks.length};}
 function filt(rows,options){return rows.filter(r=>Object.entries(options).every(([k,v])=>v==='all'||String(r[k])===String(v)));}
 async function validatePage(page,name,exhaustive=false){const r=evidence();
  assert.equal(await page.locator('#b077-title').isVisible(),true);
  assert.deepEqual(await page.locator('#b077-evidence').evaluate(e=>JSON.parse(e.textContent)),r);
+ const p=peaks();assert.deepEqual(await page.locator('#b077-peak-evidence').evaluate(e=>JSON.parse(e.textContent)),p);
+ const peakBase={season:'all',horizon_minutes:'all',target:'all'};
+ async function peakCheck(options){for(const [field,id]of Object.entries({season:'b077-peak-season',horizon_minutes:'b077-peak-horizon',target:'b077-peak-target'}))await page.selectOption('#'+id,String(options[field]));
+  const expected=filt(p.historical_peaks,options),actual=await page.locator('#b077-peaks tbody tr').evaluateAll(rows=>rows.map(row=>({id:row.dataset.group,cells:[...row.cells].map(c=>c.innerText.replace(/\s+/g,' ').trim())})));
+  assert.equal(actual.length,expected.length);for(let i=0;i<expected.length;i++){const e=expected[i];assert.equal(actual[i].id,e.group_id);
+   assert.deepEqual(actual[i].cells,[e.season,'T'+e.horizon_minutes+' '+e.target,e.metric.replaceAll('_',' '),e.families.join('; ')+' '+e.tied_saved_rows+' saved row'+(e.tied_saved_rows===1?'':'s'),e.metric==='accuracy'?(100*e.saved_metric_value).toFixed(2)+'%':e.saved_metric_value.toFixed(6),String(e.games)],name+' exact historical peak');}}
+ await peakCheck(peakBase);if(exhaustive)for(const season of ['2024-25','2025-26'])for(const horizon_minutes of ['60','120'])for(const target of ['winner','margin','total'])await peakCheck({season,horizon_minutes,target});await peakCheck(peakBase);
+ const h=p.promotion_gates.historical_nomination,prod=p.promotion_gates.registered_production;
+ const gateCells=await page.locator('#b077-gate-rows tr').evaluateAll(rows=>rows.map(row=>[...row.cells].map(c=>c.textContent.trim())));
+ assert.deepEqual(gateCells.map(row=>row.slice(1,3)),[[h.regular.minimum_games_each_season+' in each frozen season; '+h.regular.minimum_total_games+' total',String(h.regular.minimum_week_clusters)],[h.postseason.minimum_games_each_season+' in each frozen season; '+h.postseason.minimum_total_games+' total',String(h.postseason.minimum_week_clusters)],[prod.minimum_matched_games+' matched games',String(prod.minimum_cluster_weeks)]]);
+ assert.ok((await page.locator('#b077-production-guardrails').textContent()).includes(prod.multiplicity));
+ assert.equal(h.positive_paired_interval_is_nomination_requirement,false);assert.equal(prod.automatic_production_promotion,false);
  const controls={season:'b077-season',evidence_track:'b077-track',target:'b077-target',phase:'b077-phase',horizon_minutes:'b077-horizon'};
  const base={season:'2026-27',evidence_track:'all',target:'winner',phase:'regular',horizon_minutes:'all'};
  const score=(v,m)=>typeof v!=='number'?'Unavailable':m==='accuracy'?(v*100).toFixed(2)+'%':v.toFixed(6);
@@ -57,6 +73,7 @@ async function validatePage(page,name,exhaustive=false){const r=evidence();
   await venueCheck({...vbase,horizon_minutes:'120'});
  }
  await venueCheck(vbase);
- return {status:'PASS',name,metric_rows:r.metric_rows.length,provider_rows:r.provider_comparisons.length};
+ assert.deepEqual(await page.locator('#b077-evidence').evaluate(e=>JSON.parse(e.textContent)),r);
+ return {status:'PASS',name,metric_rows:r.metric_rows.length,provider_rows:r.provider_comparisons.length,historical_peak_groups:p.historical_peaks.length};
 }
 module.exports={verify,validatePage};

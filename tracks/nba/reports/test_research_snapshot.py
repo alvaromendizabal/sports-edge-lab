@@ -213,5 +213,50 @@ class B077RecoveredContinuationTests(unittest.TestCase):
         builder=importlib.util.module_from_spec(spec);spec.loader.exec_module(builder)
         self.assertEqual(builder.build(check=True)['status'],'PASS')
 
+class B077HistoricalPeakTests(unittest.TestCase):
+    @classmethod
+    def setUpClass(cls):
+        cls.peaks=json.loads((ROOT/'b077_historical_peaks_and_gates.json').read_bytes())
+
+    def test_existing_metrics_original_issues_and_schedule_bytes_are_unchanged(self):
+        for name,pin in {'b078_recovered_b077_evidence.json':'74dd8d0632e9efeb1885b410b7c2f5a82129ba5b41f3e2e70114a4aa0e824c1b',
+                'latest_research_outputs.json':'9e6795387c1e64bc6265da04bdd9d4e9fd0fb9860007da7b465549752542149b'}.items():
+            self.assertEqual(hashlib.sha256((ROOT/name).read_bytes()).hexdigest(),pin)
+
+    def test_descriptive_peaks_keep_all_equal_strata_and_coalesce_ties(self):
+        rows=self.peaks['historical_peaks']
+        expected={(season,horizon,target,metric) for season in ('2024-25','2025-26') for horizon in (60,120)
+            for target,metrics in {'winner':('accuracy','log_loss','brier'),'margin':('mae','rmse'),'total':('mae','rmse')}.items() for metric in metrics}
+        self.assertEqual({(r['season'],r['horizon_minutes'],r['target'],r['metric']) for r in rows},expected)
+        self.assertEqual(len(rows),28);self.assertEqual(sum(r['tied_saved_rows'] for r in rows),31)
+        for row in rows:
+            self.assertEqual(row['games'],1230);self.assertEqual(row['phase'],'regular')
+            self.assertFalse(row['selection_or_promotion_allowed']);self.assertTrue(row['source_row_indexes'])
+            self.assertEqual(row['families'],sorted(set(row['families'])))
+        self.assertFalse(self.peaks['new_metric_scoring']);self.assertFalse(self.peaks['selection_or_promotion_allowed'])
+        text=json.dumps(self.peaks)
+        for forbidden in ('recipe_id','s3://','/home/','feature_names','560403859723'):self.assertNotIn(forbidden,text)
+
+    def test_nomination_and_production_requirements_are_not_conflated(self):
+        gates=self.peaks['promotion_gates'];history=gates['historical_nomination'];production=gates['registered_production']
+        self.assertEqual(history['regular'],{'minimum_games_each_season':250,'minimum_total_games':500,'minimum_week_clusters':30})
+        self.assertEqual(history['postseason'],{'minimum_games_each_season':40,'minimum_total_games':80,'minimum_week_clusters':8})
+        self.assertFalse(history['positive_paired_interval_is_nomination_requirement'])
+        self.assertEqual(production['minimum_matched_games'],500);self.assertEqual(production['minimum_cluster_weeks'],30)
+        self.assertFalse(production['automatic_production_promotion'])
+        self.assertIn('post-registration',production['prospective_gate']);self.assertIn('independent review',production['prospective_gate'])
+        self.assertIsNone(gates['universal_absolute_score_threshold'])
+
+    def test_entry_point_links_current_report_and_preserves_archived_monitor(self):
+        repository=ROOT.parents[2]
+        page=(repository/'docs/nba/index.html').read_text()
+        self.assertIn('id="nba-current-report"',page)
+        self.assertIn('href="../../tracks/nba/reports/latest_research_outputs.html"',page)
+        self.assertIn('November 3 monitor archive',page)
+        self.assertNotIn('latest failed-publication boundary',page)
+        archive=(repository/'docs/nba/monitor.html').read_bytes()
+        self.assertEqual(hashlib.sha1(f'blob {len(archive)}\0'.encode()+archive).hexdigest(),'e56159f92a39c0bf73385914aa824025b3bb6436')
+
+
 if __name__=='__main__':unittest.main()
 

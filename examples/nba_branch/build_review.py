@@ -80,11 +80,14 @@ h1{font-size:clamp(2rem,4vw,3.1rem);line-height:1.15;max-width:850px;margin:18px
 code{background:#eaf0f4;border-radius:4px;padding:2px 5px;overflow-wrap:anywhere}footer{color:var(--muted);font-size:.85rem;padding-top:0}
 @media(max-width:760px){header>div,main,footer{padding:20px}.metrics{grid-template-columns:repeat(2,1fr)}.split,.contracts{grid-template-columns:1fr}.matrix{border-spacing:4px;font-size:.85rem}.matrix td{padding:10px}.matrix th{font-size:.77rem}.panel{padding:16px}}
 </style></head><body>
+<!-- NBA CURRENT REPORT NAVIGATION BEGIN -->
+<aside class="note" id="nba-current-report" aria-label="Current NBA report" style="margin:20px auto;max-width:1064px"><strong>Latest saved NBA research report · B077</strong><p><a href="../../tracks/nba/reports/latest_research_outputs.html">Open the latest saved NBA report</a> for the observed season schedule, original forecasts, historical metric peaks, selected and former roles, provider comparisons and promotion gates. Saved evidence ends November 12, 2026 at 02:15:47 UTC; the latest original forecast is 02:02:29 UTC. This is a static evidence report, not a live feed.</p><p>The October 29 page below and the <a href="monitor.html">November 3 monitor archive</a> preserve their original dated evidence.</p></aside>
+<!-- NBA CURRENT REPORT NAVIGATION END -->
 <header><div><nav aria-label="Project navigation"><a href="../../README.md">Sports Edge Lab</a><a href="../NBA_RESEARCH_CARD.md">Experiment, model &amp; source card</a><a href="../../examples/nba_branch/README.md">Run the invented example</a><a href="../basketball/index.html">Preserved basketball evidence</a></nav>
 <p class="eyebrow">NBA / Research &amp; engineering</p><h1>Controlled comparisons.<br>Verifiable progress.</h1>
 <p class="lede">B009 completed a separately registered NBA experiment. The next NBA branch makes feature changes and training-window changes independently visible, preserves exact checkpoints, and keeps source timing attached to every admitted observation.</p>
 <p><span class="tag">B009 completed with reported gaps</span> <span class="tag pending">B010 real execution pending</span></p></div></header>
-<main><aside class="note"><strong>Preserved October 29, 2026 snapshot.</strong> The dated B009/B010 status below is unchanged. See the <a href="monitor.html">November 3 evidence monitor</a> for the admitted fixed-model diagnostics, subsequent completed research and latest failed-publication boundary.</aside><section class="metrics" aria-label="Verified accounting scopes">
+<main><aside class="note"><strong>Preserved October 29, 2026 archive.</strong> The dated B009/B010 status below is unchanged. The <a href="monitor.html">November 3 monitor archive</a> preserves its fixed-model diagnostics, subsequent research and original failed-publication boundary.</aside><section class="metrics" aria-label="Verified accounting scopes">
 <div class="metric"><span>B009 new NBA units</span><strong>''' + str(data["new_real_nba_units"]) + '''</strong><span>Completed native estimator units</span></div>
 <div class="metric"><span>Lifetime NBA units</span><strong>''' + str(data["lifetime_nba_units"]) + '''</strong><span>Unique units; predecessor aliases excluded</span></div>
 <div class="metric"><span>Combined basketball units</span><strong>''' + str(data["combined_basketball_units"]) + '''</strong><span>Includes NCAA; not an NBA-only total</span></div>
@@ -125,4 +128,3 @@ def main(argv=None):
 
 if __name__ == "__main__":
     main()
-
