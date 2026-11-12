@@ -1,42 +1,52 @@
-# NFL selected model card · N072 actual return
+# NFL selected model card · N076 actual return
 
-[Latest all-game selected forecasts](season_review_n076.html) · [Owner evidence](2026-11-11-n072-actual-n073-prepared.json) · [Prior model card](CURRENT_MODEL_CARD_N072_SNAPSHOT.md)
+[Latest all-game review](season_review_n077.html) · [Selected forecasts](selected_forecasts_n077.json) · [Actual N076 evidence](2026-11-12-n076-actual-n077-review.json) · [Model card](CURRENT_MODEL_CARD.md)
 
-**Latest execution: N075 returned resumable after resource admission was refused, with known zero fits, forecasts and paid calls.** No newer selection or promotion supersedes the scorecards below. [Actual execution status](2026-11-11-n075-actual-n076-continuation.json). The 772 selected N072 rows and original issue clocks remain intact.
+**N076 produced 62 new fits and 1,008 unique issue events. The latest selected projection contains 448 rows for 112 future games. Full current-season champion/former-champion replay remains incomplete; no independent production promotion is established.**
 
-**N072 retains 18 metric/horizon-specific primary selections and nine operational fallback roles. No independent production promotion is established.** The verified completed phases contain at least 69 new fits; original whole-run counters remain null after the final refresh failed. The selected display contains 772 already-issued rows for 112 confirmed future games.
-
-Every table row follows the same selected candidate across 2024 and 2025. Objectives and historical horizons are separate; a days-ahead current issue is not relabeled as a one-hour or two-hour forecast.
+The returned registry retains 18 primary metric/horizon selections and nine fallback roles. Only the one-hour total-CRPS primary role has current outputs on all 112 timed future games; the other 17 primary roles are unavailable. All nine operational fallback roles have outputs for 112 games. The following saved 2024/2025 scorecards follow each selected model through both seasons. Historical comparison labels do not change a current issue’s true lead time.
 
 ## Historical comparison: 1 hour(s) before kickoff
 
 | Selected objective | Public alias | 2024 | 2025 | Pooled | Games |
 |---|---|---:|---:|---:|---:|
-| Winner accuracy | Selected model 1 | 71.93% | 63.73% | 67.84% | 569 |
-| Winner log loss | Selected model 3 | 0.605012 | 0.638486 | 0.621719 | 569 |
-| Winner Brier | Selected model 3 | 0.207684 | 0.223769 | 0.215712 | 569 |
-| Point margin MAE | Selected model 5 | 10.008260 | 10.018003 | 10.013132 | 570 |
-| Point margin RMSE | Selected model 5 | 13.057690 | 12.800020 | 12.929497 | 570 |
-| Point margin marginal CRPS | Selected model 5 | 7.283699 | 7.199146 | 7.241423 | 570 |
-| Total points MAE | Selected model 9 | 9.955067 | 10.729888 | 10.342478 | 570 |
-| Total points RMSE | Selected model 9 | 12.900565 | 13.488984 | 13.198054 | 570 |
-| Total points marginal CRPS | Selected model 12 | 7.285066 | 7.606911 | 7.445988 | 570 |
+| Winner accuracy historical leader (60-minute historical cohort) | Selected model 1 | 71.93% | 63.73% | 67.84% | 569 |
+| Winner log-loss historical leader (60-minute historical cohort) | Selected model 3 | 0.605012 | 0.638486 | 0.621719 | 569 |
+| Winner Brier historical leader (60-minute historical cohort) | Selected model 3 | 0.207684 | 0.223769 | 0.215712 | 569 |
+| Point-margin absolute-error historical leader (60-minute historical cohort) | Selected model 5 | 10.008260 | 10.018003 | 10.013132 | 570 |
+| Point-margin squared-error historical leader (60-minute historical cohort) | Selected model 5 | 13.057690 | 12.800020 | 12.929497 | 570 |
+| Point-margin distribution historical leader (60-minute historical cohort) | Selected model 5 | 7.283699 | 7.199146 | 7.241423 | 570 |
+| Total-points absolute-error historical leader (60-minute historical cohort) | Selected model 9 | 10.021665 | 10.646625 | 10.334145 | 570 |
+| Total-points squared-error historical leader (60-minute historical cohort) | Selected model 11 | 12.900565 | 13.488984 | 13.198054 | 570 |
+| Total-points distribution historical leader (60-minute historical cohort) | Selected model 13 | 7.285066 | 7.606911 | 7.445988 | 570 |
 
 ## Historical comparison: 2 hour(s) before kickoff
 
 | Selected objective | Public alias | 2024 | 2025 | Pooled | Games |
 |---|---|---:|---:|---:|---:|
-| Winner accuracy | Selected model 2 | 69.12% | 65.49% | 67.31% | 569 |
-| Winner log loss | Selected model 4 | 0.620667 | 0.616461 | 0.618568 | 569 |
-| Winner Brier | Selected model 4 | 0.215025 | 0.214361 | 0.214694 | 569 |
-| Point margin MAE | Selected model 6 | 9.960953 | 10.076034 | 10.018494 | 570 |
-| Point margin RMSE | Selected model 7 | 13.016251 | 12.807722 | 12.912407 | 570 |
-| Point margin marginal CRPS | Selected model 8 | 7.303503 | 7.198659 | 7.251081 | 570 |
-| Total points MAE | Selected model 10 | 9.870659 | 10.635246 | 10.252952 | 570 |
-| Total points RMSE | Selected model 11 | 12.752940 | 13.425951 | 13.093771 | 570 |
-| Total points marginal CRPS | Selected model 13 | 7.151308 | 7.607862 | 7.379585 | 570 |
+| Winner accuracy historical leader (120-minute historical cohort) | Selected model 2 | 69.12% | 65.49% | 67.31% | 569 |
+| Winner log-loss historical leader (120-minute historical cohort) | Selected model 4 | 0.620667 | 0.616461 | 0.618568 | 569 |
+| Winner Brier historical leader (120-minute historical cohort) | Selected model 4 | 0.215025 | 0.214361 | 0.214694 | 569 |
+| Point-margin absolute-error historical leader (120-minute historical cohort) | Selected model 6 | 9.960953 | 10.076034 | 10.018494 | 570 |
+| Point-margin squared-error historical leader (120-minute historical cohort) | Selected model 7 | 13.016251 | 12.807722 | 12.912407 | 570 |
+| Point-margin distribution historical leader (120-minute historical cohort) | Selected model 8 | 7.303503 | 7.198659 | 7.251081 | 570 |
+| Total-points absolute-error historical leader (120-minute historical cohort) | Selected model 10 | 9.870659 | 10.635246 | 10.252952 | 570 |
+| Total-points squared-error historical leader (120-minute historical cohort) | Selected model 12 | 12.752940 | 13.425951 | 13.093771 | 570 |
+| Total-points distribution historical leader (120-minute historical cohort) | Selected model 14 | 7.151308 | 7.607862 | 7.379585 | 570 |
 
-Winner support is 285 games in 2024 and 284 in 2025; one tie is excluded. Point targets retain 285 games each season. Selection and repeated research expose these completed seasons. The results support forward shadow monitoring; no independent confirmation or automatic promotion is claimed. Marginal CRPS does not establish joint-score quality or calibrated cover probabilities.
+Winner support is 285 games in 2024 and 284 in 2025; point targets retain 285 games each season. These repeatedly examined seasons are exposed research, not independent confirmation. Marginal CRPS does not establish joint-score quality or calibrated cover probabilities.
+
+## Reconciled 2026 early snapshots: 15 games
+
+135 saved rows represent 15 unique games × three combinations × three targets. Independent durable pregame delivery and complete source-publication clocks remain unproved. These full-precision saved scores are descriptive, not a complete current-season replay or promotion evidence.
+
+| Saved model | Correct / 15 | Log loss | Brier | Margin MAE / RMSE | Total MAE / RMSE |
+|---|---:|---:|---:|---:|---:|
+| Saved early combination 1 | 12 | 0.468755 | 0.148314 | 9.217 / 11.811 | 9.940 / 13.646 |
+| Saved early combination 2 | 13 | 0.487875 | 0.154542 | 10.058 / 12.383 | 10.021 / 13.697 |
+| Saved early combination 3 | 13 | 0.456838 | 0.143123 | 8.829 / 11.363 | 9.679 / 13.629 |
+
+The newest owner return did not complete full-season current champion/former-champion replay. The following older studies retain their original cohorts and qualifications.
 
 ## Distinct recovered original accuracy and probability leaders
 
@@ -69,7 +79,7 @@ Those older models remain serious candidates: on these saved matched cohorts the
 
 The archived 2026 Torch B replay remains **0.649255 log loss, 49/77 correct**; TF AB is **0.662046, 47/77**. These are 77-game replay cohorts, not all 136 completed 2026 games. A qualified 15-game early snapshot has **0.456838 log loss, 13/15 correct**. An exact approximately **0.40 full-season NFL result has not been authenticated**; the remembered result remains unresolved rather than discarded.
 
-The saved **119-game Kalshi panel** still has **79 correct for the accuracy combination versus 76 for Kalshi**; its model log loss is 0.646823. The probability combination has **77 correct / 0.629080 log loss**; Kalshi's saved one-hour/two-hour values are 0.644579/0.644377. Event, target, horizon, non-tie and exposure qualifications remain. N072 does not establish a fresh full-season Kalshi comparison.
+The saved **119-game Kalshi panel** still has **79 correct for the accuracy combination versus 76 for Kalshi**; its model log loss is 0.646823. The probability combination has **77 correct / 0.629080 log loss**; Kalshi's saved one-hour/two-hour values are 0.644579/0.644377. Event, target, horizon, non-tie and exposure qualifications remain. N076 does not establish a fresh full-season Kalshi comparison.
 
 Current issues and missing-role reasons retain their original clocks. Current-season outcomes do not select these historical roles. Authentic earlier-game market paths can be candidate inputs only when fully available before the later game's cutoff; target-game live data cannot change its own pregame model or forecast. R13–R20 remain unexecuted source-gated studies.
 
@@ -84,7 +94,7 @@ Current issues and missing-role reasons retain their original clocks. Current-se
 | Historical comparison | Nested chronological selection, prior-origin OOF calibration/stacking and paired errors against the fixed incumbent | Exposed 2024/2025 development evidence is retained; it is not untouched confirmation |
 | Uncertainty and stability | Predeclared support, season/week clustering, multiplicity control, calibration and stability checks | N072's 478 paired Holm comparisons yielded zero adjusted p-values below 0.05; no independent promotion is established |
 | Forward confirmation | Unchanged precommitted policy evaluated on genuinely newly issued games after registration | Full current-season former-champion evidence is incomplete; exposed 2026 replays cannot supply this gate |
-| Operational quality | Full-denominator coverage, source-gap truth, reproducible state, resource cost and rollback criteria | N075 deferred before model dispatch; N076 owner validation remains pending |
+| Operational quality | Full-denominator coverage, source-gap truth, reproducible state, resource cost and rollback criteria | N076 produced new issues but current source/replay/original-runtime and monitor gaps remain |
 
 There is no universal log-loss or MAE number that bypasses these gates. Any new practical improvement threshold and minimum support must be registered before examining the confirmation cohort.
 

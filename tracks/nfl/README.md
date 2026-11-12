@@ -1,35 +1,39 @@
-# NFL · latest execution and preserved model evidence
+# NFL · actual N076 forecasts and preserved scientific evidence
 
-[Latest all-game review](season_review_n076.html) · [Retained selected forecasts](selected_forecasts_n073.json) · [Actual N075 status](2026-11-11-n075-actual-n076-continuation.json) · [Model card](CURRENT_MODEL_CARD.md)
+[Latest all-game review](season_review_n077.html) · [Selected forecasts](selected_forecasts_n077.json) · [Actual N076 evidence](2026-11-12-n076-actual-n077-review.json) · [Model card](CURRENT_MODEL_CARD.md)
 
-## N075 returned before scientific work
+## What N076 accomplished and what failed
 
-**N075 produced zero new fits, zero new forecasts and zero paid source calls.** The November 11 invocation ran from **3:56:05 to 3:56:41 p.m. Pacific**, taking **36.301 seconds**, and returned `RESOURCE_DEFERRED_RESUMABLE` after an `EXTERNAL_IO_PRESSURE` admission refusal. All scientific stages are recorded as not invoked. This is an operational deferral, not a negative model experiment or evidence that N075's repaired models performed badly.
+**N076 completed 62 new fits (32 native / 30 meta) and 1,008 unique issue events across 112 future games.** The authenticated owner invocation took **9,819.494 seconds (2 hours 43 minutes 39 seconds)** and returned `PARTIAL_OWNER_CONTINUATION_REPAIR_REQUIRED`. The 1,008 events cover 560 distinct game/recipe pairs, including 448 later issue events on existing pairs; this is not 1,008 distinct games or independently trained models.
 
-The return does not include the measured I/O pressure, detailed lease decision or current CPU capacity. It cannot establish which workload caused pressure or whether the signal was stale. N074's previously observed 48 effective vCPUs and 12-CPU NFL ceiling remain dated evidence, not new N075 measurements. No current AWS cost estimate or model-throughput claim is supported by this return.
+The latest public export shows **448 selected rounded forecasts for all 112 future games with confirmed kickoff times**, at **2026-11-12 03:52:38 UTC**. It intentionally excludes 112 latest nonselected issue rows. The complete saved census remains **272 games: 136 completed, 112 timed future and 24 kickoff times TBD**. The table preserves current selected issues, earlier saved forward evidence and historical reconstructions separately. The preceding N072 selected snapshot remains available unchanged.
 
-N076 is the V8 engineering continuation: observable resource waiting and safe resumption without bypassing genuine pressure, followed by due forecasts and current-season champion/former-champion evaluation. **Its owner execution and scientific outcomes remain pending.** Original scientific states, source clocks and completed work remain preserved.
+The execution made 15 paid source calls and produced 472 normalized market rows. Three current core refreshes—team statistics, player statistics and play-by-play—failed an immutable source namespace check. Current champion replay accounting also failed, and the original neural forward lane lacked an authenticated available runtime. Fourteen newly final games failed an original-issued monitor read-scope check. **The run made real progress but did not complete the full-season champion/former-champion reevaluation.** A refreshed schedule does not prove refreshed model inputs.
 
-## Latest forecasts and metric-specific models
+## Champions, former champions and current-season evidence
 
-The latest authenticated selected outputs remain **N072's 772 rounded rows for 112 confirmed future games**. All **272 saved season games** remain visible: 136 completed, 112 timed future and 24 kickoff times TBD. N075 did not refresh that schedule. The original selected display cutoff remains **November 11, 11:55:36 a.m. Pacific / 19:55:36 UTC**.
+The latest role registry retains **18 historical metric/horizon selections and nine operational fallback roles**. Only the one-hour total-CRPS primary role has current outputs (112 games); the other 17 primary roles are unavailable. All nine fallback roles have outputs for 112 games. The prior N072 view had 17 primary roles available on 27 games; those dated outputs remain preserved, but they do not become current N076 champion issues. Historical one-hour/two-hour comparison labels do not relabel actual days-ahead forecasts.
 
-There are **18 primary historical metric/horizon roles and nine operational fallback roles**. Seventeen primary roles have outputs for 27 games; the one-hour total-CRPS role and fallbacks cover all 112 confirmed future games. A fallback is never presented as the missing primary champion. The original values, roles and issue clocks are unchanged.
+The [model card](CURRENT_MODEL_CARD.md) shows each selected model's separate 2024 and 2025 scores, plus the recovered original leaders. **Torch AB leads the saved original annual accuracy panel at 388/557; Torch B leads saved original log loss at 0.595426 and Brier at 0.204637.** These are different cohorts from the newer 569-game probability selection; only exact matched subsets support direct comparison. The older models remain serious finalists. Their saved evidence is preserved rather than discarded.
 
-The [model card](CURRENT_MODEL_CARD.md) retains separate 2024/2025 accuracy, log loss, Brier, margin and total results. Among 24 recovered original variants, **Torch AB leads saved annual rolling-origin accuracy at 388/557**, and **Torch B leads saved log loss at 0.595426 and Brier at 0.204637**. Exact matched-game comparisons favor these older probability models over the newer one-hour probability selection. That evidence remains exposed and subject to source-clock qualifications.
+The newly reconciled early-snapshot monitor has **135 rows over only 15 unique games**, comprising three saved combinations and three targets. The best descriptive combination has 13/15 correct, 0.456838 log loss and 0.143123 Brier; its margin MAE/RMSE are 8.829/11.363 and total MAE/RMSE 9.679/13.629. Independent durable pregame delivery and full source-publication clocks remain unproved. This panel is neither a 135-game result nor a full current-season champion replay, and it cannot select or promote a model. The archived 77-game original-model and 119-game Kalshi panels remain separate.
 
-## Current-season and market comparison gaps
+An exact approximately 0.40 full-season NFL result remains unauthenticated. A strong score on a smaller or different cohort is evidence to recover and reevaluate, not an automatic current champion.
 
-The archived original-model panel covers **77 games**, and the archived Kalshi panel covers **119 games**. Neither is a refreshed full-season score against the **136 completed-game census**, which contains 135 binary winner outcomes. Sixteen completed games lack required original pregame vectors. The approximately **0.40 full-season NFL result remains unauthenticated**, not discarded.
+## Provider coverage and promotion
 
-DraftKings, Kalshi and Polymarket are separate products with separate target definitions, resolution rules and cutoff requirements. Complete matched comparisons across all seasons/targets/horizons are unavailable; R13–R20 have no completed source-admitted comparison. Missing data is not zero error or evidence of an edge.
+| Provider | Captured current winner rows | Games | Newly qualified benchmark cells | Remaining qualification |
+|---|---:|---:|---:|---|
+| DraftKings | 54 | 27 | 0 | Receipt adapter and frozen ties-void resolution rules not admitted |
+| Kalshi | 108 | 27 | 0 | Tie resolution rules mismatch, unregistered bid/ask probability and missing provider quote clock |
+| Polymarket | 108 | 27 | 0 | Tie resolution rules mismatch and unregistered bid/ask probability; quote timestamp verified |
 
-## Forecast policy and promotion
+Each provider has no captured current winner row for 245 of the 272 census games. Current quotes cannot backfill a completed game's historical pregame cutoff. Available quotes and admitted comparable benchmarks are different counts. Complete matched winner, margin, cover and total comparisons against all three providers are not established. R13–R20 have no adapted play rows or materialized market-response features; no measured market-path benefit is claimed.
 
-The original annual rolling-origin panel uses models fitted through 2023 for 2024 and through 2024 for 2025. Archived 2026 through-2025 replays, retained original issues and genuinely future-issued rolling forecasts remain separate. A proposed full-current-season replay cannot be called an originally issued forecast, and a days-ahead issue cannot be called a final-hour issue.
+**No independent production promotion is established.** Promotion requires the registered matched game/target/horizon/source policy, prior-origin OOF selection and calibration, predeclared paired improvement/support with multiplicity and stability checks, and independent genuinely issued forward confirmation. Exposed 2024/2025 research and 2026 descriptive monitoring cannot supply untouched confirmation. There is no single log-loss or MAE threshold that bypasses these gates.
 
-**No production promotion is established.** N072's 478 paired comparisons have no Holm-adjusted p-value below 0.05. Promotion also requires predeclared matched support, authentic source and issue clocks, calibration/stability checks and independent forward confirmation. Repeated historical research does not become untouched confirmation.
+The elapsed-time compute estimate is about **$7.010 for the whole instance at $2.57/hour**, not an AWS bill or an NFL-exclusive cost allocation. This return does not establish measured parallel speedup or complete V8 acceptance. The N077 owner-runner repair has not been prepared: recovery of the canonical executable/source into this review workspace remains blocked. This N077 publication reports authenticated N076 results and does not claim a repaired or owner-executed N077 runner.
 
-[Preserved N074 actual / N075 prepared report](README_N075_SNAPSHOT.md) · [Preserved N072 evidence](README_N073_SNAPSHOT.md)
+[Previous N075 actual / N076 prepared report](README_N076_SNAPSHOT.md) · [Previous selected view](season_review_n076.html) · [Earlier N072 evidence](README_N073_SNAPSHOT.md)
 
-Only selected rounded outputs, saved scores and aggregate evidence are public. Source publication does not deploy or refresh the separately hosted Site.
+Only selected rounded outputs and qualified aggregate evidence are public. GitHub source publication does not deploy or refresh the separately hosted Site.
