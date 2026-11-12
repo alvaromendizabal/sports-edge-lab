@@ -1,29 +1,35 @@
 # NFL · latest execution and preserved model evidence
 
-[Latest all-game review](season_review_n075.html) · [Retained selected forecasts](selected_forecasts_n073.json) · [Actual N074 status](2026-11-11-n074-actual-n075-continuation.json) · [Model card](CURRENT_MODEL_CARD.md)
+[Latest all-game review](season_review_n076.html) · [Retained selected forecasts](selected_forecasts_n073.json) · [Actual N075 status](2026-11-11-n075-actual-n076-continuation.json) · [Model card](CURRENT_MODEL_CARD.md)
 
-## N074 stopped before model dispatch
+## N075 returned before scientific work
 
-**N074 produced zero new fits and zero new forecasts. The latest authenticated selected outputs remain N072's 772 rows for 112 confirmed future games. All 272 saved season games remain visible.** The original values, metric roles and issue clocks are preserved.
+**N075 produced zero new fits, zero new forecasts and zero paid source calls.** The November 11 invocation ran from **3:56:05 to 3:56:41 p.m. Pacific**, taking **36.301 seconds**, and returned `RESOURCE_DEFERRED_RESUMABLE` after an `EXTERNAL_IO_PRESSURE` admission refusal. All scientific stages are recorded as not invoked. This is an operational deferral, not a negative model experiment or evidence that N075's repaired models performed badly.
 
-The November 11 run lasted **446.789 seconds (7m 27s), from 2:29:53 to 2:37:20 p.m. Pacific**. The saved fit-state contract failed before the urgent, main and final current-model phases could dispatch. The original-model shadow lane also stopped because its required original runtime was unavailable or resolved through an unacceptable alias. Terminal receipts now establish **known zero fits and forecasts**, rather than unknown whole-run counts. The prior local acceptance suite did not exercise all authentic retained-state hydration paths or verify that the required runtime existed on the owner host.
+The return does not include the measured I/O pressure, detailed lease decision or current CPU capacity. It cannot establish which workload caused pressure or whether the signal was stale. N074's previously observed 48 effective vCPUs and 12-CPU NFL ceiling remain dated evidence, not new N075 measurements. No current AWS cost estimate or model-throughput claim is supported by this return.
 
-The host exposed **48 effective vCPUs and a 12-CPU NFL ceiling**, but no scientific fit workers launched. Source collection made **15 paid calls using 71 known credits**, leaving **4,931,898** reported credits. The whole-instance compute-time estimate is **$0.318958 at $2.57/hour**, excluding storage, requests, providers, idle time and allocation among projects; it is not an AWS bill. Refresh activity does not earn training or forecast credit.
+N076 is the V8 engineering continuation: observable resource waiting and safe resumption without bypassing genuine pressure, followed by due forecasts and current-season champion/former-champion evaluation. **Its owner execution and scientific outcomes remain pending.** Original scientific states, source clocks and completed work remain preserved.
 
-## What the model evidence supports
+## Latest forecasts and metric-specific models
 
-The [model card](CURRENT_MODEL_CARD.md) preserves metric-specific 2024/2025 accuracy, log loss, Brier, margin and total results, plus former-model comparisons. Among 24 recovered original variants, **Torch AB has the best saved annual rolling-origin accuracy (388/557 correct)** and **Torch B has the best saved log loss (0.595426) and Brier (0.204637)**. On exact matched games, the older probability models outperform the newer one-hour probability selection. Their source-clock qualifications and selection exposure remain explicit.
+The latest authenticated selected outputs remain **N072's 772 rounded rows for 112 confirmed future games**. All **272 saved season games** remain visible: 136 completed, 112 timed future and 24 kickoff times TBD. N075 did not refresh that schedule. The original selected display cutoff remains **November 11, 11:55:36 a.m. Pacific / 19:55:36 UTC**.
 
-A complete 2026 former-champion refresh is still missing. The archived **77-game** original-model panel and **119-game** Kalshi panel are retained separately from the **136 completed-game census**; neither is a full-season newly issued score. The remembered approximately **0.40 full-season NFL log loss remains unauthenticated**. No result is discarded or silently promoted on that basis.
+There are **18 primary historical metric/horizon roles and nine operational fallback roles**. Seventeen primary roles have outputs for 27 games; the one-hour total-CRPS role and fallbacks cover all 112 confirmed future games. A fallback is never presented as the missing primary champion. The original values, roles and issue clocks are unchanged.
 
-DraftKings, Kalshi and Polymarket remain separate sources. A complete matched provider comparison across all targets, seasons and horizons is unavailable; historical market-response studies R13–R20 have no source-admitted completed comparison. Missing observations stay missing.
+The [model card](CURRENT_MODEL_CARD.md) retains separate 2024/2025 accuracy, log loss, Brier, margin and total results. Among 24 recovered original variants, **Torch AB leads saved annual rolling-origin accuracy at 388/557**, and **Torch B leads saved log loss at 0.595426 and Brier at 0.204637**. Exact matched-game comparisons favor these older probability models over the newer one-hour probability selection. That evidence remains exposed and subject to source-clock qualifications.
 
-## Forecast and champion continuity
+## Current-season and market comparison gaps
 
-The retained report covers **136 completed games, 112 confirmed future games and 24 official kickoff times TBD**. Its **18 primary historical metric/horizon roles and nine operational fallback roles** remain separate. Seventeen primary roles have outputs for 27 games; the one-hour total-CRPS role and fallbacks cover all 112 confirmed future games. Missing primary outputs stay explicit. The report distinguishes original issues, qualified early snapshots and selected reconstructions; it does not pool them into a prospective score.
+The archived original-model panel covers **77 games**, and the archived Kalshi panel covers **119 games**. Neither is a refreshed full-season score against the **136 completed-game census**, which contains 135 binary winner outcomes. Sixteen completed games lack required original pregame vectors. The approximately **0.40 full-season NFL result remains unauthenticated**, not discarded.
 
-N075 is the V8 engineering continuation. It must repair the authentic state-reuse path, preserve completed fits, and prioritize current-season champion/former-champion comparisons and due forecasts. **Its owner execution and scientific outcomes are pending.** Prepared code, local tests and documentation are not demonstrated model improvement or production promotion.
+DraftKings, Kalshi and Polymarket are separate products with separate target, settlement and cutoff requirements. Complete matched comparisons across all seasons/targets/horizons are unavailable; R13–R20 have no completed source-admitted comparison. Missing data is not zero error or evidence of an edge.
 
-[Preserved N073 actual / N074 prepared report](README_N074_SNAPSHOT.md) · [Preserved N072 evidence](README_N073_SNAPSHOT.md)
+## Forecast policy and promotion
+
+The original annual rolling-origin panel uses models fitted through 2023 for 2024 and through 2024 for 2025. Archived 2026 through-2025 replays, retained original issues and genuinely future-issued rolling forecasts remain separate. A proposed full-current-season replay cannot be called an originally issued forecast, and a days-ahead issue cannot be called a final-hour issue.
+
+**No production promotion is established.** N072's 478 paired comparisons have no Holm-adjusted p-value below 0.05. Promotion also requires predeclared matched support, authentic source and issue clocks, calibration/stability checks and independent forward confirmation. Repeated historical research does not become untouched confirmation.
+
+[Preserved N074 actual / N075 prepared report](README_N075_SNAPSHOT.md) · [Preserved N072 evidence](README_N073_SNAPSHOT.md)
 
 Only selected rounded outputs, saved scores and aggregate evidence are public. Source publication does not deploy or refresh the separately hosted Site.
