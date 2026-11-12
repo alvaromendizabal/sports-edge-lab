@@ -30,7 +30,7 @@ def main():
                 assert page.locator("#late-rows tbody tr").count() == 46
                 assert page.locator("#outcome-sources tbody tr").count() == 38
                 assert "1–25 of 164" in page.locator("#candidate-count").inner_text()
-                assert page.evaluate("window.__ncaaB063R2.ownerR2Executed") is False
+                assert page.evaluate("window.__ncaaB063R2.ownerR2Executed") is True
                 page.locator("#candidate-next").click()
                 assert "26–50 of 164" in page.locator("#candidate-count").inner_text()
                 page.locator("#league").select_option("ncaaw")
@@ -69,3 +69,4 @@ def main():
 
 if __name__ == "__main__":
     main()
+
