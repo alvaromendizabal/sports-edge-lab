@@ -1,6 +1,7 @@
 """Publication checks for separately recovered, already issued FBS forecasts."""
 from pathlib import Path
 from datetime import datetime
+import base64
 import hashlib
 import json
 import re
@@ -78,5 +79,10 @@ class RecoveredOriginalPublic(unittest.TestCase):
         self.assertEqual(self.page.count('data-recovered-game='),55)
         self.assertIn('no combined prospective score',self.page)
         self.assertIn('recovered-original-v069.json',self.page)
+
+    def test_offline_download_contains_exact_public_json(self):
+        anchors=re.findall(r'<a href="data:application/json;charset=utf-8;base64,([A-Za-z0-9+/=]+)" download="recovered-original-v069.json">',self.page)
+        self.assertEqual(len(anchors),1)
+        self.assertEqual(base64.b64decode(anchors[0],validate=True),(P/'recovered-original-v069.json').read_bytes())
 
 if __name__=='__main__': unittest.main()
