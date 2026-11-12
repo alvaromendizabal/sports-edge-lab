@@ -40,7 +40,10 @@ ASSETS += ('actual-owner-v056.json','historical-contenders-v057.json')
 ASSETS += ('latest-v071.html','latest-v071.js','latest-v071.css','latest-v071.json',
            'issued-v070-selected.csv','season-inventory-v071.csv',
            'V071_ACTUAL_V070_REVIEW_2026-11-12.md')
-SOURCE_FILES = {'index.html':'latest-v071.html','season-archive.html':'index.html'}
+ASSETS += ('latest-v072.html','latest-v072.js','latest-v072.css','latest-v072.json',
+           'issued-v071-selected.csv','season-inventory-v072.csv',
+           'V072_ACTUAL_V071_REVIEW_2026-11-12.md')
+SOURCE_FILES = {'index.html':'latest-v072.html','season-archive.html':'index.html'}
 
 
 def committed(commit, path):
@@ -140,7 +143,13 @@ def export(commit, output):
               'v039_optional_study':{k:optional[k] for k in ('counts','sources','generated_at','evidence_class','forecast_issued','promotion_allowed')},
               'three_season_explorer':{k:three[k] for k in ('identified_games','predicted_games','seasons','sources','new_fits','new_provider_requests','new_issues')},
               'publication_is_not_source_refresh':True,'public_files':files}
-    manifest['primary_dashboard_source']='docs/fbs/latest-v071.html'
+    manifest['primary_dashboard_source']='docs/fbs/latest-v072.html'
+    actual_v071=json.loads(committed(commit,'docs/fbs/latest-v072.json'))
+    manifest['actual_v071_selected_report']={k:actual_v071[k] for k in (
+        'schema','actual_owner_release','source_as_of_utc','source_capture_started_at',
+        'source_capture_completed_at','source_owner_return_sha256','run_counts','refresh',
+        'season_coverage','champions','continuity','publication')}
+    manifest['previous_actual_v070_dashboard_retained_at']='latest-v071.html'
     actual_v070=json.loads(committed(commit,'docs/fbs/latest-v071.json'))
     manifest['actual_v070_selected_report']={k:actual_v070[k] for k in (
         'schema','actual_owner_release','source_as_of_utc','source_capture_started_at',

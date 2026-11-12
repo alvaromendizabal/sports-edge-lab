@@ -23,6 +23,7 @@ jobs:
           python -m unittest discover -s examples/fbs_contracts/tests -v
           python tests/test_fbs_v054_public_evidence.py
           python tests/test_fbs_v071_public.py
+          python tests/test_fbs_v072_public.py
           node tests/fbs_v054_public_view.test.cjs
       - name: Execute twice and verify deterministic evidence page
         run: |
@@ -80,6 +81,7 @@ jobs:
           node examples/fbs_contracts/tests/test_season_browser.cjs
           node tests/fbs_v054_browser.test.cjs
           node tests/fbs_v071_browser.test.cjs
+          node tests/fbs_v072_browser.test.cjs
       - name: Preserve desktop and mobile evidence views
         uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02
         with:
