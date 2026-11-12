@@ -344,8 +344,9 @@ def render_landing(data):
 
 
 def outputs():
+    from b063r2_dashboard import evidence_outputs
     data=[evidence(league) for league in ('ncaam','ncaaw')]
-    return {**{ROOT/'tracks'/d['league']/'index.html':render_track(d) for d in data},
+    return {**evidence_outputs(), **{ROOT/'tracks'/d['league']/'index.html':render_track(d) for d in data},
             ROOT/'docs/ncaa/index.html':render_landing(data),
             ROOT/'docs/ncaa/private-report/index.html':(HERE/'private_report.html.tmpl').read_text()
                 .replace('__B058_LATEST_REVIEW__',latest_review_html())
