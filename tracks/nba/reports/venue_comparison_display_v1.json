@@ -1,0 +1,2158 @@
+{
+  "schema": "sports-edge-lab.nba.saved-venue-display.v1",
+  "source": {
+    "base_commit": "1eba99225d577b42d94a58f130b32344fd267f37",
+    "evidence_path": "tracks/nba/reports/b077_owner_evidence.json",
+    "evidence_git_blob": "c8e46fcfcd6ce2461c969785c9847bbd0c3e0c5b",
+    "original_html_git_blob": "9fe263707541048de71d0d30b45429e59fb455c8",
+    "unchanged_selected_json_git_blob": "79f17d685fdbbb04483a72cac4780d2700ed701e",
+    "actual_owner_release": "B076",
+    "owner_return_sha256": "9a45d5aadea5eb7d3af4d5276cd1041c3405c04070d1608243a5ed2c34c8d465"
+  },
+  "display_only": true,
+  "new_fits": 0,
+  "new_inference": 0,
+  "new_metric_calculations": 0,
+  "new_forecast_issues": 0,
+  "new_promotions": 0,
+  "source_clocks": {
+    "latest_forecast_source_cutoff": "2026-11-11T19:53:01.747439+00:00",
+    "latest_original_issue": "2026-11-11T20:00:36.717077+00:00",
+    "report_evidence_as_of": "2026-11-11T21:51:50Z",
+    "comparison_specific_quote_clock_ranges": "NOT_INCLUDED_IN_PUBLISHED_AGGREGATES"
+  },
+  "providers": [
+    {
+      "id": "DRAFTKINGS",
+      "name": "DraftKings",
+      "matched_games": 0,
+      "scope": "No admitted matched games in this saved current monitor",
+      "source_pointer": "/current_matched_provider_comparisons/DraftKings_matched_games"
+    },
+    {
+      "id": "KALSHI",
+      "name": "Kalshi",
+      "matched_games": 6,
+      "scope": "T60 accuracy role · early outlook · winner reference",
+      "source_pointer": "/current_matched_provider_comparisons/saved_same_game_comparisons/0"
+    },
+    {
+      "id": "POLYMARKET_US",
+      "name": "Polymarket US",
+      "matched_games": 5,
+      "scope": "T60 accuracy role · early outlook · winner reference",
+      "source_pointer": "/current_matched_provider_comparisons/saved_same_game_comparisons/1"
+    },
+    {
+      "id": "POLYMARKET_INTERNATIONAL",
+      "name": "Polymarket international",
+      "matched_games": 0,
+      "scope": "No admitted matched games in this saved current monitor",
+      "source_pointer": "/current_matched_provider_comparisons/Polymarket_international_matched_games"
+    }
+  ],
+  "winner_comparisons": [
+    {
+      "source_index": 0,
+      "saved": {
+        "coverage_fraction": 1,
+        "evaluation_track": "ORIGINAL_ISSUED_ROLLING_CHAMPION",
+        "evidence_class": "ORIGINAL_ISSUED_EARLY_OUTLOOK_CHAMPION_SHADOW",
+        "fair_probability_games": 0,
+        "fair_probability_metrics": null,
+        "favorite_comparison": {
+          "cluster_weeks": 1,
+          "counts": {
+            "BOTH_CORRECT": 4,
+            "BOTH_WRONG": 1,
+            "MODEL_ONLY_CORRECT": 0,
+            "REFERENCE_ONLY_CORRECT": 1
+          },
+          "games": 6,
+          "inference": "DESCRIPTIVE_PAIRED_COMPARISON_NOT_REPEATED_SELECTION_ADJUSTED_CONFIRMATION",
+          "p_values": null,
+          "paired_accuracy_delta": -0.16666666666666666,
+          "paired_accuracy_descriptive_interval": null,
+          "probabilistic_scores": null,
+          "uncertainty_status": "INSUFFICIENT_DISTINCT_WEEK_BLOCKS"
+        },
+        "full_universe_games": 6,
+        "horizon_minutes": 60,
+        "issue_horizon_class": "EARLY_OUTLOOK",
+        "market_qualified_directional_games": 6,
+        "market_qualified_probability_reference_games": 6,
+        "model_full_universe": {
+          "accuracy": 0.6666666666666666,
+          "brier": 0.1831814886570375,
+          "correct_winners": 4,
+          "ece_10_fixed_bins": 0.047337845058636974,
+          "games": 6,
+          "log_loss": 0.5395397123851359,
+          "roc_auc": 0.8888888888888888
+        },
+        "model_on_same_reference_games": {
+          "accuracy": 0.6666666666666666,
+          "brier": 0.1831814886570375,
+          "correct_winners": 4,
+          "ece_10_fixed_bins": 0.047337845058636974,
+          "games": 6,
+          "log_loss": 0.5395397123851359,
+          "roc_auc": 0.8888888888888888
+        },
+        "provider": "KALSHI",
+        "raw_bbo_midpoint_reference": {
+          "accuracy": 0.8333333333333334,
+          "brier": 0.13899166666666665,
+          "correct_winners": 5,
+          "ece_10_fixed_bins": 0.18500000000000003,
+          "games": 6,
+          "log_loss": 0.444999991603878,
+          "roc_auc": 0.8888888888888888
+        },
+        "reference_probability_class": "RAW_BINARY_BBO_MIDPOINT_NOT_FAIR_NO_VIG_OR_EXECUTABLE",
+        "season_end_year": 2027,
+        "selected_metric_roles": [
+          "accuracy"
+        ],
+        "selection_or_promotion_allowed": false
+      }
+    },
+    {
+      "source_index": 1,
+      "saved": {
+        "coverage_fraction": 0.8333333333333334,
+        "evaluation_track": "ORIGINAL_ISSUED_ROLLING_CHAMPION",
+        "evidence_class": "ORIGINAL_ISSUED_EARLY_OUTLOOK_CHAMPION_SHADOW",
+        "fair_probability_games": 0,
+        "fair_probability_metrics": null,
+        "favorite_comparison": {
+          "cluster_weeks": 1,
+          "counts": {
+            "BOTH_CORRECT": 4,
+            "BOTH_WRONG": 1,
+            "MODEL_ONLY_CORRECT": 0,
+            "REFERENCE_ONLY_CORRECT": 0
+          },
+          "games": 5,
+          "inference": "DESCRIPTIVE_PAIRED_COMPARISON_NOT_REPEATED_SELECTION_ADJUSTED_CONFIRMATION",
+          "p_values": null,
+          "paired_accuracy_delta": 0,
+          "paired_accuracy_descriptive_interval": null,
+          "probabilistic_scores": null,
+          "uncertainty_status": "INSUFFICIENT_DISTINCT_WEEK_BLOCKS"
+        },
+        "full_universe_games": 6,
+        "horizon_minutes": 60,
+        "issue_horizon_class": "EARLY_OUTLOOK",
+        "market_qualified_directional_games": 5,
+        "market_qualified_probability_reference_games": 5,
+        "model_full_universe": {
+          "accuracy": 0.6666666666666666,
+          "brier": 0.1831814886570375,
+          "correct_winners": 4,
+          "ece_10_fixed_bins": 0.047337845058636974,
+          "games": 6,
+          "log_loss": 0.5395397123851359,
+          "roc_auc": 0.8888888888888888
+        },
+        "model_on_same_reference_games": {
+          "accuracy": 0.8,
+          "brier": 0.1620576124281074,
+          "correct_winners": 4,
+          "ece_10_fixed_bins": 0.11874471501781023,
+          "games": 5,
+          "log_loss": 0.4932683003559406,
+          "roc_auc": 0.8333333333333334
+        },
+        "provider": "POLYMARKET_US",
+        "raw_bbo_midpoint_reference": {
+          "accuracy": 0.8,
+          "brier": 0.13494499999999998,
+          "correct_winners": 4,
+          "ece_10_fixed_bins": 0.141,
+          "games": 5,
+          "log_loss": 0.43122411996038224,
+          "roc_auc": 0.8333333333333334
+        },
+        "reference_probability_class": "RAW_BINARY_BBO_MIDPOINT_NOT_FAIR_NO_VIG_OR_EXECUTABLE",
+        "season_end_year": 2027,
+        "selected_metric_roles": [
+          "accuracy"
+        ],
+        "selection_or_promotion_allowed": false
+      }
+    },
+    {
+      "source_index": 2,
+      "saved": {
+        "coverage_fraction": 0.8333333333333334,
+        "evaluation_track": "ORIGINAL_ISSUED_ROLLING_CHAMPION",
+        "evidence_class": "ORIGINAL_ISSUED_EARLY_OUTLOOK_CHAMPION_SHADOW",
+        "fair_probability_games": 0,
+        "fair_probability_metrics": null,
+        "favorite_comparison": {
+          "cluster_weeks": 1,
+          "counts": {
+            "BOTH_CORRECT": 3,
+            "BOTH_WRONG": 1,
+            "MODEL_ONLY_CORRECT": 0,
+            "REFERENCE_ONLY_CORRECT": 1
+          },
+          "games": 5,
+          "inference": "DESCRIPTIVE_PAIRED_COMPARISON_NOT_REPEATED_SELECTION_ADJUSTED_CONFIRMATION",
+          "p_values": null,
+          "paired_accuracy_delta": -0.2,
+          "paired_accuracy_descriptive_interval": null,
+          "probabilistic_scores": null,
+          "uncertainty_status": "INSUFFICIENT_DISTINCT_WEEK_BLOCKS"
+        },
+        "full_universe_games": 6,
+        "horizon_minutes": 120,
+        "issue_horizon_class": "EARLY_OUTLOOK",
+        "market_qualified_directional_games": 5,
+        "market_qualified_probability_reference_games": 5,
+        "model_full_universe": {
+          "accuracy": 0.6666666666666666,
+          "brier": 0.17672334329962971,
+          "correct_winners": 4,
+          "ece_10_fixed_bins": 0.1759763279767471,
+          "games": 6,
+          "log_loss": 0.5234014815502278,
+          "roc_auc": 1
+        },
+        "model_on_same_reference_games": {
+          "accuracy": 0.6,
+          "brier": 0.2109090412028316,
+          "correct_winners": 3,
+          "ece_10_fixed_bins": 0.19594680617309454,
+          "games": 5,
+          "log_loss": 0.6122463084035148,
+          "roc_auc": 1
+        },
+        "provider": "KALSHI",
+        "raw_bbo_midpoint_reference": {
+          "accuracy": 0.8,
+          "brier": 0.164585,
+          "correct_winners": 4,
+          "ece_10_fixed_bins": 0.201,
+          "games": 5,
+          "log_loss": 0.5118136777831973,
+          "roc_auc": 0.8333333333333334
+        },
+        "reference_probability_class": "RAW_BINARY_BBO_MIDPOINT_NOT_FAIR_NO_VIG_OR_EXECUTABLE",
+        "season_end_year": 2027,
+        "selected_metric_roles": [
+          "accuracy"
+        ],
+        "selection_or_promotion_allowed": false
+      }
+    },
+    {
+      "source_index": 3,
+      "saved": {
+        "coverage_fraction": 0.6666666666666666,
+        "evaluation_track": "ORIGINAL_ISSUED_ROLLING_CHAMPION",
+        "evidence_class": "ORIGINAL_ISSUED_EARLY_OUTLOOK_CHAMPION_SHADOW",
+        "fair_probability_games": 0,
+        "fair_probability_metrics": null,
+        "favorite_comparison": {
+          "cluster_weeks": 1,
+          "counts": {
+            "BOTH_CORRECT": 3,
+            "BOTH_WRONG": 1,
+            "MODEL_ONLY_CORRECT": 0,
+            "REFERENCE_ONLY_CORRECT": 0
+          },
+          "games": 4,
+          "inference": "DESCRIPTIVE_PAIRED_COMPARISON_NOT_REPEATED_SELECTION_ADJUSTED_CONFIRMATION",
+          "p_values": null,
+          "paired_accuracy_delta": 0,
+          "paired_accuracy_descriptive_interval": null,
+          "probabilistic_scores": null,
+          "uncertainty_status": "INSUFFICIENT_DISTINCT_WEEK_BLOCKS"
+        },
+        "full_universe_games": 6,
+        "horizon_minutes": 120,
+        "issue_horizon_class": "EARLY_OUTLOOK",
+        "market_qualified_directional_games": 4,
+        "market_qualified_probability_reference_games": 4,
+        "model_full_universe": {
+          "accuracy": 0.6666666666666666,
+          "brier": 0.17672334329962971,
+          "correct_winners": 4,
+          "ece_10_fixed_bins": 0.1759763279767471,
+          "games": 6,
+          "log_loss": 0.5234014815502278,
+          "roc_auc": 1
+        },
+        "model_on_same_reference_games": {
+          "accuracy": 0.75,
+          "brier": 0.1933645087506376,
+          "correct_winners": 3,
+          "ece_10_fixed_bins": 0.11238937096100099,
+          "games": 4,
+          "log_loss": 0.5764583138029031,
+          "roc_auc": 1
+        },
+        "provider": "POLYMARKET_US",
+        "raw_bbo_midpoint_reference": {
+          "accuracy": 0.75,
+          "brier": 0.165925,
+          "correct_winners": 3,
+          "ece_10_fixed_bins": 0.15,
+          "games": 4,
+          "log_loss": 0.5112972597736575,
+          "roc_auc": 0.6666666666666666
+        },
+        "reference_probability_class": "RAW_BINARY_BBO_MIDPOINT_NOT_FAIR_NO_VIG_OR_EXECUTABLE",
+        "season_end_year": 2027,
+        "selected_metric_roles": [
+          "accuracy"
+        ],
+        "selection_or_promotion_allowed": false
+      }
+    },
+    {
+      "source_index": 4,
+      "saved": {
+        "coverage_fraction": 1,
+        "evaluation_track": "ORIGINAL_ISSUED_ROLLING_CHAMPION",
+        "evidence_class": "ORIGINAL_ISSUED_NOMINAL_HORIZON_CHAMPION_SHADOW",
+        "fair_probability_games": 0,
+        "fair_probability_metrics": null,
+        "favorite_comparison": {
+          "cluster_weeks": 1,
+          "counts": {
+            "BOTH_CORRECT": 1,
+            "BOTH_WRONG": 0,
+            "MODEL_ONLY_CORRECT": 0,
+            "REFERENCE_ONLY_CORRECT": 0
+          },
+          "games": 1,
+          "inference": "DESCRIPTIVE_PAIRED_COMPARISON_NOT_REPEATED_SELECTION_ADJUSTED_CONFIRMATION",
+          "p_values": null,
+          "paired_accuracy_delta": 0,
+          "paired_accuracy_descriptive_interval": null,
+          "probabilistic_scores": null,
+          "uncertainty_status": "INSUFFICIENT_DISTINCT_WEEK_BLOCKS"
+        },
+        "full_universe_games": 1,
+        "horizon_minutes": 120,
+        "issue_horizon_class": "NOMINAL",
+        "market_qualified_directional_games": 1,
+        "market_qualified_probability_reference_games": 1,
+        "model_full_universe": {
+          "accuracy": 1,
+          "brier": 0.00579485378362023,
+          "correct_winners": 1,
+          "ece_10_fixed_bins": 0.07612393699500986,
+          "games": 1,
+          "log_loss": 0.07917734728379319,
+          "roc_auc": null
+        },
+        "model_on_same_reference_games": {
+          "accuracy": 1,
+          "brier": 0.00579485378362023,
+          "correct_winners": 1,
+          "ece_10_fixed_bins": 0.07612393699500986,
+          "games": 1,
+          "log_loss": 0.07917734728379319,
+          "roc_auc": null
+        },
+        "provider": "KALSHI",
+        "raw_bbo_midpoint_reference": {
+          "accuracy": 1,
+          "brier": 0.011024999999999997,
+          "correct_winners": 1,
+          "ece_10_fixed_bins": 0.10499999999999998,
+          "games": 1,
+          "log_loss": 0.11093156070728166,
+          "roc_auc": null
+        },
+        "reference_probability_class": "RAW_BINARY_BBO_MIDPOINT_NOT_FAIR_NO_VIG_OR_EXECUTABLE",
+        "season_end_year": 2027,
+        "selected_metric_roles": [
+          "accuracy"
+        ],
+        "selection_or_promotion_allowed": false
+      }
+    },
+    {
+      "source_index": 5,
+      "saved": {
+        "coverage_fraction": 1,
+        "evaluation_track": "ORIGINAL_ISSUED_ROLLING_CHAMPION",
+        "evidence_class": "ORIGINAL_ISSUED_NOMINAL_HORIZON_CHAMPION_SHADOW",
+        "fair_probability_games": 0,
+        "fair_probability_metrics": null,
+        "favorite_comparison": {
+          "cluster_weeks": 1,
+          "counts": {
+            "BOTH_CORRECT": 1,
+            "BOTH_WRONG": 0,
+            "MODEL_ONLY_CORRECT": 0,
+            "REFERENCE_ONLY_CORRECT": 0
+          },
+          "games": 1,
+          "inference": "DESCRIPTIVE_PAIRED_COMPARISON_NOT_REPEATED_SELECTION_ADJUSTED_CONFIRMATION",
+          "p_values": null,
+          "paired_accuracy_delta": 0,
+          "paired_accuracy_descriptive_interval": null,
+          "probabilistic_scores": null,
+          "uncertainty_status": "INSUFFICIENT_DISTINCT_WEEK_BLOCKS"
+        },
+        "full_universe_games": 1,
+        "horizon_minutes": 120,
+        "issue_horizon_class": "NOMINAL",
+        "market_qualified_directional_games": 1,
+        "market_qualified_probability_reference_games": 1,
+        "model_full_universe": {
+          "accuracy": 1,
+          "brier": 0.00579485378362023,
+          "correct_winners": 1,
+          "ece_10_fixed_bins": 0.07612393699500986,
+          "games": 1,
+          "log_loss": 0.07917734728379319,
+          "roc_auc": null
+        },
+        "model_on_same_reference_games": {
+          "accuracy": 1,
+          "brier": 0.00579485378362023,
+          "correct_winners": 1,
+          "ece_10_fixed_bins": 0.07612393699500986,
+          "games": 1,
+          "log_loss": 0.07917734728379319,
+          "roc_auc": null
+        },
+        "provider": "POLYMARKET_US",
+        "raw_bbo_midpoint_reference": {
+          "accuracy": 1,
+          "brier": 0.011024999999999997,
+          "correct_winners": 1,
+          "ece_10_fixed_bins": 0.10499999999999998,
+          "games": 1,
+          "log_loss": 0.11093156070728166,
+          "roc_auc": null
+        },
+        "reference_probability_class": "RAW_BINARY_BBO_MIDPOINT_NOT_FAIR_NO_VIG_OR_EXECUTABLE",
+        "season_end_year": 2027,
+        "selected_metric_roles": [
+          "accuracy"
+        ],
+        "selection_or_promotion_allowed": false
+      }
+    },
+    {
+      "source_index": 6,
+      "saved": {
+        "coverage_fraction": 0.8333333333333334,
+        "evaluation_track": "ORIGINAL_ISSUED_ROLLING_CHAMPION",
+        "evidence_class": "ORIGINAL_ISSUED_EARLY_OUTLOOK_CHAMPION_SHADOW",
+        "fair_probability_games": 0,
+        "fair_probability_metrics": null,
+        "favorite_comparison": {
+          "cluster_weeks": 1,
+          "counts": {
+            "BOTH_CORRECT": 3,
+            "BOTH_WRONG": 1,
+            "MODEL_ONLY_CORRECT": 0,
+            "REFERENCE_ONLY_CORRECT": 1
+          },
+          "games": 5,
+          "inference": "DESCRIPTIVE_PAIRED_COMPARISON_NOT_REPEATED_SELECTION_ADJUSTED_CONFIRMATION",
+          "p_values": null,
+          "paired_accuracy_delta": -0.2,
+          "paired_accuracy_descriptive_interval": null,
+          "probabilistic_scores": null,
+          "uncertainty_status": "INSUFFICIENT_DISTINCT_WEEK_BLOCKS"
+        },
+        "full_universe_games": 6,
+        "horizon_minutes": 120,
+        "issue_horizon_class": "EARLY_OUTLOOK",
+        "market_qualified_directional_games": 5,
+        "market_qualified_probability_reference_games": 5,
+        "model_full_universe": {
+          "accuracy": 0.6666666666666666,
+          "brier": 0.18100903857450054,
+          "correct_winners": 4,
+          "ece_10_fixed_bins": 0.12527487719604757,
+          "games": 6,
+          "log_loss": 0.5384810971234639,
+          "roc_auc": 0.7777777777777778
+        },
+        "model_on_same_reference_games": {
+          "accuracy": 0.6,
+          "brier": 0.2137446355475805,
+          "correct_winners": 3,
+          "ece_10_fixed_bins": 0.12400036064691777,
+          "games": 5,
+          "log_loss": 0.617945817620489,
+          "roc_auc": 0.6666666666666666
+        },
+        "provider": "KALSHI",
+        "raw_bbo_midpoint_reference": {
+          "accuracy": 0.8,
+          "brier": 0.164585,
+          "correct_winners": 4,
+          "ece_10_fixed_bins": 0.201,
+          "games": 5,
+          "log_loss": 0.5118136777831973,
+          "roc_auc": 0.8333333333333334
+        },
+        "reference_probability_class": "RAW_BINARY_BBO_MIDPOINT_NOT_FAIR_NO_VIG_OR_EXECUTABLE",
+        "season_end_year": 2027,
+        "selected_metric_roles": [
+          "brier"
+        ],
+        "selection_or_promotion_allowed": false
+      }
+    },
+    {
+      "source_index": 7,
+      "saved": {
+        "coverage_fraction": 0.6666666666666666,
+        "evaluation_track": "ORIGINAL_ISSUED_ROLLING_CHAMPION",
+        "evidence_class": "ORIGINAL_ISSUED_EARLY_OUTLOOK_CHAMPION_SHADOW",
+        "fair_probability_games": 0,
+        "fair_probability_metrics": null,
+        "favorite_comparison": {
+          "cluster_weeks": 1,
+          "counts": {
+            "BOTH_CORRECT": 3,
+            "BOTH_WRONG": 1,
+            "MODEL_ONLY_CORRECT": 0,
+            "REFERENCE_ONLY_CORRECT": 0
+          },
+          "games": 4,
+          "inference": "DESCRIPTIVE_PAIRED_COMPARISON_NOT_REPEATED_SELECTION_ADJUSTED_CONFIRMATION",
+          "p_values": null,
+          "paired_accuracy_delta": 0,
+          "paired_accuracy_descriptive_interval": null,
+          "probabilistic_scores": null,
+          "uncertainty_status": "INSUFFICIENT_DISTINCT_WEEK_BLOCKS"
+        },
+        "full_universe_games": 6,
+        "horizon_minutes": 120,
+        "issue_horizon_class": "EARLY_OUTLOOK",
+        "market_qualified_directional_games": 4,
+        "market_qualified_probability_reference_games": 4,
+        "model_full_universe": {
+          "accuracy": 0.6666666666666666,
+          "brier": 0.18100903857450054,
+          "correct_winners": 4,
+          "ece_10_fixed_bins": 0.12527487719604757,
+          "games": 6,
+          "log_loss": 0.5384810971234639,
+          "roc_auc": 0.7777777777777778
+        },
+        "model_on_same_reference_games": {
+          "accuracy": 0.75,
+          "brier": 0.20230009777441216,
+          "correct_winners": 3,
+          "ece_10_fixed_bins": 0.28235889836912853,
+          "games": 4,
+          "log_loss": 0.5943835158081086,
+          "roc_auc": 0.3333333333333333
+        },
+        "provider": "POLYMARKET_US",
+        "raw_bbo_midpoint_reference": {
+          "accuracy": 0.75,
+          "brier": 0.165925,
+          "correct_winners": 3,
+          "ece_10_fixed_bins": 0.15,
+          "games": 4,
+          "log_loss": 0.5112972597736575,
+          "roc_auc": 0.6666666666666666
+        },
+        "reference_probability_class": "RAW_BINARY_BBO_MIDPOINT_NOT_FAIR_NO_VIG_OR_EXECUTABLE",
+        "season_end_year": 2027,
+        "selected_metric_roles": [
+          "brier"
+        ],
+        "selection_or_promotion_allowed": false
+      }
+    },
+    {
+      "source_index": 8,
+      "saved": {
+        "coverage_fraction": 1,
+        "evaluation_track": "ORIGINAL_ISSUED_ROLLING_CHAMPION",
+        "evidence_class": "ORIGINAL_ISSUED_NOMINAL_HORIZON_CHAMPION_SHADOW",
+        "fair_probability_games": 0,
+        "fair_probability_metrics": null,
+        "favorite_comparison": {
+          "cluster_weeks": 1,
+          "counts": {
+            "BOTH_CORRECT": 1,
+            "BOTH_WRONG": 0,
+            "MODEL_ONLY_CORRECT": 0,
+            "REFERENCE_ONLY_CORRECT": 0
+          },
+          "games": 1,
+          "inference": "DESCRIPTIVE_PAIRED_COMPARISON_NOT_REPEATED_SELECTION_ADJUSTED_CONFIRMATION",
+          "p_values": null,
+          "paired_accuracy_delta": 0,
+          "paired_accuracy_descriptive_interval": null,
+          "probabilistic_scores": null,
+          "uncertainty_status": "INSUFFICIENT_DISTINCT_WEEK_BLOCKS"
+        },
+        "full_universe_games": 1,
+        "horizon_minutes": 120,
+        "issue_horizon_class": "NOMINAL",
+        "market_qualified_directional_games": 1,
+        "market_qualified_probability_reference_games": 1,
+        "model_full_universe": {
+          "accuracy": 1,
+          "brier": 0.017331053709100576,
+          "correct_winners": 1,
+          "ece_10_fixed_bins": 0.13164745994169647,
+          "games": 1,
+          "log_loss": 0.14115749463833888,
+          "roc_auc": null
+        },
+        "model_on_same_reference_games": {
+          "accuracy": 1,
+          "brier": 0.017331053709100576,
+          "correct_winners": 1,
+          "ece_10_fixed_bins": 0.13164745994169647,
+          "games": 1,
+          "log_loss": 0.14115749463833888,
+          "roc_auc": null
+        },
+        "provider": "KALSHI",
+        "raw_bbo_midpoint_reference": {
+          "accuracy": 1,
+          "brier": 0.011024999999999997,
+          "correct_winners": 1,
+          "ece_10_fixed_bins": 0.10499999999999998,
+          "games": 1,
+          "log_loss": 0.11093156070728166,
+          "roc_auc": null
+        },
+        "reference_probability_class": "RAW_BINARY_BBO_MIDPOINT_NOT_FAIR_NO_VIG_OR_EXECUTABLE",
+        "season_end_year": 2027,
+        "selected_metric_roles": [
+          "brier"
+        ],
+        "selection_or_promotion_allowed": false
+      }
+    },
+    {
+      "source_index": 9,
+      "saved": {
+        "coverage_fraction": 1,
+        "evaluation_track": "ORIGINAL_ISSUED_ROLLING_CHAMPION",
+        "evidence_class": "ORIGINAL_ISSUED_NOMINAL_HORIZON_CHAMPION_SHADOW",
+        "fair_probability_games": 0,
+        "fair_probability_metrics": null,
+        "favorite_comparison": {
+          "cluster_weeks": 1,
+          "counts": {
+            "BOTH_CORRECT": 1,
+            "BOTH_WRONG": 0,
+            "MODEL_ONLY_CORRECT": 0,
+            "REFERENCE_ONLY_CORRECT": 0
+          },
+          "games": 1,
+          "inference": "DESCRIPTIVE_PAIRED_COMPARISON_NOT_REPEATED_SELECTION_ADJUSTED_CONFIRMATION",
+          "p_values": null,
+          "paired_accuracy_delta": 0,
+          "paired_accuracy_descriptive_interval": null,
+          "probabilistic_scores": null,
+          "uncertainty_status": "INSUFFICIENT_DISTINCT_WEEK_BLOCKS"
+        },
+        "full_universe_games": 1,
+        "horizon_minutes": 120,
+        "issue_horizon_class": "NOMINAL",
+        "market_qualified_directional_games": 1,
+        "market_qualified_probability_reference_games": 1,
+        "model_full_universe": {
+          "accuracy": 1,
+          "brier": 0.017331053709100576,
+          "correct_winners": 1,
+          "ece_10_fixed_bins": 0.13164745994169647,
+          "games": 1,
+          "log_loss": 0.14115749463833888,
+          "roc_auc": null
+        },
+        "model_on_same_reference_games": {
+          "accuracy": 1,
+          "brier": 0.017331053709100576,
+          "correct_winners": 1,
+          "ece_10_fixed_bins": 0.13164745994169647,
+          "games": 1,
+          "log_loss": 0.14115749463833888,
+          "roc_auc": null
+        },
+        "provider": "POLYMARKET_US",
+        "raw_bbo_midpoint_reference": {
+          "accuracy": 1,
+          "brier": 0.011024999999999997,
+          "correct_winners": 1,
+          "ece_10_fixed_bins": 0.10499999999999998,
+          "games": 1,
+          "log_loss": 0.11093156070728166,
+          "roc_auc": null
+        },
+        "reference_probability_class": "RAW_BINARY_BBO_MIDPOINT_NOT_FAIR_NO_VIG_OR_EXECUTABLE",
+        "season_end_year": 2027,
+        "selected_metric_roles": [
+          "brier"
+        ],
+        "selection_or_promotion_allowed": false
+      }
+    },
+    {
+      "source_index": 10,
+      "saved": {
+        "coverage_fraction": 1,
+        "evaluation_track": "ORIGINAL_ISSUED_ROLLING_CHAMPION",
+        "evidence_class": "ORIGINAL_ISSUED_EARLY_OUTLOOK_CHAMPION_SHADOW",
+        "fair_probability_games": 0,
+        "fair_probability_metrics": null,
+        "favorite_comparison": {
+          "cluster_weeks": 1,
+          "counts": {
+            "BOTH_CORRECT": 4,
+            "BOTH_WRONG": 1,
+            "MODEL_ONLY_CORRECT": 0,
+            "REFERENCE_ONLY_CORRECT": 1
+          },
+          "games": 6,
+          "inference": "DESCRIPTIVE_PAIRED_COMPARISON_NOT_REPEATED_SELECTION_ADJUSTED_CONFIRMATION",
+          "p_values": null,
+          "paired_accuracy_delta": -0.16666666666666666,
+          "paired_accuracy_descriptive_interval": null,
+          "probabilistic_scores": null,
+          "uncertainty_status": "INSUFFICIENT_DISTINCT_WEEK_BLOCKS"
+        },
+        "full_universe_games": 6,
+        "horizon_minutes": 60,
+        "issue_horizon_class": "EARLY_OUTLOOK",
+        "market_qualified_directional_games": 6,
+        "market_qualified_probability_reference_games": 6,
+        "model_full_universe": {
+          "accuracy": 0.6666666666666666,
+          "brier": 0.18100903857450054,
+          "correct_winners": 4,
+          "ece_10_fixed_bins": 0.12527487719604757,
+          "games": 6,
+          "log_loss": 0.5384810971234639,
+          "roc_auc": 0.7777777777777778
+        },
+        "model_on_same_reference_games": {
+          "accuracy": 0.6666666666666666,
+          "brier": 0.18100903857450054,
+          "correct_winners": 4,
+          "ece_10_fixed_bins": 0.12527487719604757,
+          "games": 6,
+          "log_loss": 0.5384810971234639,
+          "roc_auc": 0.7777777777777778
+        },
+        "provider": "KALSHI",
+        "raw_bbo_midpoint_reference": {
+          "accuracy": 0.8333333333333334,
+          "brier": 0.13899166666666665,
+          "correct_winners": 5,
+          "ece_10_fixed_bins": 0.18500000000000003,
+          "games": 6,
+          "log_loss": 0.444999991603878,
+          "roc_auc": 0.8888888888888888
+        },
+        "reference_probability_class": "RAW_BINARY_BBO_MIDPOINT_NOT_FAIR_NO_VIG_OR_EXECUTABLE",
+        "season_end_year": 2027,
+        "selected_metric_roles": [],
+        "selection_or_promotion_allowed": false
+      }
+    },
+    {
+      "source_index": 11,
+      "saved": {
+        "coverage_fraction": 0.8333333333333334,
+        "evaluation_track": "ORIGINAL_ISSUED_ROLLING_CHAMPION",
+        "evidence_class": "ORIGINAL_ISSUED_EARLY_OUTLOOK_CHAMPION_SHADOW",
+        "fair_probability_games": 0,
+        "fair_probability_metrics": null,
+        "favorite_comparison": {
+          "cluster_weeks": 1,
+          "counts": {
+            "BOTH_CORRECT": 4,
+            "BOTH_WRONG": 1,
+            "MODEL_ONLY_CORRECT": 0,
+            "REFERENCE_ONLY_CORRECT": 0
+          },
+          "games": 5,
+          "inference": "DESCRIPTIVE_PAIRED_COMPARISON_NOT_REPEATED_SELECTION_ADJUSTED_CONFIRMATION",
+          "p_values": null,
+          "paired_accuracy_delta": 0,
+          "paired_accuracy_descriptive_interval": null,
+          "probabilistic_scores": null,
+          "uncertainty_status": "INSUFFICIENT_DISTINCT_WEEK_BLOCKS"
+        },
+        "full_universe_games": 6,
+        "horizon_minutes": 60,
+        "issue_horizon_class": "EARLY_OUTLOOK",
+        "market_qualified_directional_games": 5,
+        "market_qualified_probability_reference_games": 5,
+        "model_full_universe": {
+          "accuracy": 0.6666666666666666,
+          "brier": 0.18100903857450054,
+          "correct_winners": 4,
+          "ece_10_fixed_bins": 0.12527487719604757,
+          "games": 6,
+          "log_loss": 0.5384810971234639,
+          "roc_auc": 0.7777777777777778
+        },
+        "model_on_same_reference_games": {
+          "accuracy": 0.8,
+          "brier": 0.16530628896134986,
+          "correct_winners": 4,
+          "ece_10_fixed_bins": 0.25221661068364215,
+          "games": 5,
+          "log_loss": 0.5037383115741545,
+          "roc_auc": 0.6666666666666666
+        },
+        "provider": "POLYMARKET_US",
+        "raw_bbo_midpoint_reference": {
+          "accuracy": 0.8,
+          "brier": 0.13494499999999998,
+          "correct_winners": 4,
+          "ece_10_fixed_bins": 0.141,
+          "games": 5,
+          "log_loss": 0.43122411996038224,
+          "roc_auc": 0.8333333333333334
+        },
+        "reference_probability_class": "RAW_BINARY_BBO_MIDPOINT_NOT_FAIR_NO_VIG_OR_EXECUTABLE",
+        "season_end_year": 2027,
+        "selected_metric_roles": [],
+        "selection_or_promotion_allowed": false
+      }
+    }
+  ],
+  "model_monitoring": [
+    {
+      "source_index": 0,
+      "saved": {
+        "distinct_games": 6,
+        "horizon_minutes": 60,
+        "issue_horizon_class": "EARLY_OUTLOOK",
+        "lead_bucket": "SIX_TO_TWENTY_FOUR_HOURS",
+        "metric_game_support": {
+          "absolute_error": 6,
+          "coverage_50": 6,
+          "coverage_80": 6,
+          "coverage_90": 6,
+          "interval_score_50": 6,
+          "interval_score_80": 6,
+          "interval_score_90": 6,
+          "signed_error": 6,
+          "squared_error": 6,
+          "width_50": 6,
+          "width_80": 6,
+          "width_90": 6
+        },
+        "metrics": {
+          "absolute_error": 13.525907014208997,
+          "coverage_50": 0.3333333333333333,
+          "coverage_80": 0.8333333333333334,
+          "coverage_90": 1,
+          "interval_score_50": 41.873487953316406,
+          "interval_score_80": 50.16899988774571,
+          "interval_score_90": 61.589128155430664,
+          "mae": 13.525907014208997,
+          "rmse": 15.758458433878818,
+          "signed_error": 6.113520998295248,
+          "squared_error": 248.32901221228647,
+          "width_50": 25.428584194235043,
+          "width_80": 48.16203686016686,
+          "width_90": 61.589128155430664
+        },
+        "objective": "total",
+        "primary_revision_policy": "LATEST_ORIGINAL_ISSUED_IN_SAME_CLASS_AND_LEAD_BUCKET",
+        "retained_scored_revisions": 11,
+        "selected_metric_roles": [
+          "rmse"
+        ]
+      }
+    },
+    {
+      "source_index": 1,
+      "saved": {
+        "distinct_games": 6,
+        "horizon_minutes": 60,
+        "issue_horizon_class": "EARLY_OUTLOOK",
+        "lead_bucket": "WITHIN_SIX_HOURS",
+        "metric_game_support": {
+          "absolute_error": 6,
+          "coverage_50": 6,
+          "coverage_80": 6,
+          "coverage_90": 6,
+          "interval_score_50": 6,
+          "interval_score_80": 6,
+          "interval_score_90": 6,
+          "signed_error": 6,
+          "squared_error": 6,
+          "width_50": 6,
+          "width_80": 6,
+          "width_90": 6
+        },
+        "metrics": {
+          "absolute_error": 13.52584823132259,
+          "coverage_50": 0.3333333333333333,
+          "coverage_80": 0.8333333333333334,
+          "coverage_90": 1,
+          "interval_score_50": 41.87297935943233,
+          "interval_score_80": 50.168887330186045,
+          "interval_score_90": 61.58912815543067,
+          "mae": 13.52584823132259,
+          "rmse": 15.758320870595588,
+          "signed_error": 6.113251982121696,
+          "squared_error": 248.3246766606485,
+          "width_50": 25.428584194235043,
+          "width_80": 48.162036860166836,
+          "width_90": 61.58912815543067
+        },
+        "objective": "total",
+        "primary_revision_policy": "LATEST_ORIGINAL_ISSUED_IN_SAME_CLASS_AND_LEAD_BUCKET",
+        "retained_scored_revisions": 7,
+        "selected_metric_roles": [
+          "rmse"
+        ]
+      }
+    },
+    {
+      "source_index": 2,
+      "saved": {
+        "distinct_games": 6,
+        "horizon_minutes": 120,
+        "issue_horizon_class": "EARLY_OUTLOOK",
+        "lead_bucket": "SIX_TO_TWENTY_FOUR_HOURS",
+        "metric_game_support": {
+          "absolute_error": 6,
+          "coverage_50": 6,
+          "coverage_80": 6,
+          "coverage_90": 6,
+          "crps": 6,
+          "interval_score_50": 6,
+          "interval_score_80": 6,
+          "interval_score_90": 6,
+          "signed_error": 6,
+          "squared_error": 6,
+          "weighted_interval_score": 6,
+          "width_50": 6,
+          "width_80": 6,
+          "width_90": 6
+        },
+        "metrics": {
+          "absolute_error": 14.511492523277134,
+          "coverage_50": 0.3333333333333333,
+          "coverage_80": 0.6666666666666666,
+          "coverage_90": 0.8333333333333334,
+          "crps": 10.00622141567878,
+          "interval_score_50": 47.08155111133588,
+          "interval_score_80": 51.84411349543399,
+          "interval_score_90": 49.10239568353577,
+          "mae": 14.511492523277134,
+          "rmse": 16.74453253306113,
+          "signed_error": -6.4732114936749,
+          "squared_error": 280.3793697507425,
+          "weighted_interval_score": 7.619651992651749,
+          "width_50": 19.599542942640966,
+          "width_80": 37.24148587964216,
+          "width_90": 47.80093860114156
+        },
+        "objective": "margin",
+        "primary_revision_policy": "LATEST_ORIGINAL_ISSUED_IN_SAME_CLASS_AND_LEAD_BUCKET",
+        "retained_scored_revisions": 11,
+        "selected_metric_roles": [
+          "mae",
+          "rmse",
+          "weighted_interval_score"
+        ]
+      }
+    },
+    {
+      "source_index": 3,
+      "saved": {
+        "distinct_games": 6,
+        "horizon_minutes": 120,
+        "issue_horizon_class": "EARLY_OUTLOOK",
+        "lead_bucket": "WITHIN_SIX_HOURS",
+        "metric_game_support": {
+          "absolute_error": 6,
+          "coverage_50": 6,
+          "coverage_80": 6,
+          "coverage_90": 6,
+          "crps": 6,
+          "interval_score_50": 6,
+          "interval_score_80": 6,
+          "interval_score_90": 6,
+          "signed_error": 6,
+          "squared_error": 6,
+          "weighted_interval_score": 6,
+          "width_50": 6,
+          "width_80": 6,
+          "width_90": 6
+        },
+        "metrics": {
+          "absolute_error": 14.512091465504108,
+          "coverage_50": 0.3333333333333333,
+          "coverage_80": 0.6666666666666666,
+          "coverage_90": 0.8333333333333334,
+          "crps": 10.006646307369403,
+          "interval_score_50": 47.083858144558484,
+          "interval_score_80": 51.84302624691764,
+          "interval_score_90": 49.100465754055925,
+          "mae": 14.512091465504108,
+          "rmse": 16.74506891492993,
+          "signed_error": -6.473524257202603,
+          "squared_error": 280.39733296575264,
+          "weighted_interval_score": 7.619843074141307,
+          "width_50": 19.599464577514087,
+          "width_80": 37.24133591115385,
+          "width_90": 47.80074489894948
+        },
+        "objective": "margin",
+        "primary_revision_policy": "LATEST_ORIGINAL_ISSUED_IN_SAME_CLASS_AND_LEAD_BUCKET",
+        "retained_scored_revisions": 6,
+        "selected_metric_roles": [
+          "mae",
+          "rmse",
+          "weighted_interval_score"
+        ]
+      }
+    },
+    {
+      "source_index": 4,
+      "saved": {
+        "distinct_games": 1,
+        "horizon_minutes": 120,
+        "issue_horizon_class": "LATE",
+        "lead_bucket": "WITHIN_SIX_HOURS",
+        "metric_game_support": {
+          "absolute_error": 1,
+          "coverage_50": 1,
+          "coverage_80": 1,
+          "coverage_90": 1,
+          "crps": 1,
+          "interval_score_50": 1,
+          "interval_score_80": 1,
+          "interval_score_90": 1,
+          "signed_error": 1,
+          "squared_error": 1,
+          "weighted_interval_score": 1,
+          "width_50": 1,
+          "width_80": 1,
+          "width_90": 1
+        },
+        "metrics": {
+          "absolute_error": 17.026723565722115,
+          "coverage_50": 0,
+          "coverage_80": 1,
+          "coverage_90": 1,
+          "crps": 10.554673900667828,
+          "interval_score_50": 48.48223961601764,
+          "interval_score_80": 37.323513491527464,
+          "interval_score_90": 47.90660130735982,
+          "mae": 17.026723565722115,
+          "rmse": 17.026723565722115,
+          "signed_error": -17.026723565722115,
+          "squared_error": 289.9093153835168,
+          "weighted_interval_score": 7.647332141681798,
+          "width_50": 19.642539674343766,
+          "width_80": 37.323513491527464,
+          "width_90": 47.90660130735982
+        },
+        "objective": "margin",
+        "primary_revision_policy": "LATEST_ORIGINAL_ISSUED_IN_SAME_CLASS_AND_LEAD_BUCKET",
+        "retained_scored_revisions": 1,
+        "selected_metric_roles": [
+          "mae",
+          "rmse",
+          "weighted_interval_score"
+        ]
+      }
+    },
+    {
+      "source_index": 5,
+      "saved": {
+        "distinct_games": 1,
+        "horizon_minutes": 120,
+        "issue_horizon_class": "NOMINAL",
+        "lead_bucket": "WITHIN_SIX_HOURS",
+        "metric_game_support": {
+          "absolute_error": 1,
+          "coverage_50": 1,
+          "coverage_80": 1,
+          "coverage_90": 1,
+          "crps": 1,
+          "interval_score_50": 1,
+          "interval_score_80": 1,
+          "interval_score_90": 1,
+          "signed_error": 1,
+          "squared_error": 1,
+          "weighted_interval_score": 1,
+          "width_50": 1,
+          "width_80": 1,
+          "width_90": 1
+        },
+        "metrics": {
+          "absolute_error": 17.026712490731192,
+          "coverage_50": 0,
+          "coverage_80": 1,
+          "coverage_90": 1,
+          "crps": 10.554665344732367,
+          "interval_score_50": 48.48219379247196,
+          "interval_score_80": 37.32351673706156,
+          "interval_score_90": 47.90660549085776,
+          "mae": 17.026712490731192,
+          "rmse": 17.026712490731192,
+          "signed_error": -17.026712490731192,
+          "squared_error": 289.90893824202163,
+          "weighted_interval_score": 7.647327450434502,
+          "width_50": 19.64254137452805,
+          "width_80": 37.32351673706156,
+          "width_90": 47.90660549085776
+        },
+        "objective": "margin",
+        "primary_revision_policy": "LATEST_ORIGINAL_ISSUED_IN_SAME_CLASS_AND_LEAD_BUCKET",
+        "retained_scored_revisions": 1,
+        "selected_metric_roles": [
+          "mae",
+          "rmse",
+          "weighted_interval_score"
+        ]
+      }
+    },
+    {
+      "source_index": 6,
+      "saved": {
+        "distinct_games": 6,
+        "horizon_minutes": 60,
+        "issue_horizon_class": "EARLY_OUTLOOK",
+        "lead_bucket": "SIX_TO_TWENTY_FOUR_HOURS",
+        "metric_game_support": {
+          "absolute_error": 6,
+          "coverage_50": 6,
+          "coverage_80": 6,
+          "coverage_90": 6,
+          "interval_score_50": 6,
+          "interval_score_80": 6,
+          "interval_score_90": 6,
+          "signed_error": 6,
+          "squared_error": 6,
+          "width_50": 6,
+          "width_80": 6,
+          "width_90": 6
+        },
+        "metrics": {
+          "absolute_error": 13.238167947712611,
+          "coverage_50": 0.3333333333333333,
+          "coverage_80": 0.8333333333333334,
+          "coverage_90": 1,
+          "interval_score_50": 42.01977860954677,
+          "interval_score_80": 49.496620761672226,
+          "interval_score_90": 61.38043213993029,
+          "mae": 13.238167947712611,
+          "rmse": 15.749825706711349,
+          "signed_error": 6.443854797008555,
+          "squared_error": 248.05700979178562,
+          "width_50": 25.423718433509293,
+          "width_80": 48.283542195497546,
+          "width_90": 61.38043213993029
+        },
+        "objective": "total",
+        "primary_revision_policy": "LATEST_ORIGINAL_ISSUED_IN_SAME_CLASS_AND_LEAD_BUCKET",
+        "retained_scored_revisions": 11,
+        "selected_metric_roles": [
+          "crps",
+          "weighted_interval_score"
+        ]
+      }
+    },
+    {
+      "source_index": 7,
+      "saved": {
+        "distinct_games": 6,
+        "horizon_minutes": 60,
+        "issue_horizon_class": "EARLY_OUTLOOK",
+        "lead_bucket": "WITHIN_SIX_HOURS",
+        "metric_game_support": {
+          "absolute_error": 6,
+          "coverage_50": 6,
+          "coverage_80": 6,
+          "coverage_90": 6,
+          "interval_score_50": 6,
+          "interval_score_80": 6,
+          "interval_score_90": 6,
+          "signed_error": 6,
+          "squared_error": 6,
+          "width_50": 6,
+          "width_80": 6,
+          "width_90": 6
+        },
+        "metrics": {
+          "absolute_error": 13.238167947712611,
+          "coverage_50": 0.3333333333333333,
+          "coverage_80": 0.8333333333333334,
+          "coverage_90": 1,
+          "interval_score_50": 42.01977860954677,
+          "interval_score_80": 49.496620761672226,
+          "interval_score_90": 61.38043213993029,
+          "mae": 13.238167947712611,
+          "rmse": 15.749825706711349,
+          "signed_error": 6.443854797008555,
+          "squared_error": 248.05700979178562,
+          "width_50": 25.423718433509293,
+          "width_80": 48.283542195497546,
+          "width_90": 61.38043213993029
+        },
+        "objective": "total",
+        "primary_revision_policy": "LATEST_ORIGINAL_ISSUED_IN_SAME_CLASS_AND_LEAD_BUCKET",
+        "retained_scored_revisions": 7,
+        "selected_metric_roles": [
+          "crps",
+          "weighted_interval_score"
+        ]
+      }
+    },
+    {
+      "source_index": 8,
+      "saved": {
+        "distinct_games": 1,
+        "horizon_minutes": 120,
+        "issue_horizon_class": "LATE",
+        "lead_bucket": "WITHIN_SIX_HOURS",
+        "metric_game_support": {
+          "absolute_error": 1,
+          "coverage_50": 1,
+          "coverage_80": 1,
+          "coverage_90": 1,
+          "interval_score_50": 1,
+          "interval_score_80": 1,
+          "interval_score_90": 1,
+          "signed_error": 1,
+          "squared_error": 1,
+          "width_50": 1,
+          "width_80": 1,
+          "width_90": 1
+        },
+        "metrics": {
+          "absolute_error": 12.756030092958742,
+          "coverage_50": 0,
+          "coverage_80": 1,
+          "coverage_90": 1,
+          "interval_score_50": 36.633253628434325,
+          "interval_score_80": 36.351118180985296,
+          "interval_score_90": 47.26676699272127,
+          "mae": 12.756030092958742,
+          "rmse": 12.756030092958742,
+          "signed_error": -12.756030092958742,
+          "squared_error": 162.71630373246902,
+          "width_50": 18.41478473241134,
+          "width_80": 36.351118180985296,
+          "width_90": 47.26676699272127
+        },
+        "objective": "margin",
+        "primary_revision_policy": "LATEST_ORIGINAL_ISSUED_IN_SAME_CLASS_AND_LEAD_BUCKET",
+        "retained_scored_revisions": 1,
+        "selected_metric_roles": [
+          "crps"
+        ]
+      }
+    },
+    {
+      "source_index": 9,
+      "saved": {
+        "distinct_games": 6,
+        "horizon_minutes": 60,
+        "issue_horizon_class": "EARLY_OUTLOOK",
+        "lead_bucket": "SIX_TO_TWENTY_FOUR_HOURS",
+        "metric_game_support": {
+          "accuracy": 6,
+          "brier": 6,
+          "log_loss": 6
+        },
+        "metrics": {
+          "accuracy": 0.6666666666666666,
+          "brier": 0.1831814886570375,
+          "ece_10_fixed_bins": 0.047337845058636974,
+          "log_loss": 0.5395397123851359,
+          "roc_auc": 0.8888888888888888
+        },
+        "objective": "winner",
+        "primary_revision_policy": "LATEST_ORIGINAL_ISSUED_IN_SAME_CLASS_AND_LEAD_BUCKET",
+        "retained_scored_revisions": 11,
+        "selected_metric_roles": [
+          "accuracy"
+        ]
+      }
+    },
+    {
+      "source_index": 10,
+      "saved": {
+        "distinct_games": 6,
+        "horizon_minutes": 60,
+        "issue_horizon_class": "EARLY_OUTLOOK",
+        "lead_bucket": "WITHIN_SIX_HOURS",
+        "metric_game_support": {
+          "accuracy": 6,
+          "brier": 6,
+          "log_loss": 6
+        },
+        "metrics": {
+          "accuracy": 0.6666666666666666,
+          "brier": 0.1831814886570375,
+          "ece_10_fixed_bins": 0.047337845058636974,
+          "log_loss": 0.5395397123851359,
+          "roc_auc": 0.8888888888888888
+        },
+        "objective": "winner",
+        "primary_revision_policy": "LATEST_ORIGINAL_ISSUED_IN_SAME_CLASS_AND_LEAD_BUCKET",
+        "retained_scored_revisions": 7,
+        "selected_metric_roles": [
+          "accuracy"
+        ]
+      }
+    },
+    {
+      "source_index": 11,
+      "saved": {
+        "distinct_games": 6,
+        "horizon_minutes": 120,
+        "issue_horizon_class": "EARLY_OUTLOOK",
+        "lead_bucket": "SIX_TO_TWENTY_FOUR_HOURS",
+        "metric_game_support": {
+          "absolute_error": 6,
+          "coverage_50": 6,
+          "coverage_80": 6,
+          "coverage_90": 6,
+          "interval_score_50": 6,
+          "interval_score_80": 6,
+          "interval_score_90": 6,
+          "signed_error": 6,
+          "squared_error": 6,
+          "width_50": 6,
+          "width_80": 6,
+          "width_90": 6
+        },
+        "metrics": {
+          "absolute_error": 13.420398436643742,
+          "coverage_50": 0.3333333333333333,
+          "coverage_80": 0.8333333333333334,
+          "coverage_90": 1,
+          "interval_score_50": 40.03506478684647,
+          "interval_score_80": 48.37992743358662,
+          "interval_score_90": 61.7949432590018,
+          "mae": 13.420398436643742,
+          "rmse": 15.4168265620653,
+          "signed_error": 5.776770314979056,
+          "squared_error": 237.67854124480218,
+          "width_50": 25.008857715855385,
+          "width_80": 48.17330951668152,
+          "width_90": 61.7949432590018
+        },
+        "objective": "total",
+        "primary_revision_policy": "LATEST_ORIGINAL_ISSUED_IN_SAME_CLASS_AND_LEAD_BUCKET",
+        "retained_scored_revisions": 11,
+        "selected_metric_roles": [
+          "mae"
+        ]
+      }
+    },
+    {
+      "source_index": 12,
+      "saved": {
+        "distinct_games": 6,
+        "horizon_minutes": 120,
+        "issue_horizon_class": "EARLY_OUTLOOK",
+        "lead_bucket": "WITHIN_SIX_HOURS",
+        "metric_game_support": {
+          "absolute_error": 6,
+          "coverage_50": 6,
+          "coverage_80": 6,
+          "coverage_90": 6,
+          "interval_score_50": 6,
+          "interval_score_80": 6,
+          "interval_score_90": 6,
+          "signed_error": 6,
+          "squared_error": 6,
+          "width_50": 6,
+          "width_80": 6,
+          "width_90": 6
+        },
+        "metrics": {
+          "absolute_error": 13.42035057182359,
+          "coverage_50": 0.3333333333333333,
+          "coverage_80": 0.8333333333333334,
+          "coverage_90": 1,
+          "interval_score_50": 40.034440032752904,
+          "interval_score_80": 48.37992743358662,
+          "interval_score_90": 61.7949432590018,
+          "mae": 13.42035057182359,
+          "rmse": 15.416678905358395,
+          "signed_error": 5.776389861347103,
+          "squared_error": 237.67398847092252,
+          "width_50": 25.008857715855385,
+          "width_80": 48.173309516681535,
+          "width_90": 61.7949432590018
+        },
+        "objective": "total",
+        "primary_revision_policy": "LATEST_ORIGINAL_ISSUED_IN_SAME_CLASS_AND_LEAD_BUCKET",
+        "retained_scored_revisions": 6,
+        "selected_metric_roles": [
+          "mae"
+        ]
+      }
+    },
+    {
+      "source_index": 13,
+      "saved": {
+        "distinct_games": 1,
+        "horizon_minutes": 120,
+        "issue_horizon_class": "LATE",
+        "lead_bucket": "WITHIN_SIX_HOURS",
+        "metric_game_support": {
+          "absolute_error": 1,
+          "coverage_50": 1,
+          "coverage_80": 1,
+          "coverage_90": 1,
+          "interval_score_50": 1,
+          "interval_score_80": 1,
+          "interval_score_90": 1,
+          "signed_error": 1,
+          "squared_error": 1,
+          "width_50": 1,
+          "width_80": 1,
+          "width_90": 1
+        },
+        "metrics": {
+          "absolute_error": 21.078835744410497,
+          "coverage_50": 0,
+          "coverage_80": 1,
+          "coverage_90": 1,
+          "interval_score_50": 59.242205486259905,
+          "interval_score_80": 48.17330951668151,
+          "interval_score_90": 61.7949432590018,
+          "mae": 21.078835744410497,
+          "rmse": 21.078835744410497,
+          "signed_error": 21.078835744410497,
+          "squared_error": 444.31731633983765,
+          "width_50": 25.008857715855385,
+          "width_80": 48.17330951668151,
+          "width_90": 61.7949432590018
+        },
+        "objective": "total",
+        "primary_revision_policy": "LATEST_ORIGINAL_ISSUED_IN_SAME_CLASS_AND_LEAD_BUCKET",
+        "retained_scored_revisions": 1,
+        "selected_metric_roles": [
+          "mae"
+        ]
+      }
+    },
+    {
+      "source_index": 14,
+      "saved": {
+        "distinct_games": 1,
+        "horizon_minutes": 120,
+        "issue_horizon_class": "NOMINAL",
+        "lead_bucket": "WITHIN_SIX_HOURS",
+        "metric_game_support": {
+          "absolute_error": 1,
+          "coverage_50": 1,
+          "coverage_80": 1,
+          "coverage_90": 1,
+          "interval_score_50": 1,
+          "interval_score_80": 1,
+          "interval_score_90": 1,
+          "signed_error": 1,
+          "squared_error": 1,
+          "width_50": 1,
+          "width_80": 1,
+          "width_90": 1
+        },
+        "metrics": {
+          "absolute_error": 21.07883787506657,
+          "coverage_50": 0,
+          "coverage_80": 1,
+          "coverage_90": 1,
+          "interval_score_50": 59.24221400888419,
+          "interval_score_80": 48.17330951668151,
+          "interval_score_90": 61.7949432590018,
+          "mae": 21.07883787506657,
+          "rmse": 21.07883787506657,
+          "signed_error": 21.07883787506657,
+          "squared_error": 444.3174061633409,
+          "width_50": 25.008857715855385,
+          "width_80": 48.17330951668151,
+          "width_90": 61.7949432590018
+        },
+        "objective": "total",
+        "primary_revision_policy": "LATEST_ORIGINAL_ISSUED_IN_SAME_CLASS_AND_LEAD_BUCKET",
+        "retained_scored_revisions": 1,
+        "selected_metric_roles": [
+          "mae"
+        ]
+      }
+    },
+    {
+      "source_index": 15,
+      "saved": {
+        "distinct_games": 6,
+        "horizon_minutes": 60,
+        "issue_horizon_class": "EARLY_OUTLOOK",
+        "lead_bucket": "SIX_TO_TWENTY_FOUR_HOURS",
+        "metric_game_support": {
+          "absolute_error": 6,
+          "coverage_50": 6,
+          "coverage_80": 6,
+          "coverage_90": 6,
+          "crps": 6,
+          "interval_score_50": 6,
+          "interval_score_80": 6,
+          "interval_score_90": 6,
+          "signed_error": 6,
+          "squared_error": 6,
+          "weighted_interval_score": 6,
+          "width_50": 6,
+          "width_80": 6,
+          "width_90": 6
+        },
+        "metrics": {
+          "absolute_error": 14.511492523277134,
+          "coverage_50": 0.3333333333333333,
+          "coverage_80": 0.6666666666666666,
+          "coverage_90": 0.8333333333333334,
+          "crps": 10.00622141567878,
+          "interval_score_50": 47.08155111133588,
+          "interval_score_80": 51.84411349543399,
+          "interval_score_90": 49.10239568353577,
+          "mae": 14.511492523277134,
+          "rmse": 16.74453253306113,
+          "signed_error": -6.4732114936749,
+          "squared_error": 280.3793697507425,
+          "weighted_interval_score": 7.619651992651749,
+          "width_50": 19.599542942640966,
+          "width_80": 37.24148587964216,
+          "width_90": 47.80093860114156
+        },
+        "objective": "margin",
+        "primary_revision_policy": "LATEST_ORIGINAL_ISSUED_IN_SAME_CLASS_AND_LEAD_BUCKET",
+        "retained_scored_revisions": 11,
+        "selected_metric_roles": [
+          "mae",
+          "rmse",
+          "weighted_interval_score"
+        ]
+      }
+    },
+    {
+      "source_index": 16,
+      "saved": {
+        "distinct_games": 6,
+        "horizon_minutes": 60,
+        "issue_horizon_class": "EARLY_OUTLOOK",
+        "lead_bucket": "WITHIN_SIX_HOURS",
+        "metric_game_support": {
+          "absolute_error": 6,
+          "coverage_50": 6,
+          "coverage_80": 6,
+          "coverage_90": 6,
+          "crps": 6,
+          "interval_score_50": 6,
+          "interval_score_80": 6,
+          "interval_score_90": 6,
+          "signed_error": 6,
+          "squared_error": 6,
+          "weighted_interval_score": 6,
+          "width_50": 6,
+          "width_80": 6,
+          "width_90": 6
+        },
+        "metrics": {
+          "absolute_error": 14.512242539283092,
+          "coverage_50": 0.3333333333333333,
+          "coverage_80": 0.6666666666666666,
+          "coverage_90": 0.8333333333333334,
+          "crps": 10.00676302889438,
+          "interval_score_50": 47.0844834234816,
+          "interval_score_80": 51.84298135574024,
+          "interval_score_90": 49.100407880104484,
+          "mae": 14.512242539283092,
+          "rmse": 16.74522252489699,
+          "signed_error": -6.473675330981588,
+          "squared_error": 280.40247740831757,
+          "weighted_interval_score": 7.6199070449818675,
+          "width_50": 19.59944106984271,
+          "width_80": 37.24129101997646,
+          "width_90": 47.80068702499804
+        },
+        "objective": "margin",
+        "primary_revision_policy": "LATEST_ORIGINAL_ISSUED_IN_SAME_CLASS_AND_LEAD_BUCKET",
+        "retained_scored_revisions": 7,
+        "selected_metric_roles": [
+          "mae",
+          "rmse",
+          "weighted_interval_score"
+        ]
+      }
+    },
+    {
+      "source_index": 17,
+      "saved": {
+        "distinct_games": 6,
+        "horizon_minutes": 120,
+        "issue_horizon_class": "EARLY_OUTLOOK",
+        "lead_bucket": "SIX_TO_TWENTY_FOUR_HOURS",
+        "metric_game_support": {
+          "absolute_error": 6,
+          "coverage_50": 6,
+          "coverage_80": 6,
+          "coverage_90": 6,
+          "interval_score_50": 6,
+          "interval_score_80": 6,
+          "interval_score_90": 6,
+          "signed_error": 6,
+          "squared_error": 6,
+          "width_50": 6,
+          "width_80": 6,
+          "width_90": 6
+        },
+        "metrics": {
+          "absolute_error": 14.628819220084603,
+          "coverage_50": 0.3333333333333333,
+          "coverage_80": 1,
+          "coverage_90": 1,
+          "interval_score_50": 43.82910867402702,
+          "interval_score_80": 48.061238645779554,
+          "interval_score_90": 62.040949220034214,
+          "mae": 14.628819220084603,
+          "rmse": 16.712446383092217,
+          "signed_error": 6.4593480326141774,
+          "squared_error": 279.3058641077322,
+          "width_50": 25.107143053962456,
+          "width_80": 48.061238645779554,
+          "width_90": 62.040949220034214
+        },
+        "objective": "total",
+        "primary_revision_policy": "LATEST_ORIGINAL_ISSUED_IN_SAME_CLASS_AND_LEAD_BUCKET",
+        "retained_scored_revisions": 11,
+        "selected_metric_roles": [
+          "rmse",
+          "crps",
+          "weighted_interval_score"
+        ]
+      }
+    },
+    {
+      "source_index": 18,
+      "saved": {
+        "distinct_games": 6,
+        "horizon_minutes": 120,
+        "issue_horizon_class": "EARLY_OUTLOOK",
+        "lead_bucket": "WITHIN_SIX_HOURS",
+        "metric_game_support": {
+          "absolute_error": 6,
+          "coverage_50": 6,
+          "coverage_80": 6,
+          "coverage_90": 6,
+          "interval_score_50": 6,
+          "interval_score_80": 6,
+          "interval_score_90": 6,
+          "signed_error": 6,
+          "squared_error": 6,
+          "width_50": 6,
+          "width_80": 6,
+          "width_90": 6
+        },
+        "metrics": {
+          "absolute_error": 14.628819220084614,
+          "coverage_50": 0.3333333333333333,
+          "coverage_80": 1,
+          "coverage_90": 1,
+          "interval_score_50": 43.829108674027054,
+          "interval_score_80": 48.061238645779554,
+          "interval_score_90": 62.040949220034214,
+          "mae": 14.628819220084614,
+          "rmse": 16.71244638309223,
+          "signed_error": 6.459348032614187,
+          "squared_error": 279.30586410773265,
+          "width_50": 25.107143053962456,
+          "width_80": 48.061238645779554,
+          "width_90": 62.040949220034214
+        },
+        "objective": "total",
+        "primary_revision_policy": "LATEST_ORIGINAL_ISSUED_IN_SAME_CLASS_AND_LEAD_BUCKET",
+        "retained_scored_revisions": 6,
+        "selected_metric_roles": [
+          "rmse",
+          "crps",
+          "weighted_interval_score"
+        ]
+      }
+    },
+    {
+      "source_index": 19,
+      "saved": {
+        "distinct_games": 1,
+        "horizon_minutes": 120,
+        "issue_horizon_class": "LATE",
+        "lead_bucket": "WITHIN_SIX_HOURS",
+        "metric_game_support": {
+          "absolute_error": 1,
+          "coverage_50": 1,
+          "coverage_80": 1,
+          "coverage_90": 1,
+          "interval_score_50": 1,
+          "interval_score_80": 1,
+          "interval_score_90": 1,
+          "signed_error": 1,
+          "squared_error": 1,
+          "width_50": 1,
+          "width_80": 1,
+          "width_90": 1
+        },
+        "metrics": {
+          "absolute_error": 23.678760696207718,
+          "coverage_50": 0,
+          "coverage_80": 1,
+          "coverage_90": 1,
+          "interval_score_50": 67.28505701420912,
+          "interval_score_80": 48.061238645779554,
+          "interval_score_90": 62.040949220034236,
+          "mae": 23.678760696207718,
+          "rmse": 23.678760696207718,
+          "signed_error": 23.678760696207718,
+          "squared_error": 560.6837081082714,
+          "width_50": 25.10714305396246,
+          "width_80": 48.061238645779554,
+          "width_90": 62.040949220034236
+        },
+        "objective": "total",
+        "primary_revision_policy": "LATEST_ORIGINAL_ISSUED_IN_SAME_CLASS_AND_LEAD_BUCKET",
+        "retained_scored_revisions": 1,
+        "selected_metric_roles": [
+          "rmse",
+          "crps",
+          "weighted_interval_score"
+        ]
+      }
+    },
+    {
+      "source_index": 20,
+      "saved": {
+        "distinct_games": 1,
+        "horizon_minutes": 120,
+        "issue_horizon_class": "NOMINAL",
+        "lead_bucket": "WITHIN_SIX_HOURS",
+        "metric_game_support": {
+          "absolute_error": 1,
+          "coverage_50": 1,
+          "coverage_80": 1,
+          "coverage_90": 1,
+          "interval_score_50": 1,
+          "interval_score_80": 1,
+          "interval_score_90": 1,
+          "signed_error": 1,
+          "squared_error": 1,
+          "width_50": 1,
+          "width_80": 1,
+          "width_90": 1
+        },
+        "metrics": {
+          "absolute_error": 23.678760696207718,
+          "coverage_50": 0,
+          "coverage_80": 1,
+          "coverage_90": 1,
+          "interval_score_50": 67.28505701420912,
+          "interval_score_80": 48.061238645779554,
+          "interval_score_90": 62.040949220034236,
+          "mae": 23.678760696207718,
+          "rmse": 23.678760696207718,
+          "signed_error": 23.678760696207718,
+          "squared_error": 560.6837081082714,
+          "width_50": 25.10714305396246,
+          "width_80": 48.061238645779554,
+          "width_90": 62.040949220034236
+        },
+        "objective": "total",
+        "primary_revision_policy": "LATEST_ORIGINAL_ISSUED_IN_SAME_CLASS_AND_LEAD_BUCKET",
+        "retained_scored_revisions": 1,
+        "selected_metric_roles": [
+          "rmse",
+          "crps",
+          "weighted_interval_score"
+        ]
+      }
+    },
+    {
+      "source_index": 21,
+      "saved": {
+        "distinct_games": 6,
+        "horizon_minutes": 120,
+        "issue_horizon_class": "EARLY_OUTLOOK",
+        "lead_bucket": "SIX_TO_TWENTY_FOUR_HOURS",
+        "metric_game_support": {
+          "accuracy": 6,
+          "brier": 6,
+          "log_loss": 6
+        },
+        "metrics": {
+          "accuracy": 0.6666666666666666,
+          "brier": 0.18100903857450054,
+          "ece_10_fixed_bins": 0.12527487719604757,
+          "log_loss": 0.5384810971234639,
+          "roc_auc": 0.7777777777777778
+        },
+        "objective": "winner",
+        "primary_revision_policy": "LATEST_ORIGINAL_ISSUED_IN_SAME_CLASS_AND_LEAD_BUCKET",
+        "retained_scored_revisions": 11,
+        "selected_metric_roles": [
+          "brier"
+        ]
+      }
+    },
+    {
+      "source_index": 22,
+      "saved": {
+        "distinct_games": 6,
+        "horizon_minutes": 120,
+        "issue_horizon_class": "EARLY_OUTLOOK",
+        "lead_bucket": "WITHIN_SIX_HOURS",
+        "metric_game_support": {
+          "accuracy": 6,
+          "brier": 6,
+          "log_loss": 6
+        },
+        "metrics": {
+          "accuracy": 0.6666666666666666,
+          "brier": 0.18100903857450054,
+          "ece_10_fixed_bins": 0.12527487719604757,
+          "log_loss": 0.5384810971234639,
+          "roc_auc": 0.7777777777777778
+        },
+        "objective": "winner",
+        "primary_revision_policy": "LATEST_ORIGINAL_ISSUED_IN_SAME_CLASS_AND_LEAD_BUCKET",
+        "retained_scored_revisions": 6,
+        "selected_metric_roles": [
+          "brier"
+        ]
+      }
+    },
+    {
+      "source_index": 23,
+      "saved": {
+        "distinct_games": 1,
+        "horizon_minutes": 120,
+        "issue_horizon_class": "LATE",
+        "lead_bucket": "WITHIN_SIX_HOURS",
+        "metric_game_support": {
+          "accuracy": 1,
+          "brier": 1,
+          "log_loss": 1
+        },
+        "metrics": {
+          "accuracy": 1,
+          "brier": 0.017331053709100576,
+          "ece_10_fixed_bins": 0.13164745994169647,
+          "log_loss": 0.14115749463833888
+        },
+        "objective": "winner",
+        "primary_revision_policy": "LATEST_ORIGINAL_ISSUED_IN_SAME_CLASS_AND_LEAD_BUCKET",
+        "retained_scored_revisions": 1,
+        "selected_metric_roles": [
+          "brier"
+        ]
+      }
+    },
+    {
+      "source_index": 24,
+      "saved": {
+        "distinct_games": 1,
+        "horizon_minutes": 120,
+        "issue_horizon_class": "NOMINAL",
+        "lead_bucket": "WITHIN_SIX_HOURS",
+        "metric_game_support": {
+          "accuracy": 1,
+          "brier": 1,
+          "log_loss": 1
+        },
+        "metrics": {
+          "accuracy": 1,
+          "brier": 0.017331053709100576,
+          "ece_10_fixed_bins": 0.13164745994169647,
+          "log_loss": 0.14115749463833888
+        },
+        "objective": "winner",
+        "primary_revision_policy": "LATEST_ORIGINAL_ISSUED_IN_SAME_CLASS_AND_LEAD_BUCKET",
+        "retained_scored_revisions": 1,
+        "selected_metric_roles": [
+          "brier"
+        ]
+      }
+    },
+    {
+      "source_index": 25,
+      "saved": {
+        "distinct_games": 6,
+        "horizon_minutes": 120,
+        "issue_horizon_class": "EARLY_OUTLOOK",
+        "lead_bucket": "SIX_TO_TWENTY_FOUR_HOURS",
+        "metric_game_support": {
+          "accuracy": 6,
+          "brier": 6,
+          "log_loss": 6
+        },
+        "metrics": {
+          "accuracy": 0.6666666666666666,
+          "brier": 0.17672334329962971,
+          "ece_10_fixed_bins": 0.17597632797674714,
+          "log_loss": 0.5234014815502279,
+          "roc_auc": 1
+        },
+        "objective": "winner",
+        "primary_revision_policy": "LATEST_ORIGINAL_ISSUED_IN_SAME_CLASS_AND_LEAD_BUCKET",
+        "retained_scored_revisions": 11,
+        "selected_metric_roles": [
+          "accuracy"
+        ]
+      }
+    },
+    {
+      "source_index": 26,
+      "saved": {
+        "distinct_games": 6,
+        "horizon_minutes": 120,
+        "issue_horizon_class": "EARLY_OUTLOOK",
+        "lead_bucket": "WITHIN_SIX_HOURS",
+        "metric_game_support": {
+          "accuracy": 6,
+          "brier": 6,
+          "log_loss": 6
+        },
+        "metrics": {
+          "accuracy": 0.6666666666666666,
+          "brier": 0.17672334329962971,
+          "ece_10_fixed_bins": 0.1759763279767471,
+          "log_loss": 0.5234014815502278,
+          "roc_auc": 1
+        },
+        "objective": "winner",
+        "primary_revision_policy": "LATEST_ORIGINAL_ISSUED_IN_SAME_CLASS_AND_LEAD_BUCKET",
+        "retained_scored_revisions": 6,
+        "selected_metric_roles": [
+          "accuracy"
+        ]
+      }
+    },
+    {
+      "source_index": 27,
+      "saved": {
+        "distinct_games": 1,
+        "horizon_minutes": 120,
+        "issue_horizon_class": "LATE",
+        "lead_bucket": "WITHIN_SIX_HOURS",
+        "metric_game_support": {
+          "accuracy": 1,
+          "brier": 1,
+          "log_loss": 1
+        },
+        "metrics": {
+          "accuracy": 1,
+          "brier": 0.00579485378362023,
+          "ece_10_fixed_bins": 0.07612393699500986,
+          "log_loss": 0.07917734728379319
+        },
+        "objective": "winner",
+        "primary_revision_policy": "LATEST_ORIGINAL_ISSUED_IN_SAME_CLASS_AND_LEAD_BUCKET",
+        "retained_scored_revisions": 1,
+        "selected_metric_roles": [
+          "accuracy"
+        ]
+      }
+    },
+    {
+      "source_index": 28,
+      "saved": {
+        "distinct_games": 1,
+        "horizon_minutes": 120,
+        "issue_horizon_class": "NOMINAL",
+        "lead_bucket": "WITHIN_SIX_HOURS",
+        "metric_game_support": {
+          "accuracy": 1,
+          "brier": 1,
+          "log_loss": 1
+        },
+        "metrics": {
+          "accuracy": 1,
+          "brier": 0.00579485378362023,
+          "ece_10_fixed_bins": 0.07612393699500986,
+          "log_loss": 0.07917734728379319
+        },
+        "objective": "winner",
+        "primary_revision_policy": "LATEST_ORIGINAL_ISSUED_IN_SAME_CLASS_AND_LEAD_BUCKET",
+        "retained_scored_revisions": 1,
+        "selected_metric_roles": [
+          "accuracy"
+        ]
+      }
+    },
+    {
+      "source_index": 29,
+      "saved": {
+        "distinct_games": 1,
+        "horizon_minutes": 120,
+        "issue_horizon_class": "LATE",
+        "lead_bucket": "WITHIN_SIX_HOURS",
+        "metric_game_support": {
+          "accuracy": 1,
+          "brier": 1,
+          "log_loss": 1
+        },
+        "metrics": {
+          "accuracy": 1,
+          "brier": 0.00722635685752192,
+          "ece_10_fixed_bins": 0.08500798114013719,
+          "log_loss": 0.08883993630218445
+        },
+        "objective": "winner",
+        "primary_revision_policy": "LATEST_ORIGINAL_ISSUED_IN_SAME_CLASS_AND_LEAD_BUCKET",
+        "retained_scored_revisions": 1,
+        "selected_metric_roles": [
+          "log_loss"
+        ]
+      }
+    },
+    {
+      "source_index": 30,
+      "saved": {
+        "distinct_games": 6,
+        "horizon_minutes": 60,
+        "issue_horizon_class": "EARLY_OUTLOOK",
+        "lead_bucket": "SIX_TO_TWENTY_FOUR_HOURS",
+        "metric_game_support": {
+          "absolute_error": 6,
+          "coverage_50": 6,
+          "coverage_80": 6,
+          "coverage_90": 6,
+          "interval_score_50": 6,
+          "interval_score_80": 6,
+          "interval_score_90": 6,
+          "signed_error": 6,
+          "squared_error": 6,
+          "width_50": 6,
+          "width_80": 6,
+          "width_90": 6
+        },
+        "metrics": {
+          "absolute_error": 13.460615837756379,
+          "coverage_50": 0.3333333333333333,
+          "coverage_80": 0.8333333333333334,
+          "coverage_90": 1,
+          "interval_score_50": 42.028390773497584,
+          "interval_score_80": 50.349424663347556,
+          "interval_score_90": 61.4743980332274,
+          "mae": 13.460615837756379,
+          "rmse": 15.791079716342148,
+          "signed_error": 6.265171839245791,
+          "squared_error": 249.3581986078724,
+          "width_50": 25.50030709499042,
+          "width_80": 48.07332812510098,
+          "width_90": 61.4743980332274
+        },
+        "objective": "total",
+        "primary_revision_policy": "LATEST_ORIGINAL_ISSUED_IN_SAME_CLASS_AND_LEAD_BUCKET",
+        "retained_scored_revisions": 11,
+        "selected_metric_roles": [
+          "mae"
+        ]
+      }
+    },
+    {
+      "source_index": 31,
+      "saved": {
+        "distinct_games": 6,
+        "horizon_minutes": 60,
+        "issue_horizon_class": "EARLY_OUTLOOK",
+        "lead_bucket": "WITHIN_SIX_HOURS",
+        "metric_game_support": {
+          "absolute_error": 6,
+          "coverage_50": 6,
+          "coverage_80": 6,
+          "coverage_90": 6,
+          "interval_score_50": 6,
+          "interval_score_80": 6,
+          "interval_score_90": 6,
+          "signed_error": 6,
+          "squared_error": 6,
+          "width_50": 6,
+          "width_80": 6,
+          "width_90": 6
+        },
+        "metrics": {
+          "absolute_error": 13.460570220538306,
+          "coverage_50": 0.3333333333333333,
+          "coverage_80": 0.8333333333333334,
+          "coverage_90": 1,
+          "interval_score_50": 42.02807535865581,
+          "interval_score_80": 50.349199548228306,
+          "interval_score_90": 61.474398033227395,
+          "mae": 13.460570220538306,
+          "rmse": 15.79098581534657,
+          "signed_error": 6.265024015382603,
+          "squared_error": 249.3552330204766,
+          "width_50": 25.50030709499042,
+          "width_80": 48.07332812510098,
+          "width_90": 61.474398033227395
+        },
+        "objective": "total",
+        "primary_revision_policy": "LATEST_ORIGINAL_ISSUED_IN_SAME_CLASS_AND_LEAD_BUCKET",
+        "retained_scored_revisions": 7,
+        "selected_metric_roles": [
+          "mae"
+        ]
+      }
+    }
+  ],
+  "distinct_settled_monitor_games": 6,
+  "requested_metric_roles": [
+    {
+      "target": "winner",
+      "metric": "accuracy"
+    },
+    {
+      "target": "winner",
+      "metric": "log_loss"
+    },
+    {
+      "target": "winner",
+      "metric": "brier"
+    },
+    {
+      "target": "margin",
+      "metric": "mae"
+    },
+    {
+      "target": "margin",
+      "metric": "rmse"
+    },
+    {
+      "target": "total",
+      "metric": "mae"
+    },
+    {
+      "target": "total",
+      "metric": "rmse"
+    }
+  ],
+  "historical_venue_scorecards": {
+    "seasons": [
+      "2024-25",
+      "2025-26"
+    ],
+    "status": "NOT_EXPORTED_IN_THIS_AUTHENTICATED_SOURCE",
+    "model_role_metrics": "EXISTING_UNCHANGED_CHAMPION_TABLE"
+  },
+  "unsupported_point_comparison": "MATCHED_EXPECTED_MARGIN_AND_TOTAL_ERROR_METRICS_NOT_EXPORTED",
+  "qualification": "DESCRIPTIVE_ONLY_REPEATED_SELECTION_AND_PROSPECTIVE_CONFIRMATION_REMAIN_SEPARATE"
+}
