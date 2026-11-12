@@ -132,7 +132,7 @@ class V068PublicEvidenceTests(unittest.TestCase):
   self.assertIsNotNone(encoded)
   self.assertEqual(base64.b64decode(encoded[1],validate=True),self.gz)
   text=self.raw.decode()
-  for pattern in ['s3://','/home/sagemaker-user','sagemaker-sports-edge','joint_components','fit_identities','recipe_policy_sha256','model_snapshot_sha256','ridge_affine_50','ridge_intercept_50']:
+  for pattern in ['s3://','/home/sagemaker-user','sagemaker-sports-edge','joint_components','fit_identities','recipe_policy_sha256','model_snapshot_sha256','ridge_']:
    self.assertNotIn(pattern,text)
   self.assertFalse(self.data['publication_projection']['full_immutable_forecast_archive_published'])
 
