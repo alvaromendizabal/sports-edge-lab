@@ -1,5 +1,17 @@
 # NCAA basketball: research policy and evidence model card
 
+## November 12 recovery, failed B063 startup and full-precision monitoring
+
+The actual B063 owner returned `FAILED_PARTIAL_WORK_PRESERVED` after one startup fixture rejected an inherited process-memory high-water value. Scientific execution and the actual parallel benchmark were not reached: zero new sports-model fits, zero runtime-validated reused fits, zero new forecasts and zero promotions. B063R1 repairs this memory measurement while preserving the worker guard; its actual owner execution remains pending in this dated publication. See [the recovery status](B063R1_DASHBOARD_STATUS.md).
+
+B062's completed 104/104 frozen-core contexts and all published historical/current tables remain preserved. The 6,320-context catalog is unfinished, and ledger lower bounds are not an exact global census of physically reopened model fits. Recovered models and original forecasts do not earn new-fit credit.
+
+The selected original archive now adds 90 authenticated preserved-role outputs across 30 games, chosen by the pre-existing role policy and latest original issue time without later outcomes. Together with the prior 142 public rows, it contains 232 selected original rows. The full candidate grid stays private; no recovered early issue is relabeled as a currently upcoming forecast or freshly qualified champion.
+
+[The separate eight-game post-issue monitor](B063_POSTISSUE_OUTCOME_MONITOR_20261112.md) reconfirms university athletics finals and recalculates 11 separate model/target groups from all 46 full-precision original immutable issue records. It corrects the rounded-input metric headlines introduced by [draft PR #243](https://github.com/alvaromendizabal/sports-edge-lab/pull/243), preserving that report's attribution and official-source observations. Men's winner models each scored five of six; women's models two of two. This selected one-week cohort, all home wins, is descriptive monitoring and cannot establish a current-season champion, market advantage or independent prospective confirmation.
+
+The older historical policy and status sections follow unchanged as dated evidence.
+
 ## B057 actual evidence and B058 prepared policy — November 10, 2026 UTC
 
 The [current aggregate evidence](evidence/B057_ACTUAL_B058_PREPARED.md) records a partial B057 owner run: **7 new target fits, three completed frozen contexts and 16,787 prediction rows**, with no new current forecasts or promotions. A fitted-model schema validation failure left the full comparison and champion selection incomplete. These counts are not model-quality findings.

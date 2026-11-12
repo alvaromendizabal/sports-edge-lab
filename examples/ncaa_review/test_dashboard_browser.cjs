@@ -1367,6 +1367,7 @@ const { fixture: executionFixture } = require('./test_execution_review.cjs');
       }
       counts.viewports++;
     }
+    counts.b063r1Recovery = await require('./test_b063r1_dashboard_browser.cjs').verifyR1(browser, path.join(root, 'docs/ncaa/index.html'));
     assert.deepEqual(failures, []);
     assert.deepEqual(externalRequests, []);
     console.log(JSON.stringify({ status: 'PASS', ...counts, widths: [1440, 390], scriptErrors: 0, externalRequests: 0, realChromium: true }));
