@@ -447,6 +447,15 @@ function expectedRow(row, data) {
   try {
     const desktop = await context({ width: 1366, height: 1000 });
     const page = await pageFor(desktop);
+    await page.goto(pathToFileURL(path.join(__dirname, '../../../docs/nba/index.html')).href, { waitUntil: 'load' });
+    assert.equal(await page.locator('#nba-current-report').isVisible(), true);
+    assert.equal(await page.locator('#nba-current-report a').first().getAttribute('href'), '../../tracks/nba/reports/latest_research_outputs.html');
+    assert.ok((await page.locator('#nba-current-report').innerText()).includes('November 3 monitor archive'));
+    await screenshot(page, 'nba-publication-entry.png');
+    await page.locator('#nba-current-report a').first().click();
+    await page.waitForFunction(() => window.NBA_RENDER_STATE && window.NBA_PUBLIC_REPORT);
+    assert.equal(page.url(), url);
+    checks.push('nba_entry_point_opens_current_standalone_report_and_labels_archive');
     await b077Review.validatePage(page, 'desktop', true);
     assert.equal(await page.locator("h1").isVisible(), true);
     assert.equal(await page.locator("h1").innerText(), "Season coverage, issued forecasts and champion roles");

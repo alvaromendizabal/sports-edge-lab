@@ -247,6 +247,16 @@ class B077HistoricalPeakTests(unittest.TestCase):
         self.assertIn('post-registration',production['prospective_gate']);self.assertIn('independent review',production['prospective_gate'])
         self.assertIsNone(gates['universal_absolute_score_threshold'])
 
+    def test_entry_point_links_current_report_and_preserves_archived_monitor(self):
+        repository=ROOT.parents[2]
+        page=(repository/'docs/nba/index.html').read_text()
+        self.assertIn('id="nba-current-report"',page)
+        self.assertIn('href="../../tracks/nba/reports/latest_research_outputs.html"',page)
+        self.assertIn('November 3 monitor archive',page)
+        self.assertNotIn('latest failed-publication boundary',page)
+        archive=(repository/'docs/nba/monitor.html').read_bytes()
+        self.assertEqual(hashlib.sha1(f'blob {len(archive)}\0'.encode()+archive).hexdigest(),'e56159f92a39c0bf73385914aa824025b3bb6436')
+
 
 if __name__=='__main__':unittest.main()
 
