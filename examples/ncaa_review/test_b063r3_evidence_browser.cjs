@@ -41,7 +41,7 @@ async function verifyR3(browser, filename) {
       const download = await downloadPromise;
       const rows = fs.readFileSync(await download.path(),'utf8').trim().split(/\r?\n/);
       assert.equal(rows.length, 15);
-      assert.ok(rows.slice(1).every(row => row.startsWith('ncaaw,2025–26,win,')));
+      assert.ok(rows.slice(1).every(row => row.startsWith('"ncaaw","2025–26","win",')));
       await page.locator('#query').fill('NO_MATCH_IN_SAVED_EVIDENCE');
       assert.match(await page.locator('#candidate-table').innerText(), /No rows match/);
       assert.equal(await page.locator('#candidate-next').isDisabled(), true);
