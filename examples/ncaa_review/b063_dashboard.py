@@ -83,4 +83,6 @@ def render(legacy_html):
     end = legacy_html.rindex("</main>")
     legacy_body = legacy_html[start:end]
     template = (HERE / "b063_dashboard.html.tmpl").read_text()
-    return template.replace("__B063_DATA__", raw.replace("<", "\\u003c")).replace("__B063_LEGACY__", legacy_body)
+    from terminal_dashboard import render as render_terminal
+    return render_terminal(template.replace("__B063_DATA__", raw.replace("<", "\\u003c")).replace("__B063_LEGACY__", legacy_body))
+
