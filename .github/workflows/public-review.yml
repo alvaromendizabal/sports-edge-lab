@@ -19,6 +19,10 @@ jobs:
       - uses: actions/setup-python@5fda3b95a4ea91299a34e894583c3862153e4b97
         with:
           python-version: ${{ matrix.python-version }}
+      - name: Test shared live logs, failed children and recoverable checkpoints
+        run: |
+          python -m unittest discover -s runtime/execution -p 'test_sports_edge_live.py' -v
+          python runtime/execution/verify_live_execution.py
       - name: Test chronology, matched scoring and recovery
         run: python -m unittest discover -s examples/review_lab/tests -v
       - name: Test basketball identities and information-time contracts
