@@ -1,0 +1,249 @@
+{
+  "actual_owner_finished_at": "2026-11-11T19:44:42.946706Z",
+  "actual_owner_run_id": "20261111T193746Z-661a3f230c-fbs064",
+  "actual_owner_version": "V064",
+  "comparisons": {
+    "all_comparisons_are_descriptive_exposed_research": true,
+    "better": 0,
+    "current_301_probability_bank_metrics_changed": false,
+    "exact_saved_cohort_scalar_comparisons": 56,
+    "new_fit_primary_metric_comparisons_to_restored_stronger_controls": 84,
+    "owner_paired": 28,
+    "tied": 0,
+    "within_family_remove_volatility_ablations": {
+      "better": 17,
+      "worse": 11
+    },
+    "worse": 84
+  },
+  "current_2026": {
+    "final_games": 688,
+    "kickoff_unresolved_games": 54,
+    "new_current_pool_issues": 0,
+    "new_current_pool_state_gaps": 146,
+    "original_issue_covered_completed_games": 3,
+    "original_issue_covered_games": 148,
+    "original_issue_covered_uncompleted_timed_games": 145,
+    "production_champion_promotions": 0,
+    "timed_future_games": 146,
+    "timed_future_games_without_original_issue": 1,
+    "unique_original_issues": 216
+  },
+  "current_probability_cohort": {
+    "benchmark_is_verified_kalshi": false,
+    "best_accuracy_correct": 238,
+    "best_saved_accuracy": 0.7906976744186046,
+    "best_saved_brier": 0.15263011173024493,
+    "best_saved_log_loss": 0.46551880819770836,
+    "candidate_aliases": 250,
+    "completed_games_outside_saved_bank": 387,
+    "distinct_prediction_vectors": 212,
+    "nonfinal_games": 200,
+    "promotion_authorized": false,
+    "same_cohort_raw_market_correct": 232,
+    "scored_games": 301
+  },
+  "fixtures": {
+    "2024": 920,
+    "2025": 934,
+    "2026": 888
+  },
+  "github_publication_claimed_by_this_file": false,
+  "historical_market_response": {
+    "authenticated_tick_cells": 0,
+    "executed_R13_R20_experiments": 0,
+    "nonmissing_materialized_response_feature_values": 0,
+    "status": "SOURCE_BLOCKED_NO_AUTHENTICATED_TICK_ADAPTER"
+  },
+  "latest_verified_labels_at": "2026-11-11T19:38:54Z",
+  "new_sports_metrics_computed_in_this_export": 0,
+  "old_low_loss": {
+    "evidence_class": "2026_MONITORING_RECONSTRUCTION_NOT_PREGAME_ISSUANCE",
+    "games": 231,
+    "same_model_on_301_log_loss": 0.46694615237899967,
+    "saved_accuracy": 0.8138528138528138,
+    "saved_log_loss": 0.41619886534100337
+  },
+  "original_issue_continuity": {
+    "all_prior_latest_original_issue_selections_exactly_restored": true,
+    "game_coverage_restored": 26,
+    "original_issue_records_restored": 80,
+    "prior_v062_older_selection_count": 14,
+    "remaining_older_selections_vs_v061": 0,
+    "v062_primary_ledger_games": 122,
+    "v062_primary_ledger_unique_issues": 136,
+    "v064_primary_ledger_games": 148,
+    "v064_primary_ledger_unique_issues": 216
+  },
+  "promotion": {
+    "promotions": 0,
+    "reason": "GLOBAL_CHAMPIONSHIP_DEFERRED_INCOMPLETE_VERIFIED_SOURCE_CLOSURE",
+    "registered_cases": 5858,
+    "remaining_cases": 5611,
+    "verified_completed_cases": 247
+  },
+  "provider_qualified_games": {
+    "DraftKings": {
+      "cover_probability": 0,
+      "margin": 0,
+      "total": 0,
+      "winner": 0
+    },
+    "Kalshi": {
+      "cover_probability": 0,
+      "margin": 0,
+      "total": 0,
+      "winner": 0
+    },
+    "Polymarket Global": {
+      "cover_probability": 0,
+      "margin": 0,
+      "total": 0,
+      "winner": 0
+    },
+    "Polymarket US": {
+      "cover_probability": 0,
+      "margin": 0,
+      "total": 0,
+      "winner": 0
+    }
+  },
+  "recovered_current_point_metrics": {
+    "current_completed_games": 688,
+    "current_native_probability_301_cohort_is_separate": true,
+    "current_verification_capture_at": "2026-11-11T19:38:28Z",
+    "leader_roles": [
+      {
+        "candidate_family_count": 12,
+        "evidence_class": "RETAINED_DEVELOPMENT_OUTPUT_DESCRIPTIVE_EVALUATION",
+        "games": 688,
+        "metric": "mae",
+        "selection_or_promotion_authorized": false,
+        "target": "margin",
+        "tied_leader_count": 1,
+        "value": 14.261798749136714
+      },
+      {
+        "candidate_family_count": 12,
+        "evidence_class": "RETAINED_DEVELOPMENT_OUTPUT_DESCRIPTIVE_EVALUATION",
+        "games": 688,
+        "metric": "rmse",
+        "selection_or_promotion_authorized": false,
+        "target": "margin",
+        "tied_leader_count": 1,
+        "value": 18.091150093442536
+      },
+      {
+        "candidate_family_count": 12,
+        "evidence_class": "RETAINED_DEVELOPMENT_OUTPUT_DESCRIPTIVE_EVALUATION",
+        "games": 688,
+        "metric": "mae",
+        "selection_or_promotion_authorized": false,
+        "target": "total",
+        "tied_leader_count": 1,
+        "value": 13.002524352788058
+      },
+      {
+        "candidate_family_count": 12,
+        "evidence_class": "RETAINED_DEVELOPMENT_OUTPUT_DESCRIPTIVE_EVALUATION",
+        "games": 688,
+        "metric": "rmse",
+        "selection_or_promotion_authorized": false,
+        "target": "total",
+        "tied_leader_count": 1,
+        "value": 16.236818941008934
+      },
+      {
+        "candidate_family_count": 10,
+        "evidence_class": "RETAINED_DEVELOPMENT_OUTPUT_DESCRIPTIVE_EVALUATION",
+        "games": 688,
+        "metric": "accuracy",
+        "selection_or_promotion_authorized": false,
+        "target": "winner",
+        "tied_leader_count": 2,
+        "value": 0.7165697674418605
+      },
+      {
+        "candidate_family_count": 10,
+        "evidence_class": "RETAINED_DEVELOPMENT_OUTPUT_DESCRIPTIVE_EVALUATION",
+        "games": 688,
+        "metric": "log_loss",
+        "selection_or_promotion_authorized": false,
+        "target": "winner",
+        "tied_leader_count": 1,
+        "value": 0.5409218605468924
+      },
+      {
+        "candidate_family_count": 10,
+        "evidence_class": "RETAINED_DEVELOPMENT_OUTPUT_DESCRIPTIVE_EVALUATION",
+        "games": 688,
+        "metric": "brier",
+        "selection_or_promotion_authorized": false,
+        "target": "winner",
+        "tied_leader_count": 1,
+        "value": 0.1837835242692838
+      }
+    ],
+    "metric_report_owner_version": "V062",
+    "new_scores_or_predictions_computed": false,
+    "older_point_leaders_full_current_season_replay_complete": false,
+    "original_pregame_issue_ledger_is_separate": true,
+    "original_report_source_capture_at": "2026-11-11T07:24:15Z",
+    "production_promotions": 0,
+    "recovered_existing_owner_reports": true,
+    "schema": "fbs.v065.public-saved-current-point-metrics.v1",
+    "scope": "Only the retained baseline model families represented in these reports; not every historical recipe",
+    "three_game_development_refresh": {
+      "games": 3,
+      "minimum_week_support_met": false,
+      "promotion_allowed": false,
+      "weeks": 1
+    },
+    "total_mae_leader_vs_fixed_control_saved_uncertainty": {
+      "difference_direction": "candidate_loss_minus_control_loss_negative_is_better",
+      "draws": 1000,
+      "exact_game_ids_sha256": "e26992ee2e3a10ecd86f86ccd1dc7492cd181d76523d1c34c79bcf2ad36daaee",
+      "games": 688,
+      "mean_difference": -0.0302838371490206,
+      "multiplicity_adjusted_interval": [
+        -0.5015527535385158,
+        0.684762703559144
+      ],
+      "one_sided_nonimprovement_frequency": 0.4045954045954046,
+      "percentile95": [
+        -0.335140477132309,
+        0.3486981424954353
+      ],
+      "promotion_allowed": false,
+      "registered_contrasts": 384,
+      "seed": 47001,
+      "status": "DESCRIPTIVE_PAIRED_WEEK_BOOTSTRAP",
+      "target": "total",
+      "weeks": 12
+    },
+    "verified_unchanged_by_owner_version": "V064"
+  },
+  "schema": "fbs.v065.public-aggregate-actual-v064-facts.v1",
+  "source_capture_started_at": "2026-11-11T19:38:28Z",
+  "status": "V064_PARTIAL_SCIENCE_TRANCHE_COMPLETED_SOURCE_RECOVERY_PENDING",
+  "work": {
+    "current_monitor_metric_cards_unchanged_from_v062": 250,
+    "effective_host_vcpus": 48,
+    "failed_fits": 0,
+    "new_current_monitor_metric_cards": 250,
+    "new_frozen_fits": 36,
+    "new_frozen_scalar_outputs": 33336,
+    "new_genuine_forecast_issues": 0,
+    "new_native_historical_and_market_metric_evaluations": 11,
+    "new_original_state_inference_rows": 7611,
+    "new_total_scalar_prediction_outputs": 40947,
+    "observed_peak_concurrent_fits": 12,
+    "project_max_vcpus": 12,
+    "restored_original_model_states_parity_verified": 9,
+    "reused_frozen_cases": 60,
+    "reused_frozen_scalar_outputs": 55560
+  },
+  "prepared_version": "V065",
+  "public_scope": "EXISTING_FBS_ALL_GAME_ANALYTICAL_REPORT",
+  "source_publication_is_source_refresh": false
+}

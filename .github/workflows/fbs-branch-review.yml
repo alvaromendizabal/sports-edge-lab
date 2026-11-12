@@ -22,6 +22,12 @@ jobs:
         run: |
           python -m unittest discover -s examples/fbs_contracts/tests -v
           python tests/test_fbs_v054_public_evidence.py
+          python tests/test_fbs_v065_public.py
+          python tests/test_fbs_v066_public.py
+          python tests/test_fbs_v067_public.py
+          python tests/test_fbs_v068_public.py
+          python tests/test_fbs_v069_recovery_public.py
+          python tests/test_fbs_v070_public.py
           node tests/fbs_v054_public_view.test.cjs
       - name: Execute twice and verify deterministic evidence page
         run: |
@@ -74,11 +80,16 @@ jobs:
           PLAYWRIGHT_MODULE_DIR: ${{ runner.temp }}/fbs-browser/node_modules/playwright
           FBS_SCREENSHOTS: ${{ runner.temp }}/fbs-screenshots
         run: |
+          node tests/fbs_v068_browser.test.cjs
           node examples/fbs_contracts/tests/test_dashboard_browser.cjs
           node examples/fbs_contracts/tests/test_recovery_browser.cjs
           node examples/fbs_contracts/tests/test_season_browser.cjs
           node tests/fbs_v054_browser.test.cjs
+          node tests/fbs_v065_browser.test.cjs
+          node tests/fbs_v066_browser.test.cjs
+          node tests/fbs_v067_browser.test.cjs
       - name: Preserve desktop and mobile evidence views
+        if: always()
         uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02
         with:
           name: fbs-evidence-screenshots

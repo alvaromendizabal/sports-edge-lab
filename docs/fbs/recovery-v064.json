@@ -1,0 +1,407 @@
+{
+  "schema": "fbs.v064.public-recovery-aggregates.v1",
+  "sport": "ncaa_fbs",
+  "review_date": "2026-11-11",
+  "actual_owner_release": "V062",
+  "prepared_release": "V064",
+  "launch_failure": {
+    "attempted_release": "V063",
+    "error_class": "IndentationError",
+    "phase": "PASTED_COMMAND_PARSING_BEFORE_OWNER_LAUNCH",
+    "owner_started": false,
+    "new_scientific_work_from_attempt": false
+  },
+  "software_status": "LOCAL_PACKAGE_TESTS_PASSED_NO_V064_AWS_EXECUTION_CLAIM",
+  "source_capture_completed_at": "2026-11-11T07:24:46Z",
+  "source_time_is_not_publication_time": true,
+  "publication_scope": "SANITIZED_AGGREGATE_FBS_RESEARCH_RECOVERY_NOTE_NO_GAME_FILE_CHANGE",
+  "research_only_non_wagering": true,
+  "owner_work": {
+    "new_frozen_fits": 36,
+    "new_frozen_scalar_outputs": 33336,
+    "new_restored_state_outputs": 301,
+    "reused_frozen_cases": 36,
+    "reused_frozen_scalar_outputs": 33336,
+    "new_saved_probability_evaluations": 250,
+    "distinct_preserved_probability_vectors": 212,
+    "failed_fit_attempts": 0,
+    "observed_concurrent_frozen_fits": 12,
+    "new_primary_comparison_cells": 84,
+    "cells_favoring_new_candidates": 0,
+    "cells_favoring_restored_controls": 84,
+    "new_champions_authorized": 0,
+    "new_current_origin_forecasts": 0,
+    "status": "PARTIAL_RESUMABLE_NO_RECORDED_APPLICATION_EXCEPTION"
+  },
+  "forecast_inventory": {
+    "fixtures": 888,
+    "observed_finals": 688,
+    "future_timed_games": 145,
+    "exact_kickoff_unresolved": 55,
+    "current_origin_refresh_gaps": 145,
+    "archived_previous_future_issue_games": 145,
+    "prior_originals_omitted_from_current_owner_view": 26,
+    "older_original_selections_in_current_owner_view": 14,
+    "native_saved_completed_panel": 301,
+    "completed_games_outside_native_bank": 387,
+    "archive_recovery_is_new_issue": false,
+    "original_issued_and_replay_layers_remain_separate": true
+  },
+  "archived_low_loss_result": {
+    "role": "TensorFlow recency",
+    "games": 231,
+    "season": 2026,
+    "log_loss": 0.416199,
+    "brier": 0.133223,
+    "correct": 188,
+    "accuracy": 0.813853,
+    "cohort": "PURE_FBS_COMMON_BOOK_MARKET_231",
+    "evidence": "EXPOSED_ARCHIVED_RECONSTRUCTION_NOT_ORIGINAL_ISSUE",
+    "full_season": false,
+    "kalshi_only": false,
+    "promotion_authorized": false
+  },
+  "saved_301_game_model_rows": [
+    {
+      "role": "TensorFlow base",
+      "games": 301,
+      "accuracy": 0.787375,
+      "log_loss": 0.465519,
+      "brier": 0.15263,
+      "evidence": "EXPOSED_ARCHIVED_RECONSTRUCTION_NOT_ORIGINAL_ISSUE"
+    },
+    {
+      "role": "TensorFlow recency",
+      "games": 301,
+      "accuracy": 0.780731,
+      "log_loss": 0.466946,
+      "brier": 0.153064,
+      "evidence": "EXPOSED_ARCHIVED_RECONSTRUCTION_NOT_ORIGINAL_ISSUE"
+    },
+    {
+      "role": "PyTorch recency",
+      "games": 301,
+      "accuracy": 0.777409,
+      "log_loss": 0.466857,
+      "brier": 0.153166,
+      "evidence": "EXPOSED_ARCHIVED_RECONSTRUCTION_NOT_ORIGINAL_ISSUE"
+    },
+    {
+      "role": "PyTorch feedback and recency",
+      "games": 301,
+      "accuracy": 0.790698,
+      "log_loss": 0.47159,
+      "brier": 0.154706,
+      "evidence": "EXPOSED_ARCHIVED_RECONSTRUCTION_NOT_ORIGINAL_ISSUE"
+    }
+  ],
+  "cohort_denominators_are_not_interchangeable": true,
+  "matched_completed_season_controls": [
+    {
+      "season": 2024,
+      "target": "margin",
+      "metric": "mae",
+      "games": 917,
+      "restored_control": 13.541581,
+      "best_new": 13.860839,
+      "evidence": "EXPOSED_MATCHED_SAVED_COMPARISON_NOT_PROMOTED"
+    },
+    {
+      "season": 2024,
+      "target": "margin",
+      "metric": "rmse",
+      "games": 917,
+      "restored_control": 17.010088,
+      "best_new": 17.602979,
+      "evidence": "EXPOSED_MATCHED_SAVED_COMPARISON_NOT_PROMOTED"
+    },
+    {
+      "season": 2025,
+      "target": "margin",
+      "metric": "mae",
+      "games": 933,
+      "restored_control": 12.81003,
+      "best_new": 13.681287,
+      "evidence": "EXPOSED_MATCHED_SAVED_COMPARISON_NOT_PROMOTED"
+    },
+    {
+      "season": 2025,
+      "target": "margin",
+      "metric": "rmse",
+      "games": 933,
+      "restored_control": 16.244601,
+      "best_new": 17.207053,
+      "evidence": "EXPOSED_MATCHED_SAVED_COMPARISON_NOT_PROMOTED"
+    },
+    {
+      "season": 2024,
+      "target": "total",
+      "metric": "mae",
+      "games": 917,
+      "restored_control": 12.789334,
+      "best_new": 12.85545,
+      "evidence": "EXPOSED_MATCHED_SAVED_COMPARISON_NOT_PROMOTED"
+    },
+    {
+      "season": 2024,
+      "target": "total",
+      "metric": "rmse",
+      "games": 917,
+      "restored_control": 16.259808,
+      "best_new": 16.345907,
+      "evidence": "EXPOSED_MATCHED_SAVED_COMPARISON_NOT_PROMOTED"
+    },
+    {
+      "season": 2025,
+      "target": "total",
+      "metric": "mae",
+      "games": 933,
+      "restored_control": 12.695097,
+      "best_new": 12.782387,
+      "evidence": "EXPOSED_MATCHED_SAVED_COMPARISON_NOT_PROMOTED"
+    },
+    {
+      "season": 2025,
+      "target": "total",
+      "metric": "rmse",
+      "games": 933,
+      "restored_control": 15.731463,
+      "best_new": 15.819521,
+      "evidence": "EXPOSED_MATCHED_SAVED_COMPARISON_NOT_PROMOTED"
+    },
+    {
+      "season": 2024,
+      "target": "winner",
+      "metric": "accuracy",
+      "games": 917,
+      "restored_control": 0.733915,
+      "best_new": 0.709924,
+      "evidence": "EXPOSED_MATCHED_SAVED_COMPARISON_NOT_PROMOTED"
+    },
+    {
+      "season": 2024,
+      "target": "winner",
+      "metric": "brier",
+      "games": 917,
+      "restored_control": 0.178109,
+      "best_new": 0.186112,
+      "evidence": "EXPOSED_MATCHED_SAVED_COMPARISON_NOT_PROMOTED"
+    },
+    {
+      "season": 2024,
+      "target": "winner",
+      "metric": "log_loss",
+      "games": 917,
+      "restored_control": 0.524793,
+      "best_new": 0.545467,
+      "evidence": "EXPOSED_MATCHED_SAVED_COMPARISON_NOT_PROMOTED"
+    },
+    {
+      "season": 2025,
+      "target": "winner",
+      "metric": "accuracy",
+      "games": 933,
+      "restored_control": 0.750268,
+      "best_new": 0.72776,
+      "evidence": "EXPOSED_MATCHED_SAVED_COMPARISON_NOT_PROMOTED"
+    },
+    {
+      "season": 2025,
+      "target": "winner",
+      "metric": "brier",
+      "games": 933,
+      "restored_control": 0.164444,
+      "best_new": 0.179532,
+      "evidence": "EXPOSED_MATCHED_SAVED_COMPARISON_NOT_PROMOTED"
+    },
+    {
+      "season": 2025,
+      "target": "winner",
+      "metric": "log_loss",
+      "games": 933,
+      "restored_control": 0.492943,
+      "best_new": 0.533299,
+      "evidence": "EXPOSED_MATCHED_SAVED_COMPARISON_NOT_PROMOTED"
+    }
+  ],
+  "original_saved_cohort_descriptive_leaders": [
+    {
+      "season": 2024,
+      "target": "margin",
+      "metric": "mae",
+      "games": 918,
+      "value": 13.463804,
+      "evidence": "COHORT_SPECIFIC_POSTHOC_SAVED_LEADER_NOT_JOINTLY_SELECTED"
+    },
+    {
+      "season": 2024,
+      "target": "margin",
+      "metric": "rmse",
+      "games": 918,
+      "value": 16.859941,
+      "evidence": "COHORT_SPECIFIC_POSTHOC_SAVED_LEADER_NOT_JOINTLY_SELECTED"
+    },
+    {
+      "season": 2024,
+      "target": "total",
+      "metric": "mae",
+      "games": 918,
+      "value": 12.72322,
+      "evidence": "COHORT_SPECIFIC_POSTHOC_SAVED_LEADER_NOT_JOINTLY_SELECTED"
+    },
+    {
+      "season": 2024,
+      "target": "total",
+      "metric": "rmse",
+      "games": 918,
+      "value": 16.163994,
+      "evidence": "COHORT_SPECIFIC_POSTHOC_SAVED_LEADER_NOT_JOINTLY_SELECTED"
+    },
+    {
+      "season": 2024,
+      "target": "winner",
+      "metric": "accuracy",
+      "games": 918,
+      "value": 0.733115,
+      "evidence": "COHORT_SPECIFIC_POSTHOC_SAVED_LEADER_NOT_JOINTLY_SELECTED"
+    },
+    {
+      "season": 2024,
+      "target": "winner",
+      "metric": "brier",
+      "games": 918,
+      "value": 0.177148,
+      "evidence": "COHORT_SPECIFIC_POSTHOC_SAVED_LEADER_NOT_JOINTLY_SELECTED"
+    },
+    {
+      "season": 2024,
+      "target": "winner",
+      "metric": "log_loss",
+      "games": 918,
+      "value": 0.520898,
+      "evidence": "COHORT_SPECIFIC_POSTHOC_SAVED_LEADER_NOT_JOINTLY_SELECTED"
+    },
+    {
+      "season": 2025,
+      "target": "margin",
+      "metric": "mae",
+      "games": 934,
+      "value": 12.668611,
+      "evidence": "COHORT_SPECIFIC_POSTHOC_SAVED_LEADER_NOT_JOINTLY_SELECTED"
+    },
+    {
+      "season": 2025,
+      "target": "margin",
+      "metric": "rmse",
+      "games": 934,
+      "value": 16.060335,
+      "evidence": "COHORT_SPECIFIC_POSTHOC_SAVED_LEADER_NOT_JOINTLY_SELECTED"
+    },
+    {
+      "season": 2025,
+      "target": "total",
+      "metric": "mae",
+      "games": 934,
+      "value": 12.659079,
+      "evidence": "COHORT_SPECIFIC_POSTHOC_SAVED_LEADER_NOT_JOINTLY_SELECTED"
+    },
+    {
+      "season": 2025,
+      "target": "total",
+      "metric": "rmse",
+      "games": 934,
+      "value": 15.708576,
+      "evidence": "COHORT_SPECIFIC_POSTHOC_SAVED_LEADER_NOT_JOINTLY_SELECTED"
+    },
+    {
+      "season": 2025,
+      "target": "winner",
+      "metric": "accuracy",
+      "games": 934,
+      "value": 0.767666,
+      "evidence": "COHORT_SPECIFIC_POSTHOC_SAVED_LEADER_NOT_JOINTLY_SELECTED"
+    },
+    {
+      "season": 2025,
+      "target": "winner",
+      "metric": "brier",
+      "games": 934,
+      "value": 0.161648,
+      "evidence": "COHORT_SPECIFIC_POSTHOC_SAVED_LEADER_NOT_JOINTLY_SELECTED"
+    },
+    {
+      "season": 2025,
+      "target": "winner",
+      "metric": "log_loss",
+      "games": 934,
+      "value": 0.485283,
+      "evidence": "COHORT_SPECIFIC_POSTHOC_SAVED_LEADER_NOT_JOINTLY_SELECTED"
+    }
+  ],
+  "kalshi_winner_coverage": {
+    "game_denominator": 888,
+    "numeric_reference_games": 708,
+    "qualified_matched_pregame_games": 0,
+    "status_counts": {
+      "NO_RETAINED_PROVIDER_TARGET_REFERENCE": 179,
+      "POST_START_REFERENCE_NOT_PREGAME_PROOF": 594,
+      "RETAINED_REFERENCE_REQUIRES_CONTRACT_AND_POSSESSION_PROOF": 2,
+      "QUOTE_CLOCK_MISSING": 112,
+      "NO_EXACT_ORDERED_TEAM_KICKOFF_CONTRACT_IN_TARGETED_SUBSET": 1
+    }
+  },
+  "promotion_status": {
+    "authorized_champions": 0,
+    "stage": "DEFERRED_INCOMPLETE_VERIFIED_SOURCE_CLOSURE",
+    "per_objective_selection_reached": false,
+    "registered_candidates": 6437,
+    "registered_candidate_objective_contrasts": 96555,
+    "registered_frozen_cases": 5858,
+    "completed_frozen_cases": 211,
+    "contiguous_completed_cases": 151,
+    "separately_verified_priority_cases": 60,
+    "remaining_cases": 5647,
+    "contiguous_unvisited_positions": 5707,
+    "later_gates_individually_evaluated_in_this_run": false,
+    "current_season_used_for_selection": false
+  },
+  "market_response": {
+    "exact_tick_checkpoint_cells": 0,
+    "materialized_nonmissing_feature_values": 0,
+    "executed_experiments": 0,
+    "new_model_fits": 0,
+    "demonstrated_predictive_improvement": false,
+    "missing_exact_tick_providers": [
+      "DraftKings",
+      "Kalshi",
+      "Polymarket Global",
+      "Polymarket US"
+    ],
+    "source_status": "NO_EXACT_ADMITTED_TICKS"
+  },
+  "preparation_counts": {
+    "new_real_model_fits": 0,
+    "new_real_inference": 0,
+    "new_outcome_rescoring": 0,
+    "new_forecast_issues": 0,
+    "source_requests": 0
+  },
+  "public_evidence_links": {
+    "actual_owner": "V063_LATEST_GAMES_AND_OWNER_2026-11-11.md",
+    "all_games": "latest-games-v063.html",
+    "rounded_evidence": "latest-games-v063.json.gz",
+    "six_layer_csv": "latest-games-v063.csv"
+  },
+  "local_validation": {
+    "exact_package_tests": 773,
+    "v064_version_tests": 151,
+    "retained_version_tests": 622,
+    "final_failures": 0,
+    "final_errors": 0,
+    "skipped": 0,
+    "initial_retained_overlap_check_failure_preserved": true,
+    "unchanged_full_suite_retry_passed": true,
+    "real_AWS_runs": 0,
+    "real_sports_computation": 0
+  }
+}

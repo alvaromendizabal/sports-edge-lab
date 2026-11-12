@@ -1,3 +1,102 @@
+<!-- FBS_V070_LATEST_ATTEMPT_START -->
+# NCAA FBS · latest actual V069 attempt and preserved forecasts
+
+**The November 12 V069 invocation failed during current-price verification before source refresh or training.** Its summary reports zero new fits, issues and outputs. The independent worker and supervisor both exited 2; all 73 return-manifest pins verified. Unreached optimizer counters remain unobserved.
+
+[Open latest execution, annual leaders and full saved game view](latest-games-v068.html#latest-attempt) · [Download status, leaders and coverage](latest-attempt-v070.json) · [Read the failure and evidence review](V070_ACTUAL_V069_REVIEW_2026-11-12.md).
+
+The actual saved price catalog was 42 hours, 4 minutes and 38 seconds old when its 24-hour guard rejected it, after the live request was denied. V070 is being prepared to repair current-price verification without widening that gate or changing model-selection rules. No V070 owner results are claimed.
+
+The latest verified selected forecasts remain the 146 V067 outlooks issued November 11. The saved inventory contains 888 games, 688 observed finals and 54 unresolved kickoffs. All 21 saved annual leader roles, earlier forecasts and metric comparisons remain unchanged. Last completed rolling-champion authorization: V064, zero. Full-current-season refresh of every former model and strict full-season named-provider comparisons remain incomplete. The separately recovered 55 original issues remain distinct from the 301-game reconstruction.
+
+The reports below are dated history. This update changes public source on the existing draft PR; it is not a new source capture, model run, promotion or website deployment.
+
+<!-- FBS_V070_LATEST_ATTEMPT_END -->
+
+# NCAA FBS · actual V067 forecasts and restored-model evidence
+
+**V067 completed one registered foundation fit, 146 current forecast contexts and a 301-game former-model evaluation, then failed during final ledger assembly.** All completed issue values and clocks are preserved in the [new game explorer](latest-games-v068.html), alongside all 888 observed current-season games, earlier originals, separate reconstructions, provider gaps and metric-specific saved leaders for 2024, 2025 and 2026.
+
+The owner produced 739 scalar outputs: 438 forward winner/margin/total values and 301 former-model probabilities. It made 13 official-source requests and normalized 128 already-owned market request bodies. Worker/supervisor exits were 2/2. The parallel frozen-fit phase was not reached, and no new model promotion occurred. The restored probability model scored 0.465519 log loss and 0.152630 Brier on its original 301-game design; 387 current finals remain outside that design. The near-0.40 result remains a separate preserved 231-game finding.
+
+[Actual run, failures and scientific limits](V068_ACTUAL_OWNER_REVIEW_2026-11-11.md) · [All 6,216 selected-layer CSV rows](latest-games-v068.csv) · [Complete 2,742-game 2024–2026 inventory](season-inventory-v068.csv).
+
+New V067 outlooks were originally issued November 11, 3:31–3:32 p.m. Pacific. They are unpromoted research baselines with their actual lead times. Older original layers remain unchanged. V068 is a prepared engineering continuation, not a completed owner run. This FBS draft source update is not a website deployment.
+
+The complete preceding accounts below remain dated history. Their latest-owner and pending-release statements describe their original publication dates.
+
+---
+
+# NCAA FBS · recovered V066 sources; V067 continuation prepared
+
+**Latest actual owner: V066, failed after source refresh and before new validated model results. V067 has not yet run on AWS.**
+
+[Open the latest dated all-game report](latest-games-v067.html) · [Actual execution and preserved science](V067_ACTUAL_OWNER_REVIEW_2026-11-11.md) · [Complete rounded layer CSV](latest-games-v067.csv)
+
+The recovered V066 source capture is November 11, 2026, **2:22:13–2:22:44 p.m. Pacific / 22:22:13–22:22:44 UTC**. It preserves 888 games: 688 finals, 146 timed future games and 54 unresolved kickoffs. The selected-original layer contains 148 game records (145 future and three completed) from 216 private immutable issue records. Every original value and publication clock remains unchanged.
+
+V066 made 13 official-source requests, zero new fits, 301 unvalidated inference rows and zero new forecasts. All 146 current foundation refresh tasks failed because the exact new-pool fitted state was missing. The original registration already permitted one current fit; V067 restores it within the existing 48-fit allowance and 12-champion reservation. This does not promote a model or backdate earlier forecasts.
+
+V067 also repairs oversized owned market request records, the original metadata join and large-summary return certification. The actual recovered archive was authenticated separately after the original supervisor rejected it. The last completed metric comparison remains V064: stronger restored models won all 84 primary comparison cells, and no rolling champion was authorized. The old 231-game low-loss result, separate 301-game leaders and 688-game point metrics retain their original cohorts and clocks. Complete source-clock-qualified Kalshi/Polymarket comparisons remain unavailable.
+
+The complete preceding dated evidence follows unchanged. Source publication, exact-head CI, merge and deployment are separate statuses.
+
+---
+
+# NCAA FBS · actual V065 admission failure; V064 science retained
+
+**Latest actual owner: V065, failed before source acquisition or science. V066 is prepared; no V066 AWS run is observed.**
+
+[Open the latest dated all-game report](latest-games-v066.html) · [Actual execution and preserved science](V066_ACTUAL_OWNER_REVIEW_2026-11-11.md) · [Complete rounded layer CSV](latest-games-v066.csv)
+
+V065 reported zero new fits, prediction outputs, genuine forecasts or provider requests and returned exit code 2 after resource admission deferred. Its fallback display used a November 9 capture. The new report preserves the latest valid V064 November 11, 19:38:28–19:38:54 UTC evidence instead: **888 games, 688 finals, 146 timed future games and 54 unresolved kickoffs**, with **148 selected original game records** (145 future and three completed) drawn from 216 retained private issue records. All six earlier report layers and 5,328 CSV rows remain available with their original clocks and explicit empty values.
+
+The last measured V064 forward refresh blocked all 146 timed games because the exact new training-pool state was absent under the no-refit policy; V065 did not retry it. Rutgers at Penn State is the single timed game without an admitted original. There are zero authorized rolling champions. V064's 36 new fits and all 84 unfavorable comparisons against restored controls remain dated V064 evidence. The recovered 231-game low-loss result, separate 301-game native leaders and 688-game saved point metrics retain their original cohorts, clocks and promotion limits. No verified Kalshi-only winner comparison is claimed.
+
+V066 prepares admission recovery, exact latest-evidence continuity and owned-source inventory qualification without new scientific authority. Report preparation creates no new forecast or source capture. Source publication, exact-head CI, merging and deployment remain separate.
+
+The complete preceding dated evidence follows unchanged.
+
+---
+
+# Latest FBS evidence — actual V064 owner, V065 preparation
+
+[Current all-game report](latest-games-v065.html) · [Comparison CSV](latest-games-v065.csv) · [Actual owner findings](V065_ACTUAL_OWNER_REVIEW_2026-11-11.md) · [Aggregate evidence](recovery-v065.json)
+
+The latest authenticated V064 capture contains **888 fixtures: 688 finals, 146 timed future games and 54 unresolved kickoffs**. Original forecast continuity is restored for **148 games** (145 future and three completed), with original issue times preserved. Rutgers–Penn State is the one timed future game without a selected original issue. All 146 still lack a newly issued exact-current-pool V064 forecast; no new champion was promoted.
+
+V064 completed 36 new frozen fits, restored 9 additional native states and produced 40,947 new scalar outputs, but all 84 primary comparisons trail stronger preserved controls on matched 2024/2025 games. The old .416199 result remains available on its 231-game cohort; its 301-game value is .466946. Newly recovered saved 688-game point reports show margin MAE 14.261799 and total MAE 13.002524; these retrospective evaluations remain separate from original-issued evidence. Full findings and limitations are linked above.
+
+Source capture: **November 11, 2026, 11:38:28 a.m. Pacific / 19:38:28 UTC**. V065 is tested software preparation, not a newly executed owner result. The existing draft PR preserves all earlier reports; source publication, merge and deployment are separate.
+
+---
+
+> **V064 recovery review — November 11:** [Launch failure, preserved model leaders and remaining forecast gaps](V064_RECOVERY_2026-11-11.md). The attempted V063 command stopped before owner execution after losing Python indentation. Actual science remains V062: 36 new fits, stronger restored controls, zero newly authorized champions and 145 current-refresh gaps. The existing all-game view preserves all 888 fixtures and a separate archive of 145 earlier future forecasts. V064 passed its complete 773-test local package suite; no new owner result is claimed.
+
+> **V063 delivery update — November 11:** [Tested executable delivery and verified return parts](V063_AUTHORIZED_DELIVERY_2026-11-11.md). The owner replaced the 150 MB packaging restriction with a 512 MB per-return-file limit and splitting for larger returns. The latest actual research and predictions remain the dated V062 evidence below.
+
+# FBS · actual V062 research and forecast continuity
+
+[**Open all 888 current-season games →**](latest-games-v063.html) · [Actual owner and model comparison](V063_LATEST_GAMES_AND_OWNER_2026-11-11.md) · [All six forecast layers](latest-games-v063.csv) · [Rounded evidence](latest-games-v063.json.gz)
+
+The latest authenticated V062 owner completed **36 new frozen fits / 33,336 outputs** and reused 36 completed cases. Its 19 new comparison cards preserve the old selected references: all 84 new-fit/season/primary-metric comparisons favored those restored controls. All 250 native probability variants retain unchanged metrics on the same 301-game panel. **Zero metric champions were authorized.**
+
+The source capture at **11:24:15–11:24:46 p.m. Pacific on November 10** records **688 finals, 145 future timed games and 55 unresolved kickoffs**. All 145 current-origin baseline refresh tasks failed exact-existing-state lookup. The actual V062 ledger retains 119 future originals, omits 26 earlier originals and selects an older issue for 14 more games. A separately labeled authenticated V061 archive preserves all 145 earlier future issues with their original clocks; it receives no new V062 issuance or refresh credit. All six layers and explicit gaps remain downloadable.
+
+The partial exit preserved a resumable checkpoint without a recorded application exception. Full research, refreshed forecast coverage and promotion remain incomplete. This is a draft publication of actual V062 evidence, not a V063 owner result or a deployed website. Earlier dated research and pages remain below.
+
+---
+
+> **Latest actual FBS owner — November 10, 6:26 p.m. Pacific (November 11, 02:26 UTC):** [All 888 games and all 145 future baseline forecasts](latest-games-v062.html) · [Actual V061 research, restored controls and current monitoring](V062_LATEST_GAMES_AND_OWNER_2026-11-11.md). V061 completed 36 new frozen fits and 250 saved-probability evaluations. None of the new alternatives beat their restored selected references on the matched main metrics. Forty new forecast contexts update already-covered games; 105 immutable issues were reused. Zero rolling champions were authorized. The run returned a bounded resumable checkpoint with no recorded application error. Earlier dated reports remain below.
+
+> **Latest complete future baseline coverage — November 11, 01:29 UTC capture:** [All 888 games and all 145 future baseline forecasts](latest-games-v061.html) · [Actual V060 output and V061 correction](V061_LATEST_GAMES_AND_OWNER_2026-11-11.md). Forty issues are genuinely new; 105 retain their earlier issue clocks. No new model promotion.
+
+> **Latest games and champions — November 11, 2026:** [All 888 current-season games, upcoming forecasts and source gaps](latest-games-v060.html) · [V059 actual owner and V060 preparation](V060_LATEST_GAMES_AND_OWNER_2026-11-11.md). The latest owner completed 36 new fits; no metric-specific rolling champion was authorized.
+
+> **Latest actual owner review — November 10, 2026:** [V058 early failure and prepared V059 correction](V059_OWNER_FAILURE_PREPARATION_2026-11-10.md). Earlier dated accounts remain unchanged.
+
+> **Latest recovery review — November 10, 2026:** [Authenticated V057 partial results and prepared V058 continuation](V058_RECOVERY_PREPARATION_2026-11-10.md). Earlier accounts below retain their original publication dates.
+
 # NCAA FBS · authenticated partial V055 and prepared V056
 
 **Latest actual owner: V055, partial. V056 is prepared; owner execution remains pending.**
@@ -255,4 +354,3 @@ The latest authenticated V056 owner added 31 base fits and five statistical stat
 V057 prepares exact historical-recipe recovery, reusable per-candidate metrics before global closure, and bounded recovery that can advance after interruption. Its 64-unit chunks retain the eight-chunk ceiling, for an effective maximum of 512 units per recovery slice. Complete-population cache reuse requires independent canonical receipt, source and selector verification. No V057 AWS execution, new model improvement or automatic promotion is claimed. The requirement for hundreds of certified new feature concepts remains unmet.
 
 Evidence: [latest saved owner counts](actual-owner-v056.json), [historical scorecards and qualifications](historical-contenders-v057.json), and [FBS evidence dashboard](current.html). Publication is not a data refresh or model run. NFL, NBA and NCAA basketball retain their independent owners and evidence.
-

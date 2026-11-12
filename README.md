@@ -1,3 +1,33 @@
+## FBS: actual V069 stopped before training — November 12, 2026
+
+**Latest actual FBS execution: V069, worker and supervisor exit 2, before source refresh or training.** The current-invocation summary reports zero new fits, issues and prediction outputs; unreached optimizer counters stay unobserved. An expired saved price catalog was correctly rejected after live price access was denied. The return passed all 73 manifest-member pins.
+
+[**Latest attempt, season leaders and all saved games**](docs/fbs/latest-games-v068.html#latest-attempt) · [Status and coverage JSON](docs/fbs/latest-attempt-v070.json) · [Actual V069 review](docs/fbs/V070_ACTUAL_V069_REVIEW_2026-11-12.md).
+
+The 146 selected outlooks retain their November 11 V067 issue clocks. The saved current-season inventory remains 888 games with 688 observed finals and 54 unresolved kickoffs. All 21 annual metric roles and stronger historical controls remain available. The 301-game reconstruction and 55 recovered original issues stay separate; full-season refresh of every former model and fully qualified annual named-provider comparisons remain incomplete. The last completed champion check authorized zero rolling champions.
+
+V070 software repair is in preparation; no V070 owner result, promotion, merge or deployment is claimed. Earlier FBS entries below are dated history; their latest-owner and pending-release statements describe those earlier publication dates. Current NFL and NCAA evidence from main is preserved unchanged.
+
+## FBS: actual V067 forecasts recovered; final ledger failed — November 11, 2026
+
+**Latest actual FBS execution: V067, partial, worker and supervisor exit 2.** One registered foundation fit produced **146 genuine current outlooks** for all eligible timed future games. Another **301 restored-model probabilities** passed original-output parity, producing one new metric evaluation. A subsequent report-binding defect stopped full-ledger delivery before parallel frozen fitting; no new champion was authorized.
+
+[**V067 current forecasts and season leaders**](docs/fbs/latest-games-v068.html) · [Seven selected layers, 6,216 CSV rows](docs/fbs/latest-games-v068.csv) · [Official 2024–2026 inventory, 2,742 games](docs/fbs/season-inventory-v068.csv) · [Actual-owner review](docs/fbs/V068_ACTUAL_OWNER_REVIEW_2026-11-11.md)
+
+The fresh 2026 inventory has **888 games: 688 finals, 146 timed future games and 54 unresolved kickoffs**. New outlooks retain original November 11, 23:31:03–23:32:11 UTC issue clocks. All six earlier forecast layers and stronger historical comparisons remain unchanged. The restored model's 301-game result (237 correct, 0.465519 log loss, 0.152630 Brier) does not cover the remaining 387 finals. Market benchmarks retain their provider, cohort and source-clock limits.
+
+**V068 remains an engineering continuation pending owner execution.** This dated repository projection adds no fits, forecasts or recomputed metrics. Draft publication, merge and deployment are separate states.
+
+## FBS: recovered V066 source refresh; V067 repairs prepared — November 11, 2026
+
+**Latest actual FBS execution: V066, exit 2.** Its recovered return preserves the latest official-source capture (November 11, 22:22:13–22:22:44 UTC): **888 games, 688 finals, 146 timed future games and 54 unresolved kickoffs**. Earlier original forecasts remain selected for **148 games** (145 future and three completed), with unchanged values and original issue clocks. V066 made 13 official requests, zero new fits, 301 unvalidated inference outputs and zero new forecasts.
+
+[**All games and latest preserved forecasts**](docs/fbs/latest-games-v067.html) · [Complete rounded layer CSV](docs/fbs/latest-games-v067.csv) · [Actual execution, restored-model comparisons and promotion gaps](docs/fbs/V067_ACTUAL_OWNER_REVIEW_2026-11-11.md)
+
+The earlier 0.416199 log-loss model remains preserved on its 231-game cohort; its separate 301-game result and the 688-game baseline metrics retain their own support. V064 remains the last completed scientific tranche: its newer alternatives lost all 84 primary comparison cells to restored references, and no rolling champion was authorized. V066 did not reach a new champion check. Qualified Kalshi and Polymarket comparisons remain incomplete.
+
+**V067 is prepared; its owner execution is unobserved.** It repairs oversized owned-record handling, the original-model metadata join and large-summary return certification, and restores the originally authorized one current foundation fit within the existing shared 48-fit budget. Twelve admissions remain reserved for qualified champions. Earlier issues cannot be backdated or overwritten. Repository publication does not establish merge, deployment or new forecasts.
+
 ## NCAA basketball B062: execution repaired, earlier models retained — November 11, 2026 UTC
 
 **B060 remains the latest actual owner run; B062 is prepared and locally validated.** B061's reported launch stopped before archive code. The new continuation provides measured source diagnostics, earlier durable fit output, a native-library startup fix, fourteen separate metric roles, and lossless authenticated return splitting. The original checkpoint authority and seven older scientific identities are preserved. Actual twelve-core throughput and fresh future forecasts still require the next owner execution.
@@ -146,7 +176,7 @@ a narrow missing-clock checkpoint repair.
 | Track | Entry point | Publication boundary |
 |---|---|---|
 | NFL | [Current evidence](tracks/nfl/README.md) | N076: 62 new fits, 1,008 issue events; 448 selected rows across 112 timed future games, complete 272-game census, preserved former champions and explicit incomplete replay |
-| NCAA FBS | [Browser dashboard](https://sports-edge-lab-fbs.alv-mendizabal.chatgpt.site) · [Track](tracks/ncaaf/README.md) | Actual V053 partial; V055 prepared; 500 saved issue contexts across 122 games, with dated provider coverage |
+| NCAA FBS | [Latest actual attempt and preserved forecasts](docs/fbs/latest-games-v068.html#latest-attempt) · [Track](tracks/ncaaf/README.md) | Actual V069 stopped before training; 146 V067 outlooks, 888 saved game identities, annual leaders and earlier models preserved; full refresh incomplete |
 | NBA | [Research view](docs/NBA_RESEARCH_CARD.md) | Separately dated basketball evidence |
 | NCAA basketball | [Open dashboards](https://alvaro-ncaa-research-review.alv-mendizabal.chatgpt.site/) · [Men's evidence](tracks/ncaam/README.md) · [Women's evidence](tracks/ncaaw/README.md) · [Runnable contracts](examples/ncaa_review/README.md) | Separate historical selections, current execution gaps and three-provider qualification |
 
