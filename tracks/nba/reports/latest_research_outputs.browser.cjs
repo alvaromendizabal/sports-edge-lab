@@ -1,7 +1,7 @@
 /* Hosted Playwright acceptance for the source-separated saved NBA schedule, schema v4.
- * Run only in the authorized GitHub Actions browser job using its pinned
- * Playwright installation. No local browser launch, NBA fit, or rescoring is
- * part of preparation. --data-only runs the independent JSON census without
+ * Canonical acceptance runs in the GitHub Actions browser job with its pinned
+ * Playwright installation. Authorized local replay uses the same saved files;
+ * no NBA fit or rescoring is performed. --data-only runs the independent census without
  * importing Playwright or touching any browser API. The oracle below never
  * calls the page's expandedRows.
  */
@@ -252,6 +252,55 @@ function expectedRow(row, data) {
   ] };
 }
 
+
+function verifyVenueDisplayEvidence(htmlBytes, jsonBytes) {
+  const evidenceBytes = fs.readFileSync(path.join(__dirname, "b077_owner_evidence.json"));
+  const projection = JSON.parse(fs.readFileSync(path.join(__dirname, "venue_comparison_display_v1.json")));
+  const evidence = JSON.parse(evidenceBytes);
+  const gitBlob = bytes => crypto.createHash("sha1").update("blob " + bytes.length + "\0").update(bytes).digest("hex");
+  assert.equal(projection.schema, "sports-edge-lab.nba.saved-venue-display.v1");
+  assert.equal(projection.display_only, true);
+  for (const field of ["new_fits", "new_inference", "new_metric_calculations", "new_forecast_issues", "new_promotions"]) {
+    assert.equal(projection[field], 0, "Display-only scope: " + field);
+  }
+  assert.equal(gitBlob(evidenceBytes), projection.source.evidence_git_blob);
+  assert.equal(gitBlob(jsonBytes), projection.source.unchanged_selected_json_git_blob, "No forecast JSON byte changed");
+  const html = htmlBytes.toString("utf8");
+  const blocks = [...html.matchAll(/<!-- NBA VENUE DISPLAY V1 BEGIN -->[\s\S]*?<!-- NBA VENUE DISPLAY V1 END -->\n/g)];
+  assert.equal(blocks.length, 1, "Exactly one additive venue display block");
+  assert.equal(gitBlob(Buffer.from(html.replace(blocks[0][0], ""), "utf8")), projection.source.original_html_git_blob,
+    "Removing the display insertion must recover the exact original report, including every script and data byte");
+  const comparisons = evidence.current_matched_provider_comparisons.saved_same_game_comparisons;
+  const monitor = evidence.current_original_issue_monitor.selected_role_groups;
+  assert.equal(projection.winner_comparisons.length, comparisons.length);
+  assert.equal(projection.model_monitoring.length, monitor.length);
+  for (const [i, copy] of projection.winner_comparisons.entries()) {
+    assert.equal(copy.source_index, i); assert.deepEqual(copy.saved, comparisons[i], "Exact saved paired row " + i);
+  }
+  for (const [i, copy] of projection.model_monitoring.entries()) {
+    assert.equal(copy.source_index, i); assert.deepEqual(copy.saved, monitor[i], "Exact saved monitoring row " + i);
+  }
+  assert.deepEqual(projection.requested_metric_roles.map(role => role.target + "_" + role.metric),
+    ["winner_accuracy", "winner_log_loss", "winner_brier", "margin_mae", "margin_rmse", "total_mae", "total_rmse"]);
+  assert.equal(projection.distinct_settled_monitor_games, evidence.current_original_issue_monitor.distinct_games);
+  assert.equal(projection.source_clocks.latest_forecast_source_cutoff, evidence.public_snapshot.original_source_cutoff);
+  assert.equal(projection.source_clocks.latest_original_issue, evidence.public_snapshot.original_issue_clock);
+  assert.equal(projection.source_clocks.report_evidence_as_of, JSON.parse(jsonBytes).evidence_as_of_utc);
+  assert.equal(projection.source_clocks.comparison_specific_quote_clock_ranges, "NOT_INCLUDED_IN_PUBLISHED_AGGREGATES");
+  assert.equal(evidence.current_matched_provider_comparisons.at_most_one_week_block_on_current_nonempty_views, true);
+  assert.ok(comparisons.every(row => row.selection_or_promotion_allowed === false && row.fair_probability_games === 0));
+  const cardCounts = {
+    DRAFTKINGS: evidence.current_matched_provider_comparisons.DraftKings_matched_games,
+    KALSHI: comparisons.find(row => row.provider === "KALSHI" && row.horizon_minutes === 60 &&
+      row.issue_horizon_class === "EARLY_OUTLOOK" && row.selected_metric_roles.includes("accuracy")).model_on_same_reference_games.games,
+    POLYMARKET_US: comparisons.find(row => row.provider === "POLYMARKET_US" && row.horizon_minutes === 60 &&
+      row.issue_horizon_class === "EARLY_OUTLOOK" && row.selected_metric_roles.includes("accuracy")).model_on_same_reference_games.games,
+    POLYMARKET_INTERNATIONAL: evidence.current_matched_provider_comparisons.Polymarket_international_matched_games,
+  };
+  assert.deepEqual(Object.fromEntries(projection.providers.map(row => [row.id, row.matched_games])), cardCounts);
+  return { evidence, projection, comparisons, monitor, cardCounts };
+}
+
 (async () => {
   const started = new Date().toISOString(), startedClock = process.hrtime.bigint();
   const output = path.resolve(process.env.NBA_MONITOR_SCREENSHOTS || "nba-publication-browser-artifacts");
@@ -262,6 +311,7 @@ function expectedRow(row, data) {
   const data = JSON.parse(jsonBytes), url = pathToFileURL(htmlPath).href;
   assert.equal(data.schema, "sports-edge-lab-nba-public-source-separated-research-outputs-v4");
   const reference = referenceInventory(data);
+  const venueEvidence = verifyVenueDisplayEvidence(htmlBytes, jsonBytes);
   if (process.argv.includes("--data-only")) {
     const combinations = [];
     const seenViews = new Set(), seenIssues = new Set();
@@ -284,7 +334,8 @@ function expectedRow(row, data) {
     assert.deepEqual(sorted(seenIssues), sorted(Object.keys(data.issues)));
     assert.equal(Object.keys(require.cache).some(name => /(?:^|[\\/])playwright(?:-core)?(?:[\\/]|$)/.test(name)), false);
     const census = { status: "PASS_DATA_ONLY_ORACLE_CENSUS", browser_launched: false, playwright_imported: false,
-      scope: "Independent JSON/reference census and expected-cell formatting only; no DOM or browser validation claimed",
+      scope: "Independent JSON/reference census, expected-cell formatting, exact saved venue projection and insertion-only byte proof; no DOM or browser validation claimed",
+      venue_evidence: { paired_rows: venueEvidence.comparisons.length, model_groups: venueEvidence.monitor.length, card_counts: venueEvidence.cardCounts, original_html_and_forecast_json_preserved: true },
       started_at_utc: started, finished_at_utc: new Date().toISOString(),
       elapsed_seconds: Number(process.hrtime.bigint() - startedClock) / 1e9,
       source_json_sha256: sha256(jsonBytes), source_html_sha256: sha256(htmlBytes),
@@ -441,9 +492,102 @@ function expectedRow(row, data) {
       phase: row.game.phase, date: row.facts.date, team: row.game.home_team || row.game.away_team || "", ...extra };
   }
 
+
+  async function checkVenueDisplay(page, exerciseFilters, name) {
+    const { comparisons, monitor, cardCounts, projection } = venueEvidence;
+    const names = { DRAFTKINGS: "DraftKings", KALSHI: "Kalshi", POLYMARKET_US: "Polymarket US",
+      POLYMARKET_INTERNATIONAL: "Polymarket international" };
+    const score = (value, metric) => typeof value !== "number" ? "Not reported" :
+      metric === "accuracy" ? (100 * value).toFixed(4) + "%" : value.toFixed(6);
+    assert.equal(await page.locator("#nba-venue-title").isVisible(), true);
+    for (const [provider, count] of Object.entries(cardCounts)) {
+      const card = page.locator('#venue-cards [data-venue="' + provider + '"]');
+      assert.equal(await card.locator("h3").innerText(), names[provider]);
+      assert.equal(await card.locator("[data-matched-games]").innerText(), String(count));
+    }
+    const actualWinner = await page.locator("#venue-winner-table tbody tr").evaluateAll(rows => rows.map(row => ({
+      source: Number(row.dataset.sourceIndex),
+      cells: [...row.cells].map(cell => cell.innerText.replace(/\s+/g, " ").trim()),
+    })));
+    assert.deepEqual(actualWinner, comparisons.map((row, i) => ({
+      source: i, cells: [
+        names[row.provider], row.selected_metric_roles.length ? row.selected_metric_roles.join(", ") : "Role association not exported",
+        "T" + row.horizon_minutes + " " + words(row.issue_horizon_class),
+        row.model_on_same_reference_games.games + " / " + row.full_universe_games,
+        ...["accuracy", "log_loss", "brier", "ece_10_fixed_bins"].map(metric =>
+          score(row.model_on_same_reference_games[metric], metric) + " / " + score(row.raw_bbo_midpoint_reference[metric], metric)),
+      ],
+    })), name + ": every displayed paired value matches the original owner evidence");
+    await page.locator("#venue-monitor-detail").evaluate(element => { element.open = true; });
+    const actualMonitor = await page.locator("#venue-monitor-table tbody tr").evaluateAll(rows => rows.map(row => ({
+      source: Number(row.dataset.sourceIndex),
+      cells: [...row.cells].map(cell => cell.innerText.replace(/\s+/g, " ").trim()),
+    })));
+    assert.deepEqual(actualMonitor, monitor.map((row, i) => ({
+      source: i, cells: [
+        row.objective + " " + (row.selected_metric_roles.length ? row.selected_metric_roles.join(", ") : "Role association not exported"),
+        "T" + row.horizon_minutes + " · " + words(row.issue_horizon_class) + " " + words(row.lead_bucket),
+        String(row.distinct_games), ...["accuracy", "log_loss", "brier", "mae", "rmse"].map(metric => score(row.metrics[metric], metric)),
+      ],
+    })), name + ": every model-only metric retains its original group, lead bucket and denominator");
+    await page.locator("#venue-monitor-detail").evaluate(element => { element.open = false; });
+    assert.deepEqual(await page.locator("#venue-role-rows tr").evaluateAll(rows => rows.map(row => row.dataset.role)),
+      projection.requested_metric_roles.map(role => role.target + "_" + role.metric));
+    assert.match(await page.locator('#venue-role-rows [data-role="winner_log_loss"]').innerText(), /No named-venue comparison exported/);
+    for (const role of ["margin_mae", "margin_rmse", "total_mae", "total_rmse"]) {
+      assert.match(await page.locator('#venue-role-rows [data-role="' + role + '"]').innerText(), /No matched expected-point error comparison exported/);
+    }
+    assert.equal(await page.locator("#venue-season-table tbody tr").count(), 12);
+    assert.equal(await page.locator('#venue-season-table tr[data-season="2024-25"] td.missing').count(), 4);
+    assert.equal(await page.locator('#venue-season-table tr[data-season="2025-26"] td.missing').count(), 4);
+    const clocks = await page.locator("#venue-clock-scope").innerText();
+    for (const field of ["latest_forecast_source_cutoff", "latest_original_issue", "report_evidence_as_of"]) {
+      assert.ok(clocks.includes(projection.source_clocks[field]));
+    }
+    assert.match(clocks, /report-level clocks, not a common cutoff/);
+    assert.match(clocks, /Individual quote timestamps and exact matched-game clock ranges are not included/);
+    assert.equal(await page.locator('#nba-venue-comparisons a[href="venue_comparison_display_v1.json"]').count(), 1);
+    assert.equal(await page.locator('#nba-venue-comparisons a[href="#forecast-rows"]').count(), 1);
+    assert.equal(await page.locator('#nba-venue-comparisons a[href="#champion-rows"]').count(), 1);
+    const originalGameState = await page.evaluate(() => window.NBA_RENDER_STATE);
+    async function selection(provider, horizon, timing) {
+      await page.selectOption("#venue-provider", provider);
+      await page.selectOption("#venue-horizon", horizon);
+      await page.selectOption("#venue-timing", timing);
+      const expected = comparisons.flatMap((row, i) =>
+        (provider === "all" || row.provider === provider) && (horizon === "all" || String(row.horizon_minutes) === horizon) &&
+        (timing === "all" || row.issue_horizon_class === timing) ? [i] : []);
+      const expectedMonitor = monitor.flatMap((row, i) =>
+        (horizon === "all" || String(row.horizon_minutes) === horizon) &&
+        (timing === "all" || row.issue_horizon_class === timing) ? [i] : []);
+      assert.deepEqual(await page.locator("#venue-winner-table tr.venue-row").evaluateAll(rows =>
+        rows.filter(row => !row.hidden).map(row => Number(row.dataset.sourceIndex))), expected);
+      assert.deepEqual(await page.locator("#venue-monitor-table tr.monitor-row").evaluateAll(rows =>
+        rows.filter(row => !row.hidden).map(row => Number(row.dataset.sourceIndex))), expectedMonitor);
+      assert.deepEqual(await page.evaluate(() => window.NBA_VENUE_DISPLAY_STATE), {
+        visible_comparisons: expected.length, visible_monitor_groups: expectedMonitor.length,
+        provider, horizon, issue_class: timing,
+      });
+      assert.equal(await page.locator("#venue-empty").isVisible(), expected.length === 0);
+      assert.deepEqual(await page.evaluate(() => window.NBA_RENDER_STATE), originalGameState, "Venue filters leave all game controls independent");
+    }
+    if (exerciseFilters) {
+      for (const [provider, horizon, timing] of [
+        ["KALSHI", "60", "EARLY_OUTLOOK"], ["POLYMARKET_US", "60", "EARLY_OUTLOOK"],
+        ["DRAFTKINGS", "all", "all"], ["POLYMARKET_INTERNATIONAL", "all", "all"],
+        ["KALSHI", "120", "NOMINAL"], ["all", "120", "LATE"],
+      ]) await selection(provider, horizon, timing);
+    }
+    await selection("all", "all", "all");
+    assert.deepEqual(await page.evaluate(() => window.NBA_PUBLIC_REPORT), data);
+    checks.push(name + "_exact_saved_venue_metrics_roles_clocks_and_missingness");
+    if (exerciseFilters) checks.push("venue_filters_same_game_denominators_and_independent_game_controls");
+  }
+
   try {
     const desktop = await context({ width: 1366, height: 1000 });
     const page = await pageFor(desktop);
+    await checkVenueDisplay(page, true, "desktop_venue_display");
     assert.equal(await page.locator("h1").isVisible(), true);
     assert.equal(await page.locator("h1").innerText(), "Season coverage, issued forecasts and champion roles");
     for (const id of CONTROLS) {
@@ -561,6 +705,7 @@ function expectedRow(row, data) {
 
     const mobile = await context({ width: 390, height: 844 });
     const small = await pageFor(mobile);
+    await checkVenueDisplay(small, false, "mobile_venue_display");
     await checkFilter(small, {}, "mobile_default_all_observed_games");
     await checkChampionTable(small);
     await noOverflow(small, "mobile_390px_no_page_horizontal_overflow");
@@ -579,6 +724,7 @@ function expectedRow(row, data) {
     // A brand-new context has no prior filter or tab state to rescue the page.
     const reopened = await context({ width: 1366, height: 1000 });
     const again = await pageFor(reopened);
+    await checkVenueDisplay(again, false, "fresh_reopen_venue_display");
     assert.deepEqual(await again.evaluate(() => window.NBA_PUBLIC_REPORT), data);
     await assertPage(again, matching(reference), 0, "fresh_context_reopen_default_without_prior_state");
     for (const [id, expected] of Object.entries({ "game-status": "all", phase: "all", target: "winner", metric: "log_loss",
