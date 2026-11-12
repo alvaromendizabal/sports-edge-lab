@@ -49,6 +49,10 @@ jobs:
         run: python tracks/nba/reports/validate_research_snapshot.py tracks/nba/reports/latest_research_outputs.json
       - name: Reject unsupported NBA status and source-clock substitutions
         run: python -m unittest discover -s tracks/nba/reports -p test_research_snapshot.py -v
+      - name: Verify source-preserving B078 and B079 execution review
+        run: |
+          python tracks/nba/reports/build_execution_review.py --check
+          python -m unittest discover -s tracks/nba/reports -p test_execution_review.py -v
       - name: Test progressive-enhancement interaction logic
         run: node --test docs/nba/monitor.test.cjs
 
@@ -73,6 +77,11 @@ jobs:
           PLAYWRIGHT_MODULE_DIR: ${{ runner.temp }}/nba-monitor-browser/node_modules/playwright
           NBA_MONITOR_SCREENSHOTS: ${{ runner.temp }}/nba-monitor-screenshots
         run: node tracks/nba/reports/latest_research_outputs.browser.cjs
+      - name: Render actual owner failure and replacement engineering evidence
+        env:
+          PLAYWRIGHT_MODULE_DIR: ${{ runner.temp }}/nba-monitor-browser/node_modules/playwright
+          NBA_MONITOR_SCREENSHOTS: ${{ runner.temp }}/nba-monitor-screenshots
+        run: node tracks/nba/reports/execution_review.browser.cjs
       - name: Preserve rendered review and bounded accessibility checks
         uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02
         with:
