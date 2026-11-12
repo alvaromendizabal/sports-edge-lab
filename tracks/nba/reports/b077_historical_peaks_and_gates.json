@@ -1,0 +1,649 @@
+{
+  "evidence_as_of_utc": "2026-11-12T02:15:47.762742Z",
+  "existing_metric_evidence_sha256": "74dd8d0632e9efeb1885b410b7c2f5a82129ba5b41f3e2e70114a4aa0e824c1b",
+  "historical_peaks": [
+    {
+      "denominator_status": "EXACT_GAME_RECONCILIATION_REQUIRED",
+      "evaluation_track": "EXPOSED_FROZEN_HISTORICAL_RECONSTRUCTION",
+      "families": [
+        "Logistic regression"
+      ],
+      "games": 1230,
+      "group_id": "2024-25_regular_t60_winner_accuracy",
+      "horizon_minutes": 60,
+      "metric": "accuracy",
+      "phase": "regular",
+      "saved_metric_value": 0.676423,
+      "season": "2024-25",
+      "selection_or_promotion_allowed": false,
+      "source_row_indexes": [
+        742
+      ],
+      "source_section": "season_scoreboard/rows",
+      "target": "winner",
+      "tied_saved_rows": 1
+    },
+    {
+      "denominator_status": "EXACT_GAME_RECONCILIATION_REQUIRED",
+      "evaluation_track": "EXPOSED_FROZEN_HISTORICAL_RECONSTRUCTION",
+      "families": [
+        "Logistic regression"
+      ],
+      "games": 1230,
+      "group_id": "2024-25_regular_t60_winner_log_loss",
+      "horizon_minutes": 60,
+      "metric": "log_loss",
+      "phase": "regular",
+      "saved_metric_value": 0.606708,
+      "season": "2024-25",
+      "selection_or_promotion_allowed": false,
+      "source_row_indexes": [
+        982
+      ],
+      "source_section": "season_scoreboard/rows",
+      "target": "winner",
+      "tied_saved_rows": 1
+    },
+    {
+      "denominator_status": "EXACT_GAME_RECONCILIATION_REQUIRED",
+      "evaluation_track": "EXPOSED_FROZEN_HISTORICAL_RECONSTRUCTION",
+      "families": [
+        "CatBoost"
+      ],
+      "games": 1230,
+      "group_id": "2024-25_regular_t60_winner_brier",
+      "horizon_minutes": 60,
+      "metric": "brier",
+      "phase": "regular",
+      "saved_metric_value": 0.209486,
+      "season": "2024-25",
+      "selection_or_promotion_allowed": false,
+      "source_row_indexes": [
+        164
+      ],
+      "source_section": "season_scoreboard/rows",
+      "target": "winner",
+      "tied_saved_rows": 1
+    },
+    {
+      "denominator_status": "EXACT_GAME_RECONCILIATION_REQUIRED",
+      "evaluation_track": "EXPOSED_FROZEN_HISTORICAL_RECONSTRUCTION",
+      "families": [
+        "Preserved ensemble"
+      ],
+      "games": 1230,
+      "group_id": "2024-25_regular_t60_margin_mae",
+      "horizon_minutes": 60,
+      "metric": "mae",
+      "phase": "regular",
+      "saved_metric_value": 10.981526,
+      "season": "2024-25",
+      "selection_or_promotion_allowed": false,
+      "source_row_indexes": [
+        4228
+      ],
+      "source_section": "season_scoreboard/rows",
+      "target": "margin",
+      "tied_saved_rows": 1
+    },
+    {
+      "denominator_status": "EXACT_GAME_RECONCILIATION_REQUIRED",
+      "evaluation_track": "EXPOSED_FROZEN_HISTORICAL_RECONSTRUCTION",
+      "families": [
+        "Ridge"
+      ],
+      "games": 1230,
+      "group_id": "2024-25_regular_t60_margin_rmse",
+      "horizon_minutes": 60,
+      "metric": "rmse",
+      "phase": "regular",
+      "saved_metric_value": 14.031029,
+      "season": "2024-25",
+      "selection_or_promotion_allowed": false,
+      "source_row_indexes": [
+        1912
+      ],
+      "source_section": "season_scoreboard/rows",
+      "target": "margin",
+      "tied_saved_rows": 1
+    },
+    {
+      "denominator_status": "EXACT_GAME_RECONCILIATION_REQUIRED",
+      "evaluation_track": "EXPOSED_FROZEN_HISTORICAL_RECONSTRUCTION",
+      "families": [
+        "Precommitted ensemble"
+      ],
+      "games": 1230,
+      "group_id": "2024-25_regular_t60_total_mae",
+      "horizon_minutes": 60,
+      "metric": "mae",
+      "phase": "regular",
+      "saved_metric_value": 14.749734,
+      "season": "2024-25",
+      "selection_or_promotion_allowed": false,
+      "source_row_indexes": [
+        3906
+      ],
+      "source_section": "season_scoreboard/rows",
+      "target": "total",
+      "tied_saved_rows": 1
+    },
+    {
+      "denominator_status": "EXACT_GAME_RECONCILIATION_REQUIRED",
+      "evaluation_track": "EXPOSED_FROZEN_HISTORICAL_RECONSTRUCTION",
+      "families": [
+        "Ridge"
+      ],
+      "games": 1230,
+      "group_id": "2024-25_regular_t60_total_rmse",
+      "horizon_minutes": 60,
+      "metric": "rmse",
+      "phase": "regular",
+      "saved_metric_value": 18.459321,
+      "season": "2024-25",
+      "selection_or_promotion_allowed": false,
+      "source_row_indexes": [
+        836
+      ],
+      "source_section": "season_scoreboard/rows",
+      "target": "total",
+      "tied_saved_rows": 1
+    },
+    {
+      "denominator_status": "EXACT_GAME_RECONCILIATION_REQUIRED",
+      "evaluation_track": "EXPOSED_FROZEN_HISTORICAL_RECONSTRUCTION",
+      "families": [
+        "Logistic regression"
+      ],
+      "games": 1230,
+      "group_id": "2024-25_regular_t120_winner_accuracy",
+      "horizon_minutes": 120,
+      "metric": "accuracy",
+      "phase": "regular",
+      "saved_metric_value": 0.677236,
+      "season": "2024-25",
+      "selection_or_promotion_allowed": false,
+      "source_row_indexes": [
+        1668
+      ],
+      "source_section": "season_scoreboard/rows",
+      "target": "winner",
+      "tied_saved_rows": 1
+    },
+    {
+      "denominator_status": "EXACT_GAME_RECONCILIATION_REQUIRED",
+      "evaluation_track": "EXPOSED_FROZEN_HISTORICAL_RECONSTRUCTION",
+      "families": [
+        "Extra trees"
+      ],
+      "games": 1230,
+      "group_id": "2024-25_regular_t120_winner_log_loss",
+      "horizon_minutes": 120,
+      "metric": "log_loss",
+      "phase": "regular",
+      "saved_metric_value": 0.605845,
+      "season": "2024-25",
+      "selection_or_promotion_allowed": false,
+      "source_row_indexes": [
+        88
+      ],
+      "source_section": "season_scoreboard/rows",
+      "target": "winner",
+      "tied_saved_rows": 1
+    },
+    {
+      "denominator_status": "EXACT_GAME_RECONCILIATION_REQUIRED",
+      "evaluation_track": "EXPOSED_FROZEN_HISTORICAL_RECONSTRUCTION",
+      "families": [
+        "Extra trees"
+      ],
+      "games": 1230,
+      "group_id": "2024-25_regular_t120_winner_brier",
+      "horizon_minutes": 120,
+      "metric": "brier",
+      "phase": "regular",
+      "saved_metric_value": 0.209275,
+      "season": "2024-25",
+      "selection_or_promotion_allowed": false,
+      "source_row_indexes": [
+        88
+      ],
+      "source_section": "season_scoreboard/rows",
+      "target": "winner",
+      "tied_saved_rows": 1
+    },
+    {
+      "denominator_status": "EXACT_GAME_RECONCILIATION_REQUIRED",
+      "evaluation_track": "EXPOSED_FROZEN_HISTORICAL_RECONSTRUCTION",
+      "families": [
+        "Preserved ensemble"
+      ],
+      "games": 1230,
+      "group_id": "2024-25_regular_t120_margin_mae",
+      "horizon_minutes": 120,
+      "metric": "mae",
+      "phase": "regular",
+      "saved_metric_value": 10.983158,
+      "season": "2024-25",
+      "selection_or_promotion_allowed": false,
+      "source_row_indexes": [
+        4240
+      ],
+      "source_section": "season_scoreboard/rows",
+      "target": "margin",
+      "tied_saved_rows": 1
+    },
+    {
+      "denominator_status": "EXACT_GAME_RECONCILIATION_REQUIRED",
+      "evaluation_track": "EXPOSED_FROZEN_HISTORICAL_RECONSTRUCTION",
+      "families": [
+        "Ridge"
+      ],
+      "games": 1230,
+      "group_id": "2024-25_regular_t120_margin_rmse",
+      "horizon_minutes": 120,
+      "metric": "rmse",
+      "phase": "regular",
+      "saved_metric_value": 14.027243,
+      "season": "2024-25",
+      "selection_or_promotion_allowed": false,
+      "source_row_indexes": [
+        1914
+      ],
+      "source_section": "season_scoreboard/rows",
+      "target": "margin",
+      "tied_saved_rows": 1
+    },
+    {
+      "denominator_status": "EXACT_GAME_RECONCILIATION_REQUIRED",
+      "evaluation_track": "EXPOSED_FROZEN_HISTORICAL_RECONSTRUCTION",
+      "families": [
+        "Ridge"
+      ],
+      "games": 1230,
+      "group_id": "2024-25_regular_t120_total_mae",
+      "horizon_minutes": 120,
+      "metric": "mae",
+      "phase": "regular",
+      "saved_metric_value": 14.761803,
+      "season": "2024-25",
+      "selection_or_promotion_allowed": false,
+      "source_row_indexes": [
+        558
+      ],
+      "source_section": "season_scoreboard/rows",
+      "target": "total",
+      "tied_saved_rows": 1
+    },
+    {
+      "denominator_status": "EXACT_GAME_RECONCILIATION_REQUIRED",
+      "evaluation_track": "EXPOSED_FROZEN_HISTORICAL_RECONSTRUCTION",
+      "families": [
+        "Ridge"
+      ],
+      "games": 1230,
+      "group_id": "2024-25_regular_t120_total_rmse",
+      "horizon_minutes": 120,
+      "metric": "rmse",
+      "phase": "regular",
+      "saved_metric_value": 18.463006,
+      "season": "2024-25",
+      "selection_or_promotion_allowed": false,
+      "source_row_indexes": [
+        838
+      ],
+      "source_section": "season_scoreboard/rows",
+      "target": "total",
+      "tied_saved_rows": 1
+    },
+    {
+      "denominator_status": "EXACT_GAME_RECONCILIATION_REQUIRED",
+      "evaluation_track": "EXPOSED_FROZEN_HISTORICAL_RECONSTRUCTION",
+      "families": [
+        "Preserved XGBoost",
+        "XGBoost"
+      ],
+      "games": 1230,
+      "group_id": "2025-26_regular_t60_winner_accuracy",
+      "horizon_minutes": 60,
+      "metric": "accuracy",
+      "phase": "regular",
+      "saved_metric_value": 0.695935,
+      "season": "2025-26",
+      "selection_or_promotion_allowed": false,
+      "source_row_indexes": [
+        303,
+        4189,
+        4191
+      ],
+      "source_section": "season_scoreboard/rows",
+      "target": "winner",
+      "tied_saved_rows": 3
+    },
+    {
+      "denominator_status": "EXACT_GAME_RECONCILIATION_REQUIRED",
+      "evaluation_track": "EXPOSED_FROZEN_HISTORICAL_RECONSTRUCTION",
+      "families": [
+        "Logistic regression"
+      ],
+      "games": 1230,
+      "group_id": "2025-26_regular_t60_winner_log_loss",
+      "horizon_minutes": 60,
+      "metric": "log_loss",
+      "phase": "regular",
+      "saved_metric_value": 0.595123,
+      "season": "2025-26",
+      "selection_or_promotion_allowed": false,
+      "source_row_indexes": [
+        981
+      ],
+      "source_section": "season_scoreboard/rows",
+      "target": "winner",
+      "tied_saved_rows": 1
+    },
+    {
+      "denominator_status": "EXACT_GAME_RECONCILIATION_REQUIRED",
+      "evaluation_track": "EXPOSED_FROZEN_HISTORICAL_RECONSTRUCTION",
+      "families": [
+        "Preserved XGBoost"
+      ],
+      "games": 1230,
+      "group_id": "2025-26_regular_t60_winner_brier",
+      "horizon_minutes": 60,
+      "metric": "brier",
+      "phase": "regular",
+      "saved_metric_value": 0.204108,
+      "season": "2025-26",
+      "selection_or_promotion_allowed": false,
+      "source_row_indexes": [
+        4191
+      ],
+      "source_section": "season_scoreboard/rows",
+      "target": "winner",
+      "tied_saved_rows": 1
+    },
+    {
+      "denominator_status": "EXACT_GAME_RECONCILIATION_REQUIRED",
+      "evaluation_track": "EXPOSED_FROZEN_HISTORICAL_RECONSTRUCTION",
+      "families": [
+        "Preserved ensemble"
+      ],
+      "games": 1230,
+      "group_id": "2025-26_regular_t60_margin_mae",
+      "horizon_minutes": 60,
+      "metric": "mae",
+      "phase": "regular",
+      "saved_metric_value": 11.345493,
+      "season": "2025-26",
+      "selection_or_promotion_allowed": false,
+      "source_row_indexes": [
+        4229
+      ],
+      "source_section": "season_scoreboard/rows",
+      "target": "margin",
+      "tied_saved_rows": 1
+    },
+    {
+      "denominator_status": "EXACT_GAME_RECONCILIATION_REQUIRED",
+      "evaluation_track": "EXPOSED_FROZEN_HISTORICAL_RECONSTRUCTION",
+      "families": [
+        "Preserved ensemble"
+      ],
+      "games": 1230,
+      "group_id": "2025-26_regular_t60_margin_rmse",
+      "horizon_minutes": 60,
+      "metric": "rmse",
+      "phase": "regular",
+      "saved_metric_value": 14.494245,
+      "season": "2025-26",
+      "selection_or_promotion_allowed": false,
+      "source_row_indexes": [
+        4229
+      ],
+      "source_section": "season_scoreboard/rows",
+      "target": "margin",
+      "tied_saved_rows": 1
+    },
+    {
+      "denominator_status": "EXACT_GAME_RECONCILIATION_REQUIRED",
+      "evaluation_track": "EXPOSED_FROZEN_HISTORICAL_RECONSTRUCTION",
+      "families": [
+        "Precommitted ensemble"
+      ],
+      "games": 1230,
+      "group_id": "2025-26_regular_t60_total_mae",
+      "horizon_minutes": 60,
+      "metric": "mae",
+      "phase": "regular",
+      "saved_metric_value": 15.229563,
+      "season": "2025-26",
+      "selection_or_promotion_allowed": false,
+      "source_row_indexes": [
+        3909
+      ],
+      "source_section": "season_scoreboard/rows",
+      "target": "total",
+      "tied_saved_rows": 1
+    },
+    {
+      "denominator_status": "EXACT_GAME_RECONCILIATION_REQUIRED",
+      "evaluation_track": "EXPOSED_FROZEN_HISTORICAL_RECONSTRUCTION",
+      "families": [
+        "Extra trees"
+      ],
+      "games": 1230,
+      "group_id": "2025-26_regular_t60_total_rmse",
+      "horizon_minutes": 60,
+      "metric": "rmse",
+      "phase": "regular",
+      "saved_metric_value": 19.184097,
+      "season": "2025-26",
+      "selection_or_promotion_allowed": false,
+      "source_row_indexes": [
+        257
+      ],
+      "source_section": "season_scoreboard/rows",
+      "target": "total",
+      "tied_saved_rows": 1
+    },
+    {
+      "denominator_status": "EXACT_GAME_RECONCILIATION_REQUIRED",
+      "evaluation_track": "EXPOSED_FROZEN_HISTORICAL_RECONSTRUCTION",
+      "families": [
+        "Preserved XGBoost"
+      ],
+      "games": 1230,
+      "group_id": "2025-26_regular_t120_winner_accuracy",
+      "horizon_minutes": 120,
+      "metric": "accuracy",
+      "phase": "regular",
+      "saved_metric_value": 0.695935,
+      "season": "2025-26",
+      "selection_or_promotion_allowed": false,
+      "source_row_indexes": [
+        4197,
+        4199
+      ],
+      "source_section": "season_scoreboard/rows",
+      "target": "winner",
+      "tied_saved_rows": 2
+    },
+    {
+      "denominator_status": "EXACT_GAME_RECONCILIATION_REQUIRED",
+      "evaluation_track": "EXPOSED_FROZEN_HISTORICAL_RECONSTRUCTION",
+      "families": [
+        "Logistic regression"
+      ],
+      "games": 1230,
+      "group_id": "2025-26_regular_t120_winner_log_loss",
+      "horizon_minutes": 120,
+      "metric": "log_loss",
+      "phase": "regular",
+      "saved_metric_value": 0.595288,
+      "season": "2025-26",
+      "selection_or_promotion_allowed": false,
+      "source_row_indexes": [
+        987
+      ],
+      "source_section": "season_scoreboard/rows",
+      "target": "winner",
+      "tied_saved_rows": 1
+    },
+    {
+      "denominator_status": "EXACT_GAME_RECONCILIATION_REQUIRED",
+      "evaluation_track": "EXPOSED_FROZEN_HISTORICAL_RECONSTRUCTION",
+      "families": [
+        "Preserved XGBoost"
+      ],
+      "games": 1230,
+      "group_id": "2025-26_regular_t120_winner_brier",
+      "horizon_minutes": 120,
+      "metric": "brier",
+      "phase": "regular",
+      "saved_metric_value": 0.204,
+      "season": "2025-26",
+      "selection_or_promotion_allowed": false,
+      "source_row_indexes": [
+        4199
+      ],
+      "source_section": "season_scoreboard/rows",
+      "target": "winner",
+      "tied_saved_rows": 1
+    },
+    {
+      "denominator_status": "EXACT_GAME_RECONCILIATION_REQUIRED",
+      "evaluation_track": "EXPOSED_FROZEN_HISTORICAL_RECONSTRUCTION",
+      "families": [
+        "Preserved ensemble"
+      ],
+      "games": 1230,
+      "group_id": "2025-26_regular_t120_margin_mae",
+      "horizon_minutes": 120,
+      "metric": "mae",
+      "phase": "regular",
+      "saved_metric_value": 11.342669,
+      "season": "2025-26",
+      "selection_or_promotion_allowed": false,
+      "source_row_indexes": [
+        4241
+      ],
+      "source_section": "season_scoreboard/rows",
+      "target": "margin",
+      "tied_saved_rows": 1
+    },
+    {
+      "denominator_status": "EXACT_GAME_RECONCILIATION_REQUIRED",
+      "evaluation_track": "EXPOSED_FROZEN_HISTORICAL_RECONSTRUCTION",
+      "families": [
+        "Preserved ensemble"
+      ],
+      "games": 1230,
+      "group_id": "2025-26_regular_t120_margin_rmse",
+      "horizon_minutes": 120,
+      "metric": "rmse",
+      "phase": "regular",
+      "saved_metric_value": 14.492024,
+      "season": "2025-26",
+      "selection_or_promotion_allowed": false,
+      "source_row_indexes": [
+        4241
+      ],
+      "source_section": "season_scoreboard/rows",
+      "target": "margin",
+      "tied_saved_rows": 1
+    },
+    {
+      "denominator_status": "EXACT_GAME_RECONCILIATION_REQUIRED",
+      "evaluation_track": "EXPOSED_FROZEN_HISTORICAL_RECONSTRUCTION",
+      "families": [
+        "Extra trees"
+      ],
+      "games": 1230,
+      "group_id": "2025-26_regular_t120_total_mae",
+      "horizon_minutes": 120,
+      "metric": "mae",
+      "phase": "regular",
+      "saved_metric_value": 15.250792,
+      "season": "2025-26",
+      "selection_or_promotion_allowed": false,
+      "source_row_indexes": [
+        259
+      ],
+      "source_section": "season_scoreboard/rows",
+      "target": "total",
+      "tied_saved_rows": 1
+    },
+    {
+      "denominator_status": "EXACT_GAME_RECONCILIATION_REQUIRED",
+      "evaluation_track": "EXPOSED_FROZEN_HISTORICAL_RECONSTRUCTION",
+      "families": [
+        "Extra trees"
+      ],
+      "games": 1230,
+      "group_id": "2025-26_regular_t120_total_rmse",
+      "horizon_minutes": 120,
+      "metric": "rmse",
+      "phase": "regular",
+      "saved_metric_value": 19.162914,
+      "season": "2025-26",
+      "selection_or_promotion_allowed": false,
+      "source_row_indexes": [
+        259
+      ],
+      "source_section": "season_scoreboard/rows",
+      "target": "total",
+      "tied_saved_rows": 1
+    }
+  ],
+  "metric_precision_decimal_places": 6,
+  "new_metric_scoring": false,
+  "promotion_gates": {
+    "current_completed_production_promotions": 0,
+    "historical_nomination": {
+      "additional_requirements": [
+        "Exact baseline game set",
+        "Season stability",
+        "Probability calibration guardrail",
+        "Exact rolling refit adapter available"
+      ],
+      "point_maximum_season_mae_degradation": 1.0,
+      "positive_paired_interval_is_nomination_requirement": false,
+      "postseason": {
+        "minimum_games_each_season": 40,
+        "minimum_total_games": 80,
+        "minimum_week_clusters": 8
+      },
+      "regular": {
+        "minimum_games_each_season": 250,
+        "minimum_total_games": 500,
+        "minimum_week_clusters": 30
+      },
+      "required_both_seasons": [
+        "2024-25",
+        "2025-26"
+      ],
+      "status": "EXPOSED_HISTORICAL_NOMINATION_FOR_FORWARD_SHADOW_ONLY",
+      "winner_maximum_ece_degradation": 0.01,
+      "winner_maximum_season_log_loss_degradation": 0.01
+    },
+    "registered_production": {
+      "automatic_production_promotion": false,
+      "calibration_guardrail": "winner/cover ECE no more than incumbent plus 0.01 on the same qualifying cohort",
+      "minimum_cluster_weeks": 30,
+      "minimum_matched_games": 500,
+      "multiplicity": "Bonferroni alpha 0.05 divided by registered matched comparisons",
+      "prospective_gate": "new post-registration issued evidence and independent review; exposed 2026 outcomes never pristine",
+      "resampling_unit": "season plus ISO week clusters",
+      "rollback": "retain immutable incumbent lineage and explicit source/runtime/schema failures",
+      "stability": "no season degrades primary loss by more than 0.01 for probability targets or 1 point for point targets"
+    },
+    "scope": "Saved registry requirements are described here. No new production qualification or independent forward confirmation is performed.",
+    "universal_absolute_score_threshold": null
+  },
+  "release": "B077",
+  "schema": "sports-edge-lab.nba.b077.historical-peaks-and-gates.v1",
+  "scope": "Per-season numerical extrema among saved equal-stratum 1,230-game regular-season aggregates. Exposed descriptive evidence, not preselected two-season champions or a paired-superiority claim. Equal counts do not establish exact game-set identity.",
+  "selection_or_promotion_allowed": false,
+  "source_report_sha256": "d1e4e4691b3375e768400b52c0ff1396395ff8540ac54b2aef76d7839eff9387",
+  "source_science_review_sha256": "dfbaab7e91b183632b92444719bde7d068f09045fd4d66cb2244acc871ec8788"
+}

@@ -456,7 +456,8 @@ function expectedRow(row, data) {
     }
     assert.deepEqual(await page.evaluate(() => window.NBA_PUBLIC_REPORT), data);
     checks.push("embedded_public_data_exactly_matches_adjacent_json", "all_nine_controls_visible_and_labelled",
-      "b077_saved_metric_and_venue_filters_verified", "b077_metric_csv_all_248_rows_preserved");
+      "b077_saved_metric_and_venue_filters_verified", "b077_metric_csv_all_248_rows_preserved",
+      "b077_all_28_historical_peak_groups_and_filters_verified", "b077_nomination_and_production_gates_match_saved_registry");
     const cardValues = await page.locator("#cards .big").allTextContents();
     assert.deepEqual(cardValues, [data.coverage.official_schedule_games, data.coverage.games_in_original_issued_inventory,
       data.coverage.active_research_champion_roles, data.coverage.official_games_without_original_issues].map(value => value.toLocaleString("en-US")));
