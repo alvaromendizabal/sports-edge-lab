@@ -20,4 +20,6 @@ Current selected rows are preserved original owner issues before their games. Hi
 
 N076 ran **9,819.494 seconds** and returned partial. Core source namespace failures, replay-accounting failures, missing original neural runtime and monitor read-scope failures prevented complete champion/former-champion evaluation. This report does not imply fresh core feature coverage, automatic promotion, measured parallel speedup or a separately hosted Site deployment.
 
+N077 canonical executable/source recovery remains blocked. No repaired N077 owner runner or new N077 owner execution is claimed by this publication.
+
 [Prior forecast status](CURRENT_FORECAST_STATUS_N076_SNAPSHOT.md) · [Prior selected snapshot](selected_forecasts_n073.json).

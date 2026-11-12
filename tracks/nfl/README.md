@@ -32,7 +32,7 @@ Each provider has no captured current winner row for 245 of the 272 census games
 
 **No independent production promotion is established.** Promotion requires the registered matched game/target/horizon/source policy, prior-origin OOF selection and calibration, predeclared paired improvement/support with multiplicity and stability checks, and independent genuinely issued forward confirmation. Exposed 2024/2025 research and 2026 descriptive monitoring cannot supply untouched confirmation. There is no single log-loss or MAE threshold that bypasses these gates.
 
-The elapsed-time compute estimate is about **$7.010 for the whole instance at $2.57/hour**, not an AWS bill or an NFL-exclusive cost allocation. This return does not establish measured parallel speedup or complete V8 acceptance. N077 continuation engineering is separate from the N076 scientific results reported here.
+The elapsed-time compute estimate is about **$7.010 for the whole instance at $2.57/hour**, not an AWS bill or an NFL-exclusive cost allocation. This return does not establish measured parallel speedup or complete V8 acceptance. The N077 owner-runner repair has not been prepared: recovery of the canonical executable/source into this review workspace remains blocked. This N077 publication reports authenticated N076 results and does not claim a repaired or owner-executed N077 runner.
 
 [Previous N075 actual / N076 prepared report](README_N076_SNAPSHOT.md) · [Previous selected view](season_review_n076.html) · [Earlier N072 evidence](README_N073_SNAPSHOT.md)
 
