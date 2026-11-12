@@ -262,6 +262,8 @@ function expectedRow(row, data) {
   const data = JSON.parse(jsonBytes), url = pathToFileURL(htmlPath).href;
   assert.equal(data.schema, "sports-edge-lab-nba-public-source-separated-research-outputs-v4");
   const reference = referenceInventory(data);
+  const b077Review = require('./b077_review.browser.cjs');
+  const b077Evidence = b077Review.verify(htmlBytes);
   if (process.argv.includes("--data-only")) {
     const combinations = [];
     const seenViews = new Set(), seenIssues = new Set();
@@ -292,6 +294,7 @@ function expectedRow(row, data) {
       observed_games: reference.gameIds.length, official_games: reference.official.length,
       target_horizon_cells: reference.cells.size, sparse_saved_role_views: seenViews.size,
       public_selected_issues: seenIssues.size,
+      b077_saved_metrics_and_venue_evidence: b077Evidence,
       compact_all_missing_sentinels_verified: Object.values(data.game_coverage).filter(value => value.current_role_ids_missing === "ALL_APPLICABLE_ROLES").length,
       expected_metric_rows: reference.rows.length,
       expected_browser_pages: combinations.reduce((sum, value) => sum + value.expected_pages, 0),
@@ -444,6 +447,7 @@ function expectedRow(row, data) {
   try {
     const desktop = await context({ width: 1366, height: 1000 });
     const page = await pageFor(desktop);
+    await b077Review.validatePage(page, 'desktop', true);
     assert.equal(await page.locator("h1").isVisible(), true);
     assert.equal(await page.locator("h1").innerText(), "Season coverage, issued forecasts and champion roles");
     for (const id of CONTROLS) {
@@ -451,7 +455,8 @@ function expectedRow(row, data) {
       assert.equal(await page.locator("#" + id).evaluate(element => Boolean(element.closest("label")?.textContent.trim())), true);
     }
     assert.deepEqual(await page.evaluate(() => window.NBA_PUBLIC_REPORT), data);
-    checks.push("embedded_public_data_exactly_matches_adjacent_json", "all_nine_controls_visible_and_labelled");
+    checks.push("embedded_public_data_exactly_matches_adjacent_json", "all_nine_controls_visible_and_labelled",
+      "b077_saved_metric_and_venue_filters_verified", "b077_metric_csv_all_248_rows_preserved");
     const cardValues = await page.locator("#cards .big").allTextContents();
     assert.deepEqual(cardValues, [data.coverage.official_schedule_games, data.coverage.games_in_original_issued_inventory,
       data.coverage.active_research_champion_roles, data.coverage.official_games_without_original_issues].map(value => value.toLocaleString("en-US")));
@@ -561,6 +566,7 @@ function expectedRow(row, data) {
 
     const mobile = await context({ width: 390, height: 844 });
     const small = await pageFor(mobile);
+    await b077Review.validatePage(small, 'mobile', false);
     await checkFilter(small, {}, "mobile_default_all_observed_games");
     await checkChampionTable(small);
     await noOverflow(small, "mobile_390px_no_page_horizontal_overflow");
@@ -579,6 +585,7 @@ function expectedRow(row, data) {
     // A brand-new context has no prior filter or tab state to rescue the page.
     const reopened = await context({ width: 1366, height: 1000 });
     const again = await pageFor(reopened);
+    await b077Review.validatePage(again, 'offline_reopen', false);
     assert.deepEqual(await again.evaluate(() => window.NBA_PUBLIC_REPORT), data);
     await assertPage(again, matching(reference), 0, "fresh_context_reopen_default_without_prior_state");
     for (const [id, expected] of Object.entries({ "game-status": "all", phase: "all", target: "winner", metric: "log_loss",
@@ -601,6 +608,7 @@ function expectedRow(row, data) {
       source_json_sha256: sha256(jsonBytes), source_html_sha256: sha256(htmlBytes),
       oracle: "Independent target/horizon coverage grid joined to shared role groups and sparse original issues; no renderer functions invoked",
       observed_games_checked: reference.gameIds.length, target_horizon_cells_checked: visitedCells.size,
+      b077_saved_metrics_and_venue_evidence: b077Evidence,
       saved_role_views_checked: visitedViews.size, distinct_issued_bodies_checked: seenIssues.size,
       exhaustive_displayed_rows_checked: exhaustiveRows, exhaustive_pages_checked: exhaustivePages,
       evidence_as_of_utc: data.evidence_as_of_utc, coverage: data.coverage, checks, rendered_cases: snapshots,
@@ -622,3 +630,4 @@ function expectedRow(row, data) {
     await browser.close();
   }
 })().catch(error => { console.error(error); process.exit(1); });
+

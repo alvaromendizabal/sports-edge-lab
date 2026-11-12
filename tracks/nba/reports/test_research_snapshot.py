@@ -69,7 +69,7 @@ class SourceSeparatedSnapshotTests(unittest.TestCase):
 class B076OwnerContinuationTests(unittest.TestCase):
     @classmethod
     def setUpClass(cls):
-        cls.data=json.loads((ROOT/'latest_research_outputs.json').read_bytes())
+        cls.data=json.loads((ROOT/'history/b077_selected_outputs.json').read_bytes())
         cls.previous=json.loads((ROOT/'history/b076_selected_outputs.json').read_bytes())
         cls.audit=json.loads((ROOT/'b077_owner_evidence.json').read_bytes())
 
@@ -144,4 +144,74 @@ class B076OwnerContinuationTests(unittest.TestCase):
         self.assertFalse(self.audit['public_snapshot']['new_fitting_inference_acquisition_or_metric_rescoring_in_publication'])
 
 
+class B077RecoveredContinuationTests(unittest.TestCase):
+    @classmethod
+    def setUpClass(cls):
+        cls.data=json.loads((ROOT/'latest_research_outputs.json').read_bytes())
+        cls.previous=json.loads((ROOT/'history/b077_selected_outputs.json').read_bytes())
+        cls.evidence=json.loads((ROOT/'b078_recovered_b077_evidence.json').read_bytes())
+
+    def test_recovered_issues_do_not_claim_live_refresh_or_new_computation(self):
+        self.assertEqual(self.data['newest_owner_execution']['release'],'B077')
+        self.assertEqual(self.data['newest_owner_execution']['status'],'FINALIZER_FAILED_CHECKPOINTS_PRESERVED')
+        self.assertEqual(self.data['latest_forecast_issue_at_utc'],'2026-11-12T02:02:29.830904+00:00')
+        p=self.data['publication_recovery']
+        for key in ('new_fits','new_inference','new_metric_calculations','new_forecast_issues'):self.assertEqual(p[key],0)
+        self.assertFalse(p['saved_original_B077_export_bytes_recovered'])
+        self.assertFalse(p['source_refresh_or_new_forecast_at_publication'])
+        self.assertEqual(p['prior_selected_snapshot_sha256'],hashlib.sha256((ROOT/'history/b077_selected_outputs.json').read_bytes()).hexdigest())
+        self.assertEqual(self.data['coverage']['distinct_public_selected_issues'],2705)
+        self.assertEqual(self.data['coverage']['games_in_original_issued_inventory'],199)
+        self.assertEqual(self.data['coverage']['original_issued_records_recovered'],5519)
+
+    def test_unchanged_issues_and_schedule_clocks_are_preserved(self):
+        old,new=self.previous['issues'],self.data['issues']
+        self.assertEqual(len(set(old)&set(new)),138)
+        for key in old.keys()&new.keys():self.assertEqual(old[key],new[key])
+        self.assertEqual(set(self.previous['games']),set(self.data['games']))
+        for gid,game in self.previous['games'].items():
+            for key in ('scheduled_start_utc','schedule_source_asof_utc','source_status','home_team','away_team'):
+                self.assertEqual(game[key],self.data['games'][gid][key])
+
+    def test_newer_aggregate_does_not_invent_three_live_game_identities(self):
+        self.assertEqual(self.data['coverage']['official_games_by_latest_row_backed_status'],{'FINAL':227,'SCHEDULED':1040,'TBD':7})
+        self.assertEqual(self.data['coverage']['latest_row_and_source_aggregate_difference'],{
+            'LIVE':{'row_backed':0,'source_aggregate':3},'SCHEDULED':{'row_backed':1040,'source_aggregate':1037}})
+        self.assertFalse(self.data['result_observation_recovery']['full_new_owner_schedule_projection_reconstructed'])
+
+    def test_replay_array_and_original_evidence_are_separate(self):
+        from collections import Counter
+        counts=Counter(row['evidence_track'] for row in self.evidence['metric_rows'])
+        self.assertEqual(counts['FROZEN_HISTORICAL'],88)
+        self.assertEqual(counts['CURRENT_FIXED_STATE_REPLAY'],90)
+        self.assertEqual(counts['SAVED_SEASON_FROZEN_ARRAY']+counts['SAVED_WEEKLY_CURRENT_ARRAY'],38)
+        self.assertEqual(counts['ORIGINAL_ISSUED_ROLLING'],32)
+        self.assertEqual(self.evidence['completed_current_regular_games'],160)
+        self.assertEqual(self.evidence['distinct_original_issue_monitor_games'],6)
+        for row in self.evidence['metric_rows']:
+            self.assertFalse(row['promotion_allowed'])
+            self.assertLessEqual(row['scored_games'],row['completed_game_denominator'])
+            if row['evidence_track']=='CURRENT_FIXED_STATE_REPLAY':self.assertFalse(row['original_issue_claim'])
+
+    def test_provider_coverage_and_publication_boundary_remain_explicit(self):
+        self.assertEqual(len(self.evidence['provider_comparisons']),24)
+        for row in self.evidence['provider_comparisons']:
+            self.assertFalse(row['selection_or_promotion_allowed'])
+            self.assertEqual(row['fair_probability_games'],0)
+            self.assertLessEqual(row['cluster_weeks'],1)
+            self.assertLessEqual(row['model_on_same_reference_games']['games'],6)
+        for row in self.evidence['provider_coverage']:
+            if row['provider']=='DRAFTKINGS' or row['season']!='2026-27':
+                self.assertEqual(row['maximum_matched_games_in_one_selected_view'],0)
+            self.assertFalse(row['whole_season_provider_performance_available'])
+        body=json.dumps(self.evidence)
+        for token in ('recipe_id','/home/','s3://','560403859723','apiKey','api_key','feature_names','PRIVATE KEY'):
+            self.assertNotIn(token,body)
+
+    def test_display_is_deterministic_from_saved_public_evidence(self):
+        spec=importlib.util.spec_from_file_location('nba_b077_display',ROOT/'build_b077_review.py')
+        builder=importlib.util.module_from_spec(spec);spec.loader.exec_module(builder)
+        self.assertEqual(builder.build(check=True)['status'],'PASS')
+
 if __name__=='__main__':unittest.main()
+

@@ -5,6 +5,33 @@ Reproducible NBA forecasts, complete released-game inventories, chronological mo
 This NBA track belongs to the shared [Sports Edge Lab](../../README.md) repository. Its public material contains sanitized aggregate evidence, selected rounded already-issued research forecasts, complete observed schedule coverage, and invented engineering examples. Exact feature recipes, model weights, source responses, full journals, candidate forecast grids, and execution packages remain private under the [NBA publication boundary](../../docs/PUBLICATION_BOUNDARY.md#selected-nba-research-outputs-november-11-extension).
 
 
+## November 12 — B077 original issues recovered; historical and current policy metrics exposed
+
+**B077 completed 761 new frozen estimator fits, reused 1,567 earlier frozen fits, and created 2,637 original forecast issues before its finalizer failed.** Its status remains `FINALIZER_FAILED_CHECKPOINTS_PRESERVED`; this publication does not turn a failed owner invocation into a successful run. The [saved B077 evidence](reports/b078_recovered_b077_evidence.json) records **zero automatic promotions** and distinguishes the owner’s completed work from this display-only recovery.
+
+The [season dashboard](reports/latest_research_outputs.html) now includes **5,519 authenticated recovered original records**, **2,705 distinct selected public issues**, **44 active metric-specific research roles**, and **4,378 saved role views**. It represents every game in the preserved **1,274-game official inventory**. There are **199 games with at least one original issue and 1,075 without**. Across the whole inventory, **4,245 of 26,532 applicable current-role opportunities have a saved issue**; the remaining **22,287 are explicit gaps**. Latest original issue: **2026-11-12 02:02:29.830904 UTC**. Evidence closes at **02:15:47.762742 UTC**. These clocks describe the saved source; the page is not a live forecast service.
+
+### Compare seasons and policies without mixing their evidence
+
+The dashboard adds **248 saved metric rows** with season, policy, target, phase and nominal-horizon filters, plus a complete filtered CSV export:
+
+| Evidence class | Saved rows | Qualification |
+|---|---:|---|
+| Selected frozen historical roles | 88 | 2024–25 and 2025–26; exposed research |
+| Current fixed-state selected/former-role replay | 90 | Retrospective current-season evidence; missing games retained |
+| Preserved season-frozen and weekly-current arrays | 38 | Original weights and feature hashes not completely verified |
+| Selected original issued rolling monitor | 32 | Six distinct settled games; revisions and roles are not independent games |
+
+Winner accuracy, log loss and Brier remain separate objectives from margin and total-point MAE/RMSE. Current replay has **160 completed regular-season games** in its denominator; supported roles cover **128 or 132 games**, and unsupported roles stay unavailable. It retains the B076 nomination authority, including former leaders. B077’s newly selected postseason roles are not relabeled as current replay: no completed current-season postseason games exist in this evidence.
+
+### Named venues and honest remaining gaps
+
+The dashboard exposes **24 saved selected-role comparison rows** for Kalshi and Polymarket, with the model and reference evaluated on the same games. The largest selected view has **six matched Kalshi games** or **five Polymarket US games**. DraftKings and Polymarket international have **no admitted selected comparison**. The nonempty comparisons have at most **one independent week block**. Raw binary bid/ask midpoint references are not established fair no-vig probabilities, and winner prices do not identify expected point margins or totals. No complete 2024–25, 2025–26 or current-season named-venue superiority result is claimed.
+
+The exact newer B077 schedule body was absent from the returned archive. This derived export preserves the prior published B073 schedule and all original source clocks, plus **227 individually identified finals**. B077’s newer aggregate reports three live games whose identities cannot be established from those saved rows; the discrepancy remains visible. The [previous selected snapshot](reports/history/b077_selected_outputs.json) retains its exact GitHub bytes, and shared original issues remain unchanged.
+
+Historical selection and retrospective replay do not by themselves authorize production promotion. Registered matched-game forward support, calibration, stability, uncertainty, source coverage and rollback gates still apply. This update performs no acquisition, fitting, inference, rescoring or new forecast issuance. Hosted browser checks and deployment are separate revision-specific events. Earlier dated evidence follows unchanged.
+
 ## November 11 — B076 completed 822 fits and 196 issues; transport and selection limits remain explicit
 
 **B076 performed substantial new research: 791 frozen estimator fits, 3 legacy estimator fits and 28 champion estimator fits, plus 196 immutable early outlooks for 14 games.** Its [authenticated owner review](reports/b077_owner_evidence.json) records exit 3 after **1 hour 56 minutes 56.12 seconds**, when final packaging exceeded its scientific transport allowance. Completed science remains preserved. The latest selected forecasts are from **20:00:36.717077 UTC**, with original source cutoff **19:53:01.747439 UTC**. They remain early outlooks, not nominal final-hour issues.
