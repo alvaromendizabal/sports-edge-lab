@@ -1,0 +1,3861 @@
+{
+  "B003_current_observed_replay_metrics": [
+    {
+      "cohort_sha256": "c9e3db59ffc3588181707fc2fb2814c0ab3f26264b2ecad0a42f3f3994664b47",
+      "evaluation_mode": "retrospective_reconstructed",
+      "games": 420,
+      "league": "ncaam",
+      "metrics": {
+        "accuracy": 0.8071428571428572,
+        "brier": 0.12813394640258302,
+        "calibration_bias": -0.025298653526142446,
+        "ece_10_fixed_bins": 0.04447772721564117,
+        "log_loss": 0.39740076874551317
+      },
+      "new_fit_credit": 0,
+      "new_issue_credit": 0,
+      "public_model_id": "B003-original",
+      "scope": "all eligible supplied settled games, not certified full official-season coverage",
+      "season_end_year": 2027,
+      "target": "win",
+      "weights_unchanged": true
+    },
+    {
+      "cohort_sha256": "c9e3db59ffc3588181707fc2fb2814c0ab3f26264b2ecad0a42f3f3994664b47",
+      "evaluation_mode": "retrospective_reconstructed",
+      "games": 420,
+      "league": "ncaam",
+      "metrics": {
+        "mae": 10.815574971194993,
+        "rmse": 13.796316116102405
+      },
+      "new_fit_credit": 0,
+      "new_issue_credit": 0,
+      "public_model_id": "B003-original",
+      "scope": "all eligible supplied settled games, not certified full official-season coverage",
+      "season_end_year": 2027,
+      "target": "margin",
+      "weights_unchanged": true
+    },
+    {
+      "cohort_sha256": "c9e3db59ffc3588181707fc2fb2814c0ab3f26264b2ecad0a42f3f3994664b47",
+      "evaluation_mode": "retrospective_reconstructed",
+      "games": 420,
+      "league": "ncaam",
+      "metrics": {
+        "mae": 14.043206378863356,
+        "rmse": 17.692651253935562
+      },
+      "new_fit_credit": 0,
+      "new_issue_credit": 0,
+      "public_model_id": "B003-original",
+      "scope": "all eligible supplied settled games, not certified full official-season coverage",
+      "season_end_year": 2027,
+      "target": "total",
+      "weights_unchanged": true
+    },
+    {
+      "cohort_sha256": "8992b5db2704a14f34fca688ea238e8338abbfc1d67df11e1575c2b850c50de4",
+      "evaluation_mode": "retrospective_reconstructed",
+      "games": 403,
+      "league": "ncaaw",
+      "metrics": {
+        "accuracy": 0.8535980148883374,
+        "brier": 0.09923253508973237,
+        "calibration_bias": -0.020846349712886073,
+        "ece_10_fixed_bins": 0.050307727670253884,
+        "log_loss": 0.3154940386933251
+      },
+      "new_fit_credit": 0,
+      "new_issue_credit": 0,
+      "public_model_id": "B003-original",
+      "scope": "all eligible supplied settled games, not certified full official-season coverage",
+      "season_end_year": 2027,
+      "target": "win",
+      "weights_unchanged": true
+    },
+    {
+      "cohort_sha256": "8992b5db2704a14f34fca688ea238e8338abbfc1d67df11e1575c2b850c50de4",
+      "evaluation_mode": "retrospective_reconstructed",
+      "games": 403,
+      "league": "ncaaw",
+      "metrics": {
+        "mae": 12.630944342612306,
+        "rmse": 16.427410773731925
+      },
+      "new_fit_credit": 0,
+      "new_issue_credit": 0,
+      "public_model_id": "B003-original",
+      "scope": "all eligible supplied settled games, not certified full official-season coverage",
+      "season_end_year": 2027,
+      "target": "margin",
+      "weights_unchanged": true
+    },
+    {
+      "cohort_sha256": "8992b5db2704a14f34fca688ea238e8338abbfc1d67df11e1575c2b850c50de4",
+      "evaluation_mode": "retrospective_reconstructed",
+      "games": 403,
+      "league": "ncaaw",
+      "metrics": {
+        "mae": 14.35789525691126,
+        "rmse": 17.94058344158038
+      },
+      "new_fit_credit": 0,
+      "new_issue_credit": 0,
+      "public_model_id": "B003-original",
+      "scope": "all eligible supplied settled games, not certified full official-season coverage",
+      "season_end_year": 2027,
+      "target": "total",
+      "weights_unchanged": true
+    }
+  ],
+  "B003_matched_Polymarket_International": {
+    "cohort_sha256": "f42a9bf8606e0839c7f4f0b8d5cb13dc8acda7f513678dd0967c6405d16bf682",
+    "games": 338,
+    "gaps": {
+      "provider_quote_missing": 79,
+      "quote_exceeds_declared_max_age": 3
+    },
+    "league": "ncaam",
+    "metrics": {
+      "accuracy": {
+        "better_direction": "higher",
+        "candidate": 0.8195266272189349,
+        "candidate_minus_reference": 0.007396449704141994,
+        "descriptive_95_percent_interval": null,
+        "reference": 0.8121301775147929
+      },
+      "brier": {
+        "better_direction": "lower",
+        "candidate": 0.12456634157033539,
+        "candidate_minus_reference": 0.014589936244891605,
+        "descriptive_95_percent_interval": null,
+        "reference": 0.10997640532544378
+      },
+      "log_loss": {
+        "better_direction": "lower",
+        "candidate": 0.3894085894554397,
+        "candidate_minus_reference": 0.0470369826065733,
+        "descriptive_95_percent_interval": null,
+        "reference": 0.3423716068488664
+      }
+    },
+    "model_evidence_mode": "retrospective_reconstructed",
+    "provider_product": "polymarket_international",
+    "public_model_id": "B003-original",
+    "quote_evidence_mode": "retrospective_reconstructed",
+    "season_end_year": 2027,
+    "status": "EXPOSED_DESCRIPTIVE_MATCHED_COMPARISON",
+    "target": "win",
+    "uncertainty": {
+      "blocks": 3,
+      "causal_claim": false,
+      "independent_confirmation": false,
+      "method": "paired_resampling_of_calendar_week_blocks",
+      "minimum_blocks": 4,
+      "reason": "INSUFFICIENT_WEEK_BLOCKS_OR_DISABLED",
+      "replicates": 0,
+      "seed": 8852784991709056977,
+      "selection_adjusted": false,
+      "timezone": "America/New_York"
+    },
+    "winner_counts": {
+      "candidate": {
+        "correct_direction_count": 277,
+        "half_credit_accuracy_credits": 277.0,
+        "incorrect_direction_count": 61,
+        "no_direction_count": 0
+      },
+      "paired_discordance": {
+        "at_least_one_no_direction": 1,
+        "both_correct": 259,
+        "both_incorrect": 45,
+        "candidate_only_correct": 18,
+        "reference_only_correct": 15
+      },
+      "reference": {
+        "correct_direction_count": 274,
+        "half_credit_accuracy_credits": 274.5,
+        "incorrect_direction_count": 63,
+        "no_direction_count": 1
+      }
+    }
+  },
+  "current_home_baselines": [
+    {
+      "B003_accuracy": 0.8071428571428572,
+      "B003_minus_home_percentage_points": 0.4761904761904745,
+      "always_predict_home_accuracy": 0.8023809523809524,
+      "always_predict_home_accuracy_percent": 80.23809523809524,
+      "away_wins": 83,
+      "baseline_is_descriptive_not_a_fitted_probability_model": true,
+      "calculation": "sum(binary home-win actuals) / unique settled B003 win-event rows",
+      "cohort_sha256_from_saved_metric_panel": "c9e3db59ffc3588181707fc2fb2814c0ab3f26264b2ecad0a42f3f3994664b47",
+      "games": 420,
+      "home_wins": 337,
+      "league": "ncaam",
+      "saved_descriptive_leader_accuracy": 0.8071428571428572,
+      "saved_leader_minus_home_percentage_points": 0.4761904761904745,
+      "season": "2026-27"
+    },
+    {
+      "B003_accuracy": 0.8535980148883374,
+      "B003_minus_home_percentage_points": 9.429280397022332,
+      "always_predict_home_accuracy": 0.7593052109181141,
+      "always_predict_home_accuracy_percent": 75.93052109181141,
+      "away_wins": 97,
+      "baseline_is_descriptive_not_a_fitted_probability_model": true,
+      "calculation": "sum(binary home-win actuals) / unique settled B003 win-event rows",
+      "cohort_sha256_from_saved_metric_panel": "8992b5db2704a14f34fca688ea238e8338abbfc1d67df11e1575c2b850c50de4",
+      "games": 403,
+      "home_wins": 306,
+      "league": "ncaaw",
+      "saved_descriptive_leader_accuracy": 0.858560794044665,
+      "saved_leader_minus_home_percentage_points": 9.925558312655092,
+      "season": "2026-27"
+    }
+  ],
+  "current_observed_replay_leaders": [
+    {
+      "candidate_track_count": 21,
+      "cohort_sha256": "c9e3db59ffc3588181707fc2fb2814c0ab3f26264b2ecad0a42f3f3994664b47",
+      "evaluation_mode": "retrospective_reconstructed",
+      "full_official_season_coverage_certified": false,
+      "games": 420,
+      "league": "ncaam",
+      "metric": "accuracy",
+      "metric_name_for_display": "accuracy",
+      "model_names": [
+        "B003 original frozen model",
+        "current-observed-ncaam-win-009d20f3"
+      ],
+      "model_track_count": 3,
+      "public_model_ids": [
+        "B003-original",
+        "current-observed-ncaam-win-009d20f3"
+      ],
+      "season": "2026-27",
+      "season_end_year": 2027,
+      "selection_or_promotion_authority": false,
+      "status": "EXPOSED_DESCRIPTIVE_CURRENT_MONITORING_LEADER",
+      "target": "win",
+      "value": 0.8071428571428572
+    },
+    {
+      "candidate_track_count": 21,
+      "cohort_sha256": "c9e3db59ffc3588181707fc2fb2814c0ab3f26264b2ecad0a42f3f3994664b47",
+      "evaluation_mode": "retrospective_reconstructed",
+      "full_official_season_coverage_certified": false,
+      "games": 420,
+      "league": "ncaam",
+      "metric": "log_loss",
+      "metric_name_for_display": "log_loss",
+      "model_names": [
+        "current-observed-ncaam-win-39bdbd9b"
+      ],
+      "model_track_count": 2,
+      "public_model_ids": [
+        "current-observed-ncaam-win-39bdbd9b"
+      ],
+      "season": "2026-27",
+      "season_end_year": 2027,
+      "selection_or_promotion_authority": false,
+      "status": "EXPOSED_DESCRIPTIVE_CURRENT_MONITORING_LEADER",
+      "target": "win",
+      "value": 0.39384987932977233
+    },
+    {
+      "candidate_track_count": 21,
+      "cohort_sha256": "c9e3db59ffc3588181707fc2fb2814c0ab3f26264b2ecad0a42f3f3994664b47",
+      "evaluation_mode": "retrospective_reconstructed",
+      "full_official_season_coverage_certified": false,
+      "games": 420,
+      "league": "ncaam",
+      "metric": "brier",
+      "metric_name_for_display": "brier",
+      "model_names": [
+        "current-observed-ncaam-win-39bdbd9b"
+      ],
+      "model_track_count": 2,
+      "public_model_ids": [
+        "current-observed-ncaam-win-39bdbd9b"
+      ],
+      "season": "2026-27",
+      "season_end_year": 2027,
+      "selection_or_promotion_authority": false,
+      "status": "EXPOSED_DESCRIPTIVE_CURRENT_MONITORING_LEADER",
+      "target": "win",
+      "value": 0.1271268885699531
+    },
+    {
+      "candidate_track_count": 15,
+      "cohort_sha256": "c9e3db59ffc3588181707fc2fb2814c0ab3f26264b2ecad0a42f3f3994664b47",
+      "evaluation_mode": "retrospective_reconstructed",
+      "full_official_season_coverage_certified": false,
+      "games": 420,
+      "league": "ncaam",
+      "metric": "mae",
+      "metric_name_for_display": "margin_mae",
+      "model_names": [
+        "current-observed-ncaam-margin-39bdbd9b"
+      ],
+      "model_track_count": 2,
+      "public_model_ids": [
+        "current-observed-ncaam-margin-39bdbd9b"
+      ],
+      "season": "2026-27",
+      "season_end_year": 2027,
+      "selection_or_promotion_authority": false,
+      "status": "EXPOSED_DESCRIPTIVE_CURRENT_MONITORING_LEADER",
+      "target": "margin",
+      "value": 10.442247534726475
+    },
+    {
+      "candidate_track_count": 15,
+      "cohort_sha256": "c9e3db59ffc3588181707fc2fb2814c0ab3f26264b2ecad0a42f3f3994664b47",
+      "evaluation_mode": "retrospective_reconstructed",
+      "full_official_season_coverage_certified": false,
+      "games": 420,
+      "league": "ncaam",
+      "metric": "rmse",
+      "metric_name_for_display": "margin_rmse",
+      "model_names": [
+        "current-observed-ncaam-margin-39bdbd9b"
+      ],
+      "model_track_count": 2,
+      "public_model_ids": [
+        "current-observed-ncaam-margin-39bdbd9b"
+      ],
+      "season": "2026-27",
+      "season_end_year": 2027,
+      "selection_or_promotion_authority": false,
+      "status": "EXPOSED_DESCRIPTIVE_CURRENT_MONITORING_LEADER",
+      "target": "margin",
+      "value": 13.241315315172258
+    },
+    {
+      "candidate_track_count": 15,
+      "cohort_sha256": "c9e3db59ffc3588181707fc2fb2814c0ab3f26264b2ecad0a42f3f3994664b47",
+      "evaluation_mode": "retrospective_reconstructed",
+      "full_official_season_coverage_certified": false,
+      "games": 420,
+      "league": "ncaam",
+      "metric": "mae",
+      "metric_name_for_display": "total_mae",
+      "model_names": [
+        "current-observed-ncaam-total-39bdbd9b"
+      ],
+      "model_track_count": 2,
+      "public_model_ids": [
+        "current-observed-ncaam-total-39bdbd9b"
+      ],
+      "season": "2026-27",
+      "season_end_year": 2027,
+      "selection_or_promotion_authority": false,
+      "status": "EXPOSED_DESCRIPTIVE_CURRENT_MONITORING_LEADER",
+      "target": "total",
+      "value": 13.936397219009512
+    },
+    {
+      "candidate_track_count": 15,
+      "cohort_sha256": "c9e3db59ffc3588181707fc2fb2814c0ab3f26264b2ecad0a42f3f3994664b47",
+      "evaluation_mode": "retrospective_reconstructed",
+      "full_official_season_coverage_certified": false,
+      "games": 420,
+      "league": "ncaam",
+      "metric": "rmse",
+      "metric_name_for_display": "total_rmse",
+      "model_names": [
+        "current-observed-ncaam-total-39bdbd9b"
+      ],
+      "model_track_count": 2,
+      "public_model_ids": [
+        "current-observed-ncaam-total-39bdbd9b"
+      ],
+      "season": "2026-27",
+      "season_end_year": 2027,
+      "selection_or_promotion_authority": false,
+      "status": "EXPOSED_DESCRIPTIVE_CURRENT_MONITORING_LEADER",
+      "target": "total",
+      "value": 17.407215598595066
+    },
+    {
+      "candidate_track_count": 21,
+      "cohort_sha256": "8992b5db2704a14f34fca688ea238e8338abbfc1d67df11e1575c2b850c50de4",
+      "evaluation_mode": "retrospective_reconstructed",
+      "full_official_season_coverage_certified": false,
+      "games": 403,
+      "league": "ncaaw",
+      "metric": "accuracy",
+      "metric_name_for_display": "accuracy",
+      "model_names": [
+        "current-observed-ncaaw-win-9fe75806"
+      ],
+      "model_track_count": 1,
+      "public_model_ids": [
+        "current-observed-ncaaw-win-9fe75806"
+      ],
+      "season": "2026-27",
+      "season_end_year": 2027,
+      "selection_or_promotion_authority": false,
+      "status": "EXPOSED_DESCRIPTIVE_CURRENT_MONITORING_LEADER",
+      "target": "win",
+      "value": 0.858560794044665
+    },
+    {
+      "candidate_track_count": 21,
+      "cohort_sha256": "8992b5db2704a14f34fca688ea238e8338abbfc1d67df11e1575c2b850c50de4",
+      "evaluation_mode": "retrospective_reconstructed",
+      "full_official_season_coverage_certified": false,
+      "games": 403,
+      "league": "ncaaw",
+      "metric": "log_loss",
+      "metric_name_for_display": "log_loss",
+      "model_names": [
+        "current-observed-ncaaw-win-12dc8c2d"
+      ],
+      "model_track_count": 2,
+      "public_model_ids": [
+        "current-observed-ncaaw-win-12dc8c2d"
+      ],
+      "season": "2026-27",
+      "season_end_year": 2027,
+      "selection_or_promotion_authority": false,
+      "status": "EXPOSED_DESCRIPTIVE_CURRENT_MONITORING_LEADER",
+      "target": "win",
+      "value": 0.30856380746479206
+    },
+    {
+      "candidate_track_count": 21,
+      "cohort_sha256": "8992b5db2704a14f34fca688ea238e8338abbfc1d67df11e1575c2b850c50de4",
+      "evaluation_mode": "retrospective_reconstructed",
+      "full_official_season_coverage_certified": false,
+      "games": 403,
+      "league": "ncaaw",
+      "metric": "brier",
+      "metric_name_for_display": "brier",
+      "model_names": [
+        "current-observed-ncaaw-win-009d20f3"
+      ],
+      "model_track_count": 2,
+      "public_model_ids": [
+        "current-observed-ncaaw-win-009d20f3"
+      ],
+      "season": "2026-27",
+      "season_end_year": 2027,
+      "selection_or_promotion_authority": false,
+      "status": "EXPOSED_DESCRIPTIVE_CURRENT_MONITORING_LEADER",
+      "target": "win",
+      "value": 0.09915107217789698
+    },
+    {
+      "candidate_track_count": 17,
+      "cohort_sha256": "8992b5db2704a14f34fca688ea238e8338abbfc1d67df11e1575c2b850c50de4",
+      "evaluation_mode": "retrospective_reconstructed",
+      "full_official_season_coverage_certified": false,
+      "games": 403,
+      "league": "ncaaw",
+      "metric": "mae",
+      "metric_name_for_display": "margin_mae",
+      "model_names": [
+        "current-observed-ncaaw-margin-7b88b66b"
+      ],
+      "model_track_count": 2,
+      "public_model_ids": [
+        "current-observed-ncaaw-margin-7b88b66b"
+      ],
+      "season": "2026-27",
+      "season_end_year": 2027,
+      "selection_or_promotion_authority": false,
+      "status": "EXPOSED_DESCRIPTIVE_CURRENT_MONITORING_LEADER",
+      "target": "margin",
+      "value": 12.462371732657212
+    },
+    {
+      "candidate_track_count": 17,
+      "cohort_sha256": "8992b5db2704a14f34fca688ea238e8338abbfc1d67df11e1575c2b850c50de4",
+      "evaluation_mode": "retrospective_reconstructed",
+      "full_official_season_coverage_certified": false,
+      "games": 403,
+      "league": "ncaaw",
+      "metric": "rmse",
+      "metric_name_for_display": "margin_rmse",
+      "model_names": [
+        "current-observed-ncaaw-margin-7b88b66b"
+      ],
+      "model_track_count": 2,
+      "public_model_ids": [
+        "current-observed-ncaaw-margin-7b88b66b"
+      ],
+      "season": "2026-27",
+      "season_end_year": 2027,
+      "selection_or_promotion_authority": false,
+      "status": "EXPOSED_DESCRIPTIVE_CURRENT_MONITORING_LEADER",
+      "target": "margin",
+      "value": 16.100636813432793
+    },
+    {
+      "candidate_track_count": 17,
+      "cohort_sha256": "8992b5db2704a14f34fca688ea238e8338abbfc1d67df11e1575c2b850c50de4",
+      "evaluation_mode": "retrospective_reconstructed",
+      "full_official_season_coverage_certified": false,
+      "games": 403,
+      "league": "ncaaw",
+      "metric": "mae",
+      "metric_name_for_display": "total_mae",
+      "model_names": [
+        "current-observed-ncaaw-total-2fde92b8"
+      ],
+      "model_track_count": 2,
+      "public_model_ids": [
+        "current-observed-ncaaw-total-2fde92b8"
+      ],
+      "season": "2026-27",
+      "season_end_year": 2027,
+      "selection_or_promotion_authority": false,
+      "status": "EXPOSED_DESCRIPTIVE_CURRENT_MONITORING_LEADER",
+      "target": "total",
+      "value": 14.277967775171854
+    },
+    {
+      "candidate_track_count": 17,
+      "cohort_sha256": "8992b5db2704a14f34fca688ea238e8338abbfc1d67df11e1575c2b850c50de4",
+      "evaluation_mode": "retrospective_reconstructed",
+      "full_official_season_coverage_certified": false,
+      "games": 403,
+      "league": "ncaaw",
+      "metric": "rmse",
+      "metric_name_for_display": "total_rmse",
+      "model_names": [
+        "current-observed-ncaaw-total-7371d966"
+      ],
+      "model_track_count": 2,
+      "public_model_ids": [
+        "current-observed-ncaaw-total-7371d966"
+      ],
+      "season": "2026-27",
+      "season_end_year": 2027,
+      "selection_or_promotion_authority": false,
+      "status": "EXPOSED_DESCRIPTIVE_CURRENT_MONITORING_LEADER",
+      "target": "total",
+      "value": 17.880689486409636
+    }
+  ],
+  "evidence_asof": "2026-11-11T22:39:45.642794+00:00",
+  "historical_per_season_candidate_metrics": [
+    {
+      "cohort_membership_sha256": "96436881557024e0ca77aeb0e819684aafbb08b81e14ef78fcf40e4edd931b53",
+      "games": 5758,
+      "league": "ncaam",
+      "metrics": {
+        "accuracy": 0.7250781521361583,
+        "brier": 0.1768271822621325,
+        "log_loss": 0.5232390705588387
+      },
+      "model_family": "retained equal-weight ensemble",
+      "public_model_id": "retained-role-ncaam-win-1294bf8a",
+      "season_end_year": 2025,
+      "source": "B032 retained catalog",
+      "target": "win"
+    },
+    {
+      "cohort_membership_sha256": "96436881557024e0ca77aeb0e819684aafbb08b81e14ef78fcf40e4edd931b53",
+      "games": 5758,
+      "league": "ncaam",
+      "metrics": {
+        "accuracy": 0.7219520666898228,
+        "brier": 0.17774890476985866,
+        "log_loss": 0.5260736743820892
+      },
+      "model_family": "retained Extra Trees",
+      "public_model_id": "retained-role-ncaam-win-292d8ffa",
+      "season_end_year": 2025,
+      "source": "B032 retained catalog",
+      "target": "win"
+    },
+    {
+      "cohort_membership_sha256": "96436881557024e0ca77aeb0e819684aafbb08b81e14ef78fcf40e4edd931b53",
+      "games": 5758,
+      "league": "ncaam",
+      "metrics": {
+        "accuracy": 0.7229940951719347,
+        "brier": 0.17728396465913662,
+        "log_loss": 0.5246424183118602
+      },
+      "model_family": "retained histogram gradient boosting",
+      "public_model_id": "retained-role-ncaam-win-41e7b0cb",
+      "season_end_year": 2025,
+      "source": "B032 retained catalog",
+      "target": "win"
+    },
+    {
+      "cohort_membership_sha256": "96436881557024e0ca77aeb0e819684aafbb08b81e14ef78fcf40e4edd931b53",
+      "games": 5758,
+      "league": "ncaam",
+      "metrics": {
+        "accuracy": 0.7257728377908996,
+        "brier": 0.17645292984627586,
+        "log_loss": 0.5214815135867004
+      },
+      "model_family": "retained linear model",
+      "public_model_id": "retained-role-ncaam-win-8cea42be",
+      "season_end_year": 2025,
+      "source": "B032 retained catalog",
+      "target": "win"
+    },
+    {
+      "cohort_membership_sha256": "96436881557024e0ca77aeb0e819684aafbb08b81e14ef78fcf40e4edd931b53",
+      "games": 5758,
+      "league": "ncaam",
+      "metrics": {
+        "accuracy": 0.7247308093087877,
+        "brier": 0.17685429988387305,
+        "log_loss": 0.523390914841713
+      },
+      "model_family": "retained equal-weight ensemble",
+      "public_model_id": "retained-role-ncaam-win-1c9c8c9e",
+      "season_end_year": 2025,
+      "source": "B032 retained catalog",
+      "target": "win"
+    },
+    {
+      "cohort_membership_sha256": "96436881557024e0ca77aeb0e819684aafbb08b81e14ef78fcf40e4edd931b53",
+      "games": 5758,
+      "league": "ncaam",
+      "metrics": {
+        "accuracy": 0.7229940951719347,
+        "brier": 0.17820320853601568,
+        "log_loss": 0.5271570174031271
+      },
+      "model_family": "retained Extra Trees",
+      "public_model_id": "retained-role-ncaam-win-2a183c8f",
+      "season_end_year": 2025,
+      "source": "B032 retained catalog",
+      "target": "win"
+    },
+    {
+      "cohort_membership_sha256": "96436881557024e0ca77aeb0e819684aafbb08b81e14ef78fcf40e4edd931b53",
+      "games": 5758,
+      "league": "ncaam",
+      "metrics": {
+        "accuracy": 0.7242097950677319,
+        "brier": 0.1772163928280832,
+        "log_loss": 0.5244505743092582
+      },
+      "model_family": "retained histogram gradient boosting",
+      "public_model_id": "retained-role-ncaam-win-7c3e4114",
+      "season_end_year": 2025,
+      "source": "B032 retained catalog",
+      "target": "win"
+    },
+    {
+      "cohort_membership_sha256": "96436881557024e0ca77aeb0e819684aafbb08b81e14ef78fcf40e4edd931b53",
+      "games": 5758,
+      "league": "ncaam",
+      "metrics": {
+        "accuracy": 0.7269885376866968,
+        "brier": 0.17686494719178594,
+        "log_loss": 0.5227701562789421
+      },
+      "model_family": "retained linear model",
+      "public_model_id": "retained-role-ncaam-win-10670a65",
+      "season_end_year": 2025,
+      "source": "B032 retained catalog",
+      "target": "win"
+    },
+    {
+      "cohort_membership_sha256": "96436881557024e0ca77aeb0e819684aafbb08b81e14ef78fcf40e4edd931b53",
+      "games": 5758,
+      "league": "ncaam",
+      "metrics": {
+        "accuracy": 0.7250781521361583,
+        "brier": 0.17675123138775511,
+        "log_loss": 0.5231197368965124
+      },
+      "model_family": "retained equal-weight ensemble",
+      "public_model_id": "retained-role-ncaam-win-e6cea026",
+      "season_end_year": 2025,
+      "source": "B032 retained catalog",
+      "target": "win"
+    },
+    {
+      "cohort_membership_sha256": "96436881557024e0ca77aeb0e819684aafbb08b81e14ef78fcf40e4edd931b53",
+      "games": 5758,
+      "league": "ncaam",
+      "metrics": {
+        "accuracy": 0.7238624522403613,
+        "brier": 0.17763619301030084,
+        "log_loss": 0.5259442513380475
+      },
+      "model_family": "retained Extra Trees",
+      "public_model_id": "retained-role-ncaam-win-3b3251f6",
+      "season_end_year": 2025,
+      "source": "B032 retained catalog",
+      "target": "win"
+    },
+    {
+      "cohort_membership_sha256": "96436881557024e0ca77aeb0e819684aafbb08b81e14ef78fcf40e4edd931b53",
+      "games": 5758,
+      "league": "ncaam",
+      "metrics": {
+        "accuracy": 0.7238624522403613,
+        "brier": 0.17714175223323733,
+        "log_loss": 0.5242483568129997
+      },
+      "model_family": "retained histogram gradient boosting",
+      "public_model_id": "retained-role-ncaam-win-3dbbcdcb",
+      "season_end_year": 2025,
+      "source": "B032 retained catalog",
+      "target": "win"
+    },
+    {
+      "cohort_membership_sha256": "96436881557024e0ca77aeb0e819684aafbb08b81e14ef78fcf40e4edd931b53",
+      "games": 5758,
+      "league": "ncaam",
+      "metrics": {
+        "accuracy": 0.7262938520319555,
+        "brier": 0.1764650050878529,
+        "log_loss": 0.5215662035830115
+      },
+      "model_family": "retained linear model",
+      "public_model_id": "retained-role-ncaam-win-c31a7934",
+      "season_end_year": 2025,
+      "source": "B032 retained catalog",
+      "target": "win"
+    },
+    {
+      "cohort_membership_sha256": "96436881557024e0ca77aeb0e819684aafbb08b81e14ef78fcf40e4edd931b53",
+      "games": 5758,
+      "league": "ncaam",
+      "metrics": {
+        "accuracy": 0.7255991663772143,
+        "brier": 0.17656683379768442,
+        "log_loss": 0.5225573581773935
+      },
+      "model_family": "fixed blend of histogram gradient boosting and logistic regression",
+      "public_model_id": "frozen-core-ncaam-win-f17d338c",
+      "season_end_year": 2025,
+      "source": "Selected native frozen-core catalog",
+      "target": "win"
+    },
+    {
+      "cohort_membership_sha256": "96436881557024e0ca77aeb0e819684aafbb08b81e14ef78fcf40e4edd931b53",
+      "games": 5758,
+      "league": "ncaam",
+      "metrics": {
+        "accuracy": 0.7264675234456408,
+        "brier": 0.17691969120430937,
+        "log_loss": 0.5230809917460127
+      },
+      "model_family": "logistic regression",
+      "public_model_id": "frozen-core-ncaam-win-662ba2b4",
+      "season_end_year": 2025,
+      "source": "Selected native frozen-core catalog",
+      "target": "win"
+    },
+    {
+      "cohort_membership_sha256": "7e3a27cc402baa6229730948c1e3c6d359e3eba6180bb7d7d05d86a0d1e23443",
+      "games": 5749,
+      "league": "ncaam",
+      "metrics": {
+        "accuracy": 0.714385110453992,
+        "brier": 0.17830770163533163,
+        "log_loss": 0.525580520098668
+      },
+      "model_family": "retained equal-weight ensemble",
+      "public_model_id": "retained-role-ncaam-win-1294bf8a",
+      "season_end_year": 2026,
+      "source": "B032 retained catalog",
+      "target": "win"
+    },
+    {
+      "cohort_membership_sha256": "7e3a27cc402baa6229730948c1e3c6d359e3eba6180bb7d7d05d86a0d1e23443",
+      "games": 5749,
+      "league": "ncaam",
+      "metrics": {
+        "accuracy": 0.71664637328231,
+        "brier": 0.17965676510489517,
+        "log_loss": 0.5294431813787659
+      },
+      "model_family": "retained Extra Trees",
+      "public_model_id": "retained-role-ncaam-win-292d8ffa",
+      "season_end_year": 2026,
+      "source": "B032 retained catalog",
+      "target": "win"
+    },
+    {
+      "cohort_membership_sha256": "7e3a27cc402baa6229730948c1e3c6d359e3eba6180bb7d7d05d86a0d1e23443",
+      "games": 5749,
+      "league": "ncaam",
+      "metrics": {
+        "accuracy": 0.714732997042964,
+        "brier": 0.1783185578303047,
+        "log_loss": 0.525880089978331
+      },
+      "model_family": "retained histogram gradient boosting",
+      "public_model_id": "retained-role-ncaam-win-41e7b0cb",
+      "season_end_year": 2026,
+      "source": "B032 retained catalog",
+      "target": "win"
+    },
+    {
+      "cohort_membership_sha256": "7e3a27cc402baa6229730948c1e3c6d359e3eba6180bb7d7d05d86a0d1e23443",
+      "games": 5749,
+      "league": "ncaam",
+      "metrics": {
+        "accuracy": 0.7201252391720299,
+        "brier": 0.1778399915620509,
+        "log_loss": 0.5238873160433043
+      },
+      "model_family": "retained linear model",
+      "public_model_id": "retained-role-ncaam-win-8cea42be",
+      "season_end_year": 2026,
+      "source": "B032 retained catalog",
+      "target": "win"
+    },
+    {
+      "cohort_membership_sha256": "7e3a27cc402baa6229730948c1e3c6d359e3eba6180bb7d7d05d86a0d1e23443",
+      "games": 5749,
+      "league": "ncaam",
+      "metrics": {
+        "accuracy": 0.715254826926422,
+        "brier": 0.17865153887658897,
+        "log_loss": 0.526511964881015
+      },
+      "model_family": "retained equal-weight ensemble",
+      "public_model_id": "retained-role-ncaam-win-1c9c8c9e",
+      "season_end_year": 2026,
+      "source": "B032 retained catalog",
+      "target": "win"
+    },
+    {
+      "cohort_membership_sha256": "7e3a27cc402baa6229730948c1e3c6d359e3eba6180bb7d7d05d86a0d1e23443",
+      "games": 5749,
+      "league": "ncaam",
+      "metrics": {
+        "accuracy": 0.716820316576796,
+        "brier": 0.1803116407730852,
+        "log_loss": 0.5310320605742562
+      },
+      "model_family": "retained Extra Trees",
+      "public_model_id": "retained-role-ncaam-win-2a183c8f",
+      "season_end_year": 2026,
+      "source": "B032 retained catalog",
+      "target": "win"
+    },
+    {
+      "cohort_membership_sha256": "7e3a27cc402baa6229730948c1e3c6d359e3eba6180bb7d7d05d86a0d1e23443",
+      "games": 5749,
+      "league": "ncaam",
+      "metrics": {
+        "accuracy": 0.7175160897547399,
+        "brier": 0.1789477313558808,
+        "log_loss": 0.5271973400841813
+      },
+      "model_family": "retained histogram gradient boosting",
+      "public_model_id": "retained-role-ncaam-win-7c3e4114",
+      "season_end_year": 2026,
+      "source": "B032 retained catalog",
+      "target": "win"
+    },
+    {
+      "cohort_membership_sha256": "7e3a27cc402baa6229730948c1e3c6d359e3eba6180bb7d7d05d86a0d1e23443",
+      "games": 5749,
+      "league": "ncaam",
+      "metrics": {
+        "accuracy": 0.7199512958775439,
+        "brier": 0.17823646215151123,
+        "log_loss": 0.5252782539897621
+      },
+      "model_family": "retained linear model",
+      "public_model_id": "retained-role-ncaam-win-10670a65",
+      "season_end_year": 2026,
+      "source": "B032 retained catalog",
+      "target": "win"
+    },
+    {
+      "cohort_membership_sha256": "7e3a27cc402baa6229730948c1e3c6d359e3eba6180bb7d7d05d86a0d1e23443",
+      "games": 5749,
+      "league": "ncaam",
+      "metrics": {
+        "accuracy": 0.71664637328231,
+        "brier": 0.17823782765097493,
+        "log_loss": 0.5254519464302867
+      },
+      "model_family": "retained equal-weight ensemble",
+      "public_model_id": "retained-role-ncaam-win-e6cea026",
+      "season_end_year": 2026,
+      "source": "B032 retained catalog",
+      "target": "win"
+    },
+    {
+      "cohort_membership_sha256": "7e3a27cc402baa6229730948c1e3c6d359e3eba6180bb7d7d05d86a0d1e23443",
+      "games": 5749,
+      "league": "ncaam",
+      "metrics": {
+        "accuracy": 0.71664637328231,
+        "brier": 0.17939396773473681,
+        "log_loss": 0.5289259513498539
+      },
+      "model_family": "retained Extra Trees",
+      "public_model_id": "retained-role-ncaam-win-3b3251f6",
+      "season_end_year": 2026,
+      "source": "B032 retained catalog",
+      "target": "win"
+    },
+    {
+      "cohort_membership_sha256": "7e3a27cc402baa6229730948c1e3c6d359e3eba6180bb7d7d05d86a0d1e23443",
+      "games": 5749,
+      "league": "ncaam",
+      "metrics": {
+        "accuracy": 0.715950600104366,
+        "brier": 0.17827842905302008,
+        "log_loss": 0.5257208447929629
+      },
+      "model_family": "retained histogram gradient boosting",
+      "public_model_id": "retained-role-ncaam-win-3dbbcdcb",
+      "season_end_year": 2026,
+      "source": "B032 retained catalog",
+      "target": "win"
+    },
+    {
+      "cohort_membership_sha256": "7e3a27cc402baa6229730948c1e3c6d359e3eba6180bb7d7d05d86a0d1e23443",
+      "games": 5749,
+      "league": "ncaam",
+      "metrics": {
+        "accuracy": 0.719081579405114,
+        "brier": 0.17791611720390216,
+        "log_loss": 0.5240938110075535
+      },
+      "model_family": "retained linear model",
+      "public_model_id": "retained-role-ncaam-win-c31a7934",
+      "season_end_year": 2026,
+      "source": "B032 retained catalog",
+      "target": "win"
+    },
+    {
+      "cohort_membership_sha256": "7e3a27cc402baa6229730948c1e3c6d359e3eba6180bb7d7d05d86a0d1e23443",
+      "games": 5749,
+      "league": "ncaam",
+      "metrics": {
+        "accuracy": 0.7178639763437119,
+        "brier": 0.17840041494635392,
+        "log_loss": 0.5258545633551338
+      },
+      "model_family": "fixed blend of histogram gradient boosting and logistic regression",
+      "public_model_id": "frozen-core-ncaam-win-f17d338c",
+      "season_end_year": 2026,
+      "source": "Selected native frozen-core catalog",
+      "target": "win"
+    },
+    {
+      "cohort_membership_sha256": "7e3a27cc402baa6229730948c1e3c6d359e3eba6180bb7d7d05d86a0d1e23443",
+      "games": 5749,
+      "league": "ncaam",
+      "metrics": {
+        "accuracy": 0.718733692816142,
+        "brier": 0.17846342707014298,
+        "log_loss": 0.5260119656076415
+      },
+      "model_family": "logistic regression",
+      "public_model_id": "frozen-core-ncaam-win-662ba2b4",
+      "season_end_year": 2026,
+      "source": "Selected native frozen-core catalog",
+      "target": "win"
+    },
+    {
+      "cohort_membership_sha256": "08a887bff66c67045202ea32f6642cf507d3f28d55f1e80889f583bf69537a2e",
+      "games": 5758,
+      "league": "ncaam",
+      "metrics": {
+        "bias": -0.3609059187683668,
+        "mae": 8.988752265871979,
+        "rmse": 11.50016838022012
+      },
+      "model_family": "retained equal-weight ensemble",
+      "public_model_id": "retained-role-ncaam-margin-1294bf8a",
+      "season_end_year": 2025,
+      "source": "B032 retained catalog",
+      "target": "margin"
+    },
+    {
+      "cohort_membership_sha256": "08a887bff66c67045202ea32f6642cf507d3f28d55f1e80889f583bf69537a2e",
+      "games": 5758,
+      "league": "ncaam",
+      "metrics": {
+        "bias": -0.3332293183786502,
+        "mae": 9.03181036361129,
+        "rmse": 11.565694158771223
+      },
+      "model_family": "retained Extra Trees",
+      "public_model_id": "retained-role-ncaam-margin-292d8ffa",
+      "season_end_year": 2025,
+      "source": "B032 retained catalog",
+      "target": "margin"
+    },
+    {
+      "cohort_membership_sha256": "08a887bff66c67045202ea32f6642cf507d3f28d55f1e80889f583bf69537a2e",
+      "games": 5758,
+      "league": "ncaam",
+      "metrics": {
+        "bias": -0.4714010773819703,
+        "mae": 8.998040452862996,
+        "rmse": 11.50535018734506
+      },
+      "model_family": "retained histogram gradient boosting",
+      "public_model_id": "retained-role-ncaam-margin-41e7b0cb",
+      "season_end_year": 2025,
+      "source": "B032 retained catalog",
+      "target": "margin"
+    },
+    {
+      "cohort_membership_sha256": "08a887bff66c67045202ea32f6642cf507d3f28d55f1e80889f583bf69537a2e",
+      "games": 5758,
+      "league": "ncaam",
+      "metrics": {
+        "bias": -0.27808736054448,
+        "mae": 8.979033825234042,
+        "rmse": 11.484606185214982
+      },
+      "model_family": "retained linear model",
+      "public_model_id": "retained-role-ncaam-margin-8cea42be",
+      "season_end_year": 2025,
+      "source": "B032 retained catalog",
+      "target": "margin"
+    },
+    {
+      "cohort_membership_sha256": "08a887bff66c67045202ea32f6642cf507d3f28d55f1e80889f583bf69537a2e",
+      "games": 5758,
+      "league": "ncaam",
+      "metrics": {
+        "bias": -0.2848196515995112,
+        "mae": 8.996736502150796,
+        "rmse": 11.512938356749505
+      },
+      "model_family": "retained equal-weight ensemble",
+      "public_model_id": "retained-role-ncaam-margin-1c9c8c9e",
+      "season_end_year": 2025,
+      "source": "B032 retained catalog",
+      "target": "margin"
+    },
+    {
+      "cohort_membership_sha256": "08a887bff66c67045202ea32f6642cf507d3f28d55f1e80889f583bf69537a2e",
+      "games": 5758,
+      "league": "ncaam",
+      "metrics": {
+        "bias": -0.2852552874123488,
+        "mae": 9.055505731307386,
+        "rmse": 11.600114719577078
+      },
+      "model_family": "retained Extra Trees",
+      "public_model_id": "retained-role-ncaam-margin-2a183c8f",
+      "season_end_year": 2025,
+      "source": "B032 retained catalog",
+      "target": "margin"
+    },
+    {
+      "cohort_membership_sha256": "08a887bff66c67045202ea32f6642cf507d3f28d55f1e80889f583bf69537a2e",
+      "games": 5758,
+      "league": "ncaam",
+      "metrics": {
+        "bias": -0.3701012270488374,
+        "mae": 9.017024022557314,
+        "rmse": 11.525923879046806
+      },
+      "model_family": "retained histogram gradient boosting",
+      "public_model_id": "retained-role-ncaam-margin-7c3e4114",
+      "season_end_year": 2025,
+      "source": "B032 retained catalog",
+      "target": "margin"
+    },
+    {
+      "cohort_membership_sha256": "08a887bff66c67045202ea32f6642cf507d3f28d55f1e80889f583bf69537a2e",
+      "games": 5758,
+      "league": "ncaam",
+      "metrics": {
+        "bias": -0.19910244033734756,
+        "mae": 8.998089528437745,
+        "rmse": 11.517706387870437
+      },
+      "model_family": "retained linear model",
+      "public_model_id": "retained-role-ncaam-margin-10670a65",
+      "season_end_year": 2025,
+      "source": "B032 retained catalog",
+      "target": "margin"
+    },
+    {
+      "cohort_membership_sha256": "08a887bff66c67045202ea32f6642cf507d3f28d55f1e80889f583bf69537a2e",
+      "games": 5758,
+      "league": "ncaam",
+      "metrics": {
+        "bias": -0.36763004169734165,
+        "mae": 8.987557694580763,
+        "rmse": 11.498716740863856
+      },
+      "model_family": "retained equal-weight ensemble",
+      "public_model_id": "retained-role-ncaam-margin-e6cea026",
+      "season_end_year": 2025,
+      "source": "B032 retained catalog",
+      "target": "margin"
+    },
+    {
+      "cohort_membership_sha256": "08a887bff66c67045202ea32f6642cf507d3f28d55f1e80889f583bf69537a2e",
+      "games": 5758,
+      "league": "ncaam",
+      "metrics": {
+        "bias": -0.33983856197585616,
+        "mae": 9.025263953708418,
+        "rmse": 11.555620884890535
+      },
+      "model_family": "retained Extra Trees",
+      "public_model_id": "retained-role-ncaam-margin-3b3251f6",
+      "season_end_year": 2025,
+      "source": "B032 retained catalog",
+      "target": "margin"
+    },
+    {
+      "cohort_membership_sha256": "08a887bff66c67045202ea32f6642cf507d3f28d55f1e80889f583bf69537a2e",
+      "games": 5758,
+      "league": "ncaam",
+      "metrics": {
+        "bias": -0.478585442841565,
+        "mae": 8.995866029724022,
+        "rmse": 11.504871544795408
+      },
+      "model_family": "retained histogram gradient boosting",
+      "public_model_id": "retained-role-ncaam-margin-3dbbcdcb",
+      "season_end_year": 2025,
+      "source": "B032 retained catalog",
+      "target": "margin"
+    },
+    {
+      "cohort_membership_sha256": "08a887bff66c67045202ea32f6642cf507d3f28d55f1e80889f583bf69537a2e",
+      "games": 5758,
+      "league": "ncaam",
+      "metrics": {
+        "bias": -0.2844661202746039,
+        "mae": 8.983222993658845,
+        "rmse": 11.487295280276246
+      },
+      "model_family": "retained linear model",
+      "public_model_id": "retained-role-ncaam-margin-c31a7934",
+      "season_end_year": 2025,
+      "source": "B032 retained catalog",
+      "target": "margin"
+    },
+    {
+      "cohort_membership_sha256": "08a887bff66c67045202ea32f6642cf507d3f28d55f1e80889f583bf69537a2e",
+      "games": 5758,
+      "league": "ncaam",
+      "metrics": {
+        "bias": -0.30466529797539843,
+        "mae": 8.99151766816536,
+        "rmse": 11.499037679338374
+      },
+      "model_family": "fixed blend of histogram gradient boosting and ridge regression",
+      "public_model_id": "frozen-core-ncaam-margin-6982e0b8",
+      "season_end_year": 2025,
+      "source": "Selected native frozen-core catalog",
+      "target": "margin"
+    },
+    {
+      "cohort_membership_sha256": "5e89f284a55dfce1e83605b33f409b3c9e24e16b3dfe19171cf2b045ef756f8c",
+      "games": 5749,
+      "league": "ncaam",
+      "metrics": {
+        "bias": 0.1329996827815769,
+        "mae": 9.168615001594734,
+        "rmse": 11.608841833761968
+      },
+      "model_family": "retained equal-weight ensemble",
+      "public_model_id": "retained-role-ncaam-margin-1294bf8a",
+      "season_end_year": 2026,
+      "source": "B032 retained catalog",
+      "target": "margin"
+    },
+    {
+      "cohort_membership_sha256": "5e89f284a55dfce1e83605b33f409b3c9e24e16b3dfe19171cf2b045ef756f8c",
+      "games": 5749,
+      "league": "ncaam",
+      "metrics": {
+        "bias": 0.14561660137214577,
+        "mae": 9.209474577813122,
+        "rmse": 11.673621376259568
+      },
+      "model_family": "retained Extra Trees",
+      "public_model_id": "retained-role-ncaam-margin-292d8ffa",
+      "season_end_year": 2026,
+      "source": "B032 retained catalog",
+      "target": "margin"
+    },
+    {
+      "cohort_membership_sha256": "5e89f284a55dfce1e83605b33f409b3c9e24e16b3dfe19171cf2b045ef756f8c",
+      "games": 5749,
+      "league": "ncaam",
+      "metrics": {
+        "bias": 0.01968053034889141,
+        "mae": 9.168167911660893,
+        "rmse": 11.607056155474275
+      },
+      "model_family": "retained histogram gradient boosting",
+      "public_model_id": "retained-role-ncaam-margin-41e7b0cb",
+      "season_end_year": 2026,
+      "source": "B032 retained catalog",
+      "target": "margin"
+    },
+    {
+      "cohort_membership_sha256": "5e89f284a55dfce1e83605b33f409b3c9e24e16b3dfe19171cf2b045ef756f8c",
+      "games": 5749,
+      "league": "ncaam",
+      "metrics": {
+        "bias": 0.2337019166236934,
+        "mae": 9.164305956964675,
+        "rmse": 11.60028301302509
+      },
+      "model_family": "retained linear model",
+      "public_model_id": "retained-role-ncaam-margin-8cea42be",
+      "season_end_year": 2026,
+      "source": "B032 retained catalog",
+      "target": "margin"
+    },
+    {
+      "cohort_membership_sha256": "5e89f284a55dfce1e83605b33f409b3c9e24e16b3dfe19171cf2b045ef756f8c",
+      "games": 5749,
+      "league": "ncaam",
+      "metrics": {
+        "bias": 0.1645753907559193,
+        "mae": 9.172683292965333,
+        "rmse": 11.618611921877951
+      },
+      "model_family": "retained equal-weight ensemble",
+      "public_model_id": "retained-role-ncaam-margin-1c9c8c9e",
+      "season_end_year": 2026,
+      "source": "B032 retained catalog",
+      "target": "margin"
+    },
+    {
+      "cohort_membership_sha256": "5e89f284a55dfce1e83605b33f409b3c9e24e16b3dfe19171cf2b045ef756f8c",
+      "games": 5749,
+      "league": "ncaam",
+      "metrics": {
+        "bias": 0.14921047282173783,
+        "mae": 9.233923691033734,
+        "rmse": 11.717192821173708
+      },
+      "model_family": "retained Extra Trees",
+      "public_model_id": "retained-role-ncaam-margin-2a183c8f",
+      "season_end_year": 2026,
+      "source": "B032 retained catalog",
+      "target": "margin"
+    },
+    {
+      "cohort_membership_sha256": "5e89f284a55dfce1e83605b33f409b3c9e24e16b3dfe19171cf2b045ef756f8c",
+      "games": 5749,
+      "league": "ncaam",
+      "metrics": {
+        "bias": 0.10544064554930213,
+        "mae": 9.192634219780398,
+        "rmse": 11.639080338227298
+      },
+      "model_family": "retained histogram gradient boosting",
+      "public_model_id": "retained-role-ncaam-margin-7c3e4114",
+      "season_end_year": 2026,
+      "source": "B032 retained catalog",
+      "target": "margin"
+    },
+    {
+      "cohort_membership_sha256": "5e89f284a55dfce1e83605b33f409b3c9e24e16b3dfe19171cf2b045ef756f8c",
+      "games": 5749,
+      "league": "ncaam",
+      "metrics": {
+        "bias": 0.2390750538967178,
+        "mae": 9.162618730992724,
+        "rmse": 11.603864564938457
+      },
+      "model_family": "retained linear model",
+      "public_model_id": "retained-role-ncaam-margin-10670a65",
+      "season_end_year": 2026,
+      "source": "B032 retained catalog",
+      "target": "margin"
+    },
+    {
+      "cohort_membership_sha256": "5e89f284a55dfce1e83605b33f409b3c9e24e16b3dfe19171cf2b045ef756f8c",
+      "games": 5749,
+      "league": "ncaam",
+      "metrics": {
+        "bias": 0.12438463022968296,
+        "mae": 9.16752329367889,
+        "rmse": 11.610224459457019
+      },
+      "model_family": "retained equal-weight ensemble",
+      "public_model_id": "retained-role-ncaam-margin-e6cea026",
+      "season_end_year": 2026,
+      "source": "B032 retained catalog",
+      "target": "margin"
+    },
+    {
+      "cohort_membership_sha256": "5e89f284a55dfce1e83605b33f409b3c9e24e16b3dfe19171cf2b045ef756f8c",
+      "games": 5749,
+      "league": "ncaam",
+      "metrics": {
+        "bias": 0.13566172570228774,
+        "mae": 9.202431514251384,
+        "rmse": 11.666003621821288
+      },
+      "model_family": "retained Extra Trees",
+      "public_model_id": "retained-role-ncaam-margin-3b3251f6",
+      "season_end_year": 2026,
+      "source": "B032 retained catalog",
+      "target": "margin"
+    },
+    {
+      "cohort_membership_sha256": "5e89f284a55dfce1e83605b33f409b3c9e24e16b3dfe19171cf2b045ef756f8c",
+      "games": 5749,
+      "league": "ncaam",
+      "metrics": {
+        "bias": 0.0064322377187365646,
+        "mae": 9.171575451764799,
+        "rmse": 11.612370189241645
+      },
+      "model_family": "retained histogram gradient boosting",
+      "public_model_id": "retained-role-ncaam-margin-3dbbcdcb",
+      "season_end_year": 2026,
+      "source": "B032 retained catalog",
+      "target": "margin"
+    },
+    {
+      "cohort_membership_sha256": "5e89f284a55dfce1e83605b33f409b3c9e24e16b3dfe19171cf2b045ef756f8c",
+      "games": 5749,
+      "league": "ncaam",
+      "metrics": {
+        "bias": 0.23105992726802466,
+        "mae": 9.164285225709792,
+        "rmse": 11.602837773451412
+      },
+      "model_family": "retained linear model",
+      "public_model_id": "retained-role-ncaam-margin-c31a7934",
+      "season_end_year": 2026,
+      "source": "B032 retained catalog",
+      "target": "margin"
+    },
+    {
+      "cohort_membership_sha256": "5e89f284a55dfce1e83605b33f409b3c9e24e16b3dfe19171cf2b045ef756f8c",
+      "games": 5749,
+      "league": "ncaam",
+      "metrics": {
+        "bias": 0.14444741215288803,
+        "mae": 9.160726359930727,
+        "rmse": 11.606803088165304
+      },
+      "model_family": "fixed blend of histogram gradient boosting and ridge regression",
+      "public_model_id": "frozen-core-ncaam-margin-6982e0b8",
+      "season_end_year": 2026,
+      "source": "Selected native frozen-core catalog",
+      "target": "margin"
+    },
+    {
+      "cohort_membership_sha256": "217b35f24d2fb90080683fa8435450346feb9eee71a2c579b5d4926abf62d30c",
+      "games": 5758,
+      "league": "ncaam",
+      "metrics": {
+        "bias": 0.0734273788037822,
+        "mae": 12.940769521582554,
+        "rmse": 16.535903545045137
+      },
+      "model_family": "retained equal-weight ensemble",
+      "public_model_id": "retained-role-ncaam-total-1294bf8a",
+      "season_end_year": 2025,
+      "source": "B032 retained catalog",
+      "target": "total"
+    },
+    {
+      "cohort_membership_sha256": "217b35f24d2fb90080683fa8435450346feb9eee71a2c579b5d4926abf62d30c",
+      "games": 5758,
+      "league": "ncaam",
+      "metrics": {
+        "bias": 0.14804078511011215,
+        "mae": 13.020548057543891,
+        "rmse": 16.611396630525196
+      },
+      "model_family": "retained Extra Trees",
+      "public_model_id": "retained-role-ncaam-total-292d8ffa",
+      "season_end_year": 2025,
+      "source": "B032 retained catalog",
+      "target": "total"
+    },
+    {
+      "cohort_membership_sha256": "217b35f24d2fb90080683fa8435450346feb9eee71a2c579b5d4926abf62d30c",
+      "games": 5758,
+      "league": "ncaam",
+      "metrics": {
+        "bias": -0.14185706588293823,
+        "mae": 12.932967407305734,
+        "rmse": 16.542998296114202
+      },
+      "model_family": "retained histogram gradient boosting",
+      "public_model_id": "retained-role-ncaam-total-41e7b0cb",
+      "season_end_year": 2025,
+      "source": "B032 retained catalog",
+      "target": "total"
+    },
+    {
+      "cohort_membership_sha256": "217b35f24d2fb90080683fa8435450346feb9eee71a2c579b5d4926abf62d30c",
+      "games": 5758,
+      "league": "ncaam",
+      "metrics": {
+        "bias": 0.21409841718417244,
+        "mae": 12.929473421062825,
+        "rmse": 16.520374748166137
+      },
+      "model_family": "retained linear model",
+      "public_model_id": "retained-role-ncaam-total-8cea42be",
+      "season_end_year": 2025,
+      "source": "B032 retained catalog",
+      "target": "total"
+    },
+    {
+      "cohort_membership_sha256": "217b35f24d2fb90080683fa8435450346feb9eee71a2c579b5d4926abf62d30c",
+      "games": 5758,
+      "league": "ncaam",
+      "metrics": {
+        "bias": -0.8849213139094814,
+        "mae": 12.968957881768612,
+        "rmse": 16.59155255405364
+      },
+      "model_family": "retained equal-weight ensemble",
+      "public_model_id": "retained-role-ncaam-total-1c9c8c9e",
+      "season_end_year": 2025,
+      "source": "B032 retained catalog",
+      "target": "total"
+    },
+    {
+      "cohort_membership_sha256": "217b35f24d2fb90080683fa8435450346feb9eee71a2c579b5d4926abf62d30c",
+      "games": 5758,
+      "league": "ncaam",
+      "metrics": {
+        "bias": -0.7159931505681065,
+        "mae": 13.031282109291961,
+        "rmse": 16.65180535340206
+      },
+      "model_family": "retained Extra Trees",
+      "public_model_id": "retained-role-ncaam-total-2a183c8f",
+      "season_end_year": 2025,
+      "source": "B032 retained catalog",
+      "target": "total"
+    },
+    {
+      "cohort_membership_sha256": "217b35f24d2fb90080683fa8435450346feb9eee71a2c579b5d4926abf62d30c",
+      "games": 5758,
+      "league": "ncaam",
+      "metrics": {
+        "bias": -0.5982111364335833,
+        "mae": 12.98730144995836,
+        "rmse": 16.606851552527832
+      },
+      "model_family": "retained histogram gradient boosting",
+      "public_model_id": "retained-role-ncaam-total-7c3e4114",
+      "season_end_year": 2025,
+      "source": "B032 retained catalog",
+      "target": "total"
+    },
+    {
+      "cohort_membership_sha256": "217b35f24d2fb90080683fa8435450346feb9eee71a2c579b5d4926abf62d30c",
+      "games": 5758,
+      "league": "ncaam",
+      "metrics": {
+        "bias": -1.3405596547267544,
+        "mae": 12.948327512868342,
+        "rmse": 16.602083725299927
+      },
+      "model_family": "retained linear model",
+      "public_model_id": "retained-role-ncaam-total-10670a65",
+      "season_end_year": 2025,
+      "source": "B032 retained catalog",
+      "target": "total"
+    },
+    {
+      "cohort_membership_sha256": "217b35f24d2fb90080683fa8435450346feb9eee71a2c579b5d4926abf62d30c",
+      "games": 5758,
+      "league": "ncaam",
+      "metrics": {
+        "bias": 0.07178182018330692,
+        "mae": 12.934289265330586,
+        "rmse": 16.532130502202445
+      },
+      "model_family": "retained equal-weight ensemble",
+      "public_model_id": "retained-role-ncaam-total-e6cea026",
+      "season_end_year": 2025,
+      "source": "B032 retained catalog",
+      "target": "total"
+    },
+    {
+      "cohort_membership_sha256": "217b35f24d2fb90080683fa8435450346feb9eee71a2c579b5d4926abf62d30c",
+      "games": 5758,
+      "league": "ncaam",
+      "metrics": {
+        "bias": 0.06869659330505354,
+        "mae": 12.98989522861986,
+        "rmse": 16.58320622842188
+      },
+      "model_family": "retained Extra Trees",
+      "public_model_id": "retained-role-ncaam-total-3b3251f6",
+      "season_end_year": 2025,
+      "source": "B032 retained catalog",
+      "target": "total"
+    },
+    {
+      "cohort_membership_sha256": "217b35f24d2fb90080683fa8435450346feb9eee71a2c579b5d4926abf62d30c",
+      "games": 5758,
+      "league": "ncaam",
+      "metrics": {
+        "bias": -0.08823129827750258,
+        "mae": 12.938389081222304,
+        "rmse": 16.553185739723055
+      },
+      "model_family": "retained histogram gradient boosting",
+      "public_model_id": "retained-role-ncaam-total-3dbbcdcb",
+      "season_end_year": 2025,
+      "source": "B032 retained catalog",
+      "target": "total"
+    },
+    {
+      "cohort_membership_sha256": "217b35f24d2fb90080683fa8435450346feb9eee71a2c579b5d4926abf62d30c",
+      "games": 5758,
+      "league": "ncaam",
+      "metrics": {
+        "bias": 0.23488016552236993,
+        "mae": 12.931025080467565,
+        "rmse": 16.52051235998542
+      },
+      "model_family": "retained linear model",
+      "public_model_id": "retained-role-ncaam-total-c31a7934",
+      "season_end_year": 2025,
+      "source": "B032 retained catalog",
+      "target": "total"
+    },
+    {
+      "cohort_membership_sha256": "217b35f24d2fb90080683fa8435450346feb9eee71a2c579b5d4926abf62d30c",
+      "games": 5758,
+      "league": "ncaam",
+      "metrics": {
+        "bias": -0.9548952100136183,
+        "mae": 12.952621089096626,
+        "rmse": 16.581956215718996
+      },
+      "model_family": "fixed blend of histogram gradient boosting and ridge regression",
+      "public_model_id": "frozen-core-ncaam-total-28fda29a",
+      "season_end_year": 2025,
+      "source": "Selected native frozen-core catalog",
+      "target": "total"
+    },
+    {
+      "cohort_membership_sha256": "217b35f24d2fb90080683fa8435450346feb9eee71a2c579b5d4926abf62d30c",
+      "games": 5758,
+      "league": "ncaam",
+      "metrics": {
+        "bias": -1.330201798571858,
+        "mae": 12.948693373833484,
+        "rmse": 16.601027174078315
+      },
+      "model_family": "ridge regression",
+      "public_model_id": "frozen-core-ncaam-total-f7aebdc4",
+      "season_end_year": 2025,
+      "source": "Selected native frozen-core catalog",
+      "target": "total"
+    },
+    {
+      "cohort_membership_sha256": "3b816d189f572602e243243e19552a8cb92d8dff8bb8f606cfd829f29ca13901",
+      "games": 5749,
+      "league": "ncaam",
+      "metrics": {
+        "bias": -0.01748689928817823,
+        "mae": 13.718650513491523,
+        "rmse": 17.2848583267049
+      },
+      "model_family": "retained equal-weight ensemble",
+      "public_model_id": "retained-role-ncaam-total-1294bf8a",
+      "season_end_year": 2026,
+      "source": "B032 retained catalog",
+      "target": "total"
+    },
+    {
+      "cohort_membership_sha256": "3b816d189f572602e243243e19552a8cb92d8dff8bb8f606cfd829f29ca13901",
+      "games": 5749,
+      "league": "ncaam",
+      "metrics": {
+        "bias": 0.382620462677121,
+        "mae": 13.787941044900734,
+        "rmse": 17.348077664716914
+      },
+      "model_family": "retained Extra Trees",
+      "public_model_id": "retained-role-ncaam-total-292d8ffa",
+      "season_end_year": 2026,
+      "source": "B032 retained catalog",
+      "target": "total"
+    },
+    {
+      "cohort_membership_sha256": "3b816d189f572602e243243e19552a8cb92d8dff8bb8f606cfd829f29ca13901",
+      "games": 5749,
+      "league": "ncaam",
+      "metrics": {
+        "bias": -0.05436196661658526,
+        "mae": 13.73441375880969,
+        "rmse": 17.317694331710705
+      },
+      "model_family": "retained histogram gradient boosting",
+      "public_model_id": "retained-role-ncaam-total-41e7b0cb",
+      "season_end_year": 2026,
+      "source": "B032 retained catalog",
+      "target": "total"
+    },
+    {
+      "cohort_membership_sha256": "3b816d189f572602e243243e19552a8cb92d8dff8bb8f606cfd829f29ca13901",
+      "games": 5749,
+      "league": "ncaam",
+      "metrics": {
+        "bias": -0.3807191939250708,
+        "mae": 13.687858425800112,
+        "rmse": 17.268824574154007
+      },
+      "model_family": "retained linear model",
+      "public_model_id": "retained-role-ncaam-total-8cea42be",
+      "season_end_year": 2026,
+      "source": "B032 retained catalog",
+      "target": "total"
+    },
+    {
+      "cohort_membership_sha256": "3b816d189f572602e243243e19552a8cb92d8dff8bb8f606cfd829f29ca13901",
+      "games": 5749,
+      "league": "ncaam",
+      "metrics": {
+        "bias": -0.5404543511327852,
+        "mae": 13.753592817855015,
+        "rmse": 17.351275345053654
+      },
+      "model_family": "retained equal-weight ensemble",
+      "public_model_id": "retained-role-ncaam-total-1c9c8c9e",
+      "season_end_year": 2026,
+      "source": "B032 retained catalog",
+      "target": "total"
+    },
+    {
+      "cohort_membership_sha256": "3b816d189f572602e243243e19552a8cb92d8dff8bb8f606cfd829f29ca13901",
+      "games": 5749,
+      "league": "ncaam",
+      "metrics": {
+        "bias": 0.0027898231168629727,
+        "mae": 13.819996325714632,
+        "rmse": 17.404858081082352
+      },
+      "model_family": "retained Extra Trees",
+      "public_model_id": "retained-role-ncaam-total-2a183c8f",
+      "season_end_year": 2026,
+      "source": "B032 retained catalog",
+      "target": "total"
+    },
+    {
+      "cohort_membership_sha256": "3b816d189f572602e243243e19552a8cb92d8dff8bb8f606cfd829f29ca13901",
+      "games": 5749,
+      "league": "ncaam",
+      "metrics": {
+        "bias": -0.1128177771471153,
+        "mae": 13.80544117069462,
+        "rmse": 17.393211180132326
+      },
+      "model_family": "retained histogram gradient boosting",
+      "public_model_id": "retained-role-ncaam-total-7c3e4114",
+      "season_end_year": 2026,
+      "source": "B032 retained catalog",
+      "target": "total"
+    },
+    {
+      "cohort_membership_sha256": "3b816d189f572602e243243e19552a8cb92d8dff8bb8f606cfd829f29ca13901",
+      "games": 5749,
+      "league": "ncaam",
+      "metrics": {
+        "bias": -1.5113350993681036,
+        "mae": 13.73424226692539,
+        "rmse": 17.381630716851575
+      },
+      "model_family": "retained linear model",
+      "public_model_id": "retained-role-ncaam-total-10670a65",
+      "season_end_year": 2026,
+      "source": "B032 retained catalog",
+      "target": "total"
+    },
+    {
+      "cohort_membership_sha256": "3b816d189f572602e243243e19552a8cb92d8dff8bb8f606cfd829f29ca13901",
+      "games": 5749,
+      "league": "ncaam",
+      "metrics": {
+        "bias": -0.042138482483213544,
+        "mae": 13.716931628285824,
+        "rmse": 17.287722129120407
+      },
+      "model_family": "retained equal-weight ensemble",
+      "public_model_id": "retained-role-ncaam-total-e6cea026",
+      "season_end_year": 2026,
+      "source": "B032 retained catalog",
+      "target": "total"
+    },
+    {
+      "cohort_membership_sha256": "3b816d189f572602e243243e19552a8cb92d8dff8bb8f606cfd829f29ca13901",
+      "games": 5749,
+      "league": "ncaam",
+      "metrics": {
+        "bias": 0.22777739198902947,
+        "mae": 13.776293346372631,
+        "rmse": 17.342984981997922
+      },
+      "model_family": "retained Extra Trees",
+      "public_model_id": "retained-role-ncaam-total-3b3251f6",
+      "season_end_year": 2026,
+      "source": "B032 retained catalog",
+      "target": "total"
+    },
+    {
+      "cohort_membership_sha256": "3b816d189f572602e243243e19552a8cb92d8dff8bb8f606cfd829f29ca13901",
+      "games": 5749,
+      "league": "ncaam",
+      "metrics": {
+        "bias": -0.0034970464787446205,
+        "mae": 13.730850643349239,
+        "rmse": 17.31512445744745
+      },
+      "model_family": "retained histogram gradient boosting",
+      "public_model_id": "retained-role-ncaam-total-3dbbcdcb",
+      "season_end_year": 2026,
+      "source": "B032 retained catalog",
+      "target": "total"
+    },
+    {
+      "cohort_membership_sha256": "3b816d189f572602e243243e19552a8cb92d8dff8bb8f606cfd829f29ca13901",
+      "games": 5749,
+      "league": "ncaam",
+      "metrics": {
+        "bias": -0.35069579295992515,
+        "mae": 13.69407717756374,
+        "rmse": 17.274565046978893
+      },
+      "model_family": "retained linear model",
+      "public_model_id": "retained-role-ncaam-total-c31a7934",
+      "season_end_year": 2026,
+      "source": "B032 retained catalog",
+      "target": "total"
+    },
+    {
+      "cohort_membership_sha256": "3b816d189f572602e243243e19552a8cb92d8dff8bb8f606cfd829f29ca13901",
+      "games": 5749,
+      "league": "ncaam",
+      "metrics": {
+        "bias": -0.755907898427301,
+        "mae": 13.743377005250325,
+        "rmse": 17.357225149245938
+      },
+      "model_family": "fixed blend of histogram gradient boosting and ridge regression",
+      "public_model_id": "frozen-core-ncaam-total-28fda29a",
+      "season_end_year": 2026,
+      "source": "Selected native frozen-core catalog",
+      "target": "total"
+    },
+    {
+      "cohort_membership_sha256": "3b816d189f572602e243243e19552a8cb92d8dff8bb8f606cfd829f29ca13901",
+      "games": 5749,
+      "league": "ncaam",
+      "metrics": {
+        "bias": -1.4652950587449312,
+        "mae": 13.7377571056855,
+        "rmse": 17.386074119680856
+      },
+      "model_family": "ridge regression",
+      "public_model_id": "frozen-core-ncaam-total-f7aebdc4",
+      "season_end_year": 2026,
+      "source": "Selected native frozen-core catalog",
+      "target": "total"
+    },
+    {
+      "cohort_membership_sha256": "a257cd1c905322df857ed858947789ef18c4b2e660d4a51ad9c933206e6ca657",
+      "games": 5280,
+      "league": "ncaaw",
+      "metrics": {
+        "accuracy": 0.7666666666666667,
+        "brier": 0.15108974423598542,
+        "log_loss": 0.45459784439903
+      },
+      "model_family": "retained equal-weight ensemble",
+      "public_model_id": "retained-role-ncaaw-win-1294bf8a",
+      "season_end_year": 2025,
+      "source": "B032 retained catalog",
+      "target": "win"
+    },
+    {
+      "cohort_membership_sha256": "a257cd1c905322df857ed858947789ef18c4b2e660d4a51ad9c933206e6ca657",
+      "games": 5280,
+      "league": "ncaaw",
+      "metrics": {
+        "accuracy": 0.768560606060606,
+        "brier": 0.15214373236688594,
+        "log_loss": 0.4576758314689854
+      },
+      "model_family": "retained Extra Trees",
+      "public_model_id": "retained-role-ncaaw-win-292d8ffa",
+      "season_end_year": 2025,
+      "source": "B032 retained catalog",
+      "target": "win"
+    },
+    {
+      "cohort_membership_sha256": "a257cd1c905322df857ed858947789ef18c4b2e660d4a51ad9c933206e6ca657",
+      "games": 5280,
+      "league": "ncaaw",
+      "metrics": {
+        "accuracy": 0.7647727272727273,
+        "brier": 0.15169500808310316,
+        "log_loss": 0.45673640936732235
+      },
+      "model_family": "retained histogram gradient boosting",
+      "public_model_id": "retained-role-ncaaw-win-41e7b0cb",
+      "season_end_year": 2025,
+      "source": "B032 retained catalog",
+      "target": "win"
+    },
+    {
+      "cohort_membership_sha256": "a257cd1c905322df857ed858947789ef18c4b2e660d4a51ad9c933206e6ca657",
+      "games": 5280,
+      "league": "ncaaw",
+      "metrics": {
+        "accuracy": 0.7674242424242425,
+        "brier": 0.1505529080965236,
+        "log_loss": 0.45247342465972745
+      },
+      "model_family": "retained linear model",
+      "public_model_id": "retained-role-ncaaw-win-8cea42be",
+      "season_end_year": 2025,
+      "source": "B032 retained catalog",
+      "target": "win"
+    },
+    {
+      "cohort_membership_sha256": "a257cd1c905322df857ed858947789ef18c4b2e660d4a51ad9c933206e6ca657",
+      "games": 5280,
+      "league": "ncaaw",
+      "metrics": {
+        "accuracy": 0.7659090909090909,
+        "brier": 0.15130978197826633,
+        "log_loss": 0.4553425245413212
+      },
+      "model_family": "retained equal-weight ensemble",
+      "public_model_id": "retained-role-ncaaw-win-1c9c8c9e",
+      "season_end_year": 2025,
+      "source": "B032 retained catalog",
+      "target": "win"
+    },
+    {
+      "cohort_membership_sha256": "a257cd1c905322df857ed858947789ef18c4b2e660d4a51ad9c933206e6ca657",
+      "games": 5280,
+      "league": "ncaaw",
+      "metrics": {
+        "accuracy": 0.7689393939393939,
+        "brier": 0.152976231101101,
+        "log_loss": 0.45983622419153797
+      },
+      "model_family": "retained Extra Trees",
+      "public_model_id": "retained-role-ncaaw-win-2a183c8f",
+      "season_end_year": 2025,
+      "source": "B032 retained catalog",
+      "target": "win"
+    },
+    {
+      "cohort_membership_sha256": "a257cd1c905322df857ed858947789ef18c4b2e660d4a51ad9c933206e6ca657",
+      "games": 5280,
+      "league": "ncaaw",
+      "metrics": {
+        "accuracy": 0.765530303030303,
+        "brier": 0.15245759718195878,
+        "log_loss": 0.4586566095685322
+      },
+      "model_family": "retained histogram gradient boosting",
+      "public_model_id": "retained-role-ncaaw-win-7c3e4114",
+      "season_end_year": 2025,
+      "source": "B032 retained catalog",
+      "target": "win"
+    },
+    {
+      "cohort_membership_sha256": "a257cd1c905322df857ed858947789ef18c4b2e660d4a51ad9c933206e6ca657",
+      "games": 5280,
+      "league": "ncaaw",
+      "metrics": {
+        "accuracy": 0.7678030303030303,
+        "brier": 0.1505621540063799,
+        "log_loss": 0.4527921246694495
+      },
+      "model_family": "retained linear model",
+      "public_model_id": "retained-role-ncaaw-win-10670a65",
+      "season_end_year": 2025,
+      "source": "B032 retained catalog",
+      "target": "win"
+    },
+    {
+      "cohort_membership_sha256": "a257cd1c905322df857ed858947789ef18c4b2e660d4a51ad9c933206e6ca657",
+      "games": 5280,
+      "league": "ncaaw",
+      "metrics": {
+        "accuracy": 0.7666666666666667,
+        "brier": 0.15095809467436308,
+        "log_loss": 0.45429591450950096
+      },
+      "model_family": "retained equal-weight ensemble",
+      "public_model_id": "retained-role-ncaaw-win-e6cea026",
+      "season_end_year": 2025,
+      "source": "B032 retained catalog",
+      "target": "win"
+    },
+    {
+      "cohort_membership_sha256": "a257cd1c905322df857ed858947789ef18c4b2e660d4a51ad9c933206e6ca657",
+      "games": 5280,
+      "league": "ncaaw",
+      "metrics": {
+        "accuracy": 0.7683712121212121,
+        "brier": 0.15197404636957348,
+        "log_loss": 0.4573897690784822
+      },
+      "model_family": "retained Extra Trees",
+      "public_model_id": "retained-role-ncaaw-win-3b3251f6",
+      "season_end_year": 2025,
+      "source": "B032 retained catalog",
+      "target": "win"
+    },
+    {
+      "cohort_membership_sha256": "a257cd1c905322df857ed858947789ef18c4b2e660d4a51ad9c933206e6ca657",
+      "games": 5280,
+      "league": "ncaaw",
+      "metrics": {
+        "accuracy": 0.7668560606060606,
+        "brier": 0.1514797946351205,
+        "log_loss": 0.4561625421613018
+      },
+      "model_family": "retained histogram gradient boosting",
+      "public_model_id": "retained-role-ncaaw-win-3dbbcdcb",
+      "season_end_year": 2025,
+      "source": "B032 retained catalog",
+      "target": "win"
+    },
+    {
+      "cohort_membership_sha256": "a257cd1c905322df857ed858947789ef18c4b2e660d4a51ad9c933206e6ca657",
+      "games": 5280,
+      "league": "ncaaw",
+      "metrics": {
+        "accuracy": 0.7674242424242425,
+        "brier": 0.15041605997115878,
+        "log_loss": 0.45211932742946104
+      },
+      "model_family": "retained linear model",
+      "public_model_id": "retained-role-ncaaw-win-c31a7934",
+      "season_end_year": 2025,
+      "source": "B032 retained catalog",
+      "target": "win"
+    },
+    {
+      "cohort_membership_sha256": "a257cd1c905322df857ed858947789ef18c4b2e660d4a51ad9c933206e6ca657",
+      "games": 5280,
+      "league": "ncaaw",
+      "metrics": {
+        "accuracy": 0.7725378787878788,
+        "brier": 0.15124692123761238,
+        "log_loss": 0.45527723052801217
+      },
+      "model_family": "TensorFlow",
+      "public_model_id": "frozen-core-ncaaw-win-1b6c83bc",
+      "season_end_year": 2025,
+      "source": "Selected native frozen-core catalog",
+      "target": "win"
+    },
+    {
+      "cohort_membership_sha256": "a257cd1c905322df857ed858947789ef18c4b2e660d4a51ad9c933206e6ca657",
+      "games": 5280,
+      "league": "ncaaw",
+      "metrics": {
+        "accuracy": 0.7672348484848485,
+        "brier": 0.1505443621103972,
+        "log_loss": 0.45358619158203217
+      },
+      "model_family": "PyTorch",
+      "public_model_id": "frozen-core-ncaaw-win-8bf36a85",
+      "season_end_year": 2025,
+      "source": "Selected native frozen-core catalog",
+      "target": "win"
+    },
+    {
+      "cohort_membership_sha256": "6045f20513c92ed261e24c476009de41ae28d3904afd3ad161e394127831f7b1",
+      "games": 5621,
+      "league": "ncaaw",
+      "metrics": {
+        "accuracy": 0.7667674790962462,
+        "brier": 0.1520324678446396,
+        "log_loss": 0.4577178522519593
+      },
+      "model_family": "retained equal-weight ensemble",
+      "public_model_id": "retained-role-ncaaw-win-1294bf8a",
+      "season_end_year": 2026,
+      "source": "B032 retained catalog",
+      "target": "win"
+    },
+    {
+      "cohort_membership_sha256": "6045f20513c92ed261e24c476009de41ae28d3904afd3ad161e394127831f7b1",
+      "games": 5621,
+      "league": "ncaaw",
+      "metrics": {
+        "accuracy": 0.761252446183953,
+        "brier": 0.1535845547236784,
+        "log_loss": 0.4620262116907879
+      },
+      "model_family": "retained Extra Trees",
+      "public_model_id": "retained-role-ncaaw-win-292d8ffa",
+      "season_end_year": 2026,
+      "source": "B032 retained catalog",
+      "target": "win"
+    },
+    {
+      "cohort_membership_sha256": "6045f20513c92ed261e24c476009de41ae28d3904afd3ad161e394127831f7b1",
+      "games": 5621,
+      "league": "ncaaw",
+      "metrics": {
+        "accuracy": 0.7657000533712862,
+        "brier": 0.1523097196860104,
+        "log_loss": 0.4590793122408641
+      },
+      "model_family": "retained histogram gradient boosting",
+      "public_model_id": "retained-role-ncaaw-win-41e7b0cb",
+      "season_end_year": 2026,
+      "source": "B032 retained catalog",
+      "target": "win"
+    },
+    {
+      "cohort_membership_sha256": "6045f20513c92ed261e24c476009de41ae28d3904afd3ad161e394127831f7b1",
+      "games": 5621,
+      "league": "ncaaw",
+      "metrics": {
+        "accuracy": 0.7680128091086995,
+        "brier": 0.15112552733019,
+        "log_loss": 0.45485851027598606
+      },
+      "model_family": "retained linear model",
+      "public_model_id": "retained-role-ncaaw-win-8cea42be",
+      "season_end_year": 2026,
+      "source": "B032 retained catalog",
+      "target": "win"
+    },
+    {
+      "cohort_membership_sha256": "6045f20513c92ed261e24c476009de41ae28d3904afd3ad161e394127831f7b1",
+      "games": 5621,
+      "league": "ncaaw",
+      "metrics": {
+        "accuracy": 0.7635652019213663,
+        "brier": 0.15284164579926485,
+        "log_loss": 0.4598245442009539
+      },
+      "model_family": "retained equal-weight ensemble",
+      "public_model_id": "retained-role-ncaaw-win-1c9c8c9e",
+      "season_end_year": 2026,
+      "source": "B032 retained catalog",
+      "target": "win"
+    },
+    {
+      "cohort_membership_sha256": "6045f20513c92ed261e24c476009de41ae28d3904afd3ad161e394127831f7b1",
+      "games": 5621,
+      "league": "ncaaw",
+      "metrics": {
+        "accuracy": 0.7582280732965665,
+        "brier": 0.1550975509550686,
+        "log_loss": 0.46598610046320865
+      },
+      "model_family": "retained Extra Trees",
+      "public_model_id": "retained-role-ncaaw-win-2a183c8f",
+      "season_end_year": 2026,
+      "source": "B032 retained catalog",
+      "target": "win"
+    },
+    {
+      "cohort_membership_sha256": "6045f20513c92ed261e24c476009de41ae28d3904afd3ad161e394127831f7b1",
+      "games": 5621,
+      "league": "ncaaw",
+      "metrics": {
+        "accuracy": 0.763387297633873,
+        "brier": 0.15335520432234587,
+        "log_loss": 0.4616296506943145
+      },
+      "model_family": "retained histogram gradient boosting",
+      "public_model_id": "retained-role-ncaaw-win-7c3e4114",
+      "season_end_year": 2026,
+      "source": "B032 retained catalog",
+      "target": "win"
+    },
+    {
+      "cohort_membership_sha256": "6045f20513c92ed261e24c476009de41ae28d3904afd3ad161e394127831f7b1",
+      "games": 5621,
+      "league": "ncaaw",
+      "metrics": {
+        "accuracy": 0.7655221490837929,
+        "brier": 0.15187864980117666,
+        "log_loss": 0.4567165906234395
+      },
+      "model_family": "retained linear model",
+      "public_model_id": "retained-role-ncaaw-win-10670a65",
+      "season_end_year": 2026,
+      "source": "B032 retained catalog",
+      "target": "win"
+    },
+    {
+      "cohort_membership_sha256": "6045f20513c92ed261e24c476009de41ae28d3904afd3ad161e394127831f7b1",
+      "games": 5621,
+      "league": "ncaaw",
+      "metrics": {
+        "accuracy": 0.7662337662337663,
+        "brier": 0.15198287843300176,
+        "log_loss": 0.4575452380881405
+      },
+      "model_family": "retained equal-weight ensemble",
+      "public_model_id": "retained-role-ncaaw-win-e6cea026",
+      "season_end_year": 2026,
+      "source": "B032 retained catalog",
+      "target": "win"
+    },
+    {
+      "cohort_membership_sha256": "6045f20513c92ed261e24c476009de41ae28d3904afd3ad161e394127831f7b1",
+      "games": 5621,
+      "league": "ncaaw",
+      "metrics": {
+        "accuracy": 0.760718733321473,
+        "brier": 0.15346161365492753,
+        "log_loss": 0.4616499966651227
+      },
+      "model_family": "retained Extra Trees",
+      "public_model_id": "retained-role-ncaaw-win-3b3251f6",
+      "season_end_year": 2026,
+      "source": "B032 retained catalog",
+      "target": "win"
+    },
+    {
+      "cohort_membership_sha256": "6045f20513c92ed261e24c476009de41ae28d3904afd3ad161e394127831f7b1",
+      "games": 5621,
+      "league": "ncaaw",
+      "metrics": {
+        "accuracy": 0.7655221490837929,
+        "brier": 0.15227998207406937,
+        "log_loss": 0.4589413287975024
+      },
+      "model_family": "retained histogram gradient boosting",
+      "public_model_id": "retained-role-ncaaw-win-3dbbcdcb",
+      "season_end_year": 2026,
+      "source": "B032 retained catalog",
+      "target": "win"
+    },
+    {
+      "cohort_membership_sha256": "6045f20513c92ed261e24c476009de41ae28d3904afd3ad161e394127831f7b1",
+      "games": 5621,
+      "league": "ncaaw",
+      "metrics": {
+        "accuracy": 0.7680128091086995,
+        "brier": 0.15106917381064314,
+        "log_loss": 0.45473728543321623
+      },
+      "model_family": "retained linear model",
+      "public_model_id": "retained-role-ncaaw-win-c31a7934",
+      "season_end_year": 2026,
+      "source": "B032 retained catalog",
+      "target": "win"
+    },
+    {
+      "cohort_membership_sha256": "6045f20513c92ed261e24c476009de41ae28d3904afd3ad161e394127831f7b1",
+      "games": 5621,
+      "league": "ncaaw",
+      "metrics": {
+        "accuracy": 0.7657000533712862,
+        "brier": 0.1518759482120581,
+        "log_loss": 0.4564495738067936
+      },
+      "model_family": "TensorFlow",
+      "public_model_id": "frozen-core-ncaaw-win-1b6c83bc",
+      "season_end_year": 2026,
+      "source": "Selected native frozen-core catalog",
+      "target": "win"
+    },
+    {
+      "cohort_membership_sha256": "6045f20513c92ed261e24c476009de41ae28d3904afd3ad161e394127831f7b1",
+      "games": 5621,
+      "league": "ncaaw",
+      "metrics": {
+        "accuracy": 0.7664116705212596,
+        "brier": 0.15163886884532057,
+        "log_loss": 0.4558821934928292
+      },
+      "model_family": "PyTorch",
+      "public_model_id": "frozen-core-ncaaw-win-8bf36a85",
+      "season_end_year": 2026,
+      "source": "Selected native frozen-core catalog",
+      "target": "win"
+    },
+    {
+      "cohort_membership_sha256": "94b0c1e772a046a54fa5eda1c5efbdc0755e624f23100a3d2a977d9b327699e2",
+      "games": 5280,
+      "league": "ncaaw",
+      "metrics": {
+        "bias": -0.25510459175684747,
+        "mae": 9.691930271447246,
+        "rmse": 12.264426368116812
+      },
+      "model_family": "retained equal-weight ensemble",
+      "public_model_id": "retained-role-ncaaw-margin-1294bf8a",
+      "season_end_year": 2025,
+      "source": "B032 retained catalog",
+      "target": "margin"
+    },
+    {
+      "cohort_membership_sha256": "94b0c1e772a046a54fa5eda1c5efbdc0755e624f23100a3d2a977d9b327699e2",
+      "games": 5280,
+      "league": "ncaaw",
+      "metrics": {
+        "bias": -0.24738219522111043,
+        "mae": 9.747058588863739,
+        "rmse": 12.347948445950463
+      },
+      "model_family": "retained Extra Trees",
+      "public_model_id": "retained-role-ncaaw-margin-292d8ffa",
+      "season_end_year": 2025,
+      "source": "B032 retained catalog",
+      "target": "margin"
+    },
+    {
+      "cohort_membership_sha256": "94b0c1e772a046a54fa5eda1c5efbdc0755e624f23100a3d2a977d9b327699e2",
+      "games": 5280,
+      "league": "ncaaw",
+      "metrics": {
+        "bias": -0.4016983579632971,
+        "mae": 9.71199328394026,
+        "rmse": 12.298904539390984
+      },
+      "model_family": "retained histogram gradient boosting",
+      "public_model_id": "retained-role-ncaaw-margin-41e7b0cb",
+      "season_end_year": 2025,
+      "source": "B032 retained catalog",
+      "target": "margin"
+    },
+    {
+      "cohort_membership_sha256": "94b0c1e772a046a54fa5eda1c5efbdc0755e624f23100a3d2a977d9b327699e2",
+      "games": 5280,
+      "league": "ncaaw",
+      "metrics": {
+        "bias": -0.11623322208613496,
+        "mae": 9.693798230465047,
+        "rmse": 12.240592272717945
+      },
+      "model_family": "retained linear model",
+      "public_model_id": "retained-role-ncaaw-margin-8cea42be",
+      "season_end_year": 2025,
+      "source": "B032 retained catalog",
+      "target": "margin"
+    },
+    {
+      "cohort_membership_sha256": "94b0c1e772a046a54fa5eda1c5efbdc0755e624f23100a3d2a977d9b327699e2",
+      "games": 5280,
+      "league": "ncaaw",
+      "metrics": {
+        "bias": -0.2583181675736692,
+        "mae": 9.696630701202354,
+        "rmse": 12.277766148084792
+      },
+      "model_family": "retained equal-weight ensemble",
+      "public_model_id": "retained-role-ncaaw-margin-1c9c8c9e",
+      "season_end_year": 2025,
+      "source": "B032 retained catalog",
+      "target": "margin"
+    },
+    {
+      "cohort_membership_sha256": "94b0c1e772a046a54fa5eda1c5efbdc0755e624f23100a3d2a977d9b327699e2",
+      "games": 5280,
+      "league": "ncaaw",
+      "metrics": {
+        "bias": -0.27936791054139887,
+        "mae": 9.793658329000335,
+        "rmse": 12.416475113251828
+      },
+      "model_family": "retained Extra Trees",
+      "public_model_id": "retained-role-ncaaw-margin-2a183c8f",
+      "season_end_year": 2025,
+      "source": "B032 retained catalog",
+      "target": "margin"
+    },
+    {
+      "cohort_membership_sha256": "94b0c1e772a046a54fa5eda1c5efbdc0755e624f23100a3d2a977d9b327699e2",
+      "games": 5280,
+      "league": "ncaaw",
+      "metrics": {
+        "bias": -0.4151304906235422,
+        "mae": 9.74468348748431,
+        "rmse": 12.349351338415826
+      },
+      "model_family": "retained histogram gradient boosting",
+      "public_model_id": "retained-role-ncaaw-margin-7c3e4114",
+      "season_end_year": 2025,
+      "source": "B032 retained catalog",
+      "target": "margin"
+    },
+    {
+      "cohort_membership_sha256": "94b0c1e772a046a54fa5eda1c5efbdc0755e624f23100a3d2a977d9b327699e2",
+      "games": 5280,
+      "league": "ncaaw",
+      "metrics": {
+        "bias": -0.08045610155606664,
+        "mae": 9.69510560244129,
+        "rmse": 12.247220004447557
+      },
+      "model_family": "retained linear model",
+      "public_model_id": "retained-role-ncaaw-margin-10670a65",
+      "season_end_year": 2025,
+      "source": "B032 retained catalog",
+      "target": "margin"
+    },
+    {
+      "cohort_membership_sha256": "94b0c1e772a046a54fa5eda1c5efbdc0755e624f23100a3d2a977d9b327699e2",
+      "games": 5280,
+      "league": "ncaaw",
+      "metrics": {
+        "bias": -0.26297435661773544,
+        "mae": 9.695229229455,
+        "rmse": 12.26762777670618
+      },
+      "model_family": "retained equal-weight ensemble",
+      "public_model_id": "retained-role-ncaaw-margin-e6cea026",
+      "season_end_year": 2025,
+      "source": "B032 retained catalog",
+      "target": "margin"
+    },
+    {
+      "cohort_membership_sha256": "94b0c1e772a046a54fa5eda1c5efbdc0755e624f23100a3d2a977d9b327699e2",
+      "games": 5280,
+      "league": "ncaaw",
+      "metrics": {
+        "bias": -0.2581473895852464,
+        "mae": 9.741592079622693,
+        "rmse": 12.339882215293267
+      },
+      "model_family": "retained Extra Trees",
+      "public_model_id": "retained-role-ncaaw-margin-3b3251f6",
+      "season_end_year": 2025,
+      "source": "B032 retained catalog",
+      "target": "margin"
+    },
+    {
+      "cohort_membership_sha256": "94b0c1e772a046a54fa5eda1c5efbdc0755e624f23100a3d2a977d9b327699e2",
+      "games": 5280,
+      "league": "ncaaw",
+      "metrics": {
+        "bias": -0.40996454669749577,
+        "mae": 9.717626929771043,
+        "rmse": 12.30436506012518
+      },
+      "model_family": "retained histogram gradient boosting",
+      "public_model_id": "retained-role-ncaaw-margin-3dbbcdcb",
+      "season_end_year": 2025,
+      "source": "B032 retained catalog",
+      "target": "margin"
+    },
+    {
+      "cohort_membership_sha256": "94b0c1e772a046a54fa5eda1c5efbdc0755e624f23100a3d2a977d9b327699e2",
+      "games": 5280,
+      "league": "ncaaw",
+      "metrics": {
+        "bias": -0.1208111335704642,
+        "mae": 9.69140039438187,
+        "rmse": 12.240095478214265
+      },
+      "model_family": "retained linear model",
+      "public_model_id": "retained-role-ncaaw-margin-c31a7934",
+      "season_end_year": 2025,
+      "source": "B032 retained catalog",
+      "target": "margin"
+    },
+    {
+      "cohort_membership_sha256": "94b0c1e772a046a54fa5eda1c5efbdc0755e624f23100a3d2a977d9b327699e2",
+      "games": 5280,
+      "league": "ncaaw",
+      "metrics": {
+        "bias": -1.5528570632161007,
+        "mae": 9.71405687539796,
+        "rmse": 12.323048626352096
+      },
+      "model_family": "PyTorch",
+      "public_model_id": "frozen-core-ncaaw-margin-a74c4c97",
+      "season_end_year": 2025,
+      "source": "Selected native frozen-core catalog",
+      "target": "margin"
+    },
+    {
+      "cohort_membership_sha256": "94b0c1e772a046a54fa5eda1c5efbdc0755e624f23100a3d2a977d9b327699e2",
+      "games": 5280,
+      "league": "ncaaw",
+      "metrics": {
+        "bias": -0.07655422167295138,
+        "mae": 9.690975117615855,
+        "rmse": 12.244721712506268
+      },
+      "model_family": "ridge regression",
+      "public_model_id": "frozen-core-ncaaw-margin-2cf81b3e",
+      "season_end_year": 2025,
+      "source": "Selected native frozen-core catalog",
+      "target": "margin"
+    },
+    {
+      "cohort_membership_sha256": "a9041739f230075d8d4a42b52d610257e747ef39e9884c934bd5ce0c16587cc0",
+      "games": 5621,
+      "league": "ncaaw",
+      "metrics": {
+        "bias": -0.1740952898396791,
+        "mae": 9.684556425824507,
+        "rmse": 12.287534581901388
+      },
+      "model_family": "retained equal-weight ensemble",
+      "public_model_id": "retained-role-ncaaw-margin-1294bf8a",
+      "season_end_year": 2026,
+      "source": "B032 retained catalog",
+      "target": "margin"
+    },
+    {
+      "cohort_membership_sha256": "a9041739f230075d8d4a42b52d610257e747ef39e9884c934bd5ce0c16587cc0",
+      "games": 5621,
+      "league": "ncaaw",
+      "metrics": {
+        "bias": -0.21193314645372793,
+        "mae": 9.752242977388088,
+        "rmse": 12.364668462286414
+      },
+      "model_family": "retained Extra Trees",
+      "public_model_id": "retained-role-ncaaw-margin-292d8ffa",
+      "season_end_year": 2026,
+      "source": "B032 retained catalog",
+      "target": "margin"
+    },
+    {
+      "cohort_membership_sha256": "a9041739f230075d8d4a42b52d610257e747ef39e9884c934bd5ce0c16587cc0",
+      "games": 5621,
+      "league": "ncaaw",
+      "metrics": {
+        "bias": -0.28072421640944106,
+        "mae": 9.712021195125944,
+        "rmse": 12.32233802744429
+      },
+      "model_family": "retained histogram gradient boosting",
+      "public_model_id": "retained-role-ncaaw-margin-41e7b0cb",
+      "season_end_year": 2026,
+      "source": "B032 retained catalog",
+      "target": "margin"
+    },
+    {
+      "cohort_membership_sha256": "a9041739f230075d8d4a42b52d610257e747ef39e9884c934bd5ce0c16587cc0",
+      "games": 5621,
+      "league": "ncaaw",
+      "metrics": {
+        "bias": -0.02962850665586829,
+        "mae": 9.671339695146884,
+        "rmse": 12.270989387703258
+      },
+      "model_family": "retained linear model",
+      "public_model_id": "retained-role-ncaaw-margin-8cea42be",
+      "season_end_year": 2026,
+      "source": "B032 retained catalog",
+      "target": "margin"
+    },
+    {
+      "cohort_membership_sha256": "a9041739f230075d8d4a42b52d610257e747ef39e9884c934bd5ce0c16587cc0",
+      "games": 5621,
+      "league": "ncaaw",
+      "metrics": {
+        "bias": -0.20982487015063248,
+        "mae": 9.708903144112023,
+        "rmse": 12.320167948298595
+      },
+      "model_family": "retained equal-weight ensemble",
+      "public_model_id": "retained-role-ncaaw-margin-1c9c8c9e",
+      "season_end_year": 2026,
+      "source": "B032 retained catalog",
+      "target": "margin"
+    },
+    {
+      "cohort_membership_sha256": "a9041739f230075d8d4a42b52d610257e747ef39e9884c934bd5ce0c16587cc0",
+      "games": 5621,
+      "league": "ncaaw",
+      "metrics": {
+        "bias": -0.2682982823528249,
+        "mae": 9.833105176629822,
+        "rmse": 12.461572043054398
+      },
+      "model_family": "retained Extra Trees",
+      "public_model_id": "retained-role-ncaaw-margin-2a183c8f",
+      "season_end_year": 2026,
+      "source": "B032 retained catalog",
+      "target": "margin"
+    },
+    {
+      "cohort_membership_sha256": "a9041739f230075d8d4a42b52d610257e747ef39e9884c934bd5ce0c16587cc0",
+      "games": 5621,
+      "league": "ncaaw",
+      "metrics": {
+        "bias": -0.3336323318559836,
+        "mae": 9.764904636813641,
+        "rmse": 12.393895216138008
+      },
+      "model_family": "retained histogram gradient boosting",
+      "public_model_id": "retained-role-ncaaw-margin-7c3e4114",
+      "season_end_year": 2026,
+      "source": "B032 retained catalog",
+      "target": "margin"
+    },
+    {
+      "cohort_membership_sha256": "a9041739f230075d8d4a42b52d610257e747ef39e9884c934bd5ce0c16587cc0",
+      "games": 5621,
+      "league": "ncaaw",
+      "metrics": {
+        "bias": -0.027543996243088988,
+        "mae": 9.68015470263537,
+        "rmse": 12.290580586791108
+      },
+      "model_family": "retained linear model",
+      "public_model_id": "retained-role-ncaaw-margin-10670a65",
+      "season_end_year": 2026,
+      "source": "B032 retained catalog",
+      "target": "margin"
+    },
+    {
+      "cohort_membership_sha256": "a9041739f230075d8d4a42b52d610257e747ef39e9884c934bd5ce0c16587cc0",
+      "games": 5621,
+      "league": "ncaaw",
+      "metrics": {
+        "bias": -0.18615792783648905,
+        "mae": 9.683397218075052,
+        "rmse": 12.28925918759085
+      },
+      "model_family": "retained equal-weight ensemble",
+      "public_model_id": "retained-role-ncaaw-margin-e6cea026",
+      "season_end_year": 2026,
+      "source": "B032 retained catalog",
+      "target": "margin"
+    },
+    {
+      "cohort_membership_sha256": "a9041739f230075d8d4a42b52d610257e747ef39e9884c934bd5ce0c16587cc0",
+      "games": 5621,
+      "league": "ncaaw",
+      "metrics": {
+        "bias": -0.20687549248216125,
+        "mae": 9.736523018715344,
+        "rmse": 12.34917810496588
+      },
+      "model_family": "retained Extra Trees",
+      "public_model_id": "retained-role-ncaaw-margin-3b3251f6",
+      "season_end_year": 2026,
+      "source": "B032 retained catalog",
+      "target": "margin"
+    },
+    {
+      "cohort_membership_sha256": "a9041739f230075d8d4a42b52d610257e747ef39e9884c934bd5ce0c16587cc0",
+      "games": 5621,
+      "league": "ncaaw",
+      "metrics": {
+        "bias": -0.30788758448371667,
+        "mae": 9.712951932607112,
+        "rmse": 12.330429919255076
+      },
+      "model_family": "retained histogram gradient boosting",
+      "public_model_id": "retained-role-ncaaw-margin-3dbbcdcb",
+      "season_end_year": 2026,
+      "source": "B032 retained catalog",
+      "target": "margin"
+    },
+    {
+      "cohort_membership_sha256": "a9041739f230075d8d4a42b52d610257e747ef39e9884c934bd5ce0c16587cc0",
+      "games": 5621,
+      "league": "ncaaw",
+      "metrics": {
+        "bias": -0.04371070654358914,
+        "mae": 9.672902075966569,
+        "rmse": 12.272549636522962
+      },
+      "model_family": "retained linear model",
+      "public_model_id": "retained-role-ncaaw-margin-c31a7934",
+      "season_end_year": 2026,
+      "source": "B032 retained catalog",
+      "target": "margin"
+    },
+    {
+      "cohort_membership_sha256": "a9041739f230075d8d4a42b52d610257e747ef39e9884c934bd5ce0c16587cc0",
+      "games": 5621,
+      "league": "ncaaw",
+      "metrics": {
+        "bias": -0.335848790948511,
+        "mae": 9.629252199655516,
+        "rmse": 12.229814493606785
+      },
+      "model_family": "PyTorch",
+      "public_model_id": "frozen-core-ncaaw-margin-a74c4c97",
+      "season_end_year": 2026,
+      "source": "Selected native frozen-core catalog",
+      "target": "margin"
+    },
+    {
+      "cohort_membership_sha256": "a9041739f230075d8d4a42b52d610257e747ef39e9884c934bd5ce0c16587cc0",
+      "games": 5621,
+      "league": "ncaaw",
+      "metrics": {
+        "bias": -0.04150713113874059,
+        "mae": 9.683102807065373,
+        "rmse": 12.293789908504607
+      },
+      "model_family": "ridge regression",
+      "public_model_id": "frozen-core-ncaaw-margin-2cf81b3e",
+      "season_end_year": 2026,
+      "source": "Selected native frozen-core catalog",
+      "target": "margin"
+    },
+    {
+      "cohort_membership_sha256": "d7099dd989d7c575211df71b9be50c828d6a917159db7edac03eb949e1ae19e8",
+      "games": 5280,
+      "league": "ncaaw",
+      "metrics": {
+        "bias": -0.1820641071568897,
+        "mae": 12.580380458671018,
+        "rmse": 15.931642841460734
+      },
+      "model_family": "retained equal-weight ensemble",
+      "public_model_id": "retained-role-ncaaw-total-1294bf8a",
+      "season_end_year": 2025,
+      "source": "B032 retained catalog",
+      "target": "total"
+    },
+    {
+      "cohort_membership_sha256": "d7099dd989d7c575211df71b9be50c828d6a917159db7edac03eb949e1ae19e8",
+      "games": 5280,
+      "league": "ncaaw",
+      "metrics": {
+        "bias": 0.051487425006891546,
+        "mae": 12.622948258824161,
+        "rmse": 15.981738995706976
+      },
+      "model_family": "retained Extra Trees",
+      "public_model_id": "retained-role-ncaaw-total-292d8ffa",
+      "season_end_year": 2025,
+      "source": "B032 retained catalog",
+      "target": "total"
+    },
+    {
+      "cohort_membership_sha256": "d7099dd989d7c575211df71b9be50c828d6a917159db7edac03eb949e1ae19e8",
+      "games": 5280,
+      "league": "ncaaw",
+      "metrics": {
+        "bias": 0.01037404704179077,
+        "mae": 12.589006694153424,
+        "rmse": 15.951641154616816
+      },
+      "model_family": "retained histogram gradient boosting",
+      "public_model_id": "retained-role-ncaaw-total-41e7b0cb",
+      "season_end_year": 2025,
+      "source": "B032 retained catalog",
+      "target": "total"
+    },
+    {
+      "cohort_membership_sha256": "d7099dd989d7c575211df71b9be50c828d6a917159db7edac03eb949e1ae19e8",
+      "games": 5280,
+      "league": "ncaaw",
+      "metrics": {
+        "bias": -0.6080537935193513,
+        "mae": 12.579388928046884,
+        "rmse": 15.928108329411401
+      },
+      "model_family": "retained linear model",
+      "public_model_id": "retained-role-ncaaw-total-8cea42be",
+      "season_end_year": 2025,
+      "source": "B032 retained catalog",
+      "target": "total"
+    },
+    {
+      "cohort_membership_sha256": "d7099dd989d7c575211df71b9be50c828d6a917159db7edac03eb949e1ae19e8",
+      "games": 5280,
+      "league": "ncaaw",
+      "metrics": {
+        "bias": 0.16373309438367833,
+        "mae": 12.626976562199921,
+        "rmse": 15.983306109741935
+      },
+      "model_family": "retained equal-weight ensemble",
+      "public_model_id": "retained-role-ncaaw-total-1c9c8c9e",
+      "season_end_year": 2025,
+      "source": "B032 retained catalog",
+      "target": "total"
+    },
+    {
+      "cohort_membership_sha256": "d7099dd989d7c575211df71b9be50c828d6a917159db7edac03eb949e1ae19e8",
+      "games": 5280,
+      "league": "ncaaw",
+      "metrics": {
+        "bias": -0.016868134009417446,
+        "mae": 12.658283856745324,
+        "rmse": 16.03126074747917
+      },
+      "model_family": "retained Extra Trees",
+      "public_model_id": "retained-role-ncaaw-total-2a183c8f",
+      "season_end_year": 2025,
+      "source": "B032 retained catalog",
+      "target": "total"
+    },
+    {
+      "cohort_membership_sha256": "d7099dd989d7c575211df71b9be50c828d6a917159db7edac03eb949e1ae19e8",
+      "games": 5280,
+      "league": "ncaaw",
+      "metrics": {
+        "bias": 0.1303503584833588,
+        "mae": 12.643705874243036,
+        "rmse": 16.025484280098368
+      },
+      "model_family": "retained histogram gradient boosting",
+      "public_model_id": "retained-role-ncaaw-total-7c3e4114",
+      "season_end_year": 2025,
+      "source": "B032 retained catalog",
+      "target": "total"
+    },
+    {
+      "cohort_membership_sha256": "d7099dd989d7c575211df71b9be50c828d6a917159db7edac03eb949e1ae19e8",
+      "games": 5280,
+      "league": "ncaaw",
+      "metrics": {
+        "bias": 0.37771705867709404,
+        "mae": 12.6485287271828,
+        "rmse": 15.984170079278243
+      },
+      "model_family": "retained linear model",
+      "public_model_id": "retained-role-ncaaw-total-10670a65",
+      "season_end_year": 2025,
+      "source": "B032 retained catalog",
+      "target": "total"
+    },
+    {
+      "cohort_membership_sha256": "d7099dd989d7c575211df71b9be50c828d6a917159db7edac03eb949e1ae19e8",
+      "games": 5280,
+      "league": "ncaaw",
+      "metrics": {
+        "bias": -0.15754528618664462,
+        "mae": 12.58429203711946,
+        "rmse": 15.93145997578306
+      },
+      "model_family": "retained equal-weight ensemble",
+      "public_model_id": "retained-role-ncaaw-total-e6cea026",
+      "season_end_year": 2025,
+      "source": "B032 retained catalog",
+      "target": "total"
+    },
+    {
+      "cohort_membership_sha256": "d7099dd989d7c575211df71b9be50c828d6a917159db7edac03eb949e1ae19e8",
+      "games": 5280,
+      "league": "ncaaw",
+      "metrics": {
+        "bias": 0.0648606902766366,
+        "mae": 12.619771000135628,
+        "rmse": 15.978150763459224
+      },
+      "model_family": "retained Extra Trees",
+      "public_model_id": "retained-role-ncaaw-total-3b3251f6",
+      "season_end_year": 2025,
+      "source": "B032 retained catalog",
+      "target": "total"
+    },
+    {
+      "cohort_membership_sha256": "d7099dd989d7c575211df71b9be50c828d6a917159db7edac03eb949e1ae19e8",
+      "games": 5280,
+      "league": "ncaaw",
+      "metrics": {
+        "bias": 0.0730272507887623,
+        "mae": 12.60188241607212,
+        "rmse": 15.95443238724802
+      },
+      "model_family": "retained histogram gradient boosting",
+      "public_model_id": "retained-role-ncaaw-total-3dbbcdcb",
+      "season_end_year": 2025,
+      "source": "B032 retained catalog",
+      "target": "total"
+    },
+    {
+      "cohort_membership_sha256": "d7099dd989d7c575211df71b9be50c828d6a917159db7edac03eb949e1ae19e8",
+      "games": 5280,
+      "league": "ncaaw",
+      "metrics": {
+        "bias": -0.6105237996253323,
+        "mae": 12.57927939843677,
+        "rmse": 15.92629891862978
+      },
+      "model_family": "retained linear model",
+      "public_model_id": "retained-role-ncaaw-total-c31a7934",
+      "season_end_year": 2025,
+      "source": "B032 retained catalog",
+      "target": "total"
+    },
+    {
+      "cohort_membership_sha256": "d7099dd989d7c575211df71b9be50c828d6a917159db7edac03eb949e1ae19e8",
+      "games": 5280,
+      "league": "ncaaw",
+      "metrics": {
+        "bias": -0.21833440751740427,
+        "mae": 12.605177190087058,
+        "rmse": 15.955129881667698
+      },
+      "model_family": "PyTorch",
+      "public_model_id": "frozen-core-ncaaw-total-fb9a06da",
+      "season_end_year": 2025,
+      "source": "Selected native frozen-core catalog",
+      "target": "total"
+    },
+    {
+      "cohort_membership_sha256": "810619036d8c57a4fb9d4f8ea5e1311c93e1c9fbb17c03906cff5bc10c1049d5",
+      "games": 5621,
+      "league": "ncaaw",
+      "metrics": {
+        "bias": 0.06442703549331187,
+        "mae": 12.614191136924495,
+        "rmse": 15.989141811056
+      },
+      "model_family": "retained equal-weight ensemble",
+      "public_model_id": "retained-role-ncaaw-total-1294bf8a",
+      "season_end_year": 2026,
+      "source": "B032 retained catalog",
+      "target": "total"
+    },
+    {
+      "cohort_membership_sha256": "810619036d8c57a4fb9d4f8ea5e1311c93e1c9fbb17c03906cff5bc10c1049d5",
+      "games": 5621,
+      "league": "ncaaw",
+      "metrics": {
+        "bias": 0.23608606132031257,
+        "mae": 12.655609860194891,
+        "rmse": 16.036751889718126
+      },
+      "model_family": "retained Extra Trees",
+      "public_model_id": "retained-role-ncaaw-total-292d8ffa",
+      "season_end_year": 2026,
+      "source": "B032 retained catalog",
+      "target": "total"
+    },
+    {
+      "cohort_membership_sha256": "810619036d8c57a4fb9d4f8ea5e1311c93e1c9fbb17c03906cff5bc10c1049d5",
+      "games": 5621,
+      "league": "ncaaw",
+      "metrics": {
+        "bias": 0.3271197885112856,
+        "mae": 12.645291627767023,
+        "rmse": 16.004490408021514
+      },
+      "model_family": "retained histogram gradient boosting",
+      "public_model_id": "retained-role-ncaaw-total-41e7b0cb",
+      "season_end_year": 2026,
+      "source": "B032 retained catalog",
+      "target": "total"
+    },
+    {
+      "cohort_membership_sha256": "810619036d8c57a4fb9d4f8ea5e1311c93e1c9fbb17c03906cff5bc10c1049d5",
+      "games": 5621,
+      "league": "ncaaw",
+      "metrics": {
+        "bias": -0.3699247433516626,
+        "mae": 12.597916463977597,
+        "rmse": 15.99313198559537
+      },
+      "model_family": "retained linear model",
+      "public_model_id": "retained-role-ncaaw-total-8cea42be",
+      "season_end_year": 2026,
+      "source": "B032 retained catalog",
+      "target": "total"
+    },
+    {
+      "cohort_membership_sha256": "810619036d8c57a4fb9d4f8ea5e1311c93e1c9fbb17c03906cff5bc10c1049d5",
+      "games": 5621,
+      "league": "ncaaw",
+      "metrics": {
+        "bias": 0.3994248224255022,
+        "mae": 12.655583617164618,
+        "rmse": 16.040935256556352
+      },
+      "model_family": "retained equal-weight ensemble",
+      "public_model_id": "retained-role-ncaaw-total-1c9c8c9e",
+      "season_end_year": 2026,
+      "source": "B032 retained catalog",
+      "target": "total"
+    },
+    {
+      "cohort_membership_sha256": "810619036d8c57a4fb9d4f8ea5e1311c93e1c9fbb17c03906cff5bc10c1049d5",
+      "games": 5621,
+      "league": "ncaaw",
+      "metrics": {
+        "bias": 0.21303893799714227,
+        "mae": 12.672323055690727,
+        "rmse": 16.064641410843816
+      },
+      "model_family": "retained Extra Trees",
+      "public_model_id": "retained-role-ncaaw-total-2a183c8f",
+      "season_end_year": 2026,
+      "source": "B032 retained catalog",
+      "target": "total"
+    },
+    {
+      "cohort_membership_sha256": "810619036d8c57a4fb9d4f8ea5e1311c93e1c9fbb17c03906cff5bc10c1049d5",
+      "games": 5621,
+      "league": "ncaaw",
+      "metrics": {
+        "bias": 0.4688223033597613,
+        "mae": 12.719916056018167,
+        "rmse": 16.09881169766601
+      },
+      "model_family": "retained histogram gradient boosting",
+      "public_model_id": "retained-role-ncaaw-total-7c3e4114",
+      "season_end_year": 2026,
+      "source": "B032 retained catalog",
+      "target": "total"
+    },
+    {
+      "cohort_membership_sha256": "810619036d8c57a4fb9d4f8ea5e1311c93e1c9fbb17c03906cff5bc10c1049d5",
+      "games": 5621,
+      "league": "ncaaw",
+      "metrics": {
+        "bias": 0.5164132259196033,
+        "mae": 12.655238139998193,
+        "rmse": 16.05712852171913
+      },
+      "model_family": "retained linear model",
+      "public_model_id": "retained-role-ncaaw-total-10670a65",
+      "season_end_year": 2026,
+      "source": "B032 retained catalog",
+      "target": "total"
+    },
+    {
+      "cohort_membership_sha256": "810619036d8c57a4fb9d4f8ea5e1311c93e1c9fbb17c03906cff5bc10c1049d5",
+      "games": 5621,
+      "league": "ncaaw",
+      "metrics": {
+        "bias": 0.07276119536642292,
+        "mae": 12.619200255361251,
+        "rmse": 15.992916290712738
+      },
+      "model_family": "retained equal-weight ensemble",
+      "public_model_id": "retained-role-ncaaw-total-e6cea026",
+      "season_end_year": 2026,
+      "source": "B032 retained catalog",
+      "target": "total"
+    },
+    {
+      "cohort_membership_sha256": "810619036d8c57a4fb9d4f8ea5e1311c93e1c9fbb17c03906cff5bc10c1049d5",
+      "games": 5621,
+      "league": "ncaaw",
+      "metrics": {
+        "bias": 0.2374031491699106,
+        "mae": 12.657986705910545,
+        "rmse": 16.033209175477836
+      },
+      "model_family": "retained Extra Trees",
+      "public_model_id": "retained-role-ncaaw-total-3b3251f6",
+      "season_end_year": 2026,
+      "source": "B032 retained catalog",
+      "target": "total"
+    },
+    {
+      "cohort_membership_sha256": "810619036d8c57a4fb9d4f8ea5e1311c93e1c9fbb17c03906cff5bc10c1049d5",
+      "games": 5621,
+      "league": "ncaaw",
+      "metrics": {
+        "bias": 0.3532140605732821,
+        "mae": 12.655270585592831,
+        "rmse": 16.01742668086134
+      },
+      "model_family": "retained histogram gradient boosting",
+      "public_model_id": "retained-role-ncaaw-total-3dbbcdcb",
+      "season_end_year": 2026,
+      "source": "B032 retained catalog",
+      "target": "total"
+    },
+    {
+      "cohort_membership_sha256": "810619036d8c57a4fb9d4f8ea5e1311c93e1c9fbb17c03906cff5bc10c1049d5",
+      "games": 5621,
+      "league": "ncaaw",
+      "metrics": {
+        "bias": -0.37233362364392447,
+        "mae": 12.600388633159374,
+        "rmse": 15.99331346101407
+      },
+      "model_family": "retained linear model",
+      "public_model_id": "retained-role-ncaaw-total-c31a7934",
+      "season_end_year": 2026,
+      "source": "B032 retained catalog",
+      "target": "total"
+    },
+    {
+      "cohort_membership_sha256": "810619036d8c57a4fb9d4f8ea5e1311c93e1c9fbb17c03906cff5bc10c1049d5",
+      "games": 5621,
+      "league": "ncaaw",
+      "metrics": {
+        "bias": 0.3356187837740171,
+        "mae": 12.671401423759848,
+        "rmse": 16.04917687021197
+      },
+      "model_family": "PyTorch",
+      "public_model_id": "frozen-core-ncaaw-total-fb9a06da",
+      "season_end_year": 2026,
+      "source": "Selected native frozen-core catalog",
+      "target": "total"
+    }
+  ],
+  "historical_per_season_leaders": [
+    {
+      "automatic_promotion": false,
+      "candidate_count": 14,
+      "full_native_catalog_per_season_rank_claim": false,
+      "games": 5758,
+      "league": "ncaam",
+      "membership_sha256": "96436881557024e0ca77aeb0e819684aafbb08b81e14ef78fcf40e4edd931b53",
+      "metric": "accuracy",
+      "model_families": [
+        "retained linear model"
+      ],
+      "public_model_ids": [
+        "retained-role-ncaam-win-10670a65"
+      ],
+      "scope": "ALL_12_RETAINED_RECIPES_PLUS_SELECTED_NATIVE_CANDIDATES",
+      "season": "2024\u201325",
+      "season_end_year": 2025,
+      "target": "win",
+      "value": 0.7269885376866968
+    },
+    {
+      "automatic_promotion": false,
+      "candidate_count": 14,
+      "full_native_catalog_per_season_rank_claim": false,
+      "games": 5758,
+      "league": "ncaam",
+      "membership_sha256": "96436881557024e0ca77aeb0e819684aafbb08b81e14ef78fcf40e4edd931b53",
+      "metric": "log_loss",
+      "model_families": [
+        "retained linear model"
+      ],
+      "public_model_ids": [
+        "retained-role-ncaam-win-8cea42be"
+      ],
+      "scope": "ALL_12_RETAINED_RECIPES_PLUS_SELECTED_NATIVE_CANDIDATES",
+      "season": "2024\u201325",
+      "season_end_year": 2025,
+      "target": "win",
+      "value": 0.5214815135867004
+    },
+    {
+      "automatic_promotion": false,
+      "candidate_count": 14,
+      "full_native_catalog_per_season_rank_claim": false,
+      "games": 5758,
+      "league": "ncaam",
+      "membership_sha256": "96436881557024e0ca77aeb0e819684aafbb08b81e14ef78fcf40e4edd931b53",
+      "metric": "brier",
+      "model_families": [
+        "retained linear model"
+      ],
+      "public_model_ids": [
+        "retained-role-ncaam-win-8cea42be"
+      ],
+      "scope": "ALL_12_RETAINED_RECIPES_PLUS_SELECTED_NATIVE_CANDIDATES",
+      "season": "2024\u201325",
+      "season_end_year": 2025,
+      "target": "win",
+      "value": 0.17645292984627586
+    },
+    {
+      "automatic_promotion": false,
+      "candidate_count": 14,
+      "full_native_catalog_per_season_rank_claim": false,
+      "games": 5749,
+      "league": "ncaam",
+      "membership_sha256": "7e3a27cc402baa6229730948c1e3c6d359e3eba6180bb7d7d05d86a0d1e23443",
+      "metric": "accuracy",
+      "model_families": [
+        "retained linear model"
+      ],
+      "public_model_ids": [
+        "retained-role-ncaam-win-8cea42be"
+      ],
+      "scope": "ALL_12_RETAINED_RECIPES_PLUS_SELECTED_NATIVE_CANDIDATES",
+      "season": "2025\u201326",
+      "season_end_year": 2026,
+      "target": "win",
+      "value": 0.7201252391720299
+    },
+    {
+      "automatic_promotion": false,
+      "candidate_count": 14,
+      "full_native_catalog_per_season_rank_claim": false,
+      "games": 5749,
+      "league": "ncaam",
+      "membership_sha256": "7e3a27cc402baa6229730948c1e3c6d359e3eba6180bb7d7d05d86a0d1e23443",
+      "metric": "log_loss",
+      "model_families": [
+        "retained linear model"
+      ],
+      "public_model_ids": [
+        "retained-role-ncaam-win-8cea42be"
+      ],
+      "scope": "ALL_12_RETAINED_RECIPES_PLUS_SELECTED_NATIVE_CANDIDATES",
+      "season": "2025\u201326",
+      "season_end_year": 2026,
+      "target": "win",
+      "value": 0.5238873160433043
+    },
+    {
+      "automatic_promotion": false,
+      "candidate_count": 14,
+      "full_native_catalog_per_season_rank_claim": false,
+      "games": 5749,
+      "league": "ncaam",
+      "membership_sha256": "7e3a27cc402baa6229730948c1e3c6d359e3eba6180bb7d7d05d86a0d1e23443",
+      "metric": "brier",
+      "model_families": [
+        "retained linear model"
+      ],
+      "public_model_ids": [
+        "retained-role-ncaam-win-8cea42be"
+      ],
+      "scope": "ALL_12_RETAINED_RECIPES_PLUS_SELECTED_NATIVE_CANDIDATES",
+      "season": "2025\u201326",
+      "season_end_year": 2026,
+      "target": "win",
+      "value": 0.1778399915620509
+    },
+    {
+      "automatic_promotion": false,
+      "candidate_count": 13,
+      "full_native_catalog_per_season_rank_claim": false,
+      "games": 5758,
+      "league": "ncaam",
+      "membership_sha256": "08a887bff66c67045202ea32f6642cf507d3f28d55f1e80889f583bf69537a2e",
+      "metric": "mae",
+      "model_families": [
+        "retained linear model"
+      ],
+      "public_model_ids": [
+        "retained-role-ncaam-margin-8cea42be"
+      ],
+      "scope": "ALL_12_RETAINED_RECIPES_PLUS_SELECTED_NATIVE_CANDIDATES",
+      "season": "2024\u201325",
+      "season_end_year": 2025,
+      "target": "margin",
+      "value": 8.979033825234042
+    },
+    {
+      "automatic_promotion": false,
+      "candidate_count": 13,
+      "full_native_catalog_per_season_rank_claim": false,
+      "games": 5758,
+      "league": "ncaam",
+      "membership_sha256": "08a887bff66c67045202ea32f6642cf507d3f28d55f1e80889f583bf69537a2e",
+      "metric": "rmse",
+      "model_families": [
+        "retained linear model"
+      ],
+      "public_model_ids": [
+        "retained-role-ncaam-margin-8cea42be"
+      ],
+      "scope": "ALL_12_RETAINED_RECIPES_PLUS_SELECTED_NATIVE_CANDIDATES",
+      "season": "2024\u201325",
+      "season_end_year": 2025,
+      "target": "margin",
+      "value": 11.484606185214982
+    },
+    {
+      "automatic_promotion": false,
+      "candidate_count": 13,
+      "full_native_catalog_per_season_rank_claim": false,
+      "games": 5749,
+      "league": "ncaam",
+      "membership_sha256": "5e89f284a55dfce1e83605b33f409b3c9e24e16b3dfe19171cf2b045ef756f8c",
+      "metric": "mae",
+      "model_families": [
+        "fixed blend of histogram gradient boosting and ridge regression"
+      ],
+      "public_model_ids": [
+        "frozen-core-ncaam-margin-6982e0b8"
+      ],
+      "scope": "ALL_12_RETAINED_RECIPES_PLUS_SELECTED_NATIVE_CANDIDATES",
+      "season": "2025\u201326",
+      "season_end_year": 2026,
+      "target": "margin",
+      "value": 9.160726359930727
+    },
+    {
+      "automatic_promotion": false,
+      "candidate_count": 13,
+      "full_native_catalog_per_season_rank_claim": false,
+      "games": 5749,
+      "league": "ncaam",
+      "membership_sha256": "5e89f284a55dfce1e83605b33f409b3c9e24e16b3dfe19171cf2b045ef756f8c",
+      "metric": "rmse",
+      "model_families": [
+        "retained linear model"
+      ],
+      "public_model_ids": [
+        "retained-role-ncaam-margin-8cea42be"
+      ],
+      "scope": "ALL_12_RETAINED_RECIPES_PLUS_SELECTED_NATIVE_CANDIDATES",
+      "season": "2025\u201326",
+      "season_end_year": 2026,
+      "target": "margin",
+      "value": 11.60028301302509
+    },
+    {
+      "automatic_promotion": false,
+      "candidate_count": 14,
+      "full_native_catalog_per_season_rank_claim": false,
+      "games": 5758,
+      "league": "ncaam",
+      "membership_sha256": "217b35f24d2fb90080683fa8435450346feb9eee71a2c579b5d4926abf62d30c",
+      "metric": "mae",
+      "model_families": [
+        "retained linear model"
+      ],
+      "public_model_ids": [
+        "retained-role-ncaam-total-8cea42be"
+      ],
+      "scope": "ALL_12_RETAINED_RECIPES_PLUS_SELECTED_NATIVE_CANDIDATES",
+      "season": "2024\u201325",
+      "season_end_year": 2025,
+      "target": "total",
+      "value": 12.929473421062825
+    },
+    {
+      "automatic_promotion": false,
+      "candidate_count": 14,
+      "full_native_catalog_per_season_rank_claim": false,
+      "games": 5758,
+      "league": "ncaam",
+      "membership_sha256": "217b35f24d2fb90080683fa8435450346feb9eee71a2c579b5d4926abf62d30c",
+      "metric": "rmse",
+      "model_families": [
+        "retained linear model"
+      ],
+      "public_model_ids": [
+        "retained-role-ncaam-total-8cea42be"
+      ],
+      "scope": "ALL_12_RETAINED_RECIPES_PLUS_SELECTED_NATIVE_CANDIDATES",
+      "season": "2024\u201325",
+      "season_end_year": 2025,
+      "target": "total",
+      "value": 16.520374748166137
+    },
+    {
+      "automatic_promotion": false,
+      "candidate_count": 14,
+      "full_native_catalog_per_season_rank_claim": false,
+      "games": 5749,
+      "league": "ncaam",
+      "membership_sha256": "3b816d189f572602e243243e19552a8cb92d8dff8bb8f606cfd829f29ca13901",
+      "metric": "mae",
+      "model_families": [
+        "retained linear model"
+      ],
+      "public_model_ids": [
+        "retained-role-ncaam-total-8cea42be"
+      ],
+      "scope": "ALL_12_RETAINED_RECIPES_PLUS_SELECTED_NATIVE_CANDIDATES",
+      "season": "2025\u201326",
+      "season_end_year": 2026,
+      "target": "total",
+      "value": 13.687858425800112
+    },
+    {
+      "automatic_promotion": false,
+      "candidate_count": 14,
+      "full_native_catalog_per_season_rank_claim": false,
+      "games": 5749,
+      "league": "ncaam",
+      "membership_sha256": "3b816d189f572602e243243e19552a8cb92d8dff8bb8f606cfd829f29ca13901",
+      "metric": "rmse",
+      "model_families": [
+        "retained linear model"
+      ],
+      "public_model_ids": [
+        "retained-role-ncaam-total-8cea42be"
+      ],
+      "scope": "ALL_12_RETAINED_RECIPES_PLUS_SELECTED_NATIVE_CANDIDATES",
+      "season": "2025\u201326",
+      "season_end_year": 2026,
+      "target": "total",
+      "value": 17.268824574154007
+    },
+    {
+      "automatic_promotion": false,
+      "candidate_count": 14,
+      "full_native_catalog_per_season_rank_claim": false,
+      "games": 5280,
+      "league": "ncaaw",
+      "membership_sha256": "a257cd1c905322df857ed858947789ef18c4b2e660d4a51ad9c933206e6ca657",
+      "metric": "accuracy",
+      "model_families": [
+        "TensorFlow"
+      ],
+      "public_model_ids": [
+        "frozen-core-ncaaw-win-1b6c83bc"
+      ],
+      "scope": "ALL_12_RETAINED_RECIPES_PLUS_SELECTED_NATIVE_CANDIDATES",
+      "season": "2024\u201325",
+      "season_end_year": 2025,
+      "target": "win",
+      "value": 0.7725378787878788
+    },
+    {
+      "automatic_promotion": false,
+      "candidate_count": 14,
+      "full_native_catalog_per_season_rank_claim": false,
+      "games": 5280,
+      "league": "ncaaw",
+      "membership_sha256": "a257cd1c905322df857ed858947789ef18c4b2e660d4a51ad9c933206e6ca657",
+      "metric": "log_loss",
+      "model_families": [
+        "retained linear model"
+      ],
+      "public_model_ids": [
+        "retained-role-ncaaw-win-c31a7934"
+      ],
+      "scope": "ALL_12_RETAINED_RECIPES_PLUS_SELECTED_NATIVE_CANDIDATES",
+      "season": "2024\u201325",
+      "season_end_year": 2025,
+      "target": "win",
+      "value": 0.45211932742946104
+    },
+    {
+      "automatic_promotion": false,
+      "candidate_count": 14,
+      "full_native_catalog_per_season_rank_claim": false,
+      "games": 5280,
+      "league": "ncaaw",
+      "membership_sha256": "a257cd1c905322df857ed858947789ef18c4b2e660d4a51ad9c933206e6ca657",
+      "metric": "brier",
+      "model_families": [
+        "retained linear model"
+      ],
+      "public_model_ids": [
+        "retained-role-ncaaw-win-c31a7934"
+      ],
+      "scope": "ALL_12_RETAINED_RECIPES_PLUS_SELECTED_NATIVE_CANDIDATES",
+      "season": "2024\u201325",
+      "season_end_year": 2025,
+      "target": "win",
+      "value": 0.15041605997115878
+    },
+    {
+      "automatic_promotion": false,
+      "candidate_count": 14,
+      "full_native_catalog_per_season_rank_claim": false,
+      "games": 5621,
+      "league": "ncaaw",
+      "membership_sha256": "6045f20513c92ed261e24c476009de41ae28d3904afd3ad161e394127831f7b1",
+      "metric": "accuracy",
+      "model_families": [
+        "retained linear model",
+        "retained linear model"
+      ],
+      "public_model_ids": [
+        "retained-role-ncaaw-win-8cea42be",
+        "retained-role-ncaaw-win-c31a7934"
+      ],
+      "scope": "ALL_12_RETAINED_RECIPES_PLUS_SELECTED_NATIVE_CANDIDATES",
+      "season": "2025\u201326",
+      "season_end_year": 2026,
+      "target": "win",
+      "value": 0.7680128091086995
+    },
+    {
+      "automatic_promotion": false,
+      "candidate_count": 14,
+      "full_native_catalog_per_season_rank_claim": false,
+      "games": 5621,
+      "league": "ncaaw",
+      "membership_sha256": "6045f20513c92ed261e24c476009de41ae28d3904afd3ad161e394127831f7b1",
+      "metric": "log_loss",
+      "model_families": [
+        "retained linear model"
+      ],
+      "public_model_ids": [
+        "retained-role-ncaaw-win-c31a7934"
+      ],
+      "scope": "ALL_12_RETAINED_RECIPES_PLUS_SELECTED_NATIVE_CANDIDATES",
+      "season": "2025\u201326",
+      "season_end_year": 2026,
+      "target": "win",
+      "value": 0.45473728543321623
+    },
+    {
+      "automatic_promotion": false,
+      "candidate_count": 14,
+      "full_native_catalog_per_season_rank_claim": false,
+      "games": 5621,
+      "league": "ncaaw",
+      "membership_sha256": "6045f20513c92ed261e24c476009de41ae28d3904afd3ad161e394127831f7b1",
+      "metric": "brier",
+      "model_families": [
+        "retained linear model"
+      ],
+      "public_model_ids": [
+        "retained-role-ncaaw-win-c31a7934"
+      ],
+      "scope": "ALL_12_RETAINED_RECIPES_PLUS_SELECTED_NATIVE_CANDIDATES",
+      "season": "2025\u201326",
+      "season_end_year": 2026,
+      "target": "win",
+      "value": 0.15106917381064314
+    },
+    {
+      "automatic_promotion": false,
+      "candidate_count": 14,
+      "full_native_catalog_per_season_rank_claim": false,
+      "games": 5280,
+      "league": "ncaaw",
+      "membership_sha256": "94b0c1e772a046a54fa5eda1c5efbdc0755e624f23100a3d2a977d9b327699e2",
+      "metric": "mae",
+      "model_families": [
+        "ridge regression"
+      ],
+      "public_model_ids": [
+        "frozen-core-ncaaw-margin-2cf81b3e"
+      ],
+      "scope": "ALL_12_RETAINED_RECIPES_PLUS_SELECTED_NATIVE_CANDIDATES",
+      "season": "2024\u201325",
+      "season_end_year": 2025,
+      "target": "margin",
+      "value": 9.690975117615855
+    },
+    {
+      "automatic_promotion": false,
+      "candidate_count": 14,
+      "full_native_catalog_per_season_rank_claim": false,
+      "games": 5280,
+      "league": "ncaaw",
+      "membership_sha256": "94b0c1e772a046a54fa5eda1c5efbdc0755e624f23100a3d2a977d9b327699e2",
+      "metric": "rmse",
+      "model_families": [
+        "retained linear model"
+      ],
+      "public_model_ids": [
+        "retained-role-ncaaw-margin-c31a7934"
+      ],
+      "scope": "ALL_12_RETAINED_RECIPES_PLUS_SELECTED_NATIVE_CANDIDATES",
+      "season": "2024\u201325",
+      "season_end_year": 2025,
+      "target": "margin",
+      "value": 12.240095478214265
+    },
+    {
+      "automatic_promotion": false,
+      "candidate_count": 14,
+      "full_native_catalog_per_season_rank_claim": false,
+      "games": 5621,
+      "league": "ncaaw",
+      "membership_sha256": "a9041739f230075d8d4a42b52d610257e747ef39e9884c934bd5ce0c16587cc0",
+      "metric": "mae",
+      "model_families": [
+        "PyTorch"
+      ],
+      "public_model_ids": [
+        "frozen-core-ncaaw-margin-a74c4c97"
+      ],
+      "scope": "ALL_12_RETAINED_RECIPES_PLUS_SELECTED_NATIVE_CANDIDATES",
+      "season": "2025\u201326",
+      "season_end_year": 2026,
+      "target": "margin",
+      "value": 9.629252199655516
+    },
+    {
+      "automatic_promotion": false,
+      "candidate_count": 14,
+      "full_native_catalog_per_season_rank_claim": false,
+      "games": 5621,
+      "league": "ncaaw",
+      "membership_sha256": "a9041739f230075d8d4a42b52d610257e747ef39e9884c934bd5ce0c16587cc0",
+      "metric": "rmse",
+      "model_families": [
+        "PyTorch"
+      ],
+      "public_model_ids": [
+        "frozen-core-ncaaw-margin-a74c4c97"
+      ],
+      "scope": "ALL_12_RETAINED_RECIPES_PLUS_SELECTED_NATIVE_CANDIDATES",
+      "season": "2025\u201326",
+      "season_end_year": 2026,
+      "target": "margin",
+      "value": 12.229814493606785
+    },
+    {
+      "automatic_promotion": false,
+      "candidate_count": 13,
+      "full_native_catalog_per_season_rank_claim": false,
+      "games": 5280,
+      "league": "ncaaw",
+      "membership_sha256": "d7099dd989d7c575211df71b9be50c828d6a917159db7edac03eb949e1ae19e8",
+      "metric": "mae",
+      "model_families": [
+        "retained linear model"
+      ],
+      "public_model_ids": [
+        "retained-role-ncaaw-total-c31a7934"
+      ],
+      "scope": "ALL_12_RETAINED_RECIPES_PLUS_SELECTED_NATIVE_CANDIDATES",
+      "season": "2024\u201325",
+      "season_end_year": 2025,
+      "target": "total",
+      "value": 12.57927939843677
+    },
+    {
+      "automatic_promotion": false,
+      "candidate_count": 13,
+      "full_native_catalog_per_season_rank_claim": false,
+      "games": 5280,
+      "league": "ncaaw",
+      "membership_sha256": "d7099dd989d7c575211df71b9be50c828d6a917159db7edac03eb949e1ae19e8",
+      "metric": "rmse",
+      "model_families": [
+        "retained linear model"
+      ],
+      "public_model_ids": [
+        "retained-role-ncaaw-total-c31a7934"
+      ],
+      "scope": "ALL_12_RETAINED_RECIPES_PLUS_SELECTED_NATIVE_CANDIDATES",
+      "season": "2024\u201325",
+      "season_end_year": 2025,
+      "target": "total",
+      "value": 15.92629891862978
+    },
+    {
+      "automatic_promotion": false,
+      "candidate_count": 13,
+      "full_native_catalog_per_season_rank_claim": false,
+      "games": 5621,
+      "league": "ncaaw",
+      "membership_sha256": "810619036d8c57a4fb9d4f8ea5e1311c93e1c9fbb17c03906cff5bc10c1049d5",
+      "metric": "mae",
+      "model_families": [
+        "retained linear model"
+      ],
+      "public_model_ids": [
+        "retained-role-ncaaw-total-8cea42be"
+      ],
+      "scope": "ALL_12_RETAINED_RECIPES_PLUS_SELECTED_NATIVE_CANDIDATES",
+      "season": "2025\u201326",
+      "season_end_year": 2026,
+      "target": "total",
+      "value": 12.597916463977597
+    },
+    {
+      "automatic_promotion": false,
+      "candidate_count": 13,
+      "full_native_catalog_per_season_rank_claim": false,
+      "games": 5621,
+      "league": "ncaaw",
+      "membership_sha256": "810619036d8c57a4fb9d4f8ea5e1311c93e1c9fbb17c03906cff5bc10c1049d5",
+      "metric": "rmse",
+      "model_families": [
+        "retained equal-weight ensemble"
+      ],
+      "public_model_ids": [
+        "retained-role-ncaaw-total-1294bf8a"
+      ],
+      "scope": "ALL_12_RETAINED_RECIPES_PLUS_SELECTED_NATIVE_CANDIDATES",
+      "season": "2025\u201326",
+      "season_end_year": 2026,
+      "target": "total",
+      "value": 15.989141811056
+    }
+  ],
+  "historical_pooled_leaders": [
+    {
+      "automatic_promotion": false,
+      "games": 11507,
+      "league": "ncaam",
+      "metric": "accuracy",
+      "model_family": "retained linear model",
+      "paired_significance_claim": false,
+      "public_model_id": "retained-role-ncaam-win-10670a65",
+      "seasons": [
+        "2024-25",
+        "2025-26"
+      ],
+      "target": "win",
+      "value": 0.7234726688102894
+    },
+    {
+      "automatic_promotion": false,
+      "games": 11507,
+      "league": "ncaam",
+      "metric": "log_loss",
+      "model_family": "retained linear model",
+      "paired_significance_claim": false,
+      "public_model_id": "retained-role-ncaam-win-8cea42be",
+      "seasons": [
+        "2024-25",
+        "2025-26"
+      ],
+      "target": "win",
+      "value": 0.5226834739867192
+    },
+    {
+      "automatic_promotion": false,
+      "games": 11507,
+      "league": "ncaam",
+      "metric": "brier",
+      "model_family": "retained linear model",
+      "paired_significance_claim": false,
+      "public_model_id": "retained-role-ncaam-win-8cea42be",
+      "seasons": [
+        "2024-25",
+        "2025-26"
+      ],
+      "target": "win",
+      "value": 0.17714591827105997
+    },
+    {
+      "automatic_promotion": false,
+      "games": 11507,
+      "league": "ncaam",
+      "metric": "mae",
+      "model_family": "retained linear model",
+      "paired_significance_claim": false,
+      "public_model_id": "retained-role-ncaam-margin-8cea42be",
+      "seasons": [
+        "2024-25",
+        "2025-26"
+      ],
+      "target": "margin",
+      "value": 9.071597437410928
+    },
+    {
+      "automatic_promotion": false,
+      "games": 11507,
+      "league": "ncaam",
+      "metric": "rmse",
+      "model_family": "retained linear model",
+      "paired_significance_claim": false,
+      "public_model_id": "retained-role-ncaam-margin-8cea42be",
+      "seasons": [
+        "2024-25",
+        "2025-26"
+      ],
+      "target": "margin",
+      "value": 11.542544273581601
+    },
+    {
+      "automatic_promotion": false,
+      "games": 11507,
+      "league": "ncaam",
+      "metric": "mae",
+      "model_family": "retained linear model",
+      "paired_significance_claim": false,
+      "public_model_id": "retained-role-ncaam-total-8cea42be",
+      "seasons": [
+        "2024-25",
+        "2025-26"
+      ],
+      "target": "total",
+      "value": 13.30836934460803
+    },
+    {
+      "automatic_promotion": false,
+      "games": 11507,
+      "league": "ncaam",
+      "metric": "rmse",
+      "model_family": "retained linear model",
+      "paired_significance_claim": false,
+      "public_model_id": "retained-role-ncaam-total-8cea42be",
+      "seasons": [
+        "2024-25",
+        "2025-26"
+      ],
+      "target": "total",
+      "value": 16.898451175093925
+    },
+    {
+      "automatic_promotion": false,
+      "games": 10901,
+      "league": "ncaaw",
+      "metric": "accuracy",
+      "model_family": "TensorFlow",
+      "paired_significance_claim": false,
+      "public_model_id": "frozen-core-ncaaw-win-1b6c83bc",
+      "seasons": [
+        "2024-25",
+        "2025-26"
+      ],
+      "target": "win",
+      "value": 0.7690120172461242
+    },
+    {
+      "automatic_promotion": false,
+      "games": 10901,
+      "league": "ncaaw",
+      "metric": "log_loss",
+      "model_family": "retained linear model",
+      "paired_significance_claim": false,
+      "public_model_id": "retained-role-ncaaw-win-c31a7934",
+      "seasons": [
+        "2024-25",
+        "2025-26"
+      ],
+      "target": "win",
+      "value": 0.45346925330223486
+    },
+    {
+      "automatic_promotion": false,
+      "games": 10901,
+      "league": "ncaaw",
+      "metric": "brier",
+      "model_family": "retained linear model",
+      "paired_significance_claim": false,
+      "public_model_id": "retained-role-ncaaw-win-c31a7934",
+      "seasons": [
+        "2024-25",
+        "2025-26"
+      ],
+      "target": "win",
+      "value": 0.15075283209222487
+    },
+    {
+      "automatic_promotion": false,
+      "games": 10901,
+      "league": "ncaaw",
+      "metric": "mae",
+      "model_family": "PyTorch",
+      "paired_significance_claim": false,
+      "public_model_id": "frozen-core-ncaaw-margin-a74c4c97",
+      "seasons": [
+        "2024-25",
+        "2025-26"
+      ],
+      "target": "margin",
+      "value": 9.67032812736124
+    },
+    {
+      "automatic_promotion": false,
+      "games": 10901,
+      "league": "ncaaw",
+      "metric": "rmse",
+      "model_family": "retained linear model",
+      "paired_significance_claim": false,
+      "public_model_id": "retained-role-ncaaw-margin-8cea42be",
+      "seasons": [
+        "2024-25",
+        "2025-26"
+      ],
+      "target": "margin",
+      "value": 12.256275678769471
+    },
+    {
+      "automatic_promotion": false,
+      "games": 10901,
+      "league": "ncaaw",
+      "metric": "mae",
+      "model_family": "retained linear model",
+      "paired_significance_claim": false,
+      "public_model_id": "retained-role-ncaaw-total-8cea42be",
+      "seasons": [
+        "2024-25",
+        "2025-26"
+      ],
+      "target": "total",
+      "value": 12.588942480883004
+    },
+    {
+      "automatic_promotion": false,
+      "games": 10901,
+      "league": "ncaaw",
+      "metric": "rmse",
+      "model_family": "retained linear model",
+      "paired_significance_claim": false,
+      "public_model_id": "retained-role-ncaaw-total-c31a7934",
+      "seasons": [
+        "2024-25",
+        "2025-26"
+      ],
+      "target": "total",
+      "value": 15.960889485792258
+    }
+  ],
+  "new_fits": 0,
+  "new_issues": 0,
+  "promotions": 0,
+  "provider_coverage": [
+    {
+      "candidate_comparisons": 321,
+      "evidence_modes": [],
+      "games_counted_across_models_not_unique_coverage": true,
+      "gap_occurrences_across_candidate_comparisons": {
+        "live_quote_not_pregame": 315,
+        "missing_or_incompatible_settlement_rule": 2261,
+        "prospective_quote_acquired_after_cutoff": 462,
+        "provider_quote_missing": 15795,
+        "quote_after_cutoff": 462,
+        "quote_exceeds_declared_max_age": 1799
+      },
+      "maximum_matched_games_in_one_comparison": 0,
+      "missing_evidence_is_not_zero_error": true,
+      "positive_candidate_comparisons": 0,
+      "provider_product": "draftkings_us",
+      "qualified_positive_leagues": []
+    },
+    {
+      "candidate_comparisons": 321,
+      "evidence_modes": [],
+      "games_counted_across_models_not_unique_coverage": true,
+      "gap_occurrences_across_candidate_comparisons": {
+        "provider_quote_missing": 18056
+      },
+      "maximum_matched_games_in_one_comparison": 0,
+      "missing_evidence_is_not_zero_error": true,
+      "positive_candidate_comparisons": 0,
+      "provider_product": "kalshi_us",
+      "qualified_positive_leagues": []
+    },
+    {
+      "candidate_comparisons": 321,
+      "evidence_modes": [],
+      "games_counted_across_models_not_unique_coverage": true,
+      "gap_occurrences_across_candidate_comparisons": {
+        "provider_quote_missing": 18056
+      },
+      "maximum_matched_games_in_one_comparison": 0,
+      "missing_evidence_is_not_zero_error": true,
+      "positive_candidate_comparisons": 0,
+      "provider_product": "polymarket_us",
+      "qualified_positive_leagues": []
+    },
+    {
+      "candidate_comparisons": 321,
+      "evidence_modes": [
+        "retrospective_reconstructed"
+      ],
+      "games_counted_across_models_not_unique_coverage": true,
+      "gap_occurrences_across_candidate_comparisons": {
+        "provider_quote_missing": 10554,
+        "quote_exceeds_declared_max_age": 63
+      },
+      "maximum_matched_games_in_one_comparison": 338,
+      "missing_evidence_is_not_zero_error": true,
+      "positive_candidate_comparisons": 139,
+      "provider_product": "polymarket_international",
+      "qualified_positive_leagues": [
+        "ncaam"
+      ]
+    }
+  ],
+  "schema": "sel.ncaa.b063r2.scientific_review.v1",
+  "scope_notes": [
+    "Historical seasonal panel now includes all 12 retained recipes plus selected native candidates. It does not rank all 6320 registered contexts.",
+    "Pooled and per-season descriptive roles are distinct; no current-season outcomes selected historical recipes.",
+    "2026-27 replay support is 420 men / 403 women games through saved evidence, not the entire official season to today.",
+    "Original B003 comparable 2024-25/2025-26 panels remain missing.",
+    "No qualified positive DraftKings US, Kalshi US, or Polymarket US paired panel; qualified men Polymarket International panel has 338 games and only 3 week blocks.",
+    "Post-issue outcome monitoring remains separate from replay; neither changes immutable original forecast values or timestamps."
+  ],
+  "source_owner_run_id": "20261111T193524Z_1ccf922c",
+  "status": "SAVED_EVIDENCE_VERIFIED_NO_NEW_FITS_OR_ISSUES"
+}
