@@ -1045,9 +1045,9 @@ network or persistence path. Browser fixtures use invented records only.
 
 
 
-## B064 continuation: authenticated B063R2 failure reconciled
+## B063R3 continuation: authenticated B063R2 failure reconciled
 
-The latest actual owner return is B063R2 (`20261112T195139Z_e9783dcb`). Its 3,766 fixture cases passed, 11 were skipped, and compatibility validation then stopped the run before any committed scientific fit or verified runtime reuse. The run spent 615.04 seconds in fixture validation and 993.80 seconds overall. Peak measured CPU usage of 11.44 cores included engineering probes; the scientific-worker peak was zero. These are execution diagnostics, not scientific throughput. B064 remains prepared pending its own authenticated owner execution.
+The latest actual owner return is B063R2 (`20261112T195139Z_e9783dcb`). Its 3,766 fixture cases passed, 11 were skipped, and compatibility validation then stopped the run before any committed scientific fit or verified runtime reuse. The run spent 615.04 seconds in fixture validation and 993.80 seconds overall. Peak measured CPU usage of 11.44 cores included engineering probes; the scientific-worker peak was zero. These are execution diagnostics, not scientific throughput. B063R3 remains prepared pending its own authenticated owner execution.
 
 The complete existing current-season game census, original forecasts, saved 164 candidate-season metrics, 28 season leaders, 14 pooled leaders, 14 current replay leaders, and both disjoint original-issue monitoring cohorts remain preserved byte-for-byte outside the additive status banner. Saved source cutoffs still govern coverage; no new schedule, model fit, market quote, original issue or promotion was created by this review. The public execution JSON retains the previous B063R1 actual return separately.
 
