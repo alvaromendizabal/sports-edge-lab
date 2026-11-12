@@ -78,6 +78,7 @@ jobs:
           PLAYWRIGHT_MODULE_DIR: ${{ runner.temp }}/fbs-browser/node_modules/playwright
           FBS_SCREENSHOTS: ${{ runner.temp }}/fbs-screenshots
         run: |
+          node tests/fbs_v068_browser.test.cjs
           node examples/fbs_contracts/tests/test_dashboard_browser.cjs
           node examples/fbs_contracts/tests/test_recovery_browser.cjs
           node examples/fbs_contracts/tests/test_season_browser.cjs
@@ -85,8 +86,8 @@ jobs:
           node tests/fbs_v065_browser.test.cjs
           node tests/fbs_v066_browser.test.cjs
           node tests/fbs_v067_browser.test.cjs
-          node tests/fbs_v068_browser.test.cjs
       - name: Preserve desktop and mobile evidence views
+        if: always()
         uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02
         with:
           name: fbs-evidence-screenshots

@@ -50,8 +50,9 @@ let browser;
   await page.selectOption('#period','final');await summary(688,0);
   await page.selectOption('#period','upcoming');await page.locator('#search').fill('no-such-fixture-068');await summary(0,0);
   assert.equal(await page.locator('#download-view').isDisabled(),true);await page.locator('#search').fill('');
-  assert.equal(await page.evaluate(()=>document.documentElement.scrollWidth>innerWidth),false,`overflow at ${width}`);
   if(process.env.FBS_SCREENSHOTS){fs.mkdirSync(process.env.FBS_SCREENSHOTS,{recursive:true});await page.screenshot({path:path.join(process.env.FBS_SCREENSHOTS,`fbs-latest-v068-${width}.png`),fullPage:true});}
+  const layout=await page.evaluate(()=>({viewport:innerWidth,width:document.documentElement.scrollWidth,offenders:[...document.querySelectorAll('main,main>section,header,code,.filters,select')].map(e=>({tag:e.tagName,id:e.id,right:e.getBoundingClientRect().right,width:e.getBoundingClientRect().width})).filter(e=>e.right>innerWidth)}));
+  assert.equal(layout.width>width,false,`overflow at ${width}: ${JSON.stringify(layout)}`);
  }
  assert.deepEqual(errors,[]);assert.deepEqual(external,[]);
  console.log(JSON.stringify({status:'PASS',viewports:[1440,390],selectorAssertions:assertions,errors,externalRequests:external.length}));
