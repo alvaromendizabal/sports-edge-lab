@@ -67,11 +67,11 @@ The prepared V7 continuation prioritizes current forecasts, restores exact old f
 
 ## Current NFL evidence · November 11, 2026
 
-**N074 produced zero new fits and zero new forecasts after failing before model dispatch.** The [latest all-game research view](tracks/nfl/season_review_n075.html) preserves N072's 772 selected rows across 112 confirmed future games, all 272 saved season games, 18 metric/horizon roles and nine distinct fallbacks. Original values and issue clocks remain unchanged.
+**N075 returned resumable after resource admission was refused: zero new fits, forecasts or paid source calls in 36.301 seconds.** The [latest all-game research view](tracks/nfl/season_review_n076.html) preserves N072's 772 selected rows for 112 confirmed future games, all 272 saved season games, 18 metric/horizon roles and nine separate fallbacks. Original values and issue clocks are unchanged; N075 did not refresh the schedule.
 
-The [actual N074 report](tracks/nfl/2026-11-11-n074-actual-n075-continuation.json) records 7m 27s elapsed, the saved-state contract failure and unavailable original runtime. Terminal receipts establish known zero work. The 48-vCPU host's 12-CPU NFL ceiling did not yield model parallelism because no fit workers launched. N075 is the V8 engineering continuation; owner execution is pending.
+The [actual N075 report](tracks/nfl/2026-11-11-n075-actual-n076-continuation.json) records `EXTERNAL_IO_PRESSURE`, but the return lacks the detailed current pressure and lease-decision telemetry needed to determine its cause. No fit worker launched or parallel model speedup was demonstrated. N076 is the V8 resource-admission and scientific-continuation repair; owner execution remains pending.
 
-[Metric-specific 2024/2025 scorecards, former-model leaders and promotion gates](tracks/nfl/CURRENT_MODEL_CARD.md) remain visible. Torch AB leads the saved original accuracy panel; Torch B leads original log loss and Brier. Full-season 2026 former-champion scoring and complete matched DraftKings/Kalshi/Polymarket comparisons remain incomplete. **No production promotion is established.** This source update does not refresh the separately deployed Site.
+[Metric-specific 2024/2025 results, former-model leaders and promotion gates](tracks/nfl/CURRENT_MODEL_CARD.md) remain visible. Torch AB leads saved original accuracy; Torch B leads original log loss and Brier. Original annual rolling fits, archived 2026 replays and genuinely issued forecasts remain separate. Full-season 2026 former-champion scoring and complete matched DraftKings/Kalshi/Polymarket comparisons remain incomplete. **No production promotion is established.** Source publication does not refresh the separately deployed Site.
 
 <details>
 <summary>Preserved November 8 NFL evidence</summary>
@@ -147,7 +147,7 @@ a narrow missing-clock checkpoint repair.
 
 | Track | Entry point | Publication boundary |
 |---|---|---|
-| NFL | [Current evidence](tracks/nfl/README.md) | N074 blocked with known zero model work; N072 outputs retained: 772 selected rows across 112 future games, metric-specific roles and former-model comparisons |
+| NFL | [Current evidence](tracks/nfl/README.md) | N075 resource-deferred with known zero model work; N072 outputs retained: 772 selected rows across 112 future games, metric-specific roles and former-model comparisons |
 | NCAA FBS | [Browser dashboard](https://sports-edge-lab-fbs.alv-mendizabal.chatgpt.site) · [Track](tracks/ncaaf/README.md) | Actual V053 partial; V055 prepared; 500 saved issue contexts across 122 games, with dated provider coverage |
 | NBA | [Research view](docs/NBA_RESEARCH_CARD.md) | Separately dated basketball evidence |
 | NCAA basketball | [Open dashboards](https://alvaro-ncaa-research-review.alv-mendizabal.chatgpt.site/) · [Men's evidence](tracks/ncaam/README.md) · [Women's evidence](tracks/ncaaw/README.md) · [Runnable contracts](examples/ncaa_review/README.md) | Separate historical selections, current execution gaps and three-provider qualification |
