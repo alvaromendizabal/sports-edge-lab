@@ -50,6 +50,26 @@ class EvidenceBoundaryTests(unittest.TestCase):
         self.assertEqual(once.count(dashboard.START), 1)
         self.assertIn('href="b063r2.html"', once)
 
+    def test_actual_landing_preserves_the_complete_prior_page(self):
+        page = (dashboard.ROOT / "docs/ncaa/index.html").read_text()
+        self.assertEqual(page.count(dashboard.BANNER), 1)
+        previous = page.replace(dashboard.BANNER, "")
+        git_blob = b"blob " + str(len(previous.encode())).encode() + b"\0" + previous.encode()
+        self.assertEqual(hashlib.sha1(git_blob).hexdigest(),
+                         "ac6ba71d80e444de82d799c64f5b5387c02b501b")
+        self.assertEqual(dashboard.render_banner(previous), page)
+
+    def test_publishing_checks_both_retained_history_and_companion(self):
+        from unittest.mock import patch
+        import build_dashboard
+        sentinel = dashboard.ROOT / "retained-full-history.html"
+        with patch.object(build_dashboard, "outputs", return_value={sentinel: "retained"}):
+            output = build_dashboard.publication_outputs()
+        self.assertEqual(output[sentinel], "retained")
+        self.assertEqual(output[dashboard.ROOT / "docs/ncaa/b063r2.html"], dashboard.render_page())
+        for name in dashboard.SOURCE_PINS:
+            self.assertIn(dashboard.ROOT / "docs/ncaa/data" / name, output)
+
     def test_preserves_full_historical_and_separate_original_populations(self):
         science = self.payload["science"]
         self.assertEqual(len(science["historical_per_season_candidate_metrics"]), 164)
