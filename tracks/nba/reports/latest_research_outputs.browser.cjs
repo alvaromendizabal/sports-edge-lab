@@ -548,7 +548,7 @@ function verifyVenueDisplayEvidence(htmlBytes, jsonBytes) {
     assert.match(clocks, /Individual quote timestamps and exact matched-game clock ranges are not included/);
     assert.equal(await page.locator('#nba-venue-comparisons a[href="venue_comparison_display_v1.json"]').count(), 1);
     assert.equal(await page.locator('#nba-venue-comparisons a[href="#forecast-rows"]').count(), 1);
-    assert.equal(await page.locator('#nba-venue-comparisons a[href="#champion-rows"]').count(), 1);
+    assert.equal(await page.locator('#nba-venue-comparisons nav a[href="#champion-rows"]').count(), 1);
     const originalGameState = await page.evaluate(() => window.NBA_RENDER_STATE);
     async function selection(provider, horizon, timing) {
       await page.selectOption("#venue-provider", provider);
