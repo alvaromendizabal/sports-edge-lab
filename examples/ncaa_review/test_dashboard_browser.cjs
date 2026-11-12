@@ -288,15 +288,47 @@ const { fixture: executionFixture } = require('./test_execution_review.cjs');
         counts.viewports++;
       }
       await page.goto(pathToFileURL(path.join(root, 'docs/ncaa/index.html')).href);
+      await page.locator('#b063-game-table tbody tr').first().waitFor();
+      const b063 = JSON.parse(await page.locator('#b063-data').textContent());
+      assert.equal(b063.games.length, 3457);
+      assert.equal(b063.issued_archive.records.length, 96);
+      assert.equal(b063.execution.new_owner_fits, 0);
+      assert.equal(b063.execution.parallelism_verified, false);
+      assert.match(await page.locator('#b063-game-count').innerText(), /3,457 of 3,457/);
+      assert.equal(await page.locator('#b063-game-table tbody tr').count(), 40);
+      await page.locator('#b063-status').selectOption('issued');
+      assert.match(await page.locator('#b063-game-count').innerText(), /30 of 3,457/);
+      await page.locator('[data-b063-detail]').first().click();
+      assert.match(await page.locator('#b063-detail').innerText(), /Originally issued.*Training cutoff.*Features available/s);
+      await page.locator('#b063-status').selectOption('future');
+      assert.equal(await page.locator('#b063-game-table tbody tr').evaluateAll(rows=>rows.every(row=>[3,4,5].every(i=>row.children[i].textContent==='—'))), true);
+      await page.locator('#b063-league').selectOption('ncaaw');
+      await page.locator('#b063-status').selectOption('replay');
+      assert.match(await page.locator('#b063-game-count').innerText(), /399 of 3,457/);
+      await page.locator('#b063-mode').selectOption('replay');
+      await page.locator('#b063-season').selectOption('2025');
+      assert.match(await page.locator('#b063-game-count').innerText(), /0 of 3,457/);
+      assert.equal(await page.locator('#b063-historical tbody tr').count(), 1);
+      await page.locator('#b063-reset').click();
+      await page.locator('#b063-archive-target').selectOption('all');
+      assert.equal(await page.locator('#b063-archive tbody tr').count(), 96);
+      const b063download = page.waitForEvent('download');
+      await page.locator('#b063-download').click();
+      assert.equal((await b063download).suggestedFilename(), 'ncaa_b063_preserved_source_records.csv');
+      assert.equal(await page.evaluate(() => document.documentElement.scrollWidth > innerWidth), false, 'B063 horizontal overflow '+width);
+      await page.locator('#b063-legacy').evaluate(el=>el.open=true);
       assert.equal(await page.locator('.cards a').count(), 2);
       assert.match(await page.locator('.status').innerText(), /B046: 9\/16 stages completed; partial work and final return preserved/);
       assert.match(await page.locator('.status').innerText(), /85,466 target rows, 47,127 game-model rows and 47,130 display rows/s);
       assert.match(await page.locator('.status').innerText(), /339 B042 immutable issues/);
       assert.doesNotMatch(await page.locator('.status').innerText(), /Latest owner stopped before science/);
+      await page.locator('#b063-legacy').evaluate(el=>el.open=false);
+      await page.locator('#b063-archive-target').selectOption('win');
       assert.equal(await page.evaluate(() => document.documentElement.scrollWidth > innerWidth), false, `landing ${width} overflow`);
       if (process.env.DASHBOARD_SCREENSHOTS) {
         await page.screenshot({ path: path.join(process.env.DASHBOARD_SCREENSHOTS, `ncaa-landing-${width}.png`), fullPage: true });
       }
+      await page.locator('#b063-legacy').evaluate(el=>el.open=false);
       counts.viewports++;
       // Only invented rows enter public browser tests. Private files are never fixtures.
       await page.goto(pathToFileURL(path.join(root, 'docs/ncaa/private-report/index.html')).href);
