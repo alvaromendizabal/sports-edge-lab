@@ -1,3 +1,13 @@
+## FBS: actual V067 forecasts recovered; final ledger failed — November 11, 2026
+
+**Latest actual FBS execution: V067, partial, worker and supervisor exit 2.** One registered foundation fit produced **146 genuine current outlooks** for all eligible timed future games. Another **301 restored-model probabilities** passed original-output parity, producing one new metric evaluation. A subsequent report-binding defect stopped full-ledger delivery before parallel frozen fitting; no new champion was authorized.
+
+[**V067 current forecasts and season leaders**](docs/fbs/latest-games-v068.html) · [Seven selected layers, 6,216 CSV rows](docs/fbs/latest-games-v068.csv) · [Official 2024–2026 inventory, 2,742 games](docs/fbs/season-inventory-v068.csv) · [Actual-owner review](docs/fbs/V068_ACTUAL_OWNER_REVIEW_2026-11-11.md)
+
+The fresh 2026 inventory has **888 games: 688 finals, 146 timed future games and 54 unresolved kickoffs**. New outlooks retain original November 11, 23:31:03–23:32:11 UTC issue clocks. All six earlier forecast layers and stronger historical comparisons remain unchanged. The restored model's 301-game result (237 correct, 0.465519 log loss, 0.152630 Brier) does not cover the remaining 387 finals. Market benchmarks retain their provider, cohort and source-clock limits.
+
+**V068 remains an engineering continuation pending owner execution.** This dated repository projection adds no fits, forecasts or recomputed metrics. Draft publication, merge and deployment are separate states.
+
 ## FBS: recovered V066 source refresh; V067 repairs prepared — November 11, 2026
 
 **Latest actual FBS execution: V066, exit 2.** Its recovered return preserves the latest official-source capture (November 11, 22:22:13–22:22:44 UTC): **888 games, 688 finals, 146 timed future games and 54 unresolved kickoffs**. Earlier original forecasts remain selected for **148 games** (145 future and three completed), with unchanged values and original issue clocks. V066 made 13 official requests, zero new fits, 301 unvalidated inference outputs and zero new forecasts.
@@ -77,11 +87,11 @@ The prepared V7 continuation prioritizes current forecasts, restores exact old f
 
 ## Current NFL evidence · November 11, 2026
 
-**N073 failed before verifying new model fits or forecasts. The latest valid selected outputs remain N072's 772 rows for 112 upcoming games.** The [updated all-game research view](tracks/nfl/season_review_n074.html) preserves all 272 season games, 18 primary historical metric/horizon roles and nine operational fallback roles. Original prediction values and issue clocks are unchanged; the failed run's smaller fallback export does not replace richer evidence.
+**N075 returned resumable after resource admission was refused: zero new fits, forecasts or paid source calls in 36.301 seconds.** The [latest all-game research view](tracks/nfl/season_review_n076.html) preserves N072's 772 selected rows for 112 confirmed future games, all 272 saved season games, 18 metric/horizon roles and nine separate fallbacks. Original values and issue clocks are unchanged; N075 did not refresh the schedule.
 
-The [actual N073 report](tracks/nfl/2026-11-11-n073-actual-n074-continuation.json) records 7m 32s elapsed, three orchestration failure classes, zero verified new fits/issues and unknown whole-run totals. Sources were refreshed, but the new raw captures are not validated forecasts or completed market-response experiments. N074 is the V8 engineering continuation; owner execution is pending.
+The [actual N075 report](tracks/nfl/2026-11-11-n075-actual-n076-continuation.json) records `EXTERNAL_IO_PRESSURE`, but the return lacks the detailed current pressure and lease-decision telemetry needed to determine its cause. No fit worker launched or parallel model speedup was demonstrated. N076 is the V8 resource-admission and scientific-continuation repair; owner execution remains pending.
 
-[Metric-specific 2024/2025 scorecards and old-model comparisons](tracks/nfl/CURRENT_MODEL_CARD.md) remain available. The remembered approximately 0.40 full-season NFL log loss is unresolved, and **no independent production promotion is established**. [Prior N072 actual evidence](tracks/nfl/README_N073_SNAPSHOT.md) retains at least 69 completed fits, all 1,251 cached native annual cases, and the original partial-run qualifications. This source update does not refresh the separately deployed Site.
+[Metric-specific 2024/2025 results, former-model leaders and promotion gates](tracks/nfl/CURRENT_MODEL_CARD.md) remain visible. Torch AB leads saved original accuracy; Torch B leads original log loss and Brier. Original annual rolling fits, archived 2026 replays and genuinely issued forecasts remain separate. Full-season 2026 former-champion scoring and complete matched DraftKings/Kalshi/Polymarket comparisons remain incomplete. **No production promotion is established.** Source publication does not refresh the separately deployed Site.
 
 <details>
 <summary>Preserved November 8 NFL evidence</summary>
@@ -157,8 +167,8 @@ a narrow missing-clock checkpoint repair.
 
 | Track | Entry point | Publication boundary |
 |---|---|---|
-| NFL | [Current evidence](tracks/nfl/README.md) | N073 blocked; latest valid N072 outputs retained: 772 selected rows across 112 future games, 18 metric/horizon selections and old-model comparisons |
-| NCAA FBS | [Browser dashboard](https://sports-edge-lab-fbs.alv-mendizabal.chatgpt.site) · [Track](tracks/ncaaf/README.md) | Actual V066 recovered; V067 prepared; 888 source games, 148 selected originals and explicit current refresh gaps |
+| NFL | [Current evidence](tracks/nfl/README.md) | N075 resource-deferred with known zero model work; N072 outputs retained: 772 selected rows across 112 future games, metric-specific roles and former-model comparisons |
+| NCAA FBS | [V067 evidence dashboard](docs/fbs/latest-games-v068.html) · [Track](tracks/ncaaf/README.md) | Actual V067 partial: 1 fit, 146 new current outlooks, 301 restored probabilities; 888 source games and older models preserved |
 | NBA | [Research view](docs/NBA_RESEARCH_CARD.md) | Separately dated basketball evidence |
 | NCAA basketball | [Open dashboards](https://alvaro-ncaa-research-review.alv-mendizabal.chatgpt.site/) · [Men's evidence](tracks/ncaam/README.md) · [Women's evidence](tracks/ncaaw/README.md) · [Runnable contracts](examples/ncaa_review/README.md) | Separate historical selections, current execution gaps and three-provider qualification |
 

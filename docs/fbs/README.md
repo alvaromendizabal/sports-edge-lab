@@ -1,3 +1,17 @@
+# NCAA FBS · actual V067 forecasts and restored-model evidence
+
+**V067 completed one registered foundation fit, 146 current forecast contexts and a 301-game former-model evaluation, then failed during final ledger assembly.** All completed issue values and clocks are preserved in the [new game explorer](latest-games-v068.html), alongside all 888 observed current-season games, earlier originals, separate reconstructions, provider gaps and metric-specific saved leaders for 2024, 2025 and 2026.
+
+The owner produced 739 scalar outputs: 438 forward winner/margin/total values and 301 former-model probabilities. It made 13 official-source requests and normalized 128 already-owned market request bodies. Worker/supervisor exits were 2/2. The parallel frozen-fit phase was not reached, and no new model promotion occurred. The restored probability model scored 0.465519 log loss and 0.152630 Brier on its original 301-game design; 387 current finals remain outside that design. The near-0.40 result remains a separate preserved 231-game finding.
+
+[Actual run, failures and scientific limits](V068_ACTUAL_OWNER_REVIEW_2026-11-11.md) · [All 6,216 selected-layer CSV rows](latest-games-v068.csv) · [Complete 2,742-game 2024–2026 inventory](season-inventory-v068.csv).
+
+New V067 outlooks were originally issued November 11, 3:31–3:32 p.m. Pacific. They are unpromoted research baselines with their actual lead times. Older original layers remain unchanged. V068 is a prepared engineering continuation, not a completed owner run. This FBS draft source update is not a website deployment.
+
+The complete preceding accounts below remain dated history. Their latest-owner and pending-release statements describe their original publication dates.
+
+---
+
 # NCAA FBS · recovered V066 sources; V067 continuation prepared
 
 **Latest actual owner: V066, failed after source refresh and before new validated model results. V067 has not yet run on AWS.**
@@ -325,8 +339,3 @@ The latest authenticated V056 owner added 31 base fits and five statistical stat
 V057 prepares exact historical-recipe recovery, reusable per-candidate metrics before global closure, and bounded recovery that can advance after interruption. Its 64-unit chunks retain the eight-chunk ceiling, for an effective maximum of 512 units per recovery slice. Complete-population cache reuse requires independent canonical receipt, source and selector verification. No V057 AWS execution, new model improvement or automatic promotion is claimed. The requirement for hundreds of certified new feature concepts remains unmet.
 
 Evidence: [latest saved owner counts](actual-owner-v056.json), [historical scorecards and qualifications](historical-contenders-v057.json), and [FBS evidence dashboard](current.html). Publication is not a data refresh or model run. NFL, NBA and NCAA basketball retain their independent owners and evidence.
-
-
-
-
-

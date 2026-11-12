@@ -1,0 +1,98 @@
+{
+  "automatic_promotion": false,
+  "compute_cost": {
+    "actual_bill": false,
+    "estimated_usd": null,
+    "observed_hourly_rate": null,
+    "reason": "This return contains no current instance price or cost ledger; prior-run pricing is not presented as newly measured cost."
+  },
+  "counts_known": true,
+  "counts_qualification": "Every scientific stage is recorded as not invoked. Resource admission stopped this invocation before provider refresh or model dispatch.",
+  "cpu_contract": {
+    "last_recorded_effective_vcpus": 48,
+    "last_recorded_owner_release": "N074",
+    "last_recorded_per_project_ceiling": 12,
+    "new_fit_worker_dispatches": 0,
+    "prior_capacity_is_not_current_measurement": true,
+    "scientific_fit_concurrency_proved": false
+  },
+  "current_census": {
+    "completed": 136,
+    "confirmed_future": 112,
+    "games": 272,
+    "kickoff_tbd": 24,
+    "refreshed_by_latest_execution": false,
+    "season": 2026,
+    "source_owner_release": "N074"
+  },
+  "elapsed_seconds": 36.3014844900008,
+  "failures": [
+    {
+      "class": "resource_pressure_deferral",
+      "effect": "The invocation returned resumable after an I/O-pressure admission refusal. It performed no new source refresh, fit, original-model inference or forecast issue.",
+      "stage": "resource_admission_before_source_or_model_dispatch"
+    }
+  ],
+  "finished_at_utc": "2026-11-11T23:56:41.511123+00:00",
+  "latest_execution": "N075",
+  "new_fits": 0,
+  "new_forecasts": 0,
+  "new_meta_fits": 0,
+  "new_native_fits": 0,
+  "new_release": {
+    "governing_policy": "V8",
+    "owner_executed": false,
+    "purpose": "Make resource admission observable and safely resumable without bypassing genuine pressure; retain completed fits and original issues and prioritize due forecasts and current-season former-champion comparisons.",
+    "release": "N076",
+    "status": "ENGINEERING_CONTINUATION_PENDING_OWNER_EVIDENCE"
+  },
+  "original_predictions_changed": false,
+  "owner_research_acceptance": false,
+  "publication": {
+    "private_model_details_included": false,
+    "raw_provider_values_included": false,
+    "website_deployed": false
+  },
+  "resource_admission": {
+    "current_capacity_recorded": false,
+    "current_effective_vcpus": null,
+    "current_per_project_ceiling": null,
+    "detailed_decision_in_return": false,
+    "interpretation": "A resource gate refused admission. This return does not contain the measured pressure or lease-decision telemetry needed to determine the physical cause.",
+    "measured_pressure": null,
+    "observed_reason": "EXTERNAL_IO_PRESSURE",
+    "other_owner_cause_proven": false,
+    "pressure_was_stale_proven": false,
+    "requested_or_granted_threads": null
+  },
+  "retained_forecasts": {
+    "fallback_roles": 9,
+    "future_games": 112,
+    "historical_primary_roles": 18,
+    "new_fit_credit": 0,
+    "new_inference_credit": 0,
+    "new_issue_credit": 0,
+    "original_issue_clocks_preserved": true,
+    "owner_execution": "N072",
+    "publication_file": "selected_forecasts_n073.json",
+    "reissued": false,
+    "selected_rows": 772,
+    "sha256": "61edc9fb9fe518299b2c70259163cc42a7c73830288129a36ba98ee46a03b013"
+  },
+  "return_sha256": "2687b26f975cd2817e6e23fe4a786fc791dac5247ace875a8a328f97d0efcffe",
+  "schema": "nfl.n076.latest-execution-retained-forecasts.v1",
+  "source_activity": {
+    "earlier_game_response_studies_executed": 0,
+    "fresh_remaining_quota": null,
+    "full_historical_market_inventory_complete": false,
+    "known_new_credits": 0,
+    "new_paid_calls": 0,
+    "newly_qualified_current_winner_probabilities": 0,
+    "source_refresh_invoked": false
+  },
+  "sport": "NFL",
+  "started_at_utc": "2026-11-11T23:56:05.209643+00:00",
+  "status": "RESOURCE_DEFERRED_RESUMABLE",
+  "verified_new_fit_minimum": 0,
+  "verified_new_issue_minimum": 0
+}
