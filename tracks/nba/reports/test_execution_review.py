@@ -97,6 +97,13 @@ class ExecutionReviewTests(unittest.TestCase):
         self.assertEqual(expected["status"], "PASS")
         self.assertEqual(hashlib.sha256(runtime.read_bytes()).hexdigest(), expected["module_sha256"])
         self.assertFalse(expected["actual_NBA_fits"])
+        package = self.data["replacement_engineering"]["package_verification"]
+        self.assertEqual(package["status"], "PASS")
+        self.assertEqual(package["packaged_tests"], 338)
+        self.assertEqual(package["passed"], 338)
+        self.assertEqual(package["failures"] + package["errors"] + package["skipped"] + package["module_errors"], 0)
+        self.assertEqual(package["exact_package_sha256"], "6938ded9c716d012b2007f39a244b5655a6752bb4d557ffaa2a95e8525be6094")
+        self.assertFalse(package["owner_execution_performed"])
 
 
 if __name__ == "__main__":

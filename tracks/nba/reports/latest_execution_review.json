@@ -76,13 +76,15 @@
     "logging_verification": {
       "actual_AWS_owner_execution": false,
       "actual_NBA_fits": 0,
-      "actual_local_process_elapsed_seconds": 33.782036053999036,
+      "actual_local_process_elapsed_seconds": 33.0554091419981,
       "cases": [
         {
           "child_returncode": 0,
           "heartbeat_samples": 6,
+          "human_log_growth_observations": 3,
+          "jsonl_growth_observations": 3,
           "mode": "stall",
-          "observed_max_gap_seconds": 10.120274,
+          "observed_max_gap_seconds": 10.01582,
           "process_wait_channels": [
             "__futex_wait",
             "hrtimer_nanosleep",
@@ -95,8 +97,10 @@
         {
           "child_returncode": 1,
           "heartbeat_samples": 5,
+          "human_log_growth_observations": 2,
+          "jsonl_growth_observations": 2,
           "mode": "crash",
-          "observed_max_gap_seconds": 10.12755,
+          "observed_max_gap_seconds": 10.016373,
           "process_wait_channels": [
             "__futex_wait",
             "hrtimer_nanosleep",
@@ -107,17 +111,33 @@
           "tail_F_heartbeats_observed_while_child_alive": 3
         }
       ],
-      "module_bytes": 53718,
-      "module_sha256": "f32078a6cf20814442fbbc0f1bd881b510484c8c5a08f5dccd094b638ccfaaba",
+      "module_bytes": 53959,
+      "module_sha256": "0e1177c8ba3f51d3fa360eade70a27ed66aa31bef4052e16a218a6b309d2e48e",
       "real_tail_F_observed": true,
       "source_pins_unchanged_through_live_test": true,
       "status": "PASS",
       "unit_test_failures": 0,
-      "unit_tests": 17
+      "unit_tests": 18
     },
     "owner_execution_completed": false,
     "package_verification": {
-      "status": "FINAL_RECEIPT_PENDING"
+      "all_payload_sha256_verified": true,
+      "elapsed_seconds": 42.051969707,
+      "errors": 0,
+      "exact_package_bytes": 101168160,
+      "exact_package_sha256": "6938ded9c716d012b2007f39a244b5655a6752bb4d557ffaa2a95e8525be6094",
+      "failures": 0,
+      "launcher_process_fixtures_included": 11,
+      "module_errors": 0,
+      "original_B078_members_preserved": 1077,
+      "owner_execution_performed": false,
+      "package_members": 1113,
+      "packaged_tests": 338,
+      "passed": 338,
+      "real_NBA_fits": 0,
+      "shared_logging_unit_tests_included": 18,
+      "skipped": 0,
+      "status": "PASS"
     },
     "release": "B079",
     "shared_logging_framework_projects": [
@@ -127,12 +147,13 @@
       "NCAA basketball",
       "other named projects"
     ],
-    "status": "SOURCE_FIXES_VERIFIED_REPLACEMENT_PACKAGE_VERIFICATION_PENDING",
+    "status": "TESTED_REPLACEMENT_OWNER_EXECUTION_PENDING",
     "verification_summary": [
       "Recovery: 13 local regression tests passed, including the exact two-context failure chain, warm zero-rehash reuse and tampered model/clock rejection.",
       "Supervision: 9 local tests passed with real operating-system children, silent-stall stack capture, exit-7 preservation and append across restarts.",
-      "Shared logging: 17 regression tests passed. Real blocked and failed child executions lasted 33.782 seconds overall; maximum measured heartbeat gaps were 10.120 and 10.128 seconds, with four and three tail-F observations while the respective children were alive.",
-      "Fixture validation does not count as real NBA fitting or establish owner-host twelve-core training throughput."
+      "Shared logging: 18 regression tests passed, including a real child-registration log-write failure. Source-pinned blocked and failed child executions lasted 33.055 seconds overall; maximum measured heartbeat gaps were 10.016 and 10.016 seconds, with four and three tail-F observations while the respective children were alive.",
+      "Fixture validation does not count as real NBA fitting or establish owner-host twelve-core training throughput.",
+      "The exact replacement package passed all 338 packaged tests in 42.052 seconds, with zero failures, errors, skips or module errors. All 1,113 members were read back and SHA-256 verified; all 1,077 original B078 members were preserved. The tests include 18 shared logger regressions and 11 launcher process fixtures, with zero real NBA fits."
     ],
     "verified_new_owner_scientific_fits": 0
   },

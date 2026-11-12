@@ -73,11 +73,21 @@ def run_case(directory, mode):
     out = [r for r in rows if r['event'] == 'PROCESS_OUTPUT']
     text = logger.paths['log'].read_text()
     alive_growth = [x for x in growth if x['child_running']]
-    observed_changes = sum(a['log_bytes'] != b['log_bytes'] and a['jsonl_bytes'] != b['jsonl_bytes']
-                           for a, b in zip(alive_growth, alive_growth[1:]))
+    # These are separate append-only files. A poll may land between their two
+    # writes, so require independently observed growth instead of pretending
+    # that both filesystem updates are atomic within one sampling interval.
+    log_changes = sum(a['log_bytes'] != b['log_bytes']
+                      for a, b in zip(alive_growth, alive_growth[1:]))
+    jsonl_changes = sum(a['jsonl_bytes'] != b['jsonl_bytes']
+                        for a, b in zip(alive_growth, alive_growth[1:]))
+    observations = directory/'observation_samples.json'
+    atomic_json(observations, {'growth_samples': growth, 'tail_F_events': tail_events,
+        'human_log_growth_observations': log_changes, 'jsonl_growth_observations': jsonl_changes})
     assert gaps and max(gaps) <= 15., gaps
     assert len([x for x in tail_events if x['child_running']]) >= 2
-    assert observed_changes >= (3 if mode == 'stall' else 2), observed_changes
+    required_changes = 3 if mode == 'stall' else 2
+    assert log_changes >= required_changes, log_changes
+    assert jsonl_changes >= required_changes, jsonl_changes
     assert 'UNTERMINATED_STDOUT_VISIBLE' in text and 'STDERR_VISIBLE_DURING_EXECUTION' in text
     assert receipt['health_errors'] == [], receipt
     alive_child_samples = [r for r in beats if any(p['pid'] == child.pid and
@@ -96,7 +106,9 @@ def run_case(directory, mode):
             'heartbeat_interval_seconds': 10., 'heartbeat_samples': len(beats),
             'observed_max_gap_seconds': max(gaps), 'gap_seconds': gaps,
             'tail_F_heartbeats_observed_while_child_alive': len([x for x in tail_events if x['child_running']]),
-            'simultaneous_human_and_JSONL_growth_observations': observed_changes,
+            'human_log_growth_observations': log_changes,
+            'jsonl_growth_observations': jsonl_changes,
+            'observation_samples_pin': pin(observations),
             'registered_child_observed_in_process_samples': len(alive_child_samples),
             'stall_diagnostic_count': len(stalls), 'fixture_stall_threshold_seconds': 20.,
             'production_default_stall_threshold_seconds': 120.,

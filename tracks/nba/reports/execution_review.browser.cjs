@@ -28,7 +28,7 @@ async function check(page,viewport,name){
  assert.ok(await page.locator('#forecast-rows').count());
  assert.ok(await page.evaluate(()=>document.documentElement.scrollWidth<=window.innerWidth+1),'horizontal viewport overflow');
  const screenshotDir=process.env.NBA_MONITOR_SCREENSHOTS;
- if(screenshotDir){fs.mkdirSync(screenshotDir,{recursive:true});await section.scrollIntoViewIfNeeded();await page.screenshot({path:path.join(screenshotDir,'nba-b079-execution-'+name+'.png'),fullPage:false});}
+ if(screenshotDir){fs.mkdirSync(screenshotDir,{recursive:true});await page.locator('#nba-execution-title').evaluate(node=>node.scrollIntoView({block:'start'}));await page.screenshot({path:path.join(screenshotDir,'nba-b079-execution-'+name+'.png'),fullPage:false});}
  await page.locator('#nba-execution-repairs > summary').click();await page.reload({waitUntil:'load'});
  assert.deepEqual(await page.locator('#nba-execution-data').evaluate(n=>JSON.parse(n.textContent)),value);
  assert.deepEqual(errors,[]);assert.deepEqual(external,[]);return{name,viewport,console_or_page_errors:errors.length,external_requests:external.length,offline_reopen:true};

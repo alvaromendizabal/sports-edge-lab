@@ -501,7 +501,10 @@ class LiveExecutionLog:
             raise ValueError('LIVE_LOG_CHILD_IDENTITY_NOT_CURRENT')
         with self.lock:
             self.child = actual
-        self.event('CHILD_REGISTERED', child_identity=actual)
+        # Registration is also used immediately after Popen, before the caller
+        # enters supervise. A failed diagnostic write must retain the exact
+        # child identity and let supervision drain pipes/request safe recovery.
+        self._safe_event('CHILD_REGISTERED', child_identity=actual)
         return actual
 
     def bind_progress(self, path, producer_identity=None):

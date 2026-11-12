@@ -10,7 +10,7 @@ The standard-library implementation runs on Linux, uses process identity and app
 
 - Start a distinct log prefix and invocation identity before launching any substantial child work. Preserve prior log bytes across failures or restarts. Read the human stream with `tail -F`.
 - Emit and flush status independently of the workload at a default 10-second cadence, with a maximum configured interval of 15 seconds. Record the measured maximum interval and fail the interval gate if it exceeds 15 seconds. A blocked child must not prevent observations.
-- Capture child stdout and stderr, including partial output without a newline. Preserve exit status, exceptions, diagnostic evidence and checkpoint locations.
+- Capture child stdout and stderr, including partial output without a newline. Preserve exit status, exceptions, diagnostic evidence and checkpoint locations. A child-registration log-write failure keeps the actual child bound and enters the supervisor drain loop, so an observer failure does not abandon the process.
 - Protect the envelope identity from callback data. Validate invocation, origin, boot, process ID and process start time before accepting a progress document. A foreign or stale document supplies no accepted progress.
 - Report UTC, elapsed time, stage, completed and remaining work, throughput and ETA when the current workload reports them. Missing values remain null with an explicit reason.
 - Report observed process CPU, memory, disk availability, reserved cores and active workers separately. Concurrent scientific fits and completed, reused or failed fits come from current bound workload evidence; reservations and CPU samples never manufacture fit counts.

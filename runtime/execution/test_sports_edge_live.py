@@ -140,6 +140,32 @@ class LiveLogTests(unittest.TestCase):
         self.assertEqual(len(requests), 1)
         self.assertGreaterEqual(len(logger.receipt()['health_errors']), 1)
 
+    def test_child_registration_write_failure_still_supervises_real_child(self):
+        with self.logger() as logger:
+            original = logger.event
+            def fail_registration(kind, **kw):
+                if kind == 'CHILD_REGISTERED':
+                    raise OSError('injected_registration_write_failure')
+                return original(kind, **kw)
+            logger.event = fail_registration
+            child = subprocess.Popen([sys.executable, '-u', '-c',
+                "import time;print('registered-child-started');time.sleep(.2);print('registered-child-complete')"],
+                stdout=subprocess.PIPE, stderr=subprocess.PIPE)
+            try:
+                registered = logger.set_child(child.pid)
+                self.assertEqual(registered, process_identity(child.pid))
+                requests = []
+                self.assertEqual(logger.supervise(child,
+                    on_observer_error=lambda errors: requests.append(errors)), 0)
+                self.assertEqual(len(requests), 1)
+            finally:
+                if child.poll() is None:
+                    child.terminate(); child.wait(timeout=3)
+                child.stdout.close(); child.stderr.close()
+                logger.event = original
+        self.assertIn('registered-child-complete', (self.root/'execution.log').read_text())
+        self.assertIn('injected_registration_write_failure', json.dumps(logger.receipt()['health_errors']))
+
     def test_snapshot_is_immutable_prefix_live_log_continues(self):
         with self.logger() as logger:
             logger.event('BEFORE_SNAPSHOT')
