@@ -1,5 +1,11 @@
 # NCAA basketball: research policy and evidence model card
 
+## B062 terminal recovery and new November 12 post-issue outcome monitor
+
+[The bounded B063 post-issue follow-up](B063_POSTISSUE_OUTCOME_MONITOR_20261112.md) independently links eight **previously preserved** B062 candidate/component-issue games (46 target rows) to host-school final reports after their original pregame issue clocks. Men's winner components were each correct on five of six games; women's components on two of two. The one-week results are **exposed monitoring, not a new trained champion, proper prospective confirmation, original new issue, market comparison, or independent private model/source reauthentication**. B062 completed 104/104 frozen-core contexts but its full 6,320-context catalog and exact new physical fit accounting remain unresolved. PR #241 is a merged public record, not a B063 owner execution.
+
+The older historical policy and status sections follow unchanged as dated evidence.
+
 ## B057 actual evidence and B058 prepared policy — November 10, 2026 UTC
 
 The [current aggregate evidence](evidence/B057_ACTUAL_B058_PREPARED.md) records a partial B057 owner run: **7 new target fits, three completed frozen contexts and 16,787 prediction rows**, with no new current forecasts or promotions. A fitted-model schema validation failure left the full comparison and champion selection incomplete. These counts are not model-quality findings.
