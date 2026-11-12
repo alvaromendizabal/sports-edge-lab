@@ -16,6 +16,10 @@ class TerminalEvidence(unittest.TestCase):
             d=copy.deepcopy(self.data)
             next(r for r in d['issues'] if r['display_evidence_mode']=='recovered_native_original')[field]=value
             with self.assertRaises(ValueError):dashboard.validate(d)
+        equal=copy.deepcopy(self.data)
+        row=next(r for r in equal['issues'] if r['display_evidence_mode']=='recovered_native_original')
+        row['server_last_modified_utc']=row['cutoff_time']
+        with self.assertRaises(ValueError):dashboard.validate(equal)
 
     def test_selected_original_closure_and_unchanged_prior(self):
         latest=[r for r in self.data['issues'] if r['display_evidence_mode']=='recovered_native_original']

@@ -23,7 +23,7 @@ def validate(data):
         raise ValueError('recovered original closure')
     for row in latest:
         t=lambda key:datetime.fromisoformat(row[key].replace('Z','+00:00'))
-        if not (t('issued_at') <= t('server_last_modified_utc') <= t('cutoff_time') < t('event_time')):
+        if not (t('issued_at') <= t('server_last_modified_utc') < t('cutoff_time') < t('event_time')):
             raise ValueError('original issue clock')
         if row['actual'] is not None or row['automatic_promotion'] or not row['durable_issued_before_cutoff']:
             raise ValueError('original issue scope')
