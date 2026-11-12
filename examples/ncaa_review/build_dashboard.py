@@ -344,6 +344,7 @@ def render_landing(data):
 
 
 def outputs():
+    """Return the full-history pages covered by the original review contract."""
     data=[evidence(league) for league in ('ncaam','ncaaw')]
     return {**{ROOT/'tracks'/d['league']/'index.html':render_track(d) for d in data},
             ROOT/'docs/ncaa/index.html':render_landing(data),
@@ -357,10 +358,16 @@ def outputs():
                 .replace('__V4_REVIEW_SCRIPT__',(HERE/'refresh_review.js').read_text()+'\n'+(HERE/'projection_review.js').read_text()+'\n'+(HERE/'v4_review.js').read_text()+'\n'+(HERE/'execution_review.js').read_text())}
 
 
+def publication_outputs():
+    """Publish the retained history and the independently validated companion."""
+    from b063r2_dashboard import evidence_outputs
+    return {**outputs(), **evidence_outputs()}
+
+
 def main():
     p=argparse.ArgumentParser(description=__doc__);p.add_argument('--check',action='store_true');args=p.parse_args()
     receipts=[]
-    for path,text in outputs().items():
+    for path,text in publication_outputs().items():
         if args.check:
             if not path.is_file() or path.read_text()!=text:raise SystemExit('Stale generated page: '+str(path.relative_to(ROOT)))
         else:path.parent.mkdir(parents=True,exist_ok=True);path.write_text(text)

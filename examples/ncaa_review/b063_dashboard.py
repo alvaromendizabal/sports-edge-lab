@@ -85,5 +85,7 @@ def render(legacy_html):
     template = (HERE / "b063_dashboard.html.tmpl").read_text()
     from terminal_dashboard import render as render_terminal
     from recovery_dashboard import render as render_recovery
-    return render_recovery(render_terminal(template.replace("__B063_DATA__", raw.replace("<", "\\u003c")).replace("__B063_LEGACY__", legacy_body)))
+    from b063r2_dashboard import render_banner
+    return render_banner(render_recovery(render_terminal(template.replace("__B063_DATA__", raw.replace("<", "\\u003c")).replace("__B063_LEGACY__", legacy_body))))
+
 

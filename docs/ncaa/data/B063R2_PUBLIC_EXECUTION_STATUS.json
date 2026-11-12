@@ -1,0 +1,51 @@
+{
+  "continuation": {
+    "new_issue_credit": 0,
+    "new_promotion_credit": 0,
+    "new_scientific_fit_credit": 0,
+    "owner_parallelism_proven": false,
+    "release": "B063R2",
+    "runtime_reuse_credit": 0,
+    "status": "PREPARED_OWNER_EXECUTION_PENDING"
+  },
+  "latest_actual_owner": {
+    "completed_at": "2026-11-12T18:25:41.311298+00:00",
+    "configured_cpu_ceiling": 12,
+    "cpu_granted_in_initial_lease": 1,
+    "cpu_requested_in_initial_lease": 1,
+    "elapsed_seconds": 636.7950224659999,
+    "estimated_whole_instance_cost_usd": 0.4545677037108804,
+    "failure": "Queued parent-fit startup fixture raised V7_PARENT_FIT_SHARED_CAPACITY_UNAVAILABLE",
+    "new_verified_scientific_fits": 0,
+    "peak_observed_cpu_cores": 0.9993785675345291,
+    "peak_scientific_workers": 0,
+    "release": "B063R1",
+    "run_id": "20261112T181504Z_f89b03a5",
+    "runtime_reused_fits": 0,
+    "source_sha256": "17c702c967ad084f8514f527359edb32fb9b721bf56b7e6d81ebf3cfaa0f493a",
+    "started_at": "2026-11-12T18:15:04.870352+00:00",
+    "status": "FAILED_PARTIAL_WORK_PRESERVED",
+    "tests_errored": 1,
+    "tests_passed": 3737,
+    "tests_skipped": 11
+  },
+  "limits": [
+    "Artifact recovery is distinct from runtime model reuse.",
+    "The 104 completed priority contexts do not complete all 6,320 registered contexts.",
+    "No current remote process state is inferred from a dated terminal archive.",
+    "Costs are whole-instance wall estimates at the recorded verified rate, not invoices."
+  ],
+  "recovered_evidence": {
+    "checkpoint_references": 2793,
+    "exact_overall_fit_count": null,
+    "frozen_target_models_physically_verified": 104,
+    "native_refresh_models_physically_verified": 11,
+    "selected_model_chains_physically_verified": 115,
+    "terminal_ledger_fit_lower_bounds": {
+      "residual_models": 24,
+      "scalar_calibrations": 48,
+      "target_estimators": 245
+    }
+  },
+  "schema": "sel.ncaa.b063r2.public_execution_status.v1"
+}

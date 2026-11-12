@@ -7,6 +7,7 @@ import re
 import unittest
 
 import recovery_dashboard as dashboard
+import b063r2_dashboard as latest_dashboard
 
 
 class RecoveryDashboardTests(unittest.TestCase):
@@ -60,6 +61,10 @@ class RecoveryDashboardTests(unittest.TestCase):
     def test_new_panel_preserves_every_previous_page_byte(self):
         path=dashboard.HERE.parents[1]/'docs/ncaa/index.html'
         text=path.read_text()
+        self.assertEqual(text.count(latest_dashboard.BANNER), 1)
+        # The R2 component has its own exact predecessor and idempotence gate.
+        # Check this R1 component against the same historical bytes as before.
+        text=text.replace(latest_dashboard.BANNER, '')
         start=text.index(dashboard.START);end=text.index(dashboard.END)+len(dashboard.END)
         previous=text[:start]+text[end:]
         self.assertEqual(hashlib.sha256(previous.encode()).hexdigest(),
@@ -80,3 +85,4 @@ class RecoveryDashboardTests(unittest.TestCase):
 
 
 if __name__=='__main__':unittest.main()
+
