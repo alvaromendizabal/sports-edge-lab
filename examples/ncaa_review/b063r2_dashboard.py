@@ -12,7 +12,7 @@ SOURCE_PINS = {
     "NCAA_B063R2_PUBLIC_SCIENTIFIC_TABLES.json": "afd11df371e7886d6ed0adc97802fee565259cc9c95701f7cf8d133559f7f766",
     "B063_PUBLIC_EARLY_ORIGINAL_POSTISSUE_MONITORING.json": "af4813490e536bbb32b9c38e44af5e4504a45859bbbf8951e063003dc43ece35",
     "B063_PUBLIC_LATE_ORIGINAL_POSTISSUE_MONITORING.json": "918e8951f0972429c6a226d8347d53f07c746fb7c3beae0b904a5fbdaa2ddd58",
-    "B063R2_PUBLIC_EXECUTION_STATUS.json": "661500226de7ed8e8dac8971e4649c265fd3b49fc65609c43ff4f216acb53b33",
+    "B063R2_PUBLIC_EXECUTION_STATUS.json": "a05d58f11f30ff4b422d85940a2ca89d82c34c57389e3fa95d242b4e4c7c0825",
 }
 KEYS = ("science", "early", "late", "execution")
 START = "<!-- B063R2_EVIDENCE_LINK_START -->"
@@ -22,7 +22,7 @@ BANNER = START + '''
   <p style="font-size:12px;letter-spacing:.1em;text-transform:uppercase;font-weight:750;margin:0 0 9px">November 12 · Latest NCAA evidence review</p>
   <h2 id="b063r2-latest-title" style="font-size:28px;line-height:1.2;margin:0 0 12px">Legacy models, season leaders and original forecasts—reconciled.</h2>
   <p>Open the complete 2024–25 and 2025–26 tables: <strong>164 candidate-season results, 28 season leaders and 14 pooled leaders</strong>. The separate current-season view includes 14 replay leaders, qualified market comparisons, and two preserved original-forecast cohorts with later final scores.</p>
-  <p><strong>Latest actual owner: B063R1 failed its startup test; no new owner science ran.</strong> B063R2 is prepared for owner execution. The 115 recovered model artifacts are distinct from new fits or runtime reuse.</p>
+  <p><strong>Latest actual owner: B063R2 passed startup tests, then failed prior-source compatibility; no new owner science ran.</strong> B064 is prepared for owner execution. The measured 12-worker activity was an engineering probe; scientific concurrency was zero. The 115 recovered model artifacts are distinct from new fits or runtime reuse.</p>
   <p><a href="b063r2.html" style="display:inline-block;padding:10px 15px;border-radius:7px;background:#17684f;color:white;font-weight:750;text-decoration:none">Open the latest comparisons and recovery status →</a></p>
   <p style="font-size:12px;color:#52675c;margin-bottom:0">The dated panels below remain preserved. Their earlier counts and execution labels do not supersede this latest review. Saved source cutoffs are shown throughout; this page makes no live-schedule or new-forecast claim.</p>
 </section>
@@ -63,10 +63,15 @@ def validate(payload):
         if row["original_actual"] is not None or not row["original_issued_at"] < row["original_cutoff_time"]:
             raise ValueError("Original issue chronology or actual field changed")
     owner = execution["latest_actual_owner"]
+    if owner["release"] != "B063R2" or execution["continuation"]["release"] != "B064":
+        raise ValueError("Latest actual R2 and prepared B064 must remain separate")
+    if (owner["peak_observed_cpu_cores"] > 0 and owner["peak_scientific_workers"] == 0
+            and not owner.get("probe_utilization_is_not_scientific_parallelism")):
+        raise ValueError("Probe utilization cannot establish scientific parallelism")
     if owner["status"] != "FAILED_PARTIAL_WORK_PRESERVED" or owner["new_verified_scientific_fits"] != 0 or owner["peak_scientific_workers"] != 0:
-        raise ValueError("B063R1 actual return is misrepresented")
+        raise ValueError("B063R2 actual return is misrepresented")
     if execution["continuation"]["status"] != "PREPARED_OWNER_EXECUTION_PENDING" or execution["continuation"]["owner_parallelism_proven"]:
-        raise ValueError("Prepared R2 must not be presented as executed")
+        raise ValueError("Prepared B064 must not be presented as executed")
     return payload
 
 def load_payload():
@@ -117,3 +122,4 @@ def main():
 
 if __name__ == "__main__":
     main()
+

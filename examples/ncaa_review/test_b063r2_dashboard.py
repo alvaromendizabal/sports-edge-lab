@@ -37,6 +37,17 @@ class EvidenceBoundaryTests(unittest.TestCase):
         payload["science"]["historical_per_season_leaders"][0]["value"] += 0.01
         with self.assertRaisesRegex(ValueError, "exact candidate"):
             dashboard.validate(payload)
+
+    def test_latest_r2_preserves_prior_return_and_excludes_probe_credit(self):
+        execution = self.payload["execution"]
+        self.assertEqual(execution["latest_actual_owner"]["release"], "B063R2")
+        self.assertEqual(execution["prior_actual_owner"]["release"], "B063R1")
+        self.assertEqual(execution["latest_actual_owner"]["tests_passed"], 3766)
+        self.assertEqual(execution["latest_actual_owner"]["peak_scientific_workers"], 0)
+        payload = copy.deepcopy(self.payload)
+        payload["execution"]["latest_actual_owner"]["probe_utilization_is_not_scientific_parallelism"] = False
+        with self.assertRaisesRegex(ValueError, "Probe"):
+            dashboard.validate(payload)
         payload = copy.deepcopy(self.payload)
         payload["late"]["rows"][0]["original_actual"] = 1
         with self.assertRaisesRegex(ValueError, "actual field"):
@@ -82,3 +93,4 @@ class EvidenceBoundaryTests(unittest.TestCase):
 
 if __name__ == "__main__":
     unittest.main()
+
