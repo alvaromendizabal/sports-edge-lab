@@ -67,6 +67,8 @@ The prepared V7 continuation prioritizes current forecasts, restores exact old f
 
 ## Current NFL evidence · November 13, 2026 Pacific
 
+**Latest N086 execution failed:** 564.544 seconds, 0.397 mean CPU cores, 15 paid calls and no completed new scientific receipt. Final fit/forecast counts are unknown; zero observed optimizer callbacks are a separate measurement. [Failure evidence](tracks/nfl/2026-11-13-n086-failed-n087-review.json) · [Failure panel](tracks/nfl/season_review_n086.html#latest-execution). N087 repair work is separate; all N085 forecast clocks and scientific results below are preserved.
+
 **The actual N085 executable completed 327 verified new fits: 294 native and 33 meta.** All 78 planned historical candidates completed 234 frozen fits and 156 annual scorecards. The current-season monitor performed 60 new fits and reused 168 predictions. All 180 prior historical fit identities remain preserved. Owner acceptance is still incomplete: the original forward runtime, cohort-identity checks and full comparable coverage remain unresolved.
 
 The [latest NFL all-game research view](tracks/nfl/season_review_n086.html) shows **all 272 games: 137 finals, 111 timed upcoming and 24 kickoff TBD**, with **444 latest selected outputs** at the saved November 13, 09:53:20 Pacific cutoff. It exposes 783 current-season monitoring cards, 63 selected replay cards, all 1,530 historical cards, and separately dated former/original champion evidence. [Model card](tracks/nfl/CURRENT_MODEL_CARD.md) · [Exact aggregate evidence](tracks/nfl/2026-11-13-n085-actual-n086-review.json) · [Prior scientific snapshot](tracks/nfl/season_review_n084.html).
@@ -158,7 +160,7 @@ a narrow missing-clock checkpoint repair.
 
 | Track | Entry point | Publication boundary |
 |---|---|---|
-| NFL | [Latest all-game view](tracks/nfl/season_review_n086.html) · [Current evidence](tracks/nfl/README.md) | Actual N085: 327 fits, 78 completed historical candidates, 783 current-season monitoring cards; acceptance incomplete. All 272 games, 444 selected outputs, 1,530 retained historical cards and explicit former/current/rolling-role limits |
+| NFL | [Latest all-game view](tracks/nfl/season_review_n086.html) · [Current evidence](tracks/nfl/README.md) | Latest N086 failed; final totals unknown, 0 observed optimizer callbacks. Preserved N085: 327 fits, 78 completed historical candidates, 783 current-season monitoring cards; acceptance incomplete. All 272 games, 444 selected outputs, 1,530 retained historical cards and explicit former/current/rolling-role limits |
 | NCAA FBS | [Browser dashboard](https://sports-edge-lab-fbs.alv-mendizabal.chatgpt.site) · [Track](tracks/ncaaf/README.md) | Actual V053 partial; V055 prepared; 500 saved issue contexts across 122 games, with dated provider coverage |
 | NBA | [Research view](docs/NBA_RESEARCH_CARD.md) | Separately dated basketball evidence |
 | NCAA basketball | [Open dashboards](https://alvaro-ncaa-research-review.alv-mendizabal.chatgpt.site/) · [Men's evidence](tracks/ncaam/README.md) · [Women's evidence](tracks/ncaaw/README.md) · [Runnable contracts](examples/ncaa_review/README.md) | Separate historical selections, current execution gaps and three-provider qualification |

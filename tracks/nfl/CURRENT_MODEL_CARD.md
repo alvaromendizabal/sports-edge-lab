@@ -1,5 +1,11 @@
 # NFL current model evidence · authenticated N085
 
+**Latest actual execution: N086 failed after 564.544 seconds.** Three current-science stages were rejected by an active-attempt path guard; finalization then conflicted with an immutable summary. Final new fit/native/meta/forecast counts remain **unknown**, with **0 observed optimizer callbacks/commits** and no completed new scientific receipt. Mean CPU was **0.397 core equivalents** (peak 1.281); **15 paid calls** occurred. This does not meet twelve-core or scientific-progress acceptance. [Exact sanitized failure evidence](2026-11-13-n086-failed-n087-review.json) · [Visible failure panel](season_review_n086.html#latest-execution).
+
+The N086 diagnostic does not close the full current evidence graph: four current artifacts are unresolved, and the physical live log streams are missing despite summary counters. Source reuse was 456 hits / 320,114,459 bytes and 2 source GETs / 3,488 bytes; separately, 1,367 full publication readbacks transferred 115,919,486 bytes. N087 repairs are being prepared; the existing 27-candidate / maximum 81-fit study remains pending. Earlier CI/browser passes missed the failing owner call sequence and are not production-execution proof.
+
+**Last valid science and forecasts remain the authenticated N085 snapshot below.** The 272 games, 444 selected forecasts, 1,530 historical cards, metric values and original source/issue clocks are preserved. This publication performs no source refresh, model fitting, rescoring, promotion or website deployment.
+
 [All games and metric scoreboards](season_review_n086.html) · [Exact aggregate evidence](2026-11-13-n085-actual-n086-review.json)
 
 **The exact N085 owner executable completed 327 verified new fits: 294 native and 33 meta.** All 78 planned historical candidates completed 234 frozen fits and 156 annual 2024/2025 scorecards. The separate current-season monitor completed 60 new fits and reused 168 verified prediction cases. All 180 previous N083 historical fit identities are preserved as reuse. Owner research acceptance remains false; completed work is retained.
