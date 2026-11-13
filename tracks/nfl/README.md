@@ -2,6 +2,7 @@
 
 [Open the NFL browser dashboard](https://sports-edge-lab-nfl.alv-mendizabal.chatgpt.site/) · [Prepared N088 source dashboard](dashboard_n088/index.html) · [Fresh Phase A public scorecards](phase_a_n088_public.json)
 
+**Current Circa / JMac View:** [Open the browser-ready N089 comparison](https://sports-edge-lab-nfl.alv-mendizabal.chatgpt.site/circa/) · [Source and evidence](circa_million_2026/current/README.md). Every official current-board game, frozen model-only versus manual cards, exact history and team splits; missing cover distributions remain explicit. The existing N088 root below is preserved unchanged.
 **New evidence: 171 saved-model scorecards and 10,216 model–game rows were recomputed with zero new fits.** The recovered schedule contains all 272 games: 137 finals, 111 confirmed upcoming and 24 kickoff TBD. Original forecast clocks and the 444 previously issued selected outputs remain intact. Later November fits are labeled later-fitted reconstructions; no historical pregame issue is invented.
 
 **Recovery is partial.** Current union coverage reaches 136 non-tied winner outcomes and 137 point outcomes across different models; the largest single-model cohorts remain 119 winner and 120 margin/total games, at least 17 missing per target. Only one current-season game has recovered original-issued scored rows. Full independent 2024/2025 census reconciliation, missing model bodies, exact same-cutoff provider comparisons and controlled Phase B prerequisites remain unresolved. Automatic rolling refits and automatic promotion are off.

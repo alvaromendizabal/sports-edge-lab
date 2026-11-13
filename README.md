@@ -92,6 +92,8 @@ The prepared V7 continuation prioritizes current forecasts, restores exact old f
 
 ## NFL V10 recovery · November 13, 2026 UTC
 
+**Current Circa / JMac View:** [Open the N089 comparison](https://sports-edge-lab-nfl.alv-mendizabal.chatgpt.site/circa/) · [Current source and evidence](tracks/nfl/circa_million_2026/current/README.md). Frozen model cards and the requested manual JAX −10.5 card remain separate; unavailable cover probabilities are not fabricated. The N088 season dashboard remains unchanged.
+
 [Prepared N088 interactive source](tracks/nfl/dashboard_n088/index.html) · [Current NFL evidence](tracks/nfl/README.md) · [Fresh public Phase A scorecards](tracks/nfl/phase_a_n088_public.json)
 
 **171 saved-model scorecards / 10,216 model–game rows recomputed; zero new fits.** All 272 games remain visible: 137 finals, 111 confirmed upcoming and 24 kickoff TBD. Current union coverage is 136 non-tied winner and 137 point outcomes across models; largest single-model cohorts are only 119 / 120, leaving at least 17 missing outcomes. This is partial recovery, not full-season champion acceptance. Original issues, later-fitted reconstructions and exact-cohort leaders remain separate; no promotion or provider advantage is claimed.
