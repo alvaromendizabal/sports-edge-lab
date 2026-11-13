@@ -2,6 +2,8 @@
 
 [Latest all-game review](season_review_n084.html) · [Selected forecasts](selected_forecasts_n084.json) · [Execution and metrics](2026-11-13-n083-actual-n084-review.json) · [Model card](CURRENT_MODEL_CARD.md)
 
+**November 13 operational update:** a supplied terminal trace stopped at package authentication after approximately 0.917 seconds because the command's required identity and the executable's entrypoint lineage differed. It completed zero new fits or forecasts. The actual owner file hash was not printed. [Failure diagnosis and logging repair contract](N084_BOOTSTRAP_RECOVERY.md). All N083 scientific evidence below remains unchanged.
+
 **Actual N083 completed 376 verified fits: 354 native and 22 meta.** All 60 new historical candidates completed 180 frozen fits and 120 annual 2024/2025 scorecards. A separate 2026 monitor performed 166 new fits and reused two. Owner research acceptance remains false; the original forward runtime and complete comparable season coverage remain unresolved. Completed fits, negative findings, original issues and caches are retained.
 
 The saved cutoff is **November 12, 2026 at 22:51:24 Pacific** (`2026-11-13T06:51:24.256834+00:00`). All **272 games = 137 finals + 111 confirmed upcoming + 24 kickoff TBD** are visible. Washington at New York is now final, 24–21; earlier pregame forecasts retain their actual clocks. The latest selected panel shows **444 outputs for all 111 upcoming timed games**. The 1,776 owner issue events include repeated later issues across 666 game/model pairs; they are not 1,776 distinct games. Another 222 nonselected rows in the latest issue batch remain outside the narrow selected public projection.
