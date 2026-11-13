@@ -1,3 +1,18 @@
+<!-- NCAA_B063R9_ROOT_STATUS_START -->
+## NCAA basketball B063R9 — November 13, 2026 UTC
+
+[Current NCAA repository dashboard](docs/ncaa/index.html) · [Actual R8 failure and verified R9 preparation](docs/ncaa/b063r9.html)
+
+**Latest authenticated owner result: B063R8 failed before scientific workers started, with zero new fits.** The schedule provenance check rejected authenticated cached bytes. Peak reserved capacity remained one CPU; the twelve-core scientific queue was never reached. The return records 118 verified local reads, 1,396,887,267 reused bytes and regular live logging.
+
+**B063R9 is prepared and verified:** 758 unique packaged engineering cases passed, and all eight scientific identities remain unchanged from R8. The repair preserves earlier game rows, model metrics, checkpoints and original issue clocks. Engineering tests earn no new sports-fit credit.
+
+R9 owner execution, complete current-season and upcoming-game refresh, and measured twelve-core scientific acceptance remain pending. The linked repository pages show the actual failure, repair evidence, retained metric leaders and explicit coverage gaps.
+
+**The separately hosted NCAA site has not been redeployed by this update.** Repository publication and hosted browser tests are separate from website deployment. The dated historical reports and other sports' updates below remain preserved.
+
+<!-- NCAA_B063R9_ROOT_STATUS_END -->
+
 ## NCAA basketball B062: execution repaired, earlier models retained — November 11, 2026 UTC
 
 **B060 remains the latest actual owner run; B062 is prepared and locally validated.** B061's reported launch stopped before archive code. The new continuation provides measured source diagnostics, earlier durable fit output, a native-library startup fix, fourteen separate metric roles, and lossless authenticated return splitting. The original checkpoint authority and seven older scientific identities are preserved. Actual twelve-core throughput and fresh future forecasts still require the next owner execution.
