@@ -4,7 +4,7 @@
 
 **The original V072 log reports 36 completed frozen-model fits, followed by zero new market-stage fits and a failure during return packaging.** The original executable and independent exit receipt corroborate the failure; a completed V072 return and all preserved model states have not yet been authenticated in this review. Local engineering repair performs no new sports fitting, forecasting, source refresh or rescoring. Measured 12-core scientific performance remains unverified.
 
-The exact replacement executable passed **754/754 engineering tests**, with zero failures, errors or skips. Its command created and verified a local fictional-artifact archive, then verified and reused the identical archive on a second invocation. These are packaging checks; recovery of the original production artifacts remains pending.
+The exact replacement executable passed **773/773 engineering tests**, with zero failures, errors or skips. Its command created and verified a local fictional-artifact archive, then verified and reused the identical archive on a second invocation. These are packaging checks; recovery of the original production artifacts remains pending.
 
 [Read the dated execution and repair status](V072_EXECUTION_AND_REPAIR_2026-11-13.md) · [Open the retained V071 dashboard](latest-v072.html).
 

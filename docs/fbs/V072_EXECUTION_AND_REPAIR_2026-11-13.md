@@ -27,7 +27,7 @@ The prepared recovery path finalizes preserved local artifacts without repeating
 
 The prepared repairs implement bounded concurrent market conversion, batched checkpoints with immutable incremental manifests, independent CPU admission for eligible scientific fits, and a separate regularly flushed progress log through finalization. Concurrency remains bounded by project limits, shared-host activity, memory and source-request restrictions. Source clocks, content authentication and applicable source rights remain required.
 
-**The exact replacement executable passed all 754 packaged engineering tests, with zero failures, errors or skips.** The earlier candidate had six test errors: five missing-dependency errors and one test-path error during ZIP import. Those problems were corrected before rebuilding and rerunning the complete final suite.
+**The exact replacement executable passed all 773 packaged engineering tests, with zero failures, errors or skips.** The earlier candidate had six test errors: five missing-dependency errors and one test-path error during ZIP import. Those problems were corrected before rebuilding and rerunning the complete final suite.
 
 The actual replacement command then completed finalization on explicitly fictional local artifacts. The output archive was physically verified, original fixture evidence remained unchanged, and a second command invocation verified and reused the identical archive. Both executions returned the deliberate partial-research exit code 2. This demonstrates working packaging and repeat-command recovery; it does not authenticate the original owner’s production artifacts.
 
