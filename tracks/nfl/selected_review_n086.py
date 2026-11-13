@@ -7,6 +7,7 @@ from pathlib import Path
 from zoneinfo import ZoneInfo
 from selected_review_n073 import TEMPLATE
 from selected_review_n083 import replace_once
+from execution_review_n087 import panel as latest_failed_execution
 
 HEALTH = '2026-11-13-n085-actual-n086-review.json'
 FORECAST = 'selected_forecasts_n086.json'
@@ -163,11 +164,12 @@ def render(raw, health):
     page = page.replace('<option value="7200">Two hours before kickoff</option>', '')
     cutoff = datetime.fromisoformat(value['display_cutoff_utc']).astimezone(ZoneInfo('America/Los_Angeles'))
     banner = '<section class="panel" id="latest-attempt"><h2>Actual N085 · 327 completed fits</h2><p class="note"><strong>294 native + 33 meta fits committed. Owner acceptance remains incomplete.</strong> All 78 planned historical candidates completed. The separate 2026 monitor performed 60 new fits and reused 168. Completed work and negative findings stay preserved; no automatic production promotion.</p><p>Saved cutoff: <strong>' + value['display_cutoff_utc'] + '</strong> (' + cutoff.strftime('%B %d, %Y at %H:%M:%S Pacific (%Z)') + '). All <strong>272 games: 137 finals, 111 confirmed upcoming, 24 kickoff TBD</strong>. Latest selected outputs retain their actual early issue clocks; historical one-hour selection labels do not turn them into final-hour issues.</p><p>The exact N085 executable used the preserved N084 scientific namespace. These are authenticated owner results. N086 code preparation is separate and earns no new owner-fit credit. <a href="season_review_n084.html">Previous N083 owner snapshot</a> · <a href="season_review_n083.html">Preserved N082 snapshot</a> · <a href="' + HEALTH + '">Aggregate evidence</a></p></section>'
-    page = replace_once(page, '<main class="wrap">', '<main class="wrap">' + banner)
+    banner = banner.replace('N086 code preparation is separate and earns no new owner-fit credit.', 'The later failed N086 execution is reported above; this N085 scientific snapshot remains unchanged.')
+    page = replace_once(page, '<main class="wrap">', '<main class="wrap">' + latest_failed_execution() + banner)
     page = replace_once(page, 'Latest owner execution: frozen research resumed', 'Execution, reuse and remaining work')
     page = replace_once(page, '<th>New observations</th>', '<th>Admitted comparisons</th>')
     page = replace_once(page, '<section class="panel" id="evidence">', PANELS + '<section class="panel" id="evidence">')
-    page = replace_once(page, '<a href="#evidence">Evidence limits</a>', '<a href="#monitor">2026 comparison</a><a href="#experiments">New science</a><a href="#preserved">Former models</a><a href="#evidence">Evidence limits</a>')
+    page = replace_once(page, '<a href="#evidence">Evidence limits</a>', '<a href="#latest-execution">Latest execution</a><a href="#monitor">2026 comparison</a><a href="#experiments">New science</a><a href="#preserved">Former models</a><a href="#evidence">Evidence limits</a>')
     return page
 
 
