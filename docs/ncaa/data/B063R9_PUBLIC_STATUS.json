@@ -1,0 +1,756 @@
+{
+  "schema": "sel.ncaa.b063r9.public_status.v1",
+  "updated_at_utc": "2026-11-13T19:32:22.855530+00:00",
+  "latest_actual_owner": {
+    "release": "B063R8",
+    "release_identity_basis": "EXACT_EXECUTABLE_SHA256",
+    "source_sha256": "f45ab01b74fd2a67639f90d9933c032a851173e8d1b4d9c20f1b955f50f73235",
+    "status": "FAILED_PARTIAL_WORK_PRESERVED",
+    "failure_code": "B051_SCHEDULE_EXACT_FULL_READBACK_REQUIRED",
+    "failure_type": "ScheduleProjectionError",
+    "started_at_utc": "2026-11-13T19:28:31.572483+00:00",
+    "completed_at_utc": "2026-11-13T19:32:22.855530+00:00",
+    "worker_elapsed_seconds": 231.707490776,
+    "failed_stage": "04_latest_source_refresh",
+    "failed_stage_seconds": 10.042750302000059,
+    "reported_science_phase_seconds": 191.65094264799995,
+    "before_first_recorded_science_stage_seconds": 181.6081923459999,
+    "native_preflight_seconds": 31.024099265999894,
+    "native_fixture_contracts": 26,
+    "native_fixture_sports_fit_credit": 0,
+    "native_cache_status": "UNAVAILABLE",
+    "native_cache_failure_reason": "ValueError:B067_NATIVE_DEPENDENCY_RECORD_REQUIRED:setuptools",
+    "fixture_selftests_seconds": 3.6422569480000675,
+    "initial_admission_wait_seconds": 1.100861704999943,
+    "new_owner_fits": 0,
+    "reused_verified_fits": 0,
+    "new_checkpoints": 0,
+    "reused_checkpoints": 0,
+    "new_forecasts": 0,
+    "new_metric_scores": 0,
+    "new_market_quotes": 0,
+    "durable_return_verified": true,
+    "full_scientific_run_completed": false
+  },
+  "actual_cpu": {
+    "host_effective_vcpus": 48,
+    "configured_project_cap": 12,
+    "launcher_requested_cap": 12,
+    "peak_ready_demand_requested_cpus": 1,
+    "peak_granted_cpus": 1,
+    "peak_observed_process_tree_cpu_cores": 1.0004364834119108,
+    "peak_active_scientific_workers": 0,
+    "scientific_native_callback_starts": 0,
+    "twelve_core_scientific_acceptance_proven": false,
+    "failure_before_ready_scientific_queue": true
+  },
+  "actual_cache": {
+    "verified_local_reads": 118,
+    "verified_local_bytes": 1396887267,
+    "cache_layer_local_bytes": 1396887736,
+    "cache_layer_hits": 119,
+    "full_S3_GETs": 2,
+    "full_S3_GET_bytes": 24079252,
+    "full_S3_GET_seconds": 0.3412936580000405,
+    "full_GET_scope": "CURRENT_OWNER_INSTRUMENTED_STORE; RETURN_PERSISTENCE_SEPARATE",
+    "full_GET_purposes": [
+      "NEW_EXECUTABLE_PUBLICATION_READBACK",
+      "SMALL_RECEIPT_PUBLICATION_READBACK"
+    ],
+    "repeat_frozen_scientific_cache_acceptance_proven": false,
+    "cache_hit_clocks_changed": false,
+    "automatic_eviction": false,
+    "scope_note": "119 lower-level cache hits include one extra small receipt access; 118 store reads and 119 cache hits are not summed."
+  },
+  "actual_logging": {
+    "jsonl_rows": 55,
+    "heartbeats": 26,
+    "maximum_captured_UTC_timestamp_gap_seconds": 10.010604,
+    "maximum_captured_event_elapsed_gap_seconds": 10.01060355300001,
+    "logger_reported_monotonic_max_heartbeat_gap_seconds": 10.010606480000206,
+    "human_log_captured_bytes": 141986,
+    "jsonl_captured_bytes": 248052,
+    "capture_status": "VERIFIED_BOUNDED_PREFIX",
+    "validation_errors": [],
+    "terminal_flush_status": "ACKNOWLEDGED",
+    "terminal_publisher_sequence": 1756,
+    "complete_final_owner_log_claimed": false,
+    "post_capture_events_remain_external": true,
+    "observed_logger_release_label": "B063R7",
+    "release_label_is_executable_identity": false
+  },
+  "actual_cost": {
+    "estimated_whole_instance_invocation_usd": 0.1652139763822528,
+    "verified_rate_usd_per_hour": 2.57,
+    "actual_invoice_cost_usd": null,
+    "overlapping_workload_cost_not_attributed": true,
+    "instance_wall_seconds": 231.428133269,
+    "new_infrastructure": false
+  },
+  "preserved_science": {
+    "current_observed_replay_leaders": [
+      {
+        "candidate_track_count": 21,
+        "cohort_sha256": "c9e3db59ffc3588181707fc2fb2814c0ab3f26264b2ecad0a42f3f3994664b47",
+        "evaluation_mode": "retrospective_reconstructed",
+        "full_official_season_coverage_certified": false,
+        "games": 420,
+        "league": "ncaam",
+        "metric": "accuracy",
+        "metric_name_for_display": "accuracy",
+        "model_names": [
+          "B003 original frozen model",
+          "current-observed-ncaam-win-009d20f3"
+        ],
+        "model_track_count": 3,
+        "public_model_ids": [
+          "B003-original",
+          "current-observed-ncaam-win-009d20f3"
+        ],
+        "season": "2026-27",
+        "season_end_year": 2027,
+        "selection_or_promotion_authority": false,
+        "status": "EXPOSED_DESCRIPTIVE_CURRENT_MONITORING_LEADER",
+        "target": "win",
+        "value": 0.8071428571428572
+      },
+      {
+        "candidate_track_count": 21,
+        "cohort_sha256": "c9e3db59ffc3588181707fc2fb2814c0ab3f26264b2ecad0a42f3f3994664b47",
+        "evaluation_mode": "retrospective_reconstructed",
+        "full_official_season_coverage_certified": false,
+        "games": 420,
+        "league": "ncaam",
+        "metric": "log_loss",
+        "metric_name_for_display": "log_loss",
+        "model_names": [
+          "current-observed-ncaam-win-39bdbd9b"
+        ],
+        "model_track_count": 2,
+        "public_model_ids": [
+          "current-observed-ncaam-win-39bdbd9b"
+        ],
+        "season": "2026-27",
+        "season_end_year": 2027,
+        "selection_or_promotion_authority": false,
+        "status": "EXPOSED_DESCRIPTIVE_CURRENT_MONITORING_LEADER",
+        "target": "win",
+        "value": 0.39384987932977233
+      },
+      {
+        "candidate_track_count": 21,
+        "cohort_sha256": "c9e3db59ffc3588181707fc2fb2814c0ab3f26264b2ecad0a42f3f3994664b47",
+        "evaluation_mode": "retrospective_reconstructed",
+        "full_official_season_coverage_certified": false,
+        "games": 420,
+        "league": "ncaam",
+        "metric": "brier",
+        "metric_name_for_display": "brier",
+        "model_names": [
+          "current-observed-ncaam-win-39bdbd9b"
+        ],
+        "model_track_count": 2,
+        "public_model_ids": [
+          "current-observed-ncaam-win-39bdbd9b"
+        ],
+        "season": "2026-27",
+        "season_end_year": 2027,
+        "selection_or_promotion_authority": false,
+        "status": "EXPOSED_DESCRIPTIVE_CURRENT_MONITORING_LEADER",
+        "target": "win",
+        "value": 0.1271268885699531
+      },
+      {
+        "candidate_track_count": 15,
+        "cohort_sha256": "c9e3db59ffc3588181707fc2fb2814c0ab3f26264b2ecad0a42f3f3994664b47",
+        "evaluation_mode": "retrospective_reconstructed",
+        "full_official_season_coverage_certified": false,
+        "games": 420,
+        "league": "ncaam",
+        "metric": "mae",
+        "metric_name_for_display": "margin_mae",
+        "model_names": [
+          "current-observed-ncaam-margin-39bdbd9b"
+        ],
+        "model_track_count": 2,
+        "public_model_ids": [
+          "current-observed-ncaam-margin-39bdbd9b"
+        ],
+        "season": "2026-27",
+        "season_end_year": 2027,
+        "selection_or_promotion_authority": false,
+        "status": "EXPOSED_DESCRIPTIVE_CURRENT_MONITORING_LEADER",
+        "target": "margin",
+        "value": 10.442247534726475
+      },
+      {
+        "candidate_track_count": 15,
+        "cohort_sha256": "c9e3db59ffc3588181707fc2fb2814c0ab3f26264b2ecad0a42f3f3994664b47",
+        "evaluation_mode": "retrospective_reconstructed",
+        "full_official_season_coverage_certified": false,
+        "games": 420,
+        "league": "ncaam",
+        "metric": "rmse",
+        "metric_name_for_display": "margin_rmse",
+        "model_names": [
+          "current-observed-ncaam-margin-39bdbd9b"
+        ],
+        "model_track_count": 2,
+        "public_model_ids": [
+          "current-observed-ncaam-margin-39bdbd9b"
+        ],
+        "season": "2026-27",
+        "season_end_year": 2027,
+        "selection_or_promotion_authority": false,
+        "status": "EXPOSED_DESCRIPTIVE_CURRENT_MONITORING_LEADER",
+        "target": "margin",
+        "value": 13.241315315172258
+      },
+      {
+        "candidate_track_count": 15,
+        "cohort_sha256": "c9e3db59ffc3588181707fc2fb2814c0ab3f26264b2ecad0a42f3f3994664b47",
+        "evaluation_mode": "retrospective_reconstructed",
+        "full_official_season_coverage_certified": false,
+        "games": 420,
+        "league": "ncaam",
+        "metric": "mae",
+        "metric_name_for_display": "total_mae",
+        "model_names": [
+          "current-observed-ncaam-total-39bdbd9b"
+        ],
+        "model_track_count": 2,
+        "public_model_ids": [
+          "current-observed-ncaam-total-39bdbd9b"
+        ],
+        "season": "2026-27",
+        "season_end_year": 2027,
+        "selection_or_promotion_authority": false,
+        "status": "EXPOSED_DESCRIPTIVE_CURRENT_MONITORING_LEADER",
+        "target": "total",
+        "value": 13.936397219009512
+      },
+      {
+        "candidate_track_count": 15,
+        "cohort_sha256": "c9e3db59ffc3588181707fc2fb2814c0ab3f26264b2ecad0a42f3f3994664b47",
+        "evaluation_mode": "retrospective_reconstructed",
+        "full_official_season_coverage_certified": false,
+        "games": 420,
+        "league": "ncaam",
+        "metric": "rmse",
+        "metric_name_for_display": "total_rmse",
+        "model_names": [
+          "current-observed-ncaam-total-39bdbd9b"
+        ],
+        "model_track_count": 2,
+        "public_model_ids": [
+          "current-observed-ncaam-total-39bdbd9b"
+        ],
+        "season": "2026-27",
+        "season_end_year": 2027,
+        "selection_or_promotion_authority": false,
+        "status": "EXPOSED_DESCRIPTIVE_CURRENT_MONITORING_LEADER",
+        "target": "total",
+        "value": 17.407215598595066
+      },
+      {
+        "candidate_track_count": 21,
+        "cohort_sha256": "8992b5db2704a14f34fca688ea238e8338abbfc1d67df11e1575c2b850c50de4",
+        "evaluation_mode": "retrospective_reconstructed",
+        "full_official_season_coverage_certified": false,
+        "games": 403,
+        "league": "ncaaw",
+        "metric": "accuracy",
+        "metric_name_for_display": "accuracy",
+        "model_names": [
+          "current-observed-ncaaw-win-9fe75806"
+        ],
+        "model_track_count": 1,
+        "public_model_ids": [
+          "current-observed-ncaaw-win-9fe75806"
+        ],
+        "season": "2026-27",
+        "season_end_year": 2027,
+        "selection_or_promotion_authority": false,
+        "status": "EXPOSED_DESCRIPTIVE_CURRENT_MONITORING_LEADER",
+        "target": "win",
+        "value": 0.858560794044665
+      },
+      {
+        "candidate_track_count": 21,
+        "cohort_sha256": "8992b5db2704a14f34fca688ea238e8338abbfc1d67df11e1575c2b850c50de4",
+        "evaluation_mode": "retrospective_reconstructed",
+        "full_official_season_coverage_certified": false,
+        "games": 403,
+        "league": "ncaaw",
+        "metric": "log_loss",
+        "metric_name_for_display": "log_loss",
+        "model_names": [
+          "current-observed-ncaaw-win-12dc8c2d"
+        ],
+        "model_track_count": 2,
+        "public_model_ids": [
+          "current-observed-ncaaw-win-12dc8c2d"
+        ],
+        "season": "2026-27",
+        "season_end_year": 2027,
+        "selection_or_promotion_authority": false,
+        "status": "EXPOSED_DESCRIPTIVE_CURRENT_MONITORING_LEADER",
+        "target": "win",
+        "value": 0.30856380746479206
+      },
+      {
+        "candidate_track_count": 21,
+        "cohort_sha256": "8992b5db2704a14f34fca688ea238e8338abbfc1d67df11e1575c2b850c50de4",
+        "evaluation_mode": "retrospective_reconstructed",
+        "full_official_season_coverage_certified": false,
+        "games": 403,
+        "league": "ncaaw",
+        "metric": "brier",
+        "metric_name_for_display": "brier",
+        "model_names": [
+          "current-observed-ncaaw-win-009d20f3"
+        ],
+        "model_track_count": 2,
+        "public_model_ids": [
+          "current-observed-ncaaw-win-009d20f3"
+        ],
+        "season": "2026-27",
+        "season_end_year": 2027,
+        "selection_or_promotion_authority": false,
+        "status": "EXPOSED_DESCRIPTIVE_CURRENT_MONITORING_LEADER",
+        "target": "win",
+        "value": 0.09915107217789698
+      },
+      {
+        "candidate_track_count": 17,
+        "cohort_sha256": "8992b5db2704a14f34fca688ea238e8338abbfc1d67df11e1575c2b850c50de4",
+        "evaluation_mode": "retrospective_reconstructed",
+        "full_official_season_coverage_certified": false,
+        "games": 403,
+        "league": "ncaaw",
+        "metric": "mae",
+        "metric_name_for_display": "margin_mae",
+        "model_names": [
+          "current-observed-ncaaw-margin-7b88b66b"
+        ],
+        "model_track_count": 2,
+        "public_model_ids": [
+          "current-observed-ncaaw-margin-7b88b66b"
+        ],
+        "season": "2026-27",
+        "season_end_year": 2027,
+        "selection_or_promotion_authority": false,
+        "status": "EXPOSED_DESCRIPTIVE_CURRENT_MONITORING_LEADER",
+        "target": "margin",
+        "value": 12.462371732657212
+      },
+      {
+        "candidate_track_count": 17,
+        "cohort_sha256": "8992b5db2704a14f34fca688ea238e8338abbfc1d67df11e1575c2b850c50de4",
+        "evaluation_mode": "retrospective_reconstructed",
+        "full_official_season_coverage_certified": false,
+        "games": 403,
+        "league": "ncaaw",
+        "metric": "rmse",
+        "metric_name_for_display": "margin_rmse",
+        "model_names": [
+          "current-observed-ncaaw-margin-7b88b66b"
+        ],
+        "model_track_count": 2,
+        "public_model_ids": [
+          "current-observed-ncaaw-margin-7b88b66b"
+        ],
+        "season": "2026-27",
+        "season_end_year": 2027,
+        "selection_or_promotion_authority": false,
+        "status": "EXPOSED_DESCRIPTIVE_CURRENT_MONITORING_LEADER",
+        "target": "margin",
+        "value": 16.100636813432793
+      },
+      {
+        "candidate_track_count": 17,
+        "cohort_sha256": "8992b5db2704a14f34fca688ea238e8338abbfc1d67df11e1575c2b850c50de4",
+        "evaluation_mode": "retrospective_reconstructed",
+        "full_official_season_coverage_certified": false,
+        "games": 403,
+        "league": "ncaaw",
+        "metric": "mae",
+        "metric_name_for_display": "total_mae",
+        "model_names": [
+          "current-observed-ncaaw-total-2fde92b8"
+        ],
+        "model_track_count": 2,
+        "public_model_ids": [
+          "current-observed-ncaaw-total-2fde92b8"
+        ],
+        "season": "2026-27",
+        "season_end_year": 2027,
+        "selection_or_promotion_authority": false,
+        "status": "EXPOSED_DESCRIPTIVE_CURRENT_MONITORING_LEADER",
+        "target": "total",
+        "value": 14.277967775171854
+      },
+      {
+        "candidate_track_count": 17,
+        "cohort_sha256": "8992b5db2704a14f34fca688ea238e8338abbfc1d67df11e1575c2b850c50de4",
+        "evaluation_mode": "retrospective_reconstructed",
+        "full_official_season_coverage_certified": false,
+        "games": 403,
+        "league": "ncaaw",
+        "metric": "rmse",
+        "metric_name_for_display": "total_rmse",
+        "model_names": [
+          "current-observed-ncaaw-total-7371d966"
+        ],
+        "model_track_count": 2,
+        "public_model_ids": [
+          "current-observed-ncaaw-total-7371d966"
+        ],
+        "season": "2026-27",
+        "season_end_year": 2027,
+        "selection_or_promotion_authority": false,
+        "status": "EXPOSED_DESCRIPTIVE_CURRENT_MONITORING_LEADER",
+        "target": "total",
+        "value": 17.880689486409636
+      }
+    ],
+    "earlier_source_census": {
+      "census_asof_utc": "2026-11-11T06:02:54.852518+00:00",
+      "coverage": {
+        "certified_complete_season_denominator": false,
+        "normalized_espn_records": 2498,
+        "normalized_observed_completed_records": 1165,
+        "observed_records": 3457,
+        "original_reference_scored_games": 814,
+        "unit": "SOURCE_RECORDS_NOT_CERTIFIED_UNIQUE_GAMES",
+        "unmatched_official_candidates": 934,
+        "unresolved_candidates": 25
+      },
+      "evidence_asof_utc": "2026-11-11T06:29:49.601626+00:00",
+      "is_same_population_as_latest_replay": false,
+      "source_counts": {
+        "cohorts": {
+          "ncaam|OBSERVED_SOURCE_GAME_WITHOUT_BOUND_MODEL_ROW": 1252,
+          "ncaam|UNMATCHED_OFFICIAL_CANDIDATE_RECORD": 527,
+          "ncaam|UNRESOLVED_SOURCE_CANDIDATE_RECORD": 21,
+          "ncaaw|OBSERVED_SOURCE_GAME_WITHOUT_BOUND_MODEL_ROW": 1246,
+          "ncaaw|UNMATCHED_OFFICIAL_CANDIDATE_RECORD": 407,
+          "ncaaw|UNRESOLVED_SOURCE_CANDIDATE_RECORD": 4
+        },
+        "completed_observed_records": 1547,
+        "distinct_source_event_ids": 3457,
+        "new_issues_in_this_pre_model_census": 0,
+        "normalized_espn_games": 2498,
+        "observed_records": 3457,
+        "provider_status_counts": {
+          "draftkings": {
+            "margin": {
+              "unavailable": 3457
+            },
+            "total": {
+              "unavailable": 3457
+            },
+            "win": {
+              "unavailable": 3457
+            }
+          },
+          "kalshi": {
+            "margin": {
+              "unavailable": 3457
+            },
+            "total": {
+              "unavailable": 3457
+            },
+            "win": {
+              "unavailable": 3457
+            }
+          },
+          "polymarket": {
+            "margin": {
+              "unavailable": 3457
+            },
+            "total": {
+              "unavailable": 3457
+            },
+            "win": {
+              "unavailable": 3457
+            }
+          }
+        },
+        "unmatched_official_candidates": 934,
+        "unresolved_source_candidates": 25
+      }
+    },
+    "evidence_asof": "2026-11-11T22:39:45.642794+00:00",
+    "historical_candidate_metric_panels": 164,
+    "historical_per_season_leaders": 28,
+    "historical_pooled_leaders": 14,
+    "provider_coverage": [
+      {
+        "candidate_comparisons": 321,
+        "evidence_modes": [],
+        "games_counted_across_models_not_unique_coverage": true,
+        "gap_occurrences_across_candidate_comparisons": {
+          "live_quote_not_pregame": 315,
+          "missing_or_incompatible_settlement_rule": 2261,
+          "prospective_quote_acquired_after_cutoff": 462,
+          "provider_quote_missing": 15795,
+          "quote_after_cutoff": 462,
+          "quote_exceeds_declared_max_age": 1799
+        },
+        "maximum_matched_games_in_one_comparison": 0,
+        "missing_evidence_is_not_zero_error": true,
+        "positive_candidate_comparisons": 0,
+        "provider_product": "draftkings_us",
+        "qualified_positive_leagues": []
+      },
+      {
+        "candidate_comparisons": 321,
+        "evidence_modes": [],
+        "games_counted_across_models_not_unique_coverage": true,
+        "gap_occurrences_across_candidate_comparisons": {
+          "provider_quote_missing": 18056
+        },
+        "maximum_matched_games_in_one_comparison": 0,
+        "missing_evidence_is_not_zero_error": true,
+        "positive_candidate_comparisons": 0,
+        "provider_product": "kalshi_us",
+        "qualified_positive_leagues": []
+      },
+      {
+        "candidate_comparisons": 321,
+        "evidence_modes": [],
+        "games_counted_across_models_not_unique_coverage": true,
+        "gap_occurrences_across_candidate_comparisons": {
+          "provider_quote_missing": 18056
+        },
+        "maximum_matched_games_in_one_comparison": 0,
+        "missing_evidence_is_not_zero_error": true,
+        "positive_candidate_comparisons": 0,
+        "provider_product": "polymarket_us",
+        "qualified_positive_leagues": []
+      },
+      {
+        "candidate_comparisons": 321,
+        "evidence_modes": [
+          "retrospective_reconstructed"
+        ],
+        "games_counted_across_models_not_unique_coverage": true,
+        "gap_occurrences_across_candidate_comparisons": {
+          "provider_quote_missing": 10554,
+          "quote_exceeds_declared_max_age": 63
+        },
+        "maximum_matched_games_in_one_comparison": 338,
+        "missing_evidence_is_not_zero_error": true,
+        "positive_candidate_comparisons": 139,
+        "provider_product": "polymarket_international",
+        "qualified_positive_leagues": [
+          "ncaam"
+        ]
+      }
+    ],
+    "schema": "sel.r8.preserved_public_science_inventory.v1",
+    "scope": "PREVIOUSLY_VALIDATED_SAVED_EVIDENCE_RETAINED_EXACTLY; NOT_NEW_R7_OR_R8_SCIENCE",
+    "scope_notes": [
+      "Historical seasonal panel now includes all 12 retained recipes plus selected native candidates. It does not rank all 6320 registered contexts.",
+      "Pooled and per-season descriptive roles are distinct; no current-season outcomes selected historical recipes.",
+      "2026-27 replay support is 420 men / 403 women games through saved evidence, not the entire official season to today.",
+      "Original B003 comparable 2024-25/2025-26 panels remain missing.",
+      "No qualified positive DraftKings US, Kalshi US, or Polymarket US paired panel; qualified men Polymarket International panel has 338 games and only 3 week blocks.",
+      "Post-issue outcome monitoring remains separate from replay; neither changes immutable original forecast values or timestamps."
+    ],
+    "selected_original_recovery": {
+      "asof_utc": "2026-11-12T17:45:02.032086+00:00",
+      "complete_current_season": false,
+      "new_upcoming_forecasts": 0,
+      "selected_original_rows": 90,
+      "selected_recovery": {
+        "complete_official_current_schedule_coverage": false,
+        "current_outcome_status": "NOT_REFRESHED; ORIGINAL NOVEMBER11 EVENT TIMES ARE PAST AT RECOVERY",
+        "currently_upcoming_coverage_claimed": false,
+        "cutoff_to_tip_minutes": 60,
+        "earlier_matching_role_versions_retained_privately": 180,
+        "early_matches_to_new_frozen_core_or_fixed_ensemble_roles": 0,
+        "event_times": [
+          "2026-11-11T23:00:00+00:00",
+          "2026-11-11T23:30:00+00:00"
+        ],
+        "exact_prepared_display_matches": 90,
+        "first_issued_at": "2026-11-11T21:40:48.016082+00:00",
+        "last_issued_at": "2026-11-11T21:41:47.452268+00:00",
+        "matching_preserved_role_original_versions": 270,
+        "new_B063_issues": 0,
+        "new_fits": 0,
+        "new_promotions": 0,
+        "nonselected_candidate_rows_retained_privately": 1769,
+        "original_issue_to_tip_minutes_max": 109.19973196666666,
+        "original_issue_to_tip_minutes_min": 78.20912886666666,
+        "overlap_with_existing142_published_issues": 0,
+        "projected_public_issue_rows_after_merge": 232,
+        "publication_scope": "Only these 90 selected-role rows may enter the public dashboard. The full 2,039-row candidate grid remains private.",
+        "qualification_scope": "Immutable original record bytes, hashes, server clocks and source-export bindings independently checked. Full underlying model/source bytes were not all reopened; no new promotion or complete scientific closure is claimed.",
+        "recovered_immutable_objects": 126,
+        "recovered_original_rows_preserved_privately": 2039,
+        "refreshed_outcomes": 0,
+        "selected_games": 30,
+        "selected_games_by_league": {
+          "ncaam": 4,
+          "ncaaw": 26
+        },
+        "selected_original_rows": 90,
+        "selected_rows_by_league": {
+          "ncaam": 12,
+          "ncaaw": 78
+        },
+        "selected_rows_by_target": {
+          "margin": 30,
+          "total": 30,
+          "win": 30
+        },
+        "selection_method": "Existing authenticated preserved primary model for each league/target; select its latest original issue time per game/target; exact agreement with prior prepared selected display; no outcome use.",
+        "source_current_outcomes_used_for_selection": false,
+        "status": "VERIFIED_SELECTED_ROLE_ORIGINALS_READY_FOR_DASHBOARD_REVIEW"
+      }
+    },
+    "source_sha256": "afd11df371e7886d6ed0adc97802fee565259cc9c95701f7cf8d133559f7f766"
+  },
+  "preserved_evidence": {
+    "authenticated_prior_target_fits": 22,
+    "exact_content_objects_reverified": 134,
+    "model_deserializations_in_review": 0,
+    "new_fit_credit_for_preservation": 0,
+    "previous_public_science_and_issue_clocks_unchanged": true,
+    "prior_release": "B063R3",
+    "scientific_runtime_compatibility_still_required": true,
+    "broader_B062_target_fit_receipts": 115,
+    "broader_B062_terminal_commit_references": 2793,
+    "distinct_run_inventories_summed": false,
+    "all_broader_model_bytes_reopened": false,
+    "capsule_content_bytes_reverified": 3553676
+  },
+  "metric_policy": {
+    "current_season_complete": false,
+    "metrics": [
+      "accuracy",
+      "log_loss",
+      "brier",
+      "margin_mae",
+      "margin_rmse",
+      "total_mae",
+      "total_rmse"
+    ],
+    "missing_quotes_fabricated": false,
+    "new_scores": null,
+    "provider_refresh_performed": false,
+    "rolling_or_original_issue_promotion": false
+  },
+  "coverage_status": {
+    "current_season": "2026-27",
+    "current_season_complete": false,
+    "upcoming_schedule_complete": false,
+    "latest_attempt_refreshed_game_inventory": false,
+    "saved_source_records": 3457,
+    "saved_normalized_espn_records": 2498,
+    "saved_unmatched_official_candidates": 934,
+    "saved_unresolved_source_candidates": 25,
+    "saved_source_census_asof_utc": "2026-11-11T06:02:54.852518+00:00",
+    "saved_replay_games_by_league": {
+      "ncaam": 420,
+      "ncaaw": 403
+    },
+    "saved_replay_evidence_asof_utc": "2026-11-11T22:39:45.642794+00:00",
+    "saved_selected_original_target_rows": 90,
+    "saved_selected_original_games": 30,
+    "populations_are_distinct_and_not_added": true,
+    "missing_reason": "SCHEDULE_PROVENANCE_FAILURE_BEFORE_SOURCE_REFRESH_OR_NEW_SCIENCE",
+    "all_prior_public_game_and_metric_payloads_preserved": true
+  },
+  "prepared_continuation": {
+    "release": "B063R9",
+    "status": "PREPARED_FINAL_SOURCE_OWNER_EXECUTION_PENDING",
+    "source_sha256": "621294edf89ff50c8fcfb955bde2b683dbc548de52a67effdd5209fff925486b",
+    "source_bytes": 25846901,
+    "owner_execution_performed": false,
+    "new_owner_scientific_fits": 0,
+    "twelve_core_owner_utilization_proven": false,
+    "validation": {
+      "scope": "PASS_FINAL_SEALED_ENGINEERING_OWNER_EXECUTION_PENDING",
+      "packaged_unique_cases_passed": 758,
+      "targeted_packaged_cases_passed": 607,
+      "startup_cases_passed": 185,
+      "startup_cases_overlapping_targeted_cases": 34,
+      "failed_cases": 0,
+      "errored_cases": 0,
+      "skipped_cases": 0,
+      "cold_startup_wall_seconds": 3.703438006,
+      "warm_startup_wall_seconds": 0.587510476,
+      "cold_startup_function_seconds": 2.374732261,
+      "warm_startup_function_seconds": 0.40660725,
+      "warm_startup_reexecuted_cases": 0,
+      "warm_startup_integrity_verified_reused_cases": 185,
+      "native_inventory_and_ready_queue_cases_passed": 51,
+      "separate_public_R4_through_R9_status_cases_passed": 67,
+      "new_R9_public_cases_within_public_status_scope": 17,
+      "test_scopes_are_not_added_to_sports_fits": true,
+      "local_browser_status": "BLOCKED_BEFORE_PAGE_LOAD_SOCKET_PERMISSION",
+      "public_summary": "The final sealed R9 package passed 758 unique engineering cases: 607 targeted cases plus 185 cold-startup cases, with 34 overlaps removed; there were zero failures, errors or skips. The startup suite took 3.703 seconds cold and 0.588 seconds warm. The warm path reused 185 integrity-verified results and reexecuted zero cases. These timings describe engineering startup, not native scientific preflight or training throughput. A separate public review scope passed 67 R4-through-R9 status and preservation cases, including 17 new R9 cases. Local Chromium was blocked before loading a page by environment socket permissions; desktop, mobile, keyboard and exact-export checks are integrated into the public browser suite. No R9 owner execution, new sports fits or twelve-core scientific utilization is claimed."
+    },
+    "science_identity_continuity": {
+      "reference_release": "B063R8",
+      "all_eight_scientific_identities_unchanged": true,
+      "fitted_families_unchanged": 7,
+      "rolling_v7_identity_unchanged": true
+    },
+    "receipt_replay": {
+      "scope": "ACTUAL_CAPTURED_112_JSON_RECEIPT_AND_METADATA_SUBSET_LOCAL_ENGINEERING_ONLY",
+      "selected_files": 112,
+      "distinct_bytes": 666672,
+      "baseline_median_wall_seconds": 0.08240636199479923,
+      "optimized_median_wall_seconds": 0.03448810800909996,
+      "median_speedup_ratio": 2.389413822673475,
+      "scientific_fits": 0,
+      "network_requests": 0,
+      "model_deserializations": 0,
+      "full_adoption_speedup_claimed": false,
+      "original_181_second_owner_adoption_workload_reproduced": false,
+      "legacy_adoption_chain_still_runs": true,
+      "current_files_fully_hashed_at_all_existing_recheck_boundaries": true,
+      "limits": [
+        "Measures local byte-reading, strict JSON parsing and recursive receipt proof work only.",
+        "Does not measure SageMaker filesystem, S3, full adoption, model deserialization or scientific fitting."
+      ]
+    },
+    "changes": [
+      "Accept authenticated persistent schedule bytes with exact original readback provenance; do not require a redundant network read.",
+      "Restore explicit admission of the authenticated prior-recovery import; the existing legacy adoption chain still runs.",
+      "Reuse parsed receipt proofs while still fully hashing each current file at every existing recheck boundary; no full owner-adoption speedup is claimed.",
+      "Support complete installed conda or egg dependency inventories when native validation cache metadata has no wheel RECORD.",
+      "Retain shared CPU, memory, disk and ownership admission; exercise the one-core startup to twelve-item ready-queue dispatch path.",
+      "Use the current continuation release in bound live logging metadata."
+    ]
+  },
+  "publication": {
+    "scope": "NCAA_MEN_AND_WOMEN_SANITIZED_OPERATIONAL_AND_PRESERVED_ANALYTICAL_REPORT",
+    "base_commit": "c63b6ed8350c52ce6f01695eefef7ccf07934f2c",
+    "source_publication_status": "PREPARED",
+    "hosted_site_deployment_claimed": false,
+    "provider_refresh_claimed": false,
+    "automatic_promotion_claimed": false,
+    "private_packages_and_cloud_paths_included": false
+  },
+  "source_attribution": {
+    "actual_outer_return_sha256": "a61bdc5da69e0553c96e676165912f0a16ebd47a5fda4829605a18ac8a9bd057",
+    "actual_outer_return_bytes": 35007679,
+    "actual_owner_evidence": [
+      "launcher_completion.json",
+      "stage_state.json",
+      "B039_IO_AND_RESOURCES.json",
+      "B058_early_native_contract_preflight.json",
+      "B068_LIVE_LOG_RETURN_EVIDENCE.json",
+      "LIVE_EXECUTION.jsonl"
+    ],
+    "preserved_public_status_blob_sha": "3811819c8615b56d21bd8d3d0efad055f033295e",
+    "preserved_public_status": "B063R8_PUBLIC_STATUS.json",
+    "new_scientific_results_from_this_update": false
+  }
+}

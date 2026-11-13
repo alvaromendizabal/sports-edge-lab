@@ -1,3 +1,41 @@
+<!-- B063R9_STATUS_START -->
+## Latest authenticated return: R8 reused data, then failed before science
+
+The November 13 R8 owner attempt ended after 231.707 seconds with
+`B051_SCHEDULE_EXACT_FULL_READBACK_REQUIRED`. Its configured project ceiling was
+12 CPUs on a 48-vCPU host, but actual peak admission was one CPU. No scientific
+worker, target fit, new forecast, new metric score or new market quote completed.
+
+The failed attempt does provide measured engineering evidence: 118 verified
+store reads reused 1,396,887,267 local bytes, while two full acquisition GETs
+totaled 24,079,252 bytes. These do not include separate return persistence.
+The live log captured 55 event records and 26 heartbeats, with a maximum
+event timestamp gap of 10.010604 seconds and an acknowledged terminal flush. The
+logger's internal cadence clock reports a maximum of 10.010606 seconds. The
+captured prefix is bounded; events after capture remain external.
+
+R9 repairs the cache provenance witness, explicit authenticated prior-recovery
+admission, native dependency inventory caching and live release identity. Parsed
+receipt proofs are reused while every current file is still fully hashed at
+every existing recheck boundary. The legacy adoption chain still runs. A local
+replay of 112 captured JSON receipt/metadata files measured a 2.389× median
+speedup for that subset only; it does not measure the original 181.608-second
+owner adoption phase, SageMaker storage, S3 or scientific training.
+
+The prepared source fingerprint and
+exact engineering scope are reported in `b063r9.html` and
+`B063R9_PUBLIC_STATUS.json`. These checks earn zero sports-fit credit. R9 owner
+execution and measured twelve-core scientific throughput remain pending.
+
+Every earlier public game, issue clock, model comparison and market gap remains
+preserved. The dated census has 3,457 source records, not certified unique games;
+the saved current-season reconstructed replay has 420 men's and 403 women's
+games. The latest attempt did not refresh either complete current-season or
+upcoming coverage. All seven metric leaders for each league remain visible with
+their original November 11 evidence time and selection qualifications.
+
+<!-- B063R9_STATUS_END -->
+
 <!-- B063R8_STATUS_START -->
 ## Latest actual return: R7 waited 120 seconds without admitting science
 

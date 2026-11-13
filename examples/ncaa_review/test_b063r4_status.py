@@ -4,7 +4,9 @@ import hashlib,json,re,unittest
 from b063r5_status import strip_banner as strip_r5_banner
 from b063r6_status import strip_banner as strip_r6_banner
 from b063r7_status import strip_banner as strip_r7_only
-from b063r8_status import strip_banner as strip_r8_banner
+from b063r8_status import strip_banner as strip_r8_only
+from b063r9_status import strip_banner as strip_r9_banner
+def strip_r8_banner(body):return strip_r8_only(strip_r9_banner(body))
 def strip_r7_banner(body):return strip_r7_only(strip_r8_banner(body))
 def strip_latest_banner(body):return strip_r5_banner(strip_r6_banner(strip_r7_banner(body)))
 ROOT=Path(__file__).resolve().parents[2]
@@ -53,7 +55,7 @@ class B063R4PublicStatus(unittest.TestCase):
   body=(EX/'README.md').read_bytes().split(b'<!-- B063R5_STATUS_END -->\n\n',1)[1];marker=b'<!-- B063R4_STATUS_END -->\n\n'
   self.assertTrue(body.startswith(b'<!-- B063R4_STATUS_START -->'))
   self.assertEqual(git_blob(body.split(marker)[1]),self.data['source_attribution']['preserved_git_blobs']['examples/ncaa_review/README.md'])
-  body=(EX/'test_dashboard_browser.cjs').read_bytes().replace(b"    counts.b063r8Status = await require('./test_b063r8_status_browser.cjs').verifyR8(browser, path.join(root, 'docs/ncaa/b063r8.html'));\n",b'').replace(b"    counts.b063r7Status = await require('./test_b063r7_status_browser.cjs').verifyR7(browser, path.join(root, 'docs/ncaa/b063r7.html'));\n",b'').replace(b"    counts.b063r6Status = await require('./test_b063r6_status_browser.cjs').verifyR6(browser, path.join(root, 'docs/ncaa/b063r6.html'));\n",b'').replace(b"    counts.b063r5Status = await require('./test_b063r5_status_browser.cjs').verifyR5(browser, path.join(root, 'docs/ncaa/b063r5.html'));\n",b'');line=b"    counts.b063r4Status = await require('./test_b063r4_status_browser.cjs').verifyR4(browser, path.join(root, 'docs/ncaa/b063r4.html'));\n"
+  body=(EX/'test_dashboard_browser.cjs').read_bytes().replace(b"    counts.b063r9Status = await require('./test_b063r9_status_browser.cjs').verifyR9(browser, path.join(root, 'docs/ncaa/b063r9.html'));\n",b'').replace(b"    counts.b063r8Status = await require('./test_b063r8_status_browser.cjs').verifyR8(browser, path.join(root, 'docs/ncaa/b063r8.html'));\n",b'').replace(b"    counts.b063r7Status = await require('./test_b063r7_status_browser.cjs').verifyR7(browser, path.join(root, 'docs/ncaa/b063r7.html'));\n",b'').replace(b"    counts.b063r6Status = await require('./test_b063r6_status_browser.cjs').verifyR6(browser, path.join(root, 'docs/ncaa/b063r6.html'));\n",b'').replace(b"    counts.b063r5Status = await require('./test_b063r5_status_browser.cjs').verifyR5(browser, path.join(root, 'docs/ncaa/b063r5.html'));\n",b'');line=b"    counts.b063r4Status = await require('./test_b063r4_status_browser.cjs').verifyR4(browser, path.join(root, 'docs/ncaa/b063r4.html'));\n"
   self.assertEqual(body.count(line),1)
   self.assertEqual(git_blob(body.replace(line,b'')),self.data['source_attribution']['preserved_git_blobs']['examples/ncaa_review/test_dashboard_browser.cjs'])
  def test_standalone_page_contains_exact_downloadable_evidence(self):
