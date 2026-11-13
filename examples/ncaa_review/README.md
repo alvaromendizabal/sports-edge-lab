@@ -1,3 +1,11 @@
+<!-- B063R5_STATUS_START -->
+## Latest owner result: B063R4 preflight failed
+
+The authenticated latest return reports `PREFLIGHT_FAILED` and **zero new owner fits**. A missing Python process-handle binding stopped recovery before a new worker began. The return does not establish the older owner's shutdown or kernel capabilities, and its referenced recovery diagnostic was absent. All **22 prior target fits and 134 saved content objects** remain preserved.
+
+The [B063R5 operational report](../../docs/ncaa/b063r5.html) separates this failure from the prepared compatibility repair. The [downloadable status JSON](../../docs/ncaa/data/B063R5_PUBLIC_STATUS.json) records exact source fingerprints, unknown environment fields and validation scope. Existing scientific populations, model leaders, game rows, market rows and issue clocks remain intact. The established Python and Chromium review gates test this additive layer and its offline JSON download.
+<!-- B063R5_STATUS_END -->
+
 <!-- B063R4_STATUS_START -->
 ## B063R4 runtime repair and authenticated partial R3 progress — November 13, 2026 UTC
 
