@@ -14,13 +14,18 @@ import re
 import threading
 import uuid
 
-from sports_edge_live import LiveExecutionLog, project_measurements
+from sports_edge_live import LiveExecutionLog, project_measurements, utc
 
 PROJECTS = frozenset(('nfl', 'fbs', 'nba', 'ncaa_basketball'))
 SCHEMA = 'sports-edge-lab.n085.live-event-adapter.v1'
 _RUN_ID = re.compile(r'[A-Za-z0-9][A-Za-z0-9_.-]{0,127}')
 _PHASE_NOISE = frozenset(('resource_admission_decision', 'cpu_lease_released',
     'N080_MEASURED_PROGRESS', 'N075_TRANSIENT_RESOURCE_RECOVERY', 'N080_LOG_HEARTBEAT'))
+_PHASE_LOCAL_DEFAULTS = dict.fromkeys(('stage', 'total_stages', 'substage',
+    'completed', 'remaining', 'total', 'completed_tasks', 'remaining_tasks',
+    'successes', 'failures', 'work_unit', 'throughput_per_second',
+    'eta_seconds', 'eta_observed_rate_range_seconds'))
+_PHASE_LOCAL_DEFAULTS['eta_uncertainty'] = 'NEW_PHASE_AWAITING_CURRENT_DENOMINATOR_AND_RATE'
 
 
 def _safe(path):
@@ -77,6 +82,7 @@ def new_run(home, project, *, release='N085', run_id=None, flush_seconds=10.):
         release=release, invocation_id=identifier, interval=float(flush_seconds))
     log._n085_observation_lock = threading.RLock()
     log._n085_last_source_phase = None
+    log._n085_observed_phase = 'BOOTSTRAP_BEFORE_PACKAGE_AUTHENTICATION'
     log._n085_events_received = 0
     log._n085_pending_state = {}
     log._n085_latest_training = {}
@@ -112,7 +118,13 @@ def normalize_event(event):
     event = _map(event)
     result = {}
     source_stage = _text(event.get('stage'))
-    phase = _text(event.get('stage_name')) or _text(event.get('owner_stage'))
+    phase = _text(event.get('stage_name'))
+    if phase in _PHASE_NOISE:
+        phase = None
+    if phase is None:
+        owner_phase = _text(event.get('owner_stage'))
+        if owner_phase not in _PHASE_NOISE:
+            phase = owner_phase
     if phase is None and source_stage not in _PHASE_NOISE:
         phase = source_stage
     if phase:
@@ -141,6 +153,9 @@ def normalize_event(event):
     for source_key, target in (('eta_seconds', 'eta_seconds'),):
         if source_key in event:
             result[target] = _num(event[source_key])
+            result['eta_uncertainty'] = (_text(event.get('eta_uncertainty')) or
+                ('SOURCE_REPORTED_ETA_SUPPORT_NOT_INFERRED' if result[target] is not None else
+                 'CURRENT_SOURCE_ETA_UNKNOWN'))
     if eta:
         result['eta_seconds'] = _num(eta.get('total_remaining_eta_seconds', eta.get('seconds')))
         result['eta_uncertainty'] = _text(eta.get('status')) or 'SOURCE_ETA_NOT_SUPPORTED'
@@ -267,6 +282,19 @@ def observe(log, event=None, **fields):
     normalized = normalize_event(event)
     with log._n085_observation_lock:
         log._n085_events_received += 1
+        phase = normalized.get('stage_name')
+        if phase and phase != log._n085_observed_phase:
+            # Do this on observation, not on eventual writer consumption: a
+            # coalesced A -> B transition must replace A's pending denominator
+            # too. Explicit metrics carried by this B event override defaults.
+            normalized = {**_PHASE_LOCAL_DEFAULTS, **normalized}
+            log._n085_observed_phase = phase
+            normalized['training_progress']['phase_progress_epoch'] = {
+                'stage_name': phase, 'observed_at_utc': utc(),
+                'source_at_utc': _text(event.get('at_utc', event.get('observed_at_utc'))),
+                'prior_phase_progress_and_eta_discarded': True,
+                'reported_same_event_values_preserved': True,
+            }
         log._n085_latest_training.update(normalized.get('training_progress', {}))
         normalized['training_progress'] = dict(log._n085_latest_training)
         log._n085_pending_state.update(normalized)
@@ -301,11 +329,13 @@ def _observation_loop(log):
 
 
 def error(log, exc, *, phase=None):
+    fields = {'status': 'FAILED', 'eta': {'total_remaining_eta_seconds': None,
+        'status': 'EXECUTION_FAILED_ETA_UNAVAILABLE'}}
     if phase:
-        log.update_state({'stage_name': _text(phase), 'status': 'FAILED'})
-    else:
-        log.update_state({'status': 'FAILED'})
-    log.event('EXECUTION_EXCEPTION', exception_type=type(exc).__name__, message=str(exc)[:2000])
+        fields['stage_name'] = _text(phase)
+    observe(log, fields)
+    log.event('EXECUTION_EXCEPTION', exception_type=type(exc).__name__, message=str(exc)[:2000],
+              failed_phase=_text(phase), future_eta_unavailable=True)
     log.flush()
 
 

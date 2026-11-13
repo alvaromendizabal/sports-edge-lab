@@ -133,6 +133,73 @@ except Exception as exc:
         incomplete=bridge.normalize_event({'observed_active_optimizer_calls':12,'active_optimizer_calls':[{'meta':False}]})
         self.assertNotIn('native',incomplete)
 
+    def test_new_phase_clears_old_progress_eta_and_preserves_explicit_new_values(self):
+        log=self.new()
+        bridge.observe(log,{'stage_name':'PHASE_A','stage':2,'total_stages':8,
+            'completed':4,'remaining':6,'total':10,'completed_tasks':4,'remaining_tasks':6,
+            'work_unit':'models','throughput_per_second':2,'eta_seconds':3,
+            'counts':{'fits_new':4,'fits_reused':1}})
+        self.wait_state(log,'stage_name','PHASE_A')
+        bridge.observe(log,{'stage_name':'PHASE_B'})
+        self.wait_state(log,'stage_name','PHASE_B')
+        for key in ('completed','remaining','total','completed_tasks','remaining_tasks',
+                    'work_unit','throughput_per_second','eta_seconds','stage','total_stages'):
+            self.assertIsNone(log.state[key],key)
+        self.assertEqual(log.state['eta_uncertainty'],'NEW_PHASE_AWAITING_CURRENT_DENOMINATOR_AND_RATE')
+        self.assertEqual(project_measurements(log.state)['fits']['new'],4)
+        self.assertTrue(log.state['training_progress']['phase_progress_epoch']['prior_phase_progress_and_eta_discarded'])
+        bridge.observe(log,{'stage_name':'PHASE_C','completed':2,'remaining':3,'total':5,
+            'work_unit':'partitions','throughput_per_second':.5,
+            'eta':{'status':'MEASURED_CURRENT_PHASE','total_remaining_eta_seconds':6}})
+        self.wait_state(log,'stage_name','PHASE_C')
+        for key,value in {'completed':2,'remaining':3,'total':5,'work_unit':'partitions',
+                          'throughput_per_second':.5,'eta_seconds':6}.items():
+            self.assertEqual(log.state[key],value,key)
+        self.assertEqual(log.state['eta_uncertainty'],'MEASURED_CURRENT_PHASE')
+        bridge.observe(log,{'stage_name':'PHASE_C','counts':{'fits_new':5}})
+        self.wait_state(log,'invocation_fit_counts',{'new':5,'reused':None,'failed':None})
+        self.assertEqual(log.state['remaining'],3);self.assertEqual(log.state['eta_seconds'],6)
+
+    def test_phase_resets_survive_coalescing_and_resource_noise_does_not_reset(self):
+        log=self.new();entered=threading.Event();release=threading.Event();original=log.update_state
+        def blocked(value):
+            entered.set();release.wait(5);return original(value)
+        with mock.patch.object(log,'update_state',side_effect=blocked):
+            bridge.observe(log,{'stage_name':'WRITER_BLOCKED'})
+            self.assertTrue(entered.wait(1))
+            bridge.observe(log,{'stage_name':'A_QUEUED','completed':10,'total':20,'remaining':10,'eta_seconds':5})
+            bridge.observe(log,{'stage_name':'B_QUEUED'})
+            with log._n085_observation_lock:
+                self.assertEqual(log._n085_pending_state['stage_name'],'B_QUEUED')
+                self.assertIsNone(log._n085_pending_state['completed'])
+                self.assertIsNone(log._n085_pending_state['eta_seconds'])
+            release.set()
+        self.wait_state(log,'stage_name','B_QUEUED')
+        self.assertIsNone(log.state['remaining'])
+        bridge.observe(log,{'stage_name':'B_QUEUED','completed':1,'remaining':4,'eta_seconds':8})
+        self.wait_state(log,'eta_seconds',8)
+        epoch=dict(log.state['training_progress']['phase_progress_epoch'])
+        bridge.observe(log,{'stage':'resource_admission_decision','snapshot':{'elastic_project_limit':7}})
+        bridge.observe(log,{'stage':'N080_MEASURED_PROGRESS','owner_stage':'cpu_lease_released'})
+        bridge.observe(log,{'stage_name':'cpu_lease_released','stage':'cpu_lease_released'})
+        self.wait_state(log,'cpu_project_cap',7)
+        self.assertEqual(log.state['stage_name'],'B_QUEUED')
+        self.assertEqual(log.state['completed'],1);self.assertEqual(log.state['remaining'],4)
+        self.assertEqual(log.state['eta_seconds'],8)
+        self.assertEqual(log.state['training_progress']['phase_progress_epoch'],epoch)
+
+    def test_failure_phase_has_no_eta_or_progress_from_prior_work(self):
+        log=self.new()
+        bridge.observe(log,{'stage_name':'FIT','completed':9,'remaining':1,'total':10,'eta_seconds':1})
+        self.wait_state(log,'stage_name','FIT')
+        bridge.error(log,ValueError('failed'),phase='FAILED_AUTHENTICATION')
+        receipt=bridge.close(log,status='FAILED')
+        self.assertTrue(receipt['closed'])
+        self.assertEqual(log.state['stage_name'],'FAILED_AUTHENTICATION')
+        self.assertIsNone(log.state['completed']);self.assertIsNone(log.state['remaining'])
+        self.assertIsNone(log.state['eta_seconds'])
+        self.assertEqual(log.state['eta_uncertainty'],'EXECUTION_FAILED_ETA_UNAVAILABLE')
+
     def test_observe_does_not_wait_on_shared_logger_io_or_lock(self):
         log=self.new();entered=threading.Event();release=threading.Event()
         original=log.update_state
