@@ -1,4 +1,26 @@
 <!-- FBS_V072_ACTUAL_V071_START -->
+<!-- FBS_V072R4_ACTUAL_R3_DISK_FAILURE_START -->
+## Latest owner result: R3 stopped at disk admission; diagnostic ZIP verified
+
+**The November 13, 2026, 17:30 UTC R3 invocation stopped before scientific work at stage 3 of 33 with `DISK_HEADROOM`.** It had **21.233 GiB available** against a full-research minimum of **25.246 GiB**, including the separate working buffer. The shortfall was **4.014 GiB**. Its **213,412,421-byte diagnostic ZIP** completed and all **82 members / 81 manifest bindings** verified. Worker and supervisor exits were both **2**. New model fits and genuine forecasts were **zero**; historical-source recovery was not reached.
+
+**R4 adds separately registered disk allowances for bounded phases**, fresh per-device measurements, an 8 GiB shared free-space floor and protected output/return budgets. The original resource plan remains evidence. CPU, memory, ownership, source integrity and scientific eligibility still have independent gates. The original scientific optimizer budget remains the exact **48-start object and type**. A separate operational restriction selects **48, 36, 24 or 12** from fresh disk capacity and holds back up to **12 qualified-champion admissions** within that subset. Read-only evaluation and cache reuse remain eligible after new-fit capacity is exhausted.
+
+The return reservation covers **every selected lifetime pending model state and recovery pair**, even if canonical persistence fails repeatedly. Twelve is the parallel worker ceiling, not a backlog limit; a completed thirteenth state is not discarded. Expected typed optional-market disk shortages can fall back to freshly admitted independent evaluation. A terminal original CPU, memory, ownership or cost refusal still stops work.
+
+**Final acceptance passed 1109 test executions / 1105 distinct test IDs**, four normal-startup scenarios across five invocations, and two finalization-only invocations that reused the same verified ZIP. The **100-test focused review overlaps** the suite. Every normal fixture produced a verified return and closed owner-log supplement; no fixture becomes an owner scientific-performance claim.
+
+The actual R3 archived owner logs had a maximum recomputed heartbeat gap of about **10.035 seconds**. The supplied bytes contain a pinned pre-ZIP prefix; final post-ZIP permanent log bytes were not supplied. Closed-log delivery, subprocess exits and other-project execution remain separate evidence scopes.
+
+**All 36 original V072 frozen-fit receipts remain preserved.** Their native calls averaged **0.452668 core-equivalents**, with **11 overlapping calls for 0.012328 seconds**; sustained twelve-core scientific utilization remains unproved. The original production cohort contains **1,906,848 unbound market quotes** and zero eligible game-matched pairs. Its approximately two-million-quote fixture measured **142.73 seconds before versus 143.17 seconds after**, so no cold normalization speedup is claimed.
+
+The visible game and forecast payloads remain the **November 12, 2026, 21:04:22 UTC V071 snapshot**. This status update creates **zero new sports fits, forecasts, provider quotes or model promotions**. Complete current-season forecasts, metric-specific champion comparisons, qualified market matching, incremental market Parquet reuse and measured real scientific throughput remain unfinished.
+
+[Read the latest actual failure and repair scope](V072_EXECUTION_AND_REPAIR_2026-11-13.md#actual-r3-disk-admission-failure--november-13-2026-1730-utc) · [Open the preserved all-game dashboard](latest-v072.html).
+
+Earlier accounts below remain dated history; their then-pending statements are not current owner outcomes.
+<!-- FBS_V072R4_ACTUAL_R3_DISK_FAILURE_END -->
+
 <!-- FBS_V072R3_ACTUAL_R2_FAILURE_START -->
 ## Latest owner result: R2 stopped before science; diagnostic ZIP verified
 

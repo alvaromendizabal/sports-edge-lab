@@ -1,5 +1,73 @@
 # FBS V072 execution failure and repair status
 
+## Actual R3 disk-admission failure — November 13, 2026, 17:30 UTC
+
+**The latest authenticated R3 owner stopped before source recovery or scientific dispatch. Its diagnostic ZIP completed.** This differs from the earlier missing-legacy-source condition and original summary defects retained below.
+
+| Actual R3 evidence | Verified value | Scope |
+|---|---:|---|
+| Terminal stage | 3/33 | Compatible owner leases / original resource admission; sole recorded reason `DISK_HEADROOM` |
+| Available filesystem bytes | 22,798,544,896 | About 21.232800 GiB |
+| Original disk reserve | 26,839,613,440 | 5% of the approximately 499.927 GiB filesystem |
+| Additional working buffer | 268,435,456 | Included in the full minimum |
+| Full admission minimum | 27,108,048,896 | About 25.246338 GiB |
+| Full shortfall | 4,309,504,000 | About 4.013538 GiB; no attribution to another project |
+| Diagnostic return | 213,412,421 bytes | All 82 members and 81 manifest bindings passed CRC, size and SHA-256 checks |
+| Worker / supervisor interpreter exit | 2 / 2 | Partial status retained |
+| Observer elapsed | 73.362252 seconds | Includes startup and supervision; overlapping intervals are not added |
+| Owner before packaging | 1.130228 seconds | No scientific phase reached |
+| Finalization watch | 22.343288 seconds | Diagnostic sealing and persistence |
+| New fits / new genuine forecasts | 0 / 0 | Unvisited fields remain unknown where recorded as null |
+| Current hourly rate / compute cost | Unknown / unknown | Current runtime-price binding was not reached |
+
+Source authentication took approximately 22.760 seconds in the supervisor and 22.576 seconds in the worker. Those scopes overlap broader elapsed measurements. Legacy source recovery was not reached, so this run establishes neither success nor failure of the preceding source fix. Finalization's instrumented store counted two GETs and two PUTs, each totaling 213,416,226 bytes; those counters exclude unmeasured clients and later supervisor operations.
+
+### R4 bounded phase disk admission
+
+R4 preserves the actual measurements and original percentage plan while recording a separate admission for bounded work. It retains an **8 GiB free-space floor per relevant device**, accounts separately for owner/cache/return locations, reserves output before dispatch and protects return staging. CPU, memory, active-owner, registration, source and information-clock gates remain independent. Unknown acquisition requires the original full policy. No automatic historical cleanup, storage resize or interference with another project is introduced.
+
+The exact original scientific `PilotBudget()` object, type, 48-start ceiling and saved snapshot schema remain unchanged. A separate operational hook restricts new admissions to the largest feasible **48, 36, 24 or 12** subset and preserves the remaining qualified-champion allowance within that subset. Only the original locked authority can refund a reservation proved never admitted. An admitted worker with a missing result remains charged. Read-only metrics, bootstrap admission checks and cache reuse continue after the operational new-fit cap is exhausted.
+
+The parent reserves **all selected lifetime pending pairs**, each bounded by the original 64 MiB state and 4 MiB recovery-record limits. A 12-worker execution can accumulate more than 12 pending states after repeated canonical failures, so the policy does not assume that failed publication stops later waves. A real spawned-process regression exercised original fit-store persistence with 36 fictional failed pairs, preserved all 72 files and correctly recorded zero parent-observed child write bytes. No estimator was fitted in this regression. Unobserved child output remains conservatively reserved; global free-space changes are not misreported as authenticated worker writes.
+
+Logical return space is calculated from the actual source size, retained earlier outputs, every selected possible pending pair, a bounded other-output allowance and control slack, rounded up within the unchanged logical-return ceiling. It is no longer a fixed 2,304 MiB allowance. Fewer newly admitted fits can be necessary to preserve all completed work safely.
+
+Expected typed optional-market disk shortages now receive a separately measured evaluation admission before the original control checks run again. Unexpected integrity errors and in-flight transition errors are not relabelled. A terminal original CPU, memory, owner or cost refusal is not cleared merely to proceed. Completed work remains available for finalization.
+
+### Engineering acceptance and exact scope
+
+The source-bound normal acceptance passed **four scenarios / five actual runner-function invocations** in **115.541 seconds**. Cold and warm fictional legacy-source recovery reached the original registry boundary. Insufficient disk, insufficient memory and blocked ownership produced their expected refusals. All five created independently verified fixture ZIPs and closed owner-log supplements. The low-memory fixture retained its original observation window. These are engineering fixtures, not five new scientific runs.
+
+The normal acceptance uses production runner, planner and phase-gate implementations from the exact sealed replacement. Dated observations, process identity and immutable-store transport are explicit fixture boundaries; its handoff source is fictional. Reaching the next registry gate proves that path, not a complete live workspace or new sports science. Warm source reuse must be measured as zero additional original-source GETs.
+
+An independent review passed **100 overlapping engineering tests**. These include actual original registration construction, atomic operational admission, original locked refunds, cost/bootstrap/rolling compatibility, complete native-state preservation, actual spawned persistence failure, typed optional-market fallback, phase resource gates and exact ledger reconstruction.
+
+Earlier candidate failures and externally interrupted local attempts remain dated engineering evidence. No partial process is counted as a successful complete suite, and no cause is inferred solely from an external kill. Source-authenticated successful group receipts and a separate execution-ID audit establish the final accepted coverage.
+
+<!-- FBS_V072R4_FINAL_TEST_LINE_START -->
+**The final exact replacement passed 1109 test executions, covering 1105 distinct fully qualified test IDs, with 355.474 reported aggregate seconds and zero failures, errors or skips.** The suite ran in isolated source-authenticated process groups; every required group must pass. 4 repeated imported-case executions are disclosed; the focused 100-test review overlaps this suite and is not added to its unique count.
+<!-- FBS_V072R4_FINAL_TEST_LINE_END -->
+
+The separate local bootstrap-only acceptance used real insufficient local disk, returned the expected exit 2 in **0.448 seconds**, and created a verified **8,982-byte diagnostic ZIP**. It did not dispatch the owner or claim full source-closure authentication. It is not a SageMaker speed benchmark.
+
+### Logging evidence and preserved science
+
+The actual R3 return contains 27 matched owner log records and three heartbeat observations. Its recomputed maximum elapsed heartbeat gap was **10.034561 seconds**. The supplied archived prefix passed sequence and content checks. The complete final permanent text/JSONL pair and closed receipt were not supplied, so no claim is made about those final bytes or that they were never written.
+
+The final normal fixtures independently read back their closed owner streams and verified additive log supplements. The maximum owner heartbeat gap was **10.008514 seconds**. This fixture scope contains one owner writer and does not claim an observed interpreter exit or a supervisor/controller trio. The two finalization CLI subprocess passes separately verify physical return reuse and live-stream growth; their maximum heartbeat gaps were **10.122692 / 10.069551 seconds**. Availability of shared logging support does not establish a retrofit or run of every other project.
+
+All **36 original V072 completed frozen-fit receipts** remain distinct from engineering progress. Their measured native CPU use averaged **0.452668 core-equivalents**, and 11 concurrent native calls overlapped for **0.012328 seconds**. Twelve worker processes or a configured cap does not establish sustained twelve-core scientific use. This repair and status update create **zero new scientific fits, forecasts, provider quotes or promotions**.
+
+The original market evidence remains **1,906,848 unbound quotes across 4,548 games**, with zero eligible matched scientific tasks. The entirely fictional all-unbound 1,999,872-quote fixture measured **142.732351 seconds before and 143.174306 seconds after**, with matching substantive outputs and no observed cold acceleration. Warm exact-input reuse was verified separately. Improvement in the mixed bound/unbound fixture is not transferred to the wholly unbound production cohort.
+
+The existing public game and forecast payloads remain the **November 12, 21:04:22 UTC V071 snapshot**, with 2,742 observed game identities and 888 observed 2026 fixtures. No game payload or forecast clock is rewritten by this status insertion. Qualified market/event/time binding, incremental market Parquet reuse, complete champion comparisons, every current/upcoming forecast and actual parallel scientific throughput still require successful owner continuation. No AWS job, infrastructure change, browser takeover or paid market backfill was launched by this repair.
+
+Repository source changes, CI, merge and live-site deployment are separate evidence. A source commit alone does not establish deployment.
+
+---
+
+The following R3 preparation and earlier owner accounts are retained as dated history.
+
 ## Actual R2 owner failure — November 13, 2026, 16:18 UTC
 
 **The newly supplied R2 owner invocation stopped before scientific work because a required historical executable was missing. Its diagnostic return ZIP was successfully created and is now independently authenticated.** This is a different failure from the original V072 summary-serialization and console-budget defects described in the dated sections below.
