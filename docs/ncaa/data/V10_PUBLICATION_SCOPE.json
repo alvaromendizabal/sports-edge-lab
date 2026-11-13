@@ -1,0 +1,27 @@
+{
+  "schema": "sel.ncaa.v10.publication_scope.v1",
+  "analysis_asof": "2026-11-13T21:40:45.147265+00:00",
+  "recomputed_saved_prediction_rows": 854308,
+  "partitions": 18,
+  "model_scorecards": 336,
+  "metric_leader_rows": 64,
+  "recovered_game_time_records": 25847,
+  "complete_current_season": false,
+  "complete_upcoming_schedule": false,
+  "qualified_matched_provider_scoreboards": 0,
+  "retrospective_polymarket_rows": 343,
+  "phase_a_new_scientific_fits": 0,
+  "new_issued_forecasts": 0,
+  "promotions": 0,
+  "aws_twelve_core_utilization_proven": false,
+  "site_version": 39,
+  "site_source_commit": "6dedb495ea186f00e84956ac23890e649e84fc8f",
+  "site_url": "https://alvaro-ncaa-research-review.alv-mendizabal.chatgpt.site",
+  "github_pages_enabled": false,
+  "html": {
+    "characters": 880037,
+    "bytes": 880064,
+    "sha256": "0bd09705a67119cf82ff465806e6cfee3e9734eed9862ec684a6726060b6c1db",
+    "git_blob": "0f59bbcf4cac46ca448137118fc73d66a96a948f"
+  }
+}
