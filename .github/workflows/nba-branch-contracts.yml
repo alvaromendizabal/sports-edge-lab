@@ -92,6 +92,7 @@ jobs:
           NBA_MONITOR_SCREENSHOTS: ${{ runner.temp }}/nba-monitor-screenshots
         run: node tracks/nba/reports/execution_review.browser.cjs
       - name: Preserve rendered review and bounded accessibility checks
+        if: always()
         uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02
         with:
           name: nba-monitor-browser-review

@@ -7,7 +7,7 @@ function verify(html){const value=load('current_saved_cohort_leaders.json'),mode
  assert.equal(crypto.createHash('sha256').update(read('latest_model_review.json')).digest('hex'),value.source_public_file_pin.sha256);
  assert.equal(value.rows.length,40);assert.equal(new Set(value.rows.map(r=>r.cohort_alias)).size,16);assert.equal(value.entire_current_season_best_claim,false);assert.equal(value.production_promotions,0);assert.equal(value.new_metric_scoring,0);
  let bindings=0;for(const row of value.rows){assert.equal(row.scored_games+row.missing_games,row.completed_game_denominator);assert.equal(row.selection_or_promotion_allowed,false);assert.equal(row.original_issue_claim,false);for(const ref of row.source_rows){const source=rows.get(ref.row_id);assert.ok(source);assert.equal(source.metrics[row.metric],row.saved_metric_value);for(const[k,v]of Object.entries(ref))assert.deepEqual(source[k],v);bindings++;}}
- assert.equal(bindings,71);return{saved_leaders:20,distinct_exact_cohorts:8,saved_source_bindings:bindings,new_scores:0};
+ assert.equal(bindings,71);return{saved_leaders:40,distinct_exact_cohorts:16,saved_source_bindings:bindings,new_scores:0};
 }
 async function validatePage(page,name,exhaustive=false){const value=load('current_saved_cohort_leaders.json');assert.deepEqual(await page.locator('#nba-cohort-data').evaluate(n=>JSON.parse(n.textContent)),value);
  const base={target:'all',horizon:'all',metric:'all',evidence_track:'all'};
