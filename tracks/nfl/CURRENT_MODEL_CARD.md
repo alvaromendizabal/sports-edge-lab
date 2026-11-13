@@ -1,3 +1,22 @@
+# NFL current model evidence · actual N083
+
+[Latest all-game and metric review](season_review_n084.html) · [Aggregate evidence](2026-11-13-n083-actual-n084-review.json)
+
+**Actual N083 completed 376 verified fits: 354 native and 22 meta.** All 60 new historical candidates completed 180 frozen fits and 120 annual 2024/2025 scorecards. A separate 2026 monitor performed 166 new fits and reused two. Owner research acceptance remains false; the original forward runtime and complete comparable season coverage remain unresolved. Completed fits, negative findings, original issues and caches are retained.
+
+All 60 new historical candidates completed, across 180 frozen fit/cohort checks and 120 annual evaluations. None of the 60 native candidates beats the preserved best on the 9 exact pooled comparisons. Separately, the historical total-MAE shadow role improved from 10.342478 to 10.320930 points on the verified same 570-game, one-hour 2024/2025 cohort, a 0.021547-point difference. This is exposed development evidence, not an independent prospective improvement or production promotion. No direct paired uncertainty interval against the former total-MAE champion is available. None of the 633 saved clustered reference comparisons passed Holm-adjusted p<0.05, so no statistically established improvement is claimed. Other primary historical metric selections remain unchanged. The combined historical ledger preserves 1,320 cards, including 48 authentic N082 cards omitted from the N083 current table; those recovered cards earn no new fit credit.
+
+The new view contains **573 saved 2026 monitoring scorecards**, all **1,320 recovered historical cards** (including 48 omitted by the N083 current table), every new native historical card, all **77 dated N079 scorecards**, and **333 recovered older scorecards**. Each target, horizon, cohort and original/reconstructed evidence class stays separate. Nine pooled legacy cards lack a saved cohort digest and receive no matched ranking claim. Eighteen original former-role horizon gaps remain explicit. The prior N082 108 candidates and 216 evaluations stay unchanged in the [dated review](season_review_n083.html). Current historical selections, operational fallbacks, prior selected roles and original neural champions are distinct; no rolling production promotion is established.
+
+DraftKings, Kalshi and Polymarket remain unavailable as equivalent same-cutoff comparisons in the selected 2026 replay. Missing quotes and coherent score distributions are not invented. Replayed current-season performance does not select or promote models; the historical total-MAE shadow selection changed on exposed 2024/2025 evidence, not from 2026 outcomes. Public content includes authorized selected rounded issues and aggregate metrics only. This publication performs no N084 owner fit, provider refresh or hosted-site deployment.
+
+The complete preceding model card remains [preserved verbatim](MODEL_CARD_N083_SNAPSHOT.md), including original Torch champions, qualified historical market comparisons, frozen 2024/2025 tables and original evidence qualifications. Their original cohorts are not combined with the newly monitored cohorts.
+
+Five genuine native optimizer calls overlapped. During the 180-new-historical-fit window, 197.47 process-tree CPU-seconds were measured across 30.040 seconds, averaging 6.574 cores. A retained 11.636-core process-tree sample coincided with real optimizer intervals, but whole-invocation mean usage remained 1.361 cores. This is not sustained twelve-core proof. The 43.208-minute summary excludes 67.126 seconds of pre-ZIP packaging and subsequent ZIP finalization. The first real fit began at 201.258 seconds; the no-progress diagnostic escalated at 122.313 seconds. Completed archive conversion was reused; the warm archive batch took 3.801 seconds for two items. No matched end-to-end speedup is claimed.
+
+<details>
+<summary>Preserved pre-N084 model-card history; dated claims below are historical snapshots</summary>
+
 # Actual N082 update · November 12, 2026 Pacific
 
 [Latest all-game, metric and experiment review](season_review_n083.html) · [Authenticated aggregate evidence](2026-11-13-n082-actual-n083-review.json)
@@ -165,3 +184,5 @@ There is no universal log-loss or MAE number that bypasses these gates. Any new 
 | Polymarket comparison | Source captures and coverage diagnostics | Complete comparable target/horizon evaluation is not established |
 
 The best saved original 2026 variant is displayed descriptively and does not select the next forward model. A missing primary champion issue is never filled with an operational fallback under the primary label.
+
+</details>
