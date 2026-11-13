@@ -1,3 +1,17 @@
+# NFL selected model card · actual N079
+
+[Latest all-game review](season_review_n080.html) · [Latest selected forecasts](selected_forecasts_n080.json) · [Full selected aggregate evidence](2026-11-12-n079-actual-n080-review.json)
+
+N079 completed **zero new native or meta fits** in 84.07 minutes. All 272 scheduled games remain visible; 448 selected outputs cover 112 timed future games, and all 24 TBD games remain explicit. The latest selected cutoff is November 12 at 23:22:35 UTC. This page claims no N080 owner execution.
+
+The authenticated 2026 scorecard bodies now support exact-horizon descriptive comparisons for the displayed historical selections. One-hour and two-hour cohorts remain separate: 119 conditional winner games or 120 point games, from 136 completed games in the census. Sixteen lack admitted vectors at those selected horizons, but have other actual archived lead times: 14 at 24 hours and two at distinct irregular horizons. A tie is excluded from the conditional winner target. Other-horizon standalone scores are displayed separately and never pooled. Current outcomes did not select or calibrate these frozen candidates. Missing point distributions keep CRPS unavailable. No independent rolling production promotion is established.
+
+The dashboard preserves 18 primary metric/horizon roles, nine operational fallbacks, 18 unresolved former-role horizon comparisons, and the separately qualified earlier 15-game snapshot monitor. The table of 2026 leaders ranks only displayed selected candidates with identical target, horizon and game cohort. Former Torch AB/Torch B records below have different historical cohorts and must not be ranked against those current scores.
+
+The following dated model cards retain earlier selections and evidence verbatim. Public model aliases are local to each saved projection; use the latest dashboard's own alias-to-role mapping.
+
+---
+
 # NFL selected model card · N077 actual return
 
 [Latest all-game review](season_review_n078.html) · [Latest selected forecasts](selected_forecasts_n078.json)
