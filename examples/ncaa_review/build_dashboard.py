@@ -340,7 +340,8 @@ def render_legacy_landing(data):
 
 def render_landing(data):
     from b063_dashboard import render
-    return render(render_legacy_landing(data))
+    from b063r4_status import render_banner
+    return render_banner(render(render_legacy_landing(data)))
 
 
 def outputs():
@@ -361,7 +362,8 @@ def outputs():
 def publication_outputs():
     """Publish the retained history and the independently validated companion."""
     from b063r2_dashboard import evidence_outputs
-    return {**outputs(), **evidence_outputs()}
+    from b063r4_status import status_outputs
+    return status_outputs({**outputs(), **evidence_outputs()})
 
 
 def main():
