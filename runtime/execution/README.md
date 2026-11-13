@@ -2,7 +2,7 @@
 
 [NBA execution evidence](../../tracks/nba/reports/latest_execution_review.json) · [Public/private boundary](../../docs/PUBLICATION_BOUNDARY.md)
 
-Every Sports Edge Lab runner must write a separate, continuously readable execution `.log` and a machine-readable `.jsonl` stream. This directory publishes the actual generic framework used by the replacement NBA B079 runner. NFL, FBS, NBA, NCAA basketball and other named projects can use the same implementation. Publication of this module does not establish that previously deployed non-NBA executables have been retrofitted.
+Every Sports Edge Lab runner must write a separate, continuously readable execution `.log` and a machine-readable `.jsonl` stream. This directory publishes the actual generic framework used by the replacement NBA B082 runner. NFL, FBS, NBA, NCAA basketball and other named projects can use the same implementation. Publication of this module does not establish that previously deployed non-NBA executables have been retrofitted.
 
 The standard-library implementation runs on Linux, uses process identity and append-only files, and requires no scientific library or cloud credential for local use. It does not train a model, generate observations or infer scientific progress from CPU usage. Its cloud sink accepts an existing caller-owned client; it does not create credentials, change infrastructure, list historical objects or download data.
 
@@ -15,7 +15,8 @@ The standard-library implementation runs on Linux, uses process identity and app
 - Report UTC, elapsed time, stage, completed and remaining work, throughput and ETA when the current workload reports them. Missing values remain null with an explicit reason.
 - Report observed process CPU, memory, disk availability, reserved cores and active workers separately. Concurrent scientific fits and completed, reused or failed fits come from current bound workload evidence; reservations and CPU samples never manufacture fit counts.
 - Preserve current bound model families, training events, evaluation aggregates, champion changes, transfer/cache counters and cost estimates when reported. An estimate is not an actual bill. Costs or workload measurements that are not reported remain unavailable.
-- Detect unchanged progress after the configured stall interval and emit process-tree, wait-state and Python stack diagnostics. Logger observations must continue while the child is blocked or failing.
+- Detect unchanged progress after the configured stall interval using separate operational-work and native-fit-completion clocks. Successful cache reads, authenticated verification and completed S3 transfers can advance operational progress; attempts, failures, CPU changes, a newly visible historical receipt or a counter reset cannot. Overlapping scopes are never summed. Logger observations continue while the child is blocked or failing.
+- Label Python stacks as `LOGGER_PROCESS_ONLY`. The observer stack does not establish the child Python stack. Keep child process identity, wait state and the explicit absence of observed child frames separate; preserve the legacy stack alias with the same scope label.
 - Periodically checkpoint bounded compressed increments through the injected sink. The default interval is 300 seconds and the minimum is 30 seconds. Reuse prior acknowledged offsets, cap chunk size and retain local bytes after failures. A returned ETag is not a SHA-256 checksum.
 - Capture a stable, read-back-verified log prefix for a return artifact. Authenticate the current invocation and sequence order, and exclude an incomplete JSONL tail. Events after the captured prefix remain in the live external files; the snapshot states that limitation explicitly.
 
@@ -56,8 +57,14 @@ python -m unittest discover -s runtime/execution -p 'test_sports_edge_live.py' -
 python runtime/execution/verify_live_execution.py
 ```
 
-The tests execute real local child processes and check identity protection, active-writer exclusion, restarts, no-newline output, stopped progress, failed children, observer errors, bounded incremental checkpoint recovery, checksum rejection and safe log snapshots. They use invented observations and temporary files. Their process activity and mock transfers are not NBA fits or owner-cloud throughput.
+The 27-test suite includes nine new invented progress-counter and failed-child regressions. It executes real local child processes and checks identity protection, active-writer exclusion, restarts, no-newline output, stopped progress, failed children, observer errors, bounded incremental checkpoint recovery, checksum rejection and safe log snapshots. They use invented observations and temporary files. Their process activity and mock transfers are not NBA fits or owner-cloud throughput.
 
 The separate live acceptance script runs a 33-second lock-blocked child and a 27-second failing child concurrently. It observes the actual human log with `tail -F`, checks simultaneous JSONL growth, captures both streams, verifies the child in process samples and enforces maximum heartbeat gaps of 15 seconds at the real ten-second setting. This is a failure-injection test, not a synthetic CPU load benchmark or sports fit. Temporary local evidence is written beneath the module directory.
 
 The existing public-review workflow runs these tests on Python 3.11 and 3.12. The NBA report has a separate source-preservation validator and hosted desktop/mobile/offline browser check. Exact-head CI, a repository merge, an owner execution and a deployed website remain different evidence states.
+
+## Successful-work observation and native-fit evidence
+
+`ProgressObservation` is part of this standalone module. The logger can be loaded as a manifest-pinned bridge before sibling modules become importable. No separate runtime helper is needed. Successful operational counters are compared within their own reported scopes; a newly appearing cumulative receipt establishes a baseline and does not retroactively establish progress in the current interval. Native returned-fit counters have an independent idle clock, so a long source transfer does not appear as ongoing model training.
+
+The NBA B081 saved log contained one false stall while successful GETs increased from 16 to 5,618. The repaired comparison recognizes that observed transfer progress while keeping the native-fit idle clock unchanged. The public regression uses invented counters and a real local child that waits and exits with code 7. Private original telemetry stays outside this repository. The published NBA execution evidence reports the saved owner's actual measurements separately.

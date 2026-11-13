@@ -1,4 +1,4 @@
-"""Public aggregate and display regressions; no source fetch, model fit or scoring."""
+"""Saved B081 facts, immutable selected outputs and B082 engineering boundaries."""
 import copy
 import hashlib
 import json
@@ -6,213 +6,153 @@ from pathlib import Path
 import re
 import unittest
 
-import build_execution_review as review
+import build_execution_review as subject
 
-ROOT = Path(__file__).resolve().parent
-
+ROOT=Path(__file__).parent
 
 class ExecutionReviewTests(unittest.TestCase):
     @classmethod
     def setUpClass(cls):
-        cls.data = json.loads((ROOT / "latest_execution_review.json").read_bytes())
-        cls.page = (ROOT / "latest_research_outputs.html").read_text()
+        cls.value=json.loads((ROOT/'latest_execution_review.json').read_bytes())
+        cls.public=json.loads((ROOT/'latest_research_outputs.json').read_bytes())
+        cls.body=(ROOT/'latest_research_outputs.html').read_text()
 
-    def test_saved_scientific_exports_are_byte_exact(self):
-        for name, expected in review.SOURCE_PINS.items():
-            self.assertEqual(hashlib.sha256((ROOT / name).read_bytes()).hexdigest(), expected, name)
-        self.assertEqual(review.digest(review.strip_review(self.page).encode()), review.BASE_DISPLAY_SHA256)
+    def rejected(self,edit,reason):
+        value=copy.deepcopy(self.value);edit(value)
+        with self.assertRaisesRegex(ValueError,reason):subject.validate(value)
 
-    def test_deterministic_status_is_the_only_html_change(self):
-        self.assertTrue(review.validate(self.data))
-        self.assertEqual(review.attach(self.page, self.data), self.page)
-        self.assertEqual(self.page.count(review.BEGIN), 1)
-        embedded = re.search(r'<script id="nba-execution-data" type="application/json">(.*?)</script>', self.page, re.S)
-        self.assertIsNotNone(embedded)
-        self.assertEqual(json.loads(embedded[1]), self.data)
-        self.assertEqual(review.build(True)["status"], "PASS")
+    def test_actual_partial_run_and_short_native_fit_are_recorded(self):
+        subject.validate(self.value)
+        run=self.value['latest_owner_execution'];runtime=self.value['observed_runtime']
+        self.assertEqual((run['release'],run['new_confirmed_scientific_fits'],run['new_forecasts'],run['exit_code']),('B081',1,5,2))
+        self.assertEqual(runtime['peak_concurrent_scientific_fits'],1)
+        self.assertEqual(runtime['peak_concurrent_native_fits_at_heartbeat_samples'],0)
+        self.assertAlmostEqual(runtime['native_fit_exact_intervals']['native_fit_elapsed_seconds_sum'],2.21192068)
+        self.assertFalse(runtime['twelve_core_scientific_utilization_proven'])
 
-    def test_actual_failure_keeps_zero_fits_and_unchanged_issue_clock(self):
-        run = self.data["latest_owner_execution"]
-        self.assertEqual(run["new_confirmed_scientific_fits"], 0)
-        self.assertEqual(run["exit_code"], 2)
-        self.assertEqual(run["return"]["payload_members_authenticated"], run["return"]["members"] - 1)
-        self.assertEqual(sum(self.data["science_preservation"]["completed_task_release_counts"].values()), 2328)
-        old = json.loads((ROOT / "latest_research_outputs.json").read_bytes())
-        self.assertEqual(old["latest_forecast_issue_at_utc"], self.data["science_preservation"]["latest_original_issue_at_utc"])
-        self.assertEqual(old["newest_owner_execution"]["release"], "B077")
+    def test_twelve_reserved_cores_or_transport_peak_cannot_claim_native_parallelism(self):
+        self.rejected(lambda x:x['observed_runtime'].update(peak_concurrent_scientific_fits=12),'RESERVATION_IS_NOT_UTILIZATION')
+        self.rejected(lambda x:x['observed_runtime'].update(twelve_core_scientific_utilization_proven=True),'RESERVATION_IS_NOT_UTILIZATION')
+        obs=self.value['observed_runtime']
+        self.assertEqual(obs['one_reserved_core_samples'],178);self.assertEqual(obs['twelve_reserved_core_samples'],2)
+        self.assertAlmostEqual(obs['time_weighted_cpu_cores'],.8395186076897229)
+        self.assertAlmostEqual(obs['peak_cpu_cores'],7.950013631756633)
+        self.assertEqual(obs['transport_benchmark']['new_estimator_fits'],0)
 
-    def test_measured_cpu_is_not_reservation(self):
-        obs = self.data["observed_runtime"]
-        self.assertAlmostEqual(obs["time_weighted_cpu_cores"], obs["matched_process_cpu_seconds"] / obs["sample_elapsed_seconds"], places=10)
-        self.assertEqual(obs["peak_reserved_cores"], 12)
-        self.assertEqual(obs["one_reserved_core_samples"], 94)
-        self.assertEqual(obs["twelve_reserved_core_samples"], 3)
-        self.assertEqual(obs["matched_cpu_intervals"], 103)
-        self.assertAlmostEqual(obs["peak_cpu_cores"], 11.701368980331605)
-        self.assertEqual(obs['peak_work_class'], 'TRANSPORT_FINALIZATION_NOT_SCIENTIFIC_FITS')
-        self.assertEqual(obs["peak_concurrent_scientific_fits"], 0)
-        self.assertFalse(obs["twelve_core_scientific_utilization_proven"])
-        altered = copy.deepcopy(self.data)
-        altered["observed_runtime"]["twelve_core_scientific_utilization_proven"] = True
-        with self.assertRaisesRegex(ValueError, "RESERVATION_IS_NOT_UTILIZATION"):
-            review.validate(altered)
+    def test_publication_does_not_invent_work_or_rewrite_issue_clock(self):
+        self.rejected(lambda x:x['latest_owner_execution'].update(new_confirmed_scientific_fits=12),'UNSUPPORTED_PROGRESS')
+        self.rejected(lambda x:x['science_preservation'].update(publication_new_fits=1),'PUBLICATION_IS_NOT_SCIENCE')
+        self.rejected(lambda x:x['science_preservation'].update(latest_original_issue_at_utc='2099-01-01T00:00:00Z'),'ORIGINAL_ISSUE_CLOCK')
+        self.assertEqual(self.public['latest_forecast_issue_at_utc'],self.value['science_preservation']['latest_original_issue_at_utc'])
 
-    def test_clock_progress_and_owner_execution_cannot_be_upgraded(self):
-        for field, value, error in [
-            ("latest_original_issue_at_utc", "2026-11-12T22:25:21Z", "ORIGINAL_ISSUE_CLOCK"),
-            ("publication_new_fits", 12, "PUBLICATION_IS_NOT_SCIENCE"),
-            ("publication_new_forecasts", 1, "PUBLICATION_IS_NOT_SCIENCE"),
-        ]:
-            altered = copy.deepcopy(self.data)
-            altered["science_preservation"][field] = value
-            with self.assertRaisesRegex(ValueError, error):
-                review.validate(altered)
-        altered = copy.deepcopy(self.data)
-        altered["replacement_engineering"]["owner_execution_completed"] = True
-        with self.assertRaisesRegex(ValueError, "NO_B081_OWNER_RUN"):
-            review.validate(altered)
-        altered = copy.deepcopy(self.data)
-        altered["replacement_engineering"]["all_deployed_sports_retrofitted"] = True
-        with self.assertRaisesRegex(ValueError, "UNVERIFIED_CROSS_SPORT_DEPLOYMENT"):
-            review.validate(altered)
+    def test_source_pins_and_exact_prior_snapshot_are_preserved(self):
+        for name,pin in subject.SOURCE_PINS.items():
+            self.assertEqual(hashlib.sha256((ROOT/name).read_bytes()).hexdigest(),pin,name)
+        prior=json.loads((ROOT/'history/b081_prepared_execution_review.json').read_bytes())
+        self.assertEqual(prior['latest_owner_execution']['release'],'B080')
+        self.assertEqual(prior['replacement_engineering']['release'],'B081')
+        self.assertEqual(prior['latest_owner_execution']['new_confirmed_scientific_fits'],0)
 
-    def test_return_digest_and_missingness_cannot_be_relabelled(self):
-        altered = copy.deepcopy(self.data)
-        altered["latest_owner_execution"]["return"]["sha256"] = "0" * 64
-        with self.assertRaisesRegex(ValueError, "RETURN_PIN"):
-            review.validate(altered)
-        science = self.data["science_preservation"]
-        self.assertEqual(science["available_selected_role_cells"] + science["missing_selected_role_cells"], science["selected_role_opportunities"])
-        self.assertEqual(science["all_target_horizon_cells"], 6 * science["observed_games"])
+    def test_history_retains_superseded_selections_and_all_shared_objects(self):
+        prior=json.loads((ROOT/'history/b077_recovered_selected_outputs.json').read_bytes())
+        common=prior['issues'].keys()&self.public['issues'].keys()
+        self.assertEqual(len(common),2700)
+        self.assertEqual(len(prior['issues'].keys()-self.public['issues'].keys()),5)
+        self.assertEqual(len(self.public['issues'].keys()-prior['issues'].keys()),5)
+        for key in common:self.assertEqual(prior['issues'][key],self.public['issues'][key],key)
+        self.assertEqual(prior['champions'],self.public['champions'])
+        self.assertEqual(set(prior['games']),set(self.public['games']))
 
-    def test_private_path_and_unreviewed_display_changes_are_rejected(self):
-        altered = copy.deepcopy(self.data)
-        altered["private_path"] = "/home/invented-private-owner/fixture"
-        with self.assertRaisesRegex(ValueError, "PRIVATE_FIELD_OR_PATH"):
-            review.validate(altered)
-        with self.assertRaisesRegex(ValueError, "BASE_DISPLAY_CHANGED"):
-            review.attach(self.page.replace("Season coverage, issued forecasts", "Changed research"), self.data)
-        with self.assertRaisesRegex(ValueError, "DUPLICATE_OR_UNCLOSED"):
-            review.strip_review(self.page + review.BEGIN)
+    def test_logger_cadence_and_successful_work_stall_are_distinct(self):
+        log=self.value['live_logging']
+        self.assertEqual(log['heartbeat_samples'],249);self.assertEqual(log['health_errors'],[])
+        self.assertLess(log['maximum_gap_seconds'],15)
+        self.assertEqual(log['observed_stall_diagnostics'],2)
+        self.assertEqual(log['reproduced_false_positive_stall_diagnostics'],1)
+        self.assertEqual((log['false_positive_successful_s3_gets_before'],log['false_positive_successful_s3_gets_after']),(16,5618))
+        self.assertTrue(log['unobserved_progress_diagnostic_preserved'])
 
-    def test_shared_runtime_source_pin_matches_published_module(self):
-        runtime = ROOT.parents[2] / "runtime" / "execution" / "sports_edge_live.py"
-        expected = self.data["replacement_engineering"]["logging_verification"]
-        self.assertEqual(expected["status"], "PASS")
-        self.assertEqual(hashlib.sha256(runtime.read_bytes()).hexdigest(), expected["module_sha256"])
-        self.assertFalse(expected["actual_NBA_fits"])
-        package = self.data["replacement_engineering"]["package_verification"]
-        self.assertEqual(package["status"], "PASS")
-        self.assertEqual(package["packaged_tests"], 489)
-        self.assertEqual(package["passed"], package["packaged_tests"])
-        self.assertEqual(package["failures"] + package["errors"] + package["skipped"] + package["module_errors"], 0)
-        self.assertRegex(package["exact_package_sha256"], r'^[0-9a-f]{64}$')
-        self.assertNotEqual(package["exact_package_sha256"], self.data['latest_owner_execution']['executable_sha256'])
-        self.assertFalse(package["owner_execution_performed"])
-        self.assertEqual(package["post_test_source_cache_pyc_files"], 0)
-        self.assertGreater(package["exact_package_bytes"], 118159084)
-        self.assertLess(package["exact_package_bytes"], 512 << 20)
-        self.assertEqual(package['original_B080_members_preserved'], 1147)
-        self.assertEqual(package["embedded_lineage_verification"]["status"], "PASS")
-        self.assertEqual(package["embedded_lineage_verification"]["AWS_operations"], 0)
-        warm = package["warm_executable_local_review"]
-        self.assertEqual(warm["execution_scope"], "PREPARED_REVIEW_ONLY_NON_AWS")
-        self.assertFalse(warm["owner_AWS_execution"])
-        self.assertEqual(warm["new_scientific_fits"], 0)
-        self.assertEqual(warm["unchanged_source_member_identity_reuses"], package['package_members'])
-        self.assertEqual(warm["source_members_freshly_rehashed"], 0)
-        changed = copy.deepcopy(self.data)
-        changed['replacement_engineering']['package_verification']['exact_package_sha256'] = '0' * 64
-        with self.assertRaisesRegex(ValueError, 'EXACT_PACKAGE_VERIFICATION_CHANGED'):
-            review.validate(changed)
+    def test_s3_sink_scopes_and_same_run_warm_cache_are_not_whole_pipeline_claims(self):
+        log=self.value['live_logging'];cache=self.value['cache_evidence']
+        self.assertEqual(log['s3_checkpoints']['scope'],'LOG_CHECKPOINT_SINK_ONLY')
+        self.assertEqual(cache['measurements']['s3_gets_completed'],7970)
+        self.assertFalse(cache['measurements']['all_pipeline_S3_calls_instrumented'])
+        self.assertFalse(cache['repeat_read_gate']['new_owner_invocation_claim'])
+        self.assertTrue(cache['repeat_read_gate']['second_pass_network_disabled'])
+        self.rejected(lambda x:x['cache_evidence']['measurements'].update(all_pipeline_S3_calls_instrumented=True),'CACHE_SCOPE_CHANGED')
+        self.rejected(lambda x:x['cache_evidence']['repeat_read_gate'].update(new_owner_invocation_claim=True),'WARM_CACHE_SCOPE_CHANGED')
 
-    def test_actual_log_health_and_transfer_scope_stay_separate_from_science(self):
-        logging = self.data['live_logging']
-        self.assertEqual(logging['heartbeat_samples'], 104)
-        self.assertEqual(logging['health_errors'], [])
-        self.assertAlmostEqual(logging['maximum_gap_seconds'], 10.612139867998849)
-        self.assertTrue(logging['logging_success_is_not_model_success'])
-        for key, value, error in (
-            ('scope', 'WHOLE_PIPELINE', 'TRANSFER_SCOPE_CHANGED'),
-            ('get_calls', 1, 'TRANSFER_SCOPE_CHANGED'),
-            ('attempted_body_bytes', 0, 'TRANSFER_SCOPE_CHANGED'),
-        ):
-            changed = copy.deepcopy(self.data)
-            changed['live_logging']['s3_checkpoints'][key] = value
-            with self.assertRaisesRegex(ValueError, error): review.validate(changed)
+    def test_actual_admissions_do_not_support_a_resource_denial_claim(self):
+        admission=self.value['resource_admission']
+        self.assertEqual(admission['exact_stage_admission_statuses'],{'ADMITTED_EXACT_THREADS':119})
+        self.assertEqual(admission['native_threads_requested_counts'],{'1':114,'2':3,'3':2})
+        self.assertEqual(admission['resource_deferred_stages'],{})
+        self.rejected(lambda x:x['resource_admission'].update(resource_deferred_stages={'fabricated':1}),'RESOURCE_DENIAL_NOT_OBSERVED')
 
-    def test_missing_finalizer_hashes_remain_unknown_and_cost_remains_estimate(self):
-        cache = self.data['cache_evidence']
-        self.assertIsNone(cache['finalizer_hash_operations'])
-        self.assertIsNone(cache['finalizer_bytes_hashed'])
-        self.assertEqual(cache['parquet_operation'], 'VERIFIED_LOCAL_PARQUET_CONTEXT_REUSED')
-        self.assertFalse(cache['whole_pipeline_s3_transfers_fully_instrumented'])
-        self.assertIsNone(self.data['cost_evidence']['actual_billed_cost_usd'])
-        changed = copy.deepcopy(self.data)
-        changed['cache_evidence']['finalizer_hash_operations'] = 0
-        with self.assertRaisesRegex(ValueError, 'CACHE_SCOPE_CHANGED'): review.validate(changed)
-        changed = copy.deepcopy(self.data)
-        changed['cost_evidence']['actual_billed_cost_usd'] = .292741
-        with self.assertRaisesRegex(ValueError, 'COST_IS_NOT_INVOICE'): review.validate(changed)
+    def test_capacity_repair_preserves_scope_and_report_bytes(self):
+        cap=self.value['capacity_failures'];budget=self.value['replacement_engineering']['budget_verification']
+        self.assertGreater(cap['bound_after_first_fit_bytes'],cap['original_scientific_support_allowance_bytes'])
+        self.assertLess(cap['actual_final_support_bytes'],cap['original_scientific_support_allowance_bytes'])
+        self.assertEqual(budget['selected_files'],91718)
+        self.assertEqual(budget['physical_files_decoded_and_original_sha256_verified']+budget['external_description_count'],91718)
+        self.assertTrue(budget['all_report_original_bytes_preserved'])
+        self.assertTrue(budget['conditional_on_live_verified_ancestor_graph'])
+        self.assertFalse(budget['full_owner_ancestor_readback_claimed'])
+        self.rejected(lambda x:x['replacement_engineering']['budget_verification'].update(full_owner_ancestor_readback_claimed=True),'SAVED_ENGINEERING_SCOPE_CHANGED')
 
-    def test_prior_failure_review_remains_available_unchanged(self):
-        previous_B080 = ROOT/'history/b080_prepared_execution_review.json'
-        self.assertEqual(hashlib.sha256(previous_B080.read_bytes()).hexdigest(),
-                         '430551e3b4f0c74cededad2e896602f0e467745b77d78c41f6866392ac722f25')
-        prior = json.loads(previous_B080.read_bytes())
-        self.assertEqual(prior['latest_owner_execution']['release'], 'B079')
-        self.assertEqual(prior['replacement_engineering']['release'], 'B080')
-        self.assertEqual(prior['science_preservation'], self.data['science_preservation'])
-        previous = ROOT/'history/b079_prepared_execution_review.json'
-        self.assertEqual(hashlib.sha256(previous.read_bytes()).hexdigest(),
-                         'f77bb9272877112d71779f94e3d82b7b2af914e7c0c07fdd6b3ff87fbdbe8039')
-        document = json.loads(previous.read_bytes())
-        self.assertEqual(document['latest_owner_execution']['release'], 'B078')
-        self.assertEqual(document['replacement_engineering']['release'], 'B079')
-        self.assertEqual(document['latest_owner_execution']['return']['sha256'],
-                         'fee168714d963992f71904c0ff46b161fcc2416a4432cf6e6bdf57963369448d')
-        self.assertEqual(document['science_preservation'], self.data['science_preservation'])
+    def test_current_clocks_and_saved_model_rows_have_no_automatic_promotion(self):
+        model=json.loads((ROOT/'latest_model_review.json').read_bytes())
+        self.assertEqual(model['release'],'B081');self.assertEqual(model['exporter_release'],'B082')
+        self.assertEqual(len(model['metric_rows']),392)
+        self.assertTrue(all(row['promotion_allowed'] is False for row in model['metric_rows']))
+        self.assertEqual(model['publication_new_metric_scoring'],0)
+        self.assertEqual(model['latest_original_issue_at_utc'],self.public['latest_forecast_issue_at_utc'])
 
-    def test_preflight_objects_are_not_hidden_by_zero_frame_task_count(self):
-        failure = self.data['capacity_failure']
-        self.assertEqual(failure['files_physically_prepared'], 33977)
-        self.assertEqual(failure['new_objects_compressed'], 61460)
-        self.assertEqual(failure['frame_tasks_submitted'], 0)
-        self.assertAlmostEqual(failure['preflight_seconds'], 595.8604437939994)
-        self.assertGreater(failure['conservative_bound_bytes'], failure['scientific_allowance_bytes'])
-        self.assertLess(failure['actual_final_scientific_support_bytes'], failure['scientific_allowance_bytes'])
-        self.assertTrue(failure['zero_frame_tasks_did_not_mean_zero_object_compression'])
-        changed = copy.deepcopy(self.data)
-        changed['capacity_failure']['new_objects_compressed'] = 0
-        with self.assertRaisesRegex(ValueError, 'ACTUAL_CAPACITY_FAILURE_CHANGED'):
-            review.validate(changed)
+    def test_deployed_other_sports_and_b082_owner_fits_are_not_inferred(self):
+        self.rejected(lambda x:x['replacement_engineering'].update(owner_execution_completed=True),'NO_UNOBSERVED_OWNER_OR_CROSS_SPORT_DEPLOYMENT')
+        self.rejected(lambda x:x['replacement_engineering'].update(all_deployed_sports_retrofitted=True),'NO_UNOBSERVED_OWNER_OR_CROSS_SPORT_DEPLOYMENT')
+        self.assertFalse(self.value['publication']['website_deployment_verified'])
 
-    def test_metadata_replay_does_not_become_whole_run_speedup_or_new_science(self):
-        proof = self.data['replacement_engineering']['budget_verification']
-        self.assertEqual(proof['selected_files'], 76324)
-        self.assertEqual(proof['inherited_files'], 76324)
-        self.assertEqual(proof['complete_support_bound_bytes'], 36821661)
-        self.assertTrue(proof['owner_current_source_and_full_ancestry_guards_still_required'])
-        self.assertEqual(proof['declared_omissions_unchanged'], 2658)
-        self.assertTrue(proof['actual_report_original_verifier_passed'])
-        for field, value in (('controlled_end_to_end_speedup_established', True),
-                             ('new_scientific_fits', 12), ('declared_omissions_unchanged', 0)):
-            changed = copy.deepcopy(self.data)
-            changed['replacement_engineering']['budget_verification'][field] = value
-            with self.assertRaisesRegex(ValueError, 'METADATA_TEST_SCOPE_CHANGED'):
-                review.validate(changed)
+    def test_private_fields_and_cost_as_invoice_fail_closed(self):
+        self.rejected(lambda x:x.update(private_note='s3://invented-private'),'PRIVATE_FIELD_OR_PATH')
+        self.rejected(lambda x:x.update(recipe_id='invented-private'),'PRIVATE_FIELD_OR_PATH')
+        self.rejected(lambda x:x['cost_evidence'].update(actual_billed_cost_usd=1.77),'ESTIMATE_IS_NOT_INVOICE')
 
-    def test_pending_package_receipt_cannot_pass_publish_check(self):
-        from unittest import mock
-        changed = copy.deepcopy(self.data)
-        changed['replacement_engineering']['package_verification'] = {'status': 'FINAL_RECEIPT_PENDING'}
-        path = ROOT/'latest_execution_review.json'; read = Path.read_bytes
-        def substituted(p):
-            return json.dumps(changed).encode() if p == path else read(p)
-        with mock.patch.object(Path, 'read_bytes', substituted):
-            with self.assertRaisesRegex(ValueError, 'FINAL_PACKAGE_RECEIPT_REQUIRED'):
-                review.build(True)
+    def test_shared_logger_pin_is_the_published_standalone_file(self):
+        path=ROOT.parents[2]/'runtime/execution/sports_edge_live.py'
+        self.assertEqual(hashlib.sha256(path.read_bytes()).hexdigest(),self.value['replacement_engineering']['shared_logging_module_sha256'])
+        self.assertNotIn('from b082_runtime import',path.read_text())
+        self.assertIn('class ProgressObservation:',path.read_text())
 
+    def test_real_ten_second_acceptance_is_bound_to_current_shared_logger(self):
+        fixed=self.value['replacement_engineering'];live=fixed['live_logging_acceptance']
+        self.assertEqual(live['status'],'PASS')
+        self.assertEqual(live['source_pins']['sports_edge_live.py']['sha256'],fixed['shared_logging_module_sha256'])
+        self.assertTrue(live['sources_unchanged_through_test'])
+        self.assertEqual({row['mode'] for row in live['cases']},{'stall','crash'})
+        for row in live['cases']:
+            self.assertEqual(row['heartbeat_interval_seconds'],10)
+            self.assertLess(row['observed_max_gap_seconds'],15)
+            self.assertGreater(row['tail_F_heartbeats_observed_while_child_alive'],0)
+            self.assertGreater(row['human_log_growth_observations'],0)
+            self.assertGreater(row['jsonl_growth_observations'],0)
+            self.assertEqual(row['actual_NBA_fits'],0)
+            self.assertFalse(row['actual_AWS_owner_execution'])
+        self.assertEqual(next(row['child_returncode'] for row in live['cases'] if row['mode']=='crash'),1)
 
-if __name__ == "__main__":
-    unittest.main()
+    def test_duplicate_unclosed_or_changed_base_page_is_rejected(self):
+        with self.assertRaisesRegex(ValueError,'DUPLICATE_OR_UNCLOSED'):subject.strip_review(subject.BEGIN)
+        with self.assertRaisesRegex(ValueError,'DUPLICATE_OR_UNCLOSED'):subject.strip_review(self.body+subject.BEGIN+subject.END)
+        with self.assertRaisesRegex(ValueError,'BASE_DISPLAY_CHANGED'):subject.attach(self.body+'unexpected',self.value)
+
+    def test_exact_package_and_deterministic_html_are_required_for_completion(self):
+        package=self.value['replacement_engineering']['package_verification']
+        self.assertEqual(package['status'],'PASS')
+        self.assertEqual(package['passed'],package['packaged_tests'])
+        self.assertEqual(subject.build(check=True)['status'],'PASS')
+        self.assertEqual(subject.attach(self.body,self.value),self.body)
+        embedded=re.search(r'<script id="nba-execution-data" type="application/json">(.*?)</script>',self.body,re.S)
+        self.assertEqual(json.loads(embedded.group(1)),self.value)
+        self.assertEqual(hashlib.sha256(subject.strip_review(self.body).encode()).hexdigest(),subject.BASE_DISPLAY_SHA256)
+
+if __name__=='__main__':unittest.main()

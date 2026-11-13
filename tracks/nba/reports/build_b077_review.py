@@ -113,7 +113,7 @@ def render_section(evidence,data,peaks):
 
 def build(check=False):
     path=ROOT/'latest_research_outputs.html'
-    data=json.loads((ROOT/'latest_research_outputs.json').read_bytes())
+    data=json.loads((ROOT/'history/b077_recovered_selected_outputs.json').read_bytes())
     evidence=json.loads((ROOT/'b078_recovered_b077_evidence.json').read_bytes())
     peaks=json.loads((ROOT/'b077_historical_peaks_and_gates.json').read_bytes())
     assert evidence['schema']=='sports-edge-lab.nba.recovered-b077-review.v1'

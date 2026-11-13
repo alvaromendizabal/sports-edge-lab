@@ -47,7 +47,8 @@ class SourceSeparatedSnapshotTests(unittest.TestCase):
         if not changed['coverage']['latest_row_and_source_aggregate_difference']:
             # Invent an aggregate-only discrepancy while preserving its total.
             # No identified game row supplies this LIVE state.
-            counts=changed['result_observation_recovery']['source_reported_status_counts']
+            counts=dict(changed['result_observation_recovery']['source_reported_status_counts'] or changed['coverage']['official_games_by_latest_row_backed_status'])
+            changed['result_observation_recovery']['source_reported_status_counts']=counts
             counts['FINAL']-=1;counts['LIVE']=counts.get('LIVE',0)+1
         changed['coverage']['latest_row_and_source_aggregate_difference']={}
         with self.assertRaisesRegex(ValueError,'discrepancy hidden'):
@@ -147,7 +148,7 @@ class B076OwnerContinuationTests(unittest.TestCase):
 class B077RecoveredContinuationTests(unittest.TestCase):
     @classmethod
     def setUpClass(cls):
-        cls.data=json.loads((ROOT/'latest_research_outputs.json').read_bytes())
+        cls.data=json.loads((ROOT/'history/b077_recovered_selected_outputs.json').read_bytes())
         cls.previous=json.loads((ROOT/'history/b077_selected_outputs.json').read_bytes())
         cls.evidence=json.loads((ROOT/'b078_recovered_b077_evidence.json').read_bytes())
 
@@ -220,7 +221,7 @@ class B077HistoricalPeakTests(unittest.TestCase):
 
     def test_existing_metrics_original_issues_and_schedule_bytes_are_unchanged(self):
         for name,pin in {'b078_recovered_b077_evidence.json':'74dd8d0632e9efeb1885b410b7c2f5a82129ba5b41f3e2e70114a4aa0e824c1b',
-                'latest_research_outputs.json':'9e6795387c1e64bc6265da04bdd9d4e9fd0fb9860007da7b465549752542149b'}.items():
+                'history/b077_recovered_selected_outputs.json':'9e6795387c1e64bc6265da04bdd9d4e9fd0fb9860007da7b465549752542149b'}.items():
             self.assertEqual(hashlib.sha256((ROOT/name).read_bytes()).hexdigest(),pin)
 
     def test_descriptive_peaks_keep_all_equal_strata_and_coalesce_ties(self):
