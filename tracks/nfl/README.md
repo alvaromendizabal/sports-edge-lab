@@ -1,3 +1,18 @@
+# NFL · V10 Phase A recovery · November 13, 2026
+
+[Open the NFL browser dashboard](https://sports-edge-lab-nfl.alv-mendizabal.chatgpt.site/) · [Prepared N088 source dashboard](dashboard_n088/index.html) · [Fresh Phase A public scorecards](phase_a_n088_public.json)
+
+**New evidence: 171 saved-model scorecards and 10,216 model–game rows were recomputed with zero new fits.** The recovered schedule contains all 272 games: 137 finals, 111 confirmed upcoming and 24 kickoff TBD. Original forecast clocks and the 444 previously issued selected outputs remain intact. Later November fits are labeled later-fitted reconstructions; no historical pregame issue is invented.
+
+**Recovery is partial.** Current union coverage reaches 136 non-tied winner outcomes and 137 point outcomes across different models; the largest single-model cohorts remain 119 winner and 120 margin/total games, at least 17 missing per target. Only one current-season game has recovered original-issued scored rows. Full independent 2024/2025 census reconciliation, missing model bodies, exact same-cutoff provider comparisons and controlled Phase B prerequisites remain unresolved. Automatic rolling refits and automatic promotion are off.
+
+**Actual N087 failed:** 678.674 seconds, 0.399 mean / 1.213 peak CPU core equivalents, 15 paid calls, and zero verified completed new scientific receipts. Final fit totals remain unreconciled. Both live log streams exist; closing the return did not repair the child runtime. The exact packaged cold-import installer chain independently reproduces a recursion error before it can write the required response.
+
+**Publication state: COMMITTED / NOT YET DEPLOYED.** The existing public Site was still N063, dated November 9, even though later GitHub HTML existed. Its exact older version will remain archived when the verified N088 bundle replaces the same public URL. Source CI and deployment are separate checks.
+
+<details>
+<summary>Preserved N085 scientific snapshot and N086/N087 delivery history</summary>
+
 # NFL · authenticated N085 science · November 13, 2026
 
 **Latest actual execution: N086 failed after 564.544 seconds.** Three current-science stages were rejected by an active-attempt path guard; finalization then conflicted with an immutable summary. Final new fit/native/meta/forecast counts remain **unknown**, with **0 observed optimizer callbacks/commits** and no completed new scientific receipt. Mean CPU was **0.397 core equivalents** (peak 1.281); **15 paid calls** occurred. This does not meet twelve-core or scientific-progress acceptance. [Exact sanitized failure evidence](2026-11-13-n086-failed-n087-review.json) · [Visible failure panel](season_review_n086.html#latest-execution).
@@ -27,3 +42,5 @@ DraftKings, Kalshi and Polymarket have zero admitted equivalent same-cutoff comp
 The executable retained the N084 scientific namespace. The later N086 execution failed as described above; it earns no completed new scientific-result credit in this publication. Source publication, hosted test rendering and website deployment are distinct; no live website deployment or new provider refresh is claimed.
 
 [Prior N085 delivery notice](README_N085_SNAPSHOT.md) · [Prior N083 scientific snapshot](season_review_n084.html) · [Prior model-card history](MODEL_CARD_N085_SNAPSHOT.md)
+
+</details>
