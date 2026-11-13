@@ -7,6 +7,7 @@ import re
 import unittest
 from unittest.mock import patch
 import b063r8_status as status
+from b063r9_status import strip_banner as strip_r9_banner
 
 ROOT=Path(__file__).resolve().parents[2]
 DOC=ROOT/'docs/ncaa'
@@ -88,14 +89,14 @@ class B063R8PublicStatus(unittest.TestCase):
 
     def test_prior_landing_and_dated_reports_remain_identical(self):
         pins=self.data['source_attribution']['preserved_git_blobs']
-        body=(DOC/'index.html').read_text()
+        body=strip_r9_banner((DOC/'index.html').read_text())
         self.assertEqual(blob(status.strip_banner(body).encode()),pins['docs/ncaa/index.html'])
         for path,expected in pins.items():
             if path.startswith('docs/ncaa/') and path!='docs/ncaa/index.html':
                 self.assertEqual(blob((ROOT/path).read_bytes()),expected,path)
         readme=(EX/'README.md').read_bytes().split(b'<!-- B063R8_STATUS_END -->\n\n',1)[1]
         self.assertEqual(blob(readme),pins['examples/ncaa_review/README.md'])
-        browser=(EX/'test_dashboard_browser.cjs').read_bytes().replace(R8_LINE,b'')
+        browser=(EX/'test_dashboard_browser.cjs').read_bytes().replace(b"    counts.b063r9Status = await require('./test_b063r9_status_browser.cjs').verifyR9(browser, path.join(root, 'docs/ncaa/b063r9.html'));\n",b'').replace(R8_LINE,b'')
         self.assertEqual(blob(browser),pins['examples/ncaa_review/test_dashboard_browser.cjs'])
 
     def test_render_download_and_banner_are_exact_and_idempotent(self):
@@ -106,7 +107,8 @@ class B063R8PublicStatus(unittest.TestCase):
         self.assertEqual(page,status.render_page())
         self.assertNotIn('__B063R8_',page)
         self.assertIn('new Blob([exact]',page)
-        self.assertEqual(status.render_banner((DOC/'index.html').read_text()),(DOC/'index.html').read_text())
+        landing=strip_r9_banner((DOC/'index.html').read_text())
+        self.assertEqual(status.render_banner(landing),landing)
         self.assertEqual(page.count('<tr>'),15)
 
     def test_prepared_policy_stays_qualified_and_bounded(self):

@@ -9,7 +9,9 @@ from unittest.mock import patch
 import b063r5_status as status
 from b063r6_status import strip_banner as strip_r6_only
 from b063r7_status import strip_banner as strip_r7_only
-from b063r8_status import strip_banner as strip_r8_banner
+from b063r8_status import strip_banner as strip_r8_only
+from b063r9_status import strip_banner as strip_r9_banner
+def strip_r8_banner(body):return strip_r8_only(strip_r9_banner(body))
 def strip_r7_banner(body):return strip_r7_only(strip_r8_banner(body))
 def strip_r6_banner(body):return strip_r6_only(strip_r7_banner(body))
 ROOT = Path(__file__).resolve().parents[2]
@@ -66,7 +68,7 @@ class B063R5PublicStatus(unittest.TestCase):
         self.assertTrue(body.startswith(b'<!-- B063R5_STATUS_START -->'))
         self.assertEqual(body.count(b'<!-- B063R5_STATUS_END -->\n\n'), 1)
         self.assertEqual(git_blob(body.split(b'<!-- B063R5_STATUS_END -->\n\n', 1)[1]), pins['examples/ncaa_review/README.md'])
-        body = (EX / 'test_dashboard_browser.cjs').read_bytes().replace(b"    counts.b063r8Status = await require('./test_b063r8_status_browser.cjs').verifyR8(browser, path.join(root, 'docs/ncaa/b063r8.html'));\n",b'').replace(b"    counts.b063r7Status = await require('./test_b063r7_status_browser.cjs').verifyR7(browser, path.join(root, 'docs/ncaa/b063r7.html'));\n",b'').replace(b"    counts.b063r6Status = await require('./test_b063r6_status_browser.cjs').verifyR6(browser, path.join(root, 'docs/ncaa/b063r6.html'));\n",b'')
+        body = (EX / 'test_dashboard_browser.cjs').read_bytes().replace(b"    counts.b063r9Status = await require('./test_b063r9_status_browser.cjs').verifyR9(browser, path.join(root, 'docs/ncaa/b063r9.html'));\n",b'').replace(b"    counts.b063r8Status = await require('./test_b063r8_status_browser.cjs').verifyR8(browser, path.join(root, 'docs/ncaa/b063r8.html'));\n",b'').replace(b"    counts.b063r7Status = await require('./test_b063r7_status_browser.cjs').verifyR7(browser, path.join(root, 'docs/ncaa/b063r7.html'));\n",b'').replace(b"    counts.b063r6Status = await require('./test_b063r6_status_browser.cjs').verifyR6(browser, path.join(root, 'docs/ncaa/b063r6.html'));\n",b'')
         self.assertEqual(body.count(R5_BROWSER_LINE), 1)
         self.assertEqual(git_blob(body.replace(R5_BROWSER_LINE, b'')), pins['examples/ncaa_review/test_dashboard_browser.cjs'])
 

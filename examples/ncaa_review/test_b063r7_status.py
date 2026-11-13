@@ -8,7 +8,9 @@ import unittest
 from unittest.mock import patch
 
 import b063r7_status as status
-from b063r8_status import strip_banner as strip_r8_banner
+from b063r8_status import strip_banner as strip_r8_only
+from b063r9_status import strip_banner as strip_r9_banner
+def strip_r8_banner(body):return strip_r8_only(strip_r9_banner(body))
 
 ROOT=Path(__file__).resolve().parents[2]
 DOC=ROOT/'docs/ncaa'
@@ -72,7 +74,7 @@ class B063R7PublicStatus(unittest.TestCase):
             self.assertEqual(blob((ROOT/name).read_bytes()),pins[name])
         body=(EX/'README.md').read_bytes().split(b'<!-- B063R8_STATUS_END -->\n\n',1)[1].split(b'<!-- B063R7_STATUS_END -->\n\n',1)[1]
         self.assertEqual(blob(body),pins['examples/ncaa_review/README.md'])
-        body=(EX/'test_dashboard_browser.cjs').read_bytes().replace(b"    counts.b063r8Status = await require('./test_b063r8_status_browser.cjs').verifyR8(browser, path.join(root, 'docs/ncaa/b063r8.html'));\n",b'').replace(R7_LINE,b'')
+        body=(EX/'test_dashboard_browser.cjs').read_bytes().replace(b"    counts.b063r9Status = await require('./test_b063r9_status_browser.cjs').verifyR9(browser, path.join(root, 'docs/ncaa/b063r9.html'));\n",b'').replace(b"    counts.b063r8Status = await require('./test_b063r8_status_browser.cjs').verifyR8(browser, path.join(root, 'docs/ncaa/b063r8.html'));\n",b'').replace(R7_LINE,b'')
         self.assertEqual(blob(body),pins['examples/ncaa_review/test_dashboard_browser.cjs'])
 
     def test_exact_shared_logger_and_verified_cli_sources(self):

@@ -1374,6 +1374,7 @@ const { fixture: executionFixture } = require('./test_execution_review.cjs');
     counts.b063r6Status = await require('./test_b063r6_status_browser.cjs').verifyR6(browser, path.join(root, 'docs/ncaa/b063r6.html'));
     counts.b063r7Status = await require('./test_b063r7_status_browser.cjs').verifyR7(browser, path.join(root, 'docs/ncaa/b063r7.html'));
     counts.b063r8Status = await require('./test_b063r8_status_browser.cjs').verifyR8(browser, path.join(root, 'docs/ncaa/b063r8.html'));
+    counts.b063r9Status = await require('./test_b063r9_status_browser.cjs').verifyR9(browser, path.join(root, 'docs/ncaa/b063r9.html'));
     assert.deepEqual(failures, []);
     assert.deepEqual(externalRequests, []);
     console.log(JSON.stringify({ status: 'PASS', ...counts, widths: [1440, 390], scriptErrors: 0, externalRequests: 0, realChromium: true }));
