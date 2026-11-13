@@ -105,12 +105,14 @@ jobs:
         env:
           PLAYWRIGHT_MODULE_DIR: ${{ runner.temp }}/dashboard-browser/node_modules/playwright
           DASHBOARD_SCREENSHOTS: ${{ runner.temp }}/dashboard-screenshots
+          SEL_V10_LIVE_URL: https://alvaro-ncaa-research-review.alv-mendizabal.chatgpt.site/v10.html
         run: |
           node examples/review_lab/tests/test_dashboard_browser.cjs
           node examples/ncaa_review/test_dashboard_browser.cjs
           node examples/ncaa_review/test_b061_report_browser.cjs
           python examples/ncaa_review/build_b062_saved_reports.py --output-dir examples/ncaa_review
           node examples/ncaa_review/test_b062_report_browser.cjs
+          node examples/ncaa_review/test_v10_dashboard_browser.cjs
       - name: Preserve rendered public dashboard for visual review
         uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02
         with:

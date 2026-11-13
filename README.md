@@ -1,3 +1,13 @@
+## NCAA V10 recovery — November 13, 2026
+
+[Open the live NCAA dashboard](https://alvaro-ncaa-research-review.alv-mendizabal.chatgpt.site) · [Versioned dashboard source](docs/ncaa/v10.html)
+
+Phase A recomputed 854,308 eligible saved prediction rows across 18 competition/season/target partitions, producing 336 separate scorecards and 64 metric-specific descriptive leader rows. The page contains 25,847 recovered game/time records across men's and women's 2024–25, 2025–26 and 2026–27 evidence. Original source clocks, smaller cohorts, missing provider matches and negative findings remain visible. These archived observations do not certify a fresh complete current season or upcoming schedule. No new scientific model fits, inference, issued forecasts or promotions are claimed. The local leased-process benchmark was blocked by unverifiable CPU-pressure evidence; twelve-core SageMaker acceptance remains pending.
+
+The existing public NCAA site is deployed; this repository's GitHub Pages service remains disabled. The saved-model original/former/current/frozen-role registry is preserved privately, and an unresolved role binding is not reassigned from current outcomes.
+
+---
+
 <!-- NCAA_B063R9_ROOT_STATUS_START -->
 ## NCAA basketball B063R9 — November 13, 2026 UTC
 
