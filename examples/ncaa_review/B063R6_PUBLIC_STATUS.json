@@ -1,0 +1,233 @@
+{
+  "actual_observer": {
+    "complete_terminal_log_claimed": false,
+    "included_samples": 5,
+    "independent_process": true,
+    "intervals_seconds": [
+      10.000418,
+      10.000082,
+      10.000093,
+      10.00008
+    ],
+    "is_return_preparation_prefix": true,
+    "scientific_workers": 0,
+    "twelve_core_scientific_acceptance_proven": false,
+    "worker_peak_CPU_equivalents": 0.6913211502831491
+  },
+  "actual_recovery": {
+    "actual_backend": "libc.pidfd_open + libc.pidfd_send_signal",
+    "basis": "Authenticated recovery report included in the actual returned owner artifact; observation applies at that recorded recovery completion.",
+    "canonical_locks_acquired_before_new_worker": true,
+    "elapsed_seconds": 79.45207473199844,
+    "exact_old_lease_released": true,
+    "forced_shutdown": true,
+    "foreign_lease_records_unchanged": true,
+    "foreign_process_signals": 0,
+    "kernel_capability_was_exercised": true,
+    "lock_files_deleted": 0,
+    "numeric_PID_signal_fallback": false,
+    "observed_python_pidfd_open": false,
+    "observed_python_pidfd_send_signal": false,
+    "observed_python_version": "3.12.15",
+    "old_worker_exit_verified": true,
+    "registered_frontend_exit_verified": true,
+    "status": "EXACT_OLD_OWNER_EXIT_VERIFIED_SAFE_TO_LAUNCH"
+  },
+  "latest_actual_owner": {
+    "cause": "Missing-binding test cleanup attempted to delete a pidfd attribute already absent in the owner Python module.",
+    "durable_return_verified": true,
+    "errored_startup_cases": 1,
+    "failed_scientific_fits": 0,
+    "failure_code": "B032_FRESH_PACKAGE_TESTS_FAILED",
+    "failure_stage": "CRITICAL_STARTUP_FIXTURE_AFTER_NATIVE_PREFLIGHT_BEFORE_SCIENCE",
+    "full_scientific_run_completed": false,
+    "new_checkpoints": 0,
+    "new_metrics_or_forecasts": false,
+    "new_owner_fits": 0,
+    "new_scientific_fit_attempts": 0,
+    "passed_startup_cases": 115,
+    "release": "B063R5",
+    "reused_checkpoints": 0,
+    "reused_scientific_fits": 0,
+    "source_sha256": "7605996d5989734af843158c09b7a3d470d26cb9278484af4e103cb8d34bccb6",
+    "status": "FAILED_PARTIAL_WORK_PRESERVED",
+    "subtest_error_events": 3,
+    "unique_startup_cases": 116,
+    "worker_completed_at_utc": "2026-11-13T02:24:13.231026+00:00",
+    "worker_elapsed_seconds": 48.86063736600045,
+    "worker_started_at_utc": "2026-11-13T02:23:24.787845+00:00"
+  },
+  "metric_policy": {
+    "current_season_complete": false,
+    "metrics": [
+      "accuracy",
+      "log_loss",
+      "brier",
+      "margin_mae",
+      "margin_rmse",
+      "total_mae",
+      "total_rmse"
+    ],
+    "missing_quotes_fabricated": false,
+    "new_scores": null,
+    "provider_refresh_performed": false,
+    "rolling_or_original_issue_promotion": false
+  },
+  "preflight_cost": {
+    "cost_is_invoice_or_exclusive_project_cost": false,
+    "cost_scope_excludes_prelaunch_recovery": true,
+    "critical_startup_case_seconds": 0.6999858179988223,
+    "instance_wall_estimate_usd": 0.03484643814093318,
+    "native_fixture_cached_cases": 0,
+    "native_fixture_cases": 26,
+    "native_fixture_real_sports_credit": 0,
+    "native_fixture_seconds": 44.90784474300017,
+    "rate_usd_per_hour": 2.57
+  },
+  "prepared_continuation": {
+    "new_preparation_scientific_fits": 0,
+    "owner_execution_verified": false,
+    "release": "B063R6",
+    "source_sha256": "1fa4cb7d9c784d8be5c576d46886dcb9e0b459cc7e096b0b5501720b215b1a41",
+    "status": "VERIFIED_LOCAL_ENGINEERING_OWNER_EXECUTION_PENDING",
+    "validation": {
+      "status": "PASS_EXACT_SEALED_LOCAL_ENGINEERING",
+      "distinct_targeted_cases": 483,
+      "groups": [
+        {
+          "scope": "source",
+          "cases": 8,
+          "passed": 8,
+          "wall_seconds": 8.952263567000045,
+          "receipt_sha256": "a7fe75b9837c294b63d422d0098a50691a09d0daceac408a9ec35522f5880fb9"
+        },
+        {
+          "scope": "locking",
+          "cases": 144,
+          "passed": 144,
+          "wall_seconds": 4.965644754003733,
+          "receipt_sha256": "72e79fa13fafedcb7af922765d3100b3fdaf3f2cfa4eed51791f98526d4cc853"
+        },
+        {
+          "scope": "runtime",
+          "cases": 131,
+          "passed": 131,
+          "wall_seconds": 5.5953320219996385,
+          "receipt_sha256": "1460162127c68a7067adff1baf18301c615a15fd0bf4ceef54a8a9a507dadeda"
+        },
+        {
+          "scope": "cache_resume",
+          "cases": 199,
+          "passed": 199,
+          "wall_seconds": 22.96872388900374,
+          "receipt_sha256": "e3cdadaba838d0bf43522b859f6e9407969886035efa1065650b073fa533878e"
+        },
+        {
+          "scope": "stress",
+          "cases": 1,
+          "passed": 1,
+          "wall_seconds": 1.333122733005439,
+          "receipt_sha256": "b689e49df9303ce824e954b234faa86db3790d6699af0c037d47f3e7e4115315"
+        }
+      ],
+      "full_legacy_regression_claimed": false,
+      "startup_cold_cases": 116,
+      "startup_cold_case_seconds": 0.9558431900004507,
+      "startup_cold_invocation_seconds": 2.366384246000962,
+      "startup_warm_executed_cases": 0,
+      "startup_warm_reused_cases": 116,
+      "startup_warm_invocation_seconds": 0.6204138879984384,
+      "binding_matrix_environments": 4,
+      "distinct_focused_binding_cases": 38,
+      "focused_binding_case_executions_across_environments": 152,
+      "runtime_cases_with_both_bindings_absent": 131,
+      "runtime_descriptors_restored_after_documented_stdlib_initialization": true,
+      "new_sports_scientific_fits": 0,
+      "owner_execution": false,
+      "public_summary": "The exact sealed executable passed 483 distinct targeted engineering cases. Startup validation passed all 116 cases and reused those results with zero reexecuted cases on the next invocation. All four binding-availability environments passed; the runtime suite also passed 131 cases with both Python convenience bindings absent. A 12-process engineering stress test committed and exactly resumed 384 fixture contracts without rerunning their producers. In a separate two-process native-cache check, 11 synthetic sklearn contracts took 4.728 seconds cold and 2.030 seconds warm; the warm process reused all 11 with its fixture producer forbidden. These are local engineering results, with zero sports-fit credit and no owner throughput claim."
+    },
+    "source_bytes": 23153163,
+    "source_members": 1074,
+    "native_cache_measurement": {
+      "status": "PASS",
+      "measurement_scope": "One local paired fresh-process engineering measurement; genuine native sklearn fits on invented observations. No sports-fit, twelve-core or production whole-pipeline speedup claim.",
+      "distinct_fresh_processes": 2,
+      "native_families": [
+        "logistic",
+        "linear",
+        "ridge",
+        "hist_gradient",
+        "extra_trees"
+      ],
+      "cold_seconds": 4.727712539999629,
+      "warm_seconds": 2.0302772840004764,
+      "cold_fixture_fits": 11,
+      "warm_fixture_fits": 0,
+      "warm_reused_fixture_contracts": 11,
+      "warm_original_fixture_producer_forbidden_and_not_called": true,
+      "full_native_package_bytes_rehashed_by_warm_cache": false,
+      "target_model_runtime_authentication_relaxed": false,
+      "new_sports_fits": 0,
+      "AWS_calls": 0,
+      "provider_calls": 0,
+      "receipt_sha256": "e69ac5d22872b2c0e311b4727d30dc47480beedef199b201db469aec8326eee1"
+    },
+    "repairs_verified": [
+      "Module-safe missing-binding test fixtures",
+      "Parent-safe simulated identities in monitor fixtures",
+      "Critical startup validation before expensive native imports",
+      "Authenticated persistent native-validation receipt reuse"
+    ],
+    "engineering_stress": {
+      "distinct_OS_workers": 12,
+      "simultaneously_observed_engineering_processes": 12,
+      "simultaneously_observed_scientific_processes": 0,
+      "durable_fixture_contracts": 384,
+      "ordered_completion_events": 768,
+      "exact_resumed_fixture_contracts": 384,
+      "resume_producer_calls": 0,
+      "seconds_including_spawn_and_resume": 1.311265538999578,
+      "engineering_contracts_per_wall_second": 292.84686326231866,
+      "new_sports_scientific_fits": 0,
+      "owner_12_core_utilization_proved": false,
+      "no_scientific_throughput_or_model_performance_claim": true,
+      "local_available_affinity_CPUs": 9,
+      "receipt_sha256": "64d803e6c6f4d629aef2b77d89547cdb4b4e779d8c1210c10c34868e82272650"
+    }
+  },
+  "preserved_evidence": {
+    "authenticated_prior_target_fits": 22,
+    "exact_content_objects_reverified": 134,
+    "model_deserializations_in_review": 0,
+    "new_fit_credit_for_preservation": 0,
+    "previous_public_science_and_issue_clocks_unchanged": true,
+    "prior_release": "B063R3",
+    "scientific_runtime_compatibility_still_required": true
+  },
+  "project": "NCAA basketball / men and women",
+  "publication": {
+    "new_scientific_evaluation": false,
+    "private_executable_or_models_published": false,
+    "source_publication_is_deployment": false,
+    "website_deployment_verified": false
+  },
+  "release": "B063R6",
+  "schema": "sel.ncaa.b063r6.public_status.v1",
+  "source_attribution": {
+    "authenticated_nested_return_sha256": "078383d92289e9a3e373beb6f71b64ccdb966aa0869b7c1a27dd020bc90eca37",
+    "authenticated_outer_return_sha256": "b464061e98197203393178058e5b1d66fa03130cf5f0af2b83ea6d8bdb4d5ed7",
+    "preserved_prior_capsule_sha256": "7322b22c15b341bd3e35b37d8fad95af87cc750a027133869141b4e3f9f7668d",
+    "returned_source_sha256": "7605996d5989734af843158c09b7a3d470d26cb9278484af4e103cb8d34bccb6",
+    "base_commit": "b07bfa7369ef3521e4454deb91224bd7a7e4d013",
+    "preserved_git_blobs": {
+      "docs/ncaa/index.html": "041fb7c4b351eb4c0d721a0661efbbd144941462",
+      "docs/ncaa/b063r5.html": "54f88306d11422e5da1ff8669ceb918d4d9056b2",
+      "docs/ncaa/data/B063R5_PUBLIC_STATUS.json": "8756a24f6b38781e681b34533bfa7d694132dd3e",
+      "docs/ncaa/b063r4.html": "b8dd8df8d7fa423eb9d34bf36980f75bc2b849bd",
+      "docs/ncaa/data/B063R4_PUBLIC_STATUS.json": "56283ed5a968f91b98c3075aec2a8932e9ef9639",
+      "examples/ncaa_review/README.md": "45caa21449b4289641fe7e348863973d69bd466a",
+      "examples/ncaa_review/test_dashboard_browser.cjs": "bd230ba8f77c00389ba13dc3067f24bc3c5b3208"
+    }
+  },
+  "updated_at_utc": "2026-11-13T03:23:04.907964+00:00"
+}

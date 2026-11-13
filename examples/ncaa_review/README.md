@@ -1,3 +1,19 @@
+<!-- B063R6_STATUS_START -->
+## Latest actual return: R5 recovery verified, startup fixture failed
+
+The exact R5 return verifies old-owner exit, scoped old-lease release, fresh
+canonical ownership, and five independent observations at ten-second intervals.
+The next worker stopped before science because one missing-binding test had
+three cleanup errors; 115 of 116 unique cases passed. All 22 prior target fits and
+134 content objects remain preserved. No new scientific fits, forecasts,
+quotes, scores or whole-season coverage are claimed.
+
+`b063r6.html` and `B063R6_PUBLIC_STATUS.json` distinguish actual recovery from
+the prepared fixture/startup/cache repair. Earlier dated evidence remains exact.
+Public source publication does not establish a deployed website.
+
+<!-- B063R6_STATUS_END -->
+
 <!-- B063R5_STATUS_START -->
 ## Latest owner result: B063R4 preflight failed
 
