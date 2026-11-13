@@ -1,7 +1,7 @@
 'use strict';
 const assert=require('node:assert/strict'),fs=require('node:fs'),path=require('node:path'),http=require('node:http'),crypto=require('node:crypto');
 const {chromium}=require(process.env.PLAYWRIGHT_MODULE_DIR||'playwright');
-const root=path.join(__dirname,'dashboard_n088');
+const root=path.resolve(process.env.NFL_N088_BUNDLE_ROOT||path.join(__dirname,'dashboard_n088'));
 (async()=>{
  const server=http.createServer((req,res)=>{const route=new URL(req.url,'http://local').pathname;const filename=route==='/'?'index.html':route.replace(/^\//,'');if(!['index.html','historical.json','publication.json'].includes(filename)){res.writeHead(404);res.end();return;}res.setHeader('Content-Type',filename.endsWith('.json')?'application/json':'text/html');res.end(fs.readFileSync(path.join(root,filename)));});
  await new Promise(resolve=>server.listen(0,'127.0.0.1',resolve));
