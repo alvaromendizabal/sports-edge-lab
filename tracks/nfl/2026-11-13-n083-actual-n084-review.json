@@ -1,0 +1,4679 @@
+{
+  "schema": "nfl.n084.actual-n083-public-review.v1",
+  "actual_owner_release": "N083",
+  "owner_status": "PARTIAL_OWNER_CONTINUATION_REPAIR_REQUIRED",
+  "owner_research_acceptance": false,
+  "owner_return_sha256": "be514bc5c2a488e21b043e88b557ee8f07a59d3f5df1a638d98ace1780afac17",
+  "selected_forecasts_sha256": "68298d318594c1fd41365b70c64ff79c31057bd7c110a81201796d5c2f98bfe7",
+  "new_fits": 376,
+  "new_native_fits": 354,
+  "new_meta_fits": 22,
+  "new_forecast_events": 1776,
+  "elapsed_seconds": 2592.474130618,
+  "finished_at_utc": "2026-11-13T06:51:27.568148+00:00",
+  "invocation_started_at_utc": "2026-11-13T06:08:15.094026+00:00",
+  "compute_estimate_usd": 1.850738476580072,
+  "estimate_not_bill": true,
+  "new_paid_calls": 15,
+  "automatic_promotion": false,
+  "counts": {
+    "completed_games": 137,
+    "current_selected_games": 111,
+    "current_selected_rows": 444,
+    "distinct_selected_model_aliases": 9,
+    "future_games": 135,
+    "games_with_any_preserved_evidence": 248,
+    "games_without_prediction_evidence_in_this_projection": 24,
+    "official_time_tbd_games": 24,
+    "primary_metric_roles": 9,
+    "rows_after_display_cutoff_not_shown": 0,
+    "schedule_games": 272,
+    "unmapped_nonselected_issue_rows_not_shown": 222
+  },
+  "current_2026_monitor": {
+    "status": "REGISTERED_CURRENT_SEASON_MONITOR_WITH_EXPLICIT_GAPS",
+    "execution_complete": false,
+    "new_fits": 166,
+    "registered_candidate_count": 168,
+    "source_supported_candidate_count": 168,
+    "replay_rows": 21475,
+    "failures": 0,
+    "peak_leased_native_processes": 12,
+    "physical_worker_launches": 168,
+    "denominator_status_counts": {
+      "ARCHIVED_VECTOR_OR_SELECTED_STATE_UNAVAILABLE_NO_BACKFILL": 132525,
+      "SCORED_FROZEN_REPLAY": 50071,
+      "TIE_EXCLUDED_FROM_CONDITIONAL_BINARY_TARGET": 573,
+      "UNPLAYED_NO_CURRENT_SEASON_SCORE": 180495
+    }
+  },
+  "latest_2026_scoreboard_status": "OFFLOADED_SCORECARDS_NOT_INCLUDED_IN_RETURN",
+  "latest_2026_scoreboard_sha256": "1b31427bf47d0dfb3f687f0fe2e57d63de34bc9ef76b976a86d1493173d43da4",
+  "qualified_provider_comparison_cells": 0,
+  "source_gaps": [
+    "DraftKings: no admitted same-cutoff quote values in selected export.",
+    "Kalshi: no admitted same-cutoff quote values in selected export.",
+    "Polymarket: no admitted same-cutoff quote values in selected export.",
+    "Latest 2026 monitor scorecards are offloaded; no new leaderboard is inferred from earlier cards."
+  ],
+  "publication_performed_fit_or_inference": false,
+  "website_deployed": false,
+  "new_historical": {
+    "schema": "nfl.n084.public-new-n083-historical-cards.v1",
+    "provenance": {
+      "return_sha256": "be514bc5c2a488e21b043e88b557ee8f07a59d3f5df1a638d98ace1780afac17",
+      "summary_member_sha256": "3c61544fba5237ec123b1c6399e1e0809e58bef67aecf65f5f2a41e4aab3b685",
+      "source_field": "SUMMARY.n083_scientific_progress.new_experiment_scorecards"
+    },
+    "qualification": "Best within the 60 new N083 recipes on exact development-exposed frozen 2024/2025 cohorts. These are retrospective research results, not prospective wins or global champions. No automatic promotion.",
+    "cards": [
+      {
+        "accuracy": 0.6456140350877193,
+        "brier": 0.21801928667497286,
+        "comparison_horizon_seconds": 3600.0,
+        "ece": 0.06260341918961222,
+        "exact_horizon_cohort": true,
+        "exposure": "DEVELOPMENT_EXPOSED",
+        "log_loss": 0.6250124533630356,
+        "n": 285,
+        "prospective": false,
+        "reliability": [
+          {
+            "bin": 1,
+            "mean_probability": 0.1605457048946284,
+            "n": 1,
+            "observed_rate": 1.0
+          },
+          {
+            "bin": 2,
+            "mean_probability": 0.266231622625646,
+            "n": 8,
+            "observed_rate": 0.0
+          },
+          {
+            "bin": 3,
+            "mean_probability": 0.3542381896014281,
+            "n": 21,
+            "observed_rate": 0.38095238095238093
+          },
+          {
+            "bin": 4,
+            "mean_probability": 0.453086008253602,
+            "n": 56,
+            "observed_rate": 0.35714285714285715
+          },
+          {
+            "bin": 5,
+            "mean_probability": 0.5568399815845162,
+            "n": 58,
+            "observed_rate": 0.46551724137931033
+          },
+          {
+            "bin": 6,
+            "mean_probability": 0.6456519302983288,
+            "n": 79,
+            "observed_rate": 0.6582278481012658
+          },
+          {
+            "bin": 7,
+            "mean_probability": 0.7447860841901526,
+            "n": 51,
+            "observed_rate": 0.7254901960784313
+          },
+          {
+            "bin": 8,
+            "mean_probability": 0.8486776381522294,
+            "n": 11,
+            "observed_rate": 1.0
+          }
+        ],
+        "roc_auc": 0.7099980123235937,
+        "season": 2024,
+        "target": "win",
+        "model_alias": "Candidate 001",
+        "model_family": "ridge"
+      },
+      {
+        "accuracy": 0.6161971830985915,
+        "brier": 0.23362138644303393,
+        "comparison_horizon_seconds": 3600.0,
+        "ece": 0.044685387151829556,
+        "exact_horizon_cohort": true,
+        "exposure": "DEVELOPMENT_EXPOSED",
+        "log_loss": 0.6594202631818735,
+        "n": 284,
+        "prospective": false,
+        "reliability": [
+          {
+            "bin": 1,
+            "mean_probability": 0.17828188630326458,
+            "n": 1,
+            "observed_rate": 0.0
+          },
+          {
+            "bin": 2,
+            "mean_probability": 0.26161248231433126,
+            "n": 16,
+            "observed_rate": 0.4375
+          },
+          {
+            "bin": 3,
+            "mean_probability": 0.34890372742905934,
+            "n": 32,
+            "observed_rate": 0.34375
+          },
+          {
+            "bin": 4,
+            "mean_probability": 0.4512204638725674,
+            "n": 48,
+            "observed_rate": 0.3958333333333333
+          },
+          {
+            "bin": 5,
+            "mean_probability": 0.5530563173099221,
+            "n": 67,
+            "observed_rate": 0.5223880597014925
+          },
+          {
+            "bin": 6,
+            "mean_probability": 0.650933722583097,
+            "n": 65,
+            "observed_rate": 0.6153846153846154
+          },
+          {
+            "bin": 7,
+            "mean_probability": 0.7398918920638066,
+            "n": 36,
+            "observed_rate": 0.6944444444444444
+          },
+          {
+            "bin": 8,
+            "mean_probability": 0.8354259419089141,
+            "n": 19,
+            "observed_rate": 0.7894736842105263
+          }
+        ],
+        "roc_auc": 0.6507177033492824,
+        "season": 2025,
+        "target": "win",
+        "model_alias": "Candidate 001",
+        "model_family": "ridge"
+      },
+      {
+        "accuracy": 0.6912280701754386,
+        "brier": 0.21394424715006788,
+        "comparison_horizon_seconds": 3600.0,
+        "ece": 0.06832634106016997,
+        "exact_horizon_cohort": true,
+        "exposure": "DEVELOPMENT_EXPOSED",
+        "log_loss": 0.6179316574034583,
+        "n": 285,
+        "prospective": false,
+        "reliability": [
+          {
+            "bin": 2,
+            "mean_probability": 0.2819768190383911,
+            "n": 3,
+            "observed_rate": 0.6666666666666666
+          },
+          {
+            "bin": 3,
+            "mean_probability": 0.35808642026854726,
+            "n": 41,
+            "observed_rate": 0.21951219512195122
+          },
+          {
+            "bin": 4,
+            "mean_probability": 0.44824781156566046,
+            "n": 73,
+            "observed_rate": 0.3698630136986301
+          },
+          {
+            "bin": 5,
+            "mean_probability": 0.5465370878881338,
+            "n": 49,
+            "observed_rate": 0.6326530612244898
+          },
+          {
+            "bin": 6,
+            "mean_probability": 0.656496524810791,
+            "n": 45,
+            "observed_rate": 0.6444444444444445
+          },
+          {
+            "bin": 7,
+            "mean_probability": 0.7498314833199536,
+            "n": 54,
+            "observed_rate": 0.7777777777777778
+          },
+          {
+            "bin": 8,
+            "mean_probability": 0.8322088986635208,
+            "n": 20,
+            "observed_rate": 0.8
+          }
+        ],
+        "roc_auc": 0.7230172927847346,
+        "season": 2024,
+        "target": "win",
+        "model_alias": "Candidate 002",
+        "model_family": "xgboost"
+      },
+      {
+        "accuracy": 0.6373239436619719,
+        "brier": 0.23035060379309047,
+        "comparison_horizon_seconds": 3600.0,
+        "ece": 0.059387970715761185,
+        "exact_horizon_cohort": true,
+        "exposure": "DEVELOPMENT_EXPOSED",
+        "log_loss": 0.6532020301995847,
+        "n": 284,
+        "prospective": false,
+        "reliability": [
+          {
+            "bin": 2,
+            "mean_probability": 0.27799061089754107,
+            "n": 10,
+            "observed_rate": 0.4
+          },
+          {
+            "bin": 3,
+            "mean_probability": 0.35814092414719717,
+            "n": 56,
+            "observed_rate": 0.39285714285714285
+          },
+          {
+            "bin": 4,
+            "mean_probability": 0.4527167276902632,
+            "n": 55,
+            "observed_rate": 0.36363636363636365
+          },
+          {
+            "bin": 5,
+            "mean_probability": 0.5535550063306635,
+            "n": 33,
+            "observed_rate": 0.5151515151515151
+          },
+          {
+            "bin": 6,
+            "mean_probability": 0.6555584852512066,
+            "n": 39,
+            "observed_rate": 0.5897435897435898
+          },
+          {
+            "bin": 7,
+            "mean_probability": 0.75101630834111,
+            "n": 57,
+            "observed_rate": 0.7017543859649122
+          },
+          {
+            "bin": 8,
+            "mean_probability": 0.8282510533052332,
+            "n": 34,
+            "observed_rate": 0.7647058823529411
+          }
+        ],
+        "roc_auc": 0.6643740031897927,
+        "season": 2025,
+        "target": "win",
+        "model_alias": "Candidate 002",
+        "model_family": "xgboost"
+      },
+      {
+        "accuracy": 0.6807017543859649,
+        "brier": 0.2150563241117047,
+        "comparison_horizon_seconds": 3600.0,
+        "ece": 0.057295924103599113,
+        "exact_horizon_cohort": true,
+        "exposure": "DEVELOPMENT_EXPOSED",
+        "log_loss": 0.620597429747589,
+        "n": 285,
+        "prospective": false,
+        "reliability": [
+          {
+            "bin": 2,
+            "mean_probability": 0.2972029829796207,
+            "n": 1,
+            "observed_rate": 0.0
+          },
+          {
+            "bin": 3,
+            "mean_probability": 0.3731161024119657,
+            "n": 40,
+            "observed_rate": 0.25
+          },
+          {
+            "bin": 4,
+            "mean_probability": 0.44788045947484156,
+            "n": 73,
+            "observed_rate": 0.3835616438356164
+          },
+          {
+            "bin": 5,
+            "mean_probability": 0.5492660851034481,
+            "n": 62,
+            "observed_rate": 0.5483870967741935
+          },
+          {
+            "bin": 6,
+            "mean_probability": 0.6484438643075618,
+            "n": 40,
+            "observed_rate": 0.775
+          },
+          {
+            "bin": 7,
+            "mean_probability": 0.7502087965494108,
+            "n": 63,
+            "observed_rate": 0.746031746031746
+          },
+          {
+            "bin": 8,
+            "mean_probability": 0.8279465230533541,
+            "n": 6,
+            "observed_rate": 1.0
+          }
+        ],
+        "roc_auc": 0.7193897833432717,
+        "season": 2024,
+        "target": "win",
+        "model_alias": "Candidate 003",
+        "model_family": "catboost"
+      },
+      {
+        "accuracy": 0.6584507042253521,
+        "brier": 0.22603894957700787,
+        "comparison_horizon_seconds": 3600.0,
+        "ece": 0.07582925467328905,
+        "exact_horizon_cohort": true,
+        "exposure": "DEVELOPMENT_EXPOSED",
+        "log_loss": 0.6432362463239042,
+        "n": 284,
+        "prospective": false,
+        "reliability": [
+          {
+            "bin": 3,
+            "mean_probability": 0.37352132839074526,
+            "n": 48,
+            "observed_rate": 0.3958333333333333
+          },
+          {
+            "bin": 4,
+            "mean_probability": 0.4489923163950626,
+            "n": 71,
+            "observed_rate": 0.323943661971831
+          },
+          {
+            "bin": 5,
+            "mean_probability": 0.5520966387433924,
+            "n": 33,
+            "observed_rate": 0.6363636363636364
+          },
+          {
+            "bin": 6,
+            "mean_probability": 0.6501590683298146,
+            "n": 45,
+            "observed_rate": 0.5333333333333333
+          },
+          {
+            "bin": 7,
+            "mean_probability": 0.7517901997428222,
+            "n": 75,
+            "observed_rate": 0.72
+          },
+          {
+            "bin": 8,
+            "mean_probability": 0.8196796959250797,
+            "n": 12,
+            "observed_rate": 0.9166666666666666
+          }
+        ],
+        "roc_auc": 0.6753389154704944,
+        "season": 2025,
+        "target": "win",
+        "model_alias": "Candidate 003",
+        "model_family": "catboost"
+      },
+      {
+        "bias": -2.428572042364823,
+        "comparison_horizon_seconds": 3600.0,
+        "crps": 7.45091127963314,
+        "exact_horizon_cohort": true,
+        "exposure": "DEVELOPMENT_EXPOSED",
+        "interval_90_coverage": 0.9087719298245615,
+        "interval_90_width": 43.64094848632812,
+        "mae": 10.200911204020182,
+        "n": 285,
+        "prospective": false,
+        "residual_quantiles": {
+          "0.05": -18.854505920410155,
+          "0.1": -12.755735778808594,
+          "0.5": 1.7929496765136719,
+          "0.9": 18.4981575012207,
+          "0.95": 24.86144180297852
+        },
+        "rmse": 13.137977108542254,
+        "season": 2024,
+        "target": "total",
+        "model_alias": "Candidate 004",
+        "model_family": "xgboost"
+      },
+      {
+        "bias": -0.14451113249126232,
+        "comparison_horizon_seconds": 3600.0,
+        "crps": 7.88575206757766,
+        "exact_horizon_cohort": true,
+        "exposure": "DEVELOPMENT_EXPOSED",
+        "interval_90_coverage": 0.8771929824561403,
+        "interval_90_width": 43.64094848632812,
+        "mae": 11.05346913923297,
+        "n": 285,
+        "prospective": false,
+        "residual_quantiles": {
+          "0.05": -21.628473663330077,
+          "0.1": -16.010861968994142,
+          "0.5": 0.2589149475097656,
+          "0.9": 18.66098098754883,
+          "0.95": 23.319950866699223
+        },
+        "rmse": 13.87921919942993,
+        "season": 2025,
+        "target": "total",
+        "model_alias": "Candidate 004",
+        "model_family": "xgboost"
+      },
+      {
+        "bias": 0.5366704659610323,
+        "comparison_horizon_seconds": 3600.0,
+        "crps": 7.406762267008344,
+        "exact_horizon_cohort": true,
+        "exposure": "DEVELOPMENT_EXPOSED",
+        "interval_90_coverage": 0.887719298245614,
+        "interval_90_width": 45.160645551559575,
+        "mae": 10.208627443004158,
+        "n": 285,
+        "prospective": false,
+        "residual_quantiles": {
+          "0.05": -23.984059202411206,
+          "0.1": -17.525356867409204,
+          "0.5": -1.312555497650047,
+          "0.9": 17.102889892076824,
+          "0.95": 23.263931217991566
+        },
+        "rmse": 13.283553045451532,
+        "season": 2024,
+        "target": "margin",
+        "model_alias": "Candidate 005",
+        "model_family": "lightgbm"
+      },
+      {
+        "bias": 1.9367980267581077,
+        "comparison_horizon_seconds": 3600.0,
+        "crps": 7.367828983800088,
+        "exact_horizon_cohort": true,
+        "exposure": "DEVELOPMENT_EXPOSED",
+        "interval_90_coverage": 0.9122807017543859,
+        "interval_90_width": 45.160645551559575,
+        "mae": 10.316612942286097,
+        "n": 285,
+        "prospective": false,
+        "residual_quantiles": {
+          "0.05": -21.886248639644535,
+          "0.1": -18.32480357450266,
+          "0.5": -2.127668491375186,
+          "0.9": 15.650222230286913,
+          "0.95": 20.54055219595792
+        },
+        "rmse": 13.112552174102227,
+        "season": 2025,
+        "target": "margin",
+        "model_alias": "Candidate 005",
+        "model_family": "lightgbm"
+      },
+      {
+        "bias": -0.12980413897823548,
+        "comparison_horizon_seconds": 3600.0,
+        "crps": 7.511684126134446,
+        "exact_horizon_cohort": true,
+        "exposure": "DEVELOPMENT_EXPOSED",
+        "interval_90_coverage": 0.9298245614035088,
+        "interval_90_width": 51.34644257050758,
+        "mae": 10.377532698091748,
+        "n": 285,
+        "prospective": false,
+        "residual_quantiles": {
+          "0.05": -22.174949656178693,
+          "0.1": -18.41793645496237,
+          "0.5": 0.7984968872796907,
+          "0.9": 17.17680258774793,
+          "0.95": 23.68788031547807
+        },
+        "rmse": 13.359094000826257,
+        "season": 2024,
+        "target": "margin",
+        "model_alias": "Candidate 006",
+        "model_family": "ridge"
+      },
+      {
+        "bias": 0.7145950165014676,
+        "comparison_horizon_seconds": 3600.0,
+        "crps": 7.425971048660502,
+        "exact_horizon_cohort": true,
+        "exposure": "DEVELOPMENT_EXPOSED",
+        "interval_90_coverage": 0.9368421052631579,
+        "interval_90_width": 51.34644257050758,
+        "mae": 10.288592003721597,
+        "n": 285,
+        "prospective": false,
+        "residual_quantiles": {
+          "0.05": -22.178500031800287,
+          "0.1": -16.28633489412986,
+          "0.5": -0.7552405226408161,
+          "0.9": 16.732751457634013,
+          "0.95": 23.47082113869439
+        },
+        "rmse": 13.200599551156337,
+        "season": 2025,
+        "target": "margin",
+        "model_alias": "Candidate 006",
+        "model_family": "ridge"
+      },
+      {
+        "bias": -2.4666216398540297,
+        "comparison_horizon_seconds": 3600.0,
+        "crps": 7.458459304570051,
+        "exact_horizon_cohort": true,
+        "exposure": "DEVELOPMENT_EXPOSED",
+        "interval_90_coverage": 0.8982456140350877,
+        "interval_90_width": 43.073107147216824,
+        "mae": 10.172539078561883,
+        "n": 285,
+        "prospective": false,
+        "residual_quantiles": {
+          "0.05": -18.86261444091797,
+          "0.1": -13.020448303222656,
+          "0.5": 1.9016380310058594,
+          "0.9": 18.799261474609374,
+          "0.95": 24.56209259033204
+        },
+        "rmse": 13.165892209479876,
+        "season": 2024,
+        "target": "total",
+        "model_alias": "Candidate 007",
+        "model_family": "xgboost"
+      },
+      {
+        "bias": 0.1138986821760211,
+        "comparison_horizon_seconds": 3600.0,
+        "crps": 7.852308155551768,
+        "exact_horizon_cohort": true,
+        "exposure": "DEVELOPMENT_EXPOSED",
+        "interval_90_coverage": 0.8807017543859649,
+        "interval_90_width": 43.073107147216824,
+        "mae": 11.01778504221063,
+        "n": 285,
+        "prospective": false,
+        "residual_quantiles": {
+          "0.05": -21.961115264892577,
+          "0.1": -16.732237243652342,
+          "0.5": -0.6960716247558594,
+          "0.9": 18.3945442199707,
+          "0.95": 22.738230133056643
+        },
+        "rmse": 13.836518039728878,
+        "season": 2025,
+        "target": "total",
+        "model_alias": "Candidate 007",
+        "model_family": "xgboost"
+      },
+      {
+        "accuracy": 0.7052631578947368,
+        "brier": 0.21093710933031568,
+        "comparison_horizon_seconds": 3600.0,
+        "ece": 0.08474634065248209,
+        "exact_horizon_cohort": true,
+        "exposure": "DEVELOPMENT_EXPOSED",
+        "log_loss": 0.6122563593240415,
+        "n": 285,
+        "prospective": false,
+        "reliability": [
+          {
+            "bin": 3,
+            "mean_probability": 0.3728494008393003,
+            "n": 29,
+            "observed_rate": 0.2413793103448276
+          },
+          {
+            "bin": 4,
+            "mean_probability": 0.4377818897705609,
+            "n": 88,
+            "observed_rate": 0.32954545454545453
+          },
+          {
+            "bin": 5,
+            "mean_probability": 0.5424088648413787,
+            "n": 51,
+            "observed_rate": 0.5882352941176471
+          },
+          {
+            "bin": 6,
+            "mean_probability": 0.6479387124505542,
+            "n": 56,
+            "observed_rate": 0.7321428571428571
+          },
+          {
+            "bin": 7,
+            "mean_probability": 0.7404869593929356,
+            "n": 60,
+            "observed_rate": 0.8
+          },
+          {
+            "bin": 8,
+            "mean_probability": 0.8080942704741835,
+            "n": 1,
+            "observed_rate": 1.0
+          }
+        ],
+        "roc_auc": 0.7352415026833632,
+        "season": 2024,
+        "target": "win",
+        "model_alias": "Candidate 008",
+        "model_family": "catboost"
+      },
+      {
+        "accuracy": 0.6443661971830986,
+        "brier": 0.2263073155875603,
+        "comparison_horizon_seconds": 3600.0,
+        "ece": 0.07670757262173801,
+        "exact_horizon_cohort": true,
+        "exposure": "DEVELOPMENT_EXPOSED",
+        "log_loss": 0.6432601846130889,
+        "n": 284,
+        "prospective": false,
+        "reliability": [
+          {
+            "bin": 3,
+            "mean_probability": 0.3740569182225723,
+            "n": 43,
+            "observed_rate": 0.4186046511627907
+          },
+          {
+            "bin": 4,
+            "mean_probability": 0.4476186095333579,
+            "n": 74,
+            "observed_rate": 0.33783783783783783
+          },
+          {
+            "bin": 5,
+            "mean_probability": 0.5496836447857593,
+            "n": 37,
+            "observed_rate": 0.5945945945945946
+          },
+          {
+            "bin": 6,
+            "mean_probability": 0.6475228156483182,
+            "n": 43,
+            "observed_rate": 0.5116279069767442
+          },
+          {
+            "bin": 7,
+            "mean_probability": 0.7491888221439775,
+            "n": 73,
+            "observed_rate": 0.7123287671232876
+          },
+          {
+            "bin": 8,
+            "mean_probability": 0.8178820878313735,
+            "n": 14,
+            "observed_rate": 0.9285714285714286
+          }
+        ],
+        "roc_auc": 0.6748903508771931,
+        "season": 2025,
+        "target": "win",
+        "model_alias": "Candidate 008",
+        "model_family": "catboost"
+      },
+      {
+        "bias": 0.4425473064314901,
+        "comparison_horizon_seconds": 3600.0,
+        "crps": 7.33873049969557,
+        "exact_horizon_cohort": true,
+        "exposure": "DEVELOPMENT_EXPOSED",
+        "interval_90_coverage": 0.8842105263157894,
+        "interval_90_width": 45.59117908477784,
+        "mae": 10.058108392710748,
+        "n": 285,
+        "prospective": false,
+        "residual_quantiles": {
+          "0.05": -23.78015576004982,
+          "0.1": -17.120167207717895,
+          "0.5": -0.7697305679321289,
+          "0.9": 16.384391498565673,
+          "0.95": 22.691232109069837
+        },
+        "rmse": 13.142230409731507,
+        "season": 2024,
+        "target": "margin",
+        "model_alias": "Candidate 009",
+        "model_family": "xgboost"
+      },
+      {
+        "bias": 1.6074299502268172,
+        "comparison_horizon_seconds": 3600.0,
+        "crps": 7.3916353088789775,
+        "exact_horizon_cohort": true,
+        "exposure": "DEVELOPMENT_EXPOSED",
+        "interval_90_coverage": 0.9052631578947369,
+        "interval_90_width": 45.59117908477784,
+        "mae": 10.31658755347394,
+        "n": 285,
+        "prospective": false,
+        "residual_quantiles": {
+          "0.05": -22.54287271499634,
+          "0.1": -17.98760132789612,
+          "0.5": -2.2098913192749023,
+          "0.9": 16.847948646545408,
+          "0.95": 21.358185386657727
+        },
+        "rmse": 13.162630717294505,
+        "season": 2025,
+        "target": "margin",
+        "model_alias": "Candidate 009",
+        "model_family": "xgboost"
+      },
+      {
+        "accuracy": 0.6771929824561403,
+        "brier": 0.2155194564472272,
+        "comparison_horizon_seconds": 3600.0,
+        "ece": 0.07837922308088403,
+        "exact_horizon_cohort": true,
+        "exposure": "DEVELOPMENT_EXPOSED",
+        "log_loss": 0.6204027934597796,
+        "n": 285,
+        "prospective": false,
+        "reliability": [
+          {
+            "bin": 2,
+            "mean_probability": 0.2766490942297798,
+            "n": 1,
+            "observed_rate": 0.0
+          },
+          {
+            "bin": 3,
+            "mean_probability": 0.3621331953180747,
+            "n": 27,
+            "observed_rate": 0.2962962962962963
+          },
+          {
+            "bin": 4,
+            "mean_probability": 0.45009536760153596,
+            "n": 71,
+            "observed_rate": 0.323943661971831
+          },
+          {
+            "bin": 5,
+            "mean_probability": 0.5514544850092604,
+            "n": 58,
+            "observed_rate": 0.5
+          },
+          {
+            "bin": 6,
+            "mean_probability": 0.6451271260774785,
+            "n": 80,
+            "observed_rate": 0.725
+          },
+          {
+            "bin": 7,
+            "mean_probability": 0.7410594532631745,
+            "n": 42,
+            "observed_rate": 0.7619047619047619
+          },
+          {
+            "bin": 8,
+            "mean_probability": 0.8204384827933993,
+            "n": 6,
+            "observed_rate": 1.0
+          }
+        ],
+        "roc_auc": 0.7259491154839992,
+        "season": 2024,
+        "target": "win",
+        "model_alias": "Candidate 010",
+        "model_family": "catboost"
+      },
+      {
+        "accuracy": 0.6197183098591549,
+        "brier": 0.2278509725252001,
+        "comparison_horizon_seconds": 3600.0,
+        "ece": 0.03562402539392602,
+        "exact_horizon_cohort": true,
+        "exposure": "DEVELOPMENT_EXPOSED",
+        "log_loss": 0.6470543439117734,
+        "n": 284,
+        "prospective": false,
+        "reliability": [
+          {
+            "bin": 2,
+            "mean_probability": 0.2910017159827247,
+            "n": 8,
+            "observed_rate": 0.25
+          },
+          {
+            "bin": 3,
+            "mean_probability": 0.3527685225381224,
+            "n": 53,
+            "observed_rate": 0.33962264150943394
+          },
+          {
+            "bin": 4,
+            "mean_probability": 0.44402575711627984,
+            "n": 55,
+            "observed_rate": 0.4727272727272727
+          },
+          {
+            "bin": 5,
+            "mean_probability": 0.5537701214453314,
+            "n": 50,
+            "observed_rate": 0.5
+          },
+          {
+            "bin": 6,
+            "mean_probability": 0.6502128788966512,
+            "n": 60,
+            "observed_rate": 0.6333333333333333
+          },
+          {
+            "bin": 7,
+            "mean_probability": 0.7389221151341611,
+            "n": 49,
+            "observed_rate": 0.6938775510204082
+          },
+          {
+            "bin": 8,
+            "mean_probability": 0.8216186685279384,
+            "n": 9,
+            "observed_rate": 1.0
+          }
+        ],
+        "roc_auc": 0.6676136363636362,
+        "season": 2025,
+        "target": "win",
+        "model_alias": "Candidate 010",
+        "model_family": "catboost"
+      },
+      {
+        "bias": -2.517623296540586,
+        "comparison_horizon_seconds": 3600.0,
+        "crps": 7.4072091973214,
+        "exact_horizon_cohort": true,
+        "exposure": "DEVELOPMENT_EXPOSED",
+        "interval_90_coverage": 0.9087719298245615,
+        "interval_90_width": 45.44929092106451,
+        "mae": 10.319363676734987,
+        "n": 285,
+        "prospective": false,
+        "residual_quantiles": {
+          "0.05": -18.29047924294236,
+          "0.1": -13.660511004077666,
+          "0.5": 2.1264966338705875,
+          "0.9": 18.955749069827448,
+          "0.95": 25.429548546498648
+        },
+        "rmse": 13.495121214985806,
+        "season": 2024,
+        "target": "total",
+        "model_alias": "Candidate 011",
+        "model_family": "ridge"
+      },
+      {
+        "bias": -0.06984386389127831,
+        "comparison_horizon_seconds": 3600.0,
+        "crps": 7.554719607914355,
+        "exact_horizon_cohort": true,
+        "exposure": "DEVELOPMENT_EXPOSED",
+        "interval_90_coverage": 0.8982456140350877,
+        "interval_90_width": 45.44929092106451,
+        "mae": 10.528941940013546,
+        "n": 285,
+        "prospective": false,
+        "residual_quantiles": {
+          "0.05": -21.595291600411187,
+          "0.1": -16.374649923331763,
+          "0.5": 0.1416916974166682,
+          "0.9": 16.76857483590902,
+          "0.95": 20.866630726606697
+        },
+        "rmse": 13.417755280543139,
+        "season": 2025,
+        "target": "total",
+        "model_alias": "Candidate 011",
+        "model_family": "ridge"
+      },
+      {
+        "accuracy": 0.656140350877193,
+        "brier": 0.22087612039882115,
+        "comparison_horizon_seconds": 3600.0,
+        "ece": 0.06038233023125261,
+        "exact_horizon_cohort": true,
+        "exposure": "DEVELOPMENT_EXPOSED",
+        "log_loss": 0.6371568147423263,
+        "n": 285,
+        "prospective": false,
+        "reliability": [
+          {
+            "bin": 0,
+            "mean_probability": 0.05786161221541756,
+            "n": 2,
+            "observed_rate": 0.5
+          },
+          {
+            "bin": 1,
+            "mean_probability": 0.13858943546483724,
+            "n": 3,
+            "observed_rate": 0.3333333333333333
+          },
+          {
+            "bin": 2,
+            "mean_probability": 0.2549745067426033,
+            "n": 16,
+            "observed_rate": 0.375
+          },
+          {
+            "bin": 3,
+            "mean_probability": 0.3609685808612667,
+            "n": 38,
+            "observed_rate": 0.2894736842105263
+          },
+          {
+            "bin": 4,
+            "mean_probability": 0.45803096496491036,
+            "n": 58,
+            "observed_rate": 0.41379310344827586
+          },
+          {
+            "bin": 5,
+            "mean_probability": 0.5572839126761682,
+            "n": 48,
+            "observed_rate": 0.5
+          },
+          {
+            "bin": 6,
+            "mean_probability": 0.6497662751117548,
+            "n": 50,
+            "observed_rate": 0.72
+          },
+          {
+            "bin": 7,
+            "mean_probability": 0.7428344179438465,
+            "n": 44,
+            "observed_rate": 0.7045454545454546
+          },
+          {
+            "bin": 8,
+            "mean_probability": 0.851388346193603,
+            "n": 24,
+            "observed_rate": 0.8333333333333334
+          },
+          {
+            "bin": 9,
+            "mean_probability": 0.9209515185614947,
+            "n": 2,
+            "observed_rate": 1.0
+          }
+        ],
+        "roc_auc": 0.7005565493937588,
+        "season": 2024,
+        "target": "win",
+        "model_alias": "Candidate 012",
+        "model_family": "ridge"
+      },
+      {
+        "accuracy": 0.6126760563380281,
+        "brier": 0.23397821774099564,
+        "comparison_horizon_seconds": 3600.0,
+        "ece": 0.08824435258616878,
+        "exact_horizon_cohort": true,
+        "exposure": "DEVELOPMENT_EXPOSED",
+        "log_loss": 0.6614740684497922,
+        "n": 284,
+        "prospective": false,
+        "reliability": [
+          {
+            "bin": 1,
+            "mean_probability": 0.1762407053656924,
+            "n": 2,
+            "observed_rate": 0.0
+          },
+          {
+            "bin": 2,
+            "mean_probability": 0.2621345243314778,
+            "n": 10,
+            "observed_rate": 0.2
+          },
+          {
+            "bin": 3,
+            "mean_probability": 0.355256611320482,
+            "n": 31,
+            "observed_rate": 0.2903225806451613
+          },
+          {
+            "bin": 4,
+            "mean_probability": 0.44329212773012355,
+            "n": 31,
+            "observed_rate": 0.4838709677419355
+          },
+          {
+            "bin": 5,
+            "mean_probability": 0.5499129908585282,
+            "n": 53,
+            "observed_rate": 0.4716981132075472
+          },
+          {
+            "bin": 6,
+            "mean_probability": 0.6501185254390085,
+            "n": 53,
+            "observed_rate": 0.5849056603773585
+          },
+          {
+            "bin": 7,
+            "mean_probability": 0.7473347079988496,
+            "n": 61,
+            "observed_rate": 0.6229508196721312
+          },
+          {
+            "bin": 8,
+            "mean_probability": 0.8476210122401889,
+            "n": 38,
+            "observed_rate": 0.7105263157894737
+          },
+          {
+            "bin": 9,
+            "mean_probability": 0.9164031055403576,
+            "n": 5,
+            "observed_rate": 1.0
+          }
+        ],
+        "roc_auc": 0.6649720893141946,
+        "season": 2025,
+        "target": "win",
+        "model_alias": "Candidate 012",
+        "model_family": "ridge"
+      },
+      {
+        "accuracy": 0.6842105263157895,
+        "brier": 0.21373759795797953,
+        "comparison_horizon_seconds": 3600.0,
+        "ece": 0.06897142628361955,
+        "exact_horizon_cohort": true,
+        "exposure": "DEVELOPMENT_EXPOSED",
+        "log_loss": 0.6176583385649552,
+        "n": 285,
+        "prospective": false,
+        "reliability": [
+          {
+            "bin": 2,
+            "mean_probability": 0.2758538064446776,
+            "n": 4,
+            "observed_rate": 0.75
+          },
+          {
+            "bin": 3,
+            "mean_probability": 0.3604184909140501,
+            "n": 39,
+            "observed_rate": 0.20512820512820512
+          },
+          {
+            "bin": 4,
+            "mean_probability": 0.44558878279043146,
+            "n": 72,
+            "observed_rate": 0.375
+          },
+          {
+            "bin": 5,
+            "mean_probability": 0.5479407420071288,
+            "n": 47,
+            "observed_rate": 0.5957446808510638
+          },
+          {
+            "bin": 6,
+            "mean_probability": 0.6462693216916245,
+            "n": 48,
+            "observed_rate": 0.625
+          },
+          {
+            "bin": 7,
+            "mean_probability": 0.7476994341495465,
+            "n": 55,
+            "observed_rate": 0.8
+          },
+          {
+            "bin": 8,
+            "mean_probability": 0.8238657260706697,
+            "n": 20,
+            "observed_rate": 0.8
+          }
+        ],
+        "roc_auc": 0.7258994235738422,
+        "season": 2024,
+        "target": "win",
+        "model_alias": "Candidate 013",
+        "model_family": "histgb"
+      },
+      {
+        "accuracy": 0.6056338028169014,
+        "brier": 0.23295288876090225,
+        "comparison_horizon_seconds": 3600.0,
+        "ece": 0.07722882697191584,
+        "exact_horizon_cohort": true,
+        "exposure": "DEVELOPMENT_EXPOSED",
+        "log_loss": 0.6586925850552103,
+        "n": 284,
+        "prospective": false,
+        "reliability": [
+          {
+            "bin": 2,
+            "mean_probability": 0.2713407683602137,
+            "n": 2,
+            "observed_rate": 1.0
+          },
+          {
+            "bin": 3,
+            "mean_probability": 0.36241062765544835,
+            "n": 28,
+            "observed_rate": 0.35714285714285715
+          },
+          {
+            "bin": 4,
+            "mean_probability": 0.4528904224342469,
+            "n": 66,
+            "observed_rate": 0.3939393939393939
+          },
+          {
+            "bin": 5,
+            "mean_probability": 0.5483340626908085,
+            "n": 49,
+            "observed_rate": 0.40816326530612246
+          },
+          {
+            "bin": 6,
+            "mean_probability": 0.6454009663462593,
+            "n": 33,
+            "observed_rate": 0.6060606060606061
+          },
+          {
+            "bin": 7,
+            "mean_probability": 0.7516709875969294,
+            "n": 71,
+            "observed_rate": 0.6619718309859155
+          },
+          {
+            "bin": 8,
+            "mean_probability": 0.825776053173529,
+            "n": 35,
+            "observed_rate": 0.7714285714285715
+          }
+        ],
+        "roc_auc": 0.6685606060606061,
+        "season": 2025,
+        "target": "win",
+        "model_alias": "Candidate 013",
+        "model_family": "histgb"
+      },
+      {
+        "accuracy": 0.6631578947368421,
+        "brier": 0.21601744618800692,
+        "comparison_horizon_seconds": 3600.0,
+        "ece": 0.05259494894585525,
+        "exact_horizon_cohort": true,
+        "exposure": "DEVELOPMENT_EXPOSED",
+        "log_loss": 0.6209566933834225,
+        "n": 285,
+        "prospective": false,
+        "reliability": [
+          {
+            "bin": 1,
+            "mean_probability": 0.19727239263938284,
+            "n": 1,
+            "observed_rate": 0.0
+          },
+          {
+            "bin": 2,
+            "mean_probability": 0.2789256437630933,
+            "n": 8,
+            "observed_rate": 0.375
+          },
+          {
+            "bin": 3,
+            "mean_probability": 0.34997964550702254,
+            "n": 49,
+            "observed_rate": 0.30612244897959184
+          },
+          {
+            "bin": 4,
+            "mean_probability": 0.44691764106925,
+            "n": 53,
+            "observed_rate": 0.39622641509433965
+          },
+          {
+            "bin": 5,
+            "mean_probability": 0.5578415941406296,
+            "n": 62,
+            "observed_rate": 0.5161290322580645
+          },
+          {
+            "bin": 6,
+            "mean_probability": 0.6485863012248927,
+            "n": 59,
+            "observed_rate": 0.711864406779661
+          },
+          {
+            "bin": 7,
+            "mean_probability": 0.745619305397106,
+            "n": 37,
+            "observed_rate": 0.8108108108108109
+          },
+          {
+            "bin": 8,
+            "mean_probability": 0.8410239272351443,
+            "n": 16,
+            "observed_rate": 0.8125
+          }
+        ],
+        "roc_auc": 0.7105943152454781,
+        "season": 2024,
+        "target": "win",
+        "model_alias": "Candidate 014",
+        "model_family": "histgb"
+      },
+      {
+        "accuracy": 0.6091549295774648,
+        "brier": 0.2345477957905504,
+        "comparison_horizon_seconds": 3600.0,
+        "ece": 0.04863349380979187,
+        "exact_horizon_cohort": true,
+        "exposure": "DEVELOPMENT_EXPOSED",
+        "log_loss": 0.6605231279019437,
+        "n": 284,
+        "prospective": false,
+        "reliability": [
+          {
+            "bin": 2,
+            "mean_probability": 0.2760923849689668,
+            "n": 20,
+            "observed_rate": 0.3
+          },
+          {
+            "bin": 3,
+            "mean_probability": 0.34995440008856443,
+            "n": 60,
+            "observed_rate": 0.4
+          },
+          {
+            "bin": 4,
+            "mean_probability": 0.44684870469232035,
+            "n": 43,
+            "observed_rate": 0.4883720930232558
+          },
+          {
+            "bin": 5,
+            "mean_probability": 0.552820485677983,
+            "n": 43,
+            "observed_rate": 0.5581395348837209
+          },
+          {
+            "bin": 6,
+            "mean_probability": 0.6461021412838314,
+            "n": 48,
+            "observed_rate": 0.5416666666666666
+          },
+          {
+            "bin": 7,
+            "mean_probability": 0.7482097691827367,
+            "n": 49,
+            "observed_rate": 0.6938775510204082
+          },
+          {
+            "bin": 8,
+            "mean_probability": 0.8400770314771016,
+            "n": 21,
+            "observed_rate": 0.8095238095238095
+          }
+        ],
+        "roc_auc": 0.6475279106858054,
+        "season": 2025,
+        "target": "win",
+        "model_alias": "Candidate 014",
+        "model_family": "histgb"
+      },
+      {
+        "accuracy": 0.6456140350877193,
+        "brier": 0.21915103484016915,
+        "comparison_horizon_seconds": 3600.0,
+        "ece": 0.06601386590255941,
+        "exact_horizon_cohort": true,
+        "exposure": "DEVELOPMENT_EXPOSED",
+        "log_loss": 0.628793252431079,
+        "n": 285,
+        "prospective": false,
+        "reliability": [
+          {
+            "bin": 2,
+            "mean_probability": 0.290582145379255,
+            "n": 2,
+            "observed_rate": 1.0
+          },
+          {
+            "bin": 3,
+            "mean_probability": 0.3615870842680779,
+            "n": 47,
+            "observed_rate": 0.2978723404255319
+          },
+          {
+            "bin": 4,
+            "mean_probability": 0.4513057376936969,
+            "n": 73,
+            "observed_rate": 0.4246575342465753
+          },
+          {
+            "bin": 5,
+            "mean_probability": 0.5528698125186934,
+            "n": 47,
+            "observed_rate": 0.5106382978723404
+          },
+          {
+            "bin": 6,
+            "mean_probability": 0.6519378853959729,
+            "n": 48,
+            "observed_rate": 0.7708333333333334
+          },
+          {
+            "bin": 7,
+            "mean_probability": 0.7451410192912943,
+            "n": 54,
+            "observed_rate": 0.6666666666666666
+          },
+          {
+            "bin": 8,
+            "mean_probability": 0.8195909621680993,
+            "n": 14,
+            "observed_rate": 0.8571428571428571
+          }
+        ],
+        "roc_auc": 0.6990161001788908,
+        "season": 2024,
+        "target": "win",
+        "model_alias": "Candidate 015",
+        "model_family": "lightgbm"
+      },
+      {
+        "accuracy": 0.6267605633802817,
+        "brier": 0.228774047684154,
+        "comparison_horizon_seconds": 3600.0,
+        "ece": 0.04471457430923605,
+        "exact_horizon_cohort": true,
+        "exposure": "DEVELOPMENT_EXPOSED",
+        "log_loss": 0.6497072809210117,
+        "n": 284,
+        "prospective": false,
+        "reliability": [
+          {
+            "bin": 2,
+            "mean_probability": 0.28810679140705614,
+            "n": 3,
+            "observed_rate": 0.6666666666666666
+          },
+          {
+            "bin": 3,
+            "mean_probability": 0.3608247423614473,
+            "n": 52,
+            "observed_rate": 0.36538461538461536
+          },
+          {
+            "bin": 4,
+            "mean_probability": 0.44415360051460306,
+            "n": 63,
+            "observed_rate": 0.3968253968253968
+          },
+          {
+            "bin": 5,
+            "mean_probability": 0.5448790818977303,
+            "n": 42,
+            "observed_rate": 0.47619047619047616
+          },
+          {
+            "bin": 6,
+            "mean_probability": 0.6499071409008761,
+            "n": 35,
+            "observed_rate": 0.6285714285714286
+          },
+          {
+            "bin": 7,
+            "mean_probability": 0.7523696368016575,
+            "n": 65,
+            "observed_rate": 0.7076923076923077
+          },
+          {
+            "bin": 8,
+            "mean_probability": 0.8253654785448502,
+            "n": 24,
+            "observed_rate": 0.75
+          }
+        ],
+        "roc_auc": 0.6666666666666666,
+        "season": 2025,
+        "target": "win",
+        "model_alias": "Candidate 015",
+        "model_family": "lightgbm"
+      },
+      {
+        "bias": -2.463143614460007,
+        "comparison_horizon_seconds": 3600.0,
+        "crps": 7.430439274722249,
+        "exact_horizon_cohort": true,
+        "exposure": "DEVELOPMENT_EXPOSED",
+        "interval_90_coverage": 0.8807017543859649,
+        "interval_90_width": 40.53726509371666,
+        "mae": 10.170153828075112,
+        "n": 285,
+        "prospective": false,
+        "residual_quantiles": {
+          "0.05": -18.116949352349913,
+          "0.1": -13.28393052072948,
+          "0.5": 1.7425275025432256,
+          "0.9": 18.20460460474406,
+          "0.95": 24.85154476523087
+        },
+        "rmse": 13.144463172764983,
+        "season": 2024,
+        "target": "total",
+        "model_alias": "Candidate 016",
+        "model_family": "lightgbm"
+      },
+      {
+        "bias": 0.2976951350419144,
+        "comparison_horizon_seconds": 3600.0,
+        "crps": 7.811776633318148,
+        "exact_horizon_cohort": true,
+        "exposure": "DEVELOPMENT_EXPOSED",
+        "interval_90_coverage": 0.8631578947368421,
+        "interval_90_width": 40.53726509371666,
+        "mae": 10.973121346070018,
+        "n": 285,
+        "prospective": false,
+        "residual_quantiles": {
+          "0.05": -22.55643727937304,
+          "0.1": -16.919750144091687,
+          "0.5": -0.7655545389863718,
+          "0.9": 17.831861168575468,
+          "0.95": 22.6129902984411
+        },
+        "rmse": 13.772272155422607,
+        "season": 2025,
+        "target": "total",
+        "model_alias": "Candidate 016",
+        "model_family": "lightgbm"
+      },
+      {
+        "bias": 0.36173711484086546,
+        "comparison_horizon_seconds": 3600.0,
+        "crps": 7.411134837247537,
+        "exact_horizon_cohort": true,
+        "exposure": "DEVELOPMENT_EXPOSED",
+        "interval_90_coverage": 0.887719298245614,
+        "interval_90_width": 45.195225103106786,
+        "mae": 10.2340983621626,
+        "n": 285,
+        "prospective": false,
+        "residual_quantiles": {
+          "0.05": -22.98561906326216,
+          "0.1": -17.483245078274194,
+          "0.5": -1.119365796135571,
+          "0.9": 17.52009948087824,
+          "0.95": 22.874333198508804
+        },
+        "rmse": 13.284628381718987,
+        "season": 2024,
+        "target": "margin",
+        "model_alias": "Candidate 017",
+        "model_family": "lightgbm"
+      },
+      {
+        "bias": 1.7791539617830332,
+        "comparison_horizon_seconds": 3600.0,
+        "crps": 7.363836386137801,
+        "exact_horizon_cohort": true,
+        "exposure": "DEVELOPMENT_EXPOSED",
+        "interval_90_coverage": 0.9122807017543859,
+        "interval_90_width": 45.195225103106786,
+        "mae": 10.308037986412295,
+        "n": 285,
+        "prospective": false,
+        "residual_quantiles": {
+          "0.05": -21.78748812268091,
+          "0.1": -18.223080798687402,
+          "0.5": -2.0712821865012767,
+          "0.9": 16.002476724392878,
+          "0.95": 21.17889719925855
+        },
+        "rmse": 13.129852850650574,
+        "season": 2025,
+        "target": "margin",
+        "model_alias": "Candidate 017",
+        "model_family": "lightgbm"
+      },
+      {
+        "bias": 0.21127635572199724,
+        "comparison_horizon_seconds": 3600.0,
+        "crps": 7.2804600947977205,
+        "exact_horizon_cohort": true,
+        "exposure": "DEVELOPMENT_EXPOSED",
+        "interval_90_coverage": 0.8807017543859649,
+        "interval_90_width": 44.76952180168002,
+        "mae": 9.998886546065693,
+        "n": 285,
+        "prospective": false,
+        "residual_quantiles": {
+          "0.05": -23.612390594115446,
+          "0.1": -17.062567619249048,
+          "0.5": -0.700089754875532,
+          "0.9": 17.075455987791962,
+          "0.95": 22.04548826806702
+        },
+        "rmse": 13.043556646606106,
+        "season": 2024,
+        "target": "margin",
+        "model_alias": "Candidate 018",
+        "model_family": "catboost"
+      },
+      {
+        "bias": 1.3838416976112808,
+        "comparison_horizon_seconds": 3600.0,
+        "crps": 7.339305774742989,
+        "exact_horizon_cohort": true,
+        "exposure": "DEVELOPMENT_EXPOSED",
+        "interval_90_coverage": 0.9052631578947369,
+        "interval_90_width": 44.76952180168002,
+        "mae": 10.26405726519273,
+        "n": 285,
+        "prospective": false,
+        "residual_quantiles": {
+          "0.05": -22.86350867407261,
+          "0.1": -17.378224397240498,
+          "0.5": -1.806710699450118,
+          "0.9": 16.880865476471893,
+          "0.95": 21.625344125852983
+        },
+        "rmse": 13.026141213644769,
+        "season": 2025,
+        "target": "margin",
+        "model_alias": "Candidate 018",
+        "model_family": "catboost"
+      },
+      {
+        "bias": -0.12336340360310152,
+        "comparison_horizon_seconds": 3600.0,
+        "crps": 7.506881401426044,
+        "exact_horizon_cohort": true,
+        "exposure": "DEVELOPMENT_EXPOSED",
+        "interval_90_coverage": 0.9333333333333333,
+        "interval_90_width": 51.29994973551562,
+        "mae": 10.36878608306111,
+        "n": 285,
+        "prospective": false,
+        "residual_quantiles": {
+          "0.05": -22.176881140871473,
+          "0.1": -18.36339156471286,
+          "0.5": 0.7692461613047197,
+          "0.9": 17.158679602887318,
+          "0.95": 23.636840003826343
+        },
+        "rmse": 13.350948507862148,
+        "season": 2024,
+        "target": "margin",
+        "model_alias": "Candidate 019",
+        "model_family": "ridge"
+      },
+      {
+        "bias": 0.7291885368324141,
+        "comparison_horizon_seconds": 3600.0,
+        "crps": 7.426691360462375,
+        "exact_horizon_cohort": true,
+        "exposure": "DEVELOPMENT_EXPOSED",
+        "interval_90_coverage": 0.9368421052631579,
+        "interval_90_width": 51.29994973551562,
+        "mae": 10.29024927991173,
+        "n": 285,
+        "prospective": false,
+        "residual_quantiles": {
+          "0.05": -22.21117706645439,
+          "0.1": -16.299878994691785,
+          "0.5": -0.7753078909837203,
+          "0.9": 16.680186064351847,
+          "0.95": 23.458984730236697
+        },
+        "rmse": 13.202443456138454,
+        "season": 2025,
+        "target": "margin",
+        "model_alias": "Candidate 019",
+        "model_family": "ridge"
+      },
+      {
+        "bias": -2.3811762885261523,
+        "comparison_horizon_seconds": 3600.0,
+        "crps": 7.41773243015854,
+        "exact_horizon_cohort": true,
+        "exposure": "DEVELOPMENT_EXPOSED",
+        "interval_90_coverage": 0.8842105263157894,
+        "interval_90_width": 40.7538622002734,
+        "mae": 10.185329851662335,
+        "n": 285,
+        "prospective": false,
+        "residual_quantiles": {
+          "0.05": -18.121637558015813,
+          "0.1": -13.489608022912018,
+          "0.5": 1.9162302680078085,
+          "0.9": 18.191817457468535,
+          "0.95": 24.654733216222972
+        },
+        "rmse": 13.100231652494331,
+        "season": 2024,
+        "target": "total",
+        "model_alias": "Candidate 020",
+        "model_family": "lightgbm"
+      },
+      {
+        "bias": -0.03817026737536835,
+        "comparison_horizon_seconds": 3600.0,
+        "crps": 7.845727946633713,
+        "exact_horizon_cohort": true,
+        "exposure": "DEVELOPMENT_EXPOSED",
+        "interval_90_coverage": 0.856140350877193,
+        "interval_90_width": 40.753862200273396,
+        "mae": 11.012627572663567,
+        "n": 285,
+        "prospective": false,
+        "residual_quantiles": {
+          "0.05": -22.239728711156495,
+          "0.1": -16.709340993043664,
+          "0.5": -0.028877899413672026,
+          "0.9": 18.627613842013123,
+          "0.95": 22.928249767193865
+        },
+        "rmse": 13.808818019587024,
+        "season": 2025,
+        "target": "total",
+        "model_alias": "Candidate 020",
+        "model_family": "lightgbm"
+      },
+      {
+        "bias": -2.4979777562145853,
+        "comparison_horizon_seconds": 3600.0,
+        "crps": 7.396295076019198,
+        "exact_horizon_cohort": true,
+        "exposure": "DEVELOPMENT_EXPOSED",
+        "interval_90_coverage": 0.9017543859649123,
+        "interval_90_width": 42.324246257618356,
+        "mae": 10.18370082279914,
+        "n": 285,
+        "prospective": false,
+        "residual_quantiles": {
+          "0.05": -17.956719218232685,
+          "0.1": -13.20941083598094,
+          "0.5": 2.403869207770626,
+          "0.9": 17.806918331943002,
+          "0.95": 25.017471325032115
+        },
+        "rmse": 13.085369363529132,
+        "season": 2024,
+        "target": "total",
+        "model_alias": "Candidate 021",
+        "model_family": "histgb"
+      },
+      {
+        "bias": -0.1798391260069644,
+        "comparison_horizon_seconds": 3600.0,
+        "crps": 7.834313651739164,
+        "exact_horizon_cohort": true,
+        "exposure": "DEVELOPMENT_EXPOSED",
+        "interval_90_coverage": 0.8912280701754386,
+        "interval_90_width": 42.324246257618356,
+        "mae": 11.008445062746773,
+        "n": 285,
+        "prospective": false,
+        "residual_quantiles": {
+          "0.05": -21.70707442261086,
+          "0.1": -16.598172963338936,
+          "0.5": 0.3855519775102394,
+          "0.9": 17.44198416403935,
+          "0.95": 22.39662067043607
+        },
+        "rmse": 13.805354515645758,
+        "season": 2025,
+        "target": "total",
+        "model_alias": "Candidate 021",
+        "model_family": "histgb"
+      },
+      {
+        "bias": 0.4840424439363312,
+        "comparison_horizon_seconds": 3600.0,
+        "crps": 7.358064999268096,
+        "exact_horizon_cohort": true,
+        "exposure": "DEVELOPMENT_EXPOSED",
+        "interval_90_coverage": 0.8807017543859649,
+        "interval_90_width": 45.5193590283394,
+        "mae": 10.109314248122667,
+        "n": 285,
+        "prospective": false,
+        "residual_quantiles": {
+          "0.05": -24.155768752098083,
+          "0.1": -17.471335470676422,
+          "0.5": -1.0041251182556152,
+          "0.9": 16.641204547882076,
+          "0.95": 23.315470695495637
+        },
+        "rmse": 13.178960200568987,
+        "season": 2024,
+        "target": "margin",
+        "model_alias": "Candidate 022",
+        "model_family": "xgboost"
+      },
+      {
+        "bias": 1.452341345200936,
+        "comparison_horizon_seconds": 3600.0,
+        "crps": 7.393195667822991,
+        "exact_horizon_cohort": true,
+        "exposure": "DEVELOPMENT_EXPOSED",
+        "interval_90_coverage": 0.9157894736842105,
+        "interval_90_width": 45.5193590283394,
+        "mae": 10.340877324172801,
+        "n": 285,
+        "prospective": false,
+        "residual_quantiles": {
+          "0.05": -21.509130001068115,
+          "0.1": -17.58352165222168,
+          "0.5": -2.1424144506454468,
+          "0.9": 16.792208755016325,
+          "0.95": 21.520014953613284
+        },
+        "rmse": 13.17048480360768,
+        "season": 2025,
+        "target": "margin",
+        "model_alias": "Candidate 022",
+        "model_family": "xgboost"
+      },
+      {
+        "bias": 0.41939344189140515,
+        "comparison_horizon_seconds": 3600.0,
+        "crps": 7.526740410236491,
+        "exact_horizon_cohort": true,
+        "exposure": "DEVELOPMENT_EXPOSED",
+        "interval_90_coverage": 0.887719298245614,
+        "interval_90_width": 45.399819076795715,
+        "mae": 10.418442177740987,
+        "n": 285,
+        "prospective": false,
+        "residual_quantiles": {
+          "0.05": -23.885631591954983,
+          "0.1": -16.606710375425557,
+          "0.5": -0.9135648062894095,
+          "0.9": 17.149771170493217,
+          "0.95": 22.920490628466645
+        },
+        "rmse": 13.496001706015662,
+        "season": 2024,
+        "target": "margin",
+        "model_alias": "Candidate 023",
+        "model_family": "lightgbm"
+      },
+      {
+        "bias": -0.07282549528876889,
+        "comparison_horizon_seconds": 3600.0,
+        "crps": 7.3823447817707555,
+        "exact_horizon_cohort": true,
+        "exposure": "DEVELOPMENT_EXPOSED",
+        "interval_90_coverage": 0.9087719298245615,
+        "interval_90_width": 45.399819076795715,
+        "mae": 10.348035361988078,
+        "n": 285,
+        "prospective": false,
+        "residual_quantiles": {
+          "0.05": -21.158841233304383,
+          "0.1": -15.865181111993476,
+          "0.5": -0.8405396219682517,
+          "0.9": 18.60587313018797,
+          "0.95": 22.40856929978858
+        },
+        "rmse": 13.134100525166856,
+        "season": 2025,
+        "target": "margin",
+        "model_alias": "Candidate 023",
+        "model_family": "lightgbm"
+      },
+      {
+        "bias": 0.303918479565163,
+        "comparison_horizon_seconds": 3600.0,
+        "crps": 7.4132903712203575,
+        "exact_horizon_cohort": true,
+        "exposure": "DEVELOPMENT_EXPOSED",
+        "interval_90_coverage": 0.8736842105263158,
+        "interval_90_width": 44.40854272246145,
+        "mae": 10.210138219795143,
+        "n": 285,
+        "prospective": false,
+        "residual_quantiles": {
+          "0.05": -22.549529289905273,
+          "0.1": -16.653069342630012,
+          "0.5": -1.082002959090019,
+          "0.9": 16.199835566758864,
+          "0.95": 22.96792980014182
+        },
+        "rmse": 13.311746367758204,
+        "season": 2024,
+        "target": "margin",
+        "model_alias": "Candidate 024",
+        "model_family": "catboost"
+      },
+      {
+        "bias": 0.14312025187433808,
+        "comparison_horizon_seconds": 3600.0,
+        "crps": 7.3424087255602855,
+        "exact_horizon_cohort": true,
+        "exposure": "DEVELOPMENT_EXPOSED",
+        "interval_90_coverage": 0.9122807017543859,
+        "interval_90_width": 44.40854272246145,
+        "mae": 10.287132163654492,
+        "n": 285,
+        "prospective": false,
+        "residual_quantiles": {
+          "0.05": -20.48560273014746,
+          "0.1": -16.543815374368254,
+          "0.5": -1.0054752202659003,
+          "0.9": 18.964820337838486,
+          "0.95": 22.265030642181493
+        },
+        "rmse": 13.04192803684912,
+        "season": 2025,
+        "target": "margin",
+        "model_alias": "Candidate 024",
+        "model_family": "catboost"
+      },
+      {
+        "bias": -2.0621036849432715,
+        "comparison_horizon_seconds": 3600.0,
+        "crps": 7.326480585629937,
+        "exact_horizon_cohort": true,
+        "exposure": "DEVELOPMENT_EXPOSED",
+        "interval_90_coverage": 0.9017543859649123,
+        "interval_90_width": 43.31902815632911,
+        "mae": 10.006615359578472,
+        "n": 285,
+        "prospective": false,
+        "residual_quantiles": {
+          "0.05": -18.18634632358604,
+          "0.1": -13.776532351613895,
+          "0.5": 1.102136513520449,
+          "0.9": 17.25302092256443,
+          "0.95": 25.2745626349427
+        },
+        "rmse": 12.960301198866983,
+        "season": 2024,
+        "target": "total",
+        "model_alias": "Candidate 025",
+        "model_family": "catboost"
+      },
+      {
+        "bias": -0.13816984490082315,
+        "comparison_horizon_seconds": 3600.0,
+        "crps": 7.686572355097607,
+        "exact_horizon_cohort": true,
+        "exposure": "DEVELOPMENT_EXPOSED",
+        "interval_90_coverage": 0.8842105263157894,
+        "interval_90_width": 43.31902815632911,
+        "mae": 10.701121963368342,
+        "n": 285,
+        "prospective": false,
+        "residual_quantiles": {
+          "0.05": -21.48375724348454,
+          "0.1": -16.31950479393982,
+          "0.5": -0.3499689529049803,
+          "0.9": 18.480837942872046,
+          "0.95": 23.5582319477645
+        },
+        "rmse": 13.557697408002714,
+        "season": 2025,
+        "target": "total",
+        "model_alias": "Candidate 025",
+        "model_family": "catboost"
+      },
+      {
+        "accuracy": 0.6631578947368421,
+        "brier": 0.21916134586761257,
+        "comparison_horizon_seconds": 3600.0,
+        "ece": 0.06560992687417752,
+        "exact_horizon_cohort": true,
+        "exposure": "DEVELOPMENT_EXPOSED",
+        "log_loss": 0.6274288400947903,
+        "n": 285,
+        "prospective": false,
+        "reliability": [
+          {
+            "bin": 2,
+            "mean_probability": 0.27216499405247824,
+            "n": 7,
+            "observed_rate": 0.14285714285714285
+          },
+          {
+            "bin": 3,
+            "mean_probability": 0.3511599619337853,
+            "n": 47,
+            "observed_rate": 0.3617021276595745
+          },
+          {
+            "bin": 4,
+            "mean_probability": 0.4502203790254371,
+            "n": 43,
+            "observed_rate": 0.32558139534883723
+          },
+          {
+            "bin": 5,
+            "mean_probability": 0.547506780393662,
+            "n": 62,
+            "observed_rate": 0.5967741935483871
+          },
+          {
+            "bin": 6,
+            "mean_probability": 0.6484287537512232,
+            "n": 61,
+            "observed_rate": 0.5573770491803278
+          },
+          {
+            "bin": 7,
+            "mean_probability": 0.7390640834544567,
+            "n": 47,
+            "observed_rate": 0.7659574468085106
+          },
+          {
+            "bin": 8,
+            "mean_probability": 0.8296669754717085,
+            "n": 18,
+            "observed_rate": 0.9444444444444444
+          }
+        ],
+        "roc_auc": 0.6971278075929239,
+        "season": 2024,
+        "target": "win",
+        "model_alias": "Candidate 026",
+        "model_family": "xgboost"
+      },
+      {
+        "accuracy": 0.6197183098591549,
+        "brier": 0.2332492368511457,
+        "comparison_horizon_seconds": 3600.0,
+        "ece": 0.03220460474700993,
+        "exact_horizon_cohort": true,
+        "exposure": "DEVELOPMENT_EXPOSED",
+        "log_loss": 0.6582190424737612,
+        "n": 284,
+        "prospective": false,
+        "reliability": [
+          {
+            "bin": 2,
+            "mean_probability": 0.27782381645270754,
+            "n": 21,
+            "observed_rate": 0.2857142857142857
+          },
+          {
+            "bin": 3,
+            "mean_probability": 0.3521198039705103,
+            "n": 55,
+            "observed_rate": 0.4
+          },
+          {
+            "bin": 4,
+            "mean_probability": 0.4376072762977509,
+            "n": 42,
+            "observed_rate": 0.4523809523809524
+          },
+          {
+            "bin": 5,
+            "mean_probability": 0.5533623569286786,
+            "n": 52,
+            "observed_rate": 0.5192307692307693
+          },
+          {
+            "bin": 6,
+            "mean_probability": 0.6540200346046023,
+            "n": 54,
+            "observed_rate": 0.6296296296296297
+          },
+          {
+            "bin": 7,
+            "mean_probability": 0.7461432576179504,
+            "n": 40,
+            "observed_rate": 0.725
+          },
+          {
+            "bin": 8,
+            "mean_probability": 0.8394423991441726,
+            "n": 20,
+            "observed_rate": 0.75
+          }
+        ],
+        "roc_auc": 0.6503688197767146,
+        "season": 2025,
+        "target": "win",
+        "model_alias": "Candidate 026",
+        "model_family": "xgboost"
+      },
+      {
+        "bias": 0.24714993873327387,
+        "comparison_horizon_seconds": 3600.0,
+        "crps": 7.464986041984993,
+        "exact_horizon_cohort": true,
+        "exposure": "DEVELOPMENT_EXPOSED",
+        "interval_90_coverage": 0.8947368421052632,
+        "interval_90_width": 45.71456071674737,
+        "mae": 10.311361474466729,
+        "n": 285,
+        "prospective": false,
+        "residual_quantiles": {
+          "0.05": -23.263817701432785,
+          "0.1": -17.017014046538407,
+          "0.5": -0.5807277158548914,
+          "0.9": 17.513375487407412,
+          "0.95": 22.10359623437387
+        },
+        "rmse": 13.37161462359387,
+        "season": 2024,
+        "target": "margin",
+        "model_alias": "Candidate 027",
+        "model_family": "histgb"
+      },
+      {
+        "bias": -0.021161033788519332,
+        "comparison_horizon_seconds": 3600.0,
+        "crps": 7.353523631143234,
+        "exact_horizon_cohort": true,
+        "exposure": "DEVELOPMENT_EXPOSED",
+        "interval_90_coverage": 0.9228070175438596,
+        "interval_90_width": 45.71456071674737,
+        "mae": 10.26574648324813,
+        "n": 285,
+        "prospective": false,
+        "residual_quantiles": {
+          "0.05": -20.957174721390892,
+          "0.1": -15.972749689374611,
+          "0.5": -0.6457860603219188,
+          "0.9": 20.074489064400584,
+          "0.95": 22.880850018951286
+        },
+        "rmse": 13.103280525488017,
+        "season": 2025,
+        "target": "margin",
+        "model_alias": "Candidate 027",
+        "model_family": "histgb"
+      },
+      {
+        "bias": -3.1165002963804542,
+        "comparison_horizon_seconds": 3600.0,
+        "crps": 7.429627352829415,
+        "exact_horizon_cohort": true,
+        "exposure": "DEVELOPMENT_EXPOSED",
+        "interval_90_coverage": 0.9052631578947369,
+        "interval_90_width": 42.666652647946876,
+        "mae": 10.234964130668851,
+        "n": 285,
+        "prospective": false,
+        "residual_quantiles": {
+          "0.05": -16.486636126262095,
+          "0.1": -13.596965147506442,
+          "0.5": 2.7977314834599483,
+          "0.9": 20.53809838432669,
+          "0.95": 26.13780226191334
+        },
+        "rmse": 13.236687376106776,
+        "season": 2024,
+        "target": "total",
+        "model_alias": "Candidate 028",
+        "model_family": "lightgbm"
+      },
+      {
+        "bias": -0.14248938519580998,
+        "comparison_horizon_seconds": 3600.0,
+        "crps": 7.706286323276519,
+        "exact_horizon_cohort": true,
+        "exposure": "DEVELOPMENT_EXPOSED",
+        "interval_90_coverage": 0.9017543859649123,
+        "interval_90_width": 42.666652647946876,
+        "mae": 10.859221437954368,
+        "n": 285,
+        "prospective": false,
+        "residual_quantiles": {
+          "0.05": -21.487887289989278,
+          "0.1": -16.73777616134487,
+          "0.5": -0.451779743636898,
+          "0.9": 18.040496278874105,
+          "0.95": 21.68684857304045
+        },
+        "rmse": 13.585880993185404,
+        "season": 2025,
+        "target": "total",
+        "model_alias": "Candidate 028",
+        "model_family": "lightgbm"
+      },
+      {
+        "bias": -2.302120053642879,
+        "comparison_horizon_seconds": 3600.0,
+        "crps": 7.366208887375034,
+        "exact_horizon_cohort": true,
+        "exposure": "DEVELOPMENT_EXPOSED",
+        "interval_90_coverage": 0.8982456140350877,
+        "interval_90_width": 43.03303081410929,
+        "mae": 10.139750116756911,
+        "n": 285,
+        "prospective": false,
+        "residual_quantiles": {
+          "0.05": -18.59552112746317,
+          "0.1": -13.223735313053126,
+          "0.5": 1.9250215083046243,
+          "0.9": 17.88618677199089,
+          "0.95": 23.883148479032542
+        },
+        "rmse": 13.095739128707857,
+        "season": 2024,
+        "target": "total",
+        "model_alias": "Candidate 029",
+        "model_family": "histgb"
+      },
+      {
+        "bias": 0.13887079189397014,
+        "comparison_horizon_seconds": 3600.0,
+        "crps": 7.786593337742844,
+        "exact_horizon_cohort": true,
+        "exposure": "DEVELOPMENT_EXPOSED",
+        "interval_90_coverage": 0.8842105263157894,
+        "interval_90_width": 43.03303081410929,
+        "mae": 10.964797350339158,
+        "n": 285,
+        "prospective": false,
+        "residual_quantiles": {
+          "0.05": -21.95250999952196,
+          "0.1": -16.881406751397122,
+          "0.5": -0.6511192934250829,
+          "0.9": 16.795408900853943,
+          "0.95": 22.23231827467628
+        },
+        "rmse": 13.737291937169095,
+        "season": 2025,
+        "target": "total",
+        "model_alias": "Candidate 029",
+        "model_family": "histgb"
+      },
+      {
+        "accuracy": 0.6982456140350877,
+        "brier": 0.2120007915510656,
+        "comparison_horizon_seconds": 3600.0,
+        "ece": 0.07993505778345884,
+        "exact_horizon_cohort": true,
+        "exposure": "DEVELOPMENT_EXPOSED",
+        "log_loss": 0.6142060918613478,
+        "n": 285,
+        "prospective": false,
+        "reliability": [
+          {
+            "bin": 3,
+            "mean_probability": 0.37063104361156435,
+            "n": 31,
+            "observed_rate": 0.2903225806451613
+          },
+          {
+            "bin": 4,
+            "mean_probability": 0.444673331366563,
+            "n": 86,
+            "observed_rate": 0.32558139534883723
+          },
+          {
+            "bin": 5,
+            "mean_probability": 0.5471657093504441,
+            "n": 57,
+            "observed_rate": 0.5789473684210527
+          },
+          {
+            "bin": 6,
+            "mean_probability": 0.6477842703254345,
+            "n": 46,
+            "observed_rate": 0.8043478260869565
+          },
+          {
+            "bin": 7,
+            "mean_probability": 0.7378993155884899,
+            "n": 65,
+            "observed_rate": 0.7538461538461538
+          }
+        ],
+        "roc_auc": 0.7375273305505864,
+        "season": 2024,
+        "target": "win",
+        "model_alias": "Candidate 030",
+        "model_family": "catboost"
+      },
+      {
+        "accuracy": 0.6373239436619719,
+        "brier": 0.22509213929261845,
+        "comparison_horizon_seconds": 3600.0,
+        "ece": 0.053064749834046784,
+        "exact_horizon_cohort": true,
+        "exposure": "DEVELOPMENT_EXPOSED",
+        "log_loss": 0.6410124615878984,
+        "n": 284,
+        "prospective": false,
+        "reliability": [
+          {
+            "bin": 3,
+            "mean_probability": 0.3744167128213683,
+            "n": 37,
+            "observed_rate": 0.35135135135135137
+          },
+          {
+            "bin": 4,
+            "mean_probability": 0.44328135317760486,
+            "n": 78,
+            "observed_rate": 0.38461538461538464
+          },
+          {
+            "bin": 5,
+            "mean_probability": 0.5474519638893213,
+            "n": 35,
+            "observed_rate": 0.5142857142857142
+          },
+          {
+            "bin": 6,
+            "mean_probability": 0.6496729631938924,
+            "n": 46,
+            "observed_rate": 0.5434782608695652
+          },
+          {
+            "bin": 7,
+            "mean_probability": 0.7513291464190047,
+            "n": 80,
+            "observed_rate": 0.725
+          },
+          {
+            "bin": 8,
+            "mean_probability": 0.8138852157425245,
+            "n": 8,
+            "observed_rate": 1.0
+          }
+        ],
+        "roc_auc": 0.6838616427432217,
+        "season": 2025,
+        "target": "win",
+        "model_alias": "Candidate 030",
+        "model_family": "catboost"
+      },
+      {
+        "bias": -2.008622452703694,
+        "comparison_horizon_seconds": 3600.0,
+        "crps": 7.315772216717103,
+        "exact_horizon_cohort": true,
+        "exposure": "DEVELOPMENT_EXPOSED",
+        "interval_90_coverage": 0.8982456140350877,
+        "interval_90_width": 43.25908175828106,
+        "mae": 10.013904055602625,
+        "n": 285,
+        "prospective": false,
+        "residual_quantiles": {
+          "0.05": -18.015461981286016,
+          "0.1": -13.967351276790657,
+          "0.5": 1.3008362303765892,
+          "0.9": 17.1054864511026,
+          "0.95": 25.321572376826385
+        },
+        "rmse": 12.95916199235944,
+        "season": 2024,
+        "target": "total",
+        "model_alias": "Candidate 031",
+        "model_family": "catboost"
+      },
+      {
+        "bias": -0.13399152611196152,
+        "comparison_horizon_seconds": 3600.0,
+        "crps": 7.685443301071532,
+        "exact_horizon_cohort": true,
+        "exposure": "DEVELOPMENT_EXPOSED",
+        "interval_90_coverage": 0.8842105263157894,
+        "interval_90_width": 43.25908175828106,
+        "mae": 10.699283219975039,
+        "n": 285,
+        "prospective": false,
+        "residual_quantiles": {
+          "0.05": -21.492615314352836,
+          "0.1": -16.249398321239465,
+          "0.5": -0.34756458566453574,
+          "0.9": 18.420175842670776,
+          "0.95": 23.591570317194403
+        },
+        "rmse": 13.555557768738954,
+        "season": 2025,
+        "target": "total",
+        "model_alias": "Candidate 031",
+        "model_family": "catboost"
+      },
+      {
+        "accuracy": 0.6912280701754386,
+        "brier": 0.21488000884553857,
+        "comparison_horizon_seconds": 3600.0,
+        "ece": 0.06756878498926427,
+        "exact_horizon_cohort": true,
+        "exposure": "DEVELOPMENT_EXPOSED",
+        "log_loss": 0.6202062342137823,
+        "n": 285,
+        "prospective": false,
+        "reliability": [
+          {
+            "bin": 2,
+            "mean_probability": 0.2885938759073742,
+            "n": 2,
+            "observed_rate": 1.0
+          },
+          {
+            "bin": 3,
+            "mean_probability": 0.35988822812052956,
+            "n": 43,
+            "observed_rate": 0.2558139534883721
+          },
+          {
+            "bin": 4,
+            "mean_probability": 0.4487229412887707,
+            "n": 64,
+            "observed_rate": 0.328125
+          },
+          {
+            "bin": 5,
+            "mean_probability": 0.5527527949239303,
+            "n": 58,
+            "observed_rate": 0.603448275862069
+          },
+          {
+            "bin": 6,
+            "mean_probability": 0.6517538940198159,
+            "n": 44,
+            "observed_rate": 0.6818181818181818
+          },
+          {
+            "bin": 7,
+            "mean_probability": 0.7509184906930872,
+            "n": 55,
+            "observed_rate": 0.7636363636363637
+          },
+          {
+            "bin": 8,
+            "mean_probability": 0.825167360666875,
+            "n": 19,
+            "observed_rate": 0.7894736842105263
+          }
+        ],
+        "roc_auc": 0.719986086265156,
+        "season": 2024,
+        "target": "win",
+        "model_alias": "Candidate 032",
+        "model_family": "histgb"
+      },
+      {
+        "accuracy": 0.6126760563380281,
+        "brier": 0.23582607118117077,
+        "comparison_horizon_seconds": 3600.0,
+        "ece": 0.08694340342114688,
+        "exact_horizon_cohort": true,
+        "exposure": "DEVELOPMENT_EXPOSED",
+        "log_loss": 0.6645924108977994,
+        "n": 284,
+        "prospective": false,
+        "reliability": [
+          {
+            "bin": 2,
+            "mean_probability": 0.28343409112437973,
+            "n": 3,
+            "observed_rate": 1.0
+          },
+          {
+            "bin": 3,
+            "mean_probability": 0.3577091404611911,
+            "n": 23,
+            "observed_rate": 0.17391304347826086
+          },
+          {
+            "bin": 4,
+            "mean_probability": 0.44853232092213685,
+            "n": 60,
+            "observed_rate": 0.4166666666666667
+          },
+          {
+            "bin": 5,
+            "mean_probability": 0.5460622656504341,
+            "n": 54,
+            "observed_rate": 0.46296296296296297
+          },
+          {
+            "bin": 6,
+            "mean_probability": 0.6489400089622822,
+            "n": 37,
+            "observed_rate": 0.6216216216216216
+          },
+          {
+            "bin": 7,
+            "mean_probability": 0.7536537451299317,
+            "n": 77,
+            "observed_rate": 0.6363636363636364
+          },
+          {
+            "bin": 8,
+            "mean_probability": 0.8291166102436875,
+            "n": 30,
+            "observed_rate": 0.7666666666666667
+          }
+        ],
+        "roc_auc": 0.6611842105263157,
+        "season": 2025,
+        "target": "win",
+        "model_alias": "Candidate 032",
+        "model_family": "histgb"
+      },
+      {
+        "accuracy": 0.6596491228070176,
+        "brier": 0.21864316602067846,
+        "comparison_horizon_seconds": 3600.0,
+        "ece": 0.04520206350452226,
+        "exact_horizon_cohort": true,
+        "exposure": "DEVELOPMENT_EXPOSED",
+        "log_loss": 0.6266926944045337,
+        "n": 285,
+        "prospective": false,
+        "reliability": [
+          {
+            "bin": 2,
+            "mean_probability": 0.28694276558758314,
+            "n": 9,
+            "observed_rate": 0.4444444444444444
+          },
+          {
+            "bin": 3,
+            "mean_probability": 0.3533617431661844,
+            "n": 51,
+            "observed_rate": 0.3333333333333333
+          },
+          {
+            "bin": 4,
+            "mean_probability": 0.45637996320308877,
+            "n": 48,
+            "observed_rate": 0.3541666666666667
+          },
+          {
+            "bin": 5,
+            "mean_probability": 0.5572643576620161,
+            "n": 69,
+            "observed_rate": 0.5797101449275363
+          },
+          {
+            "bin": 6,
+            "mean_probability": 0.6483113783368296,
+            "n": 58,
+            "observed_rate": 0.6724137931034483
+          },
+          {
+            "bin": 7,
+            "mean_probability": 0.7397240915940151,
+            "n": 39,
+            "observed_rate": 0.717948717948718
+          },
+          {
+            "bin": 8,
+            "mean_probability": 0.8416866450998124,
+            "n": 11,
+            "observed_rate": 1.0
+          }
+        ],
+        "roc_auc": 0.7005565493937587,
+        "season": 2024,
+        "target": "win",
+        "model_alias": "Candidate 033",
+        "model_family": "lightgbm"
+      },
+      {
+        "accuracy": 0.6197183098591549,
+        "brier": 0.230998596949286,
+        "comparison_horizon_seconds": 3600.0,
+        "ece": 0.05721828265563899,
+        "exact_horizon_cohort": true,
+        "exposure": "DEVELOPMENT_EXPOSED",
+        "log_loss": 0.6532692493372027,
+        "n": 284,
+        "prospective": false,
+        "reliability": [
+          {
+            "bin": 2,
+            "mean_probability": 0.2794132522598381,
+            "n": 17,
+            "observed_rate": 0.35294117647058826
+          },
+          {
+            "bin": 3,
+            "mean_probability": 0.357916293309583,
+            "n": 69,
+            "observed_rate": 0.4057971014492754
+          },
+          {
+            "bin": 4,
+            "mean_probability": 0.44605619437781824,
+            "n": 34,
+            "observed_rate": 0.4117647058823529
+          },
+          {
+            "bin": 5,
+            "mean_probability": 0.5548781463051123,
+            "n": 46,
+            "observed_rate": 0.4782608695652174
+          },
+          {
+            "bin": 6,
+            "mean_probability": 0.6472173192223015,
+            "n": 58,
+            "observed_rate": 0.6896551724137931
+          },
+          {
+            "bin": 7,
+            "mean_probability": 0.7440719358913132,
+            "n": 41,
+            "observed_rate": 0.6341463414634146
+          },
+          {
+            "bin": 8,
+            "mean_probability": 0.8401267576079681,
+            "n": 19,
+            "observed_rate": 0.8421052631578947
+          }
+        ],
+        "roc_auc": 0.6560007974481659,
+        "season": 2025,
+        "target": "win",
+        "model_alias": "Candidate 033",
+        "model_family": "lightgbm"
+      },
+      {
+        "bias": -0.11896427049988535,
+        "comparison_horizon_seconds": 3600.0,
+        "crps": 7.506346299784462,
+        "exact_horizon_cohort": true,
+        "exposure": "DEVELOPMENT_EXPOSED",
+        "interval_90_coverage": 0.9333333333333333,
+        "interval_90_width": 51.348084860234565,
+        "mae": 10.36497441305108,
+        "n": 285,
+        "prospective": false,
+        "residual_quantiles": {
+          "0.05": -22.194501302931165,
+          "0.1": -18.39699093849384,
+          "0.5": 0.7430844114696606,
+          "0.9": 17.167561183128765,
+          "0.95": 23.621677069955833
+        },
+        "rmse": 13.352494374916784,
+        "season": 2024,
+        "target": "margin",
+        "model_alias": "Candidate 034",
+        "model_family": "ridge"
+      },
+      {
+        "bias": 0.7197174540939872,
+        "comparison_horizon_seconds": 3600.0,
+        "crps": 7.427174349539583,
+        "exact_horizon_cohort": true,
+        "exposure": "DEVELOPMENT_EXPOSED",
+        "interval_90_coverage": 0.9368421052631579,
+        "interval_90_width": 51.348084860234565,
+        "mae": 10.29183876599193,
+        "n": 285,
+        "prospective": false,
+        "residual_quantiles": {
+          "0.05": -22.19152085609718,
+          "0.1": -16.29722757679759,
+          "0.5": -0.7620122894002428,
+          "0.9": 16.707798483454212,
+          "0.95": 23.432962913906824
+        },
+        "rmse": 13.202664498827666,
+        "season": 2025,
+        "target": "margin",
+        "model_alias": "Candidate 034",
+        "model_family": "ridge"
+      },
+      {
+        "bias": -2.308376344383191,
+        "comparison_horizon_seconds": 3600.0,
+        "crps": 7.40431959724084,
+        "exact_horizon_cohort": true,
+        "exposure": "DEVELOPMENT_EXPOSED",
+        "interval_90_coverage": 0.8807017543859649,
+        "interval_90_width": 39.92223273842869,
+        "mae": 10.150602998175483,
+        "n": 285,
+        "prospective": false,
+        "residual_quantiles": {
+          "0.05": -18.395569829824492,
+          "0.1": -13.258237582854614,
+          "0.5": 1.8468361756150458,
+          "0.9": 17.9490651452989,
+          "0.95": 24.64383487363596
+        },
+        "rmse": 13.0993101908895,
+        "season": 2024,
+        "target": "total",
+        "model_alias": "Candidate 035",
+        "model_family": "lightgbm"
+      },
+      {
+        "bias": 0.24362743142202842,
+        "comparison_horizon_seconds": 3600.0,
+        "crps": 7.801276579724088,
+        "exact_horizon_cohort": true,
+        "exposure": "DEVELOPMENT_EXPOSED",
+        "interval_90_coverage": 0.8526315789473684,
+        "interval_90_width": 39.92223273842869,
+        "mae": 10.940124814093027,
+        "n": 285,
+        "prospective": false,
+        "residual_quantiles": {
+          "0.05": -22.434709303825525,
+          "0.1": -17.14316308072003,
+          "0.5": -0.6743216645672305,
+          "0.9": 17.95377691910754,
+          "0.95": 22.494532730673132
+        },
+        "rmse": 13.740694531668096,
+        "season": 2025,
+        "target": "total",
+        "model_alias": "Candidate 035",
+        "model_family": "lightgbm"
+      },
+      {
+        "bias": 0.48084692588758526,
+        "comparison_horizon_seconds": 3600.0,
+        "crps": 7.406005764281932,
+        "exact_horizon_cohort": true,
+        "exposure": "DEVELOPMENT_EXPOSED",
+        "interval_90_coverage": 0.887719298245614,
+        "interval_90_width": 45.218736300623355,
+        "mae": 10.212384988569832,
+        "n": 285,
+        "prospective": false,
+        "residual_quantiles": {
+          "0.05": -23.584869800321755,
+          "0.1": -17.489631630558076,
+          "0.5": -1.1517575955084967,
+          "0.9": 16.978786176076376,
+          "0.95": 23.697183783457383
+        },
+        "rmse": 13.293382227888626,
+        "season": 2024,
+        "target": "margin",
+        "model_alias": "Candidate 036",
+        "model_family": "lightgbm"
+      },
+      {
+        "bias": 1.9693957640209483,
+        "comparison_horizon_seconds": 3600.0,
+        "crps": 7.361882182484908,
+        "exact_horizon_cohort": true,
+        "exposure": "DEVELOPMENT_EXPOSED",
+        "interval_90_coverage": 0.9122807017543859,
+        "interval_90_width": 45.218736300623355,
+        "mae": 10.320429477609302,
+        "n": 285,
+        "prospective": false,
+        "residual_quantiles": {
+          "0.05": -21.911751674557586,
+          "0.1": -18.38920296254247,
+          "0.5": -2.1213245905316205,
+          "0.9": 15.886716884897801,
+          "0.95": 20.329218242753985
+        },
+        "rmse": 13.1097023726688,
+        "season": 2025,
+        "target": "margin",
+        "model_alias": "Candidate 036",
+        "model_family": "lightgbm"
+      },
+      {
+        "accuracy": 0.7017543859649122,
+        "brier": 0.214314051531914,
+        "comparison_horizon_seconds": 3600.0,
+        "ece": 0.08901907435634679,
+        "exact_horizon_cohort": true,
+        "exposure": "DEVELOPMENT_EXPOSED",
+        "log_loss": 0.618738961388831,
+        "n": 285,
+        "prospective": false,
+        "reliability": [
+          {
+            "bin": 2,
+            "mean_probability": 0.28884357213974,
+            "n": 4,
+            "observed_rate": 0.75
+          },
+          {
+            "bin": 3,
+            "mean_probability": 0.360020437091589,
+            "n": 40,
+            "observed_rate": 0.2
+          },
+          {
+            "bin": 4,
+            "mean_probability": 0.4512365216182338,
+            "n": 72,
+            "observed_rate": 0.3472222222222222
+          },
+          {
+            "bin": 5,
+            "mean_probability": 0.548842539592665,
+            "n": 49,
+            "observed_rate": 0.673469387755102
+          },
+          {
+            "bin": 6,
+            "mean_probability": 0.6557173295454546,
+            "n": 44,
+            "observed_rate": 0.6818181818181818
+          },
+          {
+            "bin": 7,
+            "mean_probability": 0.7479887487632888,
+            "n": 56,
+            "observed_rate": 0.7142857142857143
+          },
+          {
+            "bin": 8,
+            "mean_probability": 0.8253279775381088,
+            "n": 20,
+            "observed_rate": 0.85
+          }
+        ],
+        "roc_auc": 0.7224209898628503,
+        "season": 2024,
+        "target": "win",
+        "model_alias": "Candidate 037",
+        "model_family": "xgboost"
+      },
+      {
+        "accuracy": 0.6302816901408451,
+        "brier": 0.2313922512739913,
+        "comparison_horizon_seconds": 3600.0,
+        "ece": 0.06663095337194457,
+        "exact_horizon_cohort": true,
+        "exposure": "DEVELOPMENT_EXPOSED",
+        "log_loss": 0.6554544423818359,
+        "n": 284,
+        "prospective": false,
+        "reliability": [
+          {
+            "bin": 2,
+            "mean_probability": 0.27242478231589,
+            "n": 9,
+            "observed_rate": 0.4444444444444444
+          },
+          {
+            "bin": 3,
+            "mean_probability": 0.3555141470649026,
+            "n": 55,
+            "observed_rate": 0.4
+          },
+          {
+            "bin": 4,
+            "mean_probability": 0.44945034047342697,
+            "n": 53,
+            "observed_rate": 0.3584905660377358
+          },
+          {
+            "bin": 5,
+            "mean_probability": 0.5492607385684283,
+            "n": 39,
+            "observed_rate": 0.46153846153846156
+          },
+          {
+            "bin": 6,
+            "mean_probability": 0.6601855059464773,
+            "n": 36,
+            "observed_rate": 0.6388888888888888
+          },
+          {
+            "bin": 7,
+            "mean_probability": 0.7571671864678783,
+            "n": 62,
+            "observed_rate": 0.6935483870967742
+          },
+          {
+            "bin": 8,
+            "mean_probability": 0.8325070420900981,
+            "n": 30,
+            "observed_rate": 0.7666666666666667
+          }
+        ],
+        "roc_auc": 0.6620314992025518,
+        "season": 2025,
+        "target": "win",
+        "model_alias": "Candidate 037",
+        "model_family": "xgboost"
+      },
+      {
+        "bias": -2.774111584912308,
+        "comparison_horizon_seconds": 3600.0,
+        "crps": 7.361239443114142,
+        "exact_horizon_cohort": true,
+        "exposure": "DEVELOPMENT_EXPOSED",
+        "interval_90_coverage": 0.8947368421052632,
+        "interval_90_width": 41.585491173229855,
+        "mae": 10.106941576087292,
+        "n": 285,
+        "prospective": false,
+        "residual_quantiles": {
+          "0.05": -17.38931392374007,
+          "0.1": -13.362942892779717,
+          "0.5": 2.2648111600071346,
+          "0.9": 17.826648100716938,
+          "0.95": 25.905557852026337
+        },
+        "rmse": 13.135838789349123,
+        "season": 2024,
+        "target": "total",
+        "model_alias": "Candidate 038",
+        "model_family": "catboost"
+      },
+      {
+        "bias": -0.41461321468220197,
+        "comparison_horizon_seconds": 3600.0,
+        "crps": 7.664561033834534,
+        "exact_horizon_cohort": true,
+        "exposure": "DEVELOPMENT_EXPOSED",
+        "interval_90_coverage": 0.8912280701754386,
+        "interval_90_width": 41.58549117322985,
+        "mae": 10.756759404145985,
+        "n": 285,
+        "prospective": false,
+        "residual_quantiles": {
+          "0.05": -20.768628943180346,
+          "0.1": -15.700234161416562,
+          "0.5": 0.2310962515038213,
+          "0.9": 18.601757439190884,
+          "0.95": 21.573424861104044
+        },
+        "rmse": 13.526044718049382,
+        "season": 2025,
+        "target": "total",
+        "model_alias": "Candidate 038",
+        "model_family": "catboost"
+      },
+      {
+        "accuracy": 0.7052631578947368,
+        "brier": 0.2151910995586993,
+        "comparison_horizon_seconds": 3600.0,
+        "ece": 0.07873179412698189,
+        "exact_horizon_cohort": true,
+        "exposure": "DEVELOPMENT_EXPOSED",
+        "log_loss": 0.6208218190133599,
+        "n": 285,
+        "prospective": false,
+        "reliability": [
+          {
+            "bin": 2,
+            "mean_probability": 0.2638392233694543,
+            "n": 2,
+            "observed_rate": 1.0
+          },
+          {
+            "bin": 3,
+            "mean_probability": 0.36098706214263376,
+            "n": 37,
+            "observed_rate": 0.2702702702702703
+          },
+          {
+            "bin": 4,
+            "mean_probability": 0.44482926385664456,
+            "n": 68,
+            "observed_rate": 0.27941176470588236
+          },
+          {
+            "bin": 5,
+            "mean_probability": 0.5487725288117966,
+            "n": 56,
+            "observed_rate": 0.625
+          },
+          {
+            "bin": 6,
+            "mean_probability": 0.6489236624930441,
+            "n": 43,
+            "observed_rate": 0.6744186046511628
+          },
+          {
+            "bin": 7,
+            "mean_probability": 0.7491539123924608,
+            "n": 58,
+            "observed_rate": 0.7586206896551724
+          },
+          {
+            "bin": 8,
+            "mean_probability": 0.8308206928963671,
+            "n": 21,
+            "observed_rate": 0.8095238095238095
+          }
+        ],
+        "roc_auc": 0.7191910157026438,
+        "season": 2024,
+        "target": "win",
+        "model_alias": "Candidate 039",
+        "model_family": "histgb"
+      },
+      {
+        "accuracy": 0.6197183098591549,
+        "brier": 0.23447252367346755,
+        "comparison_horizon_seconds": 3600.0,
+        "ece": 0.07619773970530012,
+        "exact_horizon_cohort": true,
+        "exposure": "DEVELOPMENT_EXPOSED",
+        "log_loss": 0.6624452964301076,
+        "n": 284,
+        "prospective": false,
+        "reliability": [
+          {
+            "bin": 2,
+            "mean_probability": 0.28259897698496766,
+            "n": 4,
+            "observed_rate": 0.75
+          },
+          {
+            "bin": 3,
+            "mean_probability": 0.35810093396193055,
+            "n": 30,
+            "observed_rate": 0.3
+          },
+          {
+            "bin": 4,
+            "mean_probability": 0.4465076348179029,
+            "n": 58,
+            "observed_rate": 0.3793103448275862
+          },
+          {
+            "bin": 5,
+            "mean_probability": 0.5429412046271057,
+            "n": 49,
+            "observed_rate": 0.5102040816326531
+          },
+          {
+            "bin": 6,
+            "mean_probability": 0.6508457221539375,
+            "n": 45,
+            "observed_rate": 0.4888888888888889
+          },
+          {
+            "bin": 7,
+            "mean_probability": 0.7537433727709059,
+            "n": 68,
+            "observed_rate": 0.7352941176470589
+          },
+          {
+            "bin": 8,
+            "mean_probability": 0.8327785757957284,
+            "n": 30,
+            "observed_rate": 0.7
+          }
+        ],
+        "roc_auc": 0.6599381977671451,
+        "season": 2025,
+        "target": "win",
+        "model_alias": "Candidate 039",
+        "model_family": "histgb"
+      },
+      {
+        "bias": 0.34686623539187406,
+        "comparison_horizon_seconds": 3600.0,
+        "crps": 7.565630873553903,
+        "exact_horizon_cohort": true,
+        "exposure": "DEVELOPMENT_EXPOSED",
+        "interval_90_coverage": 0.8771929824561403,
+        "interval_90_width": 44.52286275625227,
+        "mae": 10.408550616477926,
+        "n": 285,
+        "prospective": false,
+        "residual_quantiles": {
+          "0.05": -23.281390953063966,
+          "0.1": -16.79181238412857,
+          "0.5": -0.6741983890533447,
+          "0.9": 18.071119748055935,
+          "0.95": 22.882789590954783
+        },
+        "rmse": 13.588193906451504,
+        "season": 2024,
+        "target": "margin",
+        "model_alias": "Candidate 040",
+        "model_family": "xgboost"
+      },
+      {
+        "bias": -0.04555030286050679,
+        "comparison_horizon_seconds": 3600.0,
+        "crps": 7.332857695025054,
+        "exact_horizon_cohort": true,
+        "exposure": "DEVELOPMENT_EXPOSED",
+        "interval_90_coverage": 0.9017543859649123,
+        "interval_90_width": 44.52286275625227,
+        "mae": 10.266570154891202,
+        "n": 285,
+        "prospective": false,
+        "residual_quantiles": {
+          "0.05": -20.434113776683805,
+          "0.1": -15.940211510658264,
+          "0.5": -0.6265772581100464,
+          "0.9": 18.961409330368042,
+          "0.95": 22.560248374938965
+        },
+        "rmse": 13.050598725195208,
+        "season": 2025,
+        "target": "margin",
+        "model_alias": "Candidate 040",
+        "model_family": "xgboost"
+      },
+      {
+        "accuracy": 0.6771929824561403,
+        "brier": 0.21619553055037924,
+        "comparison_horizon_seconds": 3600.0,
+        "ece": 0.051975683037593944,
+        "exact_horizon_cohort": true,
+        "exposure": "DEVELOPMENT_EXPOSED",
+        "log_loss": 0.622482242789031,
+        "n": 285,
+        "prospective": false,
+        "reliability": [
+          {
+            "bin": 2,
+            "mean_probability": 0.28236724175397077,
+            "n": 4,
+            "observed_rate": 0.75
+          },
+          {
+            "bin": 3,
+            "mean_probability": 0.35399461980252017,
+            "n": 55,
+            "observed_rate": 0.2727272727272727
+          },
+          {
+            "bin": 4,
+            "mean_probability": 0.45127994661548676,
+            "n": 72,
+            "observed_rate": 0.4027777777777778
+          },
+          {
+            "bin": 5,
+            "mean_probability": 0.5583689553732004,
+            "n": 38,
+            "observed_rate": 0.5789473684210527
+          },
+          {
+            "bin": 6,
+            "mean_probability": 0.6543103797418136,
+            "n": 47,
+            "observed_rate": 0.723404255319149
+          },
+          {
+            "bin": 7,
+            "mean_probability": 0.7458956627370051,
+            "n": 54,
+            "observed_rate": 0.7407407407407407
+          },
+          {
+            "bin": 8,
+            "mean_probability": 0.8218052832316619,
+            "n": 15,
+            "observed_rate": 0.8666666666666667
+          }
+        ],
+        "roc_auc": 0.7082587954680979,
+        "season": 2024,
+        "target": "win",
+        "model_alias": "Candidate 041",
+        "model_family": "lightgbm"
+      },
+      {
+        "accuracy": 0.6373239436619719,
+        "brier": 0.2294263604284465,
+        "comparison_horizon_seconds": 3600.0,
+        "ece": 0.07923142212408239,
+        "exact_horizon_cohort": true,
+        "exposure": "DEVELOPMENT_EXPOSED",
+        "log_loss": 0.6515757445054629,
+        "n": 284,
+        "prospective": false,
+        "reliability": [
+          {
+            "bin": 2,
+            "mean_probability": 0.2872433702648786,
+            "n": 3,
+            "observed_rate": 1.0
+          },
+          {
+            "bin": 3,
+            "mean_probability": 0.3609333797108669,
+            "n": 42,
+            "observed_rate": 0.38095238095238093
+          },
+          {
+            "bin": 4,
+            "mean_probability": 0.44589922735515064,
+            "n": 72,
+            "observed_rate": 0.3472222222222222
+          },
+          {
+            "bin": 5,
+            "mean_probability": 0.5514880960657527,
+            "n": 34,
+            "observed_rate": 0.5
+          },
+          {
+            "bin": 6,
+            "mean_probability": 0.649814811629182,
+            "n": 43,
+            "observed_rate": 0.5581395348837209
+          },
+          {
+            "bin": 7,
+            "mean_probability": 0.7540314997958182,
+            "n": 60,
+            "observed_rate": 0.7833333333333333
+          },
+          {
+            "bin": 8,
+            "mean_probability": 0.8322389797926092,
+            "n": 30,
+            "observed_rate": 0.6666666666666666
+          }
+        ],
+        "roc_auc": 0.6675139553429027,
+        "season": 2025,
+        "target": "win",
+        "model_alias": "Candidate 041",
+        "model_family": "lightgbm"
+      },
+      {
+        "bias": 0.37980770141922504,
+        "comparison_horizon_seconds": 3600.0,
+        "crps": 7.376467133378588,
+        "exact_horizon_cohort": true,
+        "exposure": "DEVELOPMENT_EXPOSED",
+        "interval_90_coverage": 0.8912280701754386,
+        "interval_90_width": 46.57280446295181,
+        "mae": 10.185929155024876,
+        "n": 285,
+        "prospective": false,
+        "residual_quantiles": {
+          "0.05": -23.477875198984243,
+          "0.1": -17.189774364133235,
+          "0.5": -0.756040457080065,
+          "0.9": 16.584181811089582,
+          "0.95": 24.415046283253776
+        },
+        "rmse": 13.221864972345408,
+        "season": 2024,
+        "target": "margin",
+        "model_alias": "Candidate 042",
+        "model_family": "histgb"
+      },
+      {
+        "bias": 1.9406184460552467,
+        "comparison_horizon_seconds": 3600.0,
+        "crps": 7.387791308150844,
+        "exact_horizon_cohort": true,
+        "exposure": "DEVELOPMENT_EXPOSED",
+        "interval_90_coverage": 0.9122807017543859,
+        "interval_90_width": 46.57280446295181,
+        "mae": 10.37706788662992,
+        "n": 285,
+        "prospective": false,
+        "residual_quantiles": {
+          "0.05": -23.1425800391229,
+          "0.1": -17.659082254086872,
+          "0.5": -2.50052587923496,
+          "0.9": 15.524604456329875,
+          "0.95": 21.544207404377843
+        },
+        "rmse": 13.159449408438464,
+        "season": 2025,
+        "target": "margin",
+        "model_alias": "Candidate 042",
+        "model_family": "histgb"
+      },
+      {
+        "bias": 0.2147224352448662,
+        "comparison_horizon_seconds": 3600.0,
+        "crps": 7.289401443962459,
+        "exact_horizon_cohort": true,
+        "exposure": "DEVELOPMENT_EXPOSED",
+        "interval_90_coverage": 0.8842105263157894,
+        "interval_90_width": 44.99301304251787,
+        "mae": 10.016232165268402,
+        "n": 285,
+        "prospective": false,
+        "residual_quantiles": {
+          "0.05": -23.708198473325275,
+          "0.1": -16.883527756998543,
+          "0.5": -0.6850314939333044,
+          "0.9": 17.13680891131766,
+          "0.95": 22.26165292152241
+        },
+        "rmse": 13.054441315735492,
+        "season": 2024,
+        "target": "margin",
+        "model_alias": "Candidate 043",
+        "model_family": "catboost"
+      },
+      {
+        "bias": 1.6076779553370824,
+        "comparison_horizon_seconds": 3600.0,
+        "crps": 7.385732646674958,
+        "exact_horizon_cohort": true,
+        "exposure": "DEVELOPMENT_EXPOSED",
+        "interval_90_coverage": 0.9087719298245615,
+        "interval_90_width": 44.99301304251787,
+        "mae": 10.348684763223464,
+        "n": 285,
+        "prospective": false,
+        "residual_quantiles": {
+          "0.05": -23.358102514231216,
+          "0.1": -17.591479671788857,
+          "0.5": -2.2682709235122904,
+          "0.9": 16.748628739424984,
+          "0.95": 21.601805529531234
+        },
+        "rmse": 13.095758259153701,
+        "season": 2025,
+        "target": "margin",
+        "model_alias": "Candidate 043",
+        "model_family": "catboost"
+      },
+      {
+        "bias": -2.51546964888006,
+        "comparison_horizon_seconds": 3600.0,
+        "crps": 7.30888343791567,
+        "exact_horizon_cohort": true,
+        "exposure": "DEVELOPMENT_EXPOSED",
+        "interval_90_coverage": 0.9122807017543859,
+        "interval_90_width": 43.16430071702547,
+        "mae": 10.213953588259066,
+        "n": 285,
+        "prospective": false,
+        "residual_quantiles": {
+          "0.05": -16.545202179813153,
+          "0.1": -13.810684593179536,
+          "0.5": 2.120720998158802,
+          "0.9": 18.313040607619172,
+          "0.95": 25.622153773859843
+        },
+        "rmse": 13.085234968362519,
+        "season": 2024,
+        "target": "total",
+        "model_alias": "Candidate 044",
+        "model_family": "ridge"
+      },
+      {
+        "bias": -0.2963147300446835,
+        "comparison_horizon_seconds": 3600.0,
+        "crps": 7.626289373076048,
+        "exact_horizon_cohort": true,
+        "exposure": "DEVELOPMENT_EXPOSED",
+        "interval_90_coverage": 0.8947368421052632,
+        "interval_90_width": 43.16430071702547,
+        "mae": 10.64700611667277,
+        "n": 285,
+        "prospective": false,
+        "residual_quantiles": {
+          "0.05": -20.86227653392488,
+          "0.1": -16.06044195331012,
+          "0.5": 0.06318608452124153,
+          "0.9": 18.28589541719791,
+          "0.95": 21.30975541233426
+        },
+        "rmse": 13.458267325923925,
+        "season": 2025,
+        "target": "total",
+        "model_alias": "Candidate 044",
+        "model_family": "ridge"
+      },
+      {
+        "bias": -2.5313154715895,
+        "comparison_horizon_seconds": 3600.0,
+        "crps": 7.407955131496646,
+        "exact_horizon_cohort": true,
+        "exposure": "DEVELOPMENT_EXPOSED",
+        "interval_90_coverage": 0.9087719298245615,
+        "interval_90_width": 45.426145995872794,
+        "mae": 10.32252598928851,
+        "n": 285,
+        "prospective": false,
+        "residual_quantiles": {
+          "0.05": -18.294025245859018,
+          "0.1": -13.681395034868187,
+          "0.5": 2.111006142351556,
+          "0.9": 19.045380614642617,
+          "0.95": 25.36624888168218
+        },
+        "rmse": 13.499191854104533,
+        "season": 2024,
+        "target": "total",
+        "model_alias": "Candidate 045",
+        "model_family": "ridge"
+      },
+      {
+        "bias": -0.09265466820703812,
+        "comparison_horizon_seconds": 3600.0,
+        "crps": 7.558986383976161,
+        "exact_horizon_cohort": true,
+        "exposure": "DEVELOPMENT_EXPOSED",
+        "interval_90_coverage": 0.8982456140350877,
+        "interval_90_width": 45.426145995872794,
+        "mae": 10.540547113434673,
+        "n": 285,
+        "prospective": false,
+        "residual_quantiles": {
+          "0.05": -21.465064019237243,
+          "0.1": -16.39542032823177,
+          "0.5": 0.1399551312071594,
+          "0.9": 16.75263601733649,
+          "0.95": 20.902231332457962
+        },
+        "rmse": 13.426592463251096,
+        "season": 2025,
+        "target": "total",
+        "model_alias": "Candidate 045",
+        "model_family": "ridge"
+      },
+      {
+        "bias": -3.1337713007341352,
+        "comparison_horizon_seconds": 3600.0,
+        "crps": 7.5271067373288085,
+        "exact_horizon_cohort": true,
+        "exposure": "DEVELOPMENT_EXPOSED",
+        "interval_90_coverage": 0.9087719298245615,
+        "interval_90_width": 42.885411071777355,
+        "mae": 10.318946316367702,
+        "n": 285,
+        "prospective": false,
+        "residual_quantiles": {
+          "0.05": -17.486688995361327,
+          "0.1": -13.559196472167969,
+          "0.5": 2.2968368530273438,
+          "0.9": 20.06199188232421,
+          "0.95": 26.909696197509767
+        },
+        "rmse": 13.391869177533637,
+        "season": 2024,
+        "target": "total",
+        "model_alias": "Candidate 046",
+        "model_family": "xgboost"
+      },
+      {
+        "bias": -0.05022823936060855,
+        "comparison_horizon_seconds": 3600.0,
+        "crps": 7.613253047587359,
+        "exact_horizon_cohort": true,
+        "exposure": "DEVELOPMENT_EXPOSED",
+        "interval_90_coverage": 0.8912280701754386,
+        "interval_90_width": 42.885411071777355,
+        "mae": 10.734529836554277,
+        "n": 285,
+        "prospective": false,
+        "residual_quantiles": {
+          "0.05": -20.785977935791017,
+          "0.1": -16.28232727050781,
+          "0.5": -0.6639747619628906,
+          "0.9": 18.740654754638673,
+          "0.95": 21.514004516601567
+        },
+        "rmse": 13.42620817815451,
+        "season": 2025,
+        "target": "total",
+        "model_alias": "Candidate 046",
+        "model_family": "xgboost"
+      },
+      {
+        "bias": -2.4963055669303955,
+        "comparison_horizon_seconds": 3600.0,
+        "crps": 7.3924832530456595,
+        "exact_horizon_cohort": true,
+        "exposure": "DEVELOPMENT_EXPOSED",
+        "interval_90_coverage": 0.8982456140350877,
+        "interval_90_width": 42.15321515305931,
+        "mae": 10.157728766221465,
+        "n": 285,
+        "prospective": false,
+        "residual_quantiles": {
+          "0.05": -18.551996025874587,
+          "0.1": -13.508205103992,
+          "0.5": 1.9831689277961217,
+          "0.9": 17.742418971908414,
+          "0.95": 24.395127155271076
+        },
+        "rmse": 13.08105237995423,
+        "season": 2024,
+        "target": "total",
+        "model_alias": "Candidate 047",
+        "model_family": "histgb"
+      },
+      {
+        "bias": 0.020350289437298066,
+        "comparison_horizon_seconds": 3600.0,
+        "crps": 7.776931189318274,
+        "exact_horizon_cohort": true,
+        "exposure": "DEVELOPMENT_EXPOSED",
+        "interval_90_coverage": 0.887719298245614,
+        "interval_90_width": 42.15321515305931,
+        "mae": 10.964836947211468,
+        "n": 285,
+        "prospective": false,
+        "residual_quantiles": {
+          "0.05": -22.146469128027796,
+          "0.1": -16.784580068298318,
+          "0.5": -0.547358556699372,
+          "0.9": 17.457721781585526,
+          "0.95": 22.946878296184398
+        },
+        "rmse": 13.717464690851877,
+        "season": 2025,
+        "target": "total",
+        "model_alias": "Candidate 047",
+        "model_family": "histgb"
+      },
+      {
+        "bias": -2.4027789467259457,
+        "comparison_horizon_seconds": 3600.0,
+        "crps": 7.39196317288207,
+        "exact_horizon_cohort": true,
+        "exposure": "DEVELOPMENT_EXPOSED",
+        "interval_90_coverage": 0.9122807017543859,
+        "interval_90_width": 44.1441215515137,
+        "mae": 10.11954594662315,
+        "n": 285,
+        "prospective": false,
+        "residual_quantiles": {
+          "0.05": -19.00175323486328,
+          "0.1": -13.011729431152343,
+          "0.5": 1.9233894348144531,
+          "0.9": 18.982719421386715,
+          "0.95": 24.18018341064454
+        },
+        "rmse": 13.08579439896686,
+        "season": 2024,
+        "target": "total",
+        "model_alias": "Candidate 048",
+        "model_family": "xgboost"
+      },
+      {
+        "bias": 0.19165243851511102,
+        "comparison_horizon_seconds": 3600.0,
+        "crps": 7.839000652403639,
+        "exact_horizon_cohort": true,
+        "exposure": "DEVELOPMENT_EXPOSED",
+        "interval_90_coverage": 0.8912280701754386,
+        "interval_90_width": 44.1441215515137,
+        "mae": 11.038234737463165,
+        "n": 285,
+        "prospective": false,
+        "residual_quantiles": {
+          "0.05": -21.72146530151367,
+          "0.1": -16.629400634765624,
+          "0.5": 0.022769927978515625,
+          "0.9": 18.414972686767577,
+          "0.95": 22.450424194335938
+        },
+        "rmse": 13.813848344718386,
+        "season": 2025,
+        "target": "total",
+        "model_alias": "Candidate 048",
+        "model_family": "xgboost"
+      },
+      {
+        "bias": 0.32168782720605327,
+        "comparison_horizon_seconds": 3600.0,
+        "crps": 7.369382851924855,
+        "exact_horizon_cohort": true,
+        "exposure": "DEVELOPMENT_EXPOSED",
+        "interval_90_coverage": 0.8982456140350877,
+        "interval_90_width": 46.653446175339404,
+        "mae": 10.16702375530429,
+        "n": 285,
+        "prospective": false,
+        "residual_quantiles": {
+          "0.05": -23.14650134975161,
+          "0.1": -17.280778222820526,
+          "0.5": -0.7218477412995254,
+          "0.9": 16.814767500579112,
+          "0.95": 24.004944431968653
+        },
+        "rmse": 13.199998746381262,
+        "season": 2024,
+        "target": "margin",
+        "model_alias": "Candidate 049",
+        "model_family": "histgb"
+      },
+      {
+        "bias": 1.7794793654911194,
+        "comparison_horizon_seconds": 3600.0,
+        "crps": 7.329569411664319,
+        "exact_horizon_cohort": true,
+        "exposure": "DEVELOPMENT_EXPOSED",
+        "interval_90_coverage": 0.9228070175438596,
+        "interval_90_width": 46.653446175339404,
+        "mae": 10.308533442205757,
+        "n": 285,
+        "prospective": false,
+        "residual_quantiles": {
+          "0.05": -21.553835785500702,
+          "0.1": -18.01475814069989,
+          "0.5": -2.1992934393388666,
+          "0.9": 15.81507758709124,
+          "0.95": 21.06853412130995
+        },
+        "rmse": 13.054505827033823,
+        "season": 2025,
+        "target": "margin",
+        "model_alias": "Candidate 049",
+        "model_family": "histgb"
+      },
+      {
+        "bias": 0.1966723989226901,
+        "comparison_horizon_seconds": 3600.0,
+        "crps": 7.277070007099498,
+        "exact_horizon_cohort": true,
+        "exposure": "DEVELOPMENT_EXPOSED",
+        "interval_90_coverage": 0.887719298245614,
+        "interval_90_width": 44.95387021777891,
+        "mae": 10.006612513687235,
+        "n": 285,
+        "prospective": false,
+        "residual_quantiles": {
+          "0.05": -23.448103717693687,
+          "0.1": -17.254395230943363,
+          "0.5": -0.9570271174334195,
+          "0.9": 17.140125642907222,
+          "0.95": 22.21757834587977
+        },
+        "rmse": 13.037300446033289,
+        "season": 2024,
+        "target": "margin",
+        "model_alias": "Candidate 050",
+        "model_family": "catboost"
+      },
+      {
+        "bias": 1.8380854099376365,
+        "comparison_horizon_seconds": 3600.0,
+        "crps": 7.402024242600829,
+        "exact_horizon_cohort": true,
+        "exposure": "DEVELOPMENT_EXPOSED",
+        "interval_90_coverage": 0.9122807017543859,
+        "interval_90_width": 44.95387021777891,
+        "mae": 10.372835703882393,
+        "n": 285,
+        "prospective": false,
+        "residual_quantiles": {
+          "0.05": -24.071682594876172,
+          "0.1": -17.732641906915315,
+          "0.5": -2.472726635514509,
+          "0.9": 16.499787521085885,
+          "0.95": 21.324419841696354
+        },
+        "rmse": 13.124145052233187,
+        "season": 2025,
+        "target": "margin",
+        "model_alias": "Candidate 050",
+        "model_family": "catboost"
+      },
+      {
+        "accuracy": 0.6456140350877193,
+        "brier": 0.21824135729340088,
+        "comparison_horizon_seconds": 3600.0,
+        "ece": 0.054753835869654134,
+        "exact_horizon_cohort": true,
+        "exposure": "DEVELOPMENT_EXPOSED",
+        "log_loss": 0.6269534087693664,
+        "n": 285,
+        "prospective": false,
+        "reliability": [
+          {
+            "bin": 2,
+            "mean_probability": 0.2912355945642134,
+            "n": 6,
+            "observed_rate": 0.8333333333333334
+          },
+          {
+            "bin": 3,
+            "mean_probability": 0.354910162134596,
+            "n": 45,
+            "observed_rate": 0.24444444444444444
+          },
+          {
+            "bin": 4,
+            "mean_probability": 0.4443361688531561,
+            "n": 69,
+            "observed_rate": 0.43478260869565216
+          },
+          {
+            "bin": 5,
+            "mean_probability": 0.5473487343328166,
+            "n": 48,
+            "observed_rate": 0.5
+          },
+          {
+            "bin": 6,
+            "mean_probability": 0.6487669691239042,
+            "n": 50,
+            "observed_rate": 0.72
+          },
+          {
+            "bin": 7,
+            "mean_probability": 0.7474553207203309,
+            "n": 56,
+            "observed_rate": 0.7321428571428571
+          },
+          {
+            "bin": 8,
+            "mean_probability": 0.8209286446539635,
+            "n": 11,
+            "observed_rate": 0.8181818181818182
+          }
+        ],
+        "roc_auc": 0.7056748161399323,
+        "season": 2024,
+        "target": "win",
+        "model_alias": "Candidate 051",
+        "model_family": "lightgbm"
+      },
+      {
+        "accuracy": 0.6408450704225352,
+        "brier": 0.22813462129221096,
+        "comparison_horizon_seconds": 3600.0,
+        "ece": 0.055365064469502304,
+        "exact_horizon_cohort": true,
+        "exposure": "DEVELOPMENT_EXPOSED",
+        "log_loss": 0.648160849809629,
+        "n": 284,
+        "prospective": false,
+        "reliability": [
+          {
+            "bin": 2,
+            "mean_probability": 0.28878785917838234,
+            "n": 5,
+            "observed_rate": 0.8
+          },
+          {
+            "bin": 3,
+            "mean_probability": 0.3576860774832751,
+            "n": 51,
+            "observed_rate": 0.3333333333333333
+          },
+          {
+            "bin": 4,
+            "mean_probability": 0.4442302627155705,
+            "n": 64,
+            "observed_rate": 0.375
+          },
+          {
+            "bin": 5,
+            "mean_probability": 0.5481347421050211,
+            "n": 38,
+            "observed_rate": 0.5263157894736842
+          },
+          {
+            "bin": 6,
+            "mean_probability": 0.6579193098576178,
+            "n": 38,
+            "observed_rate": 0.6052631578947368
+          },
+          {
+            "bin": 7,
+            "mean_probability": 0.7597906601275893,
+            "n": 63,
+            "observed_rate": 0.6984126984126984
+          },
+          {
+            "bin": 8,
+            "mean_probability": 0.8319210110867445,
+            "n": 25,
+            "observed_rate": 0.8
+          }
+        ],
+        "roc_auc": 0.6707037480063796,
+        "season": 2025,
+        "target": "win",
+        "model_alias": "Candidate 051",
+        "model_family": "lightgbm"
+      },
+      {
+        "bias": 0.2680649053851832,
+        "comparison_horizon_seconds": 3600.0,
+        "crps": 7.333327646775178,
+        "exact_horizon_cohort": true,
+        "exposure": "DEVELOPMENT_EXPOSED",
+        "interval_90_coverage": 0.8912280701754386,
+        "interval_90_width": 46.17120289226159,
+        "mae": 10.098973387115285,
+        "n": 285,
+        "prospective": false,
+        "residual_quantiles": {
+          "0.05": -23.448516475957536,
+          "0.1": -16.91141301462696,
+          "0.5": -1.1206837387391873,
+          "0.9": 16.867801704293186,
+          "0.95": 24.261163205841743
+        },
+        "rmse": 13.141322832692527,
+        "season": 2024,
+        "target": "margin",
+        "model_alias": "Candidate 052",
+        "model_family": "histgb"
+      },
+      {
+        "bias": 1.9850306460053162,
+        "comparison_horizon_seconds": 3600.0,
+        "crps": 7.36403327806632,
+        "exact_horizon_cohort": true,
+        "exposure": "DEVELOPMENT_EXPOSED",
+        "interval_90_coverage": 0.9157894736842105,
+        "interval_90_width": 46.17120289226159,
+        "mae": 10.335662771213222,
+        "n": 285,
+        "prospective": false,
+        "residual_quantiles": {
+          "0.05": -22.517945929096864,
+          "0.1": -17.95813193202497,
+          "0.5": -2.1709240949842963,
+          "0.9": 15.756737345842838,
+          "0.95": 21.099486557579933
+        },
+        "rmse": 13.12814301625995,
+        "season": 2025,
+        "target": "margin",
+        "model_alias": "Candidate 052",
+        "model_family": "histgb"
+      },
+      {
+        "accuracy": 0.6631578947368421,
+        "brier": 0.22076553185965997,
+        "comparison_horizon_seconds": 3600.0,
+        "ece": 0.06468232914379372,
+        "exact_horizon_cohort": true,
+        "exposure": "DEVELOPMENT_EXPOSED",
+        "log_loss": 0.6369846931638852,
+        "n": 285,
+        "prospective": false,
+        "reliability": [
+          {
+            "bin": 0,
+            "mean_probability": 0.05743977367770203,
+            "n": 2,
+            "observed_rate": 0.5
+          },
+          {
+            "bin": 1,
+            "mean_probability": 0.1386549348657419,
+            "n": 3,
+            "observed_rate": 0.3333333333333333
+          },
+          {
+            "bin": 2,
+            "mean_probability": 0.2549549018434094,
+            "n": 16,
+            "observed_rate": 0.375
+          },
+          {
+            "bin": 3,
+            "mean_probability": 0.36215053889167814,
+            "n": 39,
+            "observed_rate": 0.3076923076923077
+          },
+          {
+            "bin": 4,
+            "mean_probability": 0.458952434141207,
+            "n": 57,
+            "observed_rate": 0.38596491228070173
+          },
+          {
+            "bin": 5,
+            "mean_probability": 0.5584080235136987,
+            "n": 49,
+            "observed_rate": 0.5102040816326531
+          },
+          {
+            "bin": 6,
+            "mean_probability": 0.650843299624388,
+            "n": 49,
+            "observed_rate": 0.7346938775510204
+          },
+          {
+            "bin": 7,
+            "mean_probability": 0.7432089761332888,
+            "n": 44,
+            "observed_rate": 0.7045454545454546
+          },
+          {
+            "bin": 8,
+            "mean_probability": 0.851281369583807,
+            "n": 24,
+            "observed_rate": 0.8333333333333334
+          },
+          {
+            "bin": 9,
+            "mean_probability": 0.9210962329240763,
+            "n": 2,
+            "observed_rate": 1.0
+          }
+        ],
+        "roc_auc": 0.7012025442258001,
+        "season": 2024,
+        "target": "win",
+        "model_alias": "Candidate 053",
+        "model_family": "ridge"
+      },
+      {
+        "accuracy": 0.6126760563380281,
+        "brier": 0.23399575071545387,
+        "comparison_horizon_seconds": 3600.0,
+        "ece": 0.0883534157451623,
+        "exact_horizon_cohort": true,
+        "exposure": "DEVELOPMENT_EXPOSED",
+        "log_loss": 0.6615388647155491,
+        "n": 284,
+        "prospective": false,
+        "reliability": [
+          {
+            "bin": 1,
+            "mean_probability": 0.1766387668937408,
+            "n": 2,
+            "observed_rate": 0.0
+          },
+          {
+            "bin": 2,
+            "mean_probability": 0.262518248162161,
+            "n": 10,
+            "observed_rate": 0.2
+          },
+          {
+            "bin": 3,
+            "mean_probability": 0.3555675458585212,
+            "n": 31,
+            "observed_rate": 0.2903225806451613
+          },
+          {
+            "bin": 4,
+            "mean_probability": 0.4436515153766602,
+            "n": 31,
+            "observed_rate": 0.4838709677419355
+          },
+          {
+            "bin": 5,
+            "mean_probability": 0.5500990175483698,
+            "n": 53,
+            "observed_rate": 0.4716981132075472
+          },
+          {
+            "bin": 6,
+            "mean_probability": 0.6511712964746528,
+            "n": 54,
+            "observed_rate": 0.5925925925925926
+          },
+          {
+            "bin": 7,
+            "mean_probability": 0.7482628185334496,
+            "n": 60,
+            "observed_rate": 0.6166666666666667
+          },
+          {
+            "bin": 8,
+            "mean_probability": 0.847716054532954,
+            "n": 38,
+            "observed_rate": 0.7105263157894737
+          },
+          {
+            "bin": 9,
+            "mean_probability": 0.9165928025349526,
+            "n": 5,
+            "observed_rate": 1.0
+          }
+        ],
+        "roc_auc": 0.6654704944178629,
+        "season": 2025,
+        "target": "win",
+        "model_alias": "Candidate 053",
+        "model_family": "ridge"
+      },
+      {
+        "bias": -2.5274695496952857,
+        "comparison_horizon_seconds": 3600.0,
+        "crps": 7.408531149943366,
+        "exact_horizon_cohort": true,
+        "exposure": "DEVELOPMENT_EXPOSED",
+        "interval_90_coverage": 0.9087719298245615,
+        "interval_90_width": 45.45000864750374,
+        "mae": 10.322614916546225,
+        "n": 285,
+        "prospective": false,
+        "residual_quantiles": {
+          "0.05": -18.301467077491203,
+          "0.1": -13.683772336057936,
+          "0.5": 2.1128736528649554,
+          "0.9": 19.04302235440337,
+          "0.95": 25.180317152550202
+        },
+        "rmse": 13.497535389194836,
+        "season": 2024,
+        "target": "total",
+        "model_alias": "Candidate 054",
+        "model_family": "ridge"
+      },
+      {
+        "bias": -0.12325307590063805,
+        "comparison_horizon_seconds": 3600.0,
+        "crps": 7.560155239715459,
+        "exact_horizon_cohort": true,
+        "exposure": "DEVELOPMENT_EXPOSED",
+        "interval_90_coverage": 0.8982456140350877,
+        "interval_90_width": 45.45000864750374,
+        "mae": 10.544169223252265,
+        "n": 285,
+        "prospective": false,
+        "residual_quantiles": {
+          "0.05": -21.349868964593075,
+          "0.1": -16.364787548239782,
+          "0.5": 0.17469337021664444,
+          "0.9": 16.772241084273197,
+          "0.95": 20.95731586427563
+        },
+        "rmse": 13.432448169728897,
+        "season": 2025,
+        "target": "total",
+        "model_alias": "Candidate 054",
+        "model_family": "ridge"
+      },
+      {
+        "bias": 0.43549710559871113,
+        "comparison_horizon_seconds": 3600.0,
+        "crps": 7.352692089734164,
+        "exact_horizon_cohort": true,
+        "exposure": "DEVELOPMENT_EXPOSED",
+        "interval_90_coverage": 0.8771929824561403,
+        "interval_90_width": 44.61160284280777,
+        "mae": 10.101281878986118,
+        "n": 285,
+        "prospective": false,
+        "residual_quantiles": {
+          "0.05": -23.751777911186217,
+          "0.1": -17.270272159576415,
+          "0.5": -0.696190357208252,
+          "0.9": 16.706061887741082,
+          "0.95": 23.1550256252289
+        },
+        "rmse": 13.174133436177142,
+        "season": 2024,
+        "target": "margin",
+        "model_alias": "Candidate 055",
+        "model_family": "xgboost"
+      },
+      {
+        "bias": 1.4509913757051291,
+        "comparison_horizon_seconds": 3600.0,
+        "crps": 7.36587156026675,
+        "exact_horizon_cohort": true,
+        "exposure": "DEVELOPMENT_EXPOSED",
+        "interval_90_coverage": 0.9052631578947369,
+        "interval_90_width": 44.61160284280777,
+        "mae": 10.280570481782943,
+        "n": 285,
+        "prospective": false,
+        "residual_quantiles": {
+          "0.05": -22.05950164794922,
+          "0.1": -17.506086945533752,
+          "0.5": -2.1091529726982117,
+          "0.9": 16.429429739713665,
+          "0.95": 21.50027875900269
+        },
+        "rmse": 13.132990192115479,
+        "season": 2025,
+        "target": "margin",
+        "model_alias": "Candidate 055",
+        "model_family": "xgboost"
+      },
+      {
+        "bias": -1.9859554341862027,
+        "comparison_horizon_seconds": 3600.0,
+        "crps": 7.306825031381084,
+        "exact_horizon_cohort": true,
+        "exposure": "DEVELOPMENT_EXPOSED",
+        "interval_90_coverage": 0.9017543859649123,
+        "interval_90_width": 43.63335080810646,
+        "mae": 10.00277037943315,
+        "n": 285,
+        "prospective": false,
+        "residual_quantiles": {
+          "0.05": -18.01825959032158,
+          "0.1": -14.07892415187773,
+          "0.5": 1.5265337811808877,
+          "0.9": 17.213472649516294,
+          "0.95": 25.534335618328992
+        },
+        "rmse": 12.952135096421284,
+        "season": 2024,
+        "target": "total",
+        "model_alias": "Candidate 056",
+        "model_family": "catboost"
+      },
+      {
+        "bias": -0.23712385396226224,
+        "comparison_horizon_seconds": 3600.0,
+        "crps": 7.694186425866403,
+        "exact_horizon_cohort": true,
+        "exposure": "DEVELOPMENT_EXPOSED",
+        "interval_90_coverage": 0.8842105263157894,
+        "interval_90_width": 43.63335080810646,
+        "mae": 10.711148813167712,
+        "n": 285,
+        "prospective": false,
+        "residual_quantiles": {
+          "0.05": -21.137391609416472,
+          "0.1": -15.765460688656296,
+          "0.5": -0.2411487324627828,
+          "0.9": 18.745993670960427,
+          "0.95": 23.769193668778268
+        },
+        "rmse": 13.569574372478838,
+        "season": 2025,
+        "target": "total",
+        "model_alias": "Candidate 056",
+        "model_family": "catboost"
+      },
+      {
+        "bias": -2.9118088005161775,
+        "comparison_horizon_seconds": 3600.0,
+        "crps": 7.50104465938159,
+        "exact_horizon_cohort": true,
+        "exposure": "DEVELOPMENT_EXPOSED",
+        "interval_90_coverage": 0.9087719298245615,
+        "interval_90_width": 43.50383985724878,
+        "mae": 10.235103919896877,
+        "n": 285,
+        "prospective": false,
+        "residual_quantiles": {
+          "0.05": -17.208143799951046,
+          "0.1": -13.975550058835909,
+          "0.5": 2.5250059211656364,
+          "0.9": 18.45525913536202,
+          "0.95": 26.623569404310665
+        },
+        "rmse": 13.266091093650633,
+        "season": 2024,
+        "target": "total",
+        "model_alias": "Candidate 057",
+        "model_family": "histgb"
+      },
+      {
+        "bias": -0.0033714192051855947,
+        "comparison_horizon_seconds": 3600.0,
+        "crps": 7.688491733482243,
+        "exact_horizon_cohort": true,
+        "exposure": "DEVELOPMENT_EXPOSED",
+        "interval_90_coverage": 0.9052631578947369,
+        "interval_90_width": 43.50383985724878,
+        "mae": 10.836258805700682,
+        "n": 285,
+        "prospective": false,
+        "residual_quantiles": {
+          "0.05": -21.30684208614018,
+          "0.1": -16.673476840105792,
+          "0.5": -0.711600477596555,
+          "0.9": 18.411741847489175,
+          "0.95": 21.404532999619306
+        },
+        "rmse": 13.574367550797792,
+        "season": 2025,
+        "target": "total",
+        "model_alias": "Candidate 057",
+        "model_family": "histgb"
+      },
+      {
+        "bias": 0.9856721706351512,
+        "comparison_horizon_seconds": 3600.0,
+        "crps": 7.520071644699946,
+        "exact_horizon_cohort": true,
+        "exposure": "DEVELOPMENT_EXPOSED",
+        "interval_90_coverage": 0.8701754385964913,
+        "interval_90_width": 43.49960087920489,
+        "mae": 10.453725344666235,
+        "n": 285,
+        "prospective": false,
+        "residual_quantiles": {
+          "0.05": -24.85991397974487,
+          "0.1": -17.45640174392473,
+          "0.5": -1.424089102731982,
+          "0.9": 16.66384354136889,
+          "0.95": 22.742982210331146
+        },
+        "rmse": 13.475152700749081,
+        "season": 2024,
+        "target": "margin",
+        "model_alias": "Candidate 058",
+        "model_family": "ridge"
+      },
+      {
+        "bias": 0.41282905554680277,
+        "comparison_horizon_seconds": 3600.0,
+        "crps": 7.409295664683247,
+        "exact_horizon_cohort": true,
+        "exposure": "DEVELOPMENT_EXPOSED",
+        "interval_90_coverage": 0.8842105263157894,
+        "interval_90_width": 43.49960087920489,
+        "mae": 10.384469652258948,
+        "n": 285,
+        "prospective": false,
+        "residual_quantiles": {
+          "0.05": -21.487114335927025,
+          "0.1": -16.6123535892377,
+          "0.5": -0.8961077902922367,
+          "0.9": 17.888288594324834,
+          "0.95": 23.474829355746134
+        },
+        "rmse": 13.142498420158383,
+        "season": 2025,
+        "target": "margin",
+        "model_alias": "Candidate 058",
+        "model_family": "ridge"
+      },
+      {
+        "accuracy": 0.656140350877193,
+        "brier": 0.22085180049187192,
+        "comparison_horizon_seconds": 3600.0,
+        "ece": 0.07030434721850322,
+        "exact_horizon_cohort": true,
+        "exposure": "DEVELOPMENT_EXPOSED",
+        "log_loss": 0.6372010424633141,
+        "n": 285,
+        "prospective": false,
+        "reliability": [
+          {
+            "bin": 0,
+            "mean_probability": 0.05718864513027681,
+            "n": 2,
+            "observed_rate": 0.5
+          },
+          {
+            "bin": 1,
+            "mean_probability": 0.13949799284201078,
+            "n": 3,
+            "observed_rate": 0.3333333333333333
+          },
+          {
+            "bin": 2,
+            "mean_probability": 0.25521565697985593,
+            "n": 16,
+            "observed_rate": 0.375
+          },
+          {
+            "bin": 3,
+            "mean_probability": 0.3603885184110101,
+            "n": 37,
+            "observed_rate": 0.2972972972972973
+          },
+          {
+            "bin": 4,
+            "mean_probability": 0.4554800206284659,
+            "n": 57,
+            "observed_rate": 0.40350877192982454
+          },
+          {
+            "bin": 5,
+            "mean_probability": 0.5550515558406207,
+            "n": 50,
+            "observed_rate": 0.5
+          },
+          {
+            "bin": 6,
+            "mean_probability": 0.6481520865575664,
+            "n": 48,
+            "observed_rate": 0.75
+          },
+          {
+            "bin": 7,
+            "mean_probability": 0.741860902826648,
+            "n": 46,
+            "observed_rate": 0.6739130434782609
+          },
+          {
+            "bin": 8,
+            "mean_probability": 0.8513560763211073,
+            "n": 24,
+            "observed_rate": 0.8333333333333334
+          },
+          {
+            "bin": 9,
+            "mean_probability": 0.921550309146231,
+            "n": 2,
+            "observed_rate": 1.0
+          }
+        ],
+        "roc_auc": 0.7004074736632877,
+        "season": 2024,
+        "target": "win",
+        "model_alias": "Candidate 059",
+        "model_family": "ridge"
+      },
+      {
+        "accuracy": 0.6126760563380281,
+        "brier": 0.23391449447316398,
+        "comparison_horizon_seconds": 3600.0,
+        "ece": 0.08386535540626013,
+        "exact_horizon_cohort": true,
+        "exposure": "DEVELOPMENT_EXPOSED",
+        "log_loss": 0.6613088040731179,
+        "n": 284,
+        "prospective": false,
+        "reliability": [
+          {
+            "bin": 1,
+            "mean_probability": 0.1768574540173925,
+            "n": 2,
+            "observed_rate": 0.0
+          },
+          {
+            "bin": 2,
+            "mean_probability": 0.2631994376393332,
+            "n": 10,
+            "observed_rate": 0.2
+          },
+          {
+            "bin": 3,
+            "mean_probability": 0.35640187967997594,
+            "n": 32,
+            "observed_rate": 0.3125
+          },
+          {
+            "bin": 4,
+            "mean_probability": 0.4453228937750854,
+            "n": 30,
+            "observed_rate": 0.4666666666666667
+          },
+          {
+            "bin": 5,
+            "mean_probability": 0.5497571037415135,
+            "n": 53,
+            "observed_rate": 0.4716981132075472
+          },
+          {
+            "bin": 6,
+            "mean_probability": 0.6507225677561118,
+            "n": 54,
+            "observed_rate": 0.5925925925925926
+          },
+          {
+            "bin": 7,
+            "mean_probability": 0.7481165146838626,
+            "n": 60,
+            "observed_rate": 0.6166666666666667
+          },
+          {
+            "bin": 8,
+            "mean_probability": 0.8475165752258935,
+            "n": 38,
+            "observed_rate": 0.7105263157894737
+          },
+          {
+            "bin": 9,
+            "mean_probability": 0.9163775164605756,
+            "n": 5,
+            "observed_rate": 1.0
+          }
+        ],
+        "roc_auc": 0.6656200159489634,
+        "season": 2025,
+        "target": "win",
+        "model_alias": "Candidate 059",
+        "model_family": "ridge"
+      },
+      {
+        "accuracy": 0.6912280701754386,
+        "brier": 0.21386922097570302,
+        "comparison_horizon_seconds": 3600.0,
+        "ece": 0.06602976248975387,
+        "exact_horizon_cohort": true,
+        "exposure": "DEVELOPMENT_EXPOSED",
+        "log_loss": 0.6180812506740173,
+        "n": 285,
+        "prospective": false,
+        "reliability": [
+          {
+            "bin": 2,
+            "mean_probability": 0.2938058574994405,
+            "n": 3,
+            "observed_rate": 0.3333333333333333
+          },
+          {
+            "bin": 3,
+            "mean_probability": 0.3605050758311623,
+            "n": 38,
+            "observed_rate": 0.2631578947368421
+          },
+          {
+            "bin": 4,
+            "mean_probability": 0.45424712370885045,
+            "n": 76,
+            "observed_rate": 0.35526315789473684
+          },
+          {
+            "bin": 5,
+            "mean_probability": 0.5550739169120789,
+            "n": 50,
+            "observed_rate": 0.66
+          },
+          {
+            "bin": 6,
+            "mean_probability": 0.6559891211680877,
+            "n": 39,
+            "observed_rate": 0.6410256410256411
+          },
+          {
+            "bin": 7,
+            "mean_probability": 0.7474494951386605,
+            "n": 62,
+            "observed_rate": 0.7580645161290323
+          },
+          {
+            "bin": 8,
+            "mean_probability": 0.8229361421921674,
+            "n": 17,
+            "observed_rate": 0.7647058823529411
+          }
+        ],
+        "roc_auc": 0.7269926455972968,
+        "season": 2024,
+        "target": "win",
+        "model_alias": "Candidate 060",
+        "model_family": "xgboost"
+      },
+      {
+        "accuracy": 0.6302816901408451,
+        "brier": 0.23220322435232782,
+        "comparison_horizon_seconds": 3600.0,
+        "ece": 0.05740584795114018,
+        "exact_horizon_cohort": true,
+        "exposure": "DEVELOPMENT_EXPOSED",
+        "log_loss": 0.6567147738834217,
+        "n": 284,
+        "prospective": false,
+        "reliability": [
+          {
+            "bin": 2,
+            "mean_probability": 0.27903873349229497,
+            "n": 12,
+            "observed_rate": 0.4166666666666667
+          },
+          {
+            "bin": 3,
+            "mean_probability": 0.3558104016564109,
+            "n": 55,
+            "observed_rate": 0.38181818181818183
+          },
+          {
+            "bin": 4,
+            "mean_probability": 0.44730546295642853,
+            "n": 50,
+            "observed_rate": 0.38
+          },
+          {
+            "bin": 5,
+            "mean_probability": 0.543937399580672,
+            "n": 37,
+            "observed_rate": 0.4594594594594595
+          },
+          {
+            "bin": 6,
+            "mean_probability": 0.6531447844627576,
+            "n": 39,
+            "observed_rate": 0.6410256410256411
+          },
+          {
+            "bin": 7,
+            "mean_probability": 0.7569573173920313,
+            "n": 60,
+            "observed_rate": 0.6833333333333333
+          },
+          {
+            "bin": 8,
+            "mean_probability": 0.8335566174599432,
+            "n": 31,
+            "observed_rate": 0.7741935483870968
+          }
+        ],
+        "roc_auc": 0.6584928229665072,
+        "season": 2025,
+        "target": "win",
+        "model_alias": "Candidate 060",
+        "model_family": "xgboost"
+      }
+    ],
+    "leaders": [
+      {
+        "season": 2024,
+        "target": "win",
+        "metric": "accuracy",
+        "value": 0.7052631578947368,
+        "n": 285,
+        "horizon_seconds": 3600.0,
+        "model_aliases": [
+          "Candidate 008",
+          "Candidate 039"
+        ],
+        "families": [
+          "catboost",
+          "histgb"
+        ],
+        "candidate_count": 20
+      },
+      {
+        "season": 2024,
+        "target": "win",
+        "metric": "log_loss",
+        "value": 0.6122563593240415,
+        "n": 285,
+        "horizon_seconds": 3600.0,
+        "model_aliases": [
+          "Candidate 008"
+        ],
+        "families": [
+          "catboost"
+        ],
+        "candidate_count": 20
+      },
+      {
+        "season": 2024,
+        "target": "win",
+        "metric": "brier",
+        "value": 0.21093710933031568,
+        "n": 285,
+        "horizon_seconds": 3600.0,
+        "model_aliases": [
+          "Candidate 008"
+        ],
+        "families": [
+          "catboost"
+        ],
+        "candidate_count": 20
+      },
+      {
+        "season": 2025,
+        "target": "win",
+        "metric": "accuracy",
+        "value": 0.6584507042253521,
+        "n": 284,
+        "horizon_seconds": 3600.0,
+        "model_aliases": [
+          "Candidate 003"
+        ],
+        "families": [
+          "catboost"
+        ],
+        "candidate_count": 20
+      },
+      {
+        "season": 2025,
+        "target": "win",
+        "metric": "log_loss",
+        "value": 0.6410124615878984,
+        "n": 284,
+        "horizon_seconds": 3600.0,
+        "model_aliases": [
+          "Candidate 030"
+        ],
+        "families": [
+          "catboost"
+        ],
+        "candidate_count": 20
+      },
+      {
+        "season": 2025,
+        "target": "win",
+        "metric": "brier",
+        "value": 0.22509213929261845,
+        "n": 284,
+        "horizon_seconds": 3600.0,
+        "model_aliases": [
+          "Candidate 030"
+        ],
+        "families": [
+          "catboost"
+        ],
+        "candidate_count": 20
+      },
+      {
+        "season": 2024,
+        "target": "total",
+        "metric": "mae",
+        "value": 10.00277037943315,
+        "n": 285,
+        "horizon_seconds": 3600.0,
+        "model_aliases": [
+          "Candidate 056"
+        ],
+        "families": [
+          "catboost"
+        ],
+        "candidate_count": 20
+      },
+      {
+        "season": 2024,
+        "target": "total",
+        "metric": "rmse",
+        "value": 12.952135096421284,
+        "n": 285,
+        "horizon_seconds": 3600.0,
+        "model_aliases": [
+          "Candidate 056"
+        ],
+        "families": [
+          "catboost"
+        ],
+        "candidate_count": 20
+      },
+      {
+        "season": 2025,
+        "target": "total",
+        "metric": "mae",
+        "value": 10.528941940013546,
+        "n": 285,
+        "horizon_seconds": 3600.0,
+        "model_aliases": [
+          "Candidate 011"
+        ],
+        "families": [
+          "ridge"
+        ],
+        "candidate_count": 20
+      },
+      {
+        "season": 2025,
+        "target": "total",
+        "metric": "rmse",
+        "value": 13.417755280543139,
+        "n": 285,
+        "horizon_seconds": 3600.0,
+        "model_aliases": [
+          "Candidate 011"
+        ],
+        "families": [
+          "ridge"
+        ],
+        "candidate_count": 20
+      },
+      {
+        "season": 2024,
+        "target": "margin",
+        "metric": "mae",
+        "value": 9.998886546065693,
+        "n": 285,
+        "horizon_seconds": 3600.0,
+        "model_aliases": [
+          "Candidate 018"
+        ],
+        "families": [
+          "catboost"
+        ],
+        "candidate_count": 20
+      },
+      {
+        "season": 2024,
+        "target": "margin",
+        "metric": "rmse",
+        "value": 13.037300446033289,
+        "n": 285,
+        "horizon_seconds": 3600.0,
+        "model_aliases": [
+          "Candidate 050"
+        ],
+        "families": [
+          "catboost"
+        ],
+        "candidate_count": 20
+      },
+      {
+        "season": 2025,
+        "target": "margin",
+        "metric": "mae",
+        "value": 10.26405726519273,
+        "n": 285,
+        "horizon_seconds": 3600.0,
+        "model_aliases": [
+          "Candidate 018"
+        ],
+        "families": [
+          "catboost"
+        ],
+        "candidate_count": 20
+      },
+      {
+        "season": 2025,
+        "target": "margin",
+        "metric": "rmse",
+        "value": 13.026141213644769,
+        "n": 285,
+        "horizon_seconds": 3600.0,
+        "model_aliases": [
+          "Candidate 018"
+        ],
+        "families": [
+          "catboost"
+        ],
+        "candidate_count": 20
+      }
+    ],
+    "current_2026_monitor_scorecards": "EXACT_OFFLOADED_RECEIPT_IDENTIFIED_NOT_YET_BODY_RETRIEVED"
+  }
+}

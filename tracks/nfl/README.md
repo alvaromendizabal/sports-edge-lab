@@ -1,3 +1,15 @@
+# NFL: actual N083 results — November 12, 2026 Pacific
+
+[N083 all-game dashboard](season_review_n084.html) · [Actual execution evidence](2026-11-13-n083-actual-n084-review.json) · [Previous dated dashboard](season_review_n083.html)
+
+N083 completed **376 new fits (354 native + 22 meta)** in **43.21 minutes** and recorded **1,776 forecast events**. The latest selected display contains **444 outputs for 111 upcoming games**. The dashboard retains all **272 games: 137 finals, 111 confirmed future games and 24 kickoff TBD**, with original, early-snapshot and reconstruction panels kept separate.
+
+The current-season monitor completed 166 new fits and 21,475 replay rows, but detailed scorecards are offloaded and absent from this return. The latest 2026 leaderboard remains explicitly unavailable here; the prior dated review preserves its 77 scorecards. The new review also exposes all 120 frozen 2024/2025 scorecards for 60 new candidates, without calling them prospective winners or automatically promoting a model.
+
+The whole-owner run remains partial. DraftKings, Kalshi and Polymarket have no admitted same-cutoff comparison values in this selected export. Twelve leased worker processes do not prove sustained twelve-core fitting. Source publication and deployment remain separate.
+
+---
+
 # NFL · actual N082 scientific progress · November 12, 2026 Pacific
 
 [Latest all-game review](season_review_n083.html) · [Current selected forecasts](selected_forecasts_n083.json) · [Execution and metric evidence](2026-11-13-n082-actual-n083-review.json) · [Model card](CURRENT_MODEL_CARD.md)
@@ -13,3 +25,4 @@ The main scientific child ran for 282.237452 seconds; its inner scientific resul
 DraftKings, Kalshi and Polymarket have no qualified equivalent same-cutoff comparison cells in this selected 2026 replay. Missing quotes are not invented; newly observed provider data cannot establish earlier quote availability. Public content contains authorized selected rounded issues and aggregate evidence, not private recipes, model bodies, raw feeds or cloud paths. This publication does not execute N083 or deploy the separately hosted website.
 
 [Previous N081 failed attempt](README_N082_SNAPSHOT.md) · [Earlier N080 failure](README_N081_SNAPSHOT.md) · [Preserved N079 evidence](README_N080_SNAPSHOT.md)
+
