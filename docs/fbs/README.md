@@ -1,14 +1,22 @@
 <!-- FBS_V072_ACTUAL_V071_START -->
 <!-- FBS_V072R1_REPAIR_STATUS_START -->
-## November 13, 2026: V072 packaging failure; production recovery pending
+## R2 repair tested; original recovery evidence checked
 
-**The original V072 log reports 36 completed frozen-model fits, followed by zero new market-stage fits and a failure during return packaging.** The original executable and independent exit receipt corroborate the failure; a completed V072 return and all preserved model states have not yet been authenticated in this review. Local engineering repair performs no new sports fitting, forecasting, source refresh or rescoring. Measured 12-core scientific performance remains unverified.
+**The supplied recovery parts preserve all 36 original V072 parallel-worker receipts.** Their task, fit and case identities match the original execution log, and their internal evidence digests verify. These are the original completed fits; finalization and this review add zero new sports fits, forecasts or source requests.
 
-The exact replacement executable passed **773/773 engineering tests**, with zero failures, errors or skips. Its command created and verified a local fictional-artifact archive, then verified and reused the identical archive on a second invocation. These are packaging checks; recovery of the original production artifacts remains pending.
+The supplied two of three required parts pass their declared physical hashes, chunk hashes and ZIP CRCs. The remaining part is needed to verify the complete owner return and the original frozen report. The recovery diagnostic reports successful local finalization with partial research status; it is not a completed new scientific run.
 
-[Read the dated execution and repair status](V072_EXECUTION_AND_REPAIR_2026-11-13.md) · [Open the retained V071 dashboard](latest-v072.html).
+Native fitting calls briefly overlapped at **11**, for **0.012328 seconds** at that width. Their CPU time divided by the full first-to-last native-call interval was **0.452668 core-equivalents**. Whole worker envelopes overlap more broadly because they include setup and I/O. **Twelve-core scientific utilization is not demonstrated.**
 
-The game tables and forecasts remain the **V071 snapshot dated November 12, 2026, with evidence as of 21:04:22 UTC**. All saved values, original issue clocks, separate metric cohorts and explicit champion/venue gaps remain intact. The earlier V071 result is retained immediately below.
+The actual market report has **1,152 cumulative completed conversions** and **30,189 pending requests**, but all **1,906,848 quotes are unbound** to its official game universe. It records zero game-matched pairs and zero new market-stage fits. Event identity, historical cohort coverage, source rights and time eligibility must be resolved before qualified market research can proceed.
+
+[Read the recovery evidence and its limits](V072_EXECUTION_AND_REPAIR_2026-11-13.md) · [Open the retained V071 dashboard](latest-v072.html).
+
+The exact R2 replacement passed **832/832 engineering tests** with zero failures, errors or skips. Its finalization check created a verified local fixture archive, then reused the identical archive on a second invocation. R2 also repairs the separate original console-budget abort while preserving the complete event journal. A new continuation guard requires the intact prior local evidence and complete multipart return before dispatch.
+
+The production-shaped, all-unbound fixture measured **142.73 seconds before and 143.17 seconds after**, with identical results: no observed cold normalization speedup. Exact-input warm reuse took **0.051 seconds** with zero original quote reads. These are engineering fixtures, not owner performance or new scientific fits.
+
+The visible game/forecast data retain the **November 12, 2026, 21:04:22 UTC V071 snapshot**. Corrected owner execution and complete archive verification remain pending; the earlier 773-test R1 result is retained as dated evidence.
 <!-- FBS_V072R1_REPAIR_STATUS_END -->
 
 # NCAA FBS · actual V071 results · November 12, 2026
