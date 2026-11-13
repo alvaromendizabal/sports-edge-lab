@@ -1,0 +1,72 @@
+name: NFL V10 online publication review
+on:
+  pull_request:
+    paths: ['tracks/nfl/**', '.github/workflows/nfl-static-review.yml']
+  push:
+    branches: [main]
+    paths: ['tracks/nfl/**', '.github/workflows/nfl-static-review.yml']
+permissions:
+  contents: read
+  pages: read
+concurrency:
+  group: nfl-static-review-${{ github.event.pull_request.number || github.ref }}
+  cancel-in-progress: true
+jobs:
+  browser-and-pages-availability:
+    runs-on: ubuntu-24.04
+    steps:
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1
+        with:
+          persist-credentials: false
+      - name: Verify deterministic public bundle
+        run: python tracks/nfl/build_dashboard_n088.py --check
+      - name: Read actual GitHub Pages state without changing configuration
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          mkdir -p "${RUNNER_TEMP}/nfl-static-evidence"
+          python - <<'PY'
+          import json, os, urllib.request, urllib.error
+          from pathlib import Path
+          result={"configuration_mutated":False,"repository":os.environ['GITHUB_REPOSITORY']}
+          req=urllib.request.Request('https://api.github.com/repos/'+os.environ['GITHUB_REPOSITORY']+'/pages',headers={'Authorization':'Bearer '+os.environ['GH_TOKEN'],'Accept':'application/vnd.github+json','X-GitHub-Api-Version':'2022-11-28'})
+          try:
+              with urllib.request.urlopen(req,timeout=30) as response:
+                  value=json.load(response)
+                  result.update(http_status=response.status,status=value.get('status'),html_url=value.get('html_url'),build_type=value.get('build_type'),source=value.get('source'))
+          except urllib.error.HTTPError as exc:
+              result.update(http_status=exc.code,status='NOT_AVAILABLE_TO_WORKFLOW_TOKEN')
+          except (OSError,TimeoutError) as exc:
+              result.update(http_status=None,status='PROBE_FAILED',error_type=type(exc).__name__)
+          path=Path(os.environ['RUNNER_TEMP'])/'nfl-static-evidence'/'github-pages-availability.json';path.write_text(json.dumps(result,indent=2));print(json.dumps(result))
+          PY
+      - name: Install pinned verification browser
+        run: |
+          npm install --prefix "${RUNNER_TEMP}/nfl-static-browser" --ignore-scripts --no-audit --no-fund playwright@1.62.1
+          node "${RUNNER_TEMP}/nfl-static-browser/node_modules/playwright/cli.js" install --with-deps chromium
+      - name: Test responsive paged games, lazy scores, detail clocks and script-free fallback
+        env:
+          PLAYWRIGHT_MODULE_DIR: ${{ runner.temp }}/nfl-static-browser/node_modules/playwright
+          NFL_N088_EVIDENCE: ${{ runner.temp }}/nfl-static-evidence
+        run: node tracks/nfl/dashboard_n088_browser.cjs
+      - name: Verify existing production NFL Site when deployment receipt is present
+        env:
+          PLAYWRIGHT_MODULE_DIR: ${{ runner.temp }}/nfl-static-browser/node_modules/playwright
+          NFL_N088_EVIDENCE: ${{ runner.temp }}/nfl-static-evidence/online
+          NFL_N088_ONLINE_URL: https://sports-edge-lab-nfl.alv-mendizabal.chatgpt.site/
+        run: |
+          if test -f tracks/nfl/n088_online_deployment.json; then
+            node tracks/nfl/dashboard_n088_browser.cjs
+          else
+            echo 'No N088 deployment receipt yet; source verification is not a deployment claim.'
+          fi
+      - name: Preserve exact public bundle and browser evidence
+        if: always()
+        uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02
+        with:
+          name: nfl-v10-publication-evidence
+          path: |
+            ${{ runner.temp }}/nfl-static-evidence
+            tracks/nfl/dashboard_n088
+          if-no-files-found: error
+          retention-days: 14
