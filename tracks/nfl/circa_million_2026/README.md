@@ -1,5 +1,6 @@
 # 2026 NFL models vs. Circa Million VIII
 
+**Current N089 interactive view:** [Open Circa Million VIII and JMac View](https://sports-edge-lab-nfl.alv-mendizabal.chatgpt.site/circa/) · [Current source and deployment evidence](current/README.md). The remainder of this page and the original `index.html` are the preserved November 8 archive; use the current view for all recovered 2024/2025/current-2026 evidence, the complete current board and separate model/manual cards.
 **Sports Edge Lab · Complete Weeks 1–9 report · Nov. 8, 2026 (Pacific time)**
 
 > **Important:** This is research, not an entered Circa contest card. Weeks 1–8 are retrospectively reconstructed after the games, with unverified historical source-possession clocks. Week 9 forecasts were actually saved before Sunday's kickoffs, but after Circa's Saturday 4 p.m. contest cutoff. Thursday's Week 9 game has no N056 original issue. No backdated live-pick claims are made.

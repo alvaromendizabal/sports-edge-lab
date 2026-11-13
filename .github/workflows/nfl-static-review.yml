@@ -112,6 +112,33 @@ jobs:
           else
             echo 'Circa source prepared; no native deployment receipt exists yet.'
           fi
+      - name: Verify the exact Circa HTML and history emitted by the sealed N089 executable
+        if: always()
+        env:
+          PLAYWRIGHT_MODULE_DIR: ${{ runner.temp }}/nfl-static-browser/node_modules/playwright
+          CIRCA_N089_EVIDENCE: ${{ runner.temp }}/nfl-static-evidence/circa-runtime
+          CIRCA_N089_BUNDLE_ROOT: ${{ runner.temp }}/n089-runtime-dashboard
+        run: |
+          python - <<'PYFIXTURE'
+          import base64, gzip, hashlib, json, os
+          from pathlib import Path
+          source=Path('tracks/nfl/circa_million_2026')
+          fixture=json.loads((source/'runtime_dashboard_n089_fixture.json').read_text())
+          raw=gzip.decompress(base64.b64decode(fixture['html_gzip_base64']))
+          assert len(raw)==fixture['html_bytes']
+          assert hashlib.sha256(raw).hexdigest()==fixture['html_sha256']
+          history=base64.b64decode(fixture['history_gzip_base64'])
+          assert hashlib.sha256(history).hexdigest()==fixture['history_gzip_sha256']
+          evidence=(raw.decode().split('<script id="circa-data" type="application/json">')[1].split('</script>')[0]+'\n').encode()
+          archive=(source/'current/archive/index.html').read_bytes()
+          out=Path(os.environ['CIRCA_N089_BUNDLE_ROOT']);out.mkdir(exist_ok=True)
+          for name,blob in {'index.html':raw,'history.json.gz':history,'evidence.json':evidence,'archive/index.html':archive}.items():
+              assert hashlib.sha256(blob).hexdigest()==fixture['publication']['assets'][name]['sha256']
+              dest=out/name;dest.parent.mkdir(exist_ok=True,parents=True);dest.write_bytes(blob)
+          (out/'publication.json').write_text(json.dumps(fixture['publication'],indent=2,sort_keys=True)+'\n')
+          print(json.dumps({'fixture':'actual sealed N089 executable output','html_sha256':fixture['html_sha256'],'new_model_fits':0}))
+          PYFIXTURE
+          node tracks/nfl/circa_million_2026/test_current_n089_browser.cjs
       - name: Preserve exact public bundle and browser evidence
         if: always()
         uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02
