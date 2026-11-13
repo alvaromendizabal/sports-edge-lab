@@ -1,0 +1,11 @@
+'use strict';
+const assert=require('node:assert/strict'),fs=require('node:fs'),vm=require('node:vm'),path=require('node:path'),zlib=require('node:zlib');
+const root=path.join(__dirname,'current'),data=JSON.parse(fs.readFileSync(path.join(root,'evidence.json'),'utf8')),histories=JSON.parse(zlib.gunzipSync(fs.readFileSync(path.join(root,'history.json.gz')))),elements=new Map();
+function element(id){if(!elements.has(id))elements.set(id,{innerHTML:'',textContent:id==='circa-data'?JSON.stringify(data):'',value:({'board-filter':'all','perspective':'model','history-scope':'full_slate'})[id]||'',addEventListener(){},showModal(){this.open=true},close(){this.open=false}});return elements.get(id)}
+const sandbox={document:{getElementById:element,querySelectorAll(){return[]}},window:{},console,Date,Intl,Map,Set,JSON,Object,Array,String,Number,Math,INPUT_HISTORY:histories};vm.createContext(sandbox);vm.runInContext(fs.readFileSync(path.join(__dirname,'current_n089.js'),'utf8'),sandbox,{timeout:5000});
+assert.equal(sandbox.window.circaV10.visibleGameIds.length,14);assert.match(element('model-card').innerHTML,/TEN \+10\.5/);assert.match(element('jmac-card').innerHTML,/JAX -10\.5/);assert.match(element('model-card-total').textContent,/Unavailable/);assert.match(element('integrity-note').innerHTML,/COVER PROBABILITY UNAVAILABLE/);
+let checks=5;for(const view of data.model_views){sandbox.window.circaV10.setModel(view.model_id);assert.equal(sandbox.window.circaV10.visibleGameIds.length,14);checks++}
+vm.runInContext('HISTORY=INPUT_HISTORY',sandbox);const h=data.model_views.find(v=>histories[v.model_id].drilldowns.length>100);sandbox.window.circaV10.setModel(h.model_id);assert.match(element('history-rows').innerHTML,/2026/);assert.match(element('team-rows').innerHTML,/backed/);assert.match(element('team-rows').innerHTML,/opposed/);checks+=3;
+element('history-scope').value='five_pick';vm.runInContext('renderHistory()',sandbox);assert.match(element('team-rows').innerHTML,/five pick/i);checks++;
+element('history-season').value='2024';vm.runInContext('renderHistory()',sandbox);assert.match(element('history-rows').innerHTML,/No authenticated/);checks++;
+console.log(JSON.stringify({status:'PASS',test_kind:'Dependency-free DOM contract, not a real browser',checks,model_views:data.model_views.length,board_games:14}));
