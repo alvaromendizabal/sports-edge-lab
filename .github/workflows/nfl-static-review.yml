@@ -69,6 +69,29 @@ jobs:
           else
             echo 'No N088 deployment receipt yet; source verification is not a deployment claim.'
           fi
+      - name: Verify the exact public dashboard emitted by the sealed N088 executable
+        env:
+          PLAYWRIGHT_MODULE_DIR: ${{ runner.temp }}/nfl-static-browser/node_modules/playwright
+          NFL_N088_EVIDENCE: ${{ runner.temp }}/nfl-static-evidence/runtime
+          NFL_N088_BUNDLE_ROOT: ${{ runner.temp }}/nfl-runtime-dashboard
+        run: |
+          python - <<'PY'
+          import base64, gzip, hashlib, json, os
+          from pathlib import Path
+          source=Path('tracks/nfl')
+          fixture=json.loads((source/'runtime_dashboard_n088_fixture.json').read_text())
+          raw=gzip.decompress(base64.b64decode(fixture['html_gzip_base64']))
+          assert len(raw)==fixture['html_bytes']<2000000
+          assert hashlib.sha256(raw).hexdigest()==fixture['html_sha256']
+          historical=(source/'dashboard_n088/historical.json').read_bytes()
+          assert hashlib.sha256(historical).hexdigest()==fixture['historical_sha256']
+          out=Path(os.environ['NFL_N088_BUNDLE_ROOT']);out.mkdir(exist_ok=True)
+          (out/'index.html').write_bytes(raw)
+          (out/'historical.json').write_bytes(historical)
+          (out/'publication.json').write_text(json.dumps(fixture['publication']))
+          print(json.dumps({'fixture':'actual sealed N088 executable output','html_sha256':fixture['html_sha256'],'source_run':fixture['source_run'],'new_model_fits':0}))
+          PY
+          node tracks/nfl/dashboard_n088_browser.cjs
       - name: Preserve exact public bundle and browser evidence
         if: always()
         uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02

@@ -86,7 +86,7 @@ The prepared V7 continuation prioritizes current forecasts, restores exact old f
 
 **Sports Edge Lab** connects probabilistic sports modeling with reliable ML infrastructure: chronological training, immutable forecasts, matched market comparisons and recoverable cloud execution. Built by [Alvaro Mendizabal](https://github.com/alvaromendizabal).
 
-[**Latest NFL V10 all-game research view →**](tracks/nfl/dashboard_n088/index.html) · [Current NFL evidence](tracks/nfl/README.md) · [Dated hosted NFL snapshot](https://sports-edge-lab-nfl.alv-mendizabal.chatgpt.site/) (separate publication; not refreshed here) · [Five-minute technical review](docs/REVIEW_GUIDE.md) · [System design](docs/SYSTEM_DESIGN.md) · [Reproducibility boundary](docs/PUBLICATION_BOUNDARY.md)
+[**Latest NFL V10 all-game research view →**](tracks/nfl/dashboard_n088/index.html) · [Current NFL evidence](tracks/nfl/README.md) · [Open the NFL V10 dashboard](https://sports-edge-lab-nfl.alv-mendizabal.chatgpt.site/) (version 42) · [Five-minute technical review](docs/REVIEW_GUIDE.md) · [System design](docs/SYSTEM_DESIGN.md) · [Reproducibility boundary](docs/PUBLICATION_BOUNDARY.md)
 
 [**Open the FBS browser dashboard →**](https://sports-edge-lab-fbs.alv-mendizabal.chatgpt.site) · [FBS clock and coverage methodology](docs/fbs/SEASON_EXPLORER_2026-11-03.md) · [FBS source and model card](tracks/ncaaf/README.md)
 
@@ -98,7 +98,7 @@ The prepared V7 continuation prioritizes current forecasts, restores exact old f
 
 **The actual N087 owner run failed** after 678.674 seconds at 0.399 mean CPU cores. Both live logs and the return closure succeeded, but all three scientific children exited without responses. A cold-import recursion defect is independently reproduced in the exact packaged executable. Fifteen paid calls occurred; zero completed new scientific receipts were verified.
 
-**Online deployment remains pending verification.** The existing hosted NFL Site was still the November 9 N063 publication, explaining why later GitHub source updates were not visible online. The prepared N088 package uses paged games, lazy historical scorecards and script-free fallback tables; the same public URL will be updated after validation.
+**The public NFL dashboard is now deployed as version 42** at [the same browser-ready URL](https://sports-edge-lab-nfl.alv-mendizabal.chatgpt.site/), pinned to GitHub merge `a32506fb28e6a7a8a72b5964714fd4fc5a748374`. The previously stale November 9 N063 site is preserved under `/archive/v41/`. [Deployment receipt](tracks/nfl/n088_online_deployment.json) · [Real production Chromium checks](https://github.com/alvaromendizabal/sports-edge-lab/actions/workflows/nfl-static-review.yml). GitHub Pages itself returned HTTP 404; the existing authorized host serves the app.
 
 ## Preserved NFL N085 / N086 evidence · November 13, 2026 Pacific
 
@@ -195,7 +195,7 @@ a narrow missing-clock checkpoint repair.
 
 | Track | Entry point | Publication boundary |
 |---|---|---|
-| NFL | [V10 all-game view](tracks/nfl/dashboard_n088/index.html) · [Current evidence](tracks/nfl/README.md) | N088 Phase A: 171 recomputed cards, 10,216 scored rows, zero new fits. N087 actual owner run failed. All 272 games and 444 original selected outputs preserved; full single-model season coverage and provider comparisons incomplete. Online deployment verification pending. |
+| NFL | [V10 all-game view](tracks/nfl/dashboard_n088/index.html) · [Current evidence](tracks/nfl/README.md) | N088 Phase A: 171 recomputed cards, 10,216 scored rows, zero new fits. N087 actual owner run failed. All 272 games and 444 original selected outputs preserved; full single-model season coverage and provider comparisons incomplete. Existing public Site version 42 deployed; production browser checks linked. |
 | NCAA FBS | [Browser dashboard](https://sports-edge-lab-fbs.alv-mendizabal.chatgpt.site) · [Track](tracks/ncaaf/README.md) | Actual V053 partial; V055 prepared; 500 saved issue contexts across 122 games, with dated provider coverage |
 | NBA | [Research view](docs/NBA_RESEARCH_CARD.md) | Separately dated basketball evidence |
 | NCAA basketball | [Open dashboards](https://alvaro-ncaa-research-review.alv-mendizabal.chatgpt.site/) · [Men's evidence](tracks/ncaam/README.md) · [Women's evidence](tracks/ncaaw/README.md) · [Runnable contracts](examples/ncaa_review/README.md) | Separate historical selections, current execution gaps and three-provider qualification |
