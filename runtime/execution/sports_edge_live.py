@@ -478,6 +478,9 @@ def project_measurements(state):
                 'active_workers': workers.get('active', state.get('active_tasks')),
                 'requested_workers': workers.get('target', lease.get('desired_workers'))},
         'fits': {'new': fits.get('new'), 'reused': fits.get('reused'), 'failed': fits.get('failed'),
+                 'scope': fits.get('scope', 'CURRENT_BOUND_INVOCATION'),
+                 'source_phase': fits.get('source_phase'),
+                 'reported_counts': fits.get('reported_counts'),
                  'completed_native_fit_returns': native.get('real_estimator_fit_returns'),
                  'failed_native_calls': native.get('failed_native_calls'),
                  'concurrent_native_fits': native.get('observed_active_native_fit_workers'),
@@ -615,8 +618,9 @@ class LiveExecutionLog:
             return (head+f" stage={stage.get('stage')}/{stage.get('total_stages')} {stage.get('stage_name')} substage={stage.get('substage')}"
                 +f"\n  progress={p.get('completed')}/{p.get('total')} remaining={p.get('remaining')} rate={p.get('throughput_per_second')}/s ETA={p.get('eta_seconds')}s"
                 +f" | CPU_used={cpu.get('used_core_equivalents')}c reserved={c.get('reserved_cores')} active_workers={c.get('active_workers')} concurrent_native_fits={fits.get('concurrent_native_fits')}"
-                +f"\n  fits_new/reused/failed={fits.get('new')}/{fits.get('reused')}/{fits.get('failed')} native_returns={fits.get('completed_native_fit_returns')}"
+                +f"\n  fits_new/reused/failed={fits.get('new')}/{fits.get('reused')}/{fits.get('failed')} scope={fits.get('scope')} native_returns={fits.get('completed_native_fit_returns')} reported_counts="+json.dumps(fits.get('reported_counts'), sort_keys=True)
                 +f" | RSS={data['process_tree'].get('rss_bytes')} RAM_free={resource['memory'].get('MemAvailable')} disk_free={resource['disk'].get('free_bytes')}"
+                +" PIDs="+json.dumps([p.get('pid') for p in data['process_tree'].get('processes', [])])
                 +f" | source_age={data['progress_observation'].get('age_seconds')}s progress_idle={data['progress_idle_seconds']:.3f}s child={data.get('child_identity')}"
                 +f" native_fit_completion_idle={data.get('native_fit_completion_idle_seconds')}s"
                 +"\n  S3="+json.dumps(m['s3'], sort_keys=True)+" cache="+json.dumps(m['cache'], sort_keys=True)
@@ -1116,3 +1120,4 @@ class S3LogSink:
                 'get_calls': 0, 'list_calls': 0, 'scope': 'LOG_CHECKPOINT_SINK_ONLY',
                 'request_count_basis': 'SDK_METHOD_INVOCATIONS', 'internal_HTTP_retry_attempts': None,
                 'body_bytes_basis': 'BODY_BYTES_PER_SDK_INVOCATION; RETRY_NETWORK_BYTES_NOT_OBSERVED'}
+
