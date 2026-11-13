@@ -21,6 +21,7 @@ def load_payload():
  observer=value['actual_observer']
  if observer['included_samples']!=5 or len(observer['intervals_seconds'])!=4 or not all(9.9<n<10.1 for n in observer['intervals_seconds']):raise ValueError('Actual observer cadence changed')
  if observer['scientific_workers'] or observer['twelve_core_scientific_acceptance_proven'] or observer['complete_terminal_log_claimed']:raise ValueError('Observer prefix is not scientific acceptance')
+ if observer['application_ledger_peak_CPU_equivalents']!=0.6913211502831491 or observer['independent_watchdog_peak_CPU_equivalents']!=0.8239929701863001:raise ValueError('Different CPU samplers must retain exact attribution')
  prepared=value['prepared_continuation']; fingerprint=prepared['source_sha256']
  if fingerprint is not None and re.fullmatch('[0-9a-f]{64}',fingerprint) is None:raise ValueError('Invalid prepared fingerprint')
  if prepared['owner_execution_verified'] or prepared['new_preparation_scientific_fits']:raise ValueError('Preparation is not owner execution')

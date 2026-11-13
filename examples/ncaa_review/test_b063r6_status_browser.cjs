@@ -20,6 +20,7 @@ async function verifyR6(browser,filename){
       assert.match(await page.locator('#r6-scope').innerText(),/No foreign process was signaled/);
       assert.match(await page.locator('#r6-failure').innerText(),/115 of 116 unique cases/);
       assert.match(await page.locator('#r6-runtime').innerText(),/0.691 core equivalents/);
+      assert.match(await page.locator('#r6-runtime').innerText(),/independent watchdog recorded a separate process-tree peak of 0.824 core equivalents/);
       assert.equal(await page.locator('#r6-remaining ol li').count(),4);
       await page.locator('#r6-clocks summary').focus();await page.keyboard.press('Enter');
       assert.equal(await page.locator('#r6-clocks').getAttribute('open'),'');

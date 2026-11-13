@@ -55,6 +55,9 @@ class B063R6PublicStatus(unittest.TestCase):
 
     def test_true_observer_prefix_and_fixture_preflight_keep_zero_science(self):
         observer=self.data['actual_observer']; cost=self.data['preflight_cost']
+        self.assertEqual(observer['application_ledger_peak_CPU_equivalents'],0.6913211502831491)
+        self.assertEqual(observer['independent_watchdog_peak_CPU_equivalents'],0.8239929701863001)
+        self.assertNotIn('worker_peak_CPU_equivalents',observer)
         self.assertEqual(observer['included_samples'],5)
         self.assertEqual(len(observer['intervals_seconds']),4)
         self.assertTrue(all(9.9<n<10.1 for n in observer['intervals_seconds']))

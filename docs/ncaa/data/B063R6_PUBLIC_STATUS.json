@@ -12,7 +12,9 @@
     "is_return_preparation_prefix": true,
     "scientific_workers": 0,
     "twelve_core_scientific_acceptance_proven": false,
-    "worker_peak_CPU_equivalents": 0.6913211502831491
+    "application_ledger_peak_CPU_equivalents": 0.6913211502831491,
+    "independent_watchdog_peak_CPU_equivalents": 0.8239929701863001,
+    "CPU_measurement_scope": "Application-ledger peak and independent-watchdog process-tree peak are separate samplers and windows; neither measures a scientific fit workload in this return."
   },
   "actual_recovery": {
     "actual_backend": "libc.pidfd_open + libc.pidfd_send_signal",
