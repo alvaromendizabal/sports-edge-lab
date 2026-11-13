@@ -48,5 +48,19 @@ class PublicDashboardContracts(unittest.TestCase):
         self.assertIn('ARCHIVED REGRESSION REFERENCE',page)
         self.assertEqual(page.split('<noscript>')[1].split('</noscript>')[0].count('<tr>'),273)
 
+    def test_new_phase_a_is_partial_and_public_safe(self):
+        data,_=dashboard.build_payload();phase=data['phase_a']
+        self.assertEqual(phase['new_fits'],0)
+        self.assertFalse(phase['phase_b_admitted'])
+        self.assertEqual(phase['status'],'PHASE_A_PARTIAL_EVIDENCE_RECOVERED')
+        self.assertTrue(phase['scorecards'])
+        self.assertTrue(phase['gaps'])
+        self.assertNotIn('cache',phase)
+        self.assertNotIn('performance',phase)
+        self.assertNotIn('/home/',json.dumps(phase))
+        self.assertEqual(sum(g['official_time_tbd'] for g in data['games']),24)
+        self.assertTrue(all(g['kickoff_utc'] is None for g in data['games'] if g['official_time_tbd']))
+        self.assertTrue(all(r['automatic_promotion'] is False for r in phase['scorecards']))
+
 
 if __name__=='__main__':unittest.main()

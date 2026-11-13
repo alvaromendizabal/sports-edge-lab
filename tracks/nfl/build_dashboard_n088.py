@@ -40,11 +40,24 @@ def build_payload():
     if phase is not None:
         if phase.get('new_model_fits') != 0 or phase.get('automatic_promotion') is not False:
             raise ValueError('PHASE_A_FIT_OR_PROMOTION_CLAIM')
+    schedule=json.loads((ROOT/'schedule_n088_public.json').read_bytes())
+    by_game={g['game_id']:g for g in schedule['games']}
+    if set(by_game)!={g['game_id'] for g in games}:raise ValueError('SCHEDULE_UNIVERSE_MISMATCH')
+    for game in games:
+        current=by_game[game['game_id']]
+        for field in ('home_team','away_team','kickoff_utc','home_score','away_score','official_time_tbd'):
+            if game[field]!=current[field]:raise ValueError('SCHEDULE_CHANGE_REQUIRES_FORECAST_ELIGIBILITY_REVIEW')
+        if game['completed_in_saved_census']!=current['completed']:raise ValueError('GAME_STATUS_CHANGE_REQUIRES_ELIGIBILITY_REVIEW')
+        game['latest_schedule_observed_at_utc']=current['observed_at_utc']
+        game['latest_schedule_source_sha256']=current['source_sha256']
     return {
         'schema': 'nfl.v10.public-dashboard.n088.v1',
         'owner': 'NFL', 'season':2026, 'release':'N088',
-        'saved_schedule_cutoff_utc': source['display_cutoff_utc'],
+        'saved_schedule_cutoff_utc': schedule['source_cutoff_utc'],
+        'forecast_export_cutoff_utc':source['display_cutoff_utc'],
+        'schedule_source_sha256':schedule['source_schedule_sha256'],
         'schedule_refresh_claimed':False,
+        'later_authenticated_schedule_recovered':True,
         'source_forecast_sha256':hashlib.sha256(raw).hexdigest(),
         'source_aggregate_sha256':hashlib.sha256(HEALTH.read_bytes()).hexdigest(),
         'games':games, 'historical_roles':source['selected_historical_roles'],
@@ -85,7 +98,7 @@ def fallback(games):
 
 def assets():
     data,health=build_payload()
-    template=(ROOT/'dashboard_n088_template.html').read_text()
+    template=(ROOT/'dashboard_n088.html.in').read_text()
     page=template.replace('__DASHBOARD_DATA__',encode(data)).replace('__FALLBACK__',fallback(data['games']))
     out={'index.html':page.encode(), '.nojekyll':b''}
     out['historical.json']=encode({'cards':health['all_historical_cards'], 'original_issue_cards':health['original_issue_cards'], 'legacy_cards':health['legacy_cards'], 'preserved_cards':health['preserved_cards'], 'current_cards':health['monitor_cards']+health['selected_2026_scorecards']+health['mapped_preserved_cards']}).encode()
