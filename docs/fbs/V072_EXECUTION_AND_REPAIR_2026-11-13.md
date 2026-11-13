@@ -1,5 +1,39 @@
 # FBS V072 execution failure and repair status
 
+## Recovery follow-up — November 13, 2026 UTC
+
+**Two of the three required production recovery parts were supplied. Their physical hashes, raw chunk hashes, transport metadata and ZIP CRCs verify against the supplied index. Full owner-return authentication remains pending the first part.** Two small index uploads are identical copies, not additional data parts. A strict reader inspected only present byte ranges; it did not fabricate the missing prefix.
+
+### Original scientific work verified from available evidence
+
+All **36 original parallel-worker receipts** are present. Their task, fit and case identities match the original execution log; their canonical case-readback, native-observation and cache-observation digests verify. The cases span **18 evaluations in 2024 and 18 in 2025**, across eight model families. These 36 cases do not establish current-season 2026 fit coverage. Recorded case-publication pins are preservation evidence; they do not establish a fresh readback of the native model bodies.
+
+The actual native fitting intervals reach **11 overlapping calls for 0.012328 seconds**. Recorded native CPU totals **35.749776 seconds** over a **78.975788-second** first-to-last-call span, or **0.452668 core-equivalents** on that denominator. The union of intervals with any native call active is **16.991040 seconds**. Whole worker envelopes reach 12 overlaps for 3.882605 seconds, but include preparation, source I/O and publication; their 143.768782 CPU seconds over 82.800204 seconds are **1.736334 core-equivalents**. None of these observations proves sustained 12-core scientific utilization. The earlier sparse process-tree sample peak and these interval-derived measurements have different denominators and must not be substituted for one another.
+
+### Packaging defect reproduced with preserved production-stage values
+
+The available recovery diagnostic identifies numeric-key ordering differences in native-fit overlap histograms for fit indices **25 through 35**. The corresponding preserved stage summary is available. Restoring integer key types only where the original source creates those integer keys reproduces its complete original serialized bytes. The old summary checker then raises the same exception; the exact repaired packaged summary code accepts the same evidence, preserves original bytes, uses stable key normalization and rejects an injected key collision.
+
+This is a production-stage reproduction. It does not reconstruct the lost full in-memory summary. The recovery diagnostic reports that the owner verified the original frozen-report digest; independently repeating that exact frozen-report byte check here still requires the missing first part.
+
+### Market work remains blocked by more than throughput
+
+The production inventory reports **31,341 known requests, 1,152 cumulative completed conversions and 30,189 pending requests**. The completed total includes 128 preserved conversions and the original V072 tranche's 1,024 new conversions. The normalization report records **1,906,848 unbound quotes, zero matched game pairs, zero per-game normalization checkpoints and zero ready per-game tasks**. Its source event years are 2020–2023; its official game denominator covers 2022–2026. It records no alias-source or rights reference. These are reported production conditions, not a license decision or permission to manufacture missing mappings.
+
+Consequently, enabling a per-game CPU pool alone cannot make this particular cohort eligible for model fitting. The earlier approximately two-million-record engineering fixture included a bound subset; its measured speedup cannot be represented as a measured speedup for this all-unbound production cohort. Immutable request conversions and normalized results must be reused while resolving identity, historical denominator, source-rights and time-eligibility dependencies.
+
+### Recovery and publication scope
+
+The supplied recovery control and diagnostic report **zero repeated market processing, zero new model fits, zero provider requests and zero S3 operations**. They declare successful local archive finalization with partial research status and intended exit code 2. The complete physical archive, independent invocation exit, full recovery elapsed time and referenced native model bodies are not all verified from this incomplete transfer. Summary-construction timestamps are not packaging runtime.
+
+The existing game table, metrics, forecasts, source clocks and champion roles remain the dated **V071 snapshot**. No missing quote, model score, game result or forecast is filled from inference. Source publication, browser checks and hosted website deployment remain separate states.
+
+The following section is the earlier engineering review, retained as dated history. Its then-pending production checks are qualified by the follow-up above.
+
+---
+
+## Earlier engineering review
+
 **Status reviewed November 13, 2026. The V072 owner run failed during return packaging. The existing dashboard remains the dated V071 scientific snapshot.**
 
 [Open the retained game dashboard](latest-v072.html) · [FBS research history](README.md) · [Prior V071 result](V072_ACTUAL_V071_REVIEW_2026-11-12.md)
