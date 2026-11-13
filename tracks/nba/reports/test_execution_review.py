@@ -44,10 +44,12 @@ class ExecutionReviewTests(unittest.TestCase):
     def test_measured_cpu_is_not_reservation(self):
         obs = self.data["observed_runtime"]
         self.assertAlmostEqual(obs["time_weighted_cpu_cores"], obs["matched_process_cpu_seconds"] / obs["sample_elapsed_seconds"], places=10)
-        self.assertEqual(obs["peak_reserved_cores"], 2)
-        self.assertEqual(obs["one_reserved_core_samples"], 38)
-        self.assertEqual(obs["matched_cpu_intervals"], 42)
-        self.assertLess(obs["peak_cpu_cores"], 2)
+        self.assertEqual(obs["peak_reserved_cores"], 12)
+        self.assertEqual(obs["one_reserved_core_samples"], 94)
+        self.assertEqual(obs["twelve_reserved_core_samples"], 3)
+        self.assertEqual(obs["matched_cpu_intervals"], 103)
+        self.assertAlmostEqual(obs["peak_cpu_cores"], 11.701368980331605)
+        self.assertEqual(obs['peak_work_class'], 'TRANSPORT_FINALIZATION_NOT_SCIENTIFIC_FITS')
         self.assertEqual(obs["peak_concurrent_scientific_fits"], 0)
         self.assertFalse(obs["twelve_core_scientific_utilization_proven"])
         altered = copy.deepcopy(self.data)
@@ -67,7 +69,7 @@ class ExecutionReviewTests(unittest.TestCase):
                 review.validate(altered)
         altered = copy.deepcopy(self.data)
         altered["replacement_engineering"]["owner_execution_completed"] = True
-        with self.assertRaisesRegex(ValueError, "NO_B080_OWNER_RUN"):
+        with self.assertRaisesRegex(ValueError, "NO_B081_OWNER_RUN"):
             review.validate(altered)
         altered = copy.deepcopy(self.data)
         altered["replacement_engineering"]["all_deployed_sports_retrofitted"] = True
@@ -101,27 +103,34 @@ class ExecutionReviewTests(unittest.TestCase):
         self.assertFalse(expected["actual_NBA_fits"])
         package = self.data["replacement_engineering"]["package_verification"]
         self.assertEqual(package["status"], "PASS")
-        self.assertEqual(package["packaged_tests"], 414)
-        self.assertEqual(package["passed"], 414)
+        self.assertEqual(package["packaged_tests"], 489)
+        self.assertEqual(package["passed"], package["packaged_tests"])
         self.assertEqual(package["failures"] + package["errors"] + package["skipped"] + package["module_errors"], 0)
-        self.assertEqual(package["exact_package_sha256"], "f3e201800e86ee72306dbcc32f751ff82a686489e9a4772c5115128dc4b496fd")
+        self.assertRegex(package["exact_package_sha256"], r'^[0-9a-f]{64}$')
+        self.assertNotEqual(package["exact_package_sha256"], self.data['latest_owner_execution']['executable_sha256'])
         self.assertFalse(package["owner_execution_performed"])
         self.assertEqual(package["post_test_source_cache_pyc_files"], 0)
-        self.assertEqual(package["exact_package_bytes"], 118159084)
+        self.assertGreater(package["exact_package_bytes"], 118159084)
+        self.assertLess(package["exact_package_bytes"], 512 << 20)
+        self.assertEqual(package['original_B080_members_preserved'], 1147)
         self.assertEqual(package["embedded_lineage_verification"]["status"], "PASS")
         self.assertEqual(package["embedded_lineage_verification"]["AWS_operations"], 0)
         warm = package["warm_executable_local_review"]
         self.assertEqual(warm["execution_scope"], "PREPARED_REVIEW_ONLY_NON_AWS")
         self.assertFalse(warm["owner_AWS_execution"])
         self.assertEqual(warm["new_scientific_fits"], 0)
-        self.assertEqual(warm["unchanged_source_member_identity_reuses"], 1147)
+        self.assertEqual(warm["unchanged_source_member_identity_reuses"], package['package_members'])
         self.assertEqual(warm["source_members_freshly_rehashed"], 0)
+        changed = copy.deepcopy(self.data)
+        changed['replacement_engineering']['package_verification']['exact_package_sha256'] = '0' * 64
+        with self.assertRaisesRegex(ValueError, 'EXACT_PACKAGE_VERIFICATION_CHANGED'):
+            review.validate(changed)
 
     def test_actual_log_health_and_transfer_scope_stay_separate_from_science(self):
         logging = self.data['live_logging']
-        self.assertEqual(logging['heartbeat_samples'], 43)
+        self.assertEqual(logging['heartbeat_samples'], 104)
         self.assertEqual(logging['health_errors'], [])
-        self.assertAlmostEqual(logging['maximum_gap_seconds'], 10.035731789999772)
+        self.assertAlmostEqual(logging['maximum_gap_seconds'], 10.612139867998849)
         self.assertTrue(logging['logging_success_is_not_model_success'])
         for key, value, error in (
             ('scope', 'WHOLE_PIPELINE', 'TRANSFER_SCOPE_CHANGED'),
@@ -147,6 +156,13 @@ class ExecutionReviewTests(unittest.TestCase):
         with self.assertRaisesRegex(ValueError, 'COST_IS_NOT_INVOICE'): review.validate(changed)
 
     def test_prior_failure_review_remains_available_unchanged(self):
+        previous_B080 = ROOT/'history/b080_prepared_execution_review.json'
+        self.assertEqual(hashlib.sha256(previous_B080.read_bytes()).hexdigest(),
+                         '430551e3b4f0c74cededad2e896602f0e467745b77d78c41f6866392ac722f25')
+        prior = json.loads(previous_B080.read_bytes())
+        self.assertEqual(prior['latest_owner_execution']['release'], 'B079')
+        self.assertEqual(prior['replacement_engineering']['release'], 'B080')
+        self.assertEqual(prior['science_preservation'], self.data['science_preservation'])
         previous = ROOT/'history/b079_prepared_execution_review.json'
         self.assertEqual(hashlib.sha256(previous.read_bytes()).hexdigest(),
                          'f77bb9272877112d71779f94e3d82b7b2af914e7c0c07fdd6b3ff87fbdbe8039')
@@ -156,6 +172,46 @@ class ExecutionReviewTests(unittest.TestCase):
         self.assertEqual(document['latest_owner_execution']['return']['sha256'],
                          'fee168714d963992f71904c0ff46b161fcc2416a4432cf6e6bdf57963369448d')
         self.assertEqual(document['science_preservation'], self.data['science_preservation'])
+
+    def test_preflight_objects_are_not_hidden_by_zero_frame_task_count(self):
+        failure = self.data['capacity_failure']
+        self.assertEqual(failure['files_physically_prepared'], 33977)
+        self.assertEqual(failure['new_objects_compressed'], 61460)
+        self.assertEqual(failure['frame_tasks_submitted'], 0)
+        self.assertAlmostEqual(failure['preflight_seconds'], 595.8604437939994)
+        self.assertGreater(failure['conservative_bound_bytes'], failure['scientific_allowance_bytes'])
+        self.assertLess(failure['actual_final_scientific_support_bytes'], failure['scientific_allowance_bytes'])
+        self.assertTrue(failure['zero_frame_tasks_did_not_mean_zero_object_compression'])
+        changed = copy.deepcopy(self.data)
+        changed['capacity_failure']['new_objects_compressed'] = 0
+        with self.assertRaisesRegex(ValueError, 'ACTUAL_CAPACITY_FAILURE_CHANGED'):
+            review.validate(changed)
+
+    def test_metadata_replay_does_not_become_whole_run_speedup_or_new_science(self):
+        proof = self.data['replacement_engineering']['budget_verification']
+        self.assertEqual(proof['selected_files'], 76324)
+        self.assertEqual(proof['inherited_files'], 76324)
+        self.assertEqual(proof['complete_support_bound_bytes'], 36821661)
+        self.assertTrue(proof['owner_current_source_and_full_ancestry_guards_still_required'])
+        self.assertEqual(proof['declared_omissions_unchanged'], 2658)
+        self.assertTrue(proof['actual_report_original_verifier_passed'])
+        for field, value in (('controlled_end_to_end_speedup_established', True),
+                             ('new_scientific_fits', 12), ('declared_omissions_unchanged', 0)):
+            changed = copy.deepcopy(self.data)
+            changed['replacement_engineering']['budget_verification'][field] = value
+            with self.assertRaisesRegex(ValueError, 'METADATA_TEST_SCOPE_CHANGED'):
+                review.validate(changed)
+
+    def test_pending_package_receipt_cannot_pass_publish_check(self):
+        from unittest import mock
+        changed = copy.deepcopy(self.data)
+        changed['replacement_engineering']['package_verification'] = {'status': 'FINAL_RECEIPT_PENDING'}
+        path = ROOT/'latest_execution_review.json'; read = Path.read_bytes
+        def substituted(p):
+            return json.dumps(changed).encode() if p == path else read(p)
+        with mock.patch.object(Path, 'read_bytes', substituted):
+            with self.assertRaisesRegex(ValueError, 'FINAL_PACKAGE_RECEIPT_REQUIRED'):
+                review.build(True)
 
 
 if __name__ == "__main__":
