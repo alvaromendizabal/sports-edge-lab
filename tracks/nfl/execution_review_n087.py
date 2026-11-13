@@ -1,4 +1,5 @@
 """Sanitized failed-owner evidence, separate from preserved scientific data."""
+import base64
 import hashlib
 import html
 import json
@@ -25,7 +26,8 @@ def validate(value, forecast_bytes, aggregate_bytes):
 
 
 def panel():
-    value = json.loads((ROOT/SOURCE).read_bytes())
+    raw = (ROOT/SOURCE).read_bytes()
+    value = json.loads(raw)
     retained = value['preserved_science']
     validate(value, (ROOT/retained['selected_forecasts_file']).read_bytes(),
              (ROOT/retained['aggregate_file']).read_bytes())
@@ -38,6 +40,6 @@ def panel():
 <p>Source cache: 456 hits, 320,114,459 reused bytes, 2 source GETs / 3,488 bytes. Separate publication/readback accounting reports 1,367 full readbacks / 115,919,486 bytes. The two source GETs are not total remote traffic. Prior N085 custody used zero remote GETs.</p>
 <p>The bounded diagnostic has four unresolved current artifacts. Its summary reports 59 log flushes, but the physical live log streams are absent from this return; the older execution log is present, but continuity of the required live pair cannot be verified. Full current evidence closure is false.</p>
 <p><strong>All forecast and metric panels below retain the last valid N085 source cutoff: ''' + html.escape(retained['display_cutoff_utc']) + '''.</strong> The 272 games, 444 selected outputs and 1,530 historical cards retain their existing values and issue clocks. Reusing 579 original-issue evaluations adds zero new score computations. No new schedule, forecast, market refresh or champion promotion is claimed.</p>
-<p>N087 is a repair of the owner call sequence and failure finalization; no N087 owner result is claimed. Earlier test and browser passes missed these production call paths and do not establish owner-run success. <a href="''' + SOURCE + '''" download>Download exact sanitized failure evidence</a>. Source publication is separate from website deployment.</p>
+<p>N087 is a repair of the owner call sequence and failure finalization; no N087 owner result is claimed. Earlier test and browser passes missed these production call paths and do not establish owner-run success. <a href="data:application/json;base64,''' + base64.b64encode(raw).decode('ascii') + '''" download="''' + SOURCE + '''">Download exact sanitized failure evidence</a>. Source publication is separate from website deployment.</p>
 </section>
 <!-- N087_FAILED_OWNER_END -->'''

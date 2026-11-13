@@ -1,4 +1,5 @@
 """Do not turn a failed owner invocation into false scientific completion."""
+import base64
 import copy
 import hashlib
 import json
@@ -66,3 +67,8 @@ class FailedOwnerReviewTests(unittest.TestCase):
         value['owner_return_sha256'] = '0'*64
         with self.assertRaisesRegex(ValueError, 'IDENTITY'):
             review.validate(value, FORECAST, AGGREGATE)
+
+    def test_download_is_self_contained_and_byte_exact_after_reopen(self):
+        carrier = re.search(r'href="data:application/json;base64,([^"]+)"', review.panel())
+        self.assertIsNotNone(carrier)
+        self.assertEqual(base64.b64decode(carrier.group(1)), (ROOT/review.SOURCE).read_bytes())
