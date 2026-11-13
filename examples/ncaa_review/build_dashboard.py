@@ -340,7 +340,8 @@ def render_legacy_landing(data):
 
 def render_landing(data):
     from b063_dashboard import render
-    return render(render_legacy_landing(data))
+    from b063r4_status import render_banner
+    return render_banner(render(render_legacy_landing(data)))
 
 
 def outputs():
