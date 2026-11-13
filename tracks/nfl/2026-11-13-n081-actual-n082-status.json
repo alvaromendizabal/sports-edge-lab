@@ -1,0 +1,52 @@
+{
+  "automatic_promotion": false,
+  "bootstrap_observations": {
+    "direct_older_ancestor_s3_bytes": 41774501,
+    "direct_older_ancestor_s3_gets": 1,
+    "embedded_runtime_carrier_s3_gets": 0,
+    "embedded_runtime_carrier_seconds": 0.8953273510014697,
+    "installed_runtime_authentication_seconds": 36.04946420200031,
+    "isolated_import_preflight_seconds": 33.10837140299918,
+    "local_n079_s3_gets": 0,
+    "local_n079_verification_seconds": 9.064095723999344,
+    "observed_optimizer_calls": 0,
+    "observed_process_tree_mean_cores": 0.6471761419397724,
+    "observed_process_tree_peak_cores": 1.2307991950808,
+    "scope": "Separate measured bootstrap stages; no completed-model or whole-run speedup claim. Source-store counters exclude the direct older-ancestor fetch."
+  },
+  "elapsed_seconds": 112.95654879699941,
+  "failure_reason": "Release mismatch between source writer and refresh collector",
+  "failure_stage": "Before current source refresh and scientific execution",
+  "finished_at": "2026-11-13T01:57:18.254825+00:00",
+  "invocation_started_at_utc": "2026-11-13T01:55:25.298282+00:00",
+  "latest_attempt": "N081",
+  "new_fits": 0,
+  "new_forecasts": 0,
+  "new_meta_fits": 0,
+  "new_n082_owner_science_claimed": false,
+  "new_native_fits": 0,
+  "new_paid_calls": 0,
+  "new_provider_refresh_claimed": false,
+  "owner_executable": {
+    "bytes": 424538313,
+    "sha256": "0ccdfbb08ca5d63a3fc0f414b3580e57b3a205c6c099dd74b5967672190d134d"
+  },
+  "owner_research_acceptance": false,
+  "owner_return": {
+    "bytes": 5741803,
+    "sha256": "48388737d5df24677f9da108616c4909b4df81dbcd7222d2a3ed26fbe70baee2"
+  },
+  "preserved_games": 272,
+  "preserved_metrics_file": "2026-11-12-n079-actual-n080-review.json",
+  "preserved_metrics_sha256": "2b33b866319c9e309fddfda145b4662437a914916998b92945524243342e1ec8",
+  "preserved_scientific_source": "N079",
+  "preserved_selected_forecasts_file": "selected_forecasts_n080.json",
+  "preserved_selected_forecasts_sha256": "5fdcef74dc2eefaf6827257197977f47de7e202b18546cbdd14e8ea28e9edb84",
+  "preserved_selected_games": 112,
+  "preserved_selected_rows": 448,
+  "preserved_selected_snapshot_utc": "2026-11-12T23:22:35.281084+00:00",
+  "qualification": "Failed later invocation retains prior authenticated outputs and original clocks. Previously upcoming labels describe the saved census, not a live refresh. Zero new work is not successful scientific progress.",
+  "schema": "nfl.n082.latest-attempt-status.v1",
+  "sport": "NFL",
+  "status": "FAILED"
+}
