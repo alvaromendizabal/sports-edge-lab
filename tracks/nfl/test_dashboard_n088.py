@@ -61,6 +61,9 @@ class PublicDashboardContracts(unittest.TestCase):
         self.assertEqual(sum(g['official_time_tbd'] for g in data['games']),24)
         self.assertTrue(all(g['kickoff_utc'] is None for g in data['games'] if g['official_time_tbd']))
         self.assertTrue(all(r['automatic_promotion'] is False for r in phase['scorecards']))
+        for row in phase['scorecards']+phase['matched_cohort_leaders']:
+            self.assertRegex(row['evaluation_series_sha256'],r'^[0-9a-f]{64}$')
+            self.assertRegex(row['fitted_snapshot_commitment_sha256'],r'^[0-9a-f]{64}$')
 
 
 if __name__=='__main__':unittest.main()
