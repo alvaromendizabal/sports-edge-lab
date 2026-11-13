@@ -49,9 +49,12 @@ jobs:
         run: python tracks/nba/reports/validate_research_snapshot.py tracks/nba/reports/latest_research_outputs.json
       - name: Reject unsupported NBA status and source-clock substitutions
         run: python -m unittest discover -s tracks/nba/reports -p test_research_snapshot.py -v
-      - name: Verify source-preserving B078 and B079 execution review
+      - name: Verify current B081 evidence and separate B082 engineering review
         run: |
           python tracks/nba/reports/build_execution_review.py --check
+          python tracks/nba/reports/build_model_review.py --check
+          python tracks/nba/reports/build_cohort_leaders.py --check
+          python -m unittest discover -s tracks/nba/reports -p test_cohort_leaders.py -v
           python -m unittest discover -s tracks/nba/reports -p test_execution_review.py -v
       - name: Test progressive-enhancement interaction logic
         run: node --test docs/nba/monitor.test.cjs

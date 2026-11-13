@@ -30,6 +30,140 @@ import time
 import traceback
 import uuid
 
+# Keep the bootstrap logger self-contained: the owner bridge loads this
+# manifest-pinned stdlib module before project siblings may be imported.
+_SUCCESS_COUNTERS = frozenset((
+    's3_gets_completed', 's3_bytes', 'local_cache_hits', 'local_reused_bytes',
+    'files_hashed', 'bytes_hashed', 'verified_unchanged_files_reused',
+    'verified_unchanged_bytes_reused', 'objects_verified', 'bytes_verified',
+    'objects_read', 'bytes_read',
+))
+_STATE_COUNTERS = (
+    'completed', 'remaining', 'total', 'completed_tasks', 'remaining_tasks',
+    'successes', 'failures',
+)
+
+
+def _number(value):
+    if isinstance(value, bool) or not isinstance(value, (int, float)):
+        return None
+    try:
+        return value if math.isfinite(value) and value >= 0 else None
+    except (OverflowError, TypeError, ValueError):
+        return None
+
+
+def _mapping(value):
+    return value if isinstance(value, dict) else {}
+
+
+def successful_work_counters(measurements):
+    """Read bounded known scalar scopes without scanning detailed evidence.
+
+    Scopes are retained separately: the same read may appear in both an S3
+    source and its cache receipt, so these counters are deliberately not added.
+    Attempts, retries, failures, CPU time, transfer duration, freshness and
+    clock changes are not successful-work counters.
+    """
+    result = {}
+
+    def accept(prefix, value):
+        value = _mapping(value)
+        for key in sorted(_SUCCESS_COUNTERS):
+            number = _number(value.get(key))
+            if number is not None:
+                result[prefix + '.' + key] = number
+
+    s3 = _mapping(measurements.get('s3'))
+    accept('s3', s3)
+    sources = _mapping(s3.get('instrumented_sources'))
+    for name in sorted(sources)[:32]:
+        accept('s3.instrumented_sources.' + str(name), sources[name])
+    cache = _mapping(measurements.get('cache'))
+    accept('cache', cache)
+    verified = _mapping(cache.get('verified_file_cache'))
+    accept('cache.verified_file_cache', _mapping(verified.get('counters')) or verified)
+    sources = _mapping(cache.get('live_instrumented_cache_sources'))
+    for name in sorted(sources)[:32]:
+        source = _mapping(sources[name])
+        accept('cache.live_instrumented_cache_sources.' + str(name), source.get('counters'))
+    accept('local_io', measurements.get('local_io'))
+    return result
+
+
+class ProgressObservation:
+    """Track task state, completed operational work and native returns apart."""
+
+    def __init__(self, started):
+        self.started = float(started)
+        self.last_execution_progress = self.started
+        self.last_native_completion = self.started
+        self.signature = None
+        self.counters = {}
+        self.native_returns = None
+        self.observations = 0
+        self.last_observation = self.started
+
+    def observe(self, measurements, now):
+        now = float(now)
+        if not math.isfinite(now) or now < self.last_observation:
+            raise ValueError('B082_PROGRESS_CLOCK_MUST_BE_FINITE_AND_MONOTONIC')
+        self.last_observation = now
+        progress = _mapping(measurements.get('progress'))
+        fits = _mapping(measurements.get('fits'))
+        state = {
+            'stage': measurements.get('stage'),
+            'counts': {key: progress.get(key) for key in _STATE_COUNTERS},
+            'fits': fits,
+        }
+        signature = json.dumps(state, sort_keys=True, separators=(',', ':'), allow_nan=False)
+        state_changed = signature != self.signature
+        self.signature = signature
+        counters = successful_work_counters(measurements)
+        advances = []
+        resets = []
+        for key, value in counters.items():
+            previous = self.counters.get(key)
+            # A first observation establishes a baseline. An old completed
+            # receipt newly appearing in telemetry is not new work.
+            if previous is not None and value > previous:
+                advances.append({'scope': key, 'previous': previous,
+                                 'current': value, 'delta': value - previous})
+            elif previous is not None and value < previous:
+                resets.append(key)
+        self.counters = counters
+        if state_changed or advances:
+            self.last_execution_progress = now
+        native = _number(fits.get('completed_native_fit_returns'))
+        native_delta = None
+        if native is not None and self.native_returns is not None:
+            native_delta = native - self.native_returns
+            if native_delta > 0:
+                self.last_native_completion = now
+            elif native_delta < 0:
+                # A reset is explicitly visible; it cannot earn a completion.
+                native_delta = None
+        self.native_returns = native
+        self.observations += 1
+        return {
+            'schema': 'sel.execution.progress_observation.b082.v1',
+            'observations': self.observations,
+            'execution_idle_seconds': max(0., now - self.last_execution_progress),
+            'task_or_stage_state_changed': state_changed,
+            'successful_work_counter_advance_observed': bool(advances),
+            'successful_work_counter_advances': advances[:16],
+            'successful_work_counter_advance_count': len(advances),
+            'successful_work_counter_resets': resets[:16],
+            'independent_counter_scopes_are_not_summed': True,
+            'first_observation_is_baseline_only': True,
+            'attempts_failures_clocks_and_cpu_are_not_successful_work': True,
+            'native_fit_completion_idle_seconds': max(0., now - self.last_native_completion),
+            'completed_native_fit_returns': native,
+            'new_native_returns_observed_between_samples': native_delta,
+            'operational_work_is_not_scientific_fit_progress': True,
+        }
+
+
 SCHEMA = 'sports-edge-lab.live-execution.v1'
 IDENTITY_ENV = 'SEL_EXECUTION_INVOCATION_ID'
 ORIGIN_ENV = 'SEL_EXECUTION_ORIGIN_JSON'
@@ -413,6 +547,7 @@ class LiveExecutionLog:
         self.progress_path = Path(progress_path) if progress_path else None
         self.expected_producer = None; self.last_progress_error = None
         self.progress_signature = None; self.last_progress = self.started; self.last_stall = None
+        self.execution_progress = ProgressObservation(self.started)
         self.health_errors = []; self.checkpoint_sink = checkpoint_sink
         self.checkpoint_interval = float(checkpoint_interval)
         self.checkpoint_stop = threading.Event(); self.checkpoint_thread = None
@@ -483,6 +618,7 @@ class LiveExecutionLog:
                 +f"\n  fits_new/reused/failed={fits.get('new')}/{fits.get('reused')}/{fits.get('failed')} native_returns={fits.get('completed_native_fit_returns')}"
                 +f" | RSS={data['process_tree'].get('rss_bytes')} RAM_free={resource['memory'].get('MemAvailable')} disk_free={resource['disk'].get('free_bytes')}"
                 +f" | source_age={data['progress_observation'].get('age_seconds')}s progress_idle={data['progress_idle_seconds']:.3f}s child={data.get('child_identity')}"
+                +f" native_fit_completion_idle={data.get('native_fit_completion_idle_seconds')}s"
                 +"\n  S3="+json.dumps(m['s3'], sort_keys=True)+" cache="+json.dumps(m['cache'], sort_keys=True)
                 +" local_IO="+json.dumps(m['local_io'], sort_keys=True)
                 +" cost="+json.dumps(m['cost'], sort_keys=True)
@@ -581,15 +717,19 @@ class LiveExecutionLog:
                 self.max_gap = max(self.max_gap, now-self.last_beat)
             self.last_beat = now
             measures = project_measurements(self.state)
-            # Clock-only and stdout updates do not reset lack-of-progress detection.
-            stable_counts = {k: measures['progress'].get(k) for k in
-                             ('completed', 'remaining', 'total', 'completed_tasks', 'remaining_tasks', 'successes', 'failures')}
-            signature = canonical({'stage': measures['stage'], 'counts': stable_counts, 'fits': measures['fits']})
-            if signature != self.progress_signature:
-                self.progress_signature = signature; self.last_progress = now
+            # B082 also observes successful transfer/cache/I/O counters. B081
+            # reported a transfer stalled despite thousands of completed GETs.
+            # Keep native-return inactivity distinct: these operational counters
+            # never earn a scientific fit. Clocks, CPU, attempts and failure
+            # retries alone still cannot suppress a stalled-work diagnostic.
+            progress = self.execution_progress.observe(measures, now)
+            self.progress_signature = self.execution_progress.signature.encode('utf-8')
+            self.last_progress = self.execution_progress.last_execution_progress
             data = {'measurements': measures, 'resources': _host_resources(self.prefix.parent),
                     'process_tree': current, 'cpu_delta': delta, 'child_identity': self.child,
-                    'progress_observation': observation, 'progress_idle_seconds': now-self.last_progress,
+                    'progress_observation': observation, 'progress_idle_seconds': progress['execution_idle_seconds'],
+                    'execution_progress_observation': progress,
+                    'native_fit_completion_idle_seconds': progress['native_fit_completion_idle_seconds'],
                     'heartbeat_target_seconds': self.interval, 'heartbeat_observed_max_gap_seconds': self.max_gap,
                     'training_timeout_applied': False, 'logger_errors': copy.deepcopy(self.health_errors)}
             self.event('HEARTBEAT', **data)
@@ -600,14 +740,26 @@ class LiveExecutionLog:
             idle = now-self.last_progress
             if idle >= self.stall_seconds and (self.last_stall is None or now-self.last_stall >= max(30., self.stall_seconds)):
                 self.last_stall = now
+                workload_identity = self.expected_producer or self.child
+                stacks = self._thread_stacks()
                 self.event('STALLED_PROGRESS_DIAGNOSTIC', idle_seconds=idle,
                     process_states=current, cpu_delta=delta, stage=measures['stage'],
                     active_tasks=measures['experiments']['active_task_details'],
-                    owner_thread_stacks=self._thread_stacks(),
+                    # Retain the old field for readers, with an explicit scope.
+                    # Python frames here are the logger's own frames, not those
+                    # of its separately executing scientific workload child.
+                    owner_thread_stacks=stacks, observer_thread_stacks=stacks,
+                    thread_stack_scope='LOGGER_PROCESS_ONLY',
+                    thread_stack_process_identity=self.identity,
+                    workload_process_identity=workload_identity,
+                    workload_python_stacks_observed=(workload_identity == self.identity),
+                    workload_stack_unavailability_reason=(None if workload_identity == self.identity else
+                        'SEPARATE_WORKLOAD_PROCESS; PYTHON_FRAMES_NOT_OBSERVED_BY_EXTERNAL_LOGGER'),
+                    execution_progress_observation=progress,
                     recovery_actions=['PRESERVE_ATOMIC_CHECKPOINTS', 'INSPECT_WAIT_CHANNEL_AND_DEPENDENCY',
                                       'SUPERVISOR_REQUESTS_SAFE_BOUNDARY_RECOVERY_ONLY'],
                     automatic_signal_or_training_kill=False,
-                    diagnostic_interpretation='NO_COUNTER_OR_STAGE_ADVANCE; ACTIVE_COMPUTE_CAN_BE_LONG_RUNNING')
+                    diagnostic_interpretation='NO_TASK_STAGE_OR_OBSERVED_SUCCESSFUL_WORK_ADVANCE; ACTIVE_COMPUTE_CAN_BE_LONG_RUNNING')
             self._drain_checkpoint_results()
             self.flush()
             if self.checkpoint_sink and now-self.checkpoint_last >= self.checkpoint_interval:

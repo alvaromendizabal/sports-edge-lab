@@ -1,0 +1,28 @@
+{
+  "history_sha256": "9e6795387c1e64bc6265da04bdd9d4e9fd0fb9860007da7b465549752542149b",
+  "latest_selected_issues": 2705,
+  "new_B081_selected_issues": 5,
+  "new_fits_in_publication": 0,
+  "new_forecasts_in_publication": 0,
+  "new_issue_refs": [
+    "59c9a7e473f7ff976ec79940",
+    "671657bf52deb830ff8fa7f9",
+    "6cf57ec4a33b3dea8078ccb2",
+    "8dc93bdb81b51664702bd341",
+    "9a637b7d8269ff36cc8e81be"
+  ],
+  "old_canonical_game_ids_preserved": true,
+  "old_champion_role_objects_unchanged": true,
+  "previous_selected_issues": 2705,
+  "schema": "sports-edge-lab.nba.selected-issue-preservation.v1",
+  "source_main_commit": "af4d0e92b0f02eef7da14209621825feae42bc2e",
+  "superseded_issue_refs": [
+    "16674d24ee185324d23a9f7c",
+    "1737987164dad5941765bcd7",
+    "9dacde351e912bdb20140033",
+    "bde015801cfc019e9632fb03",
+    "d19ffd7f9237dd7109829a2b"
+  ],
+  "superseded_selected_issues_preserved_in_history": 5,
+  "unchanged_shared_selected_issues": 2700
+}

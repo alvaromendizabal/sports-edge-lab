@@ -61,6 +61,24 @@ NUMERIC_FIELDS = {
     'heartbeat_target_seconds', 'observed_heartbeat_samples', 'used_cpu_equivalents',
     'requested_cpus', 'granted_cpus', 'real_new_native_fits', 'peak_reserved_tokens',
     'new_native_fits_per_hour', 'pending', 'completed', 'failed', 'running',
+    's3_get_attempts', 's3_gets_completed', 'local_cache_bytes', 'cache_hit_byte_ratio',
+    'requested_workers', 'native_threads_per_task', 'requested_cpu_tokens', 'new_native_fits',
+    'reused_tasks', 'native_process_cpu_seconds', 'registered_unique_tasks',
+    'repeated_completed_fits_for_benchmark', 'throughput_ratio_vs_1x1',
+    's3_transfer_seconds', 'files_hashed', 'bytes_hashed',
+    'verified_unchanged_files_reused', 'verified_unchanged_bytes_reused',
+    'contexts', 'rows', 'bytes_read', 'historical_full_S3_GETs',
+    'repeated_label_adapter_calls', 'native_model_or_preprocessor_fits',
+    'newly_materialized_contexts', 'exact_archive_readbacks_reused',
+    'unique_archive_proof_reuses', 'verified_virtual_bytes_covered_by_reused_archive_proofs',
+    'original_file_pins_compared', 'baseline_rebuilds_avoided',
+    'lazy_object_decodes_actually_requested', 'archive_hits', 'archive_misses',
+    'archive_invalidated', 'archive_proofs_completed', 'baseline_hits',
+    'baseline_misses', 'baseline_invalidated', 'baseline_proofs_completed',
+    'cache_writes_deferred_for_storage', 'maximum_cached_proof_bytes',
+    'cached_decoded_object_bytes', 'real_estimator_fits', 'head_calls',
+    'exact_key_list_calls', 'client_preparation_failures', 'source_body_gets',
+    'broad_historical_listings',
 }
 BOOLEAN_FIELDS = {
     'owner_run_completed', 'acceptance_passed', 'measured', 'rerun_measured',
@@ -77,9 +95,30 @@ BOOLEAN_FIELDS = {
     'owner_AWS_execution_verified', 'active_cpu_coordinator_moved_or_forked',
     'ncaa_men_women_separate_one_owner', 'physical_legacy_models_relocated',
     'preflight_no_progress_escalated', 'training_wallclock_deadline_applied',
+    'synthetic_fixture', 'owner_benchmark_complete', 'complete_provenance',
+    'configured_workers_used_as_observed_concurrency',
+    'different_scientific_tasks_are_not_repeated_timing_trials',
+    'all_pipeline_S3_calls_instrumented', 'uninstrumented_S3_calls_reported_as_zero',
+    'expected_pins_remain_upstream_authority', 'unchanged_stat_reuse_is_not_fresh_full_byte_hash',
+    'source_clocks_and_exact_values_preserved', 'original_authenticated_adapter_completed',
+    'automatic_eviction_or_resize', 'first_use_full_exact_reconstruction_required',
+    'complete_dependency_stat_guards_required', 'unchanged_verifier_and_runtime_required',
+    'source_file_pins_still_compared', 'current_full_decode_claimed_for_reuse',
+    'old_scientific_files_modified', 'new_source_clocks_assumed',
 }
 CODE_FIELDS = {'status', 'scope', 'evidence_class', 'measurement_class', 'reason',
-               'exception_reason', 'workload_class', 'benchmark_kind', 'architecture', 'activity_class'}
+               'exception_reason', 'workload_class', 'benchmark_kind', 'architecture', 'activity_class', 'timing_scope',
+               'cache_status', 'verification', 'format', 'measurement_phase', 'elapsed_seconds_scope'}
+# These source qualifiers contain punctuation. Copy only their exact known
+# literals so their important limits survive without admitting arbitrary text.
+QUALIFIED_RECEIPT_TEXT = {
+    'reused_byte_counter_scope': {'UNIQUE_REUSED_ARCHIVE_INDEX_ORIGINAL_BYTES; MAY_INCLUDE_SHARED_EXTERNAL_FILES; NOT_PHYSICAL_IO_SAVED'},
+    'transfer_byte_scope': {'COMPLETE_FETCHED_BODIES; FAILED_PARTIAL_TRANSFER_BYTES_UNOBSERVED'},
+    'call_count_scope': {'SDK_METHOD_INVOCATIONS_INCLUDING_FAILURES; HTTP_RETRIES_NOT_INFERRED'},
+}
+CACHE_RECEIPT_BLOCKS = ('authenticated_context_cache', 'verified_file_cache',
+    'transport_proof_cache', 'finalizer_transport_proof_cache',
+    'finalizer_verified_file_cache', 'source_version_refresh')
 CLOCK_FIELDS = {'started_at_utc', 'finished_at_utc', 'observed_at_utc',
                 'training_cutoff_utc', 'actual_materialized_at_utc'}
 NEXT_ACTION = {
@@ -158,6 +197,13 @@ def _scalar_receipt(source):
         out[key] = code(source[key])
     for key in sorted(CLOCK_FIELDS & source.keys()):
         out[key] = clock(source[key])
+    for key, allowed in QUALIFIED_RECEIPT_TEXT.items():
+        if key in source:
+            out[key] = source[key] if isinstance(source[key], str) and source[key] in allowed else 'SOURCE_STATUS_UNAVAILABLE'
+    if source.get('layout') is not None:
+        if source['layout'] not in ('1x1', '4x1', '8x1', '12x1', '6x2', '4x3', '3x4'):
+            fail('REGISTERED_PUBLIC_BENCHMARK_LAYOUT_REQUIRED')
+        out['layout'] = source['layout']
     return out
 
 
@@ -172,17 +218,23 @@ def receipt_view(name, source):
     # A source's explicit pass is displayed as its claim, not independently
     # reclassified as measured native work by a renderer.
     result['source_acceptance_claim'] = source.get('acceptance_passed') is True
-    for row in source.get('benchmarks', []):
+    for row in source.get('benchmarks', source.get('configurations', [])):
         if not isinstance(row, dict) or len(result['benchmarks']) >= 100:
             fail('BOUNDED_BENCHMARK_OBJECT_REQUIRED')
         result['benchmarks'].append(_scalar_receipt(row))
+    result['speedups'] = [_scalar_receipt(row) for row in source.get('speedups', [])[:100]]
     for field in ('measurements', 'summary', 'counts', 'timings', 'native_fit_summary', 'cache_summary',
-                  'second_pass', 'native_overlap', 'estimator_method_overlap', 'neural_loop_overlap', 'storage', 'native', 'latest_heartbeat'):
+                  'second_pass', 'native_overlap', 'estimator_method_overlap', 'neural_loop_overlap', 'storage', 'native', 'latest_heartbeat', 'repeat_read_gate') + CACHE_RECEIPT_BLOCKS:
         if isinstance(source.get(field), dict):
-            result[field] = _scalar_receipt(source[field])
+            # Version-refresh failures contain private locators, while the
+            # similarly named runtime field is a numeric queue counter.
+            scalars = source[field] if field != 'source_version_refresh' else {k:v for k,v in source[field].items() if k != 'failed'}
+            result[field] = _scalar_receipt(scalars)
             if field == 'latest_heartbeat':
                 result[field]['queue'] = _scalar_receipt(source[field].get('queue') or {})
                 result[field]['underutilization_reason_codes'] = [code(x) for x in source[field].get('underutilization_reason_codes', [])][:100]
+            if field == 'repeat_read_gate' and isinstance(source[field].get('second_pass'), dict):
+                result[field]['second_pass'] = _scalar_receipt(source[field]['second_pass'])
     return result
 
 
@@ -470,7 +522,7 @@ def render_section(value):
 <h3>Actual outcomes, uncertainty and forecast gaps</h3>
 <p>Source-bound final scores and original issued intervals are retained. Missing coherent home/away score centers, per-game errors, probability calibration intervals and matched venue evidence remain unavailable. Independent point heads are not combined into a new score forecast; winner contract prices do not establish an expected margin or total.</p>
 <details id="nba-v9-game-details"><summary>Observed games and exact missing-role counts</summary>
-<label>Game state <select id="nba-v9-game-state"><option value="all">All observed games</option><option value="FINAL">Final</option><option value="SCHEDULED">Scheduled</option><option value="TBD">Unresolved</option><option value="missing">Missing selected roles</option><option value="future">Future tip at evidence time</option></select></label>
+<label>Game state <select id="nba-v9-game-state"><option value="all">All observed games</option><option value="FINAL">Final</option><option value="LIVE">Live as observed</option><option value="SCHEDULED">Scheduled</option><option value="TBD">Unresolved</option><option value="missing">Missing selected roles</option><option value="future">Future tip at evidence time</option></select></label>
 <p id="nba-v9-game-count" aria-live="polite"></p><div class="scroll"><table id="nba-v9-games"><thead><tr><th>Game / teams</th><th>Saved status</th><th>Scheduled start / status clock</th><th>Available / required roles</th><th>Actual home / away points</th><th>Missing targets or qualification</th></tr></thead><tbody></tbody></table></div>
 </details>
 <h3>Cache, native-fit concurrency and measured throughput</h3>
@@ -489,7 +541,8 @@ q('nba-v9-policy').tBodies[0].innerHTML=R.model_policy_coverage.map(r=>'<tr>'+ce
 q('nba-v9-diagnostics').tBodies[0].innerHTML=R.saved_metric_diagnostics.map(r=>'<tr data-source-index="'+r.source_index+'">'+cells([r.season+' / '+w(r.evidence_track)+' / '+w(r.role_alias),(r.scored_games??'Unavailable')+' / '+(r.completed_game_denominator??'Unavailable'),...['ece_10_bins','ece_10_fixed_bins','crps','weighted_interval_score'].map(k=>typeof r.metrics[k]==='number'?r.metrics[k].toFixed(6):'Unavailable'),r.training_cutoff_utc,r.actual_materialized_at_utc])+'</tr>').join('');
 q('nba-v9-windows').tBodies[0].innerHTML=R.window_coverage.map(r=>'<tr>'+cells([w(r.evidence_track),w(r.window),r.saved_metric_rows,w(r.status)+'; '+w(r.ranking_status)])+'</tr>').join('');
 function draw(){const filter=q('nba-v9-game-state').value,rows=R.game_rows.filter(r=>filter==='all'||filter==='missing'&&r.missing_current_roles.length>0||filter==='future'&&r.tip_time_relation_at_report==='FUTURE_TIP'||r.last_confirmed_status===filter);q('nba-v9-game-count').textContent=rows.length+' observed games; all matching rows are available in this scrollable table and the complete JSON export.';q('nba-v9-games').tBodies[0].innerHTML=rows.map(r=>'<tr data-game-id="'+e(r.game_id)+'">'+cells([r.game_id+' / '+(r.away_team??'TBD')+' at '+(r.home_team??'TBD'),w(r.last_confirmed_status),(r.scheduled_start_utc??'Unavailable')+' / '+(r.last_confirmed_status_asof_utc??'Unavailable'),r.available_current_roles+' / '+r.expected_current_roles,(r.actual.home_points??'Unavailable')+' / '+(r.actual.away_points??'Unavailable'),[...new Set(r.target_horizon.filter(c=>c.missing_roles>0||c.expected_roles===0).map(c=>c.target+' T'+c.horizon_minutes+': '+w(c.status)))].join('; ')||'All applicable original issues available'])+'</tr>').join('');window.NBA_V9_DISPLAY_STATE={games:rows.length,filter};}
-q('nba-v9-runtime').tBodies[0].innerHTML=R.runtime_receipts.map(r=>'<tr>'+cells([r.section,w(r.status),Object.entries(r.measurements).map(([k,v])=>w(k)+': '+v).join('; ')||'No saved owner measurement; unverified'])+'</tr>').join('');
+function measured(r){const values=[];function walk(x,prefix){for(const [k,v]of Object.entries(x??{})){if(v&&typeof v==='object')walk(v,prefix+w(k)+' / ');else values.push(prefix+w(k)+': '+(v??'Unavailable'));}}for(const key of ['measurements','native','latest_heartbeat','summary','counts','timings','cache_summary','second_pass','repeat_read_gate','benchmarks','speedups','storage','authenticated_context_cache','verified_file_cache','transport_proof_cache','finalizer_transport_proof_cache','finalizer_verified_file_cache','source_version_refresh'])if(r[key])walk(r[key],key==='measurements'?'':w(key)+' / ');return values.join('; ')||'No saved owner measurement; unverified';}
+q('nba-v9-runtime').tBodies[0].innerHTML=R.runtime_receipts.map(r=>'<tr>'+cells([r.section,w(r.status),measured(r)])+'</tr>').join('');
 q('nba-v9-publication').tBodies[0].innerHTML=Object.entries(R.publication_lifecycle).filter(([k])=>k!=='source_publication_is_website_deployment').map(([k,v])=>'<tr>'+cells([w(k),v.verified?'Yes':'No',w(v.status)+(v.commit_sha?' / '+v.commit_sha:'')+(v.url?' / '+v.url:'')])+'</tr>').join('');
 q('nba-v9-publication-scope').textContent=w(R.publication_lifecycle_scope);
 q('nba-v9-limits').innerHTML=R.limitations.map(v=>'<li>'+e(v)+'</li>').join('');q('nba-v9-game-state').addEventListener('change',draw);draw();})();</script>

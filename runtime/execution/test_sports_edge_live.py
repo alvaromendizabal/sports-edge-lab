@@ -274,5 +274,156 @@ class LiveLogTests(unittest.TestCase):
         self.assertEqual(len(list(self.root.glob('*.log'))), 5)
 
 
+
+# B082 scoped successful-work observation regressions
+"""Invented successful-work counter, stalled-child and failed-child fixtures.
+No sports computation, provider request, private run or CPU benchmark.
+"""
+
+import copy
+import json
+from pathlib import Path
+import subprocess
+import sys
+import tempfile
+import threading
+import time
+import unittest
+
+from sports_edge_live import ProgressObservation, successful_work_counters
+from sports_edge_live import LiveExecutionLog
+
+
+def measurement(completed=0, **extra):
+    row = {'stage': {'stage_name': 'OWNED_HISTORY', 'substage': 'READING'},
+        'progress': {'completed': None, 'remaining': None, 'total': None},
+        'fits': {'completed_native_fit_returns': 0, 'concurrent_native_fits': 0},
+        's3': {'instrumented_sources': {'owned_market': {
+            's3_gets_completed': completed, 's3_bytes': completed * 10}}}}
+    row.update(extra)
+    return row
+
+
+class ProgressObservationTests(unittest.TestCase):
+    def test_successful_s3_work_advances_execution_but_never_native_fit_clock(self):
+        observer = ProgressObservation(0)
+        observer.observe(measurement(), 0)
+        observation = observer.observe(measurement(9), 130)
+        self.assertEqual(observation['execution_idle_seconds'], 0)
+        self.assertEqual(observation['native_fit_completion_idle_seconds'], 130)
+        self.assertEqual(observation['new_native_returns_observed_between_samples'], 0)
+        self.assertEqual(observation['successful_work_counter_advance_count'], 2)
+
+    def test_attempts_failures_transfer_time_and_clock_do_not_hide_stall(self):
+        observer = ProgressObservation(0)
+        row = measurement()
+        observer.observe(row, 0)
+        row['s3']['instrumented_sources']['owned_market'].update(
+            s3_get_attempts=1000, failed_reads=1000, s3_transfer_seconds=1500,
+            at_utc='2026-11-13T03:00:00Z')
+        row['cpu_delta'] = {'used_core_equivalents': 12}
+        observation = observer.observe(row, 130)
+        self.assertEqual(observation['execution_idle_seconds'], 130)
+        self.assertEqual(observation['successful_work_counter_advances'], [])
+
+    def test_newly_reported_prior_receipt_establishes_only_baseline(self):
+        observer = ProgressObservation(0)
+        observer.observe(measurement(s3={}), 0)
+        observation = observer.observe(measurement(20000), 130)
+        self.assertEqual(observation['execution_idle_seconds'], 130)
+        self.assertFalse(observation['successful_work_counter_advance_observed'])
+
+    def test_counter_reset_is_not_a_successful_completion(self):
+        observer = ProgressObservation(0)
+        observer.observe(measurement(100), 0)
+        observation = observer.observe(measurement(2), 130)
+        self.assertEqual(observation['execution_idle_seconds'], 130)
+        self.assertEqual(observation['successful_work_counter_advance_count'], 0)
+        self.assertEqual(len(observation['successful_work_counter_resets']), 2)
+        observation = observer.observe(measurement(3), 131)
+        self.assertEqual(observation['execution_idle_seconds'], 0)
+
+    def test_overlapping_scopes_are_not_added_and_malformed_values_are_unknown(self):
+        row = measurement(5)
+        row['cache'] = {'live_instrumented_cache_sources': {'owned_market': {'counters': {
+            's3_gets_completed': 5, 's3_bytes': 50, 'bytes_read': True,
+            'files_hashed': float('nan'), 'bytes_hashed': -1}}}}
+        counters = successful_work_counters(row)
+        self.assertEqual(len(counters), 4)
+        self.assertEqual(sorted(counters.values()), [5, 5, 50, 50])
+        self.assertNotIn('total', counters)
+
+    def test_native_completion_has_an_independent_clock_and_preserves_missingness(self):
+        observer = ProgressObservation(0)
+        observer.observe(measurement(), 0)
+        row = measurement(20)
+        row['fits']['completed_native_fit_returns'] = 1
+        observation = observer.observe(row, 20)
+        self.assertEqual(observation['new_native_returns_observed_between_samples'], 1)
+        self.assertEqual(observation['native_fit_completion_idle_seconds'], 0)
+        observation = observer.observe(measurement(50, fits={'completed_native_fit_returns': 1}), 40)
+        self.assertEqual(observation['native_fit_completion_idle_seconds'], 20)
+        observation = observer.observe(measurement(60, fits={'completed_native_fit_returns': None}), 50)
+        self.assertIsNone(observation['completed_native_fit_returns'])
+        self.assertIsNone(observation['new_native_returns_observed_between_samples'])
+
+    def test_observation_does_not_mutate_saved_telemetry(self):
+        row = measurement(5)
+        prior = copy.deepcopy(row)
+        observer = ProgressObservation(0)
+        observer.observe(row, 0)
+        self.assertEqual(row, prior)
+
+    def test_backwards_observation_clock_fails_explicitly(self):
+        observer = ProgressObservation(0)
+        observer.observe(measurement(), 20)
+        with self.assertRaisesRegex(ValueError, 'MONOTONIC'):
+            observer.observe(measurement(), 19)
+
+
+class LiveChildProgressTests(unittest.TestCase):
+    def test_log_continues_while_real_child_stalls_then_fails_and_frames_are_scoped(self):
+        with tempfile.TemporaryDirectory() as directory:
+            prefix = Path(directory)/'execution'
+            observed_while_running = []
+            with LiveExecutionLog(prefix, project='nba', release='B082_ENGINEERING_TEST',
+                    interval=.05, stall_seconds=.12) as logger:
+                child = subprocess.Popen([sys.executable, '-u', '-c',
+                    "import sys,time;print('ENGINEERING_CHILD_STARTED');time.sleep(.6);"
+                    "print('ENGINEERING_CHILD_FAILURE',file=sys.stderr);sys.exit(7)"],
+                    stdout=subprocess.PIPE, stderr=subprocess.PIPE)
+                def read_during_child():
+                    time.sleep(.25)
+                    body = prefix.with_suffix('.log').read_text()
+                    observed_while_running.append(child.poll() is None and
+                        'ENGINEERING_CHILD_STARTED' in body and 'HEARTBEAT' in body)
+                reader = threading.Thread(target=read_during_child)
+                reader.start()
+                try:
+                    self.assertEqual(logger.supervise(child), 7)
+                finally:
+                    if child.poll() is None:
+                        child.terminate(); child.wait(timeout=3)
+                    reader.join(timeout=3)
+                    child.stdout.close(); child.stderr.close()
+            rows = [json.loads(line) for line in prefix.with_suffix('.jsonl').read_text().splitlines()]
+            self.assertEqual(observed_while_running, [True])
+            heartbeats = [r for r in rows if r['event'] == 'HEARTBEAT']
+            self.assertGreaterEqual(len(heartbeats), 4)
+            self.assertLess(logger.receipt()['maximum_observed_heartbeat_gap_seconds'], 15)
+            self.assertEqual(logger.receipt()['health_errors'], [])
+            self.assertIn('ENGINEERING_CHILD_FAILURE', prefix.with_suffix('.log').read_text())
+            stalls = [r['data'] for r in rows if r['event'] == 'STALLED_PROGRESS_DIAGNOSTIC']
+            self.assertGreaterEqual(len(stalls), 1)
+            for stall in stalls:
+                self.assertEqual(stall['thread_stack_scope'], 'LOGGER_PROCESS_ONLY')
+                self.assertFalse(stall['workload_python_stacks_observed'])
+                self.assertEqual(stall['workload_process_identity']['pid'], child.pid)
+                self.assertEqual(stall['owner_thread_stacks'], stall['observer_thread_stacks'])
+                self.assertFalse(stall['automatic_signal_or_training_kill'])
+            self.assertTrue(all(r['data']['measurements']['fits']['completed_native_fit_returns'] is None
+                                for r in heartbeats))
+
+
 if __name__ == '__main__':
     unittest.main()
