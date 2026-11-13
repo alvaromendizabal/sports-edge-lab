@@ -61,15 +61,17 @@ The prepared V7 continuation prioritizes current forecasts, restores exact old f
 
 **Sports Edge Lab** connects probabilistic sports modeling with reliable ML infrastructure: chronological training, immutable forecasts, matched market comparisons and recoverable cloud execution. Built by [Alvaro Mendizabal](https://github.com/alvaromendizabal).
 
-[**Latest NFL all-game research view →**](tracks/nfl/season_review_n082.html) · [Current NFL evidence](tracks/nfl/README.md) · [Dated hosted NFL snapshot](https://sports-edge-lab-nfl.alv-mendizabal.chatgpt.site/) (separate publication; not refreshed here) · [Five-minute technical review](docs/REVIEW_GUIDE.md) · [System design](docs/SYSTEM_DESIGN.md) · [Reproducibility boundary](docs/PUBLICATION_BOUNDARY.md)
+[**Latest NFL all-game research view →**](tracks/nfl/season_review_n083.html) · [Current NFL evidence](tracks/nfl/README.md) · [Dated hosted NFL snapshot](https://sports-edge-lab-nfl.alv-mendizabal.chatgpt.site/) (separate publication; not refreshed here) · [Five-minute technical review](docs/REVIEW_GUIDE.md) · [System design](docs/SYSTEM_DESIGN.md) · [Reproducibility boundary](docs/PUBLICATION_BOUNDARY.md)
 
 [**Open the FBS browser dashboard →**](https://sports-edge-lab-fbs.alv-mendizabal.chatgpt.site) · [FBS clock and coverage methodology](docs/fbs/SEASON_EXPLORER_2026-11-03.md) · [FBS source and model card](tracks/ncaaf/README.md)
 
 ## Current NFL evidence · November 12, 2026 Pacific
 
-The actual attempt began November 12 at 17:55:25 Pacific (November 13 at 01:55:25 UTC). **N081 failed after 112.956549 seconds with zero new fits, zero new forecasts and zero paid calls; owner research acceptance is false.** A release mismatch between the source writer and refresh collector stopped current source refresh before scientific execution. The [latest all-game research view](tracks/nfl/season_review_n082.html) displays that failure and retains the **N079 selected snapshot from November 12 at 23:22:35.281084 UTC** (15:22:35.281084 Pacific): all **272 saved games**, **136 finals**, **112 timed upcoming games**, **24 TBD games** and **448 selected outputs** with original clocks. Results and “upcoming” labels describe that saved census, not a live refresh.
+**Actual N082 completed 337 verified fits (324 native + 13 meta), 108 new candidate experiments and 216 frozen 2024/2025 scorecards.** None beat the preserved best on matched pooled selection cohorts. An earlier urgent stage failed, so whole-run fit counts remain unknown and owner acceptance remains false. Seven native optimizer calls overlapped; full-invocation mean CPU use was only 0.649 cores. Completed models, evaluations and persistent Parquet migration must be reused.
 
-The [current model card](tracks/nfl/CURRENT_MODEL_CARD.md) and [preserved N079 metrics](tracks/nfl/2026-11-12-n079-actual-n080-review.json) retain separate 2024–2026 metric-specific selections, former champions, operational fallbacks and exact-horizon descriptive leaders. Missing DraftKings, Kalshi and Polymarket comparisons remain explicit. No N082 owner-run science, execution speedup, rolling promotion or hosted-site update is claimed. [Authenticated N081 attempt status](tracks/nfl/2026-11-13-n081-actual-n082-status.json).
+The [latest NFL all-game research view](tracks/nfl/season_review_n083.html) preserves the exact **2026-11-13T04:18:31.686021+00:00** cutoff (November 12 at 20:18:31 Pacific): **272 games = 136 finals + one live + 111 confirmed future + 24 TBD**, with **444 selected outputs for all 111 genuinely upcoming timed games**. The live game keeps prior pregame issues. All **77 retained 2026 scorecards across 34 candidates** remain visible at separate exact horizons; the current 40-card export is an unchanged subset, so no new 2026 scoring is claimed. Prior selections and former champions remain explicit. [Current model card](tracks/nfl/CURRENT_MODEL_CARD.md) · [Execution and metric evidence](tracks/nfl/2026-11-13-n082-actual-n083-review.json).
+
+No new N083 owner result, sustained twelve-core fitting, rolling production promotion, fabricated market comparison or hosted-site refresh is claimed.
 
 <details>
 <summary>Preserved N076 NFL evidence · dated November 12 snapshot</summary>
@@ -156,7 +158,7 @@ a narrow missing-clock checkpoint repair.
 
 | Track | Entry point | Publication boundary |
 |---|---|---|
-| NFL | [Latest all-game view](tracks/nfl/season_review_n082.html) · [Current evidence](tracks/nfl/README.md) | Actual N081 failed: 0 new fits/forecasts/paid calls; preserved N079 snapshot at November 12, 23:22:35.281084 UTC, 448 selected rows across 112 games, all 272 saved games and separate metric-specific champions |
+| NFL | [Latest all-game view](tracks/nfl/season_review_n083.html) · [Current evidence](tracks/nfl/README.md) | Actual N082: 337 verified fits, 108 new candidates; acceptance incomplete. All 272 saved games, 111 upcoming games with 444 selected outputs, 77 retained exact-cohort scorecards and separate former/current roles |
 | NCAA FBS | [Browser dashboard](https://sports-edge-lab-fbs.alv-mendizabal.chatgpt.site) · [Track](tracks/ncaaf/README.md) | Actual V053 partial; V055 prepared; 500 saved issue contexts across 122 games, with dated provider coverage |
 | NBA | [Research view](docs/NBA_RESEARCH_CARD.md) | Separately dated basketball evidence |
 | NCAA basketball | [Open dashboards](https://alvaro-ncaa-research-review.alv-mendizabal.chatgpt.site/) · [Men's evidence](tracks/ncaam/README.md) · [Women's evidence](tracks/ncaaw/README.md) · [Runnable contracts](examples/ncaa_review/README.md) | Separate historical selections, current execution gaps and three-provider qualification |

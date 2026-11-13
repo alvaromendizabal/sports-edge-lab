@@ -1,3 +1,17 @@
+# Actual N082 update · November 12, 2026 Pacific
+
+[Latest all-game, metric and experiment review](season_review_n083.html) · [Authenticated aggregate evidence](2026-11-13-n082-actual-n083-review.json)
+
+The actual N082 owner run completed **337 verified fits (324 native + 13 meta)** and 108 new candidate experiments. Its 216 frozen 2024/2025 scorecards use exact one-hour cohorts; new candidates did not beat the preserved best on the matched pooled selections. Owner acceptance remains false, and the whole-run count remains unknown because an earlier urgent stage failed. No N083 owner result or independent rolling promotion is claimed.
+
+The current saved census is **272 games = 136 completed + one live + 111 confirmed future + 24 TBD**, at 2026-11-13T04:18:31.686021+00:00 (November 12 at 20:18:31 Pacific). Latest selected forecasts cover all 111 genuinely upcoming timed games with 444 rows; 888 unique issue events include later issues on the same pairs. The live game keeps earlier original issues only.
+
+**All 77 retained 2026 scorecards remain available.** The current export's 40 cards are unchanged matches to the earlier N079 evaluations; 37 additional cards, including 15 at the two-hour horizon, are preserved. Thus no newly scored 2026 case is claimed. The dashboard shows best values separately by exact horizon and cohort across 34 saved candidates, never across horizons or as an all-model global winner. All 27 prior N079 selection roles and 18 original former-role horizon gaps remain separate. Original model evidence below is retained verbatim.
+
+Seven native optimizer calls overlapped, but full-invocation mean CPU usage remained 0.649 cores. The 11.981-core retained instantaneous process-tree sample occurred after the final optimizer return and does not prove twelve-core fitting. Durable receipt bindings preserve all 337 completed models; this reporting audit did not download their remote model bodies. Current same-cutoff provider comparison cells remain unavailable.
+
+---
+
 # NFL latest attempt · N081 failed · November 12, 2026 Pacific
 
 [Latest all-game review](season_review_n082.html) · [Actual N081 status](2026-11-13-n081-actual-n082-status.json)
