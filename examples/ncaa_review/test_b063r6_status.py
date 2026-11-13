@@ -7,7 +7,9 @@ import re
 import unittest
 from unittest.mock import patch
 import b063r6_status as status
-from b063r7_status import strip_banner as strip_r7_banner
+from b063r7_status import strip_banner as strip_r7_only
+from b063r8_status import strip_banner as strip_r8_banner
+def strip_r7_banner(body):return strip_r7_only(strip_r8_banner(body))
 
 ROOT=Path(__file__).resolve().parents[2]
 DOC=ROOT/'docs/ncaa'
@@ -82,11 +84,11 @@ class B063R6PublicStatus(unittest.TestCase):
 
     def test_old_readme_and_browser_bytes_survive_one_new_layer(self):
         pins=self.data['source_attribution']['preserved_git_blobs']
-        body=(EX/'README.md').read_bytes().split(b'<!-- B063R7_STATUS_END -->\n\n',1)[1]
+        body=(EX/'README.md').read_bytes().split(b'<!-- B063R8_STATUS_END -->\n\n',1)[1].split(b'<!-- B063R7_STATUS_END -->\n\n',1)[1]
         self.assertTrue(body.startswith(b'<!-- B063R6_STATUS_START -->'))
         self.assertEqual(body.count(b'<!-- B063R6_STATUS_END -->\n\n'),1)
         self.assertEqual(blob(body.split(b'<!-- B063R6_STATUS_END -->\n\n',1)[1]),pins['examples/ncaa_review/README.md'])
-        body=(EX/'test_dashboard_browser.cjs').read_bytes().replace(b"    counts.b063r7Status = await require('./test_b063r7_status_browser.cjs').verifyR7(browser, path.join(root, 'docs/ncaa/b063r7.html'));\n",b'')
+        body=(EX/'test_dashboard_browser.cjs').read_bytes().replace(b"    counts.b063r8Status = await require('./test_b063r8_status_browser.cjs').verifyR8(browser, path.join(root, 'docs/ncaa/b063r8.html'));\n",b'').replace(b"    counts.b063r7Status = await require('./test_b063r7_status_browser.cjs').verifyR7(browser, path.join(root, 'docs/ncaa/b063r7.html'));\n",b'')
         self.assertEqual(body.count(R6_BROWSER_LINE),1)
         self.assertEqual(blob(body.replace(R6_BROWSER_LINE,b'')),pins['examples/ncaa_review/test_dashboard_browser.cjs'])
 

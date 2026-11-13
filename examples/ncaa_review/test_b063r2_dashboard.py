@@ -66,7 +66,8 @@ class EvidenceBoundaryTests(unittest.TestCase):
         from b063r5_status import strip_banner as strip_r5_banner
         from b063r6_status import strip_banner as strip_r6_banner
         from b063r7_status import strip_banner as strip_r7_banner
-        strip_latest_banner=lambda body:strip_r5_banner(strip_r6_banner(strip_r7_banner(body)))
+        from b063r8_status import strip_banner as strip_r8_banner
+        strip_latest_banner=lambda body:strip_r5_banner(strip_r6_banner(strip_r7_banner(strip_r8_banner(body))))
         page = strip_banner(strip_latest_banner((dashboard.ROOT / "docs/ncaa/index.html").read_text()))
         self.assertEqual(page.count(dashboard.BANNER), 1)
         previous = page.replace(dashboard.BANNER, "")

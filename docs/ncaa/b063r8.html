@@ -1,0 +1,917 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>NCAA B063R8 · Compute admission and verified live logs</title><meta name="description" content="Authenticated R7 resource wait, measured CPU and live logging, preserved NCAA metric leaders and qualified R8 continuation."><style>*{box-sizing:border-box}body{margin:0;background:#f5f4ee;color:#172b25;font:16px/1.6 system-ui,sans-serif}main{max-width:1120px;margin:auto;padding:34px 30px 48px}a{color:#116653;text-underline-offset:4px}a:focus-visible,summary:focus-visible{outline:3px solid #245e91;outline-offset:5px}header{display:flex;gap:20px;justify-content:space-between;align-items:center;border-bottom:1px solid #cdd9d0;padding-bottom:24px;font-size:13px}.brand{font-size:19px;font-weight:760;text-decoration:none;color:#17372c}.tag{margin:44px 0 12px;color:#66501e;font-weight:750;letter-spacing:.13em;text-transform:uppercase;font-size:12px}h1{font-size:clamp(36px,5.8vw,65px);line-height:1.08;letter-spacing:-.05em;max-width:930px;margin:0 0 22px}h1 span{color:#76551f}.intro{font-size:20px;color:#53675a;max-width:900px}.cards{display:grid;grid-template-columns:repeat(4,1fr);gap:14px;margin:30px 0}.card{padding:22px 18px;border:1px solid #c9d8cd;border-radius:14px;background:#fffefb}.card strong{display:block;font-size:35px;letter-spacing:-.04em;line-height:1.2}.card span{display:block;margin-top:10px;font-size:12px;color:#54695d}.notice{padding:21px 24px;background:#fff1d8;border:1px solid #dbc99f;border-radius:14px;margin:25px 0}.notice p{margin:7px 0}section{margin-top:40px}h2{font-size:27px;letter-spacing:-.035em;line-height:1.25}h3{font-size:18px;margin-top:0}.grid{display:grid;grid-template-columns:1fr 1fr;gap:18px}.panel{border:1px solid #cedbd1;border-radius:14px;background:#fffefb;padding:23px}.panel p:last-child{margin-bottom:0}.muted{font-size:14px;color:#596f61}details{border:1px solid #cbd9cf;background:#fffefb;border-radius:12px;padding:16px 20px;margin-top:20px}summary{font-weight:700;cursor:pointer}code{font-size:12px;overflow-wrap:anywhere;word-break:break-word}table{width:100%;border-collapse:collapse;font-size:13px}th,td{text-align:left;vertical-align:top;padding:12px 10px;border-bottom:1px solid #d3dfd6}th{background:#e7eee7;font-size:12px}td:last-child{overflow-wrap:anywhere;max-width:320px}table caption{text-align:left;font-weight:700;padding-bottom:12px}.table-wrap{overflow-x:auto;border:1px solid #cddbd1;border-radius:12px;background:#fffefb}ol{padding-left:24px}li{padding-bottom:10px}.links{display:flex;flex-wrap:wrap;gap:12px;margin:22px 0}.links a{display:inline-block;border:1px solid #c8d7cc;border-radius:8px;padding:10px 14px;font-size:13px;font-weight:700;text-decoration:none;background:#fffefb}.links a.primary{background:#135b48;color:white;border-color:#135b48}footer{border-top:1px solid #cdd9d0;margin-top:36px;padding-top:21px;color:#5b7163;font-size:12px}@media(max-width:650px){main{padding:24px 18px 34px}header{align-items:flex-start;flex-direction:column;gap:6px}.intro{font-size:17px}.cards{grid-template-columns:1fr 1fr}.card{padding:17px 14px}.card strong{font-size:29px}.grid{grid-template-columns:1fr}.tag{margin-top:34px}h1{font-size:40px}h2{font-size:24px}.notice{padding:18px}.panel{padding:20px}th,td{padding:10px 8px;font-size:12px}.table-wrap table{min-width:660px}}</style></head><body><main>
+<header><a class="brand" href="index.html">Sports Edge Lab / NCAA</a><span>November 13, 2026 · Operational evidence</span></header>
+<div class="tag">Latest authenticated return · R7</div><h1>The machine had spare CPU.<br><span>The shared gate admitted no workers.</span></h1>
+<p class="intro">118 resource decisions ended in the same host IO-pressure denial. The actual run spent 120.021 seconds waiting and produced zero new scientific fits. Its independent live logs now provide a measured account of that wait.</p>
+<div class="cards" id="r8-cards"><div class="card"><strong>118</strong><span>Shared admission decisions<br>all denied by host IO pressure</span></div><div class="card"><strong>0</strong><span>New scientific fits<br>zero scientific workers</span></div><div class="card"><strong>10.006s</strong><span>Maximum heartbeat gap<br>15 observed heartbeats</span></div><div class="card"><strong>R8</strong><span>Continuation prepared<br>owner acceptance pending</span></div></div>
+<aside class="notice" id="r8-scope"><p><strong>This return establishes an admission failure and working live observation.</strong> Startup tests, native preflight, scientific cache reuse, model fitting and forecast refresh were not entered. Preparation of the R8 continuation does not establish a successful owner run.</p><p>The returned recovery check reverified two old exact process identities as dead. It sent no new signals and required no new process-control action. Earlier deadlock repair, prior models and original issue clocks stay preserved.</p></aside>
+<section id="r8-admission"><h2>What kept all scientific workers idle</h2><div class="grid"><article class="panel"><h3>Repeated denial despite measured CPU headroom</h3><p>The 48-vCPU host supplied 117 ready CPU samples, with <strong>45.7175–46.9802 available cores</strong>. All 118 shared decisions reserved <strong>zero CPUs</strong>. Host IO full-pressure avg10 ranged from <strong>27.69% to 41.29%</strong>.</p><p>The scheduler requested one startup worker. Its measured capacity did not become a shared reservation. The 120-second wait budget expired before a scientific worker started.</p></article><article class="panel"><h3>The cost was time spent waiting</h3><p>The worker timer reports <strong>121.320827 seconds</strong>, including <strong>120.020539 seconds</strong> in admission. Admission used <strong>0.851888 CPU seconds</strong>, equivalent to about <strong>0.00710 core</strong> on average.</p><p>Available RAM remained 81.715–82.499 GB, with zero measured memory full-pressure. Free disk was 22.314–23.208 GB. Spare CPU by itself does not establish safe storage throughput.</p></article></div><details id="r8-clocks"><summary>Inspect cache, timing and cost boundaries</summary><p>Actual owner clocks: November 13, 2026, 17:30:21.381550–17:32:22.290844 UTC. The configured wait budget was 120 seconds; individual refresh calls took at most 0.072668 seconds. Independent counters use different intervals and are not added.</p><p>The scientific store was not initialized. Pre-science counters show zero historical full S3 GETs and zero byte-cache reuses, but these defaults do not measure all S3 operations. Return persistence is a separate transfer. No successful historical-cache rerun or measured cache hit rate is claimed.</p><p>Dollar cost remains unavailable because a current rate and attributable billing evidence were not verified. No infrastructure was added.</p></details></section>
+<section id="r8-logging"><h2>Live logging worked in the actual owner run</h2><div class="grid"><article class="panel"><h3>Both streams were captured and authenticated</h3><p>The per-run <code>LIVE_EXECUTION.jsonl</code> contains <strong>33 event records</strong> and 15 heartbeats. The paired human log contains the same 33 events over 93 physical lines. Their uncompressed captured sizes are 133,560 and 72,211 bytes.</p><p>The maximum monotonic heartbeat gap was <strong>10.005856 seconds</strong>. The independent watchdog recorded 13 samples, at most 10.000078 seconds apart. These are observed execution measurements, with zero scientific-fit credit.</p></article><article class="panel"><h3>The capture has an explicit end</h3><p>The final flush was acknowledged at publisher sequence 47. The returned bounded prefix omits none of the bytes observed at capture, and has no recorded validation errors.</p><p>Events after capture remain external. The prefix is not represented as the complete post-close owner log. No observation of a busy process is counted as a completed model fit.</p></article></div></section>
+<section id="r8-repair"><h2>The R8 continuation changes resource admission</h2><div class="grid"><article class="panel"><h3>Separate CPU work from bounded IO work</h3><p>Under moderate IO pressure, CPU admission and the IO lane budget are assessed separately. IO-intensive activity shares one aggregate lane per owner. Severe or unknown IO pressure continues to defer work.</p><p>CPU capacity, RAM, disk, sibling-owner fairness and exact lease ownership remain admission requirements. The policy does not treat spare CPU as proof of unconstrained storage capacity.</p></article><article class="panel"><h3>Grant measured demand without a serial ramp</h3><p>A safe measured grant can cover the pending independent work up to the twelve-core project cap in one decision. This replaces repeated one-slot growth when sufficient capacity and valid demand already exist.</p><p>The package also adopts the current shared logger’s explicit fit-count scope and measured process IDs in human logs. The matching generic tests remain bound to that dated source.</p><p>Actual scientific workers, overlapping fits, CPU use, throughput, warm-cache behavior and resumption still require returned owner evidence. No R8 sports-model fit is claimed here.</p></article></div><details id="r8-engineering"><summary>Inspect the sealed source and verification scope</summary><p id="r8-tests">The final sealed replacement passed 697 unique targeted engineering cases. Cold startup executed 157 prerequisite cases in 2.921505 seconds; its warm check reused all 157 with zero case reexecution in 0.589821 seconds. Native validation measured 4.940964 seconds cold and 1.999462 seconds warm, reusing eleven fixture contracts with zero warm producer calls. A twelve-process engineering stress saved and resumed 384 contracts with zero resumed producer calls; its measured CPU peak was 6.322002 cores, not a twelve-core sports acceptance result. Three identical callback regressions failed on the prior code and passed on the repair; these cases are already included in the 697. Historical resource-input replay covers 118 observations and two complete snapshots without production-speedup credit. Seven fitted scientific identity families remain unchanged; the protected execution family changes explicitly. These checks receive zero new sports-fit credit. R8 owner execution, scientific throughput, production historical-cache reuse and a complete season refresh remain unverified.</p><p>Prepared source SHA-256: <code id="r8-source">f45ab01b74fd2a67639f90d9933c032a851173e8d1b4d9c20f1b955f50f73235</code>.</p><p>Engineering validation and preserved checkpoint authentication receive zero new sports-fit credit.</p></details></section>
+<section id="r8-preservation"><h2>Former and current research remains inspectable</h2><p>The stalled R3 recovery capsule still contains <strong>22 committed target fits and 134 authenticated content objects</strong>. The separately preserved B062 catalog retains <strong>115 target-fit receipts and 2,793 terminal references</strong>. These are different run-scoped inventories; they are not added into a claimed unique total. Reopening the catalogs does not establish that every referenced model body was reloaded.</p><p>The seven scientific identity families with preserved fits remain unchanged. The repaired execution family receives a new identity; earlier checkpoint records keep their original identities and are not relabeled to force compatibility.</p><p>The dated public scientific table retains <strong>164 historical candidate panels, 28 per-season leaders, 14 pooled metric roles and 14 observed current-season replay leaders</strong>. Its evidence clock remains November 11, 2026, 22:39:45 UTC.</p><div class="links"><a class="primary" href="b063r2.html">Open historical, current and rolling comparison</a><a href="index.html">Open all preserved NCAA evidence</a><a href="b063r7.html">Inspect the dated R7 preparation</a></div>
+<div class="table-wrap"><table id="r8-leaders"><caption>Saved 2026–27 descriptive replay leaders · no new selection or promotion</caption><thead><tr><th>League</th><th>Metric</th><th>Saved value</th><th>Games</th><th>Retained public model alias</th></tr></thead><tbody><tr><td>Men</td><td>accuracy</td><td>0.807143</td><td>420</td><td>B003-original / current-observed-ncaam-win-009d20f3</td></tr><tr><td>Men</td><td>log loss</td><td>0.393850</td><td>420</td><td>current-observed-ncaam-win-39bdbd9b</td></tr><tr><td>Men</td><td>brier</td><td>0.127127</td><td>420</td><td>current-observed-ncaam-win-39bdbd9b</td></tr><tr><td>Men</td><td>margin mae</td><td>10.442248</td><td>420</td><td>current-observed-ncaam-margin-39bdbd9b</td></tr><tr><td>Men</td><td>margin rmse</td><td>13.241315</td><td>420</td><td>current-observed-ncaam-margin-39bdbd9b</td></tr><tr><td>Men</td><td>total mae</td><td>13.936397</td><td>420</td><td>current-observed-ncaam-total-39bdbd9b</td></tr><tr><td>Men</td><td>total rmse</td><td>17.407216</td><td>420</td><td>current-observed-ncaam-total-39bdbd9b</td></tr><tr><td>Women</td><td>accuracy</td><td>0.858561</td><td>403</td><td>current-observed-ncaaw-win-9fe75806</td></tr><tr><td>Women</td><td>log loss</td><td>0.308564</td><td>403</td><td>current-observed-ncaaw-win-12dc8c2d</td></tr><tr><td>Women</td><td>brier</td><td>0.099151</td><td>403</td><td>current-observed-ncaaw-win-009d20f3</td></tr><tr><td>Women</td><td>margin mae</td><td>12.462372</td><td>403</td><td>current-observed-ncaaw-margin-7b88b66b</td></tr><tr><td>Women</td><td>margin rmse</td><td>16.100637</td><td>403</td><td>current-observed-ncaaw-margin-7b88b66b</td></tr><tr><td>Women</td><td>total mae</td><td>14.277968</td><td>403</td><td>current-observed-ncaaw-total-2fde92b8</td></tr><tr><td>Women</td><td>total rmse</td><td>17.880689</td><td>403</td><td>current-observed-ncaaw-total-7371d966</td></tr></tbody></table></div><p class="muted">Men: 420 games. Women: 403 games. These are exposed retrospective reconstructions on the saved populations, not prospective performance or a certified complete current season. Accuracy is higher-is-better; the six loss and point-error metrics are lower-is-better. Display rounding does not recompute the original metrics.</p></section>
+<section id="r8-market"><h2>Quotes and schedule gaps remain explicit</h2><p>The saved market comparisons contain no qualified positive matched rows for DraftKings US, Kalshi US or Polymarket US. Polymarket International has bounded men's retrospective comparisons, with at most 338 matched games in one comparison. Repeated candidate comparisons are not unique market coverage or a prospective market-win claim.</p><p>The earlier census contains 3,457 source records, not a certified count of unique current-season games. The separately preserved selected-original recovery contains 90 target rows for 30 games, with original issue clocks. No provider refresh, new upcoming forecast or complete-season schedule refresh occurred in R7.</p><ol><li>Resume compatible saved fits and persistent cached inputs after the repaired admission gates pass.</li><li>Measure simultaneous scientific fits and throughput across the safely available twelve-core project allocation.</li><li>Refresh every eligible current-season and upcoming game, outcomes and genuinely time-matched provider evidence.</li><li>Reevaluate former, current and rolling metric champions on all required seasons without rewriting earlier issue clocks.</li></ol><div class="links"><a id="r8-download" href="data/B063R8_PUBLIC_STATUS.json" download>Download exact status and retained leader JSON</a></div></section>
+<footer id="r8-publication">Sanitized operational evidence and dated aggregate science. Source publication is separate from website deployment. Current FBS/shared logging changes and other sports' evidence remain preserved. No new scores, market quotes, forecasts or full-season coverage are claimed.</footer>
+<script id="b063r8-data" type="application/json">{
+  "schema": "sel.ncaa.b063r8.public_status.v1",
+  "updated_at_utc": "2026-11-13T17:32:22.290844+00:00",
+  "latest_actual_owner": {
+    "release": "B063R7",
+    "status": "RESOURCE_DEFERRED_PARTIAL_WORK_PRESERVED",
+    "failure_code": "V7_INITIAL_SHARED_LEASE_UNAVAILABLE",
+    "started_at_utc": "2026-11-13T17:30:21.381550+00:00",
+    "completed_at_utc": "2026-11-13T17:32:22.290844+00:00",
+    "worker_elapsed_seconds": 121.32082730900038,
+    "admission_phase_seconds": 120.02053888299997,
+    "new_owner_fits": 0,
+    "scientific_fit_attempts": 0,
+    "reused_scientific_fits": 0,
+    "failed_scientific_fits": 0,
+    "new_checkpoints": 0,
+    "reused_checkpoints": 0,
+    "new_forecasts": 0,
+    "new_metric_scores": 0,
+    "new_market_quotes": 0,
+    "native_preflight_entered": false,
+    "selftests_entered": false,
+    "durable_return_verified": true,
+    "full_scientific_run_completed": false
+  },
+  "actual_admission": {
+    "reason_counts": {
+      "IO_FULL_PRESSURE": 118
+    },
+    "decisions": 118,
+    "terminal_reason": "WAIT_BUDGET_EXHAUSTED",
+    "effective_vcpus": 48.0,
+    "project_cpu_cap": 12,
+    "requested_startup_workers": 1,
+    "reserved_cpus": 0,
+    "cpu_ready_observations": 117,
+    "cpu_unready_observations": 1,
+    "wait_budget_seconds": 120,
+    "wait_elapsed_seconds": 120.0001510230004,
+    "maximum_refresh_seconds": 0.0726679690005767,
+    "observation_bounds": {
+      "available_cpu_cores": {
+        "maximum": 46.98019801980198,
+        "minimum": 45.717489343521706,
+        "observations": 117
+      },
+      "available_memory_bytes": {
+        "maximum": 82498920448,
+        "minimum": 81715310592,
+        "observations": 118
+      },
+      "cpu_some_avg10": {
+        "maximum": 0.46,
+        "minimum": 0.0,
+        "observations": 118
+      },
+      "disk_free_bytes": {
+        "maximum": 23207579648,
+        "minimum": 22314283008,
+        "observations": 118
+      },
+      "io_full_avg10": {
+        "maximum": 41.29,
+        "minimum": 27.69,
+        "observations": 118
+      },
+      "memory_full_avg10": {
+        "maximum": 0.0,
+        "minimum": 0.0,
+        "observations": 118
+      }
+    },
+    "available_CPU_is_safe_IO_capacity": false,
+    "resource_guards_relaxed": false,
+    "foreign_processes_signaled": 0
+  },
+  "actual_observer": {
+    "literal_LIVE_EXECUTION_files_present": true,
+    "JSONL_rows": 33,
+    "human_event_records": 33,
+    "human_physical_lines": 93,
+    "heartbeats": 15,
+    "maximum_monotonic_heartbeat_gap_seconds": 10.005855937999513,
+    "watchdog_samples": 13,
+    "watchdog_maximum_gap_seconds": 10.000078078000115,
+    "heartbeat_interval_verified": true,
+    "terminal_flush_acknowledged": true,
+    "terminal_publisher_sequence": 47,
+    "capture_status": "VERIFIED_BOUNDED_PREFIX",
+    "observed_bytes_omitted": 0,
+    "complete_terminal_log_claimed": false,
+    "post_capture_events_remain_external": true,
+    "JSONL_uncompressed_bytes": 133560,
+    "human_log_uncompressed_bytes": 72211,
+    "scientific_workers": 0,
+    "twelve_core_scientific_acceptance_proven": false,
+    "admission_owner_CPU_seconds": 0.8518880000000001,
+    "admission_average_CPU_cores": 0.007097851817099813,
+    "ledger_peak_observed_CPU_cores": 0.014977155678433418,
+    "owner_whole_run_average_CPU_cores": 0.016711681989874307,
+    "whole_run_RSS_peak_bytes": 119013376,
+    "sampling_scopes_are_not_added": true
+  },
+  "actual_recovery": {
+    "status": "PRIOR_PINNED_R3_RECOVERY_REVERIFIED",
+    "safe_to_launch": true,
+    "unique_old_exact_identities_rechecked_dead": 2,
+    "boot_changed_from_old_R3": true,
+    "process_control_required": false,
+    "new_signals_sent": 0,
+    "new_lease_releases_claimed": false,
+    "foreign_owners_untouched": true,
+    "observation_is_fresh_remote_inspection_by_this_review": false
+  },
+  "actual_cache_and_cost": {
+    "pre_science_reported_full_S3_GETs": 0,
+    "pre_science_reported_byte_cache_reuses": 0,
+    "store_initialized": false,
+    "historical_cache_benchmark_exercised": false,
+    "zero_defaults_measure_all_S3_calls": false,
+    "return_persistence_is_separate": true,
+    "new_infrastructure": false,
+    "estimated_cost_usd": null,
+    "cost_status": "UNVERIFIED_NO_CURRENT_INSTANCE_RATE_OR_BILLING_ASSUMED",
+    "observed_instance_wall_seconds": 121.15362071600066
+  },
+  "preserved_evidence": {
+    "authenticated_prior_target_fits": 22,
+    "exact_content_objects_reverified": 134,
+    "model_deserializations_in_review": 0,
+    "new_fit_credit_for_preservation": 0,
+    "previous_public_science_and_issue_clocks_unchanged": true,
+    "prior_release": "B063R3",
+    "scientific_runtime_compatibility_still_required": true,
+    "broader_B062_target_fit_receipts": 115,
+    "broader_B062_terminal_commit_references": 2793,
+    "distinct_run_inventories_summed": false,
+    "all_broader_model_bytes_reopened": false,
+    "capsule_content_bytes_reverified": 3553676
+  },
+  "preserved_science": {
+    "current_observed_replay_leaders": [
+      {
+        "candidate_track_count": 21,
+        "cohort_sha256": "c9e3db59ffc3588181707fc2fb2814c0ab3f26264b2ecad0a42f3f3994664b47",
+        "evaluation_mode": "retrospective_reconstructed",
+        "full_official_season_coverage_certified": false,
+        "games": 420,
+        "league": "ncaam",
+        "metric": "accuracy",
+        "metric_name_for_display": "accuracy",
+        "model_names": [
+          "B003 original frozen model",
+          "current-observed-ncaam-win-009d20f3"
+        ],
+        "model_track_count": 3,
+        "public_model_ids": [
+          "B003-original",
+          "current-observed-ncaam-win-009d20f3"
+        ],
+        "season": "2026-27",
+        "season_end_year": 2027,
+        "selection_or_promotion_authority": false,
+        "status": "EXPOSED_DESCRIPTIVE_CURRENT_MONITORING_LEADER",
+        "target": "win",
+        "value": 0.8071428571428572
+      },
+      {
+        "candidate_track_count": 21,
+        "cohort_sha256": "c9e3db59ffc3588181707fc2fb2814c0ab3f26264b2ecad0a42f3f3994664b47",
+        "evaluation_mode": "retrospective_reconstructed",
+        "full_official_season_coverage_certified": false,
+        "games": 420,
+        "league": "ncaam",
+        "metric": "log_loss",
+        "metric_name_for_display": "log_loss",
+        "model_names": [
+          "current-observed-ncaam-win-39bdbd9b"
+        ],
+        "model_track_count": 2,
+        "public_model_ids": [
+          "current-observed-ncaam-win-39bdbd9b"
+        ],
+        "season": "2026-27",
+        "season_end_year": 2027,
+        "selection_or_promotion_authority": false,
+        "status": "EXPOSED_DESCRIPTIVE_CURRENT_MONITORING_LEADER",
+        "target": "win",
+        "value": 0.39384987932977233
+      },
+      {
+        "candidate_track_count": 21,
+        "cohort_sha256": "c9e3db59ffc3588181707fc2fb2814c0ab3f26264b2ecad0a42f3f3994664b47",
+        "evaluation_mode": "retrospective_reconstructed",
+        "full_official_season_coverage_certified": false,
+        "games": 420,
+        "league": "ncaam",
+        "metric": "brier",
+        "metric_name_for_display": "brier",
+        "model_names": [
+          "current-observed-ncaam-win-39bdbd9b"
+        ],
+        "model_track_count": 2,
+        "public_model_ids": [
+          "current-observed-ncaam-win-39bdbd9b"
+        ],
+        "season": "2026-27",
+        "season_end_year": 2027,
+        "selection_or_promotion_authority": false,
+        "status": "EXPOSED_DESCRIPTIVE_CURRENT_MONITORING_LEADER",
+        "target": "win",
+        "value": 0.1271268885699531
+      },
+      {
+        "candidate_track_count": 15,
+        "cohort_sha256": "c9e3db59ffc3588181707fc2fb2814c0ab3f26264b2ecad0a42f3f3994664b47",
+        "evaluation_mode": "retrospective_reconstructed",
+        "full_official_season_coverage_certified": false,
+        "games": 420,
+        "league": "ncaam",
+        "metric": "mae",
+        "metric_name_for_display": "margin_mae",
+        "model_names": [
+          "current-observed-ncaam-margin-39bdbd9b"
+        ],
+        "model_track_count": 2,
+        "public_model_ids": [
+          "current-observed-ncaam-margin-39bdbd9b"
+        ],
+        "season": "2026-27",
+        "season_end_year": 2027,
+        "selection_or_promotion_authority": false,
+        "status": "EXPOSED_DESCRIPTIVE_CURRENT_MONITORING_LEADER",
+        "target": "margin",
+        "value": 10.442247534726475
+      },
+      {
+        "candidate_track_count": 15,
+        "cohort_sha256": "c9e3db59ffc3588181707fc2fb2814c0ab3f26264b2ecad0a42f3f3994664b47",
+        "evaluation_mode": "retrospective_reconstructed",
+        "full_official_season_coverage_certified": false,
+        "games": 420,
+        "league": "ncaam",
+        "metric": "rmse",
+        "metric_name_for_display": "margin_rmse",
+        "model_names": [
+          "current-observed-ncaam-margin-39bdbd9b"
+        ],
+        "model_track_count": 2,
+        "public_model_ids": [
+          "current-observed-ncaam-margin-39bdbd9b"
+        ],
+        "season": "2026-27",
+        "season_end_year": 2027,
+        "selection_or_promotion_authority": false,
+        "status": "EXPOSED_DESCRIPTIVE_CURRENT_MONITORING_LEADER",
+        "target": "margin",
+        "value": 13.241315315172258
+      },
+      {
+        "candidate_track_count": 15,
+        "cohort_sha256": "c9e3db59ffc3588181707fc2fb2814c0ab3f26264b2ecad0a42f3f3994664b47",
+        "evaluation_mode": "retrospective_reconstructed",
+        "full_official_season_coverage_certified": false,
+        "games": 420,
+        "league": "ncaam",
+        "metric": "mae",
+        "metric_name_for_display": "total_mae",
+        "model_names": [
+          "current-observed-ncaam-total-39bdbd9b"
+        ],
+        "model_track_count": 2,
+        "public_model_ids": [
+          "current-observed-ncaam-total-39bdbd9b"
+        ],
+        "season": "2026-27",
+        "season_end_year": 2027,
+        "selection_or_promotion_authority": false,
+        "status": "EXPOSED_DESCRIPTIVE_CURRENT_MONITORING_LEADER",
+        "target": "total",
+        "value": 13.936397219009512
+      },
+      {
+        "candidate_track_count": 15,
+        "cohort_sha256": "c9e3db59ffc3588181707fc2fb2814c0ab3f26264b2ecad0a42f3f3994664b47",
+        "evaluation_mode": "retrospective_reconstructed",
+        "full_official_season_coverage_certified": false,
+        "games": 420,
+        "league": "ncaam",
+        "metric": "rmse",
+        "metric_name_for_display": "total_rmse",
+        "model_names": [
+          "current-observed-ncaam-total-39bdbd9b"
+        ],
+        "model_track_count": 2,
+        "public_model_ids": [
+          "current-observed-ncaam-total-39bdbd9b"
+        ],
+        "season": "2026-27",
+        "season_end_year": 2027,
+        "selection_or_promotion_authority": false,
+        "status": "EXPOSED_DESCRIPTIVE_CURRENT_MONITORING_LEADER",
+        "target": "total",
+        "value": 17.407215598595066
+      },
+      {
+        "candidate_track_count": 21,
+        "cohort_sha256": "8992b5db2704a14f34fca688ea238e8338abbfc1d67df11e1575c2b850c50de4",
+        "evaluation_mode": "retrospective_reconstructed",
+        "full_official_season_coverage_certified": false,
+        "games": 403,
+        "league": "ncaaw",
+        "metric": "accuracy",
+        "metric_name_for_display": "accuracy",
+        "model_names": [
+          "current-observed-ncaaw-win-9fe75806"
+        ],
+        "model_track_count": 1,
+        "public_model_ids": [
+          "current-observed-ncaaw-win-9fe75806"
+        ],
+        "season": "2026-27",
+        "season_end_year": 2027,
+        "selection_or_promotion_authority": false,
+        "status": "EXPOSED_DESCRIPTIVE_CURRENT_MONITORING_LEADER",
+        "target": "win",
+        "value": 0.858560794044665
+      },
+      {
+        "candidate_track_count": 21,
+        "cohort_sha256": "8992b5db2704a14f34fca688ea238e8338abbfc1d67df11e1575c2b850c50de4",
+        "evaluation_mode": "retrospective_reconstructed",
+        "full_official_season_coverage_certified": false,
+        "games": 403,
+        "league": "ncaaw",
+        "metric": "log_loss",
+        "metric_name_for_display": "log_loss",
+        "model_names": [
+          "current-observed-ncaaw-win-12dc8c2d"
+        ],
+        "model_track_count": 2,
+        "public_model_ids": [
+          "current-observed-ncaaw-win-12dc8c2d"
+        ],
+        "season": "2026-27",
+        "season_end_year": 2027,
+        "selection_or_promotion_authority": false,
+        "status": "EXPOSED_DESCRIPTIVE_CURRENT_MONITORING_LEADER",
+        "target": "win",
+        "value": 0.30856380746479206
+      },
+      {
+        "candidate_track_count": 21,
+        "cohort_sha256": "8992b5db2704a14f34fca688ea238e8338abbfc1d67df11e1575c2b850c50de4",
+        "evaluation_mode": "retrospective_reconstructed",
+        "full_official_season_coverage_certified": false,
+        "games": 403,
+        "league": "ncaaw",
+        "metric": "brier",
+        "metric_name_for_display": "brier",
+        "model_names": [
+          "current-observed-ncaaw-win-009d20f3"
+        ],
+        "model_track_count": 2,
+        "public_model_ids": [
+          "current-observed-ncaaw-win-009d20f3"
+        ],
+        "season": "2026-27",
+        "season_end_year": 2027,
+        "selection_or_promotion_authority": false,
+        "status": "EXPOSED_DESCRIPTIVE_CURRENT_MONITORING_LEADER",
+        "target": "win",
+        "value": 0.09915107217789698
+      },
+      {
+        "candidate_track_count": 17,
+        "cohort_sha256": "8992b5db2704a14f34fca688ea238e8338abbfc1d67df11e1575c2b850c50de4",
+        "evaluation_mode": "retrospective_reconstructed",
+        "full_official_season_coverage_certified": false,
+        "games": 403,
+        "league": "ncaaw",
+        "metric": "mae",
+        "metric_name_for_display": "margin_mae",
+        "model_names": [
+          "current-observed-ncaaw-margin-7b88b66b"
+        ],
+        "model_track_count": 2,
+        "public_model_ids": [
+          "current-observed-ncaaw-margin-7b88b66b"
+        ],
+        "season": "2026-27",
+        "season_end_year": 2027,
+        "selection_or_promotion_authority": false,
+        "status": "EXPOSED_DESCRIPTIVE_CURRENT_MONITORING_LEADER",
+        "target": "margin",
+        "value": 12.462371732657212
+      },
+      {
+        "candidate_track_count": 17,
+        "cohort_sha256": "8992b5db2704a14f34fca688ea238e8338abbfc1d67df11e1575c2b850c50de4",
+        "evaluation_mode": "retrospective_reconstructed",
+        "full_official_season_coverage_certified": false,
+        "games": 403,
+        "league": "ncaaw",
+        "metric": "rmse",
+        "metric_name_for_display": "margin_rmse",
+        "model_names": [
+          "current-observed-ncaaw-margin-7b88b66b"
+        ],
+        "model_track_count": 2,
+        "public_model_ids": [
+          "current-observed-ncaaw-margin-7b88b66b"
+        ],
+        "season": "2026-27",
+        "season_end_year": 2027,
+        "selection_or_promotion_authority": false,
+        "status": "EXPOSED_DESCRIPTIVE_CURRENT_MONITORING_LEADER",
+        "target": "margin",
+        "value": 16.100636813432793
+      },
+      {
+        "candidate_track_count": 17,
+        "cohort_sha256": "8992b5db2704a14f34fca688ea238e8338abbfc1d67df11e1575c2b850c50de4",
+        "evaluation_mode": "retrospective_reconstructed",
+        "full_official_season_coverage_certified": false,
+        "games": 403,
+        "league": "ncaaw",
+        "metric": "mae",
+        "metric_name_for_display": "total_mae",
+        "model_names": [
+          "current-observed-ncaaw-total-2fde92b8"
+        ],
+        "model_track_count": 2,
+        "public_model_ids": [
+          "current-observed-ncaaw-total-2fde92b8"
+        ],
+        "season": "2026-27",
+        "season_end_year": 2027,
+        "selection_or_promotion_authority": false,
+        "status": "EXPOSED_DESCRIPTIVE_CURRENT_MONITORING_LEADER",
+        "target": "total",
+        "value": 14.277967775171854
+      },
+      {
+        "candidate_track_count": 17,
+        "cohort_sha256": "8992b5db2704a14f34fca688ea238e8338abbfc1d67df11e1575c2b850c50de4",
+        "evaluation_mode": "retrospective_reconstructed",
+        "full_official_season_coverage_certified": false,
+        "games": 403,
+        "league": "ncaaw",
+        "metric": "rmse",
+        "metric_name_for_display": "total_rmse",
+        "model_names": [
+          "current-observed-ncaaw-total-7371d966"
+        ],
+        "model_track_count": 2,
+        "public_model_ids": [
+          "current-observed-ncaaw-total-7371d966"
+        ],
+        "season": "2026-27",
+        "season_end_year": 2027,
+        "selection_or_promotion_authority": false,
+        "status": "EXPOSED_DESCRIPTIVE_CURRENT_MONITORING_LEADER",
+        "target": "total",
+        "value": 17.880689486409636
+      }
+    ],
+    "earlier_source_census": {
+      "census_asof_utc": "2026-11-11T06:02:54.852518+00:00",
+      "coverage": {
+        "certified_complete_season_denominator": false,
+        "normalized_espn_records": 2498,
+        "normalized_observed_completed_records": 1165,
+        "observed_records": 3457,
+        "original_reference_scored_games": 814,
+        "unit": "SOURCE_RECORDS_NOT_CERTIFIED_UNIQUE_GAMES",
+        "unmatched_official_candidates": 934,
+        "unresolved_candidates": 25
+      },
+      "evidence_asof_utc": "2026-11-11T06:29:49.601626+00:00",
+      "is_same_population_as_latest_replay": false,
+      "source_counts": {
+        "cohorts": {
+          "ncaam|OBSERVED_SOURCE_GAME_WITHOUT_BOUND_MODEL_ROW": 1252,
+          "ncaam|UNMATCHED_OFFICIAL_CANDIDATE_RECORD": 527,
+          "ncaam|UNRESOLVED_SOURCE_CANDIDATE_RECORD": 21,
+          "ncaaw|OBSERVED_SOURCE_GAME_WITHOUT_BOUND_MODEL_ROW": 1246,
+          "ncaaw|UNMATCHED_OFFICIAL_CANDIDATE_RECORD": 407,
+          "ncaaw|UNRESOLVED_SOURCE_CANDIDATE_RECORD": 4
+        },
+        "completed_observed_records": 1547,
+        "distinct_source_event_ids": 3457,
+        "new_issues_in_this_pre_model_census": 0,
+        "normalized_espn_games": 2498,
+        "observed_records": 3457,
+        "provider_status_counts": {
+          "draftkings": {
+            "margin": {
+              "unavailable": 3457
+            },
+            "total": {
+              "unavailable": 3457
+            },
+            "win": {
+              "unavailable": 3457
+            }
+          },
+          "kalshi": {
+            "margin": {
+              "unavailable": 3457
+            },
+            "total": {
+              "unavailable": 3457
+            },
+            "win": {
+              "unavailable": 3457
+            }
+          },
+          "polymarket": {
+            "margin": {
+              "unavailable": 3457
+            },
+            "total": {
+              "unavailable": 3457
+            },
+            "win": {
+              "unavailable": 3457
+            }
+          }
+        },
+        "unmatched_official_candidates": 934,
+        "unresolved_source_candidates": 25
+      }
+    },
+    "evidence_asof": "2026-11-11T22:39:45.642794+00:00",
+    "historical_candidate_metric_panels": 164,
+    "historical_per_season_leaders": 28,
+    "historical_pooled_leaders": 14,
+    "provider_coverage": [
+      {
+        "candidate_comparisons": 321,
+        "evidence_modes": [],
+        "games_counted_across_models_not_unique_coverage": true,
+        "gap_occurrences_across_candidate_comparisons": {
+          "live_quote_not_pregame": 315,
+          "missing_or_incompatible_settlement_rule": 2261,
+          "prospective_quote_acquired_after_cutoff": 462,
+          "provider_quote_missing": 15795,
+          "quote_after_cutoff": 462,
+          "quote_exceeds_declared_max_age": 1799
+        },
+        "maximum_matched_games_in_one_comparison": 0,
+        "missing_evidence_is_not_zero_error": true,
+        "positive_candidate_comparisons": 0,
+        "provider_product": "draftkings_us",
+        "qualified_positive_leagues": []
+      },
+      {
+        "candidate_comparisons": 321,
+        "evidence_modes": [],
+        "games_counted_across_models_not_unique_coverage": true,
+        "gap_occurrences_across_candidate_comparisons": {
+          "provider_quote_missing": 18056
+        },
+        "maximum_matched_games_in_one_comparison": 0,
+        "missing_evidence_is_not_zero_error": true,
+        "positive_candidate_comparisons": 0,
+        "provider_product": "kalshi_us",
+        "qualified_positive_leagues": []
+      },
+      {
+        "candidate_comparisons": 321,
+        "evidence_modes": [],
+        "games_counted_across_models_not_unique_coverage": true,
+        "gap_occurrences_across_candidate_comparisons": {
+          "provider_quote_missing": 18056
+        },
+        "maximum_matched_games_in_one_comparison": 0,
+        "missing_evidence_is_not_zero_error": true,
+        "positive_candidate_comparisons": 0,
+        "provider_product": "polymarket_us",
+        "qualified_positive_leagues": []
+      },
+      {
+        "candidate_comparisons": 321,
+        "evidence_modes": [
+          "retrospective_reconstructed"
+        ],
+        "games_counted_across_models_not_unique_coverage": true,
+        "gap_occurrences_across_candidate_comparisons": {
+          "provider_quote_missing": 10554,
+          "quote_exceeds_declared_max_age": 63
+        },
+        "maximum_matched_games_in_one_comparison": 338,
+        "missing_evidence_is_not_zero_error": true,
+        "positive_candidate_comparisons": 139,
+        "provider_product": "polymarket_international",
+        "qualified_positive_leagues": [
+          "ncaam"
+        ]
+      }
+    ],
+    "schema": "sel.r8.preserved_public_science_inventory.v1",
+    "scope": "PREVIOUSLY_VALIDATED_SAVED_EVIDENCE_RETAINED_EXACTLY; NOT_NEW_R7_OR_R8_SCIENCE",
+    "scope_notes": [
+      "Historical seasonal panel now includes all 12 retained recipes plus selected native candidates. It does not rank all 6320 registered contexts.",
+      "Pooled and per-season descriptive roles are distinct; no current-season outcomes selected historical recipes.",
+      "2026-27 replay support is 420 men / 403 women games through saved evidence, not the entire official season to today.",
+      "Original B003 comparable 2024-25/2025-26 panels remain missing.",
+      "No qualified positive DraftKings US, Kalshi US, or Polymarket US paired panel; qualified men Polymarket International panel has 338 games and only 3 week blocks.",
+      "Post-issue outcome monitoring remains separate from replay; neither changes immutable original forecast values or timestamps."
+    ],
+    "selected_original_recovery": {
+      "asof_utc": "2026-11-12T17:45:02.032086+00:00",
+      "complete_current_season": false,
+      "new_upcoming_forecasts": 0,
+      "selected_original_rows": 90,
+      "selected_recovery": {
+        "complete_official_current_schedule_coverage": false,
+        "current_outcome_status": "NOT_REFRESHED; ORIGINAL NOVEMBER11 EVENT TIMES ARE PAST AT RECOVERY",
+        "currently_upcoming_coverage_claimed": false,
+        "cutoff_to_tip_minutes": 60,
+        "earlier_matching_role_versions_retained_privately": 180,
+        "early_matches_to_new_frozen_core_or_fixed_ensemble_roles": 0,
+        "event_times": [
+          "2026-11-11T23:00:00+00:00",
+          "2026-11-11T23:30:00+00:00"
+        ],
+        "exact_prepared_display_matches": 90,
+        "first_issued_at": "2026-11-11T21:40:48.016082+00:00",
+        "last_issued_at": "2026-11-11T21:41:47.452268+00:00",
+        "matching_preserved_role_original_versions": 270,
+        "new_B063_issues": 0,
+        "new_fits": 0,
+        "new_promotions": 0,
+        "nonselected_candidate_rows_retained_privately": 1769,
+        "original_issue_to_tip_minutes_max": 109.19973196666666,
+        "original_issue_to_tip_minutes_min": 78.20912886666666,
+        "overlap_with_existing142_published_issues": 0,
+        "projected_public_issue_rows_after_merge": 232,
+        "publication_scope": "Only these 90 selected-role rows may enter the public dashboard. The full 2,039-row candidate grid remains private.",
+        "qualification_scope": "Immutable original record bytes, hashes, server clocks and source-export bindings independently checked. Full underlying model/source bytes were not all reopened; no new promotion or complete scientific closure is claimed.",
+        "recovered_immutable_objects": 126,
+        "recovered_original_rows_preserved_privately": 2039,
+        "refreshed_outcomes": 0,
+        "selected_games": 30,
+        "selected_games_by_league": {
+          "ncaam": 4,
+          "ncaaw": 26
+        },
+        "selected_original_rows": 90,
+        "selected_rows_by_league": {
+          "ncaam": 12,
+          "ncaaw": 78
+        },
+        "selected_rows_by_target": {
+          "margin": 30,
+          "total": 30,
+          "win": 30
+        },
+        "selection_method": "Existing authenticated preserved primary model for each league/target; select its latest original issue time per game/target; exact agreement with prior prepared selected display; no outcome use.",
+        "source_current_outcomes_used_for_selection": false,
+        "status": "VERIFIED_SELECTED_ROLE_ORIGINALS_READY_FOR_DASHBOARD_REVIEW"
+      }
+    },
+    "source_sha256": "afd11df371e7886d6ed0adc97802fee565259cc9c95701f7cf8d133559f7f766"
+  },
+  "metric_policy": {
+    "current_season_complete": false,
+    "metrics": [
+      "accuracy",
+      "log_loss",
+      "brier",
+      "margin_mae",
+      "margin_rmse",
+      "total_mae",
+      "total_rmse"
+    ],
+    "missing_quotes_fabricated": false,
+    "new_scores": null,
+    "provider_refresh_performed": false,
+    "rolling_or_original_issue_promotion": false
+  },
+  "prepared_continuation": {
+    "release": "B063R8",
+    "status": "PREPARED_OWNER_EXECUTION_PENDING",
+    "source_sha256": "f45ab01b74fd2a67639f90d9933c032a851173e8d1b4d9c20f1b955f50f73235",
+    "source_bytes": 24078783,
+    "validation": {
+      "status": "PASS",
+      "scope": "Targeted final-source engineering regression, exact startup and native validation cache, resource policy, callback safety, archive continuity and actual R7 runtime audit.",
+      "unique_targeted_cases": 697,
+      "globally_unique_case_ids": true,
+      "full_historical_regression_suite_claimed": false,
+      "groups": {
+        "admission": {
+          "status": "PASS",
+          "tests": 35,
+          "wall_seconds": 6.936779948009644,
+          "failures": 0,
+          "errors": 0,
+          "skipped": 0
+        },
+        "cache_resume": {
+          "status": "PASS",
+          "tests": 199,
+          "wall_seconds": 18.108365774998674,
+          "failures": 0,
+          "errors": 0,
+          "skipped": 0
+        },
+        "live_logging": {
+          "status": "PASS",
+          "tests": 60,
+          "wall_seconds": 37.82088519800163,
+          "failures": 0,
+          "errors": 0,
+          "skipped": 0
+        },
+        "locking": {
+          "status": "PASS",
+          "tests": 144,
+          "wall_seconds": 4.08401226400747,
+          "failures": 0,
+          "errors": 0,
+          "skipped": 0
+        },
+        "pressure": {
+          "status": "PASS",
+          "tests": 115,
+          "wall_seconds": 18.332147485009045,
+          "failures": 0,
+          "errors": 0,
+          "skipped": 0
+        },
+        "runtime": {
+          "status": "PASS",
+          "tests": 131,
+          "wall_seconds": 5.159323967003729,
+          "failures": 0,
+          "errors": 0,
+          "skipped": 0
+        },
+        "source": {
+          "status": "PASS",
+          "tests": 12,
+          "wall_seconds": 6.787964495000779,
+          "failures": 0,
+          "errors": 0,
+          "skipped": 0
+        },
+        "stress": {
+          "status": "PASS",
+          "tests": 1,
+          "wall_seconds": 1.2584781649929937,
+          "failures": 0,
+          "errors": 0,
+          "skipped": 0
+        }
+      },
+      "startup_cold": {
+        "executed_cases_this_run": 157,
+        "reused_validation_cases": 0,
+        "wall_seconds": 2.9215054149972275,
+        "fresh_source_integrity_checked": true
+      },
+      "startup_warm": {
+        "executed_cases_this_run": 0,
+        "reused_validation_cases": 157,
+        "wall_seconds": 0.5898210169980302,
+        "fresh_source_integrity_checked": true
+      },
+      "native_preflight_cache": {
+        "AWS_calls": 0,
+        "cold_fixture_fits": 11,
+        "cold_seconds": 4.940964240988251,
+        "distinct_fresh_processes": 2,
+        "full_native_package_bytes_rehashed_by_warm_cache": false,
+        "measurement_scope": "One local paired fresh-process engineering measurement; genuine native sklearn fits on invented observations. No sports-fit, twelve-core or production whole-pipeline speedup claim.",
+        "new_sports_fits": 0,
+        "provider_calls": 0,
+        "schema": "sel.ncaa.b063r8.native_cache_measurement.v1",
+        "single_observed_cold_to_warm_ratio": 2.4711467292301834,
+        "source_unchanged_after_measurement": true,
+        "status": "PASS",
+        "target_model_runtime_authentication_relaxed": false,
+        "warm_fixture_fits": 0,
+        "warm_original_fixture_producer_forbidden_and_not_called": true,
+        "warm_reused_fixture_contracts": 11,
+        "warm_seconds": 1.999462104999111
+      },
+      "twelve_process_engineering_stress": {
+        "distinct_OS_workers": 12,
+        "durable_fixture_contracts": 384,
+        "exact_resumed_fixture_contracts": 384,
+        "resume_producer_calls": 0,
+        "seconds_including_spawn_and_resume": 1.2329852989932988,
+        "engineering_contracts_per_wall_second": 311.43923639116076,
+        "measured_peak_observed_CPU_cores": 6.32200246971386,
+        "simultaneously_observed_engineering_processes": 12,
+        "simultaneously_observed_scientific_processes": 0,
+        "owner_12_core_utilization_proved": false,
+        "new_sports_scientific_fits": 0
+      },
+      "resource_policy_replay": {
+        "actual_input_observations": 118,
+        "full_snapshot_replays": 2,
+        "production_speedup_credit": 0,
+        "source_sha256": "f45ab01b74fd2a67639f90d9933c032a851173e8d1b4d9c20f1b955f50f73235",
+        "receipt_sha256": "4dd893687a182ffe35bc97ece1d7f6399eb1d305932de5eb89b0202591da2abf"
+      },
+      "callback_regressions": {
+        "same_cases_old_failed": 3,
+        "same_cases_repaired_passed": 3,
+        "additional_cases_added_to_targeted_count": 0,
+        "sha256": "5080da31f4c5d3fdcc80c286da5edabe1011fb207bcfea84680ee9c17bf32f16"
+      },
+      "all_seven_fitted_scientific_identities_unchanged": true,
+      "rolling_v7_execution_identity_changed": true,
+      "scientific_twelve_core_acceptance_passed": false,
+      "scientific_cache_zero_GET_rerun_passed": false,
+      "new_sports_scientific_fits": 0,
+      "new_R8_owner_execution": false,
+      "private_validation_receipt_sha256": "80fd6f8399439dc6689a7862d5857ccf207b9ad44b016e42ff4fa49062c35be1",
+      "private_validation_receipt_bytes": 201037,
+      "public_summary": "The final sealed replacement passed 697 unique targeted engineering cases. Cold startup executed 157 prerequisite cases in 2.921505 seconds; its warm check reused all 157 with zero case reexecution in 0.589821 seconds. Native validation measured 4.940964 seconds cold and 1.999462 seconds warm, reusing eleven fixture contracts with zero warm producer calls. A twelve-process engineering stress saved and resumed 384 contracts with zero resumed producer calls; its measured CPU peak was 6.322002 cores, not a twelve-core sports acceptance result. Three identical callback regressions failed on the prior code and passed on the repair; these cases are already included in the 697. Historical resource-input replay covers 118 observations and two complete snapshots without production-speedup credit. Seven fitted scientific identity families remain unchanged; the protected execution family changes explicitly. These checks receive zero new sports-fit credit. R8 owner execution, scientific throughput, production historical-cache reuse and a complete season refresh remain unverified."
+    },
+    "owner_execution_verified": false,
+    "new_preparation_scientific_fits": 0,
+    "CPU_and_IO_admission_separated": true,
+    "moderate_IO_aggregate_lanes_per_owner": 1,
+    "severe_or_unknown_IO_deferred": true,
+    "CPU_memory_disk_fairness_guards_retained": true,
+    "measured_demand_grant_replaces_single_slot_ramp": true,
+    "scientific_twelve_core_acceptance_passed": false,
+    "shared_logger_binding": {
+      "status": "PASS",
+      "module_sha256": "607954a6f5dc4eba98e3edd121360d52aa00ff4a148c8630dd79f125b44b6947",
+      "module_bytes": 61565,
+      "matching_test_sha256": "be68fabfddb481a0859d6bde4d8775d10f06b281b7055f8466aaca7d54e18a89",
+      "matching_test_bytes": 24774,
+      "authenticated_public_base_commit": "71e19d050923e5341fe9e2e56711a8aade0fa8ec",
+      "generic_fit_scope_metadata_and_measured_human_log_PIDs": true,
+      "sealed_package_members_reopened": true,
+      "public_shared_files_modified": false,
+      "prior_R7_logger_provenance_retained": true
+    },
+    "science_identity_continuity": {
+      "fitted_family_identities_unchanged": 7,
+      "all_seven_fitted_families_preserved": true,
+      "rolling_v7_execution_identity_changed": true,
+      "all_eight_unchanged_claimed": false,
+      "exact_prior_archive_reconstructions": [
+        "B062",
+        "B063R2",
+        "B063R3",
+        "B063R4",
+        "B063R5",
+        "B063R6",
+        "B063R7"
+      ]
+    }
+  },
+  "publication": {
+    "new_scientific_evaluation": false,
+    "private_executable_or_models_published": false,
+    "source_publication_is_deployment": false,
+    "website_deployment_verified": false,
+    "concurrent_FBS_shared_logging_changes_preserved": true
+  },
+  "source_attribution": {
+    "authenticated_outer_return_sha256": "78b6fa0580d435b7203c6dbb097c81c955ede85b2621c6df163f5eae5e218407",
+    "authenticated_nested_return_sha256": "e300bb01e007093e3ffb39bd0bfa66c0e2e713c36574a7bb82b1ab65df0e6b34",
+    "returned_source_sha256": "d02ca7a0d16ba64b4d77afa0c16da37b94aac40239cc442bd22ac476662361be",
+    "preserved_prior_capsule_sha256": "7322b22c15b341bd3e35b37d8fad95af87cc750a027133869141b4e3f9f7668d",
+    "base_commit": "71e19d050923e5341fe9e2e56711a8aade0fa8ec",
+    "preserved_git_blobs": {
+      "docs/ncaa/b063r2.html": "d8f48294b784803b84ebbc7929d5ed758df9709e",
+      "docs/ncaa/b063r4.html": "b8dd8df8d7fa423eb9d34bf36980f75bc2b849bd",
+      "docs/ncaa/b063r5.html": "54f88306d11422e5da1ff8669ceb918d4d9056b2",
+      "docs/ncaa/b063r6.html": "ce62538b1bbd5b6226e6ebc0b9cf452e48f13990",
+      "docs/ncaa/b063r7.html": "82d28a8c552c4f2733bcc56e77f1e5f8e80fac16",
+      "docs/ncaa/data/B063R2_PUBLIC_EXECUTION_STATUS.json": "72aad1f28565955f03a90e310ee8b92a498b3bd3",
+      "docs/ncaa/data/B063R4_PUBLIC_STATUS.json": "56283ed5a968f91b98c3075aec2a8932e9ef9639",
+      "docs/ncaa/data/B063R5_PUBLIC_STATUS.json": "8756a24f6b38781e681b34533bfa7d694132dd3e",
+      "docs/ncaa/data/B063R6_PUBLIC_STATUS.json": "d3bb1dfd0e92b95d12595c9a868c35e8eeef7408",
+      "docs/ncaa/data/B063R7_PUBLIC_STATUS.json": "b2fc5f0adb618d3ec2840f286f81cc31742b9c4a",
+      "docs/ncaa/data/B063_PUBLIC_EARLY_ORIGINAL_POSTISSUE_MONITORING.json": "814636ffe123c723dfd2fa8de9192b34fa64ba92",
+      "docs/ncaa/data/B063_PUBLIC_LATE_ORIGINAL_POSTISSUE_MONITORING.json": "9a11f2d10fd13bfd8dba43702ae4ef942cb4a4a4",
+      "docs/ncaa/data/NCAA_B063R2_PUBLIC_SCIENTIFIC_TABLES.json": "65dd2b657a73cbdcce470170274da5e1b8f41728",
+      "docs/ncaa/index.html": "6a073beed99343a21c3422999831696f244e981f",
+      "docs/ncaa/private-report/index.html": "0446bae687f00107fe17bba7860bdefd1c17cb4d",
+      "examples/ncaa_review/README.md": "7df6e8fff84e2d257e1ca4230e63c21380aba1ec",
+      "examples/ncaa_review/test_dashboard_browser.cjs": "aa3362fbe486d57f2bac847cc431aae5a8bb9c68",
+      "runtime/execution/sports_edge_live.py": "dd1a79bc66d61282b8f3722fc48f94892df529c4",
+      "runtime/execution/test_sports_edge_live.py": "ef9e030363b181fc74df681b8b640b006a8759e3",
+      "runtime/execution/README.md": "dd2e92b21cf3893dc8789fbe75032a210b29b4c2",
+      "runtime/execution/sel_live_logging.py": "62dbe42edaae4ee082cd7bb99c2fd9bee2adbbad",
+      "runtime/execution/test_live_logging.py": "02e472b93aed16a76a8c08872fc4c26924ddab67"
+    }
+  }
+}
+</script><script>(function(){'use strict';document.getElementById('r8-download').addEventListener('click',function(event){event.preventDefault();const exact=document.getElementById('b063r8-data').textContent;const url=URL.createObjectURL(new Blob([exact],{type:'application/json;charset=utf-8'}));const link=document.createElement('a');link.href=url;link.download='B063R8_PUBLIC_STATUS.json';document.body.appendChild(link);link.click();link.remove();setTimeout(function(){URL.revokeObjectURL(url);},1000);});})();</script></main></body></html>
