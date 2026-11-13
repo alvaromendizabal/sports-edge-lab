@@ -1,3 +1,4 @@
+<!-- FBS_V072_ACTUAL_V071_START -->
 <!-- FBS_V072R3_ACTUAL_R2_FAILURE_START -->
 ## Latest owner result: R2 stopped before science; diagnostic ZIP verified
 
@@ -16,7 +17,6 @@ The owner preflight also verified the complete prior multipart return and exact 
 The preceding preparation and original-run recovery reports follow as dated history. Their pending-state statements describe what was known before this newly supplied owner run.
 <!-- FBS_V072R3_ACTUAL_R2_FAILURE_END -->
 
-<!-- FBS_V072_ACTUAL_V071_START -->
 <!-- FBS_V072R1_REPAIR_STATUS_START -->
 ## R2 repair tested; original recovery evidence checked
 
