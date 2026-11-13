@@ -113,6 +113,7 @@ jobs:
             echo 'Circa source prepared; no native deployment receipt exists yet.'
           fi
       - name: Verify the exact Circa HTML and history emitted by the sealed N089 executable
+        if: always()
         env:
           PLAYWRIGHT_MODULE_DIR: ${{ runner.temp }}/nfl-static-browser/node_modules/playwright
           CIRCA_N089_EVIDENCE: ${{ runner.temp }}/nfl-static-evidence/circa-runtime
