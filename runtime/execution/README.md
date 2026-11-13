@@ -73,6 +73,8 @@ finally:
 
 This is an integration skeleton; the comments do not perform authentication or scientific work. The adapter maps bounded, known scalar event fields and coalesces updates in memory so a slow log write does not hold a scientific callback behind the logger's filesystem lock. Worker CPU and identity observations remain the shared logger's own measurements. New, reused, native, meta and active optimizer counts retain their reported scopes; callback activity is not a completed fit. Cache and S3 snapshots are not added across overlapping lanes. Missing costs, progress denominators or ETAs remain unavailable. Inspect the returned receipt for interval failures, observer errors and a close still pending on I/O; an execution exit code does not override these conditions.
 
+A new phase invalidates the previous phase's progress and ETA before applying the new phase's explicit measurements. Missing values return to unknown, including when callbacks coalesce before the observer writes. Updates within the same phase retain the latest reported values for that phase.
+
 The adapter has NFL event aliases and accepts common explicit fields from other projects. A project must bind its actual producer and counters before those fields can be reported. The module and its four-selector tests do not rewrite existing FBS, NBA or NCAA executables, establish owner execution, reserve CPUs or authenticate any model result. The private delivery's pinned delegate wrapper is a separate integration; it may observe an explicitly selected existing executable but cannot supply counters that executable never reports. Every deployed integration still needs its own identity, failure-path and live-interval verification.
 
 ## Verification
