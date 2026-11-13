@@ -48,16 +48,46 @@ The module directory must be on the import path. Production wrappers also bind t
 
 `IncrementalLogCheckpoint` accepts an injected `put` function. `S3LogSink` can adapt an already authorized, bounded-timeout client and caller-selected destination. Its request and byte counters describe SDK calls and supplied bodies, not unobserved internal retry traffic. Unit tests use a fake sink only and perform no cloud request.
 
+## Per-invocation bootstrap adapter
+
+`sel_live_logging.py` uses the existing shared logger without changing its bytes. It creates the exact `LIVE_EXECUTION.log` and `LIVE_EXECUTION.jsonl` filenames under a new `sports-edge-lab/projects/<project>/logs/<invocation>/` directory. Its four selectors are `nfl`, `fbs`, `nba` and `ncaa_basketball`. Start it before package authentication so an immediate identity error has a durable diagnostic stream. A reused invocation directory, unsupported selector, aliased path or interval outside 10–15 seconds fails explicitly.
+
+```python
+from pathlib import Path
+from sel_live_logging import new_run, observe, error, close
+
+# Call before authenticating or importing the existing project runner.
+log = new_run(Path("working-cache"), "fbs", release="integration", flush_seconds=10)
+status = "FAILED"
+try:
+    observe(log, stage_name="PACKAGE_AUTHENTICATION")
+    # Authenticate and run the existing runner here. Bind its trusted, current
+    # workload callback to observe(log, event); preserve its scientific gates.
+    status = "COMPLETED"
+except BaseException as exc:
+    error(log, exc)
+    raise
+finally:
+    logging_receipt = close(log, status=status)
+```
+
+This is an integration skeleton; the comments do not perform authentication or scientific work. The adapter maps bounded, known scalar event fields and coalesces updates in memory so a slow log write does not hold a scientific callback behind the logger's filesystem lock. Worker CPU and identity observations remain the shared logger's own measurements. New, reused, native, meta and active optimizer counts retain their reported scopes; callback activity is not a completed fit. Cache and S3 snapshots are not added across overlapping lanes. Missing costs, progress denominators or ETAs remain unavailable. Inspect the returned receipt for interval failures, observer errors and a close still pending on I/O; an execution exit code does not override these conditions.
+
+The adapter has NFL event aliases and accepts common explicit fields from other projects. A project must bind its actual producer and counters before those fields can be reported. The module and its four-selector tests do not rewrite existing FBS, NBA or NCAA executables, establish owner execution, reserve CPUs or authenticate any model result. The private delivery's pinned delegate wrapper is a separate integration; it may observe an explicitly selected existing executable but cannot supply counters that executable never reports. Every deployed integration still needs its own identity, failure-path and live-interval verification.
+
 ## Verification
 
 Run the generic regression suite from the repository root:
 
 ```sh
 python -m unittest discover -s runtime/execution -p 'test_sports_edge_live.py' -v
+python -m unittest discover -s runtime/execution -p 'test_live_logging.py' -v
 python runtime/execution/verify_live_execution.py
 ```
 
 The 27-test suite includes nine new invented progress-counter and failed-child regressions. It executes real local child processes and checks identity protection, active-writer exclusion, restarts, no-newline output, stopped progress, failed children, observer errors, bounded incremental checkpoint recovery, checksum rejection and safe log snapshots. They use invented observations and temporary files. Their process activity and mock transfers are not NBA fits or owner-cloud throughput.
+
+The adapter suite verifies all four project directories, earliest authentication failures, secret redaction, safe counters, concurrent callbacks, blocked observer I/O, observer errors and immutable snapshots. Its real 31-second child checks heartbeat spacing at the production ten-second interval, process samples, physical stream flush calls and partial stdout. Unreported model counts remain null. These observations establish logging behavior, not scientific fit concurrency or owner throughput.
 
 The separate live acceptance script runs a 33-second lock-blocked child and a 27-second failing child concurrently. It observes the actual human log with `tail -F`, checks simultaneous JSONL growth, captures both streams, verifies the child in process samples and enforces maximum heartbeat gaps of 15 seconds at the real ten-second setting. This is a failure-injection test, not a synthetic CPU load benchmark or sports fit. Temporary local evidence is written beneath the module directory.
 

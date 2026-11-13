@@ -1,0 +1,50 @@
+{
+  "schema": "nfl.n085.bootstrap-identity-correction.v1",
+  "report_date_pacific": "2026-11-13",
+  "evidence_class": "OWNER_SUPPLIED_TERMINAL_TRACE",
+  "trace_sha256": "def4eece2ac573653673b7a5a581a99bcb115d70277cf093c0c306898357861c",
+  "failed_invocation": {
+    "started_at_utc": "2026-11-13T16:12:44.442384+00:00",
+    "last_observed_at_utc": "2026-11-13T16:12:45.358989+00:00",
+    "reported_elapsed_seconds": 0.9172194069999478,
+    "stage": "PACKAGE_AUTHENTICATION",
+    "error": "Executable physical identity differs",
+    "expected_delivery_sha256": "412f6e0eba3da4651172b048315216f8e3da4cb12e90d121d19eead39004af82",
+    "actual_owner_package_sha256": null,
+    "actual_owner_package_identity_proven": false,
+    "observed_entrypoint_lineage": [
+      "__main__",
+      "n084_entry.main",
+      "owner_sources_n083.main"
+    ],
+    "expected_delivery_entrypoint_lineage": [
+      "__main__",
+      "owner_sources_n084.main"
+    ],
+    "initial_resource_confirmation_recovered": true,
+    "authentication_lease_released": true,
+    "scientific_execution_reached": false,
+    "new_fits": 0,
+    "new_forecasts": 0,
+    "new_paid_calls": 0
+  },
+  "diagnosis": "The supplied command and observed executable entrypoint belong to different delivery revisions. The actual owner file hash is not printed; do not infer its exact build from its filename.",
+  "preservation": {
+    "latest_authenticated_scientific_owner_run": "N083",
+    "existing_model_cache_reset": false,
+    "previous_results_relabelled": false,
+    "new_current_season_selection": false,
+    "dashboard_or_provider_refresh_performed": false,
+    "selected_forecast_file": "selected_forecasts_n084.json",
+    "selected_forecast_sha256": "68298d318594c1fd41365b70c64ff79c31057bd7c110a81201796d5c2f98bfe7"
+  },
+  "repair_contract": [
+    "Unique immutable delivery names and explicit expected/actual physical identity diagnostics.",
+    "Start project-scoped LIVE_EXECUTION.log and LIVE_EXECUTION.jsonl before package authentication.",
+    "Retain checkpoints and source caches; do not weaken verification or substitute an older digest to bypass the failure.",
+    "Verify each project integration separately; shared logging publication does not establish retrofitting of previously deployed executables."
+  ],
+  "owner_execution_acceptance": false,
+  "new_n085_owner_fits_claimed": false,
+  "real_twelve_core_utilization_claimed": false
+}

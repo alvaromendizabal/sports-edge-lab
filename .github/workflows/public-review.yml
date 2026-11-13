@@ -22,6 +22,7 @@ jobs:
       - name: Test shared live logs, failed children and recoverable checkpoints
         run: |
           python -m unittest discover -s runtime/execution -p 'test_sports_edge_live.py' -v
+          python -m unittest discover -s runtime/execution -p 'test_live_logging.py' -v
           python runtime/execution/verify_live_execution.py
       - name: Test chronology, matched scoring and recovery
         run: python -m unittest discover -s examples/review_lab/tests -v
