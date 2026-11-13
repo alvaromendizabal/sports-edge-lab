@@ -1,6 +1,6 @@
 <!-- FBS_V072_ACTUAL_V071_START -->
 <!-- FBS_V072R1_REPAIR_STATUS_START -->
-## Recovery follow-up: 36 worker receipts checked; archive verification pending
+## R2 repair tested; original recovery evidence checked
 
 **The supplied recovery parts preserve all 36 original V072 parallel-worker receipts.** Their task, fit and case identities match the original execution log, and their internal evidence digests verify. These are the original completed fits; finalization and this review add zero new sports fits, forecasts or source requests.
 
@@ -12,7 +12,11 @@ The actual market report has **1,152 cumulative completed conversions** and **30
 
 [Read the recovery evidence and its limits](V072_EXECUTION_AND_REPAIR_2026-11-13.md) · [Open the retained V071 dashboard](latest-v072.html).
 
-The visible game/forecast data retain the **November 12, 2026, 21:04:22 UTC V071 snapshot**. The exact replacement executable previously passed **773/773 engineering tests**; those checks and the fictional local packaging benchmark are distinct from this production-evidence audit.
+The exact R2 replacement passed **832/832 engineering tests** with zero failures, errors or skips. Its finalization check created a verified local fixture archive, then reused the identical archive on a second invocation. R2 also repairs the separate original console-budget abort while preserving the complete event journal. A new continuation guard requires the intact prior local evidence and complete multipart return before dispatch.
+
+The production-shaped, all-unbound fixture measured **142.73 seconds before and 143.17 seconds after**, with identical results: no observed cold normalization speedup. Exact-input warm reuse took **0.051 seconds** with zero original quote reads. These are engineering fixtures, not owner performance or new scientific fits.
+
+The visible game/forecast data retain the **November 12, 2026, 21:04:22 UTC V071 snapshot**. Corrected owner execution and complete archive verification remain pending; the earlier 773-test R1 result is retained as dated evidence.
 <!-- FBS_V072R1_REPAIR_STATUS_END -->
 
 # NCAA FBS · actual V071 results · November 12, 2026

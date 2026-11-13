@@ -7,6 +7,7 @@ import re
 import unittest
 from unittest.mock import patch
 import b063r5_status as status
+from b063r6_status import strip_banner as strip_r6_banner
 ROOT = Path(__file__).resolve().parents[2]
 DOC = ROOT / 'docs/ncaa'
 EX = ROOT / 'examples/ncaa_review'
@@ -49,7 +50,7 @@ class B063R5PublicStatus(unittest.TestCase):
 
     def test_all_prior_landing_bytes_and_r4_companion_are_unchanged(self):
         pins = self.data['source_attribution']['preserved_git_blobs']
-        body = (DOC / 'index.html').read_text()
+        body = strip_r6_banner((DOC / 'index.html').read_text())
         self.assertEqual(body.count(status.START), 1)
         self.assertEqual(git_blob(status.strip_banner(body).encode()), pins['docs/ncaa/index.html'])
         for name in ('docs/ncaa/b063r4.html', 'docs/ncaa/data/B063R4_PUBLIC_STATUS.json'):
@@ -57,11 +58,11 @@ class B063R5PublicStatus(unittest.TestCase):
 
     def test_prior_readme_and_browser_contract_are_unchanged(self):
         pins = self.data['source_attribution']['preserved_git_blobs']
-        body = (EX / 'README.md').read_bytes()
+        body = (EX / 'README.md').read_bytes().split(b'<!-- B063R6_STATUS_END -->\n\n',1)[1]
         self.assertTrue(body.startswith(b'<!-- B063R5_STATUS_START -->'))
         self.assertEqual(body.count(b'<!-- B063R5_STATUS_END -->\n\n'), 1)
         self.assertEqual(git_blob(body.split(b'<!-- B063R5_STATUS_END -->\n\n', 1)[1]), pins['examples/ncaa_review/README.md'])
-        body = (EX / 'test_dashboard_browser.cjs').read_bytes()
+        body = (EX / 'test_dashboard_browser.cjs').read_bytes().replace(b"    counts.b063r6Status = await require('./test_b063r6_status_browser.cjs').verifyR6(browser, path.join(root, 'docs/ncaa/b063r6.html'));\n",b'')
         self.assertEqual(body.count(R5_BROWSER_LINE), 1)
         self.assertEqual(git_blob(body.replace(R5_BROWSER_LINE, b'')), pins['examples/ncaa_review/test_dashboard_browser.cjs'])
 
@@ -76,7 +77,7 @@ class B063R5PublicStatus(unittest.TestCase):
         self.assertIn('new Blob([exact]', page)
         self.assertIn('The return does not identify the individual missing binding', page)
         self.assertIn('filename timestamp, not a verified failure completion time', page)
-        landing = (DOC / 'index.html').read_text()
+        landing = strip_r6_banner((DOC / 'index.html').read_text())
         self.assertEqual(status.render_banner(landing), landing)
         self.assertEqual(status.status_outputs({DOC / 'index.html':status.strip_banner(landing)})[DOC / 'index.html'], landing)
 
