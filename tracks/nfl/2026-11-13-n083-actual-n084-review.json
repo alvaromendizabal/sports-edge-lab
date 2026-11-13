@@ -1,0 +1,3663 @@
+{
+  "actual_owner_release": "N083",
+  "automatic_promotion": false,
+  "current_2026_status": "New monitor scorecards are referenced by durable archive but absent from supplied return; recovery pending.",
+  "display_cutoff_utc": "2026-11-13T06:51:24.256834+00:00",
+  "elapsed_seconds": 2592.474130618,
+  "failure": "Original forward runtime was unavailable; acceptance remains incomplete.",
+  "forecast_scope": "1,776 issue events are repeated issues across the same game/model pairs; this display selects 444 rows for 111 games. Issue events are not independent games.",
+  "new_fits": 376,
+  "new_forecasts": 1776,
+  "new_frozen_cards": [
+    {
+      "cohort_sha256": "e3ff84afd46362375bcd40eb31f67a680b12df299076ee9cc209ec528a7894d3",
+      "evidence": "Development-exposed frozen replay; no original issue credit",
+      "games": 285,
+      "horizon_seconds": 3600.0,
+      "metrics": {
+        "accuracy": 0.6456140350877193,
+        "brier": 0.21801928667497286,
+        "ece": 0.06260341918961222,
+        "log_loss": 0.6250124533630356,
+        "roc_auc": 0.7099980123235937
+      },
+      "model_alias": "N083 experiment 01",
+      "season": 2024,
+      "target": "win"
+    },
+    {
+      "cohort_sha256": "725ebed30fdf76ed306dc708dd55658f8d64a53e1c7e2d53c521b9d0e09b59bb",
+      "evidence": "Development-exposed frozen replay; no original issue credit",
+      "games": 284,
+      "horizon_seconds": 3600.0,
+      "metrics": {
+        "accuracy": 0.6161971830985915,
+        "brier": 0.23362138644303393,
+        "ece": 0.044685387151829556,
+        "log_loss": 0.6594202631818735,
+        "roc_auc": 0.6507177033492824
+      },
+      "model_alias": "N083 experiment 01",
+      "season": 2025,
+      "target": "win"
+    },
+    {
+      "cohort_sha256": "e3ff84afd46362375bcd40eb31f67a680b12df299076ee9cc209ec528a7894d3",
+      "evidence": "Development-exposed frozen replay; no original issue credit",
+      "games": 285,
+      "horizon_seconds": 3600.0,
+      "metrics": {
+        "accuracy": 0.6912280701754386,
+        "brier": 0.21394424715006788,
+        "ece": 0.06832634106016997,
+        "log_loss": 0.6179316574034583,
+        "roc_auc": 0.7230172927847346
+      },
+      "model_alias": "N083 experiment 02",
+      "season": 2024,
+      "target": "win"
+    },
+    {
+      "cohort_sha256": "725ebed30fdf76ed306dc708dd55658f8d64a53e1c7e2d53c521b9d0e09b59bb",
+      "evidence": "Development-exposed frozen replay; no original issue credit",
+      "games": 284,
+      "horizon_seconds": 3600.0,
+      "metrics": {
+        "accuracy": 0.6373239436619719,
+        "brier": 0.23035060379309047,
+        "ece": 0.059387970715761185,
+        "log_loss": 0.6532020301995847,
+        "roc_auc": 0.6643740031897927
+      },
+      "model_alias": "N083 experiment 02",
+      "season": 2025,
+      "target": "win"
+    },
+    {
+      "cohort_sha256": "e3ff84afd46362375bcd40eb31f67a680b12df299076ee9cc209ec528a7894d3",
+      "evidence": "Development-exposed frozen replay; no original issue credit",
+      "games": 285,
+      "horizon_seconds": 3600.0,
+      "metrics": {
+        "accuracy": 0.6807017543859649,
+        "brier": 0.2150563241117047,
+        "ece": 0.057295924103599113,
+        "log_loss": 0.620597429747589,
+        "roc_auc": 0.7193897833432717
+      },
+      "model_alias": "N083 experiment 03",
+      "season": 2024,
+      "target": "win"
+    },
+    {
+      "cohort_sha256": "725ebed30fdf76ed306dc708dd55658f8d64a53e1c7e2d53c521b9d0e09b59bb",
+      "evidence": "Development-exposed frozen replay; no original issue credit",
+      "games": 284,
+      "horizon_seconds": 3600.0,
+      "metrics": {
+        "accuracy": 0.6584507042253521,
+        "brier": 0.22603894957700787,
+        "ece": 0.07582925467328905,
+        "log_loss": 0.6432362463239042,
+        "roc_auc": 0.6753389154704944
+      },
+      "model_alias": "N083 experiment 03",
+      "season": 2025,
+      "target": "win"
+    },
+    {
+      "cohort_sha256": "e3ff84afd46362375bcd40eb31f67a680b12df299076ee9cc209ec528a7894d3",
+      "evidence": "Development-exposed frozen replay; no original issue credit",
+      "games": 285,
+      "horizon_seconds": 3600.0,
+      "metrics": {
+        "crps": 7.45091127963314,
+        "mae": 10.200911204020182,
+        "rmse": 13.137977108542254
+      },
+      "model_alias": "N083 experiment 04",
+      "season": 2024,
+      "target": "total"
+    },
+    {
+      "cohort_sha256": "9289c431838febfa7041ca3dcc0d87217bc9b6a76a1249a36dc999ce08448b81",
+      "evidence": "Development-exposed frozen replay; no original issue credit",
+      "games": 285,
+      "horizon_seconds": 3600.0,
+      "metrics": {
+        "crps": 7.88575206757766,
+        "mae": 11.05346913923297,
+        "rmse": 13.87921919942993
+      },
+      "model_alias": "N083 experiment 04",
+      "season": 2025,
+      "target": "total"
+    },
+    {
+      "cohort_sha256": "e3ff84afd46362375bcd40eb31f67a680b12df299076ee9cc209ec528a7894d3",
+      "evidence": "Development-exposed frozen replay; no original issue credit",
+      "games": 285,
+      "horizon_seconds": 3600.0,
+      "metrics": {
+        "crps": 7.406762267008344,
+        "mae": 10.208627443004158,
+        "rmse": 13.283553045451532
+      },
+      "model_alias": "N083 experiment 05",
+      "season": 2024,
+      "target": "margin"
+    },
+    {
+      "cohort_sha256": "9289c431838febfa7041ca3dcc0d87217bc9b6a76a1249a36dc999ce08448b81",
+      "evidence": "Development-exposed frozen replay; no original issue credit",
+      "games": 285,
+      "horizon_seconds": 3600.0,
+      "metrics": {
+        "crps": 7.367828983800088,
+        "mae": 10.316612942286097,
+        "rmse": 13.112552174102227
+      },
+      "model_alias": "N083 experiment 05",
+      "season": 2025,
+      "target": "margin"
+    },
+    {
+      "cohort_sha256": "e3ff84afd46362375bcd40eb31f67a680b12df299076ee9cc209ec528a7894d3",
+      "evidence": "Development-exposed frozen replay; no original issue credit",
+      "games": 285,
+      "horizon_seconds": 3600.0,
+      "metrics": {
+        "crps": 7.511684126134446,
+        "mae": 10.377532698091748,
+        "rmse": 13.359094000826257
+      },
+      "model_alias": "N083 experiment 06",
+      "season": 2024,
+      "target": "margin"
+    },
+    {
+      "cohort_sha256": "9289c431838febfa7041ca3dcc0d87217bc9b6a76a1249a36dc999ce08448b81",
+      "evidence": "Development-exposed frozen replay; no original issue credit",
+      "games": 285,
+      "horizon_seconds": 3600.0,
+      "metrics": {
+        "crps": 7.425971048660502,
+        "mae": 10.288592003721597,
+        "rmse": 13.200599551156337
+      },
+      "model_alias": "N083 experiment 06",
+      "season": 2025,
+      "target": "margin"
+    },
+    {
+      "cohort_sha256": "e3ff84afd46362375bcd40eb31f67a680b12df299076ee9cc209ec528a7894d3",
+      "evidence": "Development-exposed frozen replay; no original issue credit",
+      "games": 285,
+      "horizon_seconds": 3600.0,
+      "metrics": {
+        "crps": 7.458459304570051,
+        "mae": 10.172539078561883,
+        "rmse": 13.165892209479876
+      },
+      "model_alias": "N083 experiment 07",
+      "season": 2024,
+      "target": "total"
+    },
+    {
+      "cohort_sha256": "9289c431838febfa7041ca3dcc0d87217bc9b6a76a1249a36dc999ce08448b81",
+      "evidence": "Development-exposed frozen replay; no original issue credit",
+      "games": 285,
+      "horizon_seconds": 3600.0,
+      "metrics": {
+        "crps": 7.852308155551768,
+        "mae": 11.01778504221063,
+        "rmse": 13.836518039728878
+      },
+      "model_alias": "N083 experiment 07",
+      "season": 2025,
+      "target": "total"
+    },
+    {
+      "cohort_sha256": "e3ff84afd46362375bcd40eb31f67a680b12df299076ee9cc209ec528a7894d3",
+      "evidence": "Development-exposed frozen replay; no original issue credit",
+      "games": 285,
+      "horizon_seconds": 3600.0,
+      "metrics": {
+        "accuracy": 0.7052631578947368,
+        "brier": 0.21093710933031568,
+        "ece": 0.08474634065248209,
+        "log_loss": 0.6122563593240415,
+        "roc_auc": 0.7352415026833632
+      },
+      "model_alias": "N083 experiment 08",
+      "season": 2024,
+      "target": "win"
+    },
+    {
+      "cohort_sha256": "725ebed30fdf76ed306dc708dd55658f8d64a53e1c7e2d53c521b9d0e09b59bb",
+      "evidence": "Development-exposed frozen replay; no original issue credit",
+      "games": 284,
+      "horizon_seconds": 3600.0,
+      "metrics": {
+        "accuracy": 0.6443661971830986,
+        "brier": 0.2263073155875603,
+        "ece": 0.07670757262173801,
+        "log_loss": 0.6432601846130889,
+        "roc_auc": 0.6748903508771931
+      },
+      "model_alias": "N083 experiment 08",
+      "season": 2025,
+      "target": "win"
+    },
+    {
+      "cohort_sha256": "e3ff84afd46362375bcd40eb31f67a680b12df299076ee9cc209ec528a7894d3",
+      "evidence": "Development-exposed frozen replay; no original issue credit",
+      "games": 285,
+      "horizon_seconds": 3600.0,
+      "metrics": {
+        "crps": 7.33873049969557,
+        "mae": 10.058108392710748,
+        "rmse": 13.142230409731507
+      },
+      "model_alias": "N083 experiment 09",
+      "season": 2024,
+      "target": "margin"
+    },
+    {
+      "cohort_sha256": "9289c431838febfa7041ca3dcc0d87217bc9b6a76a1249a36dc999ce08448b81",
+      "evidence": "Development-exposed frozen replay; no original issue credit",
+      "games": 285,
+      "horizon_seconds": 3600.0,
+      "metrics": {
+        "crps": 7.3916353088789775,
+        "mae": 10.31658755347394,
+        "rmse": 13.162630717294505
+      },
+      "model_alias": "N083 experiment 09",
+      "season": 2025,
+      "target": "margin"
+    },
+    {
+      "cohort_sha256": "e3ff84afd46362375bcd40eb31f67a680b12df299076ee9cc209ec528a7894d3",
+      "evidence": "Development-exposed frozen replay; no original issue credit",
+      "games": 285,
+      "horizon_seconds": 3600.0,
+      "metrics": {
+        "accuracy": 0.6771929824561403,
+        "brier": 0.2155194564472272,
+        "ece": 0.07837922308088403,
+        "log_loss": 0.6204027934597796,
+        "roc_auc": 0.7259491154839992
+      },
+      "model_alias": "N083 experiment 10",
+      "season": 2024,
+      "target": "win"
+    },
+    {
+      "cohort_sha256": "725ebed30fdf76ed306dc708dd55658f8d64a53e1c7e2d53c521b9d0e09b59bb",
+      "evidence": "Development-exposed frozen replay; no original issue credit",
+      "games": 284,
+      "horizon_seconds": 3600.0,
+      "metrics": {
+        "accuracy": 0.6197183098591549,
+        "brier": 0.2278509725252001,
+        "ece": 0.03562402539392602,
+        "log_loss": 0.6470543439117734,
+        "roc_auc": 0.6676136363636362
+      },
+      "model_alias": "N083 experiment 10",
+      "season": 2025,
+      "target": "win"
+    },
+    {
+      "cohort_sha256": "e3ff84afd46362375bcd40eb31f67a680b12df299076ee9cc209ec528a7894d3",
+      "evidence": "Development-exposed frozen replay; no original issue credit",
+      "games": 285,
+      "horizon_seconds": 3600.0,
+      "metrics": {
+        "crps": 7.4072091973214,
+        "mae": 10.319363676734987,
+        "rmse": 13.495121214985806
+      },
+      "model_alias": "N083 experiment 11",
+      "season": 2024,
+      "target": "total"
+    },
+    {
+      "cohort_sha256": "9289c431838febfa7041ca3dcc0d87217bc9b6a76a1249a36dc999ce08448b81",
+      "evidence": "Development-exposed frozen replay; no original issue credit",
+      "games": 285,
+      "horizon_seconds": 3600.0,
+      "metrics": {
+        "crps": 7.554719607914355,
+        "mae": 10.528941940013546,
+        "rmse": 13.417755280543139
+      },
+      "model_alias": "N083 experiment 11",
+      "season": 2025,
+      "target": "total"
+    },
+    {
+      "cohort_sha256": "e3ff84afd46362375bcd40eb31f67a680b12df299076ee9cc209ec528a7894d3",
+      "evidence": "Development-exposed frozen replay; no original issue credit",
+      "games": 285,
+      "horizon_seconds": 3600.0,
+      "metrics": {
+        "accuracy": 0.656140350877193,
+        "brier": 0.22087612039882115,
+        "ece": 0.06038233023125261,
+        "log_loss": 0.6371568147423263,
+        "roc_auc": 0.7005565493937588
+      },
+      "model_alias": "N083 experiment 12",
+      "season": 2024,
+      "target": "win"
+    },
+    {
+      "cohort_sha256": "725ebed30fdf76ed306dc708dd55658f8d64a53e1c7e2d53c521b9d0e09b59bb",
+      "evidence": "Development-exposed frozen replay; no original issue credit",
+      "games": 284,
+      "horizon_seconds": 3600.0,
+      "metrics": {
+        "accuracy": 0.6126760563380281,
+        "brier": 0.23397821774099564,
+        "ece": 0.08824435258616878,
+        "log_loss": 0.6614740684497922,
+        "roc_auc": 0.6649720893141946
+      },
+      "model_alias": "N083 experiment 12",
+      "season": 2025,
+      "target": "win"
+    },
+    {
+      "cohort_sha256": "e3ff84afd46362375bcd40eb31f67a680b12df299076ee9cc209ec528a7894d3",
+      "evidence": "Development-exposed frozen replay; no original issue credit",
+      "games": 285,
+      "horizon_seconds": 3600.0,
+      "metrics": {
+        "accuracy": 0.6842105263157895,
+        "brier": 0.21373759795797953,
+        "ece": 0.06897142628361955,
+        "log_loss": 0.6176583385649552,
+        "roc_auc": 0.7258994235738422
+      },
+      "model_alias": "N083 experiment 13",
+      "season": 2024,
+      "target": "win"
+    },
+    {
+      "cohort_sha256": "725ebed30fdf76ed306dc708dd55658f8d64a53e1c7e2d53c521b9d0e09b59bb",
+      "evidence": "Development-exposed frozen replay; no original issue credit",
+      "games": 284,
+      "horizon_seconds": 3600.0,
+      "metrics": {
+        "accuracy": 0.6056338028169014,
+        "brier": 0.23295288876090225,
+        "ece": 0.07722882697191584,
+        "log_loss": 0.6586925850552103,
+        "roc_auc": 0.6685606060606061
+      },
+      "model_alias": "N083 experiment 13",
+      "season": 2025,
+      "target": "win"
+    },
+    {
+      "cohort_sha256": "e3ff84afd46362375bcd40eb31f67a680b12df299076ee9cc209ec528a7894d3",
+      "evidence": "Development-exposed frozen replay; no original issue credit",
+      "games": 285,
+      "horizon_seconds": 3600.0,
+      "metrics": {
+        "accuracy": 0.6631578947368421,
+        "brier": 0.21601744618800692,
+        "ece": 0.05259494894585525,
+        "log_loss": 0.6209566933834225,
+        "roc_auc": 0.7105943152454781
+      },
+      "model_alias": "N083 experiment 14",
+      "season": 2024,
+      "target": "win"
+    },
+    {
+      "cohort_sha256": "725ebed30fdf76ed306dc708dd55658f8d64a53e1c7e2d53c521b9d0e09b59bb",
+      "evidence": "Development-exposed frozen replay; no original issue credit",
+      "games": 284,
+      "horizon_seconds": 3600.0,
+      "metrics": {
+        "accuracy": 0.6091549295774648,
+        "brier": 0.2345477957905504,
+        "ece": 0.04863349380979187,
+        "log_loss": 0.6605231279019437,
+        "roc_auc": 0.6475279106858054
+      },
+      "model_alias": "N083 experiment 14",
+      "season": 2025,
+      "target": "win"
+    },
+    {
+      "cohort_sha256": "e3ff84afd46362375bcd40eb31f67a680b12df299076ee9cc209ec528a7894d3",
+      "evidence": "Development-exposed frozen replay; no original issue credit",
+      "games": 285,
+      "horizon_seconds": 3600.0,
+      "metrics": {
+        "accuracy": 0.6456140350877193,
+        "brier": 0.21915103484016915,
+        "ece": 0.06601386590255941,
+        "log_loss": 0.628793252431079,
+        "roc_auc": 0.6990161001788908
+      },
+      "model_alias": "N083 experiment 15",
+      "season": 2024,
+      "target": "win"
+    },
+    {
+      "cohort_sha256": "725ebed30fdf76ed306dc708dd55658f8d64a53e1c7e2d53c521b9d0e09b59bb",
+      "evidence": "Development-exposed frozen replay; no original issue credit",
+      "games": 284,
+      "horizon_seconds": 3600.0,
+      "metrics": {
+        "accuracy": 0.6267605633802817,
+        "brier": 0.228774047684154,
+        "ece": 0.04471457430923605,
+        "log_loss": 0.6497072809210117,
+        "roc_auc": 0.6666666666666666
+      },
+      "model_alias": "N083 experiment 15",
+      "season": 2025,
+      "target": "win"
+    },
+    {
+      "cohort_sha256": "e3ff84afd46362375bcd40eb31f67a680b12df299076ee9cc209ec528a7894d3",
+      "evidence": "Development-exposed frozen replay; no original issue credit",
+      "games": 285,
+      "horizon_seconds": 3600.0,
+      "metrics": {
+        "crps": 7.430439274722249,
+        "mae": 10.170153828075112,
+        "rmse": 13.144463172764983
+      },
+      "model_alias": "N083 experiment 16",
+      "season": 2024,
+      "target": "total"
+    },
+    {
+      "cohort_sha256": "9289c431838febfa7041ca3dcc0d87217bc9b6a76a1249a36dc999ce08448b81",
+      "evidence": "Development-exposed frozen replay; no original issue credit",
+      "games": 285,
+      "horizon_seconds": 3600.0,
+      "metrics": {
+        "crps": 7.811776633318148,
+        "mae": 10.973121346070018,
+        "rmse": 13.772272155422607
+      },
+      "model_alias": "N083 experiment 16",
+      "season": 2025,
+      "target": "total"
+    },
+    {
+      "cohort_sha256": "e3ff84afd46362375bcd40eb31f67a680b12df299076ee9cc209ec528a7894d3",
+      "evidence": "Development-exposed frozen replay; no original issue credit",
+      "games": 285,
+      "horizon_seconds": 3600.0,
+      "metrics": {
+        "crps": 7.411134837247537,
+        "mae": 10.2340983621626,
+        "rmse": 13.284628381718987
+      },
+      "model_alias": "N083 experiment 17",
+      "season": 2024,
+      "target": "margin"
+    },
+    {
+      "cohort_sha256": "9289c431838febfa7041ca3dcc0d87217bc9b6a76a1249a36dc999ce08448b81",
+      "evidence": "Development-exposed frozen replay; no original issue credit",
+      "games": 285,
+      "horizon_seconds": 3600.0,
+      "metrics": {
+        "crps": 7.363836386137801,
+        "mae": 10.308037986412295,
+        "rmse": 13.129852850650574
+      },
+      "model_alias": "N083 experiment 17",
+      "season": 2025,
+      "target": "margin"
+    },
+    {
+      "cohort_sha256": "e3ff84afd46362375bcd40eb31f67a680b12df299076ee9cc209ec528a7894d3",
+      "evidence": "Development-exposed frozen replay; no original issue credit",
+      "games": 285,
+      "horizon_seconds": 3600.0,
+      "metrics": {
+        "crps": 7.2804600947977205,
+        "mae": 9.998886546065693,
+        "rmse": 13.043556646606106
+      },
+      "model_alias": "N083 experiment 18",
+      "season": 2024,
+      "target": "margin"
+    },
+    {
+      "cohort_sha256": "9289c431838febfa7041ca3dcc0d87217bc9b6a76a1249a36dc999ce08448b81",
+      "evidence": "Development-exposed frozen replay; no original issue credit",
+      "games": 285,
+      "horizon_seconds": 3600.0,
+      "metrics": {
+        "crps": 7.339305774742989,
+        "mae": 10.26405726519273,
+        "rmse": 13.026141213644769
+      },
+      "model_alias": "N083 experiment 18",
+      "season": 2025,
+      "target": "margin"
+    },
+    {
+      "cohort_sha256": "e3ff84afd46362375bcd40eb31f67a680b12df299076ee9cc209ec528a7894d3",
+      "evidence": "Development-exposed frozen replay; no original issue credit",
+      "games": 285,
+      "horizon_seconds": 3600.0,
+      "metrics": {
+        "crps": 7.506881401426044,
+        "mae": 10.36878608306111,
+        "rmse": 13.350948507862148
+      },
+      "model_alias": "N083 experiment 19",
+      "season": 2024,
+      "target": "margin"
+    },
+    {
+      "cohort_sha256": "9289c431838febfa7041ca3dcc0d87217bc9b6a76a1249a36dc999ce08448b81",
+      "evidence": "Development-exposed frozen replay; no original issue credit",
+      "games": 285,
+      "horizon_seconds": 3600.0,
+      "metrics": {
+        "crps": 7.426691360462375,
+        "mae": 10.29024927991173,
+        "rmse": 13.202443456138454
+      },
+      "model_alias": "N083 experiment 19",
+      "season": 2025,
+      "target": "margin"
+    },
+    {
+      "cohort_sha256": "e3ff84afd46362375bcd40eb31f67a680b12df299076ee9cc209ec528a7894d3",
+      "evidence": "Development-exposed frozen replay; no original issue credit",
+      "games": 285,
+      "horizon_seconds": 3600.0,
+      "metrics": {
+        "crps": 7.41773243015854,
+        "mae": 10.185329851662335,
+        "rmse": 13.100231652494331
+      },
+      "model_alias": "N083 experiment 20",
+      "season": 2024,
+      "target": "total"
+    },
+    {
+      "cohort_sha256": "9289c431838febfa7041ca3dcc0d87217bc9b6a76a1249a36dc999ce08448b81",
+      "evidence": "Development-exposed frozen replay; no original issue credit",
+      "games": 285,
+      "horizon_seconds": 3600.0,
+      "metrics": {
+        "crps": 7.845727946633713,
+        "mae": 11.012627572663567,
+        "rmse": 13.808818019587024
+      },
+      "model_alias": "N083 experiment 20",
+      "season": 2025,
+      "target": "total"
+    },
+    {
+      "cohort_sha256": "e3ff84afd46362375bcd40eb31f67a680b12df299076ee9cc209ec528a7894d3",
+      "evidence": "Development-exposed frozen replay; no original issue credit",
+      "games": 285,
+      "horizon_seconds": 3600.0,
+      "metrics": {
+        "crps": 7.396295076019198,
+        "mae": 10.18370082279914,
+        "rmse": 13.085369363529132
+      },
+      "model_alias": "N083 experiment 21",
+      "season": 2024,
+      "target": "total"
+    },
+    {
+      "cohort_sha256": "9289c431838febfa7041ca3dcc0d87217bc9b6a76a1249a36dc999ce08448b81",
+      "evidence": "Development-exposed frozen replay; no original issue credit",
+      "games": 285,
+      "horizon_seconds": 3600.0,
+      "metrics": {
+        "crps": 7.834313651739164,
+        "mae": 11.008445062746773,
+        "rmse": 13.805354515645758
+      },
+      "model_alias": "N083 experiment 21",
+      "season": 2025,
+      "target": "total"
+    },
+    {
+      "cohort_sha256": "e3ff84afd46362375bcd40eb31f67a680b12df299076ee9cc209ec528a7894d3",
+      "evidence": "Development-exposed frozen replay; no original issue credit",
+      "games": 285,
+      "horizon_seconds": 3600.0,
+      "metrics": {
+        "crps": 7.358064999268096,
+        "mae": 10.109314248122667,
+        "rmse": 13.178960200568987
+      },
+      "model_alias": "N083 experiment 22",
+      "season": 2024,
+      "target": "margin"
+    },
+    {
+      "cohort_sha256": "9289c431838febfa7041ca3dcc0d87217bc9b6a76a1249a36dc999ce08448b81",
+      "evidence": "Development-exposed frozen replay; no original issue credit",
+      "games": 285,
+      "horizon_seconds": 3600.0,
+      "metrics": {
+        "crps": 7.393195667822991,
+        "mae": 10.340877324172801,
+        "rmse": 13.17048480360768
+      },
+      "model_alias": "N083 experiment 22",
+      "season": 2025,
+      "target": "margin"
+    },
+    {
+      "cohort_sha256": "e3ff84afd46362375bcd40eb31f67a680b12df299076ee9cc209ec528a7894d3",
+      "evidence": "Development-exposed frozen replay; no original issue credit",
+      "games": 285,
+      "horizon_seconds": 3600.0,
+      "metrics": {
+        "crps": 7.526740410236491,
+        "mae": 10.418442177740987,
+        "rmse": 13.496001706015662
+      },
+      "model_alias": "N083 experiment 23",
+      "season": 2024,
+      "target": "margin"
+    },
+    {
+      "cohort_sha256": "9289c431838febfa7041ca3dcc0d87217bc9b6a76a1249a36dc999ce08448b81",
+      "evidence": "Development-exposed frozen replay; no original issue credit",
+      "games": 285,
+      "horizon_seconds": 3600.0,
+      "metrics": {
+        "crps": 7.3823447817707555,
+        "mae": 10.348035361988078,
+        "rmse": 13.134100525166856
+      },
+      "model_alias": "N083 experiment 23",
+      "season": 2025,
+      "target": "margin"
+    },
+    {
+      "cohort_sha256": "e3ff84afd46362375bcd40eb31f67a680b12df299076ee9cc209ec528a7894d3",
+      "evidence": "Development-exposed frozen replay; no original issue credit",
+      "games": 285,
+      "horizon_seconds": 3600.0,
+      "metrics": {
+        "crps": 7.4132903712203575,
+        "mae": 10.210138219795143,
+        "rmse": 13.311746367758204
+      },
+      "model_alias": "N083 experiment 24",
+      "season": 2024,
+      "target": "margin"
+    },
+    {
+      "cohort_sha256": "9289c431838febfa7041ca3dcc0d87217bc9b6a76a1249a36dc999ce08448b81",
+      "evidence": "Development-exposed frozen replay; no original issue credit",
+      "games": 285,
+      "horizon_seconds": 3600.0,
+      "metrics": {
+        "crps": 7.3424087255602855,
+        "mae": 10.287132163654492,
+        "rmse": 13.04192803684912
+      },
+      "model_alias": "N083 experiment 24",
+      "season": 2025,
+      "target": "margin"
+    },
+    {
+      "cohort_sha256": "e3ff84afd46362375bcd40eb31f67a680b12df299076ee9cc209ec528a7894d3",
+      "evidence": "Development-exposed frozen replay; no original issue credit",
+      "games": 285,
+      "horizon_seconds": 3600.0,
+      "metrics": {
+        "crps": 7.326480585629937,
+        "mae": 10.006615359578472,
+        "rmse": 12.960301198866983
+      },
+      "model_alias": "N083 experiment 25",
+      "season": 2024,
+      "target": "total"
+    },
+    {
+      "cohort_sha256": "9289c431838febfa7041ca3dcc0d87217bc9b6a76a1249a36dc999ce08448b81",
+      "evidence": "Development-exposed frozen replay; no original issue credit",
+      "games": 285,
+      "horizon_seconds": 3600.0,
+      "metrics": {
+        "crps": 7.686572355097607,
+        "mae": 10.701121963368342,
+        "rmse": 13.557697408002714
+      },
+      "model_alias": "N083 experiment 25",
+      "season": 2025,
+      "target": "total"
+    },
+    {
+      "cohort_sha256": "e3ff84afd46362375bcd40eb31f67a680b12df299076ee9cc209ec528a7894d3",
+      "evidence": "Development-exposed frozen replay; no original issue credit",
+      "games": 285,
+      "horizon_seconds": 3600.0,
+      "metrics": {
+        "accuracy": 0.6631578947368421,
+        "brier": 0.21916134586761257,
+        "ece": 0.06560992687417752,
+        "log_loss": 0.6274288400947903,
+        "roc_auc": 0.6971278075929239
+      },
+      "model_alias": "N083 experiment 26",
+      "season": 2024,
+      "target": "win"
+    },
+    {
+      "cohort_sha256": "725ebed30fdf76ed306dc708dd55658f8d64a53e1c7e2d53c521b9d0e09b59bb",
+      "evidence": "Development-exposed frozen replay; no original issue credit",
+      "games": 284,
+      "horizon_seconds": 3600.0,
+      "metrics": {
+        "accuracy": 0.6197183098591549,
+        "brier": 0.2332492368511457,
+        "ece": 0.03220460474700993,
+        "log_loss": 0.6582190424737612,
+        "roc_auc": 0.6503688197767146
+      },
+      "model_alias": "N083 experiment 26",
+      "season": 2025,
+      "target": "win"
+    },
+    {
+      "cohort_sha256": "e3ff84afd46362375bcd40eb31f67a680b12df299076ee9cc209ec528a7894d3",
+      "evidence": "Development-exposed frozen replay; no original issue credit",
+      "games": 285,
+      "horizon_seconds": 3600.0,
+      "metrics": {
+        "crps": 7.464986041984993,
+        "mae": 10.311361474466729,
+        "rmse": 13.37161462359387
+      },
+      "model_alias": "N083 experiment 27",
+      "season": 2024,
+      "target": "margin"
+    },
+    {
+      "cohort_sha256": "9289c431838febfa7041ca3dcc0d87217bc9b6a76a1249a36dc999ce08448b81",
+      "evidence": "Development-exposed frozen replay; no original issue credit",
+      "games": 285,
+      "horizon_seconds": 3600.0,
+      "metrics": {
+        "crps": 7.353523631143234,
+        "mae": 10.26574648324813,
+        "rmse": 13.103280525488017
+      },
+      "model_alias": "N083 experiment 27",
+      "season": 2025,
+      "target": "margin"
+    },
+    {
+      "cohort_sha256": "e3ff84afd46362375bcd40eb31f67a680b12df299076ee9cc209ec528a7894d3",
+      "evidence": "Development-exposed frozen replay; no original issue credit",
+      "games": 285,
+      "horizon_seconds": 3600.0,
+      "metrics": {
+        "crps": 7.429627352829415,
+        "mae": 10.234964130668851,
+        "rmse": 13.236687376106776
+      },
+      "model_alias": "N083 experiment 28",
+      "season": 2024,
+      "target": "total"
+    },
+    {
+      "cohort_sha256": "9289c431838febfa7041ca3dcc0d87217bc9b6a76a1249a36dc999ce08448b81",
+      "evidence": "Development-exposed frozen replay; no original issue credit",
+      "games": 285,
+      "horizon_seconds": 3600.0,
+      "metrics": {
+        "crps": 7.706286323276519,
+        "mae": 10.859221437954368,
+        "rmse": 13.585880993185404
+      },
+      "model_alias": "N083 experiment 28",
+      "season": 2025,
+      "target": "total"
+    },
+    {
+      "cohort_sha256": "e3ff84afd46362375bcd40eb31f67a680b12df299076ee9cc209ec528a7894d3",
+      "evidence": "Development-exposed frozen replay; no original issue credit",
+      "games": 285,
+      "horizon_seconds": 3600.0,
+      "metrics": {
+        "crps": 7.366208887375034,
+        "mae": 10.139750116756911,
+        "rmse": 13.095739128707857
+      },
+      "model_alias": "N083 experiment 29",
+      "season": 2024,
+      "target": "total"
+    },
+    {
+      "cohort_sha256": "9289c431838febfa7041ca3dcc0d87217bc9b6a76a1249a36dc999ce08448b81",
+      "evidence": "Development-exposed frozen replay; no original issue credit",
+      "games": 285,
+      "horizon_seconds": 3600.0,
+      "metrics": {
+        "crps": 7.786593337742844,
+        "mae": 10.964797350339158,
+        "rmse": 13.737291937169095
+      },
+      "model_alias": "N083 experiment 29",
+      "season": 2025,
+      "target": "total"
+    },
+    {
+      "cohort_sha256": "e3ff84afd46362375bcd40eb31f67a680b12df299076ee9cc209ec528a7894d3",
+      "evidence": "Development-exposed frozen replay; no original issue credit",
+      "games": 285,
+      "horizon_seconds": 3600.0,
+      "metrics": {
+        "accuracy": 0.6982456140350877,
+        "brier": 0.2120007915510656,
+        "ece": 0.07993505778345884,
+        "log_loss": 0.6142060918613478,
+        "roc_auc": 0.7375273305505864
+      },
+      "model_alias": "N083 experiment 30",
+      "season": 2024,
+      "target": "win"
+    },
+    {
+      "cohort_sha256": "725ebed30fdf76ed306dc708dd55658f8d64a53e1c7e2d53c521b9d0e09b59bb",
+      "evidence": "Development-exposed frozen replay; no original issue credit",
+      "games": 284,
+      "horizon_seconds": 3600.0,
+      "metrics": {
+        "accuracy": 0.6373239436619719,
+        "brier": 0.22509213929261845,
+        "ece": 0.053064749834046784,
+        "log_loss": 0.6410124615878984,
+        "roc_auc": 0.6838616427432217
+      },
+      "model_alias": "N083 experiment 30",
+      "season": 2025,
+      "target": "win"
+    },
+    {
+      "cohort_sha256": "e3ff84afd46362375bcd40eb31f67a680b12df299076ee9cc209ec528a7894d3",
+      "evidence": "Development-exposed frozen replay; no original issue credit",
+      "games": 285,
+      "horizon_seconds": 3600.0,
+      "metrics": {
+        "crps": 7.315772216717103,
+        "mae": 10.013904055602625,
+        "rmse": 12.95916199235944
+      },
+      "model_alias": "N083 experiment 31",
+      "season": 2024,
+      "target": "total"
+    },
+    {
+      "cohort_sha256": "9289c431838febfa7041ca3dcc0d87217bc9b6a76a1249a36dc999ce08448b81",
+      "evidence": "Development-exposed frozen replay; no original issue credit",
+      "games": 285,
+      "horizon_seconds": 3600.0,
+      "metrics": {
+        "crps": 7.685443301071532,
+        "mae": 10.699283219975039,
+        "rmse": 13.555557768738954
+      },
+      "model_alias": "N083 experiment 31",
+      "season": 2025,
+      "target": "total"
+    },
+    {
+      "cohort_sha256": "e3ff84afd46362375bcd40eb31f67a680b12df299076ee9cc209ec528a7894d3",
+      "evidence": "Development-exposed frozen replay; no original issue credit",
+      "games": 285,
+      "horizon_seconds": 3600.0,
+      "metrics": {
+        "accuracy": 0.6912280701754386,
+        "brier": 0.21488000884553857,
+        "ece": 0.06756878498926427,
+        "log_loss": 0.6202062342137823,
+        "roc_auc": 0.719986086265156
+      },
+      "model_alias": "N083 experiment 32",
+      "season": 2024,
+      "target": "win"
+    },
+    {
+      "cohort_sha256": "725ebed30fdf76ed306dc708dd55658f8d64a53e1c7e2d53c521b9d0e09b59bb",
+      "evidence": "Development-exposed frozen replay; no original issue credit",
+      "games": 284,
+      "horizon_seconds": 3600.0,
+      "metrics": {
+        "accuracy": 0.6126760563380281,
+        "brier": 0.23582607118117077,
+        "ece": 0.08694340342114688,
+        "log_loss": 0.6645924108977994,
+        "roc_auc": 0.6611842105263157
+      },
+      "model_alias": "N083 experiment 32",
+      "season": 2025,
+      "target": "win"
+    },
+    {
+      "cohort_sha256": "e3ff84afd46362375bcd40eb31f67a680b12df299076ee9cc209ec528a7894d3",
+      "evidence": "Development-exposed frozen replay; no original issue credit",
+      "games": 285,
+      "horizon_seconds": 3600.0,
+      "metrics": {
+        "accuracy": 0.6596491228070176,
+        "brier": 0.21864316602067846,
+        "ece": 0.04520206350452226,
+        "log_loss": 0.6266926944045337,
+        "roc_auc": 0.7005565493937587
+      },
+      "model_alias": "N083 experiment 33",
+      "season": 2024,
+      "target": "win"
+    },
+    {
+      "cohort_sha256": "725ebed30fdf76ed306dc708dd55658f8d64a53e1c7e2d53c521b9d0e09b59bb",
+      "evidence": "Development-exposed frozen replay; no original issue credit",
+      "games": 284,
+      "horizon_seconds": 3600.0,
+      "metrics": {
+        "accuracy": 0.6197183098591549,
+        "brier": 0.230998596949286,
+        "ece": 0.05721828265563899,
+        "log_loss": 0.6532692493372027,
+        "roc_auc": 0.6560007974481659
+      },
+      "model_alias": "N083 experiment 33",
+      "season": 2025,
+      "target": "win"
+    },
+    {
+      "cohort_sha256": "e3ff84afd46362375bcd40eb31f67a680b12df299076ee9cc209ec528a7894d3",
+      "evidence": "Development-exposed frozen replay; no original issue credit",
+      "games": 285,
+      "horizon_seconds": 3600.0,
+      "metrics": {
+        "crps": 7.506346299784462,
+        "mae": 10.36497441305108,
+        "rmse": 13.352494374916784
+      },
+      "model_alias": "N083 experiment 34",
+      "season": 2024,
+      "target": "margin"
+    },
+    {
+      "cohort_sha256": "9289c431838febfa7041ca3dcc0d87217bc9b6a76a1249a36dc999ce08448b81",
+      "evidence": "Development-exposed frozen replay; no original issue credit",
+      "games": 285,
+      "horizon_seconds": 3600.0,
+      "metrics": {
+        "crps": 7.427174349539583,
+        "mae": 10.29183876599193,
+        "rmse": 13.202664498827666
+      },
+      "model_alias": "N083 experiment 34",
+      "season": 2025,
+      "target": "margin"
+    },
+    {
+      "cohort_sha256": "e3ff84afd46362375bcd40eb31f67a680b12df299076ee9cc209ec528a7894d3",
+      "evidence": "Development-exposed frozen replay; no original issue credit",
+      "games": 285,
+      "horizon_seconds": 3600.0,
+      "metrics": {
+        "crps": 7.40431959724084,
+        "mae": 10.150602998175483,
+        "rmse": 13.0993101908895
+      },
+      "model_alias": "N083 experiment 35",
+      "season": 2024,
+      "target": "total"
+    },
+    {
+      "cohort_sha256": "9289c431838febfa7041ca3dcc0d87217bc9b6a76a1249a36dc999ce08448b81",
+      "evidence": "Development-exposed frozen replay; no original issue credit",
+      "games": 285,
+      "horizon_seconds": 3600.0,
+      "metrics": {
+        "crps": 7.801276579724088,
+        "mae": 10.940124814093027,
+        "rmse": 13.740694531668096
+      },
+      "model_alias": "N083 experiment 35",
+      "season": 2025,
+      "target": "total"
+    },
+    {
+      "cohort_sha256": "e3ff84afd46362375bcd40eb31f67a680b12df299076ee9cc209ec528a7894d3",
+      "evidence": "Development-exposed frozen replay; no original issue credit",
+      "games": 285,
+      "horizon_seconds": 3600.0,
+      "metrics": {
+        "crps": 7.406005764281932,
+        "mae": 10.212384988569832,
+        "rmse": 13.293382227888626
+      },
+      "model_alias": "N083 experiment 36",
+      "season": 2024,
+      "target": "margin"
+    },
+    {
+      "cohort_sha256": "9289c431838febfa7041ca3dcc0d87217bc9b6a76a1249a36dc999ce08448b81",
+      "evidence": "Development-exposed frozen replay; no original issue credit",
+      "games": 285,
+      "horizon_seconds": 3600.0,
+      "metrics": {
+        "crps": 7.361882182484908,
+        "mae": 10.320429477609302,
+        "rmse": 13.1097023726688
+      },
+      "model_alias": "N083 experiment 36",
+      "season": 2025,
+      "target": "margin"
+    },
+    {
+      "cohort_sha256": "e3ff84afd46362375bcd40eb31f67a680b12df299076ee9cc209ec528a7894d3",
+      "evidence": "Development-exposed frozen replay; no original issue credit",
+      "games": 285,
+      "horizon_seconds": 3600.0,
+      "metrics": {
+        "accuracy": 0.7017543859649122,
+        "brier": 0.214314051531914,
+        "ece": 0.08901907435634679,
+        "log_loss": 0.618738961388831,
+        "roc_auc": 0.7224209898628503
+      },
+      "model_alias": "N083 experiment 37",
+      "season": 2024,
+      "target": "win"
+    },
+    {
+      "cohort_sha256": "725ebed30fdf76ed306dc708dd55658f8d64a53e1c7e2d53c521b9d0e09b59bb",
+      "evidence": "Development-exposed frozen replay; no original issue credit",
+      "games": 284,
+      "horizon_seconds": 3600.0,
+      "metrics": {
+        "accuracy": 0.6302816901408451,
+        "brier": 0.2313922512739913,
+        "ece": 0.06663095337194457,
+        "log_loss": 0.6554544423818359,
+        "roc_auc": 0.6620314992025518
+      },
+      "model_alias": "N083 experiment 37",
+      "season": 2025,
+      "target": "win"
+    },
+    {
+      "cohort_sha256": "e3ff84afd46362375bcd40eb31f67a680b12df299076ee9cc209ec528a7894d3",
+      "evidence": "Development-exposed frozen replay; no original issue credit",
+      "games": 285,
+      "horizon_seconds": 3600.0,
+      "metrics": {
+        "crps": 7.361239443114142,
+        "mae": 10.106941576087292,
+        "rmse": 13.135838789349123
+      },
+      "model_alias": "N083 experiment 38",
+      "season": 2024,
+      "target": "total"
+    },
+    {
+      "cohort_sha256": "9289c431838febfa7041ca3dcc0d87217bc9b6a76a1249a36dc999ce08448b81",
+      "evidence": "Development-exposed frozen replay; no original issue credit",
+      "games": 285,
+      "horizon_seconds": 3600.0,
+      "metrics": {
+        "crps": 7.664561033834534,
+        "mae": 10.756759404145985,
+        "rmse": 13.526044718049382
+      },
+      "model_alias": "N083 experiment 38",
+      "season": 2025,
+      "target": "total"
+    },
+    {
+      "cohort_sha256": "e3ff84afd46362375bcd40eb31f67a680b12df299076ee9cc209ec528a7894d3",
+      "evidence": "Development-exposed frozen replay; no original issue credit",
+      "games": 285,
+      "horizon_seconds": 3600.0,
+      "metrics": {
+        "accuracy": 0.7052631578947368,
+        "brier": 0.2151910995586993,
+        "ece": 0.07873179412698189,
+        "log_loss": 0.6208218190133599,
+        "roc_auc": 0.7191910157026438
+      },
+      "model_alias": "N083 experiment 39",
+      "season": 2024,
+      "target": "win"
+    },
+    {
+      "cohort_sha256": "725ebed30fdf76ed306dc708dd55658f8d64a53e1c7e2d53c521b9d0e09b59bb",
+      "evidence": "Development-exposed frozen replay; no original issue credit",
+      "games": 284,
+      "horizon_seconds": 3600.0,
+      "metrics": {
+        "accuracy": 0.6197183098591549,
+        "brier": 0.23447252367346755,
+        "ece": 0.07619773970530012,
+        "log_loss": 0.6624452964301076,
+        "roc_auc": 0.6599381977671451
+      },
+      "model_alias": "N083 experiment 39",
+      "season": 2025,
+      "target": "win"
+    },
+    {
+      "cohort_sha256": "e3ff84afd46362375bcd40eb31f67a680b12df299076ee9cc209ec528a7894d3",
+      "evidence": "Development-exposed frozen replay; no original issue credit",
+      "games": 285,
+      "horizon_seconds": 3600.0,
+      "metrics": {
+        "crps": 7.565630873553903,
+        "mae": 10.408550616477926,
+        "rmse": 13.588193906451504
+      },
+      "model_alias": "N083 experiment 40",
+      "season": 2024,
+      "target": "margin"
+    },
+    {
+      "cohort_sha256": "9289c431838febfa7041ca3dcc0d87217bc9b6a76a1249a36dc999ce08448b81",
+      "evidence": "Development-exposed frozen replay; no original issue credit",
+      "games": 285,
+      "horizon_seconds": 3600.0,
+      "metrics": {
+        "crps": 7.332857695025054,
+        "mae": 10.266570154891202,
+        "rmse": 13.050598725195208
+      },
+      "model_alias": "N083 experiment 40",
+      "season": 2025,
+      "target": "margin"
+    },
+    {
+      "cohort_sha256": "e3ff84afd46362375bcd40eb31f67a680b12df299076ee9cc209ec528a7894d3",
+      "evidence": "Development-exposed frozen replay; no original issue credit",
+      "games": 285,
+      "horizon_seconds": 3600.0,
+      "metrics": {
+        "accuracy": 0.6771929824561403,
+        "brier": 0.21619553055037924,
+        "ece": 0.051975683037593944,
+        "log_loss": 0.622482242789031,
+        "roc_auc": 0.7082587954680979
+      },
+      "model_alias": "N083 experiment 41",
+      "season": 2024,
+      "target": "win"
+    },
+    {
+      "cohort_sha256": "725ebed30fdf76ed306dc708dd55658f8d64a53e1c7e2d53c521b9d0e09b59bb",
+      "evidence": "Development-exposed frozen replay; no original issue credit",
+      "games": 284,
+      "horizon_seconds": 3600.0,
+      "metrics": {
+        "accuracy": 0.6373239436619719,
+        "brier": 0.2294263604284465,
+        "ece": 0.07923142212408239,
+        "log_loss": 0.6515757445054629,
+        "roc_auc": 0.6675139553429027
+      },
+      "model_alias": "N083 experiment 41",
+      "season": 2025,
+      "target": "win"
+    },
+    {
+      "cohort_sha256": "e3ff84afd46362375bcd40eb31f67a680b12df299076ee9cc209ec528a7894d3",
+      "evidence": "Development-exposed frozen replay; no original issue credit",
+      "games": 285,
+      "horizon_seconds": 3600.0,
+      "metrics": {
+        "crps": 7.376467133378588,
+        "mae": 10.185929155024876,
+        "rmse": 13.221864972345408
+      },
+      "model_alias": "N083 experiment 42",
+      "season": 2024,
+      "target": "margin"
+    },
+    {
+      "cohort_sha256": "9289c431838febfa7041ca3dcc0d87217bc9b6a76a1249a36dc999ce08448b81",
+      "evidence": "Development-exposed frozen replay; no original issue credit",
+      "games": 285,
+      "horizon_seconds": 3600.0,
+      "metrics": {
+        "crps": 7.387791308150844,
+        "mae": 10.37706788662992,
+        "rmse": 13.159449408438464
+      },
+      "model_alias": "N083 experiment 42",
+      "season": 2025,
+      "target": "margin"
+    },
+    {
+      "cohort_sha256": "e3ff84afd46362375bcd40eb31f67a680b12df299076ee9cc209ec528a7894d3",
+      "evidence": "Development-exposed frozen replay; no original issue credit",
+      "games": 285,
+      "horizon_seconds": 3600.0,
+      "metrics": {
+        "crps": 7.289401443962459,
+        "mae": 10.016232165268402,
+        "rmse": 13.054441315735492
+      },
+      "model_alias": "N083 experiment 43",
+      "season": 2024,
+      "target": "margin"
+    },
+    {
+      "cohort_sha256": "9289c431838febfa7041ca3dcc0d87217bc9b6a76a1249a36dc999ce08448b81",
+      "evidence": "Development-exposed frozen replay; no original issue credit",
+      "games": 285,
+      "horizon_seconds": 3600.0,
+      "metrics": {
+        "crps": 7.385732646674958,
+        "mae": 10.348684763223464,
+        "rmse": 13.095758259153701
+      },
+      "model_alias": "N083 experiment 43",
+      "season": 2025,
+      "target": "margin"
+    },
+    {
+      "cohort_sha256": "e3ff84afd46362375bcd40eb31f67a680b12df299076ee9cc209ec528a7894d3",
+      "evidence": "Development-exposed frozen replay; no original issue credit",
+      "games": 285,
+      "horizon_seconds": 3600.0,
+      "metrics": {
+        "crps": 7.30888343791567,
+        "mae": 10.213953588259066,
+        "rmse": 13.085234968362519
+      },
+      "model_alias": "N083 experiment 44",
+      "season": 2024,
+      "target": "total"
+    },
+    {
+      "cohort_sha256": "9289c431838febfa7041ca3dcc0d87217bc9b6a76a1249a36dc999ce08448b81",
+      "evidence": "Development-exposed frozen replay; no original issue credit",
+      "games": 285,
+      "horizon_seconds": 3600.0,
+      "metrics": {
+        "crps": 7.626289373076048,
+        "mae": 10.64700611667277,
+        "rmse": 13.458267325923925
+      },
+      "model_alias": "N083 experiment 44",
+      "season": 2025,
+      "target": "total"
+    },
+    {
+      "cohort_sha256": "e3ff84afd46362375bcd40eb31f67a680b12df299076ee9cc209ec528a7894d3",
+      "evidence": "Development-exposed frozen replay; no original issue credit",
+      "games": 285,
+      "horizon_seconds": 3600.0,
+      "metrics": {
+        "crps": 7.407955131496646,
+        "mae": 10.32252598928851,
+        "rmse": 13.499191854104533
+      },
+      "model_alias": "N083 experiment 45",
+      "season": 2024,
+      "target": "total"
+    },
+    {
+      "cohort_sha256": "9289c431838febfa7041ca3dcc0d87217bc9b6a76a1249a36dc999ce08448b81",
+      "evidence": "Development-exposed frozen replay; no original issue credit",
+      "games": 285,
+      "horizon_seconds": 3600.0,
+      "metrics": {
+        "crps": 7.558986383976161,
+        "mae": 10.540547113434673,
+        "rmse": 13.426592463251096
+      },
+      "model_alias": "N083 experiment 45",
+      "season": 2025,
+      "target": "total"
+    },
+    {
+      "cohort_sha256": "e3ff84afd46362375bcd40eb31f67a680b12df299076ee9cc209ec528a7894d3",
+      "evidence": "Development-exposed frozen replay; no original issue credit",
+      "games": 285,
+      "horizon_seconds": 3600.0,
+      "metrics": {
+        "crps": 7.5271067373288085,
+        "mae": 10.318946316367702,
+        "rmse": 13.391869177533637
+      },
+      "model_alias": "N083 experiment 46",
+      "season": 2024,
+      "target": "total"
+    },
+    {
+      "cohort_sha256": "9289c431838febfa7041ca3dcc0d87217bc9b6a76a1249a36dc999ce08448b81",
+      "evidence": "Development-exposed frozen replay; no original issue credit",
+      "games": 285,
+      "horizon_seconds": 3600.0,
+      "metrics": {
+        "crps": 7.613253047587359,
+        "mae": 10.734529836554277,
+        "rmse": 13.42620817815451
+      },
+      "model_alias": "N083 experiment 46",
+      "season": 2025,
+      "target": "total"
+    },
+    {
+      "cohort_sha256": "e3ff84afd46362375bcd40eb31f67a680b12df299076ee9cc209ec528a7894d3",
+      "evidence": "Development-exposed frozen replay; no original issue credit",
+      "games": 285,
+      "horizon_seconds": 3600.0,
+      "metrics": {
+        "crps": 7.3924832530456595,
+        "mae": 10.157728766221465,
+        "rmse": 13.08105237995423
+      },
+      "model_alias": "N083 experiment 47",
+      "season": 2024,
+      "target": "total"
+    },
+    {
+      "cohort_sha256": "9289c431838febfa7041ca3dcc0d87217bc9b6a76a1249a36dc999ce08448b81",
+      "evidence": "Development-exposed frozen replay; no original issue credit",
+      "games": 285,
+      "horizon_seconds": 3600.0,
+      "metrics": {
+        "crps": 7.776931189318274,
+        "mae": 10.964836947211468,
+        "rmse": 13.717464690851877
+      },
+      "model_alias": "N083 experiment 47",
+      "season": 2025,
+      "target": "total"
+    },
+    {
+      "cohort_sha256": "e3ff84afd46362375bcd40eb31f67a680b12df299076ee9cc209ec528a7894d3",
+      "evidence": "Development-exposed frozen replay; no original issue credit",
+      "games": 285,
+      "horizon_seconds": 3600.0,
+      "metrics": {
+        "crps": 7.39196317288207,
+        "mae": 10.11954594662315,
+        "rmse": 13.08579439896686
+      },
+      "model_alias": "N083 experiment 48",
+      "season": 2024,
+      "target": "total"
+    },
+    {
+      "cohort_sha256": "9289c431838febfa7041ca3dcc0d87217bc9b6a76a1249a36dc999ce08448b81",
+      "evidence": "Development-exposed frozen replay; no original issue credit",
+      "games": 285,
+      "horizon_seconds": 3600.0,
+      "metrics": {
+        "crps": 7.839000652403639,
+        "mae": 11.038234737463165,
+        "rmse": 13.813848344718386
+      },
+      "model_alias": "N083 experiment 48",
+      "season": 2025,
+      "target": "total"
+    },
+    {
+      "cohort_sha256": "e3ff84afd46362375bcd40eb31f67a680b12df299076ee9cc209ec528a7894d3",
+      "evidence": "Development-exposed frozen replay; no original issue credit",
+      "games": 285,
+      "horizon_seconds": 3600.0,
+      "metrics": {
+        "crps": 7.369382851924855,
+        "mae": 10.16702375530429,
+        "rmse": 13.199998746381262
+      },
+      "model_alias": "N083 experiment 49",
+      "season": 2024,
+      "target": "margin"
+    },
+    {
+      "cohort_sha256": "9289c431838febfa7041ca3dcc0d87217bc9b6a76a1249a36dc999ce08448b81",
+      "evidence": "Development-exposed frozen replay; no original issue credit",
+      "games": 285,
+      "horizon_seconds": 3600.0,
+      "metrics": {
+        "crps": 7.329569411664319,
+        "mae": 10.308533442205757,
+        "rmse": 13.054505827033823
+      },
+      "model_alias": "N083 experiment 49",
+      "season": 2025,
+      "target": "margin"
+    },
+    {
+      "cohort_sha256": "e3ff84afd46362375bcd40eb31f67a680b12df299076ee9cc209ec528a7894d3",
+      "evidence": "Development-exposed frozen replay; no original issue credit",
+      "games": 285,
+      "horizon_seconds": 3600.0,
+      "metrics": {
+        "crps": 7.277070007099498,
+        "mae": 10.006612513687235,
+        "rmse": 13.037300446033289
+      },
+      "model_alias": "N083 experiment 50",
+      "season": 2024,
+      "target": "margin"
+    },
+    {
+      "cohort_sha256": "9289c431838febfa7041ca3dcc0d87217bc9b6a76a1249a36dc999ce08448b81",
+      "evidence": "Development-exposed frozen replay; no original issue credit",
+      "games": 285,
+      "horizon_seconds": 3600.0,
+      "metrics": {
+        "crps": 7.402024242600829,
+        "mae": 10.372835703882393,
+        "rmse": 13.124145052233187
+      },
+      "model_alias": "N083 experiment 50",
+      "season": 2025,
+      "target": "margin"
+    },
+    {
+      "cohort_sha256": "e3ff84afd46362375bcd40eb31f67a680b12df299076ee9cc209ec528a7894d3",
+      "evidence": "Development-exposed frozen replay; no original issue credit",
+      "games": 285,
+      "horizon_seconds": 3600.0,
+      "metrics": {
+        "accuracy": 0.6456140350877193,
+        "brier": 0.21824135729340088,
+        "ece": 0.054753835869654134,
+        "log_loss": 0.6269534087693664,
+        "roc_auc": 0.7056748161399323
+      },
+      "model_alias": "N083 experiment 51",
+      "season": 2024,
+      "target": "win"
+    },
+    {
+      "cohort_sha256": "725ebed30fdf76ed306dc708dd55658f8d64a53e1c7e2d53c521b9d0e09b59bb",
+      "evidence": "Development-exposed frozen replay; no original issue credit",
+      "games": 284,
+      "horizon_seconds": 3600.0,
+      "metrics": {
+        "accuracy": 0.6408450704225352,
+        "brier": 0.22813462129221096,
+        "ece": 0.055365064469502304,
+        "log_loss": 0.648160849809629,
+        "roc_auc": 0.6707037480063796
+      },
+      "model_alias": "N083 experiment 51",
+      "season": 2025,
+      "target": "win"
+    },
+    {
+      "cohort_sha256": "e3ff84afd46362375bcd40eb31f67a680b12df299076ee9cc209ec528a7894d3",
+      "evidence": "Development-exposed frozen replay; no original issue credit",
+      "games": 285,
+      "horizon_seconds": 3600.0,
+      "metrics": {
+        "crps": 7.333327646775178,
+        "mae": 10.098973387115285,
+        "rmse": 13.141322832692527
+      },
+      "model_alias": "N083 experiment 52",
+      "season": 2024,
+      "target": "margin"
+    },
+    {
+      "cohort_sha256": "9289c431838febfa7041ca3dcc0d87217bc9b6a76a1249a36dc999ce08448b81",
+      "evidence": "Development-exposed frozen replay; no original issue credit",
+      "games": 285,
+      "horizon_seconds": 3600.0,
+      "metrics": {
+        "crps": 7.36403327806632,
+        "mae": 10.335662771213222,
+        "rmse": 13.12814301625995
+      },
+      "model_alias": "N083 experiment 52",
+      "season": 2025,
+      "target": "margin"
+    },
+    {
+      "cohort_sha256": "e3ff84afd46362375bcd40eb31f67a680b12df299076ee9cc209ec528a7894d3",
+      "evidence": "Development-exposed frozen replay; no original issue credit",
+      "games": 285,
+      "horizon_seconds": 3600.0,
+      "metrics": {
+        "accuracy": 0.6631578947368421,
+        "brier": 0.22076553185965997,
+        "ece": 0.06468232914379372,
+        "log_loss": 0.6369846931638852,
+        "roc_auc": 0.7012025442258001
+      },
+      "model_alias": "N083 experiment 53",
+      "season": 2024,
+      "target": "win"
+    },
+    {
+      "cohort_sha256": "725ebed30fdf76ed306dc708dd55658f8d64a53e1c7e2d53c521b9d0e09b59bb",
+      "evidence": "Development-exposed frozen replay; no original issue credit",
+      "games": 284,
+      "horizon_seconds": 3600.0,
+      "metrics": {
+        "accuracy": 0.6126760563380281,
+        "brier": 0.23399575071545387,
+        "ece": 0.0883534157451623,
+        "log_loss": 0.6615388647155491,
+        "roc_auc": 0.6654704944178629
+      },
+      "model_alias": "N083 experiment 53",
+      "season": 2025,
+      "target": "win"
+    },
+    {
+      "cohort_sha256": "e3ff84afd46362375bcd40eb31f67a680b12df299076ee9cc209ec528a7894d3",
+      "evidence": "Development-exposed frozen replay; no original issue credit",
+      "games": 285,
+      "horizon_seconds": 3600.0,
+      "metrics": {
+        "crps": 7.408531149943366,
+        "mae": 10.322614916546225,
+        "rmse": 13.497535389194836
+      },
+      "model_alias": "N083 experiment 54",
+      "season": 2024,
+      "target": "total"
+    },
+    {
+      "cohort_sha256": "9289c431838febfa7041ca3dcc0d87217bc9b6a76a1249a36dc999ce08448b81",
+      "evidence": "Development-exposed frozen replay; no original issue credit",
+      "games": 285,
+      "horizon_seconds": 3600.0,
+      "metrics": {
+        "crps": 7.560155239715459,
+        "mae": 10.544169223252265,
+        "rmse": 13.432448169728897
+      },
+      "model_alias": "N083 experiment 54",
+      "season": 2025,
+      "target": "total"
+    },
+    {
+      "cohort_sha256": "e3ff84afd46362375bcd40eb31f67a680b12df299076ee9cc209ec528a7894d3",
+      "evidence": "Development-exposed frozen replay; no original issue credit",
+      "games": 285,
+      "horizon_seconds": 3600.0,
+      "metrics": {
+        "crps": 7.352692089734164,
+        "mae": 10.101281878986118,
+        "rmse": 13.174133436177142
+      },
+      "model_alias": "N083 experiment 55",
+      "season": 2024,
+      "target": "margin"
+    },
+    {
+      "cohort_sha256": "9289c431838febfa7041ca3dcc0d87217bc9b6a76a1249a36dc999ce08448b81",
+      "evidence": "Development-exposed frozen replay; no original issue credit",
+      "games": 285,
+      "horizon_seconds": 3600.0,
+      "metrics": {
+        "crps": 7.36587156026675,
+        "mae": 10.280570481782943,
+        "rmse": 13.132990192115479
+      },
+      "model_alias": "N083 experiment 55",
+      "season": 2025,
+      "target": "margin"
+    },
+    {
+      "cohort_sha256": "e3ff84afd46362375bcd40eb31f67a680b12df299076ee9cc209ec528a7894d3",
+      "evidence": "Development-exposed frozen replay; no original issue credit",
+      "games": 285,
+      "horizon_seconds": 3600.0,
+      "metrics": {
+        "crps": 7.306825031381084,
+        "mae": 10.00277037943315,
+        "rmse": 12.952135096421284
+      },
+      "model_alias": "N083 experiment 56",
+      "season": 2024,
+      "target": "total"
+    },
+    {
+      "cohort_sha256": "9289c431838febfa7041ca3dcc0d87217bc9b6a76a1249a36dc999ce08448b81",
+      "evidence": "Development-exposed frozen replay; no original issue credit",
+      "games": 285,
+      "horizon_seconds": 3600.0,
+      "metrics": {
+        "crps": 7.694186425866403,
+        "mae": 10.711148813167712,
+        "rmse": 13.569574372478838
+      },
+      "model_alias": "N083 experiment 56",
+      "season": 2025,
+      "target": "total"
+    },
+    {
+      "cohort_sha256": "e3ff84afd46362375bcd40eb31f67a680b12df299076ee9cc209ec528a7894d3",
+      "evidence": "Development-exposed frozen replay; no original issue credit",
+      "games": 285,
+      "horizon_seconds": 3600.0,
+      "metrics": {
+        "crps": 7.50104465938159,
+        "mae": 10.235103919896877,
+        "rmse": 13.266091093650633
+      },
+      "model_alias": "N083 experiment 57",
+      "season": 2024,
+      "target": "total"
+    },
+    {
+      "cohort_sha256": "9289c431838febfa7041ca3dcc0d87217bc9b6a76a1249a36dc999ce08448b81",
+      "evidence": "Development-exposed frozen replay; no original issue credit",
+      "games": 285,
+      "horizon_seconds": 3600.0,
+      "metrics": {
+        "crps": 7.688491733482243,
+        "mae": 10.836258805700682,
+        "rmse": 13.574367550797792
+      },
+      "model_alias": "N083 experiment 57",
+      "season": 2025,
+      "target": "total"
+    },
+    {
+      "cohort_sha256": "e3ff84afd46362375bcd40eb31f67a680b12df299076ee9cc209ec528a7894d3",
+      "evidence": "Development-exposed frozen replay; no original issue credit",
+      "games": 285,
+      "horizon_seconds": 3600.0,
+      "metrics": {
+        "crps": 7.520071644699946,
+        "mae": 10.453725344666235,
+        "rmse": 13.475152700749081
+      },
+      "model_alias": "N083 experiment 58",
+      "season": 2024,
+      "target": "margin"
+    },
+    {
+      "cohort_sha256": "9289c431838febfa7041ca3dcc0d87217bc9b6a76a1249a36dc999ce08448b81",
+      "evidence": "Development-exposed frozen replay; no original issue credit",
+      "games": 285,
+      "horizon_seconds": 3600.0,
+      "metrics": {
+        "crps": 7.409295664683247,
+        "mae": 10.384469652258948,
+        "rmse": 13.142498420158383
+      },
+      "model_alias": "N083 experiment 58",
+      "season": 2025,
+      "target": "margin"
+    },
+    {
+      "cohort_sha256": "e3ff84afd46362375bcd40eb31f67a680b12df299076ee9cc209ec528a7894d3",
+      "evidence": "Development-exposed frozen replay; no original issue credit",
+      "games": 285,
+      "horizon_seconds": 3600.0,
+      "metrics": {
+        "accuracy": 0.656140350877193,
+        "brier": 0.22085180049187192,
+        "ece": 0.07030434721850322,
+        "log_loss": 0.6372010424633141,
+        "roc_auc": 0.7004074736632877
+      },
+      "model_alias": "N083 experiment 59",
+      "season": 2024,
+      "target": "win"
+    },
+    {
+      "cohort_sha256": "725ebed30fdf76ed306dc708dd55658f8d64a53e1c7e2d53c521b9d0e09b59bb",
+      "evidence": "Development-exposed frozen replay; no original issue credit",
+      "games": 284,
+      "horizon_seconds": 3600.0,
+      "metrics": {
+        "accuracy": 0.6126760563380281,
+        "brier": 0.23391449447316398,
+        "ece": 0.08386535540626013,
+        "log_loss": 0.6613088040731179,
+        "roc_auc": 0.6656200159489634
+      },
+      "model_alias": "N083 experiment 59",
+      "season": 2025,
+      "target": "win"
+    },
+    {
+      "cohort_sha256": "e3ff84afd46362375bcd40eb31f67a680b12df299076ee9cc209ec528a7894d3",
+      "evidence": "Development-exposed frozen replay; no original issue credit",
+      "games": 285,
+      "horizon_seconds": 3600.0,
+      "metrics": {
+        "accuracy": 0.6912280701754386,
+        "brier": 0.21386922097570302,
+        "ece": 0.06602976248975387,
+        "log_loss": 0.6180812506740173,
+        "roc_auc": 0.7269926455972968
+      },
+      "model_alias": "N083 experiment 60",
+      "season": 2024,
+      "target": "win"
+    },
+    {
+      "cohort_sha256": "725ebed30fdf76ed306dc708dd55658f8d64a53e1c7e2d53c521b9d0e09b59bb",
+      "evidence": "Development-exposed frozen replay; no original issue credit",
+      "games": 284,
+      "horizon_seconds": 3600.0,
+      "metrics": {
+        "accuracy": 0.6302816901408451,
+        "brier": 0.23220322435232782,
+        "ece": 0.05740584795114018,
+        "log_loss": 0.6567147738834217,
+        "roc_auc": 0.6584928229665072
+      },
+      "model_alias": "N083 experiment 60",
+      "season": 2025,
+      "target": "win"
+    }
+  ],
+  "new_meta_fits": 22,
+  "new_native_fits": 354,
+  "new_paid_calls": 15,
+  "old_2026_cards": [
+    {
+      "cohort_sha256": "2a05b1f21d207e4158b17a0f83475ced5d96789ed59bcca8ba17256bce75a6da",
+      "comparison_horizon_seconds": 3600.0,
+      "games": 120,
+      "included_in_current_export": false,
+      "metrics": {
+        "mae": 11.352531077956566,
+        "rmse": 14.120407353503637
+      },
+      "model_alias": "Retained candidate 13",
+      "original_issue_credit": 0,
+      "promotion_authorized": false,
+      "qualification": "Dated retained actual-horizon replay. It does not recover an unknown former selection horizon or represent a new N082 evaluation.",
+      "season": 2026,
+      "source_snapshot": "N079 retained unchanged in N082",
+      "target": "total"
+    },
+    {
+      "cohort_sha256": "65df2008165ee6ab5daaa2ad161b1f5dc46c733da5e100ab8051d21abb3f53d3",
+      "comparison_horizon_seconds": 4738.345284,
+      "games": 1,
+      "included_in_current_export": false,
+      "metrics": {
+        "mae": 5.989287450724248,
+        "rmse": 5.989287450724248
+      },
+      "model_alias": "Retained candidate 13",
+      "original_issue_credit": 0,
+      "promotion_authorized": false,
+      "qualification": "Dated retained actual-horizon replay. It does not recover an unknown former selection horizon or represent a new N082 evaluation.",
+      "season": 2026,
+      "source_snapshot": "N079 retained unchanged in N082",
+      "target": "total"
+    },
+    {
+      "cohort_sha256": "5d4efd7c011b244ef1b92ff0763f6338089ee98fff3df520e25cb9f87472cc42",
+      "comparison_horizon_seconds": 170544.720703,
+      "games": 1,
+      "included_in_current_export": false,
+      "metrics": {
+        "mae": 3.682976587492341,
+        "rmse": 3.682976587492341
+      },
+      "model_alias": "Retained candidate 13",
+      "original_issue_credit": 0,
+      "promotion_authorized": false,
+      "qualification": "Dated retained actual-horizon replay. It does not recover an unknown former selection horizon or represent a new N082 evaluation.",
+      "season": 2026,
+      "source_snapshot": "N079 retained unchanged in N082",
+      "target": "total"
+    },
+    {
+      "cohort_sha256": "0be98450b968c6ce16af20526c21af28d262a6a27131a45069586de31b7a1b2c",
+      "comparison_horizon_seconds": 3600.0,
+      "games": 119,
+      "included_in_current_export": true,
+      "metrics": {
+        "accuracy": 0.6470588235294118,
+        "brier": 0.23530370308199267,
+        "log_loss": 0.6638995449790782
+      },
+      "model_alias": "Selected model 1",
+      "original_issue_credit": 0,
+      "promotion_authorized": false,
+      "qualification": "Dated retained actual-horizon replay. It does not recover an unknown former selection horizon or represent a new N082 evaluation.",
+      "season": 2026,
+      "source_snapshot": "N079 retained unchanged in N082",
+      "target": "win"
+    },
+    {
+      "cohort_sha256": "65df2008165ee6ab5daaa2ad161b1f5dc46c733da5e100ab8051d21abb3f53d3",
+      "comparison_horizon_seconds": 4738.345284,
+      "games": 1,
+      "included_in_current_export": true,
+      "metrics": {
+        "accuracy": 0.0,
+        "brier": 0.37758321287731106,
+        "log_loss": 0.9531570196953567
+      },
+      "model_alias": "Selected model 1",
+      "original_issue_credit": 0,
+      "promotion_authorized": false,
+      "qualification": "Dated retained actual-horizon replay. It does not recover an unknown former selection horizon or represent a new N082 evaluation.",
+      "season": 2026,
+      "source_snapshot": "N079 retained unchanged in N082",
+      "target": "win"
+    },
+    {
+      "cohort_sha256": "5d4efd7c011b244ef1b92ff0763f6338089ee98fff3df520e25cb9f87472cc42",
+      "comparison_horizon_seconds": 170544.720703,
+      "games": 1,
+      "included_in_current_export": true,
+      "metrics": {
+        "accuracy": 1.0,
+        "brier": 0.10047505914597481,
+        "log_loss": 0.3812282244809649
+      },
+      "model_alias": "Selected model 1",
+      "original_issue_credit": 0,
+      "promotion_authorized": false,
+      "qualification": "Dated retained actual-horizon replay. It does not recover an unknown former selection horizon or represent a new N082 evaluation.",
+      "season": 2026,
+      "source_snapshot": "N079 retained unchanged in N082",
+      "target": "win"
+    },
+    {
+      "cohort_sha256": "0be98450b968c6ce16af20526c21af28d262a6a27131a45069586de31b7a1b2c",
+      "comparison_horizon_seconds": 3600.0,
+      "games": 119,
+      "included_in_current_export": true,
+      "metrics": {
+        "accuracy": 0.6218487394957983,
+        "brier": 0.2304767379162756,
+        "log_loss": 0.6536275874377288
+      },
+      "model_alias": "Retained candidate 9",
+      "original_issue_credit": 0,
+      "promotion_authorized": false,
+      "qualification": "Dated retained actual-horizon replay. It does not recover an unknown former selection horizon or represent a new N082 evaluation.",
+      "season": 2026,
+      "source_snapshot": "N079 retained unchanged in N082",
+      "target": "win"
+    },
+    {
+      "cohort_sha256": "65df2008165ee6ab5daaa2ad161b1f5dc46c733da5e100ab8051d21abb3f53d3",
+      "comparison_horizon_seconds": 4738.345284,
+      "games": 1,
+      "included_in_current_export": true,
+      "metrics": {
+        "accuracy": 0.0,
+        "brier": 0.42858999946565746,
+        "log_loss": 1.0632485839556955
+      },
+      "model_alias": "Retained candidate 9",
+      "original_issue_credit": 0,
+      "promotion_authorized": false,
+      "qualification": "Dated retained actual-horizon replay. It does not recover an unknown former selection horizon or represent a new N082 evaluation.",
+      "season": 2026,
+      "source_snapshot": "N079 retained unchanged in N082",
+      "target": "win"
+    },
+    {
+      "cohort_sha256": "5d4efd7c011b244ef1b92ff0763f6338089ee98fff3df520e25cb9f87472cc42",
+      "comparison_horizon_seconds": 170544.720703,
+      "games": 1,
+      "included_in_current_export": true,
+      "metrics": {
+        "accuracy": 1.0,
+        "brier": 0.059996879986901064,
+        "log_loss": 0.2809615134111055
+      },
+      "model_alias": "Retained candidate 9",
+      "original_issue_credit": 0,
+      "promotion_authorized": false,
+      "qualification": "Dated retained actual-horizon replay. It does not recover an unknown former selection horizon or represent a new N082 evaluation.",
+      "season": 2026,
+      "source_snapshot": "N079 retained unchanged in N082",
+      "target": "win"
+    },
+    {
+      "cohort_sha256": "2a05b1f21d207e4158b17a0f83475ced5d96789ed59bcca8ba17256bce75a6da",
+      "comparison_horizon_seconds": 3600.0,
+      "games": 120,
+      "included_in_current_export": false,
+      "metrics": {
+        "mae": 11.429085037767369,
+        "rmse": 14.090947620682368
+      },
+      "model_alias": "Retained candidate 14",
+      "original_issue_credit": 0,
+      "promotion_authorized": false,
+      "qualification": "Dated retained actual-horizon replay. It does not recover an unknown former selection horizon or represent a new N082 evaluation.",
+      "season": 2026,
+      "source_snapshot": "N079 retained unchanged in N082",
+      "target": "total"
+    },
+    {
+      "cohort_sha256": "65df2008165ee6ab5daaa2ad161b1f5dc46c733da5e100ab8051d21abb3f53d3",
+      "comparison_horizon_seconds": 4738.345284,
+      "games": 1,
+      "included_in_current_export": false,
+      "metrics": {
+        "mae": 4.64587897492391,
+        "rmse": 4.64587897492391
+      },
+      "model_alias": "Retained candidate 14",
+      "original_issue_credit": 0,
+      "promotion_authorized": false,
+      "qualification": "Dated retained actual-horizon replay. It does not recover an unknown former selection horizon or represent a new N082 evaluation.",
+      "season": 2026,
+      "source_snapshot": "N079 retained unchanged in N082",
+      "target": "total"
+    },
+    {
+      "cohort_sha256": "5d4efd7c011b244ef1b92ff0763f6338089ee98fff3df520e25cb9f87472cc42",
+      "comparison_horizon_seconds": 170544.720703,
+      "games": 1,
+      "included_in_current_export": false,
+      "metrics": {
+        "mae": 4.024065289064126,
+        "rmse": 4.024065289064126
+      },
+      "model_alias": "Retained candidate 14",
+      "original_issue_credit": 0,
+      "promotion_authorized": false,
+      "qualification": "Dated retained actual-horizon replay. It does not recover an unknown former selection horizon or represent a new N082 evaluation.",
+      "season": 2026,
+      "source_snapshot": "N079 retained unchanged in N082",
+      "target": "total"
+    },
+    {
+      "cohort_sha256": "2a05b1f21d207e4158b17a0f83475ced5d96789ed59bcca8ba17256bce75a6da",
+      "comparison_horizon_seconds": 7200.0,
+      "games": 120,
+      "included_in_current_export": false,
+      "metrics": {
+        "mae": 11.153211997592996,
+        "rmse": 13.80630529371553
+      },
+      "model_alias": "Retained candidate 15",
+      "original_issue_credit": 0,
+      "promotion_authorized": false,
+      "qualification": "Dated retained actual-horizon replay. It does not recover an unknown former selection horizon or represent a new N082 evaluation.",
+      "season": 2026,
+      "source_snapshot": "N079 retained unchanged in N082",
+      "target": "total"
+    },
+    {
+      "cohort_sha256": "2a05b1f21d207e4158b17a0f83475ced5d96789ed59bcca8ba17256bce75a6da",
+      "comparison_horizon_seconds": 3600.0,
+      "games": 120,
+      "included_in_current_export": true,
+      "metrics": {
+        "mae": 11.826751232477193,
+        "rmse": 14.400735752714306
+      },
+      "model_alias": "Selected model 5",
+      "original_issue_credit": 0,
+      "promotion_authorized": false,
+      "qualification": "Dated retained actual-horizon replay. It does not recover an unknown former selection horizon or represent a new N082 evaluation.",
+      "season": 2026,
+      "source_snapshot": "N079 retained unchanged in N082",
+      "target": "total"
+    },
+    {
+      "cohort_sha256": "65df2008165ee6ab5daaa2ad161b1f5dc46c733da5e100ab8051d21abb3f53d3",
+      "comparison_horizon_seconds": 4738.345284,
+      "games": 1,
+      "included_in_current_export": true,
+      "metrics": {
+        "mae": 3.298728420202025,
+        "rmse": 3.298728420202025
+      },
+      "model_alias": "Selected model 5",
+      "original_issue_credit": 0,
+      "promotion_authorized": false,
+      "qualification": "Dated retained actual-horizon replay. It does not recover an unknown former selection horizon or represent a new N082 evaluation.",
+      "season": 2026,
+      "source_snapshot": "N079 retained unchanged in N082",
+      "target": "total"
+    },
+    {
+      "cohort_sha256": "9c55de679fa490f12a51e2b64d10d95c8797caab82883dfbb4ed406ab0232cfb",
+      "comparison_horizon_seconds": 86400.0,
+      "games": 14,
+      "included_in_current_export": true,
+      "metrics": {
+        "mae": 11.234213594188828,
+        "rmse": 14.622042959737058
+      },
+      "model_alias": "Selected model 5",
+      "original_issue_credit": 0,
+      "promotion_authorized": false,
+      "qualification": "Dated retained actual-horizon replay. It does not recover an unknown former selection horizon or represent a new N082 evaluation.",
+      "season": 2026,
+      "source_snapshot": "N079 retained unchanged in N082",
+      "target": "total"
+    },
+    {
+      "cohort_sha256": "5d4efd7c011b244ef1b92ff0763f6338089ee98fff3df520e25cb9f87472cc42",
+      "comparison_horizon_seconds": 170544.720703,
+      "games": 1,
+      "included_in_current_export": true,
+      "metrics": {
+        "mae": 4.992995522901126,
+        "rmse": 4.992995522901126
+      },
+      "model_alias": "Selected model 5",
+      "original_issue_credit": 0,
+      "promotion_authorized": false,
+      "qualification": "Dated retained actual-horizon replay. It does not recover an unknown former selection horizon or represent a new N082 evaluation.",
+      "season": 2026,
+      "source_snapshot": "N079 retained unchanged in N082",
+      "target": "total"
+    },
+    {
+      "cohort_sha256": "2a05b1f21d207e4158b17a0f83475ced5d96789ed59bcca8ba17256bce75a6da",
+      "comparison_horizon_seconds": 7200.0,
+      "games": 120,
+      "included_in_current_export": false,
+      "metrics": {
+        "mae": 11.344074078411746,
+        "rmse": 13.867093568079339
+      },
+      "model_alias": "Retained candidate 16",
+      "original_issue_credit": 0,
+      "promotion_authorized": false,
+      "qualification": "Dated retained actual-horizon replay. It does not recover an unknown former selection horizon or represent a new N082 evaluation.",
+      "season": 2026,
+      "source_snapshot": "N079 retained unchanged in N082",
+      "target": "total"
+    },
+    {
+      "cohort_sha256": "2a05b1f21d207e4158b17a0f83475ced5d96789ed59bcca8ba17256bce75a6da",
+      "comparison_horizon_seconds": 3600.0,
+      "games": 120,
+      "included_in_current_export": false,
+      "metrics": {
+        "mae": 11.549293454008083,
+        "rmse": 14.165110789433689
+      },
+      "model_alias": "Retained candidate 17",
+      "original_issue_credit": 0,
+      "promotion_authorized": false,
+      "qualification": "Dated retained actual-horizon replay. It does not recover an unknown former selection horizon or represent a new N082 evaluation.",
+      "season": 2026,
+      "source_snapshot": "N079 retained unchanged in N082",
+      "target": "total"
+    },
+    {
+      "cohort_sha256": "65df2008165ee6ab5daaa2ad161b1f5dc46c733da5e100ab8051d21abb3f53d3",
+      "comparison_horizon_seconds": 4738.345284,
+      "games": 1,
+      "included_in_current_export": false,
+      "metrics": {
+        "mae": 4.283427246907287,
+        "rmse": 4.283427246907287
+      },
+      "model_alias": "Retained candidate 17",
+      "original_issue_credit": 0,
+      "promotion_authorized": false,
+      "qualification": "Dated retained actual-horizon replay. It does not recover an unknown former selection horizon or represent a new N082 evaluation.",
+      "season": 2026,
+      "source_snapshot": "N079 retained unchanged in N082",
+      "target": "total"
+    },
+    {
+      "cohort_sha256": "5d4efd7c011b244ef1b92ff0763f6338089ee98fff3df520e25cb9f87472cc42",
+      "comparison_horizon_seconds": 170544.720703,
+      "games": 1,
+      "included_in_current_export": false,
+      "metrics": {
+        "mae": 3.06246789691599,
+        "rmse": 3.06246789691599
+      },
+      "model_alias": "Retained candidate 17",
+      "original_issue_credit": 0,
+      "promotion_authorized": false,
+      "qualification": "Dated retained actual-horizon replay. It does not recover an unknown former selection horizon or represent a new N082 evaluation.",
+      "season": 2026,
+      "source_snapshot": "N079 retained unchanged in N082",
+      "target": "total"
+    },
+    {
+      "cohort_sha256": "0be98450b968c6ce16af20526c21af28d262a6a27131a45069586de31b7a1b2c",
+      "comparison_horizon_seconds": 3600.0,
+      "games": 119,
+      "included_in_current_export": true,
+      "metrics": {
+        "accuracy": 0.6050420168067226,
+        "brier": 0.22994707845661924,
+        "log_loss": 0.6512532712562219
+      },
+      "model_alias": "Selected model 2",
+      "original_issue_credit": 0,
+      "promotion_authorized": false,
+      "qualification": "Dated retained actual-horizon replay. It does not recover an unknown former selection horizon or represent a new N082 evaluation.",
+      "season": 2026,
+      "source_snapshot": "N079 retained unchanged in N082",
+      "target": "win"
+    },
+    {
+      "cohort_sha256": "65df2008165ee6ab5daaa2ad161b1f5dc46c733da5e100ab8051d21abb3f53d3",
+      "comparison_horizon_seconds": 4738.345284,
+      "games": 1,
+      "included_in_current_export": true,
+      "metrics": {
+        "accuracy": 0.0,
+        "brier": 0.4561754891656776,
+        "log_loss": 1.1251851813546276
+      },
+      "model_alias": "Selected model 2",
+      "original_issue_credit": 0,
+      "promotion_authorized": false,
+      "qualification": "Dated retained actual-horizon replay. It does not recover an unknown former selection horizon or represent a new N082 evaluation.",
+      "season": 2026,
+      "source_snapshot": "N079 retained unchanged in N082",
+      "target": "win"
+    },
+    {
+      "cohort_sha256": "5d4efd7c011b244ef1b92ff0763f6338089ee98fff3df520e25cb9f87472cc42",
+      "comparison_horizon_seconds": 170544.720703,
+      "games": 1,
+      "included_in_current_export": true,
+      "metrics": {
+        "accuracy": 1.0,
+        "brier": 0.12091065188346929,
+        "log_loss": 0.427284565560598
+      },
+      "model_alias": "Selected model 2",
+      "original_issue_credit": 0,
+      "promotion_authorized": false,
+      "qualification": "Dated retained actual-horizon replay. It does not recover an unknown former selection horizon or represent a new N082 evaluation.",
+      "season": 2026,
+      "source_snapshot": "N079 retained unchanged in N082",
+      "target": "win"
+    },
+    {
+      "cohort_sha256": "2a05b1f21d207e4158b17a0f83475ced5d96789ed59bcca8ba17256bce75a6da",
+      "comparison_horizon_seconds": 3600.0,
+      "games": 120,
+      "included_in_current_export": false,
+      "metrics": {
+        "mae": 11.652238398987212,
+        "rmse": 14.194950487148295
+      },
+      "model_alias": "Retained candidate 18",
+      "original_issue_credit": 0,
+      "promotion_authorized": false,
+      "qualification": "Dated retained actual-horizon replay. It does not recover an unknown former selection horizon or represent a new N082 evaluation.",
+      "season": 2026,
+      "source_snapshot": "N079 retained unchanged in N082",
+      "target": "total"
+    },
+    {
+      "cohort_sha256": "65df2008165ee6ab5daaa2ad161b1f5dc46c733da5e100ab8051d21abb3f53d3",
+      "comparison_horizon_seconds": 4738.345284,
+      "games": 1,
+      "included_in_current_export": false,
+      "metrics": {
+        "mae": 4.570499868192499,
+        "rmse": 4.570499868192499
+      },
+      "model_alias": "Retained candidate 18",
+      "original_issue_credit": 0,
+      "promotion_authorized": false,
+      "qualification": "Dated retained actual-horizon replay. It does not recover an unknown former selection horizon or represent a new N082 evaluation.",
+      "season": 2026,
+      "source_snapshot": "N079 retained unchanged in N082",
+      "target": "total"
+    },
+    {
+      "cohort_sha256": "9c55de679fa490f12a51e2b64d10d95c8797caab82883dfbb4ed406ab0232cfb",
+      "comparison_horizon_seconds": 86400.0,
+      "games": 14,
+      "included_in_current_export": false,
+      "metrics": {
+        "mae": 12.177189987210946,
+        "rmse": 15.766941365415768
+      },
+      "model_alias": "Retained candidate 18",
+      "original_issue_credit": 0,
+      "promotion_authorized": false,
+      "qualification": "Dated retained actual-horizon replay. It does not recover an unknown former selection horizon or represent a new N082 evaluation.",
+      "season": 2026,
+      "source_snapshot": "N079 retained unchanged in N082",
+      "target": "total"
+    },
+    {
+      "cohort_sha256": "5d4efd7c011b244ef1b92ff0763f6338089ee98fff3df520e25cb9f87472cc42",
+      "comparison_horizon_seconds": 170544.720703,
+      "games": 1,
+      "included_in_current_export": false,
+      "metrics": {
+        "mae": 4.573799164152007,
+        "rmse": 4.573799164152007
+      },
+      "model_alias": "Retained candidate 18",
+      "original_issue_credit": 0,
+      "promotion_authorized": false,
+      "qualification": "Dated retained actual-horizon replay. It does not recover an unknown former selection horizon or represent a new N082 evaluation.",
+      "season": 2026,
+      "source_snapshot": "N079 retained unchanged in N082",
+      "target": "total"
+    },
+    {
+      "cohort_sha256": "2a05b1f21d207e4158b17a0f83475ced5d96789ed59bcca8ba17256bce75a6da",
+      "comparison_horizon_seconds": 7200.0,
+      "games": 120,
+      "included_in_current_export": false,
+      "metrics": {
+        "mae": 11.21211261338503,
+        "rmse": 13.80313215649705
+      },
+      "model_alias": "Retained candidate 19",
+      "original_issue_credit": 0,
+      "promotion_authorized": false,
+      "qualification": "Dated retained actual-horizon replay. It does not recover an unknown former selection horizon or represent a new N082 evaluation.",
+      "season": 2026,
+      "source_snapshot": "N079 retained unchanged in N082",
+      "target": "total"
+    },
+    {
+      "cohort_sha256": "2a05b1f21d207e4158b17a0f83475ced5d96789ed59bcca8ba17256bce75a6da",
+      "comparison_horizon_seconds": 7200.0,
+      "games": 120,
+      "included_in_current_export": false,
+      "metrics": {
+        "mae": 9.723553823421419,
+        "rmse": 12.407960969776177
+      },
+      "model_alias": "Retained candidate 20",
+      "original_issue_credit": 0,
+      "promotion_authorized": false,
+      "qualification": "Dated retained actual-horizon replay. It does not recover an unknown former selection horizon or represent a new N082 evaluation.",
+      "season": 2026,
+      "source_snapshot": "N079 retained unchanged in N082",
+      "target": "margin"
+    },
+    {
+      "cohort_sha256": "0be98450b968c6ce16af20526c21af28d262a6a27131a45069586de31b7a1b2c",
+      "comparison_horizon_seconds": 7200.0,
+      "games": 119,
+      "included_in_current_export": false,
+      "metrics": {
+        "accuracy": 0.6386554621848739,
+        "brier": 0.2250154056093251,
+        "log_loss": 0.639552308684626
+      },
+      "model_alias": "Retained candidate 21",
+      "original_issue_credit": 0,
+      "promotion_authorized": false,
+      "qualification": "Dated retained actual-horizon replay. It does not recover an unknown former selection horizon or represent a new N082 evaluation.",
+      "season": 2026,
+      "source_snapshot": "N079 retained unchanged in N082",
+      "target": "win"
+    },
+    {
+      "cohort_sha256": "0be98450b968c6ce16af20526c21af28d262a6a27131a45069586de31b7a1b2c",
+      "comparison_horizon_seconds": 7200.0,
+      "games": 119,
+      "included_in_current_export": false,
+      "metrics": {
+        "accuracy": 0.6050420168067226,
+        "brier": 0.22464716907922408,
+        "log_loss": 0.6385720653042565
+      },
+      "model_alias": "Retained candidate 22",
+      "original_issue_credit": 0,
+      "promotion_authorized": false,
+      "qualification": "Dated retained actual-horizon replay. It does not recover an unknown former selection horizon or represent a new N082 evaluation.",
+      "season": 2026,
+      "source_snapshot": "N079 retained unchanged in N082",
+      "target": "win"
+    },
+    {
+      "cohort_sha256": "2a05b1f21d207e4158b17a0f83475ced5d96789ed59bcca8ba17256bce75a6da",
+      "comparison_horizon_seconds": 3600.0,
+      "games": 120,
+      "included_in_current_export": false,
+      "metrics": {
+        "mae": 11.410833676656088,
+        "rmse": 14.097284217445097
+      },
+      "model_alias": "Retained candidate 23",
+      "original_issue_credit": 0,
+      "promotion_authorized": false,
+      "qualification": "Dated retained actual-horizon replay. It does not recover an unknown former selection horizon or represent a new N082 evaluation.",
+      "season": 2026,
+      "source_snapshot": "N079 retained unchanged in N082",
+      "target": "total"
+    },
+    {
+      "cohort_sha256": "65df2008165ee6ab5daaa2ad161b1f5dc46c733da5e100ab8051d21abb3f53d3",
+      "comparison_horizon_seconds": 4738.345284,
+      "games": 1,
+      "included_in_current_export": false,
+      "metrics": {
+        "mae": 5.8469085693359375,
+        "rmse": 5.8469085693359375
+      },
+      "model_alias": "Retained candidate 23",
+      "original_issue_credit": 0,
+      "promotion_authorized": false,
+      "qualification": "Dated retained actual-horizon replay. It does not recover an unknown former selection horizon or represent a new N082 evaluation.",
+      "season": 2026,
+      "source_snapshot": "N079 retained unchanged in N082",
+      "target": "total"
+    },
+    {
+      "cohort_sha256": "5d4efd7c011b244ef1b92ff0763f6338089ee98fff3df520e25cb9f87472cc42",
+      "comparison_horizon_seconds": 170544.720703,
+      "games": 1,
+      "included_in_current_export": false,
+      "metrics": {
+        "mae": 3.791217803955078,
+        "rmse": 3.791217803955078
+      },
+      "model_alias": "Retained candidate 23",
+      "original_issue_credit": 0,
+      "promotion_authorized": false,
+      "qualification": "Dated retained actual-horizon replay. It does not recover an unknown former selection horizon or represent a new N082 evaluation.",
+      "season": 2026,
+      "source_snapshot": "N079 retained unchanged in N082",
+      "target": "total"
+    },
+    {
+      "cohort_sha256": "2a05b1f21d207e4158b17a0f83475ced5d96789ed59bcca8ba17256bce75a6da",
+      "comparison_horizon_seconds": 3600.0,
+      "games": 120,
+      "included_in_current_export": true,
+      "metrics": {
+        "mae": 11.66000265269037,
+        "rmse": 14.21214819921517
+      },
+      "model_alias": "Selected model 8",
+      "original_issue_credit": 0,
+      "promotion_authorized": false,
+      "qualification": "Dated retained actual-horizon replay. It does not recover an unknown former selection horizon or represent a new N082 evaluation.",
+      "season": 2026,
+      "source_snapshot": "N079 retained unchanged in N082",
+      "target": "total"
+    },
+    {
+      "cohort_sha256": "65df2008165ee6ab5daaa2ad161b1f5dc46c733da5e100ab8051d21abb3f53d3",
+      "comparison_horizon_seconds": 4738.345284,
+      "games": 1,
+      "included_in_current_export": true,
+      "metrics": {
+        "mae": 1.0630746766622892,
+        "rmse": 1.0630746766622892
+      },
+      "model_alias": "Selected model 8",
+      "original_issue_credit": 0,
+      "promotion_authorized": false,
+      "qualification": "Dated retained actual-horizon replay. It does not recover an unknown former selection horizon or represent a new N082 evaluation.",
+      "season": 2026,
+      "source_snapshot": "N079 retained unchanged in N082",
+      "target": "total"
+    },
+    {
+      "cohort_sha256": "9c55de679fa490f12a51e2b64d10d95c8797caab82883dfbb4ed406ab0232cfb",
+      "comparison_horizon_seconds": 86400.0,
+      "games": 14,
+      "included_in_current_export": true,
+      "metrics": {
+        "mae": 11.328632905492213,
+        "rmse": 14.731486346361804
+      },
+      "model_alias": "Selected model 8",
+      "original_issue_credit": 0,
+      "promotion_authorized": false,
+      "qualification": "Dated retained actual-horizon replay. It does not recover an unknown former selection horizon or represent a new N082 evaluation.",
+      "season": 2026,
+      "source_snapshot": "N079 retained unchanged in N082",
+      "target": "total"
+    },
+    {
+      "cohort_sha256": "5d4efd7c011b244ef1b92ff0763f6338089ee98fff3df520e25cb9f87472cc42",
+      "comparison_horizon_seconds": 170544.720703,
+      "games": 1,
+      "included_in_current_export": true,
+      "metrics": {
+        "mae": 3.0073813953104747,
+        "rmse": 3.0073813953104747
+      },
+      "model_alias": "Selected model 8",
+      "original_issue_credit": 0,
+      "promotion_authorized": false,
+      "qualification": "Dated retained actual-horizon replay. It does not recover an unknown former selection horizon or represent a new N082 evaluation.",
+      "season": 2026,
+      "source_snapshot": "N079 retained unchanged in N082",
+      "target": "total"
+    },
+    {
+      "cohort_sha256": "2a05b1f21d207e4158b17a0f83475ced5d96789ed59bcca8ba17256bce75a6da",
+      "comparison_horizon_seconds": 7200.0,
+      "games": 120,
+      "included_in_current_export": false,
+      "metrics": {
+        "mae": 11.188024594774072,
+        "rmse": 13.822069640969117
+      },
+      "model_alias": "Retained candidate 24",
+      "original_issue_credit": 0,
+      "promotion_authorized": false,
+      "qualification": "Dated retained actual-horizon replay. It does not recover an unknown former selection horizon or represent a new N082 evaluation.",
+      "season": 2026,
+      "source_snapshot": "N079 retained unchanged in N082",
+      "target": "total"
+    },
+    {
+      "cohort_sha256": "2a05b1f21d207e4158b17a0f83475ced5d96789ed59bcca8ba17256bce75a6da",
+      "comparison_horizon_seconds": 3600.0,
+      "games": 120,
+      "included_in_current_export": true,
+      "metrics": {
+        "mae": 11.536998568533056,
+        "rmse": 14.170924181546848
+      },
+      "model_alias": "Selected model 4",
+      "original_issue_credit": 0,
+      "promotion_authorized": false,
+      "qualification": "Dated retained actual-horizon replay. It does not recover an unknown former selection horizon or represent a new N082 evaluation.",
+      "season": 2026,
+      "source_snapshot": "N079 retained unchanged in N082",
+      "target": "total"
+    },
+    {
+      "cohort_sha256": "65df2008165ee6ab5daaa2ad161b1f5dc46c733da5e100ab8051d21abb3f53d3",
+      "comparison_horizon_seconds": 4738.345284,
+      "games": 1,
+      "included_in_current_export": true,
+      "metrics": {
+        "mae": 4.2998603783521006,
+        "rmse": 4.2998603783521006
+      },
+      "model_alias": "Selected model 4",
+      "original_issue_credit": 0,
+      "promotion_authorized": false,
+      "qualification": "Dated retained actual-horizon replay. It does not recover an unknown former selection horizon or represent a new N082 evaluation.",
+      "season": 2026,
+      "source_snapshot": "N079 retained unchanged in N082",
+      "target": "total"
+    },
+    {
+      "cohort_sha256": "5d4efd7c011b244ef1b92ff0763f6338089ee98fff3df520e25cb9f87472cc42",
+      "comparison_horizon_seconds": 170544.720703,
+      "games": 1,
+      "included_in_current_export": true,
+      "metrics": {
+        "mae": 3.7376376249285954,
+        "rmse": 3.7376376249285954
+      },
+      "model_alias": "Selected model 4",
+      "original_issue_credit": 0,
+      "promotion_authorized": false,
+      "qualification": "Dated retained actual-horizon replay. It does not recover an unknown former selection horizon or represent a new N082 evaluation.",
+      "season": 2026,
+      "source_snapshot": "N079 retained unchanged in N082",
+      "target": "total"
+    },
+    {
+      "cohort_sha256": "0be98450b968c6ce16af20526c21af28d262a6a27131a45069586de31b7a1b2c",
+      "comparison_horizon_seconds": 3600.0,
+      "games": 119,
+      "included_in_current_export": true,
+      "metrics": {
+        "accuracy": 0.6218487394957983,
+        "brier": 0.23188815979908578,
+        "log_loss": 0.6571236400285413
+      },
+      "model_alias": "Retained candidate 10",
+      "original_issue_credit": 0,
+      "promotion_authorized": false,
+      "qualification": "Dated retained actual-horizon replay. It does not recover an unknown former selection horizon or represent a new N082 evaluation.",
+      "season": 2026,
+      "source_snapshot": "N079 retained unchanged in N082",
+      "target": "win"
+    },
+    {
+      "cohort_sha256": "65df2008165ee6ab5daaa2ad161b1f5dc46c733da5e100ab8051d21abb3f53d3",
+      "comparison_horizon_seconds": 4738.345284,
+      "games": 1,
+      "included_in_current_export": true,
+      "metrics": {
+        "accuracy": 0.0,
+        "brier": 0.43352345960608135,
+        "log_loss": 1.0741879580284248
+      },
+      "model_alias": "Retained candidate 10",
+      "original_issue_credit": 0,
+      "promotion_authorized": false,
+      "qualification": "Dated retained actual-horizon replay. It does not recover an unknown former selection horizon or represent a new N082 evaluation.",
+      "season": 2026,
+      "source_snapshot": "N079 retained unchanged in N082",
+      "target": "win"
+    },
+    {
+      "cohort_sha256": "5d4efd7c011b244ef1b92ff0763f6338089ee98fff3df520e25cb9f87472cc42",
+      "comparison_horizon_seconds": 170544.720703,
+      "games": 1,
+      "included_in_current_export": true,
+      "metrics": {
+        "accuracy": 1.0,
+        "brier": 0.07403924915069823,
+        "log_loss": 0.3175937212626325
+      },
+      "model_alias": "Retained candidate 10",
+      "original_issue_credit": 0,
+      "promotion_authorized": false,
+      "qualification": "Dated retained actual-horizon replay. It does not recover an unknown former selection horizon or represent a new N082 evaluation.",
+      "season": 2026,
+      "source_snapshot": "N079 retained unchanged in N082",
+      "target": "win"
+    },
+    {
+      "cohort_sha256": "2a05b1f21d207e4158b17a0f83475ced5d96789ed59bcca8ba17256bce75a6da",
+      "comparison_horizon_seconds": 3600.0,
+      "games": 120,
+      "included_in_current_export": true,
+      "metrics": {
+        "mae": 9.974148336148335,
+        "rmse": 12.63198334137435
+      },
+      "model_alias": "Retained candidate 11",
+      "original_issue_credit": 0,
+      "promotion_authorized": false,
+      "qualification": "Dated retained actual-horizon replay. It does not recover an unknown former selection horizon or represent a new N082 evaluation.",
+      "season": 2026,
+      "source_snapshot": "N079 retained unchanged in N082",
+      "target": "margin"
+    },
+    {
+      "cohort_sha256": "65df2008165ee6ab5daaa2ad161b1f5dc46c733da5e100ab8051d21abb3f53d3",
+      "comparison_horizon_seconds": 4738.345284,
+      "games": 1,
+      "included_in_current_export": true,
+      "metrics": {
+        "mae": 22.496649952684578,
+        "rmse": 22.496649952684578
+      },
+      "model_alias": "Retained candidate 11",
+      "original_issue_credit": 0,
+      "promotion_authorized": false,
+      "qualification": "Dated retained actual-horizon replay. It does not recover an unknown former selection horizon or represent a new N082 evaluation.",
+      "season": 2026,
+      "source_snapshot": "N079 retained unchanged in N082",
+      "target": "margin"
+    },
+    {
+      "cohort_sha256": "5d4efd7c011b244ef1b92ff0763f6338089ee98fff3df520e25cb9f87472cc42",
+      "comparison_horizon_seconds": 170544.720703,
+      "games": 1,
+      "included_in_current_export": true,
+      "metrics": {
+        "mae": 20.059102416239554,
+        "rmse": 20.059102416239554
+      },
+      "model_alias": "Retained candidate 11",
+      "original_issue_credit": 0,
+      "promotion_authorized": false,
+      "qualification": "Dated retained actual-horizon replay. It does not recover an unknown former selection horizon or represent a new N082 evaluation.",
+      "season": 2026,
+      "source_snapshot": "N079 retained unchanged in N082",
+      "target": "margin"
+    },
+    {
+      "cohort_sha256": "2a05b1f21d207e4158b17a0f83475ced5d96789ed59bcca8ba17256bce75a6da",
+      "comparison_horizon_seconds": 3600.0,
+      "games": 120,
+      "included_in_current_export": true,
+      "metrics": {
+        "mae": 9.725635647018256,
+        "rmse": 12.349537003722343
+      },
+      "model_alias": "Selected model 7",
+      "original_issue_credit": 0,
+      "promotion_authorized": false,
+      "qualification": "Dated retained actual-horizon replay. It does not recover an unknown former selection horizon or represent a new N082 evaluation.",
+      "season": 2026,
+      "source_snapshot": "N079 retained unchanged in N082",
+      "target": "margin"
+    },
+    {
+      "cohort_sha256": "65df2008165ee6ab5daaa2ad161b1f5dc46c733da5e100ab8051d21abb3f53d3",
+      "comparison_horizon_seconds": 4738.345284,
+      "games": 1,
+      "included_in_current_export": true,
+      "metrics": {
+        "mae": 20.17873215307962,
+        "rmse": 20.17873215307962
+      },
+      "model_alias": "Selected model 7",
+      "original_issue_credit": 0,
+      "promotion_authorized": false,
+      "qualification": "Dated retained actual-horizon replay. It does not recover an unknown former selection horizon or represent a new N082 evaluation.",
+      "season": 2026,
+      "source_snapshot": "N079 retained unchanged in N082",
+      "target": "margin"
+    },
+    {
+      "cohort_sha256": "9c55de679fa490f12a51e2b64d10d95c8797caab82883dfbb4ed406ab0232cfb",
+      "comparison_horizon_seconds": 86400.0,
+      "games": 14,
+      "included_in_current_export": true,
+      "metrics": {
+        "mae": 8.994242666638069,
+        "rmse": 10.715892295221455
+      },
+      "model_alias": "Selected model 7",
+      "original_issue_credit": 0,
+      "promotion_authorized": false,
+      "qualification": "Dated retained actual-horizon replay. It does not recover an unknown former selection horizon or represent a new N082 evaluation.",
+      "season": 2026,
+      "source_snapshot": "N079 retained unchanged in N082",
+      "target": "margin"
+    },
+    {
+      "cohort_sha256": "5d4efd7c011b244ef1b92ff0763f6338089ee98fff3df520e25cb9f87472cc42",
+      "comparison_horizon_seconds": 170544.720703,
+      "games": 1,
+      "included_in_current_export": true,
+      "metrics": {
+        "mae": 19.916984282459502,
+        "rmse": 19.916984282459502
+      },
+      "model_alias": "Selected model 7",
+      "original_issue_credit": 0,
+      "promotion_authorized": false,
+      "qualification": "Dated retained actual-horizon replay. It does not recover an unknown former selection horizon or represent a new N082 evaluation.",
+      "season": 2026,
+      "source_snapshot": "N079 retained unchanged in N082",
+      "target": "margin"
+    },
+    {
+      "cohort_sha256": "2a05b1f21d207e4158b17a0f83475ced5d96789ed59bcca8ba17256bce75a6da",
+      "comparison_horizon_seconds": 7200.0,
+      "games": 120,
+      "included_in_current_export": false,
+      "metrics": {
+        "mae": 9.626290728653293,
+        "rmse": 12.289772426348494
+      },
+      "model_alias": "Retained candidate 25",
+      "original_issue_credit": 0,
+      "promotion_authorized": false,
+      "qualification": "Dated retained actual-horizon replay. It does not recover an unknown former selection horizon or represent a new N082 evaluation.",
+      "season": 2026,
+      "source_snapshot": "N079 retained unchanged in N082",
+      "target": "margin"
+    },
+    {
+      "cohort_sha256": "0be98450b968c6ce16af20526c21af28d262a6a27131a45069586de31b7a1b2c",
+      "comparison_horizon_seconds": 7200.0,
+      "games": 119,
+      "included_in_current_export": false,
+      "metrics": {
+        "accuracy": 0.6302521008403361,
+        "brier": 0.2303565968618695,
+        "log_loss": 0.6517758207960518
+      },
+      "model_alias": "Retained candidate 26",
+      "original_issue_credit": 0,
+      "promotion_authorized": false,
+      "qualification": "Dated retained actual-horizon replay. It does not recover an unknown former selection horizon or represent a new N082 evaluation.",
+      "season": 2026,
+      "source_snapshot": "N079 retained unchanged in N082",
+      "target": "win"
+    },
+    {
+      "cohort_sha256": "2a05b1f21d207e4158b17a0f83475ced5d96789ed59bcca8ba17256bce75a6da",
+      "comparison_horizon_seconds": 3600.0,
+      "games": 120,
+      "included_in_current_export": true,
+      "metrics": {
+        "mae": 9.872470705856434,
+        "rmse": 12.652731237231107
+      },
+      "model_alias": "Selected model 3",
+      "original_issue_credit": 0,
+      "promotion_authorized": false,
+      "qualification": "Dated retained actual-horizon replay. It does not recover an unknown former selection horizon or represent a new N082 evaluation.",
+      "season": 2026,
+      "source_snapshot": "N079 retained unchanged in N082",
+      "target": "margin"
+    },
+    {
+      "cohort_sha256": "65df2008165ee6ab5daaa2ad161b1f5dc46c733da5e100ab8051d21abb3f53d3",
+      "comparison_horizon_seconds": 4738.345284,
+      "games": 1,
+      "included_in_current_export": true,
+      "metrics": {
+        "mae": 22.85689253051744,
+        "rmse": 22.85689253051744
+      },
+      "model_alias": "Selected model 3",
+      "original_issue_credit": 0,
+      "promotion_authorized": false,
+      "qualification": "Dated retained actual-horizon replay. It does not recover an unknown former selection horizon or represent a new N082 evaluation.",
+      "season": 2026,
+      "source_snapshot": "N079 retained unchanged in N082",
+      "target": "margin"
+    },
+    {
+      "cohort_sha256": "5d4efd7c011b244ef1b92ff0763f6338089ee98fff3df520e25cb9f87472cc42",
+      "comparison_horizon_seconds": 170544.720703,
+      "games": 1,
+      "included_in_current_export": true,
+      "metrics": {
+        "mae": 19.026452826640906,
+        "rmse": 19.026452826640906
+      },
+      "model_alias": "Selected model 3",
+      "original_issue_credit": 0,
+      "promotion_authorized": false,
+      "qualification": "Dated retained actual-horizon replay. It does not recover an unknown former selection horizon or represent a new N082 evaluation.",
+      "season": 2026,
+      "source_snapshot": "N079 retained unchanged in N082",
+      "target": "margin"
+    },
+    {
+      "cohort_sha256": "2a05b1f21d207e4158b17a0f83475ced5d96789ed59bcca8ba17256bce75a6da",
+      "comparison_horizon_seconds": 3600.0,
+      "games": 120,
+      "included_in_current_export": false,
+      "metrics": {
+        "mae": 11.428520646564575,
+        "rmse": 14.03652180010309
+      },
+      "model_alias": "Retained candidate 27",
+      "original_issue_credit": 0,
+      "promotion_authorized": false,
+      "qualification": "Dated retained actual-horizon replay. It does not recover an unknown former selection horizon or represent a new N082 evaluation.",
+      "season": 2026,
+      "source_snapshot": "N079 retained unchanged in N082",
+      "target": "total"
+    },
+    {
+      "cohort_sha256": "65df2008165ee6ab5daaa2ad161b1f5dc46c733da5e100ab8051d21abb3f53d3",
+      "comparison_horizon_seconds": 4738.345284,
+      "games": 1,
+      "included_in_current_export": false,
+      "metrics": {
+        "mae": 5.659293218612476,
+        "rmse": 5.659293218612476
+      },
+      "model_alias": "Retained candidate 27",
+      "original_issue_credit": 0,
+      "promotion_authorized": false,
+      "qualification": "Dated retained actual-horizon replay. It does not recover an unknown former selection horizon or represent a new N082 evaluation.",
+      "season": 2026,
+      "source_snapshot": "N079 retained unchanged in N082",
+      "target": "total"
+    },
+    {
+      "cohort_sha256": "5d4efd7c011b244ef1b92ff0763f6338089ee98fff3df520e25cb9f87472cc42",
+      "comparison_horizon_seconds": 170544.720703,
+      "games": 1,
+      "included_in_current_export": false,
+      "metrics": {
+        "mae": 3.667382307480324,
+        "rmse": 3.667382307480324
+      },
+      "model_alias": "Retained candidate 27",
+      "original_issue_credit": 0,
+      "promotion_authorized": false,
+      "qualification": "Dated retained actual-horizon replay. It does not recover an unknown former selection horizon or represent a new N082 evaluation.",
+      "season": 2026,
+      "source_snapshot": "N079 retained unchanged in N082",
+      "target": "total"
+    },
+    {
+      "cohort_sha256": "2a05b1f21d207e4158b17a0f83475ced5d96789ed59bcca8ba17256bce75a6da",
+      "comparison_horizon_seconds": 7200.0,
+      "games": 120,
+      "included_in_current_export": false,
+      "metrics": {
+        "mae": 9.583711314299274,
+        "rmse": 12.254417138711707
+      },
+      "model_alias": "Retained candidate 28",
+      "original_issue_credit": 0,
+      "promotion_authorized": false,
+      "qualification": "Dated retained actual-horizon replay. It does not recover an unknown former selection horizon or represent a new N082 evaluation.",
+      "season": 2026,
+      "source_snapshot": "N079 retained unchanged in N082",
+      "target": "margin"
+    },
+    {
+      "cohort_sha256": "2a05b1f21d207e4158b17a0f83475ced5d96789ed59bcca8ba17256bce75a6da",
+      "comparison_horizon_seconds": 7200.0,
+      "games": 120,
+      "included_in_current_export": false,
+      "metrics": {
+        "mae": 11.160995684472,
+        "rmse": 13.801442139078478
+      },
+      "model_alias": "Retained candidate 29",
+      "original_issue_credit": 0,
+      "promotion_authorized": false,
+      "qualification": "Dated retained actual-horizon replay. It does not recover an unknown former selection horizon or represent a new N082 evaluation.",
+      "season": 2026,
+      "source_snapshot": "N079 retained unchanged in N082",
+      "target": "total"
+    },
+    {
+      "cohort_sha256": "2a05b1f21d207e4158b17a0f83475ced5d96789ed59bcca8ba17256bce75a6da",
+      "comparison_horizon_seconds": 7200.0,
+      "games": 120,
+      "included_in_current_export": false,
+      "metrics": {
+        "mae": 9.534752100892824,
+        "rmse": 12.226780993867537
+      },
+      "model_alias": "Retained candidate 30",
+      "original_issue_credit": 0,
+      "promotion_authorized": false,
+      "qualification": "Dated retained actual-horizon replay. It does not recover an unknown former selection horizon or represent a new N082 evaluation.",
+      "season": 2026,
+      "source_snapshot": "N079 retained unchanged in N082",
+      "target": "margin"
+    },
+    {
+      "cohort_sha256": "0be98450b968c6ce16af20526c21af28d262a6a27131a45069586de31b7a1b2c",
+      "comparison_horizon_seconds": 3600.0,
+      "games": 119,
+      "included_in_current_export": true,
+      "metrics": {
+        "accuracy": 0.6302521008403361,
+        "brier": 0.23173173624574475,
+        "log_loss": 0.6552339615381841
+      },
+      "model_alias": "Retained candidate 12",
+      "original_issue_credit": 0,
+      "promotion_authorized": false,
+      "qualification": "Dated retained actual-horizon replay. It does not recover an unknown former selection horizon or represent a new N082 evaluation.",
+      "season": 2026,
+      "source_snapshot": "N079 retained unchanged in N082",
+      "target": "win"
+    },
+    {
+      "cohort_sha256": "65df2008165ee6ab5daaa2ad161b1f5dc46c733da5e100ab8051d21abb3f53d3",
+      "comparison_horizon_seconds": 4738.345284,
+      "games": 1,
+      "included_in_current_export": true,
+      "metrics": {
+        "accuracy": 0.0,
+        "brier": 0.41586326221422204,
+        "log_loss": 1.0352843397118061
+      },
+      "model_alias": "Retained candidate 12",
+      "original_issue_credit": 0,
+      "promotion_authorized": false,
+      "qualification": "Dated retained actual-horizon replay. It does not recover an unknown former selection horizon or represent a new N082 evaluation.",
+      "season": 2026,
+      "source_snapshot": "N079 retained unchanged in N082",
+      "target": "win"
+    },
+    {
+      "cohort_sha256": "5d4efd7c011b244ef1b92ff0763f6338089ee98fff3df520e25cb9f87472cc42",
+      "comparison_horizon_seconds": 170544.720703,
+      "games": 1,
+      "included_in_current_export": true,
+      "metrics": {
+        "accuracy": 1.0,
+        "brier": 0.13569694704367613,
+        "log_loss": 0.45945255259777407
+      },
+      "model_alias": "Retained candidate 12",
+      "original_issue_credit": 0,
+      "promotion_authorized": false,
+      "qualification": "Dated retained actual-horizon replay. It does not recover an unknown former selection horizon or represent a new N082 evaluation.",
+      "season": 2026,
+      "source_snapshot": "N079 retained unchanged in N082",
+      "target": "win"
+    },
+    {
+      "cohort_sha256": "0be98450b968c6ce16af20526c21af28d262a6a27131a45069586de31b7a1b2c",
+      "comparison_horizon_seconds": 3600.0,
+      "games": 119,
+      "included_in_current_export": true,
+      "metrics": {
+        "accuracy": 0.6050420168067226,
+        "brier": 0.2331929754428583,
+        "log_loss": 0.6567638348424673
+      },
+      "model_alias": "Selected model 6",
+      "original_issue_credit": 0,
+      "promotion_authorized": false,
+      "qualification": "Dated retained actual-horizon replay. It does not recover an unknown former selection horizon or represent a new N082 evaluation.",
+      "season": 2026,
+      "source_snapshot": "N079 retained unchanged in N082",
+      "target": "win"
+    },
+    {
+      "cohort_sha256": "65df2008165ee6ab5daaa2ad161b1f5dc46c733da5e100ab8051d21abb3f53d3",
+      "comparison_horizon_seconds": 4738.345284,
+      "games": 1,
+      "included_in_current_export": true,
+      "metrics": {
+        "accuracy": 0.0,
+        "brier": 0.43897576768580787,
+        "log_loss": 1.086345229940062
+      },
+      "model_alias": "Selected model 6",
+      "original_issue_credit": 0,
+      "promotion_authorized": false,
+      "qualification": "Dated retained actual-horizon replay. It does not recover an unknown former selection horizon or represent a new N082 evaluation.",
+      "season": 2026,
+      "source_snapshot": "N079 retained unchanged in N082",
+      "target": "win"
+    },
+    {
+      "cohort_sha256": "9c55de679fa490f12a51e2b64d10d95c8797caab82883dfbb4ed406ab0232cfb",
+      "comparison_horizon_seconds": 86400.0,
+      "games": 14,
+      "included_in_current_export": true,
+      "metrics": {
+        "accuracy": 0.9285714285714286,
+        "brier": 0.15107739042680965,
+        "log_loss": 0.48505257072747376
+      },
+      "model_alias": "Selected model 6",
+      "original_issue_credit": 0,
+      "promotion_authorized": false,
+      "qualification": "Dated retained actual-horizon replay. It does not recover an unknown former selection horizon or represent a new N082 evaluation.",
+      "season": 2026,
+      "source_snapshot": "N079 retained unchanged in N082",
+      "target": "win"
+    },
+    {
+      "cohort_sha256": "5d4efd7c011b244ef1b92ff0763f6338089ee98fff3df520e25cb9f87472cc42",
+      "comparison_horizon_seconds": 170544.720703,
+      "games": 1,
+      "included_in_current_export": true,
+      "metrics": {
+        "accuracy": 1.0,
+        "brier": 0.14784145016382516,
+        "log_loss": 0.48532286898717936
+      },
+      "model_alias": "Selected model 6",
+      "original_issue_credit": 0,
+      "promotion_authorized": false,
+      "qualification": "Dated retained actual-horizon replay. It does not recover an unknown former selection horizon or represent a new N082 evaluation.",
+      "season": 2026,
+      "source_snapshot": "N079 retained unchanged in N082",
+      "target": "win"
+    },
+    {
+      "cohort_sha256": "2a05b1f21d207e4158b17a0f83475ced5d96789ed59bcca8ba17256bce75a6da",
+      "comparison_horizon_seconds": 3600.0,
+      "games": 120,
+      "included_in_current_export": false,
+      "metrics": {
+        "mae": 11.818554994875138,
+        "rmse": 14.598341004368367
+      },
+      "model_alias": "Retained candidate 31",
+      "original_issue_credit": 0,
+      "promotion_authorized": false,
+      "qualification": "Dated retained actual-horizon replay. It does not recover an unknown former selection horizon or represent a new N082 evaluation.",
+      "season": 2026,
+      "source_snapshot": "N079 retained unchanged in N082",
+      "target": "total"
+    },
+    {
+      "cohort_sha256": "65df2008165ee6ab5daaa2ad161b1f5dc46c733da5e100ab8051d21abb3f53d3",
+      "comparison_horizon_seconds": 4738.345284,
+      "games": 1,
+      "included_in_current_export": false,
+      "metrics": {
+        "mae": 1.5258574957709996,
+        "rmse": 1.5258574957709996
+      },
+      "model_alias": "Retained candidate 31",
+      "original_issue_credit": 0,
+      "promotion_authorized": false,
+      "qualification": "Dated retained actual-horizon replay. It does not recover an unknown former selection horizon or represent a new N082 evaluation.",
+      "season": 2026,
+      "source_snapshot": "N079 retained unchanged in N082",
+      "target": "total"
+    },
+    {
+      "cohort_sha256": "5d4efd7c011b244ef1b92ff0763f6338089ee98fff3df520e25cb9f87472cc42",
+      "comparison_horizon_seconds": 170544.720703,
+      "games": 1,
+      "included_in_current_export": false,
+      "metrics": {
+        "mae": 5.366547974389064,
+        "rmse": 5.366547974389064
+      },
+      "model_alias": "Retained candidate 31",
+      "original_issue_credit": 0,
+      "promotion_authorized": false,
+      "qualification": "Dated retained actual-horizon replay. It does not recover an unknown former selection horizon or represent a new N082 evaluation.",
+      "season": 2026,
+      "source_snapshot": "N079 retained unchanged in N082",
+      "target": "total"
+    },
+    {
+      "cohort_sha256": "2a05b1f21d207e4158b17a0f83475ced5d96789ed59bcca8ba17256bce75a6da",
+      "comparison_horizon_seconds": 7200.0,
+      "games": 120,
+      "included_in_current_export": false,
+      "metrics": {
+        "mae": 9.51405411563979,
+        "rmse": 12.17949243258316
+      },
+      "model_alias": "Retained candidate 32",
+      "original_issue_credit": 0,
+      "promotion_authorized": false,
+      "qualification": "Dated retained actual-horizon replay. It does not recover an unknown former selection horizon or represent a new N082 evaluation.",
+      "season": 2026,
+      "source_snapshot": "N079 retained unchanged in N082",
+      "target": "margin"
+    },
+    {
+      "cohort_sha256": "0be98450b968c6ce16af20526c21af28d262a6a27131a45069586de31b7a1b2c",
+      "comparison_horizon_seconds": 7200.0,
+      "games": 119,
+      "included_in_current_export": false,
+      "metrics": {
+        "accuracy": 0.6218487394957983,
+        "brier": 0.22412088981639644,
+        "log_loss": 0.637893917610099
+      },
+      "model_alias": "Retained candidate 33",
+      "original_issue_credit": 0,
+      "promotion_authorized": false,
+      "qualification": "Dated retained actual-horizon replay. It does not recover an unknown former selection horizon or represent a new N082 evaluation.",
+      "season": 2026,
+      "source_snapshot": "N079 retained unchanged in N082",
+      "target": "win"
+    },
+    {
+      "cohort_sha256": "2a05b1f21d207e4158b17a0f83475ced5d96789ed59bcca8ba17256bce75a6da",
+      "comparison_horizon_seconds": 7200.0,
+      "games": 120,
+      "included_in_current_export": false,
+      "metrics": {
+        "mae": 9.78116953801335,
+        "rmse": 12.47867303351791
+      },
+      "model_alias": "Retained candidate 34",
+      "original_issue_credit": 0,
+      "promotion_authorized": false,
+      "qualification": "Dated retained actual-horizon replay. It does not recover an unknown former selection horizon or represent a new N082 evaluation.",
+      "season": 2026,
+      "source_snapshot": "N079 retained unchanged in N082",
+      "target": "margin"
+    }
+  ],
+  "old_2026_leaders": [
+    {
+      "cohort_sha256": "2a05b1f21d207e4158b17a0f83475ced5d96789ed59bcca8ba17256bce75a6da",
+      "comparison_horizon_seconds": 3600.0,
+      "games": 120,
+      "metric": "mae",
+      "model_aliases": [
+        "Selected model 7"
+      ],
+      "promotion_authorized": false,
+      "scope": "DESCRIPTIVE_BEST_AMONG_DISPLAYED_CANDIDATES_ON_IDENTICAL_COHORT",
+      "season": 2026,
+      "selected_candidates_compared": 3,
+      "target": "margin",
+      "value": 9.725635647018256
+    },
+    {
+      "cohort_sha256": "2a05b1f21d207e4158b17a0f83475ced5d96789ed59bcca8ba17256bce75a6da",
+      "comparison_horizon_seconds": 3600.0,
+      "games": 120,
+      "metric": "rmse",
+      "model_aliases": [
+        "Selected model 7"
+      ],
+      "promotion_authorized": false,
+      "scope": "DESCRIPTIVE_BEST_AMONG_DISPLAYED_CANDIDATES_ON_IDENTICAL_COHORT",
+      "season": 2026,
+      "selected_candidates_compared": 3,
+      "target": "margin",
+      "value": 12.349537003722343
+    },
+    {
+      "cohort_sha256": "65df2008165ee6ab5daaa2ad161b1f5dc46c733da5e100ab8051d21abb3f53d3",
+      "comparison_horizon_seconds": 4738.345284,
+      "games": 1,
+      "metric": "mae",
+      "model_aliases": [
+        "Selected model 7"
+      ],
+      "promotion_authorized": false,
+      "scope": "DESCRIPTIVE_BEST_AMONG_DISPLAYED_CANDIDATES_ON_IDENTICAL_COHORT",
+      "season": 2026,
+      "selected_candidates_compared": 3,
+      "target": "margin",
+      "value": 20.17873215307962
+    },
+    {
+      "cohort_sha256": "65df2008165ee6ab5daaa2ad161b1f5dc46c733da5e100ab8051d21abb3f53d3",
+      "comparison_horizon_seconds": 4738.345284,
+      "games": 1,
+      "metric": "rmse",
+      "model_aliases": [
+        "Selected model 7"
+      ],
+      "promotion_authorized": false,
+      "scope": "DESCRIPTIVE_BEST_AMONG_DISPLAYED_CANDIDATES_ON_IDENTICAL_COHORT",
+      "season": 2026,
+      "selected_candidates_compared": 3,
+      "target": "margin",
+      "value": 20.17873215307962
+    },
+    {
+      "cohort_sha256": "2a05b1f21d207e4158b17a0f83475ced5d96789ed59bcca8ba17256bce75a6da",
+      "comparison_horizon_seconds": 7200.0,
+      "games": 120,
+      "metric": "mae",
+      "model_aliases": [
+        "Retained candidate 32"
+      ],
+      "promotion_authorized": false,
+      "scope": "DESCRIPTIVE_BEST_AMONG_DISPLAYED_CANDIDATES_ON_IDENTICAL_COHORT",
+      "season": 2026,
+      "selected_candidates_compared": 6,
+      "target": "margin",
+      "value": 9.51405411563979
+    },
+    {
+      "cohort_sha256": "2a05b1f21d207e4158b17a0f83475ced5d96789ed59bcca8ba17256bce75a6da",
+      "comparison_horizon_seconds": 7200.0,
+      "games": 120,
+      "metric": "rmse",
+      "model_aliases": [
+        "Retained candidate 32"
+      ],
+      "promotion_authorized": false,
+      "scope": "DESCRIPTIVE_BEST_AMONG_DISPLAYED_CANDIDATES_ON_IDENTICAL_COHORT",
+      "season": 2026,
+      "selected_candidates_compared": 6,
+      "target": "margin",
+      "value": 12.17949243258316
+    },
+    {
+      "cohort_sha256": "9c55de679fa490f12a51e2b64d10d95c8797caab82883dfbb4ed406ab0232cfb",
+      "comparison_horizon_seconds": 86400.0,
+      "games": 14,
+      "metric": "mae",
+      "model_aliases": [
+        "Selected model 7"
+      ],
+      "promotion_authorized": false,
+      "scope": "DESCRIPTIVE_BEST_AMONG_DISPLAYED_CANDIDATES_ON_IDENTICAL_COHORT",
+      "season": 2026,
+      "selected_candidates_compared": 1,
+      "target": "margin",
+      "value": 8.994242666638069
+    },
+    {
+      "cohort_sha256": "9c55de679fa490f12a51e2b64d10d95c8797caab82883dfbb4ed406ab0232cfb",
+      "comparison_horizon_seconds": 86400.0,
+      "games": 14,
+      "metric": "rmse",
+      "model_aliases": [
+        "Selected model 7"
+      ],
+      "promotion_authorized": false,
+      "scope": "DESCRIPTIVE_BEST_AMONG_DISPLAYED_CANDIDATES_ON_IDENTICAL_COHORT",
+      "season": 2026,
+      "selected_candidates_compared": 1,
+      "target": "margin",
+      "value": 10.715892295221455
+    },
+    {
+      "cohort_sha256": "5d4efd7c011b244ef1b92ff0763f6338089ee98fff3df520e25cb9f87472cc42",
+      "comparison_horizon_seconds": 170544.720703,
+      "games": 1,
+      "metric": "mae",
+      "model_aliases": [
+        "Selected model 3"
+      ],
+      "promotion_authorized": false,
+      "scope": "DESCRIPTIVE_BEST_AMONG_DISPLAYED_CANDIDATES_ON_IDENTICAL_COHORT",
+      "season": 2026,
+      "selected_candidates_compared": 3,
+      "target": "margin",
+      "value": 19.026452826640906
+    },
+    {
+      "cohort_sha256": "5d4efd7c011b244ef1b92ff0763f6338089ee98fff3df520e25cb9f87472cc42",
+      "comparison_horizon_seconds": 170544.720703,
+      "games": 1,
+      "metric": "rmse",
+      "model_aliases": [
+        "Selected model 3"
+      ],
+      "promotion_authorized": false,
+      "scope": "DESCRIPTIVE_BEST_AMONG_DISPLAYED_CANDIDATES_ON_IDENTICAL_COHORT",
+      "season": 2026,
+      "selected_candidates_compared": 3,
+      "target": "margin",
+      "value": 19.026452826640906
+    },
+    {
+      "cohort_sha256": "2a05b1f21d207e4158b17a0f83475ced5d96789ed59bcca8ba17256bce75a6da",
+      "comparison_horizon_seconds": 3600.0,
+      "games": 120,
+      "metric": "mae",
+      "model_aliases": [
+        "Retained candidate 13"
+      ],
+      "promotion_authorized": false,
+      "scope": "DESCRIPTIVE_BEST_AMONG_DISPLAYED_CANDIDATES_ON_IDENTICAL_COHORT",
+      "season": 2026,
+      "selected_candidates_compared": 10,
+      "target": "total",
+      "value": 11.352531077956566
+    },
+    {
+      "cohort_sha256": "2a05b1f21d207e4158b17a0f83475ced5d96789ed59bcca8ba17256bce75a6da",
+      "comparison_horizon_seconds": 3600.0,
+      "games": 120,
+      "metric": "rmse",
+      "model_aliases": [
+        "Retained candidate 27"
+      ],
+      "promotion_authorized": false,
+      "scope": "DESCRIPTIVE_BEST_AMONG_DISPLAYED_CANDIDATES_ON_IDENTICAL_COHORT",
+      "season": 2026,
+      "selected_candidates_compared": 10,
+      "target": "total",
+      "value": 14.03652180010309
+    },
+    {
+      "cohort_sha256": "65df2008165ee6ab5daaa2ad161b1f5dc46c733da5e100ab8051d21abb3f53d3",
+      "comparison_horizon_seconds": 4738.345284,
+      "games": 1,
+      "metric": "mae",
+      "model_aliases": [
+        "Selected model 8"
+      ],
+      "promotion_authorized": false,
+      "scope": "DESCRIPTIVE_BEST_AMONG_DISPLAYED_CANDIDATES_ON_IDENTICAL_COHORT",
+      "season": 2026,
+      "selected_candidates_compared": 10,
+      "target": "total",
+      "value": 1.0630746766622892
+    },
+    {
+      "cohort_sha256": "65df2008165ee6ab5daaa2ad161b1f5dc46c733da5e100ab8051d21abb3f53d3",
+      "comparison_horizon_seconds": 4738.345284,
+      "games": 1,
+      "metric": "rmse",
+      "model_aliases": [
+        "Selected model 8"
+      ],
+      "promotion_authorized": false,
+      "scope": "DESCRIPTIVE_BEST_AMONG_DISPLAYED_CANDIDATES_ON_IDENTICAL_COHORT",
+      "season": 2026,
+      "selected_candidates_compared": 10,
+      "target": "total",
+      "value": 1.0630746766622892
+    },
+    {
+      "cohort_sha256": "2a05b1f21d207e4158b17a0f83475ced5d96789ed59bcca8ba17256bce75a6da",
+      "comparison_horizon_seconds": 7200.0,
+      "games": 120,
+      "metric": "mae",
+      "model_aliases": [
+        "Retained candidate 15"
+      ],
+      "promotion_authorized": false,
+      "scope": "DESCRIPTIVE_BEST_AMONG_DISPLAYED_CANDIDATES_ON_IDENTICAL_COHORT",
+      "season": 2026,
+      "selected_candidates_compared": 5,
+      "target": "total",
+      "value": 11.153211997592996
+    },
+    {
+      "cohort_sha256": "2a05b1f21d207e4158b17a0f83475ced5d96789ed59bcca8ba17256bce75a6da",
+      "comparison_horizon_seconds": 7200.0,
+      "games": 120,
+      "metric": "rmse",
+      "model_aliases": [
+        "Retained candidate 29"
+      ],
+      "promotion_authorized": false,
+      "scope": "DESCRIPTIVE_BEST_AMONG_DISPLAYED_CANDIDATES_ON_IDENTICAL_COHORT",
+      "season": 2026,
+      "selected_candidates_compared": 5,
+      "target": "total",
+      "value": 13.801442139078478
+    },
+    {
+      "cohort_sha256": "9c55de679fa490f12a51e2b64d10d95c8797caab82883dfbb4ed406ab0232cfb",
+      "comparison_horizon_seconds": 86400.0,
+      "games": 14,
+      "metric": "mae",
+      "model_aliases": [
+        "Selected model 5"
+      ],
+      "promotion_authorized": false,
+      "scope": "DESCRIPTIVE_BEST_AMONG_DISPLAYED_CANDIDATES_ON_IDENTICAL_COHORT",
+      "season": 2026,
+      "selected_candidates_compared": 3,
+      "target": "total",
+      "value": 11.234213594188828
+    },
+    {
+      "cohort_sha256": "9c55de679fa490f12a51e2b64d10d95c8797caab82883dfbb4ed406ab0232cfb",
+      "comparison_horizon_seconds": 86400.0,
+      "games": 14,
+      "metric": "rmse",
+      "model_aliases": [
+        "Selected model 5"
+      ],
+      "promotion_authorized": false,
+      "scope": "DESCRIPTIVE_BEST_AMONG_DISPLAYED_CANDIDATES_ON_IDENTICAL_COHORT",
+      "season": 2026,
+      "selected_candidates_compared": 3,
+      "target": "total",
+      "value": 14.622042959737058
+    },
+    {
+      "cohort_sha256": "5d4efd7c011b244ef1b92ff0763f6338089ee98fff3df520e25cb9f87472cc42",
+      "comparison_horizon_seconds": 170544.720703,
+      "games": 1,
+      "metric": "mae",
+      "model_aliases": [
+        "Selected model 8"
+      ],
+      "promotion_authorized": false,
+      "scope": "DESCRIPTIVE_BEST_AMONG_DISPLAYED_CANDIDATES_ON_IDENTICAL_COHORT",
+      "season": 2026,
+      "selected_candidates_compared": 10,
+      "target": "total",
+      "value": 3.0073813953104747
+    },
+    {
+      "cohort_sha256": "5d4efd7c011b244ef1b92ff0763f6338089ee98fff3df520e25cb9f87472cc42",
+      "comparison_horizon_seconds": 170544.720703,
+      "games": 1,
+      "metric": "rmse",
+      "model_aliases": [
+        "Selected model 8"
+      ],
+      "promotion_authorized": false,
+      "scope": "DESCRIPTIVE_BEST_AMONG_DISPLAYED_CANDIDATES_ON_IDENTICAL_COHORT",
+      "season": 2026,
+      "selected_candidates_compared": 10,
+      "target": "total",
+      "value": 3.0073813953104747
+    },
+    {
+      "cohort_sha256": "0be98450b968c6ce16af20526c21af28d262a6a27131a45069586de31b7a1b2c",
+      "comparison_horizon_seconds": 3600.0,
+      "games": 119,
+      "metric": "accuracy",
+      "model_aliases": [
+        "Selected model 1"
+      ],
+      "promotion_authorized": false,
+      "scope": "DESCRIPTIVE_BEST_AMONG_DISPLAYED_CANDIDATES_ON_IDENTICAL_COHORT",
+      "season": 2026,
+      "selected_candidates_compared": 6,
+      "target": "win",
+      "value": 0.6470588235294118
+    },
+    {
+      "cohort_sha256": "0be98450b968c6ce16af20526c21af28d262a6a27131a45069586de31b7a1b2c",
+      "comparison_horizon_seconds": 3600.0,
+      "games": 119,
+      "metric": "brier",
+      "model_aliases": [
+        "Selected model 2"
+      ],
+      "promotion_authorized": false,
+      "scope": "DESCRIPTIVE_BEST_AMONG_DISPLAYED_CANDIDATES_ON_IDENTICAL_COHORT",
+      "season": 2026,
+      "selected_candidates_compared": 6,
+      "target": "win",
+      "value": 0.22994707845661924
+    },
+    {
+      "cohort_sha256": "0be98450b968c6ce16af20526c21af28d262a6a27131a45069586de31b7a1b2c",
+      "comparison_horizon_seconds": 3600.0,
+      "games": 119,
+      "metric": "log_loss",
+      "model_aliases": [
+        "Selected model 2"
+      ],
+      "promotion_authorized": false,
+      "scope": "DESCRIPTIVE_BEST_AMONG_DISPLAYED_CANDIDATES_ON_IDENTICAL_COHORT",
+      "season": 2026,
+      "selected_candidates_compared": 6,
+      "target": "win",
+      "value": 0.6512532712562219
+    },
+    {
+      "cohort_sha256": "65df2008165ee6ab5daaa2ad161b1f5dc46c733da5e100ab8051d21abb3f53d3",
+      "comparison_horizon_seconds": 4738.345284,
+      "games": 1,
+      "metric": "accuracy",
+      "model_aliases": [
+        "Retained candidate 10",
+        "Retained candidate 12",
+        "Retained candidate 9",
+        "Selected model 1",
+        "Selected model 2",
+        "Selected model 6"
+      ],
+      "promotion_authorized": false,
+      "scope": "DESCRIPTIVE_BEST_AMONG_DISPLAYED_CANDIDATES_ON_IDENTICAL_COHORT",
+      "season": 2026,
+      "selected_candidates_compared": 6,
+      "target": "win",
+      "value": 0.0
+    },
+    {
+      "cohort_sha256": "65df2008165ee6ab5daaa2ad161b1f5dc46c733da5e100ab8051d21abb3f53d3",
+      "comparison_horizon_seconds": 4738.345284,
+      "games": 1,
+      "metric": "brier",
+      "model_aliases": [
+        "Selected model 1"
+      ],
+      "promotion_authorized": false,
+      "scope": "DESCRIPTIVE_BEST_AMONG_DISPLAYED_CANDIDATES_ON_IDENTICAL_COHORT",
+      "season": 2026,
+      "selected_candidates_compared": 6,
+      "target": "win",
+      "value": 0.37758321287731106
+    },
+    {
+      "cohort_sha256": "65df2008165ee6ab5daaa2ad161b1f5dc46c733da5e100ab8051d21abb3f53d3",
+      "comparison_horizon_seconds": 4738.345284,
+      "games": 1,
+      "metric": "log_loss",
+      "model_aliases": [
+        "Selected model 1"
+      ],
+      "promotion_authorized": false,
+      "scope": "DESCRIPTIVE_BEST_AMONG_DISPLAYED_CANDIDATES_ON_IDENTICAL_COHORT",
+      "season": 2026,
+      "selected_candidates_compared": 6,
+      "target": "win",
+      "value": 0.9531570196953567
+    },
+    {
+      "cohort_sha256": "0be98450b968c6ce16af20526c21af28d262a6a27131a45069586de31b7a1b2c",
+      "comparison_horizon_seconds": 7200.0,
+      "games": 119,
+      "metric": "accuracy",
+      "model_aliases": [
+        "Retained candidate 21"
+      ],
+      "promotion_authorized": false,
+      "scope": "DESCRIPTIVE_BEST_AMONG_DISPLAYED_CANDIDATES_ON_IDENTICAL_COHORT",
+      "season": 2026,
+      "selected_candidates_compared": 4,
+      "target": "win",
+      "value": 0.6386554621848739
+    },
+    {
+      "cohort_sha256": "0be98450b968c6ce16af20526c21af28d262a6a27131a45069586de31b7a1b2c",
+      "comparison_horizon_seconds": 7200.0,
+      "games": 119,
+      "metric": "brier",
+      "model_aliases": [
+        "Retained candidate 33"
+      ],
+      "promotion_authorized": false,
+      "scope": "DESCRIPTIVE_BEST_AMONG_DISPLAYED_CANDIDATES_ON_IDENTICAL_COHORT",
+      "season": 2026,
+      "selected_candidates_compared": 4,
+      "target": "win",
+      "value": 0.22412088981639644
+    },
+    {
+      "cohort_sha256": "0be98450b968c6ce16af20526c21af28d262a6a27131a45069586de31b7a1b2c",
+      "comparison_horizon_seconds": 7200.0,
+      "games": 119,
+      "metric": "log_loss",
+      "model_aliases": [
+        "Retained candidate 33"
+      ],
+      "promotion_authorized": false,
+      "scope": "DESCRIPTIVE_BEST_AMONG_DISPLAYED_CANDIDATES_ON_IDENTICAL_COHORT",
+      "season": 2026,
+      "selected_candidates_compared": 4,
+      "target": "win",
+      "value": 0.637893917610099
+    },
+    {
+      "cohort_sha256": "9c55de679fa490f12a51e2b64d10d95c8797caab82883dfbb4ed406ab0232cfb",
+      "comparison_horizon_seconds": 86400.0,
+      "games": 14,
+      "metric": "accuracy",
+      "model_aliases": [
+        "Selected model 6"
+      ],
+      "promotion_authorized": false,
+      "scope": "DESCRIPTIVE_BEST_AMONG_DISPLAYED_CANDIDATES_ON_IDENTICAL_COHORT",
+      "season": 2026,
+      "selected_candidates_compared": 1,
+      "target": "win",
+      "value": 0.9285714285714286
+    },
+    {
+      "cohort_sha256": "9c55de679fa490f12a51e2b64d10d95c8797caab82883dfbb4ed406ab0232cfb",
+      "comparison_horizon_seconds": 86400.0,
+      "games": 14,
+      "metric": "brier",
+      "model_aliases": [
+        "Selected model 6"
+      ],
+      "promotion_authorized": false,
+      "scope": "DESCRIPTIVE_BEST_AMONG_DISPLAYED_CANDIDATES_ON_IDENTICAL_COHORT",
+      "season": 2026,
+      "selected_candidates_compared": 1,
+      "target": "win",
+      "value": 0.15107739042680965
+    },
+    {
+      "cohort_sha256": "9c55de679fa490f12a51e2b64d10d95c8797caab82883dfbb4ed406ab0232cfb",
+      "comparison_horizon_seconds": 86400.0,
+      "games": 14,
+      "metric": "log_loss",
+      "model_aliases": [
+        "Selected model 6"
+      ],
+      "promotion_authorized": false,
+      "scope": "DESCRIPTIVE_BEST_AMONG_DISPLAYED_CANDIDATES_ON_IDENTICAL_COHORT",
+      "season": 2026,
+      "selected_candidates_compared": 1,
+      "target": "win",
+      "value": 0.48505257072747376
+    },
+    {
+      "cohort_sha256": "5d4efd7c011b244ef1b92ff0763f6338089ee98fff3df520e25cb9f87472cc42",
+      "comparison_horizon_seconds": 170544.720703,
+      "games": 1,
+      "metric": "accuracy",
+      "model_aliases": [
+        "Retained candidate 10",
+        "Retained candidate 12",
+        "Retained candidate 9",
+        "Selected model 1",
+        "Selected model 2",
+        "Selected model 6"
+      ],
+      "promotion_authorized": false,
+      "scope": "DESCRIPTIVE_BEST_AMONG_DISPLAYED_CANDIDATES_ON_IDENTICAL_COHORT",
+      "season": 2026,
+      "selected_candidates_compared": 6,
+      "target": "win",
+      "value": 1.0
+    },
+    {
+      "cohort_sha256": "5d4efd7c011b244ef1b92ff0763f6338089ee98fff3df520e25cb9f87472cc42",
+      "comparison_horizon_seconds": 170544.720703,
+      "games": 1,
+      "metric": "brier",
+      "model_aliases": [
+        "Retained candidate 9"
+      ],
+      "promotion_authorized": false,
+      "scope": "DESCRIPTIVE_BEST_AMONG_DISPLAYED_CANDIDATES_ON_IDENTICAL_COHORT",
+      "season": 2026,
+      "selected_candidates_compared": 6,
+      "target": "win",
+      "value": 0.059996879986901064
+    },
+    {
+      "cohort_sha256": "5d4efd7c011b244ef1b92ff0763f6338089ee98fff3df520e25cb9f87472cc42",
+      "comparison_horizon_seconds": 170544.720703,
+      "games": 1,
+      "metric": "log_loss",
+      "model_aliases": [
+        "Retained candidate 9"
+      ],
+      "promotion_authorized": false,
+      "scope": "DESCRIPTIVE_BEST_AMONG_DISPLAYED_CANDIDATES_ON_IDENTICAL_COHORT",
+      "season": 2026,
+      "selected_candidates_compared": 6,
+      "target": "win",
+      "value": 0.2809615134111055
+    }
+  ],
+  "old_2026_scope": "Preserved N079 evaluations; not updated N083 scores. Exact horizons and cohorts stay separate.",
+  "owner_research_acceptance": false,
+  "provider_scope": "No quote values in this selected projection. Earlier archived provider studies remain separately dated. No new same-cutoff superiority established.",
+  "publication_status": "PREPARED",
+  "saved_census": {
+    "completed": 137,
+    "current_issued_games": 111,
+    "current_issued_rows": 444,
+    "live_or_awaiting_final": 0,
+    "tbd": 24,
+    "upcoming": 111
+  },
+  "schema": "nfl.n084.actual-n083-public-review.v1",
+  "selected_forecasts_sha256": "68298d318594c1fd41365b70c64ff79c31057bd7c110a81201796d5c2f98bfe7",
+  "status": "PARTIAL_OWNER_CONTINUATION_REPAIR_REQUIRED",
+  "website_deployment_claimed": false
+}
