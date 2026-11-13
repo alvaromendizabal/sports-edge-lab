@@ -82,11 +82,21 @@ jobs:
           node tests/fbs_v054_browser.test.cjs
           node tests/fbs_v071_browser.test.cjs
           node tests/fbs_v072_browser.test.cjs
+          node tests/fbs_v073_browser.test.cjs
+      - name: Verify the published V073 URL in an actual public browser
+        if: github.event_name == 'pull_request' && github.head_ref == 'fbs/v073-v10-frozen-recovery'
+        env:
+          PLAYWRIGHT_MODULE_DIR: ${{ runner.temp }}/fbs-browser/node_modules/playwright
+          FBS_SCREENSHOTS: ${{ runner.temp }}/fbs-screenshots
+          FBS_V073_LIVE_URL: https://sports-edge-lab-fbs.alv-mendizabal.chatgpt.site/v073/
+        run: node tests/fbs_v073_browser.test.cjs
       - name: Preserve desktop and mobile evidence views
         uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02
         with:
           name: fbs-evidence-screenshots
-          path: ${{ runner.temp }}/fbs-screenshots/*.png
+          path: |
+            ${{ runner.temp }}/fbs-screenshots/*.png
+            ${{ runner.temp }}/fbs-screenshots/FBS_V073_BROWSER_RECEIPT.json
           if-no-files-found: error
           retention-days: 14
 
