@@ -1,0 +1,19 @@
+# NFL · actual N079 evidence and the full 2026 schedule
+
+[Latest all-game review](season_review_n080.html) · [Selected forecasts](selected_forecasts_n080.json) · [Actual N079 metrics and execution](2026-11-12-n079-actual-n080-review.json) · [Model card](CURRENT_MODEL_CARD.md)
+
+**N079 took 84.07 minutes and completed zero new native or meta fits. Owner research acceptance is false.** It preserved 61 completed batches and issued 2,517 unique forecast events across 112 future games: 1,397 game/recipe pairs plus 1,120 later issue events on existing pairs. Reuse is not new training. This publication reports actual N079 evidence; it claims no N080 owner-run science or speedup.
+
+The latest selected display retains **all 272 observed 2026 games: 136 finals, 112 timed upcoming games and 24 kickoff times TBD**. It contains 448 current selected outputs with original issue clocks, alongside separately labeled earlier snapshots and historical reconstructions. The saved cutoff is November 12, 2026 at 23:22:35 UTC. Opening the page does not refresh data.
+
+Unlike the previous return, N079 includes authenticated 2026 replay scorecard bodies. The dashboard follows all 18 primary historical metric/horizon selections and nine operational fallback roles through 2024, 2025 and 2026. It also shows 14 descriptive metric leaders **among the displayed selected candidates on identical target, horizon and game cohorts**. These are exposed retrospective results, not original-issued performance, a ranking of the full candidate grid or rolling promotion.
+
+The exact one-hour and two-hour replay cohorts contain 119 conditional winner games and 120 point games. Sixteen of the 136 finals lack admitted vectors at those selected horizons; winner scoring additionally excludes one tie. Those 16 have other actual archived horizons: 14 at 24 hours and two at distinct irregular lead times. Their standalone metrics are displayed separately and never pooled into the selected-horizon cohorts. Point forecasts do not establish CRPS where the required earlier residual distribution is unavailable. Eighteen preserved former roles still lack original selection horizons; their comparable scores stay unavailable. Original Torch AB accuracy and Torch B probability records remain separately qualified in the model card. No independent rolling production promotion is established.
+
+DraftKings, Kalshi and Polymarket each have explicit same-cutoff comparison gaps for winner, expected margin and expected total. There are zero admitted matched comparison cells in this selected 2026 replay. No missing quotes are fabricated, and conditional threshold contracts are not treated as expected points. Earlier saved venue evidence retains its original separate scope.
+
+The main scientific child began 3,392.09 seconds (56.53 minutes) after invocation. Observed process-tree CPU averaged 0.543 cores and peaked at 1.209; short-lived workers between samples may be omitted. There were zero observed concurrent optimizer calls. Cache telemetry reports 421 hits, 3,086 misses and 47.58% byte reuse. The run recorded 1,668 S3 readbacks, 322,855,029 readback bytes and 15 paid calls. The whole-instance compute estimate is $3.601 at the saved rate, not an AWS bill or NFL-exclusive allocation. Host/shared-cgroup I/O pressure was measured; its reason label does not attribute causation to another sport.
+
+The selected JSON is copied byte-for-byte from the authenticated return. Metric displays use saved full-precision aggregate scores, never rescoring rounded public forecasts. This publication performs no model fit, inference, forecast issue or provider refresh. No private recipe, candidate grid, model body, raw feed or execution package is public. Source publication and website deployment remain separate.
+
+[Preserved actual N077 review](README_N078_SNAPSHOT.md) · [Previous selected dashboard](season_review_n078.html)

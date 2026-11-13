@@ -1,0 +1,38 @@
+{
+  "automatic_promotion": false,
+  "elapsed_seconds": 5.823639174999698,
+  "failure_reason": "Missing required legacy runtime dependency",
+  "failure_stage": "Before source refresh and scientific execution",
+  "finished_at": "2026-11-13T00:44:55.868671+00:00",
+  "invocation_started_at_utc": "2026-11-13T00:44:50.045037+00:00",
+  "latest_attempt": "N080",
+  "new_fits": 0,
+  "new_forecasts": 0,
+  "new_meta_fits": 0,
+  "new_n081_owner_science_claimed": false,
+  "new_native_fits": 0,
+  "new_paid_calls": 0,
+  "new_provider_refresh_claimed": false,
+  "owner_executable": {
+    "bytes": 314014986,
+    "sha256": "67e61302982c1a228a5c4152a416024145c236a96a269197070a72aefcaebd66"
+  },
+  "owner_research_acceptance": false,
+  "owner_return": {
+    "bytes": 282435,
+    "sha256": "29dc59a738e9df93597936a7b557190cab6594bdfc7127712678bf72eb90217a"
+  },
+  "preserved_games": 272,
+  "preserved_metrics_file": "2026-11-12-n079-actual-n080-review.json",
+  "preserved_metrics_sha256": "2b33b866319c9e309fddfda145b4662437a914916998b92945524243342e1ec8",
+  "preserved_scientific_source": "N079",
+  "preserved_selected_forecasts_file": "selected_forecasts_n080.json",
+  "preserved_selected_forecasts_sha256": "5fdcef74dc2eefaf6827257197977f47de7e202b18546cbdd14e8ea28e9edb84",
+  "preserved_selected_games": 112,
+  "preserved_selected_rows": 448,
+  "preserved_selected_snapshot_utc": "2026-11-12T23:22:35.281084+00:00",
+  "qualification": "Failed later invocation retains prior authenticated outputs and original clocks. Previously upcoming labels describe the saved census, not a live refresh. Zero new work is not successful scientific progress.",
+  "schema": "nfl.n081.latest-attempt-status.v1",
+  "sport": "NFL",
+  "status": "FAILED"
+}

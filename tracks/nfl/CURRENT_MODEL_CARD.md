@@ -1,3 +1,23 @@
+# NFL latest attempt · N081 failed · November 12, 2026 Pacific
+
+[Latest all-game review](season_review_n082.html) · [Actual N081 status](2026-11-13-n081-actual-n082-status.json)
+
+N081 failed after **112.956549 seconds** because the source writer and refresh collector disagreed on the release namespace. It completed **zero new fits, zero new forecasts and zero paid calls**; owner research acceptance remains false. No N082 owner-run result, whole-run speedup or independent rolling promotion is claimed.
+
+The **N079 selected snapshot from November 12, 2026 at 23:22:35.281084 UTC** (15:22:35.281084 Pacific) remains unchanged: all 272 saved games, 448 selected outputs across 112 games, original issue clocks and separate historical/former/fallback metric roles. The dated model cards below retain their original scopes. The latest failed attempt cannot erase or re-date earlier scientific evidence.
+
+---
+
+# NFL latest attempt · N080 failed before scientific execution
+
+[Latest all-game review](season_review_n081.html) · [Actual N080 status](2026-11-13-n080-actual-n081-status.json)
+
+N080 failed after **5.823639 seconds** because a required legacy runtime dependency was missing. It completed **zero new fits, zero new forecasts and zero paid calls**; owner research acceptance remains false. It did not reach source refresh or scientific execution. No N081 owner-run result or speedup is claimed.
+
+The last valid selected snapshot remains **N079, November 12, 2026 at 23:22:35.281084 UTC**. Its 448 selected rows across 112 games, all 272 saved schedule games, original issue clocks, metric-specific historical leaders and separate operational fallback roles are unchanged. “Upcoming” describes that saved census. No failed-attempt output replaces that evidence and no independent rolling promotion is established. The dated cards below are preserved verbatim and keep their original scopes.
+
+---
+
 # NFL selected model card · actual N079
 
 [Latest all-game review](season_review_n080.html) · [Latest selected forecasts](selected_forecasts_n080.json) · [Full selected aggregate evidence](2026-11-12-n079-actual-n080-review.json)
