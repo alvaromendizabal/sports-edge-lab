@@ -76,11 +76,21 @@ The prepared V7 continuation prioritizes current forecasts, restores exact old f
 
 **Sports Edge Lab** connects probabilistic sports modeling with reliable ML infrastructure: chronological training, immutable forecasts, matched market comparisons and recoverable cloud execution. Built by [Alvaro Mendizabal](https://github.com/alvaromendizabal).
 
-[**Latest NFL all-game research view →**](tracks/nfl/season_review_n086.html) · [Current NFL evidence](tracks/nfl/README.md) · [Dated hosted NFL snapshot](https://sports-edge-lab-nfl.alv-mendizabal.chatgpt.site/) (separate publication; not refreshed here) · [Five-minute technical review](docs/REVIEW_GUIDE.md) · [System design](docs/SYSTEM_DESIGN.md) · [Reproducibility boundary](docs/PUBLICATION_BOUNDARY.md)
+[**Latest NFL V10 all-game research view →**](tracks/nfl/dashboard_n088/index.html) · [Current NFL evidence](tracks/nfl/README.md) · [Dated hosted NFL snapshot](https://sports-edge-lab-nfl.alv-mendizabal.chatgpt.site/) (separate publication; not refreshed here) · [Five-minute technical review](docs/REVIEW_GUIDE.md) · [System design](docs/SYSTEM_DESIGN.md) · [Reproducibility boundary](docs/PUBLICATION_BOUNDARY.md)
 
 [**Open the FBS browser dashboard →**](https://sports-edge-lab-fbs.alv-mendizabal.chatgpt.site) · [FBS clock and coverage methodology](docs/fbs/SEASON_EXPLORER_2026-11-03.md) · [FBS source and model card](tracks/ncaaf/README.md)
 
-## Current NFL evidence · November 13, 2026 Pacific
+## NFL V10 recovery · November 13, 2026 UTC
+
+[Prepared N088 interactive source](tracks/nfl/dashboard_n088/index.html) · [Current NFL evidence](tracks/nfl/README.md) · [Fresh public Phase A scorecards](tracks/nfl/phase_a_n088_public.json)
+
+**171 saved-model scorecards / 10,216 model–game rows recomputed; zero new fits.** All 272 games remain visible: 137 finals, 111 confirmed upcoming and 24 kickoff TBD. Current union coverage is 136 non-tied winner and 137 point outcomes across models; largest single-model cohorts are only 119 / 120, leaving at least 17 missing outcomes. This is partial recovery, not full-season champion acceptance. Original issues, later-fitted reconstructions and exact-cohort leaders remain separate; no promotion or provider advantage is claimed.
+
+**The actual N087 owner run failed** after 678.674 seconds at 0.399 mean CPU cores. Both live logs and the return closure succeeded, but all three scientific children exited without responses. A cold-import recursion defect is independently reproduced in the exact packaged executable. Fifteen paid calls occurred; zero completed new scientific receipts were verified.
+
+**Online deployment remains pending verification.** The existing hosted NFL Site was still the November 9 N063 publication, explaining why later GitHub source updates were not visible online. The prepared N088 package uses paged games, lazy historical scorecards and script-free fallback tables; the same public URL will be updated after validation.
+
+## Preserved NFL N085 / N086 evidence · November 13, 2026 Pacific
 
 **Latest N086 execution failed:** 564.544 seconds, 0.397 mean CPU cores, 15 paid calls and no completed new scientific receipt. Final fit/forecast counts are unknown; zero observed optimizer callbacks are a separate measurement. [Failure evidence](tracks/nfl/2026-11-13-n086-failed-n087-review.json) · [Failure panel](tracks/nfl/season_review_n086.html#latest-execution). N087 repair work is separate; all N085 forecast clocks and scientific results below are preserved.
 
@@ -175,7 +185,7 @@ a narrow missing-clock checkpoint repair.
 
 | Track | Entry point | Publication boundary |
 |---|---|---|
-| NFL | [Latest all-game view](tracks/nfl/season_review_n086.html) · [Current evidence](tracks/nfl/README.md) | Latest N086 failed; final totals unknown, 0 observed optimizer callbacks. Preserved N085: 327 fits, 78 completed historical candidates, 783 current-season monitoring cards; acceptance incomplete. All 272 games, 444 selected outputs, 1,530 retained historical cards and explicit former/current/rolling-role limits |
+| NFL | [V10 all-game view](tracks/nfl/dashboard_n088/index.html) · [Current evidence](tracks/nfl/README.md) | N088 Phase A: 171 recomputed cards, 10,216 scored rows, zero new fits. N087 actual owner run failed. All 272 games and 444 original selected outputs preserved; full single-model season coverage and provider comparisons incomplete. Online deployment verification pending. |
 | NCAA FBS | [Browser dashboard](https://sports-edge-lab-fbs.alv-mendizabal.chatgpt.site) · [Track](tracks/ncaaf/README.md) | Actual V053 partial; V055 prepared; 500 saved issue contexts across 122 games, with dated provider coverage |
 | NBA | [Research view](docs/NBA_RESEARCH_CARD.md) | Separately dated basketball evidence |
 | NCAA basketball | [Open dashboards](https://alvaro-ncaa-research-review.alv-mendizabal.chatgpt.site/) · [Men's evidence](tracks/ncaam/README.md) · [Women's evidence](tracks/ncaaw/README.md) · [Runnable contracts](examples/ncaa_review/README.md) | Separate historical selections, current execution gaps and three-provider qualification |

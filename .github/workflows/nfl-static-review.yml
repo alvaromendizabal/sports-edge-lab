@@ -38,6 +38,15 @@ jobs:
               result.update(http_status=exc.code,status='NOT_AVAILABLE_TO_WORKFLOW_TOKEN')
           except (OSError,TimeoutError) as exc:
               result.update(http_status=None,status='PROBE_FAILED',error_type=type(exc).__name__)
+          result['public_url']='https://alvaromendizabal.github.io/sports-edge-lab/'
+          try:
+              with urllib.request.urlopen(result['public_url'],timeout=30) as response:
+                  result['public_url_http_status']=response.status
+          except urllib.error.HTTPError as exc:
+              result['public_url_http_status']=exc.code
+          except (OSError,TimeoutError) as exc:
+              result['public_url_http_status']=None
+              result['public_url_error_type']=type(exc).__name__
           path=Path(os.environ['RUNNER_TEMP'])/'nfl-static-evidence'/'github-pages-availability.json';path.write_text(json.dumps(result,indent=2));print(json.dumps(result))
           PY
       - name: Install pinned verification browser
