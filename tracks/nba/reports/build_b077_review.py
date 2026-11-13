@@ -62,7 +62,7 @@ TEMPLATE=r'''<!-- NBA B077 REVIEW BEGIN -->
 <p id="b077-nomination-guardrails" class="footnote"></p><p id="b077-production-guardrails" class="footnote"></p>
 <p class="scope"><strong>Six settled original-issue games do not satisfy the registered production support.</strong> The historical nomination code reports paired uncertainty but does not require a positive adjusted interval for nomination. A nominated research role therefore does not itself prove an improvement. Production still requires new post-registration originally issued evidence and independent review; no automatic production promotion is authorized.</p>
 <details><summary>Coverage gaps and promotion status</summary><ul id="b077-gaps"></ul><p><strong>No automatic production promotion.</strong> Historical research role selection permits prospective shadow monitoring. A new production claim needs the registered independent forward evidence and comparison gates; current retrospective scores do not satisfy that requirement.</p><p>All previously published schedule source fields and clocks are retained. The newer B077 schedule body is unavailable in this recovered return; its three aggregate-only live states are not assigned to individual games. The previous published selected snapshot remains available in <a href="history/b077_selected_outputs.json">history</a>.</p></details>
-<p class="small"><a href="b078_recovered_b077_evidence.json">Saved aggregate evidence</a> · <a href="latest_research_outputs.json">All observed games and selected issues</a> · <a href="build_b077_review.py">Deterministic display renderer</a></p>
+<p class="small"><a href="b078_recovered_b077_evidence.json">Saved aggregate evidence</a> · <a href="latest_research_outputs.json.gz" data-sel-json="latest_research_outputs.json">All observed games and selected issues</a> · <a href="build_b077_review.py">Deterministic display renderer</a></p>
 <script id="b077-evidence" type="application/json">REVIEW_JSON</script>
 <script id="b077-peak-evidence" type="application/json">PEAK_JSON</script>
 <script>
@@ -122,7 +122,7 @@ def build(check=False):
     assert evidence['schema']=='sports-edge-lab.nba.recovered-b077-review.v1'
     current=expand_html(path.read_text())
     clean=re.sub(re.escape(BEGIN)+r'.*?'+re.escape(END)+r'\n?', '',current,flags=re.S)
-    anchor='<p><a href="latest_research_outputs.json">Complete observed schedule and selected outputs</a> · <a href="validate_research_snapshot.py">Public evidence validator</a> · <a href="../README.md">NBA research history</a></p>\n'
+    anchor='<p><a href="latest_research_outputs.json.gz" data-sel-json="latest_research_outputs.json">Complete observed schedule and selected outputs</a> · <a href="validate_research_snapshot.py">Public evidence validator</a> · <a href="../README.md">NBA research history</a></p>\n'
     if clean.count(anchor)!=1:raise ValueError('The selected-output insertion point must be unique')
     result=clean.replace(anchor,anchor+render_section(evidence,data,peaks),1)
     if check:

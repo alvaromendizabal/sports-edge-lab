@@ -73,6 +73,13 @@ class ExecutionReviewTests(unittest.TestCase):
     def test_fit_documents_do_not_authenticate_omitted_model_bodies(self):
         self.rejected(lambda x:x['native_document_authentication'].update(omitted_model_bodies_authenticated_by_this_audit=True),'FIT_DOCUMENTS_ARE_NOT_MODEL_BODIES')
 
+    def test_exact_package_receipt_cannot_gain_tests_or_change_bytes(self):
+        package=self.value['replacement_engineering']['package_verification']
+        self.assertEqual((package['status'],package['packaged_tests'],package['passed']),('PASS',715,715))
+        self.rejected(lambda x:x['replacement_engineering']['package_verification'].update(packaged_tests=716,passed=716),'EXACT_PACKAGE_VERIFICATION_CHANGED')
+        self.rejected(lambda x:x['replacement_engineering']['package_verification'].update(exact_package_sha256='0'*64),'EXACT_PACKAGE_VERIFICATION_CHANGED')
+        self.rejected(lambda x:x['replacement_engineering']['package_verification'].update(owner_execution_performed=True),'EXACT_PACKAGE_VERIFICATION_CHANGED')
+
     def test_lossless_deterministic_display_and_data(self):
         page=(ROOT/'latest_research_outputs.html').read_text();expanded=expand_html(page)
         self.assertEqual(subject.attach(expanded,self.value),expanded)

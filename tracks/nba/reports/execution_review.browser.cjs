@@ -32,7 +32,7 @@ async function check(page,viewport,name){
  assert.equal(await page.locator('#nba-v9-data').evaluate(n=>JSON.parse(n.textContent).coverage.observed_games),1274);
  assert.equal(await page.evaluate(()=>Object.keys(window.NBA_PUBLIC_REPORT.issues).length),14054);
  if(name==='desktop'){const assets=JSON.parse(read('snapshot_asset_manifest.json'));for(const asset of assets.files){
-  const downloadPromise=page.waitForEvent('download');await page.locator('[data-sel-json="'+asset.name+'"]').click();const download=await downloadPromise;
+  const downloadPromise=page.waitForEvent('download');await page.locator('#sel-complete-downloads [data-sel-json="'+asset.name+'"]').click();const download=await downloadPromise;
   assert.equal(download.suggestedFilename(),asset.name);const bytes=fs.readFileSync(await download.path());assert.equal(bytes.length,asset.original_pin.bytes);assert.equal(hash(bytes),asset.original_pin.sha256);
  }}
  assert.ok(await page.evaluate(()=>document.documentElement.scrollWidth<=window.innerWidth+1),'horizontal viewport overflow');

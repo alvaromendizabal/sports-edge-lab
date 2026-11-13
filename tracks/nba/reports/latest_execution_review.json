@@ -492,7 +492,8 @@
       "Stream the original complete report through its unchanged archive verifier without building repeated large JSON encodings.",
       "Remove byte-identical duplicate publication carriers before the unchanged one-owner schedule binding guard; reject conflicting projections.",
       "Refresh stale catalogue context clocks and normalize typed historical origin/role identities for eligible scientific continuations; keep chronology guards.",
-      "Keep exact native-fit evidence independent of configured workers, reservation counts and ten-second CPU samples."
+      "Keep exact native-fit evidence independent of configured workers, reservation counts and ten-second CPU samples.",
+      "Bind model preservation to exact committed states: restore only authenticated content keys, prioritize new commits for concurrent immutable private backups, and require verified remote checksums or complete local model bodies under the existing return-size gate."
     ],
     "live_logging_acceptance": {
       "cases": [
@@ -530,11 +531,42 @@
       },
       "status": "PASS"
     },
+    "model_durability_engineering": {
+      "actual_model_storage_transfers_executed": false,
+      "cache_budget_ancestry_regressions": 46,
+      "focused_model_tests": 33,
+      "model_bodies_deserialized": false,
+      "models_silently_refitted": false,
+      "overlaps_packaged_tests": true,
+      "owner_model_recovery_executed": false,
+      "status": "ENGINEERING_VERIFIED; OWNER_CLOUD_RECOVERY_PENDING",
+      "unchanged_and_restarted_fixture_repeats_additional_simulated_requests": 0,
+      "unchanged_and_restarted_fixture_repeats_preserved_manifest_hash": true
+    },
     "owner_execution_completed": false,
     "package_verification": {
+      "all_1221_original_B082_members_preserved": true,
+      "all_member_CRC_and_manifest_SHA256_checks_passed": true,
+      "archive_members": 1266,
+      "errors": 0,
+      "exact_package_bytes": 178697447,
+      "exact_package_sha256": "6ce6373083491767bb41fbe76515db4c847e1bff39aaf015b59780ffc674292b",
+      "failures": 0,
+      "focused_suites_overlap_these_715_tests": true,
+      "full_verification_elapsed_seconds": 62.034455153989256,
+      "independent_member_verification_elapsed_seconds": 8.975755842999206,
+      "independent_receipt_sha256": "4d35d70ec265e10ea9bb125f077dc3540060651e674e0da97468dafa15b386aa",
+      "module_errors": 0,
       "owner_execution_performed": false,
+      "packaged_tests": 715,
+      "passed": 715,
+      "protected_original_module_count": 17,
+      "protected_original_modules_byte_identical": true,
       "real_NBA_fits": 0,
-      "status": "PENDING_FINAL_EXACT_BUILD_TEST_RECEIPT"
+      "skipped": 0,
+      "status": "PASS",
+      "test_elapsed_seconds": 53.18530203298724,
+      "test_receipt_sha256": "cc0d5eca5137b76ad17ca943b212fe6d21f450fdb7cc9731c98af58a7c10f86d"
     },
     "release": "B083",
     "runtime_tests": {
@@ -588,7 +620,7 @@
       "scientific_fit_credit": 0,
       "tests": 53
     },
-    "status": "TESTED_SOURCE_AND_PACKAGE_PREPARATION; OWNER_EXECUTION_PENDING",
+    "status": "EXACT_PACKAGE_AND_SOURCE_VERIFIED; OWNER_EXECUTION_PENDING",
     "verified_new_owner_scientific_fits": 0
   },
   "schema": "sports-edge-lab.nba.execution-review.v3",

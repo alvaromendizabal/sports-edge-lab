@@ -511,7 +511,7 @@ def render_section(value):
 <p>Evidence snapshot: <strong id="nba-v9-clock"></strong>. Latest authentic original issue: <strong id="nba-v9-issue-clock"></strong>. This is a saved analytical snapshot. Publication itself performs no model fit, inference or metric scoring.</p>
 <div id="nba-v9-cards" class="cards"></div>
 <p id="nba-v9-denominator"></p>
-<p><a href="latest_v9_acceptance.json">Download every observed game, selected original issue, missing role and acceptance state</a> · <a href="#forecast-rows">Inspect all game predictions and original intervals</a></p>
+<p><a href="latest_v9_acceptance.json.gz" data-sel-json="latest_v9_acceptance.json">Download every observed game, selected original issue, missing role and acceptance state</a> · <a href="#forecast-rows">Inspect all game predictions and original intervals</a></p>
 <h3>Old, refreshed and rolling model evidence</h3>
 <div class="scroll"><table id="nba-v9-policy"><thead><tr><th>Evidence policy</th><th>Saved metric rows</th><th>Evidence state</th><th>Original issue evidence</th></tr></thead><tbody></tbody></table></div>
 <p>Former and selected roles remain in the saved model tables. A newly materialized season-frozen state is retrospective unless a forecast was actually issued before the game. No policy in this panel is automatically promoted.</p>

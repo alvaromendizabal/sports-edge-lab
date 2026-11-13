@@ -62,7 +62,7 @@ for(const k of ['season','target','track'])q('nba-owner-'+k).addEventListener('c
 
 def attach_model_review(base_html,review):
     clean=re.sub(re.escape(BEGIN)+r'.*?'+re.escape(END)+r'\n?','',base_html,flags=re.S)
-    anchor='<p><a href="latest_research_outputs.json">Complete observed schedule and selected outputs</a> · <a href="validate_research_snapshot.py">Public evidence validator</a> · <a href="../README.md">NBA research history</a></p>\n'
+    anchor='<p><a href="latest_research_outputs.json.gz" data-sel-json="latest_research_outputs.json">Complete observed schedule and selected outputs</a> · <a href="validate_research_snapshot.py">Public evidence validator</a> · <a href="../README.md">NBA research history</a></p>\n'
     section=render_section(review)
     historical_end='<!-- NBA B077 REVIEW END -->\n'
     if clean.count(historical_end)==1:return clean.replace(historical_end,historical_end+section,1)

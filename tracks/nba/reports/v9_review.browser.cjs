@@ -54,7 +54,7 @@ async function validatePage(page,name,exhaustive=false){const r=load('latest_v9_
  await page.locator('#nba-v9-title').scrollIntoViewIfNeeded();
  if(process.env.NBA_MONITOR_SCREENSHOTS)await page.screenshot({path:path.join(process.env.NBA_MONITOR_SCREENSHOTS,'nba-v9-'+name+'.png'),fullPage:false});
  assert.deepEqual(await page.evaluate(()=>window.NBA_V9_DISPLAY_STATE),{games:r.game_rows.length,filter:'all'});
- assert.equal(await page.locator('a[href="latest_v9_acceptance.json"]').count(),1);
+ assert.equal(await page.locator('#nba-v9-review a[data-sel-json="latest_v9_acceptance.json"][href="latest_v9_acceptance.json.gz"]').count(),1);
  return{status:'PASS',name,games:r.game_rows.length};
 }
 module.exports={verify,validatePage};

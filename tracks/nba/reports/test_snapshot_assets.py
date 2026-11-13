@@ -39,6 +39,20 @@ class SnapshotAssetTests(unittest.TestCase):
             self.assertEqual(storage.file_pin(ROOT/row['name']),row['original_pin']);self.assertEqual(download['original_pin'],row['original_pin'])
         self.assertIn('Download complete selected-output JSON',expanded)
         self.assertIn('latest_research_outputs.json.gz',(ROOT/'latest_research_outputs.html').read_text())
+    def test_every_original_json_anchor_has_a_real_committed_fallback(self):
+        from html.parser import HTMLParser
+        class Anchors(HTMLParser):
+            def __init__(self):super().__init__();self.rows=[]
+            def handle_starttag(self,tag,attrs):
+                if tag=='a':self.rows.append(dict(attrs))
+        parser=Anchors();parser.feed((ROOT/'latest_research_outputs.html').read_text())
+        names={row['name'] for row in json.loads((ROOT/storage.MANIFEST).read_bytes())['files']}
+        for row in parser.rows:
+            self.assertNotIn(row.get('href'),names)
+            if row.get('data-sel-json') in names:
+                self.assertEqual(row['href'],row['data-sel-json']+'.gz')
+                self.assertTrue((ROOT/row['href']).is_file())
+        self.assertEqual(sum(row.get('data-sel-json') in names for row in parser.rows),5)
     def test_uncompressed_inputs_are_logical_not_silently_omitted(self):
         names={row['name'] for row in json.loads((ROOT/storage.MANIFEST).read_bytes())['files']}
         self.assertEqual(names,{'latest_research_outputs.json','latest_v9_acceptance.json'})
