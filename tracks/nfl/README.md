@@ -8,7 +8,7 @@
 
 **Actual N087 failed:** 678.674 seconds, 0.399 mean / 1.213 peak CPU core equivalents, 15 paid calls, and zero verified completed new scientific receipts. Final fit totals remain unreconciled. Both live log streams exist; closing the return did not repair the child runtime. The exact packaged cold-import installer chain independently reproduces a recursion error before it can write the required response.
 
-**Publication state: COMMITTED / NOT YET DEPLOYED.** The existing public Site was still N063, dated November 9, even though later GitHub HTML existed. Its exact older version will remain archived when the verified N088 bundle replaces the same public URL. Source CI and deployment are separate checks.
+**Publication state: DEPLOYED, version 42.** The same public NFL URL now serves N088, pinned to canonical GitHub commit `a32506fb28e6a7a8a72b5964714fd4fc5a748374`. The previous live N063 version remains at [/archive/v41/index.html](https://sports-edge-lab-nfl.alv-mendizabal.chatgpt.site/archive/v41/index.html). [Exact native deployment receipt](n088_online_deployment.json) · [Production browser verification workflow](https://github.com/alvaromendizabal/sports-edge-lab/actions/workflows/nfl-static-review.yml). GitHub Pages returned HTTP 404; this uses the existing authorized public hosting mechanism, with no Pages or AWS configuration change. Native deployment and browser verification are separate checks.
 
 <details>
 <summary>Preserved N085 scientific snapshot and N086/N087 delivery history</summary>
