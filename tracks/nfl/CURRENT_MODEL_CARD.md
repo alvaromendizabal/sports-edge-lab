@@ -1,3 +1,24 @@
+# NFL current model evidence · authenticated N085
+
+[All games and metric scoreboards](season_review_n086.html) · [Exact aggregate evidence](2026-11-13-n085-actual-n086-review.json)
+
+**The exact N085 owner executable completed 327 verified new fits: 294 native and 33 meta.** All 78 planned historical candidates completed 234 frozen fits and 156 annual 2024/2025 scorecards. The separate current-season monitor completed 60 new fits and reused 168 verified prediction cases. All 180 previous N083 historical fit identities are preserved as reuse. Owner research acceptance remains false; completed work is retained.
+
+All 78 new historical candidates completed: 60 interaction candidates and 18 source-removal controls, with 234 frozen fits and 156 annual scorecards. None of the new candidates beats the preserved best on any of the nine pooled objective comparisons; all nine primary historical metric-role selections remain unchanged. Paired-control acceptance rejected 18 comparisons and retained-cohort acceptance rejected 45 checks because frozen-cache rows retained an earlier whole-dataset identity. Those failed receipts are preserved; completed fits are not refitted or reclassified as absent. This is development-exposed research, with no production promotion or prospective superiority claim. The full historical ledger retains 1,530 cards: 1,428 in the current table plus 102 preserved cards absent from it.
+
+The current review retains **1,530 historical cards** (1,428 in the current table plus 102 absent-but-preserved cards), **783 registered 2026 monitoring cards**, **63 current selected-role replay cards**, all **77 dated N079 scorecards**, **333 older legacy cards**, and **87 reused original-issue aggregate groups** over 15 games. Current-season outcomes do not select the historical roles. No independent rolling production promotion is established, and 18 former-role horizon gaps remain explicit.
+
+The [current-season scoreboards](season_review_n086.html#monitor) identify a separate best model for every metric on each exact target, horizon and game cohort. The largest comparable one-hour cohort has **119 non-tied winner games and 120 point-target games**, fewer than the 137 observed finals. These are development-exposed retrospective results; no global full-season winner or independent rolling champion is inferred from the incomplete coverage.
+
+DraftKings, Kalshi and Polymarket have zero admitted equivalent same-cutoff comparisons in the selected current-season replay. Genuine source holdings remain preserved; missing clocks, contracts, forecasts and coherent score distributions are explicit gaps. No prices or comparisons are fabricated. The public report contains selected rounded outputs and aggregate metrics only; private active recipes and complete issue journals remain excluded.
+
+45.236 minutes before packaging. Seven actual historical optimizer calls overlapped; the outer sampled monitor saw only three. Whole-invocation mean was 0.858 CPU core equivalents. A 12.402-core instantaneous sample is not sustained twelve-core proof. The 234 new historical optimizer calls occupied a 33.590-second first-start-to-last-end window; first new commit was approximately 853 seconds after invocation. Packaging hashed 14.293 GB across 66,328 reads. No matched end-to-end speedup is claimed. Fifteen paid calls were recorded; full cost and cache transport scopes remain separate.
+
+All prior original Torch champions, qualified market comparisons, metric roles and scientific caveats remain verbatim in the [preceding model card](MODEL_CARD_N085_SNAPSHOT.md). Earlier results retain their original cohorts and evidence classes; they are not pooled with the newly observed monitoring cohorts.
+
+<details>
+<summary>Preserved dated model-card history; earlier claims retain their original scope</summary>
+
 # NFL current model evidence · actual N083
 
 [Latest all-game and metric review](season_review_n084.html) · [Aggregate evidence](2026-11-13-n083-actual-n084-review.json)
@@ -184,5 +205,7 @@ There is no universal log-loss or MAE number that bypasses these gates. Any new 
 | Polymarket comparison | Source captures and coverage diagnostics | Complete comparable target/horizon evaluation is not established |
 
 The best saved original 2026 variant is displayed descriptively and does not select the next forward model. A missing primary champion issue is never filled with an operational fallback under the primary label.
+
+</details>
 
 </details>
