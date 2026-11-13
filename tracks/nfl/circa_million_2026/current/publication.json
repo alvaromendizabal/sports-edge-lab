@@ -1,0 +1,29 @@
+{
+  "assets": {
+    "archive/index.html": {
+      "bytes": 617602,
+      "sha256": "26e5e30f0da3eeb75ec1e745aefebffa3e586b4ae51aef9b3680da4b47a42dba"
+    },
+    "evidence.json": {
+      "bytes": 2508254,
+      "sha256": "246cc3a1c96f69754437bc99ef949ee5c8d934e0e8991a6e2f00faa43865a008"
+    },
+    "history.json.gz": {
+      "bytes": 1569304,
+      "sha256": "4d54397a76898ba544311d440985eefdd552a3e354c886f72fc51a314d1631cd"
+    },
+    "index.html": {
+      "bytes": 2550411,
+      "sha256": "e9d51a6feaf0f15a62884706fb226ca4bc22e52d321920947ba0a564baeaa06e"
+    }
+  },
+  "board_games": 14,
+  "model_views": 40,
+  "new_fits": 0,
+  "new_source_calls": 0,
+  "public_payload_sha256": "246cc3a1c96f69754437bc99ef949ee5c8d934e0e8991a6e2f00faa43865a008",
+  "release": "N089",
+  "schema": "sports-edge.circa-publication.v1",
+  "source_payload_sha256": "3df5170202c3a1925a64ee28e6a8fd726091e6729aed178100a332152c8dfc4c",
+  "state": "PREPARED_NOT_DEPLOYED"
+}

@@ -92,6 +92,26 @@ jobs:
           print(json.dumps({'fixture':'actual sealed N088 executable output','html_sha256':fixture['html_sha256'],'source_run':fixture['source_run'],'new_model_fits':0}))
           PY
           node tracks/nfl/dashboard_n088_browser.cjs
+      - name: Verify Circa public rendering and source immutability
+        run: |
+          python -m unittest discover -s tracks/nfl/circa_million_2026 -p test_current_n089.py -v
+          node tracks/nfl/circa_million_2026/test_current_n089_dom.cjs
+      - name: Verify responsive Circa cards, JMac override, history and exact game drilldowns
+        env:
+          PLAYWRIGHT_MODULE_DIR: ${{ runner.temp }}/nfl-static-browser/node_modules/playwright
+          CIRCA_N089_EVIDENCE: ${{ runner.temp }}/nfl-static-evidence/circa-source
+        run: node tracks/nfl/circa_million_2026/test_current_n089_browser.cjs
+      - name: Verify actual published Circa route when a deployment receipt is present
+        env:
+          PLAYWRIGHT_MODULE_DIR: ${{ runner.temp }}/nfl-static-browser/node_modules/playwright
+          CIRCA_N089_EVIDENCE: ${{ runner.temp }}/nfl-static-evidence/circa-online
+          CIRCA_N089_ONLINE_URL: https://sports-edge-lab-nfl.alv-mendizabal.chatgpt.site/circa/
+        run: |
+          if test -f tracks/nfl/circa_million_2026/current/online_deployment.json; then
+            node tracks/nfl/circa_million_2026/test_current_n089_browser.cjs
+          else
+            echo 'Circa source prepared; no native deployment receipt exists yet.'
+          fi
       - name: Preserve exact public bundle and browser evidence
         if: always()
         uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02
@@ -100,5 +120,6 @@ jobs:
           path: |
             ${{ runner.temp }}/nfl-static-evidence
             tracks/nfl/dashboard_n088
+            tracks/nfl/circa_million_2026/current
           if-no-files-found: error
           retention-days: 14
