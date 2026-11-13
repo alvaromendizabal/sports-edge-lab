@@ -82,7 +82,7 @@ The adapter has NFL event aliases and accepts common explicit fields from other 
 Run the generic regression suite from the repository root:
 
 ```sh
-python -m unittest discover -s runtime/execution -p 'test_sports_edge_live.py' -v
+python -m unittest discover -s runtime/execution -p 'test_sports_edge_live*.py' -v
 python -m unittest discover -s runtime/execution -p 'test_live_logging.py' -v
 python runtime/execution/verify_live_execution.py
 ```
@@ -100,3 +100,20 @@ The existing public-review workflow runs these tests on Python 3.11 and 3.12. Th
 `ProgressObservation` is part of this standalone module. The logger can be loaded as a manifest-pinned bridge before sibling modules become importable. No separate runtime helper is needed. Successful operational counters are compared within their own reported scopes; a newly appearing cumulative receipt establishes a baseline and does not retroactively establish progress in the current interval. Native returned-fit counters have an independent idle clock, so a long source transfer does not appear as ongoing model training.
 
 The NBA B081 saved log contained one false stall while successful GETs increased from 16 to 5,618. The repaired comparison recognizes that observed transfer progress while keeping the native-fit idle clock unchanged. The public regression uses invented counters and a real local child that waits and exits with code 7. Private original telemetry stays outside this repository. The published NBA execution evidence reports the saved owner's actual measurements separately.
+
+## Explicit command supervision for every project
+
+The shared module now has a tested command-line entry point,
+[`sports_edge_live_runner.py`](sports_edge_live_runner.py), with selectors for
+NFL, FBS, NBA and NCAA basketball. It creates an exclusive per-run project log
+directory with literal `LIVE_EXECUTION.log` and `LIVE_EXECUTION.jsonl` filenames,
+forwards a received signal only to its exact direct child and preserves the
+child's exit status. It does not choose or rewrite a private owner command.
+
+Nine additional tests cover all four selectors, real simultaneous ten-second
+observations, partial output, failure/signal exits, current-bound progress and
+preservation of previous logs. Their work receives zero sports-fit credit.
+The original 27 core tests remain unchanged. Read the
+[activation contract and evidence boundaries](ACTIVATION_AND_SCOPE.md) before
+integrating an existing private runner. Local supervisor tests do not establish
+activation of every deployed sport or twelve-core scientific performance.

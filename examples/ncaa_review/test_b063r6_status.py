@@ -7,6 +7,7 @@ import re
 import unittest
 from unittest.mock import patch
 import b063r6_status as status
+from b063r7_status import strip_banner as strip_r7_banner
 
 ROOT=Path(__file__).resolve().parents[2]
 DOC=ROOT/'docs/ncaa'
@@ -72,7 +73,7 @@ class B063R6PublicStatus(unittest.TestCase):
 
     def test_original_landing_and_dated_companions_are_exactly_preserved(self):
         pins=self.data['source_attribution']['preserved_git_blobs']
-        body=(DOC/'index.html').read_text()
+        body=strip_r7_banner((DOC/'index.html').read_text())
         self.assertEqual(body.count(status.START),1)
         self.assertEqual(blob(status.strip_banner(body).encode()),pins['docs/ncaa/index.html'])
         for name in ('docs/ncaa/b063r5.html','docs/ncaa/data/B063R5_PUBLIC_STATUS.json',
@@ -81,11 +82,11 @@ class B063R6PublicStatus(unittest.TestCase):
 
     def test_old_readme_and_browser_bytes_survive_one_new_layer(self):
         pins=self.data['source_attribution']['preserved_git_blobs']
-        body=(EX/'README.md').read_bytes()
+        body=(EX/'README.md').read_bytes().split(b'<!-- B063R7_STATUS_END -->\n\n',1)[1]
         self.assertTrue(body.startswith(b'<!-- B063R6_STATUS_START -->'))
         self.assertEqual(body.count(b'<!-- B063R6_STATUS_END -->\n\n'),1)
         self.assertEqual(blob(body.split(b'<!-- B063R6_STATUS_END -->\n\n',1)[1]),pins['examples/ncaa_review/README.md'])
-        body=(EX/'test_dashboard_browser.cjs').read_bytes()
+        body=(EX/'test_dashboard_browser.cjs').read_bytes().replace(b"    counts.b063r7Status = await require('./test_b063r7_status_browser.cjs').verifyR7(browser, path.join(root, 'docs/ncaa/b063r7.html'));\n",b'')
         self.assertEqual(body.count(R6_BROWSER_LINE),1)
         self.assertEqual(blob(body.replace(R6_BROWSER_LINE,b'')),pins['examples/ncaa_review/test_dashboard_browser.cjs'])
 
@@ -99,7 +100,7 @@ class B063R6PublicStatus(unittest.TestCase):
         self.assertNotIn('__B063R6_',body)
         self.assertIn('new Blob([exact]',body)
         self.assertIn('zero scientific-fit credit',body)
-        landing=(DOC/'index.html').read_text()
+        landing=strip_r7_banner((DOC/'index.html').read_text())
         self.assertEqual(status.render_banner(landing),landing)
         self.assertEqual(status.status_outputs({DOC/'index.html':status.strip_banner(landing)})[DOC/'index.html'],landing)
 
