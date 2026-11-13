@@ -1,6 +1,7 @@
 """Public partial-owner facts, private boundary and exact preservation gates."""
 from pathlib import Path
 import hashlib,json,re,unittest
+from b063r5_status import strip_banner as strip_latest_banner
 ROOT=Path(__file__).resolve().parents[2]
 DOC=ROOT/'docs/ncaa';EX=ROOT/'examples/ncaa_review'
 def git_blob(body):return hashlib.sha1(b'blob '+str(len(body)).encode()+b'\0'+body).hexdigest()
@@ -39,15 +40,15 @@ class B063R4PublicStatus(unittest.TestCase):
   self.assertFalse(p['source_publication_is_deployment']);self.assertFalse(p['website_deployment_verified'])
   self.assertFalse(p['provider_refresh_performed'])
  def test_original_landing_game_and_metric_bytes_are_exactly_preserved(self):
-  body=(DOC/'index.html').read_bytes();start=b'<!-- B063R4_PARTIAL_OWNER_STATUS_START -->';end=b'<!-- B063R4_PARTIAL_OWNER_STATUS_END -->\n'
+  body=strip_latest_banner((DOC/'index.html').read_text()).encode();start=b'<!-- B063R4_PARTIAL_OWNER_STATUS_START -->';end=b'<!-- B063R4_PARTIAL_OWNER_STATUS_END -->\n'
   self.assertEqual(body.count(start),1);self.assertEqual(body.count(end),1)
   left,remaining=body.split(start);_,right=remaining.split(end)
   self.assertEqual(git_blob(left+right),self.data['source_attribution']['preserved_git_blobs']['docs/ncaa/index.html'])
  def test_original_readme_and_browser_contract_are_preserved(self):
-  body=(EX/'README.md').read_bytes();marker=b'<!-- B063R4_STATUS_END -->\n\n'
+  body=(EX/'README.md').read_bytes().split(b'<!-- B063R5_STATUS_END -->\n\n',1)[1];marker=b'<!-- B063R4_STATUS_END -->\n\n'
   self.assertTrue(body.startswith(b'<!-- B063R4_STATUS_START -->'))
   self.assertEqual(git_blob(body.split(marker)[1]),self.data['source_attribution']['preserved_git_blobs']['examples/ncaa_review/README.md'])
-  body=(EX/'test_dashboard_browser.cjs').read_bytes();line=b"    counts.b063r4Status = await require('./test_b063r4_status_browser.cjs').verifyR4(browser, path.join(root, 'docs/ncaa/b063r4.html'));\n"
+  body=(EX/'test_dashboard_browser.cjs').read_bytes().replace(b"    counts.b063r5Status = await require('./test_b063r5_status_browser.cjs').verifyR5(browser, path.join(root, 'docs/ncaa/b063r5.html'));\n",b'');line=b"    counts.b063r4Status = await require('./test_b063r4_status_browser.cjs').verifyR4(browser, path.join(root, 'docs/ncaa/b063r4.html'));\n"
   self.assertEqual(body.count(line),1)
   self.assertEqual(git_blob(body.replace(line,b'')),self.data['source_attribution']['preserved_git_blobs']['examples/ncaa_review/test_dashboard_browser.cjs'])
  def test_standalone_page_contains_exact_downloadable_evidence(self):
@@ -62,7 +63,7 @@ class B063R4PublicStatus(unittest.TestCase):
   import b063r4_status as status
   self.assertEqual(status.render_page(),(DOC/'b063r4.html').read_text())
   self.assertEqual(status.load_payload(),self.data)
-  landing=(DOC/'index.html').read_text();self.assertEqual(status.render_banner(landing),landing)
+  landing=strip_latest_banner((DOC/'index.html').read_text());self.assertEqual(status.render_banner(landing),landing)
   self.assertEqual(status.status_outputs({DOC/'index.html':status.strip_banner(landing)})[DOC/'index.html'],landing)
  def test_prepared_and_partial_population_mutations_are_rejected(self):
   import copy,b063r4_status as status

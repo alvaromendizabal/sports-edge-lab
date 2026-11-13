@@ -63,7 +63,8 @@ class EvidenceBoundaryTests(unittest.TestCase):
 
     def test_actual_landing_preserves_the_complete_prior_page(self):
         from b063r4_status import strip_banner
-        page = strip_banner((dashboard.ROOT / "docs/ncaa/index.html").read_text())
+        from b063r5_status import strip_banner as strip_latest_banner
+        page = strip_banner(strip_latest_banner((dashboard.ROOT / "docs/ncaa/index.html").read_text()))
         self.assertEqual(page.count(dashboard.BANNER), 1)
         previous = page.replace(dashboard.BANNER, "")
         git_blob = b"blob " + str(len(previous.encode())).encode() + b"\0" + previous.encode()

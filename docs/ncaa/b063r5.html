@@ -1,0 +1,155 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>NCAA B063R5 · Preflight failure and preserved evidence</title><meta name="description" content="Authenticated NCAA B063R4 preflight failure, zero new owner fits, 22 preserved prior fits, and the scoped B063R5 portability repair."><style>
+*{box-sizing:border-box}body{margin:0;background:#f5f4ef;color:#1b302d;font:16px/1.65 system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif}main{max-width:1180px;margin:auto;padding:28px 28px 60px}a{color:#146657;text-underline-offset:4px}a:focus-visible,summary:focus-visible{outline:3px solid #216eab;outline-offset:4px}nav{display:flex;justify-content:space-between;gap:20px;flex-wrap:wrap;border-bottom:1px solid #ced9d2;padding-bottom:20px}.brand{font-size:19px;font-weight:800;text-decoration:none}.eyebrow{font-size:12px;letter-spacing:.12em;text-transform:uppercase;font-weight:750;color:#286f5d;margin-top:32px}h1{font-size:clamp(32px,5vw,57px);line-height:1.1;letter-spacing:-.045em;margin:15px 0 20px}h2{font-size:26px;line-height:1.25;letter-spacing:-.025em;margin:0 0 15px}.intro{font-size:19px;max-width:970px;color:#4d6458}.cards{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:14px;margin:26px 0}.card{background:#fffdf7;border:1px solid #c9d9cc;border-radius:13px;padding:19px}.card strong{font-size:33px;line-height:1.2;letter-spacing:-.035em;display:block;overflow-wrap:anywhere}.card span{font-size:13px;display:block;margin-top:9px}.notice{padding:20px 23px;background:#fcf0d9;border:1px solid #dec8a2;border-radius:12px;color:#61491f}.notice p{margin:0 0 10px}.notice p:last-child{margin:0}section{margin:35px 0}p{margin:10px 0 17px}.grid{display:grid;grid-template-columns:1fr 1fr;gap:20px}.panel{padding:21px;border:1px solid #ccd9cf;border-radius:12px;background:#fffdf7;min-width:0}.panel h3{margin:0 0 10px;font-size:19px}.muted{font-size:13px;color:#506659}code{font-size:12px;overflow-wrap:anywhere}li{margin:12px 0}.links{display:flex;gap:12px;flex-wrap:wrap}.links a{padding:10px 15px;border:1px solid #a9c0af;border-radius:7px;background:#fffdf7}.links .primary{background:#17684f;color:white;font-weight:700;text-decoration:none}footer{margin-top:35px;border-top:1px solid #d0ddd2;padding-top:21px;font-size:12px;color:#506659}details{margin:20px 0}summary{font-weight:700;cursor:pointer}@media(max-width:700px){main{padding:22px 16px 38px}.cards{grid-template-columns:1fr 1fr;gap:10px}.card{padding:15px}.card strong{font-size:27px}.grid{grid-template-columns:1fr}.notice{padding:16px}.intro{font-size:17px}.links a{width:100%}}
+</style></head><body><main>
+<nav><a class="brand" href="index.html">Sports Edge Lab / NCAA</a><a href="b063r2.html">Preserved games, metrics and leaders</a></nav>
+<header><p class="eyebrow">November 13, 2026 · Men and women · Authenticated owner result</p><h1>Preflight failed.<br>Prior scientific work is preserved.</h1><p class="intro">The latest B063R4 return stopped during recovery before a new worker started. A missing Python process-handle API caused the failure. B063R5 addresses that compatibility gap and preserves the diagnostic evidence needed to verify the next owner attempt.</p></header>
+<div class="cards" id="r5-cards"><div class="card"><strong>0</strong><span>New fits in the actual B063R4 attempt</span></div><div class="card"><strong>22</strong><span>Prior target fits preserved<br>134 exact objects reverified</span></div><div class="card"><strong>Failed</strong><span>Authenticated preflight result</span></div><div class="card"><strong>Unverified</strong><span>B063R5 owner execution<br>and older owner shutdown</span></div></div>
+<aside class="notice" id="r5-scope"><p><strong>The failure return does not contain new scientific results.</strong> It confirms zero new owner fits. It does not establish that the older R3 owner stopped successfully, and its referenced recovery diagnostic was not included.</p><p>The earlier <a href="b063r4.html">dated R3 progress and R4 preparation report</a> remains intact. Its recorded fits and CPU observations belong to that earlier evidence period. The latest failure cannot turn them into R4 execution or twelve-core acceptance.</p></aside>
+<section id="r5-failure"><h2>What the return proves—and what remains unknown</h2><div class="grid"><article class="panel"><h3>A missing Python binding stopped recovery</h3><p>The exact failure code is <code>B065_PIDFD_REQUIRED_FOR_PROCESS_CONTROL</code>. The returned implementation checks for Python process-handle bindings before attempting a kernel operation. At least one binding was absent.</p><p class="muted">The return does not identify the individual missing binding or provide the owner's Python, kernel or C runtime versions. It does not prove that the kernel lacks process-handle support.</p></article><article class="panel"><h3>Preservation carries no new-fit credit</h3><p>All <strong>134 saved content objects</strong> supporting the <strong>22 prior target fits</strong> were authenticated again inside the returned source. This review did not deserialize models or rerun science.</p><p class="muted">Admission still requires exact scientific, input and runtime compatibility. Preserving an artifact does not automatically make it compatible with a different Python or package environment.</p></article></div><details id="r5-clocks"><summary>Inspect the evidence clock and diagnostic gap</summary><p>The return filename contains <time datetime="2026-11-13T01:33:34Z">November 13, 2026 at 01:33:34 UTC</time>. This is a filename timestamp, not a verified failure completion time. No new forecast issue time or outcome clock is inferred from it.</p><p>The source, nested return and all declared archive members were verified against their recorded hashes. The failure text references a recovery diagnostic that is absent from the attached return. Successful old-owner shutdown and the actual failed capability details remain unverified.</p></details></section>
+<section id="r5-repair"><h2>The scoped engineering repair</h2><div class="grid"><article class="panel"><h3>Portable, identity-safe process handles</h3><p>When a Python binding is missing, use typed interfaces to the same kernel process-handle operations. Verify the descriptor's target and the complete process identity before signaling. Close each acquired descriptor.</p><p>Errors from an existing callable API remain failures. The repair does not substitute another route after a permission denial, kernel refusal or unsupported-operation error.</p></article><article class="panel"><h3>Early capability evidence and portable diagnostics</h3><p>A fresh, nonterminating self probe records the actual Python bindings, kernel, C runtime and selected backend before recovery work. Recovery evidence belongs in the returned diagnostic, where the next review can authenticate it.</p><p>Engineering tests and a source fingerprint establish prepared code. Actual owner recovery, science and throughput still require a new owner return.</p></article></div><details id="r5-engineering"><summary>Inspect validation and the prepared source fingerprint</summary><p id="r5-tests">The sealed executable passed 435 targeted engineering cases with zero failures, errors or skips. A separate cold startup passed 116 checks in 1.76 seconds total; warm startup reused the verified result in 0.56 seconds without rerunning those cases. Three exact prior-failure controls and five native/fallback child-process cases passed with zero foreign-process signals, numeric-PID signals or descriptor leaks. These are local engineering checks; owner execution and scientific throughput remain unverified.</p><p>Prepared B063R5 source fingerprint: <code id="r5-source">7605996d5989734af843158c09b7a3d470d26cb9278484af4e103cb8d34bccb6</code>.</p><p>Local compatibility checks force missing Python bindings and exercise real, nonterminating kernel probes. Refusal and descriptor-cleanup cases protect the process boundary. These checks are engineering verification, with zero scientific-fit credit.</p></details></section>
+<section id="r5-remaining"><h2>The scientific obligations remain open</h2><ol><li>Verify the old owner's safe exit or authenticated terminal evidence, then admit a new owner.</li><li>Demonstrate actual independent scientific fits, sustained utilization and comparable throughput across all 12 safely available project cores.</li><li>Complete eligible historical evaluation and current-season/upcoming game coverage with exact issue and outcome clocks.</li><li>Report accuracy, log loss, Brier, margin MAE/RMSE and total-points MAE/RMSE, with separate former, current and rolling champions and genuine time-matched provider data.</li></ol><p>No new metrics, forecasts, DraftKings quotes, Kalshi quotes or Polymarket quotes were created by this incident update. The retained dashboard keeps its original dated populations and coverage qualifications.</p><div class="links"><a class="primary" href="index.html">Open preserved NCAA dashboard</a><a href="b063r4.html">Inspect prior saved progress</a><a id="r5-download" href="data/B063R5_PUBLIC_STATUS.json" download>Download exact status JSON</a></div></section>
+<footer id="r5-publication">Sanitized NCAA operational evidence. Source publication is separate from website deployment and does not imply a provider refresh or new scientific evaluation. Exact fingerprints and the distinction between the failed owner attempt and prepared repair are in the downloadable JSON.</footer>
+<script id="b063r5-data" type="application/json">{
+  "schema": "sel.ncaa.b063r5.public_status.v1",
+  "release": "B063R5",
+  "updated_on": "2026-11-13",
+  "project": "NCAA basketball / men and women",
+  "latest_actual_owner": {
+    "release": "B063R4",
+    "status": "PREFLIGHT_FAILED",
+    "new_owner_fits": 0,
+    "failure_code": "B065_PIDFD_REQUIRED_FOR_PROCESS_CONTROL",
+    "failure_stage": "PRELAUNCH_RECOVERY_BEFORE_NEW_WORKER",
+    "missing_python_pidfd_binding": true,
+    "specific_missing_binding": null,
+    "owner_python_version": null,
+    "owner_kernel_version": null,
+    "owner_libc_version": null,
+    "kernel_pidfd_support_tested_by_failed_code": false,
+    "referenced_recovery_diagnostic_in_attached_return": false,
+    "old_R3_shutdown_verified": false,
+    "failure_clock_verified": null,
+    "return_filename_time_utc": "2026-11-13T01:33:34Z",
+    "return_filename_time_is_failure_time": false,
+    "whole_scientific_run_completed": false,
+    "new_metrics_or_forecasts": false
+  },
+  "preserved_evidence": {
+    "prior_release": "B063R3",
+    "authenticated_prior_target_fits": 22,
+    "exact_content_objects_reverified": 134,
+    "new_fit_credit_for_preservation": 0,
+    "model_deserializations_in_review": 0,
+    "scientific_runtime_compatibility_still_required": true,
+    "previous_public_science_and_issue_clocks_unchanged": true
+  },
+  "prepared_continuation": {
+    "release": "B063R5",
+    "status": "PREPARED_LOCAL_VALIDATION_PASSED_OWNER_PENDING",
+    "source_sha256": "7605996d5989734af843158c09b7a3d470d26cb9278484af4e103cb8d34bccb6",
+    "validation": {
+      "targeted_unique_cases": 435,
+      "failures": 0,
+      "errors": 0,
+      "skips": 0,
+      "groups": {
+        "locking": 143,
+        "runtime": 126,
+        "cache_resume": 157,
+        "source": 8,
+        "stress": 1
+      },
+      "cold_startup_cases": 116,
+      "cold_startup_suite_seconds": 0.59126016,
+      "cold_startup_total_seconds": 1.759790226,
+      "warm_startup_total_seconds": 0.561019715,
+      "warm_cases_rerun": 0,
+      "local_end_to_end_failure_controls": 3,
+      "local_end_to_end_native_or_fallback_child_cases": 5,
+      "local_end_to_end_seconds": 2.124729058,
+      "foreign_process_signals": 0,
+      "numeric_pid_signals": 0,
+      "descriptor_leaks": 0,
+      "scientific_fit_credit": 0,
+      "public_summary": "The sealed executable passed 435 targeted engineering cases with zero failures, errors or skips. A separate cold startup passed 116 checks in 1.76 seconds total; warm startup reused the verified result in 0.56 seconds without rerunning those cases. Three exact prior-failure controls and five native/fallback child-process cases passed with zero foreign-process signals, numeric-PID signals or descriptor leaks. These are local engineering checks; owner execution and scientific throughput remain unverified."
+    },
+    "owner_execution_verified": false,
+    "owner_environment_verified": false,
+    "new_preparation_scientific_fits": 0,
+    "engineering_tests_are_scientific_performance": false,
+    "repairs": [
+      {
+        "title": "Portable process handles",
+        "behavior": "Resolve missing Python process-handle bindings through typed interfaces to the same kernel APIs. Keep descriptor and full process identity checks."
+      },
+      {
+        "title": "Fail-closed process control",
+        "behavior": "Never replace an existing API error or permission denial with another signaling route. Close every acquired descriptor."
+      },
+      {
+        "title": "Actual capability diagnostics",
+        "behavior": "Record a harmless fresh self probe, Python bindings, kernel, C runtime and chosen backend before recovery work."
+      },
+      {
+        "title": "Portable failure evidence",
+        "behavior": "Preserve the recovery diagnostic with the preflight return so the next review can inspect the actual failed environment."
+      }
+    ],
+    "source_bytes": 22865873,
+    "source_members": 1050,
+    "scientific_identity_families_preserved": 8
+  },
+  "metric_policy": {
+    "metrics": [
+      "accuracy",
+      "log_loss",
+      "brier",
+      "margin_mae",
+      "margin_rmse",
+      "total_mae",
+      "total_rmse"
+    ],
+    "new_scores": null,
+    "current_season_complete": false,
+    "rolling_or_original_issue_promotion": false,
+    "missing_quotes_fabricated": false,
+    "twelve_core_scientific_acceptance_proven": false,
+    "provider_refresh_performed": false
+  },
+  "source_attribution": {
+    "authenticated_outer_return_sha256": "32622316ee2c940ac6e339afae3f3da1cb1ee8e30ef19ff27805302a81331375",
+    "authenticated_nested_return_sha256": "29b0cc40176eaedf05139f035ed0abc2323ae2a21c3f7cd759e79deec2b6c33c",
+    "returned_source_sha256": "e7700344640e1a4c21a23fc52ec62c70c6b599c95b30db98704180f339b6035f",
+    "preserved_prior_capsule_sha256": "7322b22c15b341bd3e35b37d8fad95af87cc750a027133869141b4e3f9f7668d",
+    "evidence": "Authenticated attached B063R4 return, exact returned source, all 134 embedded prior content objects, and separately scoped local engineering checks.",
+    "base_commit": "5df812c7b8e8952023f60dbad1873ba3adbca0a8",
+    "preserved_git_blobs": {
+      "docs/ncaa/index.html": "764a6fa578cd8f6ea0b211e25006beb9d240f2c7",
+      "docs/ncaa/b063r4.html": "b8dd8df8d7fa423eb9d34bf36980f75bc2b849bd",
+      "docs/ncaa/data/B063R4_PUBLIC_STATUS.json": "56283ed5a968f91b98c3075aec2a8932e9ef9639",
+      "examples/ncaa_review/README.md": "a449bf2a9adcade848b939cfffc8f7ab97330770",
+      "examples/ncaa_review/test_dashboard_browser.cjs": "93cd3ccecb3e507e7bd6bbabcdeb226d35d1846c"
+    }
+  },
+  "publication": {
+    "source_publication_is_deployment": false,
+    "website_deployment_verified": false,
+    "private_executable_or_models_published": false,
+    "new_scientific_evaluation": false
+  }
+}
+</script><script>
+(function () {
+  'use strict';
+  document.getElementById('r5-download').addEventListener('click', function (event) {
+    event.preventDefault();
+    const exact = document.getElementById('b063r5-data').textContent;
+    const url = URL.createObjectURL(new Blob([exact], {type: 'application/json;charset=utf-8'}));
+    const link = document.createElement('a');
+    link.href = url; link.download = 'B063R5_PUBLIC_STATUS.json';
+    document.body.appendChild(link); link.click(); link.remove();
+    setTimeout(function () { URL.revokeObjectURL(url); }, 1000);
+  });
+})();
+</script></main></body></html>
