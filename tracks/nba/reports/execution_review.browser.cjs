@@ -19,16 +19,19 @@ async function check(page,viewport,name){
  assert.deepEqual(await page.locator('#nba-execution-data').evaluate(n=>JSON.parse(n.textContent)),value);
  assert.match(await page.locator('#nba-execution-outcome').textContent(),/zero confirmed new scientific fits/);
  assert.match(await page.locator('#nba-execution-source-clock').textContent(),/2026-11-12T02:02:29\.830904\+00:00/);
- assert.match(await page.locator('#nba-execution-fatal').textContent(),/Both guards remain active/);
- assert.match(await page.locator('#nba-execution-replacement-status').textContent(),/No B079 owner execution/);
- assert.equal(await page.locator('#nba-execution-evidence tbody tr').count(),8);
+ assert.match(await page.locator('#nba-execution-fatal').textContent(),/original resource guards remain active/);
+ assert.match(await page.locator('#nba-execution-replacement-status').textContent(),/No B080 owner execution/);
+ assert.equal(await page.locator('#nba-execution-evidence tbody tr').count(),11);
+ assert.match(await page.locator('#nba-execution-evidence').textContent(),/43 heartbeats; maximum gap 10\.035732 seconds/);
+ assert.match(await page.locator('#nba-execution-evidence').textContent(),/136,927 compressed body bytes/);
+ assert.match(await page.locator('#nba-execution-evidence').textContent(),/null does not mean zero/);
  await page.locator('#nba-execution-repairs > summary').click();assert.equal(await page.locator('#nba-execution-repairs').evaluate(n=>n.open),true);
  assert.equal(await section.locator('li').count(),value.replacement_engineering.implemented_repairs.length+value.replacement_engineering.verification_summary.length);
  assert.equal(await page.locator('#nba-v9-data').evaluate(n=>JSON.parse(n.textContent).coverage.observed_games),1274);
  assert.ok(await page.locator('#forecast-rows').count());
  assert.ok(await page.evaluate(()=>document.documentElement.scrollWidth<=window.innerWidth+1),'horizontal viewport overflow');
  const screenshotDir=process.env.NBA_MONITOR_SCREENSHOTS;
- if(screenshotDir){fs.mkdirSync(screenshotDir,{recursive:true});await page.locator('#nba-execution-title').evaluate(node=>node.scrollIntoView({block:'start'}));await page.screenshot({path:path.join(screenshotDir,'nba-b079-execution-'+name+'.png'),fullPage:false});}
+ if(screenshotDir){fs.mkdirSync(screenshotDir,{recursive:true});await page.locator('#nba-execution-title').evaluate(node=>node.scrollIntoView({block:'start'}));await page.screenshot({path:path.join(screenshotDir,'nba-b080-execution-'+name+'.png'),fullPage:false});}
  await page.locator('#nba-execution-repairs > summary').click();await page.reload({waitUntil:'load'});
  assert.deepEqual(await page.locator('#nba-execution-data').evaluate(n=>JSON.parse(n.textContent)),value);
  assert.deepEqual(errors,[]);assert.deepEqual(external,[]);return{name,viewport,console_or_page_errors:errors.length,external_requests:external.length,offline_reopen:true};
@@ -39,6 +42,6 @@ async function check(page,viewport,name){
  const results=[];try{for(const[v,n]of[[{width:1440,height:1050},'desktop'],[{width:390,height:844},'mobile']]){const page=await browser.newPage();results.push(await check(page,v,n));await page.close();}}
  finally{await browser.close();}
  const receipt={schema:'sports-edge-lab.nba.execution-review.browser.v1',status:'PASS',display_sha256:hash(read('latest_research_outputs.html')),evidence_sha256:hash(read('latest_execution_review.json')),unchanged_research_sources:value.science_preservation.source_sha256,new_fits:0,new_forecasts:0,results};
- if(process.env.NBA_MONITOR_SCREENSHOTS)fs.writeFileSync(path.join(process.env.NBA_MONITOR_SCREENSHOTS,'B079_EXECUTION_BROWSER_RECEIPT.json'),JSON.stringify(receipt,null,2)+'\n');
+ if(process.env.NBA_MONITOR_SCREENSHOTS)fs.writeFileSync(path.join(process.env.NBA_MONITOR_SCREENSHOTS,'B080_EXECUTION_BROWSER_RECEIPT.json'),JSON.stringify(receipt,null,2)+'\n');
  console.log(JSON.stringify(receipt));
 })().catch(e=>{console.error(e);process.exitCode=1;});

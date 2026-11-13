@@ -30,14 +30,18 @@ def validate(value):
     if value.get("schema") != SCHEMA:
         raise ValueError("EXECUTION_REVIEW_SCHEMA")
     run = value["latest_owner_execution"]
-    if run["release"] != "B078" or run["status"] != "PARTIAL_RESUMABLE_OWNER_PIPELINE":
+    if run["release"] != "B079" or run["status"] != "PARTIAL_RESUMABLE_OWNER_PIPELINE":
         raise ValueError("EXECUTION_REVIEW_OWNER_IDENTITY")
     if run["new_confirmed_scientific_fits"] != 0 or run["exit_code"] != 2:
         raise ValueError("EXECUTION_REVIEW_UNSUPPORTED_PROGRESS")
-    if run["return"]["bytes"] != 104624594 or run["return"]["members"] != 15:
+    if run["return"]["bytes"] != 120605732 or run["return"]["members"] != 10:
         raise ValueError("EXECUTION_REVIEW_RETURN_IDENTITY")
-    if run["return"]["sha256"] != "fee168714d963992f71904c0ff46b161fcc2416a4432cf6e6bdf57963369448d":
+    if run["return"]["sha256"] != "3e2385b51185997943bbdafb8c5000e9d11fbc65b5f1b314869ae9c83a15f483":
         raise ValueError("EXECUTION_REVIEW_RETURN_PIN")
+    if run.get("scientific_stages_reached") is not False or run.get("new_forecasts") != 0:
+        raise ValueError("EXECUTION_REVIEW_UNSUPPORTED_PROGRESS")
+    if run.get("fatal_error") != "ResourceDeferred:TASK_PREPROCESSING_CPU_NOT_ADMITTED":
+        raise ValueError("EXECUTION_REVIEW_FAILURE_CLASS")
     runtime = value["observed_runtime"]
     if runtime["peak_concurrent_scientific_fits"] != 0 or runtime["twelve_core_scientific_utilization_proven"]:
         raise ValueError("EXECUTION_REVIEW_RESERVATION_IS_NOT_UTILIZATION")
@@ -46,8 +50,8 @@ def validate(value):
     if value["science_preservation"]["publication_new_fits"] != 0 or value["science_preservation"]["publication_new_forecasts"] != 0:
         raise ValueError("EXECUTION_REVIEW_PUBLICATION_IS_NOT_SCIENCE")
     replacement = value["replacement_engineering"]
-    if replacement["owner_execution_completed"] or replacement["verified_new_owner_scientific_fits"] != 0:
-        raise ValueError("EXECUTION_REVIEW_NO_B079_OWNER_RUN")
+    if replacement.get("release") != "B080" or replacement["owner_execution_completed"] or replacement["verified_new_owner_scientific_fits"] != 0:
+        raise ValueError("EXECUTION_REVIEW_NO_B080_OWNER_RUN")
     if replacement["all_deployed_sports_retrofitted"]:
         raise ValueError("EXECUTION_REVIEW_UNVERIFIED_CROSS_SPORT_DEPLOYMENT")
     body = json.dumps(value, sort_keys=True)
@@ -56,6 +60,22 @@ def validate(value):
             raise ValueError("EXECUTION_REVIEW_PRIVATE_FIELD_OR_PATH")
     if value["science_preservation"]["source_sha256"] != SOURCE_PINS:
         raise ValueError("EXECUTION_REVIEW_RESEARCH_PINS_CHANGED")
+    logging = value['live_logging']
+    if logging['heartbeat_samples'] != 43 or logging['health_errors'] or logging['heartbeat_interval_gate'] != 'PASS':
+        raise ValueError('EXECUTION_REVIEW_LOG_EVIDENCE_CHANGED')
+    if not 10 <= logging['maximum_gap_seconds'] < 10.1:
+        raise ValueError('EXECUTION_REVIEW_LOG_INTERVAL_CHANGED')
+    sink = logging['s3_checkpoints']
+    if (sink['scope'] != 'LOG_CHECKPOINT_SINK_ONLY' or sink['put_calls'] != 9
+            or sink['get_calls'] != 0 or sink['list_calls'] != 0 or sink['attempted_body_bytes'] != 136927):
+        raise ValueError('EXECUTION_REVIEW_TRANSFER_SCOPE_CHANGED')
+    cache = value['cache_evidence']
+    if (cache['parquet_operation'] != 'VERIFIED_LOCAL_PARQUET_CONTEXT_REUSED'
+            or cache['whole_pipeline_s3_transfers_fully_instrumented'] is not False
+            or cache['finalizer_hash_operations'] is not None or cache['finalizer_bytes_hashed'] is not None):
+        raise ValueError('EXECUTION_REVIEW_CACHE_SCOPE_CHANGED')
+    if value['cost_evidence']['actual_billed_cost_usd'] is not None:
+        raise ValueError('EXECUTION_REVIEW_COST_IS_NOT_INVOICE')
     return True
 
 
@@ -72,14 +92,19 @@ def render(value):
     obs = value["observed_runtime"]
     cache = value["cache_evidence"]
     fixed = value["replacement_engineering"]
+    package = fixed["package_verification"]
+    logging = value['live_logging']; sink = logging['s3_checkpoints']; cost = value['cost_evidence']
     rows = [
         ("Actual owner outcome", f"{run['status']}; exit {run['exit_code']}; {run['elapsed_seconds']:.3f} seconds; zero confirmed new scientific fits"),
         ("Observed process CPU", f"{obs['time_weighted_cpu_cores']:.5f} average cores over {obs['sample_elapsed_seconds']:.3f} measured seconds; {obs['peak_cpu_cores']:.5f} peak; {obs['samples']} samples"),
-        ("Reservation versus work", "Most preflight reserved one core. Transport briefly reserved 12, then 11; concurrent native scientific fits stayed zero. Twelve-core training utilization is not established."),
-        ("Persistent Parquet materialization", f"{cache['parquet_contexts']} contexts; {cache['parquet_rows']:,} rows; {cache['parquet_build_seconds']:.3f} seconds. Context-cache historical object GET count was zero; whole-pipeline transfers were not fully instrumented."),
+        ("Reservation versus work", f"{obs['one_reserved_core_samples']} observed heartbeats reserved one core; maximum observed reservation {obs['peak_reserved_cores']}. Concurrent native scientific fits stayed zero. Twelve-core training utilization is not established."),
+        ("Persistent Parquet reuse", f"{cache['parquet_contexts']} contexts; {cache['parquet_rows']:,} rows; {cache['parquet_bytes_read']:,} bytes read in {cache['parquet_reuse_seconds']:.3f} seconds. Context-cache historical object GET count was zero; whole-pipeline transfers were not fully instrumented."),
         ("Pipeline pin cache", f"{cache['pipeline_hash_operations']:,} full-body hash operations; {cache['pipeline_unchanged_pin_reuses']:,} unchanged-pin reuses; {cache['pipeline_bytes_hashed']:,} bytes hashed"),
-        ("Finalizer pin cache", f"{cache['finalizer_hash_operations']} full-body hash operations; {cache['finalizer_unchanged_pin_reuses']:,} unchanged-pin reuses; {cache['finalizer_bytes_hashed']:,} bytes hashed"),
+        ("Finalizer pin cache", f"{cache['finalizer_unchanged_pin_reuses']:,} unchanged-pin reuses. Full-body hash operation and byte counts were not reported; null does not mean zero."),
         ("Reused transport proofs", f"{cache['finalizer_archive_proof_hits']} archive proof hits; {cache['finalizer_baseline_proof_hits']} baseline proof hit; one baseline rebuild avoided. These stages are not a controlled whole-run speedup benchmark."),
+        ("Continuous actual-owner logging", f"{logging['heartbeat_samples']} heartbeats; maximum gap {logging['maximum_gap_seconds']:.6f} seconds; zero logger health errors. Human log {logging['log_bytes']:,} bytes; JSONL {logging['jsonl_bytes']:,} bytes. Logging success is not scientific progress."),
+        ("Log checkpoint transfers only", f"{sink['put_calls']} SDK PUT calls; {sink['attempted_body_bytes']:,} compressed body bytes; zero GET or LIST calls; {sink['elapsed_seconds']:.3f} measured transfer seconds. Internal retry network bytes were not observed."),
+        ("Measured whole-instance cost estimate", f"${float(cost['estimated_whole_instance_invocation_usd']):.6f} across {cost['measured_total_elapsed_seconds']:.3f} seconds at the verified stored rate. Actual billed cost and project-only allocation are unknown; overlapping stage estimates are not added."),
         ("Authenticated return", f"{run['return']['bytes']:,} bytes; {run['return']['members']} members; every payload SHA-256 authenticated"),
     ]
     cells = "\n".join("<tr><th scope=\"row\">" + esc(a) + "</th><td>" + esc(b) + "</td></tr>" for a, b in rows)
@@ -89,16 +114,16 @@ def render(value):
     return BEGIN + f'''
 <section id="nba-execution-review" aria-labelledby="nba-execution-title">
 <style>#nba-execution-review{{margin:22px 0;padding:20px;border:1px solid #bdced5;border-radius:8px;background:#f4f8fb}}#nba-execution-review h2{{margin-top:0}}#nba-execution-review p,#nba-execution-review td,#nba-execution-review li{{overflow-wrap:anywhere}}#nba-execution-review th{{white-space:normal;min-width:120px}}#nba-execution-review .scroll{{max-height:480px}}@media(max-width:600px){{#nba-execution-review{{padding:14px}}}}</style>
-<h2 id="nba-execution-title">B078 failure recovered; B079 engineering verification</h2>
+<h2 id="nba-execution-title">B079 stopped before science; B080 recovery prepared</h2>
 <p id="nba-execution-outcome"><strong>Latest owner invocation: {esc(run['status'])}, zero confirmed new scientific fits.</strong> It ran from {esc(run['started_at_utc'])} to {esc(run['finished_at_utc'])}. The saved B077 forecasts, champions and model scores below remain unchanged.</p>
 <p id="nba-execution-source-clock">Latest authentic original forecast issue: <strong>{esc(value['science_preservation']['latest_original_issue_at_utc'])}</strong>. A later diagnostic, source commit or browser check does not refresh that issue clock.</p>
 <div class="scroll"><table id="nba-execution-evidence"><thead><tr><th>Evidence</th><th>Actual saved measurement and qualification</th></tr></thead><tbody>{cells}</tbody></table></div>
-<p id="nba-execution-fatal"><strong>Reproduced fatal cause:</strong> the baseline seal rebound a transport measurement context to a different cache directory; the integrity guard then stopped the pipeline. Fixing that exposed a second frame-context directory binding error. Both guards remain active. A separate progress callback overwrote the heartbeat envelope schema and caused the ownership rejection messages.</p>
+<p id="nba-execution-fatal"><strong>Authenticated failure:</strong> return-budget preflight attempted archive frame compression before scientific stages. A temporary resource-admission refusal raised <code>{esc(run['fatal_error'])}</code> and stopped the pipeline. B080 separates conservative preflight capacity accounting from exact final sealing and rechecks resource admission within a bounded continuous wait. The original resource guards remain active.</p>
 <details id="nba-execution-repairs"><summary>Implemented recovery and permanent logging changes</summary><ul>{repairs}</ul><ul>{tests}</ul></details>
-<p id="nba-execution-replacement-status"><strong>{esc(fixed['status'])}.</strong> The replacement NBA runner uses the shared logging framework. The generic framework supports NFL, FBS, NBA, NCAA basketball and other named project runners; previously deployed non-NBA executables have not been verified as retrofitted. No B079 owner execution or new owner fit result is claimed here.</p>
-<p id="nba-execution-package-status"><strong>Replacement package verification:</strong> {esc(fixed['package_verification']['status'])}. Source repairs and the generic runtime are tested; package validation and an owner execution are separate gates.</p>
+<p id="nba-execution-replacement-status"><strong>{esc(fixed['status'])}.</strong> Actual B079 logging met its heartbeat interval gate but training never started. The replacement NBA runner retains the shared logging framework. Previously deployed non-NBA executables have not been verified as retrofitted. No B080 owner execution or new owner fit result is claimed here.</p>
+<p id="nba-execution-package-status"><strong>Replacement package verification:</strong> {esc(package['status'])}: {package['passed']}/{package['packaged_tests']} tests passed on the exact {package['exact_package_bytes']:,}-byte executable in {package['elapsed_seconds']:.3f} seconds. SHA-256 <code>{esc(package['exact_package_sha256'])}</code>. All {package['original_B079_members_preserved']:,} original B079 members remain preserved. These local fixture results do not establish an owner-host scientific result.</p>
 <p>All {value['science_preservation']['authenticated_completed_frozen_tasks']:,} completed historical frozen tasks remain authenticated. New current-season evaluation, substantial parallel training, fresh market comparisons and new issues require the next owner execution. No model has been promoted by this engineering repair or publication.</p>
-<p><a href="latest_execution_review.json">Download sanitized execution evidence</a> · <a href="../../../runtime/execution/README.md">Inspect the shared live logging framework and test contract</a></p>
+<p><a href="latest_execution_review.json">Download sanitized execution evidence</a> · <a href="history/b079_prepared_execution_review.json">Preserved B078 failure and B079 preparation review</a> · <a href="../../../runtime/execution/README.md">Inspect the shared live logging framework and test contract</a></p>
 <script id="nba-execution-data" type="application/json">{encoded}</script>
 </section>
 ''' + END + "\n"
