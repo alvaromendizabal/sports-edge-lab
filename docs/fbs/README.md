@@ -1,4 +1,16 @@
 <!-- FBS_V072_ACTUAL_V071_START -->
+<!-- FBS_V072R1_REPAIR_STATUS_START -->
+## November 13, 2026: V072 packaging failure; production recovery pending
+
+**The original V072 log reports 36 completed frozen-model fits, followed by zero new market-stage fits and a failure during return packaging.** The original executable and independent exit receipt corroborate the failure; a completed V072 return and all preserved model states have not yet been authenticated in this review. Local engineering repair performs no new sports fitting, forecasting, source refresh or rescoring. Measured 12-core scientific performance remains unverified.
+
+The exact replacement executable passed **754/754 engineering tests**, with zero failures, errors or skips. Its command created and verified a local fictional-artifact archive, then verified and reused the identical archive on a second invocation. These are packaging checks; recovery of the original production artifacts remains pending.
+
+[Read the dated execution and repair status](V072_EXECUTION_AND_REPAIR_2026-11-13.md) · [Open the retained V071 dashboard](latest-v072.html).
+
+The game tables and forecasts remain the **V071 snapshot dated November 12, 2026, with evidence as of 21:04:22 UTC**. All saved values, original issue clocks, separate metric cohorts and explicit champion/venue gaps remain intact. The earlier V071 result is retained immediately below.
+<!-- FBS_V072R1_REPAIR_STATUS_END -->
+
 # NCAA FBS · actual V071 results · November 12, 2026
 
 **V071 completed the priority forecast sweep: 72 new issues, 70 compatible issues reused and one explicit fixture gap across all 143 eligible tasks.** It also completed 251 probability evaluations on a 301-game historical bank, then stopped at a registration-integrity check. Zero new fits completed; full frozen training and champion selection remain unfinished.
