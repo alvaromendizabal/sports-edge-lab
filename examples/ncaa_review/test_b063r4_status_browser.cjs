@@ -27,6 +27,10 @@ async function verifyR4(browser, filename) {
       const download=await downloadPromise;
       assert.deepEqual(JSON.parse(fs.readFileSync(await download.path(),'utf8')),expected);
       assert.equal(await page.evaluate(()=>document.documentElement.scrollWidth>innerWidth+1),false,`R4 ${width}px overflow`);
+      if (process.env.DASHBOARD_SCREENSHOTS) {
+        fs.mkdirSync(process.env.DASHBOARD_SCREENSHOTS,{recursive:true});
+        await page.screenshot({path:path.join(process.env.DASHBOARD_SCREENSHOTS,`ncaa-b063r4-status-${width}.png`),fullPage:true});
+      }
       await page.goto(pathToFileURL(path.join(path.dirname(filename),'index.html')).href);
       assert.equal(await page.locator('#b063r4-latest-status').count(),1);
       assert.match(await page.locator('#b063r4-latest-status').innerText(),/22 prior target fits recovered/);
