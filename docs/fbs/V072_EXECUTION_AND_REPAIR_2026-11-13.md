@@ -1,5 +1,57 @@
 # FBS V072 execution failure and repair status
 
+## Actual R2 owner failure — November 13, 2026, 16:18 UTC
+
+**The newly supplied R2 owner invocation stopped before scientific work because a required historical executable was missing. Its diagnostic return ZIP was successfully created and is now independently authenticated.** This is a different failure from the original V072 summary-serialization and console-budget defects described in the dated sections below.
+
+| Evidence from the new owner run | Verified result | Scope |
+|---|---|---|
+| Failure | `FileNotFoundError` during historical-source authentication, planned stage 8/33 | The required loose legacy executable was absent; no cloud path is published |
+| New scientific work | 0 new model fits; 0 new genuine forecasts; 0 new prediction outputs | Unreached detailed frontier fields remain null; they are not rewritten as measured zero |
+| Worker / supervisor exit | 2 / 2 | Independent process-wait receipts; the observer's outer shell exit was not independently observed |
+| Returned ZIP | 213,579,508 bytes; 85 members; 84 manifest bindings | Whole-file SHA-256 plus every member size, SHA-256 and CRC verified |
+| Owner time before packaging | 8.452 seconds | Owner work scope; excludes earlier launch verification |
+| Finalization watch | 23.151 seconds | Archive and post-ZIP persistence scope; overlaps other measurements |
+| Observer elapsed | 80.576 seconds | Broader startup, supervision and return-verification scope |
+| CPU admission | 1 requested and 1 granted token; 48 effective host CPUs observed | No scientific fits reached; no 12-core performance claim |
+| Logging | Separate startup, owner and finalization observations at 10-second cadence | R2 lacked the exact unified `LIVE_EXECUTION.log` / `.jsonl` pair |
+
+The return SHA-256 is `bf45f309e6a06a1ff8eba8b3bae472b133156a00efafd1c981a82060a1ae868a`. Its embedded executable matches the exact delivered R2 source SHA-256 `26807448538d9c19527f4e6756a94926be9125a4a24bfde756b69de063aff0a0`. Duplicate, unsafe and nonregular archive members were absent. The original uploaded files were not changed.
+
+The finalization counters record **two object GETs and two PUTs, each totaling 213,583,301 bytes**, for archive and receipt persistence. These counters are scoped to finalization; they are not presented as a complete account of every network operation. The last logged compute estimate was **$0.022553**, on an instance-wall-time list-price basis, excluding storage and provider costs. It is neither an invoice nor an apportioned marginal FBS charge. Current-source and native-history worker request subtotals remained unobserved; those unknowns are retained.
+
+### What was preserved
+
+Before dispatch, the owner verified all three prior transport parts, their index and the prior logical archive. The prior logical archive remains **1,179,502,915 bytes** with SHA-256 `a8f6b5d12a1237aa95d491cccd7d7de651f810588aba84e50a19481ffbaccf95`. It also verified exact preserved invocation and market-report bindings. This evidence establishes an owner-side verification in the new run; the local review has not acquired or read the still-missing first original transport part.
+
+The new return retains 20 separately pinned earlier research, metric, game-ledger and dashboard reports. It does not refit or relabel the 36 original V072 fits, promote champions, refresh game outcomes or issue new forecasts. Their original clocks and receipt identities remain authoritative. The public game and forecast data remain the V071 snapshot, with every existing observed game row retained.
+
+### R3 source-recovery repair
+
+The normal owner path now resolves the required exact legacy executable in this order: an existing original file, the authenticated local source cache, the exact original local return archive, then one specifically pinned canonical return through the existing immutable cache-aware reader. It verifies the complete archive and selected original executable bytes, invokes the unchanged original source and member-manifest authenticator, and publishes the source cache atomically without replacing old evidence. It does not rebuild an approximation from retained source members or recursively scan historical objects.
+
+A present but corrupt original source, local return or cached source causes an integrity error. It is never silently replaced. Disk and inode reserves remain enforced. Concurrent misses share the one-source cache lock; interruption after complete atomic publication leaves a fully verifiable cached source for the next invocation. A warm source-cache fixture makes zero historical GETs. These are engineering checks, not a measured owner-run speedup.
+
+### Permanent per-run logging and validation scope
+
+R3 adds separate `LIVE_EXECUTION.log` and `LIVE_EXECUTION.jsonl` outputs with a **10-second heartbeat**, phase/progress/remaining work, source-qualified ETA, fit counts, process and worker identities, CPU/RAM, cache and S3 counters, scoped costs, errors and checkpoint observations. Unknown values retain reasons. Immutable verified log snapshots are included in return packaging while the external live pair continues through finalization.
+
+The reusable implementation supports NFL, FBS, NBA and NCAA basketball project namespaces. FBS is the current executable integration. The other projects' production executables and owner runs require their own integration verification; availability of a shared module does not prove deployment across them.
+
+**The engineering suite passed 953/953 tests against the exact sealed R3 replacement, with zero failures, errors or skips.** This total comprises 924 packaged regressions plus 29 separately supplied public shared-logger tests against the packaged logger. The sealed executable is 207,489,576 bytes, SHA-256 `1ec45cf267b3343432199e7e761e6a302def49b2605b067651483041ddd3c366`.
+
+The four normal-path regressions recovered an invented missing legacy source through the unchanged source authenticator, reused the verified source without another historical GET, recovered from an exact local return with zero historical GETs, and rejected corrupt existing source while still creating a verified diagnostic ZIP. They deliberately leave the later fictional registry context absent, so the owner path stops at the next unchanged registry gate. They do not prove completion of a real scientific run.
+
+The separate finalization-only acceptance created a verified **206,388,146-byte fixture ZIP** and reused the identical bytes on its second invocation, preserving all four original fixture files. Its SHA-256 is `b5ffcbc1c7e9f97d374380365c912b348a915a732ba9659080dbbb5a3fae67a7`. Both expected interpreter exits were 2 because the fictional research status remained partial. Independent observations confirmed both permanent log streams grew during authentication and finalization; maximum heartbeat gaps were **10.030260 seconds** and **10.029013 seconds**. These are engineering observations with zero real sports fits and zero network requests. The previous 832-test R2 suite and its successful finalization-only fixture did not exercise the real missing-source startup condition: the earlier startup unit fixture mocked source authentication and return creation. The replacement acceptance case exercises the owner path through source recovery and retains real archive creation/verification, using clearly invented engineering data and mocked cloud/resource boundaries.
+
+The exact original historical executable body is not available in this local review. Positive physical authentication of that owner source will occur only from exact bytes during an authorized owner run; an invented fixture is not reported as that source. The repair changes engineering behavior and records zero new real scientific fits, zero cloud jobs and zero infrastructure changes in this review. Twelve-core scientific utilization, complete current-season champion comparison and market time-matching remain unproved.
+
+Source preparation, hosted tests, merge and deployed website state are separate. This source revision records completed local engineering tests. Hosted CI and merge are tracked in the pull request; deployment is not claimed. No website deployment is inferred from a source commit.
+
+---
+
+The following recovery review and earlier engineering report are retained without changing their dated scientific evidence.
+
 ## Recovery follow-up — November 13, 2026 UTC
 
 **Two of the three required production recovery parts were supplied. Their physical hashes, raw chunk hashes, transport metadata and ZIP CRCs verify against the supplied index. Full owner-return authentication remains pending the first part.** Two small index uploads are identical copies, not additional data parts. A strict reader inspected only present byte ranges; it did not fabricate the missing prefix.

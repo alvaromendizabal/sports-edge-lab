@@ -1,4 +1,22 @@
 <!-- FBS_V072_ACTUAL_V071_START -->
+<!-- FBS_V072R3_ACTUAL_R2_FAILURE_START -->
+## Latest owner result: R2 stopped before science; diagnostic ZIP verified
+
+**The November 13, 2026, 16:18 UTC R2 invocation failed at the historical-source authentication stage because a required legacy executable was absent.** The actual error was `FileNotFoundError` at planned stage **8 of 33**. It completed **zero new fits and zero new genuine forecasts**. The existing all-game scientific report remains the **November 12, 21:04:22 UTC V071 snapshot**.
+
+Packaging did complete: the supplied **213,579,508-byte return** has **85 members**, and its full physical hash, member sizes, SHA-256 bindings and ZIP CRCs verify. Both worker and supervisor interpreter exits were **2**, correctly preserving partial status. The independent observer measured **80.576 seconds**; its scope includes startup and supervision. Packaging completion does not establish research completion.
+
+The owner preflight also verified the complete prior multipart return and exact retained market-report pins before dispatch. That is new owner-side closure evidence; the earlier local review still lacks one original transport part and does not claim to have read its missing bytes.
+
+**R3 implements recovery of the exact missing historical source from verified local cache or one authenticated canonical archive, followed by the unchanged original source authenticator.** Corrupt existing evidence is refused without overwrite. A separate immutable source cache permits a warm repeat with zero historical source GETs. R3 also integrates per-run `LIVE_EXECUTION.log` and `LIVE_EXECUTION.jsonl` with a 10-second heartbeat. The shared logging implementation supports all four project identities; completed owner integration and execution in the other projects must be verified separately.
+
+**R3 exact-package engineering tests: 953/953 passed; zero failures, errors or skips. Normal-path and finalization acceptance: passed with invented engineering inputs and verified partial returns.** No corrected owner scientific run or sustained 12-core result is claimed. The earlier 832-test R2 result checked the packaged code and finalization mode but did not test this missing-legacy-source production path; the new regression covers it explicitly.
+
+[Read the new failure and repair evidence](V072_EXECUTION_AND_REPAIR_2026-11-13.md#actual-r2-owner-failure--november-13-2026-1618-utc) · [Open the retained all-game dashboard](latest-v072.html).
+
+The preceding preparation and original-run recovery reports follow as dated history. Their pending-state statements describe what was known before this newly supplied owner run.
+<!-- FBS_V072R3_ACTUAL_R2_FAILURE_END -->
+
 <!-- FBS_V072R1_REPAIR_STATUS_START -->
 ## R2 repair tested; original recovery evidence checked
 

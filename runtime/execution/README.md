@@ -2,7 +2,7 @@
 
 [NBA execution evidence](../../tracks/nba/reports/latest_execution_review.json) · [Public/private boundary](../../docs/PUBLICATION_BOUNDARY.md)
 
-Every Sports Edge Lab runner must write a separate, continuously readable execution `.log` and a machine-readable `.jsonl` stream. This directory publishes the actual generic framework used by the replacement NBA B082 runner. NFL, FBS, NBA, NCAA basketball and other named projects can use the same implementation. Publication of this module does not establish that previously deployed non-NBA executables have been retrofitted.
+Every Sports Edge Lab runner must write a separate per-run `LIVE_EXECUTION.log` and machine-readable `LIVE_EXECUTION.jsonl` stream. This directory publishes the generic framework used by the NBA B082 replacement and integrated into the tested FBS V072R3 replacement. NFL, FBS, NBA and NCAA basketball can use the same implementation. A shared module and selector tests do not establish that all previously deployed executables have been retrofitted or that an owner run has completed.
 
 The standard-library implementation runs on Linux, uses process identity and append-only files, and requires no scientific library or cloud credential for local use. It does not train a model, generate observations or infer scientific progress from CPU usage. Its cloud sink accepts an existing caller-owned client; it does not create credentials, change infrastructure, list historical objects or download data.
 
@@ -32,8 +32,10 @@ import subprocess
 
 from sports_edge_live import LiveExecutionLog
 
-prefix = Path("project-logs") / "execution-unique-invocation"
-with LiveExecutionLog(prefix, project="nba", release="example", interval=10) as log:
+invocation_id = "example-unique-invocation"
+prefix = Path("project-logs") / "nba" / invocation_id / "LIVE_EXECUTION"
+with LiveExecutionLog(prefix, project="nba", release="example",
+                      invocation_id=invocation_id, interval=10) as log:
     child = subprocess.Popen(
         ["python", "existing_project_runner.py"],
         stdout=subprocess.PIPE,
@@ -47,6 +49,19 @@ with LiveExecutionLog(prefix, project="nba", release="example", interval=10) as 
 The module directory must be on the import path. Production wrappers also bind their progress document to the actual producer identity and connect their existing transfer, resource and scientific-event counters. `project_measurements` documents the accepted state fields. `update_state` accepts current workload state; unknown quantities should remain absent or null. Retain the execution exit code separately from logging verification.
 
 `IncrementalLogCheckpoint` accepts an injected `put` function. `S3LogSink` can adapt an already authorized, bounded-timeout client and caller-selected destination. Its request and byte counters describe SDK calls and supplied bodies, not unobserved internal retry traffic. Unit tests use a fake sink only and perform no cloud request.
+
+## Project integration and observed scope
+
+| Project | Available integration evidence | Limit |
+|---|---|---|
+| NBA | The B082 replacement uses this generic framework; its dated execution evidence remains linked above | This revision does not rerun NBA science or replace its owner receipts |
+| FBS | V072R3 integrates the logger before package authentication and through normal owner finalization; 953 engineering tests passed against the sealed replacement, including 29 public shared-logger cases | A normal-path fixture reaches the next unchanged registry gate; an actual corrected owner scientific run remains pending |
+| NFL | The separate bootstrap adapter and NFL event aliases below retain their own production integration and failure-path checks | These are separate from the FBS source and must keep their own invocation identity and verification |
+| NCAA basketball | The shared implementation and per-invocation adapter support its project selector | This change does not establish retrofitting or execution of a current NCAA owner executable |
+
+The FBS finalization acceptance invoked the sealed replacement twice, created a verified archive, and reused the identical bytes on the second invocation. Independent readers observed both permanent log streams growing during authentication and finalization, with measured maximum heartbeat gaps of 10.030260 and 10.029013 seconds. The owner-path fixture also verified that the archived snapshot is an exact prefix while the live pair continues through packaging. These invented-input engineering checks establish logging and recovery behavior, with zero new real fits or network requests.
+
+This source revision records completed local engineering tests. Hosted checks, merge and deployment are tracked separately in the pull request; no website deployment or cross-project owner completion is inferred from these source files. The [FBS repair review](../../docs/fbs/V072_EXECUTION_AND_REPAIR_2026-11-13.md) retains the original production failure, current limitations and dated scientific evidence.
 
 ## Per-invocation bootstrap adapter
 
@@ -87,7 +102,7 @@ python -m unittest discover -s runtime/execution -p 'test_live_logging.py' -v
 python runtime/execution/verify_live_execution.py
 ```
 
-The 27-test suite includes nine new invented progress-counter and failed-child regressions. It executes real local child processes and checks identity protection, active-writer exclusion, restarts, no-newline output, stopped progress, failed children, observer errors, bounded incremental checkpoint recovery, checksum rejection and safe log snapshots. They use invented observations and temporary files. Their process activity and mock transfers are not NBA fits or owner-cloud throughput.
+The 29-test shared suite preserves the 27 earlier regressions and adds two fit-counter scope checks. A current-phase absolute receipt remains labeled with its source phase and reported counts; it is not presented as a whole-invocation total. Human heartbeats also show the observed process IDs. It executes real local child processes and checks identity protection, active-writer exclusion, restarts, no-newline output, stopped progress, failed children, observer errors, bounded incremental checkpoint recovery, checksum rejection and safe log snapshots. They use invented observations and temporary files. Their process activity and mock transfers are not NBA fits or owner-cloud throughput.
 
 The adapter suite verifies all four project directories, earliest authentication failures, secret redaction, safe counters, concurrent callbacks, blocked observer I/O, observer errors and immutable snapshots. Its real 31-second child checks heartbeat spacing at the production ten-second interval, process samples, physical stream flush calls and partial stdout. Unreported model counts remain null. These observations establish logging behavior, not scientific fit concurrency or owner throughput.
 

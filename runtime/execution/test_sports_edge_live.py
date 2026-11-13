@@ -425,5 +425,26 @@ class LiveChildProgressTests(unittest.TestCase):
                                 for r in heartbeats))
 
 
+class ScopedFitMeasurementTests(unittest.TestCase):
+    def test_default_invocation_scope_is_preserved(self):
+        from sports_edge_live import project_measurements
+        value = project_measurements({'invocation_fit_counts': {'new': 3, 'reused': 2, 'failed': 1}})['fits']
+        self.assertEqual(value['scope'], 'CURRENT_BOUND_INVOCATION')
+        self.assertEqual((value['new'], value['reused'], value['failed']), (3, 2, 1))
+        self.assertIsNone(value['reported_counts'])
+
+    def test_phase_receipt_scope_is_not_presented_as_whole_invocation(self):
+        from sports_edge_live import project_measurements
+        counts = {'new_base_fits': 4, 'completed_optimizers': 4, 'reused_fit_states': 2}
+        value = project_measurements({'invocation_fit_counts': {
+            'new': None, 'reused': 2, 'scope': 'CURRENT_PHASE_ABSOLUTE_RECEIPTS',
+            'source_phase': 'FICTIONAL_FROZEN', 'reported_counts': counts}})['fits']
+        self.assertEqual(value['scope'], 'CURRENT_PHASE_ABSOLUTE_RECEIPTS')
+        self.assertEqual(value['source_phase'], 'FICTIONAL_FROZEN')
+        self.assertEqual(value['reported_counts'], counts)
+        self.assertIsNone(value['new'])
+
+
 if __name__ == '__main__':
     unittest.main()
+
