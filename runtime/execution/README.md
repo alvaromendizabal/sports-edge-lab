@@ -132,3 +132,9 @@ The original 27 core tests remain unchanged. Read the
 [activation contract and evidence boundaries](ACTIVATION_AND_SCOPE.md) before
 integrating an existing private runner. Local supervisor tests do not establish
 activation of every deployed sport or twelve-core scientific performance.
+
+## NBA B083 shared-logger compatibility and permanent filenames
+
+The NBA B083 replacement preserves the current NFL/FBS fit-count scope, source-phase and reported-count fields. Every invocation also exposes literal `LIVE_EXECUTION.log` and `LIVE_EXECUTION.jsonl` names. They are hard links to the existing append-only streams, so one write updates both names without duplicate storage or S3 uploads. Existing aliases must resolve to the exact same inode; a conflicting path or symlink fails without overwriting prior logs. A prefix already named `LIVE_EXECUTION` is reused directly. `LIVE_EXECUTION_MANIFEST.json` binds the paths to the current invocation and process identity.
+
+An authoritative identity-validated progress snapshot replaces the previous snapshot instead of inheriting an earlier operation's counters. A completed count greater than its denominator retains the raw counters and reports unknown throughput/ETA. Exact peak native-fit overlap remains distinct from active workers seen at heartbeat samples. The source and real-child acceptance tests establish these engineering behaviors; they do not establish a new owner-host run or twelve-core scientific throughput.

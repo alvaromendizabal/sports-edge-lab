@@ -1,341 +1,511 @@
 {
   "cache_evidence": {
-    "authenticated_context_cache": {
-      "bytes_read": 16220197,
-      "cache_status": "VERIFIED_LOCAL_PARQUET_CONTEXT_REUSED",
+    "all_pipeline_S3_calls_instrumented": false,
+    "file_pin_operations": {
+      "bytes_hashed": 4361902475,
+      "first_hash_operations": 45775,
+      "logical_reused_bytes": 410616543107,
+      "physical_IO_bytes_avoided_claim": false,
+      "unchanged_stat_identity_reuse_operations": 5267796,
+      "unique_file_count_claim": false
+    },
+    "persistent_contexts": {
       "contexts": 2,
-      "elapsed_seconds": 4.589978455998789,
-      "format": "ZSTD_PARQUET_WITH_TYPED_FEATURE_COLUMNS_AND_EXACT_PROVENANCE",
-      "historical_full_S3_GETs": 0,
-      "native_model_or_preprocessor_fits": 0,
-      "repeated_label_adapter_calls": 0,
+      "elapsed_seconds": 4.395744701,
+      "historical_full_object_S3_GETs": 0,
+      "local_bytes": 16220197,
       "rows": 30530,
-      "source_clocks_and_exact_values_preserved": true
+      "scope": "AUTHENTICATED_PARQUET_CONTEXT_PATH_ONLY"
     },
-    "finalizer_transport_proof_cache": {
-      "archive_hits": 5,
-      "cached_decoded_object_bytes": 0,
-      "complete_dependency_stat_guards_required": true,
-      "current_full_decode_claimed_for_reuse": false,
-      "elapsed_seconds": 13.816337183998257,
-      "elapsed_seconds_scope": "CACHE_INSTANCE_LIFETIME_NOT_PREPARATION_CPU_TIME",
-      "exact_archive_readbacks_reused": 5,
-      "first_use_full_exact_reconstruction_required": true,
-      "maximum_cached_proof_bytes": 134217728,
-      "measurement_phase": "FINALIZER_AFTER_ANCESTRY_BEFORE_SEAL",
-      "old_scientific_files_modified": false,
-      "original_file_pins_compared": 0,
-      "real_estimator_fits": 0,
-      "reused_byte_counter_scope": "UNIQUE_REUSED_ARCHIVE_INDEX_ORIGINAL_BYTES; MAY_INCLUDE_SHARED_EXTERNAL_FILES; NOT_PHYSICAL_IO_SAVED",
-      "source_file_pins_still_compared": true,
-      "unchanged_verifier_and_runtime_required": true,
-      "unique_archive_proof_reuses": 5,
-      "verified_virtual_bytes_covered_by_reused_archive_proofs": 17821361976
+    "prior_baseline_adoption": {
+      "S3_GETs": 0,
+      "copies": 0,
+      "existing_B081_and_B080_paths_reused": true,
+      "recompression": 0,
+      "scope": "EXACT_PRIOR_BASELINE_ADOPTION_ONLY"
     },
-    "finalizer_verified_file_cache": {
-      "elapsed_seconds": 13.82806260900179,
-      "expected_pins_remain_upstream_authority": true,
-      "unchanged_stat_reuse_is_not_fresh_full_byte_hash": true,
-      "verification": "SHA256_FIRST_USE_THEN_DEVICE_INODE_SIZE_MTIME_CTIME_MATCH",
-      "verified_unchanged_bytes_reused": 2863841566,
-      "verified_unchanged_files_reused": 1735
-    },
-    "measurements": {
-      "all_pipeline_S3_calls_instrumented": false,
-      "all_pipeline_s3_calls_instrumented": false,
-      "automatic_eviction_permitted": false,
-      "byte_hit_fraction": 0.007609213672118664,
-      "cache_misses": 7970,
-      "elapsed_seconds": 180.14515410699823,
-      "etag_used_as_sha256": false,
-      "failed_reads": 0,
-      "local_cache_hits": 222,
-      "local_reused_bytes": 149908,
-      "maximum_cached_bytes": 34359738368,
-      "physical_cached_bytes": 19550945,
-      "s3_bytes": 19550945,
-      "s3_get_attempts": 7970,
-      "s3_gets_completed": 7970,
-      "s3_transfer_seconds": 583.2151415950029,
-      "scope": "INSTRUMENTED_OWNED_MARKET_SOURCE_READS_AND_AUTHENTICATED_CONTEXT_CACHE",
-      "source_rights_or_clock_eligibility_changed": false,
-      "transfer_byte_scope": "COMPLETE_FETCHED_BODIES; FAILED_PARTIAL_TRANSFER_BYTES_UNOBSERVED",
-      "uninstrumented_S3_calls_reported_as_zero": false,
-      "unique_content_objects": 7970
-    },
-    "repeat_read_gate": {
-      "independent_cache_instance": true,
-      "new_owner_invocation_claim": false,
-      "parsing_or_model_speedup_claimed": false,
-      "scope": "EXACT_IMMUTABLE_VERSIONS_TOUCHED_THIS_INVOCATION",
-      "second_pass": {
-        "all_pipeline_s3_calls_instrumented": false,
-        "automatic_eviction_permitted": false,
-        "byte_hit_fraction": 1.0,
-        "cache_misses": 0,
-        "elapsed_seconds": 3.806135238999559,
-        "etag_used_as_sha256": false,
-        "failed_reads": 0,
-        "local_cache_hits": 7970,
-        "local_reused_bytes": 19550945,
-        "maximum_cached_bytes": 34359738368,
-        "physical_cached_bytes": 19550945,
-        "s3_bytes": 0,
-        "s3_get_attempts": 0,
-        "s3_gets_completed": 0,
-        "s3_transfer_seconds": 0,
-        "scope": "OWNED_MARKET_SOURCE_ADAPTER_EXACT_VERSIONS_ONLY",
-        "source_rights_or_clock_eligibility_changed": false,
-        "transfer_byte_scope": "COMPLETE_FETCHED_BODIES; FAILED_PARTIAL_TRANSFER_BYTES_UNOBSERVED",
-        "unique_content_objects": 7970
-      },
-      "second_pass_network_disabled": true,
-      "source_count": 7970,
-      "status": "PASS_UNCHANGED_SOURCE_BYTES"
-    },
-    "source_version_refresh": {
-      "broad_historical_listings": 0,
-      "call_count_scope": "SDK_METHOD_INVOCATIONS_INCLUDING_FAILURES; HTTP_RETRIES_NOT_INFERRED",
-      "client_preparation_failures": 0,
-      "elapsed_seconds": 6.153799768071622e-05,
-      "exact_key_list_calls": 0,
-      "head_calls": 0,
-      "new_source_clocks_assumed": false,
-      "scope": "ONLY_REUSED_NORMALIZED_PAYLOAD_VERSIONS_NEEDED_FOR_SCIENCE",
-      "source_body_gets": 0
-    },
-    "transport_proof_cache": {
-      "archive_hits": 5,
-      "cached_decoded_object_bytes": 0,
-      "complete_dependency_stat_guards_required": true,
-      "current_full_decode_claimed_for_reuse": false,
-      "elapsed_seconds": 2053.375273349997,
-      "elapsed_seconds_scope": "CACHE_INSTANCE_LIFETIME_NOT_PREPARATION_CPU_TIME",
-      "exact_archive_readbacks_reused": 5,
-      "first_use_full_exact_reconstruction_required": true,
-      "maximum_cached_proof_bytes": 134217728,
-      "measurement_phase": "PIPELINE_AFTER_GRAPH_CLOSE",
-      "old_scientific_files_modified": false,
-      "original_file_pins_compared": 0,
-      "real_estimator_fits": 0,
-      "reused_byte_counter_scope": "UNIQUE_REUSED_ARCHIVE_INDEX_ORIGINAL_BYTES; MAY_INCLUDE_SHARED_EXTERNAL_FILES; NOT_PHYSICAL_IO_SAVED",
-      "source_file_pins_still_compared": true,
-      "unchanged_verifier_and_runtime_required": true,
-      "unique_archive_proof_reuses": 5,
-      "verified_virtual_bytes_covered_by_reused_archive_proofs": 17821361976
-    },
-    "verified_file_cache": {
-      "bytes_hashed": 4608060989,
-      "elapsed_seconds": 2053.4625729030013,
-      "expected_pins_remain_upstream_authority": true,
-      "files_hashed": 16958,
-      "unchanged_stat_reuse_is_not_fresh_full_byte_hash": true,
-      "verification": "SHA256_FIRST_USE_THEN_DEVICE_INODE_SIZE_MTIME_CTIME_MATCH",
-      "verified_unchanged_bytes_reused": 208841379116,
-      "verified_unchanged_files_reused": 1541472
+    "transport_archive_proof_reuse": {
+      "distinct_archives_per_process": 6,
+      "finalizer_reuses": 6,
+      "physical_IO_bytes_avoided_claim": false,
+      "same_six_archives_not_twelve_unique": true,
+      "virtual_bytes_covered_including_overlap": 29239520912,
+      "worker_reuses": 6
     }
   },
   "capacity_failures": {
-    "actual_final_support_bytes": 147989928,
-    "bound_after_first_fit_bytes": 511281780,
-    "current_season_remaining_bytes": -109091486,
-    "deferred_champion_batches": 152,
-    "deferred_research_admissions": 4067,
-    "final_raw_bound_bytes": 1654128402,
-    "initial_bound_bytes": 37564029,
-    "original_resource_guards_unchanged": true,
-    "original_return_limit_bytes": 536870912,
-    "original_scientific_support_allowance_bytes": 402666112,
-    "root_cause": "The raw-original-byte admission bound exceeded capacity after due-forecast contexts were added, although the physically compressed support fit. Repeated saved scientific aggregates increased report size. Resource requests themselves were admitted; this was not a resource-denial failure.",
-    "v9_science_remaining_bytes": -109859319
+    "actual_final_support_bytes": 306611974,
+    "champion_batch_callbacks": 126,
+    "complete_external_ancestor_fresh_readback_claimed_here": false,
+    "external_descriptions": 91679,
+    "fast_compressed_support_bound_bytes": 786151348,
+    "full_budget_reconciliation_seconds": 295.919273946,
+    "full_budget_reconciliations": 9,
+    "physical_files": 45030,
+    "scientific_support_capacity_bytes": 383217225,
+    "selected_files": 136709
   },
   "cost_evidence": {
     "actual_billed_cost_usd": null,
     "added_to_pipeline_estimate": false,
     "divided_by_projects_or_cpu_workers": false,
-    "estimated_whole_instance_invocation_usd": "1.769812865217547222222222222",
+    "estimated_whole_instance_invocation_usd": "4.062946916940352777777777778",
     "hourly_usd": "2.5700000000",
-    "measured_total_elapsed_seconds": 2479.115297581,
+    "measured_total_elapsed_seconds": 5691.287510111,
     "overlaps_pipeline_estimate_do_not_add": true,
-    "rate_provenance_sha256": "592b928e634c95c8e7a249394dd539fd56bf4fac27639042d4f175d2a5eb2224",
+    "rate_provenance_sha256": "b1d7a4d3b6948173b22d6630d21f7e06b528cb443b448daa87961fc286a6f90f",
     "scope": "WHOLE_HOST_DURING_OBSERVED_EXTERNAL_INVOCATION_INCLUDING_PREFLIGHT_AND_FINALIZATION",
     "status": "VERIFIED_RATE_MEASURED_INTERVAL_ESTIMATE"
   },
   "latest_owner_execution": {
-    "elapsed_seconds": 2479.115297581,
-    "executable_sha256": "802ff5bfaf1afec93e70478a105543110a5c9317c8bfc909810350021ba65142",
+    "elapsed_seconds": 5691.287510111,
     "exit_code": 2,
-    "finished_at_utc": "2026-11-13T03:36:15.633156Z",
-    "fully_completed_scientific_frontier": false,
-    "new_confirmed_scientific_fits": 1,
-    "new_forecasts": 5,
-    "provider_requests": 52,
-    "release": "B081",
+    "finished_at_utc": "2026-11-13T17:53:05.203284Z",
+    "native_fit_breakdown": {
+      "V9_studies": 256,
+      "champion_issuance": 28,
+      "current_season_frozen": 34
+    },
+    "new_confirmed_scientific_fits": 318,
+    "new_forecast_distinct_games": 985,
+    "new_forecast_horizon_class": "EARLY_OUTLOOK",
+    "new_forecasts": 13860,
+    "provider_requests": 36,
+    "release": "B082",
     "return": {
-      "bytes": 277495287,
+      "bytes": 458509782,
       "members": 10,
       "payload_members_authenticated": 9,
-      "sha256": "da85c4d3d81ffbb69114f81c4e4e598a118925b53cd138f27b383fee10a84ea0"
+      "sha256": "01b357ea905c96462071a174e2a6b396aa9120bb38b8117a201c832b40a0cffd"
     },
-    "scientific_stages_reached": true,
-    "started_at_utc": "2026-11-13T02:54:56.518135Z",
+    "selected_export_estimator_count_scope": "CHAMPION_ISSUANCE_ONLY_28; WHOLE_INVOCATION_NATIVE_RETURNS_318",
+    "started_at_utc": "2026-11-13T16:18:13.916041Z",
     "status": "PARTIAL_SUBSTANTIVE_WITH_EXPLICIT_BLOCKERS"
   },
   "limitations": [
-    "The actual B081 invocation made one native estimator fit and five new forecasts, but did not establish substantial parallel scientific throughput.",
-    "B082 engineering fixes have not yet been executed as an owner-host sports run. No new owner-host fits, refreshed markets or model promotion are claimed for preparation.",
-    "The selected dashboard preserves 2,700 shared issue objects unchanged and keeps five superseded selected issues in dated history.",
-    "All 1,274 canonical observed games and three secondary observations are retained. Twenty-four regular-season schedule slots remain unobserved; complete future schedule coverage is not claimed.",
-    "Full-season matched DraftKings, Kalshi and Polymarket performance remains unavailable. Dated source-qualified comparisons stay separate from current missing rows.",
-    "Whole-pipeline S3 calls are not fully instrumented. Counter scopes and unavailable measurements remain explicit.",
-    "The public repository contains no private execution archive, model body, private transform, raw provider array or private storage address."
+    "No new owner-cloud execution was performed by this saved-artifact review.",
+    "Twelve-core sustained scientific utilization is not established by B082.",
+    "All observed schedule identities are present;24regular-season slots and several selected-role issues remain missing.",
+    "Current saved comparisons do not establish a full-season best model or justify automatic promotion.",
+    "Partial market coverage and missing time-matched quotes remain explicit.",
+    "The 925 authenticated fit-return/result documents do not authenticate 287 model bodies omitted from the increment; owner-local or S3 durability is a separate recovery requirement."
   ],
   "live_logging": {
-    "closed": true,
-    "diagnostic_scope_correction": "Observer Python stacks are labeled LOGGER_PROCESS_ONLY. Child identity and process wait state remain separate.",
-    "false_positive_successful_s3_gets_after": 5618,
-    "false_positive_successful_s3_gets_before": 16,
+    "cause": "FORCED_MEASUREMENT_SUBSTAGE_FLUSHES_REPEATED_CUMULATIVE_SCIENTIFIC_PREVIEWS",
+    "child_handoff_progress_unavailable_events": 1,
     "health_errors": [],
     "heartbeat_interval_gate": "PASS",
-    "heartbeat_samples": 249,
-    "jsonl_bytes": 39392464,
-    "log_bytes": 39478863,
-    "logging_success_is_not_model_success": true,
-    "maximum_gap_seconds": 10.776131607002753,
-    "observed_stall_diagnostics": 2,
-    "reproduced_false_positive_stall_diagnostics": 1,
+    "heartbeat_samples": 570,
+    "identity_guards_bypassed": false,
+    "internal_progress_jsonl_bytes": 1030619902,
+    "jsonl_bytes": 52324223,
+    "jsonl_sha256": "b44a6bffc13857c1c4540c23c61d7cfbc623b7b38eadb2e160efca4b5ff49fbd",
+    "log_bytes": 38766414,
+    "log_sha256": "451d36919b1f5d52ed079c6d83e8a72a668cfa09d81638c0a1f5ae0dcfb86363",
+    "maximum_gap_seconds": 10.737293674999819,
+    "observed_stall_diagnostics": 0,
     "s3_checkpoints": {
-      "attempted_body_bytes": 10926934,
+      "attempted_body_bytes": 14559581,
       "body_bytes_basis": "BODY_BYTES_PER_SDK_INVOCATION; RETRY_NETWORK_BYTES_NOT_OBSERVED",
-      "elapsed_seconds": 5.394324165990838,
+      "elapsed_seconds": 7.680268626001862,
       "failed_calls": 0,
       "get_calls": 0,
       "internal_HTTP_retry_attempts": null,
       "list_calls": 0,
-      "put_calls": 97,
+      "put_calls": 128,
       "request_count_basis": "SDK_METHOD_INVOCATIONS",
       "scope": "LOG_CHECKPOINT_SINK_ONLY"
     },
-    "target_seconds": 10.0,
-    "unobserved_progress_diagnostic_preserved": true
+    "startup_stale_origin_refusals": 1
+  },
+  "native_document_authentication": {
+    "authenticated_document_bytes": 15203684,
+    "distinct_authenticated_fit_return_and_result_documents": 925,
+    "new_estimator_fit_returns": 318,
+    "new_model_fits_from_audit": 0,
+    "omitted_model_bodies_authenticated_by_this_audit": false,
+    "omitted_model_bodies_in_return_increment": 287,
+    "owner_local_or_S3_model_durability_requires_separate_verification": true
   },
   "observed_runtime": {
-    "cpu_qualification": "Matched PID and process-start identities across measured external-logger intervals. Short-lived unobserved children are excluded. The peak was transport compression, not scientific fitting.",
-    "matched_cpu_intervals": 248,
-    "matched_process_cpu_seconds": 2081.1600000000008,
+    "first_native_fit_observed_at_utc": "2026-11-13T16:25:22.334268Z",
+    "first_positive_native_return_sample_elapsed_seconds": 430.5386267429999,
     "native_fit_exact_intervals": {
       "failed_native_calls": 0,
-      "mean_cpu_equivalents_per_native_call": 1.9666166329255668,
-      "native_fit_elapsed_seconds_sum": 2.21192068,
-      "native_fit_process_cpu_seconds": 4.35000000000003,
-      "observed_peak_concurrent_native_fits": 1,
-      "real_estimator_fit_returns": 1,
-      "synthetic_estimator_fit_returns": 0,
-      "unresolved_native_enters": []
+      "mean_cpu_equivalents_per_native_call": 1.3244922892931816,
+      "native_fit_elapsed_seconds_sum": 58.588487549,
+      "native_fit_process_cpu_seconds": 77.60000000000008,
+      "observed_peak_concurrent_native_fits": 6,
+      "p50_native_fit_seconds": 0.0022532510000000004,
+      "p95_native_fit_seconds": 1.070643678,
+      "real_estimator_fit_returns": 318,
+      "synthetic_estimator_fit_returns": 0
     },
-    "one_reserved_core_samples": 178,
+    "native_interval_proof_scope": "SAVED_EXACT_ENTER_EXIT_LEDGER_SEPARATE_FROM_TEN_SECOND_SAMPLES",
+    "observed_cpu_seconds": 5094.440000000003,
     "peak_concurrent_native_fits_at_heartbeat_samples": 0,
-    "peak_concurrent_scientific_fits": 1,
-    "peak_cpu_cores": 7.950013631756633,
-    "peak_reserved_cores": 12,
+    "peak_concurrent_scientific_fits": 6,
+    "peak_cpu_cores": 10.90101018288416,
     "peak_work_class": "TRANSPORT_FINALIZATION_NOT_SCIENTIFIC_FITS",
-    "reserved_core_observation_counts": {
-      "0": 32,
-      "1": 178,
-      "12": 2,
-      "2": 28,
-      "3": 7,
+    "preflight_no_progress_escalated": true,
+    "reserved_core_sample_counts": {
+      "0": 35,
+      "1": 286,
+      "11": 1,
+      "12": 5,
+      "2": 230,
+      "3": 8,
+      "7": 1,
+      "8": 1,
+      "9": 1,
       "None": 2
     },
-    "sample_elapsed_seconds": 2478.9921044479997,
-    "samples": 249,
-    "short_native_fit_can_fall_between_heartbeat_samples": true,
-    "time_weighted_cpu_cores": 0.8395186076897229,
+    "safe_boundary_recovery_applied": false,
+    "sample_attributed_stages": [
+      {
+        "CPU_seconds": 1841.7100000000019,
+        "average_cores": 0.9098496753421322,
+        "peak_cores": 1.0511455057148198,
+        "samples": 202,
+        "seconds": 2024.1915229650003,
+        "stage": "ISSUE_REMAINING_QUALIFIED_CHAMPIONS"
+      },
+      {
+        "CPU_seconds": 976.63,
+        "average_cores": 1.0349419446937087,
+        "peak_cores": 10.90101018288416,
+        "samples": 94,
+        "seconds": 943.6567964099995,
+        "stage": "SEAL_IMMUTABLE_FRAMES_AND_EXACT_READBACK"
+      },
+      {
+        "CPU_seconds": 196.3300000000004,
+        "average_cores": 0.5931519997563566,
+        "peak_cores": 0.9985609524635612,
+        "samples": 33,
+        "seconds": 330.99441640700024,
+        "stage": "TEST_ORIGIN_PROVEN_COMPLEMENTARY_BLENDS"
+      },
+      {
+        "CPU_seconds": 274.6400000000005,
+        "average_cores": 0.8567813654998622,
+        "peak_cores": 1.4801006666531347,
+        "samples": 32,
+        "seconds": 320.54852154699984,
+        "stage": "FIT_REGISTERED_PREQUENTIAL_ERROR_AND_CALIBRATION_STUDIES"
+      },
+      {
+        "CPU_seconds": 248.91000000000017,
+        "average_cores": 0.9564882049837402,
+        "peak_cores": 1.5693681452649209,
+        "samples": 26,
+        "seconds": 260.2332142759999,
+        "stage": "ISSUE_DUE_FORECASTS_BEFORE_RESEARCH"
+      },
+      {
+        "CPU_seconds": 139.53999999999968,
+        "average_cores": 0.7334230332114543,
+        "peak_cores": 1.0001850401217263,
+        "samples": 19,
+        "seconds": 190.25854613399997,
+        "stage": "FIT_AND_SCORE_MISSING_CURRENT_SEASON_FROZEN_ORIGINS"
+      },
+      {
+        "CPU_seconds": 145.30999999999997,
+        "average_cores": 0.806322089927529,
+        "peak_cores": 1.0012873118276147,
+        "samples": 18,
+        "seconds": 180.21334379299992,
+        "stage": "AUTHENTICATE_B077_AND_PRESERVE_ALL_OLD_WORK"
+      },
+      {
+        "CPU_seconds": 150.930000000001,
+        "average_cores": 0.8852709686635665,
+        "peak_cores": 1.000592738868083,
+        "samples": 17,
+        "seconds": 170.49017232300048,
+        "stage": "EXPORT_LATEST_AUTHENTICATED_FORECASTS_AND_CHAMPIONS"
+      },
+      {
+        "CPU_seconds": 133.78999999999962,
+        "average_cores": 0.9531693251046999,
+        "peak_cores": 1.0009095568207058,
+        "samples": 14,
+        "seconds": 140.36330846599958,
+        "stage": "REFRESH_AGAIN_BEFORE_ISSUANCE"
+      },
+      {
+        "CPU_seconds": 115.72999999999993,
+        "average_cores": 0.8251063122777721,
+        "peak_cores": 1.0047861838257393,
+        "samples": 14,
+        "seconds": 140.26071341100032,
+        "stage": "REFRESH_CHAMPION_AND_FORMER_CHAMPION_ENTIRE_CURRENT_SEASON"
+      },
+      {
+        "CPU_seconds": 115.84999999999995,
+        "average_cores": 0.9629881032935687,
+        "peak_cores": 1.0011914536294284,
+        "samples": 12,
+        "seconds": 120.30262845799962,
+        "stage": "PARALLEL_MISSING_FROZEN_FITS_WITH_SHARED_MATRICES"
+      },
+      {
+        "CPU_seconds": 104.2,
+        "average_cores": 0.8673936430445442,
+        "peak_cores": 1.000317079828428,
+        "samples": 12,
+        "seconds": 120.1300019150001,
+        "stage": "REFRESH_OFFICIAL_GAMES_AND_CURRENT_SOURCE_STATE"
+      },
+      {
+        "CPU_seconds": 77.97999999999999,
+        "average_cores": 0.7001875637744447,
+        "peak_cores": 1.001543218051371,
+        "samples": 11,
+        "seconds": 111.3701585609997,
+        "stage": "INVENTORY_AND_FREEZE_COMPLETE_SCIENCE"
+      },
+      {
+        "CPU_seconds": 88.40000000000067,
+        "average_cores": 0.9729066152425256,
+        "peak_cores": 1.000306594967717,
+        "samples": 9,
+        "seconds": 90.86175241799992,
+        "stage": "COMPARE_MATCHED_CURRENT_MODELS_AND_QUALIFIED_VENUES"
+      },
+      {
+        "CPU_seconds": 59.5,
+        "average_cores": 0.9896992735346776,
+        "peak_cores": 0.9996021568451493,
+        "samples": 6,
+        "seconds": 60.11927217799985,
+        "stage": "RECOVER_ALL_AUTHENTICATED_SAVED_ARRAYS_ON_ONE_CPU"
+      },
+      {
+        "CPU_seconds": 59.92999999999985,
+        "average_cores": 0.9973687776048528,
+        "peak_cores": 1.0066740431772458,
+        "samples": 6,
+        "seconds": 60.088105167999856,
+        "stage": "EXTEND_EXACT_NATIVE_STATES_AND_REFIT_ELIGIBLE_RECIPES"
+      },
+      {
+        "CPU_seconds": 48.77999999999939,
+        "average_cores": 0.973614943517253,
+        "peak_cores": 1.007101539374961,
+        "samples": 5,
+        "seconds": 50.10194258499996,
+        "stage": "RECONCILE_CURRENT_SEASON_REPLAY_AFTER_LATEST_FINALS"
+      },
+      {
+        "CPU_seconds": 31.28999999999991,
+        "average_cores": 0.7776837376814701,
+        "peak_cores": 0.986211001618563,
+        "samples": 4,
+        "seconds": 40.23486474499987,
+        "stage": "BUILD_COMPLETE_GAME_AND_SOURCE_GAP_DASHBOARD"
+      },
+      {
+        "CPU_seconds": 39.980000000000004,
+        "average_cores": 0.9961354838194618,
+        "peak_cores": 1.0003723979506824,
+        "samples": 4,
+        "seconds": 40.1351027540004,
+        "stage": "EXPORT_AUTHENTICATED_CURRENT_PUBLICATION"
+      },
+      {
+        "CPU_seconds": 39.11999999999992,
+        "average_cores": 0.9757469532782646,
+        "peak_cores": 0.9995047113007184,
+        "samples": 4,
+        "seconds": 40.092361927000184,
+        "stage": "COMPARE_OLD_AND_NEW_METRIC_SPECIFIC_CANDIDATES"
+      },
+      {
+        "CPU_seconds": 24.199999999999996,
+        "average_cores": 0.8045719866175531,
+        "peak_cores": 0.9978754913464868,
+        "samples": 3,
+        "seconds": 30.078104137999617,
+        "stage": "RECOVER_IMMUTABLE_SCIENTIFIC_ACCOUNTING"
+      },
+      {
+        "CPU_seconds": 29.380000000000038,
+        "average_cores": 0.9770722584047451,
+        "peak_cores": 0.9994610915768477,
+        "samples": 3,
+        "seconds": 30.069423983000434,
+        "stage": "UPDATE_FUTURE_CHAMPION_TRAINING_AT_LATEST_REFRESH"
+      },
+      {
+        "CPU_seconds": 18.999999999999964,
+        "average_cores": 0.9279726539094609,
+        "peak_cores": 1.0002000938226003,
+        "samples": 2,
+        "seconds": 20.474741276000714,
+        "stage": "WRITE_AND_VERIFY_COMPLETE_OWNER_RETURN"
+      },
+      {
+        "CPU_seconds": 13.080000000000162,
+        "average_cores": 0.647345545116078,
+        "peak_cores": 0.7421212942661607,
+        "samples": 2,
+        "seconds": 20.205592049999723,
+        "stage": "RENDER_ALL_CURRENT_REPLAY_ROLES_AND_EXPLICIT_SOURCE_GAPS"
+      },
+      {
+        "CPU_seconds": 19.960000000000015,
+        "average_cores": 0.9941562280617203,
+        "peak_cores": 0.9984070098618408,
+        "samples": 2,
+        "seconds": 20.077327321999974,
+        "stage": "ADMIT_NEW_COMPLETED_GAMES_TO_FUTURE_CHAMPION_TRAINING"
+      },
+      {
+        "CPU_seconds": 19.9,
+        "average_cores": 0.9918073651489271,
+        "peak_cores": 0.998752759945631,
+        "samples": 2,
+        "seconds": 20.06438014000014,
+        "stage": "VERIFY_ACCEPTED_ANCESTRY_ONCE"
+      },
+      {
+        "CPU_seconds": 16.450000000000045,
+        "average_cores": 0.8201171952108358,
+        "peak_cores": 0.9362166793042608,
+        "samples": 2,
+        "seconds": 20.058108885000365,
+        "stage": "SCORE_IMMUTABLE_FORWARD_ISSUES"
+      },
+      {
+        "CPU_seconds": 4.589999999999999,
+        "average_cores": 0.22886272663404897,
+        "peak_cores": 0.407635527571719,
+        "samples": 2,
+        "seconds": 20.05569044599997,
+        "stage": "OWNED_PIPELINE_BOOTSTRAP"
+      },
+      {
+        "CPU_seconds": 12.160000000000013,
+        "average_cores": 0.7948712828750627,
+        "peak_cores": 1.0007117619097288,
+        "samples": 3,
+        "seconds": 15.298074369999995,
+        "stage": "SEALED_OWNER_RETURN_READY"
+      },
+      {
+        "CPU_seconds": 9.710000000000012,
+        "average_cores": 0.9683933082352065,
+        "peak_cores": 0.9683933082352065,
+        "samples": 1,
+        "seconds": 10.026917697000044,
+        "stage": "AUDIT_SOURCE_CLOCK_AND_VENUE_RECENCY_COVERAGE"
+      },
+      {
+        "CPU_seconds": 8.090000000000268,
+        "average_cores": 0.8069237081570537,
+        "peak_cores": 0.8069237081570537,
+        "samples": 1,
+        "seconds": 10.025730955999734,
+        "stage": "ISSUE_QUALIFIED_NATIVE_CHAMPIONS"
+      },
+      {
+        "CPU_seconds": 9.58000000000009,
+        "average_cores": 0.9556539209426805,
+        "peak_cores": 0.9556539209426805,
+        "samples": 1,
+        "seconds": 10.024549463000312,
+        "stage": "RECOVER_OWNED_HISTORICAL_MARKETS_BEFORE_NEW_REQUESTS"
+      },
+      {
+        "CPU_seconds": 7.039999999999991,
+        "average_cores": 0.7027323112473693,
+        "peak_cores": 0.7027323112473693,
+        "samples": 1,
+        "seconds": 10.018039425999632,
+        "stage": "MATCH_PROVIDER_TARGET_HORIZON_AND_GAME_COHORTS"
+      },
+      {
+        "CPU_seconds": 6.3899999999999935,
+        "average_cores": 0.6379642151441032,
+        "peak_cores": 0.6379642151441032,
+        "samples": 1,
+        "seconds": 10.016235783000184,
+        "stage": "AUTHENTICATE_LEGACY_CONTEXTS_WITH_INDEPENDENT_FROZEN_FALLBACK"
+      },
+      {
+        "CPU_seconds": 6.35999999999997,
+        "average_cores": 0.635393233011241,
+        "peak_cores": 0.635393233011241,
+        "samples": 1,
+        "seconds": 10.00954947199989,
+        "stage": "ADVERSARIAL_TARGET_GAME_LEAKAGE_TESTS"
+      },
+      {
+        "CPU_seconds": 0,
+        "average_cores": null,
+        "peak_cores": 0,
+        "samples": 1,
+        "seconds": 0,
+        "stage": "BOOTSTRAP"
+      }
+    ],
+    "sample_elapsed_seconds": 5691.149211848,
+    "seconds_with_multiple_native_fits": 8.130174685,
+    "time_weighted_cpu_cores": 0.8951513675646124,
     "transport_benchmark": {
-      "completed_levels": [
-        1,
-        2,
-        4,
-        8,
-        12
-      ],
-      "elapsed_seconds": 23.678602022999257,
-      "new_estimator_fits": 0,
-      "new_predictions": 0,
-      "status": "COMPLETED_EXACT_PINNED_FRAME_BENCHMARK"
+      "eligible_scientific_utilization_proof": false,
+      "new_estimator_fits": 0
     },
-    "twelve_core_scientific_utilization_proven": false,
-    "twelve_reserved_core_samples": 2
+    "twelve_core_scientific_utilization_proven": false
   },
   "publication": {
-    "merge_verified": false,
-    "qualification": "Prepared saved evidence. Subsequent exact-head CI, source publication, merge and any deployed website require separate receipts.",
-    "source_commit_verified": false,
+    "prepared_executable_release": "B083",
+    "source_data_refreshed_by_publication": false,
+    "source_execution_release": "B082",
+    "source_publication_is_website_deployment": false,
     "website_deployment_verified": false
   },
   "replacement_engineering": {
     "all_deployed_sports_retrofitted": false,
-    "budget_verification": {
-      "all_report_original_bytes_preserved": true,
-      "all_selected_virtual_names_and_original_pins_preserved": true,
-      "archive_written": false,
-      "cheap_raw_admission_prepares_no_chunks_when_ample": true,
-      "conditional_on_live_verified_ancestor_graph": true,
-      "container_bytes_upper_bound": 295689922,
-      "controlled_owner_scientific_speedup_claimed": false,
-      "external_description_count": 88060,
-      "external_description_identity_preserved": true,
-      "fast_seal_and_full_readback_seconds": 2.353328491000866,
-      "final_replacement_source_bytes": 141653687,
-      "final_scientific_allowance_bytes": 383217225,
-      "first_compressed_measurement_seconds": 3.5550736200020765,
-      "full_owner_ancestor_readback_claimed": false,
-      "full_report_archive_bytes": 20717397,
-      "full_report_original_bytes": 226760148,
-      "new_scientific_fits": 0,
-      "original_research_reserve_bytes": 18000000,
-      "owner_execution_performed": false,
-      "physical_files_decoded_and_original_sha256_verified": 3658,
-      "physical_original_bytes_decoded_and_verified": 2725146160,
-      "remaining_after_original_research_reserve_bytes": 69527303,
-      "remaining_before_original_research_reserve_bytes": 87527303,
-      "same_process_warm_measurement_seconds": 0.0009666959958849475,
-      "selected_files": 91718,
-      "status": "PASS_SAVED_PHYSICAL_DELTA_AND_ORIGINAL_REPORT_ROUNDTRIP",
-      "under_pressure_only_changed_physical_bytes_are_compressed": true
-    },
     "heartbeat_projection_replay": {
-      "heartbeat_count": 249,
-      "largest_original_heartbeat_bytes": 316964,
-      "largest_projected_heartbeat_bytes": 61404,
-      "projection_preserves_fit_cache_S3_CPU_cost_stage_fields": true,
-      "replay_is_saved_evidence_engineering_not_new_owner_execution": true,
-      "replayed_B082_evaluation_projection_heartbeat_json_bytes": 7401897,
-      "replayed_heartbeat_byte_reduction_fraction": 0.8001724016212663,
-      "replayed_original_heartbeat_json_bytes": 37041415
+      "actual_saved_heartbeat_count": 570,
+      "coalescing_savings_not_included_in_this_projection_measurement": true,
+      "elapsed_seconds": 1.5702803099993616,
+      "fit_CPU_S3_cache_cost_stage_progress_local_IO_counters_identical": true,
+      "maximum_evaluation_preview_bytes": 14194,
+      "new_estimator_fits_or_inference_or_score_computations": 0,
+      "original_heartbeat_jsonl_bytes": 27815909,
+      "reduction_percent": 45.214121889743026,
+      "reprojected_heartbeat_jsonl_bytes": 15239190,
+      "saved_scientific_reports_or_original_logs_modified": false,
+      "scope": "SAVED_B082_HEARTBEAT_DISPLAY_PROJECTION_ONLY",
+      "status": "PASS"
     },
     "implemented_repairs": [
-      "Keep cheap raw admission while ample; under pressure measure compressed changed physical bytes, retain exact finalizer readback and the 512 MiB cap, and reuse the immutable B081 sealed support with its B080 dependency.",
-      "Bound repeated evaluation projections in heartbeat telemetry while retaining every saved scientific field, durable detailed evidence and actual fit counters. Compress the unchanged full report through the original verified transport.",
-      "Track completed operational work separately from native-fit completions. Successful cache or S3 transfers prevent false operational stalls without earning model-fit credit.",
-      "Label observer stacks honestly, keep child supervision and identity checks active, and preserve readable human logs and JSONL through stalled and failed children.",
-      "Repair accepted-reference path handling and exact role/target/phase/horizon comparisons; retain outcome-independent selected issue publication and original issue clocks."
+      "Coalesce repetitive compressed-byte measurement callbacks while preserving real stage, task, fit, error and checkpoint events.",
+      "Bound live scientific previews and retain full saved source reports; do not repeatedly append the full report to telemetry.",
+      "Replace stale authoritative progress fields and make incompatible denominators produce unknown ETA with original counters retained.",
+      "Create literal LIVE_EXECUTION.log and LIVE_EXECUTION.jsonl per invocation as same-inode aliases; preserve exact owner identity and append history.",
+      "Reuse stable verified objects and update changed forecast batches incrementally, avoiding repeated full inventories.",
+      "Stream the original complete report through its unchanged archive verifier without building repeated large JSON encodings.",
+      "Remove byte-identical duplicate publication carriers before the unchanged one-owner schedule binding guard; reject conflicting projections.",
+      "Refresh stale catalogue context clocks and normalize typed historical origin/role identities for eligible scientific continuations; keep chronology guards.",
+      "Keep exact native-fit evidence independent of configured workers, reservation counts and ten-second CPU samples.",
+      "Bind model preservation to exact committed states: restore only authenticated content keys, prioritize new commits for concurrent immutable private backups, and require verified remote checksums or complete local model bodies under the existing return-size gate."
     ],
-    "integrated_replacement_project": "NBA",
     "live_logging_acceptance": {
       "cases": [
         {
           "actual_AWS_owner_execution": false,
           "actual_NBA_fits": 0,
           "child_returncode": 0,
-          "heartbeat_interval_seconds": 10.0,
           "heartbeat_samples": 6,
-          "human_log_growth_observations": 3,
-          "jsonl_growth_observations": 3,
           "mode": "stall",
-          "observed_max_gap_seconds": 10.035544,
-          "registered_child_observed_in_process_samples": 3,
+          "observed_max_gap_seconds": 10.02715,
           "stall_diagnostic_count": 1,
+          "standard_aliases_same_inode": true,
           "status": "PASS",
           "synthetic_CPU_probe_performed": false,
           "tail_F_heartbeats_observed_while_child_alive": 4
@@ -344,190 +514,253 @@
           "actual_AWS_owner_execution": false,
           "actual_NBA_fits": 0,
           "child_returncode": 1,
-          "heartbeat_interval_seconds": 10.0,
           "heartbeat_samples": 5,
-          "human_log_growth_observations": 2,
-          "jsonl_growth_observations": 2,
           "mode": "crash",
-          "observed_max_gap_seconds": 10.03589,
-          "registered_child_observed_in_process_samples": 2,
+          "observed_max_gap_seconds": 10.019643,
           "stall_diagnostic_count": 0,
+          "standard_aliases_same_inode": true,
           "status": "PASS",
           "synthetic_CPU_probe_performed": false,
           "tail_F_heartbeats_observed_while_child_alive": 3
         }
       ],
-      "elapsed_seconds": 33.05111499399936,
-      "evidence_scope": "REAL_OS_CHILDREN_AND_TAIL_F; FAILURE_INJECTION_ONLY; NOT_OWNER_SCIENTIFIC_UTILIZATION",
-      "schema": "sports-edge-lab.live-log-acceptance.v1",
-      "source_pins": {
-        "live_fixture_worker.py": {
-          "bytes": 3143,
-          "sha256": "6e7517add33ce39ef57a50652ccf9a15a12572ebc211814ee3a5764b1518aadd"
-        },
-        "sports_edge_live.py": {
-          "bytes": 61164,
-          "sha256": "4cd17825265aa0839392482c3387c94e8cfbf65a57874b4a3d427b028565ca5b"
-        },
-        "verify_live_execution.py": {
-          "bytes": 8621,
-          "sha256": "641552960117a0943e37090168c51dc7bf3018e9b427244af759b16df5a95e27"
-        }
+      "elapsed_seconds": 33.088403794987244,
+      "source_logger_pin": {
+        "bytes": 65296,
+        "sha256": "888da8e95b83e734457b61ee6fde9a64a590f0ea2c4598f8eccdc07ba2030bd0"
       },
-      "sources_unchanged_through_test": true,
       "status": "PASS"
+    },
+    "model_durability_engineering": {
+      "actual_model_storage_transfers_executed": false,
+      "cache_budget_ancestry_regressions": 46,
+      "focused_model_tests": 33,
+      "model_bodies_deserialized": false,
+      "models_silently_refitted": false,
+      "overlaps_packaged_tests": true,
+      "owner_model_recovery_executed": false,
+      "status": "ENGINEERING_VERIFIED; OWNER_CLOUD_RECOVERY_PENDING",
+      "unchanged_and_restarted_fixture_repeats_additional_simulated_requests": 0,
+      "unchanged_and_restarted_fixture_repeats_preserved_manifest_hash": true
     },
     "owner_execution_completed": false,
     "package_verification": {
-      "all_payload_sha256_verified": true,
-      "default_outer_launcher_executed": false,
-      "elapsed_seconds": 51.271565914998064,
+      "all_1221_original_B082_members_preserved": true,
+      "all_member_CRC_and_manifest_SHA256_checks_passed": true,
+      "archive_members": 1266,
       "errors": 0,
-      "exact_package_bytes": 141653687,
-      "exact_package_sha256": "cc48797f6cec62bc26a49d68bdfe4b00e8b9b16cf419343c9ab7bd121ebfbfc7",
+      "exact_package_bytes": 178697447,
+      "exact_package_sha256": "6ce6373083491767bb41fbe76515db4c847e1bff39aaf015b59780ffc674292b",
       "failures": 0,
-      "inherited_overlap_fixture_uses_explicit_rendezvous": true,
+      "focused_suites_overlap_these_715_tests": true,
+      "full_verification_elapsed_seconds": 62.034455153989256,
+      "independent_member_verification_elapsed_seconds": 8.975755842999206,
+      "independent_receipt_sha256": "4d35d70ec265e10ea9bb125f077dc3540060651e674e0da97468dafa15b386aa",
       "module_errors": 0,
-      "original_B081_members_preserved": 1181,
       "owner_execution_performed": false,
-      "package_members": 1221,
-      "packaged_tests": 578,
-      "passed": 578,
-      "prior_inherited_fixture_bindings_corrected": true,
-      "protected_original_verifier_modules_unchanged": [
-        "b053_core.py",
-        "b056_inputs.py",
-        "b064_codec.py",
-        "b064_common.py",
-        "b066_transport.py",
-        "b067_transport.py",
-        "b068_transport.py",
-        "b070_science.py",
-        "b075_transport_codec.py",
-        "b077_transport_codec.py",
-        "b077_transport_graph.py",
-        "b078_baseline.py",
-        "b078_market_history.py",
-        "b078_transport_views.py",
-        "v9_cache.py",
-        "v9_layout.py",
-        "v9_transport_cache.py"
-      ],
+      "packaged_tests": 715,
+      "passed": 715,
+      "protected_original_module_count": 17,
+      "protected_original_modules_byte_identical": true,
       "real_NBA_fits": 0,
       "skipped": 0,
       "status": "PASS",
-      "total_verification_elapsed_seconds": 62.41475039500074,
-      "verification_scope": "EXACT_PACKAGE_PHYSICAL_BOOTSTRAP_AND_ALL_PACKAGED_ENGINEERING_TESTS",
-      "warm_source_archive_member_redecodes": 0,
-      "warm_source_identities_reused": 1221,
-      "warm_source_member_rehashes": 0
+      "test_elapsed_seconds": 53.18530203298724,
+      "test_receipt_sha256": "cc0d5eca5137b76ad17ca943b212fe6d21f450fdb7cc9731c98af58a7c10f86d"
     },
-    "release": "B082",
-    "shared_logging_framework_projects": [
-      "NFL",
-      "FBS",
-      "NBA",
-      "NCAA basketball",
-      "other named projects"
-    ],
-    "shared_logging_module_sha256": "4cd17825265aa0839392482c3387c94e8cfbf65a57874b4a3d427b028565ca5b",
-    "status": "LOCAL_ENGINEERING_VERIFIED_OWNER_EXECUTION_PENDING",
-    "verification_summary": [
-      "Actual B081 telemetry reproduces one false stall while successful GETs advanced from 16 to 5,618; the independent native-fit idle clock remains stalled.",
-      "A local child really waits, then exits 7; live heartbeats and diagnostics continue. This engineering fixture is not a scientific fit or CPU benchmark.",
-      "Latest sealed-support adoption preserves all 91,718 accepted file pins, authentic prior sources and required B080 ancestry, without weakening original verification.",
-      "Final exact package passed 578/578 engineering tests in 51.272 seconds. Earlier exact-package checks exposed stale inherited fixture imports and one timing-dependent fixture; those tests were corrected without changing numerical, admission or clock guards. No owner-host sports execution is claimed."
-    ],
+    "release": "B083",
+    "runtime_tests": {
+      "elapsed_seconds": 5.8570763479947345,
+      "errors": 0,
+      "failures": 0,
+      "log_pin": {
+        "bytes": 12670,
+        "sha256": "867df18268196bc7388f3ceda6351d64443399457ae0b0c695cfc8525097511c"
+      },
+      "new_sports_fits": 0,
+      "skipped": 0,
+      "status": "PASS",
+      "synthetic_CPU_probe_performed": false,
+      "tests": 73
+    },
+    "saved_artifact_engineering": {
+      "issue_inventory": {
+        "baseline_files": 4000,
+        "batches": 24,
+        "bytes": 13400869,
+        "files": 5536,
+        "files_per_batch": 64,
+        "incremental_seconds": 0.964836825,
+        "initial_full_scans": 1,
+        "new_S3_requests": 0,
+        "new_fits": 0,
+        "new_forecasts": 0,
+        "original_seconds": 38.800797,
+        "same_selected_file_pins": true,
+        "speed_ratio": 40.2149
+      },
+      "report_seal": {
+        "all_original_report_bytes_preserved": true,
+        "byte_identical_archive_bytes": 25438130,
+        "full_owner_inventory_speedup_claim": false,
+        "original_report_bytes": 383911149,
+        "original_seconds": 43.259892,
+        "original_verifier_readback": true,
+        "speed_ratio": 2.43764,
+        "streaming_seconds": 17.746659
+      },
+      "scope": "LOCAL_REVIEW_OF_AUTHENTIC_SAVED_BYTES; NO_SPORTS_COMPUTATION_OR_OWNER_RUN"
+    },
+    "shared_framework_tests": {
+      "elapsed_seconds": 48.15,
+      "errors": 0,
+      "failures": 0,
+      "passed": 53,
+      "real_ten_second_blocked_children_for_four_sports": true,
+      "scientific_fit_credit": 0,
+      "tests": 53
+    },
+    "status": "EXACT_PACKAGE_AND_SOURCE_VERIFIED; OWNER_EXECUTION_PENDING",
     "verified_new_owner_scientific_fits": 0
   },
-  "resource_admission": {
-    "conclusion": "NO_STAGE_RESOURCE_DENIAL; NO_RESOURCE_POLICY_RELAXATION_JUSTIFIED",
-    "control_wait": {
-      "measured_control_wait_seconds": 12.14169956600017,
-      "rechecks": 12,
-      "recovered_grants": 1,
-      "wait_cycles": 1
-    },
-    "exact_stage_admission_statuses": {
-      "ADMITTED_EXACT_THREADS": 119
-    },
-    "freshness": {
-      "additional_original_samples": 20,
-      "coordinator_probe_calls": 452,
-      "fresh_measurement_unavailable_deferrals": 0,
-      "original_probe_errors": 0
-    },
-    "native_threads_requested_counts": {
-      "1": 114,
-      "2": 3,
-      "3": 2
-    },
-    "resource_deferred_stages": {}
-  },
-  "schema": "sports-edge-lab.nba.execution-review.v2",
+  "schema": "sports-edge-lab.nba.execution-review.v3",
   "science_preservation": {
-    "all_target_horizon_cells": 7644,
+    "all_observed_games_present": true,
     "automatic_promotions": 0,
-    "available_selected_role_cells": 4245,
-    "canonical_status_counts": {
-      "FINAL": 240,
-      "LIVE": 1,
-      "SCHEDULED": 1026,
-      "TBD": 7
-    },
     "champion_roles": 44,
-    "current_distinct_exact_cohorts": 8,
-    "current_same_cohort_descriptive_leaders": 20,
+    "completed_historical_frozen_tasks_preserved": 2328,
+    "coverage": {
+      "active_research_champion_roles": 44,
+      "all_game_applicable_role_opportunities": 26532,
+      "all_game_current_role_forecasts_available": 22082,
+      "all_game_current_role_forecasts_missing": 4450,
+      "all_game_target_horizon_cells": 7644,
+      "current_champion_forecast_available_views": 22082,
+      "current_champion_forecast_missing_views": 28,
+      "current_role_issue_horizon_classes": {
+        "EARLY_OUTLOOK": 22071,
+        "LATE": 11
+      },
+      "distinct_observed_games": 1274,
+      "distinct_public_selected_issues": 14054,
+      "distinct_public_selected_issues_with_intervals": 9034,
+      "games_in_original_issued_inventory": 1005,
+      "latest_at_issue_champion_differs_from_current_views": 28,
+      "latest_at_issue_forecast_available_views": 22110,
+      "latest_row_and_source_aggregate_difference": {},
+      "observed_games_without_applicable_champion_roles": 68,
+      "official_future_tips_at_report": 1033,
+      "official_games_by_latest_row_backed_status": {
+        "FINAL": 241,
+        "SCHEDULED": 1026,
+        "TBD": 7
+      },
+      "official_games_by_phase": {
+        "ist_championship": 1,
+        "preseason": 67,
+        "regular": 1206
+      },
+      "official_games_by_saved_status": {
+        "FINAL": 241,
+        "SCHEDULED": 1026,
+        "TBD": 7
+      },
+      "official_games_without_original_issues": 269,
+      "official_resolved_matchups": 1267,
+      "official_schedule_games": 1274,
+      "official_scheduled_start_passed_without_final_observation": 0,
+      "official_unresolved_matchups": 7,
+      "original_issue_games_absent_from_official_inventory": 0,
+      "original_issue_horizon_classes": {
+        "EARLY_OUTLOOK": 19372,
+        "LATE": 7,
+        "NOMINAL": 5
+      },
+      "original_issued_records_recovered": 19384,
+      "original_issued_records_with_intervals": 12420,
+      "selected_champion_role_views": 22110,
+      "separate_secondary_observations": 3
+    },
+    "distinct_exact_current_cohorts": 16,
+    "evidence_as_of_utc": "2026-11-13T17:53:05.203284Z",
+    "expected_regular_season_games": 1230,
     "full_future_schedule_complete": false,
-    "latest_original_issue_at_utc": "2026-11-13T03:01:14.158960+00:00",
-    "missing_selected_role_cells": 22287,
-    "new_B081_selected_issues": 5,
-    "newly_created_publication_issues": 0,
+    "latest_original_issue_at_utc": "2026-11-13T17:26:12.502657+00:00",
+    "missing_regular_schedule_slots": 24,
     "observed_canonical_games": 1274,
-    "original_shared_issues_and_champion_objects_unchanged": true,
+    "observed_regular_season_games": 1206,
+    "previous_snapshot_preservation": {
+      "history_file": "history/b081_selected_outputs.json",
+      "history_sha256": "4fbcbaed8b46182a044ba11ad69a2c283d724e42a7a61819091c88ee02ed8087",
+      "latest_selected_issues": 14054,
+      "new_B082_selected_issues": 13790,
+      "new_fits_in_publication": 0,
+      "new_forecasts_in_publication": 0,
+      "new_scoring_in_publication": 0,
+      "old_canonical_game_ids_preserved": true,
+      "old_champion_role_objects_unchanged": true,
+      "previous_selected_issues": 2705,
+      "schema": "sports-edge-lab.nba.selected-issue-preservation.v2",
+      "source_main_commit": "71e19d050923e5341fe9e2e56711a8aade0fa8ec",
+      "superseded_selected_issues_preserved_in_history": 2441,
+      "unchanged_shared_selected_issues": 264
+    },
     "publication_new_fits": 0,
     "publication_new_forecasts": 0,
     "publication_new_scoring": 0,
+    "saved_current_cohort_leaders": 40,
     "saved_current_review_metric_rows": 392,
-    "saved_dated_b077_metric_rows": 248,
-    "saved_dated_b077_venue_rows": 24,
-    "saved_historical_peak_groups": 28,
+    "saved_leader_source_bindings": 71,
+    "saved_matched_model_pairs": 66,
+    "saved_venue_comparisons": 105,
     "secondary_observations": 3,
-    "selected_research_evidence_as_of_utc": "2026-11-13T03:36:15.633156Z",
-    "selected_role_opportunities": 26532,
     "source_sha256": {
       "b077_historical_peaks_and_gates.json": "65edad6d038b898b384aa6907070c48180798c7b95404fe00c2952f53d368e85",
       "b078_recovered_b077_evidence.json": "74dd8d0632e9efeb1885b410b7c2f5a82129ba5b41f3e2e70114a4aa0e824c1b",
-      "current_saved_cohort_leaders.json": "7349f9882372af44cebd84a4c828afac82efd242a12e3e70ecbcc0da6082283c",
-      "history/b077_recovered_selected_outputs.json": "9e6795387c1e64bc6265da04bdd9d4e9fd0fb9860007da7b465549752542149b",
-      "latest_model_review.json": "d71286315816a948ac2022ad80673c7b643ae1bbdb043a857ee92c5f1e0e3dd4",
-      "latest_research_outputs.json": "4fbcbaed8b46182a044ba11ad69a2c283d724e42a7a61819091c88ee02ed8087",
-      "latest_v9_acceptance.json": "9731fe2af9d8a1e45f32fe4855f4d1ea24949e3b598f30cf2a4bcaa2beaa1f71",
-      "selected_issue_preservation.json": "ce0ae0a6f52d3ac52afce43c01aea497edf9f20b90537ed689707c82821844f8"
-    },
-    "superseded_selected_issues_preserved_in_history": 5,
-    "unchanged_shared_selected_issues": 2700,
-    "unobserved_regular_slots": 24
+      "current_saved_cohort_leaders.json": "2ed1ae7c3abb0dd13daaaa0e7b2c882e800db5b4c939122ea079b390f06a0acd",
+      "history/b081_selected_outputs.json": "4fbcbaed8b46182a044ba11ad69a2c283d724e42a7a61819091c88ee02ed8087",
+      "latest_model_review.json": "32768513f97399c65b9bcab52b39686970acb26737c5c73aaa8a495564bce59f",
+      "latest_research_outputs.json": "3d28fc2e6116b7a75eb0037ccb2a2ea199afd9c29e7a72794ac9ece1722b8fdf",
+      "latest_v9_acceptance.json": "9c47f58c4b625b97c4b4f6b64d68e2deabce08c202dd57f74ff88d9c4e7a6fbd",
+      "selected_issue_preservation.json": "9150b15c884b361afedd9301ef967848c8d687695cb7698b4aa6babc7fed3cf1"
+    }
   },
   "scientific_failures": [
     {
-      "error_class": "KeyError",
-      "new_fit_credit": 0,
-      "reason": "MISSING_PATH_IN_ACCEPTED_REFERENCE",
-      "stage": "PREQUENTIAL_SCIENCE"
+      "reason": "ValueError:B075_CATALOG_CACHE_SOURCE_OR_CLOCK_CHANGED",
+      "stage": "V6_source_report",
+      "status": "BLOCKED_OR_FAILED"
     },
     {
-      "error_class": "ValueError",
-      "new_fit_credit": 0,
-      "reason": "CURRENT_PAIRS_ROLE_TARGET_PHASE_HORIZON_REQUIRED",
-      "stage": "WINNER_COMPARISON"
+      "reason": "DEFERRED_NO_AUTHENTICATED_SOURCE_REPORT",
+      "stage": "V6_collection",
+      "status": "NOT_RUN_DEPENDENCY_OR_ELIGIBILITY"
     },
     {
-      "error_class": "ValueError",
-      "new_fit_credit": 0,
-      "reason": "PUBLICATION_CURRENT_OUTCOME_ISSUANCE_SELECTION",
-      "stage": "PUBLICATION"
+      "reason": "DEFERRED_NO_AUTHENTICATED_SOURCE_REPORT",
+      "stage": "V6_observation",
+      "status": "NOT_RUN_DEPENDENCY_OR_ELIGIBILITY"
+    },
+    {
+      "reason": "DEFERRED_SOURCE_OR_LEAKAGE_GATE",
+      "stage": "V6_research",
+      "status": "NOT_RUN_DEPENDENCY_OR_ELIGIBILITY"
+    },
+    {
+      "reason": "NO_QUALIFIED_NATIVE_METRIC_ROLES",
+      "stage": "legacy_champion_issuance",
+      "status": "NOT_RUN_DEPENDENCY_OR_ELIGIBILITY"
+    },
+    {
+      "reason": "DEFERRED_NO_QUALIFIED_SOURCE_OR_PARENT_DASHBOARD",
+      "stage": "V6_dashboard",
+      "status": "NOT_RUN_DEPENDENCY_OR_ELIGIBILITY"
+    },
+    {
+      "reason": "ValueError:B075_SCHEDULE_SOURCE_REPORT_BINDING_REQUIRED",
+      "stage": "publication",
+      "status": "BLOCKED_OR_FAILED"
     }
   ],
-  "scope": "SANITIZED_AUTHENTICATED_B081_OWNER_AGGREGATES_AND_B082_ENGINEERING_FIXTURES"
+  "scope": "AUTHENTICATED_B082_OWNER_EVIDENCE_AND_SEPARATE_B083_ENGINEERING; PUBLICATION_PERFORMS_NO_SPORTS_COMPUTATION"
 }

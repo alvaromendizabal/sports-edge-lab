@@ -239,6 +239,8 @@ def validate_public_report(data):
     return dict(checks,latest_row_backed_status_counts=row_counts)
 
 if __name__=='__main__':
+    from restore_snapshot_assets import restore
+    restore()
     path=Path(sys.argv[1]) if len(sys.argv)>1 else Path(__file__).with_name('latest_research_outputs.json')
     body=path.read_bytes()
     print(json.dumps({'status':'PASS','sha256':hashlib.sha256(body).hexdigest(),**validate_public_report(json.loads(body))},sort_keys=True))

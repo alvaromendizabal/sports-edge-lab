@@ -15,9 +15,9 @@ class SavedCohortLeaderTests(unittest.TestCase):
         cls.data=json.loads((ROOT/'current_saved_cohort_leaders.json').read_bytes())
         cls.model=json.loads((ROOT/'latest_model_review.json').read_bytes())
 
-    def test_twenty_saved_leaders_have_eight_distinct_verified_supports(self):
-        self.assertEqual(subject.validate(self.data,self.model),{'rows':20,'distinct_exact_cohorts':8})
-        self.assertEqual(sum(len(row['source_rows']) for row in self.data['rows']),27)
+    def test_forty_saved_leaders_keep_sixteen_exact_supports_and_policies(self):
+        self.assertEqual(subject.validate(self.data,self.model),{'rows':40,'distinct_exact_cohorts':16})
+        self.assertEqual(sum(len(row['source_rows']) for row in self.data['rows']),71)
         self.assertTrue(all(row['scored_games']+row['missing_games']==row['completed_game_denominator'] for row in self.data['rows']))
         self.assertTrue(any(row['distinct_saved_recipes']==1 for row in self.data['rows']))
 
@@ -49,6 +49,6 @@ class SavedCohortLeaderTests(unittest.TestCase):
         body=(ROOT/'latest_model_review.json').read_bytes()
         self.assertEqual(self.data['source_public_file_pin'],{'bytes':len(body),'sha256':hashlib.sha256(body).hexdigest()})
         self.assertEqual(subject.build(check=True)['status'],'PASS')
-        page=(ROOT/'latest_research_outputs.html').read_text();self.assertEqual(subject.attach(page,self.data,self.model),page)
+        page=subject.expand_html((ROOT/'latest_research_outputs.html').read_text());self.assertEqual(subject.attach(page,self.data,self.model),page)
 
 if __name__=='__main__':unittest.main()

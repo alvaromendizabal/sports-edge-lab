@@ -466,7 +466,7 @@ def project_measurements(state):
     """Preserve measured values and explicit missingness; never infer fits."""
     workers = state.get('workers') or {}; lease = state.get('lease') or state.get('V7_resource_lease') or {}
     native = state.get('native') or {}; fits = state.get('invocation_fit_counts') or {}
-    return {
+    measurements = {
         'stage': {k: state.get(k) for k in ('stage', 'total_stages', 'stage_name', 'substage', 'status')},
         'progress': {k: state.get(k) for k in ('completed', 'remaining', 'total', 'work_unit',
                      'completed_tasks', 'remaining_tasks', 'successes', 'failures',
@@ -484,6 +484,7 @@ def project_measurements(state):
                  'completed_native_fit_returns': native.get('real_estimator_fit_returns'),
                  'failed_native_calls': native.get('failed_native_calls'),
                  'concurrent_native_fits': native.get('observed_active_native_fit_workers'),
+                 'peak_concurrent_native_fits_observed': native.get('observed_peak_concurrent_native_fits'),
                  'counts_are_not_inferred_from_cpu_or_wrapper_tasks': True},
         'experiments': {'task_event': state.get('task_event'),
                         'active_task_details': state.get('active_task_details'),
@@ -500,13 +501,23 @@ def project_measurements(state):
             'actual_billed_cost_usd': None},
         'null_reason': 'NOT_REPORTED_BY_CURRENT_BOUND_WORKLOAD; NOT_ZERO_OR_INFERRED',
     }
+    progress = measurements['progress']
+    completed, total = _number(progress.get('completed')), _number(progress.get('total'))
+    if completed is not None and total is not None and completed > total:
+        progress['reported_progress_counters'] = {
+            k:progress.get(k) for k in ('completed','remaining','total','work_unit')}
+        for key in ('total','remaining','throughput_per_second','eta_seconds',
+                    'eta_observed_rate_range_seconds'):
+            progress[key] = None
+        progress['eta_uncertainty'] = 'INCOMPATIBLE_REPORTED_PROGRESS_DENOMINATOR'
+    return measurements
 
 
 class LiveExecutionLog:
     def __init__(self, prefix, *, project, release, invocation_id=None,
                  invocation_origin=None, interval=10., root_pid=None,
                  progress_path=None, checkpoint_sink=None, checkpoint_interval=300.,
-                 stall_seconds=120., console=None):
+                 stall_seconds=120., console=None, live_directory=None):
         if not 0 < float(interval) <= 15:
             raise ValueError('LIVE_LOG_HEARTBEAT_MUST_BE_AT_MOST_15_SECONDS')
         if float(checkpoint_interval) < 30:
@@ -556,9 +567,55 @@ class LiveExecutionLog:
         self.checkpoint_stop = threading.Event(); self.checkpoint_thread = None
         self.checkpoint_requests = queue.Queue(maxsize=1); self.checkpoint_results = queue.Queue()
         self.checkpoint_last = self.started; self.checkpoint_receipts = []
+        self.live_directory = Path(live_directory) if live_directory is not None else (
+            self.prefix.parent if self.prefix.name == 'LIVE_EXECUTION' else
+            self.prefix.parent/(self.prefix.name+'.logs')/self.invocation_id)
+        self.live_aliases = {}
+        try:
+            self._publish_live_aliases()
+        except BaseException:
+            for stream in self.streams.values(): stream.close()
+            fcntl.flock(self.lock_fd, fcntl.LOCK_UN); os.close(self.lock_fd)
+            raise
         self.event('EXECUTION_LOG_OPENED', previous_bytes=self.previous_sizes,
                    append_only=True, heartbeat_target_seconds=self.interval,
+                   standard_live_logs=self.live_aliases,
                    measurement_scope='OBSERVATION_ONLY; NOT_SCIENTIFIC_PROGRESS')
+
+    def _publish_live_aliases(self):
+        """Standard per-invocation names share the original append-only inode.
+
+        No copying, network writes or symlinks. Existing different targets fail
+        closed; neither a former run nor an active sibling can be overwritten.
+        The original source paths remain the only checkpoint-upload inputs.
+        """
+        directory = self.live_directory.absolute()
+        _regular(directory/'LIVE_EXECUTION.log')
+        directory.mkdir(parents=True, exist_ok=True)
+        for kind, source in self.paths.items():
+            target = _regular(directory/('LIVE_EXECUTION.'+kind))
+            if target.exists():
+                if not os.path.samefile(source, target):
+                    raise ValueError('LIVE_LOG_STANDARD_ALIAS_ALREADY_HAS_DIFFERENT_BYTES')
+            else:
+                os.link(source, target, follow_symlinks=False)
+            if not os.path.samefile(source, target):
+                raise ValueError('LIVE_LOG_STANDARD_ALIAS_IDENTITY_MISMATCH')
+            self.live_aliases[kind] = str(target)
+        manifest = directory/'LIVE_EXECUTION_MANIFEST.json'
+        if manifest.exists():
+            existing = json.loads(_regular(manifest).read_bytes())
+            if (existing.get('invocation_id') != self.invocation_id or
+                    existing.get('project') != self.project):
+                raise ValueError('LIVE_LOG_STANDARD_DIRECTORY_BELONGS_TO_ANOTHER_INVOCATION')
+        atomic_json(manifest, {'schema':'sports-edge-lab.standard-live-log-paths.v1',
+            'invocation_id':self.invocation_id, 'project':self.project,
+            'release':self.release, 'producer_identity':self.identity,
+            'invocation_origin':self.origin, 'paths':dict(self.live_aliases),
+            'original_paths':{k:str(p) for k,p in self.paths.items()},
+            'same_physical_inode_no_duplicate_storage':True,
+            'original_prefix_preexisting_bytes':dict(self.previous_sizes),
+            'checkpoint_uploads_not_duplicated':True})
 
     def environment(self, base=None):
         env = dict(os.environ if base is None else base)
@@ -618,7 +675,7 @@ class LiveExecutionLog:
             return (head+f" stage={stage.get('stage')}/{stage.get('total_stages')} {stage.get('stage_name')} substage={stage.get('substage')}"
                 +f"\n  progress={p.get('completed')}/{p.get('total')} remaining={p.get('remaining')} rate={p.get('throughput_per_second')}/s ETA={p.get('eta_seconds')}s"
                 +f" | CPU_used={cpu.get('used_core_equivalents')}c reserved={c.get('reserved_cores')} active_workers={c.get('active_workers')} concurrent_native_fits={fits.get('concurrent_native_fits')}"
-                +f"\n  fits_new/reused/failed={fits.get('new')}/{fits.get('reused')}/{fits.get('failed')} scope={fits.get('scope')} native_returns={fits.get('completed_native_fit_returns')} reported_counts="+json.dumps(fits.get('reported_counts'), sort_keys=True)
+                +f"\n  fits_new/reused/failed={fits.get('new')}/{fits.get('reused')}/{fits.get('failed')} scope={fits.get('scope')} native_returns={fits.get('completed_native_fit_returns')} peak_concurrent_native_fits={fits.get('peak_concurrent_native_fits_observed')} reported_counts="+json.dumps(fits.get('reported_counts'), sort_keys=True)
                 +f" | RSS={data['process_tree'].get('rss_bytes')} RAM_free={resource['memory'].get('MemAvailable')} disk_free={resource['disk'].get('free_bytes')}"
                 +" PIDs="+json.dumps([p.get('pid') for p in data['process_tree'].get('processes', [])])
                 +f" | source_age={data['progress_observation'].get('age_seconds')}s progress_idle={data['progress_idle_seconds']:.3f}s child={data.get('child_identity')}"
@@ -685,7 +742,10 @@ class LiveExecutionLog:
                 if stamp > ended:
                     raise ValueError('PROGRESS_TIMESTAMP_AFTER_OBSERVED_CHILD_EXIT')
                 after_exit = True
-            self.state.update(row)
+            # Bound progress is an authoritative snapshot. Merging it retained
+            # an earlier operation's counters when the next snapshot omitted
+            # them, producing contradictory denominators and stale ETA=0.
+            self.state = dict(row)
             return {'status': 'CURRENT_INVOCATION_BOUND', 'age_seconds': max(0., age),
                     'stale': age > 3*self.interval, 'source_at_utc': row['at_utc'],
                     'preserved_exact_child_receipt_after_observed_exit': after_exit}
@@ -959,6 +1019,7 @@ class LiveExecutionLog:
         return {'schema': 'sports-edge-lab.live-log-receipt.v1', 'invocation_id': self.invocation_id,
                 'project': self.project, 'release': self.release, 'producer_identity': self.identity,
                 'paths': {k: str(p) for k, p in self.paths.items()},
+                'standard_live_log_paths': dict(self.live_aliases),
                 'heartbeat_samples': self.samples, 'heartbeat_target_seconds': self.interval,
                 'maximum_observed_heartbeat_gap_seconds': self.max_gap,
                 'heartbeat_interval_gate': 'PASS' if self.samples >= 2 and self.max_gap <= 15 else 'NOT_ESTABLISHED' if self.samples < 2 else 'FAIL',
@@ -1120,4 +1181,3 @@ class S3LogSink:
                 'get_calls': 0, 'list_calls': 0, 'scope': 'LOG_CHECKPOINT_SINK_ONLY',
                 'request_count_basis': 'SDK_METHOD_INVOCATIONS', 'internal_HTTP_retry_attempts': None,
                 'body_bytes_basis': 'BODY_BYTES_PER_SDK_INVOCATION; RETRY_NETWORK_BYTES_NOT_OBSERVED'}
-

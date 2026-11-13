@@ -1,3 +1,4 @@
+require('node:child_process').execFileSync('python',[require('node:path').join(__dirname,'restore_snapshot_assets.py')],{stdio:'pipe'});
 /* Hosted Playwright acceptance for the source-separated saved NBA schedule, schema v4.
  * Run only in the authorized GitHub Actions browser job using its pinned
  * Playwright installation. No local browser launch, NBA fit, or rescoring is
@@ -263,13 +264,14 @@ function expectedRow(row, data) {
   assert.equal(data.schema, "sports-edge-lab-nba-public-source-separated-research-outputs-v4");
   const reference = referenceInventory(data);
   const cohortReview = require('./cohort_leaders.browser.cjs');
-  const cohortEvidence = cohortReview.verify(htmlBytes);
+  const expandedHtml = Buffer.from(require('./standalone_payload.cjs').expandHtml(htmlBytes));
+  const cohortEvidence = cohortReview.verify(expandedHtml);
   const modelReview = require('./model_review.browser.cjs');
-  const modelEvidence = modelReview.verify(htmlBytes);
+  const modelEvidence = modelReview.verify(expandedHtml);
   const v9Review = require('./v9_review.browser.cjs');
-  const v9Evidence = v9Review.verify(htmlBytes);
+  const v9Evidence = v9Review.verify(expandedHtml);
   const b077Review = require('./b077_review.browser.cjs');
-  const b077Evidence = b077Review.verify(htmlBytes);
+  const b077Evidence = b077Review.verify(expandedHtml);
   if (process.argv.includes("--data-only")) {
     const combinations = [];
     const seenViews = new Set(), seenIssues = new Set();
@@ -317,7 +319,7 @@ function expectedRow(row, data) {
   // installed and cannot invoke a local browser as a side effect.
   const { chromium } = require(process.env.PLAYWRIGHT_MODULE_DIR || "playwright");
   const checks = [], snapshots = [], errors = [], consoleErrors = [], remoteRequests = [];
-  const contexts = [], screenshots = [];
+  const contexts = [], screenshots = [], screenshotGeometry = [];
   const visitedCells = new Set(), visitedViews = new Set(), seenIssues = new Set();
   let exhaustiveRows = 0, exhaustivePages = 0;
   const browser = await chromium.launch({ headless: true });
@@ -337,6 +339,8 @@ function expectedRow(row, data) {
     page.on("console", message => { if (message.type() === "error") consoleErrors.push(message.text()); });
     page.on("websocket", socket => remoteRequests.push(socket.url()));
     await page.goto(url, { waitUntil: "load" });
+    await page.waitForFunction(() => window.__SEL_OFFLINE_READY__ || window.__SEL_OFFLINE_ERROR__, null, {timeout:120000});
+    assert.equal(await page.evaluate(() => window.__SEL_OFFLINE_ERROR__), null);
     await page.waitForFunction(() => window.NBA_RENDER_STATE && window.NBA_PUBLIC_REPORT);
     return page;
   }
@@ -430,9 +434,17 @@ function expectedRow(row, data) {
     assert.deepEqual(result, { page: true, main: true, scrollContainers: true }, name);
     checks.push(name);
   }
-  async function screenshot(page, name) {
-    await page.screenshot({ path: path.join(output, name), fullPage: true });
+  async function screenshot(page, name, selector = 'h1') {
+    // The complete saved report contains large historical tables. Capture its
+    // actual viewport, not an unbounded full-document bitmap; every report row
+    // is still independently checked by the exhaustive DOM oracle below.
+    await page.locator(selector).first().scrollIntoViewIfNeeded();
+    const geometry = await page.evaluate(() => ({ viewport_width: innerWidth,
+      viewport_height: innerHeight, document_width: document.documentElement.scrollWidth,
+      document_height: document.documentElement.scrollHeight, scroll_y: scrollY }));
+    await page.screenshot({ path: path.join(output, name), fullPage: false });
     screenshots.push(name);
+    screenshotGeometry.push({ name, selector, capture: 'actual_viewport', ...geometry });
   }
   async function checkChampionTable(page) {
     const score = (value, metric) => typeof value !== "number" ? "Unavailable" : metric === "accuracy" ?
@@ -462,6 +474,8 @@ function expectedRow(row, data) {
     assert.ok((await page.locator('#nba-current-report').innerText()).includes('November 3 monitor archive'));
     await screenshot(page, 'nba-publication-entry.png');
     await page.locator('#nba-current-report a').first().click();
+    await page.waitForFunction(() => window.__SEL_OFFLINE_READY__ || window.__SEL_OFFLINE_ERROR__, null, {timeout:120000});
+    assert.equal(await page.evaluate(() => window.__SEL_OFFLINE_ERROR__), null);
     await page.waitForFunction(() => window.NBA_RENDER_STATE && window.NBA_PUBLIC_REPORT);
     assert.equal(page.url(), url);
     checks.push('nba_entry_point_opens_current_standalone_report_and_labels_archive');
@@ -498,6 +512,8 @@ function expectedRow(row, data) {
     await checkFilter(page, {}, "desktop_default_complete_inventory");
     await noOverflow(page, "desktop_no_page_horizontal_overflow");
     await screenshot(page, "nba-publication-desktop.png");
+    await screenshot(page, "nba-publication-desktop-models.png", "#nba-owner-review-title");
+    await screenshot(page, "nba-publication-desktop-cohorts.png", "#nba-current-cohorts h2");
 
     // Exhaustive displayed-row verification, including unsupported phases,
     // unresolved opponents and all games absent from the old issued inventory.
@@ -596,14 +612,16 @@ function expectedRow(row, data) {
     await checkChampionTable(small);
     await noOverflow(small, "mobile_390px_no_page_horizontal_overflow");
     await screenshot(small, "nba-publication-mobile.png");
+    await screenshot(small, "nba-publication-mobile-models.png", "#nba-owner-review-title");
+    await screenshot(small, "nba-publication-mobile-cohorts.png", "#nba-current-cohorts h2");
     await checkFilter(small, { status: "unresolved" }, "mobile_unresolved_official_matchups_visible");
     await noOverflow(small, "mobile_unresolved_rows_do_not_overflow");
-    await screenshot(small, "nba-publication-mobile-unresolved.png");
+    await screenshot(small, "nba-publication-mobile-unresolved.png", "#denominator");
     if (intervalRows.length) {
       const row = intervalRows[intervalRows.length - 1];
       await checkFilter(small, isolate(row), "mobile_original_interval_endpoints_and_clocks");
       await noOverflow(small, "mobile_intervals_stay_inside_scroll_container");
-      await screenshot(small, "nba-publication-mobile-intervals.png");
+      await screenshot(small, "nba-publication-mobile-intervals.png", "#denominator");
     }
     assert.deepEqual(await small.evaluate(() => window.NBA_PUBLIC_REPORT), data);
 
@@ -644,7 +662,7 @@ function expectedRow(row, data) {
       exhaustive_displayed_rows_checked: exhaustiveRows, exhaustive_pages_checked: exhaustivePages,
       evidence_as_of_utc: data.evidence_as_of_utc, coverage: data.coverage, checks, rendered_cases: snapshots,
       page_errors: errors, console_errors: consoleErrors, remote_page_requests: remoteRequests.length,
-      external_accessibility_audit: false, cross_browser_coverage: false, screenshots };
+      external_accessibility_audit: false, cross_browser_coverage: false, screenshots, screenshot_geometry: screenshotGeometry };
     fs.writeFileSync(path.join(output, "nba-publication-browser-result.json"), JSON.stringify(result, null, 2) + "\n");
     console.log(JSON.stringify(result, null, 2));
   } catch (error) {
