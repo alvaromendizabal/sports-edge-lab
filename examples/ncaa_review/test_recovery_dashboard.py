@@ -61,7 +61,9 @@ class RecoveryDashboardTests(unittest.TestCase):
     def test_new_panel_preserves_every_previous_page_byte(self):
         path=dashboard.HERE.parents[1]/'docs/ncaa/index.html'
         from b063r4_status import strip_banner
-        from b063r5_status import strip_banner as strip_latest_banner
+        from b063r5_status import strip_banner as strip_r5_banner
+        from b063r6_status import strip_banner as strip_r6_banner
+        strip_latest_banner=lambda body:strip_r5_banner(strip_r6_banner(body))
         text=strip_banner(strip_latest_banner(path.read_text()))
         self.assertEqual(text.count(latest_dashboard.BANNER), 1)
         # The R2 component has its own exact predecessor and idempotence gate.
