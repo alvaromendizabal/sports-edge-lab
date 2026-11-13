@@ -1,0 +1,266 @@
+{
+  "cache_evidence": {
+    "context_cache_historical_object_gets": 0,
+    "finalizer_archive_proof_hits": 5,
+    "finalizer_avoided_baseline_rebuilds": 1,
+    "finalizer_baseline_proof_hits": 1,
+    "finalizer_bytes_hashed": null,
+    "finalizer_hash_operations": null,
+    "finalizer_logical_reused_bytes": 11629109153,
+    "finalizer_unchanged_pin_reuses": 77357,
+    "parquet_bytes_read": 16220197,
+    "parquet_contexts": 2,
+    "parquet_operation": "VERIFIED_LOCAL_PARQUET_CONTEXT_REUSED",
+    "parquet_reuse_seconds": 5.352334451001298,
+    "parquet_rows": 30530,
+    "pipeline_bytes_hashed": 1283048852,
+    "pipeline_hash_operations": 2484,
+    "pipeline_logical_reused_bytes": 48411707640,
+    "pipeline_unchanged_pin_reuses": 333692,
+    "qualification": "Operation counters are not unique-file counts or measured physical bytes saved. Unreported finalizer full-body hash counts remain null. Different invocations and stages are not a controlled speedup trial.",
+    "repeated_label_adapter_calls": 0,
+    "whole_pipeline_s3_transfers_fully_instrumented": false
+  },
+  "cost_evidence": {
+    "actual_billed_cost_usd": null,
+    "added_to_pipeline_estimate": false,
+    "divided_by_projects_or_cpu_workers": false,
+    "estimated_whole_instance_invocation_usd": "0.2927413089312877680833333333",
+    "hourly_usd": "2.5700000000",
+    "measured_total_elapsed_seconds": 410.06564675199843,
+    "overlaps_pipeline_estimate_do_not_add": true,
+    "rate_provenance_sha256": "592b928e634c95c8e7a249394dd539fd56bf4fac27639042d4f175d2a5eb2224",
+    "scope": "WHOLE_HOST_DURING_OBSERVED_EXTERNAL_INVOCATION_INCLUDING_PREFLIGHT_AND_FINALIZATION",
+    "status": "VERIFIED_RATE_MEASURED_INTERVAL_ESTIMATE"
+  },
+  "latest_owner_execution": {
+    "elapsed_seconds": 410.06564675199843,
+    "executable_sha256": "3eb157877a6fa47844cd65a2fe50a8db00af0e66d0eb59441d97b918d5435ec6",
+    "exit_code": 2,
+    "failed_stage": "RETURN_BUDGET_PREFLIGHT_ARCHIVE_COMPRESSION_ADMISSION",
+    "fatal_error": "ResourceDeferred:TASK_PREPROCESSING_CPU_NOT_ADMITTED",
+    "finished_at_utc": "2026-11-13T00:06:41.995962Z",
+    "new_confirmed_scientific_fits": 0,
+    "new_forecasts": 0,
+    "release": "B079",
+    "return": {
+      "bytes": 120605732,
+      "members": 10,
+      "payload_members_authenticated": 9,
+      "sha256": "3e2385b51185997943bbdafb8c5000e9d11fbc65b5f1b314869ae9c83a15f483"
+    },
+    "scientific_stages_reached": false,
+    "secondary_heartbeat_error": null,
+    "started_at_utc": "2026-11-12T23:59:51.930595Z",
+    "status": "PARTIAL_RESUMABLE_OWNER_PIPELINE"
+  },
+  "limitations": [
+    "B079 did not enter scientific stages and produced zero confirmed new fits or forecasts.",
+    "The selected research snapshot retains every original game, issue, metric, missing role, schedule gap and market-coverage limitation.",
+    "B080 owner execution, full-season reevaluation, fresh forecasts and actual twelve-core scientific throughput remain pending.",
+    "Whole-pipeline S3 transfers are not fully instrumented; the zero historical GET figure is specifically the authenticated context-cache count.",
+    "No private executable, model state, feature transform, raw quote, credential or owner storage address appears in this public export."
+  ],
+  "live_logging": {
+    "closed": true,
+    "health_errors": [],
+    "heartbeat_interval_gate": "PASS",
+    "heartbeat_samples": 43,
+    "jsonl_bytes": 711729,
+    "log_bytes": 476246,
+    "logging_success_is_not_model_success": true,
+    "maximum_gap_seconds": 10.035731789999772,
+    "s3_checkpoints": {
+      "attempted_body_bytes": 136927,
+      "body_bytes_basis": "BODY_BYTES_PER_SDK_INVOCATION; RETRY_NETWORK_BYTES_NOT_OBSERVED",
+      "elapsed_seconds": 0.46345406400178035,
+      "failed_calls": 0,
+      "get_calls": 0,
+      "internal_HTTP_retry_attempts": null,
+      "list_calls": 0,
+      "put_calls": 9,
+      "request_count_basis": "SDK_METHOD_INVOCATIONS",
+      "scope": "LOG_CHECKPOINT_SINK_ONLY"
+    },
+    "target_seconds": 10.0
+  },
+  "observed_runtime": {
+    "cpu_qualification": "Matched process identities from the external logger over observed intervals; short-lived unobserved children and whole-host CPU are excluded.",
+    "matched_cpu_intervals": 42,
+    "matched_process_cpu_seconds": 282.34999999999997,
+    "one_reserved_core_samples": 38,
+    "peak_concurrent_scientific_fits": 0,
+    "peak_cpu_cores": 1.0010129036783713,
+    "peak_reserved_cores": 2,
+    "process_census_source_sha256": "70c8d0f735423cb074048c2adc58fc2820d4c5c0915aecf7503f086273b6f108",
+    "reservation_qualification": "38 observed heartbeats reserved one core; the maximum observed reservation was two cores. Reservation is not scientific utilization.",
+    "runtime_heartbeat_max_gap_seconds": 10.035731789999772,
+    "sample_elapsed_seconds": 409.9587766069999,
+    "samples": 43,
+    "time_weighted_cpu_cores": 0.6887277846247211,
+    "twelve_core_scientific_utilization_proven": false
+  },
+  "publication": {
+    "merge_verified": false,
+    "qualification": "Prepared source only. Exact-head checks, commit, merge and any website deployment are separate observations.",
+    "source_commit_verified": false,
+    "website_deployment_verified": false
+  },
+  "replacement_engineering": {
+    "all_deployed_sports_retrofitted": false,
+    "implemented_repairs": [
+      "Admit return capacity using a conservative authenticated manifest bound before science; keep exact archive compression, readback and size gates at final sealing.",
+      "Recheck temporary resource denial within a bounded continuous wait episode; retain all original CPU, memory, disk, identity and other-owner guards.",
+      "Record resource deferral separately from failed native work, preserve its receipts and checkpoints, and continue independent eligible optional lanes.",
+      "Keep unknown entered-stage fit counts unknown; protect allowance and recovery accounting from missing-count arithmetic failures.",
+      "Keep the existing one-core saved-evidence fallback available after a three-core replay refusal before work starts; do not repeat entered native fits.",
+      "Reuse authenticated unchanged data, completed historical tasks and numerical source contracts; preserve all original forecast and model evidence.",
+      "Expose current preflight inventory and return-budget stages in continuous logs, including bounded progress callbacks, instead of leaving an earlier adoption label active."
+    ],
+    "integrated_replacement_project": "NBA",
+    "logging_verification": {
+      "actual_AWS_owner_execution": false,
+      "actual_NBA_fits": 0,
+      "actual_local_process_elapsed_seconds": 33.0554091419981,
+      "cases": [
+        {
+          "child_returncode": 0,
+          "heartbeat_samples": 6,
+          "human_log_growth_observations": 3,
+          "jsonl_growth_observations": 3,
+          "mode": "stall",
+          "observed_max_gap_seconds": 10.01582,
+          "process_wait_channels": [
+            "__futex_wait",
+            "hrtimer_nanosleep",
+            "locks_lock_inode_wait"
+          ],
+          "registered_child_observed_in_process_samples": 3,
+          "stall_diagnostic_count": 1,
+          "tail_F_heartbeats_observed_while_child_alive": 4
+        },
+        {
+          "child_returncode": 1,
+          "heartbeat_samples": 5,
+          "human_log_growth_observations": 2,
+          "jsonl_growth_observations": 2,
+          "mode": "crash",
+          "observed_max_gap_seconds": 10.016373,
+          "process_wait_channels": [
+            "__futex_wait",
+            "hrtimer_nanosleep",
+            "locks_lock_inode_wait"
+          ],
+          "registered_child_observed_in_process_samples": 2,
+          "stall_diagnostic_count": 0,
+          "tail_F_heartbeats_observed_while_child_alive": 3
+        }
+      ],
+      "module_bytes": 53959,
+      "module_sha256": "0e1177c8ba3f51d3fa360eade70a27ed66aa31bef4052e16a218a6b309d2e48e",
+      "real_tail_F_observed": true,
+      "source_pins_unchanged_through_live_test": true,
+      "status": "PASS",
+      "unit_test_failures": 0,
+      "unit_tests": 18
+    },
+    "owner_execution_completed": false,
+    "package_verification": {
+      "all_payload_sha256_verified": true,
+      "elapsed_seconds": 44.845102397997834,
+      "embedded_lineage_verification": {
+        "AWS_operations": 0,
+        "all_members_verified": 1147,
+        "elapsed_seconds": 4.900856375999865,
+        "new_fits": 0,
+        "new_forecasts": 0,
+        "new_metric_scores": 0,
+        "status": "PASS"
+      },
+      "errors": 0,
+      "exact_package_bytes": 118159084,
+      "exact_package_sha256": "f3e201800e86ee72306dbcc32f751ff82a686489e9a4772c5115128dc4b496fd",
+      "failures": 0,
+      "launcher_process_fixtures_included": 11,
+      "module_errors": 0,
+      "new_engineering_regressions_included": 72,
+      "original_B079_members_preserved": 1115,
+      "owner_execution_performed": false,
+      "package_members": 1147,
+      "packaged_tests": 414,
+      "passed": 414,
+      "post_test_source_cache_pyc_files": 0,
+      "real_NBA_fits": 0,
+      "shared_logging_unit_tests_included": 18,
+      "skipped": 0,
+      "status": "PASS",
+      "warm_executable_local_review": {
+        "all_return_payload_pins_verified": true,
+        "elapsed_seconds": 2.981890924002073,
+        "execution_scope": "PREPARED_REVIEW_ONLY_NON_AWS",
+        "exit_code": 0,
+        "log_health_errors": [],
+        "new_scientific_fits": 0,
+        "owner_AWS_execution": false,
+        "return_log_and_JSONL_verified": true,
+        "return_zip_bytes": 121140160,
+        "return_zip_sha256": "6f5d56bdeec839612fbe9ecf06b46c20a82ea369061fe9a96a4a56dfad824aec",
+        "source_archive_members_redecoded": 0,
+        "source_members_freshly_rehashed": 0,
+        "status": "PASS",
+        "unchanged_source_member_identity_reuses": 1147,
+        "warm_bootstrap_seconds": 0.2077723119982693
+      }
+    },
+    "release": "B080",
+    "shared_logging_framework_projects": [
+      "NFL",
+      "FBS",
+      "NBA",
+      "NCAA basketball",
+      "other named projects"
+    ],
+    "status": "LOCAL_ENGINEERING_VERIFIED_OWNER_EXECUTION_PENDING",
+    "verification_summary": [
+      "The exact 118,159,084-byte B080 executable passed 414 of 414 packaged tests in 44.845 seconds, with zero failures, errors, skips or module errors. This includes 72 new engineering regressions; subset counts are not added again.",
+      "The exact complete executable also exited 0 in a 2.982-second local review with a verified 121,140,160-byte return, human log and JSONL. Warm bootstrap took 0.208 seconds, reused 1,147 authenticated member identities and freshly rehashed zero source members. This is a prepared non-AWS review with zero sports fits.",
+      "21 new control-flow and recovery regressions passed through the actual stage controller and finalizer tally readers.",
+      "67 inherited current-season replay, frozen-origin, native V9 study and accounting tests passed with invented inputs.",
+      "17 numerical implementation modules were verified byte-identical to the authenticated B079 executable.",
+      "The actual B079 owner log recorded 43 heartbeats with a maximum 10.035732-second gap and no logger health errors. It still produced zero new scientific fits.",
+      "Local fixture tests do not establish B080 owner-host training throughput or twelve concurrent scientific fits."
+    ],
+    "verified_new_owner_scientific_fits": 0
+  },
+  "schema": "sports-edge-lab.nba.execution-review.v1",
+  "science_preservation": {
+    "all_target_horizon_cells": 7644,
+    "authenticated_completed_frozen_tasks": 2328,
+    "automatic_promotions": 0,
+    "available_selected_role_cells": 4245,
+    "completed_task_release_counts": {
+      "B076": 791,
+      "B077": 761,
+      "original": 776
+    },
+    "latest_original_issue_at_utc": "2026-11-12T02:02:29.830904+00:00",
+    "missing_selected_role_cells": 22287,
+    "observed_games": 1274,
+    "original_forecasts_results_champions_unchanged": true,
+    "publication_new_fits": 0,
+    "publication_new_forecasts": 0,
+    "publication_new_scoring": 0,
+    "saved_historical_peak_groups": 28,
+    "saved_metric_rows": 248,
+    "saved_venue_comparison_rows": 24,
+    "selected_research_evidence_as_of_utc": "2026-11-12T02:15:47.762742Z",
+    "selected_role_opportunities": 26532,
+    "source_sha256": {
+      "b077_historical_peaks_and_gates.json": "65edad6d038b898b384aa6907070c48180798c7b95404fe00c2952f53d368e85",
+      "b078_recovered_b077_evidence.json": "74dd8d0632e9efeb1885b410b7c2f5a82129ba5b41f3e2e70114a4aa0e824c1b",
+      "latest_research_outputs.json": "9e6795387c1e64bc6265da04bdd9d4e9fd0fb9860007da7b465549752542149b",
+      "latest_v9_acceptance.json": "7e39b2285177cd5fc2ab78b9463f21a34bad254e872afb14318b63cfdf1fda5e"
+    }
+  },
+  "scope": "SANITIZED_OWNER_EXECUTION_AGGREGATES_AND_LOCAL_ENGINEERING_TESTS"
+}
