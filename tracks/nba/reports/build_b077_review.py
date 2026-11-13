@@ -1,5 +1,6 @@
 """Render saved public NBA metrics without fitting, inference or rescoring."""
 from pathlib import Path
+from b083_html import expand_html
 import hashlib
 import html
 import json
@@ -112,12 +113,14 @@ def render_section(evidence,data,peaks):
     return result
 
 def build(check=False):
+    from restore_snapshot_assets import restore
+    if (ROOT/'snapshot_asset_manifest.json').exists():restore(ROOT)
     path=ROOT/'latest_research_outputs.html'
     data=json.loads((ROOT/'history/b077_recovered_selected_outputs.json').read_bytes())
     evidence=json.loads((ROOT/'b078_recovered_b077_evidence.json').read_bytes())
     peaks=json.loads((ROOT/'b077_historical_peaks_and_gates.json').read_bytes())
     assert evidence['schema']=='sports-edge-lab.nba.recovered-b077-review.v1'
-    current=path.read_text()
+    current=expand_html(path.read_text())
     clean=re.sub(re.escape(BEGIN)+r'.*?'+re.escape(END)+r'\n?', '',current,flags=re.S)
     anchor='<p><a href="latest_research_outputs.json">Complete observed schedule and selected outputs</a> · <a href="validate_research_snapshot.py">Public evidence validator</a> · <a href="../README.md">NBA research history</a></p>\n'
     if clean.count(anchor)!=1:raise ValueError('The selected-output insertion point must be unique')

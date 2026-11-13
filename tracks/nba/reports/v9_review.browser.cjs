@@ -11,8 +11,8 @@ function verify(htmlBytes){
  assert.equal(r.selected_output_sha256,hash(fs.readFileSync(path.join(__dirname,'latest_research_outputs.json'))));
  assert.deepEqual(r.game_rows.map(g=>g.game_id).sort(),Object.keys(p.games).sort());
  assert.equal(r.coverage.observed_games,1274);assert.equal(r.coverage.unobserved_regular_slots,24);
- assert.equal(r.coverage.expected_current_role_cells,26532);assert.equal(r.coverage.available_current_role_cells,4245);
- assert.equal(r.coverage.missing_current_role_cells,22287);assert.equal(r.coverage.all_target_horizon_cells,7644);
+ assert.equal(r.coverage.expected_current_role_cells,26532);assert.equal(r.coverage.available_current_role_cells,22082);
+ assert.equal(r.coverage.missing_current_role_cells,4450);assert.equal(r.coverage.all_target_horizon_cells,7644);
  assert.equal(r.coverage.full_season_completion_claim,false);assert.equal(r.coverage.future_full_schedule_complete,false);
  let issueCells=0;
  for(const game of r.game_rows){const original=p.games[game.game_id],cov=p.game_coverage[game.game_id];
@@ -26,7 +26,7 @@ function verify(htmlBytes){
  }
  assert.equal(r.saved_metric_diagnostics.length,392);
  for(const d of r.saved_metric_diagnostics){const source=m.metric_rows[d.source_index];assert.equal(d.role_alias,source.role_alias);assert.equal(d.scored_games,source.scored_games);for(const [key,value]of Object.entries(d.metrics))assert.equal(value,source.metrics[key]);}
- assert.equal(r.runtime_receipts.length,5);assert.ok(r.runtime_receipts.every(x=>x.source_present===true&&x.verified_acceptance_claim===false));const native=r.runtime_receipts.find(x=>x.section==='V9_parallel').native;assert.equal(native.real_estimator_fit_returns,1);assert.equal(native.observed_peak_concurrent_native_fits,1);assert.equal(r.runtime_receipts.find(x=>x.section==='V9_cache').repeat_read_gate.second_pass.s3_gets_completed,0);
+ assert.equal(r.runtime_receipts.length,5);assert.ok(r.runtime_receipts.every(x=>x.source_present===true&&x.verified_acceptance_claim===false));const native=r.runtime_receipts.find(x=>x.section==='V9_parallel').native;assert.equal(native.real_estimator_fit_returns,318);assert.equal(native.observed_peak_concurrent_native_fits,6);const cache=r.runtime_receipts.find(x=>x.section==='V9_cache');assert.equal(cache.authenticated_context_cache.historical_full_S3_GETs,0);assert.equal(cache.authenticated_context_cache.contexts,2);assert.equal(cache.repeat_read_gate,undefined);
  assert.equal(r.window_coverage.length,24);assert.ok(r.window_coverage.every(x=>x.saved_metric_rows===0&&x.full_current_season_best_claim===false));
  assert.equal(r.publication_lifecycle_scope,'CURRENT_OWNER_EXPORT');assert.equal(r.publication_lifecycle.merged.verified,false);assert.equal(r.publication_lifecycle.deployed.verified,false);
  return{status:'PASS',games:r.game_rows.length,issue_source_cells_checked:issueCells,diagnostic_rows:392,real_fits:0,new_scores:0};

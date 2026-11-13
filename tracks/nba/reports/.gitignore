@@ -1,0 +1,4 @@
+# Materialized by restore_snapshot_assets.py from exact pinned gzip bytes.
+/latest_research_outputs.json
+/latest_v9_acceptance.json
+/__pycache__/

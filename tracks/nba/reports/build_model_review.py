@@ -1,5 +1,6 @@
 """Render saved authorized NBA aggregates without private inputs or new scoring."""
 from pathlib import Path
+from b083_html import expand_html
 import hashlib
 import html
 import json
@@ -74,11 +75,13 @@ def attach_model_review(base_html,review):
 
 
 def build(check=False):
+    from restore_snapshot_assets import restore
+    if (ROOT/'snapshot_asset_manifest.json').exists():restore(ROOT)
     saved=json.loads((ROOT/'latest_model_review.json').read_bytes())
     public=json.loads((ROOT/'latest_research_outputs.json').read_bytes())
     if saved['evidence_as_of_utc']!=public['evidence_as_of_utc'] or saved['latest_original_issue_at_utc']!=public['latest_forecast_issue_at_utc']:
         _fail('SAVED_SOURCE_CLOCK_MISMATCH')
-    path=ROOT/'latest_research_outputs.html'; current=path.read_text()
+    path=ROOT/'latest_research_outputs.html'; current=expand_html(path.read_text())
     result=attach_model_review(current,saved)
     if check and result!=current:_fail('SAVED_MODEL_DISPLAY_STALE')
     if not check:path.write_text(result)

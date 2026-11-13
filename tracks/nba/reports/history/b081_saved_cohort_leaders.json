@@ -1,0 +1,850 @@
+{
+  "cohort_aliases_identify_verified_game_id_sets_not_just_equal_counts": true,
+  "entire_current_season_best_claim": false,
+  "evidence_as_of_utc": "2026-11-13T03:36:15.633156Z",
+  "exporter_release": "B082",
+  "independent_confirmation_claim": false,
+  "metric_precision_decimal_places": 6,
+  "new_estimator_fits": 0,
+  "new_inference": 0,
+  "new_metric_scoring": 0,
+  "no_cross_cohort_ranking": true,
+  "original_issue_claim": false,
+  "production_promotions": 0,
+  "release": "B081",
+  "rows": [
+    {
+      "cohort_alias": "saved_current_support_01",
+      "completed_game_denominator": 173,
+      "distinct_saved_recipes": 1,
+      "eligible_saved_role_views": 1,
+      "entire_current_season_best_claim": false,
+      "evidence_track": "CURRENT_FIXED_STATE_REPLAY",
+      "exact_same_official_game_set_verified": true,
+      "families": [
+        "Ridge"
+      ],
+      "horizon_minutes": 60,
+      "metric": "mae",
+      "missing_games": 41,
+      "new_paired_interval_calculated": false,
+      "original_issue_claim": false,
+      "phase": "regular",
+      "role_kinds": [
+        "selected"
+      ],
+      "saved_metric_value": 11.999473,
+      "scored_games": 132,
+      "season": "2026-27",
+      "selection_or_promotion_allowed": false,
+      "source_rows": [
+        {
+          "family": "Ridge",
+          "role_alias": "selected_regular_margin_crps_t60_8",
+          "role_kind": "selected",
+          "row_id": "current_replay_final_8",
+          "selected_metric": "crps",
+          "source_index": 8,
+          "source_section": "current_replay_final"
+        }
+      ],
+      "source_section": "current_replay_final",
+      "target": "margin"
+    },
+    {
+      "cohort_alias": "saved_current_support_01",
+      "completed_game_denominator": 173,
+      "distinct_saved_recipes": 1,
+      "eligible_saved_role_views": 1,
+      "entire_current_season_best_claim": false,
+      "evidence_track": "CURRENT_FIXED_STATE_REPLAY",
+      "exact_same_official_game_set_verified": true,
+      "families": [
+        "Ridge"
+      ],
+      "horizon_minutes": 60,
+      "metric": "rmse",
+      "missing_games": 41,
+      "new_paired_interval_calculated": false,
+      "original_issue_claim": false,
+      "phase": "regular",
+      "role_kinds": [
+        "selected"
+      ],
+      "saved_metric_value": 15.24789,
+      "scored_games": 132,
+      "season": "2026-27",
+      "selection_or_promotion_allowed": false,
+      "source_rows": [
+        {
+          "family": "Ridge",
+          "role_alias": "selected_regular_margin_crps_t60_8",
+          "role_kind": "selected",
+          "row_id": "current_replay_final_8",
+          "selected_metric": "crps",
+          "source_index": 8,
+          "source_section": "current_replay_final"
+        }
+      ],
+      "source_section": "current_replay_final",
+      "target": "margin"
+    },
+    {
+      "cohort_alias": "saved_current_support_02",
+      "completed_game_denominator": 173,
+      "distinct_saved_recipes": 3,
+      "eligible_saved_role_views": 4,
+      "entire_current_season_best_claim": false,
+      "evidence_track": "CURRENT_FIXED_STATE_REPLAY",
+      "exact_same_official_game_set_verified": true,
+      "families": [
+        "CatBoost"
+      ],
+      "horizon_minutes": 60,
+      "metric": "mae",
+      "missing_games": 41,
+      "new_paired_interval_calculated": false,
+      "original_issue_claim": false,
+      "phase": "regular",
+      "role_kinds": [
+        "selected"
+      ],
+      "saved_metric_value": 14.74578,
+      "scored_games": 132,
+      "season": "2026-27",
+      "selection_or_promotion_allowed": false,
+      "source_rows": [
+        {
+          "family": "CatBoost",
+          "role_alias": "selected_regular_total_crps_t60_16",
+          "role_kind": "selected",
+          "row_id": "current_replay_final_16",
+          "selected_metric": "crps",
+          "source_index": 16,
+          "source_section": "current_replay_final"
+        },
+        {
+          "family": "CatBoost",
+          "role_alias": "selected_regular_total_weighted_interval_score_t60_17",
+          "role_kind": "selected",
+          "row_id": "current_replay_final_17",
+          "selected_metric": "weighted_interval_score",
+          "source_index": 17,
+          "source_section": "current_replay_final"
+        }
+      ],
+      "source_section": "current_replay_final",
+      "target": "total"
+    },
+    {
+      "cohort_alias": "saved_current_support_02",
+      "completed_game_denominator": 173,
+      "distinct_saved_recipes": 3,
+      "eligible_saved_role_views": 4,
+      "entire_current_season_best_claim": false,
+      "evidence_track": "CURRENT_FIXED_STATE_REPLAY",
+      "exact_same_official_game_set_verified": true,
+      "families": [
+        "Precommitted ensemble"
+      ],
+      "horizon_minutes": 60,
+      "metric": "rmse",
+      "missing_games": 41,
+      "new_paired_interval_calculated": false,
+      "original_issue_claim": false,
+      "phase": "regular",
+      "role_kinds": [
+        "selected"
+      ],
+      "saved_metric_value": 18.706388,
+      "scored_games": 132,
+      "season": "2026-27",
+      "selection_or_promotion_allowed": false,
+      "source_rows": [
+        {
+          "family": "Precommitted ensemble",
+          "role_alias": "selected_regular_total_rmse_t60_15",
+          "role_kind": "selected",
+          "row_id": "current_replay_final_15",
+          "selected_metric": "rmse",
+          "source_index": 15,
+          "source_section": "current_replay_final"
+        }
+      ],
+      "source_section": "current_replay_final",
+      "target": "total"
+    },
+    {
+      "cohort_alias": "saved_current_support_03",
+      "completed_game_denominator": 173,
+      "distinct_saved_recipes": 2,
+      "eligible_saved_role_views": 3,
+      "entire_current_season_best_claim": false,
+      "evidence_track": "CURRENT_FIXED_STATE_REPLAY",
+      "exact_same_official_game_set_verified": true,
+      "families": [
+        "Logistic regression"
+      ],
+      "horizon_minutes": 60,
+      "metric": "accuracy",
+      "missing_games": 41,
+      "new_paired_interval_calculated": false,
+      "original_issue_claim": false,
+      "phase": "regular",
+      "role_kinds": [
+        "selected"
+      ],
+      "saved_metric_value": 0.659091,
+      "scored_games": 132,
+      "season": "2026-27",
+      "selection_or_promotion_allowed": false,
+      "source_rows": [
+        {
+          "family": "Logistic regression",
+          "role_alias": "selected_regular_winner_log_loss_t60_1",
+          "role_kind": "selected",
+          "row_id": "current_replay_final_1",
+          "selected_metric": "log_loss",
+          "source_index": 1,
+          "source_section": "current_replay_final"
+        },
+        {
+          "family": "Logistic regression",
+          "role_alias": "selected_regular_winner_brier_t60_2",
+          "role_kind": "selected",
+          "row_id": "current_replay_final_2",
+          "selected_metric": "brier",
+          "source_index": 2,
+          "source_section": "current_replay_final"
+        }
+      ],
+      "source_section": "current_replay_final",
+      "target": "winner"
+    },
+    {
+      "cohort_alias": "saved_current_support_03",
+      "completed_game_denominator": 173,
+      "distinct_saved_recipes": 2,
+      "eligible_saved_role_views": 3,
+      "entire_current_season_best_claim": false,
+      "evidence_track": "CURRENT_FIXED_STATE_REPLAY",
+      "exact_same_official_game_set_verified": true,
+      "families": [
+        "XGBoost"
+      ],
+      "horizon_minutes": 60,
+      "metric": "log_loss",
+      "missing_games": 41,
+      "new_paired_interval_calculated": false,
+      "original_issue_claim": false,
+      "phase": "regular",
+      "role_kinds": [
+        "selected"
+      ],
+      "saved_metric_value": 0.617517,
+      "scored_games": 132,
+      "season": "2026-27",
+      "selection_or_promotion_allowed": false,
+      "source_rows": [
+        {
+          "family": "XGBoost",
+          "role_alias": "selected_regular_winner_accuracy_t60_0",
+          "role_kind": "selected",
+          "row_id": "current_replay_final_0",
+          "selected_metric": "accuracy",
+          "source_index": 0,
+          "source_section": "current_replay_final"
+        }
+      ],
+      "source_section": "current_replay_final",
+      "target": "winner"
+    },
+    {
+      "cohort_alias": "saved_current_support_03",
+      "completed_game_denominator": 173,
+      "distinct_saved_recipes": 2,
+      "eligible_saved_role_views": 3,
+      "entire_current_season_best_claim": false,
+      "evidence_track": "CURRENT_FIXED_STATE_REPLAY",
+      "exact_same_official_game_set_verified": true,
+      "families": [
+        "XGBoost"
+      ],
+      "horizon_minutes": 60,
+      "metric": "brier",
+      "missing_games": 41,
+      "new_paired_interval_calculated": false,
+      "original_issue_claim": false,
+      "phase": "regular",
+      "role_kinds": [
+        "selected"
+      ],
+      "saved_metric_value": 0.215627,
+      "scored_games": 132,
+      "season": "2026-27",
+      "selection_or_promotion_allowed": false,
+      "source_rows": [
+        {
+          "family": "XGBoost",
+          "role_alias": "selected_regular_winner_accuracy_t60_0",
+          "role_kind": "selected",
+          "row_id": "current_replay_final_0",
+          "selected_metric": "accuracy",
+          "source_index": 0,
+          "source_section": "current_replay_final"
+        }
+      ],
+      "source_section": "current_replay_final",
+      "target": "winner"
+    },
+    {
+      "cohort_alias": "saved_current_support_04",
+      "completed_game_denominator": 173,
+      "distinct_saved_recipes": 2,
+      "eligible_saved_role_views": 5,
+      "entire_current_season_best_claim": false,
+      "evidence_track": "CURRENT_FIXED_STATE_REPLAY",
+      "exact_same_official_game_set_verified": true,
+      "families": [
+        "Other registered model family"
+      ],
+      "horizon_minutes": 60,
+      "metric": "accuracy",
+      "missing_games": 45,
+      "new_paired_interval_calculated": false,
+      "original_issue_claim": false,
+      "phase": "regular",
+      "role_kinds": [
+        "former"
+      ],
+      "saved_metric_value": 0.6875,
+      "scored_games": 128,
+      "season": "2026-27",
+      "selection_or_promotion_allowed": false,
+      "source_rows": [
+        {
+          "family": "Other registered model family",
+          "role_alias": "former_regular_winner_accuracy_t60_52",
+          "role_kind": "former",
+          "row_id": "current_replay_final_52",
+          "selected_metric": "accuracy",
+          "source_index": 52,
+          "source_section": "current_replay_final"
+        },
+        {
+          "family": "Other registered model family",
+          "role_alias": "former_regular_winner_brier_t60_53",
+          "role_kind": "former",
+          "row_id": "current_replay_final_53",
+          "selected_metric": "brier",
+          "source_index": 53,
+          "source_section": "current_replay_final"
+        },
+        {
+          "family": "Other registered model family",
+          "role_alias": "former_regular_winner_log_loss_t60_54",
+          "role_kind": "former",
+          "row_id": "current_replay_final_54",
+          "selected_metric": "log_loss",
+          "source_index": 54,
+          "source_section": "current_replay_final"
+        },
+        {
+          "family": "Other registered model family",
+          "role_alias": "former_regular_winner_preserved_prior_probability_leader_t60_55",
+          "role_kind": "former",
+          "row_id": "current_replay_final_55",
+          "selected_metric": "preserved_prior_probability_leader",
+          "source_index": 55,
+          "source_section": "current_replay_final"
+        },
+        {
+          "family": "Other registered model family",
+          "role_alias": "former_regular_winner_preserved_prior_probability_leader_t60_61",
+          "role_kind": "former",
+          "row_id": "current_replay_final_61",
+          "selected_metric": "preserved_prior_probability_leader",
+          "source_index": 61,
+          "source_section": "current_replay_final"
+        }
+      ],
+      "source_section": "current_replay_final",
+      "target": "winner"
+    },
+    {
+      "cohort_alias": "saved_current_support_04",
+      "completed_game_denominator": 173,
+      "distinct_saved_recipes": 2,
+      "eligible_saved_role_views": 5,
+      "entire_current_season_best_claim": false,
+      "evidence_track": "CURRENT_FIXED_STATE_REPLAY",
+      "exact_same_official_game_set_verified": true,
+      "families": [
+        "Other registered model family"
+      ],
+      "horizon_minutes": 60,
+      "metric": "log_loss",
+      "missing_games": 45,
+      "new_paired_interval_calculated": false,
+      "original_issue_claim": false,
+      "phase": "regular",
+      "role_kinds": [
+        "former"
+      ],
+      "saved_metric_value": 0.543388,
+      "scored_games": 128,
+      "season": "2026-27",
+      "selection_or_promotion_allowed": false,
+      "source_rows": [
+        {
+          "family": "Other registered model family",
+          "role_alias": "former_regular_winner_preserved_prior_probability_leader_t60_61",
+          "role_kind": "former",
+          "row_id": "current_replay_final_61",
+          "selected_metric": "preserved_prior_probability_leader",
+          "source_index": 61,
+          "source_section": "current_replay_final"
+        }
+      ],
+      "source_section": "current_replay_final",
+      "target": "winner"
+    },
+    {
+      "cohort_alias": "saved_current_support_04",
+      "completed_game_denominator": 173,
+      "distinct_saved_recipes": 2,
+      "eligible_saved_role_views": 5,
+      "entire_current_season_best_claim": false,
+      "evidence_track": "CURRENT_FIXED_STATE_REPLAY",
+      "exact_same_official_game_set_verified": true,
+      "families": [
+        "Other registered model family"
+      ],
+      "horizon_minutes": 60,
+      "metric": "brier",
+      "missing_games": 45,
+      "new_paired_interval_calculated": false,
+      "original_issue_claim": false,
+      "phase": "regular",
+      "role_kinds": [
+        "former"
+      ],
+      "saved_metric_value": 0.185435,
+      "scored_games": 128,
+      "season": "2026-27",
+      "selection_or_promotion_allowed": false,
+      "source_rows": [
+        {
+          "family": "Other registered model family",
+          "role_alias": "former_regular_winner_preserved_prior_probability_leader_t60_61",
+          "role_kind": "former",
+          "row_id": "current_replay_final_61",
+          "selected_metric": "preserved_prior_probability_leader",
+          "source_index": 61,
+          "source_section": "current_replay_final"
+        }
+      ],
+      "source_section": "current_replay_final",
+      "target": "winner"
+    },
+    {
+      "cohort_alias": "saved_current_support_05",
+      "completed_game_denominator": 173,
+      "distinct_saved_recipes": 1,
+      "eligible_saved_role_views": 1,
+      "entire_current_season_best_claim": false,
+      "evidence_track": "CURRENT_FIXED_STATE_REPLAY",
+      "exact_same_official_game_set_verified": true,
+      "families": [
+        "Ridge"
+      ],
+      "horizon_minutes": 120,
+      "metric": "mae",
+      "missing_games": 41,
+      "new_paired_interval_calculated": false,
+      "original_issue_claim": false,
+      "phase": "regular",
+      "role_kinds": [
+        "selected"
+      ],
+      "saved_metric_value": 11.936822,
+      "scored_games": 132,
+      "season": "2026-27",
+      "selection_or_promotion_allowed": false,
+      "source_rows": [
+        {
+          "family": "Ridge",
+          "role_alias": "selected_regular_margin_crps_t120_12",
+          "role_kind": "selected",
+          "row_id": "current_replay_final_12",
+          "selected_metric": "crps",
+          "source_index": 12,
+          "source_section": "current_replay_final"
+        }
+      ],
+      "source_section": "current_replay_final",
+      "target": "margin"
+    },
+    {
+      "cohort_alias": "saved_current_support_05",
+      "completed_game_denominator": 173,
+      "distinct_saved_recipes": 1,
+      "eligible_saved_role_views": 1,
+      "entire_current_season_best_claim": false,
+      "evidence_track": "CURRENT_FIXED_STATE_REPLAY",
+      "exact_same_official_game_set_verified": true,
+      "families": [
+        "Ridge"
+      ],
+      "horizon_minutes": 120,
+      "metric": "rmse",
+      "missing_games": 41,
+      "new_paired_interval_calculated": false,
+      "original_issue_claim": false,
+      "phase": "regular",
+      "role_kinds": [
+        "selected"
+      ],
+      "saved_metric_value": 15.211523,
+      "scored_games": 132,
+      "season": "2026-27",
+      "selection_or_promotion_allowed": false,
+      "source_rows": [
+        {
+          "family": "Ridge",
+          "role_alias": "selected_regular_margin_crps_t120_12",
+          "role_kind": "selected",
+          "row_id": "current_replay_final_12",
+          "selected_metric": "crps",
+          "source_index": 12,
+          "source_section": "current_replay_final"
+        }
+      ],
+      "source_section": "current_replay_final",
+      "target": "margin"
+    },
+    {
+      "cohort_alias": "saved_current_support_06",
+      "completed_game_denominator": 173,
+      "distinct_saved_recipes": 2,
+      "eligible_saved_role_views": 4,
+      "entire_current_season_best_claim": false,
+      "evidence_track": "CURRENT_FIXED_STATE_REPLAY",
+      "exact_same_official_game_set_verified": true,
+      "families": [
+        "Precommitted ensemble"
+      ],
+      "horizon_minutes": 120,
+      "metric": "mae",
+      "missing_games": 41,
+      "new_paired_interval_calculated": false,
+      "original_issue_claim": false,
+      "phase": "regular",
+      "role_kinds": [
+        "selected"
+      ],
+      "saved_metric_value": 14.709124,
+      "scored_games": 132,
+      "season": "2026-27",
+      "selection_or_promotion_allowed": false,
+      "source_rows": [
+        {
+          "family": "Precommitted ensemble",
+          "role_alias": "selected_regular_total_mae_t120_18",
+          "role_kind": "selected",
+          "row_id": "current_replay_final_18",
+          "selected_metric": "mae",
+          "source_index": 18,
+          "source_section": "current_replay_final"
+        }
+      ],
+      "source_section": "current_replay_final",
+      "target": "total"
+    },
+    {
+      "cohort_alias": "saved_current_support_06",
+      "completed_game_denominator": 173,
+      "distinct_saved_recipes": 2,
+      "eligible_saved_role_views": 4,
+      "entire_current_season_best_claim": false,
+      "evidence_track": "CURRENT_FIXED_STATE_REPLAY",
+      "exact_same_official_game_set_verified": true,
+      "families": [
+        "Precommitted ensemble"
+      ],
+      "horizon_minutes": 120,
+      "metric": "rmse",
+      "missing_games": 41,
+      "new_paired_interval_calculated": false,
+      "original_issue_claim": false,
+      "phase": "regular",
+      "role_kinds": [
+        "selected"
+      ],
+      "saved_metric_value": 18.675525,
+      "scored_games": 132,
+      "season": "2026-27",
+      "selection_or_promotion_allowed": false,
+      "source_rows": [
+        {
+          "family": "Precommitted ensemble",
+          "role_alias": "selected_regular_total_mae_t120_18",
+          "role_kind": "selected",
+          "row_id": "current_replay_final_18",
+          "selected_metric": "mae",
+          "source_index": 18,
+          "source_section": "current_replay_final"
+        }
+      ],
+      "source_section": "current_replay_final",
+      "target": "total"
+    },
+    {
+      "cohort_alias": "saved_current_support_07",
+      "completed_game_denominator": 173,
+      "distinct_saved_recipes": 2,
+      "eligible_saved_role_views": 2,
+      "entire_current_season_best_claim": false,
+      "evidence_track": "CURRENT_FIXED_STATE_REPLAY",
+      "exact_same_official_game_set_verified": true,
+      "families": [
+        "Extra trees"
+      ],
+      "horizon_minutes": 120,
+      "metric": "accuracy",
+      "missing_games": 41,
+      "new_paired_interval_calculated": false,
+      "original_issue_claim": false,
+      "phase": "regular",
+      "role_kinds": [
+        "selected"
+      ],
+      "saved_metric_value": 0.681818,
+      "scored_games": 132,
+      "season": "2026-27",
+      "selection_or_promotion_allowed": false,
+      "source_rows": [
+        {
+          "family": "Extra trees",
+          "role_alias": "selected_regular_winner_accuracy_t120_3",
+          "role_kind": "selected",
+          "row_id": "current_replay_final_3",
+          "selected_metric": "accuracy",
+          "source_index": 3,
+          "source_section": "current_replay_final"
+        }
+      ],
+      "source_section": "current_replay_final",
+      "target": "winner"
+    },
+    {
+      "cohort_alias": "saved_current_support_07",
+      "completed_game_denominator": 173,
+      "distinct_saved_recipes": 2,
+      "eligible_saved_role_views": 2,
+      "entire_current_season_best_claim": false,
+      "evidence_track": "CURRENT_FIXED_STATE_REPLAY",
+      "exact_same_official_game_set_verified": true,
+      "families": [
+        "Extra trees"
+      ],
+      "horizon_minutes": 120,
+      "metric": "log_loss",
+      "missing_games": 41,
+      "new_paired_interval_calculated": false,
+      "original_issue_claim": false,
+      "phase": "regular",
+      "role_kinds": [
+        "selected"
+      ],
+      "saved_metric_value": 0.604245,
+      "scored_games": 132,
+      "season": "2026-27",
+      "selection_or_promotion_allowed": false,
+      "source_rows": [
+        {
+          "family": "Extra trees",
+          "role_alias": "selected_regular_winner_accuracy_t120_3",
+          "role_kind": "selected",
+          "row_id": "current_replay_final_3",
+          "selected_metric": "accuracy",
+          "source_index": 3,
+          "source_section": "current_replay_final"
+        }
+      ],
+      "source_section": "current_replay_final",
+      "target": "winner"
+    },
+    {
+      "cohort_alias": "saved_current_support_07",
+      "completed_game_denominator": 173,
+      "distinct_saved_recipes": 2,
+      "eligible_saved_role_views": 2,
+      "entire_current_season_best_claim": false,
+      "evidence_track": "CURRENT_FIXED_STATE_REPLAY",
+      "exact_same_official_game_set_verified": true,
+      "families": [
+        "Extra trees"
+      ],
+      "horizon_minutes": 120,
+      "metric": "brier",
+      "missing_games": 41,
+      "new_paired_interval_calculated": false,
+      "original_issue_claim": false,
+      "phase": "regular",
+      "role_kinds": [
+        "selected"
+      ],
+      "saved_metric_value": 0.209591,
+      "scored_games": 132,
+      "season": "2026-27",
+      "selection_or_promotion_allowed": false,
+      "source_rows": [
+        {
+          "family": "Extra trees",
+          "role_alias": "selected_regular_winner_accuracy_t120_3",
+          "role_kind": "selected",
+          "row_id": "current_replay_final_3",
+          "selected_metric": "accuracy",
+          "source_index": 3,
+          "source_section": "current_replay_final"
+        }
+      ],
+      "source_section": "current_replay_final",
+      "target": "winner"
+    },
+    {
+      "cohort_alias": "saved_current_support_08",
+      "completed_game_denominator": 173,
+      "distinct_saved_recipes": 4,
+      "eligible_saved_role_views": 5,
+      "entire_current_season_best_claim": false,
+      "evidence_track": "CURRENT_FIXED_STATE_REPLAY",
+      "exact_same_official_game_set_verified": true,
+      "families": [
+        "Histogram gradient boosting"
+      ],
+      "horizon_minutes": 120,
+      "metric": "accuracy",
+      "missing_games": 45,
+      "new_paired_interval_calculated": false,
+      "original_issue_claim": false,
+      "phase": "regular",
+      "role_kinds": [
+        "former"
+      ],
+      "saved_metric_value": 0.703125,
+      "scored_games": 128,
+      "season": "2026-27",
+      "selection_or_promotion_allowed": false,
+      "source_rows": [
+        {
+          "family": "Histogram gradient boosting",
+          "role_alias": "former_regular_winner_preserved_previously_reported_current_comparator_t120_46",
+          "role_kind": "former",
+          "row_id": "current_replay_final_46",
+          "selected_metric": "preserved_previously_reported_current_comparator",
+          "source_index": 46,
+          "source_section": "current_replay_final"
+        },
+        {
+          "family": "Histogram gradient boosting",
+          "role_alias": "former_regular_winner_preserved_previously_reported_current_comparator_t120_79",
+          "role_kind": "former",
+          "row_id": "current_replay_final_79",
+          "selected_metric": "preserved_previously_reported_current_comparator",
+          "source_index": 79,
+          "source_section": "current_replay_final"
+        }
+      ],
+      "source_section": "current_replay_final",
+      "target": "winner"
+    },
+    {
+      "cohort_alias": "saved_current_support_08",
+      "completed_game_denominator": 173,
+      "distinct_saved_recipes": 4,
+      "eligible_saved_role_views": 5,
+      "entire_current_season_best_claim": false,
+      "evidence_track": "CURRENT_FIXED_STATE_REPLAY",
+      "exact_same_official_game_set_verified": true,
+      "families": [
+        "Histogram gradient boosting"
+      ],
+      "horizon_minutes": 120,
+      "metric": "log_loss",
+      "missing_games": 45,
+      "new_paired_interval_calculated": false,
+      "original_issue_claim": false,
+      "phase": "regular",
+      "role_kinds": [
+        "former"
+      ],
+      "saved_metric_value": 0.538644,
+      "scored_games": 128,
+      "season": "2026-27",
+      "selection_or_promotion_allowed": false,
+      "source_rows": [
+        {
+          "family": "Histogram gradient boosting",
+          "role_alias": "former_regular_winner_preserved_previously_reported_current_comparator_t120_46",
+          "role_kind": "former",
+          "row_id": "current_replay_final_46",
+          "selected_metric": "preserved_previously_reported_current_comparator",
+          "source_index": 46,
+          "source_section": "current_replay_final"
+        }
+      ],
+      "source_section": "current_replay_final",
+      "target": "winner"
+    },
+    {
+      "cohort_alias": "saved_current_support_08",
+      "completed_game_denominator": 173,
+      "distinct_saved_recipes": 4,
+      "eligible_saved_role_views": 5,
+      "entire_current_season_best_claim": false,
+      "evidence_track": "CURRENT_FIXED_STATE_REPLAY",
+      "exact_same_official_game_set_verified": true,
+      "families": [
+        "Histogram gradient boosting"
+      ],
+      "horizon_minutes": 120,
+      "metric": "brier",
+      "missing_games": 45,
+      "new_paired_interval_calculated": false,
+      "original_issue_claim": false,
+      "phase": "regular",
+      "role_kinds": [
+        "former"
+      ],
+      "saved_metric_value": 0.182483,
+      "scored_games": 128,
+      "season": "2026-27",
+      "selection_or_promotion_allowed": false,
+      "source_rows": [
+        {
+          "family": "Histogram gradient boosting",
+          "role_alias": "former_regular_winner_preserved_previously_reported_current_comparator_t120_46",
+          "role_kind": "former",
+          "row_id": "current_replay_final_46",
+          "selected_metric": "preserved_previously_reported_current_comparator",
+          "source_index": 46,
+          "source_section": "current_replay_final"
+        }
+      ],
+      "source_section": "current_replay_final",
+      "target": "winner"
+    }
+  ],
+  "schema": "sports-edge-lab.nba.saved-current-cohort-leaders.v1",
+  "scope": "DESCRIPTIVE_BEST_SAVED_SCORE_WITHIN_IDENTICAL_GAME_SET_TARGET_PHASE_AND_HORIZON",
+  "scores_copied_without_rescoring": true,
+  "selection_exposure": "EXPOSED_RETROSPECTIVE_CURRENT_MONITORING_ONLY",
+  "source_public_file": "latest_model_review.json",
+  "source_public_file_pin": {
+    "bytes": 320437,
+    "sha256": "d71286315816a948ac2022ad80673c7b643ae1bbdb043a857ee92c5f1e0e3dd4"
+  },
+  "unavailable_scope": "Missing games remain absent; original issued rolling evidence and market comparisons are separate."
+}

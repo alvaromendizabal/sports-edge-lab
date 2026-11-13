@@ -1,0 +1,31 @@
+{
+  "files": [
+    {
+      "gzip_name": "latest_research_outputs.json.gz",
+      "gzip_pin": {
+        "bytes": 1282450,
+        "sha256": "5a68199e3db0a5ecc652cc7c0bb79dfafa9d879e05447f8a0f3f58f3835e6ac0"
+      },
+      "name": "latest_research_outputs.json",
+      "original_pin": {
+        "bytes": 17681357,
+        "sha256": "3d28fc2e6116b7a75eb0037ccb2a2ea199afd9c29e7a72794ac9ece1722b8fdf"
+      }
+    },
+    {
+      "gzip_name": "latest_v9_acceptance.json.gz",
+      "gzip_pin": {
+        "bytes": 974801,
+        "sha256": "88e026492e2ed4cdb33ae13a9ecee9706a2e60770a6c251caa1b20b65801dd7d"
+      },
+      "name": "latest_v9_acceptance.json",
+      "original_pin": {
+        "bytes": 28984087,
+        "sha256": "9c47f58c4b625b97c4b4f6b64d68e2deabce08c202dd57f74ff88d9c4e7a6fbd"
+      }
+    }
+  ],
+  "lossy_projection": false,
+  "original_source_bytes_modified": false,
+  "schema": "sports-edge-lab.lossless-json-assets.v1"
+}

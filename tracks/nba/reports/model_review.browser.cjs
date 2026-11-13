@@ -7,14 +7,14 @@ const score=(x,m)=>typeof x!=='number'?'Unavailable':m==='accuracy'?(100*x).toFi
 function verify(html){const m=load('latest_model_review.json'),p=load('latest_research_outputs.json');
  const embedded=html.toString().match(/<script id="nba-owner-review-data" type="application\/json">([\s\S]*?)<\/script>/);
  assert.ok(embedded);assert.deepEqual(JSON.parse(embedded[1]),m);
- assert.equal(m.release,'B081');assert.equal(m.exporter_release,'B082');assert.equal(m.latest_original_issue_at_utc,p.latest_forecast_issue_at_utc);
+ assert.equal(m.release,'B082');assert.equal(m.exporter_release,'B082');assert.equal(m.latest_original_issue_at_utc,p.latest_forecast_issue_at_utc);
  assert.equal(m.evidence_as_of_utc,p.evidence_as_of_utc);assert.equal(m.metric_rows.length,392);assert.equal(m.historical_descriptive_peaks.length,28);
  assert.equal(m.publication_new_fits,0);assert.equal(m.publication_new_metric_scoring,0);assert.equal(m.production_promotions,0);
  assert.ok(m.metric_rows.every(row=>row.promotion_allowed===false));
  assert.ok(m.metric_rows.filter(row=>row.evidence_track!=='ORIGINAL_ISSUED_ROLLING').every(row=>row.original_issue_claim===false));
- assert.equal(m.model_pairs.length,0);assert.equal(m.venue_comparisons.length,0);assert.equal(m.venue_coverage.length,12);
+ assert.equal(m.model_pairs.length,66);assert.equal(m.venue_comparisons.length,105);assert.equal(m.venue_coverage.length,12);
  assert.equal(m.promotion_gates.registered_production.automatic_production_promotion,false);
- return {saved_metrics:m.metric_rows.length,descriptive_peaks:m.historical_descriptive_peaks.length,missing_current_pairs:true,current_venue_coverage_rows:m.venue_coverage.length,new_fits:0,new_scores:0};
+ return {saved_metrics:m.metric_rows.length,descriptive_peaks:m.historical_descriptive_peaks.length,saved_current_pairs:66,current_venue_coverage_rows:m.venue_coverage.length,new_fits:0,new_scores:0};
 }
 async function validatePage(page,name,exhaustive=false){const m=load('latest_model_review.json');
  assert.deepEqual(await page.locator('#nba-owner-review-data').evaluate(n=>JSON.parse(n.textContent)),m);

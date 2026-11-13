@@ -1,17 +1,20 @@
-"""Render the pinned saved B081 V9 export without owner data or rescoring."""
+"""Render the pinned saved B082 V9 export without owner data or rescoring."""
 import hashlib
 import json
 from pathlib import Path
+from b083_html import expand_html
 import sys
 
 import v9_publication
 
 ROOT = Path(__file__).parent
 # Updated only after authenticating a new owner return and selected-output export.
-PINS = {'latest_research_outputs.json': '4fbcbaed8b46182a044ba11ad69a2c283d724e42a7a61819091c88ee02ed8087', 'latest_model_review.json': 'd71286315816a948ac2022ad80673c7b643ae1bbdb043a857ee92c5f1e0e3dd4', 'latest_v9_acceptance.json': '9731fe2af9d8a1e45f32fe4855f4d1ea24949e3b598f30cf2a4bcaa2beaa1f71'}
+PINS = {'latest_research_outputs.json': '3d28fc2e6116b7a75eb0037ccb2a2ea199afd9c29e7a72794ac9ece1722b8fdf', 'latest_model_review.json': '32768513f97399c65b9bcab52b39686970acb26737c5c73aaa8a495564bce59f', 'latest_v9_acceptance.json': '9c47f58c4b625b97c4b4f6b64d68e2deabce08c202dd57f74ff88d9c4e7a6fbd'}
 
 
 def build(check=False):
+    from restore_snapshot_assets import restore
+    if (ROOT/'snapshot_asset_manifest.json').exists():restore(ROOT)
     saved = {}
     for name, expected in PINS.items():
         body = (ROOT / name).read_bytes()
@@ -35,7 +38,7 @@ def build(check=False):
         if any(source['metrics'].get(key) != value for key, value in row['metrics'].items()):
             raise ValueError('V9_SAVED_METRIC_CHANGED')
     path = ROOT / 'latest_research_outputs.html'
-    current = path.read_text()
+    current = expand_html(path.read_text())
     result = v9_publication.attach_review(current, review)
     if check and result != current:
         raise ValueError('V9_SAVED_DISPLAY_STALE')
