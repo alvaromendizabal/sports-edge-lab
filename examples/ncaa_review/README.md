@@ -1,3 +1,28 @@
+<!-- B063R8_STATUS_START -->
+## Latest actual return: R7 waited 120 seconds without admitting science
+
+All 118 shared decisions were denied by host IO full pressure, while 117 ready
+samples measured 45.7175–46.9802 spare CPU cores. The worker reserved no CPUs,
+entered no native preflight or scientific work, and produced zero new fits,
+forecasts or market comparisons. Existing research remains preserved.
+
+The owner live logger was verified: 33 paired event records, 15 heartbeats and a
+maximum monotonic gap of 10.005856 seconds. The captured prefix includes the
+acknowledged final flush; events after capture remain external.
+
+R8 separates CPU admission from a bounded aggregate IO lane per owner under
+moderate pressure and replaces one-slot grant growth with measured-demand
+admission. Severe/unknown IO pressure and CPU, memory, disk and fairness guards
+remain enforced. The exact final source/tests are reported in `b063r8.html` and
+`B063R8_PUBLIC_STATUS.json`; owner scientific acceptance remains pending.
+
+The update adds a saved seven-metric men's/women's leader table, with its true
+November 11 evidence time and retrospective scope. All original/current/rolling
+pages, forecasts, provider gaps, shared logging source and other sport evidence
+remain preserved. No complete current/upcoming refresh is asserted.
+
+<!-- B063R8_STATUS_END -->
+
 <!-- B063R7_STATUS_START -->
 ## Latest actual return: R6 stopped at its first shared resource check
 

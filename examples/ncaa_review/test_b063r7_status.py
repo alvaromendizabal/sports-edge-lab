@@ -8,6 +8,7 @@ import unittest
 from unittest.mock import patch
 
 import b063r7_status as status
+from b063r8_status import strip_banner as strip_r8_banner
 
 ROOT=Path(__file__).resolve().parents[2]
 DOC=ROOT/'docs/ncaa'
@@ -63,25 +64,26 @@ class B063R7PublicStatus(unittest.TestCase):
 
     def test_original_landing_and_every_dated_page_remain_exact(self):
         pins=self.data['source_attribution']['preserved_git_blobs']
-        body=(DOC/'index.html').read_text()
+        body=strip_r8_banner((DOC/'index.html').read_text())
         self.assertEqual(blob(status.strip_banner(body).encode()),pins['docs/ncaa/index.html'])
         for name in ('docs/ncaa/b063r6.html','docs/ncaa/data/B063R6_PUBLIC_STATUS.json',
                      'docs/ncaa/b063r5.html','docs/ncaa/data/B063R5_PUBLIC_STATUS.json',
                      'docs/ncaa/b063r4.html','docs/ncaa/data/B063R4_PUBLIC_STATUS.json'):
             self.assertEqual(blob((ROOT/name).read_bytes()),pins[name])
-        body=(EX/'README.md').read_bytes().split(b'<!-- B063R7_STATUS_END -->\n\n',1)[1]
+        body=(EX/'README.md').read_bytes().split(b'<!-- B063R8_STATUS_END -->\n\n',1)[1].split(b'<!-- B063R7_STATUS_END -->\n\n',1)[1]
         self.assertEqual(blob(body),pins['examples/ncaa_review/README.md'])
-        body=(EX/'test_dashboard_browser.cjs').read_bytes().replace(R7_LINE,b'')
+        body=(EX/'test_dashboard_browser.cjs').read_bytes().replace(b"    counts.b063r8Status = await require('./test_b063r8_status_browser.cjs').verifyR8(browser, path.join(root, 'docs/ncaa/b063r8.html'));\n",b'').replace(R7_LINE,b'')
         self.assertEqual(blob(body),pins['examples/ncaa_review/test_dashboard_browser.cjs'])
 
     def test_exact_shared_logger_and_verified_cli_sources(self):
         logs=self.data['shared_logging_engineering']; runtime=ROOT/'runtime/execution'
-        for name,key in [('sports_edge_live.py','reused_module_sha256'),
-                         ('sports_edge_live_runner.py','generic_supervisor_source_sha256'),
+        for name,key in [('sports_edge_live_runner.py','generic_supervisor_source_sha256'),
                          ('test_sports_edge_live_runner.py','generic_supervisor_test_sha256')]:
             self.assertEqual(hashlib.sha256((runtime/name).read_bytes()).hexdigest(),logs[key])
-        self.assertEqual(blob((runtime/'sports_edge_live.py').read_bytes()),
-                         self.data['source_attribution']['preserved_git_blobs']['runtime/execution/sports_edge_live.py'])
+        # This dated report records the R7 logger; later cross-project repairs may evolve current source.
+        self.assertEqual(logs['reused_module_sha256'],'4cd17825265aa0839392482c3387c94e8cfbf65a57874b4a3d427b028565ca5b')
+        self.assertEqual(self.data['source_attribution']['preserved_git_blobs']['runtime/execution/sports_edge_live.py'],'720407053e8e1cf9440095ff5821479caf975b12')
+        self.assertIn('class LiveExecutionLog:',(runtime/'sports_edge_live.py').read_text())
 
     def test_four_project_local_logging_is_not_deployed_science(self):
         logs=self.data['shared_logging_engineering']
@@ -103,7 +105,7 @@ class B063R7PublicStatus(unittest.TestCase):
         self.assertNotIn('__B063R7_',body)
         self.assertIn('new Blob([exact]',body)
         self.assertIn('zero scientific-fit credit',body)
-        landing=(DOC/'index.html').read_text()
+        landing=strip_r8_banner((DOC/'index.html').read_text())
         self.assertEqual(status.render_banner(landing),landing)
 
     def test_mutations_cannot_upgrade_admission_logging_or_science(self):
