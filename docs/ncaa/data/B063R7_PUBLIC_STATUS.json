@@ -1,0 +1,358 @@
+{
+  "schema": "sel.ncaa.b063r7.public_status.v1",
+  "updated_at_utc": "2026-11-13T16:18:31.178931+00:00",
+  "latest_actual_owner": {
+    "release": "B063R6",
+    "status": "RESOURCE_DEFERRED_PARTIAL_WORK_PRESERVED",
+    "failure_code": "V7_INITIAL_SHARED_LEASE_UNAVAILABLE",
+    "worker_elapsed_seconds": 1.7489990870001293,
+    "admission_wait_seconds": 1.0061335450000115,
+    "started_at_utc": "2026-11-13T16:18:28.499178+00:00",
+    "completed_at_utc": "2026-11-13T16:18:29.845076+00:00",
+    "new_owner_fits": 0,
+    "scientific_fit_attempts": 0,
+    "reused_scientific_fits": 0,
+    "failed_scientific_fits": 0,
+    "new_checkpoints": 0,
+    "reused_checkpoints": 0,
+    "new_forecasts": 0,
+    "new_metric_scores": 0,
+    "new_market_quotes": 0,
+    "native_preflight_entered": false,
+    "selftests_entered": false,
+    "durable_return_verified": true,
+    "full_scientific_run_completed": false
+  },
+  "actual_admission": {
+    "reason": [
+      "IO_FULL_PRESSURE"
+    ],
+    "effective_vcpus": 48.0,
+    "requested_startup_workers": 1,
+    "reserved_cpus": 0,
+    "project_cpu_cap": 12,
+    "shared_lease_rechecks_observed": 0,
+    "cpu_measurement_ready": false,
+    "available_cpu_cores": null,
+    "io_full_avg10_percent": 20.14,
+    "io_full_avg60_percent": 5.1,
+    "io_full_avg300_percent": 1.88,
+    "available_memory_bytes": 95348129792,
+    "disk_free_bytes": 33972879360,
+    "initial_capacity_estimate_is_not_shared_reservation": true,
+    "pressure_was_proved_gone_in_actual_R6": false
+  },
+  "actual_recovery": {
+    "status": "PRIOR_PINNED_R3_RECOVERY_REVERIFIED",
+    "safe_to_launch": true,
+    "unique_old_exact_identities_rechecked_dead": 2,
+    "boot_changed_from_old_R3": true,
+    "process_control_required": false,
+    "new_signals_sent": 0,
+    "new_lease_releases_claimed": false,
+    "foreign_owners_untouched": true,
+    "observation_is_fresh_remote_inspection_by_this_review": false
+  },
+  "actual_observer": {
+    "included_samples": 1,
+    "heartbeat_interval_verified": false,
+    "heartbeat_interval_reason": "Only one sample before the short admission stop; no interval exists.",
+    "literal_LIVE_EXECUTION_files_present": false,
+    "complete_terminal_log_claimed": false,
+    "twelve_core_scientific_acceptance_proven": false,
+    "scientific_workers": 0
+  },
+  "actual_cache_and_cost": {
+    "pre_science_S3_full_GETs_reported": 0,
+    "pre_science_byte_cache_reuses_reported": 0,
+    "persistent_history_cache_benchmark_exercised": false,
+    "new_return_S3_persistence_performed": true,
+    "source_memoization_scope": "PROCESS_LOCAL_VERIFIED_IMMUTABLE_BYTES_ONLY",
+    "source_memoization_entries": 0,
+    "dollar_estimate": null,
+    "cost_status": "UNVERIFIED_NO_CURRENT_INSTANCE_RATE_OR_BILLING_ASSUMED",
+    "observed_instance_wall_seconds": 1.7052052650001315
+  },
+  "preserved_evidence": {
+    "authenticated_prior_target_fits": 22,
+    "exact_content_objects_reverified": 134,
+    "model_deserializations_in_review": 0,
+    "new_fit_credit_for_preservation": 0,
+    "previous_public_science_and_issue_clocks_unchanged": true,
+    "prior_release": "B063R3",
+    "scientific_runtime_compatibility_still_required": true
+  },
+  "metric_policy": {
+    "current_season_complete": false,
+    "metrics": [
+      "accuracy",
+      "log_loss",
+      "brier",
+      "margin_mae",
+      "margin_rmse",
+      "total_mae",
+      "total_rmse"
+    ],
+    "missing_quotes_fabricated": false,
+    "new_scores": null,
+    "provider_refresh_performed": false,
+    "rolling_or_original_issue_promotion": false
+  },
+  "prepared_continuation": {
+    "release": "B063R7",
+    "status": "PREPARED_OWNER_EXECUTION_PENDING",
+    "source_sha256": "d02ca7a0d16ba64b4d77afa0c16da37b94aac40239cc442bd22ac476662361be",
+    "source_bytes": 23484199,
+    "owner_execution_verified": false,
+    "new_preparation_scientific_fits": 0,
+    "validation": {
+      "status": "PASS",
+      "scope": "Final distributable targeted engineering, startup, fresh admission, independent logging, source continuity, native validation receipt cache, and real OS-process checkpoint stress. No owner scientific throughput or production data-cache claim.",
+      "unique_targeted_cases": 580,
+      "globally_unique_case_ids": true,
+      "full_historical_regression_suite_claimed": false,
+      "groups": {
+        "admission": {
+          "status": "PASS",
+          "tests": 35,
+          "wall_seconds": 8.08337720799318,
+          "failures": 0,
+          "errors": 0,
+          "skipped": 0
+        },
+        "cache_resume": {
+          "status": "PASS",
+          "tests": 199,
+          "wall_seconds": 19.19205446098931,
+          "failures": 0,
+          "errors": 0,
+          "skipped": 0
+        },
+        "live_logging": {
+          "status": "PASS",
+          "tests": 58,
+          "wall_seconds": 37.958422001000145,
+          "failures": 0,
+          "errors": 0,
+          "skipped": 0
+        },
+        "locking": {
+          "status": "PASS",
+          "tests": 144,
+          "wall_seconds": 5.251301861993852,
+          "failures": 0,
+          "errors": 0,
+          "skipped": 0
+        },
+        "runtime": {
+          "status": "PASS",
+          "tests": 131,
+          "wall_seconds": 5.966895906007267,
+          "failures": 0,
+          "errors": 0,
+          "skipped": 0
+        },
+        "source": {
+          "status": "PASS",
+          "tests": 12,
+          "wall_seconds": 8.76028626599873,
+          "failures": 0,
+          "errors": 0,
+          "skipped": 0
+        },
+        "stress": {
+          "status": "PASS",
+          "tests": 1,
+          "wall_seconds": 1.3554721949913073,
+          "failures": 0,
+          "errors": 0,
+          "skipped": 0
+        }
+      },
+      "startup_cold": {
+        "executed_cases_this_run": 142,
+        "reused_validation_cases": 0,
+        "seconds": 1.5272737979976228,
+        "fresh_source_integrity_checked": true
+      },
+      "startup_warm": {
+        "executed_cases_this_run": 0,
+        "reused_validation_cases": 142,
+        "seconds": 0.41595387100824155,
+        "fresh_source_integrity_checked": true
+      },
+      "native_preflight_cache": {
+        "AWS_calls": 0,
+        "cold_fixture_fits": 11,
+        "cold_seconds": 4.54083074600203,
+        "distinct_fresh_processes": 2,
+        "full_native_package_bytes_rehashed_by_warm_cache": false,
+        "measurement_scope": "One local paired fresh-process engineering measurement; genuine native sklearn fits on invented observations. No sports-fit, twelve-core or production whole-pipeline speedup claim.",
+        "new_sports_fits": 0,
+        "provider_calls": 0,
+        "schema": "sel.ncaa.b063r7.native_cache_measurement.v1",
+        "single_observed_cold_to_warm_ratio": 2.1616189974974045,
+        "source": {
+          "bytes": 23484199,
+          "sha256": "d02ca7a0d16ba64b4d77afa0c16da37b94aac40239cc442bd22ac476662361be"
+        },
+        "source_unchanged_after_measurement": true,
+        "status": "PASS",
+        "target_model_runtime_authentication_relaxed": false,
+        "warm_fixture_fits": 0,
+        "warm_original_fixture_producer_forbidden_and_not_called": true,
+        "warm_reused_fixture_contracts": 11,
+        "warm_seconds": 2.1006619349936955
+      },
+      "twelve_process_engineering_stress": {
+        "distinct_OS_workers": 12,
+        "durable_fixture_contracts": 384,
+        "exact_resumed_fixture_contracts": 384,
+        "resume_producer_calls": 0,
+        "seconds_including_spawn_and_resume": 1.3322955550102051,
+        "engineering_contracts_per_wall_second": 288.2243347250818,
+        "measured_peak_observed_CPU_cores": 5.8747758714477,
+        "simultaneously_observed_engineering_processes": 12,
+        "simultaneously_observed_scientific_processes": 0,
+        "owner_12_core_utilization_proved": false,
+        "new_sports_scientific_fits": 0
+      },
+      "interrupted_locking_attempt": {
+        "exit_code": 137,
+        "cause_not_yet_established": true,
+        "concurrent_other_regression_groups": 5,
+        "included_in_passed_case_count": false,
+        "isolated_retry_status": "PASS",
+        "isolated_retry_tests": 144,
+        "isolated_retry_wall_seconds": 5.251301861993852
+      },
+      "all_eight_scientific_identities_unchanged": true,
+      "exact_prior_archives_reconstruct": [
+        "B062",
+        "B063R2",
+        "B063R3",
+        "B063R4",
+        "B063R5",
+        "B063R6"
+      ],
+      "scientific_twelve_core_acceptance_passed": false,
+      "scientific_cache_zero_GET_rerun_passed": false,
+      "new_sports_scientific_fits": 0,
+      "new_R7_owner_execution": false,
+      "private_validation_receipt_sha256": "d9ca4168cf639507fa8c8a36e7abdf4f9c6ec2d9e8bf23e9959ee65aef471471",
+      "public_summary": "The exact sealed replacement passed 580 unique targeted engineering cases. Cold startup passed 142 prerequisite cases; the warm check reused all 142 with zero case reexecution. Native validation measured 4.540831 seconds cold and 2.100662 seconds warm, reusing eleven fixture contracts with no native producer calls. A twelve-process engineering stress saved and resumed 384 contracts with zero resumed producer calls. An earlier locking-test process exited 137 while five other groups ran; its cause remains unestablished and its log is preserved. The isolated retry passed all 144 locking cases. These observations receive zero scientific-fit credit and establish no owner-cloud or full-season performance."
+    },
+    "bounded_shared_retry_uses_original_wait_budget": true,
+    "maximum_admission_wait_seconds": 120,
+    "resource_guards_relaxed": false,
+    "native_preflight_cache_and_prior_science_retained": true,
+    "NCAA_per_run_literal_live_log_and_jsonl_integrated": true,
+    "NCAA_live_owner_activation_verified": false
+  },
+  "shared_logging_engineering": {
+    "reused_module_sha256": "4cd17825265aa0839392482c3387c94e8cfbf65a57874b4a3d427b028565ca5b",
+    "generic_supervisor_source_sha256": "167d1a713dedc81fa9dc552d16e5c8d201222a4ec4198be9b994bbabbfd65097",
+    "generic_supervisor_test_sha256": "ac2e7730aee9c15a3caa6759829243e76a3220a9e561c8743849bb6a0b27fc5a",
+    "focused_tests_passed": 9,
+    "focused_test_seconds": 12.707,
+    "four_project_acceptance_elapsed_seconds": 11.421423206993495,
+    "cases": [
+      {
+        "project": "nfl",
+        "status": "PASS",
+        "heartbeat_samples": 4,
+        "periodic_heartbeat_while_child_running": 1,
+        "maximum_gap_seconds": 10.006012119003572,
+        "growth_observations_while_running": {
+          "log": 1,
+          "jsonl": 1
+        },
+        "actual_process_sample_count": 2,
+        "source_fits_remain_unknown": true,
+        "actual_sports_fit_credit": 0
+      },
+      {
+        "project": "fbs",
+        "status": "PASS",
+        "heartbeat_samples": 4,
+        "periodic_heartbeat_while_child_running": 1,
+        "maximum_gap_seconds": 10.006146530999104,
+        "growth_observations_while_running": {
+          "log": 1,
+          "jsonl": 1
+        },
+        "actual_process_sample_count": 2,
+        "source_fits_remain_unknown": true,
+        "actual_sports_fit_credit": 0
+      },
+      {
+        "project": "nba",
+        "status": "PASS",
+        "heartbeat_samples": 4,
+        "periodic_heartbeat_while_child_running": 1,
+        "maximum_gap_seconds": 10.005574306007475,
+        "growth_observations_while_running": {
+          "log": 1,
+          "jsonl": 1
+        },
+        "actual_process_sample_count": 2,
+        "source_fits_remain_unknown": true,
+        "actual_sports_fit_credit": 0
+      },
+      {
+        "project": "ncaa_basketball",
+        "status": "PASS",
+        "heartbeat_samples": 4,
+        "periodic_heartbeat_while_child_running": 1,
+        "maximum_gap_seconds": 10.006067484006053,
+        "growth_observations_while_running": {
+          "log": 1,
+          "jsonl": 1
+        },
+        "actual_process_sample_count": 2,
+        "source_fits_remain_unknown": true,
+        "actual_sports_fit_credit": 0
+      }
+    ],
+    "synthetic_CPU_probe_performed": false,
+    "scientific_fit_credit": 0,
+    "actual_cloud_owner_execution": false,
+    "all_deployed_private_runners_modified": false,
+    "activation": "EXPLICIT_EXISTING_COMMAND_REQUIRED; PRIVATE_PRODUCTION_ACTIVATION_NOT_ESTABLISHED",
+    "projects": [
+      "nfl",
+      "fbs",
+      "nba",
+      "ncaa_basketball"
+    ],
+    "child_exit_and_signal_semantics_tested": true,
+    "prior_run_log_bytes_preserved": true,
+    "focused_test_scope": "EXACT_GENERIC_MODULES_IN_ZIPIMPORT_FIXTURE"
+  },
+  "publication": {
+    "new_scientific_evaluation": false,
+    "private_executable_or_models_published": false,
+    "source_publication_is_deployment": false,
+    "website_deployment_verified": false,
+    "concurrent_NFL_logging_adapter_and_CI_preserved": true
+  },
+  "source_attribution": {
+    "authenticated_outer_return_sha256": "4e5c720e835b08792cedfed609987f740819ad42f1f1ab52c0da3efe46f27474",
+    "authenticated_nested_return_sha256": "a6a6a9ee0e601f640b5a91ca37327f33eaf13f2d8df1176548a00309876a915d",
+    "returned_source_sha256": "1fa4cb7d9c784d8be5c576d46886dcb9e0b459cc7e096b0b5501720b215b1a41",
+    "preserved_prior_capsule_sha256": "7322b22c15b341bd3e35b37d8fad95af87cc750a027133869141b4e3f9f7668d",
+    "base_commit": "150921430215422df86316e79e68f19b3a170d50",
+    "preserved_git_blobs": {
+      "docs/ncaa/index.html": "825d62aa4fdc21cd22b35b96c84009d7ab440afe",
+      "docs/ncaa/b063r6.html": "ce62538b1bbd5b6226e6ebc0b9cf452e48f13990",
+      "docs/ncaa/data/B063R6_PUBLIC_STATUS.json": "d3bb1dfd0e92b95d12595c9a868c35e8eeef7408",
+      "docs/ncaa/b063r5.html": "54f88306d11422e5da1ff8669ceb918d4d9056b2",
+      "docs/ncaa/data/B063R5_PUBLIC_STATUS.json": "8756a24f6b38781e681b34533bfa7d694132dd3e",
+      "docs/ncaa/b063r4.html": "b8dd8df8d7fa423eb9d34bf36980f75bc2b849bd",
+      "docs/ncaa/data/B063R4_PUBLIC_STATUS.json": "56283ed5a968f91b98c3075aec2a8932e9ef9639",
+      "examples/ncaa_review/README.md": "4fd1af812611ea3e4c4008d0a1bea603bf0e928c",
+      "examples/ncaa_review/test_dashboard_browser.cjs": "35da26f77d8e0a2865108ee6a8ac33a576472a52",
+      "runtime/execution/sports_edge_live.py": "720407053e8e1cf9440095ff5821479caf975b12"
+    }
+  }
+}

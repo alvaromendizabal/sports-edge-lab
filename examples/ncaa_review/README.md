@@ -1,3 +1,26 @@
+<!-- B063R7_STATUS_START -->
+## Latest actual return: R6 stopped at its first shared resource check
+
+The exact R6 worker ended after 1.749 seconds with
+`V7_INITIAL_SHARED_LEASE_UNAVAILABLE`: IO full avg10 was 20.14%, and the shared
+CPU counter had not yet obtained its second sample. No startup tests, native
+preflight, scientific fits, forecasts or new metrics ran. The return was
+persisted and verified; all 22 prior target fits and 134 objects remain preserved.
+The prior scoped recovery was reverified without a new signal or process kill.
+
+R7 adds bounded fresh admission checks within the original budget and permanent
+per-run `LIVE_EXECUTION.log` and `.jsonl`. The shared all-project supervisor and
+its four-project local logging evidence are public under
+[`runtime/execution`](../../runtime/execution/README.md). Actual R7 owner
+execution, twelve-core scientific throughput, full-season refresh and retrofit
+of every private deployed runner remain unproved. Logging tests earn no fits.
+
+`b063r7.html` and `B063R7_PUBLIC_STATUS.json` separate actual R6 evidence from
+prepared R7 source and local engineering. Every earlier dated page, scientific
+population, issue clock and market gap remains preserved.
+
+<!-- B063R7_STATUS_END -->
+
 <!-- B063R6_STATUS_START -->
 ## Latest actual return: R5 recovery verified, startup fixture failed
 
