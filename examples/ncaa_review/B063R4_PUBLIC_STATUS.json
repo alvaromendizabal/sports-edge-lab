@@ -1,0 +1,123 @@
+{
+  "schema": "sel.ncaa.public.b063r4.partial_owner_and_repair.v1",
+  "project": "NCAA basketball — men and women",
+  "report_date": "2026-11-13",
+  "latest_attempt": {
+    "release": "B063R3",
+    "evidence_class": "PARTIAL_OWNER_LOG_AND_INDEPENDENTLY_AUTHENTICATED_SAVED_ARTIFACTS",
+    "last_observed_event_at": "2026-11-12T23:34:23.600590+00:00",
+    "last_observed_heartbeat_at": "2026-11-12T23:34:01.197471+00:00",
+    "terminal_return_verified": false,
+    "whole_run_completed": false,
+    "authenticated_prior_target_fits": 22,
+    "authenticated_content_objects": 134,
+    "new_fits_in_this_preparation": 0,
+    "new_distinct_checkpoint_contracts": 167,
+    "reused_distinct_checkpoint_contracts": 248,
+    "total_distinct_checkpoint_contracts": 415,
+    "checkpoint_close_events": 438,
+    "checkpoint_events_are_fit_counts": false,
+    "peak_recorded_cpu_cores": 2.9286481116162077,
+    "maximum_reported_parent_fit_callbacks": 10,
+    "callbacks_prove_simultaneous_scientific_fits": false,
+    "twelve_core_acceptance_proven": false,
+    "new_complete_season_metric_tables": false,
+    "new_issued_forecasts_available_for_public_update": false
+  },
+  "observed_io": {
+    "fresh_full_GETs": 12055,
+    "fresh_full_GET_bytes": 11727401322,
+    "verified_byte_cache_reads": 6921,
+    "verified_byte_cache_bytes": 6121141179,
+    "cache_read_hit_rate": 0.36472386172006743,
+    "identical_republished_chunks": 147,
+    "identical_republished_payload_bytes": 2454853413,
+    "scope": "Last saved partial-owner counters; payload republication is separate from original source acquisition"
+  },
+  "prepared_continuation": {
+    "release": "B063R4",
+    "status": "SEALED_EXECUTABLE_ENGINEERING_VERIFIED_OWNER_EXECUTION_PENDING",
+    "source_sha256": "e7700344640e1a4c21a23fc52ec62c70c6b599c95b30db98704180f339b6035f",
+    "scientific_identity_families_preserved": 8,
+    "owner_execution_verified": false,
+    "live_owner_shutdown_observed_in_preparation": false,
+    "new_preparation_scientific_fits": 0,
+    "targeted_runtime_tests_passed": 38,
+    "targeted_resume_and_row_reuse_tests_passed": 47,
+    "independent_observer_real_sample_intervals_seconds": [
+      10.00059986114502,
+      9.999819040298462
+    ],
+    "engineering_tests_are_owner_performance": false
+  },
+  "repairs": [
+    {
+      "name": "Checkpoint and heartbeat lock ordering",
+      "status": "DETERMINISTIC_REGRESSION_VERIFIED",
+      "detail": "Store callbacks leave the store lock before entering the event ledger; monitoring gathers store and process observations before taking its ledger lock."
+    },
+    {
+      "name": "Independent progress observation",
+      "status": "LOCAL_PROCESS_REGRESSION_VERIFIED",
+      "detail": "A separate process writes flushed CPU, I/O, process and stale-stage observations every 10 seconds without acquiring application locks. A stale-stage diagnostic imposes no scientific training deadline."
+    },
+    {
+      "name": "Safe owner shutdown and evidence preservation",
+      "status": "LOCAL_PROCESS_REGRESSION_VERIFIED",
+      "detail": "Preserve journals and logs first; request a cooperative stop, then bound graceful waits and signal only authenticated owner and registered frontend identities. Release only verified-dead owner leases. Forced recovery can produce a diagnostic return; an old owner terminal return is not promised."
+    },
+    {
+      "name": "Recovered prior fits",
+      "status": "ALL_22_PRIOR_TARGET_FITS_AUTHENTICATED",
+      "detail": "All 134 referenced content objects were authenticated. Importing these saved fits earns zero new-fit credit."
+    },
+    {
+      "name": "Unchanged market-row payload reuse",
+      "status": "LOCAL_CONTRACT_REGRESSION_VERIFIED",
+      "detail": "Validate the complete unchanged source row payload and reuse its existing chunk references. Changed, missing or corrupt evidence cannot take this path."
+    },
+    {
+      "name": "Persistent parsed-parent cache continuity",
+      "status": "ENGINEERING_REPAIR_PREPARED",
+      "detail": "An operational package revision no longer changes the parsed-data cache key solely through a whole-package manifest. Exact scientific consumer bytes and full row, dtype, order and value validation remain required."
+    }
+  ],
+  "remaining_owner_acceptance": [
+    "Verify the exact old owner exit or already-terminal return and admit the new owner safely.",
+    "Prove real independent scientific fits, measured utilization and throughput across all 12 safely available project cores.",
+    "Complete both basketball season evaluations and every observed current-season/upcoming game with outcome and forecast clocks.",
+    "Refresh all seven metric-specific champion views and genuine time-matched DraftKings, Kalshi and Polymarket comparisons."
+  ],
+  "metric_policy": {
+    "metrics": [
+      "accuracy",
+      "log_loss",
+      "brier",
+      "margin_mae",
+      "margin_rmse",
+      "total_mae",
+      "total_rmse"
+    ],
+    "new_scores": null,
+    "prior_leaders_preserved": true,
+    "current_season_complete": false,
+    "rolling_or_original_issue_promotion": false,
+    "missing_quotes_fabricated": false
+  },
+  "source_attribution": {
+    "partial_owner_log_sha256": "0e0f843dd6d8bbaade63f194d4dc16226d5c93124f02d634f150e1a38650a856",
+    "prior_fit_artifact_authentication": "Exact saved receipt and model/report/prediction content hashes; no model deserialization or refitting during preparation",
+    "upstream_commit": "019a3b02470b79980ce7bde761bcc9515b2ab47d",
+    "preserved_git_blobs": {
+      "docs/ncaa/index.html": "9927752eecda93ecfc9ce1c1359eb97f9a87f234",
+      "examples/ncaa_review/README.md": "c9f93894f6eb57ecfa7eeb6178ac721dadbd7962",
+      "examples/ncaa_review/test_dashboard_browser.cjs": "d4883c2b8ff593649ed53f7f5c60ac2ce7671c84"
+    }
+  },
+  "publication": {
+    "scope": "NCAA-only sanitized incident and progress update; prior games, metrics, market evidence and original issue clocks preserved",
+    "source_publication_is_deployment": false,
+    "website_deployment_verified": false,
+    "provider_refresh_performed": false
+  }
+}

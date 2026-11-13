@@ -1,3 +1,17 @@
+<!-- B063R4_STATUS_START -->
+## B063R4 runtime repair and authenticated partial R3 progress — November 13, 2026 UTC
+
+[Inspect the latest incident and progress report](../../docs/ncaa/b063r4.html) or [download the exact status JSON](../../docs/ncaa/data/B063R4_PUBLIC_STATUS.json).
+
+The supplied B063R3 record ends November 12 at **23:34:23 UTC**, without a verified terminal owner return. All **22 prior target fits** were independently authenticated through **134 exact saved content objects**. Preparation performed zero new scientific fits. **167 new + 248 reused = 415 distinct checkpoint contracts**; the 438 checkpoint-close events are not a fitted-model count.
+
+The maximum saved CPU sample was **2.928648 cores**, and 10 parent fit callbacks were reported. Neither figure proves twelve concurrent scientific fits or sustained twelve-core throughput. The partial counters include 147 unchanged chunks totaling **2,454,853,413 bytes** republished under different artifact keys.
+
+The prepared, sealed B063R4 executable repairs checkpoint/monitor lock ordering; provides a separate process that records actual CPU/I/O and stale-stage evidence every 10 seconds; preserves journals before bounded, identity-scoped shutdown; releases only dead authenticated owner leases; imports the authenticated prior fits without new-fit credit; and reuses complete unchanged row payloads. Local engineering verification passed 38 runtime/launch/finalization tests and a separate 47-test resume/row/reporting group. These tests are not new sports experiments or proof of the next owner's utilization. Forced recovery can provide a diagnostic ZIP; an old owner terminal return is not promised.
+
+**B063R4 owner execution remains pending.** No new complete season metrics, original forecast issues, qualified market comparison or rolling-champion promotion is asserted. Prior game rows, original clocks, leaders, failures and model/market evidence remain unchanged. Source publication and website deployment are separate.
+<!-- B063R4_STATUS_END -->
+
 ## B062 continuation and preserved scientific results — November 11, 2026 UTC
 
 [Read B062 findings](B062_EVIDENCE.md), [inspect the exact status](B062_STATUS.json), or [reconstruct the saved executed notebook and offline interactive report](B062_SAVED_REPORTS.md). The report displays all 3,457 saved source records, separate original replay and issued predictions, exact same-game comparisons, four completed-season scorecards, six preserved selected roles and the fourteen-role extension awaiting owner execution.
