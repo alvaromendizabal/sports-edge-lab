@@ -15,6 +15,8 @@ async function verifyR5(browser, filename) {
       await page.goto(pathToFileURL(filename).href);
       assert.deepEqual(JSON.parse(await page.locator('#b063r5-data').textContent()), expected);
       assert.deepEqual(await page.locator('#r5-cards strong').allTextContents(), ['0','22','Failed','Unverified']);
+      const wrappedCards = await page.locator('#r5-cards strong').evaluateAll(nodes => nodes.filter(node => node.getBoundingClientRect().height > parseFloat(getComputedStyle(node).lineHeight)+1).map(node => node.textContent));
+      assert.deepEqual(wrappedCards, [], `R5 ${width}px status labels must fit one line`);
       assert.match(await page.locator('#r5-scope').innerText(), /zero new owner fits/);
       assert.match(await page.locator('#r5-scope').innerText(), /referenced recovery diagnostic was not included/);
       assert.equal(await page.locator('#r5-remaining ol li').count(), 4);
