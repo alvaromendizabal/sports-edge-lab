@@ -23,15 +23,50 @@ prospective superiority.
 
 The 50% / 35% / 15% current/prior/earlier season policy and alternative weight
 policies are retained. No exact recovered candidate identity spans all three
-seasons, so weighted ranks remain withheld. All 1,208 uncertainty metric rows
-withhold adjusted intervals; insufficient independent week clusters and/or
-Monte Carlo tail resolution remain explicit. All 1,344 source/model panels
+seasons, so weighted ranks remain withheld. The recovered payload keeps its original 1,208 withheld uncertainty labels.
+The separately dated historical supplement below supplies 336 exploratory
+intervals while current and comparable early-week intervals remain withheld. All 1,344 source/model panels
 have zero qualified market matches. Missing evidence is never zero error.
 
 The current inventory reconciles 3,469 prior display rows to 3,425
 source-specific event IDs and retains 6,894 observation versions. These IDs
 are not asserted to be unique across providers. Six identity conflicts remain
 quarantined. Future unissued numeric forecasts remain withheld.
+
+## New historical uncertainty supplement
+
+A new local statistical replay of 12 authenticated historical partitions
+reproduced all 336 exact cohort hashes and game counts. Paired point estimates
+agree with the recovered public evidence to at most 8.9 × 10⁻¹⁶ absolute loss.
+The study was registered at 2026-11-14 00:55:00 UTC and executed 149,999 paired
+resamples of whole America/New_York calendar weeks, retaining unequal week
+sizes and the recovered per-partition multiple-comparison family. No model was
+fitted or used for new inference.
+
+The 336 exploratory Bonferroni-adjusted percentile intervals contain 9 positive
+loss improvements, 15 negative results and 312 intervals including zero. The
+last count includes 28 self-baseline controls. All 40 negative-control checks
+passed. These are metric comparisons, not 336 distinct models or wins.
+
+| Competition / season | Positive | Negative | Includes zero | Interval rows |
+|---|---:|---:|---:|---:|
+| Men 2024–25 | 2 | 0 | 82 | 84 |
+| Men 2025–26 | 1 | 1 | 82 | 84 |
+| Women 2024–25 | 2 | 4 | 78 | 84 |
+| Women 2025–26 | 4 | 10 | 70 | 84 |
+
+The historical partitions contain 22–23 week clusters. These exploratory
+conditional percentile intervals do not remove repeated-team dependence,
+selection exposure, nonstationarity or source drift; they do not implement
+bootstrap-t or guarantee exact finite-sample coverage. Two- or three-week
+current-season intervals stay withheld because additional resamples do not
+create independent weeks. There is no weighted champion, market-advantage
+claim, prospective improvement claim, new issue or promotion.
+
+The study records [Gneiting and Raftery’s scoring-rule paper](https://sites.stat.washington.edu/raftery/Research/PDF/Gneiting2007jasa.pdf)
+and [Cameron, Gelbach and Miller’s clustered-bootstrap paper](https://www.nber.org/system/files/working_papers/t0344/t0344.pdf)
+as method references. The latter is a caution about clustered inference, not a
+claim that this percentile procedure reproduces their bootstrap-t method.
 
 ## Measured execution and pending continuation
 

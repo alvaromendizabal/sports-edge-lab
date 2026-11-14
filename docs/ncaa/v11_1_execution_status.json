@@ -63,5 +63,88 @@
     "weighted_rank": "WITHHELD",
     "prospective_superiority": "NOT_ESTABLISHED"
   },
-  "preserved_scientific_payload_sha256": "18e93c42ddfd569935733f936a417e86ae9f74d0afa87d0dd028ba617a75b730"
+  "preserved_scientific_payload_sha256": "18e93c42ddfd569935733f936a417e86ae9f74d0afa87d0dd028ba617a75b730",
+  "historical_uncertainty_supplement": {
+    "status": "COMPLETED",
+    "execution_environment": "Local statistical replay of authenticated saved prediction losses; not owner model execution",
+    "registered_at": "2026-11-14T00:55:00.551321+00:00",
+    "historical_partitions": 12,
+    "interval_rows": 336,
+    "bootstrap_replicates": 149999,
+    "directions": {
+      "INCLUDES_ZERO": 312,
+      "NEGATIVE": 15,
+      "POSITIVE": 9
+    },
+    "self_baseline_controls_in_interval_rows": 28,
+    "negative_controls_passed": 40,
+    "negative_controls_total": 40,
+    "week_clusters_min": 22,
+    "week_clusters_max": 23,
+    "method": "Paired candidate-minus-baseline loss comparisons resampled by whole America/New_York calendar weeks; loss improvement is baseline minus candidate. Unequal week sizes retained. Percentile intervals; recovered per-partition Bonferroni family accounts for two windows and excludes self-baseline controls.",
+    "point_estimates_max_absolute_reproduction_error": 8.881784197001252e-16,
+    "cohorts_and_game_counts_reproduced": true,
+    "limitations": "Exploratory conditional percentile intervals. No claim of bootstrap-t, exact finite-sample coverage, removal of repeated-team dependence, prospective validation, or selection-exposure correction.",
+    "current_intervals": "WITHHELD_2_OR_3_WEEK_CLUSTERS; NO_ADDED_CURRENT_SEASON_EVIDENCE",
+    "weighted_champion": null,
+    "new_model_fits": 0,
+    "new_model_inference": 0,
+    "new_issued_forecasts": 0,
+    "new_market_evidence": false,
+    "promotions": 0,
+    "by_competition_season": [
+      {
+        "league": "ncaam",
+        "season_end_year": 2025,
+        "interval_rows": 84,
+        "positive": 2,
+        "negative": 0,
+        "includes_zero": 82,
+        "self_baseline_controls": 7
+      },
+      {
+        "league": "ncaam",
+        "season_end_year": 2026,
+        "interval_rows": 84,
+        "positive": 1,
+        "negative": 1,
+        "includes_zero": 82,
+        "self_baseline_controls": 7
+      },
+      {
+        "league": "ncaaw",
+        "season_end_year": 2025,
+        "interval_rows": 84,
+        "positive": 2,
+        "negative": 4,
+        "includes_zero": 78,
+        "self_baseline_controls": 7
+      },
+      {
+        "league": "ncaaw",
+        "season_end_year": 2026,
+        "interval_rows": 84,
+        "positive": 4,
+        "negative": 10,
+        "includes_zero": 70,
+        "self_baseline_controls": 7
+      }
+    ],
+    "method_references": [
+      {
+        "authors": "Gneiting and Raftery",
+        "title": "Strictly Proper Scoring Rules, Prediction, and Estimation",
+        "url": "https://sites.stat.washington.edu/raftery/Research/PDF/Gneiting2007jasa.pdf",
+        "use": "Proper probability scores; this implementation uses log loss and Brier loss.",
+        "year": 2007
+      },
+      {
+        "authors": "Cameron, Gelbach, and Miller",
+        "title": "Bootstrap-Based Improvements for Inference with Clustered Errors",
+        "url": "https://www.nber.org/system/files/working_papers/t0344/t0344.pdf",
+        "use": "Few-cluster inference limitations; not a claim that this percentile method implements their bootstrap-t procedure.",
+        "year": 2007
+      }
+    ]
+  }
 }

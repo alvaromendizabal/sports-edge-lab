@@ -45,7 +45,8 @@ const {pathToFileURL}=require('node:url');
       assert.match(await page.locator('#execution-status').innerText(),/Next owner execution pending/);
       assert.match(await page.locator('#execution-status').innerText(),/8\.49×/);
      }
-     assert.equal(await page.evaluate(()=>document.documentElement.scrollWidth<=innerWidth),true);
+     const dimensions=await page.evaluate(()=>({documentWidth:document.documentElement.scrollWidth,viewport:innerWidth}));
+     assert.equal(dimensions.documentWidth<=dimensions.viewport,true,JSON.stringify({url,width,...dimensions}));
      if(process.env.DASHBOARD_SCREENSHOTS){
       fs.mkdirSync(process.env.DASHBOARD_SCREENSHOTS,{recursive:true});
       await page.screenshot({path:path.join(process.env.DASHBOARD_SCREENSHOTS,`ncaa-${isV11?'v11':'v10'}-${url.startsWith('https:')?'live':'source'}-${width}.png`),fullPage:true});

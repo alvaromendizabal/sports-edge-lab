@@ -78,6 +78,30 @@ class PublicEvidenceTests(unittest.TestCase):
         self.assertEqual(p["maximum_physical_part_bytes"], 512 << 20)
         self.assertFalse(p["aggregate_transport_size_is_science_admission_gate"])
 
+    def test_new_uncertainty_supplement_retains_negative_and_null_results(self):
+        s = self.operational["historical_uncertainty_supplement"]
+        self.assertEqual(s["historical_partitions"], 12)
+        self.assertEqual(s["interval_rows"], 336)
+        self.assertEqual(s["bootstrap_replicates"], 149999)
+        self.assertEqual(s["directions"],
+                         {"POSITIVE": 9, "NEGATIVE": 15, "INCLUDES_ZERO": 312})
+        self.assertEqual(sum(s["directions"].values()), s["interval_rows"])
+        self.assertEqual(s["self_baseline_controls_in_interval_rows"], 28)
+        self.assertEqual(s["negative_controls_passed"], s["negative_controls_total"])
+        self.assertEqual(s["negative_controls_total"], 40)
+        self.assertLess(s["point_estimates_max_absolute_reproduction_error"], 1e-14)
+        self.assertTrue(s["cohorts_and_game_counts_reproduced"])
+        self.assertIsNone(s["weighted_champion"])
+        self.assertFalse(s["new_market_evidence"])
+        self.assertEqual(s["new_model_fits"], 0)
+        self.assertEqual(s["new_model_inference"], 0)
+        self.assertEqual(s["new_issued_forecasts"], 0)
+        self.assertEqual(s["promotions"], 0)
+        for key, label in [("positive", "POSITIVE"), ("negative", "NEGATIVE"),
+                           ("includes_zero", "INCLUDES_ZERO")]:
+            self.assertEqual(sum(r[key] for r in s["by_competition_season"]),
+                             s["directions"][label])
+
     def test_weighted_and_market_claims_remain_withheld(self):
         d = self.evidence
         self.assertEqual(d["v11_weighting"]["complete_three_season_candidates"], 0)
