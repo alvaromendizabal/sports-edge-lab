@@ -1,0 +1,242 @@
+const assert = require('node:assert/strict');
+const crypto = require('node:crypto');
+const fs = require('node:fs');
+const path = require('node:path');
+const {pathToFileURL} = require('node:url');
+
+const sourcePath = path.join(__dirname, 'n105_current', 'index.html');
+const source = fs.readFileSync(sourcePath, 'utf8');
+const live = process.env.NFL_N105_ONLINE_URL;
+const sha = bytes => crypto.createHash('sha256').update(bytes).digest('hex');
+const close = (a,b) => Number.isFinite(a) && Number.isFinite(b) && Math.abs(a-b)<=0.000005;
+
+function checkPublicSource(html) {
+  assert.doesNotMatch(html, /s3:\/\/|\/home\/(?:sagemaker-user|agent)\/|\/workspace\/scratch\/|-----BEGIN [^-]*PRIVATE KEY-----|\b(?:AKIA|ASIA)[A-Z0-9]{16}\b|[\w.+-]+@[\w.-]+\.(com|net|org|edu)\b/i);
+  assert.match(html, /<main\b[^>]*>[\s\S]*?<\/main>/i);
+  const assets = [...html.matchAll(/<(script|style)\b[^>]*>[\s\S]*?<\/\1>/gi)].map(m => m[0]);
+  assert.ok(assets.some(a=>a.startsWith('<style')));
+  assert.ok(assets.some(a=>/application\/json/i.test(a)));
+  assert.ok(assets.some(a=>a.startsWith('<script') && !/type=["']application\/json["']/i.test(a)));
+  return assets.concat(html.match(/<main\b[^>]*>[\s\S]*?<\/main>/i)[0]);
+}
+
+function checkCard(card) {
+  assert.ok(Date.parse(card.issued) < Date.parse(card.deadline));
+  assert.equal(card.rows.length, 26);
+  assert.equal(new Set(card.rows.map(r => r.game)).size, 13);
+  assert.equal(new Set(card.rows.map(r => r.game+' '+r.team)).size, 26);
+  const selected = card.rows.filter(r => r.selected);
+  assert.equal(selected.length, 5);
+  assert.equal(new Set(selected.map(r => r.game)).size, 5);
+  const gameBest = new Map();
+  for (const row of card.rows) {
+    for (const p of [row.cover, row.push, row.loss]) assert.ok(p >= 0 && p <= 1);
+    assert.ok(close(row.cover + row.push + row.loss, 1), 'Cover/push/loss must total one');
+    assert.ok(close(row.points, row.cover + 0.5*row.push), 'Expected contest points');
+    gameBest.set(row.game, Math.max(gameBest.get(row.game) || 0, row.points));
+  }
+  const bestValues = [...gameBest.values()].sort((a,b)=>b-a).slice(0,5);
+  const chosenValues = selected.map(r=>r.points).sort((a,b)=>b-a);
+  bestValues.forEach((v,i)=>assert.ok(close(v,chosenValues[i]), 'The five selected games must maximize expected contest points'));
+}
+
+function checkDataset(data) {
+  assert.equal(data.release,"N105"); assert.ok(data.drives.length>0&&data.n101_margin.length>0&&data.n101_winner.length>0&&data.exchange.history.week===7);
+  assert.equal(data.season_games.length,272);assert.equal(new Set(data.season_games.map(r=>r.game)).size,272);
+  assert.deepEqual(data.season_counts,{Final:137,Confirmed:111,TBD:24});
+  assert.equal(data.ties,1);
+  const currentFinal=data.season_games.filter(g=>g.status==='Final');
+  for(const g of currentFinal){
+    if(g.p==null){assert.ok(g.winner_evidence&&g.q==null);continue;}
+    assert.ok(g.p>=0&&g.p<=1&&g.q>=0&&g.q<=1);
+    assert.equal(g.actual_margin,g.away_final-g.home_final);
+    if(g.outcome==='Tie'){assert.equal(g.yb,null);assert.equal(g.qb,null);}
+    else{assert.ok(close(g.yb,(g.p-Number(g.away_final>g.home_final))**2));}
+  }
+  if(data.strict?.complete){assert.equal(data.strict.promotion,false);assert.equal(data.strict.historical_new_strict_issue_credit,0);}
+
+  assert.ok(Array.isArray(data.winner),'Winner evidence collection');
+  assert.ok(data.margin.some(r=>r.arm==='market_joint'&&r.scope==='all_five_same_market_games'&&Number(r.season)===2026),'Common-cohort current margin evidence');
+  for (const game of data.games) {
+    assert.ok(close(game.away_score-game.home_score,game.margin),'Team-score margin sign');
+    assert.ok(close(game.away_score+game.home_score,game.total),'Separate expected team-score total');
+    assert.ok(Date.parse(game.issued)<Date.parse(game.kickoff),'Score issue before kickoff');
+    if (game.winner) {
+      assert.equal(game.winner.length,3);
+      assert.ok(close(game.winner.reduce((a,b)=>a+b),1),'Away/tie/home partition');
+      assert.ok(Date.parse(game.prob_issue)<Date.parse(game.kickoff),'Probability issue before kickoff');
+    }
+  }
+  assert.equal(data.cards.length, 6);
+  assert.equal(new Set(data.cards.map(c=>c.family)).size, 6);
+  assert.equal(data.games.length,111);
+  assert.equal(new Set(data.games.map(g=>g.game)).size,111);
+  assert.ok(data.games.every(g=>g.away!==g.home && Number.isFinite(g.margin) && Number.isFinite(g.total)));
+  for (const dataset of ['margin','frontier','history']) assert.ok(data[dataset].length > 0,dataset);
+  assert.ok(data.exchange && Object.keys(data.exchange).length > 0);
+  data.cards.forEach(checkCard);
+}
+
+async function exercise(width, browser, assets) {
+  const page = await browser.newPage({viewport:{width,height:900}});
+  try {
+    const errors=[];
+    page.on('pageerror',e=>errors.push(String(e)));
+    const response = await page.goto(live || pathToFileURL(sourcePath).href, {waitUntil:'domcontentloaded'});
+    let responseHash=null;
+    if (live) {
+      assert.equal(response.status(), 200);
+      const served=await response.body();
+      responseHash=sha(served);
+      for (const asset of assets) assert.ok(served.toString().includes(asset),'Deployed source asset or main layout differs');
+      assert.equal(new URL(page.url()).pathname, '/circa/n105/');
+    }
+    assert.equal(await page.title(), 'Circa Million Picks & Performance Dashboard');
+    const data=await page.locator('#data').evaluate(el=>JSON.parse(el.textContent));
+    checkDataset(data);
+
+    assert.equal(await page.locator('#contest').isVisible(),true);
+    const contest=data.n105.contest;
+    assert.ok(contest.season.length>0 && contest.weekly.length && !contest.evidence.verified_historical_entries);
+    for(const year of ['2024','2025','2026']){
+      await page.selectOption('#contestYear',year);
+      for(const scope of ['week_open','saturday_remaining']){
+        await page.selectOption('#contestScope',scope);
+        const cohort=contest.season.filter(r=>r.season===+year&&r.scope===scope&&r.window==='through_week_9');
+        assert.equal(await page.locator('#contestStandings tbody tr').count(),cohort.length);
+        cohort.forEach(r=>assert.ok(close(r.observed_points,r.selected_wpl[0]+.5*r.selected_wpl[1])));
+      }
+    }
+    await page.selectOption('#contestScope','week_open');await page.selectOption('#contestFamily','week_open_ridge');
+    await page.selectOption('#contestWeek','7');assert.equal(await page.locator('#contestPicks tbody tr').count(),5);
+    await page.selectOption('#contestWeights','equal');assert.ok(await page.locator('#contestWeighted tbody tr').count()>0);
+    await page.locator('#openCurrentCard').click();assert.equal(await page.locator('#card').isVisible(),true);
+    await page.locator('#bn105').click();await page.locator('#n105').waitFor({state:'visible'});
+    if(data.n105.margin_laws){
+      assert.equal(await page.locator('#s3match option').count(),111);
+      for(const [id,law] of Object.entries(data.n105.margin_laws)){
+        assert.equal(law.cumulative.length,321);assert.equal(law.cumulative.at(-1),1000000);
+        for(let i=1;i<law.cumulative.length;i++)assert.ok(law.cumulative[i]>=law.cumulative[i-1]);
+      }
+      await page.selectOption('#s3side','home');await page.fill('#s3min','3');await page.fill('#s3max','7');
+      assert.equal(await page.locator('#s3law tbody tr').count(),6);
+      await page.fill('#s3max','2');assert.equal(await page.locator('#s3law tbody tr').count(),0);
+      await page.fill('#s3max','7');assert.equal(await page.locator('#s3law tbody tr').count(),6);
+    }
+    if(data.n105.totals.length){
+      await page.fill('#s3tmin','44');assert.equal(await page.locator('#s3totlaw tbody tr').count(),1);
+      assert.equal(await page.locator('#s3total option').count(),data.n105.totals.length);
+      assert.ok(data.n105.totals.every(r=>r.cumulative.at(-1)===1000000));
+    }
+    const joint=data.n105.exchange.joint_model_replay;
+    assert.equal(await page.locator('#jointlawrows tbody tr').count(),Object.values(joint).flat().length);
+    assert.equal(await page.locator('#strictpointscores tbody tr').count(),data.n105.strict_scores.length);
+    assert.equal(await page.locator('#totalpair tbody tr').count(),data.n105.exchange.matched_total_uncertainty.length);
+    assert.equal(await page.locator('#s3strict tbody tr').count(),data.n105.strict_new_rows.length);
+    const uniqueSources=[...new Set(data.n105.providers.map(r=>r.source))];
+    assert.ok(uniqueSources.includes('DraftKings')&&uniqueSources.includes('Kalshi')&&uniqueSources.includes('Polymarket'));
+    for(const year of ['2024','2025','2026']){
+      await page.selectOption('#s3year', year);await page.selectOption('#s3rel','');
+      for(const source of uniqueSources){
+        await page.selectOption('#s3source',source);const expected=data.n105.providers.filter(r=>r.year==year&&r.source===source);
+        assert.equal(await page.locator('#s3prov tbody tr').count(),expected.length);
+      }
+    }
+    await page.locator('#bn101').click();await page.locator('#n101').waitFor({state:'visible'});
+    for(const year of ['2024','2025','2026']){
+      await page.selectOption('#newYear',year);
+      assert.equal(await page.locator('#driveRows tbody tr').count(),data.drives.filter(x=>x.season==year).length);
+      for(const arm of [...new Set(data.n101_margin.map(x=>x.arm))]){
+        await page.selectOption('#newArm',arm);
+        const sc=await page.locator('#newScope').inputValue();
+        assert.equal(await page.locator('#distRows tbody tr').count(),data.n101_margin.filter(x=>x.season==year&&x.scope===sc&&x.arm===arm).length);
+      }
+      for(const lead of [...new Set(data.n101_winner.map(x=>x.lead))]){
+        await page.selectOption('#winnerLead',String(lead));
+        assert.equal(await page.locator('#newWinner tbody tr').count(),data.n101_winner.filter(x=>x.season==year&&x.lead===lead&&x.baseline==='market').length);
+      }
+    }
+    assert.equal(await page.locator('#providerRows tbody tr').count(),data.venue.length+data.named.length);
+    assert.equal(await page.locator('#providerCurrent tbody tr').count(),data.named_current.length);
+    assert.equal(await page.locator('#origMarket tbody tr').count(),data.original_contracts.scores.length);
+    assert.equal(await page.locator('#totalRows tbody tr').count(),data.strict_total_forward.length);
+    assert.ok(data.strict_total_forward.length&&data.total_contracts.pairs>0&&data.original_contracts.rows>0);
+    assert.ok(data.named.some(r=>r.provider==='DraftKings')&&data.named.some(r=>r.provider==='Polymarket'));
+    await page.locator('#bcard').click();
+    await page.locator('#card').waitFor({state:'visible'});
+    assert.equal(await page.locator('#family option').count(),6);
+    for (let i=0; i<data.cards.length; i++) {
+      await page.selectOption('#family',{index:i});
+      await page.selectOption('#sideFilter','all');
+      assert.equal(await page.locator('#cardTable tbody tr').count(), 26);
+      await page.selectOption('#sideFilter','best');
+      assert.equal(await page.locator('#cardTable tbody tr').count(), 5);
+    }
+    await page.locator('#bseason').click();
+    await page.locator('#season').waitFor({state:'visible'});
+    for(const [state,n] of Object.entries({all:272,Final:137,Confirmed:111,TBD:24})){
+      await page.selectOption('#seasonStatus',state);assert.equal(await page.locator('#seasonTable tbody tr').count(),n);
+    }
+    await page.locator('#bforecast').click();
+    await page.locator('#forecast').waitFor({state:'visible'});
+    await page.fill('#team','');
+    assert.equal(await page.locator('#gamesTable tbody tr').count(),111);
+    const team = data.games[0].away;
+    await page.fill('#team',team);
+    const teamRows=await page.locator('#gamesTable tbody tr').allTextContents();
+    const withTeam=data.games.filter(g=>g.away===team || g.home===team);
+    assert.equal(teamRows.length,withTeam.length);
+    assert.ok(teamRows.every(row=>row.includes(team)));
+    await page.locator('#bmetric').click();
+    await page.locator('#metric').waitFor({state:'visible'});
+    for (const year of ['2024','2025','2026']) {
+      await page.selectOption('#year',year);
+      const arm=await page.locator('#arm').inputValue();
+      const inYear=r=>String(r.season)===year;
+      assert.equal(arm,'market_joint');
+      for(const scope of await page.locator('#scope option').evaluateAll(items=>items.map(o=>o.value))) {
+        await page.selectOption('#scope',scope);
+        assert.equal(await page.locator('#marginTable tbody tr').count(),data.margin.filter(r=>inYear(r)&&r.arm===arm&&r.scope===scope).length);
+      }
+      assert.equal(await page.locator('#frontierTable tbody tr').count(),data.frontier.filter(inYear).length);
+      assert.equal(await page.locator('#winnerTable tbody tr').count(),data.winner.filter(inYear).length);
+    }
+    await page.locator('#bmarket').click();
+    await page.locator('#market').waitFor({state:'visible'});
+    const scores=data.exchange.history.scores;
+    for (const target of new Set(['all',...scores.map(r=>r.target)])) {
+      await page.selectOption('#target',target);
+      assert.equal(await page.locator('#marketTable tbody tr').count(),scores.filter(r=>target==='all'||r.target===target).length);
+    }
+    assert.equal(data.exchange.current.actual_trades,0);
+    assert.ok(data.exchange.current.native_candle_equals_book<=data.exchange.current.paired);
+    assert.ok(data.exchange.current.native_matches_distinct<=data.exchange.current.contracts);
+    assert.equal(await page.evaluate(()=>document.documentElement.scrollWidth>window.innerWidth+1),false);
+    assert.deepEqual(errors,[]);
+    console.log(JSON.stringify({target:live || 'source',width,source_sha256:sha(source),served_sha256:responseHash,authored_blocks:assets.length,cards:data.cards.length,selected_sides:30,reviewed_sides:156,forecasts:111,team_filter_matches:teamRows.length,checks:'script/style/main, privacy, distinct games, ranking, probability arithmetic, filters, season scores, viewport and JS exceptions'}));
+  } finally {
+    await page.close();
+  }
+}
+
+(async () => {
+  const assets=checkPublicSource(source);
+  if (process.argv.includes('--source-only')) {
+    const dataBlock = assets.find(a=>/^<script\b[^>]*id=["']data["']/i.test(a));
+    assert.ok(dataBlock,'Embedded public JSON');
+    const dataset=JSON.parse(dataBlock.slice(dataBlock.indexOf('>')+1, dataBlock.lastIndexOf('</script>')));
+    checkDataset(dataset);
+    const required=['family','sideFilter','team','year','scope','cardTable','gamesTable','card','forecast','metric','market','bcard','bforecast','bmetric','bmarket'];
+    for (const id of required) assert.ok(new RegExp('id=["\']'+id+'["\']').test(source),id);
+    console.log(JSON.stringify({scope:'static source, no browser',sha256:sha(source),data_cards:dataset.cards.length,game_count:dataset.games.length,authored_blocks:assets.length}));
+    return;
+  }
+  const {chromium}=require(process.env.PLAYWRIGHT_MODULE_DIR || 'playwright');
+  const executable=process.env.NFL_N105_CHROMIUM;
+  const browser=await chromium.launch({headless:true, ...(executable ? {executablePath:executable} : {})});
+  try {
+    for (const width of [1440,390]) await exercise(width,browser,assets);
+  } finally {
+    await browser.close();
+  }
+})().catch(e => { console.error(e); process.exitCode = 1; });
