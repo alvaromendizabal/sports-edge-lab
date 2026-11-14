@@ -67,6 +67,34 @@ class PublicEvidenceTests(unittest.TestCase):
         self.assertFalse(e["new_scientific_results_this_update"])
         self.assertIn("Latest owner execution failed before fitting", self.page)
 
+    def test_local_release_validation_is_not_owner_execution(self):
+        r = self.operational["next_release"]
+        self.assertEqual(r["status"],
+                         "LOCAL_RELEASE_VALIDATED_OWNER_EXECUTION_PENDING")
+        self.assertFalse(r["owner_execution_verified"])
+        self.assertEqual(r["actual_owner_runs_observed"], 0)
+        self.assertEqual(r["new_model_fits"], 0)
+        self.assertEqual(r["new_issued_forecasts"], 0)
+        self.assertEqual(r["local_validation"]["status"], "PASSED")
+        self.assertEqual(r["local_validation"]["production_fit_credit_from_local_checks"], 0)
+        self.assertIn("passed local release validation", self.page)
+        self.assertIn("No actual R12 owner execution is recorded", self.page)
+        v = r["local_validation"]
+        c = v["final_packaged_counts"]
+        self.assertEqual(c["startup"]["passed"], 318)
+        self.assertEqual(c["startup"]["errors"] + c["startup"]["failures"] + c["startup"]["skipped"], 0)
+        self.assertEqual(c["warm_validation"]["executed_cases"], 0)
+        self.assertEqual(c["warm_validation"]["verified_reused_validation_cases"], 318)
+        self.assertEqual(c["native_bridge"]["passed"], 54)
+        self.assertEqual(c["physical_transport"]["passed"], 16)
+        self.assertEqual([(x["serialized_zip_bytes"], x["physical_parts"]) for x in v["physical_archive_boundaries"]],
+                         [(536870911, 1), (536870912, 1), (536870913, 2), (2150629376, 5)])
+        self.assertEqual(v["initial_transport_attempt"]["errors"], 1)
+        self.assertFalse(v["initial_transport_attempt"]["included_in_actual_owner_run_count"])
+        self.assertEqual(v["authentic_historical_candidate_validation"]["verified_reused_fit_credit"], 0)
+        self.assertTrue(v["separate_suites_may_overlap_do_not_sum"])
+
+
     def test_emergency_transport_success_does_not_hide_missing_evidence(self):
         r = self.operational["latest_owner_execution"]["return"]
         self.assertTrue(r["zip_integrity_verified"])

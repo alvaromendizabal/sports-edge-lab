@@ -224,10 +224,99 @@
   },
   "next_release": {
     "release": "B063R12",
-    "status": "REPAIR_IN_PROGRESS_VALIDATION_PENDING",
+    "status": "LOCAL_RELEASE_VALIDATED_OWNER_EXECUTION_PENDING",
     "owner_execution_verified": false,
     "new_model_fits": 0,
     "new_issued_forecasts": 0,
-    "acceptance": "Final packaged integration tests and a separate actual owner return are required; preparation is not fitting evidence."
+    "acceptance": "Local release checks establish executable readiness only. A separate authenticated owner return must establish actual production fits, verified checkpoint reuse, forecasts, utilization and durability.",
+    "actual_owner_runs_observed": 0,
+    "local_validation": {
+      "status": "PASSED",
+      "scope": "LOCAL_RELEASE_AND_PACKAGED_CHECKS_ONLY",
+      "final_packaged_counts": {
+        "startup": {
+          "passed": 318,
+          "planned": 318,
+          "failures": 0,
+          "errors": 0,
+          "skipped": 0,
+          "wall_seconds": 48.22248169500017
+        },
+        "native_bridge": {
+          "passed": 54,
+          "planned": 54,
+          "failures": 0,
+          "errors": 0,
+          "skipped": 0,
+          "wall_seconds": 61.24176915800126
+        },
+        "physical_transport": {
+          "passed": 16,
+          "planned": 16,
+          "failures": 0,
+          "errors": 0,
+          "skipped": 0,
+          "wall_seconds": 37.69822600900079
+        },
+        "warm_validation": {
+          "executed_cases": 0,
+          "verified_reused_validation_cases": 318,
+          "wall_seconds": 0.6518277850009326,
+          "exact_code_environment_receipt": true
+        },
+        "original_numeric_and_feature_scopes": {
+          "matched": 19,
+          "total": 19
+        },
+        "independent_review_source_pins": {
+          "matched": 15,
+          "total": 15,
+          "unresolved_findings": 0
+        }
+      },
+      "production_fit_credit_from_local_checks": 0,
+      "separate_suites_may_overlap_do_not_sum": true,
+      "same_exact_executable_verified_across_final_checks": true,
+      "physical_archive_boundaries": [
+        {
+          "serialized_zip_bytes": 536870911,
+          "physical_parts": 1,
+          "integrity_and_reassembly": "PASS"
+        },
+        {
+          "serialized_zip_bytes": 536870912,
+          "physical_parts": 1,
+          "integrity_and_reassembly": "PASS"
+        },
+        {
+          "serialized_zip_bytes": 536870913,
+          "physical_parts": 2,
+          "integrity_and_reassembly": "PASS"
+        },
+        {
+          "serialized_zip_bytes": 2150629376,
+          "physical_parts": 5,
+          "integrity_and_reassembly": "PASS"
+        }
+      ],
+      "initial_transport_attempt": {
+        "status": "STOPPED_AT_ACTUAL_FREE_DISK_GATE",
+        "passed": 15,
+        "errors": 1,
+        "environment": "temporary local volume",
+        "same_executable_passed_after": "validation moved to a local volume with sufficient physical storage",
+        "included_in_actual_owner_run_count": false
+      },
+      "authentic_historical_candidate_validation": {
+        "status": "PASS",
+        "B033_candidates": 108,
+        "B036_candidates": 85,
+        "models_deserialized": 0,
+        "new_fit_credit": 0,
+        "verified_reused_fit_credit": 0,
+        "current_runtime_inputs_and_artifact_readback_still_required": true
+      },
+      "aws_requests": 0
+    }
   }
 }
