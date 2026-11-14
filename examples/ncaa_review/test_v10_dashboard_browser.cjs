@@ -42,8 +42,13 @@ const {pathToFileURL}=require('node:url');
       assert.match(await page.locator('#weight-status').innerText(),/weighted ranks are withheld/);
       await page.locator('#execution-status summary').click();
       assert.equal(await page.locator('#execution-rows tr').count(),4);
-      assert.match(await page.locator('#execution-status').innerText(),/Next owner execution pending/);
+      assert.match(await page.locator('#execution-status').innerText(),/Latest owner execution failed before fitting/);
+      assert.match(await page.locator('#scope').innerText(),/Latest owner execution: R11 failed before fitting/);
       assert.match(await page.locator('#execution-status').innerText(),/8\.49×/);
+      assert.equal(await page.locator('#owner-attempt-rows tr').count(),3);
+      assert.match(await page.locator('#execution-tally').innerText(),/14 actual owner runs/);
+      assert.match(await page.locator('#execution-status').innerText(),/not attempted/);
+      assert.match(await page.locator('#next-release-status').innerText(),/R12/);
      }
      const dimensions=await page.evaluate(()=>({documentWidth:document.documentElement.scrollWidth,viewport:innerWidth}));
      assert.equal(dimensions.documentWidth<=dimensions.viewport,true,JSON.stringify({url,width,...dimensions}));
