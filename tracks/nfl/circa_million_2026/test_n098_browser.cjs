@@ -19,12 +19,24 @@ for(const word of banned) assert.ok(!raw.toString().toLowerCase().includes(word.
     const errors=[];page.on('pageerror',e=>errors.push(String(e)));
     const t=Date.now();
     const resp=await page.goto(live||pathToFileURL(file).href,{waitUntil:'domcontentloaded'});
-    if(live){assert.equal(resp.status(),200);assert.equal(sha(await resp.body()),sha(raw));checks+=2}
+    if(live){
+      assert.equal(resp.status(),200);
+      const served=await resp.body();
+      const source=raw.toString(), returned=served.toString();
+      const assets=[...source.matchAll(/<(script|style)\b[^>]*>[\s\S]*?<\/\1>/g)].map(match=>match[0]);
+      assert.equal(assets.length,3);
+      for(const authored of assets)assert.ok(returned.includes(authored),'Authored script, data, or style differs from source');
+      const main=source.match(/<main>[\s\S]*?<\/main>/)[0];
+      assert.ok(returned.includes(main),'Authored main layout or script-free fallback differs');
+      console.log(JSON.stringify({source_sha256:sha(raw),response_sha256:sha(served),scripts_styles_and_evidence_data_exact:true,authored_main_and_fallback_exact:true}));
+      checks+=6;
+    }
     assert.equal(await page.title(),'Circa Million Picks & Performance Dashboard');
     const d=await page.locator('#evidenceData').evaluate(n=>JSON.parse(n.textContent));
     assert.equal(d.release,'N098');assert.equal(d.games.length,272);
     assert.equal(new Set(d.games.map(g=>g.game)).size,d.games.length);
     assert.ok(d.kalshi.length>0&&d.totals.length>0&&d.margin.length>0);
+    assert.equal(d.cards.length,5);assert.equal(d.cards.reduce((n,c)=>n+c.sides.length,0),130);assert.equal(d.games.reduce((n,g)=>n+(g.strict||[]).length,0),888);checks+=3;
     assert.ok(d.previous.new===0&&d.previous.reused===205);
     assert.equal(d.matched.current_executable_rows,0);checks+=7;
     const timings=[];
