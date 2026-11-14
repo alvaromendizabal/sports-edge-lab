@@ -1,7 +1,7 @@
 {
   "schema": "sel.ncaa.v11_1.public_execution_status.v1",
   "evidence_asof": "2026-11-14T05:27:59.865610+00:00",
-  "publication_scope": "Actual resource-deferred NCAA R12 execution over preserved scientific evidence; R13 remains unreleased",
+  "publication_scope": "Actual resource-deferred NCAA R12 execution and latest observed census over preserved scientific evidence; locally verified R13 engineering release awaits authenticated owner execution",
   "new_owner_execution_verified": true,
   "new_owner_fits": 0,
   "new_owner_inference": 0,
@@ -189,7 +189,8 @@
       "final_available_memory_bytes": 91015860224,
       "final_free_disk_bytes": 538667384832,
       "diagnosis": "The existing one-CPU parent was tested as a new worker; retaining its own CPU made the additional-admission predicate false despite measured spare capacity.",
-      "repair_implementation_not_release_validated": true
+      "repair_implementation_not_release_validated": false,
+      "repair_validation_scope": "R13 local final packaged resource regression passed; authentic owner continuation remains pending"
     },
     "source_refresh": {
       "completed": true,
@@ -278,24 +279,112 @@
   },
   "next_release": {
     "release": "B063R13",
-    "status": "UNRELEASED_RECOVERY_IN_PROGRESS_AFTER_WORKSPACE_RESET",
+    "status": "ENGINEERING_RELEASE_VERIFIED_PENDING_AUTHENTIC_OWNER_EXECUTION",
     "owner_execution_verified": false,
     "actual_owner_runs_observed": 0,
     "new_model_fits": 0,
     "new_issued_forecasts": 0,
-    "acquisition_adapter_implemented": false,
-    "packaged_runner_verified": false,
+    "acquisition_adapter_implemented": true,
+    "packaged_runner_verified": true,
     "local_validation": {
-      "status": "INCOMPLETE_ONE_ERROR_PENDING_CORRECTION",
-      "scope": "Focused resource regression preparation only",
-      "cases_executed": 47,
-      "passed": 46,
-      "errors": 1,
+      "status": "PASSED",
+      "scope": "LOCAL_FINAL_PACKAGED_EXECUTABLE_ONLY_NOT_OWNER_SCIENCE",
+      "complete_suite_pass": true,
+      "same_exact_executable_verified_across_final_checks": true,
+      "separate_suites_may_overlap_do_not_sum": true,
       "production_fit_credit_from_local_checks": 0,
-      "complete_suite_pass": false
+      "final_packaged_counts": {
+        "startup": {
+          "passed": 383,
+          "planned": 383,
+          "failures": 0,
+          "errors": 0,
+          "skipped": 0,
+          "wall_seconds": 98.498
+        },
+        "native_bridge": {
+          "passed": 54,
+          "planned": 54,
+          "failures": 0,
+          "errors": 0,
+          "skipped": 0,
+          "wall_seconds": 90.748
+        },
+        "resource_regression": {
+          "passed": 69,
+          "planned": 69,
+          "failures": 0,
+          "errors": 0,
+          "skipped": 0,
+          "wall_seconds": 2.757
+        },
+        "source_acquisition_guards": {
+          "passed": 16,
+          "planned": 16,
+          "failures": 0,
+          "errors": 0,
+          "skipped": 0,
+          "wall_seconds": 35.006
+        },
+        "physical_transport": {
+          "passed": 16,
+          "planned": 16,
+          "failures": 0,
+          "errors": 0,
+          "skipped": 0,
+          "wall_seconds": 57.497
+        },
+        "original_numeric_and_feature_scopes": {
+          "matched": 19,
+          "total": 19,
+          "wall_seconds": 3.61
+        },
+        "warm_validation": {
+          "executed_cases": 0,
+          "verified_reused_validation_cases": 383,
+          "wall_seconds": 1.118636,
+          "mode": "EXACT_CODE_ENVIRONMENT_RECEIPT_REUSED",
+          "exact_code_environment_receipt": true,
+          "fresh_full_source_integrity_checked": true
+        }
+      },
+      "physical_archive_boundaries": [
+        {
+          "serialized_zip_bytes": 536870911,
+          "physical_parts": 1,
+          "integrity_and_reassembly": "PASS"
+        },
+        {
+          "serialized_zip_bytes": 536870912,
+          "physical_parts": 1,
+          "integrity_and_reassembly": "PASS"
+        },
+        {
+          "serialized_zip_bytes": 536870913,
+          "physical_parts": 2,
+          "integrity_and_reassembly": "PASS"
+        },
+        {
+          "serialized_zip_bytes": 2150629376,
+          "physical_parts": 5,
+          "integrity_and_reassembly": "PASS"
+        }
+      ],
+      "new_12_core_owner_throughput_verified": false,
+      "cold_warm_comparison_scope": "Local engineering runtime only; not a production owner speedup"
     },
-    "acceptance": "The workspace reset removed local preparation files before complete validation and packaging. Recovery from authenticated prior artifacts is in progress; no ready R13 release or successful owner execution is claimed. The acquisition continuation adapter is not implemented.",
-    "workspace_status": "RESET_AUTHENTICATED_RECOVERY_IN_PROGRESS"
+    "development_history": {
+      "earlier_resource_attempt": {
+        "cases_executed": 47,
+        "passed": 46,
+        "errors": 1,
+        "status": "CORRECTED_BEFORE_FINAL_PACKAGED_RELEASE"
+      },
+      "workspace_reset_occurred": true,
+      "recovery_basis": "Authenticated prior artifacts; local preparation was rebuilt"
+    },
+    "workspace_status": "RESTORED_AND_REBUILT_FROM_AUTHENTICATED_ARTIFACTS",
+    "acceptance": "Final packaged engineering checks passed for the same executable. The acquisition continuation adapter is implemented. An authenticated owner execution is still required to establish new or reused model fits, genuinely issued forecasts, fresh durability and actual leased throughput. This release has no new owner-run or science credit."
   },
   "previous_owner_execution": {
     "release": "B063R11",
@@ -441,5 +530,40 @@
       },
       "aws_requests": 0
     }
+  },
+  "latest_public_observed_census": {
+    "release": "B063R12",
+    "report_asof": "2026-11-14T05:23:59.250627+00:00",
+    "complete_official_universe": false,
+    "counts": {
+      "display_inventory_rows": 24522,
+      "canonical_games": 2502,
+      "canonical_final": 1482,
+      "canonical_scheduled": 1013,
+      "canonical_in_progress": 3,
+      "canonical_other": 4,
+      "reported_upcoming_scheduled_or_in_progress": 1016,
+      "unresolved_official_rows": 903,
+      "unresolved_schedule_rows": 21117,
+      "canonical_games_with_saved_forecast": 0
+    },
+    "canonical_asset": "v11_r12_canonical_games.json",
+    "unresolved_asset": "v11_r12_unresolved_inventory.json",
+    "public_columns": [
+      "league",
+      "event_id",
+      "away_team",
+      "home_team",
+      "event_time",
+      "time_precision",
+      "status",
+      "inventory_kind",
+      "missing_reasons",
+      "away_score",
+      "home_score"
+    ],
+    "unresolved_rows_are_unique_games": false,
+    "source_refresh_or_science_performed_by_publication": false,
+    "unissued_forecasts_published": 0
   }
 }

@@ -1,5 +1,13 @@
 # NCAA V11.1 continuation status
 
+## Latest observed R12 census
+
+The observed-census panel now exposes the authenticated report snapshot from **2026-11-14 05:23:59 UTC**, separately from the earlier model-comparison payload. Its **24,522 inventory rows** comprise **2,502 canonical games**, **903 unresolved official records**, and **21,117 unresolved schedule records**. Unresolved records may overlap and must not be added to the unique game denominator. The complete official season universe remains unverified.
+
+Canonical statuses are **1,482 final, 1,013 scheduled, 3 in progress, and 4 unqualified**. The source report called the scheduled-plus-in-progress total of **1,016** upcoming; the panel makes that meaning explicit. It contains **zero qualified saved forecasts**. Publication does not issue forecasts, refresh feeds, score models or create scientific fit credit.
+
+The two downloadable JSON projections contain only league, public event ID, team names, event time/precision, status, inventory kind, missing-reason codes, and away/home final scores. They exclude source hashes, cloud locations, source versions/receipts, private clock details, model inputs, weights, raw quotes and unissued forecasts. The canonical table loads first; unresolved records are loaded only when selected. Filters, pagination and filtered JSON export preserve the report as-of time and incomplete-universe flag. The prior scientific payload remains byte-identical.
+
 The [interactive V11 evidence page](v11.html) preserves the previously published
 NCAA men's and women's comparisons. Its source analysis time remains
 **2026-11-13 23:38:59 UTC**. A publication update is not a source refresh or a new
@@ -85,13 +93,35 @@ completed with 65 newly committed target fits and 35 scalar-calibration fits.
 Those historical fits receive no new-fit credit in this update. One reported
 parser attempt and two transfer attempts are separate from owner executions.
 
-### R13 is unreleased
+### R13 engineering release verified; owner execution pending
 
-R13 preparation is incomplete. The focused resource suite recorded **47 cases:
-46 passed and 1 errored**, with correction pending. The workspace reset removed local preparation files before complete validation
-and packaging. Recovery from authenticated prior artifacts is in progress. The acquisition
-continuation adapter is **not implemented**. No ready R13 release, actual R13
-owner execution, new fitted model or forecast is claimed.
+The final packaged R13 executable passed every release gate below. The acquisition
+continuation adapter and existing-parent admission repair are implemented. These
+checks verify local engineering readiness; **actual R13 owner runs, new fitted
+models and newly issued forecasts remain zero**. No production 12-core throughput
+or model improvement is claimed.
+
+| Final packaged check | Observed result | Wall time |
+|---|---|---:|
+| Cold startup prerequisites | 383/383 passed | 98.498 s |
+| Exact warm receipt | 0 cases executed; 383 prior code/environment cases reused, with fresh source integrity checked | 1.118636 s |
+| Native checkpoint bridge | 54/54 passed | 90.748 s |
+| Resource regression | 69/69 passed | 2.757 s |
+| Source acquisition guards | 16/16 passed | 35.006 s |
+| Original numerical and feature scopes | 19/19 matched | 3.610 s |
+| Physical return transport | 16/16 passed | 57.497 s |
+
+Every executed suite has zero failures, errors and skips. Suites overlap and are
+not summed as unique tests. Actual serialized archives of 536,870,911;
+536,870,912; 536,870,913; and 2,150,629,376 bytes passed integrity and reassembly
+using 1, 1, 2 and 5 physical parts. The cold/warm timing comparison describes
+this local runtime, not a production owner speedup.
+
+The earlier resource attempt (47 cases: 46 passed and one error) is preserved as
+corrected development history. Preparation was rebuilt from authenticated prior
+artifacts after the workspace reset. A fresh authenticated owner return must
+still establish new or reused model fits, genuinely issued forecasts, new
+durability and actual leased throughput.
 
 ### Historical R12 local validation evidence
 
@@ -200,15 +230,14 @@ when needed. Aggregate transport size must not prevent otherwise admissible
 science. Exact recipes, source rights, information clocks, actual resource
 availability and independent promotion review remain required. R12 recovered
 all 65 indexed R11 diagnostic bodies and verified its complete declared return,
-while the scientific workflow remains partial. R13 is unreleased and requires
-correction, complete validation and packaging. Recovery checkpoint references
+while the scientific workflow remains partial. R13 is a verified local engineering release awaiting authentic owner execution. Recovery checkpoint references
 are not model-fit counts.
 
 ## Publication scope
 
 The embedded scientific payload is preserved byte for byte from the recovered
 public V11 page. The added [operational status](v11_1_execution_status.json)
-contains only aggregate execution facts and the incomplete R13 preparation status. The earlier
+contains only aggregate execution facts and the verified local R13 engineering status and pending owner execution. The earlier
 uncertainty supplement is reused unchanged; it is not counted as new work. Private
 recipes, weights, owner packages, cloud paths, raw feeds and future unissued
 candidate values are excluded. Older NCAA pages and other sports' evidence
