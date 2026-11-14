@@ -1,5 +1,7 @@
 # Circa Million Picks & Performance Dashboard
 
+**Current publication: existing Site version 44 deployed successfully at 00:21:13 UTC on November 14, 2026 (November 13 Pacific).** Canonical source merge `b95ee8afeb3127b19a2c5c630204102892af700b`; the NFL root, scientific payload and history remain unchanged. The actual-public-route browser check runs with this receipt. Native deployment alone is not reported as interaction verification.
+
 N090 prepares the V11 continuation. Recovered 1,008 native fit receipts with ordered feature recipes and 611 included native model bodies. This review performed zero new owner AWS fits. The 40-model/14-game Circa display and 272-game season census are retained N089 evidence. The current expected-points top five remains unavailable until calibrated probabilities and eligibility pass. No automatic promotion or new market-superiority claim.
 
 # Preserved N089 evidence

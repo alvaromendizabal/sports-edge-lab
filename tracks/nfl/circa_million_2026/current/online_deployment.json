@@ -1,8 +1,21 @@
 {
-  "schema": "nfl.n090.publication.v1",
-  "state": "PREPARED_NOT_DEPLOYED",
-  "previous_native_version": 43,
-  "previous_native_source_commit": "176961ce40414a99c8d7580845539c3689007b76",
+  "schema": "nfl.n090.native-publication.v1",
+  "state": "DEPLOYED_BROWSER_VERIFICATION_PENDING",
   "public_url": "https://sports-edge-lab-nfl.alv-mendizabal.chatgpt.site/circa/",
-  "note": "Current N090 source is not yet deployed; the preceding N089 v43 deployment remains an independently dated event."
+  "native_site_version": 44,
+  "native_deployment_id": "appgdep_6af7a9726c4081919a874e22ac3ed670",
+  "native_deployment_succeeded_at_utc": "2026-11-14T00:21:13.696614+00:00",
+  "native_source_commit": "d91a0bc0b84a48787b4f9fdb4a61578810605583",
+  "canonical_github_commit": "b95ee8afeb3127b19a2c5c630204102892af700b",
+  "reviewed_head": "8b0947ce67531749b63dcf60aa17024aab696587",
+  "source_pull_request": 290,
+  "circa_index_sha256": "97dc54ad6826ebac580eb10372c6b95f86996d0e4c4edb867da3d5ae9b93fb24",
+  "existing_nfl_root_sha256": "4b860e5cdbf01344227375ba35758c97cec7bb8a64c03c53c1aed566fa3e30e1",
+  "audience": "public",
+  "audience_changed": false,
+  "new_site_created": false,
+  "aws_infrastructure_changed": false,
+  "new_owner_aws_fits": 0,
+  "current_source_privacy_corrected": true,
+  "browser_review_workflow": "https://github.com/alvaromendizabal/sports-edge-lab/actions/workflows/nfl-static-review.yml"
 }
