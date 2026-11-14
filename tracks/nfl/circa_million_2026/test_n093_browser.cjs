@@ -1,0 +1,93 @@
+'use strict';
+const fs = require('node:fs');
+const path = require('node:path');
+const http = require('node:http');
+const assert = require('node:assert/strict');
+const crypto = require('node:crypto');
+const { chromium } = require(process.env.PLAYWRIGHT_MODULE_DIR || 'playwright');
+const base = path.resolve(process.env.NFL_N093_BUNDLE_ROOT || path.join(__dirname, 'n093_current'));
+const onlineUrl = process.env.NFL_N093_ONLINE_URL;
+const html = fs.readFileSync(path.join(base, 'index.html'));
+const body = fs.readFileSync(path.join(base, 'public_science.json'));
+const source = JSON.parse(body);
+let checks = 0;
+const check = (condition, name) => { assert.ok(condition, name); checks++; };
+const digest = value => crypto.createHash('sha256').update(value).digest('hex');
+let server;
+async function main() {
+  let url = onlineUrl;
+  if (!url) {
+    server = http.createServer((req,res) => {
+      if (req.url === '/favicon.ico') { res.writeHead(204); return res.end(); }
+      res.setHeader('Content-Type','text/html; charset=utf-8'); res.end(html);
+    });
+    await new Promise(resolve => server.listen(0,'127.0.0.1',resolve));
+    url = 'http://127.0.0.1:' + server.address().port + '/';
+  }
+  const browser = await chromium.launch({headless:true});
+  const viewports = [], errors = [], consoleErrors = [];
+  for (const width of [1440,390]) {
+    const page = await browser.newPage({viewport:{width,height:1000}});
+    page.on('pageerror', e => errors.push(String(e)));
+    page.on('console', m => { if(m.type()==='error') consoleErrors.push(m.text()); });
+    const start=Date.now();
+    await page.goto(url,{waitUntil:'networkidle'});
+    await page.waitForFunction(()=>Boolean(window.nflN093));
+    const data = await page.evaluate(()=>window.nflN093.data);
+    const rows = id=>page.locator('#'+id+' tbody tr').count();
+    const text = id=>page.locator('#'+id).innerText();
+    check(await page.title()==='Circa Million Picks & Performance Dashboard','public title');
+    check((await page.locator('h1').innerText())===await page.title(),'primary heading');
+    check(!JSON.stringify(data).toLowerCase().includes(String.fromCharCode(106,109,97,99)),'privacy');
+    check(JSON.stringify(data)===JSON.stringify(source),'exact source and deployed payload');
+    check(data.execution.new_fits===12&&data.execution.reused_fits===156&&data.execution.failed_fits===0,'returned owner fit jobs');
+    check(data.execution.unique_completed_fit_identities===164&&data.execution.unique_reused_fit_identities===152,'unique fit identities');
+    check(data.execution.scientific_worker_mean_core_equivalents>2.25&&data.execution.scientific_worker_mean_core_equivalents<2.26,'measured CPU');
+    check(data.execution.qualified_current_rows_after_display_clock_gate===888,'current forecast rows');
+    check(data.records.length===444&&data.execution.current_models===8,'selected public scope');
+    check(data.games.length===272&&data.scorecards.length===243,'schedule and seasonal scores');
+    check(data.owner_probability_counts.new_aws_calibrator_fits===9&&data.owner_probability_counts.studies_reused===18,'owner calibration receipts');
+    check(data.time_ordered_studies.length===27&&data.selected_current_margin_events.length===111,'studies and current distributions');
+    const card=data.current_owner_research_cards[0];
+    check(card.expected_card_points===3.1473,'expected card points');
+    check(card.picks.map(s=>s.team).join(',')==='CAR,CIN,TEN,ARI,DET','ordered owner card');
+    check(new Set(card.picks.map(s=>s.game_id)).size===5,'five distinct games');
+    check(card.production_accepted===false&&card.submitted===false,'research qualifications');
+    check(card.alternatives.length===26&&card.alternatives.every(s=>s.team_ats&&s.chosen_side_ats&&s.rationale),'all side histories and rationales');
+    check(await rows('owner-card-picks')===5&&await rows('owner-card-alternatives')===26,'rendered card and alternatives');
+    check((await text('owner-card-summary')).includes('3.1473'),'primary card visibility');
+    check(await rows('model-ats')===3&&await rows('distribution-scores')===3,'primary seasonal comparisons');
+    check((await text('model-ats')).includes('14.0 / 30')&&(await text('model-ats')).includes('12.5 / 25'),'retrospective five-game scores');
+    check(data.historical_clock_audit.historical_feature_origin_prelock_picks===146&&data.historical_clock_audit.historical_picks_all_policies===1590,'recorded weekly lock audit');
+    check(data.historical_clock_audit.historical_true_asof_replay_cards===0,'source-qualified historical replay status');
+    await page.selectOption('#study-policy','all');
+    check(await rows('model-ats')===9,'challenger calibration filter');
+    await page.selectOption('#study-season','2025');
+    check(await rows('historical-five')===135,'earlier weekly reconstructions');
+    await page.selectOption('#study-season','2026'); await page.selectOption('#study-policy','primary');
+    check(await rows('common-models')===12,'common-game strict refits');
+    check((await text('common-models')).includes('catboost'),'common cohort family labels');
+    await page.selectOption('#common-scope','weeks_1_to_9');
+    check(await rows('common-models')===12,'comparable weeks filter');
+    await page.selectOption('#common-scope','all');
+    check(await rows('official-games')===14&&await rows('official-sides')===26,'official board');
+    check(data.scenario_sensitivity.rankings[0].sum_scenario_mean_points===3.1375,'separate descriptive scenario');
+    check(data.market_comparison.scorecards.length===52&&data.market_comparison.weighted_scorecards.length===54,'fixed contest line comparisons');
+    check(data.archived_market.season_scorecards.length===449&&data.archived_market.weighted_scorecards.length===501,'independent archived market comparisons');
+    check(data.archived_market.scope.executable_contract_comparisons===0,'contract execution qualification');
+    check(await page.locator('#game-rows tr').count()===135,'all upcoming games');
+    await page.selectOption('#game-scope','all');check(await page.locator('#game-rows tr').count()===272,'complete schedule filter');
+    await page.selectOption('#game-scope','upcoming');await page.fill('#game-search','2026_10_NE_DET');
+    check(await page.locator('#game-rows tr').count()===1,'game search');
+    await page.locator('[data-game]').first().click();check(await page.locator('#detail').isVisible(),'issue detail opens');
+    check((await text('detail-body')).includes('model_fitted_at_utc'),'issue provenance');
+    await page.click('#close-detail');check(!(await page.locator('#detail').isVisible()),'issue detail closes');
+    check(!(await page.evaluate(()=>document.documentElement.scrollWidth>innerWidth+2)),'responsive layout');
+    viewports.push({width,load_wall_ms:Date.now()-start,upcoming_games:135});await page.close();
+  }
+  const nojs=await browser.newPage({javaScriptEnabled:false});await nojs.goto(url);check(await nojs.locator('noscript tbody tr').count()===272,'script-free game census');
+  await browser.close(); if(server)server.close();
+  check(errors.length===0,'no uncaught page errors'); check(consoleErrors.length===0,'no console errors');
+  console.log(JSON.stringify({status:'PASS',release:'N093',online:Boolean(onlineUrl),url,checks,viewports,uncaught_page_errors:errors,console_error_messages:consoleErrors,source_html_sha256:digest(html),public_payload_sha256:digest(body),scientific_fits_performed_by_browser:0,verified_at_utc:new Date().toISOString()}));
+}
+main().catch(error=>{console.error(error);if(server)server.close();process.exit(1);});
