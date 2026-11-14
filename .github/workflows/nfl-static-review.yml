@@ -96,7 +96,7 @@ jobs:
         run: |
           python -m unittest discover -s tracks/nfl/circa_million_2026 -p test_current_n089.py -v
           node tracks/nfl/circa_million_2026/test_current_n089_dom.cjs
-      - name: Verify responsive Circa cards, JMac override, history and exact game drilldowns
+      - name: Verify responsive Circa cards, manual override, history and exact game drilldowns
         env:
           PLAYWRIGHT_MODULE_DIR: ${{ runner.temp }}/nfl-static-browser/node_modules/playwright
           CIRCA_N089_EVIDENCE: ${{ runner.temp }}/nfl-static-evidence/circa-source
@@ -107,12 +107,12 @@ jobs:
           CIRCA_N089_EVIDENCE: ${{ runner.temp }}/nfl-static-evidence/circa-online
           CIRCA_N089_ONLINE_URL: https://sports-edge-lab-nfl.alv-mendizabal.chatgpt.site/circa/
         run: |
-          if test -f tracks/nfl/circa_million_2026/current/online_deployment.json; then
+          if python -c "import json,pathlib; p=pathlib.Path('tracks/nfl/circa_million_2026/current/online_deployment.json'); d=json.loads(p.read_text()) if p.exists() else {}; raise SystemExit(0 if str(d.get('state','')).startswith(('DEPLOYED','VERIFIED')) else 1)"; then
             node tracks/nfl/circa_million_2026/test_current_n089_browser.cjs
           else
-            echo 'Circa source prepared; no native deployment receipt exists yet.'
+            echo 'Circa source prepared; this source does not yet have a matching deployment receipt.'
           fi
-      - name: Verify the exact Circa HTML and history emitted by the sealed N089 executable
+      - name: Verify the sanitized projection of the preserved N089 runtime fixture
         if: always()
         env:
           PLAYWRIGHT_MODULE_DIR: ${{ runner.temp }}/nfl-static-browser/node_modules/playwright
@@ -136,7 +136,7 @@ jobs:
               assert hashlib.sha256(blob).hexdigest()==fixture['publication']['assets'][name]['sha256']
               dest=out/name;dest.parent.mkdir(exist_ok=True,parents=True);dest.write_bytes(blob)
           (out/'publication.json').write_text(json.dumps(fixture['publication'],indent=2,sort_keys=True)+'\n')
-          print(json.dumps({'fixture':'actual sealed N089 executable output','html_sha256':fixture['html_sha256'],'new_model_fits':0}))
+          print(json.dumps({'fixture':'privacy-sanitized N089 runtime projection','html_sha256':fixture['html_sha256'],'new_model_fits':0}))
           PYFIXTURE
           node tracks/nfl/circa_million_2026/test_current_n089_browser.cjs
       - name: Preserve exact public bundle and browser evidence
