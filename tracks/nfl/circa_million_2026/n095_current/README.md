@@ -21,3 +21,5 @@ The same-week test covers all five reconstructed weekly cards in Weeks 4–8 of 
 All three current model cards included CAR +2.5, TEN +10.5 and ARI +9.5. Their fifth and sixth sides have overlapping marginal intervals in all three cases. An overlap cannot be used as a probability that a pick belongs in the top five.
 
 The HTML is self-contained. The verified version 52 dashboard retains the earlier N093 owner projection and N094 frozen-weight inference under its original clocks. Source refresh and native deployment carry separate receipts.
+
+The complete owner-authored public dataset is preserved byte for byte in public_science.json (SHA-256 ccaec4ddee50000d0b1be74192a07e07d259edc9268d1807c018554270726d7b). The page retains the 272-game census, 25-stream forecast coverage, 27 retained margin studies, nine newly trained total calibrators and alternate-market league tables. Our additional same-week and selection-stability calculations are in research_review.json.

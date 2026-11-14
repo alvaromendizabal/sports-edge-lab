@@ -5,12 +5,16 @@
   "source_release": "N094",
   "assets": {
     "index.html": {
-      "bytes": 75666,
-      "sha256": "e3ffad07a2aae2f8259f9eed38b60c4b00baf9a4adc4d83fca83497c0130e384"
+      "bytes": 2687498,
+      "sha256": "8c4f26f6f94a6fe5c8f48d64b515a27b2eecb8fe418c78ca3ddc4e9ec9d2eb3d"
     },
     "public_science.json": {
-      "bytes": 64782,
-      "sha256": "cda869b88e03f71c6b1b91a5e0a369546e7127ab20c9c77589301d59909a17b2"
+      "bytes": 2537544,
+      "sha256": "ccaec4ddee50000d0b1be74192a07e07d259edc9268d1807c018554270726d7b"
+    },
+    "research_review.json": {
+      "bytes": 67041,
+      "sha256": "396cd8035de0db844796241ad54c11a68aadd86e04148ac3dbdb235693eb17ac"
     }
   },
   "source_archive_sha256": "8ca7e72767ad7d07a2dc8f41683a523cd14d5ca5008e8110f19d9bef0cbdf1bb",
@@ -28,5 +32,11 @@
     "private_paths_count": 0,
     "private_recipes_published": 0,
     "trained_weights_published": false
-  }
+  },
+  "returned_dashboard_html": {
+    "bytes": 2617175,
+    "sha256": "5ba10be69da877b36bcfd47f4d48cdb2009751a20778e02be241e49581e0acc4"
+  },
+  "canonical_owner_payload_verified_by_full_sha256": true,
+  "source_projection_scope": "COMPLETE_UNMODIFIED_OWNER_PUBLIC_PAYLOAD_PLUS_SEPARATE_N095_REVIEW"
 }
