@@ -1,5 +1,7 @@
 # 2026 NFL models vs. Circa Million VIII
 
+[Circa Million Picks & Performance Dashboard · N104 NFL research](https://sports-edge-lab-nfl.alv-mendizabal.chatgpt.site/circa/n104/) includes the full season ledger, six Week 10 cards, original point-model issues, and comparisons with DraftKings, Kalshi and Polymarket.
+
 [Circa Million Picks & Performance Dashboard · November 14 NFL update](https://sports-edge-lab-nfl.alv-mendizabal.chatgpt.site/circa/n103/) includes the complete 2026 schedule, model and market results, total and margin probability controls, and six Week 10 research cards.
 
 [Circa Million Picks & Performance Dashboard · November 14 NFL research](https://sports-edge-lab-nfl.alv-mendizabal.chatgpt.site/circa/n102/) covers all 272 scheduled 2026 games, six five-game cards and same-cohort model comparisons with DraftKings, Kalshi and Polymarket.
