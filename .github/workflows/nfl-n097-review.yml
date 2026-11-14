@@ -1,0 +1,53 @@
+name: NFL N097 scientific return review
+on:
+  pull_request:
+    paths: ['tracks/nfl/circa_million_2026/n097_current/**', 'tracks/nfl/circa_million_2026/test_n097_browser.cjs', '.github/workflows/nfl-n097-review.yml']
+  push:
+    branches: [main]
+    paths: ['tracks/nfl/circa_million_2026/n097_current/**', 'tracks/nfl/circa_million_2026/test_n097_browser.cjs', '.github/workflows/nfl-n097-review.yml']
+permissions:
+  contents: read
+concurrency:
+  group: nfl-n097-${{ github.event.pull_request.number || github.ref }}
+  cancel-in-progress: true
+jobs:
+  actual-science-browser:
+    runs-on: ubuntu-24.04
+    steps:
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1
+        with:
+          persist-credentials: false
+      - name: Check pinned public assets and privacy
+        run: |
+          python - <<'PY'
+          import hashlib, json, pathlib
+          p=pathlib.Path('tracks/nfl/circa_million_2026/n097_current')
+          for name,pin in json.loads((p/'publication.json').read_text())['assets'].items():
+              raw=(p/name).read_bytes()
+              assert len(raw)==pin['bytes'] and hashlib.sha256(raw).hexdigest()==pin['sha256']
+          needle=bytes([106,109,97,99])
+          for f in p.rglob('*'):
+              if f.is_file():
+                  raw=f.read_bytes()
+                  assert needle not in f.name.encode().lower()+raw.lower()
+                  assert not any(v in raw for v in (b's3://',b'/home/',b'/workspace/',b'AKIA',b'PRIVATE KEY-----'))
+          print('PASS public asset pins and privacy')
+          PY
+      - name: Install pinned verification browser
+        run: |
+          npm install --prefix "${RUNNER_TEMP}/n097-browser" --ignore-scripts --no-audit --no-fund playwright@1.62.1
+          node "${RUNNER_TEMP}/n097-browser/node_modules/playwright/cli.js" install --with-deps chromium
+      - name: Verify current scientific dashboard interactions at desktop and mobile sizes
+        env:
+          PLAYWRIGHT_MODULE_DIR: ${{ runner.temp }}/n097-browser/node_modules/playwright
+        run: node tracks/nfl/circa_million_2026/test_n097_browser.cjs
+      - name: Verify actual deployed N097 route when its receipt is present
+        env:
+          PLAYWRIGHT_MODULE_DIR: ${{ runner.temp }}/n097-browser/node_modules/playwright
+          NFL_N097_ONLINE_URL: https://sports-edge-lab-nfl.alv-mendizabal.chatgpt.site/circa/
+        run: |
+          if python -c "import json,pathlib;p=pathlib.Path('tracks/nfl/circa_million_2026/n097_current/online_deployment.json');d=json.loads(p.read_text()) if p.exists() else {};raise SystemExit(0 if str(d.get('state','')).startswith(('DEPLOYED','VERIFIED')) else 1)"; then
+            node tracks/nfl/circa_million_2026/test_n097_browser.cjs
+          else
+            echo 'Public source verified. Native N097 deployment receipt pending.'
+          fi
