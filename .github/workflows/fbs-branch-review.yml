@@ -24,6 +24,7 @@ jobs:
           python tests/test_fbs_v054_public_evidence.py
           python tests/test_fbs_v071_public.py
           python tests/test_fbs_v072_public.py
+          python tests/test_fbs_v074_public.py
           node tests/fbs_v054_public_view.test.cjs
       - name: Execute twice and verify deterministic evidence page
         run: |
@@ -83,6 +84,14 @@ jobs:
           node tests/fbs_v071_browser.test.cjs
           node tests/fbs_v072_browser.test.cjs
           node tests/fbs_v073_browser.test.cjs
+          node tests/fbs_v074_browser.test.cjs
+      - name: Verify the published V074 URL in an actual public browser
+        if: github.event_name == 'pull_request' && github.head_ref == 'fbs/v074-saved-evidence-review'
+        env:
+          PLAYWRIGHT_MODULE_DIR: ${{ runner.temp }}/fbs-browser/node_modules/playwright
+          FBS_SCREENSHOTS: ${{ runner.temp }}/fbs-screenshots
+          FBS_V074_LIVE_URL: https://sports-edge-lab-fbs.alv-mendizabal.chatgpt.site/v074/
+        run: node tests/fbs_v074_browser.test.cjs
       - name: Verify the published V073 URL in an actual public browser
         if: github.event_name == 'pull_request' && github.head_ref == 'fbs/v073-v10-frozen-recovery'
         env:
@@ -97,6 +106,7 @@ jobs:
           path: |
             ${{ runner.temp }}/fbs-screenshots/*.png
             ${{ runner.temp }}/fbs-screenshots/FBS_V073_BROWSER_RECEIPT.json
+            ${{ runner.temp }}/fbs-screenshots/FBS_V074_*_BROWSER_RECEIPT.json
           if-no-files-found: error
           retention-days: 14
 
