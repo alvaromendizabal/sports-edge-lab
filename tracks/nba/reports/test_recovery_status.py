@@ -32,9 +32,25 @@ class RecoveryStatusTests(unittest.TestCase):
         changed = copy.deepcopy(self.value); changed['private_detail'] = '/home/example/model.pkl'
         with self.assertRaises(AssertionError): subject.validate(changed)
 
+    def test_engineering_hash_threads_do_not_become_scientific_throughput(self):
+        changed = copy.deepcopy(self.value)
+        changed['preparation_verification']['concurrency']['twelve_core_scientific_throughput_established'] = True
+        with self.assertRaises(AssertionError): subject.validate(changed)
+
+    def test_physical_boundary_cannot_claim_a_single_file_above_limit(self):
+        changed = copy.deepcopy(self.value)
+        changed['preparation_verification']['physical_size_cases'][2]['zip_files'] = 1
+        with self.assertRaises(AssertionError): subject.validate(changed)
+
+    def test_preparation_cannot_claim_new_nba_fits(self):
+        changed = copy.deepcopy(self.value)
+        changed['preparation_verification']['new_NBA_fits'] = 1
+        with self.assertRaises(AssertionError): subject.validate(changed)
+
     def test_notice_does_not_create_science(self):
         changed = copy.deepcopy(self.value); changed['publication_effects']['new_forecasts'] = 1
         with self.assertRaises(AssertionError): subject.validate(changed)
 
 
 if __name__ == '__main__': unittest.main(verbosity=2)
+
