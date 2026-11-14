@@ -7,3 +7,5 @@ The research card issued at 04:57:58 UTC has five distinct eligible games and 3.
 The drive comparison covers 58 later-fitted games. Three-year comparisons lack earlier drive coverage. Observed settlements cover 484 contracts across 121 games. Pregame models and post-kickoff quotes have different information times. The settled sample contains zero synchronized pregame comparisons and zero executable trades.
 
 The executable verification compares the page’s embedded public JSON with the pinned source, checks interactive controls at desktop and mobile sizes, and verifies the script-free schedule.
+
+The expanded N094 predeadline review also evaluated three separate model-specific research cards. Its 333 exact-weight margin distributions include 111 returned HistGB distributions and 222 new projections from local scoring with authentic owner-trained ExtraTrees and CatBoost weights. The selector shows the five chosen sides and all 26 alternatives for each model. Each card retains its own issue and selection times, expected points, team history and side history. No new optimizer fit or submission occurred.

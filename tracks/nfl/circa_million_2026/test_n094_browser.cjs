@@ -65,6 +65,17 @@ async function main() {
     check(data.total_study.scorecards.filter(r=>r.season===2026).every(r=>r.model_crps>r.reference_crps)&&await rows('total-scenario-scores')===9,'same-game total reference');
     check(data.earlier_original_issues.scored_rows===48&&data.earlier_original_issues.game_count===16&&data.earlier_original_issues.pending===39,'recovered original forecast cohort');
     check(await rows('original-scorecard')===3&&(await text('original-scorecard')).includes('0.1615'),'original issue losses');
+    const expanded=data.current_model_card_review;
+    check(expanded.cards.map(c=>c.family).join(',')==='histgb,extratrees,catboost'&&expanded.current_unique_probability_rows===333&&expanded.new_probability_projections===222,'three evidence-qualified margin models');
+    check(expanded.cards.every(c=>c.picks.length===5&&new Set(c.picks.map(x=>x.game_id)).size===5&&c.alternatives.length===26),'distinct five and complete alternatives for every model');
+    check(expanded.cards.filter(c=>c.point_origin==='LOCAL_PRESERVED_WEIGHT_INFERENCE').length===2,'extra cards with preserved-weight execution origin');
+    await page.selectOption('#model-card-select','1');
+    check((await text('model-card-status')).includes('3.1084')&&(await text('model-card-status')).includes('Local inference'),'ExtraTrees issue and provenance');
+    check(await rows('model-card-picked')===5&&await rows('model-card-others')===26,'selected model issues and alternatives');
+    await page.selectOption('#model-card-select','2');
+    check((await text('model-card-status')).includes('3.0286')&&(await text('model-card-picked')).includes('KC'),'CatBoost card and alternate evidence');
+    await page.selectOption('#model-card-select','0');
+    check((await text('model-card-status')).includes('Original owner-issued distribution'),'preserved owner clock');
     const card=data.current_owner_research_cards[0];
     check(card.expected_card_points===3.1473,'expected card points');
     check(card.picks.map(s=>s.team).join(',')==='CAR,CIN,TEN,ARI,DET','ordered owner card');
