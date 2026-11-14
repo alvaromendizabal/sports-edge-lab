@@ -19,10 +19,26 @@ def validate(value):
     assert value['attempts'][1]['finalizer_exit_code'] == 1
     assert value['attempts'][2]['external_exit_code'] == 3
     assert value['attempts'][2]['failure_class'] == 'AGGREGATE_RETURN_TRANSPORT_ADMISSION'
-    assert value['replacement']['release'] == 'B085'
+    assert value['replacement']['release'] == 'B086'
     assert value['replacement']['owner_execution_observed'] is False
     assert value['publication_effects'] == {'new_fits': 0, 'new_forecasts': 0, 'new_scoring': 0,
                                           'data_refresh': False, 'automatic_promotions': 0}
+    engineering = value['preparation_verification']
+    assert engineering['owner_execution_observed'] is False
+    assert engineering['new_NBA_fits'] == 0
+    assert engineering['tests'] == {'run': 95, 'passed': 95, 'failed': 0, 'errors': 0, 'skipped': 0}
+    assert engineering['concurrency']['independent_hash_readers_verified'] == 4
+    assert engineering['concurrency']['twelve_core_scientific_throughput_established'] is False
+    assert [(row['logical_archive_bytes'], row['zip_files'], row['byte_parts'], row['manifests'])
+            for row in engineering['physical_size_cases']] == [
+        (536870911, 1, 0, 0), (536870912, 1, 0, 0),
+        (536870913, 0, 2, 1), (2147549185, 0, 5, 1)]
+    for row in engineering['physical_size_cases']:
+        assert row['status'] == 'PASS'
+        assert row['representation'] == ('single_zip' if row['zip_files'] else 'byte_split_single_zip')
+    assert engineering['checks']['sparse_or_mocked_sizes'] is False
+    assert all(verified is True for key, verified in engineering['checks'].items()
+               if key != 'sparse_or_mocked_sizes')
     body = json.dumps(value, sort_keys=True)
     forbidden = ('s3://', '/home/', '/workspace/', 'recipe_id', 'feature_names', 'api_key',
                  '.pyz', 'PRIVATE KEY', 'sha256', 'private_recipient')
@@ -36,6 +52,10 @@ def render(value):
     rows = ''.join('<tr><th scope="row">'+e(row['label'])+'</th><td>'+e(row['started_at_utc'])+
         '</td><td>'+str(row['native_estimator_fit_returns'])+'</td><td>'+e(row['outcome'])+'</td></tr>'
         for row in value['attempts'])
+    engineering = value['preparation_verification']
+    boundary_rows = ''.join('<tr><td>'+format(row['logical_archive_bytes'], ',')+'</td><td>'+
+        ('One ZIP' if row['zip_files'] else str(row['byte_parts'])+' byte pieces + manifest')+
+        '</td><td>'+e(row['status'])+'</td></tr>' for row in engineering['physical_size_cases'])
     options = ''.join('<option value="'+e(row['id'])+'">'+e(row['label'])+'</option>' for row in value['attempts'])
     data = json.dumps(value, ensure_ascii=False, sort_keys=True, separators=(',', ':')).replace('<', '\\u003c')
     return '''<!doctype html>
@@ -49,7 +69,7 @@ header{padding:44px 24px 32px;background:#123343;color:#fff}header>div,main,foot
 main{padding:28px 24px 48px}section{margin:0 0 24px;padding:25px;background:white;border:1px solid var(--line);border-radius:10px}p{margin:0 0 16px}p:last-child{margin-bottom:0}a{color:var(--blue)}.actions{display:flex;flex-wrap:wrap;gap:12px;margin-top:22px}.button,button{display:inline-block;background:var(--blue);color:white;padding:10px 16px;border:1px solid transparent;border-radius:5px;text-decoration:none;font:inherit;cursor:pointer}.button.secondary{background:white;color:var(--blue);border-color:var(--line)}.status{display:inline-block;border-radius:4px;background:#ffedbf;color:#654800;font-weight:700;padding:4px 10px;margin-bottom:16px}.columns{display:grid;grid-template-columns:1.1fr 1fr;gap:24px}.small{font-size:14px;color:var(--muted)}.scroll{overflow:auto}table{border-collapse:collapse;width:100%;font-size:14px}th,td{padding:13px 12px;border-bottom:1px solid var(--line);text-align:left;vertical-align:top}thead{background:#eaf3f7}th{min-width:150px}td{min-width:110px}select{max-width:100%;padding:10px;border:1px solid #7f9daa;border-radius:4px;background:white;color:var(--ink);font:inherit;margin:8px 0 18px}#attempt-detail{padding:16px;background:#f3f8fa;border-left:3px solid var(--blue)}summary{cursor:pointer;font-weight:700;padding:8px 0}li{margin:8px 0}iframe{width:100%;height:1100px;border:1px solid var(--line);border-radius:6px;margin-top:18px}footer{padding:0 24px 36px;color:var(--muted);font-size:14px}p,li,td,th,a,code{overflow-wrap:anywhere}a:focus-visible,button:focus-visible,select:focus-visible,summary:focus-visible{outline:3px solid #e5a821;outline-offset:3px}@media(max-width:650px){header{padding:30px 18px 24px}main{padding:18px 14px 30px}section{padding:18px}.columns{grid-template-columns:1fr;gap:0}h2{font-size:22px}.actions{gap:8px}}
 </style></head><body>
 <header><div><div class="eyebrow">Sports Edge Lab · NBA</div><h1>Recovery status &amp; saved research</h1>
-<p>Two later owner attempts are now recovered. Their operational evidence is separate from the forecasts and scores in the preserved public dashboard.</p></div></header>
+<p>The next continuation has passed local engineering checks. Recovered owner execution, prepared software and the preserved forecasts retain separate evidence labels.</p></div></header>
 <main>
 <section aria-labelledby="recovery-title"><span class="status">Recovery required · no automatic promotion</span>
 <h2 id="recovery-title">The latest attempt stopped before new training</h2>
@@ -62,7 +82,7 @@ main{padding:28px 24px 48px}section{margin:0 0 24px;padding:25px;background:whit
 <p>The preserved dashboard contains 1,274 observed canonical games and the earlier B082 result of 318 native fit returns. Original issues, exposed historical replay, missing coverage and metric-specific roles retain their existing labels. Later recovered operational summaries do not refresh those game rows or rescore them.</p>
 <p class="small">Publication adds zero fits, forecasts, scores or provider refreshes. A later operational report is not a new forecast timestamp.</p></section>
 <section aria-labelledby="next-title"><h2 id="next-title">What must happen next</h2>
-<p id="replacement-status"><strong>B085 owner execution remains unobserved.</strong> Its continuation must remove the aggregate transport gate, preserve all scientific evidence, recover strict champion recipes and compare new time-valid work before any promotion decision.</p>
+<p id="replacement-status"><strong>B086 owner execution remains unobserved.</strong> Its prepared transport and recovery changes have passed local engineering checks. The owner run must establish new time-valid science, strict champion recovery and measured useful throughput before any promotion decision.</p>
 <details id="recovery-gates"><summary>Required recovery and evidence gates</summary><ul>
 <li>One complete logical return, with ordered parts of at most 512 MiB when needed; test reconstruction and missing or corrupt parts.</li>
 <li>Reuse prior cryptographic proofs only for proven identical files; report changed, missing and unverified bytes honestly.</li>
@@ -70,6 +90,14 @@ main{padding:28px 24px 48px}section{margin:0 0 24px;padding:25px;background:whit
 <li>Measure useful CPU work and new versus reused model results. A twelve-core reservation is not twelve-core utilization.</li>
 <li>Retain source-rights, leakage, exact-recipe, actual-disk and promotion gates. Current-season model-versus-market completeness is still pending.</li>
 </ul></details></section></div>
+<section aria-labelledby="engineering-title"><span class="status">Prepared software · owner result pending</span>
+<h2 id="engineering-title">Verified transport and recovery engineering</h2>
+<p id="engineering-tests"><strong>95 targeted tests passed</strong>, with zero failures, errors or skips. These local invented-byte fixtures validate software behavior and create zero NBA fits or forecasts.</p>
+<div class="scroll"><table id="engineering-boundaries"><thead><tr><th>Exact serialized archive bytes</th><th>Physical delivery</th><th>Result</th></tr></thead><tbody>'''+boundary_rows+'''</tbody></table></div>
+<p id="engineering-readback">The multipart cases were physically reassembled. Complete archive and payload readback passed; missing and corrupt parts were rejected, and verification passed after repair. No source archive was changed. Byte pieces are not independently extractable ZIPs.</p>
+<p id="engineering-concurrency">Four independent file readers entered the engineering hash workload concurrently. Warm unchanged files reused their existing proofs; changed or unproved files required complete reads. This does not establish twelve-core scientific throughput.</p>
+<details id="engineering-repairs"><summary>Recovery behavior corrected</summary><ul><li>Missing historical bodies cannot receive a verified historical-closure flag.</li><li>Cooperative interrupts and earlier failed-gate exits retain their severity after partial sealing.</li><li>Existing immutable support containers can be verified and reused without requiring capacity for a new write.</li><li>File hashing uses bounded workers and guarded metadata commits; live logs retain their original snapshot procedure.</li></ul></details>
+<p class="small">A completed B086 owner run, sustained twelve-core science, new complete current-season source-matched scoreboards and newly issued forecasts remain pending.</p></section>
 <section aria-labelledby="attempts-title"><h2 id="attempts-title">Recovered attempts, in time order</h2>
 <div class="scroll"><table id="attempt-table"><thead><tr><th>Attempt</th><th>Started (UTC)</th><th>Native fit returns</th><th>Observed outcome</th></tr></thead><tbody>'''+rows+'''</tbody></table></div>
 <p class="small">Counts describe native method returns in each invocation. Repeated replay passes, forecast rows and scientific model commits have different denominators.</p>
@@ -105,3 +133,4 @@ def build(check=False):
 if __name__ == '__main__':
     parser = argparse.ArgumentParser(); parser.add_argument('--check', action='store_true')
     print(json.dumps(build(parser.parse_args().check)))
+

@@ -58,7 +58,10 @@ async function checkRecovery(browser){
   assert.match(await page.locator('#latest-attempt-summary').textContent(),/zero new native estimator fits/);
   assert.match(await page.locator('#b084-summary').textContent(),/28 native estimator method returns/);
   assert.match(await page.locator('#snapshot-clock').textContent(),/17:53:05.203284/);
-  assert.match(await page.locator('#replacement-status').textContent(),/B085 owner execution remains unobserved/);
+  assert.match(await page.locator('#replacement-status').textContent(),/B086 owner execution remains unobserved/);
+  assert.match(await page.locator('#engineering-tests').textContent(),/95 targeted tests passed/);
+  assert.equal(await page.locator('#engineering-boundaries tbody tr').count(),4);
+  assert.match(await page.locator('#engineering-concurrency').textContent(),/does not establish twelve-core scientific throughput/);
   await page.locator('#attempt-selector').selectOption('b084');
   assert.equal(await page.locator('#attempt-detail').getAttribute('data-attempt'),'b084');
   assert.match(await page.locator('#attempt-detail').textContent(),/28 native fit returns/);
@@ -70,7 +73,7 @@ async function checkRecovery(browser){
    assert.equal(file.suggestedFilename(),'nba_recovery_status_2026-11-14.json');assert.deepEqual(JSON.parse(fs.readFileSync(await file.path(),'utf8')),status);
   }
   assert.ok(await page.evaluate(()=>document.documentElement.scrollWidth<=window.innerWidth+1),'recovery horizontal overflow');
-  const out=process.env.NBA_MONITOR_SCREENSHOTS;if(out){fs.mkdirSync(out,{recursive:true});await page.screenshot({path:path.join(out,'nba-b085-recovery-'+name+'.png'),fullPage:true});}
+  const out=process.env.NBA_MONITOR_SCREENSHOTS;if(out){fs.mkdirSync(out,{recursive:true});await page.screenshot({path:path.join(out,'nba-b086-recovery-'+name+'.png'),fullPage:true});}
   await page.reload({waitUntil:'load'});assert.equal(await page.locator('#attempt-detail').getAttribute('data-attempt'),'b082-latest');
   assert.deepEqual(errors,[]);assert.deepEqual(external,[]);
   checks.push({viewport,name,status:'PASS',original_snapshot_clock_preserved:true,unobserved_owner_not_claimed:true,offline_reopen:true});await page.close();
@@ -85,4 +88,5 @@ async function checkRecovery(browser){
  const receipt={schema:'sports-edge-lab.nba.execution-review.browser.v2',status:'PASS',display_sha256:hash(raw),evidence_sha256:hash(read('latest_execution_review.json')),new_fits:0,new_forecasts:0,lossless_offline_restoration_verified:true,unsupported_browser_fallback_verified:true,exact_original_JSON_downloads_verified:2,recovery_status_checks:recoveryChecks,results};
  if(process.env.NBA_MONITOR_SCREENSHOTS)fs.writeFileSync(path.join(process.env.NBA_MONITOR_SCREENSHOTS,'B083_EXECUTION_BROWSER_RECEIPT.json'),JSON.stringify(receipt,null,2)+'\n');console.log(JSON.stringify(receipt));
 })().catch(e=>{console.error(e);process.exitCode=1;});
+
 

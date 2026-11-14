@@ -5,6 +5,18 @@ Reproducible NBA forecasts, complete released-game inventories, chronological mo
 This NBA track belongs to the shared [Sports Edge Lab](../../README.md) repository. Its public material contains sanitized aggregate evidence, selected rounded already-issued research forecasts, complete observed schedule coverage, and invented engineering examples. Exact feature recipes, model weights, source responses, full journals, candidate forecast grids, and execution packages remain private under the [NBA publication boundary](../../docs/PUBLICATION_BOUNDARY.md#selected-nba-research-outputs-november-11-extension).
 
 
+<!-- NBA B086 ENGINEERING STATUS BEGIN -->
+## November 14 — B086 engineering verified; owner science remains pending
+
+The [recovery dashboard](reports/recovery_status.html) now separates the prepared **B086** continuation from actual owner execution. **95 targeted local engineering tests passed**, with zero failures, errors or skips. Four physically written archive cases passed: **512 MiB minus one byte**, **exactly 512 MiB**, **512 MiB plus one byte**, and **2 GiB plus 65,537 bytes**. The first two produced one ZIP each; the larger cases produced two and five ordered byte pieces, respectively, plus a manifest. Physical reassembly, full archive and payload readback, missing/corrupt-piece rejection and recovery after repair passed. Original source archives were unchanged.
+
+The preparation repairs independent file verification under a bounded worker ceiling, preserves live-log snapshots, stops missing historical bodies from receiving a false closure flag, retains interrupted/failed exit severity, and reuses existing immutable support containers without charging them for a new write. Four concurrent engineering file readers were verified. **These checks do not establish sustained twelve-core model training or a completed B086 owner run.**
+
+The saved public scientific cutoff remains **November 13, 17:53:05.203284 UTC**. The latest authenticated B082 attempt still has **zero new native fits and exit 3**; the intervening B084 evidence still records **28 native method returns**, pipeline exit **2**, and finalizer exit **1**, without a complete sealed scientific return. Preparation adds zero NBA fits, forecasts, scoring or source refreshes. Complete current-season source-matched comparisons and owner throughput remain pending; automatic promotion remains disabled.
+
+The older B085 and B083 notices below remain dated history. Source publication and live website deployment require separate verification.
+<!-- NBA B086 ENGINEERING STATUS END -->
+
 <!-- NBA B085 RECOVERY STATUS BEGIN -->
 ## November 14 — later B084 execution recovered; latest rerun stopped before training
 

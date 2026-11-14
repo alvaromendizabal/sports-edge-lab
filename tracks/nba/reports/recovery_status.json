@@ -12,7 +12,7 @@
   "attempts": [
     {
       "id": "b082-earlier",
-      "label": "B082 · earlier substantive run",
+      "label": "B082 \u00b7 earlier substantive run",
       "started_at_utc": "2026-11-13T16:18:13.916041Z",
       "finished_at_utc": "2026-11-13T17:53:05.203284Z",
       "native_estimator_fit_returns": 318,
@@ -23,7 +23,7 @@
     },
     {
       "id": "b084",
-      "label": "B084 · recovered intervening run",
+      "label": "B084 \u00b7 recovered intervening run",
       "started_at_utc": "2026-11-13T21:45:21.287283Z",
       "pipeline_finished_at_utc": "2026-11-13T23:07:41.149810Z",
       "finalizer_finished_at_utc": "2026-11-13T23:08:00.619867Z",
@@ -43,7 +43,7 @@
     },
     {
       "id": "b082-latest",
-      "label": "B082 · latest diagnostic rerun",
+      "label": "B082 \u00b7 latest diagnostic rerun",
       "started_at_utc": "2026-11-13T23:33:41.606169Z",
       "finished_at_utc": "2026-11-14T00:08:46.573306Z",
       "native_estimator_fit_returns": 0,
@@ -58,9 +58,9 @@
     }
   ],
   "replacement": {
-    "release": "B085",
+    "release": "B086",
     "owner_execution_observed": false,
-    "status": "CONTINUATION_PREPARATION_OWNER_RESULT_PENDING",
+    "status": "LOCAL_ENGINEERING_VERIFIED_OWNER_RESULT_PENDING",
     "aggregate_transport_ceiling_permitted": false,
     "maximum_physical_part_mib": 512,
     "automatic_promotion_permitted": false
@@ -72,5 +72,79 @@
     "data_refresh": false,
     "automatic_promotions": 0
   },
-  "source_attribution": "Recovered owner execution receipts, native-call summaries, stage summaries and the preserved earlier public snapshot; private source material remains outside this public report."
+  "source_attribution": "Recovered owner execution receipts, native-call summaries, stage summaries and the preserved earlier public snapshot; private source material remains outside this public report.",
+  "preparation_verification": {
+    "scope": "INVENTED_LOCAL_ENGINEERING_FIXTURES_ONLY",
+    "owner_execution_observed": false,
+    "new_NBA_fits": 0,
+    "tests": {
+      "run": 95,
+      "passed": 95,
+      "failed": 0,
+      "errors": 0,
+      "skipped": 0
+    },
+    "verified_repairs": [
+      "Independent unchanged-file proofs are reused; changed or unproved files receive complete concurrent hashes with guarded metadata commits.",
+      "Live operational logs retain their original snapshot procedure.",
+      "Missing historical bodies cannot be marked as verified historical closure.",
+      "A cooperative interrupt and an earlier failed-gate exit keep their original exit severity after partial sealing.",
+      "An existing immutable support container can be verified and reused without requiring capacity for a new container."
+    ],
+    "physical_size_cases": [
+      {
+        "logical_archive_bytes": 536870911,
+        "representation": "single_zip",
+        "zip_files": 1,
+        "byte_parts": 0,
+        "manifests": 0,
+        "status": "PASS"
+      },
+      {
+        "logical_archive_bytes": 536870912,
+        "representation": "single_zip",
+        "zip_files": 1,
+        "byte_parts": 0,
+        "manifests": 0,
+        "status": "PASS"
+      },
+      {
+        "logical_archive_bytes": 536870913,
+        "representation": "byte_split_single_zip",
+        "zip_files": 0,
+        "byte_parts": 2,
+        "manifests": 1,
+        "status": "PASS"
+      },
+      {
+        "logical_archive_bytes": 2147549185,
+        "representation": "byte_split_single_zip",
+        "zip_files": 0,
+        "byte_parts": 5,
+        "manifests": 1,
+        "status": "PASS"
+      }
+    ],
+    "checks": {
+      "physically_written_archives": true,
+      "sparse_or_mocked_sizes": false,
+      "whole_archive_and_all_payload_readback": true,
+      "physical_reassembly_of_multipart_cases": true,
+      "missing_and_corrupt_parts_rejected": true,
+      "verified_after_part_repair": true,
+      "original_source_archives_unchanged": true
+    },
+    "concurrency": {
+      "independent_hash_readers_verified": 4,
+      "workload": "LOCAL_ENGINEERING_FILE_HASHING",
+      "twelve_core_scientific_throughput_established": false
+    },
+    "not_established": [
+      "A completed B086 owner execution",
+      "Sustained twelve-core scientific throughput",
+      "A new complete current-season model-versus-market leaderboard",
+      "New forecasts or newly promoted models"
+    ],
+    "qualification": "These engineering checks validate file transport and recovery behavior. They do not add NBA model results or refresh the preserved research snapshot."
+  }
 }
