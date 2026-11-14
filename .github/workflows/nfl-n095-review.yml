@@ -40,6 +40,8 @@ jobs:
           python tracks/nfl/circa_million_2026/n095_current/verification/check_file_and_cutoffs.py
       - name: Verify complete generic launcher with only generated fixture objects
         run: python tracks/nfl/circa_million_2026/n095_current/verification/test_bootstrap.py tracks/nfl/circa_million_2026/n095_current/verification/bootstrap_launcher.py
+      - name: Check exact ASCII-safe zipapp wrapper using native CPython
+        run: python tracks/nfl/circa_million_2026/n095_current/verification/test_outer_wrapper.py tracks/nfl/circa_million_2026/n095_current/verification/outer_wrapper.py
       - name: Install pinned verification browser
         run: |
           npm install --prefix "${RUNNER_TEMP}/n095-browser" --ignore-scripts --no-audit --no-fund playwright@1.62.1
