@@ -38,6 +38,8 @@ jobs:
           python --version
           python tracks/nfl/circa_million_2026/n095_current/verification/test_market_anchor.py -v
           python tracks/nfl/circa_million_2026/n095_current/verification/check_file_and_cutoffs.py
+      - name: Verify complete generic launcher with only generated fixture objects
+        run: python tracks/nfl/circa_million_2026/n095_current/verification/test_bootstrap.py tracks/nfl/circa_million_2026/n095_current/verification/bootstrap_launcher.py
       - name: Install pinned verification browser
         run: |
           npm install --prefix "${RUNNER_TEMP}/n095-browser" --ignore-scripts --no-audit --no-fund playwright@1.62.1
