@@ -1,0 +1,57 @@
+name: NFL N094 actual science publication review
+on:
+  pull_request:
+    paths: ['tracks/nfl/circa_million_2026/n094_current/**', 'tracks/nfl/circa_million_2026/test_n094_browser.cjs', '.github/workflows/nfl-n094-review.yml']
+  push:
+    branches: [main]
+    paths: ['tracks/nfl/circa_million_2026/n094_current/**', 'tracks/nfl/circa_million_2026/test_n094_browser.cjs', '.github/workflows/nfl-n094-review.yml']
+permissions:
+  contents: read
+concurrency:
+  group: nfl-n094-${{ github.event.pull_request.number || github.ref }}
+  cancel-in-progress: true
+jobs:
+  actual-science-browser:
+    runs-on: ubuntu-24.04
+    steps:
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1
+        with:
+          persist-credentials: false
+      - name: Verify scientific public projection and immutable asset pins
+        run: |
+          python - <<'PY'
+          import hashlib,json,pathlib
+          root=pathlib.Path('tracks/nfl/circa_million_2026/n094_current')
+          receipt=json.loads((root/'publication.json').read_text())
+          for name,pin in receipt['assets'].items():
+            raw=(root/name).read_bytes()
+            assert len(raw)==pin['bytes'] and hashlib.sha256(raw).hexdigest()==pin['sha256']
+          data=json.loads((root/'public_science.json').read_text())
+          assert data['automatic_promotion'] is False
+          assert data['execution']['new_fits']==32
+          assert data['execution']['qualified_current_rows_after_display_clock_gate']==1110
+          assert len(data['games'])==272 and len(data['scorecards'])==269
+          assert len(data['records'])==444
+          raw=(root/'public_science.json').read_text()
+          assert all(t not in raw for t in ('/home/','/workspace/','s3://'))
+          assert ''.join(map(chr,[106,109,97,99])) not in raw.lower()
+          print('PASS: actual science counts, complete census, privacy and exact asset pins')
+          PY
+      - name: Install pinned verification browser
+        run: |
+          npm install --prefix "${RUNNER_TEMP}/n094-browser" --ignore-scripts --no-audit --no-fund playwright@1.62.1
+          node "${RUNNER_TEMP}/n094-browser/node_modules/playwright/cli.js" install --with-deps chromium
+      - name: Verify current scientific dashboard interactions at desktop and mobile sizes
+        env:
+          PLAYWRIGHT_MODULE_DIR: ${{ runner.temp }}/n094-browser/node_modules/playwright
+        run: node tracks/nfl/circa_million_2026/test_n094_browser.cjs
+      - name: Verify actual deployed N094 route when its receipt is present
+        env:
+          PLAYWRIGHT_MODULE_DIR: ${{ runner.temp }}/n094-browser/node_modules/playwright
+          NFL_N094_ONLINE_URL: https://sports-edge-lab-nfl.alv-mendizabal.chatgpt.site/circa/
+        run: |
+          if python -c "import pathlib,json;p=pathlib.Path('tracks/nfl/circa_million_2026/n094_current/online_deployment.json');d=json.loads(p.read_text()) if p.exists() else {};raise SystemExit(0 if str(d.get('state','')).startswith(('DEPLOYED','VERIFIED')) else 1)"; then
+            node tracks/nfl/circa_million_2026/test_n094_browser.cjs
+          else
+            echo 'Source verification only; N094 deployment has not yet been recorded.'
+          fi
