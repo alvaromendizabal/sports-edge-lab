@@ -1,6 +1,6 @@
 {
   "schema": "nfl.n091.native-publication.v1",
-  "state": "ARCHIVED_SOURCE_LIVE_ROUTE_TRANSITIONING_TO_N092",
+  "state": "ARCHIVED_SOURCE_LIVE_ROUTE_REPLACED_BY_N092",
   "public_url": "https://sports-edge-lab-nfl.alv-mendizabal.chatgpt.site/circa/",
   "native_site_version": 45,
   "native_version_id": "appgprj_6aea53c491508191892bc27c1a92f69e~appgver_8993ce41ebfc8191b4a9dae61f060f31",
@@ -23,5 +23,6 @@
   "automatic_promotion": false,
   "source_browser_checks": 70,
   "live_browser_smoke": "PASS: title, actual counts, 135 upcoming games, weighted market negatives and blocked calibration visible.",
-  "browser_review_workflow": "https://github.com/alvaromendizabal/sports-edge-lab/actions/workflows/nfl-n091-review.yml"
+  "browser_review_workflow": "https://github.com/alvaromendizabal/sports-edge-lab/actions/workflows/nfl-n091-review.yml",
+  "successor_site_version": 46
 }

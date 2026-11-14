@@ -1,1 +1,29 @@
-{"schema":"nfl.n092.native-publication.v1","state":"PREPARED_NOT_PUBLISHED"}
+{
+  "schema": "nfl.n092.native-publication.v1",
+  "state": "DEPLOYED_BROWSER_VERIFICATION_PENDING",
+  "public_url": "https://sports-edge-lab-nfl.alv-mendizabal.chatgpt.site/circa/",
+  "native_site_version": 46,
+  "native_version_id": "appgprj_6aea53c491508191892bc27c1a92f69e~appgver_a254b1415fbc81919545b48f962dd399",
+  "native_deployment_id": "appgdep_6af7d2330a9881918218721119f53c46",
+  "native_deployment_succeeded_at_utc": "2026-11-14T03:15:07.927409+00:00",
+  "native_source_commit": "75c25c7596558889be2bdd0fc17b3ca338688459",
+  "canonical_github_commit": "2fcceea7f67ab7cdb9d52ad3e7a5f1c521d0e569",
+  "reviewed_head": "1877757f80fae983fc69ec38c66c637baf7139ed",
+  "source_browser_checks": 92,
+  "public_payload_sha256": "0c40710622cd7a09268744aba480ad35d624c989e0bb1f90dbe7aeb289b2aee2",
+  "source_html_sha256": "d2402cef98b302baa90b30592f55e09ba7a9068d43f67ad3ba1d93d8e3f0ddef",
+  "access": "public",
+  "live_smoke": {
+    "state": "PASS",
+    "rows": 888,
+    "upcoming_games": 135,
+    "official_games": 14,
+    "eligible_sides": 26,
+    "scenario_points": 3.1375,
+    "season_market_comparisons": 401,
+    "policy_market_comparisons": 439,
+    "executable_contract_comparisons": 0
+  },
+  "verified_private_report_published": false,
+  "scientific_fits_performed_by_publication": 0
+}
