@@ -1,0 +1,67 @@
+{
+  "schema": "sel.ncaa.v11_1.public_execution_status.v1",
+  "evidence_asof": "2026-11-13T23:39:45.572764+00:00",
+  "publication_scope": "Operational continuation over preserved public V11 evidence",
+  "new_owner_execution_verified": false,
+  "new_owner_fits": 0,
+  "new_owner_inference": 0,
+  "new_owner_issued_forecasts": 0,
+  "automatic_promotions": 0,
+  "latest_authenticated_owner_status": "COMPLETED_WITH_EXPLICIT_COVERAGE_STATUS",
+  "latest_authenticated_owner_scope": "Saved prediction scoring and bounded result refresh",
+  "latest_partition_rows": 867979,
+  "initial_partition_rows": 854308,
+  "initial_current_partition_rows": 47620,
+  "refreshed_current_partition_rows": 61291,
+  "checkpoint_references": 2793,
+  "checkpoint_references_are_fits": false,
+  "verified_reused_fit_credit": 0,
+  "benchmark": {
+    "scope": "Measured saved-row scoring on the authenticated owner; repeated work solely for declared performance benchmarking",
+    "unique_tasks": 18,
+    "records_each_layout": 854308,
+    "synthetic_work": false,
+    "layouts": [
+      {
+        "layout": "1x1",
+        "wall_seconds": 56.499515353,
+        "speedup": 1.0,
+        "core_equivalents": 0.9530521397
+      },
+      {
+        "layout": "4x1",
+        "wall_seconds": 15.473744713,
+        "speedup": 3.6513149468,
+        "core_equivalents": 3.5321431246
+      },
+      {
+        "layout": "8x1",
+        "wall_seconds": 9.124045555,
+        "speedup": 6.192375412,
+        "core_equivalents": 6.0391380849
+      },
+      {
+        "layout": "12x1",
+        "wall_seconds": 6.652417486,
+        "speedup": 8.4930802181,
+        "core_equivalents": 8.3165554652
+      }
+    ],
+    "peak_workers": 12,
+    "thread_schedule_limit": "Requests for6x2 and4x3 ran6x1 and4x1; the scorer did not use extra native threads. This is scoring performance, not a fitting benchmark."
+  },
+  "delivery_policy": {
+    "logical_return": "One complete immutable owner return",
+    "maximum_physical_part_bytes": 536870912,
+    "aggregate_transport_size_is_science_admission_gate": false,
+    "exact_oversize_transfer": "Numbered parts plus manifest and integrity-checked reassembly",
+    "owner_execution_of_new_transport": "NOT_YET_OBSERVED"
+  },
+  "research_limits": {
+    "source_matched_provider_games": 0,
+    "complete_three_season_identities": 0,
+    "weighted_rank": "WITHHELD",
+    "prospective_superiority": "NOT_ESTABLISHED"
+  },
+  "preserved_scientific_payload_sha256": "18e93c42ddfd569935733f936a417e86ae9f74d0afa87d0dd028ba617a75b730"
+}
