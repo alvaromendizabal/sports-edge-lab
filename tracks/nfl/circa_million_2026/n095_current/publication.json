@@ -1,0 +1,42 @@
+{
+  "schema": "nfl.n095.public-projection.v1",
+  "state": "PREPARED_NOT_PUBLISHED",
+  "source_owner_run": "20261114T061736Z_28316e1c9f",
+  "source_release": "N094",
+  "assets": {
+    "index.html": {
+      "bytes": 2687938,
+      "sha256": "c4e92a5dc603fc00557c131a372e45b4224c3c363c4a202fffdb31baac9e9405"
+    },
+    "public_science.json": {
+      "bytes": 2537544,
+      "sha256": "ccaec4ddee50000d0b1be74192a07e07d259edc9268d1807c018554270726d7b"
+    },
+    "research_review.json": {
+      "bytes": 67041,
+      "sha256": "396cd8035de0db844796241ad54c11a68aadd86e04148ac3dbdb235693eb17ac"
+    }
+  },
+  "source_archive_sha256": "8ca7e72767ad7d07a2dc8f41683a523cd14d5ca5008e8110f19d9bef0cbdf1bb",
+  "cards_member_sha256": "837a83bb1d2797d25f07abba9610b5f1ff4a8cda00239d3e8dbf5f678191d7a4",
+  "source_qualified_decision_clocks": [
+    "2026-11-14T06:18:24.705073+00:00",
+    "2026-11-14T06:18:24.705073+00:00",
+    "2026-11-14T06:18:24.705073+00:00"
+  ],
+  "public_eligible_sides": 78,
+  "scientific_fits_performed_by_adapter": 0,
+  "public_audit": {
+    "recipient_scan": "PASS",
+    "raw_provider_payload_count": 0,
+    "private_paths_count": 0,
+    "private_recipes_published": 0,
+    "trained_weights_published": false
+  },
+  "returned_dashboard_html": {
+    "bytes": 2617175,
+    "sha256": "5ba10be69da877b36bcfd47f4d48cdb2009751a20778e02be241e49581e0acc4"
+  },
+  "canonical_owner_payload_verified_by_full_sha256": true,
+  "source_projection_scope": "COMPLETE_UNMODIFIED_OWNER_PUBLIC_PAYLOAD_PLUS_SEPARATE_N095_REVIEW"
+}
