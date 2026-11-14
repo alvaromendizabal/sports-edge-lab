@@ -1,3 +1,13 @@
+<!-- FBS_V074_EVIDENCE_REVIEW_START -->
+## November 14, 2026: V074 saved-evidence review
+
+[Open the V074 interactive report](v074/index.html) · [Read its evidence scope](v074/README.md) · [Prior dated V073 report](v073/index.html).
+
+The saved November 13, 23:31 UTC source contains all 2,742 observed 2024–2026 fixtures and 693 completed 2026 games. The V074 report separates original-issued results, future outlooks, later-fitted reconstructions and missing evidence. Its weighted season view compares saved families on identical game cohorts, with alternative emphasis, comparable elapsed seasons, uncertainty and negative results. This public review verifies zero new owner fits and makes no complete time-valid season or promotion claim. V11.1 retraining authorization remains in effect; completed execution requires separate receipts.
+
+Earlier accounts below remain dated historical records.
+<!-- FBS_V074_EVIDENCE_REVIEW_END -->
+
 <!-- FBS_V072_ACTUAL_V071_START -->
 <!-- FBS_V072R4_ACTUAL_R3_DISK_FAILURE_START -->
 ## Latest owner result: R3 stopped at disk admission; diagnostic ZIP verified
