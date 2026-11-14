@@ -37,11 +37,14 @@ no 12-core fitting benchmark.
 |---|---:|---:|---:|---:|
 | Recent R9 / R10 / R11 | 3 | 1 | 2 | 0 |
 | Nine preserved older runs | 9 | 0 | 6 | 3 |
-| Combined selected evidence | 12 | 1 | 8 | 3 |
+| Earlier B033 / B036 returns | 2 | 1 | 1 | 0 |
+| Combined selected evidence | 14 | 2 | 9 | 3 |
 
 These are not lifetime counts. The completed recent run performed frozen
-saved-row scoring. Three older interrupted runs retained useful partial
-science. One reported parser attempt and two transfer attempts are separate
+saved-row scoring. Four older interrupted runs retained useful partial
+science. B033 failed after committing 108 target fits; B036 completed with
+65 newly committed target fits and 35 scalar-calibration fits. Those earlier
+fits are historical evidence and receive no new-fit credit in this update. One reported parser attempt and two transfer attempts are separate
 from owner executions.
 
 **R12 repair and final validation are in progress.** A later authenticated

@@ -81,12 +81,16 @@ class PublicEvidenceTests(unittest.TestCase):
 
     def test_selected_run_tally_is_not_a_lifetime_or_model_count(self):
         t = self.operational["selected_execution_tally"]
-        self.assertEqual(t["actual_owner_runs"], 12)
+        self.assertEqual(t["actual_owner_runs"], 14)
         self.assertEqual(t["completed_with_coverage_gaps"] + t["failed"] +
                          t["resource_deferred"], t["actual_owner_runs"])
         self.assertEqual(t["recent_runs"], 3)
         self.assertEqual(t["recent_completed_frozen_scoring"], 1)
         self.assertEqual(t["recent_failed"], 2)
+        self.assertEqual(t["completed_with_coverage_gaps"], 2)
+        self.assertEqual(t["failed"], 9)
+        self.assertEqual(t["earlier_two_returns"]["historical_new_target_fits"], 173)
+        self.assertEqual(t["earlier_two_returns"]["new_fits_credited_to_this_update"], 0)
         self.assertEqual(t["recent_new_target_fits"], 0)
         self.assertIsNone(t["lifetime_runs"])
         self.assertIsNone(t["lifetime_failures"])

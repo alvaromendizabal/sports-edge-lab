@@ -199,10 +199,10 @@
     "unrelated_processes_signaled": 0
   },
   "selected_execution_tally": {
-    "scope": "Nine preserved older owner runs plus R9, R10 and R11; selected evidence, not lifetime totals",
-    "actual_owner_runs": 12,
-    "completed_with_coverage_gaps": 1,
-    "failed": 8,
+    "scope": "Two earlier authenticated returns, nine preserved older owner runs, and R9, R10 and R11; selected evidence, not lifetime totals",
+    "actual_owner_runs": 14,
+    "completed_with_coverage_gaps": 2,
+    "failed": 9,
     "resource_deferred": 3,
     "recent_runs": 3,
     "recent_completed_frozen_scoring": 1,
@@ -210,9 +210,17 @@
     "recent_new_target_fits": 0,
     "lifetime_runs": null,
     "lifetime_failures": null,
-    "older_runs_with_preserved_partial_science": 3,
+    "older_runs_with_preserved_partial_science": 4,
     "pre_owner_parser_attempts_separate": 1,
-    "pre_owner_transport_attempts_separate": 2
+    "pre_owner_transport_attempts_separate": 2,
+    "earlier_two_returns": {
+      "actual_owner_runs": 2,
+      "completed_with_coverage_gaps": 1,
+      "failed": 1,
+      "historical_new_target_fits": 173,
+      "historical_new_scalar_calibration_fits": 35,
+      "new_fits_credited_to_this_update": 0
+    }
   },
   "next_release": {
     "release": "B063R12",

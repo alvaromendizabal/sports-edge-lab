@@ -46,7 +46,7 @@ const {pathToFileURL}=require('node:url');
       assert.match(await page.locator('#scope').innerText(),/Latest owner execution: R11 failed before fitting/);
       assert.match(await page.locator('#execution-status').innerText(),/8\.49×/);
       assert.equal(await page.locator('#owner-attempt-rows tr').count(),3);
-      assert.match(await page.locator('#execution-tally').innerText(),/12 actual owner runs/);
+      assert.match(await page.locator('#execution-tally').innerText(),/14 actual owner runs/);
       assert.match(await page.locator('#execution-status').innerText(),/not attempted/);
       assert.match(await page.locator('#next-release-status').innerText(),/R12/);
      }
