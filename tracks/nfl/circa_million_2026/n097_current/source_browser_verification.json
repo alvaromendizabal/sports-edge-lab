@@ -2,7 +2,7 @@
   "status": "PASS",
   "release": "N097",
   "online": false,
-  "checks": 168,
+  "checks": 178,
   "viewports": [
     {
       "width": 1440,
@@ -17,7 +17,7 @@
   ],
   "errors": [],
   "public_payload_sha256": "8bd1462277a625ca41eacaf330138a2584e78fb8bb579602369f8e0fe258642b",
-  "source_html_sha256": "ba9a2f1f4a329e8455a96259939fe3779db546dc4be9fa12b368a901459e4099",
-  "verified_at_utc": "2026-11-14T08:19:37.156Z",
-  "workflow_job": "https://github.com/alvaromendizabal/sports-edge-lab/actions/runs/43575189375/job/132387787217"
+  "source_html_sha256": "9417cfbcfa1c63bb3fb556dbf25f270210479715e01acb4fa70e7312b4230688",
+  "verified_at_utc": "2026-11-14T08:29:57.486Z",
+  "workflow_job": "https://github.com/alvaromendizabal/sports-edge-lab/actions/runs/43576047634/job/132390422322"
 }

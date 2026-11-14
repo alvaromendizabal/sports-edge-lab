@@ -1,6 +1,52 @@
 {
-  "state": "SOURCE_VERIFICATION_PENDING",
+  "state": "DEPLOYED_AWAITING_LIVE_EQUIVALENCE",
   "release": "N097",
-  "previous_verified_public_version": 54,
-  "previous_verified_workflow": "https://github.com/alvaromendizabal/sports-edge-lab/actions/runs/43575403530/job/132388417776"
+  "source_owner_release": "N096",
+  "public_url": "https://sports-edge-lab-nfl.alv-mendizabal.chatgpt.site/circa/",
+  "version": 55,
+  "version_id": "appgprj_6aea53c491508191892bc27c1a92f69e~appgver_b36e498e97d081919329d21e651efdca",
+  "deployment_id": "appgdep_6af81c1b2e808191b6f4b8fffb133516",
+  "deployed_at": "2026-11-14T08:30:27.151207+00:00",
+  "status": "succeeded",
+  "source_sha": "b3ab1ed3e49028c2c23a16023355e71adc52d7fa",
+  "source_review": {
+    "status": "PASS",
+    "release": "N097",
+    "online": false,
+    "checks": 178,
+    "viewports": [
+      {
+        "width": 1440,
+        "models": 3,
+        "eligible_sides_per_model": 26
+      },
+      {
+        "width": 390,
+        "models": 3,
+        "eligible_sides_per_model": 26
+      }
+    ],
+    "errors": [],
+    "public_payload_sha256": "8bd1462277a625ca41eacaf330138a2584e78fb8bb579602369f8e0fe258642b",
+    "source_html_sha256": "9417cfbcfa1c63bb3fb556dbf25f270210479715e01acb4fa70e7312b4230688",
+    "verified_at_utc": "2026-11-14T08:29:57.486Z",
+    "workflow_job": "https://github.com/alvaromendizabal/sports-edge-lab/actions/runs/43576047634/job/132390422322"
+  },
+  "source_pr": "https://github.com/alvaromendizabal/sports-edge-lab/pull/316",
+  "source_merge_sha": "cb9bfa0b22480f55345428d8ac718ff7bb306ff9",
+  "supersedes_verified_version": 54,
+  "scope": {
+    "season_games": 272,
+    "all_cards": 9,
+    "model_specific_sides": 234,
+    "settled_total_contracts": 73,
+    "settled_winner_and_margin_contracts": 219,
+    "graded_original_issues": 183,
+    "legacy_challenger_estimates": 264,
+    "portable_legacy_fits": 3,
+    "portable_legacy_upcoming_points": 333,
+    "actual_contest_entries": 0,
+    "orders": 0,
+    "promotions": 0
+  }
 }
