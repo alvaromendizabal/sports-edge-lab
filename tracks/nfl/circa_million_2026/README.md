@@ -1,5 +1,7 @@
 # 2026 NFL models vs. Circa Million VIII
 
+[Circa Million Picks & Performance Dashboard · November 14 NFL research](https://sports-edge-lab-nfl.alv-mendizabal.chatgpt.site/circa/n102/) covers all 272 scheduled 2026 games, six five-game cards and same-cohort model comparisons with DraftKings, Kalshi and Polymarket.
+
 **Current N089 interactive view:** [Open Circa Million VIII and Manual alternative](https://sports-edge-lab-nfl.alv-mendizabal.chatgpt.site/circa/) · [Current source and deployment evidence](current/README.md). The remainder of this page and the original `index.html` are the preserved November 8 archive; use the current view for all recovered 2024/2025/current-2026 evidence, the complete current board and separate model/manual cards.
 **Sports Edge Lab · Complete Weeks 1–9 report · Nov. 8, 2026 (Pacific time)**
 
