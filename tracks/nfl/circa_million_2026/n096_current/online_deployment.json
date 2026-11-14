@@ -1,5 +1,60 @@
 {
-  "state": "PREPARED_NOT_PUBLISHED",
+  "schema": "nfl.n096.native-publication.v1",
+  "state": "DEPLOYED_BROWSER_VERIFICATION_PENDING",
   "release": "N096",
-  "previous_native_version": 52
+  "source_owner_release": "N095",
+  "public_url": "https://sports-edge-lab-nfl.alv-mendizabal.chatgpt.site/circa/",
+  "active_site": {
+    "project_id": "appgprj_6aea53c491508191892bc27c1a92f69e",
+    "title": "Circa Million Picks & Performance Dashboard",
+    "access_mode": "public",
+    "status": "active",
+    "latest_version": 53,
+    "base_url": "https://sports-edge-lab-nfl.alv-mendizabal.chatgpt.site",
+    "version": 53,
+    "version_id": "appgprj_6aea53c491508191892bc27c1a92f69e~appgver_ed72039c162881918adf545005c1e8a1",
+    "deployment_status": "succeeded",
+    "deployment_id": "appgdep_6af81031fd148191a96a62f9adef8c52",
+    "deployed_at": "2026-11-14T07:39:38.702959+00:00",
+    "native_source": "f250f870f785f782014f8528d1d7ea3ae5907e1c"
+  },
+  "source_pr": 312,
+  "source_merge_commit": "291508046ca69ea215b280e0158272fc5bce18b7",
+  "source_browser": {
+    "status": "PASS",
+    "release": "N096",
+    "online": false,
+    "url": "http://127.0.0.1:43321/",
+    "checks": 126,
+    "viewports": [
+      {
+        "width": 1440,
+        "models": 3,
+        "eligible_sides_per_model": 26
+      },
+      {
+        "width": 390,
+        "models": 3,
+        "eligible_sides_per_model": 26
+      }
+    ],
+    "errors": [],
+    "public_payload_sha256": "6477c81e6832e1e42ae723c4d75cfd8b9eb4fd9ac3d5cf7838a6b8ee3ded9644",
+    "source_html_sha256": "005aaa9e70609d2084cb1382285be46efcb74e0ada7531260aec7be729cf4ac0",
+    "verified_at_utc": "2026-11-14T07:38:39.003Z",
+    "ci_url": "https://github.com/alvaromendizabal/sports-edge-lab/actions/runs/43571999714/job/132378185870",
+    "workflow_run": 43571999714,
+    "head_sha": "34d4204fa0a682969239fcc18be80f8d983cab08",
+    "state": "VERIFIED"
+  },
+  "live_smoke": {
+    "state": "PASS",
+    "title": "Circa Million Picks & Performance Dashboard",
+    "route": "/circa/",
+    "official_alternatives": 78,
+    "independent_new_studies": 4,
+    "owner_cards": 3,
+    "current_source_distributions": 333
+  },
+  "complete_online_checks": "PENDING_SEPARATE_ONLINE_WORKFLOW"
 }
