@@ -100,21 +100,40 @@ class PublicEvidenceTests(unittest.TestCase):
         self.assertFalse(r["complete_official_universe"])
         self.assertTrue(r["source_refresh_is_not_training"])
 
-    def test_incomplete_next_release_is_not_a_ready_runner(self):
+    def test_verified_engineering_does_not_claim_owner_execution(self):
         r = self.operational["next_release"]
         self.assertEqual(r["release"], "B063R13")
-        self.assertTrue(r["status"].startswith("UNRELEASED_"))
+        self.assertEqual(r["status"], "ENGINEERING_RELEASE_VERIFIED_PENDING_AUTHENTIC_OWNER_EXECUTION")
         self.assertFalse(r["owner_execution_verified"])
-        self.assertFalse(r["packaged_runner_verified"])
-        self.assertFalse(r["acquisition_adapter_implemented"])
+        self.assertTrue(r["packaged_runner_verified"])
+        self.assertTrue(r["acquisition_adapter_implemented"])
         self.assertEqual(r["actual_owner_runs_observed"], 0)
         self.assertEqual(r["new_model_fits"], 0)
         self.assertEqual(r["new_issued_forecasts"], 0)
-        self.assertEqual(r["local_validation"]["cases_executed"], 47)
-        self.assertEqual(r["local_validation"]["passed"], 46)
-        self.assertEqual(r["local_validation"]["errors"], 1)
-        self.assertFalse(r["local_validation"]["complete_suite_pass"])
-        self.assertIn("R13 is unreleased; validation is incomplete", self.page)
+        v = r["local_validation"]
+        self.assertEqual(v["status"], "PASSED")
+        self.assertTrue(v["complete_suite_pass"])
+        self.assertTrue(v["same_exact_executable_verified_across_final_checks"])
+        self.assertTrue(v["separate_suites_may_overlap_do_not_sum"])
+        self.assertEqual(v["production_fit_credit_from_local_checks"], 0)
+        self.assertFalse(v["new_12_core_owner_throughput_verified"])
+        c = v["final_packaged_counts"]
+        for name, total in [("startup",383),("native_bridge",54),("resource_regression",69),
+                            ("source_acquisition_guards",16),("physical_transport",16)]:
+            self.assertEqual(c[name]["passed"], total)
+            self.assertEqual(c[name]["planned"], total)
+            self.assertEqual(c[name]["failures"] + c[name]["errors"] + c[name]["skipped"], 0)
+        self.assertEqual(c["original_numeric_and_feature_scopes"]["matched"],19)
+        self.assertEqual(c["warm_validation"]["executed_cases"],0)
+        self.assertEqual(c["warm_validation"]["verified_reused_validation_cases"],383)
+        self.assertTrue(c["warm_validation"]["fresh_full_source_integrity_checked"])
+        self.assertEqual(c["warm_validation"]["mode"],"EXACT_CODE_ENVIRONMENT_RECEIPT_REUSED")
+        self.assertEqual([(x["serialized_zip_bytes"], x["physical_parts"]) for x in v["physical_archive_boundaries"]],
+                         [(536870911,1),(536870912,1),(536870913,2),(2150629376,5)])
+        self.assertEqual(r["development_history"]["earlier_resource_attempt"]["errors"],1)
+        self.assertFalse(self.operational["latest_owner_execution"]["admission"]["repair_implementation_not_release_validated"])
+        self.assertIn("R13 engineering release verified; owner execution pending",self.page)
+        self.assertNotIn("R13 is unreleased; validation is incomplete",self.page)
 
     def test_prior_local_checks_did_not_prove_owner_completion(self):
         r = self.operational["prior_release_validation"]
