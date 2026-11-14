@@ -82,6 +82,9 @@ class PublicEvidenceTests(unittest.TestCase):
     def test_selected_run_tally_is_not_a_lifetime_or_model_count(self):
         t = self.operational["selected_execution_tally"]
         self.assertEqual(t["actual_owner_runs"], 14)
+        tally_html = re.search(r'<p id="execution-tally">(.*?)</p>', self.page, re.S).group(1)
+        self.assertIn("14 actual owner runs", tally_html)
+        self.assertIn("2 completed with coverage gaps, 9 failed", tally_html)
         self.assertEqual(t["completed_with_coverage_gaps"] + t["failed"] +
                          t["resource_deferred"], t["actual_owner_runs"])
         self.assertEqual(t["recent_runs"], 3)
