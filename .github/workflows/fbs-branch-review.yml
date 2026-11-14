@@ -26,6 +26,7 @@ jobs:
           python tests/test_fbs_v072_public.py
           python tests/test_fbs_v074_public.py
           python tests/test_fbs_v075_public.py
+          python tests/test_fbs_v076_public.py
           node tests/fbs_v054_public_view.test.cjs
       - name: Execute twice and verify deterministic evidence page
         run: |
@@ -87,6 +88,7 @@ jobs:
           node tests/fbs_v073_browser.test.cjs
           node tests/fbs_v074_browser.test.cjs
           node tests/fbs_v075_browser.test.cjs
+          node tests/fbs_v076_browser.test.cjs
       - name: Verify the published V074 URL in an actual public browser
         if: github.event_name == 'pull_request' && github.head_ref == 'fbs/v074-saved-evidence-review'
         env:
@@ -110,6 +112,7 @@ jobs:
             ${{ runner.temp }}/fbs-screenshots/FBS_V073_BROWSER_RECEIPT.json
             ${{ runner.temp }}/fbs-screenshots/FBS_V074_*_BROWSER_RECEIPT.json
             ${{ runner.temp }}/fbs-screenshots/FBS_V075_*_BROWSER_RECEIPT.json
+            ${{ runner.temp }}/fbs-screenshots/FBS_V076_*_BROWSER_RECEIPT.json
           if-no-files-found: error
           retention-days: 14
 

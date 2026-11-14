@@ -1,0 +1,576 @@
+{
+  "title": "FBS forecast evidence",
+  "source_as_of": "2026-11-14T04:57:50Z",
+  "analysis_generated_at": "2026-11-14T04:57:55.150313Z",
+  "publication_generated_at": "2026-11-14T08:30:13.988697Z",
+  "evaluation_as_of": "2026-11-14T04:57:50Z",
+  "season_census": {
+    "2024": {
+      "final": 919,
+      "final_with_score_bytes": 919,
+      "games": 920,
+      "kickoff_tbd": 1,
+      "pending_or_upcoming": 1
+    },
+    "2025": {
+      "final": 934,
+      "final_with_score_bytes": 934,
+      "games": 934,
+      "kickoff_tbd": 0,
+      "pending_or_upcoming": 0
+    },
+    "2026": {
+      "final": 694,
+      "final_with_score_bytes": 694,
+      "games": 888,
+      "kickoff_tbd": 54,
+      "pending_or_upcoming": 194
+    }
+  },
+  "seasons": [
+    2024,
+    2025,
+    2026
+  ],
+  "total_games": 2742,
+  "retained_model_policies": 269,
+  "published_selected_models": 12,
+  "selected_models": [
+    {
+      "code": "M01",
+      "family": "CatBoost",
+      "label": "CatBoost \u00b7 M01",
+      "role": "Retained descriptive leader",
+      "seasons": [
+        2024,
+        2025,
+        2026
+      ],
+      "targets": [
+        "margin",
+        "total",
+        "winner"
+      ]
+    },
+    {
+      "code": "M02",
+      "family": "Ensemble / mixture",
+      "label": "Ensemble / mixture \u00b7 M02",
+      "role": "Retained descriptive leader",
+      "seasons": [
+        2024,
+        2025,
+        2026
+      ],
+      "targets": [
+        "margin",
+        "total",
+        "winner"
+      ]
+    },
+    {
+      "code": "M03",
+      "family": "Ensemble / mixture",
+      "label": "Ensemble / mixture \u00b7 M03",
+      "role": "Retained descriptive leader",
+      "seasons": [
+        2024,
+        2025,
+        2026
+      ],
+      "targets": [
+        "margin",
+        "total",
+        "winner"
+      ]
+    },
+    {
+      "code": "M04",
+      "family": "Extra Trees",
+      "label": "Extra Trees \u00b7 M04",
+      "role": "Retained descriptive leader",
+      "seasons": [
+        2024,
+        2025,
+        2026
+      ],
+      "targets": [
+        "margin",
+        "total",
+        "winner"
+      ]
+    },
+    {
+      "code": "M05",
+      "family": "Frozen foundation",
+      "label": "Frozen foundation \u00b7 M05",
+      "role": "Frozen issued baseline",
+      "seasons": [
+        2026
+      ],
+      "targets": [
+        "margin",
+        "total",
+        "winner"
+      ]
+    },
+    {
+      "code": "M06",
+      "family": "PyTorch",
+      "label": "PyTorch \u00b7 M06",
+      "role": "Retained descriptive leader",
+      "seasons": [
+        2026
+      ],
+      "targets": [
+        "winner"
+      ]
+    },
+    {
+      "code": "M07",
+      "family": "PyTorch",
+      "label": "PyTorch \u00b7 M07",
+      "role": "Retained descriptive leader",
+      "seasons": [
+        2024,
+        2025,
+        2026
+      ],
+      "targets": [
+        "margin",
+        "total",
+        "winner"
+      ]
+    },
+    {
+      "code": "M08",
+      "family": "TensorFlow",
+      "label": "TensorFlow \u00b7 M08",
+      "role": "Retained descriptive leader",
+      "seasons": [
+        2026
+      ],
+      "targets": [
+        "winner"
+      ]
+    },
+    {
+      "code": "M09",
+      "family": "TensorFlow",
+      "label": "TensorFlow \u00b7 M09",
+      "role": "Retained descriptive leader",
+      "seasons": [
+        2026
+      ],
+      "targets": [
+        "winner"
+      ]
+    },
+    {
+      "code": "M10",
+      "family": "TensorFlow",
+      "label": "TensorFlow \u00b7 M10",
+      "role": "Retained descriptive leader",
+      "seasons": [
+        2024,
+        2025
+      ],
+      "targets": [
+        "winner"
+      ]
+    },
+    {
+      "code": "M11",
+      "family": "TensorFlow",
+      "label": "TensorFlow \u00b7 M11",
+      "role": "Retained descriptive leader",
+      "seasons": [
+        2024,
+        2025
+      ],
+      "targets": [
+        "winner"
+      ]
+    },
+    {
+      "code": "M12",
+      "family": "XGBoost",
+      "label": "XGBoost \u00b7 M12",
+      "role": "Retained descriptive leader",
+      "seasons": [
+        2024,
+        2025,
+        2026
+      ],
+      "targets": [
+        "margin",
+        "total",
+        "winner"
+      ]
+    }
+  ],
+  "metric_cards_recomputed": 79,
+  "new_fits": 0,
+  "new_forecasts": 3588,
+  "fresh_source_acquisition": false,
+  "all_current_season_claim": false,
+  "time_valid_scored_rows": 9,
+  "qualified_provider_cells": 0,
+  "provider_cells": 32904,
+  "providers": [
+    {
+      "season": 2024,
+      "provider": "Circa",
+      "target": "margin",
+      "denominator": 920,
+      "qualified": 0
+    },
+    {
+      "season": 2024,
+      "provider": "Circa",
+      "target": "total",
+      "denominator": 920,
+      "qualified": 0
+    },
+    {
+      "season": 2024,
+      "provider": "Circa",
+      "target": "winner_probability",
+      "denominator": 920,
+      "qualified": 0
+    },
+    {
+      "season": 2024,
+      "provider": "DraftKings",
+      "target": "margin",
+      "denominator": 920,
+      "qualified": 0
+    },
+    {
+      "season": 2024,
+      "provider": "DraftKings",
+      "target": "total",
+      "denominator": 920,
+      "qualified": 0
+    },
+    {
+      "season": 2024,
+      "provider": "DraftKings",
+      "target": "winner_probability",
+      "denominator": 920,
+      "qualified": 0
+    },
+    {
+      "season": 2024,
+      "provider": "Kalshi",
+      "target": "margin",
+      "denominator": 920,
+      "qualified": 0
+    },
+    {
+      "season": 2024,
+      "provider": "Kalshi",
+      "target": "total",
+      "denominator": 920,
+      "qualified": 0
+    },
+    {
+      "season": 2024,
+      "provider": "Kalshi",
+      "target": "winner_probability",
+      "denominator": 920,
+      "qualified": 0
+    },
+    {
+      "season": 2024,
+      "provider": "Polymarket",
+      "target": "margin",
+      "denominator": 920,
+      "qualified": 0
+    },
+    {
+      "season": 2024,
+      "provider": "Polymarket",
+      "target": "total",
+      "denominator": 920,
+      "qualified": 0
+    },
+    {
+      "season": 2024,
+      "provider": "Polymarket",
+      "target": "winner_probability",
+      "denominator": 920,
+      "qualified": 0
+    },
+    {
+      "season": 2025,
+      "provider": "Circa",
+      "target": "margin",
+      "denominator": 934,
+      "qualified": 0
+    },
+    {
+      "season": 2025,
+      "provider": "Circa",
+      "target": "total",
+      "denominator": 934,
+      "qualified": 0
+    },
+    {
+      "season": 2025,
+      "provider": "Circa",
+      "target": "winner_probability",
+      "denominator": 934,
+      "qualified": 0
+    },
+    {
+      "season": 2025,
+      "provider": "DraftKings",
+      "target": "margin",
+      "denominator": 934,
+      "qualified": 0
+    },
+    {
+      "season": 2025,
+      "provider": "DraftKings",
+      "target": "total",
+      "denominator": 934,
+      "qualified": 0
+    },
+    {
+      "season": 2025,
+      "provider": "DraftKings",
+      "target": "winner_probability",
+      "denominator": 934,
+      "qualified": 0
+    },
+    {
+      "season": 2025,
+      "provider": "Kalshi",
+      "target": "margin",
+      "denominator": 934,
+      "qualified": 0
+    },
+    {
+      "season": 2025,
+      "provider": "Kalshi",
+      "target": "total",
+      "denominator": 934,
+      "qualified": 0
+    },
+    {
+      "season": 2025,
+      "provider": "Kalshi",
+      "target": "winner_probability",
+      "denominator": 934,
+      "qualified": 0
+    },
+    {
+      "season": 2025,
+      "provider": "Polymarket",
+      "target": "margin",
+      "denominator": 934,
+      "qualified": 0
+    },
+    {
+      "season": 2025,
+      "provider": "Polymarket",
+      "target": "total",
+      "denominator": 934,
+      "qualified": 0
+    },
+    {
+      "season": 2025,
+      "provider": "Polymarket",
+      "target": "winner_probability",
+      "denominator": 934,
+      "qualified": 0
+    },
+    {
+      "season": 2026,
+      "provider": "Circa",
+      "target": "margin",
+      "denominator": 888,
+      "qualified": 0
+    },
+    {
+      "season": 2026,
+      "provider": "Circa",
+      "target": "total",
+      "denominator": 888,
+      "qualified": 0
+    },
+    {
+      "season": 2026,
+      "provider": "Circa",
+      "target": "winner_probability",
+      "denominator": 888,
+      "qualified": 0
+    },
+    {
+      "season": 2026,
+      "provider": "DraftKings",
+      "target": "margin",
+      "denominator": 888,
+      "qualified": 0
+    },
+    {
+      "season": 2026,
+      "provider": "DraftKings",
+      "target": "total",
+      "denominator": 888,
+      "qualified": 0
+    },
+    {
+      "season": 2026,
+      "provider": "DraftKings",
+      "target": "winner_probability",
+      "denominator": 888,
+      "qualified": 0
+    },
+    {
+      "season": 2026,
+      "provider": "Kalshi",
+      "target": "margin",
+      "denominator": 888,
+      "qualified": 0
+    },
+    {
+      "season": 2026,
+      "provider": "Kalshi",
+      "target": "total",
+      "denominator": 888,
+      "qualified": 0
+    },
+    {
+      "season": 2026,
+      "provider": "Kalshi",
+      "target": "winner_probability",
+      "denominator": 888,
+      "qualified": 0
+    },
+    {
+      "season": 2026,
+      "provider": "Polymarket",
+      "target": "margin",
+      "denominator": 888,
+      "qualified": 0
+    },
+    {
+      "season": 2026,
+      "provider": "Polymarket",
+      "target": "total",
+      "denominator": 888,
+      "qualified": 0
+    },
+    {
+      "season": 2026,
+      "provider": "Polymarket",
+      "target": "winner_probability",
+      "denominator": 888,
+      "qualified": 0
+    }
+  ],
+  "timing_games": {
+    "LATER_FITTED_RECONSTRUCTION": 2426,
+    "MISSING_OR_UNQUALIFIED": 174,
+    "ORIGINAL_ISSUED": 5,
+    "FUTURE_ISSUED": 137
+  },
+  "status_games": {
+    "FINAL": 2547,
+    "RESULT_NOT_OBSERVED_SINCE_SOURCE_SNAPSHOT": 3,
+    "SCHEDULED": 138,
+    "KICKOFF_TBD": 54
+  },
+  "promotion": "No automatic promotion. Exposed descriptive selection is not independent confirmation.",
+  "source_note": "Latest source time is separate from the time this report was generated. A game with an elapsed kickoff and no observed result remains unknown.",
+  "public_scope": "Verified owner execution and refit coverage counts, selected saved game forecasts, issued baselines and coarse-family weighted comparisons. Unissued values, private candidate identities and recipes are withheld.",
+  "publication_policy": "V11.1",
+  "execution": {
+    "verified_new_owner_fits": 0,
+    "verified_new_owner_calibrators": 0,
+    "verified_reused_fit_states": 26,
+    "verified_prepared_forecasts": 3588,
+    "prepared_game_count": 138,
+    "issued_forecasts": 3588,
+    "new_genuine_forecasts_this_run": 3588,
+    "failed_fits": 0,
+    "execution_receipts_verified": true,
+    "new_refit_forecasts_added_by_dashboard": 0,
+    "scientific_status": "PARTIAL_UNPROMOTED_RESEARCH",
+    "independent_terminal_exit_verified": true,
+    "historical_performance_improvement_claimed": false,
+    "fit_status": "0 completed model fits and 0 calibrator fits are bound to verified artifacts.",
+    "prepared_forecast_records_covered": 0
+  },
+  "refit_coverage": {
+    "pending_games": 194,
+    "games_with_refit_outputs": 138,
+    "missing_games": 56,
+    "kickoff_tbd": 54,
+    "prepared_rows": 0,
+    "issued_rows": 3588
+  },
+  "refit_family_counts": [
+    {
+      "family": "CatBoost",
+      "verified_fit_states": 3
+    },
+    {
+      "family": "Extra Trees",
+      "verified_fit_states": 3
+    },
+    {
+      "family": "Histogram boosting",
+      "verified_fit_states": 3
+    },
+    {
+      "family": "LightGBM",
+      "verified_fit_states": 3
+    },
+    {
+      "family": "Linear regression",
+      "verified_fit_states": 2
+    },
+    {
+      "family": "Logistic regression",
+      "verified_fit_states": 1
+    },
+    {
+      "family": "PyTorch",
+      "verified_fit_states": 3
+    },
+    {
+      "family": "Ridge",
+      "verified_fit_states": 2
+    },
+    {
+      "family": "TensorFlow",
+      "verified_fit_states": 3
+    },
+    {
+      "family": "XGBoost",
+      "verified_fit_states": 3
+    }
+  ],
+  "policy_evidence": "Observed results and saved predictions retain their original timing. Native model verification is reported separately from this public assessment.",
+  "policy_research": "Bounded owner champion reproduction and research continue independently under V11.1. Completed fits require verified execution receipts.",
+  "publication_review": {
+    "report_version": "V076",
+    "verified_owner_version": "V075",
+    "owner_child_os_exit_code": 0,
+    "parent_os_exit_scope": "Planned, not self-observed",
+    "scientific_acceptance": "PARTIAL",
+    "new_fits_by_publication": 0,
+    "new_inference_by_publication": 0,
+    "new_issues_by_publication": 0,
+    "v076_owner_execution_claimed": false,
+    "final_log_tail_bytes_missing": {
+      "jsonl": 10354,
+      "text": 891
+    },
+    "full_return_payload_integrity_verified": true,
+    "all_scientific_requirements_satisfied": false
+  }
+}

@@ -1,3 +1,13 @@
+<!-- FBS_V076_OWNER_REVIEW_START -->
+## November 13, 2026 Pacific: verified V075 issues and scientific shortfall
+
+[Open the V076 review of V075 owner results](v076/index.html) · [Evidence and remaining gaps](v076/README.md) · [Earlier V075 report](v075/index.html).
+
+The actual V075 owner run completed **zero new fits or calibrators, reused 26 fit states and issued 3,588 unpromoted research forecasts across 138 of 194 pending games**. All 56 missing fixtures remain visible, including 54 unresolved kickoffs and two cutoff failures. The source snapshot is **8:57:50 p.m. Pacific on November 13** and contains **694 observed 2026 finals**. V076 corrects the prior dashboard's zero-issued coverage display by independently checking the saved journal while preserving original preparations.
+
+The child process exited zero, but scientific acceptance remains **partial**. New fitting, complete champion reproduction, qualified market baselines and sustained twelve-core scientific throughput remain unfinished. Original-issued negative results, every observed fixture and timing classifications are retained. The final log tails were hash-referenced but not attached. This publication performs no new owner science and does not claim a V076 owner run.
+<!-- FBS_V076_OWNER_REVIEW_END -->
+
 <!-- FBS_V075_OWNER_REVIEW_START -->
 ## November 13, 2026 Pacific: verified V074 owner work and V075 report repair
 
