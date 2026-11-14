@@ -1,3 +1,13 @@
+<!-- FBS_V075_OWNER_REVIEW_START -->
+## November 13, 2026 Pacific: verified V074 owner work and V075 report repair
+
+[Open the V075 owner-work report](v075/index.html) · [Evidence and publication scope](v075/README.md) · [Earlier V074 review](v074/index.html).
+
+The actual V074 owner run completed **26 model fits and eight calibrator fits, with zero failed fits**. It retained **3,588 prepared records across 138 of 195 pending 2026 games**, all still unissued. V075 corrects the report that previously displayed zero verified fits. Public per-game coverage and execution counts now show this work; unissued values and private candidates remain withheld. All 2,742 observed fixtures and original timing labels remain available. Scientific completeness, market comparison and promotion remain unproved. This publication adds no owner fits, inference or issues; V075 owner execution is pending.
+
+The source was observed at **6:36:07 p.m. Pacific on November 13**. Earlier dated reports below remain unchanged historical records.
+<!-- FBS_V075_OWNER_REVIEW_END -->
+
 <!-- FBS_V074_EVIDENCE_REVIEW_START -->
 ## November 14, 2026: V074 saved-evidence review
 
