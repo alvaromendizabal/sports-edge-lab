@@ -1,0 +1,35 @@
+{
+  "schema": "nfl.n096.public-projection.v1",
+  "state": "PREPARED_NOT_PUBLISHED",
+  "source_owner_run": "20261114T071544Z_4fbbeaa16f",
+  "source_release": "N095",
+  "assets": {
+    "index.html": {
+      "bytes": 2880898,
+      "sha256": "005aaa9e70609d2084cb1382285be46efcb74e0ada7531260aec7be729cf4ac0"
+    },
+    "public_science.json": {
+      "bytes": 2537739,
+      "sha256": "6477c81e6832e1e42ae723c4d75cfd8b9eb4fd9ac3d5cf7838a6b8ee3ded9644"
+    },
+    "research_review.json": {
+      "bytes": 221773,
+      "sha256": "4dde7da806c484906b03104250348570f3034f3915184bfc5ea714a8cf4c7863"
+    }
+  },
+  "unchanged_owner_source_assets": {
+    "index.html": {
+      "bytes": 2617192,
+      "sha256": "ba4803f4aa7ad57890880085f16290b7bf9f02e2931222092a15d7e4892d4109"
+    },
+    "public_science.json": {
+      "bytes": 2537561,
+      "sha256": "ed12c6b8d597f4b2c90b017d93c0c469cb8c8d0c1e24d4eed113a0089ccadd78"
+    }
+  },
+  "qualified_forecast_rows": 2775,
+  "source_qualified_model_cards": 3,
+  "source_verified_alternatives": 78,
+  "automatic_promotion": false,
+  "public_review_native_fits": 0
+}
