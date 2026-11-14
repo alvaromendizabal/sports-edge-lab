@@ -441,5 +441,40 @@
       },
       "aws_requests": 0
     }
+  },
+  "latest_public_observed_census": {
+    "release": "B063R12",
+    "report_asof": "2026-11-14T05:23:59.250627+00:00",
+    "complete_official_universe": false,
+    "counts": {
+      "display_inventory_rows": 24522,
+      "canonical_games": 2502,
+      "canonical_final": 1482,
+      "canonical_scheduled": 1013,
+      "canonical_in_progress": 3,
+      "canonical_other": 4,
+      "reported_upcoming_scheduled_or_in_progress": 1016,
+      "unresolved_official_rows": 903,
+      "unresolved_schedule_rows": 21117,
+      "canonical_games_with_saved_forecast": 0
+    },
+    "canonical_asset": "v11_r12_canonical_games.json",
+    "unresolved_asset": "v11_r12_unresolved_inventory.json",
+    "public_columns": [
+      "league",
+      "event_id",
+      "away_team",
+      "home_team",
+      "event_time",
+      "time_precision",
+      "status",
+      "inventory_kind",
+      "missing_reasons",
+      "away_score",
+      "home_score"
+    ],
+    "unresolved_rows_are_unique_games": false,
+    "source_refresh_or_science_performed_by_publication": false,
+    "unissued_forecasts_published": 0
   }
 }

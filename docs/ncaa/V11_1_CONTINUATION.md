@@ -1,5 +1,13 @@
 # NCAA V11.1 continuation status
 
+## Latest observed R12 census
+
+The observed-census panel now exposes the authenticated report snapshot from **2026-11-14 05:23:59 UTC**, separately from the earlier model-comparison payload. Its **24,522 inventory rows** comprise **2,502 canonical games**, **903 unresolved official records**, and **21,117 unresolved schedule records**. Unresolved records may overlap and must not be added to the unique game denominator. The complete official season universe remains unverified.
+
+Canonical statuses are **1,482 final, 1,013 scheduled, 3 in progress, and 4 unqualified**. The source report called the scheduled-plus-in-progress total of **1,016** upcoming; the panel makes that meaning explicit. It contains **zero qualified saved forecasts**. Publication does not issue forecasts, refresh feeds, score models or create scientific fit credit.
+
+The two downloadable JSON projections contain only league, public event ID, team names, event time/precision, status, inventory kind, missing-reason codes, and away/home final scores. They exclude source hashes, cloud locations, source versions/receipts, private clock details, model inputs, weights, raw quotes and unissued forecasts. The canonical table loads first; unresolved records are loaded only when selected. Filters, pagination and filtered JSON export preserve the report as-of time and incomplete-universe flag. The prior scientific payload remains byte-identical.
+
 The [interactive V11 evidence page](v11.html) preserves the previously published
 NCAA men's and women's comparisons. Its source analysis time remains
 **2026-11-13 23:38:59 UTC**. A publication update is not a source refresh or a new

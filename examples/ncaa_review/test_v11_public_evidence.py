@@ -263,5 +263,97 @@ class PublicEvidenceTests(unittest.TestCase):
         self.assertFalse(self.evidence["complete_upcoming_schedule"])
 
 
+class PublicObservedCensusTests(unittest.TestCase):
+    @classmethod
+    def setUpClass(cls):
+        cls.canonical = json.loads((ROOT / "docs/ncaa/v11_r12_canonical_games.json").read_text())
+        cls.unresolved = json.loads((ROOT / "docs/ncaa/v11_r12_unresolved_inventory.json").read_text())
+        cls.page, _, _, cls.operational = read_public()
+        cls.columns = ["league", "event_id", "away_team", "home_team", "event_time",
+                       "time_precision", "status", "inventory_kind", "missing_reasons",
+                       "away_score", "home_score"]
+
+    def rows(self, data):
+        return [dict(zip(data["columns"], row)) for row in data["rows"]]
+
+    def test_canonical_counts_and_unique_public_event_ids(self):
+        rows = self.rows(self.canonical)
+        self.assertEqual(self.canonical["row_count"], 2502)
+        self.assertEqual(len(rows), 2502)
+        self.assertEqual(len({(r["league"], r["event_id"]) for r in rows}), 2502)
+        self.assertEqual({r["inventory_kind"] for r in rows}, {"CANONICAL_ACQUISITION_GAME"})
+        self.assertEqual(self.canonical["census_counts"], self.unresolved["census_counts"])
+        self.assertFalse(self.canonical["complete_official_universe"])
+        self.assertFalse(self.unresolved["complete_official_universe"])
+
+    def test_unresolved_records_are_retained_without_unique_game_claim(self):
+        from collections import Counter
+        rows = self.rows(self.unresolved)
+        self.assertEqual(len(rows), 22020)
+        self.assertEqual(Counter(r["inventory_kind"] for r in rows),
+                         {"UNRESOLVED_OFFICIAL_RECORD": 903,
+                          "UNRESOLVED_PROVIDER_SCHEDULE_RECORD": 21117})
+        self.assertEqual(len(rows) + self.canonical["row_count"], 24522)
+        overlap = [r for r in rows if r["event_id"] == "ncaam:ncaa:contest:6661200"]
+        self.assertEqual(len(overlap), 2)
+        self.assertEqual(len({r["inventory_kind"] for r in overlap}), 2)
+        self.assertFalse(self.operational["latest_public_observed_census"]["unresolved_rows_are_unique_games"])
+
+    def test_status_totals_do_not_relabel_in_progress_as_future_start(self):
+        from collections import Counter
+        counts = Counter(r["status"] for r in self.rows(self.canonical))
+        self.assertEqual(counts, {"final": 1482, "scheduled": 1013,
+                                 "in_progress": 3, "source_status_unqualified": 4})
+        self.assertEqual(counts["scheduled"] + counts["in_progress"], 1016)
+        self.assertIn("it is not a count of future starts", self.page)
+        self.assertIn("complete official season universe has not been verified", self.page)
+        for data in [self.canonical, self.unresolved]:
+            self.assertEqual(data["report_asof"], "2026-11-14T05:23:59.250627+00:00")
+
+    def test_public_projection_has_only_approved_fields_and_public_ids(self):
+        allowed_top = {"schema", "release", "report_asof", "season", "complete_official_universe",
+                       "census_counts", "columns", "forecast_status", "scope", "inventory_scope", "row_count", "rows"}
+        reasons = {"NO_EXACT_CANONICAL_OFFICIAL_RECONCILIATION", "NO_QUALIFIED_SAVED_FORECAST",
+                   "SCHEDULE_RECORD_NOT_BOUND_TO_MODEL_INPUTS", "NO_QUALIFIED_ISSUED_FORECAST"}
+        for data in [self.canonical, self.unresolved]:
+            self.assertEqual(set(data), allowed_top)
+            self.assertEqual(data["columns"], self.columns)
+            self.assertTrue(all(len(row) == len(self.columns) for row in data["rows"]))
+            for row in self.rows(data):
+                self.assertRegex(row["event_id"], r"^ncaa[mw]:(?:ncaa:contest|espn:event):\d+$")
+                self.assertLessEqual(set(row["missing_reasons"]), reasons)
+            text = json.dumps(data)
+            for forbidden in ["s3://", "arn:aws:", "/home/sagemaker-user", "source_row_sha256",
+                              "source_version_id", "source_input_pins", "available_at", "source_sha256",
+                              "feature_columns", "hyperparameters", "model_weights", "apiKey", "X-Amz-", '"forecasts":']:
+                self.assertNotIn(forbidden, text)
+            self.assertIsNone(re.search(r"\b[0-9a-f]{64}\b", text))
+
+    def test_only_canonical_finals_have_public_scores_and_no_forecasts(self):
+        canonical = self.rows(self.canonical)
+        self.assertEqual(sum(r["away_score"] is not None for r in canonical), 1482)
+        for row in canonical + self.rows(self.unresolved):
+            present = row["away_score"] is not None or row["home_score"] is not None
+            if present:
+                self.assertEqual(row["inventory_kind"], "CANONICAL_ACQUISITION_GAME")
+                self.assertEqual(row["status"], "final")
+                self.assertIsInstance(row["away_score"], (int, float))
+                self.assertIsInstance(row["home_score"], (int, float))
+            self.assertTrue(row["missing_reasons"])
+        self.assertEqual(self.canonical["census_counts"]["canonical_games_with_saved_forecast"], 0)
+        self.assertFalse(self.operational["latest_public_observed_census"]["source_refresh_or_science_performed_by_publication"])
+
+    def test_public_assets_and_static_fallback_keep_asof_and_missingness(self):
+        self.assertIn('<section id="latest-census"', self.page)
+        self.assertLess(self.page.index('<section id="latest-census"'), self.page.index('<section id="leaders"'))
+        self.assertIn('<noscript>', self.page)
+        for filename in ["v11_r12_canonical_games.json", "v11_r12_unresolved_inventory.json"]:
+            self.assertIn(f'href="{filename}" download', self.page)
+            self.assertTrue((PAGE.parent / filename).is_file())
+        self.assertIn("No qualified saved forecast", self.page)
+        self.assertIn("preserved model comparisons", self.page)
+        self.assertEqual(self.operational["latest_public_observed_census"]["report_asof"], self.canonical["report_asof"])
+
+
 if __name__ == "__main__":
     unittest.main()
