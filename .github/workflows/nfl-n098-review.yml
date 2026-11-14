@@ -1,0 +1,29 @@
+name: NFL N098 scientific return review
+on:
+  pull_request:
+    paths: ['tracks/nfl/circa_million_2026/n098_current/**', 'tracks/nfl/circa_million_2026/test_n098_browser.cjs', '.github/workflows/nfl-n098-review.yml']
+  push:
+    branches: [main]
+    paths: ['tracks/nfl/circa_million_2026/n098_current/**', 'tracks/nfl/circa_million_2026/test_n098_browser.cjs', '.github/workflows/nfl-n098-review.yml']
+permissions:
+  contents: read
+concurrency:
+  group: nfl-n098-${{ github.event.pull_request.number || github.ref }}
+  cancel-in-progress: true
+jobs:
+  browser:
+    runs-on: ubuntu-24.04
+    steps:
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1
+        with:
+          persist-credentials: false
+      - name: Install the existing verification browser
+        run: |
+          npm install --prefix "${RUNNER_TEMP}/n098-browser" --ignore-scripts --no-audit --no-fund playwright@1.62.1
+          node "${RUNNER_TEMP}/n098-browser/node_modules/playwright/cli.js" install --with-deps chromium
+      - name: Verify exact source and deployed bytes with desktop and mobile controls
+        env:
+          PLAYWRIGHT_MODULE_DIR: ${{ runner.temp }}/n098-browser/node_modules/playwright
+        run: |
+          node tracks/nfl/circa_million_2026/test_n098_browser.cjs
+          NFL_N098_ONLINE_URL=https://sports-edge-lab-nfl.alv-mendizabal.chatgpt.site/circa/n098/ node tracks/nfl/circa_million_2026/test_n098_browser.cjs
