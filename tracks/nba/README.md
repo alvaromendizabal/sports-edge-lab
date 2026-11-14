@@ -5,6 +5,20 @@ Reproducible NBA forecasts, complete released-game inventories, chronological mo
 This NBA track belongs to the shared [Sports Edge Lab](../../README.md) repository. Its public material contains sanitized aggregate evidence, selected rounded already-issued research forecasts, complete observed schedule coverage, and invented engineering examples. Exact feature recipes, model weights, source responses, full journals, candidate forecast grids, and execution packages remain private under the [NBA publication boundary](../../docs/PUBLICATION_BOUNDARY.md#selected-nba-research-outputs-november-11-extension).
 
 
+<!-- NBA B085 RECOVERY STATUS BEGIN -->
+## November 14 — later B084 execution recovered; latest rerun stopped before training
+
+The [current recovery dashboard](reports/recovery_status.html) and [sanitized status JSON](reports/recovery_status.json) distinguish three actual attempts. The earlier B082 run remains the source of the preserved all-game public snapshot: its 318 native estimator returns and original forecast clocks are unchanged. Public scientific evidence still closes at **November 13, 17:53:05.203284 UTC**, with latest original issue at **17:26:12.502657 UTC**.
+
+The intervening **B084 did execute**. Recovered native and stage receipts report **28 native estimator method returns**, all during priority forecast issuance, and peak native-fit concurrency **one**. These are not a verified count of unique models or promoted champions. Its pending V9 study stage failed on an immutable provenance-receipt conflict. The pipeline exited **2** and finalizer exited **1**; a complete sealed B084 scientific return is not established by the recovered evidence.
+
+The latest B082 rerun began **November 13 at 23:33:41.606169 UTC** and finished **November 14 at 00:08:46.573306 UTC**, with exit **3** and **zero new native fits**. Its aggregate return-capacity gate blocked scientific admission despite approximately **519 GiB free disk**. The approximately nine-minute pipeline preceded additional finalization; the full observed invocation lasted **35 minutes 4.97 seconds**. Its diagnostic archive does not establish complete portable scientific closure.
+
+**B085 owner execution remains unobserved.** The continuation must repair multipart transport and immutable receipt recovery, retain every available scientific body, reuse proven unchanged verification work and measure useful leased-core science. One logical return may require multiple physical files of at most 512 MiB each. Point-in-time validity, exact champion recipes, source rights, actual disk checks and promotion review remain required. Current-season complete model-versus-market comparisons remain pending.
+
+This additive public notice creates no new fit, score, forecast or source refresh. The prior interactive page, original selected issues and dated research sections remain preserved. Source publication and verified website deployment are separate events.
+<!-- NBA B085 RECOVERY STATUS END -->
+
 <!-- NBA B083 EXECUTION UPDATE BEGIN -->
 ## November 13 — B082 recovered: 318 native fits, 13,860 early outlooks, current model comparisons
 
