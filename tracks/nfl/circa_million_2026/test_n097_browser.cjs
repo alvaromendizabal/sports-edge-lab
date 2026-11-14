@@ -92,6 +92,11 @@ async function main() {
     check(await p.locator('.n097-challenger-card').first().getAttribute('open')!==null,'new comparison accessible');
     check(d.n097_research.exchange_matched.distinct_settled_contracts===219&&await p.locator('#n097-exchange tbody tr').count()===6,'exact exchange comparisons');
     check(d.n097_research.personnel.parameters_fitted===225&&await p.locator('#n097-personnel tbody tr').count()===2,'reported personnel comparisons');
+    check(d.n097_research.separate_total_exchange.distinct===73&&d.n097_research.separate_total_exchange.matched_pairs===219&&await p.locator('#n097-total-exchange tbody tr').count()===3,'separate historical totals quote and score comparison');
+    check(Object.values(d.n097_research.separate_total_exchange.scores).every(row=>row.n===73&&row.week_cluster_95_market_minus_model[1]<0),'all three exchange total models with exact intervals');
+    check(d.n097_research.legacy.new_statistical_estimates===264&&d.n097_research.legacy.graded_rows===183&&d.n097_research.legacy.original_games_graded===16&&await p.locator('#n097-legacy tbody tr').count()===3,'legacy chronology and controls');
+    check(d.n097_research.native_legacy.changed_old_rows===0&&d.n097_research.native_legacy.additional_finals===17&&d.n097_research.native_legacy.new_fits===3&&d.n097_research.native_legacy.runtime_byte_identity===false,'original feature continuity and changed-system research qualification');
+    check(await p.locator('#n097-native-legacy').isVisible(),'legacy native issue scope');
     check(!await p.evaluate(()=>document.documentElement.scrollWidth>innerWidth+2),'responsive layout');
     viewports.push({width,models:d.cards.length,eligible_sides_per_model:26});await p.close();
   }

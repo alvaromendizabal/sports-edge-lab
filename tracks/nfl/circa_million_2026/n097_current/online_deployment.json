@@ -1,46 +1,6 @@
 {
-  "state": "DEPLOYED_AWAITING_LIVE_EQUIVALENCE",
+  "state": "SOURCE_VERIFICATION_PENDING",
   "release": "N097",
-  "source_owner_release": "N096",
-  "public_url": "https://sports-edge-lab-nfl.alv-mendizabal.chatgpt.site/circa/",
-  "version": 54,
-  "version_id": "appgprj_6aea53c491508191892bc27c1a92f69e~appgver_0055fca51274819195ea57afe7af4bf8",
-  "deployment_id": "appgdep_6af819b577d88191abf1d17ebab63b0c",
-  "deployed_at": "2026-11-14T08:20:14.440373+00:00",
-  "status": "succeeded",
-  "source_sha": "39e79ee3839fdcc3a87c95a8fbd9cde880291e83",
-  "source_review": {
-    "status": "PASS",
-    "release": "N097",
-    "online": false,
-    "checks": 168,
-    "viewports": [
-      {
-        "width": 1440,
-        "models": 3,
-        "eligible_sides_per_model": 26
-      },
-      {
-        "width": 390,
-        "models": 3,
-        "eligible_sides_per_model": 26
-      }
-    ],
-    "errors": [],
-    "public_payload_sha256": "8bd1462277a625ca41eacaf330138a2584e78fb8bb579602369f8e0fe258642b",
-    "source_html_sha256": "ba9a2f1f4a329e8455a96259939fe3779db546dc4be9fa12b368a901459e4099",
-    "verified_at_utc": "2026-11-14T08:19:37.156Z",
-    "workflow_job": "https://github.com/alvaromendizabal/sports-edge-lab/actions/runs/43575189375/job/132387787217"
-  },
-  "source_pr": "https://github.com/alvaromendizabal/sports-edge-lab/pull/314",
-  "source_merge_sha": "80683ef4851b27e152a39fc8f6e7a170ff6c9766",
-  "scope": {
-    "schedule": 272,
-    "original_research_cards": 3,
-    "fixed_mixture_cards": 3,
-    "learned_key_margin_cards": 3,
-    "current_model_specific_sides": 234,
-    "automatic_promotion": false,
-    "actual_entries": 0
-  }
+  "previous_verified_public_version": 54,
+  "previous_verified_workflow": "https://github.com/alvaromendizabal/sports-edge-lab/actions/runs/43575403530/job/132388417776"
 }
