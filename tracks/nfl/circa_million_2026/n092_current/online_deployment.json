@@ -1,6 +1,6 @@
 {
   "schema": "nfl.n092.native-publication.v1",
-  "state": "ARCHIVED_SOURCE_LIVE_ROUTE_TRANSITIONING_TO_N093",
+  "state": "ARCHIVED_SOURCE_LIVE_ROUTE_REPLACED_BY_N093",
   "public_url": "https://sports-edge-lab-nfl.alv-mendizabal.chatgpt.site/circa/",
   "native_site_version": 46,
   "native_version_id": "appgprj_6aea53c491508191892bc27c1a92f69e~appgver_a254b1415fbc81919545b48f962dd399",
@@ -25,5 +25,6 @@
     "executable_contract_comparisons": 0
   },
   "verified_private_report_published": false,
-  "scientific_fits_performed_by_publication": 0
+  "scientific_fits_performed_by_publication": 0,
+  "successor_site_version": 48
 }
