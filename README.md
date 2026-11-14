@@ -92,7 +92,7 @@ The prepared V7 continuation prioritizes current forecasts, restores exact old f
 
 ## NFL V10 recovery · November 13, 2026 UTC
 
-**Current Circa / JMac View:** [Open the N089 comparison](https://sports-edge-lab-nfl.alv-mendizabal.chatgpt.site/circa/) · [Current source and evidence](tracks/nfl/circa_million_2026/current/README.md). Frozen model cards and the requested manual JAX −10.5 card remain separate; unavailable cover probabilities are not fabricated. The N088 season dashboard remains unchanged.
+**Current Circa / Manual alternative:** [Open the N089 comparison](https://sports-edge-lab-nfl.alv-mendizabal.chatgpt.site/circa/) · [Current source and evidence](tracks/nfl/circa_million_2026/current/README.md). Frozen model cards and the requested manual JAX −10.5 card remain separate; unavailable cover probabilities are not fabricated. The N088 season dashboard remains unchanged.
 
 [Prepared N088 interactive source](tracks/nfl/dashboard_n088/index.html) · [Current NFL evidence](tracks/nfl/README.md) · [Fresh public Phase A scorecards](tracks/nfl/phase_a_n088_public.json)
 

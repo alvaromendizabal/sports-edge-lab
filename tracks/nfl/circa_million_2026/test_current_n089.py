@@ -26,7 +26,7 @@ class CircaRendererTests(unittest.TestCase):
         embedded=raw.split('<script id="circa-data" type="application/json">')[1].split('</script>')[0]
         self.assertEqual(json.loads(embedded),m.public_payload(data))
         self.assertNotIn('</script>',embedded)
-        self.assertIn('JMac View',raw)
+        self.assertIn('Manual alternative',raw)
         self.assertIn('Cover probabilities',raw)
     def test_private_paths_rejected_and_unknown_top_fields_omitted(self):
         data=self.source();data['private_dump']={'secret':'must never appear'}

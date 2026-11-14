@@ -1,10 +1,14 @@
-# Circa Million VIII · N089 frozen comparison
+# Circa Million Picks & Performance Dashboard
 
-This is the current public-safe Circa snapshot. The preserved Weeks 1–9 N057 report remains in `archive/index.html`; its evidence and original source files have not been changed.
+N090 prepares the V11 continuation. Recovered 1,008 native fit receipts with ordered feature recipes and 611 included native model bodies. This review performed zero new owner AWS fits. The 40-model/14-game Circa display and 272-game season census are retained N089 evidence. The current expected-points top five remains unavailable until calibrated probabilities and eligibility pass. No automatic promotion or new market-superiority claim.
+
+# Preserved N089 evidence
+
+This is the preserved N089 public-safe Circa snapshot. The preserved Weeks 1–9 N057 report remains in `archive/index.html`; its evidence and original source files have not been changed.
 
 The current board lists every official Week 10 game, including the completed Thursday game, and distinguishes the remaining eligible alternatives. All available frozen model policies can be selected as a whole card. The initial comparison policy contains the requested TEN +10.5 selection; this display preference is not a claim that the policy is a validated contest champion.
 
-**JMac View** is an explicitly requested manual JAX −10.5 alternative. The original frozen model card remains unchanged. The page neither places a wager nor submits a contest entry.
+**Manual alternative** is an explicitly requested manual JAX −10.5 alternative. The original frozen model card remains unchanged. The page neither places a wager nor submits a contest entry.
 
 Cover probabilities and expected Circa points remain unavailable where the saved forecasts contain no authenticated ATS distribution. A half-point line implies a structural zero probability of an exact push under integer final scores; this is line arithmetic, not a calibrated distribution. Outright win probabilities are not substituted for cover probabilities. Independent winner and total models are labeled separately and are never silently combined into another model's projected score.
 

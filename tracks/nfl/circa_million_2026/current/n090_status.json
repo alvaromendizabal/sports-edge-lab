@@ -1,0 +1,22 @@
+{
+  "schema": "nfl.n090.public-status.v1",
+  "status": "V11_RUNNER_PREPARATION_NOT_AWS_EXECUTION",
+  "new_fits": 0,
+  "automatic_promotion": false,
+  "recovered_native_fit_receipts": 1008,
+  "native_receipts_with_ordered_features": 1008,
+  "included_native_model_bodies": 611,
+  "owner_aws_execution_performed": false,
+  "V11_training_authorized": true,
+  "V11_new_runner_preparation_in_progress": true,
+  "season_weight_policy": {
+    "2024": 0.15,
+    "2025": 0.35,
+    "2026": 0.5
+  },
+  "limitations": [
+    "The 272-game season census, 40 model views and 14-game Circa board are inherited verified N089 evidence.",
+    "No new owner AWS fits, source refresh, market-superiority result or validated expected-points top five is claimed.",
+    "Archived margin-edge cards remain diagnostics; current recommendations require validated cover and push probabilities."
+  ]
+}
