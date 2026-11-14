@@ -1,14 +1,14 @@
 {
   "schema": "sel.ncaa.v11_1.public_execution_status.v1",
-  "evidence_asof": "2026-11-13T23:39:45.572764+00:00",
-  "publication_scope": "Operational continuation over preserved public V11 evidence",
-  "new_owner_execution_verified": false,
+  "evidence_asof": "2026-11-14T02:32:40.215155+00:00",
+  "publication_scope": "Actual failed NCAA owner execution over preserved scientific evidence",
+  "new_owner_execution_verified": true,
   "new_owner_fits": 0,
   "new_owner_inference": 0,
   "new_owner_issued_forecasts": 0,
   "automatic_promotions": 0,
-  "latest_authenticated_owner_status": "COMPLETED_WITH_EXPLICIT_COVERAGE_STATUS",
-  "latest_authenticated_owner_scope": "Saved prediction scoring and bounded result refresh",
+  "latest_authenticated_owner_status": "PACKAGING_FAILED_EMERGENCY_RETURN",
+  "latest_authenticated_owner_scope": "V11 orchestration entered; source-family contract failed before numbered scientific stages",
   "latest_partition_rows": 867979,
   "initial_partition_rows": 854308,
   "initial_current_partition_rows": 47620,
@@ -17,7 +17,7 @@
   "checkpoint_references_are_fits": false,
   "verified_reused_fit_credit": 0,
   "benchmark": {
-    "scope": "Measured saved-row scoring on the authenticated owner; repeated work solely for declared performance benchmarking",
+    "scope": "Preserved prior completed owner saved-row scoring benchmark; not the latest failed run and not a fitting benchmark",
     "unique_tasks": 18,
     "records_each_layout": 854308,
     "synthetic_work": false,
@@ -48,14 +48,14 @@
       }
     ],
     "peak_workers": 12,
-    "thread_schedule_limit": "Requests for6x2 and4x3 ran6x1 and4x1; the scorer did not use extra native threads. This is scoring performance, not a fitting benchmark."
+    "thread_schedule_limit": "Requests for 6x2 and 4x3 ran 6x1 and 4x1; the scorer did not use extra native threads. This is prior scoring performance, not a fitting benchmark."
   },
   "delivery_policy": {
     "logical_return": "One complete immutable owner return",
     "maximum_physical_part_bytes": 536870912,
     "aggregate_transport_size_is_science_admission_gate": false,
     "exact_oversize_transfer": "Numbered parts plus manifest and integrity-checked reassembly",
-    "owner_execution_of_new_transport": "NOT_YET_OBSERVED"
+    "owner_execution_of_new_transport": "NORMAL_FINALIZATION_FAILED; EMERGENCY_SINGLE_ZIP_VERIFIED; S3_NOT_ATTEMPTED"
   },
   "research_limits": {
     "source_matched_provider_games": 0,
@@ -146,5 +146,88 @@
         "year": 2007
       }
     ]
+  },
+  "scientific_evidence_asof": "2026-11-13T23:38:59.294384+00:00",
+  "historical_uncertainty_reused_this_update": true,
+  "new_scientific_results_this_update": false,
+  "latest_owner_execution": {
+    "release": "B063R11",
+    "started_at_utc": "2026-11-14T02:32:16.252922+00:00",
+    "started_at_pacific": "2026-11-13T18:32:16.252922-08:00",
+    "status": "FAILED_BEFORE_NUMBERED_SCIENTIFIC_STAGES",
+    "elapsed_seconds": 24.02871182600029,
+    "failed_owner_attempts": 1,
+    "primary_error_class": "Source-family orchestration integration rejected",
+    "secondary_error_class": "Return resource-lease finalization rejected",
+    "distinct_recorded_errors": 2,
+    "new_target_fits": 0,
+    "new_calibration_fits": 0,
+    "new_residual_fits": 0,
+    "verified_reused_target_fits": 0,
+    "recorded_fit_callback_starts": 0,
+    "recorded_failed_fit_units": 0,
+    "requested_cpu_ceiling": 12,
+    "peak_granted_cpus": 1,
+    "peak_scientific_workers": 0,
+    "peak_observed_process_tree_cores": 0.7022429730577858,
+    "actual_12_core_fitting_verified": false,
+    "return": {
+      "transport": "single_zip",
+      "bytes": 50825651,
+      "declared_payloads_verified": 9,
+      "zip_integrity_verified": true,
+      "complete_run_evidence_in_download": false,
+      "indexed_local_evidence_objects": 65,
+      "indexed_local_evidence_bytes": 9522212,
+      "exact_indexed_bodies_in_download": 0,
+      "indexed_local_evidence_recovered_in_this_publication": false,
+      "scientific_status": "FAILED_RESUMABLE",
+      "s3_persistence": "NOT_ATTEMPTED",
+      "return_s3_put_calls": 0,
+      "return_s3_get_calls": 0,
+      "return_s3_uploaded_bytes": 0,
+      "return_s3_readback_bytes": 0,
+      "whole_run_s3_calls": null,
+      "whole_run_s3_bytes": null
+    },
+    "estimated_instance_wall_cost_usd": 0.017007061694666845,
+    "rate_usd_per_hour": 2.57,
+    "cost_is_invoice": false,
+    "exclusive_owner_cost_attribution": false,
+    "cost_excludes_unmeasured_finalization_tail": true,
+    "new_infrastructure": false,
+    "unrelated_processes_signaled": 0
+  },
+  "selected_execution_tally": {
+    "scope": "Two earlier authenticated returns, nine preserved older owner runs, and R9, R10 and R11; selected evidence, not lifetime totals",
+    "actual_owner_runs": 14,
+    "completed_with_coverage_gaps": 2,
+    "failed": 9,
+    "resource_deferred": 3,
+    "recent_runs": 3,
+    "recent_completed_frozen_scoring": 1,
+    "recent_failed": 2,
+    "recent_new_target_fits": 0,
+    "lifetime_runs": null,
+    "lifetime_failures": null,
+    "older_runs_with_preserved_partial_science": 4,
+    "pre_owner_parser_attempts_separate": 1,
+    "pre_owner_transport_attempts_separate": 2,
+    "earlier_two_returns": {
+      "actual_owner_runs": 2,
+      "completed_with_coverage_gaps": 1,
+      "failed": 1,
+      "historical_new_target_fits": 173,
+      "historical_new_scalar_calibration_fits": 35,
+      "new_fits_credited_to_this_update": 0
+    }
+  },
+  "next_release": {
+    "release": "B063R12",
+    "status": "REPAIR_IN_PROGRESS_VALIDATION_PENDING",
+    "owner_execution_verified": false,
+    "new_model_fits": 0,
+    "new_issued_forecasts": 0,
+    "acceptance": "Final packaged integration tests and a separate actual owner return are required; preparation is not fitting evidence."
   }
 }
