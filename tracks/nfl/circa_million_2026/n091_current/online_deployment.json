@@ -1,0 +1,11 @@
+{
+  "schema": "nfl.n091.native-publication.v1",
+  "state": "PREPARED_NOT_PUBLISHED",
+  "public_url": "https://sports-edge-lab-nfl.alv-mendizabal.chatgpt.site/circa/",
+  "new_owner_aws_fits_in_n091_review": 0,
+  "source_owner_release": "N090",
+  "source_owner_new_fits": 88,
+  "audience_changed": false,
+  "new_site_created": false,
+  "automatic_promotion": false
+}

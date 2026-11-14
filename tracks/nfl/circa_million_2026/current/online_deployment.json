@@ -1,6 +1,6 @@
 {
   "schema": "nfl.n090.native-publication.v1",
-  "state": "DEPLOYED_BROWSER_VERIFICATION_PENDING",
+  "state": "ARCHIVED_SOURCE_LIVE_ROUTE_TRANSITIONING_TO_N091",
   "public_url": "https://sports-edge-lab-nfl.alv-mendizabal.chatgpt.site/circa/",
   "native_site_version": 44,
   "native_deployment_id": "appgdep_6af7a9726c4081919a874e22ac3ed670",
@@ -17,5 +17,6 @@
   "aws_infrastructure_changed": false,
   "new_owner_aws_fits": 0,
   "current_source_privacy_corrected": true,
-  "browser_review_workflow": "https://github.com/alvaromendizabal/sports-edge-lab/actions/workflows/nfl-static-review.yml"
+  "browser_review_workflow": "https://github.com/alvaromendizabal/sports-edge-lab/actions/workflows/nfl-static-review.yml",
+  "n091_transition": "Source retained; live route is transitioning to separately verified N091 actual science. Historical source checks remain active."
 }
