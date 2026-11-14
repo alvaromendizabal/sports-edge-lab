@@ -175,6 +175,7 @@ class ActualV071PublicEvidence(unittest.TestCase):
             clean = re.sub(r'<!-- FBS_V072_LATEST_LINK_START -->.*?<!-- FBS_V072_LATEST_LINK_END -->','',text,flags=re.S)
             self.assertEqual(blob(clean.encode()),expected[name])
         text = (P/'README.md').read_text()
+        text = re.sub(r'<!-- FBS_V075_OWNER_REVIEW_START -->.*?<!-- FBS_V075_OWNER_REVIEW_END -->\n\n','',text,flags=re.S)
         text = re.sub(r'<!-- FBS_V074_EVIDENCE_REVIEW_START -->.*?<!-- FBS_V074_EVIDENCE_REVIEW_END -->\n\n','',text,flags=re.S)
         clean = re.sub(r'<!-- FBS_V072_ACTUAL_V071_START -->.*?<!-- FBS_V072_ACTUAL_V071_END -->\n\n','',text,flags=re.S)
         self.assertEqual(blob(clean.encode()),expected['README.md'])
