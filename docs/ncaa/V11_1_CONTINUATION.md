@@ -5,59 +5,99 @@ NCAA men's and women's comparisons. Its source analysis time remains
 **2026-11-13 23:38:59 UTC**. A publication update is not a source refresh or a new
 owner run.
 
-## Latest actual execution: R11 failed
+## Latest actual execution: R12 resource-deferred
 
-The new authenticated owner return records a real execution beginning
-**November 13, 2026 at 6:32 p.m. Pacific** (November 14 at 02:32 UTC). It failed
-before any numbered scientific stage after **24.0287 seconds**. A source-family
-orchestration contract failed first, followed by a resource-lease validation
-failure during normal return finalization. These are two errors in one failed
-owner execution. Newly committed target, calibration and residual fits are all
-zero; verified reused target fits and recorded scientific worker starts are
-also zero.
+The authenticated R12 owner execution began **November 13, 2026 at 8:57 p.m.
+Pacific** (November 14 at 04:57 UTC). It ended at 9:27 p.m. Pacific after
+**1,837.837 seconds — 30 minutes 37.8 seconds** with
+`RESOURCE_DEFERRED_PARTIAL_WORK_PRESERVED`. Source refresh completed, then
+parent-stage resource admission stopped execution before fitting. Newly committed
+target, scalar-calibration and empirical-residual fits were **zero**. Verified
+fit reuse, scientific worker starts, new forecasts and promotions were also zero.
+Uncommitted optimizer attempts are not inferred from missing artifacts.
 
-The emergency ZIP passed full integrity checks for nine declared payloads. It
-contains a hash index for 65 local evidence objects totaling 9,522,212 bytes,
-but none of those exact indexed bodies is in the download. The primary failure
-traceback was replaced there by the packaging traceback. Recovery must verify
-the original local objects before including them in a future return. No model
-or scientific credit is inferred from the existence of an index.
+### Admission defect and execution time
 
-Return S3 persistence was **not attempted**, so its PUT/GET counts and upload/
-readback bytes are zero. Whole-run S3 totals are unavailable from this download.
-The observed shared-instance wall-cost estimate is approximately **$0.017**;
-it is not an invoice or an exclusive NCAA allocation and excludes the
-unmeasured finalization tail. Peak scientific workers were zero, and peak
-leased CPUs were one against a requested ceiling of twelve. This run produced
-no 12-core fitting benchmark.
+The final wait lasted **120.000 seconds across 115 observations**. The first
+sample was stale. The remaining **114 observations** reported measured capacity
+admitted with a one-CPU reservation and no draining, while the
+additional-worker admission predicate remained false. The existing parent
+already occupied the retained CPU. Its continuation was tested as an additional
+worker instead of as continued work within its existing verified lease.
+
+The final observation recorded **47.94 available CPU cores**, **91.02 GB available
+memory**, and **538.67 GB free disk**. This was not evidence of exhausted host
+resources. The repair must distinguish existing-parent continuation from new
+worker admission while retaining genuine lease, affinity, active-work, memory,
+IO, disk and cost guards.
+
+The source-refresh stage took **1,361.410 seconds**, including **1,028.527 owner
+CPU seconds**. A **1,095,672-row** display-history snapshot occupied a declared
+single-worker serialization path for **259.720 seconds**. The report later
+reused that snapshot, but that did not avoid the earlier serialization. Initial
+current-coverage reporting took approximately another 116 seconds.
+
+Peak granted CPU was **one**, against a configured ceiling of twelve. Peak
+measured owner-tree CPU was **1.0007 cores**; average parent CPU was **0.73293
+cores**. No 12-core training or new fitting throughput claim is supported.
+
+### Preserved source and return work
+
+The current receipt contains **2,502 canonical games**, including **1,482 final**
+and **1,016 upcoming games**, with **zero saved forecasts**. All **3,429 weekly
+display rows** lack win, margin and total predictions. Unresolved official and
+schedule identities remain explicit; complete official coverage is not claimed.
+Acquisition progress is not training or a completed current-model comparison.
+
+R12 recovered **all 65 indexed R11 diagnostic bodies**, totaling **9,522,212
+bytes**. The actual R12 ZIP is **83,145,771 bytes** and passed integrity checks
+for **239 declared payloads**. Its **39,979-byte manifest** and ZIP were uploaded
+and fully read back: **2 PUT and 2 GET calls**, with **83,185,750 bytes in each
+direction**. Scientific completeness remains partial.
+
+The main-store receipt, before final return publication, records 6,479 GET
+attempts, 6,306 full-GET successes and 3,579,131,373 bytes read; 3,355 conditional
+PUT creations and 3,575,321,395 bytes written; and 8,605 verified cache reads
+totaling 10,282,383,511 bytes. These counters do not establish a complete priced
+API-credit bill or the SDK's unobserved internal retries.
+
+The observed whole-instance wall-cost estimate is **$1.311556** at **$2.57/hour**.
+It is not an invoice or an exclusive NCAA allocation. Work after the summary and
+additional service charges are excluded.
+
+The previous R11 source-guard repair, diagnostic recovery and final return
+persistence worked during R12. The requested scientific continuation still failed.
 
 ### Selected execution tally
 
 | Scope | Actual owner runs | Completed with gaps | Failed | Resource deferred |
 |---|---:|---:|---:|---:|
-| Recent R9 / R10 / R11 | 3 | 1 | 2 | 0 |
+| Recent R9 / R10 / R11 / R12 | 4 | 1 | 2 | 1 |
 | Nine preserved older runs | 9 | 0 | 6 | 3 |
 | Earlier B033 / B036 returns | 2 | 1 | 1 | 0 |
-| Combined selected evidence | 14 | 2 | 9 | 3 |
+| Combined selected evidence | 15 | 2 | 9 | 4 |
 
-These are not lifetime counts. The completed recent run performed frozen
-saved-row scoring. Four older interrupted runs retained useful partial
-science. B033 failed after committing 108 target fits; B036 completed with
-65 newly committed target fits and 35 scalar-calibration fits. Those earlier
-fits are historical evidence and receive no new-fit credit in this update. One reported parser attempt and two transfer attempts are separate
-from owner executions.
+Thirteen selected runs were unsuccessful or deferred. These are not lifetime
+counts. The recent completed run performed frozen saved-row scoring; the recent
+four runs contain **zero new target fits**. Four older interrupted runs retained
+useful partial science. B033 failed after committing 108 target fits; B036
+completed with 65 newly committed target fits and 35 scalar-calibration fits.
+Those historical fits receive no new-fit credit in this update. One reported
+parser attempt and two transfer attempts are separate from owner executions.
 
-**R12 passed local release validation; owner execution is pending.** No actual
-R12 owner execution is recorded in this evidence. Local tests and packaged
-checks establish release readiness only and provide no production model-fit
-or forecast credit. A later authenticated owner return must establish actual
-fits, verified reuse, current forecasts, worker utilization and S3 durability.
-The latest actual owner execution remains the failed R11 attempt above.
+### R13 is unreleased
 
-### R12 local validation evidence
+R13 preparation is incomplete. The focused resource suite recorded **47 cases:
+46 passed and 1 errored**, with correction pending. The workspace reset removed local preparation files before complete validation
+and packaging. Recovery from authenticated prior artifacts is in progress. The acquisition
+continuation adapter is **not implemented**. No ready R13 release, actual R13
+owner execution, new fitted model or forecast is claimed.
 
-These are local release checks. Separate suites may overlap and are not summed.
-None supplies production fit, forecast, owner-execution or cloud-durability credit.
+### Historical R12 local validation evidence
+
+These checks passed before the actual R12 failure. They did not establish that
+the complete owner continuation would succeed. Separate suites may overlap and
+are not summed. None supplies production fit, forecast or owner-execution credit.
 
 | Local check | Observed result | Wall time |
 |---|---|---:|
@@ -75,7 +115,7 @@ Real serialized archives of 536,870,911; 536,870,912; 536,870,913; and
 The first local transport attempt stopped at a real free-disk gate on the
 temporary volume: 15 cases passed and one reported an error. The same executable
 then passed all 16 on a local volume with sufficient storage. This validation
-iteration is excluded from the 14 actual owner-run tally.
+iteration is excluded from the 15 actual owner-run tally.
 
 Authentic B033/B036 archive validation retained 108 and 85 candidate records,
 respectively. It deserialized no models and received zero new or verified reused
@@ -158,20 +198,17 @@ V11.1 requires one complete immutable logical return and a 512 MiB limit per
 physical transfer part, with numbered parts and integrity-checked reassembly
 when needed. Aggregate transport size must not prevent otherwise admissible
 science. Exact recipes, source rights, information clocks, actual resource
-availability and independent promotion review remain required. The R11
-emergency archive verifies its declared subset; complete run evidence still
-requires recovery of the preserved local journal bodies.
-
-The failed R11 execution is verified. R12 has passed local release checks but
-has zero actual owner executions in the evidence used here. No completed R12
-owner execution, new production scientific fit, forecast or promotion is
-claimed. Recovery checkpoint references are not model-fit counts.
+availability and independent promotion review remain required. R12 recovered
+all 65 indexed R11 diagnostic bodies and verified its complete declared return,
+while the scientific workflow remains partial. R13 is unreleased and requires
+correction, complete validation and packaging. Recovery checkpoint references
+are not model-fit counts.
 
 ## Publication scope
 
 The embedded scientific payload is preserved byte for byte from the recovered
 public V11 page. The added [operational status](v11_1_execution_status.json)
-contains only aggregate execution facts and local release-readiness status. The earlier
+contains only aggregate execution facts and the incomplete R13 preparation status. The earlier
 uncertainty supplement is reused unchanged; it is not counted as new work. Private
 recipes, weights, owner packages, cloud paths, raw feeds and future unissued
 candidate values are excluded. Older NCAA pages and other sports' evidence

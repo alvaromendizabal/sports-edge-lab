@@ -50,35 +50,78 @@ class PublicEvidenceTests(unittest.TestCase):
         self.assertFalse(e["checkpoint_references_are_fits"])
         self.assertEqual(e["verified_reused_fit_credit"], 0)
 
-    def test_failed_actual_execution_does_not_create_fit_credit(self):
+    def test_deferred_actual_execution_does_not_create_fit_credit(self):
         e = self.operational
         self.assertTrue(e["new_owner_execution_verified"])
         self.assertEqual(e["latest_authenticated_owner_status"],
-                         "PACKAGING_FAILED_EMERGENCY_RETURN")
+                         "RESOURCE_DEFERRED_PARTIAL_WORK_PRESERVED")
         for key in ["new_owner_fits", "new_owner_inference",
                     "new_owner_issued_forecasts", "automatic_promotions"]:
             self.assertEqual(e[key], 0)
         run = e["latest_owner_execution"]
-        self.assertEqual(run["failed_owner_attempts"], 1)
-        self.assertEqual(run["distinct_recorded_errors"], 2)
+        self.assertEqual(run["release"], "B063R12")
+        self.assertEqual(run["failed_owner_attempts"], 0)
+        self.assertEqual(run["resource_deferred_owner_attempts"], 1)
+        self.assertEqual(run["distinct_recorded_errors"], 1)
         self.assertEqual(run["peak_scientific_workers"], 0)
-        self.assertAlmostEqual(run["elapsed_seconds"], 24.02871182600029)
+        self.assertAlmostEqual(run["elapsed_seconds"], 1837.8370001469993)
         self.assertFalse(e["next_release"]["owner_execution_verified"])
         self.assertFalse(e["new_scientific_results_this_update"])
-        self.assertIn("Latest owner execution failed before fitting", self.page)
+        self.assertIn("Latest owner execution stopped before fitting", self.page)
+        self.assertIsNone(run["uncommitted_optimizer_attempts"])
 
-    def test_local_release_validation_is_not_owner_execution(self):
+    def test_existing_parent_defect_is_not_physical_capacity_shortage(self):
+        run = self.operational["latest_owner_execution"]
+        a = run["admission"]
+        self.assertEqual(a["observations"], 115)
+        self.assertEqual(a["measured_capacity_admitted_observations"], 114)
+        self.assertAlmostEqual(a["wait_seconds"], 120.00011544599874)
+        self.assertFalse(a["final_new_admissions_allowed"])
+        self.assertFalse(a["final_draining"])
+        self.assertEqual(a["final_reserved_cpus"], 1)
+        self.assertEqual(a["final_admission_ceiling"], 1)
+        self.assertEqual(a["final_active_fit_slots"], 0)
+        self.assertGreater(a["final_available_cpu_cores"], 47)
+        self.assertGreater(a["final_free_disk_bytes"], 500_000_000_000)
+        self.assertEqual(run["peak_granted_cpus"], 1)
+        self.assertFalse(run["actual_12_core_fitting_verified"])
+        self.assertIn("existing parent", self.page)
+
+    def test_acquisition_counts_do_not_claim_forecasts(self):
+        r = self.operational["latest_owner_execution"]["source_refresh"]
+        self.assertTrue(r["completed"])
+        self.assertEqual(r["canonical_games"], 2502)
+        self.assertEqual(r["canonical_final_games"], 1482)
+        self.assertEqual(r["canonical_upcoming_games"], 1016)
+        self.assertEqual(r["canonical_games_with_saved_forecast"], 0)
+        self.assertEqual(r["weekly_display_rows"], 3429)
+        self.assertEqual(r["weekly_rows_without_win_margin_and_total_predictions"], 3429)
+        self.assertEqual(r["next_week_rows_without_win_margin_and_total_predictions"], 1001)
+        self.assertFalse(r["complete_official_universe"])
+        self.assertTrue(r["source_refresh_is_not_training"])
+
+    def test_incomplete_next_release_is_not_a_ready_runner(self):
         r = self.operational["next_release"]
-        self.assertEqual(r["status"],
-                         "LOCAL_RELEASE_VALIDATED_OWNER_EXECUTION_PENDING")
+        self.assertEqual(r["release"], "B063R13")
+        self.assertTrue(r["status"].startswith("UNRELEASED_"))
         self.assertFalse(r["owner_execution_verified"])
+        self.assertFalse(r["packaged_runner_verified"])
+        self.assertFalse(r["acquisition_adapter_implemented"])
         self.assertEqual(r["actual_owner_runs_observed"], 0)
         self.assertEqual(r["new_model_fits"], 0)
         self.assertEqual(r["new_issued_forecasts"], 0)
+        self.assertEqual(r["local_validation"]["cases_executed"], 47)
+        self.assertEqual(r["local_validation"]["passed"], 46)
+        self.assertEqual(r["local_validation"]["errors"], 1)
+        self.assertFalse(r["local_validation"]["complete_suite_pass"])
+        self.assertIn("R13 is unreleased; validation is incomplete", self.page)
+
+    def test_prior_local_checks_did_not_prove_owner_completion(self):
+        r = self.operational["prior_release_validation"]
+        self.assertEqual(r["release"], "B063R12")
         self.assertEqual(r["local_validation"]["status"], "PASSED")
         self.assertEqual(r["local_validation"]["production_fit_credit_from_local_checks"], 0)
-        self.assertIn("passed local release validation", self.page)
-        self.assertIn("No actual R12 owner execution is recorded", self.page)
+        self.assertIn("Historical R12 local release validation", self.page)
         v = r["local_validation"]
         c = v["final_packaged_counts"]
         self.assertEqual(c["startup"]["passed"], 318)
@@ -94,30 +137,42 @@ class PublicEvidenceTests(unittest.TestCase):
         self.assertEqual(v["authentic_historical_candidate_validation"]["verified_reused_fit_credit"], 0)
         self.assertTrue(v["separate_suites_may_overlap_do_not_sum"])
 
-
-    def test_emergency_transport_success_does_not_hide_missing_evidence(self):
+    def test_complete_transport_does_not_claim_complete_science(self):
         r = self.operational["latest_owner_execution"]["return"]
         self.assertTrue(r["zip_integrity_verified"])
-        self.assertEqual(r["declared_payloads_verified"], 9)
-        self.assertFalse(r["complete_run_evidence_in_download"])
+        self.assertEqual(r["declared_payloads_verified"], 239)
+        self.assertTrue(r["complete_declared_payloads_verified"])
         self.assertEqual(r["indexed_local_evidence_objects"], 65)
-        self.assertEqual(r["exact_indexed_bodies_in_download"], 0)
-        self.assertEqual(r["s3_persistence"], "NOT_ATTEMPTED")
-        self.assertEqual(r["return_s3_put_calls"] + r["return_s3_get_calls"], 0)
+        self.assertEqual(r["exact_indexed_bodies_in_download"], 65)
+        self.assertEqual(r["bytes"], 83145771)
+        self.assertEqual(r["manifest_bytes"], 39979)
+        self.assertEqual(r["scientific_status"], "PARTIAL")
+        self.assertEqual(r["s3_persistence"], "VERIFIED_ALL_PHYSICAL_RETURN_BYTES")
+        self.assertEqual(r["return_s3_put_calls"], 2)
+        self.assertEqual(r["return_s3_get_calls"], 2)
+        self.assertEqual(r["return_s3_uploaded_bytes"], 83185750)
+        self.assertEqual(r["return_s3_readback_bytes"], 83185750)
         self.assertIsNone(r["whole_run_s3_calls"])
         self.assertIsNone(r["whole_run_s3_bytes"])
+        previous = self.operational["previous_owner_execution"]
+        self.assertEqual(previous["release"], "B063R11")
+        self.assertEqual(previous["return"]["exact_indexed_bodies_in_download"], 0)
+        self.assertEqual(previous["return"]["s3_persistence"], "NOT_ATTEMPTED")
 
     def test_selected_run_tally_is_not_a_lifetime_or_model_count(self):
         t = self.operational["selected_execution_tally"]
-        self.assertEqual(t["actual_owner_runs"], 14)
+        self.assertEqual(t["actual_owner_runs"], 15)
         tally_html = re.search(r'<p id="execution-tally">(.*?)</p>', self.page, re.S).group(1)
-        self.assertIn("14 actual owner runs", tally_html)
+        self.assertIn("15 actual owner runs", tally_html)
         self.assertIn("2 completed with coverage gaps, 9 failed", tally_html)
         self.assertEqual(t["completed_with_coverage_gaps"] + t["failed"] +
                          t["resource_deferred"], t["actual_owner_runs"])
-        self.assertEqual(t["recent_runs"], 3)
+        self.assertEqual(t["recent_runs"], 4)
         self.assertEqual(t["recent_completed_frozen_scoring"], 1)
         self.assertEqual(t["recent_failed"], 2)
+        self.assertEqual(t["recent_resource_deferred"], 1)
+        self.assertEqual(t["resource_deferred"], 4)
+        self.assertEqual(t["unsuccessful_or_deferred"], 13)
         self.assertEqual(t["completed_with_coverage_gaps"], 2)
         self.assertEqual(t["failed"], 9)
         self.assertEqual(t["earlier_two_returns"]["historical_new_target_fits"], 173)
