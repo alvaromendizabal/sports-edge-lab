@@ -73,11 +73,12 @@ function renderReturnedBoard() {
       g.currently_selectable_at_return?'Selectable at issue':'Completed before issue'];
   });
   $('official-games').innerHTML=table(['Matchup / kickoff UTC','Official fixed spreads','Current away − home','Frozen away − home','At source issue'],rows);
-  const sides=games.flatMap(g=>(g.sides||[]).map(s=>[esc(g.away_team)+' @ '+esc(g.home_team),esc(s.team)+' '+line(s.official_spread),
+  function sideModel(g,s){const matched=DATA.current_model_card_review.cards.filter(c=>c.alternatives.some(a=>a.game_id===g.game_id&&a.team===s.team&&a.side===s.side&&a.spread===s.official_spread&&Math.abs(a.expected_points-s.expected_contest_points)<.000051&&Math.abs(a.p_cover-s.p_cover)<.000051));return matched.length===1?matched[0].family:'Shared probability';}
+  const sides=games.flatMap(g=>(g.sides||[]).map(s=>[esc(sideModel(g,s)),esc(g.away_team)+' @ '+esc(g.home_team),esc(s.team)+' '+line(s.official_spread),
     fmt(s.point_forecast_team_margin,2),esc(record(s.team_2026_ats)),esc(record(s.team_2026_ats_home_or_away)),
     esc(record(s.model_chosen_side_historical_ats)),s.expected_contest_points==null?'Pending calibrated distribution':fmt(s.expected_contest_points)]));
-  $('sides-label').textContent=sides.length+' eligible sides · team and chosen-side ATS records';
-  $('official-sides').innerHTML=table(['Game','Side / line','Frozen team margin','Team ATS W–L–P (n)','Team home/away ATS','Model chosen-side ATS','Expected contest points'],sides);
+  $('sides-label').textContent=sides.length+' model-specific alternatives across 13 eligible games · team and chosen-side ATS records';
+  $('official-sides').innerHTML=table(['Margin model','Game','Side / line','Frozen team margin','Team ATS W–L–P (n)','Team home/away ATS','Model chosen-side ATS','Expected contest points'],sides);
   const ds=(DATA.direction_scorecards||[]).filter(r=>r.season===2026&&r.series==='STRICT_RECIPE_SEASONAL_REFIT');
   $('directions-table').innerHTML=table(['Seasonal refit','Point-direction ATS W–L–P','Winner decisions','Model correct','Official-line favorite correct','Evidence'],ds.map(r=>[
     esc(model(r.model)),esc(record(r.point_direction_ats)),esc(r.winner_direction_paired_n),esc(r.winner_direction_model_correct),

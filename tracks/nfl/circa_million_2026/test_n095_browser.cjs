@@ -41,6 +41,8 @@ async function main() {
     await p.selectOption('#study-policy','all');check(await p.locator('#model-ats tbody tr').count()===9,'alternate calibration policies');
     await p.selectOption('#study-policy','primary');
     check(await p.locator('#event-score-table tbody tr').count()===57,'scored margin events');
+    check(await p.locator('#official-sides tbody tr').count()===78,'all model-specific board rows');
+    check(new Set(await p.locator('#official-sides tbody tr td:first-child').allTextContents()).size===3,'distinct board model labels');
     check(d.source_owner_release==='N094'&&d.release==='N095','release provenance');
     check(d.owner_execution.new_base_weight_fits===0&&d.owner_execution.reused_fit_jobs===217&&d.owner_execution.failed_fit_jobs===0,'owner fit jobs');
     check(d.owner_execution.distinct_reused_weight_versions===199&&d.owner_execution.new_total_calibration_fits===9,'weights and separate calibrators');

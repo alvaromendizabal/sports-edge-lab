@@ -52,9 +52,11 @@ jobs:
         env:
           PLAYWRIGHT_MODULE_DIR: ${{ runner.temp }}/n095-browser/node_modules/playwright
           NFL_N095_ONLINE_URL: https://sports-edge-lab-nfl.alv-mendizabal.chatgpt.site/circa/
+          NFL_N094_ONLINE_URL: https://sports-edge-lab-nfl.alv-mendizabal.chatgpt.site/circa/
         run: |
           if python -c "import json,pathlib;p=pathlib.Path('tracks/nfl/circa_million_2026/n095_current/online_deployment.json');d=json.loads(p.read_text()) if p.exists() else {};raise SystemExit(0 if str(d.get('state','')).startswith(('DEPLOYED','VERIFIED')) else 1)"; then
             node tracks/nfl/circa_million_2026/test_n095_browser.cjs
           else
-            echo 'N095 source only. Latest independently verified live deployment is v52.'
+            echo 'N095 source is awaiting native publication. Verify the prior public deployment against its original source.'
+            node tracks/nfl/circa_million_2026/test_n094_browser.cjs
           fi
