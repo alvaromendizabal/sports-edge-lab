@@ -50,15 +50,47 @@ class PublicEvidenceTests(unittest.TestCase):
         self.assertFalse(e["checkpoint_references_are_fits"])
         self.assertEqual(e["verified_reused_fit_credit"], 0)
 
-    def test_no_new_execution_or_fit_credit_from_publication(self):
+    def test_failed_actual_execution_does_not_create_fit_credit(self):
         e = self.operational
-        self.assertFalse(e["new_owner_execution_verified"])
+        self.assertTrue(e["new_owner_execution_verified"])
+        self.assertEqual(e["latest_authenticated_owner_status"],
+                         "PACKAGING_FAILED_EMERGENCY_RETURN")
         for key in ["new_owner_fits", "new_owner_inference",
                     "new_owner_issued_forecasts", "automatic_promotions"]:
             self.assertEqual(e[key], 0)
-        self.assertEqual(e["delivery_policy"]["owner_execution_of_new_transport"],
-                         "NOT_YET_OBSERVED")
-        self.assertIn("in preparation", self.page)
+        run = e["latest_owner_execution"]
+        self.assertEqual(run["failed_owner_attempts"], 1)
+        self.assertEqual(run["distinct_recorded_errors"], 2)
+        self.assertEqual(run["peak_scientific_workers"], 0)
+        self.assertAlmostEqual(run["elapsed_seconds"], 24.02871182600029)
+        self.assertFalse(e["next_release"]["owner_execution_verified"])
+        self.assertFalse(e["new_scientific_results_this_update"])
+        self.assertIn("Latest owner execution failed before fitting", self.page)
+
+    def test_emergency_transport_success_does_not_hide_missing_evidence(self):
+        r = self.operational["latest_owner_execution"]["return"]
+        self.assertTrue(r["zip_integrity_verified"])
+        self.assertEqual(r["declared_payloads_verified"], 9)
+        self.assertFalse(r["complete_run_evidence_in_download"])
+        self.assertEqual(r["indexed_local_evidence_objects"], 65)
+        self.assertEqual(r["exact_indexed_bodies_in_download"], 0)
+        self.assertEqual(r["s3_persistence"], "NOT_ATTEMPTED")
+        self.assertEqual(r["return_s3_put_calls"] + r["return_s3_get_calls"], 0)
+        self.assertIsNone(r["whole_run_s3_calls"])
+        self.assertIsNone(r["whole_run_s3_bytes"])
+
+    def test_selected_run_tally_is_not_a_lifetime_or_model_count(self):
+        t = self.operational["selected_execution_tally"]
+        self.assertEqual(t["actual_owner_runs"], 12)
+        self.assertEqual(t["completed_with_coverage_gaps"] + t["failed"] +
+                         t["resource_deferred"], t["actual_owner_runs"])
+        self.assertEqual(t["recent_runs"], 3)
+        self.assertEqual(t["recent_completed_frozen_scoring"], 1)
+        self.assertEqual(t["recent_failed"], 2)
+        self.assertEqual(t["recent_new_target_fits"], 0)
+        self.assertIsNone(t["lifetime_runs"])
+        self.assertIsNone(t["lifetime_failures"])
+        self.assertTrue(self.operational["historical_uncertainty_reused_this_update"])
 
     def test_benchmark_is_measured_scoring_without_fit_claim(self):
         b = self.operational["benchmark"]

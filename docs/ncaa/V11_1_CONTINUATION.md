@@ -5,9 +5,53 @@ NCAA men's and women's comparisons. Its source analysis time remains
 **2026-11-13 23:38:59 UTC**. A publication update is not a source refresh or a new
 owner run.
 
-## Recovered work
+## Latest actual execution: R11 failed
 
-The latest authenticated owner run completed saved-row scoring and a bounded
+The new authenticated owner return records a real execution beginning
+**November 13, 2026 at 6:32 p.m. Pacific** (November 14 at 02:32 UTC). It failed
+before any numbered scientific stage after **24.0287 seconds**. A source-family
+orchestration contract failed first, followed by a resource-lease validation
+failure during normal return finalization. These are two errors in one failed
+owner execution. Newly committed target, calibration and residual fits are all
+zero; verified reused target fits and recorded scientific worker starts are
+also zero.
+
+The emergency ZIP passed full integrity checks for nine declared payloads. It
+contains a hash index for 65 local evidence objects totaling 9,522,212 bytes,
+but none of those exact indexed bodies is in the download. The primary failure
+traceback was replaced there by the packaging traceback. Recovery must verify
+the original local objects before including them in a future return. No model
+or scientific credit is inferred from the existence of an index.
+
+Return S3 persistence was **not attempted**, so its PUT/GET counts and upload/
+readback bytes are zero. Whole-run S3 totals are unavailable from this download.
+The observed shared-instance wall-cost estimate is approximately **$0.017**;
+it is not an invoice or an exclusive NCAA allocation and excludes the
+unmeasured finalization tail. Peak scientific workers were zero, and peak
+leased CPUs were one against a requested ceiling of twelve. This run produced
+no 12-core fitting benchmark.
+
+### Selected execution tally
+
+| Scope | Actual owner runs | Completed with gaps | Failed | Resource deferred |
+|---|---:|---:|---:|---:|
+| Recent R9 / R10 / R11 | 3 | 1 | 2 | 0 |
+| Nine preserved older runs | 9 | 0 | 6 | 3 |
+| Combined selected evidence | 12 | 1 | 8 | 3 |
+
+These are not lifetime counts. The completed recent run performed frozen
+saved-row scoring. Three older interrupted runs retained useful partial
+science. One reported parser attempt and two transfer attempts are separate
+from owner executions.
+
+**R12 repair and final validation are in progress.** A later authenticated
+owner return is still required to establish new fits, actual reuse, forecasts,
+worker utilization and S3 durability. This publication adds an operational
+failure audit, not a new scientific result.
+
+## Prior scientific work preserved
+
+The prior completed R10 owner run completed saved-row scoring and a bounded
 result refresh with explicit coverage gaps. It produced **zero new fitted
 models, inference calls, issued forecasts or promotions**. The latest partition
 set contains 867,979 scored model rows: 854,308 initial rows, replacing 47,620
@@ -33,9 +77,9 @@ source-specific event IDs and retains 6,894 observation versions. These IDs
 are not asserted to be unique across providers. Six identity conflicts remain
 quarantined. Future unissued numeric forecasts remain withheld.
 
-## New historical uncertainty supplement
+## Preserved historical uncertainty supplement
 
-A new local statistical replay of 12 authenticated historical partitions
+The earlier local statistical replay of 12 authenticated historical partitions
 reproduced all 336 exact cohort hashes and game counts. Paired point estimates
 agree with the recovered public evidence to at most 8.9 × 10⁻¹⁶ absolute loss.
 The study was registered at 2026-11-14 00:55:00 UTC and executed 149,999 paired
@@ -68,31 +112,33 @@ and [Cameron, Gelbach and Miller’s clustered-bootstrap paper](https://www.nber
 as method references. The latter is a caution about clustered inference, not a
 claim that this percentile procedure reproduces their bootstrap-t method.
 
-## Measured execution and pending continuation
+## Preserved scoring benchmark and pending continuation
 
-The recovered owner scored the same 854,308 records across 18 independent tasks
+The prior completed owner scored the same 854,308 records across 18 independent tasks
 in each declared benchmark layout. The one-worker layout took 56.500 seconds;
 the 12-worker layout took 6.652 seconds, an 8.493× wall speedup with 8.317
 measured process CPU core equivalents. This measures saved-row scoring, not
 fitting. Requests for 6×2 and 4×3 actually used 6×1 and 4×1; additional native
 thread throughput has not been established.
 
-V11.1 delivery changes are in preparation. They retain one complete immutable
-logical return and a 512 MiB limit per physical transfer part, with numbered
-parts and integrity-checked reassembly when needed. Aggregate transport size
-must not prevent otherwise admissible science. Exact recipes, source rights,
-information clocks, real disk/resource availability and promotion review
-remain required.
+V11.1 requires one complete immutable logical return and a 512 MiB limit per
+physical transfer part, with numbered parts and integrity-checked reassembly
+when needed. Aggregate transport size must not prevent otherwise admissible
+science. Exact recipes, source rights, information clocks, actual resource
+availability and independent promotion review remain required. The R11
+emergency archive verifies its declared subset; complete run evidence still
+requires recovery of the preserved local journal bodies.
 
-No new V11.1 owner execution is verified by this page. New local engineering
-tests, new owner runs and new scientific model counts require their own
-receipts. Recovery checkpoint references are not model-fit counts.
+The new failed R11 execution is verified. R12 is a separate pending repair;
+no completed R12 owner execution, new scientific fit, forecast or promotion is
+claimed. Recovery checkpoint references are not model-fit counts.
 
 ## Publication scope
 
 The embedded scientific payload is preserved byte for byte from the recovered
 public V11 page. The added [operational status](v11_1_execution_status.json)
-contains only aggregate execution facts and pending-release policy. Private
+contains only aggregate execution facts and pending-release policy. The earlier
+uncertainty supplement is reused unchanged; it is not counted as new work. Private
 recipes, weights, owner packages, cloud paths, raw feeds and future unissued
 candidate values are excluded. Older NCAA pages and other sports' evidence
 remain unchanged. Source publication and hosted deployment are separate events.
