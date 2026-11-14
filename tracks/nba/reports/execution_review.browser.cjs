@@ -40,10 +40,49 @@ async function check(page,viewport,name){
  await page.reload({waitUntil:'load'});await ready(page);assert.deepEqual(await page.locator('#nba-execution-data').evaluate(n=>JSON.parse(n.textContent)),value);
  assert.deepEqual(errors,[]);assert.deepEqual(external,[]);return{name,viewport,console_or_page_errors:0,external_requests:0,offline_reopen:true,verified_games:1274,verified_selected_issues:14054};
 }
-(async()=>{const browser=await require(process.env.PLAYWRIGHT_MODULE_DIR||'playwright').chromium.launch({headless:true});const results=[];
- try{for(const [v,n]of[[{width:1440,height:1050},'desktop'],[{width:390,height:844},'mobile']]){const page=await browser.newPage();results.push(await check(page,v,n));await page.close();}
+
+// This later status panel does not alter the dated scientific page above.
+async function checkRecovery(browser){
+ require('node:child_process').execFileSync('python',[path.join(root,'build_recovery_status.py'),'--check'],{stdio:'pipe'});
+ const status=JSON.parse(read('recovery_status.json')),checks=[];
+ assert.deepEqual(status.attempts.map(row=>row.native_estimator_fit_returns),[318,28,0]);
+ assert.equal(status.saved_public_snapshot.evidence_as_of_utc,'2026-11-13T17:53:05.203284Z');
+ assert.equal(status.replacement.owner_execution_observed,false);
+ for(const [viewport,name]of[[{width:1440,height:1050},'desktop'],[{width:390,height:844},'mobile']]){
+  const page=await browser.newPage({viewport}),errors=[],external=[];
+  page.on('pageerror',e=>errors.push(String(e)));
+  await page.route('**/*',route=>{if(/^https?:/.test(route.request().url())){external.push(route.request().url());return route.abort();}return route.continue();});
+  await page.goto('file://'+path.join(root,'recovery_status.html'),{waitUntil:'load'});
+  assert.deepEqual(await page.locator('#nba-recovery-data').evaluate(n=>JSON.parse(n.textContent)),status);
+  assert.equal(await page.locator('#attempt-table tbody tr').count(),3);
+  assert.match(await page.locator('#latest-attempt-summary').textContent(),/zero new native estimator fits/);
+  assert.match(await page.locator('#b084-summary').textContent(),/28 native estimator method returns/);
+  assert.match(await page.locator('#snapshot-clock').textContent(),/17:53:05.203284/);
+  assert.match(await page.locator('#replacement-status').textContent(),/B085 owner execution remains unobserved/);
+  await page.locator('#attempt-selector').selectOption('b084');
+  assert.equal(await page.locator('#attempt-detail').getAttribute('data-attempt'),'b084');
+  assert.match(await page.locator('#attempt-detail').textContent(),/28 native fit returns/);
+  await page.locator('#attempt-selector').selectOption('b082-latest');
+  assert.match(await page.locator('#attempt-detail').textContent(),/0 native fit returns/);
+  await page.locator('#recovery-gates > summary').click();assert.equal(await page.locator('#recovery-gates').evaluate(n=>n.open),true);
+  if(name==='desktop'){
+   const pending=page.waitForEvent('download');await page.locator('#download-recovery').click();const file=await pending;
+   assert.equal(file.suggestedFilename(),'nba_recovery_status_2026-11-14.json');assert.deepEqual(JSON.parse(fs.readFileSync(await file.path(),'utf8')),status);
+  }
+  assert.ok(await page.evaluate(()=>document.documentElement.scrollWidth<=window.innerWidth+1),'recovery horizontal overflow');
+  const out=process.env.NBA_MONITOR_SCREENSHOTS;if(out){fs.mkdirSync(out,{recursive:true});await page.screenshot({path:path.join(out,'nba-b085-recovery-'+name+'.png'),fullPage:true});}
+  await page.reload({waitUntil:'load'});assert.equal(await page.locator('#attempt-detail').getAttribute('data-attempt'),'b082-latest');
+  assert.deepEqual(errors,[]);assert.deepEqual(external,[]);
+  checks.push({viewport,name,status:'PASS',original_snapshot_clock_preserved:true,unobserved_owner_not_claimed:true,offline_reopen:true});await page.close();
+ }
+ return checks;
+}
+
+(async()=>{const browser=await require(process.env.PLAYWRIGHT_MODULE_DIR||'playwright').chromium.launch({headless:true});const results=[];let recoveryChecks=[];
+ try{recoveryChecks=await checkRecovery(browser);for(const [v,n]of[[{width:1440,height:1050},'desktop'],[{width:390,height:844},'mobile']]){const page=await browser.newPage();results.push(await check(page,v,n));await page.close();}
  const unsupported=await browser.newPage();await unsupported.addInitScript(()=>{window.DecompressionStream=undefined;});await unsupported.goto('file://'+path.join(root,'latest_research_outputs.html'));await unsupported.waitForFunction(()=>window.__SEL_OFFLINE_ERROR__);assert.equal(await unsupported.locator('#sel-offline-ready').getAttribute('data-state'),'error');assert.equal(await unsupported.locator('#sel-offline-ready a[href="latest_research_outputs.json.gz"]').count(),1);assert.equal(await unsupported.evaluate(()=>window.__SEL_OFFLINE_READY__),false);await unsupported.close();
  }finally{await browser.close();}
- const receipt={schema:'sports-edge-lab.nba.execution-review.browser.v2',status:'PASS',display_sha256:hash(raw),evidence_sha256:hash(read('latest_execution_review.json')),new_fits:0,new_forecasts:0,lossless_offline_restoration_verified:true,unsupported_browser_fallback_verified:true,exact_original_JSON_downloads_verified:2,results};
+ const receipt={schema:'sports-edge-lab.nba.execution-review.browser.v2',status:'PASS',display_sha256:hash(raw),evidence_sha256:hash(read('latest_execution_review.json')),new_fits:0,new_forecasts:0,lossless_offline_restoration_verified:true,unsupported_browser_fallback_verified:true,exact_original_JSON_downloads_verified:2,recovery_status_checks:recoveryChecks,results};
  if(process.env.NBA_MONITOR_SCREENSHOTS)fs.writeFileSync(path.join(process.env.NBA_MONITOR_SCREENSHOTS,'B083_EXECUTION_BROWSER_RECEIPT.json'),JSON.stringify(receipt,null,2)+'\n');console.log(JSON.stringify(receipt));
 })().catch(e=>{console.error(e);process.exitCode=1;});
+

@@ -1,0 +1,76 @@
+{
+  "schema": "sports-edge-lab.nba.recovery-status.v1",
+  "review_date": "2026-11-14",
+  "scope": "Sanitized recovered execution status; saved public scientific data remains dated.",
+  "saved_public_snapshot": {
+    "release": "B082",
+    "evidence_as_of_utc": "2026-11-13T17:53:05.203284Z",
+    "latest_original_issue_at_utc": "2026-11-13T17:26:12.502657Z",
+    "observed_canonical_games": 1274,
+    "changed_by_this_notice": false
+  },
+  "attempts": [
+    {
+      "id": "b082-earlier",
+      "label": "B082 · earlier substantive run",
+      "started_at_utc": "2026-11-13T16:18:13.916041Z",
+      "finished_at_utc": "2026-11-13T17:53:05.203284Z",
+      "native_estimator_fit_returns": 318,
+      "unique_model_count": null,
+      "external_exit_code": 2,
+      "outcome": "Partial substantive work; explicit blockers",
+      "explanation": "The saved public snapshot comes from this earlier invocation: 256 V9 study calls, 34 current-season frozen calls and 28 champion-issuance calls. Its 13,860 new original-live forecast rows cover 985 distinct games. Later publication does not create additional results."
+    },
+    {
+      "id": "b084",
+      "label": "B084 · recovered intervening run",
+      "started_at_utc": "2026-11-13T21:45:21.287283Z",
+      "pipeline_finished_at_utc": "2026-11-13T23:07:41.149810Z",
+      "finalizer_finished_at_utc": "2026-11-13T23:08:00.619867Z",
+      "native_estimator_fit_returns": 28,
+      "unique_model_count": null,
+      "unique_model_count_reason": "Native method calls are not a deduplicated scientific model registry.",
+      "pipeline_exit_code": 2,
+      "finalizer_exit_code": 1,
+      "external_exit_code": null,
+      "peak_concurrent_native_fits": 1,
+      "explicit_calibrator_fit_returns": 0,
+      "new_forecast_rows_reported": 12316,
+      "unique_forecast_games": null,
+      "failure_class": "IMMUTABLE_PROVENANCE_RECEIPT_CONFLICT_AND_FINALIZER_RESOURCE_ADMISSION",
+      "outcome": "Pipeline partial; pending studies blocked; finalizer failed",
+      "explanation": "All 28 native method returns occurred in priority forecast issuance. Historical research reused 2,328 fits, the current-season lane reused 43, and legacy revival reused 48; these lane counts are not added into a unique-model total. The pending V9 study stage failed on an immutable provenance-receipt conflict. No sealed complete B084 science return is established by the recovered evidence."
+    },
+    {
+      "id": "b082-latest",
+      "label": "B082 · latest diagnostic rerun",
+      "started_at_utc": "2026-11-13T23:33:41.606169Z",
+      "finished_at_utc": "2026-11-14T00:08:46.573306Z",
+      "native_estimator_fit_returns": 0,
+      "unique_model_count": 0,
+      "external_exit_code": 3,
+      "elapsed_seconds": 2104.967486304,
+      "pipeline_elapsed_seconds": 539.898,
+      "free_disk_approx_gib": 519,
+      "failure_class": "AGGREGATE_RETURN_TRANSPORT_ADMISSION",
+      "outcome": "Stopped before substantive science; diagnostic return only",
+      "explanation": "The total-return capacity gate rejected admission after baseline measurement, despite approximately 519 GiB free disk. This is a transport architecture failure. The diagnostic return preserved evidence but did not establish complete portable model bodies or new model training."
+    }
+  ],
+  "replacement": {
+    "release": "B085",
+    "owner_execution_observed": false,
+    "status": "CONTINUATION_PREPARATION_OWNER_RESULT_PENDING",
+    "aggregate_transport_ceiling_permitted": false,
+    "maximum_physical_part_mib": 512,
+    "automatic_promotion_permitted": false
+  },
+  "publication_effects": {
+    "new_fits": 0,
+    "new_forecasts": 0,
+    "new_scoring": 0,
+    "data_refresh": false,
+    "automatic_promotions": 0
+  },
+  "source_attribution": "Recovered owner execution receipts, native-call summaries, stage summaries and the preserved earlier public snapshot; private source material remains outside this public report."
+}
