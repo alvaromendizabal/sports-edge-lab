@@ -1,0 +1,26 @@
+{
+  "status": "PASS",
+  "release": "N094",
+  "online": false,
+  "url": "http://127.0.0.1:45875/",
+  "checks": 117,
+  "viewports": [
+    {
+      "width": 1440,
+      "load_wall_ms": 1689,
+      "upcoming_games": 135
+    },
+    {
+      "width": 390,
+      "load_wall_ms": 1595,
+      "upcoming_games": 135
+    }
+  ],
+  "uncaught_page_errors": [],
+  "console_error_messages": [],
+  "source_html_sha256": "3b8591b97f715955287f69defecf513f49691b347c4620fd899d961420102ba1",
+  "public_payload_sha256": "1c633aa845afe75fa2bf876aef9ff98c869f2b9c30d7f9b6b5222ed2c808529b",
+  "scientific_fits_performed_by_browser": 0,
+  "verified_at_utc": "2026-11-14T05:30:59.251Z",
+  "workflow_job_id": 132347039781
+}
