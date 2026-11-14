@@ -47,10 +47,40 @@ science. B033 failed after committing 108 target fits; B036 completed with
 fits are historical evidence and receive no new-fit credit in this update. One reported parser attempt and two transfer attempts are separate
 from owner executions.
 
-**R12 repair and final validation are in progress.** A later authenticated
-owner return is still required to establish new fits, actual reuse, forecasts,
-worker utilization and S3 durability. This publication adds an operational
-failure audit, not a new scientific result.
+**R12 passed local release validation; owner execution is pending.** No actual
+R12 owner execution is recorded in this evidence. Local tests and packaged
+checks establish release readiness only and provide no production model-fit
+or forecast credit. A later authenticated owner return must establish actual
+fits, verified reuse, current forecasts, worker utilization and S3 durability.
+The latest actual owner execution remains the failed R11 attempt above.
+
+### R12 local validation evidence
+
+These are local release checks. Separate suites may overlap and are not summed.
+None supplies production fit, forecast, owner-execution or cloud-durability credit.
+
+| Local check | Observed result | Wall time |
+|---|---|---:|
+| Fresh startup prerequisites | 318/318 passed; zero failures, errors or skips | 48.2225 s |
+| Warm receipt | 0 cases executed; 318 prior validation cases reused for identical code/environment | 0.651828 s |
+| Native checkpoint bridge | 54/54 passed | 61.2418 s |
+| Physical return transport | 16/16 passed | 37.6982 s |
+| Original numerical and feature scopes | 19/19 matched | Source equality |
+| Independent review binding | 15/15 source pins matched; no unresolved findings | Review evidence |
+
+Real serialized archives of 536,870,911; 536,870,912; 536,870,913; and
+2,150,629,376 bytes passed integrity and reassembly checks using 1, 1, 2 and
+5 physical parts. The 512 MiB limit is per transferred part.
+
+The first local transport attempt stopped at a real free-disk gate on the
+temporary volume: 15 cases passed and one reported an error. The same executable
+then passed all 16 on a local volume with sufficient storage. This validation
+iteration is excluded from the 14 actual owner-run tally.
+
+Authentic B033/B036 archive validation retained 108 and 85 candidate records,
+respectively. It deserialized no models and received zero new or verified reused
+fit credit. Actual current runtime, input and artifact readback gates remain
+required during the next owner execution.
 
 ## Prior scientific work preserved
 
@@ -132,15 +162,16 @@ availability and independent promotion review remain required. The R11
 emergency archive verifies its declared subset; complete run evidence still
 requires recovery of the preserved local journal bodies.
 
-The new failed R11 execution is verified. R12 is a separate pending repair;
-no completed R12 owner execution, new scientific fit, forecast or promotion is
+The failed R11 execution is verified. R12 has passed local release checks but
+has zero actual owner executions in the evidence used here. No completed R12
+owner execution, new production scientific fit, forecast or promotion is
 claimed. Recovery checkpoint references are not model-fit counts.
 
 ## Publication scope
 
 The embedded scientific payload is preserved byte for byte from the recovered
 public V11 page. The added [operational status](v11_1_execution_status.json)
-contains only aggregate execution facts and pending-release policy. The earlier
+contains only aggregate execution facts and local release-readiness status. The earlier
 uncertainty supplement is reused unchanged; it is not counted as new work. Private
 recipes, weights, owner packages, cloud paths, raw feeds and future unissued
 candidate values are excluded. Older NCAA pages and other sports' evidence
