@@ -1,1 +1,34 @@
-{"schema":"nfl.n093.native-publication.v1","state":"PREPARED_NOT_PUBLISHED"}
+{
+  "schema": "nfl.n093.native-publication.v1",
+  "state": "DEPLOYED_BROWSER_VERIFICATION_PENDING",
+  "public_url": "https://sports-edge-lab-nfl.alv-mendizabal.chatgpt.site/circa/",
+  "native_site_version": 48,
+  "native_version_id": "appgprj_6aea53c491508191892bc27c1a92f69e~appgver_eeb5687397a881919c88f1faf36c3bea",
+  "native_deployment_id": "appgdep_6af7da019c348191be9ae9fbad76e486",
+  "native_deployment_succeeded_at_utc": "2026-11-14T03:48:25.792715+00:00",
+  "native_source_commit": "e20b9f5935cf76cd62f2414827f36998297eb9b0",
+  "canonical_github_commit": "5dbba0c8cd1d17b9f3c7971c7969ce093fa93e26",
+  "reviewed_head": "37b79485d7de12c129b49c18673c8472980b92f2",
+  "source_browser_checks": 83,
+  "public_payload_sha256": "8cd5ec7925d162a5d3ea962b481f0955fd9e4a42c9c4ee8f57168b209f290084",
+  "source_html_sha256": "c54417fc51569ef816eda51b9e082d965248f21b9757deb4e350a223fbfdc36a",
+  "access": "public",
+  "title": "Circa Million Picks & Performance Dashboard",
+  "live_smoke": {
+    "state": "PASS",
+    "owner_new_fits": 12,
+    "reused_jobs": 156,
+    "failed_jobs": 0,
+    "qualified_rows": 888,
+    "upcoming_games": 135,
+    "current_source_qualified_research_cards": 1,
+    "selected_distinct_games": 5,
+    "eligible_sides": 26,
+    "expected_contest_points": 3.1473,
+    "heldout_primary_models": 3,
+    "comparable_strict_refits": 12,
+    "production_accepted_distributions": 0,
+    "actual_entry_claim": false
+  },
+  "scientific_fits_performed_by_publication": 0
+}
