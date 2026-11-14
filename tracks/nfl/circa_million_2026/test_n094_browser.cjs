@@ -61,10 +61,11 @@ async function main() {
     check(await rows('pregame-exchange')===6&&await rows('exchange-horizons')===24,'settled contract objective tables');
     check(await rows('event-score-table')===57&&data.heldout_margin_events.evaluations===8436,'held-out margin event table');
     check(data.official_board.games.flatMap(g=>g.sides).filter(s=>Number.isFinite(s.expected_contest_points)).length===26,'official side probabilities');
-    check(data.total_study.current_scenario_cases===222&&data.total_study.settled_total_contract_model_pairs===222,'separate total-score evaluation');
+    check(data.total_study.current_scenario_cases===333&&data.total_study.exact_total_contract_model_pairs===42&&data.total_study.settled_total_contract_model_pairs===222,'separate total-score evaluation');
     check(data.total_study.scorecards.filter(r=>r.season===2026).every(r=>r.model_crps>r.reference_crps)&&await rows('total-scenario-scores')===9,'same-game total reference');
     check(data.earlier_original_issues.scored_rows===48&&data.earlier_original_issues.game_count===16&&data.earlier_original_issues.pending===39,'recovered original forecast cohort');
     check(await rows('original-scorecard')===3&&(await text('original-scorecard')).includes('0.1615'),'original issue losses');
+    check(data.frozen_inference.models===8&&data.frozen_inference.point_rows===888&&data.frozen_inference.optimizer_fits===0,'full frozen model completion');
     const expanded=data.current_model_card_review;
     check(expanded.cards.map(c=>c.family).join(',')==='histgb,extratrees,catboost'&&expanded.current_unique_probability_rows===333&&expanded.new_probability_projections===222,'three evidence-qualified margin models');
     check(expanded.cards.every(c=>c.picks.length===5&&new Set(c.picks.map(x=>x.game_id)).size===5&&c.alternatives.length===26),'distinct five and complete alternatives for every model');
