@@ -39,6 +39,10 @@ for(const word of banned) assert.ok(!raw.toString().toLowerCase().includes(word.
     assert.equal(d.cards.length,5);assert.equal(d.cards.reduce((n,c)=>n+c.sides.length,0),130);assert.equal(d.games.reduce((n,g)=>n+(g.strict||[]).length,0),888);checks+=3;
     assert.ok(d.previous.new===0&&d.previous.reused===205);
     assert.equal(d.matched.current_executable_rows,0);checks+=7;
+    assert.equal(d.historical_cards.length,84);
+    await page.selectOption('#histFamily','frozen_2023_week_open_ridge');await page.selectOption('#histYear','2026');assert.equal(await page.locator('#histRows tbody tr').count(),9);
+    assert.ok((await page.locator('#histScores').innerText()).includes('20.5 / 45'));
+    await page.selectOption('#histFamily','week_open_ridge');assert.equal(await page.locator('#histRows tbody tr').count(),7);checks+=4;
     const timings=[];
     for(let i=0;i<d.cards.length+d.previous_cards.length;i++){
       await page.selectOption('#families',String(i));await page.selectOption('#sideView','all');
