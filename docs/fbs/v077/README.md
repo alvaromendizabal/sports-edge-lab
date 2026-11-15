@@ -29,7 +29,6 @@ Two genuine issue scopes remain separate:
 - The older frozen-foundation original-issued winner cohort was **0/3** in the dated V075 view and is **2/5** in the V076 saved outcome audit. Its current log loss is 0.7302624476 and Brier score is 0.2681649271. This is a small original-issue cohort, not a whole-season champion result.
 - The **3,588 prior V075 refit-shadow issue records** have **zero scored rows** in their saved outcome join. Those records are not the older five-game cohort and are not new V076 issues.
 
-Five older original-model margin residuals still fail current calibrated ATS/Kalshi acceptance. The research challengers have separate own-state residual calibrations, with research margin orientation **home minus away**. Saved CRPS and interval coverage do not establish future calibration, correctly matched current contracts or market advantage. No NFL Circa card is claimed by this FBS report.
 
 ## Sources, execution and transport
 

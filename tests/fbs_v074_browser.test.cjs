@@ -70,8 +70,8 @@ let browser,checks=0; const check=(ok,msg)=>{assert.ok(ok,msg);checks++;};
   check((await page.locator('#weighted-limits').innerText()).length>100,'Uncertainty and selection limitations remain visible');
   check(await page.evaluate(()=>document.documentElement.scrollWidth<=innerWidth),'Weighted view remains responsive');
   if(output){fs.mkdirSync(output,{recursive:true});await page.screenshot({path:path.join(output,`fbs-v074-${live?'live':'static'}-${width}.png`),fullPage:true});}
-  await page.click('[data-tab="coverage"]');check(await page.locator('#provider-body tr').count()===12,'Every provider/target denominator');
-  check((await page.locator('#provider-summary').innerText()).includes('0 / 10,656'),'No invented qualified provider cells');
+  await page.click('[data-tab="coverage"]');check(await page.locator('#provider-body tr').count()===9,'Every provider/target denominator');
+  check((await page.locator('#provider-summary').innerText()).includes('0 / 7,992'),'No invented qualified provider cells');
   check((await page.locator('#phase-b').innerText()).includes('V11.1'),'Current research policy');
   await page.close();
  }

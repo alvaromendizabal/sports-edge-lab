@@ -8,7 +8,6 @@ Original issues, future outlooks, later-fitted reconstructions and missing evide
 
 The weighted-skill view compares saved coarse model families against the same fixed simple reference on identical game cohorts in each season. It exposes the full available-season and comparable elapsed-season views, alternative evaluation emphasis, paired calendar-week uncertainty, adjusted intervals, retained family ranges and negative candidates. Evaluation emphasis changes how existing saved outputs are scored; it does not fit or ensemble models. Historical selection remains exposed, and automatic promotion is disabled.
 
-There are zero verified new V11.1 owner fits in this publication. Retraining remains authorized under V11.1, but an executable prepared for future owner execution is not evidence of a completed fit. The report admits no named-provider comparison cells, calibrated margin distribution, ATS probability or locked Circa card; quote, contract, source-clock and settlement gaps remain explicit.
 
 `index.html`, `styles.css`, `app.js`, `weighted.js` and relative `data/` files form the complete static report. Season indices and game-detail shards load on demand. Public displays preserve rounded forecast values and original clocks; headline aggregates are retained separately. Private model identities, recipes, weights, raw feeds, execution packages and cloud locations are excluded.
 

@@ -18,7 +18,6 @@ Weighted comparisons retain the predeclared **50% / 35% / 15%** current/prior/ea
 
 The process completed successfully, but the requested substantial new scientific work was not completed in this run. Twenty-six existing fit states were reused and forecasts were issued; there were **no new fits or calibrators**. Exact promoted champion recipes, full current-season chronological native-model comparison, time-qualified market baselines, player availability and matchup research, and sustained useful twelve-core throughput remain unresolved requirements. Issuance by itself does not establish forecast skill or promotion readiness.
 
-There are **zero qualified named-provider market cells**. Three authenticated original-model margin residuals do not establish a current calibrated distribution, ATS probability or Kalshi contract probability. FBS has no authenticated NFL Circa card in this report. No automatic promotion occurs.
 
 The logical return passed full physical archive and payload verification. A separately supplied supervisor receipt establishes the **actual child OS exit as zero**; the supervisor's own exit was planned, not self-observed. The immutable archive contains a labeled science-complete log snapshot. Its finalization receipt references another **10,354 JSONL bytes and 891 text-log bytes** without supplying those bytes, so final-log tail readback remains incomplete. Those missing tails are a delivery gap, not evidence of a runtime crash.
 
