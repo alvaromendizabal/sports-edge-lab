@@ -2,26 +2,26 @@
   "schema": "fbs.v078.renderer-receipt.v1",
   "status": "PASS",
   "owner_version": "V078",
-  "source_as_of": "2026-11-15T05:10:30Z",
-  "input_manifest_sha256": "549855c5d880f509005ec3918a6bffb41dfd2c105a414d53984c3dead1a0311b",
+  "source_as_of": "2026-11-15T20:39:57Z",
+  "input_manifest_sha256": "7c2f36eee1565a241cef21c034611d5f360e12b0f5242467c357e51f6e88d3dc",
   "counts": {
     "failed_fits": 0,
-    "new_fits": 0,
-    "new_issue_games": 14,
-    "new_issue_records": 364,
-    "new_winner_calibrators": 3,
-    "newly_added_unique_forecast_games": 0,
-    "reused_base_estimators": 9,
-    "reused_issue_games": 70,
-    "reused_issue_records": 1820,
-    "reused_states": 218,
-    "total_current_issue_games": 84,
-    "total_current_issue_records": 2184
+    "new_fits": 26,
+    "new_issue_games": 86,
+    "new_issue_records": 2236,
+    "new_winner_calibrators": 8,
+    "newly_added_unique_forecast_games": 3,
+    "reused_base_estimators": 0,
+    "reused_issue_games": 0,
+    "reused_issue_records": 0,
+    "reused_states": 201,
+    "total_current_issue_games": 86,
+    "total_current_issue_records": 2236
   },
   "census": {
     "fixtures": 888,
-    "finals": 744,
-    "pending": 144
+    "finals": 751,
+    "pending": 137
   },
   "new_model_fits_by_renderer": 0,
   "new_issues_by_renderer": 0,
@@ -29,28 +29,28 @@
   "files": [
     {
       "path": "README.md",
-      "bytes": 1944,
-      "sha256": "b1705863cb36f5122aa5c7502005a8901bdeb729cbb919489ae6a0dee3e7898d"
+      "bytes": 1708,
+      "sha256": "9854cde8b15e64c7a5e83bdad594e8518ef7aa8e5d43dfde342b95305be9c7c8"
     },
     {
       "path": "app.js",
-      "bytes": 27223,
-      "sha256": "1e6c64e4e60481112050c280534b62a19d75d7a1fb7310a45cea46ee2f1f2673"
+      "bytes": 31691,
+      "sha256": "0adf89e4b6b9d352f81c725901bfc183076bd382ea3b65d63828b7279e8473f9"
     },
     {
       "path": "data/games.json.gz",
-      "bytes": 161748,
-      "sha256": "5c21dde9c8bfdd5cd1c553ec95cefea61e4e72f5546f782263d8a040d4c1f249"
+      "bytes": 166283,
+      "sha256": "49111c3af9036817228f3339c32ce13bb3102921069d0699b7c6c29e1b43af61"
     },
     {
       "path": "data/review.json",
-      "bytes": 92149,
-      "sha256": "e54e4f66930ab02f710de47969151663b50bcdc2480e5c3dc9e742de812db94d"
+      "bytes": 114615,
+      "sha256": "b0d43fcd603e4dbdde01241f317ae92112ef305175e21c31fd7031941542654d"
     },
     {
       "path": "index.html",
-      "bytes": 20561,
-      "sha256": "cfdf0d82e05ef73a08e10e9fc494c72e3b42712641d059b1e37dd5536085f8db"
+      "bytes": 21251,
+      "sha256": "d3fef4e9efd785db94c0f8c77f6adf26253eedc363b990bf519ea3a0a709e891"
     },
     {
       "path": "styles.css",

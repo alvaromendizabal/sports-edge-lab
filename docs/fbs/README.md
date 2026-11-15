@@ -1,3 +1,55 @@
+<!-- FBS_V078R5_OWNER_REVIEW_START -->
+## November 15, 2026, 12:39 p.m. Pacific: execution recovered and new forecasts committed
+
+[Open the current FBS models and market comparison](v078/index.html) · [Methods and limits](v078/README.md) · [Preserved 11:40 a.m. failed-run review](v078-20261115T194012Z/index.html) · [Earlier issued snapshot](v078-20261115T051030Z/index.html).
+
+The authenticated successor exited **0**, committed **2,236 genuine issue records on 86 pending games**, and reached verified durable closure. The owner reports **26 new base model fits**, **8 new winner calibrators**, **201 reused complete states** and **zero failed fits**. Three previously uncovered game identities gained committed coverage. Earlier issues remain preserved in their journal and dated reviews; zero earlier rows are reused as the active latest issue. The physical receipt, event and matrix audit verifies that the unchanged chronological recipe admitted 9,152 training rows instead of 9,150; no identical-input base fit was repeated. Successful execution does not establish full scientific acceptance, a promoted champion, or market superiority.
+
+The source clock is **2026-11-15T20:39:57Z**. The observed census remains **888 current-season fixtures: 751 finals and 137 pending**, including 50 unresolved kickoffs. The game table exposes each observed game and its gaps. The complete official fixture population is not yet proved. All 86 eligible future games have new research issues; 50 unresolved kickoffs and one passed cutoff remain explicit exclusions. No later issue is backdated into historical evaluation.
+
+| Objective on the same 47 earlier-issued games | Research family | Saved metric |
+|---|---|---:|
+| Winner probability quality | CatBoost | Log loss 0.600278; Brier 0.205577 |
+| Winner accuracy | TensorFlow | 36/47, 76.596% |
+| Margin absolute / squared error | TensorFlow | MAE 14.388223; RMSE 18.894542 |
+| Total absolute error | Extra Trees | MAE 12.098243 |
+| Total squared-error sensitivity | Ridge regression | RMSE 14.578538 |
+
+The ranking selector separates probability quality from classification accuracy, and total MAE from total RMSE. The **26 states scored on 47 identical games** and **26 newer states scored on one overlapping game** remain separate cohorts. Fresh issuance added no historical outcome evidence. These exploratory comparisons do not establish statistical superiority. Current selected research values use different exact model states from those scored on 47 games.
+
+The future comparison exposes **five objective roles and 430 admitted rounded values on 86 pending games**, alongside the preserved original foundation and the fixed Logistic/Ridge audit baseline. Each selected value retains its actual fit, preparation, issue, display-selection and T120 clocks, plus its exact-state qualification. The fixed audit baseline has 258 admitted values and is not relabelled as a champion. All 137 pending fixtures remain selectable, including the 51 with explicit gaps. Publication creates no forecasts or new inference and performs no promotion.
+
+**DraftKings, Kalshi, Polymarket Global and Polymarket US are visible next to every observed game. Their full-season qualified comparison coverage remains incomplete.** Provider and target filters, played/pending populations, missing reasons, quote/observation clocks and filtered CSV downloads are tested. The display preserves 194 rounded DraftKings references, while **zero named-provider comparison cells qualify for scoring**. An owned historical page supplied 63 events and 53 pre-cutoff game candidates across 159 target candidates. Identity, pricing and rights progress remains distinct from unresolved settlement, horizon and cohort gates. This bounded recovery made no provider requests or purchases and adds no qualified comparison cells.
+
+The secondary milestone materializes 274 team rows and 172 eligible rows across 86 pending games, with two eligible team rows lacking history. It has no completed feature ablation or measured improvement. The measured short scientific queue does not prove sustained selected-capacity utilization.
+
+The successor's complete logical return is **539,995,588 bytes in two ordered byte-split pieces**, each at most 512 MiB, with an immutable manifest and verification receipt. The pieces are not standalone ZIPs. The evidence was reviewed directly; no manual multi-gigabyte chat upload is required. Both intervening dated reviews and all older evidence remain preserved below.
+<!-- FBS_V078R5_OWNER_REVIEW_END -->
+
+<!-- FBS_V078R4_OWNER_REVIEW_START -->
+## November 15, 2026, 11:40 a.m. Pacific: updated scoring, failed new issuance
+
+[Open the current FBS models and market comparison](v078/index.html) · [Methods and limits](v078/README.md) · [Preserved 9:10 p.m. snapshot from November 14](v078-20261115T051030Z/index.html).
+
+The latest authenticated owner returned **exit 2** at forecast validation: `ONE_BASE_STATE_PER_FIT_REQUIRED`. It executed **zero new base fits**, reused **192 complete fit states and 35 additional base estimators**, and fitted **11 winner calibrators**. It committed **zero new forecast issues**. Independent scoring and research completed before the issuance failure. The complete logical return preserves this partial result. Publishing this review creates no fits, inference, provider requests or issues and does not promote a model.
+
+The **2026-11-15 19:40:12 UTC** source snapshot contains **888 observed 2026 fixtures: 751 finals and 137 pending**, comprising 87 timed pending games and 50 unresolved kickoffs. Genuine earlier research issues are graded on **47 identical games across 26 exact model/target states**. Another 26 states have one observed game that overlaps this cohort; the model selector keeps them separate. These are not 48 distinct prospective games. The 52-game original foundation, 301-game legacy monitor and 751-game later-fitted reconstruction retain their own evidence classes.
+
+| Objective on the identical 47-game cohort | Research family | Saved metric |
+|---|---|---:|
+| Winner probability quality | CatBoost | Log loss 0.600278; Brier 0.205577 |
+| Winner accuracy | TensorFlow | 36/47, 76.596% |
+| Margin absolute / squared error | TensorFlow | MAE 14.388223; RMSE 18.894542 |
+| Total absolute error | Extra Trees | MAE 12.098243 |
+| Total squared-error sensitivity | Ridge regression | RMSE 14.578538 |
+
+These are exploratory leaders on a small, dated cohort. The dashboard provides an explicit ranking objective and **five distinct future research roles**, alongside the preserved foundation and fixed audit baseline. Independent revalidation admits earlier committed issues on **83 of 137 pending games**, preserving 2,158 earlier research rows and exposing 415 rounded values across five roles. Latest prepared replacements remain unissued and are excluded. All 415 selected values use different states from those scored on 47 games; the earlier metrics do not validate the selected weights. Each role retains 54 explicit gaps: 50 unresolved kickoffs, three fixtures without an earlier committed selected state, and one passed cutoff. Selection is timestamped **2026-11-15T20:25:10.689144Z**, separate from original issue and source-observation clocks. Prior batches, physical atomic commits and model-state proofs remain bound to their authenticated predecessor because the newest failed issuance return omitted that journal.
+
+DraftKings, Kalshi, Polymarket Global and Polymarket US appear beside every observed game with provider/target filters, quote and observation clocks, archived-reference counts, missing reasons and CSV downloads. **Zero named-provider comparison cells are qualified.** The display retains 194 rounded DraftKings references. The 15,450,173-row bookmaker archive does not prove complete season or exchange coverage. A bounded read of one owned DraftKings history page identified 53 pre-cutoff game candidates and 159 target candidates omitted by the earlier requested-game normalizer. They remain private until contract, identity and display qualification is complete; this discovery adds no qualified public cells or paid requests.
+
+The secondary milestone describes 274 team rows and 172 eligible rows across 86 pending games, with two eligible team rows lacking history. It establishes no new fit or measured improvement. The preceding current page is preserved byte-for-byte at the dated link above. All older evidence remains below unchanged.
+<!-- FBS_V078R4_OWNER_REVIEW_END -->
+
 <!-- FBS_V078R3_OWNER_REVIEW_START -->
 ## November 14, 2026, 9:10 p.m. Pacific: verified reuse and updated forecasts
 
