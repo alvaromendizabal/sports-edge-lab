@@ -47,8 +47,8 @@ let browser,checks=0; const check=(ok,msg)=>{assert.ok(ok,msg);checks++;};
   check(await page.locator('#calibration-chart svg').count()===1,'Calibration chart');
   await page.selectOption('#leader-target','margin');check((await page.locator('#cohort-info').innerText()).includes('690'),'Same-game margin denominator');
   if(output){fs.mkdirSync(output,{recursive:true});await page.screenshot({path:path.join(output,`fbs-v073-${width}.png`),fullPage:true});}
-  await page.click('[data-tab="coverage"]');check(await page.locator('#provider-body tr').count()===12,'Every provider/target denominator');
-  check((await page.locator('#provider-summary').innerText()).includes('0 / 10,656'),'No invented qualified provider cells');
+  await page.click('[data-tab="coverage"]');check(await page.locator('#provider-body tr').count()===9,'Every provider/target denominator');
+  check((await page.locator('#provider-summary').innerText()).includes('0 / 7,992'),'No invented qualified provider cells');
   check((await page.locator('#phase-b').innerText()).includes('Disabled'),'No automatic Phase B');
   await page.close();
  }

@@ -1,3 +1,15 @@
+<!-- FBS_V078_OWNER_REVIEW_START -->
+## November 15, 2026 UTC: verified V077 work and recovered prospective scores
+
+[Open the V078 models, games and market review](v078/index.html) · [Methods and qualification limits](v078/README.md).
+
+The actual V077 owner recorded **35 new fitted models, 11 winner calibrators, 192 reused states and 2,210 genuine research issue rows across 85 games**. The source snapshot contains **728 observed 2026 finals and 160 pending fixtures**. The owner exited 2 at event-identity validation. A read-only authenticated journal repair now grades **29 identical games** across 26 model/target states and quarantines three changed event identities, preserving original issues.
+
+The dashboard separates those genuine issues from the 728-game reconstruction, 301-game saved legacy monitor and 34-game original frozen baseline. It presents every observed current fixture beside DraftKings, Kalshi and the two Polymarket products, with retained reference counts, explicit timing/identity gaps and zero qualified market baseline claims. The owner recovered 15,450,173 normalized historical rows; full current-season coverage remains incomplete. No automatic promotion or new owner execution is claimed by this publication.
+
+Earlier dated evidence remains below.
+<!-- FBS_V078_OWNER_REVIEW_END -->
+
 <!-- FBS_V077_OWNER_REVIEW_START -->
 ## November 14, 2026 UTC: V076 completed research, partial execution acceptance
 

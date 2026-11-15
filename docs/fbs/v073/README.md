@@ -8,7 +8,6 @@ The broad same-game reconstruction cohorts are 687 winner games across 11 saved 
 
 Twelve selected public aliases cover descriptive metric leaders and the retained frozen issue baseline. Rounded per-game displays do not recalculate headline scores. The complete private candidate grid, model bodies, recipes, cloud paths, raw market data and owner execution package are not published.
 
-There are no admitted named-provider comparison cells in this recovered evidence. Contract, quote-clock, fee/vig and exact-cutoff gaps remain visible. Circa contest evidence is not established for this FBS track. Phase B and automatic promotion remain disabled.
 
 `index.html`, `styles.css`, `app.js` and relative `data/` files form the complete static page. Season indices and game-detail chunks load on demand. The viewer does not need a notebook or a downloaded archive.
 

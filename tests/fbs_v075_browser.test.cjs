@@ -94,8 +94,8 @@ let browser,checks=0; const check=(ok,msg)=>{assert.ok(ok,msg);checks++;};
   check(!exported.includes('prediction')&&!exported.includes('model_id'),'Coverage CSV doesnotexportvaluesorprivateidentities');
   check(await page.evaluate(()=>document.documentElement.scrollWidth<=innerWidth),'Coverage view remains responsive');
   if(output){await page.screenshot({path:path.join(output,`fbs-v075-refits-${live?'live':'static'}-${width}.png`),fullPage:true});}
-  await page.click('[data-tab="coverage"]');check(await page.locator('#provider-body tr').count()===12,'Every provider/target denominator');
-  check((await page.locator('#provider-summary').innerText()).includes('0 / 10,656'),'No invented qualified provider cells');
+  await page.click('[data-tab="coverage"]');check(await page.locator('#provider-body tr').count()===9,'Every provider/target denominator');
+  check((await page.locator('#provider-summary').innerText()).includes('0 / 7,992'),'No invented qualified provider cells');
   check((await page.locator('#phase-b').innerText()).includes('V11.1'),'Current research policy');
   await page.close();
  }

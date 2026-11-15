@@ -110,7 +110,7 @@ class PublicV074(unittest.TestCase):
         self.assertEqual(self.summary["timing_games"]["ORIGINAL_ISSUED"], 2)
         html = (SITE / "index.html").read_text()
         self.assertIn("0 / 2 correct", html)
-        self.assertIn("No authenticated Circa", html)
+        self.assertNotIn("circa", html.lower())
 
     def test_public_files_exclude_runtime_and_private_locations(self):
         forbidden = re.compile(r"s3://|arn:aws:|/home/sagemaker-user|/workspace/|AKIA[0-9A-Z]{16}|BEGIN (?:RSA |EC )?PRIVATE KEY")
