@@ -40,11 +40,20 @@ for (const f of data.market.fixtures) {
 async function fetchPublic(ref) {
   return fetch(ref,{credentials:'omit',redirect:'manual',headers:{'Cache-Control':'no-cache','User-Agent':'SportsEdgeLab N111 release readback'},signal:AbortSignal.timeout(50000)});
 }
+async function checkViewport(page,view) {
+  const actual=await page.evaluate(()=>{
+    const pageWidth=document.documentElement.scrollWidth,viewport=innerWidth;
+    const spill=[...document.querySelectorAll('main,nav,section,.game-grid,#caseDetail,.venue-card,.choices,.sheet')].map(e=>({node:e.id||e.className||e.tagName,right:Math.round(e.getBoundingClientRect().right)})).filter(e=>e.right>viewport+2).slice(0,10);
+    return {pageWidth,viewport,spill};
+  });
+  assert(actual.pageWidth<=actual.viewport+2,view+' layout width: '+JSON.stringify(actual));
+}
 async function verifyRoutes() {
   const release=await fetchPublic(url), stable=await fetchPublic(canonical), pinned=await fetchPublic(canonical+'n110/'), m=await fetchPublic(canonical+'publication.json');
   for (const r of [release,stable,pinned,m]) assert.equal(r.status,200);
   verifyHostedHtml(Buffer.from(await release.arrayBuffer()),sha(native),'n111');
   verifyHostedHtml(Buffer.from(await pinned.arrayBuffer()),parentSha,'n110');
+  const sealed=await fetchPublic(new URL('sealed.html',url)); assert.equal(sealed.status,200); verifyHostedHtml(Buffer.from(await sealed.arrayBuffer()),'00914041368c147eafa1a0ab8d3ab9e4ba1872fd847d5de5a5e2ccaf08daf4c4','n111 sealed');
   const manifest=await m.json(), stableSha=verifyHostedHtml(Buffer.from(await stable.arrayBuffer()),manifest.assets['index.html'].sha256,'stable');
   assert.match(manifest.newest_review_path,/^n[0-9]+\/$/);
   assert.equal(manifest.assets['n111/index.html'].sha256,sha(native));
@@ -67,6 +76,7 @@ async function verifyRoutes() {
       const errors=[];page.on('pageerror',e=>errors.push(String(e)));
       await page.goto(url,{waitUntil:'domcontentloaded',timeout:60000});
       await page.waitForSelector('#leadersTable');
+      await checkViewport(page,'Leaders');
       assert.equal(await page.title(),'Circa Million Picks & Performance Dashboard');
       assert.equal(sha(await page.locator('#n111data').textContent()),sha(native.toString().match(pattern)[1]));
       await page.locator('#metric').selectOption('margin CRPS');
@@ -74,6 +84,7 @@ async function verifyRoutes() {
       await page.getByRole('button',{name:'Games & venues',exact:true}).click();
       await page.waitForSelector('#caseRows button');
       assert.equal(await page.locator('#caseRows button').count(),272);
+      await checkViewport(page,'Games with all three venues');
       await page.locator('#status').selectOption('Kickoff TBD');
       assert.equal(await page.locator('#caseRows button').count(),data.parent.games.filter(g=>g.status==='Kickoff TBD').length);
       await page.locator('#status').selectOption('');
@@ -87,12 +98,15 @@ async function verifyRoutes() {
       await page.getByText('Qualified pregame checkpoints',{exact:true}).click();
       const ck=Object.keys(game.providers.Kalshi.qualified_checkpoints||{});
       assert.equal(await page.locator('#caseDetail .venue-card details tbody tr').count(),ck.length);
+      await checkViewport(page,'Single venue and checkpoints');
       await page.getByRole('button',{name:'Market comparisons',exact:true}).click();
       await page.locator('#marketVenue').selectOption('DraftKings');
       await page.getByText('Source coverage and settlement',{exact:true}).click();
       assert(await page.locator('#mk table tbody tr').count());
+      await checkViewport(page,'Markets');
       await page.getByRole('button',{name:'Model features',exact:true}).click();
       await page.getByRole('heading',{name:'Inherited named model feature groups',exact:true}).waitFor({state:'visible'});
+      await checkViewport(page,'Features');
       await page.getByRole('button',{name:'Circa cards',exact:true}).click();
       await page.getByRole('heading',{name:'Week 10 · deadline passed',exact:true}).waitFor({state:'visible'});
       const size=await page.evaluate(()=>[document.documentElement.scrollWidth,innerWidth]);

@@ -21,9 +21,12 @@ jobs:
         run: |
           npm install --prefix "${RUNNER_TEMP}/n111-browser" --ignore-scripts --no-audit --no-fund playwright@1.62.1
           node "${RUNNER_TEMP}/n111-browser/node_modules/playwright/cli.js" install --with-deps chromium
-      - name: Verify repository and anonymous hosted data at two viewport widths
+      - name: Verify all repository views at desktop and mobile widths
         env:
           PLAYWRIGHT_MODULE_DIR: ${{ runner.temp }}/n111-browser/node_modules/playwright
         run: |
           node tracks/nfl/circa_million_2026/test_n111_browser.cjs
-          NFL_N111_ONLINE_URL=https://sports-edge-lab-nfl.alv-mendizabal.chatgpt.site/circa/n111/ node tracks/nfl/circa_million_2026/test_n111_browser.cjs
+      - name: Verify both published routes, retained source and private guards
+        env:
+          PLAYWRIGHT_MODULE_DIR: ${{ runner.temp }}/n111-browser/node_modules/playwright
+        run: NFL_N111_ONLINE_URL=https://sports-edge-lab-nfl.alv-mendizabal.chatgpt.site/circa/n111/ node tracks/nfl/circa_million_2026/test_n111_browser.cjs
