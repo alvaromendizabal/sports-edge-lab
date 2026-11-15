@@ -1,3 +1,4 @@
+const {verifyHostedHtml}=require('./n111_current/verified_hosted_html.cjs');
 const assert = require('node:assert/strict');
 const crypto = require('node:crypto');
 const fs = require('node:fs');
@@ -42,9 +43,9 @@ async function fetchPublic(ref) {
 async function verifyRoutes() {
   const release=await fetchPublic(url), stable=await fetchPublic(canonical), pinned=await fetchPublic(canonical+'n110/'), m=await fetchPublic(canonical+'publication.json');
   for (const r of [release,stable,pinned,m]) assert.equal(r.status,200);
-  assert.equal(sha(Buffer.from(await release.arrayBuffer())),sha(native));
-  assert.equal(sha(Buffer.from(await pinned.arrayBuffer())),parentSha);
-  const manifest=await m.json(), stableSha=sha(Buffer.from(await stable.arrayBuffer()));
+  verifyHostedHtml(Buffer.from(await release.arrayBuffer()),sha(native),'n111');
+  verifyHostedHtml(Buffer.from(await pinned.arrayBuffer()),parentSha,'n110');
+  const manifest=await m.json(), stableSha=verifyHostedHtml(Buffer.from(await stable.arrayBuffer()),manifest.assets['index.html'].sha256,'stable');
   assert.match(manifest.newest_review_path,/^n[0-9]+\/$/);
   assert.equal(manifest.assets['n111/index.html'].sha256,sha(native));
   assert.equal(manifest.assets['n110/index.html'].sha256,parentSha);
@@ -83,9 +84,12 @@ async function verifyRoutes() {
       assert.equal(await page.locator('#gameHeading').innerText(),game.away+' at '+game.home);
       await page.locator('#venue').selectOption('Kalshi');
       assert.equal(await page.locator('#caseDetail .venue-card').count(),1);
+      await page.getByText('Qualified pregame checkpoints',{exact:true}).click();
+      const ck=Object.keys(game.providers.Kalshi.qualified_checkpoints||{});
+      assert.equal(await page.locator('#caseDetail .venue-card details tbody tr').count(),ck.length);
       await page.getByRole('button',{name:'Market comparisons',exact:true}).click();
       await page.locator('#marketVenue').selectOption('DraftKings');
-      await page.getByText('All scheduled checkpoints and quote custody',{exact:true}).click();
+      await page.getByText('Source coverage and settlement',{exact:true}).click();
       assert(await page.locator('#mk table tbody tr').count());
       await page.getByRole('button',{name:'Model features',exact:true}).click();
       assert(await page.getByText('Inherited named model feature groups',{exact:true}).isVisible());

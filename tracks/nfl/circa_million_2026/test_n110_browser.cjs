@@ -1,3 +1,4 @@
+const {verifyHostedHtml}=require('./n111_current/verified_hosted_html.cjs');
 const assert=require('node:assert/strict'), fs=require('node:fs'), path=require('node:path'), crypto=require('node:crypto');
 const {pathToFileURL}=require('node:url');
 const {chromium}=require(process.env.PLAYWRIGHT_MODULE_DIR||'playwright');
@@ -24,11 +25,11 @@ async function verifyAnonymousRoute(){
  const responses=await Promise.all(urls.map(url=>fetch(url,{headers,redirect:'manual',credentials:'omit',signal:AbortSignal.timeout(30000)})));
  assert.deepEqual(responses.slice(0,3).map(r=>r.status),[200,200,200]);assert([403,404,410].includes(responses[3].status));
  const html=await responses[0].text(),nav=await responses[1].text(),manifest=await responses[2].json();
- assert.equal(sha(html),sha(native));assert.equal(sha(html.match(reData)[1]),sha(dataMatch[1]));
+ verifyHostedHtml(html,sha(native),'n110');assert.equal(sha(html.match(reData)[1]),sha(dataMatch[1]));
  assert.match(manifest.newest_review_path,/^n[0-9]+\/$/);
  const newest=await fetch(new URL(manifest.newest_review_path,stable),{headers,redirect:'manual',credentials:'omit',signal:AbortSignal.timeout(30000)});
- assert.equal(newest.status,200);assert.equal(sha(nav),sha(await newest.text()));
- assert.equal(sha(nav),manifest.assets['index.html'].sha256);assert.equal(sha(nav),manifest.assets[manifest.newest_review_path+'index.html'].sha256);
+ assert.equal(newest.status,200);const stableNative=verifyHostedHtml(nav,manifest.assets['index.html'].sha256,'stable');verifyHostedHtml(await newest.text(),stableNative,'latest');
+ assert.equal(stableNative,manifest.assets[manifest.newest_review_path+'index.html'].sha256);
  if(manifest.newest_review_path==='n110/')assert.equal(sha(nav.match(reData)[1]),sha(dataMatch[1]));
  assert.equal(manifest.assets['n110/index.html'].sha256,sha(native));
  console.log(JSON.stringify({verification:'anonymous_public_http',public:responses[0].status,stable:responses[1].status,private:responses[3].status,
