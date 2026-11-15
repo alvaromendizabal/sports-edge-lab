@@ -1,51 +1,30 @@
-name: NFL N121 full-season review
+name: N121 isolated physical transport verification
 on:
-  pull_request:
-    paths: ['tracks/nfl/circa_million_2026/n121_current/**', 'tracks/nfl/circa_million_2026/test_n121_browser.cjs', '.github/workflows/nfl-n121-review.yml']
   push:
-    branches: [main]
-    paths: ['tracks/nfl/circa_million_2026/n121_current/**', 'tracks/nfl/circa_million_2026/test_n121_browser.cjs', '.github/workflows/nfl-n121-review.yml']
+    branches: ['nfl/n121-physical-transport-proof']
 permissions:
   contents: read
-  pages: read
 concurrency:
-  group: nfl-n121-${{ github.event.pull_request.number || github.ref }}
-  cancel-in-progress: true
+  group: nfl-n121-isolated-physical-transport
+  cancel-in-progress: false
 jobs:
-  verification:
+  physical:
     runs-on: ubuntu-24.04
+    timeout-minutes: 12
     steps:
       - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1
         with:
           persist-credentials: false
-      - name: Verify portable runner and archive recovery
+      - name: Build the exact released runner
         run: |
           python -I tracks/nfl/circa_million_2026/n121_current/runner_source/build.py "$RUNNER_TEMP/evidence-recovery.pyz"
-          cd "$RUNNER_TEMP"
-          echo '72d84f2a5c8579f402417c5f6bc9f6791719f72eade0c20b8db7a5f63923cf5f  evidence-recovery.pyz' | sha256sum --check
-          python -I -u evidence-recovery.pyz --self-test
-      - name: Save verified portable runner
+          echo "72d84f2a5c8579f402417c5f6bc9f6791719f72eade0c20b8db7a5f63923cf5f  $RUNNER_TEMP/evidence-recovery.pyz" | sha256sum --check
+          python -I -u "$RUNNER_TEMP/evidence-recovery.pyz" --self-test
+      - name: Physical 512-MiB boundaries, multi-GiB, and rejection tests
+        run: python -I -u tracks/nfl/test_n121_physical_transport.py "$RUNNER_TEMP/evidence-recovery.pyz" "$RUNNER_TEMP/physical-transport-receipt.json"
+      - name: Save checked results
         uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02
         with:
-          name: nfl-n121-portable-recovery-runner
-          path: ${{ runner.temp }}/evidence-recovery.pyz
-      - name: Identify existing repository publication
-        env:
-          GH_TOKEN: ${{ github.token }}
-        run: |
-          gh api "repos/${GITHUB_REPOSITORY}" --jq '{has_pages: .has_pages}'
-          if gh api "repos/${GITHUB_REPOSITORY}/pages" --jq '{status: .status, html_url: .html_url, build_type: .build_type, source: .source}'; then true; else echo 'Existing Pages deployment could not be confirmed.'; fi
-
-      - name: Install pinned browser QA
-        run: |
-          npm install --no-save --no-package-lock --ignore-scripts playwright@1.62.1
-          npx playwright install --with-deps chromium
-      - name: Check dashboard, mobile layout, annual populations and disclosure boundaries
-        run: node tracks/nfl/circa_million_2026/test_n121_browser.cjs
-      - name: Save verified dashboard and public screenshots
-        uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02
-        with:
-          name: nfl-n121-dashboard-review
-          path: |
-            artifacts/
-            tracks/nfl/circa_million_2026/n121_current/index.html
+          name: nfl-n121-physical-transport-receipt
+          path: ${{ runner.temp }}/physical-transport-receipt.json
+          if-no-files-found: error
