@@ -207,10 +207,14 @@ class SeasonComparisonTests(unittest.TestCase):
         self.assertEqual(sum(len(g['forecasts']) for g in new_games),704)
         for g in new_games:
             self.assertEqual(len(g['forecasts']),22)
-            for f in g['forecasts'].values():
+            for role,f in g['forecasts'].items():
                 self.assertEqual(f['issue_horizon_class'],'EARLY_OUTLOOK')
                 self.assertEqual(f['source_asof_utc'],issue['feature_asof_utc'])
                 self.assertLess(f['issued_at_utc'],f['scheduled_start_at_issue_utc'])
+                if '_winner_' in role:
+                    self.assertEqual(f['home_win_probability'],f['prediction'])
+                    self.assertGreaterEqual(f['home_win_probability'],0)
+                    self.assertLessEqual(f['home_win_probability'],1)
         self.assertEqual(data['coverage']['unobserved_regular_slots'],24)
         self.assertFalse(data['market_coverage_complete'])
         self.assertEqual(data['owner_execution']['release'],'B087-R3')
