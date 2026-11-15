@@ -269,5 +269,8 @@ class V9SavedEvidenceTests(unittest.TestCase):
         self.assertEqual(result['observed_games'],1274)
         self.assertFalse(result['new_owner_execution_claim'])
 
+# Current season comparison contracts run in the established NBA check.
+from test_season_comparison import SeasonComparisonTests
+
 if __name__=='__main__':unittest.main()
 
