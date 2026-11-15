@@ -27,6 +27,7 @@ const check=(value,message)=>{assert.ok(value,message);checks++;};
     await page.goto(base,{waitUntil:'networkidle'});await page.waitForSelector('html[data-ready="true"]');
     check(await page.locator('#stat-fits').innerText()===data.counts.new_fits.toLocaleString('en-US'),'Actual executed fit tasks');
     check((await page.locator('#fit-reuse-note').innerText()).includes(data.fit_reuse_caveat),'Current fit and reuse accounting visible');
+    if(data.fit_input_change?.detail)check((await page.locator('#fit-reuse-note').innerText()).includes(data.fit_input_change.detail),'Exact changed-input reason and historical-possession limit are visible');
     check(await page.locator('#stat-reused').innerText()===data.counts.reused_states.toLocaleString('en-US'),'Prior states kept separate');
     check(await page.locator('#stat-fixtures').innerText()===String(data.census.fixtures),'Current observed census');
     check(await page.locator('#owner-status-note').isVisible(),'Latest execution status is explicit');
