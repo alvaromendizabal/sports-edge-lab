@@ -92,9 +92,9 @@ async function verifyRoutes() {
       await page.getByText('Source coverage and settlement',{exact:true}).click();
       assert(await page.locator('#mk table tbody tr').count());
       await page.getByRole('button',{name:'Model features',exact:true}).click();
-      assert(await page.getByText('Inherited named model feature groups',{exact:true}).isVisible());
+      await page.getByRole('heading',{name:'Inherited named model feature groups',exact:true}).waitFor({state:'visible'});
       await page.getByRole('button',{name:'Circa cards',exact:true}).click();
-      assert(await page.getByText('Week 10 · deadline passed',{exact:true}).isVisible());
+      await page.getByRole('heading',{name:'Week 10 · deadline passed',exact:true}).waitFor({state:'visible'});
       const size=await page.evaluate(()=>[document.documentElement.scrollWidth,innerWidth]);
       assert(size[0]<=size[1]+2);assert.deepEqual(errors,[]);
       console.log(JSON.stringify({source:live?'hosted':'repository',width,fixtures:272,sha256:sha(native),script_errors:errors.length}));
