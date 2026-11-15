@@ -10,6 +10,7 @@ import copy
 import gzip
 import hashlib
 import json
+import math
 from datetime import datetime
 from pathlib import Path
 
@@ -21,6 +22,77 @@ PUBLIC_OWNER_FIELDS = ('release', 'observed_at_utc', 'started_at_utc', 'finished
                        'return_verified', 'return_parts', 'active_run', 'limitations',
                        'verified_payloads', 'scientific_status', 'source_receipt_sha256',
                        'return_logical_bytes', 'return_representation', 'total_elapsed_seconds')
+
+def validate_cached_science(value):
+    """Reject private data and unsupported claims in the aggregate-only audit."""
+    forbidden_keys = {'event_id', 'game_id', 'memberships', 'predictions', 'prediction',
+        'recipe_id', 'cohort_id', 'feature_names', 'feature_values', 'raw_payload',
+        'raw_record', 'source_url', 'source_path', 'account_id', 'credentials',
+        'access_token', 'yes_bid', 'yes_ask', 'no_bid', 'no_ask', 'player_id', 'person_id'}
+    def public(node):
+        if isinstance(node, dict):
+            if forbidden_keys.intersection(node): raise ValueError('Private audit field')
+            for child in node.values(): public(child)
+        elif isinstance(node, list):
+            for child in node: public(child)
+        elif isinstance(node, str) and any(x in node.lower() for x in
+                ('s3://', 'arn:aws:', '/home/', '/workspace/', 'https://', 'http://', 'nba:espn:event:')):
+            raise ValueError('Private audit content')
+    public(value)
+    audit = value['paired_audit']
+    if audit['promotion_allowed'] is not False or audit['provider_baseline_comparison'] is not False:
+        raise ValueError('Unsupported audit qualification')
+    if any(audit['new_work'][k] != 0 for k in ('new_fits', 'new_forecasts', 'models_modified')):
+        raise ValueError('Audit cannot claim fits or forecasts')
+    aliases = {'HGB72', 'market_only9', 'ExtraTrees63'}
+    def cohort(row):
+        n = row['games']
+        if type(n) is not int or n <= 0 or set(row['metrics']) != aliases:
+            raise ValueError('Invalid paired cohort')
+        for metrics in row['metrics'].values():
+            if metrics['games'] != n: raise ValueError('Paired cohort size mismatch')
+            for metric in ('accuracy', 'brier', 'log_loss'):
+                number = metrics[metric]
+                if isinstance(number, bool) or not isinstance(number, (float, int)) or not math.isfinite(number) or number < 0:
+                    raise ValueError('Invalid paired metric')
+            if metrics['accuracy'] > 1: raise ValueError('Invalid paired accuracy')
+        expected_pairs = {f'{left}__minus__{right}' for left, right in
+            (('ExtraTrees63', 'HGB72'), ('ExtraTrees63', 'market_only9'), ('HGB72', 'market_only9'))}
+        if set(row['pairs']) != expected_pairs: raise ValueError('Incomplete paired differences')
+        for key, pair in row['pairs'].items():
+            if pair['games'] != n: raise ValueError('Paired cohort difference size mismatch')
+            left, right = key.split('__minus__')
+            for metric, paired_metric in [('brier','brier'), ('log_loss','log_loss'), ('accuracy','correctness')]:
+                expected = row['metrics'][left][metric] - row['metrics'][right][metric]
+                if not math.isclose(expected, pair['mean_left_minus_right'][paired_metric], rel_tol=0, abs_tol=1e-12):
+                    raise ValueError('Inconsistent paired difference')
+        return n
+    total = cohort(audit['overall'])
+    if total != audit['games'] or total + audit['missing_from_common'] != audit['completed_denominator_in_prior_snapshot']:
+        raise ValueError('Inconsistent paired cohort denominator')
+    if set(audit['week_views']) != {'UTC', 'America/Los_Angeles'}:
+        raise ValueError('Unsupported week boundary')
+    for view in audit['week_views'].values():
+        if view['bounds_are_confidence_intervals'] is not False:
+            raise ValueError('Sensitivity bounds are not confidence intervals')
+        weeks = view['weekly']
+        excluded = view['leave_one_week_out']
+        if set(weeks) != set(excluded) or len(weeks) != view['week_clusters']:
+            raise ValueError('Inconsistent weekly cohort partition')
+        if sum(cohort(row) for row in weeks.values()) != total:
+            raise ValueError('Incomplete weekly cohort partition')
+        for week, row in excluded.items():
+            if cohort(row) + weeks[week]['games'] != total:
+                raise ValueError('Inconsistent deleted-week cohort')
+    feature = value['secondary_features']
+    if feature['promotion_allowed'] is not False or feature['predictive_improvement_established'] is not False:
+        raise ValueError('Materialization does not establish predictive improvement')
+    if any(feature[k] != 0 for k in ('new_model_fits', 'new_calibration_fits', 'new_forecasts', 'new_provider_requests')):
+        raise ValueError('Materialization cannot claim fits, forecasts or source calls')
+    source = value['source_recovery']
+    if source['current_quote_refresh_verified'] is not False or source['current_market_rows_newly_admitted'] != 0:
+        raise ValueError('Connection check cannot qualify market quotes')
+    return value
 
 def read_json(path):
     raw = path.read_bytes()
@@ -181,6 +253,11 @@ def build(root=ROOT):
     if score_path.exists():
         result['current_science_scores'], score_hash = read_json(score_path)
         result['source_payload_sha256']['current_science_scores'] = score_hash
+    recovery_path = root / 'b088_cached_science.json'
+    if recovery_path.exists():
+        recovery, recovery_hash = read_json(recovery_path)
+        result['b088_cached_science'] = validate_cached_science(recovery)
+        result['source_payload_sha256']['b088_cached_science'] = recovery_hash
     encoded = json.dumps(result, sort_keys=True, separators=(',', ':'), ensure_ascii=False).encode()
     template = (root / 'season_comparison.template.html').read_text()
     packed = base64.b64encode(gzip.compress(encoded, mtime=0)).decode()
