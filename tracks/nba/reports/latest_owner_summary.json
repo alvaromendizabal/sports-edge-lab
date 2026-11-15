@@ -1,0 +1,23 @@
+{
+  "active_run": false,
+  "exit_code": 2,
+  "failed_model_count": null,
+  "finished_at_utc": "2026-11-15T02:37:30.198443Z",
+  "limitations": [
+    "Native estimator method returns are not a count of distinct model versions or promoted champions.",
+    "The owner completed substantial work but returned a resumable partial result with unresolved source and recovery gates.",
+    "The execution summary and scientific snapshot keep separate clocks."
+  ],
+  "new_estimator_method_returns": 804,
+  "new_forecast_rows": 13916,
+  "new_unique_model_count": null,
+  "observed_at_utc": "2026-11-15T02:37:30.198443Z",
+  "release": "B086",
+  "return_parts": 7,
+  "return_verified": true,
+  "reused_model_count": null,
+  "scientific_status": "PARTIAL_RESUMABLE_HISTORICAL_BODY_RECOVERY_REQUIRED",
+  "source_receipt_sha256": "534d5917b4e6f54418033214399f719aedc7e5b4c55203234cf6e9a120db7215",
+  "started_at_utc": "2026-11-15T00:54:16.300419Z",
+  "status": "PARTIAL_RESUMABLE_HISTORICAL_BODY_RECOVERY_REQUIRED"
+}

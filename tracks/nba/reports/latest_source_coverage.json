@@ -1,0 +1,153 @@
+{
+  "cautions": [
+    "Observation rows and market counts are not distinct NBA game counts.",
+    "The final refresh pass is separate from the whole run.",
+    "The source audit cannot establish a full season of source-matched model comparisons.",
+    "An observation clock is not a provider quote timestamp.",
+    "Retained historical observations are not silently discarded when the current pass is deferred."
+  ],
+  "coverage_complete": false,
+  "execution_release": "B086",
+  "observed_at_utc": "2026-11-15T01:34:44.535866+00:00",
+  "rows": [
+    {
+      "contract_exclusions": {},
+      "current_pass_coverage_state": "SOURCE_STATUS_EXPLICIT",
+      "current_pass_observation_rows": 0,
+      "current_pass_statuses": [
+        {
+          "observations": 0,
+          "paid_calls": 0,
+          "status": "DEFERRED_NO_VERIFIED_ZERO_COST_CURRENT_FEED_ENTITLEMENT"
+        }
+      ],
+      "distinct_markets": 0,
+      "exact_game_bound_observations": 0,
+      "full_provider_coverage_claim": false,
+      "last_actual_observation_utc": null,
+      "provider": "DRAFTKINGS",
+      "retained_observations": 0,
+      "strict_contracts": 0,
+      "unbound_observations": 0
+    },
+    {
+      "contract_exclusions": {
+        "EXPLICIT_SPREAD_OR_TOTAL_TYPE_REQUIRED": 20918
+      },
+      "current_pass_coverage_state": "DEFERRED_PRESERVED_HISTORY",
+      "current_pass_observation_rows": 0,
+      "current_pass_statuses": [
+        {
+          "reason": "OPTIONAL_SOURCE_DEFERRED_IN_PRE_ISSUE_REFRESH",
+          "status": "DEFERRED"
+        },
+        {
+          "full_provider_coverage_claim": false,
+          "observations": 0,
+          "status": "NO_ROWS_OBSERVED"
+        },
+        {
+          "reason": "OPTIONAL_SOURCE_DEFERRED_IN_PRE_ISSUE_REFRESH",
+          "status": "DEFERRED"
+        },
+        {
+          "full_provider_coverage_claim": false,
+          "observations": 0,
+          "status": "NO_ROWS_OBSERVED"
+        },
+        {
+          "reason": "OPTIONAL_SOURCE_DEFERRED_IN_PRE_ISSUE_REFRESH",
+          "status": "DEFERRED"
+        },
+        {
+          "full_provider_coverage_claim": false,
+          "observations": 0,
+          "status": "NO_ROWS_OBSERVED"
+        }
+      ],
+      "distinct_markets": 3224,
+      "exact_game_bound_observations": 20918,
+      "full_provider_coverage_claim": false,
+      "last_actual_observation_utc": "2026-11-15T00:56:36.506873+00:00",
+      "provider": "KALSHI",
+      "retained_observations": 20918,
+      "strict_contracts": 0,
+      "unbound_observations": 0
+    },
+    {
+      "contract_exclusions": {
+        "EXACT_ORDERED_GAME_BINDING_REQUIRED": 7308
+      },
+      "current_pass_coverage_state": "DEFERRED_PRESERVED_HISTORY",
+      "current_pass_observation_rows": 0,
+      "current_pass_statuses": [
+        {
+          "reason": "OPTIONAL_SOURCE_DEFERRED_IN_PRE_ISSUE_REFRESH",
+          "status": "DEFERRED"
+        },
+        {
+          "full_provider_coverage_claim": false,
+          "observations": 0,
+          "status": "NO_ROWS_OBSERVED"
+        }
+      ],
+      "distinct_markets": 609,
+      "exact_game_bound_observations": 0,
+      "full_provider_coverage_claim": false,
+      "last_actual_observation_utc": "2026-11-15T00:56:38.500007+00:00",
+      "provider": "POLYMARKET_INTERNATIONAL",
+      "retained_observations": 7308,
+      "strict_contracts": 0,
+      "unbound_observations": 7308
+    },
+    {
+      "contract_exclusions": {
+        "EXACT_ORDERED_GAME_BINDING_REQUIRED": 17978,
+        "EXPLICIT_SPREAD_OR_TOTAL_TYPE_REQUIRED": 560
+      },
+      "current_pass_coverage_state": "DEFERRED_PRESERVED_HISTORY",
+      "current_pass_observation_rows": 0,
+      "current_pass_statuses": [
+        {
+          "reason": "OPTIONAL_SOURCE_DEFERRED_IN_PRE_ISSUE_REFRESH",
+          "status": "DEFERRED"
+        },
+        {
+          "full_provider_coverage_claim": false,
+          "observations": 0,
+          "status": "NO_ROWS_OBSERVED"
+        }
+      ],
+      "distinct_markets": 1459,
+      "exact_game_bound_observations": 560,
+      "full_provider_coverage_claim": false,
+      "last_actual_observation_utc": "2026-11-15T00:56:37.848538+00:00",
+      "provider": "POLYMARKET_US",
+      "retained_observations": 18538,
+      "strict_contracts": 0,
+      "unbound_observations": 17978
+    }
+  ],
+  "schema": "sports-edge-lab.nba.source-coverage.public.v1",
+  "source_report_sha256": "3db6f01235a8701dac8a81f04c9fb1ad70f2a22269f9e9ff07c699a3555ba0b4",
+  "strict_contract_count": 0,
+  "strict_fair_market_observations": 0,
+  "winner_reference_coverage": {
+    "by_provider": {
+      "POLYMARKET_US": 533
+    },
+    "distinct_games": 68,
+    "exclusion_counts": {
+      "ACTUAL_OBSERVATION_MUST_PRECEDE_TIP": 12678,
+      "EXACT_ORDERED_GAME_BINDING_REQUIRED": 25286,
+      "EXACT_PROVIDER_AND_OFFICIAL_START_REQUIRED": 4,
+      "EXPLICIT_USD_QUOTES_REQUIRED": 10,
+      "EXPLICIT_WINNER_CONTRACT_ADAPTER_UNAVAILABLE": 7237,
+      "WINNER_SERIES_OBSERVED_EXPLICIT_OVERTIME_AND_COMPLEMENT_CONTRACT_PENDING": 1016
+    },
+    "new_comparative_model_scores": 0,
+    "new_fair_probabilities": 0,
+    "observations_checked": 46764,
+    "winner_reference_rows": 533
+  }
+}

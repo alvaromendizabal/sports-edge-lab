@@ -139,8 +139,9 @@ class B076OwnerContinuationTests(unittest.TestCase):
 
     def test_public_evidence_does_not_expose_private_recipes_or_source_arrays(self):
         body=(ROOT/'b077_owner_evidence.json').read_text()
-        for forbidden in ('recipe_id','/home/','s3://','560403859723','api_key','apiKey','PRIVATE KEY'):
+        for forbidden in ('recipe_id','/home/','s3://','api_key','apiKey','PRIVATE KEY'):
             self.assertNotIn(forbidden,body)
+        self.assertNotRegex(body,r'"[0-9]{12}"')
         self.assertEqual(len(self.audit['historical_champions']),44)
         self.assertFalse(self.audit['public_snapshot']['new_fitting_inference_acquisition_or_metric_rescoring_in_publication'])
 
@@ -206,8 +207,9 @@ class B077RecoveredContinuationTests(unittest.TestCase):
                 self.assertEqual(row['maximum_matched_games_in_one_selected_view'],0)
             self.assertFalse(row['whole_season_provider_performance_available'])
         body=json.dumps(self.evidence)
-        for token in ('recipe_id','/home/','s3://','560403859723','apiKey','api_key','feature_names','PRIVATE KEY'):
+        for token in ('recipe_id','/home/','s3://','apiKey','api_key','feature_names','PRIVATE KEY'):
             self.assertNotIn(token,body)
+        self.assertNotRegex(body,r'"[0-9]{12}"')
 
     def test_display_is_deterministic_from_saved_public_evidence(self):
         spec=importlib.util.spec_from_file_location('nba_b077_display',ROOT/'build_b077_review.py')
@@ -236,7 +238,8 @@ class B077HistoricalPeakTests(unittest.TestCase):
             self.assertEqual(row['families'],sorted(set(row['families'])))
         self.assertFalse(self.peaks['new_metric_scoring']);self.assertFalse(self.peaks['selection_or_promotion_allowed'])
         text=json.dumps(self.peaks)
-        for forbidden in ('recipe_id','s3://','/home/','feature_names','560403859723'):self.assertNotIn(forbidden,text)
+        for forbidden in ('recipe_id','s3://','/home/','feature_names'):self.assertNotIn(forbidden,text)
+        self.assertNotRegex(text,r'"[0-9]{12}"')
 
     def test_nomination_and_production_requirements_are_not_conflated(self):
         gates=self.peaks['promotion_gates'];history=gates['historical_nomination'];production=gates['registered_production']
@@ -268,6 +271,9 @@ class V9SavedEvidenceTests(unittest.TestCase):
         self.assertEqual(result['status'],'PASS')
         self.assertEqual(result['observed_games'],1274)
         self.assertFalse(result['new_owner_execution_claim'])
+
+# Current season comparison contracts run in the established NBA check.
+from test_season_comparison import SeasonComparisonTests
 
 if __name__=='__main__':unittest.main()
 

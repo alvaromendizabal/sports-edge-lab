@@ -306,6 +306,7 @@ function expectedRow(row, data) {
       v9_saved_coverage_acceptance_evidence: v9Evidence,
       current_saved_model_evidence: modelEvidence,
       current_saved_cohort_leaders: cohortEvidence,
+      season_comparison: seasonComparisonEvidence,
       compact_all_missing_sentinels_verified: Object.values(data.game_coverage).filter(value => value.current_role_ids_missing === "ALL_APPLICABLE_ROLES").length,
       expected_metric_rows: reference.rows.length,
       expected_browser_pages: combinations.reduce((sum, value) => sum + value.expected_pages, 0),
@@ -648,6 +649,7 @@ function expectedRow(row, data) {
     assert.equal(sha256(fs.readFileSync(jsonPath)), sha256(jsonBytes));
     assert.equal(sha256(fs.readFileSync(htmlPath)), sha256(htmlBytes));
     checks.push("no_javascript_page_or_console_errors", "zero_remote_page_requests", "saved_artifact_bytes_unchanged");
+    const seasonComparisonEvidence = await require("./season_comparison.browser.cjs")(browser, output);
     const result = { status: "PASS", scope: "Hosted browser verification of every public schedule/metric row against saved JSON; no fitting, rescoring or live refresh",
       browser_version: await browser.version(), started_at_utc: started, finished_at_utc: new Date().toISOString(),
       elapsed_seconds: Number(process.hrtime.bigint() - startedClock) / 1e9,
@@ -658,6 +660,7 @@ function expectedRow(row, data) {
       v9_saved_coverage_acceptance_evidence: v9Evidence,
       current_saved_model_evidence: modelEvidence,
       current_saved_cohort_leaders: cohortEvidence,
+      season_comparison: seasonComparisonEvidence,
       saved_role_views_checked: visitedViews.size, distinct_issued_bodies_checked: seenIssues.size,
       exhaustive_displayed_rows_checked: exhaustiveRows, exhaustive_pages_checked: exhaustivePages,
       evidence_as_of_utc: data.evidence_as_of_utc, coverage: data.coverage, checks, rendered_cases: snapshots,
