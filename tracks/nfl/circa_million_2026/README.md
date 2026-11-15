@@ -1,5 +1,9 @@
 # 2026 NFL models vs. Circa Million VIII
 
+[N117 live dashboard](https://sports-edge-lab-nfl.alv-mendizabal.chatgpt.site/circa/n117/) · [N117 public page source](n117_current/index.html)
+
+N117 scores signed-margin and integer-total forecasts in historical replays. Upcoming forecasts, market observations and Circa research cards retain their N116 dates. The dashboard identifies the DraftKings, Kalshi and Polymarket contracts with identical settlement terms and shows the coverage of every fixture.
+
 [N116 live dashboard](https://sports-edge-lab-nfl.alv-mendizabal.chatgpt.site/circa/n116/) · [N116 public page source](n116_current/index.html)
 
 N116 compares the new margin and totals studies with historical venue forecasts. Each game shows original issue times, retained forecasts and qualifying matching payouts across DraftKings, Kalshi and Polymarket.

@@ -1,0 +1,32 @@
+name: NFL N117 scientific return review
+on:
+  pull_request:
+    paths: ['tracks/nfl/circa_million_2026/n117_current/**', 'tracks/nfl/circa_million_2026/test_n117_browser.cjs', '.github/workflows/nfl-n117-review.yml']
+  push:
+    branches: [main]
+    paths: ['tracks/nfl/circa_million_2026/n117_current/**', 'tracks/nfl/circa_million_2026/test_n117_browser.cjs', '.github/workflows/nfl-n117-review.yml']
+permissions:
+  contents: read
+concurrency:
+  group: nfl-n117-${{ github.event.pull_request.number || github.ref }}
+  cancel-in-progress: true
+jobs:
+  browser:
+    runs-on: ubuntu-24.04
+    steps:
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1
+        with:
+          persist-credentials: false
+      - name: Install verification browser
+        run: |
+          npm install --prefix "${RUNNER_TEMP}/n117-browser" --ignore-scripts --no-audit --no-fund playwright@1.62.1
+          node "${RUNNER_TEMP}/n117-browser/node_modules/playwright/cli.js" install --with-deps chromium
+      - name: Verify all repository views at desktop and mobile widths
+        env:
+          PLAYWRIGHT_MODULE_DIR: ${{ runner.temp }}/n117-browser/node_modules/playwright
+        run: |
+          node tracks/nfl/circa_million_2026/test_n117_browser.cjs
+      - name: Verify both published routes, retained source and private guards
+        env:
+          PLAYWRIGHT_MODULE_DIR: ${{ runner.temp }}/n117-browser/node_modules/playwright
+        run: NFL_N117_ONLINE_URL=https://sports-edge-lab-nfl.alv-mendizabal.chatgpt.site/circa/n117/ node tracks/nfl/circa_million_2026/test_n117_browser.cjs
