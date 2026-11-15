@@ -96,8 +96,8 @@
       const body=bytes[0]===31&&bytes[1]===139?await new Response(new Blob([bytes]).stream().pipeThrough(new DecompressionStream('gzip'))).text():new TextDecoder().decode(bytes);
       return JSON.parse(body);
     }));data=responses[0];games=responses[1].games;
-    $('stat-fits').textContent=n(data.counts.new_fits);$('stat-reused').textContent=n(data.counts.reused_states);$('stat-fixtures').textContent=n(data.census.fixtures);$('stat-issues').textContent=n(data.counts.new_issue_records);
-    facts('owner-facts',[['New fitted models',n(data.counts.new_fits)],['New winner calibrators',n(data.counts.new_winner_calibrators)],['Games with new issues',n(data.counts.new_issue_games)],['Failed model fits',n(data.counts.failed_fits)],['Promotion','None']]);
+    $('stat-fits').textContent=n(data.counts.new_fits);if(data.fit_reuse_caveat){$('fit-reuse-note').hidden=false;$('fit-reuse-detail').textContent=data.fit_reuse_caveat;}$('stat-reused').textContent=n(data.counts.reused_states);$('stat-fixtures').textContent=n(data.census.fixtures);$('stat-issues').textContent=n(data.counts.new_issue_records);
+    facts('owner-facts',[['Fit tasks executed',n(data.counts.new_fits)],['New winner calibrators',n(data.counts.new_winner_calibrators)],['Games with new issues',n(data.counts.new_issue_games)],['Failed model fits',n(data.counts.failed_fits)],['Promotion','None']]);
     facts('execution-facts',data.execution_facts);$('finalization-note').textContent=data.execution_note||'';$('normalized-rows').textContent=n(data.market.normalized_rows);$('market-recovery-detail').textContent=data.market.detail;$('prospective-repair').textContent=data.prospective_repair;$('cpu-detail').textContent=data.cpu_detail;$('feature-progress').textContent=data.feature_progress;
     $('archive-hash').textContent='Logical ZIP SHA-256: '+data.return.logical_archive_sha256;$('manifest-hash').textContent='Manifest SHA-256: '+data.return.manifest_sha256;
     $('model-cohort').innerHTML=data.model_cohorts.map(c=>`<option value="${esc(c.id)}">${esc(c.label)}</option>`).join('');

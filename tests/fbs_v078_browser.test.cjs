@@ -25,7 +25,8 @@ const check=(value,message)=>{assert.ok(value,message);checks++;};
     page.on('pageerror',e=>errors.push(e.message));page.on('requestfailed',r=>failed.push(r.url()));
     page.on('response',r=>{if(r.status()>=400)httpErrors.push({url:r.url(),status:r.status()});});
     await page.goto(base,{waitUntil:'networkidle'});await page.waitForSelector('html[data-ready="true"]');
-    check(await page.locator('#stat-fits').innerText()==='35','Actual new model fits');
+    check(await page.locator('#stat-fits').innerText()==='35','Actual executed fit tasks');
+    check((await page.locator('#fit-reuse-note').innerText()).includes('unchanged training rows'),'Duplicate base-fit qualification visible');
     check(await page.locator('#stat-reused').innerText()==='192','Prior states kept separate');
     check(await page.locator('#stat-fixtures').innerText()==='888','Current observed census');
     check(await page.locator('#stat-issues').innerText()==='2,184','New genuine research issues');
@@ -123,7 +124,7 @@ const check=(value,message)=>{assert.ok(value,message);checks++;};
     check((await page.locator('#finalization-note').innerText()).includes('closure-only recovery'),'Finalization failure and recovery remain visible');
     check((await page.locator('#panel-execution').innerText()).includes('7 parts'),'Multipart return explicit');
     check((await page.locator('#panel-execution').innerText()).includes('Uploading the multi-gigabyte return in chat is unnecessary'),'No manual return-upload requirement');
-    check(await page.locator('#gate-body tr').count()===6,'All acceptance statuses shown');
+    check(await page.locator('#gate-body tr').count()===data.gates.length,'All acceptance statuses shown');
     await page.locator('[data-tab="execution"]').focus();await page.keyboard.press('Home');
     check(await page.locator('[data-tab="overview"]').getAttribute('aria-selected')==='true','Keyboard tab navigation');
     check(!/circa/i.test(await page.locator('body').innerText()),'Current presentation has no out-of-sport content');
@@ -131,7 +132,7 @@ const check=(value,message)=>{assert.ok(value,message);checks++;};
   }
   check(errors.length===0,'No JavaScript errors');check(failed.length===0,'No failed assets');check(httpErrors.length===0,'No HTTP failures');
   const receipt={status:'PASS',checks,viewports:[1440,390],live_url:live||null,source_as_of:data.source_as_of,
-    owner_version:'V078',report_version:'V078',new_fits_by_publication:0,owner_new_model_fits:35,owner_new_issues:2184,
+    owner_version:'V078',report_version:'V078',new_fits_by_publication:0,owner_executed_fit_tasks:35,owner_new_issues:2184,
     publication_is_owner_execution:false,errors,failed,httpErrors};
   if(out)fs.writeFileSync(path.join(out,`FBS_V078_${live?'LIVE':'STATIC'}_BROWSER_RECEIPT.json`),JSON.stringify(receipt,null,2));
   console.log(JSON.stringify(receipt));

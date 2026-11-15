@@ -27,6 +27,8 @@ class PublicV078(unittest.TestCase):
         self.assertEqual(d['publication_new_fits'], 0)
         self.assertEqual(d['publication_new_issues'], 0)
         self.assertFalse(d['promotion'])
+        self.assertEqual(d['fit_accounting_semantics'], 'EXECUTED_TASKS_NOT_DISTINCT_NEW_INPUT_FITS')
+        self.assertIn('unchanged training rows and numeric values', d['fit_reuse_caveat'])
 
     def test_every_observed_game_and_missing_state_remain(self):
         self.assertEqual(len(self.games), 2742)
