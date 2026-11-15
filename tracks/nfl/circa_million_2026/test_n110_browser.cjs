@@ -2,7 +2,10 @@ const assert=require('node:assert/strict'), fs=require('node:fs'), path=require(
 const {pathToFileURL}=require('node:url');
 const {chromium}=require(process.env.PLAYWRIGHT_MODULE_DIR||'playwright');
 const pagePath=process.env.NFL_N110_LOCAL_PATH||path.join(__dirname,'n110_current','index.html');
-const native=fs.readFileSync(pagePath,'utf8');
+const repoView=fs.readFileSync(pagePath,'utf8');
+const native=fs.readFileSync(pagePath+'.source','utf8');
+const absoluteNavigation=native.replaceAll('href="/circa/','href="https://sports-edge-lab-nfl.alv-mendizabal.chatgpt.site/circa/');
+assert.equal(repoView,absoluteNavigation,'Only the deployed host root is expanded for repository links');
 const reData=/<script type="application\/json" id="n110data">([\s\S]*?)<\/script>/;
 const sha=b=>crypto.createHash('sha256').update(b).digest('hex');
 const dataMatch=native.match(reData);
