@@ -10,3 +10,12 @@
 - [Full historical study summaries for 21 recipes](N121_Original_Study_Season_Scores.csv). This later archival recovery contains all 63 native seasonal rows. For the N025 paper models, the full 2024 and 2025 totals and margins have 285 games per year. Winner scoring has 285 and 284 decisive fixtures. Earlier 2026 archive rows have 120 finals and 119 decisive games. Historical source-clock and study-population labels remain attached.
 
 N121 uses 285 validation games in 2024, 285 in 2025 and 145 completed games in the 2026 test. The 2026 season also has three games in progress, 100 scheduled future kickoffs and 24 games awaiting a kickoff assignment at the recorded cutoff. The dashboard uses 411 matched venue panels, including 210 panels comparing all three N121 families in the 2026 test. N121 forecasts for future fixtures were computed on the tool host and remained unissued at this freeze.
+
+## Portable evidence recovery
+
+[Download the verified release runner](https://raw.githubusercontent.com/alvaromendizabal/sports-edge-lab/685e55419d426e8c252cd6706916e3216b82ad21/tracks/nfl/circa_million_2026/n121_current/evidence-recovery.pyz) or build the same bytes from [the Python source](runner_source/). The release SHA-256 is `72d84f2a5c8579f402417c5f6bc9f6791719f72eade0c20b8db7a5f63923cf5f`. The release workflow rebuilds the archive, runs the offline self-test and publishes the verified runner as a downloadable Actions artifact.
+
+```sh
+python -I runner_source/build.py evidence-recovery.pyz
+python -I -u evidence-recovery.pyz --self-test
+```
