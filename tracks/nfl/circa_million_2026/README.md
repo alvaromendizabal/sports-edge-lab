@@ -1,5 +1,9 @@
 # 2026 NFL models vs. Circa Million VIII
 
+[N115 live dashboard](https://sports-edge-lab-nfl.alv-mendizabal.chatgpt.site/circa/n115/) · [N115 public page source](n115_current/index.html)
+
+The NFL review compares signed key margins and totals on matching games. The market view includes identical-payoff venue scores and the probability of an away win by one through six points. Each future total carries its model and issue time.
+
 [N114 live dashboard](https://sports-edge-lab-nfl.alv-mendizabal.chatgpt.site/circa/n114/) · [N114 public page source](n114_current/index.html)
 
 The current NFL review includes separately issued margin and total forecasts, three-venue game comparisons and evidence timestamps for recent and historical prices.
