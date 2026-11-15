@@ -3,7 +3,7 @@
   "status": "PASS",
   "owner_version": "V078",
   "source_as_of": "2026-11-15T03:35:19Z",
-  "input_manifest_sha256": "fa11f28f1d4b5311b8047d94650a15f926fe3d0bf9d41b58aec73c724fe1e689",
+  "input_manifest_sha256": "5b7359c0a834b0443fbeec9dee0ef5acb5e54d4a8b5cd1d1b2a6ba12cfded0ce",
   "counts": {
     "failed_fits": 0,
     "new_fits": 35,
@@ -38,8 +38,8 @@
     },
     {
       "path": "data/review.json",
-      "bytes": 85796,
-      "sha256": "e4a1a5ca68590bb26d2eb263294517d65583855fb7e47d7606aac169ac73e724"
+      "bytes": 86168,
+      "sha256": "e9e8331924320299e54cb1177219a25a6fac01a14555df8e71b937954d6fd64c"
     },
     {
       "path": "index.html",

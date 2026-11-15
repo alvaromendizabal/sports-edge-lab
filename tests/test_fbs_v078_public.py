@@ -28,7 +28,10 @@ class PublicV078(unittest.TestCase):
         self.assertEqual(d['publication_new_issues'], 0)
         self.assertFalse(d['promotion'])
         self.assertEqual(d['fit_accounting_semantics'], 'EXECUTED_TASKS_NOT_DISTINCT_NEW_INPUT_FITS')
-        self.assertIn('unchanged training rows and numeric values', d['fit_reuse_caveat'])
+        self.assertIn('26 avoidable strict base refits', d['fit_reuse_caveat'])
+        self.assertEqual(d['fit_necessity_audit']['avoidable_repeated_strict_base_fits'], 26)
+        self.assertEqual(d['fit_necessity_audit']['changed_training_input_challenger_fits'], 9)
+        self.assertEqual(d['fit_necessity_audit']['observed_optimizer_fits'], 35)
 
     def test_every_observed_game_and_missing_state_remain(self):
         self.assertEqual(len(self.games), 2742)
