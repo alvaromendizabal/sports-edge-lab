@@ -1,5 +1,9 @@
 # 2026 NFL models vs. Circa Million VIII
 
+[N118 live dashboard](https://sports-edge-lab-nfl.alv-mendizabal.chatgpt.site/circa/n118/) · [N118 public page source](n118_current/index.html)
+
+The NFL game review separates verified finals, games in progress, confirmed future kickoffs and times still to be determined. Each matchup shows the available DraftKings, Kalshi and Polymarket evidence, with earlier forecast times and historical research labeled separately. The model pages include prior-week margin calibration and a rest-based total-points study.
+
 [N117 live dashboard](https://sports-edge-lab-nfl.alv-mendizabal.chatgpt.site/circa/n117/) · [N117 public page source](n117_current/index.html)
 
 N117 scores signed-margin and integer-total forecasts in historical replays. Upcoming forecasts, market observations and Circa research cards retain their N116 dates. The dashboard identifies the DraftKings, Kalshi and Polymarket contracts with identical settlement terms and shows the coverage of every fixture.
