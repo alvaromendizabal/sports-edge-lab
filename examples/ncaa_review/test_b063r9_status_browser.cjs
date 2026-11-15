@@ -75,7 +75,9 @@ async function verifyR9(browser, filename) {
       assert.match(await page.locator('#b063r9-latest-status').innerText(),/one peak reserved core, zero new scientific fits/);
       assert.match(await page.locator('#b063r9-latest-status').innerText(),/No complete current-season or upcoming-game refresh occurred/);
       assert.equal(await page.locator('#b063r9-latest-status a').getAttribute('href'),'b063r9.html');
-      assert.equal(await page.locator('main > :first-child').getAttribute('id'),'b063r9-latest-status');
+      assert.equal(await page.locator('main > :first-child').getAttribute('id'),'v12-current-evidence');
+      assert.equal(await page.locator('#v12-current-evidence a').getAttribute('href'),'v12.html');
+      assert.equal(await page.locator('main > :nth-child(2)').getAttribute('id'),'b063r9-latest-status');
       assert.equal(await page.locator('#b063r1-data, #terminal-data, #b063-data').count(),3);
       assert.equal(await page.evaluate(()=>document.documentElement.scrollWidth<=window.innerWidth),true,
         `retained landing must fit ${width}px`);

@@ -1,0 +1,1324 @@
+{
+  "as_of_utc": "2026-11-15T02:37:30.204693Z",
+  "completed_regular_games": 183,
+  "current_winner_matched_comparison": {
+    "evidence_class": "Fixed-state retrospective replay; not original issued predictions",
+    "horizon_minutes": 120,
+    "matched_games": 128,
+    "missing_regular_games": 55,
+    "models": [
+      {
+        "current_selected_champion": false,
+        "feature_count": 72,
+        "label": "Retained basketball plus market histogram boosting",
+        "metrics": {
+          "accuracy": 0.703125,
+          "brier": 0.1824835,
+          "games": 128,
+          "log_loss": 0.53864388
+        }
+      },
+      {
+        "current_selected_champion": false,
+        "feature_count": 9,
+        "label": "Retained market-only logistic ridge",
+        "metrics": {
+          "accuracy": 0.6953125,
+          "brier": 0.1847366,
+          "games": 128,
+          "log_loss": 0.54229433
+        }
+      },
+      {
+        "current_selected_champion": true,
+        "feature_count": 63,
+        "label": "Selected market-free ExtraTrees",
+        "metrics": {
+          "accuracy": 0.6875,
+          "brier": 0.20453943,
+          "games": 128,
+          "log_loss": 0.59243882
+        }
+      }
+    ],
+    "promotion_allowed": false,
+    "provider_baseline_comparison": false,
+    "uncertainty": "Not estimated in this pair audit; three week clusters are limited support.",
+    "week_clusters": 3
+  },
+  "limitations": [
+    "The inherited current replay covers 132 of 183 completed regular games; the market-assisted matched comparison covers 128.",
+    "The current new frontier ablations use 139 available games and cannot be merged with the 132-game or 128-game scoreboards.",
+    "The leading residual head has no scored predictions for the 47 completed games in the latest seven-day window.",
+    "Historical selected champions are prospective shadow candidates, not proven current-season market winners.",
+    "Preserved CatBoost and margin ensemble current historical states remain unavailable for exact historical comparison.",
+    "No automatic promotions; original-issued, replay and later-fitted evidence remain separate."
+  ],
+  "new_frontier_current_ablations": [
+    {
+      "baseline_metrics": {
+        "bias": 1.00743426,
+        "crps": 8.35112887,
+        "crps_empirical_residual": 8.35112887,
+        "distribution_assumption": "PRIOR_HELDOUT_RESIDUALS_EXCHANGEABLE_WITH_TARGET_REGIME_NOT_GUARANTEED",
+        "games": 139,
+        "interval_50_coverage": 0.49640288,
+        "interval_50_width": 18.30640576,
+        "interval_80_coverage": 0.79136691,
+        "interval_80_width": 37.3399246,
+        "interval_90_coverage": 0.90647482,
+        "interval_90_width": 48.02524017,
+        "mae": 11.66117359,
+        "rmse": 14.95045484,
+        "weighted_interval_score": 6.76053935
+      },
+      "candidate_metrics": {
+        "bias": 1.02526324,
+        "crps": 8.35860314,
+        "crps_empirical_residual": 8.35860314,
+        "distribution_assumption": "PRIOR_HELDOUT_RESIDUALS_EXCHANGEABLE_WITH_TARGET_REGIME_NOT_GUARANTEED",
+        "games": 139,
+        "interval_50_coverage": 0.48920863,
+        "interval_50_width": 18.43803792,
+        "interval_80_coverage": 0.78417266,
+        "interval_80_width": 37.31488384,
+        "interval_90_coverage": 0.90647482,
+        "interval_90_width": 47.98892016,
+        "mae": 11.67532303,
+        "rmse": 14.96611042,
+        "weighted_interval_score": 6.76861684
+      },
+      "evidence_class": "Exposed development ablation on 139 available games, not original-issued performance",
+      "feature_arm": "nonce negative control",
+      "horizon_minutes": 120,
+      "negative_control": true,
+      "objective": "margin",
+      "paired_cluster_interval": {
+        "clusters": 3,
+        "familywise_alpha": 0.05,
+        "games": 139,
+        "improvement_in_loss_units": -0.01414944,
+        "lower": -0.02155966,
+        "method": "SEASON_ISO_WEEK_CLUSTER_SANDWICH_NORMAL_APPROXIMATION_BONFERRONI",
+        "registered_comparisons": 36,
+        "selection_exposure": "EXPOSED_DEVELOPMENT_NOT_INDEPENDENT_CONFIRMATION",
+        "upper": -0.00673922
+      },
+      "primary_metric": "mae",
+      "promotion_allowed": false
+    },
+    {
+      "baseline_metrics": {
+        "bias": 1.00743426,
+        "crps": 8.35112887,
+        "crps_empirical_residual": 8.35112887,
+        "distribution_assumption": "PRIOR_HELDOUT_RESIDUALS_EXCHANGEABLE_WITH_TARGET_REGIME_NOT_GUARANTEED",
+        "games": 139,
+        "interval_50_coverage": 0.49640288,
+        "interval_50_width": 18.30640576,
+        "interval_80_coverage": 0.79136691,
+        "interval_80_width": 37.3399246,
+        "interval_90_coverage": 0.90647482,
+        "interval_90_width": 48.02524017,
+        "mae": 11.66117359,
+        "rmse": 14.95045484,
+        "weighted_interval_score": 6.76053935
+      },
+      "candidate_metrics": {
+        "bias": 0.96979591,
+        "crps": 8.32515677,
+        "crps_empirical_residual": 8.32515677,
+        "distribution_assumption": "PRIOR_HELDOUT_RESIDUALS_EXCHANGEABLE_WITH_TARGET_REGIME_NOT_GUARANTEED",
+        "games": 139,
+        "interval_50_coverage": 0.50359712,
+        "interval_50_width": 18.32894566,
+        "interval_80_coverage": 0.79136691,
+        "interval_80_width": 37.50593222,
+        "interval_90_coverage": 0.91366906,
+        "interval_90_width": 48.10638204,
+        "mae": 11.61906556,
+        "rmse": 14.90715175,
+        "weighted_interval_score": 6.7442117
+      },
+      "evidence_class": "Exposed development ablation on 139 available games, not original-issued performance",
+      "feature_arm": "pace discordance",
+      "horizon_minutes": 120,
+      "negative_control": false,
+      "objective": "margin",
+      "paired_cluster_interval": {
+        "clusters": 3,
+        "familywise_alpha": 0.05,
+        "games": 139,
+        "improvement_in_loss_units": 0.04210804,
+        "lower": -0.09542556,
+        "method": "SEASON_ISO_WEEK_CLUSTER_SANDWICH_NORMAL_APPROXIMATION_BONFERRONI",
+        "registered_comparisons": 36,
+        "selection_exposure": "EXPOSED_DEVELOPMENT_NOT_INDEPENDENT_CONFIRMATION",
+        "upper": 0.17964164
+      },
+      "primary_metric": "mae",
+      "promotion_allowed": false
+    },
+    {
+      "baseline_metrics": {
+        "bias": 1.00743426,
+        "crps": 8.35112887,
+        "crps_empirical_residual": 8.35112887,
+        "distribution_assumption": "PRIOR_HELDOUT_RESIDUALS_EXCHANGEABLE_WITH_TARGET_REGIME_NOT_GUARANTEED",
+        "games": 139,
+        "interval_50_coverage": 0.49640288,
+        "interval_50_width": 18.30640576,
+        "interval_80_coverage": 0.79136691,
+        "interval_80_width": 37.3399246,
+        "interval_90_coverage": 0.90647482,
+        "interval_90_width": 48.02524017,
+        "mae": 11.66117359,
+        "rmse": 14.95045484,
+        "weighted_interval_score": 6.76053935
+      },
+      "candidate_metrics": {
+        "bias": 1.00949017,
+        "crps": 8.35297437,
+        "crps_empirical_residual": 8.35297437,
+        "distribution_assumption": "PRIOR_HELDOUT_RESIDUALS_EXCHANGEABLE_WITH_TARGET_REGIME_NOT_GUARANTEED",
+        "games": 139,
+        "interval_50_coverage": 0.50359712,
+        "interval_50_width": 18.29556144,
+        "interval_80_coverage": 0.78417266,
+        "interval_80_width": 37.31655415,
+        "interval_90_coverage": 0.91366906,
+        "interval_90_width": 48.1954229,
+        "mae": 11.65460806,
+        "rmse": 14.95564096,
+        "weighted_interval_score": 6.76295658
+      },
+      "evidence_class": "Exposed development ablation on 139 available games, not original-issued performance",
+      "feature_arm": "shooting uncertainty",
+      "horizon_minutes": 120,
+      "negative_control": false,
+      "objective": "margin",
+      "paired_cluster_interval": {
+        "clusters": 3,
+        "familywise_alpha": 0.05,
+        "games": 139,
+        "improvement_in_loss_units": 0.00656553,
+        "lower": -0.02029947,
+        "method": "SEASON_ISO_WEEK_CLUSTER_SANDWICH_NORMAL_APPROXIMATION_BONFERRONI",
+        "registered_comparisons": 36,
+        "selection_exposure": "EXPOSED_DEVELOPMENT_NOT_INDEPENDENT_CONFIRMATION",
+        "upper": 0.03343054
+      },
+      "primary_metric": "mae",
+      "promotion_allowed": false
+    },
+    {
+      "baseline_metrics": {
+        "bias": 1.02405545,
+        "crps": 10.65763903,
+        "crps_empirical_residual": 10.65763903,
+        "distribution_assumption": "PRIOR_HELDOUT_RESIDUALS_EXCHANGEABLE_WITH_TARGET_REGIME_NOT_GUARANTEED",
+        "games": 139,
+        "interval_50_coverage": 0.48920863,
+        "interval_50_width": 25.97878457,
+        "interval_80_coverage": 0.83453237,
+        "interval_80_width": 48.40896677,
+        "interval_90_coverage": 0.92086331,
+        "interval_90_width": 64.48079099,
+        "mae": 15.09600844,
+        "rmse": 18.93320168,
+        "weighted_interval_score": 8.61674225
+      },
+      "candidate_metrics": {
+        "bias": 0.95573813,
+        "crps": 10.65324525,
+        "crps_empirical_residual": 10.65324525,
+        "distribution_assumption": "PRIOR_HELDOUT_RESIDUALS_EXCHANGEABLE_WITH_TARGET_REGIME_NOT_GUARANTEED",
+        "games": 139,
+        "interval_50_coverage": 0.49640288,
+        "interval_50_width": 26.20578997,
+        "interval_80_coverage": 0.83453237,
+        "interval_80_width": 48.32796335,
+        "interval_90_coverage": 0.92086331,
+        "interval_90_width": 64.51579455,
+        "mae": 15.07867233,
+        "rmse": 18.92318474,
+        "weighted_interval_score": 8.61032323
+      },
+      "evidence_class": "Exposed development ablation on 139 available games, not original-issued performance",
+      "feature_arm": "nonce negative control",
+      "horizon_minutes": 120,
+      "negative_control": true,
+      "objective": "total",
+      "paired_cluster_interval": {
+        "clusters": 3,
+        "familywise_alpha": 0.05,
+        "games": 139,
+        "improvement_in_loss_units": 0.01733611,
+        "lower": -0.05056595,
+        "method": "SEASON_ISO_WEEK_CLUSTER_SANDWICH_NORMAL_APPROXIMATION_BONFERRONI",
+        "registered_comparisons": 36,
+        "selection_exposure": "EXPOSED_DEVELOPMENT_NOT_INDEPENDENT_CONFIRMATION",
+        "upper": 0.08523817
+      },
+      "primary_metric": "mae",
+      "promotion_allowed": false
+    },
+    {
+      "baseline_metrics": {
+        "bias": 1.02405545,
+        "crps": 10.65763903,
+        "crps_empirical_residual": 10.65763903,
+        "distribution_assumption": "PRIOR_HELDOUT_RESIDUALS_EXCHANGEABLE_WITH_TARGET_REGIME_NOT_GUARANTEED",
+        "games": 139,
+        "interval_50_coverage": 0.48920863,
+        "interval_50_width": 25.97878457,
+        "interval_80_coverage": 0.83453237,
+        "interval_80_width": 48.40896677,
+        "interval_90_coverage": 0.92086331,
+        "interval_90_width": 64.48079099,
+        "mae": 15.09600844,
+        "rmse": 18.93320168,
+        "weighted_interval_score": 8.61674225
+      },
+      "candidate_metrics": {
+        "bias": 1.04301308,
+        "crps": 10.66663357,
+        "crps_empirical_residual": 10.66663357,
+        "distribution_assumption": "PRIOR_HELDOUT_RESIDUALS_EXCHANGEABLE_WITH_TARGET_REGIME_NOT_GUARANTEED",
+        "games": 139,
+        "interval_50_coverage": 0.48920863,
+        "interval_50_width": 25.9257096,
+        "interval_80_coverage": 0.82014388,
+        "interval_80_width": 48.38697487,
+        "interval_90_coverage": 0.90647482,
+        "interval_90_width": 64.23013097,
+        "mae": 15.10281456,
+        "rmse": 18.94708158,
+        "weighted_interval_score": 8.62301425
+      },
+      "evidence_class": "Exposed development ablation on 139 available games, not original-issued performance",
+      "feature_arm": "pace discordance",
+      "horizon_minutes": 120,
+      "negative_control": false,
+      "objective": "total",
+      "paired_cluster_interval": {
+        "clusters": 3,
+        "familywise_alpha": 0.05,
+        "games": 139,
+        "improvement_in_loss_units": -0.00680612,
+        "lower": -0.12357032,
+        "method": "SEASON_ISO_WEEK_CLUSTER_SANDWICH_NORMAL_APPROXIMATION_BONFERRONI",
+        "registered_comparisons": 36,
+        "selection_exposure": "EXPOSED_DEVELOPMENT_NOT_INDEPENDENT_CONFIRMATION",
+        "upper": 0.10995807
+      },
+      "primary_metric": "mae",
+      "promotion_allowed": false
+    },
+    {
+      "baseline_metrics": {
+        "bias": 1.02405545,
+        "crps": 10.65763903,
+        "crps_empirical_residual": 10.65763903,
+        "distribution_assumption": "PRIOR_HELDOUT_RESIDUALS_EXCHANGEABLE_WITH_TARGET_REGIME_NOT_GUARANTEED",
+        "games": 139,
+        "interval_50_coverage": 0.48920863,
+        "interval_50_width": 25.97878457,
+        "interval_80_coverage": 0.83453237,
+        "interval_80_width": 48.40896677,
+        "interval_90_coverage": 0.92086331,
+        "interval_90_width": 64.48079099,
+        "mae": 15.09600844,
+        "rmse": 18.93320168,
+        "weighted_interval_score": 8.61674225
+      },
+      "candidate_metrics": {
+        "bias": 1.01748807,
+        "crps": 10.65624978,
+        "crps_empirical_residual": 10.65624978,
+        "distribution_assumption": "PRIOR_HELDOUT_RESIDUALS_EXCHANGEABLE_WITH_TARGET_REGIME_NOT_GUARANTEED",
+        "games": 139,
+        "interval_50_coverage": 0.48920863,
+        "interval_50_width": 25.97620539,
+        "interval_80_coverage": 0.83453237,
+        "interval_80_width": 48.39281408,
+        "interval_90_coverage": 0.92086331,
+        "interval_90_width": 64.52813103,
+        "mae": 15.09335546,
+        "rmse": 18.93160644,
+        "weighted_interval_score": 8.61593688
+      },
+      "evidence_class": "Exposed development ablation on 139 available games, not original-issued performance",
+      "feature_arm": "shooting uncertainty",
+      "horizon_minutes": 120,
+      "negative_control": false,
+      "objective": "total",
+      "paired_cluster_interval": {
+        "clusters": 3,
+        "familywise_alpha": 0.05,
+        "games": 139,
+        "improvement_in_loss_units": 0.00265298,
+        "lower": -0.00978919,
+        "method": "SEASON_ISO_WEEK_CLUSTER_SANDWICH_NORMAL_APPROXIMATION_BONFERRONI",
+        "registered_comparisons": 36,
+        "selection_exposure": "EXPOSED_DEVELOPMENT_NOT_INDEPENDENT_CONFIRMATION",
+        "upper": 0.01509514
+      },
+      "primary_metric": "mae",
+      "promotion_allowed": false
+    },
+    {
+      "baseline_metrics": {
+        "accuracy": 0.68345324,
+        "brier": 0.20531889,
+        "ece_10_bins": 0.04799343,
+        "games": 139,
+        "log_loss": 0.59363117,
+        "roc_auc": 0.74274461
+      },
+      "candidate_metrics": {
+        "accuracy": 0.68345324,
+        "brier": 0.20531485,
+        "ece_10_bins": 0.03752474,
+        "games": 139,
+        "log_loss": 0.59356327,
+        "roc_auc": 0.74398839
+      },
+      "evidence_class": "Exposed development ablation on 139 available games, not original-issued performance",
+      "feature_arm": "nonce negative control",
+      "horizon_minutes": 120,
+      "negative_control": true,
+      "objective": "winner",
+      "paired_cluster_interval": {
+        "clusters": 3,
+        "familywise_alpha": 0.05,
+        "games": 139,
+        "improvement_in_loss_units": 6.79e-05,
+        "lower": -0.00144829,
+        "method": "SEASON_ISO_WEEK_CLUSTER_SANDWICH_NORMAL_APPROXIMATION_BONFERRONI",
+        "registered_comparisons": 36,
+        "selection_exposure": "EXPOSED_DEVELOPMENT_NOT_INDEPENDENT_CONFIRMATION",
+        "upper": 0.0015841
+      },
+      "primary_metric": "log_loss",
+      "promotion_allowed": false
+    },
+    {
+      "baseline_metrics": {
+        "accuracy": 0.68345324,
+        "brier": 0.20531889,
+        "ece_10_bins": 0.04799343,
+        "games": 139,
+        "log_loss": 0.59363117,
+        "roc_auc": 0.74274461
+      },
+      "candidate_metrics": {
+        "accuracy": 0.68345324,
+        "brier": 0.20474042,
+        "ece_10_bins": 0.04535338,
+        "games": 139,
+        "log_loss": 0.59226811,
+        "roc_auc": 0.74295191
+      },
+      "evidence_class": "Exposed development ablation on 139 available games, not original-issued performance",
+      "feature_arm": "pace discordance",
+      "horizon_minutes": 120,
+      "negative_control": false,
+      "objective": "winner",
+      "paired_cluster_interval": {
+        "clusters": 3,
+        "familywise_alpha": 0.05,
+        "games": 139,
+        "improvement_in_loss_units": 0.00136306,
+        "lower": -0.00639786,
+        "method": "SEASON_ISO_WEEK_CLUSTER_SANDWICH_NORMAL_APPROXIMATION_BONFERRONI",
+        "registered_comparisons": 36,
+        "selection_exposure": "EXPOSED_DEVELOPMENT_NOT_INDEPENDENT_CONFIRMATION",
+        "upper": 0.00912399
+      },
+      "primary_metric": "log_loss",
+      "promotion_allowed": false
+    },
+    {
+      "baseline_metrics": {
+        "accuracy": 0.68345324,
+        "brier": 0.20531889,
+        "ece_10_bins": 0.04799343,
+        "games": 139,
+        "log_loss": 0.59363117,
+        "roc_auc": 0.74274461
+      },
+      "candidate_metrics": {
+        "accuracy": 0.68345324,
+        "brier": 0.20532845,
+        "ece_10_bins": 0.04348739,
+        "games": 139,
+        "log_loss": 0.59369718,
+        "roc_auc": 0.7433665
+      },
+      "evidence_class": "Exposed development ablation on 139 available games, not original-issued performance",
+      "feature_arm": "shooting uncertainty",
+      "horizon_minutes": 120,
+      "negative_control": false,
+      "objective": "winner",
+      "paired_cluster_interval": {
+        "clusters": 3,
+        "familywise_alpha": 0.05,
+        "games": 139,
+        "improvement_in_loss_units": -6.6e-05,
+        "lower": -0.00134822,
+        "method": "SEASON_ISO_WEEK_CLUSTER_SANDWICH_NORMAL_APPROXIMATION_BONFERRONI",
+        "registered_comparisons": 36,
+        "selection_exposure": "EXPOSED_DEVELOPMENT_NOT_INDEPENDENT_CONFIRMATION",
+        "upper": 0.00121621
+      },
+      "primary_metric": "log_loss",
+      "promotion_allowed": false
+    },
+    {
+      "baseline_metrics": {
+        "bias": 1.00564356,
+        "crps": 8.37419583,
+        "crps_empirical_residual": 8.37419583,
+        "distribution_assumption": "PRIOR_HELDOUT_RESIDUALS_EXCHANGEABLE_WITH_TARGET_REGIME_NOT_GUARANTEED",
+        "games": 139,
+        "interval_50_coverage": 0.48920863,
+        "interval_50_width": 18.29981268,
+        "interval_80_coverage": 0.78417266,
+        "interval_80_width": 37.32136292,
+        "interval_90_coverage": 0.90647482,
+        "interval_90_width": 48.06939303,
+        "mae": 11.7115002,
+        "rmse": 14.97663683,
+        "weighted_interval_score": 6.7708324
+      },
+      "candidate_metrics": {
+        "bias": 1.02357688,
+        "crps": 8.38174959,
+        "crps_empirical_residual": 8.38174959,
+        "distribution_assumption": "PRIOR_HELDOUT_RESIDUALS_EXCHANGEABLE_WITH_TARGET_REGIME_NOT_GUARANTEED",
+        "games": 139,
+        "interval_50_coverage": 0.48201439,
+        "interval_50_width": 18.35592195,
+        "interval_80_coverage": 0.78417266,
+        "interval_80_width": 37.16436102,
+        "interval_90_coverage": 0.90647482,
+        "interval_90_width": 47.99296262,
+        "mae": 11.72579075,
+        "rmse": 14.99240593,
+        "weighted_interval_score": 6.78125001
+      },
+      "evidence_class": "Exposed development ablation on 139 available games, not original-issued performance",
+      "feature_arm": "nonce negative control",
+      "horizon_minutes": 60,
+      "negative_control": true,
+      "objective": "margin",
+      "paired_cluster_interval": {
+        "clusters": 3,
+        "familywise_alpha": 0.05,
+        "games": 139,
+        "improvement_in_loss_units": -0.01429055,
+        "lower": -0.02127621,
+        "method": "SEASON_ISO_WEEK_CLUSTER_SANDWICH_NORMAL_APPROXIMATION_BONFERRONI",
+        "registered_comparisons": 36,
+        "selection_exposure": "EXPOSED_DEVELOPMENT_NOT_INDEPENDENT_CONFIRMATION",
+        "upper": -0.0073049
+      },
+      "primary_metric": "mae",
+      "promotion_allowed": false
+    },
+    {
+      "baseline_metrics": {
+        "bias": 1.00564356,
+        "crps": 8.37419583,
+        "crps_empirical_residual": 8.37419583,
+        "distribution_assumption": "PRIOR_HELDOUT_RESIDUALS_EXCHANGEABLE_WITH_TARGET_REGIME_NOT_GUARANTEED",
+        "games": 139,
+        "interval_50_coverage": 0.48920863,
+        "interval_50_width": 18.29981268,
+        "interval_80_coverage": 0.78417266,
+        "interval_80_width": 37.32136292,
+        "interval_90_coverage": 0.90647482,
+        "interval_90_width": 48.06939303,
+        "mae": 11.7115002,
+        "rmse": 14.97663683,
+        "weighted_interval_score": 6.7708324
+      },
+      "candidate_metrics": {
+        "bias": 0.96854921,
+        "crps": 8.34723146,
+        "crps_empirical_residual": 8.34723146,
+        "distribution_assumption": "PRIOR_HELDOUT_RESIDUALS_EXCHANGEABLE_WITH_TARGET_REGIME_NOT_GUARANTEED",
+        "games": 139,
+        "interval_50_coverage": 0.50359712,
+        "interval_50_width": 18.36131568,
+        "interval_80_coverage": 0.79136691,
+        "interval_80_width": 37.32947019,
+        "interval_90_coverage": 0.91366906,
+        "interval_90_width": 48.14438147,
+        "mae": 11.66589288,
+        "rmse": 14.93196738,
+        "weighted_interval_score": 6.75599015
+      },
+      "evidence_class": "Exposed development ablation on 139 available games, not original-issued performance",
+      "feature_arm": "pace discordance",
+      "horizon_minutes": 60,
+      "negative_control": false,
+      "objective": "margin",
+      "paired_cluster_interval": {
+        "clusters": 3,
+        "familywise_alpha": 0.05,
+        "games": 139,
+        "improvement_in_loss_units": 0.04560732,
+        "lower": -0.09635733,
+        "method": "SEASON_ISO_WEEK_CLUSTER_SANDWICH_NORMAL_APPROXIMATION_BONFERRONI",
+        "registered_comparisons": 36,
+        "selection_exposure": "EXPOSED_DEVELOPMENT_NOT_INDEPENDENT_CONFIRMATION",
+        "upper": 0.18757196
+      },
+      "primary_metric": "mae",
+      "promotion_allowed": false
+    },
+    {
+      "baseline_metrics": {
+        "bias": 1.00564356,
+        "crps": 8.37419583,
+        "crps_empirical_residual": 8.37419583,
+        "distribution_assumption": "PRIOR_HELDOUT_RESIDUALS_EXCHANGEABLE_WITH_TARGET_REGIME_NOT_GUARANTEED",
+        "games": 139,
+        "interval_50_coverage": 0.48920863,
+        "interval_50_width": 18.29981268,
+        "interval_80_coverage": 0.78417266,
+        "interval_80_width": 37.32136292,
+        "interval_90_coverage": 0.90647482,
+        "interval_90_width": 48.06939303,
+        "mae": 11.7115002,
+        "rmse": 14.97663683,
+        "weighted_interval_score": 6.7708324
+      },
+      "candidate_metrics": {
+        "bias": 1.01012582,
+        "crps": 8.37592421,
+        "crps_empirical_residual": 8.37592421,
+        "distribution_assumption": "PRIOR_HELDOUT_RESIDUALS_EXCHANGEABLE_WITH_TARGET_REGIME_NOT_GUARANTEED",
+        "games": 139,
+        "interval_50_coverage": 0.49640288,
+        "interval_50_width": 18.22126225,
+        "interval_80_coverage": 0.78417266,
+        "interval_80_width": 37.37788578,
+        "interval_90_coverage": 0.91366906,
+        "interval_90_width": 48.21103111,
+        "mae": 11.70581438,
+        "rmse": 14.98134951,
+        "weighted_interval_score": 6.77307413
+      },
+      "evidence_class": "Exposed development ablation on 139 available games, not original-issued performance",
+      "feature_arm": "shooting uncertainty",
+      "horizon_minutes": 60,
+      "negative_control": false,
+      "objective": "margin",
+      "paired_cluster_interval": {
+        "clusters": 3,
+        "familywise_alpha": 0.05,
+        "games": 139,
+        "improvement_in_loss_units": 0.00568582,
+        "lower": -0.01840366,
+        "method": "SEASON_ISO_WEEK_CLUSTER_SANDWICH_NORMAL_APPROXIMATION_BONFERRONI",
+        "registered_comparisons": 36,
+        "selection_exposure": "EXPOSED_DEVELOPMENT_NOT_INDEPENDENT_CONFIRMATION",
+        "upper": 0.02977529
+      },
+      "primary_metric": "mae",
+      "promotion_allowed": false
+    },
+    {
+      "baseline_metrics": {
+        "bias": 1.0181777,
+        "crps": 10.65977103,
+        "crps_empirical_residual": 10.65977103,
+        "distribution_assumption": "PRIOR_HELDOUT_RESIDUALS_EXCHANGEABLE_WITH_TARGET_REGIME_NOT_GUARANTEED",
+        "games": 139,
+        "interval_50_coverage": 0.47482014,
+        "interval_50_width": 25.75050903,
+        "interval_80_coverage": 0.82733813,
+        "interval_80_width": 48.28841218,
+        "interval_90_coverage": 0.92086331,
+        "interval_90_width": 64.3675097,
+        "mae": 15.1041972,
+        "rmse": 18.92613954,
+        "weighted_interval_score": 8.61523873
+      },
+      "candidate_metrics": {
+        "bias": 0.94993078,
+        "crps": 10.65511339,
+        "crps_empirical_residual": 10.65511339,
+        "distribution_assumption": "PRIOR_HELDOUT_RESIDUALS_EXCHANGEABLE_WITH_TARGET_REGIME_NOT_GUARANTEED",
+        "games": 139,
+        "interval_50_coverage": 0.48201439,
+        "interval_50_width": 26.09012697,
+        "interval_80_coverage": 0.83453237,
+        "interval_80_width": 48.25305222,
+        "interval_90_coverage": 0.92086331,
+        "interval_90_width": 64.54564698,
+        "mae": 15.08643996,
+        "rmse": 18.91531964,
+        "weighted_interval_score": 8.60719928
+      },
+      "evidence_class": "Exposed development ablation on 139 available games, not original-issued performance",
+      "feature_arm": "nonce negative control",
+      "horizon_minutes": 60,
+      "negative_control": true,
+      "objective": "total",
+      "paired_cluster_interval": {
+        "clusters": 3,
+        "familywise_alpha": 0.05,
+        "games": 139,
+        "improvement_in_loss_units": 0.01775724,
+        "lower": -0.05086316,
+        "method": "SEASON_ISO_WEEK_CLUSTER_SANDWICH_NORMAL_APPROXIMATION_BONFERRONI",
+        "registered_comparisons": 36,
+        "selection_exposure": "EXPOSED_DEVELOPMENT_NOT_INDEPENDENT_CONFIRMATION",
+        "upper": 0.08637765
+      },
+      "primary_metric": "mae",
+      "promotion_allowed": false
+    },
+    {
+      "baseline_metrics": {
+        "bias": 1.0181777,
+        "crps": 10.65977103,
+        "crps_empirical_residual": 10.65977103,
+        "distribution_assumption": "PRIOR_HELDOUT_RESIDUALS_EXCHANGEABLE_WITH_TARGET_REGIME_NOT_GUARANTEED",
+        "games": 139,
+        "interval_50_coverage": 0.47482014,
+        "interval_50_width": 25.75050903,
+        "interval_80_coverage": 0.82733813,
+        "interval_80_width": 48.28841218,
+        "interval_90_coverage": 0.92086331,
+        "interval_90_width": 64.3675097,
+        "mae": 15.1041972,
+        "rmse": 18.92613954,
+        "weighted_interval_score": 8.61523873
+      },
+      "candidate_metrics": {
+        "bias": 1.03988365,
+        "crps": 10.66832978,
+        "crps_empirical_residual": 10.66832978,
+        "distribution_assumption": "PRIOR_HELDOUT_RESIDUALS_EXCHANGEABLE_WITH_TARGET_REGIME_NOT_GUARANTEED",
+        "games": 139,
+        "interval_50_coverage": 0.48920863,
+        "interval_50_width": 25.93122815,
+        "interval_80_coverage": 0.82014388,
+        "interval_80_width": 48.38376042,
+        "interval_90_coverage": 0.90647482,
+        "interval_90_width": 64.14940027,
+        "mae": 15.10896146,
+        "rmse": 18.93996227,
+        "weighted_interval_score": 8.62088929
+      },
+      "evidence_class": "Exposed development ablation on 139 available games, not original-issued performance",
+      "feature_arm": "pace discordance",
+      "horizon_minutes": 60,
+      "negative_control": false,
+      "objective": "total",
+      "paired_cluster_interval": {
+        "clusters": 3,
+        "familywise_alpha": 0.05,
+        "games": 139,
+        "improvement_in_loss_units": -0.00476426,
+        "lower": -0.1188023,
+        "method": "SEASON_ISO_WEEK_CLUSTER_SANDWICH_NORMAL_APPROXIMATION_BONFERRONI",
+        "registered_comparisons": 36,
+        "selection_exposure": "EXPOSED_DEVELOPMENT_NOT_INDEPENDENT_CONFIRMATION",
+        "upper": 0.10927378
+      },
+      "primary_metric": "mae",
+      "promotion_allowed": false
+    },
+    {
+      "baseline_metrics": {
+        "bias": 1.0181777,
+        "crps": 10.65977103,
+        "crps_empirical_residual": 10.65977103,
+        "distribution_assumption": "PRIOR_HELDOUT_RESIDUALS_EXCHANGEABLE_WITH_TARGET_REGIME_NOT_GUARANTEED",
+        "games": 139,
+        "interval_50_coverage": 0.47482014,
+        "interval_50_width": 25.75050903,
+        "interval_80_coverage": 0.82733813,
+        "interval_80_width": 48.28841218,
+        "interval_90_coverage": 0.92086331,
+        "interval_90_width": 64.3675097,
+        "mae": 15.1041972,
+        "rmse": 18.92613954,
+        "weighted_interval_score": 8.61523873
+      },
+      "candidate_metrics": {
+        "bias": 1.01294274,
+        "crps": 10.65856877,
+        "crps_empirical_residual": 10.65856877,
+        "distribution_assumption": "PRIOR_HELDOUT_RESIDUALS_EXCHANGEABLE_WITH_TARGET_REGIME_NOT_GUARANTEED",
+        "games": 139,
+        "interval_50_coverage": 0.47482014,
+        "interval_50_width": 25.74542388,
+        "interval_80_coverage": 0.82733813,
+        "interval_80_width": 48.24992816,
+        "interval_90_coverage": 0.92086331,
+        "interval_90_width": 64.39736989,
+        "mae": 15.10195109,
+        "rmse": 18.92479891,
+        "weighted_interval_score": 8.61453649
+      },
+      "evidence_class": "Exposed development ablation on 139 available games, not original-issued performance",
+      "feature_arm": "shooting uncertainty",
+      "horizon_minutes": 60,
+      "negative_control": false,
+      "objective": "total",
+      "paired_cluster_interval": {
+        "clusters": 3,
+        "familywise_alpha": 0.05,
+        "games": 139,
+        "improvement_in_loss_units": 0.00224611,
+        "lower": -0.00928057,
+        "method": "SEASON_ISO_WEEK_CLUSTER_SANDWICH_NORMAL_APPROXIMATION_BONFERRONI",
+        "registered_comparisons": 36,
+        "selection_exposure": "EXPOSED_DEVELOPMENT_NOT_INDEPENDENT_CONFIRMATION",
+        "upper": 0.0137728
+      },
+      "primary_metric": "mae",
+      "promotion_allowed": false
+    },
+    {
+      "baseline_metrics": {
+        "accuracy": 0.67625899,
+        "brier": 0.2061033,
+        "ece_10_bins": 0.04252345,
+        "games": 139,
+        "log_loss": 0.59516845,
+        "roc_auc": 0.73942786
+      },
+      "candidate_metrics": {
+        "accuracy": 0.67625899,
+        "brier": 0.20608461,
+        "ece_10_bins": 0.04782505,
+        "games": 139,
+        "log_loss": 0.59507664,
+        "roc_auc": 0.73963516
+      },
+      "evidence_class": "Exposed development ablation on 139 available games, not original-issued performance",
+      "feature_arm": "nonce negative control",
+      "horizon_minutes": 60,
+      "negative_control": true,
+      "objective": "winner",
+      "paired_cluster_interval": {
+        "clusters": 3,
+        "familywise_alpha": 0.05,
+        "games": 139,
+        "improvement_in_loss_units": 9.181e-05,
+        "lower": -0.00110388,
+        "method": "SEASON_ISO_WEEK_CLUSTER_SANDWICH_NORMAL_APPROXIMATION_BONFERRONI",
+        "registered_comparisons": 36,
+        "selection_exposure": "EXPOSED_DEVELOPMENT_NOT_INDEPENDENT_CONFIRMATION",
+        "upper": 0.0012875
+      },
+      "primary_metric": "log_loss",
+      "promotion_allowed": false
+    },
+    {
+      "baseline_metrics": {
+        "accuracy": 0.67625899,
+        "brier": 0.2061033,
+        "ece_10_bins": 0.04252345,
+        "games": 139,
+        "log_loss": 0.59516845,
+        "roc_auc": 0.73942786
+      },
+      "candidate_metrics": {
+        "accuracy": 0.67625899,
+        "brier": 0.20543218,
+        "ece_10_bins": 0.04458172,
+        "games": 139,
+        "log_loss": 0.59358812,
+        "roc_auc": 0.73859867
+      },
+      "evidence_class": "Exposed development ablation on 139 available games, not original-issued performance",
+      "feature_arm": "pace discordance",
+      "horizon_minutes": 60,
+      "negative_control": false,
+      "objective": "winner",
+      "paired_cluster_interval": {
+        "clusters": 3,
+        "familywise_alpha": 0.05,
+        "games": 139,
+        "improvement_in_loss_units": 0.00158034,
+        "lower": -0.00611673,
+        "method": "SEASON_ISO_WEEK_CLUSTER_SANDWICH_NORMAL_APPROXIMATION_BONFERRONI",
+        "registered_comparisons": 36,
+        "selection_exposure": "EXPOSED_DEVELOPMENT_NOT_INDEPENDENT_CONFIRMATION",
+        "upper": 0.0092774
+      },
+      "primary_metric": "log_loss",
+      "promotion_allowed": false
+    },
+    {
+      "baseline_metrics": {
+        "accuracy": 0.67625899,
+        "brier": 0.2061033,
+        "ece_10_bins": 0.04252345,
+        "games": 139,
+        "log_loss": 0.59516845,
+        "roc_auc": 0.73942786
+      },
+      "candidate_metrics": {
+        "accuracy": 0.67625899,
+        "brier": 0.20628987,
+        "ece_10_bins": 0.04242132,
+        "games": 139,
+        "log_loss": 0.59560533,
+        "roc_auc": 0.73922056
+      },
+      "evidence_class": "Exposed development ablation on 139 available games, not original-issued performance",
+      "feature_arm": "shooting uncertainty",
+      "horizon_minutes": 60,
+      "negative_control": false,
+      "objective": "winner",
+      "paired_cluster_interval": {
+        "clusters": 3,
+        "familywise_alpha": 0.05,
+        "games": 139,
+        "improvement_in_loss_units": -0.00043687,
+        "lower": -0.00132871,
+        "method": "SEASON_ISO_WEEK_CLUSTER_SANDWICH_NORMAL_APPROXIMATION_BONFERRONI",
+        "registered_comparisons": 36,
+        "selection_exposure": "EXPOSED_DEVELOPMENT_NOT_INDEPENDENT_CONFIRMATION",
+        "upper": 0.00045497
+      },
+      "primary_metric": "log_loss",
+      "promotion_allowed": false
+    }
+  ],
+  "new_frontier_execution": {
+    "automatic_promotions": 0,
+    "current_season_paired_ablations": 18,
+    "failed_tasks": 0,
+    "new_native_estimator_fits": 72,
+    "new_prediction_rows": 34896,
+    "new_source_requests": 0,
+    "paired_ablations": 54,
+    "pending_tasks": 48,
+    "registered_tasks": 120
+  },
+  "schema": "NBA_B086_PUBLIC_AUDIT_SCORES_V1",
+  "season": "2026-27",
+  "weighted_50_35_15": {
+    "comparison_families_evaluated": 58,
+    "provider_baseline_rank_rows": 0,
+    "rank_rows_with_supported_weights": 52,
+    "ranking_scope": "Retrospective matched foundation comparisons only; no all-season provider leaderboard is established.",
+    "supported_baseline_families": 11,
+    "top_head_within_each_foundation": [
+      {
+        "automatic_promotion": false,
+        "baseline_family": "ridge",
+        "baseline_feature_count": 48,
+        "evidence_class": "Later-fitted reconstruction with preserved registered retrospective clocks",
+        "head_family": "ridge",
+        "head_feature_summary": "constant residual",
+        "horizon_minutes": 60,
+        "interpretation": "Positive skill means lower primary loss than its identical-cohort model foundation; this is not a provider benchmark.",
+        "memory_policy": "all available oof",
+        "objective": "margin",
+        "phase": "regular",
+        "promotion_blockers": [
+          "INSUFFICIENT_CURRENT_INDEPENDENT_WEEKS",
+          "SIMULTANEOUS_SKILL_INTERVAL_DOES_NOT_CLEAR_PREDECLARED_EFFECT",
+          "TEAM_CLUSTER_ROBUSTNESS_REVIEW_OUTSTANDING",
+          "SOURCE_REGIME_DRIFT_REVIEW_OUTSTANDING",
+          "INDEPENDENT_PROSPECTIVE_CONFIRMATION_OUTSTANDING"
+        ],
+        "rank_scope": "Best registered head within this baseline family, not across different cohorts or providers",
+        "season_primary_skill": {
+          "2025": 0.0051232,
+          "2026": 0.0005668,
+          "2027": 0.01076094
+        },
+        "season_weights": {
+          "2025": 0.15,
+          "2026": 0.35,
+          "2027": 0.5
+        },
+        "simultaneous_95_interval": [
+          0.00040478,
+          0.01228988
+        ],
+        "weighted_primary_skill": 0.00634733
+      },
+      {
+        "automatic_promotion": false,
+        "baseline_family": "logistic",
+        "baseline_feature_count": 48,
+        "evidence_class": "Later-fitted reconstruction with preserved registered retrospective clocks",
+        "head_family": "logistic",
+        "head_feature_summary": "platt logit",
+        "horizon_minutes": 120,
+        "interpretation": "Positive skill means lower primary loss than its identical-cohort model foundation; this is not a provider benchmark.",
+        "memory_policy": "all available oof",
+        "objective": "winner",
+        "phase": "regular",
+        "promotion_blockers": [
+          "INSUFFICIENT_CURRENT_INDEPENDENT_WEEKS",
+          "SIMULTANEOUS_SKILL_INTERVAL_DOES_NOT_CLEAR_PREDECLARED_EFFECT",
+          "PRIOR_SEASON_CORROBORATION_MISSING",
+          "TEAM_CLUSTER_ROBUSTNESS_REVIEW_OUTSTANDING",
+          "SOURCE_REGIME_DRIFT_REVIEW_OUTSTANDING",
+          "INDEPENDENT_PROSPECTIVE_CONFIRMATION_OUTSTANDING"
+        ],
+        "rank_scope": "Best registered head within this baseline family, not across different cohorts or providers",
+        "season_primary_skill": {
+          "2025": -0.00460807,
+          "2026": -0.00211697,
+          "2027": 0.00106362
+        },
+        "season_weights": {
+          "2025": 0.15,
+          "2026": 0.35,
+          "2027": 0.5
+        },
+        "simultaneous_95_interval": [
+          -0.00992582,
+          0.00812514
+        ],
+        "weighted_primary_skill": -0.00090034
+      },
+      {
+        "automatic_promotion": false,
+        "baseline_family": "catboost",
+        "baseline_feature_count": 63,
+        "evidence_class": "Later-fitted reconstruction with preserved registered retrospective clocks",
+        "head_family": "ridge",
+        "head_feature_summary": "constant residual",
+        "horizon_minutes": 60,
+        "interpretation": "Positive skill means lower primary loss than its identical-cohort model foundation; this is not a provider benchmark.",
+        "memory_policy": "all available oof",
+        "objective": "total",
+        "phase": "regular",
+        "promotion_blockers": [
+          "INSUFFICIENT_CURRENT_INDEPENDENT_WEEKS",
+          "SIMULTANEOUS_SKILL_INTERVAL_DOES_NOT_CLEAR_PREDECLARED_EFFECT",
+          "TEAM_CLUSTER_ROBUSTNESS_REVIEW_OUTSTANDING",
+          "SOURCE_REGIME_DRIFT_REVIEW_OUTSTANDING",
+          "INDEPENDENT_PROSPECTIVE_CONFIRMATION_OUTSTANDING"
+        ],
+        "rank_scope": "Best registered head within this baseline family, not across different cohorts or providers",
+        "season_primary_skill": {
+          "2025": -0.00271875,
+          "2026": 0.00114437,
+          "2027": -0.00384354
+        },
+        "season_weights": {
+          "2025": 0.15,
+          "2026": 0.35,
+          "2027": 0.5
+        },
+        "simultaneous_95_interval": [
+          -0.00696047,
+          0.00310237
+        ],
+        "weighted_primary_skill": -0.00192905
+      },
+      {
+        "automatic_promotion": false,
+        "baseline_family": "xgboost",
+        "baseline_feature_count": 63,
+        "evidence_class": "Later-fitted reconstruction with preserved registered retrospective clocks",
+        "head_family": "logistic",
+        "head_feature_summary": "platt logit",
+        "horizon_minutes": 60,
+        "interpretation": "Positive skill means lower primary loss than its identical-cohort model foundation; this is not a provider benchmark.",
+        "memory_policy": "all available oof",
+        "objective": "winner",
+        "phase": "regular",
+        "promotion_blockers": [
+          "INSUFFICIENT_CURRENT_INDEPENDENT_WEEKS",
+          "SIMULTANEOUS_SKILL_INTERVAL_DOES_NOT_CLEAR_PREDECLARED_EFFECT",
+          "PRIOR_SEASON_CORROBORATION_MISSING",
+          "TEAM_CLUSTER_ROBUSTNESS_REVIEW_OUTSTANDING",
+          "SOURCE_REGIME_DRIFT_REVIEW_OUTSTANDING",
+          "INDEPENDENT_PROSPECTIVE_CONFIRMATION_OUTSTANDING"
+        ],
+        "rank_scope": "Best registered head within this baseline family, not across different cohorts or providers",
+        "season_primary_skill": {
+          "2025": -0.00644826,
+          "2026": -0.0009522,
+          "2027": -0.00048293
+        },
+        "season_weights": {
+          "2025": 0.15,
+          "2026": 0.35,
+          "2027": 0.5
+        },
+        "simultaneous_95_interval": [
+          -0.01086027,
+          0.00777633
+        ],
+        "weighted_primary_skill": -0.00154197
+      },
+      {
+        "automatic_promotion": false,
+        "baseline_family": "precommitted_ensemble",
+        "baseline_feature_count": null,
+        "evidence_class": "Later-fitted reconstruction with preserved registered retrospective clocks",
+        "head_family": "ridge",
+        "head_feature_summary": "constant residual",
+        "horizon_minutes": 60,
+        "interpretation": "Positive skill means lower primary loss than its identical-cohort model foundation; this is not a provider benchmark.",
+        "memory_policy": "all available oof",
+        "objective": "total",
+        "phase": "regular",
+        "promotion_blockers": [
+          "INSUFFICIENT_CURRENT_INDEPENDENT_WEEKS",
+          "SIMULTANEOUS_SKILL_INTERVAL_DOES_NOT_CLEAR_PREDECLARED_EFFECT",
+          "PRIOR_SEASON_CORROBORATION_MISSING",
+          "TEAM_CLUSTER_ROBUSTNESS_REVIEW_OUTSTANDING",
+          "SOURCE_REGIME_DRIFT_REVIEW_OUTSTANDING",
+          "INDEPENDENT_PROSPECTIVE_CONFIRMATION_OUTSTANDING"
+        ],
+        "rank_scope": "Best registered head within this baseline family, not across different cohorts or providers",
+        "season_primary_skill": {
+          "2025": -5.832e-05,
+          "2026": -0.00025271,
+          "2027": 0.00035124
+        },
+        "season_weights": {
+          "2025": 0.15,
+          "2026": 0.35,
+          "2027": 0.5
+        },
+        "simultaneous_95_interval": [
+          -0.00519199,
+          0.00534883
+        ],
+        "weighted_primary_skill": 7.842e-05
+      },
+      {
+        "automatic_promotion": false,
+        "baseline_family": "ridge",
+        "baseline_feature_count": 48,
+        "evidence_class": "Later-fitted reconstruction with preserved registered retrospective clocks",
+        "head_family": "ridge",
+        "head_feature_summary": "constant residual",
+        "horizon_minutes": 120,
+        "interpretation": "Positive skill means lower primary loss than its identical-cohort model foundation; this is not a provider benchmark.",
+        "memory_policy": "all available oof",
+        "objective": "margin",
+        "phase": "regular",
+        "promotion_blockers": [
+          "INSUFFICIENT_CURRENT_INDEPENDENT_WEEKS",
+          "SIMULTANEOUS_SKILL_INTERVAL_DOES_NOT_CLEAR_PREDECLARED_EFFECT",
+          "TEAM_CLUSTER_ROBUSTNESS_REVIEW_OUTSTANDING",
+          "SOURCE_REGIME_DRIFT_REVIEW_OUTSTANDING",
+          "INDEPENDENT_PROSPECTIVE_CONFIRMATION_OUTSTANDING"
+        ],
+        "rank_scope": "Best registered head within this baseline family, not across different cohorts or providers",
+        "season_primary_skill": {
+          "2025": 0.00495461,
+          "2026": 0.000408,
+          "2027": 0.01060272
+        },
+        "season_weights": {
+          "2025": 0.15,
+          "2026": 0.35,
+          "2027": 0.5
+        },
+        "simultaneous_95_interval": [
+          -6.052e-05,
+          0.01243522
+        ],
+        "weighted_primary_skill": 0.00618735
+      },
+      {
+        "automatic_promotion": false,
+        "baseline_family": "logistic",
+        "baseline_feature_count": 48,
+        "evidence_class": "Later-fitted reconstruction with preserved registered retrospective clocks",
+        "head_family": "logistic",
+        "head_feature_summary": "platt logit",
+        "horizon_minutes": 60,
+        "interpretation": "Positive skill means lower primary loss than its identical-cohort model foundation; this is not a provider benchmark.",
+        "memory_policy": "all available oof",
+        "objective": "winner",
+        "phase": "regular",
+        "promotion_blockers": [
+          "INSUFFICIENT_CURRENT_INDEPENDENT_WEEKS",
+          "SIMULTANEOUS_SKILL_INTERVAL_DOES_NOT_CLEAR_PREDECLARED_EFFECT",
+          "PRIOR_SEASON_CORROBORATION_MISSING",
+          "TEAM_CLUSTER_ROBUSTNESS_REVIEW_OUTSTANDING",
+          "SOURCE_REGIME_DRIFT_REVIEW_OUTSTANDING",
+          "INDEPENDENT_PROSPECTIVE_CONFIRMATION_OUTSTANDING"
+        ],
+        "rank_scope": "Best registered head within this baseline family, not across different cohorts or providers",
+        "season_primary_skill": {
+          "2025": -0.00467066,
+          "2026": -0.00220519,
+          "2027": 0.00131685
+        },
+        "season_weights": {
+          "2025": 0.15,
+          "2026": 0.35,
+          "2027": 0.5
+        },
+        "simultaneous_95_interval": [
+          -0.00984322,
+          0.00821524
+        ],
+        "weighted_primary_skill": -0.00081399
+      },
+      {
+        "automatic_promotion": false,
+        "baseline_family": "precommitted_ensemble",
+        "baseline_feature_count": null,
+        "evidence_class": "Later-fitted reconstruction with preserved registered retrospective clocks",
+        "head_family": "ridge",
+        "head_feature_summary": "constant residual",
+        "horizon_minutes": 120,
+        "interpretation": "Positive skill means lower primary loss than its identical-cohort model foundation; this is not a provider benchmark.",
+        "memory_policy": "all available oof",
+        "objective": "total",
+        "phase": "regular",
+        "promotion_blockers": [
+          "INSUFFICIENT_CURRENT_INDEPENDENT_WEEKS",
+          "SIMULTANEOUS_SKILL_INTERVAL_DOES_NOT_CLEAR_PREDECLARED_EFFECT",
+          "TEAM_CLUSTER_ROBUSTNESS_REVIEW_OUTSTANDING",
+          "SOURCE_REGIME_DRIFT_REVIEW_OUTSTANDING",
+          "INDEPENDENT_PROSPECTIVE_CONFIRMATION_OUTSTANDING"
+        ],
+        "rank_scope": "Best registered head within this baseline family, not across different cohorts or providers",
+        "season_primary_skill": {
+          "2025": -0.00042613,
+          "2026": 0.00012101,
+          "2027": -0.00043566
+        },
+        "season_weights": {
+          "2025": 0.15,
+          "2026": 0.35,
+          "2027": 0.5
+        },
+        "simultaneous_95_interval": [
+          -0.00633534,
+          0.00585655
+        ],
+        "weighted_primary_skill": -0.0002394
+      },
+      {
+        "automatic_promotion": false,
+        "baseline_family": "precommitted_ensemble",
+        "baseline_feature_count": null,
+        "evidence_class": "Later-fitted reconstruction with preserved registered retrospective clocks",
+        "head_family": "ridge",
+        "head_feature_summary": "constant residual",
+        "horizon_minutes": 60,
+        "interpretation": "Positive skill means lower primary loss than its identical-cohort model foundation; this is not a provider benchmark.",
+        "memory_policy": "all available oof",
+        "objective": "total",
+        "phase": "regular",
+        "promotion_blockers": [
+          "INSUFFICIENT_CURRENT_INDEPENDENT_WEEKS",
+          "SIMULTANEOUS_SKILL_INTERVAL_DOES_NOT_CLEAR_PREDECLARED_EFFECT",
+          "PRIOR_SEASON_CORROBORATION_MISSING",
+          "TEAM_CLUSTER_ROBUSTNESS_REVIEW_OUTSTANDING",
+          "SOURCE_REGIME_DRIFT_REVIEW_OUTSTANDING",
+          "INDEPENDENT_PROSPECTIVE_CONFIRMATION_OUTSTANDING"
+        ],
+        "rank_scope": "Best registered head within this baseline family, not across different cohorts or providers",
+        "season_primary_skill": {
+          "2025": 2.629e-05,
+          "2026": -0.00055115,
+          "2027": 0.00117945
+        },
+        "season_weights": {
+          "2025": 0.15,
+          "2026": 0.35,
+          "2027": 0.5
+        },
+        "simultaneous_95_interval": [
+          -0.00479936,
+          0.00560089
+        ],
+        "weighted_primary_skill": 0.00040077
+      },
+      {
+        "automatic_promotion": false,
+        "baseline_family": "extra_trees",
+        "baseline_feature_count": 63,
+        "evidence_class": "Later-fitted reconstruction with preserved registered retrospective clocks",
+        "head_family": "logistic",
+        "head_feature_summary": "logit with error drift",
+        "horizon_minutes": 120,
+        "interpretation": "Positive skill means lower primary loss than its identical-cohort model foundation; this is not a provider benchmark.",
+        "memory_policy": "all available oof",
+        "objective": "winner",
+        "phase": "regular",
+        "promotion_blockers": [
+          "INSUFFICIENT_CURRENT_INDEPENDENT_WEEKS",
+          "SIMULTANEOUS_SKILL_INTERVAL_DOES_NOT_CLEAR_PREDECLARED_EFFECT",
+          "PRIOR_SEASON_CORROBORATION_MISSING",
+          "TEAM_CLUSTER_ROBUSTNESS_REVIEW_OUTSTANDING",
+          "SOURCE_REGIME_DRIFT_REVIEW_OUTSTANDING",
+          "INDEPENDENT_PROSPECTIVE_CONFIRMATION_OUTSTANDING"
+        ],
+        "rank_scope": "Best registered head within this baseline family, not across different cohorts or providers",
+        "season_primary_skill": {
+          "2025": -0.02685686,
+          "2026": -0.00213649,
+          "2027": 0.00662086
+        },
+        "season_weights": {
+          "2025": 0.15,
+          "2026": 0.35,
+          "2027": 0.5
+        },
+        "simultaneous_95_interval": [
+          -0.01271936,
+          0.00978762
+        ],
+        "weighted_primary_skill": -0.00146587
+      },
+      {
+        "automatic_promotion": false,
+        "baseline_family": "extra_trees",
+        "baseline_feature_count": 63,
+        "evidence_class": "Later-fitted reconstruction with preserved registered retrospective clocks",
+        "head_family": "ridge",
+        "head_feature_summary": "constant residual",
+        "horizon_minutes": 120,
+        "interpretation": "Positive skill means lower primary loss than its identical-cohort model foundation; this is not a provider benchmark.",
+        "memory_policy": "all available oof",
+        "objective": "total",
+        "phase": "regular",
+        "promotion_blockers": [
+          "INSUFFICIENT_CURRENT_INDEPENDENT_WEEKS",
+          "SIMULTANEOUS_SKILL_INTERVAL_DOES_NOT_CLEAR_PREDECLARED_EFFECT",
+          "PRIOR_SEASON_CORROBORATION_MISSING",
+          "TEAM_CLUSTER_ROBUSTNESS_REVIEW_OUTSTANDING",
+          "SOURCE_REGIME_DRIFT_REVIEW_OUTSTANDING",
+          "INDEPENDENT_PROSPECTIVE_CONFIRMATION_OUTSTANDING"
+        ],
+        "rank_scope": "Best registered head within this baseline family, not across different cohorts or providers",
+        "season_primary_skill": {
+          "2025": -0.00100802,
+          "2026": -0.00036974,
+          "2027": 0.00467514
+        },
+        "season_weights": {
+          "2025": 0.15,
+          "2026": 0.35,
+          "2027": 0.5
+        },
+        "simultaneous_95_interval": [
+          -0.00513621,
+          0.00925012
+        ],
+        "weighted_primary_skill": 0.00205696
+      }
+    ]
+  }
+}

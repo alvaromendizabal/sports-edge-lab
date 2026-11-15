@@ -97,7 +97,7 @@ class B063R9PublicStatus(unittest.TestCase):
             self.assertEqual((len(raw),hashlib.sha256(raw).hexdigest()), (size,digest), name)
             self.assertIsInstance(json.loads(raw), dict)
 
-    def test_removing_only_new_banner_restores_exact_previous_landing(self):
+    def test_removing_current_and_r9_wrappers_restores_exact_previous_landing(self):
         landing = (DOC/'index.html').read_text()
         self.assertEqual(landing.count(status.START), 1)
         self.assertEqual(blob(status.strip_banner(landing).encode()), '69b452f8b88c4dcd12dcb772baca6b8958858e1a')

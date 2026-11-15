@@ -1,0 +1,2434 @@
+{
+  "counts": {
+    "original_issue_rows": 13916,
+    "original_issued_distinct_games": 980,
+    "selected_roles": 44
+  },
+  "execution_release": "B086",
+  "metric_scope_warning": "Historical selected roles are not proven current-season winners. Replay, later-materialized refresh and original live issues remain distinct; no auto-promotion.",
+  "roles": {
+    "postseason_margin_crps_t120": {
+      "current_metrics": [
+        {
+          "actual_materialized_at_utc": null,
+          "completed_game_denominator": 0,
+          "evidence_class": "QUALIFIED_FIXED_FROZEN_STATE_RETROSPECTIVE_REPLAY_NOT_ISSUED",
+          "metrics": {},
+          "missing_games": 0,
+          "missing_reasons": {},
+          "promotion_allowed": false,
+          "scored_games": 0,
+          "state_origin": null,
+          "track": "CURRENT_FIXED_STATE_RETROSPECTIVE_REPLAY",
+          "training_cutoff_utc": null
+        },
+        {
+          "actual_materialized_at_utc": null,
+          "completed_game_denominator": 0,
+          "evidence_class": "NEW_SEASON_FROZEN_REFRESH",
+          "metrics": {},
+          "missing_games": 0,
+          "missing_reasons": {},
+          "promotion_allowed": false,
+          "scored_games": 0,
+          "state_origin": "EXACT_STATE_NOT_ADMITTED",
+          "track": "SEASON_FROZEN_LATER_MATERIALIZED_REFRESH",
+          "training_cutoff_utc": null
+        }
+      ],
+      "detailed_player_or_live_market_features_claimed": false,
+      "feature_count": null,
+      "feature_groups": [
+        "Registered basketball baseline components"
+      ],
+      "latest_original_issue_summary": {
+        "all_original_live_issue_verified": false,
+        "distinct_games": 0,
+        "horizon_classes": {},
+        "issued_at_max": null,
+        "issued_at_min": null,
+        "nominal_T60_T120_issue_claim": false,
+        "rows": 0
+      }
+    },
+    "postseason_margin_crps_t60": {
+      "current_metrics": [
+        {
+          "actual_materialized_at_utc": null,
+          "completed_game_denominator": 0,
+          "evidence_class": "QUALIFIED_FIXED_FROZEN_STATE_RETROSPECTIVE_REPLAY_NOT_ISSUED",
+          "metrics": {},
+          "missing_games": 0,
+          "missing_reasons": {},
+          "promotion_allowed": false,
+          "scored_games": 0,
+          "state_origin": null,
+          "track": "CURRENT_FIXED_STATE_RETROSPECTIVE_REPLAY",
+          "training_cutoff_utc": null
+        },
+        {
+          "actual_materialized_at_utc": null,
+          "completed_game_denominator": 0,
+          "evidence_class": "NEW_SEASON_FROZEN_REFRESH",
+          "metrics": {},
+          "missing_games": 0,
+          "missing_reasons": {},
+          "promotion_allowed": false,
+          "scored_games": 0,
+          "state_origin": "EXACT_STATE_NOT_ADMITTED",
+          "track": "SEASON_FROZEN_LATER_MATERIALIZED_REFRESH",
+          "training_cutoff_utc": null
+        }
+      ],
+      "detailed_player_or_live_market_features_claimed": false,
+      "feature_count": null,
+      "feature_groups": [
+        "Registered basketball baseline components"
+      ],
+      "latest_original_issue_summary": {
+        "all_original_live_issue_verified": false,
+        "distinct_games": 0,
+        "horizon_classes": {},
+        "issued_at_max": null,
+        "issued_at_min": null,
+        "nominal_T60_T120_issue_claim": false,
+        "rows": 0
+      }
+    },
+    "postseason_margin_mae_t120": {
+      "current_metrics": [
+        {
+          "actual_materialized_at_utc": null,
+          "completed_game_denominator": 0,
+          "evidence_class": "QUALIFIED_FIXED_FROZEN_STATE_RETROSPECTIVE_REPLAY_NOT_ISSUED",
+          "metrics": {},
+          "missing_games": 0,
+          "missing_reasons": {},
+          "promotion_allowed": false,
+          "scored_games": 0,
+          "state_origin": null,
+          "track": "CURRENT_FIXED_STATE_RETROSPECTIVE_REPLAY",
+          "training_cutoff_utc": null
+        },
+        {
+          "actual_materialized_at_utc": null,
+          "completed_game_denominator": 0,
+          "evidence_class": "NEW_SEASON_FROZEN_REFRESH",
+          "metrics": {},
+          "missing_games": 0,
+          "missing_reasons": {},
+          "promotion_allowed": false,
+          "scored_games": 0,
+          "state_origin": "EXACT_STATE_NOT_ADMITTED",
+          "track": "SEASON_FROZEN_LATER_MATERIALIZED_REFRESH",
+          "training_cutoff_utc": null
+        }
+      ],
+      "detailed_player_or_live_market_features_claimed": false,
+      "feature_count": null,
+      "feature_groups": [
+        "Registered basketball baseline components"
+      ],
+      "latest_original_issue_summary": {
+        "all_original_live_issue_verified": false,
+        "distinct_games": 0,
+        "horizon_classes": {},
+        "issued_at_max": null,
+        "issued_at_min": null,
+        "nominal_T60_T120_issue_claim": false,
+        "rows": 0
+      }
+    },
+    "postseason_margin_mae_t60": {
+      "current_metrics": [
+        {
+          "actual_materialized_at_utc": null,
+          "completed_game_denominator": 0,
+          "evidence_class": "QUALIFIED_FIXED_FROZEN_STATE_RETROSPECTIVE_REPLAY_NOT_ISSUED",
+          "metrics": {},
+          "missing_games": 0,
+          "missing_reasons": {},
+          "promotion_allowed": false,
+          "scored_games": 0,
+          "state_origin": null,
+          "track": "CURRENT_FIXED_STATE_RETROSPECTIVE_REPLAY",
+          "training_cutoff_utc": null
+        },
+        {
+          "actual_materialized_at_utc": null,
+          "completed_game_denominator": 0,
+          "evidence_class": "NEW_SEASON_FROZEN_REFRESH",
+          "metrics": {},
+          "missing_games": 0,
+          "missing_reasons": {},
+          "promotion_allowed": false,
+          "scored_games": 0,
+          "state_origin": "EXACT_STATE_NOT_ADMITTED",
+          "track": "SEASON_FROZEN_LATER_MATERIALIZED_REFRESH",
+          "training_cutoff_utc": null
+        }
+      ],
+      "detailed_player_or_live_market_features_claimed": false,
+      "feature_count": null,
+      "feature_groups": [
+        "Registered basketball baseline components"
+      ],
+      "latest_original_issue_summary": {
+        "all_original_live_issue_verified": false,
+        "distinct_games": 0,
+        "horizon_classes": {},
+        "issued_at_max": null,
+        "issued_at_min": null,
+        "nominal_T60_T120_issue_claim": false,
+        "rows": 0
+      }
+    },
+    "postseason_margin_rmse_t120": {
+      "current_metrics": [
+        {
+          "actual_materialized_at_utc": null,
+          "completed_game_denominator": 0,
+          "evidence_class": "QUALIFIED_FIXED_FROZEN_STATE_RETROSPECTIVE_REPLAY_NOT_ISSUED",
+          "metrics": {},
+          "missing_games": 0,
+          "missing_reasons": {},
+          "promotion_allowed": false,
+          "scored_games": 0,
+          "state_origin": null,
+          "track": "CURRENT_FIXED_STATE_RETROSPECTIVE_REPLAY",
+          "training_cutoff_utc": null
+        },
+        {
+          "actual_materialized_at_utc": "2026-11-13T16:29:32.533582+00:00",
+          "completed_game_denominator": 0,
+          "evidence_class": "NEW_SEASON_FROZEN_REFRESH",
+          "metrics": {},
+          "missing_games": 0,
+          "missing_reasons": {},
+          "promotion_allowed": false,
+          "scored_games": 0,
+          "state_origin": "EXACT_COMMITTED_FROZEN_FIT_REUSE",
+          "track": "SEASON_FROZEN_LATER_MATERIALIZED_REFRESH",
+          "training_cutoff_utc": "2026-10-19T07:00:00+00:00"
+        }
+      ],
+      "detailed_player_or_live_market_features_claimed": false,
+      "feature_count": 66,
+      "feature_groups": [
+        "Offensive and defensive shooting, turnovers, rebounding and free-throw opportunities",
+        "Shot mix, finishing rates and shooting uncertainty",
+        "Pace and offensive/defensive efficiency",
+        "Venue and opponent-style interactions"
+      ],
+      "latest_original_issue_summary": {
+        "all_original_live_issue_verified": false,
+        "distinct_games": 0,
+        "horizon_classes": {},
+        "issued_at_max": null,
+        "issued_at_min": null,
+        "nominal_T60_T120_issue_claim": false,
+        "rows": 0
+      }
+    },
+    "postseason_margin_rmse_t60": {
+      "current_metrics": [
+        {
+          "actual_materialized_at_utc": null,
+          "completed_game_denominator": 0,
+          "evidence_class": "QUALIFIED_FIXED_FROZEN_STATE_RETROSPECTIVE_REPLAY_NOT_ISSUED",
+          "metrics": {},
+          "missing_games": 0,
+          "missing_reasons": {},
+          "promotion_allowed": false,
+          "scored_games": 0,
+          "state_origin": null,
+          "track": "CURRENT_FIXED_STATE_RETROSPECTIVE_REPLAY",
+          "training_cutoff_utc": null
+        },
+        {
+          "actual_materialized_at_utc": "2026-11-13T16:29:32.167015+00:00",
+          "completed_game_denominator": 0,
+          "evidence_class": "NEW_SEASON_FROZEN_REFRESH",
+          "metrics": {},
+          "missing_games": 0,
+          "missing_reasons": {},
+          "promotion_allowed": false,
+          "scored_games": 0,
+          "state_origin": "EXACT_COMMITTED_FROZEN_FIT_REUSE",
+          "track": "SEASON_FROZEN_LATER_MATERIALIZED_REFRESH",
+          "training_cutoff_utc": "2026-10-19T07:00:00+00:00"
+        }
+      ],
+      "detailed_player_or_live_market_features_claimed": false,
+      "feature_count": 66,
+      "feature_groups": [
+        "Offensive and defensive shooting, turnovers, rebounding and free-throw opportunities",
+        "Shot mix, finishing rates and shooting uncertainty",
+        "Pace and offensive/defensive efficiency",
+        "Venue and opponent-style interactions"
+      ],
+      "latest_original_issue_summary": {
+        "all_original_live_issue_verified": false,
+        "distinct_games": 0,
+        "horizon_classes": {},
+        "issued_at_max": null,
+        "issued_at_min": null,
+        "nominal_T60_T120_issue_claim": false,
+        "rows": 0
+      }
+    },
+    "postseason_margin_weighted_interval_score_t120": {
+      "current_metrics": [
+        {
+          "actual_materialized_at_utc": null,
+          "completed_game_denominator": 0,
+          "evidence_class": "QUALIFIED_FIXED_FROZEN_STATE_RETROSPECTIVE_REPLAY_NOT_ISSUED",
+          "metrics": {},
+          "missing_games": 0,
+          "missing_reasons": {},
+          "promotion_allowed": false,
+          "scored_games": 0,
+          "state_origin": null,
+          "track": "CURRENT_FIXED_STATE_RETROSPECTIVE_REPLAY",
+          "training_cutoff_utc": null
+        },
+        {
+          "actual_materialized_at_utc": null,
+          "completed_game_denominator": 0,
+          "evidence_class": "NEW_SEASON_FROZEN_REFRESH",
+          "metrics": {},
+          "missing_games": 0,
+          "missing_reasons": {},
+          "promotion_allowed": false,
+          "scored_games": 0,
+          "state_origin": "EXACT_STATE_NOT_ADMITTED",
+          "track": "SEASON_FROZEN_LATER_MATERIALIZED_REFRESH",
+          "training_cutoff_utc": null
+        }
+      ],
+      "detailed_player_or_live_market_features_claimed": false,
+      "feature_count": null,
+      "feature_groups": [
+        "Registered basketball baseline components"
+      ],
+      "latest_original_issue_summary": {
+        "all_original_live_issue_verified": false,
+        "distinct_games": 0,
+        "horizon_classes": {},
+        "issued_at_max": null,
+        "issued_at_min": null,
+        "nominal_T60_T120_issue_claim": false,
+        "rows": 0
+      }
+    },
+    "postseason_margin_weighted_interval_score_t60": {
+      "current_metrics": [
+        {
+          "actual_materialized_at_utc": null,
+          "completed_game_denominator": 0,
+          "evidence_class": "QUALIFIED_FIXED_FROZEN_STATE_RETROSPECTIVE_REPLAY_NOT_ISSUED",
+          "metrics": {},
+          "missing_games": 0,
+          "missing_reasons": {},
+          "promotion_allowed": false,
+          "scored_games": 0,
+          "state_origin": null,
+          "track": "CURRENT_FIXED_STATE_RETROSPECTIVE_REPLAY",
+          "training_cutoff_utc": null
+        },
+        {
+          "actual_materialized_at_utc": null,
+          "completed_game_denominator": 0,
+          "evidence_class": "NEW_SEASON_FROZEN_REFRESH",
+          "metrics": {},
+          "missing_games": 0,
+          "missing_reasons": {},
+          "promotion_allowed": false,
+          "scored_games": 0,
+          "state_origin": "EXACT_STATE_NOT_ADMITTED",
+          "track": "SEASON_FROZEN_LATER_MATERIALIZED_REFRESH",
+          "training_cutoff_utc": null
+        }
+      ],
+      "detailed_player_or_live_market_features_claimed": false,
+      "feature_count": null,
+      "feature_groups": [
+        "Registered basketball baseline components"
+      ],
+      "latest_original_issue_summary": {
+        "all_original_live_issue_verified": false,
+        "distinct_games": 0,
+        "horizon_classes": {},
+        "issued_at_max": null,
+        "issued_at_min": null,
+        "nominal_T60_T120_issue_claim": false,
+        "rows": 0
+      }
+    },
+    "postseason_total_crps_t120": {
+      "current_metrics": [
+        {
+          "actual_materialized_at_utc": null,
+          "completed_game_denominator": 0,
+          "evidence_class": "QUALIFIED_FIXED_FROZEN_STATE_RETROSPECTIVE_REPLAY_NOT_ISSUED",
+          "metrics": {},
+          "missing_games": 0,
+          "missing_reasons": {},
+          "promotion_allowed": false,
+          "scored_games": 0,
+          "state_origin": null,
+          "track": "CURRENT_FIXED_STATE_RETROSPECTIVE_REPLAY",
+          "training_cutoff_utc": null
+        },
+        {
+          "actual_materialized_at_utc": "2026-11-13T16:29:32.202554+00:00",
+          "completed_game_denominator": 0,
+          "evidence_class": "NEW_SEASON_FROZEN_REFRESH",
+          "metrics": {},
+          "missing_games": 0,
+          "missing_reasons": {},
+          "promotion_allowed": false,
+          "scored_games": 0,
+          "state_origin": "EXACT_COMMITTED_FROZEN_FIT_REUSE",
+          "track": "SEASON_FROZEN_LATER_MATERIALIZED_REFRESH",
+          "training_cutoff_utc": "2026-10-19T07:00:00+00:00"
+        }
+      ],
+      "detailed_player_or_live_market_features_claimed": false,
+      "feature_count": 63,
+      "feature_groups": [
+        "Team strength, home advantage and long-run scoring form",
+        "Recent form, residual variation and sample support",
+        "Offensive and defensive shooting, turnovers, rebounding and free-throw opportunities",
+        "Shot mix, finishing rates and shooting uncertainty",
+        "Pace and offensive/defensive efficiency",
+        "Rest and schedule workload",
+        "Venue and opponent-style interactions",
+        "Opponent-adjusted team strength"
+      ],
+      "latest_original_issue_summary": {
+        "all_original_live_issue_verified": false,
+        "distinct_games": 0,
+        "horizon_classes": {},
+        "issued_at_max": null,
+        "issued_at_min": null,
+        "nominal_T60_T120_issue_claim": false,
+        "rows": 0
+      }
+    },
+    "postseason_total_crps_t60": {
+      "current_metrics": [
+        {
+          "actual_materialized_at_utc": null,
+          "completed_game_denominator": 0,
+          "evidence_class": "QUALIFIED_FIXED_FROZEN_STATE_RETROSPECTIVE_REPLAY_NOT_ISSUED",
+          "metrics": {},
+          "missing_games": 0,
+          "missing_reasons": {},
+          "promotion_allowed": false,
+          "scored_games": 0,
+          "state_origin": null,
+          "track": "CURRENT_FIXED_STATE_RETROSPECTIVE_REPLAY",
+          "training_cutoff_utc": null
+        },
+        {
+          "actual_materialized_at_utc": "2026-11-13T16:29:31.595670+00:00",
+          "completed_game_denominator": 0,
+          "evidence_class": "NEW_SEASON_FROZEN_REFRESH",
+          "metrics": {},
+          "missing_games": 0,
+          "missing_reasons": {},
+          "promotion_allowed": false,
+          "scored_games": 0,
+          "state_origin": "EXACT_COMMITTED_FROZEN_FIT_REUSE",
+          "track": "SEASON_FROZEN_LATER_MATERIALIZED_REFRESH",
+          "training_cutoff_utc": "2026-10-19T07:00:00+00:00"
+        }
+      ],
+      "detailed_player_or_live_market_features_claimed": false,
+      "feature_count": 63,
+      "feature_groups": [
+        "Team strength, home advantage and long-run scoring form",
+        "Recent form, residual variation and sample support",
+        "Offensive and defensive shooting, turnovers, rebounding and free-throw opportunities",
+        "Shot mix, finishing rates and shooting uncertainty",
+        "Pace and offensive/defensive efficiency",
+        "Rest and schedule workload",
+        "Venue and opponent-style interactions",
+        "Opponent-adjusted team strength"
+      ],
+      "latest_original_issue_summary": {
+        "all_original_live_issue_verified": false,
+        "distinct_games": 0,
+        "horizon_classes": {},
+        "issued_at_max": null,
+        "issued_at_min": null,
+        "nominal_T60_T120_issue_claim": false,
+        "rows": 0
+      }
+    },
+    "postseason_total_mae_t120": {
+      "current_metrics": [
+        {
+          "actual_materialized_at_utc": null,
+          "completed_game_denominator": 0,
+          "evidence_class": "QUALIFIED_FIXED_FROZEN_STATE_RETROSPECTIVE_REPLAY_NOT_ISSUED",
+          "metrics": {},
+          "missing_games": 0,
+          "missing_reasons": {},
+          "promotion_allowed": false,
+          "scored_games": 0,
+          "state_origin": null,
+          "track": "CURRENT_FIXED_STATE_RETROSPECTIVE_REPLAY",
+          "training_cutoff_utc": null
+        },
+        {
+          "actual_materialized_at_utc": "2026-11-13T16:29:33.898305+00:00",
+          "completed_game_denominator": 0,
+          "evidence_class": "NEW_SEASON_FROZEN_REFRESH",
+          "metrics": {},
+          "missing_games": 0,
+          "missing_reasons": {},
+          "promotion_allowed": false,
+          "scored_games": 0,
+          "state_origin": "EXACT_COMMITTED_FROZEN_FIT_REUSE",
+          "track": "SEASON_FROZEN_LATER_MATERIALIZED_REFRESH",
+          "training_cutoff_utc": "2026-10-19T07:00:00+00:00"
+        }
+      ],
+      "detailed_player_or_live_market_features_claimed": false,
+      "feature_count": 63,
+      "feature_groups": [
+        "Team strength, home advantage and long-run scoring form",
+        "Recent form, residual variation and sample support",
+        "Offensive and defensive shooting, turnovers, rebounding and free-throw opportunities",
+        "Shot mix, finishing rates and shooting uncertainty",
+        "Pace and offensive/defensive efficiency",
+        "Rest and schedule workload",
+        "Venue and opponent-style interactions",
+        "Opponent-adjusted team strength"
+      ],
+      "latest_original_issue_summary": {
+        "all_original_live_issue_verified": false,
+        "distinct_games": 0,
+        "horizon_classes": {},
+        "issued_at_max": null,
+        "issued_at_min": null,
+        "nominal_T60_T120_issue_claim": false,
+        "rows": 0
+      }
+    },
+    "postseason_total_mae_t60": {
+      "current_metrics": [
+        {
+          "actual_materialized_at_utc": null,
+          "completed_game_denominator": 0,
+          "evidence_class": "QUALIFIED_FIXED_FROZEN_STATE_RETROSPECTIVE_REPLAY_NOT_ISSUED",
+          "metrics": {},
+          "missing_games": 0,
+          "missing_reasons": {},
+          "promotion_allowed": false,
+          "scored_games": 0,
+          "state_origin": null,
+          "track": "CURRENT_FIXED_STATE_RETROSPECTIVE_REPLAY",
+          "training_cutoff_utc": null
+        },
+        {
+          "actual_materialized_at_utc": "2026-11-13T16:29:32.910541+00:00",
+          "completed_game_denominator": 0,
+          "evidence_class": "NEW_SEASON_FROZEN_REFRESH",
+          "metrics": {},
+          "missing_games": 0,
+          "missing_reasons": {},
+          "promotion_allowed": false,
+          "scored_games": 0,
+          "state_origin": "EXACT_COMMITTED_FROZEN_FIT_REUSE",
+          "track": "SEASON_FROZEN_LATER_MATERIALIZED_REFRESH",
+          "training_cutoff_utc": "2026-10-19T07:00:00+00:00"
+        }
+      ],
+      "detailed_player_or_live_market_features_claimed": false,
+      "feature_count": 63,
+      "feature_groups": [
+        "Team strength, home advantage and long-run scoring form",
+        "Recent form, residual variation and sample support",
+        "Offensive and defensive shooting, turnovers, rebounding and free-throw opportunities",
+        "Shot mix, finishing rates and shooting uncertainty",
+        "Pace and offensive/defensive efficiency",
+        "Rest and schedule workload",
+        "Venue and opponent-style interactions",
+        "Opponent-adjusted team strength"
+      ],
+      "latest_original_issue_summary": {
+        "all_original_live_issue_verified": false,
+        "distinct_games": 0,
+        "horizon_classes": {},
+        "issued_at_max": null,
+        "issued_at_min": null,
+        "nominal_T60_T120_issue_claim": false,
+        "rows": 0
+      }
+    },
+    "postseason_total_rmse_t120": {
+      "current_metrics": [
+        {
+          "actual_materialized_at_utc": null,
+          "completed_game_denominator": 0,
+          "evidence_class": "QUALIFIED_FIXED_FROZEN_STATE_RETROSPECTIVE_REPLAY_NOT_ISSUED",
+          "metrics": {},
+          "missing_games": 0,
+          "missing_reasons": {},
+          "promotion_allowed": false,
+          "scored_games": 0,
+          "state_origin": null,
+          "track": "CURRENT_FIXED_STATE_RETROSPECTIVE_REPLAY",
+          "training_cutoff_utc": null
+        },
+        {
+          "actual_materialized_at_utc": "2026-11-13T16:29:31.998268+00:00",
+          "completed_game_denominator": 0,
+          "evidence_class": "NEW_SEASON_FROZEN_REFRESH",
+          "metrics": {},
+          "missing_games": 0,
+          "missing_reasons": {},
+          "promotion_allowed": false,
+          "scored_games": 0,
+          "state_origin": "EXACT_COMMITTED_FROZEN_FIT_REUSE",
+          "track": "SEASON_FROZEN_LATER_MATERIALIZED_REFRESH",
+          "training_cutoff_utc": "2026-10-19T07:00:00+00:00"
+        }
+      ],
+      "detailed_player_or_live_market_features_claimed": false,
+      "feature_count": 10,
+      "feature_groups": [
+        "Pace and offensive/defensive efficiency"
+      ],
+      "latest_original_issue_summary": {
+        "all_original_live_issue_verified": false,
+        "distinct_games": 0,
+        "horizon_classes": {},
+        "issued_at_max": null,
+        "issued_at_min": null,
+        "nominal_T60_T120_issue_claim": false,
+        "rows": 0
+      }
+    },
+    "postseason_total_rmse_t60": {
+      "current_metrics": [
+        {
+          "actual_materialized_at_utc": null,
+          "completed_game_denominator": 0,
+          "evidence_class": "QUALIFIED_FIXED_FROZEN_STATE_RETROSPECTIVE_REPLAY_NOT_ISSUED",
+          "metrics": {},
+          "missing_games": 0,
+          "missing_reasons": {},
+          "promotion_allowed": false,
+          "scored_games": 0,
+          "state_origin": null,
+          "track": "CURRENT_FIXED_STATE_RETROSPECTIVE_REPLAY",
+          "training_cutoff_utc": null
+        },
+        {
+          "actual_materialized_at_utc": "2026-11-13T16:29:33.516882+00:00",
+          "completed_game_denominator": 0,
+          "evidence_class": "NEW_SEASON_FROZEN_REFRESH",
+          "metrics": {},
+          "missing_games": 0,
+          "missing_reasons": {},
+          "promotion_allowed": false,
+          "scored_games": 0,
+          "state_origin": "EXACT_COMMITTED_FROZEN_FIT_REUSE",
+          "track": "SEASON_FROZEN_LATER_MATERIALIZED_REFRESH",
+          "training_cutoff_utc": "2026-10-19T07:00:00+00:00"
+        }
+      ],
+      "detailed_player_or_live_market_features_claimed": false,
+      "feature_count": 10,
+      "feature_groups": [
+        "Pace and offensive/defensive efficiency"
+      ],
+      "latest_original_issue_summary": {
+        "all_original_live_issue_verified": false,
+        "distinct_games": 0,
+        "horizon_classes": {},
+        "issued_at_max": null,
+        "issued_at_min": null,
+        "nominal_T60_T120_issue_claim": false,
+        "rows": 0
+      }
+    },
+    "postseason_total_weighted_interval_score_t120": {
+      "current_metrics": [
+        {
+          "actual_materialized_at_utc": null,
+          "completed_game_denominator": 0,
+          "evidence_class": "QUALIFIED_FIXED_FROZEN_STATE_RETROSPECTIVE_REPLAY_NOT_ISSUED",
+          "metrics": {},
+          "missing_games": 0,
+          "missing_reasons": {},
+          "promotion_allowed": false,
+          "scored_games": 0,
+          "state_origin": null,
+          "track": "CURRENT_FIXED_STATE_RETROSPECTIVE_REPLAY",
+          "training_cutoff_utc": null
+        },
+        {
+          "actual_materialized_at_utc": "2026-11-13T16:29:32.202554+00:00",
+          "completed_game_denominator": 0,
+          "evidence_class": "NEW_SEASON_FROZEN_REFRESH",
+          "metrics": {},
+          "missing_games": 0,
+          "missing_reasons": {},
+          "promotion_allowed": false,
+          "scored_games": 0,
+          "state_origin": "EXACT_COMMITTED_FROZEN_FIT_REUSE",
+          "track": "SEASON_FROZEN_LATER_MATERIALIZED_REFRESH",
+          "training_cutoff_utc": "2026-10-19T07:00:00+00:00"
+        }
+      ],
+      "detailed_player_or_live_market_features_claimed": false,
+      "feature_count": 63,
+      "feature_groups": [
+        "Team strength, home advantage and long-run scoring form",
+        "Recent form, residual variation and sample support",
+        "Offensive and defensive shooting, turnovers, rebounding and free-throw opportunities",
+        "Shot mix, finishing rates and shooting uncertainty",
+        "Pace and offensive/defensive efficiency",
+        "Rest and schedule workload",
+        "Venue and opponent-style interactions",
+        "Opponent-adjusted team strength"
+      ],
+      "latest_original_issue_summary": {
+        "all_original_live_issue_verified": false,
+        "distinct_games": 0,
+        "horizon_classes": {},
+        "issued_at_max": null,
+        "issued_at_min": null,
+        "nominal_T60_T120_issue_claim": false,
+        "rows": 0
+      }
+    },
+    "postseason_total_weighted_interval_score_t60": {
+      "current_metrics": [
+        {
+          "actual_materialized_at_utc": null,
+          "completed_game_denominator": 0,
+          "evidence_class": "QUALIFIED_FIXED_FROZEN_STATE_RETROSPECTIVE_REPLAY_NOT_ISSUED",
+          "metrics": {},
+          "missing_games": 0,
+          "missing_reasons": {},
+          "promotion_allowed": false,
+          "scored_games": 0,
+          "state_origin": null,
+          "track": "CURRENT_FIXED_STATE_RETROSPECTIVE_REPLAY",
+          "training_cutoff_utc": null
+        },
+        {
+          "actual_materialized_at_utc": "2026-11-13T16:29:31.595670+00:00",
+          "completed_game_denominator": 0,
+          "evidence_class": "NEW_SEASON_FROZEN_REFRESH",
+          "metrics": {},
+          "missing_games": 0,
+          "missing_reasons": {},
+          "promotion_allowed": false,
+          "scored_games": 0,
+          "state_origin": "EXACT_COMMITTED_FROZEN_FIT_REUSE",
+          "track": "SEASON_FROZEN_LATER_MATERIALIZED_REFRESH",
+          "training_cutoff_utc": "2026-10-19T07:00:00+00:00"
+        }
+      ],
+      "detailed_player_or_live_market_features_claimed": false,
+      "feature_count": 63,
+      "feature_groups": [
+        "Team strength, home advantage and long-run scoring form",
+        "Recent form, residual variation and sample support",
+        "Offensive and defensive shooting, turnovers, rebounding and free-throw opportunities",
+        "Shot mix, finishing rates and shooting uncertainty",
+        "Pace and offensive/defensive efficiency",
+        "Rest and schedule workload",
+        "Venue and opponent-style interactions",
+        "Opponent-adjusted team strength"
+      ],
+      "latest_original_issue_summary": {
+        "all_original_live_issue_verified": false,
+        "distinct_games": 0,
+        "horizon_classes": {},
+        "issued_at_max": null,
+        "issued_at_min": null,
+        "nominal_T60_T120_issue_claim": false,
+        "rows": 0
+      }
+    },
+    "postseason_winner_accuracy_t120": {
+      "current_metrics": [
+        {
+          "actual_materialized_at_utc": null,
+          "completed_game_denominator": 0,
+          "evidence_class": "QUALIFIED_FIXED_FROZEN_STATE_RETROSPECTIVE_REPLAY_NOT_ISSUED",
+          "metrics": {},
+          "missing_games": 0,
+          "missing_reasons": {},
+          "promotion_allowed": false,
+          "scored_games": 0,
+          "state_origin": null,
+          "track": "CURRENT_FIXED_STATE_RETROSPECTIVE_REPLAY",
+          "training_cutoff_utc": null
+        },
+        {
+          "actual_materialized_at_utc": "2026-11-13T16:29:30.504048+00:00",
+          "completed_game_denominator": 0,
+          "evidence_class": "NEW_SEASON_FROZEN_REFRESH",
+          "metrics": {},
+          "missing_games": 0,
+          "missing_reasons": {},
+          "promotion_allowed": false,
+          "scored_games": 0,
+          "state_origin": "EXACT_COMMITTED_FROZEN_FIT_REUSE",
+          "track": "SEASON_FROZEN_LATER_MATERIALIZED_REFRESH",
+          "training_cutoff_utc": "2026-10-19T07:00:00+00:00"
+        }
+      ],
+      "detailed_player_or_live_market_features_claimed": false,
+      "feature_count": 63,
+      "feature_groups": [
+        "Team strength, home advantage and long-run scoring form",
+        "Recent form, residual variation and sample support",
+        "Offensive and defensive shooting, turnovers, rebounding and free-throw opportunities",
+        "Shot mix, finishing rates and shooting uncertainty",
+        "Pace and offensive/defensive efficiency",
+        "Rest and schedule workload",
+        "Venue and opponent-style interactions",
+        "Opponent-adjusted team strength"
+      ],
+      "latest_original_issue_summary": {
+        "all_original_live_issue_verified": false,
+        "distinct_games": 0,
+        "horizon_classes": {},
+        "issued_at_max": null,
+        "issued_at_min": null,
+        "nominal_T60_T120_issue_claim": false,
+        "rows": 0
+      }
+    },
+    "postseason_winner_accuracy_t60": {
+      "current_metrics": [
+        {
+          "actual_materialized_at_utc": null,
+          "completed_game_denominator": 0,
+          "evidence_class": "QUALIFIED_FIXED_FROZEN_STATE_RETROSPECTIVE_REPLAY_NOT_ISSUED",
+          "metrics": {},
+          "missing_games": 0,
+          "missing_reasons": {},
+          "promotion_allowed": false,
+          "scored_games": 0,
+          "state_origin": null,
+          "track": "CURRENT_FIXED_STATE_RETROSPECTIVE_REPLAY",
+          "training_cutoff_utc": null
+        },
+        {
+          "actual_materialized_at_utc": "2026-11-13T16:29:30.359157+00:00",
+          "completed_game_denominator": 0,
+          "evidence_class": "NEW_SEASON_FROZEN_REFRESH",
+          "metrics": {},
+          "missing_games": 0,
+          "missing_reasons": {},
+          "promotion_allowed": false,
+          "scored_games": 0,
+          "state_origin": "EXACT_COMMITTED_FROZEN_FIT_REUSE",
+          "track": "SEASON_FROZEN_LATER_MATERIALIZED_REFRESH",
+          "training_cutoff_utc": "2026-10-19T07:00:00+00:00"
+        }
+      ],
+      "detailed_player_or_live_market_features_claimed": false,
+      "feature_count": 26,
+      "feature_groups": [
+        "Team strength, home advantage and long-run scoring form",
+        "Recent form, residual variation and sample support",
+        "Shot mix, finishing rates and shooting uncertainty",
+        "Opponent-adjusted team strength"
+      ],
+      "latest_original_issue_summary": {
+        "all_original_live_issue_verified": false,
+        "distinct_games": 0,
+        "horizon_classes": {},
+        "issued_at_max": null,
+        "issued_at_min": null,
+        "nominal_T60_T120_issue_claim": false,
+        "rows": 0
+      }
+    },
+    "postseason_winner_brier_t120": {
+      "current_metrics": [
+        {
+          "actual_materialized_at_utc": null,
+          "completed_game_denominator": 0,
+          "evidence_class": "QUALIFIED_FIXED_FROZEN_STATE_RETROSPECTIVE_REPLAY_NOT_ISSUED",
+          "metrics": {},
+          "missing_games": 0,
+          "missing_reasons": {},
+          "promotion_allowed": false,
+          "scored_games": 0,
+          "state_origin": null,
+          "track": "CURRENT_FIXED_STATE_RETROSPECTIVE_REPLAY",
+          "training_cutoff_utc": null
+        },
+        {
+          "actual_materialized_at_utc": "2026-11-13T16:29:41.877760+00:00",
+          "completed_game_denominator": 0,
+          "evidence_class": "NEW_SEASON_FROZEN_REFRESH",
+          "metrics": {},
+          "missing_games": 0,
+          "missing_reasons": {},
+          "promotion_allowed": false,
+          "scored_games": 0,
+          "state_origin": "EXACT_COMMITTED_FROZEN_FIT_REUSE",
+          "track": "SEASON_FROZEN_LATER_MATERIALIZED_REFRESH",
+          "training_cutoff_utc": "2026-10-19T07:00:00+00:00"
+        }
+      ],
+      "detailed_player_or_live_market_features_claimed": false,
+      "feature_count": 66,
+      "feature_groups": [
+        "Offensive and defensive shooting, turnovers, rebounding and free-throw opportunities",
+        "Shot mix, finishing rates and shooting uncertainty",
+        "Pace and offensive/defensive efficiency",
+        "Venue and opponent-style interactions"
+      ],
+      "latest_original_issue_summary": {
+        "all_original_live_issue_verified": false,
+        "distinct_games": 0,
+        "horizon_classes": {},
+        "issued_at_max": null,
+        "issued_at_min": null,
+        "nominal_T60_T120_issue_claim": false,
+        "rows": 0
+      }
+    },
+    "postseason_winner_brier_t60": {
+      "current_metrics": [
+        {
+          "actual_materialized_at_utc": null,
+          "completed_game_denominator": 0,
+          "evidence_class": "QUALIFIED_FIXED_FROZEN_STATE_RETROSPECTIVE_REPLAY_NOT_ISSUED",
+          "metrics": {},
+          "missing_games": 0,
+          "missing_reasons": {},
+          "promotion_allowed": false,
+          "scored_games": 0,
+          "state_origin": null,
+          "track": "CURRENT_FIXED_STATE_RETROSPECTIVE_REPLAY",
+          "training_cutoff_utc": null
+        },
+        {
+          "actual_materialized_at_utc": "2026-11-13T16:29:41.867853+00:00",
+          "completed_game_denominator": 0,
+          "evidence_class": "NEW_SEASON_FROZEN_REFRESH",
+          "metrics": {},
+          "missing_games": 0,
+          "missing_reasons": {},
+          "promotion_allowed": false,
+          "scored_games": 0,
+          "state_origin": "EXACT_COMMITTED_FROZEN_FIT_REUSE",
+          "track": "SEASON_FROZEN_LATER_MATERIALIZED_REFRESH",
+          "training_cutoff_utc": "2026-10-19T07:00:00+00:00"
+        }
+      ],
+      "detailed_player_or_live_market_features_claimed": false,
+      "feature_count": 66,
+      "feature_groups": [
+        "Offensive and defensive shooting, turnovers, rebounding and free-throw opportunities",
+        "Shot mix, finishing rates and shooting uncertainty",
+        "Pace and offensive/defensive efficiency",
+        "Venue and opponent-style interactions"
+      ],
+      "latest_original_issue_summary": {
+        "all_original_live_issue_verified": false,
+        "distinct_games": 0,
+        "horizon_classes": {},
+        "issued_at_max": null,
+        "issued_at_min": null,
+        "nominal_T60_T120_issue_claim": false,
+        "rows": 0
+      }
+    },
+    "postseason_winner_log_loss_t120": {
+      "current_metrics": [
+        {
+          "actual_materialized_at_utc": null,
+          "completed_game_denominator": 0,
+          "evidence_class": "QUALIFIED_FIXED_FROZEN_STATE_RETROSPECTIVE_REPLAY_NOT_ISSUED",
+          "metrics": {},
+          "missing_games": 0,
+          "missing_reasons": {},
+          "promotion_allowed": false,
+          "scored_games": 0,
+          "state_origin": null,
+          "track": "CURRENT_FIXED_STATE_RETROSPECTIVE_REPLAY",
+          "training_cutoff_utc": null
+        },
+        {
+          "actual_materialized_at_utc": "2026-11-13T16:29:41.877760+00:00",
+          "completed_game_denominator": 0,
+          "evidence_class": "NEW_SEASON_FROZEN_REFRESH",
+          "metrics": {},
+          "missing_games": 0,
+          "missing_reasons": {},
+          "promotion_allowed": false,
+          "scored_games": 0,
+          "state_origin": "EXACT_COMMITTED_FROZEN_FIT_REUSE",
+          "track": "SEASON_FROZEN_LATER_MATERIALIZED_REFRESH",
+          "training_cutoff_utc": "2026-10-19T07:00:00+00:00"
+        }
+      ],
+      "detailed_player_or_live_market_features_claimed": false,
+      "feature_count": 66,
+      "feature_groups": [
+        "Offensive and defensive shooting, turnovers, rebounding and free-throw opportunities",
+        "Shot mix, finishing rates and shooting uncertainty",
+        "Pace and offensive/defensive efficiency",
+        "Venue and opponent-style interactions"
+      ],
+      "latest_original_issue_summary": {
+        "all_original_live_issue_verified": false,
+        "distinct_games": 0,
+        "horizon_classes": {},
+        "issued_at_max": null,
+        "issued_at_min": null,
+        "nominal_T60_T120_issue_claim": false,
+        "rows": 0
+      }
+    },
+    "postseason_winner_log_loss_t60": {
+      "current_metrics": [
+        {
+          "actual_materialized_at_utc": null,
+          "completed_game_denominator": 0,
+          "evidence_class": "QUALIFIED_FIXED_FROZEN_STATE_RETROSPECTIVE_REPLAY_NOT_ISSUED",
+          "metrics": {},
+          "missing_games": 0,
+          "missing_reasons": {},
+          "promotion_allowed": false,
+          "scored_games": 0,
+          "state_origin": null,
+          "track": "CURRENT_FIXED_STATE_RETROSPECTIVE_REPLAY",
+          "training_cutoff_utc": null
+        },
+        {
+          "actual_materialized_at_utc": "2026-11-13T16:29:41.867853+00:00",
+          "completed_game_denominator": 0,
+          "evidence_class": "NEW_SEASON_FROZEN_REFRESH",
+          "metrics": {},
+          "missing_games": 0,
+          "missing_reasons": {},
+          "promotion_allowed": false,
+          "scored_games": 0,
+          "state_origin": "EXACT_COMMITTED_FROZEN_FIT_REUSE",
+          "track": "SEASON_FROZEN_LATER_MATERIALIZED_REFRESH",
+          "training_cutoff_utc": "2026-10-19T07:00:00+00:00"
+        }
+      ],
+      "detailed_player_or_live_market_features_claimed": false,
+      "feature_count": 66,
+      "feature_groups": [
+        "Offensive and defensive shooting, turnovers, rebounding and free-throw opportunities",
+        "Shot mix, finishing rates and shooting uncertainty",
+        "Pace and offensive/defensive efficiency",
+        "Venue and opponent-style interactions"
+      ],
+      "latest_original_issue_summary": {
+        "all_original_live_issue_verified": false,
+        "distinct_games": 0,
+        "horizon_classes": {},
+        "issued_at_max": null,
+        "issued_at_min": null,
+        "nominal_T60_T120_issue_claim": false,
+        "rows": 0
+      }
+    },
+    "regular_margin_crps_t120": {
+      "current_metrics": [
+        {
+          "actual_materialized_at_utc": null,
+          "completed_game_denominator": 183,
+          "evidence_class": "QUALIFIED_FIXED_FROZEN_STATE_RETROSPECTIVE_REPLAY_NOT_ISSUED",
+          "metrics": {
+            "bias": 1.61486,
+            "crps_empirical_residual": null,
+            "games": 132,
+            "mae": 11.936822,
+            "rmse": 15.211523,
+            "weighted_interval_score": null
+          },
+          "missing_games": 51,
+          "missing_reasons": {
+            "NO_ELIGIBLE_EXACT_CURRENT_FEATURE_CONTEXT": 51
+          },
+          "promotion_allowed": false,
+          "scored_games": 132,
+          "state_origin": null,
+          "track": "CURRENT_FIXED_STATE_RETROSPECTIVE_REPLAY",
+          "training_cutoff_utc": null
+        },
+        {
+          "actual_materialized_at_utc": "2026-11-13T16:29:33.187142+00:00",
+          "completed_game_denominator": 183,
+          "evidence_class": "NEW_SEASON_FROZEN_REFRESH",
+          "metrics": {
+            "bias": 0.995782,
+            "crps_empirical_residual": null,
+            "games": 132,
+            "mae": 11.82398,
+            "rmse": 15.133148,
+            "weighted_interval_score": null
+          },
+          "missing_games": 51,
+          "missing_reasons": {
+            "NO_ELIGIBLE_EXACT_CURRENT_FEATURE_CONTEXT": 51
+          },
+          "promotion_allowed": false,
+          "scored_games": 132,
+          "state_origin": "EXACT_COMMITTED_FROZEN_FIT_REUSE",
+          "track": "SEASON_FROZEN_LATER_MATERIALIZED_REFRESH",
+          "training_cutoff_utc": "2026-10-19T07:00:00+00:00"
+        }
+      ],
+      "detailed_player_or_live_market_features_claimed": false,
+      "feature_count": 48,
+      "feature_groups": [
+        "Recent form, residual variation and sample support",
+        "Offensive and defensive shooting, turnovers, rebounding and free-throw opportunities",
+        "Shot mix, finishing rates and shooting uncertainty",
+        "Pace and offensive/defensive efficiency",
+        "Rest and schedule workload",
+        "Venue and opponent-style interactions"
+      ],
+      "latest_original_issue_summary": {
+        "all_original_live_issue_verified": true,
+        "distinct_games": 980,
+        "horizon_classes": {
+          "EARLY_OUTLOOK": 994
+        },
+        "issued_at_max": "2026-11-15T01:39:43.985780+00:00",
+        "issued_at_min": "2026-11-15T01:00:46.954096+00:00",
+        "nominal_T60_T120_issue_claim": false,
+        "rows": 994
+      }
+    },
+    "regular_margin_crps_t60": {
+      "current_metrics": [
+        {
+          "actual_materialized_at_utc": null,
+          "completed_game_denominator": 183,
+          "evidence_class": "QUALIFIED_FIXED_FROZEN_STATE_RETROSPECTIVE_REPLAY_NOT_ISSUED",
+          "metrics": {
+            "bias": 1.64418,
+            "crps_empirical_residual": null,
+            "games": 132,
+            "mae": 11.999473,
+            "rmse": 15.24789,
+            "weighted_interval_score": null
+          },
+          "missing_games": 51,
+          "missing_reasons": {
+            "NO_ELIGIBLE_EXACT_CURRENT_FEATURE_CONTEXT": 51
+          },
+          "promotion_allowed": false,
+          "scored_games": 132,
+          "state_origin": null,
+          "track": "CURRENT_FIXED_STATE_RETROSPECTIVE_REPLAY",
+          "training_cutoff_utc": null
+        },
+        {
+          "actual_materialized_at_utc": "2026-11-13T16:29:30.787292+00:00",
+          "completed_game_denominator": 183,
+          "evidence_class": "NEW_SEASON_FROZEN_REFRESH",
+          "metrics": {
+            "bias": 1.015822,
+            "crps_empirical_residual": null,
+            "games": 132,
+            "mae": 11.894588,
+            "rmse": 15.174266,
+            "weighted_interval_score": null
+          },
+          "missing_games": 51,
+          "missing_reasons": {
+            "NO_ELIGIBLE_EXACT_CURRENT_FEATURE_CONTEXT": 51
+          },
+          "promotion_allowed": false,
+          "scored_games": 132,
+          "state_origin": "EXACT_COMMITTED_FROZEN_FIT_REUSE",
+          "track": "SEASON_FROZEN_LATER_MATERIALIZED_REFRESH",
+          "training_cutoff_utc": "2026-10-19T07:00:00+00:00"
+        }
+      ],
+      "detailed_player_or_live_market_features_claimed": false,
+      "feature_count": 48,
+      "feature_groups": [
+        "Recent form, residual variation and sample support",
+        "Offensive and defensive shooting, turnovers, rebounding and free-throw opportunities",
+        "Shot mix, finishing rates and shooting uncertainty",
+        "Pace and offensive/defensive efficiency",
+        "Rest and schedule workload",
+        "Venue and opponent-style interactions"
+      ],
+      "latest_original_issue_summary": {
+        "all_original_live_issue_verified": true,
+        "distinct_games": 980,
+        "horizon_classes": {
+          "EARLY_OUTLOOK": 994
+        },
+        "issued_at_max": "2026-11-15T01:39:43.824544+00:00",
+        "issued_at_min": "2026-11-15T01:01:38.918254+00:00",
+        "nominal_T60_T120_issue_claim": false,
+        "rows": 994
+      }
+    },
+    "regular_margin_mae_t120": {
+      "current_metrics": [
+        {
+          "actual_materialized_at_utc": null,
+          "completed_game_denominator": 183,
+          "evidence_class": "QUALIFIED_FIXED_FROZEN_STATE_RETROSPECTIVE_REPLAY_NOT_ISSUED",
+          "metrics": {},
+          "missing_games": 183,
+          "missing_reasons": {
+            "AUTHENTICATED_B050_ORIGINAL_MODEL_BODY_NOT_LOCATED_OR_EXACT_STATE_ADAPTER_UNAVAILABLE": 183
+          },
+          "promotion_allowed": false,
+          "scored_games": 0,
+          "state_origin": null,
+          "track": "CURRENT_FIXED_STATE_RETROSPECTIVE_REPLAY",
+          "training_cutoff_utc": null
+        },
+        {
+          "actual_materialized_at_utc": null,
+          "completed_game_denominator": 183,
+          "evidence_class": "NEW_SEASON_FROZEN_REFRESH",
+          "metrics": {},
+          "missing_games": 183,
+          "missing_reasons": {
+            "EXACT_PRIOR_ONLY_CURRENT_ORIGIN_STATE_NOT_ADMITTED": 183
+          },
+          "promotion_allowed": false,
+          "scored_games": 0,
+          "state_origin": "EXACT_STATE_NOT_ADMITTED",
+          "track": "SEASON_FROZEN_LATER_MATERIALIZED_REFRESH",
+          "training_cutoff_utc": null
+        }
+      ],
+      "detailed_player_or_live_market_features_claimed": false,
+      "feature_count": null,
+      "feature_groups": [
+        "Registered basketball baseline components"
+      ],
+      "latest_original_issue_summary": {
+        "all_original_live_issue_verified": true,
+        "distinct_games": 980,
+        "horizon_classes": {
+          "EARLY_OUTLOOK": 994
+        },
+        "issued_at_max": "2026-11-15T01:40:49.942452+00:00",
+        "issued_at_min": "2026-11-15T01:00:44.002994+00:00",
+        "nominal_T60_T120_issue_claim": false,
+        "rows": 994
+      }
+    },
+    "regular_margin_mae_t60": {
+      "current_metrics": [
+        {
+          "actual_materialized_at_utc": null,
+          "completed_game_denominator": 183,
+          "evidence_class": "QUALIFIED_FIXED_FROZEN_STATE_RETROSPECTIVE_REPLAY_NOT_ISSUED",
+          "metrics": {},
+          "missing_games": 183,
+          "missing_reasons": {
+            "AUTHENTICATED_B050_ORIGINAL_MODEL_BODY_NOT_LOCATED_OR_EXACT_STATE_ADAPTER_UNAVAILABLE": 183
+          },
+          "promotion_allowed": false,
+          "scored_games": 0,
+          "state_origin": null,
+          "track": "CURRENT_FIXED_STATE_RETROSPECTIVE_REPLAY",
+          "training_cutoff_utc": null
+        },
+        {
+          "actual_materialized_at_utc": null,
+          "completed_game_denominator": 183,
+          "evidence_class": "NEW_SEASON_FROZEN_REFRESH",
+          "metrics": {},
+          "missing_games": 183,
+          "missing_reasons": {
+            "EXACT_PRIOR_ONLY_CURRENT_ORIGIN_STATE_NOT_ADMITTED": 183
+          },
+          "promotion_allowed": false,
+          "scored_games": 0,
+          "state_origin": "EXACT_STATE_NOT_ADMITTED",
+          "track": "SEASON_FROZEN_LATER_MATERIALIZED_REFRESH",
+          "training_cutoff_utc": null
+        }
+      ],
+      "detailed_player_or_live_market_features_claimed": false,
+      "feature_count": null,
+      "feature_groups": [
+        "Registered basketball baseline components"
+      ],
+      "latest_original_issue_summary": {
+        "all_original_live_issue_verified": true,
+        "distinct_games": 980,
+        "horizon_classes": {
+          "EARLY_OUTLOOK": 994
+        },
+        "issued_at_max": "2026-11-15T01:39:47.244828+00:00",
+        "issued_at_min": "2026-11-15T01:01:35.913441+00:00",
+        "nominal_T60_T120_issue_claim": false,
+        "rows": 994
+      }
+    },
+    "regular_margin_rmse_t120": {
+      "current_metrics": [
+        {
+          "actual_materialized_at_utc": null,
+          "completed_game_denominator": 183,
+          "evidence_class": "QUALIFIED_FIXED_FROZEN_STATE_RETROSPECTIVE_REPLAY_NOT_ISSUED",
+          "metrics": {},
+          "missing_games": 183,
+          "missing_reasons": {
+            "AUTHENTICATED_B050_ORIGINAL_MODEL_BODY_NOT_LOCATED_OR_EXACT_STATE_ADAPTER_UNAVAILABLE": 183
+          },
+          "promotion_allowed": false,
+          "scored_games": 0,
+          "state_origin": null,
+          "track": "CURRENT_FIXED_STATE_RETROSPECTIVE_REPLAY",
+          "training_cutoff_utc": null
+        },
+        {
+          "actual_materialized_at_utc": null,
+          "completed_game_denominator": 183,
+          "evidence_class": "NEW_SEASON_FROZEN_REFRESH",
+          "metrics": {},
+          "missing_games": 183,
+          "missing_reasons": {
+            "EXACT_PRIOR_ONLY_CURRENT_ORIGIN_STATE_NOT_ADMITTED": 183
+          },
+          "promotion_allowed": false,
+          "scored_games": 0,
+          "state_origin": "EXACT_STATE_NOT_ADMITTED",
+          "track": "SEASON_FROZEN_LATER_MATERIALIZED_REFRESH",
+          "training_cutoff_utc": null
+        }
+      ],
+      "detailed_player_or_live_market_features_claimed": false,
+      "feature_count": null,
+      "feature_groups": [
+        "Registered basketball baseline components"
+      ],
+      "latest_original_issue_summary": {
+        "all_original_live_issue_verified": true,
+        "distinct_games": 980,
+        "horizon_classes": {
+          "EARLY_OUTLOOK": 994
+        },
+        "issued_at_max": "2026-11-15T01:40:49.942452+00:00",
+        "issued_at_min": "2026-11-15T01:00:44.002994+00:00",
+        "nominal_T60_T120_issue_claim": false,
+        "rows": 994
+      }
+    },
+    "regular_margin_rmse_t60": {
+      "current_metrics": [
+        {
+          "actual_materialized_at_utc": null,
+          "completed_game_denominator": 183,
+          "evidence_class": "QUALIFIED_FIXED_FROZEN_STATE_RETROSPECTIVE_REPLAY_NOT_ISSUED",
+          "metrics": {},
+          "missing_games": 183,
+          "missing_reasons": {
+            "AUTHENTICATED_B050_ORIGINAL_MODEL_BODY_NOT_LOCATED_OR_EXACT_STATE_ADAPTER_UNAVAILABLE": 183
+          },
+          "promotion_allowed": false,
+          "scored_games": 0,
+          "state_origin": null,
+          "track": "CURRENT_FIXED_STATE_RETROSPECTIVE_REPLAY",
+          "training_cutoff_utc": null
+        },
+        {
+          "actual_materialized_at_utc": null,
+          "completed_game_denominator": 183,
+          "evidence_class": "NEW_SEASON_FROZEN_REFRESH",
+          "metrics": {},
+          "missing_games": 183,
+          "missing_reasons": {
+            "EXACT_PRIOR_ONLY_CURRENT_ORIGIN_STATE_NOT_ADMITTED": 183
+          },
+          "promotion_allowed": false,
+          "scored_games": 0,
+          "state_origin": "EXACT_STATE_NOT_ADMITTED",
+          "track": "SEASON_FROZEN_LATER_MATERIALIZED_REFRESH",
+          "training_cutoff_utc": null
+        }
+      ],
+      "detailed_player_or_live_market_features_claimed": false,
+      "feature_count": null,
+      "feature_groups": [
+        "Registered basketball baseline components"
+      ],
+      "latest_original_issue_summary": {
+        "all_original_live_issue_verified": true,
+        "distinct_games": 980,
+        "horizon_classes": {
+          "EARLY_OUTLOOK": 994
+        },
+        "issued_at_max": "2026-11-15T01:39:47.244828+00:00",
+        "issued_at_min": "2026-11-15T01:01:35.913441+00:00",
+        "nominal_T60_T120_issue_claim": false,
+        "rows": 994
+      }
+    },
+    "regular_margin_weighted_interval_score_t120": {
+      "current_metrics": [
+        {
+          "actual_materialized_at_utc": null,
+          "completed_game_denominator": 183,
+          "evidence_class": "QUALIFIED_FIXED_FROZEN_STATE_RETROSPECTIVE_REPLAY_NOT_ISSUED",
+          "metrics": {},
+          "missing_games": 183,
+          "missing_reasons": {
+            "AUTHENTICATED_B050_ORIGINAL_MODEL_BODY_NOT_LOCATED_OR_EXACT_STATE_ADAPTER_UNAVAILABLE": 183
+          },
+          "promotion_allowed": false,
+          "scored_games": 0,
+          "state_origin": null,
+          "track": "CURRENT_FIXED_STATE_RETROSPECTIVE_REPLAY",
+          "training_cutoff_utc": null
+        },
+        {
+          "actual_materialized_at_utc": null,
+          "completed_game_denominator": 183,
+          "evidence_class": "NEW_SEASON_FROZEN_REFRESH",
+          "metrics": {},
+          "missing_games": 183,
+          "missing_reasons": {
+            "EXACT_PRIOR_ONLY_CURRENT_ORIGIN_STATE_NOT_ADMITTED": 183
+          },
+          "promotion_allowed": false,
+          "scored_games": 0,
+          "state_origin": "EXACT_STATE_NOT_ADMITTED",
+          "track": "SEASON_FROZEN_LATER_MATERIALIZED_REFRESH",
+          "training_cutoff_utc": null
+        }
+      ],
+      "detailed_player_or_live_market_features_claimed": false,
+      "feature_count": null,
+      "feature_groups": [
+        "Registered basketball baseline components"
+      ],
+      "latest_original_issue_summary": {
+        "all_original_live_issue_verified": true,
+        "distinct_games": 980,
+        "horizon_classes": {
+          "EARLY_OUTLOOK": 994
+        },
+        "issued_at_max": "2026-11-15T01:40:49.942452+00:00",
+        "issued_at_min": "2026-11-15T01:00:44.002994+00:00",
+        "nominal_T60_T120_issue_claim": false,
+        "rows": 994
+      }
+    },
+    "regular_margin_weighted_interval_score_t60": {
+      "current_metrics": [
+        {
+          "actual_materialized_at_utc": null,
+          "completed_game_denominator": 183,
+          "evidence_class": "QUALIFIED_FIXED_FROZEN_STATE_RETROSPECTIVE_REPLAY_NOT_ISSUED",
+          "metrics": {},
+          "missing_games": 183,
+          "missing_reasons": {
+            "AUTHENTICATED_B050_ORIGINAL_MODEL_BODY_NOT_LOCATED_OR_EXACT_STATE_ADAPTER_UNAVAILABLE": 183
+          },
+          "promotion_allowed": false,
+          "scored_games": 0,
+          "state_origin": null,
+          "track": "CURRENT_FIXED_STATE_RETROSPECTIVE_REPLAY",
+          "training_cutoff_utc": null
+        },
+        {
+          "actual_materialized_at_utc": null,
+          "completed_game_denominator": 183,
+          "evidence_class": "NEW_SEASON_FROZEN_REFRESH",
+          "metrics": {},
+          "missing_games": 183,
+          "missing_reasons": {
+            "EXACT_PRIOR_ONLY_CURRENT_ORIGIN_STATE_NOT_ADMITTED": 183
+          },
+          "promotion_allowed": false,
+          "scored_games": 0,
+          "state_origin": "EXACT_STATE_NOT_ADMITTED",
+          "track": "SEASON_FROZEN_LATER_MATERIALIZED_REFRESH",
+          "training_cutoff_utc": null
+        }
+      ],
+      "detailed_player_or_live_market_features_claimed": false,
+      "feature_count": null,
+      "feature_groups": [
+        "Registered basketball baseline components"
+      ],
+      "latest_original_issue_summary": {
+        "all_original_live_issue_verified": true,
+        "distinct_games": 980,
+        "horizon_classes": {
+          "EARLY_OUTLOOK": 994
+        },
+        "issued_at_max": "2026-11-15T01:39:47.244828+00:00",
+        "issued_at_min": "2026-11-15T01:01:35.913441+00:00",
+        "nominal_T60_T120_issue_claim": false,
+        "rows": 994
+      }
+    },
+    "regular_total_crps_t120": {
+      "current_metrics": [
+        {
+          "actual_materialized_at_utc": null,
+          "completed_game_denominator": 183,
+          "evidence_class": "QUALIFIED_FIXED_FROZEN_STATE_RETROSPECTIVE_REPLAY_NOT_ISSUED",
+          "metrics": {
+            "bias": 2.060209,
+            "crps_empirical_residual": null,
+            "games": 132,
+            "mae": 15.064098,
+            "rmse": 18.943078,
+            "weighted_interval_score": null
+          },
+          "missing_games": 51,
+          "missing_reasons": {
+            "NO_ELIGIBLE_EXACT_CURRENT_FEATURE_CONTEXT": 51
+          },
+          "promotion_allowed": false,
+          "scored_games": 132,
+          "state_origin": null,
+          "track": "CURRENT_FIXED_STATE_RETROSPECTIVE_REPLAY",
+          "training_cutoff_utc": null
+        },
+        {
+          "actual_materialized_at_utc": "2026-11-13T16:29:36.097730+00:00",
+          "completed_game_denominator": 183,
+          "evidence_class": "NEW_SEASON_FROZEN_REFRESH",
+          "metrics": {
+            "bias": 3.100785,
+            "crps_empirical_residual": null,
+            "games": 132,
+            "mae": 15.076984,
+            "rmse": 18.928477,
+            "weighted_interval_score": null
+          },
+          "missing_games": 51,
+          "missing_reasons": {
+            "NO_ELIGIBLE_EXACT_CURRENT_FEATURE_CONTEXT": 51
+          },
+          "promotion_allowed": false,
+          "scored_games": 132,
+          "state_origin": "EXACT_COMMITTED_FROZEN_FIT_REUSE",
+          "track": "SEASON_FROZEN_LATER_MATERIALIZED_REFRESH",
+          "training_cutoff_utc": "2026-10-19T07:00:00+00:00"
+        }
+      ],
+      "detailed_player_or_live_market_features_claimed": false,
+      "feature_count": 63,
+      "feature_groups": [
+        "Team strength, home advantage and long-run scoring form",
+        "Recent form, residual variation and sample support",
+        "Offensive and defensive shooting, turnovers, rebounding and free-throw opportunities",
+        "Shot mix, finishing rates and shooting uncertainty",
+        "Pace and offensive/defensive efficiency",
+        "Rest and schedule workload",
+        "Venue and opponent-style interactions",
+        "Opponent-adjusted team strength"
+      ],
+      "latest_original_issue_summary": {
+        "all_original_live_issue_verified": true,
+        "distinct_games": 980,
+        "horizon_classes": {
+          "EARLY_OUTLOOK": 994
+        },
+        "issued_at_max": "2026-11-15T01:40:49.196898+00:00",
+        "issued_at_min": "2026-11-15T01:01:18.823950+00:00",
+        "nominal_T60_T120_issue_claim": false,
+        "rows": 994
+      }
+    },
+    "regular_total_crps_t60": {
+      "current_metrics": [
+        {
+          "actual_materialized_at_utc": null,
+          "completed_game_denominator": 183,
+          "evidence_class": "QUALIFIED_FIXED_FROZEN_STATE_RETROSPECTIVE_REPLAY_NOT_ISSUED",
+          "metrics": {
+            "bias": 1.289119,
+            "crps_empirical_residual": null,
+            "games": 132,
+            "mae": 14.74578,
+            "rmse": 18.7094,
+            "weighted_interval_score": null
+          },
+          "missing_games": 51,
+          "missing_reasons": {
+            "NO_ELIGIBLE_EXACT_CURRENT_FEATURE_CONTEXT": 51
+          },
+          "promotion_allowed": false,
+          "scored_games": 132,
+          "state_origin": null,
+          "track": "CURRENT_FIXED_STATE_RETROSPECTIVE_REPLAY",
+          "training_cutoff_utc": null
+        },
+        {
+          "actual_materialized_at_utc": "2026-11-13T16:29:34.988607+00:00",
+          "completed_game_denominator": 183,
+          "evidence_class": "NEW_SEASON_FROZEN_REFRESH",
+          "metrics": {
+            "bias": 2.229034,
+            "crps_empirical_residual": null,
+            "games": 132,
+            "mae": 15.032981,
+            "rmse": 18.977496,
+            "weighted_interval_score": null
+          },
+          "missing_games": 51,
+          "missing_reasons": {
+            "NO_ELIGIBLE_EXACT_CURRENT_FEATURE_CONTEXT": 51
+          },
+          "promotion_allowed": false,
+          "scored_games": 132,
+          "state_origin": "EXACT_COMMITTED_FROZEN_FIT_REUSE",
+          "track": "SEASON_FROZEN_LATER_MATERIALIZED_REFRESH",
+          "training_cutoff_utc": "2026-10-19T07:00:00+00:00"
+        }
+      ],
+      "detailed_player_or_live_market_features_claimed": false,
+      "feature_count": 63,
+      "feature_groups": [
+        "Team strength, home advantage and long-run scoring form",
+        "Recent form, residual variation and sample support",
+        "Offensive and defensive shooting, turnovers, rebounding and free-throw opportunities",
+        "Shot mix, finishing rates and shooting uncertainty",
+        "Pace and offensive/defensive efficiency",
+        "Rest and schedule workload",
+        "Venue and opponent-style interactions",
+        "Opponent-adjusted team strength"
+      ],
+      "latest_original_issue_summary": {
+        "all_original_live_issue_verified": true,
+        "distinct_games": 980,
+        "horizon_classes": {
+          "EARLY_OUTLOOK": 994
+        },
+        "issued_at_max": "2026-11-15T01:40:45.234146+00:00",
+        "issued_at_min": "2026-11-15T01:02:08.341048+00:00",
+        "nominal_T60_T120_issue_claim": false,
+        "rows": 994
+      }
+    },
+    "regular_total_mae_t120": {
+      "current_metrics": [
+        {
+          "actual_materialized_at_utc": null,
+          "completed_game_denominator": 183,
+          "evidence_class": "QUALIFIED_FIXED_FROZEN_STATE_RETROSPECTIVE_REPLAY_NOT_ISSUED",
+          "metrics": {
+            "bias": 0.864473,
+            "crps_empirical_residual": null,
+            "games": 132,
+            "mae": 14.709124,
+            "rmse": 18.675525,
+            "weighted_interval_score": null
+          },
+          "missing_games": 51,
+          "missing_reasons": {
+            "NO_ELIGIBLE_EXACT_CURRENT_FEATURE_CONTEXT": 51
+          },
+          "promotion_allowed": false,
+          "scored_games": 132,
+          "state_origin": null,
+          "track": "CURRENT_FIXED_STATE_RETROSPECTIVE_REPLAY",
+          "training_cutoff_utc": null
+        },
+        {
+          "actual_materialized_at_utc": "2026-11-13T16:29:38.415784+00:00",
+          "completed_game_denominator": 183,
+          "evidence_class": "NEW_SEASON_FROZEN_REFRESH",
+          "metrics": {
+            "bias": 2.425734,
+            "crps_empirical_residual": null,
+            "games": 132,
+            "mae": 14.97077,
+            "rmse": 18.899864,
+            "weighted_interval_score": null
+          },
+          "missing_games": 51,
+          "missing_reasons": {
+            "NO_ELIGIBLE_EXACT_CURRENT_FEATURE_CONTEXT": 51
+          },
+          "promotion_allowed": false,
+          "scored_games": 132,
+          "state_origin": "EXACT_COMMITTED_FROZEN_FIT_REUSE",
+          "track": "SEASON_FROZEN_LATER_MATERIALIZED_REFRESH",
+          "training_cutoff_utc": "2026-10-19T07:00:00+00:00"
+        }
+      ],
+      "detailed_player_or_live_market_features_claimed": false,
+      "feature_count": null,
+      "feature_groups": [
+        "Registered basketball baseline components"
+      ],
+      "latest_original_issue_summary": {
+        "all_original_live_issue_verified": true,
+        "distinct_games": 980,
+        "horizon_classes": {
+          "EARLY_OUTLOOK": 994
+        },
+        "issued_at_max": "2026-11-15T01:41:39.958158+00:00",
+        "issued_at_min": "2026-11-15T01:01:14.168800+00:00",
+        "nominal_T60_T120_issue_claim": false,
+        "rows": 994
+      }
+    },
+    "regular_total_mae_t60": {
+      "current_metrics": [
+        {
+          "actual_materialized_at_utc": null,
+          "completed_game_denominator": 183,
+          "evidence_class": "QUALIFIED_FIXED_FROZEN_STATE_RETROSPECTIVE_REPLAY_NOT_ISSUED",
+          "metrics": {
+            "bias": 1.082983,
+            "crps_empirical_residual": null,
+            "games": 132,
+            "mae": 14.782408,
+            "rmse": 18.727091,
+            "weighted_interval_score": null
+          },
+          "missing_games": 51,
+          "missing_reasons": {
+            "NO_ELIGIBLE_EXACT_CURRENT_FEATURE_CONTEXT": 51
+          },
+          "promotion_allowed": false,
+          "scored_games": 132,
+          "state_origin": null,
+          "track": "CURRENT_FIXED_STATE_RETROSPECTIVE_REPLAY",
+          "training_cutoff_utc": null
+        },
+        {
+          "actual_materialized_at_utc": "2026-11-13T16:29:40.730426+00:00",
+          "completed_game_denominator": 183,
+          "evidence_class": "NEW_SEASON_FROZEN_REFRESH",
+          "metrics": {
+            "bias": 2.284236,
+            "crps_empirical_residual": null,
+            "games": 132,
+            "mae": 15.064522,
+            "rmse": 18.985775,
+            "weighted_interval_score": null
+          },
+          "missing_games": 51,
+          "missing_reasons": {
+            "NO_ELIGIBLE_EXACT_CURRENT_FEATURE_CONTEXT": 51
+          },
+          "promotion_allowed": false,
+          "scored_games": 132,
+          "state_origin": "EXACT_COMMITTED_FROZEN_FIT_REUSE",
+          "track": "SEASON_FROZEN_LATER_MATERIALIZED_REFRESH",
+          "training_cutoff_utc": "2026-10-19T07:00:00+00:00"
+        }
+      ],
+      "detailed_player_or_live_market_features_claimed": false,
+      "feature_count": null,
+      "feature_groups": [
+        "Registered basketball baseline components"
+      ],
+      "latest_original_issue_summary": {
+        "all_original_live_issue_verified": true,
+        "distinct_games": 980,
+        "horizon_classes": {
+          "EARLY_OUTLOOK": 994
+        },
+        "issued_at_max": "2026-11-15T01:40:36.726655+00:00",
+        "issued_at_min": "2026-11-15T01:01:57.819404+00:00",
+        "nominal_T60_T120_issue_claim": false,
+        "rows": 994
+      }
+    },
+    "regular_total_rmse_t120": {
+      "current_metrics": [
+        {
+          "actual_materialized_at_utc": null,
+          "completed_game_denominator": 183,
+          "evidence_class": "QUALIFIED_FIXED_FROZEN_STATE_RETROSPECTIVE_REPLAY_NOT_ISSUED",
+          "metrics": {
+            "bias": 2.060209,
+            "crps_empirical_residual": null,
+            "games": 132,
+            "mae": 15.064098,
+            "rmse": 18.943078,
+            "weighted_interval_score": null
+          },
+          "missing_games": 51,
+          "missing_reasons": {
+            "NO_ELIGIBLE_EXACT_CURRENT_FEATURE_CONTEXT": 51
+          },
+          "promotion_allowed": false,
+          "scored_games": 132,
+          "state_origin": null,
+          "track": "CURRENT_FIXED_STATE_RETROSPECTIVE_REPLAY",
+          "training_cutoff_utc": null
+        },
+        {
+          "actual_materialized_at_utc": "2026-11-13T16:29:36.097730+00:00",
+          "completed_game_denominator": 183,
+          "evidence_class": "NEW_SEASON_FROZEN_REFRESH",
+          "metrics": {
+            "bias": 3.100785,
+            "crps_empirical_residual": null,
+            "games": 132,
+            "mae": 15.076984,
+            "rmse": 18.928477,
+            "weighted_interval_score": null
+          },
+          "missing_games": 51,
+          "missing_reasons": {
+            "NO_ELIGIBLE_EXACT_CURRENT_FEATURE_CONTEXT": 51
+          },
+          "promotion_allowed": false,
+          "scored_games": 132,
+          "state_origin": "EXACT_COMMITTED_FROZEN_FIT_REUSE",
+          "track": "SEASON_FROZEN_LATER_MATERIALIZED_REFRESH",
+          "training_cutoff_utc": "2026-10-19T07:00:00+00:00"
+        }
+      ],
+      "detailed_player_or_live_market_features_claimed": false,
+      "feature_count": 63,
+      "feature_groups": [
+        "Team strength, home advantage and long-run scoring form",
+        "Recent form, residual variation and sample support",
+        "Offensive and defensive shooting, turnovers, rebounding and free-throw opportunities",
+        "Shot mix, finishing rates and shooting uncertainty",
+        "Pace and offensive/defensive efficiency",
+        "Rest and schedule workload",
+        "Venue and opponent-style interactions",
+        "Opponent-adjusted team strength"
+      ],
+      "latest_original_issue_summary": {
+        "all_original_live_issue_verified": true,
+        "distinct_games": 980,
+        "horizon_classes": {
+          "EARLY_OUTLOOK": 994
+        },
+        "issued_at_max": "2026-11-15T01:40:49.196898+00:00",
+        "issued_at_min": "2026-11-15T01:01:18.823950+00:00",
+        "nominal_T60_T120_issue_claim": false,
+        "rows": 994
+      }
+    },
+    "regular_total_rmse_t60": {
+      "current_metrics": [
+        {
+          "actual_materialized_at_utc": null,
+          "completed_game_denominator": 183,
+          "evidence_class": "QUALIFIED_FIXED_FROZEN_STATE_RETROSPECTIVE_REPLAY_NOT_ISSUED",
+          "metrics": {
+            "bias": 0.938367,
+            "crps_empirical_residual": null,
+            "games": 132,
+            "mae": 14.765512,
+            "rmse": 18.706388,
+            "weighted_interval_score": null
+          },
+          "missing_games": 51,
+          "missing_reasons": {
+            "NO_ELIGIBLE_EXACT_CURRENT_FEATURE_CONTEXT": 51
+          },
+          "promotion_allowed": false,
+          "scored_games": 132,
+          "state_origin": null,
+          "track": "CURRENT_FIXED_STATE_RETROSPECTIVE_REPLAY",
+          "training_cutoff_utc": null
+        },
+        {
+          "actual_materialized_at_utc": "2026-11-13T16:29:40.730426+00:00",
+          "completed_game_denominator": 183,
+          "evidence_class": "NEW_SEASON_FROZEN_REFRESH",
+          "metrics": {
+            "bias": 2.252593,
+            "crps_empirical_residual": null,
+            "games": 132,
+            "mae": 15.081773,
+            "rmse": 19.015055,
+            "weighted_interval_score": null
+          },
+          "missing_games": 51,
+          "missing_reasons": {
+            "NO_ELIGIBLE_EXACT_CURRENT_FEATURE_CONTEXT": 51
+          },
+          "promotion_allowed": false,
+          "scored_games": 132,
+          "state_origin": "EXACT_COMMITTED_FROZEN_FIT_REUSE",
+          "track": "SEASON_FROZEN_LATER_MATERIALIZED_REFRESH",
+          "training_cutoff_utc": "2026-10-19T07:00:00+00:00"
+        }
+      ],
+      "detailed_player_or_live_market_features_claimed": false,
+      "feature_count": null,
+      "feature_groups": [
+        "Registered basketball baseline components"
+      ],
+      "latest_original_issue_summary": {
+        "all_original_live_issue_verified": true,
+        "distinct_games": 980,
+        "horizon_classes": {
+          "EARLY_OUTLOOK": 994
+        },
+        "issued_at_max": "2026-11-15T01:40:36.243747+00:00",
+        "issued_at_min": "2026-11-15T01:02:05.634954+00:00",
+        "nominal_T60_T120_issue_claim": false,
+        "rows": 994
+      }
+    },
+    "regular_total_weighted_interval_score_t120": {
+      "current_metrics": [
+        {
+          "actual_materialized_at_utc": null,
+          "completed_game_denominator": 183,
+          "evidence_class": "QUALIFIED_FIXED_FROZEN_STATE_RETROSPECTIVE_REPLAY_NOT_ISSUED",
+          "metrics": {
+            "bias": 2.060209,
+            "crps_empirical_residual": null,
+            "games": 132,
+            "mae": 15.064098,
+            "rmse": 18.943078,
+            "weighted_interval_score": null
+          },
+          "missing_games": 51,
+          "missing_reasons": {
+            "NO_ELIGIBLE_EXACT_CURRENT_FEATURE_CONTEXT": 51
+          },
+          "promotion_allowed": false,
+          "scored_games": 132,
+          "state_origin": null,
+          "track": "CURRENT_FIXED_STATE_RETROSPECTIVE_REPLAY",
+          "training_cutoff_utc": null
+        },
+        {
+          "actual_materialized_at_utc": "2026-11-13T16:29:36.097730+00:00",
+          "completed_game_denominator": 183,
+          "evidence_class": "NEW_SEASON_FROZEN_REFRESH",
+          "metrics": {
+            "bias": 3.100785,
+            "crps_empirical_residual": null,
+            "games": 132,
+            "mae": 15.076984,
+            "rmse": 18.928477,
+            "weighted_interval_score": null
+          },
+          "missing_games": 51,
+          "missing_reasons": {
+            "NO_ELIGIBLE_EXACT_CURRENT_FEATURE_CONTEXT": 51
+          },
+          "promotion_allowed": false,
+          "scored_games": 132,
+          "state_origin": "EXACT_COMMITTED_FROZEN_FIT_REUSE",
+          "track": "SEASON_FROZEN_LATER_MATERIALIZED_REFRESH",
+          "training_cutoff_utc": "2026-10-19T07:00:00+00:00"
+        }
+      ],
+      "detailed_player_or_live_market_features_claimed": false,
+      "feature_count": 63,
+      "feature_groups": [
+        "Team strength, home advantage and long-run scoring form",
+        "Recent form, residual variation and sample support",
+        "Offensive and defensive shooting, turnovers, rebounding and free-throw opportunities",
+        "Shot mix, finishing rates and shooting uncertainty",
+        "Pace and offensive/defensive efficiency",
+        "Rest and schedule workload",
+        "Venue and opponent-style interactions",
+        "Opponent-adjusted team strength"
+      ],
+      "latest_original_issue_summary": {
+        "all_original_live_issue_verified": true,
+        "distinct_games": 980,
+        "horizon_classes": {
+          "EARLY_OUTLOOK": 994
+        },
+        "issued_at_max": "2026-11-15T01:40:49.196898+00:00",
+        "issued_at_min": "2026-11-15T01:01:18.823950+00:00",
+        "nominal_T60_T120_issue_claim": false,
+        "rows": 994
+      }
+    },
+    "regular_total_weighted_interval_score_t60": {
+      "current_metrics": [
+        {
+          "actual_materialized_at_utc": null,
+          "completed_game_denominator": 183,
+          "evidence_class": "QUALIFIED_FIXED_FROZEN_STATE_RETROSPECTIVE_REPLAY_NOT_ISSUED",
+          "metrics": {
+            "bias": 1.289119,
+            "crps_empirical_residual": null,
+            "games": 132,
+            "mae": 14.74578,
+            "rmse": 18.7094,
+            "weighted_interval_score": null
+          },
+          "missing_games": 51,
+          "missing_reasons": {
+            "NO_ELIGIBLE_EXACT_CURRENT_FEATURE_CONTEXT": 51
+          },
+          "promotion_allowed": false,
+          "scored_games": 132,
+          "state_origin": null,
+          "track": "CURRENT_FIXED_STATE_RETROSPECTIVE_REPLAY",
+          "training_cutoff_utc": null
+        },
+        {
+          "actual_materialized_at_utc": "2026-11-13T16:29:34.988607+00:00",
+          "completed_game_denominator": 183,
+          "evidence_class": "NEW_SEASON_FROZEN_REFRESH",
+          "metrics": {
+            "bias": 2.229034,
+            "crps_empirical_residual": null,
+            "games": 132,
+            "mae": 15.032981,
+            "rmse": 18.977496,
+            "weighted_interval_score": null
+          },
+          "missing_games": 51,
+          "missing_reasons": {
+            "NO_ELIGIBLE_EXACT_CURRENT_FEATURE_CONTEXT": 51
+          },
+          "promotion_allowed": false,
+          "scored_games": 132,
+          "state_origin": "EXACT_COMMITTED_FROZEN_FIT_REUSE",
+          "track": "SEASON_FROZEN_LATER_MATERIALIZED_REFRESH",
+          "training_cutoff_utc": "2026-10-19T07:00:00+00:00"
+        }
+      ],
+      "detailed_player_or_live_market_features_claimed": false,
+      "feature_count": 63,
+      "feature_groups": [
+        "Team strength, home advantage and long-run scoring form",
+        "Recent form, residual variation and sample support",
+        "Offensive and defensive shooting, turnovers, rebounding and free-throw opportunities",
+        "Shot mix, finishing rates and shooting uncertainty",
+        "Pace and offensive/defensive efficiency",
+        "Rest and schedule workload",
+        "Venue and opponent-style interactions",
+        "Opponent-adjusted team strength"
+      ],
+      "latest_original_issue_summary": {
+        "all_original_live_issue_verified": true,
+        "distinct_games": 980,
+        "horizon_classes": {
+          "EARLY_OUTLOOK": 994
+        },
+        "issued_at_max": "2026-11-15T01:40:45.234146+00:00",
+        "issued_at_min": "2026-11-15T01:02:08.341048+00:00",
+        "nominal_T60_T120_issue_claim": false,
+        "rows": 994
+      }
+    },
+    "regular_winner_accuracy_t120": {
+      "current_metrics": [
+        {
+          "actual_materialized_at_utc": null,
+          "completed_game_denominator": 183,
+          "evidence_class": "QUALIFIED_FIXED_FROZEN_STATE_RETROSPECTIVE_REPLAY_NOT_ISSUED",
+          "metrics": {
+            "accuracy": 0.681818,
+            "brier": 0.209591,
+            "ece_10_bins": 0.121255,
+            "games": 132,
+            "log_loss": 0.604245,
+            "roc_auc": 0.735524
+          },
+          "missing_games": 51,
+          "missing_reasons": {
+            "NO_ELIGIBLE_EXACT_CURRENT_FEATURE_CONTEXT": 51
+          },
+          "promotion_allowed": false,
+          "scored_games": 132,
+          "state_origin": null,
+          "track": "CURRENT_FIXED_STATE_RETROSPECTIVE_REPLAY",
+          "training_cutoff_utc": null
+        },
+        {
+          "actual_materialized_at_utc": "2026-11-13T16:29:41.837466+00:00",
+          "completed_game_denominator": 183,
+          "evidence_class": "NEW_SEASON_FROZEN_REFRESH",
+          "metrics": {
+            "accuracy": 0.681818,
+            "brier": 0.213864,
+            "ece_10_bins": 0.134644,
+            "games": 132,
+            "log_loss": 0.613528,
+            "roc_auc": 0.722886
+          },
+          "missing_games": 51,
+          "missing_reasons": {
+            "NO_ELIGIBLE_EXACT_CURRENT_FEATURE_CONTEXT": 51
+          },
+          "promotion_allowed": false,
+          "scored_games": 132,
+          "state_origin": "EXACT_COMMITTED_FROZEN_FIT_REUSE",
+          "track": "SEASON_FROZEN_LATER_MATERIALIZED_REFRESH",
+          "training_cutoff_utc": "2026-10-19T07:00:00+00:00"
+        }
+      ],
+      "detailed_player_or_live_market_features_claimed": false,
+      "feature_count": 63,
+      "feature_groups": [
+        "Team strength, home advantage and long-run scoring form",
+        "Recent form, residual variation and sample support",
+        "Offensive and defensive shooting, turnovers, rebounding and free-throw opportunities",
+        "Shot mix, finishing rates and shooting uncertainty",
+        "Pace and offensive/defensive efficiency",
+        "Rest and schedule workload",
+        "Venue and opponent-style interactions",
+        "Opponent-adjusted team strength"
+      ],
+      "latest_original_issue_summary": {
+        "all_original_live_issue_verified": true,
+        "distinct_games": 980,
+        "horizon_classes": {
+          "EARLY_OUTLOOK": 994
+        },
+        "issued_at_max": "2026-11-15T01:38:44.045131+00:00",
+        "issued_at_min": "2026-11-15T01:00:06.680872+00:00",
+        "nominal_T60_T120_issue_claim": false,
+        "rows": 994
+      }
+    },
+    "regular_winner_accuracy_t60": {
+      "current_metrics": [
+        {
+          "actual_materialized_at_utc": null,
+          "completed_game_denominator": 183,
+          "evidence_class": "QUALIFIED_FIXED_FROZEN_STATE_RETROSPECTIVE_REPLAY_NOT_ISSUED",
+          "metrics": {
+            "accuracy": 0.651515,
+            "brier": 0.215627,
+            "ece_10_bins": 0.093156,
+            "games": 132,
+            "log_loss": 0.617517,
+            "roc_auc": 0.717142
+          },
+          "missing_games": 51,
+          "missing_reasons": {
+            "NO_ELIGIBLE_EXACT_CURRENT_FEATURE_CONTEXT": 51
+          },
+          "promotion_allowed": false,
+          "scored_games": 132,
+          "state_origin": null,
+          "track": "CURRENT_FIXED_STATE_RETROSPECTIVE_REPLAY",
+          "training_cutoff_utc": null
+        },
+        {
+          "actual_materialized_at_utc": "2026-11-13T16:29:41.818583+00:00",
+          "completed_game_denominator": 183,
+          "evidence_class": "NEW_SEASON_FROZEN_REFRESH",
+          "metrics": {
+            "accuracy": 0.659091,
+            "brier": 0.215441,
+            "ece_10_bins": 0.094154,
+            "games": 132,
+            "log_loss": 0.617121,
+            "roc_auc": 0.723805
+          },
+          "missing_games": 51,
+          "missing_reasons": {
+            "NO_ELIGIBLE_EXACT_CURRENT_FEATURE_CONTEXT": 51
+          },
+          "promotion_allowed": false,
+          "scored_games": 132,
+          "state_origin": "EXACT_COMMITTED_FROZEN_FIT_REUSE",
+          "track": "SEASON_FROZEN_LATER_MATERIALIZED_REFRESH",
+          "training_cutoff_utc": "2026-10-19T07:00:00+00:00"
+        }
+      ],
+      "detailed_player_or_live_market_features_claimed": false,
+      "feature_count": 63,
+      "feature_groups": [
+        "Team strength, home advantage and long-run scoring form",
+        "Recent form, residual variation and sample support",
+        "Offensive and defensive shooting, turnovers, rebounding and free-throw opportunities",
+        "Shot mix, finishing rates and shooting uncertainty",
+        "Pace and offensive/defensive efficiency",
+        "Rest and schedule workload",
+        "Venue and opponent-style interactions",
+        "Opponent-adjusted team strength"
+      ],
+      "latest_original_issue_summary": {
+        "all_original_live_issue_verified": true,
+        "distinct_games": 980,
+        "horizon_classes": {
+          "EARLY_OUTLOOK": 994
+        },
+        "issued_at_max": "2026-11-15T01:38:44.122233+00:00",
+        "issued_at_min": "2026-11-15T01:01:22.487581+00:00",
+        "nominal_T60_T120_issue_claim": false,
+        "rows": 994
+      }
+    },
+    "regular_winner_brier_t120": {
+      "current_metrics": [
+        {
+          "actual_materialized_at_utc": null,
+          "completed_game_denominator": 183,
+          "evidence_class": "QUALIFIED_FIXED_FROZEN_STATE_RETROSPECTIVE_REPLAY_NOT_ISSUED",
+          "metrics": {},
+          "missing_games": 183,
+          "missing_reasons": {
+            "AUTHENTICATED_B050_ORIGINAL_MODEL_BODY_NOT_LOCATED_OR_EXACT_STATE_ADAPTER_UNAVAILABLE": 183
+          },
+          "promotion_allowed": false,
+          "scored_games": 0,
+          "state_origin": null,
+          "track": "CURRENT_FIXED_STATE_RETROSPECTIVE_REPLAY",
+          "training_cutoff_utc": null
+        },
+        {
+          "actual_materialized_at_utc": null,
+          "completed_game_denominator": 183,
+          "evidence_class": "NEW_SEASON_FROZEN_REFRESH",
+          "metrics": {},
+          "missing_games": 183,
+          "missing_reasons": {
+            "EXACT_PRIOR_ONLY_CURRENT_ORIGIN_STATE_NOT_ADMITTED": 183
+          },
+          "promotion_allowed": false,
+          "scored_games": 0,
+          "state_origin": "EXACT_STATE_NOT_ADMITTED",
+          "track": "SEASON_FROZEN_LATER_MATERIALIZED_REFRESH",
+          "training_cutoff_utc": null
+        }
+      ],
+      "detailed_player_or_live_market_features_claimed": false,
+      "feature_count": null,
+      "feature_groups": [
+        "Registered basketball baseline components"
+      ],
+      "latest_original_issue_summary": {
+        "all_original_live_issue_verified": true,
+        "distinct_games": 980,
+        "horizon_classes": {
+          "EARLY_OUTLOOK": 994
+        },
+        "issued_at_max": "2026-11-15T01:38:45.080761+00:00",
+        "issued_at_min": "2026-11-15T01:00:17.005862+00:00",
+        "nominal_T60_T120_issue_claim": false,
+        "rows": 994
+      }
+    },
+    "regular_winner_brier_t60": {
+      "current_metrics": [
+        {
+          "actual_materialized_at_utc": null,
+          "completed_game_denominator": 183,
+          "evidence_class": "QUALIFIED_FIXED_FROZEN_STATE_RETROSPECTIVE_REPLAY_NOT_ISSUED",
+          "metrics": {
+            "accuracy": 0.659091,
+            "brier": 0.215774,
+            "ece_10_bins": 0.074124,
+            "games": 132,
+            "log_loss": 0.617819,
+            "roc_auc": 0.711167
+          },
+          "missing_games": 51,
+          "missing_reasons": {
+            "NO_ELIGIBLE_EXACT_CURRENT_FEATURE_CONTEXT": 51
+          },
+          "promotion_allowed": false,
+          "scored_games": 132,
+          "state_origin": null,
+          "track": "CURRENT_FIXED_STATE_RETROSPECTIVE_REPLAY",
+          "training_cutoff_utc": null
+        },
+        {
+          "actual_materialized_at_utc": "2026-11-13T16:29:41.828111+00:00",
+          "completed_game_denominator": 183,
+          "evidence_class": "NEW_SEASON_FROZEN_REFRESH",
+          "metrics": {
+            "accuracy": 0.651515,
+            "brier": 0.215864,
+            "ece_10_bins": 0.068881,
+            "games": 132,
+            "log_loss": 0.617847,
+            "roc_auc": 0.713695
+          },
+          "missing_games": 51,
+          "missing_reasons": {
+            "NO_ELIGIBLE_EXACT_CURRENT_FEATURE_CONTEXT": 51
+          },
+          "promotion_allowed": false,
+          "scored_games": 132,
+          "state_origin": "EXACT_COMMITTED_FROZEN_FIT_REUSE",
+          "track": "SEASON_FROZEN_LATER_MATERIALIZED_REFRESH",
+          "training_cutoff_utc": "2026-10-19T07:00:00+00:00"
+        }
+      ],
+      "detailed_player_or_live_market_features_claimed": false,
+      "feature_count": 48,
+      "feature_groups": [
+        "Recent form, residual variation and sample support",
+        "Offensive and defensive shooting, turnovers, rebounding and free-throw opportunities",
+        "Shot mix, finishing rates and shooting uncertainty",
+        "Pace and offensive/defensive efficiency",
+        "Rest and schedule workload",
+        "Venue and opponent-style interactions"
+      ],
+      "latest_original_issue_summary": {
+        "all_original_live_issue_verified": true,
+        "distinct_games": 980,
+        "horizon_classes": {
+          "EARLY_OUTLOOK": 994
+        },
+        "issued_at_max": "2026-11-15T01:38:44.000837+00:00",
+        "issued_at_min": "2026-11-15T01:01:25.538174+00:00",
+        "nominal_T60_T120_issue_claim": false,
+        "rows": 994
+      }
+    },
+    "regular_winner_log_loss_t120": {
+      "current_metrics": [
+        {
+          "actual_materialized_at_utc": null,
+          "completed_game_denominator": 183,
+          "evidence_class": "QUALIFIED_FIXED_FROZEN_STATE_RETROSPECTIVE_REPLAY_NOT_ISSUED",
+          "metrics": {
+            "accuracy": 0.636364,
+            "brier": 0.214638,
+            "ece_10_bins": 0.060249,
+            "games": 132,
+            "log_loss": 0.615408,
+            "roc_auc": 0.715074
+          },
+          "missing_games": 51,
+          "missing_reasons": {
+            "NO_ELIGIBLE_EXACT_CURRENT_FEATURE_CONTEXT": 51
+          },
+          "promotion_allowed": false,
+          "scored_games": 132,
+          "state_origin": null,
+          "track": "CURRENT_FIXED_STATE_RETROSPECTIVE_REPLAY",
+          "training_cutoff_utc": null
+        },
+        {
+          "actual_materialized_at_utc": "2026-11-13T16:29:41.846480+00:00",
+          "completed_game_denominator": 183,
+          "evidence_class": "NEW_SEASON_FROZEN_REFRESH",
+          "metrics": {
+            "accuracy": 0.643939,
+            "brier": 0.214429,
+            "ece_10_bins": 0.067126,
+            "games": 132,
+            "log_loss": 0.614757,
+            "roc_auc": 0.717601
+          },
+          "missing_games": 51,
+          "missing_reasons": {
+            "NO_ELIGIBLE_EXACT_CURRENT_FEATURE_CONTEXT": 51
+          },
+          "promotion_allowed": false,
+          "scored_games": 132,
+          "state_origin": "EXACT_COMMITTED_FROZEN_FIT_REUSE",
+          "track": "SEASON_FROZEN_LATER_MATERIALIZED_REFRESH",
+          "training_cutoff_utc": "2026-10-19T07:00:00+00:00"
+        }
+      ],
+      "detailed_player_or_live_market_features_claimed": false,
+      "feature_count": 48,
+      "feature_groups": [
+        "Recent form, residual variation and sample support",
+        "Offensive and defensive shooting, turnovers, rebounding and free-throw opportunities",
+        "Shot mix, finishing rates and shooting uncertainty",
+        "Pace and offensive/defensive efficiency",
+        "Rest and schedule workload",
+        "Venue and opponent-style interactions"
+      ],
+      "latest_original_issue_summary": {
+        "all_original_live_issue_verified": true,
+        "distinct_games": 980,
+        "horizon_classes": {
+          "EARLY_OUTLOOK": 994
+        },
+        "issued_at_max": "2026-11-15T01:38:44.075335+00:00",
+        "issued_at_min": "2026-11-15T01:00:09.706611+00:00",
+        "nominal_T60_T120_issue_claim": false,
+        "rows": 994
+      }
+    },
+    "regular_winner_log_loss_t60": {
+      "current_metrics": [
+        {
+          "actual_materialized_at_utc": null,
+          "completed_game_denominator": 183,
+          "evidence_class": "QUALIFIED_FIXED_FROZEN_STATE_RETROSPECTIVE_REPLAY_NOT_ISSUED",
+          "metrics": {
+            "accuracy": 0.659091,
+            "brier": 0.215774,
+            "ece_10_bins": 0.074124,
+            "games": 132,
+            "log_loss": 0.617819,
+            "roc_auc": 0.711167
+          },
+          "missing_games": 51,
+          "missing_reasons": {
+            "NO_ELIGIBLE_EXACT_CURRENT_FEATURE_CONTEXT": 51
+          },
+          "promotion_allowed": false,
+          "scored_games": 132,
+          "state_origin": null,
+          "track": "CURRENT_FIXED_STATE_RETROSPECTIVE_REPLAY",
+          "training_cutoff_utc": null
+        },
+        {
+          "actual_materialized_at_utc": "2026-11-13T16:29:41.828111+00:00",
+          "completed_game_denominator": 183,
+          "evidence_class": "NEW_SEASON_FROZEN_REFRESH",
+          "metrics": {
+            "accuracy": 0.651515,
+            "brier": 0.215864,
+            "ece_10_bins": 0.068881,
+            "games": 132,
+            "log_loss": 0.617847,
+            "roc_auc": 0.713695
+          },
+          "missing_games": 51,
+          "missing_reasons": {
+            "NO_ELIGIBLE_EXACT_CURRENT_FEATURE_CONTEXT": 51
+          },
+          "promotion_allowed": false,
+          "scored_games": 132,
+          "state_origin": "EXACT_COMMITTED_FROZEN_FIT_REUSE",
+          "track": "SEASON_FROZEN_LATER_MATERIALIZED_REFRESH",
+          "training_cutoff_utc": "2026-10-19T07:00:00+00:00"
+        }
+      ],
+      "detailed_player_or_live_market_features_claimed": false,
+      "feature_count": 48,
+      "feature_groups": [
+        "Recent form, residual variation and sample support",
+        "Offensive and defensive shooting, turnovers, rebounding and free-throw opportunities",
+        "Shot mix, finishing rates and shooting uncertainty",
+        "Pace and offensive/defensive efficiency",
+        "Rest and schedule workload",
+        "Venue and opponent-style interactions"
+      ],
+      "latest_original_issue_summary": {
+        "all_original_live_issue_verified": true,
+        "distinct_games": 980,
+        "horizon_classes": {
+          "EARLY_OUTLOOK": 994
+        },
+        "issued_at_max": "2026-11-15T01:38:44.000837+00:00",
+        "issued_at_min": "2026-11-15T01:01:25.538174+00:00",
+        "nominal_T60_T120_issue_claim": false,
+        "rows": 994
+      }
+    }
+  },
+  "schema": "sports-edge-lab.nba.model-role-detail.public.v1"
+}

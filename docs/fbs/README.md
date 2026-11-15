@@ -1,11 +1,11 @@
 <!-- FBS_V078_OWNER_REVIEW_START -->
-## November 15, 2026 UTC: verified V077 work and recovered prospective scores
+## November 15, 2026 UTC: actual V078 completed, with explicit evidence gaps
 
 [Open the V078 models, games and market review](v078/index.html) · [Methods and qualification limits](v078/README.md).
 
-The actual V077 owner recorded **35 new fitted models, 11 winner calibrators, 192 reused states and 2,210 genuine research issue rows across 85 games**. The source snapshot contains **728 observed 2026 finals and 160 pending fixtures**. The owner exited 2 at event-identity validation. A read-only authenticated journal repair now grades **29 identical games** across 26 model/target states and quarantines three changed event identities, preserving original issues.
+The actual V078 owner task exited **0** and recorded **35 new fitted models, 11 winner calibrators, 192 reused states and 2,184 genuine research issue rows across 84 games**, with zero failed fits. Its **03:35:19 UTC** source snapshot contains **738 observed 2026 finals and 150 pending fixtures**. The repaired event-specific scoring grades **36 identical games** across 26 research model/target states and quarantines six changed identities without rewriting original issues.
 
-The dashboard separates those genuine issues from the 728-game reconstruction, 301-game saved legacy monitor and 34-game original frozen baseline. It presents every observed current fixture beside DraftKings, Kalshi and the two Polymarket products, with retained reference counts, explicit timing/identity gaps and zero qualified market baseline claims. The owner recovered 15,450,173 normalized historical rows; full current-season coverage remains incomplete. No automatic promotion or new owner execution is claimed by this publication.
+The dashboard separates those genuine issues from the 738-game reconstruction, 301-game saved legacy monitor and 41-game original frozen baseline. It presents every observed current fixture beside DraftKings, Kalshi and the two Polymarket products, with retained reference counts, explicit timing/identity gaps and zero qualified market baseline claims. The retained market archive contains 15,450,173 normalized bookmaker records; full current-season provider coverage remains incomplete. Scientific acceptance remains partial and no model is automatically promoted. Publication adds no fits or issues.
 
 Earlier dated evidence remains below.
 <!-- FBS_V078_OWNER_REVIEW_END -->

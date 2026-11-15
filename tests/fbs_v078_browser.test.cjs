@@ -28,7 +28,7 @@ const check=(value,message)=>{assert.ok(value,message);checks++;};
     check(await page.locator('#stat-fits').innerText()==='35','Actual new model fits');
     check(await page.locator('#stat-reused').innerText()==='192','Prior states kept separate');
     check(await page.locator('#stat-fixtures').innerText()==='888','Current observed census');
-    check(await page.locator('#stat-issues').innerText()==='2,210','New genuine research issues');
+    check(await page.locator('#stat-issues').innerText()==='2,184','New genuine research issues');
     check(await page.evaluate(()=>document.documentElement.scrollWidth<=innerWidth),'Overview has no page overflow');
     if(out){fs.mkdirSync(out,{recursive:true});await page.screenshot({path:path.join(out,`fbs-v078-result-${live?'live':'static'}-${width}.png`),fullPage:true});}
     await page.click('[data-tab="models"]');
@@ -38,8 +38,9 @@ const check=(value,message)=>{assert.ok(value,message);checks++;};
       check(await page.locator('.model-card').count()===expected.length,'Exact separated model cohort cards');
       check((await page.locator('#model-cohort-note').innerText())===cohort.description,'Evidence caveat shown');
     }
-    await page.selectOption('#model-cohort','issued29');await page.selectOption('#model-target','winner');
-    check((await page.locator('#model-cards').innerText()).includes('0.500763'),'Genuine LightGBM metric');
+    await page.selectOption('#model-cohort','issued');await page.selectOption('#model-target','winner');
+    check((await page.locator('#model-cards').innerText()).includes('0.490613'),'Genuine LightGBM metric');
+    check((await page.locator('#model-cards').innerText()).includes('Conditional 95% accuracy interval'),'Conditional uncertainty visible');
     check(await page.evaluate(()=>document.documentElement.scrollWidth<=innerWidth),'Model cards do not overflow');
     if(out)await page.screenshot({path:path.join(out,`fbs-v078-models-${live?'live':'static'}-${width}.png`),fullPage:true});
     await page.click('[data-tab="markets"]');
@@ -96,12 +97,12 @@ const check=(value,message)=>{assert.ok(value,message);checks++;};
     check(await page.locator('#game-body tr').count()===25,'Game paging');
     const first=await page.locator('#game-body').innerText();await page.click('#game-next');
     check(await page.locator('#game-body').innerText()!==first,'Paging changes visible games');
-    await page.selectOption('#game-status','final');check((await page.locator('#game-count').innerText()).startsWith('728'),'All current finals');
+    await page.selectOption('#game-status','final');check((await page.locator('#game-count').innerText()).startsWith('738'),'All current finals');
     await page.selectOption('#game-status','tbd');check((await page.locator('#game-count').innerText()).startsWith('53'),'Current TBD count excludes old-season TBD');
     await page.selectOption('#game-status','all');await page.selectOption('#game-coverage','issued');
-    check((await page.locator('#game-count').innerText()).startsWith('85'),'New issues cover 85 games');
+    check((await page.locator('#game-count').innerText()).startsWith('84'),'New issues cover 84 games');
     check((await page.locator('#game-body').innerText()).includes('new issue rows retained'),'Issue coverage explicit');
-    await page.selectOption('#game-coverage','missing');check((await page.locator('#game-count').innerText()).startsWith('803'),'All games without new issue remain');
+    await page.selectOption('#game-coverage','missing');check((await page.locator('#game-count').innerText()).startsWith('804'),'All games without new issue remain');
     await page.selectOption('#game-coverage','all');await page.fill('#game-search','Florida');
     check((await page.locator('#game-body').innerText()).includes('Florida'),'Team search works');await page.fill('#game-search','');
     check(await page.evaluate(()=>document.documentElement.scrollWidth<=innerWidth),'Mobile game cards have no page overflow');
@@ -118,8 +119,9 @@ const check=(value,message)=>{assert.ok(value,message);checks++;};
     check(downloaded.split('\r\n').length===890,'CSV contains all 888 filtered games and header');
     check(downloaded.includes('draftkings_observation_time'),'CSV preserves provider observation clocks');
     check(!/circa|s3:\/\//i.test(downloaded),'CSV respects sport and public scope');
-    await page.click('[data-tab="execution"]');check((await page.locator('#cpu-detail').innerText()).includes('11.607945'),'Actual study CPU seconds');
-    check((await page.locator('#panel-execution').innerText()).includes('10 parts'),'Multipart return explicit');
+    await page.click('[data-tab="execution"]');check((await page.locator('#cpu-detail').innerText()).includes('41.240602'),'Actual study CPU seconds');
+    check((await page.locator('#finalization-note').innerText()).includes('closure-only recovery'),'Finalization failure and recovery remain visible');
+    check((await page.locator('#panel-execution').innerText()).includes('7 parts'),'Multipart return explicit');
     check((await page.locator('#panel-execution').innerText()).includes('Uploading the multi-gigabyte return in chat is unnecessary'),'No manual return-upload requirement');
     check(await page.locator('#gate-body tr').count()===6,'All acceptance statuses shown');
     await page.locator('[data-tab="execution"]').focus();await page.keyboard.press('Home');
@@ -129,7 +131,7 @@ const check=(value,message)=>{assert.ok(value,message);checks++;};
   }
   check(errors.length===0,'No JavaScript errors');check(failed.length===0,'No failed assets');check(httpErrors.length===0,'No HTTP failures');
   const receipt={status:'PASS',checks,viewports:[1440,390],live_url:live||null,source_as_of:data.source_as_of,
-    owner_version:'V077',report_version:'V078',new_fits_by_publication:0,owner_new_model_fits:35,owner_new_issues:2210,
+    owner_version:'V078',report_version:'V078',new_fits_by_publication:0,owner_new_model_fits:35,owner_new_issues:2184,
     publication_is_owner_execution:false,errors,failed,httpErrors};
   if(out)fs.writeFileSync(path.join(out,`FBS_V078_${live?'LIVE':'STATIC'}_BROWSER_RECEIPT.json`),JSON.stringify(receipt,null,2));
   console.log(JSON.stringify(receipt));
