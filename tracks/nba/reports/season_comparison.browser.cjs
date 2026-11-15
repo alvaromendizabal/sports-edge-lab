@@ -72,6 +72,34 @@ module.exports = async function checkSeasonComparison(browser, output) {
     await page.selectOption('#model-target','winner');
     assert.equal(await page.locator('#current-score-rows tr').count(),3);
     assert.match(await page.locator('#current-score-scope').textContent(),/128 identical/);
+    const audit=source.b088_cached_science.paired_audit;
+    assert.match(await page.locator('#latest-cached-audit-checkpoint').textContent(),/Cached-data audit update:.*no new fit, forecast or game quote.*Forecast foundation: B087-R3/);
+    assert.equal(await page.locator('#owner-details summary').textContent(),'Forecast foundation: verified owner return');
+    assert.match(await page.locator('#robust-clock').textContent(),/128 \/ 183.*55 missing/);
+    assert.match(await page.locator('#robust-summary').textContent(),/reverse when week 44 is excluded/);
+    for(const zone of ['UTC','America/Los_Angeles'])for(const metric of ['brier','log_loss','accuracy']){
+      await page.selectOption('#robust-week-zone',zone);await page.selectOption('#robust-metric',metric);
+      const view=audit.week_views[zone],expected=[['All 128 shared games',audit.overall],...Object.entries(view.weekly).map(([w,r])=>['Only '+w,r]),...Object.entries(view.leave_one_week_out).map(([w,r])=>['Exclude '+w,r])];
+      assert.equal(await page.locator('#robust-rows tr').count(),7);
+      for(const [label,row] of expected){
+        const cells=await page.locator(`#robust-rows tr[data-cohort="${label}"] td`).allTextContents();
+        assert.equal(cells.length,7);assert.equal(cells[1],String(row.games));
+        ['HGB72','market_only9','ExtraTrees63'].forEach((alias,i)=>assert.equal(cells[i+2],metric==='accuracy'?(row.metrics[alias][metric]*100).toFixed(2)+'%':row.metrics[alias][metric].toFixed(6)));
+        const delta=row.pairs.HGB72__minus__market_only9.mean_left_minus_right[metric==='accuracy'?'correctness':metric];
+        assert.equal(cells[5],metric==='accuracy'?(delta*100).toFixed(2)+' percentage points':delta.toFixed(6));
+      }
+    }
+    const tiedLead=await page.locator('#robust-rows tr[data-cohort="Exclude 2026-W44"] td').last().textContent();
+    assert.match(tiedLead,/Shared lead:/);for(const label of ['Basketball + market','Market-only model','Basketball-only'])assert.ok(tiedLead.includes(label));
+    await page.selectOption('#robust-metric','brier');
+    assert.equal(await page.locator('#robust-rows tr[data-cohort="Exclude 2026-W44"] td').last().textContent(),'Market-only model');
+    assert.match(await page.locator('#robust-limit').textContent(),/not 95% confidence intervals/);
+    assert.match(await page.locator('#cached-work-details').textContent(),/830.*83.*166.*2,201/);
+    assert.match(await page.locator('#cached-work-details').textContent(),/Nineteen tests passed/);
+    assert.match(await page.locator('#cached-work-details').textContent(),/No predictive improvement established/);
+    assert.match(await page.locator('#source-inventory-rows').textContent(),/Existing provider connection verified; no new game quotes collected/);
+    assert.doesNotMatch(await page.locator('#robustness').textContent(),/undefined|NaN/);
+    await page.selectOption('#robust-week-zone','UTC');
     assert.equal(await page.locator('#frontier-score-rows tr').count(),18);
     assert.match(await page.locator('#frontier-score-scope').textContent(),/B087-R1/);
     assert.match(await page.locator('#frontier-score-scope').textContent(),/48 new frontier fits, 72 reused fits, 0 pending tasks and 0 failed tasks/);

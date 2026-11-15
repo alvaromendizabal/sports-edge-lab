@@ -1,0 +1,1085 @@
+{
+  "audit_verified_at_utc": "2026-11-15T19:51:18.406299+00:00",
+  "evidence_class": "QUALIFIED_FIXED_FROZEN_STATE_RETROSPECTIVE_REPLAY_NOT_ISSUED",
+  "paired_audit": {
+    "completed_denominator_in_prior_snapshot": 183,
+    "games": 128,
+    "horizon_minutes": 120,
+    "missing_from_common": 55,
+    "new_work": {
+      "models_modified": 0,
+      "new_fits": 0,
+      "new_forecasts": 0,
+      "paired_game_comparisons": 384,
+      "recipe_inventory_groups": 17,
+      "recovery_reproduction_not_new_independent_analysis": true,
+      "reused_prediction_rows": 2220,
+      "unique_games": 128
+    },
+    "overall": {
+      "games": 128,
+      "metrics": {
+        "ExtraTrees63": {
+          "accuracy": 0.6875,
+          "brier": 0.20453942559015428,
+          "correct_games_equivalent": 88.0,
+          "games": 128,
+          "log_loss": 0.5924388199098197
+        },
+        "HGB72": {
+          "accuracy": 0.703125,
+          "brier": 0.18248349989772294,
+          "correct_games_equivalent": 90.0,
+          "games": 128,
+          "log_loss": 0.5386438763556466
+        },
+        "market_only9": {
+          "accuracy": 0.6953125,
+          "brier": 0.1847366037154752,
+          "correct_games_equivalent": 89.0,
+          "games": 128,
+          "log_loss": 0.5422943306311451
+        }
+      },
+      "pairs": {
+        "ExtraTrees63__minus__HGB72": {
+          "delta_direction": "Negative Brier/log loss favors left; positive correctness favors left.",
+          "discordant_correctness_counts": {
+            "any_half_tie": 0,
+            "both_correct": 80,
+            "both_wrong": 30,
+            "left_only_correct": 8,
+            "right_only_correct": 10
+          },
+          "games": 128,
+          "mean_left_minus_right": {
+            "brier": 0.022055925692431345,
+            "correctness": -0.015625,
+            "log_loss": 0.05379494355417308
+          }
+        },
+        "ExtraTrees63__minus__market_only9": {
+          "delta_direction": "Negative Brier/log loss favors left; positive correctness favors left.",
+          "discordant_correctness_counts": {
+            "any_half_tie": 0,
+            "both_correct": 80,
+            "both_wrong": 31,
+            "left_only_correct": 8,
+            "right_only_correct": 9
+          },
+          "games": 128,
+          "mean_left_minus_right": {
+            "brier": 0.019802821874679088,
+            "correctness": -0.0078125,
+            "log_loss": 0.050144489278674605
+          }
+        },
+        "HGB72__minus__market_only9": {
+          "delta_direction": "Negative Brier/log loss favors left; positive correctness favors left.",
+          "discordant_correctness_counts": {
+            "any_half_tie": 0,
+            "both_correct": 81,
+            "both_wrong": 30,
+            "left_only_correct": 9,
+            "right_only_correct": 8
+          },
+          "games": 128,
+          "mean_left_minus_right": {
+            "brier": -0.0022531038177522568,
+            "correctness": 0.0078125,
+            "log_loss": -0.003650454275498476
+          }
+        }
+      }
+    },
+    "promotion_allowed": false,
+    "provider_baseline_comparison": false,
+    "selection_exposure": "These model families and aggregate scores were known before original registration. Exploratory robustness audit only; not confirmatory discovery. Reconstructed after runtime replacement; reproduction is not new independent evidence.",
+    "warnings": [
+      "Previously exposed leader selection: exploratory robustness audit, not confirmatory discovery.",
+      "Only 3 week clusters; deletion bounds are sensitivity ranges, not 95% confidence intervals.",
+      "Market-only model is a fitted model using market features, not a DraftKings/Kalshi/Polymarket odds benchmark.",
+      "No new fit, original-issued claim, live betting edge or promotion.",
+      "The 183-game denominator is an earlier snapshot, not a live season census.",
+      "HGB72 T60 paired rows are absent from this source."
+    ],
+    "week_views": {
+      "America/Los_Angeles": {
+        "bounds_are_confidence_intervals": false,
+        "leave_one_week_out": {
+          "2026-W43": {
+            "games": 85,
+            "metrics": {
+              "ExtraTrees63": {
+                "accuracy": 0.7176470588235294,
+                "brier": 0.20027826213000277,
+                "correct_games_equivalent": 61.0,
+                "games": 85,
+                "log_loss": 0.5818686323316956
+              },
+              "HGB72": {
+                "accuracy": 0.7176470588235294,
+                "brier": 0.17849314600674682,
+                "correct_games_equivalent": 61.0,
+                "games": 85,
+                "log_loss": 0.5294376280251786
+              },
+              "market_only9": {
+                "accuracy": 0.6941176470588235,
+                "brier": 0.18586231375573167,
+                "correct_games_equivalent": 59.0,
+                "games": 85,
+                "log_loss": 0.5441026458238513
+              }
+            },
+            "pairs": {
+              "ExtraTrees63__minus__HGB72": {
+                "delta_direction": "Negative Brier/log loss favors left; positive correctness favors left.",
+                "discordant_correctness_counts": {
+                  "any_half_tie": 0,
+                  "both_correct": 56,
+                  "both_wrong": 19,
+                  "left_only_correct": 5,
+                  "right_only_correct": 5
+                },
+                "games": 85,
+                "mean_left_minus_right": {
+                  "brier": 0.021785116123255965,
+                  "correctness": 0.0,
+                  "log_loss": 0.05243100430651709
+                }
+              },
+              "ExtraTrees63__minus__market_only9": {
+                "delta_direction": "Negative Brier/log loss favors left; positive correctness favors left.",
+                "discordant_correctness_counts": {
+                  "any_half_tie": 0,
+                  "both_correct": 56,
+                  "both_wrong": 21,
+                  "left_only_correct": 5,
+                  "right_only_correct": 3
+                },
+                "games": 85,
+                "mean_left_minus_right": {
+                  "brier": 0.014415948374271114,
+                  "correctness": 0.023529411764705882,
+                  "log_loss": 0.03776598650784435
+                }
+              },
+              "HGB72__minus__market_only9": {
+                "delta_direction": "Negative Brier/log loss favors left; positive correctness favors left.",
+                "discordant_correctness_counts": {
+                  "any_half_tie": 0,
+                  "both_correct": 55,
+                  "both_wrong": 20,
+                  "left_only_correct": 6,
+                  "right_only_correct": 4
+                },
+                "games": 85,
+                "mean_left_minus_right": {
+                  "brier": -0.007369167748984853,
+                  "correctness": 0.023529411764705882,
+                  "log_loss": -0.014665017798672733
+                }
+              }
+            }
+          },
+          "2026-W44": {
+            "games": 83,
+            "metrics": {
+              "ExtraTrees63": {
+                "accuracy": 0.6987951807228916,
+                "brier": 0.19940244604855079,
+                "correct_games_equivalent": 58.0,
+                "games": 83,
+                "log_loss": 0.5814707936174686
+              },
+              "HGB72": {
+                "accuracy": 0.6987951807228916,
+                "brier": 0.18300836304691426,
+                "correct_games_equivalent": 58.0,
+                "games": 83,
+                "log_loss": 0.5385643740282738
+              },
+              "market_only9": {
+                "accuracy": 0.6987951807228916,
+                "brier": 0.18037973969422347,
+                "correct_games_equivalent": 58.0,
+                "games": 83,
+                "log_loss": 0.533026948468966
+              }
+            },
+            "pairs": {
+              "ExtraTrees63__minus__HGB72": {
+                "delta_direction": "Negative Brier/log loss favors left; positive correctness favors left.",
+                "discordant_correctness_counts": {
+                  "any_half_tie": 0,
+                  "both_correct": 51,
+                  "both_wrong": 18,
+                  "left_only_correct": 7,
+                  "right_only_correct": 7
+                },
+                "games": 83,
+                "mean_left_minus_right": {
+                  "brier": 0.016394083001636514,
+                  "correctness": 0.0,
+                  "log_loss": 0.042906419589194784
+                }
+              },
+              "ExtraTrees63__minus__market_only9": {
+                "delta_direction": "Negative Brier/log loss favors left; positive correctness favors left.",
+                "discordant_correctness_counts": {
+                  "any_half_tie": 0,
+                  "both_correct": 51,
+                  "both_wrong": 18,
+                  "left_only_correct": 7,
+                  "right_only_correct": 7
+                },
+                "games": 83,
+                "mean_left_minus_right": {
+                  "brier": 0.019022706354327318,
+                  "correctness": 0.0,
+                  "log_loss": 0.04844384514850256
+                }
+              },
+              "HGB72__minus__market_only9": {
+                "delta_direction": "Negative Brier/log loss favors left; positive correctness favors left.",
+                "discordant_correctness_counts": {
+                  "any_half_tie": 0,
+                  "both_correct": 52,
+                  "both_wrong": 19,
+                  "left_only_correct": 6,
+                  "right_only_correct": 6
+                },
+                "games": 83,
+                "mean_left_minus_right": {
+                  "brier": 0.0026286233526908046,
+                  "correctness": 0.0,
+                  "log_loss": 0.005537425559307767
+                }
+              }
+            }
+          },
+          "2026-W45": {
+            "games": 88,
+            "metrics": {
+              "ExtraTrees63": {
+                "accuracy": 0.6477272727272727,
+                "brier": 0.21350042781817669,
+                "correct_games_equivalent": 57.0,
+                "games": 88,
+                "log_loss": 0.6129935031644297
+              },
+              "HGB72": {
+                "accuracy": 0.6931818181818182,
+                "brier": 0.18584277761761037,
+                "correct_games_equivalent": 61.0,
+                "games": 88,
+                "log_loss": 0.5476112604608935
+              },
+              "market_only9": {
+                "accuracy": 0.6931818181818182,
+                "brier": 0.18775858508299903,
+                "correct_games_equivalent": 61.0,
+                "games": 88,
+                "log_loss": 0.549288488904791
+              }
+            },
+            "pairs": {
+              "ExtraTrees63__minus__HGB72": {
+                "delta_direction": "Negative Brier/log loss favors left; positive correctness favors left.",
+                "discordant_correctness_counts": {
+                  "any_half_tie": 0,
+                  "both_correct": 53,
+                  "both_wrong": 23,
+                  "left_only_correct": 4,
+                  "right_only_correct": 8
+                },
+                "games": 88,
+                "mean_left_minus_right": {
+                  "brier": 0.027657650200566323,
+                  "correctness": -0.045454545454545456,
+                  "log_loss": 0.06538224270353624
+                }
+              },
+              "ExtraTrees63__minus__market_only9": {
+                "delta_direction": "Negative Brier/log loss favors left; positive correctness favors left.",
+                "discordant_correctness_counts": {
+                  "any_half_tie": 0,
+                  "both_correct": 53,
+                  "both_wrong": 23,
+                  "left_only_correct": 4,
+                  "right_only_correct": 8
+                },
+                "games": 88,
+                "mean_left_minus_right": {
+                  "brier": 0.025741842735177666,
+                  "correctness": -0.045454545454545456,
+                  "log_loss": 0.06370501425963883
+                }
+              },
+              "HGB72__minus__market_only9": {
+                "delta_direction": "Negative Brier/log loss favors left; positive correctness favors left.",
+                "discordant_correctness_counts": {
+                  "any_half_tie": 0,
+                  "both_correct": 55,
+                  "both_wrong": 21,
+                  "left_only_correct": 6,
+                  "right_only_correct": 6
+                },
+                "games": 88,
+                "mean_left_minus_right": {
+                  "brier": -0.0019158074653886595,
+                  "correctness": 0.0,
+                  "log_loss": -0.0016772284438974106
+                }
+              }
+            }
+          }
+        },
+        "week_clusters": 3,
+        "weekly": {
+          "2026-W43": {
+            "games": 43,
+            "metrics": {
+              "ExtraTrees63": {
+                "accuracy": 0.627906976744186,
+                "brier": 0.2129626556858026,
+                "correct_games_equivalent": 27.0,
+                "games": 43,
+                "log_loss": 0.6133333767502974
+              },
+              "HGB72": {
+                "accuracy": 0.6744186046511628,
+                "brier": 0.19037140875197808,
+                "correct_games_equivalent": 29.0,
+                "games": 43,
+                "log_loss": 0.5568422742181998
+              },
+              "market_only9": {
+                "accuracy": 0.6976744186046512,
+                "brier": 0.18251136293822404,
+                "correct_games_equivalent": 30.0,
+                "games": 43,
+                "log_loss": 0.5387197540874236
+              }
+            },
+            "pairs": {
+              "ExtraTrees63__minus__HGB72": {
+                "delta_direction": "Negative Brier/log loss favors left; positive correctness favors left.",
+                "discordant_correctness_counts": {
+                  "any_half_tie": 0,
+                  "both_correct": 24,
+                  "both_wrong": 11,
+                  "left_only_correct": 3,
+                  "right_only_correct": 5
+                },
+                "games": 43,
+                "mean_left_minus_right": {
+                  "brier": 0.02259124693382453,
+                  "correctness": -0.046511627906976744,
+                  "log_loss": 0.05649110253209772
+                }
+              },
+              "ExtraTrees63__minus__market_only9": {
+                "delta_direction": "Negative Brier/log loss favors left; positive correctness favors left.",
+                "discordant_correctness_counts": {
+                  "any_half_tie": 0,
+                  "both_correct": 24,
+                  "both_wrong": 10,
+                  "left_only_correct": 3,
+                  "right_only_correct": 6
+                },
+                "games": 43,
+                "mean_left_minus_right": {
+                  "brier": 0.030451292747578573,
+                  "correctness": -0.06976744186046512,
+                  "log_loss": 0.07461362266287394
+                }
+              },
+              "HGB72__minus__market_only9": {
+                "delta_direction": "Negative Brier/log loss favors left; positive correctness favors left.",
+                "discordant_correctness_counts": {
+                  "any_half_tie": 0,
+                  "both_correct": 26,
+                  "both_wrong": 10,
+                  "left_only_correct": 3,
+                  "right_only_correct": 4
+                },
+                "games": 43,
+                "mean_left_minus_right": {
+                  "brier": 0.007860045813754038,
+                  "correctness": -0.023255813953488372,
+                  "log_loss": 0.01812252013077622
+                }
+              }
+            }
+          },
+          "2026-W44": {
+            "games": 45,
+            "metrics": {
+              "ExtraTrees63": {
+                "accuracy": 0.6666666666666666,
+                "brier": 0.21401429896688967,
+                "correct_games_equivalent": 30.0,
+                "games": 45,
+                "log_loss": 0.6126687350712673
+              },
+              "HGB72": {
+                "accuracy": 0.7111111111111111,
+                "brier": 0.18151541897810342,
+                "correct_games_equivalent": 32.0,
+                "games": 45,
+                "log_loss": 0.5387905139816898
+              },
+              "market_only9": {
+                "accuracy": 0.6888888888888889,
+                "brier": 0.19277259735467286,
+                "correct_games_equivalent": 31.0,
+                "games": 45,
+                "log_loss": 0.5593875021747198
+              }
+            },
+            "pairs": {
+              "ExtraTrees63__minus__HGB72": {
+                "delta_direction": "Negative Brier/log loss favors left; positive correctness favors left.",
+                "discordant_correctness_counts": {
+                  "any_half_tie": 0,
+                  "both_correct": 29,
+                  "both_wrong": 12,
+                  "left_only_correct": 1,
+                  "right_only_correct": 3
+                },
+                "games": 45,
+                "mean_left_minus_right": {
+                  "brier": 0.03249887998878626,
+                  "correctness": -0.044444444444444446,
+                  "log_loss": 0.0738782210895775
+                }
+              },
+              "ExtraTrees63__minus__market_only9": {
+                "delta_direction": "Negative Brier/log loss favors left; positive correctness favors left.",
+                "discordant_correctness_counts": {
+                  "any_half_tie": 0,
+                  "both_correct": 29,
+                  "both_wrong": 13,
+                  "left_only_correct": 1,
+                  "right_only_correct": 2
+                },
+                "games": 45,
+                "mean_left_minus_right": {
+                  "brier": 0.021241701612216796,
+                  "correctness": -0.022222222222222223,
+                  "log_loss": 0.05328123289654751
+                }
+              },
+              "HGB72__minus__market_only9": {
+                "delta_direction": "Negative Brier/log loss favors left; positive correctness favors left.",
+                "discordant_correctness_counts": {
+                  "any_half_tie": 0,
+                  "both_correct": 29,
+                  "both_wrong": 11,
+                  "left_only_correct": 3,
+                  "right_only_correct": 2
+                },
+                "games": 45,
+                "mean_left_minus_right": {
+                  "brier": -0.01125717837656946,
+                  "correctness": 0.022222222222222223,
+                  "log_loss": -0.02059698819302999
+                }
+              }
+            }
+          },
+          "2026-W45": {
+            "games": 40,
+            "metrics": {
+              "ExtraTrees63": {
+                "accuracy": 0.775,
+                "brier": 0.18482522068850504,
+                "correct_games_equivalent": 31.0,
+                "games": 40,
+                "log_loss": 0.5472185167496775
+              },
+              "HGB72": {
+                "accuracy": 0.725,
+                "brier": 0.17509308891397063,
+                "correct_games_equivalent": 29.0,
+                "games": 40,
+                "log_loss": 0.5189156313241035
+              },
+              "market_only9": {
+                "accuracy": 0.7,
+                "brier": 0.1780882447069228,
+                "correct_games_equivalent": 28.0,
+                "games": 40,
+                "log_loss": 0.5269071824291243
+              }
+            },
+            "pairs": {
+              "ExtraTrees63__minus__HGB72": {
+                "delta_direction": "Negative Brier/log loss favors left; positive correctness favors left.",
+                "discordant_correctness_counts": {
+                  "any_half_tie": 0,
+                  "both_correct": 27,
+                  "both_wrong": 7,
+                  "left_only_correct": 4,
+                  "right_only_correct": 2
+                },
+                "games": 40,
+                "mean_left_minus_right": {
+                  "brier": 0.009732131774534391,
+                  "correctness": 0.05,
+                  "log_loss": 0.02830288542557413
+                }
+              },
+              "ExtraTrees63__minus__market_only9": {
+                "delta_direction": "Negative Brier/log loss favors left; positive correctness favors left.",
+                "discordant_correctness_counts": {
+                  "any_half_tie": 0,
+                  "both_correct": 27,
+                  "both_wrong": 8,
+                  "left_only_correct": 4,
+                  "right_only_correct": 1
+                },
+                "games": 40,
+                "mean_left_minus_right": {
+                  "brier": 0.006736975981582219,
+                  "correctness": 0.075,
+                  "log_loss": 0.020311334320553313
+                }
+              },
+              "HGB72__minus__market_only9": {
+                "delta_direction": "Negative Brier/log loss favors left; positive correctness favors left.",
+                "discordant_correctness_counts": {
+                  "any_half_tie": 0,
+                  "both_correct": 26,
+                  "both_wrong": 9,
+                  "left_only_correct": 3,
+                  "right_only_correct": 2
+                },
+                "games": 40,
+                "mean_left_minus_right": {
+                  "brier": -0.0029951557929521707,
+                  "correctness": 0.025,
+                  "log_loss": -0.00799155110502082
+                }
+              }
+            }
+          }
+        }
+      },
+      "UTC": {
+        "bounds_are_confidence_intervals": false,
+        "leave_one_week_out": {
+          "2026-W43": {
+            "games": 86,
+            "metrics": {
+              "ExtraTrees63": {
+                "accuracy": 0.7209302325581395,
+                "brier": 0.20028705402937175,
+                "correct_games_equivalent": 62.0,
+                "games": 86,
+                "log_loss": 0.5820198707536377
+              },
+              "HGB72": {
+                "accuracy": 0.7209302325581395,
+                "brier": 0.17882144466196312,
+                "correct_games_equivalent": 62.0,
+                "games": 86,
+                "log_loss": 0.5303321700177897
+              },
+              "market_only9": {
+                "accuracy": 0.6976744186046512,
+                "brier": 0.18596221289297327,
+                "correct_games_equivalent": 60.0,
+                "games": 86,
+                "log_loss": 0.5445380838007765
+              }
+            },
+            "pairs": {
+              "ExtraTrees63__minus__HGB72": {
+                "delta_direction": "Negative Brier/log loss favors left; positive correctness favors left.",
+                "discordant_correctness_counts": {
+                  "any_half_tie": 0,
+                  "both_correct": 57,
+                  "both_wrong": 19,
+                  "left_only_correct": 5,
+                  "right_only_correct": 5
+                },
+                "games": 86,
+                "mean_left_minus_right": {
+                  "brier": 0.021465609367408617,
+                  "correctness": 0.0,
+                  "log_loss": 0.05168770073584798
+                }
+              },
+              "ExtraTrees63__minus__market_only9": {
+                "delta_direction": "Negative Brier/log loss favors left; positive correctness favors left.",
+                "discordant_correctness_counts": {
+                  "any_half_tie": 0,
+                  "both_correct": 57,
+                  "both_wrong": 21,
+                  "left_only_correct": 5,
+                  "right_only_correct": 3
+                },
+                "games": 86,
+                "mean_left_minus_right": {
+                  "brier": 0.014324841136398474,
+                  "correctness": 0.023255813953488372,
+                  "log_loss": 0.03748178695286113
+                }
+              },
+              "HGB72__minus__market_only9": {
+                "delta_direction": "Negative Brier/log loss favors left; positive correctness favors left.",
+                "discordant_correctness_counts": {
+                  "any_half_tie": 0,
+                  "both_correct": 56,
+                  "both_wrong": 20,
+                  "left_only_correct": 6,
+                  "right_only_correct": 4
+                },
+                "games": 86,
+                "mean_left_minus_right": {
+                  "brier": -0.007140768231010144,
+                  "correctness": 0.023255813953488372,
+                  "log_loss": -0.014205913782986851
+                }
+              }
+            }
+          },
+          "2026-W44": {
+            "games": 84,
+            "metrics": {
+              "ExtraTrees63": {
+                "accuracy": 0.7023809523809523,
+                "brier": 0.19941244347488035,
+                "correct_games_equivalent": 59.0,
+                "games": 84,
+                "log_loss": 0.5816071889967261
+              },
+              "HGB72": {
+                "accuracy": 0.6904761904761905,
+                "brier": 0.18476355956374554,
+                "correct_games_equivalent": 58.0,
+                "games": 84,
+                "log_loss": 0.5423266158873667
+              },
+              "market_only9": {
+                "accuracy": 0.6904761904761905,
+                "brier": 0.18332397612560292,
+                "correct_games_equivalent": 58.0,
+                "games": 84,
+                "log_loss": 0.5392546610462153
+              }
+            },
+            "pairs": {
+              "ExtraTrees63__minus__HGB72": {
+                "delta_direction": "Negative Brier/log loss favors left; positive correctness favors left.",
+                "discordant_correctness_counts": {
+                  "any_half_tie": 0,
+                  "both_correct": 51,
+                  "both_wrong": 18,
+                  "left_only_correct": 8,
+                  "right_only_correct": 7
+                },
+                "games": 84,
+                "mean_left_minus_right": {
+                  "brier": 0.0146488839111348,
+                  "correctness": 0.011904761904761904,
+                  "log_loss": 0.039280573109359423
+                }
+              },
+              "ExtraTrees63__minus__market_only9": {
+                "delta_direction": "Negative Brier/log loss favors left; positive correctness favors left.",
+                "discordant_correctness_counts": {
+                  "any_half_tie": 0,
+                  "both_correct": 51,
+                  "both_wrong": 18,
+                  "left_only_correct": 8,
+                  "right_only_correct": 7
+                },
+                "games": 84,
+                "mean_left_minus_right": {
+                  "brier": 0.016088467349277408,
+                  "correctness": 0.011904761904761904,
+                  "log_loss": 0.04235252795051076
+                }
+              },
+              "HGB72__minus__market_only9": {
+                "delta_direction": "Negative Brier/log loss favors left; positive correctness favors left.",
+                "discordant_correctness_counts": {
+                  "any_half_tie": 0,
+                  "both_correct": 51,
+                  "both_wrong": 19,
+                  "left_only_correct": 7,
+                  "right_only_correct": 7
+                },
+                "games": 84,
+                "mean_left_minus_right": {
+                  "brier": 0.0014395834381426126,
+                  "correctness": 0.0,
+                  "log_loss": 0.0030719548411513413
+                }
+              }
+            }
+          },
+          "2026-W45": {
+            "games": 86,
+            "metrics": {
+              "ExtraTrees63": {
+                "accuracy": 0.6395348837209303,
+                "brier": 0.21379954712399513,
+                "correct_games_equivalent": 55.0,
+                "games": 86,
+                "log_loss": 0.6134375015857675
+              },
+              "HGB72": {
+                "accuracy": 0.6976744186046512,
+                "brier": 0.18391852011085605,
+                "correct_games_equivalent": 60.0,
+                "games": 86,
+                "log_loss": 0.5433584882671723
+              },
+              "market_only9": {
+                "accuracy": 0.6976744186046512,
+                "brier": 0.18489077032343376,
+                "correct_games_equivalent": 60.0,
+                "games": 86,
+                "log_loss": 0.5430195570560962
+              }
+            },
+            "pairs": {
+              "ExtraTrees63__minus__HGB72": {
+                "delta_direction": "Negative Brier/log loss favors left; positive correctness favors left.",
+                "discordant_correctness_counts": {
+                  "any_half_tie": 0,
+                  "both_correct": 52,
+                  "both_wrong": 23,
+                  "left_only_correct": 3,
+                  "right_only_correct": 8
+                },
+                "games": 86,
+                "mean_left_minus_right": {
+                  "brier": 0.02988102701313907,
+                  "correctness": -0.05813953488372093,
+                  "log_loss": 0.07007901331859524
+                }
+              },
+              "ExtraTrees63__minus__market_only9": {
+                "delta_direction": "Negative Brier/log loss favors left; positive correctness favors left.",
+                "discordant_correctness_counts": {
+                  "any_half_tie": 0,
+                  "both_correct": 52,
+                  "both_wrong": 23,
+                  "left_only_correct": 3,
+                  "right_only_correct": 8
+                },
+                "games": 86,
+                "mean_left_minus_right": {
+                  "brier": 0.028908776800561344,
+                  "correctness": -0.05813953488372093,
+                  "log_loss": 0.07041794452967137
+                }
+              },
+              "HGB72__minus__market_only9": {
+                "delta_direction": "Negative Brier/log loss favors left; positive correctness favors left.",
+                "discordant_correctness_counts": {
+                  "any_half_tie": 0,
+                  "both_correct": 55,
+                  "both_wrong": 21,
+                  "left_only_correct": 5,
+                  "right_only_correct": 5
+                },
+                "games": 86,
+                "mean_left_minus_right": {
+                  "brier": -0.0009722502125777307,
+                  "correctness": 0.0,
+                  "log_loss": 0.0003389312110761237
+                }
+              }
+            }
+          }
+        },
+        "week_clusters": 3,
+        "weekly": {
+          "2026-W43": {
+            "games": 42,
+            "metrics": {
+              "ExtraTrees63": {
+                "accuracy": 0.6190476190476191,
+                "brier": 0.21324666259556618,
+                "correct_games_equivalent": 26.0,
+                "games": 42,
+                "log_loss": 0.6137728586581923
+              },
+              "HGB72": {
+                "accuracy": 0.6666666666666666,
+                "brier": 0.18998199395189783,
+                "correct_games_equivalent": 28.0,
+                "games": 42,
+                "log_loss": 0.5556630845712585
+              },
+              "market_only9": {
+                "accuracy": 0.6904761904761905,
+                "brier": 0.18222702301869345,
+                "correct_games_equivalent": 29.0,
+                "games": 42,
+                "log_loss": 0.5376999789028521
+              }
+            },
+            "pairs": {
+              "ExtraTrees63__minus__HGB72": {
+                "delta_direction": "Negative Brier/log loss favors left; positive correctness favors left.",
+                "discordant_correctness_counts": {
+                  "any_half_tie": 0,
+                  "both_correct": 23,
+                  "both_wrong": 11,
+                  "left_only_correct": 3,
+                  "right_only_correct": 5
+                },
+                "games": 42,
+                "mean_left_minus_right": {
+                  "brier": 0.023264668643668357,
+                  "correctness": -0.047619047619047616,
+                  "log_loss": 0.05810977408693399
+                }
+              },
+              "ExtraTrees63__minus__market_only9": {
+                "delta_direction": "Negative Brier/log loss favors left; positive correctness favors left.",
+                "discordant_correctness_counts": {
+                  "any_half_tie": 0,
+                  "both_correct": 23,
+                  "both_wrong": 10,
+                  "left_only_correct": 3,
+                  "right_only_correct": 6
+                },
+                "games": 42,
+                "mean_left_minus_right": {
+                  "brier": 0.031019639576872725,
+                  "correctness": -0.07142857142857142,
+                  "log_loss": 0.07607287975534029
+                }
+              },
+              "HGB72__minus__market_only9": {
+                "delta_direction": "Negative Brier/log loss favors left; positive correctness favors left.",
+                "discordant_correctness_counts": {
+                  "any_half_tie": 0,
+                  "both_correct": 25,
+                  "both_wrong": 10,
+                  "left_only_correct": 3,
+                  "right_only_correct": 4
+                },
+                "games": 42,
+                "mean_left_minus_right": {
+                  "brier": 0.007754970933204368,
+                  "correctness": -0.023809523809523808,
+                  "log_loss": 0.017963105668406292
+                }
+              }
+            }
+          },
+          "2026-W44": {
+            "games": 44,
+            "metrics": {
+              "ExtraTrees63": {
+                "accuracy": 0.6590909090909091,
+                "brier": 0.21432730053749546,
+                "correct_games_equivalent": 29.0,
+                "games": 44,
+                "log_loss": 0.6131173880166346
+              },
+              "HGB72": {
+                "accuracy": 0.7272727272727273,
+                "brier": 0.17813065871713435,
+                "correct_games_equivalent": 32.0,
+                "games": 44,
+                "log_loss": 0.53161319179509
+              },
+              "market_only9": {
+                "accuracy": 0.7045454545454546,
+                "brier": 0.18743343820523134,
+                "correct_games_equivalent": 31.0,
+                "games": 44,
+                "log_loss": 0.5480973362023746
+              }
+            },
+            "pairs": {
+              "ExtraTrees63__minus__HGB72": {
+                "delta_direction": "Negative Brier/log loss favors left; positive correctness favors left.",
+                "discordant_correctness_counts": {
+                  "any_half_tie": 0,
+                  "both_correct": 29,
+                  "both_wrong": 12,
+                  "left_only_correct": 0,
+                  "right_only_correct": 3
+                },
+                "games": 44,
+                "mean_left_minus_right": {
+                  "brier": 0.036196641820361114,
+                  "correctness": -0.06818181818181818,
+                  "log_loss": 0.0815041962215446
+                }
+              },
+              "ExtraTrees63__minus__market_only9": {
+                "delta_direction": "Negative Brier/log loss favors left; positive correctness favors left.",
+                "discordant_correctness_counts": {
+                  "any_half_tie": 0,
+                  "both_correct": 29,
+                  "both_wrong": 13,
+                  "left_only_correct": 0,
+                  "right_only_correct": 2
+                },
+                "games": 44,
+                "mean_left_minus_right": {
+                  "brier": 0.02689386233226411,
+                  "correctness": -0.045454545454545456,
+                  "log_loss": 0.06502005181426013
+                }
+              },
+              "HGB72__minus__market_only9": {
+                "delta_direction": "Negative Brier/log loss favors left; positive correctness favors left.",
+                "discordant_correctness_counts": {
+                  "any_half_tie": 0,
+                  "both_correct": 30,
+                  "both_wrong": 11,
+                  "left_only_correct": 2,
+                  "right_only_correct": 1
+                },
+                "games": 44,
+                "mean_left_minus_right": {
+                  "brier": -0.009302779488097006,
+                  "correctness": 0.022727272727272728,
+                  "log_loss": -0.016484144407284494
+                }
+              }
+            }
+          },
+          "2026-W45": {
+            "games": 42,
+            "metrics": {
+              "ExtraTrees63": {
+                "accuracy": 0.7857142857142857,
+                "brier": 0.18557822435419452,
+                "correct_games_equivalent": 33.0,
+                "games": 42,
+                "log_loss": 0.54944151933526
+              },
+              "HGB72": {
+                "accuracy": 0.7142857142857143,
+                "brier": 0.1795451251755933,
+                "correct_games_equivalent": 30.0,
+                "games": 42,
+                "log_loss": 0.5289901472034751
+              },
+              "market_only9": {
+                "accuracy": 0.6904761904761905,
+                "brier": 0.1844209292325124,
+                "correct_games_equivalent": 29.0,
+                "games": 42,
+                "log_loss": 0.5408093431895787
+              }
+            },
+            "pairs": {
+              "ExtraTrees63__minus__HGB72": {
+                "delta_direction": "Negative Brier/log loss favors left; positive correctness favors left.",
+                "discordant_correctness_counts": {
+                  "any_half_tie": 0,
+                  "both_correct": 28,
+                  "both_wrong": 7,
+                  "left_only_correct": 5,
+                  "right_only_correct": 2
+                },
+                "games": 42,
+                "mean_left_minus_right": {
+                  "brier": 0.006033099178601238,
+                  "correctness": 0.07142857142857142,
+                  "log_loss": 0.020451372131784853
+                }
+              },
+              "ExtraTrees63__minus__market_only9": {
+                "delta_direction": "Negative Brier/log loss favors left; positive correctness favors left.",
+                "discordant_correctness_counts": {
+                  "any_half_tie": 0,
+                  "both_correct": 28,
+                  "both_wrong": 8,
+                  "left_only_correct": 5,
+                  "right_only_correct": 1
+                },
+                "games": 42,
+                "mean_left_minus_right": {
+                  "brier": 0.0011572951216820928,
+                  "correctness": 0.09523809523809523,
+                  "log_loss": 0.008632176145681245
+                }
+              },
+              "HGB72__minus__market_only9": {
+                "delta_direction": "Negative Brier/log loss favors left; positive correctness favors left.",
+                "discordant_correctness_counts": {
+                  "any_half_tie": 0,
+                  "both_correct": 26,
+                  "both_wrong": 9,
+                  "left_only_correct": 4,
+                  "right_only_correct": 3
+                },
+                "games": 42,
+                "mean_left_minus_right": {
+                  "brier": -0.004875804056919143,
+                  "correctness": 0.023809523809523808,
+                  "log_loss": -0.011819195986103608
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  },
+  "recovery_reverified_at_utc": "2026-11-15T20:23:50.009969+00:00",
+  "schema": "sports-edge-lab.nba.b088-cached-science.v1",
+  "secondary_features": {
+    "known_exact_game_end_clocks": 0,
+    "known_publication_clocks": 0,
+    "materialization_cutoff_utc": "2026-11-15T19:59:01.852877Z",
+    "missing_raw_schedule_ancestor_games": 23,
+    "missing_raw_schedule_ancestor_objects": 3,
+    "new_calibration_fits": 0,
+    "new_forecasts": 0,
+    "new_model_fits": 0,
+    "new_provider_requests": 0,
+    "owner_persistence_status": "VERIFIED_DURABLE_PRIVATE_PARTITION_NEW_OWNER_EXECUTION_PENDING",
+    "player_rows_reconciled": 2201,
+    "predictive_improvement_established": false,
+    "promotion_allowed": false,
+    "rate_component_values": 830,
+    "source_games": 83,
+    "source_observation_range_utc": [
+      "2026-11-10T01:16:14.095721Z",
+      "2026-11-15T00:56:29.863169Z"
+    ],
+    "status": "M1_MATERIALIZED_PRIVATE_NOT_TRAINED",
+    "summary": "M1 materialized 830 versioned rate components from 83 completed regular-season games, 166 team rows and 2,201 player rows. Eight total-rebound discrepancies remain flagged without imputation. Twenty-three games reference three older schedule bodies absent from this saved source package; their normalized schedule rows remain authenticated. Observation times conservatively bound completion; historical availability is not backdated. Nineteen tests passed. This reuses definitions already present in the feature program and adds no model fit, forecast or demonstrated predictive improvement. The partition was reproduced after an execution-workspace replacement; that recovery earns no additional scientific credit.",
+    "team_rows": 166,
+    "tests_passed": 19,
+    "total_rebound_discrepancy_rows": 8,
+    "verified_at_utc": "2026-11-15T20:21:12.516353+00:00"
+  },
+  "source_prediction_evidence_at_utc": "2026-11-15T01:44:26.949458+00:00",
+  "source_recovery": {
+    "cached_featured_market_requests": 9694,
+    "cached_history_capture_date": "2026-10-16",
+    "cached_history_last_requested_snapshot_date": "2026-10-16",
+    "cached_history_license_status": "UNVERIFIED",
+    "cached_payloads": 12005,
+    "cached_player_prop_requests": 3106,
+    "cached_request_receipts": 12800,
+    "current_market_rows_newly_admitted": 0,
+    "current_quote_refresh_verified": false,
+    "observed_at_utc": "2026-11-15T20:02:56Z",
+    "owned_connection_verified": true,
+    "public_price_redistribution_verified": false,
+    "qualification": "The existing provider connection was verified at the displayed time with no paid quote request. No new game quotes were collected. Retained historical records still have incomplete transport provenance and usage qualification; historical coverage and current DraftKings comparisons remain unverified. Current-season acquisition awaits approval of the prepared bounded plan. The earlier provider observation clocks are unchanged.",
+    "status": "OWNED_CONNECTION_VERIFIED_CURRENT_QUOTES_PENDING",
+    "transport_binding_status": "BLOCKED_TRANSPORT_HOST_AUTHORITY"
+  },
+  "source_report_sha256": "21121f6c735938dfa00ab4ce7c5c05b35b8cb6b3595ccff06c284e5c29f5e054"
+}
