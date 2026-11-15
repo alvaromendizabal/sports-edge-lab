@@ -204,7 +204,7 @@ class CurrentSnapshotTests(unittest.TestCase):
 
     def test_latest_execution_and_preserved_science_are_explicit_in_page(self):
         page = (DOCS / 'v12.html').read_text()
-        self.assertIn('Latest execution: R16 deferred. Latest model comparison: R14.', page)
+        self.assertIn('Latest verified return: R16 deferred. Latest model comparison: R14.', page)
         self.assertIn('id="latest-execution-r16"', page)
         self.assertIn('484.95 seconds before return finalization', page)
         self.assertIn('Historical target models reused: 40. Current target fits reused: 0.', page)
@@ -214,6 +214,18 @@ class CurrentSnapshotTests(unittest.TestCase):
         self.assertIn('1 core leased at the failure-time admission decision', page)
         self.assertIn('id="prior-execution-r14"', page)
         self.assertIn('14,979 checkpoint references are references, not model fits', page)
+
+    def test_continuation_notice_does_not_claim_a_new_verified_outcome(self):
+        page = (DOCS / 'v12.html').read_text()
+        self.assertIn('id="continuation-observation"', page)
+        self.assertIn('R17 continuation started; outcome unverified.', page)
+        self.assertIn('datetime="2026-11-15T20:39:38Z"', page)
+        self.assertIn('520 of 571 startup fixture checks had passed', page)
+        self.assertIn('Current process status and fit counts are unknown', page)
+        self.assertIn('latest verified completed return remains R16', page)
+        self.assertIn('does not advance any source clock or issue a forecast', page)
+        self.assertEqual(hashlib.sha256((DOCS / 'v12_r14_public_evidence.json').read_bytes()).hexdigest(), 'eb604ede076e4db3e2a71e0f326adf7d2dff20a942361d5547606455beb86ace')
+        self.assertEqual(hashlib.sha256((DOCS / 'v12_nov15_descriptive_rating_comparison.json').read_bytes()).hexdigest(), 'e0f74e5ce0980ccbfd1bec32574bc26096934c488ee08b2d9279ba023ab91bcb')
 
     def test_uncertainty_audit_is_descriptive_and_uses_unchanged_cohort(self):
         value = UNCERTAINTY
