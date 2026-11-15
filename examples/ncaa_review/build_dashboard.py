@@ -346,7 +346,8 @@ def render_landing(data):
     from b063r7_status import render_banner as render_r7_banner
     from b063r8_status import render_banner as render_r8_banner
     from b063r9_status import render_banner as render_latest_banner
-    return render_latest_banner(render_r8_banner(render_r7_banner(render_r6_banner(render_r5_banner(render_banner(render(render_legacy_landing(data))))))))
+    from v12_public_status import render_banner as render_v12_banner
+    return render_v12_banner(render_latest_banner(render_r8_banner(render_r7_banner(render_r6_banner(render_r5_banner(render_banner(render(render_legacy_landing(data)))))))))
 
 
 def outputs():
@@ -388,4 +389,5 @@ def main():
 
 
 if __name__=='__main__':main()
+
 
