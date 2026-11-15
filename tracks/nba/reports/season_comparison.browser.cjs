@@ -73,6 +73,18 @@ module.exports = async function checkSeasonComparison(browser, output) {
     assert.equal(await page.locator('#current-score-rows tr').count(),3);
     assert.match(await page.locator('#current-score-scope').textContent(),/128 identical/);
     assert.equal(await page.locator('#frontier-score-rows tr').count(),18);
+    assert.match(await page.locator('#frontier-score-scope').textContent(),/B087-R1/);
+    assert.match(await page.locator('#frontier-score-scope').textContent(),/48 new frontier fits, 72 reused fits, 0 pending tasks and 0 failed tasks/);
+    assert.match(await page.locator('#frontier-score-scope').textContent(),/120 of 120 registered tasks completed/);
+    assert.match(await page.locator('#frontier-score-scope').textContent(),/not the required three-minute full-capacity pass/);
+    assert.match(await page.locator('#latest-research-checkpoint').textContent(),/B087-R1.*120\/120 frontier tasks complete \(48 new, 72 reused\)/);
+    assert.equal(await page.locator('#earlier-frontier-rows tr').count(),36);
+    const earlierRows=await page.locator('#earlier-frontier-rows tr').allTextContents();
+    source.current_science_scores.new_frontier_earlier_season_ablations.forEach((row,i)=>{
+      assert.ok(earlierRows[i].includes(row.phase));
+      assert.ok(earlierRows[i].includes(row.baseline_metrics.games+' games'));
+      for(const value of [row.baseline_metrics[row.primary_metric],row.candidate_metrics[row.primary_metric],row.paired_cluster_interval.lower,row.paired_cluster_interval.upper])assert.ok(earlierRows[i].includes(value.toFixed(6)));
+    });
     assert.equal(await page.locator('#weighted-score-rows tr').count(),11);
     const [download]=await Promise.all([page.waitForEvent('download'),page.locator('#download-json').click()]);
     assert.deepEqual(JSON.parse(fs.readFileSync(await download.path(),'utf8')),source);
