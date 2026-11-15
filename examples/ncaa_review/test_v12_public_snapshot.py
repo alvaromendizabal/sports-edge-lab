@@ -19,6 +19,7 @@ ROOT = Path(__file__).resolve().parents[2]
 DOCS = ROOT / 'docs/ncaa'
 DATA = json.loads((DOCS / 'v12_r14_public_evidence.json').read_text())
 UNCERTAINTY = json.loads((DOCS / 'v12_r14_descriptive_uncertainty.json').read_text())
+RATING = json.loads((DOCS / 'v12_nov15_descriptive_rating_comparison.json').read_text())
 
 
 class Page(HTMLParser):
@@ -141,8 +142,8 @@ class CurrentSnapshotTests(unittest.TestCase):
         self.assertEqual(value['requested_cores'], 42)
         self.assertEqual(value['selected_capacity_acceptance'], 'NOT_DEMONSTRATED')
 
-    def test_latest_execution_is_r15_and_comparison_remains_r14(self):
-        value = DATA['latest_execution']
+    def test_prior_r15_execution_is_preserved(self):
+        value = DATA['latest_execution']['prior_execution']
         self.assertEqual(value['return_release'], 'R15')
         self.assertEqual(DATA['return_release'], 'R14')
         self.assertEqual(value['status'], 'ADMISSION_DEFERRED')
@@ -165,19 +166,54 @@ class CurrentSnapshotTests(unittest.TestCase):
         self.assertEqual(value['return_published_at'], '2026-11-15T04:23:50+00:00')
         self.assertEqual(value['selected_capacity_acceptance'], 'NOT_DEMONSTRATED')
 
-    def test_r14_scientific_snapshot_is_unchanged_by_r15_status(self):
+    def test_latest_r16_execution_has_typed_reuse_and_fresh_later_latch(self):
+        value = DATA['latest_execution']
+        self.assertEqual(value['return_release'], 'R16')
+        self.assertEqual(DATA['return_release'], 'R14')
+        self.assertEqual(value['status'], 'ADMISSION_DEFERRED')
+        self.assertEqual((value['new_target_fits'], value['new_scalar_calibration_fits'], value['new_empirical_residual_fits']), (0, 0, 0))
+        self.assertEqual(value['verified_historical_target_fits_reused'], 40)
+        self.assertEqual(value['verified_reused_target_fits'], 0)
+        self.assertEqual(value['recovered_checkpoint_references'], 14979)
+        self.assertFalse(value['checkpoint_references_are_fit_credit'])
+        self.assertEqual(value['checkpoint_import_failures'], 57)
+        self.assertFalse(value['checkpoint_import_failures_are_optimizer_failures'])
+        self.assertEqual(value['memory_full_pressure_avg10'], 1.1)
+        self.assertLess(value['memory_pressure_sample_age_seconds'], .001)
+        self.assertEqual(value['cause_diagnosis'], 'LATER_HISTORICAL_REUSE_ADMISSION_LATCH_OUTSIDE_LAUNCH_RECOVERY_SCOPE')
+        self.assertAlmostEqual(value['reservation_age_at_deferral_seconds'], 19.64526297699922)
+        self.assertIsNone(value['continuous_memory_pressure_wait_seconds'])
+        self.assertLess(value['launch_recovery_closed_at'], value['healthy_resource_sample_preceding_block_at'])
+        self.assertLess(value['healthy_resource_sample_preceding_block_at'], value['first_retained_memory_block_at'])
+        self.assertEqual(value['launch_recovery_status'], 'ARMED_NO_MEMORY_PRESSURE_OBSERVED')
+        self.assertEqual((value['requested_cores'], value['leased_cores_at_deferral']), (48, 1))
+        self.assertEqual(value['selected_capacity_acceptance'], 'NOT_DEMONSTRATED')
+        self.assertEqual((value['cache_reads_verified'], value['resource_report_full_gets']), (506, 9))
+        self.assertEqual(value['provider_http_calls'], 0)
+        self.assertFalse(value['source_clocks_advanced'])
+        self.assertFalse(value['new_comparison_completed'])
+        self.assertFalse(value['secondary_feature_ablation_completed'])
+        self.assertFalse(value['cost_is_invoice_or_exclusive_owner_charge'])
+        self.assertAlmostEqual(value['summary_elapsed_seconds_before_return_finalization'], 484.9524829229995)
+        self.assertEqual(value['return_published_at'], '2026-11-15T06:09:49+00:00')
+
+    def test_r14_scientific_snapshot_is_unchanged_by_new_execution_status(self):
         preserved = {key: value for key, value in DATA.items() if key != 'latest_execution'}
         serialized = json.dumps(preserved, sort_keys=True, separators=(',', ':'), ensure_ascii=False).encode()
         self.assertEqual(hashlib.sha256(serialized).hexdigest(), '75aa87382b79c7f44f5f3442fa043e7fcafbf66b875ff3937afc361b582c8b06')
 
     def test_latest_execution_and_preserved_science_are_explicit_in_page(self):
         page = (DOCS / 'v12.html').read_text()
-        self.assertIn('Latest execution: R15 deferred. Latest model comparison: R14.', page)
-        self.assertIn('memory-pressure admission deferral during checkpoint authentication', page)
+        self.assertIn('Latest execution: R16 deferred. Latest model comparison: R14.', page)
+        self.assertIn('id="latest-execution-r16"', page)
+        self.assertIn('484.95 seconds before return finalization', page)
+        self.assertIn('Historical target models reused: 40. Current target fits reused: 0.', page)
+        self.assertIn('it was not 19.65 seconds of continuous memory pressure', page)
+        self.assertIn('id="prior-execution-r15"', page)
         self.assertIn('109.60 seconds before return finalization', page)
         self.assertIn('1 core leased at the failure-time admission decision', page)
         self.assertIn('id="prior-execution-r14"', page)
-        self.assertIn('2,793 recovered checkpoint references are references, not model fits', page)
+        self.assertIn('14,979 checkpoint references are references, not model fits', page)
 
     def test_uncertainty_audit_is_descriptive_and_uses_unchanged_cohort(self):
         value = UNCERTAINTY
@@ -215,7 +251,7 @@ class CurrentSnapshotTests(unittest.TestCase):
 
     def test_public_surfaces_have_no_private_fields_or_other_contest_marker(self):
         excluded_contest = ''.join(map(chr, [99, 105, 114, 99, 97]))
-        for name in ['v12.html', 'v12_r14_public_evidence.json', 'v12_r14_descriptive_uncertainty.json', 'v11.html', 'v10.html']:
+        for name in ['v12.html', 'v12_r14_public_evidence.json', 'v12_r14_descriptive_uncertainty.json', 'v12_nov15_descriptive_rating_comparison.json', 'v11.html', 'v10.html']:
             text = (DOCS / name).read_text()
             decoded = []
             for attrs, payload in re.findall(r'<script([^>]*)>(.*?)</script>', text, re.S):
@@ -227,6 +263,43 @@ class CurrentSnapshotTests(unittest.TestCase):
         current = (DOCS / 'v12_r14_public_evidence.json').read_text()
         for marker in ['chosen_recipe', 'ordered_columns', 'model_sha256', 'raw_reference', 'source_manifest', 'B032_', 'espn:event:']:
             self.assertNotIn(marker, current)
+
+    def test_rating_comparison_preserves_source_clock_and_no_fit_claim(self):
+        self.assertEqual(RATING['schema'], 'ncaa.public.descriptive_original_vs_rating.v1')
+        self.assertEqual(RATING['source_comparison_asof'], DATA['comparison_asof'])
+        self.assertEqual(RATING['source_inventory_asof'], DATA['census_asof'])
+        self.assertFalse(RATING['data_freshness_advanced'])
+        self.assertFalse(RATING['current_champion_ranking_available'])
+        self.assertTrue(RATING['point_metrics_independently_recomputed'])
+        self.assertTrue(RATING['no_per_game_values_or_private_recipe_published'])
+        for key in ['issued_forecasts', 'new_calibrators', 'new_fits', 'new_provider_requests', 'promotions']:
+            self.assertEqual(RATING['accounting'][key], 0)
+        self.assertEqual(RATING['accounting']['settled_games_compared'], 1163)
+        self.assertIn('not a refreshed season leaderboard', ' '.join(RATING['limitations']))
+        self.assertIn('not a sportsbook or exchange price', ' '.join(RATING['limitations']))
+
+    def test_rating_differences_close_on_same_cohort_and_qualify_accuracy(self):
+        for league, row in RATING['leagues'].items():
+            self.assertEqual(row['games'], 578 if league == 'ncaam' else 585)
+            self.assertEqual(row['date_clusters'], 14)
+            self.assertEqual(row['observed_completed_source_games'], row['games'] + row['completed_source_games_without_model_score'])
+            current = {model['target']: model for model in DATA['current_models'] if model['league'] == league}
+            for key, metric in row['metrics'].items():
+                target, metric_name = key.split('_', 1)
+                if metric_name != 'bias':
+                    self.assertAlmostEqual(metric['original'], current['win' if target == 'winner' else target]['metrics'][metric_name], places=12)
+                self.assertAlmostEqual(metric['original_minus_rating'], metric['original'] - metric['rating_formula'], places=12)
+                ordinary = metric['paired_descriptive_95_percentile_interval']
+                adjusted = metric['paired_nominal_bonferroni_percentile_interval']
+                self.assertLessEqual(adjusted[0], ordinary[0])
+                self.assertLessEqual(ordinary[1], adjusted[1])
+                if key == 'winner_accuracy':
+                    self.assertLess(adjusted[0], 0)
+                    self.assertGreater(adjusted[1], 0)
+                elif key == 'margin_bias':
+                    self.assertLess(abs(metric['original']), abs(metric['rating_formula']))
+                else:
+                    self.assertLess(adjusted[1], 0)
 
     def test_navigation_and_current_archive_links(self):
         page = Page()
