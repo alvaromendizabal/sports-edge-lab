@@ -5,6 +5,18 @@ Reproducible NBA forecasts, complete released-game inventories, chronological mo
 This NBA track belongs to the shared [Sports Edge Lab](../../README.md) repository. Its public material contains sanitized aggregate evidence, selected rounded already-issued research forecasts, complete observed schedule coverage, and invented engineering examples. Exact feature recipes, model weights, source responses, full journals, candidate forecast grids, and execution packages remain private under the [NBA publication boundary](../../docs/PUBLICATION_BOUNDARY.md#selected-nba-research-outputs-november-11-extension).
 
 
+<!-- NBA B087 R1 FRONTIER UPDATE BEGIN -->
+## November 14 Pacific — the remaining frontier study tasks completed
+
+The authenticated **B087-R1 frontier stage** finished at **19:56:01 Pacific** (**2026-11-15T03:56:01.216131+00:00**). It fitted the remaining **48 estimators**, reused **72** proven completed fits, and completed **120 of 120 registered tasks**, with **zero pending or failed frontier tasks**. It added **31,536 retrospective evaluation rows** and reused **34,896**; these are not newly issued upcoming forecasts. All 48 added model cells cover **2024–25 regular-season or postseason** evaluation. The completed study has **90 paired ablations** across its admitted seasons and phases.
+
+The [current comparison page](reports/season_comparison.html) records the frontier stage with its own completion clock. Existing original forecasts, the current-season model comparisons, provider inventory, game results and market-comparison clocks retain their earlier evidence. The latest verified owner-return summary remains separately labeled; a completed study stage does not establish complete owner acceptance. No automatic promotion or new provider acquisition occurred in this stage.
+
+The executor completed its short queue in **9.54 seconds**, with **47 observed workers** and a sampled peak of **30.39 process-tree CPU core equivalents**. Worker presence is not simultaneous native-fit count. This is **conditional short-queue completion**, not a pass of the required three-minute sustained-capacity gate. The earlier B086 execution account below remains a dated historical record.
+
+All **72 prior model cells and their point metrics are unchanged**. The complete study expands the multiplicity adjustment from **36 to 60 registered noncontrol comparisons**, so the 18 displayed current-season paired intervals have been refreshed. The page adds all **36 newly available 2024–25 paired comparisons** with their separate phase and game denominators. Shooting uncertainty worsened regular-season winner log loss and margin MAE at both horizons under the adjusted intervals. **No positive noncontrol adjusted interval in the completed study excludes zero.** These negative findings remain visible, and the study does not establish a promoted feature set.
+<!-- NBA B087 R1 FRONTIER UPDATE END -->
+
 <!-- NBA B086 COMPARISON UPDATE BEGIN -->
 ## November 14 Pacific — actual B086 evidence recovered; complete observed-game comparison view
 
