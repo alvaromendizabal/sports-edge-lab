@@ -1,0 +1,13 @@
+season,model,recipe,target,fixtures,scored,correct,accuracy,brier,log_loss,mae,rmse,evidence,outcome_digest
+2024,N025 retained recipe family,N025/win/preserved_count_blend,win,285,285,193,0.6771929824561403,0.2129229243888477,0.6158751926288595,,,retrospective weekly reconstruction,29054414458accca4f35a1414ec8706708dca50283c1d61882a88ebeef229dd4
+2024,N025 retained recipe family,N025/margin/preserved_count_blend,margin,285,285,,,,,10.056376809946237,13.053162943569735,retrospective weekly reconstruction,
+2024,N025 retained recipe family,N025/total/context_causal_blend,total,285,285,,,,,9.825836516938226,12.725657125638424,retrospective weekly reconstruction,
+2024,N121 recent-score winner,n121_opponent_ridge_recent,win,285,285,191,0.6701754385964912,0.2168046676,0.6235734711,,,"N121 source-qualified evaluation, winner probability conditioned on a decisive game",29054414458accca4f35a1414ec8706708dca50283c1d61882a88ebeef229dd4
+2025,N025 retained recipe family,N025/win/preserved_count_blend,win,285,284,187,0.6584507042253521,0.21866499053840324,0.6259288342331887,,,retrospective weekly reconstruction,0d2a21ff40b4011357fcc5a006ca2230f1d961a64ca0708854de1a338e9a97c0
+2025,N025 retained recipe family,N025/margin/preserved_count_blend,margin,285,285,,,,,10.000189532805758,12.811094720136769,retrospective weekly reconstruction,
+2025,N025 retained recipe family,N025/total/context_causal_blend,total,285,285,,,,,10.649102614515039,13.457271337524118,retrospective weekly reconstruction,
+2025,N121 recent-score winner,n121_opponent_ridge_recent,win,285,284,180,0.6338028169014085,0.223137571,0.6360145028,,,"N121 source-qualified evaluation, winner probability conditioned on a decisive game",0d2a21ff40b4011357fcc5a006ca2230f1d961a64ca0708854de1a338e9a97c0
+2026,N025 retained recipe family,N025/win/preserved_count_blend,win,145,144,92,0.6388888888888888,0.2219514846974267,0.6331776188314779,,,120 retrospective + 16 original N025 + 8 original refits + 1 later reconstruction,81d294911c1fcccf60806c28194f8c0e6776f3b0f9d34b1e8162515dbe3f8297
+2026,N025 retained recipe family,N025/margin/preserved_count_blend,margin,145,145,,,,,9.855762462619381,12.433547583741685,120 retrospective + 16 original N025 + 8 original refits + 1 later reconstruction,
+2026,N025 retained recipe family,N025/total/context_causal_blend,total,145,145,,,,,10.885814087906624,13.546228522046674,120 retrospective + 16 original N025 + 8 original refits + 1 later reconstruction,
+2026,N121 recent-score winner,n121_opponent_ridge_recent,win,145,144,89,0.6180555555555556,0.2233874419,0.6367247541,,,"N121 source-qualified evaluation, winner probability conditioned on a decisive game",81d294911c1fcccf60806c28194f8c0e6776f3b0f9d34b1e8162515dbe3f8297

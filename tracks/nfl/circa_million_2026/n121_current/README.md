@@ -11,6 +11,10 @@
 
 N121 uses 285 validation games in 2024, 285 in 2025 and 145 completed games in the 2026 test. The 2026 season also has three games in progress, 100 scheduled future kickoffs and 24 games awaiting a kickoff assignment at the recorded cutoff. The dashboard uses 411 matched venue panels, including 210 panels comparing all three N121 families in the 2026 test. N121 forecasts for future fixtures were computed on the tool host and remained unissued at this freeze.
 
+## Post-freeze N025 paper champion
+
+[Read the N025 original paper-champion reconciliation](N121_N025_Original_Champion.md) for all 145 completed 2026 games, with decisive-winner metrics on 144. The source clocks include retrospective proxies. These figures are diagnostic and excluded from the frozen N121 rankings. [Season metrics CSV](N121_N025_Original_Champion.csv) · [Source reconciliation JSON](N121_N025_Original_Champion.json).
+
 ## Portable evidence recovery
 
 [Download the verified release runner](https://raw.githubusercontent.com/alvaromendizabal/sports-edge-lab/685e55419d426e8c252cd6706916e3216b82ad21/tracks/nfl/circa_million_2026/n121_current/evidence-recovery.pyz) or build the same bytes from [the Python source](runner_source/). The release SHA-256 is `72d84f2a5c8579f402417c5f6bc9f6791719f72eade0c20b8db7a5f63923cf5f`. The release workflow rebuilds the archive, runs the offline self-test and publishes the verified runner as a downloadable Actions artifact.
