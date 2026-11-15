@@ -161,4 +161,3 @@ const http=require('node:http');
  console.log(JSON.stringify({status:'PASS',receipts}));
 })().catch(error=>{console.error(error);process.exitCode=1;});
 
-
