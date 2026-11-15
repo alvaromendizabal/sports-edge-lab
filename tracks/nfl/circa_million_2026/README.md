@@ -1,5 +1,8 @@
 # 2026 NFL models vs. Circa Million VIII
 
+[Week 10 original research cards, opening-week comparisons and settled results](https://sports-edge-lab-nfl.alv-mendizabal.chatgpt.site/circa/n107/) · [Reviewed N107 dashboard source](./n107_current/index.html)
+
+
 [Week 10 original research cards, opening-week comparisons and settled results](https://sports-edge-lab-nfl.alv-mendizabal.chatgpt.site/circa/n106/) · [Reviewed N106 dashboard source](./n106_current/index.html)
 
 
