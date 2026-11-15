@@ -28,3 +28,17 @@ jobs:
         run: |
           gh api "repos/${GITHUB_REPOSITORY}" --jq '{has_pages: .has_pages}'
           if gh api "repos/${GITHUB_REPOSITORY}/pages" --jq '{status: .status, html_url: .html_url, build_type: .build_type, source: .source}'; then true; else echo 'Existing Pages deployment could not be confirmed.'; fi
+
+      - name: Install pinned browser QA
+        run: |
+          npm install --no-save --no-package-lock --ignore-scripts playwright@1.62.1
+          npx playwright install --with-deps chromium
+      - name: Check dashboard, mobile layout, annual populations and disclosure boundaries
+        run: node tracks/nfl/circa_million_2026/test_n121_browser.cjs
+      - name: Save verified dashboard and public screenshots
+        uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02
+        with:
+          name: nfl-n121-dashboard-review
+          path: |
+            artifacts/
+            tracks/nfl/circa_million_2026/n121_current/index.html

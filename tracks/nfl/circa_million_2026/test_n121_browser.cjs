@@ -1,0 +1,41 @@
+'use strict';
+const { chromium } = require('playwright');
+const assert = require('node:assert/strict');
+const {readFileSync,mkdirSync,writeFileSync}=require('node:fs');
+const path=require('node:path');
+const {pathToFileURL}=require('node:url');
+const {createHash}=require('node:crypto');
+(async()=>{
+ const fs=path.join(__dirname,'n121_current','index.html'),html=readFileSync(fs,'utf8');
+ const D=JSON.parse(html.match(/<script id="n121" type="application\/json">([\s\S]*?)<\/script>/)[1]);
+ const counts=Object.fromEntries([2024,2025,2026].map(y=>[y,D.calendar.filter(x=>x.season===y&&x.status==='PLAYED').length]));
+ assert.deepEqual(counts,{2024:285,2025:285,2026:145});assert.equal(D.calendar.length,842);assert.equal(new Set(D.calendar.map(r=>r.game_id)).size,842);
+ assert.equal(D.recipes.length,48);assert.equal(D.venues.fixtures.length,842);assert(D.forecasts.length>=2526);assert.equal(D.contest.cards.length,3);
+ const restricted=/"(?:bid|ask|bid_size|ask_size|market_probability|contract_id|event_id|rule_sha256|bucket|private_path|source_blob|api_key)"\s*:/i;
+ assert(!restricted.test(html));assert(!/s3:\/\/|[0-9]{12}\.dkr\.ecr|\/home\/sagemaker-user|private-handoff|x-amz-credential/i.test(html));
+ const facts={page_sha256:createHash('sha256').update(html).digest('hex'),population:counts,recipes:D.recipes.length,game_forecasts:D.forecasts.length};
+ mkdirSync('artifacts',{recursive:true});const browser=await chromium.launch({headless:true});
+ try{
+ for(const [device,viewport] of [['desktop',{width:1440,height:980}],['mobile',{width:390,height:844}]]){
+  const page=await browser.newPage({viewport,deviceScaleFactor:1});let errors=[];page.on('pageerror',e=>errors.push(e.message));
+  await page.goto(pathToFileURL(fs).href);await page.waitForSelector('#table121 tbody tr');
+  assert.equal(await page.locator('#table121 tbody tr').count(),48);
+  assert.match(await page.locator('#decision121').innerText(),/opponent ridge recent/i);
+  await page.selectOption('#target121','win');await page.selectOption('#coverage121','complete');
+  assert.equal(await page.locator('#table121 tbody tr').count(),4);assert.match(await page.locator('#table121').innerText(),/145\/145/);
+  await page.selectOption('#target121','ats');assert.match(await page.locator('#decision121').innerText(),/named.market|spread coverage/i);
+  await page.selectOption('#coverage121','all');await page.selectOption('#target121','margin');
+  await page.screenshot({path:'artifacts/N121-'+device+'-models.png'});
+  await page.click('[data-view=games]');await page.waitForSelector('#gameList121 button');
+  assert.equal(await page.locator('#gameList121 button').count(),272);
+  await page.selectOption('#year121g','2025');assert.equal(await page.locator('#gameList121 button').count(),285);
+  assert.match(await page.locator('#gameDetail121').innerText(),/DraftKings/);
+  await page.click('[data-view=markets]');await page.waitForSelector('#cover121 table');assert.match(await page.locator('#cover121').innerText(),/Kalshi/);
+  await page.screenshot({path:'artifacts/N121-'+device+'-markets.png'});await page.click('[data-view=future]');await page.waitForSelector('tbody tr');assert.equal(await page.locator('tbody tr').count(),124);
+  await page.click('[data-view=circa]');await page.waitForSelector('#card121 table');assert.equal(await page.locator('#card121 table').first().locator('tbody tr').count(),5);assert.equal(await page.locator('#card121 details tbody tr').count(),28);assert.match(await page.locator('main').innerText(),/after deadline/i);
+  await page.click('[data-view=study]');await page.waitForSelector('main table');assert.match(await page.locator('main').innerText(),/tool host/i);assert.equal(await page.evaluate(()=>document.documentElement.scrollWidth>window.innerWidth),false);
+  assert.deepEqual(errors,[]);await page.close();facts[device]='PASS';
+ }
+ }finally{await browser.close();}
+ writeFileSync('artifacts/N121-public-qa.json',JSON.stringify(facts,null,2)+'\n');console.log(facts);
+})().catch(e=>{console.error(e);process.exit(1);});

@@ -1,5 +1,9 @@
 # 2026 NFL models vs. Circa Million VIII
 
+[N121 full-season dashboard file](n121_current/index.html) · [Download standalone dashboard](https://raw.githubusercontent.com/alvaromendizabal/sports-edge-lab/main/tracks/nfl/circa_million_2026/n121_current/index.html)
+
+Open the downloaded HTML in a browser to compare the same 285 games from 2024, 285 from 2025 and 145 completed 2026 games, check forecasts for scheduled fixtures, and inspect each venue’s exact target and cutoff coverage. The hosted N120 archive is linked separately below.
+
 [N120 live dashboard](https://sports-edge-lab-nfl.alv-mendizabal.chatgpt.site/circa/n120/) · [N120 public page source](n120_current/index.html)
 
 Compare winner, spread, margin and total models on the same 304 games. The game list covers every scheduled fixture and identifies which have matching DraftKings, Kalshi and Polymarket evidence. Newly graded original forecasts and prospective calculations retain their own timing and execution status.
