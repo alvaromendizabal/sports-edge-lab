@@ -53,7 +53,14 @@ async function verifyRoutes() {
   for (const r of [release,stable,pinned,m]) assert.equal(r.status,200);
   verifyHostedHtml(Buffer.from(await release.arrayBuffer()),sha(native),'n111');
   verifyHostedHtml(Buffer.from(await pinned.arrayBuffer()),parentSha,'n110');
-  const sealed=await fetchPublic(new URL('sealed.html',url)); assert.equal(sealed.status,200); verifyHostedHtml(Buffer.from(await sealed.arrayBuffer()),'00914041368c147eafa1a0ab8d3ab9e4ba1872fd847d5de5a5e2ccaf08daf4c4','n111 sealed');
+  const originalUrl=new URL('sealed.html',url), originalCanonical=new URL('sealed',url);
+  let sealed=await fetchPublic(originalUrl);
+  if (sealed.status===307 || sealed.status===308) {
+    assert.equal(new URL(sealed.headers.get('location'),originalUrl).href,originalCanonical.href);
+    sealed=await fetchPublic(originalCanonical);
+  }
+  assert.equal(sealed.status,200);
+  verifyHostedHtml(Buffer.from(await sealed.arrayBuffer()),'00914041368c147eafa1a0ab8d3ab9e4ba1872fd847d5de5a5e2ccaf08daf4c4','n111 sealed');
   const manifest=await m.json(), stableSha=verifyHostedHtml(Buffer.from(await stable.arrayBuffer()),manifest.assets['index.html'].sha256,'stable');
   assert.match(manifest.newest_review_path,/^n[0-9]+\/$/);
   assert.equal(manifest.assets['n111/index.html'].sha256,sha(native));
