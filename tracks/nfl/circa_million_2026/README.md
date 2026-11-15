@@ -1,5 +1,9 @@
 # 2026 NFL models vs. Circa Million VIII
 
+[N120 live dashboard](https://sports-edge-lab-nfl.alv-mendizabal.chatgpt.site/circa/n120/) · [N120 public page source](n120_current/index.html)
+
+Compare winner, spread, margin and total models on the same 304 games. The game list covers every scheduled fixture and identifies which have matching DraftKings, Kalshi and Polymarket evidence. Newly graded original forecasts and prospective calculations retain their own timing and execution status.
+
 [N119 live dashboard](https://sports-edge-lab-nfl.alv-mendizabal.chatgpt.site/circa/n119/) · [N119 public page source](n119_current/index.html)
 
 The season selector compares models with DraftKings on the same games and shows the sample behind each score. The registry identifies original study selections and research challengers. Each fixture records its market coverage and separates forecast issue time from subsequent venue observations.

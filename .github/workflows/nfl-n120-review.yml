@@ -1,0 +1,41 @@
+name: NFL N120 scientific return review
+on:
+  pull_request:
+    paths: ['tracks/nfl/circa_million_2026/n120_current/**', 'tracks/nfl/circa_million_2026/test_n120_browser.cjs', '.github/workflows/nfl-n120-review.yml']
+  push:
+    branches: [main]
+    paths: ['tracks/nfl/circa_million_2026/n120_current/**', 'tracks/nfl/circa_million_2026/test_n120_browser.cjs', '.github/workflows/nfl-n120-review.yml']
+permissions:
+  contents: read
+concurrency:
+  group: nfl-n120-${{ github.event.pull_request.number || github.ref }}
+  cancel-in-progress: true
+jobs:
+  browser:
+    runs-on: ubuntu-24.04
+    steps:
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1
+        with:
+          persist-credentials: false
+      - name: Install verification browser
+        run: |
+          npm install --prefix "${RUNNER_TEMP}/n120-browser" --ignore-scripts --no-audit --no-fund playwright@1.62.1
+          node "${RUNNER_TEMP}/n120-browser/node_modules/playwright/cli.js" install --with-deps chromium
+      - name: Verify all repository views at desktop and mobile widths
+        env:
+          PLAYWRIGHT_MODULE_DIR: ${{ runner.temp }}/n120-browser/node_modules/playwright
+        run: |
+          node tracks/nfl/circa_million_2026/test_n120_browser.cjs
+      - name: Verify both published routes, retained source and private guards
+        env:
+          NFL_N120_SCREEN_DIR: ${{ runner.temp }}/n120-public-screens
+          PLAYWRIGHT_MODULE_DIR: ${{ runner.temp }}/n120-browser/node_modules/playwright
+        run: NFL_N120_ONLINE_URL=https://sports-edge-lab-nfl.alv-mendizabal.chatgpt.site/circa/n120/ node tracks/nfl/circa_million_2026/test_n120_browser.cjs
+
+      - name: Save public desktop and mobile captures
+        uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02
+        with:
+          name: nfl-n120-public-browser-verification
+          path: ${{ runner.temp }}/n120-public-screens/*.png
+          if-no-files-found: error
+          retention-days: 30
