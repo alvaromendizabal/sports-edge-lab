@@ -73,6 +73,8 @@ module.exports = async function checkSeasonComparison(browser, output) {
     assert.equal(await page.locator('#current-score-rows tr').count(),3);
     assert.match(await page.locator('#current-score-scope').textContent(),/128 identical/);
     const audit=source.b088_cached_science.paired_audit;
+    assert.match(await page.locator('#latest-cached-audit-checkpoint').textContent(),/Cached-data audit update:.*no new fit, forecast or game quote.*Forecast foundation: B087-R3/);
+    assert.equal(await page.locator('#owner-details summary').textContent(),'Forecast foundation: verified owner return');
     assert.match(await page.locator('#robust-clock').textContent(),/128 \/ 183.*55 missing/);
     assert.match(await page.locator('#robust-summary').textContent(),/reverse when week 44 is excluded/);
     for(const zone of ['UTC','America/Los_Angeles'])for(const metric of ['brier','log_loss','accuracy']){
