@@ -1,5 +1,7 @@
 # 2026 NFL models vs. Circa Million VIII
 
+[N112 live dashboard](https://sports-edge-lab-nfl.alv-mendizabal.chatgpt.site/circa/n112/) · [N112 public page source](n112_current/index.html)
+
 [N111 live dashboard](https://sports-edge-lab-nfl.alv-mendizabal.chatgpt.site/circa/n111/) · [N111 public page source](n111_current/index.html)
 
 [Current NFL dashboard](https://sports-edge-lab-nfl.alv-mendizabal.chatgpt.site/circa/) · [N110 release](https://sports-edge-lab-nfl.alv-mendizabal.chatgpt.site/circa/n110/) · [Exact native page source](n110_current/index.html.source) · [Repository view](n110_current/index.html) · [Previous dashboard and releases](https://sports-edge-lab-nfl.alv-mendizabal.chatgpt.site/circa/index-before-n110.html)
