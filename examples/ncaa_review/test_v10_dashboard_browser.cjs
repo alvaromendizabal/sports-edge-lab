@@ -7,7 +7,7 @@ const http=require('node:http');
  const {chromium}=require(process.env.PLAYWRIGHT_MODULE_DIR||'playwright');
  const browser=await chromium.launch({headless:true});
  const docs=path.resolve(__dirname,'../../docs/ncaa');
- const allowedAssets=new Set(['v10.html','v11.html','v11_r12_canonical_games.json','v11_r12_unresolved_inventory.json','v12.html','v12_r14_public_evidence.json','v12_r14_descriptive_uncertainty.json']);
+ const allowedAssets=new Set(['v10.html','v11.html','v11_r12_canonical_games.json','v11_r12_unresolved_inventory.json','v12.html','v12_r14_public_evidence.json','v12_r14_descriptive_uncertainty.json','v12_nov15_descriptive_rating_comparison.json']);
  const server=http.createServer((request,response)=>{
   const name=request.url.split('?')[0].replace(/^\//,'');
   if(!allowedAssets.has(name)){response.writeHead(404);response.end();return;}
