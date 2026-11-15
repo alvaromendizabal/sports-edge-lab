@@ -1,5 +1,20 @@
 # Sports Edge Lab · NBA
 
+
+## November 15: verified B087-R3 forecast recovery and return
+
+[Open the NBA models and market comparison](reports/season_comparison.html).
+
+The authenticated R3 issue journal adds **448 original early-outlook forecasts for 32 previously missing games**, represented in **704 current metric-role views**. It reuses 28 existing model states and four saved calibrators, with **zero new estimator or calibration fits**. Issues were created between 06:11:51.895232 and 06:13:13.918828 UTC on November 15; source-feature materialization retains its 06:10:29.903845 UTC clock. Nominal T60/T120 labels do not claim final-hour issue timing.
+
+All **1,012 known scheduled regular-season games** now have selected forecasts. This closes the observed 32-game forecast gap, while **24 unobserved regular-season slots, six unresolved regular matchups and one unresolved special matchup** remain outside that claim. The 1,274-game observed inventory, historical scores and provider observations retain their earlier evidence clocks. No full-season market comparison or provider-price refresh is claimed.
+
+The R2 source repair made three bounded official calendar requests and built 64 vectors under the unchanged 63-feature recipe. R3 reused those three cached responses, made zero new calendar requests, and rebuilt 64 eligible vectors before verified issuance. Exact R2 warm verification reused 120 completed frontier models and 66,432 evaluation rows in 3.975 seconds; this is completed-work reuse, not a controlled speedup or full-capacity CPU pass. The completed R1 frontier results and negative findings remain unchanged.
+
+The latest owner return finished at **06:39:37.417600 UTC**, with **one verified 3,773,418,232-byte logical archive transferred as eight byte-split pieces plus a manifest**. Pieces are not standalone ZIPs. Full archive CRC and all 35 direct payload hashes passed owner verification. Exit 2 and the resumable scientific partial status remain explicit: probability qualification, complete market comparisons and historical recovery are still incomplete. The source-separated owner export passed validation; GitHub publication and this website deployment remain separately verified actions.
+
+Only the selected rounded model values, coarse family labels, original source/issue clocks and coverage are published. Exact private recipes, calibration parameters, weights, raw provider prices and complete issue journals remain excluded. Earlier selected public inputs remain immutable; no old issue value, historical metric or provider observation is rewritten.
+
 Reproducible NBA forecasts, complete released-game inventories, chronological model comparisons, and source-qualified market and player-availability research.
 
 This NBA track belongs to the shared [Sports Edge Lab](../../README.md) repository. Its public material contains sanitized aggregate evidence, selected rounded already-issued research forecasts, complete observed schedule coverage, and invented engineering examples. Exact feature recipes, model weights, source responses, full journals, candidate forecast grids, and execution packages remain private under the [NBA publication boundary](../../docs/PUBLICATION_BOUNDARY.md#selected-nba-research-outputs-november-11-extension).

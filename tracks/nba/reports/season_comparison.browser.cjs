@@ -78,6 +78,14 @@ module.exports = async function checkSeasonComparison(browser, output) {
     assert.match(await page.locator('#frontier-score-scope').textContent(),/120 of 120 registered tasks completed/);
     assert.match(await page.locator('#frontier-score-scope').textContent(),/not the required three-minute full-capacity pass/);
     assert.match(await page.locator('#latest-research-checkpoint').textContent(),/B087-R1.*120\/120 frontier tasks complete \(48 new, 72 reused\)/);
+    assert.match(await page.locator('#latest-source-checkpoint').textContent(),/B087-R2.*32 source-qualified games and 64 eligible feature vectors/);
+    assert.match(await page.locator('#upcoming-recovery-scope').textContent(),/3 official calendar requests \(1,081,438 downloaded bytes\) and performed 0 model fits/);
+    assert.match(await page.locator('#warm-cache-scope').textContent(),/120 completed models and 66,432 evaluation rows reused in 3.975 seconds, with 0 new fits and 0 new prediction rows/);
+    assert.match(await page.locator('#warm-cache-scope').textContent(),/does not measure a speedup/);
+    assert.match(await page.locator('#latest-forecast-checkpoint').textContent(),/B087-R3.*448 new early-outlook rows for 32 games/);
+    assert.match(await page.locator('#latest-forecast-checkpoint').textContent(),/1,012\/1,012 known scheduled regular games/);
+    assert.match(await page.locator('#owner-status').textContent(),/B087-R3/);
+    assert.match(await page.locator('#owner-status').textContent(),/3,773,418,232 bytes across 8 numbered byte-split pieces/);
     assert.equal(await page.locator('#earlier-frontier-rows tr').count(),36);
     const earlierRows=await page.locator('#earlier-frontier-rows tr').allTextContents();
     source.current_science_scores.new_frontier_earlier_season_ablations.forEach((row,i)=>{

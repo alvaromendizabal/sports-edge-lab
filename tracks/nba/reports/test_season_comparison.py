@@ -159,4 +159,63 @@ class SeasonComparisonTests(unittest.TestCase):
         self.assertEqual(data['provider_game_coverage']['summary']['POLYMARKET_INTERNATIONAL']['unbound_observations'],7308)
         self.assertTrue(all(g['markets']['POLYMARKET_INTERNATIONAL']['status']=='NO_CANONICAL_BINDING_IN_AUDITED_SNAPSHOT' for g in data['games']))
 
+    def test_source_readiness_keeps_forecast_issuance_separate(self):
+        raw,_=b.build();data=json.loads(raw)
+        progress=data['current_science_scores']['future_source_progress']
+        self.assertEqual(progress['source_qualified_future_targets'],32)
+        self.assertEqual(progress['new_eligible_future_vectors'],64)
+        self.assertEqual(progress['existing_feature_count'],63)
+        self.assertFalse(progress['new_feature_recipe'])
+        self.assertEqual(progress['new_model_fits'],0)
+        self.assertEqual(progress['new_forecasts'],0)
+        self.assertFalse(progress['full_season_source_or_market_coverage_claimed'])
+        self.assertTrue(progress['prior_forecast_and_provider_clocks_unchanged'])
+        if not data['current_science_scores'].get('future_forecast_issuance'):
+            scheduled=[g for g in data['games'] if g['status']=='SCHEDULED']
+            self.assertEqual(len(scheduled),1012)
+            self.assertEqual(sum(bool(g['forecasts']) for g in scheduled),980)
+            self.assertEqual(sum(not g['forecasts'] for g in scheduled),32)
+        self.assertEqual(data['publication_effects']['new_forecasts'],0)
+
+    def test_complete_work_reuse_does_not_claim_new_fits_or_speedup(self):
+        raw,_=b.build();data=json.loads(raw)
+        reuse=data['current_science_scores']['warm_cache_progress']
+        self.assertEqual(reuse['verified_models_reused'],120)
+        self.assertEqual(reuse['verified_prediction_rows_reused'],66432)
+        self.assertEqual(reuse['new_estimator_fits'],0)
+        self.assertEqual(reuse['new_prediction_rows'],0)
+        self.assertEqual(reuse['stat_only_unproven_bytes_accepted'],0)
+        self.assertFalse(reuse['same_work_speedup_claimed'])
+        self.assertFalse(reuse['full_capacity_acceptance_claimed'])
+        self.assertFalse(reuse['verifier_event_counts_are_disjoint_unique_files'])
+
+    def test_R3_original_issues_close_only_the_known_scheduled_gap(self):
+        raw,_=b.build();data=json.loads(raw)
+        issue=data['current_science_scores']['future_forecast_issuance']
+        self.assertEqual(issue['new_original_issue_rows'],448)
+        self.assertEqual(issue['new_distinct_games'],32)
+        self.assertEqual(issue['current_role_views'],704)
+        self.assertEqual(issue['new_model_or_calibration_fits'],0)
+        self.assertEqual(issue['new_calendar_requests'],0)
+        self.assertEqual(issue['source_cache_reuses'],3)
+        self.assertFalse(issue['provider_market_coverage_refreshed'])
+        scheduled=[g for g in data['games'] if g['status']=='SCHEDULED' and g['phase']=='regular']
+        self.assertEqual(len(scheduled),1012)
+        self.assertTrue(all(g['forecasts'] for g in scheduled))
+        new_games=[g for g in scheduled if any(f['issued_at_utc']>=issue['issue_clocks_utc']['first'] for f in g['forecasts'].values())]
+        self.assertEqual(len(new_games),32)
+        self.assertEqual(sum(len(g['forecasts']) for g in new_games),704)
+        for g in new_games:
+            self.assertEqual(len(g['forecasts']),22)
+            for f in g['forecasts'].values():
+                self.assertEqual(f['issue_horizon_class'],'EARLY_OUTLOOK')
+                self.assertEqual(f['source_asof_utc'],issue['feature_asof_utc'])
+                self.assertLess(f['issued_at_utc'],f['scheduled_start_at_issue_utc'])
+        self.assertEqual(data['coverage']['unobserved_regular_slots'],24)
+        self.assertFalse(data['market_coverage_complete'])
+        self.assertEqual(data['owner_execution']['release'],'B087-R3')
+        self.assertTrue(data['owner_execution']['return_verified'])
+        self.assertEqual(data['owner_execution']['return_parts'],8)
+        self.assertEqual(data['owner_execution']['exit_code'],2)
+
 if __name__ == '__main__': unittest.main()

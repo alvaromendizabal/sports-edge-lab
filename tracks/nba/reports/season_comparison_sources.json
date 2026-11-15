@@ -1,5 +1,5 @@
 {
-  "selected_outputs": "season_inputs/b086_selected_comparison_input.json.gz",
+  "selected_outputs": "season_inputs/b087_r3_selected_comparison_input.json.gz",
   "model_review": "season_inputs/b084_preserved_market_review.json",
   "acceptance": "season_inputs/b086_observed_coverage.json.gz",
   "winner_references": "season_inputs/b086_winner_reference_projection.json",
