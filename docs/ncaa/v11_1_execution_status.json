@@ -63,7 +63,7 @@
     "weighted_rank": "WITHHELD",
     "prospective_superiority": "NOT_ESTABLISHED"
   },
-  "preserved_scientific_payload_sha256": "18e93c42ddfd569935733f936a417e86ae9f74d0afa87d0dd028ba617a75b730",
+  "preserved_scientific_payload_sha256": "2c6dd1546bc27eacf5c04d6a6989d99fc289e5942fbd92b2ec003edabb442926",
   "historical_uncertainty_supplement": {
     "status": "COMPLETED",
     "execution_environment": "Local statistical replay of authenticated saved prediction losses; not owner model execution",
@@ -565,5 +565,11 @@
     "unresolved_rows_are_unique_games": false,
     "source_refresh_or_science_performed_by_publication": false,
     "unissued_forecasts_published": 0
+  },
+  "v12_presentation_revision": {
+    "prior_packed_payload_sha256": "18e93c42ddfd569935733f936a417e86ae9f74d0afa87d0dd028ba617a75b730",
+    "removed_non_sport_presentation_fields": 1,
+    "scientific_values_unchanged": true,
+    "scientific_values_canonical_sha256": "57d377999110d6f8a5674ba5530fef5d8f4908610c738600e28f43c9b6b171f2"
   }
 }
