@@ -1,14 +1,14 @@
 # FBS verified owner review
 
-Owner: V078. Source snapshot: 2026-11-15T05:10:30Z.
+Owner: V078. Source snapshot: 2026-11-15T19:40:12Z.
 
-Rounded preserved foundation, retained fixed audit baselines and three independently admitted pending research leader roles, aggregate metrics and typed archived references only; no candidate grids, private recipes, weights or raw feeds.
+Rounded preserved foundation, fixed baseline and five objective-specific research roles; aggregate metrics and typed archived references. No private recipes, model states or raw feeds.
 
-Authenticated 8,346 issue records; graded 1,066 exact-identity rows across 41 distinct games. Quarantined 182 rows across 7 changed identities. Original issues were preserved. Public reporting itself adds no fits or forecasts.
+Preserved 8,346 issues; graded 1,248 rows across 47 distinct games and 52 exact-state cards. Eight changed event identities / 208 rows remain quarantined. No new sports fit or inference in this review.
 
-Source audit and descriptive schedule context: 288 team rows, 168 eligible rows covering 84 pending games; 2 eligible team rows lack history. Zero model fits, forecasts or measured improvement from this milestone. Required play/drive input qualification remains queued.
+Current schedule context: 274 team rows, 172 eligible rows on 86 pending games; 2 eligible rows lack history. No feature ablation, new fit or measured improvement from this milestone. Play/drive input qualification remains separate.
 
-The registered study recorded 47 worker PIDs, 0 new fits, 192 reused states, 38.513317 worker CPU seconds and 16.869777 study wall seconds. These measurements alone are not whole-host saturation proof.
+Registered study: 47 worker PIDs, 38.125268 worker CPU seconds, 15.470644 wall seconds,192 complete states reused. Short queue measurements do not prove sustained full capacity occupancy.
 
 The model cohorts, observed census, archived provider interpretation and all missingness are retained in the aggregate evidence and game download. Publication adds no fits or issues and does not promote models.
 
@@ -16,4 +16,4 @@ The model cohorts, observed census, archived provider interpretation and all mis
 
 ## Selected future research families
 
-Families leading the 41-game issued cohort; future-only research display; not promoted. Selection: 2026-11-15T06:10:09Z. The 41-game scores grade exact earlier-issued states. All 252 selected pending values use different current state hashes; the earlier scores do not measure or confirm these newer states. All reported selected-role paired gain intervals against the fixed baseline cross zero. One-week dependence and exploratory selection are not validated; these roles are not promotion evidence. No historical backfill, new inference or promotion occurs.
+Families leading the 47-game issued cohort; retained earlier issues; not promoted. Selection: 2026-11-15T20:25:10.689144Z. All 249 selected primary-role values differ from the exact 47-game evaluation states. Those earlier scores do not validate these currently issued states. Selected primary-role paired loss gain intervals cross zero; team/week dependence and model selection unvalidated. No historical backfill, new inference or promotion occurs.

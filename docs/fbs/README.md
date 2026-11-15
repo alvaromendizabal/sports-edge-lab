@@ -1,3 +1,27 @@
+<!-- FBS_V078R4_OWNER_REVIEW_START -->
+## November 15, 2026, 11:40 a.m. Pacific: updated scoring, failed new issuance
+
+[Open the current FBS models and market comparison](v078/index.html) · [Methods and limits](v078/README.md) · [Preserved 9:10 p.m. snapshot from November 14](v078-20261115T051030Z/index.html).
+
+The latest authenticated owner returned **exit 2** at forecast validation: `ONE_BASE_STATE_PER_FIT_REQUIRED`. It executed **zero new base fits**, reused **192 complete fit states and 35 additional base estimators**, and fitted **11 winner calibrators**. It committed **zero new forecast issues**. Independent scoring and research completed before the issuance failure. The complete logical return preserves this partial result. Publishing this review creates no fits, inference, provider requests or issues and does not promote a model.
+
+The **2026-11-15 19:40:12 UTC** source snapshot contains **888 observed 2026 fixtures: 751 finals and 137 pending**, comprising 87 timed pending games and 50 unresolved kickoffs. Genuine earlier research issues are graded on **47 identical games across 26 exact model/target states**. Another 26 states have one observed game that overlaps this cohort; the model selector keeps them separate. These are not 48 distinct prospective games. The 52-game original foundation, 301-game legacy monitor and 751-game later-fitted reconstruction retain their own evidence classes.
+
+| Objective on the identical 47-game cohort | Research family | Saved metric |
+|---|---|---:|
+| Winner probability quality | CatBoost | Log loss 0.600278; Brier 0.205577 |
+| Winner accuracy | TensorFlow | 36/47, 76.596% |
+| Margin absolute / squared error | TensorFlow | MAE 14.388223; RMSE 18.894542 |
+| Total absolute error | Extra Trees | MAE 12.098243 |
+| Total squared-error sensitivity | Ridge regression | RMSE 14.578538 |
+
+These are exploratory leaders on a small, dated cohort. The dashboard provides an explicit ranking objective and **five distinct future research roles**, alongside the preserved foundation and fixed audit baseline. Independent revalidation admits earlier committed issues on **83 of 137 pending games**, preserving 2,158 earlier research rows and exposing 415 rounded values across five roles. Latest prepared replacements remain unissued and are excluded. All 415 selected values use different states from those scored on 47 games; the earlier metrics do not validate the selected weights. Each role retains 54 explicit gaps: 50 unresolved kickoffs, three fixtures without an earlier committed selected state, and one passed cutoff. Selection is timestamped **2026-11-15T20:25:10.689144Z**, separate from original issue and source-observation clocks. Prior batches, physical atomic commits and model-state proofs remain bound to their authenticated predecessor because the newest failed issuance return omitted that journal.
+
+DraftKings, Kalshi, Polymarket Global and Polymarket US appear beside every observed game with provider/target filters, quote and observation clocks, archived-reference counts, missing reasons and CSV downloads. **Zero named-provider comparison cells are qualified.** The display retains 194 rounded DraftKings references. The 15,450,173-row bookmaker archive does not prove complete season or exchange coverage. A bounded read of one owned DraftKings history page identified 53 pre-cutoff game candidates and 159 target candidates omitted by the earlier requested-game normalizer. They remain private until contract, identity and display qualification is complete; this discovery adds no qualified public cells or paid requests.
+
+The secondary milestone describes 274 team rows and 172 eligible rows across 86 pending games, with two eligible team rows lacking history. It establishes no new fit or measured improvement. The preceding current page is preserved byte-for-byte at the dated link above. All older evidence remains below unchanged.
+<!-- FBS_V078R4_OWNER_REVIEW_END -->
+
 <!-- FBS_V078R3_OWNER_REVIEW_START -->
 ## November 14, 2026, 9:10 p.m. Pacific: verified reuse and updated forecasts
 
