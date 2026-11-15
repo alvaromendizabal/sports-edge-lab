@@ -2,20 +2,26 @@
   "schema": "fbs.v078.renderer-receipt.v1",
   "status": "PASS",
   "owner_version": "V078",
-  "source_as_of": "2026-11-15T03:35:19Z",
-  "input_manifest_sha256": "5b7359c0a834b0443fbeec9dee0ef5acb5e54d4a8b5cd1d1b2a6ba12cfded0ce",
+  "source_as_of": "2026-11-15T05:10:30Z",
+  "input_manifest_sha256": "2be09ed56646f4531aa870e45c05ce78de9e266052c20f70f33f5de2734a82a2",
   "counts": {
     "failed_fits": 0,
-    "new_fits": 35,
-    "new_issue_games": 84,
-    "new_issue_records": 2184,
-    "new_winner_calibrators": 11,
-    "reused_states": 192
+    "new_fits": 0,
+    "new_issue_games": 14,
+    "new_issue_records": 364,
+    "new_winner_calibrators": 3,
+    "newly_added_unique_forecast_games": 0,
+    "reused_base_estimators": 9,
+    "reused_issue_games": 70,
+    "reused_issue_records": 1820,
+    "reused_states": 218,
+    "total_current_issue_games": 84,
+    "total_current_issue_records": 2184
   },
   "census": {
     "fixtures": 888,
-    "finals": 738,
-    "pending": 150
+    "finals": 744,
+    "pending": 144
   },
   "new_model_fits_by_renderer": 0,
   "new_issues_by_renderer": 0,
@@ -23,33 +29,33 @@
   "files": [
     {
       "path": "README.md",
-      "bytes": 1256,
-      "sha256": "4a2756ac0ead813c6b286cf42ba905579ebdbe320c10f0a5c83a9c005ff96a00"
+      "bytes": 1258,
+      "sha256": "733defbc645dbb48792dc064000be0d058a379b2a7bf95bb456c8fc93bc04ba3"
     },
     {
       "path": "app.js",
-      "bytes": 17654,
-      "sha256": "a6cd8a5acd61523e81807c461df77664276c6bc9f2f378fdf591b060b1bf4571"
+      "bytes": 21692,
+      "sha256": "0d7017bf88076e7b1f415307b6bc6e1e76bcd8ec674ce2c20fd461e85a0308e4"
     },
     {
       "path": "data/games.json.gz",
-      "bytes": 147272,
-      "sha256": "f0886555c830016d45e813b6c301c6967b0800c85a7c56101115e20a87dd5a27"
+      "bytes": 148895,
+      "sha256": "8749eaa6ebb74d221ccb1ff2b1db8f5d8ca10ad2c5a41e9169ec7d57e8223948"
     },
     {
       "path": "data/review.json",
-      "bytes": 86168,
-      "sha256": "e9e8331924320299e54cb1177219a25a6fac01a14555df8e71b937954d6fd64c"
+      "bytes": 87315,
+      "sha256": "f237cd28e1f148c84ac83c2d0d7d0ff23613d65dfd7e52f96fefbd259ce8127a"
     },
     {
       "path": "index.html",
-      "bytes": 17886,
-      "sha256": "05cdc121e0c6cda5d1ab2d96080be32db6966562de4f21b2c690f19fd472c1a6"
+      "bytes": 19607,
+      "sha256": "06ce43ffeec24d3d0ea0cf2eadd53c3cba254ea1f1bd1bd90fdb0c2249c281f1"
     },
     {
       "path": "styles.css",
-      "bytes": 13063,
-      "sha256": "bec3e0ecc5f34eeecb4632671f55749c31a895933e6e78b3b202f4460a05b8c0"
+      "bytes": 13883,
+      "sha256": "ebff8181d29843a9a03f17b81307dbc0b608593f09c48a30835863067560c633"
     }
   ]
 }

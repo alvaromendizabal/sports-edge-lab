@@ -25,11 +25,11 @@ const check=(value,message)=>{assert.ok(value,message);checks++;};
     page.on('pageerror',e=>errors.push(e.message));page.on('requestfailed',r=>failed.push(r.url()));
     page.on('response',r=>{if(r.status()>=400)httpErrors.push({url:r.url(),status:r.status()});});
     await page.goto(base,{waitUntil:'networkidle'});await page.waitForSelector('html[data-ready="true"]');
-    check(await page.locator('#stat-fits').innerText()==='35','Actual executed fit tasks');
-    check((await page.locator('#fit-reuse-note').innerText()).includes('unchanged training rows'),'Duplicate base-fit qualification visible');
-    check(await page.locator('#stat-reused').innerText()==='192','Prior states kept separate');
+    check(await page.locator('#stat-fits').innerText()===data.counts.new_fits.toLocaleString('en-US'),'Actual executed fit tasks');
+    check((await page.locator('#fit-reuse-note').innerText()).includes(data.fit_reuse_caveat),'Current fit and reuse accounting visible');
+    check(await page.locator('#stat-reused').innerText()===data.counts.reused_states.toLocaleString('en-US'),'Prior states kept separate');
     check(await page.locator('#stat-fixtures').innerText()==='888','Current observed census');
-    check(await page.locator('#stat-issues').innerText()==='2,184','New genuine research issues');
+    check(await page.locator('#stat-issues').innerText()===data.counts.new_issue_records.toLocaleString('en-US'),'Updated genuine research issues');
     check(await page.evaluate(()=>document.documentElement.scrollWidth<=innerWidth),'Overview has no page overflow');
     if(out){fs.mkdirSync(out,{recursive:true});await page.screenshot({path:path.join(out,`fbs-v078-result-${live?'live':'static'}-${width}.png`),fullPage:true});}
     await page.click('[data-tab="models"]');
@@ -40,7 +40,8 @@ const check=(value,message)=>{assert.ok(value,message);checks++;};
       check((await page.locator('#model-cohort-note').innerText())===cohort.description,'Evidence caveat shown');
     }
     await page.selectOption('#model-cohort','issued');await page.selectOption('#model-target','winner');
-    check((await page.locator('#model-cards').innerText()).includes('0.490613'),'Genuine LightGBM metric');
+    const winnerLeader=data.models.filter(r=>r.cohort==='issued'&&r.target==='winner').sort((a,b)=>a.metrics.log_loss-b.metrics.log_loss)[0];
+    check((await page.locator('#model-cards').innerText()).includes(winnerLeader.metrics.log_loss.toFixed(6)),'Latest genuine probability leader metric');
     check((await page.locator('#model-cards').innerText()).includes('Conditional 95% accuracy interval'),'Conditional uncertainty visible');
     check(await page.evaluate(()=>document.documentElement.scrollWidth<=innerWidth),'Model cards do not overflow');
     if(out)await page.screenshot({path:path.join(out,`fbs-v078-models-${live?'live':'static'}-${width}.png`),fullPage:true});
@@ -50,11 +51,13 @@ const check=(value,message)=>{assert.ok(value,message);checks++;};
       const cohort=census.filter(g=>g.season===2026&&(population==='all'||(population==='final'?g.status==='final':g.status!=='final')));
       check(await page.locator('#provider-body tr').count()===4,'Four distinct provider products');
       for(const provider of data.providers){
-        const row=page.locator('#provider-body tr[data-provider="'+provider.id+'"] td');
+        const row=page.locator('#provider-body tr[data-provider="'+provider.id+'"]');
         const references=cohort.filter(g=>g.providers?.[provider.id]?.[target]?.observed_reference).length;
-        check((await row.nth(1).innerText())===(references?references.toLocaleString('en-US')+' archived references':'Not proved for this cohort'),'Correct provider schema and coverage');
-        check(await row.nth(2).innerText()==='0','No invented qualified baseline');
-        check(await row.nth(3).innerText()===cohort.length.toLocaleString('en-US'),'Correct provider denominator');
+        const displayable=cohort.filter(g=>g.providers?.[provider.id]?.[target]?.value!=null&&g.providers?.[provider.id]?.[target]?.display_eligible===true).length;
+        check((await row.locator('[data-coverage="reference"]').innerText())===references.toLocaleString('en-US'),'Correct archived reference count');
+        check((await row.locator('[data-coverage="display"]').innerText())===displayable.toLocaleString('en-US'),'Displayable rounded references remain separate');
+        check(await row.locator('[data-coverage="qualified"]').innerText()==='0','No invented qualified baseline');
+        check(await row.locator('[data-coverage="denominator"]').innerText()===cohort.length.toLocaleString('en-US'),'Correct provider denominator');
       }
     }
     check((await page.locator('#archive-comparison-body').innerText()).includes('Unresolved saved market reference'),'Composite reference not misattributed');
@@ -98,16 +101,34 @@ const check=(value,message)=>{assert.ok(value,message);checks++;};
     check(await page.locator('#game-body tr').count()===25,'Game paging');
     const first=await page.locator('#game-body').innerText();await page.click('#game-next');
     check(await page.locator('#game-body').innerText()!==first,'Paging changes visible games');
-    await page.selectOption('#game-status','final');check((await page.locator('#game-count').innerText()).startsWith('738'),'All current finals');
-    await page.selectOption('#game-status','tbd');check((await page.locator('#game-count').innerText()).startsWith('53'),'Current TBD count excludes old-season TBD');
+    await page.selectOption('#game-status','final');check((await page.locator('#game-count').innerText()).startsWith(String(data.census.finals)),'All current finals');
+    await page.selectOption('#game-status','unfinished');check((await page.locator('#game-count').innerText()).startsWith(String(data.census.pending)),'All pending includes unresolved kickoffs');
+    await page.selectOption('#game-status','tbd');check((await page.locator('#game-count').innerText()).startsWith(String(census.filter(g=>g.season===2026&&g.status==='tbd').length)),'Current TBD count excludes old-season TBD');
     await page.selectOption('#game-status','all');await page.selectOption('#game-coverage','issued');
-    check((await page.locator('#game-count').innerText()).startsWith('84'),'New issues cover 84 games');
+    check((await page.locator('#game-count').innerText()).startsWith(String(data.counts.new_issue_games)),'Updated issue game count');
     check((await page.locator('#game-body').innerText()).includes('new issue rows retained'),'Issue coverage explicit');
-    await page.selectOption('#game-coverage','missing');check((await page.locator('#game-count').innerText()).startsWith('804'),'All games without new issue remain');
+    await page.selectOption('#game-coverage','missing');check((await page.locator('#game-count').innerText()).startsWith(String(data.census.fixtures-data.counts.new_issue_games)),'All games without an updated issue remain');
+    await page.selectOption('#game-coverage','foundation');
+    check((await page.locator('#game-count').innerText()).startsWith(String(census.filter(g=>g.season===2026&&g.model?.winner?.value!=null).length)),'Preserved foundation outputs can be located separately');
     await page.selectOption('#game-coverage','all');await page.fill('#game-search','Florida');
     check((await page.locator('#game-body').innerText()).includes('Florida'),'Team search works');await page.fill('#game-search','');
     check(await page.evaluate(()=>document.documentElement.scrollWidth<=innerWidth),'Mobile game cards have no page overflow');
     if(out)await page.screenshot({path:path.join(out,`fbs-v078-games-${live?'live':'static'}-${width}.png`),fullPage:true});
+    for(const provider of data.providers)for(const target of ['winner','margin','total']){
+      await page.selectOption('#game-provider',provider.id);await page.selectOption('#game-target',target);
+      for(const state of ['reference','display','qualified','missing','blocked']){
+        await page.selectOption('#game-provider-state',state);
+        const expected=census.filter(g=>{if(g.season!==2026)return false;const c=g.providers?.[provider.id]?.[target];const reference=c?.observed_reference===true,display=c?.value!=null&&c?.display_eligible===true;return state==='reference'?reference:state==='display'?display:state==='qualified'?c?.status==='qualified':state==='missing'?!reference:reference&&!display;});
+        check((await page.locator('#game-count').innerText()).startsWith(String(expected.length)),`${provider.id} ${target} ${state} gap filter`);
+      }
+    }
+    await page.click('[data-tab="markets"]');await page.selectOption('#provider-population','upcoming');await page.selectOption('#provider-target','winner');
+    await page.click('[data-provider-open="kalshi"]');
+    check(await page.locator('#tab-games').getAttribute('aria-selected')==='true','Provider drilldown opens the game table');
+    check(await page.locator('#game-provider').inputValue()==='kalshi','Provider drilldown preserves product identity');
+    check(await page.locator('#game-status').inputValue()==='unfinished','Provider drilldown includes all pending fixtures');
+    check((await page.locator('#game-count').innerText()).startsWith(String(data.census.pending)),'Pending drilldown includes unresolved kickoffs');
+    await page.selectOption('#game-status','all');await page.selectOption('#game-provider','all');await page.selectOption('#game-provider-state','all');
     await page.selectOption('#game-target','margin');
     await page.locator('[data-game-open]').first().click();
     check(await page.locator('#game-dialog').isVisible(),'Game detail opens');
@@ -117,12 +138,13 @@ const check=(value,message)=>{assert.ok(value,message);checks++;};
     const downloadPromise=page.waitForEvent('download');await page.click('#download-games');const download=await downloadPromise;
     check(download.suggestedFilename()==='FBS_2026_FILTERED_COMPARISON.csv','Filtered CSV has current season');
     const downloaded=fs.readFileSync(await download.path(),'utf8');
-    check(downloaded.split('\r\n').length===890,'CSV contains all 888 filtered games and header');
+    check(downloaded.split('\r\n').length===data.census.fixtures+2,'CSV contains every filtered game and header');
+    for(const suffix of ['reference_present','rounded_value_displayable','identity_matched','clock_gate_passed','qualified_comparison'])check(downloaded.includes('draftkings_'+suffix),'CSV preserves '+suffix);
     check(downloaded.includes('draftkings_observation_time'),'CSV preserves provider observation clocks');
     check(!/circa|s3:\/\//i.test(downloaded),'CSV respects sport and public scope');
-    await page.click('[data-tab="execution"]');check((await page.locator('#cpu-detail').innerText()).includes('41.240602'),'Actual study CPU seconds');
-    check((await page.locator('#finalization-note').innerText()).includes('closure-only recovery'),'Finalization failure and recovery remain visible');
-    check((await page.locator('#panel-execution').innerText()).includes('7 parts'),'Multipart return explicit');
+    await page.click('[data-tab="execution"]');check((await page.locator('#cpu-detail').innerText())===data.cpu_detail,'Current measured CPU accounting');
+    check((await page.locator('#finalization-note').innerText())===data.execution_note,'Current finalization is distinct from archived failures');
+    check((await page.locator('#panel-execution').innerText()).includes(data.return.parts.toLocaleString('en-US')+' parts'),'Multipart return explicit');
     check((await page.locator('#panel-execution').innerText()).includes('Uploading the multi-gigabyte return in chat is unnecessary'),'No manual return-upload requirement');
     check(await page.locator('#gate-body tr').count()===data.gates.length,'All acceptance statuses shown');
     await page.locator('[data-tab="execution"]').focus();await page.keyboard.press('Home');
@@ -132,7 +154,7 @@ const check=(value,message)=>{assert.ok(value,message);checks++;};
   }
   check(errors.length===0,'No JavaScript errors');check(failed.length===0,'No failed assets');check(httpErrors.length===0,'No HTTP failures');
   const receipt={status:'PASS',checks,viewports:[1440,390],live_url:live||null,source_as_of:data.source_as_of,
-    owner_version:'V078',report_version:'V078',new_fits_by_publication:0,owner_executed_fit_tasks:35,owner_new_issues:2184,
+    owner_version:data.owner_version,report_version:data.report_version,new_fits_by_publication:0,owner_executed_fit_tasks:data.counts.new_fits,owner_new_issues:data.counts.new_issue_records,
     publication_is_owner_execution:false,errors,failed,httpErrors};
   if(out)fs.writeFileSync(path.join(out,`FBS_V078_${live?'LIVE':'STATIC'}_BROWSER_RECEIPT.json`),JSON.stringify(receipt,null,2));
   console.log(JSON.stringify(receipt));

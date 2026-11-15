@@ -1,0 +1,55 @@
+{
+  "schema": "fbs.v078.renderer-receipt.v1",
+  "status": "PASS",
+  "owner_version": "V078",
+  "source_as_of": "2026-11-15T03:35:19Z",
+  "input_manifest_sha256": "5b7359c0a834b0443fbeec9dee0ef5acb5e54d4a8b5cd1d1b2a6ba12cfded0ce",
+  "counts": {
+    "failed_fits": 0,
+    "new_fits": 35,
+    "new_issue_games": 84,
+    "new_issue_records": 2184,
+    "new_winner_calibrators": 11,
+    "reused_states": 192
+  },
+  "census": {
+    "fixtures": 888,
+    "finals": 738,
+    "pending": 150
+  },
+  "new_model_fits_by_renderer": 0,
+  "new_issues_by_renderer": 0,
+  "publication_performed": false,
+  "files": [
+    {
+      "path": "README.md",
+      "bytes": 1256,
+      "sha256": "4a2756ac0ead813c6b286cf42ba905579ebdbe320c10f0a5c83a9c005ff96a00"
+    },
+    {
+      "path": "app.js",
+      "bytes": 17654,
+      "sha256": "a6cd8a5acd61523e81807c461df77664276c6bc9f2f378fdf591b060b1bf4571"
+    },
+    {
+      "path": "data/games.json.gz",
+      "bytes": 147272,
+      "sha256": "f0886555c830016d45e813b6c301c6967b0800c85a7c56101115e20a87dd5a27"
+    },
+    {
+      "path": "data/review.json",
+      "bytes": 86168,
+      "sha256": "e9e8331924320299e54cb1177219a25a6fac01a14555df8e71b937954d6fd64c"
+    },
+    {
+      "path": "index.html",
+      "bytes": 17886,
+      "sha256": "05cdc121e0c6cda5d1ab2d96080be32db6966562de4f21b2c690f19fd472c1a6"
+    },
+    {
+      "path": "styles.css",
+      "bytes": 13063,
+      "sha256": "bec3e0ecc5f34eeecb4632671f55749c31a895933e6e78b3b202f4460a05b8c0"
+    }
+  ]
+}
