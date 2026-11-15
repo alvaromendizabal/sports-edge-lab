@@ -1,3 +1,21 @@
+<!-- FBS_V078R3_OWNER_REVIEW_START -->
+## November 14, 2026, 9:10 p.m. Pacific: verified reuse and updated forecasts
+
+[Open the latest FBS model and market comparison](v078/index.html) · [Methods and limits](v078/README.md) · [Preserved 7:35 p.m. snapshot](v078-20261115T033519Z/index.html).
+
+The latest verified V078 execution used the repaired continuation runner and completed with **exit 0 in 174.3 seconds**. It made **zero new base fits**, reused **218 complete fit states and nine additional base estimators**, fitted **three winner calibrators**, and refreshed **six residual calibrations**, with zero failed fits. The detailed study proves the nine additional base reuses; the owner summary incorrectly records that one counter as zero. The original summary remains preserved. This is compatible reuse, with no automatic promotion.
+
+The **November 15, 05:10:30 UTC** source snapshot contains **888 observed 2026 games: 744 finals and 144 pending**, including 91 timed pending games and 53 unresolved kickoffs. Genuine earlier research issues now have **41 exact-event scored games**, with seven changed identities quarantined. CatBoost leads winner log loss/Brier/accuracy on that cohort; TensorFlow leads margin MAE/RMSE. Extra Trees leads total MAE and XGBoost total RMSE. These small current cohorts remain separate from the **46-game original foundation**, **301-game legacy monitor** and **744-game reconstruction**.
+
+Future research coverage comprises **84 of 144 pending games**. The run committed **364 updated issue records on 14 previously forecast games** and retained **1,820 prior issues on 70 other games**. It added **zero new unique forecast games**. The per-game source selector keeps the preserved foundation separate from a newly admitted **fixed audit baseline: Logistic regression for winner, Ridge regression for margin and total**. This bounded control exposes **252 existing issued values across 84 pending games**, with 60 explicit game gaps; it is neither a promoted champion nor an outcome-selected current leader. Selection is timestamped **05:54:30 UTC**, separate from input observation and original issue times. Admission verifies exact current fixtures, state/receipt bindings, reconstructed journal bytes, physically read atomic commits and the fit/preparation/issue/selection/cutoff chronology. There is no historical backfill, new inference or publication issuance credit, and the complete private candidate grid remains excluded.
+
+The dashboard now separates **archived references, rounded values eligible for display, and qualified comparisons**, adds all-pending and provider-gap filters, and exports the evidence flags and both provider clocks. All four provider products retain explicit gaps. **Zero named-provider comparison cells are qualified.** The 15,450,173 retained bookmaker rows were reused; their volume does not establish complete current-season or exchange coverage.
+
+The original TensorFlow base state is now authenticated against all 301 saved monitor probabilities. That closes the state-binding gap for that one saved model; it does not establish historical pregame possession or promotion readiness. The continuation source passed **84 packaged regression tests**, including calibration-only reuse and launch-boundary checks; test validation itself created no owner fits or issues. The earlier snapshot and its execution failures remain available unchanged. Publication adds no fits, source collection or forecast issues.
+A third source exposes selected research-family outputs for the same 84 pending games: CatBoost winner, TensorFlow margin and ExtraTrees total by MAE, selected at 2026-11-15 06:10:09 UTC from the earlier-issued 41-game cohort. All 252 pending values use newer or different states from those scored; the earlier metrics do not measure the newer weights. Selection is exploratory, future-only and not promotion or confirmed superiority. The foundation and fixed audit baseline remain separate options, and every pending gap remains explicit.
+
+<!-- FBS_V078R3_OWNER_REVIEW_END -->
+
 <!-- FBS_V078_OWNER_REVIEW_START -->
 ## November 15, 2026 UTC: actual V078 completed, with explicit evidence gaps
 
