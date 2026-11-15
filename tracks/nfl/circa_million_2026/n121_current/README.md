@@ -13,7 +13,7 @@ N121 uses 285 validation games in 2024, 285 in 2025 and 145 completed games in t
 
 ## Post-freeze N025 paper champion
 
-[Read the N025 original paper-champion reconciliation](N121_N025_Original_Champion.md) for all 145 completed 2026 games, with decisive-winner metrics on 144. The source clocks include retrospective proxies. These figures are diagnostic and excluded from the frozen N121 rankings. [Season metrics CSV](N121_N025_Original_Champion.csv) · [Source reconciliation JSON](N121_N025_Original_Champion.json).
+[Read the N025 original paper-champion reconciliation](N121_N025_Original_Champion.md) for all 145 completed 2026 games, with decisive-winner metrics on 144. The outcome ledger already had these 145 finals at 21:29:38 UTC on November 15. The N121 test froze the identical 145 game IDs at 22:06:43 UTC. The one tie is excluded from both decisive-winner scores. The forecast source clocks include retrospective proxies. These figures are diagnostic and excluded from the frozen N121 rankings. [Season metrics CSV](N121_N025_Original_Champion.csv) · [Source reconciliation JSON](N121_N025_Original_Champion.json).
 
 ## Portable evidence recovery
 
