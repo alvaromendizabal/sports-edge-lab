@@ -2,6 +2,8 @@
 
 [Current NFL dashboard](https://sports-edge-lab-nfl.alv-mendizabal.chatgpt.site/circa/) · [N110 release](https://sports-edge-lab-nfl.alv-mendizabal.chatgpt.site/circa/n110/) · [Exact native page source](n110_current/index.html.source) · [Repository view](n110_current/index.html) · [Previous dashboard and releases](https://sports-edge-lab-nfl.alv-mendizabal.chatgpt.site/circa/index-before-n110.html)
 
+[N110 paired Kalshi scores, three-venue coverage and 105-game drive study](n110_current/README.md)
+
 [2026 NFL fixtures, venue terms and source-matched model comparisons](https://sports-edge-lab-nfl.alv-mendizabal.chatgpt.site/circa/n109/) · [N109 reviewed source](./n109_current/index.html)
 
 
