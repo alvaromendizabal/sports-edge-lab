@@ -5,6 +5,7 @@ import base64
 from collections import Counter
 from datetime import datetime
 import gzip
+import hashlib
 from html.parser import HTMLParser
 import json
 from pathlib import Path
@@ -138,6 +139,44 @@ class CurrentSnapshotTests(unittest.TestCase):
         self.assertEqual(value['automatic_promotions'], 0)
         self.assertEqual(value['requested_cores'], 42)
         self.assertEqual(value['selected_capacity_acceptance'], 'NOT_DEMONSTRATED')
+
+    def test_latest_execution_is_r15_and_comparison_remains_r14(self):
+        value = DATA['latest_execution']
+        self.assertEqual(value['return_release'], 'R15')
+        self.assertEqual(DATA['return_release'], 'R14')
+        self.assertEqual(value['status'], 'ADMISSION_DEFERRED')
+        self.assertEqual((value['new_target_fits'], value['new_scalar_calibration_fits'], value['verified_reused_target_fits']), (0, 0, 0))
+        self.assertEqual(value['recovered_checkpoint_references'], 2793)
+        self.assertFalse(value['checkpoint_references_are_fit_credit'])
+        self.assertEqual(value['requested_cores'], 48)
+        self.assertEqual(value['leased_cores_at_deferral'], 1)
+        self.assertEqual(value['memory_full_pressure_avg10'], 3.1)
+        self.assertEqual(value['cause_diagnosis'], 'FRESH_PRESSURE_GATE_CHECKPOINT_WAIT_EXHAUSTED')
+        self.assertAlmostEqual(value['checkpoint_admission_wait_seconds'], 15.016700029998901)
+        self.assertEqual(value['memory_full_pressure_avg10_during_later_packaging'], 0.93)
+        self.assertEqual(value['pressure_blockers_during_later_packaging'], [])
+        self.assertFalse(value['science_resumed_after_pressure_recovered'])
+        self.assertFalse(value['new_comparison_completed'])
+        self.assertFalse(value['new_source_refresh_claimed'])
+        self.assertAlmostEqual(value['summary_elapsed_seconds_before_return_finalization'], 109.5966174669993)
+        self.assertAlmostEqual(value['startup_fixture_tests_seconds'], 88.14597212800072)
+        self.assertAlmostEqual(value['science_phase_seconds_before_first_numbered_stage'], 16.016921452001043)
+        self.assertEqual(value['return_published_at'], '2026-11-15T04:23:50+00:00')
+        self.assertEqual(value['selected_capacity_acceptance'], 'NOT_DEMONSTRATED')
+
+    def test_r14_scientific_snapshot_is_unchanged_by_r15_status(self):
+        preserved = {key: value for key, value in DATA.items() if key != 'latest_execution'}
+        serialized = json.dumps(preserved, sort_keys=True, separators=(',', ':'), ensure_ascii=False).encode()
+        self.assertEqual(hashlib.sha256(serialized).hexdigest(), '75aa87382b79c7f44f5f3442fa043e7fcafbf66b875ff3937afc361b582c8b06')
+
+    def test_latest_execution_and_preserved_science_are_explicit_in_page(self):
+        page = (DOCS / 'v12.html').read_text()
+        self.assertIn('Latest execution: R15 deferred. Latest model comparison: R14.', page)
+        self.assertIn('memory-pressure admission deferral during checkpoint authentication', page)
+        self.assertIn('109.60 seconds before return finalization', page)
+        self.assertIn('1 core leased at the failure-time admission decision', page)
+        self.assertIn('id="prior-execution-r14"', page)
+        self.assertIn('2,793 recovered checkpoint references are references, not model fits', page)
 
     def test_public_surfaces_have_no_private_fields_or_other_contest_marker(self):
         excluded_contest = ''.join(map(chr, [99, 105, 114, 99, 97]))
