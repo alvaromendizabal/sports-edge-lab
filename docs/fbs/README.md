@@ -12,6 +12,8 @@ Future research coverage comprises **84 of 144 pending games**. The run committe
 The dashboard now separates **archived references, rounded values eligible for display, and qualified comparisons**, adds all-pending and provider-gap filters, and exports the evidence flags and both provider clocks. All four provider products retain explicit gaps. **Zero named-provider comparison cells are qualified.** The 15,450,173 retained bookmaker rows were reused; their volume does not establish complete current-season or exchange coverage.
 
 The original TensorFlow base state is now authenticated against all 301 saved monitor probabilities. That closes the state-binding gap for that one saved model; it does not establish historical pregame possession or promotion readiness. The continuation source passed **84 packaged regression tests**, including calibration-only reuse and launch-boundary checks; test validation itself created no owner fits or issues. The earlier snapshot and its execution failures remain available unchanged. Publication adds no fits, source collection or forecast issues.
+A third source exposes selected research-family outputs for the same 84 pending games: CatBoost winner, TensorFlow margin and ExtraTrees total by MAE, selected at 2026-11-15 06:10:09 UTC from the earlier-issued 41-game cohort. All 252 pending values use newer or different states from those scored; the earlier metrics do not measure the newer weights. Selection is exploratory, future-only and not promotion or confirmed superiority. The foundation and fixed audit baseline remain separate options, and every pending gap remains explicit.
+
 <!-- FBS_V078R3_OWNER_REVIEW_END -->
 
 <!-- FBS_V078_OWNER_REVIEW_START -->

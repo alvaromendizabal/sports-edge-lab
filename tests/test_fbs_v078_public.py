@@ -202,6 +202,53 @@ class PublicV078(unittest.TestCase):
         self.assertEqual(len({g for g,t in admitted}), 84)
         self.assertEqual(after_observation, 42, 'Observation precedes the 14 games of legitimate later issuance')
 
+    def test_selected_research_leaders_are_future_only_and_state_qualified(self):
+        selection = self.data['research_leader_selection']
+        self.assertEqual(selection['rule'], {'winner':'CatBoost','margin':'TensorFlow','total':'ExtraTrees'})
+        self.assertEqual(selection['selection_cohort_games'], 41)
+        self.assertFalse(selection['promotion'])
+        self.assertFalse(selection['historical_leader_backfill'])
+        self.assertTrue(selection['performance_state_differs_from_current_issued_state'])
+        self.assertEqual([selection[k] for k in ['new_fits','new_inference','new_issues']], [0,0,0])
+        self.assertTrue(all(selection['gates'].values()))
+        self.assertEqual([selection[k] for k in ['admitted_cells','admitted_games','missing_games']], [252,84,60])
+        self.assertIn('cross zero', selection['uncertainty_limitation'])
+        chosen = datetime.fromisoformat(selection['selection_time'].replace('Z','+00:00'))
+        admitted=[]; missing=[]
+        for target,role in selection['selection_objectives'].items():
+            self.assertEqual(role['cohort_games'], 41)
+            self.assertFalse(role['current_state_is_earlier_scored_state'])
+            self.assertEqual(role['evaluation_state_matches'],0)
+            self.assertEqual(role['evaluation_state_mismatches'],84)
+            self.assertEqual(role['objective'], 'log_loss' if target=='winner' else 'mae')
+        for game in self.games:
+            cells=game.get('research_leader_model',{})
+            if not cells: continue
+            self.assertEqual(game['season'],2026)
+            self.assertNotEqual(game['status'],'final')
+            self.assertEqual(set(cells), {'winner','margin','total'})
+            for target,cell in cells.items():
+                self.assertEqual(cell['family'],selection['rule'][target])
+                self.assertEqual(cell['source_alias'],'Selected research leaders')
+                self.assertIn('not promoted',cell['evidence'])
+                self.assertIn('Current issued states differ',cell['evidence'])
+                if cell['value'] is None:
+                    self.assertTrue(cell['reason']);missing.append((game['id'],target));continue
+                self.assertEqual(cell['admission_status'],'PASS')
+                self.assertEqual(cell['status'],'genuine_issued_research')
+                clocks={k:datetime.fromisoformat(cell[k].replace('Z','+00:00')) for k in ['fit_completed_at','prepared_at','issue_time','information_cutoff','requested_horizon_cutoff','selection_time']}
+                self.assertLessEqual(clocks['fit_completed_at'],clocks['prepared_at'])
+                self.assertLessEqual(clocks['information_cutoff'],clocks['prepared_at'])
+                self.assertLessEqual(clocks['prepared_at'],clocks['issue_time'])
+                self.assertLessEqual(clocks['issue_time'],chosen)
+                self.assertEqual(clocks['selection_time'],chosen)
+                self.assertLess(chosen,clocks['requested_horizon_cutoff'])
+                self.assertEqual(clocks['requested_horizon_cutoff'],datetime.fromisoformat(game['kickoff'].replace('Z','+00:00'))-timedelta(minutes=120))
+                admitted.append((game['id'],target))
+        self.assertEqual(len(admitted),252)
+        self.assertEqual(len({g for g,t in admitted}),84)
+        self.assertEqual(len(missing),180)
+
     def test_prior_public_snapshot_bytes_are_preserved(self):
         prior = ROOT / 'docs/fbs/v078-20261115T033519Z'
         receipt = json.loads((prior/'RENDER_RECEIPT.json').read_text())
