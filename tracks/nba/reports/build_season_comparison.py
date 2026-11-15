@@ -19,7 +19,8 @@ PUBLIC_OWNER_FIELDS = ('release', 'observed_at_utc', 'started_at_utc', 'finished
                        'exit_code', 'new_estimator_method_returns', 'new_unique_model_count',
                        'reused_model_count', 'failed_model_count', 'new_forecast_rows',
                        'return_verified', 'return_parts', 'active_run', 'limitations',
-                       'verified_payloads', 'scientific_status', 'source_receipt_sha256')
+                       'verified_payloads', 'scientific_status', 'source_receipt_sha256',
+                       'return_logical_bytes', 'return_representation', 'total_elapsed_seconds')
 
 def read_json(path):
     raw = path.read_bytes()
