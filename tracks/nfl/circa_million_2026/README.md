@@ -1,5 +1,9 @@
 # 2026 NFL models vs. Circa Million VIII
 
+[N114 live dashboard](https://sports-edge-lab-nfl.alv-mendizabal.chatgpt.site/circa/n114/) · [N114 public page source](n114_current/index.html)
+
+The current NFL review includes separately issued margin and total forecasts, three-venue game comparisons and evidence timestamps for recent and historical prices.
+
 [N113 live dashboard](https://sports-edge-lab-nfl.alv-mendizabal.chatgpt.site/circa/n113/) · [N113 public page source](n113_current/index.html)
 
 The N113 review covers 272 current-season fixtures and 570 earlier games. The team availability section includes its source time and the later practice-margin study. Original winner and margin probabilities retain their recorded issue times.
