@@ -18,6 +18,7 @@ from urllib.parse import urlsplit
 ROOT = Path(__file__).resolve().parents[2]
 DOCS = ROOT / 'docs/ncaa'
 DATA = json.loads((DOCS / 'v12_r14_public_evidence.json').read_text())
+UNCERTAINTY = json.loads((DOCS / 'v12_r14_descriptive_uncertainty.json').read_text())
 
 
 class Page(HTMLParser):
@@ -178,9 +179,43 @@ class CurrentSnapshotTests(unittest.TestCase):
         self.assertIn('id="prior-execution-r14"', page)
         self.assertIn('2,793 recovered checkpoint references are references, not model fits', page)
 
+    def test_uncertainty_audit_is_descriptive_and_uses_unchanged_cohort(self):
+        value = UNCERTAINTY
+        self.assertEqual(value['analysis_role'], 'POST_HOC_DESCRIPTIVE_AUDIT_OF_KNOWN_METRICS')
+        self.assertEqual(value['scientific_comparison_return'], 'R14')
+        self.assertEqual(value['replicates'], 10000)
+        self.assertEqual(value['confidence_level'], .95)
+        for key in ['new_fits', 'new_calibrators', 'new_forecasts', 'provider_calls', 'model_promotions', 'original_issued_forecast_credit']:
+            self.assertEqual(value[key], 0)
+        for league, row in value['leagues'].items():
+            self.assertEqual(row['n_games'], 578 if league == 'ncaam' else 585)
+            self.assertEqual(row['utc_date_clusters'], 14)
+            self.assertEqual(row['model_count_in_this_comparison'], 1)
+            self.assertEqual(row['market_prices_used'], 0)
+        self.assertTrue(any('Repeated teams' in item for item in value['limitations']))
+        self.assertIn('selected cohort', (DOCS / 'v12.html').read_text())
+
+    def test_uncertainty_estimates_match_preserved_model_scorecards(self):
+        for model in DATA['current_models']:
+            prefix = '' if model['target'] == 'win' else model['target'] + '_'
+            for metric, estimate in model['metrics'].items():
+                key = prefix + metric
+                if key not in UNCERTAINTY['leagues'][model['league']]['metrics']:
+                    continue
+                interval = UNCERTAINTY['leagues'][model['league']]['metrics'][key]
+                self.assertAlmostEqual(interval['estimate'], estimate, places=12)
+                self.assertLessEqual(interval['lower95'], interval['estimate'])
+                self.assertLessEqual(interval['estimate'], interval['upper95'])
+        men = UNCERTAINTY['leagues']['ncaam']['metrics']['accuracy']
+        women = UNCERTAINTY['leagues']['ncaaw']['metrics']['accuracy']
+        self.assertAlmostEqual(men['lower95'], .7333333333333333)
+        self.assertAlmostEqual(men['upper95'], .8374487414387297)
+        self.assertAlmostEqual(women['lower95'], .7828442375411021)
+        self.assertAlmostEqual(women['upper95'], .8507800045097256)
+
     def test_public_surfaces_have_no_private_fields_or_other_contest_marker(self):
         excluded_contest = ''.join(map(chr, [99, 105, 114, 99, 97]))
-        for name in ['v12.html', 'v12_r14_public_evidence.json', 'v11.html', 'v10.html']:
+        for name in ['v12.html', 'v12_r14_public_evidence.json', 'v12_r14_descriptive_uncertainty.json', 'v11.html', 'v10.html']:
             text = (DOCS / name).read_text()
             decoded = []
             for attrs, payload in re.findall(r'<script([^>]*)>(.*?)</script>', text, re.S):
