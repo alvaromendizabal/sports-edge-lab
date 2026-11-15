@@ -34,8 +34,8 @@
     },
     {
       "path": "app.js",
-      "bytes": 31366,
-      "sha256": "1328ce43c091a24b54569ee6c2520efb65d4a33bef75f6a060e013eaeae34e94"
+      "bytes": 31509,
+      "sha256": "004e93d648acef5923e7709d8d70b501995043ca9dfa69a6727ceffd971b8ca2"
     },
     {
       "path": "data/games.json.gz",
