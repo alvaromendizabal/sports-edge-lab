@@ -1,5 +1,8 @@
 # 2026 NFL models vs. Circa Million VIII
 
+[2026 NFL fixtures, venue terms and source-matched model comparisons](https://sports-edge-lab-nfl.alv-mendizabal.chatgpt.site/circa/n109/) · [N109 reviewed source](./n109_current/index.html)
+
+
 [Post-deadline NFL forecasts, original contest cards and provider comparisons](https://sports-edge-lab-nfl.alv-mendizabal.chatgpt.site/circa/n108/) · [N108 reviewed source](./n108_current/index.html)
 
 
