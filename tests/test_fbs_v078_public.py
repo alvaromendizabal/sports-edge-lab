@@ -160,6 +160,48 @@ class PublicV078(unittest.TestCase):
         self.assertIn('later-fitted reconstruction', r['detail'])
         self.assertIn('not pregame possession or promotion evidence', r['detail'])
 
+    def test_fixed_audit_baseline_is_pending_only_and_preserves_issue_clocks(self):
+        selection = self.data['audit_baseline_selection']
+        self.assertEqual(selection['rule'], {'winner':'Logistic regression','margin':'Ridge regression','total':'Ridge regression'})
+        self.assertFalse(selection['promotion'])
+        self.assertEqual([selection[k] for k in ['new_fits','new_inference','new_issues']], [0,0,0])
+        self.assertTrue(all(selection['gates'].values()))
+        self.assertEqual(selection['admitted_cells'], 252)
+        self.assertEqual(selection['admitted_games'], 84)
+        self.assertEqual(selection['missing_games'], 60)
+        self.assertEqual(selection['missing_cell_reasons'], {'KICKOFF_UNRESOLVED':159,'TARGET_NOT_FUTURE_BEFORE_T120_CUTOFF':21})
+        chosen = datetime.fromisoformat(selection['selection_time'].replace('Z','+00:00'))
+        observed = datetime.fromisoformat(self.data['source_as_of'].replace('Z','+00:00'))
+        admitted = []
+        after_observation = 0
+        for game in self.games:
+            cells = game.get('audit_model', {})
+            if not cells: continue
+            self.assertEqual(game['season'], 2026)
+            self.assertNotEqual(game['status'], 'final')
+            self.assertEqual(set(cells), {'winner','margin','total'})
+            for target, cell in cells.items():
+                self.assertEqual(cell['family'], selection['rule'][target])
+                self.assertEqual(cell['source_alias'], 'Fixed audit baseline')
+                if cell['value'] is None:
+                    self.assertTrue(cell['reason'])
+                    continue
+                self.assertEqual(cell['admission_status'], 'PASS')
+                self.assertEqual(cell['status'], 'genuine_issued_research')
+                clocks = {k:datetime.fromisoformat(cell[k].replace('Z','+00:00')) for k in ['fit_completed_at','prepared_at','issue_time','information_cutoff','requested_horizon_cutoff','selection_time']}
+                self.assertLessEqual(clocks['fit_completed_at'], clocks['prepared_at'])
+                self.assertLessEqual(clocks['information_cutoff'], clocks['prepared_at'])
+                self.assertLessEqual(clocks['prepared_at'], clocks['issue_time'])
+                self.assertLessEqual(clocks['issue_time'], chosen)
+                self.assertEqual(clocks['selection_time'], chosen)
+                self.assertLess(chosen, clocks['requested_horizon_cutoff'])
+                self.assertEqual(clocks['requested_horizon_cutoff'], datetime.fromisoformat(game['kickoff'].replace('Z','+00:00'))-timedelta(minutes=120))
+                after_observation += clocks['issue_time'] > observed
+                admitted.append((game['id'],target))
+        self.assertEqual(len(admitted), 252)
+        self.assertEqual(len({g for g,t in admitted}), 84)
+        self.assertEqual(after_observation, 42, 'Observation precedes the 14 games of legitimate later issuance')
+
     def test_prior_public_snapshot_bytes_are_preserved(self):
         prior = ROOT / 'docs/fbs/v078-20261115T033519Z'
         receipt = json.loads((prior/'RENDER_RECEIPT.json').read_text())

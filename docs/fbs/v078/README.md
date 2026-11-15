@@ -2,7 +2,7 @@
 
 Owner: V078. Source snapshot: 2026-11-15T05:10:30Z.
 
-Rounded selected frozen outputs, aggregate metrics and typed archived references only; no candidate grids, private recipes, model states or raw feeds.
+Rounded preserved foundation and three fixed independently admitted pending audit baselines, aggregate metrics and typed archived references only; no candidate grids, private recipes, weights or raw feeds.
 
 Authenticated 8,346 issue records; graded 1,066 exact-identity rows across 41 distinct games. Quarantined 182 rows across 7 changed identities. Original issues were preserved. Public reporting itself adds no fits or forecasts.
 

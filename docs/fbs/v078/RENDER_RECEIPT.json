@@ -3,7 +3,7 @@
   "status": "PASS",
   "owner_version": "V078",
   "source_as_of": "2026-11-15T05:10:30Z",
-  "input_manifest_sha256": "2be09ed56646f4531aa870e45c05ce78de9e266052c20f70f33f5de2734a82a2",
+  "input_manifest_sha256": "1dbfa45342530bd71fff9efe7e0b8852827ff8f1fc5abdc9d57da77aeb918bfc",
   "counts": {
     "failed_fits": 0,
     "new_fits": 0,
@@ -29,33 +29,33 @@
   "files": [
     {
       "path": "README.md",
-      "bytes": 1258,
-      "sha256": "733defbc645dbb48792dc064000be0d058a379b2a7bf95bb456c8fc93bc04ba3"
+      "bytes": 1313,
+      "sha256": "0307e56c911de0a5ede602baae30a1846d6ba27cd291a1cce1250748c5b473de"
     },
     {
       "path": "app.js",
-      "bytes": 21809,
-      "sha256": "fb58cb519ce12f45432e3a267c2706c923d37384b570ceb036d08bdad1493ec9"
+      "bytes": 25134,
+      "sha256": "43897dfdfa55f40e56f1c53f40caf7ba4258559f59baa1e39bf71feb7c0e5a2d"
     },
     {
       "path": "data/games.json.gz",
-      "bytes": 148895,
-      "sha256": "8749eaa6ebb74d221ccb1ff2b1db8f5d8ca10ad2c5a41e9169ec7d57e8223948"
+      "bytes": 155955,
+      "sha256": "96ec361146eb1c1f192135462536d72cd7192dc1c2070e8940b0341a21ee5a2e"
     },
     {
       "path": "data/review.json",
-      "bytes": 87315,
-      "sha256": "f237cd28e1f148c84ac83c2d0d7d0ff23613d65dfd7e52f96fefbd259ce8127a"
+      "bytes": 88802,
+      "sha256": "f65af3cc4071e93780d0acf24e09320e67f9af51a3f58561c848a53acdbdd4f4"
     },
     {
       "path": "index.html",
-      "bytes": 19607,
-      "sha256": "06ce43ffeec24d3d0ea0cf2eadd53c3cba254ea1f1bd1bd90fdb0c2249c281f1"
+      "bytes": 20171,
+      "sha256": "c9b30394c9cf827ca59a9819a53d4ea3b2b4626b6ee9bddbb91580bbe2a6c50e"
     },
     {
       "path": "styles.css",
-      "bytes": 13883,
-      "sha256": "ebff8181d29843a9a03f17b81307dbc0b608593f09c48a30835863067560c633"
+      "bytes": 13986,
+      "sha256": "ba68cc5057a877b79b15bffa307172b45d434f21373615ff541b257890e4ceff"
     }
   ]
 }
