@@ -41,6 +41,14 @@ class PublicEvidenceTests(unittest.TestCase):
         self.assertEqual(len(self.evidence["v11_pairs"]), 512)
         self.assertEqual(len(self.evidence["v11_comparable_week_leaders"]), 48)
         self.assertEqual(len(self.evidence["models"]), 336)
+        revision = self.operational["v12_presentation_revision"]
+        self.assertEqual(revision["prior_packed_payload_sha256"], "18e93c42ddfd569935733f936a417e86ae9f74d0afa87d0dd028ba617a75b730")
+        self.assertEqual(revision["removed_non_sport_presentation_fields"], 1)
+        self.assertTrue(revision["scientific_values_unchanged"])
+        canonical = hashlib.sha256(json.dumps(self.evidence, sort_keys=True, separators=(",", ":"), ensure_ascii=False).encode()).hexdigest()
+        self.assertEqual(canonical, "57d377999110d6f8a5674ba5530fef5d8f4908610c738600e28f43c9b6b171f2")
+        self.assertEqual(canonical, revision["scientific_values_canonical_sha256"])
+
 
     def test_updated_partition_accounting_does_not_double_count(self):
         e = self.operational

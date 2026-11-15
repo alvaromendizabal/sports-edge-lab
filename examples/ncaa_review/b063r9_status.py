@@ -3,6 +3,7 @@ from pathlib import Path
 import html
 import json
 import re
+from v12_public_status import strip_banner as strip_current_banner, render_banner as render_current_banner
 
 HERE = Path(__file__).resolve().parent
 ROOT = HERE.parents[1]
@@ -67,6 +68,8 @@ def load_payload():
 
 
 def strip_banner(body):
+    # Historical extraction removes the independently dated current wrapper first.
+    body = strip_current_banner(body)
     if START not in body and END not in body:
         return body
     if body.count(START) != 1 or body.count(END) != 1:
@@ -85,7 +88,7 @@ def render_banner(body):
     status = ('R9 final package verification is pending' if value['prepared_continuation']['source_sha256'] is None
               else 'R9 is prepared; owner execution remains pending')
     banner = banner.replace('__R9_PREPARED_STATUS__',html.escape(status))
-    return body.replace('<main>','<main>'+banner,1)
+    return render_current_banner(body.replace('<main>','<main>'+banner,1))
 
 
 def render_page():
