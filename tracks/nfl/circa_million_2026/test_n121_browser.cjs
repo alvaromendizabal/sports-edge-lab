@@ -10,7 +10,7 @@ const {createHash}=require('node:crypto');
  const D=JSON.parse(html.match(/<script id="n121" type="application\/json">([\s\S]*?)<\/script>/)[1]);
  const counts=Object.fromEntries([2024,2025,2026].map(y=>[y,D.calendar.filter(x=>x.season===y&&x.status==='PLAYED').length]));
  assert.deepEqual(counts,{2024:285,2025:285,2026:145});assert.equal(D.calendar.length,842);assert.equal(new Set(D.calendar.map(r=>r.game_id)).size,842);
- assert.equal(D.recipes.length,48);assert.equal(D.venues.fixtures.length,842);assert(D.forecasts.length>=2526);assert.equal(D.contest.cards.length,3);
+ assert.equal(D.recipes.length,48);assert.equal(D.venues.fixtures.length,842);assert(D.forecasts.length>=2526);assert.equal(D.contest.cards.length,3);assert.equal(D.recommendations.filter(x=>x.winner==='n121_opponent_ridge_recent').length,3);for(const y of [2024,2025,2026])assert.equal(new Set(D.scores.filter(x=>Number(x.season)===y&&x.eligible_full_scope&&x.scored_n===counts[y]).map(x=>x.recipe)).size>=5,true);const futures=D.venues.fixture_coverage.filter(x=>x.season===2026&&x.status==='UPCOMING_TIMED');for(const [v,n] of [['DraftKings',94],['Polymarket',29],['Kalshi',2]])assert.equal(futures.find(x=>x.provider===v).exact,n);for(const v of D.contest.cards){assert.equal(v.picks.length,5);assert.equal(new Set(v.picks.map(p=>p.game_id)).size,5);assert(v.picks.every(p=>Math.abs(p.p_cover+.5*p.p_push-p.expected_points)<1e-6));}
  const restricted=/"(?:bid|ask|bid_size|ask_size|market_probability|contract_id|event_id|rule_sha256|bucket|private_path|source_blob|api_key)"\s*:/i;
  assert(!restricted.test(html));assert(!/s3:\/\/|[0-9]{12}\.dkr\.ecr|\/home\/sagemaker-user|private-handoff|x-amz-credential/i.test(html));
  const facts={page_sha256:createHash('sha256').update(html).digest('hex'),population:counts,recipes:D.recipes.length,game_forecasts:D.forecasts.length};
@@ -31,9 +31,9 @@ const {createHash}=require('node:crypto');
   await page.selectOption('#year121g','2025');assert.equal(await page.locator('#gameList121 button').count(),285);
   assert.match(await page.locator('#gameDetail121').innerText(),/DraftKings/);
   await page.click('[data-view=markets]');await page.waitForSelector('#cover121 table');assert.match(await page.locator('#cover121').innerText(),/Kalshi/);
-  await page.screenshot({path:'artifacts/N121-'+device+'-markets.png'});await page.click('[data-view=future]');await page.waitForSelector('tbody tr');assert.equal(await page.locator('tbody tr').count(),124);
+  await page.screenshot({path:'artifacts/N121-'+device+'-markets.png'});await page.click('[data-view=future]');await page.getByRole('heading',{name:'Upcoming forecasts',exact:true}).waitFor();assert.equal(await page.locator('tbody tr').count(),124);
   await page.click('[data-view=circa]');await page.waitForSelector('#card121 table');assert.equal(await page.locator('#card121 table').first().locator('tbody tr').count(),5);assert.equal(await page.locator('#card121 details tbody tr').count(),28);assert.match(await page.locator('main').innerText(),/after deadline/i);
-  await page.click('[data-view=study]');await page.waitForSelector('main table');assert.match(await page.locator('main').innerText(),/tool host/i);assert.equal(await page.evaluate(()=>document.documentElement.scrollWidth>window.innerWidth),false);
+  await page.click('[data-view=study]');await page.getByRole('heading',{name:'Validation and test design',exact:true}).waitFor();assert.match(await page.locator('main').innerText(),/tool host/i);assert.equal(await page.evaluate(()=>document.documentElement.scrollWidth>window.innerWidth),false);
   assert.deepEqual(errors,[]);await page.close();facts[device]='PASS';
  }
  }finally{await browser.close();}
