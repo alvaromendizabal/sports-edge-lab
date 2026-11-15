@@ -1,5 +1,9 @@
 # 2026 NFL models vs. Circa Million VIII
 
+[N116 live dashboard](https://sports-edge-lab-nfl.alv-mendizabal.chatgpt.site/circa/n116/) · [N116 public page source](n116_current/index.html)
+
+N116 compares the new margin and totals studies with historical venue forecasts. Each game shows original issue times, retained forecasts and qualifying matching payouts across DraftKings, Kalshi and Polymarket.
+
 [N115 live dashboard](https://sports-edge-lab-nfl.alv-mendizabal.chatgpt.site/circa/n115/) · [N115 public page source](n115_current/index.html)
 
 The NFL review compares signed key margins and totals on matching games. The market view includes identical-payoff venue scores and the probability of an away win by one through six points. Each future total carries its model and issue time.
