@@ -2,19 +2,30 @@
 const assert=require('node:assert/strict'),fs=require('node:fs'),path=require('node:path'),vm=require('node:vm');
 const docs=path.resolve(__dirname,'../../docs/ncaa');
 const html=fs.readFileSync(path.join(docs,'v12.html'),'utf8'),data=JSON.parse(fs.readFileSync(path.join(docs,'v12_r14_public_evidence.json'),'utf8'));
+const uncertainty=JSON.parse(fs.readFileSync(path.join(docs,'v12_r14_descriptive_uncertainty.json'),'utf8'));
+const rating=JSON.parse(fs.readFileSync(path.join(docs,'v12_nov15_descriptive_rating_comparison.json'),'utf8'));
 const script=[...html.matchAll(/<script[^>]*>([\s\S]*?)<\/script>/g)].at(-1)[1];
 class Element{constructor(id){this.id=id;this.value='';this.innerHTML='';this.textContent='';this.disabled=false;this.events={};this.classList={add(){}};}addEventListener(name,fn){this.events[name]=fn;}dispatch(name){this.events[name]();}click(){if(this.events.click)this.events.click();}}
 async function main(){
  const elements=new Map([...html.matchAll(/\bid="([^"]+)"/g)].map(m=>[m[1],new Element(m[1])])),get=id=>{assert(elements.has(id),'Undeclared DOM ID '+id);return elements.get(id);};
  for(const [id,value]of Object.entries({league:'all','historical-target':'all','historical-season':'pooled','game-status':'all','game-sort':'asc'}))get(id).value=value;
  let downloaded=null;
- const context={document:{getElementById:get,createElement:()=>new Element('download')},window:{},fetch:async()=>({ok:true,json:async()=>structuredClone(data)}),Blob,URL:{createObjectURL:blob=>{downloaded=blob;return'blob:test';},revokeObjectURL(){}},setTimeout:fn=>fn(),Date,console};
+ const context={document:{getElementById:get,createElement:()=>new Element('download')},window:{},fetch:async url=>({ok:true,json:async()=>structuredClone(url.includes('rating_comparison')?rating:url.includes('descriptive_uncertainty')?uncertainty:data)}),Blob,URL:{createObjectURL:blob=>{downloaded=blob;return'blob:test';},revokeObjectURL(){}},setTimeout:fn=>fn(),Date,console};
  vm.runInNewContext(script,context,{timeout:10000});
  // Early interaction before fetch completion remains harmless.
  get('league').dispatch('change');
  await new Promise(resolve=>setImmediate(resolve));
  assert.equal(context.window.SEL_V12_ERROR,undefined);
  assert.equal(context.window.SEL_V12_READY.observedGames,2503);
+ assert.equal(context.window.SEL_V12_UNCERTAINTY_READY,true);
+ assert.equal(context.window.SEL_V12_RATING_READY,true);
+ assert.equal((get('rating-comparison-rows').innerHTML.match(/<tr>/g)||[]).length,12);
+ assert.match(get('rating-comparison-rows').innerHTML,/78\.89%/);
+ assert.match(get('rating-comparison-rows').innerHTML,/14\.39/);
+ assert.match(get('rating-comparison-rows').innerHTML,/-1\.42 pp to 3\.98 pp/);
+ assert.equal((get('uncertainty-rows').innerHTML.match(/<tr>/g)||[]).length,7);
+ assert.match(get('uncertainty-rows').innerHTML,/73\.33% – 83\.74%/);
+ assert.match(get('uncertainty-rows').innerHTML,/78\.28% – 85\.08%/);
  assert.match(get('game-count').textContent,/2,503 matching observed games/);
  assert.equal((get('current-model-rows').innerHTML.match(/<tr>/g)||[]).length,6);
  assert.equal((get('provider-rows').innerHTML.match(/<tr>/g)||[]).length,8);
@@ -27,6 +38,8 @@ async function main(){
   assert(get('game-count').textContent.startsWith(total.toLocaleString('en-US')+' matching'));
   assert.equal((get('current-model-rows').innerHTML.match(/<tr>/g)||[]).length,3);
   assert.equal((get('provider-rows').innerHTML.match(/<tr>/g)||[]).length,4);
+  assert.equal((get('rating-comparison-rows').innerHTML.match(/<tr>/g)||[]).length,6);
+  assert.equal((get('uncertainty-head').innerHTML.match(/<th>/g)||[]).length,2);
   get('game-status').value='future';get('game-status').dispatch('change');
   assert(get('game-count').textContent.startsWith(future+' matching'));
   get('game-status').value='all';get('game-status').dispatch('change');
@@ -43,6 +56,13 @@ async function main(){
  get('historical-target').value='win';get('historical-target').dispatch('change');get('historical-season').value='2025';get('historical-season').dispatch('change');
  assert.equal((get('historical-rows').innerHTML.match(/<tr>/g)||[]).length,6);assert(get('historical-rows').innerHTML.includes('5,758'));
  for(const e of elements.values()){assert(!e.innerHTML.includes('NaN'));assert(!e.innerHTML.includes('undefined'));}
+ // A missing secondary audit must not suppress the established science tables.
+ const fallback={...context,window:{},fetch:async url=>({ok:!url.includes('descriptive_uncertainty')&&!url.includes('rating_comparison'),json:async()=>structuredClone(data)})};
+ vm.runInNewContext(script,fallback,{timeout:10000});await new Promise(resolve=>setImmediate(resolve));
+ assert.equal(fallback.window.SEL_V12_READY.observedGames,2503);
+ assert.equal(fallback.window.SEL_V12_ERROR,undefined);
+ assert.match(fallback.window.SEL_V12_UNCERTAINTY_ERROR,/unavailable/);
+ assert.match(fallback.window.SEL_V12_RATING_ERROR,/unavailable/);
  console.log(JSON.stringify({status:'PASS',kind:'DOM harness, not visual browser verification',checks:['load','early interaction','competition filters','current and historical separation','null market losses','final scores','future-clock filter','passed-start filter','pagination','search','download scope','historical season filter']}));
 }
 main().catch(error=>{console.error(error);process.exitCode=1;});

@@ -1,0 +1,229 @@
+{
+  "accounting": {
+    "issued_forecasts": 0,
+    "new_calibrators": 0,
+    "new_fits": 0,
+    "new_provider_requests": 0,
+    "promotions": 0,
+    "settled_games_compared": 1163
+  },
+  "analysis_recorded_at": "2026-11-15T19:49:46.790026+00:00",
+  "comparator_label": "Preserved rating formula",
+  "contrast": "Frozen original minus preserved rating formula. Positive accuracy differences and negative loss differences favor the original; margin bias is judged toward zero.",
+  "current_champion_ranking_available": false,
+  "data_freshness_advanced": false,
+  "evidence_mode": "Post-hoc comparison of reconstructed saved predictions; original issuance and complete source publication-vintage qualification are not established.",
+  "horizon_minutes": 60,
+  "leagues": {
+    "ncaam": {
+      "completed_source_games_without_model_score": 213,
+      "date_clusters": 14,
+      "games": 578,
+      "metrics": {
+        "margin_bias": {
+          "improvement_direction": "toward_zero_bias_not_signed_delta",
+          "original": -2.3876757356420972,
+          "original_minus_rating": 6.6855725264560695,
+          "paired_descriptive_95_percentile_interval": [
+            5.417272655882731,
+            7.844270670705804
+          ],
+          "paired_nominal_bonferroni_percentile_interval": [
+            4.782457818720713,
+            8.390813415229843
+          ],
+          "rating_formula": -9.073248262098167
+        },
+        "margin_mae": {
+          "improvement_direction": "negative",
+          "original": 10.690700763815395,
+          "original_minus_rating": -3.6981845939310016,
+          "paired_descriptive_95_percentile_interval": [
+            -4.81132659829553,
+            -2.5692163383808935
+          ],
+          "paired_nominal_bonferroni_percentile_interval": [
+            -5.302759132396031,
+            -2.0105697663553657
+          ],
+          "rating_formula": 14.388885357746396
+        },
+        "margin_rmse": {
+          "improvement_direction": "negative",
+          "original": 13.626927051373503,
+          "original_minus_rating": -4.7454616652117245,
+          "paired_descriptive_95_percentile_interval": [
+            -5.832383622021181,
+            -3.43848785392422
+          ],
+          "paired_nominal_bonferroni_percentile_interval": [
+            -6.239258643459329,
+            -2.7467285850054095
+          ],
+          "rating_formula": 18.372388716585228
+        },
+        "winner_accuracy": {
+          "improvement_direction": "positive",
+          "original": 0.7889273356401384,
+          "original_minus_rating": 0.00865051903114189,
+          "paired_descriptive_95_percentile_interval": [
+            -0.00852893629798578,
+            0.02935794782764865
+          ],
+          "paired_nominal_bonferroni_percentile_interval": [
+            -0.014240969182974694,
+            0.039812860533589664
+          ],
+          "rating_formula": 0.7802768166089965
+        },
+        "winner_brier": {
+          "improvement_direction": "negative",
+          "original": 0.1369117705079419,
+          "original_minus_rating": -0.033302386377483895,
+          "paired_descriptive_95_percentile_interval": [
+            -0.04359364811896112,
+            -0.02263062711353824
+          ],
+          "paired_nominal_bonferroni_percentile_interval": [
+            -0.048053818594722485,
+            -0.01691883703098053
+          ],
+          "rating_formula": 0.1702141568854258
+        },
+        "winner_log_loss": {
+          "improvement_direction": "negative",
+          "original": 0.41821797204961225,
+          "original_minus_rating": -0.10368621218134871,
+          "paired_descriptive_95_percentile_interval": [
+            -0.13346395535050412,
+            -0.07165344602886492
+          ],
+          "paired_nominal_bonferroni_percentile_interval": [
+            -0.14573519466324622,
+            -0.05536366245487441
+          ],
+          "rating_formula": 0.521904184230961
+        }
+      },
+      "observed_completed_source_games": 791,
+      "unsettled_games_excluded": 362
+    },
+    "ncaaw": {
+      "completed_source_games_without_model_score": 205,
+      "date_clusters": 14,
+      "games": 585,
+      "metrics": {
+        "margin_bias": {
+          "improvement_direction": "toward_zero_bias_not_signed_delta",
+          "original": -3.010614293751108,
+          "original_minus_rating": 7.424489922223417,
+          "paired_descriptive_95_percentile_interval": [
+            5.7181812385790955,
+            9.24337915981037
+          ],
+          "paired_nominal_bonferroni_percentile_interval": [
+            4.800439469838932,
+            10.02096512749106
+          ],
+          "rating_formula": -10.435104215974524
+        },
+        "margin_mae": {
+          "improvement_direction": "negative",
+          "original": 12.49862534666672,
+          "original_minus_rating": -6.453402689382838,
+          "paired_descriptive_95_percentile_interval": [
+            -7.382701374615912,
+            -5.494224028734569
+          ],
+          "paired_nominal_bonferroni_percentile_interval": [
+            -7.8082137236671985,
+            -5.06488314310192
+          ],
+          "rating_formula": 18.95202803604956
+        },
+        "margin_rmse": {
+          "improvement_direction": "negative",
+          "original": 16.010683504371634,
+          "original_minus_rating": -8.551471421295059,
+          "paired_descriptive_95_percentile_interval": [
+            -9.54731271048454,
+            -7.562198226765183
+          ],
+          "paired_nominal_bonferroni_percentile_interval": [
+            -10.017401609380869,
+            -7.093662211723304
+          ],
+          "rating_formula": 24.562154925666693
+        },
+        "winner_accuracy": {
+          "improvement_direction": "positive",
+          "original": 0.8170940170940171,
+          "original_minus_rating": 0.02564102564102566,
+          "paired_descriptive_95_percentile_interval": [
+            0.005424954792043413,
+            0.04535147392290251
+          ],
+          "paired_nominal_bonferroni_percentile_interval": [
+            -0.003795066413662229,
+            0.05417324563056316
+          ],
+          "rating_formula": 0.7914529914529914
+        },
+        "winner_brier": {
+          "improvement_direction": "negative",
+          "original": 0.11606122335086844,
+          "original_minus_rating": -0.046907583912153356,
+          "paired_descriptive_95_percentile_interval": [
+            -0.05699812962731324,
+            -0.036666738023861105
+          ],
+          "paired_nominal_bonferroni_percentile_interval": [
+            -0.062113652281553175,
+            -0.031518742902238966
+          ],
+          "rating_formula": 0.1629688072630218
+        },
+        "winner_log_loss": {
+          "improvement_direction": "negative",
+          "original": 0.3589652482848696,
+          "original_minus_rating": -0.1459171976190518,
+          "paired_descriptive_95_percentile_interval": [
+            -0.1727512818776828,
+            -0.11724342488136323
+          ],
+          "paired_nominal_bonferroni_percentile_interval": [
+            -0.185838811806731,
+            -0.10338040380878809
+          ],
+          "rating_formula": 0.5048824459039214
+        }
+      },
+      "observed_completed_source_games": 790,
+      "unsettled_games_excluded": 407
+    }
+  },
+  "limitations": [
+    "This comparison uses the old November 14 source snapshot; it is not a refreshed season leaderboard.",
+    "Source publication and revision clocks are not fully qualified; these are reconstructed values, not issued forecasts.",
+    "The rating formula is an unfitted diagnostic baseline, not a sportsbook or exchange price.",
+    "No conclusion about market advantage, strict champion refit completion or promotion follows.",
+    "A total-score comparator was not defined."
+  ],
+  "margin_orientation": "Home score minus away score.",
+  "model_label": "Frozen original",
+  "no_per_game_values_or_private_recipe_published": true,
+  "point_metrics_independently_recomputed": true,
+  "probability_definition": "Home win, full game including overtime; ties at probability 0.5 receive half accuracy credit.",
+  "schema": "ncaa.public.descriptive_original_vs_rating.v1",
+  "source_comparison_asof": "2026-11-15T01:46:08.255826+00:00",
+  "source_comparison_asof_pacific": "November 14, 2026, 5:46 p.m. Pacific",
+  "source_inventory_asof": "2026-11-15T01:37:50.675790+00:00",
+  "summary": "The original has lower winner probability loss and margin error on these observed rows. Accuracy differences are less conclusive: the adjusted intervals cross zero for both leagues.",
+  "title": "Descriptive comparison with a preserved rating formula",
+  "uncertainty": {
+    "draws_per_league": 10000,
+    "intervals": "95% percentile intervals and nominal Bonferroni-adjusted 99.5833% percentile intervals across 12 league-metric contrasts.",
+    "qualification": "Approximate descriptive intervals: few dates, repeated teams, selected coverage and previous research selection remain. Neither interval supplies independent prospective confirmation.",
+    "unit": "UTC event-date blocks; 14 dates per league, paired across both predictions."
+  }
+}

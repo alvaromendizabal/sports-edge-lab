@@ -1,0 +1,118 @@
+{
+  "schema": "sel.ncaa.public.descriptive_uncertainty.v1",
+  "analysis_role": "POST_HOC_DESCRIPTIVE_AUDIT_OF_KNOWN_METRICS",
+  "scientific_comparison_return": "R14",
+  "model_alias": "Original frozen model",
+  "evidence_class": "RETROSPECTIVE_RECONSTRUCTION",
+  "completed_at_utc": "2026-11-15T04:44:49.512953+00:00",
+  "cohort": "The same 578 men’s and 585 women’s already-settled R14 reconstruction games; no new games or forecasts.",
+  "resampling": "10000 whole UTC event-date block bootstrap draws; sample 14 observed dates with replacement, pool their games, recompute game-weighted metrics.",
+  "replicates": 10000,
+  "confidence_level": 0.95,
+  "interval": "Percentile 2.5% and 97.5%; descriptive, only 14 date clusters and no multiplicity or season-selection adjustment.",
+  "limitations": [
+    "Repeated teams can induce dependence across dates; date blocks do not eliminate it.",
+    "Missing model coverage and source publication-vintage gaps remain unresolved.",
+    "Retrospective reconstruction is not original issuance or a fully qualified historical replay.",
+    "Intervals are conditional on this early-season observed cohort, not all remaining season games.",
+    "No market prices are used, so these intervals do not establish a sportsbook or exchange edge or a current champion."
+  ],
+  "new_fits": 0,
+  "new_calibrators": 0,
+  "new_forecasts": 0,
+  "provider_calls": 0,
+  "model_promotions": 0,
+  "original_issued_forecast_credit": 0,
+  "leagues": {
+    "ncaam": {
+      "n_games": 578,
+      "utc_date_clusters": 14,
+      "first_utc_event_date": "2026-11-01",
+      "last_utc_event_date": "2026-11-14",
+      "metrics": {
+        "accuracy": {
+          "estimate": 0.7889273356401384,
+          "lower95": 0.7333333333333333,
+          "upper95": 0.8374487414387297
+        },
+        "log_loss": {
+          "estimate": 0.4182179720496122,
+          "lower95": 0.36239263022297324,
+          "upper95": 0.4830482414675169
+        },
+        "brier": {
+          "estimate": 0.1369117705079419,
+          "lower95": 0.11459310474250148,
+          "upper95": 0.1625058143026904
+        },
+        "margin_mae": {
+          "estimate": 10.690700763815395,
+          "lower95": 10.138734875647646,
+          "upper95": 11.090893161162878
+        },
+        "margin_rmse": {
+          "estimate": 13.626927051373503,
+          "lower95": 12.904122486891435,
+          "upper95": 14.16066818502403
+        },
+        "total_mae": {
+          "estimate": 13.7747382181738,
+          "lower95": 12.97293322296626,
+          "upper95": 14.577831420338182
+        },
+        "total_rmse": {
+          "estimate": 17.50010046723631,
+          "lower95": 16.30905135333185,
+          "upper95": 18.680271556575715
+        }
+      },
+      "model_count_in_this_comparison": 1,
+      "market_prices_used": 0
+    },
+    "ncaaw": {
+      "n_games": 585,
+      "utc_date_clusters": 14,
+      "first_utc_event_date": "2026-11-01",
+      "last_utc_event_date": "2026-11-14",
+      "metrics": {
+        "accuracy": {
+          "estimate": 0.8170940170940171,
+          "lower95": 0.7828442375411021,
+          "upper95": 0.8507800045097256
+        },
+        "log_loss": {
+          "estimate": 0.3589652482848696,
+          "lower95": 0.31223240966345706,
+          "upper95": 0.4097878322681515
+        },
+        "brier": {
+          "estimate": 0.11606122335086844,
+          "lower95": 0.09764136671996773,
+          "upper95": 0.1360423198365494
+        },
+        "margin_mae": {
+          "estimate": 12.49862534666672,
+          "lower95": 11.723960095164704,
+          "upper95": 13.2980905147107
+        },
+        "margin_rmse": {
+          "estimate": 16.010683504371634,
+          "lower95": 14.891404535848954,
+          "upper95": 17.16714385251344
+        },
+        "total_mae": {
+          "estimate": 14.149986653880077,
+          "lower95": 13.380888209276193,
+          "upper95": 15.062412537035133
+        },
+        "total_rmse": {
+          "estimate": 17.76078375868138,
+          "lower95": 16.879769321106593,
+          "upper95": 18.78711502586176
+        }
+      },
+      "model_count_in_this_comparison": 1,
+      "market_prices_used": 0
+    }
+  }
+}
