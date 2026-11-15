@@ -24,8 +24,13 @@ async function verifyAnonymousRoute(){
  const responses=await Promise.all(urls.map(url=>fetch(url,{headers,redirect:'manual',credentials:'omit',signal:AbortSignal.timeout(30000)})));
  assert.deepEqual(responses.slice(0,3).map(r=>r.status),[200,200,200]);assert([403,404,410].includes(responses[3].status));
  const html=await responses[0].text(),nav=await responses[1].text(),manifest=await responses[2].json();
- assert.equal(sha(html.match(reData)[1]),sha(dataMatch[1]));assert.equal(sha(nav.match(reData)[1]),sha(dataMatch[1]));
- assert.equal(manifest.newest_review_path,'n110/');assert.equal(manifest.assets['n110/index.html'].sha256,sha(native));
+ assert.equal(sha(html),sha(native));assert.equal(sha(html.match(reData)[1]),sha(dataMatch[1]));
+ assert.match(manifest.newest_review_path,/^n[0-9]+\/$/);
+ const newest=await fetch(new URL(manifest.newest_review_path,stable),{headers,redirect:'manual',credentials:'omit',signal:AbortSignal.timeout(30000)});
+ assert.equal(newest.status,200);assert.equal(sha(nav),sha(await newest.text()));
+ assert.equal(sha(nav),manifest.assets['index.html'].sha256);assert.equal(sha(nav),manifest.assets[manifest.newest_review_path+'index.html'].sha256);
+ if(manifest.newest_review_path==='n110/')assert.equal(sha(nav.match(reData)[1]),sha(dataMatch[1]));
+ assert.equal(manifest.assets['n110/index.html'].sha256,sha(native));
  console.log(JSON.stringify({verification:'anonymous_public_http',public:responses[0].status,stable:responses[1].status,private:responses[3].status,
   redirects:false,credentials:false,html_sha256:sha(html),native_sha256:sha(native),whole_page_identical:sha(html)===sha(native),embedded_sha256:sha(html.match(reData)[1])}));
 }
@@ -42,7 +47,8 @@ async function verifyAnonymousRoute(){
  await page.getByRole('button',{name:'Model features',exact:true}).click();assert.equal(await page.locator('#recipeList button').count(),trusted.recipes.models.length);
  await page.getByRole('button',{name:'Market comparisons',exact:true}).click();await page.locator('#marketq').fill('DraftKings');assert(await page.locator('#mk').isVisible());
  await page.getByRole('button',{name:'Circa cards',exact:true}).click();assert(await page.locator('#panel').innerText().then(t=>t.includes('deadline passed')));if(trusted.opening?.length)assert.equal(await page.locator('#openingBody tbody tr').count(),trusted.opening[0].sides.length);
- if(process.env.NFL_N110_ONLINE_URL){await page.goto(new URL('../',target).href,{waitUntil:'domcontentloaded'});await page.waitForSelector('#leaderRows');assert.equal(await page.title(),'Circa Million Picks & Performance Dashboard');await page.getByRole('button',{name:'Games & venues',exact:true}).click();assert.equal(await page.locator('#caseRows button').count(),272);}
+ if(process.env.NFL_N110_ONLINE_URL){await page.goto(new URL('../',target).href,{waitUntil:'domcontentloaded'});await page.getByRole('button',{name:'Games & venues',exact:true}).waitFor();assert.equal(await page.title(),'Circa Million Picks & Performance Dashboard');await page.getByRole('button',{name:'Games & venues',exact:true}).click();assert.equal(await page.locator('#caseRows button').count(),272);}
  const layout=await page.evaluate(()=>({scroll:document.documentElement.scrollWidth,view:innerWidth}));assert(layout.scroll<=layout.view+2);assert.deepEqual(errors,[]);
  console.log(JSON.stringify({target:process.env.NFL_N110_ONLINE_URL?'deployed':'source',width,scope:'public',data_sha256:sha(embedded),html_sha256:sha(native),fixtures:trusted.fixtures.length,venue_slots:816,boards:trusted.boards.length,private_prices_disclosed:false,errors:errors.length,ready:true}));await page.close();
 }await browser.close()})().catch(e=>{console.error(e);process.exit(1)});
+
