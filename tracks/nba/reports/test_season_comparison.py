@@ -222,4 +222,51 @@ class SeasonComparisonTests(unittest.TestCase):
         self.assertEqual(data['owner_execution']['return_parts'],8)
         self.assertEqual(data['owner_execution']['exit_code'],2)
 
+    def test_new_robustness_audit_preserves_cohort_and_reversal(self):
+        raw,_=b.build();audit=json.loads(raw)['b088_cached_science']['paired_audit']
+        self.assertEqual((audit['games'],audit['completed_denominator_in_prior_snapshot'],audit['missing_from_common']),(128,183,55))
+        self.assertFalse(audit['promotion_allowed'])
+        self.assertFalse(audit['provider_baseline_comparison'])
+        self.assertEqual(audit['new_work']['new_fits'],0)
+        self.assertLess(audit['overall']['pairs']['HGB72__minus__market_only9']['mean_left_minus_right']['brier'],0)
+        for view in audit['week_views'].values():
+            self.assertFalse(view['bounds_are_confidence_intervals'])
+            self.assertEqual(sum(row['games'] for row in view['weekly'].values()),128)
+            delta=view['leave_one_week_out']['2026-W44']['pairs']['HGB72__minus__market_only9']['mean_left_minus_right']
+            self.assertGreater(delta['brier'],0)
+            self.assertGreater(delta['log_loss'],0)
+        tied=audit['week_views']['America/Los_Angeles']['leave_one_week_out']['2026-W44']['metrics']
+        self.assertEqual({row['accuracy'] for row in tied.values()},{58/83})
+
+    def test_cached_aggregate_rejects_private_payload_and_false_qualification(self):
+        value,_=b.read_json(b.ROOT/'b088_cached_science.json')
+        for key in ['game_id','recipe_id','yes_bid','source_url','memberships']:
+            bad=copy.deepcopy(value);bad['injected']={key:'not-public'}
+            with self.assertRaisesRegex(ValueError,'Private'):b.validate_cached_science(bad)
+        bad=copy.deepcopy(value);bad['injected']=['nba:espn:event:fixture']
+        with self.assertRaisesRegex(ValueError,'Private'):b.validate_cached_science(bad)
+        bad=copy.deepcopy(value);bad['paired_audit']['week_views']['UTC']['bounds_are_confidence_intervals']=True
+        with self.assertRaisesRegex(ValueError,'not confidence intervals'):b.validate_cached_science(bad)
+        bad=copy.deepcopy(value);bad['paired_audit']['overall']['metrics']['HGB72']['games']=127
+        with self.assertRaisesRegex(ValueError,'cohort'):b.validate_cached_science(bad)
+        bad=copy.deepcopy(value);bad['paired_audit']['overall']['pairs']['HGB72__minus__market_only9']['mean_left_minus_right']['brier']=.1
+        with self.assertRaisesRegex(ValueError,'difference'):b.validate_cached_science(bad)
+        bad=copy.deepcopy(value);bad['source_recovery']['current_market_rows_newly_admitted']=1
+        with self.assertRaisesRegex(ValueError,'cannot qualify market'):b.validate_cached_science(bad)
+
+    def test_M1_summary_is_materialization_not_training_or_new_source_coverage(self):
+        raw,_=b.build();data=json.loads(raw);value=data['b088_cached_science'];m=value['secondary_features']
+        self.assertEqual((m['source_games'],m['team_rows'],m['player_rows_reconciled']),(83,166,2201))
+        self.assertEqual((m['rate_component_values'],m['total_rebound_discrepancy_rows'],m['missing_raw_schedule_ancestor_games'],m['tests_passed']),(830,8,23,19))
+        self.assertFalse(m['promotion_allowed']);self.assertFalse(m['predictive_improvement_established'])
+        for field in ['new_model_fits','new_calibration_fits','new_forecasts','new_provider_requests']:self.assertEqual(m[field],0)
+        self.assertTrue(value['source_recovery']['owned_connection_verified'])
+        self.assertFalse(value['source_recovery']['current_quote_refresh_verified'])
+        self.assertEqual(value['source_recovery']['current_market_rows_newly_admitted'],0)
+        self.assertEqual(data['source_coverage']['execution_release'],'B086')
+        self.assertFalse(data['market_coverage_complete'])
+        self.assertEqual(data['provider_game_coverage']['summary']['KALSHI']['bound_games'],80)
+        self.assertEqual(data['provider_game_coverage']['summary']['POLYMARKET_US']['bound_games'],73)
+        self.assertTrue(all(row['value'] is None for game in data['games'] for row in game['markets'].values()))
+
 if __name__ == '__main__': unittest.main()

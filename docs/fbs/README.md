@@ -1,3 +1,31 @@
+<!-- FBS_V078R5_OWNER_REVIEW_START -->
+## November 15, 2026, 12:39 p.m. Pacific: execution recovered and new forecasts committed
+
+[Open the current FBS models and market comparison](v078/index.html) · [Methods and limits](v078/README.md) · [Preserved 11:40 a.m. failed-run review](v078-20261115T194012Z/index.html) · [Earlier issued snapshot](v078-20261115T051030Z/index.html).
+
+The authenticated successor exited **0**, committed **2,236 genuine issue records on 86 pending games**, and reached verified durable closure. The owner reports **26 new base model fits**, **8 new winner calibrators**, **201 reused complete states** and **zero failed fits**. Three previously uncovered game identities gained committed coverage. Earlier issues remain preserved in their journal and dated reviews; zero earlier rows are reused as the active latest issue. The physical receipt, event and matrix audit verifies that the unchanged chronological recipe admitted 9,152 training rows instead of 9,150; no identical-input base fit was repeated. Successful execution does not establish full scientific acceptance, a promoted champion, or market superiority.
+
+The source clock is **2026-11-15T20:39:57Z**. The observed census remains **888 current-season fixtures: 751 finals and 137 pending**, including 50 unresolved kickoffs. The game table exposes each observed game and its gaps. The complete official fixture population is not yet proved. All 86 eligible future games have new research issues; 50 unresolved kickoffs and one passed cutoff remain explicit exclusions. No later issue is backdated into historical evaluation.
+
+| Objective on the same 47 earlier-issued games | Research family | Saved metric |
+|---|---|---:|
+| Winner probability quality | CatBoost | Log loss 0.600278; Brier 0.205577 |
+| Winner accuracy | TensorFlow | 36/47, 76.596% |
+| Margin absolute / squared error | TensorFlow | MAE 14.388223; RMSE 18.894542 |
+| Total absolute error | Extra Trees | MAE 12.098243 |
+| Total squared-error sensitivity | Ridge regression | RMSE 14.578538 |
+
+The ranking selector separates probability quality from classification accuracy, and total MAE from total RMSE. The **26 states scored on 47 identical games** and **26 newer states scored on one overlapping game** remain separate cohorts. Fresh issuance added no historical outcome evidence. These exploratory comparisons do not establish statistical superiority. Current selected research values use different exact model states from those scored on 47 games.
+
+The future comparison exposes **five objective roles and 430 admitted rounded values on 86 pending games**, alongside the preserved original foundation and the fixed Logistic/Ridge audit baseline. Each selected value retains its actual fit, preparation, issue, display-selection and T120 clocks, plus its exact-state qualification. The fixed audit baseline has 258 admitted values and is not relabelled as a champion. All 137 pending fixtures remain selectable, including the 51 with explicit gaps. Publication creates no forecasts or new inference and performs no promotion.
+
+**DraftKings, Kalshi, Polymarket Global and Polymarket US are visible next to every observed game. Their full-season qualified comparison coverage remains incomplete.** Provider and target filters, played/pending populations, missing reasons, quote/observation clocks and filtered CSV downloads are tested. The display preserves 194 rounded DraftKings references, while **zero named-provider comparison cells qualify for scoring**. An owned historical page supplied 63 events and 53 pre-cutoff game candidates across 159 target candidates. Identity, pricing and rights progress remains distinct from unresolved settlement, horizon and cohort gates. This bounded recovery made no provider requests or purchases and adds no qualified comparison cells.
+
+The secondary milestone materializes 274 team rows and 172 eligible rows across 86 pending games, with two eligible team rows lacking history. It has no completed feature ablation or measured improvement. The measured short scientific queue does not prove sustained selected-capacity utilization.
+
+The successor's complete logical return is **539,995,588 bytes in two ordered byte-split pieces**, each at most 512 MiB, with an immutable manifest and verification receipt. The pieces are not standalone ZIPs. The evidence was reviewed directly; no manual multi-gigabyte chat upload is required. Both intervening dated reviews and all older evidence remain preserved below.
+<!-- FBS_V078R5_OWNER_REVIEW_END -->
+
 <!-- FBS_V078R4_OWNER_REVIEW_START -->
 ## November 15, 2026, 11:40 a.m. Pacific: updated scoring, failed new issuance
 

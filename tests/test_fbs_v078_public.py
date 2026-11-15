@@ -8,10 +8,10 @@ import re
 import unittest
 
 ROOT = Path(__file__).resolve().parents[1]
-SITE = ROOT / 'docs/fbs/v078'
+SITE = ROOT / 'docs/fbs/v078-20261115T194012Z'
 
 
-class PublicV078(unittest.TestCase):
+class PublicV078R4Archive(unittest.TestCase):
     @classmethod
     def setUpClass(cls):
         cls.data = json.loads((SITE / 'data/review.json').read_text())
@@ -348,6 +348,175 @@ class PublicV078(unittest.TestCase):
             if not p.is_file(): continue
             body = gzip.decompress(p.read_bytes()) if p.suffix == '.gz' else p.read_bytes()
             self.assertNotIn(b'circa', body.lower(), str(p.relative_to(ROOT)))
+
+
+class PublicV078R5Current(unittest.TestCase):
+    @classmethod
+    def setUpClass(cls):
+        cls.site = ROOT / 'docs/fbs/v078'
+        cls.data = json.loads((cls.site/'data/review.json').read_text())
+        cls.games = json.loads(gzip.decompress((cls.site/'data/games.json.gz').read_bytes()))['games']
+        cls.current = [g for g in cls.games if g['season'] == 2026]
+        cls.r4 = json.loads((SITE/'data/review.json').read_text())
+        cls.r4_games = json.loads(gzip.decompress((SITE/'data/games.json.gz').read_bytes()))['games']
+
+    def test_actual_successor_completion_keeps_scientific_limits(self):
+        d = self.data
+        self.assertEqual(d['source_as_of'], '2026-11-15T20:39:57Z')
+        self.assertEqual(d['actual_child_exit_code'], 0)
+        self.assertEqual(d['counts'], dict(new_fits=26, new_winner_calibrators=8,
+            reused_states=201, failed_fits=0, reused_base_estimators=0,
+            new_issue_records=2236, new_issue_games=86,
+            reused_issue_records=0, reused_issue_games=0,
+            newly_added_unique_forecast_games=3,
+            total_current_issue_games=86, total_current_issue_records=2236))
+        self.assertEqual(d['scientific_acceptance'], 'PARTIAL; NO_AUTOMATIC_PROMOTION')
+        self.assertFalse(d['promotion'])
+        self.assertEqual((d['publication_new_fits'], d['publication_new_issues']), (0,0))
+        self.assertIn('operational completion is not full scientific acceptance',d['owner_status_summary'].lower())
+        self.assertIn('9,150 to 9,152 rows',d['owner_status_summary'])
+        self.assertIn('no identical-input base fit was repeated',d['owner_status_summary'])
+        self.assertEqual(self.r4['actual_child_exit_code'],2)
+        self.assertEqual(self.r4['counts']['new_issue_records'],0)
+        self.assertIn('ONE_BASE_STATE_PER_FIT_REQUIRED',self.r4['owner_status_summary'])
+
+    def test_every_fixture_and_current_issue_is_accounted_for(self):
+        self.assertEqual(len(self.games),2742)
+        self.assertEqual(len({g['id'] for g in self.games}),2742)
+        self.assertEqual((len(self.current),sum(g['status']=='final' for g in self.current)),(888,751))
+        self.assertEqual(sum(g['status']!='final' for g in self.current),137)
+        self.assertEqual(sum(g['status']=='tbd' for g in self.current),50)
+        self.assertEqual(sum(g['issued_rows'] for g in self.current),2236)
+        self.assertEqual(sum(g['issued_rows']>0 for g in self.current),86)
+        self.assertEqual({g['issued_rows'] for g in self.current if g['issued_rows']},{26})
+        self.assertEqual(sum(g.get('retained_issue_rows',0) for g in self.current),0)
+        self.assertTrue(all(g['status']!='final' for g in self.current if g['issued_rows']))
+        self.assertFalse(self.data['census']['complete_population_proved'])
+
+    def test_new_issue_clocks_and_five_objectives_are_independently_qualified(self):
+        s=self.data['research_objective_selection']
+        expected={'winner_probability':('winner','log_loss','CatBoost'),
+            'winner_accuracy':('winner','accuracy','TensorFlow'),
+            'margin_mae':('margin','mae','TensorFlow'),
+            'total_mae':('total','mae','ExtraTrees'),
+            'total_rmse':('total','rmse','Ridge regression')}
+        self.assertEqual(set(s['roles']),set(expected))
+        self.assertEqual((s['admitted_cells'],s['admitted_games'],s['pending_games']),(430,86,137))
+        self.assertTrue(all(s['gates'].values()))
+        self.assertEqual([s[k] for k in ['new_fits','new_inference','new_issues']],[0,0,0])
+        self.assertFalse(s['promotion']);self.assertFalse(s['historical_leader_backfill'])
+        observed=datetime.fromisoformat(self.data['source_as_of'].replace('Z','+00:00'))
+        selected=datetime.fromisoformat(s['selection_time'].replace('Z','+00:00'))
+        for key,(target,objective,family) in expected.items():
+            role=s['roles'][key]
+            self.assertEqual((role['target'],role['objective'],role['family']),(target,objective,family))
+            self.assertEqual(role['cohort_games'],47)
+            self.assertEqual((role['admitted_cells'],role['evaluation_state_matches'],role['evaluation_state_mismatches']),(86,0,86))
+            self.assertEqual(role['missing_cell_reasons'],{'KICKOFF_UNRESOLVED':50,'TARGET_NOT_FUTURE_BEFORE_T120_CUTOFF':1})
+            values=[];missing=[]
+            for g in self.games:
+                cells=g.get('research_objective_models',{})
+                if g['season']!=2026 or g['status']=='final':
+                    self.assertFalse(cells);continue
+                self.assertEqual(set(cells),set(expected))
+                c=cells[key]
+                if c['value'] is None:
+                    self.assertEqual(c['status'],'unavailable');self.assertTrue(c['reason']);missing.append(c);continue
+                self.assertEqual((c['status'],c['admission_status']),('genuine_issued_research','PASS'))
+                self.assertFalse(c['retained_from_prior_verified_return']);self.assertFalse(c['evaluation_state_matches'])
+                self.assertEqual((c['family'],c['objective'],c['evaluation_cohort_games']),(family,objective,47))
+                clocks={k:datetime.fromisoformat(c[k].replace('Z','+00:00')) for k in ['fit_completed_at','prepared_at','issue_time','information_cutoff','requested_horizon_cutoff','selection_time']}
+                self.assertLessEqual(clocks['fit_completed_at'],clocks['prepared_at'])
+                self.assertLessEqual(clocks['information_cutoff'],clocks['prepared_at'])
+                self.assertLessEqual(clocks['prepared_at'],clocks['issue_time'])
+                self.assertGreater(clocks['issue_time'],observed)
+                self.assertLessEqual(clocks['issue_time'],selected)
+                self.assertEqual(clocks['selection_time'],selected)
+                self.assertLess(selected,clocks['requested_horizon_cutoff'])
+                self.assertEqual(clocks['requested_horizon_cutoff'],datetime.fromisoformat(g['kickoff'].replace('Z','+00:00'))-timedelta(minutes=120))
+                self.assertGreater(g['issued_rows'],0)
+                values.append(c)
+            self.assertEqual((len(values),len(missing)),(86,51))
+
+    def test_fixed_audit_and_original_foundation_are_separate(self):
+        self.assertEqual(self.data['audit_baseline_selection']['rule'],{'winner':'Logistic regression','margin':'Ridge regression','total':'Ridge regression'})
+        for key,field in [('audit_baseline_selection','audit_model'),('research_leader_selection','research_leader_model')]:
+            s=self.data[key]
+            self.assertEqual((s['admitted_cells'],s['admitted_games'],s['missing_games']),(258,86,51))
+            self.assertTrue(all(s['gates'].values()))
+            self.assertFalse(s['promotion'])
+            self.assertEqual(sum(c['value'] is not None for g in self.games for c in g.get(field,{}).values()),258)
+            self.assertTrue(all(g['status']!='final' and g['season']==2026 for g in self.games if g.get(field)))
+        before={g['id']:g['model'] for g in self.r4_games}
+        self.assertEqual({g['id']:g['model'] for g in self.games},before)
+
+    def test_new_issue_delivery_does_not_add_historical_scored_games(self):
+        m=self.data['models']
+        self.assertEqual(len([r for r in m if r['cohort']=='issued']),26)
+        self.assertEqual({r['n'] for r in m if r['cohort']=='issued'},{47})
+        self.assertEqual(len([r for r in m if r['cohort']=='issued_newer_state_single_game']),26)
+        self.assertEqual({r['n'] for r in m if r['cohort']=='issued_newer_state_single_game'},{1})
+        prior={(r['cohort'],r['target'],r['family']):r['metrics'] for r in self.r4['models'] if r['cohort'].startswith('issued')}
+        current={(r['cohort'],r['target'],r['family']):r['metrics'] for r in m if r['cohort'].startswith('issued')}
+        self.assertEqual(current,prior)
+        self.assertEqual(len(self.data['scores']),36)
+        self.assertEqual(len(self.data['comparisons']),54)
+        self.assertEqual({r['evidence_class'] for r in self.data['scores']},{'LATER_FITTED_RECONSTRUCTION'})
+        self.assertEqual({r['n'] for r in self.data['scores'] if r['season']==2026},{751})
+
+    def test_provider_grid_is_complete_about_missingness(self):
+        products={'draftkings','kalshi','polymarket_global','polymarket_us'}
+        observed={('draftkings','winner'):600,('draftkings','margin'):675,('draftkings','total'):675,
+            ('kalshi','winner'):708,('kalshi','margin'):594,('kalshi','total'):594,
+            ('polymarket_global','winner'):702,('polymarket_global','margin'):601,('polymarket_global','total'):603,
+            ('polymarket_us','winner'):680,('polymarket_us','margin'):0,('polymarket_us','total'):0}
+        for g in self.current:
+            self.assertEqual(set(g['providers']),products)
+            for cells in g['providers'].values():self.assertEqual(set(cells),{'winner','margin','total'})
+        for (provider,target),count in observed.items():
+            cells=[g['providers'][provider][target] for g in self.current]
+            self.assertEqual(sum(c['observed_reference'] for c in cells),count)
+            self.assertFalse(any(c['status']=='qualified' for c in cells))
+        shown=[(g,c) for g in self.current for cells in g['providers'].values() for c in cells.values() if c['value'] is not None]
+        self.assertEqual(len(shown),194)
+        for g,c in shown:
+            self.assertTrue(c['display_eligible']);self.assertTrue(c['identity_matched_reference'])
+            self.assertEqual(c['status'],'archived_unqualified')
+            cutoff=datetime.fromisoformat(g['kickoff'].replace('Z','+00:00'))-timedelta(minutes=120)
+            self.assertLessEqual(datetime.fromisoformat(c['observation_time'].replace('Z','+00:00')),cutoff)
+            self.assertLessEqual(datetime.fromisoformat(c['quote_time'].replace('Z','+00:00')),cutoff)
+        self.assertEqual(self.data['market']['qualified_cells'],0)
+        p=self.data['market']['bounded_source_progress']
+        self.assertEqual((p['owned_raw_events_read'],p['pre_t120_candidate_games'],p['pre_t120_candidate_rows']),(63,53,159))
+        self.assertEqual((p['fully_qualified_added_cells'],p['new_paid_credits'],p['new_provider_calls']),(0,0,0))
+
+    def test_current_logical_return_is_two_parts_and_science_is_partial(self):
+        r=self.data['return']
+        self.assertEqual((r['parts'],r['logical_zip_bytes'],r['part_limit_bytes']),(2,539995588,536870912))
+        self.assertEqual(r['logical_archive_sha256'],'979c6e1642e0cd16d58655db3b27fadc90214fc2f1208dea4a373e1b48b4799d')
+        self.assertFalse(r['manual_upload_required']);self.assertFalse(r['parts_independently_extractable'])
+        gate=next(g for g in self.data['gates'] if g['gate']=='Complete logical return')
+        self.assertIn('2 ordered byte-split pieces',gate['detail'])
+        self.assertIn('do not prove sustained full capacity occupancy',self.data['cpu_detail'])
+        self.assertIn('No feature ablation, new fit or measured improvement',self.data['feature_progress'])
+
+    def test_current_receipt_and_both_dated_archives_bind_the_actual_files(self):
+        for route,clock in [('v078','2026-11-15T20:39:57Z'),('v078-20261115T194012Z','2026-11-15T19:40:12Z'),('v078-20261115T051030Z','2026-11-15T05:10:30Z')]:
+            site=ROOT/'docs/fbs'/route
+            receipt=json.loads((site/'RENDER_RECEIPT.json').read_text())
+            self.assertEqual(receipt['source_as_of'],clock)
+            for entry in receipt['files']:
+                raw=(site/entry['path']).read_bytes()
+                self.assertEqual((len(raw),hashlib.sha256(raw).hexdigest()),(entry['bytes'],entry['sha256']))
+        html=(self.site/'index.html').read_text()
+        self.assertIn('../v078-20261115T194012Z/',html)
+        self.assertIn('../v078-20261115T051030Z/',html)
+        forbidden=re.compile(r's3://|arn:aws:|/home/sagemaker-user|/workspace/|AKIA[0-9A-Z]{16}|"(?:model_id|fit_id|state_sha256|coefficients|feature_names|prediction_records)"')
+        for p in self.site.rglob('*'):
+            if not p.is_file():continue
+            body=gzip.decompress(p.read_bytes()) if p.suffix=='.gz' else p.read_bytes()
+            self.assertIsNone(forbidden.search(body.decode()),p.name)
+            self.assertNotIn(b'circa',body.lower())
 
 
 if __name__ == '__main__':

@@ -1,5 +1,9 @@
 # 2026 NFL models vs. Circa Million VIII
 
+[N119 live dashboard](https://sports-edge-lab-nfl.alv-mendizabal.chatgpt.site/circa/n119/) · [N119 public page source](n119_current/index.html)
+
+The season selector compares models with DraftKings on the same games and shows the sample behind each score. The registry identifies original study selections and research challengers. Each fixture records its market coverage and separates forecast issue time from subsequent venue observations.
+
 [N118 live dashboard](https://sports-edge-lab-nfl.alv-mendizabal.chatgpt.site/circa/n118/) · [N118 public page source](n118_current/index.html)
 
 The NFL game review separates verified finals, games in progress, confirmed future kickoffs and times still to be determined. Each matchup shows the available DraftKings, Kalshi and Polymarket evidence, with earlier forecast times and historical research labeled separately. The model pages include prior-week margin calibration and a rest-based total-points study.
