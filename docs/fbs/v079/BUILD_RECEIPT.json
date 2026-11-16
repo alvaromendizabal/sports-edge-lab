@@ -11,13 +11,13 @@
   "files": [
     {
       "path": "README.md",
-      "bytes": 4071,
-      "sha256": "503e591fa6bc8c7036a6073f99243d103dead7b7463c3490ac6d87aadfbcc529"
+      "bytes": 5564,
+      "sha256": "ce0464db5873a144cb253497eba9707c83ba98c638003549ab9ff05a1672051b"
     },
     {
       "path": "app.js",
-      "bytes": 45784,
-      "sha256": "90302bd1f3664ccadc2503dd30038993ce3366fe01ec7237ed1aecc3ad40075e"
+      "bytes": 51293,
+      "sha256": "88c5b26d1790ab662e2eda1a1b3cf80f05c0745f674d3ea006271115e5dd9fcb"
     },
     {
       "path": "data/games.json.gz",
@@ -30,9 +30,14 @@
       "sha256": "c0613ef42f411d6109c163e8e320789b2702a83e6b5501f7ba58e62b4e9587d8"
     },
     {
+      "path": "data/validation-nominees.json",
+      "bytes": 550933,
+      "sha256": "fcc483ec7d51bc4027a28809f3e29666b95e215cb59ff06c01a308194cebfc96"
+    },
+    {
       "path": "index.html",
-      "bytes": 26261,
-      "sha256": "7ce9a8cb464342f639bb9f067160898426edc787e7e61e2446bbe12c8083399b"
+      "bytes": 26311,
+      "sha256": "86c3cb5ee758e86acbf892f1e63018cb97714cfc6947bb1f9b5d91fc1790648e"
     },
     {
       "path": "styles.css",
@@ -144,5 +149,35 @@
       "Multiline study table width contained",
       "Actual audited research comparison on the same fixed DraftKings cohorts"
     ]
+  },
+  "validation_nominee_display_enrichment": {
+    "schema": "fbs.v080r1.selected-role-publication.v1",
+    "projection_created_at": "2026-11-16T19:00:47.007758Z",
+    "selected_aliases": [
+      "W08",
+      "W02",
+      "M09",
+      "T09"
+    ],
+    "objective_roles": 6,
+    "issued_games": 86,
+    "unique_selected_output_count": 344,
+    "source_forecast_csv_sha256": "a2669b93e419e1d4a9034db48aecd77e5d34573e7dfdc1cef1c5f72fed540685",
+    "source_nomination_report_sha256": "25daa7aee44572a438b21f7065af4e6d0a52663fc61e539eec2eae126cc1486a",
+    "selection_seasons": [
+      2024,
+      2025
+    ],
+    "test_outcomes_used_for_selection": false,
+    "exact_original_selection_time_retained": false,
+    "nomination_report_clock_separate": true,
+    "current_state_historical_backfill": false,
+    "legacy_games_and_review_bytes_unchanged": true,
+    "historical_and_current_exchange_references_not_measured": true,
+    "legacy_archived_references_unchanged": true,
+    "new_fits": 0,
+    "new_forecast_issues": 0,
+    "source_calls": 0,
+    "promotion": false
   }
 }

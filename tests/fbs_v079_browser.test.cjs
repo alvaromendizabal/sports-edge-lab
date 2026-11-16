@@ -5,6 +5,7 @@ const {chromium}=require(process.env.PLAYWRIGHT_MODULE_DIR||'playwright');
 const root=path.resolve(__dirname,'..'),site=process.env.FBS_V079_SITE||path.join(root,'docs/fbs/v079');
 const live=process.env.FBS_V079_LIVE_URL,base=live||'http://fbs-v079.test/';
 const data=JSON.parse(fs.readFileSync(path.join(site,'data/review.json'))),games=JSON.parse(zlib.gunzipSync(fs.readFileSync(path.join(site,'data/games.json.gz')))).games;
+const nomineeProjection=JSON.parse(fs.readFileSync(path.join(site,'data/validation-nominees.json')));
 require(path.join(site,'app.js'));
 const logic=globalThis.FBS079,out=process.env.FBS_SCREENSHOTS;
 let browser,checks=0;const check=(value,message)=>{assert.ok(value,message);checks++;};
@@ -82,7 +83,7 @@ function parseCSV(text){const rows=[];let row=[],field='',quoted=false;for(let i
         for(const key of ['reference','display','qualified','missing','denominator'])check(await row.locator(`[data-coverage="${key}"]`).innerText()===expected[key].toLocaleString('en-US'),'Exact provider denominator and evidence state');
         for(const [prefix,state,fn] of [['current','CURRENT_SOURCE_PROJECTION_VERIFIED',logic.currentCoverage],['historical','HISTORICAL_SOURCE_PROJECTION_VERIFIED',logic.historicalCoverage]]){
           const projection=data[prefix+'_source_coverage'],attached=projection?.state===state&&(prefix==='historical'||season===2026),c=fn(subset,provider,target),sourceRow=page.locator(`#${prefix}-market-body tr[data-${prefix}-provider="${provider}"]`);
-          for(const key of ['reference','qualified','denominator'])check(await sourceRow.locator(`[data-${prefix}-coverage="${key}"]`).innerText()===(key==='denominator'||attached&&c.covered===subset.length?c[key].toLocaleString('en-US'):'Not attached'),'Capture coverage retains exact denominator and missing projection');
+          for(const key of ['reference','qualified','denominator']){const expected=key==='denominator'?c[key].toLocaleString('en-US'):attached&&c.covered===subset.length?(key==='reference'?logic.referenceCoverageLabel(c,logic.referenceMeasurement(nomineeProjection,prefix,provider)):c[key].toLocaleString('en-US')):'Not attached';check(await sourceRow.locator(`[data-${prefix}-coverage="${key}"]`).innerText()===expected,'Capture coverage retains denominator and distinguishes unmeasured references from zero qualified');}
         }
         if(status==='final'){
           await page.selectOption('#comparison-provider',provider);
@@ -102,6 +103,23 @@ function parseCSV(text){const rows=[];let row=[],field='',quoted=false;for(let i
     await page.click('[data-open-game]');const currentDetail=await page.locator('#game-dialog-body').innerText();
     check(currentDetail.includes(currentCell.quote_time)&&currentDetail.includes(currentCell.observation_time),'Current quote and acquisition clocks are visible separately');
     await page.click('#dialog-close');await page.fill('#game-search','');
+    check(await page.locator('#game-source option[value="nominees"]').count()===1,'Validation nominee source is selectable');
+    await page.selectOption('#game-source','nominees');await page.fill('#game-search',currentExample.id);
+    for(const [objective,role] of Object.entries(nomineeProjection.roles)){
+      await page.selectOption('#game-target',role.target);await page.selectOption('#game-objective',objective);
+      const cell=logic.selectGameModel(currentExample,'nominees',role.target,objective,nomineeProjection),text=await page.locator('#game-body').innerText(),value=role.target==='winner'?(100*cell.value).toFixed(1)+'%':cell.value.toFixed(1);
+      check(text.includes(value)&&text.includes(role.model_alias),'Selected objective shows its actual rounded nominee output and public alias');
+      await page.click('[data-open-game]');const detail=await page.locator('#game-dialog-body').innerText();
+      for(const clock of ['issue_time','fit_completed_at','prepared_at','information_cutoff','nomination_report_completed_at'])check(detail.includes(cell[clock]),'Original issue and nomination-report clocks are visible separately');
+      check(detail.includes('Exact original nomination-selection clock was not retained'),'Missing selection clock is never backdated');
+      check(detail.includes('recipe and chronological protocol'),'Historical metrics do not validate the current fitted state');
+      await page.click('#dialog-close');
+    }
+    await page.selectOption('#game-target','winner');await page.selectOption('#game-objective','winner_probability');
+    const completedExample=games.find(g=>g.season===2026&&g.status==='final'),tbdExample=games.find(g=>g.season===2026&&g.status==='tbd');
+    await page.fill('#game-search',completedExample.id);check((await page.locator('#game-body').innerText()).includes('not backfilled'),'Completed games do not receive a current-fit forecast');
+    await page.fill('#game-search',tbdExample.id);check((await page.locator('#game-body').innerText()).includes('Kickoff is unresolved'),'Unissued unresolved fixtures retain an explicit missing reason');
+    await page.fill('#game-search','');
     for(const season of [2024,2025,2026]){await page.selectOption('#game-season',String(season));check((await page.locator('#game-count').innerText()).startsWith(games.filter(g=>g.season===season).length.toLocaleString('en-US')),'All observed games remain in each season');}
     await page.selectOption('#game-status','unfinished');check((await page.locator('#game-count').innerText()).startsWith(games.filter(g=>g.season===2026&&g.status!=='final').length.toLocaleString('en-US')),'Pending and unresolved retained');
     const first=await page.locator('#game-body').innerText();if(await page.locator('#game-next').isEnabled()){await page.click('#game-next');check(await page.locator('#game-body').innerText()!==first,'Next page changes games');}
@@ -115,6 +133,10 @@ function parseCSV(text){const rows=[];let row=[],field='',quoted=false;for(let i
     const downloadPromise=page.waitForEvent('download');await page.click('#download-games');const download=await downloadPromise;check(download.suggestedFilename()==='FBS_2026_COMPARISON.csv','Filtered comparison downloadable');
     const stream=await download.createReadStream(),chunks=[];for await(const chunk of stream)chunks.push(chunk);const csv=parseCSV(Buffer.concat(chunks).toString('utf8')),headers=csv[0],exported=csv.slice(1).map(row=>Object.fromEntries(headers.map((name,i)=>[name,row[i]]))),byGame=new Map(exported.map(r=>[r.game_id,r]));
     check(exported.filter(r=>r.draftkings_current_display_value!=='').length===54,'CSV includes all54 current derived probabilities');
+    check(exported.filter(r=>r.model_value!=='').length===86,'Nominee CSV has exactly86 current issues without historical backfill');
+    check(exported.filter(r=>r.status==='final').every(r=>r.model_value===''),'Every completed game remains explicitly unforecast by the current-state view');
+    for(const row of exported.filter(r=>r.model_value!=='')){check(row.model_alias==='W08'&&row.model_fit_completed_at&&row.model_information_cutoff&&row.model_nomination_report_completed_at,'CSV binds the selected alias and actual clocks');check(row.model_selection_time===''&&row.model_selection_time_basis.includes('not retained'),'CSV does not invent original selection time');}
+    check(exported.every(r=>r.kalshi_current_reference==='Not measured'&&r.kalshi_historical_reference==='Not measured'&&r.kalshi_current_source_qualified==='false'),'CSV distinguishes unmeasured references from zero qualified');
     for(const game of currentValueGames){const row=byGame.get(game.id),cell=game.current_provider_coverage.draftkings.winner;check(Number(row.draftkings_current_display_value)===cell.display_value,'CSV current probability equals actual public cell');check(row.draftkings_current_quote_time===cell.quote_time&&row.draftkings_current_observed_at===cell.observation_time,'CSV keeps the actual current quote and acquisition clocks');}
     check(await page.evaluate(()=>document.documentElement.scrollWidth<=innerWidth),'Game table contained on mobile');
     await page.click('[data-tab="diagnostics"]');check((await page.locator('#diagnostic-note').innerText()).includes('47-game'),'Narrow issued cohort is explicitly diagnostic');
@@ -134,3 +156,4 @@ function parseCSV(text){const rows=[];let row=[],field='',quoted=false;for(let i
   if(out)fs.writeFileSync(path.join(out,`FBS_V079_${live?'LIVE':'STATIC'}_BROWSER_RECEIPT.json`),JSON.stringify(receipt,null,2)+'\n');
   console.log(JSON.stringify(receipt));await browser.close();
 })().catch(async error=>{console.error(error);if(browser)await browser.close();process.exitCode=1;});
+
