@@ -85,6 +85,26 @@ class DraftKingsAnalyticalTests(unittest.TestCase):
         self.row['comparison_eligible'] = True
         with self.assertRaisesRegex(ValueError, 'backtest'): self.project()
 
+    def test_new_current_capture_retains_older_observation_without_refreshing_it(self):
+        self.games[0].update(phase='regular',status='SCHEDULED')
+        self.row.update(horizon_minutes=None, retrieved_at='2026-10-20T17:10:00Z',
+                        forecast_cutoff=None, archive_snapshot_time=None,
+                        comparison_eligible=False, status='QUALIFIED_CURRENT_REFERENCE')
+        newer=copy.deepcopy(self.row)
+        newer.update(retrieved_at='2026-10-20T17:20:00Z',source_quote_time='2026-10-20T17:19:00Z')
+        result=self.project([self.row,newer])
+        self.assertEqual(len(result['rows']),2)
+        self.assertEqual(result['rows'][0]['retrieved_at'],'2026-10-20T17:10:00Z')
+        self.assertEqual(result['latest_current_capture_utc'],'2026-10-20T17:20:00Z')
+        self.assertEqual(result['latest_current_capture_scheduled_games'],1)
+        self.assertEqual(result['qualified_current_scheduled_reference_games'],1)
+        with self.assertRaisesRegex(ValueError,'duplicate'):self.project([newer,copy.deepcopy(newer)])
+        self.games[0]['status']='FINAL'
+        result=self.project([self.row,newer])
+        self.assertEqual(result['qualified_current_reference_games'],1)
+        self.assertEqual(result['qualified_current_scheduled_reference_games'],0)
+        self.assertEqual(result['latest_current_capture_scheduled_games'],0)
+
     def test_spread_is_threshold_and_push_remains_unknown(self):
         self.row.update(target='margin', home_spread_line=-3.5, away_spread_line=3.5, market_home_minus_away=3.5)
         result = self.project()

@@ -31,17 +31,21 @@ module.exports = async function checkSeasonComparison(browser, output) {
     assert.deepEqual(await page.evaluate(()=>window.NBA_COMPARISON_DATA),source);
     const forward=source.forward_forecast_update;
     assert.ok(forward);
-    assert.match(await page.locator('#latest-forward-checkpoint').textContent(),/13,601 issues.*972\/1005.*33 retain older/);
-    assert.match(await page.locator('#forward-issue-scope').textContent(),/28 new estimator fits.*14 preserved selected recipes.*971 scheduled games.*22.*1 is partly updated.*33 retain only older.*737.*Missing selected-role cells: 0/);
-    assert.equal(await page.locator('#forward-role-rows tr').count(),22);
-    assert.equal(await page.locator('#forward-gap-rows tr').count(),33);
+    assert.match(await page.locator('#latest-forward-checkpoint').textContent(),new RegExp(forward.new_original_issue_rows.toLocaleString('en-US')+' issues.*'+forward.scheduled_games_with_new_issues+'/'+forward.scheduled_regular_games));
+    const forwardText=await page.locator('#forward-issue-scope').textContent();
+    assert.ok(forwardText.includes(forward.source_reported_unique_new_fits+' new estimator fits'));
+    assert.ok(forwardText.includes(forward.scheduled_games_all_roles_new+' scheduled games'));
+    assert.ok(forwardText.includes('Missing selected-role cells: '+forward.scheduled_selected_role_cells_missing));
+    assert.equal(await page.locator('#forward-role-rows tr').count(),forward.required_regular_roles_per_game);
+    assert.equal((await page.locator('#forward-gap-rows tr').count()),Math.max(1,forward.scheduled_games_only_older_issues));
     assert.equal(forward.nominal_window_issues,0);
-    for(const [role,count] of Object.entries(forward.scheduled_coverage_by_role))assert.ok(count===971||count===972);
+    for(const [role,count] of Object.entries(forward.scheduled_coverage_by_role))assert.ok(count<=forward.scheduled_regular_games);
     const equal=source.equal_population_evaluation;
     assert.ok(equal);
     assert.deepEqual(equal.protocol.validation_seasons,['2024-25','2025-26']);
     assert.equal(equal.protocol.test_season,'2026-27');
     assert.equal(equal.protocol.test_exposure_status,'PREVIOUSLY_EXPOSED');
+    assert.match(await page.locator('#latest-full-population-scope').textContent(),/1,230 regular and 84 postseason.*1,230 regular and 85 postseason.*197 regular and 0 postseason/);
     assert.match(await page.locator('#equal-population-protocol').textContent(),/Selection population: 2024–25 and 2025–26.*prior analytical exposure/);
     for(const group of equal.groups){
       const metric=group.target==='winner'?'log_loss':'mae';
@@ -58,6 +62,18 @@ module.exports = async function checkSeasonComparison(browser, output) {
       if(!group.all_required_candidates_complete)assert.match(observed.result,/No all-candidate full-population ranking/);
       assert.doesNotMatch(observed.section,/undefined|NaN/);
     }
+    const leaders=source.validation_leaders;
+    assert.ok(leaders);assert.equal(leaders.test_used_for_ranking,false);assert.equal(leaders.automatic_promotion,false);
+    for(const phase of ['regular','postseason'])for(const target of ['winner','margin','total'])for(const horizon of [60,120]){
+      await changeControls(page,[['leader-phase',phase],['leader-target',target],['leader-horizon',horizon]]);
+      const groups=leaders.groups.filter(g=>g.phase===phase&&g.target===target&&g.horizon_minutes===horizon);
+      assert.equal(await page.locator('#validation-leader-rows tr').count(),groups.reduce((n,g)=>n+g.leaders.length,0));
+      const text=await page.locator('#validation-leader-rows').textContent();
+      for(const g of groups)for(const row of g.leaders){assert.ok(text.includes(row.alias));assert.ok(text.includes(g.metric==='accuracy'?(row.pooled_metric*100).toFixed(2)+'%':row.pooled_metric.toFixed(6)));}
+      assert.doesNotMatch(text,/undefined|NaN/);
+      if(phase==='regular'&&target==='winner'&&horizon===60)assert.equal((text.match(/One of 3 tied leading scores/g)||[]).length,3);
+    }
+    await changeControls(page,[['leader-phase','regular'],['leader-target','winner'],['leader-horizon',120]]);
     await page.selectOption('#equal-phase','regular');await page.selectOption('#equal-target','winner');await page.selectOption('#equal-horizon','120');await page.selectOption('#equal-season','2026-27');
     if(equal.groups.some(g=>g.evidence_track==='QUALIFIED_FIXED_REPLAY'&&g.target==='winner'&&g.horizon_minutes===120&&g.phase==='regular'))await page.selectOption('#equal-track','QUALIFIED_FIXED_REPLAY');
     await page.screenshot({path:path.join(output,`nba-full-population-${name}.png`),fullPage:false});
@@ -71,16 +87,18 @@ module.exports = async function checkSeasonComparison(browser, output) {
         const cells=await page.locator('#paired-full-rows tr').allTextContents();
         group.models.forEach((m,i)=>{assert.ok(cells[i].includes(m.model_games+' / '+group.required_games));if(!m.full_population_complete)assert.ok(cells[i].includes('Unavailable'));});
         assert.match(await page.locator('#paired-diagnostic-scope').textContent(),new RegExp('Diagnostic only: '+group.common_diagnostic.games+' identical available games'));
+        assert.equal(group.common_diagnostic.games,0);
+        assert.match(await page.locator('#provider-only-baseline').textContent(),/full 197-game provider population/);
         assert.doesNotMatch(await page.locator('#named-market-scoreboard').textContent(),/undefined|NaN/);
       }
       await page.selectOption('#paired-target','winner');await page.selectOption('#paired-horizon','120');await page.selectOption('#paired-track','QUALIFIED_FIXED_REPLAY');
     }
     if(source.draftkings_analytical){
       assert.equal(await page.locator('#draftkings-coverage-rows tr').count(),6);
-      for(const group of source.draftkings_analytical.coverage){assert.equal(group.required_games,192);assert.equal(group.qualified_games,192);assert.equal(group.missing_or_unqualified_games,0);assert.equal(group.full_population_market_coverage,true);}
+      for(const group of source.draftkings_analytical.coverage){assert.equal(group.required_games,197);assert.equal(group.qualified_games,197);assert.equal(group.missing_or_unqualified_games,0);assert.equal(group.full_population_market_coverage,true);}
       assert.equal((await page.locator('#draftkings-coverage-rows').textContent()).match(/All required provider references qualified/g).length,6);
       await page.selectOption('#market-availability','QUALIFIED_DRAFTKINGS');
-      assert.match(await page.locator('#game-count').textContent(),/^194 matching/);
+      const dkGames=new Set(source.draftkings_analytical.rows.filter(r=>r.analytical_display_qualified).map(r=>r.game_id));assert.match(await page.locator('#game-count').textContent(),new RegExp('^'+dkGames.size+' matching'));
       await page.selectOption('#game-status','UPCOMING');await page.selectOption('#horizon','120');
       for(const target of ['winner','margin','total']){
         await page.selectOption('#target',target);assert.match(await page.locator('#game-rows').textContent(),/Current capture · reference only/);
@@ -144,8 +162,8 @@ module.exports = async function checkSeasonComparison(browser, output) {
     assert.equal(await page.locator('#current-score-rows tr').count(),3);
     assert.match(await page.locator('#current-score-scope').textContent(),/128 identical/);
     const audit=source.b088_cached_science.paired_audit;
-    assert.match(await page.locator('#latest-cached-audit-checkpoint').textContent(),/Cached-data audit update:.*no new fit, forecast or game quote.*Forecast foundation: B087-R3/);
-    assert.equal(await page.locator('#owner-details summary').textContent(),'Forecast foundation: verified owner return');
+    assert.match(await page.locator('#latest-cached-audit-checkpoint').textContent(),/Cached-data audit update:.*no new fit, forecast or game quote.*Retained forecast foundation: B087-R3/);
+    assert.equal(await page.locator('#owner-details summary').textContent(),'Latest verified owner return and remaining work');
     assert.match(await page.locator('#robust-clock').textContent(),/128 \/ 183.*55 missing/);
     assert.match(await page.locator('#robust-summary').textContent(),/reverse when week 44 is excluded/);
     for(const zone of ['UTC','America/Los_Angeles'])for(const metric of ['brier','log_loss','accuracy']){
@@ -183,8 +201,9 @@ module.exports = async function checkSeasonComparison(browser, output) {
     assert.match(await page.locator('#warm-cache-scope').textContent(),/does not measure a speedup/);
     assert.match(await page.locator('#latest-forecast-checkpoint').textContent(),/B087-R3.*448 new early-outlook rows for 32 games/);
     assert.match(await page.locator('#latest-forecast-checkpoint').textContent(),/1,012\/1,012 known scheduled regular games/);
-    assert.match(await page.locator('#owner-status').textContent(),/B087-R3/);
-    assert.match(await page.locator('#owner-status').textContent(),/3,773,418,232 bytes across 8 numbered byte-split pieces/);
+    assert.match(await page.locator('#owner-status').textContent(),/B090/);
+    assert.match(await page.locator('#latest-owner-checkpoint').textContent(),/return packaging pending.*B090.*28 new estimator fits.*14,042 new forecast rows/);
+    assert.match(await page.locator('#owner-status').textContent(),/Return packaging is pending; its physical integrity has not yet been verified/);
     assert.equal(await page.locator('#earlier-frontier-rows tr').count(),36);
     const earlierRows=await page.locator('#earlier-frontier-rows tr').allTextContents();
     source.current_science_scores.new_frontier_earlier_season_ablations.forEach((row,i)=>{

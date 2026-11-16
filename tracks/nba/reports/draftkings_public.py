@@ -44,7 +44,8 @@ def project_normalized(raw, *, expected_sha256, games, required_game_ids):
     if hashlib.sha256(raw).hexdigest() != expected_sha256:
         raise ValueError('DraftKings normalized input fingerprint mismatch')
     source = json.loads(raw)
-    if source.get('schema') != 'sel.nba.b089.market_analytical_projection.v1':
+    if source.get('schema') not in ('sel.nba.b089.market_analytical_projection.v1',
+                                    'sel.nba.b090.incremental_draftkings.v1.normalized_private'):
         raise ValueError('DraftKings normalized input schema mismatch')
     if source.get('raw_provider_export_authorized') is not False:
         raise ValueError('DraftKings raw export permission is not established')
@@ -66,7 +67,10 @@ def project_normalized(raw, *, expected_sha256, games, required_game_ids):
         if (row.get('home'), row.get('away'), moment(row.get('start_utc'))) != (
                 game.get('home_team'), game.get('away_team'), moment(game.get('scheduled_start_utc'))):
             raise ValueError('DraftKings exact game identity mismatch')
-        key = (game_id, target, horizon)
+        # Historical registered horizons are unique. Live references retain
+        # distinct capture versions; a newer capture never rewrites an earlier
+        # missing or qualified observation.
+        key = (game_id, target, horizon, row.get('retrieved_at') if horizon is None else None)
         if key in seen:
             raise ValueError('DraftKings duplicate game target horizon')
         seen.add(key)
@@ -158,19 +162,29 @@ def project_normalized(raw, *, expected_sha256, games, required_game_ids):
     clocks = [r['retrieved_at'] for r in projected if r['retrieved_at']]
     current_games = {r['game_id'] for r in projected if r['analytical_display_qualified'] and r['horizon_minutes'] is None}
     scheduled_games = {g['game_id'] for g in games if g.get('phase') == 'regular' and g.get('status') == 'SCHEDULED'}
+    current_clocks = [r['retrieved_at'] for r in projected if r['analytical_display_qualified'] and r['horizon_minutes'] is None]
+    latest_current_clock = max(current_clocks, key=moment) if current_clocks else None
+    latest_current_games = {r['game_id'] for r in projected if r['analytical_display_qualified'] and
+                            r['horizon_minutes'] is None and r['retrieved_at'] == latest_current_clock}
     return {'schema': SCHEMA, 'source_normalized_sha256': expected_sha256,
             'observed_at_utc': max(clocks, key=moment) if clocks else None,
             'required_population_games': len(required), 'coverage': coverage,
             'qualified_historical_target_slots': sum(r['historical_comparison_qualified'] for r in projected),
             'qualified_current_reference_slots': sum(r['analytical_display_qualified'] and r['horizon_minutes'] is None for r in projected),
             'qualified_current_reference_games': len(current_games),
+            'qualified_current_scheduled_reference_games': len(current_games & scheduled_games),
+            'latest_current_capture_utc': latest_current_clock,
+            'latest_current_capture_scheduled_games': len(latest_current_games & scheduled_games),
             'known_scheduled_regular_games': len(scheduled_games),
             'scheduled_games_without_qualified_current_quotes': len(scheduled_games-current_games),
             'historical_start_revision_game_horizon_slots': len({(r['game_id'],r['horizon_minutes']) for r in projected
                 if r['historical_comparison_qualified'] and r['start_revision_seconds'] != 0}),
-            'captures_normalized': source.get('captures_normalized', 0),
+            'captures_normalized': source.get('captures_normalized',
+                source.get('captures_newly_decoded_for_normalization', 0) + source.get('old_capture_bodies_redecoded_for_normalization', 0)),
+            'normalization_is_incremental': source.get('schema') == 'sel.nba.b090.incremental_draftkings.v1.normalized_private',
+            'prior_normalized_rows_preserved': source.get('prior_rows_preserved', 0),
             'capture_failure_count': len(source.get('capture_failures', [])),
-            'rows': sorted(projected, key=lambda r: (r['game_id'], r['target'], r['horizon_minutes'] or 0)),
+            'rows': sorted(projected, key=lambda r: (r['game_id'], r['target'], r['horizon_minutes'] or 0, r['retrieved_at'] or '')),
             'rights': {'analytical_ui_permitted': True, 'bulk_provider_download_permitted': False,
                        'scope': 'DRAFTKINGS_VIA_THE_ODDS_API_ONLY'},
             'comparison_scope': 'REGISTERED_HORIZON_REFERENCES; MODEL_PAIRING_AND_FULL_POPULATION_READINESS_SEPARATE',

@@ -35,8 +35,15 @@ def validate_public(value, equal_population):
             raise ValueError('Public paired required candidates omitted or duplicated')
         if group['market_games']+group['missing_market_games']!=required:
             raise ValueError('Public paired market denominator mismatch')
+        provider_only=group.get('provider_only_full_population_metrics')
+        if provider_only is not None:
+            if group['market_games']!=required or not provider_only or not set(provider_only).issubset(METRICS):
+                raise ValueError('Partial or unsupported provider-only full score')
+            if any(v is not None and (not isinstance(v,(float,int)) or not math.isfinite(v) or v<0) for v in provider_only.values()):
+                raise ValueError('Invalid provider-only full score')
         for model in group['models']:
             if (model['model_games']+model['missing_model_games']!=required
+                    or model['model_games']!=candidates[model['alias']]['qualified_games']
                     or model['market_games']!=group['market_games'] or model['missing_market_games']!=group['missing_market_games']
                     or not 0<=model['paired_games']<=min(model['model_games'],model['market_games'])):
                 raise ValueError('Public paired model denominator mismatch')

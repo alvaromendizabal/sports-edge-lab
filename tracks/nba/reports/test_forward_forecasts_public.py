@@ -1,4 +1,5 @@
 import copy
+import datetime as dt
 import gzip
 import json
 import unittest
@@ -11,7 +12,7 @@ class ForwardForecastTests(unittest.TestCase):
         root=b.ROOT;config=b.read_json(root/'season_comparison_sources.json')[0]
         inputs=[b.read_json(root/config[k])[0] for k in ['selected_outputs','model_review','acceptance','cohort_leaders']]
         cls.base=b.project(*inputs)
-        b.apply_current_inventory(cls.base,b.read_json(root/'current_game_inventory.json')[0])
+        b.apply_current_inventory(cls.base,b.read_json(root/'b089_current_game_inventory.json')[0])
         cls.base['equal_population_evaluation']=b.read_json(root/'equal_cohort_scoreboard.json')[0]
         cls.base['model_market_comparison']=b.read_json(root/'model_market_comparison.json')[0]
         cls.value=b.read_json(root/'forward_forecasts_public.json.gz')[0]
@@ -85,5 +86,23 @@ class ForwardForecastTests(unittest.TestCase):
         for key,value in [('automatic_promotions',1),('historical_test_backscore',True)]:
             base,data,row=self.fixture();data[key]=value
             with self.assertRaisesRegex(ValueError,'alter science'):f.apply_public(base,data)
+
+    def test_new_checkpoint_preserves_prior_original_issue_and_summary(self):
+        base,value,row=self.fixture()
+        prior_summary=copy.deepcopy(f.apply_public(base,value))
+        prior=copy.deepcopy(base['games'][0]['forecasts'])
+        next_value=copy.deepcopy(value);next_row=next_value['rows'][0]
+        next_value.update(schema=f.SCHEMA_V2,execution_checkpoint='B090')
+        next_row['issue_id']='issue-synthetic-checkpoint-test'
+        next_row['issued_at_utc']=(f.stamp(next_row['issued_at_utc'])+dt.timedelta(seconds=1)).isoformat()
+        next_row['actual_lead_minutes']-=1/60
+        next_row['source_age_seconds_at_issue']+=1
+        summary=f.apply_public(base,next_value)
+        self.assertEqual(base['forward_forecast_update_history'],[prior_summary])
+        self.assertEqual(summary['execution_checkpoint'],'B090')
+        for role in next_row['roles']:
+            self.assertEqual(base['games'][0]['original_issue_history'][role][-1],prior[role])
+            self.assertEqual(base['games'][0]['forecasts'][role]['execution_checkpoint'],'B090')
+            self.assertFalse(base['games'][0]['forecasts'][role]['nominal_horizon_qualified'])
 
 if __name__=='__main__':unittest.main()

@@ -25,7 +25,11 @@ PUBLIC_OWNER_FIELDS = ('release', 'observed_at_utc', 'started_at_utc', 'finished
                        'reused_model_count', 'failed_model_count', 'new_forecast_rows',
                        'return_verified', 'return_parts', 'active_run', 'limitations',
                        'verified_payloads', 'scientific_status', 'source_receipt_sha256',
-                       'return_logical_bytes', 'return_representation', 'total_elapsed_seconds')
+                       'return_logical_bytes', 'return_representation', 'total_elapsed_seconds',
+                       'new_calibration_fits', 'successful_jobs', 'failed_jobs',
+                       'return_verified_at_utc', 'return_verification_receipt_sha256',
+                       'historical_snapshot_utc', 'full_current_model_test_cells', 'automatic_promotions',
+                       'execution_receipt_sha256s', 'forward_source_correction_pending')
 
 def validate_cached_science(value):
     """Reject private data and unsupported claims in the aggregate-only audit."""
@@ -316,11 +320,18 @@ def build(root=ROOT):
         recovery, recovery_hash = read_json(recovery_path)
         result['b088_cached_science'] = validate_cached_science(recovery)
         result['source_payload_sha256']['b088_cached_science'] = recovery_hash
-    equal_path = root / 'equal_cohort_scoreboard.json'
+    equal_path = root / 'all_candidate_scoreboard.json.gz'
+    if not equal_path.exists(): equal_path = root / 'equal_cohort_scoreboard.json'
     if equal_path.exists():
         equal, equal_hash = read_json(equal_path)
         result['equal_population_evaluation'] = validate_equal_population(equal)
         result['source_payload_sha256']['equal_population_evaluation'] = equal_hash
+    validation_path = root / 'validation_leaders.json'
+    if validation_path.exists():
+        from validation_leaders_public import validate_public as validate_leaders
+        validation, validation_hash = read_json(validation_path)
+        result['validation_leaders'] = validate_leaders(validation, result['equal_population_evaluation'])
+        result['source_payload_sha256']['validation_leaders'] = validation_hash
     inventory_path = root / 'current_game_inventory.json'
     if inventory_path.exists():
         inventory, inventory_hash = read_json(inventory_path)
@@ -358,7 +369,8 @@ def build(root=ROOT):
             raise ValueError('Prior analytical display disagrees with public aggregate summary')
         result['draftkings_analytical'] = saved
         result['source_payload_sha256']['draftkings_normalized'] = saved['source_normalized_sha256']
-    paired_path = root / 'model_market_comparison.json'
+    paired_path = root / 'all_candidate_market_comparison.json.gz'
+    if not paired_path.exists(): paired_path = root / 'model_market_comparison.json'
     if paired_path.exists():
         from model_market_public import validate_public as validate_model_market
         paired, paired_hash = read_json(paired_path)
@@ -377,6 +389,13 @@ def build(root=ROOT):
         forward, forward_hash = read_json(forward_path)
         apply_forward(result,forward)
         result['source_payload_sha256']['forward_forecasts_public'] = forward_hash
+    for current_forward_name in ('b090_earlier_forward_forecasts_public.json.gz', 'current_forward_forecasts_public.json.gz'):
+        current_forward_path = root / current_forward_name
+        if not current_forward_path.exists(): continue
+        from forward_forecasts_public import apply_public as apply_forward
+        forward, forward_hash = read_json(current_forward_path)
+        apply_forward(result, forward)
+        result['source_payload_sha256'][current_forward_name.removesuffix('.json.gz')] = forward_hash
     encoded = json.dumps(result, sort_keys=True, separators=(',', ':'), ensure_ascii=False).encode()
     template = (root / 'season_comparison.template.html').read_text()
     packed = base64.b64encode(gzip.compress(encoded, mtime=0)).decode()

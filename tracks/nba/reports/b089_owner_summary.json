@@ -1,0 +1,31 @@
+{
+  "active_run": false,
+  "automatic_promotions": 0,
+  "failed_jobs": 0,
+  "full_current_model_test_cells": 0,
+  "historical_snapshot_utc": "2026-11-16T00:52:26.458444+00:00",
+  "limitations": [
+    "The completed regular-season test population is 192 games at the saved outcome cutoff; no model has a qualified full-population current test score.",
+    "Validation leaders are descriptive among recovered candidates with both complete prior seasons. Historical reconstruction assumptions and incomplete candidates remain visible; no model was promoted.",
+    "The 13,601 new forecast rows comprise 13,594 early outlooks and seven late pregame issues; zero meet their nominal T60 or T120 issue window. All earlier original issues remain preserved.",
+    "DraftKings historical references cover all 192 completed games for winner, margin and total at T60 and T120. Complete Kalshi and Polymarket comparison coverage remains unverified.",
+    "The logical return passed physical reassembly, archive and payload readback, plus missing-part and corrupted-part tests. Transport verification does not complete the scientific mandate."
+  ],
+  "new_calibration_fits": 1,
+  "new_estimator_method_returns": 28,
+  "new_forecast_rows": 13601,
+  "new_unique_model_count": 28,
+  "observed_at_utc": "2026-11-16T03:05:49.939926+00:00",
+  "release": "B089",
+  "return_logical_bytes": 5516818786,
+  "return_parts": 11,
+  "return_representation": "byte_split_single_zip",
+  "return_verification_receipt_sha256": "3ff3ff8ce11946de27a3a5955f4a535a7eeee59deb27fea74b760b12a94a06bd",
+  "return_verified": true,
+  "return_verified_at_utc": "2026-11-16T03:00:55.858457+00:00",
+  "scientific_status": "FULL_CURRENT_MODEL_TEST_INCOMPLETE",
+  "source_receipt_sha256": "2dcbe0904527f8853e170cb2a83574b5f70fb1b76ce739281fae6ce13bbed01f",
+  "status": "VERIFIED_SCIENTIFIC_PARTIAL",
+  "successful_jobs": 12,
+  "verified_payloads": 853
+}
