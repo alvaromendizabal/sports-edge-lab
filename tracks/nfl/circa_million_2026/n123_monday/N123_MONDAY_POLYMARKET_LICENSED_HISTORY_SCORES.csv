@@ -1,0 +1,4 @@
+product,season,full_finals,matched,source,model_brier,model_log_loss,venue_brier,venue_log_loss
+winner,2025,285,11,Licensed clocks and historical international outcome-token rules,0.27598453856749633,0.7468762848276608,0.1927944580587095,0.5721481365294351
+spread,2025,285,9,Licensed clocks and historical international outcome-token rules,0.2714347759302793,0.7354788446065562,0.2715684919235671,0.736451919304065
+total,2025,285,10,Licensed clocks and historical international outcome-token rules,0.23169523776015327,0.655996319148586,0.24374103060005461,0.6806216609280933

@@ -27,6 +27,7 @@
   "upcoming_all_three_any_archived_sorted": [
     "2026_11_ARI_KC",
     "2026_11_BAL_CAR",
+    "2026_11_CIN_WAS",
     "2026_11_IND_HOU",
     "2026_11_JAX_NYG",
     "2026_11_LV_DEN",
@@ -47,5 +48,10 @@
     "totals": 6
   },
   "current_three_venue_distinct_games": 8,
-  "contract_count_definition": "Source observations. An identical contract can be seen on two distinct Monday captures."
+  "contract_count_definition": "Source observations. An identical contract can be seen on two distinct Monday captures.",
+  "licensed_historical_cutoffs": 342,
+  "historical_paid_credits_including_pilots": 8960,
+  "total_paid_credits": 8963,
+  "paid_calls_with_historical_unique_successes": 343,
+  "same_capture_settlement_scope": "Six spreads include overtime explicitly. Six total thresholds align for normal completed-game scoring; explicit Polymarket overtime wording is unverified."
 }

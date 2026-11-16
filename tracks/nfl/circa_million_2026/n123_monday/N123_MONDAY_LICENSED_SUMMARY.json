@@ -18,11 +18,11 @@
       "listed": 14
     },
     "Kalshi": {
-      "current_winner": 0,
+      "current_winner": 12,
       "current_spreads": 11,
       "current_totals": 11,
-      "distinct_fixtures_with_exact_contract": 11,
-      "exact_contract_count": 22,
+      "distinct_fixtures_with_exact_contract": 12,
+      "exact_contract_count": 34,
       "listed": 12
     },
     "Polymarket": {
@@ -47,6 +47,8 @@
     "totals": 6
   },
   "three_venue_distinct_games": 8,
+  "three_venue_terms": "Spreads explicitly include overtime. Total thresholds align on an ordinary completed game; international total clauses do not explicitly specify overtime. Exceptional cancellation/abandonment payouts may differ.",
   "credits": 3,
-  "paid_calls": 1
+  "paid_calls": 1,
+  "same_capture_settlement_scope": "Six spreads include overtime explicitly. Six total thresholds align for normal completed-game scoring; explicit Polymarket overtime wording is unverified."
 }
