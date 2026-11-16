@@ -11,7 +11,7 @@ assert.equal(arr.games.length,842);assert.equal(new Set(arr.games.map(g=>g[0])).
 const counts=[2024,2025,2026].map(y=>arr.games.filter(g=>g[1]===y&&g[2]==='FINAL').length);
 assert.equal(counts[0],285);assert.equal(counts[1],285);
 for(const item of arr.models)assert.deepEqual(item.y.map(y=>y.n),counts);
-const direct=JSON.parse(html.match(/<script type="application\/json" id="livePM">(.*?)<\/script>/s)[1]);assert.equal(Object.values(direct).filter(x=>Number(x[2])>0).length,18);assert.equal(Number(direct['2026_10_LAC_BAL'][2]),52);
+const direct=JSON.parse(html.match(/<script type="application\/json" id="livePM">(.*?)<\/script>/s)[1]);assert.equal(Object.values(direct).filter(x=>Number(x[2])>0).length,20);assert.equal(Number(direct['2026_10_LAC_BAL'][2]),52);
 assert.equal(parseZip(html,'games123').issues['2026_10_LAC_BAL'].length,3);assert.equal(parseZip(html,'games123').venues['2026_10_LAC_BAL'].length,4);
 assert.equal(Object.keys(cards).length,276);
 for(const weekly of Object.values(cards)){

@@ -3,7 +3,7 @@
 [Open the N123 dashboard](https://sports-edge-lab-nfl.alv-mendizabal.chatgpt.site/circa/n123/) for the full-season model comparisons, market coverage, sources and Circa cards.
 
 - [Entire NFL schedule and settlement status](N123_SEASON_CALENDAR.csv)
-- [Provider and product coverage for each game](N123_GAME_MARKET_COVERAGE.csv)
+- [Reconciled provider and product coverage for each game](N123_GAME_MARKET_COVERAGE.csv)
 - [N123 integer-score model metrics by season](N123_INTEGER_SCORES.csv)
 - [Probability calibration by season, event and forecast range](N123_INTEGER_CALIBRATION.csv)
 - [Postseason tie-settlement sensitivity](N123_INTEGER_POSTSEASON.csv)
