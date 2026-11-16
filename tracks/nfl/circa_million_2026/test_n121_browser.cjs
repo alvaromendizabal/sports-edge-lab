@@ -43,7 +43,7 @@ const {createHash}=require('node:crypto');
   await page.getByRole('heading',{name:'N025 paper champions and the N121 validation leader',exact:true}).waitFor();
   await page.getByRole('heading',{name:'Weights and calibration fixed before each season',exact:true}).waitFor();
   await page.goto(pathToFileURL(fs).href+'#games/'+update.finals[0].game_id);await page.waitForSelector('#gameDetail121');assert.match(await page.locator('#gameDetail121').innerText(),/Graded pregame market comparisons/);
-  await page.click('[data-view=markets]');assert.match(await page.locator('main').innerText(),/Identical three-venue settlement/);
+  await page.click('[data-view=markets]');await page.getByRole('heading',{name:'Identical three-venue settlement',exact:true}).waitFor();
   const download=await page.evaluate(async()=>{const bytes=Uint8Array.from(atob('YWJj'),c=>c.charCodeAt(0));const d=new Uint8Array(await crypto.subtle.digest('SHA-256',bytes)),a=document.createElement('a');a.href=URL.createObjectURL(new Blob([bytes]));a.download='fixture.bin';const ok=a.download==='fixture.bin'&&a.href.startsWith('blob:');URL.revokeObjectURL(a.href);return [Array.from(d,x=>x.toString(16).padStart(2,'0')).join(''),ok];});assert.deepEqual(download,['ba7816bf8f01cfea414140de5dae2223b00361a396177a9cb410ff61f20015ad',true]);assert.deepEqual(errors,[]);await page.close();facts[device]='PASS';
  }
  }finally{await browser.close();}
