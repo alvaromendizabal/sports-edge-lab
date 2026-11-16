@@ -119,11 +119,12 @@ class SeasonComparisonTests(unittest.TestCase):
         raw,_=b.build();data=json.loads(raw)
         self.assertEqual(len(data['games']),1274)
         finals=[r for r in data['games'] if r['status']=='FINAL']
-        self.assertEqual(len(finals),250)
-        self.assertEqual(sum(r['phase']=='regular' for r in finals),183)
+        self.assertEqual(len(finals),259)
+        self.assertEqual(sum(r['phase']=='regular' for r in finals),192)
         self.assertTrue(all(isinstance(r['actual']['home_points'],(int,float)) for r in finals))
         self.assertEqual(data['coverage']['secondary_observations'],3)
         self.assertEqual(data['coverage']['unobserved_regular_slots'],24)
+        self.assertEqual(data['coverage']['regular_status_counts'],{'FINAL':192,'LIVE':3,'SCHEDULED':1005,'TBD':6})
 
     def test_reference_coverage_never_exports_price_or_invents_quote_clock(self):
         raw,_=b.build();data=json.loads(raw)
@@ -200,9 +201,10 @@ class SeasonComparisonTests(unittest.TestCase):
         self.assertEqual(issue['source_cache_reuses'],3)
         self.assertFalse(issue['provider_market_coverage_refreshed'])
         scheduled=[g for g in data['games'] if g['status']=='SCHEDULED' and g['phase']=='regular']
-        self.assertEqual(len(scheduled),1012)
+        self.assertEqual(len(scheduled),1005)
+        self.assertEqual(issue['known_scheduled_regular_games'],1012)
         self.assertTrue(all(g['forecasts'] for g in scheduled))
-        new_games=[g for g in scheduled if any(f['issued_at_utc']>=issue['issue_clocks_utc']['first'] for f in g['forecasts'].values())]
+        new_games=[g for g in data['games'] if any(f['issued_at_utc']>=issue['issue_clocks_utc']['first'] for f in g['forecasts'].values())]
         self.assertEqual(len(new_games),32)
         self.assertEqual(sum(len(g['forecasts']) for g in new_games),704)
         for g in new_games:
