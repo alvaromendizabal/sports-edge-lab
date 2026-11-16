@@ -3,10 +3,11 @@
 const assert = require('node:assert/strict'), fs = require('node:fs'), path = require('node:path'), http = require('node:http');
 module.exports = async function testThreeSeasonBrowser(browser) {
   const docs = path.resolve(__dirname, '../../docs/ncaa');
-  const weightContracts = require('node:child_process').spawnSync(process.execPath,
-    [path.join(__dirname, 'test_validation_weights.cjs')], {encoding: 'utf8', timeout: 30000});
-  assert.equal(weightContracts.status, 0, weightContracts.stdout + weightContracts.stderr);
-  console.log(weightContracts.stdout.trim());
+  for (const contract of ['test_validation_weights.cjs','test_r19_comparison.cjs']) {
+    const result = require('node:child_process').spawnSync(process.execPath,
+      [path.join(__dirname, contract)], {encoding: 'utf8', timeout: 30000});
+    assert.equal(result.status, 0, result.stdout + result.stderr); console.log(result.stdout.trim());
+  }
   const physical = require('node:child_process').spawnSync('python', ['-m', 'examples.ncaa_review.full_status_integrity_gate'], { cwd: path.resolve(__dirname, '../..'), encoding: 'utf8', timeout: 240000 });
   assert.equal(physical.status, 0, physical.stdout + physical.stderr);
   const physicalReceipt = JSON.parse(physical.stdout);
@@ -20,7 +21,7 @@ module.exports = async function testThreeSeasonBrowser(browser) {
   const sharedManifest = JSON.parse(fs.readFileSync(path.join(docs, 'status_objects_manifest.json')));
   assert.equal(sharedManifest.logical_partition_references, 3252);
   assert.equal(sharedManifest.physical_objects, 1899);
-  const allowed = new Set(['status_objects_manifest.json', ...sharedManifest.objects.map(p => p.path), 'three_seasons.html', 'three_seasons_r17.html', 'three_seasons.css', 'three_seasons.js', 'validation_weights.js', 'validation_weight_sensitivity.json', 'population/collection_public.json', ...['population', 'population_r17'].flatMap(base => ['population_public.json', 'population_context.json', 'status_manifest.json', 'execution_public.json'].map(name => base + '/' + name))]);
+  const allowed = new Set(['status_objects_manifest.json', ...sharedManifest.objects.map(p => p.path), 'three_seasons.html', 'three_seasons_r17.html', 'three_seasons.css', 'three_seasons.js', 'validation_weights.js', 'validation_weight_sensitivity.json', 'r19_comparison.js', 'r19_recovered_comparison.json', 'population/collection_public.json', ...['population', 'population_r17'].flatMap(base => ['population_public.json', 'population_context.json', 'status_manifest.json', 'execution_public.json'].map(name => base + '/' + name))]);
   const server = http.createServer((request, response) => {
     const name = request.url.split('?')[0].replace(/^\//, '');
     if (!allowed.has(name)) { response.writeHead(404); response.end(); return; }
@@ -41,6 +42,14 @@ module.exports = async function testThreeSeasonBrowser(browser) {
         assert.equal(await page.locator('#population-rows tr').count(), 6);
         assert.match(await page.locator('#rank-status').innerText(), /No complete, comparable full-population champion/);
         assert.equal(await page.locator('#provider-summary article').count(), 4);
+        await page.waitForFunction(() => document.querySelectorAll('#r19-recovered-rows tr').length === 17);
+        for (const league of ['ncaam','ncaaw']) for (const target of ['win','margin','total']) {
+          await page.selectOption('#r19-recovered-league',league); await page.selectOption('#r19-recovered-target',target);
+          assert.equal(await page.locator('#r19-recovered-rows tr').count(), target === 'win' ? 17 : 13);
+          assert.equal(await page.locator('#r19-recovered-missing li').count(),8);
+          assert.match(await page.locator('#r19-recovered-status').innerText(),/selection: 0%/);
+        }
+        await page.selectOption('#r19-recovered-league','ncaam'); await page.selectOption('#r19-recovered-target','win');
         await page.waitForFunction(() => document.querySelectorAll('#validation-weight-rows tr').length === 12);
         assert.match(await page.locator('#r19-execution-status').innerText(), /49 new target-model fits/);
         for (const league of ['ncaam', 'ncaaw']) {
