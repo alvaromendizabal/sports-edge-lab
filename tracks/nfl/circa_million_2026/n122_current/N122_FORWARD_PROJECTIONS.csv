@@ -1,0 +1,991 @@
+id,family,time,status,margin,total,away,tie,home
+2026_10_LAC_BAL,n121_team_score_baseline,2026-11-16T00:51:47.393Z,N121 public research · visible by 00:58:58 UTC Nov 16; no native issue receipt,-2.382222,44.947773,0.422549,0.032161,0.54529
+2026_10_PIT_CIN,n121_team_score_baseline,2026-11-16T00:51:47.393Z,N121 public research · visible by 00:58:58 UTC Nov 16; no native issue receipt,-1.254271,46.90106,0.458755,0.031156,0.510089
+2026_11_ARI_KC,n121_team_score_baseline,2026-11-16T00:51:47.393Z,N121 public research · visible by 00:58:58 UTC Nov 16; no native issue receipt,-5.975769,45.357344,0.301181,0.033193,0.665626
+2026_11_BAL_CAR,n121_team_score_baseline,2026-11-16T00:51:47.393Z,N121 public research · visible by 00:58:58 UTC Nov 16; no native issue receipt,0.382225,46.850137,0.509937,0.032615,0.457448
+2026_11_CIN_WAS,n121_team_score_baseline,2026-11-16T00:51:47.393Z,N121 public research · visible by 00:58:58 UTC Nov 16; no native issue receipt,1.52435,48.78005,0.547128,0.035474,0.417397
+2026_11_IND_HOU,n121_team_score_baseline,2026-11-16T00:51:47.393Z,N121 public research · visible by 00:58:58 UTC Nov 16; no native issue receipt,-3.189662,47.074964,0.395068,0.033641,0.571292
+2026_11_JAX_NYG,n121_team_score_baseline,2026-11-16T00:51:47.393Z,N121 public research · visible by 00:58:58 UTC Nov 16; no native issue receipt,3.206205,45.868384,0.608162,0.035312,0.356526
+2026_11_LV_DEN,n121_team_score_baseline,2026-11-16T00:51:47.393Z,N121 public research · visible by 00:58:58 UTC Nov 16; no native issue receipt,-4.265267,45.352977,0.358784,0.033743,0.607473
+2026_11_MIA_BUF,n121_team_score_baseline,2026-11-16T00:51:47.393Z,N121 public research · visible by 00:58:58 UTC Nov 16; no native issue receipt,-5.936031,47.072018,0.302435,0.033277,0.664287
+2026_11_MIN_SF,n121_team_score_baseline,2026-11-16T00:51:47.393Z,N121 public research · visible by 00:58:58 UTC Nov 16; no native issue receipt,-1.447131,44.429424,0.452637,0.031166,0.516197
+2026_11_NO_CHI,n121_team_score_baseline,2026-11-16T00:51:47.393Z,N121 public research · visible by 00:58:58 UTC Nov 16; no native issue receipt,-3.19932,45.972795,0.394744,0.033653,0.571603
+2026_11_NYJ_LAC,n121_team_score_baseline,2026-11-16T00:51:47.393Z,N121 public research · visible by 00:58:58 UTC Nov 16; no native issue receipt,-1.920412,44.159974,0.437336,0.031751,0.530913
+2026_11_PIT_PHI,n121_team_score_baseline,2026-11-16T00:51:47.393Z,N121 public research · visible by 00:58:58 UTC Nov 16; no native issue receipt,0.454397,43.279234,0.512238,0.032628,0.455134
+2026_11_TB_DET,n121_team_score_baseline,2026-11-16T00:51:47.393Z,N121 public research · visible by 00:58:58 UTC Nov 16; no native issue receipt,-2.352803,47.353068,0.423495,0.03216,0.544345
+2026_11_TEN_DAL,n121_team_score_baseline,2026-11-16T00:51:47.393Z,N121 public research · visible by 00:58:58 UTC Nov 16; no native issue receipt,-3.713564,49.399199,0.377538,0.033863,0.5886
+2026_12_ATL_MIN,n121_team_score_baseline,2026-11-16T00:51:47.393Z,N121 public research · visible by 00:58:58 UTC Nov 16; no native issue receipt,-3.698893,42.581917,0.378029,0.033867,0.588104
+2026_12_BAL_HOU,n121_team_score_baseline,2026-11-16T00:51:47.393Z,N121 public research · visible by 00:58:58 UTC Nov 16; no native issue receipt,-2.250543,46.540178,0.426757,0.032115,0.541128
+2026_12_CAR_TB,n121_team_score_baseline,2026-11-16T00:51:47.393Z,N121 public research · visible by 00:58:58 UTC Nov 16; no native issue receipt,-2.803082,45.750842,0.408322,0.03281,0.558868
+2026_12_CHI_DET,n121_team_score_baseline,2026-11-16T00:51:47.393Z,N121 public research · visible by 00:58:58 UTC Nov 16; no native issue receipt,-1.832106,48.37724,0.440199,0.031523,0.528279
+2026_12_DEN_PIT,n121_team_score_baseline,2026-11-16T00:51:47.393Z,N121 public research · visible by 00:58:58 UTC Nov 16; no native issue receipt,-0.378582,43.368492,0.485975,0.031535,0.48249
+2026_12_GB_LA,n121_team_score_baseline,2026-11-16T00:51:47.393Z,N121 public research · visible by 00:58:58 UTC Nov 16; no native issue receipt,-2.653972,45.820944,0.413417,0.032563,0.554019
+2026_12_KC_BUF,n121_team_score_baseline,2026-11-16T00:51:47.393Z,N121 public research · visible by 00:58:58 UTC Nov 16; no native issue receipt,-1.890119,46.823596,0.438325,0.031669,0.530006
+2026_12_LV_CLE,n121_team_score_baseline,2026-11-16T00:51:47.393Z,N121 public research · visible by 00:58:58 UTC Nov 16; no native issue receipt,-1.574565,44.567508,0.448556,0.031245,0.520199
+2026_12_NE_LAC,n121_team_score_baseline,2026-11-16T00:51:47.393Z,N121 public research · visible by 00:58:58 UTC Nov 16; no native issue receipt,1.52326,44.033311,0.547093,0.035468,0.417439
+2026_12_NO_CIN,n121_team_score_baseline,2026-11-16T00:51:47.393Z,N121 public research · visible by 00:58:58 UTC Nov 16; no native issue receipt,-3.189392,47.751691,0.395077,0.03364,0.571283
+2026_12_NYG_IND,n121_team_score_baseline,2026-11-16T00:51:47.393Z,N121 public research · visible by 00:58:58 UTC Nov 16; no native issue receipt,-0.220611,46.707616,0.490963,0.031615,0.477421
+2026_12_NYJ_MIA,n121_team_score_baseline,2026-11-16T00:51:47.393Z,N121 public research · visible by 00:58:58 UTC Nov 16; no native issue receipt,-1.764345,44.655438,0.442395,0.031383,0.526221
+2026_12_PHI_DAL,n121_team_score_baseline,2026-11-16T00:51:47.393Z,N121 public research · visible by 00:58:58 UTC Nov 16; no native issue receipt,-1.054911,48.253006,0.46499,0.031175,0.503835
+2026_12_SEA_SF,n121_team_score_baseline,2026-11-16T00:51:47.393Z,N121 public research · visible by 00:58:58 UTC Nov 16; no native issue receipt,-0.143763,46.338394,0.493355,0.031766,0.474879
+2026_12_TEN_JAX,n121_team_score_baseline,2026-11-16T00:51:47.393Z,N121 public research · visible by 00:58:58 UTC Nov 16; no native issue receipt,-7.392944,45.950139,0.25972,0.028959,0.711321
+2026_12_WAS_ARI,n121_team_score_baseline,2026-11-16T00:51:47.393Z,N121 public research · visible by 00:58:58 UTC Nov 16; no native issue receipt,1.182496,47.238807,0.536138,0.033841,0.430021
+2026_13_BUF_NE,n121_team_score_baseline,2026-11-16T00:51:47.393Z,N121 public research · visible by 00:58:58 UTC Nov 16; no native issue receipt,1.91024,47.740765,0.560192,0.037019,0.40279
+2026_13_CAR_MIN,n121_team_score_baseline,2026-11-16T00:51:47.393Z,N121 public research · visible by 00:58:58 UTC Nov 16; no native issue receipt,-3.455854,43.09189,0.386172,0.033995,0.579833
+2026_13_CIN_CLE,n121_team_score_baseline,2026-11-16T00:51:47.393Z,N121 public research · visible by 00:58:58 UTC Nov 16; no native issue receipt,1.977091,46.115952,0.562607,0.037049,0.400344
+2026_13_DAL_SEA,n121_team_score_baseline,2026-11-16T00:51:47.393Z,N121 public research · visible by 00:58:58 UTC Nov 16; no native issue receipt,-3.663437,48.321782,0.379207,0.03389,0.586903
+2026_13_DET_ATL,n121_team_score_baseline,2026-11-16T00:51:47.393Z,N121 public research · visible by 00:58:58 UTC Nov 16; no native issue receipt,3.05246,47.766083,0.602447,0.035996,0.361557
+2026_13_GB_NO,n121_team_score_baseline,2026-11-16T00:51:47.393Z,N121 public research · visible by 00:58:58 UTC Nov 16; no native issue receipt,1.052861,45.148219,0.53182,0.033537,0.434643
+2026_13_HOU_PIT,n121_team_score_baseline,2026-11-16T00:51:47.393Z,N121 public research · visible by 00:58:58 UTC Nov 16; no native issue receipt,-0.208966,44.71102,0.491324,0.031637,0.477038
+2026_13_JAX_CHI,n121_team_score_baseline,2026-11-16T00:51:47.393Z,N121 public research · visible by 00:58:58 UTC Nov 16; no native issue receipt,1.451386,46.646877,0.544769,0.03507,0.420161
+2026_13_KC_LA,n121_team_score_baseline,2026-11-16T00:51:47.393Z,N121 public research · visible by 00:58:58 UTC Nov 16; no native issue receipt,-1.15929,44.889013,0.461734,0.031134,0.507131
+2026_13_LAC_TB,n121_team_score_baseline,2026-11-16T00:51:47.393Z,N121 public research · visible by 00:58:58 UTC Nov 16; no native issue receipt,-3.23877,43.848477,0.393413,0.03372,0.572867
+2026_13_MIA_DEN,n121_team_score_baseline,2026-11-16T00:51:47.393Z,N121 public research · visible by 00:58:58 UTC Nov 16; no native issue receipt,-3.837062,43.614441,0.373373,0.033761,0.592867
+2026_13_PHI_ARI,n121_team_score_baseline,2026-11-16T00:51:47.393Z,N121 public research · visible by 00:58:58 UTC Nov 16; no native issue receipt,1.780331,45.270921,0.555596,0.036781,0.407622
+2026_13_SF_NYG,n121_team_score_baseline,2026-11-16T00:51:47.393Z,N121 public research · visible by 00:58:58 UTC Nov 16; no native issue receipt,1.769716,47.334055,0.555231,0.036748,0.408021
+2026_13_WAS_TEN,n121_team_score_baseline,2026-11-16T00:51:47.393Z,N121 public research · visible by 00:58:58 UTC Nov 16; no native issue receipt,1.278663,46.304417,0.539253,0.034201,0.426547
+2026_14_ATL_CLE,n121_team_score_baseline,2026-11-16T00:51:47.393Z,N121 public research · visible by 00:58:58 UTC Nov 16; no native issue receipt,-0.797644,43.7259,0.472758,0.031608,0.495634
+2026_14_BUF_GB,n121_team_score_baseline,2026-11-16T00:51:47.393Z,N121 public research · visible by 00:58:58 UTC Nov 16; no native issue receipt,1.820492,47.755527,0.556994,0.036897,0.406109
+2026_14_CHI_MIA,n121_team_score_baseline,2026-11-16T00:51:47.393Z,N121 public research · visible by 00:58:58 UTC Nov 16; no native issue receipt,2.351225,45.368113,0.576102,0.037429,0.386469
+2026_14_DEN_NYJ,n121_team_score_baseline,2026-11-16T00:51:47.393Z,N121 public research · visible by 00:58:58 UTC Nov 16; no native issue receipt,3.254943,44.409851,0.609966,0.035063,0.35497
+2026_14_HOU_WAS,n121_team_score_baseline,2026-11-16T00:51:47.393Z,N121 public research · visible by 00:58:58 UTC Nov 16; no native issue receipt,1.625421,46.59001,0.550435,0.036046,0.41352
+2026_14_IND_PHI,n121_team_score_baseline,2026-11-16T00:51:47.393Z,N121 public research · visible by 00:58:58 UTC Nov 16; no native issue receipt,-1.379922,45.643178,0.454784,0.031149,0.514067
+2026_14_KC_CIN,n121_team_score_baseline,2026-11-16T00:51:47.393Z,N121 public research · visible by 00:58:58 UTC Nov 16; no native issue receipt,0.140305,46.898587,0.502397,0.032341,0.465262
+2026_14_LAC_LV,n121_team_score_baseline,2026-11-16T00:51:47.393Z,N121 public research · visible by 00:58:58 UTC Nov 16; no native issue receipt,-0.197882,45.1031,0.491667,0.031658,0.476675
+2026_14_LA_SF,n121_team_score_baseline,2026-11-16T00:51:47.393Z,N121 public research · visible by 00:58:58 UTC Nov 16; no native issue receipt,-0.289538,47.88187,0.488796,0.031535,0.47967
+2026_14_MIN_NE,n121_team_score_baseline,2026-11-16T00:51:47.393Z,N121 public research · visible by 00:58:58 UTC Nov 16; no native issue receipt,0.021818,42.353737,0.498604,0.032158,0.469238
+2026_14_NO_CAR,n121_team_score_baseline,2026-11-16T00:51:47.393Z,N121 public research · visible by 00:58:58 UTC Nov 16; no native issue receipt,-0.657696,45.87161,0.477155,0.031538,0.491307
+2026_14_NYG_SEA,n121_team_score_baseline,2026-11-16T00:51:47.393Z,N121 public research · visible by 00:58:58 UTC Nov 16; no native issue receipt,-3.972417,44.323551,0.368784,0.033591,0.597625
+2026_14_PIT_JAX,n121_team_score_baseline,2026-11-16T00:51:47.393Z,N121 public research · visible by 00:58:58 UTC Nov 16; no native issue receipt,-3.49774,44.892843,0.384765,0.033998,0.581237
+2026_14_TB_BAL,n121_team_score_baseline,2026-11-16T00:51:47.393Z,N121 public research · visible by 00:58:58 UTC Nov 16; no native issue receipt,0.074393,45.92715,0.500285,0.032259,0.467457
+2026_14_TEN_DET,n121_team_score_baseline,2026-11-16T00:51:47.393Z,N121 public research · visible by 00:58:58 UTC Nov 16; no native issue receipt,-6.209355,47.680502,0.294014,0.032342,0.673644
+2026_15_ATL_WAS,n121_team_score_baseline,2026-11-16T00:51:47.393Z,N121 public research · visible by 00:58:58 UTC Nov 16; no native issue receipt,-1.250386,46.389997,0.458877,0.031156,0.509967
+2026_15_BAL_PIT,n121_team_score_baseline,2026-11-16T00:51:47.393Z,N121 public research · visible by 00:58:58 UTC Nov 16; no native issue receipt,-1.677355,45.197288,0.445218,0.031303,0.523479
+2026_15_CHI_BUF,n121_team_score_baseline,2026-11-16T00:51:47.393Z,N121 public research · visible by 00:58:58 UTC Nov 16; no native issue receipt,-2.802651,48.580103,0.408337,0.032809,0.558854
+2026_15_CIN_CAR,n121_team_score_baseline,2026-11-16T00:51:47.393Z,N121 public research · visible by 00:58:58 UTC Nov 16; no native issue receipt,1.749542,48.553909,0.55454,0.036682,0.408778
+2026_15_CLE_NYG,n121_team_score_baseline,2026-11-16T00:51:47.393Z,N121 public research · visible by 00:58:58 UTC Nov 16; no native issue receipt,-1.796509,43.558564,0.441345,0.031447,0.527207
+2026_15_DAL_LA,n121_team_score_baseline,2026-11-16T00:51:47.393Z,N121 public research · visible by 00:58:58 UTC Nov 16; no native issue receipt,-3.517662,49.865258,0.384101,0.033983,0.581917
+2026_15_DEN_LV,n121_team_score_baseline,2026-11-16T00:51:47.393Z,N121 public research · visible by 00:58:58 UTC Nov 16; no native issue receipt,2.700957,45.352977,0.589381,0.037177,0.373443
+2026_15_DET_MIN,n121_team_score_baseline,2026-11-16T00:51:47.393Z,N121 public research · visible by 00:58:58 UTC Nov 16; no native issue receipt,0.135722,44.694116,0.502251,0.032334,0.465414
+2026_15_IND_TEN,n121_team_score_baseline,2026-11-16T00:51:47.393Z,N121 public research · visible by 00:58:58 UTC Nov 16; no native issue receipt,1.278731,46.789371,0.539255,0.034201,0.426544
+2026_15_JAX_HOU,n121_team_score_baseline,2026-11-16T00:51:47.393Z,N121 public research · visible by 00:58:58 UTC Nov 16; no native issue receipt,1.360242,46.235732,0.54185,0.034587,0.423563
+2026_15_MIA_GB,n121_team_score_baseline,2026-11-16T00:51:47.393Z,N121 public research · visible by 00:58:58 UTC Nov 16; no native issue receipt,-3.333384,44.543537,0.390251,0.033867,0.575882
+2026_15_NE_KC,n121_team_score_baseline,2026-11-16T00:51:47.393Z,N121 public research · visible by 00:58:58 UTC Nov 16; no native issue receipt,-2.366584,44.280354,0.423056,0.032158,0.544786
+2026_15_NO_TB,n121_team_score_baseline,2026-11-16T00:51:47.393Z,N121 public research · visible by 00:58:58 UTC Nov 16; no native issue receipt,-2.678623,44.948623,0.412582,0.032594,0.554823
+2026_15_NYJ_ARI,n121_team_score_baseline,2026-11-16T00:51:47.393Z,N121 public research · visible by 00:58:58 UTC Nov 16; no native issue receipt,-0.616642,46.401177,0.478467,0.031506,0.490028
+2026_15_SEA_PHI,n121_team_score_baseline,2026-11-16T00:51:47.393Z,N121 public research · visible by 00:58:58 UTC Nov 16; no native issue receipt,2.371885,43.259113,0.576875,0.037429,0.385696
+2026_15_SF_LAC,n121_team_score_baseline,2026-11-16T00:51:47.393Z,N121 public research · visible by 00:58:58 UTC Nov 16; no native issue receipt,2.992208,46.108999,0.600217,0.03623,0.363554
+2026_16_ARI_NO,n121_team_score_baseline,2026-11-16T00:51:47.393Z,N121 public research · visible by 00:58:58 UTC Nov 16; no native issue receipt,-2.646071,46.210448,0.413685,0.03255,0.553764
+2026_16_BUF_DEN,n121_team_score_baseline,2026-11-16T00:51:47.393Z,N121 public research · visible by 00:58:58 UTC Nov 16; no native issue receipt,1.316814,46.82643,0.540466,0.034373,0.42516
+2026_16_CAR_PIT,n121_team_score_baseline,2026-11-16T00:51:47.393Z,N121 public research · visible by 00:58:58 UTC Nov 16; no native issue receipt,-2.841735,45.020979,0.406967,0.032922,0.560112
+2026_16_CIN_IND,n121_team_score_baseline,2026-11-16T00:51:47.393Z,N121 public research · visible by 00:58:58 UTC Nov 16; no native issue receipt,1.524281,49.265004,0.547126,0.035474,0.4174
+2026_16_CLE_BAL,n121_team_score_baseline,2026-11-16T00:51:47.393Z,N121 public research · visible by 00:58:58 UTC Nov 16; no native issue receipt,-2.174084,44.412181,0.429215,0.032061,0.538725
+2026_16_GB_CHI,n121_team_score_baseline,2026-11-16T00:51:47.393Z,N121 public research · visible by 00:58:58 UTC Nov 16; no native issue receipt,-1.364304,46.051623,0.455287,0.031134,0.513578
+2026_16_HOU_PHI,n121_team_score_baseline,2026-11-16T00:51:47.393Z,N121 public research · visible by 00:58:58 UTC Nov 16; no native issue receipt,1.027586,44.622123,0.530959,0.033481,0.43556
+2026_16_JAX_DAL,n121_team_score_baseline,2026-11-16T00:51:47.393Z,N121 public research · visible by 00:58:58 UTC Nov 16; no native issue receipt,2.897226,49.866615,0.596732,0.036595,0.366673
+2026_16_LAC_MIA,n121_team_score_baseline,2026-11-16T00:51:47.393Z,N121 public research · visible by 00:58:58 UTC Nov 16; no native issue receipt,-0.626087,43.364563,0.478166,0.031511,0.490323
+2026_16_LA_SEA,n121_team_score_baseline,2026-11-16T00:51:47.393Z,N121 public research · visible by 00:58:58 UTC Nov 16; no native issue receipt,-0.92793,44.871365,0.46886,0.031351,0.499789
+2026_16_NE_NYJ,n121_team_score_baseline,2026-11-16T00:51:47.393Z,N121 public research · visible by 00:58:58 UTC Nov 16; no native issue receipt,2.661517,45.324186,0.58787,0.037265,0.374865
+2026_16_NYG_DET,n121_team_score_baseline,2026-11-16T00:51:47.393Z,N121 public research · visible by 00:58:58 UTC Nov 16; no native issue receipt,-3.586926,47.598747,0.381764,0.033946,0.58429
+2026_16_SF_KC,n121_team_score_baseline,2026-11-16T00:51:47.393Z,N121 public research · visible by 00:58:58 UTC Nov 16; no native issue receipt,-0.897636,46.356041,0.469768,0.031409,0.498823
+2026_16_TB_ATL,n121_team_score_baseline,2026-11-16T00:51:47.393Z,N121 public research · visible by 00:58:58 UTC Nov 16; no native issue receipt,1.481812,45.24087,0.545748,0.035231,0.419022
+2026_16_TEN_LV,n121_team_score_baseline,2026-11-16T00:51:47.393Z,N121 public research · visible by 00:58:58 UTC Nov 16; no native issue receipt,-1.597819,46.409912,0.447806,0.031257,0.520937
+2026_16_WAS_MIN,n121_team_score_baseline,2026-11-16T00:51:47.393Z,N121 public research · visible by 00:58:58 UTC Nov 16; no native issue receipt,-3.230661,43.31803,0.393686,0.033706,0.572609
+2026_17_BAL_CIN,n121_team_score_baseline,2026-11-16T00:51:47.393Z,N121 public research · visible by 00:58:58 UTC Nov 16; no native issue receipt,-2.149472,48.730218,0.430015,0.032024,0.537961
+2026_17_BUF_MIA,n121_team_score_baseline,2026-11-16T00:51:47.393Z,N121 public research · visible by 00:58:58 UTC Nov 16; no native issue receipt,4.371722,47.072018,0.648612,0.028215,0.323173
+2026_17_DEN_NE,n121_team_score_baseline,2026-11-16T00:51:47.393Z,N121 public research · visible by 00:58:58 UTC Nov 16; no native issue receipt,-0.188729,44.283188,0.491951,0.031674,0.476375
+2026_17_DET_CHI,n121_team_score_baseline,2026-11-16T00:51:47.393Z,N121 public research · visible by 00:58:58 UTC Nov 16; no native issue receipt,0.267797,48.37724,0.506368,0.032533,0.4611
+2026_17_HOU_GB,n121_team_score_baseline,2026-11-16T00:51:47.393Z,N121 public research · visible by 00:58:58 UTC Nov 16; no native issue receipt,-0.108861,45.640478,0.494451,0.031848,0.473701
+2026_17_IND_CLE,n121_team_score_baseline,2026-11-16T00:51:47.393Z,N121 public research · visible by 00:58:58 UTC Nov 16; no native issue receipt,-0.329345,44.946967,0.487528,0.031536,0.480936
+2026_17_KC_LAC,n121_team_score_baseline,2026-11-16T00:51:47.393Z,N121 public research · visible by 00:58:58 UTC Nov 16; no native issue receipt,3.107689,43.116142,0.604505,0.035767,0.359728
+2026_17_LA_TB,n121_team_score_baseline,2026-11-16T00:51:47.393Z,N121 public research · visible by 00:58:58 UTC Nov 16; no native issue receipt,1.02821,45.621348,0.530981,0.033482,0.435537
+2026_17_LV_ARI,n121_team_score_baseline,2026-11-16T00:51:47.393Z,N121 public research · visible by 00:58:58 UTC Nov 16; no native issue receipt,-0.062657,47.344303,0.495918,0.031956,0.472126
+2026_17_MIN_NYJ,n121_team_score_baseline,2026-11-16T00:51:47.393Z,N121 public research · visible by 00:58:58 UTC Nov 16; no native issue receipt,3.46549,42.4804,0.617824,0.033559,0.348617
+2026_17_NO_ATL,n121_team_score_baseline,2026-11-16T00:51:47.393Z,N121 public research · visible by 00:58:58 UTC Nov 16; no native issue receipt,-0.414657,45.361638,0.484832,0.031535,0.483633
+2026_17_NYG_DAL,n121_team_score_baseline,2026-11-16T00:51:47.393Z,N121 public research · visible by 00:58:58 UTC Nov 16; no native issue receipt,-1.091134,49.317443,0.463861,0.03115,0.504989
+2026_17_PHI_SF,n121_team_score_baseline,2026-11-16T00:51:47.393Z,N121 public research · visible by 00:58:58 UTC Nov 16; no native issue receipt,-3.297802,46.269618,0.391432,0.03383,0.574738
+2026_17_PIT_TEN,n121_team_score_baseline,2026-11-16T00:51:47.393Z,N121 public research · visible by 00:58:58 UTC Nov 16; no native issue receipt,3.11305,44.425427,0.604704,0.035743,0.359553
+2026_17_SEA_CAR,n121_team_score_baseline,2026-11-16T00:51:47.393Z,N121 public research · visible by 00:58:58 UTC Nov 16; no native issue receipt,3.194913,45.000859,0.607744,0.03537,0.356887
+2026_17_WAS_JAX,n121_team_score_baseline,2026-11-16T00:51:47.393Z,N121 public research · visible by 00:58:58 UTC Nov 16; no native issue receipt,-5.332127,46.771833,0.322173,0.034286,0.64354
+2026_18_ATL_CAR,n121_team_score_baseline,2026-11-16T00:51:47.393Z,N121 public research · visible by 00:58:58 UTC Nov 16; no native issue receipt,-1.025193,46.163857,0.465899,0.031213,0.502888
+2026_18_CHI_MIN,n121_team_score_baseline,2026-11-16T00:51:47.393Z,N121 public research · visible by 00:58:58 UTC Nov 16; no native issue receipt,-0.91423,43.193075,0.469273,0.03137,0.499357
+2026_18_CLE_CIN,n121_team_score_baseline,2026-11-16T00:51:47.393Z,N121 public research · visible by 00:58:58 UTC Nov 16; no native issue receipt,-3.541401,46.115952,0.383309,0.033964,0.582727
+2026_18_DAL_WAS,n121_team_score_baseline,2026-11-16T00:51:47.393Z,N121 public research · visible by 00:58:58 UTC Nov 16; no native issue receipt,0.088437,50.220892,0.500728,0.032286,0.466986
+2026_18_DET_GB,n121_team_score_baseline,2026-11-16T00:51:47.393Z,N121 public research · visible by 00:58:58 UTC Nov 16; no native issue receipt,0.849947,47.552664,0.524909,0.033118,0.441973
+2026_18_JAX_IND,n121_team_score_baseline,2026-11-16T00:51:47.393Z,N121 public research · visible by 00:58:58 UTC Nov 16; no native issue receipt,3.767749,47.256788,0.62893,0.031205,0.339865
+2026_18_LAC_DEN,n121_team_score_baseline,2026-11-16T00:51:47.393Z,N121 public research · visible by 00:58:58 UTC Nov 16; no native issue receipt,-3.680994,43.118976,0.378626,0.033876,0.587499
+2026_18_LV_KC,n121_team_score_baseline,2026-11-16T00:51:47.393Z,N121 public research · visible by 00:58:58 UTC Nov 16; no native issue receipt,-5.256271,45.350143,0.324763,0.034335,0.640902
+2026_18_MIA_NE,n121_team_score_baseline,2026-11-16T00:51:47.393Z,N121 public research · visible by 00:58:58 UTC Nov 16; no native issue receipt,-3.243637,44.528775,0.39325,0.033727,0.573022
+2026_18_NYJ_BUF,n121_team_score_baseline,2026-11-16T00:51:47.393Z,N121 public research · visible by 00:58:58 UTC Nov 16; no native issue receipt,-6.918221,47.867428,0.273298,0.029704,0.696998
+2026_18_PHI_NYG,n121_team_score_baseline,2026-11-16T00:51:47.393Z,N121 public research · visible by 00:58:58 UTC Nov 16; no native issue receipt,-0.745932,44.254775,0.474349,0.031597,0.494054
+2026_18_PIT_BAL,n121_team_score_baseline,2026-11-16T00:51:47.393Z,N121 public research · visible by 00:58:58 UTC Nov 16; no native issue receipt,0.113045,45.197288,0.501523,0.03231,0.466167
+2026_18_SEA_LA,n121_team_score_baseline,2026-11-16T00:51:47.393Z,N121 public research · visible by 00:58:58 UTC Nov 16; no native issue receipt,-0.636379,44.871365,0.477838,0.031518,0.490644
+2026_18_SF_ARI,n121_team_score_baseline,2026-11-16T00:51:47.393Z,N121 public research · visible by 00:58:58 UTC Nov 16; no native issue receipt,4.295978,48.350201,0.646307,0.028547,0.325146
+2026_18_TB_NO,n121_team_score_baseline,2026-11-16T00:51:47.393Z,N121 public research · visible by 00:58:58 UTC Nov 16; no native issue receipt,1.114314,44.948623,0.533875,0.033672,0.432454
+2026_18_TEN_HOU,n121_team_score_baseline,2026-11-16T00:51:47.393Z,N121 public research · visible by 00:58:58 UTC Nov 16; no native issue receipt,-5.250548,45.768316,0.324958,0.03434,0.640703
+2026_10_LAC_BAL,n121_opponent_ridge_recent,2026-11-16T00:51:47.393Z,N121 public research · visible by 00:58:58 UTC Nov 16; no native issue receipt,-2.71315,43.36046,0.402181,0.034525,0.563295
+2026_10_PIT_CIN,n121_opponent_ridge_recent,2026-11-16T00:51:47.393Z,N121 public research · visible by 00:58:58 UTC Nov 16; no native issue receipt,-1.840784,48.010523,0.432254,0.03561,0.532135
+2026_11_ARI_KC,n121_opponent_ridge_recent,2026-11-16T00:51:47.393Z,N121 public research · visible by 00:58:58 UTC Nov 16; no native issue receipt,-9.166234,44.978479,0.21093,0.025832,0.763238
+2026_11_BAL_CAR,n121_opponent_ridge_recent,2026-11-16T00:51:47.393Z,N121 public research · visible by 00:58:58 UTC Nov 16; no native issue receipt,-0.319304,47.463389,0.487414,0.036514,0.476072
+2026_11_CIN_WAS,n121_opponent_ridge_recent,2026-11-16T00:51:47.393Z,N121 public research · visible by 00:58:58 UTC Nov 16; no native issue receipt,4.58659,51.037293,0.647159,0.026381,0.32646
+2026_11_IND_HOU,n121_opponent_ridge_recent,2026-11-16T00:51:47.393Z,N121 public research · visible by 00:58:58 UTC Nov 16; no native issue receipt,-5.053922,48.553758,0.328184,0.030943,0.640873
+2026_11_JAX_NYG,n121_opponent_ridge_recent,2026-11-16T00:51:47.393Z,N121 public research · visible by 00:58:58 UTC Nov 16; no native issue receipt,7.846689,45.60172,0.730152,0.022031,0.247817
+2026_11_LV_DEN,n121_opponent_ridge_recent,2026-11-16T00:51:47.393Z,N121 public research · visible by 00:58:58 UTC Nov 16; no native issue receipt,-6.390453,46.74448,0.286308,0.031723,0.681968
+2026_11_MIA_BUF,n121_opponent_ridge_recent,2026-11-16T00:51:47.393Z,N121 public research · visible by 00:58:58 UTC Nov 16; no native issue receipt,-10.284161,47.655236,0.185691,0.022278,0.792031
+2026_11_MIN_SF,n121_opponent_ridge_recent,2026-11-16T00:51:47.393Z,N121 public research · visible by 00:58:58 UTC Nov 16; no native issue receipt,-1.078785,42.383841,0.459489,0.037,0.503511
+2026_11_NO_CHI,n121_opponent_ridge_recent,2026-11-16T00:51:47.393Z,N121 public research · visible by 00:58:58 UTC Nov 16; no native issue receipt,-6.205044,48.059164,0.292033,0.03162,0.676347
+2026_11_NYJ_LAC,n121_opponent_ridge_recent,2026-11-16T00:51:47.393Z,N121 public research · visible by 00:58:58 UTC Nov 16; no native issue receipt,-1.22821,42.817201,0.454118,0.036719,0.509163
+2026_11_PIT_PHI,n121_opponent_ridge_recent,2026-11-16T00:51:47.393Z,N121 public research · visible by 00:58:58 UTC Nov 16; no native issue receipt,3.732537,39.625308,0.621316,0.0299,0.348784
+2026_11_TB_DET,n121_opponent_ridge_recent,2026-11-16T00:51:47.393Z,N121 public research · visible by 00:58:58 UTC Nov 16; no native issue receipt,-2.899801,47.366522,0.396008,0.034178,0.569815
+2026_11_TEN_DAL,n121_opponent_ridge_recent,2026-11-16T00:51:47.393Z,N121 public research · visible by 00:58:58 UTC Nov 16; no native issue receipt,-5.05203,53.202309,0.328242,0.030944,0.640813
+2026_12_ATL_MIN,n121_opponent_ridge_recent,2026-11-16T00:51:47.393Z,N121 public research · visible by 00:58:58 UTC Nov 16; no native issue receipt,-6.425899,38.109016,0.285214,0.031728,0.683057
+2026_12_BAL_HOU,n121_opponent_ridge_recent,2026-11-16T00:51:47.393Z,N121 public research · visible by 00:58:58 UTC Nov 16; no native issue receipt,-4.194103,46.657409,0.354802,0.031604,0.613595
+2026_12_CAR_TB,n121_opponent_ridge_recent,2026-11-16T00:51:47.393Z,N121 public research · visible by 00:58:58 UTC Nov 16; no native issue receipt,-3.490177,45.587063,0.376719,0.032786,0.590494
+2026_12_CHI_DET,n121_opponent_ridge_recent,2026-11-16T00:51:47.393Z,N121 public research · visible by 00:58:58 UTC Nov 16; no native issue receipt,-1.153342,51.051233,0.456798,0.036874,0.506328
+2026_12_DEN_PIT,n121_opponent_ridge_recent,2026-11-16T00:51:47.393Z,N121 public research · visible by 00:58:58 UTC Nov 16; no native issue receipt,0.668448,41.264231,0.523498,0.033747,0.442754
+2026_12_GB_LA,n121_opponent_ridge_recent,2026-11-16T00:51:47.393Z,N121 public research · visible by 00:58:58 UTC Nov 16; no native issue receipt,-3.405972,45.113858,0.379425,0.03292,0.587655
+2026_12_KC_BUF,n121_opponent_ridge_recent,2026-11-16T00:51:47.393Z,N121 public research · visible by 00:58:58 UTC Nov 16; no native issue receipt,-2.588361,48.554779,0.406263,0.034929,0.558808
+2026_12_LV_CLE,n121_opponent_ridge_recent,2026-11-16T00:51:47.393Z,N121 public research · visible by 00:58:58 UTC Nov 16; no native issue receipt,-1.296231,45.301842,0.45169,0.036597,0.511713
+2026_12_NE_LAC,n121_opponent_ridge_recent,2026-11-16T00:51:47.393Z,N121 public research · visible by 00:58:58 UTC Nov 16; no native issue receipt,4.598827,43.171796,0.647506,0.02634,0.326155
+2026_12_NO_CIN,n121_opponent_ridge_recent,2026-11-16T00:51:47.393Z,N121 public research · visible by 00:58:58 UTC Nov 16; no native issue receipt,-6.031785,50.753326,0.297465,0.031402,0.671133
+2026_12_NYG_IND,n121_opponent_ridge_recent,2026-11-16T00:51:47.393Z,N121 public research · visible by 00:58:58 UTC Nov 16; no native issue receipt,1.314097,46.999243,0.545689,0.031458,0.422853
+2026_12_NYJ_MIA,n121_opponent_ridge_recent,2026-11-16T00:51:47.393Z,N121 public research · visible by 00:58:58 UTC Nov 16; no native issue receipt,-1.337058,42.670145,0.450224,0.036521,0.513255
+2026_12_PHI_DAL,n121_opponent_ridge_recent,2026-11-16T00:51:47.393Z,N121 public research · visible by 00:58:58 UTC Nov 16; no native issue receipt,-2.167398,49.349682,0.420636,0.035652,0.543712
+2026_12_SEA_SF,n121_opponent_ridge_recent,2026-11-16T00:51:47.393Z,N121 public research · visible by 00:58:58 UTC Nov 16; no native issue receipt,0.137378,46.31796,0.504526,0.035218,0.460256
+2026_12_TEN_JAX,n121_opponent_ridge_recent,2026-11-16T00:51:47.393Z,N121 public research · visible by 00:58:58 UTC Nov 16; no native issue receipt,-13.033499,46.464684,0.138561,0.014906,0.846533
+2026_12_WAS_ARI,n121_opponent_ridge_recent,2026-11-16T00:51:47.393Z,N121 public research · visible by 00:58:58 UTC Nov 16; no native issue receipt,2.882113,47.400278,0.594746,0.031338,0.373916
+2026_13_BUF_NE,n121_opponent_ridge_recent,2026-11-16T00:51:47.393Z,N121 public research · visible by 00:58:58 UTC Nov 16; no native issue receipt,4.799824,50.249066,0.653028,0.025866,0.321106
+2026_13_CAR_MIN,n121_opponent_ridge_recent,2026-11-16T00:51:47.393Z,N121 public research · visible by 00:58:58 UTC Nov 16; no native issue receipt,-5.314602,40.047262,0.320372,0.030686,0.648942
+2026_13_CIN_CLE,n121_opponent_ridge_recent,2026-11-16T00:51:47.393Z,N121 public research · visible by 00:58:58 UTC Nov 16; no native issue receipt,5.2722,46.812065,0.665674,0.025321,0.309005
+2026_13_DAL_SEA,n121_opponent_ridge_recent,2026-11-16T00:51:47.393Z,N121 public research · visible by 00:58:58 UTC Nov 16; no native issue receipt,-5.536215,49.750342,0.31354,0.030702,0.655758
+2026_13_DET_ATL,n121_opponent_ridge_recent,2026-11-16T00:51:47.393Z,N121 public research · visible by 00:58:58 UTC Nov 16; no native issue receipt,6.506918,48.772092,0.696767,0.025452,0.277781
+2026_13_GB_NO,n121_opponent_ridge_recent,2026-11-16T00:51:47.393Z,N121 public research · visible by 00:58:58 UTC Nov 16; no native issue receipt,3.576172,45.709548,0.616279,0.030588,0.353133
+2026_13_HOU_PIT,n121_opponent_ridge_recent,2026-11-16T00:51:47.393Z,N121 public research · visible by 00:58:58 UTC Nov 16; no native issue receipt,0.320753,44.169486,0.511272,0.03464,0.454088
+2026_13_JAX_CHI,n121_opponent_ridge_recent,2026-11-16T00:51:47.393Z,N121 public research · visible by 00:58:58 UTC Nov 16; no native issue receipt,3.739384,48.303109,0.621537,0.029865,0.348599
+2026_13_KC_LA,n121_opponent_ridge_recent,2026-11-16T00:51:47.393Z,N121 public research · visible by 00:58:58 UTC Nov 16; no native issue receipt,-0.91009,43.772137,0.465401,0.037359,0.49724
+2026_13_LAC_TB,n121_opponent_ridge_recent,2026-11-16T00:51:47.393Z,N121 public research · visible by 00:58:58 UTC Nov 16; no native issue receipt,-5.859726,41.484133,0.303005,0.031298,0.665697
+2026_13_MIA_DEN,n121_opponent_ridge_recent,2026-11-16T00:51:47.393Z,N121 public research · visible by 00:58:58 UTC Nov 16; no native issue receipt,-6.814648,40.969661,0.27362,0.030871,0.695509
+2026_13_PHI_ARI,n121_opponent_ridge_recent,2026-11-16T00:51:47.393Z,N121 public research · visible by 00:58:58 UTC Nov 16; no native issue receipt,2.226835,42.978763,0.574479,0.03074,0.394781
+2026_13_SF_NYG,n121_opponent_ridge_recent,2026-11-16T00:51:47.393Z,N121 public research · visible by 00:58:58 UTC Nov 16; no native issue receipt,4.601152,48.906964,0.647571,0.026332,0.326097
+2026_13_WAS_TEN,n121_opponent_ridge_recent,2026-11-16T00:51:47.393Z,N121 public research · visible by 00:58:58 UTC Nov 16; no native issue receipt,3.208457,46.504705,0.604648,0.031449,0.363904
+2026_14_ATL_CLE,n121_opponent_ridge_recent,2026-11-16T00:51:47.393Z,N121 public research · visible by 00:58:58 UTC Nov 16; no native issue receipt,-0.571021,41.838762,0.477907,0.037162,0.484931
+2026_14_BUF_GB,n121_opponent_ridge_recent,2026-11-16T00:51:47.393Z,N121 public research · visible by 00:58:58 UTC Nov 16; no native issue receipt,4.421338,49.8965,0.642381,0.027095,0.330524
+2026_14_CHI_MIA,n121_opponent_ridge_recent,2026-11-16T00:51:47.393Z,N121 public research · visible by 00:58:58 UTC Nov 16; no native issue receipt,6.834433,45.02179,0.704986,0.02489,0.270124
+2026_14_DEN_NYJ,n121_opponent_ridge_recent,2026-11-16T00:51:47.393Z,N121 public research · visible by 00:58:58 UTC Nov 16; no native issue receipt,7.157349,43.208896,0.713179,0.023903,0.262918
+2026_14_HOU_WAS,n121_opponent_ridge_recent,2026-11-16T00:51:47.393Z,N121 public research · visible by 00:58:58 UTC Nov 16; no native issue receipt,3.729464,47.196256,0.621218,0.029915,0.348867
+2026_14_IND_PHI,n121_opponent_ridge_recent,2026-11-16T00:51:47.393Z,N121 public research · visible by 00:58:58 UTC Nov 16; no native issue receipt,-0.337728,44.00958,0.48672,0.036562,0.476718
+2026_14_KC_CIN,n121_opponent_ridge_recent,2026-11-16T00:51:47.393Z,N121 public research · visible by 00:58:58 UTC Nov 16; no native issue receipt,0.371721,48.615494,0.513084,0.034523,0.452392
+2026_14_LAC_LV,n121_opponent_ridge_recent,2026-11-16T00:51:47.393Z,N121 public research · visible by 00:58:58 UTC Nov 16; no native issue receipt,-0.864495,46.352785,0.467021,0.037435,0.495544
+2026_14_LA_SF,n121_opponent_ridge_recent,2026-11-16T00:51:47.393Z,N121 public research · visible by 00:58:58 UTC Nov 16; no native issue receipt,-0.048198,49.459158,0.497633,0.03572,0.466647
+2026_14_MIN_NE,n121_opponent_ridge_recent,2026-11-16T00:51:47.393Z,N121 public research · visible by 00:58:58 UTC Nov 16; no native issue receipt,2.090967,38.391108,0.570275,0.030745,0.39898
+2026_14_NO_CAR,n121_opponent_ridge_recent,2026-11-16T00:51:47.393Z,N121 public research · visible by 00:58:58 UTC Nov 16; no native issue receipt,-1.29986,47.718269,0.45156,0.03659,0.511851
+2026_14_NYG_SEA,n121_opponent_ridge_recent,2026-11-16T00:51:47.393Z,N121 public research · visible by 00:58:58 UTC Nov 16; no native issue receipt,-5.732887,41.620887,0.307159,0.031179,0.661662
+2026_14_PIT_JAX,n121_opponent_ridge_recent,2026-11-16T00:51:47.393Z,N121 public research · visible by 00:58:58 UTC Nov 16; no native issue receipt,-6.084879,44.0068,0.295806,0.031431,0.672763
+2026_14_TB_BAL,n121_opponent_ridge_recent,2026-11-16T00:51:47.393Z,N121 public research · visible by 00:58:58 UTC Nov 16; no native issue receipt,2.815124,44.119572,0.592712,0.031238,0.376049
+2026_14_TEN_DET,n121_opponent_ridge_recent,2026-11-16T00:51:47.393Z,N121 public research · visible by 00:58:58 UTC Nov 16; no native issue receipt,-9.784553,49.212808,0.196238,0.024402,0.77936
+2026_15_ATL_WAS,n121_opponent_ridge_recent,2026-11-16T00:51:47.393Z,N121 public research · visible by 00:58:58 UTC Nov 16; no native issue receipt,-1.256632,46.06399,0.453109,0.036666,0.510225
+2026_15_BAL_PIT,n121_opponent_ridge_recent,2026-11-16T00:51:47.393Z,N121 public research · visible by 00:58:58 UTC Nov 16; no native issue receipt,-3.541898,43.507975,0.375092,0.032695,0.592212
+2026_15_CHI_BUF,n121_opponent_ridge_recent,2026-11-16T00:51:47.393Z,N121 public research · visible by 00:58:58 UTC Nov 16; no native issue receipt,-3.118276,52.246115,0.388871,0.033508,0.577621
+2026_15_CIN_CAR,n121_opponent_ridge_recent,2026-11-16T00:51:47.393Z,N121 public research · visible by 00:58:58 UTC Nov 16; no native issue receipt,4.400472,51.965937,0.641769,0.027194,0.331037
+2026_15_CLE_NYG,n121_opponent_ridge_recent,2026-11-16T00:51:47.393Z,N121 public research · visible by 00:58:58 UTC Nov 16; no native issue receipt,-2.001059,41.416513,0.426602,0.035605,0.537792
+2026_15_DAL_LA,n121_opponent_ridge_recent,2026-11-16T00:51:47.393Z,N121 public research · visible by 00:58:58 UTC Nov 16; no native issue receipt,-5.350639,52.891539,0.31926,0.030689,0.650052
+2026_15_DEN_LV,n121_opponent_ridge_recent,2026-11-16T00:51:47.393Z,N121 public research · visible by 00:58:58 UTC Nov 16; no native issue receipt,5.727548,46.74448,0.677042,0.025234,0.297725
+2026_15_DET_MIN,n121_opponent_ridge_recent,2026-11-16T00:51:47.393Z,N121 public research · visible by 00:58:58 UTC Nov 16; no native issue receipt,0.412471,41.826721,0.514499,0.034447,0.451054
+2026_15_IND_TEN,n121_opponent_ridge_recent,2026-11-16T00:51:47.393Z,N121 public research · visible by 00:58:58 UTC Nov 16; no native issue receipt,2.546903,47.862207,0.584381,0.030964,0.384655
+2026_15_JAX_HOU,n121_opponent_ridge_recent,2026-11-16T00:51:47.393Z,N121 public research · visible by 00:58:58 UTC Nov 16; no native issue receipt,4.769769,47.156235,0.65222,0.025904,0.321876
+2026_15_MIA_GB,n121_opponent_ridge_recent,2026-11-16T00:51:47.393Z,N121 public research · visible by 00:58:58 UTC Nov 16; no native issue receipt,-5.531371,42.672174,0.31369,0.030697,0.655613
+2026_15_NE_KC,n121_opponent_ridge_recent,2026-11-16T00:51:47.393Z,N121 public research · visible by 00:58:58 UTC Nov 16; no native issue receipt,-3.205821,43.924283,0.386017,0.033261,0.580722
+2026_15_NO_TB,n121_opponent_ridge_recent,2026-11-16T00:51:47.393Z,N121 public research · visible by 00:58:58 UTC Nov 16; no native issue receipt,-4.458585,44.374452,0.346626,0.031107,0.622267
+2026_15_NYJ_ARI,n121_opponent_ridge_recent,2026-11-16T00:51:47.393Z,N121 public research · visible by 00:58:58 UTC Nov 16; no native issue receipt,-0.198077,46.318172,0.491974,0.0362,0.471826
+2026_15_SEA_PHI,n121_opponent_ridge_recent,2026-11-16T00:51:47.393Z,N121 public research · visible by 00:58:58 UTC Nov 16; no native issue receipt,6.709255,38.631224,0.701815,0.025233,0.272952
+2026_15_SF_LAC,n121_opponent_ridge_recent,2026-11-16T00:51:47.393Z,N121 public research · visible by 00:58:58 UTC Nov 16; no native issue receipt,7.768579,47.164529,0.728384,0.022122,0.249494
+2026_16_ARI_NO,n121_opponent_ridge_recent,2026-11-16T00:51:47.393Z,N121 public research · visible by 00:58:58 UTC Nov 16; no native issue receipt,-2.762727,47.116311,0.400539,0.034431,0.56503
+2026_16_BUF_DEN,n121_opponent_ridge_recent,2026-11-16T00:51:47.393Z,N121 public research · visible by 00:58:58 UTC Nov 16; no native issue receipt,3.138061,48.193987,0.602473,0.031536,0.365991
+2026_16_CAR_PIT,n121_opponent_ridge_recent,2026-11-16T00:51:47.393Z,N121 public research · visible by 00:58:58 UTC Nov 16; no native issue receipt,-3.554046,44.975466,0.374712,0.032677,0.592611
+2026_16_CIN_IND,n121_opponent_ridge_recent,2026-11-16T00:51:47.393Z,N121 public research · visible by 00:58:58 UTC Nov 16; no native issue receipt,5.248144,52.394795,0.665038,0.02536,0.309603
+2026_16_CLE_BAL,n121_opponent_ridge_recent,2026-11-16T00:51:47.393Z,N121 public research · visible by 00:58:58 UTC Nov 16; no native issue receipt,-1.215329,42.309517,0.454573,0.036748,0.508679
+2026_16_GB_CHI,n121_opponent_ridge_recent,2026-11-16T00:51:47.393Z,N121 public research · visible by 00:58:58 UTC Nov 16; no native issue receipt,-2.297419,47.263053,0.416051,0.035596,0.548353
+2026_16_HOU_PHI,n121_opponent_ridge_recent,2026-11-16T00:51:47.393Z,N121 public research · visible by 00:58:58 UTC Nov 16; no native issue receipt,4.384742,42.774742,0.641306,0.027263,0.33143
+2026_16_JAX_DAL,n121_opponent_ridge_recent,2026-11-16T00:51:47.393Z,N121 public research · visible by 00:58:58 UTC Nov 16; no native issue receipt,7.650017,53.731175,0.725675,0.022284,0.252041
+2026_16_LAC_MIA,n121_opponent_ridge_recent,2026-11-16T00:51:47.393Z,N121 public research · visible by 00:58:58 UTC Nov 16; no native issue receipt,-0.4403,40.577966,0.482836,0.03686,0.480304
+2026_16_LA_SEA,n121_opponent_ridge_recent,2026-11-16T00:51:47.393Z,N121 public research · visible by 00:58:58 UTC Nov 16; no native issue receipt,-0.517028,42.173081,0.479981,0.036992,0.483027
+2026_16_NE_NYJ,n121_opponent_ridge_recent,2026-11-16T00:51:47.393Z,N121 public research · visible by 00:58:58 UTC Nov 16; no native issue receipt,5.495585,45.263976,0.671275,0.02521,0.303515
+2026_16_NYG_DET,n121_opponent_ridge_recent,2026-11-16T00:51:47.393Z,N121 public research · visible by 00:58:58 UTC Nov 16; no native issue receipt,-5.260647,48.349844,0.322014,0.030719,0.647267
+2026_16_SF_KC,n121_opponent_ridge_recent,2026-11-16T00:51:47.393Z,N121 public research · visible by 00:58:58 UTC Nov 16; no native issue receipt,-0.036069,47.917017,0.498086,0.035692,0.466222
+2026_16_TB_ATL,n121_opponent_ridge_recent,2026-11-16T00:51:47.393Z,N121 public research · visible by 00:58:58 UTC Nov 16; no native issue receipt,3.938569,43.648817,0.627869,0.02886,0.343271
+2026_16_TEN_LV,n121_opponent_ridge_recent,2026-11-16T00:51:47.393Z,N121 public research · visible by 00:58:58 UTC Nov 16; no native issue receipt,-2.220973,48.958184,0.418744,0.03563,0.545626
+2026_16_WAS_MIN,n121_opponent_ridge_recent,2026-11-16T00:51:47.393Z,N121 public research · visible by 00:58:58 UTC Nov 16; no native issue receipt,-5.50072,39.118618,0.314645,0.030673,0.654682
+2026_17_BAL_CIN,n121_opponent_ridge_recent,2026-11-16T00:51:47.393Z,N121 public research · visible by 00:58:58 UTC Nov 16; no native issue receipt,-5.051229,50.498446,0.328267,0.030945,0.640788
+2026_17_BUF_MIA,n121_opponent_ridge_recent,2026-11-16T00:51:47.393Z,N121 public research · visible by 00:58:58 UTC Nov 16; no native issue receipt,9.621257,47.655236,0.768002,0.018886,0.213112
+2026_17_DEN_NE,n121_opponent_ridge_recent,2026-11-16T00:51:47.393Z,N121 public research · visible by 00:58:58 UTC Nov 16; no native issue receipt,1.330311,43.563491,0.546233,0.031414,0.422353
+2026_17_DET_CHI,n121_opponent_ridge_recent,2026-11-16T00:51:47.393Z,N121 public research · visible by 00:58:58 UTC Nov 16; no native issue receipt,0.490437,51.051233,0.517239,0.03427,0.448492
+2026_17_HOU_GB,n121_opponent_ridge_recent,2026-11-16T00:51:47.393Z,N121 public research · visible by 00:58:58 UTC Nov 16; no native issue receipt,0.604129,46.116179,0.521261,0.033941,0.444798
+2026_17_IND_CLE,n121_opponent_ridge_recent,2026-11-16T00:51:47.393Z,N121 public research · visible by 00:58:58 UTC Nov 16; no native issue receipt,-0.307396,44.205866,0.487864,0.036486,0.475649
+2026_17_KC_LAC,n121_opponent_ridge_recent,2026-11-16T00:51:47.393Z,N121 public research · visible by 00:58:58 UTC Nov 16; no native issue receipt,7.473196,41.477508,0.721387,0.022759,0.255854
+2026_17_LA_TB,n121_opponent_ridge_recent,2026-11-16T00:51:47.393Z,N121 public research · visible by 00:58:58 UTC Nov 16; no native issue receipt,2.52356,43.778762,0.583664,0.030931,0.385404
+2026_17_LV_ARI,n121_opponent_ridge_recent,2026-11-16T00:51:47.393Z,N121 public research · visible by 00:58:58 UTC Nov 16; no native issue receipt,1.231724,49.853756,0.542948,0.031681,0.425371
+2026_17_MIN_NYJ,n121_opponent_ridge_recent,2026-11-16T00:51:47.393Z,N121 public research · visible by 00:58:58 UTC Nov 16; no native issue receipt,7.918005,38.036512,0.731746,0.021952,0.246302
+2026_17_NO_ATL,n121_opponent_ridge_recent,2026-11-16T00:51:47.393Z,N121 public research · visible by 00:58:58 UTC Nov 16; no native issue receipt,-0.188563,45.780023,0.492333,0.036172,0.471495
+2026_17_NYG_DAL,n121_opponent_ridge_recent,2026-11-16T00:51:47.393Z,N121 public research · visible by 00:58:58 UTC Nov 16; no native issue receipt,-0.528124,52.339345,0.479557,0.037021,0.483421
+2026_17_PHI_SF,n121_opponent_ridge_recent,2026-11-16T00:51:47.393Z,N121 public research · visible by 00:58:58 UTC Nov 16; no native issue receipt,-6.90333,45.917301,0.271051,0.03052,0.698429
+2026_17_PIT_TEN,n121_opponent_ridge_recent,2026-11-16T00:51:47.393Z,N121 public research · visible by 00:58:58 UTC Nov 16; no native issue receipt,6.617168,43.477935,0.699521,0.025378,0.275102
+2026_17_SEA_CAR,n121_opponent_ridge_recent,2026-11-16T00:51:47.393Z,N121 public research · visible by 00:58:58 UTC Nov 16; no native issue receipt,5.86786,43.981382,0.680641,0.025188,0.294171
+2026_17_WAS_JAX,n121_opponent_ridge_recent,2026-11-16T00:51:47.393Z,N121 public research · visible by 00:58:58 UTC Nov 16; no native issue receipt,-9.49359,47.033571,0.202938,0.025403,0.771658
+2026_18_ATL_CAR,n121_opponent_ridge_recent,2026-11-16T00:51:47.393Z,N121 public research · visible by 00:58:58 UTC Nov 16; no native issue receipt,-1.442749,46.992634,0.446419,0.036327,0.517254
+2026_18_CHI_MIN,n121_opponent_ridge_recent,2026-11-16T00:51:47.393Z,N121 public research · visible by 00:58:58 UTC Nov 16; no native issue receipt,-0.409419,40.388157,0.483993,0.036794,0.479213
+2026_18_CLE_CIN,n121_opponent_ridge_recent,2026-11-16T00:51:47.393Z,N121 public research · visible by 00:58:58 UTC Nov 16; no native issue receipt,-5.935105,46.812065,0.300537,0.031369,0.668093
+2026_18_DAL_WAS,n121_opponent_ridge_recent,2026-11-16T00:51:47.393Z,N121 public research · visible by 00:58:58 UTC Nov 16; no native issue receipt,0.849215,53.771196,0.529803,0.033073,0.437124
+2026_18_DET_GB,n121_opponent_ridge_recent,2026-11-16T00:51:47.393Z,N121 public research · visible by 00:58:58 UTC Nov 16; no native issue receipt,2.456404,48.701617,0.581597,0.030848,0.387555
+2026_18_JAX_IND,n121_opponent_ridge_recent,2026-11-16T00:51:47.393Z,N121 public research · visible by 00:58:58 UTC Nov 16; no native issue receipt,9.492239,48.391073,0.765436,0.019102,0.215463
+2026_18_LAC_DEN,n121_opponent_ridge_recent,2026-11-16T00:51:47.393Z,N121 public research · visible by 00:58:58 UTC Nov 16; no native issue receipt,-6.923496,41.116716,0.270465,0.030448,0.699087
+2026_18_LV_KC,n121_opponent_ridge_recent,2026-11-16T00:51:47.393Z,N121 public research · visible by 00:58:58 UTC Nov 16; no native issue receipt,-7.603058,47.105272,0.25134,0.028477,0.720184
+2026_18_MIA_NE,n121_opponent_ridge_recent,2026-11-16T00:51:47.393Z,N121 public research · visible by 00:58:58 UTC Nov 16; no native issue receipt,-5.152885,43.024741,0.325203,0.030862,0.643935
+2026_18_NYJ_BUF,n121_opponent_ridge_recent,2026-11-16T00:51:47.393Z,N121 public research · visible by 00:58:58 UTC Nov 16; no native issue receipt,-11.289767,49.894471,0.166604,0.018977,0.814419
+2026_18_PHI_NYG,n121_opponent_ridge_recent,2026-11-16T00:51:47.393Z,N121 public research · visible by 00:58:58 UTC Nov 16; no native issue receipt,-1.970726,41.220227,0.427685,0.035578,0.536738
+2026_18_PIT_BAL,n121_opponent_ridge_recent,2026-11-16T00:51:47.393Z,N121 public research · visible by 00:58:58 UTC Nov 16; no native issue receipt,2.878993,43.507975,0.594651,0.031334,0.374015
+2026_18_SEA_LA,n121_opponent_ridge_recent,2026-11-16T00:51:47.393Z,N121 public research · visible by 00:58:58 UTC Nov 16; no native issue receipt,-0.145876,42.173081,0.493958,0.036014,0.470028
+2026_18_SF_ARI,n121_opponent_ridge_recent,2026-11-16T00:51:47.393Z,N121 public research · visible by 00:58:58 UTC Nov 16; no native issue receipt,8.798713,50.6655,0.751156,0.020433,0.228412
+2026_18_TB_NO,n121_opponent_ridge_recent,2026-11-16T00:51:47.393Z,N121 public research · visible by 00:58:58 UTC Nov 16; no native issue receipt,3.79568,44.374452,0.623336,0.029581,0.347083
+2026_18_TEN_HOU,n121_opponent_ridge_recent,2026-11-16T00:51:47.393Z,N121 public research · visible by 00:58:58 UTC Nov 16; no native issue receipt,-7.932278,46.627369,0.242779,0.02743,0.729791
+2026_10_LAC_BAL,n121_opponent_ridge_pooled,2026-11-16T00:51:47.393Z,N121 public research · visible by 00:58:58 UTC Nov 16; no native issue receipt,-3.99933,44.399323,0.364034,0.033085,0.602881
+2026_10_PIT_CIN,n121_opponent_ridge_pooled,2026-11-16T00:51:47.393Z,N121 public research · visible by 00:58:58 UTC Nov 16; no native issue receipt,-1.957305,47.768811,0.430671,0.035112,0.534218
+2026_11_ARI_KC,n121_opponent_ridge_pooled,2026-11-16T00:51:47.393Z,N121 public research · visible by 00:58:58 UTC Nov 16; no native issue receipt,-8.142698,44.857356,0.239301,0.028595,0.732104
+2026_11_BAL_CAR,n121_opponent_ridge_pooled,2026-11-16T00:51:47.393Z,N121 public research · visible by 00:58:58 UTC Nov 16; no native issue receipt,2.875007,47.000241,0.595175,0.029388,0.375437
+2026_11_CIN_WAS,n121_opponent_ridge_pooled,2026-11-16T00:51:47.393Z,N121 public research · visible by 00:58:58 UTC Nov 16; no native issue receipt,2.081541,51.301507,0.570194,0.031094,0.398711
+2026_11_IND_HOU,n121_opponent_ridge_pooled,2026-11-16T00:51:47.393Z,N121 public research · visible by 00:58:58 UTC Nov 16; no native issue receipt,-4.457794,47.335814,0.348762,0.033263,0.617975
+2026_11_JAX_NYG,n121_opponent_ridge_pooled,2026-11-16T00:51:47.393Z,N121 public research · visible by 00:58:58 UTC Nov 16; no native issue receipt,5.065449,45.035491,0.65783,0.025083,0.317087
+2026_11_LV_DEN,n121_opponent_ridge_pooled,2026-11-16T00:51:47.393Z,N121 public research · visible by 00:58:58 UTC Nov 16; no native issue receipt,-7.150628,44.331395,0.267678,0.029242,0.703081
+2026_11_MIA_BUF,n121_opponent_ridge_pooled,2026-11-16T00:51:47.393Z,N121 public research · visible by 00:58:58 UTC Nov 16; no native issue receipt,-9.525137,48.270189,0.204834,0.024324,0.770842
+2026_11_MIN_SF,n121_opponent_ridge_pooled,2026-11-16T00:51:47.393Z,N121 public research · visible by 00:58:58 UTC Nov 16; no native issue receipt,-1.887647,43.24905,0.433052,0.035255,0.531693
+2026_11_NO_CHI,n121_opponent_ridge_pooled,2026-11-16T00:51:47.393Z,N121 public research · visible by 00:58:58 UTC Nov 16; no native issue receipt,-5.103951,45.656748,0.327816,0.032683,0.639501
+2026_11_NYJ_LAC,n121_opponent_ridge_pooled,2026-11-16T00:51:47.393Z,N121 public research · visible by 00:58:58 UTC Nov 16; no native issue receipt,-4.338713,42.74122,0.352792,0.033111,0.614097
+2026_11_PIT_PHI,n121_opponent_ridge_pooled,2026-11-16T00:51:47.393Z,N121 public research · visible by 00:58:58 UTC Nov 16; no native issue receipt,-0.984599,41.425408,0.464787,0.035981,0.499233
+2026_11_TB_DET,n121_opponent_ridge_pooled,2026-11-16T00:51:47.393Z,N121 public research · visible by 00:58:58 UTC Nov 16; no native issue receipt,-4.224875,49.439495,0.356519,0.033105,0.610377
+2026_11_TEN_DAL,n121_opponent_ridge_pooled,2026-11-16T00:51:47.393Z,N121 public research · visible by 00:58:58 UTC Nov 16; no native issue receipt,-5.981591,51.162653,0.301761,0.029945,0.668294
+2026_12_ATL_MIN,n121_opponent_ridge_pooled,2026-11-16T00:51:47.393Z,N121 public research · visible by 00:58:58 UTC Nov 16; no native issue receipt,-6.180568,40.540783,0.296064,0.029353,0.674583
+2026_12_BAL_HOU,n121_opponent_ridge_pooled,2026-11-16T00:51:47.393Z,N121 public research · visible by 00:58:58 UTC Nov 16; no native issue receipt,-2.00325,45.90604,0.429099,0.035016,0.535886
+2026_12_CAR_TB,n121_opponent_ridge_pooled,2026-11-16T00:51:47.393Z,N121 public research · visible by 00:58:58 UTC Nov 16; no native issue receipt,-5.134918,45.589444,0.326842,0.032619,0.640539
+2026_12_CHI_DET,n121_opponent_ridge_pooled,2026-11-16T00:51:47.393Z,N121 public research · visible by 00:58:58 UTC Nov 16; no native issue receipt,-3.639164,50.831894,0.37591,0.032727,0.591363
+2026_12_DEN_PIT,n121_opponent_ridge_pooled,2026-11-16T00:51:47.393Z,N121 public research · visible by 00:58:58 UTC Nov 16; no native issue receipt,0.28544,41.427386,0.509923,0.03358,0.456496
+2026_12_GB_LA,n121_opponent_ridge_pooled,2026-11-16T00:51:47.393Z,N121 public research · visible by 00:58:58 UTC Nov 16; no native issue receipt,-3.372632,45.823543,0.384808,0.03221,0.582982
+2026_12_KC_BUF,n121_opponent_ridge_pooled,2026-11-16T00:51:47.393Z,N121 public research · visible by 00:58:58 UTC Nov 16; no native issue receipt,-3.559512,47.890475,0.378613,0.03252,0.588866
+2026_12_LV_CLE,n121_opponent_ridge_pooled,2026-11-16T00:51:47.393Z,N121 public research · visible by 00:58:58 UTC Nov 16; no native issue receipt,-2.013819,43.117202,0.428738,0.034998,0.536264
+2026_12_NE_LAC,n121_opponent_ridge_pooled,2026-11-16T00:51:47.393Z,N121 public research · visible by 00:58:58 UTC Nov 16; no native issue receipt,1.43743,42.30382,0.54858,0.033144,0.418276
+2026_12_NO_CIN,n121_opponent_ridge_pooled,2026-11-16T00:51:47.393Z,N121 public research · visible by 00:58:58 UTC Nov 16; no native issue receipt,-4.872239,48.982218,0.335171,0.033016,0.631813
+2026_12_NYG_IND,n121_opponent_ridge_pooled,2026-11-16T00:51:47.393Z,N121 public research · visible by 00:58:58 UTC Nov 16; no native issue receipt,-1.893629,47.02993,0.432849,0.035243,0.531908
+2026_12_NYJ_MIA,n121_opponent_ridge_pooled,2026-11-16T00:51:47.393Z,N121 public research · visible by 00:58:58 UTC Nov 16; no native issue receipt,-3.320662,43.412207,0.386486,0.032193,0.581322
+2026_12_PHI_DAL,n121_opponent_ridge_pooled,2026-11-16T00:51:47.393Z,N121 public research · visible by 00:58:58 UTC Nov 16; no native issue receipt,-0.348974,49.634744,0.487812,0.034206,0.477982
+2026_12_SEA_SF,n121_opponent_ridge_pooled,2026-11-16T00:51:47.393Z,N121 public research · visible by 00:58:58 UTC Nov 16; no native issue receipt,-0.025557,46.416579,0.499346,0.033595,0.467059
+2026_12_TEN_JAX,n121_opponent_ridge_pooled,2026-11-16T00:51:47.393Z,N121 public research · visible by 00:58:58 UTC Nov 16; no native issue receipt,-10.628562,45.418563,0.181054,0.021535,0.797411
+2026_12_WAS_ARI,n121_opponent_ridge_pooled,2026-11-16T00:51:47.393Z,N121 public research · visible by 00:58:58 UTC Nov 16; no native issue receipt,0.622974,48.161194,0.521095,0.033798,0.445106
+2026_13_BUF_NE,n121_opponent_ridge_pooled,2026-11-16T00:51:47.393Z,N121 public research · visible by 00:58:58 UTC Nov 16; no native issue receipt,3.517732,48.596028,0.61411,0.028752,0.357138
+2026_13_CAR_MIN,n121_opponent_ridge_pooled,2026-11-16T00:51:47.393Z,N121 public research · visible by 00:58:58 UTC Nov 16; no native issue receipt,-6.643512,41.166373,0.28251,0.028997,0.688493
+2026_13_CIN_CLE,n121_opponent_ridge_pooled,2026-11-16T00:51:47.393Z,N121 public research · visible by 00:58:58 UTC Nov 16; no native issue receipt,3.256749,46.550178,0.606416,0.029157,0.364427
+2026_13_DAL_SEA,n121_opponent_ridge_pooled,2026-11-16T00:51:47.393Z,N121 public research · visible by 00:58:58 UTC Nov 16; no native issue receipt,-6.008366,50.004736,0.300986,0.029868,0.669146
+2026_13_DET_ATL,n121_opponent_ridge_pooled,2026-11-16T00:51:47.393Z,N121 public research · visible by 00:58:58 UTC Nov 16; no native issue receipt,5.344924,49.733292,0.665088,0.024639,0.310273
+2026_13_GB_NO,n121_opponent_ridge_pooled,2026-11-16T00:51:47.393Z,N121 public research · visible by 00:58:58 UTC Nov 16; no native issue receipt,2.901652,44.387472,0.595962,0.029389,0.374649
+2026_13_HOU_PIT,n121_opponent_ridge_pooled,2026-11-16T00:51:47.393Z,N121 public research · visible by 00:58:58 UTC Nov 16; no native issue receipt,0.16267,42.876128,0.505817,0.033474,0.460709
+2026_13_JAX_CHI,n121_opponent_ridge_pooled,2026-11-16T00:51:47.393Z,N121 public research · visible by 00:58:58 UTC Nov 16; no native issue receipt,1.423579,46.908588,0.548111,0.033166,0.418723
+2026_13_KC_LA,n121_opponent_ridge_pooled,2026-11-16T00:51:47.393Z,N121 public research · visible by 00:58:58 UTC Nov 16; no native issue receipt,-1.883736,44.310161,0.433184,0.035264,0.531552
+2026_13_LAC_TB,n121_opponent_ridge_pooled,2026-11-16T00:51:47.393Z,N121 public research · visible by 00:58:58 UTC Nov 16; no native issue receipt,-3.891291,42.988526,0.367561,0.032984,0.599455
+2026_13_MIA_DEN,n121_opponent_ridge_pooled,2026-11-16T00:51:47.393Z,N121 public research · visible by 00:58:58 UTC Nov 16; no native issue receipt,-5.959426,42.035957,0.30241,0.030004,0.667586
+2026_13_PHI_ARI,n121_opponent_ridge_pooled,2026-11-16T00:51:47.393Z,N121 public research · visible by 00:58:58 UTC Nov 16; no native issue receipt,2.915784,44.622081,0.59638,0.029389,0.374231
+2026_13_SF_NYG,n121_opponent_ridge_pooled,2026-11-16T00:51:47.393Z,N121 public research · visible by 00:58:58 UTC Nov 16; no native issue receipt,4.084451,47.191424,0.630673,0.027647,0.34168
+2026_13_WAS_TEN,n121_opponent_ridge_pooled,2026-11-16T00:51:47.393Z,N121 public research · visible by 00:58:58 UTC Nov 16; no native issue receipt,2.155832,46.486012,0.572635,0.030865,0.3965
+2026_14_ATL_CLE,n121_opponent_ridge_pooled,2026-11-16T00:51:47.393Z,N121 public research · visible by 00:58:58 UTC Nov 16; no native issue receipt,-0.585249,42.126106,0.479331,0.03495,0.485719
+2026_14_BUF_GB,n121_opponent_ridge_pooled,2026-11-16T00:51:47.393Z,N121 public research · visible by 00:58:58 UTC Nov 16; no native issue receipt,2.680459,49.403857,0.589314,0.029573,0.381113
+2026_14_CHI_MIA,n121_opponent_ridge_pooled,2026-11-16T00:51:47.393Z,N121 public research · visible by 00:58:58 UTC Nov 16; no native issue receipt,3.127104,45.051912,0.602648,0.029245,0.368107
+2026_14_DEN_NYJ,n121_opponent_ridge_pooled,2026-11-16T00:51:47.393Z,N121 public research · visible by 00:58:58 UTC Nov 16; no native issue receipt,5.728165,42.799196,0.674546,0.024327,0.301128
+2026_14_HOU_WAS,n121_opponent_ridge_pooled,2026-11-16T00:51:47.393Z,N121 public research · visible by 00:58:58 UTC Nov 16; no native issue receipt,2.654855,46.408823,0.588526,0.029615,0.381859
+2026_14_IND_PHI,n121_opponent_ridge_pooled,2026-11-16T00:51:47.393Z,N121 public research · visible by 00:58:58 UTC Nov 16; no native issue receipt,-2.911774,45.885094,0.399884,0.032348,0.567768
+2026_14_KC_CIN,n121_opponent_ridge_pooled,2026-11-16T00:51:47.393Z,N121 public research · visible by 00:58:58 UTC Nov 16; no native issue receipt,0.702284,47.997668,0.523694,0.033908,0.442398
+2026_14_LAC_LV,n121_opponent_ridge_pooled,2026-11-16T00:51:47.393Z,N121 public research · visible by 00:58:58 UTC Nov 16; no native issue receipt,1.025278,44.273419,0.534652,0.033689,0.431659
+2026_14_LA_SF,n121_opponent_ridge_pooled,2026-11-16T00:51:47.393Z,N121 public research · visible by 00:58:58 UTC Nov 16; no native issue receipt,-0.456223,48.702483,0.483943,0.034562,0.481495
+2026_14_MIN_NE,n121_opponent_ridge_pooled,2026-11-16T00:51:47.393Z,N121 public research · visible by 00:58:58 UTC Nov 16; no native issue receipt,0.410532,39.56228,0.514142,0.03353,0.452328
+2026_14_NO_CAR,n121_opponent_ridge_pooled,2026-11-16T00:51:47.393Z,N121 public research · visible by 00:58:58 UTC Nov 16; no native issue receipt,-0.567297,45.183735,0.479981,0.034892,0.485127
+2026_14_NYG_SEA,n121_opponent_ridge_pooled,2026-11-16T00:51:47.393Z,N121 public research · visible by 00:58:58 UTC Nov 16; no native issue receipt,-7.610818,42.933817,0.254419,0.029038,0.716543
+2026_14_PIT_JAX,n121_opponent_ridge_pooled,2026-11-16T00:51:47.393Z,N121 public research · visible by 00:58:58 UTC Nov 16; no native issue receipt,-4.79657,43.897073,0.337579,0.033114,0.629307
+2026_14_TB_BAL,n121_opponent_ridge_pooled,2026-11-16T00:51:47.393Z,N121 public research · visible by 00:58:58 UTC Nov 16; no native issue receipt,-1.292014,46.080854,0.454069,0.0358,0.510131
+2026_14_TEN_DET,n121_opponent_ridge_pooled,2026-11-16T00:51:47.393Z,N121 public research · visible by 00:58:58 UTC Nov 16; no native issue receipt,-10.476198,49.34187,0.184219,0.021698,0.794083
+2026_15_ATL_WAS,n121_opponent_ridge_pooled,2026-11-16T00:51:47.393Z,N121 public research · visible by 00:58:58 UTC Nov 16; no native issue receipt,-1.760457,46.877434,0.437468,0.035397,0.527135
+2026_15_BAL_PIT,n121_opponent_ridge_pooled,2026-11-16T00:51:47.393Z,N121 public research · visible by 00:58:58 UTC Nov 16; no native issue receipt,-0.656605,44.461739,0.476683,0.035203,0.488114
+2026_15_CHI_BUF,n121_opponent_ridge_pooled,2026-11-16T00:51:47.393Z,N121 public research · visible by 00:58:58 UTC Nov 16; no native issue receipt,-5.214059,50.673132,0.324364,0.032505,0.643131
+2026_15_CIN_CAR,n121_opponent_ridge_pooled,2026-11-16T00:51:47.393Z,N121 public research · visible by 00:58:58 UTC Nov 16; no native issue receipt,3.120968,50.307313,0.602466,0.029252,0.368282
+2026_15_CLE_NYG,n121_opponent_ridge_pooled,2026-11-16T00:51:47.393Z,N121 public research · visible by 00:58:58 UTC Nov 16; no native issue receipt,-2.21454,41.351611,0.422096,0.034691,0.543212
+2026_15_DAL_LA,n121_opponent_ridge_pooled,2026-11-16T00:51:47.393Z,N121 public research · visible by 00:58:58 UTC Nov 16; no native issue receipt,-5.5777,52.29064,0.31337,0.031362,0.655268
+2026_15_DEN_LV,n121_opponent_ridge_pooled,2026-11-16T00:51:47.393Z,N121 public research · visible by 00:58:58 UTC Nov 16; no native issue receipt,4.782678,44.331395,0.650242,0.025678,0.32408
+2026_15_DET_MIN,n121_opponent_ridge_pooled,2026-11-16T00:51:47.393Z,N121 public research · visible by 00:58:58 UTC Nov 16; no native issue receipt,0.348331,45.016424,0.512053,0.033552,0.454395
+2026_15_IND_TEN,n121_opponent_ridge_pooled,2026-11-16T00:51:47.393Z,N121 public research · visible by 00:58:58 UTC Nov 16; no native issue receipt,2.720842,47.413003,0.590554,0.029518,0.379929
+2026_15_JAX_HOU,n121_opponent_ridge_pooled,2026-11-16T00:51:47.393Z,N121 public research · visible by 00:58:58 UTC Nov 16; no native issue receipt,1.081976,45.341375,0.536548,0.033661,0.429791
+2026_15_MIA_GB,n121_opponent_ridge_pooled,2026-11-16T00:51:47.393Z,N121 public research · visible by 00:58:58 UTC Nov 16; no native issue receipt,-5.660704,43.782636,0.311025,0.030947,0.658027
+2026_15_NE_KC,n121_opponent_ridge_pooled,2026-11-16T00:51:47.393Z,N121 public research · visible by 00:58:58 UTC Nov 16; no native issue receipt,-3.510145,42.595093,0.380286,0.032402,0.587313
+2026_15_NO_TB,n121_opponent_ridge_pooled,2026-11-16T00:51:47.393Z,N121 public research · visible by 00:58:58 UTC Nov 16; no native issue receipt,-4.51824,44.264348,0.346719,0.033293,0.619987
+2026_15_NYJ_ARI,n121_opponent_ridge_pooled,2026-11-16T00:51:47.393Z,N121 public research · visible by 00:58:58 UTC Nov 16; no native issue receipt,-2.327565,46.000309,0.418456,0.034352,0.547192
+2026_15_SEA_PHI,n121_opponent_ridge_pooled,2026-11-16T00:51:47.393Z,N121 public research · visible by 00:58:58 UTC Nov 16; no native issue receipt,2.805416,41.788981,0.59311,0.029427,0.377463
+2026_15_SF_LAC,n121_opponent_ridge_pooled,2026-11-16T00:51:47.393Z,N121 public research · visible by 00:58:58 UTC Nov 16; no native issue receipt,3.735609,45.99059,0.620505,0.028438,0.351057
+2026_16_ARI_NO,n121_opponent_ridge_pooled,2026-11-16T00:51:47.393Z,N121 public research · visible by 00:58:58 UTC Nov 16; no native issue receipt,-2.568175,45.841906,0.410861,0.03339,0.555749
+2026_16_BUF_DEN,n121_opponent_ridge_pooled,2026-11-16T00:51:47.393Z,N121 public research · visible by 00:58:58 UTC Nov 16; no native issue receipt,2.381736,47.657178,0.579944,0.030125,0.38993
+2026_16_CAR_PIT,n121_opponent_ridge_pooled,2026-11-16T00:51:47.393Z,N121 public research · visible by 00:58:58 UTC Nov 16; no native issue receipt,-4.715587,43.970328,0.340186,0.033175,0.626639
+2026_16_CIN_IND,n121_opponent_ridge_pooled,2026-11-16T00:51:47.393Z,N121 public research · visible by 00:58:58 UTC Nov 16; no native issue receipt,1.51653,52.228497,0.551261,0.032977,0.415762
+2026_16_CLE_BAL,n121_opponent_ridge_pooled,2026-11-16T00:51:47.393Z,N121 public research · visible by 00:58:58 UTC Nov 16; no native issue receipt,-5.378738,43.243106,0.319276,0.03218,0.648544
+2026_16_GB_CHI,n121_opponent_ridge_pooled,2026-11-16T00:51:47.393Z,N121 public research · visible by 00:58:58 UTC Nov 16; no native issue receipt,-1.018324,46.18558,0.463575,0.036022,0.500403
+2026_16_HOU_PHI,n121_opponent_ridge_pooled,2026-11-16T00:51:47.393Z,N121 public research · visible by 00:58:58 UTC Nov 16; no native issue receipt,0.362045,42.86971,0.512514,0.033542,0.453944
+2026_16_JAX_DAL,n121_opponent_ridge_pooled,2026-11-16T00:51:47.393Z,N121 public research · visible by 00:58:58 UTC Nov 16; no native issue receipt,3.462996,52.106409,0.612484,0.028827,0.358689
+2026_16_LAC_MIA,n121_opponent_ridge_pooled,2026-11-16T00:51:47.393Z,N121 public research · visible by 00:58:58 UTC Nov 16; no native issue receipt,-0.165924,41.977981,0.494397,0.033742,0.471861
+2026_16_LA_SEA,n121_opponent_ridge_pooled,2026-11-16T00:51:47.393Z,N121 public research · visible by 00:58:58 UTC Nov 16; no native issue receipt,-1.61464,44.444877,0.44263,0.03562,0.52175
+2026_16_NE_NYJ,n121_opponent_ridge_pooled,2026-11-16T00:51:47.393Z,N121 public research · visible by 00:58:58 UTC Nov 16; no native issue receipt,4.592169,43.738046,0.64497,0.026172,0.328858
+2026_16_NYG_DET,n121_opponent_ridge_pooled,2026-11-16T00:51:47.393Z,N121 public research · visible by 00:58:58 UTC Nov 16; no native issue receipt,-7.281034,48.958797,0.264001,0.029146,0.706852
+2026_16_SF_KC,n121_opponent_ridge_pooled,2026-11-16T00:51:47.393Z,N121 public research · visible by 00:58:58 UTC Nov 16; no native issue receipt,-1.211966,46.281863,0.456878,0.035868,0.507254
+2026_16_TB_ATL,n121_opponent_ridge_pooled,2026-11-16T00:51:47.393Z,N121 public research · visible by 00:58:58 UTC Nov 16; no native issue receipt,2.304023,44.963854,0.577493,0.030304,0.392203
+2026_16_TEN_LV,n121_opponent_ridge_pooled,2026-11-16T00:51:47.393Z,N121 public research · visible by 00:58:58 UTC Nov 16; no native issue receipt,-2.518728,45.857325,0.412417,0.033566,0.554017
+2026_16_WAS_MIN,n121_opponent_ridge_pooled,2026-11-16T00:51:47.393Z,N121 public research · visible by 00:58:58 UTC Nov 16; no native issue receipt,-5.604085,42.160566,0.312617,0.031241,0.656142
+2026_17_BAL_CIN,n121_opponent_ridge_pooled,2026-11-16T00:51:47.393Z,N121 public research · visible by 00:58:58 UTC Nov 16; no native issue receipt,-1.429935,50.798724,0.449144,0.035746,0.51511
+2026_17_BUF_MIA,n121_opponent_ridge_pooled,2026-11-16T00:51:47.393Z,N121 public research · visible by 00:58:58 UTC Nov 16; no native issue receipt,7.157188,48.270189,0.7089,0.022519,0.268581
+2026_17_DEN_NE,n121_opponent_ridge_pooled,2026-11-16T00:51:47.393Z,N121 public research · visible by 00:58:58 UTC Nov 16; no native issue receipt,-0.047979,42.361796,0.498568,0.03361,0.467822
+2026_17_DET_CHI,n121_opponent_ridge_pooled,2026-11-16T00:51:47.393Z,N121 public research · visible by 00:58:58 UTC Nov 16; no native issue receipt,1.271215,50.831894,0.543022,0.033399,0.423579
+2026_17_HOU_GB,n121_opponent_ridge_pooled,2026-11-16T00:51:47.393Z,N121 public research · visible by 00:58:58 UTC Nov 16; no native issue receipt,-1.008022,44.618367,0.463943,0.03601,0.500046
+2026_17_IND_CLE,n121_opponent_ridge_pooled,2026-11-16T00:51:47.393Z,N121 public research · visible by 00:58:58 UTC Nov 16; no native issue receipt,0.556244,44.672879,0.518917,0.033702,0.447381
+2026_17_KC_LAC,n121_opponent_ridge_pooled,2026-11-16T00:51:47.393Z,N121 public research · visible by 00:58:58 UTC Nov 16; no native issue receipt,3.7636,41.598267,0.621323,0.02839,0.350287
+2026_17_LA_TB,n121_opponent_ridge_pooled,2026-11-16T00:51:47.393Z,N121 public research · visible by 00:58:58 UTC Nov 16; no native issue receipt,1.756044,45.700419,0.559433,0.032197,0.40837
+2026_17_LV_ARI,n121_opponent_ridge_pooled,2026-11-16T00:51:47.393Z,N121 public research · visible by 00:58:58 UTC Nov 16; no native issue receipt,-1.382079,47.532507,0.450861,0.035751,0.513387
+2026_17_MIN_NYJ,n121_opponent_ridge_pooled,2026-11-16T00:51:47.393Z,N121 public research · visible by 00:58:58 UTC Nov 16; no native issue receipt,6.186675,39.999681,0.685892,0.023697,0.290412
+2026_17_NO_ATL,n121_opponent_ridge_pooled,2026-11-16T00:51:47.393Z,N121 public research · visible by 00:58:58 UTC Nov 16; no native issue receipt,-1.030242,44.558146,0.463149,0.036035,0.500816
+2026_17_NYG_DAL,n121_opponent_ridge_pooled,2026-11-16T00:51:47.393Z,N121 public research · visible by 00:58:58 UTC Nov 16; no native issue receipt,-2.786428,50.77958,0.403939,0.032622,0.563439
+2026_17_PHI_SF,n121_opponent_ridge_pooled,2026-11-16T00:51:47.393Z,N121 public research · visible by 00:58:58 UTC Nov 16; no native issue receipt,-4.014948,46.046587,0.363516,0.033101,0.603383
+2026_17_PIT_TEN,n121_opponent_ridge_pooled,2026-11-16T00:51:47.393Z,N121 public research · visible by 00:58:58 UTC Nov 16; no native issue receipt,4.648017,42.953316,0.646527,0.025999,0.327475
+2026_17_SEA_CAR,n121_opponent_ridge_pooled,2026-11-16T00:51:47.393Z,N121 public research · visible by 00:58:58 UTC Nov 16; no native issue receipt,6.137653,44.333902,0.684682,0.023765,0.291553
+2026_17_WAS_JAX,n121_opponent_ridge_pooled,2026-11-16T00:51:47.393Z,N121 public research · visible by 00:58:58 UTC Nov 16; no native issue receipt,-7.288755,47.429768,0.263781,0.029143,0.707075
+2026_18_ATL_CAR,n121_opponent_ridge_pooled,2026-11-16T00:51:47.393Z,N121 public research · visible by 00:58:58 UTC Nov 16; no native issue receipt,-0.72103,45.883241,0.474299,0.035407,0.490293
+2026_18_CHI_MIN,n121_opponent_ridge_pooled,2026-11-16T00:51:47.393Z,N121 public research · visible by 00:58:58 UTC Nov 16; no native issue receipt,-2.106858,41.639385,0.425618,0.034865,0.539517
+2026_18_CLE_CIN,n121_opponent_ridge_pooled,2026-11-16T00:51:47.393Z,N121 public research · visible by 00:58:58 UTC Nov 16; no native issue receipt,-5.624698,46.550178,0.312032,0.031136,0.656832
+2026_18_DAL_WAS,n121_opponent_ridge_pooled,2026-11-16T00:51:47.393Z,N121 public research · visible by 00:58:58 UTC Nov 16; no native issue receipt,0.273835,53.173858,0.509535,0.033576,0.456889
+2026_18_DET_GB,n121_opponent_ridge_pooled,2026-11-16T00:51:47.393Z,N121 public research · visible by 00:58:58 UTC Nov 16; no native issue receipt,1.105564,49.562619,0.537343,0.033637,0.42902
+2026_18_JAX_IND,n121_opponent_ridge_pooled,2026-11-16T00:51:47.393Z,N121 public research · visible by 00:58:58 UTC Nov 16; no native issue receipt,4.355795,48.356759,0.638329,0.027035,0.334636
+2026_18_LAC_DEN,n121_opponent_ridge_pooled,2026-11-16T00:51:47.393Z,N121 public research · visible by 00:58:58 UTC Nov 16; no native issue receipt,-4.941375,41.364971,0.332987,0.032941,0.634072
+2026_18_LV_KC,n121_opponent_ridge_pooled,2026-11-16T00:51:47.393Z,N121 public research · visible by 00:58:58 UTC Nov 16; no native issue receipt,-8.340802,44.564691,0.233955,0.028339,0.737707
+2026_18_MIA_NE,n121_opponent_ridge_pooled,2026-11-16T00:51:47.393Z,N121 public research · visible by 00:58:58 UTC Nov 16; no native issue receipt,-4.82343,42.974807,0.336707,0.033099,0.630194
+2026_18_NYJ_BUF,n121_opponent_ridge_pooled,2026-11-16T00:51:47.393Z,N121 public research · visible by 00:58:58 UTC Nov 16; no native issue receipt,-11.661825,49.033428,0.1614,0.018977,0.819624
+2026_18_PHI_NYG,n121_opponent_ridge_pooled,2026-11-16T00:51:47.393Z,N121 public research · visible by 00:58:58 UTC Nov 16; no native issue receipt,1.253478,42.563826,0.542418,0.033418,0.424164
+2026_18_PIT_BAL,n121_opponent_ridge_pooled,2026-11-16T00:51:47.393Z,N121 public research · visible by 00:58:58 UTC Nov 16; no native issue receipt,-1.711344,44.461739,0.439201,0.035453,0.525346
+2026_18_SEA_LA,n121_opponent_ridge_pooled,2026-11-16T00:51:47.393Z,N121 public research · visible by 00:58:58 UTC Nov 16; no native issue receipt,-0.753309,44.444877,0.473125,0.035503,0.491372
+2026_18_SF_ARI,n121_opponent_ridge_pooled,2026-11-16T00:51:47.393Z,N121 public research · visible by 00:58:58 UTC Nov 16; no native issue receipt,5.746757,49.249679,0.675012,0.024303,0.300685
+2026_18_TB_NO,n121_opponent_ridge_pooled,2026-11-16T00:51:47.393Z,N121 public research · visible by 00:58:58 UTC Nov 16; no native issue receipt,2.15029,44.264348,0.572451,0.030885,0.396664
+2026_18_TEN_HOU,n121_opponent_ridge_pooled,2026-11-16T00:51:47.393Z,N121 public research · visible by 00:58:58 UTC Nov 16; no native issue receipt,-8.362611,44.397618,0.233386,0.028276,0.738338
+2026_10_LAC_BAL,n122_residual_league,2026-11-16T01:33:30.636295+00:00,unissued timed research,-4.488138,43.552349,0.398145,0.033504,0.56835
+2026_10_PIT_CIN,n122_residual_league,2026-11-16T01:33:30.636295+00:00,suppressed kickoff passed,,,,,
+2026_11_ARI_KC,n122_residual_league,2026-11-16T01:33:30.636295+00:00,unissued timed research,-8.631505,44.010383,0.270758,0.025159,0.704084
+2026_11_BAL_CAR,n122_residual_league,2026-11-16T01:33:30.636295+00:00,unissued timed research,2.3862,46.153267,0.629502,0.025211,0.345287
+2026_11_CIN_WAS,n122_residual_league,2026-11-16T01:33:30.636295+00:00,unissued timed research,1.592733,50.454533,0.604532,0.02986,0.365608
+2026_11_IND_HOU,n122_residual_league,2026-11-16T01:33:30.636295+00:00,unissued timed research,-4.946601,46.488841,0.381054,0.036259,0.582687
+2026_11_JAX_NYG,n122_residual_league,2026-11-16T01:33:30.636295+00:00,unissued timed research,4.576642,44.188517,0.687019,0.025687,0.287294
+2026_11_LV_DEN,n122_residual_league,2026-11-16T01:33:30.636295+00:00,unissued timed research,-7.639435,43.484421,0.295701,0.028308,0.675992
+2026_11_MIA_BUF,n122_residual_league,2026-11-16T01:33:30.636295+00:00,unissued timed research,-10.013945,47.423215,0.238266,0.023075,0.738659
+2026_11_MIN_SF,n122_residual_league,2026-11-16T01:33:30.636295+00:00,unissued timed research,-2.376454,42.402077,0.465179,0.037964,0.496857
+2026_11_NO_CHI,n122_residual_league,2026-11-16T01:33:30.636295+00:00,unissued timed research,-5.592758,44.809774,0.358472,0.035704,0.605824
+2026_11_NYJ_LAC,n122_residual_league,2026-11-16T01:33:30.636295+00:00,unissued timed research,-4.827521,41.894247,0.385435,0.035573,0.578993
+2026_11_PIT_PHI,n122_residual_league,2026-11-16T01:33:30.636295+00:00,unissued timed research,-1.473406,40.578434,0.499221,0.037872,0.462907
+2026_11_TB_DET,n122_residual_league,2026-11-16T01:33:30.636295+00:00,unissued timed research,-4.713683,48.592522,0.389692,0.034801,0.575507
+2026_11_TEN_DAL,n122_residual_league,2026-11-16T01:33:30.636295+00:00,unissued timed research,-6.470398,50.315679,0.329093,0.033496,0.637412
+2026_12_ATL_MIN,n122_residual_league,2026-11-16T01:33:30.636295+00:00,unissued timed research,-6.669375,39.69381,0.323121,0.03273,0.644149
+2026_12_BAL_HOU,n122_residual_league,2026-11-16T01:33:30.636295+00:00,unissued timed research,-2.492057,45.059067,0.461525,0.036924,0.50155
+2026_12_CAR_TB,n122_residual_league,2026-11-16T01:33:30.636295+00:00,unissued timed research,-5.623725,44.74247,0.357429,0.035611,0.606961
+2026_12_CHI_DET,n122_residual_league,2026-11-16T01:33:30.636295+00:00,unissued timed research,-4.127971,49.984921,0.411099,0.031397,0.557504
+2026_12_DEN_PIT,n122_residual_league,2026-11-16T01:33:30.636295+00:00,unissued timed research,-0.203367,40.580413,0.546716,0.031745,0.421538
+2026_12_GB_LA,n122_residual_league,2026-11-16T01:33:30.636295+00:00,unissued timed research,-3.861439,44.97657,0.419986,0.03059,0.549424
+2026_12_KC_BUF,n122_residual_league,2026-11-16T01:33:30.636295+00:00,unissued timed research,-4.048319,47.043501,0.41383,0.031031,0.555139
+2026_12_LV_CLE,n122_residual_league,2026-11-16T01:33:30.636295+00:00,unissued timed research,-2.502627,42.270228,0.461198,0.036815,0.501987
+2026_12_NE_LAC,n122_residual_league,2026-11-16T01:33:30.636295+00:00,unissued timed research,0.948623,41.456847,0.583476,0.032356,0.384168
+2026_12_NO_CIN,n122_residual_league,2026-11-16T01:33:30.636295+00:00,unissued timed research,-5.361047,48.135244,0.366224,0.036648,0.597128
+2026_12_NYG_IND,n122_residual_league,2026-11-16T01:33:30.636295+00:00,unissued timed research,-2.382436,46.182957,0.464991,0.037912,0.497096
+2026_12_NYJ_MIA,n122_residual_league,2026-11-16T01:33:30.636295+00:00,unissued timed research,-3.80947,42.565233,0.421552,0.030559,0.54789
+2026_12_PHI_DAL,n122_residual_league,2026-11-16T01:33:30.636295+00:00,unissued timed research,-0.837782,48.78777,0.523512,0.034736,0.441752
+2026_12_SEA_SF,n122_residual_league,2026-11-16T01:33:30.636295+00:00,unissued timed research,-0.514364,45.569606,0.53553,0.032458,0.432011
+2026_12_TEN_JAX,n122_residual_league,2026-11-16T01:33:30.636295+00:00,unissued timed research,-11.117369,44.57159,0.216118,0.019951,0.763931
+2026_12_WAS_ARI,n122_residual_league,2026-11-16T01:33:30.636295+00:00,unissued timed research,0.134167,47.314221,0.557435,0.032227,0.410338
+2026_13_BUF_NE,n122_residual_league,2026-11-16T01:33:30.636295+00:00,unissued timed research,3.028925,47.749054,0.645066,0.026913,0.328021
+2026_13_CAR_MIN,n122_residual_league,2026-11-16T01:33:30.636295+00:00,unissued timed research,-7.13232,40.319399,0.309975,0.029963,0.660063
+2026_13_CIN_CLE,n122_residual_league,2026-11-16T01:33:30.636295+00:00,unissued timed research,2.767942,45.703205,0.638412,0.026243,0.335345
+2026_13_DAL_SEA,n122_residual_league,2026-11-16T01:33:30.636295+00:00,unissued timed research,-6.497173,49.157762,0.328255,0.033446,0.6383
+2026_13_DET_ATL,n122_residual_league,2026-11-16T01:33:30.636295+00:00,unissued timed research,4.856117,48.886319,0.69453,0.025027,0.280443
+2026_13_GB_NO,n122_residual_league,2026-11-16T01:33:30.636295+00:00,unissued timed research,2.412845,43.540499,0.630191,0.025206,0.344603
+2026_13_HOU_PIT,n122_residual_league,2026-11-16T01:33:30.636295+00:00,unissued timed research,-0.326138,42.029154,0.542552,0.031846,0.425602
+2026_13_JAX_CHI,n122_residual_league,2026-11-16T01:33:30.636295+00:00,unissued timed research,0.934772,46.061614,0.58301,0.032391,0.3846
+2026_13_KC_LA,n122_residual_league,2026-11-16T01:33:30.636295+00:00,unissued timed research,-2.372543,43.463187,0.465302,0.037998,0.496701
+2026_13_LAC_TB,n122_residual_league,2026-11-16T01:33:30.636295+00:00,unissued timed research,-4.380098,42.141552,0.402153,0.032857,0.56499
+2026_13_MIA_DEN,n122_residual_league,2026-11-16T01:33:30.636295+00:00,unissued timed research,-6.448234,41.188984,0.329794,0.033522,0.636683
+2026_13_PHI_ARI,n122_residual_league,2026-11-16T01:33:30.636295+00:00,unissued timed research,2.426977,43.775107,0.630556,0.025206,0.344238
+2026_13_SF_NYG,n122_residual_league,2026-11-16T01:33:30.636295+00:00,unissued timed research,3.595644,46.34445,0.660035,0.027472,0.312494
+2026_13_WAS_TEN,n122_residual_league,2026-11-16T01:33:30.636295+00:00,unissued timed research,1.667024,45.639038,0.606875,0.029186,0.363939
+2026_14_ATL_CLE,n122_residual_league,2026-11-16T01:33:30.636295+00:00,unissued timed research,-1.074056,41.279133,0.514876,0.036049,0.449075
+2026_14_BUF_GB,n122_residual_league,2026-11-16T01:33:30.636295+00:00,unissued timed research,2.191652,48.556884,0.623691,0.02589,0.350419
+2026_14_CHI_MIA,n122_residual_league,2026-11-16T01:33:30.636295+00:00,unissued timed research,2.638297,44.204938,0.635415,0.025698,0.338888
+2026_14_DEN_NYJ,n122_residual_league,2026-11-16T01:33:30.636295+00:00,unissued timed research,5.239357,41.952223,0.703899,0.024319,0.271782
+2026_14_HOU_WAS,n122_residual_league,2026-11-16T01:33:30.636295+00:00,unissued timed research,2.166048,45.56185,0.622855,0.026008,0.351137
+2026_14_IND_PHI,n122_residual_league,2026-11-16T01:33:30.636295+00:00,unissued timed research,-3.400581,45.038121,0.434376,0.030032,0.535592
+2026_14_KC_CIN,n122_residual_league,2026-11-16T01:33:30.636295+00:00,unissued timed research,0.213477,47.150695,0.559697,0.032507,0.407796
+2026_14_LAC_LV,n122_residual_league,2026-11-16T01:33:30.636295+00:00,unissued timed research,0.53647,43.426445,0.56972,0.033036,0.397244
+2026_14_LA_SF,n122_residual_league,2026-11-16T01:33:30.636295+00:00,unissued timed research,-0.94503,47.85551,0.519534,0.035511,0.444954
+2026_14_MIN_NE,n122_residual_league,2026-11-16T01:33:30.636295+00:00,unissued timed research,-0.078275,38.715307,0.550788,0.031782,0.417429
+2026_14_NO_CAR,n122_residual_league,2026-11-16T01:33:30.636295+00:00,unissued timed research,-1.056104,44.336762,0.515535,0.03597,0.448495
+2026_14_NYG_SEA,n122_residual_league,2026-11-16T01:33:30.636295+00:00,unissued timed research,-8.099626,42.086844,0.283623,0.027253,0.689125
+2026_14_PIT_JAX,n122_residual_league,2026-11-16T01:33:30.636295+00:00,unissued timed research,-5.285377,43.050099,0.368861,0.036817,0.594322
+2026_14_TB_BAL,n122_residual_league,2026-11-16T01:33:30.636295+00:00,unissued timed research,-1.780821,45.233881,0.486799,0.038813,0.474389
+2026_14_TEN_DET,n122_residual_league,2026-11-16T01:33:30.636295+00:00,unissued timed research,-10.965005,48.494896,0.218931,0.020459,0.76061
+2026_15_ATL_WAS,n122_residual_league,2026-11-16T01:33:30.636295+00:00,unissued timed research,-2.249264,46.030461,0.469487,0.03864,0.491873
+2026_15_BAL_PIT,n122_residual_league,2026-11-16T01:33:30.636295+00:00,unissued timed research,-1.145412,43.614765,0.512143,0.03645,0.451407
+2026_15_CHI_BUF,n122_residual_league,2026-11-16T01:33:30.636295+00:00,unissued timed research,-5.702866,49.826159,0.35466,0.035443,0.609898
+2026_15_CIN_CAR,n122_residual_league,2026-11-16T01:33:30.636295+00:00,unissued timed research,2.63216,49.46034,0.635277,0.02568,0.339043
+2026_15_CLE_NYG,n122_residual_league,2026-11-16T01:33:30.636295+00:00,unissued timed research,-2.703347,40.504638,0.455266,0.03463,0.510105
+2026_15_DAL_LA,n122_residual_league,2026-11-16T01:33:30.636295+00:00,unissued timed research,-6.066507,51.443666,0.342173,0.034677,0.62315
+2026_15_DEN_LV,n122_residual_league,2026-11-16T01:33:30.636295+00:00,unissued timed research,4.293871,43.484421,0.679377,0.025941,0.294682
+2026_15_DET_MIN,n122_residual_league,2026-11-16T01:33:30.636295+00:00,unissued timed research,-0.140476,44.16945,0.548753,0.031751,0.419496
+2026_15_IND_TEN,n122_residual_league,2026-11-16T01:33:30.636295+00:00,unissued timed research,2.232035,46.566029,0.625002,0.025706,0.349292
+2026_15_JAX_HOU,n122_residual_league,2026-11-16T01:33:30.636295+00:00,unissued timed research,0.593169,44.494401,0.571662,0.032883,0.395455
+2026_15_MIA_GB,n122_residual_league,2026-11-16T01:33:30.636295+00:00,unissued timed research,-6.149511,42.935663,0.339353,0.034496,0.626151
+2026_15_NE_KC,n122_residual_league,2026-11-16T01:33:30.636295+00:00,unissued timed research,-3.998952,41.74812,0.415541,0.030842,0.553617
+2026_15_NO_TB,n122_residual_league,2026-11-16T01:33:30.636295+00:00,unissued timed research,-5.007047,43.417375,0.378973,0.036287,0.58474
+2026_15_NYJ_ARI,n122_residual_league,2026-11-16T01:33:30.636295+00:00,unissued timed research,-2.816372,45.153336,0.451903,0.033479,0.514618
+2026_15_SEA_PHI,n122_residual_league,2026-11-16T01:33:30.636295+00:00,unissued timed research,2.316609,40.942008,0.627549,0.02539,0.347061
+2026_15_SF_LAC,n122_residual_league,2026-11-16T01:33:30.636295+00:00,unissued timed research,3.246802,45.143616,0.651104,0.026938,0.321958
+2026_16_ARI_NO,n122_residual_league,2026-11-16T01:33:30.636295+00:00,unissued timed research,-3.056982,44.994932,0.444595,0.031776,0.523629
+2026_16_BUF_DEN,n122_residual_league,2026-11-16T01:33:30.636295+00:00,unissued timed research,1.892929,46.810205,0.614098,0.027439,0.358463
+2026_16_CAR_PIT,n122_residual_league,2026-11-16T01:33:30.636295+00:00,unissued conditional time tbd,-5.204395,43.123355,0.371842,0.036659,0.591499
+2026_16_CIN_IND,n122_residual_league,2026-11-16T01:33:30.636295+00:00,unissued conditional time tbd,1.027723,51.381524,0.586142,0.032212,0.381646
+2026_16_CLE_BAL,n122_residual_league,2026-11-16T01:33:30.636295+00:00,unissued timed research,-5.867545,42.396132,0.348997,0.034952,0.616051
+2026_16_GB_CHI,n122_residual_league,2026-11-16T01:33:30.636295+00:00,unissued timed research,-1.507131,45.338607,0.497827,0.037979,0.464194
+2026_16_HOU_PHI,n122_residual_league,2026-11-16T01:33:30.636295+00:00,unissued timed research,-0.126762,42.022736,0.549197,0.031752,0.419051
+2026_16_JAX_DAL,n122_residual_league,2026-11-16T01:33:30.636295+00:00,unissued timed research,2.974189,51.259435,0.643606,0.026835,0.329559
+2026_16_LAC_MIA,n122_residual_league,2026-11-16T01:33:30.636295+00:00,unissued timed research,-0.654731,41.131008,0.530155,0.033422,0.436423
+2026_16_LA_SEA,n122_residual_league,2026-11-16T01:33:30.636295+00:00,unissued timed research,-2.103447,43.597903,0.474706,0.039062,0.486232
+2026_16_NE_NYJ,n122_residual_league,2026-11-16T01:33:30.636295+00:00,unissued timed research,4.103361,42.891072,0.67401,0.026454,0.299536
+2026_16_NYG_DET,n122_residual_league,2026-11-16T01:33:30.636295+00:00,unissued timed research,-7.769842,48.111824,0.292321,0.027943,0.679736
+2026_16_SF_KC,n122_residual_league,2026-11-16T01:33:30.636295+00:00,unissued timed research,-1.700773,45.434889,0.489999,0.038503,0.471497
+2026_16_TB_ATL,n122_residual_league,2026-11-16T01:33:30.636295+00:00,unissued conditional time tbd,1.815216,44.116881,0.611595,0.027981,0.360424
+2026_16_TEN_LV,n122_residual_league,2026-11-16T01:33:30.636295+00:00,unissued timed research,-3.007535,45.010351,0.446114,0.032028,0.521858
+2026_16_WAS_MIN,n122_residual_league,2026-11-16T01:33:30.636295+00:00,unissued conditional time tbd,-6.092893,41.313592,0.341276,0.034618,0.624105
+2026_17_BAL_CIN,n122_residual_league,2026-11-16T01:33:30.636295+00:00,unissued timed research,-1.918742,49.95175,0.481433,0.039038,0.479529
+2026_17_BUF_MIA,n122_residual_league,2026-11-16T01:33:30.636295+00:00,unissued timed research,6.668381,47.423215,0.738588,0.021996,0.239415
+2026_17_DEN_NE,n122_residual_league,2026-11-16T01:33:30.636295+00:00,unissued conditional time tbd,-0.536786,41.514823,0.534677,0.032563,0.43276
+2026_17_DET_CHI,n122_residual_league,2026-11-16T01:33:30.636295+00:00,unissued timed research,0.782407,49.984921,0.578,0.032535,0.389465
+2026_17_HOU_GB,n122_residual_league,2026-11-16T01:33:30.636295+00:00,unissued timed research,-1.49683,43.771394,0.498253,0.037946,0.463801
+2026_17_IND_CLE,n122_residual_league,2026-11-16T01:33:30.636295+00:00,unissued timed research,0.067437,43.825906,0.555438,0.032041,0.41252
+2026_17_KC_LAC,n122_residual_league,2026-11-16T01:33:30.636295+00:00,unissued conditional time tbd,3.274793,40.751294,0.651843,0.026993,0.321164
+2026_17_LA_TB,n122_residual_league,2026-11-16T01:33:30.636295+00:00,unissued conditional time tbd,1.267237,44.853446,0.594011,0.032062,0.373927
+2026_17_LV_ARI,n122_residual_league,2026-11-16T01:33:30.636295+00:00,unissued timed research,-1.870886,46.685534,0.48326,0.038995,0.477745
+2026_17_MIN_NYJ,n122_residual_league,2026-11-16T01:33:30.636295+00:00,unissued timed research,5.697868,39.152707,0.715812,0.023438,0.26075
+2026_17_NO_ATL,n122_residual_league,2026-11-16T01:33:30.636295+00:00,unissued timed research,-1.519049,43.711172,0.497335,0.038017,0.464648
+2026_17_NYG_DAL,n122_residual_league,2026-11-16T01:33:30.636295+00:00,unissued timed research,-3.275235,49.932607,0.438204,0.030385,0.531411
+2026_17_PHI_SF,n122_residual_league,2026-11-16T01:33:30.636295+00:00,unissued timed research,-4.503755,45.199614,0.397545,0.033618,0.568836
+2026_17_PIT_TEN,n122_residual_league,2026-11-16T01:33:30.636295+00:00,unissued timed research,4.15921,42.106343,0.675548,0.026267,0.298184
+2026_17_SEA_CAR,n122_residual_league,2026-11-16T01:33:30.636295+00:00,unissued timed research,5.648845,43.486928,0.714585,0.023552,0.261863
+2026_17_WAS_JAX,n122_residual_league,2026-11-16T01:33:30.636295+00:00,unissued conditional time tbd,-7.777563,46.582795,0.292121,0.027925,0.679954
+2026_18_ATL_CAR,n122_residual_league,2026-11-16T01:33:30.636295+00:00,unissued conditional time tbd,-1.209837,45.036267,0.509649,0.036858,0.453493
+2026_18_CHI_MIN,n122_residual_league,2026-11-16T01:33:30.636295+00:00,unissued conditional time tbd,-2.595666,40.792412,0.458346,0.035866,0.505788
+2026_18_CLE_CIN,n122_residual_league,2026-11-16T01:33:30.636295+00:00,unissued conditional time tbd,-6.113506,45.703205,0.340576,0.034574,0.62485
+2026_18_DAL_WAS,n122_residual_league,2026-11-16T01:33:30.636295+00:00,unissued conditional time tbd,-0.214972,52.326884,0.546341,0.031744,0.421915
+2026_18_DET_GB,n122_residual_league,2026-11-16T01:33:30.636295+00:00,unissued conditional time tbd,0.616757,48.715645,0.57247,0.03282,0.39471
+2026_18_JAX_IND,n122_residual_league,2026-11-16T01:33:30.636295+00:00,unissued conditional time tbd,3.866988,47.509785,0.667376,0.027432,0.305192
+2026_18_LAC_DEN,n122_residual_league,2026-11-16T01:33:30.636295+00:00,unissued conditional time tbd,-5.430183,40.517997,0.363905,0.036419,0.599676
+2026_18_LV_KC,n122_residual_league,2026-11-16T01:33:30.636295+00:00,unissued conditional time tbd,-8.829609,43.717718,0.265898,0.024846,0.709256
+2026_18_MIA_NE,n122_residual_league,2026-11-16T01:33:30.636295+00:00,unissued conditional time tbd,-5.312238,42.127833,0.367891,0.036823,0.595285
+2026_18_NYJ_BUF,n122_residual_league,2026-11-16T01:33:30.636295+00:00,unissued conditional time tbd,-12.150632,48.186454,0.198108,0.01741,0.784481
+2026_18_PHI_NYG,n122_residual_league,2026-11-16T01:33:30.636295+00:00,unissued conditional time tbd,0.764671,41.716852,0.577422,0.03254,0.390038
+2026_18_PIT_BAL,n122_residual_league,2026-11-16T01:33:30.636295+00:00,unissued conditional time tbd,-2.200151,43.614765,0.471244,0.03878,0.489976
+2026_18_SEA_LA,n122_residual_league,2026-11-16T01:33:30.636295+00:00,unissued conditional time tbd,-1.242116,43.597903,0.508404,0.037043,0.454553
+2026_18_SF_ARI,n122_residual_league,2026-11-16T01:33:30.636295+00:00,unissued conditional time tbd,5.25795,48.402705,0.704383,0.024249,0.271368
+2026_18_TB_NO,n122_residual_league,2026-11-16T01:33:30.636295+00:00,unissued conditional time tbd,1.661483,43.417375,0.6067,0.029235,0.364064
+2026_18_TEN_HOU,n122_residual_league,2026-11-16T01:33:30.636295+00:00,unissued conditional time tbd,-8.851418,43.550645,0.265375,0.024777,0.709848
+2026_10_LAC_BAL,n122_residual_matchup,2026-11-16T01:33:30.636295+00:00,unissued timed research,-5.178622,44.486844,0.369995,0.036229,0.593777
+2026_10_PIT_CIN,n122_residual_matchup,2026-11-16T01:33:30.636295+00:00,suppressed kickoff passed,,,,,
+2026_11_ARI_KC,n122_residual_matchup,2026-11-16T01:33:30.636295+00:00,unissued timed research,-10.33209,43.515516,0.239203,0.019802,0.740995
+2026_11_BAL_CAR,n122_residual_matchup,2026-11-16T01:33:30.636295+00:00,unissued timed research,5.746452,46.318353,0.709593,0.020278,0.270129
+2026_11_CIN_WAS,n122_residual_matchup,2026-11-16T01:33:30.636295+00:00,unissued timed research,3.920374,54.935627,0.665899,0.025571,0.30853
+2026_11_IND_HOU,n122_residual_matchup,2026-11-16T01:33:30.636295+00:00,unissued timed research,-5.962026,46.663448,0.339214,0.038982,0.621805
+2026_11_JAX_NYG,n122_residual_matchup,2026-11-16T01:33:30.636295+00:00,unissued timed research,6.757332,43.647855,0.730091,0.020146,0.249763
+2026_11_LV_DEN,n122_residual_matchup,2026-11-16T01:33:30.636295+00:00,unissued timed research,-10.166214,41.321555,0.242642,0.019642,0.737716
+2026_11_MIA_BUF,n122_residual_matchup,2026-11-16T01:33:30.636295+00:00,unissued timed research,-12.971235,49.321172,0.188559,0.017166,0.794275
+2026_11_MIN_SF,n122_residual_matchup,2026-11-16T01:33:30.636295+00:00,unissued timed research,-3.712779,41.976992,0.422046,0.033306,0.544648
+2026_11_NO_CHI,n122_residual_matchup,2026-11-16T01:33:30.636295+00:00,unissued timed research,-6.736314,43.448106,0.311827,0.035987,0.652186
+2026_11_NYJ_LAC,n122_residual_matchup,2026-11-16T01:33:30.636295+00:00,unissued timed research,-6.563198,41.525291,0.317272,0.037526,0.645202
+2026_11_PIT_PHI,n122_residual_matchup,2026-11-16T01:33:30.636295+00:00,unissued timed research,-4.567098,39.809482,0.392672,0.034328,0.573001
+2026_11_TB_DET,n122_residual_matchup,2026-11-16T01:33:30.636295+00:00,unissued timed research,-7.38741,50.171505,0.29556,0.02788,0.67656
+2026_11_TEN_DAL,n122_residual_matchup,2026-11-16T01:33:30.636295+00:00,unissued timed research,-10.834649,51.295812,0.228783,0.020055,0.751161
+2026_12_ATL_MIN,n122_residual_matchup,2026-11-16T01:33:30.636295+00:00,unissued timed research,-9.065853,38.277166,0.264156,0.018016,0.717827
+2026_12_BAL_HOU,n122_residual_matchup,2026-11-16T01:33:30.636295+00:00,unissued timed research,-1.452714,44.55009,0.505248,0.038052,0.4567
+2026_12_CAR_TB,n122_residual_matchup,2026-11-16T01:33:30.636295+00:00,unissued timed research,-7.730736,43.398736,0.288692,0.023303,0.688005
+2026_12_CHI_DET,n122_residual_matchup,2026-11-16T01:33:30.636295+00:00,unissued timed research,-7.481719,52.624572,0.29359,0.026448,0.679961
+2026_12_DEN_PIT,n122_residual_matchup,2026-11-16T01:33:30.636295+00:00,unissued timed research,1.611455,38.297142,0.599047,0.027191,0.373762
+2026_12_GB_LA,n122_residual_matchup,2026-11-16T01:33:30.636295+00:00,unissued timed research,-4.449076,45.210102,0.397038,0.033808,0.569155
+2026_12_KC_BUF,n122_residual_matchup,2026-11-16T01:33:30.636295+00:00,unissued timed research,-6.501767,47.071687,0.319347,0.037943,0.642709
+2026_12_LV_CLE,n122_residual_matchup,2026-11-16T01:33:30.636295+00:00,unissued timed research,-3.093093,39.111211,0.442623,0.035239,0.522138
+2026_12_NE_LAC,n122_residual_matchup,2026-11-16T01:33:30.636295+00:00,unissued timed research,0.783981,40.566682,0.578701,0.02478,0.396518
+2026_12_NO_CIN,n122_residual_matchup,2026-11-16T01:33:30.636295+00:00,unissued timed research,-8.767888,49.026212,0.26951,0.018477,0.712014
+2026_12_NYG_IND,n122_residual_matchup,2026-11-16T01:33:30.636295+00:00,unissued timed research,-2.670477,47.105774,0.456744,0.039461,0.503795
+2026_12_NYJ_MIA,n122_residual_matchup,2026-11-16T01:33:30.636295+00:00,unissued timed research,-5.456071,42.638801,0.359157,0.037635,0.603208
+2026_12_PHI_DAL,n122_residual_matchup,2026-11-16T01:33:30.636295+00:00,unissued timed research,0.062168,51.645978,0.559672,0.02565,0.414678
+2026_12_SEA_SF,n122_residual_matchup,2026-11-16T01:33:30.636295+00:00,unissued timed research,-1.080348,45.97153,0.520429,0.035336,0.444235
+2026_12_TEN_JAX,n122_residual_matchup,2026-11-16T01:33:30.636295+00:00,unissued timed research,-14.832786,43.459742,0.160063,0.014184,0.825753
+2026_12_WAS_ARI,n122_residual_matchup,2026-11-16T01:33:30.636295+00:00,unissued timed research,0.138699,49.988717,0.561775,0.025227,0.412999
+2026_13_BUF_NE,n122_residual_matchup,2026-11-16T01:33:30.636295+00:00,unissued timed research,6.074703,48.250927,0.716535,0.020177,0.263288
+2026_13_CAR_MIN,n122_residual_matchup,2026-11-16T01:33:30.636295+00:00,unissued timed research,-10.063901,38.422802,0.244507,0.019685,0.735807
+2026_13_CIN_CLE,n122_residual_matchup,2026-11-16T01:33:30.636295+00:00,unissued timed research,4.960941,46.543341,0.692412,0.021782,0.285806
+2026_13_DAL_SEA,n122_residual_matchup,2026-11-16T01:33:30.636295+00:00,unissued timed research,-6.365049,51.040768,0.324254,0.038467,0.637279
+2026_13_DET_ATL,n122_residual_matchup,2026-11-16T01:33:30.636295+00:00,unissued timed research,9.114675,50.813567,0.775155,0.021236,0.203609
+2026_13_GB_NO,n122_residual_matchup,2026-11-16T01:33:30.636295+00:00,unissued timed research,4.956484,40.968889,0.692309,0.021793,0.285898
+2026_13_HOU_PIT,n122_residual_matchup,2026-11-16T01:33:30.636295+00:00,unissued timed research,0.36739,39.205103,0.568179,0.024317,0.407504
+2026_13_JAX_CHI,n122_residual_matchup,2026-11-16T01:33:30.636295+00:00,unissued timed research,2.692992,46.63916,0.628764,0.030537,0.340699
+2026_13_KC_LA,n122_residual_matchup,2026-11-16T01:33:30.636295+00:00,unissued timed research,-2.707027,43.056467,0.455529,0.039138,0.505333
+2026_13_LAC_TB,n122_residual_matchup,2026-11-16T01:33:30.636295+00:00,unissued timed research,-3.825956,41.567227,0.417987,0.033748,0.548264
+2026_13_MIA_DEN,n122_residual_matchup,2026-11-16T01:33:30.636295+00:00,unissued timed research,-7.314053,40.792211,0.297045,0.029096,0.673859
+2026_13_PHI_ARI,n122_residual_matchup,2026-11-16T01:33:30.636295+00:00,unissued timed research,5.789946,45.319116,0.71053,0.020244,0.269225
+2026_13_SF_NYG,n122_residual_matchup,2026-11-16T01:33:30.636295+00:00,unissued timed research,6.867644,46.414688,0.732438,0.019823,0.247739
+2026_13_WAS_TEN,n122_residual_matchup,2026-11-16T01:33:30.636295+00:00,unissued timed research,3.577096,46.178102,0.65607,0.02739,0.31654
+2026_14_ATL_CLE,n122_residual_matchup,2026-11-16T01:33:30.636295+00:00,unissued timed research,-2.040538,39.154229,0.480103,0.041807,0.47809
+2026_14_BUF_GB,n122_residual_matchup,2026-11-16T01:33:30.636295+00:00,unissued timed research,4.906867,49.225322,0.691157,0.021922,0.286921
+2026_14_CHI_MIA,n122_residual_matchup,2026-11-16T01:33:30.636295+00:00,unissued timed research,1.501826,45.133804,0.596074,0.026856,0.377071
+2026_14_DEN_NYJ,n122_residual_matchup,2026-11-16T01:33:30.636295+00:00,unissued timed research,7.7647,40.680576,0.750381,0.018921,0.230699
+2026_14_HOU_WAS,n122_residual_matchup,2026-11-16T01:33:30.636295+00:00,unissued timed research,3.120014,45.92389,0.642258,0.029169,0.328573
+2026_14_IND_PHI,n122_residual_matchup,2026-11-16T01:33:30.636295+00:00,unissued timed research,-6.824784,47.267827,0.309231,0.035293,0.655477
+2026_14_KC_CIN,n122_residual_matchup,2026-11-16T01:33:30.636295+00:00,unissued timed research,-0.400881,48.462425,0.545058,0.029131,0.425811
+2026_14_LAC_LV,n122_residual_matchup,2026-11-16T01:33:30.636295+00:00,unissued timed research,2.290813,42.166271,0.617047,0.030639,0.352314
+2026_14_LA_SF,n122_residual_matchup,2026-11-16T01:33:30.636295+00:00,unissued timed research,-1.802533,49.57814,0.490651,0.040262,0.469087
+2026_14_MIN_NE,n122_residual_matchup,2026-11-16T01:33:30.636295+00:00,unissued timed research,0.369717,36.634559,0.568244,0.024314,0.407442
+2026_14_NO_CAR,n122_residual_matchup,2026-11-16T01:33:30.636295+00:00,unissued timed research,-0.768362,41.782737,0.532203,0.032173,0.435624
+2026_14_NYG_SEA,n122_residual_matchup,2026-11-16T01:33:30.636295+00:00,unissued timed research,-10.792719,41.091404,0.229686,0.019935,0.750379
+2026_14_PIT_JAX,n122_residual_matchup,2026-11-16T01:33:30.636295+00:00,unissued timed research,-6.834593,41.760723,0.308949,0.0352,0.655852
+2026_14_TB_BAL,n122_residual_matchup,2026-11-16T01:33:30.636295+00:00,unissued timed research,-3.02114,45.530654,0.445092,0.035887,0.519021
+2026_14_TEN_DET,n122_residual_matchup,2026-11-16T01:33:30.636295+00:00,unissued timed research,-16.284563,49.445154,0.136987,0.016455,0.846558
+2026_15_ATL_WAS,n122_residual_matchup,2026-11-16T01:33:30.636295+00:00,unissued timed research,-3.081106,47.546515,0.44302,0.035336,0.521644
+2026_15_BAL_PIT,n122_residual_matchup,2026-11-16T01:33:30.636295+00:00,unissued timed research,0.583151,43.105284,0.573799,0.02448,0.401721
+2026_15_CHI_BUF,n122_residual_matchup,2026-11-16T01:33:30.636295+00:00,unissued timed research,-9.800934,51.704539,0.249467,0.019433,0.7311
+2026_15_CIN_CAR,n122_residual_matchup,2026-11-16T01:33:30.636295+00:00,unissued timed research,6.331052,51.429909,0.721839,0.019957,0.258203
+2026_15_CLE_NYG,n122_residual_matchup,2026-11-16T01:33:30.636295+00:00,unissued timed research,-2.201977,37.97393,0.473631,0.04186,0.484509
+2026_15_DAL_LA,n122_residual_matchup,2026-11-16T01:33:30.636295+00:00,unissued timed research,-5.642864,54.647378,0.351546,0.038274,0.61018
+2026_15_DEN_LV,n122_residual_matchup,2026-11-16T01:33:30.636295+00:00,unissued timed research,6.829265,41.321555,0.731617,0.019946,0.248437
+2026_15_DET_MIN,n122_residual_matchup,2026-11-16T01:33:30.636295+00:00,unissued timed research,1.717296,45.195571,0.601773,0.027757,0.37047
+2026_15_IND_TEN,n122_residual_matchup,2026-11-16T01:33:30.636295+00:00,unissued timed research,4.072033,46.917661,0.670144,0.024841,0.305015
+2026_15_JAX_HOU,n122_residual_matchup,2026-11-16T01:33:30.636295+00:00,unissued timed research,1.461779,43.205529,0.595018,0.026758,0.378224
+2026_15_MIA_GB,n122_residual_matchup,2026-11-16T01:33:30.636295+00:00,unissued timed research,-6.395893,42.654586,0.323133,0.038374,0.638493
+2026_15_NE_KC,n122_residual_matchup,2026-11-16T01:33:30.636295+00:00,unissued timed research,-4.57836,39.430707,0.392245,0.034388,0.573367
+2026_15_NO_TB,n122_residual_matchup,2026-11-16T01:33:30.636295+00:00,unissued timed research,-6.830623,40.995039,0.309063,0.035237,0.6557
+2026_15_NYJ_ARI,n122_residual_matchup,2026-11-16T01:33:30.636295+00:00,unissued timed research,-3.261923,45.653365,0.437043,0.034284,0.528673
+2026_15_SEA_PHI,n122_residual_matchup,2026-11-16T01:33:30.636295+00:00,unissued timed research,1.297457,41.253457,0.590722,0.026499,0.382779
+2026_15_SF_LAC,n122_residual_matchup,2026-11-16T01:33:30.636295+00:00,unissued timed research,4.866477,45.909115,0.690238,0.021973,0.287789
+2026_16_ARI_NO,n122_residual_matchup,2026-11-16T01:33:30.636295+00:00,unissued timed research,-1.965083,44.079302,0.483532,0.041205,0.475263
+2026_16_BUF_DEN,n122_residual_matchup,2026-11-16T01:33:30.636295+00:00,unissued timed research,3.988707,47.362946,0.667815,0.025241,0.306944
+2026_16_CAR_PIT,n122_residual_matchup,2026-11-16T01:33:30.636295+00:00,unissued conditional time tbd,-6.831776,40.973366,0.30903,0.035226,0.655744
+2026_16_CIN_IND,n122_residual_matchup,2026-11-16T01:33:30.636295+00:00,unissued conditional time tbd,3.425437,55.675185,0.651754,0.027749,0.320497
+2026_16_CLE_BAL,n122_residual_matchup,2026-11-16T01:33:30.636295+00:00,unissued timed research,-7.713291,41.431784,0.289019,0.0235,0.687481
+2026_16_GB_CHI,n122_residual_matchup,2026-11-16T01:33:30.636295+00:00,unissued timed research,-0.111356,45.037954,0.554794,0.026468,0.418737
+2026_16_HOU_PHI,n122_residual_matchup,2026-11-16T01:33:30.636295+00:00,unissued timed research,-2.531233,41.254288,0.46145,0.040577,0.497973
+2026_16_JAX_DAL,n122_residual_matchup,2026-11-16T01:33:30.636295+00:00,unissued timed research,2.329662,53.597219,0.618085,0.030818,0.351097
+2026_16_LAC_MIA,n122_residual_matchup,2026-11-16T01:33:30.636295+00:00,unissued timed research,-0.561347,41.636926,0.539533,0.03057,0.429897
+2026_16_LA_SEA,n122_residual_matchup,2026-11-16T01:33:30.636295+00:00,unissued timed research,-2.390659,44.254857,0.466412,0.041415,0.492173
+2026_16_NE_NYJ,n122_residual_matchup,2026-11-16T01:33:30.636295+00:00,unissued timed research,5.678704,41.568556,0.708158,0.02035,0.271492
+2026_16_NYG_DET,n122_residual_matchup,2026-11-16T01:33:30.636295+00:00,unissued timed research,-11.546058,49.633267,0.213839,0.020923,0.765238
+2026_16_SF_KC,n122_residual_matchup,2026-11-16T01:33:30.636295+00:00,unissued timed research,-0.495863,44.77314,0.541807,0.029989,0.428203
+2026_16_TB_ATL,n122_residual_matchup,2026-11-16T01:33:30.636295+00:00,unissued conditional time tbd,3.395739,43.253099,0.650896,0.027852,0.321252
+2026_16_TEN_LV,n122_residual_matchup,2026-11-16T01:33:30.636295+00:00,unissued timed research,-4.448858,42.48373,0.397045,0.033807,0.569148
+2026_16_WAS_MIN,n122_residual_matchup,2026-11-16T01:33:30.636295+00:00,unissued conditional time tbd,-7.653222,41.92852,0.290148,0.024218,0.685634
+2026_17_BAL_CIN,n122_residual_matchup,2026-11-16T01:33:30.636295+00:00,unissued timed research,-2.253074,53.561828,0.471667,0.041757,0.486576
+2026_17_BUF_MIA,n122_residual_matchup,2026-11-16T01:33:30.636295+00:00,unissued timed research,9.634286,49.321172,0.7862,0.02159,0.192211
+2026_17_DEN_NE,n122_residual_matchup,2026-11-16T01:33:30.636295+00:00,unissued conditional time tbd,0.417522,39.721966,0.569539,0.024293,0.406168
+2026_17_DET_CHI,n122_residual_matchup,2026-11-16T01:33:30.636295+00:00,unissued timed research,4.144769,52.624572,0.672087,0.024523,0.30339
+2026_17_HOU_GB,n122_residual_matchup,2026-11-16T01:33:30.636295+00:00,unissued timed research,-1.994379,41.604323,0.482198,0.041431,0.476371
+2026_17_IND_CLE,n122_residual_matchup,2026-11-16T01:33:30.636295+00:00,unissued timed research,-0.13297,43.545142,0.554095,0.026637,0.419269
+2026_17_KC_LAC,n122_residual_matchup,2026-11-16T01:33:30.636295+00:00,unissued conditional time tbd,3.693866,39.387442,0.659326,0.02697,0.313704
+2026_17_LA_TB,n122_residual_matchup,2026-11-16T01:33:30.636295+00:00,unissued conditional time tbd,2.574937,45.236253,0.625115,0.030897,0.343988
+2026_17_LV_ARI,n122_residual_matchup,2026-11-16T01:33:30.636295+00:00,unissued timed research,-2.326487,46.294345,0.468846,0.041608,0.489546
+2026_17_MIN_NYJ,n122_residual_matchup,2026-11-16T01:33:30.636295+00:00,unissued timed research,7.716895,37.593168,0.749448,0.019015,0.231537
+2026_17_NO_ATL,n122_residual_matchup,2026-11-16T01:33:30.636295+00:00,unissued timed research,-1.766409,41.637101,0.49218,0.040097,0.467723
+2026_17_NYG_DAL,n122_residual_matchup,2026-11-16T01:33:30.636295+00:00,unissued timed research,-6.096144,51.483925,0.334204,0.038895,0.626901
+2026_17_PHI_SF,n122_residual_matchup,2026-11-16T01:33:30.636295+00:00,unissued timed research,-4.046281,46.57674,0.410551,0.03366,0.555789
+2026_17_PIT_TEN,n122_residual_matchup,2026-11-16T01:33:30.636295+00:00,unissued timed research,6.329719,39.459316,0.721812,0.019959,0.258229
+2026_17_SEA_CAR,n122_residual_matchup,2026-11-16T01:33:30.636295+00:00,unissued timed research,9.359383,42.417341,0.780299,0.02136,0.198341
+2026_17_WAS_JAX,n122_residual_matchup,2026-11-16T01:33:30.636295+00:00,unissued conditional time tbd,-9.587216,48.479509,0.253697,0.019011,0.727291
+2026_18_ATL_CAR,n122_residual_matchup,2026-11-16T01:33:30.636295+00:00,unissued conditional time tbd,-0.670427,44.040798,0.535809,0.031334,0.432857
+2026_18_CHI_MIN,n122_residual_matchup,2026-11-16T01:33:30.636295+00:00,unissued conditional time tbd,-4.095948,40.088171,0.408937,0.033593,0.55747
+2026_18_CLE_CIN,n122_residual_matchup,2026-11-16T01:33:30.636295+00:00,unissued conditional time tbd,-8.297891,46.543341,0.27793,0.019461,0.702609
+2026_18_DAL_WAS,n122_residual_matchup,2026-11-16T01:33:30.636295+00:00,unissued conditional time tbd,2.25213,56.315579,0.616028,0.030471,0.3535
+2026_18_DET_GB,n122_residual_matchup,2026-11-16T01:33:30.636295+00:00,unissued conditional time tbd,2.587651,50.145354,0.625506,0.030848,0.343646
+2026_18_JAX_IND,n122_residual_matchup,2026-11-16T01:33:30.636295+00:00,unissued conditional time tbd,5.75533,49.219068,0.709781,0.020269,0.26995
+2026_18_LAC_DEN,n122_residual_matchup,2026-11-16T01:33:30.636295+00:00,unissued conditional time tbd,-6.206926,39.678701,0.330078,0.038832,0.63109
+2026_18_LV_KC,n122_residual_matchup,2026-11-16T01:33:30.636295+00:00,unissued conditional time tbd,-10.990103,41.030296,0.225267,0.020577,0.754156
+2026_18_MIA_NE,n122_residual_matchup,2026-11-16T01:33:30.636295+00:00,unissued conditional time tbd,-5.228057,41.680192,0.368101,0.036484,0.595415
+2026_18_NYJ_BUF,n122_residual_matchup,2026-11-16T01:33:30.636295+00:00,unissued conditional time tbd,-16.758831,49.209536,0.129261,0.017393,0.853346
+2026_18_PHI_NYG,n122_residual_matchup,2026-11-16T01:33:30.636295+00:00,unissued conditional time tbd,4.489838,41.696615,0.681197,0.022845,0.295958
+2026_18_PIT_BAL,n122_residual_matchup,2026-11-16T01:33:30.636295+00:00,unissued conditional time tbd,-3.9201,43.105284,0.414736,0.033809,0.551455
+2026_18_SEA_LA,n122_residual_matchup,2026-11-16T01:33:30.636295+00:00,unissued conditional time tbd,-0.94629,44.254857,0.525458,0.033984,0.440558
+2026_18_SF_ARI,n122_residual_matchup,2026-11-16T01:33:30.636295+00:00,unissued conditional time tbd,8.167752,50.037189,0.757757,0.018418,0.223825
+2026_18_TB_NO,n122_residual_matchup,2026-11-16T01:33:30.636295+00:00,unissued conditional time tbd,3.493674,40.995039,0.65375,0.027548,0.318702
+2026_18_TEN_HOU,n122_residual_matchup,2026-11-16T01:33:30.636295+00:00,unissued conditional time tbd,-11.702533,40.904122,0.210849,0.020728,0.768423
+2026_10_LAC_BAL,n122_residual_scramble,2026-11-16T01:33:30.636295+00:00,unissued timed research,-5.831151,42.673126,0.351659,0.03649,0.611851
+2026_10_PIT_CIN,n122_residual_scramble,2026-11-16T01:33:30.636295+00:00,suppressed kickoff passed,,,,,
+2026_11_ARI_KC,n122_residual_scramble,2026-11-16T01:33:30.636295+00:00,unissued timed research,-8.92494,45.490721,0.266942,0.024429,0.708629
+2026_11_BAL_CAR,n122_residual_scramble,2026-11-16T01:33:30.636295+00:00,unissued timed research,2.127647,44.51511,0.615493,0.032667,0.35184
+2026_11_CIN_WAS,n122_residual_scramble,2026-11-16T01:33:30.636295+00:00,unissued timed research,1.854938,50.409473,0.6059,0.033748,0.360352
+2026_11_IND_HOU,n122_residual_scramble,2026-11-16T01:33:30.636295+00:00,unissued timed research,-3.314979,45.289425,0.439431,0.03351,0.52706
+2026_11_JAX_NYG,n122_residual_scramble,2026-11-16T01:33:30.636295+00:00,unissued timed research,3.156817,46.860379,0.648987,0.025122,0.325891
+2026_11_LV_DEN,n122_residual_scramble,2026-11-16T01:33:30.636295+00:00,unissued timed research,-6.555847,43.287512,0.327116,0.034521,0.638363
+2026_11_MIA_BUF,n122_residual_scramble,2026-11-16T01:33:30.636295+00:00,unissued timed research,-9.531737,47.256357,0.251466,0.025221,0.723313
+2026_11_MIN_SF,n122_residual_scramble,2026-11-16T01:33:30.636295+00:00,unissued timed research,-2.163707,43.288961,0.47799,0.034328,0.487681
+2026_11_NO_CHI,n122_residual_scramble,2026-11-16T01:33:30.636295+00:00,unissued timed research,-6.321047,46.391462,0.335046,0.035009,0.629945
+2026_11_NYJ_LAC,n122_residual_scramble,2026-11-16T01:33:30.636295+00:00,unissued timed research,-5.324378,42.810505,0.369935,0.035888,0.594177
+2026_11_PIT_PHI,n122_residual_scramble,2026-11-16T01:33:30.636295+00:00,unissued timed research,-1.696878,40.776007,0.494184,0.032716,0.4731
+2026_11_TB_DET,n122_residual_scramble,2026-11-16T01:33:30.636295+00:00,unissued timed research,-4.367367,49.427287,0.404388,0.033222,0.56239
+2026_11_TEN_DAL,n122_residual_scramble,2026-11-16T01:33:30.636295+00:00,unissued timed research,-7.742933,49.691645,0.295794,0.025742,0.678464
+2026_12_ATL_MIN,n122_residual_scramble,2026-11-16T01:33:30.636295+00:00,unissued timed research,-9.212681,40.427545,0.259652,0.024347,0.716001
+2026_12_BAL_HOU,n122_residual_scramble,2026-11-16T01:33:30.636295+00:00,unissued timed research,-2.930367,45.448518,0.452948,0.033233,0.513819
+2026_12_CAR_TB,n122_residual_scramble,2026-11-16T01:33:30.636295+00:00,unissued timed research,-5.649694,45.436917,0.358281,0.036362,0.605357
+2026_12_CHI_DET,n122_residual_scramble,2026-11-16T01:33:30.636295+00:00,unissued timed research,-4.630919,47.977406,0.395312,0.033141,0.571547
+2026_12_DEN_PIT,n122_residual_scramble,2026-11-16T01:33:30.636295+00:00,unissued timed research,-0.925204,41.993546,0.519664,0.029668,0.450668
+2026_12_GB_LA,n122_residual_scramble,2026-11-16T01:33:30.636295+00:00,unissued timed research,-2.370697,46.768927,0.471092,0.034218,0.49469
+2026_12_KC_BUF,n122_residual_scramble,2026-11-16T01:33:30.636295+00:00,unissued timed research,-4.469257,46.91407,0.401014,0.033018,0.565968
+2026_12_LV_CLE,n122_residual_scramble,2026-11-16T01:33:30.636295+00:00,unissued timed research,-3.280406,41.367585,0.440608,0.033503,0.525889
+2026_12_NE_LAC,n122_residual_scramble,2026-11-16T01:33:30.636295+00:00,unissued timed research,-0.3456,40.715478,0.537737,0.029093,0.43317
+2026_12_NO_CIN,n122_residual_scramble,2026-11-16T01:33:30.636295+00:00,unissued timed research,-7.720738,48.563154,0.296326,0.025853,0.677822
+2026_12_NYG_IND,n122_residual_scramble,2026-11-16T01:33:30.636295+00:00,unissued timed research,-1.281597,45.265308,0.508477,0.031061,0.460462
+2026_12_NYJ_MIA,n122_residual_scramble,2026-11-16T01:33:30.636295+00:00,unissued timed research,-4.161585,39.899921,0.411271,0.033476,0.555253
+2026_12_PHI_DAL,n122_residual_scramble,2026-11-16T01:33:30.636295+00:00,unissued timed research,0.332854,47.483061,0.557158,0.03053,0.412312
+2026_12_SEA_SF,n122_residual_scramble,2026-11-16T01:33:30.636295+00:00,unissued timed research,-0.80239,41.662886,0.523557,0.029421,0.447021
+2026_12_TEN_JAX,n122_residual_scramble,2026-11-16T01:33:30.636295+00:00,unissued timed research,-9.458184,42.665252,0.253389,0.024961,0.72165
+2026_12_WAS_ARI,n122_residual_scramble,2026-11-16T01:33:30.636295+00:00,unissued timed research,-1.959527,49.143025,0.485154,0.033424,0.481422
+2026_13_BUF_NE,n122_residual_scramble,2026-11-16T01:33:30.636295+00:00,unissued timed research,2.35437,48.325085,0.62306,0.031337,0.345602
+2026_13_CAR_MIN,n122_residual_scramble,2026-11-16T01:33:30.636295+00:00,unissued timed research,-8.815967,38.413062,0.269817,0.024229,0.705954
+2026_13_CIN_CLE,n122_residual_scramble,2026-11-16T01:33:30.636295+00:00,unissued timed research,4.153241,42.829944,0.674027,0.02263,0.303342
+2026_13_DAL_SEA,n122_residual_scramble,2026-11-16T01:33:30.636295+00:00,unissued timed research,-5.093146,48.832356,0.378517,0.035076,0.586407
+2026_13_DET_ATL,n122_residual_scramble,2026-11-16T01:33:30.636295+00:00,unissued timed research,5.939705,48.689409,0.716576,0.02357,0.259854
+2026_13_GB_NO,n122_residual_scramble,2026-11-16T01:33:30.636295+00:00,unissued timed research,3.233668,42.726192,0.651164,0.024746,0.32409
+2026_13_HOU_PIT,n122_residual_scramble,2026-11-16T01:33:30.636295+00:00,unissued timed research,-1.476783,42.887451,0.501599,0.0323,0.4661
+2026_13_JAX_CHI,n122_residual_scramble,2026-11-16T01:33:30.636295+00:00,unissued timed research,4.058131,47.883547,0.671849,0.022644,0.305507
+2026_13_KC_LA,n122_residual_scramble,2026-11-16T01:33:30.636295+00:00,unissued timed research,-0.509487,46.299164,0.532878,0.029111,0.43801
+2026_13_LAC_TB,n122_residual_scramble,2026-11-16T01:33:30.636295+00:00,unissued timed research,-6.614956,43.556738,0.32533,0.034192,0.640478
+2026_13_MIA_DEN,n122_residual_scramble,2026-11-16T01:33:30.636295+00:00,unissued timed research,-6.481206,40.645615,0.329514,0.034798,0.635688
+2026_13_PHI_ARI,n122_residual_scramble,2026-11-16T01:33:30.636295+00:00,unissued timed research,4.005004,45.251772,0.670646,0.022707,0.306647
+2026_13_SF_NYG,n122_residual_scramble,2026-11-16T01:33:30.636295+00:00,unissued timed research,3.717563,43.697638,0.663519,0.023649,0.312832
+2026_13_WAS_TEN,n122_residual_scramble,2026-11-16T01:33:30.636295+00:00,unissued timed research,0.257262,42.765778,0.554789,0.030255,0.414956
+2026_14_ATL_CLE,n122_residual_scramble,2026-11-16T01:33:30.636295+00:00,unissued timed research,-2.157319,42.020283,0.478215,0.034287,0.487498
+2026_14_BUF_GB,n122_residual_scramble,2026-11-16T01:33:30.636295+00:00,unissued timed research,3.638591,51.370938,0.661551,0.023834,0.314615
+2026_14_CHI_MIA,n122_residual_scramble,2026-11-16T01:33:30.636295+00:00,unissued timed research,-0.288531,43.089866,0.539348,0.029061,0.431591
+2026_14_DEN_NYJ,n122_residual_scramble,2026-11-16T01:33:30.636295+00:00,unissued timed research,5.437269,41.975505,0.704072,0.023798,0.27213
+2026_14_HOU_WAS,n122_residual_scramble,2026-11-16T01:33:30.636295+00:00,unissued timed research,1.521448,47.007087,0.594071,0.034153,0.371775
+2026_14_IND_PHI,n122_residual_scramble,2026-11-16T01:33:30.636295+00:00,unissued timed research,-2.368517,44.031377,0.471165,0.034225,0.49461
+2026_14_KC_CIN,n122_residual_scramble,2026-11-16T01:33:30.636295+00:00,unissued timed research,-0.264765,48.363651,0.540001,0.029064,0.430935
+2026_14_LAC_LV,n122_residual_scramble,2026-11-16T01:33:30.636295+00:00,unissued timed research,0.519235,42.512229,0.562883,0.03111,0.406006
+2026_14_LA_SF,n122_residual_scramble,2026-11-16T01:33:30.636295+00:00,unissued timed research,-2.130163,48.379626,0.479156,0.034124,0.48672
+2026_14_MIN_NE,n122_residual_scramble,2026-11-16T01:33:30.636295+00:00,unissued timed research,1.850671,37.942359,0.605745,0.033756,0.3605
+2026_14_NO_CAR,n122_residual_scramble,2026-11-16T01:33:30.636295+00:00,unissued timed research,-2.153937,44.439471,0.478333,0.034265,0.487401
+2026_14_NYG_SEA,n122_residual_scramble,2026-11-16T01:33:30.636295+00:00,unissued timed research,-7.762044,41.986451,0.295336,0.025646,0.679017
+2026_14_PIT_JAX,n122_residual_scramble,2026-11-16T01:33:30.636295+00:00,unissued timed research,-5.706315,42.920668,0.356235,0.036375,0.60739
+2026_14_TB_BAL,n122_residual_scramble,2026-11-16T01:33:30.636295+00:00,unissued timed research,-2.691519,45.010869,0.46091,0.03345,0.50564
+2026_14_TEN_DET,n122_residual_scramble,2026-11-16T01:33:30.636295+00:00,unissued timed research,-10.073679,48.885369,0.237938,0.025206,0.736856
+2026_15_ATL_WAS,n122_residual_scramble,2026-11-16T01:33:30.636295+00:00,unissued timed research,-3.073051,45.886751,0.447937,0.033221,0.518842
+2026_15_BAL_PIT,n122_residual_scramble,2026-11-16T01:33:30.636295+00:00,unissued timed research,-3.344564,42.81357,0.438408,0.033545,0.528047
+2026_15_CHI_BUF,n122_residual_scramble,2026-11-16T01:33:30.636295+00:00,unissued timed research,-3.435644,51.570064,0.435199,0.033795,0.531007
+2026_15_CIN_CAR,n122_residual_scramble,2026-11-16T01:33:30.636295+00:00,unissued timed research,-0.638022,49.364607,0.528744,0.029313,0.441943
+2026_15_CLE_NYG,n122_residual_scramble,2026-11-16T01:33:30.636295+00:00,unissued timed research,-3.042437,39.712509,0.449032,0.033204,0.517765
+2026_15_DAL_LA,n122_residual_scramble,2026-11-16T01:33:30.636295+00:00,unissued timed research,-4.619568,54.25772,0.395717,0.033117,0.571166
+2026_15_DEN_LV,n122_residual_scramble,2026-11-16T01:33:30.636295+00:00,unissued timed research,3.430943,44.058399,0.656442,0.024166,0.319391
+2026_15_DET_MIN,n122_residual_scramble,2026-11-16T01:33:30.636295+00:00,unissued timed research,-0.083933,42.239923,0.544886,0.029448,0.425666
+2026_15_IND_TEN,n122_residual_scramble,2026-11-16T01:33:30.636295+00:00,unissued timed research,3.088793,45.95199,0.647058,0.025488,0.327454
+2026_15_JAX_HOU,n122_residual_scramble,2026-11-16T01:33:30.636295+00:00,unissued timed research,3.882432,43.38208,0.667699,0.023009,0.309292
+2026_15_MIA_GB,n122_residual_scramble,2026-11-16T01:33:30.636295+00:00,unissued timed research,-5.291138,44.789499,0.371153,0.035754,0.593093
+2026_15_NE_KC,n122_residual_scramble,2026-11-16T01:33:30.636295+00:00,unissued timed research,-5.15289,38.404999,0.376226,0.035332,0.588442
+2026_15_NO_TB,n122_residual_scramble,2026-11-16T01:33:30.636295+00:00,unissued timed research,-3.555104,44.971049,0.43107,0.034091,0.534839
+2026_15_NYJ_ARI,n122_residual_scramble,2026-11-16T01:33:30.636295+00:00,unissued timed research,-1.324067,47.202767,0.506997,0.031353,0.46165
+2026_15_SEA_PHI,n122_residual_scramble,2026-11-16T01:33:30.636295+00:00,unissued timed research,1.514748,43.08044,0.593839,0.034178,0.371983
+2026_15_SF_LAC,n122_residual_scramble,2026-11-16T01:33:30.636295+00:00,unissued timed research,4.272191,41.8056,0.676825,0.022788,0.300387
+2026_16_ARI_NO,n122_residual_scramble,2026-11-16T01:33:30.636295+00:00,unissued timed research,-3.673729,49.188678,0.427018,0.034444,0.538537
+2026_16_BUF_DEN,n122_residual_scramble,2026-11-16T01:33:30.636295+00:00,unissued timed research,1.253341,46.985855,0.584907,0.034901,0.380192
+2026_16_CAR_PIT,n122_residual_scramble,2026-11-16T01:33:30.636295+00:00,unissued conditional time tbd,-3.940196,42.845801,0.418535,0.03407,0.547395
+2026_16_CIN_IND,n122_residual_scramble,2026-11-16T01:33:30.636295+00:00,unissued conditional time tbd,0.741056,51.336463,0.569226,0.032709,0.398066
+2026_16_CLE_BAL,n122_residual_scramble,2026-11-16T01:33:30.636295+00:00,unissued timed research,-6.201769,42.780479,0.339057,0.035349,0.625594
+2026_16_GB_CHI,n122_residual_scramble,2026-11-16T01:33:30.636295+00:00,unissued timed research,-0.269162,44.324231,0.53988,0.029064,0.431057
+2026_16_HOU_PHI,n122_residual_scramble,2026-11-16T01:33:30.636295+00:00,unissued timed research,1.746079,44.695619,0.602113,0.03379,0.364097
+2026_16_JAX_DAL,n122_residual_scramble,2026-11-16T01:33:30.636295+00:00,unissued timed research,4.207295,51.917146,0.67528,0.022676,0.302044
+2026_16_LAC_MIA,n122_residual_scramble,2026-11-16T01:33:30.636295+00:00,unissued timed research,-0.589725,42.605619,0.53029,0.029215,0.440495
+2026_16_LA_SEA,n122_residual_scramble,2026-11-16T01:33:30.636295+00:00,unissued timed research,-3.153299,40.259887,0.445054,0.033302,0.521644
+2026_16_NE_NYJ,n122_residual_scramble,2026-11-16T01:33:30.636295+00:00,unissued timed research,4.590723,45.089075,0.684335,0.023945,0.29172
+2026_16_NYG_DET,n122_residual_scramble,2026-11-16T01:33:30.636295+00:00,unissued timed research,-5.414341,52.230567,0.366728,0.036099,0.597173
+2026_16_SF_KC,n122_residual_scramble,2026-11-16T01:33:30.636295+00:00,unissued timed research,-0.477859,44.070354,0.533868,0.029103,0.437029
+2026_16_TB_ATL,n122_residual_scramble,2026-11-16T01:33:30.636295+00:00,unissued conditional time tbd,0.335088,47.511211,0.557228,0.030539,0.412234
+2026_16_TEN_LV,n122_residual_scramble,2026-11-16T01:33:30.636295+00:00,unissued timed research,-1.34483,45.666058,0.506258,0.031501,0.462241
+2026_16_WAS_MIN,n122_residual_scramble,2026-11-16T01:33:30.636295+00:00,unissued conditional time tbd,-3.184842,39.800935,0.443903,0.03337,0.522726
+2026_17_BAL_CIN,n122_residual_scramble,2026-11-16T01:33:30.636295+00:00,unissued timed research,-0.648982,49.210381,0.52841,0.029312,0.442278
+2026_17_BUF_MIA,n122_residual_scramble,2026-11-16T01:33:30.636295+00:00,unissued timed research,7.985699,48.50387,0.759087,0.016369,0.224544
+2026_17_DEN_NE,n122_residual_scramble,2026-11-16T01:33:30.636295+00:00,unissued conditional time tbd,-2.071768,39.563424,0.481203,0.033848,0.484949
+2026_17_DET_CHI,n122_residual_scramble,2026-11-16T01:33:30.636295+00:00,unissued timed research,0.241787,48.806462,0.554304,0.030198,0.415498
+2026_17_HOU_GB,n122_residual_scramble,2026-11-16T01:33:30.636295+00:00,unissued timed research,-2.085063,42.963155,0.480735,0.033907,0.485358
+2026_17_IND_CLE,n122_residual_scramble,2026-11-16T01:33:30.636295+00:00,unissued timed research,2.375248,44.281878,0.623732,0.031224,0.345044
+2026_17_KC_LAC,n122_residual_scramble,2026-11-16T01:33:30.636295+00:00,unissued conditional time tbd,3.898653,40.355875,0.668101,0.022958,0.308941
+2026_17_LA_TB,n122_residual_scramble,2026-11-16T01:33:30.636295+00:00,unissued conditional time tbd,2.832111,42.300377,0.638876,0.027587,0.333538
+2026_17_LV_ARI,n122_residual_scramble,2026-11-16T01:33:30.636295+00:00,unissued timed research,-0.941534,48.180127,0.519147,0.029713,0.451139
+2026_17_MIN_NYJ,n122_residual_scramble,2026-11-16T01:33:30.636295+00:00,unissued timed research,5.585273,38.813663,0.708136,0.023513,0.268352
+2026_17_NO_ATL,n122_residual_scramble,2026-11-16T01:33:30.636295+00:00,unissued timed research,-0.698226,42.896865,0.526858,0.029326,0.443816
+2026_17_NYG_DAL,n122_residual_scramble,2026-11-16T01:33:30.636295+00:00,unissued timed research,-2.682446,51.851025,0.461192,0.033465,0.505343
+2026_17_PHI_SF,n122_residual_scramble,2026-11-16T01:33:30.636295+00:00,unissued timed research,-4.57329,46.247451,0.397398,0.033038,0.569564
+2026_17_PIT_TEN,n122_residual_scramble,2026-11-16T01:33:30.636295+00:00,unissued timed research,4.496792,42.00595,0.682178,0.023557,0.294265
+2026_17_SEA_CAR,n122_residual_scramble,2026-11-16T01:33:30.636295+00:00,unissued timed research,6.393817,43.944889,0.726755,0.022667,0.250578
+2026_17_WAS_JAX,n122_residual_scramble,2026-11-16T01:33:30.636295+00:00,unissued conditional time tbd,-10.360263,45.56054,0.231831,0.024068,0.744101
+2026_18_ATL_CAR,n122_residual_scramble,2026-11-16T01:33:30.636295+00:00,unissued conditional time tbd,-0.043239,44.800884,0.545974,0.029537,0.42449
+2026_18_CHI_MIN,n122_residual_scramble,2026-11-16T01:33:30.636295+00:00,unissued conditional time tbd,-3.476885,40.178372,0.433772,0.033863,0.532365
+2026_18_CLE_CIN,n122_residual_scramble,2026-11-16T01:33:30.636295+00:00,unissued conditional time tbd,-8.066914,44.930257,0.287893,0.024756,0.687351
+2026_18_DAL_WAS,n122_residual_scramble,2026-11-16T01:33:30.636295+00:00,unissued conditional time tbd,-2.327469,55.659735,0.472522,0.034355,0.493123
+2026_18_DET_GB,n122_residual_scramble,2026-11-16T01:33:30.636295+00:00,unissued conditional time tbd,1.800373,47.0996,0.603984,0.033797,0.362219
+2026_18_JAX_IND,n122_residual_scramble,2026-11-16T01:33:30.636295+00:00,unissued conditional time tbd,4.608359,44.887891,0.684726,0.024016,0.291258
+2026_18_LAC_DEN,n122_residual_scramble,2026-11-16T01:33:30.636295+00:00,unissued conditional time tbd,-6.901584,43.332051,0.317017,0.032144,0.650838
+2026_18_LV_KC,n122_residual_scramble,2026-11-16T01:33:30.636295+00:00,unissued conditional time tbd,-8.42576,42.41275,0.279066,0.024413,0.696521
+2026_18_MIA_NE,n122_residual_scramble,2026-11-16T01:33:30.636295+00:00,unissued conditional time tbd,-5.038504,41.260024,0.38058,0.03486,0.58456
+2026_18_NYJ_BUF,n122_residual_scramble,2026-11-16T01:33:30.636295+00:00,unissued conditional time tbd,-11.720874,48.925552,0.203609,0.019921,0.77647
+2026_18_PHI_NYG,n122_residual_scramble,2026-11-16T01:33:30.636295+00:00,unissued conditional time tbd,0.226412,39.615138,0.553834,0.030148,0.416018
+2026_18_PIT_BAL,n122_residual_scramble,2026-11-16T01:33:30.636295+00:00,unissued conditional time tbd,-2.895448,43.941978,0.454166,0.033244,0.51259
+2026_18_SEA_LA,n122_residual_scramble,2026-11-16T01:33:30.636295+00:00,unissued conditional time tbd,1.616437,44.431699,0.597498,0.03391,0.368592
+2026_18_SF_ARI,n122_residual_scramble,2026-11-16T01:33:30.636295+00:00,unissued conditional time tbd,3.577079,46.265229,0.66009,0.023937,0.315973
+2026_18_TB_NO,n122_residual_scramble,2026-11-16T01:33:30.636295+00:00,unissued conditional time tbd,2.942213,45.994603,0.642603,0.026577,0.33082
+2026_18_TEN_HOU,n122_residual_scramble,2026-11-16T01:33:30.636295+00:00,unissued conditional time tbd,-9.290204,43.940898,0.257669,0.02437,0.717961
+2026_10_LAC_BAL,n113_team_strength_margin,,Week 1 fixed-state projection given matchup,-2.237723,,0.456302,0.037459,0.506239
+2026_10_LAC_BAL,n114_opponent_adjusted_scoring_total,,Week 1 fixed-state projection given matchup,,41.334703,,,
+2026_11_ARI_KC,n113_team_strength_margin,,Week 1 fixed-state projection given matchup,-5.014396,,0.350185,0.043701,0.606114
+2026_11_ARI_KC,n114_opponent_adjusted_scoring_total,,Week 1 fixed-state projection given matchup,,41.105877,,,
+2026_11_BAL_CAR,n113_team_strength_margin,,Week 1 fixed-state projection given matchup,-1.903692,,0.456302,0.037459,0.506239
+2026_11_BAL_CAR,n114_opponent_adjusted_scoring_total,,Week 1 fixed-state projection given matchup,,43.221129,,,
+2026_11_CIN_WAS,n113_team_strength_margin,,Week 1 fixed-state projection given matchup,-0.843033,,0.493755,0.018733,0.487513
+2026_11_CIN_WAS,n114_opponent_adjusted_scoring_total,,Week 1 fixed-state projection given matchup,,46.886856,,,
+2026_11_IND_HOU,n113_team_strength_margin,,Week 1 fixed-state projection given matchup,-3.451115,,0.425091,0.031217,0.543692
+2026_11_IND_HOU,n114_opponent_adjusted_scoring_total,,Week 1 fixed-state projection given matchup,,47.042455,,,
+2026_11_JAX_NYG,n113_team_strength_margin,,Week 1 fixed-state projection given matchup,2.207601,,0.599871,0.049944,0.350185
+2026_11_JAX_NYG,n114_opponent_adjusted_scoring_total,,Week 1 fixed-state projection given matchup,,46.594999,,,
+2026_11_LV_DEN,n113_team_strength_margin,,Week 1 fixed-state projection given matchup,-11.353796,,0.212858,0.024975,0.762168
+2026_11_LV_DEN,n114_opponent_adjusted_scoring_total,,Week 1 fixed-state projection given matchup,,42.217457,,,
+2026_11_MIA_BUF,n113_team_strength_margin,,Week 1 fixed-state projection given matchup,-8.122293,,0.275279,0.012491,0.71223
+2026_11_MIA_BUF,n114_opponent_adjusted_scoring_total,,Week 1 fixed-state projection given matchup,,45.873769,,,
+2026_11_MIN_SF,n113_team_strength_margin,,Week 1 fixed-state projection given matchup,-3.88213,,0.39388,0.031217,0.574903
+2026_11_MIN_SF,n114_opponent_adjusted_scoring_total,,Week 1 fixed-state projection given matchup,,41.133288,,,
+2026_11_NO_CHI,n113_team_strength_margin,,Week 1 fixed-state projection given matchup,-8.641093,,0.256553,0.018733,0.724715
+2026_11_NO_CHI,n114_opponent_adjusted_scoring_total,,Week 1 fixed-state projection given matchup,,42.289536,,,
+2026_11_NYJ_LAC,n113_team_strength_margin,,Week 1 fixed-state projection given matchup,-8.517462,,0.256553,0.018733,0.724715
+2026_11_NYJ_LAC,n114_opponent_adjusted_scoring_total,,Week 1 fixed-state projection given matchup,,39.990174,,,
+2026_11_PIT_PHI,n113_team_strength_margin,,Week 1 fixed-state projection given matchup,-2.005803,,0.456302,0.037459,0.506239
+2026_11_PIT_PHI,n114_opponent_adjusted_scoring_total,,Week 1 fixed-state projection given matchup,,40.454337,,,
+2026_11_TB_DET,n113_team_strength_margin,,Week 1 fixed-state projection given matchup,-7.126011,,0.287763,0.037459,0.674777
+2026_11_TB_DET,n114_opponent_adjusted_scoring_total,,Week 1 fixed-state projection given matchup,,44.875558,,,
+2026_11_TEN_DAL,n113_team_strength_margin,,Week 1 fixed-state projection given matchup,-4.702031,,0.350185,0.043701,0.606114
+2026_11_TEN_DAL,n114_opponent_adjusted_scoring_total,,Week 1 fixed-state projection given matchup,,49.212919,,,
+2026_12_ATL_MIN,n113_team_strength_margin,,Week 1 fixed-state projection given matchup,-4.517088,,0.350185,0.043701,0.606114
+2026_12_ATL_MIN,n114_opponent_adjusted_scoring_total,,Week 1 fixed-state projection given matchup,,40.206471,,,
+2026_12_BAL_HOU,n113_team_strength_margin,,Week 1 fixed-state projection given matchup,-6.050829,,0.325216,0.024975,0.649809
+2026_12_BAL_HOU,n114_opponent_adjusted_scoring_total,,Week 1 fixed-state projection given matchup,,44.916315,,,
+2026_12_CAR_TB,n113_team_strength_margin,,Week 1 fixed-state projection given matchup,-0.672687,,0.493755,0.018733,0.487513
+2026_12_CAR_TB,n114_opponent_adjusted_scoring_total,,Week 1 fixed-state projection given matchup,,41.972828,,,
+2026_12_CHI_DET,n113_team_strength_margin,,Week 1 fixed-state projection given matchup,-2.636992,,0.425091,0.031217,0.543692
+2026_12_CHI_DET,n114_opponent_adjusted_scoring_total,,Week 1 fixed-state projection given matchup,,46.098947,,,
+2026_12_DEN_PIT,n113_team_strength_margin,,Week 1 fixed-state projection given matchup,0.018876,,0.512481,0.037459,0.45006
+2026_12_DEN_PIT,n114_opponent_adjusted_scoring_total,,Week 1 fixed-state projection given matchup,,43.295874,,,
+2026_12_GB_LA,n113_team_strength_margin,,Week 1 fixed-state projection given matchup,-7.142229,,0.287763,0.037459,0.674777
+2026_12_GB_LA,n114_opponent_adjusted_scoring_total,,Week 1 fixed-state projection given matchup,,49.930386,,,
+2026_12_KC_BUF,n113_team_strength_margin,,Week 1 fixed-state projection given matchup,-6.304273,,0.325216,0.024975,0.649809
+2026_12_KC_BUF,n114_opponent_adjusted_scoring_total,,Week 1 fixed-state projection given matchup,,43.8976,,,
+2026_12_LV_CLE,n113_team_strength_margin,,Week 1 fixed-state projection given matchup,-4.403062,,0.39388,0.031217,0.574903
+2026_12_LV_CLE,n114_opponent_adjusted_scoring_total,,Week 1 fixed-state projection given matchup,,38.8474,,,
+2026_12_NE_LAC,n113_team_strength_margin,,Week 1 fixed-state projection given matchup,3.064478,,0.649809,0.024975,0.325216
+2026_12_NE_LAC,n114_opponent_adjusted_scoring_total,,Week 1 fixed-state projection given matchup,,41.467314,,,
+2026_12_NO_CIN,n113_team_strength_margin,,Week 1 fixed-state projection given matchup,-4.804472,,0.350185,0.043701,0.606114
+2026_12_NO_CIN,n114_opponent_adjusted_scoring_total,,Week 1 fixed-state projection given matchup,,44.260435,,,
+2026_12_NYG_IND,n113_team_strength_margin,,Week 1 fixed-state projection given matchup,-6.229607,,0.325216,0.024975,0.649809
+2026_12_NYG_IND,n114_opponent_adjusted_scoring_total,,Week 1 fixed-state projection given matchup,,47.608716,,,
+2026_12_NYJ_MIA,n113_team_strength_margin,,Week 1 fixed-state projection given matchup,-5.855846,,0.325216,0.024975,0.649809
+2026_12_NYJ_MIA,n114_opponent_adjusted_scoring_total,,Week 1 fixed-state projection given matchup,,41.684352,,,
+2026_12_PHI_DAL,n113_team_strength_margin,,Week 1 fixed-state projection given matchup,-1.270608,,0.493755,0.018733,0.487513
+2026_12_PHI_DAL,n114_opponent_adjusted_scoring_total,,Week 1 fixed-state projection given matchup,,45.559897,,,
+2026_12_SEA_SF,n113_team_strength_margin,,Week 1 fixed-state projection given matchup,3.887158,,0.674777,0.031217,0.294006
+2026_12_SEA_SF,n114_opponent_adjusted_scoring_total,,Week 1 fixed-state projection given matchup,,45.92928,,,
+2026_12_TEN_JAX,n113_team_strength_margin,,Week 1 fixed-state projection given matchup,-9.435396,,0.256553,0.018733,0.724715
+2026_12_TEN_JAX,n114_opponent_adjusted_scoring_total,,Week 1 fixed-state projection given matchup,,46.690516,,,
+2026_12_WAS_ARI,n113_team_strength_margin,,Week 1 fixed-state projection given matchup,-2.172105,,0.456302,0.037459,0.506239
+2026_12_WAS_ARI,n114_opponent_adjusted_scoring_total,,Week 1 fixed-state projection given matchup,,44.994034,,,
+2026_13_BUF_NE,n113_team_strength_margin,,Week 1 fixed-state projection given matchup,-4.773614,,0.350185,0.043701,0.606114
+2026_13_BUF_NE,n114_opponent_adjusted_scoring_total,,Week 1 fixed-state projection given matchup,,47.707511,,,
+2026_13_CAR_MIN,n113_team_strength_margin,,Week 1 fixed-state projection given matchup,-3.151433,,0.425091,0.031217,0.543692
+2026_13_CAR_MIN,n114_opponent_adjusted_scoring_total,,Week 1 fixed-state projection given matchup,,38.58394,,,
+2026_13_CIN_CLE,n113_team_strength_margin,,Week 1 fixed-state projection given matchup,0.473198,,0.512481,0.037459,0.45006
+2026_13_CIN_CLE,n114_opponent_adjusted_scoring_total,,Week 1 fixed-state projection given matchup,,43.342537,,,
+2026_13_DAL_SEA,n113_team_strength_margin,,Week 1 fixed-state projection given matchup,-11.810257,,0.187889,0.024975,0.787136
+2026_13_DAL_SEA,n114_opponent_adjusted_scoring_total,,Week 1 fixed-state projection given matchup,,48.523643,,,
+2026_13_DET_ATL,n113_team_strength_margin,,Week 1 fixed-state projection given matchup,1.994538,,0.599871,0.049944,0.350185
+2026_13_DET_ATL,n114_opponent_adjusted_scoring_total,,Week 1 fixed-state projection given matchup,,46.237506,,,
+2026_13_GB_NO,n113_team_strength_margin,,Week 1 fixed-state projection given matchup,2.603175,,0.649809,0.024975,0.325216
+2026_13_GB_NO,n114_opponent_adjusted_scoring_total,,Week 1 fixed-state projection given matchup,,42.881105,,,
+2026_13_HOU_PIT,n113_team_strength_margin,,Week 1 fixed-state projection given matchup,1.14327,,0.549934,0.049944,0.400122
+2026_13_HOU_PIT,n114_opponent_adjusted_scoring_total,,Week 1 fixed-state projection given matchup,,43.445582,,,
+2026_13_JAX_CHI,n113_team_strength_margin,,Week 1 fixed-state projection given matchup,-1.317875,,0.493755,0.018733,0.487513
+2026_13_JAX_CHI,n114_opponent_adjusted_scoring_total,,Week 1 fixed-state projection given matchup,,45.817524,,,
+2026_13_KC_LA,n113_team_strength_margin,,Week 1 fixed-state projection given matchup,-8.861088,,0.256553,0.018733,0.724715
+2026_13_KC_LA,n114_opponent_adjusted_scoring_total,,Week 1 fixed-state projection given matchup,,45.686428,,,
+2026_13_LAC_TB,n113_team_strength_margin,,Week 1 fixed-state projection given matchup,-0.034225,,0.512481,0.037459,0.45006
+2026_13_LAC_TB,n114_opponent_adjusted_scoring_total,,Week 1 fixed-state projection given matchup,,40.086402,,,
+2026_13_MIA_DEN,n113_team_strength_margin,,Week 1 fixed-state projection given matchup,-7.435836,,0.287763,0.037459,0.674777
+2026_13_MIA_DEN,n114_opponent_adjusted_scoring_total,,Week 1 fixed-state projection given matchup,,43.065475,,,
+2026_13_PHI_ARI,n113_team_strength_margin,,Week 1 fixed-state projection given matchup,0.669449,,0.549934,0.049944,0.400122
+2026_13_PHI_ARI,n114_opponent_adjusted_scoring_total,,Week 1 fixed-state projection given matchup,,41.978235,,,
+2026_13_SF_NYG,n113_team_strength_margin,,Week 1 fixed-state projection given matchup,0.617458,,0.549934,0.049944,0.400122
+2026_13_SF_NYG,n114_opponent_adjusted_scoring_total,,Week 1 fixed-state projection given matchup,,46.52304,,,
+2026_13_WAS_TEN,n113_team_strength_margin,,Week 1 fixed-state projection given matchup,-1.800069,,0.456302,0.037459,0.506239
+2026_13_WAS_TEN,n114_opponent_adjusted_scoring_total,,Week 1 fixed-state projection given matchup,,45.788948,,,
+2026_14_ATL_CLE,n113_team_strength_margin,,Week 1 fixed-state projection given matchup,0.172397,,0.512481,0.037459,0.45006
+2026_14_ATL_CLE,n114_opponent_adjusted_scoring_total,,Week 1 fixed-state projection given matchup,,41.510197,,,
+2026_14_BUF_GB,n113_team_strength_margin,,Week 1 fixed-state projection given matchup,-0.194462,,0.512481,0.037459,0.45006
+2026_14_BUF_GB,n114_opponent_adjusted_scoring_total,,Week 1 fixed-state projection given matchup,,48.141558,,,
+2026_14_CHI_MIA,n113_team_strength_margin,,Week 1 fixed-state projection given matchup,2.404984,,0.599871,0.049944,0.350185
+2026_14_CHI_MIA,n114_opponent_adjusted_scoring_total,,Week 1 fixed-state projection given matchup,,43.003969,,,
+2026_14_DEN_NYJ,n113_team_strength_margin,,Week 1 fixed-state projection given matchup,6.121868,,0.724715,0.031217,0.244068
+2026_14_DEN_NYJ,n114_opponent_adjusted_scoring_total,,Week 1 fixed-state projection given matchup,,43.422078,,,
+2026_14_HOU_WAS,n113_team_strength_margin,,Week 1 fixed-state projection given matchup,4.368958,,0.674777,0.031217,0.294006
+2026_14_HOU_WAS,n114_opponent_adjusted_scoring_total,,Week 1 fixed-state projection given matchup,,45.127171,,,
+2026_14_IND_PHI,n113_team_strength_margin,,Week 1 fixed-state projection given matchup,0.466228,,0.512481,0.037459,0.45006
+2026_14_IND_PHI,n114_opponent_adjusted_scoring_total,,Week 1 fixed-state projection given matchup,,44.05121,,,
+2026_14_KC_CIN,n113_team_strength_margin,,Week 1 fixed-state projection given matchup,-1.530218,,0.456302,0.037459,0.506239
+2026_14_KC_CIN,n114_opponent_adjusted_scoring_total,,Week 1 fixed-state projection given matchup,,42.998699,,,
+2026_14_LAC_LV,n113_team_strength_margin,,Week 1 fixed-state projection given matchup,4.189638,,0.674777,0.031217,0.294006
+2026_14_LAC_LV,n114_opponent_adjusted_scoring_total,,Week 1 fixed-state projection given matchup,,38.785554,,,
+2026_14_LA_SF,n113_team_strength_margin,,Week 1 fixed-state projection given matchup,1.622391,,0.599871,0.049944,0.350185
+2026_14_LA_SF,n114_opponent_adjusted_scoring_total,,Week 1 fixed-state projection given matchup,,50.404193,,,
+2026_14_MIN_NE,n113_team_strength_margin,,Week 1 fixed-state projection given matchup,-7.72132,,0.275279,0.012491,0.71223
+2026_14_MIN_NE,n114_opponent_adjusted_scoring_total,,Week 1 fixed-state projection given matchup,,40.225434,,,
+2026_14_NO_CAR,n113_team_strength_margin,,Week 1 fixed-state projection given matchup,-5.869326,,0.325216,0.024975,0.649809
+2026_14_NO_CAR,n114_opponent_adjusted_scoring_total,,Week 1 fixed-state projection given matchup,,40.805565,,,
+2026_14_NYG_SEA,n113_team_strength_margin,,Week 1 fixed-state projection given matchup,-11.67443,,0.187889,0.024975,0.787136
+2026_14_NYG_SEA,n114_opponent_adjusted_scoring_total,,Week 1 fixed-state projection given matchup,,45.641379,,,
+2026_14_PIT_JAX,n113_team_strength_margin,,Week 1 fixed-state projection given matchup,-5.619839,,0.325216,0.024975,0.649809
+2026_14_PIT_JAX,n114_opponent_adjusted_scoring_total,,Week 1 fixed-state projection given matchup,,44.371703,,,
+2026_14_TB_BAL,n113_team_strength_margin,,Week 1 fixed-state projection given matchup,-4.593435,,0.350185,0.043701,0.606114
+2026_14_TB_BAL,n114_opponent_adjusted_scoring_total,,Week 1 fixed-state projection given matchup,,43.481711,,,
+2026_14_TEN_DET,n113_team_strength_margin,,Week 1 fixed-state projection given matchup,-8.610387,,0.256553,0.018733,0.724715
+2026_14_TEN_DET,n114_opponent_adjusted_scoring_total,,Week 1 fixed-state projection given matchup,,46.971938,,,
+2026_15_ATL_WAS,n113_team_strength_margin,,Week 1 fixed-state projection given matchup,-1.143834,,0.493755,0.018733,0.487513
+2026_15_ATL_WAS,n114_opponent_adjusted_scoring_total,,Week 1 fixed-state projection given matchup,,45.054516,,,
+2026_15_BAL_PIT,n113_team_strength_margin,,Week 1 fixed-state projection given matchup,-2.517621,,0.425091,0.031217,0.543692
+2026_15_BAL_PIT,n114_opponent_adjusted_scoring_total,,Week 1 fixed-state projection given matchup,,43.259279,,,
+2026_15_CHI_BUF,n113_team_strength_margin,,Week 1 fixed-state projection given matchup,-3.327371,,0.425091,0.031217,0.543692
+2026_15_CHI_BUF,n114_opponent_adjusted_scoring_total,,Week 1 fixed-state projection given matchup,,47.549988,,,
+2026_15_CIN_CAR,n113_team_strength_margin,,Week 1 fixed-state projection given matchup,-3.454792,,0.425091,0.031217,0.543692
+2026_15_CIN_CAR,n114_opponent_adjusted_scoring_total,,Week 1 fixed-state projection given matchup,,45.167116,,,
+2026_15_CLE_NYG,n113_team_strength_margin,,Week 1 fixed-state projection given matchup,-5.564219,,0.325216,0.024975,0.649809
+2026_15_CLE_NYG,n114_opponent_adjusted_scoring_total,,Week 1 fixed-state projection given matchup,,42.149112,,,
+2026_15_DAL_LA,n113_team_strength_margin,,Week 1 fixed-state projection given matchup,-9.545489,,0.237826,0.018733,0.743441
+2026_15_DAL_LA,n114_opponent_adjusted_scoring_total,,Week 1 fixed-state projection given matchup,,52.998556,,,
+2026_15_DEN_LV,n113_team_strength_margin,,Week 1 fixed-state projection given matchup,6.57392,,0.755925,0.012491,0.231584
+2026_15_DEN_LV,n114_opponent_adjusted_scoring_total,,Week 1 fixed-state projection given matchup,,42.217457,,,
+2026_15_DET_MIN,n113_team_strength_margin,,Week 1 fixed-state projection given matchup,-0.132612,,0.512481,0.037459,0.45006
+2026_15_DET_MIN,n114_opponent_adjusted_scoring_total,,Week 1 fixed-state projection given matchup,,41.48667,,,
+2026_15_IND_TEN,n113_team_strength_margin,,Week 1 fixed-state projection given matchup,3.89765,,0.674777,0.031217,0.294006
+2026_15_IND_TEN,n114_opponent_adjusted_scoring_total,,Week 1 fixed-state projection given matchup,,47.704233,,,
+2026_15_JAX_HOU,n113_team_strength_margin,,Week 1 fixed-state projection given matchup,-2.693245,,0.425091,0.031217,0.543692
+2026_15_JAX_HOU,n114_opponent_adjusted_scoring_total,,Week 1 fixed-state projection given matchup,,46.028739,,,
+2026_15_MIA_GB,n113_team_strength_margin,,Week 1 fixed-state projection given matchup,-5.926818,,0.325216,0.024975,0.649809
+2026_15_MIA_GB,n114_opponent_adjusted_scoring_total,,Week 1 fixed-state projection given matchup,,43.595539,,,
+2026_15_NE_KC,n113_team_strength_margin,,Week 1 fixed-state projection given matchup,3.908073,,0.674777,0.031217,0.294006
+2026_15_NE_KC,n114_opponent_adjusted_scoring_total,,Week 1 fixed-state projection given matchup,,41.185323,,,
+2026_15_NO_TB,n113_team_strength_margin,,Week 1 fixed-state projection given matchup,-4.152075,,0.39388,0.031217,0.574903
+2026_15_NO_TB,n114_opponent_adjusted_scoring_total,,Week 1 fixed-state projection given matchup,,41.066147,,,
+2026_15_NYJ_ARI,n113_team_strength_margin,,Week 1 fixed-state projection given matchup,-5.049409,,0.350185,0.043701,0.606114
+2026_15_NYJ_ARI,n114_opponent_adjusted_scoring_total,,Week 1 fixed-state projection given matchup,,43.438649,,,
+2026_15_SEA_PHI,n113_team_strength_margin,,Week 1 fixed-state projection given matchup,5.911051,,0.724715,0.031217,0.244068
+2026_15_SEA_PHI,n114_opponent_adjusted_scoring_total,,Week 1 fixed-state projection given matchup,,42.083873,,,
+2026_15_SF_LAC,n113_team_strength_margin,,Week 1 fixed-state projection given matchup,-0.774712,,0.493755,0.018733,0.487513
+2026_15_SF_LAC,n114_opponent_adjusted_scoring_total,,Week 1 fixed-state projection given matchup,,42.375168,,,
+2026_16_ARI_NO,n113_team_strength_margin,,Week 1 fixed-state projection given matchup,-1.740142,,0.456302,0.037459,0.506239
+2026_16_ARI_NO,n114_opponent_adjusted_scoring_total,,Week 1 fixed-state projection given matchup,,42.367613,,,
+2026_16_BUF_DEN,n113_team_strength_margin,,Week 1 fixed-state projection given matchup,-1.703481,,0.456302,0.037459,0.506239
+2026_16_BUF_DEN,n114_opponent_adjusted_scoring_total,,Week 1 fixed-state projection given matchup,,47.611495,,,
+2026_16_CAR_PIT,n113_team_strength_margin,,Week 1 fixed-state projection given matchup,-3.003867,,0.425091,0.031217,0.543692
+2026_16_CAR_PIT,n114_opponent_adjusted_scoring_total,,Week 1 fixed-state projection given matchup,,41.750396,,,
+2026_16_CIN_IND,n113_team_strength_margin,,Week 1 fixed-state projection given matchup,-6.540752,,0.287763,0.037459,0.674777
+2026_16_CIN_IND,n114_opponent_adjusted_scoring_total,,Week 1 fixed-state projection given matchup,,48.80214,,,
+2026_16_CLE_BAL,n113_team_strength_margin,,Week 1 fixed-state projection given matchup,-6.804174,,0.287763,0.037459,0.674777
+2026_16_CLE_BAL,n114_opponent_adjusted_scoring_total,,Week 1 fixed-state projection given matchup,,41.396549,,,
+2026_16_GB_CHI,n113_team_strength_margin,,Week 1 fixed-state projection given matchup,-3.64798,,0.39388,0.031217,0.574903
+2026_16_GB_CHI,n114_opponent_adjusted_scoring_total,,Week 1 fixed-state projection given matchup,,45.271758,,,
+2026_16_HOU_PHI,n113_team_strength_margin,,Week 1 fixed-state projection given matchup,1.527405,,0.599871,0.049944,0.350185
+2026_16_HOU_PHI,n114_opponent_adjusted_scoring_total,,Week 1 fixed-state projection given matchup,,42.111372,,,
+2026_16_JAX_DAL,n113_team_strength_margin,,Week 1 fixed-state projection given matchup,2.343427,,0.599871,0.049944,0.350185
+2026_16_JAX_DAL,n114_opponent_adjusted_scoring_total,,Week 1 fixed-state projection given matchup,,49.477263,,,
+2026_16_LAC_MIA,n113_team_strength_margin,,Week 1 fixed-state projection given matchup,0.271678,,0.512481,0.037459,0.45006
+2026_16_LAC_MIA,n114_opponent_adjusted_scoring_total,,Week 1 fixed-state projection given matchup,,39.633571,,,
+2026_16_LA_SEA,n113_team_strength_margin,,Week 1 fixed-state projection given matchup,-4.654705,,0.350185,0.043701,0.606114
+2026_16_LA_SEA,n114_opponent_adjusted_scoring_total,,Week 1 fixed-state projection given matchup,,49.522532,,,
+2026_16_NE_NYJ,n113_team_strength_margin,,Week 1 fixed-state projection given matchup,9.192002,,0.774652,0.031217,0.194131
+2026_16_NE_NYJ,n114_opponent_adjusted_scoring_total,,Week 1 fixed-state projection given matchup,,43.518094,,,
+2026_16_NYG_DET,n113_team_strength_margin,,Week 1 fixed-state projection given matchup,-6.162468,,0.325216,0.024975,0.649809
+2026_16_NYG_DET,n114_opponent_adjusted_scoring_total,,Week 1 fixed-state projection given matchup,,46.876422,,,
+2026_16_SF_KC,n113_team_strength_margin,,Week 1 fixed-state projection given matchup,0.068884,,0.512481,0.037459,0.45006
+2026_16_SF_KC,n114_opponent_adjusted_scoring_total,,Week 1 fixed-state projection given matchup,,42.093177,,,
+2026_16_TB_ATL,n113_team_strength_margin,,Week 1 fixed-state projection given matchup,-2.741534,,0.425091,0.031217,0.543692
+2026_16_TB_ATL,n114_opponent_adjusted_scoring_total,,Week 1 fixed-state projection given matchup,,43.595359,,,
+2026_16_TEN_LV,n113_team_strength_margin,,Week 1 fixed-state projection given matchup,0.349548,,0.512481,0.037459,0.45006
+2026_16_TEN_LV,n114_opponent_adjusted_scoring_total,,Week 1 fixed-state projection given matchup,,43.028943,,,
+2026_16_WAS_MIN,n113_team_strength_margin,,Week 1 fixed-state projection given matchup,-5.763192,,0.325216,0.024975,0.649809
+2026_16_WAS_MIN,n114_opponent_adjusted_scoring_total,,Week 1 fixed-state projection given matchup,,40.30368,,,
+2026_17_BAL_CIN,n113_team_strength_margin,,Week 1 fixed-state projection given matchup,-0.838838,,0.493755,0.018733,0.487513
+2026_17_BAL_CIN,n114_opponent_adjusted_scoring_total,,Week 1 fixed-state projection given matchup,,46.675999,,,
+2026_17_BUF_MIA,n113_team_strength_margin,,Week 1 fixed-state projection given matchup,3.342417,,0.649809,0.024975,0.325216
+2026_17_BUF_MIA,n114_opponent_adjusted_scoring_total,,Week 1 fixed-state projection given matchup,,45.873769,,,
+2026_17_DEN_NE,n113_team_strength_margin,,Week 1 fixed-state projection given matchup,-5.460071,,0.350185,0.043701,0.606114
+2026_17_DEN_NE,n114_opponent_adjusted_scoring_total,,Week 1 fixed-state projection given matchup,,44.899217,,,
+2026_17_DET_CHI,n113_team_strength_margin,,Week 1 fixed-state projection given matchup,-2.142884,,0.456302,0.037459,0.506239
+2026_17_DET_CHI,n114_opponent_adjusted_scoring_total,,Week 1 fixed-state projection given matchup,,46.098947,,,
+2026_17_HOU_GB,n113_team_strength_margin,,Week 1 fixed-state projection given matchup,0.243474,,0.512481,0.037459,0.45006
+2026_17_HOU_GB,n114_opponent_adjusted_scoring_total,,Week 1 fixed-state projection given matchup,,45.482973,,,
+2026_17_IND_CLE,n113_team_strength_margin,,Week 1 fixed-state projection given matchup,4.624012,,0.705988,0.018733,0.275279
+2026_17_IND_CLE,n114_opponent_adjusted_scoring_total,,Week 1 fixed-state projection given matchup,,43.52269,,,
+2026_17_KC_LAC,n113_team_strength_margin,,Week 1 fixed-state projection given matchup,-3.233533,,0.425091,0.031217,0.543692
+2026_17_KC_LAC,n114_opponent_adjusted_scoring_total,,Week 1 fixed-state projection given matchup,,37.657403,,,
+2026_17_LA_TB,n113_team_strength_margin,,Week 1 fixed-state projection given matchup,5.59333,,0.724715,0.031217,0.244068
+2026_17_LA_TB,n114_opponent_adjusted_scoring_total,,Week 1 fixed-state projection given matchup,,48.115428,,,
+2026_17_LV_ARI,n113_team_strength_margin,,Week 1 fixed-state projection given matchup,-5.50146,,0.325216,0.024975,0.649809
+2026_17_LV_ARI,n114_opponent_adjusted_scoring_total,,Week 1 fixed-state projection given matchup,,42.234028,,,
+2026_17_MIN_NYJ,n113_team_strength_margin,,Week 1 fixed-state projection given matchup,3.86062,,0.674777,0.031217,0.294006
+2026_17_MIN_NYJ,n114_opponent_adjusted_scoring_total,,Week 1 fixed-state projection given matchup,,38.748295,,,
+2026_17_NO_ATL,n113_team_strength_margin,,Week 1 fixed-state projection given matchup,-4.503671,,0.350185,0.043701,0.606114
+2026_17_NO_ATL,n114_opponent_adjusted_scoring_total,,Week 1 fixed-state projection given matchup,,42.428095,,,
+2026_17_NYG_DAL,n113_team_strength_margin,,Week 1 fixed-state projection given matchup,-2.254112,,0.456302,0.037459,0.506239
+2026_17_NYG_DAL,n114_opponent_adjusted_scoring_total,,Week 1 fixed-state projection given matchup,,49.117402,,,
+2026_17_PHI_SF,n113_team_strength_margin,,Week 1 fixed-state projection given matchup,-4.413831,,0.39388,0.031217,0.574903
+2026_17_PHI_SF,n114_opponent_adjusted_scoring_total,,Week 1 fixed-state projection given matchup,,42.965535,,,
+2026_17_PIT_TEN,n113_team_strength_margin,,Week 1 fixed-state projection given matchup,1.425619,,0.549934,0.049944,0.400122
+2026_17_PIT_TEN,n114_opponent_adjusted_scoring_total,,Week 1 fixed-state projection given matchup,,44.107359,,,
+2026_17_SEA_CAR,n113_team_strength_margin,,Week 1 fixed-state projection given matchup,6.140846,,0.724715,0.031217,0.244068
+2026_17_SEA_CAR,n114_opponent_adjusted_scoring_total,,Week 1 fixed-state projection given matchup,,43.379932,,,
+2026_17_WAS_JAX,n113_team_strength_margin,,Week 1 fixed-state projection given matchup,-8.845527,,0.256553,0.018733,0.724715
+2026_17_WAS_JAX,n114_opponent_adjusted_scoring_total,,Week 1 fixed-state projection given matchup,,46.053292,,,
+2026_18_ATL_CAR,n113_team_strength_margin,,Week 1 fixed-state projection given matchup,-3.755593,,0.39388,0.031217,0.574903
+2026_18_ATL_CAR,n114_opponent_adjusted_scoring_total,,Week 1 fixed-state projection given matchup,,43.334777,,,
+2026_18_CHI_MIN,n113_team_strength_margin,,Week 1 fixed-state projection given matchup,-0.379666,,0.512481,0.037459,0.45006
+2026_18_CHI_MIN,n114_opponent_adjusted_scoring_total,,Week 1 fixed-state projection given matchup,,40.067911,,,
+2026_18_CLE_CIN,n113_team_strength_margin,,Week 1 fixed-state projection given matchup,-5.253073,,0.350185,0.043701,0.606114
+2026_18_CLE_CIN,n114_opponent_adjusted_scoring_total,,Week 1 fixed-state projection given matchup,,43.342537,,,
+2026_18_DAL_WAS,n113_team_strength_margin,,Week 1 fixed-state projection given matchup,-0.667714,,0.493755,0.018733,0.487513
+2026_18_DAL_WAS,n114_opponent_adjusted_scoring_total,,Week 1 fixed-state projection given matchup,,48.575696,,,
+2026_18_DET_GB,n113_team_strength_margin,,Week 1 fixed-state projection given matchup,-0.884841,,0.493755,0.018733,0.487513
+2026_18_DET_GB,n114_opponent_adjusted_scoring_total,,Week 1 fixed-state projection given matchup,,46.690517,,,
+2026_18_JAX_IND,n113_team_strength_margin,,Week 1 fixed-state projection given matchup,-1.632068,,0.456302,0.037459,0.506239
+2026_18_JAX_IND,n114_opponent_adjusted_scoring_total,,Week 1 fixed-state projection given matchup,,47.968577,,,
+2026_18_LAC_DEN,n113_team_strength_margin,,Week 1 fixed-state projection given matchup,-4.77422,,0.350185,0.043701,0.606114
+2026_18_LAC_DEN,n114_opponent_adjusted_scoring_total,,Week 1 fixed-state projection given matchup,,41.371297,,,
+2026_18_LV_KC,n113_team_strength_margin,,Week 1 fixed-state projection given matchup,-8.125918,,0.275279,0.012491,0.71223
+2026_18_LV_KC,n114_opponent_adjusted_scoring_total,,Week 1 fixed-state projection given matchup,,38.503563,,,
+2026_18_MIA_NE,n113_team_strength_margin,,Week 1 fixed-state projection given matchup,-10.50597,,0.212858,0.024975,0.762168
+2026_18_MIA_NE,n114_opponent_adjusted_scoring_total,,Week 1 fixed-state projection given matchup,,43.161491,,,
+2026_18_NYJ_BUF,n113_team_strength_margin,,Week 1 fixed-state projection given matchup,-11.588202,,0.187889,0.024975,0.787136
+2026_18_NYJ_BUF,n114_opponent_adjusted_scoring_total,,Week 1 fixed-state projection given matchup,,46.230372,,,
+2026_18_PHI_NYG,n113_team_strength_margin,,Week 1 fixed-state projection given matchup,-1.406435,,0.493755,0.018733,0.487513
+2026_18_PHI_NYG,n114_opponent_adjusted_scoring_total,,Week 1 fixed-state projection given matchup,,42.677633,,,
+2026_18_PIT_BAL,n113_team_strength_margin,,Week 1 fixed-state projection given matchup,-2.262255,,0.456302,0.037459,0.506239
+2026_18_PIT_BAL,n114_opponent_adjusted_scoring_total,,Week 1 fixed-state projection given matchup,,43.259279,,,
+2026_18_SEA_LA,n113_team_strength_margin,,Week 1 fixed-state projection given matchup,-0.125171,,0.512481,0.037459,0.45006
+2026_18_SEA_LA,n114_opponent_adjusted_scoring_total,,Week 1 fixed-state projection given matchup,,49.522532,,,
+2026_18_SF_ARI,n113_team_strength_margin,,Week 1 fixed-state projection given matchup,2.693342,,0.649809,0.024975,0.325216
+2026_18_SF_ARI,n114_opponent_adjusted_scoring_total,,Week 1 fixed-state projection given matchup,,45.823642,,,
+2026_18_TB_NO,n113_team_strength_margin,,Week 1 fixed-state projection given matchup,-0.627801,,0.493755,0.018733,0.487513
+2026_18_TB_NO,n114_opponent_adjusted_scoring_total,,Week 1 fixed-state projection given matchup,,41.066147,,,
+2026_18_TEN_HOU,n113_team_strength_margin,,Week 1 fixed-state projection given matchup,-9.738703,,0.237826,0.018733,0.743441
+2026_18_TEN_HOU,n114_opponent_adjusted_scoring_total,,Week 1 fixed-state projection given matchup,,45.764395,,,

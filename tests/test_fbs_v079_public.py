@@ -6,6 +6,7 @@ import os
 from pathlib import Path
 import re
 import unittest
+from datetime import datetime
 
 ROOT = Path(__file__).resolve().parents[1]
 SITE = Path(os.environ.get("FBS_V079_SITE", ROOT / "docs/fbs/v079"))
@@ -137,6 +138,46 @@ class PublicV079(unittest.TestCase):
                 self.assertEqual(r["model_scored_n"], c["paired_n"])
             else:
                 self.assertEqual(r["model_metrics"], {})
+
+    def test_v080_current_forecasts_are_separate_from_earlier_issues(self):
+        current = self.data["current_execution"]
+        self.assertEqual((self.data["execution_version"], self.data["report_version"]), ("V080", "V079"))
+        self.assertEqual(self.data["prior_execution"]["version"], "V078")
+        future = [g for g in self.games if g["season"] == 2026 and g["status"] == "pending"]
+        self.assertEqual(len(future), current["timed_future_games"])
+        self.assertEqual(current["covered_timed_future_games"], len(future))
+        self.assertEqual(current["verified_current_base_issue_records"], sum(g["issued_rows"] for g in future))
+        self.assertEqual(current["verified_current_base_issue_records"], current["base_recipe_target_count"] * len(future))
+        self.assertEqual(current["verified_current_derived_issue_records"], current["derived_recipe_target_count"] * len(future))
+        self.assertEqual(current["verified_current_total_issue_records"], current["verified_current_base_issue_records"] + current["verified_current_derived_issue_records"])
+        self.assertEqual(self.data["forecast_coverage"]["total_current_forecast_rows"], current["verified_current_total_issue_records"])
+        self.assertFalse(current["private_candidate_grid_published"])
+        self.assertTrue(current["fit_calls_do_not_establish_novel_models"])
+        self.assertFalse(current["promotion"])
+        dt = lambda value: datetime.fromisoformat(value.replace("Z", "+00:00"))
+        seen = 0
+        for game in future:
+            for target in ("winner", "margin", "total"):
+                cell = game["audit_model"][target]
+                self.assertIsNotNone(cell["value"])
+                self.assertEqual(cell["issue_time"], current["base_issue_at"])
+                self.assertLessEqual(dt(cell["information_cutoff"]), dt(cell["fit_completed_at"]))
+                self.assertLessEqual(dt(cell["fit_completed_at"]), dt(cell["prepared_at"]))
+                self.assertLessEqual(dt(cell["prepared_at"]), dt(cell["issue_time"]))
+                self.assertLess(dt(cell["issue_time"]), dt(cell["requested_horizon_cutoff"]))
+                seen += 1
+        self.assertEqual(seen, current["selected_public_forecast_cells"])
+
+    def test_negative_market_finding_is_supported_on_every_fixed_cohort(self):
+        rows = [r for r in self.data["market_comparison"]["scorecards"] if r["provider"] == "draftkings" and r["target"] == "winner"]
+        self.assertEqual({r["season"] for r in rows}, {2024, 2025, 2026})
+        for row in rows:
+            self.assertEqual(row["status"], "SAME_PROVIDER_COHORT_COMPARED")
+            self.assertGreater(row["delta_model_minus_market"]["log_loss"], 0)
+            self.assertGreater(row["delta_model_minus_market"]["brier"], 0)
+            self.assertLess(row["delta_model_minus_market"]["accuracy"], 0)
+            self.assertFalse(row["used_for_nomination"])
+        self.assertIn("all 11", self.data["current_execution"]["same_provider_cohort_finding"])
 
     def test_public_scope_and_non_owner_preservation(self):
         forbidden = re.compile(r's3://|arn:aws:|/home/sagemaker-user|/workspace/|AKIA[0-9A-Z]{16}|BEGIN (?:RSA |EC )?PRIVATE KEY|"(?:original_model_id|model_id|fit_id|model_state_sha256|state_sha256|coefficients|feature_names|prediction_records)"')

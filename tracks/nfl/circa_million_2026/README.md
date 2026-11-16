@@ -1,5 +1,11 @@
 # 2026 NFL models vs. Circa Million VIII
 
+[N122 full-season dashboard](https://sports-edge-lab-nfl.alv-mendizabal.chatgpt.site/circa/n122/) · [N122 research tables and standalone dashboard](n122_current/) · [2024/2025 validation and 2026 test](n122_current/N122_FULL_SEASON_MODELS.csv)
+
+N122 scores every one of the 285 finals in each validation season and all 148 completed 2026 test games at the November 16 UTC snapshot. The market inventory retains all 842 fixtures, including the live game and all 123 upcoming games.
+
+## Archived N121 release
+
 [N121 debrief and downloadable tables](n121_current/) · [N121 full-season dashboard file](n121_current/index.html) · [Download standalone dashboard](https://raw.githubusercontent.com/alvaromendizabal/sports-edge-lab/main/tracks/nfl/circa_million_2026/n121_current/index.html)
 
 Open the downloaded HTML in a browser to compare the same 285 games from 2024, 285 from 2025 and 145 completed 2026 games, check forecasts for scheduled fixtures, and inspect each venue’s exact target and cutoff coverage. The hosted N120 archive is linked separately below.

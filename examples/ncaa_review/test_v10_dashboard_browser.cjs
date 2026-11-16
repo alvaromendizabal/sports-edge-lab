@@ -184,6 +184,7 @@ const http=require('node:http');
     receipts.push({version:'v12',width,source:true,datedCohorts:true,missingMarketsExplicit:true,futureClockFilter:true,downloadVerified:true,realChromium:true});
    }finally{await page.close();}
   }
+  receipts.push(...await require('./test_three_season_browser.cjs')(browser));
  }finally{await browser.close();await new Promise(resolve=>server.close(resolve));}
  console.log(JSON.stringify({status:'PASS',receipts}));
 })().catch(error=>{console.error(error);process.exitCode=1;});

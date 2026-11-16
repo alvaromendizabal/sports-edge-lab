@@ -4,35 +4,35 @@
   "new_science_by_publication": 0,
   "promotion": false,
   "game_count": 2742,
-  "scorecard_count": 0,
-  "model_alias_count": 0,
-  "fixture_source_as_of": "2026-11-15T20:39:57Z",
-  "full_population_report_attached": false,
+  "scorecard_count": 105,
+  "model_alias_count": 35,
+  "fixture_source_as_of": "2026-11-16T02:07:41Z",
+  "full_population_report_attached": true,
   "files": [
     {
       "path": "README.md",
-      "bytes": 884,
-      "sha256": "6cd8e76b87ab764f6938aec963c3bc206d9faa6a7eac505d156134297bc2685f"
+      "bytes": 2134,
+      "sha256": "a24cfdc024d7a6af4d9c7de3988675502581d237f1bfd41f51d1d72cd18eea89"
     },
     {
       "path": "app.js",
-      "bytes": 39830,
-      "sha256": "8e1464634bf09a95146fe9fa062f1f1ee998819f8f4efad3c39836950263a6cd"
+      "bytes": 41333,
+      "sha256": "f161e90e7dd9f847cfd75d4bf6b201101f9cb3d3d475deeb5dd5466d1663344a"
     },
     {
       "path": "data/games.json.gz",
-      "bytes": 173765,
-      "sha256": "de619b2162c52f25a03a0be88dac566168add53f9f0671e0276dbd7ae6fcf3b4"
+      "bytes": 386777,
+      "sha256": "13d5da42b0219b9d421ef1d7d6fb3c5854f3ee65173c2dd0e8125d30b479e19a"
     },
     {
       "path": "data/review.json",
-      "bytes": 51101,
-      "sha256": "c7b6fce271a9fe4469fbba9ab4eea87a035ea5632c38cb7b4403ac2c22ef7dd5"
+      "bytes": 906376,
+      "sha256": "bcbde4163273657ff3de44ca796bfdb3d69b568ac3d211394801d57099569c5b"
     },
     {
       "path": "index.html",
-      "bytes": 22744,
-      "sha256": "e35944033842496c815f83d866831c77a0c7e30946c84fb3892d6bfbf369cd9b"
+      "bytes": 22951,
+      "sha256": "f5bfa96eecb5641b47a3fe845fd03819b445c99baba7c9deec14464fbc1793a9"
     },
     {
       "path": "styles.css",
@@ -45,8 +45,44 @@
     "public_boundary_scan": true,
     "scorecard_denominators": true
   },
-  "browser_validation": "PENDING_ORIGINATING_OWNER_BROWSER",
-  "build_input_sha256": "5f6cbdb652d25671c085792f9fb8030c686d19eb8417d815956199131e919d8e",
+  "browser_validation": "PENDING_EXACT_PUBLICATION_HEAD_AND_HOSTED_OWNER_BROWSER",
+  "build_input_sha256": "4c3f7ea23628c7461f7389a63ccfa53d10d81a76b804fe5de222ea83946e17b0",
   "atomic_commit": true,
-  "reused_existing_build": false
+  "reused_existing_build": false,
+  "publication_transform": {
+    "schema": "fbs.v079.publication-transform.v1",
+    "source_owner_receipt_sha256": "f430c4148a9d1056c8b5f0930fd4ab7b0089a44c1d01e230a4c51a11c36f41c3",
+    "source_owner_build_input_sha256": "df851eddfa115560ef9782fc149c3ca2dc5c2a8136a067aeb53727f6a05f3608",
+    "hash_wrap_patch": true,
+    "exchange_value_redactions": [],
+    "owner_evidence_unchanged": true,
+    "changed_payload_paths": [
+      "index.html"
+    ],
+    "new_fits": 0,
+    "new_forecasts": 0,
+    "promotion": false
+  },
+  "publication_current_coverage_transform": {
+    "schema": "fbs.v080.publication-current-coverage.v1",
+    "source_intake_receipt_sha256": "00a91f65ffe3ae0e38c1be1d7493713b0f00bb63eedefd8e62fbad53ec9bdf6c",
+    "source_owner_manifest_sha256": "861345bcdd81cc2fa8015e2249be0bc92aae1f26d7d54617c3d931c8a89e6ef6",
+    "execution_version_label": "V080",
+    "comparison_schema_preserved": "fbs.v079.public-fixed-population.v1",
+    "unchanged_game_values_and_clocks": true,
+    "unchanged_model_and_market_scores": true,
+    "owner_artifacts_unchanged": true,
+    "changed_payload_paths": [
+      "README.md",
+      "app.js",
+      "data/review.json",
+      "index.html"
+    ],
+    "verified_current_base_records": 2236,
+    "verified_current_derived_records": 774,
+    "verified_selected_public_values": 258,
+    "new_publication_fits": 0,
+    "new_publication_issues": 0,
+    "promotion": false
+  }
 }

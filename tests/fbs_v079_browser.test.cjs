@@ -24,6 +24,10 @@ let browser,checks=0;const check=(value,message)=>{assert.ok(value,message);chec
     check(await page.locator('#census-body tr').count()===3,'All three season populations visible');
     for(const c of data.census)check((await page.locator('#census-body').innerText()).includes(c.finals.toLocaleString('en-US')),'Exact final census');
     check((await page.locator('body').innerText()).includes('already been exposed'),'Prior test exposure remains visible');
+    check((await page.locator('.report-label').innerText()).includes(data.execution_version),'V080 execution label is visible on the existing route');
+    check((await page.locator('#upcoming-summary').innerText()).includes(data.current_execution.verified_current_total_issue_records.toLocaleString('en-US')),'All actual base and derived forecasts are accounted for');
+    check((await page.locator('#upcoming-summary').innerText()).includes(data.current_execution.verified_current_derived_issue_records.toLocaleString('en-US')),'Derived fixed-blend count is visible');
+    check((await page.locator('#market-summary').innerText()).includes('all 11 reconstructed winner candidates'),'Negative same-provider comparison finding remains visible');
     check(await page.evaluate(()=>document.documentElement.scrollWidth<=innerWidth),'Overview fits viewport');
     if(out){fs.mkdirSync(out,{recursive:true});await page.screenshot({path:path.join(out,`fbs-v079-overview-${live?'live':'static'}-${width}.png`),fullPage:true});}
     await page.click('[data-tab="models"]');
@@ -75,6 +79,8 @@ let browser,checks=0;const check=(value,message)=>{assert.ok(value,message);chec
     check(await page.evaluate(()=>document.documentElement.scrollWidth<=innerWidth),'Game table contained on mobile');
     await page.click('[data-tab="diagnostics"]');check((await page.locator('#diagnostic-note').innerText()).includes('47-game'),'Narrow issued cohort is explicitly diagnostic');
     await page.click('[data-tab="execution"]');check((await page.locator('#new-execution').innerText()).includes('None'),'No promotion claimed');
+    check((await page.locator('#current-execution').innerText()).includes(data.current_execution.verified_current_total_issue_records.toLocaleString('en-US')),'Current V080 execution is separate from predecessor accounting');
+    check((await page.locator('#current-execution-note').innerText()).includes('do not establish novel models'),'Actual fit calls are not presented as novel learning');
     await page.focus('[data-tab="overview"]');await page.keyboard.press('ArrowRight');check(await page.locator('#panel-models').isVisible(),'Keyboard tabs work');
     await page.close();
   }

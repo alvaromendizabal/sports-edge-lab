@@ -1,0 +1,43 @@
+{
+  "schema": "sel.ncaa.public.completed_execution.v1",
+  "release": "R17",
+  "completed_at": "2026-11-15T21:27:26.750734+00:00",
+  "public_title": "R17 produced a recoverable return; selected-capacity acceptance failed",
+  "public_summary": "Training and source work were preserved, but the execution did not satisfy the selected-capacity utilization requirement. Return packaging completed successfully. The observed bottleneck was resource admission, with one core admitted during the representative measurement despite 48 requested. This is a completed partial execution, not a claim of current process activity.",
+  "public_counters": [
+    {
+      "value": 50,
+      "label": "reported target-estimator fit credits"
+    },
+    {
+      "value": 10,
+      "label": "reported scalar calibration fit credits"
+    },
+    {
+      "value": 24,
+      "label": "reported empirical residual fit credits"
+    },
+    {
+      "value": "2.081%",
+      "label": "measured occupancy of requested 48-core capacity"
+    },
+    {
+      "value": 2,
+      "label": "recoverable physical returns in the recent R16/R17 pair"
+    },
+    {
+      "value": 0,
+      "label": "fully accepted executions in that recent pair"
+    }
+  ],
+  "count_scope": "Fit credits are the R17 typed optimizer-ledger categories; they are not counts of unique model or numerical weight identities. The recent-run tally covers only R16 and R17. The representative utilization window is a subset of the full run and is not added to these fit counts.",
+  "public_limitations": "The complete official season denominator, full-population champion selection and provider comparisons remain separately qualified in the population report. Repeated numerical inputs across roles require distinct fit-accounting review; publication does not promote a model.",
+  "status": "UTILIZATION_ACCEPTANCE_FAILED_PARTIAL_WORK_PRESERVED",
+  "transport_complete": true,
+  "actual_utilization_gate_executed": true,
+  "requested_capacity": 48,
+  "admitted_cores_in_representative_window": 1,
+  "selected_capacity_occupancy_percent": 2.081439280354732,
+  "elapsed_seconds": 2990.6892748240007,
+  "unique_model_count": null
+}

@@ -1,0 +1,44 @@
+target,n,model,brier,ll,protocol
+margin,50,DraftKings,0.25345258653785485,0.7000560413743473,Named venue
+margin,50,Kalshi,0.2533226935405605,0.6997973598586504,Named venue
+margin,50,Polymarket,0.25274500000000005,0.6986383803002095,Named venue
+margin,50,n121_team_score_baseline,0.2556062795435287,0.7055864638777757,Season-opening fixed
+margin,50,n121_opponent_ridge_recent,0.25081475851039736,0.6960391499134957,Season-opening fixed
+margin,50,n121_opponent_ridge_pooled,0.24683705039639928,0.688695170327982,Season-opening fixed
+margin,50,n122_residual_league,0.24558436988076138,0.6855651699386618,Season-opening fixed
+margin,50,n122_residual_matchup,0.23851105970977812,0.6720994373472783,Season-opening fixed
+margin,50,n113_team_strength_margin,0.2411121475623795,0.6738615982577358,Season-opening fixed
+total,57,DraftKings,0.24980811020399488,0.6927633411622107,Named venue
+total,57,Kalshi,0.24865967040004422,0.690467018790704,Named venue
+total,57,Polymarket,0.24906008771929827,0.6912673297543085,Named venue
+total,57,n121_team_score_baseline,0.274583832275849,0.7440529235503277,Season-opening fixed
+total,57,n121_opponent_ridge_recent,0.2715402078940249,0.737577168822738,Season-opening fixed
+total,57,n121_opponent_ridge_pooled,0.2692941702009185,0.7333393795394078,Season-opening fixed
+total,57,n122_residual_league,0.2654646372329566,0.7251371487297306,Season-opening fixed
+total,57,n122_residual_matchup,0.2648481273857312,0.7260065131278556,Season-opening fixed
+total,57,n114_opponent_adjusted_scoring_total,0.2822821100466744,0.7638579271823052,Season-opening fixed
+margin,50,challengers_N110_DK / market_team_shrink,0.25026579744965227,0.6938114525642465,Archived rolling replay
+margin,50,challengers_N110_DK / opening_market_reference,0.25026579744965227,0.6938114525642465,Archived rolling replay
+margin,50,n111_line_conditioned,0.25267076021449036,0.6984948584756258,Archived rolling replay
+margin,50,n112_key_margin_shrink,0.2507960705259471,0.6947562198367921,Archived rolling replay
+margin,50,n113_logit_disagreement,0.252926193905464,0.699037756489356,Archived rolling replay
+margin,50,n113_team_strength_margin,0.2646496162762486,0.7237908590577132,Archived rolling replay
+margin,50,n114_rating_cdf_calibration,0.26682678486964184,0.7283030471409714,Archived rolling replay
+margin,50,n115_rating_key_shape,0.2651396796997077,0.7250067456905331,Archived rolling replay
+margin,50,n116_opening_rating_margin_pool,0.2509319863339537,0.6950172644317034,Archived rolling replay
+margin,50,n121_opponent_ridge_pooled,0.2504979217052339,0.6949786286420921,Archived rolling replay
+margin,50,n121_opponent_ridge_recent,0.26098686145239564,0.7151914231445871,Archived rolling replay
+margin,50,n121_team_score_baseline,0.2596352159193213,0.7130215644320593,Archived rolling replay
+margin,50,team_form_N109_DK / pooled_league_home,0.27417830863897186,0.7448056790186935,Archived rolling replay
+margin,50,team_form_N109_DK / season_decay_offense_defense,0.25354788241939796,0.7019946727874437,Archived rolling replay
+total,57,challengers_N110_DK / market_team_shrink,0.252262591164664,0.6976754433035292,Archived rolling replay
+total,57,challengers_N110_DK / opening_market_reference,0.2582668985273686,0.7097225541431729,Archived rolling replay
+total,57,n111_line_conditioned,0.2556253114511221,0.7044489695477086,Archived rolling replay
+total,57,n114_opponent_adjusted_scoring_total,0.28047810386715605,0.7575923992593411,Archived rolling replay
+total,57,n115_opening_team_total_pool,0.25283105828257696,0.6988358422290929,Archived rolling replay
+total,57,n116_opening_dispersion_total,0.2501758309432984,0.6935173872636863,Archived rolling replay
+total,57,n121_opponent_ridge_pooled,0.26755820665631846,0.7297109413471236,Archived rolling replay
+total,57,n121_opponent_ridge_recent,0.27043064853458326,0.7355243915174255,Archived rolling replay
+total,57,n121_team_score_baseline,0.2735726600003118,0.7415863989211499,Archived rolling replay
+total,57,team_form_N109_DK / pooled_league_home,0.27894128350696945,0.754897400978773,Archived rolling replay
+total,57,team_form_N109_DK / season_decay_offense_defense,0.26864720937834424,0.7313775202188914,Archived rolling replay
