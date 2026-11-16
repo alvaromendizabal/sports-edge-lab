@@ -6,38 +6,68 @@
   "game_count": 2742,
   "scorecard_count": 105,
   "model_alias_count": 35,
-  "fixture_source_as_of": "2026-11-16T03:07:27Z",
+  "fixture_source_as_of": "2026-11-16T19:57:11Z",
   "full_population_report_attached": true,
   "files": [
     {
       "path": "README.md",
-      "bytes": 5564,
-      "sha256": "ce0464db5873a144cb253497eba9707c83ba98c638003549ab9ff05a1672051b"
+      "bytes": 6584,
+      "sha256": "1bfc4e2c603171849013c5730e0090b0f56a3f0819e870b5d6c35165e22a5808"
     },
     {
       "path": "app.js",
-      "bytes": 51293,
-      "sha256": "88c5b26d1790ab662e2eda1a1b3cf80f05c0745f674d3ea006271115e5dd9fcb"
+      "bytes": 51332,
+      "sha256": "a0a29e7c1bb2fb7adfa0d1f840f1f7142f612f61bde1f4b6adaf30bde88ccf68"
     },
     {
       "path": "data/games.json.gz",
-      "bytes": 386768,
-      "sha256": "f34b68620699fb280e1cd46834ffd9507b7d7d9dfc5877ec4f5d713fe756b76d"
+      "bytes": 392907,
+      "sha256": "803f28965df14b304845c83f22d3afff830859b541694995d8946af8ef3164f5"
+    },
+    {
+      "path": "data/market-readiness.json",
+      "bytes": 33662,
+      "sha256": "36165fdcdc3dd7c7f8f3c20604007c1ee5afd9d77c45370e8be901e9e564dacf"
+    },
+    {
+      "path": "data/market-study.json",
+      "bytes": 25953,
+      "sha256": "10f2d9443747117b567c4b1cc37ef373ccc4caa6427ed2b7b24ef614f78fccc3"
     },
     {
       "path": "data/review.json",
-      "bytes": 960645,
-      "sha256": "c0613ef42f411d6109c163e8e320789b2702a83e6b5501f7ba58e62b4e9587d8"
+      "bytes": 961124,
+      "sha256": "abd78fe779d1fb216c30096cf866b709af13951a91bd27003f760ecf8230c028"
     },
     {
       "path": "data/validation-nominees.json",
-      "bytes": 550933,
-      "sha256": "fcc483ec7d51bc4027a28809f3e29666b95e215cb59ff06c01a308194cebfc96"
+      "bytes": 619377,
+      "sha256": "45efa9456683da59760f86df1435360fd3032dcf337c6b916314ee37a9e828e2"
     },
     {
       "path": "index.html",
-      "bytes": 26311,
-      "sha256": "86c3cb5ee758e86acbf892f1e63018cb97714cfc6947bb1f9b5d91fc1790648e"
+      "bytes": 27094,
+      "sha256": "b40f8d240f3cd5da4721592bacac094676c68f6b1e9401315df2ec3c3c3befd1"
+    },
+    {
+      "path": "market-readiness.html",
+      "bytes": 2691,
+      "sha256": "e5b7cad216495daa018a14054a57f5eae18a637404fa38f3a66d5666d2a1b3c2"
+    },
+    {
+      "path": "market-readiness.js",
+      "bytes": 2382,
+      "sha256": "38539b6ae2908fe57ead8bf835f09d7b1927f5d3261678f5906f2d7e7e202b68"
+    },
+    {
+      "path": "market-study.html",
+      "bytes": 5456,
+      "sha256": "ecea0bd801f3130b2457c51da2d6a0963fae292139919a9d0d0c5c06598f57b2"
+    },
+    {
+      "path": "market-study.js",
+      "bytes": 5376,
+      "sha256": "b3465c6c7116d44026d0f797db8bcc61cc5d77a6155aa6dde32b1c063178ca98"
     },
     {
       "path": "styles.css",
@@ -179,5 +209,23 @@
     "new_forecast_issues": 0,
     "source_calls": 0,
     "promotion": false
+  },
+  "v081_publication": {
+    "source_owner_run": "20261116T195659Z-7fdab07b38-fbs080",
+    "owner_executed_version": "V080R1",
+    "local_study_new_fits": 22,
+    "local_study_sagemaker_execution": false,
+    "promotion": false,
+    "issued_games": 96,
+    "selected_issue_cells": 384,
+    "public_market_study_aliases": [
+      "WB00",
+      "WM01",
+      "WM02",
+      "WB01",
+      "WN01"
+    ],
+    "full_horizon_archive_census_complete": false,
+    "full_owner_return_manifest_sha256": "65310f6c47ad48dc223fa37dbfcb683c90113622900e5a7515f1dc55af862fff"
   }
 }

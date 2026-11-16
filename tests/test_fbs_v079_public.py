@@ -126,7 +126,7 @@ class PublicV079(unittest.TestCase):
                         if field == "historical_provider_coverage":
                             self.assertFalse(cell["historical_source_possession_proven"])
 
-    def test_all_54_current_draftkings_values_keep_their_own_snapshot_clocks(self):
+    def test_all_current_draftkings_values_keep_their_own_snapshot_clocks(self):
         dt = lambda value: datetime.fromisoformat(value.replace("Z", "+00:00"))
         captured = dt(self.data["current_source_coverage"]["evaluated_at"])
         displayed = []
@@ -142,7 +142,7 @@ class PublicV079(unittest.TestCase):
             self.assertLessEqual(dt(current["observation_time"]), captured)
             self.assertGreaterEqual((dt(game["kickoff"]) - dt(current["observation_time"])).total_seconds(), 7200)
             displayed.append(current)
-        self.assertEqual(len(displayed), 54)
+        self.assertEqual(len(displayed), 66)
         self.assertEqual(len(displayed), self.data["current_source_coverage"]["displayed_probability_cells"])
         # Fixture refresh and provider capture are different events with separate clocks.
         self.assertGreater(captured, dt(self.data["fixture_source_as_of"]))
@@ -257,7 +257,7 @@ class PublicV079(unittest.TestCase):
         self.assertIn("unproved", report["source_availability"])
 
     def test_current_calibration_change_is_separate_from_previous_avoidable_fits(self):
-        audit = self.data["current_calibration_audit"]
+        audit = self.data["previous_calibration_audit"]
         self.assertEqual((audit["version"], audit["new_base_fits"], audit["reused_base_estimators"], audit["new_winner_calibrator_fits"]), ("V080R1", 0, 26, 8))
         self.assertEqual((audit["calibration_rows_before"], audit["calibration_rows_after"], audit["newly_eligible_owned_rows"], audit["removed_calibration_rows"]), (160, 161, 3, 2))
         self.assertTrue(audit["common_calibration_values_unchanged"])
@@ -304,7 +304,7 @@ class PublicV079(unittest.TestCase):
         games = {f'{g["season"]}/{g["id"]}': g for g in self.games}
         timed = {key for key, g in games.items() if g["season"] == 2026 and g["status"] == "pending"}
         self.assertEqual(set(p["forecasts"]), timed)
-        self.assertEqual(len(timed), 86)
+        self.assertEqual(len(timed), 96)
         dt = lambda value: datetime.fromisoformat(value.replace("Z", "+00:00"))
         for key, outputs in p["forecasts"].items():
             self.assertEqual(set(outputs), {"W08", "W02", "M09", "T09"})
@@ -321,8 +321,8 @@ class PublicV079(unittest.TestCase):
                 self.assertLess(clocks[-2], clocks[-1])
                 self.assertLess(clocks[-1], dt(games[key]["kickoff"]))
                 self.assertEqual(cell["value"], round(cell["value"], 4 if cell["target"] == "winner" else 1))
-        self.assertEqual(sum(len(v) for v in p["forecasts"].values()), 344)
-        self.assertEqual(p["objective_display_cell_count"], 516)
+        self.assertEqual(sum(len(v) for v in p["forecasts"].values()), 384)
+        self.assertEqual(p["objective_display_cell_count"], 576)
         self.assertEqual((p["new_model_fits"], p["new_forecast_issues"], p["new_source_calls"]), (0, 0, 0))
         self.assertFalse(p["promotion"])
 

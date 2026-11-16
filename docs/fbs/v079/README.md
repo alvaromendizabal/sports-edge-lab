@@ -27,3 +27,11 @@ V080R1 reused all 26 numerical base estimators with zero base fit calls. Its 8 w
 Earlier V080 execution: all 26 base fit calls repeated the same numerical training identities as its predecessor and were avoidable. Its full fitted-state identities changed with calibration inputs and it fitted 8 probability calibrators. Those calls remain counted as executed fits, not reuse or novel base learning. These dated counts are separate from the current V080R1 execution above. The earlier audit compared authenticated identity hashes; duplicate base-only runtime was not isolated.
 
 A separate audited view compares all four corrected research winner policies with DraftKings on exactly the same fixed provider cohorts as the primary models. DraftKings also has lower log loss and Brier score and higher accuracy than every corrected study winner policy, including the negative control, in all three fixed provider cohorts. No research control or current-season result changes the primary validation nomination.
+
+## November 16 V081 market study and refreshed owner snapshot
+
+The latest authenticated owner snapshot retains 919/934/752 completed games for 2024/2025/2026. Its 96 timed upcoming fixtures have four selected, rounded, already-issued model roles; 40 unresolved kickoffs remain visible. The saved current DraftKings winner snapshot covers 66 games.
+
+The separate V081 market study performed 22 genuine local research fits, with no SageMaker execution or automatic promotion. Its stacker improves over the preserved market-free model, but does not establish extra skill over DraftKings. Validation uses 2024–2025; 2026 is exposed test reporting. The five-policy page retains full-game and fixed-provider denominators, negative controls, uncertainty and fallback counts. The V12 coverage page distinguishes stored references, usable features and exact-settlement comparison gates. The full owned-archive horizon census is still pending.
+
+[Market study](market-study.html) · [V12 source coverage](market-readiness.html)
