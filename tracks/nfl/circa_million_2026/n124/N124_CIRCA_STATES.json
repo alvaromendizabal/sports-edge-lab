@@ -1,0 +1,119 @@
+{
+  "2024_direction": {
+    "year": 2024,
+    "component": "direction",
+    "training_n": 0,
+    "training_years": [],
+    "training_sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+    "fingerprint": "2eec5580bd0ac4bfd412e8a10fe0e065e072e539f78e9bfa8ecc2f6d72855269",
+    "parameters": [
+      0.0,
+      0.2
+    ]
+  },
+  "2024_push_key": {
+    "year": 2024,
+    "component": "push_key",
+    "training_n": 0,
+    "training_years": [],
+    "training_sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+    "fingerprint": "7d82c53730ff1faa9b7ed8b913faf8bb5e59dda134884fe4ded4be66907d42b8",
+    "parameters": [
+      0.0
+    ]
+  },
+  "2024_push_other": {
+    "year": 2024,
+    "component": "push_other",
+    "training_n": 0,
+    "training_years": [],
+    "training_sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+    "fingerprint": "435e76c6bae48fe3bda81b4a5cfd2129ac73c7216de4a94009c2fe0171e5600b",
+    "parameters": [
+      0.0
+    ]
+  },
+  "2025_direction": {
+    "year": 2025,
+    "component": "direction",
+    "training_n": 267,
+    "training_years": [
+      2024
+    ],
+    "training_sha256": "0b7f4164556027a8cb91206b415ff76603c4363f85569e380847f75f14d0f4af",
+    "fingerprint": "82391b60f33e1ce3f701daff18f0dad353e557b735e6e45e44a0119991a741c7",
+    "parameters": [
+      -0.04692798917279738,
+      0.06483509825103084
+    ]
+  },
+  "2025_push_key": {
+    "year": 2025,
+    "component": "push_key",
+    "training_n": 49,
+    "training_years": [
+      2024
+    ],
+    "training_sha256": "5b64348296b97f42d39110378452d8c78f6e3dbba538fa96ac171f2194b60382",
+    "fingerprint": "216809d82cb9dc63cf86e83123eeeb112a1e12b04c7798312bf07ba33877d7c7",
+    "parameters": [
+      0.11418146797553319
+    ]
+  },
+  "2025_push_other": {
+    "year": 2025,
+    "component": "push_other",
+    "training_n": 75,
+    "training_years": [
+      2024
+    ],
+    "training_sha256": "35d8627fcd75f780c6a69c1d5a5c37a0d15a62a5281dcf9548661521a3b4b16b",
+    "fingerprint": "f5acaab74eae0eaff19944136edc1a243fd4bd106286ddbd42f43618dc54c1d7",
+    "parameters": [
+      -0.06177254255671648
+    ]
+  },
+  "2026_direction": {
+    "year": 2026,
+    "component": "direction",
+    "training_n": 535,
+    "training_years": [
+      2024,
+      2025
+    ],
+    "training_sha256": "cca02aa8c2bae242500f8b1e702900ff453d33a6fd743a098ff9a8219466d6d4",
+    "fingerprint": "805b535236b1513f60c3ad89f2d108e2010adee0def1ca60ae4f62bfdfab5aa9",
+    "parameters": [
+      0.007695649199453245,
+      0.08556103392290737
+    ]
+  },
+  "2026_push_key": {
+    "year": 2026,
+    "component": "push_key",
+    "training_n": 103,
+    "training_years": [
+      2024,
+      2025
+    ],
+    "training_sha256": "8e2195332d2341ef0c33bcc0f8609b34daae0933643b75e14f14f4a6ede3c245",
+    "fingerprint": "cf7e8a9b3bba7335c2837189028cbed751e26a5de5e0fae4cdd136e853cf49af",
+    "parameters": [
+      0.24729671363540437
+    ]
+  },
+  "2026_push_other": {
+    "year": 2026,
+    "component": "push_other",
+    "training_n": 107,
+    "training_years": [
+      2024,
+      2025
+    ],
+    "training_sha256": "4f22fda3e7b6ea4f6d7826c596be0a070ed51b26b19d9d13e32819bbd8ec47f6",
+    "fingerprint": "af5ae9951bde922d7b0cfa26d5d992f699cea4256779dccd8e353ea39ba139b2",
+    "parameters": [
+      -0.17581612416234205
+    ]
+  }
+}

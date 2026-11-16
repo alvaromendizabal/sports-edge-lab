@@ -1,0 +1,46 @@
+{
+  "validation_leaders": [
+    "both_calibrated",
+    "direction_only"
+  ],
+  "candidates_plus_baselines_controls": 19,
+  "worksheets": 46,
+  "five_game_cards": 874,
+  "side_rows": 26372,
+  "new_policies": 4,
+  "persisted_fit_components": 6,
+  "separate_replays_and_entries": true,
+  "original_entries": 0,
+  "promotion": false,
+  "cold_start_season": 2024,
+  "state_years": {
+    "2025": [
+      2024
+    ],
+    "2026": [
+      2024,
+      2025
+    ]
+  },
+  "known_test_exposure": true,
+  "grade_as_of": "November 16, 2026 before Chargers at Ravens",
+  "pending_game": "2026_10_LAC_BAL",
+  "next_official_sheet": "Week 11 expected November 19, 2026 around 10 AM PT; unavailable at source check on November 16.",
+  "rules": "https://www.circasports.com/wp-content/uploads/2026/05/CircaMillionVIIIContest.2026.pdf",
+  "contest": "https://www.circasports.com/circa-million",
+  "next_deadline": "November 21 at 4 PM PT or before an earlier selected kickoff.",
+  "tests": [
+    "monotone bounded direction coefficient",
+    "all held-season labels excluded from fit",
+    "perturbing 2026 labels leaves every card identity intact",
+    "694 official games with both sides",
+    "no half-point push mass",
+    "all model origins before card cutoff",
+    "5 distinct selections per policy per sheet"
+  ],
+  "sources": {
+    "N124_PARENT_SIDES.csv.gz": "3462a64f552ee2b6f8cc29cf587aaf6196c5b103aeda85741a175b21f605d684",
+    "N124_CIRCA_LAWS.json.gz": "6d3a7191ca8b7a02654c0e270388e78869a12faa9dedb9e1a6dec0e894374f69",
+    "N124_CIRCA_REGISTRATION.json": "933dc5f072b24f28eb975de8a818fe824071b12f8e112f0873c05d4354e7e634"
+  }
+}

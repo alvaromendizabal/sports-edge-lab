@@ -1,0 +1,35 @@
+{
+  "sources": "Polymarket international Gamma keyset and two-token CLOB book snapshots. Filtered to official game teams, orientation, confirmed UTC kickoff, full-game rule, positive depth, uncrossed opposing bids and asks and native timestamps within five minutes; fees metadata captured but no fee-adjusted returns projected.",
+  "status": "Observed current prices expire; this is a point-in-time archive. No winner/accuracy or P&L can be graded on unplayed games. Opening/closing and cross-venue simultaneity unproven.",
+  "timestamp_start": "2026-11-16T20:06:42.521375+00:00",
+  "timestamp_end": "2026-11-16T20:08:36.968559+00:00",
+  "total_future": 123,
+  "future_timed": 99,
+  "future_tbd": 24,
+  "requested_slugs": 146,
+  "gamma_discovered": 30,
+  "eligible_rule_count": 1950,
+  "fresh_verified_contracts": 493,
+  "book_rejections": {
+    "missing_stale_or_invalid_book": 1457
+  },
+  "fresh_distinct_games": 20,
+  "fresh_games_by_target": {
+    "current_winner": 17,
+    "current_spreads": 17,
+    "current_totals": 14,
+    "current_margin_buckets": 0
+  },
+  "num_fresh_contracts_by_target": {
+    "winner_plus_half_tie": 17,
+    "full_spread": 264,
+    "full_total": 212
+  },
+  "completed_gamma_requests": 13,
+  "completed_batch_book_requests": 66,
+  "errors": [],
+  "census_method": "Confirmed UTC date and known team abbreviations in batched event slug queries; unknown unmatched listings are unverified. Excludes live games and unscheduled kickoffs. Source list observations are separate from qualified books. Silent missing event cannot prove nonexistence.",
+  "raw_verified_bytes": 32603036,
+  "paid_provider_credits": 0,
+  "model_probability_comparisons": 493
+}

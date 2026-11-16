@@ -1,0 +1,103 @@
+{
+  "eligible_unstarted": 123,
+  "timestamp": "2026-11-16T20:02:37.556444+00:00",
+  "number_of_matching_source_fixture_ids": 14,
+  "reported_provider_games": {
+    "draftkings": 14,
+    "kalshi": 12,
+    "polymarket": 13,
+    "polymarket_us": 13
+  },
+  "exact_games_by_venue": {
+    "DraftKings": {
+      "current_winner": 14,
+      "current_spreads": 14,
+      "current_totals": 14,
+      "distinct_fixtures_with_exact_contract": 14,
+      "exact_contract_count": 42,
+      "listed": 14
+    },
+    "Kalshi": {
+      "current_winner": 12,
+      "current_spreads": 11,
+      "current_totals": 11,
+      "distinct_fixtures_with_exact_contract": 12,
+      "exact_contract_count": 34,
+      "listed": 12
+    },
+    "Polymarket": {
+      "current_winner": 13,
+      "current_spreads": 13,
+      "current_totals": 13,
+      "distinct_fixtures_with_exact_contract": 13,
+      "exact_contract_count": 39,
+      "listed": 13
+    },
+    "Polymarket_US": {
+      "current_winner": 13,
+      "current_spreads": 0,
+      "current_totals": 0,
+      "distinct_fixtures_with_exact_contract": 13,
+      "exact_contract_count": 13,
+      "listed": 13
+    }
+  },
+  "three_venue_payouts": {
+    "spreads": 5,
+    "totals": 8
+  },
+  "three_venue_distinct_games": 10,
+  "three_venue_terms": "Spreads explicitly include overtime. Total thresholds align on an ordinary completed game; international total clauses do not explicitly specify overtime. Exceptional cancellation/abandonment payouts may differ.",
+  "credits": 3,
+  "paid_calls": 1,
+  "US_completed_exact": 69,
+  "US_completed_calendar": 149,
+  "US_post_listing_attempted": 70,
+  "US_exceptional_delay_terms": {
+    "historical": {
+      "14 days": 28,
+      "2 days": 41
+    },
+    "upcoming": {
+      "2 days": 13
+    }
+  },
+  "current_release_credits": 333,
+  "current_release_paid_calls": 34,
+  "US_fee_status": "Official fee coefficient retained at term review. Size, side and execution-specific charges and tradable depth do not follow from paired probability quotes.",
+  "international_direct": {
+    "sources": "Polymarket international Gamma keyset and two-token CLOB book snapshots. Filtered to official game teams, orientation, confirmed UTC kickoff, full-game rule, positive depth, uncrossed opposing bids and asks and native timestamps within five minutes; fees metadata captured but no fee-adjusted returns projected.",
+    "status": "Observed current prices expire; this is a point-in-time archive. No winner/accuracy or P&L can be graded on unplayed games. Opening/closing and cross-venue simultaneity unproven.",
+    "timestamp_start": "2026-11-16T20:06:42.521375+00:00",
+    "timestamp_end": "2026-11-16T20:08:36.968559+00:00",
+    "total_future": 123,
+    "future_timed": 99,
+    "future_tbd": 24,
+    "requested_slugs": 146,
+    "gamma_discovered": 30,
+    "eligible_rule_count": 1950,
+    "fresh_verified_contracts": 493,
+    "book_rejections": {
+      "missing_stale_or_invalid_book": 1457
+    },
+    "fresh_distinct_games": 20,
+    "fresh_games_by_target": {
+      "current_winner": 17,
+      "current_spreads": 17,
+      "current_totals": 14,
+      "current_margin_buckets": 0
+    },
+    "num_fresh_contracts_by_target": {
+      "winner_plus_half_tie": 17,
+      "full_spread": 264,
+      "full_total": 212
+    },
+    "completed_gamma_requests": 13,
+    "completed_batch_book_requests": 66,
+    "errors": [],
+    "census_method": "Confirmed UTC date and known team abbreviations in batched event slug queries; unknown unmatched listings are unverified. Excludes live games and unscheduled kickoffs. Source list observations are separate from qualified books. Silent missing event cannot prove nonexistence.",
+    "raw_verified_bytes": 32603036,
+    "paid_provider_credits": 0,
+    "model_probability_comparisons": 493
+  }
+}

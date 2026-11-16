@@ -1,0 +1,46 @@
+{
+  "inherited_inputs_sha256": {
+    "n122/contest/official_selections_lines.json": "01d7e4b527fcba431c93554e7920f6b8e16d3c7c0df818e575e0af6aa24abd83",
+    "n123/calendar/N123_SEASON_CALENDAR.csv": "4e19ce3eb8573f5609bf8bfa38fdc84484a868380c41ca6077e85610d51c337e",
+    "n122/contest/N122_CIRCA_ALTERNATIVES.csv": "3d277df30deea4d56f0d12dca091077c71cfcbc25a61fb2eb00e0d25ff0dc3f7",
+    "n123/calendar/N123_CIRCA_ALTERNATIVES.csv": "9517f3e48b54b7b9b27c5f775c818ab71f1bd2efa85c7a44e70cd8ac8eda6dfc",
+    "n123/historical/N123_N110_CIRCA_ALTERNATIVES.csv": "d247a5e15b2e4c0c3b782b81548e4dfe4d77c99d8d8562f7ad149b303fd1b09a"
+  },
+  "sunday_final": {
+    "game_id": "2026_10_PIT_CIN",
+    "away": "PIT",
+    "away_score": 18,
+    "home": "CIN",
+    "home_score": 38,
+    "source": "https://www.bengals.com/news/bengals-steelers-recap-postgame-notes-quotes-stats-week-10-2026-sunday-night-football"
+  },
+  "last_official_worksheet": "2026 week 10",
+  "official_contest_page": "https://www.circasports.com/circa-million",
+  "official_rules": "https://www.circasports.com/wp-content/uploads/2026/05/CircaMillionVIIIContest.2026.pdf",
+  "next_worksheet_expected": "2026-11-19 10:00 America/Los_Angeles",
+  "usual_deadline": "2026-11-21 16:00 America/Los_Angeles or before the earliest selected kickoff, whichever comes first",
+  "validation_policy": "30% 2024, 70% 2025; 2026 has zero selection weight; equal-weight sensitivity included.",
+  "validation_leaders": [
+    "both_calibrated",
+    "direction_only"
+  ],
+  "original_protocol_primary": "both_calibrated",
+  "reason_for_default": "Preregistered primary blended policy with the same maximum contest points in each validation season. No contest points tiebreak was registered.",
+  "target": "Five selections by cover probability + half push probability; win=1, push=0.5, loss=0.",
+  "closure": "A common fully closed week requires all eligible games on its official worksheet to have final outcomes.",
+  "chronology": "46 published worksheets verified. Retrospective season-frozen or weekly time-qualified model policies; N123 research was registered after earlier 2026 results were visible. Zero verified contest entries.",
+  "inherited_alias": "N122 league/home and N123 incumbent_league verified identical probabilities and selections on all 694 games.",
+  "submission_receipts": 0,
+  "unique_policies": 15,
+  "worksheets": 46,
+  "cards": 690,
+  "side_predictions": 20820,
+  "public_files": {
+    "N123_CIRCA_PAIRED_INTERVALS.csv": "58bda29b53cb3b54f24937c33889dd0ff261dbb99c91bccc44175599d12fdbd6",
+    "N123_CIRCA_UPDATED_ALTERNATIVES.csv": "3b585260b6105838e8500ee4e4fb094080d69a4f08e2bc085575a48d37fca788",
+    "N123_CIRCA_UPDATED_CARDS.csv": "476b1342a851e91bd965f792538832e83e8c5bc8adb3b72a46d103afecb85127",
+    "N123_CIRCA_UPDATED_SEASON_METRICS.csv": "5a47de448ee755e49957894a5582a1a8cff1c6cd2d7bffc2b29d593bbff79d4b",
+    "N123_CIRCA_VALIDATION_SELECTION.csv": "c67eb1ff1f04665439b76fd3fca894f9682928a483c1fdbbafca007509cc819c",
+    "N123_CIRCA_WEEKLY_POINTS.csv": "fc765c8036ab76b07d564e1eaaf7fe2af3fb5a69c86c7e5c2e8165bb9feca314"
+  }
+}
