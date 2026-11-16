@@ -1,0 +1,142 @@
+{
+  "schema": "sel.ncaa.public.r19.execution_status.v1",
+  "release": "R19",
+  "run_started_at": "2026-11-16T21:22:26+00:00",
+  "verified_return_published_at": "2026-11-16T22:38:29+00:00",
+  "scientific_status": "UTILIZATION_ACCEPTANCE_FAILED_PARTIAL_WORK_PRESERVED",
+  "logical_return_sha256": "3b1278088c1d8d0d25235e35d6ea692c9c68448478cc746fc96f1957b87e5f5a",
+  "transport": {
+    "verified": true,
+    "archive_bytes": 97825322,
+    "payload_members": 302,
+    "total_zip_members_including_manifest": 303,
+    "embedded_source_verified": true
+  },
+  "scientific_counts": {
+    "new_committed_target_fits": 49,
+    "new_current_target_fits": 36,
+    "new_strict_refit_target_fits": 13,
+    "new_scalar_calibration_fits": 8,
+    "new_empirical_residual_fits": 24,
+    "current_target_checkpoint_reuses": 54,
+    "historical_target_checkpoint_reuses": 108,
+    "unclassified_committed_model_artifacts": 0,
+    "strict_worker_optimizer_outputs_awaiting_publication_recovery": 2,
+    "strict_optimizer_failures_in_reported_batch": 0,
+    "strict_worker_publication_failures": 2,
+    "promotions": 0
+  },
+  "strict_pipeline": {
+    "proposed_contexts": 52,
+    "prepared_fit_tasks": 15,
+    "durably_completed_fit_contexts": 13,
+    "remaining_reported_contexts": 39,
+    "dispatch_capacity": 12,
+    "peak_ready_tasks": 1,
+    "peak_concurrent_worker_processes": 2,
+    "gate_parent_preparation_seconds": 182.195664669,
+    "gate_fit_publication_seconds": 57.024590573,
+    "final_parent_preparation_seconds": 205.040106101,
+    "final_fit_publication_seconds": 72.907380749,
+    "bottleneck": "PREPARATION_READY_WORK_SHORTAGE",
+    "callback_overlap_is_not_worker_cpu_utilization": true
+  },
+  "actual_acceptance": {
+    "executed": true,
+    "passed": false,
+    "requested_cores": 12,
+    "measurement_seconds": 181.968690863,
+    "average_owner_core_equivalents": 1.2367512176555338,
+    "average_useful_worker_core_equivalents": 0.5808691566593644,
+    "average_selected_capacity_percent": 10.306260147129448,
+    "required_selected_capacity_percent": 75,
+    "new_verified_fits_in_interval": 13,
+    "synthetic_workload_used": false,
+    "full_capacity_success_claim": false
+  },
+  "failure": {
+    "publication_pressure_reason": "MEMORY_FULL_PRESSURE",
+    "latched_at": "2026-11-16T22:37:44.531+00:00",
+    "terminal_exception": "V7_IO_DEFERRAL_ALREADY_LATCHED",
+    "full_population_materialization_completed": false,
+    "pending_worker_model_bytes_recovered_in_this_review": false,
+    "pending_worker_recovery_note": "Two workers finished optimization, but publication failed. Expected remote checkpoint records and model prefixes were absent in a bounded check. Retained local worker outputs require authentication at replacement launch before publication or any refit decision."
+  },
+  "prospective_forecasts": {
+    "durably_pre_cutoff_forecast_rows": 780,
+    "distinct_games": 21,
+    "men_games": 11,
+    "women_games": 10,
+    "men_rows": 420,
+    "women_rows": 360,
+    "distinct_durable_records_with_full_readback_receipts": 120,
+    "first_durable_commit_at": "2026-11-16T21:57:48+00:00",
+    "last_durable_commit_at": "2026-11-16T22:13:39+00:00",
+    "row_definition": "Multiple recipes, targets and tracks per game; 780 rows are not 780 distinct games.",
+    "entire_upcoming_season_coverage_claim": false,
+    "per_game_forecasts_published_in_this_status": false
+  },
+  "source_coverage": {
+    "refresh_started_at": "2026-11-16T21:30:58.111+00:00",
+    "refresh_completed_at": "2026-11-16T21:32:36.481+00:00",
+    "odds_http_calls": 3,
+    "odds_api_credits_used": 6,
+    "new_canonical_quote_rows": 44,
+    "new_raw_outcome_rows": 171,
+    "odds_refresh_scope": "Two current DraftKings NCAA sport snapshots covering winner, spread and total markets; not broad-book or historical-season acquisition.",
+    "all_historical_odds_downloaded": false,
+    "all_comparison_provider_season_coverage_complete": false,
+    "qualified_settled_provider_pairs_in_returned_current_comparison": 0,
+    "historical_validation_season_quote_refreshes": 0,
+    "cbbd_status": "PAUSED_AFTER_PROVIDER_429",
+    "cbbd_new_calls": 0,
+    "cbbd_resume_requires_new_provider_access_evidence": true,
+    "comparison_only_providers": [
+      "DraftKings",
+      "Kalshi",
+      "Polymarket"
+    ],
+    "broader_odds_feature_readiness": "Coverage, rights, source clocks and provider exclusions still require verification before materializing modeling features.",
+    "v12_registered_basketball_feature_groups": 10,
+    "v12_new_materialized_features": 0,
+    "v12_new_feature_vectors": 0,
+    "v12_completed_ablations": 0,
+    "v12_new_target_fits": 0,
+    "v12_source_audit_ready": false
+  },
+  "comparison_snapshot": {
+    "published_full_population_snapshot_release": "R18",
+    "r18_population_metric_status_assets_modified": false,
+    "r19_new_complete_all_model_population_scoreboard": false,
+    "new_final_champions_selected": false,
+    "validation_seasons": [
+      "2024-25",
+      "2025-26"
+    ],
+    "test_season": "2026-27",
+    "test_selection_weight": 0,
+    "current_test_already_exposed": true
+  },
+  "publication": {
+    "scope": "Sanitized execution counts, source coverage and scientific limitations only.",
+    "new_model_fits_from_this_publication": 0,
+    "new_forecasts_from_this_publication": 0,
+    "new_provider_calls_from_this_publication": 0,
+    "runtime_archives_model_bodies_raw_feeds_and_private_paths_included": false
+  },
+  "subsequent_read_only_recovery": {
+    "prediction_rows": 126780,
+    "committed_target_checkpoints": 144,
+    "ordered_context_hashes_verified": 16,
+    "preserved_calibration_applications": 112,
+    "displayed_same_game_target_policy_metrics": 86,
+    "men_games_per_policy": 637,
+    "women_games_per_policy": 655,
+    "missing_registered_target_policy_slots": 8,
+    "new_fits": 0,
+    "new_forecasts": 0,
+    "source_qualification_upgraded": false,
+    "original_issue_clocks_reconstructed": false,
+    "complete_all_model_comparison": false
+  }
+}

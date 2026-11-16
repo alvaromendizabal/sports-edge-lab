@@ -1,0 +1,2186 @@
+{
+  "cohorts": [
+    {
+      "cohort_sha256": "03fecb7b49fe6088ca8bcef21e6f2378a6598fedad62b6c82a10996f0cb29cfb",
+      "games": 637,
+      "league": "ncaam",
+      "model_target_policy_count": 13,
+      "target": "margin"
+    },
+    {
+      "cohort_sha256": "03fecb7b49fe6088ca8bcef21e6f2378a6598fedad62b6c82a10996f0cb29cfb",
+      "games": 637,
+      "league": "ncaam",
+      "model_target_policy_count": 13,
+      "target": "total"
+    },
+    {
+      "cohort_sha256": "03fecb7b49fe6088ca8bcef21e6f2378a6598fedad62b6c82a10996f0cb29cfb",
+      "games": 637,
+      "league": "ncaam",
+      "model_target_policy_count": 17,
+      "target": "win"
+    },
+    {
+      "cohort_sha256": "9fbb1d435f53506916a3391367939596a1c728c88c27c7cb225dc1c85f263227",
+      "games": 655,
+      "league": "ncaaw",
+      "model_target_policy_count": 13,
+      "target": "margin"
+    },
+    {
+      "cohort_sha256": "9fbb1d435f53506916a3391367939596a1c728c88c27c7cb225dc1c85f263227",
+      "games": 655,
+      "league": "ncaaw",
+      "model_target_policy_count": 13,
+      "target": "total"
+    },
+    {
+      "cohort_sha256": "9fbb1d435f53506916a3391367939596a1c728c88c27c7cb225dc1c85f263227",
+      "games": 655,
+      "league": "ncaaw",
+      "model_target_policy_count": 17,
+      "target": "win"
+    }
+  ],
+  "complete_all_seasons_claimed": false,
+  "full_registered_current_policy_intersections": [
+    {
+      "league": "ncaam",
+      "rank_permitted": false,
+      "registered_target_policy_count": 19,
+      "same_game_intersection_count": 0,
+      "target": "win"
+    },
+    {
+      "league": "ncaam",
+      "rank_permitted": false,
+      "registered_target_policy_count": 13,
+      "same_game_intersection_count": 637,
+      "target": "margin"
+    },
+    {
+      "league": "ncaam",
+      "rank_permitted": false,
+      "registered_target_policy_count": 13,
+      "same_game_intersection_count": 637,
+      "target": "total"
+    },
+    {
+      "league": "ncaaw",
+      "rank_permitted": false,
+      "registered_target_policy_count": 19,
+      "same_game_intersection_count": 0,
+      "target": "win"
+    },
+    {
+      "league": "ncaaw",
+      "rank_permitted": false,
+      "registered_target_policy_count": 15,
+      "same_game_intersection_count": 0,
+      "target": "margin"
+    },
+    {
+      "league": "ncaaw",
+      "rank_permitted": false,
+      "registered_target_policy_count": 15,
+      "same_game_intersection_count": 0,
+      "target": "total"
+    }
+  ],
+  "metrics": [
+    {
+      "cohort_sha256": "03fecb7b49fe6088ca8bcef21e6f2378a6598fedad62b6c82a10996f0cb29cfb",
+      "games": 637,
+      "league": "ncaam",
+      "metrics": {
+        "accuracy": 0.783359497645212,
+        "brier": 0.14154206702987876,
+        "log_loss": 0.4294905517696476
+      },
+      "promotion_permitted": false,
+      "public_model_id": "m_c36feeaa7d93f3475add",
+      "qualified_games": 0,
+      "rank_permitted": false,
+      "season_label": "2026-27",
+      "target": "win",
+      "test_selection_weight": 0
+    },
+    {
+      "cohort_sha256": "03fecb7b49fe6088ca8bcef21e6f2378a6598fedad62b6c82a10996f0cb29cfb",
+      "games": 637,
+      "league": "ncaam",
+      "metrics": {
+        "accuracy": 0.7849293563579278,
+        "brier": 0.14083608624343827,
+        "log_loss": 0.42813769746431046
+      },
+      "promotion_permitted": false,
+      "public_model_id": "m_83e0171c47f3cbe15fa7",
+      "qualified_games": 0,
+      "rank_permitted": false,
+      "season_label": "2026-27",
+      "target": "win",
+      "test_selection_weight": 0
+    },
+    {
+      "cohort_sha256": "03fecb7b49fe6088ca8bcef21e6f2378a6598fedad62b6c82a10996f0cb29cfb",
+      "games": 637,
+      "league": "ncaam",
+      "metrics": {
+        "accuracy": 0.7849293563579278,
+        "brier": 0.1408357742862565,
+        "log_loss": 0.42813515697358867
+      },
+      "promotion_permitted": false,
+      "public_model_id": "m_4e98798e294f7de5f3dd",
+      "qualified_games": 0,
+      "rank_permitted": false,
+      "season_label": "2026-27",
+      "target": "win",
+      "test_selection_weight": 0
+    },
+    {
+      "cohort_sha256": "03fecb7b49fe6088ca8bcef21e6f2378a6598fedad62b6c82a10996f0cb29cfb",
+      "games": 637,
+      "league": "ncaam",
+      "metrics": {
+        "accuracy": 0.7802197802197802,
+        "brier": 0.14268769979369625,
+        "log_loss": 0.4334949025119142
+      },
+      "promotion_permitted": false,
+      "public_model_id": "m_d62446d02c17706a9229",
+      "qualified_games": 0,
+      "rank_permitted": false,
+      "season_label": "2026-27",
+      "target": "win",
+      "test_selection_weight": 0
+    },
+    {
+      "cohort_sha256": "03fecb7b49fe6088ca8bcef21e6f2378a6598fedad62b6c82a10996f0cb29cfb",
+      "games": 637,
+      "league": "ncaam",
+      "metrics": {
+        "accuracy": 0.7802197802197802,
+        "brier": 0.1426876407791246,
+        "log_loss": 0.4334943149847958
+      },
+      "promotion_permitted": false,
+      "public_model_id": "m_d0642f81a10f80f7c817",
+      "qualified_games": 0,
+      "rank_permitted": false,
+      "season_label": "2026-27",
+      "target": "win",
+      "test_selection_weight": 0
+    },
+    {
+      "cohort_sha256": "03fecb7b49fe6088ca8bcef21e6f2378a6598fedad62b6c82a10996f0cb29cfb",
+      "games": 637,
+      "league": "ncaam",
+      "metrics": {
+        "accuracy": 0.7802197802197802,
+        "brier": 0.14203113538039538,
+        "log_loss": 0.4309886402743717
+      },
+      "promotion_permitted": false,
+      "public_model_id": "m_8e14c8dc3eb3f97daa51",
+      "qualified_games": 0,
+      "rank_permitted": false,
+      "season_label": "2026-27",
+      "target": "win",
+      "test_selection_weight": 0
+    },
+    {
+      "cohort_sha256": "03fecb7b49fe6088ca8bcef21e6f2378a6598fedad62b6c82a10996f0cb29cfb",
+      "games": 637,
+      "league": "ncaam",
+      "metrics": {
+        "accuracy": 0.7802197802197802,
+        "brier": 0.14203121989734366,
+        "log_loss": 0.4309896818824956
+      },
+      "promotion_permitted": false,
+      "public_model_id": "m_3e2df9a576252ab4c02c",
+      "qualified_games": 0,
+      "rank_permitted": false,
+      "season_label": "2026-27",
+      "target": "win",
+      "test_selection_weight": 0
+    },
+    {
+      "cohort_sha256": "03fecb7b49fe6088ca8bcef21e6f2378a6598fedad62b6c82a10996f0cb29cfb",
+      "games": 637,
+      "league": "ncaam",
+      "metrics": {
+        "accuracy": 0.7802197802197802,
+        "brier": 0.14281956265726584,
+        "log_loss": 0.4327474358729081
+      },
+      "promotion_permitted": false,
+      "public_model_id": "m_4211623ce4466d662bcf",
+      "qualified_games": 0,
+      "rank_permitted": false,
+      "season_label": "2026-27",
+      "target": "win",
+      "test_selection_weight": 0
+    },
+    {
+      "cohort_sha256": "03fecb7b49fe6088ca8bcef21e6f2378a6598fedad62b6c82a10996f0cb29cfb",
+      "games": 637,
+      "league": "ncaam",
+      "metrics": {
+        "accuracy": 0.7802197802197802,
+        "brier": 0.14281937606690187,
+        "log_loss": 0.43274558047225736
+      },
+      "promotion_permitted": false,
+      "public_model_id": "m_2ba0eae9e015859f0b17",
+      "qualified_games": 0,
+      "rank_permitted": false,
+      "season_label": "2026-27",
+      "target": "win",
+      "test_selection_weight": 0
+    },
+    {
+      "cohort_sha256": "03fecb7b49fe6088ca8bcef21e6f2378a6598fedad62b6c82a10996f0cb29cfb",
+      "games": 637,
+      "league": "ncaam",
+      "metrics": {
+        "accuracy": 0.7802197802197802,
+        "brier": 0.14196314357471615,
+        "log_loss": 0.42939624343267035
+      },
+      "promotion_permitted": false,
+      "public_model_id": "m_ed726d64a0dd0b2da02f",
+      "qualified_games": 0,
+      "rank_permitted": false,
+      "season_label": "2026-27",
+      "target": "win",
+      "test_selection_weight": 0
+    },
+    {
+      "cohort_sha256": "03fecb7b49fe6088ca8bcef21e6f2378a6598fedad62b6c82a10996f0cb29cfb",
+      "games": 637,
+      "league": "ncaam",
+      "metrics": {
+        "accuracy": 0.7802197802197802,
+        "brier": 0.14196297125957685,
+        "log_loss": 0.4293945491338932
+      },
+      "promotion_permitted": false,
+      "public_model_id": "m_1367aabd3ac989da08b9",
+      "qualified_games": 0,
+      "rank_permitted": false,
+      "season_label": "2026-27",
+      "target": "win",
+      "test_selection_weight": 0
+    },
+    {
+      "cohort_sha256": "03fecb7b49fe6088ca8bcef21e6f2378a6598fedad62b6c82a10996f0cb29cfb",
+      "games": 637,
+      "league": "ncaam",
+      "metrics": {
+        "accuracy": 0.7817896389324961,
+        "brier": 0.1414167113497943,
+        "log_loss": 0.427129814686515
+      },
+      "promotion_permitted": false,
+      "public_model_id": "m_60b04622fbadcd387e8d",
+      "qualified_games": 0,
+      "rank_permitted": false,
+      "season_label": "2026-27",
+      "target": "win",
+      "test_selection_weight": 0
+    },
+    {
+      "cohort_sha256": "03fecb7b49fe6088ca8bcef21e6f2378a6598fedad62b6c82a10996f0cb29cfb",
+      "games": 637,
+      "league": "ncaam",
+      "metrics": {
+        "accuracy": 0.7817896389324961,
+        "brier": 0.14141648630420586,
+        "log_loss": 0.42712763710488416
+      },
+      "promotion_permitted": false,
+      "public_model_id": "m_96b490d291b35958a0e7",
+      "qualified_games": 0,
+      "rank_permitted": false,
+      "season_label": "2026-27",
+      "target": "win",
+      "test_selection_weight": 0
+    },
+    {
+      "cohort_sha256": "03fecb7b49fe6088ca8bcef21e6f2378a6598fedad62b6c82a10996f0cb29cfb",
+      "games": 637,
+      "league": "ncaam",
+      "metrics": {
+        "accuracy": 0.7802197802197802,
+        "brier": 0.14203124485175686,
+        "log_loss": 0.4309907911034788
+      },
+      "promotion_permitted": false,
+      "public_model_id": "m_46b6203ffe490dff63ca",
+      "qualified_games": 0,
+      "rank_permitted": false,
+      "season_label": "2026-27",
+      "target": "win",
+      "test_selection_weight": 0
+    },
+    {
+      "cohort_sha256": "03fecb7b49fe6088ca8bcef21e6f2378a6598fedad62b6c82a10996f0cb29cfb",
+      "games": 637,
+      "league": "ncaam",
+      "metrics": {
+        "accuracy": 0.7802197802197802,
+        "brier": 0.14203132936608512,
+        "log_loss": 0.430991832349394
+      },
+      "promotion_permitted": false,
+      "public_model_id": "m_df8312e7968ff8099271",
+      "qualified_games": 0,
+      "rank_permitted": false,
+      "season_label": "2026-27",
+      "target": "win",
+      "test_selection_weight": 0
+    },
+    {
+      "cohort_sha256": "03fecb7b49fe6088ca8bcef21e6f2378a6598fedad62b6c82a10996f0cb29cfb",
+      "games": 637,
+      "league": "ncaam",
+      "metrics": {
+        "accuracy": 0.7770800627943485,
+        "brier": 0.1412689957402988,
+        "log_loss": 0.4275353210420102
+      },
+      "promotion_permitted": false,
+      "public_model_id": "m_592caa178ef3f8ab1ed4",
+      "qualified_games": 0,
+      "rank_permitted": false,
+      "season_label": "2026-27",
+      "target": "win",
+      "test_selection_weight": 0
+    },
+    {
+      "cohort_sha256": "03fecb7b49fe6088ca8bcef21e6f2378a6598fedad62b6c82a10996f0cb29cfb",
+      "games": 637,
+      "league": "ncaam",
+      "metrics": {
+        "accuracy": 0.7770800627943485,
+        "brier": 0.14126155697723525,
+        "log_loss": 0.4275028602354224
+      },
+      "promotion_permitted": false,
+      "public_model_id": "m_acf5e18a59cfede6a1e5",
+      "qualified_games": 0,
+      "rank_permitted": false,
+      "season_label": "2026-27",
+      "target": "win",
+      "test_selection_weight": 0
+    },
+    {
+      "cohort_sha256": "03fecb7b49fe6088ca8bcef21e6f2378a6598fedad62b6c82a10996f0cb29cfb",
+      "games": 637,
+      "league": "ncaam",
+      "metrics": {
+        "bias": -2.299978979931832,
+        "mae": 10.728739630817612,
+        "rmse": 13.654438489509136
+      },
+      "promotion_permitted": false,
+      "public_model_id": "m_c36feeaa7d93f3475add",
+      "qualified_games": 0,
+      "rank_permitted": false,
+      "season_label": "2026-27",
+      "target": "margin",
+      "test_selection_weight": 0
+    },
+    {
+      "cohort_sha256": "03fecb7b49fe6088ca8bcef21e6f2378a6598fedad62b6c82a10996f0cb29cfb",
+      "games": 637,
+      "league": "ncaam",
+      "metrics": {
+        "bias": -0.5187083541381866,
+        "mae": 10.51657244879268,
+        "rmse": 13.305425388954028
+      },
+      "promotion_permitted": false,
+      "public_model_id": "m_83e0171c47f3cbe15fa7",
+      "qualified_games": 0,
+      "rank_permitted": false,
+      "season_label": "2026-27",
+      "target": "margin",
+      "test_selection_weight": 0
+    },
+    {
+      "cohort_sha256": "03fecb7b49fe6088ca8bcef21e6f2378a6598fedad62b6c82a10996f0cb29cfb",
+      "games": 637,
+      "league": "ncaam",
+      "metrics": {
+        "bias": -0.5184371277972943,
+        "mae": 10.516301222451787,
+        "rmse": 13.305119567454122
+      },
+      "promotion_permitted": false,
+      "public_model_id": "m_4e98798e294f7de5f3dd",
+      "qualified_games": 0,
+      "rank_permitted": false,
+      "season_label": "2026-27",
+      "target": "margin",
+      "test_selection_weight": 0
+    },
+    {
+      "cohort_sha256": "03fecb7b49fe6088ca8bcef21e6f2378a6598fedad62b6c82a10996f0cb29cfb",
+      "games": 637,
+      "league": "ncaam",
+      "metrics": {
+        "bias": -2.4039097506412146,
+        "mae": 10.784773457433618,
+        "rmse": 13.73468636097893
+      },
+      "promotion_permitted": false,
+      "public_model_id": "m_d62446d02c17706a9229",
+      "qualified_games": 0,
+      "rank_permitted": false,
+      "season_label": "2026-27",
+      "target": "margin",
+      "test_selection_weight": 0
+    },
+    {
+      "cohort_sha256": "03fecb7b49fe6088ca8bcef21e6f2378a6598fedad62b6c82a10996f0cb29cfb",
+      "games": 637,
+      "league": "ncaam",
+      "metrics": {
+        "bias": -2.4036422549173615,
+        "mae": 10.784505961709764,
+        "rmse": 13.734402893741423
+      },
+      "promotion_permitted": false,
+      "public_model_id": "m_d0642f81a10f80f7c817",
+      "qualified_games": 0,
+      "rank_permitted": false,
+      "season_label": "2026-27",
+      "target": "margin",
+      "test_selection_weight": 0
+    },
+    {
+      "cohort_sha256": "03fecb7b49fe6088ca8bcef21e6f2378a6598fedad62b6c82a10996f0cb29cfb",
+      "games": 637,
+      "league": "ncaam",
+      "metrics": {
+        "bias": -2.4039097506412146,
+        "mae": 10.784773457433618,
+        "rmse": 13.73468636097893
+      },
+      "promotion_permitted": false,
+      "public_model_id": "m_4211623ce4466d662bcf",
+      "qualified_games": 0,
+      "rank_permitted": false,
+      "season_label": "2026-27",
+      "target": "margin",
+      "test_selection_weight": 0
+    },
+    {
+      "cohort_sha256": "03fecb7b49fe6088ca8bcef21e6f2378a6598fedad62b6c82a10996f0cb29cfb",
+      "games": 637,
+      "league": "ncaam",
+      "metrics": {
+        "bias": -2.4036422549173615,
+        "mae": 10.784505961709764,
+        "rmse": 13.734402893741423
+      },
+      "promotion_permitted": false,
+      "public_model_id": "m_2ba0eae9e015859f0b17",
+      "qualified_games": 0,
+      "rank_permitted": false,
+      "season_label": "2026-27",
+      "target": "margin",
+      "test_selection_weight": 0
+    },
+    {
+      "cohort_sha256": "03fecb7b49fe6088ca8bcef21e6f2378a6598fedad62b6c82a10996f0cb29cfb",
+      "games": 637,
+      "league": "ncaam",
+      "metrics": {
+        "bias": -1.932609401515458,
+        "mae": 10.665468123690633,
+        "rmse": 13.574418877037326
+      },
+      "promotion_permitted": false,
+      "public_model_id": "m_ed726d64a0dd0b2da02f",
+      "qualified_games": 0,
+      "rank_permitted": false,
+      "season_label": "2026-27",
+      "target": "margin",
+      "test_selection_weight": 0
+    },
+    {
+      "cohort_sha256": "03fecb7b49fe6088ca8bcef21e6f2378a6598fedad62b6c82a10996f0cb29cfb",
+      "games": 637,
+      "league": "ncaam",
+      "metrics": {
+        "bias": -1.9323409731373449,
+        "mae": 10.66519969531252,
+        "rmse": 13.574128849261816
+      },
+      "promotion_permitted": false,
+      "public_model_id": "m_1367aabd3ac989da08b9",
+      "qualified_games": 0,
+      "rank_permitted": false,
+      "season_label": "2026-27",
+      "target": "margin",
+      "test_selection_weight": 0
+    },
+    {
+      "cohort_sha256": "03fecb7b49fe6088ca8bcef21e6f2378a6598fedad62b6c82a10996f0cb29cfb",
+      "games": 637,
+      "league": "ncaam",
+      "metrics": {
+        "bias": -1.461309052389702,
+        "mae": 10.58298972089093,
+        "rmse": 13.44884319233306
+      },
+      "promotion_permitted": false,
+      "public_model_id": "m_60b04622fbadcd387e8d",
+      "qualified_games": 0,
+      "rank_permitted": false,
+      "season_label": "2026-27",
+      "target": "margin",
+      "test_selection_weight": 0
+    },
+    {
+      "cohort_sha256": "03fecb7b49fe6088ca8bcef21e6f2378a6598fedad62b6c82a10996f0cb29cfb",
+      "games": 637,
+      "league": "ncaam",
+      "metrics": {
+        "bias": -1.4610396913573291,
+        "mae": 10.582720359858557,
+        "rmse": 13.448547197202558
+      },
+      "promotion_permitted": false,
+      "public_model_id": "m_96b490d291b35958a0e7",
+      "qualified_games": 0,
+      "rank_permitted": false,
+      "season_label": "2026-27",
+      "target": "margin",
+      "test_selection_weight": 0
+    },
+    {
+      "cohort_sha256": "03fecb7b49fe6088ca8bcef21e6f2378a6598fedad62b6c82a10996f0cb29cfb",
+      "games": 637,
+      "league": "ncaam",
+      "metrics": {
+        "bias": -1.3525238350076343,
+        "mae": 10.533356918031243,
+        "rmse": 13.413387173612103
+      },
+      "promotion_permitted": false,
+      "public_model_id": "m_592caa178ef3f8ab1ed4",
+      "qualified_games": 0,
+      "rank_permitted": false,
+      "season_label": "2026-27",
+      "target": "margin",
+      "test_selection_weight": 0
+    },
+    {
+      "cohort_sha256": "03fecb7b49fe6088ca8bcef21e6f2378a6598fedad62b6c82a10996f0cb29cfb",
+      "games": 637,
+      "league": "ncaam",
+      "metrics": {
+        "bias": -1.3514358488881213,
+        "mae": 10.53279948349258,
+        "rmse": 13.412680100141266
+      },
+      "promotion_permitted": false,
+      "public_model_id": "m_acf5e18a59cfede6a1e5",
+      "qualified_games": 0,
+      "rank_permitted": false,
+      "season_label": "2026-27",
+      "target": "margin",
+      "test_selection_weight": 0
+    },
+    {
+      "cohort_sha256": "03fecb7b49fe6088ca8bcef21e6f2378a6598fedad62b6c82a10996f0cb29cfb",
+      "games": 637,
+      "league": "ncaam",
+      "metrics": {
+        "bias": -1.5302837410373347,
+        "mae": 13.811986783207141,
+        "rmse": 17.432122977121516
+      },
+      "promotion_permitted": false,
+      "public_model_id": "m_c36feeaa7d93f3475add",
+      "qualified_games": 0,
+      "rank_permitted": false,
+      "season_label": "2026-27",
+      "target": "total",
+      "test_selection_weight": 0
+    },
+    {
+      "cohort_sha256": "03fecb7b49fe6088ca8bcef21e6f2378a6598fedad62b6c82a10996f0cb29cfb",
+      "games": 637,
+      "league": "ncaam",
+      "metrics": {
+        "bias": 1.241649087916082,
+        "mae": 13.948340973660633,
+        "rmse": 17.406113974149346
+      },
+      "promotion_permitted": false,
+      "public_model_id": "m_83e0171c47f3cbe15fa7",
+      "qualified_games": 0,
+      "rank_permitted": false,
+      "season_label": "2026-27",
+      "target": "total",
+      "test_selection_weight": 0
+    },
+    {
+      "cohort_sha256": "03fecb7b49fe6088ca8bcef21e6f2378a6598fedad62b6c82a10996f0cb29cfb",
+      "games": 637,
+      "league": "ncaam",
+      "metrics": {
+        "bias": 1.2411484383156601,
+        "mae": 13.947840324060211,
+        "rmse": 17.405507714076233
+      },
+      "promotion_permitted": false,
+      "public_model_id": "m_4e98798e294f7de5f3dd",
+      "qualified_games": 0,
+      "rank_permitted": false,
+      "season_label": "2026-27",
+      "target": "total",
+      "test_selection_weight": 0
+    },
+    {
+      "cohort_sha256": "03fecb7b49fe6088ca8bcef21e6f2378a6598fedad62b6c82a10996f0cb29cfb",
+      "games": 637,
+      "league": "ncaam",
+      "metrics": {
+        "bias": 1.0637150734948622,
+        "mae": 13.883429190813143,
+        "rmse": 17.33447339952579
+      },
+      "promotion_permitted": false,
+      "public_model_id": "m_d62446d02c17706a9229",
+      "qualified_games": 0,
+      "rank_permitted": false,
+      "season_label": "2026-27",
+      "target": "total",
+      "test_selection_weight": 0
+    },
+    {
+      "cohort_sha256": "03fecb7b49fe6088ca8bcef21e6f2378a6598fedad62b6c82a10996f0cb29cfb",
+      "games": 637,
+      "league": "ncaam",
+      "metrics": {
+        "bias": 1.063778428989694,
+        "mae": 13.883492546307975,
+        "rmse": 17.33454125648882
+      },
+      "promotion_permitted": false,
+      "public_model_id": "m_d0642f81a10f80f7c817",
+      "qualified_games": 0,
+      "rank_permitted": false,
+      "season_label": "2026-27",
+      "target": "total",
+      "test_selection_weight": 0
+    },
+    {
+      "cohort_sha256": "03fecb7b49fe6088ca8bcef21e6f2378a6598fedad62b6c82a10996f0cb29cfb",
+      "games": 637,
+      "league": "ncaam",
+      "metrics": {
+        "bias": 2.238847527924334,
+        "mae": 14.013032721053708,
+        "rmse": 17.446057334956233
+      },
+      "promotion_permitted": false,
+      "public_model_id": "m_234eea6252e5cd60598c",
+      "qualified_games": 0,
+      "rank_permitted": false,
+      "season_label": "2026-27",
+      "target": "total",
+      "test_selection_weight": 0
+    },
+    {
+      "cohort_sha256": "03fecb7b49fe6088ca8bcef21e6f2378a6598fedad62b6c82a10996f0cb29cfb",
+      "games": 637,
+      "league": "ncaam",
+      "metrics": {
+        "bias": 2.238876503034365,
+        "mae": 14.013061696163742,
+        "rmse": 17.446090103835086
+      },
+      "promotion_permitted": false,
+      "public_model_id": "m_e4b2259dc1ba383f3ef0",
+      "qualified_games": 0,
+      "rank_permitted": false,
+      "season_label": "2026-27",
+      "target": "total",
+      "test_selection_weight": 0
+    },
+    {
+      "cohort_sha256": "03fecb7b49fe6088ca8bcef21e6f2378a6598fedad62b6c82a10996f0cb29cfb",
+      "games": 637,
+      "league": "ncaam",
+      "metrics": {
+        "bias": 2.1997873348700745,
+        "mae": 14.006058693676998,
+        "rmse": 17.43638441208045
+      },
+      "promotion_permitted": false,
+      "public_model_id": "m_d87d79a2a8c74e673504",
+      "qualified_games": 0,
+      "rank_permitted": false,
+      "season_label": "2026-27",
+      "target": "total",
+      "test_selection_weight": 0
+    },
+    {
+      "cohort_sha256": "03fecb7b49fe6088ca8bcef21e6f2378a6598fedad62b6c82a10996f0cb29cfb",
+      "games": 637,
+      "league": "ncaam",
+      "metrics": {
+        "bias": 2.1996780916611867,
+        "mae": 14.005949450468114,
+        "rmse": 17.436257380602672
+      },
+      "promotion_permitted": false,
+      "public_model_id": "m_5fd8c336a290c2c2ad07",
+      "qualified_games": 0,
+      "rank_permitted": false,
+      "season_label": "2026-27",
+      "target": "total",
+      "test_selection_weight": 0
+    },
+    {
+      "cohort_sha256": "03fecb7b49fe6088ca8bcef21e6f2378a6598fedad62b6c82a10996f0cb29cfb",
+      "games": 637,
+      "league": "ncaam",
+      "metrics": {
+        "bias": 2.160727141815847,
+        "mae": 14.007561934756167,
+        "rmse": 17.43986631946793
+      },
+      "promotion_permitted": false,
+      "public_model_id": "m_8d51b858b536160a2194",
+      "qualified_games": 0,
+      "rank_permitted": false,
+      "season_label": "2026-27",
+      "target": "total",
+      "test_selection_weight": 0
+    },
+    {
+      "cohort_sha256": "03fecb7b49fe6088ca8bcef21e6f2378a6598fedad62b6c82a10996f0cb29cfb",
+      "games": 637,
+      "league": "ncaam",
+      "metrics": {
+        "bias": 2.16047968028804,
+        "mae": 14.00731447322836,
+        "rmse": 17.439570883463652
+      },
+      "promotion_permitted": false,
+      "public_model_id": "m_15c627f5724d264c3b57",
+      "qualified_games": 0,
+      "rank_permitted": false,
+      "season_label": "2026-27",
+      "target": "total",
+      "test_selection_weight": 0
+    },
+    {
+      "cohort_sha256": "03fecb7b49fe6088ca8bcef21e6f2378a6598fedad62b6c82a10996f0cb29cfb",
+      "games": 637,
+      "league": "ncaam",
+      "metrics": {
+        "bias": 1.422289342594213,
+        "mae": 13.977434637983023,
+        "rmse": 17.446608997848863
+      },
+      "promotion_permitted": false,
+      "public_model_id": "m_592caa178ef3f8ab1ed4",
+      "qualified_games": 0,
+      "rank_permitted": false,
+      "season_label": "2026-27",
+      "target": "total",
+      "test_selection_weight": 0
+    },
+    {
+      "cohort_sha256": "03fecb7b49fe6088ca8bcef21e6f2378a6598fedad62b6c82a10996f0cb29cfb",
+      "games": 637,
+      "league": "ncaam",
+      "metrics": {
+        "bias": 1.4250602975069155,
+        "mae": 13.976186005120928,
+        "rmse": 17.44123176956644
+      },
+      "promotion_permitted": false,
+      "public_model_id": "m_acf5e18a59cfede6a1e5",
+      "qualified_games": 0,
+      "rank_permitted": false,
+      "season_label": "2026-27",
+      "target": "total",
+      "test_selection_weight": 0
+    },
+    {
+      "cohort_sha256": "9fbb1d435f53506916a3391367939596a1c728c88c27c7cb225dc1c85f263227",
+      "games": 655,
+      "league": "ncaaw",
+      "metrics": {
+        "accuracy": 0.8198473282442749,
+        "brier": 0.11634568883756227,
+        "log_loss": 0.35985848006154975
+      },
+      "promotion_permitted": false,
+      "public_model_id": "m_9b68e5c1f07ad58b305a",
+      "qualified_games": 0,
+      "rank_permitted": false,
+      "season_label": "2026-27",
+      "target": "win",
+      "test_selection_weight": 0
+    },
+    {
+      "cohort_sha256": "9fbb1d435f53506916a3391367939596a1c728c88c27c7cb225dc1c85f263227",
+      "games": 655,
+      "league": "ncaaw",
+      "metrics": {
+        "accuracy": 0.8198473282442749,
+        "brier": 0.11928389287393365,
+        "log_loss": 0.36876671847697734
+      },
+      "promotion_permitted": false,
+      "public_model_id": "m_625d96830c1d8b059e51",
+      "qualified_games": 0,
+      "rank_permitted": false,
+      "season_label": "2026-27",
+      "target": "win",
+      "test_selection_weight": 0
+    },
+    {
+      "cohort_sha256": "9fbb1d435f53506916a3391367939596a1c728c88c27c7cb225dc1c85f263227",
+      "games": 655,
+      "league": "ncaaw",
+      "metrics": {
+        "accuracy": 0.8198473282442749,
+        "brier": 0.11928424487820613,
+        "log_loss": 0.368769626114606
+      },
+      "promotion_permitted": false,
+      "public_model_id": "m_e4d55820587b98b8b7c6",
+      "qualified_games": 0,
+      "rank_permitted": false,
+      "season_label": "2026-27",
+      "target": "win",
+      "test_selection_weight": 0
+    },
+    {
+      "cohort_sha256": "9fbb1d435f53506916a3391367939596a1c728c88c27c7cb225dc1c85f263227",
+      "games": 655,
+      "league": "ncaaw",
+      "metrics": {
+        "accuracy": 0.8122137404580153,
+        "brier": 0.11939139363345418,
+        "log_loss": 0.3686553535506766
+      },
+      "promotion_permitted": false,
+      "public_model_id": "m_2f77479774269d7d364f",
+      "qualified_games": 0,
+      "rank_permitted": false,
+      "season_label": "2026-27",
+      "target": "win",
+      "test_selection_weight": 0
+    },
+    {
+      "cohort_sha256": "9fbb1d435f53506916a3391367939596a1c728c88c27c7cb225dc1c85f263227",
+      "games": 655,
+      "league": "ncaaw",
+      "metrics": {
+        "accuracy": 0.8122137404580153,
+        "brier": 0.11939034031412271,
+        "log_loss": 0.3686507444898597
+      },
+      "promotion_permitted": false,
+      "public_model_id": "m_d8e236a73c528c684c26",
+      "qualified_games": 0,
+      "rank_permitted": false,
+      "season_label": "2026-27",
+      "target": "win",
+      "test_selection_weight": 0
+    },
+    {
+      "cohort_sha256": "9fbb1d435f53506916a3391367939596a1c728c88c27c7cb225dc1c85f263227",
+      "games": 655,
+      "league": "ncaaw",
+      "metrics": {
+        "accuracy": 0.8106870229007633,
+        "brier": 0.1197470406213731,
+        "log_loss": 0.36818972058625304
+      },
+      "promotion_permitted": false,
+      "public_model_id": "m_9b746399e53067339630",
+      "qualified_games": 0,
+      "rank_permitted": false,
+      "season_label": "2026-27",
+      "target": "win",
+      "test_selection_weight": 0
+    },
+    {
+      "cohort_sha256": "9fbb1d435f53506916a3391367939596a1c728c88c27c7cb225dc1c85f263227",
+      "games": 655,
+      "league": "ncaaw",
+      "metrics": {
+        "accuracy": 0.8106870229007633,
+        "brier": 0.11974638682987727,
+        "log_loss": 0.3681871239838202
+      },
+      "promotion_permitted": false,
+      "public_model_id": "m_388a1c4bfb1a13f2c6ff",
+      "qualified_games": 0,
+      "rank_permitted": false,
+      "season_label": "2026-27",
+      "target": "win",
+      "test_selection_weight": 0
+    },
+    {
+      "cohort_sha256": "9fbb1d435f53506916a3391367939596a1c728c88c27c7cb225dc1c85f263227",
+      "games": 655,
+      "league": "ncaaw",
+      "metrics": {
+        "accuracy": 0.8137404580152672,
+        "brier": 0.11689807113421018,
+        "log_loss": 0.35784615023438676
+      },
+      "promotion_permitted": false,
+      "public_model_id": "m_23008f762b085c08cc83",
+      "qualified_games": 0,
+      "rank_permitted": false,
+      "season_label": "2026-27",
+      "target": "win",
+      "test_selection_weight": 0
+    },
+    {
+      "cohort_sha256": "9fbb1d435f53506916a3391367939596a1c728c88c27c7cb225dc1c85f263227",
+      "games": 655,
+      "league": "ncaaw",
+      "metrics": {
+        "accuracy": 0.8137404580152672,
+        "brier": 0.11689733181250557,
+        "log_loss": 0.35784332609232494
+      },
+      "promotion_permitted": false,
+      "public_model_id": "m_23de50b67458d27bb07e",
+      "qualified_games": 0,
+      "rank_permitted": false,
+      "season_label": "2026-27",
+      "target": "win",
+      "test_selection_weight": 0
+    },
+    {
+      "cohort_sha256": "9fbb1d435f53506916a3391367939596a1c728c88c27c7cb225dc1c85f263227",
+      "games": 655,
+      "league": "ncaaw",
+      "metrics": {
+        "accuracy": 0.815267175572519,
+        "brier": 0.1171861394597085,
+        "log_loss": 0.35779054832230167
+      },
+      "promotion_permitted": false,
+      "public_model_id": "m_9d98f584b7aefbd836a9",
+      "qualified_games": 0,
+      "rank_permitted": false,
+      "season_label": "2026-27",
+      "target": "win",
+      "test_selection_weight": 0
+    },
+    {
+      "cohort_sha256": "9fbb1d435f53506916a3391367939596a1c728c88c27c7cb225dc1c85f263227",
+      "games": 655,
+      "league": "ncaaw",
+      "metrics": {
+        "accuracy": 0.815267175572519,
+        "brier": 0.11718547281840737,
+        "log_loss": 0.3577875074552036
+      },
+      "promotion_permitted": false,
+      "public_model_id": "m_f4f8eba6ca866e724f22",
+      "qualified_games": 0,
+      "rank_permitted": false,
+      "season_label": "2026-27",
+      "target": "win",
+      "test_selection_weight": 0
+    },
+    {
+      "cohort_sha256": "9fbb1d435f53506916a3391367939596a1c728c88c27c7cb225dc1c85f263227",
+      "games": 655,
+      "league": "ncaaw",
+      "metrics": {
+        "accuracy": 0.816793893129771,
+        "brier": 0.11764013359270341,
+        "log_loss": 0.3583251332823808
+      },
+      "promotion_permitted": false,
+      "public_model_id": "m_29ba81624eb9291385bd",
+      "qualified_games": 0,
+      "rank_permitted": false,
+      "season_label": "2026-27",
+      "target": "win",
+      "test_selection_weight": 0
+    },
+    {
+      "cohort_sha256": "9fbb1d435f53506916a3391367939596a1c728c88c27c7cb225dc1c85f263227",
+      "games": 655,
+      "league": "ncaaw",
+      "metrics": {
+        "accuracy": 0.816793893129771,
+        "brier": 0.11763931978393369,
+        "log_loss": 0.35832082025637435
+      },
+      "promotion_permitted": false,
+      "public_model_id": "m_823294d5107f58fa860e",
+      "qualified_games": 0,
+      "rank_permitted": false,
+      "season_label": "2026-27",
+      "target": "win",
+      "test_selection_weight": 0
+    },
+    {
+      "cohort_sha256": "9fbb1d435f53506916a3391367939596a1c728c88c27c7cb225dc1c85f263227",
+      "games": 655,
+      "league": "ncaaw",
+      "metrics": {
+        "accuracy": 0.8106870229007633,
+        "brier": 0.11974757706202038,
+        "log_loss": 0.36819536698846766
+      },
+      "promotion_permitted": false,
+      "public_model_id": "m_cb122c1c67e652425c5c",
+      "qualified_games": 0,
+      "rank_permitted": false,
+      "season_label": "2026-27",
+      "target": "win",
+      "test_selection_weight": 0
+    },
+    {
+      "cohort_sha256": "9fbb1d435f53506916a3391367939596a1c728c88c27c7cb225dc1c85f263227",
+      "games": 655,
+      "league": "ncaaw",
+      "metrics": {
+        "accuracy": 0.8106870229007633,
+        "brier": 0.11974692315781657,
+        "log_loss": 0.3681927697025203
+      },
+      "promotion_permitted": false,
+      "public_model_id": "m_be053ece4e5526b44aed",
+      "qualified_games": 0,
+      "rank_permitted": false,
+      "season_label": "2026-27",
+      "target": "win",
+      "test_selection_weight": 0
+    },
+    {
+      "cohort_sha256": "9fbb1d435f53506916a3391367939596a1c728c88c27c7cb225dc1c85f263227",
+      "games": 655,
+      "league": "ncaaw",
+      "metrics": {
+        "accuracy": 0.815267175572519,
+        "brier": 0.11852297886226146,
+        "log_loss": 0.36313196042542983
+      },
+      "promotion_permitted": false,
+      "public_model_id": "m_8efa8ffc15e831b396e1",
+      "qualified_games": 0,
+      "rank_permitted": false,
+      "season_label": "2026-27",
+      "target": "win",
+      "test_selection_weight": 0
+    },
+    {
+      "cohort_sha256": "9fbb1d435f53506916a3391367939596a1c728c88c27c7cb225dc1c85f263227",
+      "games": 655,
+      "league": "ncaaw",
+      "metrics": {
+        "accuracy": 0.815267175572519,
+        "brier": 0.11829046756014033,
+        "log_loss": 0.3625638146385974
+      },
+      "promotion_permitted": false,
+      "public_model_id": "m_e541e97bd3ce240534a7",
+      "qualified_games": 0,
+      "rank_permitted": false,
+      "season_label": "2026-27",
+      "target": "win",
+      "test_selection_weight": 0
+    },
+    {
+      "cohort_sha256": "9fbb1d435f53506916a3391367939596a1c728c88c27c7cb225dc1c85f263227",
+      "games": 655,
+      "league": "ncaaw",
+      "metrics": {
+        "bias": -2.743289647832826,
+        "mae": 12.164004891436116,
+        "rmse": 15.607584480232179
+      },
+      "promotion_permitted": false,
+      "public_model_id": "m_9b68e5c1f07ad58b305a",
+      "qualified_games": 0,
+      "rank_permitted": false,
+      "season_label": "2026-27",
+      "target": "margin",
+      "test_selection_weight": 0
+    },
+    {
+      "cohort_sha256": "9fbb1d435f53506916a3391367939596a1c728c88c27c7cb225dc1c85f263227",
+      "games": 655,
+      "league": "ncaaw",
+      "metrics": {
+        "bias": -1.3693035664390654,
+        "mae": 12.103033801400663,
+        "rmse": 15.501699291506666
+      },
+      "promotion_permitted": false,
+      "public_model_id": "m_625d96830c1d8b059e51",
+      "qualified_games": 0,
+      "rank_permitted": false,
+      "season_label": "2026-27",
+      "target": "margin",
+      "test_selection_weight": 0
+    },
+    {
+      "cohort_sha256": "9fbb1d435f53506916a3391367939596a1c728c88c27c7cb225dc1c85f263227",
+      "games": 655,
+      "league": "ncaaw",
+      "metrics": {
+        "bias": -1.3676911476690912,
+        "mae": 12.100753237449753,
+        "rmse": 15.500460125860037
+      },
+      "promotion_permitted": false,
+      "public_model_id": "m_e4d55820587b98b8b7c6",
+      "qualified_games": 0,
+      "rank_permitted": false,
+      "season_label": "2026-27",
+      "target": "margin",
+      "test_selection_weight": 0
+    },
+    {
+      "cohort_sha256": "9fbb1d435f53506916a3391367939596a1c728c88c27c7cb225dc1c85f263227",
+      "games": 655,
+      "league": "ncaaw",
+      "metrics": {
+        "bias": -2.772983761505144,
+        "mae": 12.221965376972115,
+        "rmse": 15.685148615690258
+      },
+      "promotion_permitted": false,
+      "public_model_id": "m_2f77479774269d7d364f",
+      "qualified_games": 0,
+      "rank_permitted": false,
+      "season_label": "2026-27",
+      "target": "margin",
+      "test_selection_weight": 0
+    },
+    {
+      "cohort_sha256": "9fbb1d435f53506916a3391367939596a1c728c88c27c7cb225dc1c85f263227",
+      "games": 655,
+      "league": "ncaaw",
+      "metrics": {
+        "bias": -2.7726454624604053,
+        "mae": 12.221258961284697,
+        "rmse": 15.684602988164377
+      },
+      "promotion_permitted": false,
+      "public_model_id": "m_d8e236a73c528c684c26",
+      "qualified_games": 0,
+      "rank_permitted": false,
+      "season_label": "2026-27",
+      "target": "margin",
+      "test_selection_weight": 0
+    },
+    {
+      "cohort_sha256": "9fbb1d435f53506916a3391367939596a1c728c88c27c7cb225dc1c85f263227",
+      "games": 655,
+      "league": "ncaaw",
+      "metrics": {
+        "bias": -2.772983761505144,
+        "mae": 12.221965376972115,
+        "rmse": 15.685148615690258
+      },
+      "promotion_permitted": false,
+      "public_model_id": "m_23008f762b085c08cc83",
+      "qualified_games": 0,
+      "rank_permitted": false,
+      "season_label": "2026-27",
+      "target": "margin",
+      "test_selection_weight": 0
+    },
+    {
+      "cohort_sha256": "9fbb1d435f53506916a3391367939596a1c728c88c27c7cb225dc1c85f263227",
+      "games": 655,
+      "league": "ncaaw",
+      "metrics": {
+        "bias": -2.7726454624604053,
+        "mae": 12.221258961284697,
+        "rmse": 15.684602988164377
+      },
+      "promotion_permitted": false,
+      "public_model_id": "m_23de50b67458d27bb07e",
+      "qualified_games": 0,
+      "rank_permitted": false,
+      "season_label": "2026-27",
+      "target": "margin",
+      "test_selection_weight": 0
+    },
+    {
+      "cohort_sha256": "9fbb1d435f53506916a3391367939596a1c728c88c27c7cb225dc1c85f263227",
+      "games": 655,
+      "league": "ncaaw",
+      "metrics": {
+        "bias": -2.4220637127386264,
+        "mae": 12.14696288190781,
+        "rmse": 15.580515516694897
+      },
+      "promotion_permitted": false,
+      "public_model_id": "m_9d98f584b7aefbd836a9",
+      "qualified_games": 0,
+      "rank_permitted": false,
+      "season_label": "2026-27",
+      "target": "margin",
+      "test_selection_weight": 0
+    },
+    {
+      "cohort_sha256": "9fbb1d435f53506916a3391367939596a1c728c88c27c7cb225dc1c85f263227",
+      "games": 655,
+      "league": "ncaaw",
+      "metrics": {
+        "bias": -2.4214068837625793,
+        "mae": 12.14586292915452,
+        "rmse": 15.579729853044018
+      },
+      "promotion_permitted": false,
+      "public_model_id": "m_f4f8eba6ca866e724f22",
+      "qualified_games": 0,
+      "rank_permitted": false,
+      "season_label": "2026-27",
+      "target": "margin",
+      "test_selection_weight": 0
+    },
+    {
+      "cohort_sha256": "9fbb1d435f53506916a3391367939596a1c728c88c27c7cb225dc1c85f263227",
+      "games": 655,
+      "league": "ncaaw",
+      "metrics": {
+        "bias": -2.0711436639721024,
+        "mae": 12.107429604051456,
+        "rmse": 15.514781821235259
+      },
+      "promotion_permitted": false,
+      "public_model_id": "m_29ba81624eb9291385bd",
+      "qualified_games": 0,
+      "rank_permitted": false,
+      "season_label": "2026-27",
+      "target": "margin",
+      "test_selection_weight": 0
+    },
+    {
+      "cohort_sha256": "9fbb1d435f53506916a3391367939596a1c728c88c27c7cb225dc1c85f263227",
+      "games": 655,
+      "league": "ncaaw",
+      "metrics": {
+        "bias": -2.070168305064747,
+        "mae": 12.105936114232295,
+        "rmse": 15.513799286307554
+      },
+      "promotion_permitted": false,
+      "public_model_id": "m_823294d5107f58fa860e",
+      "qualified_games": 0,
+      "rank_permitted": false,
+      "season_label": "2026-27",
+      "target": "margin",
+      "test_selection_weight": 0
+    },
+    {
+      "cohort_sha256": "9fbb1d435f53506916a3391367939596a1c728c88c27c7cb225dc1c85f263227",
+      "games": 655,
+      "league": "ncaaw",
+      "metrics": {
+        "bias": -1.839027511410189,
+        "mae": 12.036794738036736,
+        "rmse": 15.390159393925591
+      },
+      "promotion_permitted": false,
+      "public_model_id": "m_8efa8ffc15e831b396e1",
+      "qualified_games": 0,
+      "rank_permitted": false,
+      "season_label": "2026-27",
+      "target": "margin",
+      "test_selection_weight": 0
+    },
+    {
+      "cohort_sha256": "9fbb1d435f53506916a3391367939596a1c728c88c27c7cb225dc1c85f263227",
+      "games": 655,
+      "league": "ncaaw",
+      "metrics": {
+        "bias": -1.831479689748809,
+        "mae": 12.031478486405145,
+        "rmse": 15.383659400863179
+      },
+      "promotion_permitted": false,
+      "public_model_id": "m_e541e97bd3ce240534a7",
+      "qualified_games": 0,
+      "rank_permitted": false,
+      "season_label": "2026-27",
+      "target": "margin",
+      "test_selection_weight": 0
+    },
+    {
+      "cohort_sha256": "9fbb1d435f53506916a3391367939596a1c728c88c27c7cb225dc1c85f263227",
+      "games": 655,
+      "league": "ncaaw",
+      "metrics": {
+        "bias": 1.2341449207807182,
+        "mae": 14.118707482000989,
+        "rmse": 17.697931791705955
+      },
+      "promotion_permitted": false,
+      "public_model_id": "m_9b68e5c1f07ad58b305a",
+      "qualified_games": 0,
+      "rank_permitted": false,
+      "season_label": "2026-27",
+      "target": "total",
+      "test_selection_weight": 0
+    },
+    {
+      "cohort_sha256": "9fbb1d435f53506916a3391367939596a1c728c88c27c7cb225dc1c85f263227",
+      "games": 655,
+      "league": "ncaaw",
+      "metrics": {
+        "bias": 0.8935860396437666,
+        "mae": 14.272767083854356,
+        "rmse": 17.750667129680085
+      },
+      "promotion_permitted": false,
+      "public_model_id": "m_625d96830c1d8b059e51",
+      "qualified_games": 0,
+      "rank_permitted": false,
+      "season_label": "2026-27",
+      "target": "total",
+      "test_selection_weight": 0
+    },
+    {
+      "cohort_sha256": "9fbb1d435f53506916a3391367939596a1c728c88c27c7cb225dc1c85f263227",
+      "games": 655,
+      "league": "ncaaw",
+      "metrics": {
+        "bias": 0.895317822735128,
+        "mae": 14.271885558513063,
+        "rmse": 17.751030509412683
+      },
+      "promotion_permitted": false,
+      "public_model_id": "m_e4d55820587b98b8b7c6",
+      "qualified_games": 0,
+      "rank_permitted": false,
+      "season_label": "2026-27",
+      "target": "total",
+      "test_selection_weight": 0
+    },
+    {
+      "cohort_sha256": "9fbb1d435f53506916a3391367939596a1c728c88c27c7cb225dc1c85f263227",
+      "games": 655,
+      "league": "ncaaw",
+      "metrics": {
+        "bias": 2.3573584266750567,
+        "mae": 14.28699541882003,
+        "rmse": 17.85294847878279
+      },
+      "promotion_permitted": false,
+      "public_model_id": "m_2f77479774269d7d364f",
+      "qualified_games": 0,
+      "rank_permitted": false,
+      "season_label": "2026-27",
+      "target": "total",
+      "test_selection_weight": 0
+    },
+    {
+      "cohort_sha256": "9fbb1d435f53506916a3391367939596a1c728c88c27c7cb225dc1c85f263227",
+      "games": 655,
+      "league": "ncaaw",
+      "metrics": {
+        "bias": 2.3574036632633897,
+        "mae": 14.286959595840312,
+        "rmse": 17.85294943318146
+      },
+      "promotion_permitted": false,
+      "public_model_id": "m_d8e236a73c528c684c26",
+      "qualified_games": 0,
+      "rank_permitted": false,
+      "season_label": "2026-27",
+      "target": "total",
+      "test_selection_weight": 0
+    },
+    {
+      "cohort_sha256": "9fbb1d435f53506916a3391367939596a1c728c88c27c7cb225dc1c85f263227",
+      "games": 655,
+      "league": "ncaaw",
+      "metrics": {
+        "bias": 2.234416819067968,
+        "mae": 14.27214164006094,
+        "rmse": 17.837131191859026
+      },
+      "promotion_permitted": false,
+      "public_model_id": "m_13862c3c98eadfbbc84e",
+      "qualified_games": 0,
+      "rank_permitted": false,
+      "season_label": "2026-27",
+      "target": "total",
+      "test_selection_weight": 0
+    },
+    {
+      "cohort_sha256": "9fbb1d435f53506916a3391367939596a1c728c88c27c7cb225dc1c85f263227",
+      "games": 655,
+      "league": "ncaaw",
+      "metrics": {
+        "bias": 2.2343423244975114,
+        "mae": 14.272105817081222,
+        "rmse": 17.83704608208674
+      },
+      "promotion_permitted": false,
+      "public_model_id": "m_90ec9d5d9226ddbf1754",
+      "qualified_games": 0,
+      "rank_permitted": false,
+      "season_label": "2026-27",
+      "target": "total",
+      "test_selection_weight": 0
+    },
+    {
+      "cohort_sha256": "9fbb1d435f53506916a3391367939596a1c728c88c27c7cb225dc1c85f263227",
+      "games": 655,
+      "league": "ncaaw",
+      "metrics": {
+        "bias": 1.86033974190453,
+        "mae": 14.248243729637087,
+        "rmse": 17.78156673017378
+      },
+      "promotion_permitted": false,
+      "public_model_id": "m_eeb61491207dfb56dcd4",
+      "qualified_games": 0,
+      "rank_permitted": false,
+      "season_label": "2026-27",
+      "target": "total",
+      "test_selection_weight": 0
+    },
+    {
+      "cohort_sha256": "9fbb1d435f53506916a3391367939596a1c728c88c27c7cb225dc1c85f263227",
+      "games": 655,
+      "league": "ncaaw",
+      "metrics": {
+        "bias": 1.860710523906604,
+        "mae": 14.247996481066973,
+        "rmse": 17.781608368419846
+      },
+      "promotion_permitted": false,
+      "public_model_id": "m_30c92348cc92ddbf610e",
+      "qualified_games": 0,
+      "rank_permitted": false,
+      "season_label": "2026-27",
+      "target": "total",
+      "test_selection_weight": 0
+    },
+    {
+      "cohort_sha256": "9fbb1d435f53506916a3391367939596a1c728c88c27c7cb225dc1c85f263227",
+      "games": 655,
+      "league": "ncaaw",
+      "metrics": {
+        "bias": 1.4862626647410018,
+        "mae": 14.235885934259413,
+        "rmse": 17.747373830522157
+      },
+      "promotion_permitted": false,
+      "public_model_id": "m_2a8fc6bad5d381acdb2d",
+      "qualified_games": 0,
+      "rank_permitted": false,
+      "season_label": "2026-27",
+      "target": "total",
+      "test_selection_weight": 0
+    },
+    {
+      "cohort_sha256": "9fbb1d435f53506916a3391367939596a1c728c88c27c7cb225dc1c85f263227",
+      "games": 655,
+      "league": "ncaaw",
+      "metrics": {
+        "bias": 1.4870787233156066,
+        "mae": 14.235427260098906,
+        "rmse": 17.747527669563443
+      },
+      "promotion_permitted": false,
+      "public_model_id": "m_a96fb2645a4211041a36",
+      "qualified_games": 0,
+      "rank_permitted": false,
+      "season_label": "2026-27",
+      "target": "total",
+      "test_selection_weight": 0
+    },
+    {
+      "cohort_sha256": "9fbb1d435f53506916a3391367939596a1c728c88c27c7cb225dc1c85f263227",
+      "games": 655,
+      "league": "ncaaw",
+      "metrics": {
+        "bias": 1.0198854443983645,
+        "mae": 14.113248127536306,
+        "rmse": 17.687328834721615
+      },
+      "promotion_permitted": false,
+      "public_model_id": "m_a13709d71e310051b1e3",
+      "qualified_games": 0,
+      "rank_permitted": false,
+      "season_label": "2026-27",
+      "target": "total",
+      "test_selection_weight": 0
+    },
+    {
+      "cohort_sha256": "9fbb1d435f53506916a3391367939596a1c728c88c27c7cb225dc1c85f263227",
+      "games": 655,
+      "league": "ncaaw",
+      "metrics": {
+        "bias": 1.0012799434499153,
+        "mae": 14.124126010315804,
+        "rmse": 17.6954457899325
+      },
+      "promotion_permitted": false,
+      "public_model_id": "m_d2d59d3e23500b24aa1e",
+      "qualified_games": 0,
+      "rank_permitted": false,
+      "season_label": "2026-27",
+      "target": "total",
+      "test_selection_weight": 0
+    }
+  ],
+  "missing_policy_note": "Eight registered secondary target-policy slots were not emitted by R19. They remain missing in the full registered-policy intersections.",
+  "missing_registered_target_policies": [
+    {
+      "games": 0,
+      "league": "ncaam",
+      "public_model_id": "m_19f0276d4ae76f151f12",
+      "status": "REGISTERED_NOT_EMITTED",
+      "target": "win"
+    },
+    {
+      "games": 0,
+      "league": "ncaam",
+      "public_model_id": "m_49d734eff3da070659cb",
+      "status": "REGISTERED_NOT_EMITTED",
+      "target": "win"
+    },
+    {
+      "games": 0,
+      "league": "ncaaw",
+      "public_model_id": "m_a13709d71e310051b1e3",
+      "status": "REGISTERED_NOT_EMITTED",
+      "target": "win"
+    },
+    {
+      "games": 0,
+      "league": "ncaaw",
+      "public_model_id": "m_d2d59d3e23500b24aa1e",
+      "status": "REGISTERED_NOT_EMITTED",
+      "target": "win"
+    },
+    {
+      "games": 0,
+      "league": "ncaaw",
+      "public_model_id": "m_a13709d71e310051b1e3",
+      "status": "REGISTERED_NOT_EMITTED",
+      "target": "margin"
+    },
+    {
+      "games": 0,
+      "league": "ncaaw",
+      "public_model_id": "m_d2d59d3e23500b24aa1e",
+      "status": "REGISTERED_NOT_EMITTED",
+      "target": "margin"
+    },
+    {
+      "games": 0,
+      "league": "ncaaw",
+      "public_model_id": "m_8efa8ffc15e831b396e1",
+      "status": "REGISTERED_NOT_EMITTED",
+      "target": "total"
+    },
+    {
+      "games": 0,
+      "league": "ncaaw",
+      "public_model_id": "m_e541e97bd3ce240534a7",
+      "status": "REGISTERED_NOT_EMITTED",
+      "target": "total"
+    }
+  ],
+  "model_roster": [
+    {
+      "availability_status": "REGISTERED",
+      "league": "ncaam",
+      "lineage": "challenger",
+      "model_id": "m_1367aabd3ac989da08b9",
+      "public_label": "Historical margin distribution \u00b7 variant B \u00b7 weekly reconstruction",
+      "targets": [
+        "margin",
+        "win"
+      ]
+    },
+    {
+      "availability_status": "REGISTERED",
+      "league": "ncaaw",
+      "lineage": "challenger",
+      "model_id": "m_13862c3c98eadfbbc84e",
+      "public_label": "Historical total distribution \u00b7 variant A \u00b7 preseason reconstruction",
+      "targets": [
+        "total"
+      ]
+    },
+    {
+      "availability_status": "REGISTERED",
+      "league": "ncaam",
+      "lineage": "challenger",
+      "model_id": "m_15c627f5724d264c3b57",
+      "public_label": "Historical total distribution \u00b7 variant C \u00b7 weekly reconstruction",
+      "targets": [
+        "total"
+      ]
+    },
+    {
+      "availability_status": "REGISTERED",
+      "league": "ncaam",
+      "lineage": "challenger",
+      "model_id": "m_19f0276d4ae76f151f12",
+      "public_label": "Historical interactions model \u00b7 linear \u00b7 preseason reconstruction",
+      "targets": [
+        "win"
+      ]
+    },
+    {
+      "availability_status": "REGISTERED",
+      "league": "ncaaw",
+      "lineage": "challenger",
+      "model_id": "m_23008f762b085c08cc83",
+      "public_label": "Historical margin distribution \u00b7 variant A \u00b7 preseason reconstruction",
+      "targets": [
+        "margin",
+        "win"
+      ]
+    },
+    {
+      "availability_status": "REGISTERED",
+      "league": "ncaam",
+      "lineage": "challenger",
+      "model_id": "m_234eea6252e5cd60598c",
+      "public_label": "Historical total distribution \u00b7 variant A \u00b7 preseason reconstruction",
+      "targets": [
+        "total"
+      ]
+    },
+    {
+      "availability_status": "REGISTERED",
+      "league": "ncaaw",
+      "lineage": "challenger",
+      "model_id": "m_23de50b67458d27bb07e",
+      "public_label": "Historical margin distribution \u00b7 variant A \u00b7 weekly reconstruction",
+      "targets": [
+        "margin",
+        "win"
+      ]
+    },
+    {
+      "availability_status": "REGISTERED",
+      "league": "ncaaw",
+      "lineage": "challenger",
+      "model_id": "m_29ba81624eb9291385bd",
+      "public_label": "Historical margin distribution \u00b7 variant C \u00b7 preseason reconstruction",
+      "targets": [
+        "margin",
+        "win"
+      ]
+    },
+    {
+      "availability_status": "REGISTERED",
+      "league": "ncaaw",
+      "lineage": "challenger",
+      "model_id": "m_2a8fc6bad5d381acdb2d",
+      "public_label": "Historical total distribution \u00b7 variant C \u00b7 preseason reconstruction",
+      "targets": [
+        "total"
+      ]
+    },
+    {
+      "availability_status": "REGISTERED",
+      "league": "ncaam",
+      "lineage": "challenger",
+      "model_id": "m_2ba0eae9e015859f0b17",
+      "public_label": "Historical margin distribution \u00b7 variant A \u00b7 weekly reconstruction",
+      "targets": [
+        "margin",
+        "win"
+      ]
+    },
+    {
+      "availability_status": "REGISTERED",
+      "league": "ncaaw",
+      "lineage": "challenger",
+      "model_id": "m_2f77479774269d7d364f",
+      "public_label": "Historical box-score model \u00b7 linear \u00b7 preseason reconstruction",
+      "targets": [
+        "margin",
+        "total",
+        "win"
+      ]
+    },
+    {
+      "availability_status": "REGISTERED",
+      "league": "ncaaw",
+      "lineage": "challenger",
+      "model_id": "m_30c92348cc92ddbf610e",
+      "public_label": "Historical total distribution \u00b7 variant B \u00b7 weekly reconstruction",
+      "targets": [
+        "total"
+      ]
+    },
+    {
+      "availability_status": "REGISTERED",
+      "league": "ncaaw",
+      "lineage": "challenger",
+      "model_id": "m_388a1c4bfb1a13f2c6ff",
+      "public_label": "Historical linear model \u00b7 isotonic calibration \u00b7 weekly reconstruction",
+      "targets": [
+        "win"
+      ]
+    },
+    {
+      "availability_status": "REGISTERED",
+      "league": "ncaam",
+      "lineage": "challenger",
+      "model_id": "m_3e2df9a576252ab4c02c",
+      "public_label": "Historical linear model \u00b7 isotonic calibration \u00b7 weekly reconstruction",
+      "targets": [
+        "win"
+      ]
+    },
+    {
+      "availability_status": "REGISTERED",
+      "league": "ncaam",
+      "lineage": "challenger",
+      "model_id": "m_4211623ce4466d662bcf",
+      "public_label": "Historical margin distribution \u00b7 variant A \u00b7 preseason reconstruction",
+      "targets": [
+        "margin",
+        "win"
+      ]
+    },
+    {
+      "availability_status": "REGISTERED",
+      "league": "ncaam",
+      "lineage": "challenger",
+      "model_id": "m_46b6203ffe490dff63ca",
+      "public_label": "Historical linear model \u00b7 symmetric calibration \u00b7 preseason reconstruction",
+      "targets": [
+        "win"
+      ]
+    },
+    {
+      "availability_status": "REGISTERED",
+      "league": "ncaam",
+      "lineage": "challenger",
+      "model_id": "m_49d734eff3da070659cb",
+      "public_label": "Historical interactions model \u00b7 linear \u00b7 weekly reconstruction",
+      "targets": [
+        "win"
+      ]
+    },
+    {
+      "availability_status": "REGISTERED",
+      "league": "ncaam",
+      "lineage": "challenger",
+      "model_id": "m_4e98798e294f7de5f3dd",
+      "public_label": "Historical box-score model \u00b7 gradient trees \u00b7 weekly reconstruction",
+      "targets": [
+        "margin",
+        "total",
+        "win"
+      ]
+    },
+    {
+      "availability_status": "REGISTERED",
+      "league": "ncaam",
+      "lineage": "challenger",
+      "model_id": "m_592caa178ef3f8ab1ed4",
+      "public_label": "Historical combined model \u00b7 linear \u00b7 preseason reconstruction",
+      "targets": [
+        "margin",
+        "total",
+        "win"
+      ]
+    },
+    {
+      "availability_status": "REGISTERED",
+      "league": "ncaam",
+      "lineage": "challenger",
+      "model_id": "m_5fd8c336a290c2c2ad07",
+      "public_label": "Historical total distribution \u00b7 variant B \u00b7 weekly reconstruction",
+      "targets": [
+        "total"
+      ]
+    },
+    {
+      "availability_status": "REGISTERED",
+      "league": "ncaam",
+      "lineage": "challenger",
+      "model_id": "m_60b04622fbadcd387e8d",
+      "public_label": "Historical margin distribution \u00b7 variant C \u00b7 preseason reconstruction",
+      "targets": [
+        "margin",
+        "win"
+      ]
+    },
+    {
+      "availability_status": "REGISTERED",
+      "league": "ncaaw",
+      "lineage": "challenger",
+      "model_id": "m_625d96830c1d8b059e51",
+      "public_label": "Historical box-score model \u00b7 gradient trees \u00b7 preseason reconstruction",
+      "targets": [
+        "margin",
+        "total",
+        "win"
+      ]
+    },
+    {
+      "availability_status": "REGISTERED",
+      "league": "ncaaw",
+      "lineage": "challenger",
+      "model_id": "m_823294d5107f58fa860e",
+      "public_label": "Historical margin distribution \u00b7 variant C \u00b7 weekly reconstruction",
+      "targets": [
+        "margin",
+        "win"
+      ]
+    },
+    {
+      "availability_status": "REGISTERED",
+      "league": "ncaam",
+      "lineage": "challenger",
+      "model_id": "m_83e0171c47f3cbe15fa7",
+      "public_label": "Historical box-score model \u00b7 gradient trees \u00b7 preseason reconstruction",
+      "targets": [
+        "margin",
+        "total",
+        "win"
+      ]
+    },
+    {
+      "availability_status": "REGISTERED",
+      "league": "ncaam",
+      "lineage": "challenger",
+      "model_id": "m_8d51b858b536160a2194",
+      "public_label": "Historical total distribution \u00b7 variant C \u00b7 preseason reconstruction",
+      "targets": [
+        "total"
+      ]
+    },
+    {
+      "availability_status": "REGISTERED",
+      "league": "ncaam",
+      "lineage": "challenger",
+      "model_id": "m_8e14c8dc3eb3f97daa51",
+      "public_label": "Historical linear model \u00b7 isotonic calibration \u00b7 preseason reconstruction",
+      "targets": [
+        "win"
+      ]
+    },
+    {
+      "availability_status": "REGISTERED",
+      "league": "ncaaw",
+      "lineage": "challenger",
+      "model_id": "m_8efa8ffc15e831b396e1",
+      "public_label": "Historical error-history model \u00b7 linear \u00b7 preseason reconstruction",
+      "targets": [
+        "margin",
+        "total",
+        "win"
+      ]
+    },
+    {
+      "availability_status": "REGISTERED",
+      "league": "ncaaw",
+      "lineage": "challenger",
+      "model_id": "m_90ec9d5d9226ddbf1754",
+      "public_label": "Historical total distribution \u00b7 variant A \u00b7 weekly reconstruction",
+      "targets": [
+        "total"
+      ]
+    },
+    {
+      "availability_status": "REGISTERED",
+      "league": "ncaam",
+      "lineage": "challenger",
+      "model_id": "m_96b490d291b35958a0e7",
+      "public_label": "Historical margin distribution \u00b7 variant C \u00b7 weekly reconstruction",
+      "targets": [
+        "margin",
+        "win"
+      ]
+    },
+    {
+      "availability_status": "REGISTERED",
+      "league": "ncaaw",
+      "lineage": "original",
+      "model_id": "m_9b68e5c1f07ad58b305a",
+      "public_label": "Original frozen model",
+      "targets": [
+        "margin",
+        "total",
+        "win"
+      ]
+    },
+    {
+      "availability_status": "REGISTERED",
+      "league": "ncaaw",
+      "lineage": "challenger",
+      "model_id": "m_9b746399e53067339630",
+      "public_label": "Historical linear model \u00b7 isotonic calibration \u00b7 preseason reconstruction",
+      "targets": [
+        "win"
+      ]
+    },
+    {
+      "availability_status": "REGISTERED",
+      "league": "ncaaw",
+      "lineage": "challenger",
+      "model_id": "m_9d98f584b7aefbd836a9",
+      "public_label": "Historical margin distribution \u00b7 variant B \u00b7 preseason reconstruction",
+      "targets": [
+        "margin",
+        "win"
+      ]
+    },
+    {
+      "availability_status": "REGISTERED",
+      "league": "ncaaw",
+      "lineage": "challenger",
+      "model_id": "m_a13709d71e310051b1e3",
+      "public_label": "Historical combined model \u00b7 linear \u00b7 preseason reconstruction",
+      "targets": [
+        "margin",
+        "total",
+        "win"
+      ]
+    },
+    {
+      "availability_status": "REGISTERED",
+      "league": "ncaaw",
+      "lineage": "challenger",
+      "model_id": "m_a96fb2645a4211041a36",
+      "public_label": "Historical total distribution \u00b7 variant C \u00b7 weekly reconstruction",
+      "targets": [
+        "total"
+      ]
+    },
+    {
+      "availability_status": "REGISTERED",
+      "league": "ncaam",
+      "lineage": "challenger",
+      "model_id": "m_acf5e18a59cfede6a1e5",
+      "public_label": "Historical combined model \u00b7 linear \u00b7 weekly reconstruction",
+      "targets": [
+        "margin",
+        "total",
+        "win"
+      ]
+    },
+    {
+      "availability_status": "REGISTERED",
+      "league": "ncaaw",
+      "lineage": "challenger",
+      "model_id": "m_be053ece4e5526b44aed",
+      "public_label": "Historical linear model \u00b7 symmetric calibration \u00b7 weekly reconstruction",
+      "targets": [
+        "win"
+      ]
+    },
+    {
+      "availability_status": "REGISTERED",
+      "league": "ncaam",
+      "lineage": "original",
+      "model_id": "m_c36feeaa7d93f3475add",
+      "public_label": "Original frozen model",
+      "targets": [
+        "margin",
+        "total",
+        "win"
+      ]
+    },
+    {
+      "availability_status": "REGISTERED",
+      "league": "ncaaw",
+      "lineage": "challenger",
+      "model_id": "m_cb122c1c67e652425c5c",
+      "public_label": "Historical linear model \u00b7 symmetric calibration \u00b7 preseason reconstruction",
+      "targets": [
+        "win"
+      ]
+    },
+    {
+      "availability_status": "REGISTERED",
+      "league": "ncaam",
+      "lineage": "challenger",
+      "model_id": "m_d0642f81a10f80f7c817",
+      "public_label": "Historical box-score model \u00b7 linear \u00b7 weekly reconstruction",
+      "targets": [
+        "margin",
+        "total",
+        "win"
+      ]
+    },
+    {
+      "availability_status": "REGISTERED",
+      "league": "ncaaw",
+      "lineage": "challenger",
+      "model_id": "m_d2d59d3e23500b24aa1e",
+      "public_label": "Historical combined model \u00b7 linear \u00b7 weekly reconstruction",
+      "targets": [
+        "margin",
+        "total",
+        "win"
+      ]
+    },
+    {
+      "availability_status": "REGISTERED",
+      "league": "ncaam",
+      "lineage": "challenger",
+      "model_id": "m_d62446d02c17706a9229",
+      "public_label": "Historical box-score model \u00b7 linear \u00b7 preseason reconstruction",
+      "targets": [
+        "margin",
+        "total",
+        "win"
+      ]
+    },
+    {
+      "availability_status": "REGISTERED",
+      "league": "ncaam",
+      "lineage": "challenger",
+      "model_id": "m_d87d79a2a8c74e673504",
+      "public_label": "Historical total distribution \u00b7 variant B \u00b7 preseason reconstruction",
+      "targets": [
+        "total"
+      ]
+    },
+    {
+      "availability_status": "REGISTERED",
+      "league": "ncaaw",
+      "lineage": "challenger",
+      "model_id": "m_d8e236a73c528c684c26",
+      "public_label": "Historical box-score model \u00b7 linear \u00b7 weekly reconstruction",
+      "targets": [
+        "margin",
+        "total",
+        "win"
+      ]
+    },
+    {
+      "availability_status": "REGISTERED",
+      "league": "ncaam",
+      "lineage": "challenger",
+      "model_id": "m_df8312e7968ff8099271",
+      "public_label": "Historical linear model \u00b7 symmetric calibration \u00b7 weekly reconstruction",
+      "targets": [
+        "win"
+      ]
+    },
+    {
+      "availability_status": "REGISTERED",
+      "league": "ncaam",
+      "lineage": "challenger",
+      "model_id": "m_e4b2259dc1ba383f3ef0",
+      "public_label": "Historical total distribution \u00b7 variant A \u00b7 weekly reconstruction",
+      "targets": [
+        "total"
+      ]
+    },
+    {
+      "availability_status": "REGISTERED",
+      "league": "ncaaw",
+      "lineage": "challenger",
+      "model_id": "m_e4d55820587b98b8b7c6",
+      "public_label": "Historical box-score model \u00b7 gradient trees \u00b7 weekly reconstruction",
+      "targets": [
+        "margin",
+        "total",
+        "win"
+      ]
+    },
+    {
+      "availability_status": "REGISTERED",
+      "league": "ncaaw",
+      "lineage": "challenger",
+      "model_id": "m_e541e97bd3ce240534a7",
+      "public_label": "Historical error-history model \u00b7 linear \u00b7 weekly reconstruction",
+      "targets": [
+        "margin",
+        "total",
+        "win"
+      ]
+    },
+    {
+      "availability_status": "REGISTERED",
+      "league": "ncaam",
+      "lineage": "challenger",
+      "model_id": "m_ed726d64a0dd0b2da02f",
+      "public_label": "Historical margin distribution \u00b7 variant B \u00b7 preseason reconstruction",
+      "targets": [
+        "margin",
+        "win"
+      ]
+    },
+    {
+      "availability_status": "REGISTERED",
+      "league": "ncaaw",
+      "lineage": "challenger",
+      "model_id": "m_eeb61491207dfb56dcd4",
+      "public_label": "Historical total distribution \u00b7 variant B \u00b7 preseason reconstruction",
+      "targets": [
+        "total"
+      ]
+    },
+    {
+      "availability_status": "REGISTERED",
+      "league": "ncaaw",
+      "lineage": "challenger",
+      "model_id": "m_f4f8eba6ca866e724f22",
+      "public_label": "Historical margin distribution \u00b7 variant B \u00b7 weekly reconstruction",
+      "targets": [
+        "margin",
+        "win"
+      ]
+    }
+  ],
+  "new_fits": 0,
+  "new_forecasts": 0,
+  "new_provider_requests": 0,
+  "point_in_time_qualification_complete": false,
+  "population_artifacts_replaced": false,
+  "population_asof": "2026-11-16T21:35:28.951604+00:00",
+  "prior_per_game_snapshot": "R18",
+  "promotion_permitted": false,
+  "public_label_note": "Coarse model families and stable variant labels; exact private recipes remain in owner evidence.",
+  "qualification_note": "All displayed metrics are descriptive reconstructions. Missing source clocks and protocol proof prevent qualified performance or promotion claims.",
+  "recovery_counts": {
+    "current_prediction_values": 126780,
+    "missing_registered_target_policy_slots": 8,
+    "ordered_context_hashes_verified": 16,
+    "original_calibration_applications": 112,
+    "original_current_rows": 7632,
+    "target_checkpoints": 144
+  },
+  "run_label": "R19",
+  "schema": "sel.ncaa.public.r19.recovered_current_comparison.v1",
+  "scope": "Original executable primary policy roster, declared from saved validation selections; secondary exact common-game comparison.",
+  "season_label": "2026-27",
+  "status": "DESCRIPTIVE_RECONSTRUCTION_UNRANKED",
+  "test_already_exposed": true,
+  "test_selection_weight": 0,
+  "title": "Recovered R19 same-game comparison"
+}
