@@ -1,5 +1,11 @@
 # 2026 NFL models vs. Circa Million VIII
 
+[Current NFL dashboard](https://sports-edge-lab-nfl.alv-mendizabal.chatgpt.site/circa/) · [Monday’s 285/285/149 full-season scorecards](n123_monday/) · [Original N123 Sunday snapshot](n123_current/)
+
+The Monday update grades Cincinnati–Pittsburgh, applies the frozen validation decisions, and preserves every scheduled fixture in the venue audit. The dashboard also provides the historical Circa research cards and new forecasts for 123 upcoming games.
+
+## Archived N122 release
+
 [N122 full-season dashboard](https://sports-edge-lab-nfl.alv-mendizabal.chatgpt.site/circa/n122/) · [N122 research tables and standalone dashboard](n122_current/) · [2024/2025 validation and 2026 test](n122_current/N122_FULL_SEASON_MODELS.csv)
 
 N122 scores every one of the 285 finals in each validation season and all 148 completed 2026 test games at the November 16 UTC snapshot. The market inventory retains all 842 fixtures, including the live game and all 123 upcoming games.
