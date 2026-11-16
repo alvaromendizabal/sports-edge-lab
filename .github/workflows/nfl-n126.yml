@@ -1,0 +1,22 @@
+name: NFL N126 dashboard
+on:
+  pull_request:
+    paths: ['tracks/nfl/circa_million_2026/n126/**', 'tracks/nfl/circa_million_2026/test_n126.cjs', '.github/workflows/nfl-n126.yml']
+  push:
+    branches: [main]
+    paths: ['tracks/nfl/circa_million_2026/n126/**', 'tracks/nfl/circa_million_2026/test_n126.cjs', '.github/workflows/nfl-n126.yml']
+permissions:
+  contents: read
+jobs:
+  verification:
+    runs-on: ubuntu-24.04
+    steps:
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1
+        with:
+          persist-credentials: false
+      - name: Install browser QA
+        run: |
+          npm install --no-save --no-package-lock --ignore-scripts playwright@1.62.1
+          npx playwright install --with-deps chromium
+      - name: Verify model and market panels at desktop and phone sizes
+        run: node tracks/nfl/circa_million_2026/test_n126.cjs
