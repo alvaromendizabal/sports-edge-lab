@@ -97,7 +97,8 @@ class SeasonComparisonTests(unittest.TestCase):
         self.assertEqual(before,json.dumps([self.selected,self.review,self.acceptance,self.leaders],sort_keys=True))
 
     def test_generated_data_and_page_match_authoritative_inputs(self):
-        raw, html = b.build()
+        # setUpClass generated these bytes freshly from the unchanged source files.
+        raw, html = self.generated_raw, self.generated_html
         self.assertEqual(gzip.decompress((b.ROOT/'season_comparison.json.gz').read_bytes()),raw)
         self.assertEqual((b.ROOT/'season_comparison.html').read_bytes(),html)
 

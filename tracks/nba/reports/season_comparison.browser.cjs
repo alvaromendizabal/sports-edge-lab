@@ -9,8 +9,11 @@ async function changeControls(page,pairs){
 }
 
 module.exports = async function checkSeasonComparison(browser, output) {
-  require('node:child_process').execFileSync('python',[path.join(__dirname,'build_season_comparison.py'),'--check'],{stdio:'pipe'});
-  for(const name of ['test_season_comparison.py','test_equal_population_public.py','test_draftkings_public.py','test_model_market_public.py'])require('node:child_process').execFileSync('python',['-m','unittest','discover','-s',__dirname,'-p',name],{stdio:'pipe'});
+  const started=Date.now();
+  // These suites include a fresh build and exact committed HTML/JSON byte checks.
+  // Run them once without blocking the independent historical browser contexts.
+  await require('node:util').promisify(require('node:child_process').execFile)('python',['-m','unittest','test_season_comparison','test_equal_population_public','test_draftkings_public','test_model_market_public'],{cwd:__dirname,maxBuffer:8<<20});
+  console.log(JSON.stringify({nba_comparison_stage:'source_and_projection_tests_passed',elapsed_seconds:(Date.now()-started)/1000}));
   const downloadSource = JSON.parse(zlib.gunzipSync(fs.readFileSync(path.join(__dirname,'season_comparison.json.gz'))));
   const html=fs.readFileSync(path.join(__dirname,'season_comparison.html'),'utf8');
   const payload=html.match(/<script id="nba-comparison-payload" type="application\/octet-stream">([^<]+)<\/script>/);
@@ -191,6 +194,7 @@ module.exports = async function checkSeasonComparison(browser, output) {
     assert.deepEqual(errors,[]);assert.deepEqual(external,[]);
     result.viewports.push({name,width,height,games_verified:visited.size,offline_reopen:true,download_roundtrip:true,page_errors:0,external_requests:0});
     await context.close();
+    console.log(JSON.stringify({nba_comparison_stage:name+'_verified',elapsed_seconds:(Date.now()-started)/1000}));
   }
   fs.writeFileSync(path.join(output,'nba-season-comparison-browser.json'),JSON.stringify(result,null,2)+'\n');
   return result;
