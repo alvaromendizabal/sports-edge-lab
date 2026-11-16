@@ -11,7 +11,7 @@ const logic=globalThis.FBS079,out=process.env.FBS_SCREENSHOTS;
 let browser,checks=0;const check=(value,message)=>{assert.ok(value,message);checks++;};
 function parseCSV(text){const rows=[];let row=[],field='',quoted=false;for(let i=0;i<text.length;i++){const c=text[i];if(c==='"'){if(quoted&&text[i+1]==='"'){field+='"';i++;}else quoted=!quoted;}else if(c===','&&!quoted){row.push(field);field='';}else if(c==='\n'&&!quoted){row.push(field.endsWith('\r')?field.slice(0,-1):field);rows.push(row);row=[];field='';}else field+=c;}if(field||row.length){row.push(field);rows.push(row);}return rows;}
 (async()=>{
-  browser=await chromium.launch({headless:true,args:['--no-sandbox']});
+  browser=await chromium.launch({headless:true,args:['--no-sandbox'],executablePath:process.env.FBS_CHROMIUM_PATH||undefined});
   const context=await browser.newContext(),errors=[],failed=[];
   if(!live)await context.route('http://fbs-v079.test/**',async route=>{
     const pathname=decodeURIComponent(new URL(route.request().url()).pathname),file=path.resolve(site,'.'+(pathname==='/'?'/index.html':pathname));
@@ -149,6 +149,16 @@ function parseCSV(text){const rows=[];let row=[],field='',quoted=false;for(let i
     check((await page.locator('#prior-execution-note').innerText()).startsWith('The V078 predecessor'),'Predecessor wording cannot imply current execution');
     check((await page.locator('#cpu-detail').innerText()).startsWith('Preserved V078 capacity measurement'),'Earlier CPU measurement remains explicitly dated');
     await page.focus('[data-tab="overview"]');await page.keyboard.press('ArrowRight');check(await page.locator('#panel-models').isVisible(),'Keyboard tabs work');
+    await page.goto(new URL('data-policy.html',base).href,{waitUntil:'networkidle'});
+    check((await page.locator('#execution').innerText()).includes('2987'),'Latest failed execution reuse count is visible');
+    check((await page.locator('body').innerText()).includes('comparison-only'),'Named providers are comparison-only');
+    check(await page.locator('#source-rows tr').count()>0,'Measured source audit is populated');
+    check(await page.evaluate(()=>document.documentElement.scrollWidth<=innerWidth),'Source policy fits viewport');
+    if(out)await page.screenshot({path:path.join(out,`fbs-v082-policy-${live?'live':'static'}-${width}.png`),fullPage:true});
+    await page.goto(new URL('market-study.html',base).href,{waitUntil:'networkidle'});
+    check((await page.locator('#nomination').innerText()).includes('ineligible'),'Archived market policies cannot remain nominees');
+    check((await page.locator('h1').innerText()).includes('Archived'),'Historical study has an archive heading');
+    check(await page.evaluate(()=>document.documentElement.scrollWidth<=innerWidth),'Archived study fits viewport');
     await page.close();
   }
   assert.deepEqual(errors,[]);assert.deepEqual(failed,[]);

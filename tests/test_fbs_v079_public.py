@@ -348,6 +348,33 @@ class PublicV079(unittest.TestCase):
             self.assertIsNone(forbidden.search(raw.decode()), path.name)
             self.assertNotIn(("cir" + "ca").encode(), raw.lower())
 
+    def test_v082_model_input_policy_and_archived_experiments(self):
+        policy = json.loads((SITE / 'data/provider-policy.json').read_text())
+        self.assertEqual(policy['comparison_only_providers'], ['DraftKings', 'Kalshi', 'Polymarket Global', 'Polymarket US'])
+        for field in ('excluded_from_model_features', 'excluded_from_calibration', 'excluded_from_ensembles', 'excluded_from_derived_consensus'):
+            self.assertTrue(policy[field])
+        self.assertEqual(policy['validation_seasons'], [2024, 2025])
+        self.assertEqual(policy['test_season'], 2026)
+        archive = json.loads((SITE / 'data/market-study.json').read_text())
+        self.assertFalse(archive['active_model_nomination_allowed'])
+        self.assertEqual(archive['nominees'], {})
+        for model in archive['models']:
+            self.assertFalse(model['nomination_eligible'])
+            if model['alias'] in ('WM01', 'WM02', 'WN01', 'WB01'):
+                self.assertFalse(model['modeling_eligible'])
+        self.assertIn('archived', (SITE / 'market-study.html').read_text().lower())
+
+    def test_latest_partial_execution_is_separate_from_complete_scorecards(self):
+        latest = self.data['latest_authenticated_execution']
+        self.assertEqual(latest['runtime_exit_code'], 2)
+        self.assertEqual(latest['status'], 'PARTIAL_SCIENCE_WITH_PRESERVED_FAILURES')
+        self.assertEqual((latest['new_model_fits'], latest['new_calibrator_fits'], latest['reused_fit_states']), (0, 0, 2987))
+        self.assertFalse(latest['fit_counts_complete'])
+        self.assertEqual((latest['completed_population_jobs'], latest['remaining_population_jobs']), (2760, 3740))
+        self.assertEqual(self.data['current_execution_evidence_role'], 'LAST_COMPLETE_OWNER_ISSUES_AND_COMPARABLE_SCORECARDS')
+        self.assertEqual(len(self.full['scorecards']), 105)
+        self.assertEqual({p['season']: p['expected_game_count'] for p in self.full['populations']}, {2024: 919, 2025: 934, 2026: 752})
+
 if __name__ == "__main__":
     unittest.main(verbosity=2)
 
