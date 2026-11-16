@@ -77,9 +77,10 @@ module.exports = async function checkSeasonComparison(browser, output) {
     }
     if(source.draftkings_analytical){
       assert.equal(await page.locator('#draftkings-coverage-rows tr').count(),6);
-      for(const group of source.draftkings_analytical.coverage)assert.equal(group.required_games,192);
+      for(const group of source.draftkings_analytical.coverage){assert.equal(group.required_games,192);assert.equal(group.qualified_games,192);assert.equal(group.missing_or_unqualified_games,0);assert.equal(group.full_population_market_coverage,true);}
+      assert.equal((await page.locator('#draftkings-coverage-rows').textContent()).match(/All required provider references qualified/g).length,6);
       await page.selectOption('#market-availability','QUALIFIED_DRAFTKINGS');
-      assert.match(await page.locator('#game-count').textContent(),/^185 matching/);
+      assert.match(await page.locator('#game-count').textContent(),/^194 matching/);
       await page.selectOption('#game-status','UPCOMING');await page.selectOption('#horizon','120');
       for(const target of ['winner','margin','total']){
         await page.selectOption('#target',target);assert.match(await page.locator('#game-rows').textContent(),/Current capture · reference only/);
