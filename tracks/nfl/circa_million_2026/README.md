@@ -2,6 +2,8 @@
 
 [Current NFL dashboard](https://sports-edge-lab-nfl.alv-mendizabal.chatgpt.site/circa/) · [N124 model and contest selections](n124/) · [N123 Monday archive](n123_monday/) · [Original N123 Sunday snapshot](n123_current/)
 
+[Market-history and V12 feature coverage](https://sports-edge-lab-nfl.alv-mendizabal.chatgpt.site/circa/market-history/) · [Aggregate market-history audit files](market_history/)
+
 The N124 dashboard reports 2024 and 2025 validation and the 149 completed 2026 test fixtures. Each objective includes the model features, forecast clock, season scores and complete game counts. All 19 Circa policies share the same 46 worksheets.
 
 The Monday update grades Cincinnati–Pittsburgh, applies the frozen validation decisions, and preserves every scheduled fixture in the venue audit. The dashboard also provides the historical Circa research cards and new forecasts for 123 upcoming games.
