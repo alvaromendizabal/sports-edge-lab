@@ -1,4 +1,16 @@
-# FBS V080R1 execution · V079 fixed population comparison
+# FBS V082 source policy and recovery update
+
+DraftKings, Kalshi, Polymarket Global and Polymarket US are comparison-only. Their prices and all derived descendants are excluded from model inputs, calibration and ensembles. WM01, WM02 and WN01 are archived ineligible experiments; WB01 is a comparison reference. Historical metric values and fitted states remain preserved.
+
+The latest authenticated V081 owner execution finished with exit 2 after a utilization diagnostic interrupted warm full-population reconstruction. It recorded zero new base or calibrator fits and 2,987 reused fit states. It completed 2,760 of 6,500 reconstruction jobs. These partial results do not replace the earlier complete 919 / 934 / 752 game scorecards or the original 96-game issue records.
+
+The saved provider observation is November 16, 2026, 1:35 p.m. Pacific. Its 66 qualified current DraftKings winner probabilities retain their own source clocks. Public publication creates no new observation, forecast or fit.
+
+[Model-input source audit and execution](data-policy.html) · [Provider comparison coverage](market-readiness.html) · [Archived market-assisted experiment](market-study.html)
+
+## Preserved complete comparison and dated history
+
+### FBS V080R1 execution · V079 fixed population comparison
 
 2024 and 2025 are validation; completed 2026 games form one fixed test population. Every model row declares its coverage and evidence class. The 2026 cohort has already been exposed to research and is not presented as untouched confirmation. No automatic promotion.
 
@@ -6,7 +18,7 @@ The 47-game issued comparison and older narrower monitors remain diagnostic appe
 
 This scoped public report contains aggregate model scores and authorized rounded selected-role game outputs. It does not distribute private recipes, fitted models, complete candidate prediction grids or raw source responses. Publication does not refresh source data.
 
-The Games model-source control now includes **Validation nominees · unpromoted**. Winner probability uses W08; winner accuracy uses W02; margin MAE and RMSE use M09; total MAE and RMSE use T09. These roles come only from pooled 2024 + 2025 validation. The display exposes four selected outputs for each of 86 already-issued, timed upcoming fixtures, with six objective choices. All 136 pending fixtures stay in the denominator; the 50 unresolved kickoffs have explicit missing-output reasons. Completed games never receive forecasts from these current fits.
+The Games model-source control now includes **Validation nominees · unpromoted**. Winner probability uses W08; winner accuracy uses W02; margin MAE and RMSE use M09; total MAE and RMSE use T09. These roles come only from pooled 2024 + 2025 validation. The display exposes four selected outputs for each of 96 already-issued, timed upcoming fixtures, with six objective choices. All 136 pending fixtures stay in the denominator; the 40 unresolved kickoffs have explicit missing-output reasons. Completed games never receive forecasts from these current fits.
 
 These current states retain the saved original issue, preparation, fit and information clocks. The validation report completion time is shown separately: the exact original nomination-selection clock was not retained and is not invented. Historical season scores evaluate the recipe and chronological protocol across earlier fitted states; they do not establish historical performance for the current state. The display makes no new forecast, fit, source request or promotion.
 
@@ -32,6 +44,6 @@ A separate audited view compares all four corrected research winner policies wit
 
 The latest authenticated owner snapshot retains 919/934/752 completed games for 2024/2025/2026. Its 96 timed upcoming fixtures have four selected, rounded, already-issued model roles; 40 unresolved kickoffs remain visible. The saved current DraftKings winner snapshot covers 66 games.
 
-The separate V081 market study performed 22 genuine local research fits, with no SageMaker execution or automatic promotion. Its stacker improves over the preserved market-free model, but does not establish extra skill over DraftKings. Validation uses 2024–2025; 2026 is exposed test reporting. The five-policy page retains full-game and fixed-provider denominators, negative controls, uncertainty and fallback counts. The V12 coverage page distinguishes stored references, usable features and exact-settlement comparison gates. The full owned-archive horizon census is still pending.
+The separate V081 market study performed 22 genuine local research fits, with no SageMaker execution or automatic promotion. Its stacker improves over the preserved market-free model, but does not establish extra skill over DraftKings. Validation uses 2024–2025; 2026 is exposed test reporting. The five-policy page retains full-game and fixed-provider denominators, negative controls, uncertainty and fallback counts. The V12 coverage page distinguishes stored references, usable features and exact-settlement comparison gates. V081 subsequently decoded all 13,378 retained quote shards; complete V082 other-bookmaker horizon qualification remains pending.
 
-[Market study](market-study.html) · [V12 source coverage](market-readiness.html)
+[Archived experiment](market-study.html) · [V12 source coverage](market-readiness.html)

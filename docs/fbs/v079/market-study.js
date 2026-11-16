@@ -19,7 +19,7 @@
     });
     const counts = (scope === "full" ? data.cohorts.map(c => c.season + ": " + c.n) : data.provider_cohorts.map(c => c.season + ": " + c.matched_n)).join(" · ");
     $("cohort-note").textContent = (scope === "full" ? "Full observed final-game populations. " : "Fixed source-qualified market populations, selected without model scores. ") + counts;
-    $("nomination").textContent = "Validation-only model nominees: log loss " + (data.nominees.log_loss || "unavailable") + "; Brier " + (data.nominees.brier || "unavailable") + "; accuracy " + (data.nominees.accuracy || "unavailable") + ". Benchmark and negative control remain separate. No promotion has occurred.";
+    $("nomination").textContent = "Archived experiment: WM01, WM02 and WN01 are ineligible under the current comparison-only source policy. WB01 is a reference, not an owned-model nominee. No model has been promoted.";
     $("fallbacks").replaceChildren();
     data.models.filter(m => m.role === "candidate").forEach(model => {
       const p = document.createElement("p"); p.append(text("strong", model.alias + ": "));
