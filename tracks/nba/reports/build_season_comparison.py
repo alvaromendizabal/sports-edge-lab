@@ -371,6 +371,12 @@ def build(root=ROOT):
             raise ValueError('Paired scores changed the current completed denominator')
         result['model_market_comparison'] = paired
         result['source_payload_sha256']['model_market_comparison'] = paired_hash
+    forward_path = root / 'forward_forecasts_public.json.gz'
+    if forward_path.exists():
+        from forward_forecasts_public import apply_public as apply_forward
+        forward, forward_hash = read_json(forward_path)
+        apply_forward(result,forward)
+        result['source_payload_sha256']['forward_forecasts_public'] = forward_hash
     encoded = json.dumps(result, sort_keys=True, separators=(',', ':'), ensure_ascii=False).encode()
     template = (root / 'season_comparison.template.html').read_text()
     packed = base64.b64encode(gzip.compress(encoded, mtime=0)).decode()
