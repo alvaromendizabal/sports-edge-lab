@@ -49,6 +49,26 @@ def observe(url, expected, expected_body):
                 record['script_paths']=[urllib.parse.urlsplit(src).path[:150] for src in re.findall(r'''<script\b[^>]*\bsrc=["']([^"']+)''',html,re.I)][:12]
                 record['has_n123_text_anywhere']='N123' in html
                 record['is_verbatim_embedded_asset']=expected_body in body
+                suffix=record['common_suffix_bytes']
+                if common_prefix+suffix==len(expected_body) and len(body)>len(expected_body):
+                    extra=body[common_prefix:len(body)-suffix if suffix else len(body)]
+                    extra_lower=extra.decode('utf-8',errors='replace').lower()
+                    labels={
+                        'cloudflare_challenge_platform':'/cdn-cgi/challenge-platform/',
+                        'cloudflare_js_detection_main':'/scripts/jsd/main.js',
+                        'cloudflare_challenge_parameter_name':'__cf$cv$params',
+                        'cloudflare_insights_host':'static.cloudflareinsights.com',
+                        'cloudflare_insights_beacon':'beacon.min.js',
+                        'cloudflare_rum_marker':'data-cf-beacon',
+                        'iframe_created':"createelement('iframe')",
+                        'script_created':"createelement('script')",
+                        'inline_script_tag':'<script',
+                    }
+                    record['inserted_bytes']=len(extra)
+                    record['inserted_sha256']=sha256(extra).hexdigest()
+                    record['insertion_signatures']=[key for key,value in labels.items() if value in extra_lower]
+                    record['exact_original_reconstructed']=sha256(body[:common_prefix]+(body[-suffix:] if suffix else b'')).hexdigest()==expected
+
         return record
 
 
