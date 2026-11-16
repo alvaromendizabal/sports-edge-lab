@@ -83,7 +83,7 @@ function parseCSV(text){const rows=[];let row=[],field='',quoted=false;for(let i
         for(const key of ['reference','display','qualified','missing','denominator'])check(await row.locator(`[data-coverage="${key}"]`).innerText()===expected[key].toLocaleString('en-US'),'Exact provider denominator and evidence state');
         for(const [prefix,state,fn] of [['current','CURRENT_SOURCE_PROJECTION_VERIFIED',logic.currentCoverage],['historical','HISTORICAL_SOURCE_PROJECTION_VERIFIED',logic.historicalCoverage]]){
           const projection=data[prefix+'_source_coverage'],attached=projection?.state===state&&(prefix==='historical'||season===2026),c=fn(subset,provider,target),sourceRow=page.locator(`#${prefix}-market-body tr[data-${prefix}-provider="${provider}"]`);
-          for(const key of ['reference','qualified','denominator']){const expected=key==='denominator'?c[key].toLocaleString('en-US'):attached&&c.covered===subset.length?(key==='reference'?logic.referenceCoverageLabel(c,logic.referenceMeasurement(nomineeProjection,prefix,provider)):c[key].toLocaleString('en-US')):'Not attached';check(await sourceRow.locator(`[data-${prefix}-coverage="${key}"]`).innerText()===expected,'Capture coverage retains denominator and distinguishes unmeasured references from zero qualified');}
+          for(const key of ['reference','qualified','denominator']){const expected=key==='denominator'?c[key].toLocaleString('en-US'):attached&&c.covered===subset.length?(key==='reference'?logic.referenceCoverageLabel(c,logic.referenceMeasurement(nomineeProjection,prefix,provider,data.current_source_coverage)):c[key].toLocaleString('en-US')):'Not attached';check(await sourceRow.locator(`[data-${prefix}-coverage="${key}"]`).innerText()===expected,'Capture coverage retains denominator and distinguishes unmeasured references from zero qualified');}
         }
         if(status==='final'){
           await page.selectOption('#comparison-provider',provider);
@@ -136,7 +136,10 @@ function parseCSV(text){const rows=[];let row=[],field='',quoted=false;for(let i
     check(exported.filter(r=>r.model_value!=='').length===96,'Nominee CSV has exactly96 current issues without historical backfill');
     check(exported.filter(r=>r.status==='final').every(r=>r.model_value===''),'Every completed game remains explicitly unforecast by the current-state view');
     for(const row of exported.filter(r=>r.model_value!=='')){check(row.model_alias==='W08'&&row.model_fit_completed_at&&row.model_information_cutoff&&row.model_nomination_report_completed_at,'CSV binds the selected alias and actual clocks');check(row.model_selection_time===''&&row.model_selection_time_basis.includes('not retained'),'CSV does not invent original selection time');}
-    check(exported.every(r=>r.kalshi_current_reference==='Not measured'&&r.kalshi_historical_reference==='Not measured'&&r.kalshi_current_source_qualified==='false'),'CSV distinguishes unmeasured references from zero qualified');
+    for(const [provider,expected] of [['kalshi',65],['polymarket_global',64],['polymarket_us',0]]){
+      check(exported.filter(r=>r[provider+'_current_reference']==='true').length===expected,'CSV exports the measured current reference count for '+provider);
+      check(exported.every(r=>['true','false'].includes(r[provider+'_current_reference'])&&r[provider+'_historical_reference']==='Not measured'&&r[provider+'_current_source_qualified']==='false'),'Current measurement never turns unknown history or unqualified settlement into a qualified comparison');
+    }
     for(const game of currentValueGames){const row=byGame.get(game.id),cell=game.current_provider_coverage.draftkings.winner;check(Number(row.draftkings_current_display_value)===cell.display_value,'CSV current probability equals actual public cell');check(row.draftkings_current_quote_time===cell.quote_time&&row.draftkings_current_observed_at===cell.observation_time,'CSV keeps the actual current quote and acquisition clocks');}
     check(await page.evaluate(()=>document.documentElement.scrollWidth<=innerWidth),'Game table contained on mobile');
     await page.click('[data-tab="diagnostics"]');check((await page.locator('#diagnostic-note').innerText()).includes('47-game'),'Narrow issued cohort is explicitly diagnostic');
@@ -153,6 +156,12 @@ function parseCSV(text){const rows=[];let row=[],field='',quoted=false;for(let i
     check((await page.locator('#execution').innerText()).includes('2987'),'Latest failed execution reuse count is visible');
     check((await page.locator('body').innerText()).includes('comparison-only'),'Named providers are comparison-only');
     check(await page.locator('#source-rows tr').count()>0,'Measured source audit is populated');
+    const sourceRows=await page.locator('#source-rows tr').evaluateAll(rows=>rows.map(r=>Array.from(r.querySelectorAll('td')).map(c=>c.textContent)));
+    const sourceCoverage=family=>sourceRows.find(row=>row[0]===family)?.[1]||'';
+    check(/13,378.*15,450,173.*13,354,870/.test(sourceCoverage('Other bookmaker cache')),'Archive coverage renders actual shard and other-book row counts');
+    check(/2,947 \/ 904,860.*554/.test(sourceCoverage('Other bookmaker features')),'Other-book feature coverage renders the measured numerator, denominator and excluded rows');
+    check(/510 \/ 752.*242/.test(sourceCoverage('CFBD 2026 raw drives')),'Drive coverage renders the expanded inspected-source game counts');
+    check(/890 \/ 27,420.*2,670/.test(sourceCoverage('CFBD F01')),'F01 renders qualified rows and values rather than a missing schema key');
     check(await page.evaluate(()=>document.documentElement.scrollWidth<=innerWidth),'Source policy fits viewport');
     if(out)await page.screenshot({path:path.join(out,`fbs-v082-policy-${live?'live':'static'}-${width}.png`),fullPage:true});
     await page.goto(new URL('market-study.html',base).href,{waitUntil:'networkidle'});

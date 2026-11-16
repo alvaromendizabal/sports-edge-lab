@@ -375,6 +375,19 @@ class PublicV079(unittest.TestCase):
         self.assertEqual(len(self.full['scorecards']), 105)
         self.assertEqual({p['season']: p['expected_game_count'] for p in self.full['populations']}, {2024: 919, 2025: 934, 2026: 752})
 
+    def test_current_readiness_counts_use_latest_capture_for_every_provider(self):
+        readiness=json.loads((SITE/'data/market-readiness.json').read_bytes())
+        rows={(r['provider'],r['target']):r for r in readiness['rows']
+              if r['season']==2026 and r['population']=='pending_or_upcoming'}
+        for provider,winner,margin,total in [('DraftKings',66,66,66),('Kalshi',65,60,65),
+                ('Polymarket Global',64,64,64),('Polymarket US',0,0,0)]:
+            for target,count in [('winner',winner),('margin',margin),('total',total)]:
+                row=rows[provider,target]
+                self.assertEqual(row['references'],count)
+                self.assertEqual(row['referenceMeasurement'],'Measured current snapshot')
+                self.assertEqual(row['expectedGames'],136)
+                self.assertEqual(row['qualifiedComparisons'],66 if provider=='DraftKings' and target=='winner' else 0)
+
 if __name__ == "__main__":
     unittest.main(verbosity=2)
 
