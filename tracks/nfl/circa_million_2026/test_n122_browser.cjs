@@ -25,5 +25,17 @@ assert.doesNotMatch(JSON.stringify(d),/s3:\/\/|\/home\/sagemaker-user|private-ha
  await page.getByRole('link',{name:'Circa cards',exact:true}).click();await page.waitForSelector('#cweek');assert.equal(await page.locator('#cweek option').count(),46);assert.ok(await page.locator('#card tbody tr').count()>=10);
  await page.getByRole('link',{name:'Evidence',exact:true}).click();await page.waitForSelector('.downloads');assert.equal(await page.locator('.downloads a').count(),d.files.length);
  assert.deepEqual(errors,[]);assert.ok(await page.evaluate(()=>document.documentElement.scrollWidth<=innerWidth+1));
+ await page.goto(pathToFileURL(path.join(directory,'N122_Margin_and_Total_Explorer.html')).href+'#2026_10_LAC_BAL');
+ assert.equal(await page.locator('#game option').count(),123);assert.equal(await page.locator('#game').inputValue(),'2026_10_LAC_BAL');
+ await page.selectOption('#side','home');assert.match(await page.locator('#win').innerText(),/56.84%/);await page.locator('#spread').fill('-4.5');assert.match(await page.locator('#ats').innerText(),/0.00%/);
+ await page.locator('#lo').fill('20');await page.locator('#hi').fill('9');assert.match(await page.locator('#thresholds').innerText(),/lower endpoint/);
+ await page.evaluate(()=>{const bank=JSON.parse(document.getElementById('saved').textContent);if(bank.length!==369)throw Error('distribution count');for(const v of bank){for(const sign of [-1,1])for(const line of [-11,-.5,0,3,7.5,11]){
+ const [a,b,c]=[x=>x+line>0,x=>x+line===0,x=>x+line<0].map(f=>sumIf(v[7],-100,sign,f));
+ if(Math.abs(a+b+c-1)>1e-12||(!Number.isInteger(line)&&b!==0))throw Error('spread mass');
+ const exact=sumIf(v[7],-100,sign,x=>x===11),tail=sumIf(v[7],-100,sign,x=>x>=11),bucket=sumIf(v[7],-100,sign,x=>x>=7&&x<=13);
+ if(exact>tail||exact>bucket)throw Error('margin thresholds');
+ const totals=v[8];if(Math.abs(totals.reduce((a,b)=>a+b,0)-1)>1e-10)throw Error('total score mass');
+ }}});
+ assert.deepEqual(errors,[]);assert.ok(await page.evaluate(()=>document.documentElement.scrollWidth<=innerWidth+1));
  await page.close();
 }await browser.close();console.log('Verified full populations, forecasts, roster, source boundaries, 322 cards, accessible navigation, mobile and desktop.');})().catch(e=>{console.error(e);process.exit(1)});
