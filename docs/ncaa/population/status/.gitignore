@@ -1,2 +1,2 @@
-# Exact generated public gzip assets are reconstructed from verified source packs.
-*.jsonl.gz
+*
+!.gitignore

@@ -21,8 +21,20 @@ class ThreeSeasonPublicContract(unittest.TestCase):
     @classmethod
     def setUpClass(cls):
         unpack(POP)
+        unpack(DOCS / "population_r17")
         cls.data = json.loads((POP / "population_public.json").read_text())
         cls.manifest = json.loads((POP / "status_manifest.json").read_text())
+
+    def test_preserved_snapshot_remains_distinct_and_unchanged(self):
+        prior = DOCS / "population_r17" / "population_public.json"
+        self.assertEqual(hashlib.sha256(prior.read_bytes()).hexdigest(), "6f0d543065e2a71024184bf887eb174a80472c775c0caef819885a6b6b6c8fdc")
+        self.assertNotEqual(json.loads(prior.read_bytes())["population_hash"], self.data["population_hash"])
+        self.assertIn('data-population-base="population_r17"', (DOCS / "three_seasons_r17.html").read_text())
+        execution = json.loads((POP / "execution_public.json").read_text())
+        self.assertEqual(execution["release"], "R18")
+        self.assertEqual(execution["public_counters"][0]["value"], 0)
+        self.assertIs(execution["actual_utilization_gate_executed"], False)
+        self.assertEqual(len(self.data["status_partition_manifest"]), 1665)
 
     def test_six_separate_populations_and_explicit_rank_policy(self):
         self.assertEqual(self.data["schema"], "sel.ncaa.b088.population_public.v1")

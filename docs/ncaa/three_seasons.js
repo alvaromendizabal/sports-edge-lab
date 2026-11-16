@@ -162,7 +162,7 @@
   }
 
   function relativeAsset(path) {
-    if (typeof path !== 'string' || !/^population\/[A-Za-z0-9_./-]+\.jsonl?(?:\.gz)?$/.test(path) || path.split('/').includes('..')) throw new Error('Public status asset path is not qualified.');
+    if (typeof path !== 'string' || !/^population(?:_r17)?\/[A-Za-z0-9_./-]+\.jsonl?(?:\.gz)?$/.test(path) || path.split('/').includes('..')) throw new Error('Public status asset path is not qualified.');
     return path;
   }
 
@@ -219,6 +219,7 @@
 
   function start(win) {
     const document = win.document;
+    const populationBase = document.body && document.body.dataset && document.body.dataset.populationBase === "population_r17" ? "population_r17" : "population";
     const $ = id => document.getElementById(id);
     const state = { data: null, models: [], coverage: [], coveragePage: 0, ownPage: 0, cellsPage: 0, manifest: null, partition: null, cells: [], partitionCache: new Map(), cachedBytes: 0, loadToken: 0 };
     const filters = () => ({ league: $('competition').value, season: $('season').value, target: $('target').value, evidence: $('evidence').value });
@@ -405,7 +406,7 @@
         let readRows = 0;
         for (const descriptor of descriptors) {
           if (token !== state.loadToken) return;
-          const path = relativeAsset(`population/status/${descriptor.filename}`), cacheKey = `${path}:${descriptor.sha256}`;
+          const path = relativeAsset(`${populationBase}/status/${descriptor.filename}`), cacheKey = `${path}:${descriptor.sha256}`;
           const pinned = array(state.data.status_partition_manifest).find(p => p.filename === descriptor.filename);
           if (!pinned || pinned.sha256 !== descriptor.sha256 || pinned.logical_sha256 !== descriptor.logical_sha256 || pinned.rows !== descriptor.rows || descriptor.population_hash !== state.data.population_hash || descriptor.codec !== 'jsonl_gzip' || descriptor.scope !== 'EXPLICIT_CELLS_NO_SPARSE_DEFAULTS' || descriptor.physical_readback_verified !== true || !hashValid(descriptor.sha256) || !hashValid(descriptor.logical_sha256) || !(descriptor.rows > 0 && descriptor.rows <= 4096) || !(descriptor.bytes > 0 && descriptor.bytes <= 8388608) || !(descriptor.logical_bytes > 0 && descriptor.logical_bytes <= 8388608)) throw new Error('Public status partition pin or bound is invalid.');
           let bytes = state.partitionCache.get(cacheKey);
@@ -481,17 +482,18 @@
     $('download-cells').addEventListener('click', () => safeExport('ncaa_filtered_game_status_cells.json', { schema: 'sel.ncaa.public.filtered_status_cells.v1', population_snapshot_asof: state.data.snapshot_asof || null, season_end_year: Number($('cell-season').value), league: $('cell-competition').value, entity: $('cell-entity').value, target: $('cell-target').value, evidence_class_filter: $('cell-evidence').value, numerical_forecasts_and_quotes_excluded: true, complete_official_population_claimed: false, row_count: state.cells.length, rows: state.cells.map(cell => Object.fromEntries(CELL_KEYS.map(key => [key, cell[key]]))) }));
     (async () => {
       try {
-        state.data = normalizeB088(await fetchJSON('population/population_public.json')); state.models = roster(state.data); state.coverage = coverageRows(state.data);
+        state.data = normalizeB088(await fetchJSON(`${populationBase}/population_public.json`)); state.models = roster(state.data); state.coverage = coverageRows(state.data);
         initializeChoices(); renderAll();
         $('publication-clock').textContent = `Population snapshot: ${pacific(state.data.snapshot_asof)}. Analysis/publication time does not replace a source-availability clock.`;
         $('load-status').innerHTML = '<strong>Three-season evidence loaded.</strong><p>Use the separate population, coverage and same-game tables below. Unknown counts and missing scores remain explicit.</p>';
         try {
-          const context = await fetchJSON('population/population_context.json');
+          const context = await fetchJSON(`${populationBase}/population_context.json`);
           if (context.population_hash !== state.data.population_hash) throw new Error('Population context identity mismatch.');
           state.data.population_context = context; renderPopulations();
         } catch (error) { win.SEL_POPULATION_CONTEXT_ERROR = error.message; }
-        try { state.data.execution = await fetchJSON('population/execution_public.json'); renderExecution(); } catch (error) { win.SEL_POPULATION_EXECUTION_ERROR = error.message; }
-        try { state.manifest = validateStatusManifest(state.data, await fetchJSON('population/status_manifest.json')); await loadPartition(); } catch (error) { $('cell-load-status').textContent = `Public status manifest unavailable: ${error.message}`; win.SEL_POPULATION_CELLS_ERROR = error.message; }
+        try { state.data.execution = await fetchJSON(`${populationBase}/execution_public.json`); renderExecution(); } catch (error) { win.SEL_POPULATION_EXECUTION_ERROR = error.message; }
+        if ($('collection-summary')) { try { const collection = await fetchJSON(`${populationBase}/collection_public.json`); $('collection-summary').hidden = false; $('collection-summary').innerHTML = `<strong>Latest recorded collection</strong><p>${esc(collection.public_summary)}</p><small>Captured ${pacific(collection.snapshot_completed_at)}. Quote-row counts are not game counts.</small>`; } catch (error) { win.SEL_POPULATION_COLLECTION_ERROR = error.message; } }
+        try { state.manifest = validateStatusManifest(state.data, await fetchJSON(`${populationBase}/status_manifest.json`)); await loadPartition(); } catch (error) { $('cell-load-status').textContent = `Public status manifest unavailable: ${error.message}`; win.SEL_POPULATION_CELLS_ERROR = error.message; }
       } catch (error) {
         $('load-status').innerHTML = `<strong>Evidence could not be verified for display.</strong><p>${esc(error.message)}</p>`; $('load-status').classList.add('error'); win.SEL_POPULATION_ERROR = error.message;
       }

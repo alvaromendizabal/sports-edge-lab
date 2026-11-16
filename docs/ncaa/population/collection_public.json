@@ -1,0 +1,23 @@
+{
+  "schema": "sel.ncaa.public.r18_collection_summary.v1",
+  "snapshot_completed_at": "2026-11-16T18:58:19.077338+00:00",
+  "new_canonical_quote_rows": 47,
+  "canonical_quote_rows_at_population_audit": 136,
+  "existing_plan_credits_used": 6,
+  "odds_http_calls": 3,
+  "official_http_calls": 40,
+  "official_request_reuses": 266,
+  "completed_qualified_provider_games": 0,
+  "all_historical_quotes_downloaded": false,
+  "full_provider_coverage_established": false,
+  "kalshi_refresh_status": "Paused after the recorded shared HTTP 429 response",
+  "polymarket_refresh_status": "No new Polymarket dispatch in this invocation",
+  "larger_inherited_quote_inventories_fully_qualified": false,
+  "public_summary": "R18 added 47 canonical DraftKings quote rows after three Odds API calls using six existing-plan credits. The population audit contains 136 canonical quote rows, not 136 unique games. Exact team/time binding and settlement verification still block qualified comparisons. Current capture does not fill historical quote gaps. Kalshi remained paused after a prior shared rate-limit response; no new Polymarket capture was made. Larger inherited inventories remain separate and incompletely qualified. The fresh canonical quotes cover 17 matched games: 15 men’s and two women’s. At the population cutoff, 16 were future games and one had started without a completed outcome; they do not add completed-game performance pairs.",
+  "new_quote_matched_games": 17,
+  "new_quote_matched_games_men": 15,
+  "new_quote_matched_games_women": 2,
+  "new_quote_games_future_at_population_cutoff": 16,
+  "new_quote_games_started_unfinished_at_population_cutoff": 1,
+  "captured_outcome_count": 177
+}

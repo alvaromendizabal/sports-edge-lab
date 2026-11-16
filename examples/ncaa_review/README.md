@@ -1,3 +1,9 @@
+## November 16, 2026: current R18 return review
+
+The latest verified execution failed during inference-model identity validation and preserved its partial work. See the [R18 return review](../../docs/ncaa/R18_RETURN_REVIEW.md) for current population, model coverage, provider collection and execution counts. The earlier notes below remain dated historical evidence.
+
+---
+
 <!-- B063R9_STATUS_START -->
 ## Latest authenticated return: R8 reused data, then failed before science
 

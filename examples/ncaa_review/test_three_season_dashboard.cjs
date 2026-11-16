@@ -63,7 +63,7 @@ function harness(bundle) {
   const get = id => { assert(elements.has(id), `Missing DOM id ${id}`); return elements.get(id); };
   for (const [id, value] of Object.entries({ competition: 'all', season: 'all', target: 'win', evidence: 'all', 'model-filter': 'all', 'coverage-filter': 'all', 'cell-competition': 'ncaam', 'cell-season': '2027', 'cell-target': 'win', 'cell-evidence': 'all', 'cell-game-status': 'all', 'cell-state': 'all' })) get(id).value = value;
   const fetched = [], output = { downloaded: null };
-  const win = { document: { getElementById: get, createElement: () => new Element('download') }, Blob, Response, DecompressionStream, TextDecoder, crypto: crypto.webcrypto, setTimeout: fn => fn(), URL: { createObjectURL: blob => { output.downloaded = blob; return 'blob:fixture'; }, revokeObjectURL() {} }, fetch: async asset => {
+  const win = { document: { body: { dataset: { populationBase: bundle.populationBase || 'population' } }, getElementById: get, createElement: () => new Element('download') }, Blob, Response, DecompressionStream, TextDecoder, crypto: crypto.webcrypto, setTimeout: fn => fn(), URL: { createObjectURL: blob => { output.downloaded = blob; return 'blob:fixture'; }, revokeObjectURL() {} }, fetch: async asset => {
     fetched.push(asset);
     if (!bundle.assets.has(asset)) return { ok: false, status: 404 };
     const value = bundle.assets.get(asset);
