@@ -38,12 +38,12 @@ const {createHash}=require('node:crypto');
   await page.click('[data-view=circa]');await page.waitForSelector('#card121 table');assert.equal(await page.locator('#card121 table').first().locator('tbody tr').count(),5);assert.equal(await page.locator('#card121 details tbody tr').count(),28);assert.match(await page.locator('main').innerText(),/after deadline/i);
   await page.click('[data-view=study]');await page.getByRole('heading',{name:'Validation and test design',exact:true}).waitFor();assert.match(await page.locator('main').innerText(),/tool host/i);assert.equal(await page.evaluate(()=>document.documentElement.scrollWidth>window.innerWidth),false);
   await page.click('[data-view=models]');await page.waitForSelector('#currentList tbody tr');
-  assert.equal(await page.locator('#currentList tbody tr').count(),48);
+  assert.equal(await page.locator('#currentList tbody tr').count(),48);assert.equal(await page.evaluate(()=>document.documentElement.scrollWidth>window.innerWidth),false);
   await page.selectOption('#currTarget','win');await page.fill('#currFilter','recent');assert.match(await page.locator('#currentList').innerText(),/140-day/);
   await page.getByRole('heading',{name:'N025 paper champions and the N121 validation leader',exact:true}).waitFor();
   await page.getByRole('heading',{name:'Weights and calibration fixed before each season',exact:true}).waitFor();
   await page.goto(pathToFileURL(fs).href+'#games/'+update.finals[0].game_id);await page.waitForSelector('#gameDetail121');assert.match(await page.locator('#gameDetail121').innerText(),/Graded pregame market comparisons/);
-  await page.click('[data-view=markets]');await page.getByRole('heading',{name:'Identical three-venue settlement',exact:true}).waitFor();
+  await page.click('[data-view=markets]');await page.getByRole('heading',{name:'Identical three-venue settlement',exact:true}).waitFor();assert.equal(await page.evaluate(()=>document.documentElement.scrollWidth>window.innerWidth),false);await page.getByRole('heading',{name:'Season-wide three-venue comparison two hours before kickoff',exact:true}).waitFor();
   const download=await page.evaluate(async()=>{const bytes=Uint8Array.from(atob('YWJj'),c=>c.charCodeAt(0));const d=new Uint8Array(await crypto.subtle.digest('SHA-256',bytes)),a=document.createElement('a');a.href=URL.createObjectURL(new Blob([bytes]));a.download='fixture.bin';const ok=a.download==='fixture.bin'&&a.href.startsWith('blob:');URL.revokeObjectURL(a.href);return [Array.from(d,x=>x.toString(16).padStart(2,'0')).join(''),ok];});assert.deepEqual(download,['ba7816bf8f01cfea414140de5dae2223b00361a396177a9cb410ff61f20015ad',true]);assert.deepEqual(errors,[]);await page.close();facts[device]='PASS';
  }
  }finally{await browser.close();}

@@ -1,0 +1,883 @@
+game_id,market,checkpoint,comparison_status
+2026_01_ARI_LAC,margin,T120_5M,checkpoint source missing
+2026_01_ARI_LAC,total,T120_5M,checkpoint source missing
+2026_01_ATL_PIT,margin,T120_5M,checkpoint source missing
+2026_01_ATL_PIT,total,T120_5M,checkpoint source missing
+2026_01_BAL_IND,margin,T120_5M,checkpoint source missing
+2026_01_BAL_IND,total,T120_5M,checkpoint source missing
+2026_01_BUF_HOU,margin,T120_5M,checkpoint source missing
+2026_01_BUF_HOU,total,T120_5M,checkpoint source missing
+2026_01_CHI_CAR,margin,T120_5M,checkpoint source missing
+2026_01_CHI_CAR,total,T120_5M,checkpoint source missing
+2026_01_CLE_JAX,margin,T120_5M,checkpoint source missing
+2026_01_CLE_JAX,total,T120_5M,checkpoint source missing
+2026_01_DAL_NYG,margin,T120_5M,checkpoint source missing
+2026_01_DAL_NYG,total,T120_5M,checkpoint source missing
+2026_01_DEN_KC,margin,T120_5M,checkpoint source missing
+2026_01_DEN_KC,total,T120_5M,checkpoint source missing
+2026_01_GB_MIN,margin,T120_5M,checkpoint source missing
+2026_01_GB_MIN,total,T120_5M,checkpoint source missing
+2026_01_MIA_LV,margin,T120_5M,checkpoint source missing
+2026_01_MIA_LV,total,T120_5M,checkpoint source missing
+2026_01_NE_SEA,margin,T120_5M,checkpoint source missing
+2026_01_NE_SEA,total,T120_5M,checkpoint source missing
+2026_01_NO_DET,margin,T120_5M,checkpoint source missing
+2026_01_NO_DET,total,T120_5M,checkpoint source missing
+2026_01_NYJ_TEN,margin,T120_5M,checkpoint source missing
+2026_01_NYJ_TEN,total,T120_5M,checkpoint source missing
+2026_01_SF_LA,margin,T120_5M,checkpoint source missing
+2026_01_SF_LA,total,T120_5M,checkpoint source missing
+2026_01_TB_CIN,margin,T120_5M,checkpoint source missing
+2026_01_TB_CIN,total,T120_5M,checkpoint source missing
+2026_01_WAS_PHI,margin,T120_5M,checkpoint source missing
+2026_01_WAS_PHI,total,T120_5M,checkpoint source missing
+2026_02_CAR_ATL,margin,T120_5M,checkpoint source missing
+2026_02_CAR_ATL,total,T120_5M,checkpoint source missing
+2026_02_CIN_HOU,margin,T120_5M,checkpoint source missing
+2026_02_CIN_HOU,total,T120_5M,checkpoint source missing
+2026_02_CLE_TB,margin,T120_5M,checkpoint source missing
+2026_02_CLE_TB,total,T120_5M,checkpoint source missing
+2026_02_DET_BUF,margin,T120_5M,checkpoint source missing
+2026_02_DET_BUF,total,T120_5M,checkpoint source missing
+2026_02_GB_NYJ,margin,T120_5M,checkpoint source missing
+2026_02_GB_NYJ,total,T120_5M,checkpoint source missing
+2026_02_IND_KC,margin,T120_5M,checkpoint source missing
+2026_02_IND_KC,total,T120_5M,checkpoint source missing
+2026_02_JAX_DEN,margin,T120_5M,checkpoint source missing
+2026_02_JAX_DEN,total,T120_5M,checkpoint source missing
+2026_02_LV_LAC,margin,T120_5M,checkpoint source missing
+2026_02_LV_LAC,total,T120_5M,checkpoint source missing
+2026_02_MIA_SF,margin,T120_5M,checkpoint source missing
+2026_02_MIA_SF,total,T120_5M,checkpoint source missing
+2026_02_MIN_CHI,margin,T120_5M,checkpoint source missing
+2026_02_MIN_CHI,total,T120_5M,checkpoint source missing
+2026_02_NO_BAL,margin,T120_5M,checkpoint source missing
+2026_02_NO_BAL,total,T120_5M,checkpoint source missing
+2026_02_NYG_LA,margin,T120_5M,checkpoint source missing
+2026_02_NYG_LA,total,T120_5M,checkpoint source missing
+2026_02_PHI_TEN,margin,T120_5M,checkpoint source missing
+2026_02_PHI_TEN,total,T120_5M,checkpoint source missing
+2026_02_PIT_NE,margin,T120_5M,checkpoint source missing
+2026_02_PIT_NE,total,T120_5M,checkpoint source missing
+2026_02_SEA_ARI,margin,T120_5M,checkpoint source missing
+2026_02_SEA_ARI,total,T120_5M,checkpoint source missing
+2026_02_WAS_DAL,margin,T120_5M,checkpoint source missing
+2026_02_WAS_DAL,total,T120_5M,checkpoint source missing
+2026_03_ARI_SF,margin,T120_5M,checkpoint source missing
+2026_03_ARI_SF,total,T120_5M,checkpoint source missing
+2026_03_ATL_GB,margin,T120_5M,checkpoint source missing
+2026_03_ATL_GB,total,T120_5M,checkpoint source missing
+2026_03_BAL_DAL,margin,T120_5M,checkpoint source missing
+2026_03_BAL_DAL,total,T120_5M,checkpoint source missing
+2026_03_CAR_CLE,margin,T120_5M,checkpoint source missing
+2026_03_CAR_CLE,total,T120_5M,checkpoint source missing
+2026_03_CIN_PIT,margin,T120_5M,checkpoint source missing
+2026_03_CIN_PIT,total,T120_5M,checkpoint source missing
+2026_03_HOU_IND,margin,T120_5M,checkpoint source missing
+2026_03_HOU_IND,total,T120_5M,checkpoint source missing
+2026_03_KC_MIA,margin,T120_5M,checkpoint source missing
+2026_03_KC_MIA,total,T120_5M,checkpoint source missing
+2026_03_LAC_BUF,margin,T120_5M,checkpoint source missing
+2026_03_LAC_BUF,total,T120_5M,checkpoint source missing
+2026_03_LA_DEN,margin,T120_5M,checkpoint source missing
+2026_03_LA_DEN,total,T120_5M,checkpoint source missing
+2026_03_LV_NO,margin,T120_5M,checkpoint source missing
+2026_03_LV_NO,total,T120_5M,checkpoint source missing
+2026_03_MIN_TB,margin,T120_5M,checkpoint source missing
+2026_03_MIN_TB,total,T120_5M,checkpoint source missing
+2026_03_NE_JAX,margin,T120_5M,checkpoint source missing
+2026_03_NE_JAX,total,T120_5M,checkpoint source missing
+2026_03_NYJ_DET,margin,T120_5M,checkpoint source missing
+2026_03_NYJ_DET,total,T120_5M,checkpoint source missing
+2026_03_PHI_CHI,margin,T120_5M,checkpoint source missing
+2026_03_PHI_CHI,total,T120_5M,checkpoint source missing
+2026_03_SEA_WAS,margin,T120_5M,checkpoint source missing
+2026_03_SEA_WAS,total,T120_5M,checkpoint source missing
+2026_03_TEN_NYG,margin,T120_5M,checkpoint source missing
+2026_03_TEN_NYG,total,T120_5M,checkpoint source missing
+2026_04_ARI_NYG,margin,T120_5M,checkpoint source missing
+2026_04_ARI_NYG,total,T120_5M,checkpoint source missing
+2026_04_ATL_NO,margin,T120_5M,checkpoint source missing
+2026_04_ATL_NO,total,T120_5M,checkpoint source missing
+2026_04_DAL_HOU,margin,T120_5M,checkpoint source missing
+2026_04_DAL_HOU,total,T120_5M,checkpoint source missing
+2026_04_DEN_SF,margin,T120_5M,contract missing or native/snapshot outside fixed clock
+2026_04_DEN_SF,total,T120_5M,no identical integer threshold at three venues
+2026_04_DET_CAR,margin,T120_5M,checkpoint source missing
+2026_04_DET_CAR,total,T120_5M,checkpoint source missing
+2026_04_GB_TB,margin,T120_5M,checkpoint source missing
+2026_04_GB_TB,total,T120_5M,checkpoint source missing
+2026_04_IND_WAS,margin,T120_5M,checkpoint source missing
+2026_04_IND_WAS,total,T120_5M,checkpoint source missing
+2026_04_JAX_CIN,margin,T120_5M,checkpoint source missing
+2026_04_JAX_CIN,total,T120_5M,checkpoint source missing
+2026_04_KC_LV,margin,T120_5M,matched
+2026_04_KC_LV,total,T120_5M,no identical integer threshold at three venues
+2026_04_LAC_SEA,margin,T120_5M,checkpoint source missing
+2026_04_LAC_SEA,total,T120_5M,checkpoint source missing
+2026_04_LA_PHI,margin,T120_5M,checkpoint source missing
+2026_04_LA_PHI,total,T120_5M,checkpoint source missing
+2026_04_MIA_MIN,margin,T120_5M,checkpoint source missing
+2026_04_MIA_MIN,total,T120_5M,checkpoint source missing
+2026_04_NE_BUF,margin,T120_5M,checkpoint source missing
+2026_04_NE_BUF,total,T120_5M,checkpoint source missing
+2026_04_NYJ_CHI,margin,T120_5M,checkpoint source missing
+2026_04_NYJ_CHI,total,T120_5M,checkpoint source missing
+2026_04_PIT_CLE,margin,T120_5M,checkpoint source missing
+2026_04_PIT_CLE,total,T120_5M,checkpoint source missing
+2026_04_TEN_BAL,margin,T120_5M,checkpoint source missing
+2026_04_TEN_BAL,total,T120_5M,checkpoint source missing
+2026_05_BAL_ATL,margin,T120_5M,checkpoint source missing
+2026_05_BAL_ATL,total,T120_5M,checkpoint source missing
+2026_05_BUF_LA,margin,T120_5M,checkpoint source missing
+2026_05_BUF_LA,total,T120_5M,checkpoint source missing
+2026_05_CHI_GB,margin,T120_5M,checkpoint source missing
+2026_05_CHI_GB,total,T120_5M,checkpoint source missing
+2026_05_CIN_MIA,margin,T120_5M,checkpoint source missing
+2026_05_CIN_MIA,total,T120_5M,checkpoint source missing
+2026_05_CLE_NYJ,margin,T120_5M,checkpoint source missing
+2026_05_CLE_NYJ,total,T120_5M,checkpoint source missing
+2026_05_DEN_LAC,margin,T120_5M,checkpoint source missing
+2026_05_DEN_LAC,total,T120_5M,checkpoint source missing
+2026_05_DET_ARI,margin,T120_5M,checkpoint source missing
+2026_05_DET_ARI,total,T120_5M,checkpoint source missing
+2026_05_HOU_TEN,margin,T120_5M,checkpoint source missing
+2026_05_HOU_TEN,total,T120_5M,checkpoint source missing
+2026_05_IND_PIT,margin,T120_5M,checkpoint source missing
+2026_05_IND_PIT,total,T120_5M,checkpoint source missing
+2026_05_LV_NE,margin,T120_5M,checkpoint source missing
+2026_05_LV_NE,total,T120_5M,checkpoint source missing
+2026_05_MIN_NO,margin,T120_5M,checkpoint source missing
+2026_05_MIN_NO,total,T120_5M,checkpoint source missing
+2026_05_NYG_WAS,margin,T120_5M,checkpoint source missing
+2026_05_NYG_WAS,total,T120_5M,checkpoint source missing
+2026_05_PHI_JAX,margin,T120_5M,checkpoint source missing
+2026_05_PHI_JAX,total,T120_5M,checkpoint source missing
+2026_05_SF_SEA,margin,T120_5M,checkpoint source missing
+2026_05_SF_SEA,total,T120_5M,checkpoint source missing
+2026_05_TB_DAL,margin,T120_5M,checkpoint source missing
+2026_05_TB_DAL,total,T120_5M,checkpoint source missing
+2026_06_ARI_LA,margin,T120_5M,checkpoint source missing
+2026_06_ARI_LA,total,T120_5M,checkpoint source missing
+2026_06_BAL_CLE,margin,T120_5M,checkpoint source missing
+2026_06_BAL_CLE,total,T120_5M,checkpoint source missing
+2026_06_BUF_LV,margin,T120_5M,checkpoint source missing
+2026_06_BUF_LV,total,T120_5M,checkpoint source missing
+2026_06_CAR_PHI,margin,T120_5M,checkpoint source missing
+2026_06_CAR_PHI,total,T120_5M,checkpoint source missing
+2026_06_CHI_ATL,margin,T120_5M,checkpoint source missing
+2026_06_CHI_ATL,total,T120_5M,checkpoint source missing
+2026_06_DAL_GB,margin,T120_5M,checkpoint source missing
+2026_06_DAL_GB,total,T120_5M,checkpoint source missing
+2026_06_HOU_JAX,margin,T120_5M,checkpoint source missing
+2026_06_HOU_JAX,total,T120_5M,checkpoint source missing
+2026_06_LAC_KC,margin,T120_5M,checkpoint source missing
+2026_06_LAC_KC,total,T120_5M,checkpoint source missing
+2026_06_NO_NYG,margin,T120_5M,checkpoint source missing
+2026_06_NO_NYG,total,T120_5M,checkpoint source missing
+2026_06_NYJ_NE,margin,T120_5M,checkpoint source missing
+2026_06_NYJ_NE,total,T120_5M,checkpoint source missing
+2026_06_PIT_TB,margin,T120_5M,checkpoint source missing
+2026_06_PIT_TB,total,T120_5M,checkpoint source missing
+2026_06_SEA_DEN,margin,T120_5M,checkpoint source missing
+2026_06_SEA_DEN,total,T120_5M,checkpoint source missing
+2026_06_TEN_IND,margin,T120_5M,checkpoint source missing
+2026_06_TEN_IND,total,T120_5M,checkpoint source missing
+2026_06_WAS_SF,margin,T120_5M,checkpoint source missing
+2026_06_WAS_SF,total,T120_5M,checkpoint source missing
+2026_07_CIN_BAL,margin,T120_5M,checkpoint source missing
+2026_07_CIN_BAL,total,T120_5M,checkpoint source missing
+2026_07_CLE_TEN,margin,T120_5M,checkpoint source missing
+2026_07_CLE_TEN,total,T120_5M,checkpoint source missing
+2026_07_DAL_PHI,margin,T120_5M,checkpoint source missing
+2026_07_DAL_PHI,total,T120_5M,checkpoint source missing
+2026_07_DEN_ARI,margin,T120_5M,checkpoint source missing
+2026_07_DEN_ARI,total,T120_5M,checkpoint source missing
+2026_07_GB_DET,margin,T120_5M,checkpoint source missing
+2026_07_GB_DET,total,T120_5M,checkpoint source missing
+2026_07_IND_MIN,margin,T120_5M,checkpoint source missing
+2026_07_IND_MIN,total,T120_5M,checkpoint source missing
+2026_07_KC_SEA,margin,T120_5M,checkpoint source missing
+2026_07_KC_SEA,total,T120_5M,checkpoint source missing
+2026_07_LA_LV,margin,T120_5M,checkpoint source missing
+2026_07_LA_LV,total,T120_5M,checkpoint source missing
+2026_07_MIA_NYJ,margin,T120_5M,checkpoint source missing
+2026_07_MIA_NYJ,total,T120_5M,checkpoint source missing
+2026_07_NE_CHI,margin,T120_5M,checkpoint source missing
+2026_07_NE_CHI,total,T120_5M,checkpoint source missing
+2026_07_NYG_HOU,margin,T120_5M,checkpoint source missing
+2026_07_NYG_HOU,total,T120_5M,checkpoint source missing
+2026_07_PIT_NO,margin,T120_5M,checkpoint source missing
+2026_07_PIT_NO,total,T120_5M,checkpoint source missing
+2026_07_SF_ATL,margin,T120_5M,checkpoint source missing
+2026_07_SF_ATL,total,T120_5M,checkpoint source missing
+2026_07_TB_CAR,margin,T120_5M,checkpoint source missing
+2026_07_TB_CAR,total,T120_5M,checkpoint source missing
+2026_08_ARI_DAL,margin,T120_5M,checkpoint source missing
+2026_08_ARI_DAL,total,T120_5M,checkpoint source missing
+2026_08_ATL_TB,margin,T120_5M,checkpoint source missing
+2026_08_ATL_TB,total,T120_5M,checkpoint source missing
+2026_08_BAL_BUF,margin,T120_5M,checkpoint source missing
+2026_08_BAL_BUF,total,T120_5M,checkpoint source missing
+2026_08_CAR_GB,margin,T120_5M,checkpoint source missing
+2026_08_CAR_GB,total,T120_5M,checkpoint source missing
+2026_08_CHI_SEA,margin,T120_5M,checkpoint source missing
+2026_08_CHI_SEA,total,T120_5M,checkpoint source missing
+2026_08_CLE_PIT,margin,T120_5M,checkpoint source missing
+2026_08_CLE_PIT,total,T120_5M,checkpoint source missing
+2026_08_IND_JAX,margin,T120_5M,checkpoint source missing
+2026_08_IND_JAX,total,T120_5M,checkpoint source missing
+2026_08_KC_DEN,margin,T120_5M,checkpoint source missing
+2026_08_KC_DEN,total,T120_5M,checkpoint source missing
+2026_08_LAC_LA,margin,T120_5M,checkpoint source missing
+2026_08_LAC_LA,total,T120_5M,checkpoint source missing
+2026_08_LV_NYJ,margin,T120_5M,checkpoint source missing
+2026_08_LV_NYJ,total,T120_5M,checkpoint source missing
+2026_08_MIN_DET,margin,T120_5M,checkpoint source missing
+2026_08_MIN_DET,total,T120_5M,checkpoint source missing
+2026_08_NE_MIA,margin,T120_5M,checkpoint source missing
+2026_08_NE_MIA,total,T120_5M,checkpoint source missing
+2026_08_PHI_WAS,margin,T120_5M,checkpoint source missing
+2026_08_PHI_WAS,total,T120_5M,checkpoint source missing
+2026_08_TEN_CIN,margin,T120_5M,checkpoint source missing
+2026_08_TEN_CIN,total,T120_5M,checkpoint source missing
+2026_09_ARI_SEA,margin,T120_5M,checkpoint source missing
+2026_09_ARI_SEA,total,T120_5M,checkpoint source missing
+2026_09_BUF_MIN,margin,T120_5M,checkpoint source missing
+2026_09_BUF_MIN,total,T120_5M,checkpoint source missing
+2026_09_CIN_ATL,margin,T120_5M,checkpoint source missing
+2026_09_CIN_ATL,total,T120_5M,checkpoint source missing
+2026_09_CLE_NO,margin,T120_5M,checkpoint source missing
+2026_09_CLE_NO,total,T120_5M,checkpoint source missing
+2026_09_DAL_IND,margin,T120_5M,checkpoint source missing
+2026_09_DAL_IND,total,T120_5M,checkpoint source missing
+2026_09_DEN_CAR,margin,T120_5M,checkpoint source missing
+2026_09_DEN_CAR,total,T120_5M,checkpoint source missing
+2026_09_DET_MIA,margin,T120_5M,checkpoint source missing
+2026_09_DET_MIA,total,T120_5M,checkpoint source missing
+2026_09_GB_NE,margin,T120_5M,checkpoint source missing
+2026_09_GB_NE,total,T120_5M,checkpoint source missing
+2026_09_HOU_LAC,margin,T120_5M,checkpoint source missing
+2026_09_HOU_LAC,total,T120_5M,checkpoint source missing
+2026_09_JAX_BAL,margin,T120_5M,checkpoint source missing
+2026_09_JAX_BAL,total,T120_5M,checkpoint source missing
+2026_09_LA_WAS,margin,T120_5M,checkpoint source missing
+2026_09_LA_WAS,total,T120_5M,checkpoint source missing
+2026_09_LV_SF,margin,T120_5M,checkpoint source missing
+2026_09_LV_SF,total,T120_5M,checkpoint source missing
+2026_09_NYG_PHI,margin,T120_5M,checkpoint source missing
+2026_09_NYG_PHI,total,T120_5M,checkpoint source missing
+2026_09_NYJ_KC,margin,T120_5M,checkpoint source missing
+2026_09_NYJ_KC,total,T120_5M,checkpoint source missing
+2026_09_TB_CHI,margin,T120_5M,checkpoint source missing
+2026_09_TB_CHI,total,T120_5M,checkpoint source missing
+2026_10_BUF_NYJ,margin,T120_5M,checkpoint source missing
+2026_10_BUF_NYJ,total,T120_5M,checkpoint source missing
+2026_10_CAR_NO,margin,T120_5M,checkpoint source missing
+2026_10_CAR_NO,total,T120_5M,checkpoint source missing
+2026_10_HOU_CLE,margin,T120_5M,checkpoint source missing
+2026_10_HOU_CLE,total,T120_5M,checkpoint source missing
+2026_10_JAX_TEN,margin,T120_5M,checkpoint source missing
+2026_10_JAX_TEN,total,T120_5M,checkpoint source missing
+2026_10_KC_ATL,margin,T120_5M,checkpoint source missing
+2026_10_KC_ATL,total,T120_5M,checkpoint source missing
+2026_10_LA_ARI,margin,T120_5M,checkpoint source missing
+2026_10_LA_ARI,total,T120_5M,checkpoint source missing
+2026_10_MIA_IND,margin,T120_5M,checkpoint source missing
+2026_10_MIA_IND,total,T120_5M,checkpoint source missing
+2026_10_MIN_GB,margin,T120_5M,checkpoint source missing
+2026_10_MIN_GB,total,T120_5M,checkpoint source missing
+2026_10_NE_DET,margin,T120_5M,checkpoint source missing
+2026_10_NE_DET,total,T120_5M,checkpoint source missing
+2026_10_SEA_LV,margin,T120_5M,checkpoint source missing
+2026_10_SEA_LV,total,T120_5M,checkpoint source missing
+2026_10_WAS_NYG,margin,T120_5M,checkpoint source missing
+2026_10_WAS_NYG,total,T120_5M,checkpoint source missing
+2026_01_ARI_LAC,margin,T120_6H,checkpoint source missing
+2026_01_ARI_LAC,total,T120_6H,checkpoint source missing
+2026_01_ATL_PIT,margin,T120_6H,no identical integer threshold at three venues
+2026_01_ATL_PIT,total,T120_6H,no identical integer threshold at three venues
+2026_01_BAL_IND,margin,T120_6H,native clocks more than five minutes apart
+2026_01_BAL_IND,total,T120_6H,no identical integer threshold at three venues
+2026_01_BUF_HOU,margin,T120_6H,native clocks more than five minutes apart
+2026_01_BUF_HOU,total,T120_6H,native clocks more than five minutes apart
+2026_01_CHI_CAR,margin,T120_6H,contract missing or native/snapshot outside fixed clock
+2026_01_CHI_CAR,total,T120_6H,no identical integer threshold at three venues
+2026_01_CLE_JAX,margin,T120_6H,no identical integer threshold at three venues
+2026_01_CLE_JAX,total,T120_6H,native clocks more than five minutes apart
+2026_01_DAL_NYG,margin,T120_6H,contract missing or native/snapshot outside fixed clock
+2026_01_DAL_NYG,total,T120_6H,no identical integer threshold at three venues
+2026_01_DEN_KC,margin,T120_6H,no identical integer threshold at three venues
+2026_01_DEN_KC,total,T120_6H,no identical integer threshold at three venues
+2026_01_GB_MIN,margin,T120_6H,no identical integer threshold at three venues
+2026_01_GB_MIN,total,T120_6H,native clocks more than five minutes apart
+2026_01_MIA_LV,margin,T120_6H,contract missing or native/snapshot outside fixed clock
+2026_01_MIA_LV,total,T120_6H,native clocks more than five minutes apart
+2026_01_NE_SEA,margin,T120_6H,contract missing or native/snapshot outside fixed clock
+2026_01_NE_SEA,total,T120_6H,native clocks more than five minutes apart
+2026_01_NO_DET,margin,T120_6H,contract missing or native/snapshot outside fixed clock
+2026_01_NO_DET,total,T120_6H,native clocks more than five minutes apart
+2026_01_NYJ_TEN,margin,T120_6H,native clocks more than five minutes apart
+2026_01_NYJ_TEN,total,T120_6H,no identical integer threshold at three venues
+2026_01_SF_LA,margin,T120_6H,native clocks more than five minutes apart
+2026_01_SF_LA,total,T120_6H,no identical integer threshold at three venues
+2026_01_TB_CIN,margin,T120_6H,native clocks more than five minutes apart
+2026_01_TB_CIN,total,T120_6H,native clocks more than five minutes apart
+2026_01_WAS_PHI,margin,T120_6H,contract missing or native/snapshot outside fixed clock
+2026_01_WAS_PHI,total,T120_6H,native clocks more than five minutes apart
+2026_02_CAR_ATL,margin,T120_6H,no identical integer threshold at three venues
+2026_02_CAR_ATL,total,T120_6H,native clocks more than five minutes apart
+2026_02_CIN_HOU,margin,T120_6H,contract missing or native/snapshot outside fixed clock
+2026_02_CIN_HOU,total,T120_6H,no identical integer threshold at three venues
+2026_02_CLE_TB,margin,T120_6H,no identical integer threshold at three venues
+2026_02_CLE_TB,total,T120_6H,native clocks more than five minutes apart
+2026_02_DET_BUF,margin,T120_6H,no identical integer threshold at three venues
+2026_02_DET_BUF,total,T120_6H,native clocks more than five minutes apart
+2026_02_GB_NYJ,margin,T120_6H,native clocks more than five minutes apart
+2026_02_GB_NYJ,total,T120_6H,native clocks more than five minutes apart
+2026_02_IND_KC,margin,T120_6H,contract missing or native/snapshot outside fixed clock
+2026_02_IND_KC,total,T120_6H,native clocks more than five minutes apart
+2026_02_JAX_DEN,margin,T120_6H,no identical integer threshold at three venues
+2026_02_JAX_DEN,total,T120_6H,native clocks more than five minutes apart
+2026_02_LV_LAC,margin,T120_6H,checkpoint source missing
+2026_02_LV_LAC,total,T120_6H,checkpoint source missing
+2026_02_MIA_SF,margin,T120_6H,no identical integer threshold at three venues
+2026_02_MIA_SF,total,T120_6H,native clocks more than five minutes apart
+2026_02_MIN_CHI,margin,T120_6H,native clocks more than five minutes apart
+2026_02_MIN_CHI,total,T120_6H,no identical integer threshold at three venues
+2026_02_NO_BAL,margin,T120_6H,no identical integer threshold at three venues
+2026_02_NO_BAL,total,T120_6H,native clocks more than five minutes apart
+2026_02_NYG_LA,margin,T120_6H,native clocks more than five minutes apart
+2026_02_NYG_LA,total,T120_6H,native clocks more than five minutes apart
+2026_02_PHI_TEN,margin,T120_6H,contract missing or native/snapshot outside fixed clock
+2026_02_PHI_TEN,total,T120_6H,native clocks more than five minutes apart
+2026_02_PIT_NE,margin,T120_6H,native clocks more than five minutes apart
+2026_02_PIT_NE,total,T120_6H,native clocks more than five minutes apart
+2026_02_SEA_ARI,margin,T120_6H,no identical integer threshold at three venues
+2026_02_SEA_ARI,total,T120_6H,native clocks more than five minutes apart
+2026_02_WAS_DAL,margin,T120_6H,native clocks more than five minutes apart
+2026_02_WAS_DAL,total,T120_6H,no identical integer threshold at three venues
+2026_03_ARI_SF,margin,T120_6H,native clocks more than five minutes apart
+2026_03_ARI_SF,total,T120_6H,no identical integer threshold at three venues
+2026_03_ATL_GB,margin,T120_6H,no identical integer threshold at three venues
+2026_03_ATL_GB,total,T120_6H,no identical integer threshold at three venues
+2026_03_BAL_DAL,margin,T120_6H,contract missing or native/snapshot outside fixed clock
+2026_03_BAL_DAL,total,T120_6H,no identical integer threshold at three venues
+2026_03_CAR_CLE,margin,T120_6H,no identical integer threshold at three venues
+2026_03_CAR_CLE,total,T120_6H,no identical integer threshold at three venues
+2026_03_CIN_PIT,margin,T120_6H,native clocks more than five minutes apart
+2026_03_CIN_PIT,total,T120_6H,native clocks more than five minutes apart
+2026_03_HOU_IND,margin,T120_6H,native clocks more than five minutes apart
+2026_03_HOU_IND,total,T120_6H,native clocks more than five minutes apart
+2026_03_KC_MIA,margin,T120_6H,no identical integer threshold at three venues
+2026_03_KC_MIA,total,T120_6H,native clocks more than five minutes apart
+2026_03_LAC_BUF,margin,T120_6H,checkpoint source missing
+2026_03_LAC_BUF,total,T120_6H,checkpoint source missing
+2026_03_LA_DEN,margin,T120_6H,no identical integer threshold at three venues
+2026_03_LA_DEN,total,T120_6H,native clocks more than five minutes apart
+2026_03_LV_NO,margin,T120_6H,native clocks more than five minutes apart
+2026_03_LV_NO,total,T120_6H,native clocks more than five minutes apart
+2026_03_MIN_TB,margin,T120_6H,no identical integer threshold at three venues
+2026_03_MIN_TB,total,T120_6H,native clocks more than five minutes apart
+2026_03_NE_JAX,margin,T120_6H,contract missing or native/snapshot outside fixed clock
+2026_03_NE_JAX,total,T120_6H,no identical integer threshold at three venues
+2026_03_NYJ_DET,margin,T120_6H,native clocks more than five minutes apart
+2026_03_NYJ_DET,total,T120_6H,no identical integer threshold at three venues
+2026_03_PHI_CHI,margin,T120_6H,no identical integer threshold at three venues
+2026_03_PHI_CHI,total,T120_6H,no identical integer threshold at three venues
+2026_03_SEA_WAS,margin,T120_6H,no identical integer threshold at three venues
+2026_03_SEA_WAS,total,T120_6H,native clocks more than five minutes apart
+2026_03_TEN_NYG,margin,T120_6H,no identical integer threshold at three venues
+2026_03_TEN_NYG,total,T120_6H,no identical integer threshold at three venues
+2026_04_ARI_NYG,margin,T120_6H,no identical integer threshold at three venues
+2026_04_ARI_NYG,total,T120_6H,native clocks more than five minutes apart
+2026_04_ATL_NO,margin,T120_6H,no identical integer threshold at three venues
+2026_04_ATL_NO,total,T120_6H,native clocks more than five minutes apart
+2026_04_DAL_HOU,margin,T120_6H,contract missing or native/snapshot outside fixed clock
+2026_04_DAL_HOU,total,T120_6H,no identical integer threshold at three venues
+2026_04_DEN_SF,margin,T120_6H,contract missing or native/snapshot outside fixed clock
+2026_04_DEN_SF,total,T120_6H,no identical integer threshold at three venues
+2026_04_DET_CAR,margin,T120_6H,native clocks more than five minutes apart
+2026_04_DET_CAR,total,T120_6H,no identical integer threshold at three venues
+2026_04_GB_TB,margin,T120_6H,contract missing or native/snapshot outside fixed clock
+2026_04_GB_TB,total,T120_6H,no identical integer threshold at three venues
+2026_04_IND_WAS,margin,T120_6H,no identical integer threshold at three venues
+2026_04_IND_WAS,total,T120_6H,no identical integer threshold at three venues
+2026_04_JAX_CIN,margin,T120_6H,native clocks more than five minutes apart
+2026_04_JAX_CIN,total,T120_6H,native clocks more than five minutes apart
+2026_04_KC_LV,margin,T120_6H,matched
+2026_04_KC_LV,total,T120_6H,no identical integer threshold at three venues
+2026_04_LAC_SEA,margin,T120_6H,checkpoint source missing
+2026_04_LAC_SEA,total,T120_6H,checkpoint source missing
+2026_04_LA_PHI,margin,T120_6H,native clocks more than five minutes apart
+2026_04_LA_PHI,total,T120_6H,no identical integer threshold at three venues
+2026_04_MIA_MIN,margin,T120_6H,contract missing or native/snapshot outside fixed clock
+2026_04_MIA_MIN,total,T120_6H,native clocks more than five minutes apart
+2026_04_NE_BUF,margin,T120_6H,contract missing or native/snapshot outside fixed clock
+2026_04_NE_BUF,total,T120_6H,no identical integer threshold at three venues
+2026_04_NYJ_CHI,margin,T120_6H,no identical integer threshold at three venues
+2026_04_NYJ_CHI,total,T120_6H,native clocks more than five minutes apart
+2026_04_PIT_CLE,margin,T120_6H,native clocks more than five minutes apart
+2026_04_PIT_CLE,total,T120_6H,no identical integer threshold at three venues
+2026_04_TEN_BAL,margin,T120_6H,no identical integer threshold at three venues
+2026_04_TEN_BAL,total,T120_6H,native clocks more than five minutes apart
+2026_05_BAL_ATL,margin,T120_6H,contract missing or native/snapshot outside fixed clock
+2026_05_BAL_ATL,total,T120_6H,native clocks more than five minutes apart
+2026_05_BUF_LA,margin,T120_6H,no identical integer threshold at three venues
+2026_05_BUF_LA,total,T120_6H,no identical integer threshold at three venues
+2026_05_CHI_GB,margin,T120_6H,no identical integer threshold at three venues
+2026_05_CHI_GB,total,T120_6H,no identical integer threshold at three venues
+2026_05_CIN_MIA,margin,T120_6H,contract missing or native/snapshot outside fixed clock
+2026_05_CIN_MIA,total,T120_6H,no identical integer threshold at three venues
+2026_05_CLE_NYJ,margin,T120_6H,native clocks more than five minutes apart
+2026_05_CLE_NYJ,total,T120_6H,native clocks more than five minutes apart
+2026_05_DEN_LAC,margin,T120_6H,checkpoint source missing
+2026_05_DEN_LAC,total,T120_6H,checkpoint source missing
+2026_05_DET_ARI,margin,T120_6H,native clocks more than five minutes apart
+2026_05_DET_ARI,total,T120_6H,native clocks more than five minutes apart
+2026_05_HOU_TEN,margin,T120_6H,no identical integer threshold at three venues
+2026_05_HOU_TEN,total,T120_6H,no identical integer threshold at three venues
+2026_05_IND_PIT,margin,T120_6H,contract missing or native/snapshot outside fixed clock
+2026_05_IND_PIT,total,T120_6H,no identical integer threshold at three venues
+2026_05_LV_NE,margin,T120_6H,native clocks more than five minutes apart
+2026_05_LV_NE,total,T120_6H,native clocks more than five minutes apart
+2026_05_MIN_NO,margin,T120_6H,no identical integer threshold at three venues
+2026_05_MIN_NO,total,T120_6H,native clocks more than five minutes apart
+2026_05_NYG_WAS,margin,T120_6H,native clocks more than five minutes apart
+2026_05_NYG_WAS,total,T120_6H,native clocks more than five minutes apart
+2026_05_PHI_JAX,margin,T120_6H,native clocks more than five minutes apart
+2026_05_PHI_JAX,total,T120_6H,no identical integer threshold at three venues
+2026_05_SF_SEA,margin,T120_6H,contract missing or native/snapshot outside fixed clock
+2026_05_SF_SEA,total,T120_6H,no identical integer threshold at three venues
+2026_05_TB_DAL,margin,T120_6H,native clocks more than five minutes apart
+2026_05_TB_DAL,total,T120_6H,no identical integer threshold at three venues
+2026_06_ARI_LA,margin,T120_6H,no identical integer threshold at three venues
+2026_06_ARI_LA,total,T120_6H,native clocks more than five minutes apart
+2026_06_BAL_CLE,margin,T120_6H,contract missing or native/snapshot outside fixed clock
+2026_06_BAL_CLE,total,T120_6H,no identical integer threshold at three venues
+2026_06_BUF_LV,margin,T120_6H,no identical integer threshold at three venues
+2026_06_BUF_LV,total,T120_6H,no identical integer threshold at three venues
+2026_06_CAR_PHI,margin,T120_6H,contract missing or native/snapshot outside fixed clock
+2026_06_CAR_PHI,total,T120_6H,no identical integer threshold at three venues
+2026_06_CHI_ATL,margin,T120_6H,native clocks more than five minutes apart
+2026_06_CHI_ATL,total,T120_6H,no identical integer threshold at three venues
+2026_06_DAL_GB,margin,T120_6H,native clocks more than five minutes apart
+2026_06_DAL_GB,total,T120_6H,native clocks more than five minutes apart
+2026_06_HOU_JAX,margin,T120_6H,native clocks more than five minutes apart
+2026_06_HOU_JAX,total,T120_6H,no identical integer threshold at three venues
+2026_06_LAC_KC,margin,T120_6H,checkpoint source missing
+2026_06_LAC_KC,total,T120_6H,checkpoint source missing
+2026_06_NO_NYG,margin,T120_6H,no identical integer threshold at three venues
+2026_06_NO_NYG,total,T120_6H,no identical integer threshold at three venues
+2026_06_NYJ_NE,margin,T120_6H,native clocks more than five minutes apart
+2026_06_NYJ_NE,total,T120_6H,no identical integer threshold at three venues
+2026_06_PIT_TB,margin,T120_6H,native clocks more than five minutes apart
+2026_06_PIT_TB,total,T120_6H,no identical integer threshold at three venues
+2026_06_SEA_DEN,margin,T120_6H,native clocks more than five minutes apart
+2026_06_SEA_DEN,total,T120_6H,native clocks more than five minutes apart
+2026_06_TEN_IND,margin,T120_6H,native clocks more than five minutes apart
+2026_06_TEN_IND,total,T120_6H,no identical integer threshold at three venues
+2026_06_WAS_SF,margin,T120_6H,native clocks more than five minutes apart
+2026_06_WAS_SF,total,T120_6H,no identical integer threshold at three venues
+2026_07_CIN_BAL,margin,T120_6H,contract missing or native/snapshot outside fixed clock
+2026_07_CIN_BAL,total,T120_6H,no identical integer threshold at three venues
+2026_07_CLE_TEN,margin,T120_6H,no identical integer threshold at three venues
+2026_07_CLE_TEN,total,T120_6H,no identical integer threshold at three venues
+2026_07_DAL_PHI,margin,T120_6H,native clocks more than five minutes apart
+2026_07_DAL_PHI,total,T120_6H,no identical integer threshold at three venues
+2026_07_DEN_ARI,margin,T120_6H,native clocks more than five minutes apart
+2026_07_DEN_ARI,total,T120_6H,no identical integer threshold at three venues
+2026_07_GB_DET,margin,T120_6H,no identical integer threshold at three venues
+2026_07_GB_DET,total,T120_6H,no identical integer threshold at three venues
+2026_07_IND_MIN,margin,T120_6H,native clocks more than five minutes apart
+2026_07_IND_MIN,total,T120_6H,no identical integer threshold at three venues
+2026_07_KC_SEA,margin,T120_6H,contract missing or native/snapshot outside fixed clock
+2026_07_KC_SEA,total,T120_6H,native clocks more than five minutes apart
+2026_07_LA_LV,margin,T120_6H,native clocks more than five minutes apart
+2026_07_LA_LV,total,T120_6H,native clocks more than five minutes apart
+2026_07_MIA_NYJ,margin,T120_6H,no identical integer threshold at three venues
+2026_07_MIA_NYJ,total,T120_6H,no identical integer threshold at three venues
+2026_07_NE_CHI,margin,T120_6H,contract missing or native/snapshot outside fixed clock
+2026_07_NE_CHI,total,T120_6H,native clocks more than five minutes apart
+2026_07_NYG_HOU,margin,T120_6H,native clocks more than five minutes apart
+2026_07_NYG_HOU,total,T120_6H,native clocks more than five minutes apart
+2026_07_PIT_NO,margin,T120_6H,contract missing or native/snapshot outside fixed clock
+2026_07_PIT_NO,total,T120_6H,no identical integer threshold at three venues
+2026_07_SF_ATL,margin,T120_6H,native clocks more than five minutes apart
+2026_07_SF_ATL,total,T120_6H,no identical integer threshold at three venues
+2026_07_TB_CAR,margin,T120_6H,contract missing or native/snapshot outside fixed clock
+2026_07_TB_CAR,total,T120_6H,native clocks more than five minutes apart
+2026_08_ARI_DAL,margin,T120_6H,contract missing or native/snapshot outside fixed clock
+2026_08_ARI_DAL,total,T120_6H,native clocks more than five minutes apart
+2026_08_ATL_TB,margin,T120_6H,native clocks more than five minutes apart
+2026_08_ATL_TB,total,T120_6H,no identical integer threshold at three venues
+2026_08_BAL_BUF,margin,T120_6H,contract missing or native/snapshot outside fixed clock
+2026_08_BAL_BUF,total,T120_6H,native clocks more than five minutes apart
+2026_08_CAR_GB,margin,T120_6H,native clocks more than five minutes apart
+2026_08_CAR_GB,total,T120_6H,native clocks more than five minutes apart
+2026_08_CHI_SEA,margin,T120_6H,no identical integer threshold at three venues
+2026_08_CHI_SEA,total,T120_6H,native clocks more than five minutes apart
+2026_08_CLE_PIT,margin,T120_6H,native clocks more than five minutes apart
+2026_08_CLE_PIT,total,T120_6H,no identical integer threshold at three venues
+2026_08_IND_JAX,margin,T120_6H,contract missing or native/snapshot outside fixed clock
+2026_08_IND_JAX,total,T120_6H,native clocks more than five minutes apart
+2026_08_KC_DEN,margin,T120_6H,no identical integer threshold at three venues
+2026_08_KC_DEN,total,T120_6H,no identical integer threshold at three venues
+2026_08_LAC_LA,margin,T120_6H,checkpoint source missing
+2026_08_LAC_LA,total,T120_6H,checkpoint source missing
+2026_08_LV_NYJ,margin,T120_6H,native clocks more than five minutes apart
+2026_08_LV_NYJ,total,T120_6H,no identical integer threshold at three venues
+2026_08_MIN_DET,margin,T120_6H,contract missing or native/snapshot outside fixed clock
+2026_08_MIN_DET,total,T120_6H,no identical integer threshold at three venues
+2026_08_NE_MIA,margin,T120_6H,contract missing or native/snapshot outside fixed clock
+2026_08_NE_MIA,total,T120_6H,no identical integer threshold at three venues
+2026_08_PHI_WAS,margin,T120_6H,contract missing or native/snapshot outside fixed clock
+2026_08_PHI_WAS,total,T120_6H,native clocks more than five minutes apart
+2026_08_TEN_CIN,margin,T120_6H,no identical integer threshold at three venues
+2026_08_TEN_CIN,total,T120_6H,no identical integer threshold at three venues
+2026_09_ARI_SEA,margin,T120_6H,no identical integer threshold at three venues
+2026_09_ARI_SEA,total,T120_6H,no identical integer threshold at three venues
+2026_09_BUF_MIN,margin,T120_6H,native clocks more than five minutes apart
+2026_09_BUF_MIN,total,T120_6H,no identical integer threshold at three venues
+2026_09_CIN_ATL,margin,T120_6H,contract missing or native/snapshot outside fixed clock
+2026_09_CIN_ATL,total,T120_6H,native clocks more than five minutes apart
+2026_09_CLE_NO,margin,T120_6H,contract missing or native/snapshot outside fixed clock
+2026_09_CLE_NO,total,T120_6H,native clocks more than five minutes apart
+2026_09_DAL_IND,margin,T120_6H,no identical integer threshold at three venues
+2026_09_DAL_IND,total,T120_6H,no identical integer threshold at three venues
+2026_09_DEN_CAR,margin,T120_6H,native clocks more than five minutes apart
+2026_09_DEN_CAR,total,T120_6H,native clocks more than five minutes apart
+2026_09_DET_MIA,margin,T120_6H,no identical integer threshold at three venues
+2026_09_DET_MIA,total,T120_6H,no identical integer threshold at three venues
+2026_09_GB_NE,margin,T120_6H,contract missing or native/snapshot outside fixed clock
+2026_09_GB_NE,total,T120_6H,native clocks more than five minutes apart
+2026_09_HOU_LAC,margin,T120_6H,checkpoint source missing
+2026_09_HOU_LAC,total,T120_6H,checkpoint source missing
+2026_09_JAX_BAL,margin,T120_6H,contract missing or native/snapshot outside fixed clock
+2026_09_JAX_BAL,total,T120_6H,no identical integer threshold at three venues
+2026_09_LA_WAS,margin,T120_6H,native clocks more than five minutes apart
+2026_09_LA_WAS,total,T120_6H,no identical integer threshold at three venues
+2026_09_LV_SF,margin,T120_6H,native clocks more than five minutes apart
+2026_09_LV_SF,total,T120_6H,no identical integer threshold at three venues
+2026_09_NYG_PHI,margin,T120_6H,contract missing or native/snapshot outside fixed clock
+2026_09_NYG_PHI,total,T120_6H,no identical integer threshold at three venues
+2026_09_NYJ_KC,margin,T120_6H,native clocks more than five minutes apart
+2026_09_NYJ_KC,total,T120_6H,no identical integer threshold at three venues
+2026_09_TB_CHI,margin,T120_6H,contract missing or native/snapshot outside fixed clock
+2026_09_TB_CHI,total,T120_6H,no identical integer threshold at three venues
+2026_10_BUF_NYJ,margin,T120_6H,checkpoint source missing
+2026_10_BUF_NYJ,total,T120_6H,checkpoint source missing
+2026_10_CAR_NO,margin,T120_6H,checkpoint source missing
+2026_10_CAR_NO,total,T120_6H,checkpoint source missing
+2026_10_HOU_CLE,margin,T120_6H,checkpoint source missing
+2026_10_HOU_CLE,total,T120_6H,checkpoint source missing
+2026_10_JAX_TEN,margin,T120_6H,checkpoint source missing
+2026_10_JAX_TEN,total,T120_6H,checkpoint source missing
+2026_10_KC_ATL,margin,T120_6H,checkpoint source missing
+2026_10_KC_ATL,total,T120_6H,checkpoint source missing
+2026_10_LA_ARI,margin,T120_6H,checkpoint source missing
+2026_10_LA_ARI,total,T120_6H,checkpoint source missing
+2026_10_MIA_IND,margin,T120_6H,checkpoint source missing
+2026_10_MIA_IND,total,T120_6H,checkpoint source missing
+2026_10_MIN_GB,margin,T120_6H,checkpoint source missing
+2026_10_MIN_GB,total,T120_6H,checkpoint source missing
+2026_10_NE_DET,margin,T120_6H,checkpoint source missing
+2026_10_NE_DET,total,T120_6H,checkpoint source missing
+2026_10_SEA_LV,margin,T120_6H,checkpoint source missing
+2026_10_SEA_LV,total,T120_6H,checkpoint source missing
+2026_10_WAS_NYG,margin,T120_6H,native clocks more than five minutes apart
+2026_10_WAS_NYG,total,T120_6H,no identical integer threshold at three venues
+2026_01_ARI_LAC,margin,T120_ALLOW_DIFFERENT_NATIVE_TIMES_UP_TO_6H,checkpoint source missing
+2026_01_ARI_LAC,total,T120_ALLOW_DIFFERENT_NATIVE_TIMES_UP_TO_6H,checkpoint source missing
+2026_01_ATL_PIT,margin,T120_ALLOW_DIFFERENT_NATIVE_TIMES_UP_TO_6H,no identical integer threshold at three venues
+2026_01_ATL_PIT,total,T120_ALLOW_DIFFERENT_NATIVE_TIMES_UP_TO_6H,no identical integer threshold at three venues
+2026_01_BAL_IND,margin,T120_ALLOW_DIFFERENT_NATIVE_TIMES_UP_TO_6H,matched
+2026_01_BAL_IND,total,T120_ALLOW_DIFFERENT_NATIVE_TIMES_UP_TO_6H,no identical integer threshold at three venues
+2026_01_BUF_HOU,margin,T120_ALLOW_DIFFERENT_NATIVE_TIMES_UP_TO_6H,matched
+2026_01_BUF_HOU,total,T120_ALLOW_DIFFERENT_NATIVE_TIMES_UP_TO_6H,matched
+2026_01_CHI_CAR,margin,T120_ALLOW_DIFFERENT_NATIVE_TIMES_UP_TO_6H,contract missing or native/snapshot outside fixed clock
+2026_01_CHI_CAR,total,T120_ALLOW_DIFFERENT_NATIVE_TIMES_UP_TO_6H,no identical integer threshold at three venues
+2026_01_CLE_JAX,margin,T120_ALLOW_DIFFERENT_NATIVE_TIMES_UP_TO_6H,no identical integer threshold at three venues
+2026_01_CLE_JAX,total,T120_ALLOW_DIFFERENT_NATIVE_TIMES_UP_TO_6H,matched
+2026_01_DAL_NYG,margin,T120_ALLOW_DIFFERENT_NATIVE_TIMES_UP_TO_6H,contract missing or native/snapshot outside fixed clock
+2026_01_DAL_NYG,total,T120_ALLOW_DIFFERENT_NATIVE_TIMES_UP_TO_6H,no identical integer threshold at three venues
+2026_01_DEN_KC,margin,T120_ALLOW_DIFFERENT_NATIVE_TIMES_UP_TO_6H,no identical integer threshold at three venues
+2026_01_DEN_KC,total,T120_ALLOW_DIFFERENT_NATIVE_TIMES_UP_TO_6H,no identical integer threshold at three venues
+2026_01_GB_MIN,margin,T120_ALLOW_DIFFERENT_NATIVE_TIMES_UP_TO_6H,no identical integer threshold at three venues
+2026_01_GB_MIN,total,T120_ALLOW_DIFFERENT_NATIVE_TIMES_UP_TO_6H,matched
+2026_01_MIA_LV,margin,T120_ALLOW_DIFFERENT_NATIVE_TIMES_UP_TO_6H,contract missing or native/snapshot outside fixed clock
+2026_01_MIA_LV,total,T120_ALLOW_DIFFERENT_NATIVE_TIMES_UP_TO_6H,matched
+2026_01_NE_SEA,margin,T120_ALLOW_DIFFERENT_NATIVE_TIMES_UP_TO_6H,contract missing or native/snapshot outside fixed clock
+2026_01_NE_SEA,total,T120_ALLOW_DIFFERENT_NATIVE_TIMES_UP_TO_6H,matched
+2026_01_NO_DET,margin,T120_ALLOW_DIFFERENT_NATIVE_TIMES_UP_TO_6H,contract missing or native/snapshot outside fixed clock
+2026_01_NO_DET,total,T120_ALLOW_DIFFERENT_NATIVE_TIMES_UP_TO_6H,matched
+2026_01_NYJ_TEN,margin,T120_ALLOW_DIFFERENT_NATIVE_TIMES_UP_TO_6H,matched
+2026_01_NYJ_TEN,total,T120_ALLOW_DIFFERENT_NATIVE_TIMES_UP_TO_6H,no identical integer threshold at three venues
+2026_01_SF_LA,margin,T120_ALLOW_DIFFERENT_NATIVE_TIMES_UP_TO_6H,matched
+2026_01_SF_LA,total,T120_ALLOW_DIFFERENT_NATIVE_TIMES_UP_TO_6H,no identical integer threshold at three venues
+2026_01_TB_CIN,margin,T120_ALLOW_DIFFERENT_NATIVE_TIMES_UP_TO_6H,matched
+2026_01_TB_CIN,total,T120_ALLOW_DIFFERENT_NATIVE_TIMES_UP_TO_6H,matched
+2026_01_WAS_PHI,margin,T120_ALLOW_DIFFERENT_NATIVE_TIMES_UP_TO_6H,contract missing or native/snapshot outside fixed clock
+2026_01_WAS_PHI,total,T120_ALLOW_DIFFERENT_NATIVE_TIMES_UP_TO_6H,matched
+2026_02_CAR_ATL,margin,T120_ALLOW_DIFFERENT_NATIVE_TIMES_UP_TO_6H,no identical integer threshold at three venues
+2026_02_CAR_ATL,total,T120_ALLOW_DIFFERENT_NATIVE_TIMES_UP_TO_6H,matched
+2026_02_CIN_HOU,margin,T120_ALLOW_DIFFERENT_NATIVE_TIMES_UP_TO_6H,contract missing or native/snapshot outside fixed clock
+2026_02_CIN_HOU,total,T120_ALLOW_DIFFERENT_NATIVE_TIMES_UP_TO_6H,no identical integer threshold at three venues
+2026_02_CLE_TB,margin,T120_ALLOW_DIFFERENT_NATIVE_TIMES_UP_TO_6H,no identical integer threshold at three venues
+2026_02_CLE_TB,total,T120_ALLOW_DIFFERENT_NATIVE_TIMES_UP_TO_6H,matched
+2026_02_DET_BUF,margin,T120_ALLOW_DIFFERENT_NATIVE_TIMES_UP_TO_6H,no identical integer threshold at three venues
+2026_02_DET_BUF,total,T120_ALLOW_DIFFERENT_NATIVE_TIMES_UP_TO_6H,matched
+2026_02_GB_NYJ,margin,T120_ALLOW_DIFFERENT_NATIVE_TIMES_UP_TO_6H,matched
+2026_02_GB_NYJ,total,T120_ALLOW_DIFFERENT_NATIVE_TIMES_UP_TO_6H,matched
+2026_02_IND_KC,margin,T120_ALLOW_DIFFERENT_NATIVE_TIMES_UP_TO_6H,contract missing or native/snapshot outside fixed clock
+2026_02_IND_KC,total,T120_ALLOW_DIFFERENT_NATIVE_TIMES_UP_TO_6H,matched
+2026_02_JAX_DEN,margin,T120_ALLOW_DIFFERENT_NATIVE_TIMES_UP_TO_6H,no identical integer threshold at three venues
+2026_02_JAX_DEN,total,T120_ALLOW_DIFFERENT_NATIVE_TIMES_UP_TO_6H,matched
+2026_02_LV_LAC,margin,T120_ALLOW_DIFFERENT_NATIVE_TIMES_UP_TO_6H,checkpoint source missing
+2026_02_LV_LAC,total,T120_ALLOW_DIFFERENT_NATIVE_TIMES_UP_TO_6H,checkpoint source missing
+2026_02_MIA_SF,margin,T120_ALLOW_DIFFERENT_NATIVE_TIMES_UP_TO_6H,no identical integer threshold at three venues
+2026_02_MIA_SF,total,T120_ALLOW_DIFFERENT_NATIVE_TIMES_UP_TO_6H,matched
+2026_02_MIN_CHI,margin,T120_ALLOW_DIFFERENT_NATIVE_TIMES_UP_TO_6H,matched
+2026_02_MIN_CHI,total,T120_ALLOW_DIFFERENT_NATIVE_TIMES_UP_TO_6H,no identical integer threshold at three venues
+2026_02_NO_BAL,margin,T120_ALLOW_DIFFERENT_NATIVE_TIMES_UP_TO_6H,no identical integer threshold at three venues
+2026_02_NO_BAL,total,T120_ALLOW_DIFFERENT_NATIVE_TIMES_UP_TO_6H,matched
+2026_02_NYG_LA,margin,T120_ALLOW_DIFFERENT_NATIVE_TIMES_UP_TO_6H,matched
+2026_02_NYG_LA,total,T120_ALLOW_DIFFERENT_NATIVE_TIMES_UP_TO_6H,matched
+2026_02_PHI_TEN,margin,T120_ALLOW_DIFFERENT_NATIVE_TIMES_UP_TO_6H,contract missing or native/snapshot outside fixed clock
+2026_02_PHI_TEN,total,T120_ALLOW_DIFFERENT_NATIVE_TIMES_UP_TO_6H,matched
+2026_02_PIT_NE,margin,T120_ALLOW_DIFFERENT_NATIVE_TIMES_UP_TO_6H,matched
+2026_02_PIT_NE,total,T120_ALLOW_DIFFERENT_NATIVE_TIMES_UP_TO_6H,matched
+2026_02_SEA_ARI,margin,T120_ALLOW_DIFFERENT_NATIVE_TIMES_UP_TO_6H,no identical integer threshold at three venues
+2026_02_SEA_ARI,total,T120_ALLOW_DIFFERENT_NATIVE_TIMES_UP_TO_6H,matched
+2026_02_WAS_DAL,margin,T120_ALLOW_DIFFERENT_NATIVE_TIMES_UP_TO_6H,matched
+2026_02_WAS_DAL,total,T120_ALLOW_DIFFERENT_NATIVE_TIMES_UP_TO_6H,no identical integer threshold at three venues
+2026_03_ARI_SF,margin,T120_ALLOW_DIFFERENT_NATIVE_TIMES_UP_TO_6H,matched
+2026_03_ARI_SF,total,T120_ALLOW_DIFFERENT_NATIVE_TIMES_UP_TO_6H,no identical integer threshold at three venues
+2026_03_ATL_GB,margin,T120_ALLOW_DIFFERENT_NATIVE_TIMES_UP_TO_6H,no identical integer threshold at three venues
+2026_03_ATL_GB,total,T120_ALLOW_DIFFERENT_NATIVE_TIMES_UP_TO_6H,no identical integer threshold at three venues
+2026_03_BAL_DAL,margin,T120_ALLOW_DIFFERENT_NATIVE_TIMES_UP_TO_6H,contract missing or native/snapshot outside fixed clock
+2026_03_BAL_DAL,total,T120_ALLOW_DIFFERENT_NATIVE_TIMES_UP_TO_6H,no identical integer threshold at three venues
+2026_03_CAR_CLE,margin,T120_ALLOW_DIFFERENT_NATIVE_TIMES_UP_TO_6H,no identical integer threshold at three venues
+2026_03_CAR_CLE,total,T120_ALLOW_DIFFERENT_NATIVE_TIMES_UP_TO_6H,no identical integer threshold at three venues
+2026_03_CIN_PIT,margin,T120_ALLOW_DIFFERENT_NATIVE_TIMES_UP_TO_6H,matched
+2026_03_CIN_PIT,total,T120_ALLOW_DIFFERENT_NATIVE_TIMES_UP_TO_6H,matched
+2026_03_HOU_IND,margin,T120_ALLOW_DIFFERENT_NATIVE_TIMES_UP_TO_6H,matched
+2026_03_HOU_IND,total,T120_ALLOW_DIFFERENT_NATIVE_TIMES_UP_TO_6H,matched
+2026_03_KC_MIA,margin,T120_ALLOW_DIFFERENT_NATIVE_TIMES_UP_TO_6H,no identical integer threshold at three venues
+2026_03_KC_MIA,total,T120_ALLOW_DIFFERENT_NATIVE_TIMES_UP_TO_6H,matched
+2026_03_LAC_BUF,margin,T120_ALLOW_DIFFERENT_NATIVE_TIMES_UP_TO_6H,checkpoint source missing
+2026_03_LAC_BUF,total,T120_ALLOW_DIFFERENT_NATIVE_TIMES_UP_TO_6H,checkpoint source missing
+2026_03_LA_DEN,margin,T120_ALLOW_DIFFERENT_NATIVE_TIMES_UP_TO_6H,no identical integer threshold at three venues
+2026_03_LA_DEN,total,T120_ALLOW_DIFFERENT_NATIVE_TIMES_UP_TO_6H,matched
+2026_03_LV_NO,margin,T120_ALLOW_DIFFERENT_NATIVE_TIMES_UP_TO_6H,matched
+2026_03_LV_NO,total,T120_ALLOW_DIFFERENT_NATIVE_TIMES_UP_TO_6H,matched
+2026_03_MIN_TB,margin,T120_ALLOW_DIFFERENT_NATIVE_TIMES_UP_TO_6H,no identical integer threshold at three venues
+2026_03_MIN_TB,total,T120_ALLOW_DIFFERENT_NATIVE_TIMES_UP_TO_6H,matched
+2026_03_NE_JAX,margin,T120_ALLOW_DIFFERENT_NATIVE_TIMES_UP_TO_6H,contract missing or native/snapshot outside fixed clock
+2026_03_NE_JAX,total,T120_ALLOW_DIFFERENT_NATIVE_TIMES_UP_TO_6H,no identical integer threshold at three venues
+2026_03_NYJ_DET,margin,T120_ALLOW_DIFFERENT_NATIVE_TIMES_UP_TO_6H,matched
+2026_03_NYJ_DET,total,T120_ALLOW_DIFFERENT_NATIVE_TIMES_UP_TO_6H,no identical integer threshold at three venues
+2026_03_PHI_CHI,margin,T120_ALLOW_DIFFERENT_NATIVE_TIMES_UP_TO_6H,no identical integer threshold at three venues
+2026_03_PHI_CHI,total,T120_ALLOW_DIFFERENT_NATIVE_TIMES_UP_TO_6H,no identical integer threshold at three venues
+2026_03_SEA_WAS,margin,T120_ALLOW_DIFFERENT_NATIVE_TIMES_UP_TO_6H,no identical integer threshold at three venues
+2026_03_SEA_WAS,total,T120_ALLOW_DIFFERENT_NATIVE_TIMES_UP_TO_6H,matched
+2026_03_TEN_NYG,margin,T120_ALLOW_DIFFERENT_NATIVE_TIMES_UP_TO_6H,no identical integer threshold at three venues
+2026_03_TEN_NYG,total,T120_ALLOW_DIFFERENT_NATIVE_TIMES_UP_TO_6H,no identical integer threshold at three venues
+2026_04_ARI_NYG,margin,T120_ALLOW_DIFFERENT_NATIVE_TIMES_UP_TO_6H,no identical integer threshold at three venues
+2026_04_ARI_NYG,total,T120_ALLOW_DIFFERENT_NATIVE_TIMES_UP_TO_6H,matched
+2026_04_ATL_NO,margin,T120_ALLOW_DIFFERENT_NATIVE_TIMES_UP_TO_6H,no identical integer threshold at three venues
+2026_04_ATL_NO,total,T120_ALLOW_DIFFERENT_NATIVE_TIMES_UP_TO_6H,matched
+2026_04_DAL_HOU,margin,T120_ALLOW_DIFFERENT_NATIVE_TIMES_UP_TO_6H,contract missing or native/snapshot outside fixed clock
+2026_04_DAL_HOU,total,T120_ALLOW_DIFFERENT_NATIVE_TIMES_UP_TO_6H,no identical integer threshold at three venues
+2026_04_DEN_SF,margin,T120_ALLOW_DIFFERENT_NATIVE_TIMES_UP_TO_6H,contract missing or native/snapshot outside fixed clock
+2026_04_DEN_SF,total,T120_ALLOW_DIFFERENT_NATIVE_TIMES_UP_TO_6H,no identical integer threshold at three venues
+2026_04_DET_CAR,margin,T120_ALLOW_DIFFERENT_NATIVE_TIMES_UP_TO_6H,matched
+2026_04_DET_CAR,total,T120_ALLOW_DIFFERENT_NATIVE_TIMES_UP_TO_6H,no identical integer threshold at three venues
+2026_04_GB_TB,margin,T120_ALLOW_DIFFERENT_NATIVE_TIMES_UP_TO_6H,contract missing or native/snapshot outside fixed clock
+2026_04_GB_TB,total,T120_ALLOW_DIFFERENT_NATIVE_TIMES_UP_TO_6H,no identical integer threshold at three venues
+2026_04_IND_WAS,margin,T120_ALLOW_DIFFERENT_NATIVE_TIMES_UP_TO_6H,no identical integer threshold at three venues
+2026_04_IND_WAS,total,T120_ALLOW_DIFFERENT_NATIVE_TIMES_UP_TO_6H,no identical integer threshold at three venues
+2026_04_JAX_CIN,margin,T120_ALLOW_DIFFERENT_NATIVE_TIMES_UP_TO_6H,matched
+2026_04_JAX_CIN,total,T120_ALLOW_DIFFERENT_NATIVE_TIMES_UP_TO_6H,matched
+2026_04_KC_LV,margin,T120_ALLOW_DIFFERENT_NATIVE_TIMES_UP_TO_6H,matched
+2026_04_KC_LV,total,T120_ALLOW_DIFFERENT_NATIVE_TIMES_UP_TO_6H,no identical integer threshold at three venues
+2026_04_LAC_SEA,margin,T120_ALLOW_DIFFERENT_NATIVE_TIMES_UP_TO_6H,checkpoint source missing
+2026_04_LAC_SEA,total,T120_ALLOW_DIFFERENT_NATIVE_TIMES_UP_TO_6H,checkpoint source missing
+2026_04_LA_PHI,margin,T120_ALLOW_DIFFERENT_NATIVE_TIMES_UP_TO_6H,matched
+2026_04_LA_PHI,total,T120_ALLOW_DIFFERENT_NATIVE_TIMES_UP_TO_6H,no identical integer threshold at three venues
+2026_04_MIA_MIN,margin,T120_ALLOW_DIFFERENT_NATIVE_TIMES_UP_TO_6H,contract missing or native/snapshot outside fixed clock
+2026_04_MIA_MIN,total,T120_ALLOW_DIFFERENT_NATIVE_TIMES_UP_TO_6H,matched
+2026_04_NE_BUF,margin,T120_ALLOW_DIFFERENT_NATIVE_TIMES_UP_TO_6H,contract missing or native/snapshot outside fixed clock
+2026_04_NE_BUF,total,T120_ALLOW_DIFFERENT_NATIVE_TIMES_UP_TO_6H,no identical integer threshold at three venues
+2026_04_NYJ_CHI,margin,T120_ALLOW_DIFFERENT_NATIVE_TIMES_UP_TO_6H,no identical integer threshold at three venues
+2026_04_NYJ_CHI,total,T120_ALLOW_DIFFERENT_NATIVE_TIMES_UP_TO_6H,matched
+2026_04_PIT_CLE,margin,T120_ALLOW_DIFFERENT_NATIVE_TIMES_UP_TO_6H,matched
+2026_04_PIT_CLE,total,T120_ALLOW_DIFFERENT_NATIVE_TIMES_UP_TO_6H,no identical integer threshold at three venues
+2026_04_TEN_BAL,margin,T120_ALLOW_DIFFERENT_NATIVE_TIMES_UP_TO_6H,no identical integer threshold at three venues
+2026_04_TEN_BAL,total,T120_ALLOW_DIFFERENT_NATIVE_TIMES_UP_TO_6H,matched
+2026_05_BAL_ATL,margin,T120_ALLOW_DIFFERENT_NATIVE_TIMES_UP_TO_6H,contract missing or native/snapshot outside fixed clock
+2026_05_BAL_ATL,total,T120_ALLOW_DIFFERENT_NATIVE_TIMES_UP_TO_6H,matched
+2026_05_BUF_LA,margin,T120_ALLOW_DIFFERENT_NATIVE_TIMES_UP_TO_6H,no identical integer threshold at three venues
+2026_05_BUF_LA,total,T120_ALLOW_DIFFERENT_NATIVE_TIMES_UP_TO_6H,no identical integer threshold at three venues
+2026_05_CHI_GB,margin,T120_ALLOW_DIFFERENT_NATIVE_TIMES_UP_TO_6H,no identical integer threshold at three venues
+2026_05_CHI_GB,total,T120_ALLOW_DIFFERENT_NATIVE_TIMES_UP_TO_6H,no identical integer threshold at three venues
+2026_05_CIN_MIA,margin,T120_ALLOW_DIFFERENT_NATIVE_TIMES_UP_TO_6H,contract missing or native/snapshot outside fixed clock
+2026_05_CIN_MIA,total,T120_ALLOW_DIFFERENT_NATIVE_TIMES_UP_TO_6H,no identical integer threshold at three venues
+2026_05_CLE_NYJ,margin,T120_ALLOW_DIFFERENT_NATIVE_TIMES_UP_TO_6H,matched
+2026_05_CLE_NYJ,total,T120_ALLOW_DIFFERENT_NATIVE_TIMES_UP_TO_6H,matched
+2026_05_DEN_LAC,margin,T120_ALLOW_DIFFERENT_NATIVE_TIMES_UP_TO_6H,checkpoint source missing
+2026_05_DEN_LAC,total,T120_ALLOW_DIFFERENT_NATIVE_TIMES_UP_TO_6H,checkpoint source missing
+2026_05_DET_ARI,margin,T120_ALLOW_DIFFERENT_NATIVE_TIMES_UP_TO_6H,matched
+2026_05_DET_ARI,total,T120_ALLOW_DIFFERENT_NATIVE_TIMES_UP_TO_6H,matched
+2026_05_HOU_TEN,margin,T120_ALLOW_DIFFERENT_NATIVE_TIMES_UP_TO_6H,no identical integer threshold at three venues
+2026_05_HOU_TEN,total,T120_ALLOW_DIFFERENT_NATIVE_TIMES_UP_TO_6H,no identical integer threshold at three venues
+2026_05_IND_PIT,margin,T120_ALLOW_DIFFERENT_NATIVE_TIMES_UP_TO_6H,contract missing or native/snapshot outside fixed clock
+2026_05_IND_PIT,total,T120_ALLOW_DIFFERENT_NATIVE_TIMES_UP_TO_6H,no identical integer threshold at three venues
+2026_05_LV_NE,margin,T120_ALLOW_DIFFERENT_NATIVE_TIMES_UP_TO_6H,matched
+2026_05_LV_NE,total,T120_ALLOW_DIFFERENT_NATIVE_TIMES_UP_TO_6H,matched
+2026_05_MIN_NO,margin,T120_ALLOW_DIFFERENT_NATIVE_TIMES_UP_TO_6H,no identical integer threshold at three venues
+2026_05_MIN_NO,total,T120_ALLOW_DIFFERENT_NATIVE_TIMES_UP_TO_6H,matched
+2026_05_NYG_WAS,margin,T120_ALLOW_DIFFERENT_NATIVE_TIMES_UP_TO_6H,matched
+2026_05_NYG_WAS,total,T120_ALLOW_DIFFERENT_NATIVE_TIMES_UP_TO_6H,matched
+2026_05_PHI_JAX,margin,T120_ALLOW_DIFFERENT_NATIVE_TIMES_UP_TO_6H,matched
+2026_05_PHI_JAX,total,T120_ALLOW_DIFFERENT_NATIVE_TIMES_UP_TO_6H,no identical integer threshold at three venues
+2026_05_SF_SEA,margin,T120_ALLOW_DIFFERENT_NATIVE_TIMES_UP_TO_6H,contract missing or native/snapshot outside fixed clock
+2026_05_SF_SEA,total,T120_ALLOW_DIFFERENT_NATIVE_TIMES_UP_TO_6H,no identical integer threshold at three venues
+2026_05_TB_DAL,margin,T120_ALLOW_DIFFERENT_NATIVE_TIMES_UP_TO_6H,matched
+2026_05_TB_DAL,total,T120_ALLOW_DIFFERENT_NATIVE_TIMES_UP_TO_6H,no identical integer threshold at three venues
+2026_06_ARI_LA,margin,T120_ALLOW_DIFFERENT_NATIVE_TIMES_UP_TO_6H,no identical integer threshold at three venues
+2026_06_ARI_LA,total,T120_ALLOW_DIFFERENT_NATIVE_TIMES_UP_TO_6H,matched
+2026_06_BAL_CLE,margin,T120_ALLOW_DIFFERENT_NATIVE_TIMES_UP_TO_6H,contract missing or native/snapshot outside fixed clock
+2026_06_BAL_CLE,total,T120_ALLOW_DIFFERENT_NATIVE_TIMES_UP_TO_6H,no identical integer threshold at three venues
+2026_06_BUF_LV,margin,T120_ALLOW_DIFFERENT_NATIVE_TIMES_UP_TO_6H,no identical integer threshold at three venues
+2026_06_BUF_LV,total,T120_ALLOW_DIFFERENT_NATIVE_TIMES_UP_TO_6H,no identical integer threshold at three venues
+2026_06_CAR_PHI,margin,T120_ALLOW_DIFFERENT_NATIVE_TIMES_UP_TO_6H,contract missing or native/snapshot outside fixed clock
+2026_06_CAR_PHI,total,T120_ALLOW_DIFFERENT_NATIVE_TIMES_UP_TO_6H,no identical integer threshold at three venues
+2026_06_CHI_ATL,margin,T120_ALLOW_DIFFERENT_NATIVE_TIMES_UP_TO_6H,matched
+2026_06_CHI_ATL,total,T120_ALLOW_DIFFERENT_NATIVE_TIMES_UP_TO_6H,no identical integer threshold at three venues
+2026_06_DAL_GB,margin,T120_ALLOW_DIFFERENT_NATIVE_TIMES_UP_TO_6H,matched
+2026_06_DAL_GB,total,T120_ALLOW_DIFFERENT_NATIVE_TIMES_UP_TO_6H,matched
+2026_06_HOU_JAX,margin,T120_ALLOW_DIFFERENT_NATIVE_TIMES_UP_TO_6H,matched
+2026_06_HOU_JAX,total,T120_ALLOW_DIFFERENT_NATIVE_TIMES_UP_TO_6H,no identical integer threshold at three venues
+2026_06_LAC_KC,margin,T120_ALLOW_DIFFERENT_NATIVE_TIMES_UP_TO_6H,checkpoint source missing
+2026_06_LAC_KC,total,T120_ALLOW_DIFFERENT_NATIVE_TIMES_UP_TO_6H,checkpoint source missing
+2026_06_NO_NYG,margin,T120_ALLOW_DIFFERENT_NATIVE_TIMES_UP_TO_6H,no identical integer threshold at three venues
+2026_06_NO_NYG,total,T120_ALLOW_DIFFERENT_NATIVE_TIMES_UP_TO_6H,no identical integer threshold at three venues
+2026_06_NYJ_NE,margin,T120_ALLOW_DIFFERENT_NATIVE_TIMES_UP_TO_6H,matched
+2026_06_NYJ_NE,total,T120_ALLOW_DIFFERENT_NATIVE_TIMES_UP_TO_6H,no identical integer threshold at three venues
+2026_06_PIT_TB,margin,T120_ALLOW_DIFFERENT_NATIVE_TIMES_UP_TO_6H,matched
+2026_06_PIT_TB,total,T120_ALLOW_DIFFERENT_NATIVE_TIMES_UP_TO_6H,no identical integer threshold at three venues
+2026_06_SEA_DEN,margin,T120_ALLOW_DIFFERENT_NATIVE_TIMES_UP_TO_6H,matched
+2026_06_SEA_DEN,total,T120_ALLOW_DIFFERENT_NATIVE_TIMES_UP_TO_6H,matched
+2026_06_TEN_IND,margin,T120_ALLOW_DIFFERENT_NATIVE_TIMES_UP_TO_6H,matched
+2026_06_TEN_IND,total,T120_ALLOW_DIFFERENT_NATIVE_TIMES_UP_TO_6H,no identical integer threshold at three venues
+2026_06_WAS_SF,margin,T120_ALLOW_DIFFERENT_NATIVE_TIMES_UP_TO_6H,matched
+2026_06_WAS_SF,total,T120_ALLOW_DIFFERENT_NATIVE_TIMES_UP_TO_6H,no identical integer threshold at three venues
+2026_07_CIN_BAL,margin,T120_ALLOW_DIFFERENT_NATIVE_TIMES_UP_TO_6H,contract missing or native/snapshot outside fixed clock
+2026_07_CIN_BAL,total,T120_ALLOW_DIFFERENT_NATIVE_TIMES_UP_TO_6H,no identical integer threshold at three venues
+2026_07_CLE_TEN,margin,T120_ALLOW_DIFFERENT_NATIVE_TIMES_UP_TO_6H,no identical integer threshold at three venues
+2026_07_CLE_TEN,total,T120_ALLOW_DIFFERENT_NATIVE_TIMES_UP_TO_6H,no identical integer threshold at three venues
+2026_07_DAL_PHI,margin,T120_ALLOW_DIFFERENT_NATIVE_TIMES_UP_TO_6H,matched
+2026_07_DAL_PHI,total,T120_ALLOW_DIFFERENT_NATIVE_TIMES_UP_TO_6H,no identical integer threshold at three venues
+2026_07_DEN_ARI,margin,T120_ALLOW_DIFFERENT_NATIVE_TIMES_UP_TO_6H,matched
+2026_07_DEN_ARI,total,T120_ALLOW_DIFFERENT_NATIVE_TIMES_UP_TO_6H,no identical integer threshold at three venues
+2026_07_GB_DET,margin,T120_ALLOW_DIFFERENT_NATIVE_TIMES_UP_TO_6H,no identical integer threshold at three venues
+2026_07_GB_DET,total,T120_ALLOW_DIFFERENT_NATIVE_TIMES_UP_TO_6H,no identical integer threshold at three venues
+2026_07_IND_MIN,margin,T120_ALLOW_DIFFERENT_NATIVE_TIMES_UP_TO_6H,matched
+2026_07_IND_MIN,total,T120_ALLOW_DIFFERENT_NATIVE_TIMES_UP_TO_6H,no identical integer threshold at three venues
+2026_07_KC_SEA,margin,T120_ALLOW_DIFFERENT_NATIVE_TIMES_UP_TO_6H,contract missing or native/snapshot outside fixed clock
+2026_07_KC_SEA,total,T120_ALLOW_DIFFERENT_NATIVE_TIMES_UP_TO_6H,matched
+2026_07_LA_LV,margin,T120_ALLOW_DIFFERENT_NATIVE_TIMES_UP_TO_6H,matched
+2026_07_LA_LV,total,T120_ALLOW_DIFFERENT_NATIVE_TIMES_UP_TO_6H,matched
+2026_07_MIA_NYJ,margin,T120_ALLOW_DIFFERENT_NATIVE_TIMES_UP_TO_6H,no identical integer threshold at three venues
+2026_07_MIA_NYJ,total,T120_ALLOW_DIFFERENT_NATIVE_TIMES_UP_TO_6H,no identical integer threshold at three venues
+2026_07_NE_CHI,margin,T120_ALLOW_DIFFERENT_NATIVE_TIMES_UP_TO_6H,contract missing or native/snapshot outside fixed clock
+2026_07_NE_CHI,total,T120_ALLOW_DIFFERENT_NATIVE_TIMES_UP_TO_6H,matched
+2026_07_NYG_HOU,margin,T120_ALLOW_DIFFERENT_NATIVE_TIMES_UP_TO_6H,matched
+2026_07_NYG_HOU,total,T120_ALLOW_DIFFERENT_NATIVE_TIMES_UP_TO_6H,matched
+2026_07_PIT_NO,margin,T120_ALLOW_DIFFERENT_NATIVE_TIMES_UP_TO_6H,contract missing or native/snapshot outside fixed clock
+2026_07_PIT_NO,total,T120_ALLOW_DIFFERENT_NATIVE_TIMES_UP_TO_6H,no identical integer threshold at three venues
+2026_07_SF_ATL,margin,T120_ALLOW_DIFFERENT_NATIVE_TIMES_UP_TO_6H,matched
+2026_07_SF_ATL,total,T120_ALLOW_DIFFERENT_NATIVE_TIMES_UP_TO_6H,no identical integer threshold at three venues
+2026_07_TB_CAR,margin,T120_ALLOW_DIFFERENT_NATIVE_TIMES_UP_TO_6H,contract missing or native/snapshot outside fixed clock
+2026_07_TB_CAR,total,T120_ALLOW_DIFFERENT_NATIVE_TIMES_UP_TO_6H,matched
+2026_08_ARI_DAL,margin,T120_ALLOW_DIFFERENT_NATIVE_TIMES_UP_TO_6H,contract missing or native/snapshot outside fixed clock
+2026_08_ARI_DAL,total,T120_ALLOW_DIFFERENT_NATIVE_TIMES_UP_TO_6H,matched
+2026_08_ATL_TB,margin,T120_ALLOW_DIFFERENT_NATIVE_TIMES_UP_TO_6H,matched
+2026_08_ATL_TB,total,T120_ALLOW_DIFFERENT_NATIVE_TIMES_UP_TO_6H,no identical integer threshold at three venues
+2026_08_BAL_BUF,margin,T120_ALLOW_DIFFERENT_NATIVE_TIMES_UP_TO_6H,contract missing or native/snapshot outside fixed clock
+2026_08_BAL_BUF,total,T120_ALLOW_DIFFERENT_NATIVE_TIMES_UP_TO_6H,matched
+2026_08_CAR_GB,margin,T120_ALLOW_DIFFERENT_NATIVE_TIMES_UP_TO_6H,matched
+2026_08_CAR_GB,total,T120_ALLOW_DIFFERENT_NATIVE_TIMES_UP_TO_6H,matched
+2026_08_CHI_SEA,margin,T120_ALLOW_DIFFERENT_NATIVE_TIMES_UP_TO_6H,no identical integer threshold at three venues
+2026_08_CHI_SEA,total,T120_ALLOW_DIFFERENT_NATIVE_TIMES_UP_TO_6H,matched
+2026_08_CLE_PIT,margin,T120_ALLOW_DIFFERENT_NATIVE_TIMES_UP_TO_6H,matched
+2026_08_CLE_PIT,total,T120_ALLOW_DIFFERENT_NATIVE_TIMES_UP_TO_6H,no identical integer threshold at three venues
+2026_08_IND_JAX,margin,T120_ALLOW_DIFFERENT_NATIVE_TIMES_UP_TO_6H,contract missing or native/snapshot outside fixed clock
+2026_08_IND_JAX,total,T120_ALLOW_DIFFERENT_NATIVE_TIMES_UP_TO_6H,matched
+2026_08_KC_DEN,margin,T120_ALLOW_DIFFERENT_NATIVE_TIMES_UP_TO_6H,no identical integer threshold at three venues
+2026_08_KC_DEN,total,T120_ALLOW_DIFFERENT_NATIVE_TIMES_UP_TO_6H,no identical integer threshold at three venues
+2026_08_LAC_LA,margin,T120_ALLOW_DIFFERENT_NATIVE_TIMES_UP_TO_6H,checkpoint source missing
+2026_08_LAC_LA,total,T120_ALLOW_DIFFERENT_NATIVE_TIMES_UP_TO_6H,checkpoint source missing
+2026_08_LV_NYJ,margin,T120_ALLOW_DIFFERENT_NATIVE_TIMES_UP_TO_6H,matched
+2026_08_LV_NYJ,total,T120_ALLOW_DIFFERENT_NATIVE_TIMES_UP_TO_6H,no identical integer threshold at three venues
+2026_08_MIN_DET,margin,T120_ALLOW_DIFFERENT_NATIVE_TIMES_UP_TO_6H,contract missing or native/snapshot outside fixed clock
+2026_08_MIN_DET,total,T120_ALLOW_DIFFERENT_NATIVE_TIMES_UP_TO_6H,no identical integer threshold at three venues
+2026_08_NE_MIA,margin,T120_ALLOW_DIFFERENT_NATIVE_TIMES_UP_TO_6H,contract missing or native/snapshot outside fixed clock
+2026_08_NE_MIA,total,T120_ALLOW_DIFFERENT_NATIVE_TIMES_UP_TO_6H,no identical integer threshold at three venues
+2026_08_PHI_WAS,margin,T120_ALLOW_DIFFERENT_NATIVE_TIMES_UP_TO_6H,contract missing or native/snapshot outside fixed clock
+2026_08_PHI_WAS,total,T120_ALLOW_DIFFERENT_NATIVE_TIMES_UP_TO_6H,matched
+2026_08_TEN_CIN,margin,T120_ALLOW_DIFFERENT_NATIVE_TIMES_UP_TO_6H,no identical integer threshold at three venues
+2026_08_TEN_CIN,total,T120_ALLOW_DIFFERENT_NATIVE_TIMES_UP_TO_6H,no identical integer threshold at three venues
+2026_09_ARI_SEA,margin,T120_ALLOW_DIFFERENT_NATIVE_TIMES_UP_TO_6H,no identical integer threshold at three venues
+2026_09_ARI_SEA,total,T120_ALLOW_DIFFERENT_NATIVE_TIMES_UP_TO_6H,no identical integer threshold at three venues
+2026_09_BUF_MIN,margin,T120_ALLOW_DIFFERENT_NATIVE_TIMES_UP_TO_6H,matched
+2026_09_BUF_MIN,total,T120_ALLOW_DIFFERENT_NATIVE_TIMES_UP_TO_6H,no identical integer threshold at three venues
+2026_09_CIN_ATL,margin,T120_ALLOW_DIFFERENT_NATIVE_TIMES_UP_TO_6H,contract missing or native/snapshot outside fixed clock
+2026_09_CIN_ATL,total,T120_ALLOW_DIFFERENT_NATIVE_TIMES_UP_TO_6H,matched
+2026_09_CLE_NO,margin,T120_ALLOW_DIFFERENT_NATIVE_TIMES_UP_TO_6H,contract missing or native/snapshot outside fixed clock
+2026_09_CLE_NO,total,T120_ALLOW_DIFFERENT_NATIVE_TIMES_UP_TO_6H,matched
+2026_09_DAL_IND,margin,T120_ALLOW_DIFFERENT_NATIVE_TIMES_UP_TO_6H,no identical integer threshold at three venues
+2026_09_DAL_IND,total,T120_ALLOW_DIFFERENT_NATIVE_TIMES_UP_TO_6H,no identical integer threshold at three venues
+2026_09_DEN_CAR,margin,T120_ALLOW_DIFFERENT_NATIVE_TIMES_UP_TO_6H,matched
+2026_09_DEN_CAR,total,T120_ALLOW_DIFFERENT_NATIVE_TIMES_UP_TO_6H,matched
+2026_09_DET_MIA,margin,T120_ALLOW_DIFFERENT_NATIVE_TIMES_UP_TO_6H,no identical integer threshold at three venues
+2026_09_DET_MIA,total,T120_ALLOW_DIFFERENT_NATIVE_TIMES_UP_TO_6H,no identical integer threshold at three venues
+2026_09_GB_NE,margin,T120_ALLOW_DIFFERENT_NATIVE_TIMES_UP_TO_6H,contract missing or native/snapshot outside fixed clock
+2026_09_GB_NE,total,T120_ALLOW_DIFFERENT_NATIVE_TIMES_UP_TO_6H,matched
+2026_09_HOU_LAC,margin,T120_ALLOW_DIFFERENT_NATIVE_TIMES_UP_TO_6H,checkpoint source missing
+2026_09_HOU_LAC,total,T120_ALLOW_DIFFERENT_NATIVE_TIMES_UP_TO_6H,checkpoint source missing
+2026_09_JAX_BAL,margin,T120_ALLOW_DIFFERENT_NATIVE_TIMES_UP_TO_6H,contract missing or native/snapshot outside fixed clock
+2026_09_JAX_BAL,total,T120_ALLOW_DIFFERENT_NATIVE_TIMES_UP_TO_6H,no identical integer threshold at three venues
+2026_09_LA_WAS,margin,T120_ALLOW_DIFFERENT_NATIVE_TIMES_UP_TO_6H,matched
+2026_09_LA_WAS,total,T120_ALLOW_DIFFERENT_NATIVE_TIMES_UP_TO_6H,no identical integer threshold at three venues
+2026_09_LV_SF,margin,T120_ALLOW_DIFFERENT_NATIVE_TIMES_UP_TO_6H,matched
+2026_09_LV_SF,total,T120_ALLOW_DIFFERENT_NATIVE_TIMES_UP_TO_6H,no identical integer threshold at three venues
+2026_09_NYG_PHI,margin,T120_ALLOW_DIFFERENT_NATIVE_TIMES_UP_TO_6H,contract missing or native/snapshot outside fixed clock
+2026_09_NYG_PHI,total,T120_ALLOW_DIFFERENT_NATIVE_TIMES_UP_TO_6H,no identical integer threshold at three venues
+2026_09_NYJ_KC,margin,T120_ALLOW_DIFFERENT_NATIVE_TIMES_UP_TO_6H,matched
+2026_09_NYJ_KC,total,T120_ALLOW_DIFFERENT_NATIVE_TIMES_UP_TO_6H,no identical integer threshold at three venues
+2026_09_TB_CHI,margin,T120_ALLOW_DIFFERENT_NATIVE_TIMES_UP_TO_6H,contract missing or native/snapshot outside fixed clock
+2026_09_TB_CHI,total,T120_ALLOW_DIFFERENT_NATIVE_TIMES_UP_TO_6H,no identical integer threshold at three venues
+2026_10_BUF_NYJ,margin,T120_ALLOW_DIFFERENT_NATIVE_TIMES_UP_TO_6H,checkpoint source missing
+2026_10_BUF_NYJ,total,T120_ALLOW_DIFFERENT_NATIVE_TIMES_UP_TO_6H,checkpoint source missing
+2026_10_CAR_NO,margin,T120_ALLOW_DIFFERENT_NATIVE_TIMES_UP_TO_6H,checkpoint source missing
+2026_10_CAR_NO,total,T120_ALLOW_DIFFERENT_NATIVE_TIMES_UP_TO_6H,checkpoint source missing
+2026_10_HOU_CLE,margin,T120_ALLOW_DIFFERENT_NATIVE_TIMES_UP_TO_6H,checkpoint source missing
+2026_10_HOU_CLE,total,T120_ALLOW_DIFFERENT_NATIVE_TIMES_UP_TO_6H,checkpoint source missing
+2026_10_JAX_TEN,margin,T120_ALLOW_DIFFERENT_NATIVE_TIMES_UP_TO_6H,checkpoint source missing
+2026_10_JAX_TEN,total,T120_ALLOW_DIFFERENT_NATIVE_TIMES_UP_TO_6H,checkpoint source missing
+2026_10_KC_ATL,margin,T120_ALLOW_DIFFERENT_NATIVE_TIMES_UP_TO_6H,checkpoint source missing
+2026_10_KC_ATL,total,T120_ALLOW_DIFFERENT_NATIVE_TIMES_UP_TO_6H,checkpoint source missing
+2026_10_LA_ARI,margin,T120_ALLOW_DIFFERENT_NATIVE_TIMES_UP_TO_6H,checkpoint source missing
+2026_10_LA_ARI,total,T120_ALLOW_DIFFERENT_NATIVE_TIMES_UP_TO_6H,checkpoint source missing
+2026_10_MIA_IND,margin,T120_ALLOW_DIFFERENT_NATIVE_TIMES_UP_TO_6H,checkpoint source missing
+2026_10_MIA_IND,total,T120_ALLOW_DIFFERENT_NATIVE_TIMES_UP_TO_6H,checkpoint source missing
+2026_10_MIN_GB,margin,T120_ALLOW_DIFFERENT_NATIVE_TIMES_UP_TO_6H,checkpoint source missing
+2026_10_MIN_GB,total,T120_ALLOW_DIFFERENT_NATIVE_TIMES_UP_TO_6H,checkpoint source missing
+2026_10_NE_DET,margin,T120_ALLOW_DIFFERENT_NATIVE_TIMES_UP_TO_6H,checkpoint source missing
+2026_10_NE_DET,total,T120_ALLOW_DIFFERENT_NATIVE_TIMES_UP_TO_6H,checkpoint source missing
+2026_10_SEA_LV,margin,T120_ALLOW_DIFFERENT_NATIVE_TIMES_UP_TO_6H,checkpoint source missing
+2026_10_SEA_LV,total,T120_ALLOW_DIFFERENT_NATIVE_TIMES_UP_TO_6H,checkpoint source missing
+2026_10_WAS_NYG,margin,T120_ALLOW_DIFFERENT_NATIVE_TIMES_UP_TO_6H,matched
+2026_10_WAS_NYG,total,T120_ALLOW_DIFFERENT_NATIVE_TIMES_UP_TO_6H,no identical integer threshold at three venues
