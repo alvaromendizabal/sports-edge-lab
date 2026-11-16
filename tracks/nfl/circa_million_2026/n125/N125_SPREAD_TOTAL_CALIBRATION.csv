@@ -1,0 +1,1035 @@
+product,model,season,outcome,low,high,games,mean_probability,observed
+spread,n121_opponent_ridge_pooled_asof_t120,2024,cover_or_over,0.1,0.2,5,0.18155073927818646,0.4
+spread,n121_opponent_ridge_pooled_asof_t120,2024,cover_or_over,0.2,0.35,35,0.29314257670599864,0.45714285714285713
+spread,n121_opponent_ridge_pooled_asof_t120,2024,cover_or_over,0.35,0.5,112,0.42982532892654884,0.5
+spread,n121_opponent_ridge_pooled_asof_t120,2024,cover_or_over,0.5,0.65,115,0.5598340441749322,0.4782608695652174
+spread,n121_opponent_ridge_pooled_asof_t120,2024,cover_or_over,0.65,0.8,17,0.692490637442246,0.35294117647058826
+spread,n121_opponent_ridge_pooled_asof_t120,2024,cover_or_over,0.8,1.001,1,0.8224775649633006,0.0
+spread,n121_opponent_ridge_pooled_asof_t120,2024,push,0,0.025,157,0.0017046786624418336,0.0
+spread,n121_opponent_ridge_pooled_asof_t120,2024,push,0.025,0.05,128,0.032085147763382,0.0625
+spread,n121_opponent_ridge_pooled_asof_t120,2024,loss_or_under,0.1,0.2,1,0.1610036323344733,1.0
+spread,n121_opponent_ridge_pooled_asof_t120,2024,loss_or_under,0.2,0.35,20,0.3042507552977517,0.6
+spread,n121_opponent_ridge_pooled_asof_t120,2024,loss_or_under,0.35,0.5,126,0.43355654767822355,0.49206349206349204
+spread,n121_opponent_ridge_pooled_asof_t120,2024,loss_or_under,0.5,0.65,103,0.5665763659095671,0.4854368932038835
+spread,n121_opponent_ridge_pooled_asof_t120,2024,loss_or_under,0.65,0.8,33,0.7104289157701069,0.48484848484848486
+spread,n121_opponent_ridge_pooled_asof_t120,2024,loss_or_under,0.8,1.001,2,0.8329443394830407,0.5
+spread,n121_opponent_ridge_pooled_asof_t120,2025,cover_or_over,0.05,0.1,1,0.09492989356538047,0.0
+spread,n121_opponent_ridge_pooled_asof_t120,2025,cover_or_over,0.1,0.2,2,0.17103436337522848,1.0
+spread,n121_opponent_ridge_pooled_asof_t120,2025,cover_or_over,0.2,0.35,40,0.30403982391897744,0.5
+spread,n121_opponent_ridge_pooled_asof_t120,2025,cover_or_over,0.35,0.5,132,0.43560052676474526,0.5227272727272727
+spread,n121_opponent_ridge_pooled_asof_t120,2025,cover_or_over,0.5,0.65,91,0.5555509325325274,0.45054945054945056
+spread,n121_opponent_ridge_pooled_asof_t120,2025,cover_or_over,0.65,0.8,18,0.6958020214926087,0.4444444444444444
+spread,n121_opponent_ridge_pooled_asof_t120,2025,cover_or_over,0.8,1.001,1,0.8147238787811373,0.0
+spread,n121_opponent_ridge_pooled_asof_t120,2025,push,0,0.025,173,0.001299303881509589,0.005780346820809248
+spread,n121_opponent_ridge_pooled_asof_t120,2025,push,0.025,0.05,112,0.03273214676312881,0.017857142857142856
+spread,n121_opponent_ridge_pooled_asof_t120,2025,loss_or_under,0.1,0.2,2,0.18599458639831523,1.0
+spread,n121_opponent_ridge_pooled_asof_t120,2025,loss_or_under,0.2,0.35,19,0.3041281447967817,0.42105263157894735
+spread,n121_opponent_ridge_pooled_asof_t120,2025,loss_or_under,0.35,0.5,112,0.44464733975157256,0.5267857142857143
+spread,n121_opponent_ridge_pooled_asof_t120,2025,loss_or_under,0.5,0.65,118,0.5684062686512893,0.4915254237288136
+spread,n121_opponent_ridge_pooled_asof_t120,2025,loss_or_under,0.65,0.8,31,0.6951938377010293,0.45161290322580644
+spread,n121_opponent_ridge_pooled_asof_t120,2025,loss_or_under,0.8,1.001,3,0.8477297030678007,0.3333333333333333
+spread,n121_opponent_ridge_pooled_asof_t120,2026,cover_or_over,0.2,0.35,10,0.2704936312358192,0.8
+spread,n121_opponent_ridge_pooled_asof_t120,2026,cover_or_over,0.35,0.5,71,0.4385937588772434,0.49295774647887325
+spread,n121_opponent_ridge_pooled_asof_t120,2026,cover_or_over,0.5,0.65,61,0.5606037377407285,0.5901639344262295
+spread,n121_opponent_ridge_pooled_asof_t120,2026,cover_or_over,0.65,0.8,7,0.6962355015731043,0.5714285714285714
+spread,n121_opponent_ridge_pooled_asof_t120,2026,push,0,0.025,85,0.001397841656620518,0.0
+spread,n121_opponent_ridge_pooled_asof_t120,2026,push,0.025,0.05,64,0.03262576439558995,0.078125
+spread,n121_opponent_ridge_pooled_asof_t120,2026,loss_or_under,0.2,0.35,10,0.30580267610820466,0.4
+spread,n121_opponent_ridge_pooled_asof_t120,2026,loss_or_under,0.35,0.5,67,0.4382213887181256,0.43283582089552236
+spread,n121_opponent_ridge_pooled_asof_t120,2026,loss_or_under,0.5,0.65,63,0.5550503374813751,0.42857142857142855
+spread,n121_opponent_ridge_pooled_asof_t120,2026,loss_or_under,0.65,0.8,9,0.7211704183897513,0.1111111111111111
+spread,n121_opponent_ridge_recent_asof_t120,2024,cover_or_over,0.1,0.2,1,0.1836019029429595,0.0
+spread,n121_opponent_ridge_recent_asof_t120,2024,cover_or_over,0.2,0.35,33,0.2964234894268216,0.42424242424242425
+spread,n121_opponent_ridge_recent_asof_t120,2024,cover_or_over,0.35,0.5,122,0.44140551557746766,0.48360655737704916
+spread,n121_opponent_ridge_recent_asof_t120,2024,cover_or_over,0.5,0.65,117,0.5669950232679201,0.47863247863247865
+spread,n121_opponent_ridge_recent_asof_t120,2024,cover_or_over,0.65,0.8,12,0.6880421562549057,0.5
+spread,n121_opponent_ridge_recent_asof_t120,2024,push,0,0.025,154,0.0013845152996234534,0.0
+spread,n121_opponent_ridge_recent_asof_t120,2024,push,0.025,0.05,131,0.03285472023459228,0.061068702290076333
+spread,n121_opponent_ridge_recent_asof_t120,2024,loss_or_under,0.1,0.2,1,0.18401258257503764,1.0
+spread,n121_opponent_ridge_recent_asof_t120,2024,loss_or_under,0.2,0.35,19,0.32203798652198357,0.5263157894736842
+spread,n121_opponent_ridge_recent_asof_t120,2024,loss_or_under,0.35,0.5,132,0.43482260712846066,0.49242424242424243
+spread,n121_opponent_ridge_recent_asof_t120,2024,loss_or_under,0.5,0.65,105,0.5586543875389609,0.5047619047619047
+spread,n121_opponent_ridge_recent_asof_t120,2024,loss_or_under,0.65,0.8,27,0.6998672401905284,0.4444444444444444
+spread,n121_opponent_ridge_recent_asof_t120,2024,loss_or_under,0.8,1.001,1,0.8163980970570406,1.0
+spread,n121_opponent_ridge_recent_asof_t120,2025,cover_or_over,0.1,0.2,1,0.11318137183207498,0.0
+spread,n121_opponent_ridge_recent_asof_t120,2025,cover_or_over,0.2,0.35,27,0.3006786337766393,0.5555555555555556
+spread,n121_opponent_ridge_recent_asof_t120,2025,cover_or_over,0.35,0.5,151,0.43099514970167274,0.5099337748344371
+spread,n121_opponent_ridge_recent_asof_t120,2025,cover_or_over,0.5,0.65,97,0.5556382123618426,0.4536082474226804
+spread,n121_opponent_ridge_recent_asof_t120,2025,cover_or_over,0.65,0.8,7,0.6750043050441381,0.5714285714285714
+spread,n121_opponent_ridge_recent_asof_t120,2025,cover_or_over,0.8,1.001,2,0.8092615805446517,0.0
+spread,n121_opponent_ridge_recent_asof_t120,2025,push,0,0.025,167,0.0005582932944923676,0.005988023952095809
+spread,n121_opponent_ridge_recent_asof_t120,2025,push,0.025,0.05,118,0.03356229611123601,0.01694915254237288
+spread,n121_opponent_ridge_recent_asof_t120,2025,loss_or_under,0.1,0.2,2,0.1811699946503459,1.0
+spread,n121_opponent_ridge_recent_asof_t120,2025,loss_or_under,0.2,0.35,11,0.3238181502052997,0.45454545454545453
+spread,n121_opponent_ridge_recent_asof_t120,2025,loss_or_under,0.35,0.5,110,0.4451253786926533,0.5363636363636364
+spread,n121_opponent_ridge_recent_asof_t120,2025,loss_or_under,0.5,0.65,141,0.5646449930651691,0.475177304964539
+spread,n121_opponent_ridge_recent_asof_t120,2025,loss_or_under,0.65,0.8,20,0.7002144073167684,0.4
+spread,n121_opponent_ridge_recent_asof_t120,2025,loss_or_under,0.8,1.001,1,0.886818628167925,1.0
+spread,n121_opponent_ridge_recent_asof_t120,2026,cover_or_over,0.2,0.35,8,0.3278522092037457,0.625
+spread,n121_opponent_ridge_recent_asof_t120,2026,cover_or_over,0.35,0.5,56,0.43880133631362117,0.5357142857142857
+spread,n121_opponent_ridge_recent_asof_t120,2026,cover_or_over,0.5,0.65,76,0.5593234157160546,0.5526315789473685
+spread,n121_opponent_ridge_recent_asof_t120,2026,cover_or_over,0.65,0.8,9,0.679267381722851,0.6666666666666666
+spread,n121_opponent_ridge_recent_asof_t120,2026,push,0,0.025,80,0.0,0.0
+spread,n121_opponent_ridge_recent_asof_t120,2026,push,0.025,0.05,69,0.032825440649141335,0.07246376811594203
+spread,n121_opponent_ridge_recent_asof_t120,2026,loss_or_under,0.2,0.35,12,0.3222558212965012,0.3333333333333333
+spread,n121_opponent_ridge_recent_asof_t120,2026,loss_or_under,0.35,0.5,82,0.4346565942569421,0.4634146341463415
+spread,n121_opponent_ridge_recent_asof_t120,2026,loss_or_under,0.5,0.65,51,0.5632953847723016,0.35294117647058826
+spread,n121_opponent_ridge_recent_asof_t120,2026,loss_or_under,0.65,0.8,4,0.6700977125190124,0.25
+spread,n121_team_score_baseline_asof_t120,2024,cover_or_over,0.1,0.2,1,0.1263479069920175,1.0
+spread,n121_team_score_baseline_asof_t120,2024,cover_or_over,0.2,0.35,54,0.3009187353641653,0.5185185185185185
+spread,n121_team_score_baseline_asof_t120,2024,cover_or_over,0.35,0.5,88,0.4231375371724189,0.4659090909090909
+spread,n121_team_score_baseline_asof_t120,2024,cover_or_over,0.5,0.65,120,0.5635206095383833,0.4666666666666667
+spread,n121_team_score_baseline_asof_t120,2024,cover_or_over,0.65,0.8,21,0.6964130621522807,0.42857142857142855
+spread,n121_team_score_baseline_asof_t120,2024,cover_or_over,0.8,1.001,1,0.8043012913752784,0.0
+spread,n121_team_score_baseline_asof_t120,2024,push,0,0.025,159,0.001837374906507904,0.006289308176100629
+spread,n121_team_score_baseline_asof_t120,2024,push,0.025,0.05,126,0.03345070687632492,0.05555555555555555
+spread,n121_team_score_baseline_asof_t120,2024,loss_or_under,0.1,0.2,1,0.18029526799549056,1.0
+spread,n121_team_score_baseline_asof_t120,2024,loss_or_under,0.2,0.35,26,0.30105441143463524,0.5384615384615384
+spread,n121_team_score_baseline_asof_t120,2024,loss_or_under,0.35,0.5,123,0.42750766174947363,0.5121951219512195
+spread,n121_team_score_baseline_asof_t120,2024,loss_or_under,0.5,0.65,90,0.5748846997672735,0.4777777777777778
+spread,n121_team_score_baseline_asof_t120,2024,loss_or_under,0.65,0.8,44,0.6962987718758311,0.4772727272727273
+spread,n121_team_score_baseline_asof_t120,2024,loss_or_under,0.8,1.001,1,0.8616353923668727,0.0
+spread,n121_team_score_baseline_asof_t120,2025,cover_or_over,0.1,0.2,4,0.15953560229899527,0.5
+spread,n121_team_score_baseline_asof_t120,2025,cover_or_over,0.2,0.35,60,0.2991682338013582,0.48333333333333334
+spread,n121_team_score_baseline_asof_t120,2025,cover_or_over,0.35,0.5,98,0.42616920014568216,0.5102040816326531
+spread,n121_team_score_baseline_asof_t120,2025,cover_or_over,0.5,0.65,95,0.5513911192240485,0.4842105263157895
+spread,n121_team_score_baseline_asof_t120,2025,cover_or_over,0.65,0.8,27,0.70904582986021,0.48148148148148145
+spread,n121_team_score_baseline_asof_t120,2025,cover_or_over,0.8,1.001,1,0.8047616898728609,0.0
+spread,n121_team_score_baseline_asof_t120,2025,push,0,0.025,176,0.0015464883670693976,0.005681818181818182
+spread,n121_team_score_baseline_asof_t120,2025,push,0.025,0.05,109,0.032585950876348566,0.01834862385321101
+spread,n121_team_score_baseline_asof_t120,2025,loss_or_under,0.1,0.2,2,0.19042457214004352,1.0
+spread,n121_team_score_baseline_asof_t120,2025,loss_or_under,0.2,0.35,29,0.2912298725072892,0.5172413793103449
+spread,n121_team_score_baseline_asof_t120,2025,loss_or_under,0.35,0.5,106,0.4452442052713326,0.4811320754716981
+spread,n121_team_score_baseline_asof_t120,2025,loss_or_under,0.5,0.65,93,0.5765032156044582,0.4838709677419355
+spread,n121_team_score_baseline_asof_t120,2025,loss_or_under,0.65,0.8,52,0.6987715391226897,0.5384615384615384
+spread,n121_team_score_baseline_asof_t120,2025,loss_or_under,0.8,1.001,3,0.8395518788630341,0.3333333333333333
+spread,n121_team_score_baseline_asof_t120,2026,cover_or_over,0.2,0.35,17,0.31028276475007927,0.5882352941176471
+spread,n121_team_score_baseline_asof_t120,2026,cover_or_over,0.35,0.5,58,0.4264888714209097,0.5862068965517241
+spread,n121_team_score_baseline_asof_t120,2026,cover_or_over,0.5,0.65,61,0.5706994820899346,0.5081967213114754
+spread,n121_team_score_baseline_asof_t120,2026,cover_or_over,0.65,0.8,13,0.697491461075376,0.6153846153846154
+spread,n121_team_score_baseline_asof_t120,2026,push,0,0.025,84,0.0010464102070888682,0.0
+spread,n121_team_score_baseline_asof_t120,2026,push,0.025,0.05,65,0.03303060745663125,0.07692307692307693
+spread,n121_team_score_baseline_asof_t120,2026,loss_or_under,0.2,0.35,17,0.3035523107710332,0.35294117647058826
+spread,n121_team_score_baseline_asof_t120,2026,loss_or_under,0.35,0.5,62,0.4255587542957364,0.45161290322580644
+spread,n121_team_score_baseline_asof_t120,2026,loss_or_under,0.5,0.65,57,0.5683132035830029,0.42105263157894735
+spread,n121_team_score_baseline_asof_t120,2026,loss_or_under,0.65,0.8,13,0.6873083430476244,0.23076923076923078
+spread,n113_team_strength_margin (season-opening),2024,cover_or_over,0.1,0.2,9,0.15038607749015298,0.4444444444444444
+spread,n113_team_strength_margin (season-opening),2024,cover_or_over,0.2,0.35,62,0.27363407199784495,0.46774193548387094
+spread,n113_team_strength_margin (season-opening),2024,cover_or_over,0.35,0.5,100,0.43252213163673386,0.51
+spread,n113_team_strength_margin (season-opening),2024,cover_or_over,0.5,0.65,85,0.5947244744490556,0.4823529411764706
+spread,n113_team_strength_margin (season-opening),2024,cover_or_over,0.65,0.8,28,0.7247442570689955,0.32142857142857145
+spread,n113_team_strength_margin (season-opening),2024,cover_or_over,0.8,1.001,1,0.8308999319604747,1.0
+spread,n113_team_strength_margin (season-opening),2024,push,0,0.025,217,0.006675715015500258,0.013824884792626729
+spread,n113_team_strength_margin (season-opening),2024,push,0.025,0.05,53,0.03801522305970414,0.09433962264150944
+spread,n113_team_strength_margin (season-opening),2024,push,0.05,0.1,15,0.05571836003116611,0.0
+spread,n113_team_strength_margin (season-opening),2024,loss_or_under,0.1,0.2,1,0.1691000680395253,0.0
+spread,n113_team_strength_margin (season-opening),2024,loss_or_under,0.2,0.35,34,0.2759411589243534,0.6176470588235294
+spread,n113_team_strength_margin (season-opening),2024,loss_or_under,0.35,0.5,87,0.39784014369921594,0.5287356321839081
+spread,n113_team_strength_margin (season-opening),2024,loss_or_under,0.5,0.65,97,0.5641988107214656,0.4536082474226804
+spread,n113_team_strength_margin (season-opening),2024,loss_or_under,0.65,0.8,58,0.7206606138397857,0.4827586206896552
+spread,n113_team_strength_margin (season-opening),2024,loss_or_under,0.8,1.001,8,0.8457094525002966,0.375
+spread,n113_team_strength_margin (season-opening),2025,cover_or_over,0.05,0.1,2,0.06921929326283854,0.5
+spread,n113_team_strength_margin (season-opening),2025,cover_or_over,0.1,0.2,8,0.1435362341057814,0.5
+spread,n113_team_strength_margin (season-opening),2025,cover_or_over,0.2,0.35,62,0.2923038454043911,0.4838709677419355
+spread,n113_team_strength_margin (season-opening),2025,cover_or_over,0.35,0.5,89,0.43706611850225563,0.5056179775280899
+spread,n113_team_strength_margin (season-opening),2025,cover_or_over,0.5,0.65,96,0.5462983415208734,0.53125
+spread,n113_team_strength_margin (season-opening),2025,cover_or_over,0.65,0.8,26,0.7309808869299455,0.34615384615384615
+spread,n113_team_strength_margin (season-opening),2025,cover_or_over,0.8,1.001,2,0.8246765001466909,0.0
+spread,n113_team_strength_margin (season-opening),2025,push,0,0.025,216,0.0043697055461003895,0.004629629629629629
+spread,n113_team_strength_margin (season-opening),2025,push,0.025,0.05,64,0.03833699539952934,0.03125
+spread,n113_team_strength_margin (season-opening),2025,push,0.05,0.1,5,0.052348223695132444,0.0
+spread,n113_team_strength_margin (season-opening),2025,loss_or_under,0.1,0.2,2,0.16907822048551505,1.0
+spread,n113_team_strength_margin (season-opening),2025,loss_or_under,0.2,0.35,31,0.27566043630598963,0.6129032258064516
+spread,n113_team_strength_margin (season-opening),2025,loss_or_under,0.35,0.5,103,0.452751553661933,0.46601941747572817
+spread,n113_team_strength_margin (season-opening),2025,loss_or_under,0.5,0.65,86,0.5651449975482433,0.46511627906976744
+spread,n113_team_strength_margin (season-opening),2025,loss_or_under,0.65,0.8,53,0.7010623271327543,0.5283018867924528
+spread,n113_team_strength_margin (season-opening),2025,loss_or_under,0.8,1.001,10,0.8657073389555358,0.5
+spread,n113_team_strength_margin (season-opening),2026,cover_or_over,0.2,0.35,21,0.28953389209567393,0.42857142857142855
+spread,n113_team_strength_margin (season-opening),2026,cover_or_over,0.35,0.5,60,0.4435089876675759,0.6166666666666667
+spread,n113_team_strength_margin (season-opening),2026,cover_or_over,0.5,0.65,47,0.5754508930071492,0.48936170212765956
+spread,n113_team_strength_margin (season-opening),2026,cover_or_over,0.65,0.8,21,0.7229682592195937,0.6666666666666666
+spread,n113_team_strength_margin (season-opening),2026,push,0,0.025,109,0.005041201394417988,0.009174311926605505
+spread,n113_team_strength_margin (season-opening),2026,push,0.025,0.05,40,0.039019731462350424,0.1
+spread,n113_team_strength_margin (season-opening),2026,loss_or_under,0.2,0.35,25,0.2762434691418905,0.36
+spread,n113_team_strength_margin (season-opening),2026,loss_or_under,0.35,0.5,50,0.4248311808290835,0.5
+spread,n113_team_strength_margin (season-opening),2026,loss_or_under,0.5,0.65,59,0.5618914755287823,0.3220338983050847
+spread,n113_team_strength_margin (season-opening),2026,loss_or_under,0.65,0.8,15,0.7114133702869105,0.5333333333333333
+spread,n121_opponent_ridge_pooled (season-opening),2024,cover_or_over,0.05,0.1,2,0.0855630495822163,0.5
+spread,n121_opponent_ridge_pooled (season-opening),2024,cover_or_over,0.1,0.2,8,0.16850906396789722,0.375
+spread,n121_opponent_ridge_pooled (season-opening),2024,cover_or_over,0.2,0.35,59,0.2900998010783124,0.4745762711864407
+spread,n121_opponent_ridge_pooled (season-opening),2024,cover_or_over,0.35,0.5,90,0.4308371614899327,0.5
+spread,n121_opponent_ridge_pooled (season-opening),2024,cover_or_over,0.5,0.65,101,0.5675324668120008,0.4752475247524752
+spread,n121_opponent_ridge_pooled (season-opening),2024,cover_or_over,0.65,0.8,21,0.6936356563679079,0.38095238095238093
+spread,n121_opponent_ridge_pooled (season-opening),2024,cover_or_over,0.8,1.001,4,0.8372162336404765,0.5
+spread,n121_opponent_ridge_pooled (season-opening),2024,push,0,0.025,169,0.0030285454245204454,0.005917159763313609
+spread,n121_opponent_ridge_pooled (season-opening),2024,push,0.025,0.05,116,0.031192800588352096,0.0603448275862069
+spread,n121_opponent_ridge_pooled (season-opening),2024,loss_or_under,0.1,0.2,5,0.16257706559043705,0.6
+spread,n121_opponent_ridge_pooled (season-opening),2024,loss_or_under,0.2,0.35,26,0.3093839452261188,0.6538461538461539
+spread,n121_opponent_ridge_pooled (season-opening),2024,loss_or_under,0.35,0.5,112,0.433271550460081,0.5
+spread,n121_opponent_ridge_pooled (season-opening),2024,loss_or_under,0.5,0.65,79,0.5709656198022105,0.4050632911392405
+spread,n121_opponent_ridge_pooled (season-opening),2024,loss_or_under,0.65,0.8,55,0.7077324872884987,0.5454545454545454
+spread,n121_opponent_ridge_pooled (season-opening),2024,loss_or_under,0.8,1.001,8,0.8510667949353478,0.5
+spread,n121_opponent_ridge_pooled (season-opening),2025,cover_or_over,0.05,0.1,2,0.09021441221684956,0.5
+spread,n121_opponent_ridge_pooled (season-opening),2025,cover_or_over,0.1,0.2,5,0.15683405425931835,0.4
+spread,n121_opponent_ridge_pooled (season-opening),2025,cover_or_over,0.2,0.35,50,0.28370001577764126,0.5
+spread,n121_opponent_ridge_pooled (season-opening),2025,cover_or_over,0.35,0.5,111,0.43341135610487214,0.5315315315315315
+spread,n121_opponent_ridge_pooled (season-opening),2025,cover_or_over,0.5,0.65,87,0.564245355057393,0.4827586206896552
+spread,n121_opponent_ridge_pooled (season-opening),2025,cover_or_over,0.65,0.8,28,0.7230269983031723,0.39285714285714285
+spread,n121_opponent_ridge_pooled (season-opening),2025,cover_or_over,0.8,1.001,2,0.8284431941163541,0.0
+spread,n121_opponent_ridge_pooled (season-opening),2025,push,0,0.025,180,0.001966074839119591,0.005555555555555556
+spread,n121_opponent_ridge_pooled (season-opening),2025,push,0.025,0.05,105,0.03175585387168986,0.01904761904761905
+spread,n121_opponent_ridge_pooled (season-opening),2025,loss_or_under,0.1,0.2,6,0.18543733013756877,0.8333333333333334
+spread,n121_opponent_ridge_pooled (season-opening),2025,loss_or_under,0.2,0.35,26,0.28487245884186085,0.5769230769230769
+spread,n121_opponent_ridge_pooled (season-opening),2025,loss_or_under,0.35,0.5,100,0.43303074547197534,0.48
+spread,n121_opponent_ridge_pooled (season-opening),2025,loss_or_under,0.5,0.65,102,0.5684713333777224,0.4803921568627451
+spread,n121_opponent_ridge_pooled (season-opening),2025,loss_or_under,0.65,0.8,44,0.7103776842276504,0.4772727272727273
+spread,n121_opponent_ridge_pooled (season-opening),2025,loss_or_under,0.8,1.001,7,0.8570595230010747,0.5714285714285714
+spread,n121_opponent_ridge_pooled (season-opening),2026,cover_or_over,0.1,0.2,4,0.1639435964560204,1.0
+spread,n121_opponent_ridge_pooled (season-opening),2026,cover_or_over,0.2,0.35,16,0.2971845473051296,0.5
+spread,n121_opponent_ridge_pooled (season-opening),2026,cover_or_over,0.35,0.5,66,0.4330593215319576,0.5606060606060606
+spread,n121_opponent_ridge_pooled (season-opening),2026,cover_or_over,0.5,0.65,53,0.5606154804734592,0.5094339622641509
+spread,n121_opponent_ridge_pooled (season-opening),2026,cover_or_over,0.65,0.8,10,0.6975409708359064,0.7
+spread,n121_opponent_ridge_pooled (season-opening),2026,push,0,0.025,88,0.002037980735066641,0.0
+spread,n121_opponent_ridge_pooled (season-opening),2026,push,0.025,0.05,61,0.032188534456076105,0.08196721311475409
+spread,n121_opponent_ridge_pooled (season-opening),2026,loss_or_under,0.2,0.35,13,0.30024869618405453,0.3076923076923077
+spread,n121_opponent_ridge_pooled (season-opening),2026,loss_or_under,0.35,0.5,53,0.43430549498840004,0.49056603773584906
+spread,n121_opponent_ridge_pooled (season-opening),2026,loss_or_under,0.5,0.65,66,0.5586553855070217,0.3939393939393939
+spread,n121_opponent_ridge_pooled (season-opening),2026,loss_or_under,0.65,0.8,14,0.7062798410000306,0.35714285714285715
+spread,n121_opponent_ridge_pooled (season-opening),2026,loss_or_under,0.8,1.001,3,0.8319623513279901,0.0
+spread,n121_opponent_ridge_recent (season-opening),2024,cover_or_over,0.05,0.1,2,0.08872306877986302,0.0
+spread,n121_opponent_ridge_recent (season-opening),2024,cover_or_over,0.1,0.2,8,0.164399079096786,0.625
+spread,n121_opponent_ridge_recent (season-opening),2024,cover_or_over,0.2,0.35,62,0.29015481462151393,0.4838709677419355
+spread,n121_opponent_ridge_recent (season-opening),2024,cover_or_over,0.35,0.5,85,0.42987467360339193,0.4823529411764706
+spread,n121_opponent_ridge_recent (season-opening),2024,cover_or_over,0.5,0.65,101,0.5671674096034832,0.48514851485148514
+spread,n121_opponent_ridge_recent (season-opening),2024,cover_or_over,0.65,0.8,23,0.6948052914433623,0.34782608695652173
+spread,n121_opponent_ridge_recent (season-opening),2024,cover_or_over,0.8,1.001,4,0.8319229462885382,0.5
+spread,n121_opponent_ridge_recent (season-opening),2024,push,0,0.025,170,0.0032173807800100333,0.0058823529411764705
+spread,n121_opponent_ridge_recent (season-opening),2024,push,0.025,0.05,115,0.03177756834547541,0.06086956521739131
+spread,n121_opponent_ridge_recent (season-opening),2024,loss_or_under,0.1,0.2,5,0.16544032418269414,0.6
+spread,n121_opponent_ridge_recent (season-opening),2024,loss_or_under,0.2,0.35,28,0.30772194126701613,0.6428571428571429
+spread,n121_opponent_ridge_recent (season-opening),2024,loss_or_under,0.35,0.5,106,0.4300975721882307,0.49056603773584906
+spread,n121_opponent_ridge_recent (season-opening),2024,loss_or_under,0.5,0.65,84,0.571253415829681,0.47619047619047616
+spread,n121_opponent_ridge_recent (season-opening),2024,loss_or_under,0.65,0.8,54,0.7102965902644699,0.48148148148148145
+spread,n121_opponent_ridge_recent (season-opening),2024,loss_or_under,0.8,1.001,8,0.8512321354865221,0.375
+spread,n121_opponent_ridge_recent (season-opening),2025,cover_or_over,0.05,0.1,1,0.0891659965838528,1.0
+spread,n121_opponent_ridge_recent (season-opening),2025,cover_or_over,0.1,0.2,7,0.1434141146957164,0.2857142857142857
+spread,n121_opponent_ridge_recent (season-opening),2025,cover_or_over,0.2,0.35,50,0.28625790124467093,0.56
+spread,n121_opponent_ridge_recent (season-opening),2025,cover_or_over,0.35,0.5,105,0.4272312193391813,0.49523809523809526
+spread,n121_opponent_ridge_recent (season-opening),2025,cover_or_over,0.5,0.65,89,0.5619736402872378,0.4606741573033708
+spread,n121_opponent_ridge_recent (season-opening),2025,cover_or_over,0.65,0.8,29,0.7173941312265446,0.5517241379310345
+spread,n121_opponent_ridge_recent (season-opening),2025,cover_or_over,0.8,1.001,4,0.8190041987757399,0.0
+spread,n121_opponent_ridge_recent (season-opening),2025,push,0,0.025,177,0.0015336903890453364,0.005649717514124294
+spread,n121_opponent_ridge_recent (season-opening),2025,push,0.025,0.05,108,0.03232655182748446,0.018518518518518517
+spread,n121_opponent_ridge_recent (season-opening),2025,loss_or_under,0.1,0.2,8,0.18254564967879233,0.875
+spread,n121_opponent_ridge_recent (season-opening),2025,loss_or_under,0.2,0.35,30,0.29726678586441124,0.43333333333333335
+spread,n121_opponent_ridge_recent (season-opening),2025,loss_or_under,0.35,0.5,96,0.43534105316997596,0.5208333333333334
+spread,n121_opponent_ridge_recent (season-opening),2025,loss_or_under,0.5,0.65,96,0.5710053020047856,0.4895833333333333
+spread,n121_opponent_ridge_recent (season-opening),2025,loss_or_under,0.65,0.8,47,0.7023452900403977,0.425531914893617
+spread,n121_opponent_ridge_recent (season-opening),2025,loss_or_under,0.8,1.001,8,0.8597604028992271,0.625
+spread,n121_opponent_ridge_recent (season-opening),2026,cover_or_over,0.1,0.2,1,0.19540862437481893,1.0
+spread,n121_opponent_ridge_recent (season-opening),2026,cover_or_over,0.2,0.35,16,0.2842789540469539,0.625
+spread,n121_opponent_ridge_recent (season-opening),2026,cover_or_over,0.35,0.5,66,0.42266203113792267,0.5
+spread,n121_opponent_ridge_recent (season-opening),2026,cover_or_over,0.5,0.65,55,0.5717837834253303,0.5818181818181818
+spread,n121_opponent_ridge_recent (season-opening),2026,cover_or_over,0.65,0.8,11,0.6913812241685267,0.6363636363636364
+spread,n121_opponent_ridge_recent (season-opening),2026,push,0,0.025,86,0.0016758569700041357,0.0
+spread,n121_opponent_ridge_recent (season-opening),2026,push,0.025,0.05,63,0.032034847978984905,0.07936507936507936
+spread,n121_opponent_ridge_recent (season-opening),2026,loss_or_under,0.2,0.35,15,0.30715595285395114,0.26666666666666666
+spread,n121_opponent_ridge_recent (season-opening),2026,loss_or_under,0.35,0.5,58,0.43005181753209293,0.5
+spread,n121_opponent_ridge_recent (season-opening),2026,loss_or_under,0.5,0.65,62,0.5729051300921079,0.3870967741935484
+spread,n121_opponent_ridge_recent (season-opening),2026,loss_or_under,0.65,0.8,13,0.7130584021862403,0.3076923076923077
+spread,n121_opponent_ridge_recent (season-opening),2026,loss_or_under,0.8,1.001,1,0.8045913756251811,0.0
+spread,n122_residual_league (season-opening),2024,cover_or_over,0.05,0.1,1,0.08004621196327588,0.0
+spread,n122_residual_league (season-opening),2024,cover_or_over,0.1,0.2,7,0.15352564981739794,0.42857142857142855
+spread,n122_residual_league (season-opening),2024,cover_or_over,0.2,0.35,62,0.2897634228709972,0.4838709677419355
+spread,n122_residual_league (season-opening),2024,cover_or_over,0.35,0.5,109,0.43343902245317867,0.48623853211009177
+spread,n122_residual_league (season-opening),2024,cover_or_over,0.5,0.65,82,0.574013666785716,0.4878048780487805
+spread,n122_residual_league (season-opening),2024,cover_or_over,0.65,0.8,21,0.6966729040102673,0.3333333333333333
+spread,n122_residual_league (season-opening),2024,cover_or_over,0.8,1.001,3,0.8333418551795834,0.6666666666666666
+spread,n122_residual_league (season-opening),2024,push,0,0.025,169,0.0030597983435775595,0.0
+spread,n122_residual_league (season-opening),2024,push,0.025,0.05,116,0.03100347841155477,0.06896551724137931
+spread,n122_residual_league (season-opening),2024,loss_or_under,0.1,0.2,4,0.16693971447813505,0.5
+spread,n122_residual_league (season-opening),2024,loss_or_under,0.2,0.35,25,0.3053840713148703,0.72
+spread,n122_residual_league (season-opening),2024,loss_or_under,0.35,0.5,91,0.42550443238837987,0.4725274725274725
+spread,n122_residual_league (season-opening),2024,loss_or_under,0.5,0.65,102,0.5656380792429194,0.4411764705882353
+spread,n122_residual_league (season-opening),2024,loss_or_under,0.65,0.8,57,0.7093628595043417,0.543859649122807
+spread,n122_residual_league (season-opening),2024,loss_or_under,0.8,1.001,6,0.8617118115460792,0.5
+spread,n122_residual_league (season-opening),2025,cover_or_over,0.05,0.1,1,0.09197577272366216,0.0
+spread,n122_residual_league (season-opening),2025,cover_or_over,0.1,0.2,6,0.1495903216423301,0.5
+spread,n122_residual_league (season-opening),2025,cover_or_over,0.2,0.35,44,0.2833505061072354,0.5227272727272727
+spread,n122_residual_league (season-opening),2025,cover_or_over,0.35,0.5,118,0.4335791762280904,0.5254237288135594
+spread,n122_residual_league (season-opening),2025,cover_or_over,0.5,0.65,86,0.5652645676758946,0.47674418604651164
+spread,n122_residual_league (season-opening),2025,cover_or_over,0.65,0.8,27,0.7306217295394585,0.4074074074074074
+spread,n122_residual_league (season-opening),2025,cover_or_over,0.8,1.001,3,0.8189053690202163,0.0
+spread,n122_residual_league (season-opening),2025,push,0,0.025,178,0.0015064827292921104,0.0056179775280898875
+spread,n122_residual_league (season-opening),2025,push,0.025,0.05,107,0.03185563308101875,0.018691588785046728
+spread,n122_residual_league (season-opening),2025,loss_or_under,0.1,0.2,7,0.18697840138988206,0.8571428571428571
+spread,n122_residual_league (season-opening),2025,loss_or_under,0.2,0.35,27,0.28303475315639776,0.5555555555555556
+spread,n122_residual_league (season-opening),2025,loss_or_under,0.35,0.5,97,0.4335197043033712,0.4845360824742268
+spread,n122_residual_league (season-opening),2025,loss_or_under,0.5,0.65,109,0.5681785447068038,0.48623853211009177
+spread,n122_residual_league (season-opening),2025,loss_or_under,0.65,0.8,38,0.7104998958794367,0.4473684210526316
+spread,n122_residual_league (season-opening),2025,loss_or_under,0.8,1.001,7,0.8535855806734628,0.5714285714285714
+spread,n122_residual_league (season-opening),2026,cover_or_over,0.1,0.2,3,0.1678417697987132,1.0
+spread,n122_residual_league (season-opening),2026,cover_or_over,0.2,0.35,14,0.2961469169249095,0.5714285714285714
+spread,n122_residual_league (season-opening),2026,cover_or_over,0.35,0.5,65,0.43266791392535164,0.5230769230769231
+spread,n122_residual_league (season-opening),2026,cover_or_over,0.5,0.65,57,0.562343569803517,0.543859649122807
+spread,n122_residual_league (season-opening),2026,cover_or_over,0.65,0.8,10,0.7044441977758836,0.7
+spread,n122_residual_league (season-opening),2026,push,0,0.025,85,0.0013028574140982736,0.0
+spread,n122_residual_league (season-opening),2026,push,0.025,0.05,64,0.0307785559793363,0.078125
+spread,n122_residual_league (season-opening),2026,loss_or_under,0.2,0.35,13,0.2935474120876813,0.3076923076923077
+spread,n122_residual_league (season-opening),2026,loss_or_under,0.35,0.5,59,0.43531151150925046,0.4406779661016949
+spread,n122_residual_league (season-opening),2026,loss_or_under,0.5,0.65,63,0.5611750877300027,0.4444444444444444
+spread,n122_residual_league (season-opening),2026,loss_or_under,0.65,0.8,12,0.7110758196224928,0.25
+spread,n122_residual_league (season-opening),2026,loss_or_under,0.8,1.001,2,0.8309858152131884,0.0
+spread,n123_integer_joint (season-opening),2024,cover_or_over,0.05,0.1,1,0.07630537745165959,0.0
+spread,n123_integer_joint (season-opening),2024,cover_or_over,0.1,0.2,8,0.1567599536545054,0.5
+spread,n123_integer_joint (season-opening),2024,cover_or_over,0.2,0.35,59,0.2891577337134595,0.4745762711864407
+spread,n123_integer_joint (season-opening),2024,cover_or_over,0.35,0.5,116,0.43288789119716214,0.49137931034482757
+spread,n123_integer_joint (season-opening),2024,cover_or_over,0.5,0.65,78,0.5757383753649344,0.48717948717948717
+spread,n123_integer_joint (season-opening),2024,cover_or_over,0.65,0.8,20,0.6950826885149302,0.3
+spread,n123_integer_joint (season-opening),2024,cover_or_over,0.8,1.001,3,0.8358603296066808,0.6666666666666666
+spread,n123_integer_joint (season-opening),2024,push,0,0.025,174,0.003401494444723621,0.005747126436781609
+spread,n123_integer_joint (season-opening),2024,push,0.025,0.05,78,0.03244599321252911,0.0641025641025641
+spread,n123_integer_joint (season-opening),2024,push,0.05,0.1,33,0.05571684428314937,0.06060606060606061
+spread,n123_integer_joint (season-opening),2024,loss_or_under,0.1,0.2,4,0.16620231784351272,0.5
+spread,n123_integer_joint (season-opening),2024,loss_or_under,0.2,0.35,25,0.3063036012656571,0.68
+spread,n123_integer_joint (season-opening),2024,loss_or_under,0.35,0.5,93,0.42814327875426755,0.4838709677419355
+spread,n123_integer_joint (season-opening),2024,loss_or_under,0.5,0.65,106,0.5706374318391418,0.44339622641509435
+spread,n123_integer_joint (season-opening),2024,loss_or_under,0.65,0.8,51,0.7120817590453333,0.5490196078431373
+spread,n123_integer_joint (season-opening),2024,loss_or_under,0.8,1.001,6,0.8621200348395525,0.5
+spread,n123_integer_joint (season-opening),2025,cover_or_over,0.05,0.1,1,0.09681124639267112,0.0
+spread,n123_integer_joint (season-opening),2025,cover_or_over,0.1,0.2,7,0.15777012667739956,0.5714285714285714
+spread,n123_integer_joint (season-opening),2025,cover_or_over,0.2,0.35,44,0.28604151768271574,0.5227272727272727
+spread,n123_integer_joint (season-opening),2025,cover_or_over,0.35,0.5,125,0.4362750858913119,0.488
+spread,n123_integer_joint (season-opening),2025,cover_or_over,0.5,0.65,77,0.567540850353164,0.5194805194805194
+spread,n123_integer_joint (season-opening),2025,cover_or_over,0.65,0.8,29,0.7275612975427601,0.41379310344827586
+spread,n123_integer_joint (season-opening),2025,cover_or_over,0.8,1.001,2,0.8209597065576578,0.0
+spread,n123_integer_joint (season-opening),2025,push,0,0.025,181,0.0018747940295173577,0.0055248618784530384
+spread,n123_integer_joint (season-opening),2025,push,0.025,0.05,74,0.03514071726836232,0.013513513513513514
+spread,n123_integer_joint (season-opening),2025,push,0.05,0.1,30,0.05805845214616161,0.03333333333333333
+spread,n123_integer_joint (season-opening),2025,loss_or_under,0.1,0.2,6,0.18822727361657632,1.0
+spread,n123_integer_joint (season-opening),2025,loss_or_under,0.2,0.35,30,0.2834158531743984,0.5333333333333333
+spread,n123_integer_joint (season-opening),2025,loss_or_under,0.35,0.5,95,0.43503225435269,0.4631578947368421
+spread,n123_integer_joint (season-opening),2025,loss_or_under,0.5,0.65,108,0.5658617721863282,0.5
+spread,n123_integer_joint (season-opening),2025,loss_or_under,0.65,0.8,39,0.7055477593884628,0.46153846153846156
+spread,n123_integer_joint (season-opening),2025,loss_or_under,0.8,1.001,7,0.8522715798666122,0.5714285714285714
+spread,n123_integer_joint (season-opening),2026,cover_or_over,0.1,0.2,4,0.1739618208733613,1.0
+spread,n123_integer_joint (season-opening),2026,cover_or_over,0.2,0.35,10,0.2886498406194582,0.6
+spread,n123_integer_joint (season-opening),2026,cover_or_over,0.35,0.5,71,0.43133750282003047,0.5352112676056338
+spread,n123_integer_joint (season-opening),2026,cover_or_over,0.5,0.65,54,0.5630188168607541,0.5370370370370371
+spread,n123_integer_joint (season-opening),2026,cover_or_over,0.65,0.8,10,0.7035605758253943,0.6
+spread,n123_integer_joint (season-opening),2026,push,0,0.025,94,0.0030974977236662015,0.0
+spread,n123_integer_joint (season-opening),2026,push,0.025,0.05,37,0.036153203344147344,0.10810810810810811
+spread,n123_integer_joint (season-opening),2026,push,0.05,0.1,18,0.05757601364159833,0.05555555555555555
+spread,n123_integer_joint (season-opening),2026,loss_or_under,0.2,0.35,15,0.3013874200028553,0.3333333333333333
+spread,n123_integer_joint (season-opening),2026,loss_or_under,0.35,0.5,54,0.43335594456595533,0.46296296296296297
+spread,n123_integer_joint (season-opening),2026,loss_or_under,0.5,0.65,67,0.5564761123125889,0.43283582089552236
+spread,n123_integer_joint (season-opening),2026,loss_or_under,0.65,0.8,11,0.7119640331502881,0.18181818181818182
+spread,n123_integer_joint (season-opening),2026,loss_or_under,0.8,1.001,2,0.8256659949236339,0.0
+spread,n124_adjusted_long,2024,cover_or_over,0.1,0.2,4,0.1720523038175576,0.25
+spread,n124_adjusted_long,2024,cover_or_over,0.2,0.35,50,0.2876418499542859,0.46
+spread,n124_adjusted_long,2024,cover_or_over,0.35,0.5,119,0.433525960195184,0.48739495798319327
+spread,n124_adjusted_long,2024,cover_or_over,0.5,0.65,99,0.5636250897597479,0.48484848484848486
+spread,n124_adjusted_long,2024,cover_or_over,0.65,0.8,13,0.686368655926178,0.38461538461538464
+spread,n124_adjusted_long,2024,push,0,0.025,167,0.0027994169503977088,0.005988023952095809
+spread,n124_adjusted_long,2024,push,0.025,0.05,113,0.0360584303755883,0.05309734513274336
+spread,n124_adjusted_long,2024,push,0.05,0.1,5,0.05488554227259398,0.2
+spread,n124_adjusted_long,2024,loss_or_under,0.2,0.35,18,0.30827285081489914,0.5555555555555556
+spread,n124_adjusted_long,2024,loss_or_under,0.35,0.5,111,0.4356193610160387,0.5135135135135135
+spread,n124_adjusted_long,2024,loss_or_under,0.5,0.65,112,0.5646740807278767,0.45535714285714285
+spread,n124_adjusted_long,2024,loss_or_under,0.65,0.8,40,0.7096788973416827,0.525
+spread,n124_adjusted_long,2024,loss_or_under,0.8,1.001,4,0.8171465783435974,0.75
+spread,n124_adjusted_long,2025,cover_or_over,0.1,0.2,2,0.15305680622401624,0.5
+spread,n124_adjusted_long,2025,cover_or_over,0.2,0.35,26,0.3195481802608025,0.5
+spread,n124_adjusted_long,2025,cover_or_over,0.35,0.5,131,0.42399854410207927,0.5038167938931297
+spread,n124_adjusted_long,2025,cover_or_over,0.5,0.65,105,0.5627270010490006,0.4857142857142857
+spread,n124_adjusted_long,2025,cover_or_over,0.65,0.8,20,0.7036547292518416,0.45
+spread,n124_adjusted_long,2025,cover_or_over,0.8,1.001,1,0.8122562059031554,0.0
+spread,n124_adjusted_long,2025,push,0,0.025,179,0.0018816626224130004,0.00558659217877095
+spread,n124_adjusted_long,2025,push,0.025,0.05,98,0.03453680204162605,0.02040816326530612
+spread,n124_adjusted_long,2025,push,0.05,0.1,8,0.05172907071020718,0.0
+spread,n124_adjusted_long,2025,loss_or_under,0.1,0.2,2,0.1893939864410288,1.0
+spread,n124_adjusted_long,2025,loss_or_under,0.2,0.35,22,0.30060113634403335,0.45454545454545453
+spread,n124_adjusted_long,2025,loss_or_under,0.35,0.5,117,0.4331991767483151,0.5128205128205128
+spread,n124_adjusted_long,2025,loss_or_under,0.5,0.65,124,0.5735444584118654,0.4838709677419355
+spread,n124_adjusted_long,2025,loss_or_under,0.65,0.8,19,0.68782623380373,0.47368421052631576
+spread,n124_adjusted_long,2025,loss_or_under,0.8,1.001,1,0.8703538097948902,1.0
+spread,n124_adjusted_long,2026,cover_or_over,0.2,0.35,15,0.3105358151195753,0.4666666666666667
+spread,n124_adjusted_long,2026,cover_or_over,0.35,0.5,71,0.43883578376883803,0.5774647887323944
+spread,n124_adjusted_long,2026,cover_or_over,0.5,0.65,51,0.551109257517287,0.5490196078431373
+spread,n124_adjusted_long,2026,cover_or_over,0.65,0.8,12,0.6785379541939083,0.5833333333333334
+spread,n124_adjusted_long,2026,push,0,0.025,96,0.0035178392761648467,0.020833333333333332
+spread,n124_adjusted_long,2026,push,0.025,0.05,52,0.03500932195855344,0.057692307692307696
+spread,n124_adjusted_long,2026,push,0.05,0.1,1,0.052109575807759316,0.0
+spread,n124_adjusted_long,2026,loss_or_under,0.2,0.35,14,0.3154070278942193,0.35714285714285715
+spread,n124_adjusted_long,2026,loss_or_under,0.35,0.5,57,0.4479348944217917,0.47368421052631576
+spread,n124_adjusted_long,2026,loss_or_under,0.5,0.65,70,0.5601315481427264,0.35714285714285715
+spread,n124_adjusted_long,2026,loss_or_under,0.65,0.8,8,0.6960114888992393,0.5
+spread,n124_form_rest,2024,cover_or_over,0.1,0.2,5,0.183477513843606,0.6
+spread,n124_form_rest,2024,cover_or_over,0.2,0.35,48,0.2946211840236448,0.4375
+spread,n124_form_rest,2024,cover_or_over,0.35,0.5,113,0.4269524862006654,0.49557522123893805
+spread,n124_form_rest,2024,cover_or_over,0.5,0.65,107,0.559978506075516,0.4672897196261682
+spread,n124_form_rest,2024,cover_or_over,0.65,0.8,12,0.6925509036439016,0.4166666666666667
+spread,n124_form_rest,2024,push,0,0.025,167,0.0027772989961700567,0.005988023952095809
+spread,n124_form_rest,2024,push,0.025,0.05,117,0.036457691135536194,0.05982905982905983
+spread,n124_form_rest,2024,push,0.05,0.1,1,0.052437337197467605,0.0
+spread,n124_form_rest,2024,loss_or_under,0.2,0.35,17,0.30200494584833887,0.5882352941176471
+spread,n124_form_rest,2024,loss_or_under,0.35,0.5,117,0.43714610505792,0.5042735042735043
+spread,n124_form_rest,2024,loss_or_under,0.5,0.65,108,0.5707270009577278,0.4722222222222222
+spread,n124_form_rest,2024,loss_or_under,0.65,0.8,40,0.7084905984232952,0.525
+spread,n124_form_rest,2024,loss_or_under,0.8,1.001,3,0.8089130397281306,0.3333333333333333
+spread,n124_form_rest,2025,cover_or_over,0.1,0.2,2,0.15779364832927942,0.5
+spread,n124_form_rest,2025,cover_or_over,0.2,0.35,22,0.30960397328352607,0.5454545454545454
+spread,n124_form_rest,2025,cover_or_over,0.35,0.5,133,0.4297741611182643,0.48872180451127817
+spread,n124_form_rest,2025,cover_or_over,0.5,0.65,107,0.5581500521629107,0.5046728971962616
+spread,n124_form_rest,2025,cover_or_over,0.65,0.8,20,0.7003303144784282,0.4
+spread,n124_form_rest,2025,cover_or_over,0.8,1.001,1,0.8090983111663131,0.0
+spread,n124_form_rest,2025,push,0,0.025,191,0.002814170672012004,0.010471204188481676
+spread,n124_form_rest,2025,push,0.025,0.05,88,0.036440272151730006,0.011363636363636364
+spread,n124_form_rest,2025,push,0.05,0.1,6,0.052009809840891964,0.0
+spread,n124_form_rest,2025,loss_or_under,0.1,0.2,1,0.19090168883368697,1.0
+spread,n124_form_rest,2025,loss_or_under,0.2,0.35,23,0.300346377036602,0.4782608695652174
+spread,n124_form_rest,2025,loss_or_under,0.35,0.5,121,0.4388977893428077,0.49586776859504134
+spread,n124_form_rest,2025,loss_or_under,0.5,0.65,121,0.5672490326476862,0.512396694214876
+spread,n124_form_rest,2025,loss_or_under,0.65,0.8,18,0.6888771584812572,0.3888888888888889
+spread,n124_form_rest,2025,loss_or_under,0.8,1.001,1,0.8766695992685746,1.0
+spread,n124_form_rest,2026,cover_or_over,0.2,0.35,12,0.31294789743943596,0.3333333333333333
+spread,n124_form_rest,2026,cover_or_over,0.35,0.5,81,0.43246875884492536,0.5925925925925926
+spread,n124_form_rest,2026,cover_or_over,0.5,0.65,43,0.5594439128852752,0.5348837209302325
+spread,n124_form_rest,2026,cover_or_over,0.65,0.8,13,0.6895404307607382,0.6153846153846154
+spread,n124_form_rest,2026,push,0,0.025,86,0.001386932149380563,0.011627906976744186
+spread,n124_form_rest,2026,push,0.025,0.05,61,0.036205241410827545,0.06557377049180328
+spread,n124_form_rest,2026,push,0.05,0.1,2,0.05178181441805102,0.0
+spread,n124_form_rest,2026,loss_or_under,0.2,0.35,17,0.3098576216700001,0.4117647058823529
+spread,n124_form_rest,2026,loss_or_under,0.35,0.5,51,0.448350101930748,0.49019607843137253
+spread,n124_form_rest,2026,loss_or_under,0.5,0.65,75,0.5659714629083361,0.3466666666666667
+spread,n124_form_rest,2026,loss_or_under,0.65,0.8,6,0.6969813176007866,0.5
+spread,n124_raw_long,2024,cover_or_over,0.1,0.2,3,0.1633992881252623,0.3333333333333333
+spread,n124_raw_long,2024,cover_or_over,0.2,0.35,56,0.2853569518683631,0.4642857142857143
+spread,n124_raw_long,2024,cover_or_over,0.35,0.5,119,0.43643927622283196,0.5042016806722689
+spread,n124_raw_long,2024,cover_or_over,0.5,0.65,94,0.5691463889540374,0.4574468085106383
+spread,n124_raw_long,2024,cover_or_over,0.65,0.8,13,0.6953504857370719,0.38461538461538464
+spread,n124_raw_long,2024,push,0,0.025,173,0.0033941900579311027,0.023121387283236993
+spread,n124_raw_long,2024,push,0.025,0.05,107,0.03702775718185178,0.028037383177570093
+spread,n124_raw_long,2024,push,0.05,0.1,5,0.05221045731339165,0.2
+spread,n124_raw_long,2024,loss_or_under,0.2,0.35,18,0.3030096929201623,0.5555555555555556
+spread,n124_raw_long,2024,loss_or_under,0.35,0.5,108,0.4316010568867268,0.5185185185185185
+spread,n124_raw_long,2024,loss_or_under,0.5,0.65,112,0.5652868497448144,0.4642857142857143
+spread,n124_raw_long,2024,loss_or_under,0.65,0.8,44,0.7134517194927069,0.5
+spread,n124_raw_long,2024,loss_or_under,0.8,1.001,3,0.8243044845808392,0.6666666666666666
+spread,n124_raw_long,2025,cover_or_over,0.1,0.2,2,0.1609515430661215,0.5
+spread,n124_raw_long,2025,cover_or_over,0.2,0.35,26,0.30913139250819727,0.46153846153846156
+spread,n124_raw_long,2025,cover_or_over,0.35,0.5,134,0.42380175405125176,0.5149253731343284
+spread,n124_raw_long,2025,cover_or_over,0.5,0.65,93,0.5649359937838484,0.4838709677419355
+spread,n124_raw_long,2025,cover_or_over,0.65,0.8,29,0.6947482156039406,0.4482758620689655
+spread,n124_raw_long,2025,cover_or_over,0.8,1.001,1,0.8122562059031552,0.0
+spread,n124_raw_long,2025,push,0,0.025,179,0.0016792909251920527,0.0
+spread,n124_raw_long,2025,push,0.025,0.05,103,0.035668907067336116,0.02912621359223301
+spread,n124_raw_long,2025,push,0.05,0.1,3,0.050430862472470916,0.0
+spread,n124_raw_long,2025,loss_or_under,0.1,0.2,2,0.1862360917041867,1.0
+spread,n124_raw_long,2025,loss_or_under,0.2,0.35,31,0.30411637143100395,0.4838709677419355
+spread,n124_raw_long,2025,loss_or_under,0.35,0.5,103,0.43026211029765316,0.5048543689320388
+spread,n124_raw_long,2025,loss_or_under,0.5,0.65,127,0.5717598205828991,0.48031496062992124
+spread,n124_raw_long,2025,loss_or_under,0.65,0.8,21,0.6970554376764593,0.5238095238095238
+spread,n124_raw_long,2025,loss_or_under,0.8,1.001,1,0.857722230847522,1.0
+spread,n124_raw_long,2026,cover_or_over,0.2,0.35,11,0.30244127347061667,0.5454545454545454
+spread,n124_raw_long,2026,cover_or_over,0.35,0.5,84,0.43960191366649987,0.5595238095238095
+spread,n124_raw_long,2026,cover_or_over,0.5,0.65,41,0.5562834046287986,0.5609756097560976
+spread,n124_raw_long,2026,cover_or_over,0.65,0.8,13,0.690380773808813,0.5384615384615384
+spread,n124_raw_long,2026,push,0,0.025,91,0.0023493648272409334,0.0
+spread,n124_raw_long,2026,push,0.025,0.05,56,0.035578505013763514,0.08928571428571429
+spread,n124_raw_long,2026,push,0.05,0.1,2,0.05100657247839362,0.0
+spread,n124_raw_long,2026,loss_or_under,0.2,0.35,14,0.30172875650285985,0.42857142857142855
+spread,n124_raw_long,2026,loss_or_under,0.35,0.5,49,0.44203365556749014,0.4489795918367347
+spread,n124_raw_long,2026,loss_or_under,0.5,0.65,77,0.5528954862350297,0.37662337662337664
+spread,n124_raw_long,2026,loss_or_under,0.65,0.8,9,0.6887788683990101,0.4444444444444444
+spread,n124_short_long,2024,cover_or_over,0.1,0.2,6,0.18070100685998833,0.5
+spread,n124_short_long,2024,cover_or_over,0.2,0.35,52,0.2972576390298793,0.46153846153846156
+spread,n124_short_long,2024,cover_or_over,0.35,0.5,112,0.43346913867756914,0.5
+spread,n124_short_long,2024,cover_or_over,0.5,0.65,102,0.5604197679692898,0.46078431372549017
+spread,n124_short_long,2024,cover_or_over,0.65,0.8,13,0.6910262381617762,0.38461538461538464
+spread,n124_short_long,2024,push,0,0.025,169,0.0022036405705926684,0.01775147928994083
+spread,n124_short_long,2024,push,0.025,0.05,116,0.03667796580931187,0.04310344827586207
+spread,n124_short_long,2024,loss_or_under,0.2,0.35,19,0.30880768396175445,0.5789473684210527
+spread,n124_short_long,2024,loss_or_under,0.35,0.5,112,0.4387115558069214,0.49107142857142855
+spread,n124_short_long,2024,loss_or_under,0.5,0.65,111,0.5683832038839026,0.4864864864864865
+spread,n124_short_long,2024,loss_or_under,0.65,0.8,38,0.7094587397438378,0.5
+spread,n124_short_long,2024,loss_or_under,0.8,1.001,5,0.8167256982180131,0.6
+spread,n124_short_long,2025,cover_or_over,0.1,0.2,2,0.15305680622401624,0.5
+spread,n124_short_long,2025,cover_or_over,0.2,0.35,28,0.31740298386083193,0.4642857142857143
+spread,n124_short_long,2025,cover_or_over,0.35,0.5,132,0.43160837270913344,0.5
+spread,n124_short_long,2025,cover_or_over,0.5,0.65,102,0.5621437455245687,0.5
+spread,n124_short_long,2025,cover_or_over,0.65,0.8,20,0.7025041487691697,0.45
+spread,n124_short_long,2025,cover_or_over,0.8,1.001,1,0.8185719953768394,0.0
+spread,n124_short_long,2025,push,0,0.025,185,0.0023014537593019193,0.010810810810810811
+spread,n124_short_long,2025,push,0.025,0.05,97,0.036257057406971695,0.010309278350515464
+spread,n124_short_long,2025,push,0.05,0.1,3,0.0505002098822934,0.0
+spread,n124_short_long,2025,loss_or_under,0.1,0.2,1,0.18142800462316067,1.0
+spread,n124_short_long,2025,loss_or_under,0.2,0.35,22,0.29691609465247104,0.45454545454545453
+spread,n124_short_long,2025,loss_or_under,0.35,0.5,117,0.4341568799002945,0.5213675213675214
+spread,n124_short_long,2025,loss_or_under,0.5,0.65,124,0.5676127730116042,0.47580645161290325
+spread,n124_short_long,2025,loss_or_under,0.65,0.8,19,0.6825028803961463,0.5263157894736842
+spread,n124_short_long,2025,loss_or_under,0.8,1.001,2,0.8356504338525763,0.5
+spread,n124_short_long,2026,cover_or_over,0.2,0.35,14,0.31174314843155077,0.42857142857142855
+spread,n124_short_long,2026,cover_or_over,0.35,0.5,75,0.433249937035312,0.6
+spread,n124_short_long,2026,cover_or_over,0.5,0.65,47,0.5542960856187625,0.5319148936170213
+spread,n124_short_long,2026,cover_or_over,0.65,0.8,13,0.689119277279501,0.5384615384615384
+spread,n124_short_long,2026,push,0,0.025,90,0.002191052305734291,0.011111111111111112
+spread,n124_short_long,2026,push,0.025,0.05,58,0.035879355255871,0.06896551724137931
+spread,n124_short_long,2026,push,0.05,0.1,1,0.052109575807759316,0.0
+spread,n124_short_long,2026,loss_or_under,0.2,0.35,16,0.30637030136797255,0.4375
+spread,n124_short_long,2026,loss_or_under,0.35,0.5,53,0.4491935279656628,0.5094339622641509
+spread,n124_short_long,2026,loss_or_under,0.5,0.65,73,0.5650422178883044,0.3287671232876712
+spread,n124_short_long,2026,loss_or_under,0.65,0.8,7,0.6919733453594655,0.42857142857142855
+spread,n125_allowed_median_reference,2024,cover_or_over,0.35,0.5,148,0.4845026926408622,0.47297297297297297
+spread,n125_allowed_median_reference,2024,cover_or_over,0.5,0.65,137,0.5135376042446004,0.4744525547445255
+spread,n125_allowed_median_reference,2024,push,0,0.025,145,0.0,0.0
+spread,n125_allowed_median_reference,2024,push,0.025,0.05,138,0.03720975410873459,0.057971014492753624
+spread,n125_allowed_median_reference,2024,push,0.05,0.1,2,0.052124506418182615,0.0
+spread,n125_allowed_median_reference,2024,loss_or_under,0.35,0.5,237,0.47712325100313147,0.4978902953586498
+spread,n125_allowed_median_reference,2024,loss_or_under,0.5,0.65,48,0.5129488362512137,0.5
+spread,n125_allowed_median_reference,2025,cover_or_over,0.35,0.5,161,0.4802540010333265,0.515527950310559
+spread,n125_allowed_median_reference,2025,cover_or_over,0.5,0.65,124,0.5135448947428561,0.4596774193548387
+spread,n125_allowed_median_reference,2025,push,0,0.025,163,0.0,0.0
+spread,n125_allowed_median_reference,2025,push,0.025,0.05,117,0.04250893005310664,0.02564102564102564
+spread,n125_allowed_median_reference,2025,push,0.05,0.1,5,0.052185233194411505,0.0
+spread,n125_allowed_median_reference,2025,loss_or_under,0.35,0.5,216,0.4788207700278221,0.5324074074074074
+spread,n125_allowed_median_reference,2025,loss_or_under,0.5,0.65,69,0.5121707474974663,0.391304347826087
+spread,n125_allowed_median_reference,2026,cover_or_over,0.35,0.5,105,0.48113760512762566,0.5619047619047619
+spread,n125_allowed_median_reference,2026,cover_or_over,0.5,0.65,44,0.5110023038622511,0.5454545454545454
+spread,n125_allowed_median_reference,2026,push,0,0.025,81,0.00029680959396954806,0.0
+spread,n125_allowed_median_reference,2026,push,0.025,0.05,68,0.03278667257823162,0.07352941176470588
+spread,n125_allowed_median_reference,2026,loss_or_under,0.35,0.5,92,0.48497800185177076,0.42391304347826086
+spread,n125_allowed_median_reference,2026,loss_or_under,0.5,0.65,57,0.5109638352432644,0.38596491228070173
+spread,n125_disagreement_ridge,2024,cover_or_over,0.35,0.5,148,0.48286678818212486,0.5
+spread,n125_disagreement_ridge,2024,cover_or_over,0.5,0.65,137,0.5224111582383631,0.44525547445255476
+spread,n125_disagreement_ridge,2024,push,0,0.025,148,3.1281281281281295e-05,0.0
+spread,n125_disagreement_ridge,2024,push,0.025,0.05,39,0.04454766641964705,0.07692307692307693
+spread,n125_disagreement_ridge,2024,push,0.05,0.1,98,0.059988446315442395,0.05102040816326531
+spread,n125_disagreement_ridge,2024,loss_or_under,0.35,0.5,252,0.46647098627372424,0.5
+spread,n125_disagreement_ridge,2024,loss_or_under,0.5,0.65,33,0.5089042960758193,0.48484848484848486
+spread,n125_disagreement_ridge,2025,cover_or_over,0.35,0.5,169,0.46929256556832055,0.4970414201183432
+spread,n125_disagreement_ridge,2025,cover_or_over,0.5,0.65,116,0.5216835368857242,0.4827586206896552
+spread,n125_disagreement_ridge,2025,push,0,0.025,165,0.0001703522611253767,0.0
+spread,n125_disagreement_ridge,2025,push,0.025,0.05,114,0.0380818035804035,0.02631578947368421
+spread,n125_disagreement_ridge,2025,push,0.05,0.1,6,0.053627294054268644,0.0
+spread,n125_disagreement_ridge,2025,loss_or_under,0.35,0.5,174,0.4737792217128389,0.5057471264367817
+spread,n125_disagreement_ridge,2025,loss_or_under,0.5,0.65,111,0.5229322888882753,0.4864864864864865
+spread,n125_disagreement_ridge,2026,cover_or_over,0.35,0.5,92,0.45070096404342747,0.532608695652174
+spread,n125_disagreement_ridge,2026,cover_or_over,0.5,0.65,57,0.5358454353800329,0.5964912280701754
+spread,n125_disagreement_ridge,2026,push,0,0.025,81,5.7155921353452195e-05,0.0
+spread,n125_disagreement_ridge,2026,push,0.025,0.05,66,0.0388239695443871,0.07575757575757576
+spread,n125_disagreement_ridge,2026,push,0.05,0.1,2,0.05100885985534611,0.0
+spread,n125_disagreement_ridge,2026,loss_or_under,0.35,0.5,78,0.4606209501752595,0.41025641025641024
+spread,n125_disagreement_ridge,2026,loss_or_under,0.5,0.65,71,0.5407726484282067,0.4084507042253521
+spread,n125_location_ridge,2024,cover_or_over,0.35,0.5,137,0.4845847683002624,0.5036496350364964
+spread,n125_location_ridge,2024,cover_or_over,0.5,0.65,148,0.5227902940697678,0.44594594594594594
+spread,n125_location_ridge,2024,push,0,0.025,148,3.128128128128129e-05,0.0
+spread,n125_location_ridge,2024,push,0.025,0.05,69,0.04408804150589443,0.07246376811594203
+spread,n125_location_ridge,2024,push,0.05,0.1,68,0.06224801859228706,0.04411764705882353
+spread,n125_location_ridge,2024,loss_or_under,0.35,0.5,259,0.46631822157338587,0.4942084942084942
+spread,n125_location_ridge,2024,loss_or_under,0.5,0.65,26,0.5070359259699845,0.5384615384615384
+spread,n125_location_ridge,2025,cover_or_over,0.35,0.5,169,0.4703247272798907,0.4970414201183432
+spread,n125_location_ridge,2025,cover_or_over,0.5,0.65,116,0.5219119235330193,0.4827586206896552
+spread,n125_location_ridge,2025,push,0,0.025,165,0.00017749170213052557,0.0
+spread,n125_location_ridge,2025,push,0.025,0.05,111,0.03754154136492689,0.02702702702702703
+spread,n125_location_ridge,2025,push,0.05,0.1,9,0.05257642184888456,0.0
+spread,n125_location_ridge,2025,loss_or_under,0.35,0.5,178,0.47372535462383686,0.5056179775280899
+spread,n125_location_ridge,2025,loss_or_under,0.5,0.65,107,0.5231835496993169,0.48598130841121495
+spread,n125_location_ridge,2026,cover_or_over,0.35,0.5,89,0.45202071868111493,0.5280898876404494
+spread,n125_location_ridge,2026,cover_or_over,0.5,0.65,60,0.5372646842150597,0.6
+spread,n125_location_ridge,2026,push,0,0.025,81,5.715592135345222e-05,0.0
+spread,n125_location_ridge,2026,push,0.025,0.05,64,0.0376131038771061,0.078125
+spread,n125_location_ridge,2026,push,0.05,0.1,4,0.050775190600410566,0.0
+spread,n125_location_ridge,2026,loss_or_under,0.35,0.5,82,0.4596977699121393,0.4024390243902439
+spread,n125_location_ridge,2026,loss_or_under,0.5,0.65,67,0.540658041962921,0.417910447761194
+spread,n125_team_market_blend,2024,cover_or_over,0.35,0.5,162,0.46612039572674463,0.4876543209876543
+spread,n125_team_market_blend,2024,cover_or_over,0.5,0.65,123,0.5243975639708998,0.45528455284552843
+spread,n125_team_market_blend,2024,push,0,0.025,148,0.00018898978741200444,0.0
+spread,n125_team_market_blend,2024,push,0.025,0.05,84,0.04477730565201918,0.05952380952380952
+spread,n125_team_market_blend,2024,push,0.05,0.1,53,0.05903646041768155,0.05660377358490566
+spread,n125_team_market_blend,2024,loss_or_under,0.35,0.5,197,0.46601656574517597,0.49746192893401014
+spread,n125_team_market_blend,2024,loss_or_under,0.5,0.65,88,0.5257288125750377,0.5
+spread,n125_team_market_blend,2025,cover_or_over,0.35,0.5,188,0.4741480687578701,0.48936170212765956
+spread,n125_team_market_blend,2025,cover_or_over,0.5,0.65,97,0.5194989950721153,0.4948453608247423
+spread,n125_team_market_blend,2025,push,0,0.025,164,6.454682570036382e-05,0.0
+spread,n125_team_market_blend,2025,push,0.025,0.05,120,0.03738368467077442,0.025
+spread,n125_team_market_blend,2025,push,0.05,0.1,1,0.05321605451578542,0.0
+spread,n125_team_market_blend,2025,loss_or_under,0.35,0.5,164,0.47752090017799137,0.5
+spread,n125_team_market_blend,2025,loss_or_under,0.5,0.65,121,0.5174007357678602,0.49586776859504134
+spread,n125_team_market_blend,2026,cover_or_over,0.35,0.5,98,0.4631069849230565,0.5612244897959183
+spread,n125_team_market_blend,2026,cover_or_over,0.5,0.65,51,0.5221621658901549,0.5490196078431373
+spread,n125_team_market_blend,2026,push,0,0.025,81,0.00011220583202303315,0.0
+spread,n125_team_market_blend,2026,push,0.025,0.05,68,0.037790202033972854,0.07352941176470588
+spread,n125_team_market_blend,2026,loss_or_under,0.35,0.5,79,0.4746697371470638,0.4050632911392405
+spread,n125_team_market_blend,2026,loss_or_under,0.5,0.65,70,0.5272501910260071,0.4142857142857143
+spread,n125_twenty_named_location_ridge,2024,cover_or_over,0.35,0.5,136,0.48354408419877215,0.5073529411764706
+spread,n125_twenty_named_location_ridge,2024,cover_or_over,0.5,0.65,149,0.5223771322842484,0.4429530201342282
+spread,n125_twenty_named_location_ridge,2024,push,0,0.025,148,3.128128128128129e-05,0.0
+spread,n125_twenty_named_location_ridge,2024,push,0.025,0.05,71,0.042291621453083364,0.07042253521126761
+spread,n125_twenty_named_location_ridge,2024,push,0.05,0.1,66,0.06155802269099822,0.045454545454545456
+spread,n125_twenty_named_location_ridge,2024,loss_or_under,0.35,0.5,255,0.4669178820973118,0.5019607843137255
+spread,n125_twenty_named_location_ridge,2024,loss_or_under,0.5,0.65,30,0.5089862551131673,0.4666666666666667
+spread,n125_twenty_named_location_ridge,2025,cover_or_over,0.35,0.5,170,0.46992084762498304,0.5
+spread,n125_twenty_named_location_ridge,2025,cover_or_over,0.5,0.65,115,0.5224488050085876,0.4782608695652174
+spread,n125_twenty_named_location_ridge,2025,push,0,0.025,165,0.00017762238696594342,0.0
+spread,n125_twenty_named_location_ridge,2025,push,0.025,0.05,107,0.038062898671682936,0.028037383177570093
+spread,n125_twenty_named_location_ridge,2025,push,0.05,0.1,13,0.05389940110039519,0.0
+spread,n125_twenty_named_location_ridge,2025,loss_or_under,0.35,0.5,177,0.47302682685156366,0.519774011299435
+spread,n125_twenty_named_location_ridge,2025,loss_or_under,0.5,0.65,108,0.5231793047130923,0.46296296296296297
+spread,n125_twenty_named_location_ridge,2026,cover_or_over,0.35,0.5,90,0.4527023950052699,0.5333333333333333
+spread,n125_twenty_named_location_ridge,2026,cover_or_over,0.5,0.65,59,0.5386952200000131,0.5932203389830508
+spread,n125_twenty_named_location_ridge,2026,push,0,0.025,81,5.7155921353452195e-05,0.0
+spread,n125_twenty_named_location_ridge,2026,push,0.025,0.05,64,0.03656135275972324,0.078125
+spread,n125_twenty_named_location_ridge,2026,push,0.05,0.1,4,0.050840969678321454,0.0
+spread,n125_twenty_named_location_ridge,2026,loss_or_under,0.35,0.5,83,0.4599373122093064,0.40963855421686746
+spread,n125_twenty_named_location_ridge,2026,loss_or_under,0.5,0.65,66,0.5416825677452619,0.4090909090909091
+total,n121_opponent_ridge_pooled_asof_t120,2024,cover_or_over,0.2,0.35,41,0.3250294580029985,0.5609756097560976
+total,n121_opponent_ridge_pooled_asof_t120,2024,cover_or_over,0.35,0.5,194,0.41926679234260517,0.5515463917525774
+total,n121_opponent_ridge_pooled_asof_t120,2024,cover_or_over,0.5,0.65,45,0.5570087136335933,0.4666666666666667
+total,n121_opponent_ridge_pooled_asof_t120,2024,cover_or_over,0.65,0.8,5,0.7262448291556141,0.4
+total,n121_opponent_ridge_pooled_asof_t120,2024,push,0,0.025,193,0.004043397128039047,0.0051813471502590676
+total,n121_opponent_ridge_pooled_asof_t120,2024,push,0.025,0.05,92,0.028750054632680443,0.03260869565217391
+total,n121_opponent_ridge_pooled_asof_t120,2024,loss_or_under,0.2,0.35,6,0.2804110091747705,0.6666666666666666
+total,n121_opponent_ridge_pooled_asof_t120,2024,loss_or_under,0.35,0.5,53,0.4383280169969081,0.5094339622641509
+total,n121_opponent_ridge_pooled_asof_t120,2024,loss_or_under,0.5,0.65,191,0.5751867582550404,0.42408376963350786
+total,n121_opponent_ridge_pooled_asof_t120,2024,loss_or_under,0.65,0.8,35,0.6697004512458945,0.45714285714285713
+total,n121_opponent_ridge_pooled_asof_t120,2025,cover_or_over,0.2,0.35,18,0.3309222617037088,0.6111111111111112
+total,n121_opponent_ridge_pooled_asof_t120,2025,cover_or_over,0.35,0.5,185,0.43456178725899935,0.5135135135135135
+total,n121_opponent_ridge_pooled_asof_t120,2025,cover_or_over,0.5,0.65,73,0.5493137636722785,0.4794520547945205
+total,n121_opponent_ridge_pooled_asof_t120,2025,cover_or_over,0.65,0.8,9,0.6842595494558353,0.7777777777777778
+total,n121_opponent_ridge_pooled_asof_t120,2025,push,0,0.025,179,0.0006788688782877165,0.0
+total,n121_opponent_ridge_pooled_asof_t120,2025,push,0.025,0.05,106,0.02893879421175038,0.009433962264150943
+total,n121_opponent_ridge_pooled_asof_t120,2025,loss_or_under,0.2,0.35,10,0.30927224237421747,0.2
+total,n121_opponent_ridge_pooled_asof_t120,2025,loss_or_under,0.35,0.5,86,0.4479336318558952,0.4883720930232558
+total,n121_opponent_ridge_pooled_asof_t120,2025,loss_or_under,0.5,0.65,175,0.5614240969289431,0.49714285714285716
+total,n121_opponent_ridge_pooled_asof_t120,2025,loss_or_under,0.65,0.8,14,0.6669976079761623,0.35714285714285715
+total,n121_opponent_ridge_pooled_asof_t120,2026,cover_or_over,0.2,0.35,15,0.3265220745238447,0.7333333333333333
+total,n121_opponent_ridge_pooled_asof_t120,2026,cover_or_over,0.35,0.5,82,0.4283038772082647,0.5121951219512195
+total,n121_opponent_ridge_pooled_asof_t120,2026,cover_or_over,0.5,0.65,47,0.5607098485795808,0.46808510638297873
+total,n121_opponent_ridge_pooled_asof_t120,2026,cover_or_over,0.65,0.8,5,0.69290301824922,0.6
+total,n121_opponent_ridge_pooled_asof_t120,2026,push,0,0.025,98,0.0007126383483519443,0.0
+total,n121_opponent_ridge_pooled_asof_t120,2026,push,0.025,0.05,51,0.028743169513049255,0.0196078431372549
+total,n121_opponent_ridge_pooled_asof_t120,2026,loss_or_under,0.2,0.35,5,0.3015638165921521,0.4
+total,n121_opponent_ridge_pooled_asof_t120,2026,loss_or_under,0.35,0.5,52,0.43640695352340064,0.5
+total,n121_opponent_ridge_pooled_asof_t120,2026,loss_or_under,0.5,0.65,83,0.5701702613554589,0.4819277108433735
+total,n121_opponent_ridge_pooled_asof_t120,2026,loss_or_under,0.65,0.8,9,0.678057823843728,0.2222222222222222
+total,n121_opponent_ridge_recent_asof_t120,2024,cover_or_over,0.2,0.35,36,0.3197315840674919,0.5555555555555556
+total,n121_opponent_ridge_recent_asof_t120,2024,cover_or_over,0.35,0.5,194,0.41719932615550614,0.5309278350515464
+total,n121_opponent_ridge_recent_asof_t120,2024,cover_or_over,0.5,0.65,49,0.5532204300552265,0.5510204081632653
+total,n121_opponent_ridge_recent_asof_t120,2024,cover_or_over,0.65,0.8,5,0.6984254725240058,0.4
+total,n121_opponent_ridge_recent_asof_t120,2024,cover_or_over,0.8,1.001,1,0.8063024340548811,1.0
+total,n121_opponent_ridge_recent_asof_t120,2024,push,0,0.025,201,0.004651574097938829,0.014925373134328358
+total,n121_opponent_ridge_recent_asof_t120,2024,push,0.025,0.05,84,0.030976811317686433,0.011904761904761904
+total,n121_opponent_ridge_recent_asof_t120,2024,loss_or_under,0.1,0.2,1,0.17022283404606342,0.0
+total,n121_opponent_ridge_recent_asof_t120,2024,loss_or_under,0.2,0.35,8,0.31593183772545635,0.625
+total,n121_opponent_ridge_recent_asof_t120,2024,loss_or_under,0.35,0.5,57,0.4456412256423107,0.5087719298245614
+total,n121_opponent_ridge_recent_asof_t120,2024,loss_or_under,0.5,0.65,190,0.5781648675901847,0.43157894736842106
+total,n121_opponent_ridge_recent_asof_t120,2024,loss_or_under,0.65,0.8,29,0.677903174001835,0.41379310344827586
+total,n121_opponent_ridge_recent_asof_t120,2025,cover_or_over,0.2,0.35,8,0.32551737431491135,0.625
+total,n121_opponent_ridge_recent_asof_t120,2025,cover_or_over,0.35,0.5,169,0.4348992316200201,0.5029585798816568
+total,n121_opponent_ridge_recent_asof_t120,2025,cover_or_over,0.5,0.65,101,0.5545212408633968,0.5346534653465347
+total,n121_opponent_ridge_recent_asof_t120,2025,cover_or_over,0.65,0.8,7,0.6882207263773016,0.5714285714285714
+total,n121_opponent_ridge_recent_asof_t120,2025,push,0,0.025,190,0.001999267941394262,0.0
+total,n121_opponent_ridge_recent_asof_t120,2025,push,0.025,0.05,95,0.0312722437153583,0.010526315789473684
+total,n121_opponent_ridge_recent_asof_t120,2025,loss_or_under,0.2,0.35,10,0.31048689974633836,0.4
+total,n121_opponent_ridge_recent_asof_t120,2025,loss_or_under,0.35,0.5,110,0.4406046055232681,0.4636363636363636
+total,n121_opponent_ridge_recent_asof_t120,2025,loss_or_under,0.5,0.65,160,0.5610852867590851,0.49375
+total,n121_opponent_ridge_recent_asof_t120,2025,loss_or_under,0.65,0.8,5,0.6755909803105381,0.4
+total,n121_opponent_ridge_recent_asof_t120,2026,cover_or_over,0.2,0.35,12,0.3259985290815836,0.5833333333333334
+total,n121_opponent_ridge_recent_asof_t120,2026,cover_or_over,0.35,0.5,83,0.4289240362943907,0.5542168674698795
+total,n121_opponent_ridge_recent_asof_t120,2026,cover_or_over,0.5,0.65,46,0.5570638180185055,0.4782608695652174
+total,n121_opponent_ridge_recent_asof_t120,2026,cover_or_over,0.65,0.8,8,0.6778527179371765,0.375
+total,n121_opponent_ridge_recent_asof_t120,2026,push,0,0.025,102,0.001633327726975024,0.0
+total,n121_opponent_ridge_recent_asof_t120,2026,push,0.025,0.05,47,0.030268614913451636,0.02127659574468085
+total,n121_opponent_ridge_recent_asof_t120,2026,loss_or_under,0.2,0.35,8,0.31903905674844496,0.625
+total,n121_opponent_ridge_recent_asof_t120,2026,loss_or_under,0.35,0.5,50,0.4386891682138374,0.5
+total,n121_opponent_ridge_recent_asof_t120,2026,loss_or_under,0.5,0.65,84,0.5672258276918478,0.44047619047619047
+total,n121_opponent_ridge_recent_asof_t120,2026,loss_or_under,0.65,0.8,7,0.6738000780513681,0.42857142857142855
+total,n121_team_score_baseline_asof_t120,2024,cover_or_over,0.2,0.35,52,0.3195852852580601,0.5
+total,n121_team_score_baseline_asof_t120,2024,cover_or_over,0.35,0.5,181,0.4201141570957605,0.56353591160221
+total,n121_team_score_baseline_asof_t120,2024,cover_or_over,0.5,0.65,47,0.553607778486521,0.46808510638297873
+total,n121_team_score_baseline_asof_t120,2024,cover_or_over,0.65,0.8,5,0.7261123048306507,0.6
+total,n121_team_score_baseline_asof_t120,2024,push,0,0.025,198,0.004522795003506536,0.005050505050505051
+total,n121_team_score_baseline_asof_t120,2024,push,0.025,0.05,87,0.02948799619051114,0.034482758620689655
+total,n121_team_score_baseline_asof_t120,2024,loss_or_under,0.2,0.35,6,0.28070444133803063,0.5
+total,n121_team_score_baseline_asof_t120,2024,loss_or_under,0.35,0.5,57,0.4434266848811402,0.47368421052631576
+total,n121_team_score_baseline_asof_t120,2024,loss_or_under,0.5,0.65,183,0.577464439061637,0.4426229508196721
+total,n121_team_score_baseline_asof_t120,2024,loss_or_under,0.65,0.8,39,0.6819042693699227,0.4358974358974359
+total,n121_team_score_baseline_asof_t120,2025,cover_or_over,0.2,0.35,22,0.32898790410684187,0.5909090909090909
+total,n121_team_score_baseline_asof_t120,2025,cover_or_over,0.35,0.5,170,0.4350504546656735,0.5117647058823529
+total,n121_team_score_baseline_asof_t120,2025,cover_or_over,0.5,0.65,81,0.5545537455239069,0.49382716049382713
+total,n121_team_score_baseline_asof_t120,2025,cover_or_over,0.65,0.8,12,0.6889153393436956,0.6666666666666666
+total,n121_team_score_baseline_asof_t120,2025,push,0,0.025,180,0.0007952970721881625,0.0
+total,n121_team_score_baseline_asof_t120,2025,push,0.025,0.05,105,0.029424632576841078,0.009523809523809525
+total,n121_team_score_baseline_asof_t120,2025,loss_or_under,0.2,0.35,15,0.30686721758607316,0.4666666666666667
+total,n121_team_score_baseline_asof_t120,2025,loss_or_under,0.35,0.5,96,0.4468092467540304,0.4791666666666667
+total,n121_team_score_baseline_asof_t120,2025,loss_or_under,0.5,0.65,160,0.5652415845925495,0.4875
+total,n121_team_score_baseline_asof_t120,2025,loss_or_under,0.65,0.8,14,0.674982998312575,0.35714285714285715
+total,n121_team_score_baseline_asof_t120,2026,cover_or_over,0.2,0.35,20,0.3144968584665478,0.65
+total,n121_team_score_baseline_asof_t120,2026,cover_or_over,0.35,0.5,72,0.4290973572348711,0.5694444444444444
+total,n121_team_score_baseline_asof_t120,2026,cover_or_over,0.5,0.65,49,0.5615509979687129,0.42857142857142855
+total,n121_team_score_baseline_asof_t120,2026,cover_or_over,0.65,0.8,8,0.6735753198401948,0.375
+total,n121_team_score_baseline_asof_t120,2026,push,0,0.025,99,0.0008656915956077097,0.0
+total,n121_team_score_baseline_asof_t120,2026,push,0.025,0.05,50,0.029268929437813403,0.02
+total,n121_team_score_baseline_asof_t120,2026,loss_or_under,0.2,0.35,9,0.32505485209924506,0.5555555555555556
+total,n121_team_score_baseline_asof_t120,2026,loss_or_under,0.35,0.5,55,0.4382149371189069,0.5272727272727272
+total,n121_team_score_baseline_asof_t120,2026,loss_or_under,0.5,0.65,69,0.5707976291290526,0.4492753623188406
+total,n121_team_score_baseline_asof_t120,2026,loss_or_under,0.65,0.8,16,0.6843093806485181,0.3125
+total,n121_opponent_ridge_pooled (season-opening),2024,cover_or_over,0.2,0.35,68,0.3034436863506386,0.4852941176470588
+total,n121_opponent_ridge_pooled (season-opening),2024,cover_or_over,0.35,0.5,166,0.4141313424097711,0.5662650602409639
+total,n121_opponent_ridge_pooled (season-opening),2024,cover_or_over,0.5,0.65,46,0.5596606678753827,0.5
+total,n121_opponent_ridge_pooled (season-opening),2024,cover_or_over,0.65,0.8,4,0.7032508639542634,0.75
+total,n121_opponent_ridge_pooled (season-opening),2024,cover_or_over,0.8,1.001,1,0.8483495927159709,0.0
+total,n121_opponent_ridge_pooled (season-opening),2024,push,0,0.025,225,0.006645195413099606,0.008888888888888889
+total,n121_opponent_ridge_pooled (season-opening),2024,push,0.025,0.05,60,0.03001579686483828,0.03333333333333333
+total,n121_opponent_ridge_pooled (season-opening),2024,loss_or_under,0.1,0.2,1,0.15165040728402918,1.0
+total,n121_opponent_ridge_pooled (season-opening),2024,loss_or_under,0.2,0.35,8,0.31250500360124933,0.5
+total,n121_opponent_ridge_pooled (season-opening),2024,loss_or_under,0.35,0.5,50,0.4446336076598125,0.42
+total,n121_opponent_ridge_pooled (season-opening),2024,loss_or_under,0.5,0.65,169,0.5825706980987111,0.4378698224852071
+total,n121_opponent_ridge_pooled (season-opening),2024,loss_or_under,0.65,0.8,57,0.6943920550829717,0.49122807017543857
+total,n121_opponent_ridge_pooled (season-opening),2025,cover_or_over,0.2,0.35,50,0.3152778666386943,0.54
+total,n121_opponent_ridge_pooled (season-opening),2025,cover_or_over,0.35,0.5,154,0.43036296782206224,0.525974025974026
+total,n121_opponent_ridge_pooled (season-opening),2025,cover_or_over,0.5,0.65,71,0.5539900191329122,0.4788732394366197
+total,n121_opponent_ridge_pooled (season-opening),2025,cover_or_over,0.65,0.8,10,0.704121098867389,0.6
+total,n121_opponent_ridge_pooled (season-opening),2025,push,0,0.025,198,0.0029144173423891846,0.005050505050505051
+total,n121_opponent_ridge_pooled (season-opening),2025,push,0.025,0.05,87,0.02920421732736774,0.0
+total,n121_opponent_ridge_pooled (season-opening),2025,loss_or_under,0.2,0.35,13,0.2951771074207187,0.38461538461538464
+total,n121_opponent_ridge_pooled (season-opening),2025,loss_or_under,0.35,0.5,82,0.4485944830579603,0.524390243902439
+total,n121_opponent_ridge_pooled (season-opening),2025,loss_or_under,0.5,0.65,148,0.5686222352793404,0.4594594594594595
+total,n121_opponent_ridge_pooled (season-opening),2025,loss_or_under,0.65,0.8,42,0.6830891644409169,0.47619047619047616
+total,n121_opponent_ridge_pooled (season-opening),2026,cover_or_over,0.2,0.35,22,0.31436756140890165,0.5909090909090909
+total,n121_opponent_ridge_pooled (season-opening),2026,cover_or_over,0.35,0.5,75,0.43124910016264995,0.49333333333333335
+total,n121_opponent_ridge_pooled (season-opening),2026,cover_or_over,0.5,0.65,45,0.5630656986737186,0.5333333333333333
+total,n121_opponent_ridge_pooled (season-opening),2026,cover_or_over,0.65,0.8,7,0.6887410529728041,0.5714285714285714
+total,n121_opponent_ridge_pooled (season-opening),2026,push,0,0.025,100,0.001092737639368215,0.0
+total,n121_opponent_ridge_pooled (season-opening),2026,push,0.025,0.05,49,0.02886529372423599,0.02040816326530612
+total,n121_opponent_ridge_pooled (season-opening),2026,loss_or_under,0.2,0.35,7,0.30728574101252104,0.42857142857142855
+total,n121_opponent_ridge_pooled (season-opening),2026,loss_or_under,0.35,0.5,52,0.43426366205513633,0.4423076923076923
+total,n121_opponent_ridge_pooled (season-opening),2026,loss_or_under,0.5,0.65,75,0.5729463256975234,0.5333333333333333
+total,n121_opponent_ridge_pooled (season-opening),2026,loss_or_under,0.65,0.8,15,0.6902486085323389,0.26666666666666666
+total,n121_opponent_ridge_recent (season-opening),2024,cover_or_over,0.2,0.35,86,0.30404105803649534,0.5116279069767442
+total,n121_opponent_ridge_recent (season-opening),2024,cover_or_over,0.35,0.5,157,0.41356729752305293,0.5414012738853503
+total,n121_opponent_ridge_recent (season-opening),2024,cover_or_over,0.5,0.65,38,0.5690928901734605,0.5789473684210527
+total,n121_opponent_ridge_recent (season-opening),2024,cover_or_over,0.65,0.8,3,0.7093637185311797,0.6666666666666666
+total,n121_opponent_ridge_recent (season-opening),2024,cover_or_over,0.8,1.001,1,0.8444174905958101,0.0
+total,n121_opponent_ridge_recent (season-opening),2024,push,0,0.025,221,0.005984589664627964,0.013574660633484163
+total,n121_opponent_ridge_recent (season-opening),2024,push,0.025,0.05,64,0.03097481169670492,0.015625
+total,n121_opponent_ridge_recent (season-opening),2024,loss_or_under,0.1,0.2,1,0.15558250940418977,1.0
+total,n121_opponent_ridge_recent (season-opening),2024,loss_or_under,0.2,0.35,5,0.3076998637057984,0.4
+total,n121_opponent_ridge_recent (season-opening),2024,loss_or_under,0.35,0.5,43,0.43235668695712903,0.3953488372093023
+total,n121_opponent_ridge_recent (season-opening),2024,loss_or_under,0.5,0.65,161,0.5820395082862203,0.45962732919254656
+total,n121_opponent_ridge_recent (season-opening),2024,loss_or_under,0.65,0.8,75,0.693674698124242,0.4533333333333333
+total,n121_opponent_ridge_recent (season-opening),2025,cover_or_over,0.2,0.35,35,0.311642860610544,0.5142857142857142
+total,n121_opponent_ridge_recent (season-opening),2025,cover_or_over,0.35,0.5,147,0.42474552323829234,0.5102040816326531
+total,n121_opponent_ridge_recent (season-opening),2025,cover_or_over,0.5,0.65,89,0.560332000825196,0.5168539325842697
+total,n121_opponent_ridge_recent (season-opening),2025,cover_or_over,0.65,0.8,14,0.6928700002219851,0.6428571428571429
+total,n121_opponent_ridge_recent (season-opening),2025,push,0,0.025,204,0.003450268190276652,0.004901960784313725
+total,n121_opponent_ridge_recent (season-opening),2025,push,0.025,0.05,81,0.031058916203161892,0.0
+total,n121_opponent_ridge_recent (season-opening),2025,loss_or_under,0.2,0.35,16,0.30150113848471405,0.375
+total,n121_opponent_ridge_recent (season-opening),2025,loss_or_under,0.35,0.5,100,0.4376103141717573,0.47
+total,n121_opponent_ridge_recent (season-opening),2025,loss_or_under,0.5,0.65,140,0.5739586927602989,0.4928571428571429
+total,n121_opponent_ridge_recent (season-opening),2025,loss_or_under,0.65,0.8,29,0.687113322186421,0.4827586206896552
+total,n121_opponent_ridge_recent (season-opening),2026,cover_or_over,0.2,0.35,23,0.3136135090959355,0.5652173913043478
+total,n121_opponent_ridge_recent (season-opening),2026,cover_or_over,0.35,0.5,67,0.4242994774324704,0.5074626865671642
+total,n121_opponent_ridge_recent (season-opening),2026,cover_or_over,0.5,0.65,51,0.5616540255364392,0.5294117647058824
+total,n121_opponent_ridge_recent (season-opening),2026,cover_or_over,0.65,0.8,8,0.6988437238056582,0.5
+total,n121_opponent_ridge_recent (season-opening),2026,push,0,0.025,107,0.0026490972394591647,0.0
+total,n121_opponent_ridge_recent (season-opening),2026,push,0.025,0.05,42,0.03023941183994269,0.023809523809523808
+total,n121_opponent_ridge_recent (season-opening),2026,loss_or_under,0.2,0.35,10,0.30722558860791976,0.5
+total,n121_opponent_ridge_recent (season-opening),2026,loss_or_under,0.35,0.5,53,0.4357492585022081,0.4528301886792453
+total,n121_opponent_ridge_recent (season-opening),2026,loss_or_under,0.5,0.65,69,0.5759106342912372,0.5072463768115942
+total,n121_opponent_ridge_recent (season-opening),2026,loss_or_under,0.65,0.8,17,0.6862005973719407,0.35294117647058826
+total,n122_residual_league (season-opening),2024,cover_or_over,0.2,0.35,78,0.3054389862978029,0.5
+total,n122_residual_league (season-opening),2024,cover_or_over,0.35,0.5,157,0.40696793351186944,0.5668789808917197
+total,n122_residual_league (season-opening),2024,cover_or_over,0.5,0.65,43,0.5596326059803725,0.4883720930232558
+total,n122_residual_league (season-opening),2024,cover_or_over,0.65,0.8,6,0.6943364688501791,0.6666666666666666
+total,n122_residual_league (season-opening),2024,cover_or_over,0.8,1.001,1,0.8508944233132535,0.0
+total,n122_residual_league (season-opening),2024,push,0,0.025,223,0.005847540723571004,0.008968609865470852
+total,n122_residual_league (season-opening),2024,push,0.025,0.05,62,0.033348169463681965,0.03225806451612903
+total,n122_residual_league (season-opening),2024,loss_or_under,0.1,0.2,1,0.14910557668674665,1.0
+total,n122_residual_league (season-opening),2024,loss_or_under,0.2,0.35,9,0.3067588288116068,0.4444444444444444
+total,n122_residual_league (season-opening),2024,loss_or_under,0.35,0.5,48,0.4431338385058379,0.4375
+total,n122_residual_league (season-opening),2024,loss_or_under,0.5,0.65,159,0.5888194579759294,0.44025157232704404
+total,n122_residual_league (season-opening),2024,loss_or_under,0.65,0.8,68,0.6915652503424811,0.47058823529411764
+total,n122_residual_league (season-opening),2025,cover_or_over,0.2,0.35,18,0.31240466195240235,0.5
+total,n122_residual_league (season-opening),2025,cover_or_over,0.35,0.5,104,0.42286709728272354,0.5
+total,n122_residual_league (season-opening),2025,cover_or_over,0.5,0.65,135,0.5658771438075466,0.5407407407407407
+total,n122_residual_league (season-opening),2025,cover_or_over,0.65,0.8,27,0.6965981226416391,0.48148148148148145
+total,n122_residual_league (season-opening),2025,cover_or_over,0.8,1.001,1,0.8261965654647703,1.0
+total,n122_residual_league (season-opening),2025,push,0,0.025,178,0.0005526965190888822,0.0
+total,n122_residual_league (season-opening),2025,push,0.025,0.05,107,0.03086294717779764,0.009345794392523364
+total,n122_residual_league (season-opening),2025,loss_or_under,0.1,0.2,1,0.17380343453522965,0.0
+total,n122_residual_league (season-opening),2025,loss_or_under,0.2,0.35,30,0.299615612417472,0.5333333333333333
+total,n122_residual_league (season-opening),2025,loss_or_under,0.35,0.5,143,0.4302435036652126,0.45454545454545453
+total,n122_residual_league (season-opening),2025,loss_or_under,0.5,0.65,97,0.5742336465815641,0.5154639175257731
+total,n122_residual_league (season-opening),2025,loss_or_under,0.65,0.8,14,0.6844504141876423,0.35714285714285715
+total,n122_residual_league (season-opening),2026,cover_or_over,0.2,0.35,12,0.31014812150868143,0.6666666666666666
+total,n122_residual_league (season-opening),2026,cover_or_over,0.35,0.5,58,0.426084925175372,0.4827586206896552
+total,n122_residual_league (season-opening),2026,cover_or_over,0.5,0.65,67,0.5644084103903445,0.5373134328358209
+total,n122_residual_league (season-opening),2026,cover_or_over,0.65,0.8,12,0.6943030995683525,0.5
+total,n122_residual_league (season-opening),2026,push,0,0.025,100,0.0009987278318999099,0.0
+total,n122_residual_league (season-opening),2026,push,0.025,0.05,49,0.030363660684830845,0.02040816326530612
+total,n122_residual_league (season-opening),2026,loss_or_under,0.2,0.35,14,0.3072331986030113,0.5
+total,n122_residual_league (season-opening),2026,loss_or_under,0.35,0.5,69,0.4316206378618178,0.463768115942029
+total,n122_residual_league (season-opening),2026,loss_or_under,0.5,0.65,55,0.5680757292381319,0.4909090909090909
+total,n122_residual_league (season-opening),2026,loss_or_under,0.65,0.8,11,0.682122739363581,0.36363636363636365
+total,n123_integer_joint (season-opening),2024,cover_or_over,0.2,0.35,78,0.3042746523030048,0.5
+total,n123_integer_joint (season-opening),2024,cover_or_over,0.35,0.5,158,0.4062181088504178,0.5632911392405063
+total,n123_integer_joint (season-opening),2024,cover_or_over,0.5,0.65,41,0.5597736526789261,0.4878048780487805
+total,n123_integer_joint (season-opening),2024,cover_or_over,0.65,0.8,7,0.687630115889533,0.7142857142857143
+total,n123_integer_joint (season-opening),2024,cover_or_over,0.8,1.001,1,0.8535257303467136,0.0
+total,n123_integer_joint (season-opening),2024,push,0,0.025,219,0.005350355188325964,0.0045662100456621
+total,n123_integer_joint (season-opening),2024,push,0.025,0.05,65,0.033937803660801895,0.046153846153846156
+total,n123_integer_joint (season-opening),2024,push,0.05,0.1,1,0.05272359927775184,0.0
+total,n123_integer_joint (season-opening),2024,loss_or_under,0.1,0.2,1,0.1464742696532863,1.0
+total,n123_integer_joint (season-opening),2024,loss_or_under,0.2,0.35,10,0.3094623864089966,0.4
+total,n123_integer_joint (season-opening),2024,loss_or_under,0.35,0.5,44,0.4413096247903599,0.45454545454545453
+total,n123_integer_joint (season-opening),2024,loss_or_under,0.5,0.65,160,0.5872702494507055,0.43125
+total,n123_integer_joint (season-opening),2024,loss_or_under,0.65,0.8,70,0.6916298494354994,0.4857142857142857
+total,n123_integer_joint (season-opening),2025,cover_or_over,0.2,0.35,22,0.31660069878566394,0.5454545454545454
+total,n123_integer_joint (season-opening),2025,cover_or_over,0.35,0.5,99,0.4226617480365447,0.48484848484848486
+total,n123_integer_joint (season-opening),2025,cover_or_over,0.5,0.65,137,0.5645394548435863,0.5328467153284672
+total,n123_integer_joint (season-opening),2025,cover_or_over,0.65,0.8,26,0.6980124093785078,0.5384615384615384
+total,n123_integer_joint (season-opening),2025,cover_or_over,0.8,1.001,1,0.826677239028517,1.0
+total,n123_integer_joint (season-opening),2025,push,0,0.025,197,0.0025945313760310034,0.0
+total,n123_integer_joint (season-opening),2025,push,0.025,0.05,88,0.03289089443257088,0.011363636363636364
+total,n123_integer_joint (season-opening),2025,loss_or_under,0.1,0.2,1,0.17332276097148255,0.0
+total,n123_integer_joint (season-opening),2025,loss_or_under,0.2,0.35,29,0.29860432493253264,0.4827586206896552
+total,n123_integer_joint (season-opening),2025,loss_or_under,0.35,0.5,143,0.43050319327220243,0.45454545454545453
+total,n123_integer_joint (season-opening),2025,loss_or_under,0.5,0.65,96,0.5744091790282142,0.53125
+total,n123_integer_joint (season-opening),2025,loss_or_under,0.65,0.8,16,0.683172435928978,0.375
+total,n123_integer_joint (season-opening),2026,cover_or_over,0.2,0.35,12,0.30760812252398934,0.6666666666666666
+total,n123_integer_joint (season-opening),2026,cover_or_over,0.35,0.5,61,0.4284880066605235,0.4918032786885246
+total,n123_integer_joint (season-opening),2026,cover_or_over,0.5,0.65,63,0.5658250958722416,0.5238095238095238
+total,n123_integer_joint (season-opening),2026,cover_or_over,0.65,0.8,13,0.6909515397344533,0.5384615384615384
+total,n123_integer_joint (season-opening),2026,push,0,0.025,110,0.0029421832696306396,0.0
+total,n123_integer_joint (season-opening),2026,push,0.025,0.05,39,0.03254752906092918,0.02564102564102564
+total,n123_integer_joint (season-opening),2026,loss_or_under,0.2,0.35,15,0.3100664824683112,0.4666666666666667
+total,n123_integer_joint (season-opening),2026,loss_or_under,0.35,0.5,66,0.4308901882309583,0.4696969696969697
+total,n123_integer_joint (season-opening),2026,loss_or_under,0.5,0.65,57,0.5671525226226048,0.49122807017543857
+total,n123_integer_joint (season-opening),2026,loss_or_under,0.65,0.8,11,0.6846496203753701,0.36363636363636365
+total,n124_adjusted_long,2024,cover_or_over,0.2,0.35,17,0.33167784053916116,0.5882352941176471
+total,n124_adjusted_long,2024,cover_or_over,0.35,0.5,191,0.4130940299542881,0.5235602094240838
+total,n124_adjusted_long,2024,cover_or_over,0.5,0.65,66,0.5589707399711094,0.5454545454545454
+total,n124_adjusted_long,2024,cover_or_over,0.65,0.8,10,0.6995236586953842,0.6
+total,n124_adjusted_long,2024,cover_or_over,0.8,1.001,1,0.8600369529641557,1.0
+total,n124_adjusted_long,2024,push,0,0.025,213,0.005009092015359149,0.014084507042253521
+total,n124_adjusted_long,2024,push,0.025,0.05,53,0.034971169715701224,0.0
+total,n124_adjusted_long,2024,push,0.05,0.1,19,0.05477523984696472,0.05263157894736842
+total,n124_adjusted_long,2024,loss_or_under,0.1,0.2,1,0.1281155747945591,0.0
+total,n124_adjusted_long,2024,loss_or_under,0.2,0.35,11,0.28838090027658736,0.45454545454545453
+total,n124_adjusted_long,2024,loss_or_under,0.35,0.5,80,0.4369081234932869,0.425
+total,n124_adjusted_long,2024,loss_or_under,0.5,0.65,179,0.5821145117209907,0.4581005586592179
+total,n124_adjusted_long,2024,loss_or_under,0.65,0.8,14,0.6643273932071905,0.5
+total,n124_adjusted_long,2025,cover_or_over,0.2,0.35,7,0.320135293097337,0.7142857142857143
+total,n124_adjusted_long,2025,cover_or_over,0.35,0.5,76,0.4454307011523951,0.42105263157894735
+total,n124_adjusted_long,2025,cover_or_over,0.5,0.65,174,0.5776788117933148,0.5459770114942529
+total,n124_adjusted_long,2025,cover_or_over,0.65,0.8,27,0.6901914319957924,0.5925925925925926
+total,n124_adjusted_long,2025,cover_or_over,0.8,1.001,1,0.8185616498618662,0.0
+total,n124_adjusted_long,2025,push,0,0.025,201,0.0024337339503891797,0.0
+total,n124_adjusted_long,2025,push,0.025,0.05,84,0.03539539671646518,0.011904761904761904
+total,n124_adjusted_long,2025,loss_or_under,0.1,0.2,1,0.18143835013813372,1.0
+total,n124_adjusted_long,2025,loss_or_under,0.2,0.35,39,0.30888318576963464,0.4358974358974359
+total,n124_adjusted_long,2025,loss_or_under,0.35,0.5,172,0.42039480743331586,0.45348837209302323
+total,n124_adjusted_long,2025,loss_or_under,0.5,0.65,69,0.5543460383693669,0.5652173913043478
+total,n124_adjusted_long,2025,loss_or_under,0.65,0.8,4,0.6721040313924228,0.25
+total,n124_adjusted_long,2026,cover_or_over,0.2,0.35,16,0.31331705643245505,0.5625
+total,n124_adjusted_long,2026,cover_or_over,0.35,0.5,63,0.429615926587895,0.5079365079365079
+total,n124_adjusted_long,2026,cover_or_over,0.5,0.65,61,0.5637998839775002,0.5573770491803278
+total,n124_adjusted_long,2026,cover_or_over,0.65,0.8,9,0.6926005306367444,0.3333333333333333
+total,n124_adjusted_long,2026,push,0,0.025,108,0.002409571143580188,0.009259259259259259
+total,n124_adjusted_long,2026,push,0.025,0.05,40,0.03544248535078921,0.0
+total,n124_adjusted_long,2026,push,0.05,0.1,1,0.05174822713755301,0.0
+total,n124_adjusted_long,2026,loss_or_under,0.2,0.35,10,0.30901054039310916,0.6
+total,n124_adjusted_long,2026,loss_or_under,0.35,0.5,67,0.43474162734340754,0.43283582089552236
+total,n124_adjusted_long,2026,loss_or_under,0.5,0.65,61,0.5705669842429214,0.5081967213114754
+total,n124_adjusted_long,2026,loss_or_under,0.65,0.8,11,0.6858058385683368,0.36363636363636365
+total,n124_form_rest,2024,cover_or_over,0.2,0.35,20,0.33417239437611057,0.5
+total,n124_form_rest,2024,cover_or_over,0.35,0.5,186,0.4141862391551184,0.521505376344086
+total,n124_form_rest,2024,cover_or_over,0.5,0.65,69,0.5590257066648712,0.5797101449275363
+total,n124_form_rest,2024,cover_or_over,0.65,0.8,9,0.6971146187099309,0.5555555555555556
+total,n124_form_rest,2024,cover_or_over,0.8,1.001,1,0.8505632687536293,1.0
+total,n124_form_rest,2024,push,0,0.025,210,0.004401005858008444,0.014285714285714285
+total,n124_form_rest,2024,push,0.025,0.05,63,0.03891095732197986,0.015873015873015872
+total,n124_form_rest,2024,push,0.05,0.1,12,0.0524789280121065,0.0
+total,n124_form_rest,2024,loss_or_under,0.1,0.2,1,0.1312734695314012,0.0
+total,n124_form_rest,2024,loss_or_under,0.2,0.35,10,0.2928131763712189,0.5
+total,n124_form_rest,2024,loss_or_under,0.35,0.5,81,0.4337646902153287,0.4074074074074074
+total,n124_form_rest,2024,loss_or_under,0.5,0.65,177,0.5804865563088313,0.4576271186440678
+total,n124_form_rest,2024,loss_or_under,0.65,0.8,16,0.664670546727903,0.5625
+total,n124_form_rest,2025,cover_or_over,0.2,0.35,5,0.3110769501486915,0.6
+total,n124_form_rest,2025,cover_or_over,0.35,0.5,75,0.4443624956741568,0.44
+total,n124_form_rest,2025,cover_or_over,0.5,0.65,175,0.5758675927531968,0.5314285714285715
+total,n124_form_rest,2025,cover_or_over,0.65,0.8,29,0.6857090205886869,0.6551724137931034
+total,n124_form_rest,2025,cover_or_over,0.8,1.001,1,0.8185616498618661,0.0
+total,n124_form_rest,2025,push,0,0.025,197,0.002224679202805674,0.0
+total,n124_form_rest,2025,push,0.025,0.05,88,0.03486752922243605,0.011363636363636364
+total,n124_form_rest,2025,loss_or_under,0.1,0.2,1,0.18143835013813372,1.0
+total,n124_form_rest,2025,loss_or_under,0.2,0.35,40,0.31140814548909884,0.425
+total,n124_form_rest,2025,loss_or_under,0.35,0.5,173,0.42091392115704174,0.4508670520231214
+total,n124_form_rest,2025,loss_or_under,0.5,0.65,68,0.5534043306389758,0.5735294117647058
+total,n124_form_rest,2025,loss_or_under,0.65,0.8,3,0.6808349023679224,0.3333333333333333
+total,n124_form_rest,2026,cover_or_over,0.2,0.35,18,0.314646864570319,0.5555555555555556
+total,n124_form_rest,2026,cover_or_over,0.35,0.5,61,0.4312131447549434,0.4918032786885246
+total,n124_form_rest,2026,cover_or_over,0.5,0.65,60,0.5609559086616573,0.5666666666666667
+total,n124_form_rest,2026,cover_or_over,0.65,0.8,10,0.6842231959034997,0.4
+total,n124_form_rest,2026,push,0,0.025,106,0.0022924848693714377,0.009433962264150943
+total,n124_form_rest,2026,push,0.025,0.05,41,0.03280824072559999,0.0
+total,n124_form_rest,2026,push,0.05,0.1,2,0.051822660965352194,0.0
+total,n124_form_rest,2026,loss_or_under,0.2,0.35,12,0.318505340583153,0.5833333333333334
+total,n124_form_rest,2026,loss_or_under,0.35,0.5,62,0.43559606379977506,0.41935483870967744
+total,n124_form_rest,2026,loss_or_under,0.5,0.65,62,0.5666413104622301,0.5161290322580645
+total,n124_form_rest,2026,loss_or_under,0.65,0.8,13,0.6830923269132635,0.38461538461538464
+total,n124_raw_long,2024,cover_or_over,0.2,0.35,19,0.33490584403255913,0.631578947368421
+total,n124_raw_long,2024,cover_or_over,0.35,0.5,173,0.4191657642026574,0.49710982658959535
+total,n124_raw_long,2024,cover_or_over,0.5,0.65,81,0.5605112587057249,0.5925925925925926
+total,n124_raw_long,2024,cover_or_over,0.65,0.8,11,0.7091065861060053,0.5454545454545454
+total,n124_raw_long,2024,cover_or_over,0.8,1.001,1,0.8568790582273135,1.0
+total,n124_raw_long,2024,push,0,0.025,197,0.003645220102376771,0.015228426395939087
+total,n124_raw_long,2024,push,0.025,0.05,73,0.03575021628210756,0.0136986301369863
+total,n124_raw_long,2024,push,0.05,0.1,15,0.054217600168927835,0.0
+total,n124_raw_long,2024,loss_or_under,0.1,0.2,1,0.12179978532087492,0.0
+total,n124_raw_long,2024,loss_or_under,0.2,0.35,14,0.29016533309200787,0.5
+total,n124_raw_long,2024,loss_or_under,0.35,0.5,90,0.43249740644936757,0.4111111111111111
+total,n124_raw_long,2024,loss_or_under,0.5,0.65,165,0.5749668633758798,0.4666666666666667
+total,n124_raw_long,2024,loss_or_under,0.65,0.8,15,0.6628731105597494,0.4666666666666667
+total,n124_raw_long,2025,cover_or_over,0.2,0.35,1,0.3026268278519768,1.0
+total,n124_raw_long,2025,cover_or_over,0.35,0.5,47,0.4518583447243559,0.3829787234042553
+total,n124_raw_long,2025,cover_or_over,0.5,0.65,180,0.5849806534613585,0.5611111111111111
+total,n124_raw_long,2025,cover_or_over,0.65,0.8,54,0.6935809312277312,0.48148148148148145
+total,n124_raw_long,2025,cover_or_over,0.8,1.001,3,0.8094679359716576,0.6666666666666666
+total,n124_raw_long,2025,push,0,0.025,204,0.00216896475460092,0.0
+total,n124_raw_long,2025,push,0.025,0.05,81,0.03509978929641426,0.012345679012345678
+total,n124_raw_long,2025,loss_or_under,0.1,0.2,3,0.19053206402834233,0.3333333333333333
+total,n124_raw_long,2025,loss_or_under,0.2,0.35,61,0.2964332052816488,0.5245901639344263
+total,n124_raw_long,2025,loss_or_under,0.35,0.5,178,0.4097706642497966,0.4438202247191011
+total,n124_raw_long,2025,loss_or_under,0.5,0.65,42,0.5416438287292957,0.5714285714285714
+total,n124_raw_long,2025,loss_or_under,0.65,0.8,1,0.6539467525383167,0.0
+total,n124_raw_long,2026,cover_or_over,0.2,0.35,22,0.3070883463788493,0.5909090909090909
+total,n124_raw_long,2026,cover_or_over,0.35,0.5,68,0.42721970866158826,0.5147058823529411
+total,n124_raw_long,2026,cover_or_over,0.5,0.65,52,0.5646377120565472,0.5192307692307693
+total,n124_raw_long,2026,cover_or_over,0.65,0.8,7,0.6777785989547588,0.42857142857142855
+total,n124_raw_long,2026,push,0,0.025,108,0.0024329583943513452,0.009259259259259259
+total,n124_raw_long,2026,push,0.025,0.05,40,0.036256119234897674,0.0
+total,n124_raw_long,2026,push,0.05,0.1,1,0.0545717855320347,0.0
+total,n124_raw_long,2026,loss_or_under,0.2,0.35,7,0.322221401045241,0.5714285714285714
+total,n124_raw_long,2026,loss_or_under,0.35,0.5,61,0.4364561213118793,0.47540983606557374
+total,n124_raw_long,2026,loss_or_under,0.5,0.65,61,0.5694155864198867,0.4918032786885246
+total,n124_raw_long,2026,loss_or_under,0.65,0.8,20,0.6853102465290609,0.35
+total,n124_short_long,2024,cover_or_over,0.2,0.35,19,0.33363762571185374,0.5263157894736842
+total,n124_short_long,2024,cover_or_over,0.35,0.5,187,0.41391401524208593,0.5187165775401069
+total,n124_short_long,2024,cover_or_over,0.5,0.65,69,0.5593460727975941,0.5797101449275363
+total,n124_short_long,2024,cover_or_over,0.65,0.8,9,0.6974654959029132,0.5555555555555556
+total,n124_short_long,2024,cover_or_over,0.8,1.001,1,0.8505632687536293,1.0
+total,n124_short_long,2024,push,0,0.025,209,0.004258722612898715,0.014354066985645933
+total,n124_short_long,2024,push,0.025,0.05,63,0.0383601598446132,0.015873015873015872
+total,n124_short_long,2024,push,0.05,0.1,13,0.05179403257004482,0.0
+total,n124_short_long,2024,loss_or_under,0.1,0.2,1,0.13127346953140123,0.0
+total,n124_short_long,2024,loss_or_under,0.2,0.35,10,0.2928131763712189,0.5
+total,n124_short_long,2024,loss_or_under,0.35,0.5,81,0.43364773115100125,0.4074074074074074
+total,n124_short_long,2024,loss_or_under,0.5,0.65,177,0.5804508738824263,0.4576271186440678
+total,n124_short_long,2024,loss_or_under,0.65,0.8,16,0.6644731783068503,0.5625
+total,n124_short_long,2025,cover_or_over,0.2,0.35,5,0.3110769501486915,0.6
+total,n124_short_long,2025,cover_or_over,0.35,0.5,78,0.4461579114310993,0.44871794871794873
+total,n124_short_long,2025,cover_or_over,0.5,0.65,170,0.5760248920135016,0.5294117647058824
+total,n124_short_long,2025,cover_or_over,0.65,0.8,31,0.6831163779964682,0.6451612903225806
+total,n124_short_long,2025,cover_or_over,0.8,1.001,1,0.8185616498618662,0.0
+total,n124_short_long,2025,push,0,0.025,198,0.002366532523318671,0.0
+total,n124_short_long,2025,push,0.025,0.05,87,0.03499249108486986,0.011494252873563218
+total,n124_short_long,2025,loss_or_under,0.1,0.2,1,0.18143835013813372,1.0
+total,n124_short_long,2025,loss_or_under,0.2,0.35,40,0.3118028823312041,0.425
+total,n124_short_long,2025,loss_or_under,0.35,0.5,172,0.4207823531794896,0.45348837209302323
+total,n124_short_long,2025,loss_or_under,0.5,0.65,69,0.5527732447278271,0.5652173913043478
+total,n124_short_long,2025,loss_or_under,0.65,0.8,3,0.6808349023679225,0.3333333333333333
+total,n124_short_long,2026,cover_or_over,0.2,0.35,18,0.31482230316681015,0.5555555555555556
+total,n124_short_long,2026,cover_or_over,0.35,0.5,61,0.431886138715254,0.4918032786885246
+total,n124_short_long,2026,cover_or_over,0.5,0.65,60,0.5615874876090258,0.5666666666666667
+total,n124_short_long,2026,cover_or_over,0.65,0.8,10,0.6845389853771839,0.4
+total,n124_short_long,2026,push,0,0.025,107,0.0024935866790402363,0.009345794392523364
+total,n124_short_long,2026,push,0.025,0.05,42,0.0337023602134725,0.0
+total,n124_short_long,2026,loss_or_under,0.2,0.35,12,0.31824218268841614,0.5833333333333334
+total,n124_short_long,2026,loss_or_under,0.35,0.5,62,0.4349848583668379,0.41935483870967744
+total,n124_short_long,2026,loss_or_under,0.5,0.65,62,0.566131972601449,0.5161290322580645
+total,n124_short_long,2026,loss_or_under,0.65,0.8,13,0.6828494119335063,0.38461538461538464
+total,n125_allowed_median_reference,2024,cover_or_over,0.35,0.5,285,0.4427831592986416,0.5368421052631579
+total,n125_allowed_median_reference,2024,push,0,0.025,160,0.0,0.0
+total,n125_allowed_median_reference,2024,push,0.025,0.05,125,0.04165046035384145,0.032
+total,n125_allowed_median_reference,2024,loss_or_under,0.35,0.5,1,0.4988214442637431,0.0
+total,n125_allowed_median_reference,2024,loss_or_under,0.5,0.65,284,0.5390903894767367,0.4507042253521127
+total,n125_allowed_median_reference,2025,cover_or_over,0.35,0.5,22,0.4934476417431157,0.4090909090909091
+total,n125_allowed_median_reference,2025,cover_or_over,0.5,0.65,263,0.524169629170754,0.5285171102661597
+total,n125_allowed_median_reference,2025,push,0,0.025,174,0.0,0.0
+total,n125_allowed_median_reference,2025,push,0.025,0.05,111,0.03689007703053543,0.009009009009009009
+total,n125_allowed_median_reference,2025,loss_or_under,0.35,0.5,285,0.4638341784538724,0.47719298245614034
+total,n125_allowed_median_reference,2026,cover_or_over,0.35,0.5,149,0.4489202077170322,0.5234899328859061
+total,n125_allowed_median_reference,2026,push,0,0.025,95,0.0,0.0
+total,n125_allowed_median_reference,2026,push,0.025,0.05,54,0.03664668770341034,0.018518518518518517
+total,n125_allowed_median_reference,2026,loss_or_under,0.5,0.65,149,0.5377984423770338,0.4697986577181208
+total,n125_disagreement_ridge,2024,cover_or_over,0.35,0.5,133,0.48091065441727615,0.48872180451127817
+total,n125_disagreement_ridge,2024,cover_or_over,0.5,0.65,152,0.5173225680058114,0.5789473684210527
+total,n125_disagreement_ridge,2024,push,0,0.025,179,0.002376104030660726,0.00558659217877095
+total,n125_disagreement_ridge,2024,push,0.025,0.05,106,0.030903925351693614,0.02830188679245283
+total,n125_disagreement_ridge,2024,loss_or_under,0.35,0.5,200,0.4746458674569706,0.45
+total,n125_disagreement_ridge,2024,loss_or_under,0.5,0.65,85,0.5150063579465531,0.4470588235294118
+total,n125_disagreement_ridge,2025,cover_or_over,0.35,0.5,3,0.4979243466628898,1.0
+total,n125_disagreement_ridge,2025,cover_or_over,0.5,0.65,282,0.5373010435428218,0.5141843971631206
+total,n125_disagreement_ridge,2025,push,0,0.025,198,0.0027659165360589756,0.005050505050505051
+total,n125_disagreement_ridge,2025,push,0.025,0.05,87,0.03032673712669229,0.0
+total,n125_disagreement_ridge,2025,loss_or_under,0.35,0.5,285,0.4519342283395566,0.47719298245614034
+total,n125_disagreement_ridge,2026,cover_or_over,0.35,0.5,15,0.49307967403954994,0.4666666666666667
+total,n125_disagreement_ridge,2026,cover_or_over,0.5,0.65,134,0.5199334231576466,0.5298507462686567
+total,n125_disagreement_ridge,2026,push,0,0.025,111,0.0030300411806791893,0.009009009009009009
+total,n125_disagreement_ridge,2026,push,0.025,0.05,38,0.028955268829747537,0.0
+total,n125_disagreement_ridge,2026,loss_or_under,0.35,0.5,149,0.4731281301993041,0.4697986577181208
+total,n125_location_ridge,2024,cover_or_over,0.35,0.5,126,0.48216334380816445,0.5
+total,n125_location_ridge,2024,cover_or_over,0.5,0.65,159,0.5180062771281259,0.5660377358490566
+total,n125_location_ridge,2024,push,0,0.025,161,0.00014570410846280918,0.0
+total,n125_location_ridge,2024,push,0.025,0.05,124,0.03159524231601235,0.03225806451612903
+total,n125_location_ridge,2024,loss_or_under,0.35,0.5,216,0.4742917732222229,0.4398148148148148
+total,n125_location_ridge,2024,loss_or_under,0.5,0.65,69,0.5144366549587109,0.4782608695652174
+total,n125_location_ridge,2025,cover_or_over,0.35,0.5,3,0.49614213719881306,1.0
+total,n125_location_ridge,2025,cover_or_over,0.5,0.65,282,0.5374782698491285,0.5141843971631206
+total,n125_location_ridge,2025,push,0,0.025,198,0.002697095715593922,0.0
+total,n125_location_ridge,2025,push,0.025,0.05,87,0.029936758249688618,0.011494252873563218
+total,n125_location_ridge,2025,loss_or_under,0.35,0.5,285,0.45194448621592576,0.47719298245614034
+total,n125_location_ridge,2026,cover_or_over,0.35,0.5,21,0.49292115064701525,0.5238095238095238
+total,n125_location_ridge,2026,cover_or_over,0.5,0.65,128,0.5193400128255719,0.5234375
+total,n125_location_ridge,2026,push,0,0.025,106,0.0021620076738076933,0.009433962264150943
+total,n125_location_ridge,2026,push,0.025,0.05,43,0.029229804071303617,0.0
+total,n125_location_ridge,2026,loss_or_under,0.35,0.5,144,0.4735064557351196,0.4791666666666667
+total,n125_location_ridge,2026,loss_or_under,0.5,0.65,5,0.5004300360785139,0.2
+total,n125_team_market_blend,2024,cover_or_over,0.35,0.5,177,0.47186922205220727,0.5254237288135594
+total,n125_team_market_blend,2024,cover_or_over,0.5,0.65,108,0.5246212606815186,0.5555555555555556
+total,n125_team_market_blend,2024,push,0,0.025,181,0.0026838470456710317,0.016574585635359115
+total,n125_team_market_blend,2024,push,0.025,0.05,104,0.03197463705897487,0.009615384615384616
+total,n125_team_market_blend,2024,loss_or_under,0.35,0.5,154,0.4702550969847542,0.43506493506493504
+total,n125_team_market_blend,2024,loss_or_under,0.5,0.65,131,0.5235849468557506,0.46564885496183206
+total,n125_team_market_blend,2025,cover_or_over,0.35,0.5,10,0.48924676661653316,0.3
+total,n125_team_market_blend,2025,cover_or_over,0.5,0.65,275,0.5510785382178961,0.5272727272727272
+total,n125_team_market_blend,2025,push,0,0.025,199,0.0029570059510456684,0.0
+total,n125_team_market_blend,2025,push,0.025,0.05,86,0.030494208774422996,0.011627906976744186
+total,n125_team_market_blend,2025,loss_or_under,0.35,0.5,282,0.4391254571332331,0.4787234042553192
+total,n125_team_market_blend,2025,loss_or_under,0.5,0.65,3,0.5055364244943409,0.3333333333333333
+total,n125_team_market_blend,2026,cover_or_over,0.35,0.5,65,0.4747463396362282,0.5230769230769231
+total,n125_team_market_blend,2026,cover_or_over,0.5,0.65,84,0.5288103219186931,0.5238095238095238
+total,n125_team_market_blend,2026,push,0,0.025,107,0.0024242767685897157,0.009345794392523364
+total,n125_team_market_blend,2026,push,0.025,0.05,42,0.029999345025707606,0.0
+total,n125_team_market_blend,2026,loss_or_under,0.35,0.5,103,0.4694757016230065,0.4854368932038835
+total,n125_team_market_blend,2026,loss_or_under,0.5,0.65,46,0.5183924676084011,0.43478260869565216
+total,n125_twenty_named_location_ridge,2024,cover_or_over,0.35,0.5,130,0.4819722691229701,0.5
+total,n125_twenty_named_location_ridge,2024,cover_or_over,0.5,0.65,155,0.518075287404826,0.567741935483871
+total,n125_twenty_named_location_ridge,2024,push,0,0.025,161,0.00014570703155207553,0.0
+total,n125_twenty_named_location_ridge,2024,push,0.025,0.05,124,0.031584981418564265,0.03225806451612903
+total,n125_twenty_named_location_ridge,2024,loss_or_under,0.35,0.5,211,0.4741846082134255,0.4312796208530806
+total,n125_twenty_named_location_ridge,2024,loss_or_under,0.5,0.65,74,0.5141754946655568,0.5
+total,n125_twenty_named_location_ridge,2025,cover_or_over,0.35,0.5,4,0.4970675014803498,0.75
+total,n125_twenty_named_location_ridge,2025,cover_or_over,0.5,0.65,281,0.5379024675376332,0.5160142348754448
+total,n125_twenty_named_location_ridge,2025,push,0,0.025,200,0.0028555558318593523,0.0
+total,n125_twenty_named_location_ridge,2025,push,0.025,0.05,85,0.029243899619979134,0.011764705882352941
+total,n125_twenty_named_location_ridge,2025,loss_or_under,0.35,0.5,285,0.4519448911646793,0.47719298245614034
+total,n125_twenty_named_location_ridge,2026,cover_or_over,0.35,0.5,22,0.4919328300075081,0.5454545454545454
+total,n125_twenty_named_location_ridge,2026,cover_or_over,0.5,0.65,127,0.5194512824319821,0.5196850393700787
+total,n125_twenty_named_location_ridge,2026,push,0,0.025,102,0.0015407160508703881,0.00980392156862745
+total,n125_twenty_named_location_ridge,2026,push,0.025,0.05,47,0.029110830060313956,0.0
+total,n125_twenty_named_location_ridge,2026,loss_or_under,0.35,0.5,144,0.4734711163247513,0.4791666666666667
+total,n125_twenty_named_location_ridge,2026,loss_or_under,0.5,0.65,5,0.5003924140370726,0.2
