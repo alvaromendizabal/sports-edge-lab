@@ -20,3 +20,6 @@ jobs:
           npx playwright install --with-deps chromium
       - name: Verify all season populations and public navigation
         run: node tracks/nfl/circa_million_2026/test_n123_browser.cjs
+      - name: Verify signed-out public responses after merge
+        if: github.event_name == 'push'
+        run: python tracks/nfl/circa_million_2026/verify_live_n123.py

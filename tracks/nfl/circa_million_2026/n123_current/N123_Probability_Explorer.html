@@ -12,7 +12,7 @@
 'use strict';
 async function start(){const bytes=Uint8Array.from(atob(document.getElementById('saved').textContent),c=>c.charCodeAt(0));const forecasts=JSON.parse(await new Response(new Blob([bytes]).stream().pipeThrough(new DecompressionStream('gzip'))).text());
 const $=id=>document.getElementById(id);
-const models={"n123_integer_joint": "N123 key-margin and total calibration", "team_only": "Team offense and opposing defense", "team_and_published_qb": "Team model with dated starting QB", "opponent_qb_negative_control": "Opposing QB · negative control"};
+const models={"n123_integer_joint": "N123 key-margin and total calibration", "team_and_published_qb": "Team model with dated starting QB", "team_only": "Team offense and opposing defense"};
 const games=new Map(),lookup=new Map();for(const r of forecasts){games.set(r[0],r);lookup.set(r[0]+'|'+r[1],r)}
 function addOption(sel,value,text){const opt=document.createElement('option');opt.value=value;opt.textContent=text;sel.append(opt)}
 for(const [id,r] of games)addOption($('game'),id,'Week '+Number(id.split('_')[1])+' · '+r[2]+' at '+r[3]);for(const [f,t] of Object.entries(models))addOption($('family'),f,t);
