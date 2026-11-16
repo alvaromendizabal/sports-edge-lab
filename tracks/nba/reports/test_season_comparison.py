@@ -87,9 +87,18 @@ class SeasonComparisonTests(unittest.TestCase):
 
     def test_public_page_remains_basketball_specific(self):
         raw, html = self.generated_raw, self.generated_html
+        import base64,re
         forbidden = 'ci' + 'rca'
-        self.assertNotIn(forbidden, raw.decode().lower())
-        self.assertNotIn(forbidden, html.decode().lower())
+        # Scan the complete decoded UI payload as well as visible/source text.
+        # Random base64 letters are an opaque transport encoding; inspecting
+        # only those letters both misses encoded text and creates false hits.
+        text=html.decode();payload=re.search(r'<script id="nba-comparison-payload" type="application/octet-stream">([^<]+)</script>',text)
+        self.assertIsNotNone(payload)
+        ui_data=gzip.decompress(base64.b64decode(payload[1])).decode()
+        source_text=text[:payload.start()]+text[payload.end():]
+        self.assertFalse(forbidden in raw.decode().lower(),'Non-basketball label in downloadable data')
+        self.assertFalse(forbidden in ui_data.lower(),'Non-basketball label in decoded UI payload')
+        self.assertFalse(forbidden in source_text.lower(),'Non-basketball label in page content or metadata')
 
     def test_projection_does_not_modify_original_evidence(self):
         before = json.dumps([self.selected,self.review,self.acceptance,self.leaders],sort_keys=True)
@@ -121,12 +130,12 @@ class SeasonComparisonTests(unittest.TestCase):
         raw,_=self.generated_raw, self.generated_html;data=json.loads(raw)
         self.assertEqual(len(data['games']),1274)
         finals=[r for r in data['games'] if r['status']=='FINAL']
-        self.assertEqual(len(finals),259)
-        self.assertEqual(sum(r['phase']=='regular' for r in finals),192)
+        self.assertEqual(len(finals),264)
+        self.assertEqual(sum(r['phase']=='regular' for r in finals),197)
         self.assertTrue(all(isinstance(r['actual']['home_points'],(int,float)) for r in finals))
         self.assertEqual(data['coverage']['secondary_observations'],3)
         self.assertEqual(data['coverage']['unobserved_regular_slots'],24)
-        self.assertEqual(data['coverage']['regular_status_counts'],{'FINAL':192,'LIVE':3,'SCHEDULED':1005,'TBD':6})
+        self.assertEqual(data['coverage']['regular_status_counts'],{'FINAL':197,'SCHEDULED':1003,'TBD':6})
 
     def test_reference_coverage_never_exports_price_or_invents_quote_clock(self):
         raw,_=self.generated_raw, self.generated_html;data=json.loads(raw)
@@ -203,7 +212,7 @@ class SeasonComparisonTests(unittest.TestCase):
         self.assertEqual(issue['source_cache_reuses'],3)
         self.assertFalse(issue['provider_market_coverage_refreshed'])
         scheduled=[g for g in data['games'] if g['status']=='SCHEDULED' and g['phase']=='regular']
-        self.assertEqual(len(scheduled),1005)
+        self.assertEqual(len(scheduled),1003)
         self.assertEqual(issue['known_scheduled_regular_games'],1012)
         self.assertTrue(all(g['forecasts'] for g in scheduled))
         # Recover that immutable checkpoint from current views plus retained history.
@@ -232,10 +241,161 @@ class SeasonComparisonTests(unittest.TestCase):
                     self.assertLessEqual(f['home_win_probability'],1)
         self.assertEqual(data['coverage']['unobserved_regular_slots'],24)
         self.assertFalse(data['market_coverage_complete'])
-        self.assertEqual(data['owner_execution']['release'],'B087-R3')
-        self.assertTrue(data['owner_execution']['return_verified'])
-        self.assertEqual(data['owner_execution']['return_parts'],8)
-        self.assertEqual(data['owner_execution']['exit_code'],2)
+        preserved=json.loads((b.ROOT/'b087_r3_owner_summary.json').read_bytes())
+        self.assertEqual(preserved['release'],'B087-R3')
+        self.assertTrue(preserved['return_verified'])
+        self.assertEqual(preserved['return_parts'],8)
+        self.assertEqual(preserved['exit_code'],2)
+
+    def test_latest_owner_return_reports_B089_without_rewriting_prior_evidence(self):
+        data=json.loads(self.generated_raw)
+        owner=json.loads((b.ROOT/'b089_owner_summary.json').read_bytes())
+        self.assertEqual(owner['release'],'B089')
+        self.assertTrue(owner['return_verified'])
+        self.assertEqual(owner['return_parts'],11)
+        self.assertEqual(owner['return_logical_bytes'],5516818786)
+        self.assertEqual(owner['new_estimator_method_returns'],28)
+        self.assertEqual(owner['new_calibration_fits'],1)
+        self.assertEqual(owner['new_forecast_rows'],13601)
+        self.assertEqual(owner['full_current_model_test_cells'],0)
+        self.assertEqual(owner['automatic_promotions'],0)
+        current=data['owner_execution'];self.assertEqual(current['release'],'B090')
+        self.assertFalse(current['return_verified'])
+        self.assertNotIn('return_logical_bytes',current)
+        self.assertNotIn('return_parts',current)
+        self.assertEqual(current['new_forecast_rows'],28084)
+        self.assertEqual(current['successful_jobs'],36)
+        self.assertFalse(current['forward_source_correction_pending'])
+
+    def test_ats_point_arithmetic_keeps_every_required_scope_without_probability_or_strategy_claims(self):
+        from ats_public import validate_public
+        data=json.loads(self.generated_raw);value=data['ats_point_diagnostics'];market=data['model_market_comparison']
+        self.assertEqual(value['required_games'],197)
+        self.assertEqual((value['required_margin_model_cells'],value['full_model_cells'],len(value['incomplete_required_cells'])),(792,8,784))
+        self.assertFalse(value['historical_issued_strategy_claim'])
+        self.assertFalse(value['calibrated_cover_probability_available'])
+        self.assertFalse(value['settlement_or_roi_claim'])
+        self.assertFalse(value['current_test_used_for_selection'])
+        self.assertEqual(sum(r['games'] for r in value['summaries']),1576)
+        for change,reason in [
+            (lambda x:x.update(settlement_or_roi_claim=True),'policy'),
+            (lambda x:x['summaries'][0].update(mathematical_cover_wins=197),'arithmetic'),
+            (lambda x:x['incomplete_required_cells'].pop(),'omitted'),
+        ]:
+            changed=copy.deepcopy(value);change(changed)
+            with self.assertRaisesRegex(ValueError,reason):validate_public(changed,market)
+
+    def test_latest_forward_export_covers_every_named_scheduled_game_and_keeps_originals(self):
+        data=json.loads(self.generated_raw);value=data['forward_forecast_update']
+        self.assertEqual(value['execution_checkpoint'],'B090-CORRECTED')
+        self.assertEqual(value['source_export_sha256'],'d8a01deb973f8758f47db6ddef7693f5ce05ea4bb4e723062a9a5b64f2f0bee6')
+        self.assertEqual((value['new_original_issue_rows'],value['new_distinct_games'],value['new_selected_recipes']),(14042,1003,14))
+        self.assertEqual(value['new_selected_role_views'],22066)
+        self.assertEqual(value['superseded_selected_role_issues_preserved'],22066)
+        self.assertEqual(value['scheduled_games_all_roles_new'],1003)
+        self.assertEqual(value['scheduled_games_partly_updated'],0)
+        self.assertEqual(value['scheduled_games_only_older_issues'],0)
+        self.assertEqual(value['scheduled_selected_role_cells_missing'],0)
+        self.assertEqual(value['nominal_window_issues'],0)
+        self.assertEqual(value['source_reported_unique_new_fits'],0)
+        self.assertEqual(value['original_journal_proof'],'FULL_CURRENT_JOURNAL_AND_ENGINE_READBACK')
+        self.assertEqual(len(data['forward_forecast_update_history']),2)
+        self.assertEqual(data['forward_forecast_update_history'][0]['new_original_issue_rows'],13601)
+        self.assertEqual(data['forward_forecast_update_history'][1]['new_original_issue_rows'],14042)
+        self.assertEqual(data['forward_forecast_update_history'][1]['source_reported_unique_new_fits'],28)
+        self.assertEqual(data['forward_forecast_update_history'][1]['source_export_sha256'],'0512306e0de283a3d667d524bae4d8d4d8239c15b8a7587c341e93a16bdc25b3')
+        for game in data['games']:
+            if game['phase']=='regular' and game['status']=='SCHEDULED':
+                for role,forecast in game['forecasts'].items():
+                    self.assertEqual(forecast['execution_checkpoint'],'B090-CORRECTED')
+                    self.assertEqual(game['original_issue_history'][role][-1]['execution_checkpoint'],'B090')
+                    self.assertTrue(forecast['original_pregame_issue'])
+                    self.assertFalse(forecast['nominal_horizon_qualified'])
+                    self.assertTrue(game['original_issue_history'][role])
+                    self.assertTrue(all(h['issued_at_utc']<forecast['issued_at_utc'] for h in game['original_issue_history'][role]))
+
+    def test_validation_leaders_require_complete_seasons_without_private_recipes(self):
+        from validation_leaders_public import validate_public
+        data=json.loads(self.generated_raw)
+        value=data['validation_leaders'];population=data['equal_population_evaluation']
+        self.assertEqual(len(validate_public(value,population)['groups']),28)
+        for mutation,reason in [
+            (lambda v:v.update(test_used_for_ranking=True),'scope'),
+            (lambda v:v['groups'][0]['leaders'][0]['seasons']['2024-25'].update(games=1229),'complete'),
+            (lambda v:v['groups'][0]['leaders'][0].update(pooled_metric=.01),'pool'),
+            (lambda v:v['groups'][0]['leaders'][0].update(exact_recipe='private'),'Private'),
+        ]:
+            changed=copy.deepcopy(value);mutation(changed)
+            with self.assertRaisesRegex(ValueError,reason):validate_public(changed,population)
+
+    def test_full_candidate_census_preserves_all_missing_test_candidates(self):
+        data=json.loads(self.generated_raw)
+        census=data['equal_population_evaluation']
+        self.assertEqual(census['census']['unique_recipe_ids'],2354)
+        self.assertEqual(census['census']['model_phase_target_horizon_scopes'],2390)
+        self.assertEqual(sum(len(g['models']) for g in census['groups']),11950)
+        self.assertEqual(sum(g['complete_candidate_count'] for g in census['groups'] if g['season']!='2026-27'),4444)
+        self.assertEqual(sum(g['complete_candidate_count'] for g in census['groups'] if g['season']=='2026-27'),40)
+        self.assertFalse(census['historical_source_availability_proved'])
+        for group in census['groups']:
+            self.assertEqual(group['required_candidate_count'],len(group['models']))
+            for model in group['models']:
+                self.assertEqual(model['qualified_games']+model['missing_games'],group['required_games'])
+                if group['season']=='2026-27':
+                    self.assertIsNone(model['strict_point_in_time_qualified_metrics'])
+                    self.assertFalse(model['independent_clean_test_claim'])
+                    if model['full_population_complete']:self.assertEqual(model['qualified_games'],197)
+                    else:self.assertIsNone(model['full_population_metrics'])
+        self.assertEqual(census['strict_current_point_in_time_metric_cells'],0)
+        self.assertEqual(census['legacy_census']['retained_original_legacy_source_scopes'],336)
+        self.assertEqual(census['legacy_census']['aggregate_source_aliases_retained_separately'],128)
+        self.assertTrue(census['legacy_census']['no_distinct_numerical_model_state_or_original_observation_discarded'])
+
+    def test_current_market_scope_keeps_every_candidate_and_full_provider_baseline(self):
+        from model_market_public import validate_public
+        data=json.loads(self.generated_raw);value=data['model_market_comparison'];population=data['equal_population_evaluation']
+        self.assertTrue(value['comparison_requires_all_candidates'])
+        uncertainty=value['full_population_uncertainty']
+        self.assertEqual((uncertainty['comparisons'],uncertainty['week_blocks'],uncertainty['draws']),(98,4,4000))
+        self.assertEqual(uncertainty['intervals_include_zero'],29)
+        self.assertTrue(uncertainty['market_better_point_estimate_on_all_reported_metrics'])
+        self.assertFalse(uncertainty['current_selection_allowed'])
+        self.assertEqual(validate_public(value,population),value)
+        for group in value['groups']:
+            self.assertEqual((group['required_games'],group['market_games'],group['missing_market_games']),(197,197,0))
+            self.assertIsNotNone(group['provider_only_full_population_metrics'])
+            self.assertEqual(group['common_diagnostic']['games'],0)
+            self.assertEqual(group['common_diagnostic']['models'],[])
+            for m in group['models']:
+                if m['full_population_complete']:
+                    self.assertEqual(m['paired_games'],197)
+                    self.assertIsNotNone(m['full_model_metrics'])
+                    self.assertEqual(m['full_comparison_evidence_status'],'DESCRIPTIVE_RECONSTRUCTION_SOURCE_AVAILABILITY_UNPROVED')
+                else:self.assertTrue(m['full_model_metrics'] is None and m['full_market_metrics'] is None)
+                self.assertFalse(m['independent_clean_test_claim'])
+        old=json.loads((b.ROOT/'model_market_comparison.json').read_bytes())
+        self.assertTrue(all(g['required_games']==192 for g in old['groups']))
+        changed=copy.deepcopy(value);changed['groups'][0]['models'].pop()
+        with self.assertRaisesRegex(ValueError,'candidates omitted'):validate_public(changed,population)
+        changed=copy.deepcopy(value);changed['groups'][0]['models'][0]['full_model_metrics']={'log_loss':.1}
+        with self.assertRaisesRegex(ValueError,'Partial paired'):validate_public(changed,population)
+        changed=copy.deepcopy(value);changed['groups'][0].update(market_games=196,missing_market_games=1)
+        with self.assertRaisesRegex(ValueError,'provider-only full'):validate_public(changed,population)
+
+    def test_validation_ties_and_uncertainty_are_explicit(self):
+        data=json.loads(self.generated_raw);groups=data['validation_leaders']['groups']
+        tied=next(g for g in groups if (g['phase'],g['target'],g['horizon_minutes'],g['metric'])==('regular','winner',60,'accuracy'))
+        self.assertEqual(tied['leading_score_tie_count'],3)
+        self.assertEqual(len({r['pooled_metric'] for r in tied['leaders']}),1)
+        for group in groups:
+            u=group['paired_validation_uncertainty']
+            self.assertTrue(u['paired_interval_includes_zero'])
+            self.assertLessEqual(u['paired_interval_95'][0],0)
+            self.assertGreaterEqual(u['paired_interval_95'][1],0)
+            self.assertTrue(u['post_selection_descriptive'])
+            self.assertFalse(u['multiple_comparison_adjusted'])
+            self.assertFalse(u['test_outcomes_used'])
+            self.assertEqual(u['resamples'],4000)
 
     def test_new_robustness_audit_preserves_cohort_and_reversal(self):
         raw,_=self.generated_raw, self.generated_html;audit=json.loads(raw)['b088_cached_science']['paired_audit']
