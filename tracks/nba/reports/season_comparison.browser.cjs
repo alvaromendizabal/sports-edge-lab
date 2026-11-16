@@ -4,9 +4,21 @@ const fs = require('node:fs');
 const path = require('node:path');
 const zlib = require('node:zlib');
 const {pathToFileURL} = require('node:url');
+async function changeControls(page,pairs){
+  await page.evaluate(values=>{for(const [id,value] of values){const element=document.getElementById(id);element.value=String(value);if(element.value!==String(value))throw new Error('Unavailable control value '+id);element.dispatchEvent(new Event('change',{bubbles:true}));}},pairs);
+}
 
 module.exports = async function checkSeasonComparison(browser, output) {
-  const source = JSON.parse(zlib.gunzipSync(fs.readFileSync(path.join(__dirname,'season_comparison.json.gz'))));
+  const started=Date.now();
+  // These suites include a fresh build and exact committed HTML/JSON byte checks.
+  // Run them once without blocking the independent historical browser contexts.
+  await require('node:util').promisify(require('node:child_process').execFile)('python',['-m','unittest','test_season_comparison','test_equal_population_public','test_draftkings_public','test_model_market_public'],{cwd:__dirname,maxBuffer:8<<20});
+  console.log(JSON.stringify({nba_comparison_stage:'source_and_projection_tests_passed',elapsed_seconds:(Date.now()-started)/1000}));
+  const downloadSource = JSON.parse(zlib.gunzipSync(fs.readFileSync(path.join(__dirname,'season_comparison.json.gz'))));
+  const html=fs.readFileSync(path.join(__dirname,'season_comparison.html'),'utf8');
+  const payload=html.match(/<script id="nba-comparison-payload" type="application\/octet-stream">([^<]+)<\/script>/);
+  assert.ok(payload);
+  const source=JSON.parse(zlib.gunzipSync(Buffer.from(payload[1],'base64')));
   const uri = pathToFileURL(path.join(__dirname,'season_comparison.html')).href;
   const result = {schema:'sports-edge-lab.nba.season-comparison-browser.v1',status:'PASS',observed_games:source.games.length,viewports:[]};
   for (const [name,width,height] of [['desktop',1440,1050],['mobile',390,844]]) {
@@ -17,6 +29,56 @@ module.exports = async function checkSeasonComparison(browser, output) {
     await page.route(/^https?:/,r=>{external.push(r.request().url());r.abort()});
     await page.goto(uri);await page.waitForSelector('html[data-nba-ready="true"]');
     assert.deepEqual(await page.evaluate(()=>window.NBA_COMPARISON_DATA),source);
+    const equal=source.equal_population_evaluation;
+    assert.ok(equal);
+    assert.deepEqual(equal.protocol.validation_seasons,['2024-25','2025-26']);
+    assert.equal(equal.protocol.test_season,'2026-27');
+    assert.equal(equal.protocol.test_exposure_status,'PREVIOUSLY_EXPOSED');
+    assert.match(await page.locator('#equal-population-protocol').textContent(),/Selection population: 2024–25 and 2025–26.*prior analytical exposure/);
+    for(const group of equal.groups){
+      const metric=group.target==='winner'?'log_loss':'mae';
+      await changeControls(page,[['equal-phase',group.phase],['equal-target',group.target],['equal-horizon',group.horizon_minutes],['equal-track',group.evidence_track],['equal-season',group.season],['equal-metric',metric]]);
+      const observed=await page.evaluate(()=>({scope:document.getElementById('equal-population-scope').textContent,rows:[...document.querySelectorAll('#equal-population-rows tr')].map(r=>r.textContent),result:document.getElementById('equal-population-result').textContent,section:document.getElementById('equal-population').textContent}));
+      assert.match(observed.scope,new RegExp('Required population: '+group.required_games+' games; '+group.required_candidate_count+' required candidates'));
+      const display=observed.rows;assert.equal(display.length,group.models.length);
+      group.models.forEach((m,i)=>{
+        assert.ok(display[i].includes(m.label));
+        assert.ok(display[i].includes(m.qualified_games+' / '+group.required_games));
+        if(!m.full_population_complete)assert.ok(display[i].includes('Unavailable'));
+        else if(typeof m.full_population_metrics?.[metric]==='number')assert.ok(display[i].includes(m.full_population_metrics[metric].toFixed(6)));
+      });
+      if(!group.all_required_candidates_complete)assert.match(observed.result,/No all-candidate full-population ranking/);
+      assert.doesNotMatch(observed.section,/undefined|NaN/);
+    }
+    await page.selectOption('#equal-phase','regular');await page.selectOption('#equal-target','winner');await page.selectOption('#equal-horizon','120');await page.selectOption('#equal-season','2026-27');
+    if(equal.groups.some(g=>g.evidence_track==='QUALIFIED_FIXED_REPLAY'&&g.target==='winner'&&g.horizon_minutes===120&&g.phase==='regular'))await page.selectOption('#equal-track','QUALIFIED_FIXED_REPLAY');
+    await page.screenshot({path:path.join(output,`nba-full-population-${name}.png`),fullPage:false});
+
+    const paired=source.model_market_comparison;
+    if(paired){
+      for(const group of paired.groups){
+        await changeControls(page,[['paired-target',group.target],['paired-horizon',group.horizon_minutes],['paired-track',group.evidence_track]]);
+        assert.match(await page.locator('#paired-market-scope').textContent(),new RegExp(group.required_games+' required 2026–27'));
+        assert.equal(await page.locator('#paired-full-rows tr').count(),group.models.length);
+        const cells=await page.locator('#paired-full-rows tr').allTextContents();
+        group.models.forEach((m,i)=>{assert.ok(cells[i].includes(m.model_games+' / '+group.required_games));if(!m.full_population_complete)assert.ok(cells[i].includes('Unavailable'));});
+        assert.match(await page.locator('#paired-diagnostic-scope').textContent(),new RegExp('Diagnostic only: '+group.common_diagnostic.games+' identical available games'));
+        assert.doesNotMatch(await page.locator('#named-market-scoreboard').textContent(),/undefined|NaN/);
+      }
+      await page.selectOption('#paired-target','winner');await page.selectOption('#paired-horizon','120');await page.selectOption('#paired-track','QUALIFIED_FIXED_REPLAY');
+    }
+    if(source.draftkings_analytical){
+      assert.equal(await page.locator('#draftkings-coverage-rows tr').count(),6);
+      for(const group of source.draftkings_analytical.coverage)assert.equal(group.required_games,192);
+      await page.selectOption('#market-availability','QUALIFIED_DRAFTKINGS');
+      assert.match(await page.locator('#game-count').textContent(),/^185 matching/);
+      await page.selectOption('#game-status','UPCOMING');await page.selectOption('#horizon','120');
+      for(const target of ['winner','margin','total']){
+        await page.selectOption('#target',target);assert.match(await page.locator('#game-rows').textContent(),/Current capture · reference only/);
+        assert.match(await page.locator('#game-rows').textContent(),/official start retained/);
+      }
+      await page.selectOption('#game-status','ALL');await page.selectOption('#market-availability','ALL');await page.selectOption('#target','winner');
+    }
     assert.equal(await page.locator('#game-rows tr').count(),Math.min(30,source.games.length));
     assert.equal(await page.locator('#provider-rows tr').count(),4);
     const visited = new Set();
@@ -41,7 +103,7 @@ module.exports = async function checkSeasonComparison(browser, output) {
         const game=source.games.find(g=>g.game_id===row.id),forecast=game.forecasts[`regular_${target}_${objective}_t120`];
         if(forecast)assert.ok(row.text.includes(target==='winner'?(forecast.prediction*100).toFixed(2)+'%':forecast.prediction.toFixed(2)));
         else assert.ok(row.text.includes('No current-role original issue'));
-        const missing=Object.values(game.markets).filter(m=>!m.bound_observations&&m.status!=='PREGAME_WINNER_REFERENCE_RETAINED_PRICE_NOT_PUBLIC').length;
+        const missing=Object.entries(game.markets).filter(([provider,m])=>!m.bound_observations&&m.status!=='PREGAME_WINNER_REFERENCE_RETAINED_PRICE_NOT_PUBLIC'&&!(provider==='DRAFTKINGS'&&source.draftkings_analytical?.rows.some(r=>r.game_id===game.game_id&&r.target===target&&(r.horizon_minutes===120||r.horizon_minutes===null)))).length;
         assert.equal((row.text.match(/No bound record in audited snapshot/g)||[]).length,missing);
       }
     }
@@ -97,7 +159,7 @@ module.exports = async function checkSeasonComparison(browser, output) {
     assert.match(await page.locator('#cached-work-details').textContent(),/830.*83.*166.*2,201/);
     assert.match(await page.locator('#cached-work-details').textContent(),/Nineteen tests passed/);
     assert.match(await page.locator('#cached-work-details').textContent(),/No predictive improvement established/);
-    assert.match(await page.locator('#source-inventory-rows').textContent(),/Existing provider connection verified; no new game quotes collected/);
+    if(source.draftkings_analytical)assert.match(await page.locator('#source-inventory-rows').textContent(),/Earlier audit inventory retained/);else assert.match(await page.locator('#source-inventory-rows').textContent(),/Existing provider connection verified; no new game quotes collected/);
     assert.doesNotMatch(await page.locator('#robustness').textContent(),/undefined|NaN/);
     await page.selectOption('#robust-week-zone','UTC');
     assert.equal(await page.locator('#frontier-score-rows tr').count(),18);
@@ -123,7 +185,8 @@ module.exports = async function checkSeasonComparison(browser, output) {
     });
     assert.equal(await page.locator('#weighted-score-rows tr').count(),11);
     const [download]=await Promise.all([page.waitForEvent('download'),page.locator('#download-json').click()]);
-    assert.deepEqual(JSON.parse(fs.readFileSync(await download.path(),'utf8')),source);
+    assert.deepEqual(JSON.parse(fs.readFileSync(await download.path(),'utf8')),downloadSource);
+    if(source.draftkings_analytical){assert.ok(source.draftkings_analytical.rows);assert.equal(downloadSource.draftkings_analytical.rows,undefined);assert.equal(downloadSource.draftkings_analytical.provider_quote_rows_excluded_from_download,true);}
     assert.equal(await page.evaluate(()=>document.documentElement.scrollWidth>innerWidth+1),false);
     assert.equal((await page.locator('body').innerText()).toLowerCase().includes('ci'+'rca'),false);
     await page.screenshot({path:path.join(output,`nba-season-comparison-${name}.png`),fullPage:true});
@@ -131,6 +194,7 @@ module.exports = async function checkSeasonComparison(browser, output) {
     assert.deepEqual(errors,[]);assert.deepEqual(external,[]);
     result.viewports.push({name,width,height,games_verified:visited.size,offline_reopen:true,download_roundtrip:true,page_errors:0,external_requests:0});
     await context.close();
+    console.log(JSON.stringify({nba_comparison_stage:name+'_verified',elapsed_seconds:(Date.now()-started)/1000}));
   }
   fs.writeFileSync(path.join(output,'nba-season-comparison-browser.json'),JSON.stringify(result,null,2)+'\n');
   return result;

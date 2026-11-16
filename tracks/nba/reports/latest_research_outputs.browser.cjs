@@ -466,6 +466,10 @@ function expectedRow(row, data) {
       phase: row.game.phase, date: row.facts.date, team: row.game.home_team || row.game.away_team || "", ...extra };
   }
 
+  // Independent report checks use separate browser contexts; preserve every assertion
+  // while avoiding a serial verification tail after the exhaustive schedule census.
+  const seasonComparisonTask = require("./season_comparison.browser.cjs")(browser, output)
+    .then(value => ({value}), error => ({error}));
   try {
     const desktop = await context({ width: 1366, height: 1000 });
     const page = await pageFor(desktop);
@@ -649,7 +653,9 @@ function expectedRow(row, data) {
     assert.equal(sha256(fs.readFileSync(jsonPath)), sha256(jsonBytes));
     assert.equal(sha256(fs.readFileSync(htmlPath)), sha256(htmlBytes));
     checks.push("no_javascript_page_or_console_errors", "zero_remote_page_requests", "saved_artifact_bytes_unchanged");
-    const seasonComparisonEvidence = await require("./season_comparison.browser.cjs")(browser, output);
+    const seasonComparisonOutcome = await seasonComparisonTask;
+    if (seasonComparisonOutcome.error) throw seasonComparisonOutcome.error;
+    const seasonComparisonEvidence = seasonComparisonOutcome.value;
     const result = { status: "PASS", scope: "Hosted browser verification of every public schedule/metric row against saved JSON; no fitting, rescoring or live refresh",
       browser_version: await browser.version(), started_at_utc: started, finished_at_utc: new Date().toISOString(),
       elapsed_seconds: Number(process.hrtime.bigint() - startedClock) / 1e9,
@@ -682,4 +688,5 @@ function expectedRow(row, data) {
     await browser.close();
   }
 })().catch(error => { console.error(error); process.exit(1); });
+
 

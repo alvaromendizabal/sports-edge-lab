@@ -12,6 +12,7 @@ class SeasonComparisonTests(unittest.TestCase):
         cls.selected, _ = b.read_json(b.ROOT / 'latest_research_outputs.json.gz')
         cls.review, _ = b.read_json(b.ROOT / 'latest_model_review.json')
         cls.acceptance, _ = b.read_json(b.ROOT / 'latest_v9_acceptance.json.gz')
+        cls.generated_raw, cls.generated_html = b.build()
         cls.leaders, _ = b.read_json(b.ROOT / 'current_saved_cohort_leaders.json')
         cls.projected = b.project(cls.selected, cls.review, cls.acceptance, cls.leaders)
 
@@ -85,7 +86,7 @@ class SeasonComparisonTests(unittest.TestCase):
             self.assertFalse(champion['automatic_production_promotion'])
 
     def test_public_page_remains_basketball_specific(self):
-        raw, html = b.build()
+        raw, html = self.generated_raw, self.generated_html
         forbidden = 'ci' + 'rca'
         self.assertNotIn(forbidden, raw.decode().lower())
         self.assertNotIn(forbidden, html.decode().lower())
@@ -96,12 +97,13 @@ class SeasonComparisonTests(unittest.TestCase):
         self.assertEqual(before,json.dumps([self.selected,self.review,self.acceptance,self.leaders],sort_keys=True))
 
     def test_generated_data_and_page_match_authoritative_inputs(self):
-        raw, html = b.build()
+        # setUpClass generated these bytes freshly from the unchanged source files.
+        raw, html = self.generated_raw, self.generated_html
         self.assertEqual(gzip.decompress((b.ROOT/'season_comparison.json.gz').read_bytes()),raw)
         self.assertEqual((b.ROOT/'season_comparison.html').read_bytes(),html)
 
     def test_actual_current_projection_preserves_separate_source_clocks(self):
-        raw, _ = b.build();value=json.loads(raw)
+        raw, _ = self.generated_raw, self.generated_html;value=json.loads(raw)
         self.assertIn('market_comparison_evidence_as_of_utc',value)
         self.assertIn('game_inventory_evidence_as_of_utc',value)
         self.assertEqual(value['publication_effects']['new_forecasts'],0)
@@ -111,22 +113,23 @@ class SeasonComparisonTests(unittest.TestCase):
                 self.assertIsNotNone(forecast['source_asof_utc'])
 
     def test_active_public_data_excludes_exact_recipes_and_private_paths(self):
-        raw, _=b.build();text=raw.decode()
+        raw, _=self.generated_raw, self.generated_html;text=raw.decode()
         for key in ['"recipe_id"','"cohort_id"','"role_id"','/home/sagemaker-user','s3://','"recovered_native_constructor"','"base_names"']:
             self.assertNotIn(key,text)
 
     def test_current_inventory_keeps_every_final_and_separates_secondary_observations(self):
-        raw,_=b.build();data=json.loads(raw)
+        raw,_=self.generated_raw, self.generated_html;data=json.loads(raw)
         self.assertEqual(len(data['games']),1274)
         finals=[r for r in data['games'] if r['status']=='FINAL']
-        self.assertEqual(len(finals),250)
-        self.assertEqual(sum(r['phase']=='regular' for r in finals),183)
+        self.assertEqual(len(finals),259)
+        self.assertEqual(sum(r['phase']=='regular' for r in finals),192)
         self.assertTrue(all(isinstance(r['actual']['home_points'],(int,float)) for r in finals))
         self.assertEqual(data['coverage']['secondary_observations'],3)
         self.assertEqual(data['coverage']['unobserved_regular_slots'],24)
+        self.assertEqual(data['coverage']['regular_status_counts'],{'FINAL':192,'LIVE':3,'SCHEDULED':1005,'TBD':6})
 
     def test_reference_coverage_never_exports_price_or_invents_quote_clock(self):
-        raw,_=b.build();data=json.loads(raw)
+        raw,_=self.generated_raw, self.generated_html;data=json.loads(raw)
         rows=[r for g in data['games'] for r in g['markets'].values() if r['status']=='PREGAME_WINNER_REFERENCE_RETAINED_PRICE_NOT_PUBLIC']
         self.assertEqual(len(rows),68)
         self.assertTrue(all(r['value'] is None and r['provider_quote_at_utc'] is None for r in rows))
@@ -134,14 +137,14 @@ class SeasonComparisonTests(unittest.TestCase):
         self.assertEqual(data['publication_effects']['new_scoring'],0)
 
     def test_reference_rejects_wrong_game_future_observation_and_unqualified_price(self):
-        raw,_=b.build();data=json.loads(raw)
+        raw,_=self.generated_raw, self.generated_html;data=json.loads(raw)
         reference=next(r for g in data['games'] for r in g['markets'].values() if r.get('target')=='winner')
         for patch,reason in [({'home_team':'wrong'},'identity'),({'observed_at_utc':'2099-01-01T00:00:00Z'},'pregame'),({'value':0.5},'price')]:
             r=copy.deepcopy(reference);r.update(patch)
             with self.assertRaisesRegex(ValueError,reason):b.apply_reference_coverage(copy.deepcopy(data),{'rows':[r]})
 
     def test_current_science_keeps_different_cohorts_and_no_promotion(self):
-        raw,_=b.build();data=json.loads(raw)['current_science_scores']
+        raw,_=self.generated_raw, self.generated_html;data=json.loads(raw)['current_science_scores']
         pair=data['current_winner_matched_comparison']
         self.assertEqual(pair['matched_games'],128)
         self.assertFalse(pair['provider_baseline_comparison'])
@@ -151,7 +154,7 @@ class SeasonComparisonTests(unittest.TestCase):
             self.assertFalse(row['promotion_allowed'])
 
     def test_row_bound_inventory_reconciles_without_treating_unbound_as_absent(self):
-        raw,_=b.build();data=json.loads(raw)
+        raw,_=self.generated_raw, self.generated_html;data=json.loads(raw)
         counts={p:sum(g['markets'][p]['bound_observations'] for g in data['games']) for p in b.PROVIDERS}
         self.assertEqual(counts,{'DRAFTKINGS':0,'KALSHI':20918,'POLYMARKET_US':560,'POLYMARKET_INTERNATIONAL':0})
         self.assertEqual(data['provider_game_coverage']['summary']['KALSHI']['bound_games'],80)
@@ -160,7 +163,7 @@ class SeasonComparisonTests(unittest.TestCase):
         self.assertTrue(all(g['markets']['POLYMARKET_INTERNATIONAL']['status']=='NO_CANONICAL_BINDING_IN_AUDITED_SNAPSHOT' for g in data['games']))
 
     def test_source_readiness_keeps_forecast_issuance_separate(self):
-        raw,_=b.build();data=json.loads(raw)
+        raw,_=self.generated_raw, self.generated_html;data=json.loads(raw)
         progress=data['current_science_scores']['future_source_progress']
         self.assertEqual(progress['source_qualified_future_targets'],32)
         self.assertEqual(progress['new_eligible_future_vectors'],64)
@@ -178,7 +181,7 @@ class SeasonComparisonTests(unittest.TestCase):
         self.assertEqual(data['publication_effects']['new_forecasts'],0)
 
     def test_complete_work_reuse_does_not_claim_new_fits_or_speedup(self):
-        raw,_=b.build();data=json.loads(raw)
+        raw,_=self.generated_raw, self.generated_html;data=json.loads(raw)
         reuse=data['current_science_scores']['warm_cache_progress']
         self.assertEqual(reuse['verified_models_reused'],120)
         self.assertEqual(reuse['verified_prediction_rows_reused'],66432)
@@ -190,7 +193,7 @@ class SeasonComparisonTests(unittest.TestCase):
         self.assertFalse(reuse['verifier_event_counts_are_disjoint_unique_files'])
 
     def test_R3_original_issues_close_only_the_known_scheduled_gap(self):
-        raw,_=b.build();data=json.loads(raw)
+        raw,_=self.generated_raw, self.generated_html;data=json.loads(raw)
         issue=data['current_science_scores']['future_forecast_issuance']
         self.assertEqual(issue['new_original_issue_rows'],448)
         self.assertEqual(issue['new_distinct_games'],32)
@@ -200,9 +203,10 @@ class SeasonComparisonTests(unittest.TestCase):
         self.assertEqual(issue['source_cache_reuses'],3)
         self.assertFalse(issue['provider_market_coverage_refreshed'])
         scheduled=[g for g in data['games'] if g['status']=='SCHEDULED' and g['phase']=='regular']
-        self.assertEqual(len(scheduled),1012)
+        self.assertEqual(len(scheduled),1005)
+        self.assertEqual(issue['known_scheduled_regular_games'],1012)
         self.assertTrue(all(g['forecasts'] for g in scheduled))
-        new_games=[g for g in scheduled if any(f['issued_at_utc']>=issue['issue_clocks_utc']['first'] for f in g['forecasts'].values())]
+        new_games=[g for g in data['games'] if any(f['issued_at_utc']>=issue['issue_clocks_utc']['first'] for f in g['forecasts'].values())]
         self.assertEqual(len(new_games),32)
         self.assertEqual(sum(len(g['forecasts']) for g in new_games),704)
         for g in new_games:
@@ -223,7 +227,7 @@ class SeasonComparisonTests(unittest.TestCase):
         self.assertEqual(data['owner_execution']['exit_code'],2)
 
     def test_new_robustness_audit_preserves_cohort_and_reversal(self):
-        raw,_=b.build();audit=json.loads(raw)['b088_cached_science']['paired_audit']
+        raw,_=self.generated_raw, self.generated_html;audit=json.loads(raw)['b088_cached_science']['paired_audit']
         self.assertEqual((audit['games'],audit['completed_denominator_in_prior_snapshot'],audit['missing_from_common']),(128,183,55))
         self.assertFalse(audit['promotion_allowed'])
         self.assertFalse(audit['provider_baseline_comparison'])
@@ -255,7 +259,7 @@ class SeasonComparisonTests(unittest.TestCase):
         with self.assertRaisesRegex(ValueError,'cannot qualify market'):b.validate_cached_science(bad)
 
     def test_M1_summary_is_materialization_not_training_or_new_source_coverage(self):
-        raw,_=b.build();data=json.loads(raw);value=data['b088_cached_science'];m=value['secondary_features']
+        raw,_=self.generated_raw, self.generated_html;data=json.loads(raw);value=data['b088_cached_science'];m=value['secondary_features']
         self.assertEqual((m['source_games'],m['team_rows'],m['player_rows_reconciled']),(83,166,2201))
         self.assertEqual((m['rate_component_values'],m['total_rebound_discrepancy_rows'],m['missing_raw_schedule_ancestor_games'],m['tests_passed']),(830,8,23,19))
         self.assertFalse(m['promotion_allowed']);self.assertFalse(m['predictive_improvement_established'])
