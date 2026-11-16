@@ -63,7 +63,7 @@ function harness(bundle) {
   const get = id => { assert(elements.has(id), `Missing DOM id ${id}`); return elements.get(id); };
   for (const [id, value] of Object.entries({ competition: 'all', season: 'all', target: 'win', evidence: 'all', 'model-filter': 'all', 'coverage-filter': 'all', 'cell-competition': 'ncaam', 'cell-season': '2027', 'cell-target': 'win', 'cell-evidence': 'all', 'cell-game-status': 'all', 'cell-state': 'all' })) get(id).value = value;
   const fetched = [], output = { downloaded: null };
-  const win = { document: { body: { dataset: { populationBase: bundle.populationBase || 'population' } }, getElementById: get, createElement: () => new Element('download') }, Blob, Response, DecompressionStream, TextDecoder, crypto: crypto.webcrypto, setTimeout: fn => fn(), URL: { createObjectURL: blob => { output.downloaded = blob; return 'blob:fixture'; }, revokeObjectURL() {} }, fetch: async asset => {
+  const win = { document: { body: { dataset: { populationBase: bundle.populationBase || 'population', statusObjectBase: bundle.statusObjectBase || '' } }, getElementById: get, createElement: () => new Element('download') }, Blob, Response, DecompressionStream, TextDecoder, crypto: crypto.webcrypto, setTimeout: fn => fn(), URL: { createObjectURL: blob => { output.downloaded = blob; return 'blob:fixture'; }, revokeObjectURL() {} }, fetch: async asset => {
     fetched.push(asset);
     if (!bundle.assets.has(asset)) return { ok: false, status: 404 };
     const value = bundle.assets.get(asset);
@@ -96,6 +96,8 @@ async function main() {
   assert.equal(api.pacific('2026-11-15', true), '2026-11-15 · date only');
   assert.match(api.pacific('2026-11-15T21:27:26Z'), /PST/);
   assert.throws(() => api.relativeAsset('population/../private.json'), /not qualified/);
+  assert.throws(() => api.relativeAsset('status_objects/../private.jsonl.gz'), /not qualified/);
+  assert.equal(api.relativeAsset('status_objects/' + 'a'.repeat(64) + '.jsonl.gz'), 'status_objects/' + 'a'.repeat(64) + '.jsonl.gz');
   assert.throws(() => api.relativeAsset('https://example.test/private.json'), /not qualified/);
   const descriptor = bundle.data.status_partition_manifest[0];
   const firstCell = JSON.parse(zlib.gunzipSync(bundle.assets.get('population/status/' + descriptor.filename)).toString().split('\n')[0]);

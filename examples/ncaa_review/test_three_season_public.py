@@ -8,6 +8,7 @@ import subprocess
 import unittest
 
 from examples.ncaa_review.public_status_transport import unpack
+from examples.ncaa_review.public_shared_status import build as build_shared
 
 ROOT = Path(__file__).resolve().parents[2]
 DOCS = ROOT / "docs" / "ncaa"
@@ -22,6 +23,7 @@ class ThreeSeasonPublicContract(unittest.TestCase):
     def setUpClass(cls):
         unpack(POP)
         unpack(DOCS / "population_r17")
+        cls.shared = build_shared(DOCS, reconstruct=False)
         cls.data = json.loads((POP / "population_public.json").read_text())
         cls.manifest = json.loads((POP / "status_manifest.json").read_text())
 
@@ -35,6 +37,10 @@ class ThreeSeasonPublicContract(unittest.TestCase):
         self.assertEqual(execution["public_counters"][0]["value"], 0)
         self.assertIs(execution["actual_utilization_gate_executed"], False)
         self.assertEqual(len(self.data["status_partition_manifest"]), 1665)
+        self.assertEqual(self.shared["logical_partition_references"], 3252)
+        self.assertEqual(self.shared["physical_objects"], 1899)
+        self.assertEqual(self.shared["duplicated_bytes_avoided"], 101620983)
+        self.assertIn('data-status-object-base="status_objects"', (DOCS / "three_seasons.html").read_text())
 
     def test_six_separate_populations_and_explicit_rank_policy(self):
         self.assertEqual(self.data["schema"], "sel.ncaa.b088.population_public.v1")
@@ -66,6 +72,7 @@ class ThreeSeasonPublicContract(unittest.TestCase):
     def test_public_assets_have_no_private_source_material(self):
         forbidden_sport_label = "".join(map(chr, [99, 105, 114, 99, 97]))
         paths = [DOCS / name for name in ("three_seasons.html", "three_seasons.css", "three_seasons.js")]
+        paths += [DOCS / "status_objects_manifest.json"]
         paths += [p for p in POP.rglob("*.json") if "source_packs" not in p.parts]
         for file in paths:
             body = gzip.decompress(file.read_bytes()) if file.suffix == ".gz" else file.read_bytes()
