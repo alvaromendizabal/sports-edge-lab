@@ -3,6 +3,7 @@ const assert = require('node:assert/strict');
 const fs = require('node:fs');
 const path = require('node:path');
 const zlib = require('node:zlib');
+const {createHash} = require('node:crypto');
 const {pathToFileURL} = require('node:url');
 async function changeControls(page,pairs){
   await page.evaluate(values=>{for(const [id,value] of values){const element=document.getElementById(id);element.value=String(value);if(element.value!==String(value))throw new Error('Unavailable control value '+id);element.dispatchEvent(new Event('change',{bubbles:true}));}},pairs);
@@ -19,6 +20,7 @@ module.exports = async function checkSeasonComparison(browser, output) {
   const payload=html.match(/<script id="nba-comparison-payload" type="application\/octet-stream">([^<]+)<\/script>/);
   assert.ok(payload);
   const source=JSON.parse(zlib.gunzipSync(Buffer.from(payload[1],'base64')));
+  const expectedPayloadSha256=createHash('sha256').update(JSON.stringify(source)).digest('hex');
   const uri = pathToFileURL(path.join(__dirname,'season_comparison.html')).href;
   const result = {schema:'sports-edge-lab.nba.season-comparison-browser.v1',status:'PASS',observed_games:source.games.length,viewports:[]};
   for (const [name,width,height] of [['desktop',1440,1050],['mobile',390,844]]) {
@@ -28,7 +30,14 @@ module.exports = async function checkSeasonComparison(browser, output) {
     page.on('console',m=>{if(m.type()==='error')errors.push(m.text())});
     await page.route(/^https?:/,r=>{external.push(r.request().url());r.abort()});
     await page.goto(uri);await page.waitForSelector('html[data-nba-ready="true"]');
-    assert.deepEqual(await page.evaluate(()=>window.NBA_COMPARISON_DATA),source);
+    // Verify every decoded byte without repeatedly transporting the full multi-season
+    // history across the browser protocol. No file-stat or partial-row substitute.
+    const observedPayloadSha256=await page.evaluate(async()=>{
+      const bytes=new TextEncoder().encode(JSON.stringify(window.NBA_COMPARISON_DATA));
+      const hash=await crypto.subtle.digest('SHA-256',bytes);
+      return [...new Uint8Array(hash)].map(x=>x.toString(16).padStart(2,'0')).join('');
+    });
+    assert.equal(observedPayloadSha256,expectedPayloadSha256);
     const forward=source.forward_forecast_update;
     assert.ok(forward);
     assert.match(await page.locator('#latest-forward-checkpoint').textContent(),new RegExp(forward.new_original_issue_rows.toLocaleString('en-US')+' issues.*'+forward.scheduled_games_with_new_issues+'/'+forward.scheduled_regular_games));
@@ -38,6 +47,7 @@ module.exports = async function checkSeasonComparison(browser, output) {
     assert.ok(forwardText.includes('Missing selected-role cells: '+forward.scheduled_selected_role_cells_missing));
     assert.equal(await page.locator('#forward-role-rows tr').count(),forward.required_regular_roles_per_game);
     assert.equal((await page.locator('#forward-gap-rows tr').count()),Math.max(1,forward.scheduled_games_only_older_issues));
+    if(!forward.scheduled_games_only_older_issues)assert.match(await page.locator('#forward-gap-rows').textContent(),/No scheduled game retains only older original issues/);
     assert.equal(forward.nominal_window_issues,0);
     for(const [role,count] of Object.entries(forward.scheduled_coverage_by_role))assert.ok(count<=forward.scheduled_regular_games);
     const equal=source.equal_population_evaluation;
@@ -202,7 +212,7 @@ module.exports = async function checkSeasonComparison(browser, output) {
     assert.match(await page.locator('#latest-forecast-checkpoint').textContent(),/B087-R3.*448 new early-outlook rows for 32 games/);
     assert.match(await page.locator('#latest-forecast-checkpoint').textContent(),/1,012\/1,012 known scheduled regular games/);
     assert.match(await page.locator('#owner-status').textContent(),/B090/);
-    assert.match(await page.locator('#latest-owner-checkpoint').textContent(),/return packaging pending.*B090.*28 new estimator fits.*14,042 new forecast rows/);
+    assert.match(await page.locator('#latest-owner-checkpoint').textContent(),/return packaging pending.*B090.*28 new estimator fits.*28,084 new forecast rows/);
     assert.match(await page.locator('#owner-status').textContent(),/Return packaging is pending; its physical integrity has not yet been verified/);
     assert.equal(await page.locator('#earlier-frontier-rows tr').count(),36);
     const earlierRows=await page.locator('#earlier-frontier-rows tr').allTextContents();

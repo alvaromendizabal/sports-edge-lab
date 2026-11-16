@@ -87,6 +87,10 @@ class ForwardForecastTests(unittest.TestCase):
             base,data,row=self.fixture();data[key]=value
             with self.assertRaisesRegex(ValueError,'alter science'):f.apply_public(base,data)
 
+    def test_unknown_journal_proof_cannot_be_published(self):
+        base,value,row=self.fixture();value['original_journal_proof']='UNVERIFIED_BODY'
+        with self.assertRaisesRegex(ValueError,'proof reference'):f.apply_public(base,value)
+
     def test_new_checkpoint_preserves_prior_original_issue_and_summary(self):
         base,value,row=self.fixture()
         prior_summary=copy.deepcopy(f.apply_public(base,value))

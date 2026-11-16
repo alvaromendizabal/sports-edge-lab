@@ -263,12 +263,14 @@ class SeasonComparisonTests(unittest.TestCase):
         self.assertFalse(current['return_verified'])
         self.assertNotIn('return_logical_bytes',current)
         self.assertNotIn('return_parts',current)
-        self.assertEqual(current['new_forecast_rows'],14042)
+        self.assertEqual(current['new_forecast_rows'],28084)
+        self.assertEqual(current['successful_jobs'],36)
+        self.assertFalse(current['forward_source_correction_pending'])
 
     def test_latest_forward_export_covers_every_named_scheduled_game_and_keeps_originals(self):
         data=json.loads(self.generated_raw);value=data['forward_forecast_update']
-        self.assertEqual(value['execution_checkpoint'],'B090')
-        self.assertEqual(value['source_export_sha256'],'0512306e0de283a3d667d524bae4d8d4d8239c15b8a7587c341e93a16bdc25b3')
+        self.assertEqual(value['execution_checkpoint'],'B090-CORRECTED')
+        self.assertEqual(value['source_export_sha256'],'d8a01deb973f8758f47db6ddef7693f5ce05ea4bb4e723062a9a5b64f2f0bee6')
         self.assertEqual((value['new_original_issue_rows'],value['new_distinct_games'],value['new_selected_recipes']),(14042,1003,14))
         self.assertEqual(value['new_selected_role_views'],22066)
         self.assertEqual(value['superseded_selected_role_issues_preserved'],22066)
@@ -277,13 +279,18 @@ class SeasonComparisonTests(unittest.TestCase):
         self.assertEqual(value['scheduled_games_only_older_issues'],0)
         self.assertEqual(value['scheduled_selected_role_cells_missing'],0)
         self.assertEqual(value['nominal_window_issues'],0)
-        self.assertEqual(value['source_reported_unique_new_fits'],28)
-        self.assertEqual(len(data['forward_forecast_update_history']),1)
+        self.assertEqual(value['source_reported_unique_new_fits'],0)
+        self.assertEqual(value['original_journal_proof'],'FULL_CURRENT_JOURNAL_AND_ENGINE_READBACK')
+        self.assertEqual(len(data['forward_forecast_update_history']),2)
         self.assertEqual(data['forward_forecast_update_history'][0]['new_original_issue_rows'],13601)
+        self.assertEqual(data['forward_forecast_update_history'][1]['new_original_issue_rows'],14042)
+        self.assertEqual(data['forward_forecast_update_history'][1]['source_reported_unique_new_fits'],28)
+        self.assertEqual(data['forward_forecast_update_history'][1]['source_export_sha256'],'0512306e0de283a3d667d524bae4d8d4d8239c15b8a7587c341e93a16bdc25b3')
         for game in data['games']:
             if game['phase']=='regular' and game['status']=='SCHEDULED':
                 for role,forecast in game['forecasts'].items():
-                    self.assertEqual(forecast['execution_checkpoint'],'B090')
+                    self.assertEqual(forecast['execution_checkpoint'],'B090-CORRECTED')
+                    self.assertEqual(game['original_issue_history'][role][-1]['execution_checkpoint'],'B090')
                     self.assertTrue(forecast['original_pregame_issue'])
                     self.assertFalse(forecast['nominal_horizon_qualified'])
                     self.assertTrue(game['original_issue_history'][role])

@@ -3,6 +3,9 @@
   "automatic_promotions": 0,
   "execution_receipt_sha256s": {
     "continuation": "f760df7ba101e2e694a0d354ee9e11427b19daa78c2c6bf21424b7c69850c45c",
+    "corrected_forward_execution": "3f4738dbdfe4e7ac11d403fe067e34969500e7771835cc876126b7bf79655fad",
+    "corrected_forward_export": "d8a01deb973f8758f47db6ddef7693f5ce05ea4bb4e723062a9a5b64f2f0bee6",
+    "corrected_independent_forecast_readback": "bb39af3761cad2fd3317fc83d2d29a12c3bd18d294f8c562b533ac19fe0d6ff9",
     "final_candidate_ledger_archive": "42989bf9a6ebc52083ab6add6991a132430b8a4a362e449f500cc5c951c185e6",
     "final_model_market_archive": "99bc3a852f33bf5c3f74749b9e707d71b65cdaea67d61c34cf7b208a0af1c751",
     "forward_export": "8ae08bff599fa3a90854b8ca3e338c11b545bb0c7eeb1013a2b729b0dce88ea8",
@@ -10,26 +13,26 @@
     "independent_forecast_readback": "4060e9f71f6f75ab583f4e9d921a2ab38493206753a166377315126c630be41c"
   },
   "failed_jobs": 0,
-  "forward_source_correction_pending": true,
+  "forward_source_correction_pending": false,
   "full_current_model_test_cells": 0,
   "historical_snapshot_utc": "2026-11-16T18:57:35.271475+00:00",
   "limitations": [
-    "This update combines the refreshed B089 fits with B090 source recovery and forecasting: 28 estimator fits, one calibration fit, 14,042 new original forecasts, 24 completed issuance jobs and zero failed issuance jobs. Historical replay is accounted separately.",
+    "This execution recorded 28 estimator fits, one calibration fit and 28,084 new original forecast versions across 36 completed issuance jobs with zero failed issuance jobs. The latest 14,042 versions replace the earlier 14,042 issues; both are preserved. Historical replay is accounted separately.",
     "All 1,003 named scheduled regular games have new forecasts for 14 selected recipes and 22 displayed metric roles. Every issue is an early outlook; no nominal T60/T120 qualification is claimed. Six regular TBD records and 24 unobserved season slots remain outside that named scheduled population.",
     "The current completed population is fixed at 197 regular games. Twenty-two complete model cells (11 fixed-state and 11 later-fitted) now have full-population descriptive reconstructions. Historical source availability remains unproved, and zero strict point-in-time current test cells are established. Every incomplete candidate remains counted.",
     "DraftKings historical references cover all 197 games at both horizons for all three targets. The latest current capture covers 8 of 1,003 scheduled games. Complete Kalshi and Polymarket comparisons remain unverified.",
     "The new logical return is still being packaged. Its physical integrity is not yet verified; the earlier verified B089 return remains archived separately.",
-    "The original displayed B090 issues omitted nine completed Cup games from historical context. The immutable original issues are retained; an inference-only source correction and replacement issuance are in progress."
+    "The earlier B090 issues omitted nine completed Cup games from inference history. The corrected 14,042 replacements use all eligible history with the same 28 saved fitted snapshots and unchanged training contexts; zero new estimator or calibration fits were needed. Values changed in 13,135 replacements and remained equal in 907. Every original value, issue time and source version is preserved."
   ],
   "new_calibration_fits": 1,
   "new_estimator_method_returns": 28,
-  "new_forecast_rows": 14042,
+  "new_forecast_rows": 28084,
   "new_unique_model_count": 28,
-  "observed_at_utc": "2026-11-16T20:00:54.801001+00:00",
+  "observed_at_utc": "2026-11-16T20:20:08.493136+00:00",
   "release": "B090",
   "return_verified": false,
   "scientific_status": "FULL_POINT_IN_TIME_CURRENT_MODEL_TEST_NOT_ESTABLISHED",
-  "source_receipt_sha256": "8ae08bff599fa3a90854b8ca3e338c11b545bb0c7eeb1013a2b729b0dce88ea8",
+  "source_receipt_sha256": "3f4738dbdfe4e7ac11d403fe067e34969500e7771835cc876126b7bf79655fad",
   "status": "VERIFIED_SCIENTIFIC_UPDATE_RETURN_PACKAGING_PENDING",
-  "successful_jobs": 24
+  "successful_jobs": 36
 }
