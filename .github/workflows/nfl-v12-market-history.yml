@@ -1,0 +1,29 @@
+name: NFL V12 market history dashboard
+on:
+  pull_request:
+    paths:
+      - 'tracks/nfl/circa_million_2026/market_history/**'
+      - 'tracks/nfl/circa_million_2026/test_v12_market_history.cjs'
+      - '.github/workflows/nfl-v12-market-history.yml'
+  push:
+    branches: [main]
+    paths:
+      - 'tracks/nfl/circa_million_2026/market_history/**'
+      - 'tracks/nfl/circa_million_2026/test_v12_market_history.cjs'
+      - '.github/workflows/nfl-v12-market-history.yml'
+permissions:
+  contents: read
+jobs:
+  verification:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 12
+    steps:
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1
+        with:
+          persist-credentials: false
+      - name: Install browser QA
+        run: |
+          npm install --no-save --no-package-lock --ignore-scripts playwright@1.62.1
+          npx playwright install --with-deps chromium
+      - name: Verify signed-out and saved market history on phone and desktop
+        run: node tracks/nfl/circa_million_2026/test_v12_market_history.cjs
