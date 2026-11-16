@@ -1,5 +1,16 @@
 # Sports Edge Lab · NBA
 
+## November 16: B091 same-population champion review
+
+[Open the B091 champion review](reports/b091_review.html) · [Download the aggregate review](reports/B091_CHAMPION_AUDIT_PUBLIC.json).
+
+The review puts both validation seasons (1,230 regular games each, with 84 and 85 postseason games separately) beside the frozen 197-game 2026–27 test population. It retains all 28 objective, horizon and phase roles, including the accuracy tie, and 43 complete descriptive current cells on identical game membership. Every leader-versus-runner-up validation interval includes zero. No final champion or automatic promotion is claimed; original issues, historical reconstruction and later-fitted evidence remain distinct.
+
+DraftKings, Kalshi and Polymarket are comparison-only. B051’s quote-selected population excludes that legacy lineage from new-policy modeling, including its nominal basketball-only arms. Other eligible Odds API books require authenticated source and clock checks. The public page shows coarse feature groups, named-source coverage and explicit missing evidence without private recipes, raw feeds or model bodies.
+
+B091 is ready for owner execution, with zero live provider calls, owner fits or forecasts so far. Its locally tested engineering is separate from recovered B090 science. Live terminal access is currently unavailable. Source publication and website deployment are separate events.
+
+
 
 ## November 15: verified B087-R3 forecast recovery and return
 

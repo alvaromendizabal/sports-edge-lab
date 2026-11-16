@@ -1,0 +1,4881 @@
+{
+  "ats_status": {
+    "calibrated_cover_probability_available": false,
+    "calibrated_push_probability_available": false,
+    "champion_selected": false,
+    "historical_issued_strategy_claim": false,
+    "historical_point_diagnostics_only": true
+  },
+  "automatic_promotions": 0,
+  "b091_owner_execution": {
+    "blocker": "Live owner terminal access is currently unavailable.",
+    "engineering_tests_are_scientific_results": false,
+    "execution_observed": false,
+    "new_owner_estimator_fits": 0,
+    "new_owner_forecast_rows": 0,
+    "new_provider_requests": 0,
+    "status": "READY_FOR_OWNER_EXECUTION"
+  },
+  "census": {
+    "b089_shortlist_recipe_ids": 66,
+    "complete_current_cells": 43,
+    "complete_prior_cells": 4444,
+    "distinct_ordered_feature_lists": 46,
+    "eligible_prior_recipe_ids": 2143,
+    "eligible_prior_scopes": 2170,
+    "evaluation_cells": 11950,
+    "frozen_array_recipe_ids": 2134,
+    "model_phase_target_horizon_scopes": 2390,
+    "negative_control_scopes": 12,
+    "original_b051_aggregate_source_scope_ids": 128,
+    "original_b051_native_estimator_states": 216,
+    "original_b051_recipe_ids": 208,
+    "original_b051_source_scope_ids": 336,
+    "source_scopes": {
+      "AUTHENTICATED_B051_ORIGINAL_NATIVE_ARRAYS": 208,
+      "AUTHENTICATED_B086_FRONTIER_ARRAY": 48,
+      "AUTHENTICATED_FROZEN_PRIOR_ARRAY": 2134
+    },
+    "unique_recipe_ids": 2354,
+    "unresolved_ordered_feature_scopes": 0
+  },
+  "comparison_baselines": {
+    "draftkings_completed": [
+      {
+        "full_population_market_metrics": {
+          "accuracy": 0.7284263959390863,
+          "accuracy_policy": "HALF_CREDIT_AT_EXACT_0_5",
+          "brier": 0.1838547649213939,
+          "games": 197,
+          "log_loss": 0.5465617254770471,
+          "log_loss_is_positive_infinity": false,
+          "probability_clipping_applied": false
+        },
+        "horizon_minutes": 60,
+        "market_qualified_games": 197,
+        "objective": "winner",
+        "population_sha256": "c5fd15cfe89aaa582809ca4392696356b4e955b436ad155c470d231dda1d17f0",
+        "required_games": 197
+      },
+      {
+        "full_population_market_metrics": {
+          "accuracy": 0.7233502538071066,
+          "accuracy_policy": "HALF_CREDIT_AT_EXACT_0_5",
+          "brier": 0.18397800448839124,
+          "games": 197,
+          "log_loss": 0.5468035591627192,
+          "log_loss_is_positive_infinity": false,
+          "probability_clipping_applied": false
+        },
+        "horizon_minutes": 120,
+        "market_qualified_games": 197,
+        "objective": "winner",
+        "population_sha256": "c5fd15cfe89aaa582809ca4392696356b4e955b436ad155c470d231dda1d17f0",
+        "required_games": 197
+      },
+      {
+        "full_population_market_metrics": {
+          "bias": -0.4137055837563452,
+          "games": 197,
+          "mae": 11.149746192893401,
+          "mse": 208.69670050761422,
+          "rmse": 14.446338654053982
+        },
+        "horizon_minutes": 60,
+        "market_qualified_games": 197,
+        "objective": "margin",
+        "population_sha256": "c5fd15cfe89aaa582809ca4392696356b4e955b436ad155c470d231dda1d17f0",
+        "required_games": 197
+      },
+      {
+        "full_population_market_metrics": {
+          "bias": -0.4289340101522843,
+          "games": 197,
+          "mae": 11.236040609137056,
+          "mse": 210.73730964467006,
+          "rmse": 14.516794055323306
+        },
+        "horizon_minutes": 120,
+        "market_qualified_games": 197,
+        "objective": "margin",
+        "population_sha256": "c5fd15cfe89aaa582809ca4392696356b4e955b436ad155c470d231dda1d17f0",
+        "required_games": 197
+      },
+      {
+        "full_population_market_metrics": {
+          "bias": 0.6370558375634517,
+          "games": 197,
+          "mae": 14.139593908629442,
+          "mse": 329.00126903553297,
+          "rmse": 18.138392129280174
+        },
+        "horizon_minutes": 60,
+        "market_qualified_games": 197,
+        "objective": "total",
+        "population_sha256": "c5fd15cfe89aaa582809ca4392696356b4e955b436ad155c470d231dda1d17f0",
+        "required_games": 197
+      },
+      {
+        "full_population_market_metrics": {
+          "bias": 0.7182741116751269,
+          "games": 197,
+          "mae": 14.15989847715736,
+          "mse": 329.6104060913706,
+          "rmse": 18.155175738377487
+        },
+        "horizon_minutes": 120,
+        "market_qualified_games": 197,
+        "objective": "total",
+        "population_sha256": "c5fd15cfe89aaa582809ca4392696356b4e955b436ad155c470d231dda1d17f0",
+        "required_games": 197
+      }
+    ],
+    "draftkings_future_snapshot": {
+      "additional_games_without_released_start": 6,
+      "expected_regular_identities_unrecovered": 24,
+      "named_scheduled_games": 1003,
+      "quoted_games": 8,
+      "snapshot_at_utc": "2026-11-16T19:19:03.309910+00:00",
+      "unquoted_named_games": 995
+    },
+    "exchange_catalog_snapshot": {
+      "comparison_only": true,
+      "downloaded_bytes": 9011605,
+      "finished_at_utc": "2026-11-16T21:24:36.636516+00:00",
+      "historical_comparison_completion_claim": false,
+      "individual_quote_time_completeness_claim": false,
+      "network_requests": 3,
+      "paid_calls": 0,
+      "provider_summary": [
+        {
+          "bound_games": 44,
+          "bound_status_counts": [
+            {
+              "games": 14,
+              "phase": "Regular Season",
+              "status": "FINAL"
+            },
+            {
+              "games": 30,
+              "phase": "Regular Season",
+              "status": "SCHEDULED"
+            }
+          ],
+          "distinct_markets": 88,
+          "full_provider_coverage_claim": false,
+          "missing_game_offering_status": "UNESTABLISHED",
+          "observation_clocks_utc": [
+            "2026-11-16T21:24:32.584171+00:00"
+          ],
+          "observations": 88,
+          "provider": "KALSHI",
+          "spread_total_exclusions": {
+            "EXPLICIT_SPREAD_OR_TOTAL_TYPE_REQUIRED": 88
+          },
+          "strict_spread_total_contracts": 0,
+          "unbound_observations": 0,
+          "winner_exclusions": {
+            "ACTUAL_OBSERVATION_MUST_PRECEDE_TIP": 28,
+            "WINNER_SERIES_OBSERVED_EXPLICIT_OVERTIME_AND_COMPLEMENT_CONTRACT_PENDING": 60
+          },
+          "winner_reference_games": 0,
+          "winner_reference_rows": 0
+        },
+        {
+          "bound_games": 43,
+          "bound_status_counts": [
+            {
+              "games": 43,
+              "phase": "Regular Season",
+              "status": "SCHEDULED"
+            }
+          ],
+          "distinct_markets": 1426,
+          "full_provider_coverage_claim": false,
+          "missing_game_offering_status": "UNESTABLISHED",
+          "observation_clocks_utc": [
+            "2026-11-16T21:24:34.230792+00:00"
+          ],
+          "observations": 1426,
+          "provider": "POLYMARKET_US",
+          "spread_total_exclusions": {
+            "EXACT_ORDERED_GAME_BINDING_REQUIRED": 1383,
+            "EXPLICIT_SPREAD_OR_TOTAL_TYPE_REQUIRED": 43
+          },
+          "strict_spread_total_contracts": 0,
+          "unbound_observations": 1383,
+          "winner_exclusions": {
+            "EXACT_ORDERED_GAME_BINDING_REQUIRED": 1383,
+            "EXPLICIT_USD_QUOTES_REQUIRED": 1
+          },
+          "winner_reference_games": 42,
+          "winner_reference_rows": 42
+        },
+        {
+          "bound_games": 0,
+          "bound_status_counts": [],
+          "distinct_markets": 609,
+          "full_provider_coverage_claim": false,
+          "missing_game_offering_status": "UNESTABLISHED",
+          "observation_clocks_utc": [
+            "2026-11-16T21:24:35.492962+00:00"
+          ],
+          "observations": 609,
+          "provider": "POLYMARKET_INTERNATIONAL",
+          "spread_total_exclusions": {
+            "EXACT_ORDERED_GAME_BINDING_REQUIRED": 609
+          },
+          "strict_spread_total_contracts": 0,
+          "unbound_observations": 609,
+          "winner_exclusions": {
+            "EXACT_ORDERED_GAME_BINDING_REQUIRED": 609
+          },
+          "winner_reference_games": 0,
+          "winner_reference_rows": 0
+        }
+      ]
+    },
+    "future_unlisted_market_rows_must_remain_missing": true,
+    "kalshi_complete_season_contract_coverage_verified": false,
+    "polymarket_complete_season_contract_coverage_verified": false,
+    "purpose": "Comparison and display only; never modeling input, selection filter or calibration source."
+  },
+  "contract_probability_status": {
+    "champion_selected": false,
+    "complete_exact_contract_comparisons_available": false
+  },
+  "current_descriptive_cell_count": 43,
+  "current_descriptive_cells": [
+    {
+      "evidence_class": "LATER_FITTED_RECONSTRUCTION",
+      "family": "Ensemble",
+      "horizon_minutes": 60,
+      "legacy_source_excluded_from_new_policy_modeling": false,
+      "metrics": {
+        "bias": 1.9013189054581923,
+        "games": 197,
+        "mae": 14.751940695278249,
+        "mse": 340.17882245050873,
+        "rmse": 18.443937281679005
+      },
+      "model_id": "NBA-C001",
+      "objective": "total",
+      "original_issued_claim": false,
+      "population_sha256": "c5fd15cfe89aaa582809ca4392696356b4e955b436ad155c470d231dda1d17f0",
+      "promotion_eligible": false,
+      "required_games": 197,
+      "same_full_membership_verified": true,
+      "strict_point_in_time_metrics": null
+    },
+    {
+      "evidence_class": "QUALIFIED_FIXED_REPLAY",
+      "family": "Ensemble",
+      "horizon_minutes": 60,
+      "legacy_source_excluded_from_new_policy_modeling": false,
+      "metrics": {
+        "bias": 0.3873546086288397,
+        "games": 197,
+        "mae": 14.52143068605045,
+        "mse": 334.55635583311994,
+        "rmse": 18.290881767512467
+      },
+      "model_id": "NBA-C001",
+      "objective": "total",
+      "original_issued_claim": false,
+      "population_sha256": "c5fd15cfe89aaa582809ca4392696356b4e955b436ad155c470d231dda1d17f0",
+      "promotion_eligible": false,
+      "required_games": 197,
+      "same_full_membership_verified": true,
+      "strict_point_in_time_metrics": null
+    },
+    {
+      "evidence_class": "QUALIFIED_FIXED_REPLAY",
+      "family": "Hist Gradient Boosting",
+      "horizon_minutes": 60,
+      "legacy_source_excluded_from_new_policy_modeling": true,
+      "metrics": {
+        "accuracy": 0.6700507614213198,
+        "brier": 0.2033665873506491,
+        "games": 197,
+        "log_loss": 0.5911287150703085
+      },
+      "model_id": "NBA-C003",
+      "objective": "winner",
+      "original_issued_claim": false,
+      "population_sha256": "c5fd15cfe89aaa582809ca4392696356b4e955b436ad155c470d231dda1d17f0",
+      "promotion_eligible": false,
+      "required_games": 197,
+      "same_full_membership_verified": true,
+      "strict_point_in_time_metrics": null
+    },
+    {
+      "evidence_class": "QUALIFIED_FIXED_REPLAY",
+      "family": "Logistic Ridge",
+      "horizon_minutes": 60,
+      "legacy_source_excluded_from_new_policy_modeling": true,
+      "metrics": {
+        "accuracy": 0.6649746192893401,
+        "brier": 0.21091304260583396,
+        "games": 197,
+        "log_loss": 0.6079636008159756
+      },
+      "model_id": "NBA-C004",
+      "objective": "winner",
+      "original_issued_claim": false,
+      "population_sha256": "c5fd15cfe89aaa582809ca4392696356b4e955b436ad155c470d231dda1d17f0",
+      "promotion_eligible": false,
+      "required_games": 197,
+      "same_full_membership_verified": true,
+      "strict_point_in_time_metrics": null
+    },
+    {
+      "evidence_class": "LATER_FITTED_RECONSTRUCTION",
+      "family": "Logistic regression",
+      "horizon_minutes": 60,
+      "legacy_source_excluded_from_new_policy_modeling": false,
+      "metrics": {
+        "accuracy": 0.6548223350253807,
+        "brier": 0.20668803635104804,
+        "games": 197,
+        "log_loss": 0.5990482408568636
+      },
+      "model_id": "NBA-C006",
+      "objective": "winner",
+      "original_issued_claim": false,
+      "population_sha256": "c5fd15cfe89aaa582809ca4392696356b4e955b436ad155c470d231dda1d17f0",
+      "promotion_eligible": false,
+      "required_games": 197,
+      "same_full_membership_verified": true,
+      "strict_point_in_time_metrics": null
+    },
+    {
+      "evidence_class": "QUALIFIED_FIXED_REPLAY",
+      "family": "Logistic regression",
+      "horizon_minutes": 60,
+      "legacy_source_excluded_from_new_policy_modeling": false,
+      "metrics": {
+        "accuracy": 0.6649746192893401,
+        "brier": 0.20634365147348138,
+        "games": 197,
+        "log_loss": 0.5982450380018461
+      },
+      "model_id": "NBA-C006",
+      "objective": "winner",
+      "original_issued_claim": false,
+      "population_sha256": "c5fd15cfe89aaa582809ca4392696356b4e955b436ad155c470d231dda1d17f0",
+      "promotion_eligible": false,
+      "required_games": 197,
+      "same_full_membership_verified": true,
+      "strict_point_in_time_metrics": null
+    },
+    {
+      "evidence_class": "QUALIFIED_FIXED_REPLAY",
+      "family": "Hist Gradient Boosting",
+      "horizon_minutes": 60,
+      "legacy_source_excluded_from_new_policy_modeling": true,
+      "metrics": {
+        "accuracy": 0.6700507614213198,
+        "brier": 0.20426049440571636,
+        "games": 197,
+        "log_loss": 0.5922580523190226
+      },
+      "model_id": "NBA-C009",
+      "objective": "winner",
+      "original_issued_claim": false,
+      "population_sha256": "c5fd15cfe89aaa582809ca4392696356b4e955b436ad155c470d231dda1d17f0",
+      "promotion_eligible": false,
+      "required_games": 197,
+      "same_full_membership_verified": true,
+      "strict_point_in_time_metrics": null
+    },
+    {
+      "evidence_class": "LATER_FITTED_RECONSTRUCTION",
+      "family": "CatBoost",
+      "horizon_minutes": 60,
+      "legacy_source_excluded_from_new_policy_modeling": false,
+      "metrics": {
+        "bias": 1.8999278047991592,
+        "games": 197,
+        "mae": 14.74505718178129,
+        "mse": 339.7046914495094,
+        "rmse": 18.431079497672116
+      },
+      "model_id": "NBA-C011",
+      "objective": "total",
+      "original_issued_claim": false,
+      "population_sha256": "c5fd15cfe89aaa582809ca4392696356b4e955b436ad155c470d231dda1d17f0",
+      "promotion_eligible": false,
+      "required_games": 197,
+      "same_full_membership_verified": true,
+      "strict_point_in_time_metrics": null
+    },
+    {
+      "evidence_class": "QUALIFIED_FIXED_REPLAY",
+      "family": "CatBoost",
+      "horizon_minutes": 60,
+      "legacy_source_excluded_from_new_policy_modeling": false,
+      "metrics": {
+        "bias": 0.7164423956432305,
+        "games": 197,
+        "mae": 14.488324974892434,
+        "mse": 333.8280996790957,
+        "rmse": 18.270963293682566
+      },
+      "model_id": "NBA-C011",
+      "objective": "total",
+      "original_issued_claim": false,
+      "population_sha256": "c5fd15cfe89aaa582809ca4392696356b4e955b436ad155c470d231dda1d17f0",
+      "promotion_eligible": false,
+      "required_games": 197,
+      "same_full_membership_verified": true,
+      "strict_point_in_time_metrics": null
+    },
+    {
+      "evidence_class": "LATER_FITTED_RECONSTRUCTION",
+      "family": "Ridge regression",
+      "horizon_minutes": 120,
+      "legacy_source_excluded_from_new_policy_modeling": false,
+      "metrics": {
+        "bias": -0.06266551838887803,
+        "games": 197,
+        "mae": 12.01494242960184,
+        "mse": 239.87782333669773,
+        "rmse": 15.487989648004602
+      },
+      "model_id": "NBA-C012",
+      "objective": "margin",
+      "original_issued_claim": false,
+      "population_sha256": "c5fd15cfe89aaa582809ca4392696356b4e955b436ad155c470d231dda1d17f0",
+      "promotion_eligible": false,
+      "required_games": 197,
+      "same_full_membership_verified": true,
+      "strict_point_in_time_metrics": null
+    },
+    {
+      "evidence_class": "QUALIFIED_FIXED_REPLAY",
+      "family": "Ridge regression",
+      "horizon_minutes": 120,
+      "legacy_source_excluded_from_new_policy_modeling": false,
+      "metrics": {
+        "bias": 0.5743934338414899,
+        "games": 197,
+        "mae": 12.06042376582382,
+        "mse": 240.27234067427784,
+        "rmse": 15.500720650159392
+      },
+      "model_id": "NBA-C012",
+      "objective": "margin",
+      "original_issued_claim": false,
+      "population_sha256": "c5fd15cfe89aaa582809ca4392696356b4e955b436ad155c470d231dda1d17f0",
+      "promotion_eligible": false,
+      "required_games": 197,
+      "same_full_membership_verified": true,
+      "strict_point_in_time_metrics": null
+    },
+    {
+      "evidence_class": "QUALIFIED_FIXED_REPLAY",
+      "family": "Logistic Ridge",
+      "horizon_minutes": 120,
+      "legacy_source_excluded_from_new_policy_modeling": true,
+      "metrics": {
+        "accuracy": 0.6700507614213198,
+        "brier": 0.20809797444145603,
+        "games": 197,
+        "log_loss": 0.6018602571801195
+      },
+      "model_id": "NBA-C013",
+      "objective": "winner",
+      "original_issued_claim": false,
+      "population_sha256": "c5fd15cfe89aaa582809ca4392696356b4e955b436ad155c470d231dda1d17f0",
+      "promotion_eligible": false,
+      "required_games": 197,
+      "same_full_membership_verified": true,
+      "strict_point_in_time_metrics": null
+    },
+    {
+      "evidence_class": "QUALIFIED_FIXED_REPLAY",
+      "family": "Hist Gradient Boosting",
+      "horizon_minutes": 120,
+      "legacy_source_excluded_from_new_policy_modeling": true,
+      "metrics": {
+        "bias": 5.975222849424569,
+        "games": 197,
+        "mae": 15.741177202132262,
+        "mse": 384.9476957732194,
+        "rmse": 19.620083989963433
+      },
+      "model_id": "NBA-C015",
+      "objective": "total",
+      "original_issued_claim": false,
+      "population_sha256": "c5fd15cfe89aaa582809ca4392696356b4e955b436ad155c470d231dda1d17f0",
+      "promotion_eligible": false,
+      "required_games": 197,
+      "same_full_membership_verified": true,
+      "strict_point_in_time_metrics": null
+    },
+    {
+      "evidence_class": "QUALIFIED_FIXED_REPLAY",
+      "family": "Hist Gradient Boosting",
+      "horizon_minutes": 120,
+      "legacy_source_excluded_from_new_policy_modeling": true,
+      "metrics": {
+        "accuracy": 0.6852791878172588,
+        "brier": 0.19929173873235972,
+        "games": 197,
+        "log_loss": 0.5825031178599435
+      },
+      "model_id": "NBA-C016",
+      "objective": "winner",
+      "original_issued_claim": false,
+      "population_sha256": "c5fd15cfe89aaa582809ca4392696356b4e955b436ad155c470d231dda1d17f0",
+      "promotion_eligible": false,
+      "required_games": 197,
+      "same_full_membership_verified": true,
+      "strict_point_in_time_metrics": null
+    },
+    {
+      "evidence_class": "LATER_FITTED_RECONSTRUCTION",
+      "family": "XGBoost",
+      "horizon_minutes": 60,
+      "legacy_source_excluded_from_new_policy_modeling": false,
+      "metrics": {
+        "accuracy": 0.6700507614213198,
+        "brier": 0.20700616064005573,
+        "games": 197,
+        "log_loss": 0.6000761782120589
+      },
+      "model_id": "NBA-C017",
+      "objective": "winner",
+      "original_issued_claim": false,
+      "population_sha256": "c5fd15cfe89aaa582809ca4392696356b4e955b436ad155c470d231dda1d17f0",
+      "promotion_eligible": false,
+      "required_games": 197,
+      "same_full_membership_verified": true,
+      "strict_point_in_time_metrics": null
+    },
+    {
+      "evidence_class": "QUALIFIED_FIXED_REPLAY",
+      "family": "XGBoost",
+      "horizon_minutes": 60,
+      "legacy_source_excluded_from_new_policy_modeling": false,
+      "metrics": {
+        "accuracy": 0.6903553299492385,
+        "brier": 0.20921189495266077,
+        "games": 197,
+        "log_loss": 0.6050914087693422
+      },
+      "model_id": "NBA-C017",
+      "objective": "winner",
+      "original_issued_claim": false,
+      "population_sha256": "c5fd15cfe89aaa582809ca4392696356b4e955b436ad155c470d231dda1d17f0",
+      "promotion_eligible": false,
+      "required_games": 197,
+      "same_full_membership_verified": true,
+      "strict_point_in_time_metrics": null
+    },
+    {
+      "evidence_class": "LATER_FITTED_RECONSTRUCTION",
+      "family": "Ensemble",
+      "horizon_minutes": 120,
+      "legacy_source_excluded_from_new_policy_modeling": false,
+      "metrics": {
+        "bias": 1.8314622330906642,
+        "games": 197,
+        "mae": 14.775737483895199,
+        "mse": 339.2920464647164,
+        "rmse": 18.419881825481845
+      },
+      "model_id": "NBA-C018",
+      "objective": "total",
+      "original_issued_claim": false,
+      "population_sha256": "c5fd15cfe89aaa582809ca4392696356b4e955b436ad155c470d231dda1d17f0",
+      "promotion_eligible": false,
+      "required_games": 197,
+      "same_full_membership_verified": true,
+      "strict_point_in_time_metrics": null
+    },
+    {
+      "evidence_class": "QUALIFIED_FIXED_REPLAY",
+      "family": "Ensemble",
+      "horizon_minutes": 120,
+      "legacy_source_excluded_from_new_policy_modeling": false,
+      "metrics": {
+        "bias": 0.2354091502561021,
+        "games": 197,
+        "mae": 14.618589349861843,
+        "mse": 336.1785762512588,
+        "rmse": 18.335173199379895
+      },
+      "model_id": "NBA-C018",
+      "objective": "total",
+      "original_issued_claim": false,
+      "population_sha256": "c5fd15cfe89aaa582809ca4392696356b4e955b436ad155c470d231dda1d17f0",
+      "promotion_eligible": false,
+      "required_games": 197,
+      "same_full_membership_verified": true,
+      "strict_point_in_time_metrics": null
+    },
+    {
+      "evidence_class": "QUALIFIED_FIXED_REPLAY",
+      "family": "Logistic Ridge",
+      "horizon_minutes": 60,
+      "legacy_source_excluded_from_new_policy_modeling": true,
+      "metrics": {
+        "accuracy": 0.6649746192893401,
+        "brier": 0.20943347376019467,
+        "games": 197,
+        "log_loss": 0.6043754339636246
+      },
+      "model_id": "NBA-C019",
+      "objective": "winner",
+      "original_issued_claim": false,
+      "population_sha256": "c5fd15cfe89aaa582809ca4392696356b4e955b436ad155c470d231dda1d17f0",
+      "promotion_eligible": false,
+      "required_games": 197,
+      "same_full_membership_verified": true,
+      "strict_point_in_time_metrics": null
+    },
+    {
+      "evidence_class": "QUALIFIED_FIXED_REPLAY",
+      "family": "Logistic Ridge",
+      "horizon_minutes": 120,
+      "legacy_source_excluded_from_new_policy_modeling": true,
+      "metrics": {
+        "bias": 12.248136479154525,
+        "games": 197,
+        "mae": 18.49118870004118,
+        "mse": 505.8181851322487,
+        "rmse": 22.490402066931768
+      },
+      "model_id": "NBA-C020",
+      "objective": "total",
+      "original_issued_claim": false,
+      "population_sha256": "c5fd15cfe89aaa582809ca4392696356b4e955b436ad155c470d231dda1d17f0",
+      "promotion_eligible": false,
+      "required_games": 197,
+      "same_full_membership_verified": true,
+      "strict_point_in_time_metrics": null
+    },
+    {
+      "evidence_class": "LATER_FITTED_RECONSTRUCTION",
+      "family": "ExtraTrees",
+      "horizon_minutes": 120,
+      "legacy_source_excluded_from_new_policy_modeling": false,
+      "metrics": {
+        "bias": 2.3319106375524132,
+        "games": 197,
+        "mae": 14.832509332349018,
+        "mse": 341.9849376944143,
+        "rmse": 18.492834766320016
+      },
+      "model_id": "NBA-C022",
+      "objective": "total",
+      "original_issued_claim": false,
+      "population_sha256": "c5fd15cfe89aaa582809ca4392696356b4e955b436ad155c470d231dda1d17f0",
+      "promotion_eligible": false,
+      "required_games": 197,
+      "same_full_membership_verified": true,
+      "strict_point_in_time_metrics": null
+    },
+    {
+      "evidence_class": "QUALIFIED_FIXED_REPLAY",
+      "family": "ExtraTrees",
+      "horizon_minutes": 120,
+      "legacy_source_excluded_from_new_policy_modeling": false,
+      "metrics": {
+        "bias": 1.2300256015886115,
+        "games": 197,
+        "mae": 14.762482390165758,
+        "mse": 341.21583258654204,
+        "rmse": 18.472028383113265
+      },
+      "model_id": "NBA-C022",
+      "objective": "total",
+      "original_issued_claim": false,
+      "population_sha256": "c5fd15cfe89aaa582809ca4392696356b4e955b436ad155c470d231dda1d17f0",
+      "promotion_eligible": false,
+      "required_games": 197,
+      "same_full_membership_verified": true,
+      "strict_point_in_time_metrics": null
+    },
+    {
+      "evidence_class": "QUALIFIED_FIXED_REPLAY",
+      "family": "Hist Gradient Boosting",
+      "horizon_minutes": 120,
+      "legacy_source_excluded_from_new_policy_modeling": true,
+      "metrics": {
+        "accuracy": 0.6852791878172588,
+        "brier": 0.19940611445827802,
+        "games": 197,
+        "log_loss": 0.5811083809871653
+      },
+      "model_id": "NBA-C023",
+      "objective": "winner",
+      "original_issued_claim": false,
+      "population_sha256": "c5fd15cfe89aaa582809ca4392696356b4e955b436ad155c470d231dda1d17f0",
+      "promotion_eligible": false,
+      "required_games": 197,
+      "same_full_membership_verified": true,
+      "strict_point_in_time_metrics": null
+    },
+    {
+      "evidence_class": "QUALIFIED_FIXED_REPLAY",
+      "family": "Hist Gradient Boosting",
+      "horizon_minutes": 120,
+      "legacy_source_excluded_from_new_policy_modeling": true,
+      "metrics": {
+        "bias": -0.3322775936468701,
+        "games": 197,
+        "mae": 11.789678275546136,
+        "mse": 233.99158867305525,
+        "rmse": 15.296783605485672
+      },
+      "model_id": "NBA-C025",
+      "objective": "margin",
+      "original_issued_claim": false,
+      "population_sha256": "c5fd15cfe89aaa582809ca4392696356b4e955b436ad155c470d231dda1d17f0",
+      "promotion_eligible": false,
+      "required_games": 197,
+      "same_full_membership_verified": true,
+      "strict_point_in_time_metrics": null
+    },
+    {
+      "evidence_class": "LATER_FITTED_RECONSTRUCTION",
+      "family": "Ridge regression",
+      "horizon_minutes": 60,
+      "legacy_source_excluded_from_new_policy_modeling": false,
+      "metrics": {
+        "bias": -0.06230016605256275,
+        "games": 197,
+        "mae": 12.05896453322097,
+        "mse": 240.32342113961317,
+        "rmse": 15.502368242936727
+      },
+      "model_id": "NBA-C026",
+      "objective": "margin",
+      "original_issued_claim": false,
+      "population_sha256": "c5fd15cfe89aaa582809ca4392696356b4e955b436ad155c470d231dda1d17f0",
+      "promotion_eligible": false,
+      "required_games": 197,
+      "same_full_membership_verified": true,
+      "strict_point_in_time_metrics": null
+    },
+    {
+      "evidence_class": "QUALIFIED_FIXED_REPLAY",
+      "family": "Ridge regression",
+      "horizon_minutes": 60,
+      "legacy_source_excluded_from_new_policy_modeling": false,
+      "metrics": {
+        "bias": 0.5915327529647914,
+        "games": 197,
+        "mae": 12.098020647595046,
+        "mse": 240.5995718499904,
+        "rmse": 15.511272412345495
+      },
+      "model_id": "NBA-C026",
+      "objective": "margin",
+      "original_issued_claim": false,
+      "population_sha256": "c5fd15cfe89aaa582809ca4392696356b4e955b436ad155c470d231dda1d17f0",
+      "promotion_eligible": false,
+      "required_games": 197,
+      "same_full_membership_verified": true,
+      "strict_point_in_time_metrics": null
+    },
+    {
+      "evidence_class": "LATER_FITTED_RECONSTRUCTION",
+      "family": "ExtraTrees",
+      "horizon_minutes": 120,
+      "legacy_source_excluded_from_new_policy_modeling": false,
+      "metrics": {
+        "accuracy": 0.6954314720812182,
+        "brier": 0.20443220559391007,
+        "games": 197,
+        "log_loss": 0.5935435131798832
+      },
+      "model_id": "NBA-C029",
+      "objective": "winner",
+      "original_issued_claim": false,
+      "population_sha256": "c5fd15cfe89aaa582809ca4392696356b4e955b436ad155c470d231dda1d17f0",
+      "promotion_eligible": false,
+      "required_games": 197,
+      "same_full_membership_verified": true,
+      "strict_point_in_time_metrics": null
+    },
+    {
+      "evidence_class": "QUALIFIED_FIXED_REPLAY",
+      "family": "ExtraTrees",
+      "horizon_minutes": 120,
+      "legacy_source_excluded_from_new_policy_modeling": false,
+      "metrics": {
+        "accuracy": 0.6852791878172588,
+        "brier": 0.20257244323736895,
+        "games": 197,
+        "log_loss": 0.5895975861346753
+      },
+      "model_id": "NBA-C029",
+      "objective": "winner",
+      "original_issued_claim": false,
+      "population_sha256": "c5fd15cfe89aaa582809ca4392696356b4e955b436ad155c470d231dda1d17f0",
+      "promotion_eligible": false,
+      "required_games": 197,
+      "same_full_membership_verified": true,
+      "strict_point_in_time_metrics": null
+    },
+    {
+      "evidence_class": "QUALIFIED_FIXED_REPLAY",
+      "family": "Hist Gradient Boosting",
+      "horizon_minutes": 60,
+      "legacy_source_excluded_from_new_policy_modeling": true,
+      "metrics": {
+        "bias": 5.495110507474888,
+        "games": 197,
+        "mae": 15.394598627213613,
+        "mse": 372.8530830917754,
+        "rmse": 19.30940400664338
+      },
+      "model_id": "NBA-C030",
+      "objective": "total",
+      "original_issued_claim": false,
+      "population_sha256": "c5fd15cfe89aaa582809ca4392696356b4e955b436ad155c470d231dda1d17f0",
+      "promotion_eligible": false,
+      "required_games": 197,
+      "same_full_membership_verified": true,
+      "strict_point_in_time_metrics": null
+    },
+    {
+      "evidence_class": "LATER_FITTED_RECONSTRUCTION",
+      "family": "Logistic regression",
+      "horizon_minutes": 120,
+      "legacy_source_excluded_from_new_policy_modeling": false,
+      "metrics": {
+        "accuracy": 0.6598984771573604,
+        "brier": 0.20581556575872867,
+        "games": 197,
+        "log_loss": 0.5971586706268214
+      },
+      "model_id": "NBA-C031",
+      "objective": "winner",
+      "original_issued_claim": false,
+      "population_sha256": "c5fd15cfe89aaa582809ca4392696356b4e955b436ad155c470d231dda1d17f0",
+      "promotion_eligible": false,
+      "required_games": 197,
+      "same_full_membership_verified": true,
+      "strict_point_in_time_metrics": null
+    },
+    {
+      "evidence_class": "QUALIFIED_FIXED_REPLAY",
+      "family": "Logistic regression",
+      "horizon_minutes": 120,
+      "legacy_source_excluded_from_new_policy_modeling": false,
+      "metrics": {
+        "accuracy": 0.6548223350253807,
+        "brier": 0.2057034460946859,
+        "games": 197,
+        "log_loss": 0.5968168151556513
+      },
+      "model_id": "NBA-C031",
+      "objective": "winner",
+      "original_issued_claim": false,
+      "population_sha256": "c5fd15cfe89aaa582809ca4392696356b4e955b436ad155c470d231dda1d17f0",
+      "promotion_eligible": false,
+      "required_games": 197,
+      "same_full_membership_verified": true,
+      "strict_point_in_time_metrics": null
+    },
+    {
+      "evidence_class": "QUALIFIED_FIXED_REPLAY",
+      "family": "Logistic Ridge",
+      "horizon_minutes": 120,
+      "legacy_source_excluded_from_new_policy_modeling": true,
+      "metrics": {
+        "bias": -0.09577930584953663,
+        "games": 197,
+        "mae": 12.119222753444857,
+        "mse": 240.22164755209195,
+        "rmse": 15.499085377921238
+      },
+      "model_id": "NBA-C032",
+      "objective": "margin",
+      "original_issued_claim": false,
+      "population_sha256": "c5fd15cfe89aaa582809ca4392696356b4e955b436ad155c470d231dda1d17f0",
+      "promotion_eligible": false,
+      "required_games": 197,
+      "same_full_membership_verified": true,
+      "strict_point_in_time_metrics": null
+    },
+    {
+      "evidence_class": "QUALIFIED_FIXED_REPLAY",
+      "family": "Logistic Ridge",
+      "horizon_minutes": 60,
+      "legacy_source_excluded_from_new_policy_modeling": true,
+      "metrics": {
+        "bias": -0.05902979377601132,
+        "games": 197,
+        "mae": 12.194410363660102,
+        "mse": 241.16616407708523,
+        "rmse": 15.529525558660355
+      },
+      "model_id": "NBA-C033",
+      "objective": "margin",
+      "original_issued_claim": false,
+      "population_sha256": "c5fd15cfe89aaa582809ca4392696356b4e955b436ad155c470d231dda1d17f0",
+      "promotion_eligible": false,
+      "required_games": 197,
+      "same_full_membership_verified": true,
+      "strict_point_in_time_metrics": null
+    },
+    {
+      "evidence_class": "LATER_FITTED_RECONSTRUCTION",
+      "family": "Ensemble",
+      "horizon_minutes": 60,
+      "legacy_source_excluded_from_new_policy_modeling": false,
+      "metrics": {
+        "bias": 1.9432057454036886,
+        "games": 197,
+        "mae": 14.754102657415752,
+        "mse": 339.80805455281757,
+        "rmse": 18.433883328067843
+      },
+      "model_id": "NBA-C034",
+      "objective": "total",
+      "original_issued_claim": false,
+      "population_sha256": "c5fd15cfe89aaa582809ca4392696356b4e955b436ad155c470d231dda1d17f0",
+      "promotion_eligible": false,
+      "required_games": 197,
+      "same_full_membership_verified": true,
+      "strict_point_in_time_metrics": null
+    },
+    {
+      "evidence_class": "QUALIFIED_FIXED_REPLAY",
+      "family": "Ensemble",
+      "horizon_minutes": 60,
+      "legacy_source_excluded_from_new_policy_modeling": false,
+      "metrics": {
+        "bias": 0.5290154347702385,
+        "games": 197,
+        "mae": 14.523224217809219,
+        "mse": 334.99865486135,
+        "rmse": 18.302968471298584
+      },
+      "model_id": "NBA-C034",
+      "objective": "total",
+      "original_issued_claim": false,
+      "population_sha256": "c5fd15cfe89aaa582809ca4392696356b4e955b436ad155c470d231dda1d17f0",
+      "promotion_eligible": false,
+      "required_games": 197,
+      "same_full_membership_verified": true,
+      "strict_point_in_time_metrics": null
+    },
+    {
+      "evidence_class": "QUALIFIED_FIXED_REPLAY",
+      "family": "Logistic Ridge",
+      "horizon_minutes": 60,
+      "legacy_source_excluded_from_new_policy_modeling": true,
+      "metrics": {
+        "bias": 12.182803581632005,
+        "games": 197,
+        "mae": 18.412814984851753,
+        "mse": 502.60970918311796,
+        "rmse": 22.41895869979509
+      },
+      "model_id": "NBA-C035",
+      "objective": "total",
+      "original_issued_claim": false,
+      "population_sha256": "c5fd15cfe89aaa582809ca4392696356b4e955b436ad155c470d231dda1d17f0",
+      "promotion_eligible": false,
+      "required_games": 197,
+      "same_full_membership_verified": true,
+      "strict_point_in_time_metrics": null
+    },
+    {
+      "evidence_class": "QUALIFIED_FIXED_REPLAY",
+      "family": "XGBoost",
+      "horizon_minutes": 60,
+      "legacy_source_excluded_from_new_policy_modeling": false,
+      "metrics": {
+        "accuracy": 0.6700507614213198,
+        "brier": 0.20927803729276998,
+        "games": 197,
+        "log_loss": 0.6056135985288857
+      },
+      "model_id": "NBA-C036",
+      "objective": "winner",
+      "original_issued_claim": false,
+      "population_sha256": "c5fd15cfe89aaa582809ca4392696356b4e955b436ad155c470d231dda1d17f0",
+      "promotion_eligible": false,
+      "required_games": 197,
+      "same_full_membership_verified": true,
+      "strict_point_in_time_metrics": null
+    },
+    {
+      "evidence_class": "QUALIFIED_FIXED_REPLAY",
+      "family": "Logistic regression",
+      "horizon_minutes": 60,
+      "legacy_source_excluded_from_new_policy_modeling": false,
+      "metrics": {
+        "accuracy": 0.700507614213198,
+        "brier": 0.20026282308366306,
+        "games": 197,
+        "log_loss": 0.584026686970231
+      },
+      "model_id": "NBA-C038",
+      "objective": "winner",
+      "original_issued_claim": false,
+      "population_sha256": "c5fd15cfe89aaa582809ca4392696356b4e955b436ad155c470d231dda1d17f0",
+      "promotion_eligible": false,
+      "required_games": 197,
+      "same_full_membership_verified": true,
+      "strict_point_in_time_metrics": null
+    },
+    {
+      "evidence_class": "QUALIFIED_FIXED_REPLAY",
+      "family": "Logistic Ridge",
+      "horizon_minutes": 120,
+      "legacy_source_excluded_from_new_policy_modeling": true,
+      "metrics": {
+        "accuracy": 0.6700507614213198,
+        "brier": 0.2090129613833332,
+        "games": 197,
+        "log_loss": 0.6043640498118011
+      },
+      "model_id": "NBA-C039",
+      "objective": "winner",
+      "original_issued_claim": false,
+      "population_sha256": "c5fd15cfe89aaa582809ca4392696356b4e955b436ad155c470d231dda1d17f0",
+      "promotion_eligible": false,
+      "required_games": 197,
+      "same_full_membership_verified": true,
+      "strict_point_in_time_metrics": null
+    },
+    {
+      "evidence_class": "QUALIFIED_FIXED_REPLAY",
+      "family": "Hist Gradient Boosting",
+      "horizon_minutes": 60,
+      "legacy_source_excluded_from_new_policy_modeling": true,
+      "metrics": {
+        "bias": -0.3289724055435042,
+        "games": 197,
+        "mae": 11.861772041921892,
+        "mse": 234.64584490053983,
+        "rmse": 15.318154095730328
+      },
+      "model_id": "NBA-C043",
+      "objective": "margin",
+      "original_issued_claim": false,
+      "population_sha256": "c5fd15cfe89aaa582809ca4392696356b4e955b436ad155c470d231dda1d17f0",
+      "promotion_eligible": false,
+      "required_games": 197,
+      "same_full_membership_verified": true,
+      "strict_point_in_time_metrics": null
+    },
+    {
+      "evidence_class": "QUALIFIED_FIXED_REPLAY",
+      "family": "CatBoost",
+      "horizon_minutes": 120,
+      "legacy_source_excluded_from_new_policy_modeling": false,
+      "metrics": {
+        "accuracy": 0.6852791878172588,
+        "accuracy_policy": "HALF_CREDIT_AT_EXACT_0_5",
+        "brier": 0.204637330628505,
+        "games": 197,
+        "log_loss": 0.5953120289969479,
+        "log_loss_is_positive_infinity": false,
+        "probability_clipping_applied": false
+      },
+      "model_id": "NBA-C027",
+      "objective": "winner",
+      "original_calibration_overlap_hours": 22.5,
+      "original_issued_claim": false,
+      "population_sha256": "c5fd15cfe89aaa582809ca4392696356b4e955b436ad155c470d231dda1d17f0",
+      "promotion_eligible": false,
+      "recovered_original_state": true,
+      "required_games": 197,
+      "same_full_membership_verified": true,
+      "strict_point_in_time_metrics": null
+    },
+    {
+      "evidence_class": "QUALIFIED_FIXED_REPLAY",
+      "family": "Ensemble",
+      "horizon_minutes": 60,
+      "legacy_source_excluded_from_new_policy_modeling": false,
+      "metrics": {
+        "bias": 0.14973864729538702,
+        "games": 197,
+        "mae": 11.876278534857818,
+        "mse": 235.18471990623297,
+        "rmse": 15.33573343228921
+      },
+      "model_id": "NBA-C021",
+      "objective": "margin",
+      "original_calibration_overlap_hours": 22.5,
+      "original_issued_claim": false,
+      "population_sha256": "c5fd15cfe89aaa582809ca4392696356b4e955b436ad155c470d231dda1d17f0",
+      "promotion_eligible": false,
+      "recovered_original_state": true,
+      "required_games": 197,
+      "same_full_membership_verified": true,
+      "strict_point_in_time_metrics": null
+    },
+    {
+      "evidence_class": "QUALIFIED_FIXED_REPLAY",
+      "family": "Ensemble",
+      "horizon_minutes": 120,
+      "legacy_source_excluded_from_new_policy_modeling": false,
+      "metrics": {
+        "bias": 0.11732461386875778,
+        "games": 197,
+        "mae": 11.85796304646651,
+        "mse": 235.42743901185878,
+        "rmse": 15.343644906340174
+      },
+      "model_id": "NBA-C010",
+      "objective": "margin",
+      "original_calibration_overlap_hours": 22.5,
+      "original_issued_claim": false,
+      "population_sha256": "c5fd15cfe89aaa582809ca4392696356b4e955b436ad155c470d231dda1d17f0",
+      "promotion_eligible": false,
+      "recovered_original_state": true,
+      "required_games": 197,
+      "same_full_membership_verified": true,
+      "strict_point_in_time_metrics": null
+    }
+  ],
+  "feature_sets": [
+    {
+      "direct_excluded_market_columns": 0,
+      "full_upstream_lineage_certified": false,
+      "groups": [
+        {
+          "label": "Pace and efficiency"
+        }
+      ],
+      "interpretation": "Aggregate inputs cover pace and efficiency. Exact feature definitions and transforms are retained in the private owner record.",
+      "public_feature_group_id": "NBA-F01",
+      "raw_feature_count": 10
+    },
+    {
+      "direct_excluded_market_columns": 0,
+      "full_upstream_lineage_certified": false,
+      "groups": [
+        {
+          "label": "Team strength"
+        }
+      ],
+      "interpretation": "Aggregate inputs cover team strength. Exact feature definitions and transforms are retained in the private owner record.",
+      "public_feature_group_id": "NBA-F02",
+      "raw_feature_count": 15
+    },
+    {
+      "direct_excluded_market_columns": 0,
+      "full_upstream_lineage_certified": false,
+      "groups": [
+        {
+          "label": "Rest, workload and venue"
+        },
+        {
+          "label": "Team strength"
+        }
+      ],
+      "interpretation": "Aggregate inputs cover rest, workload and venue, team strength. Exact feature definitions and transforms are retained in the private owner record.",
+      "public_feature_group_id": "NBA-F03",
+      "raw_feature_count": 24
+    },
+    {
+      "direct_excluded_market_columns": 0,
+      "full_upstream_lineage_certified": false,
+      "groups": [
+        {
+          "label": "Pace and efficiency"
+        },
+        {
+          "label": "Rest, workload and venue"
+        },
+        {
+          "label": "Shooting and possession outcomes"
+        },
+        {
+          "label": "Recent performance history"
+        },
+        {
+          "label": "Sample support and uncertainty"
+        }
+      ],
+      "interpretation": "Aggregate inputs cover pace and efficiency, rest, workload and venue, shooting and possession outcomes, recent performance history, sample support and uncertainty. Exact feature definitions and transforms are retained in the private owner record.",
+      "public_feature_group_id": "NBA-F04",
+      "raw_feature_count": 48
+    },
+    {
+      "direct_excluded_market_columns": 0,
+      "full_upstream_lineage_certified": false,
+      "groups": [
+        {
+          "label": "Pace and efficiency"
+        },
+        {
+          "label": "Rest, workload and venue"
+        },
+        {
+          "label": "Shooting and possession outcomes"
+        },
+        {
+          "label": "Recent performance history"
+        },
+        {
+          "label": "Team strength"
+        },
+        {
+          "label": "Sample support and uncertainty"
+        }
+      ],
+      "interpretation": "Aggregate inputs cover pace and efficiency, rest, workload and venue, shooting and possession outcomes, recent performance history, team strength, sample support and uncertainty. Exact feature definitions and transforms are retained in the private owner record.",
+      "public_feature_group_id": "NBA-F05",
+      "raw_feature_count": 63
+    },
+    {
+      "direct_excluded_market_columns": 0,
+      "full_upstream_lineage_certified": false,
+      "groups": [
+        {
+          "label": "Pace and efficiency"
+        },
+        {
+          "label": "Combined basketball context"
+        },
+        {
+          "label": "Shooting and possession outcomes"
+        }
+      ],
+      "interpretation": "Aggregate inputs cover pace and efficiency, combined basketball context, shooting and possession outcomes. Exact feature definitions and transforms are retained in the private owner record.",
+      "public_feature_group_id": "NBA-F06",
+      "raw_feature_count": 66
+    }
+  ],
+  "final_champions_selected": false,
+  "forward_outlooks": {
+    "completed_test_scores_added": 0,
+    "correction_training_fit_events": 0,
+    "distinct_scheduled_games": 1003,
+    "first_issue_at_utc": "2026-11-16T20:15:34.422613+00:00",
+    "forecast_referenced_snapshot_ids": 28,
+    "issue_horizon_class": "EARLY_OUTLOOK",
+    "last_issue_at_utc": "2026-11-16T20:19:32.727423+00:00",
+    "minimum_actual_lead_minutes": 222.76774531666666,
+    "new_forecast_rows": 14042,
+    "numerically_changed_correction_rows": 13135,
+    "numerically_unchanged_but_new_later_issue_rows": 907,
+    "selected_recipe_scopes": 14
+  },
+  "independent_raw_array_verification": {
+    "additional_raw_rows_read": 591,
+    "all_new_labels_and_ordered_team_identities_match_canonical_197": true,
+    "complete_current_cells": 43,
+    "conflicts": [],
+    "identical_duplicates": 0,
+    "matches_summary_count": true,
+    "metric_mismatches_over_1e_12": [],
+    "source_family_counts": {
+      "AUTHENTICATED_B051_ORIGINAL_NATIVE_ARRAYS": 16,
+      "AUTHENTICATED_FROZEN_PRIOR_ARRAY": 24,
+      "AUTHENTICATED_ORIGINAL_B050_SAVED_STATE": 3
+    }
+  },
+  "limitations": [
+    "No final champions selected or promoted.",
+    "Forty-three current cells share all 197 game identities, but zero full cells have independent strict point-in-time qualification.",
+    "The original CatBoost winner and prior-OOF margin ensemble now have full 197-game reconstructed scores. Their 22.5-hour original calibration/base-label clock overlap still blocks strict chronological refit qualification.",
+    "Earlier validation and current historical reconstruction results have already been exposed; they are not an untouched prospective test.",
+    "No current postseason games have completed, so its denominator is zero rather than a missing-game failure.",
+    "Exact feature names, source paths, model configurations, provider quote rows and private identifiers are omitted from this public summary."
+  ],
+  "models": [
+    {
+      "current_test_metrics_by_evidence_class": [
+        {
+          "available_population_metrics": {
+            "accuracy": 0.6649746192893401,
+            "accuracy_policy": "HALF_CREDIT_AT_EXACT_0_5",
+            "brier": 0.20634365147348138,
+            "games": 197,
+            "log_loss": 0.5982450380018461,
+            "log_loss_is_positive_infinity": false,
+            "probability_clipping_applied": false
+          },
+          "evidence_class": "QUALIFIED_FIXED_REPLAY",
+          "full_descriptive_reconstruction_metrics": {
+            "accuracy": 0.6649746192893401,
+            "accuracy_policy": "HALF_CREDIT_AT_EXACT_0_5",
+            "brier": 0.20634365147348138,
+            "games": 197,
+            "log_loss": 0.5982450380018461,
+            "log_loss_is_positive_infinity": false,
+            "probability_clipping_applied": false
+          },
+          "full_population_metrics": {
+            "accuracy": 0.6649746192893401,
+            "accuracy_policy": "HALF_CREDIT_AT_EXACT_0_5",
+            "brier": 0.20634365147348138,
+            "games": 197,
+            "log_loss": 0.5982450380018461,
+            "log_loss_is_positive_infinity": false,
+            "probability_clipping_applied": false
+          },
+          "games": 197,
+          "independent_clean_test_claim": false,
+          "missing_games": 0,
+          "original_source_possession_proved": false,
+          "required_games": 197,
+          "status": "FULL_POPULATION",
+          "strict_point_in_time_qualified_metrics": null
+        },
+        {
+          "available_population_metrics": {
+            "accuracy": 0.6548223350253807,
+            "accuracy_policy": "HALF_CREDIT_AT_EXACT_0_5",
+            "brier": 0.20668803635104804,
+            "games": 197,
+            "log_loss": 0.5990482408568636,
+            "log_loss_is_positive_infinity": false,
+            "probability_clipping_applied": false
+          },
+          "evidence_class": "LATER_FITTED_RECONSTRUCTION",
+          "full_descriptive_reconstruction_metrics": {
+            "accuracy": 0.6548223350253807,
+            "accuracy_policy": "HALF_CREDIT_AT_EXACT_0_5",
+            "brier": 0.20668803635104804,
+            "games": 197,
+            "log_loss": 0.5990482408568636,
+            "log_loss_is_positive_infinity": false,
+            "probability_clipping_applied": false
+          },
+          "full_population_metrics": {
+            "accuracy": 0.6548223350253807,
+            "accuracy_policy": "HALF_CREDIT_AT_EXACT_0_5",
+            "brier": 0.20668803635104804,
+            "games": 197,
+            "log_loss": 0.5990482408568636,
+            "log_loss_is_positive_infinity": false,
+            "probability_clipping_applied": false
+          },
+          "games": 197,
+          "independent_clean_test_claim": false,
+          "missing_games": 0,
+          "original_source_possession_proved": false,
+          "required_games": 197,
+          "status": "FULL_POPULATION",
+          "strict_point_in_time_qualified_metrics": null
+        },
+        {
+          "available_population_metrics": null,
+          "evidence_class": "ORIGINAL_ISSUED",
+          "full_descriptive_reconstruction_metrics": null,
+          "full_population_metrics": null,
+          "games": 0,
+          "independent_clean_test_claim": false,
+          "missing_games": 197,
+          "original_source_possession_proved": false,
+          "required_games": 197,
+          "status": "NO_AUTHENTICATED_SAVED_ROWS",
+          "strict_point_in_time_qualified_metrics": null
+        }
+      ],
+      "family": "Logistic regression",
+      "horizon_minutes": 60,
+      "label": "Logistic regression · 48 inputs · NBA-C006",
+      "model_id": "NBA-C006",
+      "objective": "winner",
+      "phase": "regular",
+      "pooled_validation_metrics": {
+        "accuracy": 0.6691056910569105,
+        "brier": 0.20722481222194264,
+        "games": 2460,
+        "log_loss": 0.6009829912460323
+      },
+      "prior_season_metrics": [
+        {
+          "games": 1230,
+          "metrics": {
+            "accuracy": 0.6617886178861788,
+            "accuracy_policy": "HALF_CREDIT_AT_EXACT_0_5",
+            "brier": 0.209916453345318,
+            "games": 1230,
+            "log_loss": 0.6067084137244642,
+            "log_loss_is_positive_infinity": false,
+            "probability_clipping_applied": false
+          },
+          "population_sha256": "0e7d16c3f3f139053c6fd5df99b41eee7f9480023cd3831c7dba6ae9a0272dee",
+          "required_games": 1230,
+          "season_end_year": 2025
+        },
+        {
+          "games": 1230,
+          "metrics": {
+            "accuracy": 0.6764227642276422,
+            "accuracy_policy": "HALF_CREDIT_AT_EXACT_0_5",
+            "brier": 0.20453317109856728,
+            "games": 1230,
+            "log_loss": 0.5952575687676004,
+            "log_loss_is_positive_infinity": false,
+            "probability_clipping_applied": false
+          },
+          "population_sha256": "8d1e4945a3df28cfd94246d0bfee7f52701dd3d6cc0b47d601148e5246eaa439",
+          "required_games": 1230,
+          "season_end_year": 2026
+        }
+      ],
+      "promotion_eligible": false,
+      "public_feature_group_id": "NBA-F04",
+      "raw_feature_count": 48,
+      "recipe_fidelity_status": "FROZEN_B064_RESEARCH_RECIPE_NOT_AN_AUTOMATIC_PROMOTION",
+      "role_ids": [
+        "regular_winner_t60_brier",
+        "regular_winner_t60_log_loss"
+      ],
+      "source_policy_status": "NO_EXCLUDED_DEPENDENCY_FOUND_IN_INSPECTED_CORE_CODE_FULL_LINEAGE_NOT_CERTIFIED",
+      "validation_evidence_class": "EXPOSED_HISTORICAL_RECONSTRUCTION",
+      "validation_scores_are_original_issued_claim": false
+    },
+    {
+      "current_test_metrics_by_evidence_class": [
+        {
+          "available_population_metrics": {
+            "accuracy": 0.6903553299492385,
+            "accuracy_policy": "HALF_CREDIT_AT_EXACT_0_5",
+            "brier": 0.20921189495266077,
+            "games": 197,
+            "log_loss": 0.6050914087693422,
+            "log_loss_is_positive_infinity": false,
+            "probability_clipping_applied": false
+          },
+          "evidence_class": "QUALIFIED_FIXED_REPLAY",
+          "full_descriptive_reconstruction_metrics": {
+            "accuracy": 0.6903553299492385,
+            "accuracy_policy": "HALF_CREDIT_AT_EXACT_0_5",
+            "brier": 0.20921189495266077,
+            "games": 197,
+            "log_loss": 0.6050914087693422,
+            "log_loss_is_positive_infinity": false,
+            "probability_clipping_applied": false
+          },
+          "full_population_metrics": {
+            "accuracy": 0.6903553299492385,
+            "accuracy_policy": "HALF_CREDIT_AT_EXACT_0_5",
+            "brier": 0.20921189495266077,
+            "games": 197,
+            "log_loss": 0.6050914087693422,
+            "log_loss_is_positive_infinity": false,
+            "probability_clipping_applied": false
+          },
+          "games": 197,
+          "independent_clean_test_claim": false,
+          "missing_games": 0,
+          "original_source_possession_proved": false,
+          "required_games": 197,
+          "status": "FULL_POPULATION",
+          "strict_point_in_time_qualified_metrics": null
+        },
+        {
+          "available_population_metrics": {
+            "accuracy": 0.6700507614213198,
+            "accuracy_policy": "HALF_CREDIT_AT_EXACT_0_5",
+            "brier": 0.20700616064005573,
+            "games": 197,
+            "log_loss": 0.6000761782120589,
+            "log_loss_is_positive_infinity": false,
+            "probability_clipping_applied": false
+          },
+          "evidence_class": "LATER_FITTED_RECONSTRUCTION",
+          "full_descriptive_reconstruction_metrics": {
+            "accuracy": 0.6700507614213198,
+            "accuracy_policy": "HALF_CREDIT_AT_EXACT_0_5",
+            "brier": 0.20700616064005573,
+            "games": 197,
+            "log_loss": 0.6000761782120589,
+            "log_loss_is_positive_infinity": false,
+            "probability_clipping_applied": false
+          },
+          "full_population_metrics": {
+            "accuracy": 0.6700507614213198,
+            "accuracy_policy": "HALF_CREDIT_AT_EXACT_0_5",
+            "brier": 0.20700616064005573,
+            "games": 197,
+            "log_loss": 0.6000761782120589,
+            "log_loss_is_positive_infinity": false,
+            "probability_clipping_applied": false
+          },
+          "games": 197,
+          "independent_clean_test_claim": false,
+          "missing_games": 0,
+          "original_source_possession_proved": false,
+          "required_games": 197,
+          "status": "FULL_POPULATION",
+          "strict_point_in_time_qualified_metrics": null
+        },
+        {
+          "available_population_metrics": null,
+          "evidence_class": "ORIGINAL_ISSUED",
+          "full_descriptive_reconstruction_metrics": null,
+          "full_population_metrics": null,
+          "games": 0,
+          "independent_clean_test_claim": false,
+          "missing_games": 197,
+          "original_source_possession_proved": false,
+          "required_games": 197,
+          "status": "NO_AUTHENTICATED_SAVED_ROWS",
+          "strict_point_in_time_qualified_metrics": null
+        }
+      ],
+      "family": "XGBoost",
+      "horizon_minutes": 60,
+      "label": "XGBoost · 63 inputs · NBA-C017",
+      "model_id": "NBA-C017",
+      "objective": "winner",
+      "phase": "regular",
+      "pooled_validation_metrics": {
+        "accuracy": 0.6808943089430894,
+        "brier": 0.20839032699765045,
+        "games": 2460,
+        "log_loss": 0.60499772695707
+      },
+      "prior_season_metrics": [
+        {
+          "games": 1230,
+          "metrics": {
+            "accuracy": 0.6658536585365854,
+            "accuracy_policy": "HALF_CREDIT_AT_EXACT_0_5",
+            "brier": 0.21039398368742074,
+            "games": 1230,
+            "log_loss": 0.6090727790039202,
+            "log_loss_is_positive_infinity": false,
+            "probability_clipping_applied": false
+          },
+          "population_sha256": "0e7d16c3f3f139053c6fd5df99b41eee7f9480023cd3831c7dba6ae9a0272dee",
+          "required_games": 1230,
+          "season_end_year": 2025
+        },
+        {
+          "games": 1230,
+          "metrics": {
+            "accuracy": 0.6959349593495935,
+            "accuracy_policy": "HALF_CREDIT_AT_EXACT_0_5",
+            "brier": 0.2063866703078801,
+            "games": 1230,
+            "log_loss": 0.6009226749102199,
+            "log_loss_is_positive_infinity": false,
+            "probability_clipping_applied": false
+          },
+          "population_sha256": "8d1e4945a3df28cfd94246d0bfee7f52701dd3d6cc0b47d601148e5246eaa439",
+          "required_games": 1230,
+          "season_end_year": 2026
+        }
+      ],
+      "promotion_eligible": false,
+      "public_feature_group_id": "NBA-F05",
+      "raw_feature_count": 63,
+      "recipe_fidelity_status": "CHANGED_TRAINING_PROTOCOL_CHALLENGER",
+      "role_ids": [
+        "regular_winner_t60_accuracy"
+      ],
+      "source_policy_status": "NO_EXCLUDED_DEPENDENCY_FOUND_IN_INSPECTED_CORE_CODE_FULL_LINEAGE_NOT_CERTIFIED",
+      "validation_evidence_class": "EXPOSED_HISTORICAL_RECONSTRUCTION",
+      "validation_scores_are_original_issued_claim": false
+    },
+    {
+      "current_test_metrics_by_evidence_class": [
+        {
+          "available_population_metrics": {
+            "accuracy": 0.6700507614213198,
+            "accuracy_policy": "HALF_CREDIT_AT_EXACT_0_5",
+            "brier": 0.20927803729276998,
+            "games": 197,
+            "log_loss": 0.6056135985288857,
+            "log_loss_is_positive_infinity": false,
+            "probability_clipping_applied": false
+          },
+          "evidence_class": "QUALIFIED_FIXED_REPLAY",
+          "full_descriptive_reconstruction_metrics": {
+            "accuracy": 0.6700507614213198,
+            "accuracy_policy": "HALF_CREDIT_AT_EXACT_0_5",
+            "brier": 0.20927803729276998,
+            "games": 197,
+            "log_loss": 0.6056135985288857,
+            "log_loss_is_positive_infinity": false,
+            "probability_clipping_applied": false
+          },
+          "full_population_metrics": {
+            "accuracy": 0.6700507614213198,
+            "accuracy_policy": "HALF_CREDIT_AT_EXACT_0_5",
+            "brier": 0.20927803729276998,
+            "games": 197,
+            "log_loss": 0.6056135985288857,
+            "log_loss_is_positive_infinity": false,
+            "probability_clipping_applied": false
+          },
+          "games": 197,
+          "independent_clean_test_claim": false,
+          "missing_games": 0,
+          "original_source_possession_proved": false,
+          "required_games": 197,
+          "status": "FULL_POPULATION",
+          "strict_point_in_time_qualified_metrics": null
+        },
+        {
+          "available_population_metrics": null,
+          "evidence_class": "LATER_FITTED_RECONSTRUCTION",
+          "full_descriptive_reconstruction_metrics": null,
+          "full_population_metrics": null,
+          "games": 0,
+          "independent_clean_test_claim": false,
+          "missing_games": 197,
+          "original_source_possession_proved": false,
+          "required_games": 197,
+          "status": "NO_AUTHENTICATED_SAVED_ROWS",
+          "strict_point_in_time_qualified_metrics": null
+        },
+        {
+          "available_population_metrics": null,
+          "evidence_class": "ORIGINAL_ISSUED",
+          "full_descriptive_reconstruction_metrics": null,
+          "full_population_metrics": null,
+          "games": 0,
+          "independent_clean_test_claim": false,
+          "missing_games": 197,
+          "original_source_possession_proved": false,
+          "required_games": 197,
+          "status": "NO_AUTHENTICATED_SAVED_ROWS",
+          "strict_point_in_time_qualified_metrics": null
+        }
+      ],
+      "family": "XGBoost",
+      "horizon_minutes": 60,
+      "label": "XGBoost · 63 inputs · NBA-C036",
+      "model_id": "NBA-C036",
+      "objective": "winner",
+      "phase": "regular",
+      "pooled_validation_metrics": {
+        "accuracy": 0.6808943089430894,
+        "brier": 0.20884340431849838,
+        "games": 2460,
+        "log_loss": 0.606039689568487
+      },
+      "prior_season_metrics": [
+        {
+          "games": 1230,
+          "metrics": {
+            "accuracy": 0.6699186991869919,
+            "accuracy_policy": "HALF_CREDIT_AT_EXACT_0_5",
+            "brier": 0.21079797876946124,
+            "games": 1230,
+            "log_loss": 0.6101268231910353,
+            "log_loss_is_positive_infinity": false,
+            "probability_clipping_applied": false
+          },
+          "population_sha256": "0e7d16c3f3f139053c6fd5df99b41eee7f9480023cd3831c7dba6ae9a0272dee",
+          "required_games": 1230,
+          "season_end_year": 2025
+        },
+        {
+          "games": 1230,
+          "metrics": {
+            "accuracy": 0.691869918699187,
+            "accuracy_policy": "HALF_CREDIT_AT_EXACT_0_5",
+            "brier": 0.20688882986753554,
+            "games": 1230,
+            "log_loss": 0.6019525559459387,
+            "log_loss_is_positive_infinity": false,
+            "probability_clipping_applied": false
+          },
+          "population_sha256": "8d1e4945a3df28cfd94246d0bfee7f52701dd3d6cc0b47d601148e5246eaa439",
+          "required_games": 1230,
+          "season_end_year": 2026
+        }
+      ],
+      "promotion_eligible": false,
+      "public_feature_group_id": "NBA-F05",
+      "raw_feature_count": 63,
+      "recipe_fidelity_status": "CHANGED_TRAINING_PROTOCOL_CHALLENGER",
+      "role_ids": [
+        "regular_winner_t60_accuracy"
+      ],
+      "source_policy_status": "NO_EXCLUDED_DEPENDENCY_FOUND_IN_INSPECTED_CORE_CODE_FULL_LINEAGE_NOT_CERTIFIED",
+      "validation_evidence_class": "EXPOSED_HISTORICAL_RECONSTRUCTION",
+      "validation_scores_are_original_issued_claim": false
+    },
+    {
+      "current_test_metrics_by_evidence_class": [
+        {
+          "available_population_metrics": {
+            "accuracy": 0.700507614213198,
+            "accuracy_policy": "HALF_CREDIT_AT_EXACT_0_5",
+            "brier": 0.20026282308366306,
+            "games": 197,
+            "log_loss": 0.584026686970231,
+            "log_loss_is_positive_infinity": false,
+            "probability_clipping_applied": false
+          },
+          "evidence_class": "QUALIFIED_FIXED_REPLAY",
+          "full_descriptive_reconstruction_metrics": {
+            "accuracy": 0.700507614213198,
+            "accuracy_policy": "HALF_CREDIT_AT_EXACT_0_5",
+            "brier": 0.20026282308366306,
+            "games": 197,
+            "log_loss": 0.584026686970231,
+            "log_loss_is_positive_infinity": false,
+            "probability_clipping_applied": false
+          },
+          "full_population_metrics": {
+            "accuracy": 0.700507614213198,
+            "accuracy_policy": "HALF_CREDIT_AT_EXACT_0_5",
+            "brier": 0.20026282308366306,
+            "games": 197,
+            "log_loss": 0.584026686970231,
+            "log_loss_is_positive_infinity": false,
+            "probability_clipping_applied": false
+          },
+          "games": 197,
+          "independent_clean_test_claim": false,
+          "missing_games": 0,
+          "original_source_possession_proved": false,
+          "required_games": 197,
+          "status": "FULL_POPULATION",
+          "strict_point_in_time_qualified_metrics": null
+        },
+        {
+          "available_population_metrics": null,
+          "evidence_class": "LATER_FITTED_RECONSTRUCTION",
+          "full_descriptive_reconstruction_metrics": null,
+          "full_population_metrics": null,
+          "games": 0,
+          "independent_clean_test_claim": false,
+          "missing_games": 197,
+          "original_source_possession_proved": false,
+          "required_games": 197,
+          "status": "NO_AUTHENTICATED_SAVED_ROWS",
+          "strict_point_in_time_qualified_metrics": null
+        },
+        {
+          "available_population_metrics": null,
+          "evidence_class": "ORIGINAL_ISSUED",
+          "full_descriptive_reconstruction_metrics": null,
+          "full_population_metrics": null,
+          "games": 0,
+          "independent_clean_test_claim": false,
+          "missing_games": 197,
+          "original_source_possession_proved": false,
+          "required_games": 197,
+          "status": "NO_AUTHENTICATED_SAVED_ROWS",
+          "strict_point_in_time_qualified_metrics": null
+        }
+      ],
+      "family": "Logistic regression",
+      "horizon_minutes": 60,
+      "label": "Logistic regression · 24 inputs · NBA-C038",
+      "model_id": "NBA-C038",
+      "objective": "winner",
+      "phase": "regular",
+      "pooled_validation_metrics": {
+        "accuracy": 0.6808943089430894,
+        "brier": 0.20877415522873746,
+        "games": 2460,
+        "log_loss": 0.605111336643568
+      },
+      "prior_season_metrics": [
+        {
+          "games": 1230,
+          "metrics": {
+            "accuracy": 0.6723577235772358,
+            "accuracy_policy": "HALF_CREDIT_AT_EXACT_0_5",
+            "brier": 0.2110922248769823,
+            "games": 1230,
+            "log_loss": 0.6092032036659326,
+            "log_loss_is_positive_infinity": false,
+            "probability_clipping_applied": false
+          },
+          "population_sha256": "0e7d16c3f3f139053c6fd5df99b41eee7f9480023cd3831c7dba6ae9a0272dee",
+          "required_games": 1230,
+          "season_end_year": 2025
+        },
+        {
+          "games": 1230,
+          "metrics": {
+            "accuracy": 0.6894308943089431,
+            "accuracy_policy": "HALF_CREDIT_AT_EXACT_0_5",
+            "brier": 0.2064560855804926,
+            "games": 1230,
+            "log_loss": 0.6010194696212031,
+            "log_loss_is_positive_infinity": false,
+            "probability_clipping_applied": false
+          },
+          "population_sha256": "8d1e4945a3df28cfd94246d0bfee7f52701dd3d6cc0b47d601148e5246eaa439",
+          "required_games": 1230,
+          "season_end_year": 2026
+        }
+      ],
+      "promotion_eligible": false,
+      "public_feature_group_id": "NBA-F03",
+      "raw_feature_count": 24,
+      "recipe_fidelity_status": "FROZEN_B064_RESEARCH_RECIPE_NOT_AN_AUTOMATIC_PROMOTION",
+      "role_ids": [
+        "regular_winner_t60_accuracy"
+      ],
+      "source_policy_status": "NO_EXCLUDED_DEPENDENCY_FOUND_IN_INSPECTED_CORE_CODE_FULL_LINEAGE_NOT_CERTIFIED",
+      "validation_evidence_class": "EXPOSED_HISTORICAL_RECONSTRUCTION",
+      "validation_scores_are_original_issued_claim": false
+    },
+    {
+      "current_test_metrics_by_evidence_class": [
+        {
+          "available_population_metrics": {
+            "accuracy": 0.6852791878172588,
+            "accuracy_policy": "HALF_CREDIT_AT_EXACT_0_5",
+            "brier": 0.204637330628505,
+            "games": 197,
+            "log_loss": 0.5953120289969479,
+            "log_loss_is_positive_infinity": false,
+            "probability_clipping_applied": false
+          },
+          "evidence_class": "QUALIFIED_FIXED_REPLAY",
+          "full_descriptive_reconstruction_metrics": {
+            "accuracy": 0.6852791878172588,
+            "accuracy_policy": "HALF_CREDIT_AT_EXACT_0_5",
+            "brier": 0.204637330628505,
+            "games": 197,
+            "log_loss": 0.5953120289969479,
+            "log_loss_is_positive_infinity": false,
+            "probability_clipping_applied": false
+          },
+          "full_population_metrics": {
+            "accuracy": 0.6852791878172588,
+            "accuracy_policy": "HALF_CREDIT_AT_EXACT_0_5",
+            "brier": 0.204637330628505,
+            "games": 197,
+            "log_loss": 0.5953120289969479,
+            "log_loss_is_positive_infinity": false,
+            "probability_clipping_applied": false
+          },
+          "games": 197,
+          "independent_clean_test_claim": false,
+          "missing_games": 0,
+          "original_calibration_overlap_hours": 22.5,
+          "original_issue_claim": false,
+          "original_source_possession_proved": false,
+          "recovered_original_state": true,
+          "required_games": 197,
+          "status": "FULL_POPULATION",
+          "strict_point_in_time_qualified_metrics": null
+        },
+        {
+          "available_population_metrics": null,
+          "evidence_class": "LATER_FITTED_RECONSTRUCTION",
+          "full_descriptive_reconstruction_metrics": null,
+          "full_population_metrics": null,
+          "games": 0,
+          "independent_clean_test_claim": false,
+          "missing_games": 197,
+          "original_source_possession_proved": false,
+          "required_games": 197,
+          "status": "NO_AUTHENTICATED_SAVED_ROWS",
+          "strict_point_in_time_qualified_metrics": null
+        },
+        {
+          "available_population_metrics": null,
+          "evidence_class": "ORIGINAL_ISSUED",
+          "full_descriptive_reconstruction_metrics": null,
+          "full_population_metrics": null,
+          "games": 0,
+          "independent_clean_test_claim": false,
+          "missing_games": 197,
+          "original_source_possession_proved": false,
+          "required_games": 197,
+          "status": "NO_AUTHENTICATED_SAVED_ROWS",
+          "strict_point_in_time_qualified_metrics": null
+        }
+      ],
+      "family": "CatBoost",
+      "horizon_minutes": 120,
+      "label": "CatBoost · 63 inputs · NBA-C027",
+      "model_id": "NBA-C027",
+      "objective": "winner",
+      "phase": "regular",
+      "pooled_validation_metrics": {
+        "accuracy": 0.6788617886178862,
+        "brier": 0.20715519953375028,
+        "games": 2460,
+        "log_loss": 0.601962171516985
+      },
+      "prior_season_metrics": [
+        {
+          "games": 1230,
+          "metrics": {
+            "accuracy": 0.6642276422764227,
+            "accuracy_policy": "HALF_CREDIT_AT_EXACT_0_5",
+            "brier": 0.20998048110593728,
+            "games": 1230,
+            "log_loss": 0.6078937341434368,
+            "log_loss_is_positive_infinity": false,
+            "probability_clipping_applied": false
+          },
+          "population_sha256": "0e7d16c3f3f139053c6fd5df99b41eee7f9480023cd3831c7dba6ae9a0272dee",
+          "required_games": 1230,
+          "season_end_year": 2025
+        },
+        {
+          "games": 1230,
+          "metrics": {
+            "accuracy": 0.6934959349593496,
+            "accuracy_policy": "HALF_CREDIT_AT_EXACT_0_5",
+            "brier": 0.2043299179615633,
+            "games": 1230,
+            "log_loss": 0.596030608890533,
+            "log_loss_is_positive_infinity": false,
+            "probability_clipping_applied": false
+          },
+          "population_sha256": "8d1e4945a3df28cfd94246d0bfee7f52701dd3d6cc0b47d601148e5246eaa439",
+          "required_games": 1230,
+          "season_end_year": 2026
+        }
+      ],
+      "promotion_eligible": false,
+      "public_feature_group_id": "NBA-F05",
+      "raw_feature_count": 63,
+      "recipe_fidelity_status": "PRESERVED_ORIGINAL_REPLAY_RECOVERED_STRICT_REFIT_BLOCKED",
+      "role_ids": [
+        "regular_winner_t120_brier"
+      ],
+      "source_policy_status": "NO_EXCLUDED_DEPENDENCY_FOUND_IN_INSPECTED_CORE_CODE_FULL_LINEAGE_NOT_CERTIFIED",
+      "validation_evidence_class": "EXPOSED_HISTORICAL_RECONSTRUCTION",
+      "validation_scores_are_original_issued_claim": false
+    },
+    {
+      "current_test_metrics_by_evidence_class": [
+        {
+          "available_population_metrics": {
+            "accuracy": 0.6548223350253807,
+            "accuracy_policy": "HALF_CREDIT_AT_EXACT_0_5",
+            "brier": 0.2057034460946859,
+            "games": 197,
+            "log_loss": 0.5968168151556513,
+            "log_loss_is_positive_infinity": false,
+            "probability_clipping_applied": false
+          },
+          "evidence_class": "QUALIFIED_FIXED_REPLAY",
+          "full_descriptive_reconstruction_metrics": {
+            "accuracy": 0.6548223350253807,
+            "accuracy_policy": "HALF_CREDIT_AT_EXACT_0_5",
+            "brier": 0.2057034460946859,
+            "games": 197,
+            "log_loss": 0.5968168151556513,
+            "log_loss_is_positive_infinity": false,
+            "probability_clipping_applied": false
+          },
+          "full_population_metrics": {
+            "accuracy": 0.6548223350253807,
+            "accuracy_policy": "HALF_CREDIT_AT_EXACT_0_5",
+            "brier": 0.2057034460946859,
+            "games": 197,
+            "log_loss": 0.5968168151556513,
+            "log_loss_is_positive_infinity": false,
+            "probability_clipping_applied": false
+          },
+          "games": 197,
+          "independent_clean_test_claim": false,
+          "missing_games": 0,
+          "original_source_possession_proved": false,
+          "required_games": 197,
+          "status": "FULL_POPULATION",
+          "strict_point_in_time_qualified_metrics": null
+        },
+        {
+          "available_population_metrics": {
+            "accuracy": 0.6598984771573604,
+            "accuracy_policy": "HALF_CREDIT_AT_EXACT_0_5",
+            "brier": 0.20581556575872867,
+            "games": 197,
+            "log_loss": 0.5971586706268214,
+            "log_loss_is_positive_infinity": false,
+            "probability_clipping_applied": false
+          },
+          "evidence_class": "LATER_FITTED_RECONSTRUCTION",
+          "full_descriptive_reconstruction_metrics": {
+            "accuracy": 0.6598984771573604,
+            "accuracy_policy": "HALF_CREDIT_AT_EXACT_0_5",
+            "brier": 0.20581556575872867,
+            "games": 197,
+            "log_loss": 0.5971586706268214,
+            "log_loss_is_positive_infinity": false,
+            "probability_clipping_applied": false
+          },
+          "full_population_metrics": {
+            "accuracy": 0.6598984771573604,
+            "accuracy_policy": "HALF_CREDIT_AT_EXACT_0_5",
+            "brier": 0.20581556575872867,
+            "games": 197,
+            "log_loss": 0.5971586706268214,
+            "log_loss_is_positive_infinity": false,
+            "probability_clipping_applied": false
+          },
+          "games": 197,
+          "independent_clean_test_claim": false,
+          "missing_games": 0,
+          "original_source_possession_proved": false,
+          "required_games": 197,
+          "status": "FULL_POPULATION",
+          "strict_point_in_time_qualified_metrics": null
+        },
+        {
+          "available_population_metrics": null,
+          "evidence_class": "ORIGINAL_ISSUED",
+          "full_descriptive_reconstruction_metrics": null,
+          "full_population_metrics": null,
+          "games": 0,
+          "independent_clean_test_claim": false,
+          "missing_games": 197,
+          "original_source_possession_proved": false,
+          "required_games": 197,
+          "status": "NO_AUTHENTICATED_SAVED_ROWS",
+          "strict_point_in_time_qualified_metrics": null
+        }
+      ],
+      "family": "Logistic regression",
+      "horizon_minutes": 120,
+      "label": "Logistic regression · 48 inputs · NBA-C031",
+      "model_id": "NBA-C031",
+      "objective": "winner",
+      "phase": "regular",
+      "pooled_validation_metrics": {
+        "accuracy": 0.6707317073170732,
+        "brier": 0.20717319492835012,
+        "games": 2460,
+        "log_loss": 0.6008817431846636
+      },
+      "prior_season_metrics": [
+        {
+          "games": 1230,
+          "metrics": {
+            "accuracy": 0.6642276422764227,
+            "accuracy_policy": "HALF_CREDIT_AT_EXACT_0_5",
+            "brier": 0.2097546319721953,
+            "games": 1230,
+            "log_loss": 0.6063746456147802,
+            "log_loss_is_positive_infinity": false,
+            "probability_clipping_applied": false
+          },
+          "population_sha256": "0e7d16c3f3f139053c6fd5df99b41eee7f9480023cd3831c7dba6ae9a0272dee",
+          "required_games": 1230,
+          "season_end_year": 2025
+        },
+        {
+          "games": 1230,
+          "metrics": {
+            "accuracy": 0.6772357723577236,
+            "accuracy_policy": "HALF_CREDIT_AT_EXACT_0_5",
+            "brier": 0.20459175788450495,
+            "games": 1230,
+            "log_loss": 0.5953888407545469,
+            "log_loss_is_positive_infinity": false,
+            "probability_clipping_applied": false
+          },
+          "population_sha256": "8d1e4945a3df28cfd94246d0bfee7f52701dd3d6cc0b47d601148e5246eaa439",
+          "required_games": 1230,
+          "season_end_year": 2026
+        }
+      ],
+      "promotion_eligible": false,
+      "public_feature_group_id": "NBA-F04",
+      "raw_feature_count": 48,
+      "recipe_fidelity_status": "FROZEN_B064_RESEARCH_RECIPE_NOT_AN_AUTOMATIC_PROMOTION",
+      "role_ids": [
+        "regular_winner_t120_log_loss"
+      ],
+      "source_policy_status": "NO_EXCLUDED_DEPENDENCY_FOUND_IN_INSPECTED_CORE_CODE_FULL_LINEAGE_NOT_CERTIFIED",
+      "validation_evidence_class": "EXPOSED_HISTORICAL_RECONSTRUCTION",
+      "validation_scores_are_original_issued_claim": false
+    },
+    {
+      "current_test_metrics_by_evidence_class": [
+        {
+          "available_population_metrics": {
+            "accuracy": 0.6852791878172588,
+            "accuracy_policy": "HALF_CREDIT_AT_EXACT_0_5",
+            "brier": 0.20257244323736895,
+            "games": 197,
+            "log_loss": 0.5895975861346753,
+            "log_loss_is_positive_infinity": false,
+            "probability_clipping_applied": false
+          },
+          "evidence_class": "QUALIFIED_FIXED_REPLAY",
+          "full_descriptive_reconstruction_metrics": {
+            "accuracy": 0.6852791878172588,
+            "accuracy_policy": "HALF_CREDIT_AT_EXACT_0_5",
+            "brier": 0.20257244323736895,
+            "games": 197,
+            "log_loss": 0.5895975861346753,
+            "log_loss_is_positive_infinity": false,
+            "probability_clipping_applied": false
+          },
+          "full_population_metrics": {
+            "accuracy": 0.6852791878172588,
+            "accuracy_policy": "HALF_CREDIT_AT_EXACT_0_5",
+            "brier": 0.20257244323736895,
+            "games": 197,
+            "log_loss": 0.5895975861346753,
+            "log_loss_is_positive_infinity": false,
+            "probability_clipping_applied": false
+          },
+          "games": 197,
+          "independent_clean_test_claim": false,
+          "missing_games": 0,
+          "original_source_possession_proved": false,
+          "required_games": 197,
+          "status": "FULL_POPULATION",
+          "strict_point_in_time_qualified_metrics": null
+        },
+        {
+          "available_population_metrics": {
+            "accuracy": 0.6954314720812182,
+            "accuracy_policy": "HALF_CREDIT_AT_EXACT_0_5",
+            "brier": 0.20443220559391007,
+            "games": 197,
+            "log_loss": 0.5935435131798832,
+            "log_loss_is_positive_infinity": false,
+            "probability_clipping_applied": false
+          },
+          "evidence_class": "LATER_FITTED_RECONSTRUCTION",
+          "full_descriptive_reconstruction_metrics": {
+            "accuracy": 0.6954314720812182,
+            "accuracy_policy": "HALF_CREDIT_AT_EXACT_0_5",
+            "brier": 0.20443220559391007,
+            "games": 197,
+            "log_loss": 0.5935435131798832,
+            "log_loss_is_positive_infinity": false,
+            "probability_clipping_applied": false
+          },
+          "full_population_metrics": {
+            "accuracy": 0.6954314720812182,
+            "accuracy_policy": "HALF_CREDIT_AT_EXACT_0_5",
+            "brier": 0.20443220559391007,
+            "games": 197,
+            "log_loss": 0.5935435131798832,
+            "log_loss_is_positive_infinity": false,
+            "probability_clipping_applied": false
+          },
+          "games": 197,
+          "independent_clean_test_claim": false,
+          "missing_games": 0,
+          "original_source_possession_proved": false,
+          "required_games": 197,
+          "status": "FULL_POPULATION",
+          "strict_point_in_time_qualified_metrics": null
+        },
+        {
+          "available_population_metrics": null,
+          "evidence_class": "ORIGINAL_ISSUED",
+          "full_descriptive_reconstruction_metrics": null,
+          "full_population_metrics": null,
+          "games": 0,
+          "independent_clean_test_claim": false,
+          "missing_games": 197,
+          "original_source_possession_proved": false,
+          "required_games": 197,
+          "status": "NO_AUTHENTICATED_SAVED_ROWS",
+          "strict_point_in_time_qualified_metrics": null
+        }
+      ],
+      "family": "ExtraTrees",
+      "horizon_minutes": 120,
+      "label": "ExtraTrees · 63 inputs · NBA-C029",
+      "model_id": "NBA-C029",
+      "objective": "winner",
+      "phase": "regular",
+      "pooled_validation_metrics": {
+        "accuracy": 0.6829268292682927,
+        "brier": 0.20789227259519938,
+        "games": 2460,
+        "log_loss": 0.6035892108435809
+      },
+      "prior_season_metrics": [
+        {
+          "games": 1230,
+          "metrics": {
+            "accuracy": 0.6707317073170732,
+            "accuracy_policy": "HALF_CREDIT_AT_EXACT_0_5",
+            "brier": 0.21068096732274694,
+            "games": 1230,
+            "log_loss": 0.6094373221646369,
+            "log_loss_is_positive_infinity": false,
+            "probability_clipping_applied": false
+          },
+          "population_sha256": "0e7d16c3f3f139053c6fd5df99b41eee7f9480023cd3831c7dba6ae9a0272dee",
+          "required_games": 1230,
+          "season_end_year": 2025
+        },
+        {
+          "games": 1230,
+          "metrics": {
+            "accuracy": 0.6951219512195121,
+            "accuracy_policy": "HALF_CREDIT_AT_EXACT_0_5",
+            "brier": 0.20510357786765185,
+            "games": 1230,
+            "log_loss": 0.5977410995225249,
+            "log_loss_is_positive_infinity": false,
+            "probability_clipping_applied": false
+          },
+          "population_sha256": "8d1e4945a3df28cfd94246d0bfee7f52701dd3d6cc0b47d601148e5246eaa439",
+          "required_games": 1230,
+          "season_end_year": 2026
+        }
+      ],
+      "promotion_eligible": false,
+      "public_feature_group_id": "NBA-F05",
+      "raw_feature_count": 63,
+      "recipe_fidelity_status": "CHANGED_TRAINING_PROTOCOL_CHALLENGER",
+      "role_ids": [
+        "regular_winner_t120_accuracy"
+      ],
+      "source_policy_status": "NO_EXCLUDED_DEPENDENCY_FOUND_IN_INSPECTED_CORE_CODE_FULL_LINEAGE_NOT_CERTIFIED",
+      "validation_evidence_class": "EXPOSED_HISTORICAL_RECONSTRUCTION",
+      "validation_scores_are_original_issued_claim": false
+    },
+    {
+      "current_test_metrics_by_evidence_class": [
+        {
+          "available_population_metrics": {
+            "bias": 0.14973864729538702,
+            "games": 197,
+            "mae": 11.876278534857818,
+            "mse": 235.18471990623297,
+            "rmse": 15.33573343228921
+          },
+          "evidence_class": "QUALIFIED_FIXED_REPLAY",
+          "full_descriptive_reconstruction_metrics": {
+            "bias": 0.14973864729538702,
+            "games": 197,
+            "mae": 11.876278534857818,
+            "mse": 235.18471990623297,
+            "rmse": 15.33573343228921
+          },
+          "full_population_metrics": {
+            "bias": 0.14973864729538702,
+            "games": 197,
+            "mae": 11.876278534857818,
+            "mse": 235.18471990623297,
+            "rmse": 15.33573343228921
+          },
+          "games": 197,
+          "independent_clean_test_claim": false,
+          "missing_games": 0,
+          "original_calibration_overlap_hours": 22.5,
+          "original_issue_claim": false,
+          "original_source_possession_proved": false,
+          "recovered_original_state": true,
+          "required_games": 197,
+          "status": "FULL_POPULATION",
+          "strict_point_in_time_qualified_metrics": null
+        },
+        {
+          "available_population_metrics": null,
+          "evidence_class": "LATER_FITTED_RECONSTRUCTION",
+          "full_descriptive_reconstruction_metrics": null,
+          "full_population_metrics": null,
+          "games": 0,
+          "independent_clean_test_claim": false,
+          "missing_games": 197,
+          "original_source_possession_proved": false,
+          "required_games": 197,
+          "status": "NO_AUTHENTICATED_SAVED_ROWS",
+          "strict_point_in_time_qualified_metrics": null
+        },
+        {
+          "available_population_metrics": null,
+          "evidence_class": "ORIGINAL_ISSUED",
+          "full_descriptive_reconstruction_metrics": null,
+          "full_population_metrics": null,
+          "games": 0,
+          "independent_clean_test_claim": false,
+          "missing_games": 197,
+          "original_source_possession_proved": false,
+          "required_games": 197,
+          "status": "NO_AUTHENTICATED_SAVED_ROWS",
+          "strict_point_in_time_qualified_metrics": null
+        }
+      ],
+      "family": "Ensemble",
+      "horizon_minutes": 60,
+      "label": "Ensemble · 63 inputs · NBA-C021",
+      "model_id": "NBA-C021",
+      "objective": "margin",
+      "phase": "regular",
+      "pooled_validation_metrics": {
+        "bias": 0.4295915141763314,
+        "games": 2460,
+        "mae": 11.163509664831361,
+        "mse": 203.68784086506187,
+        "rmse": 14.27192491800114
+      },
+      "prior_season_metrics": [
+        {
+          "games": 1230,
+          "metrics": {
+            "bias": 0.4456122190701562,
+            "games": 1230,
+            "mae": 10.981526026498694,
+            "mse": 197.2925478769088,
+            "rmse": 14.046086568041249
+          },
+          "population_sha256": "0e7d16c3f3f139053c6fd5df99b41eee7f9480023cd3831c7dba6ae9a0272dee",
+          "required_games": 1230,
+          "season_end_year": 2025
+        },
+        {
+          "games": 1230,
+          "metrics": {
+            "bias": 0.4135708092825065,
+            "games": 1230,
+            "mae": 11.345493303164028,
+            "mse": 210.08313385321492,
+            "rmse": 14.494244852810198
+          },
+          "population_sha256": "8d1e4945a3df28cfd94246d0bfee7f52701dd3d6cc0b47d601148e5246eaa439",
+          "required_games": 1230,
+          "season_end_year": 2026
+        }
+      ],
+      "promotion_eligible": false,
+      "public_feature_group_id": "NBA-F05",
+      "raw_feature_count": 63,
+      "recipe_fidelity_status": "PRESERVED_ORIGINAL_REPLAY_RECOVERED_STRICT_REFIT_BLOCKED",
+      "role_ids": [
+        "regular_margin_t60_mae",
+        "regular_margin_t60_rmse"
+      ],
+      "source_policy_status": "NO_EXCLUDED_DEPENDENCY_FOUND_IN_INSPECTED_CORE_CODE_FULL_LINEAGE_NOT_CERTIFIED",
+      "validation_evidence_class": "EXPOSED_HISTORICAL_RECONSTRUCTION",
+      "validation_scores_are_original_issued_claim": false
+    },
+    {
+      "current_test_metrics_by_evidence_class": [
+        {
+          "available_population_metrics": {
+            "bias": 0.11732461386875778,
+            "games": 197,
+            "mae": 11.85796304646651,
+            "mse": 235.42743901185878,
+            "rmse": 15.343644906340174
+          },
+          "evidence_class": "QUALIFIED_FIXED_REPLAY",
+          "full_descriptive_reconstruction_metrics": {
+            "bias": 0.11732461386875778,
+            "games": 197,
+            "mae": 11.85796304646651,
+            "mse": 235.42743901185878,
+            "rmse": 15.343644906340174
+          },
+          "full_population_metrics": {
+            "bias": 0.11732461386875778,
+            "games": 197,
+            "mae": 11.85796304646651,
+            "mse": 235.42743901185878,
+            "rmse": 15.343644906340174
+          },
+          "games": 197,
+          "independent_clean_test_claim": false,
+          "missing_games": 0,
+          "original_calibration_overlap_hours": 22.5,
+          "original_issue_claim": false,
+          "original_source_possession_proved": false,
+          "recovered_original_state": true,
+          "required_games": 197,
+          "status": "FULL_POPULATION",
+          "strict_point_in_time_qualified_metrics": null
+        },
+        {
+          "available_population_metrics": null,
+          "evidence_class": "LATER_FITTED_RECONSTRUCTION",
+          "full_descriptive_reconstruction_metrics": null,
+          "full_population_metrics": null,
+          "games": 0,
+          "independent_clean_test_claim": false,
+          "missing_games": 197,
+          "original_source_possession_proved": false,
+          "required_games": 197,
+          "status": "NO_AUTHENTICATED_SAVED_ROWS",
+          "strict_point_in_time_qualified_metrics": null
+        },
+        {
+          "available_population_metrics": null,
+          "evidence_class": "ORIGINAL_ISSUED",
+          "full_descriptive_reconstruction_metrics": null,
+          "full_population_metrics": null,
+          "games": 0,
+          "independent_clean_test_claim": false,
+          "missing_games": 197,
+          "original_source_possession_proved": false,
+          "required_games": 197,
+          "status": "NO_AUTHENTICATED_SAVED_ROWS",
+          "strict_point_in_time_qualified_metrics": null
+        }
+      ],
+      "family": "Ensemble",
+      "horizon_minutes": 120,
+      "label": "Ensemble · 63 inputs · NBA-C010",
+      "model_id": "NBA-C010",
+      "objective": "margin",
+      "phase": "regular",
+      "pooled_validation_metrics": {
+        "bias": 0.4230824631845255,
+        "games": 2460,
+        "mae": 11.16291316256857,
+        "mse": 203.66604445654554,
+        "rmse": 14.27116128619341
+      },
+      "prior_season_metrics": [
+        {
+          "games": 1230,
+          "metrics": {
+            "bias": 0.4386267793738178,
+            "games": 1230,
+            "mae": 10.983157769881862,
+            "mse": 197.3133420532956,
+            "rmse": 14.046826760991095
+          },
+          "population_sha256": "0e7d16c3f3f139053c6fd5df99b41eee7f9480023cd3831c7dba6ae9a0272dee",
+          "required_games": 1230,
+          "season_end_year": 2025
+        },
+        {
+          "games": 1230,
+          "metrics": {
+            "bias": 0.4075381469952332,
+            "games": 1230,
+            "mae": 11.342668555255278,
+            "mse": 210.0187468597955,
+            "rmse": 14.492023559868908
+          },
+          "population_sha256": "8d1e4945a3df28cfd94246d0bfee7f52701dd3d6cc0b47d601148e5246eaa439",
+          "required_games": 1230,
+          "season_end_year": 2026
+        }
+      ],
+      "promotion_eligible": false,
+      "public_feature_group_id": "NBA-F05",
+      "raw_feature_count": 63,
+      "recipe_fidelity_status": "PRESERVED_ORIGINAL_REPLAY_RECOVERED_STRICT_REFIT_BLOCKED",
+      "role_ids": [
+        "regular_margin_t120_mae",
+        "regular_margin_t120_rmse"
+      ],
+      "source_policy_status": "NO_EXCLUDED_DEPENDENCY_FOUND_IN_INSPECTED_CORE_CODE_FULL_LINEAGE_NOT_CERTIFIED",
+      "validation_evidence_class": "EXPOSED_HISTORICAL_RECONSTRUCTION",
+      "validation_scores_are_original_issued_claim": false
+    },
+    {
+      "current_test_metrics_by_evidence_class": [
+        {
+          "available_population_metrics": {
+            "bias": 0.5290154347702385,
+            "games": 197,
+            "mae": 14.523224217809219,
+            "mse": 334.99865486135,
+            "rmse": 18.302968471298584
+          },
+          "evidence_class": "QUALIFIED_FIXED_REPLAY",
+          "full_descriptive_reconstruction_metrics": {
+            "bias": 0.5290154347702385,
+            "games": 197,
+            "mae": 14.523224217809219,
+            "mse": 334.99865486135,
+            "rmse": 18.302968471298584
+          },
+          "full_population_metrics": {
+            "bias": 0.5290154347702385,
+            "games": 197,
+            "mae": 14.523224217809219,
+            "mse": 334.99865486135,
+            "rmse": 18.302968471298584
+          },
+          "games": 197,
+          "independent_clean_test_claim": false,
+          "missing_games": 0,
+          "original_source_possession_proved": false,
+          "required_games": 197,
+          "status": "FULL_POPULATION",
+          "strict_point_in_time_qualified_metrics": null
+        },
+        {
+          "available_population_metrics": {
+            "bias": 1.9432057454036886,
+            "games": 197,
+            "mae": 14.754102657415752,
+            "mse": 339.80805455281757,
+            "rmse": 18.433883328067843
+          },
+          "evidence_class": "LATER_FITTED_RECONSTRUCTION",
+          "full_descriptive_reconstruction_metrics": {
+            "bias": 1.9432057454036886,
+            "games": 197,
+            "mae": 14.754102657415752,
+            "mse": 339.80805455281757,
+            "rmse": 18.433883328067843
+          },
+          "full_population_metrics": {
+            "bias": 1.9432057454036886,
+            "games": 197,
+            "mae": 14.754102657415752,
+            "mse": 339.80805455281757,
+            "rmse": 18.433883328067843
+          },
+          "games": 197,
+          "independent_clean_test_claim": false,
+          "missing_games": 0,
+          "original_source_possession_proved": false,
+          "required_games": 197,
+          "status": "FULL_POPULATION",
+          "strict_point_in_time_qualified_metrics": null
+        },
+        {
+          "available_population_metrics": null,
+          "evidence_class": "ORIGINAL_ISSUED",
+          "full_descriptive_reconstruction_metrics": null,
+          "full_population_metrics": null,
+          "games": 0,
+          "independent_clean_test_claim": false,
+          "missing_games": 197,
+          "original_source_possession_proved": false,
+          "required_games": 197,
+          "status": "NO_AUTHENTICATED_SAVED_ROWS",
+          "strict_point_in_time_qualified_metrics": null
+        }
+      ],
+      "family": "Ensemble",
+      "horizon_minutes": 60,
+      "label": "Ensemble · 63 inputs · NBA-C034",
+      "model_id": "NBA-C034",
+      "objective": "total",
+      "phase": "regular",
+      "pooled_validation_metrics": {
+        "bias": -0.44761129573549563,
+        "games": 2460,
+        "mae": 14.989998745991388,
+        "mse": 354.82953247643445,
+        "rmse": 18.836919399849712
+      },
+      "prior_season_metrics": [
+        {
+          "games": 1230,
+          "metrics": {
+            "bias": 0.7420781785407303,
+            "games": 1230,
+            "mae": 14.74973364761904,
+            "mse": 341.1183304661858,
+            "rmse": 18.469389011718437
+          },
+          "population_sha256": "0e7d16c3f3f139053c6fd5df99b41eee7f9480023cd3831c7dba6ae9a0272dee",
+          "required_games": 1230,
+          "season_end_year": 2025
+        },
+        {
+          "games": 1230,
+          "metrics": {
+            "bias": -1.6373007700117217,
+            "games": 1230,
+            "mae": 15.230263844363733,
+            "mse": 368.5407344866831,
+            "rmse": 19.19741478654569
+          },
+          "population_sha256": "8d1e4945a3df28cfd94246d0bfee7f52701dd3d6cc0b47d601148e5246eaa439",
+          "required_games": 1230,
+          "season_end_year": 2026
+        }
+      ],
+      "promotion_eligible": false,
+      "public_feature_group_id": "NBA-F05",
+      "raw_feature_count": 63,
+      "recipe_fidelity_status": "FROZEN_B064_RESEARCH_RECIPE_NOT_AN_AUTOMATIC_PROMOTION",
+      "role_ids": [
+        "regular_total_t60_mae"
+      ],
+      "source_policy_status": "NO_EXCLUDED_DEPENDENCY_FOUND_IN_INSPECTED_CORE_CODE_FULL_LINEAGE_NOT_CERTIFIED",
+      "validation_evidence_class": "EXPOSED_HISTORICAL_RECONSTRUCTION",
+      "validation_scores_are_original_issued_claim": false
+    },
+    {
+      "current_test_metrics_by_evidence_class": [
+        {
+          "available_population_metrics": {
+            "bias": 0.3873546086288397,
+            "games": 197,
+            "mae": 14.52143068605045,
+            "mse": 334.55635583311994,
+            "rmse": 18.290881767512467
+          },
+          "evidence_class": "QUALIFIED_FIXED_REPLAY",
+          "full_descriptive_reconstruction_metrics": {
+            "bias": 0.3873546086288397,
+            "games": 197,
+            "mae": 14.52143068605045,
+            "mse": 334.55635583311994,
+            "rmse": 18.290881767512467
+          },
+          "full_population_metrics": {
+            "bias": 0.3873546086288397,
+            "games": 197,
+            "mae": 14.52143068605045,
+            "mse": 334.55635583311994,
+            "rmse": 18.290881767512467
+          },
+          "games": 197,
+          "independent_clean_test_claim": false,
+          "missing_games": 0,
+          "original_source_possession_proved": false,
+          "required_games": 197,
+          "status": "FULL_POPULATION",
+          "strict_point_in_time_qualified_metrics": null
+        },
+        {
+          "available_population_metrics": {
+            "bias": 1.9013189054581923,
+            "games": 197,
+            "mae": 14.751940695278249,
+            "mse": 340.17882245050873,
+            "rmse": 18.443937281679005
+          },
+          "evidence_class": "LATER_FITTED_RECONSTRUCTION",
+          "full_descriptive_reconstruction_metrics": {
+            "bias": 1.9013189054581923,
+            "games": 197,
+            "mae": 14.751940695278249,
+            "mse": 340.17882245050873,
+            "rmse": 18.443937281679005
+          },
+          "full_population_metrics": {
+            "bias": 1.9013189054581923,
+            "games": 197,
+            "mae": 14.751940695278249,
+            "mse": 340.17882245050873,
+            "rmse": 18.443937281679005
+          },
+          "games": 197,
+          "independent_clean_test_claim": false,
+          "missing_games": 0,
+          "original_source_possession_proved": false,
+          "required_games": 197,
+          "status": "FULL_POPULATION",
+          "strict_point_in_time_qualified_metrics": null
+        },
+        {
+          "available_population_metrics": null,
+          "evidence_class": "ORIGINAL_ISSUED",
+          "full_descriptive_reconstruction_metrics": null,
+          "full_population_metrics": null,
+          "games": 0,
+          "independent_clean_test_claim": false,
+          "missing_games": 197,
+          "original_source_possession_proved": false,
+          "required_games": 197,
+          "status": "NO_AUTHENTICATED_SAVED_ROWS",
+          "strict_point_in_time_qualified_metrics": null
+        }
+      ],
+      "family": "Ensemble",
+      "horizon_minutes": 60,
+      "label": "Ensemble · 63 inputs · NBA-C001",
+      "model_id": "NBA-C001",
+      "objective": "total",
+      "phase": "regular",
+      "pooled_validation_metrics": {
+        "bias": -0.5151191996977845,
+        "games": 2460,
+        "mae": 14.991688965325901,
+        "mse": 354.72868957612286,
+        "rmse": 18.834242474177795
+      },
+      "prior_season_metrics": [
+        {
+          "games": 1230,
+          "metrics": {
+            "bias": 0.613915022523913,
+            "games": 1230,
+            "mae": 14.75381468057558,
+            "mse": 340.82777214774825,
+            "rmse": 18.461521393096188
+          },
+          "population_sha256": "0e7d16c3f3f139053c6fd5df99b41eee7f9480023cd3831c7dba6ae9a0272dee",
+          "required_games": 1230,
+          "season_end_year": 2025
+        },
+        {
+          "games": 1230,
+          "metrics": {
+            "bias": -1.6441534219194822,
+            "games": 1230,
+            "mae": 15.229563250076222,
+            "mse": 368.6296070044975,
+            "rmse": 19.199729347167825
+          },
+          "population_sha256": "8d1e4945a3df28cfd94246d0bfee7f52701dd3d6cc0b47d601148e5246eaa439",
+          "required_games": 1230,
+          "season_end_year": 2026
+        }
+      ],
+      "promotion_eligible": false,
+      "public_feature_group_id": "NBA-F05",
+      "raw_feature_count": 63,
+      "recipe_fidelity_status": "FROZEN_B064_RESEARCH_RECIPE_NOT_AN_AUTOMATIC_PROMOTION",
+      "role_ids": [
+        "regular_total_t60_rmse"
+      ],
+      "source_policy_status": "NO_EXCLUDED_DEPENDENCY_FOUND_IN_INSPECTED_CORE_CODE_FULL_LINEAGE_NOT_CERTIFIED",
+      "validation_evidence_class": "EXPOSED_HISTORICAL_RECONSTRUCTION",
+      "validation_scores_are_original_issued_claim": false
+    },
+    {
+      "current_test_metrics_by_evidence_class": [
+        {
+          "available_population_metrics": {
+            "bias": 0.2354091502561021,
+            "games": 197,
+            "mae": 14.618589349861843,
+            "mse": 336.1785762512588,
+            "rmse": 18.335173199379895
+          },
+          "evidence_class": "QUALIFIED_FIXED_REPLAY",
+          "full_descriptive_reconstruction_metrics": {
+            "bias": 0.2354091502561021,
+            "games": 197,
+            "mae": 14.618589349861843,
+            "mse": 336.1785762512588,
+            "rmse": 18.335173199379895
+          },
+          "full_population_metrics": {
+            "bias": 0.2354091502561021,
+            "games": 197,
+            "mae": 14.618589349861843,
+            "mse": 336.1785762512588,
+            "rmse": 18.335173199379895
+          },
+          "games": 197,
+          "independent_clean_test_claim": false,
+          "missing_games": 0,
+          "original_source_possession_proved": false,
+          "required_games": 197,
+          "status": "FULL_POPULATION",
+          "strict_point_in_time_qualified_metrics": null
+        },
+        {
+          "available_population_metrics": {
+            "bias": 1.8314622330906642,
+            "games": 197,
+            "mae": 14.775737483895199,
+            "mse": 339.2920464647164,
+            "rmse": 18.419881825481845
+          },
+          "evidence_class": "LATER_FITTED_RECONSTRUCTION",
+          "full_descriptive_reconstruction_metrics": {
+            "bias": 1.8314622330906642,
+            "games": 197,
+            "mae": 14.775737483895199,
+            "mse": 339.2920464647164,
+            "rmse": 18.419881825481845
+          },
+          "full_population_metrics": {
+            "bias": 1.8314622330906642,
+            "games": 197,
+            "mae": 14.775737483895199,
+            "mse": 339.2920464647164,
+            "rmse": 18.419881825481845
+          },
+          "games": 197,
+          "independent_clean_test_claim": false,
+          "missing_games": 0,
+          "original_source_possession_proved": false,
+          "required_games": 197,
+          "status": "FULL_POPULATION",
+          "strict_point_in_time_qualified_metrics": null
+        },
+        {
+          "available_population_metrics": null,
+          "evidence_class": "ORIGINAL_ISSUED",
+          "full_descriptive_reconstruction_metrics": null,
+          "full_population_metrics": null,
+          "games": 0,
+          "independent_clean_test_claim": false,
+          "missing_games": 197,
+          "original_source_possession_proved": false,
+          "required_games": 197,
+          "status": "NO_AUTHENTICATED_SAVED_ROWS",
+          "strict_point_in_time_qualified_metrics": null
+        }
+      ],
+      "family": "Ensemble",
+      "horizon_minutes": 120,
+      "label": "Ensemble · 63 inputs · NBA-C018",
+      "model_id": "NBA-C018",
+      "objective": "total",
+      "phase": "regular",
+      "pooled_validation_metrics": {
+        "bias": -0.53634301518251,
+        "games": 2460,
+        "mae": 15.016232350386792,
+        "mse": 355.2179435415078,
+        "rmse": 18.847226415085796
+      },
+      "prior_season_metrics": [
+        {
+          "games": 1230,
+          "metrics": {
+            "bias": 0.43700441268673446,
+            "games": 1230,
+            "mae": 14.779657765306771,
+            "mse": 341.10895675250606,
+            "rmse": 18.46913524647286
+          },
+          "population_sha256": "0e7d16c3f3f139053c6fd5df99b41eee7f9480023cd3831c7dba6ae9a0272dee",
+          "required_games": 1230,
+          "season_end_year": 2025
+        },
+        {
+          "games": 1230,
+          "metrics": {
+            "bias": -1.5096904430517548,
+            "games": 1230,
+            "mae": 15.252806935466815,
+            "mse": 369.3269303305095,
+            "rmse": 19.217880484863816
+          },
+          "population_sha256": "8d1e4945a3df28cfd94246d0bfee7f52701dd3d6cc0b47d601148e5246eaa439",
+          "required_games": 1230,
+          "season_end_year": 2026
+        }
+      ],
+      "promotion_eligible": false,
+      "public_feature_group_id": "NBA-F05",
+      "raw_feature_count": 63,
+      "recipe_fidelity_status": "FROZEN_B064_RESEARCH_RECIPE_NOT_AN_AUTOMATIC_PROMOTION",
+      "role_ids": [
+        "regular_total_t120_mae"
+      ],
+      "source_policy_status": "NO_EXCLUDED_DEPENDENCY_FOUND_IN_INSPECTED_CORE_CODE_FULL_LINEAGE_NOT_CERTIFIED",
+      "validation_evidence_class": "EXPOSED_HISTORICAL_RECONSTRUCTION",
+      "validation_scores_are_original_issued_claim": false
+    },
+    {
+      "current_test_metrics_by_evidence_class": [
+        {
+          "available_population_metrics": {
+            "bias": 1.2300256015886115,
+            "games": 197,
+            "mae": 14.762482390165758,
+            "mse": 341.21583258654204,
+            "rmse": 18.472028383113265
+          },
+          "evidence_class": "QUALIFIED_FIXED_REPLAY",
+          "full_descriptive_reconstruction_metrics": {
+            "bias": 1.2300256015886115,
+            "games": 197,
+            "mae": 14.762482390165758,
+            "mse": 341.21583258654204,
+            "rmse": 18.472028383113265
+          },
+          "full_population_metrics": {
+            "bias": 1.2300256015886115,
+            "games": 197,
+            "mae": 14.762482390165758,
+            "mse": 341.21583258654204,
+            "rmse": 18.472028383113265
+          },
+          "games": 197,
+          "independent_clean_test_claim": false,
+          "missing_games": 0,
+          "original_source_possession_proved": false,
+          "required_games": 197,
+          "status": "FULL_POPULATION",
+          "strict_point_in_time_qualified_metrics": null
+        },
+        {
+          "available_population_metrics": {
+            "bias": 2.3319106375524132,
+            "games": 197,
+            "mae": 14.832509332349018,
+            "mse": 341.9849376944143,
+            "rmse": 18.492834766320016
+          },
+          "evidence_class": "LATER_FITTED_RECONSTRUCTION",
+          "full_descriptive_reconstruction_metrics": {
+            "bias": 2.3319106375524132,
+            "games": 197,
+            "mae": 14.832509332349018,
+            "mse": 341.9849376944143,
+            "rmse": 18.492834766320016
+          },
+          "full_population_metrics": {
+            "bias": 2.3319106375524132,
+            "games": 197,
+            "mae": 14.832509332349018,
+            "mse": 341.9849376944143,
+            "rmse": 18.492834766320016
+          },
+          "games": 197,
+          "independent_clean_test_claim": false,
+          "missing_games": 0,
+          "original_source_possession_proved": false,
+          "required_games": 197,
+          "status": "FULL_POPULATION",
+          "strict_point_in_time_qualified_metrics": null
+        },
+        {
+          "available_population_metrics": null,
+          "evidence_class": "ORIGINAL_ISSUED",
+          "full_descriptive_reconstruction_metrics": null,
+          "full_population_metrics": null,
+          "games": 0,
+          "independent_clean_test_claim": false,
+          "missing_games": 197,
+          "original_source_possession_proved": false,
+          "required_games": 197,
+          "status": "NO_AUTHENTICATED_SAVED_ROWS",
+          "strict_point_in_time_qualified_metrics": null
+        }
+      ],
+      "family": "ExtraTrees",
+      "horizon_minutes": 120,
+      "label": "ExtraTrees · 63 inputs · NBA-C022",
+      "model_id": "NBA-C022",
+      "objective": "total",
+      "phase": "regular",
+      "pooled_validation_metrics": {
+        "bias": -0.014088119991143552,
+        "games": 2460,
+        "mae": 15.040875237293683,
+        "mse": 354.9053150145109,
+        "rmse": 18.838930835228172
+      },
+      "prior_season_metrics": [
+        {
+          "games": 1230,
+          "metrics": {
+            "bias": 0.872338197392892,
+            "games": 1230,
+            "mae": 14.830958373389501,
+            "mse": 342.5933570098617,
+            "rmse": 18.50927759286844
+          },
+          "population_sha256": "0e7d16c3f3f139053c6fd5df99b41eee7f9480023cd3831c7dba6ae9a0272dee",
+          "required_games": 1230,
+          "season_end_year": 2025
+        },
+        {
+          "games": 1230,
+          "metrics": {
+            "bias": -0.9005144373751791,
+            "games": 1230,
+            "mae": 15.250792101197868,
+            "mse": 367.21727301916,
+            "rmse": 19.16291400124626
+          },
+          "population_sha256": "8d1e4945a3df28cfd94246d0bfee7f52701dd3d6cc0b47d601148e5246eaa439",
+          "required_games": 1230,
+          "season_end_year": 2026
+        }
+      ],
+      "promotion_eligible": false,
+      "public_feature_group_id": "NBA-F05",
+      "raw_feature_count": 63,
+      "recipe_fidelity_status": "CHANGED_TRAINING_PROTOCOL_CHALLENGER",
+      "role_ids": [
+        "regular_total_t120_rmse"
+      ],
+      "source_policy_status": "NO_EXCLUDED_DEPENDENCY_FOUND_IN_INSPECTED_CORE_CODE_FULL_LINEAGE_NOT_CERTIFIED",
+      "validation_evidence_class": "EXPOSED_HISTORICAL_RECONSTRUCTION",
+      "validation_scores_are_original_issued_claim": false
+    },
+    {
+      "current_test_metrics_by_evidence_class": [
+        {
+          "available_population_metrics": null,
+          "evidence_class": "QUALIFIED_FIXED_REPLAY",
+          "full_descriptive_reconstruction_metrics": null,
+          "full_population_metrics": null,
+          "games": 0,
+          "independent_clean_test_claim": false,
+          "missing_games": 0,
+          "original_source_possession_proved": false,
+          "required_games": 0,
+          "status": "NO_COMPLETED_GAMES",
+          "strict_point_in_time_qualified_metrics": null
+        },
+        {
+          "available_population_metrics": null,
+          "evidence_class": "LATER_FITTED_RECONSTRUCTION",
+          "full_descriptive_reconstruction_metrics": null,
+          "full_population_metrics": null,
+          "games": 0,
+          "independent_clean_test_claim": false,
+          "missing_games": 0,
+          "original_source_possession_proved": false,
+          "required_games": 0,
+          "status": "NO_COMPLETED_GAMES",
+          "strict_point_in_time_qualified_metrics": null
+        },
+        {
+          "available_population_metrics": null,
+          "evidence_class": "ORIGINAL_ISSUED",
+          "full_descriptive_reconstruction_metrics": null,
+          "full_population_metrics": null,
+          "games": 0,
+          "independent_clean_test_claim": false,
+          "missing_games": 0,
+          "original_source_possession_proved": false,
+          "required_games": 0,
+          "status": "NO_COMPLETED_GAMES",
+          "strict_point_in_time_qualified_metrics": null
+        }
+      ],
+      "family": "Logistic regression",
+      "horizon_minutes": 60,
+      "label": "Logistic regression · 66 inputs · NBA-C005",
+      "model_id": "NBA-C005",
+      "objective": "winner",
+      "phase": "postseason",
+      "pooled_validation_metrics": {
+        "accuracy": 0.650887573964497,
+        "brier": 0.22530671134522076,
+        "games": 169,
+        "log_loss": 0.6426713726106481
+      },
+      "prior_season_metrics": [
+        {
+          "games": 84,
+          "metrics": {
+            "accuracy": 0.5833333333333334,
+            "accuracy_policy": "HALF_CREDIT_AT_EXACT_0_5",
+            "brier": 0.24094484745066355,
+            "games": 84,
+            "log_loss": 0.6752348135221199,
+            "log_loss_is_positive_infinity": false,
+            "probability_clipping_applied": false
+          },
+          "population_sha256": "6e6ef5285ca7af0353fcb74979ce7f75237c9303f526a43af758a6aacac66cfa",
+          "required_games": 84,
+          "season_end_year": 2025
+        },
+        {
+          "games": 85,
+          "metrics": {
+            "accuracy": 0.7176470588235294,
+            "accuracy_policy": "HALF_CREDIT_AT_EXACT_0_5",
+            "brier": 0.20985255331160674,
+            "games": 85,
+            "log_loss": 0.6104910310040171,
+            "log_loss_is_positive_infinity": false,
+            "probability_clipping_applied": false
+          },
+          "population_sha256": "fcba677c751bd477847e29710efb98e6e7c17a6ba352eb18c74c99dd862bcfc9",
+          "required_games": 85,
+          "season_end_year": 2026
+        }
+      ],
+      "promotion_eligible": false,
+      "public_feature_group_id": "NBA-F06",
+      "raw_feature_count": 66,
+      "recipe_fidelity_status": "FROZEN_B064_RESEARCH_RECIPE_NOT_AN_AUTOMATIC_PROMOTION",
+      "role_ids": [
+        "postseason_winner_t60_brier",
+        "postseason_winner_t60_log_loss"
+      ],
+      "source_policy_status": "NO_EXCLUDED_DEPENDENCY_FOUND_IN_INSPECTED_CORE_CODE_FULL_LINEAGE_NOT_CERTIFIED",
+      "validation_evidence_class": "EXPOSED_HISTORICAL_RECONSTRUCTION",
+      "validation_scores_are_original_issued_claim": false
+    },
+    {
+      "current_test_metrics_by_evidence_class": [
+        {
+          "available_population_metrics": null,
+          "evidence_class": "QUALIFIED_FIXED_REPLAY",
+          "full_descriptive_reconstruction_metrics": null,
+          "full_population_metrics": null,
+          "games": 0,
+          "independent_clean_test_claim": false,
+          "missing_games": 0,
+          "original_source_possession_proved": false,
+          "required_games": 0,
+          "status": "NO_COMPLETED_GAMES",
+          "strict_point_in_time_qualified_metrics": null
+        },
+        {
+          "available_population_metrics": null,
+          "evidence_class": "LATER_FITTED_RECONSTRUCTION",
+          "full_descriptive_reconstruction_metrics": null,
+          "full_population_metrics": null,
+          "games": 0,
+          "independent_clean_test_claim": false,
+          "missing_games": 0,
+          "original_source_possession_proved": false,
+          "required_games": 0,
+          "status": "NO_COMPLETED_GAMES",
+          "strict_point_in_time_qualified_metrics": null
+        },
+        {
+          "available_population_metrics": null,
+          "evidence_class": "ORIGINAL_ISSUED",
+          "full_descriptive_reconstruction_metrics": null,
+          "full_population_metrics": null,
+          "games": 0,
+          "independent_clean_test_claim": false,
+          "missing_games": 0,
+          "original_source_possession_proved": false,
+          "required_games": 0,
+          "status": "NO_COMPLETED_GAMES",
+          "strict_point_in_time_qualified_metrics": null
+        }
+      ],
+      "family": "Logistic regression",
+      "horizon_minutes": 60,
+      "label": "Logistic regression · 15 inputs · NBA-C040",
+      "model_id": "NBA-C040",
+      "objective": "winner",
+      "phase": "postseason",
+      "pooled_validation_metrics": {
+        "accuracy": 0.6863905325443787,
+        "brier": 0.230065971844103,
+        "games": 169,
+        "log_loss": 0.655656722411431
+      },
+      "prior_season_metrics": [
+        {
+          "games": 84,
+          "metrics": {
+            "accuracy": 0.6547619047619048,
+            "accuracy_policy": "HALF_CREDIT_AT_EXACT_0_5",
+            "brier": 0.23536431275554712,
+            "games": 84,
+            "log_loss": 0.6695667360794187,
+            "log_loss_is_positive_infinity": false,
+            "probability_clipping_applied": false
+          },
+          "population_sha256": "6e6ef5285ca7af0353fcb74979ce7f75237c9303f526a43af758a6aacac66cfa",
+          "required_games": 84,
+          "season_end_year": 2025
+        },
+        {
+          "games": 85,
+          "metrics": {
+            "accuracy": 0.7176470588235294,
+            "accuracy_policy": "HALF_CREDIT_AT_EXACT_0_5",
+            "brier": 0.22482996435514638,
+            "games": 85,
+            "log_loss": 0.6419103559630668,
+            "log_loss_is_positive_infinity": false,
+            "probability_clipping_applied": false
+          },
+          "population_sha256": "fcba677c751bd477847e29710efb98e6e7c17a6ba352eb18c74c99dd862bcfc9",
+          "required_games": 85,
+          "season_end_year": 2026
+        }
+      ],
+      "promotion_eligible": false,
+      "public_feature_group_id": "NBA-F02",
+      "raw_feature_count": 15,
+      "recipe_fidelity_status": "FROZEN_B064_RESEARCH_RECIPE_NOT_AN_AUTOMATIC_PROMOTION",
+      "role_ids": [
+        "postseason_winner_t60_accuracy"
+      ],
+      "source_policy_status": "NO_EXCLUDED_DEPENDENCY_FOUND_IN_INSPECTED_CORE_CODE_FULL_LINEAGE_NOT_CERTIFIED",
+      "validation_evidence_class": "EXPOSED_HISTORICAL_RECONSTRUCTION",
+      "validation_scores_are_original_issued_claim": false
+    },
+    {
+      "current_test_metrics_by_evidence_class": [
+        {
+          "available_population_metrics": null,
+          "evidence_class": "QUALIFIED_FIXED_REPLAY",
+          "full_descriptive_reconstruction_metrics": null,
+          "full_population_metrics": null,
+          "games": 0,
+          "independent_clean_test_claim": false,
+          "missing_games": 0,
+          "original_source_possession_proved": false,
+          "required_games": 0,
+          "status": "NO_COMPLETED_GAMES",
+          "strict_point_in_time_qualified_metrics": null
+        },
+        {
+          "available_population_metrics": null,
+          "evidence_class": "LATER_FITTED_RECONSTRUCTION",
+          "full_descriptive_reconstruction_metrics": null,
+          "full_population_metrics": null,
+          "games": 0,
+          "independent_clean_test_claim": false,
+          "missing_games": 0,
+          "original_source_possession_proved": false,
+          "required_games": 0,
+          "status": "NO_COMPLETED_GAMES",
+          "strict_point_in_time_qualified_metrics": null
+        },
+        {
+          "available_population_metrics": null,
+          "evidence_class": "ORIGINAL_ISSUED",
+          "full_descriptive_reconstruction_metrics": null,
+          "full_population_metrics": null,
+          "games": 0,
+          "independent_clean_test_claim": false,
+          "missing_games": 0,
+          "original_source_possession_proved": false,
+          "required_games": 0,
+          "status": "NO_COMPLETED_GAMES",
+          "strict_point_in_time_qualified_metrics": null
+        }
+      ],
+      "family": "Logistic regression",
+      "horizon_minutes": 120,
+      "label": "Logistic regression · 66 inputs · NBA-C044",
+      "model_id": "NBA-C044",
+      "objective": "winner",
+      "phase": "postseason",
+      "pooled_validation_metrics": {
+        "accuracy": 0.650887573964497,
+        "brier": 0.22530695635700057,
+        "games": 169,
+        "log_loss": 0.642658030980285
+      },
+      "prior_season_metrics": [
+        {
+          "games": 84,
+          "metrics": {
+            "accuracy": 0.5833333333333334,
+            "accuracy_policy": "HALF_CREDIT_AT_EXACT_0_5",
+            "brier": 0.24095850608086455,
+            "games": 84,
+            "log_loss": 0.6752409232921832,
+            "log_loss_is_positive_infinity": false,
+            "probability_clipping_applied": false
+          },
+          "population_sha256": "6e6ef5285ca7af0353fcb74979ce7f75237c9303f526a43af758a6aacac66cfa",
+          "required_games": 84,
+          "season_end_year": 2025
+        },
+        {
+          "games": 85,
+          "metrics": {
+            "accuracy": 0.7176470588235294,
+            "accuracy_policy": "HALF_CREDIT_AT_EXACT_0_5",
+            "brier": 0.2098395425122409,
+            "games": 85,
+            "log_loss": 0.6104584668132327,
+            "log_loss_is_positive_infinity": false,
+            "probability_clipping_applied": false
+          },
+          "population_sha256": "fcba677c751bd477847e29710efb98e6e7c17a6ba352eb18c74c99dd862bcfc9",
+          "required_games": 85,
+          "season_end_year": 2026
+        }
+      ],
+      "promotion_eligible": false,
+      "public_feature_group_id": "NBA-F06",
+      "raw_feature_count": 66,
+      "recipe_fidelity_status": "FROZEN_B064_RESEARCH_RECIPE_NOT_AN_AUTOMATIC_PROMOTION",
+      "role_ids": [
+        "postseason_winner_t120_brier",
+        "postseason_winner_t120_log_loss"
+      ],
+      "source_policy_status": "NO_EXCLUDED_DEPENDENCY_FOUND_IN_INSPECTED_CORE_CODE_FULL_LINEAGE_NOT_CERTIFIED",
+      "validation_evidence_class": "EXPOSED_HISTORICAL_RECONSTRUCTION",
+      "validation_scores_are_original_issued_claim": false
+    },
+    {
+      "current_test_metrics_by_evidence_class": [
+        {
+          "available_population_metrics": null,
+          "evidence_class": "QUALIFIED_FIXED_REPLAY",
+          "full_descriptive_reconstruction_metrics": null,
+          "full_population_metrics": null,
+          "games": 0,
+          "independent_clean_test_claim": false,
+          "missing_games": 0,
+          "original_source_possession_proved": false,
+          "required_games": 0,
+          "status": "NO_COMPLETED_GAMES",
+          "strict_point_in_time_qualified_metrics": null
+        },
+        {
+          "available_population_metrics": null,
+          "evidence_class": "LATER_FITTED_RECONSTRUCTION",
+          "full_descriptive_reconstruction_metrics": null,
+          "full_population_metrics": null,
+          "games": 0,
+          "independent_clean_test_claim": false,
+          "missing_games": 0,
+          "original_source_possession_proved": false,
+          "required_games": 0,
+          "status": "NO_COMPLETED_GAMES",
+          "strict_point_in_time_qualified_metrics": null
+        },
+        {
+          "available_population_metrics": null,
+          "evidence_class": "ORIGINAL_ISSUED",
+          "full_descriptive_reconstruction_metrics": null,
+          "full_population_metrics": null,
+          "games": 0,
+          "independent_clean_test_claim": false,
+          "missing_games": 0,
+          "original_source_possession_proved": false,
+          "required_games": 0,
+          "status": "NO_COMPLETED_GAMES",
+          "strict_point_in_time_qualified_metrics": null
+        }
+      ],
+      "family": "Logistic regression",
+      "horizon_minutes": 120,
+      "label": "Logistic regression · 15 inputs · NBA-C042",
+      "model_id": "NBA-C042",
+      "objective": "winner",
+      "phase": "postseason",
+      "pooled_validation_metrics": {
+        "accuracy": 0.6863905325443787,
+        "brier": 0.23006602627121897,
+        "games": 169,
+        "log_loss": 0.6556568836794674
+      },
+      "prior_season_metrics": [
+        {
+          "games": 84,
+          "metrics": {
+            "accuracy": 0.6547619047619048,
+            "accuracy_policy": "HALF_CREDIT_AT_EXACT_0_5",
+            "brier": 0.23536438698751905,
+            "games": 84,
+            "log_loss": 0.6695669876479196,
+            "log_loss_is_positive_infinity": false,
+            "probability_clipping_applied": false
+          },
+          "population_sha256": "6e6ef5285ca7af0353fcb74979ce7f75237c9303f526a43af758a6aacac66cfa",
+          "required_games": 84,
+          "season_end_year": 2025
+        },
+        {
+          "games": 85,
+          "metrics": {
+            "accuracy": 0.7176470588235294,
+            "accuracy_policy": "HALF_CREDIT_AT_EXACT_0_5",
+            "brier": 0.22482999921040478,
+            "games": 85,
+            "log_loss": 0.641910427992997,
+            "log_loss_is_positive_infinity": false,
+            "probability_clipping_applied": false
+          },
+          "population_sha256": "fcba677c751bd477847e29710efb98e6e7c17a6ba352eb18c74c99dd862bcfc9",
+          "required_games": 85,
+          "season_end_year": 2026
+        }
+      ],
+      "promotion_eligible": false,
+      "public_feature_group_id": "NBA-F02",
+      "raw_feature_count": 15,
+      "recipe_fidelity_status": "FROZEN_B064_RESEARCH_RECIPE_NOT_AN_AUTOMATIC_PROMOTION",
+      "role_ids": [
+        "postseason_winner_t120_accuracy"
+      ],
+      "source_policy_status": "NO_EXCLUDED_DEPENDENCY_FOUND_IN_INSPECTED_CORE_CODE_FULL_LINEAGE_NOT_CERTIFIED",
+      "validation_evidence_class": "EXPOSED_HISTORICAL_RECONSTRUCTION",
+      "validation_scores_are_original_issued_claim": false
+    },
+    {
+      "current_test_metrics_by_evidence_class": [
+        {
+          "available_population_metrics": null,
+          "evidence_class": "QUALIFIED_FIXED_REPLAY",
+          "full_descriptive_reconstruction_metrics": null,
+          "full_population_metrics": null,
+          "games": 0,
+          "independent_clean_test_claim": false,
+          "missing_games": 0,
+          "original_source_possession_proved": false,
+          "required_games": 0,
+          "status": "NO_COMPLETED_GAMES",
+          "strict_point_in_time_qualified_metrics": null
+        },
+        {
+          "available_population_metrics": null,
+          "evidence_class": "LATER_FITTED_RECONSTRUCTION",
+          "full_descriptive_reconstruction_metrics": null,
+          "full_population_metrics": null,
+          "games": 0,
+          "independent_clean_test_claim": false,
+          "missing_games": 0,
+          "original_source_possession_proved": false,
+          "required_games": 0,
+          "status": "NO_COMPLETED_GAMES",
+          "strict_point_in_time_qualified_metrics": null
+        },
+        {
+          "available_population_metrics": null,
+          "evidence_class": "ORIGINAL_ISSUED",
+          "full_descriptive_reconstruction_metrics": null,
+          "full_population_metrics": null,
+          "games": 0,
+          "independent_clean_test_claim": false,
+          "missing_games": 0,
+          "original_source_possession_proved": false,
+          "required_games": 0,
+          "status": "NO_COMPLETED_GAMES",
+          "strict_point_in_time_qualified_metrics": null
+        }
+      ],
+      "family": "LightGBM",
+      "horizon_minutes": 60,
+      "label": "LightGBM · 63 inputs · NBA-C014",
+      "model_id": "NBA-C014",
+      "objective": "margin",
+      "phase": "postseason",
+      "pooled_validation_metrics": {
+        "bias": -0.9347250795556277,
+        "games": 169,
+        "mae": 12.47891219758306,
+        "mse": 252.38660911525872,
+        "rmse": 15.886680242116624
+      },
+      "prior_season_metrics": [
+        {
+          "games": 84,
+          "metrics": {
+            "bias": -2.408071494994946,
+            "games": 84,
+            "mae": 12.576285404153417,
+            "mse": 266.58182186913507,
+            "rmse": 16.327333581118967
+          },
+          "population_sha256": "6e6ef5285ca7af0353fcb74979ce7f75237c9303f526a43af758a6aacac66cfa",
+          "required_games": 84,
+          "season_end_year": 2025
+        },
+        {
+          "games": 85,
+          "metrics": {
+            "bias": 0.5212878486432279,
+            "games": 85,
+            "mae": 12.38268455814882,
+            "mse": 238.3583988643691,
+            "rmse": 15.438860024767667
+          },
+          "population_sha256": "fcba677c751bd477847e29710efb98e6e7c17a6ba352eb18c74c99dd862bcfc9",
+          "required_games": 85,
+          "season_end_year": 2026
+        }
+      ],
+      "promotion_eligible": false,
+      "public_feature_group_id": "NBA-F05",
+      "raw_feature_count": 63,
+      "recipe_fidelity_status": "PRESERVED_ORIGINAL_RECIPE_CURRENT_REFIT_NOT_FULLY_ADMITTED",
+      "role_ids": [
+        "postseason_margin_t60_mae"
+      ],
+      "source_policy_status": "NO_EXCLUDED_DEPENDENCY_FOUND_IN_INSPECTED_CORE_CODE_FULL_LINEAGE_NOT_CERTIFIED",
+      "validation_evidence_class": "EXPOSED_HISTORICAL_RECONSTRUCTION",
+      "validation_scores_are_original_issued_claim": false
+    },
+    {
+      "current_test_metrics_by_evidence_class": [
+        {
+          "available_population_metrics": null,
+          "evidence_class": "QUALIFIED_FIXED_REPLAY",
+          "full_descriptive_reconstruction_metrics": null,
+          "full_population_metrics": null,
+          "games": 0,
+          "independent_clean_test_claim": false,
+          "missing_games": 0,
+          "original_source_possession_proved": false,
+          "required_games": 0,
+          "status": "NO_COMPLETED_GAMES",
+          "strict_point_in_time_qualified_metrics": null
+        },
+        {
+          "available_population_metrics": null,
+          "evidence_class": "LATER_FITTED_RECONSTRUCTION",
+          "full_descriptive_reconstruction_metrics": null,
+          "full_population_metrics": null,
+          "games": 0,
+          "independent_clean_test_claim": false,
+          "missing_games": 0,
+          "original_source_possession_proved": false,
+          "required_games": 0,
+          "status": "NO_COMPLETED_GAMES",
+          "strict_point_in_time_qualified_metrics": null
+        },
+        {
+          "available_population_metrics": null,
+          "evidence_class": "ORIGINAL_ISSUED",
+          "full_descriptive_reconstruction_metrics": null,
+          "full_population_metrics": null,
+          "games": 0,
+          "independent_clean_test_claim": false,
+          "missing_games": 0,
+          "original_source_possession_proved": false,
+          "required_games": 0,
+          "status": "NO_COMPLETED_GAMES",
+          "strict_point_in_time_qualified_metrics": null
+        }
+      ],
+      "family": "Ridge regression",
+      "horizon_minutes": 60,
+      "label": "Ridge regression · 66 inputs · NBA-C002",
+      "model_id": "NBA-C002",
+      "objective": "margin",
+      "phase": "postseason",
+      "pooled_validation_metrics": {
+        "bias": 0.06343342868105492,
+        "games": 169,
+        "mae": 12.494469916986402,
+        "mse": 249.94468285386426,
+        "rmse": 15.809638922311422
+      },
+      "prior_season_metrics": [
+        {
+          "games": 84,
+          "metrics": {
+            "bias": -1.3585114631036825,
+            "games": 84,
+            "mae": 12.500435321379726,
+            "mse": 242.83576772830185,
+            "rmse": 15.583188625191632
+          },
+          "population_sha256": "6e6ef5285ca7af0353fcb74979ce7f75237c9303f526a43af758a6aacac66cfa",
+          "required_games": 84,
+          "season_end_year": 2025
+        },
+        {
+          "games": 85,
+          "metrics": {
+            "bias": 1.4686495570330307,
+            "games": 85,
+            "mae": 12.488574693821233,
+            "mse": 256.96996368383185,
+            "rmse": 16.030282707545485
+          },
+          "population_sha256": "fcba677c751bd477847e29710efb98e6e7c17a6ba352eb18c74c99dd862bcfc9",
+          "required_games": 85,
+          "season_end_year": 2026
+        }
+      ],
+      "promotion_eligible": false,
+      "public_feature_group_id": "NBA-F06",
+      "raw_feature_count": 66,
+      "recipe_fidelity_status": "FROZEN_B064_RESEARCH_RECIPE_NOT_AN_AUTOMATIC_PROMOTION",
+      "role_ids": [
+        "postseason_margin_t60_rmse"
+      ],
+      "source_policy_status": "NO_EXCLUDED_DEPENDENCY_FOUND_IN_INSPECTED_CORE_CODE_FULL_LINEAGE_NOT_CERTIFIED",
+      "validation_evidence_class": "EXPOSED_HISTORICAL_RECONSTRUCTION",
+      "validation_scores_are_original_issued_claim": false
+    },
+    {
+      "current_test_metrics_by_evidence_class": [
+        {
+          "available_population_metrics": null,
+          "evidence_class": "QUALIFIED_FIXED_REPLAY",
+          "full_descriptive_reconstruction_metrics": null,
+          "full_population_metrics": null,
+          "games": 0,
+          "independent_clean_test_claim": false,
+          "missing_games": 0,
+          "original_source_possession_proved": false,
+          "required_games": 0,
+          "status": "NO_COMPLETED_GAMES",
+          "strict_point_in_time_qualified_metrics": null
+        },
+        {
+          "available_population_metrics": null,
+          "evidence_class": "LATER_FITTED_RECONSTRUCTION",
+          "full_descriptive_reconstruction_metrics": null,
+          "full_population_metrics": null,
+          "games": 0,
+          "independent_clean_test_claim": false,
+          "missing_games": 0,
+          "original_source_possession_proved": false,
+          "required_games": 0,
+          "status": "NO_COMPLETED_GAMES",
+          "strict_point_in_time_qualified_metrics": null
+        },
+        {
+          "available_population_metrics": null,
+          "evidence_class": "ORIGINAL_ISSUED",
+          "full_descriptive_reconstruction_metrics": null,
+          "full_population_metrics": null,
+          "games": 0,
+          "independent_clean_test_claim": false,
+          "missing_games": 0,
+          "original_source_possession_proved": false,
+          "required_games": 0,
+          "status": "NO_COMPLETED_GAMES",
+          "strict_point_in_time_qualified_metrics": null
+        }
+      ],
+      "family": "LightGBM",
+      "horizon_minutes": 120,
+      "label": "LightGBM · 63 inputs · NBA-C028",
+      "model_id": "NBA-C028",
+      "objective": "margin",
+      "phase": "postseason",
+      "pooled_validation_metrics": {
+        "bias": -0.9342741713359772,
+        "games": 169,
+        "mae": 12.479363105802706,
+        "mse": 252.3903923835479,
+        "rmse": 15.8867993121191
+      },
+      "prior_season_metrics": [
+        {
+          "games": 84,
+          "metrics": {
+            "bias": -2.407164310600649,
+            "games": 84,
+            "mae": 12.577192588547714,
+            "mse": 266.5894334446217,
+            "rmse": 16.327566672490477
+          },
+          "population_sha256": "6e6ef5285ca7af0353fcb74979ce7f75237c9303f526a43af758a6aacac66cfa",
+          "required_games": 84,
+          "season_end_year": 2025
+        },
+        {
+          "games": 85,
+          "metrics": {
+            "bias": 0.5212878486432279,
+            "games": 85,
+            "mae": 12.38268455814882,
+            "mse": 238.3583988643691,
+            "rmse": 15.438860024767667
+          },
+          "population_sha256": "fcba677c751bd477847e29710efb98e6e7c17a6ba352eb18c74c99dd862bcfc9",
+          "required_games": 85,
+          "season_end_year": 2026
+        }
+      ],
+      "promotion_eligible": false,
+      "public_feature_group_id": "NBA-F05",
+      "raw_feature_count": 63,
+      "recipe_fidelity_status": "PRESERVED_ORIGINAL_RECIPE_CURRENT_REFIT_NOT_FULLY_ADMITTED",
+      "role_ids": [
+        "postseason_margin_t120_mae"
+      ],
+      "source_policy_status": "NO_EXCLUDED_DEPENDENCY_FOUND_IN_INSPECTED_CORE_CODE_FULL_LINEAGE_NOT_CERTIFIED",
+      "validation_evidence_class": "EXPOSED_HISTORICAL_RECONSTRUCTION",
+      "validation_scores_are_original_issued_claim": false
+    },
+    {
+      "current_test_metrics_by_evidence_class": [
+        {
+          "available_population_metrics": null,
+          "evidence_class": "QUALIFIED_FIXED_REPLAY",
+          "full_descriptive_reconstruction_metrics": null,
+          "full_population_metrics": null,
+          "games": 0,
+          "independent_clean_test_claim": false,
+          "missing_games": 0,
+          "original_source_possession_proved": false,
+          "required_games": 0,
+          "status": "NO_COMPLETED_GAMES",
+          "strict_point_in_time_qualified_metrics": null
+        },
+        {
+          "available_population_metrics": null,
+          "evidence_class": "LATER_FITTED_RECONSTRUCTION",
+          "full_descriptive_reconstruction_metrics": null,
+          "full_population_metrics": null,
+          "games": 0,
+          "independent_clean_test_claim": false,
+          "missing_games": 0,
+          "original_source_possession_proved": false,
+          "required_games": 0,
+          "status": "NO_COMPLETED_GAMES",
+          "strict_point_in_time_qualified_metrics": null
+        },
+        {
+          "available_population_metrics": null,
+          "evidence_class": "ORIGINAL_ISSUED",
+          "full_descriptive_reconstruction_metrics": null,
+          "full_population_metrics": null,
+          "games": 0,
+          "independent_clean_test_claim": false,
+          "missing_games": 0,
+          "original_source_possession_proved": false,
+          "required_games": 0,
+          "status": "NO_COMPLETED_GAMES",
+          "strict_point_in_time_qualified_metrics": null
+        }
+      ],
+      "family": "Ridge regression",
+      "horizon_minutes": 120,
+      "label": "Ridge regression · 66 inputs · NBA-C037",
+      "model_id": "NBA-C037",
+      "objective": "margin",
+      "phase": "postseason",
+      "pooled_validation_metrics": {
+        "bias": 0.0634476425929878,
+        "games": 169,
+        "mae": 12.494412980875468,
+        "mse": 249.94337554817315,
+        "rmse": 15.809597577047088
+      },
+      "prior_season_metrics": [
+        {
+          "games": 84,
+          "metrics": {
+            "bias": -1.3586421007408203,
+            "games": 84,
+            "mae": 12.500454631061887,
+            "mse": 242.83553739818151,
+            "rmse": 15.583181234850011
+          },
+          "population_sha256": "6e6ef5285ca7af0353fcb74979ce7f75237c9303f526a43af758a6aacac66cfa",
+          "required_games": 84,
+          "season_end_year": 2025
+        },
+        {
+          "games": 85,
+          "metrics": {
+            "bias": 1.468806918358163,
+            "games": 85,
+            "mae": 12.488442408926536,
+            "mse": 256.9675920728708,
+            "rmse": 16.030208734538387
+          },
+          "population_sha256": "fcba677c751bd477847e29710efb98e6e7c17a6ba352eb18c74c99dd862bcfc9",
+          "required_games": 85,
+          "season_end_year": 2026
+        }
+      ],
+      "promotion_eligible": false,
+      "public_feature_group_id": "NBA-F06",
+      "raw_feature_count": 66,
+      "recipe_fidelity_status": "FROZEN_B064_RESEARCH_RECIPE_NOT_AN_AUTOMATIC_PROMOTION",
+      "role_ids": [
+        "postseason_margin_t120_rmse"
+      ],
+      "source_policy_status": "NO_EXCLUDED_DEPENDENCY_FOUND_IN_INSPECTED_CORE_CODE_FULL_LINEAGE_NOT_CERTIFIED",
+      "validation_evidence_class": "EXPOSED_HISTORICAL_RECONSTRUCTION",
+      "validation_scores_are_original_issued_claim": false
+    },
+    {
+      "current_test_metrics_by_evidence_class": [
+        {
+          "available_population_metrics": null,
+          "evidence_class": "QUALIFIED_FIXED_REPLAY",
+          "full_descriptive_reconstruction_metrics": null,
+          "full_population_metrics": null,
+          "games": 0,
+          "independent_clean_test_claim": false,
+          "missing_games": 0,
+          "original_source_possession_proved": false,
+          "required_games": 0,
+          "status": "NO_COMPLETED_GAMES",
+          "strict_point_in_time_qualified_metrics": null
+        },
+        {
+          "available_population_metrics": null,
+          "evidence_class": "LATER_FITTED_RECONSTRUCTION",
+          "full_descriptive_reconstruction_metrics": null,
+          "full_population_metrics": null,
+          "games": 0,
+          "independent_clean_test_claim": false,
+          "missing_games": 0,
+          "original_source_possession_proved": false,
+          "required_games": 0,
+          "status": "NO_COMPLETED_GAMES",
+          "strict_point_in_time_qualified_metrics": null
+        },
+        {
+          "available_population_metrics": null,
+          "evidence_class": "ORIGINAL_ISSUED",
+          "full_descriptive_reconstruction_metrics": null,
+          "full_population_metrics": null,
+          "games": 0,
+          "independent_clean_test_claim": false,
+          "missing_games": 0,
+          "original_source_possession_proved": false,
+          "required_games": 0,
+          "status": "NO_COMPLETED_GAMES",
+          "strict_point_in_time_qualified_metrics": null
+        }
+      ],
+      "family": "ExtraTrees",
+      "horizon_minutes": 60,
+      "label": "ExtraTrees · 63 inputs · NBA-C008",
+      "model_id": "NBA-C008",
+      "objective": "total",
+      "phase": "postseason",
+      "pooled_validation_metrics": {
+        "bias": 2.2618869096678393,
+        "games": 169,
+        "mae": 13.761517390563377,
+        "mse": 312.0491327419077,
+        "rmse": 17.664912474787634
+      },
+      "prior_season_metrics": [
+        {
+          "games": 84,
+          "metrics": {
+            "bias": 2.647540111911701,
+            "games": 84,
+            "mae": 14.107404144345324,
+            "mse": 330.0446102372733,
+            "rmse": 18.167129939461358
+          },
+          "population_sha256": "6e6ef5285ca7af0353fcb74979ce7f75237c9303f526a43af758a6aacac66cfa",
+          "required_games": 84,
+          "season_end_year": 2025
+        },
+        {
+          "games": 85,
+          "metrics": {
+            "bias": 1.8807708039209645,
+            "games": 85,
+            "mae": 13.41969989270828,
+            "mse": 294.26536674648764,
+            "rmse": 17.15416470558936
+          },
+          "population_sha256": "fcba677c751bd477847e29710efb98e6e7c17a6ba352eb18c74c99dd862bcfc9",
+          "required_games": 85,
+          "season_end_year": 2026
+        }
+      ],
+      "promotion_eligible": false,
+      "public_feature_group_id": "NBA-F05",
+      "raw_feature_count": 63,
+      "recipe_fidelity_status": "CHANGED_TRAINING_PROTOCOL_CHALLENGER",
+      "role_ids": [
+        "postseason_total_t60_mae"
+      ],
+      "source_policy_status": "NO_EXCLUDED_DEPENDENCY_FOUND_IN_INSPECTED_CORE_CODE_FULL_LINEAGE_NOT_CERTIFIED",
+      "validation_evidence_class": "EXPOSED_HISTORICAL_RECONSTRUCTION",
+      "validation_scores_are_original_issued_claim": false
+    },
+    {
+      "current_test_metrics_by_evidence_class": [
+        {
+          "available_population_metrics": null,
+          "evidence_class": "QUALIFIED_FIXED_REPLAY",
+          "full_descriptive_reconstruction_metrics": null,
+          "full_population_metrics": null,
+          "games": 0,
+          "independent_clean_test_claim": false,
+          "missing_games": 0,
+          "original_source_possession_proved": false,
+          "required_games": 0,
+          "status": "NO_COMPLETED_GAMES",
+          "strict_point_in_time_qualified_metrics": null
+        },
+        {
+          "available_population_metrics": null,
+          "evidence_class": "LATER_FITTED_RECONSTRUCTION",
+          "full_descriptive_reconstruction_metrics": null,
+          "full_population_metrics": null,
+          "games": 0,
+          "independent_clean_test_claim": false,
+          "missing_games": 0,
+          "original_source_possession_proved": false,
+          "required_games": 0,
+          "status": "NO_COMPLETED_GAMES",
+          "strict_point_in_time_qualified_metrics": null
+        },
+        {
+          "available_population_metrics": null,
+          "evidence_class": "ORIGINAL_ISSUED",
+          "full_descriptive_reconstruction_metrics": null,
+          "full_population_metrics": null,
+          "games": 0,
+          "independent_clean_test_claim": false,
+          "missing_games": 0,
+          "original_source_possession_proved": false,
+          "required_games": 0,
+          "status": "NO_COMPLETED_GAMES",
+          "strict_point_in_time_qualified_metrics": null
+        }
+      ],
+      "family": "Ridge regression",
+      "horizon_minutes": 60,
+      "label": "Ridge regression · 10 inputs · NBA-C041",
+      "model_id": "NBA-C041",
+      "objective": "total",
+      "phase": "postseason",
+      "pooled_validation_metrics": {
+        "bias": -0.08293063240635112,
+        "games": 169,
+        "mae": 13.797106686542694,
+        "mse": 311.96709880932957,
+        "rmse": 17.662590376536777
+      },
+      "prior_season_metrics": [
+        {
+          "games": 84,
+          "metrics": {
+            "bias": -0.7094249211064827,
+            "games": 84,
+            "mae": 14.385837874878389,
+            "mse": 338.06304246630214,
+            "rmse": 18.386490759965646
+          },
+          "population_sha256": "6e6ef5285ca7af0353fcb74979ce7f75237c9303f526a43af758a6aacac66cfa",
+          "required_games": 84,
+          "season_end_year": 2025
+        },
+        {
+          "games": 85,
+          "metrics": {
+            "bias": 0.5361931352502495,
+            "games": 85,
+            "mae": 13.215301747481542,
+            "mse": 286.1781662542038,
+            "rmse": 16.916801300902126
+          },
+          "population_sha256": "fcba677c751bd477847e29710efb98e6e7c17a6ba352eb18c74c99dd862bcfc9",
+          "required_games": 85,
+          "season_end_year": 2026
+        }
+      ],
+      "promotion_eligible": false,
+      "public_feature_group_id": "NBA-F01",
+      "raw_feature_count": 10,
+      "recipe_fidelity_status": "FROZEN_B064_RESEARCH_RECIPE_NOT_AN_AUTOMATIC_PROMOTION",
+      "role_ids": [
+        "postseason_total_t60_rmse"
+      ],
+      "source_policy_status": "NO_EXCLUDED_DEPENDENCY_FOUND_IN_INSPECTED_CORE_CODE_FULL_LINEAGE_NOT_CERTIFIED",
+      "validation_evidence_class": "EXPOSED_HISTORICAL_RECONSTRUCTION",
+      "validation_scores_are_original_issued_claim": false
+    },
+    {
+      "current_test_metrics_by_evidence_class": [
+        {
+          "available_population_metrics": null,
+          "evidence_class": "QUALIFIED_FIXED_REPLAY",
+          "full_descriptive_reconstruction_metrics": null,
+          "full_population_metrics": null,
+          "games": 0,
+          "independent_clean_test_claim": false,
+          "missing_games": 0,
+          "original_source_possession_proved": false,
+          "required_games": 0,
+          "status": "NO_COMPLETED_GAMES",
+          "strict_point_in_time_qualified_metrics": null
+        },
+        {
+          "available_population_metrics": null,
+          "evidence_class": "LATER_FITTED_RECONSTRUCTION",
+          "full_descriptive_reconstruction_metrics": null,
+          "full_population_metrics": null,
+          "games": 0,
+          "independent_clean_test_claim": false,
+          "missing_games": 0,
+          "original_source_possession_proved": false,
+          "required_games": 0,
+          "status": "NO_COMPLETED_GAMES",
+          "strict_point_in_time_qualified_metrics": null
+        },
+        {
+          "available_population_metrics": null,
+          "evidence_class": "ORIGINAL_ISSUED",
+          "full_descriptive_reconstruction_metrics": null,
+          "full_population_metrics": null,
+          "games": 0,
+          "independent_clean_test_claim": false,
+          "missing_games": 0,
+          "original_source_possession_proved": false,
+          "required_games": 0,
+          "status": "NO_COMPLETED_GAMES",
+          "strict_point_in_time_qualified_metrics": null
+        }
+      ],
+      "family": "ExtraTrees",
+      "horizon_minutes": 120,
+      "label": "ExtraTrees · 63 inputs · NBA-C007",
+      "model_id": "NBA-C007",
+      "objective": "total",
+      "phase": "postseason",
+      "pooled_validation_metrics": {
+        "bias": 2.2619511149604095,
+        "games": 169,
+        "mae": 13.761485287917095,
+        "mse": 312.0496445273401,
+        "rmse": 17.664926960713426
+      },
+      "prior_season_metrics": [
+        {
+          "games": 84,
+          "metrics": {
+            "bias": 2.6476692868455625,
+            "games": 84,
+            "mae": 14.107339556878392,
+            "mse": 330.04563990082175,
+            "rmse": 18.167158278080304
+          },
+          "population_sha256": "6e6ef5285ca7af0353fcb74979ce7f75237c9303f526a43af758a6aacac66cfa",
+          "required_games": 84,
+          "season_end_year": 2025
+        },
+        {
+          "games": 85,
+          "metrics": {
+            "bias": 1.8807708039209645,
+            "games": 85,
+            "mae": 13.41969989270828,
+            "mse": 294.26536674648764,
+            "rmse": 17.15416470558936
+          },
+          "population_sha256": "fcba677c751bd477847e29710efb98e6e7c17a6ba352eb18c74c99dd862bcfc9",
+          "required_games": 85,
+          "season_end_year": 2026
+        }
+      ],
+      "promotion_eligible": false,
+      "public_feature_group_id": "NBA-F05",
+      "raw_feature_count": 63,
+      "recipe_fidelity_status": "CHANGED_TRAINING_PROTOCOL_CHALLENGER",
+      "role_ids": [
+        "postseason_total_t120_mae"
+      ],
+      "source_policy_status": "NO_EXCLUDED_DEPENDENCY_FOUND_IN_INSPECTED_CORE_CODE_FULL_LINEAGE_NOT_CERTIFIED",
+      "validation_evidence_class": "EXPOSED_HISTORICAL_RECONSTRUCTION",
+      "validation_scores_are_original_issued_claim": false
+    },
+    {
+      "current_test_metrics_by_evidence_class": [
+        {
+          "available_population_metrics": null,
+          "evidence_class": "QUALIFIED_FIXED_REPLAY",
+          "full_descriptive_reconstruction_metrics": null,
+          "full_population_metrics": null,
+          "games": 0,
+          "independent_clean_test_claim": false,
+          "missing_games": 0,
+          "original_source_possession_proved": false,
+          "required_games": 0,
+          "status": "NO_COMPLETED_GAMES",
+          "strict_point_in_time_qualified_metrics": null
+        },
+        {
+          "available_population_metrics": null,
+          "evidence_class": "LATER_FITTED_RECONSTRUCTION",
+          "full_descriptive_reconstruction_metrics": null,
+          "full_population_metrics": null,
+          "games": 0,
+          "independent_clean_test_claim": false,
+          "missing_games": 0,
+          "original_source_possession_proved": false,
+          "required_games": 0,
+          "status": "NO_COMPLETED_GAMES",
+          "strict_point_in_time_qualified_metrics": null
+        },
+        {
+          "available_population_metrics": null,
+          "evidence_class": "ORIGINAL_ISSUED",
+          "full_descriptive_reconstruction_metrics": null,
+          "full_population_metrics": null,
+          "games": 0,
+          "independent_clean_test_claim": false,
+          "missing_games": 0,
+          "original_source_possession_proved": false,
+          "required_games": 0,
+          "status": "NO_COMPLETED_GAMES",
+          "strict_point_in_time_qualified_metrics": null
+        }
+      ],
+      "family": "Ridge regression",
+      "horizon_minutes": 120,
+      "label": "Ridge regression · 10 inputs · NBA-C024",
+      "model_id": "NBA-C024",
+      "objective": "total",
+      "phase": "postseason",
+      "pooled_validation_metrics": {
+        "bias": -0.08293063240633144,
+        "games": 169,
+        "mae": 13.797106686542694,
+        "mse": 311.9670988093296,
+        "rmse": 17.66259037653678
+      },
+      "prior_season_metrics": [
+        {
+          "games": 84,
+          "metrics": {
+            "bias": -0.7094249211064478,
+            "games": 84,
+            "mae": 14.385837874878385,
+            "mse": 338.0630424663021,
+            "rmse": 18.386490759965646
+          },
+          "population_sha256": "6e6ef5285ca7af0353fcb74979ce7f75237c9303f526a43af758a6aacac66cfa",
+          "required_games": 84,
+          "season_end_year": 2025
+        },
+        {
+          "games": 85,
+          "metrics": {
+            "bias": 0.5361931352502541,
+            "games": 85,
+            "mae": 13.215301747481538,
+            "mse": 286.17816625420386,
+            "rmse": 16.916801300902126
+          },
+          "population_sha256": "fcba677c751bd477847e29710efb98e6e7c17a6ba352eb18c74c99dd862bcfc9",
+          "required_games": 85,
+          "season_end_year": 2026
+        }
+      ],
+      "promotion_eligible": false,
+      "public_feature_group_id": "NBA-F01",
+      "raw_feature_count": 10,
+      "recipe_fidelity_status": "FROZEN_B064_RESEARCH_RECIPE_NOT_AN_AUTOMATIC_PROMOTION",
+      "role_ids": [
+        "postseason_total_t120_rmse"
+      ],
+      "source_policy_status": "NO_EXCLUDED_DEPENDENCY_FOUND_IN_INSPECTED_CORE_CODE_FULL_LINEAGE_NOT_CERTIFIED",
+      "validation_evidence_class": "EXPOSED_HISTORICAL_RECONSTRUCTION",
+      "validation_scores_are_original_issued_claim": false
+    }
+  ],
+  "populations": [
+    {
+      "postseason_games": 84,
+      "regular_games": 1230,
+      "role": "validation",
+      "season": "2024-25"
+    },
+    {
+      "postseason_games": 85,
+      "regular_games": 1230,
+      "role": "validation",
+      "season": "2025-26"
+    },
+    {
+      "postseason_completed_games": 0,
+      "regular_completed_games": 197,
+      "regular_population_sha256": "c5fd15cfe89aaa582809ca4392696356b4e955b436ad155c470d231dda1d17f0",
+      "role": "exposed_test",
+      "season": "2026-27"
+    }
+  ],
+  "prepared_at_utc": "2026-11-16T21:38:23.332152+00:00",
+  "public_privacy_policy": {
+    "candidate_game_prediction_grids_published": false,
+    "feature_transforms_published": false,
+    "opaque_candidate_aliases": true,
+    "ordered_feature_hashes_published": false,
+    "private_calibration_parameters_published": false,
+    "private_recipe_identifiers_published": false
+  },
+  "publication_status": "PUBLIC_AGGREGATE_REVIEW",
+  "recovered_original_state_qualification": {
+    "actual_original_fitting_date": "2026-11-07",
+    "complete_rows": 591,
+    "completed_scopes": 3,
+    "new_calibration_fits": 0,
+    "new_estimator_fits": 0,
+    "new_inference_rows": 372,
+    "new_original_issues": 0,
+    "original_calibration_overlap_hours": 22.5,
+    "original_models_modified": 0,
+    "parity_original_rows": 390,
+    "parity_status": "PASS_AT_IMMUTABLE_ORIGINAL_TOLERANCES",
+    "reused_original_rows": 219,
+    "source_receipt_sha256": "5e04487eb9cabc74675f8d123d8dd1043a5c32e2b47f166ea659d07c8a89c405",
+    "strict_chronological_refit_qualification": false,
+    "verified_at_utc": "2026-11-16T21:25:45.292716+00:00"
+  },
+  "release_state": {
+    "b090_canonical_finalization": "PENDING_AT_LIVE_COORDINATOR_2026_11_16_2211Z",
+    "original_saved_state_extension_independently_verified": true,
+    "reviewed_scientific_supplement": "B090",
+    "science_supplement_does_not_claim_a_sealed_owner_return": true,
+    "verified_durable_owner_predecessor": "B089"
+  },
+  "review_update_at_utc": "2026-11-16T22:11:00+00:00",
+  "roles": [
+    {
+      "eligible_candidates": 317,
+      "exact_point_score_co_leaders": 1,
+      "horizon_minutes": 60,
+      "interval_includes_zero": true,
+      "leader_model_ids": [
+        "NBA-C006"
+      ],
+      "metric": "brier",
+      "objective": "winner",
+      "paired_95pct_improvement_interval": [
+        -0.0016024894082059947,
+        0.001722309428479827
+      ],
+      "phase": "regular",
+      "promotion": false,
+      "role_id": "regular_winner_t60_brier",
+      "test_used_for_selection": false
+    },
+    {
+      "eligible_candidates": 317,
+      "exact_point_score_co_leaders": 1,
+      "horizon_minutes": 60,
+      "interval_includes_zero": true,
+      "leader_model_ids": [
+        "NBA-C006"
+      ],
+      "metric": "log_loss",
+      "objective": "winner",
+      "paired_95pct_improvement_interval": [
+        -0.0028418186826406925,
+        0.005074276804116546
+      ],
+      "phase": "regular",
+      "promotion": false,
+      "role_id": "regular_winner_t60_log_loss",
+      "test_used_for_selection": false
+    },
+    {
+      "eligible_candidates": 317,
+      "exact_point_score_co_leaders": 3,
+      "horizon_minutes": 60,
+      "interval_includes_zero": true,
+      "leader_model_ids": [
+        "NBA-C017",
+        "NBA-C036",
+        "NBA-C038"
+      ],
+      "metric": "accuracy",
+      "objective": "winner",
+      "paired_95pct_improvement_interval": [
+        -0.005569314830958611,
+        0.005678136948209864
+      ],
+      "phase": "regular",
+      "promotion": false,
+      "role_id": "regular_winner_t60_accuracy",
+      "test_used_for_selection": false
+    },
+    {
+      "eligible_candidates": 317,
+      "exact_point_score_co_leaders": 1,
+      "horizon_minutes": 120,
+      "interval_includes_zero": true,
+      "leader_model_ids": [
+        "NBA-C027"
+      ],
+      "metric": "brier",
+      "objective": "winner",
+      "paired_95pct_improvement_interval": [
+        -0.0017014259804051268,
+        0.001741910041314909
+      ],
+      "phase": "regular",
+      "promotion": false,
+      "role_id": "regular_winner_t120_brier",
+      "test_used_for_selection": false
+    },
+    {
+      "eligible_candidates": 317,
+      "exact_point_score_co_leaders": 1,
+      "horizon_minutes": 120,
+      "interval_includes_zero": true,
+      "leader_model_ids": [
+        "NBA-C031"
+      ],
+      "metric": "log_loss",
+      "objective": "winner",
+      "paired_95pct_improvement_interval": [
+        -0.003109785028041198,
+        0.005198605614718713
+      ],
+      "phase": "regular",
+      "promotion": false,
+      "role_id": "regular_winner_t120_log_loss",
+      "test_used_for_selection": false
+    },
+    {
+      "eligible_candidates": 317,
+      "exact_point_score_co_leaders": 1,
+      "horizon_minutes": 120,
+      "interval_includes_zero": true,
+      "leader_model_ids": [
+        "NBA-C029"
+      ],
+      "metric": "accuracy",
+      "objective": "winner",
+      "paired_95pct_improvement_interval": [
+        -0.010651570510555134,
+        0.011368365538647849
+      ],
+      "phase": "regular",
+      "promotion": false,
+      "role_id": "regular_winner_t120_accuracy",
+      "test_used_for_selection": false
+    },
+    {
+      "eligible_candidates": 115,
+      "exact_point_score_co_leaders": 1,
+      "horizon_minutes": 60,
+      "interval_includes_zero": true,
+      "leader_model_ids": [
+        "NBA-C021"
+      ],
+      "metric": "mae",
+      "objective": "margin",
+      "paired_95pct_improvement_interval": [
+        -0.018201707700915826,
+        0.05102992323912186
+      ],
+      "phase": "regular",
+      "promotion": false,
+      "role_id": "regular_margin_t60_mae",
+      "test_used_for_selection": false
+    },
+    {
+      "eligible_candidates": 115,
+      "exact_point_score_co_leaders": 1,
+      "horizon_minutes": 60,
+      "interval_includes_zero": true,
+      "leader_model_ids": [
+        "NBA-C021"
+      ],
+      "metric": "rmse",
+      "objective": "margin",
+      "paired_95pct_improvement_interval": [
+        -0.022217160684732385,
+        0.04848318412573631
+      ],
+      "phase": "regular",
+      "promotion": false,
+      "role_id": "regular_margin_t60_rmse",
+      "test_used_for_selection": false
+    },
+    {
+      "eligible_candidates": 115,
+      "exact_point_score_co_leaders": 1,
+      "horizon_minutes": 120,
+      "interval_includes_zero": true,
+      "leader_model_ids": [
+        "NBA-C010"
+      ],
+      "metric": "mae",
+      "objective": "margin",
+      "paired_95pct_improvement_interval": [
+        -0.026851708393526685,
+        0.05902070641427809
+      ],
+      "phase": "regular",
+      "promotion": false,
+      "role_id": "regular_margin_t120_mae",
+      "test_used_for_selection": false
+    },
+    {
+      "eligible_candidates": 115,
+      "exact_point_score_co_leaders": 1,
+      "horizon_minutes": 120,
+      "interval_includes_zero": true,
+      "leader_model_ids": [
+        "NBA-C010"
+      ],
+      "metric": "rmse",
+      "objective": "margin",
+      "paired_95pct_improvement_interval": [
+        -0.03362017738372232,
+        0.06402427390522858
+      ],
+      "phase": "regular",
+      "promotion": false,
+      "role_id": "regular_margin_t120_rmse",
+      "test_used_for_selection": false
+    },
+    {
+      "eligible_candidates": 115,
+      "exact_point_score_co_leaders": 1,
+      "horizon_minutes": 60,
+      "interval_includes_zero": true,
+      "leader_model_ids": [
+        "NBA-C034"
+      ],
+      "metric": "mae",
+      "objective": "total",
+      "paired_95pct_improvement_interval": [
+        -0.006678576791653734,
+        0.009738933608200507
+      ],
+      "phase": "regular",
+      "promotion": false,
+      "role_id": "regular_total_t60_mae",
+      "test_used_for_selection": false
+    },
+    {
+      "eligible_candidates": 115,
+      "exact_point_score_co_leaders": 1,
+      "horizon_minutes": 60,
+      "interval_includes_zero": true,
+      "leader_model_ids": [
+        "NBA-C001"
+      ],
+      "metric": "rmse",
+      "objective": "total",
+      "paired_95pct_improvement_interval": [
+        -0.004858527650919519,
+        0.01020053360502358
+      ],
+      "phase": "regular",
+      "promotion": false,
+      "role_id": "regular_total_t60_rmse",
+      "test_used_for_selection": false
+    },
+    {
+      "eligible_candidates": 115,
+      "exact_point_score_co_leaders": 1,
+      "horizon_minutes": 120,
+      "interval_includes_zero": true,
+      "leader_model_ids": [
+        "NBA-C018"
+      ],
+      "metric": "mae",
+      "objective": "total",
+      "paired_95pct_improvement_interval": [
+        -0.011644388355894585,
+        0.02562810870955961
+      ],
+      "phase": "regular",
+      "promotion": false,
+      "role_id": "regular_total_t120_mae",
+      "test_used_for_selection": false
+    },
+    {
+      "eligible_candidates": 115,
+      "exact_point_score_co_leaders": 1,
+      "horizon_minutes": 120,
+      "interval_includes_zero": true,
+      "leader_model_ids": [
+        "NBA-C022"
+      ],
+      "metric": "rmse",
+      "objective": "total",
+      "paired_95pct_improvement_interval": [
+        -0.06939799427067612,
+        0.0844473153456601
+      ],
+      "phase": "regular",
+      "promotion": false,
+      "role_id": "regular_total_t120_rmse",
+      "test_used_for_selection": false
+    },
+    {
+      "eligible_candidates": 314,
+      "exact_point_score_co_leaders": 1,
+      "horizon_minutes": 60,
+      "interval_includes_zero": true,
+      "leader_model_ids": [
+        "NBA-C005"
+      ],
+      "metric": "brier",
+      "objective": "winner",
+      "paired_95pct_improvement_interval": [
+        -0.020340239532407548,
+        0.02717862298343301
+      ],
+      "phase": "postseason",
+      "promotion": false,
+      "role_id": "postseason_winner_t60_brier",
+      "test_used_for_selection": false
+    },
+    {
+      "eligible_candidates": 314,
+      "exact_point_score_co_leaders": 1,
+      "horizon_minutes": 60,
+      "interval_includes_zero": true,
+      "leader_model_ids": [
+        "NBA-C005"
+      ],
+      "metric": "log_loss",
+      "objective": "winner",
+      "paired_95pct_improvement_interval": [
+        -0.02829087968313551,
+        0.036101924799708064
+      ],
+      "phase": "postseason",
+      "promotion": false,
+      "role_id": "postseason_winner_t60_log_loss",
+      "test_used_for_selection": false
+    },
+    {
+      "eligible_candidates": 314,
+      "exact_point_score_co_leaders": 1,
+      "horizon_minutes": 60,
+      "interval_includes_zero": true,
+      "leader_model_ids": [
+        "NBA-C040"
+      ],
+      "metric": "accuracy",
+      "objective": "winner",
+      "paired_95pct_improvement_interval": [
+        -0.004387922932330839,
+        0.05000628140703524
+      ],
+      "phase": "postseason",
+      "promotion": false,
+      "role_id": "postseason_winner_t60_accuracy",
+      "test_used_for_selection": false
+    },
+    {
+      "eligible_candidates": 314,
+      "exact_point_score_co_leaders": 1,
+      "horizon_minutes": 120,
+      "interval_includes_zero": true,
+      "leader_model_ids": [
+        "NBA-C044"
+      ],
+      "metric": "brier",
+      "objective": "winner",
+      "paired_95pct_improvement_interval": [
+        -0.020261058827131573,
+        0.02689871863805574
+      ],
+      "phase": "postseason",
+      "promotion": false,
+      "role_id": "postseason_winner_t120_brier",
+      "test_used_for_selection": false
+    },
+    {
+      "eligible_candidates": 314,
+      "exact_point_score_co_leaders": 1,
+      "horizon_minutes": 120,
+      "interval_includes_zero": true,
+      "leader_model_ids": [
+        "NBA-C044"
+      ],
+      "metric": "log_loss",
+      "objective": "winner",
+      "paired_95pct_improvement_interval": [
+        -0.029491042396262514,
+        0.03460442663178227
+      ],
+      "phase": "postseason",
+      "promotion": false,
+      "role_id": "postseason_winner_t120_log_loss",
+      "test_used_for_selection": false
+    },
+    {
+      "eligible_candidates": 314,
+      "exact_point_score_co_leaders": 1,
+      "horizon_minutes": 120,
+      "interval_includes_zero": true,
+      "leader_model_ids": [
+        "NBA-C042"
+      ],
+      "metric": "accuracy",
+      "objective": "winner",
+      "paired_95pct_improvement_interval": [
+        -0.012049407306645976,
+        0.05232558139534882
+      ],
+      "phase": "postseason",
+      "promotion": false,
+      "role_id": "postseason_winner_t120_accuracy",
+      "test_used_for_selection": false
+    },
+    {
+      "eligible_candidates": 112,
+      "exact_point_score_co_leaders": 1,
+      "horizon_minutes": 60,
+      "interval_includes_zero": true,
+      "leader_model_ids": [
+        "NBA-C014"
+      ],
+      "metric": "mae",
+      "objective": "margin",
+      "paired_95pct_improvement_interval": [
+        -0.3891551829287523,
+        0.4466122177179843
+      ],
+      "phase": "postseason",
+      "promotion": false,
+      "role_id": "postseason_margin_t60_mae",
+      "test_used_for_selection": false
+    },
+    {
+      "eligible_candidates": 112,
+      "exact_point_score_co_leaders": 1,
+      "horizon_minutes": 60,
+      "interval_includes_zero": true,
+      "leader_model_ids": [
+        "NBA-C002"
+      ],
+      "metric": "rmse",
+      "objective": "margin",
+      "paired_95pct_improvement_interval": [
+        -0.365542621554725,
+        0.545002694525783
+      ],
+      "phase": "postseason",
+      "promotion": false,
+      "role_id": "postseason_margin_t60_rmse",
+      "test_used_for_selection": false
+    },
+    {
+      "eligible_candidates": 112,
+      "exact_point_score_co_leaders": 1,
+      "horizon_minutes": 120,
+      "interval_includes_zero": true,
+      "leader_model_ids": [
+        "NBA-C028"
+      ],
+      "metric": "mae",
+      "objective": "margin",
+      "paired_95pct_improvement_interval": [
+        -0.3889033225625981,
+        0.4310101903389139
+      ],
+      "phase": "postseason",
+      "promotion": false,
+      "role_id": "postseason_margin_t120_mae",
+      "test_used_for_selection": false
+    },
+    {
+      "eligible_candidates": 112,
+      "exact_point_score_co_leaders": 1,
+      "horizon_minutes": 120,
+      "interval_includes_zero": true,
+      "leader_model_ids": [
+        "NBA-C037"
+      ],
+      "metric": "rmse",
+      "objective": "margin",
+      "paired_95pct_improvement_interval": [
+        -0.3723657433168282,
+        0.5060562723916299
+      ],
+      "phase": "postseason",
+      "promotion": false,
+      "role_id": "postseason_margin_t120_rmse",
+      "test_used_for_selection": false
+    },
+    {
+      "eligible_candidates": 112,
+      "exact_point_score_co_leaders": 1,
+      "horizon_minutes": 60,
+      "interval_includes_zero": true,
+      "leader_model_ids": [
+        "NBA-C008"
+      ],
+      "metric": "mae",
+      "objective": "total",
+      "paired_95pct_improvement_interval": [
+        -0.41663109861433645,
+        0.6023057590256835
+      ],
+      "phase": "postseason",
+      "promotion": false,
+      "role_id": "postseason_total_t60_mae",
+      "test_used_for_selection": false
+    },
+    {
+      "eligible_candidates": 112,
+      "exact_point_score_co_leaders": 1,
+      "horizon_minutes": 60,
+      "interval_includes_zero": true,
+      "leader_model_ids": [
+        "NBA-C041"
+      ],
+      "metric": "rmse",
+      "objective": "total",
+      "paired_95pct_improvement_interval": [
+        -0.8524031100456649,
+        0.6728589820634794
+      ],
+      "phase": "postseason",
+      "promotion": false,
+      "role_id": "postseason_total_t60_rmse",
+      "test_used_for_selection": false
+    },
+    {
+      "eligible_candidates": 112,
+      "exact_point_score_co_leaders": 1,
+      "horizon_minutes": 120,
+      "interval_includes_zero": true,
+      "leader_model_ids": [
+        "NBA-C007"
+      ],
+      "metric": "mae",
+      "objective": "total",
+      "paired_95pct_improvement_interval": [
+        -0.4238592520754186,
+        0.6071274161809137
+      ],
+      "phase": "postseason",
+      "promotion": false,
+      "role_id": "postseason_total_t120_mae",
+      "test_used_for_selection": false
+    },
+    {
+      "eligible_candidates": 112,
+      "exact_point_score_co_leaders": 1,
+      "horizon_minutes": 120,
+      "interval_includes_zero": true,
+      "leader_model_ids": [
+        "NBA-C024"
+      ],
+      "metric": "rmse",
+      "objective": "total",
+      "paired_95pct_improvement_interval": [
+        -0.8841291891345137,
+        0.6856342048681063
+      ],
+      "phase": "postseason",
+      "promotion": false,
+      "role_id": "postseason_total_t120_rmse",
+      "test_used_for_selection": false
+    }
+  ],
+  "schema": "sports_edge_lab.nba.b091.champion_review_public.v1",
+  "scientific_cutoff_utc": "2026-11-16T18:57:35.271475+00:00",
+  "scope": "B091 independent review of frozen B090 scientific evidence; no promotion or new model fit by this review",
+  "season_policy": {
+    "current_outcomes_may_not_tune_or_select_recipes": true,
+    "incomplete_cells_receive_no_full_population_score": true,
+    "selection_status": "VALIDATION_POINT_LEADERS_ONLY_PENDING_LINEAGE_FIDELITY_AND_COMPLETE_TEST_REVIEW",
+    "test_already_exposed": true,
+    "test_season": "2026-27",
+    "test_selection_weight": 0,
+    "validation_seasons": [
+      "2024-25",
+      "2025-26"
+    ]
+  },
+  "source_pins": [
+    {
+      "bytes": 436247,
+      "id": "S1",
+      "label": "B090 scientific decision summary",
+      "sha256": "d225f3f5db761813dd6c96f22fe86008a120716283b69a4d157a872b77740144"
+    },
+    {
+      "bytes": 3074492,
+      "id": "S2",
+      "label": "B090 complete candidate ledger",
+      "sha256": "1944a1a8a873973f3a3ca40a1c2dd12e980cd88c65c794e68f32791cc834cb38"
+    },
+    {
+      "bytes": 117300,
+      "id": "S3",
+      "label": "B090 exact feature catalog",
+      "sha256": "fb3aeca5b90939b7408344d9e3b6b4b03cfa0230099ab9314a49be3cca36c428"
+    },
+    {
+      "bytes": 165654,
+      "id": "S4",
+      "label": "Independent raw-array metric audit",
+      "sha256": "1efd657d7f62c3078dba85c70dc47e12331f6fd1ecefb1f4a73e099bcd71ce69"
+    },
+    {
+      "bytes": 50456,
+      "id": "S5",
+      "label": "Validation paired uncertainty",
+      "sha256": "f09cb02f6b0a2372c6d9144dab5fe125c67865a38460fbdc90032e6e6ad8e3be"
+    },
+    {
+      "bytes": 87807,
+      "id": "S6",
+      "label": "Current same-game market uncertainty",
+      "sha256": "b52d9f61eecf29881f7017091bf1487ab79a9dd4d1495179727e067873c8b28c"
+    },
+    {
+      "bytes": 284825031,
+      "id": "S7",
+      "label": "Preserved executable containing original source producers",
+      "sha256": "1a64efbb3ddf43dd105c8ecc7c9d623c10dcf22149ba5d9b82083e634d84963f"
+    },
+    {
+      "bytes": 46685,
+      "id": "S8",
+      "label": "Basketball feature producer",
+      "sha256": "1339a8bf50bbdd18a0119f65fd663a0becba95a06eb71b179f0d9fa801856171"
+    },
+    {
+      "bytes": 797057,
+      "id": "S9",
+      "label": "Final fixed replay arrays",
+      "sha256": "ccbace1cc9158fa3c567a5ce889a0cb091822cdc33a543e261bcc2b2a0d4829e"
+    },
+    {
+      "bytes": 711935,
+      "id": "S10",
+      "label": "Final later-fitted reconstruction arrays",
+      "sha256": "bb067720be5fb58e63d2e29ed8bb8460001070a5c0398bfe2c8cbc4ab427bb5c"
+    },
+    {
+      "bytes": 873225,
+      "id": "S11",
+      "label": "Additional comparator arrays",
+      "sha256": "e981d98b54c760710b31c682e26c62d13868693635540310db83ff3370707a4c"
+    },
+    {
+      "bytes": 69399,
+      "id": "S12",
+      "label": "B090 detailed owner evidence report",
+      "sha256": "5550b03e5dba1622ffee6681e4dcdb85b4df12142caf28644393a2e7accaf2f6"
+    },
+    {
+      "bytes": 8843,
+      "name": "B090_B050_ORIGINAL_SAVED_EXECUTION_RESULT.json",
+      "sha256": "3d1b0fa8a271bb510c8cf8b450131d7dbcc7a5ffcea50bbb6831b1decf754654"
+    },
+    {
+      "bytes": 8621,
+      "name": "B090_EXCHANGE_CATALOG_EXECUTION_RESULT.json",
+      "sha256": "6e8ae06d5044682464898df78fc2ce7dc5debe42e62a8478804d034653d24d17"
+    },
+    {
+      "bytes": 6484,
+      "name": "B090_B050_ORIGINAL_130_ROW_PARITY.json",
+      "sha256": "50124a5c8e6fc53174fe1a3cb9a058c373e1ecff593cf5364d13a41f4cd98b5a"
+    },
+    {
+      "bytes": 22475,
+      "name": "B090_B050_ORIGINAL_STATE_ADMISSION.json",
+      "sha256": "c5118bb7ebf2881c394e0f6b6d42d7506cf49a76db9d2a911c8ec9d1dfe0c386"
+    },
+    {
+      "bytes": 162978,
+      "name": "B090_ORIGINAL_B050_THREE_LEADER_PREDICTIONS.json.gz",
+      "sha256": "5e04487eb9cabc74675f8d123d8dd1043a5c32e2b47f166ea659d07c8a89c405"
+    },
+    {
+      "bytes": 4464,
+      "name": "B090_B050_THREE_LEADER_SCIENTIFIC_RESULT.json",
+      "sha256": "f4023a59e4ad2869652f2955953e34844969a4558185878e911c9cc30088119e"
+    }
+  ],
+  "source_policy": {
+    "all_relevant_odds_book_coverage_verified": false,
+    "b051_legacy_status": "EXCLUDED_FROM_NEW_POLICY_MODELING_AND_NOMINATION",
+    "b051_reason": "Polymarket winner-quote availability selected the common modeling population, including nominal basketball-only and injury-only arms.",
+    "comparison_only_providers": [
+      "DraftKings",
+      "Kalshi",
+      "Polymarket"
+    ],
+    "core_b050_b064_code_audit": "No excluded-source feature or quote-availability population filter found in the inspected canonical basketball baseline path; full original input-byte and producer lineage remains unproved.",
+    "existing_b069_b077_market_engine_compliant": false,
+    "forbidden_modeling_uses": [
+      "direct_inputs",
+      "derived_inputs",
+      "training_population_selection",
+      "calibration",
+      "feature_or_model_selection"
+    ],
+    "legacy_evidence_preserved": true,
+    "other_eligible_odds_books": "Use only after authenticated rights, schema, coverage, availability and revision-clock validation.",
+    "source_changes_require_separate_challenger_identity": true
+  },
+  "strict_current_full_cells": 0,
+  "title": "NBA Model Review and Market Comparisons",
+  "uncertainty": {
+    "current_inconclusive_interval_count": 29,
+    "current_market_better_point_estimate_count": 105,
+    "current_market_point_comparisons": 105,
+    "current_model_better_interval_count": 0,
+    "current_model_worse_interval_count": 76,
+    "current_week_blocks": 4,
+    "interpretation": "Point-score front-runners are not established unique winners.",
+    "multiplicity_adjusted": false,
+    "validation_intervals_including_zero": 28,
+    "validation_method": "Paired week-block bootstrap, 4000 resamples",
+    "validation_role_count": 28
+  }
+}
