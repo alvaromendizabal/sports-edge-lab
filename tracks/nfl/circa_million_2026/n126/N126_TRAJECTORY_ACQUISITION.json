@@ -1,0 +1,29 @@
+{
+  "scope_matrix": 1965,
+  "unique_selected_fixed_rows": 194741,
+  "unique_selected_late_forward_rows": 510,
+  "selected_fixed_original_body_hashes": 3554,
+  "selected_by_horizon": {
+    "120": 49344,
+    "360": 48605,
+    "1440": 48365,
+    "4320": 48031,
+    "0": 396
+  },
+  "selected_source_families": {
+    "oddsapi_n125_historical": 56022,
+    "oddsapi_s3_historical": 127110,
+    "oddsapi_n126_historical": 875,
+    "n019_verified_source_legs": 8336,
+    "n022_verified_selected_legs": 1942,
+    "oddsapi_n126_current": 456
+  },
+  "prior_licensed_requests_reused_in_planner": 3137,
+  "gap_candidate_cutoffs": 58,
+  "gap_fully_proven_existing_cutoffs": 34,
+  "source_acquisition_requests": 33,
+  "source_acquisition_credits": 778,
+  "source_current_stage": "NFL pregame predictor and separately quarantined current market snapshots; downstream historical DraftKings repair is reported separately",
+  "core_missing_data": "Insufficient endpoint/paired source stays missing. Numeric features require at least three named books. Early captures remain at their original observation times.",
+  "no_original_market_orderfill_or_future_grade": true
+}
