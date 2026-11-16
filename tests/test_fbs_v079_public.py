@@ -155,6 +155,12 @@ class PublicV079(unittest.TestCase):
         self.assertTrue(current["fit_calls_do_not_establish_novel_models"])
         self.assertEqual(current["avoidable_duplicate_base_fit_calls"], current["base_fit_calls"])
         self.assertIn("were avoidable", current["duplicate_fit_disclosure"])
+        milestone = current["secondary_feature_milestone"]
+        self.assertEqual(milestone["team_context_rows"], 2 * milestone["pending_games"])
+        self.assertEqual(milestone["eligible_future_team_rows"], 2 * len(future))
+        self.assertFalse(milestone["feature_ablation_performed"])
+        self.assertFalse(milestone["metric_improvement_claimed"])
+        self.assertIn("V078 predecessor", self.data["prior_execution"]["summary"])
         self.assertFalse(current["promotion"])
         dt = lambda value: datetime.fromisoformat(value.replace("Z", "+00:00"))
         seen = 0

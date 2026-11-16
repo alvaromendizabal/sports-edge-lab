@@ -11,13 +11,13 @@
   "files": [
     {
       "path": "README.md",
-      "bytes": 2604,
-      "sha256": "dbcc341f6be1821507a856700801223e859f4215d110fdb7256fa97f53a7d244"
+      "bytes": 3197,
+      "sha256": "e22b8d1d5500020629bc03000217db52b127336c15cf7d7b5beba8a135378f3c"
     },
     {
       "path": "app.js",
-      "bytes": 41455,
-      "sha256": "548a79314d47bb5c26937988a558e051764a675037834f21ac87d668f87e0b2b"
+      "bytes": 41522,
+      "sha256": "79826bb5e768f9e86860ffbca413059902c6f62a5dbf833dcef4c3da59152c26"
     },
     {
       "path": "data/games.json.gz",
@@ -26,8 +26,8 @@
     },
     {
       "path": "data/review.json",
-      "bytes": 906890,
-      "sha256": "a40115299d5823ae207193256599cdedca084770bf3fd5668d55c59faf78cc0e"
+      "bytes": 907869,
+      "sha256": "ef4f44dbcf062d2d1d6edfbcdea8555e8003d9cbaba6ea3ad18f90150f24b13a"
     },
     {
       "path": "index.html",
@@ -46,7 +46,7 @@
     "scorecard_denominators": true
   },
   "browser_validation": "PENDING_EXACT_PUBLICATION_HEAD_AND_HOSTED_OWNER_BROWSER",
-  "build_input_sha256": "d97a7bf6ea60c5c529d831c1989d112d5642a7d3cd8b3ecd5788c143a4141685",
+  "build_input_sha256": "af5dbdc62571ce376cb0297108d6fcd9103b917e1c08ba4c79c9bd05e8f35ec6",
   "atomic_commit": true,
   "reused_existing_build": false,
   "publication_transform": {
@@ -99,6 +99,24 @@
       "data/review.json"
     ],
     "owner_artifacts_unchanged": true,
+    "promotion": false
+  },
+  "publication_live_qa_transform": {
+    "schema": "fbs.v080.publication-live-qa.v1",
+    "source_public_receipt_sha256": "2acd99293f254ba1c5989e6333b1074f72a39e3d9ca137a8da7955f943c6ea24",
+    "actual_secondary_milestone_sha256": "43fecde0261d586fcac51ef998985c821abf6d1131a8159d5d08209055ecc8f2",
+    "team_context_rows": 272,
+    "predecessor_labels_explicit": true,
+    "unchanged_model_and_market_metrics": true,
+    "unchanged_game_values_and_clocks": true,
+    "changed_payload_paths": [
+      "README.md",
+      "app.js",
+      "data/review.json"
+    ],
+    "owner_artifacts_unchanged": true,
+    "new_fits": 0,
+    "new_forecasts": 0,
     "promotion": false
   }
 }

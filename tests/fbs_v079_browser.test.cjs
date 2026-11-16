@@ -81,6 +81,9 @@ let browser,checks=0;const check=(value,message)=>{assert.ok(value,message);chec
     await page.click('[data-tab="execution"]');check((await page.locator('#new-execution').innerText()).includes('None'),'No promotion claimed');
     check((await page.locator('#current-execution').innerText()).includes(data.current_execution.verified_current_total_issue_records.toLocaleString('en-US')),'Current V080 execution is separate from predecessor accounting');
     check((await page.locator('#current-execution-note').innerText()).includes('do not establish novel models'),'Actual fit calls are not presented as novel learning');
+    check((await page.locator('#feature-progress').innerText()).includes(data.current_execution.secondary_feature_milestone.team_context_rows+' team rows'),'Secondary progress uses actual V080 counts');
+    check((await page.locator('#prior-execution-note').innerText()).startsWith('The V078 predecessor'),'Predecessor wording cannot imply current execution');
+    check((await page.locator('#cpu-detail').innerText()).startsWith('Preserved V078 capacity measurement'),'Earlier CPU measurement remains explicitly dated');
     await page.focus('[data-tab="overview"]');await page.keyboard.press('ArrowRight');check(await page.locator('#panel-models').isVisible(),'Keyboard tabs work');
     await page.close();
   }
