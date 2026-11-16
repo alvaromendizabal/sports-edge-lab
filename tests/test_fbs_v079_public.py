@@ -21,6 +21,7 @@ class PublicV079(unittest.TestCase):
         cls.data = json.loads((SITE / "data/review.json").read_text())
         cls.games = json.loads(gzip.decompress((SITE / "data/games.json.gz").read_bytes()))["games"]
         cls.full = cls.data["full_population"]
+        cls.nominees = json.loads((SITE / "data/validation-nominees.json").read_text())
 
     def test_validation_test_contract_never_auto_promotes(self):
         c = self.data["population_contract"]
@@ -291,6 +292,53 @@ class PublicV079(unittest.TestCase):
             self.assertFalse(row["used_for_nomination"])
         self.assertIn("all 11", self.data["current_execution"]["same_provider_cohort_finding"])
 
+    def test_selected_validation_roles_use_only_prior_seasons_and_keep_current_clocks(self):
+        p = self.nominees
+        self.assertEqual(p["selection_seasons"], [2024, 2025])
+        self.assertFalse(p["test_outcomes_used_for_selection"])
+        self.assertTrue(p["protocol_previously_exposed_to_test"])
+        self.assertIsNone(p["selection_time"])
+        self.assertIn("not retained", p["selection_time_basis"])
+        expected = {"winner_probability": "W08", "winner_accuracy": "W02", "margin_mae": "M09", "margin_rmse": "M09", "total_mae": "T09", "total_rmse": "T09"}
+        self.assertEqual({key: role["model_alias"] for key, role in p["roles"].items()}, expected)
+        games = {f'{g["season"]}/{g["id"]}': g for g in self.games}
+        timed = {key for key, g in games.items() if g["season"] == 2026 and g["status"] == "pending"}
+        self.assertEqual(set(p["forecasts"]), timed)
+        self.assertEqual(len(timed), 86)
+        dt = lambda value: datetime.fromisoformat(value.replace("Z", "+00:00"))
+        for key, outputs in p["forecasts"].items():
+            self.assertEqual(set(outputs), {"W08", "W02", "M09", "T09"})
+            for alias, cell in outputs.items():
+                self.assertEqual(cell["model_alias"], alias)
+                self.assertFalse(cell["evaluation_state_matches"])
+                self.assertIn("recipe and chronological protocol", cell["evaluation_state_note"])
+                self.assertFalse(cell["promotion"])
+                self.assertEqual(cell["timing_label"], "FUTURE_ISSUED")
+                self.assertIsNone(cell["selection_time"])
+                self.assertEqual(cell["nomination_report_completed_at"], p["nomination_report_completed_at"])
+                clocks = [dt(cell[name]) for name in ("information_cutoff", "fit_completed_at", "prepared_at", "issue_time", "requested_horizon_cutoff")]
+                self.assertEqual(clocks, sorted(clocks))
+                self.assertLess(clocks[-2], clocks[-1])
+                self.assertLess(clocks[-1], dt(games[key]["kickoff"]))
+                self.assertEqual(cell["value"], round(cell["value"], 4 if cell["target"] == "winner" else 1))
+        self.assertEqual(sum(len(v) for v in p["forecasts"].values()), 344)
+        self.assertEqual(p["objective_display_cell_count"], 516)
+        self.assertEqual((p["new_model_fits"], p["new_forecast_issues"], p["new_source_calls"]), (0, 0, 0))
+        self.assertFalse(p["promotion"])
+
+    def test_unmeasured_exchange_references_preserve_zero_qualified_and_legacy_holdings(self):
+        for scope in ("current", "historical"):
+            measurements = self.nominees["reference_measurements"][scope]
+            self.assertEqual(set(measurements), {"kalshi", "polymarket_global", "polymarket_us"})
+            for provider, metadata in measurements.items():
+                self.assertEqual(metadata["state"], "not_measured")
+                self.assertIn("not measured", metadata["reason"])
+                self.assertIn("Earlier archived references remain", metadata["reason"])
+                cells = [c for g in self.games for c in g.get(scope + "_provider_coverage", {}).get(provider, {}).values()]
+                self.assertTrue(cells)
+                self.assertTrue(all(not c["predictive_baseline_qualified"] for c in cells))
+        self.assertTrue(any((g["providers"]["kalshi"]["winner"] or {}).get("observed_reference") for g in self.games))
+
     def test_public_scope_and_non_owner_preservation(self):
         forbidden = re.compile(r's3://|arn:aws:|/home/sagemaker-user|/workspace/|AKIA[0-9A-Z]{16}|BEGIN (?:RSA |EC )?PRIVATE KEY|"(?:original_model_id|model_id|fit_id|model_state_sha256|state_sha256|coefficients|feature_names|prediction_records)"')
         for path in SITE.rglob("*"):
@@ -302,3 +350,4 @@ class PublicV079(unittest.TestCase):
 
 if __name__ == "__main__":
     unittest.main(verbosity=2)
+
