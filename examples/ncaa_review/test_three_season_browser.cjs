@@ -3,8 +3,11 @@
 const assert = require('node:assert/strict'), fs = require('node:fs'), path = require('node:path'), http = require('node:http');
 module.exports = async function testThreeSeasonBrowser(browser) {
   const docs = path.resolve(__dirname, '../../docs/ncaa');
-  const unpack = require('node:child_process').spawnSync('python', [path.join(__dirname, 'public_status_transport.py'), 'unpack'], { encoding: 'utf8', timeout: 120000 });
-  assert.equal(unpack.status, 0, unpack.stdout + unpack.stderr);
+  const physical = require('node:child_process').spawnSync('python', ['-m', 'examples.ncaa_review.full_status_integrity_gate'], { cwd: path.resolve(__dirname, '../..'), encoding: 'utf8', timeout: 240000 });
+  assert.equal(physical.status, 0, physical.stdout + physical.stderr);
+  const physicalReceipt = JSON.parse(physical.stdout);
+  assert.equal(physicalReceipt.status, 'PASS');
+  console.log(JSON.stringify({ fullStatusIntegrity: physicalReceipt }));
   const data = JSON.parse(fs.readFileSync(path.join(docs, 'population/population_public.json')));
   const manifest = JSON.parse(fs.readFileSync(path.join(docs, 'population/status_manifest.json')));
   const allowed = new Set(['three_seasons.html', 'three_seasons.css', 'three_seasons.js', 'population/population_public.json', 'population/population_context.json', 'population/status_manifest.json', 'population/execution_public.json', ...manifest.parts.map(p => 'population/status/' + p.filename)]);
@@ -65,7 +68,7 @@ module.exports = async function testThreeSeasonBrowser(browser) {
           fs.mkdirSync(process.env.DASHBOARD_SCREENSHOTS, { recursive: true });
           await page.screenshot({ path: path.join(process.env.DASHBOARD_SCREENSHOTS, `ncaa-three-seasons-source-${width}.png`), fullPage: true });
         }
-        receipts.push({ version: 'three-season-population', width, source: true, allSixPopulations: true, allThreeTargets: true, rankSuppression: true, providerProducts: 4, explicitStatusIntegrity: true, filteredDownloadVerified: true, realChromium: true });
+        receipts.push({ version: 'three-season-population', width, source: true, allSixPopulations: true, allThreeTargets: true, rankSuppression: true, providerProducts: 4, explicitStatusIntegrity: true, fullPhysicalStatusIntegrity: true, filteredDownloadVerified: true, realChromium: true });
       } finally { await page.close(); }
     }
   } finally { await new Promise(resolve => server.close(resolve)); }

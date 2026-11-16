@@ -42,42 +42,14 @@ class ThreeSeasonPublicContract(unittest.TestCase):
                     self.assertIsNone(metric["metrics"])
         self.assertIs(self.data["common_subset_is_secondary_unranked"], True)
 
-    def test_complete_physical_status_projection(self):
+    def test_complete_status_manifest_projection(self):
         self.assertEqual(self.manifest["population_hash"], self.data["population_hash"])
         self.assertIs(self.manifest["complete"], True)
         expected = {p["filename"]: p for p in self.data["status_partition_manifest"]}
         self.assertEqual(len(expected), len(self.manifest["parts"]))
         self.assertEqual(expected, {p["filename"]: p for p in self.manifest["parts"]})
-        total = 0
-        for descriptor in self.manifest["parts"]:
-            filename = descriptor["filename"]
-            self.assertRegex(filename, r"^[A-Za-z0-9_-]+\.jsonl\.gz$")
-            body = (POP / "status" / filename).read_bytes()
-            self.assertEqual(len(body), descriptor["bytes"])
-            self.assertEqual(hashlib.sha256(body).hexdigest(), descriptor["sha256"])
-            logical = gzip.decompress(body)
-            self.assertEqual(len(logical), descriptor["logical_bytes"])
-            self.assertEqual(hashlib.sha256(logical).hexdigest(), descriptor["logical_sha256"])
-            self.assertLessEqual(len(logical), 2 << 20)
-            lines = logical.splitlines()
-            self.assertEqual(len(lines), descriptor["rows"])
-            self.assertLessEqual(len(lines), 4096)
-            self.assertEqual(descriptor["scope"], "EXPLICIT_CELLS_NO_SPARSE_DEFAULTS")
-            # Inspect actual decoded status bytes once. Encoded source-pack strings
-            # are transport bytes and are never mistaken for rendered content.
-            lowered = logical.lower()
-            for marker in PRIVATE_BYTE_MARKERS + [bytes([99, 105, 114, 99, 97])]:
-                if marker in lowered:
-                    self.fail(f"Private/public-scope marker in {filename}")
-            if b"akia" in lowered:
-                self.assertIsNone(re.search(rb"\bAKIA[A-Z0-9]{16}\b", logical))
-            for line in lines:
-                row = json.loads(line)
-                if set(row) != CELL_KEYS or row["league"] != descriptor["league"] or row["season_end_year"] != descriptor["season_end_year"] or row["target"] != descriptor["target"]:
-                    self.fail(f"Invalid explicit public status cell in {filename}")
-            total += len(lines)
-        self.assertEqual(total, self.manifest["rows"])
-        self.assertEqual(total, self.data["status_ledger_rows"])
+        self.assertEqual(sum(part["rows"] for part in self.manifest["parts"]), self.data["status_ledger_rows"])
+        self.assertEqual(self.manifest["rows"], self.data["status_ledger_rows"])
 
     def test_public_assets_have_no_private_source_material(self):
         forbidden_sport_label = "".join(map(chr, [99, 105, 114, 99, 97]))
