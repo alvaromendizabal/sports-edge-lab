@@ -52,5 +52,15 @@ assert(records.every(row=>row.kalshi_current_reference==='Not measured'));
 assert.equal(records[0].model_value,.7312);assert.equal(records[1].model_value,null);assert.equal(records[2].model_value,null);
 assert.equal(records[0].model_issue_time,'2026-11-16T03:09:18Z');
 assert(exported.rows.every(row=>row.length===exported.headers.length));
-console.log(JSON.stringify({status:'PASS',tests:32,scope:'Validation independence, missingness, RMSE pooling, source-separated coverage, selected-role target and issue eligibility, no current-fit backfill, unknown-versus-zero and export fidelity'}));
+const measuredSource={state:'CURRENT_SOURCE_PROJECTION_VERIFIED',source_projection_schema:'fbs.v081.current-provider-public-coverage.v1',evaluated_at:'2026-11-16T21:35:51Z',summary:[{provider:'kalshi',current_snapshot_references:1}]};
+const frozenProjection=JSON.stringify(projection);
+const measuredGame=structuredClone(issuedGame);measuredGame.current_provider_coverage.kalshi.winner.reference_present=true;
+const currentExport=comparisonExport([measuredGame],'nominees','winner','winner_probability',projection,measuredSource);
+const currentRecord=Object.fromEntries(currentExport.headers.map((name,i)=>[name,currentExport.rows[0][i]]));
+assert.equal(currentRecord.kalshi_current_reference,true,'A verified newer capture overrides older unmeasured current-reference metadata');
+assert.equal(currentRecord.kalshi_current_source_qualified,false,'A measured reference does not imply settlement qualification');
+assert.equal(currentRecord.model_issue_time,'2026-11-16T03:09:18Z','Current source refresh never changes forecast issue clocks');
+assert.equal(globalThis.FBS079.referenceMeasurement(projection,'current','kalshi',{...measuredSource,source_projection_schema:'fbs.v079.current-provider-public-coverage.v1'}).state,'not_measured','Older DK-only source schema cannot establish exchange measurement');
+assert.equal(JSON.stringify(projection),frozenProjection,'The frozen nominee evidence is not mutated by current measurement');
+console.log(JSON.stringify({status:'PASS',tests:37,scope:'Validation independence, missingness, RMSE pooling, source-separated coverage, selected-role target and issue eligibility, no current-fit backfill, newer measured capture versus frozen issue metadata and export fidelity'}));
 
