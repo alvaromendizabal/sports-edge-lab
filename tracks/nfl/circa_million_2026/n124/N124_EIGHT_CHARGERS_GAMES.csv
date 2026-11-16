@@ -1,0 +1,9 @@
+game_id,book,asked_cutoff_utc,source_snapshot_utc,source_kickoff,team_orientation,provider_event_present,matched_books,source_sha256
+2026_01_ARI_LAC,Kalshi,2026-09-13T18:25:00Z,2026-09-13T18:20:36Z,2026-09-13T20:25:00Z,Arizona Cardinals at Los Angeles Chargers,True,0,2f487bd7be219a68ed6acd17b1359da4bc9d712253bd355ad35e2f8e027dcfda
+2026_02_LV_LAC,Kalshi,2026-09-20T18:05:00Z,2026-09-20T18:00:36Z,2026-09-20T20:05:00Z,Las Vegas Raiders at Los Angeles Chargers,True,0,26d60d3a41c830902b66bb3bcced197ccd11b522266d199e0dd2a34917185010
+2026_03_LAC_BUF,Kalshi,2026-09-27T15:00:00Z,2026-09-27T14:55:36Z,2026-09-27T17:00:00Z,Los Angeles Chargers at Buffalo Bills,True,0,34e60c192e8c46c1d301e795f03b9e449e60b7413c440ef46deea61e19486cc3
+2026_04_LAC_SEA,Kalshi,2026-10-04T18:25:00Z,2026-10-04T18:20:36Z,2026-10-04T20:25:00Z,Los Angeles Chargers at Seattle Seahawks,True,0,3343dfa1ac432bd87687ea7e38b5a0ecec1b697b6d14ef35849c0663feb5fd46
+2026_05_DEN_LAC,Kalshi,2026-10-11T18:05:00Z,2026-10-11T18:00:36Z,2026-10-11T20:05:00Z,Denver Broncos at Los Angeles Chargers,True,0,c0e734fb8978b060ac60aa8bc02dc0d45be7078a0b3559234cfe3957eaf22fad
+2026_06_LAC_KC,Kalshi,2026-10-18T18:25:00Z,2026-10-18T18:20:36Z,2026-10-18T20:25:00Z,Los Angeles Chargers at Kansas City Chiefs,True,0,02c887d8aa201a8aecc8e690553f9310a590962b3346aff1b8af1322378c479f
+2026_08_LAC_LA,Kalshi,2026-11-01T19:05:00Z,2026-11-01T19:00:36Z,2026-11-01T21:05:00Z,Los Angeles Chargers at Los Angeles Rams,True,0,6f0ee73c01bfc2ca41e3c5e4f8b9363915e6743d351d616ba3cf35983fe47bf7
+2026_09_HOU_LAC,Kalshi,2026-11-08T19:05:00Z,2026-11-08T19:00:36Z,2026-11-08T21:05:00Z,Houston Texans at Los Angeles Chargers,True,0,785b64c528dd154008f59a92a87972e9328c7ae071ce92e3abe2dde5beb3244d

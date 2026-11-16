@@ -1,0 +1,13 @@
+primary,comparator,split,points_per_week_difference,lower_95,upper_95
+n124_market_residual,both_calibrated,validation,-0.14722222222222223,-0.5695138888888889,0.29999999999999993
+n124_market_residual,both_calibrated,closed_week_test,0.9444444444444444,-0.5,2.3333333333333335
+n124_market_residual,consensus,validation,-0.011111111111111106,-0.37777777777777777,0.3667361111111113
+n124_market_residual,consensus,closed_week_test,-0.2777777777777778,-1.2222222222222223,0.6666666666666666
+n124_market_residual,n110_reference_cold_opening,validation,0.08055555555555555,-0.175,0.3361805555555558
+n124_market_residual,n110_reference_cold_opening,closed_week_test,-0.05555555555555555,-0.4444444444444444,0.3333333333333333
+n124_market_residual,n124_anchor,validation,0.11666666666666664,-0.11666666666666664,0.35
+n124_market_residual,n124_anchor,closed_week_test,-0.2222222222222222,-0.6666666666666666,0.2222222222222222
+n124_market_residual,n124_direction,validation,0.0,0.0,0.0
+n124_market_residual,n124_direction,closed_week_test,0.0,0.0,0.0
+n124_market_residual,n124_reversal_control,validation,-0.1388888888888889,-0.8777777777777777,0.5222222222222221
+n124_market_residual,n124_reversal_control,closed_week_test,0.6666666666666666,-0.8888888888888888,2.2222222222222223
