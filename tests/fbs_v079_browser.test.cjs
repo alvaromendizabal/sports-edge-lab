@@ -8,6 +8,7 @@ const data=JSON.parse(fs.readFileSync(path.join(site,'data/review.json'))),games
 require(path.join(site,'app.js'));
 const logic=globalThis.FBS079,out=process.env.FBS_SCREENSHOTS;
 let browser,checks=0;const check=(value,message)=>{assert.ok(value,message);checks++;};
+function parseCSV(text){const rows=[];let row=[],field='',quoted=false;for(let i=0;i<text.length;i++){const c=text[i];if(c==='"'){if(quoted&&text[i+1]==='"'){field+='"';i++;}else quoted=!quoted;}else if(c===','&&!quoted){row.push(field);field='';}else if(c==='\n'&&!quoted){row.push(field.endsWith('\r')?field.slice(0,-1):field);rows.push(row);row=[];field='';}else field+=c;}if(field||row.length){row.push(field);rows.push(row);}return rows;}
 (async()=>{
   browser=await chromium.launch({headless:true,args:['--no-sandbox']});
   const context=await browser.newContext(),errors=[],failed=[];
@@ -27,7 +28,7 @@ let browser,checks=0;const check=(value,message)=>{assert.ok(value,message);chec
     check((await page.locator('.report-label').innerText()).includes(data.execution_version),'V080 execution label is visible on the existing route');
     check((await page.locator('#upcoming-summary').innerText()).includes(data.current_execution.verified_current_total_issue_records.toLocaleString('en-US')),'All actual base and derived forecasts are accounted for');
     check((await page.locator('#upcoming-summary').innerText()).includes(data.current_execution.verified_current_derived_issue_records.toLocaleString('en-US')),'Derived fixed-blend count is visible');
-    check((await page.locator('#market-summary').innerText()).includes('all 11 reconstructed winner candidates'),'Negative same-provider comparison finding remains visible');
+    check((await page.locator('#market-summary').innerText()).includes('all 11 primary-comparison reconstructed winner candidates'),'Negative same-provider comparison finding remains visible');
     check(await page.evaluate(()=>document.documentElement.scrollWidth<=innerWidth),'Overview fits viewport');
     if(out){fs.mkdirSync(out,{recursive:true});await page.screenshot({path:path.join(out,`fbs-v079-overview-${live?'live':'static'}-${width}.png`),fullPage:true});}
     await page.click('[data-tab="models"]');
@@ -42,9 +43,35 @@ let browser,checks=0;const check=(value,message)=>{assert.ok(value,message);chec
       }
     }
     check((await page.locator('#nomination-note').innerText()).includes('never used to order'),'2026 cannot set table order');
+    for(const target of ['all','winner','margin','total'])for(const role of ['all','challenger','negative_control']){
+      await page.selectOption('#study-target',target);await page.selectOption('#study-role',role);
+      const expected=data.current_study.rows.filter(r=>(target==='all'||r.target===target)&&(role==='all'||r.role===role));
+      const aliases=await page.locator('#current-study-body tr[data-study-model]').evaluateAll(xs=>xs.map(x=>x.dataset.studyModel));
+      assert.deepEqual(aliases,expected.map(r=>r.alias));checks++;
+      for(const r of expected){const text=await page.locator(`#current-study-body tr[data-study-model="${r.alias}"]`).innerText();
+        for(const c of r.season_cards)check(text.includes(c.n.toLocaleString('en-US')+' games'),'Study target retains identical annual population');
+        check(text.includes(r.validation_n.toLocaleString('en-US')+' games'),'Study validation pool is visible');
+        check(text.includes('No automatic promotion'),'Research role never claims promotion');
+      }
+    }
+    await page.selectOption('#study-target','all');await page.selectOption('#study-role','all');
+    check((await page.locator('#current-study-qualification').innerText()).includes('proxy'),'Corrected study retains availability qualification');
+    check((await page.locator('#current-study-original-note').innerText()).includes('24 games'),'Original timing-defect counts retained');
+    check(await page.locator('#current-study-original-body tr[data-study-model]').count()===12,'All original study diagnostics preserved');
     check(await page.evaluate(()=>document.documentElement.scrollWidth<=innerWidth),'Model table scrolls inside viewport');
-    if(out)await page.screenshot({path:path.join(out,`fbs-v079-models-${live?'live':'static'}-${width}.png`),fullPage:true});
+    await page.selectOption('#model-target','winner');await page.selectOption('#model-metric','log_loss');
+    if(out){await page.screenshot({path:path.join(out,`fbs-v079-models-${live?'live':'static'}-${width}.png`),fullPage:true});await page.locator('#current-study-section').screenshot({path:path.join(out,`fbs-v080r1-study-${live?'live':'static'}-${width}.png`)});}
     await page.click('[data-tab="markets"]');
+    for(const season of [2024,2025,2026])for(const metric of ['log_loss','brier','accuracy']){
+      await page.selectOption('#research-market-season',String(season));await page.selectOption('#research-market-metric',metric);
+      const expected=data.research_market_comparison.scorecards.filter(r=>r.season===season);
+      const aliases=await page.locator('#research-market-body tr[data-research-market-model]').evaluateAll(xs=>xs.map(x=>x.dataset.researchMarketModel));
+      assert.deepEqual(aliases,expected.map(r=>r.alias));checks++;
+      for(const row of expected){const text=await page.locator(`#research-market-body tr[data-research-market-model="${row.alias}"]`).innerText();
+        check(text.includes(row.paired_n.toLocaleString('en-US')+' / '+row.expected_n.toLocaleString('en-US')),'Research market comparison retains identical primary provider cohort');
+        check(text.includes('no nomination'),'Research market comparison cannot nominate a champion');
+      }
+    }
     for(const season of [2024,2025,2026])for(const status of ['all','final','unfinished'])for(const target of ['winner','margin','total']){
       await page.selectOption('#market-season',String(season));await page.selectOption('#market-status',status);await page.selectOption('#market-target',target);
       const subset=logic.subsetGames(games,season,status);
@@ -65,6 +92,14 @@ let browser,checks=0;const check=(value,message)=>{assert.ok(value,message);chec
       }
     }
     await page.click('[data-tab="games"]');
+    const currentValueGames=games.filter(g=>g.season===2026&&g.status==='pending'&&g.current_provider_coverage?.draftkings?.winner?.display_eligible);
+    check(currentValueGames.length===54,'All54 approved current probabilities exist outside the archived namespace');
+    const currentExample=currentValueGames[0],currentCell=currentExample.current_provider_coverage.draftkings.winner;
+    await page.selectOption('#game-season','2026');await page.fill('#game-search',currentExample.id);
+    check((await page.locator('#game-body').innerText()).includes((100*currentCell.display_value).toFixed(2)+'%'),'Current provider probability is visibly rendered');
+    await page.click('[data-open-game]');const currentDetail=await page.locator('#game-dialog-body').innerText();
+    check(currentDetail.includes(currentCell.quote_time)&&currentDetail.includes(currentCell.observation_time),'Current quote and acquisition clocks are visible separately');
+    await page.click('#dialog-close');await page.fill('#game-search','');
     for(const season of [2024,2025,2026]){await page.selectOption('#game-season',String(season));check((await page.locator('#game-count').innerText()).startsWith(games.filter(g=>g.season===season).length.toLocaleString('en-US')),'All observed games remain in each season');}
     await page.selectOption('#game-status','unfinished');check((await page.locator('#game-count').innerText()).startsWith(games.filter(g=>g.season===2026&&g.status!=='final').length.toLocaleString('en-US')),'Pending and unresolved retained');
     const first=await page.locator('#game-body').innerText();if(await page.locator('#game-next').isEnabled()){await page.click('#game-next');check(await page.locator('#game-body').innerText()!==first,'Next page changes games');}
@@ -76,11 +111,16 @@ let browser,checks=0;const check=(value,message)=>{assert.ok(value,message);chec
     check(await page.locator('#game-dialog').isVisible(),'Per-game evidence opens');check((await page.locator('#game-dialog-body').innerText()).includes('Quote')||(await page.locator('#game-dialog-body').innerText()).includes('Not retained'),'Source clocks or absence visible');await page.click('#dialog-close');
     await page.fill('#game-search','');
     const downloadPromise=page.waitForEvent('download');await page.click('#download-games');const download=await downloadPromise;check(download.suggestedFilename()==='FBS_2026_COMPARISON.csv','Filtered comparison downloadable');
+    const stream=await download.createReadStream(),chunks=[];for await(const chunk of stream)chunks.push(chunk);const csv=parseCSV(Buffer.concat(chunks).toString('utf8')),headers=csv[0],exported=csv.slice(1).map(row=>Object.fromEntries(headers.map((name,i)=>[name,row[i]]))),byGame=new Map(exported.map(r=>[r.game_id,r]));
+    check(exported.filter(r=>r.draftkings_current_display_value!=='').length===54,'CSV includes all54 current derived probabilities');
+    for(const game of currentValueGames){const row=byGame.get(game.id),cell=game.current_provider_coverage.draftkings.winner;check(Number(row.draftkings_current_display_value)===cell.display_value,'CSV current probability equals actual public cell');check(row.draftkings_current_quote_time===cell.quote_time&&row.draftkings_current_observed_at===cell.observation_time,'CSV keeps the actual current quote and acquisition clocks');}
     check(await page.evaluate(()=>document.documentElement.scrollWidth<=innerWidth),'Game table contained on mobile');
     await page.click('[data-tab="diagnostics"]');check((await page.locator('#diagnostic-note').innerText()).includes('47-game'),'Narrow issued cohort is explicitly diagnostic');
     await page.click('[data-tab="execution"]');check((await page.locator('#new-execution').innerText()).includes('None'),'No promotion claimed');
     check((await page.locator('#current-execution').innerText()).includes(data.current_execution.verified_current_total_issue_records.toLocaleString('en-US')),'Current V080 execution is separate from predecessor accounting');
     check((await page.locator('#current-execution-note').innerText()).includes('do not establish novel models'),'Actual fit calls are not presented as novel learning');
+    check((await page.locator('#prior-v080-audit').innerText()).includes('26 base fit calls'),'Earlier V080 avoidable fits remain dated history');
+    check((await page.locator('#prior-v080-audit').innerText()).includes('separate from the current V080R1 execution'),'Earlier duplicate fits are not attributed to current execution');
     check((await page.locator('#feature-progress').innerText()).includes(data.current_execution.secondary_feature_milestone.team_context_rows+' team rows'),'Secondary progress uses actual V080 counts');
     check((await page.locator('#prior-execution-note').innerText()).startsWith('The V078 predecessor'),'Predecessor wording cannot imply current execution');
     check((await page.locator('#cpu-detail').innerText()).startsWith('Preserved V078 capacity measurement'),'Earlier CPU measurement remains explicitly dated');
@@ -88,7 +128,7 @@ let browser,checks=0;const check=(value,message)=>{assert.ok(value,message);chec
     await page.close();
   }
   assert.deepEqual(errors,[]);assert.deepEqual(failed,[]);
-  const receipt={status:'PASS',checks,site:live?'HOSTED_PUBLIC_URL':'EXACT_STATIC_PUBLIC_ASSETS',viewport_widths:[1440,390],source_as_of:data.source_as_of,fixture_source_as_of:data.fixture_source_as_of,scorecards:data.full_population.scorecards.length,game_count:games.length,owner_fits:0,forecast_issues:0,promotion:false};
+  const receipt={status:'PASS',checks,site:live?'HOSTED_PUBLIC_URL':'EXACT_STATIC_PUBLIC_ASSETS',viewport_widths:[1440,390],execution_version:data.execution_version,source_as_of:data.source_as_of,fixture_source_as_of:data.fixture_source_as_of,scorecards:data.full_population.scorecards.length,research_target_rows:data.current_study.rows.length,research_season_cards:data.current_study.rows.reduce((n,r)=>n+r.season_cards.length,0),research_market_scorecards:data.research_market_comparison.scorecards.length,game_count:games.length,owner_fits:0,forecast_issues:0,promotion:false};
   if(out)fs.writeFileSync(path.join(out,`FBS_V079_${live?'LIVE':'STATIC'}_BROWSER_RECEIPT.json`),JSON.stringify(receipt,null,2)+'\n');
   console.log(JSON.stringify(receipt));await browser.close();
 })().catch(async error=>{console.error(error);if(browser)await browser.close();process.exitCode=1;});

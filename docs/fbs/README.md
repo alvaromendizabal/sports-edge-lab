@@ -1,33 +1,20 @@
 <!-- FBS_V079_FIXED_POPULATION_REVIEW_START -->
-## V080 execution — fixed 2024–2026 comparison
+## Current FBS evaluation: V080R1 execution
 
-The [same-population FBS dashboard](v079/index.html) now contains the authenticated **V080 execution**. Its existing V079 comparison route and schema are retained. The fixture snapshot is **2026-11-16T02:07:41Z**.
+[Open the fixed-population comparison](v079/) · [Public dashboard](https://sports-edge-lab-fbs.alv-mendizabal.chatgpt.site/v079/)
 
-| Population | Role | Completed games | All observed fixtures |
-|---|---|---:|---:|
-| 2024 | Validation | 919 | 920 |
-| 2025 | Validation | 934 | 934 |
-| 2026 | Test reporting | 752 | 888 |
+The comparison uses **919 completed 2024 games and 934 completed 2025 games for validation**, with the same **752 completed 2026 games for test reporting**. Every primary and research target is evaluated on those identical season populations. The 2026 data has already been exposed to research; it is not an untouched confirmation set.
 
-All **35 scheduled recipe/target combinations** cover the same completed game identities within each season: **105 complete model-season scorecards**. The table orders pooled complete 2024–2025 validation performance within one evidence lane; 2026 cannot determine that order. Historical source availability uses an explicit proxy, so this is a complete chronological reconstruction with qualified provenance. Previously exposed 2026 outcomes are not an untouched confirmatory test. No automatic promotion occurs.
+The primary table contains 35 recovered recipe/target combinations and 105 complete season cards. A separate study table adds nine challengers and three negative-control targets, with 36 corrected season cards. Its month-boundary routing repair reuses saved states and changes 288 historical inferences across 24 games; original diagnostics remain visible. Both lanes retain their availability-proxy qualifications. There is no joint automatic ranking or promotion.
 
-The preserved roster retains **269 model identities across 295 model/target entries**. The scheduled queue comprises 26 recovered base recipe/target combinations and 9 exact fixed blends. The other **260 entries remain visible as blocked**, including recovered richer 228/240-feature models whose full-population inputs and producer/source clocks are incomplete. Completion of this queue does not establish that every old champion has been reconstructed. The earlier 47-game issued sample remains a dated diagnostic appendix.
+All 11 primary winner candidates and all four study winner policies have model-versus-DraftKings comparisons on the same fixed provider cohorts: 787 games in 2024, 803 in 2025 and 651 in 2026. DraftKings has better accuracy, Brier score and log loss in every such comparison. These partial market cohorts never replace the full-population model evaluation. Kalshi and the two Polymarket products retain explicit coverage and missing-evidence status; their price values are not published.
 
-The full-population recovery reused **6,500 completed fit states**, with zero new fits, zero failures and 91,175 prediction rows in that stage. The separate current refresh performed **26 base fit calls and 8 calibrator fit calls**. All 26 base calls repeated identical numerical training identities and were avoidable; they remain counted as executed fits, without being relabeled as reuse or novel model learning. The full-state identities changed with calibration inputs. The audit compared authenticated report identities and did not reload model bodies; duplicate base-only overhead was not isolated. The dashboard distinguishes stage accounting from the preserved V078 execution.
+The current owner reports 3,010 genuine research issues on all 86 timed upcoming games: 2,236 base forecasts and 774 fixed blends. Another 50 observed nonfinal fixtures have unresolved kickoff times. Selected game outputs preserve their actual issue clocks; complete candidate grids remain private. The separate study's 774 prepared future rows remain unissued.
 
-### Actual upcoming forecasts
+V080R1 reused 26 base estimators and made zero base fit calls. Eight winner calibrators were fitted after already-owned observations became newly eligible under the declared source clocks. The earlier V080 execution's 26 avoidable repeated base fits remain explicitly dated history. The secondary milestone contains 272 descriptive team-context rows and makes no feature-ablation or performance-improvement claim.
 
-V080 committed **2,236 base forecasts plus 774 exact fixed-blend forecasts: 3,010 total records on all 86 timed upcoming games**. Base issues were committed after their November 16 02:09:04 UTC issue time; derived issues retain their later clocks and member bindings. The 50 other observed 2026 nonfinal fixtures have unresolved kickoff times and remain visible without invented predictions. The public game view contains 258 selected fixed-baseline values with their verified original fit, information and issue clocks. Earlier V078 research selections remain separately labeled and dated. Full private candidate grids are not published.
+The public route keeps its existing V079 comparison schema. Original issued forecasts, later reconstructions, source gaps and blocked richer recipes remain separate. No automatic promotion, trading return or complete official schedule coverage is claimed.
 
-### Model versus market on identical provider cohorts
-
-DraftKings winner comparisons use **787 / 919 games in 2024, 803 / 934 in 2025 and 651 / 752 in 2026**. Each provider cohort is fixed before model matching and is identical across the models in that table. These partial market cohorts never replace the full-population model comparison.
-
-**DraftKings has lower log loss and Brier score and higher accuracy than all 11 reconstructed winner candidates on each of those season-specific cohorts.** This negative result is shown in the dashboard. It does not establish prospective trading performance or validate an unavailable spread/total baseline.
-
-The current capture supplies **54 qualified DraftKings winner comparisons** for upcoming games. Historical archive coverage and current capture have separate source, snapshot and retrieval clocks. Kalshi, Polymarket Global and Polymarket US expose coverage/status only while the required research/publication permissions and exact contract histories remain unverified. Missing provider cells remain in the denominator.
-
-The public projection preserves all 2,742 observed fixtures, original forecast values and clocks, and existing scientific scores. Official schedule completeness remains unproved. Its publication receipt records the authenticated owner binding, the cohort-fingerprint wrapping fix and the V080 coverage/label overlay. Publication performs no fit, forecast issue, source refresh or promotion. Earlier reports, including [V078](v078/index.html), remain preserved.
 <!-- FBS_V079_FIXED_POPULATION_REVIEW_END -->
 
 <!-- FBS_V078R5_OWNER_REVIEW_START -->

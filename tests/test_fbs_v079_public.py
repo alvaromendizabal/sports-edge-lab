@@ -2,6 +2,7 @@
 import gzip
 import hashlib
 import json
+import math
 import os
 from pathlib import Path
 import re
@@ -105,6 +106,9 @@ class PublicV079(unittest.TestCase):
 
     def test_derived_provider_values_keep_source_evidence_separate(self):
         for g in self.games:
+            for provider in ("kalshi", "polymarket_global", "polymarket_us"):
+                for cell in g.get("providers", {}).get(provider, {}).values():
+                    self.assertTrue(not cell or cell.get("value") is None)
             for field in ("current_provider_coverage", "historical_provider_coverage"):
                 for provider, targets in g.get(field, {}).items():
                     for target, cell in targets.items():
@@ -120,6 +124,27 @@ class PublicV079(unittest.TestCase):
                             self.assertLessEqual(cell["display_value"], 1)
                         if field == "historical_provider_coverage":
                             self.assertFalse(cell["historical_source_possession_proven"])
+
+    def test_all_54_current_draftkings_values_keep_their_own_snapshot_clocks(self):
+        dt = lambda value: datetime.fromisoformat(value.replace("Z", "+00:00"))
+        captured = dt(self.data["current_source_coverage"]["evaluated_at"])
+        displayed = []
+        for game in self.games:
+            current = game.get("current_provider_coverage", {}).get("draftkings", {}).get("winner", {})
+            if not current.get("display_eligible"):
+                continue
+            self.assertEqual((game["season"], game["status"]), (2026, "pending"))
+            self.assertTrue(current["reference_present"])
+            self.assertTrue(current["predictive_baseline_qualified"])
+            self.assertIsInstance(current["display_value"], (int, float))
+            self.assertLessEqual(dt(current["quote_time"]), dt(current["observation_time"]))
+            self.assertLessEqual(dt(current["observation_time"]), captured)
+            self.assertGreaterEqual((dt(game["kickoff"]) - dt(current["observation_time"])).total_seconds(), 7200)
+            displayed.append(current)
+        self.assertEqual(len(displayed), 54)
+        self.assertEqual(len(displayed), self.data["current_source_coverage"]["displayed_probability_cells"])
+        # Fixture refresh and provider capture are different events with separate clocks.
+        self.assertGreater(captured, dt(self.data["fixture_source_as_of"]))
 
     def test_market_diagnostics_never_change_model_population(self):
         report = self.data.get("market_comparison", {})
@@ -139,9 +164,9 @@ class PublicV079(unittest.TestCase):
             else:
                 self.assertEqual(r["model_metrics"], {})
 
-    def test_v080_current_forecasts_are_separate_from_earlier_issues(self):
+    def test_v080r1_current_forecasts_are_separate_from_earlier_issues(self):
         current = self.data["current_execution"]
-        self.assertEqual((self.data["execution_version"], self.data["report_version"]), ("V080", "V079"))
+        self.assertEqual((self.data["execution_version"], self.data["report_version"]), ("V080R1", "V079"))
         self.assertEqual(self.data["prior_execution"]["version"], "V078")
         future = [g for g in self.games if g["season"] == 2026 and g["status"] == "pending"]
         self.assertEqual(len(future), current["timed_future_games"])
@@ -153,8 +178,12 @@ class PublicV079(unittest.TestCase):
         self.assertEqual(self.data["forecast_coverage"]["total_current_forecast_rows"], current["verified_current_total_issue_records"])
         self.assertFalse(current["private_candidate_grid_published"])
         self.assertTrue(current["fit_calls_do_not_establish_novel_models"])
-        self.assertEqual(current["avoidable_duplicate_base_fit_calls"], current["base_fit_calls"])
-        self.assertIn("were avoidable", current["duplicate_fit_disclosure"])
+        dated = self.data["previous_execution_audits"][0]
+        self.assertEqual((dated["version"], dated["base_fit_calls"], dated["avoidable_duplicate_base_fit_calls"]), ("V080", 26, 26))
+        self.assertIn("were avoidable", dated["disclosure"])
+        self.assertTrue(dated["current_execution_counts_unchanged"])
+        self.assertEqual(current["verified_current_base_issue_records"], current["new_base_issue_records"] + current["reused_base_issue_records"])
+        self.assertEqual(current["verified_current_derived_issue_records"], current["new_derived_issue_records"] + current["reused_derived_issue_records"])
         milestone = current["secondary_feature_milestone"]
         self.assertEqual(milestone["team_context_rows"], 2 * milestone["pending_games"])
         self.assertEqual(milestone["eligible_future_team_rows"], 2 * len(future))
@@ -175,6 +204,81 @@ class PublicV079(unittest.TestCase):
                 self.assertLess(dt(cell["issue_time"]), dt(cell["requested_horizon_cutoff"]))
                 seen += 1
         self.assertEqual(seen, current["selected_public_forecast_cells"])
+
+    def test_additional_12_study_targets_cover_the_identical_three_populations(self):
+        report = self.data["current_study"]
+        self.assertEqual(report["state"], "CORRECTED_T120_RESEARCH_RECONSTRUCTION_ATTACHED")
+        self.assertEqual(len(report["rows"]), 12)
+        self.assertEqual(len(report["original_rows"]), 12)
+        self.assertEqual(sum(r["role"] == "negative_control" for r in report["rows"]), 3)
+        self.assertEqual({r["alias"] for r in report["rows"]}, {prefix + f"{i:02d}" for prefix in ("RW", "RM", "RT") for i in range(1, 5)})
+        populations = {p["season"]: p for p in self.full["populations"]}
+        for lane in ("rows", "original_rows"):
+            for row in report[lane]:
+                self.assertFalse(row["nomination_eligible"])
+                self.assertFalse(row["promotion"])
+                self.assertEqual(row["corrected_t120_gate_passed"], lane == "rows")
+                self.assertEqual({c["season"] for c in row["season_cards"]}, {2024, 2025, 2026})
+                for card in row["season_cards"]:
+                    self.assertEqual((card["n"], card["cohort_sha256"]), (populations[card["season"]]["expected_game_count"], populations[card["season"]]["cohort_sha256"]))
+                    self.assertTrue(all(isinstance(value, (int, float)) and math.isfinite(value) for value in card["metrics"].values()))
+        self.assertFalse(report["ranking_allowed"])
+        self.assertFalse(report["nomination_allowed"])
+        self.assertFalse(report["test_untouched"])
+        self.assertTrue(report["primary35_scorecards_unchanged"])
+        self.assertEqual(len(self.full["models"]), 35)
+        self.assertEqual(len(self.full["scorecards"]), 105)
+
+    def test_study_validation_pool_excludes_test_and_pools_squared_rmse(self):
+        for row in self.data["current_study"]["rows"] + self.data["current_study"]["original_rows"]:
+            cards = [c for c in row["season_cards"] if c["season"] in (2024, 2025)]
+            n = sum(c["n"] for c in cards)
+            self.assertEqual(row["validation_n"], n)
+            self.assertEqual(n, 1853)
+            for metric, value in row["validation_metrics"].items():
+                expected = math.sqrt(sum(c["n"] * c["metrics"][metric] ** 2 for c in cards) / n) if metric == "rmse" else sum(c["n"] * c["metrics"][metric] for c in cards) / n
+                self.assertAlmostEqual(value, expected, places=12)
+
+    def test_routing_repair_retains_original_defects_and_no_fit_claim(self):
+        report = self.data["current_study"]
+        defects = report["original_timing_defects"]
+        self.assertEqual(defects["origin_after_target_t120"]["unique_games_by_season"], {"2024": 20, "2025": 2, "2026": 2})
+        self.assertEqual(defects["calibration_label_unavailable_at_t120"]["unique_games_by_season"], {"2024": 10, "2025": 2, "2026": 2})
+        self.assertEqual(defects["training_label_unavailable_at_t120"]["prediction_rows"], 0)
+        work = report["work_counts"]
+        self.assertEqual(work["changed_historical_rows"], 288)
+        self.assertEqual(work["changed_historical_games"], 24)
+        self.assertEqual(work["new_inference_rows"] + work["reused_inference_rows"], 288)
+        self.assertEqual(work["new_model_fits"], 0)
+        self.assertEqual(work["new_calibrator_fits"], 0)
+        self.assertEqual(work["new_genuine_forecasts"], 0)
+        self.assertIn("proxy", report["qualification_summary"])
+        self.assertIn("unproved", report["source_availability"])
+
+    def test_current_calibration_change_is_separate_from_previous_avoidable_fits(self):
+        audit = self.data["current_calibration_audit"]
+        self.assertEqual((audit["version"], audit["new_base_fits"], audit["reused_base_estimators"], audit["new_winner_calibrator_fits"]), ("V080R1", 0, 26, 8))
+        self.assertEqual((audit["calibration_rows_before"], audit["calibration_rows_after"], audit["newly_eligible_owned_rows"], audit["removed_calibration_rows"]), (160, 161, 3, 2))
+        self.assertTrue(audit["common_calibration_values_unchanged"])
+        self.assertEqual(audit["avoidable_new_base_fits"], 0)
+        self.assertEqual(self.data["previous_execution_audits"][0]["avoidable_duplicate_base_fit_calls"], 26)
+
+    def test_research_market_comparison_uses_exact_primary_provider_cohorts(self):
+        report = self.data["research_market_comparison"]
+        self.assertFalse(report["used_for_nomination"])
+        self.assertFalse(report["promotion"])
+        self.assertEqual(len(report["scorecards"]), 12)
+        cohorts = {c["season"]: c for c in self.data["market_comparison"]["provider_cohorts"] if c["provider"] == "draftkings" and c["target"] == "winner"}
+        self.assertEqual({(r["alias"], r["season"]) for r in report["scorecards"]}, {(alias, season) for alias in ("RW01", "RW02", "RW03", "RW04") for season in (2024, 2025, 2026)})
+        for row in report["scorecards"]:
+            cohort = cohorts[row["season"]]
+            self.assertEqual((row["expected_n"], row["paired_n"], row["paired_cohort_sha256"]), (cohort["expected_n"], cohort["paired_n"], cohort["paired_cohort_sha256"]))
+            self.assertEqual(row["role"], "negative_control" if row["alias"] == "RW04" else "challenger")
+            self.assertFalse(row["used_for_nomination"])
+            self.assertFalse(row["promotion"])
+            for metric in ("accuracy", "log_loss", "brier"):
+                self.assertAlmostEqual(row["market_metrics"][metric], cohort["market_metrics"][metric], places=12)
+                self.assertAlmostEqual(row["delta_model_minus_market"][metric], row["model_metrics"][metric] - row["market_metrics"][metric], places=12)
 
     def test_negative_market_finding_is_supported_on_every_fixed_cohort(self):
         rows = [r for r in self.data["market_comparison"]["scorecards"] if r["provider"] == "draftkings" and r["target"] == "winner"]

@@ -6,38 +6,38 @@
   "game_count": 2742,
   "scorecard_count": 105,
   "model_alias_count": 35,
-  "fixture_source_as_of": "2026-11-16T02:07:41Z",
+  "fixture_source_as_of": "2026-11-16T03:07:27Z",
   "full_population_report_attached": true,
   "files": [
     {
       "path": "README.md",
-      "bytes": 3197,
-      "sha256": "e22b8d1d5500020629bc03000217db52b127336c15cf7d7b5beba8a135378f3c"
+      "bytes": 4071,
+      "sha256": "503e591fa6bc8c7036a6073f99243d103dead7b7463c3490ac6d87aadfbcc529"
     },
     {
       "path": "app.js",
-      "bytes": 41522,
-      "sha256": "79826bb5e768f9e86860ffbca413059902c6f62a5dbf833dcef4c3da59152c26"
+      "bytes": 45784,
+      "sha256": "90302bd1f3664ccadc2503dd30038993ce3366fe01ec7237ed1aecc3ad40075e"
     },
     {
       "path": "data/games.json.gz",
-      "bytes": 386777,
-      "sha256": "13d5da42b0219b9d421ef1d7d6fb3c5854f3ee65173c2dd0e8125d30b479e19a"
+      "bytes": 386768,
+      "sha256": "f34b68620699fb280e1cd46834ffd9507b7d7d9dfc5877ec4f5d713fe756b76d"
     },
     {
       "path": "data/review.json",
-      "bytes": 907869,
-      "sha256": "ef4f44dbcf062d2d1d6edfbcdea8555e8003d9cbaba6ea3ad18f90150f24b13a"
+      "bytes": 960645,
+      "sha256": "c0613ef42f411d6109c163e8e320789b2702a83e6b5501f7ba58e62b4e9587d8"
     },
     {
       "path": "index.html",
-      "bytes": 22951,
-      "sha256": "f5bfa96eecb5641b47a3fe845fd03819b445c99baba7c9deec14464fbc1793a9"
+      "bytes": 26261,
+      "sha256": "7ce9a8cb464342f639bb9f067160898426edc787e7e61e2446bbe12c8083399b"
     },
     {
       "path": "styles.css",
-      "bytes": 8671,
-      "sha256": "4df026a345bccbbdee91abd7b014ce7a93fa4dcb52a87ca55ed3602e472c49d7"
+      "bytes": 8849,
+      "sha256": "528de957b0e98881ddcfdf896ab5b3f381c9e60d17f4d007a099a6fe40cff2b6"
     }
   ],
   "validation": {
@@ -45,78 +45,104 @@
     "public_boundary_scan": true,
     "scorecard_denominators": true
   },
-  "browser_validation": "PENDING_EXACT_PUBLICATION_HEAD_AND_HOSTED_OWNER_BROWSER",
-  "build_input_sha256": "af5dbdc62571ce376cb0297108d6fcd9103b917e1c08ba4c79c9bd05e8f35ec6",
+  "browser_validation": "PENDING_ORIGINATING_OWNER_BROWSER",
+  "build_input_sha256": "c046d8db1dea011bc01a36777723b4392a1c5421b32a6984e0c2688f8b5ee107",
   "atomic_commit": true,
   "reused_existing_build": false,
-  "publication_transform": {
-    "schema": "fbs.v079.publication-transform.v1",
-    "source_owner_receipt_sha256": "f430c4148a9d1056c8b5f0930fd4ab7b0089a44c1d01e230a4c51a11c36f41c3",
-    "source_owner_build_input_sha256": "df851eddfa115560ef9782fc149c3ca2dc5c2a8136a067aeb53727f6a05f3608",
-    "hash_wrap_patch": true,
-    "exchange_value_redactions": [],
-    "owner_evidence_unchanged": true,
-    "changed_payload_paths": [
-      "index.html"
+  "owner_enrichment": {
+    "schema": "fbs.v080r1.public-owner-enrichment.v1",
+    "execution_version": "V080R1",
+    "primary_receipt_sha256": "121538e3b7ba0f5b0c80a9adfbd3c4b09dc0e42f98bc01ebfdfcf758aac5b4c5",
+    "corrected_study_targets": 12,
+    "corrected_study_season_cards": 36,
+    "preserved_original_study_targets": 12,
+    "primary_comparison_unchanged": true,
+    "game_values_and_clocks_unchanged": true,
+    "private_inputs": [
+      {
+        "bytes": 6186,
+        "sha256": "124d6f1b78012767c985cfe2dd61307df1db7c877602e6a62ad0f0f797b9b8e1"
+      },
+      {
+        "bytes": 239,
+        "sha256": "14cc952e18479d3501b1e6bf6949a0dac3601ac356267ae8f5a82bf34b95dec4"
+      },
+      {
+        "bytes": 242,
+        "sha256": "15affe83528eb70ea56f73a09424e4a0e7f8e83db17319f2ad199bec03ba1c4e"
+      },
+      {
+        "bytes": 4495029,
+        "sha256": "26967a70aa7442b48b8c0a0019d1a814fd6f69b02afc115fb75b6bf236a0a3f1"
+      },
+      {
+        "bytes": 2458901,
+        "sha256": "2a461b817715da9a2daad60260bb26717757fc338f9c98d0ec8d0e66d62686ac"
+      },
+      {
+        "bytes": 4517194,
+        "sha256": "319d2b6d1c91658825cc2c4b94f0ef77f7527fc6ff18b3c2b7fda5c2814354c7"
+      },
+      {
+        "bytes": 958,
+        "sha256": "5b8a72da02aaf6ded37f55bc303fc83f8140e57d6c794cc456f02720a168d881"
+      },
+      {
+        "bytes": 34940562,
+        "sha256": "8a2af5e1f9e1765458e860caa0a1abee3fcf343a0adf9550c617cd8051a2a91d"
+      },
+      {
+        "bytes": 9768824,
+        "sha256": "a0fac37a894db21706fc03127bda622e84eb2273ab8a21b7716a361807b56f81"
+      },
+      {
+        "bytes": 395230,
+        "sha256": "a303e423f146bbdb377221bcd63a3f8897a7941e330206ffd61ac3e6096471a8"
+      },
+      {
+        "bytes": 395263,
+        "sha256": "bf94078facadca1df152122204f4fafb273501fb29610b977d7dd9d9555ba6d0"
+      },
+      {
+        "bytes": 355271,
+        "sha256": "dbe580c82273346e26938afcc4f1a101fd7b08b673bc02a0e1924ae611cf5ab0"
+      },
+      {
+        "bytes": 2453073,
+        "sha256": "dcc0411f2d456b00b5ed5152cbf62251528109a38339a403eb8204523a2df929"
+      }
     ],
+    "template_sha256": {
+      "study.html": "0f8d7bdccf7fe520015a7783b53e43f8e4cac6f1f4c60b6ea3757d61782d98cd",
+      "study.js": "f4724aa9a2d6778410d0181a48ecbd09a86b62cb05002e238cc6b8ca39213179"
+    },
+    "new_science_by_publication": 0,
+    "promotion": false
+  },
+  "publication_dated_history_transform": {
+    "schema": "fbs.v080r1.publication-dated-history.v1",
+    "source_owner_receipt_sha256": "2e9873190c35af44f04941479bf1bc4e42c504eac67155adde27a3e2d59b0f7e",
+    "prior_v080_audit_sha256": "f2637ff5a7e71549e5471c4874d35ee938fcf69a3ec667872b97167bfa9e8e88",
+    "current_calibration_audit_sha256": "e350aae7ad5f63a4fcd7d658009a98b4adaeb4a3292a4dee7473ee7fb8917678",
+    "owner_logical_return_manifest_sha256": "b8d4bf71efec4787bb011af7c716fb623db9d7464f57aa04c59d7045459ec370",
+    "audited_research_provider_projection_sha256": "105d839d520f53151b1d23dc686c0e9584789728709ce84f33cbde298f9fe01e",
+    "research_provider_comparison_rows": 12,
+    "audited_broad_labels_normalized_to_existing_verified_aliases": true,
+    "dated_previous_fit_calls": 26,
+    "current_execution_counts_unchanged": true,
+    "all_47_target_metrics_unchanged": true,
+    "same_2605_completed_game_populations_unchanged": true,
+    "all_game_values_and_clocks_unchanged": true,
+    "original_owner_assets_unchanged": true,
     "new_fits": 0,
     "new_forecasts": 0,
-    "promotion": false
-  },
-  "publication_current_coverage_transform": {
-    "schema": "fbs.v080.publication-current-coverage.v1",
-    "source_intake_receipt_sha256": "00a91f65ffe3ae0e38c1be1d7493713b0f00bb63eedefd8e62fbad53ec9bdf6c",
-    "source_owner_manifest_sha256": "861345bcdd81cc2fa8015e2249be0bc92aae1f26d7d54617c3d931c8a89e6ef6",
-    "execution_version_label": "V080",
-    "comparison_schema_preserved": "fbs.v079.public-fixed-population.v1",
-    "unchanged_game_values_and_clocks": true,
-    "unchanged_model_and_market_scores": true,
-    "owner_artifacts_unchanged": true,
-    "changed_payload_paths": [
-      "README.md",
-      "app.js",
-      "data/review.json",
-      "index.html"
-    ],
-    "verified_current_base_records": 2236,
-    "verified_current_derived_records": 774,
-    "verified_selected_public_values": 258,
-    "new_publication_fits": 0,
-    "new_publication_issues": 0,
-    "promotion": false
-  },
-  "publication_execution_audit_transform": {
-    "schema": "fbs.v080.publication-execution-audit.v1",
-    "source_public_receipt_sha256": "d3f7b0f6d06b83058c4bff54e575b1591a1834d100828ab9063f8d7e0a237a8a",
-    "audit_sha256": "f2637ff5a7e71549e5471c4874d35ee938fcf69a3ec667872b97167bfa9e8e88",
-    "avoidable_duplicate_base_fit_calls": 26,
-    "fit_calls_preserved_as_executed": true,
-    "unchanged_model_and_market_metrics": true,
-    "unchanged_game_values_and_clocks": true,
-    "changed_payload_paths": [
-      "README.md",
-      "app.js",
-      "data/review.json"
-    ],
-    "owner_artifacts_unchanged": true,
-    "promotion": false
-  },
-  "publication_live_qa_transform": {
-    "schema": "fbs.v080.publication-live-qa.v1",
-    "source_public_receipt_sha256": "2acd99293f254ba1c5989e6333b1074f72a39e3d9ca137a8da7955f943c6ea24",
-    "actual_secondary_milestone_sha256": "43fecde0261d586fcac51ef998985c821abf6d1131a8159d5d08209055ecc8f2",
-    "team_context_rows": 272,
-    "predecessor_labels_explicit": true,
-    "unchanged_model_and_market_metrics": true,
-    "unchanged_game_values_and_clocks": true,
-    "changed_payload_paths": [
-      "README.md",
-      "app.js",
-      "data/review.json"
-    ],
-    "owner_artifacts_unchanged": true,
-    "new_fits": 0,
-    "new_forecasts": 0,
-    "promotion": false
+    "source_calls": 0,
+    "promotion": false,
+    "presentation_changes": [
+      "Dated V080 execution audit retained",
+      "Total current record count visible",
+      "Multiline study table width contained",
+      "Actual audited research comparison on the same fixed DraftKings cohorts"
+    ]
   }
 }
