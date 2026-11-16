@@ -56,8 +56,10 @@ function parseCSV(text){const rows=[];let row=[],field='',quoted=false;for(let i
     }
     await page.selectOption('#study-target','all');await page.selectOption('#study-role','all');
     check((await page.locator('#current-study-qualification').innerText()).includes('proxy'),'Corrected study retains availability qualification');
+    await page.locator('#current-study-section details > summary').click();
     check((await page.locator('#current-study-original-note').innerText()).includes('24 games'),'Original timing-defect counts retained');
     check(await page.locator('#current-study-original-body tr[data-study-model]').count()===12,'All original study diagnostics preserved');
+    await page.locator('#current-study-section details > summary').click();
     check(await page.evaluate(()=>document.documentElement.scrollWidth<=innerWidth),'Model table scrolls inside viewport');
     await page.selectOption('#model-target','winner');await page.selectOption('#model-metric','log_loss');
     if(out){await page.screenshot({path:path.join(out,`fbs-v079-models-${live?'live':'static'}-${width}.png`),fullPage:true});await page.locator('#current-study-section').screenshot({path:path.join(out,`fbs-v080r1-study-${live?'live':'static'}-${width}.png`)});}
