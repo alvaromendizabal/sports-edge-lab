@@ -1,0 +1,9 @@
+provider,product,full_upcoming,matched,model,both_directional,same_direction,mean_absolute_probability_gap,capture_utc
+DraftKings,h2h,123,14,Monday recent opponent ridge,14,13,0.0865625800420904,2026-11-16T19:03:52.499262+00:00
+DraftKings,spreads,123,14,Monday recent opponent ridge,11,9,0.11350698883275179,2026-11-16T19:03:52.499262+00:00
+DraftKings,totals,123,14,Monday recent opponent ridge,11,2,0.0735098087949524,2026-11-16T19:03:52.499262+00:00
+Kalshi,spreads,123,11,Monday recent opponent ridge,11,4,0.12432286759992651,2026-11-16T19:03:52.499262+00:00
+Kalshi,totals,123,11,Monday recent opponent ridge,11,4,0.07174755675316309,2026-11-16T19:03:52.499262+00:00
+Polymarket,h2h,123,13,Monday recent opponent ridge,13,12,0.09660265387009105,2026-11-16T19:03:52.499262+00:00
+Polymarket,spreads,123,13,Monday recent opponent ridge,13,5,0.12643323863711428,2026-11-16T19:03:52.499262+00:00
+Polymarket,totals,123,13,Monday recent opponent ridge,10,5,0.11091683742074811,2026-11-16T19:03:52.499262+00:00

@@ -15,7 +15,7 @@ season,status,provider,fixtures,any_exact,monday_fresh_any,monday_historical_spr
 2026,UPCOMING_TBD,Kalshi,24,0,0,0,0,0,0,0
 2026,UPCOMING_TBD,Polymarket,24,0,0,0,0,0,0,0
 2026,UPCOMING_TBD,Polymarket_US,24,0,0,0,0,0,0,0
-2026,UPCOMING_TIMED,DraftKings,99,93,0,0,93,93,93,0
-2026,UPCOMING_TIMED,Kalshi,99,1,0,0,0,1,1,0
+2026,UPCOMING_TIMED,DraftKings,99,95,14,0,95,95,95,0
+2026,UPCOMING_TIMED,Kalshi,99,11,11,0,0,11,11,0
 2026,UPCOMING_TIMED,Polymarket,99,30,18,0,30,17,14,2
 2026,UPCOMING_TIMED,Polymarket_US,99,0,0,0,0,0,0,0

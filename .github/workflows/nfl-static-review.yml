@@ -62,7 +62,7 @@ jobs:
         env:
           PLAYWRIGHT_MODULE_DIR: ${{ runner.temp }}/nfl-static-browser/node_modules/playwright
           NFL_N088_EVIDENCE: ${{ runner.temp }}/nfl-static-evidence/online
-          NFL_N088_ONLINE_URL: https://sports-edge-lab-nfl.alv-mendizabal.chatgpt.site/
+          NFL_N088_ONLINE_URL: https://sports-edge-lab-nfl.alv-mendizabal.chatgpt.site/n088/
         run: |
           if test -f tracks/nfl/n088_online_deployment.json; then
             node tracks/nfl/dashboard_n088_browser.cjs

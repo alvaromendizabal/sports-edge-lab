@@ -1,0 +1,52 @@
+{
+  "eligible_unstarted": 123,
+  "timestamp": "2026-11-16T19:03:52.499262+00:00",
+  "number_of_matching_source_fixture_ids": 14,
+  "reported_provider_games": {
+    "draftkings": 14,
+    "kalshi": 12,
+    "polymarket": 13,
+    "polymarket_us": 13
+  },
+  "exact_games_by_venue": {
+    "DraftKings": {
+      "current_winner": 14,
+      "current_spreads": 14,
+      "current_totals": 14,
+      "distinct_fixtures_with_exact_contract": 14,
+      "exact_contract_count": 42,
+      "listed": 14
+    },
+    "Kalshi": {
+      "current_winner": 0,
+      "current_spreads": 11,
+      "current_totals": 11,
+      "distinct_fixtures_with_exact_contract": 11,
+      "exact_contract_count": 22,
+      "listed": 12
+    },
+    "Polymarket": {
+      "current_winner": 13,
+      "current_spreads": 13,
+      "current_totals": 13,
+      "distinct_fixtures_with_exact_contract": 13,
+      "exact_contract_count": 39,
+      "listed": 13
+    },
+    "Polymarket_US": {
+      "current_winner": 0,
+      "current_spreads": 0,
+      "current_totals": 0,
+      "distinct_fixtures_with_exact_contract": 0,
+      "exact_contract_count": 0,
+      "listed": 13
+    }
+  },
+  "three_venue_payouts": {
+    "spreads": 6,
+    "totals": 6
+  },
+  "three_venue_distinct_games": 8,
+  "credits": 3,
+  "paid_calls": 1
+}
