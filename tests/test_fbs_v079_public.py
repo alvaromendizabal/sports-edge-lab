@@ -153,6 +153,8 @@ class PublicV079(unittest.TestCase):
         self.assertEqual(self.data["forecast_coverage"]["total_current_forecast_rows"], current["verified_current_total_issue_records"])
         self.assertFalse(current["private_candidate_grid_published"])
         self.assertTrue(current["fit_calls_do_not_establish_novel_models"])
+        self.assertEqual(current["avoidable_duplicate_base_fit_calls"], current["base_fit_calls"])
+        self.assertIn("were avoidable", current["duplicate_fit_disclosure"])
         self.assertFalse(current["promotion"])
         dt = lambda value: datetime.fromisoformat(value.replace("Z", "+00:00"))
         seen = 0

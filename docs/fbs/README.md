@@ -13,7 +13,7 @@ All **35 scheduled recipe/target combinations** cover the same completed game id
 
 The preserved roster retains **269 model identities across 295 model/target entries**. The scheduled queue comprises 26 recovered base recipe/target combinations and 9 exact fixed blends. The other **260 entries remain visible as blocked**, including recovered richer 228/240-feature models whose full-population inputs and producer/source clocks are incomplete. Completion of this queue does not establish that every old champion has been reconstructed. The earlier 47-game issued sample remains a dated diagnostic appendix.
 
-The full-population recovery reused **6,500 completed fit states**, with zero new fits, zero failures and 91,175 prediction rows in that stage. The separate current refresh performed **26 base fit calls and 8 calibrator fit calls**; fit-call counts do not establish novel model learning. The dashboard distinguishes stage accounting from the preserved V078 execution.
+The full-population recovery reused **6,500 completed fit states**, with zero new fits, zero failures and 91,175 prediction rows in that stage. The separate current refresh performed **26 base fit calls and 8 calibrator fit calls**. All 26 base calls repeated identical numerical training identities and were avoidable; they remain counted as executed fits, without being relabeled as reuse or novel model learning. The full-state identities changed with calibration inputs. The audit compared authenticated report identities and did not reload model bodies; duplicate base-only overhead was not isolated. The dashboard distinguishes stage accounting from the preserved V078 execution.
 
 ### Actual upcoming forecasts
 
