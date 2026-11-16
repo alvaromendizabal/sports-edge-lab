@@ -164,4 +164,39 @@ def validate_public(value):
         common = group.get("common_intersection_games")
         if common is not None and (_count(common, "intersection games") > required):
             raise ValueError("Intersection exceeds fixed population")
+    recovered = value.get("recovered_saved_state_qualification")
+    if recovered is not None:
+        fields = {"source_receipt_sha256", "base_label_overlap_hours", "strict_refit_clock_failure_preserved",
+            "strict_chronological_refit_qualification", "original_source_possession_proved",
+            "original_issued_forecasts", "current_outcomes_used_for_selection",
+            "all_training_calibration_labels_before_current_logical_origin", "actual_original_fitting_date",
+            "readable_qualification", "scopes"}
+        if (set(recovered) != fields or recovered["source_receipt_sha256"] != value["source_receipt_sha256"]
+                or recovered["base_label_overlap_hours"] != 22.5
+                or recovered["strict_refit_clock_failure_preserved"] is not True
+                or recovered["strict_chronological_refit_qualification"] is not False
+                or recovered["original_source_possession_proved"] is not False
+                or recovered["original_issued_forecasts"] != 0
+                or recovered["current_outcomes_used_for_selection"] is not False
+                or recovered["all_training_calibration_labels_before_current_logical_origin"] is not True
+                or recovered["actual_original_fitting_date"] != "2026-11-07"
+                or not isinstance(recovered["readable_qualification"], str)
+                or "22.5-hour overlap" not in recovered["readable_qualification"]):
+            raise ValueError("Recovered calibration qualification changed")
+        scopes = recovered["scopes"]
+        if len(scopes) != 3 or {(r["target"], r["horizon_minutes"]) for r in scopes} != {
+                ("winner", 120), ("margin", 60), ("margin", 120)}:
+            raise ValueError("Recovered calibration scope changed")
+        for row in scopes:
+            if set(row) != {"alias", "label", "target", "horizon_minutes", "evidence_track"}:
+                raise ValueError("Private recovered calibration field")
+            matches = [m for g in value["groups"]
+                if (g["season"], g["phase"], g["target"], g["horizon_minutes"], g["evidence_track"]) ==
+                   ("2026-27", "regular", row["target"], row["horizon_minutes"], row["evidence_track"])
+                for m in g["models"] if m["alias"] == row["alias"]]
+            if (row["evidence_track"] != "QUALIFIED_FIXED_REPLAY" or len(matches) != 1
+                    or matches[0]["label"] != row["label"] or matches[0]["qualified_games"] != 197
+                    or not matches[0]["full_population_complete"]
+                    or matches[0]["strict_point_in_time_qualified_metrics"] is not None):
+                raise ValueError("Recovered calibration comparison is not qualified as declared")
     return copy.deepcopy(value)

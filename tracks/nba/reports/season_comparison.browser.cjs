@@ -103,10 +103,21 @@ module.exports = async function checkSeasonComparison(browser, output) {
       }
       await page.selectOption('#paired-target','winner');await page.selectOption('#paired-horizon','120');await page.selectOption('#paired-track','QUALIFIED_FIXED_REPLAY');
     }
+    const exchange=source.current_exchange_inventory;
+    assert.ok(exchange);assert.equal(exchange.rows.length,87);
+    assert.equal(await page.locator('#current-exchange-rows tr').count(),3);
+    assert.match(await page.locator('#current-exchange-clock').textContent(),/3 public catalog requests, 0 paid calls.*197 completed and 1003 named scheduled/);
+    assert.match(await page.locator('#current-exchange-inventory').textContent(),/missing record does not prove that a market was not offered/);
+    for(const provider of exchange.providers){const text=await page.locator('#current-exchange-rows').textContent();assert.ok(text.includes(provider.bound_scheduled_regular_games+' / 1003'));}
+    assert.doesNotMatch(await page.locator('#current-exchange-inventory').textContent(),/undefined|NaN/);
+    await page.locator('#current-exchange-inventory').scrollIntoViewIfNeeded();
+    await page.screenshot({path:path.join(output,'nba-current-exchange-'+name+'.png'),fullPage:false});
     const ats=source.ats_point_diagnostics;
     assert.ok(ats);
-    assert.match(await page.locator('#ats-point-scope').textContent(),/8 complete margin\/evidence cells out of 792 required cells.*identical 197 completed games/);
-    assert.match(await page.locator('#ats-point-missing').textContent(),/784 required margin\/evidence cells.*full 197-game requirement/);
+    assert.equal(source.equal_population_evaluation.census.complete_current_cells,43);
+    assert.match(await page.locator('#recovered-state-qualification').textContent(),/22.5-hour overlap.*strict chronological refit qualification remains blocked/);
+    assert.match(await page.locator('#ats-point-scope').textContent(),/10 complete margin\/evidence cells out of 792 required cells.*identical 197 completed games/);
+    assert.match(await page.locator('#ats-point-missing').textContent(),/782 required margin\/evidence cells.*full 197-game requirement/);
     assert.equal(await page.locator('#ats-point-rows tr').count(),ats.summaries.length);
     const atsRows=await page.locator('#ats-point-rows tr').allTextContents();
     ats.summaries.forEach((r,i)=>{assert.ok(atsRows[i].includes(r.alias));assert.ok(atsRows[i].includes(r.mathematical_cover_wins+'–'+r.mathematical_cover_losses+'–'+r.mathematical_pushes));});
@@ -150,7 +161,7 @@ module.exports = async function checkSeasonComparison(browser, output) {
         const game=source.games.find(g=>g.game_id===row.id),forecast=game.forecasts[`regular_${target}_${objective}_t120`];
         if(forecast)assert.ok(row.text.includes(target==='winner'?(forecast.prediction*100).toFixed(2)+'%':forecast.prediction.toFixed(2)));
         else assert.ok(row.text.includes('No current-role original issue'));
-        const missing=Object.entries(game.markets).filter(([provider,m])=>!m.bound_observations&&m.status!=='PREGAME_WINNER_REFERENCE_RETAINED_PRICE_NOT_PUBLIC'&&!(provider==='DRAFTKINGS'&&source.draftkings_analytical?.rows.some(r=>r.game_id===game.game_id&&r.target===target&&(r.horizon_minutes===120||r.horizon_minutes===null)))).length;
+        const missing=Object.entries(game.markets).filter(([provider,m])=>!source.current_exchange_inventory?.rows.some(r=>r.game_id===game.game_id&&r.provider===provider)&&!m.bound_observations&&m.status!=='PREGAME_WINNER_REFERENCE_RETAINED_PRICE_NOT_PUBLIC'&&!(provider==='DRAFTKINGS'&&source.draftkings_analytical?.rows.some(r=>r.game_id===game.game_id&&r.target===target&&(r.horizon_minutes===120||r.horizon_minutes===null)))).length;
         assert.equal((row.text.match(/No bound record in audited snapshot/g)||[]).length,missing);
       }
     }
@@ -160,7 +171,9 @@ module.exports = async function checkSeasonComparison(browser, output) {
     assert.match(await page.locator('#game-rows').textContent(),/No observed games/);
     await page.fill('#game-search','');await page.selectOption('#phase','ALL');await page.selectOption('#target','winner');await page.selectOption('#horizon','60');
     await page.selectOption('#market-availability','RETAINED');
-    assert.match(await page.locator('#game-count').textContent(),/^68 matching/);
+    const retainedGames=new Set([...source.games.filter(g=>Object.values(g.markets).some(m=>m.status==='PREGAME_WINNER_REFERENCE_RETAINED_PRICE_NOT_PUBLIC')).map(g=>g.game_id),...exchange.rows.filter(r=>r.winner_contract_reference_rows>0).map(r=>r.game_id)]);
+    assert.equal(retainedGames.size,82);
+    assert.match(await page.locator('#game-count').textContent(),new RegExp('^'+retainedGames.size+' matching'));
     assert.match(await page.locator('#game-rows').textContent(),/Winner reference retained/);
     assert.match(await page.locator('#game-rows').textContent(),/Provider quote time unknown/);
     await page.selectOption('#target','margin');

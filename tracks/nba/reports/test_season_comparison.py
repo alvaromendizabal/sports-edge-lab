@@ -271,12 +271,12 @@ class SeasonComparisonTests(unittest.TestCase):
         from ats_public import validate_public
         data=json.loads(self.generated_raw);value=data['ats_point_diagnostics'];market=data['model_market_comparison']
         self.assertEqual(value['required_games'],197)
-        self.assertEqual((value['required_margin_model_cells'],value['full_model_cells'],len(value['incomplete_required_cells'])),(792,8,784))
+        self.assertEqual((value['required_margin_model_cells'],value['full_model_cells'],len(value['incomplete_required_cells'])),(792,10,782))
         self.assertFalse(value['historical_issued_strategy_claim'])
         self.assertFalse(value['calibrated_cover_probability_available'])
         self.assertFalse(value['settlement_or_roi_claim'])
         self.assertFalse(value['current_test_used_for_selection'])
-        self.assertEqual(sum(r['games'] for r in value['summaries']),1576)
+        self.assertEqual(sum(r['games'] for r in value['summaries']),1970)
         for change,reason in [
             (lambda x:x.update(settlement_or_roi_claim=True),'policy'),
             (lambda x:x['summaries'][0].update(mathematical_cover_wins=197),'arithmetic'),
@@ -335,7 +335,7 @@ class SeasonComparisonTests(unittest.TestCase):
         self.assertEqual(census['census']['model_phase_target_horizon_scopes'],2390)
         self.assertEqual(sum(len(g['models']) for g in census['groups']),11950)
         self.assertEqual(sum(g['complete_candidate_count'] for g in census['groups'] if g['season']!='2026-27'),4444)
-        self.assertEqual(sum(g['complete_candidate_count'] for g in census['groups'] if g['season']=='2026-27'),40)
+        self.assertEqual(sum(g['complete_candidate_count'] for g in census['groups'] if g['season']=='2026-27'),43)
         self.assertFalse(census['historical_source_availability_proved'])
         for group in census['groups']:
             self.assertEqual(group['required_candidate_count'],len(group['models']))
@@ -351,12 +351,29 @@ class SeasonComparisonTests(unittest.TestCase):
         self.assertEqual(census['legacy_census']['aggregate_source_aliases_retained_separately'],128)
         self.assertTrue(census['legacy_census']['no_distinct_numerical_model_state_or_original_observation_discarded'])
 
+    def test_recovered_saved_states_keep_calibration_overlap_explicit(self):
+        from equal_population_public import validate_public
+        population=json.loads(self.generated_raw)['equal_population_evaluation']
+        q=population['recovered_saved_state_qualification']
+        self.assertEqual(q['base_label_overlap_hours'],22.5)
+        self.assertEqual(len(q['scopes']),3)
+        self.assertFalse(q['strict_chronological_refit_qualification'])
+        self.assertIn('not original pregame issues',q['readable_qualification'])
+        self.assertEqual(validate_public(population),population)
+        for mutation in (
+            lambda x:x['recovered_saved_state_qualification'].update(strict_chronological_refit_qualification=True),
+            lambda x:x['recovered_saved_state_qualification'].update(original_issued_forecasts=1),
+            lambda x:x['recovered_saved_state_qualification']['scopes'].pop(),
+        ):
+            value=copy.deepcopy(population);mutation(value)
+            with self.assertRaisesRegex(ValueError,'calibration'):validate_public(value)
+
     def test_current_market_scope_keeps_every_candidate_and_full_provider_baseline(self):
         from model_market_public import validate_public
         data=json.loads(self.generated_raw);value=data['model_market_comparison'];population=data['equal_population_evaluation']
         self.assertTrue(value['comparison_requires_all_candidates'])
         uncertainty=value['full_population_uncertainty']
-        self.assertEqual((uncertainty['comparisons'],uncertainty['week_blocks'],uncertainty['draws']),(98,4,4000))
+        self.assertEqual((uncertainty['comparisons'],uncertainty['week_blocks'],uncertainty['draws']),(105,4,4000))
         self.assertEqual(uncertainty['intervals_include_zero'],29)
         self.assertTrue(uncertainty['market_better_point_estimate_on_all_reported_metrics'])
         self.assertFalse(uncertainty['current_selection_allowed'])
@@ -381,6 +398,34 @@ class SeasonComparisonTests(unittest.TestCase):
         with self.assertRaisesRegex(ValueError,'Partial paired'):validate_public(changed,population)
         changed=copy.deepcopy(value);changed['groups'][0].update(market_games=196,missing_market_games=1)
         with self.assertRaisesRegex(ValueError,'provider-only full'):validate_public(changed,population)
+
+    def test_current_exchange_catalog_preserves_partial_scope_and_private_prices(self):
+        from exchange_inventory_public import validate_public
+        data=json.loads(self.generated_raw)
+        value=data['current_exchange_inventory']
+        inventory=json.loads((b.ROOT/'current_game_inventory.json').read_text())
+        self.assertEqual(validate_public(value,data['games'],inventory['source_snapshot_sha256']),value)
+        self.assertEqual((value['network_requests'],value['paid_calls'],value['new_fits']),(3,0,0))
+        self.assertEqual((value['completed_regular_required'],value['scheduled_regular_required']),(197,1003))
+        self.assertEqual(len(value['rows']),87)
+        by={p['provider']:p for p in value['providers']}
+        self.assertEqual((by['KALSHI']['bound_completed_regular_games'],by['KALSHI']['bound_scheduled_regular_games']),(14,30))
+        self.assertEqual((by['POLYMARKET_US']['bound_scheduled_regular_games'],by['POLYMARKET_US']['winner_reference_games']),(43,42))
+        self.assertEqual(by['POLYMARKET_INTERNATIONAL']['unbound_observations'],609)
+        self.assertFalse(value['all_market_offerings_known'])
+        self.assertFalse(value['historical_quote_possession_claim'])
+        self.assertFalse(value['price_values_exported'])
+        self.assertTrue(value['earlier_inventory_preserved'])
+        self.assertEqual(data['provider_game_coverage']['summary']['KALSHI']['bound_games'],80)
+        for mutation,reason in [
+            (lambda x:x.update(all_market_offerings_known=True),'policy'),
+            (lambda x:x['rows'][0].update(yes_bid=.5),'private'),
+            (lambda x:x['rows'][0].update(provider_quote_time_known=True),'private'),
+            (lambda x:x['rows'].pop(),'reproduce'),
+            (lambda x:x.update(network_requests=4),'scope'),
+        ]:
+            changed=copy.deepcopy(value);mutation(changed)
+            with self.assertRaisesRegex(ValueError,reason):validate_public(changed,data['games'],inventory['source_snapshot_sha256'])
 
     def test_validation_ties_and_uncertainty_are_explicit(self):
         data=json.loads(self.generated_raw);groups=data['validation_leaders']['groups']
