@@ -363,6 +363,8 @@ def build(root=ROOT):
         from model_market_public import validate_public as validate_model_market
         paired, paired_hash = read_json(paired_path)
         paired = validate_model_market(paired,result['equal_population_evaluation'])
+        if paired['model_scoreboard_source_sha256'] != result['equal_population_evaluation']['source_receipt_sha256']:
+            raise ValueError('Paired scores refer to a different model scoreboard receipt')
         if paired['normalized_quotes_sha256'] != result.get('draftkings_analytical',{}).get('source_normalized_sha256'):
             raise ValueError('Paired scores refer to a different market snapshot')
         if any(g['required_games'] != result['coverage']['regular_status_counts'].get('FINAL',0) for g in paired['groups']):

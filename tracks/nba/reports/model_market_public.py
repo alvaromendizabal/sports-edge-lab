@@ -146,6 +146,7 @@ def project(raw, *, expected_sha256, equal_population):
     result={'schema':'sel.nba.public_model_market_comparison.v1','as_of_utc':source['as_of_utc'],
             'source_receipt_sha256':expected_sha256,'provider':'DraftKings',
             'normalized_quotes_sha256':source['source_receipts']['markets']['pin']['sha256'],
+            'model_scoreboard_source_sha256':source['source_receipts']['scoreboard']['pin']['sha256'],
             'current_test_previously_exposed':True,'automatic_promotion':False,'settlement_or_roi_claim':False,
             'groups':groups}
     text=json.dumps(result)

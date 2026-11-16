@@ -4,6 +4,9 @@ const fs = require('node:fs');
 const path = require('node:path');
 const zlib = require('node:zlib');
 const {pathToFileURL} = require('node:url');
+async function changeControls(page,pairs){
+  await page.evaluate(values=>{for(const [id,value] of values){const element=document.getElementById(id);element.value=String(value);if(element.value!==String(value))throw new Error('Unavailable control value '+id);element.dispatchEvent(new Event('change',{bubbles:true}));}},pairs);
+}
 
 module.exports = async function checkSeasonComparison(browser, output) {
   require('node:child_process').execFileSync('python',[path.join(__dirname,'build_season_comparison.py'),'--check'],{stdio:'pipe'});
@@ -30,24 +33,19 @@ module.exports = async function checkSeasonComparison(browser, output) {
     assert.equal(equal.protocol.test_exposure_status,'PREVIOUSLY_EXPOSED');
     assert.match(await page.locator('#equal-population-protocol').textContent(),/Selection population: 2024–25 and 2025–26.*prior analytical exposure/);
     for(const group of equal.groups){
-      await page.selectOption('#equal-phase',group.phase);
-      await page.selectOption('#equal-target',group.target);
-      await page.selectOption('#equal-horizon',String(group.horizon_minutes));
-      await page.selectOption('#equal-track',group.evidence_track);
-      await page.selectOption('#equal-season',group.season);
       const metric=group.target==='winner'?'log_loss':'mae';
-      await page.selectOption('#equal-metric',metric);
-      assert.match(await page.locator('#equal-population-scope').textContent(),new RegExp('Required population: '+group.required_games+' games; '+group.required_candidate_count+' required candidates'));
-      const display=await page.locator('#equal-population-rows tr').allTextContents();
-      assert.equal(display.length,group.models.length);
+      await changeControls(page,[['equal-phase',group.phase],['equal-target',group.target],['equal-horizon',group.horizon_minutes],['equal-track',group.evidence_track],['equal-season',group.season],['equal-metric',metric]]);
+      const observed=await page.evaluate(()=>({scope:document.getElementById('equal-population-scope').textContent,rows:[...document.querySelectorAll('#equal-population-rows tr')].map(r=>r.textContent),result:document.getElementById('equal-population-result').textContent,section:document.getElementById('equal-population').textContent}));
+      assert.match(observed.scope,new RegExp('Required population: '+group.required_games+' games; '+group.required_candidate_count+' required candidates'));
+      const display=observed.rows;assert.equal(display.length,group.models.length);
       group.models.forEach((m,i)=>{
         assert.ok(display[i].includes(m.label));
         assert.ok(display[i].includes(m.qualified_games+' / '+group.required_games));
         if(!m.full_population_complete)assert.ok(display[i].includes('Unavailable'));
         else if(typeof m.full_population_metrics?.[metric]==='number')assert.ok(display[i].includes(m.full_population_metrics[metric].toFixed(6)));
       });
-      if(!group.all_required_candidates_complete)assert.match(await page.locator('#equal-population-result').textContent(),/No all-candidate full-population ranking/);
-      assert.doesNotMatch(await page.locator('#equal-population').textContent(),/undefined|NaN/);
+      if(!group.all_required_candidates_complete)assert.match(observed.result,/No all-candidate full-population ranking/);
+      assert.doesNotMatch(observed.section,/undefined|NaN/);
     }
     await page.selectOption('#equal-phase','regular');await page.selectOption('#equal-target','winner');await page.selectOption('#equal-horizon','120');await page.selectOption('#equal-season','2026-27');
     if(equal.groups.some(g=>g.evidence_track==='QUALIFIED_FIXED_REPLAY'&&g.target==='winner'&&g.horizon_minutes===120&&g.phase==='regular'))await page.selectOption('#equal-track','QUALIFIED_FIXED_REPLAY');
@@ -56,7 +54,7 @@ module.exports = async function checkSeasonComparison(browser, output) {
     const paired=source.model_market_comparison;
     if(paired){
       for(const group of paired.groups){
-        await page.selectOption('#paired-target',group.target);await page.selectOption('#paired-horizon',String(group.horizon_minutes));await page.selectOption('#paired-track',group.evidence_track);
+        await changeControls(page,[['paired-target',group.target],['paired-horizon',group.horizon_minutes],['paired-track',group.evidence_track]]);
         assert.match(await page.locator('#paired-market-scope').textContent(),new RegExp(group.required_games+' required 2026–27'));
         assert.equal(await page.locator('#paired-full-rows tr').count(),group.models.length);
         const cells=await page.locator('#paired-full-rows tr').allTextContents();
