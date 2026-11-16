@@ -1,0 +1,52 @@
+{
+  "schema": "fbs.v079.public-build.v1",
+  "state": "PREPARED_NOT_PUBLISHED",
+  "new_science_by_publication": 0,
+  "promotion": false,
+  "game_count": 2742,
+  "scorecard_count": 0,
+  "model_alias_count": 0,
+  "fixture_source_as_of": "2026-11-15T20:39:57Z",
+  "full_population_report_attached": false,
+  "files": [
+    {
+      "path": "README.md",
+      "bytes": 884,
+      "sha256": "6cd8e76b87ab764f6938aec963c3bc206d9faa6a7eac505d156134297bc2685f"
+    },
+    {
+      "path": "app.js",
+      "bytes": 29053,
+      "sha256": "b6e3eda557fc3021974a498809c2b84d5f6dfcac9c98638a88afb4d50bd2271a"
+    },
+    {
+      "path": "data/games.json.gz",
+      "bytes": 173983,
+      "sha256": "eac4da0a0385bfeb87742526709a00d4855016f3717487bf5d7e8e30597761c4"
+    },
+    {
+      "path": "data/review.json",
+      "bytes": 50948,
+      "sha256": "62195b288d4b8a4b56d5c866b3bf30d21b4edce7fa08d8c29ff0401d67143d19"
+    },
+    {
+      "path": "index.html",
+      "bytes": 20011,
+      "sha256": "ef33316b76479ffa8373a44e85b93f17ce2671ba48341b24ed25d7368fee483e"
+    },
+    {
+      "path": "styles.css",
+      "bytes": 8671,
+      "sha256": "4df026a345bccbbdee91abd7b014ce7a93fa4dcb52a87ca55ed3602e472c49d7"
+    }
+  ],
+  "validation": {
+    "unique_season_game_ids": true,
+    "public_boundary_scan": true,
+    "scorecard_denominators": true
+  },
+  "browser_validation": "PENDING_ORIGINATING_OWNER_BROWSER",
+  "build_input_sha256": "70a6ea6b3de121f69cb73fdb919018103fef73b1ddbd2be98e0a2a99083e0483",
+  "atomic_commit": true,
+  "reused_existing_build": false
+}

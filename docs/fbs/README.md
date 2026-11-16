@@ -1,3 +1,17 @@
+<!-- FBS_V079_FIXED_POPULATION_REVIEW_START -->
+## V079 preparation — fixed populations, owner results pending
+
+This draft prepares the [same-population FBS comparison](v079/index.html) and its validation checks. **No V079 full-population model scorecards are attached yet.** It must not be merged or deployed as a completed evaluation before the authenticated owner results replace this pending state.
+
+The preserved source snapshot is **2026-11-15T20:39:57Z**. It records **919 completed 2024 games, 934 completed 2025 games and 751 completed 2026 games**. These are observed populations; official schedule completeness is not established. The route retains all 2,742 observed fixtures and explicit missing forecasts and provider cells. The upcoming owner report must use exactly the same final-game identities as its published fixture inventory.
+
+**2024 and 2025 are validation. Completed 2026 games are the fixed test reporting population.** The primary ordering pools only complete 2024–2025 rows within one evidence lane. The 2026 outcomes have already been exposed to research, so this is not a claim of untouched confirmation. The earlier 47-game issued sample and older monitors are diagnostic appendices. No automatic promotion occurs.
+
+DraftKings, Kalshi, Polymarket Global and Polymarket US remain separately visible for every fixture and target. Reference presence, permitted rounded display and qualified comparison are distinct. The retained provider snapshot does not establish complete current coverage; no new qualified market score is asserted by this draft.
+
+The current live report remains [V078](v078/index.html). This preparation changes no model, issue journal or source observation and does not publish private recipes, weights or candidate forecast grids.
+<!-- FBS_V079_FIXED_POPULATION_REVIEW_END -->
+
 <!-- FBS_V078R5_OWNER_REVIEW_START -->
 ## November 15, 2026, 12:39 p.m. Pacific: execution recovered and new forecasts committed
 
@@ -467,4 +481,5 @@ The latest authenticated V056 owner added 31 base fits and five statistical stat
 V057 prepares exact historical-recipe recovery, reusable per-candidate metrics before global closure, and bounded recovery that can advance after interruption. Its 64-unit chunks retain the eight-chunk ceiling, for an effective maximum of 512 units per recovery slice. Complete-population cache reuse requires independent canonical receipt, source and selector verification. No V057 AWS execution, new model improvement or automatic promotion is claimed. The requirement for hundreds of certified new feature concepts remains unmet.
 
 Evidence: [latest saved owner counts](actual-owner-v056.json), [historical scorecards and qualifications](historical-contenders-v057.json), and [FBS evidence dashboard](current.html). Publication is not a data refresh or model run. NFL, NBA and NCAA basketball retain their independent owners and evidence.
+
 
