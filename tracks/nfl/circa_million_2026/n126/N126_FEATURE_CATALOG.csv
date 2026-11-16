@@ -1,0 +1,133 @@
+model,description,protocol
+catboost__all,"Preseason team, clean market location, book dispersion and pregame movement",catboost / all
+catboost__disagreement,"Ten named books’ within-game deviations, dispersion and breadth",catboost / disagreement
+catboost__football,Preseason team and opponent scoring profiles; no market prices,catboost / football
+catboost__football_market,Preseason team profiles plus named market location,catboost / football_market
+catboost__market,"Ten named bookmaker moneylines, handicaps and totals",catboost / market
+catboost__market_disagreement,Market location plus two-sided price and line dispersion across ten books,catboost / market_disagreement
+catboost__market_movement,Market location plus time-qualified same-book trajectories,catboost / market_movement
+catboost__movement,"Matched-book 72h, 24h and 6h moves to T−120; path variation, breadth and observation flags",catboost / movement
+equal_pool__all,Equal linear probability pool over six full-feature native frameworks,equal_pool / all
+lightgbm__all,"Preseason team, clean market location, book dispersion and pregame movement",lightgbm / all
+lightgbm__disagreement,"Ten named books’ within-game deviations, dispersion and breadth",lightgbm / disagreement
+lightgbm__football,Preseason team and opponent scoring profiles; no market prices,lightgbm / football
+lightgbm__football_market,Preseason team profiles plus named market location,lightgbm / football_market
+lightgbm__market,"Ten named bookmaker moneylines, handicaps and totals",lightgbm / market
+lightgbm__market_disagreement,Market location plus two-sided price and line dispersion across ten books,lightgbm / market_disagreement
+lightgbm__market_movement,Market location plus time-qualified same-book trajectories,lightgbm / market_movement
+lightgbm__movement,"Matched-book 72h, 24h and 6h moves to T−120; path variation, breadth and observation flags",lightgbm / movement
+n113_team_strength_margin,"Signed recent scoring and points allowed, opponent net scoring over eight games, team net scoring over 16 games and capped rest.",fixed
+n113_team_strength_margin,"Signed recent scoring and points allowed, opponent net scoring over eight games, team net scoring over 16 games and capped rest.",registered_weekly_conditional_winner
+n113_team_strength_margin,"Signed recent scoring and points allowed, opponent net scoring over eight games, team net scoring over 16 games and capped rest.",registered_weekly_or_issued
+n113_team_strength_margin,"Signed recent scoring and points allowed, opponent net scoring over eight games, team net scoring over 16 games and capped rest.",season_start_fixed
+n113_team_strength_margin (season-opening),"Signed recent scoring and points allowed, opponent net scoring over eight games, team net scoring over 16 games and capped rest.",fixed
+n113_team_strength_margin (season-opening),"Signed recent scoring and points allowed, opponent net scoring over eight games, team net scoring over 16 games and capped rest.",frozen source-qualified N125 law
+n113_team_strength_margin (season-opening),"Signed recent scoring and points allowed, opponent net scoring over eight games, team net scoring over 16 games and capped rest.",season_start_fixed
+n114_opponent_adjusted_scoring_total,"Team scoring and concessions, opponent adjustment, venue and rest in a total-specific regression.",fixed
+n114_opponent_adjusted_scoring_total,"Team scoring and concessions, opponent adjustment, venue and rest in a total-specific regression.",registered_weekly_or_issued
+n114_opponent_adjusted_scoring_total (season-opening),"Team scoring and concessions, opponent adjustment, venue and rest in a total-specific regression.",fixed
+n121_opponent_ridge_pooled,"Joint team offense and opposing defense, league scoring and home advantage. 330-day half-life and ridge penalty 12.",fixed
+n121_opponent_ridge_pooled,"Joint team offense and opposing defense, league scoring and home advantage. 330-day half-life and ridge penalty 12.",registered_weekly_conditional_winner
+n121_opponent_ridge_pooled,"Joint team offense and opposing defense, league scoring and home advantage. 330-day half-life and ridge penalty 12.",registered_weekly_or_issued
+n121_opponent_ridge_pooled,"Joint team offense and opposing defense, league scoring and home advantage. 330-day half-life and ridge penalty 12.",season_start_fixed
+n121_opponent_ridge_pooled (season-opening),"Joint team offense and opposing defense, league scoring and home advantage. 330-day half-life and ridge penalty 12.",fixed
+n121_opponent_ridge_pooled (season-opening),"Joint team offense and opposing defense, league scoring and home advantage. 330-day half-life and ridge penalty 12.",frozen source-qualified N125 law
+n121_opponent_ridge_pooled (season-opening),"Joint team offense and opposing defense, league scoring and home advantage. 330-day half-life and ridge penalty 12.",season_start_fixed
+n121_opponent_ridge_pooled_asof_t120,"Joint team offense and opposing defense, league scoring and home advantage. 330-day half-life and ridge penalty 12. Last chronologically admissible weekly state at T−120.",fixed_t120
+n121_opponent_ridge_pooled_asof_t120,"Joint team offense and opposing defense, league scoring and home advantage. 330-day half-life and ridge penalty 12. Last chronologically admissible weekly state at T−120.",frozen source-qualified N125 law
+n121_opponent_ridge_recent,"Joint team offense and opposing defense, league scoring and home advantage. 140-day half-life and ridge penalty 6.",fixed
+n121_opponent_ridge_recent,"Joint team offense and opposing defense, league scoring and home advantage. 140-day half-life and ridge penalty 6.",registered_weekly_conditional_winner
+n121_opponent_ridge_recent,"Joint team offense and opposing defense, league scoring and home advantage. 140-day half-life and ridge penalty 6.",registered_weekly_or_issued
+n121_opponent_ridge_recent,"Joint team offense and opposing defense, league scoring and home advantage. 140-day half-life and ridge penalty 6.",season_start_fixed
+n121_opponent_ridge_recent (season-opening),"Joint team offense and opposing defense, league scoring and home advantage. 140-day half-life and ridge penalty 6.",fixed
+n121_opponent_ridge_recent (season-opening),"Joint team offense and opposing defense, league scoring and home advantage. 140-day half-life and ridge penalty 6.",frozen source-qualified N125 law
+n121_opponent_ridge_recent (season-opening),"Joint team offense and opposing defense, league scoring and home advantage. 140-day half-life and ridge penalty 6.",season_start_fixed
+n121_opponent_ridge_recent_asof_t120,"Joint team offense and opposing defense, league scoring and home advantage. 140-day half-life and ridge penalty 6. Last chronologically admissible weekly state at T−120.",fixed_t120
+n121_opponent_ridge_recent_asof_t120,"Joint team offense and opposing defense, league scoring and home advantage. 140-day half-life and ridge penalty 6. Last chronologically admissible weekly state at T−120.",frozen source-qualified N125 law
+n121_team_score_baseline,League and team scoring history with a home-field scoring adjustment.,fixed
+n121_team_score_baseline,League and team scoring history with a home-field scoring adjustment.,registered_weekly_conditional_winner
+n121_team_score_baseline,League and team scoring history with a home-field scoring adjustment.,registered_weekly_or_issued
+n121_team_score_baseline,League and team scoring history with a home-field scoring adjustment.,season_start_fixed
+n121_team_score_baseline (season-opening),League and team scoring history with a home-field scoring adjustment.,fixed
+n121_team_score_baseline (season-opening),League and team scoring history with a home-field scoring adjustment.,season_start_fixed
+n121_team_score_baseline_asof_t120,League and team scoring history with a home-field scoring adjustment. Last chronologically admissible weekly state at T−120.,fixed_t120
+n121_team_score_baseline_asof_t120,League and team scoring history with a home-field scoring adjustment. Last chronologically admissible weekly state at T−120.,frozen source-qualified N125 law
+n122_residual_league,"Separate team score corrections from pooled ridge, league scoring and home margin. Calibrates signed margin and total residuals separately.",fixed
+n122_residual_league,"Separate team score corrections from pooled ridge, league scoring and home margin. Calibrates signed margin and total residuals separately.",season_start_fixed
+n122_residual_league (season-opening),"Separate team score corrections from pooled ridge, league scoring and home margin. Calibrates signed margin and total residuals separately.",fixed
+n122_residual_league (season-opening),"Separate team score corrections from pooled ridge, league scoring and home margin. Calibrates signed margin and total residuals separately.",frozen source-qualified N125 law
+n122_residual_league (season-opening),"Separate team score corrections from pooled ridge, league scoring and home margin. Calibrates signed margin and total residuals separately.",season_start_fixed
+n122_residual_matchup,Team matchup and home/away corrections on top of the retained N121 pooled score model.,fixed
+n122_residual_matchup,Team matchup and home/away corrections on top of the retained N121 pooled score model.,season_start_fixed
+n122_residual_matchup (season-opening),Team matchup and home/away corrections on top of the retained N121 pooled score model.,fixed
+n122_residual_matchup (season-opening),Team matchup and home/away corrections on top of the retained N121 pooled score model.,season_start_fixed
+n123_integer_joint,"League scoring, home advantage, team offense and opponent defense. Prior-season residuals calibrate probabilities at individual integer margins and totals.",fixed
+n123_integer_joint,"League scoring, home advantage, team offense and opponent defense. Prior-season residuals calibrate probabilities at individual integer margins and totals.",season_start_fixed
+n123_integer_joint (season-opening),"League scoring, home advantage, team offense and opponent defense. Prior-season residuals calibrate probabilities at individual integer margins and totals.",fixed
+n123_integer_joint (season-opening),"League scoring, home advantage, team offense and opponent defense. Prior-season residuals calibrate probabilities at individual integer margins and totals.",frozen source-qualified N125 law
+n123_integer_joint (season-opening),"League scoring, home advantage, team offense and opponent defense. Prior-season residuals calibrate probabilities at individual integer margins and totals.",season_start_fixed
+n124_adjusted_long,venue | own_long_pf | opp_long_pa | own_long_adj_pf | opp_long_adj_pa. separate team score expectations from shared ridge,fixed_t120
+n124_adjusted_long,venue | own_long_pf | opp_long_pa | own_long_adj_pf | opp_long_adj_pa. separate team score expectations from shared ridge,frozen source-qualified N125 law
+n124_adjusted_long,venue | own_long_pf | opp_long_pa | own_long_adj_pf | opp_long_adj_pa. separate team score expectations from shared ridge,registered N124 weekly vintage
+n124_form_rest,venue | own_long_pf | opp_long_pa | own_long_adj_pf | opp_long_adj_pa | own_short_minus_long_adj_pf | opp_short_minus_long_adj_pa | rest_difference_days. separate team score expectations from shared ridge,fixed_t120
+n124_form_rest,venue | own_long_pf | opp_long_pa | own_long_adj_pf | opp_long_adj_pa | own_short_minus_long_adj_pf | opp_short_minus_long_adj_pa | rest_difference_days. separate team score expectations from shared ridge,frozen source-qualified N125 law
+n124_form_rest,venue | own_long_pf | opp_long_pa | own_long_adj_pf | opp_long_adj_pa | own_short_minus_long_adj_pf | opp_short_minus_long_adj_pa | rest_difference_days. separate team score expectations from shared ridge,registered N124 weekly vintage
+n124_raw_long,venue | own_long_pf | opp_long_pa. separate team score expectations from shared ridge,fixed_t120
+n124_raw_long,venue | own_long_pf | opp_long_pa. separate team score expectations from shared ridge,frozen source-qualified N125 law
+n124_raw_long,venue | own_long_pf | opp_long_pa. separate team score expectations from shared ridge,registered N124 weekly vintage
+n124_short_long,venue | own_long_pf | opp_long_pa | own_long_adj_pf | opp_long_adj_pa | own_short_minus_long_adj_pf | opp_short_minus_long_adj_pa. separate team score expectations from shared ridge,fixed_t120
+n124_short_long,venue | own_long_pf | opp_long_pa | own_long_adj_pf | opp_long_adj_pa | own_short_minus_long_adj_pf | opp_short_minus_long_adj_pa. separate team score expectations from shared ridge,frozen source-qualified N125 law
+n124_short_long,venue | own_long_pf | opp_long_pa | own_long_adj_pf | opp_long_adj_pa | own_short_minus_long_adj_pf | opp_short_minus_long_adj_pa. separate team score expectations from shared ridge,registered N124 weekly vintage
+n125_allowed_median_reference,"No learned correction. Median eligible market point for each available product; translate the football margin/total PMF to the median. If winner available, set conditional-away probability to the median no-vig outright quote.",fixed_t120
+n125_allowed_median_reference,"No learned correction. Median eligible market point for each available product; translate the football margin/total PMF to the median. If winner available, set conditional-away probability to the median no-vig outright quote.",frozen source-qualified N125 law
+n125_disagreement_ridge,"Same three heads with book breadth, cross-book disagreement, price/time and named-book deviations. Separately fitted new challenger.",fixed_t120
+n125_disagreement_ridge,"Same three heads with book breadth, cross-book disagreement, price/time and named-book deviations. Separately fitted new challenger.",frozen source-qualified N125 law
+n125_location_ridge,Intercept and scaled location correction. Separate regularized margin/total residual ridge and decisive winner logistic calibration with median market logit offset.,fixed_t120
+n125_location_ridge,Intercept and scaled location correction. Separate regularized margin/total residual ridge and decisive winner logistic calibration with median market logit offset.,frozen source-qualified N125 law
+n125_team_market_blend,"Fixed 75% disagreement-ridge and 25% market-free n124_raw_long for each complete probability distribution and point estimate, no additional optimizer.",fixed_t120
+n125_team_market_blend,"Fixed 75% disagreement-ridge and 25% market-free n124_raw_long for each complete probability distribution and point estimate, no additional optimizer.",frozen source-qualified N125 law
+n125_twenty_named_location_ridge,"One additional clean challenger, no replacement of the original ten-book slate. Aggregate the median of available named prices among the predeclared 20 positive sportsbook IDs, then estimate the same signed-location two-feature margin, total and winner corrections and honest held-out integer residual bank as n125_location_ridge. All fallback, clock and split rules inherit exactly from the primary study.",fixed_t120
+n125_twenty_named_location_ridge,"One additional clean challenger, no replacement of the original ten-book slate. Aggregate the median of available named prices among the predeclared 20 positive sportsbook IDs, then estimate the same signed-location two-feature margin, total and winner corrections and honest held-out integer residual bank as n125_location_ridge. All fallback, clock and split rules inherit exactly from the primary study.",frozen source-qualified N125 law
+sklearn__all,"Preseason team, clean market location, book dispersion and pregame movement",sklearn / all
+sklearn__all_context,All four core blocks plus dated football context,sklearn / all_context
+sklearn__all_raw_calibration,Identical ridge fit and residual law; no sign recalibration,sklearn / all_raw_calibration
+sklearn__context,"Dated quarterback, coaching, rest and venue history",sklearn / context
+sklearn__disagreement,"Ten named books’ within-game deviations, dispersion and breadth",sklearn / disagreement
+sklearn__football,Preseason team and opponent scoring profiles; no market prices,sklearn / football
+sklearn__football_market,Preseason team profiles plus named market location,sklearn / football_market
+sklearn__market,"Ten named bookmaker moneylines, handicaps and totals",sklearn / market
+sklearn__market_disagreement,Market location plus two-sided price and line dispersion across ten books,sklearn / market_disagreement
+sklearn__market_movement,Market location plus time-qualified same-book trajectories,sklearn / market_movement
+sklearn__movement,"Matched-book 72h, 24h and 6h moves to T−120; path variation, breadth and observation flags",sklearn / movement
+team_and_published_qb,"Team offense, opposing defense, home advantage and each dated listed quarterback. Unknown starters get zero individual adjustment.",weekly_published_qb
+team_and_published_qb,"Team offense, opposing defense, home advantage and each dated listed quarterback. Unknown starters get zero individual adjustment.",weekly_qb
+team_and_published_qb (weekly QB snapshot),"Team offense, opposing defense, home advantage and each dated listed quarterback. Unknown starters get zero individual adjustment.",weekly_published_qb
+team_and_published_qb (weekly QB snapshot),"Team offense, opposing defense, home advantage and each dated listed quarterback. Unknown starters get zero individual adjustment.",weekly_qb
+team_only,"Team offense, opposing defense and home advantage using the same dated source as the quarterback arm.",weekly_published_qb
+team_only,"Team offense, opposing defense and home advantage using the same dated source as the quarterback arm.",weekly_qb
+team_only (weekly QB snapshot),"Team offense, opposing defense and home advantage using the same dated source as the quarterback arm.",weekly_published_qb
+team_only (weekly QB snapshot),"Team offense, opposing defense and home advantage using the same dated source as the quarterback arm.",weekly_qb
+tensorflow__all,"Preseason team, clean market location, book dispersion and pregame movement",tensorflow / all
+tensorflow__disagreement,"Ten named books’ within-game deviations, dispersion and breadth",tensorflow / disagreement
+tensorflow__football,Preseason team and opponent scoring profiles; no market prices,tensorflow / football
+tensorflow__football_market,Preseason team profiles plus named market location,tensorflow / football_market
+tensorflow__market,"Ten named bookmaker moneylines, handicaps and totals",tensorflow / market
+tensorflow__market_disagreement,Market location plus two-sided price and line dispersion across ten books,tensorflow / market_disagreement
+tensorflow__market_movement,Market location plus time-qualified same-book trajectories,tensorflow / market_movement
+tensorflow__movement,"Matched-book 72h, 24h and 6h moves to T−120; path variation, breadth and observation flags",tensorflow / movement
+torch__all,"Preseason team, clean market location, book dispersion and pregame movement",torch / all
+torch__disagreement,"Ten named books’ within-game deviations, dispersion and breadth",torch / disagreement
+torch__football,Preseason team and opponent scoring profiles; no market prices,torch / football
+torch__football_market,Preseason team profiles plus named market location,torch / football_market
+torch__market,"Ten named bookmaker moneylines, handicaps and totals",torch / market
+torch__market_disagreement,Market location plus two-sided price and line dispersion across ten books,torch / market_disagreement
+torch__market_movement,Market location plus time-qualified same-book trajectories,torch / market_movement
+torch__movement,"Matched-book 72h, 24h and 6h moves to T−120; path variation, breadth and observation flags",torch / movement
+xgboost__all,"Preseason team, clean market location, book dispersion and pregame movement",xgboost / all
+xgboost__disagreement,"Ten named books’ within-game deviations, dispersion and breadth",xgboost / disagreement
+xgboost__football,Preseason team and opponent scoring profiles; no market prices,xgboost / football
+xgboost__football_market,Preseason team profiles plus named market location,xgboost / football_market
+xgboost__market,"Ten named bookmaker moneylines, handicaps and totals",xgboost / market
+xgboost__market_disagreement,Market location plus two-sided price and line dispersion across ten books,xgboost / market_disagreement
+xgboost__market_movement,Market location plus time-qualified same-book trajectories,xgboost / market_movement
+xgboost__movement,"Matched-book 72h, 24h and 6h moves to T−120; path variation, breadth and observation flags",xgboost / movement

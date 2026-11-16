@@ -1,0 +1,621 @@
+source,venue,product,model,forecast_basis,upcoming_denominator,matched_games,contract_rows,directional_cases,direction_agree,mean_absolute_probability_difference,outcomes_observed,asof
+licensed N126 pregame snapshot,DraftKings,spread,catboost__all,current N126 observed market endpoint,123,14,14,11,6,0.055669557261516,0,2026-11-16T22:04:50.800873+00:00
+licensed N126 pregame snapshot,DraftKings,spread,catboost__disagreement,current N126 observed market endpoint,123,14,14,11,8,0.1889443621585584,0,2026-11-16T22:04:50.800873+00:00
+licensed N126 pregame snapshot,DraftKings,spread,catboost__football,current N126 observed market endpoint,123,14,14,11,10,0.1390336673622812,0,2026-11-16T22:04:50.800873+00:00
+licensed N126 pregame snapshot,DraftKings,spread,catboost__football_market,current N126 observed market endpoint,123,14,14,11,6,0.024107620510230375,0,2026-11-16T22:04:50.800873+00:00
+licensed N126 pregame snapshot,DraftKings,spread,catboost__market,current N126 observed market endpoint,123,14,14,11,8,0.03311841578986914,0,2026-11-16T22:04:50.800873+00:00
+licensed N126 pregame snapshot,DraftKings,spread,catboost__market_disagreement,current N126 observed market endpoint,123,14,14,11,7,0.03160261263290757,0,2026-11-16T22:04:50.800873+00:00
+licensed N126 pregame snapshot,DraftKings,spread,catboost__market_movement,current N126 observed market endpoint,123,14,14,11,6,0.06924821815416203,0,2026-11-16T22:04:50.800873+00:00
+licensed N126 pregame snapshot,DraftKings,spread,catboost__movement,current N126 observed market endpoint,123,14,14,11,9,0.1864159885171184,0,2026-11-16T22:04:50.800873+00:00
+licensed N126 pregame snapshot,DraftKings,spread,equal_pool__all,current N126 observed market endpoint,123,14,14,11,10,0.02810947695705111,0,2026-11-16T22:04:50.800873+00:00
+licensed N126 pregame snapshot,DraftKings,spread,lightgbm__all,current N126 observed market endpoint,123,14,14,11,6,0.05537964168011457,0,2026-11-16T22:04:50.800873+00:00
+licensed N126 pregame snapshot,DraftKings,spread,lightgbm__disagreement,current N126 observed market endpoint,123,14,14,11,8,0.18619992588303094,0,2026-11-16T22:04:50.800873+00:00
+licensed N126 pregame snapshot,DraftKings,spread,lightgbm__football,current N126 observed market endpoint,123,14,14,11,10,0.13338601556984586,0,2026-11-16T22:04:50.800873+00:00
+licensed N126 pregame snapshot,DraftKings,spread,lightgbm__football_market,current N126 observed market endpoint,123,14,14,11,7,0.044070039876196385,0,2026-11-16T22:04:50.800873+00:00
+licensed N126 pregame snapshot,DraftKings,spread,lightgbm__market,current N126 observed market endpoint,123,14,14,11,5,0.043631716238841954,0,2026-11-16T22:04:50.800873+00:00
+licensed N126 pregame snapshot,DraftKings,spread,lightgbm__market_disagreement,current N126 observed market endpoint,123,14,14,11,6,0.0518510868879305,0,2026-11-16T22:04:50.800873+00:00
+licensed N126 pregame snapshot,DraftKings,spread,lightgbm__market_movement,current N126 observed market endpoint,123,14,14,11,7,0.08447609426783363,0,2026-11-16T22:04:50.800873+00:00
+licensed N126 pregame snapshot,DraftKings,spread,lightgbm__movement,current N126 observed market endpoint,123,14,14,11,9,0.17850552009587176,0,2026-11-16T22:04:50.800873+00:00
+licensed N126 pregame snapshot,DraftKings,spread,n124_adjusted_long,previous conditional fixed-checkpoint model law,123,14,14,11,7,0.1061348372183361,0,2026-11-16T22:04:50.800873+00:00
+licensed N126 pregame snapshot,DraftKings,spread,n124_form_rest,previous conditional fixed-checkpoint model law,123,14,14,11,10,0.12552105096466382,0,2026-11-16T22:04:50.800873+00:00
+licensed N126 pregame snapshot,DraftKings,spread,n124_raw_long,previous conditional fixed-checkpoint model law,123,14,14,11,7,0.10605387180930691,0,2026-11-16T22:04:50.800873+00:00
+licensed N126 pregame snapshot,DraftKings,spread,n124_short_long,previous conditional fixed-checkpoint model law,123,14,14,11,7,0.10737889234297039,0,2026-11-16T22:04:50.800873+00:00
+licensed N126 pregame snapshot,DraftKings,spread,n125_allowed_median_reference,previous N125 dated current model law,123,14,14,11,10,0.010716229105908495,0,2026-11-16T22:04:50.800873+00:00
+licensed N126 pregame snapshot,DraftKings,spread,n125_disagreement_ridge,previous N125 dated current model law,123,14,14,11,3,0.04161047899417393,0,2026-11-16T22:04:50.800873+00:00
+licensed N126 pregame snapshot,DraftKings,spread,n125_location_ridge,previous N125 dated current model law,123,14,14,11,3,0.04004214266659391,0,2026-11-16T22:04:50.800873+00:00
+licensed N126 pregame snapshot,DraftKings,spread,n125_team_market_blend,previous N125 dated current model law,123,14,14,11,7,0.018911638526779222,0,2026-11-16T22:04:50.800873+00:00
+licensed N126 pregame snapshot,DraftKings,spread,n125_team_only_reference,previous N125 dated current model law,123,14,14,11,7,0.10605387180930691,0,2026-11-16T22:04:50.800873+00:00
+licensed N126 pregame snapshot,DraftKings,spread,n125_twenty_named_location_ridge,previous N125 dated current model law,123,14,14,11,3,0.03889972087384587,0,2026-11-16T22:04:50.800873+00:00
+licensed N126 pregame snapshot,DraftKings,spread,sklearn__all,current N126 observed market endpoint,123,14,14,11,6,0.07786539606396661,0,2026-11-16T22:04:50.800873+00:00
+licensed N126 pregame snapshot,DraftKings,spread,sklearn__all_context,current N126 observed market endpoint,123,14,14,11,6,0.10174885813200289,0,2026-11-16T22:04:50.800873+00:00
+licensed N126 pregame snapshot,DraftKings,spread,sklearn__all_raw_calibration,current N126 observed market endpoint,123,14,14,11,6,0.06235463102693693,0,2026-11-16T22:04:50.800873+00:00
+licensed N126 pregame snapshot,DraftKings,spread,sklearn__context,current N126 observed market endpoint,123,14,14,11,10,0.14137993498588555,0,2026-11-16T22:04:50.800873+00:00
+licensed N126 pregame snapshot,DraftKings,spread,sklearn__disagreement,current N126 observed market endpoint,123,14,14,11,8,0.19225722895457545,0,2026-11-16T22:04:50.800873+00:00
+licensed N126 pregame snapshot,DraftKings,spread,sklearn__football,current N126 observed market endpoint,123,14,14,11,11,0.1484393868541953,0,2026-11-16T22:04:50.800873+00:00
+licensed N126 pregame snapshot,DraftKings,spread,sklearn__football_market,current N126 observed market endpoint,123,14,14,11,10,0.03385912853064712,0,2026-11-16T22:04:50.800873+00:00
+licensed N126 pregame snapshot,DraftKings,spread,sklearn__market,current N126 observed market endpoint,123,14,14,11,9,0.02861420959269636,0,2026-11-16T22:04:50.800873+00:00
+licensed N126 pregame snapshot,DraftKings,spread,sklearn__market_disagreement,current N126 observed market endpoint,123,14,14,11,5,0.046338741702406594,0,2026-11-16T22:04:50.800873+00:00
+licensed N126 pregame snapshot,DraftKings,spread,sklearn__market_movement,current N126 observed market endpoint,123,14,14,11,11,0.04733368273904742,0,2026-11-16T22:04:50.800873+00:00
+licensed N126 pregame snapshot,DraftKings,spread,sklearn__movement,current N126 observed market endpoint,123,14,14,11,10,0.19282771595779594,0,2026-11-16T22:04:50.800873+00:00
+licensed N126 pregame snapshot,DraftKings,spread,tensorflow__all,current N126 observed market endpoint,123,14,14,11,6,0.07135694047032017,0,2026-11-16T22:04:50.800873+00:00
+licensed N126 pregame snapshot,DraftKings,spread,tensorflow__disagreement,current N126 observed market endpoint,123,14,14,11,8,0.20081654381030334,0,2026-11-16T22:04:50.800873+00:00
+licensed N126 pregame snapshot,DraftKings,spread,tensorflow__football,current N126 observed market endpoint,123,14,14,11,10,0.12343554100081976,0,2026-11-16T22:04:50.800873+00:00
+licensed N126 pregame snapshot,DraftKings,spread,tensorflow__football_market,current N126 observed market endpoint,123,14,14,11,10,0.08787390788816392,0,2026-11-16T22:04:50.800873+00:00
+licensed N126 pregame snapshot,DraftKings,spread,tensorflow__market,current N126 observed market endpoint,123,14,14,11,6,0.04176236717674719,0,2026-11-16T22:04:50.800873+00:00
+licensed N126 pregame snapshot,DraftKings,spread,tensorflow__market_disagreement,current N126 observed market endpoint,123,14,14,11,8,0.09507732447978097,0,2026-11-16T22:04:50.800873+00:00
+licensed N126 pregame snapshot,DraftKings,spread,tensorflow__market_movement,current N126 observed market endpoint,123,14,14,11,9,0.030218508071386485,0,2026-11-16T22:04:50.800873+00:00
+licensed N126 pregame snapshot,DraftKings,spread,tensorflow__movement,current N126 observed market endpoint,123,14,14,11,9,0.1779060052143149,0,2026-11-16T22:04:50.800873+00:00
+licensed N126 pregame snapshot,DraftKings,spread,torch__all,current N126 observed market endpoint,123,14,14,11,8,0.1019636487607758,0,2026-11-16T22:04:50.800873+00:00
+licensed N126 pregame snapshot,DraftKings,spread,torch__disagreement,current N126 observed market endpoint,123,14,14,11,7,0.20165016638555652,0,2026-11-16T22:04:50.800873+00:00
+licensed N126 pregame snapshot,DraftKings,spread,torch__football,current N126 observed market endpoint,123,14,14,11,10,0.16666842490058678,0,2026-11-16T22:04:50.800873+00:00
+licensed N126 pregame snapshot,DraftKings,spread,torch__football_market,current N126 observed market endpoint,123,14,14,11,10,0.02048691028403702,0,2026-11-16T22:04:50.800873+00:00
+licensed N126 pregame snapshot,DraftKings,spread,torch__market,current N126 observed market endpoint,123,14,14,11,7,0.02933927038870899,0,2026-11-16T22:04:50.800873+00:00
+licensed N126 pregame snapshot,DraftKings,spread,torch__market_disagreement,current N126 observed market endpoint,123,14,14,11,5,0.06945713576896562,0,2026-11-16T22:04:50.800873+00:00
+licensed N126 pregame snapshot,DraftKings,spread,torch__market_movement,current N126 observed market endpoint,123,14,14,11,7,0.04211112390793835,0,2026-11-16T22:04:50.800873+00:00
+licensed N126 pregame snapshot,DraftKings,spread,torch__movement,current N126 observed market endpoint,123,14,14,11,8,0.21185175509117632,0,2026-11-16T22:04:50.800873+00:00
+licensed N126 pregame snapshot,DraftKings,spread,xgboost__all,current N126 observed market endpoint,123,14,14,11,7,0.034903297331528006,0,2026-11-16T22:04:50.800873+00:00
+licensed N126 pregame snapshot,DraftKings,spread,xgboost__disagreement,current N126 observed market endpoint,123,14,14,11,8,0.17641906153783934,0,2026-11-16T22:04:50.800873+00:00
+licensed N126 pregame snapshot,DraftKings,spread,xgboost__football,current N126 observed market endpoint,123,14,14,11,10,0.14460858092304724,0,2026-11-16T22:04:50.800873+00:00
+licensed N126 pregame snapshot,DraftKings,spread,xgboost__football_market,current N126 observed market endpoint,123,14,14,11,6,0.02645349503647055,0,2026-11-16T22:04:50.800873+00:00
+licensed N126 pregame snapshot,DraftKings,spread,xgboost__market,current N126 observed market endpoint,123,14,14,11,7,0.03234983995254264,0,2026-11-16T22:04:50.800873+00:00
+licensed N126 pregame snapshot,DraftKings,spread,xgboost__market_disagreement,current N126 observed market endpoint,123,14,14,11,6,0.03412272078475319,0,2026-11-16T22:04:50.800873+00:00
+licensed N126 pregame snapshot,DraftKings,spread,xgboost__market_movement,current N126 observed market endpoint,123,14,14,11,7,0.043027460810105764,0,2026-11-16T22:04:50.800873+00:00
+licensed N126 pregame snapshot,DraftKings,spread,xgboost__movement,current N126 observed market endpoint,123,14,14,11,8,0.18548275514623788,0,2026-11-16T22:04:50.800873+00:00
+licensed N126 pregame snapshot,DraftKings,total,catboost__all,current N126 observed market endpoint,123,14,14,11,7,0.043986031229711085,0,2026-11-16T22:04:50.800873+00:00
+licensed N126 pregame snapshot,DraftKings,total,catboost__disagreement,current N126 observed market endpoint,123,14,14,11,4,0.11739600084695585,0,2026-11-16T22:04:50.800873+00:00
+licensed N126 pregame snapshot,DraftKings,total,catboost__football,current N126 observed market endpoint,123,14,14,11,4,0.09748047789971624,0,2026-11-16T22:04:50.800873+00:00
+licensed N126 pregame snapshot,DraftKings,total,catboost__football_market,current N126 observed market endpoint,123,14,14,11,7,0.03139284063400527,0,2026-11-16T22:04:50.800873+00:00
+licensed N126 pregame snapshot,DraftKings,total,catboost__market,current N126 observed market endpoint,123,14,14,11,7,0.04102221128901692,0,2026-11-16T22:04:50.800873+00:00
+licensed N126 pregame snapshot,DraftKings,total,catboost__market_disagreement,current N126 observed market endpoint,123,14,14,11,10,0.026513200108406573,0,2026-11-16T22:04:50.800873+00:00
+licensed N126 pregame snapshot,DraftKings,total,catboost__market_movement,current N126 observed market endpoint,123,14,14,11,7,0.06758964710219549,0,2026-11-16T22:04:50.800873+00:00
+licensed N126 pregame snapshot,DraftKings,total,catboost__movement,current N126 observed market endpoint,123,14,14,11,4,0.12256896359352469,0,2026-11-16T22:04:50.800873+00:00
+licensed N126 pregame snapshot,DraftKings,total,equal_pool__all,current N126 observed market endpoint,123,14,14,11,6,0.06514144744396692,0,2026-11-16T22:04:50.800873+00:00
+licensed N126 pregame snapshot,DraftKings,total,lightgbm__all,current N126 observed market endpoint,123,14,14,11,7,0.03970674889618383,0,2026-11-16T22:04:50.800873+00:00
+licensed N126 pregame snapshot,DraftKings,total,lightgbm__disagreement,current N126 observed market endpoint,123,14,14,11,4,0.12364301342313182,0,2026-11-16T22:04:50.800873+00:00
+licensed N126 pregame snapshot,DraftKings,total,lightgbm__football,current N126 observed market endpoint,123,14,14,11,3,0.09991185324912596,0,2026-11-16T22:04:50.800873+00:00
+licensed N126 pregame snapshot,DraftKings,total,lightgbm__football_market,current N126 observed market endpoint,123,14,14,11,6,0.0549729902861455,0,2026-11-16T22:04:50.800873+00:00
+licensed N126 pregame snapshot,DraftKings,total,lightgbm__market,current N126 observed market endpoint,123,14,14,11,7,0.062065734446892895,0,2026-11-16T22:04:50.800873+00:00
+licensed N126 pregame snapshot,DraftKings,total,lightgbm__market_disagreement,current N126 observed market endpoint,123,14,14,11,5,0.03513592636523704,0,2026-11-16T22:04:50.800873+00:00
+licensed N126 pregame snapshot,DraftKings,total,lightgbm__market_movement,current N126 observed market endpoint,123,14,14,11,6,0.052269622391195494,0,2026-11-16T22:04:50.800873+00:00
+licensed N126 pregame snapshot,DraftKings,total,lightgbm__movement,current N126 observed market endpoint,123,14,14,11,4,0.11570485328809611,0,2026-11-16T22:04:50.800873+00:00
+licensed N126 pregame snapshot,DraftKings,total,n124_adjusted_long,previous conditional fixed-checkpoint model law,123,14,14,11,2,0.08596287294753027,0,2026-11-16T22:04:50.800873+00:00
+licensed N126 pregame snapshot,DraftKings,total,n124_form_rest,previous conditional fixed-checkpoint model law,123,14,14,11,2,0.08257941430091376,0,2026-11-16T22:04:50.800873+00:00
+licensed N126 pregame snapshot,DraftKings,total,n124_raw_long,previous conditional fixed-checkpoint model law,123,14,14,11,2,0.07886076461752774,0,2026-11-16T22:04:50.800873+00:00
+licensed N126 pregame snapshot,DraftKings,total,n124_short_long,previous conditional fixed-checkpoint model law,123,14,14,11,2,0.08190272257159044,0,2026-11-16T22:04:50.800873+00:00
+licensed N126 pregame snapshot,DraftKings,total,n125_allowed_median_reference,previous N125 dated current model law,123,14,14,11,7,0.04595226484983985,0,2026-11-16T22:04:50.800873+00:00
+licensed N126 pregame snapshot,DraftKings,total,n125_disagreement_ridge,previous N125 dated current model law,123,14,14,11,4,0.0285660708844999,0,2026-11-16T22:04:50.800873+00:00
+licensed N126 pregame snapshot,DraftKings,total,n125_location_ridge,previous N125 dated current model law,123,14,14,11,4,0.030231115744873756,0,2026-11-16T22:04:50.800873+00:00
+licensed N126 pregame snapshot,DraftKings,total,n125_team_market_blend,previous N125 dated current model law,123,14,14,11,3,0.02967366388270857,0,2026-11-16T22:04:50.800873+00:00
+licensed N126 pregame snapshot,DraftKings,total,n125_team_only_reference,previous N125 dated current model law,123,14,14,11,2,0.07886076461752774,0,2026-11-16T22:04:50.800873+00:00
+licensed N126 pregame snapshot,DraftKings,total,n125_twenty_named_location_ridge,previous N125 dated current model law,123,14,14,11,4,0.03054195150101049,0,2026-11-16T22:04:50.800873+00:00
+licensed N126 pregame snapshot,DraftKings,total,sklearn__all,current N126 observed market endpoint,123,14,14,11,4,0.06754190602549419,0,2026-11-16T22:04:50.800873+00:00
+licensed N126 pregame snapshot,DraftKings,total,sklearn__all_context,current N126 observed market endpoint,123,14,14,11,4,0.1300912671176032,0,2026-11-16T22:04:50.800873+00:00
+licensed N126 pregame snapshot,DraftKings,total,sklearn__all_raw_calibration,current N126 observed market endpoint,123,14,14,11,4,0.06754190602549419,0,2026-11-16T22:04:50.800873+00:00
+licensed N126 pregame snapshot,DraftKings,total,sklearn__context,current N126 observed market endpoint,123,14,14,11,5,0.09675081905090846,0,2026-11-16T22:04:50.800873+00:00
+licensed N126 pregame snapshot,DraftKings,total,sklearn__disagreement,current N126 observed market endpoint,123,14,14,11,4,0.13043499077917145,0,2026-11-16T22:04:50.800873+00:00
+licensed N126 pregame snapshot,DraftKings,total,sklearn__football,current N126 observed market endpoint,123,14,14,11,1,0.12576957030505517,0,2026-11-16T22:04:50.800873+00:00
+licensed N126 pregame snapshot,DraftKings,total,sklearn__football_market,current N126 observed market endpoint,123,14,14,11,3,0.06695766553188628,0,2026-11-16T22:04:50.800873+00:00
+licensed N126 pregame snapshot,DraftKings,total,sklearn__market,current N126 observed market endpoint,123,14,14,11,7,0.036447605146503935,0,2026-11-16T22:04:50.800873+00:00
+licensed N126 pregame snapshot,DraftKings,total,sklearn__market_disagreement,current N126 observed market endpoint,123,14,14,11,6,0.05597567515730527,0,2026-11-16T22:04:50.800873+00:00
+licensed N126 pregame snapshot,DraftKings,total,sklearn__market_movement,current N126 observed market endpoint,123,14,14,11,6,0.14040268045088836,0,2026-11-16T22:04:50.800873+00:00
+licensed N126 pregame snapshot,DraftKings,total,sklearn__movement,current N126 observed market endpoint,123,14,14,11,6,0.16790106262988833,0,2026-11-16T22:04:50.800873+00:00
+licensed N126 pregame snapshot,DraftKings,total,tensorflow__all,current N126 observed market endpoint,123,14,14,11,6,0.12190631478398835,0,2026-11-16T22:04:50.800873+00:00
+licensed N126 pregame snapshot,DraftKings,total,tensorflow__disagreement,current N126 observed market endpoint,123,14,14,11,5,0.11940309051690456,0,2026-11-16T22:04:50.800873+00:00
+licensed N126 pregame snapshot,DraftKings,total,tensorflow__football,current N126 observed market endpoint,123,14,14,11,2,0.14016003742192923,0,2026-11-16T22:04:50.800873+00:00
+licensed N126 pregame snapshot,DraftKings,total,tensorflow__football_market,current N126 observed market endpoint,123,14,14,11,4,0.07631057947787201,0,2026-11-16T22:04:50.800873+00:00
+licensed N126 pregame snapshot,DraftKings,total,tensorflow__market,current N126 observed market endpoint,123,14,14,11,6,0.04654860609848705,0,2026-11-16T22:04:50.800873+00:00
+licensed N126 pregame snapshot,DraftKings,total,tensorflow__market_disagreement,current N126 observed market endpoint,123,14,14,11,6,0.06769907013839684,0,2026-11-16T22:04:50.800873+00:00
+licensed N126 pregame snapshot,DraftKings,total,tensorflow__market_movement,current N126 observed market endpoint,123,14,14,11,6,0.13157252552397405,0,2026-11-16T22:04:50.800873+00:00
+licensed N126 pregame snapshot,DraftKings,total,tensorflow__movement,current N126 observed market endpoint,123,14,14,11,4,0.1369896300792987,0,2026-11-16T22:04:50.800873+00:00
+licensed N126 pregame snapshot,DraftKings,total,torch__all,current N126 observed market endpoint,123,14,14,11,6,0.11930259053404549,0,2026-11-16T22:04:50.800873+00:00
+licensed N126 pregame snapshot,DraftKings,total,torch__disagreement,current N126 observed market endpoint,123,14,14,11,5,0.1317435077501857,0,2026-11-16T22:04:50.800873+00:00
+licensed N126 pregame snapshot,DraftKings,total,torch__football,current N126 observed market endpoint,123,14,14,11,1,0.11743728864653376,0,2026-11-16T22:04:50.800873+00:00
+licensed N126 pregame snapshot,DraftKings,total,torch__football_market,current N126 observed market endpoint,123,14,14,11,4,0.10738299183648177,0,2026-11-16T22:04:50.800873+00:00
+licensed N126 pregame snapshot,DraftKings,total,torch__market,current N126 observed market endpoint,123,14,14,11,8,0.03303796711668835,0,2026-11-16T22:04:50.800873+00:00
+licensed N126 pregame snapshot,DraftKings,total,torch__market_disagreement,current N126 observed market endpoint,123,14,14,11,7,0.07699206322092662,0,2026-11-16T22:04:50.800873+00:00
+licensed N126 pregame snapshot,DraftKings,total,torch__market_movement,current N126 observed market endpoint,123,14,14,11,6,0.14693505597642406,0,2026-11-16T22:04:50.800873+00:00
+licensed N126 pregame snapshot,DraftKings,total,torch__movement,current N126 observed market endpoint,123,14,14,11,4,0.13500874084193898,0,2026-11-16T22:04:50.800873+00:00
+licensed N126 pregame snapshot,DraftKings,total,xgboost__all,current N126 observed market endpoint,123,14,14,11,8,0.028279134273598124,0,2026-11-16T22:04:50.800873+00:00
+licensed N126 pregame snapshot,DraftKings,total,xgboost__disagreement,current N126 observed market endpoint,123,14,14,11,4,0.12418407231827729,0,2026-11-16T22:04:50.800873+00:00
+licensed N126 pregame snapshot,DraftKings,total,xgboost__football,current N126 observed market endpoint,123,14,14,11,3,0.1005983411157604,0,2026-11-16T22:04:50.800873+00:00
+licensed N126 pregame snapshot,DraftKings,total,xgboost__football_market,current N126 observed market endpoint,123,14,14,11,7,0.05075307287686691,0,2026-11-16T22:04:50.800873+00:00
+licensed N126 pregame snapshot,DraftKings,total,xgboost__market,current N126 observed market endpoint,123,14,14,11,6,0.0428483216439299,0,2026-11-16T22:04:50.800873+00:00
+licensed N126 pregame snapshot,DraftKings,total,xgboost__market_disagreement,current N126 observed market endpoint,123,14,14,11,9,0.02432504381245207,0,2026-11-16T22:04:50.800873+00:00
+licensed N126 pregame snapshot,DraftKings,total,xgboost__market_movement,current N126 observed market endpoint,123,14,14,11,8,0.03152086428720519,0,2026-11-16T22:04:50.800873+00:00
+licensed N126 pregame snapshot,DraftKings,total,xgboost__movement,current N126 observed market endpoint,123,14,14,11,4,0.11213363082079611,0,2026-11-16T22:04:50.800873+00:00
+licensed N126 pregame snapshot,DraftKings,winner,catboost__all,current N126 observed market endpoint,123,14,14,14,14,0.04353952589679487,0,2026-11-16T22:04:50.800873+00:00
+licensed N126 pregame snapshot,DraftKings,winner,catboost__disagreement,current N126 observed market endpoint,123,14,14,14,11,0.18662627196788764,0,2026-11-16T22:04:50.800873+00:00
+licensed N126 pregame snapshot,DraftKings,winner,catboost__football,current N126 observed market endpoint,123,14,14,14,11,0.11536388452077138,0,2026-11-16T22:04:50.800873+00:00
+licensed N126 pregame snapshot,DraftKings,winner,catboost__football_market,current N126 observed market endpoint,123,14,14,14,14,0.023564090506254857,0,2026-11-16T22:04:50.800873+00:00
+licensed N126 pregame snapshot,DraftKings,winner,catboost__market,current N126 observed market endpoint,123,14,14,14,14,0.031173931449614056,0,2026-11-16T22:04:50.800873+00:00
+licensed N126 pregame snapshot,DraftKings,winner,catboost__market_disagreement,current N126 observed market endpoint,123,14,14,14,14,0.03235079425886146,0,2026-11-16T22:04:50.800873+00:00
+licensed N126 pregame snapshot,DraftKings,winner,catboost__market_movement,current N126 observed market endpoint,123,14,14,14,14,0.0538077260661488,0,2026-11-16T22:04:50.800873+00:00
+licensed N126 pregame snapshot,DraftKings,winner,catboost__movement,current N126 observed market endpoint,123,14,14,14,11,0.18259906565369624,0,2026-11-16T22:04:50.800873+00:00
+licensed N126 pregame snapshot,DraftKings,winner,equal_pool__all,current N126 observed market endpoint,123,14,14,14,14,0.0370428587285227,0,2026-11-16T22:04:50.800873+00:00
+licensed N126 pregame snapshot,DraftKings,winner,lightgbm__all,current N126 observed market endpoint,123,14,14,14,14,0.049739103979980444,0,2026-11-16T22:04:50.800873+00:00
+licensed N126 pregame snapshot,DraftKings,winner,lightgbm__disagreement,current N126 observed market endpoint,123,14,14,14,11,0.1861755042428296,0,2026-11-16T22:04:50.800873+00:00
+licensed N126 pregame snapshot,DraftKings,winner,lightgbm__football,current N126 observed market endpoint,123,14,14,14,11,0.11210835276910838,0,2026-11-16T22:04:50.800873+00:00
+licensed N126 pregame snapshot,DraftKings,winner,lightgbm__football_market,current N126 observed market endpoint,123,14,14,14,14,0.0366137354046615,0,2026-11-16T22:04:50.800873+00:00
+licensed N126 pregame snapshot,DraftKings,winner,lightgbm__market,current N126 observed market endpoint,123,14,14,14,14,0.028157479884217972,0,2026-11-16T22:04:50.800873+00:00
+licensed N126 pregame snapshot,DraftKings,winner,lightgbm__market_disagreement,current N126 observed market endpoint,123,14,14,14,14,0.04626109313932129,0,2026-11-16T22:04:50.800873+00:00
+licensed N126 pregame snapshot,DraftKings,winner,lightgbm__market_movement,current N126 observed market endpoint,123,14,14,14,14,0.06302377722587384,0,2026-11-16T22:04:50.800873+00:00
+licensed N126 pregame snapshot,DraftKings,winner,lightgbm__movement,current N126 observed market endpoint,123,14,14,14,11,0.1762366862205745,0,2026-11-16T22:04:50.800873+00:00
+licensed N126 pregame snapshot,DraftKings,winner,n124_adjusted_long,previous conditional fixed-checkpoint model law,123,14,14,14,14,0.08374737376319231,0,2026-11-16T22:04:50.800873+00:00
+licensed N126 pregame snapshot,DraftKings,winner,n124_form_rest,previous conditional fixed-checkpoint model law,123,14,14,14,11,0.10828022960167719,0,2026-11-16T22:04:50.800873+00:00
+licensed N126 pregame snapshot,DraftKings,winner,n124_raw_long,previous conditional fixed-checkpoint model law,123,14,14,14,14,0.0834639990255018,0,2026-11-16T22:04:50.800873+00:00
+licensed N126 pregame snapshot,DraftKings,winner,n124_short_long,previous conditional fixed-checkpoint model law,123,14,14,14,14,0.08263845211279634,0,2026-11-16T22:04:50.800873+00:00
+licensed N126 pregame snapshot,DraftKings,winner,n125_allowed_median_reference,previous N125 dated current model law,123,14,14,14,14,0.006057906311445163,0,2026-11-16T22:04:50.800873+00:00
+licensed N126 pregame snapshot,DraftKings,winner,n125_disagreement_ridge,previous N125 dated current model law,123,14,14,14,14,0.01482040755134261,0,2026-11-16T22:04:50.800873+00:00
+licensed N126 pregame snapshot,DraftKings,winner,n125_location_ridge,previous N125 dated current model law,123,14,14,14,14,0.01482869867266588,0,2026-11-16T22:04:50.800873+00:00
+licensed N126 pregame snapshot,DraftKings,winner,n125_team_market_blend,previous N125 dated current model law,123,14,14,14,14,0.011976076026017786,0,2026-11-16T22:04:50.800873+00:00
+licensed N126 pregame snapshot,DraftKings,winner,n125_team_only_reference,previous N125 dated current model law,123,14,14,14,14,0.0834639990255018,0,2026-11-16T22:04:50.800873+00:00
+licensed N126 pregame snapshot,DraftKings,winner,n125_twenty_named_location_ridge,previous N125 dated current model law,123,14,14,14,14,0.0143916382941824,0,2026-11-16T22:04:50.800873+00:00
+licensed N126 pregame snapshot,DraftKings,winner,sklearn__all,current N126 observed market endpoint,123,14,14,14,14,0.07102339973845925,0,2026-11-16T22:04:50.800873+00:00
+licensed N126 pregame snapshot,DraftKings,winner,sklearn__all_context,current N126 observed market endpoint,123,14,14,14,13,0.0914152570510999,0,2026-11-16T22:04:50.800873+00:00
+licensed N126 pregame snapshot,DraftKings,winner,sklearn__all_raw_calibration,current N126 observed market endpoint,123,14,14,14,14,0.052292275978071616,0,2026-11-16T22:04:50.800873+00:00
+licensed N126 pregame snapshot,DraftKings,winner,sklearn__context,current N126 observed market endpoint,123,14,14,14,12,0.13546827039340664,0,2026-11-16T22:04:50.800873+00:00
+licensed N126 pregame snapshot,DraftKings,winner,sklearn__disagreement,current N126 observed market endpoint,123,14,14,14,7,0.20088526889382194,0,2026-11-16T22:04:50.800873+00:00
+licensed N126 pregame snapshot,DraftKings,winner,sklearn__football,current N126 observed market endpoint,123,14,14,14,11,0.1315862060792497,0,2026-11-16T22:04:50.800873+00:00
+licensed N126 pregame snapshot,DraftKings,winner,sklearn__football_market,current N126 observed market endpoint,123,14,14,14,14,0.03512998544770535,0,2026-11-16T22:04:50.800873+00:00
+licensed N126 pregame snapshot,DraftKings,winner,sklearn__market,current N126 observed market endpoint,123,14,14,14,14,0.030542860137932504,0,2026-11-16T22:04:50.800873+00:00
+licensed N126 pregame snapshot,DraftKings,winner,sklearn__market_disagreement,current N126 observed market endpoint,123,14,14,14,14,0.02934460303694958,0,2026-11-16T22:04:50.800873+00:00
+licensed N126 pregame snapshot,DraftKings,winner,sklearn__market_movement,current N126 observed market endpoint,123,14,14,14,14,0.04428020798649418,0,2026-11-16T22:04:50.800873+00:00
+licensed N126 pregame snapshot,DraftKings,winner,sklearn__movement,current N126 observed market endpoint,123,14,14,14,11,0.20050961186577052,0,2026-11-16T22:04:50.800873+00:00
+licensed N126 pregame snapshot,DraftKings,winner,tensorflow__all,current N126 observed market endpoint,123,14,14,14,14,0.050049179088689215,0,2026-11-16T22:04:50.800873+00:00
+licensed N126 pregame snapshot,DraftKings,winner,tensorflow__disagreement,current N126 observed market endpoint,123,14,14,14,6,0.2195877249718377,0,2026-11-16T22:04:50.800873+00:00
+licensed N126 pregame snapshot,DraftKings,winner,tensorflow__football,current N126 observed market endpoint,123,14,14,14,12,0.1621839942130383,0,2026-11-16T22:04:50.800873+00:00
+licensed N126 pregame snapshot,DraftKings,winner,tensorflow__football_market,current N126 observed market endpoint,123,14,14,14,14,0.05841923676066145,0,2026-11-16T22:04:50.800873+00:00
+licensed N126 pregame snapshot,DraftKings,winner,tensorflow__market,current N126 observed market endpoint,123,14,14,14,14,0.03444331849904154,0,2026-11-16T22:04:50.800873+00:00
+licensed N126 pregame snapshot,DraftKings,winner,tensorflow__market_disagreement,current N126 observed market endpoint,123,14,14,14,14,0.06751797455996376,0,2026-11-16T22:04:50.800873+00:00
+licensed N126 pregame snapshot,DraftKings,winner,tensorflow__market_movement,current N126 observed market endpoint,123,14,14,14,14,0.03101599016677953,0,2026-11-16T22:04:50.800873+00:00
+licensed N126 pregame snapshot,DraftKings,winner,tensorflow__movement,current N126 observed market endpoint,123,14,14,14,11,0.17976892678436443,0,2026-11-16T22:04:50.800873+00:00
+licensed N126 pregame snapshot,DraftKings,winner,torch__all,current N126 observed market endpoint,123,14,14,14,12,0.10621559351993005,0,2026-11-16T22:04:50.800873+00:00
+licensed N126 pregame snapshot,DraftKings,winner,torch__disagreement,current N126 observed market endpoint,123,14,14,14,7,0.2087776867666014,0,2026-11-16T22:04:50.800873+00:00
+licensed N126 pregame snapshot,DraftKings,winner,torch__football,current N126 observed market endpoint,123,14,14,14,11,0.14506798756492953,0,2026-11-16T22:04:50.800873+00:00
+licensed N126 pregame snapshot,DraftKings,winner,torch__football_market,current N126 observed market endpoint,123,14,14,14,14,0.030826124729634426,0,2026-11-16T22:04:50.800873+00:00
+licensed N126 pregame snapshot,DraftKings,winner,torch__market,current N126 observed market endpoint,123,14,14,14,14,0.029941321098764215,0,2026-11-16T22:04:50.800873+00:00
+licensed N126 pregame snapshot,DraftKings,winner,torch__market_disagreement,current N126 observed market endpoint,123,14,14,14,14,0.05120418429947969,0,2026-11-16T22:04:50.800873+00:00
+licensed N126 pregame snapshot,DraftKings,winner,torch__market_movement,current N126 observed market endpoint,123,14,14,14,14,0.02467251461733628,0,2026-11-16T22:04:50.800873+00:00
+licensed N126 pregame snapshot,DraftKings,winner,torch__movement,current N126 observed market endpoint,123,14,14,14,4,0.2371948724329031,0,2026-11-16T22:04:50.800873+00:00
+licensed N126 pregame snapshot,DraftKings,winner,xgboost__all,current N126 observed market endpoint,123,14,14,14,14,0.035428372119095344,0,2026-11-16T22:04:50.800873+00:00
+licensed N126 pregame snapshot,DraftKings,winner,xgboost__disagreement,current N126 observed market endpoint,123,14,14,14,11,0.1782204575314749,0,2026-11-16T22:04:50.800873+00:00
+licensed N126 pregame snapshot,DraftKings,winner,xgboost__football,current N126 observed market endpoint,123,14,14,14,11,0.12232461210952272,0,2026-11-16T22:04:50.800873+00:00
+licensed N126 pregame snapshot,DraftKings,winner,xgboost__football_market,current N126 observed market endpoint,123,14,14,14,14,0.026219452831092938,0,2026-11-16T22:04:50.800873+00:00
+licensed N126 pregame snapshot,DraftKings,winner,xgboost__market,current N126 observed market endpoint,123,14,14,14,14,0.02772758737378831,0,2026-11-16T22:04:50.800873+00:00
+licensed N126 pregame snapshot,DraftKings,winner,xgboost__market_disagreement,current N126 observed market endpoint,123,14,14,14,14,0.034828830288427995,0,2026-11-16T22:04:50.800873+00:00
+licensed N126 pregame snapshot,DraftKings,winner,xgboost__market_movement,current N126 observed market endpoint,123,14,14,14,14,0.03633510359144262,0,2026-11-16T22:04:50.800873+00:00
+licensed N126 pregame snapshot,DraftKings,winner,xgboost__movement,current N126 observed market endpoint,123,14,14,14,11,0.18703350200888,0,2026-11-16T22:04:50.800873+00:00
+licensed N126 pregame snapshot,Kalshi,spread,catboost__all,current N126 observed market endpoint,123,11,11,11,8,0.06019913726705321,0,2026-11-16T22:04:50.800873+00:00
+licensed N126 pregame snapshot,Kalshi,spread,catboost__disagreement,current N126 observed market endpoint,123,11,11,11,3,0.20098683759575725,0,2026-11-16T22:04:50.800873+00:00
+licensed N126 pregame snapshot,Kalshi,spread,catboost__football,current N126 observed market endpoint,123,11,11,11,4,0.1378064685593278,0,2026-11-16T22:04:50.800873+00:00
+licensed N126 pregame snapshot,Kalshi,spread,catboost__football_market,current N126 observed market endpoint,123,11,11,11,7,0.029815236524173713,0,2026-11-16T22:04:50.800873+00:00
+licensed N126 pregame snapshot,Kalshi,spread,catboost__market,current N126 observed market endpoint,123,11,11,11,8,0.03651232545714504,0,2026-11-16T22:04:50.800873+00:00
+licensed N126 pregame snapshot,Kalshi,spread,catboost__market_disagreement,current N126 observed market endpoint,123,11,11,11,9,0.03200433555246865,0,2026-11-16T22:04:50.800873+00:00
+licensed N126 pregame snapshot,Kalshi,spread,catboost__market_movement,current N126 observed market endpoint,123,11,11,11,8,0.07530871455208049,0,2026-11-16T22:04:50.800873+00:00
+licensed N126 pregame snapshot,Kalshi,spread,catboost__movement,current N126 observed market endpoint,123,11,11,11,4,0.21079343345515092,0,2026-11-16T22:04:50.800873+00:00
+licensed N126 pregame snapshot,Kalshi,spread,equal_pool__all,current N126 observed market endpoint,123,11,11,11,8,0.032428758696558986,0,2026-11-16T22:04:50.800873+00:00
+licensed N126 pregame snapshot,Kalshi,spread,lightgbm__all,current N126 observed market endpoint,123,11,11,11,8,0.0563641396918714,0,2026-11-16T22:04:50.800873+00:00
+licensed N126 pregame snapshot,Kalshi,spread,lightgbm__disagreement,current N126 observed market endpoint,123,11,11,11,3,0.19912675950019362,0,2026-11-16T22:04:50.800873+00:00
+licensed N126 pregame snapshot,Kalshi,spread,lightgbm__football,current N126 observed market endpoint,123,11,11,11,3,0.1485734695727914,0,2026-11-16T22:04:50.800873+00:00
+licensed N126 pregame snapshot,Kalshi,spread,lightgbm__football_market,current N126 observed market endpoint,123,11,11,11,6,0.03964385953314461,0,2026-11-16T22:04:50.800873+00:00
+licensed N126 pregame snapshot,Kalshi,spread,lightgbm__market,current N126 observed market endpoint,123,11,11,11,7,0.03962831327252642,0,2026-11-16T22:04:50.800873+00:00
+licensed N126 pregame snapshot,Kalshi,spread,lightgbm__market_disagreement,current N126 observed market endpoint,123,11,11,11,8,0.05734309002310776,0,2026-11-16T22:04:50.800873+00:00
+licensed N126 pregame snapshot,Kalshi,spread,lightgbm__market_movement,current N126 observed market endpoint,123,11,11,11,8,0.08553891199710775,0,2026-11-16T22:04:50.800873+00:00
+licensed N126 pregame snapshot,Kalshi,spread,lightgbm__movement,current N126 observed market endpoint,123,11,11,11,3,0.20134712156377962,0,2026-11-16T22:04:50.800873+00:00
+licensed N126 pregame snapshot,Kalshi,spread,n124_adjusted_long,previous conditional fixed-checkpoint model law,123,11,11,11,2,0.12179611377348487,0,2026-11-16T22:04:50.800873+00:00
+licensed N126 pregame snapshot,Kalshi,spread,n124_form_rest,previous conditional fixed-checkpoint model law,123,11,11,11,4,0.13322818795013028,0,2026-11-16T22:04:50.800873+00:00
+licensed N126 pregame snapshot,Kalshi,spread,n124_raw_long,previous conditional fixed-checkpoint model law,123,11,11,11,3,0.12064778841463321,0,2026-11-16T22:04:50.800873+00:00
+licensed N126 pregame snapshot,Kalshi,spread,n124_short_long,previous conditional fixed-checkpoint model law,123,11,11,11,2,0.12294443913233653,0,2026-11-16T22:04:50.800873+00:00
+licensed N126 pregame snapshot,Kalshi,spread,n125_allowed_median_reference,previous N125 dated current model law,123,11,11,11,7,0.0229884742637652,0,2026-11-16T22:04:50.800873+00:00
+licensed N126 pregame snapshot,Kalshi,spread,n125_disagreement_ridge,previous N125 dated current model law,123,11,11,11,8,0.04181700036187577,0,2026-11-16T22:04:50.800873+00:00
+licensed N126 pregame snapshot,Kalshi,spread,n125_location_ridge,previous N125 dated current model law,123,11,11,11,8,0.040719158798933466,0,2026-11-16T22:04:50.800873+00:00
+licensed N126 pregame snapshot,Kalshi,spread,n125_team_market_blend,previous N125 dated current model law,123,11,11,11,7,0.023334895826912016,0,2026-11-16T22:04:50.800873+00:00
+licensed N126 pregame snapshot,Kalshi,spread,n125_team_only_reference,previous N125 dated current model law,123,11,11,11,3,0.12064778841463321,0,2026-11-16T22:04:50.800873+00:00
+licensed N126 pregame snapshot,Kalshi,spread,n125_twenty_named_location_ridge,previous N125 dated current model law,123,11,11,11,8,0.03963089810013979,0,2026-11-16T22:04:50.800873+00:00
+licensed N126 pregame snapshot,Kalshi,spread,sklearn__all,current N126 observed market endpoint,123,11,11,11,8,0.07186958322890445,0,2026-11-16T22:04:50.800873+00:00
+licensed N126 pregame snapshot,Kalshi,spread,sklearn__all_context,current N126 observed market endpoint,123,11,11,11,9,0.10544762190003172,0,2026-11-16T22:04:50.800873+00:00
+licensed N126 pregame snapshot,Kalshi,spread,sklearn__all_raw_calibration,current N126 observed market endpoint,123,11,11,11,8,0.055378952874095354,0,2026-11-16T22:04:50.800873+00:00
+licensed N126 pregame snapshot,Kalshi,spread,sklearn__context,current N126 observed market endpoint,123,11,11,11,4,0.15000333624644183,0,2026-11-16T22:04:50.800873+00:00
+licensed N126 pregame snapshot,Kalshi,spread,sklearn__disagreement,current N126 observed market endpoint,123,11,11,11,3,0.1963577298281027,0,2026-11-16T22:04:50.800873+00:00
+licensed N126 pregame snapshot,Kalshi,spread,sklearn__football,current N126 observed market endpoint,123,11,11,11,3,0.1623181188920514,0,2026-11-16T22:04:50.800873+00:00
+licensed N126 pregame snapshot,Kalshi,spread,sklearn__football_market,current N126 observed market endpoint,123,11,11,11,5,0.04057342707935313,0,2026-11-16T22:04:50.800873+00:00
+licensed N126 pregame snapshot,Kalshi,spread,sklearn__market,current N126 observed market endpoint,123,11,11,11,6,0.028628799574464125,0,2026-11-16T22:04:50.800873+00:00
+licensed N126 pregame snapshot,Kalshi,spread,sklearn__market_disagreement,current N126 observed market endpoint,123,11,11,11,7,0.051754995083497415,0,2026-11-16T22:04:50.800873+00:00
+licensed N126 pregame snapshot,Kalshi,spread,sklearn__market_movement,current N126 observed market endpoint,123,11,11,11,4,0.04587219956606277,0,2026-11-16T22:04:50.800873+00:00
+licensed N126 pregame snapshot,Kalshi,spread,sklearn__movement,current N126 observed market endpoint,123,11,11,11,4,0.21686282018946004,0,2026-11-16T22:04:50.800873+00:00
+licensed N126 pregame snapshot,Kalshi,spread,tensorflow__all,current N126 observed market endpoint,123,11,11,11,5,0.06726681111741123,0,2026-11-16T22:04:50.800873+00:00
+licensed N126 pregame snapshot,Kalshi,spread,tensorflow__disagreement,current N126 observed market endpoint,123,11,11,11,3,0.20961354440340269,0,2026-11-16T22:04:50.800873+00:00
+licensed N126 pregame snapshot,Kalshi,spread,tensorflow__football,current N126 observed market endpoint,123,11,11,11,3,0.15141639932905232,0,2026-11-16T22:04:50.800873+00:00
+licensed N126 pregame snapshot,Kalshi,spread,tensorflow__football_market,current N126 observed market endpoint,123,11,11,11,5,0.09804531277407405,0,2026-11-16T22:04:50.800873+00:00
+licensed N126 pregame snapshot,Kalshi,spread,tensorflow__market,current N126 observed market endpoint,123,11,11,11,7,0.045506115712600985,0,2026-11-16T22:04:50.800873+00:00
+licensed N126 pregame snapshot,Kalshi,spread,tensorflow__market_disagreement,current N126 observed market endpoint,123,11,11,11,3,0.09940781530605963,0,2026-11-16T22:04:50.800873+00:00
+licensed N126 pregame snapshot,Kalshi,spread,tensorflow__market_movement,current N126 observed market endpoint,123,11,11,11,6,0.03174920871593593,0,2026-11-16T22:04:50.800873+00:00
+licensed N126 pregame snapshot,Kalshi,spread,tensorflow__movement,current N126 observed market endpoint,123,11,11,11,4,0.1799203344220227,0,2026-11-16T22:04:50.800873+00:00
+licensed N126 pregame snapshot,Kalshi,spread,torch__all,current N126 observed market endpoint,123,11,11,11,5,0.1084876840000423,0,2026-11-16T22:04:50.800873+00:00
+licensed N126 pregame snapshot,Kalshi,spread,torch__disagreement,current N126 observed market endpoint,123,11,11,11,4,0.20760645271252906,0,2026-11-16T22:04:50.800873+00:00
+licensed N126 pregame snapshot,Kalshi,spread,torch__football,current N126 observed market endpoint,123,11,11,11,4,0.16437916816464504,0,2026-11-16T22:04:50.800873+00:00
+licensed N126 pregame snapshot,Kalshi,spread,torch__football_market,current N126 observed market endpoint,123,11,11,11,6,0.030392780285900978,0,2026-11-16T22:04:50.800873+00:00
+licensed N126 pregame snapshot,Kalshi,spread,torch__market,current N126 observed market endpoint,123,11,11,11,7,0.026736068324390495,0,2026-11-16T22:04:50.800873+00:00
+licensed N126 pregame snapshot,Kalshi,spread,torch__market_disagreement,current N126 observed market endpoint,123,11,11,11,8,0.06333114853794082,0,2026-11-16T22:04:50.800873+00:00
+licensed N126 pregame snapshot,Kalshi,spread,torch__market_movement,current N126 observed market endpoint,123,11,11,11,3,0.04853293683568733,0,2026-11-16T22:04:50.800873+00:00
+licensed N126 pregame snapshot,Kalshi,spread,torch__movement,current N126 observed market endpoint,123,11,11,11,3,0.23525704819253904,0,2026-11-16T22:04:50.800873+00:00
+licensed N126 pregame snapshot,Kalshi,spread,xgboost__all,current N126 observed market endpoint,123,11,11,11,9,0.03283890342159866,0,2026-11-16T22:04:50.800873+00:00
+licensed N126 pregame snapshot,Kalshi,spread,xgboost__disagreement,current N126 observed market endpoint,123,11,11,11,4,0.188926569152974,0,2026-11-16T22:04:50.800873+00:00
+licensed N126 pregame snapshot,Kalshi,spread,xgboost__football,current N126 observed market endpoint,123,11,11,11,2,0.15395656048432504,0,2026-11-16T22:04:50.800873+00:00
+licensed N126 pregame snapshot,Kalshi,spread,xgboost__football_market,current N126 observed market endpoint,123,11,11,11,7,0.026697660681034116,0,2026-11-16T22:04:50.800873+00:00
+licensed N126 pregame snapshot,Kalshi,spread,xgboost__market,current N126 observed market endpoint,123,11,11,11,8,0.035469831011235936,0,2026-11-16T22:04:50.800873+00:00
+licensed N126 pregame snapshot,Kalshi,spread,xgboost__market_disagreement,current N126 observed market endpoint,123,11,11,11,9,0.03725673815129866,0,2026-11-16T22:04:50.800873+00:00
+licensed N126 pregame snapshot,Kalshi,spread,xgboost__market_movement,current N126 observed market endpoint,123,11,11,11,9,0.04336111869496231,0,2026-11-16T22:04:50.800873+00:00
+licensed N126 pregame snapshot,Kalshi,spread,xgboost__movement,current N126 observed market endpoint,123,11,11,11,3,0.2087557550633523,0,2026-11-16T22:04:50.800873+00:00
+licensed N126 pregame snapshot,Kalshi,total,catboost__all,current N126 observed market endpoint,123,11,11,11,7,0.04855837344458605,0,2026-11-16T22:04:50.800873+00:00
+licensed N126 pregame snapshot,Kalshi,total,catboost__disagreement,current N126 observed market endpoint,123,11,11,11,6,0.11579554214047878,0,2026-11-16T22:04:50.800873+00:00
+licensed N126 pregame snapshot,Kalshi,total,catboost__football,current N126 observed market endpoint,123,11,11,11,7,0.07841793426368593,0,2026-11-16T22:04:50.800873+00:00
+licensed N126 pregame snapshot,Kalshi,total,catboost__football_market,current N126 observed market endpoint,123,11,11,11,7,0.03375671942757972,0,2026-11-16T22:04:50.800873+00:00
+licensed N126 pregame snapshot,Kalshi,total,catboost__market,current N126 observed market endpoint,123,11,11,11,8,0.0435873100361392,0,2026-11-16T22:04:50.800873+00:00
+licensed N126 pregame snapshot,Kalshi,total,catboost__market_disagreement,current N126 observed market endpoint,123,11,11,11,7,0.0329453431059888,0,2026-11-16T22:04:50.800873+00:00
+licensed N126 pregame snapshot,Kalshi,total,catboost__market_movement,current N126 observed market endpoint,123,11,11,11,7,0.07466040332067697,0,2026-11-16T22:04:50.800873+00:00
+licensed N126 pregame snapshot,Kalshi,total,catboost__movement,current N126 observed market endpoint,123,11,11,11,5,0.12062694525394244,0,2026-11-16T22:04:50.800873+00:00
+licensed N126 pregame snapshot,Kalshi,total,equal_pool__all,current N126 observed market endpoint,123,11,11,11,7,0.06884611041727697,0,2026-11-16T22:04:50.800873+00:00
+licensed N126 pregame snapshot,Kalshi,total,lightgbm__all,current N126 observed market endpoint,123,11,11,11,6,0.042707212619097684,0,2026-11-16T22:04:50.800873+00:00
+licensed N126 pregame snapshot,Kalshi,total,lightgbm__disagreement,current N126 observed market endpoint,123,11,11,11,5,0.11537564460865153,0,2026-11-16T22:04:50.800873+00:00
+licensed N126 pregame snapshot,Kalshi,total,lightgbm__football,current N126 observed market endpoint,123,11,11,11,5,0.09102999494924192,0,2026-11-16T22:04:50.800873+00:00
+licensed N126 pregame snapshot,Kalshi,total,lightgbm__football_market,current N126 observed market endpoint,123,11,11,11,7,0.05500758985663378,0,2026-11-16T22:04:50.800873+00:00
+licensed N126 pregame snapshot,Kalshi,total,lightgbm__market,current N126 observed market endpoint,123,11,11,11,7,0.059799867472842785,0,2026-11-16T22:04:50.800873+00:00
+licensed N126 pregame snapshot,Kalshi,total,lightgbm__market_disagreement,current N126 observed market endpoint,123,11,11,11,7,0.039031131687249206,0,2026-11-16T22:04:50.800873+00:00
+licensed N126 pregame snapshot,Kalshi,total,lightgbm__market_movement,current N126 observed market endpoint,123,11,11,11,7,0.05517110100271332,0,2026-11-16T22:04:50.800873+00:00
+licensed N126 pregame snapshot,Kalshi,total,lightgbm__movement,current N126 observed market endpoint,123,11,11,11,4,0.10775114391210966,0,2026-11-16T22:04:50.800873+00:00
+licensed N126 pregame snapshot,Kalshi,total,n124_adjusted_long,previous conditional fixed-checkpoint model law,123,11,11,11,4,0.08224481500871034,0,2026-11-16T22:04:50.800873+00:00
+licensed N126 pregame snapshot,Kalshi,total,n124_form_rest,previous conditional fixed-checkpoint model law,123,11,11,11,4,0.07937400161158115,0,2026-11-16T22:04:50.800873+00:00
+licensed N126 pregame snapshot,Kalshi,total,n124_raw_long,previous conditional fixed-checkpoint model law,123,11,11,11,3,0.07356881248660084,0,2026-11-16T22:04:50.800873+00:00
+licensed N126 pregame snapshot,Kalshi,total,n124_short_long,previous conditional fixed-checkpoint model law,123,11,11,11,4,0.07879983893215531,0,2026-11-16T22:04:50.800873+00:00
+licensed N126 pregame snapshot,Kalshi,total,n125_allowed_median_reference,previous N125 dated current model law,123,11,11,11,7,0.05007325109922298,0,2026-11-16T22:04:50.800873+00:00
+licensed N126 pregame snapshot,Kalshi,total,n125_disagreement_ridge,previous N125 dated current model law,123,11,11,11,4,0.027231586590587754,0,2026-11-16T22:04:50.800873+00:00
+licensed N126 pregame snapshot,Kalshi,total,n125_location_ridge,previous N125 dated current model law,123,11,11,11,4,0.028908424141609344,0,2026-11-16T22:04:50.800873+00:00
+licensed N126 pregame snapshot,Kalshi,total,n125_team_market_blend,previous N125 dated current model law,123,11,11,11,5,0.026597423516126165,0,2026-11-16T22:04:50.800873+00:00
+licensed N126 pregame snapshot,Kalshi,total,n125_team_only_reference,previous N125 dated current model law,123,11,11,11,3,0.07356881248660084,0,2026-11-16T22:04:50.800873+00:00
+licensed N126 pregame snapshot,Kalshi,total,n125_twenty_named_location_ridge,previous N125 dated current model law,123,11,11,11,4,0.028965223478356384,0,2026-11-16T22:04:50.800873+00:00
+licensed N126 pregame snapshot,Kalshi,total,sklearn__all,current N126 observed market endpoint,123,11,11,11,5,0.07253794339048675,0,2026-11-16T22:04:50.800873+00:00
+licensed N126 pregame snapshot,Kalshi,total,sklearn__all_context,current N126 observed market endpoint,123,11,11,11,4,0.10954285042589575,0,2026-11-16T22:04:50.800873+00:00
+licensed N126 pregame snapshot,Kalshi,total,sklearn__all_raw_calibration,current N126 observed market endpoint,123,11,11,11,5,0.07253794339048675,0,2026-11-16T22:04:50.800873+00:00
+licensed N126 pregame snapshot,Kalshi,total,sklearn__context,current N126 observed market endpoint,123,11,11,11,7,0.08596555451403151,0,2026-11-16T22:04:50.800873+00:00
+licensed N126 pregame snapshot,Kalshi,total,sklearn__disagreement,current N126 observed market endpoint,123,11,11,11,5,0.1328218557704697,0,2026-11-16T22:04:50.800873+00:00
+licensed N126 pregame snapshot,Kalshi,total,sklearn__football,current N126 observed market endpoint,123,11,11,11,4,0.10417935074023298,0,2026-11-16T22:04:50.800873+00:00
+licensed N126 pregame snapshot,Kalshi,total,sklearn__football_market,current N126 observed market endpoint,123,11,11,11,4,0.06357968072674121,0,2026-11-16T22:04:50.800873+00:00
+licensed N126 pregame snapshot,Kalshi,total,sklearn__market,current N126 observed market endpoint,123,11,11,11,7,0.03768178236838605,0,2026-11-16T22:04:50.800873+00:00
+licensed N126 pregame snapshot,Kalshi,total,sklearn__market_disagreement,current N126 observed market endpoint,123,11,11,11,5,0.05763131978859719,0,2026-11-16T22:04:50.800873+00:00
+licensed N126 pregame snapshot,Kalshi,total,sklearn__market_movement,current N126 observed market endpoint,123,11,11,11,7,0.15328424438517696,0,2026-11-16T22:04:50.800873+00:00
+licensed N126 pregame snapshot,Kalshi,total,sklearn__movement,current N126 observed market endpoint,123,11,11,11,7,0.1763008662549315,0,2026-11-16T22:04:50.800873+00:00
+licensed N126 pregame snapshot,Kalshi,total,tensorflow__all,current N126 observed market endpoint,123,11,11,11,7,0.12252596696024969,0,2026-11-16T22:04:50.800873+00:00
+licensed N126 pregame snapshot,Kalshi,total,tensorflow__disagreement,current N126 observed market endpoint,123,11,11,11,5,0.12716681992716972,0,2026-11-16T22:04:50.800873+00:00
+licensed N126 pregame snapshot,Kalshi,total,tensorflow__football,current N126 observed market endpoint,123,11,11,11,3,0.11947300531471755,0,2026-11-16T22:04:50.800873+00:00
+licensed N126 pregame snapshot,Kalshi,total,tensorflow__football_market,current N126 observed market endpoint,123,11,11,11,5,0.07041497964672304,0,2026-11-16T22:04:50.800873+00:00
+licensed N126 pregame snapshot,Kalshi,total,tensorflow__market,current N126 observed market endpoint,123,11,11,11,6,0.04595600063420516,0,2026-11-16T22:04:50.800873+00:00
+licensed N126 pregame snapshot,Kalshi,total,tensorflow__market_disagreement,current N126 observed market endpoint,123,11,11,11,4,0.06928289404724358,0,2026-11-16T22:04:50.800873+00:00
+licensed N126 pregame snapshot,Kalshi,total,tensorflow__market_movement,current N126 observed market endpoint,123,11,11,11,7,0.1347764072694497,0,2026-11-16T22:04:50.800873+00:00
+licensed N126 pregame snapshot,Kalshi,total,tensorflow__movement,current N126 observed market endpoint,123,11,11,11,5,0.13713638710283335,0,2026-11-16T22:04:50.800873+00:00
+licensed N126 pregame snapshot,Kalshi,total,torch__all,current N126 observed market endpoint,123,11,11,11,9,0.12463242100105462,0,2026-11-16T22:04:50.800873+00:00
+licensed N126 pregame snapshot,Kalshi,total,torch__disagreement,current N126 observed market endpoint,123,11,11,11,6,0.13227131236101422,0,2026-11-16T22:04:50.800873+00:00
+licensed N126 pregame snapshot,Kalshi,total,torch__football,current N126 observed market endpoint,123,11,11,11,4,0.10034832819017846,0,2026-11-16T22:04:50.800873+00:00
+licensed N126 pregame snapshot,Kalshi,total,torch__football_market,current N126 observed market endpoint,123,11,11,11,4,0.11061806880592302,0,2026-11-16T22:04:50.800873+00:00
+licensed N126 pregame snapshot,Kalshi,total,torch__market,current N126 observed market endpoint,123,11,11,11,7,0.035205122792104235,0,2026-11-16T22:04:50.800873+00:00
+licensed N126 pregame snapshot,Kalshi,total,torch__market_disagreement,current N126 observed market endpoint,123,11,11,11,5,0.07928357291891266,0,2026-11-16T22:04:50.800873+00:00
+licensed N126 pregame snapshot,Kalshi,total,torch__market_movement,current N126 observed market endpoint,123,11,11,11,7,0.15999277451163152,0,2026-11-16T22:04:50.800873+00:00
+licensed N126 pregame snapshot,Kalshi,total,torch__movement,current N126 observed market endpoint,123,11,11,11,5,0.1357064569553697,0,2026-11-16T22:04:50.800873+00:00
+licensed N126 pregame snapshot,Kalshi,total,xgboost__all,current N126 observed market endpoint,123,11,11,11,7,0.03115646687329768,0,2026-11-16T22:04:50.800873+00:00
+licensed N126 pregame snapshot,Kalshi,total,xgboost__disagreement,current N126 observed market endpoint,123,11,11,11,6,0.11942836595353333,0,2026-11-16T22:04:50.800873+00:00
+licensed N126 pregame snapshot,Kalshi,total,xgboost__football,current N126 observed market endpoint,123,11,11,11,4,0.0930808239871797,0,2026-11-16T22:04:50.800873+00:00
+licensed N126 pregame snapshot,Kalshi,total,xgboost__football_market,current N126 observed market endpoint,123,11,11,11,8,0.05416322660766786,0,2026-11-16T22:04:50.800873+00:00
+licensed N126 pregame snapshot,Kalshi,total,xgboost__market,current N126 observed market endpoint,123,11,11,11,7,0.042861911416140104,0,2026-11-16T22:04:50.800873+00:00
+licensed N126 pregame snapshot,Kalshi,total,xgboost__market_disagreement,current N126 observed market endpoint,123,11,11,11,7,0.028451603795325173,0,2026-11-16T22:04:50.800873+00:00
+licensed N126 pregame snapshot,Kalshi,total,xgboost__market_movement,current N126 observed market endpoint,123,11,11,11,7,0.034610235809348834,0,2026-11-16T22:04:50.800873+00:00
+licensed N126 pregame snapshot,Kalshi,total,xgboost__movement,current N126 observed market endpoint,123,11,11,11,4,0.10613342233500966,0,2026-11-16T22:04:50.800873+00:00
+licensed N126 pregame snapshot,Kalshi,winner,catboost__all,current N126 observed market endpoint,123,12,12,12,12,0.0417666551808002,0,2026-11-16T22:04:50.800873+00:00
+licensed N126 pregame snapshot,Kalshi,winner,catboost__disagreement,current N126 observed market endpoint,123,12,12,12,9,0.20444539575837709,0,2026-11-16T22:04:50.800873+00:00
+licensed N126 pregame snapshot,Kalshi,winner,catboost__football,current N126 observed market endpoint,123,12,12,12,9,0.11973523250591939,0,2026-11-16T22:04:50.800873+00:00
+licensed N126 pregame snapshot,Kalshi,winner,catboost__football_market,current N126 observed market endpoint,123,12,12,12,12,0.022129587721987694,0,2026-11-16T22:04:50.800873+00:00
+licensed N126 pregame snapshot,Kalshi,winner,catboost__market,current N126 observed market endpoint,123,12,12,12,12,0.028954824073205373,0,2026-11-16T22:04:50.800873+00:00
+licensed N126 pregame snapshot,Kalshi,winner,catboost__market_disagreement,current N126 observed market endpoint,123,12,12,12,12,0.02942772124130837,0,2026-11-16T22:04:50.800873+00:00
+licensed N126 pregame snapshot,Kalshi,winner,catboost__market_movement,current N126 observed market endpoint,123,12,12,12,12,0.052477304827129374,0,2026-11-16T22:04:50.800873+00:00
+licensed N126 pregame snapshot,Kalshi,winner,catboost__movement,current N126 observed market endpoint,123,12,12,12,9,0.21070011504897548,0,2026-11-16T22:04:50.800873+00:00
+licensed N126 pregame snapshot,Kalshi,winner,equal_pool__all,current N126 observed market endpoint,123,12,12,12,12,0.04130434212560849,0,2026-11-16T22:04:50.800873+00:00
+licensed N126 pregame snapshot,Kalshi,winner,lightgbm__all,current N126 observed market endpoint,123,12,12,12,12,0.04249637093038355,0,2026-11-16T22:04:50.800873+00:00
+licensed N126 pregame snapshot,Kalshi,winner,lightgbm__disagreement,current N126 observed market endpoint,123,12,12,12,9,0.2051256513040397,0,2026-11-16T22:04:50.800873+00:00
+licensed N126 pregame snapshot,Kalshi,winner,lightgbm__football,current N126 observed market endpoint,123,12,12,12,9,0.1288197040100186,0,2026-11-16T22:04:50.800873+00:00
+licensed N126 pregame snapshot,Kalshi,winner,lightgbm__football_market,current N126 observed market endpoint,123,12,12,12,12,0.03343334721791425,0,2026-11-16T22:04:50.800873+00:00
+licensed N126 pregame snapshot,Kalshi,winner,lightgbm__market,current N126 observed market endpoint,123,12,12,12,12,0.023240922099789244,0,2026-11-16T22:04:50.800873+00:00
+licensed N126 pregame snapshot,Kalshi,winner,lightgbm__market_disagreement,current N126 observed market endpoint,123,12,12,12,12,0.041635740709486536,0,2026-11-16T22:04:50.800873+00:00
+licensed N126 pregame snapshot,Kalshi,winner,lightgbm__market_movement,current N126 observed market endpoint,123,12,12,12,12,0.05779269545812521,0,2026-11-16T22:04:50.800873+00:00
+licensed N126 pregame snapshot,Kalshi,winner,lightgbm__movement,current N126 observed market endpoint,123,12,12,12,9,0.20322531239601296,0,2026-11-16T22:04:50.800873+00:00
+licensed N126 pregame snapshot,Kalshi,winner,n124_adjusted_long,previous conditional fixed-checkpoint model law,123,12,12,12,12,0.09364601942389306,0,2026-11-16T22:04:50.800873+00:00
+licensed N126 pregame snapshot,Kalshi,winner,n124_form_rest,previous conditional fixed-checkpoint model law,123,12,12,12,9,0.12143868836112477,0,2026-11-16T22:04:50.800873+00:00
+licensed N126 pregame snapshot,Kalshi,winner,n124_raw_long,previous conditional fixed-checkpoint model law,123,12,12,12,12,0.09364601942389307,0,2026-11-16T22:04:50.800873+00:00
+licensed N126 pregame snapshot,Kalshi,winner,n124_short_long,previous conditional fixed-checkpoint model law,123,12,12,12,12,0.09321995431732015,0,2026-11-16T22:04:50.800873+00:00
+licensed N126 pregame snapshot,Kalshi,winner,n125_allowed_median_reference,previous N125 dated current model law,123,12,12,12,12,0.011801084329402698,0,2026-11-16T22:04:50.800873+00:00
+licensed N126 pregame snapshot,Kalshi,winner,n125_disagreement_ridge,previous N125 dated current model law,123,12,12,12,12,0.011553166054885369,0,2026-11-16T22:04:50.800873+00:00
+licensed N126 pregame snapshot,Kalshi,winner,n125_location_ridge,previous N125 dated current model law,123,12,12,12,12,0.010817756503737596,0,2026-11-16T22:04:50.800873+00:00
+licensed N126 pregame snapshot,Kalshi,winner,n125_team_market_blend,previous N125 dated current model law,123,12,12,12,12,0.01791856620385381,0,2026-11-16T22:04:50.800873+00:00
+licensed N126 pregame snapshot,Kalshi,winner,n125_team_only_reference,previous N125 dated current model law,123,12,12,12,12,0.09364601942389307,0,2026-11-16T22:04:50.800873+00:00
+licensed N126 pregame snapshot,Kalshi,winner,n125_twenty_named_location_ridge,previous N125 dated current model law,123,12,12,12,12,0.010357626223678099,0,2026-11-16T22:04:50.800873+00:00
+licensed N126 pregame snapshot,Kalshi,winner,sklearn__all,current N126 observed market endpoint,123,12,12,12,12,0.06787658358056317,0,2026-11-16T22:04:50.800873+00:00
+licensed N126 pregame snapshot,Kalshi,winner,sklearn__all_context,current N126 observed market endpoint,123,12,12,12,11,0.09587921590403348,0,2026-11-16T22:04:50.800873+00:00
+licensed N126 pregame snapshot,Kalshi,winner,sklearn__all_raw_calibration,current N126 observed market endpoint,123,12,12,12,12,0.041012946898702836,0,2026-11-16T22:04:50.800873+00:00
+licensed N126 pregame snapshot,Kalshi,winner,sklearn__context,current N126 observed market endpoint,123,12,12,12,11,0.13820369326615048,0,2026-11-16T22:04:50.800873+00:00
+licensed N126 pregame snapshot,Kalshi,winner,sklearn__disagreement,current N126 observed market endpoint,123,12,12,12,7,0.21007280479238555,0,2026-11-16T22:04:50.800873+00:00
+licensed N126 pregame snapshot,Kalshi,winner,sklearn__football,current N126 observed market endpoint,123,12,12,12,9,0.14288672927784957,0,2026-11-16T22:04:50.800873+00:00
+licensed N126 pregame snapshot,Kalshi,winner,sklearn__football_market,current N126 observed market endpoint,123,12,12,12,12,0.029778702375613808,0,2026-11-16T22:04:50.800873+00:00
+licensed N126 pregame snapshot,Kalshi,winner,sklearn__market,current N126 observed market endpoint,123,12,12,12,12,0.025314167930751735,0,2026-11-16T22:04:50.800873+00:00
+licensed N126 pregame snapshot,Kalshi,winner,sklearn__market_disagreement,current N126 observed market endpoint,123,12,12,12,12,0.03239873597812249,0,2026-11-16T22:04:50.800873+00:00
+licensed N126 pregame snapshot,Kalshi,winner,sklearn__market_movement,current N126 observed market endpoint,123,12,12,12,12,0.04084408272856792,0,2026-11-16T22:04:50.800873+00:00
+licensed N126 pregame snapshot,Kalshi,winner,sklearn__movement,current N126 observed market endpoint,123,12,12,12,9,0.2261674823388338,0,2026-11-16T22:04:50.800873+00:00
+licensed N126 pregame snapshot,Kalshi,winner,tensorflow__all,current N126 observed market endpoint,123,12,12,12,12,0.051759037803069986,0,2026-11-16T22:04:50.800873+00:00
+licensed N126 pregame snapshot,Kalshi,winner,tensorflow__disagreement,current N126 observed market endpoint,123,12,12,12,6,0.2323079508782897,0,2026-11-16T22:04:50.800873+00:00
+licensed N126 pregame snapshot,Kalshi,winner,tensorflow__football,current N126 observed market endpoint,123,12,12,12,10,0.18448066031035892,0,2026-11-16T22:04:50.800873+00:00
+licensed N126 pregame snapshot,Kalshi,winner,tensorflow__football_market,current N126 observed market endpoint,123,12,12,12,12,0.0628198408048222,0,2026-11-16T22:04:50.800873+00:00
+licensed N126 pregame snapshot,Kalshi,winner,tensorflow__market,current N126 observed market endpoint,123,12,12,12,12,0.030569464797155905,0,2026-11-16T22:04:50.800873+00:00
+licensed N126 pregame snapshot,Kalshi,winner,tensorflow__market_disagreement,current N126 observed market endpoint,123,12,12,12,12,0.06546477592021248,0,2026-11-16T22:04:50.800873+00:00
+licensed N126 pregame snapshot,Kalshi,winner,tensorflow__market_movement,current N126 observed market endpoint,123,12,12,12,12,0.033284714533543196,0,2026-11-16T22:04:50.800873+00:00
+licensed N126 pregame snapshot,Kalshi,winner,tensorflow__movement,current N126 observed market endpoint,123,12,12,12,9,0.19776059346011376,0,2026-11-16T22:04:50.800873+00:00
+licensed N126 pregame snapshot,Kalshi,winner,torch__all,current N126 observed market endpoint,123,12,12,12,10,0.11915477265091802,0,2026-11-16T22:04:50.800873+00:00
+licensed N126 pregame snapshot,Kalshi,winner,torch__disagreement,current N126 observed market endpoint,123,12,12,12,7,0.2116388837904272,0,2026-11-16T22:04:50.800873+00:00
+licensed N126 pregame snapshot,Kalshi,winner,torch__football,current N126 observed market endpoint,123,12,12,12,9,0.1537956516512926,0,2026-11-16T22:04:50.800873+00:00
+licensed N126 pregame snapshot,Kalshi,winner,torch__football_market,current N126 observed market endpoint,123,12,12,12,12,0.028231761506262814,0,2026-11-16T22:04:50.800873+00:00
+licensed N126 pregame snapshot,Kalshi,winner,torch__market,current N126 observed market endpoint,123,12,12,12,12,0.02378402935903924,0,2026-11-16T22:04:50.800873+00:00
+licensed N126 pregame snapshot,Kalshi,winner,torch__market_disagreement,current N126 observed market endpoint,123,12,12,12,12,0.048156655251276666,0,2026-11-16T22:04:50.800873+00:00
+licensed N126 pregame snapshot,Kalshi,winner,torch__market_movement,current N126 observed market endpoint,123,12,12,12,12,0.024794799813047764,0,2026-11-16T22:04:50.800873+00:00
+licensed N126 pregame snapshot,Kalshi,winner,torch__movement,current N126 observed market endpoint,123,12,12,12,3,0.25906395158583134,0,2026-11-16T22:04:50.800873+00:00
+licensed N126 pregame snapshot,Kalshi,winner,xgboost__all,current N126 observed market endpoint,123,12,12,12,12,0.031188078339240557,0,2026-11-16T22:04:50.800873+00:00
+licensed N126 pregame snapshot,Kalshi,winner,xgboost__disagreement,current N126 observed market endpoint,123,12,12,12,9,0.19849423616785625,0,2026-11-16T22:04:50.800873+00:00
+licensed N126 pregame snapshot,Kalshi,winner,xgboost__football,current N126 observed market endpoint,123,12,12,12,9,0.13326988077758808,0,2026-11-16T22:04:50.800873+00:00
+licensed N126 pregame snapshot,Kalshi,winner,xgboost__football_market,current N126 observed market endpoint,123,12,12,12,12,0.02151755569416371,0,2026-11-16T22:04:50.800873+00:00
+licensed N126 pregame snapshot,Kalshi,winner,xgboost__market,current N126 observed market endpoint,123,12,12,12,12,0.025872686144722035,0,2026-11-16T22:04:50.800873+00:00
+licensed N126 pregame snapshot,Kalshi,winner,xgboost__market_disagreement,current N126 observed market endpoint,123,12,12,12,12,0.03289662954078121,0,2026-11-16T22:04:50.800873+00:00
+licensed N126 pregame snapshot,Kalshi,winner,xgboost__market_movement,current N126 observed market endpoint,123,12,12,12,12,0.03076266700786671,0,2026-11-16T22:04:50.800873+00:00
+licensed N126 pregame snapshot,Kalshi,winner,xgboost__movement,current N126 observed market endpoint,123,12,12,12,9,0.21480867002596715,0,2026-11-16T22:04:50.800873+00:00
+licensed N126 pregame snapshot,Polymarket,spread,catboost__all,current N126 observed market endpoint,123,13,13,13,6,0.057641832030646004,0,2026-11-16T22:04:50.800873+00:00
+licensed N126 pregame snapshot,Polymarket,spread,catboost__disagreement,current N126 observed market endpoint,123,13,13,13,5,0.1856433678963677,0,2026-11-16T22:04:50.800873+00:00
+licensed N126 pregame snapshot,Polymarket,spread,catboost__football,current N126 observed market endpoint,123,13,13,13,5,0.13288088573481735,0,2026-11-16T22:04:50.800873+00:00
+licensed N126 pregame snapshot,Polymarket,spread,catboost__football_market,current N126 observed market endpoint,123,13,13,13,6,0.029745628540370994,0,2026-11-16T22:04:50.800873+00:00
+licensed N126 pregame snapshot,Polymarket,spread,catboost__market,current N126 observed market endpoint,123,13,13,13,9,0.03542200475790521,0,2026-11-16T22:04:50.800873+00:00
+licensed N126 pregame snapshot,Polymarket,spread,catboost__market_disagreement,current N126 observed market endpoint,123,13,13,13,7,0.0329607380705798,0,2026-11-16T22:04:50.800873+00:00
+licensed N126 pregame snapshot,Polymarket,spread,catboost__market_movement,current N126 observed market endpoint,123,13,13,13,6,0.07180465334904601,0,2026-11-16T22:04:50.800873+00:00
+licensed N126 pregame snapshot,Polymarket,spread,catboost__movement,current N126 observed market endpoint,123,13,13,13,6,0.18086701718861126,0,2026-11-16T22:04:50.800873+00:00
+licensed N126 pregame snapshot,Polymarket,spread,equal_pool__all,current N126 observed market endpoint,123,13,13,13,8,0.03189420898339211,0,2026-11-16T22:04:50.800873+00:00
+licensed N126 pregame snapshot,Polymarket,spread,lightgbm__all,current N126 observed market endpoint,123,13,13,13,6,0.06088239123394601,0,2026-11-16T22:04:50.800873+00:00
+licensed N126 pregame snapshot,Polymarket,spread,lightgbm__disagreement,current N126 observed market endpoint,123,13,13,13,5,0.18247256597255238,0,2026-11-16T22:04:50.800873+00:00
+licensed N126 pregame snapshot,Polymarket,spread,lightgbm__football,current N126 observed market endpoint,123,13,13,13,4,0.1294268336550558,0,2026-11-16T22:04:50.800873+00:00
+licensed N126 pregame snapshot,Polymarket,spread,lightgbm__football_market,current N126 observed market endpoint,123,13,13,13,7,0.04236051598296258,0,2026-11-16T22:04:50.800873+00:00
+licensed N126 pregame snapshot,Polymarket,spread,lightgbm__market,current N126 observed market endpoint,123,13,13,13,8,0.04324346074591642,0,2026-11-16T22:04:50.800873+00:00
+licensed N126 pregame snapshot,Polymarket,spread,lightgbm__market_disagreement,current N126 observed market endpoint,123,13,13,13,6,0.05838092496779216,0,2026-11-16T22:04:50.800873+00:00
+licensed N126 pregame snapshot,Polymarket,spread,lightgbm__market_movement,current N126 observed market endpoint,123,13,13,13,6,0.08655904967664599,0,2026-11-16T22:04:50.800873+00:00
+licensed N126 pregame snapshot,Polymarket,spread,lightgbm__movement,current N126 observed market endpoint,123,13,13,13,5,0.17417755677121655,0,2026-11-16T22:04:50.800873+00:00
+licensed N126 pregame snapshot,Polymarket,spread,n124_adjusted_long,previous conditional fixed-checkpoint model law,123,13,13,13,6,0.10684267592347732,0,2026-11-16T22:04:50.800873+00:00
+licensed N126 pregame snapshot,Polymarket,spread,n124_form_rest,previous conditional fixed-checkpoint model law,123,13,13,13,6,0.12401887218252393,0,2026-11-16T22:04:50.800873+00:00
+licensed N126 pregame snapshot,Polymarket,spread,n124_raw_long,previous conditional fixed-checkpoint model law,123,13,13,13,6,0.10708559090323444,0,2026-11-16T22:04:50.800873+00:00
+licensed N126 pregame snapshot,Polymarket,spread,n124_short_long,previous conditional fixed-checkpoint model law,123,13,13,13,6,0.10708559090323443,0,2026-11-16T22:04:50.800873+00:00
+licensed N126 pregame snapshot,Polymarket,spread,n125_allowed_median_reference,previous N125 dated current model law,123,13,13,13,9,0.01917275290347724,0,2026-11-16T22:04:50.800873+00:00
+licensed N126 pregame snapshot,Polymarket,spread,n125_disagreement_ridge,previous N125 dated current model law,123,13,13,13,8,0.04144924159251047,0,2026-11-16T22:04:50.800873+00:00
+licensed N126 pregame snapshot,Polymarket,spread,n125_location_ridge,previous N125 dated current model law,123,13,13,13,8,0.04166418582303292,0,2026-11-16T22:04:50.800873+00:00
+licensed N126 pregame snapshot,Polymarket,spread,n125_team_market_blend,previous N125 dated current model law,123,13,13,13,12,0.01731351053353952,0,2026-11-16T22:04:50.800873+00:00
+licensed N126 pregame snapshot,Polymarket,spread,n125_team_only_reference,previous N125 dated current model law,123,13,13,13,6,0.10708559090323444,0,2026-11-16T22:04:50.800873+00:00
+licensed N126 pregame snapshot,Polymarket,spread,n125_twenty_named_location_ridge,previous N125 dated current model law,123,13,13,13,8,0.04111290610628936,0,2026-11-16T22:04:50.800873+00:00
+licensed N126 pregame snapshot,Polymarket,spread,sklearn__all,current N126 observed market endpoint,123,13,13,13,5,0.07986185912222152,0,2026-11-16T22:04:50.800873+00:00
+licensed N126 pregame snapshot,Polymarket,spread,sklearn__all_context,current N126 observed market endpoint,123,13,13,13,6,0.10453304638708305,0,2026-11-16T22:04:50.800873+00:00
+licensed N126 pregame snapshot,Polymarket,spread,sklearn__all_raw_calibration,current N126 observed market endpoint,123,13,13,13,6,0.06779181961516766,0,2026-11-16T22:04:50.800873+00:00
+licensed N126 pregame snapshot,Polymarket,spread,sklearn__context,current N126 observed market endpoint,123,13,13,13,5,0.14803825185788347,0,2026-11-16T22:04:50.800873+00:00
+licensed N126 pregame snapshot,Polymarket,spread,sklearn__disagreement,current N126 observed market endpoint,123,13,13,13,5,0.18875520557942155,0,2026-11-16T22:04:50.800873+00:00
+licensed N126 pregame snapshot,Polymarket,spread,sklearn__football,current N126 observed market endpoint,123,13,13,13,5,0.14722958254811275,0,2026-11-16T22:04:50.800873+00:00
+licensed N126 pregame snapshot,Polymarket,spread,sklearn__football_market,current N126 observed market endpoint,123,13,13,13,8,0.036839518058431955,0,2026-11-16T22:04:50.800873+00:00
+licensed N126 pregame snapshot,Polymarket,spread,sklearn__market,current N126 observed market endpoint,123,13,13,13,8,0.028066629781856554,0,2026-11-16T22:04:50.800873+00:00
+licensed N126 pregame snapshot,Polymarket,spread,sklearn__market_disagreement,current N126 observed market endpoint,123,13,13,13,5,0.05009544945492302,0,2026-11-16T22:04:50.800873+00:00
+licensed N126 pregame snapshot,Polymarket,spread,sklearn__market_movement,current N126 observed market endpoint,123,13,13,13,7,0.048455391840591173,0,2026-11-16T22:04:50.800873+00:00
+licensed N126 pregame snapshot,Polymarket,spread,sklearn__movement,current N126 observed market endpoint,123,13,13,13,5,0.190556443951545,0,2026-11-16T22:04:50.800873+00:00
+licensed N126 pregame snapshot,Polymarket,spread,tensorflow__all,current N126 observed market endpoint,123,13,13,13,7,0.06303031668258124,0,2026-11-16T22:04:50.800873+00:00
+licensed N126 pregame snapshot,Polymarket,spread,tensorflow__disagreement,current N126 observed market endpoint,123,13,13,13,5,0.19973206800511387,0,2026-11-16T22:04:50.800873+00:00
+licensed N126 pregame snapshot,Polymarket,spread,tensorflow__football,current N126 observed market endpoint,123,13,13,13,4,0.13531594966064733,0,2026-11-16T22:04:50.800873+00:00
+licensed N126 pregame snapshot,Polymarket,spread,tensorflow__football_market,current N126 observed market endpoint,123,13,13,13,8,0.08955455500393274,0,2026-11-16T22:04:50.800873+00:00
+licensed N126 pregame snapshot,Polymarket,spread,tensorflow__market,current N126 observed market endpoint,123,13,13,13,6,0.045266919615135986,0,2026-11-16T22:04:50.800873+00:00
+licensed N126 pregame snapshot,Polymarket,spread,tensorflow__market_disagreement,current N126 observed market endpoint,123,13,13,13,5,0.09996347696871856,0,2026-11-16T22:04:50.800873+00:00
+licensed N126 pregame snapshot,Polymarket,spread,tensorflow__market_movement,current N126 observed market endpoint,123,13,13,13,5,0.030731740377810696,0,2026-11-16T22:04:50.800873+00:00
+licensed N126 pregame snapshot,Polymarket,spread,tensorflow__movement,current N126 observed market endpoint,123,13,13,13,3,0.1694105015116308,0,2026-11-16T22:04:50.800873+00:00
+licensed N126 pregame snapshot,Polymarket,spread,torch__all,current N126 observed market endpoint,123,13,13,13,6,0.10222525296958243,0,2026-11-16T22:04:50.800873+00:00
+licensed N126 pregame snapshot,Polymarket,spread,torch__disagreement,current N126 observed market endpoint,123,13,13,13,4,0.20810542247992278,0,2026-11-16T22:04:50.800873+00:00
+licensed N126 pregame snapshot,Polymarket,spread,torch__football,current N126 observed market endpoint,123,13,13,13,6,0.16155314363430584,0,2026-11-16T22:04:50.800873+00:00
+licensed N126 pregame snapshot,Polymarket,spread,torch__football_market,current N126 observed market endpoint,123,13,13,13,8,0.026836448724778507,0,2026-11-16T22:04:50.800873+00:00
+licensed N126 pregame snapshot,Polymarket,spread,torch__market,current N126 observed market endpoint,123,13,13,13,8,0.028482811487624795,0,2026-11-16T22:04:50.800873+00:00
+licensed N126 pregame snapshot,Polymarket,spread,torch__market_disagreement,current N126 observed market endpoint,123,13,13,13,5,0.07155239750159369,0,2026-11-16T22:04:50.800873+00:00
+licensed N126 pregame snapshot,Polymarket,spread,torch__market_movement,current N126 observed market endpoint,123,13,13,13,8,0.0414802958466763,0,2026-11-16T22:04:50.800873+00:00
+licensed N126 pregame snapshot,Polymarket,spread,torch__movement,current N126 observed market endpoint,123,13,13,13,5,0.21774693267166004,0,2026-11-16T22:04:50.800873+00:00
+licensed N126 pregame snapshot,Polymarket,spread,xgboost__all,current N126 observed market endpoint,123,13,13,13,7,0.035759104215195195,0,2026-11-16T22:04:50.800873+00:00
+licensed N126 pregame snapshot,Polymarket,spread,xgboost__disagreement,current N126 observed market endpoint,123,13,13,13,6,0.17047706969340617,0,2026-11-16T22:04:50.800873+00:00
+licensed N126 pregame snapshot,Polymarket,spread,xgboost__football,current N126 observed market endpoint,123,13,13,13,3,0.14143845368203964,0,2026-11-16T22:04:50.800873+00:00
+licensed N126 pregame snapshot,Polymarket,spread,xgboost__football_market,current N126 observed market endpoint,123,13,13,13,8,0.02770260171707249,0,2026-11-16T22:04:50.800873+00:00
+licensed N126 pregame snapshot,Polymarket,spread,xgboost__market,current N126 observed market endpoint,123,13,13,13,9,0.03412729402881172,0,2026-11-16T22:04:50.800873+00:00
+licensed N126 pregame snapshot,Polymarket,spread,xgboost__market_disagreement,current N126 observed market endpoint,123,13,13,13,7,0.0388433019943383,0,2026-11-16T22:04:50.800873+00:00
+licensed N126 pregame snapshot,Polymarket,spread,xgboost__market_movement,current N126 observed market endpoint,123,13,13,13,7,0.04641135623039986,0,2026-11-16T22:04:50.800873+00:00
+licensed N126 pregame snapshot,Polymarket,spread,xgboost__movement,current N126 observed market endpoint,123,13,13,13,5,0.1821419250277982,0,2026-11-16T22:04:50.800873+00:00
+licensed N126 pregame snapshot,Polymarket,total,catboost__all,current N126 observed market endpoint,123,13,13,11,8,0.041982177756738896,0,2026-11-16T22:04:50.800873+00:00
+licensed N126 pregame snapshot,Polymarket,total,catboost__disagreement,current N126 observed market endpoint,123,13,13,11,7,0.10769123443204338,0,2026-11-16T22:04:50.800873+00:00
+licensed N126 pregame snapshot,Polymarket,total,catboost__football,current N126 observed market endpoint,123,13,13,11,6,0.08918331296220885,0,2026-11-16T22:04:50.800873+00:00
+licensed N126 pregame snapshot,Polymarket,total,catboost__football_market,current N126 observed market endpoint,123,13,13,11,9,0.027543930592093417,0,2026-11-16T22:04:50.800873+00:00
+licensed N126 pregame snapshot,Polymarket,total,catboost__market,current N126 observed market endpoint,123,13,13,11,8,0.03910654073776383,0,2026-11-16T22:04:50.800873+00:00
+licensed N126 pregame snapshot,Polymarket,total,catboost__market_disagreement,current N126 observed market endpoint,123,13,13,11,10,0.02655665766048066,0,2026-11-16T22:04:50.800873+00:00
+licensed N126 pregame snapshot,Polymarket,total,catboost__market_movement,current N126 observed market endpoint,123,13,13,11,8,0.06670521268635496,0,2026-11-16T22:04:50.800873+00:00
+licensed N126 pregame snapshot,Polymarket,total,catboost__movement,current N126 observed market endpoint,123,13,13,11,7,0.10985122065110493,0,2026-11-16T22:04:50.800873+00:00
+licensed N126 pregame snapshot,Polymarket,total,equal_pool__all,current N126 observed market endpoint,123,13,13,11,8,0.06552476163579343,0,2026-11-16T22:04:50.800873+00:00
+licensed N126 pregame snapshot,Polymarket,total,lightgbm__all,current N126 observed market endpoint,123,13,13,11,9,0.03909893213819811,0,2026-11-16T22:04:50.800873+00:00
+licensed N126 pregame snapshot,Polymarket,total,lightgbm__disagreement,current N126 observed market endpoint,123,13,13,11,7,0.11237500023454808,0,2026-11-16T22:04:50.800873+00:00
+licensed N126 pregame snapshot,Polymarket,total,lightgbm__football,current N126 observed market endpoint,123,13,13,11,5,0.08965876727852723,0,2026-11-16T22:04:50.800873+00:00
+licensed N126 pregame snapshot,Polymarket,total,lightgbm__football_market,current N126 observed market endpoint,123,13,13,11,7,0.05129220486724928,0,2026-11-16T22:04:50.800873+00:00
+licensed N126 pregame snapshot,Polymarket,total,lightgbm__market,current N126 observed market endpoint,123,13,13,11,8,0.057931387714060846,0,2026-11-16T22:04:50.800873+00:00
+licensed N126 pregame snapshot,Polymarket,total,lightgbm__market_disagreement,current N126 observed market endpoint,123,13,13,11,7,0.03496876725877922,0,2026-11-16T22:04:50.800873+00:00
+licensed N126 pregame snapshot,Polymarket,total,lightgbm__market_movement,current N126 observed market endpoint,123,13,13,11,8,0.051976357159739556,0,2026-11-16T22:04:50.800873+00:00
+licensed N126 pregame snapshot,Polymarket,total,lightgbm__movement,current N126 observed market endpoint,123,13,13,11,7,0.10470351772539424,0,2026-11-16T22:04:50.800873+00:00
+licensed N126 pregame snapshot,Polymarket,total,n124_adjusted_long,previous conditional fixed-checkpoint model law,123,13,13,11,4,0.08125132804324238,0,2026-11-16T22:04:50.800873+00:00
+licensed N126 pregame snapshot,Polymarket,total,n124_form_rest,previous conditional fixed-checkpoint model law,123,13,13,11,4,0.0778505183266432,0,2026-11-16T22:04:50.800873+00:00
+licensed N126 pregame snapshot,Polymarket,total,n124_raw_long,previous conditional fixed-checkpoint model law,123,13,13,11,5,0.06825877413319915,0,2026-11-16T22:04:50.800873+00:00
+licensed N126 pregame snapshot,Polymarket,total,n124_short_long,previous conditional fixed-checkpoint model law,123,13,13,11,4,0.07778993980211067,0,2026-11-16T22:04:50.800873+00:00
+licensed N126 pregame snapshot,Polymarket,total,n125_allowed_median_reference,previous N125 dated current model law,123,13,13,11,7,0.044092802956383244,0,2026-11-16T22:04:50.800873+00:00
+licensed N126 pregame snapshot,Polymarket,total,n125_disagreement_ridge,previous N125 dated current model law,123,13,13,11,5,0.029146180309690406,0,2026-11-16T22:04:50.800873+00:00
+licensed N126 pregame snapshot,Polymarket,total,n125_location_ridge,previous N125 dated current model law,123,13,13,11,5,0.03089000898277138,0,2026-11-16T22:04:50.800873+00:00
+licensed N126 pregame snapshot,Polymarket,total,n125_team_market_blend,previous N125 dated current model law,123,13,13,11,5,0.028658280353997777,0,2026-11-16T22:04:50.800873+00:00
+licensed N126 pregame snapshot,Polymarket,total,n125_team_only_reference,previous N125 dated current model law,123,13,13,11,5,0.06825877413319915,0,2026-11-16T22:04:50.800873+00:00
+licensed N126 pregame snapshot,Polymarket,total,n125_twenty_named_location_ridge,previous N125 dated current model law,123,13,13,11,5,0.031217531568305965,0,2026-11-16T22:04:50.800873+00:00
+licensed N126 pregame snapshot,Polymarket,total,sklearn__all,current N126 observed market endpoint,123,13,13,11,6,0.07020677887755107,0,2026-11-16T22:04:50.800873+00:00
+licensed N126 pregame snapshot,Polymarket,total,sklearn__all_context,current N126 observed market endpoint,123,13,13,11,4,0.1289732440888534,0,2026-11-16T22:04:50.800873+00:00
+licensed N126 pregame snapshot,Polymarket,total,sklearn__all_raw_calibration,current N126 observed market endpoint,123,13,13,11,6,0.07020677887755107,0,2026-11-16T22:04:50.800873+00:00
+licensed N126 pregame snapshot,Polymarket,total,sklearn__context,current N126 observed market endpoint,123,13,13,11,7,0.08764159086488814,0,2026-11-16T22:04:50.800873+00:00
+licensed N126 pregame snapshot,Polymarket,total,sklearn__disagreement,current N126 observed market endpoint,123,13,13,11,7,0.12474755906172558,0,2026-11-16T22:04:50.800873+00:00
+licensed N126 pregame snapshot,Polymarket,total,sklearn__football,current N126 observed market endpoint,123,13,13,11,2,0.12610461780714244,0,2026-11-16T22:04:50.800873+00:00
+licensed N126 pregame snapshot,Polymarket,total,sklearn__football_market,current N126 observed market endpoint,123,13,13,11,4,0.07177763822662263,0,2026-11-16T22:04:50.800873+00:00
+licensed N126 pregame snapshot,Polymarket,total,sklearn__market,current N126 observed market endpoint,123,13,13,11,8,0.032581785162185045,0,2026-11-16T22:04:50.800873+00:00
+licensed N126 pregame snapshot,Polymarket,total,sklearn__market_disagreement,current N126 observed market endpoint,123,13,13,11,7,0.05142982544767901,0,2026-11-16T22:04:50.800873+00:00
+licensed N126 pregame snapshot,Polymarket,total,sklearn__market_movement,current N126 observed market endpoint,123,13,13,11,8,0.1391878114154857,0,2026-11-16T22:04:50.800873+00:00
+licensed N126 pregame snapshot,Polymarket,total,sklearn__movement,current N126 observed market endpoint,123,13,13,11,8,0.15797346365474724,0,2026-11-16T22:04:50.800873+00:00
+licensed N126 pregame snapshot,Polymarket,total,tensorflow__all,current N126 observed market endpoint,123,13,13,11,8,0.12208349427349341,0,2026-11-16T22:04:50.800873+00:00
+licensed N126 pregame snapshot,Polymarket,total,tensorflow__disagreement,current N126 observed market endpoint,123,13,13,11,8,0.12071191891913147,0,2026-11-16T22:04:50.800873+00:00
+licensed N126 pregame snapshot,Polymarket,total,tensorflow__football,current N126 observed market endpoint,123,13,13,11,3,0.13617468466263175,0,2026-11-16T22:04:50.800873+00:00
+licensed N126 pregame snapshot,Polymarket,total,tensorflow__football_market,current N126 observed market endpoint,123,13,13,11,5,0.0736969563339765,0,2026-11-16T22:04:50.800873+00:00
+licensed N126 pregame snapshot,Polymarket,total,tensorflow__market,current N126 observed market endpoint,123,13,13,11,7,0.04023745303527944,0,2026-11-16T22:04:50.800873+00:00
+licensed N126 pregame snapshot,Polymarket,total,tensorflow__market_disagreement,current N126 observed market endpoint,123,13,13,11,4,0.061954929208948066,0,2026-11-16T22:04:50.800873+00:00
+licensed N126 pregame snapshot,Polymarket,total,tensorflow__market_movement,current N126 observed market endpoint,123,13,13,11,8,0.1216493833143011,0,2026-11-16T22:04:50.800873+00:00
+licensed N126 pregame snapshot,Polymarket,total,tensorflow__movement,current N126 observed market endpoint,123,13,13,11,7,0.12306656277407414,0,2026-11-16T22:04:50.800873+00:00
+licensed N126 pregame snapshot,Polymarket,total,torch__all,current N126 observed market endpoint,123,13,13,11,6,0.11962408175382293,0,2026-11-16T22:04:50.800873+00:00
+licensed N126 pregame snapshot,Polymarket,total,torch__disagreement,current N126 observed market endpoint,123,13,13,11,8,0.1302871753605189,0,2026-11-16T22:04:50.800873+00:00
+licensed N126 pregame snapshot,Polymarket,total,torch__football,current N126 observed market endpoint,123,13,13,11,2,0.12055816795765781,0,2026-11-16T22:04:50.800873+00:00
+licensed N126 pregame snapshot,Polymarket,total,torch__football_market,current N126 observed market endpoint,123,13,13,11,4,0.11496353816943031,0,2026-11-16T22:04:50.800873+00:00
+licensed N126 pregame snapshot,Polymarket,total,torch__market,current N126 observed market endpoint,123,13,13,11,9,0.028916625937970338,0,2026-11-16T22:04:50.800873+00:00
+licensed N126 pregame snapshot,Polymarket,total,torch__market_disagreement,current N126 observed market endpoint,123,13,13,11,6,0.0705627946880231,0,2026-11-16T22:04:50.800873+00:00
+licensed N126 pregame snapshot,Polymarket,total,torch__market_movement,current N126 observed market endpoint,123,13,13,11,8,0.14747169606000882,0,2026-11-16T22:04:50.800873+00:00
+licensed N126 pregame snapshot,Polymarket,total,torch__movement,current N126 observed market endpoint,123,13,13,11,7,0.12065301182345108,0,2026-11-16T22:04:50.800873+00:00
+licensed N126 pregame snapshot,Polymarket,total,xgboost__all,current N126 observed market endpoint,123,13,13,11,8,0.0282300373956993,0,2026-11-16T22:04:50.800873+00:00
+licensed N126 pregame snapshot,Polymarket,total,xgboost__disagreement,current N126 observed market endpoint,123,13,13,11,7,0.11294898315298953,0,2026-11-16T22:04:50.800873+00:00
+licensed N126 pregame snapshot,Polymarket,total,xgboost__football,current N126 observed market endpoint,123,13,13,11,6,0.08792709040421309,0,2026-11-16T22:04:50.800873+00:00
+licensed N126 pregame snapshot,Polymarket,total,xgboost__football_market,current N126 observed market endpoint,123,13,13,11,8,0.04854015895864075,0,2026-11-16T22:04:50.800873+00:00
+licensed N126 pregame snapshot,Polymarket,total,xgboost__market,current N126 observed market endpoint,123,13,13,11,7,0.041370118409526764,0,2026-11-16T22:04:50.800873+00:00
+licensed N126 pregame snapshot,Polymarket,total,xgboost__market_disagreement,current N126 observed market endpoint,123,13,13,11,9,0.024257773077615816,0,2026-11-16T22:04:50.800873+00:00
+licensed N126 pregame snapshot,Polymarket,total,xgboost__market_movement,current N126 observed market endpoint,123,13,13,11,10,0.03148351398214287,0,2026-11-16T22:04:50.800873+00:00
+licensed N126 pregame snapshot,Polymarket,total,xgboost__movement,current N126 observed market endpoint,123,13,13,11,7,0.10108919945760192,0,2026-11-16T22:04:50.800873+00:00
+licensed N126 pregame snapshot,Polymarket,winner,catboost__all,current N126 observed market endpoint,123,13,13,13,13,0.039649671120557686,0,2026-11-16T22:04:50.800873+00:00
+licensed N126 pregame snapshot,Polymarket,winner,catboost__disagreement,current N126 observed market endpoint,123,13,13,13,11,0.18569809147386057,0,2026-11-16T22:04:50.800873+00:00
+licensed N126 pregame snapshot,Polymarket,winner,catboost__football,current N126 observed market endpoint,123,13,13,13,11,0.10678914117024838,0,2026-11-16T22:04:50.800873+00:00
+licensed N126 pregame snapshot,Polymarket,winner,catboost__football_market,current N126 observed market endpoint,123,13,13,13,13,0.022460115731212812,0,2026-11-16T22:04:50.800873+00:00
+licensed N126 pregame snapshot,Polymarket,winner,catboost__market,current N126 observed market endpoint,123,13,13,13,13,0.028198615436304773,0,2026-11-16T22:04:50.800873+00:00
+licensed N126 pregame snapshot,Polymarket,winner,catboost__market_disagreement,current N126 observed market endpoint,123,13,13,13,13,0.02904553442701246,0,2026-11-16T22:04:50.800873+00:00
+licensed N126 pregame snapshot,Polymarket,winner,catboost__market_movement,current N126 observed market endpoint,123,13,13,13,13,0.0507404150323577,0,2026-11-16T22:04:50.800873+00:00
+licensed N126 pregame snapshot,Polymarket,winner,catboost__movement,current N126 observed market endpoint,123,13,13,13,11,0.17819066659671057,0,2026-11-16T22:04:50.800873+00:00
+licensed N126 pregame snapshot,Polymarket,winner,equal_pool__all,current N126 observed market endpoint,123,13,13,13,13,0.035710421162861286,0,2026-11-16T22:04:50.800873+00:00
+licensed N126 pregame snapshot,Polymarket,winner,lightgbm__all,current N126 observed market endpoint,123,13,13,13,13,0.04842485044129616,0,2026-11-16T22:04:50.800873+00:00
+licensed N126 pregame snapshot,Polymarket,winner,lightgbm__disagreement,current N126 observed market endpoint,123,13,13,13,11,0.1868248535337836,0,2026-11-16T22:04:50.800873+00:00
+licensed N126 pregame snapshot,Polymarket,winner,lightgbm__football,current N126 observed market endpoint,123,13,13,13,11,0.10411333828510919,0,2026-11-16T22:04:50.800873+00:00
+licensed N126 pregame snapshot,Polymarket,winner,lightgbm__football_market,current N126 observed market endpoint,123,13,13,13,13,0.03365835667147052,0,2026-11-16T22:04:50.800873+00:00
+licensed N126 pregame snapshot,Polymarket,winner,lightgbm__market,current N126 observed market endpoint,123,13,13,13,13,0.027558341886345816,0,2026-11-16T22:04:50.800873+00:00
+licensed N126 pregame snapshot,Polymarket,winner,lightgbm__market_disagreement,current N126 observed market endpoint,123,13,13,13,13,0.045513188510388464,0,2026-11-16T22:04:50.800873+00:00
+licensed N126 pregame snapshot,Polymarket,winner,lightgbm__market_movement,current N126 observed market endpoint,123,13,13,13,13,0.059148992087303856,0,2026-11-16T22:04:50.800873+00:00
+licensed N126 pregame snapshot,Polymarket,winner,lightgbm__movement,current N126 observed market endpoint,123,13,13,13,11,0.16922078103223367,0,2026-11-16T22:04:50.800873+00:00
+licensed N126 pregame snapshot,Polymarket,winner,n124_adjusted_long,previous conditional fixed-checkpoint model law,123,13,13,13,13,0.09371969302280257,0,2026-11-16T22:04:50.800873+00:00
+licensed N126 pregame snapshot,Polymarket,winner,n124_form_rest,previous conditional fixed-checkpoint model law,123,13,13,13,10,0.1131684658003908,0,2026-11-16T22:04:50.800873+00:00
+licensed N126 pregame snapshot,Polymarket,winner,n124_raw_long,previous conditional fixed-checkpoint model law,123,13,13,13,13,0.0944342891305125,0,2026-11-16T22:04:50.800873+00:00
+licensed N126 pregame snapshot,Polymarket,winner,n124_short_long,previous conditional fixed-checkpoint model law,123,13,13,13,13,0.09371969302280257,0,2026-11-16T22:04:50.800873+00:00
+licensed N126 pregame snapshot,Polymarket,winner,n125_allowed_median_reference,previous N125 dated current model law,123,13,13,13,13,0.012774836557963614,0,2026-11-16T22:04:50.800873+00:00
+licensed N126 pregame snapshot,Polymarket,winner,n125_disagreement_ridge,previous N125 dated current model law,123,13,13,13,13,0.009970684664489046,0,2026-11-16T22:04:50.800873+00:00
+licensed N126 pregame snapshot,Polymarket,winner,n125_location_ridge,previous N125 dated current model law,123,13,13,13,13,0.009026191336474235,0,2026-11-16T22:04:50.800873+00:00
+licensed N126 pregame snapshot,Polymarket,winner,n125_team_market_blend,previous N125 dated current model law,123,13,13,13,13,0.017959562870466815,0,2026-11-16T22:04:50.800873+00:00
+licensed N126 pregame snapshot,Polymarket,winner,n125_team_only_reference,previous N125 dated current model law,123,13,13,13,13,0.0944342891305125,0,2026-11-16T22:04:50.800873+00:00
+licensed N126 pregame snapshot,Polymarket,winner,n125_twenty_named_location_ridge,previous N125 dated current model law,123,13,13,13,13,0.00900209149853134,0,2026-11-16T22:04:50.800873+00:00
+licensed N126 pregame snapshot,Polymarket,winner,sklearn__all,current N126 observed market endpoint,123,13,13,13,13,0.06607642642276061,0,2026-11-16T22:04:50.800873+00:00
+licensed N126 pregame snapshot,Polymarket,winner,sklearn__all_context,current N126 observed market endpoint,123,13,13,13,12,0.08749407177721782,0,2026-11-16T22:04:50.800873+00:00
+licensed N126 pregame snapshot,Polymarket,winner,sklearn__all_raw_calibration,current N126 observed market endpoint,123,13,13,13,13,0.05094618945315876,0,2026-11-16T22:04:50.800873+00:00
+licensed N126 pregame snapshot,Polymarket,winner,sklearn__context,current N126 observed market endpoint,123,13,13,13,11,0.1387650171414426,0,2026-11-16T22:04:50.800873+00:00
+licensed N126 pregame snapshot,Polymarket,winner,sklearn__disagreement,current N126 observed market endpoint,123,13,13,13,7,0.2022743223938067,0,2026-11-16T22:04:50.800873+00:00
+licensed N126 pregame snapshot,Polymarket,winner,sklearn__football,current N126 observed market endpoint,123,13,13,13,11,0.12473427815554033,0,2026-11-16T22:04:50.800873+00:00
+licensed N126 pregame snapshot,Polymarket,winner,sklearn__football_market,current N126 observed market endpoint,123,13,13,13,13,0.03277997328326242,0,2026-11-16T22:04:50.800873+00:00
+licensed N126 pregame snapshot,Polymarket,winner,sklearn__market,current N126 observed market endpoint,123,13,13,13,13,0.028813963878981694,0,2026-11-16T22:04:50.800873+00:00
+licensed N126 pregame snapshot,Polymarket,winner,sklearn__market_disagreement,current N126 observed market endpoint,123,13,13,13,13,0.030862078088365386,0,2026-11-16T22:04:50.800873+00:00
+licensed N126 pregame snapshot,Polymarket,winner,sklearn__market_movement,current N126 observed market endpoint,123,13,13,13,13,0.045127415191449735,0,2026-11-16T22:04:50.800873+00:00
+licensed N126 pregame snapshot,Polymarket,winner,sklearn__movement,current N126 observed market endpoint,123,13,13,13,11,0.192788092233791,0,2026-11-16T22:04:50.800873+00:00
+licensed N126 pregame snapshot,Polymarket,winner,tensorflow__all,current N126 observed market endpoint,123,13,13,13,13,0.05298631435288763,0,2026-11-16T22:04:50.800873+00:00
+licensed N126 pregame snapshot,Polymarket,winner,tensorflow__disagreement,current N126 observed market endpoint,123,13,13,13,6,0.2221785283525182,0,2026-11-16T22:04:50.800873+00:00
+licensed N126 pregame snapshot,Polymarket,winner,tensorflow__football,current N126 observed market endpoint,123,13,13,13,11,0.16980404889635795,0,2026-11-16T22:04:50.800873+00:00
+licensed N126 pregame snapshot,Polymarket,winner,tensorflow__football_market,current N126 observed market endpoint,123,13,13,13,13,0.06105257982273625,0,2026-11-16T22:04:50.800873+00:00
+licensed N126 pregame snapshot,Polymarket,winner,tensorflow__market,current N126 observed market endpoint,123,13,13,13,13,0.032329940603174005,0,2026-11-16T22:04:50.800873+00:00
+licensed N126 pregame snapshot,Polymarket,winner,tensorflow__market_disagreement,current N126 observed market endpoint,123,13,13,13,13,0.06612741507029657,0,2026-11-16T22:04:50.800873+00:00
+licensed N126 pregame snapshot,Polymarket,winner,tensorflow__market_movement,current N126 observed market endpoint,123,13,13,13,13,0.030240806133222945,0,2026-11-16T22:04:50.800873+00:00
+licensed N126 pregame snapshot,Polymarket,winner,tensorflow__movement,current N126 observed market endpoint,123,13,13,13,11,0.16431106348399332,0,2026-11-16T22:04:50.800873+00:00
+licensed N126 pregame snapshot,Polymarket,winner,torch__all,current N126 observed market endpoint,123,13,13,13,11,0.10486041359336157,0,2026-11-16T22:04:50.800873+00:00
+licensed N126 pregame snapshot,Polymarket,winner,torch__disagreement,current N126 observed market endpoint,123,13,13,13,6,0.21815269117806435,0,2026-11-16T22:04:50.800873+00:00
+licensed N126 pregame snapshot,Polymarket,winner,torch__football,current N126 observed market endpoint,123,13,13,13,11,0.1302762815128339,0,2026-11-16T22:04:50.800873+00:00
+licensed N126 pregame snapshot,Polymarket,winner,torch__football_market,current N126 observed market endpoint,123,13,13,13,13,0.027406309907238413,0,2026-11-16T22:04:50.800873+00:00
+licensed N126 pregame snapshot,Polymarket,winner,torch__market,current N126 observed market endpoint,123,13,13,13,13,0.028076768785689384,0,2026-11-16T22:04:50.800873+00:00
+licensed N126 pregame snapshot,Polymarket,winner,torch__market_disagreement,current N126 observed market endpoint,123,13,13,13,13,0.048425895583646156,0,2026-11-16T22:04:50.800873+00:00
+licensed N126 pregame snapshot,Polymarket,winner,torch__market_movement,current N126 observed market endpoint,123,13,13,13,13,0.026317947966729725,0,2026-11-16T22:04:50.800873+00:00
+licensed N126 pregame snapshot,Polymarket,winner,torch__movement,current N126 observed market endpoint,123,13,13,13,3,0.24667746030494514,0,2026-11-16T22:04:50.800873+00:00
+licensed N126 pregame snapshot,Polymarket,winner,xgboost__all,current N126 observed market endpoint,123,13,13,13,13,0.031581821995611395,0,2026-11-16T22:04:50.800873+00:00
+licensed N126 pregame snapshot,Polymarket,winner,xgboost__disagreement,current N126 observed market endpoint,123,13,13,13,11,0.17616362145318748,0,2026-11-16T22:04:50.800873+00:00
+licensed N126 pregame snapshot,Polymarket,winner,xgboost__football,current N126 observed market endpoint,123,13,13,13,11,0.1162218602524464,0,2026-11-16T22:04:50.800873+00:00
+licensed N126 pregame snapshot,Polymarket,winner,xgboost__football_market,current N126 observed market endpoint,123,13,13,13,13,0.024081379875158623,0,2026-11-16T22:04:50.800873+00:00
+licensed N126 pregame snapshot,Polymarket,winner,xgboost__market,current N126 observed market endpoint,123,13,13,13,13,0.026096977967539736,0,2026-11-16T22:04:50.800873+00:00
+licensed N126 pregame snapshot,Polymarket,winner,xgboost__market_disagreement,current N126 observed market endpoint,123,13,13,13,13,0.033587582485818154,0,2026-11-16T22:04:50.800873+00:00
+licensed N126 pregame snapshot,Polymarket,winner,xgboost__market_movement,current N126 observed market endpoint,123,13,13,13,13,0.03251741336793554,0,2026-11-16T22:04:50.800873+00:00
+licensed N126 pregame snapshot,Polymarket,winner,xgboost__movement,current N126 observed market endpoint,123,13,13,13,11,0.18278991749282983,0,2026-11-16T22:04:50.800873+00:00
+licensed N126 pregame snapshot,Polymarket_US,winner,catboost__all,current N126 observed market endpoint,123,13,13,13,13,0.04008553280855826,0,2026-11-16T22:04:50.800873+00:00
+licensed N126 pregame snapshot,Polymarket_US,winner,catboost__disagreement,current N126 observed market endpoint,123,13,13,13,11,0.18588988406026424,0,2026-11-16T22:04:50.800873+00:00
+licensed N126 pregame snapshot,Polymarket_US,winner,catboost__football,current N126 observed market endpoint,123,13,13,13,11,0.10916002930731453,0,2026-11-16T22:04:50.800873+00:00
+licensed N126 pregame snapshot,Polymarket_US,winner,catboost__football_market,current N126 observed market endpoint,123,13,13,13,13,0.023219864058889508,0,2026-11-16T22:04:50.800873+00:00
+licensed N126 pregame snapshot,Polymarket_US,winner,catboost__market,current N126 observed market endpoint,123,13,13,13,13,0.028920433169934028,0,2026-11-16T22:04:50.800873+00:00
+licensed N126 pregame snapshot,Polymarket_US,winner,catboost__market_disagreement,current N126 observed market endpoint,123,13,13,13,13,0.02976735216064171,0,2026-11-16T22:04:50.800873+00:00
+licensed N126 pregame snapshot,Polymarket_US,winner,catboost__market_movement,current N126 observed market endpoint,123,13,13,13,13,0.051176276720358266,0,2026-11-16T22:04:50.800873+00:00
+licensed N126 pregame snapshot,Polymarket_US,winner,catboost__movement,current N126 observed market endpoint,123,13,13,13,11,0.17950523047639327,0,2026-11-16T22:04:50.800873+00:00
+licensed N126 pregame snapshot,Polymarket_US,winner,equal_pool__all,current N126 observed market endpoint,123,13,13,13,13,0.03791870953441664,0,2026-11-16T22:04:50.800873+00:00
+licensed N126 pregame snapshot,Polymarket_US,winner,lightgbm__all,current N126 observed market endpoint,123,13,13,13,13,0.048860712129296734,0,2026-11-16T22:04:50.800873+00:00
+licensed N126 pregame snapshot,Polymarket_US,winner,lightgbm__disagreement,current N126 observed market endpoint,123,13,13,13,11,0.18666845202931917,0,2026-11-16T22:04:50.800873+00:00
+licensed N126 pregame snapshot,Polymarket_US,winner,lightgbm__football,current N126 observed market endpoint,123,13,13,13,11,0.10583508653252913,0,2026-11-16T22:04:50.800873+00:00
+licensed N126 pregame snapshot,Polymarket_US,winner,lightgbm__football_market,current N126 observed market endpoint,123,13,13,13,13,0.03396710298964173,0,2026-11-16T22:04:50.800873+00:00
+licensed N126 pregame snapshot,Polymarket_US,winner,lightgbm__market,current N126 observed market endpoint,123,13,13,13,13,0.0276707785725494,0,2026-11-16T22:04:50.800873+00:00
+licensed N126 pregame snapshot,Polymarket_US,winner,lightgbm__market_disagreement,current N126 observed market endpoint,123,13,13,13,13,0.04594905019838903,0,2026-11-16T22:04:50.800873+00:00
+licensed N126 pregame snapshot,Polymarket_US,winner,lightgbm__market_movement,current N126 observed market endpoint,123,13,13,13,13,0.05958485377530443,0,2026-11-16T22:04:50.800873+00:00
+licensed N126 pregame snapshot,Polymarket_US,winner,lightgbm__movement,current N126 observed market endpoint,123,13,13,13,11,0.1698580698291548,0,2026-11-16T22:04:50.800873+00:00
+licensed N126 pregame snapshot,Polymarket_US,winner,n124_adjusted_long,previous conditional fixed-checkpoint model law,123,13,13,13,13,0.09352118299696935,0,2026-11-16T22:04:50.800873+00:00
+licensed N126 pregame snapshot,Polymarket_US,winner,n124_form_rest,previous conditional fixed-checkpoint model law,123,13,13,13,10,0.1134251357113844,0,2026-11-16T22:04:50.800873+00:00
+licensed N126 pregame snapshot,Polymarket_US,winner,n124_raw_long,previous conditional fixed-checkpoint model law,123,13,13,13,13,0.09462608171691615,0,2026-11-16T22:04:50.800873+00:00
+licensed N126 pregame snapshot,Polymarket_US,winner,n124_short_long,previous conditional fixed-checkpoint model law,123,13,13,13,13,0.09351639355787832,0,2026-11-16T22:04:50.800873+00:00
+licensed N126 pregame snapshot,Polymarket_US,winner,n125_allowed_median_reference,previous N125 dated current model law,123,13,13,13,13,0.014545746062868938,0,2026-11-16T22:04:50.800873+00:00
+licensed N126 pregame snapshot,Polymarket_US,winner,n125_disagreement_ridge,previous N125 dated current model law,123,13,13,13,13,0.009580516215974636,0,2026-11-16T22:04:50.800873+00:00
+licensed N126 pregame snapshot,Polymarket_US,winner,n125_location_ridge,previous N125 dated current model law,123,13,13,13,13,0.008853356500290456,0,2026-11-16T22:04:50.800873+00:00
+licensed N126 pregame snapshot,Polymarket_US,winner,n125_team_market_blend,previous N125 dated current model law,123,13,13,13,13,0.01903443452526611,0,2026-11-16T22:04:50.800873+00:00
+licensed N126 pregame snapshot,Polymarket_US,winner,n125_team_only_reference,previous N125 dated current model law,123,13,13,13,13,0.09462608171691615,0,2026-11-16T22:04:50.800873+00:00
+licensed N126 pregame snapshot,Polymarket_US,winner,n125_twenty_named_location_ridge,previous N125 dated current model law,123,13,13,13,13,0.009006509638350056,0,2026-11-16T22:04:50.800873+00:00
+licensed N126 pregame snapshot,Polymarket_US,winner,sklearn__all,current N126 observed market endpoint,123,13,13,13,13,0.06734405584675156,0,2026-11-16T22:04:50.800873+00:00
+licensed N126 pregame snapshot,Polymarket_US,winner,sklearn__all_context,current N126 observed market endpoint,123,13,13,13,12,0.0900262467884493,0,2026-11-16T22:04:50.800873+00:00
+licensed N126 pregame snapshot,Polymarket_US,winner,sklearn__all_raw_calibration,current N126 observed market endpoint,123,13,13,13,13,0.05249977492277838,0,2026-11-16T22:04:50.800873+00:00
+licensed N126 pregame snapshot,Polymarket_US,winner,sklearn__context,current N126 observed market endpoint,123,13,13,13,11,0.14064805226302785,0,2026-11-16T22:04:50.800873+00:00
+licensed N126 pregame snapshot,Polymarket_US,winner,sklearn__disagreement,current N126 observed market endpoint,123,13,13,13,7,0.20211792088934225,0,2026-11-16T22:04:50.800873+00:00
+licensed N126 pregame snapshot,Polymarket_US,winner,sklearn__football,current N126 observed market endpoint,123,13,13,13,11,0.126275942365065,0,2026-11-16T22:04:50.800873+00:00
+licensed N126 pregame snapshot,Polymarket_US,winner,sklearn__football_market,current N126 observed market endpoint,123,13,13,13,13,0.03355448323015323,0,2026-11-16T22:04:50.800873+00:00
+licensed N126 pregame snapshot,Polymarket_US,winner,sklearn__market,current N126 observed market endpoint,123,13,13,13,13,0.03026790249992524,0,2026-11-16T22:04:50.800873+00:00
+licensed N126 pregame snapshot,Polymarket_US,winner,sklearn__market_disagreement,current N126 observed market endpoint,123,13,13,13,13,0.032415663557985,0,2026-11-16T22:04:50.800873+00:00
+licensed N126 pregame snapshot,Polymarket_US,winner,sklearn__market_movement,current N126 observed market endpoint,123,13,13,13,13,0.04733570356300509,0,2026-11-16T22:04:50.800873+00:00
+licensed N126 pregame snapshot,Polymarket_US,winner,sklearn__movement,current N126 observed market endpoint,123,13,13,13,11,0.194045911738724,0,2026-11-16T22:04:50.800873+00:00
+licensed N126 pregame snapshot,Polymarket_US,winner,tensorflow__all,current N126 observed market endpoint,123,13,13,13,13,0.053627852213046875,0,2026-11-16T22:04:50.800873+00:00
+licensed N126 pregame snapshot,Polymarket_US,winner,tensorflow__disagreement,current N126 observed market endpoint,123,13,13,13,6,0.22202212684805378,0,2026-11-16T22:04:50.800873+00:00
+licensed N126 pregame snapshot,Polymarket_US,winner,tensorflow__football,current N126 observed market endpoint,123,13,13,13,11,0.17133888992707508,0,2026-11-16T22:04:50.800873+00:00
+licensed N126 pregame snapshot,Polymarket_US,winner,tensorflow__football_market,current N126 observed market endpoint,123,13,13,13,13,0.062450441430480064,0,2026-11-16T22:04:50.800873+00:00
+licensed N126 pregame snapshot,Polymarket_US,winner,tensorflow__market,current N126 observed market endpoint,123,13,13,13,13,0.03305175833680325,0,2026-11-16T22:04:50.800873+00:00
+licensed N126 pregame snapshot,Polymarket_US,winner,tensorflow__market_disagreement,current N126 observed market endpoint,123,13,13,13,13,0.0676865635522057,0,2026-11-16T22:04:50.800873+00:00
+licensed N126 pregame snapshot,Polymarket_US,winner,tensorflow__market_movement,current N126 observed market endpoint,123,13,13,13,13,0.0329598883611572,0,2026-11-16T22:04:50.800873+00:00
+licensed N126 pregame snapshot,Polymarket_US,winner,tensorflow__movement,current N126 observed market endpoint,123,13,13,13,11,0.1668432384952248,0,2026-11-16T22:04:50.800873+00:00
+licensed N126 pregame snapshot,Polymarket_US,winner,torch__all,current N126 observed market endpoint,123,13,13,13,11,0.10630743645859077,0,2026-11-16T22:04:50.800873+00:00
+licensed N126 pregame snapshot,Polymarket_US,winner,torch__disagreement,current N126 observed market endpoint,123,13,13,13,6,0.2179962896735999,0,2026-11-16T22:04:50.800873+00:00
+licensed N126 pregame snapshot,Polymarket_US,winner,torch__football,current N126 observed market endpoint,123,13,13,13,11,0.13138818707494904,0,2026-11-16T22:04:50.800873+00:00
+licensed N126 pregame snapshot,Polymarket_US,winner,torch__football_market,current N126 observed market endpoint,123,13,13,13,13,0.02771896361800056,0,2026-11-16T22:04:50.800873+00:00
+licensed N126 pregame snapshot,Polymarket_US,winner,torch__market,current N126 observed market endpoint,123,13,13,13,13,0.028798586519318638,0,2026-11-16T22:04:50.800873+00:00
+licensed N126 pregame snapshot,Polymarket_US,winner,torch__market_disagreement,current N126 observed market endpoint,123,13,13,13,13,0.04997948105326577,0,2026-11-16T22:04:50.800873+00:00
+licensed N126 pregame snapshot,Polymarket_US,winner,torch__market_movement,current N126 observed market endpoint,123,13,13,13,13,0.027304930361468818,0,2026-11-16T22:04:50.800873+00:00
+licensed N126 pregame snapshot,Polymarket_US,winner,torch__movement,current N126 observed market endpoint,123,13,13,13,3,0.24652105880048072,0,2026-11-16T22:04:50.800873+00:00
+licensed N126 pregame snapshot,Polymarket_US,winner,xgboost__all,current N126 observed market endpoint,123,13,13,13,13,0.03230363972924065,0,2026-11-16T22:04:50.800873+00:00
+licensed N126 pregame snapshot,Polymarket_US,winner,xgboost__disagreement,current N126 observed market endpoint,123,13,13,13,11,0.17635541403959115,0,2026-11-16T22:04:50.800873+00:00
+licensed N126 pregame snapshot,Polymarket_US,winner,xgboost__football,current N126 observed market endpoint,123,13,13,13,11,0.11775670128316353,0,2026-11-16T22:04:50.800873+00:00
+licensed N126 pregame snapshot,Polymarket_US,winner,xgboost__football_market,current N126 observed market endpoint,123,13,13,13,13,0.02480319760878787,0,2026-11-16T22:04:50.800873+00:00
+licensed N126 pregame snapshot,Polymarket_US,winner,xgboost__market,current N126 observed market endpoint,123,13,13,13,13,0.02640572428571095,0,2026-11-16T22:04:50.800873+00:00
+licensed N126 pregame snapshot,Polymarket_US,winner,xgboost__market_disagreement,current N126 observed market endpoint,123,13,13,13,13,0.03429422047885898,0,2026-11-16T22:04:50.800873+00:00
+licensed N126 pregame snapshot,Polymarket_US,winner,xgboost__market_movement,current N126 observed market endpoint,123,13,13,13,13,0.03323923110156479,0,2026-11-16T22:04:50.800873+00:00
+licensed N126 pregame snapshot,Polymarket_US,winner,xgboost__movement,current N126 observed market endpoint,123,13,13,13,11,0.18379056641532016,0,2026-11-16T22:04:50.800873+00:00

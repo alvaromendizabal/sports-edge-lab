@@ -1,5 +1,7 @@
 # 2026 NFL models vs. Circa Million VIII
 
+[N126 · Model decisions under five validation weights, held-out 2026 grades and Circa promotion tests](https://sports-edge-lab-nfl.alv-mendizabal.chatgpt.site/circa/n126/)
+
 [Current N125 full-season model leaders, bookmaker features, independent comparison venues and Circa cards](https://sports-edge-lab-nfl.alv-mendizabal.chatgpt.site/circa/n125/)
 
 [Current NFL dashboard](https://sports-edge-lab-nfl.alv-mendizabal.chatgpt.site/circa/) · [N124 model and contest selections](n124/) · [N123 Monday archive](n123_monday/) · [Original N123 Sunday snapshot](n123_current/)
