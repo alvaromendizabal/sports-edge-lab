@@ -20,8 +20,9 @@ class PublicModelMarketTests(unittest.TestCase):
         checked=validate_public(self.value,self.models)
         self.assertEqual(len(checked['groups']),18)
         for g in checked['groups']:
-            self.assertEqual((g['required_games'],g['market_games'],g['missing_market_games']),(192,183,9))
+            self.assertEqual((g['required_games'],g['market_games'],g['missing_market_games']),(192,192,0))
             self.assertFalse(g['all_required_candidates_complete'])
+            self.assertTrue(all(m['model_games'] < 192 and not m['full_population_complete'] for m in g['models']))
             self.assertTrue(all(m['full_model_metrics'] is None and m['full_market_metrics'] is None for m in g['models']))
 
     def test_partial_diagnostic_cannot_become_full_score(self):
