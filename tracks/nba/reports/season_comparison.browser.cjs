@@ -12,7 +12,7 @@ module.exports = async function checkSeasonComparison(browser, output) {
   const started=Date.now();
   // These suites include a fresh build and exact committed HTML/JSON byte checks.
   // Run them once without blocking the independent historical browser contexts.
-  await require('node:util').promisify(require('node:child_process').execFile)('python',['-m','unittest','test_season_comparison','test_equal_population_public','test_draftkings_public','test_model_market_public'],{cwd:__dirname,maxBuffer:8<<20});
+  await require('node:util').promisify(require('node:child_process').execFile)('python',['-m','unittest','test_season_comparison','test_equal_population_public','test_draftkings_public','test_model_market_public','test_forward_forecasts_public'],{cwd:__dirname,maxBuffer:8<<20});
   console.log(JSON.stringify({nba_comparison_stage:'source_and_projection_tests_passed',elapsed_seconds:(Date.now()-started)/1000}));
   const downloadSource = JSON.parse(zlib.gunzipSync(fs.readFileSync(path.join(__dirname,'season_comparison.json.gz'))));
   const html=fs.readFileSync(path.join(__dirname,'season_comparison.html'),'utf8');
@@ -29,6 +29,14 @@ module.exports = async function checkSeasonComparison(browser, output) {
     await page.route(/^https?:/,r=>{external.push(r.request().url());r.abort()});
     await page.goto(uri);await page.waitForSelector('html[data-nba-ready="true"]');
     assert.deepEqual(await page.evaluate(()=>window.NBA_COMPARISON_DATA),source);
+    const forward=source.forward_forecast_update;
+    assert.ok(forward);
+    assert.match(await page.locator('#latest-forward-checkpoint').textContent(),/13,601 issues.*972\/1005.*33 retain older/);
+    assert.match(await page.locator('#forward-issue-scope').textContent(),/28 new estimator fits.*14 preserved selected recipes.*971 scheduled games.*22.*1 is partly updated.*33 retain only older.*737.*Missing selected-role cells: 0/);
+    assert.equal(await page.locator('#forward-role-rows tr').count(),22);
+    assert.equal(await page.locator('#forward-gap-rows tr').count(),33);
+    assert.equal(forward.nominal_window_issues,0);
+    for(const [role,count] of Object.entries(forward.scheduled_coverage_by_role))assert.ok(count===971||count===972);
     const equal=source.equal_population_evaluation;
     assert.ok(equal);
     assert.deepEqual(equal.protocol.validation_seasons,['2024-25','2025-26']);

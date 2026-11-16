@@ -206,7 +206,18 @@ class SeasonComparisonTests(unittest.TestCase):
         self.assertEqual(len(scheduled),1005)
         self.assertEqual(issue['known_scheduled_regular_games'],1012)
         self.assertTrue(all(g['forecasts'] for g in scheduled))
-        new_games=[g for g in data['games'] if any(f['issued_at_utc']>=issue['issue_clocks_utc']['first'] for f in g['forecasts'].values())]
+        # Recover that immutable checkpoint from current views plus retained history.
+        # Newer original issues cannot rewrite the older checkpoint's census.
+        new_games=[]
+        for g in data['games']:
+            saved={}
+            for role,current in g['forecasts'].items():
+                candidates=[current]+g.get('original_issue_history',{}).get(role,[])
+                matches=[f for f in candidates if issue['issue_clocks_utc']['first']<=f['issued_at_utc']<=issue['issue_clocks_utc']['last']]
+                if matches:
+                    self.assertEqual(len(matches),1)
+                    saved[role]=matches[0]
+            if saved:new_games.append({'forecasts':saved})
         self.assertEqual(len(new_games),32)
         self.assertEqual(sum(len(g['forecasts']) for g in new_games),704)
         for g in new_games:
