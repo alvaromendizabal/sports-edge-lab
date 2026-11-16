@@ -1,0 +1,34 @@
+{
+  "historical_spread_recovery_by_season": {
+    "2024": 0,
+    "2025": 245
+  },
+  "fresh_source": "International Polymarket Gamma and CLOB",
+  "capture_start": "2026-11-16T18:43:28.670888+00:00",
+  "capture_end": "2026-11-16T18:44:43.009032+00:00",
+  "markets_verified": 351,
+  "fresh_distinct_games": 18,
+  "contracts_by_target": {
+    "winner_plus_half_tie": 16,
+    "full_spread": 189,
+    "full_total": 146
+  },
+  "fresh_games_by_target": {
+    "current_winner": 16,
+    "current_spreads": 17,
+    "current_totals": 14,
+    "current_margin_buckets": 0
+  },
+  "rule_eligible_contracts": 1950,
+  "book_rejections": {
+    "missing_stale_or_invalid_book": 1598,
+    "paired_clocks_outside_tolerance": 1
+  },
+  "upcoming_all_three_any_archived_sorted": [
+    "2026_11_IND_HOU"
+  ],
+  "three_venue_method": "Any product across archived captures can have distinct times or pays. Strict same product and checkpoint scoring has separate totals.",
+  "public_requests": 76,
+  "paid_calls": 0,
+  "provider_credits": 0
+}
