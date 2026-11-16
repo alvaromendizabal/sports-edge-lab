@@ -1,3 +1,15 @@
+## Complete shared status transport (November 16)
+
+`python3 -m examples.ncaa_review.public_shared_status` reconstructs both dated
+public snapshots and materializes each SHA-256-qualified gzip object once under
+`docs/ncaa/status_objects/`. The generated `status_objects_manifest.json` maps
+all 3,252 snapshot partition references to 1,899 unchanged physical objects.
+This removes 101,620,983 duplicate bytes from the deployable Site while retaining
+every row and each original population/partition manifest. For static publication,
+include this shared directory and index, and omit only the duplicate per-snapshot
+`status` directories and the Git source transport containers. Both page routes use
+the same objects while validating their own snapshot pins.
+
 ## November 16, 2026: current R18 return review
 
 The latest verified execution failed during inference-model identity validation and preserved its partial work. See the [R18 return review](../../docs/ncaa/R18_RETURN_REVIEW.md) for current population, model coverage, provider collection and execution counts. The earlier notes below remain dated historical evidence.

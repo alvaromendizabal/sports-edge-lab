@@ -162,7 +162,7 @@
   }
 
   function relativeAsset(path) {
-    if (typeof path !== 'string' || !/^population(?:_r17)?\/[A-Za-z0-9_./-]+\.jsonl?(?:\.gz)?$/.test(path) || path.split('/').includes('..')) throw new Error('Public status asset path is not qualified.');
+    if (typeof path !== 'string' || !/^(?:population(?:_r17)?\/[A-Za-z0-9_./-]+\.jsonl?(?:\.gz)?|status_objects\/[0-9a-f]{64}\.jsonl\.gz)$/.test(path) || path.split('/').includes('..')) throw new Error('Public status asset path is not qualified.');
     return path;
   }
 
@@ -220,6 +220,7 @@
   function start(win) {
     const document = win.document;
     const populationBase = document.body && document.body.dataset && document.body.dataset.populationBase === "population_r17" ? "population_r17" : "population";
+    const sharedStatusObjects = document.body && document.body.dataset && document.body.dataset.statusObjectBase === "status_objects";
     const $ = id => document.getElementById(id);
     const state = { data: null, models: [], coverage: [], coveragePage: 0, ownPage: 0, cellsPage: 0, manifest: null, partition: null, cells: [], partitionCache: new Map(), cachedBytes: 0, loadToken: 0 };
     const filters = () => ({ league: $('competition').value, season: $('season').value, target: $('target').value, evidence: $('evidence').value });
@@ -406,7 +407,7 @@
         let readRows = 0;
         for (const descriptor of descriptors) {
           if (token !== state.loadToken) return;
-          const path = relativeAsset(`${populationBase}/status/${descriptor.filename}`), cacheKey = `${path}:${descriptor.sha256}`;
+          const path = relativeAsset(sharedStatusObjects ? `status_objects/${descriptor.sha256}.jsonl.gz` : `${populationBase}/status/${descriptor.filename}`), cacheKey = `${path}:${descriptor.sha256}`;
           const pinned = array(state.data.status_partition_manifest).find(p => p.filename === descriptor.filename);
           if (!pinned || pinned.sha256 !== descriptor.sha256 || pinned.logical_sha256 !== descriptor.logical_sha256 || pinned.rows !== descriptor.rows || descriptor.population_hash !== state.data.population_hash || descriptor.codec !== 'jsonl_gzip' || descriptor.scope !== 'EXPLICIT_CELLS_NO_SPARSE_DEFAULTS' || descriptor.physical_readback_verified !== true || !hashValid(descriptor.sha256) || !hashValid(descriptor.logical_sha256) || !(descriptor.rows > 0 && descriptor.rows <= 4096) || !(descriptor.bytes > 0 && descriptor.bytes <= 8388608) || !(descriptor.logical_bytes > 0 && descriptor.logical_bytes <= 8388608)) throw new Error('Public status partition pin or bound is invalid.');
           let bytes = state.partitionCache.get(cacheKey);

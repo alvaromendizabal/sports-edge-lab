@@ -8,7 +8,7 @@
 <link rel="stylesheet" href="three_seasons.css">
 <script defer src="three_seasons.js"></script>
 </head>
-<body>
+<body data-status-object-base="status_objects">
 <a class="skip" href="#populations">Skip to season populations</a>
 <main>
 <header><a class="brand" href="three_seasons.html">SPORTS EDGE LAB <span>· NCAA</span></a><nav aria-label="Page sections"><a href="#populations">Populations</a><a href="#model-coverage">Models</a><a href="#comparisons">Comparisons</a><a href="#markets">Markets</a><a href="#game-cells">Every evidence cell</a><a href="#execution">Execution</a></nav></header>
@@ -84,7 +84,7 @@
 <p id="cell-load-status" class="muted" role="status">Loading the partition manifest…</p>
 <div class="scroll"><table><caption>Public game × selected model/provider × target status</caption><thead><tr><th>Game record / public key</th><th>Event date / qualified time</th><th>Population / target eligibility</th><th>Selected entity / target</th><th>Evidence class</th><th>Cell status</th><th>Missing or invalid reason</th></tr></thead><tbody id="cell-rows"></tbody></table></div>
 <div class="paging"><span id="cell-count" role="status"></span><button id="cell-prev" type="button">Previous</button><button id="cell-next" type="button">Next</button><button id="download-cells" type="button" disabled>Download filtered status cells</button></div>
-<p id="partition-scope" class="muted"></p>
+<p id="partition-scope" class="muted"></p><p class="muted">Both dated snapshots retain every original partition. Identical status files are shared by their verified content hash. <a href="status_objects_manifest.json" download>Download the complete status-file index and verification instructions</a>.</p>
 </section>
 
 <section id="execution" aria-labelledby="execution-title"><p class="eyebrow">Training, acceptance and transport have different outcomes</p><h2 id="execution-title">Latest verified execution</h2><div id="execution-summary" class="notice"></div><div id="execution-cards" class="cards"></div><p id="execution-scope" class="muted"></p></section>

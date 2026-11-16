@@ -10,7 +10,7 @@ const assets = { has: name => fs.existsSync(path.join(docs, name)), get: name =>
     { base: 'population', records: 2270, canonical: '863', unmatched: '295', union: '1,158', future: 1112, originals: [['ncaam', 636, '78.30%'], ['ncaaw', 655, '81.98%']] },
     { base: 'population_r17', records: 1760, canonical: '827', unmatched: '263', union: '1,090', future: 670, originals: [['ncaam', 610, '78.36%'], ['ncaaw', 606, '82.01%']] }
   ]) {
-  const data = assets.get(snapshot.base + '/population_public.json'), ui = harness({ assets, populationBase: snapshot.base });
+  const data = assets.get(snapshot.base + '/population_public.json'), ui = harness({ assets, populationBase: snapshot.base, statusObjectBase: 'status_objects' });
   await waitFor(() => ui.win.SEL_POPULATION_CELLS_READY || ui.win.SEL_POPULATION_CELLS_ERROR);
   assert.equal(ui.win.SEL_POPULATION_ERROR, undefined);
   assert.equal(ui.win.SEL_POPULATION_CONTEXT_ERROR, undefined);
@@ -27,6 +27,7 @@ const assets = { has: name => fs.existsSync(path.join(docs, name)), get: name =>
     const cohort = data.model_target_coverage.find(row => row.league === league && row.model_id === original.model_id && row.target === 'win' && row.season_end_year === 2027).metrics_by_evidence_class.find(row => row.games === games).cohort_hash;
     assert(ui.get('own-subset-rows').innerHTML.includes(cohort));
   }
+  assert(ui.fetched.filter(name => name.endsWith('.gz')).every(name => name.startsWith('status_objects/')));
   const reads = ui.fetched.filter(name => name.endsWith('.gz')).length;
   ui.get('cell-entity').value = 'provider:kalshi'; ui.get('cell-entity').dispatch('change');
   await waitFor(() => ui.win.SEL_POPULATION_CELLS_READY && ui.win.SEL_POPULATION_CELLS_READY.entity === 'kalshi');
@@ -38,7 +39,7 @@ const assets = { has: name => fs.existsSync(path.join(docs, name)), get: name =>
   const exported = JSON.parse(await ui.output.downloaded.text());
   assert.equal(exported.row_count, snapshot.future);
   assert(exported.rows.every(row => row.public_entity_id === 'kalshi' && row.population_role === 'future_or_unresolved' && !Object.hasOwn(row, 'prediction')));
-  assert(ui.fetched.filter(name => name.endsWith('.json') || name.endsWith('.gz')).every(name => name.startsWith(snapshot.base + '/')));
+  assert(ui.fetched.filter(name => name.endsWith('.json') || name.endsWith('.gz')).every(name => name.startsWith(snapshot.base + '/') || /^status_objects\/[0-9a-f]{64}\.jsonl\.gz$/.test(name)));
   receipts.push({ base: snapshot.base, current_original_cohorts: Object.fromEntries(snapshot.originals.map(([league, games]) => [league, games])), source_records: snapshot.records });
   }
   console.log(JSON.stringify({ status: 'PASS', kind: 'authentic public-data DOM integration; not visual browser verification', snapshots: receipts, six_populations: true, current_source_and_unmatched_counts_separate: true, manifest_and_selected_status_parts_verified: true, source_cache_reused: true, future_status_export_only: true, champion_ranks_suppressed: true, snapshot_assets_not_mixed: true }));

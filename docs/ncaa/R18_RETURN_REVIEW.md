@@ -71,3 +71,13 @@ absent. Current captures do not fill the historical seasons’ missing quotes.
 The public report exposes aggregates, aliases, schedules and explicit missingness.
 It excludes private model recipes, model bodies, raw provider records and execution
 packages. Publication creates no forecasts, training, trades or promotions.
+
+## Complete snapshots within the public-site transport limit
+
+Both snapshots retain all original compressed bytes, metric summaries and partition
+manifest pins. Across 3,252 dated partition references, 1,353 files have identical
+bytes. The public site stores 1,899 unique objects once and verifies each requested
+object against the selected snapshot. This avoids 101,620,983 duplicate bytes.
+The shared status-file index maps every original filename to its content hash.
+No games, models, metric rows or evidence classes are removed. The complete
+source packs remain in GitHub, so either original snapshot can be reconstructed.
