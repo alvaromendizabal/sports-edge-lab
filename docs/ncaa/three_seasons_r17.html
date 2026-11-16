@@ -1,0 +1,94 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="description" content="NCAA basketball three-season model and market comparison, with declared game populations, qualified shared cohorts, and explicit evidence gaps.">
+<title>NCAA Three-Season Comparison | Sports Edge Lab</title>
+<link rel="stylesheet" href="three_seasons.css">
+<script defer src="three_seasons.js"></script>
+</head>
+<body data-population-base="population_r17">
+<a class="skip" href="#populations">Skip to season populations</a>
+<main>
+<header><a class="brand" href="three_seasons.html">SPORTS EDGE LAB <span>· NCAA</span></a><nav aria-label="Page sections"><a href="#populations">Populations</a><a href="#model-coverage">Models</a><a href="#comparisons">Comparisons</a><a href="#markets">Markets</a><a href="#game-cells">Every evidence cell</a><a href="#execution">Execution</a></nav></header>
+<div class="notice snapshot-switch"><strong>Evidence snapshots</strong><p><a href="three_seasons.html">November 16 · R18 return</a> &nbsp; <a href="three_seasons_r17.html">November 15 · preserved R17 scores</a></p></div>
+<p class="eyebrow">Preserved November 15 evidence · Men + women · Validation and current-season test</p>
+<h1>Three seasons.<br><span>One explicit comparison scope.</span></h1>
+<p class="intro">Inspect the games each evaluation is meant to cover, the evidence each model and provider actually has, and the missing cells that prevent a complete comparison.</p>
+<p id="publication-clock" class="muted date">Loading the verified evidence snapshot…</p>
+<div id="load-status" class="notice" role="status" aria-live="polite">Loading season populations and model coverage. No ranks or scores are assumed while the evidence loads.</div>
+<noscript><div class="notice">JavaScript is needed for filters and tables. <a href="population_r17/population_public.json">Download the public population snapshot</a> and <a href="population_r17/status_manifest.json">status manifest</a> to inspect the available evidence.</div></noscript>
+<div class="filters primary-filters" aria-label="Comparison filters">
+<label>Competition<select id="competition"><option value="all">Men + women</option><option value="ncaam">Men</option><option value="ncaaw">Women</option></select></label>
+<label>Season<select id="season"><option value="all">All three seasons</option><option value="2025">2024–25 · validation</option><option value="2026">2025–26 · validation</option><option value="2027">2026–27 · completed-game test</option></select></label>
+<label>Target<select id="target"><option value="win">Winner</option><option value="margin">Margin</option><option value="total">Total</option></select></label>
+<label>Evidence<select id="evidence"><option value="all">All evidence classes</option></select></label>
+</div>
+<p class="muted" id="target-scope-note">This population report evaluates winner, margin and total. ATS and threshold-specific contract evaluations require their own matched evidence and are not reported as completed evaluations here.</p>
+
+<section id="populations" aria-labelledby="population-title">
+<div class="section-top"><div><p class="eyebrow">Start with the denominator</p><h2 id="population-title">What belongs in each season?</h2></div><a id="download-population" href="population_r17/population_public.json" download>Download population snapshot</a></div>
+<p>2024–25 and 2025–26 are validation populations. Completed 2026–27 games form the current test population. Observed future or unresolved games remain visible in the status inventory and stay outside completed-game performance denominators.</p>
+<div id="population-cards" class="cards"></div>
+<div class="scroll"><table><caption>Declared evaluation population and selected-target eligibility</caption><thead><tr><th>Competition / season</th><th>Role</th><th>Declared evaluation records</th><th>Official completed denominator</th><th>Eligible for selected target</th><th>Completeness / exposure</th><th>Population hash</th></tr></thead><tbody id="population-rows"></tbody></table></div>
+<p id="population-scope-note" class="muted"></p>
+<div class="notice" id="reconciliation-note" hidden></div>
+<div class="notice" id="test-exposure-note" hidden></div>
+</section>
+
+<section id="model-coverage" aria-labelledby="coverage-title">
+<div class="section-top"><div><p class="eyebrow">Every declared model remains visible</p><h2 id="coverage-title">Model × season × target coverage</h2></div><button id="download-model-coverage" type="button" disabled>Download filtered coverage</button></div>
+<p>Observed evidence, eligible evidence, missing games and invalid rows are separate counts. A model with no eligible prediction remains in this table. The declared model roster determines the comparison scope.</p>
+<div class="filters"><label class="wide">Model<select id="model-filter"><option value="all">All declared models</option></select></label><label>Coverage<select id="coverage-filter"><option value="all">All coverage states</option><option value="gaps">Missing or invalid evidence</option><option value="complete">Complete eligible coverage</option></select></label></div>
+<div class="scroll"><table><caption>Selected populations and target · coverage totals retain all evidence classes</caption><thead><tr><th>Model / role</th><th>Competition / season</th><th>Target</th><th>Prediction available</th><th>Descriptive scored</th><th>Qualified scored</th><th>Missing prediction</th><th>Invalid / ambiguous</th><th>Target denominator / qualified share</th><th>Rank eligibility</th></tr></thead><tbody id="model-coverage-rows"></tbody></table></div>
+<div class="paging"><span id="coverage-count" role="status"></span><button id="coverage-prev" type="button">Previous</button><button id="coverage-next" type="button">Next</button></div>
+<details><summary>Model catalog and feature families</summary><p class="muted">Only the source-qualified public model catalog is shown. Exact private recipes, weights and source identifiers are excluded.</p><div class="scroll"><table><thead><tr><th>Public model label</th><th>Competition</th><th>Role / target</th><th>Model family</th><th>Public feature families</th></tr></thead><tbody id="model-catalog-rows"></tbody></table></div></details>
+</section>
+
+<section id="comparisons" aria-labelledby="comparison-title">
+<p class="eyebrow">Population completeness comes before ranking</p><h2 id="comparison-title">Same-game model comparisons</h2>
+<div id="rank-status" class="notice"></div>
+<p>Each table names its game population, target and evidence class. A full-population comparison can support a rank only when its official denominator, declared model roster and eligible game coverage are qualified. A shared intersection is a secondary, unranked descriptive view.</p>
+<p class="muted">The earlier 50%/35%/15% weighting is retained only as a descriptive sensitivity policy. Champion selection uses the 2024–25 and 2025–26 validation populations; 2026–27 stays the already-exposed test/monitoring population and is not used for tuning, selection or automatic promotion.</p>
+<div id="full-scoreboards"></div>
+<details id="intersection-panel"><summary>Secondary shared-intersection comparisons · unranked</summary><p class="muted">These tables keep the declared target-specific model roster and use only games with evidence for every member. Their reduced game sets remain descriptive even when every displayed row uses the same cohort hash.</p><div id="intersection-scoreboards"></div></details>
+<details id="own-subset-panel"><summary>Individual model observations · separate subsets, unranked</summary><p class="muted">These are each model’s own observed subsets, split by season, target and evidence class. Their game sets can differ, so these rows are not a same-game leaderboard. The model filter above also applies here. The population audit supplies point estimates; it does not establish significance or an uncertainty-adjusted winner.</p><label class="inline-toggle"><input id="own-subset-include-empty" type="checkbox"> Include empty evidence-class rows</label><div class="scroll"><table><thead id="own-subset-head"></thead><tbody id="own-subset-rows"></tbody></table></div><div class="paging"><span id="own-subset-count" role="status"></span><button id="own-subset-prev" type="button">Previous</button><button id="own-subset-next" type="button">Next</button></div></details>
+<details><summary>Reading the metrics and evidence classes</summary><p>Winner accuracy describes correct winner selections. Log loss and Brier score measure probability quality; lower values are better. Margin and total MAE/RMSE measure error in points. Missing scores remain unavailable, rather than becoming zero.</p><p>Original-issued predictions, time-valid replay, later-fitted reconstruction and missing evidence are kept distinct. A later fit cannot receive credit as an earlier issued forecast. Winner, spread, margin thresholds and totals are separate targets.</p></details>
+</section>
+
+<section id="markets" aria-labelledby="market-title">
+<p class="eyebrow">DraftKings · Kalshi · Polymarket</p><h2 id="market-title">Coverage and qualified market comparisons</h2>
+<p>Provider records become comparable only after the game, contract, team orientation, threshold or range, quote time, settlement and applicable rights are qualified. Market availability and missing acquisition are recorded separately when the source can distinguish them.</p>
+<div id="provider-summary" class="provider-cards"></div>
+<div class="scroll"><table><caption>Selected season populations and target · provider coverage</caption><thead><tr><th>Provider product</th><th>Competition / season</th><th>Target</th><th>Declared / target-eligible population</th><th>Observed quote games</th><th>Qualified games</th><th>Without qualified quote</th><th>Qualification / overlapping reason counts</th><th>Paired cohort status</th></tr></thead><tbody id="provider-coverage-rows"></tbody></table></div>
+<h3>Model versus provider on the same games</h3><p class="muted">Paired scores appear only on an explicitly qualified shared cohort. A provider score from another set of games is never placed alongside a model as a matched baseline.</p>
+<div id="provider-scoreboards"></div>
+</section>
+
+<section id="game-cells" aria-labelledby="cell-title">
+<div class="section-top"><div><p class="eyebrow">Status only · no private forecast or quote values</p><h2 id="cell-title">Inspect the missing game-level cells</h2></div><a href="population_r17/status_manifest.json" download>Download partition manifest</a></div>
+<p>Select a competition, season and model or provider. Every game in the declared public partition remains inspectable, including missing and invalid evidence. This view publishes status and reason codes; numerical model forecasts and paid-source quotes are excluded.</p>
+<div class="filters">
+<label>Competition<select id="cell-competition"><option value="ncaam">Men</option><option value="ncaaw">Women</option></select></label>
+<label>Season<select id="cell-season"><option value="2027">2026–27</option><option value="2026">2025–26</option><option value="2025">2024–25</option></select></label>
+<label class="wide">Model or provider<select id="cell-entity"><option value="">Loading declared entities…</option></select></label>
+<label>Target<select id="cell-target"><option value="win">Winner</option><option value="margin">Margin</option><option value="total">Total</option></select></label>
+<label>Evidence class<select id="cell-evidence"><option value="all">All evidence classes</option></select></label>
+<label>Population membership<select id="cell-game-status"><option value="all">All declared games</option><option value="evaluation">Declared evaluation population</option><option value="future_or_unresolved">Future or unresolved</option></select></label>
+<label>Evidence status<select id="cell-state"><option value="all">All cells</option><option value="missing">Missing evidence</option><option value="invalid">Invalid / unqualified</option><option value="eligible">Eligible evidence</option><option value="not_applicable">Outside target population</option></select></label>
+<label class="search">Search<input id="cell-search" type="search" placeholder="Team, public game key or reason" autocomplete="off"></label>
+</div>
+<p id="cell-load-status" class="muted" role="status">Loading the partition manifest…</p>
+<div class="scroll"><table><caption>Public game × selected model/provider × target status</caption><thead><tr><th>Game record / public key</th><th>Event date / qualified time</th><th>Population / target eligibility</th><th>Selected entity / target</th><th>Evidence class</th><th>Cell status</th><th>Missing or invalid reason</th></tr></thead><tbody id="cell-rows"></tbody></table></div>
+<div class="paging"><span id="cell-count" role="status"></span><button id="cell-prev" type="button">Previous</button><button id="cell-next" type="button">Next</button><button id="download-cells" type="button" disabled>Download filtered status cells</button></div>
+<p id="partition-scope" class="muted"></p>
+</section>
+
+<section id="execution" aria-labelledby="execution-title"><p class="eyebrow">Training, acceptance and transport have different outcomes</p><h2 id="execution-title">Latest verified execution</h2><div id="execution-summary" class="notice"></div><div id="execution-cards" class="cards"></div><p id="execution-scope" class="muted"></p></section>
+
+<section id="archive" aria-labelledby="archive-title"><h2 id="archive-title">Preserved dated evidence</h2><p>Earlier scorecards remain available with their original cohorts and qualification limits. They do not determine a new full-population champion.</p><div class="archive-links"><a href="v12_r17_snapshot.html">November 15 checkpoint and R14 model comparison</a><a href="v11.html">Preserved V11 evidence</a><a href="v10.html">Preserved V10 evidence</a></div></section>
+<footer><strong>SPORTS EDGE LAB · NCAA</strong><p>Men’s and women’s basketball remain separate populations. Missing evidence is visible; ranks are withheld when coverage or comparability is incomplete. Publication does not issue forecasts, place trades or promote models. Dates are shown in Pacific time where a qualified timestamp is available.</p></footer>
+</main>
+</body>
+</html>

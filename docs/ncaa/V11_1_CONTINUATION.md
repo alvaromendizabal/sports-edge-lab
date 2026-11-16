@@ -1,3 +1,9 @@
+## November 16, 2026: current R18 return review
+
+The latest verified execution failed during inference-model identity validation and preserved its partial work. See the [R18 return review](R18_RETURN_REVIEW.md) for current population, model coverage, provider collection and execution counts. The earlier notes below remain dated historical evidence.
+
+---
+
 # NCAA V11.1 continuation status
 
 ## Latest observed R12 census

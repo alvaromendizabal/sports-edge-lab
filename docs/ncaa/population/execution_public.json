@@ -1,43 +1,76 @@
 {
   "schema": "sel.ncaa.public.completed_execution.v1",
-  "release": "R17",
-  "completed_at": "2026-11-15T21:27:26.750734+00:00",
-  "public_title": "R17 produced a recoverable return; selected-capacity acceptance failed",
-  "public_summary": "Training and source work were preserved, but the execution did not satisfy the selected-capacity utilization requirement. Return packaging completed successfully. The observed bottleneck was resource admission, with one core admitted during the representative measurement despite 48 requested. This is a completed partial execution, not a claim of current process activity.",
+  "release": "R18",
+  "started_at": "2026-11-16T18:47:13.212504+00:00",
+  "completed_at": "2026-11-16T19:47:39.563006+00:00",
+  "status": "FAILED_PARTIAL_WORK_PRESERVED",
+  "public_title": "R18 stopped on an inference-model reference conflict; partial work is preserved",
+  "public_summary": "The selected inference model failed an identity check during current-model processing. No new target estimator was committed. Two scalar calibrations, verified reuse, source refresh and the expanded population ledger were preserved in an intact return. Twelve cores were admitted, but average use was about 0.56 core; the real-science utilization acceptance gate did not run. This is a completed failed execution, not a claim about any currently running process. An independent immutable-write audit also verifies 20 forecast rows issued before deadline for one women’s game; these have no completed outcome and are separate from historical performance.",
   "public_counters": [
     {
-      "value": 50,
-      "label": "reported target-estimator fit credits"
-    },
-    {
-      "value": 10,
-      "label": "reported scalar calibration fit credits"
-    },
-    {
-      "value": 24,
-      "label": "reported empirical residual fit credits"
-    },
-    {
-      "value": "2.081%",
-      "label": "measured occupancy of requested 48-core capacity"
+      "value": 0,
+      "label": "new target-estimator fits"
     },
     {
       "value": 2,
-      "label": "recoverable physical returns in the recent R16/R17 pair"
+      "label": "new scalar calibrations"
+    },
+    {
+      "value": 36,
+      "label": "verified current target-fit reuses"
+    },
+    {
+      "value": 108,
+      "label": "historical study target reuses"
+    },
+    {
+      "value": 20,
+      "label": "durable forecast rows issued before deadline"
+    },
+    {
+      "value": 1,
+      "label": "women’s game covered by those issued rows"
+    },
+    {
+      "value": 12,
+      "label": "admitted cores"
+    },
+    {
+      "value": "0.559",
+      "label": "average measured owner cores"
+    },
+    {
+      "value": "4.66%",
+      "label": "average use of the selected 12-core capacity"
+    },
+    {
+      "value": 3,
+      "label": "recoverable partial executions in R16–R18"
     },
     {
       "value": 0,
-      "label": "fully accepted executions in that recent pair"
+      "label": "complete acceptance passes in R16–R18"
     }
   ],
-  "count_scope": "Fit credits are the R17 typed optimizer-ledger categories; they are not counts of unique model or numerical weight identities. The recent-run tally covers only R16 and R17. The representative utilization window is a subset of the full run and is not added to these fit counts.",
-  "public_limitations": "The complete official season denominator, full-population champion selection and provider comparisons remain separately qualified in the population report. Repeated numerical inputs across roles require distinct fit-accounting review; publication does not promote a model.",
-  "status": "UTILIZATION_ACCEPTANCE_FAILED_PARTIAL_WORK_PRESERVED",
+  "count_scope": "New targets, new calibrations and reused targets are separate categories. Reuse counts are not new training and are not added into a count of unique models. The recent-run tally covers only R16, R17 and R18. The new issued rows comprise eight winner, six margin and six total predictions for one event, not 20 games or complete upcoming coverage.",
+  "public_limitations": "The complete official season denominator, historical time qualification, full-population champion comparison and source-matched provider comparison remain unresolved. R19 repair is prepared; AWS execution is pending. Publication adds no forecasts, fits or model promotions.",
   "transport_complete": true,
-  "actual_utilization_gate_executed": true,
-  "requested_capacity": 48,
-  "admitted_cores_in_representative_window": 1,
-  "selected_capacity_occupancy_percent": 2.081439280354732,
-  "elapsed_seconds": 2990.6892748240007,
-  "unique_model_count": null
+  "return_payloads_verified": 3514,
+  "actual_utilization_gate_executed": false,
+  "requested_capacity": 12,
+  "admitted_capacity_peak": 12,
+  "average_owner_core_equivalents": 0.5592697705648829,
+  "selected_capacity_occupancy_percent": 4.660581421374025,
+  "elapsed_seconds": 3626.413100028,
+  "unique_model_count": null,
+  "failure_class": "INFERENCE_MODEL_REFERENCE_IDENTITY_CONFLICT",
+  "current_process_liveness_claimed": false,
+  "new_durable_issued_rows": 20,
+  "new_durable_issued_games": 1,
+  "new_durable_issued_target_counts": {
+    "win": 8,
+    "margin": 6,
+    "total": 6
+  },
+  "new_durable_issues_have_completed_outcomes": false
 }

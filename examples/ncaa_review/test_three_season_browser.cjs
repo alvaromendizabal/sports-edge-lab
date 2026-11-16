@@ -10,7 +10,10 @@ module.exports = async function testThreeSeasonBrowser(browser) {
   console.log(JSON.stringify({ fullStatusIntegrity: physicalReceipt }));
   const data = JSON.parse(fs.readFileSync(path.join(docs, 'population/population_public.json')));
   const manifest = JSON.parse(fs.readFileSync(path.join(docs, 'population/status_manifest.json')));
-  const allowed = new Set(['three_seasons.html', 'three_seasons.css', 'three_seasons.js', 'population/population_public.json', 'population/population_context.json', 'population/status_manifest.json', 'population/execution_public.json', ...manifest.parts.map(p => 'population/status/' + p.filename)]);
+  const oldReassembly = require('node:child_process').spawnSync('python', ['-m', 'examples.ncaa_review.public_status_transport', 'unpack', '--population-directory', path.join(docs, 'population_r17')], { cwd: path.resolve(__dirname, '../..'), encoding: 'utf8', timeout: 60000 });
+  assert.equal(oldReassembly.status, 0, oldReassembly.stdout + oldReassembly.stderr);
+  const oldManifest = JSON.parse(fs.readFileSync(path.join(docs, 'population_r17/status_manifest.json')));
+  const allowed = new Set(['three_seasons.html', 'three_seasons_r17.html', 'three_seasons.css', 'three_seasons.js', 'population/collection_public.json', ...['population', 'population_r17'].flatMap(base => ['population_public.json', 'population_context.json', 'status_manifest.json', 'execution_public.json'].map(name => base + '/' + name)), ...manifest.parts.map(p => 'population/status/' + p.filename), ...oldManifest.parts.map(p => 'population_r17/status/' + p.filename)]);
   const server = http.createServer((request, response) => {
     const name = request.url.split('?')[0].replace(/^\//, '');
     if (!allowed.has(name)) { response.writeHead(404); response.end(); return; }
@@ -69,6 +72,16 @@ module.exports = async function testThreeSeasonBrowser(browser) {
           await page.screenshot({ path: path.join(process.env.DASHBOARD_SCREENSHOTS, `ncaa-three-seasons-source-${width}.png`), fullPage: true });
         }
         receipts.push({ version: 'three-season-population', width, source: true, allSixPopulations: true, allThreeTargets: true, rankSuppression: true, providerProducts: 4, explicitStatusIntegrity: true, fullPhysicalStatusIntegrity: true, filteredDownloadVerified: true, realChromium: true });
+        assert.match(await page.locator('#execution-summary').innerText(), /R18 stopped/);
+        assert.match(await page.locator('#collection-summary').innerText(), /47 canonical/);
+        await page.goto(origin + '/three_seasons_r17.html', { waitUntil: 'load' });
+        await page.waitForFunction(() => window.SEL_POPULATION_CELLS_READY || window.SEL_POPULATION_CELLS_ERROR, null, { timeout: 90000 });
+        assert.equal(await page.evaluate(() => window.SEL_POPULATION_CELLS_ERROR), null);
+        assert.equal(await page.evaluate(() => window.SEL_POPULATION_CELLS_READY.records), 1760);
+        assert.match(await page.locator('#execution-summary').innerText(), /R17 produced/);
+        assert.match(await page.locator('#reconciliation-note').innerText(), /827/);
+        assert.deepEqual(errors, []);
+        receipts.push({ version: 'preserved-r17', width, realChromium: true, statusRecords: 1760, snapshotDataNotMixed: true });
       } finally { await page.close(); }
     }
   } finally { await new Promise(resolve => server.close(resolve)); }

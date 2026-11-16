@@ -1,0 +1,31 @@
+{
+  "schema": "sel.ncaa.public.population_context.v1",
+  "population_hash": "b6edbd481da289de10347858b7262a905107b570528ab872c5fefb067d240fb1",
+  "population_public_sha256": "6f0d543065e2a71024184bf887eb174a80472c775c0caef819885a6b6b6c8fdc",
+  "current_season_reconciliation": [
+    {
+      "league": "ncaam",
+      "season_end_year": 2027,
+      "canonical_source_completed_records": 827,
+      "unmatched_official_completed_records": 263,
+      "declared_unresolved_union_completed_records": 1090,
+      "additional_unique_games_from_unmatched_records": null
+    },
+    {
+      "league": "ncaaw",
+      "season_end_year": 2027,
+      "canonical_source_completed_records": 812,
+      "unmatched_official_completed_records": 220,
+      "declared_unresolved_union_completed_records": 1032,
+      "additional_unique_games_from_unmatched_records": null
+    }
+  ],
+  "unique_official_completed_population_verified": false,
+  "public_status_cell_count": 6355656,
+  "status_cells_are_game_counts": false,
+  "current_original_model_cohorts": {
+    "ncaam": 610,
+    "ncaaw": 606
+  },
+  "qualification": "Current original-model metrics are unqualified reconstructions. The prior dated archive retains its earlier 578/585-game cohorts; those archived values are not substituted for this report."
+}
