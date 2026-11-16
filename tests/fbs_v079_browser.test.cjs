@@ -96,7 +96,7 @@ function parseCSV(text){const rows=[];let row=[],field='',quoted=false;for(let i
     }
     await page.click('[data-tab="games"]');
     const currentValueGames=games.filter(g=>g.season===2026&&g.status==='pending'&&g.current_provider_coverage?.draftkings?.winner?.display_eligible);
-    check(currentValueGames.length===54,'All54 approved current probabilities exist outside the archived namespace');
+    check(currentValueGames.length===66,'All66 approved current probabilities exist outside the archived namespace');
     const currentExample=currentValueGames[0],currentCell=currentExample.current_provider_coverage.draftkings.winner;
     await page.selectOption('#game-season','2026');await page.fill('#game-search',currentExample.id);
     check((await page.locator('#game-body').innerText()).includes((100*currentCell.display_value).toFixed(2)+'%'),'Current provider probability is visibly rendered');
@@ -132,8 +132,8 @@ function parseCSV(text){const rows=[];let row=[],field='',quoted=false;for(let i
     await page.fill('#game-search','');
     const downloadPromise=page.waitForEvent('download');await page.click('#download-games');const download=await downloadPromise;check(download.suggestedFilename()==='FBS_2026_COMPARISON.csv','Filtered comparison downloadable');
     const stream=await download.createReadStream(),chunks=[];for await(const chunk of stream)chunks.push(chunk);const csv=parseCSV(Buffer.concat(chunks).toString('utf8')),headers=csv[0],exported=csv.slice(1).map(row=>Object.fromEntries(headers.map((name,i)=>[name,row[i]]))),byGame=new Map(exported.map(r=>[r.game_id,r]));
-    check(exported.filter(r=>r.draftkings_current_display_value!=='').length===54,'CSV includes all54 current derived probabilities');
-    check(exported.filter(r=>r.model_value!=='').length===86,'Nominee CSV has exactly86 current issues without historical backfill');
+    check(exported.filter(r=>r.draftkings_current_display_value!=='').length===66,'CSV includes all66 current derived probabilities');
+    check(exported.filter(r=>r.model_value!=='').length===96,'Nominee CSV has exactly96 current issues without historical backfill');
     check(exported.filter(r=>r.status==='final').every(r=>r.model_value===''),'Every completed game remains explicitly unforecast by the current-state view');
     for(const row of exported.filter(r=>r.model_value!=='')){check(row.model_alias==='W08'&&row.model_fit_completed_at&&row.model_information_cutoff&&row.model_nomination_report_completed_at,'CSV binds the selected alias and actual clocks');check(row.model_selection_time===''&&row.model_selection_time_basis.includes('not retained'),'CSV does not invent original selection time');}
     check(exported.every(r=>r.kalshi_current_reference==='Not measured'&&r.kalshi_historical_reference==='Not measured'&&r.kalshi_current_source_qualified==='false'),'CSV distinguishes unmeasured references from zero qualified');
