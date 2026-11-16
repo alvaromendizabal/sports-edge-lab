@@ -47,6 +47,17 @@ let browser,checks=0;const check=(value,message)=>{assert.ok(value,message);chec
       for(const provider of ['draftkings','kalshi','polymarket_global','polymarket_us']){
         const expected=logic.providerCoverage(subset,provider,target),row=page.locator(`#market-body tr[data-provider="${provider}"]`);
         for(const key of ['reference','display','qualified','missing','denominator'])check(await row.locator(`[data-coverage="${key}"]`).innerText()===expected[key].toLocaleString('en-US'),'Exact provider denominator and evidence state');
+        for(const [prefix,state,fn] of [['current','CURRENT_SOURCE_PROJECTION_VERIFIED',logic.currentCoverage],['historical','HISTORICAL_SOURCE_PROJECTION_VERIFIED',logic.historicalCoverage]]){
+          const projection=data[prefix+'_source_coverage'],attached=projection?.state===state&&(prefix==='historical'||season===2026),c=fn(subset,provider,target),sourceRow=page.locator(`#${prefix}-market-body tr[data-${prefix}-provider="${provider}"]`);
+          for(const key of ['reference','qualified','denominator'])check(await sourceRow.locator(`[data-${prefix}-coverage="${key}"]`).innerText()===(key==='denominator'||attached&&c.covered===subset.length?c[key].toLocaleString('en-US'):'Not attached'),'Capture coverage retains exact denominator and missing projection');
+        }
+        if(status==='final'){
+          await page.selectOption('#comparison-provider',provider);
+          const cards=(data.market_comparison?.scorecards||[]).filter(r=>r.season===season&&r.target===target&&r.provider===provider);
+          check(await page.locator('#market-comparison-body tr[data-market-model]').count()===cards.length,'All model rows use fixed provider cohort');
+          for(const metric of await page.locator('#comparison-metric option').evaluateAll(xs=>xs.map(x=>x.value))){await page.selectOption('#comparison-metric',metric);check(await page.locator('#market-comparison-body tr[data-market-model]').count()===cards.length,'Metric control preserves provider population');}
+        }
+
       }
     }
     await page.click('[data-tab="games"]');
@@ -54,7 +65,7 @@ let browser,checks=0;const check=(value,message)=>{assert.ok(value,message);chec
     await page.selectOption('#game-status','unfinished');check((await page.locator('#game-count').innerText()).startsWith(games.filter(g=>g.season===2026&&g.status!=='final').length.toLocaleString('en-US')),'Pending and unresolved retained');
     const first=await page.locator('#game-body').innerText();if(await page.locator('#game-next').isEnabled()){await page.click('#game-next');check(await page.locator('#game-body').innerText()!==first,'Next page changes games');}
     await page.selectOption('#game-provider','draftkings');await page.selectOption('#game-provider-state','qualified');
-    const qualified=games.filter(g=>g.season===2026&&g.status!=='final'&&g.providers?.draftkings?.winner?.status==='qualified').length;
+    const qualified=games.filter(g=>g.season===2026&&g.status!=='final'&&logic.combinedProviderFlags(g,'draftkings','winner').qualified).length;
     check((await page.locator('#game-count').innerText()).startsWith(qualified.toLocaleString('en-US')),'Qualified filter does not include mere references');
     await page.selectOption('#game-provider-state','all');await page.selectOption('#game-status','all');
     const game=games.find(g=>g.season===2026);await page.fill('#game-search',game.id);await page.click('[data-open-game]');

@@ -16,23 +16,23 @@
     },
     {
       "path": "app.js",
-      "bytes": 29053,
-      "sha256": "b6e3eda557fc3021974a498809c2b84d5f6dfcac9c98638a88afb4d50bd2271a"
+      "bytes": 39830,
+      "sha256": "8e1464634bf09a95146fe9fa062f1f1ee998819f8f4efad3c39836950263a6cd"
     },
     {
       "path": "data/games.json.gz",
-      "bytes": 173983,
-      "sha256": "eac4da0a0385bfeb87742526709a00d4855016f3717487bf5d7e8e30597761c4"
+      "bytes": 173765,
+      "sha256": "de619b2162c52f25a03a0be88dac566168add53f9f0671e0276dbd7ae6fcf3b4"
     },
     {
       "path": "data/review.json",
-      "bytes": 50948,
-      "sha256": "62195b288d4b8a4b56d5c866b3bf30d21b4edce7fa08d8c29ff0401d67143d19"
+      "bytes": 51101,
+      "sha256": "c7b6fce271a9fe4469fbba9ab4eea87a035ea5632c38cb7b4403ac2c22ef7dd5"
     },
     {
       "path": "index.html",
-      "bytes": 20011,
-      "sha256": "ef33316b76479ffa8373a44e85b93f17ce2671ba48341b24ed25d7368fee483e"
+      "bytes": 22744,
+      "sha256": "e35944033842496c815f83d866831c77a0c7e30946c84fb3892d6bfbf369cd9b"
     },
     {
       "path": "styles.css",
@@ -46,7 +46,7 @@
     "scorecard_denominators": true
   },
   "browser_validation": "PENDING_ORIGINATING_OWNER_BROWSER",
-  "build_input_sha256": "70a6ea6b3de121f69cb73fdb919018103fef73b1ddbd2be98e0a2a99083e0483",
+  "build_input_sha256": "5f6cbdb652d25671c085792f9fb8030c686d19eb8417d815956199131e919d8e",
   "atomic_commit": true,
   "reused_existing_build": false
 }

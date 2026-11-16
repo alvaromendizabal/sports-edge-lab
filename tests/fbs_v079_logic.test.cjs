@@ -2,7 +2,7 @@
 const assert=require('node:assert/strict');
 const path=require('node:path');
 require(path.join(process.env.FBS_V079_SITE||path.resolve(__dirname,'../docs/fbs/v079'),'app.js'));
-const {poolValidation,groupModels,providerCoverage}=globalThis.FBS079;
+const {poolValidation,groupModels,providerCoverage,currentCoverage,historicalCoverage,combinedProviderFlags}=globalThis.FBS079;
 const row=(season,value,n=2)=>({season,model_alias:'W01',target:'winner',family:'Logistic',evidence_class:'REPLAY',scored_n:n,expected_n:n,missing_n:0,complete_coverage:true,same_population:true,eligible_for_ranking:true,metrics:{log_loss:value,rmse:value,accuracy:.5,correct_count:n/2}});
 const a=[row(2024,.4),row(2025,.8),row(2026,9)];
 assert(Math.abs(poolValidation(a,'log_loss')-.6)<1e-12);
@@ -20,4 +20,11 @@ const swapped=structuredClone([...a,...other]);swapped.filter(r=>r.season===2026
 assert.deepEqual(groupModels(swapped,'winner','REPLAY','log_loss').map(g=>g.alias),before,'2026 cannot reorder validation candidates');
 const games=[{providers:{draftkings:{winner:{observed_reference:true,display_eligible:true,value:.6,status:'archived_unqualified'}}}},{providers:{draftkings:{winner:{observed_reference:false,value:null,status:'missing_reference'}}}}];
 assert.deepEqual(providerCoverage(games,'draftkings','winner'),{denominator:2,reference:1,display:1,qualified:0,missing:1});
-console.log(JSON.stringify({status:'PASS',tests:7,scope:'Validation independence, missingness, RMSE pooling, provider denominators'}));
+games[0].current_provider_coverage={draftkings:{winner:{reference_present:true,predictive_baseline_qualified:true}}};
+assert.deepEqual(currentCoverage(games,'draftkings','winner'),{denominator:2,covered:1,reference:1,qualified:1});
+assert.equal(providerCoverage(games,'draftkings','winner').qualified,0,'Current captures cannot rewrite archived qualification');
+games[1].historical_provider_coverage={draftkings:{winner:{reference_present:true,predictive_baseline_qualified:true,display_eligible:true,display_value:.7}}};
+assert.deepEqual(historicalCoverage(games,'draftkings','winner'),{denominator:2,covered:1,reference:1,qualified:1});
+assert.deepEqual(combinedProviderFlags(games[1],'draftkings','winner'),{reference:true,qualified:true,display:true});
+assert.equal(providerCoverage(games,'draftkings','winner').reference,1,'Retrospective recovery cannot rewrite preserved archive holdings');
+console.log(JSON.stringify({status:'PASS',tests:12,scope:'Validation independence, missingness, RMSE pooling, separate archived/current/historical provider denominators'}));

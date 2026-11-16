@@ -102,6 +102,42 @@ class PublicV079(unittest.TestCase):
             raw = (SITE / entry["path"]).read_bytes()
             self.assertEqual((len(raw), hashlib.sha256(raw).hexdigest()), (entry["bytes"], entry["sha256"]))
 
+    def test_derived_provider_values_keep_source_evidence_separate(self):
+        for g in self.games:
+            for field in ("current_provider_coverage", "historical_provider_coverage"):
+                for provider, targets in g.get(field, {}).items():
+                    for target, cell in targets.items():
+                        self.assertNotIn("provider_event_id", cell)
+                        self.assertNotIn("source_receipt_sha256", cell)
+                        if cell.get("display_value") is not None:
+                            self.assertEqual((provider, target), ("draftkings", "winner"))
+                            self.assertTrue(cell["display_eligible"])
+                            self.assertTrue(cell["predictive_baseline_qualified"])
+                            self.assertTrue(cell["quote_time"])
+                            self.assertTrue(cell["observation_time"])
+                            self.assertGreaterEqual(cell["display_value"], 0)
+                            self.assertLessEqual(cell["display_value"], 1)
+                        if field == "historical_provider_coverage":
+                            self.assertFalse(cell["historical_source_possession_proven"])
+
+    def test_market_diagnostics_never_change_model_population(self):
+        report = self.data.get("market_comparison", {})
+        cohorts = {(c["season"], c["provider"], c["target"]): c for c in report.get("provider_cohorts", [])}
+        population = {p["season"]: p for p in self.full["populations"]}
+        for c in cohorts.values():
+            self.assertEqual(c["expected_n"], population[c["season"]]["expected_game_count"])
+            self.assertEqual(c["full_population_cohort_sha256"], population[c["season"]]["cohort_sha256"])
+            self.assertEqual(c["paired_n"] + c["missing_market_n"], c["expected_n"])
+        for r in report.get("scorecards", []):
+            c = cohorts[(r["season"], r["provider"], r["target"])]
+            self.assertEqual(r["paired_cohort_sha256"], c["paired_cohort_sha256"])
+            self.assertEqual(r["paired_n"], c["paired_n"])
+            self.assertFalse(r["used_for_nomination"])
+            if r["model_complete_on_provider_cohort"]:
+                self.assertEqual(r["model_scored_n"], c["paired_n"])
+            else:
+                self.assertEqual(r["model_metrics"], {})
+
     def test_public_scope_and_non_owner_preservation(self):
         forbidden = re.compile(r's3://|arn:aws:|/home/sagemaker-user|/workspace/|AKIA[0-9A-Z]{16}|BEGIN (?:RSA |EC )?PRIVATE KEY|"(?:original_model_id|model_id|fit_id|model_state_sha256|state_sha256|coefficients|feature_names|prediction_records)"')
         for path in SITE.rglob("*"):

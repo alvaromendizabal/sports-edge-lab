@@ -482,4 +482,3 @@ V057 prepares exact historical-recipe recovery, reusable per-candidate metrics b
 
 Evidence: [latest saved owner counts](actual-owner-v056.json), [historical scorecards and qualifications](historical-contenders-v057.json), and [FBS evidence dashboard](current.html). Publication is not a data refresh or model run. NFL, NBA and NCAA basketball retain their independent owners and evidence.
 
-
