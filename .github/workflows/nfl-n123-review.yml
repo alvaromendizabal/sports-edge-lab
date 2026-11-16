@@ -1,10 +1,10 @@
 name: NFL N123 full-season dashboard
 on:
   pull_request:
-    paths: ['tracks/nfl/circa_million_2026/n123_current/**', 'tracks/nfl/circa_million_2026/test_n123_browser.cjs', '.github/workflows/nfl-n123-review.yml']
+    paths: ['tracks/nfl/circa_million_2026/n123_current/**', 'tracks/nfl/circa_million_2026/test_n123_browser.cjs', 'tracks/nfl/circa_million_2026/verify_live_n123.py', '.github/workflows/nfl-n123-review.yml']
   push:
     branches: [main]
-    paths: ['tracks/nfl/circa_million_2026/n123_current/**', 'tracks/nfl/circa_million_2026/test_n123_browser.cjs', '.github/workflows/nfl-n123-review.yml']
+    paths: ['tracks/nfl/circa_million_2026/n123_current/**', 'tracks/nfl/circa_million_2026/test_n123_browser.cjs', 'tracks/nfl/circa_million_2026/verify_live_n123.py', '.github/workflows/nfl-n123-review.yml']
 permissions:
   contents: read
 jobs:
@@ -20,6 +20,5 @@ jobs:
           npx playwright install --with-deps chromium
       - name: Verify all season populations and public navigation
         run: node tracks/nfl/circa_million_2026/test_n123_browser.cjs
-      - name: Verify signed-out public responses after merge
-        if: github.event_name == 'push'
+      - name: Verify signed-out public responses
         run: python tracks/nfl/circa_million_2026/verify_live_n123.py
