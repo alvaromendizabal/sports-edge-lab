@@ -369,6 +369,13 @@ def build(root=ROOT):
             raise ValueError('Prior analytical display disagrees with public aggregate summary')
         result['draftkings_analytical'] = saved
         result['source_payload_sha256']['draftkings_normalized'] = saved['source_normalized_sha256']
+    exchange_path = root / 'current_exchange_inventory.json'
+    if exchange_path.exists():
+        from exchange_inventory_public import validate_public as validate_exchange_inventory
+        exchange, exchange_hash = read_json(exchange_path)
+        result['current_exchange_inventory'] = validate_exchange_inventory(
+            exchange, result['games'], inventory['source_snapshot_sha256'])
+        result['source_payload_sha256']['current_exchange_inventory'] = exchange_hash
     paired_path = root / 'all_candidate_market_comparison.json.gz'
     if not paired_path.exists(): paired_path = root / 'model_market_comparison.json'
     if paired_path.exists():
