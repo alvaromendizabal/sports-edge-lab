@@ -3,6 +3,10 @@
 const assert = require('node:assert/strict'), fs = require('node:fs'), path = require('node:path'), http = require('node:http');
 module.exports = async function testThreeSeasonBrowser(browser) {
   const docs = path.resolve(__dirname, '../../docs/ncaa');
+  const weightContracts = require('node:child_process').spawnSync(process.execPath,
+    [path.join(__dirname, 'test_validation_weights.cjs')], {encoding: 'utf8', timeout: 30000});
+  assert.equal(weightContracts.status, 0, weightContracts.stdout + weightContracts.stderr);
+  console.log(weightContracts.stdout.trim());
   const physical = require('node:child_process').spawnSync('python', ['-m', 'examples.ncaa_review.full_status_integrity_gate'], { cwd: path.resolve(__dirname, '../..'), encoding: 'utf8', timeout: 240000 });
   assert.equal(physical.status, 0, physical.stdout + physical.stderr);
   const physicalReceipt = JSON.parse(physical.stdout);
@@ -16,7 +20,7 @@ module.exports = async function testThreeSeasonBrowser(browser) {
   const sharedManifest = JSON.parse(fs.readFileSync(path.join(docs, 'status_objects_manifest.json')));
   assert.equal(sharedManifest.logical_partition_references, 3252);
   assert.equal(sharedManifest.physical_objects, 1899);
-  const allowed = new Set(['status_objects_manifest.json', ...sharedManifest.objects.map(p => p.path), 'three_seasons.html', 'three_seasons_r17.html', 'three_seasons.css', 'three_seasons.js', 'population/collection_public.json', ...['population', 'population_r17'].flatMap(base => ['population_public.json', 'population_context.json', 'status_manifest.json', 'execution_public.json'].map(name => base + '/' + name))]);
+  const allowed = new Set(['status_objects_manifest.json', ...sharedManifest.objects.map(p => p.path), 'three_seasons.html', 'three_seasons_r17.html', 'three_seasons.css', 'three_seasons.js', 'validation_weights.js', 'validation_weight_sensitivity.json', 'population/collection_public.json', ...['population', 'population_r17'].flatMap(base => ['population_public.json', 'population_context.json', 'status_manifest.json', 'execution_public.json'].map(name => base + '/' + name))]);
   const server = http.createServer((request, response) => {
     const name = request.url.split('?')[0].replace(/^\//, '');
     if (!allowed.has(name)) { response.writeHead(404); response.end(); return; }
@@ -37,6 +41,22 @@ module.exports = async function testThreeSeasonBrowser(browser) {
         assert.equal(await page.locator('#population-rows tr').count(), 6);
         assert.match(await page.locator('#rank-status').innerText(), /No complete, comparable full-population champion/);
         assert.equal(await page.locator('#provider-summary article').count(), 4);
+        await page.waitForFunction(() => document.querySelectorAll('#validation-weight-rows tr').length === 12);
+        assert.match(await page.locator('#r19-execution-status').innerText(), /49 new target-model fits/);
+        for (const league of ['ncaam', 'ncaaw']) {
+          await page.selectOption('#validation-weight-league', league);
+          for (const policy of ['primary_50_50', 'sensitivity_40_60', 'sensitivity_30_70', 'sensitivity_20_80', 'sensitivity_10_90']) {
+            await page.selectOption('#validation-weight-policy', policy);
+            for (const objective of ['win:accuracy', 'win:log_loss', 'win:brier', 'margin:mae', 'margin:rmse', 'total:mae', 'total:rmse']) {
+              await page.selectOption('#validation-weight-objective', objective);
+              assert.equal(await page.locator('#validation-weight-rows tr').count(), 12);
+              assert.match(await page.locator('#validation-weight-status').innerText(), /2026–27 contributes zero selection weight/);
+            }
+          }
+        }
+        await page.selectOption('#validation-weight-league', 'ncaam');
+        await page.selectOption('#validation-weight-policy', 'primary_50_50');
+        await page.selectOption('#validation-weight-objective', 'win:log_loss');
         for (const season of data.seasons) for (const league of ['ncaam', 'ncaaw']) {
           await page.selectOption('#season', String(season.season_end_year)); await page.selectOption('#competition', league);
           assert.equal(await page.locator('#population-rows tr').count(), 1);
