@@ -1,5 +1,11 @@
 # N121 NFL model and market evaluation
 
+[Open the current full-season dashboard](index.html). NFL validation covers 285 finals in 2024 and 285 in 2025. The 2026 test includes all 148 finals verified through 00:51 UTC on November 16. Each qualified model has the same fixture IDs for its target. The [current score export](N121_Current_Season_Scores.csv), [decisive winner comparison](N121_Decisive_Winner_Comparison.csv), [three-venue coverage](N121_Three_Venue_Coverage.csv) and [forward projections](N121_FORWARD_PROJECTIONS.csv) accompany the [decision debrief](N121_Full_Season_Decision_Debrief.pdf).
+
+## Original 145-game freeze
+
+[Open the byte-identical frozen dashboard](N121_Frozen_145.html). The following release notes describe the earlier 145-game cutoff.
+
 [Download the interactive dashboard](https://raw.githubusercontent.com/alvaromendizabal/sports-edge-lab/main/tracks/nfl/circa_million_2026/n121_current/index.html) and open the saved HTML in a browser. It contains all 842 fixtures and works offline. The [published N120 archive](https://sports-edge-lab-nfl.alv-mendizabal.chatgpt.site/circa/n120/) records the earlier fixed-subset study.
 
 - [Seven-page champion and market debrief](N121_NFL_Champion_and_Market_Debrief.pdf) with the model features, annual results, validation decision, market controls, current venue gaps, contest review and execution limits.
