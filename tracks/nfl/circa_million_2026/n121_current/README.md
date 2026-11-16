@@ -1,5 +1,7 @@
 # N121 NFL model and market evaluation
 
+The [current all-games dashboard](index.html) includes 2024 and 2025 validation, the updated 2026 test population, current per-fixture market grading and the season-fixed comparison. [Frozen 145-game dashboard](N121_Frozen_145.html). [Full current season scores](N121_Current_Season_Scores.csv).
+
 [Download the interactive dashboard](https://raw.githubusercontent.com/alvaromendizabal/sports-edge-lab/main/tracks/nfl/circa_million_2026/n121_current/index.html) and open the saved HTML in a browser. It contains all 842 fixtures and works offline. The [published N120 archive](https://sports-edge-lab-nfl.alv-mendizabal.chatgpt.site/circa/n120/) records the earlier fixed-subset study.
 
 - [Seven-page champion and market debrief](N121_NFL_Champion_and_Market_Debrief.pdf) with the model features, annual results, validation decision, market controls, current venue gaps, contest review and execution limits.
