@@ -60,6 +60,10 @@ jobs:
           python tracks/nba/reports/build_cohort_leaders.py --check
           python -m unittest discover -s tracks/nba/reports -p test_cohort_leaders.py -v
           python -m unittest discover -s tracks/nba/reports -p test_execution_review.py -v
+      - name: Verify B091 same-population review and publication boundaries
+        run: |
+          python tracks/nba/reports/build_b091_review.py --check
+          python -m unittest discover -s tracks/nba/reports -p test_b091_review.py -v
       - name: Test progressive-enhancement interaction logic
         run: node --test docs/nba/monitor.test.cjs
 
@@ -91,6 +95,11 @@ jobs:
           PLAYWRIGHT_MODULE_DIR: ${{ runner.temp }}/nba-monitor-browser/node_modules/playwright
           NBA_MONITOR_SCREENSHOTS: ${{ runner.temp }}/nba-monitor-screenshots
         run: node tracks/nba/reports/execution_review.browser.cjs
+      - name: Render B091 full-population review, every role and evidence lane
+        env:
+          PLAYWRIGHT_MODULE_DIR: ${{ runner.temp }}/nba-monitor-browser/node_modules/playwright
+          NBA_MONITOR_SCREENSHOTS: ${{ runner.temp }}/nba-monitor-screenshots
+        run: node tracks/nba/reports/b091_review.browser.cjs
       - name: Preserve rendered review and bounded accessibility checks
         if: always()
         uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02
@@ -99,5 +108,6 @@ jobs:
           path: ${{ runner.temp }}/nba-monitor-screenshots/*
           if-no-files-found: error
           retention-days: 14
+
 
 
