@@ -1,3 +1,22 @@
+<!-- FBS_V079_FIXED_POPULATION_REVIEW_START -->
+## Current FBS evaluation: V080R1 execution
+
+[Open the fixed-population comparison](v079/) · [Public dashboard](https://sports-edge-lab-fbs.alv-mendizabal.chatgpt.site/v079/)
+
+The comparison uses **919 completed 2024 games and 934 completed 2025 games for validation**, with the same **752 completed 2026 games for test reporting**. Every primary and research target is evaluated on those identical season populations. The 2026 data has already been exposed to research; it is not an untouched confirmation set.
+
+The primary table contains 35 recovered recipe/target combinations and 105 complete season cards. A separate study table adds nine challengers and three negative-control targets, with 36 corrected season cards. Its month-boundary routing repair reuses saved states and changes 288 historical inferences across 24 games; original diagnostics remain visible. Both lanes retain their availability-proxy qualifications. There is no joint automatic ranking or promotion.
+
+All 11 primary winner candidates and all four study winner policies have model-versus-DraftKings comparisons on the same fixed provider cohorts: 787 games in 2024, 803 in 2025 and 651 in 2026. DraftKings has better accuracy, Brier score and log loss in every such comparison. These partial market cohorts never replace the full-population model evaluation. Kalshi and the two Polymarket products retain explicit coverage and missing-evidence status; their price values are not published.
+
+The current owner reports 3,010 genuine research issues on all 86 timed upcoming games: 2,236 base forecasts and 774 fixed blends. Another 50 observed nonfinal fixtures have unresolved kickoff times. Selected game outputs preserve their actual issue clocks; complete candidate grids remain private. The separate study's 774 prepared future rows remain unissued.
+
+V080R1 reused 26 base estimators and made zero base fit calls. Eight winner calibrators were fitted after already-owned observations became newly eligible under the declared source clocks. The earlier V080 execution's 26 avoidable repeated base fits remain explicitly dated history. The secondary milestone contains 272 descriptive team-context rows and makes no feature-ablation or performance-improvement claim.
+
+The public route keeps its existing V079 comparison schema. Original issued forecasts, later reconstructions, source gaps and blocked richer recipes remain separate. No automatic promotion, trading return or complete official schedule coverage is claimed.
+
+<!-- FBS_V079_FIXED_POPULATION_REVIEW_END -->
+
 <!-- FBS_V078R5_OWNER_REVIEW_START -->
 ## November 15, 2026, 12:39 p.m. Pacific: execution recovered and new forecasts committed
 
