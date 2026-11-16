@@ -21,7 +21,7 @@
     $("cohort-note").textContent = (scope === "full" ? "Full observed final-game populations. " : "Fixed source-qualified market populations, selected without model scores. ") + counts;
     $("nomination").textContent = "Archived experiment: WM01, WM02 and WN01 are ineligible under the current comparison-only source policy. WB01 is a reference, not an owned-model nominee. No model has been promoted.";
     $("fallbacks").replaceChildren();
-    data.models.filter(m => m.role === "candidate").forEach(model => {
+    data.models.filter(m => (m.original_study_role || m.role) === "candidate").forEach(model => {
       const p = document.createElement("p"); p.append(text("strong", model.alias + ": "));
       p.append(document.createTextNode([2024,2025,2026].map(year => { const counts = model[scope]?.[year]?.fallback_counts || {}; return year + " — " + (Object.entries(counts).map(([reason,n]) => n + " " + reason.toLowerCase()).join(", ") || "no fallback"); }).join("; ")));
       $("fallbacks").append(p);
@@ -41,7 +41,7 @@
     data.descriptive_weight_sensitivity.forEach(row => {const tr = document.createElement("tr"); [row.alias,names[row.weight_policy],format(row.metrics[metric],metric)].forEach(v => tr.append(text("td",v))); $("weights").append(tr);});
   }
   fetch("data/market-study.json", {cache:"no-store"}).then(response => { if (!response.ok) throw new Error("Study aggregate response unavailable"); return response.json(); }).then(value => {
-    if (value.schema !== "fbs.public.market-study.v081") throw new Error("Study aggregate schema mismatch");
+    if (value.schema !== "fbs.public.archived-market-study.v082") throw new Error("Study aggregate schema mismatch");
     data = value; $("execution").textContent = data.execution.environment;
     $("fit-count").textContent = data.execution.new_fits + " new fits · " + data.execution.reused_fits + " reused · " + data.execution.failed_fits + " failed · " + data.execution.worker_count + " observed workers";
     data.evidence_notes.forEach(note => $("notes").append(text("p", note)));
