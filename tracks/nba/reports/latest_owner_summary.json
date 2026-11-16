@@ -6,8 +6,9 @@
     "corrected_forward_execution": "3f4738dbdfe4e7ac11d403fe067e34969500e7771835cc876126b7bf79655fad",
     "corrected_forward_export": "d8a01deb973f8758f47db6ddef7693f5ce05ea4bb4e723062a9a5b64f2f0bee6",
     "corrected_independent_forecast_readback": "bb39af3761cad2fd3317fc83d2d29a12c3bd18d294f8c562b533ac19fe0d6ff9",
-    "final_candidate_ledger_archive": "42989bf9a6ebc52083ab6add6991a132430b8a4a362e449f500cc5c951c185e6",
-    "final_model_market_archive": "99bc3a852f33bf5c3f74749b9e707d71b65cdaea67d61c34cf7b208a0af1c751",
+    "final_candidate_ledger_archive": "1944a1a8a873973f3a3ca40a1c2dd12e980cd88c65c794e68f32791cc834cb38",
+    "final_current_uncertainty": "b52d9f61eecf29881f7017091bf1487ab79a9dd4d1495179727e067873c8b28c",
+    "final_model_market_archive": "13a2c936e7d2da840e1b3a345c5b3800f9c87ddb3f2cd897fc9708cbc736f730",
     "forward_export": "8ae08bff599fa3a90854b8ca3e338c11b545bb0c7eeb1013a2b729b0dce88ea8",
     "forward_recovery": "58e59f3486371e76cbbeee06c46d3a2bb4eaf891af64771024ec50b24fbd54df",
     "independent_forecast_readback": "4060e9f71f6f75ab583f4e9d921a2ab38493206753a166377315126c630be41c"
@@ -19,7 +20,7 @@
   "limitations": [
     "This execution recorded 28 estimator fits, one calibration fit and 28,084 new original forecast versions across 36 completed issuance jobs with zero failed issuance jobs. The latest 14,042 versions replace the earlier 14,042 issues; both are preserved. Historical replay is accounted separately.",
     "All 1,003 named scheduled regular games have new forecasts for 14 selected recipes and 22 displayed metric roles. Every issue is an early outlook; no nominal T60/T120 qualification is claimed. Six regular TBD records and 24 unobserved season slots remain outside that named scheduled population.",
-    "The current completed population is fixed at 197 regular games. Twenty-two complete model cells (11 fixed-state and 11 later-fitted) now have full-population descriptive reconstructions. Historical source availability remains unproved, and zero strict point-in-time current test cells are established. Every incomplete candidate remains counted.",
+    "The current completed population is fixed at 197 regular games. Forty complete model cells (29 fixed-state and 11 later-fitted) have full-population descriptive reconstructions. Historical source availability remains unproved, and zero strict point-in-time current test cells are established. Every incomplete candidate remains counted. Eighteen additional comparisons used saved states with zero training; validation leader identities and prior scores are unchanged.",
     "DraftKings historical references cover all 197 games at both horizons for all three targets. The latest current capture covers 8 of 1,003 scheduled games. Complete Kalshi and Polymarket comparisons remain unverified.",
     "The new logical return is still being packaged. Its physical integrity is not yet verified; the earlier verified B089 return remains archived separately.",
     "The earlier B090 issues omitted nine completed Cup games from inference history. The corrected 14,042 replacements use all eligible history with the same 28 saved fitted snapshots and unchanged training contexts; zero new estimator or calibration fits were needed. Values changed in 13,135 replacements and remained equal in 907. Every original value, issue time and source version is preserved."
@@ -28,7 +29,7 @@
   "new_estimator_method_returns": 28,
   "new_forecast_rows": 28084,
   "new_unique_model_count": 28,
-  "observed_at_utc": "2026-11-16T20:20:08.493136+00:00",
+  "observed_at_utc": "2026-11-16T20:30:49.428238+00:00",
   "release": "B090",
   "return_verified": false,
   "scientific_status": "FULL_POINT_IN_TIME_CURRENT_MODEL_TEST_NOT_ESTABLISHED",

@@ -267,6 +267,24 @@ class SeasonComparisonTests(unittest.TestCase):
         self.assertEqual(current['successful_jobs'],36)
         self.assertFalse(current['forward_source_correction_pending'])
 
+    def test_ats_point_arithmetic_keeps_every_required_scope_without_probability_or_strategy_claims(self):
+        from ats_public import validate_public
+        data=json.loads(self.generated_raw);value=data['ats_point_diagnostics'];market=data['model_market_comparison']
+        self.assertEqual(value['required_games'],197)
+        self.assertEqual((value['required_margin_model_cells'],value['full_model_cells'],len(value['incomplete_required_cells'])),(792,8,784))
+        self.assertFalse(value['historical_issued_strategy_claim'])
+        self.assertFalse(value['calibrated_cover_probability_available'])
+        self.assertFalse(value['settlement_or_roi_claim'])
+        self.assertFalse(value['current_test_used_for_selection'])
+        self.assertEqual(sum(r['games'] for r in value['summaries']),1576)
+        for change,reason in [
+            (lambda x:x.update(settlement_or_roi_claim=True),'policy'),
+            (lambda x:x['summaries'][0].update(mathematical_cover_wins=197),'arithmetic'),
+            (lambda x:x['incomplete_required_cells'].pop(),'omitted'),
+        ]:
+            changed=copy.deepcopy(value);change(changed)
+            with self.assertRaisesRegex(ValueError,reason):validate_public(changed,market)
+
     def test_latest_forward_export_covers_every_named_scheduled_game_and_keeps_originals(self):
         data=json.loads(self.generated_raw);value=data['forward_forecast_update']
         self.assertEqual(value['execution_checkpoint'],'B090-CORRECTED')
@@ -317,7 +335,7 @@ class SeasonComparisonTests(unittest.TestCase):
         self.assertEqual(census['census']['model_phase_target_horizon_scopes'],2390)
         self.assertEqual(sum(len(g['models']) for g in census['groups']),11950)
         self.assertEqual(sum(g['complete_candidate_count'] for g in census['groups'] if g['season']!='2026-27'),4444)
-        self.assertEqual(sum(g['complete_candidate_count'] for g in census['groups'] if g['season']=='2026-27'),22)
+        self.assertEqual(sum(g['complete_candidate_count'] for g in census['groups'] if g['season']=='2026-27'),40)
         self.assertFalse(census['historical_source_availability_proved'])
         for group in census['groups']:
             self.assertEqual(group['required_candidate_count'],len(group['models']))
@@ -338,8 +356,8 @@ class SeasonComparisonTests(unittest.TestCase):
         data=json.loads(self.generated_raw);value=data['model_market_comparison'];population=data['equal_population_evaluation']
         self.assertTrue(value['comparison_requires_all_candidates'])
         uncertainty=value['full_population_uncertainty']
-        self.assertEqual((uncertainty['comparisons'],uncertainty['week_blocks'],uncertainty['draws']),(52,4,4000))
-        self.assertEqual(uncertainty['intervals_include_zero'],20)
+        self.assertEqual((uncertainty['comparisons'],uncertainty['week_blocks'],uncertainty['draws']),(98,4,4000))
+        self.assertEqual(uncertainty['intervals_include_zero'],29)
         self.assertTrue(uncertainty['market_better_point_estimate_on_all_reported_metrics'])
         self.assertFalse(uncertainty['current_selection_allowed'])
         self.assertEqual(validate_public(value,population),value)

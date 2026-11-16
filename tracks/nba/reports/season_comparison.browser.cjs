@@ -6,7 +6,7 @@ const zlib = require('node:zlib');
 const {createHash} = require('node:crypto');
 const {pathToFileURL} = require('node:url');
 async function changeControls(page,pairs){
-  await page.evaluate(values=>{for(const [id,value] of values){const element=document.getElementById(id);element.value=String(value);if(element.value!==String(value))throw new Error('Unavailable control value '+id);element.dispatchEvent(new Event('change',{bubbles:true}));}},pairs);
+  await page.evaluate(values=>{for(const [id,value] of values){const element=document.getElementById(id);if(element.value===String(value))continue;element.value=String(value);if(element.value!==String(value))throw new Error('Unavailable control value '+id);element.dispatchEvent(new Event('change',{bubbles:true}));}},pairs);
 }
 
 module.exports = async function checkSeasonComparison(browser, output) {
@@ -103,6 +103,16 @@ module.exports = async function checkSeasonComparison(browser, output) {
       }
       await page.selectOption('#paired-target','winner');await page.selectOption('#paired-horizon','120');await page.selectOption('#paired-track','QUALIFIED_FIXED_REPLAY');
     }
+    const ats=source.ats_point_diagnostics;
+    assert.ok(ats);
+    assert.match(await page.locator('#ats-point-scope').textContent(),/8 complete margin\/evidence cells out of 792 required cells.*identical 197 completed games/);
+    assert.match(await page.locator('#ats-point-missing').textContent(),/784 required margin\/evidence cells.*full 197-game requirement/);
+    assert.equal(await page.locator('#ats-point-rows tr').count(),ats.summaries.length);
+    const atsRows=await page.locator('#ats-point-rows tr').allTextContents();
+    ats.summaries.forEach((r,i)=>{assert.ok(atsRows[i].includes(r.alias));assert.ok(atsRows[i].includes(r.mathematical_cover_wins+'–'+r.mathematical_cover_losses+'–'+r.mathematical_pushes));});
+    assert.doesNotMatch(await page.locator('#ats-point-diagnostics').textContent(),/undefined|NaN/);
+    await page.locator('#ats-point-diagnostics').scrollIntoViewIfNeeded();
+    await page.screenshot({path:path.join(output,'nba-ats-point-'+name+'.png'),fullPage:false});
     if(source.draftkings_analytical){
       assert.equal(await page.locator('#draftkings-coverage-rows tr').count(),6);
       for(const group of source.draftkings_analytical.coverage){assert.equal(group.required_games,197);assert.equal(group.qualified_games,197);assert.equal(group.missing_or_unqualified_games,0);assert.equal(group.full_population_market_coverage,true);}
@@ -173,7 +183,7 @@ module.exports = async function checkSeasonComparison(browser, output) {
     assert.match(await page.locator('#current-score-scope').textContent(),/128 identical/);
     const audit=source.b088_cached_science.paired_audit;
     assert.match(await page.locator('#latest-cached-audit-checkpoint').textContent(),/Cached-data audit update:.*no new fit, forecast or game quote.*Retained forecast foundation: B087-R3/);
-    assert.equal(await page.locator('#owner-details summary').textContent(),'Latest verified owner return and remaining work');
+    assert.equal(await page.locator('#owner-details summary').textContent(),'Latest execution and return verification');
     assert.match(await page.locator('#robust-clock').textContent(),/128 \/ 183.*55 missing/);
     assert.match(await page.locator('#robust-summary').textContent(),/reverse when week 44 is excluded/);
     for(const zone of ['UTC','America/Los_Angeles'])for(const metric of ['brier','log_loss','accuracy']){

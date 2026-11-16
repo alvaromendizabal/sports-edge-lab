@@ -383,6 +383,12 @@ def build(root=ROOT):
             raise ValueError('Paired scores changed the current completed denominator')
         result['model_market_comparison'] = paired
         result['source_payload_sha256']['model_market_comparison'] = paired_hash
+    ats_path = root / 'ats_point_diagnostics.json'
+    if ats_path.exists():
+        from ats_public import validate_public as validate_ats
+        ats, ats_hash = read_json(ats_path)
+        result['ats_point_diagnostics'] = validate_ats(ats, result['model_market_comparison'])
+        result['source_payload_sha256']['ats_point_diagnostics'] = ats_hash
     forward_path = root / 'forward_forecasts_public.json.gz'
     if forward_path.exists():
         from forward_forecasts_public import apply_public as apply_forward
