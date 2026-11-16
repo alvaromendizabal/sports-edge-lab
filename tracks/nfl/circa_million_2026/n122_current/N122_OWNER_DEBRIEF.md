@@ -22,7 +22,7 @@ All ten validation comparisons between first and second place include zero in th
 
 The 30% / 70% validation weights preserve the 15-to-35 ratio of the standing policy. 2026 has zero selection weight. The downloads also report an equal-year validation analysis and a descriptive 15% / 35% / 50% retrospective score. Equal weighting changes the margin-MAE nominee to the pooled ridge. The 2026 outcomes were already visible in earlier releases.
 
-The seven principal fixed policies and five controls or ablations have 36 annual rows. Every target a model produces uses the full, same-ID schedule. Conditional postseason matchups are supplied to the fixed policies. The original and weekly-updating models have their separate, like-for-like evidence below.
+The seven principal fixed policies and five controls or ablations have 36 annual rows. One combined download holds 2,247 model, target, season and evidence records, including all 48 inherited registry recipes. Every target a model produces uses the full, same-ID schedule. Conditional postseason matchups are supplied to the fixed policies. The original and weekly-updating models have their separate, like-for-like evidence below.
 
 # What each model knows
 
@@ -74,6 +74,8 @@ The protected N025 winner and margin each combine seven component predictions. I
 
 The opening market is a dated reference with no sportsbook attribution. It has lower winner log loss, margin MAE and total MAE than N025 across these three years. The archived 0.45684 NFL log loss covers 15 issued cases. It cannot establish a season-wide winner.
 
+A second protected model, N022, reproduced all nine original first-week fitted objects and 144 original Week 1 outputs. On the same decisive games, it got 166/285, 160/284 and 90/147 correct (log loss 0.6837, 0.7148, 0.6579). Only 633 of its 7,017 historical 2026 training rows have every input independently dated before that historical game. These scores have their own evidence label.
+
 ## Why the old answers disagreed
 
 N120 intersected games with the required provider and multiple model targets. That left 34 games in 2024, 217 in 2025 and 53 in 2026. Such an intersection answers a particular market question. The N122 headline starts with the complete schedule, retains missing rows, and withholds a full-season rank from any incomplete model or target. N110, for example, covers the 2026 test, but only 193 of 285 games in its 2024 validation.
@@ -86,14 +88,14 @@ A row with an observed price has additional requirements before it can enter a m
 
 | Population | Games | DraftKings | Kalshi | Polymarket intl. |
 | --- | --- | --- | --- | --- |
-| 2024 finals | 285 | 272 | 0 | 211 |
-| 2025 finals | 285 | 283 | 0 | 107 |
+| 2024 finals | 285 | 285 | 0 | 211 |
+| 2025 finals | 285 | 285 | 0 | 107 |
 | 2026 finals | 148 | 148 | 140 | 148 |
 | Pittsburgh at Cincinnati, live | 1 | 1 | 1 | 1 |
 | Future, kickoff set | 99 | 93 | 1 | 28 |
 | Future, kickoff TBD | 24 | 0 | 0 | 0 |
 
-Counts mean at least one exact product in the publishable inventory. Indianapolis at Houston was the only unstarted game with any exact product at all three. No unstarted game had a verified identical spread or total across all three at the audited checkpoint. Future games remain visible pending a price, contract or kickoff.
+DraftKings feed coverage includes 13 recovered 2024 events and 2 recovered 2025 events. They match the actual provider event, teams, settlement and source clock after reconciling recorded kickoff times. The inherited lookup returned 272 and 283. Both Super Bowl source events are now authenticated, including original Seattle versus New England snapshots showing the scheduled kickoff exactly. These are games with at least one supported product. Indianapolis at Houston was the only unstarted game with any exact product at all three. No unstarted game had a verified identical spread or total across all three at the audited checkpoint. Future games remain visible pending a price, contract or kickoff.
 
 ## Source-clock matched comparisons
 
