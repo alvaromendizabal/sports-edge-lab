@@ -1,0 +1,25 @@
+name: NFL N123 full-season dashboard
+on:
+  pull_request:
+    paths: ['tracks/nfl/circa_million_2026/n123_current/**', 'tracks/nfl/circa_million_2026/test_n123_browser.cjs', '.github/workflows/nfl-n123-review.yml']
+  push:
+    branches: [main]
+    paths: ['tracks/nfl/circa_million_2026/n123_current/**', 'tracks/nfl/circa_million_2026/test_n123_browser.cjs', '.github/workflows/nfl-n123-review.yml']
+permissions:
+  contents: read
+jobs:
+  verification:
+    runs-on: ubuntu-24.04
+    steps:
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1
+        with:
+          persist-credentials: false
+      - name: Install browser QA
+        run: |
+          npm install --no-save --no-package-lock --ignore-scripts playwright@1.62.1
+          npx playwright install --with-deps chromium
+      - name: Verify all season populations and public navigation
+        run: node tracks/nfl/circa_million_2026/test_n123_browser.cjs
+      - name: Verify signed-out public responses after merge
+        if: github.event_name == 'push'
+        run: python tracks/nfl/circa_million_2026/verify_live_n123.py
