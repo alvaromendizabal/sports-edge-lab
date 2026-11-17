@@ -1,0 +1,4140 @@
+{
+  "calibration_comparisons": [
+    {
+      "improved": 498,
+      "objective": "margin:mae",
+      "tied": 0,
+      "worsened": 46
+    },
+    {
+      "improved": 510,
+      "objective": "margin:rmse",
+      "tied": 0,
+      "worsened": 34
+    },
+    {
+      "improved": 484,
+      "objective": "total:mae",
+      "tied": 0,
+      "worsened": 60
+    },
+    {
+      "improved": 496,
+      "objective": "total:rmse",
+      "tied": 0,
+      "worsened": 48
+    },
+    {
+      "improved": 275,
+      "objective": "winner:accuracy",
+      "tied": 31,
+      "worsened": 238
+    },
+    {
+      "improved": 509,
+      "objective": "winner:brier",
+      "tied": 0,
+      "worsened": 35
+    },
+    {
+      "improved": 533,
+      "objective": "winner:log_loss",
+      "tied": 0,
+      "worsened": 11
+    }
+  ],
+  "calibration_scope": "DESCRIPTIVE_50_50_ANNUAL_VALIDATION_METRICS_ON_IDENTICAL_BASE_IDENTITY;NOT_NEW_SELECTION",
+  "evidence": [
+    {
+      "label": "Verified B093 aggregate/model review",
+      "sha256": "d04217ad577745aa65aca15f2be9cc32a487b379d50223dbe2e14252fefa6a57"
+    },
+    {
+      "label": "B094 execution report",
+      "sha256": "33a5630708caa3690969801028490babc0f36d9bfbaa095f2cf90b87550fb612"
+    },
+    {
+      "label": "B094 logical return archive",
+      "sha256": "efb1333792f969c7a1c95cfa0d2a65856245143f82a5b5d28f7995345bb2f9e2"
+    }
+  ],
+  "family_variant_counts": [
+    {
+      "family": "Fixed equal blend",
+      "variants": 12
+    },
+    {
+      "family": "CatBoost",
+      "variants": 408
+    },
+    {
+      "family": "LightGBM",
+      "variants": 408
+    },
+    {
+      "family": "PyTorch neural network",
+      "variants": 408
+    },
+    {
+      "family": "scikit-learn Extra Trees",
+      "variants": 408
+    },
+    {
+      "family": "scikit-learn histogram boosting",
+      "variants": 408
+    },
+    {
+      "family": "scikit-learn linear",
+      "variants": 432
+    },
+    {
+      "family": "TensorFlow neural network",
+      "variants": 408
+    },
+    {
+      "family": "XGBoost",
+      "variants": 408
+    }
+  ],
+  "features": [
+    {
+      "columns": 39,
+      "description": "Winner, spread and total consensus; dispersion, book counts, quoted margin, quote/snapshot age and missingness.",
+      "group": "Main-market summaries",
+      "state": "Materialized"
+    },
+    {
+      "columns": 135,
+      "description": "Prior-game scoring and margins, variability, win history, rest, schedule density and team ratings.",
+      "group": "Basketball history",
+      "state": "Materialized as archive replay"
+    },
+    {
+      "columns": 174,
+      "description": "Main-market summaries together with basketball history; source-ablation and no-market controls retained.",
+      "group": "Combined groups",
+      "state": "Materialized"
+    },
+    {
+      "columns": null,
+      "description": "Four factors, possession stops, opportunity creation, second chances and shot quality are not completed features in this saved study.",
+      "group": "Possessions and shot opportunity",
+      "state": "Deferred: authenticated producer lineage required"
+    },
+    {
+      "columns": null,
+      "description": "Injury, expected lineups, replacement quality and simultaneous-absence effects are not completed features in this saved study.",
+      "group": "Players, lineups and replacements",
+      "state": "Blocked: point-in-time source lineage"
+    },
+    {
+      "columns": null,
+      "description": "Opening movement, alternate/team/period/player markets and calibrated cover/push distributions remain separate unfinished work.",
+      "group": "Market paths and score distributions",
+      "state": "Deferred: schemas and model contracts"
+    }
+  ],
+  "latest_verified_execution": {
+    "actual_invoiced_cost_usd": null,
+    "configured_workers": 12,
+    "cost_scope": "Whole-instance wall-time estimate across the recorded run intervals; not an invoice or owner allocation",
+    "estimated_whole_instance_cost_usd": "3.008831036247182976388888889",
+    "execution_complete": true,
+    "full_market_paired_uncertainty_groups": 0,
+    "logical_archive_bytes": 3258435177,
+    "logical_archive_sha256": "efb1333792f969c7a1c95cfa0d2a65856245143f82a5b5d28f7995345bb2f9e2",
+    "maximum_part_bytes": 536870912,
+    "measured_full_capacity_passes": 0,
+    "new_calibration_fits": 0,
+    "new_estimator_fits": 0,
+    "new_provider_requests": 0,
+    "original_models_modified": false,
+    "payload_count": 19237,
+    "performance_acceptance": "Resource-constrained recovery; no full 75% occupancy / three-minute capacity pass",
+    "physical_parts": 7,
+    "physical_representation": "Ordered byte pieces of one ZIP; individual pieces are not standalone ZIPs",
+    "preserved_base_states": 1644,
+    "preserved_prediction_variants": 3300,
+    "release": "B094",
+    "report_sha256": "33a5630708caa3690969801028490babc0f36d9bfbaa095f2cf90b87550fb612",
+    "research_program_complete": false,
+    "science_stage_elapsed_seconds": 115.97291670800041,
+    "selection_or_population_changed": false,
+    "status": "B093_RECOVERY_COMPLETE_V13_PROGRAM_PARTIAL",
+    "uncertainty_completed": 3300,
+    "uncertainty_failed": 0,
+    "uncertainty_new": 1199,
+    "uncertainty_reused": 2101,
+    "uncertainty_unadmitted": 0,
+    "verified_at_utc": "2026-11-17T22:58:57.481995Z"
+  },
+  "objective_leaders": [
+    {
+      "annual_metrics": [
+        {
+          "games": 1314,
+          "population_sha256": "d297f4e3c325694e699b4edc103272b77957934ee51eebb8c62a61fe2e6a1e13",
+          "required_games": 1314,
+          "season": "2024-25",
+          "value": 0.6689497716894978
+        },
+        {
+          "games": 1315,
+          "population_sha256": "08d6faf39dfac94f7ef939db280ca08bbc8dad81ded574015d043d7c1e389482",
+          "required_games": 1315,
+          "season": "2025-26",
+          "value": 0.6783269961977187
+        },
+        {
+          "games": 205,
+          "population_sha256": "4d333dd16e027b4edeb096d1b81fd336e1b05ea56df2ce34a093161b5960831f",
+          "required_games": 205,
+          "season": "2026-27",
+          "value": 0.6487804878048781
+        }
+      ],
+      "calibrated": true,
+      "family": "CatBoost",
+      "feature_group": "DraftKings + basketball history",
+      "horizon_minutes": 60,
+      "objective": "winner_accuracy",
+      "public_model_alias": "NBA-R008",
+      "qualification": "Descriptive validation leader; full-season certification blocked",
+      "recovered_exact_state": false,
+      "saved_score_aggregation": "Weighted annual metric",
+      "selection_score": 0.6736383839436082,
+      "selection_uses_test_outcomes": false,
+      "tied_leaders": 1,
+      "v13_rmse_policy_satisfied": true
+    },
+    {
+      "annual_metrics": [
+        {
+          "games": 1314,
+          "population_sha256": "d297f4e3c325694e699b4edc103272b77957934ee51eebb8c62a61fe2e6a1e13",
+          "required_games": 1314,
+          "season": "2024-25",
+          "value": 0.6108935257678683
+        },
+        {
+          "games": 1315,
+          "population_sha256": "08d6faf39dfac94f7ef939db280ca08bbc8dad81ded574015d043d7c1e389482",
+          "required_games": 1315,
+          "season": "2025-26",
+          "value": 0.6070662621977021
+        },
+        {
+          "games": 205,
+          "population_sha256": "4d333dd16e027b4edeb096d1b81fd336e1b05ea56df2ce34a093161b5960831f",
+          "required_games": 205,
+          "season": "2026-27",
+          "value": 0.6204042949111512
+        }
+      ],
+      "calibrated": true,
+      "family": "CatBoost",
+      "feature_group": "DraftKings + basketball history",
+      "horizon_minutes": 60,
+      "objective": "winner_log_loss",
+      "public_model_alias": "NBA-R008",
+      "qualification": "Descriptive validation leader; full-season certification blocked",
+      "recovered_exact_state": false,
+      "saved_score_aggregation": "Weighted annual metric",
+      "selection_score": 0.6089798939827852,
+      "selection_uses_test_outcomes": false,
+      "tied_leaders": 1,
+      "v13_rmse_policy_satisfied": true
+    },
+    {
+      "annual_metrics": [
+        {
+          "games": 1314,
+          "population_sha256": "d297f4e3c325694e699b4edc103272b77957934ee51eebb8c62a61fe2e6a1e13",
+          "required_games": 1314,
+          "season": "2024-25",
+          "value": 0.21133482678407364
+        },
+        {
+          "games": 1315,
+          "population_sha256": "08d6faf39dfac94f7ef939db280ca08bbc8dad81ded574015d043d7c1e389482",
+          "required_games": 1315,
+          "season": "2025-26",
+          "value": 0.20939015009923853
+        },
+        {
+          "games": 205,
+          "population_sha256": "4d333dd16e027b4edeb096d1b81fd336e1b05ea56df2ce34a093161b5960831f",
+          "required_games": 205,
+          "season": "2026-27",
+          "value": 0.2151975437058529
+        }
+      ],
+      "calibrated": true,
+      "family": "CatBoost",
+      "feature_group": "DraftKings + basketball history",
+      "horizon_minutes": 60,
+      "objective": "winner_brier",
+      "public_model_alias": "NBA-R008",
+      "qualification": "Descriptive validation leader; full-season certification blocked",
+      "recovered_exact_state": false,
+      "saved_score_aggregation": "Weighted annual metric",
+      "selection_score": 0.2103624884416561,
+      "selection_uses_test_outcomes": false,
+      "tied_leaders": 1,
+      "v13_rmse_policy_satisfied": true
+    },
+    {
+      "annual_metrics": [
+        {
+          "games": 1314,
+          "population_sha256": "d297f4e3c325694e699b4edc103272b77957934ee51eebb8c62a61fe2e6a1e13",
+          "required_games": 1314,
+          "season": "2024-25",
+          "value": 11.127967266667914
+        },
+        {
+          "games": 1315,
+          "population_sha256": "08d6faf39dfac94f7ef939db280ca08bbc8dad81ded574015d043d7c1e389482",
+          "required_games": 1315,
+          "season": "2025-26",
+          "value": 11.562678729664086
+        },
+        {
+          "games": 205,
+          "population_sha256": "4d333dd16e027b4edeb096d1b81fd336e1b05ea56df2ce34a093161b5960831f",
+          "required_games": 205,
+          "season": "2026-27",
+          "value": 12.573392876463865
+        }
+      ],
+      "calibrated": true,
+      "family": "scikit-learn linear",
+      "feature_group": "Basketball history",
+      "horizon_minutes": 60,
+      "objective": "margin_mae",
+      "public_model_alias": "NBA-R004",
+      "qualification": "Descriptive validation leader; full-season certification blocked",
+      "recovered_exact_state": false,
+      "saved_score_aggregation": "Weighted annual metric",
+      "selection_score": 11.345322998166,
+      "selection_uses_test_outcomes": false,
+      "tied_leaders": 2,
+      "v13_rmse_policy_satisfied": true
+    },
+    {
+      "annual_metrics": [
+        {
+          "games": 1314,
+          "population_sha256": "d297f4e3c325694e699b4edc103272b77957934ee51eebb8c62a61fe2e6a1e13",
+          "required_games": 1314,
+          "season": "2024-25",
+          "value": 14.245275585559945
+        },
+        {
+          "games": 1315,
+          "population_sha256": "08d6faf39dfac94f7ef939db280ca08bbc8dad81ded574015d043d7c1e389482",
+          "required_games": 1315,
+          "season": "2025-26",
+          "value": 14.72575189651851
+        },
+        {
+          "games": 205,
+          "population_sha256": "4d333dd16e027b4edeb096d1b81fd336e1b05ea56df2ce34a093161b5960831f",
+          "required_games": 205,
+          "season": "2026-27",
+          "value": 16.187904184511165
+        }
+      ],
+      "calibrated": true,
+      "family": "scikit-learn linear",
+      "feature_group": "Basketball history",
+      "horizon_minutes": 60,
+      "objective": "margin_rmse",
+      "public_model_alias": "NBA-R004",
+      "qualification": "Descriptive validation leader; full-season certification blocked",
+      "recovered_exact_state": false,
+      "saved_score_aggregation": "Root weighted annual MSE",
+      "selection_score": 14.487505745061307,
+      "selection_uses_test_outcomes": false,
+      "tied_leaders": 2,
+      "v13_rmse_policy_satisfied": false
+    },
+    {
+      "annual_metrics": [
+        {
+          "games": 1314,
+          "population_sha256": "d297f4e3c325694e699b4edc103272b77957934ee51eebb8c62a61fe2e6a1e13",
+          "required_games": 1314,
+          "season": "2024-25",
+          "value": 15.075417111363954
+        },
+        {
+          "games": 1315,
+          "population_sha256": "08d6faf39dfac94f7ef939db280ca08bbc8dad81ded574015d043d7c1e389482",
+          "required_games": 1315,
+          "season": "2025-26",
+          "value": 15.429687737269683
+        },
+        {
+          "games": 205,
+          "population_sha256": "4d333dd16e027b4edeb096d1b81fd336e1b05ea56df2ce34a093161b5960831f",
+          "required_games": 205,
+          "season": "2026-27",
+          "value": 15.278988182319065
+        }
+      ],
+      "calibrated": true,
+      "family": "scikit-learn linear",
+      "feature_group": "Basketball history",
+      "horizon_minutes": 60,
+      "objective": "total_mae",
+      "public_model_alias": "NBA-R006",
+      "qualification": "Descriptive validation leader; full-season certification blocked",
+      "recovered_exact_state": true,
+      "saved_score_aggregation": "Weighted annual metric",
+      "selection_score": 15.252552424316818,
+      "selection_uses_test_outcomes": false,
+      "tied_leaders": 2,
+      "v13_rmse_policy_satisfied": true
+    },
+    {
+      "annual_metrics": [
+        {
+          "games": 1314,
+          "population_sha256": "d297f4e3c325694e699b4edc103272b77957934ee51eebb8c62a61fe2e6a1e13",
+          "required_games": 1314,
+          "season": "2024-25",
+          "value": 18.922672281162285
+        },
+        {
+          "games": 1315,
+          "population_sha256": "08d6faf39dfac94f7ef939db280ca08bbc8dad81ded574015d043d7c1e389482",
+          "required_games": 1315,
+          "season": "2025-26",
+          "value": 19.45795095037079
+        },
+        {
+          "games": 205,
+          "population_sha256": "4d333dd16e027b4edeb096d1b81fd336e1b05ea56df2ce34a093161b5960831f",
+          "required_games": 205,
+          "season": "2026-27",
+          "value": 18.925020823861487
+        }
+      ],
+      "calibrated": true,
+      "family": "scikit-learn linear",
+      "feature_group": "Basketball history",
+      "horizon_minutes": 60,
+      "objective": "total_rmse",
+      "public_model_alias": "NBA-R006",
+      "qualification": "Descriptive validation leader; full-season certification blocked",
+      "recovered_exact_state": true,
+      "saved_score_aggregation": "Root weighted annual MSE",
+      "selection_score": 19.192177852543246,
+      "selection_uses_test_outcomes": false,
+      "tied_leaders": 2,
+      "v13_rmse_policy_satisfied": false
+    },
+    {
+      "annual_metrics": [
+        {
+          "games": 1314,
+          "population_sha256": "d297f4e3c325694e699b4edc103272b77957934ee51eebb8c62a61fe2e6a1e13",
+          "required_games": 1314,
+          "season": "2024-25",
+          "value": 0.6704718417047184
+        },
+        {
+          "games": 1315,
+          "population_sha256": "08d6faf39dfac94f7ef939db280ca08bbc8dad81ded574015d043d7c1e389482",
+          "required_games": 1315,
+          "season": "2025-26",
+          "value": 0.6760456273764259
+        },
+        {
+          "games": 205,
+          "population_sha256": "4d333dd16e027b4edeb096d1b81fd336e1b05ea56df2ce34a093161b5960831f",
+          "required_games": 205,
+          "season": "2026-27",
+          "value": 0.6390243902439025
+        }
+      ],
+      "calibrated": true,
+      "family": "CatBoost",
+      "feature_group": "Sportsbooks + basketball history",
+      "horizon_minutes": 120,
+      "objective": "winner_accuracy",
+      "public_model_alias": "NBA-R013",
+      "qualification": "Descriptive validation leader; full-season certification blocked",
+      "recovered_exact_state": false,
+      "saved_score_aggregation": "Weighted annual metric",
+      "selection_score": 0.6732587345405722,
+      "selection_uses_test_outcomes": false,
+      "tied_leaders": 1,
+      "v13_rmse_policy_satisfied": true
+    },
+    {
+      "annual_metrics": [
+        {
+          "games": 1314,
+          "population_sha256": "d297f4e3c325694e699b4edc103272b77957934ee51eebb8c62a61fe2e6a1e13",
+          "required_games": 1314,
+          "season": "2024-25",
+          "value": 0.6121661098957633
+        },
+        {
+          "games": 1315,
+          "population_sha256": "08d6faf39dfac94f7ef939db280ca08bbc8dad81ded574015d043d7c1e389482",
+          "required_games": 1315,
+          "season": "2025-26",
+          "value": 0.6086457840350369
+        },
+        {
+          "games": 205,
+          "population_sha256": "4d333dd16e027b4edeb096d1b81fd336e1b05ea56df2ce34a093161b5960831f",
+          "required_games": 205,
+          "season": "2026-27",
+          "value": 0.6295253850299887
+        }
+      ],
+      "calibrated": true,
+      "family": "CatBoost",
+      "feature_group": "Markets + basketball history",
+      "horizon_minutes": 120,
+      "objective": "winner_log_loss",
+      "public_model_alias": "NBA-R007",
+      "qualification": "Descriptive validation leader; full-season certification blocked",
+      "recovered_exact_state": true,
+      "saved_score_aggregation": "Weighted annual metric",
+      "selection_score": 0.6104059469654001,
+      "selection_uses_test_outcomes": false,
+      "tied_leaders": 1,
+      "v13_rmse_policy_satisfied": true
+    },
+    {
+      "annual_metrics": [
+        {
+          "games": 1314,
+          "population_sha256": "d297f4e3c325694e699b4edc103272b77957934ee51eebb8c62a61fe2e6a1e13",
+          "required_games": 1314,
+          "season": "2024-25",
+          "value": 0.2117363234949395
+        },
+        {
+          "games": 1315,
+          "population_sha256": "08d6faf39dfac94f7ef939db280ca08bbc8dad81ded574015d043d7c1e389482",
+          "required_games": 1315,
+          "season": "2025-26",
+          "value": 0.21005900309234954
+        },
+        {
+          "games": 205,
+          "population_sha256": "4d333dd16e027b4edeb096d1b81fd336e1b05ea56df2ce34a093161b5960831f",
+          "required_games": 205,
+          "season": "2026-27",
+          "value": 0.21958418129265922
+        }
+      ],
+      "calibrated": true,
+      "family": "CatBoost",
+      "feature_group": "Markets + basketball history",
+      "horizon_minutes": 120,
+      "objective": "winner_brier",
+      "public_model_alias": "NBA-R007",
+      "qualification": "Descriptive validation leader; full-season certification blocked",
+      "recovered_exact_state": true,
+      "saved_score_aggregation": "Weighted annual metric",
+      "selection_score": 0.2108976632936445,
+      "selection_uses_test_outcomes": false,
+      "tied_leaders": 1,
+      "v13_rmse_policy_satisfied": true
+    },
+    {
+      "annual_metrics": [
+        {
+          "games": 1314,
+          "population_sha256": "d297f4e3c325694e699b4edc103272b77957934ee51eebb8c62a61fe2e6a1e13",
+          "required_games": 1314,
+          "season": "2024-25",
+          "value": 11.071912975855916
+        },
+        {
+          "games": 1315,
+          "population_sha256": "08d6faf39dfac94f7ef939db280ca08bbc8dad81ded574015d043d7c1e389482",
+          "required_games": 1315,
+          "season": "2025-26",
+          "value": 11.604614757053142
+        },
+        {
+          "games": 205,
+          "population_sha256": "4d333dd16e027b4edeb096d1b81fd336e1b05ea56df2ce34a093161b5960831f",
+          "required_games": 205,
+          "season": "2026-27",
+          "value": 12.17099088339012
+        }
+      ],
+      "calibrated": true,
+      "family": "scikit-learn Extra Trees",
+      "feature_group": "DraftKings + basketball history",
+      "horizon_minutes": 120,
+      "objective": "margin_mae",
+      "public_model_alias": "NBA-R012",
+      "qualification": "Descriptive validation leader; full-season certification blocked",
+      "recovered_exact_state": false,
+      "saved_score_aggregation": "Weighted annual metric",
+      "selection_score": 11.338263866454529,
+      "selection_uses_test_outcomes": false,
+      "tied_leaders": 1,
+      "v13_rmse_policy_satisfied": true
+    },
+    {
+      "annual_metrics": [
+        {
+          "games": 1314,
+          "population_sha256": "d297f4e3c325694e699b4edc103272b77957934ee51eebb8c62a61fe2e6a1e13",
+          "required_games": 1314,
+          "season": "2024-25",
+          "value": 14.23470764362899
+        },
+        {
+          "games": 1315,
+          "population_sha256": "08d6faf39dfac94f7ef939db280ca08bbc8dad81ded574015d043d7c1e389482",
+          "required_games": 1315,
+          "season": "2025-26",
+          "value": 14.72493747589782
+        },
+        {
+          "games": 205,
+          "population_sha256": "4d333dd16e027b4edeb096d1b81fd336e1b05ea56df2ce34a093161b5960831f",
+          "required_games": 205,
+          "season": "2026-27",
+          "value": 16.23047715636271
+        }
+      ],
+      "calibrated": true,
+      "family": "scikit-learn linear",
+      "feature_group": "Basketball history",
+      "horizon_minutes": 120,
+      "objective": "margin_rmse",
+      "public_model_alias": "NBA-R010",
+      "qualification": "Descriptive validation leader; full-season certification blocked",
+      "recovered_exact_state": false,
+      "saved_score_aggregation": "Root weighted annual MSE",
+      "selection_score": 14.481897067868728,
+      "selection_uses_test_outcomes": false,
+      "tied_leaders": 2,
+      "v13_rmse_policy_satisfied": false
+    },
+    {
+      "annual_metrics": [
+        {
+          "games": 1314,
+          "population_sha256": "d297f4e3c325694e699b4edc103272b77957934ee51eebb8c62a61fe2e6a1e13",
+          "required_games": 1314,
+          "season": "2024-25",
+          "value": 15.071638046871213
+        },
+        {
+          "games": 1315,
+          "population_sha256": "08d6faf39dfac94f7ef939db280ca08bbc8dad81ded574015d043d7c1e389482",
+          "required_games": 1315,
+          "season": "2025-26",
+          "value": 15.448279110961767
+        },
+        {
+          "games": 205,
+          "population_sha256": "4d333dd16e027b4edeb096d1b81fd336e1b05ea56df2ce34a093161b5960831f",
+          "required_games": 205,
+          "season": "2026-27",
+          "value": 15.289705156802219
+        }
+      ],
+      "calibrated": true,
+      "family": "scikit-learn linear",
+      "feature_group": "Basketball history",
+      "horizon_minutes": 120,
+      "objective": "total_mae",
+      "public_model_alias": "NBA-R001",
+      "qualification": "Descriptive validation leader; full-season certification blocked",
+      "recovered_exact_state": true,
+      "saved_score_aggregation": "Weighted annual metric",
+      "selection_score": 15.259958578916489,
+      "selection_uses_test_outcomes": false,
+      "tied_leaders": 2,
+      "v13_rmse_policy_satisfied": true
+    },
+    {
+      "annual_metrics": [
+        {
+          "games": 1314,
+          "population_sha256": "d297f4e3c325694e699b4edc103272b77957934ee51eebb8c62a61fe2e6a1e13",
+          "required_games": 1314,
+          "season": "2024-25",
+          "value": 18.87949287900892
+        },
+        {
+          "games": 1315,
+          "population_sha256": "08d6faf39dfac94f7ef939db280ca08bbc8dad81ded574015d043d7c1e389482",
+          "required_games": 1315,
+          "season": "2025-26",
+          "value": 19.445998435365745
+        },
+        {
+          "games": 205,
+          "population_sha256": "4d333dd16e027b4edeb096d1b81fd336e1b05ea56df2ce34a093161b5960831f",
+          "required_games": 205,
+          "season": "2026-27",
+          "value": 18.37985222764383
+        }
+      ],
+      "calibrated": true,
+      "family": "scikit-learn Extra Trees",
+      "feature_group": "Sportsbooks + basketball history",
+      "horizon_minutes": 120,
+      "objective": "total_rmse",
+      "public_model_alias": "NBA-R009",
+      "qualification": "Descriptive validation leader; full-season certification blocked",
+      "recovered_exact_state": false,
+      "saved_score_aggregation": "Root weighted annual MSE",
+      "selection_score": 19.164838983367375,
+      "selection_uses_test_outcomes": false,
+      "tied_leaders": 1,
+      "v13_rmse_policy_satisfied": false
+    }
+  ],
+  "owner": "NBA",
+  "populations": [
+    {
+      "completed_games": 1314,
+      "full_season_census_verified": false,
+      "playoff_games": 84,
+      "population_sha256": "d297f4e3c325694e699b4edc103272b77957934ee51eebb8c62a61fe2e6a1e13",
+      "qualification_gaps": [
+        "Independent all-competition season census not verified",
+        "Authenticated play-in rows absent from retained validation population",
+        "Cup-final history not proved"
+      ],
+      "registered_games": 1314,
+      "regular_games": 1230,
+      "role": "Validation",
+      "season": "2024-25",
+      "unknown_missing_count": null,
+      "upcoming_or_unconfirmed_games": 0
+    },
+    {
+      "completed_games": 1315,
+      "full_season_census_verified": false,
+      "playoff_games": 85,
+      "population_sha256": "08d6faf39dfac94f7ef939db280ca08bbc8dad81ded574015d043d7c1e389482",
+      "qualification_gaps": [
+        "Independent all-competition season census not verified",
+        "Authenticated play-in rows absent from retained validation population",
+        "Cup-final history not proved"
+      ],
+      "registered_games": 1315,
+      "regular_games": 1230,
+      "role": "Validation",
+      "season": "2025-26",
+      "unknown_missing_count": null,
+      "upcoming_or_unconfirmed_games": 0
+    },
+    {
+      "completed_games": 205,
+      "full_season_census_verified": false,
+      "playoff_games": 0,
+      "population_sha256": "4d333dd16e027b4edeb096d1b81fd336e1b05ea56df2ce34a093161b5960831f",
+      "qualification_gaps": [
+        "Independent all-competition season census not verified"
+      ],
+      "registered_games": 1200,
+      "regular_games": 205,
+      "role": "Previously exposed test; report only",
+      "season": "2026-27",
+      "unknown_missing_count": null,
+      "upcoming_or_unconfirmed_games": 995
+    }
+  ],
+  "prepared_successor": {
+    "new_forecasts": 0,
+    "new_research_fits": 0,
+    "new_source_requests": 0,
+    "owner_execution_started": false,
+    "release": "B095",
+    "status": "Prepared successor; owner execution pending"
+  },
+  "prior_execution": {
+    "additional_recovered_base_states": 534,
+    "blocked_source_contexts": 24,
+    "distinct_base_states": 1644,
+    "exit_code": 2,
+    "failed_estimator_jobs": 0,
+    "failure_class": "Concurrent compute-ledger mutation during archive write",
+    "new_calibration_fits": 774,
+    "new_estimator_fits": 774,
+    "physical_return_sealed": false,
+    "release": "B093",
+    "reused_calibration_fits": 336,
+    "reused_estimator_fits": 336,
+    "scored_variants": 3300,
+    "status": "Stopped; checkpoints preserved; return sealing failed",
+    "uncertainty_completed": 2101,
+    "uncertainty_failed": 0,
+    "uncertainty_requested": 3300,
+    "uncertainty_unadmitted": 1199
+  },
+  "publication": {
+    "model_fits_during_preparation": 0,
+    "production_deployment_claimed": false,
+    "provider_requests_during_preparation": 0,
+    "research_executions_during_preparation": 0,
+    "status": "Prepared public projection; source publication and deployed-site verification are separate"
+  },
+  "review_date": "2026-11-17",
+  "schema": "sports_edge_lab.nba.b095.review_public.v1",
+  "scientific_snapshot_at_utc": "2026-11-17T19:23:32.990318Z",
+  "selection": {
+    "automatic_promotions": 0,
+    "full_season_champions_certified": 0,
+    "primary_policy": "50/50",
+    "prior_test_exposure": "Current-season results were inspected previously. This report cannot make them pristine retrospectively.",
+    "scope": "Saved full declared cohort; independent full-season census is unproved",
+    "season_training_row_reweighting": false,
+    "source_clock_limitation": "11,422 prevalidation training/calibration rows use the declared event-time-plus-24-hour archival label-release assumption; this is not original-issued evidence.",
+    "strict_historical_point_in_time_qualified": false,
+    "test_outcomes_used_for_selection": false,
+    "test_season": "2026-27",
+    "validation_seasons": [
+      "2024-25",
+      "2025-26"
+    ]
+  },
+  "sources": {
+    "all_relevant_data_acquired": false,
+    "bookmaker_cell_scope": "15,262 retained games including prevalidation history; two horizons; three main markets. Counts are bookmaker/game/market/horizon cells, not unique games.",
+    "bookmaker_counts": [
+      {
+        "bookmaker_key": "atg_se",
+        "qualified": 0,
+        "required": 91572
+      },
+      {
+        "bookmaker_key": "ballybet",
+        "qualified": 0,
+        "required": 91572
+      },
+      {
+        "bookmaker_key": "barstool",
+        "qualified": 3348,
+        "required": 91572
+      },
+      {
+        "bookmaker_key": "bet365_au",
+        "qualified": 0,
+        "required": 91572
+      },
+      {
+        "bookmaker_key": "bet99_ca_on",
+        "qualified": 0,
+        "required": 91572
+      },
+      {
+        "bookmaker_key": "betano_ca_on",
+        "qualified": 0,
+        "required": 91572
+      },
+      {
+        "bookmaker_key": "betano_uk",
+        "qualified": 0,
+        "required": 91572
+      },
+      {
+        "bookmaker_key": "betanysports",
+        "qualified": 0,
+        "required": 91572
+      },
+      {
+        "bookmaker_key": "betclic_fr",
+        "qualified": 0,
+        "required": 91572
+      },
+      {
+        "bookmaker_key": "betfair",
+        "qualified": 670,
+        "required": 91572
+      },
+      {
+        "bookmaker_key": "betfair_ex_au",
+        "qualified": 456,
+        "required": 91572
+      },
+      {
+        "bookmaker_key": "betfair_ex_eu",
+        "qualified": 456,
+        "required": 91572
+      },
+      {
+        "bookmaker_key": "betfair_ex_uk",
+        "qualified": 458,
+        "required": 91572
+      },
+      {
+        "bookmaker_key": "betfair_sb_uk",
+        "qualified": 0,
+        "required": 91572
+      },
+      {
+        "bookmaker_key": "betfred_uk",
+        "qualified": 0,
+        "required": 91572
+      },
+      {
+        "bookmaker_key": "betinia_se",
+        "qualified": 0,
+        "required": 91572
+      },
+      {
+        "bookmaker_key": "betmgm",
+        "qualified": 7169,
+        "required": 91572
+      },
+      {
+        "bookmaker_key": "betmgm_ca_on",
+        "qualified": 0,
+        "required": 91572
+      },
+      {
+        "bookmaker_key": "betmgm_se",
+        "qualified": 0,
+        "required": 91572
+      },
+      {
+        "bookmaker_key": "betonlineag",
+        "qualified": 6187,
+        "required": 91572
+      },
+      {
+        "bookmaker_key": "betopenly",
+        "qualified": 0,
+        "required": 91572
+      },
+      {
+        "bookmaker_key": "betparx",
+        "qualified": 0,
+        "required": 91572
+      },
+      {
+        "bookmaker_key": "betr_au",
+        "qualified": 0,
+        "required": 91572
+      },
+      {
+        "bookmaker_key": "betright",
+        "qualified": 0,
+        "required": 91572
+      },
+      {
+        "bookmaker_key": "betrivers",
+        "qualified": 6955,
+        "required": 91572
+      },
+      {
+        "bookmaker_key": "betrivers_ca_on",
+        "qualified": 0,
+        "required": 91572
+      },
+      {
+        "bookmaker_key": "betsson",
+        "qualified": 0,
+        "required": 91572
+      },
+      {
+        "bookmaker_key": "betus",
+        "qualified": 5364,
+        "required": 91572
+      },
+      {
+        "bookmaker_key": "betvictor",
+        "qualified": 0,
+        "required": 91572
+      },
+      {
+        "bookmaker_key": "betway",
+        "qualified": 0,
+        "required": 91572
+      },
+      {
+        "bookmaker_key": "betwhale",
+        "qualified": 0,
+        "required": 91572
+      },
+      {
+        "bookmaker_key": "bookmaker",
+        "qualified": 56,
+        "required": 91572
+      },
+      {
+        "bookmaker_key": "bovada",
+        "qualified": 6454,
+        "required": 91572
+      },
+      {
+        "bookmaker_key": "boylesports",
+        "qualified": 0,
+        "required": 91572
+      },
+      {
+        "bookmaker_key": "campobet_se",
+        "qualified": 0,
+        "required": 91572
+      },
+      {
+        "bookmaker_key": "casumo",
+        "qualified": 0,
+        "required": 91572
+      },
+      {
+        "bookmaker_key": "provider_book_ea3af249666e",
+        "qualified": 1000,
+        "required": 91572
+      },
+      {
+        "bookmaker_key": "coolbet",
+        "qualified": 0,
+        "required": 91572
+      },
+      {
+        "bookmaker_key": "coral",
+        "qualified": 0,
+        "required": 91572
+      },
+      {
+        "bookmaker_key": "courtside",
+        "qualified": 0,
+        "required": 91572
+      },
+      {
+        "bookmaker_key": "dabble_au",
+        "qualified": 0,
+        "required": 91572
+      },
+      {
+        "bookmaker_key": "dabble_us_dfs",
+        "qualified": 0,
+        "required": 91572
+      },
+      {
+        "bookmaker_key": "draftkings",
+        "qualified": 7848,
+        "required": 91572
+      },
+      {
+        "bookmaker_key": "espnbet",
+        "qualified": 0,
+        "required": 91572
+      },
+      {
+        "bookmaker_key": "everygame",
+        "qualified": 0,
+        "required": 91572
+      },
+      {
+        "bookmaker_key": "expekt_se",
+        "qualified": 0,
+        "required": 91572
+      },
+      {
+        "bookmaker_key": "fanatics",
+        "qualified": 1464,
+        "required": 91572
+      },
+      {
+        "bookmaker_key": "fanduel",
+        "qualified": 7675,
+        "required": 91572
+      },
+      {
+        "bookmaker_key": "fliff",
+        "qualified": 0,
+        "required": 91572
+      },
+      {
+        "bookmaker_key": "foxbet",
+        "qualified": 2704,
+        "required": 91572
+      },
+      {
+        "bookmaker_key": "grosvenor",
+        "qualified": 0,
+        "required": 91572
+      },
+      {
+        "bookmaker_key": "gtbets",
+        "qualified": 1592,
+        "required": 91572
+      },
+      {
+        "bookmaker_key": "hajper_se",
+        "qualified": 0,
+        "required": 91572
+      },
+      {
+        "bookmaker_key": "hardrockbet",
+        "qualified": 0,
+        "required": 91572
+      },
+      {
+        "bookmaker_key": "hardrockbet_az",
+        "qualified": 0,
+        "required": 91572
+      },
+      {
+        "bookmaker_key": "hardrockbet_fl",
+        "qualified": 0,
+        "required": 91572
+      },
+      {
+        "bookmaker_key": "hardrockbet_oh",
+        "qualified": 0,
+        "required": 91572
+      },
+      {
+        "bookmaker_key": "intertops",
+        "qualified": 590,
+        "required": 91572
+      },
+      {
+        "bookmaker_key": "kalshi",
+        "qualified": 0,
+        "required": 91572
+      },
+      {
+        "bookmaker_key": "ladbrokes_au",
+        "qualified": 0,
+        "required": 91572
+      },
+      {
+        "bookmaker_key": "ladbrokes_uk",
+        "qualified": 0,
+        "required": 91572
+      },
+      {
+        "bookmaker_key": "leovegas",
+        "qualified": 0,
+        "required": 91572
+      },
+      {
+        "bookmaker_key": "leovegas_fi",
+        "qualified": 0,
+        "required": 91572
+      },
+      {
+        "bookmaker_key": "leovegas_se",
+        "qualified": 0,
+        "required": 91572
+      },
+      {
+        "bookmaker_key": "limitless",
+        "qualified": 0,
+        "required": 91572
+      },
+      {
+        "bookmaker_key": "livescorebet",
+        "qualified": 0,
+        "required": 91572
+      },
+      {
+        "bookmaker_key": "lowvig",
+        "qualified": 6096,
+        "required": 91572
+      },
+      {
+        "bookmaker_key": "marathonbet",
+        "qualified": 0,
+        "required": 91572
+      },
+      {
+        "bookmaker_key": "matchbook",
+        "qualified": 0,
+        "required": 91572
+      },
+      {
+        "bookmaker_key": "mrgreen_se",
+        "qualified": 0,
+        "required": 91572
+      },
+      {
+        "bookmaker_key": "mybookieag",
+        "qualified": 6431,
+        "required": 91572
+      },
+      {
+        "bookmaker_key": "neds",
+        "qualified": 0,
+        "required": 91572
+      },
+      {
+        "bookmaker_key": "netbet_fr",
+        "qualified": 0,
+        "required": 91572
+      },
+      {
+        "bookmaker_key": "nordicbet",
+        "qualified": 0,
+        "required": 91572
+      },
+      {
+        "bookmaker_key": "novig",
+        "qualified": 0,
+        "required": 91572
+      },
+      {
+        "bookmaker_key": "onexbet",
+        "qualified": 0,
+        "required": 91572
+      },
+      {
+        "bookmaker_key": "paddypower",
+        "qualified": 0,
+        "required": 91572
+      },
+      {
+        "bookmaker_key": "parlayplay",
+        "qualified": 0,
+        "required": 91572
+      },
+      {
+        "bookmaker_key": "pick6",
+        "qualified": 0,
+        "required": 91572
+      },
+      {
+        "bookmaker_key": "picklebet_au",
+        "qualified": 0,
+        "required": 91572
+      },
+      {
+        "bookmaker_key": "pinnacle",
+        "qualified": 0,
+        "required": 91572
+      },
+      {
+        "bookmaker_key": "playalberta",
+        "qualified": 0,
+        "required": 91572
+      },
+      {
+        "bookmaker_key": "playnow_ca",
+        "qualified": 0,
+        "required": 91572
+      },
+      {
+        "bookmaker_key": "playup",
+        "qualified": 0,
+        "required": 91572
+      },
+      {
+        "bookmaker_key": "pmu_fr",
+        "qualified": 0,
+        "required": 91572
+      },
+      {
+        "bookmaker_key": "pointsbetau",
+        "qualified": 0,
+        "required": 91572
+      },
+      {
+        "bookmaker_key": "pointsbetca",
+        "qualified": 0,
+        "required": 91572
+      },
+      {
+        "bookmaker_key": "pointsbetus",
+        "qualified": 4681,
+        "required": 91572
+      },
+      {
+        "bookmaker_key": "polymarket",
+        "qualified": 0,
+        "required": 91572
+      },
+      {
+        "bookmaker_key": "polymarket_us",
+        "qualified": 0,
+        "required": 91572
+      },
+      {
+        "bookmaker_key": "prizepicks",
+        "qualified": 0,
+        "required": 91572
+      },
+      {
+        "bookmaker_key": "proline_ca_on",
+        "qualified": 0,
+        "required": 91572
+      },
+      {
+        "bookmaker_key": "prophetx",
+        "qualified": 0,
+        "required": 91572
+      },
+      {
+        "bookmaker_key": "rebet",
+        "qualified": 0,
+        "required": 91572
+      },
+      {
+        "bookmaker_key": "skybet",
+        "qualified": 0,
+        "required": 91572
+      },
+      {
+        "bookmaker_key": "smarkets",
+        "qualified": 0,
+        "required": 91572
+      },
+      {
+        "bookmaker_key": "sport888",
+        "qualified": 0,
+        "required": 91572
+      },
+      {
+        "bookmaker_key": "sport888_se",
+        "qualified": 0,
+        "required": 91572
+      },
+      {
+        "bookmaker_key": "sportsbet",
+        "qualified": 0,
+        "required": 91572
+      },
+      {
+        "bookmaker_key": "sportsinteraction_ca_on",
+        "qualified": 0,
+        "required": 91572
+      },
+      {
+        "bookmaker_key": "sugarhouse",
+        "qualified": 2848,
+        "required": 91572
+      },
+      {
+        "bookmaker_key": "superbook",
+        "qualified": 1979,
+        "required": 91572
+      },
+      {
+        "bookmaker_key": "svenskaspel_se",
+        "qualified": 0,
+        "required": 91572
+      },
+      {
+        "bookmaker_key": "tab",
+        "qualified": 0,
+        "required": 91572
+      },
+      {
+        "bookmaker_key": "tabtouch",
+        "qualified": 0,
+        "required": 91572
+      },
+      {
+        "bookmaker_key": "tipico_de",
+        "qualified": 0,
+        "required": 91572
+      },
+      {
+        "bookmaker_key": "twinspires",
+        "qualified": 3500,
+        "required": 91572
+      },
+      {
+        "bookmaker_key": "underdog",
+        "qualified": 0,
+        "required": 91572
+      },
+      {
+        "bookmaker_key": "unibet",
+        "qualified": 1464,
+        "required": 91572
+      },
+      {
+        "bookmaker_key": "unibet_fi",
+        "qualified": 0,
+        "required": 91572
+      },
+      {
+        "bookmaker_key": "unibet_fr",
+        "qualified": 0,
+        "required": 91572
+      },
+      {
+        "bookmaker_key": "unibet_nl",
+        "qualified": 0,
+        "required": 91572
+      },
+      {
+        "bookmaker_key": "unibet_se",
+        "qualified": 0,
+        "required": 91572
+      },
+      {
+        "bookmaker_key": "unibet_uk",
+        "qualified": 0,
+        "required": 91572
+      },
+      {
+        "bookmaker_key": "unibet_us",
+        "qualified": 3203,
+        "required": 91572
+      },
+      {
+        "bookmaker_key": "veikkaus_fi",
+        "qualified": 0,
+        "required": 91572
+      },
+      {
+        "bookmaker_key": "virginbet",
+        "qualified": 0,
+        "required": 91572
+      },
+      {
+        "bookmaker_key": "williamhill",
+        "qualified": 0,
+        "required": 91572
+      },
+      {
+        "bookmaker_key": "williamhill_us",
+        "qualified": 6885,
+        "required": 91572
+      },
+      {
+        "bookmaker_key": "winamax_de",
+        "qualified": 0,
+        "required": 91572
+      },
+      {
+        "bookmaker_key": "winamax_fr",
+        "qualified": 0,
+        "required": 91572
+      },
+      {
+        "bookmaker_key": "wynnbet",
+        "qualified": 3423,
+        "required": 91572
+      }
+    ],
+    "bookmakers_catalogued": 122,
+    "bookmakers_with_any_qualified_cell": 28,
+    "comparison_clock_note": "Qualified here means admitted to the saved archive comparison contract. Acquisition does not establish original historical availability; quote-clock and exact-settlement gaps remain explicit.",
+    "comparison_scope": "Market overlap is a separate benchmark population and never replaces the declared model population.",
+    "live_data": false,
+    "named_provider_coverage": [
+      {
+        "archive_replay_n": 358,
+        "current_capture_n": 0,
+        "exact_contract_ready_n": 0,
+        "horizon_minutes": 60,
+        "market": "h2h",
+        "missing_n": 956,
+        "population_n": 1314,
+        "population_status": "COMPLETED",
+        "qualified_n": 358,
+        "season": "2024-25",
+        "source": "draftkings"
+      },
+      {
+        "archive_replay_n": 357,
+        "current_capture_n": 0,
+        "exact_contract_ready_n": 0,
+        "horizon_minutes": 120,
+        "market": "h2h",
+        "missing_n": 957,
+        "population_n": 1314,
+        "population_status": "COMPLETED",
+        "qualified_n": 357,
+        "season": "2024-25",
+        "source": "draftkings"
+      },
+      {
+        "archive_replay_n": 358,
+        "current_capture_n": 0,
+        "exact_contract_ready_n": 0,
+        "horizon_minutes": 60,
+        "market": "spreads",
+        "missing_n": 956,
+        "population_n": 1314,
+        "population_status": "COMPLETED",
+        "qualified_n": 358,
+        "season": "2024-25",
+        "source": "draftkings"
+      },
+      {
+        "archive_replay_n": 357,
+        "current_capture_n": 0,
+        "exact_contract_ready_n": 0,
+        "horizon_minutes": 120,
+        "market": "spreads",
+        "missing_n": 957,
+        "population_n": 1314,
+        "population_status": "COMPLETED",
+        "qualified_n": 357,
+        "season": "2024-25",
+        "source": "draftkings"
+      },
+      {
+        "archive_replay_n": 358,
+        "current_capture_n": 0,
+        "exact_contract_ready_n": 0,
+        "horizon_minutes": 60,
+        "market": "totals",
+        "missing_n": 956,
+        "population_n": 1314,
+        "population_status": "COMPLETED",
+        "qualified_n": 358,
+        "season": "2024-25",
+        "source": "draftkings"
+      },
+      {
+        "archive_replay_n": 357,
+        "current_capture_n": 0,
+        "exact_contract_ready_n": 0,
+        "horizon_minutes": 120,
+        "market": "totals",
+        "missing_n": 957,
+        "population_n": 1314,
+        "population_status": "COMPLETED",
+        "qualified_n": 357,
+        "season": "2024-25",
+        "source": "draftkings"
+      },
+      {
+        "archive_replay_n": 0,
+        "current_capture_n": 0,
+        "exact_contract_ready_n": 0,
+        "horizon_minutes": 60,
+        "market": "h2h",
+        "missing_n": 1314,
+        "population_n": 1314,
+        "population_status": "COMPLETED",
+        "qualified_n": 0,
+        "season": "2024-25",
+        "source": "kalshi"
+      },
+      {
+        "archive_replay_n": 0,
+        "current_capture_n": 0,
+        "exact_contract_ready_n": 0,
+        "horizon_minutes": 120,
+        "market": "h2h",
+        "missing_n": 1314,
+        "population_n": 1314,
+        "population_status": "COMPLETED",
+        "qualified_n": 0,
+        "season": "2024-25",
+        "source": "kalshi"
+      },
+      {
+        "archive_replay_n": 0,
+        "current_capture_n": 0,
+        "exact_contract_ready_n": 0,
+        "horizon_minutes": 60,
+        "market": "spreads",
+        "missing_n": 1314,
+        "population_n": 1314,
+        "population_status": "COMPLETED",
+        "qualified_n": 0,
+        "season": "2024-25",
+        "source": "kalshi"
+      },
+      {
+        "archive_replay_n": 0,
+        "current_capture_n": 0,
+        "exact_contract_ready_n": 0,
+        "horizon_minutes": 120,
+        "market": "spreads",
+        "missing_n": 1314,
+        "population_n": 1314,
+        "population_status": "COMPLETED",
+        "qualified_n": 0,
+        "season": "2024-25",
+        "source": "kalshi"
+      },
+      {
+        "archive_replay_n": 0,
+        "current_capture_n": 0,
+        "exact_contract_ready_n": 0,
+        "horizon_minutes": 60,
+        "market": "totals",
+        "missing_n": 1314,
+        "population_n": 1314,
+        "population_status": "COMPLETED",
+        "qualified_n": 0,
+        "season": "2024-25",
+        "source": "kalshi"
+      },
+      {
+        "archive_replay_n": 0,
+        "current_capture_n": 0,
+        "exact_contract_ready_n": 0,
+        "horizon_minutes": 120,
+        "market": "totals",
+        "missing_n": 1314,
+        "population_n": 1314,
+        "population_status": "COMPLETED",
+        "qualified_n": 0,
+        "season": "2024-25",
+        "source": "kalshi"
+      },
+      {
+        "archive_replay_n": 0,
+        "current_capture_n": 0,
+        "exact_contract_ready_n": 0,
+        "horizon_minutes": 60,
+        "market": "h2h",
+        "missing_n": 1314,
+        "population_n": 1314,
+        "population_status": "COMPLETED",
+        "qualified_n": 0,
+        "season": "2024-25",
+        "source": "polymarket_international"
+      },
+      {
+        "archive_replay_n": 0,
+        "current_capture_n": 0,
+        "exact_contract_ready_n": 0,
+        "horizon_minutes": 120,
+        "market": "h2h",
+        "missing_n": 1314,
+        "population_n": 1314,
+        "population_status": "COMPLETED",
+        "qualified_n": 0,
+        "season": "2024-25",
+        "source": "polymarket_international"
+      },
+      {
+        "archive_replay_n": 0,
+        "current_capture_n": 0,
+        "exact_contract_ready_n": 0,
+        "horizon_minutes": 60,
+        "market": "spreads",
+        "missing_n": 1314,
+        "population_n": 1314,
+        "population_status": "COMPLETED",
+        "qualified_n": 0,
+        "season": "2024-25",
+        "source": "polymarket_international"
+      },
+      {
+        "archive_replay_n": 0,
+        "current_capture_n": 0,
+        "exact_contract_ready_n": 0,
+        "horizon_minutes": 120,
+        "market": "spreads",
+        "missing_n": 1314,
+        "population_n": 1314,
+        "population_status": "COMPLETED",
+        "qualified_n": 0,
+        "season": "2024-25",
+        "source": "polymarket_international"
+      },
+      {
+        "archive_replay_n": 0,
+        "current_capture_n": 0,
+        "exact_contract_ready_n": 0,
+        "horizon_minutes": 60,
+        "market": "totals",
+        "missing_n": 1314,
+        "population_n": 1314,
+        "population_status": "COMPLETED",
+        "qualified_n": 0,
+        "season": "2024-25",
+        "source": "polymarket_international"
+      },
+      {
+        "archive_replay_n": 0,
+        "current_capture_n": 0,
+        "exact_contract_ready_n": 0,
+        "horizon_minutes": 120,
+        "market": "totals",
+        "missing_n": 1314,
+        "population_n": 1314,
+        "population_status": "COMPLETED",
+        "qualified_n": 0,
+        "season": "2024-25",
+        "source": "polymarket_international"
+      },
+      {
+        "archive_replay_n": 0,
+        "current_capture_n": 0,
+        "exact_contract_ready_n": 0,
+        "horizon_minutes": 60,
+        "market": "h2h",
+        "missing_n": 1314,
+        "population_n": 1314,
+        "population_status": "COMPLETED",
+        "qualified_n": 0,
+        "season": "2024-25",
+        "source": "polymarket_us"
+      },
+      {
+        "archive_replay_n": 0,
+        "current_capture_n": 0,
+        "exact_contract_ready_n": 0,
+        "horizon_minutes": 120,
+        "market": "h2h",
+        "missing_n": 1314,
+        "population_n": 1314,
+        "population_status": "COMPLETED",
+        "qualified_n": 0,
+        "season": "2024-25",
+        "source": "polymarket_us"
+      },
+      {
+        "archive_replay_n": 0,
+        "current_capture_n": 0,
+        "exact_contract_ready_n": 0,
+        "horizon_minutes": 60,
+        "market": "spreads",
+        "missing_n": 1314,
+        "population_n": 1314,
+        "population_status": "COMPLETED",
+        "qualified_n": 0,
+        "season": "2024-25",
+        "source": "polymarket_us"
+      },
+      {
+        "archive_replay_n": 0,
+        "current_capture_n": 0,
+        "exact_contract_ready_n": 0,
+        "horizon_minutes": 120,
+        "market": "spreads",
+        "missing_n": 1314,
+        "population_n": 1314,
+        "population_status": "COMPLETED",
+        "qualified_n": 0,
+        "season": "2024-25",
+        "source": "polymarket_us"
+      },
+      {
+        "archive_replay_n": 0,
+        "current_capture_n": 0,
+        "exact_contract_ready_n": 0,
+        "horizon_minutes": 60,
+        "market": "totals",
+        "missing_n": 1314,
+        "population_n": 1314,
+        "population_status": "COMPLETED",
+        "qualified_n": 0,
+        "season": "2024-25",
+        "source": "polymarket_us"
+      },
+      {
+        "archive_replay_n": 0,
+        "current_capture_n": 0,
+        "exact_contract_ready_n": 0,
+        "horizon_minutes": 120,
+        "market": "totals",
+        "missing_n": 1314,
+        "population_n": 1314,
+        "population_status": "COMPLETED",
+        "qualified_n": 0,
+        "season": "2024-25",
+        "source": "polymarket_us"
+      },
+      {
+        "archive_replay_n": 193,
+        "current_capture_n": 0,
+        "exact_contract_ready_n": 0,
+        "horizon_minutes": 60,
+        "market": "h2h",
+        "missing_n": 1122,
+        "population_n": 1315,
+        "population_status": "COMPLETED",
+        "qualified_n": 193,
+        "season": "2025-26",
+        "source": "draftkings"
+      },
+      {
+        "archive_replay_n": 192,
+        "current_capture_n": 0,
+        "exact_contract_ready_n": 0,
+        "horizon_minutes": 120,
+        "market": "h2h",
+        "missing_n": 1123,
+        "population_n": 1315,
+        "population_status": "COMPLETED",
+        "qualified_n": 192,
+        "season": "2025-26",
+        "source": "draftkings"
+      },
+      {
+        "archive_replay_n": 193,
+        "current_capture_n": 0,
+        "exact_contract_ready_n": 0,
+        "horizon_minutes": 60,
+        "market": "spreads",
+        "missing_n": 1122,
+        "population_n": 1315,
+        "population_status": "COMPLETED",
+        "qualified_n": 193,
+        "season": "2025-26",
+        "source": "draftkings"
+      },
+      {
+        "archive_replay_n": 192,
+        "current_capture_n": 0,
+        "exact_contract_ready_n": 0,
+        "horizon_minutes": 120,
+        "market": "spreads",
+        "missing_n": 1123,
+        "population_n": 1315,
+        "population_status": "COMPLETED",
+        "qualified_n": 192,
+        "season": "2025-26",
+        "source": "draftkings"
+      },
+      {
+        "archive_replay_n": 193,
+        "current_capture_n": 0,
+        "exact_contract_ready_n": 0,
+        "horizon_minutes": 60,
+        "market": "totals",
+        "missing_n": 1122,
+        "population_n": 1315,
+        "population_status": "COMPLETED",
+        "qualified_n": 193,
+        "season": "2025-26",
+        "source": "draftkings"
+      },
+      {
+        "archive_replay_n": 192,
+        "current_capture_n": 0,
+        "exact_contract_ready_n": 0,
+        "horizon_minutes": 120,
+        "market": "totals",
+        "missing_n": 1123,
+        "population_n": 1315,
+        "population_status": "COMPLETED",
+        "qualified_n": 192,
+        "season": "2025-26",
+        "source": "draftkings"
+      },
+      {
+        "archive_replay_n": 0,
+        "current_capture_n": 0,
+        "exact_contract_ready_n": 0,
+        "horizon_minutes": 60,
+        "market": "h2h",
+        "missing_n": 1315,
+        "population_n": 1315,
+        "population_status": "COMPLETED",
+        "qualified_n": 0,
+        "season": "2025-26",
+        "source": "kalshi"
+      },
+      {
+        "archive_replay_n": 0,
+        "current_capture_n": 0,
+        "exact_contract_ready_n": 0,
+        "horizon_minutes": 120,
+        "market": "h2h",
+        "missing_n": 1315,
+        "population_n": 1315,
+        "population_status": "COMPLETED",
+        "qualified_n": 0,
+        "season": "2025-26",
+        "source": "kalshi"
+      },
+      {
+        "archive_replay_n": 0,
+        "current_capture_n": 0,
+        "exact_contract_ready_n": 0,
+        "horizon_minutes": 60,
+        "market": "spreads",
+        "missing_n": 1315,
+        "population_n": 1315,
+        "population_status": "COMPLETED",
+        "qualified_n": 0,
+        "season": "2025-26",
+        "source": "kalshi"
+      },
+      {
+        "archive_replay_n": 0,
+        "current_capture_n": 0,
+        "exact_contract_ready_n": 0,
+        "horizon_minutes": 120,
+        "market": "spreads",
+        "missing_n": 1315,
+        "population_n": 1315,
+        "population_status": "COMPLETED",
+        "qualified_n": 0,
+        "season": "2025-26",
+        "source": "kalshi"
+      },
+      {
+        "archive_replay_n": 0,
+        "current_capture_n": 0,
+        "exact_contract_ready_n": 0,
+        "horizon_minutes": 60,
+        "market": "totals",
+        "missing_n": 1315,
+        "population_n": 1315,
+        "population_status": "COMPLETED",
+        "qualified_n": 0,
+        "season": "2025-26",
+        "source": "kalshi"
+      },
+      {
+        "archive_replay_n": 0,
+        "current_capture_n": 0,
+        "exact_contract_ready_n": 0,
+        "horizon_minutes": 120,
+        "market": "totals",
+        "missing_n": 1315,
+        "population_n": 1315,
+        "population_status": "COMPLETED",
+        "qualified_n": 0,
+        "season": "2025-26",
+        "source": "kalshi"
+      },
+      {
+        "archive_replay_n": 0,
+        "current_capture_n": 0,
+        "exact_contract_ready_n": 0,
+        "horizon_minutes": 60,
+        "market": "h2h",
+        "missing_n": 1315,
+        "population_n": 1315,
+        "population_status": "COMPLETED",
+        "qualified_n": 0,
+        "season": "2025-26",
+        "source": "polymarket_international"
+      },
+      {
+        "archive_replay_n": 0,
+        "current_capture_n": 0,
+        "exact_contract_ready_n": 0,
+        "horizon_minutes": 120,
+        "market": "h2h",
+        "missing_n": 1315,
+        "population_n": 1315,
+        "population_status": "COMPLETED",
+        "qualified_n": 0,
+        "season": "2025-26",
+        "source": "polymarket_international"
+      },
+      {
+        "archive_replay_n": 0,
+        "current_capture_n": 0,
+        "exact_contract_ready_n": 0,
+        "horizon_minutes": 60,
+        "market": "spreads",
+        "missing_n": 1315,
+        "population_n": 1315,
+        "population_status": "COMPLETED",
+        "qualified_n": 0,
+        "season": "2025-26",
+        "source": "polymarket_international"
+      },
+      {
+        "archive_replay_n": 0,
+        "current_capture_n": 0,
+        "exact_contract_ready_n": 0,
+        "horizon_minutes": 120,
+        "market": "spreads",
+        "missing_n": 1315,
+        "population_n": 1315,
+        "population_status": "COMPLETED",
+        "qualified_n": 0,
+        "season": "2025-26",
+        "source": "polymarket_international"
+      },
+      {
+        "archive_replay_n": 0,
+        "current_capture_n": 0,
+        "exact_contract_ready_n": 0,
+        "horizon_minutes": 60,
+        "market": "totals",
+        "missing_n": 1315,
+        "population_n": 1315,
+        "population_status": "COMPLETED",
+        "qualified_n": 0,
+        "season": "2025-26",
+        "source": "polymarket_international"
+      },
+      {
+        "archive_replay_n": 0,
+        "current_capture_n": 0,
+        "exact_contract_ready_n": 0,
+        "horizon_minutes": 120,
+        "market": "totals",
+        "missing_n": 1315,
+        "population_n": 1315,
+        "population_status": "COMPLETED",
+        "qualified_n": 0,
+        "season": "2025-26",
+        "source": "polymarket_international"
+      },
+      {
+        "archive_replay_n": 0,
+        "current_capture_n": 0,
+        "exact_contract_ready_n": 0,
+        "horizon_minutes": 60,
+        "market": "h2h",
+        "missing_n": 1315,
+        "population_n": 1315,
+        "population_status": "COMPLETED",
+        "qualified_n": 0,
+        "season": "2025-26",
+        "source": "polymarket_us"
+      },
+      {
+        "archive_replay_n": 0,
+        "current_capture_n": 0,
+        "exact_contract_ready_n": 0,
+        "horizon_minutes": 120,
+        "market": "h2h",
+        "missing_n": 1315,
+        "population_n": 1315,
+        "population_status": "COMPLETED",
+        "qualified_n": 0,
+        "season": "2025-26",
+        "source": "polymarket_us"
+      },
+      {
+        "archive_replay_n": 0,
+        "current_capture_n": 0,
+        "exact_contract_ready_n": 0,
+        "horizon_minutes": 60,
+        "market": "spreads",
+        "missing_n": 1315,
+        "population_n": 1315,
+        "population_status": "COMPLETED",
+        "qualified_n": 0,
+        "season": "2025-26",
+        "source": "polymarket_us"
+      },
+      {
+        "archive_replay_n": 0,
+        "current_capture_n": 0,
+        "exact_contract_ready_n": 0,
+        "horizon_minutes": 120,
+        "market": "spreads",
+        "missing_n": 1315,
+        "population_n": 1315,
+        "population_status": "COMPLETED",
+        "qualified_n": 0,
+        "season": "2025-26",
+        "source": "polymarket_us"
+      },
+      {
+        "archive_replay_n": 0,
+        "current_capture_n": 0,
+        "exact_contract_ready_n": 0,
+        "horizon_minutes": 60,
+        "market": "totals",
+        "missing_n": 1315,
+        "population_n": 1315,
+        "population_status": "COMPLETED",
+        "qualified_n": 0,
+        "season": "2025-26",
+        "source": "polymarket_us"
+      },
+      {
+        "archive_replay_n": 0,
+        "current_capture_n": 0,
+        "exact_contract_ready_n": 0,
+        "horizon_minutes": 120,
+        "market": "totals",
+        "missing_n": 1315,
+        "population_n": 1315,
+        "population_status": "COMPLETED",
+        "qualified_n": 0,
+        "season": "2025-26",
+        "source": "polymarket_us"
+      },
+      {
+        "archive_replay_n": 6,
+        "current_capture_n": 0,
+        "exact_contract_ready_n": 0,
+        "horizon_minutes": 60,
+        "market": "h2h",
+        "missing_n": 199,
+        "population_n": 205,
+        "population_status": "COMPLETED",
+        "qualified_n": 6,
+        "season": "2026-27",
+        "source": "draftkings"
+      },
+      {
+        "archive_replay_n": 6,
+        "current_capture_n": 0,
+        "exact_contract_ready_n": 0,
+        "horizon_minutes": 120,
+        "market": "h2h",
+        "missing_n": 199,
+        "population_n": 205,
+        "population_status": "COMPLETED",
+        "qualified_n": 6,
+        "season": "2026-27",
+        "source": "draftkings"
+      },
+      {
+        "archive_replay_n": 6,
+        "current_capture_n": 0,
+        "exact_contract_ready_n": 0,
+        "horizon_minutes": 60,
+        "market": "spreads",
+        "missing_n": 199,
+        "population_n": 205,
+        "population_status": "COMPLETED",
+        "qualified_n": 6,
+        "season": "2026-27",
+        "source": "draftkings"
+      },
+      {
+        "archive_replay_n": 6,
+        "current_capture_n": 0,
+        "exact_contract_ready_n": 0,
+        "horizon_minutes": 120,
+        "market": "spreads",
+        "missing_n": 199,
+        "population_n": 205,
+        "population_status": "COMPLETED",
+        "qualified_n": 6,
+        "season": "2026-27",
+        "source": "draftkings"
+      },
+      {
+        "archive_replay_n": 6,
+        "current_capture_n": 0,
+        "exact_contract_ready_n": 0,
+        "horizon_minutes": 60,
+        "market": "totals",
+        "missing_n": 199,
+        "population_n": 205,
+        "population_status": "COMPLETED",
+        "qualified_n": 6,
+        "season": "2026-27",
+        "source": "draftkings"
+      },
+      {
+        "archive_replay_n": 6,
+        "current_capture_n": 0,
+        "exact_contract_ready_n": 0,
+        "horizon_minutes": 120,
+        "market": "totals",
+        "missing_n": 199,
+        "population_n": 205,
+        "population_status": "COMPLETED",
+        "qualified_n": 6,
+        "season": "2026-27",
+        "source": "draftkings"
+      },
+      {
+        "archive_replay_n": 0,
+        "current_capture_n": 0,
+        "exact_contract_ready_n": 0,
+        "horizon_minutes": 60,
+        "market": "h2h",
+        "missing_n": 205,
+        "population_n": 205,
+        "population_status": "COMPLETED",
+        "qualified_n": 0,
+        "season": "2026-27",
+        "source": "kalshi"
+      },
+      {
+        "archive_replay_n": 0,
+        "current_capture_n": 0,
+        "exact_contract_ready_n": 0,
+        "horizon_minutes": 120,
+        "market": "h2h",
+        "missing_n": 205,
+        "population_n": 205,
+        "population_status": "COMPLETED",
+        "qualified_n": 0,
+        "season": "2026-27",
+        "source": "kalshi"
+      },
+      {
+        "archive_replay_n": 0,
+        "current_capture_n": 0,
+        "exact_contract_ready_n": 0,
+        "horizon_minutes": 60,
+        "market": "spreads",
+        "missing_n": 205,
+        "population_n": 205,
+        "population_status": "COMPLETED",
+        "qualified_n": 0,
+        "season": "2026-27",
+        "source": "kalshi"
+      },
+      {
+        "archive_replay_n": 0,
+        "current_capture_n": 0,
+        "exact_contract_ready_n": 0,
+        "horizon_minutes": 120,
+        "market": "spreads",
+        "missing_n": 205,
+        "population_n": 205,
+        "population_status": "COMPLETED",
+        "qualified_n": 0,
+        "season": "2026-27",
+        "source": "kalshi"
+      },
+      {
+        "archive_replay_n": 0,
+        "current_capture_n": 0,
+        "exact_contract_ready_n": 0,
+        "horizon_minutes": 60,
+        "market": "totals",
+        "missing_n": 205,
+        "population_n": 205,
+        "population_status": "COMPLETED",
+        "qualified_n": 0,
+        "season": "2026-27",
+        "source": "kalshi"
+      },
+      {
+        "archive_replay_n": 0,
+        "current_capture_n": 0,
+        "exact_contract_ready_n": 0,
+        "horizon_minutes": 120,
+        "market": "totals",
+        "missing_n": 205,
+        "population_n": 205,
+        "population_status": "COMPLETED",
+        "qualified_n": 0,
+        "season": "2026-27",
+        "source": "kalshi"
+      },
+      {
+        "archive_replay_n": 0,
+        "current_capture_n": 0,
+        "exact_contract_ready_n": 0,
+        "horizon_minutes": 60,
+        "market": "h2h",
+        "missing_n": 205,
+        "population_n": 205,
+        "population_status": "COMPLETED",
+        "qualified_n": 0,
+        "season": "2026-27",
+        "source": "polymarket_international"
+      },
+      {
+        "archive_replay_n": 0,
+        "current_capture_n": 0,
+        "exact_contract_ready_n": 0,
+        "horizon_minutes": 120,
+        "market": "h2h",
+        "missing_n": 205,
+        "population_n": 205,
+        "population_status": "COMPLETED",
+        "qualified_n": 0,
+        "season": "2026-27",
+        "source": "polymarket_international"
+      },
+      {
+        "archive_replay_n": 0,
+        "current_capture_n": 0,
+        "exact_contract_ready_n": 0,
+        "horizon_minutes": 60,
+        "market": "spreads",
+        "missing_n": 205,
+        "population_n": 205,
+        "population_status": "COMPLETED",
+        "qualified_n": 0,
+        "season": "2026-27",
+        "source": "polymarket_international"
+      },
+      {
+        "archive_replay_n": 0,
+        "current_capture_n": 0,
+        "exact_contract_ready_n": 0,
+        "horizon_minutes": 120,
+        "market": "spreads",
+        "missing_n": 205,
+        "population_n": 205,
+        "population_status": "COMPLETED",
+        "qualified_n": 0,
+        "season": "2026-27",
+        "source": "polymarket_international"
+      },
+      {
+        "archive_replay_n": 0,
+        "current_capture_n": 0,
+        "exact_contract_ready_n": 0,
+        "horizon_minutes": 60,
+        "market": "totals",
+        "missing_n": 205,
+        "population_n": 205,
+        "population_status": "COMPLETED",
+        "qualified_n": 0,
+        "season": "2026-27",
+        "source": "polymarket_international"
+      },
+      {
+        "archive_replay_n": 0,
+        "current_capture_n": 0,
+        "exact_contract_ready_n": 0,
+        "horizon_minutes": 120,
+        "market": "totals",
+        "missing_n": 205,
+        "population_n": 205,
+        "population_status": "COMPLETED",
+        "qualified_n": 0,
+        "season": "2026-27",
+        "source": "polymarket_international"
+      },
+      {
+        "archive_replay_n": 0,
+        "current_capture_n": 0,
+        "exact_contract_ready_n": 0,
+        "horizon_minutes": 60,
+        "market": "h2h",
+        "missing_n": 205,
+        "population_n": 205,
+        "population_status": "COMPLETED",
+        "qualified_n": 0,
+        "season": "2026-27",
+        "source": "polymarket_us"
+      },
+      {
+        "archive_replay_n": 0,
+        "current_capture_n": 0,
+        "exact_contract_ready_n": 0,
+        "horizon_minutes": 120,
+        "market": "h2h",
+        "missing_n": 205,
+        "population_n": 205,
+        "population_status": "COMPLETED",
+        "qualified_n": 0,
+        "season": "2026-27",
+        "source": "polymarket_us"
+      },
+      {
+        "archive_replay_n": 0,
+        "current_capture_n": 0,
+        "exact_contract_ready_n": 0,
+        "horizon_minutes": 60,
+        "market": "spreads",
+        "missing_n": 205,
+        "population_n": 205,
+        "population_status": "COMPLETED",
+        "qualified_n": 0,
+        "season": "2026-27",
+        "source": "polymarket_us"
+      },
+      {
+        "archive_replay_n": 0,
+        "current_capture_n": 0,
+        "exact_contract_ready_n": 0,
+        "horizon_minutes": 120,
+        "market": "spreads",
+        "missing_n": 205,
+        "population_n": 205,
+        "population_status": "COMPLETED",
+        "qualified_n": 0,
+        "season": "2026-27",
+        "source": "polymarket_us"
+      },
+      {
+        "archive_replay_n": 0,
+        "current_capture_n": 0,
+        "exact_contract_ready_n": 0,
+        "horizon_minutes": 60,
+        "market": "totals",
+        "missing_n": 205,
+        "population_n": 205,
+        "population_status": "COMPLETED",
+        "qualified_n": 0,
+        "season": "2026-27",
+        "source": "polymarket_us"
+      },
+      {
+        "archive_replay_n": 0,
+        "current_capture_n": 0,
+        "exact_contract_ready_n": 0,
+        "horizon_minutes": 120,
+        "market": "totals",
+        "missing_n": 205,
+        "population_n": 205,
+        "population_status": "COMPLETED",
+        "qualified_n": 0,
+        "season": "2026-27",
+        "source": "polymarket_us"
+      },
+      {
+        "archive_replay_n": 0,
+        "current_capture_n": 0,
+        "exact_contract_ready_n": 0,
+        "horizon_minutes": null,
+        "market": "h2h",
+        "missing_n": 995,
+        "population_n": 995,
+        "population_status": "UPCOMING",
+        "qualified_n": 0,
+        "season": "2026-27",
+        "source": "draftkings"
+      },
+      {
+        "archive_replay_n": 0,
+        "current_capture_n": 0,
+        "exact_contract_ready_n": 0,
+        "horizon_minutes": null,
+        "market": "spreads",
+        "missing_n": 995,
+        "population_n": 995,
+        "population_status": "UPCOMING",
+        "qualified_n": 0,
+        "season": "2026-27",
+        "source": "draftkings"
+      },
+      {
+        "archive_replay_n": 0,
+        "current_capture_n": 0,
+        "exact_contract_ready_n": 0,
+        "horizon_minutes": null,
+        "market": "totals",
+        "missing_n": 995,
+        "population_n": 995,
+        "population_status": "UPCOMING",
+        "qualified_n": 0,
+        "season": "2026-27",
+        "source": "draftkings"
+      },
+      {
+        "archive_replay_n": 0,
+        "current_capture_n": 0,
+        "exact_contract_ready_n": 0,
+        "horizon_minutes": null,
+        "market": "h2h",
+        "missing_n": 995,
+        "population_n": 995,
+        "population_status": "UPCOMING",
+        "qualified_n": 0,
+        "season": "2026-27",
+        "source": "kalshi"
+      },
+      {
+        "archive_replay_n": 0,
+        "current_capture_n": 0,
+        "exact_contract_ready_n": 0,
+        "horizon_minutes": null,
+        "market": "spreads",
+        "missing_n": 995,
+        "population_n": 995,
+        "population_status": "UPCOMING",
+        "qualified_n": 0,
+        "season": "2026-27",
+        "source": "kalshi"
+      },
+      {
+        "archive_replay_n": 0,
+        "current_capture_n": 0,
+        "exact_contract_ready_n": 0,
+        "horizon_minutes": null,
+        "market": "totals",
+        "missing_n": 995,
+        "population_n": 995,
+        "population_status": "UPCOMING",
+        "qualified_n": 0,
+        "season": "2026-27",
+        "source": "kalshi"
+      },
+      {
+        "archive_replay_n": 0,
+        "current_capture_n": 0,
+        "exact_contract_ready_n": 0,
+        "horizon_minutes": null,
+        "market": "h2h",
+        "missing_n": 995,
+        "population_n": 995,
+        "population_status": "UPCOMING",
+        "qualified_n": 0,
+        "season": "2026-27",
+        "source": "polymarket_international"
+      },
+      {
+        "archive_replay_n": 0,
+        "current_capture_n": 0,
+        "exact_contract_ready_n": 0,
+        "horizon_minutes": null,
+        "market": "spreads",
+        "missing_n": 995,
+        "population_n": 995,
+        "population_status": "UPCOMING",
+        "qualified_n": 0,
+        "season": "2026-27",
+        "source": "polymarket_international"
+      },
+      {
+        "archive_replay_n": 0,
+        "current_capture_n": 0,
+        "exact_contract_ready_n": 0,
+        "horizon_minutes": null,
+        "market": "totals",
+        "missing_n": 995,
+        "population_n": 995,
+        "population_status": "UPCOMING",
+        "qualified_n": 0,
+        "season": "2026-27",
+        "source": "polymarket_international"
+      },
+      {
+        "archive_replay_n": 0,
+        "current_capture_n": 0,
+        "exact_contract_ready_n": 0,
+        "horizon_minutes": null,
+        "market": "h2h",
+        "missing_n": 995,
+        "population_n": 995,
+        "population_status": "UPCOMING",
+        "qualified_n": 0,
+        "season": "2026-27",
+        "source": "polymarket_us"
+      },
+      {
+        "archive_replay_n": 0,
+        "current_capture_n": 0,
+        "exact_contract_ready_n": 0,
+        "horizon_minutes": null,
+        "market": "spreads",
+        "missing_n": 995,
+        "population_n": 995,
+        "population_status": "UPCOMING",
+        "qualified_n": 0,
+        "season": "2026-27",
+        "source": "polymarket_us"
+      },
+      {
+        "archive_replay_n": 0,
+        "current_capture_n": 0,
+        "exact_contract_ready_n": 0,
+        "horizon_minutes": null,
+        "market": "totals",
+        "missing_n": 995,
+        "population_n": 995,
+        "population_status": "UPCOMING",
+        "qualified_n": 0,
+        "season": "2026-27",
+        "source": "polymarket_us"
+      }
+    ],
+    "policy": "All qualified sources may be modeling inputs and dashboard benchmarks under V13.",
+    "provider_refresh_during_publication": false
+  },
+  "weight_sensitivity": [
+    {
+      "calibrated": true,
+      "earlier_validation_weight": 0.5,
+      "estimator_refits": 0,
+      "family": "CatBoost",
+      "feature_group": "DraftKings + basketball history",
+      "horizon_minutes": 60,
+      "later_validation_weight": 0.5,
+      "leader_annual_values": {
+        "2024-25": 0.6689497716894978,
+        "2025-26": 0.6783269961977187
+      },
+      "leader_score": 0.6736383839436082,
+      "objective": "winner_accuracy",
+      "policy": "50/50",
+      "predictions_changed": false,
+      "primary_leader_rank": 1,
+      "primary_leader_still_tied_for_first": true,
+      "public_model_alias": "NBA-R008",
+      "recovered_exact_state": false,
+      "saved_score_aggregation": "Weighted annual metric",
+      "tied_leaders": 1
+    },
+    {
+      "calibrated": true,
+      "earlier_validation_weight": 0.5,
+      "estimator_refits": 0,
+      "family": "CatBoost",
+      "feature_group": "DraftKings + basketball history",
+      "horizon_minutes": 60,
+      "later_validation_weight": 0.5,
+      "leader_annual_values": {
+        "2024-25": 0.6108935257678683,
+        "2025-26": 0.6070662621977021
+      },
+      "leader_score": 0.6089798939827852,
+      "objective": "winner_log_loss",
+      "policy": "50/50",
+      "predictions_changed": false,
+      "primary_leader_rank": 1,
+      "primary_leader_still_tied_for_first": true,
+      "public_model_alias": "NBA-R008",
+      "recovered_exact_state": false,
+      "saved_score_aggregation": "Weighted annual metric",
+      "tied_leaders": 1
+    },
+    {
+      "calibrated": true,
+      "earlier_validation_weight": 0.5,
+      "estimator_refits": 0,
+      "family": "CatBoost",
+      "feature_group": "DraftKings + basketball history",
+      "horizon_minutes": 60,
+      "later_validation_weight": 0.5,
+      "leader_annual_values": {
+        "2024-25": 0.21133482678407364,
+        "2025-26": 0.20939015009923853
+      },
+      "leader_score": 0.2103624884416561,
+      "objective": "winner_brier",
+      "policy": "50/50",
+      "predictions_changed": false,
+      "primary_leader_rank": 1,
+      "primary_leader_still_tied_for_first": true,
+      "public_model_alias": "NBA-R008",
+      "recovered_exact_state": false,
+      "saved_score_aggregation": "Weighted annual metric",
+      "tied_leaders": 1
+    },
+    {
+      "calibrated": true,
+      "earlier_validation_weight": 0.5,
+      "estimator_refits": 0,
+      "family": "scikit-learn linear",
+      "feature_group": "Basketball history",
+      "horizon_minutes": 60,
+      "later_validation_weight": 0.5,
+      "leader_annual_values": {
+        "2024-25": 11.127967266667914,
+        "2025-26": 11.562678729664086
+      },
+      "leader_score": 11.345322998166,
+      "objective": "margin_mae",
+      "policy": "50/50",
+      "predictions_changed": false,
+      "primary_leader_rank": 1,
+      "primary_leader_still_tied_for_first": true,
+      "public_model_alias": "NBA-R004",
+      "recovered_exact_state": false,
+      "saved_score_aggregation": "Weighted annual metric",
+      "tied_leaders": 2
+    },
+    {
+      "calibrated": true,
+      "earlier_validation_weight": 0.5,
+      "estimator_refits": 0,
+      "family": "scikit-learn linear",
+      "feature_group": "Basketball history",
+      "horizon_minutes": 60,
+      "later_validation_weight": 0.5,
+      "leader_annual_values": {
+        "2024-25": 14.245275585559945,
+        "2025-26": 14.72575189651851
+      },
+      "leader_score": 14.487505745061307,
+      "objective": "margin_rmse",
+      "policy": "50/50",
+      "predictions_changed": false,
+      "primary_leader_rank": 1,
+      "primary_leader_still_tied_for_first": true,
+      "public_model_alias": "NBA-R004",
+      "recovered_exact_state": false,
+      "saved_score_aggregation": "Root weighted annual MSE",
+      "tied_leaders": 2
+    },
+    {
+      "calibrated": true,
+      "earlier_validation_weight": 0.5,
+      "estimator_refits": 0,
+      "family": "scikit-learn linear",
+      "feature_group": "Basketball history",
+      "horizon_minutes": 60,
+      "later_validation_weight": 0.5,
+      "leader_annual_values": {
+        "2024-25": 15.075417111363954,
+        "2025-26": 15.429687737269683
+      },
+      "leader_score": 15.252552424316818,
+      "objective": "total_mae",
+      "policy": "50/50",
+      "predictions_changed": false,
+      "primary_leader_rank": 1,
+      "primary_leader_still_tied_for_first": true,
+      "public_model_alias": "NBA-R006",
+      "recovered_exact_state": true,
+      "saved_score_aggregation": "Weighted annual metric",
+      "tied_leaders": 2
+    },
+    {
+      "calibrated": true,
+      "earlier_validation_weight": 0.5,
+      "estimator_refits": 0,
+      "family": "scikit-learn linear",
+      "feature_group": "Basketball history",
+      "horizon_minutes": 60,
+      "later_validation_weight": 0.5,
+      "leader_annual_values": {
+        "2024-25": 18.922672281162285,
+        "2025-26": 19.45795095037079
+      },
+      "leader_score": 19.192177852543246,
+      "objective": "total_rmse",
+      "policy": "50/50",
+      "predictions_changed": false,
+      "primary_leader_rank": 1,
+      "primary_leader_still_tied_for_first": true,
+      "public_model_alias": "NBA-R006",
+      "recovered_exact_state": true,
+      "saved_score_aggregation": "Root weighted annual MSE",
+      "tied_leaders": 2
+    },
+    {
+      "calibrated": true,
+      "earlier_validation_weight": 0.5,
+      "estimator_refits": 0,
+      "family": "CatBoost",
+      "feature_group": "Sportsbooks + basketball history",
+      "horizon_minutes": 120,
+      "later_validation_weight": 0.5,
+      "leader_annual_values": {
+        "2024-25": 0.6704718417047184,
+        "2025-26": 0.6760456273764259
+      },
+      "leader_score": 0.6732587345405722,
+      "objective": "winner_accuracy",
+      "policy": "50/50",
+      "predictions_changed": false,
+      "primary_leader_rank": 1,
+      "primary_leader_still_tied_for_first": true,
+      "public_model_alias": "NBA-R013",
+      "recovered_exact_state": false,
+      "saved_score_aggregation": "Weighted annual metric",
+      "tied_leaders": 1
+    },
+    {
+      "calibrated": true,
+      "earlier_validation_weight": 0.5,
+      "estimator_refits": 0,
+      "family": "CatBoost",
+      "feature_group": "Markets + basketball history",
+      "horizon_minutes": 120,
+      "later_validation_weight": 0.5,
+      "leader_annual_values": {
+        "2024-25": 0.6121661098957633,
+        "2025-26": 0.6086457840350369
+      },
+      "leader_score": 0.6104059469654001,
+      "objective": "winner_log_loss",
+      "policy": "50/50",
+      "predictions_changed": false,
+      "primary_leader_rank": 1,
+      "primary_leader_still_tied_for_first": true,
+      "public_model_alias": "NBA-R007",
+      "recovered_exact_state": true,
+      "saved_score_aggregation": "Weighted annual metric",
+      "tied_leaders": 1
+    },
+    {
+      "calibrated": true,
+      "earlier_validation_weight": 0.5,
+      "estimator_refits": 0,
+      "family": "CatBoost",
+      "feature_group": "Markets + basketball history",
+      "horizon_minutes": 120,
+      "later_validation_weight": 0.5,
+      "leader_annual_values": {
+        "2024-25": 0.2117363234949395,
+        "2025-26": 0.21005900309234954
+      },
+      "leader_score": 0.2108976632936445,
+      "objective": "winner_brier",
+      "policy": "50/50",
+      "predictions_changed": false,
+      "primary_leader_rank": 1,
+      "primary_leader_still_tied_for_first": true,
+      "public_model_alias": "NBA-R007",
+      "recovered_exact_state": true,
+      "saved_score_aggregation": "Weighted annual metric",
+      "tied_leaders": 1
+    },
+    {
+      "calibrated": true,
+      "earlier_validation_weight": 0.5,
+      "estimator_refits": 0,
+      "family": "scikit-learn Extra Trees",
+      "feature_group": "DraftKings + basketball history",
+      "horizon_minutes": 120,
+      "later_validation_weight": 0.5,
+      "leader_annual_values": {
+        "2024-25": 11.071912975855916,
+        "2025-26": 11.604614757053142
+      },
+      "leader_score": 11.338263866454529,
+      "objective": "margin_mae",
+      "policy": "50/50",
+      "predictions_changed": false,
+      "primary_leader_rank": 1,
+      "primary_leader_still_tied_for_first": true,
+      "public_model_alias": "NBA-R012",
+      "recovered_exact_state": false,
+      "saved_score_aggregation": "Weighted annual metric",
+      "tied_leaders": 1
+    },
+    {
+      "calibrated": true,
+      "earlier_validation_weight": 0.5,
+      "estimator_refits": 0,
+      "family": "scikit-learn linear",
+      "feature_group": "Basketball history",
+      "horizon_minutes": 120,
+      "later_validation_weight": 0.5,
+      "leader_annual_values": {
+        "2024-25": 14.23470764362899,
+        "2025-26": 14.72493747589782
+      },
+      "leader_score": 14.481897067868728,
+      "objective": "margin_rmse",
+      "policy": "50/50",
+      "predictions_changed": false,
+      "primary_leader_rank": 1,
+      "primary_leader_still_tied_for_first": true,
+      "public_model_alias": "NBA-R010",
+      "recovered_exact_state": false,
+      "saved_score_aggregation": "Root weighted annual MSE",
+      "tied_leaders": 2
+    },
+    {
+      "calibrated": true,
+      "earlier_validation_weight": 0.5,
+      "estimator_refits": 0,
+      "family": "scikit-learn linear",
+      "feature_group": "Basketball history",
+      "horizon_minutes": 120,
+      "later_validation_weight": 0.5,
+      "leader_annual_values": {
+        "2024-25": 15.071638046871213,
+        "2025-26": 15.448279110961767
+      },
+      "leader_score": 15.259958578916489,
+      "objective": "total_mae",
+      "policy": "50/50",
+      "predictions_changed": false,
+      "primary_leader_rank": 1,
+      "primary_leader_still_tied_for_first": true,
+      "public_model_alias": "NBA-R001",
+      "recovered_exact_state": true,
+      "saved_score_aggregation": "Weighted annual metric",
+      "tied_leaders": 2
+    },
+    {
+      "calibrated": true,
+      "earlier_validation_weight": 0.5,
+      "estimator_refits": 0,
+      "family": "scikit-learn Extra Trees",
+      "feature_group": "Sportsbooks + basketball history",
+      "horizon_minutes": 120,
+      "later_validation_weight": 0.5,
+      "leader_annual_values": {
+        "2024-25": 18.87949287900892,
+        "2025-26": 19.445998435365745
+      },
+      "leader_score": 19.164838983367375,
+      "objective": "total_rmse",
+      "policy": "50/50",
+      "predictions_changed": false,
+      "primary_leader_rank": 1,
+      "primary_leader_still_tied_for_first": true,
+      "public_model_alias": "NBA-R009",
+      "recovered_exact_state": false,
+      "saved_score_aggregation": "Root weighted annual MSE",
+      "tied_leaders": 1
+    },
+    {
+      "calibrated": true,
+      "earlier_validation_weight": 0.4,
+      "estimator_refits": 0,
+      "family": "CatBoost",
+      "feature_group": "DraftKings + basketball history",
+      "horizon_minutes": 60,
+      "later_validation_weight": 0.6,
+      "leader_annual_values": {
+        "2024-25": 0.6689497716894978,
+        "2025-26": 0.6783269961977187
+      },
+      "leader_score": 0.6745761063944303,
+      "objective": "winner_accuracy",
+      "policy": "40/60",
+      "predictions_changed": false,
+      "primary_leader_rank": 1,
+      "primary_leader_still_tied_for_first": true,
+      "public_model_alias": "NBA-R008",
+      "recovered_exact_state": false,
+      "saved_score_aggregation": "Weighted annual metric",
+      "tied_leaders": 1
+    },
+    {
+      "calibrated": true,
+      "earlier_validation_weight": 0.4,
+      "estimator_refits": 0,
+      "family": "CatBoost",
+      "feature_group": "DraftKings + basketball history",
+      "horizon_minutes": 60,
+      "later_validation_weight": 0.6,
+      "leader_annual_values": {
+        "2024-25": 0.6108935257678683,
+        "2025-26": 0.6070662621977021
+      },
+      "leader_score": 0.6085971676257685,
+      "objective": "winner_log_loss",
+      "policy": "40/60",
+      "predictions_changed": false,
+      "primary_leader_rank": 1,
+      "primary_leader_still_tied_for_first": true,
+      "public_model_alias": "NBA-R008",
+      "recovered_exact_state": false,
+      "saved_score_aggregation": "Weighted annual metric",
+      "tied_leaders": 1
+    },
+    {
+      "calibrated": true,
+      "earlier_validation_weight": 0.4,
+      "estimator_refits": 0,
+      "family": "CatBoost",
+      "feature_group": "DraftKings + basketball history",
+      "horizon_minutes": 60,
+      "later_validation_weight": 0.6,
+      "leader_annual_values": {
+        "2024-25": 0.21133482678407364,
+        "2025-26": 0.20939015009923853
+      },
+      "leader_score": 0.2101680207731726,
+      "objective": "winner_brier",
+      "policy": "40/60",
+      "predictions_changed": false,
+      "primary_leader_rank": 1,
+      "primary_leader_still_tied_for_first": true,
+      "public_model_alias": "NBA-R008",
+      "recovered_exact_state": false,
+      "saved_score_aggregation": "Weighted annual metric",
+      "tied_leaders": 1
+    },
+    {
+      "calibrated": true,
+      "earlier_validation_weight": 0.4,
+      "estimator_refits": 0,
+      "family": "scikit-learn linear",
+      "feature_group": "Basketball history",
+      "horizon_minutes": 60,
+      "later_validation_weight": 0.6,
+      "leader_annual_values": {
+        "2024-25": 11.127967266667914,
+        "2025-26": 11.562678729664086
+      },
+      "leader_score": 11.388794144465617,
+      "objective": "margin_mae",
+      "policy": "40/60",
+      "predictions_changed": false,
+      "primary_leader_rank": 1,
+      "primary_leader_still_tied_for_first": true,
+      "public_model_alias": "NBA-R004",
+      "recovered_exact_state": false,
+      "saved_score_aggregation": "Weighted annual metric",
+      "tied_leaders": 2
+    },
+    {
+      "calibrated": true,
+      "earlier_validation_weight": 0.4,
+      "estimator_refits": 0,
+      "family": "scikit-learn linear",
+      "feature_group": "Basketball history",
+      "horizon_minutes": 60,
+      "later_validation_weight": 0.6,
+      "leader_annual_values": {
+        "2024-25": 14.245275585559945,
+        "2025-26": 14.72575189651851
+      },
+      "leader_score": 14.535467379967912,
+      "objective": "margin_rmse",
+      "policy": "40/60",
+      "predictions_changed": false,
+      "primary_leader_rank": 1,
+      "primary_leader_still_tied_for_first": true,
+      "public_model_alias": "NBA-R004",
+      "recovered_exact_state": false,
+      "saved_score_aggregation": "Root weighted annual MSE",
+      "tied_leaders": 2
+    },
+    {
+      "calibrated": true,
+      "earlier_validation_weight": 0.4,
+      "estimator_refits": 0,
+      "family": "scikit-learn linear",
+      "feature_group": "Basketball history",
+      "horizon_minutes": 60,
+      "later_validation_weight": 0.6,
+      "leader_annual_values": {
+        "2024-25": 15.075417111363954,
+        "2025-26": 15.429687737269683
+      },
+      "leader_score": 15.287979486907393,
+      "objective": "total_mae",
+      "policy": "40/60",
+      "predictions_changed": false,
+      "primary_leader_rank": 1,
+      "primary_leader_still_tied_for_first": true,
+      "public_model_alias": "NBA-R006",
+      "recovered_exact_state": true,
+      "saved_score_aggregation": "Weighted annual metric",
+      "tied_leaders": 2
+    },
+    {
+      "calibrated": true,
+      "earlier_validation_weight": 0.4,
+      "estimator_refits": 0,
+      "family": "scikit-learn linear",
+      "feature_group": "Basketball history",
+      "horizon_minutes": 60,
+      "later_validation_weight": 0.6,
+      "leader_annual_values": {
+        "2024-25": 18.922672281162285,
+        "2025-26": 19.45795095037079
+      },
+      "leader_score": 19.245626090525825,
+      "objective": "total_rmse",
+      "policy": "40/60",
+      "predictions_changed": false,
+      "primary_leader_rank": 1,
+      "primary_leader_still_tied_for_first": true,
+      "public_model_alias": "NBA-R006",
+      "recovered_exact_state": true,
+      "saved_score_aggregation": "Root weighted annual MSE",
+      "tied_leaders": 2
+    },
+    {
+      "calibrated": true,
+      "earlier_validation_weight": 0.4,
+      "estimator_refits": 0,
+      "family": "CatBoost",
+      "feature_group": "Sportsbooks + basketball history",
+      "horizon_minutes": 120,
+      "later_validation_weight": 0.6,
+      "leader_annual_values": {
+        "2024-25": 0.6704718417047184,
+        "2025-26": 0.6760456273764259
+      },
+      "leader_score": 0.6738161131077429,
+      "objective": "winner_accuracy",
+      "policy": "40/60",
+      "predictions_changed": false,
+      "primary_leader_rank": 1,
+      "primary_leader_still_tied_for_first": true,
+      "public_model_alias": "NBA-R013",
+      "recovered_exact_state": false,
+      "saved_score_aggregation": "Weighted annual metric",
+      "tied_leaders": 1
+    },
+    {
+      "calibrated": true,
+      "earlier_validation_weight": 0.4,
+      "estimator_refits": 0,
+      "family": "CatBoost",
+      "feature_group": "Basketball history",
+      "horizon_minutes": 120,
+      "later_validation_weight": 0.6,
+      "leader_annual_values": {
+        "2024-25": 0.6145224345764689,
+        "2025-26": 0.6066612056621392
+      },
+      "leader_score": 0.6098056972278711,
+      "objective": "winner_log_loss",
+      "policy": "40/60",
+      "predictions_changed": false,
+      "primary_leader_rank": 3,
+      "primary_leader_still_tied_for_first": false,
+      "public_model_alias": "NBA-R011",
+      "recovered_exact_state": true,
+      "saved_score_aggregation": "Weighted annual metric",
+      "tied_leaders": 2
+    },
+    {
+      "calibrated": true,
+      "earlier_validation_weight": 0.4,
+      "estimator_refits": 0,
+      "family": "CatBoost",
+      "feature_group": "Basketball history",
+      "horizon_minutes": 120,
+      "later_validation_weight": 0.6,
+      "leader_annual_values": {
+        "2024-25": 0.21296973601287936,
+        "2025-26": 0.20916272216273984
+      },
+      "leader_score": 0.21068552770279564,
+      "objective": "winner_brier",
+      "policy": "40/60",
+      "predictions_changed": false,
+      "primary_leader_rank": 3,
+      "primary_leader_still_tied_for_first": false,
+      "public_model_alias": "NBA-R011",
+      "recovered_exact_state": true,
+      "saved_score_aggregation": "Weighted annual metric",
+      "tied_leaders": 2
+    },
+    {
+      "calibrated": true,
+      "earlier_validation_weight": 0.4,
+      "estimator_refits": 0,
+      "family": "scikit-learn linear",
+      "feature_group": "Basketball history",
+      "horizon_minutes": 120,
+      "later_validation_weight": 0.6,
+      "leader_annual_values": {
+        "2024-25": 11.118038969702761,
+        "2025-26": 11.565053764600105
+      },
+      "leader_score": 11.386247846641167,
+      "objective": "margin_mae",
+      "policy": "40/60",
+      "predictions_changed": false,
+      "primary_leader_rank": 3,
+      "primary_leader_still_tied_for_first": false,
+      "public_model_alias": "NBA-R010",
+      "recovered_exact_state": false,
+      "saved_score_aggregation": "Weighted annual metric",
+      "tied_leaders": 2
+    },
+    {
+      "calibrated": true,
+      "earlier_validation_weight": 0.4,
+      "estimator_refits": 0,
+      "family": "scikit-learn linear",
+      "feature_group": "Basketball history",
+      "horizon_minutes": 120,
+      "later_validation_weight": 0.6,
+      "leader_annual_values": {
+        "2024-25": 14.23470764362899,
+        "2025-26": 14.72493747589782
+      },
+      "leader_score": 14.530830357598147,
+      "objective": "margin_rmse",
+      "policy": "40/60",
+      "predictions_changed": false,
+      "primary_leader_rank": 1,
+      "primary_leader_still_tied_for_first": true,
+      "public_model_alias": "NBA-R010",
+      "recovered_exact_state": false,
+      "saved_score_aggregation": "Root weighted annual MSE",
+      "tied_leaders": 2
+    },
+    {
+      "calibrated": true,
+      "earlier_validation_weight": 0.4,
+      "estimator_refits": 0,
+      "family": "scikit-learn linear",
+      "feature_group": "Basketball history",
+      "horizon_minutes": 120,
+      "later_validation_weight": 0.6,
+      "leader_annual_values": {
+        "2024-25": 15.071638046871213,
+        "2025-26": 15.448279110961767
+      },
+      "leader_score": 15.297622685325546,
+      "objective": "total_mae",
+      "policy": "40/60",
+      "predictions_changed": false,
+      "primary_leader_rank": 1,
+      "primary_leader_still_tied_for_first": true,
+      "public_model_alias": "NBA-R001",
+      "recovered_exact_state": true,
+      "saved_score_aggregation": "Weighted annual metric",
+      "tied_leaders": 2
+    },
+    {
+      "calibrated": true,
+      "earlier_validation_weight": 0.4,
+      "estimator_refits": 0,
+      "family": "scikit-learn Extra Trees",
+      "feature_group": "Sportsbooks + basketball history",
+      "horizon_minutes": 120,
+      "later_validation_weight": 0.6,
+      "leader_annual_values": {
+        "2024-25": 18.87949287900892,
+        "2025-26": 19.445998435365745
+      },
+      "leader_score": 19.221399887530765,
+      "objective": "total_rmse",
+      "policy": "40/60",
+      "predictions_changed": false,
+      "primary_leader_rank": 1,
+      "primary_leader_still_tied_for_first": true,
+      "public_model_alias": "NBA-R009",
+      "recovered_exact_state": false,
+      "saved_score_aggregation": "Root weighted annual MSE",
+      "tied_leaders": 1
+    },
+    {
+      "calibrated": true,
+      "earlier_validation_weight": 0.3,
+      "estimator_refits": 0,
+      "family": "CatBoost",
+      "feature_group": "DraftKings + basketball history",
+      "horizon_minutes": 60,
+      "later_validation_weight": 0.7,
+      "leader_annual_values": {
+        "2024-25": 0.6689497716894978,
+        "2025-26": 0.6783269961977187
+      },
+      "leader_score": 0.6755138288452525,
+      "objective": "winner_accuracy",
+      "policy": "30/70",
+      "predictions_changed": false,
+      "primary_leader_rank": 1,
+      "primary_leader_still_tied_for_first": true,
+      "public_model_alias": "NBA-R008",
+      "recovered_exact_state": false,
+      "saved_score_aggregation": "Weighted annual metric",
+      "tied_leaders": 1
+    },
+    {
+      "calibrated": true,
+      "earlier_validation_weight": 0.3,
+      "estimator_refits": 0,
+      "family": "CatBoost",
+      "feature_group": "DraftKings + basketball history",
+      "horizon_minutes": 60,
+      "later_validation_weight": 0.7,
+      "leader_annual_values": {
+        "2024-25": 0.6108935257678683,
+        "2025-26": 0.6070662621977021
+      },
+      "leader_score": 0.6082144412687519,
+      "objective": "winner_log_loss",
+      "policy": "30/70",
+      "predictions_changed": false,
+      "primary_leader_rank": 1,
+      "primary_leader_still_tied_for_first": true,
+      "public_model_alias": "NBA-R008",
+      "recovered_exact_state": false,
+      "saved_score_aggregation": "Weighted annual metric",
+      "tied_leaders": 1
+    },
+    {
+      "calibrated": true,
+      "earlier_validation_weight": 0.3,
+      "estimator_refits": 0,
+      "family": "CatBoost",
+      "feature_group": "DraftKings + basketball history",
+      "horizon_minutes": 60,
+      "later_validation_weight": 0.7,
+      "leader_annual_values": {
+        "2024-25": 0.21133482678407364,
+        "2025-26": 0.20939015009923853
+      },
+      "leader_score": 0.20997355310468907,
+      "objective": "winner_brier",
+      "policy": "30/70",
+      "predictions_changed": false,
+      "primary_leader_rank": 1,
+      "primary_leader_still_tied_for_first": true,
+      "public_model_alias": "NBA-R008",
+      "recovered_exact_state": false,
+      "saved_score_aggregation": "Weighted annual metric",
+      "tied_leaders": 1
+    },
+    {
+      "calibrated": true,
+      "earlier_validation_weight": 0.3,
+      "estimator_refits": 0,
+      "family": "scikit-learn linear",
+      "feature_group": "Basketball history",
+      "horizon_minutes": 60,
+      "later_validation_weight": 0.7,
+      "leader_annual_values": {
+        "2024-25": 11.127967266667914,
+        "2025-26": 11.562678729664086
+      },
+      "leader_score": 11.432265290765233,
+      "objective": "margin_mae",
+      "policy": "30/70",
+      "predictions_changed": false,
+      "primary_leader_rank": 1,
+      "primary_leader_still_tied_for_first": true,
+      "public_model_alias": "NBA-R004",
+      "recovered_exact_state": false,
+      "saved_score_aggregation": "Weighted annual metric",
+      "tied_leaders": 2
+    },
+    {
+      "calibrated": true,
+      "earlier_validation_weight": 0.3,
+      "estimator_refits": 0,
+      "family": "scikit-learn linear",
+      "feature_group": "Basketball history",
+      "horizon_minutes": 60,
+      "later_validation_weight": 0.7,
+      "leader_annual_values": {
+        "2024-25": 14.245275585559945,
+        "2025-26": 14.72575189651851
+      },
+      "leader_score": 14.583271278935944,
+      "objective": "margin_rmse",
+      "policy": "30/70",
+      "predictions_changed": false,
+      "primary_leader_rank": 1,
+      "primary_leader_still_tied_for_first": true,
+      "public_model_alias": "NBA-R004",
+      "recovered_exact_state": false,
+      "saved_score_aggregation": "Root weighted annual MSE",
+      "tied_leaders": 2
+    },
+    {
+      "calibrated": true,
+      "earlier_validation_weight": 0.3,
+      "estimator_refits": 0,
+      "family": "scikit-learn linear",
+      "feature_group": "Basketball history",
+      "horizon_minutes": 60,
+      "later_validation_weight": 0.7,
+      "leader_annual_values": {
+        "2024-25": 15.075417111363954,
+        "2025-26": 15.429687737269683
+      },
+      "leader_score": 15.323406549497964,
+      "objective": "total_mae",
+      "policy": "30/70",
+      "predictions_changed": false,
+      "primary_leader_rank": 1,
+      "primary_leader_still_tied_for_first": true,
+      "public_model_alias": "NBA-R006",
+      "recovered_exact_state": true,
+      "saved_score_aggregation": "Weighted annual metric",
+      "tied_leaders": 2
+    },
+    {
+      "calibrated": true,
+      "earlier_validation_weight": 0.3,
+      "estimator_refits": 0,
+      "family": "scikit-learn linear",
+      "feature_group": "Basketball history",
+      "horizon_minutes": 60,
+      "later_validation_weight": 0.7,
+      "leader_annual_values": {
+        "2024-25": 18.922672281162285,
+        "2025-26": 19.45795095037079
+      },
+      "leader_score": 19.298926304564333,
+      "objective": "total_rmse",
+      "policy": "30/70",
+      "predictions_changed": false,
+      "primary_leader_rank": 1,
+      "primary_leader_still_tied_for_first": true,
+      "public_model_alias": "NBA-R006",
+      "recovered_exact_state": true,
+      "saved_score_aggregation": "Root weighted annual MSE",
+      "tied_leaders": 2
+    },
+    {
+      "calibrated": true,
+      "earlier_validation_weight": 0.3,
+      "estimator_refits": 0,
+      "family": "CatBoost",
+      "feature_group": "Sportsbooks + basketball history",
+      "horizon_minutes": 120,
+      "later_validation_weight": 0.7,
+      "leader_annual_values": {
+        "2024-25": 0.6704718417047184,
+        "2025-26": 0.6760456273764259
+      },
+      "leader_score": 0.6743734916749136,
+      "objective": "winner_accuracy",
+      "policy": "30/70",
+      "predictions_changed": false,
+      "primary_leader_rank": 1,
+      "primary_leader_still_tied_for_first": true,
+      "public_model_alias": "NBA-R013",
+      "recovered_exact_state": false,
+      "saved_score_aggregation": "Weighted annual metric",
+      "tied_leaders": 1
+    },
+    {
+      "calibrated": true,
+      "earlier_validation_weight": 0.3,
+      "estimator_refits": 0,
+      "family": "CatBoost",
+      "feature_group": "Basketball history",
+      "horizon_minutes": 120,
+      "later_validation_weight": 0.7,
+      "leader_annual_values": {
+        "2024-25": 0.6145224345764689,
+        "2025-26": 0.6066612056621392
+      },
+      "leader_score": 0.609019574336438,
+      "objective": "winner_log_loss",
+      "policy": "30/70",
+      "predictions_changed": false,
+      "primary_leader_rank": 3,
+      "primary_leader_still_tied_for_first": false,
+      "public_model_alias": "NBA-R011",
+      "recovered_exact_state": true,
+      "saved_score_aggregation": "Weighted annual metric",
+      "tied_leaders": 2
+    },
+    {
+      "calibrated": true,
+      "earlier_validation_weight": 0.3,
+      "estimator_refits": 0,
+      "family": "CatBoost",
+      "feature_group": "Basketball history",
+      "horizon_minutes": 120,
+      "later_validation_weight": 0.7,
+      "leader_annual_values": {
+        "2024-25": 0.21296973601287936,
+        "2025-26": 0.20916272216273984
+      },
+      "leader_score": 0.2103048263177817,
+      "objective": "winner_brier",
+      "policy": "30/70",
+      "predictions_changed": false,
+      "primary_leader_rank": 3,
+      "primary_leader_still_tied_for_first": false,
+      "public_model_alias": "NBA-R011",
+      "recovered_exact_state": true,
+      "saved_score_aggregation": "Weighted annual metric",
+      "tied_leaders": 2
+    },
+    {
+      "calibrated": true,
+      "earlier_validation_weight": 0.3,
+      "estimator_refits": 0,
+      "family": "scikit-learn linear",
+      "feature_group": "Basketball history",
+      "horizon_minutes": 120,
+      "later_validation_weight": 0.7,
+      "leader_annual_values": {
+        "2024-25": 11.118038969702761,
+        "2025-26": 11.565053764600105
+      },
+      "leader_score": 11.4309493261309,
+      "objective": "margin_mae",
+      "policy": "30/70",
+      "predictions_changed": false,
+      "primary_leader_rank": 3,
+      "primary_leader_still_tied_for_first": false,
+      "public_model_alias": "NBA-R010",
+      "recovered_exact_state": false,
+      "saved_score_aggregation": "Weighted annual metric",
+      "tied_leaders": 2
+    },
+    {
+      "calibrated": true,
+      "earlier_validation_weight": 0.3,
+      "estimator_refits": 0,
+      "family": "scikit-learn linear",
+      "feature_group": "Basketball history",
+      "horizon_minutes": 120,
+      "later_validation_weight": 0.7,
+      "leader_annual_values": {
+        "2024-25": 14.23470764362899,
+        "2025-26": 14.72493747589782
+      },
+      "leader_score": 14.579599414189916,
+      "objective": "margin_rmse",
+      "policy": "30/70",
+      "predictions_changed": false,
+      "primary_leader_rank": 1,
+      "primary_leader_still_tied_for_first": true,
+      "public_model_alias": "NBA-R010",
+      "recovered_exact_state": false,
+      "saved_score_aggregation": "Root weighted annual MSE",
+      "tied_leaders": 2
+    },
+    {
+      "calibrated": true,
+      "earlier_validation_weight": 0.3,
+      "estimator_refits": 0,
+      "family": "scikit-learn linear",
+      "feature_group": "Basketball history",
+      "horizon_minutes": 120,
+      "later_validation_weight": 0.7,
+      "leader_annual_values": {
+        "2024-25": 15.071638046871213,
+        "2025-26": 15.448279110961767
+      },
+      "leader_score": 15.3352867917346,
+      "objective": "total_mae",
+      "policy": "30/70",
+      "predictions_changed": false,
+      "primary_leader_rank": 1,
+      "primary_leader_still_tied_for_first": true,
+      "public_model_alias": "NBA-R001",
+      "recovered_exact_state": true,
+      "saved_score_aggregation": "Weighted annual metric",
+      "tied_leaders": 2
+    },
+    {
+      "calibrated": true,
+      "earlier_validation_weight": 0.3,
+      "estimator_refits": 0,
+      "family": "scikit-learn Extra Trees",
+      "feature_group": "Sportsbooks + basketball history",
+      "horizon_minutes": 120,
+      "later_validation_weight": 0.7,
+      "leader_annual_values": {
+        "2024-25": 18.87949287900892,
+        "2025-26": 19.445998435365745
+      },
+      "leader_score": 19.277794843143692,
+      "objective": "total_rmse",
+      "policy": "30/70",
+      "predictions_changed": false,
+      "primary_leader_rank": 1,
+      "primary_leader_still_tied_for_first": true,
+      "public_model_alias": "NBA-R009",
+      "recovered_exact_state": false,
+      "saved_score_aggregation": "Root weighted annual MSE",
+      "tied_leaders": 1
+    },
+    {
+      "calibrated": true,
+      "earlier_validation_weight": 0.2,
+      "estimator_refits": 0,
+      "family": "CatBoost",
+      "feature_group": "DraftKings + basketball history",
+      "horizon_minutes": 60,
+      "later_validation_weight": 0.8,
+      "leader_annual_values": {
+        "2024-25": 0.6689497716894978,
+        "2025-26": 0.6783269961977187
+      },
+      "leader_score": 0.6764515512960746,
+      "objective": "winner_accuracy",
+      "policy": "20/80",
+      "predictions_changed": false,
+      "primary_leader_rank": 1,
+      "primary_leader_still_tied_for_first": true,
+      "public_model_alias": "NBA-R008",
+      "recovered_exact_state": false,
+      "saved_score_aggregation": "Weighted annual metric",
+      "tied_leaders": 1
+    },
+    {
+      "calibrated": true,
+      "earlier_validation_weight": 0.2,
+      "estimator_refits": 0,
+      "family": "CatBoost",
+      "feature_group": "DraftKings + basketball history",
+      "horizon_minutes": 60,
+      "later_validation_weight": 0.8,
+      "leader_annual_values": {
+        "2024-25": 0.6108935257678683,
+        "2025-26": 0.6070662621977021
+      },
+      "leader_score": 0.6078317149117354,
+      "objective": "winner_log_loss",
+      "policy": "20/80",
+      "predictions_changed": false,
+      "primary_leader_rank": 1,
+      "primary_leader_still_tied_for_first": true,
+      "public_model_alias": "NBA-R008",
+      "recovered_exact_state": false,
+      "saved_score_aggregation": "Weighted annual metric",
+      "tied_leaders": 1
+    },
+    {
+      "calibrated": true,
+      "earlier_validation_weight": 0.2,
+      "estimator_refits": 0,
+      "family": "CatBoost",
+      "feature_group": "DraftKings + basketball history",
+      "horizon_minutes": 60,
+      "later_validation_weight": 0.8,
+      "leader_annual_values": {
+        "2024-25": 0.21133482678407364,
+        "2025-26": 0.20939015009923853
+      },
+      "leader_score": 0.20977908543620558,
+      "objective": "winner_brier",
+      "policy": "20/80",
+      "predictions_changed": false,
+      "primary_leader_rank": 1,
+      "primary_leader_still_tied_for_first": true,
+      "public_model_alias": "NBA-R008",
+      "recovered_exact_state": false,
+      "saved_score_aggregation": "Weighted annual metric",
+      "tied_leaders": 1
+    },
+    {
+      "calibrated": true,
+      "earlier_validation_weight": 0.2,
+      "estimator_refits": 0,
+      "family": "scikit-learn linear",
+      "feature_group": "Basketball history",
+      "horizon_minutes": 60,
+      "later_validation_weight": 0.8,
+      "leader_annual_values": {
+        "2024-25": 11.127967266667914,
+        "2025-26": 11.562678729664086
+      },
+      "leader_score": 11.475736437064853,
+      "objective": "margin_mae",
+      "policy": "20/80",
+      "predictions_changed": false,
+      "primary_leader_rank": 1,
+      "primary_leader_still_tied_for_first": true,
+      "public_model_alias": "NBA-R004",
+      "recovered_exact_state": false,
+      "saved_score_aggregation": "Weighted annual metric",
+      "tied_leaders": 2
+    },
+    {
+      "calibrated": true,
+      "earlier_validation_weight": 0.2,
+      "estimator_refits": 0,
+      "family": "scikit-learn linear",
+      "feature_group": "Basketball history",
+      "horizon_minutes": 60,
+      "later_validation_weight": 0.8,
+      "leader_annual_values": {
+        "2024-25": 14.245275585559945,
+        "2025-26": 14.72575189651851
+      },
+      "leader_score": 14.630918988087004,
+      "objective": "margin_rmse",
+      "policy": "20/80",
+      "predictions_changed": false,
+      "primary_leader_rank": 1,
+      "primary_leader_still_tied_for_first": true,
+      "public_model_alias": "NBA-R004",
+      "recovered_exact_state": false,
+      "saved_score_aggregation": "Root weighted annual MSE",
+      "tied_leaders": 2
+    },
+    {
+      "calibrated": true,
+      "earlier_validation_weight": 0.2,
+      "estimator_refits": 0,
+      "family": "scikit-learn linear",
+      "feature_group": "Basketball history",
+      "horizon_minutes": 60,
+      "later_validation_weight": 0.8,
+      "leader_annual_values": {
+        "2024-25": 15.075417111363954,
+        "2025-26": 15.429687737269683
+      },
+      "leader_score": 15.358833612088539,
+      "objective": "total_mae",
+      "policy": "20/80",
+      "predictions_changed": false,
+      "primary_leader_rank": 1,
+      "primary_leader_still_tied_for_first": true,
+      "public_model_alias": "NBA-R006",
+      "recovered_exact_state": true,
+      "saved_score_aggregation": "Weighted annual metric",
+      "tied_leaders": 2
+    },
+    {
+      "calibrated": true,
+      "earlier_validation_weight": 0.2,
+      "estimator_refits": 0,
+      "family": "scikit-learn Extra Trees",
+      "feature_group": "DraftKings + basketball history",
+      "horizon_minutes": 60,
+      "later_validation_weight": 0.8,
+      "leader_annual_values": {
+        "2024-25": 19.00110668370389,
+        "2025-26": 19.42754101139364
+      },
+      "leader_score": 19.3430062513717,
+      "objective": "total_rmse",
+      "policy": "20/80",
+      "predictions_changed": false,
+      "primary_leader_rank": 2,
+      "primary_leader_still_tied_for_first": false,
+      "public_model_alias": "NBA-R005",
+      "recovered_exact_state": false,
+      "saved_score_aggregation": "Root weighted annual MSE",
+      "tied_leaders": 1
+    },
+    {
+      "calibrated": false,
+      "earlier_validation_weight": 0.2,
+      "estimator_refits": 0,
+      "family": "CatBoost",
+      "feature_group": "Markets + basketball history",
+      "horizon_minutes": 120,
+      "later_validation_weight": 0.8,
+      "leader_annual_values": {
+        "2024-25": 0.6605783866057838,
+        "2025-26": 0.6798479087452471
+      },
+      "leader_score": 0.6759940043173546,
+      "objective": "winner_accuracy",
+      "policy": "20/80",
+      "predictions_changed": false,
+      "primary_leader_rank": 11,
+      "primary_leader_still_tied_for_first": false,
+      "public_model_alias": "NBA-R003",
+      "recovered_exact_state": true,
+      "saved_score_aggregation": "Weighted annual metric",
+      "tied_leaders": 3
+    },
+    {
+      "calibrated": true,
+      "earlier_validation_weight": 0.2,
+      "estimator_refits": 0,
+      "family": "CatBoost",
+      "feature_group": "Basketball history",
+      "horizon_minutes": 120,
+      "later_validation_weight": 0.8,
+      "leader_annual_values": {
+        "2024-25": 0.6145224345764689,
+        "2025-26": 0.6066612056621392
+      },
+      "leader_score": 0.6082334514450052,
+      "objective": "winner_log_loss",
+      "policy": "20/80",
+      "predictions_changed": false,
+      "primary_leader_rank": 3,
+      "primary_leader_still_tied_for_first": false,
+      "public_model_alias": "NBA-R011",
+      "recovered_exact_state": true,
+      "saved_score_aggregation": "Weighted annual metric",
+      "tied_leaders": 2
+    },
+    {
+      "calibrated": true,
+      "earlier_validation_weight": 0.2,
+      "estimator_refits": 0,
+      "family": "CatBoost",
+      "feature_group": "Basketball history",
+      "horizon_minutes": 120,
+      "later_validation_weight": 0.8,
+      "leader_annual_values": {
+        "2024-25": 0.21296973601287936,
+        "2025-26": 0.20916272216273984
+      },
+      "leader_score": 0.20992412493276774,
+      "objective": "winner_brier",
+      "policy": "20/80",
+      "predictions_changed": false,
+      "primary_leader_rank": 3,
+      "primary_leader_still_tied_for_first": false,
+      "public_model_alias": "NBA-R011",
+      "recovered_exact_state": true,
+      "saved_score_aggregation": "Weighted annual metric",
+      "tied_leaders": 2
+    },
+    {
+      "calibrated": true,
+      "earlier_validation_weight": 0.2,
+      "estimator_refits": 0,
+      "family": "scikit-learn linear",
+      "feature_group": "Basketball history",
+      "horizon_minutes": 120,
+      "later_validation_weight": 0.8,
+      "leader_annual_values": {
+        "2024-25": 11.118038969702761,
+        "2025-26": 11.565053764600105
+      },
+      "leader_score": 11.475650805620637,
+      "objective": "margin_mae",
+      "policy": "20/80",
+      "predictions_changed": false,
+      "primary_leader_rank": 3,
+      "primary_leader_still_tied_for_first": false,
+      "public_model_alias": "NBA-R010",
+      "recovered_exact_state": false,
+      "saved_score_aggregation": "Weighted annual metric",
+      "tied_leaders": 2
+    },
+    {
+      "calibrated": true,
+      "earlier_validation_weight": 0.2,
+      "estimator_refits": 0,
+      "family": "scikit-learn linear",
+      "feature_group": "Basketball history",
+      "horizon_minutes": 120,
+      "later_validation_weight": 0.8,
+      "leader_annual_values": {
+        "2024-25": 14.23470764362899,
+        "2025-26": 14.72493747589782
+      },
+      "leader_score": 14.628205880257427,
+      "objective": "margin_rmse",
+      "policy": "20/80",
+      "predictions_changed": false,
+      "primary_leader_rank": 1,
+      "primary_leader_still_tied_for_first": true,
+      "public_model_alias": "NBA-R010",
+      "recovered_exact_state": false,
+      "saved_score_aggregation": "Root weighted annual MSE",
+      "tied_leaders": 2
+    },
+    {
+      "calibrated": true,
+      "earlier_validation_weight": 0.2,
+      "estimator_refits": 0,
+      "family": "scikit-learn linear",
+      "feature_group": "Basketball history",
+      "horizon_minutes": 120,
+      "later_validation_weight": 0.8,
+      "leader_annual_values": {
+        "2024-25": 15.071638046871213,
+        "2025-26": 15.448279110961767
+      },
+      "leader_score": 15.372950898143658,
+      "objective": "total_mae",
+      "policy": "20/80",
+      "predictions_changed": false,
+      "primary_leader_rank": 1,
+      "primary_leader_still_tied_for_first": true,
+      "public_model_alias": "NBA-R001",
+      "recovered_exact_state": true,
+      "saved_score_aggregation": "Weighted annual metric",
+      "tied_leaders": 2
+    },
+    {
+      "calibrated": true,
+      "earlier_validation_weight": 0.2,
+      "estimator_refits": 0,
+      "family": "scikit-learn Extra Trees",
+      "feature_group": "Markets excluding Polymarket + basketball history",
+      "horizon_minutes": 120,
+      "later_validation_weight": 0.8,
+      "leader_annual_values": {
+        "2024-25": 18.8797945302771,
+        "2025-26": 19.445913380699025
+      },
+      "leader_score": 19.33401577709131,
+      "objective": "total_rmse",
+      "policy": "20/80",
+      "predictions_changed": false,
+      "primary_leader_rank": 4,
+      "primary_leader_still_tied_for_first": false,
+      "public_model_alias": "NBA-R002",
+      "recovered_exact_state": false,
+      "saved_score_aggregation": "Root weighted annual MSE",
+      "tied_leaders": 3
+    },
+    {
+      "calibrated": true,
+      "earlier_validation_weight": 0.1,
+      "estimator_refits": 0,
+      "family": "CatBoost",
+      "feature_group": "DraftKings + basketball history",
+      "horizon_minutes": 60,
+      "later_validation_weight": 0.9,
+      "leader_annual_values": {
+        "2024-25": 0.6689497716894978,
+        "2025-26": 0.6783269961977187
+      },
+      "leader_score": 0.6773892737468966,
+      "objective": "winner_accuracy",
+      "policy": "10/90",
+      "predictions_changed": false,
+      "primary_leader_rank": 1,
+      "primary_leader_still_tied_for_first": true,
+      "public_model_alias": "NBA-R008",
+      "recovered_exact_state": false,
+      "saved_score_aggregation": "Weighted annual metric",
+      "tied_leaders": 1
+    },
+    {
+      "calibrated": true,
+      "earlier_validation_weight": 0.1,
+      "estimator_refits": 0,
+      "family": "CatBoost",
+      "feature_group": "DraftKings + basketball history",
+      "horizon_minutes": 60,
+      "later_validation_weight": 0.9,
+      "leader_annual_values": {
+        "2024-25": 0.6108935257678683,
+        "2025-26": 0.6070662621977021
+      },
+      "leader_score": 0.6074489885547187,
+      "objective": "winner_log_loss",
+      "policy": "10/90",
+      "predictions_changed": false,
+      "primary_leader_rank": 1,
+      "primary_leader_still_tied_for_first": true,
+      "public_model_alias": "NBA-R008",
+      "recovered_exact_state": false,
+      "saved_score_aggregation": "Weighted annual metric",
+      "tied_leaders": 1
+    },
+    {
+      "calibrated": true,
+      "earlier_validation_weight": 0.1,
+      "estimator_refits": 0,
+      "family": "CatBoost",
+      "feature_group": "DraftKings + basketball history",
+      "horizon_minutes": 60,
+      "later_validation_weight": 0.9,
+      "leader_annual_values": {
+        "2024-25": 0.21133482678407364,
+        "2025-26": 0.20939015009923853
+      },
+      "leader_score": 0.20958461776772205,
+      "objective": "winner_brier",
+      "policy": "10/90",
+      "predictions_changed": false,
+      "primary_leader_rank": 1,
+      "primary_leader_still_tied_for_first": true,
+      "public_model_alias": "NBA-R008",
+      "recovered_exact_state": false,
+      "saved_score_aggregation": "Weighted annual metric",
+      "tied_leaders": 1
+    },
+    {
+      "calibrated": true,
+      "earlier_validation_weight": 0.1,
+      "estimator_refits": 0,
+      "family": "scikit-learn linear",
+      "feature_group": "Basketball history",
+      "horizon_minutes": 60,
+      "later_validation_weight": 0.9,
+      "leader_annual_values": {
+        "2024-25": 11.127967266667914,
+        "2025-26": 11.562678729664086
+      },
+      "leader_score": 11.51920758336447,
+      "objective": "margin_mae",
+      "policy": "10/90",
+      "predictions_changed": false,
+      "primary_leader_rank": 1,
+      "primary_leader_still_tied_for_first": true,
+      "public_model_alias": "NBA-R004",
+      "recovered_exact_state": false,
+      "saved_score_aggregation": "Weighted annual metric",
+      "tied_leaders": 2
+    },
+    {
+      "calibrated": true,
+      "earlier_validation_weight": 0.1,
+      "estimator_refits": 0,
+      "family": "scikit-learn linear",
+      "feature_group": "Basketball history",
+      "horizon_minutes": 60,
+      "later_validation_weight": 0.9,
+      "leader_annual_values": {
+        "2024-25": 14.245275585559945,
+        "2025-26": 14.72575189651851
+      },
+      "leader_score": 14.678412028448163,
+      "objective": "margin_rmse",
+      "policy": "10/90",
+      "predictions_changed": false,
+      "primary_leader_rank": 1,
+      "primary_leader_still_tied_for_first": true,
+      "public_model_alias": "NBA-R004",
+      "recovered_exact_state": false,
+      "saved_score_aggregation": "Root weighted annual MSE",
+      "tied_leaders": 2
+    },
+    {
+      "calibrated": true,
+      "earlier_validation_weight": 0.1,
+      "estimator_refits": 0,
+      "family": "scikit-learn linear",
+      "feature_group": "Basketball history",
+      "horizon_minutes": 60,
+      "later_validation_weight": 0.9,
+      "leader_annual_values": {
+        "2024-25": 15.075417111363954,
+        "2025-26": 15.429687737269683
+      },
+      "leader_score": 15.39426067467911,
+      "objective": "total_mae",
+      "policy": "10/90",
+      "predictions_changed": false,
+      "primary_leader_rank": 1,
+      "primary_leader_still_tied_for_first": true,
+      "public_model_alias": "NBA-R006",
+      "recovered_exact_state": true,
+      "saved_score_aggregation": "Weighted annual metric",
+      "tied_leaders": 2
+    },
+    {
+      "calibrated": true,
+      "earlier_validation_weight": 0.1,
+      "estimator_refits": 0,
+      "family": "scikit-learn Extra Trees",
+      "feature_group": "DraftKings + basketball history",
+      "horizon_minutes": 60,
+      "later_validation_weight": 0.9,
+      "leader_annual_values": {
+        "2024-25": 19.00110668370389,
+        "2025-26": 19.42754101139364
+      },
+      "leader_score": 19.38531971093057,
+      "objective": "total_rmse",
+      "policy": "10/90",
+      "predictions_changed": false,
+      "primary_leader_rank": 4,
+      "primary_leader_still_tied_for_first": false,
+      "public_model_alias": "NBA-R005",
+      "recovered_exact_state": false,
+      "saved_score_aggregation": "Root weighted annual MSE",
+      "tied_leaders": 1
+    },
+    {
+      "calibrated": true,
+      "earlier_validation_weight": 0.1,
+      "estimator_refits": 0,
+      "family": "CatBoost",
+      "feature_group": "Basketball history",
+      "horizon_minutes": 120,
+      "later_validation_weight": 0.9,
+      "leader_annual_values": {
+        "2024-25": 0.6552511415525114,
+        "2025-26": 0.6806083650190115
+      },
+      "leader_score": 0.6780726426723616,
+      "objective": "winner_accuracy",
+      "policy": "10/90",
+      "predictions_changed": false,
+      "primary_leader_rank": 11,
+      "primary_leader_still_tied_for_first": false,
+      "public_model_alias": "NBA-R011",
+      "recovered_exact_state": true,
+      "saved_score_aggregation": "Weighted annual metric",
+      "tied_leaders": 2
+    },
+    {
+      "calibrated": true,
+      "earlier_validation_weight": 0.1,
+      "estimator_refits": 0,
+      "family": "CatBoost",
+      "feature_group": "Basketball history",
+      "horizon_minutes": 120,
+      "later_validation_weight": 0.9,
+      "leader_annual_values": {
+        "2024-25": 0.6145224345764689,
+        "2025-26": 0.6066612056621392
+      },
+      "leader_score": 0.6074473285535722,
+      "objective": "winner_log_loss",
+      "policy": "10/90",
+      "predictions_changed": false,
+      "primary_leader_rank": 3,
+      "primary_leader_still_tied_for_first": false,
+      "public_model_alias": "NBA-R011",
+      "recovered_exact_state": true,
+      "saved_score_aggregation": "Weighted annual metric",
+      "tied_leaders": 2
+    },
+    {
+      "calibrated": true,
+      "earlier_validation_weight": 0.1,
+      "estimator_refits": 0,
+      "family": "CatBoost",
+      "feature_group": "Basketball history",
+      "horizon_minutes": 120,
+      "later_validation_weight": 0.9,
+      "leader_annual_values": {
+        "2024-25": 0.21296973601287936,
+        "2025-26": 0.20916272216273984
+      },
+      "leader_score": 0.2095434235477538,
+      "objective": "winner_brier",
+      "policy": "10/90",
+      "predictions_changed": false,
+      "primary_leader_rank": 3,
+      "primary_leader_still_tied_for_first": false,
+      "public_model_alias": "NBA-R011",
+      "recovered_exact_state": true,
+      "saved_score_aggregation": "Weighted annual metric",
+      "tied_leaders": 2
+    },
+    {
+      "calibrated": true,
+      "earlier_validation_weight": 0.1,
+      "estimator_refits": 0,
+      "family": "scikit-learn linear",
+      "feature_group": "Basketball history",
+      "horizon_minutes": 120,
+      "later_validation_weight": 0.9,
+      "leader_annual_values": {
+        "2024-25": 11.118038969702761,
+        "2025-26": 11.565053764600105
+      },
+      "leader_score": 11.52035228511037,
+      "objective": "margin_mae",
+      "policy": "10/90",
+      "predictions_changed": false,
+      "primary_leader_rank": 4,
+      "primary_leader_still_tied_for_first": false,
+      "public_model_alias": "NBA-R010",
+      "recovered_exact_state": false,
+      "saved_score_aggregation": "Weighted annual metric",
+      "tied_leaders": 2
+    },
+    {
+      "calibrated": true,
+      "earlier_validation_weight": 0.1,
+      "estimator_refits": 0,
+      "family": "scikit-learn linear",
+      "feature_group": "Basketball history",
+      "horizon_minutes": 120,
+      "later_validation_weight": 0.9,
+      "leader_annual_values": {
+        "2024-25": 14.23470764362899,
+        "2025-26": 14.72493747589782
+      },
+      "leader_score": 14.676651371213701,
+      "objective": "margin_rmse",
+      "policy": "10/90",
+      "predictions_changed": false,
+      "primary_leader_rank": 1,
+      "primary_leader_still_tied_for_first": true,
+      "public_model_alias": "NBA-R010",
+      "recovered_exact_state": false,
+      "saved_score_aggregation": "Root weighted annual MSE",
+      "tied_leaders": 2
+    },
+    {
+      "calibrated": true,
+      "earlier_validation_weight": 0.1,
+      "estimator_refits": 0,
+      "family": "scikit-learn linear",
+      "feature_group": "Basketball history",
+      "horizon_minutes": 120,
+      "later_validation_weight": 0.9,
+      "leader_annual_values": {
+        "2024-25": 15.071638046871213,
+        "2025-26": 15.448279110961767
+      },
+      "leader_score": 15.410615004552712,
+      "objective": "total_mae",
+      "policy": "10/90",
+      "predictions_changed": false,
+      "primary_leader_rank": 1,
+      "primary_leader_still_tied_for_first": true,
+      "public_model_alias": "NBA-R001",
+      "recovered_exact_state": true,
+      "saved_score_aggregation": "Weighted annual metric",
+      "tied_leaders": 2
+    },
+    {
+      "calibrated": true,
+      "earlier_validation_weight": 0.1,
+      "estimator_refits": 0,
+      "family": "scikit-learn Extra Trees",
+      "feature_group": "Markets excluding Polymarket + basketball history",
+      "horizon_minutes": 120,
+      "later_validation_weight": 0.9,
+      "leader_annual_values": {
+        "2024-25": 18.8797945302771,
+        "2025-26": 19.445913380699025
+      },
+      "leader_score": 19.39004529750337,
+      "objective": "total_rmse",
+      "policy": "10/90",
+      "predictions_changed": false,
+      "primary_leader_rank": 4,
+      "primary_leader_still_tied_for_first": false,
+      "public_model_alias": "NBA-R002",
+      "recovered_exact_state": false,
+      "saved_score_aggregation": "Root weighted annual MSE",
+      "tied_leaders": 3
+    }
+  ]
+}
