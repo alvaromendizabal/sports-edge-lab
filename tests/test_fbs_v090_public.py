@@ -143,5 +143,16 @@ class PublishedDataTests(unittest.TestCase):
         self.assertIn('calibration worsens',findings)
         self.assertFalse(self.report['selection']['test_untouched'])
 
+    def test_entire_pre_v090_readme_suffix_is_byte_preserved(self):
+        content=(ROOT/'docs/fbs/README.md').read_bytes()
+        start=b'<!-- FBS_V090_VERIFIED_V089_REVIEW_START -->\n'
+        end=b'<!-- FBS_V090_VERIFIED_V089_REVIEW_END -->\n\n'
+        self.assertTrue(content.startswith(start))
+        self.assertEqual(content.count(start),1)
+        self.assertEqual(content.count(end),1)
+        suffix=content.split(end,1)[1]
+        git_blob=hashlib.sha1(b'blob '+str(len(suffix)).encode()+b'\0'+suffix).hexdigest()
+        self.assertEqual(git_blob,'ad11e2d190042fc18f37ae8f97036a6e4ea325bd')
+
 
 if __name__=='__main__':unittest.main(verbosity=2)
