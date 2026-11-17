@@ -72,6 +72,25 @@ class ProjectionTests(unittest.TestCase):
                 for metric in projection.METRICS[row['target']]:
                     if row['metrics'][metric] is not None:row['metrics'][metric]=123.456789012
         self.assertEqual(before,projection.project(*args)[0]['selection'])
+    def test_football_feature_ablations_are_separate_from_bookmaker_ablations(self):
+        args=fixture()
+        rename={'v089/linear/winner/combined/all_sources/raw':'v13/fixture/without_fixture_feature/raw',
+                'v089/linear/winner/combined/all_sources/calibrated':'v13/fixture/without_fixture_feature/calibrated',
+                'v089/linear/margin/combined/all_sources/raw':'v088/linear/margin/combined/without_fixturebook/raw'}
+        def replace_ids(value):
+            if isinstance(value,dict):
+                if value.get('model_id') in rename:value['model_id']=rename[value['model_id']]
+                for child in value.values():replace_ids(child)
+            elif isinstance(value,list):
+                for child in value:replace_ids(child)
+        replace_ids(args)
+        report,_,aliases=projection.project(*args)
+        by_alias={row['alias']:row for row in report['models']}
+        for identity,alias in aliases.items():
+            if identity[0]==rename['v089/linear/winner/combined/all_sources/raw']:
+                self.assertEqual(by_alias[alias]['study_group'],'Retained football feature ablation')
+            elif identity[0]==rename['v089/linear/margin/combined/all_sources/raw']:
+                self.assertEqual(by_alias[alias]['study_group'],'Single-source ablation')
     def test_shrunken_population_is_rejected(self):
         args=fixture();args[0][0]['expected_n']=1
         with self.assertRaisesRegex(ValueError,'population'):projection.project(*args)
@@ -142,6 +161,10 @@ class PublishedDataTests(unittest.TestCase):
         self.assertIn('worse 2026 test results on 8 of 9',findings)
         self.assertIn('calibration worsens',findings)
         self.assertFalse(self.report['selection']['test_untouched'])
+        from collections import Counter
+        self.assertEqual(Counter(m['study_group'] for m in self.report['models']),{
+            'Single-source ablation':204,'All-source control':84,
+            'Retained football feature ablation':48,'Retained no-market control':61})
 
     def test_entire_pre_v090_readme_suffix_is_byte_preserved(self):
         content=(ROOT/'docs/fbs/README.md').read_bytes()

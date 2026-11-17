@@ -108,7 +108,9 @@ def project(cards, selection, manifest, binding, stage, pointer, prior_selection
         family = FAMILIES[family_code]
         calibration = "Calibrated" if mid.endswith("/calibrated") else "Raw" if mid.endswith("/raw") else "Retained policy"
         release = "V089 extension" if mid.startswith("v089/") else "V088 market study" if mid.startswith("v088/") else "Retained earlier control"
-        study_group = "Single-source ablation" if "/without_" in mid else "All-source control" if "/all_sources/" in mid else "Retained no-market control"
+        study_group = ("Single-source ablation" if mid.startswith("v088/") and "/without_" in mid
+                       else "Retained football feature ablation" if "/without_" in mid
+                       else "All-source control" if "/all_sources/" in mid else "Retained no-market control")
         models.append({"alias": alias, "family": family, "label": family + " · " + target,
                        "target": target, "input_group": model_group(mid), "calibration": calibration,
                        "study_group": study_group, "release": release, "evidence_class": evidence_class,
