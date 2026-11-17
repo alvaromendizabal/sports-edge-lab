@@ -374,7 +374,8 @@ def publication_outputs():
     from b063r7_status import status_outputs as r7_status_outputs
     from b063r8_status import status_outputs as r8_status_outputs
     from b063r9_status import status_outputs as latest_status_outputs
-    return latest_status_outputs(r8_status_outputs(r7_status_outputs(r6_status_outputs(r5_status_outputs(status_outputs({**outputs(), **evidence_outputs()}))))))
+    from execution_status_dashboard import status_outputs as execution_status_outputs
+    return execution_status_outputs(latest_status_outputs(r8_status_outputs(r7_status_outputs(r6_status_outputs(r5_status_outputs(status_outputs({**outputs(), **evidence_outputs()})))))))
 
 
 def main():
