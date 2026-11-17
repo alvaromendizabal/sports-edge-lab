@@ -33,6 +33,7 @@ async function routeContext(context,mode,bad=false){
     check((await page.locator('#prepared-facts').innerText()).includes('936'),'Prepared campaign is separate');
     check((await page.locator('#prepared-facts').innerText()).includes('84'),'Fixed blends are separately counted');
     check((await page.locator('#publication-state').innerText()).includes('deployment pending'),'Publication status is truthful');
+    check((await page.locator('.snapshot dt').first().innerText())==='Game manifest as of','Manifest cutoff is labelled separately from later cost and finalization');
     check((await page.locator('.qualification').innerText()).includes('cannot become an untouched test'),'Prior test exposure visible');
     check(await page.evaluate(()=>document.documentElement.scrollWidth<=innerWidth),'Overview fits viewport');
     await page.keyboard.press('Tab');check((await page.evaluate(()=>document.activeElement.textContent)).includes('Skip to research'),'Keyboard skip link is first focus');
