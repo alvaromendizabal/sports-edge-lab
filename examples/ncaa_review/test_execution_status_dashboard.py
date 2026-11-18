@@ -34,16 +34,60 @@ class ExecutionStatusTests(unittest.TestCase):
         with self.assertRaises(ValueError):
             status.validate(value)
 
-    def test_latest_execution_is_separate_from_published_return(self):
-        self.assertEqual(self.data["latest_observed_attempt"]["release"], "R25")
-        self.assertEqual(self.data["latest_observed_attempt"]["status"], "RETURN_PACKAGING_FAILED_RESUMABLE")
-        self.assertFalse(self.data["latest_observed_attempt"]["return_published"])
-        self.assertEqual(self.data["latest_verified_return"]["release"], "R24")
+    def test_latest_execution_is_verified_but_scientifically_partial(self):
+        self.assertEqual(self.data["latest_observed_attempt"]["release"], "R26")
+        self.assertEqual(self.data["latest_observed_attempt"]["status"], status.RESOURCE_DEFERRED)
+        self.assertTrue(self.data["latest_observed_attempt"]["return_published"])
+        self.assertEqual(self.data["latest_verified_return"]["release"], "R26")
+        self.assertEqual(self.data["latest_verified_return"]["payloads_verified"], 201)
         self.assertEqual(self.data["latest_verified_return"]["sha256"],
-                         "9853bda9c8fe96e00cea2a6b23b13aa078747e90399fe4a2eb77a49fa5aa4e0e")
-        self.reject(lambda d: d["latest_observed_attempt"].update(evidence_class="FULL_ARCHIVE_VERIFIED"))
-        self.reject(lambda d: d["latest_observed_attempt"].update(return_published=True))
-        self.reject(lambda d: d["latest_verified_return"].update(release="R25"))
+                         "e64d63158731c5e492edc9867a4f9d792a5a5885c28536b2141df3ebe840cf08")
+        self.reject(lambda d: d["latest_observed_attempt"].update(evidence_class="VERIFIED_RECOVERY_EVIDENCE"))
+        self.reject(lambda d: d["latest_observed_attempt"].update(return_published=False))
+        self.reject(lambda d: d["latest_verified_return"].update(release="R24"))
+        self.reject(lambda d: d["latest_observed_attempt"].update(status="COMPLETE"))
+
+    def test_earlier_unpublished_recovery_snapshot_is_preserved(self):
+        old = status.validate(json.loads(status.HISTORICAL_DATA.read_text()))
+        self.assertEqual(old["latest_observed_attempt"]["release"], "R25")
+        self.assertFalse(old["latest_observed_attempt"]["return_published"])
+        self.assertEqual(old["latest_verified_return"]["release"], "R24")
+        self.assertEqual(self.data["attempts"][:-1], old["attempts"])
+        self.assertEqual(status.render_current_banner(old), status.PREVIOUS_EXECUTION_BANNER)
+        self.assertIn("remains R24", status.PREVIOUS_EXECUTION_BANNER)
+        self.assertIn("verified partial return", status.render_current_banner())
+
+    def test_current_startup_reuse_is_actual_owner_evidence(self):
+        c = self.data["current_execution"]
+        self.assertEqual(c["reused_startup_tests"], 981)
+        self.assertEqual(c["fresh_startup_tests"], 0)
+        self.assertAlmostEqual(c["startup_seconds"], 0.08316207400275744)
+        self.assertEqual(c["parent_cpu_seconds"], 392.786777)
+        self.assertGreater(c["owner_elapsed_seconds"], 445)
+        self.assertEqual(c["completed_child_cpu_seconds"], 0)
+        self.reject(lambda d: d["current_execution"].update(reused_startup_tests=955))
+        self.reject(lambda d: d["current_execution"].update(owner_elapsed_seconds=0))
+
+    def test_current_recovery_cpu_cannot_establish_scientific_occupancy(self):
+        c = self.data["current_execution"]
+        self.assertEqual(c["requested_workers"], 24)
+        self.assertEqual(c["maximum_ready_depth"], 0)
+        self.assertEqual(c["peak_scientific_workers"], 0)
+        self.assertFalse(c["scientific_gate_executed"])
+        for key in ("new_target_fits", "new_calibration_fits", "new_residual_fits", "verified_reused_target_fits", "peak_scientific_workers"):
+            self.reject(lambda d, key=key: d["current_execution"].update({key: 1}))
+        self.reject(lambda d: d["current_execution"].update(scientific_gate_executed=True))
+        self.reject(lambda d: d["current_execution"].update(scientific_gate="PASS"))
+
+    def test_cost_clock_and_unknown_measurement_guards(self):
+        self.assertIn("NOT_INVOICE", self.data["current_execution"]["cost_basis"])
+        self.reject(lambda d: d["current_execution"].update(cost_basis="BILLED_EXCLUSIVE_OWNER_COST"))
+        self.reject(lambda d: d["current_execution"].update(parent_cpu_seconds=-1))
+        self.reject(lambda d: d["current_execution"].update(cache_reads=True))
+        self.reject(lambda d: d["current_execution"].update(parent_cpu_seconds=float("nan")))
+        self.reject(lambda d: d["current_execution"].update(completed_at="2026-11-19T00:00:00Z"))
+        self.reject(lambda d: d["current_execution"].update(started_at="2026-11-18T00:41:59"))
+        self.reject(lambda d: d["current_execution"].update(unverified_science={}))
 
     def test_new_fits_do_not_count_reuse(self):
         rows = {r["id"]: r for r in self.data["attempts"]}
@@ -94,7 +138,9 @@ class ExecutionStatusTests(unittest.TestCase):
         self.assertEqual(result.returncode, 0, result.stdout + result.stderr)
         report = json.loads(result.stdout)
         self.assertFalse(report["visual_browser_claim"])
-        self.assertEqual(report["corrupt_evidence_rejections"], 4)
+        self.assertEqual(report["corrupt_evidence_rejections"], 8)
+        self.assertEqual(report["filter_views"], 5)
+        self.assertTrue(report["current_partial_return_verified"])
 
     def test_attempt_identity_cannot_duplicate(self):
         self.reject(lambda d: d["attempts"].append(deepcopy(d["attempts"][-1])))

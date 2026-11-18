@@ -18,12 +18,18 @@ function run(data) {
 }
 (async () => {
   const ui = run(expected), nodes = ui.nodes; let cells = 0;
-  assert.equal(nodes.get('observed-release').textContent, 'R25');
-  assert.equal(nodes.get('verified-release').textContent, 'R24');
+  assert.equal(nodes.get('observed-release').textContent, 'R26');
+  assert.equal(nodes.get('verified-release').textContent, 'R26');
+  assert.equal(nodes.get('current-execution-panel').hidden, false);
+  assert.match(nodes.get('current-execution-title').textContent, /R26 actual execution/);
+  const currentFacts = nodes.get('current-work-facts').children.map(n => n.textContent).join(' ');
+  assert.match(currentFacts, /981 reused · 0 fresh/);
+  assert.match(currentFacts, /Requested workers \/ scientific peak 24 \/ 0/);
+  assert.match(currentFacts, /Not run · no eligible work/);
   assert.equal(nodes.get('preserved-fits').textContent, '11');
-  for (const filter of ['all', 'RESEARCH', 'BEFORE_FIT', 'unpublished']) {
+  for (const filter of ['all', 'RESEARCH', 'BEFORE_FIT', 'unpublished', 'published']) {
     nodes.get('attempt-filter').value = filter; nodes.get('attempt-filter').listeners.change();
-    const rows = expected.attempts.filter(r => filter === 'all' || (filter === 'unpublished' ? !r.return_published : r.phase === filter));
+    const rows = expected.attempts.filter(r => filter === 'all' || (filter === 'unpublished' ? !r.return_published : filter === 'published' ? r.return_published : r.phase === filter));
     const actual = nodes.get('attempt-rows').children;
     assert.equal(actual.length, rows.length);
     for (let i = 0; i < rows.length; i++) {
@@ -37,10 +43,12 @@ function run(data) {
   nodes.get('download-report').listeners.click();
   assert.deepEqual(JSON.parse(await ui.download().text()), expected);
   for (const mutate of [d => {d.publication.new_fits = 1;}, d => {d.latest_verified_return.integrity = 'UNVERIFIED';},
-    d => {d.science_contract.test_selection_weight = .1;}, d => {d.throughput.newer_12_to_24_core_science_proven = true;}]) {
+    d => {d.science_contract.test_selection_weight = .1;}, d => {d.throughput.newer_12_to_24_core_science_proven = true;},
+    d => {d.current_execution.new_target_fits = 1;}, d => {d.current_execution.scientific_gate_executed = true;},
+    d => {d.latest_observed_attempt.return_published = false;}, d => {d.current_execution.cost_basis = 'INVOICE';}]) {
     const data = JSON.parse(JSON.stringify(expected)); mutate(data); const bad = run(data).nodes;
     assert.equal(bad.get('data-error').hidden, false); assert.equal(bad.get('report').hidden, true);
   }
-  console.log(JSON.stringify({status:'PASS', filter_views:4, checked_cells:cells, exact_downloads:1,
-    corrupt_evidence_rejections:4, new_fits:0, visual_browser_claim:false}));
+  console.log(JSON.stringify({status:'PASS', filter_views:5, checked_cells:cells, exact_downloads:1,
+    corrupt_evidence_rejections:8, current_partial_return_verified:true, new_fits:0, visual_browser_claim:false}));
 })().catch(error => { console.error(error); process.exitCode = 1; });

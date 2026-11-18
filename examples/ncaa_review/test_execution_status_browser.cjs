@@ -19,15 +19,20 @@ async function verifyExecutionStatus(browser, file) {
       await page.setViewportSize({ width, height: 1000 });
       await page.goto(pathToFileURL(file).href);
       await page.locator('#attempt-rows tr').first().waitFor();
-      assert.equal(await page.locator('#observed-release').innerText(), 'R25');
-      assert.equal(await page.locator('#verified-release').innerText(), 'R24');
-      assert.match(await page.locator('#observed-status').innerText(), /packaging failed/i);
+      assert.equal(await page.locator('#observed-release').innerText(), 'R26');
+      assert.equal(await page.locator('#verified-release').innerText(), 'R26');
+      assert.match(await page.locator('#observed-status').innerText(), /resource deferred/i);
+      assert.equal(await page.locator('#current-execution-panel').isVisible(), true);
+      assert.match(await page.locator('#current-work-facts').innerText(), /981 reused · 0 fresh/);
+      assert.match(await page.locator('#current-work-facts').innerText(), /Requested workers \/ scientific peak\s+24 \/ 0/);
+      assert.match(await page.locator('#current-work-facts').innerText(), /Not run · no eligible work/);
+      assert.match(await page.locator('#current-cost-facts').innerText(), /Succeeded · integrity verified/);
       assert.match(await page.locator('#snapshot-time').innerText(), /Pacific.*not a live status feed/);
       assert.equal(await page.locator('#preserved-fits').innerText(), '11');
       assert.match(await page.locator('#throughput-facts').innerText(), /12–24-core science proven\s+No/);
-      for (const filter of ['all', 'RESEARCH', 'BEFORE_FIT', 'unpublished']) {
+      for (const filter of ['all', 'RESEARCH', 'BEFORE_FIT', 'unpublished', 'published']) {
         await page.locator('#attempt-filter').selectOption(filter);
-        const rows = expected.attempts.filter(r => filter === 'all' || (filter === 'unpublished' ? !r.return_published : r.phase === filter));
+        const rows = expected.attempts.filter(r => filter === 'all' || (filter === 'unpublished' ? !r.return_published : filter === 'published' ? r.return_published : r.phase === filter));
         const actual = page.locator('#attempt-rows tr');
         assert.equal(await actual.count(), rows.length);
         for (let i = 0; i < rows.length; i++) {
@@ -63,12 +68,12 @@ async function verifyExecutionStatus(browser, file) {
       assert.equal(await page.locator('#attempt-rows tr').count(), expected.attempts.length);
     }
     await page.goto(pathToFileURL(path.join(path.dirname(file), 'index.html')).href);
-    assert.match(await page.locator('#v12-current-evidence').innerText(), /latest observed R25.*last fully verified published return remains R24/is);
+    assert.match(await page.locator('#v12-current-evidence').innerText(), /latest observed R26.*published return and 201 payloads are verified/is);
     assert.equal(await page.locator('#v12-current-evidence a[href="execution.html"]').count(), 1);
     await page.locator('#v12-current-evidence a[href="execution.html"]').click();
-    assert.equal(await page.locator('#observed-release').innerText(), 'R25');
+    assert.equal(await page.locator('#observed-release').innerText(), 'R26');
     const raw = fs.readFileSync(file, 'utf8');
-    for (const mutate of [d => { d.publication.new_fits = 1; }, d => { d.latest_verified_return.integrity = 'UNVERIFIED'; }, d => { d.science_contract.test_selection_weight = 0.5; }, d => { d.throughput.newer_12_to_24_core_science_proven = true; }]) {
+    for (const mutate of [d => { d.publication.new_fits = 1; }, d => { d.latest_verified_return.integrity = 'UNVERIFIED'; }, d => { d.science_contract.test_selection_weight = 0.5; }, d => { d.throughput.newer_12_to_24_core_science_proven = true; }, d => { d.current_execution.new_target_fits = 1; }, d => { d.current_execution.scientific_gate_executed = true; }, d => { d.latest_observed_attempt.return_published = false; }, d => { d.current_execution.cost_basis = 'INVOICE'; }]) {
       const bad = JSON.parse(JSON.stringify(expected)); mutate(bad);
       const html = raw.replace(/(<script id="execution-data" type="application\/json">)[\s\S]*?(<\/script>)/, '$1' + JSON.stringify(bad).replace(/</g, '\\u003c') + '$2');
       await page.setContent(html);
@@ -86,7 +91,7 @@ async function verifyExecutionStatus(browser, file) {
     assert.equal(await reopened.locator('#attempt-rows tr').count(), expected.attempts.length);
   } finally { await fresh.close(); }
   return { status: 'PASS', widths: [1440, 390], filter_views: views, checked_cells: cells,
-    exact_downloads: downloads, corrupt_evidence_rejections: 4, fresh_context_reopened: true,
+    exact_downloads: downloads, corrupt_evidence_rejections: 8, current_partial_return_verified: true, fresh_context_reopened: true,
     script_errors: 0, external_requests: 0, real_chromium: true };
 }
 
