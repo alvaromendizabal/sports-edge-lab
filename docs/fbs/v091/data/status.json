@@ -50,6 +50,36 @@
       "role": "V091 packaged startup reproduction",
       "scope": "Isolated local diagnosis: return code 2, empty stdout/stderr and zero child launches. No AWS execution or scientific fits. The operator transcript did not record an exit code.",
       "sha256": "1014b182aeb0a3a84652ffe69ada71ded293e0dd8d1307956ccca35c6b778378"
+    },
+    {
+      "role": "Verified V091 startup failure at 2026-11-18T02:19:09.348601Z",
+      "scope": "Owner startup failure record: identical supervisor identity error, no research child started, and no advancement of the actual-return pointer. It does not contain a terminal exit-code capture.",
+      "sha256": "4e9359b358bc3d1a5b19f1912f9d6e558a6db421994b499f67b9e3d675c5d99f"
+    },
+    {
+      "role": "Verified V091 startup failure at 2026-11-18T02:20:36.258110Z",
+      "scope": "Owner startup failure record: identical supervisor identity error, no research child started, and no advancement of the actual-return pointer. It does not contain a terminal exit-code capture.",
+      "sha256": "3e92325f7cc60bdbd67c5e9bbe88ebcbf80e8c70956dfb86dd5958fc69911865"
+    },
+    {
+      "role": "V092 exact-package launch regression",
+      "scope": "Five local tests passed against the final package, including visible startup failure, help/invalid arguments, child exit and signal propagation. No owner research or AWS calls.",
+      "sha256": "4d49bb52efbfbf82345977af8a671849c2a40e7bbca7b23f8129dc55a4805eef"
+    },
+    {
+      "role": "V092 packaged self-test",
+      "scope": "PASS: 2,821 active archive members and three isolated supervised children with observed exits 0, 2 and 130. Fixture executions are excluded from owner-science accounting.",
+      "sha256": "ae2f4f750b33851ff8cfaccdf29d7950164dccb739e9411628ba85af9a8186dc"
+    },
+    {
+      "role": "V092 compact-return and checkpoint audit",
+      "scope": "88 relevant local checks passed for compact storage/closure and exact completed-checkpoint reuse. No owner research, cloud writes or sustained scientific throughput claimed.",
+      "sha256": "eceacc2b80aed4a414b0a4b076be3ec21c9709dd9d3c8b47e544e1802bb1d6a6"
+    },
+    {
+      "role": "V092 native placement and supervised fixture verification",
+      "scope": "Exact canonical bytes staged and physically verified in the existing owner environment. Native self-test passed with isolated child exits 0,2,130; zero owner research, fits, provider retrievals or actual-return-pointer writes.",
+      "sha256": "9409f22cf26792cea0199ace73dfacc07fb2b76bbda94e285692076d58244e81"
     }
   ],
   "latest_attempt": {
@@ -99,9 +129,9 @@
       }
     ],
     "cost_guard_usd": 200,
-    "delivery_size_scope": "Review metadata only. The executable is separate; retained caches and model states are referenced.",
-    "evidence_as_of": "2026-11-18T02:27:54.329662+00:00",
-    "executable_bytes": null,
+    "delivery_size_scope": "This public snapshot measures the verified canonical executable. The metadata review ZIP is measured separately in the private delivery handoff.",
+    "evidence_as_of": "2026-11-18T02:42:01.991725+00:00",
+    "executable_bytes": 48552301,
     "fixed_blend_policies": 84,
     "frozen_test_jobs": 312,
     "horizon_minutes": 120,
@@ -113,11 +143,12 @@
     "provider_retrievals": 0,
     "registered_model_jobs": 936,
     "release": "V092",
-    "status": "PREPARATION_IN_PROGRESS",
+    "status": "PREPARED_NOT_EXECUTED",
     "unlimited_wall_waives_cost_guard": false,
     "validation_jobs": 624,
-    "verification_summary": "V092 preparation is in progress. The replacement will share one release identity across startup validators and exercise the actual packaged supervised launch. Final archive sizes and verification receipts remain pending. No V092 owner research execution or sustained optimizer result is claimed.",
-    "worker_ceiling": 24
+    "verification_summary": "The 48,552,301-byte V092 executable was placed and checksum-verified in the existing owner environment. Its native packaged self-test passed: 2,821 active archive members and three isolated supervised child exits (0, 2 and 130). Five local exact-package launch regression tests and 88 compact-return/checkpoint checks also pass. The actual-return pointer is unchanged. The review ZIP measurement is outside this public snapshot. Owner research and measured sustained optimizer throughput remain pending.",
+    "worker_ceiling": 24,
+    "review_zip_measurement_status": "OUTSIDE_THIS_PUBLIC_SNAPSHOT"
   },
   "publication": {
     "new_numerical_forecasts_published": false,
@@ -200,8 +231,8 @@
   },
   "launch_incident": {
     "release": "V091",
-    "status": "USER_REPORTED_FAILURE_LOCALLY_REPRODUCED",
-    "reviewed_at": "2026-11-18T02:27:54.329662+00:00",
+    "status": "OWNER_FAILURES_VERIFIED_LOCALLY_REPRODUCED",
+    "reviewed_at": "2026-11-18T02:29:20.051673+00:00",
     "new_reported_failures": 1,
     "new_reported_successes": 0,
     "lifetime_failure_total": null,
@@ -217,8 +248,22 @@
     "isolated_aws_calls": 0,
     "reproduction_scope": "The actual packaged entry function was exercised with isolated temporary owner paths and a nonroot identity override; source integrity and supervisor validation were unchanged. Child launching was forbidden. This is local engineering evidence, not an AWS research execution.",
     "prior_verification_limit": "The earlier archive checks and nonresearch self-test did not exercise the normal supervised launch path. Their passing results did not establish that V091 could start research.",
-    "repair_status": "PREPARATION_IN_PROGRESS",
+    "repair_status": "PREPARED_NOT_EXECUTED",
     "next_release": "V092",
-    "summary": "One newly reported V091 launch failed before scientific dispatch. The exact packaged entry function reproduces the silent startup error locally. The last verified owner return remains V090, and the retained scientific result remains V089."
+    "summary": "Two V091 launch failures are verified from owner startup receipts, both before a research child launched. They have the same reproduced identity-validation defect. The last verified owner return remains V090, and the retained scientific result remains V089.",
+    "verified_failed_launches": 2,
+    "verified_successful_launches": 0,
+    "distinct_verified_startup_defects": 1,
+    "verified_research_child_launches": 0,
+    "verified_failure_times_utc": [
+      "2026-11-18T02:19:09.348601Z",
+      "2026-11-18T02:20:36.258110Z"
+    ],
+    "scoped_releases": [
+      "V090",
+      "V091"
+    ],
+    "scoped_failed_launches": 3,
+    "scoped_successful_launches": 0
   }
 }

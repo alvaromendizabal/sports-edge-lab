@@ -125,6 +125,17 @@ class ExecutionReview(unittest.TestCase):
         self.assertEqual(DATA["retained_science"]["release"], "V089")
         self.assertEqual(DATA["launch_incident"]["new_reported_failures"], 1)
 
+    def test_review_zip_measurement_scope_cannot_imply_unmeasured_size(self):
+        self.rejects("prepared", "review_zip_measurement_status", "MEASURED")
+        self.rejects("prepared", "prepared_report_zip_bytes", 64000)
+
+    def test_scoped_count_cannot_duplicate_or_omit_owner_attempts(self):
+        self.assertEqual(DATA["launch_incident"]["verified_failed_launches"], 2)
+        self.assertEqual(DATA["launch_incident"]["scoped_failed_launches"], 3)
+        self.assertEqual(DATA["launch_incident"]["scoped_releases"], ["V090", "V091"])
+        self.rejects("launch_incident", "scoped_failed_launches", 4)
+        self.rejects("launch_incident", "verified_failed_launches", 1)
+
     def test_repair_status_cannot_disagree_with_prepared_release(self):
         self.rejects("launch_incident", "next_release", "V091")
         self.rejects("launch_incident", "repair_status", "OWNER_RESEARCH_COMPLETE")
