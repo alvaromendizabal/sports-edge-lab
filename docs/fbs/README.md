@@ -1,3 +1,24 @@
+<!-- FBS_V097_ACTUAL_RETURN_START -->
+## Latest FBS review: V096 finished its campaign and published a verified partial return
+
+[Open the actual results and V097 continuation review](v097/) · [Evidence and limits](v097/README.md) · [Preserved V093/V095 history](v093/)
+
+The actual V096 invocation finished with **child exit 0 and supervisor exit 0**. Its verified resumable return preserves **936/936 completed registered jobs: 624 reused validation jobs plus 312 new base-model fits and 312 new calibrator fits**, with zero failed fits. The authenticated scope now has **six historical failed attempts, one operationally finished attempt with partial science, and zero fully V13-complete executions**. This dated record supersedes the earlier latest-status description below without rewriting that history.
+
+The new report shows all nine objective-specific **2024/2025 validation-selected leaders with actual 2026 reporting**, all five evaluation-only validation ratios, full **919/934/755** known completed-game denominators and the corresponding sensitivity ranks. It keeps exposed frozen reconstructions, source reference coverage, missing pending rows, official/postseason census uncertainty and production eligibility separate.
+
+Actual fitting used **17 processes within the 24-worker ceiling**. A saved **180.078-second** real-work window passed at **87.0095% preparation-plus-fit occupancy** and **79.8297% optimizer-only occupancy**, both relative to 17 admitted workers. Later coordinator scoring used **267.657 elapsed seconds / 255.872 CPU seconds** and remained serial. The report shows these phases separately rather than treating the entire invocation as a fitting phase. The full supervised compute estimate is **USD 1.438130**, not an invoice.
+
+V097 is **prepared and native-verified** for a finite **306-job XGBoost/CatBoost source-ablation continuation**, preserves the 936 completed identities, and adds parallel checkpointed grading. It targets 12 scientific workers, with an explicit 24-worker ceiling. Preparation has launched **zero owner executions**; the report's preparation status follows the sealed canonical and native verification record. The verified V096 return remains the actual research result until the owner executes a successor.
+
+The actual control ZIP is **88,491,826 bytes**. Separate new scientific payloads total **1,676,955,059 bytes**; **35,483,901,513 inherited bytes** were referenced without recopying. Source changes remain unmerged; website deployment and production promotion are separate actions.
+
+<!-- FBS_V097_ACTUAL_RETURN_END -->
+
+## Earlier dated FBS reports
+
+The following sections retain their original evidence and publication dates. Their “latest” labels describe those earlier snapshots.
+
 <!-- FBS_V093_READINESS_START -->
 ## Latest FBS review: V095 validation finished, return publication failed
 

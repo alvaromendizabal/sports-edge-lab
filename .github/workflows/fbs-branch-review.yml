@@ -35,6 +35,8 @@ jobs:
           python tests/test_fbs_v091_public.py
           python examples/fbs_contracts/v093/build_review.py --check
           python tests/test_fbs_v093_public.py
+          python examples/fbs_contracts/v097/build_review.py --check
+          python tests/test_fbs_v097_public.py
           node tests/fbs_v079_logic.test.cjs
           node tests/fbs_v090_logic.test.cjs
           node tests/fbs_v054_public_view.test.cjs
@@ -92,6 +94,7 @@ jobs:
         run: |
           node tests/fbs_v091_browser.test.cjs
           node tests/fbs_v093_browser.test.cjs
+          node tests/fbs_v097_browser.test.cjs
           node examples/fbs_contracts/tests/test_dashboard_browser.cjs
           node examples/fbs_contracts/tests/test_recovery_browser.cjs
           node examples/fbs_contracts/tests/test_season_browser.cjs
@@ -121,12 +124,22 @@ jobs:
           FBS_SCREENSHOTS: ${{ runner.temp }}/fbs-screenshots
           FBS_V073_LIVE_URL: https://sports-edge-lab-fbs.alv-mendizabal.chatgpt.site/v073/
         run: node tests/fbs_v073_browser.test.cjs
+      - name: Preserve compact V097 render evidence
+        uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02
+        with:
+          name: fbs-v097-evidence-review
+          path: |
+            ${{ runner.temp }}/fbs-screenshots/FBS_V097_*.png
+            ${{ runner.temp }}/fbs-screenshots/FBS_V097_BROWSER_RECEIPT.json
+          if-no-files-found: error
+          retention-days: 14
       - name: Preserve desktop and mobile evidence views
         uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02
         with:
           name: fbs-evidence-screenshots
           path: |
             ${{ runner.temp }}/fbs-screenshots/*.png
+            !${{ runner.temp }}/fbs-screenshots/FBS_V097_*.png
             ${{ runner.temp }}/fbs-screenshots/FBS_V073_BROWSER_RECEIPT.json
             ${{ runner.temp }}/fbs-screenshots/FBS_V074_*_BROWSER_RECEIPT.json
             ${{ runner.temp }}/fbs-screenshots/FBS_V075_*_BROWSER_RECEIPT.json
