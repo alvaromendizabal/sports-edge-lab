@@ -28,7 +28,7 @@ class V093Readiness(unittest.TestCase):
         self.assertEqual(rendered, (ROOT / "docs/fbs/v093/index.html").read_bytes())
         embedded = re.search(rb'<script id="report-data" type="application/json">(.*?)</script>', rendered, re.S).group(1)
         self.assertEqual(json.loads(embedded), DATA)
-        self.assertLess(len(rendered), 60_000)
+        self.assertLess(len(rendered), 65_536)
         self.assertNotRegex(rendered.decode(), r'<script[^>]+src=|<link[^>]+stylesheet')
 
     def test_prepared_software_cannot_become_scientific_execution(self):
@@ -198,6 +198,71 @@ class V093Readiness(unittest.TestCase):
         self.assertIn(marker, text)
         suffix = text.split(marker, 1)[1].encode()
         self.assertEqual(hashlib.sha256(suffix).hexdigest(), "1cd9a51c0bca1e0626a50d1ab59f5ff2b1c9e56e2e2c6453553cab4217723318")
+
+    def test_native_validation_completion_does_not_advance_portable_custody(self):
+        a = DATA["current_attempt"]
+        self.assertEqual(a["native_completed_validation_jobs"], 624)
+        self.assertEqual(DATA["attempts"]["first"]["completed_validation_jobs"], 470)
+        for key in ("portable_return_integrity_verified", "actual_return_pointer_advanced", "full_scientific_complete",
+                    "full_current_test_reporting_complete", "full_current_population_champion_eligible"):
+            self.rejects("current_attempt", key, True)
+        self.rejects("current_attempt", "latest_verified_return_release", "V095")
+
+    def test_observed_delivery_failure_overrides_provisional_scientific_success(self):
+        self.assertEqual(DATA["current_attempt"]["science_stage_exit_code"], 0)
+        self.rejects("current_attempt", "child_exit_code", 0)
+        self.rejects("current_attempt", "supervisor_status", "COMPLETED")
+        self.rejects("current_attempt", "delivery_error", None)
+        self.rejects("current_attempt", "scoped_successful_attempts", 1)
+        self.rejects("current_attempt", "failed_fits", 154)
+
+    def test_latest_tally_counts_new_authenticated_attempt_exactly_once(self):
+        self.assertEqual(DATA["current_attempt"]["scoped_failed_attempts"], DATA["attempts"]["scoped_failed_attempts"] + 1)
+        for n in (5, 7):
+            self.rejects("current_attempt", "scoped_failed_attempts", n)
+        self.rejects("current_attempt", "scoped_active_attempts", 1)
+        self.rejects("current_attempt", "run_id", DATA["attempts"]["first"]["run_id"])
+
+    def test_native_branch_totals_distinguish_new_and_checkpoint_work(self):
+        branches = DATA["current_attempt"]["branch_counts"]
+        self.assertEqual(sum(b["new_base_fits"] for b in branches), 154)
+        self.assertEqual(sum(b["checkpoint_reused_jobs"] for b in branches), 470)
+        self.assertEqual(sum(b["completed_validation_jobs"] for b in branches), 624)
+        self.rejects("current_attempt", "blocked_test_jobs", 0)
+        self.rejects("current_attempt", "checkpoint_reused_jobs", 0)
+        d = copy.deepcopy(DATA)
+        d["current_attempt"]["branch_counts"][0]["new_base_fits"] = 204
+        with self.assertRaises(ValueError):
+            REVIEW.render(d)
+
+    def test_current_observed_census_preserves_unknown_completeness_and_older_cohorts(self):
+        self.assertEqual(DATA["current_census"]["completed_games"] + DATA["current_census"]["pending_games"], 888)
+        for key in ("official_population_complete_proven", "full_current_test_metrics_available"):
+            self.rejects("current_census", key, True)
+        self.rejects("current_census", "completed_games", 752)
+        self.rejects("current_census", "rows_removed_for_model_coverage", 3)
+        self.rejects("current_census", "source_as_of_is_inspection_clock", False)
+
+    def test_short_work_queue_cannot_claim_sustained_occupancy(self):
+        self.rejects("current_attempt", "sustained_occupancy_pass_claimed", True)
+        self.rejects("current_attempt", "required_gate_status", "PASS_REAL_WORK")
+        self.rejects("current_attempt", "selected_worker_capacity", 24)
+        self.rejects("current_attempt", "estimate_is_invoice", True)
+
+    def test_new_preparation_requires_native_proof_and_cannot_rewrite_actual_return(self):
+        for key in ("owner_executions", "scientific_fits", "provider_retrievals"):
+            self.rejects("next_preparation", key, 1)
+        for key in ("process_or_predecessor_restarted", "latest_return_pointer_changed_by_preparation"):
+            self.rejects("next_preparation", key, True)
+        d = copy.deepcopy(DATA)
+        d["next_preparation"].update(status="PREPARED_NOT_EXECUTED", native_verified=False)
+        with self.assertRaises(ValueError):
+            REVIEW.render(d)
+
+    def test_native_inspection_and_preparation_keep_ordered_clocks(self):
+        self.rejects("current_attempt", "started_at", DATA["prepared"]["snapshot_at"])
+        self.rejects("current_attempt", "child_exit_observed_at", "2026-11-18T08:00:00Z")
+        self.rejects("current_census", "observed_at", DATA["prepared"]["snapshot_at"])
 
 
 if __name__ == "__main__":

@@ -1,7 +1,7 @@
 {
   "schema": "fbs.public.launch-readiness.v093",
   "owner": "FBS",
-  "as_of": "2026-11-18T05:50:50.968293+00:00",
+  "as_of": "2026-11-18T07:36:17.152832Z",
   "publication": {
     "status": "SOURCE_REVIEW",
     "website_deployed": false,
@@ -194,6 +194,26 @@
         "label": "V095 native preparation verification",
         "sha256": "9522ab294bbe3b7249a8a9880e9f722864bc0ad4cd5446ef757177f724056a51",
         "scope": "Native physical bytes, canonical digest and packaged engineering self-test verified at 2026-11-18 05:50:50 UTC. No owner research, fitted models or sports-provider retrieval; the verified V093 actual return is unchanged."
+      },
+      {
+        "label": "V095 observed child exit",
+        "sha256": "0ed0bbc167ed44b96e1e568e2cb1be6157390520f39ad02d0b6252c82dc4e995",
+        "scope": "Native child exit 2 observed at 07:10:07 UTC; not a successful owner execution."
+      },
+      {
+        "label": "V095 supervisor failure",
+        "sha256": "a1cd4fc76b8e7968d4469b0385a4ada6965816e58b5d43290c8e712e70435e6f",
+        "scope": "Null return metadata failed after the child delivery error; no pointer advancement."
+      },
+      {
+        "label": "V095 native finalization accounting",
+        "sha256": "25e1226a63216b7bec95abdb646350f60459e510bb596b267dd67774f7fe5e02",
+        "scope": "Native validation 624/624, 154 new models and calibrators; return publication failed. Native evidence is not verified portable custody."
+      },
+      {
+        "label": "V095 native continuation review",
+        "sha256": "8d791f5e5f876e7feeccd7d600e07964432a3be9a62261f7ba9aff0fe6e86761",
+        "scope": "Dated native stage and census evidence. Its provisional prepublication success does not override the observed owner failure."
       }
     ],
     "final_archive_checks": 48,
@@ -318,5 +338,107 @@
     "required_useful_gate_preserved": true,
     "extra_optimizer_gate_can_abort": false,
     "optimizer_telemetry_retained": true
+  },
+  "current_attempt": {
+    "release": "V095",
+    "run_id": "20261118T065516Z-35b1263cfb-fbs095",
+    "observed_at": "2026-11-18T07:36:17.152832Z",
+    "started_at": "2026-11-18T06:55:15.368153Z",
+    "child_exit_observed_at": "2026-11-18T07:10:07.888309Z",
+    "supervisor_finished_at": "2026-11-18T07:10:07.910372Z",
+    "child_exit_code": 2,
+    "science_stage_exit_code": 0,
+    "supervisor_status": "SUPERVISOR_FAILED",
+    "delivery_error": "COMPACT_CONFLICTING_DECLARED_PINS",
+    "supervisor_error": "TypeError: null return metadata",
+    "new_model_fits": 154,
+    "new_calibrator_fits": 154,
+    "failed_fits": 0,
+    "fit_counts_complete": true,
+    "checkpoint_reused_jobs": 470,
+    "native_completed_validation_jobs": 624,
+    "registered_validation_jobs": 624,
+    "pending_validation_jobs": 0,
+    "blocked_test_jobs": 312,
+    "validation_stage_complete": true,
+    "full_scientific_complete": false,
+    "full_current_test_reporting_complete": false,
+    "full_current_population_champion_eligible": false,
+    "portable_return_integrity_verified": false,
+    "actual_return_pointer_advanced": false,
+    "latest_verified_return_release": "V093",
+    "tally_scope": "VERIFIED_V090_V091_V093_V095_ATTEMPTS",
+    "scoped_failed_attempts": 6,
+    "scoped_successful_attempts": 0,
+    "scoped_active_attempts": 0,
+    "estimated_compute_usd": 0.6371760235109749,
+    "cost_observed_at": "2026-11-18T07:10:07.910446Z",
+    "estimate_is_invoice": false,
+    "selected_worker_capacity": 16,
+    "leased_cpu_count": 24,
+    "native_threads_per_worker": 1,
+    "required_gate_status": "CONDITIONAL_INSUFFICIENT_INDEPENDENT_WORK",
+    "sustained_occupancy_pass_claimed": false,
+    "source_snapshot_shards_reused": 13378,
+    "historical_source_completed_jobs": 859,
+    "historical_source_registered_jobs": 859,
+    "branch_counts": [
+      {
+        "label": "Source ablations",
+        "completed_validation_jobs": 204,
+        "checkpoint_reused_jobs": 204,
+        "new_base_fits": 0,
+        "new_calibrator_fits": 0
+      },
+      {
+        "label": "Football feature groups",
+        "completed_validation_jobs": 168,
+        "checkpoint_reused_jobs": 108,
+        "new_base_fits": 60,
+        "new_calibrator_fits": 60
+      },
+      {
+        "label": "Market components",
+        "completed_validation_jobs": 168,
+        "checkpoint_reused_jobs": 106,
+        "new_base_fits": 62,
+        "new_calibrator_fits": 62
+      },
+      {
+        "label": "Interactions",
+        "completed_validation_jobs": 84,
+        "checkpoint_reused_jobs": 52,
+        "new_base_fits": 32,
+        "new_calibrator_fits": 32
+      }
+    ]
+  },
+  "current_census": {
+    "observed_at": "2026-11-18T07:36:17.152832Z",
+    "source_run_id": "20261118T065516Z-35b1263cfb-fbs095",
+    "season": 2026,
+    "horizon_minutes": 120,
+    "completed_games": 755,
+    "pending_games": 133,
+    "total_observed_games": 888,
+    "official_population_complete_proven": false,
+    "full_current_test_metrics_available": false,
+    "rows_removed_for_model_coverage": 0,
+    "prior_retained_completed_games": 752,
+    "source_as_of_is_inspection_clock": true
+  },
+  "next_preparation": {
+    "release": "V096",
+    "status": "IN_PREPARATION",
+    "canonical_bytes": null,
+    "canonical_sha256": null,
+    "native_verified": false,
+    "native_verified_at": null,
+    "archive_checks_passed": null,
+    "owner_executions": 0,
+    "scientific_fits": 0,
+    "provider_retrievals": 0,
+    "process_or_predecessor_restarted": false,
+    "latest_return_pointer_changed_by_preparation": false
   }
 }

@@ -1,10 +1,40 @@
-# FBS V093 actual partial return and V095 repair
+# FBS native validation work, failed delivery and verified continuation
 
 [Open the self-contained report](index.html) · [Public aggregate](data/status.json) · [Retained scientific comparison](../v090/) · [Earlier failure review](../v091/)
 
-This FBS-only source review distinguishes original V093 engineering preparation, two actual owner executions, a verified partial return and the V095 replacement. It does not launch owner work, deploy a website, publish a new forecast grid or promote a champion. The prepared replacement status comes from sealed metadata; actual V093 work retains its own dates and failure outcome.
+This FBS-only source review distinguishes original V093 engineering preparation, the earlier V093 executions and verified partial return, a later V095 execution with failed delivery, and separate V096 preparation. It does not launch owner work, deploy a website, publish a new forecast grid or promote a champion. Prepared status comes from sealed metadata. Each actual attempt retains its own dates, work counts, exit and custody status.
 
-## Actual attempts and retained work
+## Latest V095 attempt: validation completed, return publication failed
+
+The later V095 owner attempt, `20261118T065516Z-35b1263cfb-fbs095`, started at **2026-11-18 06:55:15 UTC**. Its child exit **2** was observed at **07:10:07 UTC**, followed by `SUPERVISOR_FAILED`. Native evidence was inspected at **07:36:17 UTC**. No FBS owner process was active in the dated inspection; this report is not a live process monitor.
+
+Native accounting records **154 new base fits, 154 new calibrators, zero failed fits and 470 checkpoint jobs retained**. All **624/624 validation jobs** are complete in native records. The **312 current-test jobs remain blocked**, preserving the complete **936-job registration**. The admitted science stage returned 0, but return construction failed with `COMPACT_CONFLICTING_DECLARED_PINS`, causing the child's actual exit 2. The supervisor then failed on null return metadata. A provisional prepublication success cannot override those observed failures.
+
+| Native validation branch | Completed jobs | Checkpoint jobs | New base fits | New calibrators |
+|---|---:|---:|---:|---:|
+| Source ablations | 204 | 204 | 0 | 0 |
+| Football feature groups | 168 | 108 | 60 | 60 |
+| Market components | 168 | 106 | 62 | 62 |
+| Interactions | 84 | 52 | 32 | 32 |
+| **Total** | **624** | **470** | **154** | **154** |
+
+**Native completion is not verified portable custody.** This V095 attempt did not publish a verified portable return or advance the actual-return pointer. The latest verified portable return remains **V093, with 470/624 validation jobs**, detailed below. The additional native work and its dependencies must be preserved and verified for continuation; it must not be restarted merely because publication failed. No complete current-test evaluation, full scientific acceptance, new deployable champion or production promotion is claimed.
+
+The current authenticated **V090/V091/V093/V095 scope is six failed attempts, zero finalized successes and zero active attempts**. V095 is counted once. The earlier five-failure V093 snapshot below is retained at its original clock, rather than rewritten as a current tally.
+
+The attempt selected **16 scientific workers within a 24-CPU lease**, with native threads bounded to one per worker. Its queue drained without a qualifying three-minute window, producing `CONDITIONAL_INSUFFICIENT_INDEPENDENT_WORK`; this is not a sustained-occupancy pass. Its separately timestamped supervised full-host compute estimate is **USD 0.6371760235109749** at 07:10:07 UTC, not an invoice. These counts and costs are separate from the earlier V093 attempt.
+
+Source accounting retains **13,378 reused snapshot shards** and **859/859 historical qualification jobs**. These counts do not establish fresh retrieval, complete market history, or newly filled DraftKings, Kalshi, Polymarket or other bookmaker gaps. Ambiguous cumulative/rescored prediction totals are not presented as new forecasts in this public follow-up.
+
+### Observed current-season census
+
+The V095 native evidence contains **888 observed 2026 fixtures: 755 completed and 133 pending**, for the T120 winner, margin and total populations. The 07:36:17 UTC clock is the inspection time, not a new issue time or proof of original source possession. Complete official and postseason coverage remains unproven. No observed game is removed for model coverage. Full-current test metrics remain unavailable, and the retained comparison's **919 / 934 / 752** cohorts keep their original dates and meaning.
+
+### V096 preparation
+
+**In preparation; canonical delivery verification pending.** No staged V096 bytes, native verification or owner execution is claimed until the separately bound `next_preparation` record has the exact canonical hash and size, native verification clock and exact-archive check evidence. Preparation creates no owner research run, fit or provider retrieval and does not advance the latest actual-return pointer.
+
+## Earlier V093 attempts and retained work
 
 The first V093 attempt, `20261118T045410Z-6771c1bd01-fbs093`, started at 2026-11-18 04:54:10 UTC. Its child exited **2**, observed at 05:24:30 UTC. Durable finalization finished at **05:26:48 UTC** and the latest verified actual-return pointer advanced to `SAFE_PARTIAL_FAILURE_V13`.
 
@@ -38,11 +68,11 @@ The control ZIP references separate verified durable scientific payloads. The ac
 
 Integrity verification confirms that this partial return was saved and can support continuation. It does not convert owner exit 2 into a success or establish scientific completion. Continuation must resolve the latest verified checkpoint again at launch and reuse completed identities.
 
-## V095 replacement
+## Original V095 preparation snapshot
 
-**Prepared and native-verified at 2026-11-18 05:50:50 UTC; not executed.** The V095 canonical is **49,164,009 bytes**, SHA-256 `f8d4485ac8cccc7f364be66a9c7fe125fc044626009d64d7ab00dea2bce20c1c`. All **64 exact-archive engineering checks** passed, followed by native packaged verification. These checks created no owner execution, model fit, scored owner row or sports-provider retrieval and did not modify the verified V093 actual-return pointer.
+**Prepared and native-verified at 2026-11-18 05:50:50 UTC; not executed at that preparation clock.** The later V095 execution and delivery failure are reported above. The V095 canonical is **49,164,009 bytes**, SHA-256 `f8d4485ac8cccc7f364be66a9c7fe125fc044626009d64d7ab00dea2bce20c1c`. All **64 exact-archive engineering checks** passed, followed by native packaged verification. These checks created no owner execution, model fit, scored owner row or sports-provider retrieval and did not modify the verified V093 actual-return pointer.
 
-The `replacement` object and report card explicitly distinguish `IN_PREPARATION` from `PREPARED_NOT_EXECUTED`. The latter is allowed only with the exact canonical size and SHA-256, a native verification timestamp and a matching evidence pin. Neither status claims an executed replacement owner run.
+The `replacement` object and report card explicitly distinguish `IN_PREPARATION` from `PREPARED_NOT_EXECUTED`. The latter is allowed only with the exact canonical size and SHA-256, a native verification timestamp and a matching evidence pin. Those preparation statuses describe that earlier snapshot. They do not erase the later authenticated owner attempt.
 
 V095 combines two repairs. Its supervisor still starts its own child process, which attempts the unchanged FBS owner locks. If a predecessor owns the lock, the child emits a source/run/launch-bound `OWNER_LOCK_BUSY` receipt and exits **75 before pricing, input retrieval or scientific work**. The parent verifies that exit and reports `OWNER_LAUNCH_REFUSED_ACTIVE_OWNER`; no research task is admitted, the existing owner is preserved and the actual-return pointer is untouched.
 
