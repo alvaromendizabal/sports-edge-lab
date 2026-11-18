@@ -115,6 +115,83 @@ class V093Readiness(unittest.TestCase):
         self.rejects("recovery", "scoped_successful_attempts", 1)
         self.assertEqual(DATA["recovery"]["scoped_failed_releases"], ["V090", "V091"])
 
+    def test_actual_attempts_cannot_be_conflated(self):
+        d = copy.deepcopy(DATA)
+        d["attempts"]["second"]["run_id"] = d["attempts"]["first"]["run_id"]
+        with self.assertRaises(ValueError):
+            REVIEW.render(d)
+        self.rejects("attempts", "scoped_failed_attempts", 6)
+        self.rejects("attempts", "scoped_successful_attempts", 1)
+        self.rejects("attempts", "scoped_active_attempts", 1)
+
+    def test_verified_partial_failure_is_not_successful_or_active(self):
+        for key, value in (("child_exit_observed", False), ("child_exit_code", 0), ("status", "COMPLETED"), ("new_model_fits", 459), ("pending_validation_jobs", 0), ("blocked_test_jobs", 0)):
+            d = copy.deepcopy(DATA)
+            d["attempts"]["first"][key] = value
+            with self.assertRaises(ValueError):
+                REVIEW.render(d)
+        self.rejects("attempts", "latest_actual_return_refreshed", False)
+
+    def test_return_integrity_does_not_imply_scientific_success(self):
+        for key in ("owner_execution_successful", "scientific_complete"):
+            self.rejects("verified_return", key, True)
+        self.rejects("verified_return", "partial_or_resumable", False)
+        self.rejects("verified_return", "integrity_verified", False)
+
+    def test_control_zip_is_separate_from_scientific_payloads(self):
+        self.rejects("verified_return", "new_payload_uploaded_bytes", DATA["verified_return"]["control_zip_bytes"])
+        self.rejects("verified_return", "inherited_payload_bytes_not_recopied", 0)
+        self.rejects("verified_return", "aggregate_science_cap", 536870912)
+
+    def test_prediction_rows_cannot_become_unique_games_or_new_issue(self):
+        for key in ("prediction_rows_are_games", "new_original_issue_claimed", "full_current_population_champion_eligible"):
+            d=copy.deepcopy(DATA)
+            d["attempts"]["first"][key]=True
+            with self.assertRaises(ValueError):
+                REVIEW.render(d)
+
+    def test_failed_admission_has_its_own_observed_exit_and_no_fits(self):
+        for key, value in (("child_exit_code", 0), ("new_model_fits", 458), ("phase", "MODEL_FITTING"), ("primary_errno", 0), ("actual_return_pointer_advanced", True)):
+            d = copy.deepcopy(DATA)
+            d["attempts"]["second"][key] = value
+            with self.assertRaises(ValueError):
+                REVIEW.render(d)
+
+    def test_preparation_clock_precedes_actual_owner_execution(self):
+        self.rejects("prepared", "snapshot_at", DATA["attempts"]["observed_at"])
+        d = copy.deepcopy(DATA)
+        d["attempts"]["second"]["exit_observed_at"] = d["prepared"]["snapshot_at"]
+        with self.assertRaises(ValueError):
+            REVIEW.render(d)
+
+    def test_observed_occupancy_keeps_sixteen_worker_denominator(self):
+        for key, value in (("required_gate_status", "CPU_ACCEPTANCE_FAILED"), ("extra_optimizer_status", "PASS_REAL_WORK"), ("minimum_fraction", .7), ("denominator_workers", 24), ("full_24_worker_occupancy_claimed", True), ("overall_fit_throughput_acceptance_claimed", True), ("synthetic_or_reserved_load_counted", True)):
+            d = copy.deepcopy(DATA)
+            d["attempts"]["occupancy"][key] = value
+            with self.assertRaises(ValueError):
+                REVIEW.render(d)
+
+    def test_memory_policy_explains_capacity_without_peak_claim(self):
+        memory = DATA["attempts"]["memory"]
+        self.assertEqual(memory["budget_bytes"] // (memory["resident_bytes_per_worker"] + memory["transient_bytes_per_worker"]), 16)
+        for key, value in (("admitted_workers", 24), ("arbitrary_reserved_cores", 1), ("estimates_are_measured_peak_bounds", True)):
+            d = copy.deepcopy(DATA)
+            d["attempts"]["memory"][key] = value
+            with self.assertRaises(ValueError):
+                REVIEW.render(d)
+
+    def test_repair_cannot_claim_delivery_without_native_and_canonical_proof(self):
+        d = copy.deepcopy(DATA)
+        d["replacement"].update(status="PREPARED_NOT_EXECUTED", native_verified=False)
+        with self.assertRaises(ValueError):
+            REVIEW.render(d)
+        self.rejects("replacement", "owner_executions", 1)
+        self.rejects("replacement", "active_run_restart_authorized", True)
+        self.rejects("replacement", "required_useful_gate_preserved", False)
+        self.rejects("replacement", "extra_optimizer_gate_can_abort", True)
+        self.rejects("replacement", "optimizer_telemetry_retained", False)
+        self.rejects("replacement", "owner_lock_refusal_child_exit", 0)
+
     def test_original_readme_suffix_is_preserved(self):
         text = (ROOT / "docs/fbs/README.md").read_text()
         marker = "<!-- FBS_V093_READINESS_END -->\n\n"

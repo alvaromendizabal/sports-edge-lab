@@ -1,11 +1,13 @@
 <!-- FBS_V093_READINESS_START -->
-## Latest FBS preparation: V093 readiness and conditional validation
+## Latest FBS review: verified V093 partial failure and V095 repair
 
-[Open the V093 readiness review](v093/) · [Retained V089 model comparison](v090/) · [V091 failure and V092 repair history](v091/)
+[Open the execution and continuation review](v093/) · [Retained V089 model comparison](v090/) · [Earlier failure history](v091/)
 
-V093 prepares guarded price refresh and explicit validation-only continuation when the current test population changes. The full registration remains **936 jobs: 624 validation and 312 frozen test**, plus 84 fixed blends. The fresh current-test census is resolved at owner launch; a completed validation tranche does not claim full-current-test metrics or full-population champion eligibility. An empty admitted validation queue is a reported failure.
+The first V093 attempt exited **2** and finalized an integrity-verified, resumable partial failure at **2026-11-18 05:26:48 UTC**. It saved **458 new base fits, 458 calibrators and 12 reused states**, completing **470 of 624 validation jobs** with zero individual fit or task failures. **154 validation jobs remain pending and all 312 current-test jobs remain blocked.** A distinct second launch exited 1 at owner-lock admission. The verified V090/V091/V093 scope is **five failed attempts / zero finalized successes / zero active attempts** at the recorded observation.
 
-The native official public-price read is verified, with the current account/app checks, original 24-hour cache age, **USD 200 compute guard** and **12-worker target / 24-worker ceiling** preserved. Canonical staging, engineering checks, owner execution and measured scientific occupancy remain separate evidence. This preparation creates **zero owner runs, fits or provider refreshes**; the dated scientific results below are unchanged.
+The required useful preparation-plus-fit gate passed **82.2382% over 180.486 seconds**; an additional optimizer-only gate failed at **74.7899% over 180.135 seconds** and aborted the first attempt. Both percentages use the **16 memory-admitted workers**, within a **24-CPU lease and explicit ceiling**. V095 combines an explicit busy-owner refusal with removal of the extra abort requirement while preserving the required 75% / three-minute gate and optimizer measurements. Its sealed preparation status and evidence appear in the report; preparation creates no owner run.
+
+The verified return has an **84,885,900-byte control ZIP**, plus **2,324,812,938 new scientific payload bytes** stored separately. It references **32,435,360,361 inherited bytes without recopying them**. The small control ZIP is not total storage or a science cap. The end-to-end compute estimate is **USD 1.398628**, not an invoice. Retained champion metrics below keep their original dates; no new champion or full-current test result is claimed. This PR updates source only; website deployment and production promotion remain separate.
 
 <!-- FBS_V093_READINESS_END -->
 

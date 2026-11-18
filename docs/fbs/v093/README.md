@@ -1,49 +1,82 @@
-# FBS V093 launch-readiness review
+# FBS V093 actual partial return and V095 repair
 
-[Open the standalone review](index.html) · [Aggregate evidence](data/status.json) · [Retained V089 scientific comparison](../v090/) · [V091 failure and V092 preparation history](../v091/)
+[Open the self-contained report](index.html) · [Public aggregate](data/status.json) · [Retained scientific comparison](../v090/) · [Earlier failure review](../v091/)
 
-This compact report documents prepared runtime behavior and its engineering evidence. It creates no owner execution, scientific fit, provider retrieval, forecast issue, champion promotion or website deployment. Its source publication state is separate from any live website.
+This FBS-only source review distinguishes original V093 engineering preparation, two actual owner executions, a verified partial return and the V095 replacement. It does not launch owner work, deploy a website, publish a new forecast grid or promote a champion. The prepared replacement status comes from sealed metadata; actual V093 work retains its own dates and failure outcome.
 
-## Why this preparation is needed
+## Actual attempts and retained work
 
-The native execution role cannot call the authenticated pricing query API. A recent cached rate permits only its registered original 24-hour age; checking the app again does not renew that price authority. V093 retains the current account, app and instance checks, then attempts the query API, the official public regional price list, and finally an authenticated recent cache. Anonymous public retrieval requires no permission or infrastructure change.
+The first V093 attempt, `20261118T045410Z-6771c1bd01-fbs093`, started at 2026-11-18 04:54:10 UTC. Its child exited **2**, observed at 05:24:30 UTC. Durable finalization finished at **05:26:48 UTC** and the latest verified actual-return pointer advanced to `SAFE_PARTIAL_FAILURE_V13`.
 
-The public route reads the official current regional index and its exact immutable regional offer. It validates service, region, instance, component, SKU, on-demand term, currency, unit, unrestricted hourly range, publication/effective clocks and byte limits. Redirects are forbidden. The public page reports the verified full-host estimate separately from invoice costs. The USD 200 owner guard remains active when the wall-time limit is zero.
+The return records **458 new base model fits, 458 new calibrator fits, 12 reused fit states, zero failed fits and zero failed tasks**. The fit accounting is complete. These count **470 of 624 validation jobs** as saved; **154 remain pending**. All **312 current-test jobs remain blocked**, so the full registered campaign remains **936 jobs**, including incomplete work. Registered history qualification records **859/859 jobs**; this is not a count of provider requests.
 
-Official source: [AWS instructions for current regional price-list files](https://docs.aws.amazon.com/awsaccountbilling/latest/aboutv2/using-the-aws-price-list-bulk-api-fetching-price-list-files-manually.html).
+The accountability report records **967,236 scored prediction rows** and **967,760 forecast/prediction rows including ungraded output** across policies and seasons. Those are not unique games and do not assert new live issues. This unfinished tranche does not produce a newly promoted champion. The comparison linked above retains the earlier V088/V089 validation leaders with their original dates and metrics.
 
-## Conditional validation admission
+The second V093 attempt, `20261118T045636Z-916e6541b4-fbs093`, began at 04:56:36 UTC while the first was active. Its child exited **1** at 04:56:38 UTC after `BlockingIOError`, errno 11, during owner-lock acquisition. It admitted no research and produced **zero base or calibrator fits**. The later supervisor message `NO_NEW_FINALIZATION_RECORD; PREDECESSOR_PRESERVED` was secondary and obscured the admission cause. That attempt did not advance the actual-return pointer.
 
-The complete finite registration remains **936 model jobs: 624 validation and 312 frozen-test jobs**, with 84 fixed blend policies at T120. The newest actual return, checkpoints, source dependencies and complete game population are resolved again when the owner launches. The fresh 2026 denominator is not measured by this preparation.
+At the authenticated terminal observation, the verified V090/V091/V093 scope is **five failed attempts, zero finalized successes and zero active attempts**. The two V093 failures are counted separately once each. This dated scope does not describe all historical projects or later unobserved executions.
 
-When the current test population differs, unchanged and authenticated 2024/2025 validation work can proceed. Any changed validation identity or semantics blocks this conditional path. Framework gates can reduce admitted validation work; they do not reduce the registered roster or redefine the full game population. If all census semantics remain unchanged and the existing verification gates pass, the original full-campaign path remains available.
+## Required acceptance versus the extra abort gate
 
-A conditional validation return uses `PARTIAL_VALIDATION_RESEARCH_CURRENT_TEST_BLOCKED` and `REGISTERED_VALIDATION_ONLY_CURRENT_TEST_BLOCKED`. It keeps full-stage completion and full-current-test reporting false, records the 312 blocked frozen-test jobs, and preserves every required current game in a separate gap artifact with unavailable metrics. Completing admitted validation work is not full-population champion eligibility or full V13 completion. An empty admitted validation queue is `BLOCKED_NO_ADMITTED_VALIDATION_WORK`, an operational failure requiring exit 2.
+The first V093 attempt passed the required useful preparation-plus-fit gate: **82.23823158585346% over 180.48597579200032 seconds**, status `PASS_REAL_WORK`. A separate optimizer-only gate recorded **74.78988675809495% over 180.13498736099973 seconds**, below its additional 75% floor, and returned `CPU_ACCEPTANCE_FAILED`. That additional abort gate caused the operational failure despite no individual fit errors. The report preserves both outcomes; it does not rewrite the failed optimizer measurement as a pass or claim that all throughput checks passed.
 
-The report's interactive return selector illustrates these meanings. It is labeled as a contract preview and does not invent a future run result, completion count or exit code.
+Both percentages use **16 selected scientific workers** as their denominator. The run had a **24-CPU lease and explicit worker ceiling**. Its recorded memory admission is:
 
-## Retained science and selection
+```text
+floor(54,529,485,004 / (2,259,756,319 + 1,073,741,824)) = 16 workers
+```
 
-The earlier verified V089 tranche remains **90 completed jobs, 90 base fits and 90 calibrators**, with **397 policy/target identities** on the dated **919 / 934 / 752** completed-game cohorts. Those cohorts are not presented as today's refreshed census. The full candidate comparison, annual metrics, source gaps and negative findings remain in the linked V090 report, byte-for-byte unchanged.
+The terms are estimated memory budget, estimated resident bytes per worker and estimated transient bytes per worker. They are not measured peak-memory bounds. Native threads remain bounded to one per worker and the policy reserves zero arbitrary cores. The public evidence exposes the count of observed fitting PIDs, not raw process identifiers or native paths.
 
-2024 and 2025 remain validation; the primary annual score is 50/50, with the other four ratios as sensitivity reports using unchanged predictions. 2026 remains previously exposed test reporting and cannot select features, models, calibrators, blends or seasonal weights. No year-dependent training-row weighting is introduced.
+The end-to-end full-host compute estimate is **USD 1.3986283326178637**, observed at 05:26:48 UTC. It is not an invoice. The launch cost guard remains **USD 200**, including with an unlimited wall-time setting.
 
-## Recovery and scope
+## Verified partial delivery and actual storage
 
-The existing V091 visible-startup repair, completed-task identities, checkpoint integrity and compact payload references remain part of the replacement. The latest actual verified return remains V090's partial failure; V089 remains the retained scientific tranche. Prepared release metadata cannot advance either science history or the scoped tally of three failed V090/V091 attempts.
+The control return ZIP is **84,885,900 bytes**, SHA-256 `8c88308eeab9ac4c5f8013e053f3fb64298aab899407f81cdc3bed646c4adc71`. Its manifest and latest-return pointer were verified before publication. The pointer's SHA-256 is `3514583110c8377533f8a08aba6b206d5c2e88ee9c44d12060e6cb1fa344801d`.
 
-Return transport retains the 512 MiB per-part bound without an aggregate science cap. Authenticated inherited payloads are referenced rather than repeatedly duplicated; new unique payloads retain their own verification. Source availability and current-test inference requirements remain explicit.
+The control ZIP references separate verified durable scientific payloads. The actual accounting is **2,324,812,938 new uploaded payload bytes**, **8,588 new unique payloads**, and **32,435,360,361 inherited payload bytes not recopied**. The ZIP size is not the total return's scientific storage. The per-part transport limit remains 512 MiB; there is no aggregate science cap.
 
-Only sanitized aggregate readiness information is public. No owner executable, continuation body, private cloud address, account identifier, support correspondence, licensed source array, model weight, exact private feature transform or unissued forecast grid is included.
+Integrity verification confirms that this partial return was saved and can support continuation. It does not convert owner exit 2 into a success or establish scientific completion. Continuation must resolve the latest verified checkpoint again at launch and reuse completed identities.
 
-## Verification
+## V095 replacement
 
-The final private package passed 48 focused checks (including 16 pricing checks) and 16 separate compact-resume checks: 64 engineering checks, zero failures. Native packaged startup fixtures observed child exits 0, 2 and 130; they remain explicitly excluded from owner research counts. The public report carries only their hashes and sanitized scope.
+**Prepared and native-verified at 2026-11-18 05:50:50 UTC; not executed.** The V095 canonical is **49,164,009 bytes**, SHA-256 `f8d4485ac8cccc7f364be66a9c7fe125fc044626009d64d7ab00dea2bce20c1c`. All **64 exact-archive engineering checks** passed, followed by native packaged verification. These checks created no owner execution, model fit, scored owner row or sports-provider retrieval and did not modify the verified V093 actual-return pointer.
 
-The deterministic generator rejects unknown fields and contradictory claims about source scope, current population, validation-only completion, zero admission, cache freshness, cost limits, publication and scientific work. The browser oracle verifies all three contract-preview states, keyboard-triggered exact JSON download, standalone operation, malformed-evidence rejection, desktop/mobile layout and absence of page errors or external requests.
+The `replacement` object and report card explicitly distinguish `IN_PREPARATION` from `PREPARED_NOT_EXECUTED`. The latter is allowed only with the exact canonical size and SHA-256, a native verification timestamp and a matching evidence pin. Neither status claims an executed replacement owner run.
 
-- `python examples/fbs_contracts/v093/build_review.py --check`
-- `python tests/test_fbs_v093_public.py`
-- `node tests/fbs_v093_browser.test.cjs`
+V095 combines two repairs. Its supervisor still starts its own child process, which attempts the unchanged FBS owner locks. If a predecessor owns the lock, the child emits a source/run/launch-bound `OWNER_LOCK_BUSY` receipt and exits **75 before pricing, input retrieval or scientific work**. The parent verifies that exit and reports `OWNER_LAUNCH_REFUSED_ACTIVE_OWNER`; no research task is admitted, the existing owner is preserved and the actual-return pointer is untouched.
 
-Preparation checks do not establish a successful owner research run or the three-minute scientific CPU-occupancy gate. Exact measured release bytes and native verification appear only after their separate receipts are sealed.
+The second repair removes the additional optimizer-only abort requirement. The required **75% useful preparation-plus-fit occupancy over at least three minutes remains unchanged**, and optimizer CPU measurements remain available. It does not lower the required floor, invent a successful measurement, restart an active owner or claim a successful science rerun.
+
+## Preserved scientific and source boundaries
+
+Validation seasons remain **2024 and 2025**, with declared primary **50/50** scoring and evaluation-only sensitivity ratios **40/60, 30/70, 20/80 and 10/90**. Changing those ratios does not refit estimators, alter base predictions or reweight training rows. The **2026 season is previously exposed test reporting**, never a selection set.
+
+The fresh current-season denominator was unmeasured at the original preparation clock. This partial public review does not invent a complete updated census or full-current test metrics. The current-population gap contract retains the full required population and all 312 blocked test jobs. Conditional validation work does not become full-stage completion or full-population champion eligibility. Unavailable frameworks reduce admitted work without shrinking the registered roster; changed validation semantics block conditional admission.
+
+Retained V089 evidence remains **90 completed tranche jobs, 90 base fits, 90 calibrators and 397 policy/target identities** on the dated **919 / 934 / 752** game cohorts. Those cohorts are not relabeled as current. Provider coverage and gaps remain in the linked comparison. DraftKings, Kalshi, Polymarket and other bookmaker permissions do not establish actual historical availability or filled gaps. This update adds no raw licensed observations, private recipes, model weights or unissued numerical forecast grids.
+
+## Original V093 preparation evidence
+
+The earlier preparation snapshot is preserved at **2026-11-18 03:59:15 UTC**, before either actual V093 launch. It records a native-verified **48,768,273-byte** V093 canonical, **48 exact-archive engineering checks**, including 16 pricing regressions, and **16 compact-resume checks**. Its packaged native fixtures observed child exits **0, 2 and 130**. The preparation itself created **zero owner executions, scientific fits or provider retrievals**. These engineering counts are not added to the later scientific counts.
+
+At that original preparation clock, the latest verified actual return was V090. The later `verified_return` object supersedes that dated pointer and identifies the finalized V093 partial failure. Both clocks remain explicit.
+
+The original pricing authority was verified at **USD 2.57 per full-host hour** from the official AWS public regional price list after an authenticated pricing query returned access denied. The fallback validates the public region index and its bound versioned offer, exact compute scope and original clock. Cache reuse does not renew its 24-hour age; account/app checks and the USD 200 cost guard remain in force. Requests have byte bounds and reject redirects. No permission or infrastructure change was made.
+
+## Public projection and verification
+
+The generator consumes only the bounded aggregate in `data/status.json`. It has no provider or owner-run invocation and makes no network request. The HTML embeds that aggregate and supports a keyboard-accessible contract selector, evidence pins, exact JSON download, and source/offline desktop/mobile views. Contract examples are labeled separately from actual owner results.
+
+Regenerate or verify the deterministic source with:
+
+```sh
+python examples/fbs_contracts/v093/build_review.py
+python examples/fbs_contracts/v093/build_review.py --check
+python tests/test_fbs_v093_public.py
+node tests/fbs_v093_browser.test.cjs
+```
+
+The existing FBS workflow runs aggregate, privacy, outcome, scope and storage guards and the actual Chromium source/offline checks. Negative inputs must hide the report and display a visible error rather than showing stale or unsupported claims. Public evidence excludes native paths, cloud account details, licensed feeds, private return payloads, credentials and support correspondence. Earlier scientific assets and other owners remain unchanged.
+
+This is repository source under review. Hosted website deployment, production promotion and scientific owner execution remain separate actions.

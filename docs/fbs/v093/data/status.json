@@ -1,7 +1,7 @@
 {
   "schema": "fbs.public.launch-readiness.v093",
   "owner": "FBS",
-  "as_of": "2026-11-18T03:59:15.024724Z",
+  "as_of": "2026-11-18T05:50:50.968293+00:00",
   "publication": {
     "status": "SOURCE_REVIEW",
     "website_deployed": false,
@@ -18,7 +18,8 @@
     "owner_executions": 0,
     "scientific_fits": 0,
     "provider_retrievals": 0,
-    "measured_optimizer_cores": null
+    "measured_optimizer_cores": null,
+    "snapshot_at": "2026-11-18T03:59:15.024724Z"
   },
   "selection": {
     "validation_seasons": [
@@ -116,7 +117,8 @@
       "V091"
     ],
     "scoped_failed_attempts": 3,
-    "scoped_successful_attempts": 0
+    "scoped_successful_attempts": 0,
+    "snapshot_at": "2026-11-18T03:59:15.024724Z"
   },
   "verification": {
     "price_regression_checks": 16,
@@ -131,7 +133,7 @@
       {
         "label": "Prepared V093 canonical",
         "sha256": "e1879ff7640b30af63cb10dd99b9036ad021a7a0bc632e67072b480e405c95f8",
-        "scope": "48,768,273 physical bytes verified; software preparation only. No owner execution."
+        "scope": "At the original preparation snapshot: 48,768,273 physical bytes verified. Preparation itself started no owner execution; subsequent actual attempts are recorded separately."
       },
       {
         "label": "Final-archive engineering acceptance",
@@ -141,16 +143,180 @@
       {
         "label": "Native packaged verification",
         "sha256": "5f0c2354ae0a4453a19a1f8bd620bcbb1d91b91453aa45acbf8efda4add13c23",
-        "scope": "2,835 active members verified; actual packaged fixture children exited 0, 2 and 130. Zero owner executions, fits or sports retrievals; actual-return pointer unchanged."
+        "scope": "Original preparation fixtures preceding the actual launch: 2,835 active members verified and fixture child exits 0, 2 and 130. Those checks started no owner execution, fit or sports retrieval and left the actual-return pointer unchanged."
       },
       {
         "label": "Native public-price proof",
         "sha256": "126f1e07fbc39f4e37fb9665e103f5a3c7cec2a657093fc3fa7de3864c390b0f",
         "scope": "Exact packaged price helper verified the current app and official regional public price. Original observed clock preserved; full-host estimate is not an invoice."
+      },
+      {
+        "label": "Actual pipeline memory policy",
+        "sha256": "45e709e8df17e3b6036d911a736b3e18644ae514faca6c7c5d769d30546beeb1",
+        "scope": "54,529,485,004-byte budget divided by 2,259,756,319 resident plus 1,073,741,824 transient bytes per worker admits 16 workers. These are budget estimates, not measured peak bounds."
+      },
+      {
+        "label": "Distinct admission failure reconciliation",
+        "sha256": "4dd644202bf6f18e6ac0571a8e151a2d0cc9fa7b3490cedb3157a106dbbb1377",
+        "scope": "The second V093 attempt exited 1 at owner-lock admission while the first was then active. Its missing-finalization message was secondary; the first attempt later completed its own failure finalization."
+      },
+      {
+        "label": "Final partial return and work accounting",
+        "sha256": "339cfa1216711601d3c1377ca01a8a1c7db1511ba41fce12150da7797aac9159",
+        "scope": "Final verified partial failure:458 base fits,458 calibrators,12 reused states,470 validation jobs,zero failed fits;967,236 scored prediction rows and967,760 forecast/prediction rows including ungraded. These are output rows,not unique games or newly issued live forecasts."
+      },
+      {
+        "label": "Actual terminal CPU acceptance record",
+        "sha256": "fa4cec5613b23c7f2d7909bf2df7f8d26e7a7c7cb0e9fb44108a92c9cecd87ef",
+        "scope": "Required useful preparation-plus-fit gate passed at82.2382% over180.486s; additional optimizer-only gate failed at74.7899% over180.135s. Both use16 selected workers,not the24-CPU lease. The V093 operational failure remains recorded."
+      },
+      {
+        "label": "Verified finalization and publication",
+        "sha256": "10d7c8e1d0373bdb0507ac5e8bf3388b5db3b41172e158e55cde1afb375c2f8d",
+        "scope": "The child exited2 and the supervisor finished durable partial-return publication at05:26:48UTC. End-to-end full-host compute estimate1.398628USD is not an invoice."
+      },
+      {
+        "label": "Verified compact control ZIP",
+        "sha256": "8c88308eeab9ac4c5f8013e053f3fb64298aab899407f81cdc3bed646c4adc71",
+        "scope": "84,885,900-byte control ZIP plus verified durable payload references. Separately observed2,324,812,938 new payload-upload bytes;32,435,360,361 inherited bytes were not recopied. No aggregate science cap."
+      },
+      {
+        "label": "Prepared V095 canonical",
+        "sha256": "f8d4485ac8cccc7f364be66a9c7fe125fc044626009d64d7ab00dea2bce20c1c",
+        "scope": "49,164,009 verified canonical bytes. The combined repair is prepared and native-verified; zero replacement owner executions."
+      },
+      {
+        "label": "V095 exact-archive engineering acceptance",
+        "sha256": "f5269d8784cf0870cc8df4695444a5004c3128c1735dfe8c7b05e2f0c950b69f",
+        "scope": "64 checks passed: 18 admission, five launch, eight scope, 16 compact-resume and 17 runtime-policy checks. No owner model fits, scored owner rows or provider calls."
+      },
+      {
+        "label": "V095 native preparation verification",
+        "sha256": "9522ab294bbe3b7249a8a9880e9f722864bc0ad4cd5446ef757177f724056a51",
+        "scope": "Native physical bytes, canonical digest and packaged engineering self-test verified at 2026-11-18 05:50:50 UTC. No owner research, fitted models or sports-provider retrieval; the verified V093 actual return is unchanged."
       }
     ],
     "final_archive_checks": 48,
     "compact_resume_checks": 16,
     "software_check_failures": 0
+  },
+  "attempts": {
+    "observed_at": "2026-11-18T05:29:28.314851+00:00",
+    "tally_scope": "VERIFIED_V090_V091_V093_ATTEMPTS",
+    "scoped_failed_attempts": 5,
+    "scoped_successful_attempts": 0,
+    "scoped_active_attempts": 0,
+    "latest_actual_return_refreshed": true,
+    "first": {
+      "run_id": "20261118T045410Z-6771c1bd01-fbs093",
+      "started_at": "2026-11-18T04:54:10.569915Z",
+      "science_finished_at": "2026-11-18T05:20:19.396098Z",
+      "child_exit_observed_at": "2026-11-18T05:24:30.160107Z",
+      "finalization_finished_at": "2026-11-18T05:26:48.782577Z",
+      "status": "SAFE_PARTIAL_FAILURE_V13",
+      "phase": "JOINT_VALIDATION",
+      "child_exit_code": 2,
+      "child_exit_observed": true,
+      "new_model_fits": 458,
+      "new_calibrator_fits": 458,
+      "reused_fit_states": 12,
+      "failed_fits": 0,
+      "failed_tasks": 0,
+      "fit_counts_complete": true,
+      "completed_validation_jobs": 470,
+      "registered_validation_jobs": 624,
+      "pending_validation_jobs": 154,
+      "blocked_test_jobs": 312,
+      "new_scored_prediction_rows": 967236,
+      "new_forecast_rows_including_ungraded": 967760,
+      "prediction_rows_are_games": false,
+      "new_original_issue_claimed": false,
+      "historical_source_completed_jobs": 859,
+      "historical_source_registered_jobs": 859,
+      "observed_fit_pid_count": 16,
+      "leased_cpu_count": 24,
+      "selected_worker_capacity": 16,
+      "estimated_compute_usd": 1.3986283326178637,
+      "cost_observed_at": "2026-11-18T05:26:48.782679Z",
+      "estimate_is_invoice": false,
+      "final_result_verified": true,
+      "full_current_test_reporting_complete": false,
+      "full_current_population_champion_eligible": false
+    },
+    "second": {
+      "run_id": "20261118T045636Z-916e6541b4-fbs093",
+      "started_at": "2026-11-18T04:56:36.744730Z",
+      "exit_observed_at": "2026-11-18T04:56:38.102347Z",
+      "status": "ADMISSION_FAILED",
+      "phase": "OWNER_LOCK_ADMISSION",
+      "child_exit_code": 1,
+      "primary_error_type": "BlockingIOError",
+      "primary_errno": 11,
+      "reason": "EXISTING_ACTIVE_FBS_OWNER_LOCK",
+      "secondary_error": "NO_NEW_FINALIZATION_RECORD; PREDECESSOR_PRESERVED",
+      "new_model_fits": 0,
+      "new_calibrator_fits": 0,
+      "actual_return_pointer_advanced": false
+    },
+    "occupancy": {
+      "observed_at": "2026-11-18T05:18:05.757753Z",
+      "required_gate_status": "PASS_REAL_WORK",
+      "required_useful_fraction": 0.8223823158585346,
+      "required_window_seconds": 180.48597579200032,
+      "extra_optimizer_status": "CPU_ACCEPTANCE_FAILED",
+      "extra_optimizer_fraction": 0.7478988675809495,
+      "extra_optimizer_window_seconds": 180.13498736099973,
+      "minimum_fraction": 0.75,
+      "minimum_seconds": 180,
+      "denominator_workers": 16,
+      "leased_cpus": 24,
+      "full_24_worker_occupancy_claimed": false,
+      "overall_fit_throughput_acceptance_claimed": false,
+      "synthetic_or_reserved_load_counted": false
+    },
+    "memory": {
+      "budget_bytes": 54529485004,
+      "resident_bytes_per_worker": 2259756319,
+      "transient_bytes_per_worker": 1073741824,
+      "admitted_workers": 16,
+      "hard_ceiling": 24,
+      "arbitrary_reserved_cores": 0,
+      "estimates_are_measured_peak_bounds": false,
+      "native_threads_per_worker": 1
+    }
+  },
+  "verified_return": {
+    "run_id": "20261118T045410Z-6771c1bd01-fbs093",
+    "status": "SAFE_PARTIAL_FAILURE_V13",
+    "published_at": "2026-11-18T05:26:48.782577Z",
+    "pointer_sha256": "3514583110c8377533f8a08aba6b206d5c2e88ee9c44d12060e6cb1fa344801d",
+    "integrity_verified": true,
+    "durable_available": true,
+    "owner_execution_successful": false,
+    "scientific_complete": false,
+    "partial_or_resumable": true,
+    "storage_mode": "CONTROL_ZIP_PLUS_VERIFIED_DURABLE_REFERENCES",
+    "control_zip_bytes": 84885900,
+    "control_zip_sha256": "8c88308eeab9ac4c5f8013e053f3fb64298aab899407f81cdc3bed646c4adc71",
+    "part_count": 1,
+    "new_payload_uploaded_bytes": 2324812938,
+    "inherited_payload_bytes_not_recopied": 32435360361,
+    "new_unique_payload_count": 8588,
+    "aggregate_science_cap": null
+  },
+  "replacement": {
+    "release": "V095",
+    "status": "PREPARED_NOT_EXECUTED",
+    "canonical_bytes": 49164009,
+    "canonical_sha256": "f8d4485ac8cccc7f364be66a9c7fe125fc044626009d64d7ab00dea2bce20c1c",
+    "native_verified": true,
+    "native_verified_at": "2026-11-18T05:50:50.968293+00:00",
+    "owner_executions": 0,
+    "active_run_restart_authorized": false,
+    "owner_lock_refusal_status": "OWNER_LAUNCH_REFUSED_ACTIVE_OWNER",
+    "owner_lock_refusal_child_exit": 75,
+    "required_useful_gate_preserved": true,
+    "extra_optimizer_gate_can_abort": false,
+    "optimizer_telemetry_retained": true
   }
 }
