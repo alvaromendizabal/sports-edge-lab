@@ -35,13 +35,13 @@ class ExecutionStatusTests(unittest.TestCase):
             status.validate(value)
 
     def test_latest_execution_is_verified_but_scientifically_partial(self):
-        self.assertEqual(self.data["latest_observed_attempt"]["release"], "R27")
-        self.assertEqual(self.data["latest_observed_attempt"]["status"], status.BUDGET_DEFERRED)
+        self.assertEqual(self.data["latest_observed_attempt"]["release"], "R28")
+        self.assertEqual(self.data["latest_observed_attempt"]["status"], status.RESOURCE_DEFERRED)
         self.assertTrue(self.data["latest_observed_attempt"]["return_published"])
-        self.assertEqual(self.data["latest_verified_return"]["release"], "R27")
-        self.assertEqual(self.data["latest_verified_return"]["payloads_verified"], 52)
+        self.assertEqual(self.data["latest_verified_return"]["release"], "R28")
+        self.assertEqual(self.data["latest_verified_return"]["payloads_verified"], 132)
         self.assertEqual(self.data["latest_verified_return"]["sha256"],
-                         "45ac375264849a50271db7778a9d1fa83ae04e4b77f9798d6cf2581f16489156")
+                         "36c2b6fa93b4d01e24815ee47386e5c7a604756dfaf3560529ac51b13e84f780")
         self.reject(lambda d: d["latest_observed_attempt"].update(evidence_class="VERIFIED_RECOVERY_EVIDENCE"))
         self.reject(lambda d: d["latest_observed_attempt"].update(return_published=False))
         self.reject(lambda d: d["latest_verified_return"].update(release="R24"))
@@ -55,7 +55,10 @@ class ExecutionStatusTests(unittest.TestCase):
         previous = status.validate(json.loads(status.PREVIOUS_VERIFIED_DATA.read_text()))
         self.assertEqual(previous["schema"], status.PREVIOUS_SCHEMA)
         self.assertEqual(previous["latest_verified_return"]["release"], "R26")
-        self.assertEqual(self.data["attempts"][:-1], previous["attempts"])
+        price = status.validate(json.loads(status.PRICE_DATA.read_text()))
+        self.assertEqual(self.data["attempts"][:-1], price["attempts"])
+        self.assertEqual(price["attempts"][:-1], previous["attempts"])
+        self.assertEqual(status.render_current_banner(price), status.PREVIOUS_PRICE_EXECUTION_BANNER)
         self.assertEqual(previous["attempts"][:-1], old["attempts"])
         self.assertEqual(status.render_current_banner(previous), status.PREVIOUS_VERIFIED_EXECUTION_BANNER)
         self.assertEqual(status.render_current_banner(old), status.PREVIOUS_EXECUTION_BANNER)
@@ -64,11 +67,11 @@ class ExecutionStatusTests(unittest.TestCase):
 
     def test_current_startup_reuse_is_actual_owner_evidence(self):
         c = self.data["current_execution"]
-        self.assertEqual(c["reused_startup_tests"], 1074)
+        self.assertEqual(c["reused_startup_tests"], 1102)
         self.assertEqual(c["fresh_startup_tests"], 0)
-        self.assertAlmostEqual(c["startup_seconds"], 0.06511124499957077)
-        self.assertEqual(c["parent_cpu_seconds"], 2.228032)
-        self.assertAlmostEqual(c["owner_elapsed_seconds"], 2.6334098740044283)
+        self.assertAlmostEqual(c["startup_seconds"], 0.06631604299946048)
+        self.assertEqual(c["parent_cpu_seconds"], 136.849758)
+        self.assertAlmostEqual(c["owner_elapsed_seconds"], 203.60172191999936)
         self.assertEqual(c["completed_child_cpu_seconds"], 0)
         self.reject(lambda d: d["current_execution"].update(reused_startup_tests=955))
         self.reject(lambda d: d["current_execution"].update(owner_elapsed_seconds=0))
@@ -84,9 +87,52 @@ class ExecutionStatusTests(unittest.TestCase):
         self.reject(lambda d: d["current_execution"].update(scientific_gate_executed=True))
         self.reject(lambda d: d["current_execution"].update(scientific_gate="PASS"))
 
+    def test_recovery_wait_is_not_wall_limit_or_continuous_pressure(self):
+        reason = self.data['current_execution']['deferral']
+        self.assertEqual(reason['configured_wait_minutes'], 2)
+        self.assertEqual(reason['wait_budget_seconds'], 120)
+        self.assertTrue(reason['wall_limit_disabled'])
+        self.assertFalse(reason['continuous_pressure_duration_known'])
+        self.assertIsNone(self.data['current_execution']['pressure_wait_seconds'])
+        self.reject(lambda d: d['current_execution']['deferral'].update(wait_budget_seconds=0))
+        self.reject(lambda d: d['current_execution']['deferral'].update(continuous_pressure_duration_known=True))
+        self.reject(lambda d: d['current_execution'].update(pressure_wait_seconds=120))
+
+    def test_durable_hits_are_not_recompression_or_model_fits(self):
+        e = self.data['recovery_evidence']
+        self.assertEqual(e['durable_predecessor_hits'], 50)
+        self.assertEqual(e['predecessor_requests'], 50)
+        self.assertEqual(e['predecessor_recompression_calls'], 0)
+        self.assertEqual(e['durable_predecessor_evictions'], 0)
+        self.assertEqual(e['in_memory_byte_cache_evictions'], 50)
+        self.assertEqual(e['productive_cache_reads_after_wait_started'], 82)
+        self.assertEqual(e['terminal_pressure_reasons'], [])
+        self.reject(lambda d: d['recovery_evidence'].update(predecessor_recompression_calls=50))
+        self.reject(lambda d: d['recovery_evidence'].update(durable_predecessor_evictions=50))
+        self.reject(lambda d: d['recovery_evidence'].update(out_of_memory_or_external_kill_proven=True))
+
+    def test_preparation_requires_receipt_but_never_acquires_owner_credit(self):
+        self.assertEqual(self.data['next_preparation']['owner_executions'], 0)
+        self.assertFalse(self.data['next_preparation']['science_completion_claimed'])
+        self.assertEqual(self.data['audit_scope']['completed_campaigns'], 0)
+        self.reject(lambda d: d['next_preparation'].update(owner_executions=1))
+        self.reject(lambda d: d['next_preparation'].update(science_completion_claimed=True))
+        self.reject(lambda d: d['audit_scope'].update(completed_campaigns=1))
+        if self.data['next_preparation']['status'] == 'PREPARING':
+            self.reject(lambda d: d['next_preparation'].update(status='PREPARED_VERIFIED'))
+        else:
+            self.reject(lambda d: d['next_preparation'].update(engineering_evidence_sha256=None))
+
+    def test_estimate_keeps_its_own_measured_cost_interval_and_not_invoice(self):
+        e = self.data['recovery_evidence']; c = self.data['current_execution']
+        self.assertLess(e['estimated_cost_wall_seconds'], c['owner_elapsed_seconds'])
+        self.assertAlmostEqual(c['estimated_instance_wall_cost_usd'], e['rate_usd_per_hour']*e['estimated_cost_wall_seconds']/3600, places=7)
+        self.reject(lambda d: d['current_execution'].update(estimated_instance_wall_cost_usd=0))
+        self.reject(lambda d: d['current_execution'].update(estimated_instance_wall_cost_usd=200))
+
     def test_cost_clock_and_unknown_measurement_guards(self):
-        self.assertEqual(self.data["current_execution"]["cost_basis"], status.UNKNOWN_COST)
-        self.assertIsNone(self.data["current_execution"]["estimated_instance_wall_cost_usd"])
+        self.assertEqual(self.data["current_execution"]["cost_basis"], status.ESTIMATED_COST)
+        self.assertAlmostEqual(self.data["current_execution"]["estimated_instance_wall_cost_usd"], 0.14515028062369395)
         self.reject(lambda d: d["current_execution"].update(cost_basis="BILLED_EXCLUSIVE_OWNER_COST"))
         self.reject(lambda d: d["current_execution"].update(parent_cpu_seconds=-1))
         self.reject(lambda d: d["current_execution"].update(cache_reads=True))
@@ -96,6 +142,7 @@ class ExecutionStatusTests(unittest.TestCase):
         self.reject(lambda d: d["current_execution"].update(unverified_science={}))
 
     def test_unknown_cost_cannot_be_zero_or_a_spent_budget(self):
+        self.data = status.validate(json.loads(status.PRICE_DATA.read_text()))
         for cost in (0, 0.0, 200, -1, True):
             self.reject(lambda d, cost=cost: d["current_execution"].update(estimated_instance_wall_cost_usd=cost))
         self.reject(lambda d: d["current_execution"]["deferral"].update(budget_exhaustion_proven=True))
@@ -103,6 +150,7 @@ class ExecutionStatusTests(unittest.TestCase):
         self.assertEqual(self.data["current_execution"]["deferral"]["recorded_error"], "B057_WORK_BUDGET_EXHAUSTED")
 
     def test_unreported_storage_or_pressure_cannot_inherit_prior_measurements(self):
+        self.data = status.validate(json.loads(status.PRICE_DATA.read_text()))
         for key in ("cache_reads", "cache_bytes", "fresh_storage_reads", "fresh_storage_bytes", "pressure_wait_seconds", "pressure_reason"):
             self.assertIsNone(self.data["current_execution"][key])
             self.reject(lambda d, key=key: d["current_execution"].update({key: 0}))
@@ -111,16 +159,17 @@ class ExecutionStatusTests(unittest.TestCase):
         self.assertAlmostEqual(previous["current_execution"]["estimated_instance_wall_cost_usd"], 0.31758846043366623)
 
     def test_original_price_observation_and_expiry_must_precede_launch(self):
+        self.data = status.validate(json.loads(status.PRICE_DATA.read_text()))
         for patch in ({"quote_expires_at": "2026-11-19T02:36:39.054419+00:00"},
                       {"quote_max_age_days": 8}, {"quote_observed_at": "2026-11-11T02:36:39.054419"}):
             self.reject(lambda d, patch=patch: d["current_execution"]["deferral"].update(patch))
         self.assertEqual(self.data["current_execution"]["deferral"]["compute_cost_guard_usd"], 200)
 
     def test_attempt_census_counts_invocations_separately_from_run_ids(self):
-        self.assertEqual(self.data["audit_scope"]["audited_attempts"], 8)
-        self.assertEqual(self.data["audit_scope"]["distinct_run_ids"], 6)
+        self.assertEqual(self.data["audit_scope"]["audited_attempts"], 9)
+        self.assertEqual(self.data["audit_scope"]["distinct_run_ids"], 7)
         self.reject(lambda d: d["audit_scope"].update(audited_attempts=7))
-        self.reject(lambda d: d["audit_scope"].update(distinct_run_ids=9))
+        self.reject(lambda d: d["audit_scope"].update(distinct_run_ids=10))
 
     def test_new_fits_do_not_count_reuse(self):
         rows = {r["id"]: r for r in self.data["attempts"]}
@@ -171,7 +220,7 @@ class ExecutionStatusTests(unittest.TestCase):
         self.assertEqual(result.returncode, 0, result.stdout + result.stderr)
         report = json.loads(result.stdout)
         self.assertFalse(report["visual_browser_claim"])
-        self.assertEqual(report["corrupt_evidence_rejections"], 16)
+        self.assertEqual(report["corrupt_evidence_rejections"], 20)
         self.assertEqual(report["filter_views"], 5)
         self.assertTrue(report["current_partial_return_verified"])
 

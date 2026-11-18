@@ -18,10 +18,12 @@ from zoneinfo import ZoneInfo
 
 HERE = Path(__file__).resolve().parent
 ROOT = HERE.parents[1]
-DATA = HERE / "EXECUTION_STATUS_R27_20261118.json"
+DATA = HERE / "EXECUTION_STATUS_R28_20261118.json"
+PRICE_DATA = HERE / "EXECUTION_STATUS_R27_20261118.json"
 PREVIOUS_VERIFIED_DATA = HERE / "EXECUTION_STATUS_20261118.json"
 HISTORICAL_DATA = HERE / "EXECUTION_STATUS_20261117.json"
-SCHEMA = "sel.ncaa.public.execution_status.v3"
+SCHEMA = "sel.ncaa.public.execution_status.v4"
+PRICE_SCHEMA = "sel.ncaa.public.execution_status.v3"
 PREVIOUS_SCHEMA = "sel.ncaa.public.execution_status.v2"
 LEGACY_SCHEMA = "sel.ncaa.public.execution_status.v1"
 LEGACY_TOP_KEYS = {"schema", "owner", "observed_at", "publication", "latest_observed_attempt",
@@ -52,15 +54,85 @@ def canonical(data):
     return json.dumps(data, indent=2, sort_keys=True, allow_nan=False) + "\n"
 
 
+def validate_recovery_v4(data, clocks):
+    current, evidence, preparation = data['current_execution'], data['recovery_evidence'], data['next_preparation']
+    reason = current['deferral']
+    expected = {'recorded_status','recorded_error','root_cause','classification','initial_wait_at',
+        'deadline_expired_at','configured_wait_minutes','wait_budget_seconds','deadline_kind',
+        'wall_limit_disabled','continuous_pressure_duration_known','compute_cost_guard_usd','budget_exhaustion_proven'}
+    if (set(reason) != expected or reason['recorded_status'] != RESOURCE_DEFERRED
+            or reason['recorded_error'] != 'V112_BOUNDED_RECOVERY_MEMORY_PRESSURE'
+            or reason['root_cause'] != 'PRODUCTIVE_RECOVERY_EXHAUSTED_STALE_LAUNCH_WAIT'
+            or reason['classification'] != 'LAUNCH_SCOPED_DEADLINE_AFTER_PRESSURE_CLEARED'
+            or reason['deadline_kind'] != 'LAUNCH_SCOPED_AFTER_FIRST_PRESSURE'
+            or reason['wall_limit_disabled'] is not True or reason['continuous_pressure_duration_known'] is not False
+            or reason['budget_exhaustion_proven'] is not False or reason['compute_cost_guard_usd'] != 200
+            or type(reason['configured_wait_minutes']) is not int or reason['configured_wait_minutes'] <= 0
+            or reason['wait_budget_seconds'] != 60 * reason['configured_wait_minutes']):
+        raise ValueError('Recovery wait is separate from pressure duration, owner wall and compute cost')
+    waited, expired = [datetime.fromisoformat(reason[k]) for k in ('initial_wait_at','deadline_expired_at')]
+    if (any(t.tzinfo is None for t in (waited, expired)) or not clocks[0] <= waited < expired <= clocks[1]
+            or (expired-waited).total_seconds() < reason['wait_budget_seconds']):
+        raise ValueError('Recovery deadline requires its real ordered clocks')
+    keys = {'initial_memory_full_avg10','terminal_memory_full_avg10','terminal_pressure_reasons',
+        'terminal_available_memory_bytes','terminal_memory_available_for_io_bytes','productive_cache_reads_after_wait_started',
+        'predecessor_requests','durable_predecessor_hits','predecessor_recompression_calls','durable_predecessor_evictions',
+        'compressed_ancestor_bytes_reused','ancestor_input_bytes_fingerprinted','in_memory_byte_cache_evictions',
+        'durable_and_memory_cache_evictions_are_distinct','out_of_memory_or_external_kill_proven',
+        'rate_usd_per_hour','estimated_cost_wall_seconds','price_verification_succeeded','wait_policy_note'}
+    if set(evidence) != keys:
+        raise ValueError('Unexpected recovery evidence fields')
+    counts = keys - {'initial_memory_full_avg10','terminal_memory_full_avg10','terminal_pressure_reasons',
+        'durable_and_memory_cache_evictions_are_distinct','out_of_memory_or_external_kill_proven',
+        'rate_usd_per_hour','estimated_cost_wall_seconds','price_verification_succeeded','wait_policy_note'}
+    if any(type(evidence[k]) is not int or evidence[k] < 0 for k in counts):
+        raise ValueError('Recovery observations need nonnegative integer counts')
+    if (evidence['terminal_pressure_reasons'] != [] or evidence['terminal_memory_full_avg10'] != 0
+            or evidence['initial_memory_full_avg10'] <= 0 or evidence['productive_cache_reads_after_wait_started'] <= 0
+            or evidence['productive_cache_reads_after_wait_started'] > current['cache_reads']
+            or evidence['durable_predecessor_hits'] != evidence['predecessor_requests']
+            or evidence['predecessor_recompression_calls'] != 0 or evidence['durable_predecessor_evictions'] != 0
+            or evidence['terminal_memory_available_for_io_bytes'] > evidence['terminal_available_memory_bytes']
+            or evidence['out_of_memory_or_external_kill_proven'] is not False
+            or evidence['durable_and_memory_cache_evictions_are_distinct'] is not True
+            or evidence['price_verification_succeeded'] is not True
+            or current['pressure_wait_seconds'] is not None
+            or current['pressure_reason'] != 'INITIAL_PRESSURE_CLEARED_BEFORE_SCOPED_DEADLINE_EXPIRY'):
+        raise ValueError('Productive cached recovery cannot become repeated fits, current pressure or recompression')
+    rate = evidence['rate_usd_per_hour']
+    if (type(rate) not in (int,float) or not math.isfinite(rate) or rate <= 0
+            or not 0 < evidence['estimated_cost_wall_seconds'] <= current['owner_elapsed_seconds']
+            or not math.isclose(current['estimated_instance_wall_cost_usd'], rate * evidence['estimated_cost_wall_seconds'] / 3600,
+                                rel_tol=1e-6, abs_tol=1e-6)):
+        raise ValueError('Observed shared-instance estimate must reconcile to rate and wall time')
+    if (set(preparation) != {'release','status','owner_executions','science_completion_claimed','canonical_gate_passed',
+                           'upload_verified','note','stages','engineering_tests','engineering_failures','engineering_evidence_sha256'}
+            or preparation['release'] != 'R29' or preparation['status'] not in {'PREPARING','PREPARED_VERIFIED'}
+            or preparation['owner_executions'] != 0 or preparation['science_completion_claimed'] is not False
+            or len(preparation['stages']) != 4
+            or any(set(s) != {'name','status'} or s['status'] != 'IMPLEMENTED_OWNER_EXECUTION_PENDING' for s in preparation['stages'])):
+        raise ValueError('Prepared implementation is not verified staging or completed owner science')
+    if preparation['status'] == 'PREPARING':
+        if (any(preparation[k] is not False for k in ('canonical_gate_passed','upload_verified'))
+                or any(preparation[k] is not None for k in ('engineering_tests','engineering_failures','engineering_evidence_sha256'))):
+            raise ValueError('Pending preparation cannot acquire verification credit')
+    elif (any(preparation[k] is not True for k in ('canonical_gate_passed','upload_verified'))
+            or type(preparation['engineering_tests']) is not int or preparation['engineering_tests'] <= 0
+            or preparation['engineering_failures'] != 0
+            or re.fullmatch('[0-9a-f]{64}', str(preparation['engineering_evidence_sha256'])) is None):
+        raise ValueError('Verified preparation requires its actual engineering receipt')
+
+
 def validate(data):
     """Fail closed on evidence-class confusion, inflated work, or private data."""
     if not isinstance(data, dict):
         raise ValueError("Unexpected public execution fields")
     schema = data.get("schema")
-    expected = TOP_KEYS | {"audit_scope"} if schema == SCHEMA else TOP_KEYS if schema == PREVIOUS_SCHEMA else LEGACY_TOP_KEYS
+    expected = (TOP_KEYS | {'audit_scope','recovery_evidence','next_preparation'} if schema == SCHEMA else
+                TOP_KEYS | {'audit_scope'} if schema == PRICE_SCHEMA else TOP_KEYS if schema == PREVIOUS_SCHEMA else LEGACY_TOP_KEYS)
     if set(data) != expected:
         raise ValueError("Unexpected public execution fields")
-    if schema not in {SCHEMA, PREVIOUS_SCHEMA, LEGACY_SCHEMA} or data["owner"] != "NCAA basketball":
+    if schema not in {SCHEMA, PRICE_SCHEMA, PREVIOUS_SCHEMA, LEGACY_SCHEMA} or data["owner"] != "NCAA basketball":
         raise ValueError("Wrong owner or schema")
     if FORBIDDEN.search(canonical(data)):
         raise ValueError("Private or out-of-owner content")
@@ -125,25 +197,25 @@ def validate(data):
             or s["new_full_population_champion"] is not False
             or s["test_exposure_erased"] is not False):
         raise ValueError("Scientific selection contract changed")
-    if schema in {SCHEMA, PREVIOUS_SCHEMA}:
+    if schema in {SCHEMA, PRICE_SCHEMA, PREVIOUS_SCHEMA}:
         current = data["current_execution"]
-        current_keys = CURRENT_KEYS | {"deferral"} if schema == SCHEMA else CURRENT_KEYS
+        current_keys = CURRENT_KEYS | {"deferral"} if schema in {SCHEMA, PRICE_SCHEMA} else CURRENT_KEYS
         if not isinstance(current, dict) or set(current) != current_keys:
             raise ValueError("Unexpected current execution fields")
         if (current["release"] != observed["release"] or current["phase"] != "BEFORE_FIT"
-                or observed["status"] != (BUDGET_DEFERRED if schema == SCHEMA else RESOURCE_DEFERRED)
+                or observed["status"] != (BUDGET_DEFERRED if schema == PRICE_SCHEMA else RESOURCE_DEFERRED)
                 or current["return_published"] is not True
                 or observed["return_published"] is not True
                 or current["scientific_gate"] != "PENDING_REAL_ELIGIBLE_WORK"
                 or current["scientific_gate_executed"] is not False
-                or current["cost_basis"] != (UNKNOWN_COST if schema == SCHEMA else ESTIMATED_COST)):
+                or current["cost_basis"] != (UNKNOWN_COST if schema == PRICE_SCHEMA else ESTIMATED_COST)):
             raise ValueError("Partial return cannot acquire scientific completion or fit occupancy")
         count_keys = ("recorded_stages_completed", "requested_workers", "peak_scientific_workers",
                       "maximum_ready_depth", "new_target_fits", "new_calibration_fits",
                       "new_residual_fits", "verified_reused_target_fits", "fresh_startup_tests",
                       "reused_startup_tests", "cache_reads", "cache_bytes", "fresh_storage_reads", "fresh_storage_bytes")
         for key in count_keys:
-            if schema == SCHEMA and key in ("cache_reads", "cache_bytes", "fresh_storage_reads", "fresh_storage_bytes") and current[key] is None:
+            if schema == PRICE_SCHEMA and key in ("cache_reads", "cache_bytes", "fresh_storage_reads", "fresh_storage_bytes") and current[key] is None:
                 continue
             if type(current[key]) is not int or current[key] < 0:
                 raise ValueError("Current execution counts require nonnegative integers")
@@ -153,7 +225,8 @@ def validate(data):
                 raise ValueError("Unentered scientific work cannot acquire credit")
         for key in ("startup_seconds", "owner_elapsed_seconds", "parent_cpu_seconds",
                     "completed_child_cpu_seconds", "estimated_instance_wall_cost_usd", "pressure_wait_seconds"):
-            if schema == SCHEMA and key in ("estimated_instance_wall_cost_usd", "pressure_wait_seconds") and current[key] is None:
+            if (schema == PRICE_SCHEMA and key in ("estimated_instance_wall_cost_usd", "pressure_wait_seconds")
+                    or schema == SCHEMA and key == 'pressure_wait_seconds') and current[key] is None:
                 continue
             if type(current[key]) not in (int, float) or not math.isfinite(current[key]) or current[key] < 0:
                 raise ValueError("Current execution measurements must be finite and nonnegative")
@@ -165,12 +238,18 @@ def validate(data):
         clocks = [datetime.fromisoformat(current[k]) for k in ("started_at", "completed_at")]
         if any(x.tzinfo is None for x in clocks) or not clocks[0] <= clocks[1] <= observed_clock:
             raise ValueError("Current execution requires ordered timezone-aware clocks")
-        if schema == SCHEMA:
+        if schema in {SCHEMA, PRICE_SCHEMA}:
             scope = data["audit_scope"]
-            if (not isinstance(scope, dict) or set(scope) != {"audited_attempts", "distinct_run_ids", "note"}
+            scope_keys = {'audited_attempts','distinct_run_ids','note'} | ({'completed_campaigns'} if schema == SCHEMA else set())
+            if (not isinstance(scope, dict) or set(scope) != scope_keys
                     or type(scope["audited_attempts"]) is not int or scope["audited_attempts"] != len(rows)
                     or type(scope["distinct_run_ids"]) is not int or not 0 < scope["distinct_run_ids"] <= len(rows)):
                 raise ValueError("Attempt and run identity census must remain separate")
+            if schema == SCHEMA and scope['completed_campaigns'] != 0:
+                raise ValueError('Partial owner attempts cannot become completed campaigns')
+        if schema == SCHEMA:
+            validate_recovery_v4(data, clocks)
+        if schema == PRICE_SCHEMA:
             reason = current["deferral"]
             if (not isinstance(reason, dict) or set(reason) != DEFERRAL_KEYS
                     or reason["recorded_status"] != observed["status"]
@@ -212,9 +291,15 @@ def render_current_banner(data=None):
                    f'{verified["payloads_verified"]:,} payloads are verified. Startup checks were reused, '
                    'but new scientific fitting was not reached. Continue from this partial return and '
                    'any newer authenticated work.')
-        if data["schema"] == SCHEMA:
+        if data["schema"] == PRICE_SCHEMA:
             summary += (' The saved price evidence had expired before launch. The recorded budget-deferral '
                         'label does not establish USD 200 spending; current cost remains unknown.')
+        if data['schema'] == SCHEMA:
+            summary += (' Startup checks and compressed predecessor archives were reused. A launch-scoped recovery deadline '
+                        'expired after pressure had cleared; the shared-instance estimate is about $0.15. '
+                        + ('R29 preparation and staging are verified, with owner execution still pending.'
+                           if data['next_preparation']['status'] == 'PREPARED_VERIFIED' else
+                           'R29 is being prepared, with no owner execution or deployment claimed.'))
     else:
         heading = "A newer failed attempt is separate from the last verified return"
         summary = (f'The latest observed {escape(observed["release"])} attempt stopped with '
@@ -236,6 +321,7 @@ def render_current_banner(data=None):
 
 PREVIOUS_EXECUTION_BANNER = render_current_banner(json.loads(HISTORICAL_DATA.read_text()))
 PREVIOUS_VERIFIED_EXECUTION_BANNER = render_current_banner(json.loads(PREVIOUS_VERIFIED_DATA.read_text()))
+PREVIOUS_PRICE_EXECUTION_BANNER = render_current_banner(json.loads(PRICE_DATA.read_text()))
 
 
 def render(data=None):
