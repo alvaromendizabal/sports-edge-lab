@@ -112,6 +112,10 @@ class ActualReturnContracts(unittest.TestCase):
         self.reject(lambda d: d['next_preparation'].update(reuse_completed_registered_jobs=0))
 
     def test_public_projection_preserves_dated_history(self):
+        readme=(ROOT/'docs/fbs/README.md').read_bytes()
+        end=b'<!-- FBS_V097_ACTUAL_RETURN_END -->\n\n'
+        self.assertEqual(readme.count(end), 1)
+        self.assertEqual(hashlib.sha256(readme.split(end,1)[1]).hexdigest(), '439fa441f40b9ea6d458ce8e2c60ce5dfe9729d3a9c8b7a5e6f405c8dc53e617')
         pinned = {
             'docs/fbs/v093/index.html':'97491a5a0265a88a2b3e0837028800cebf5cf6244b220d3689f1fef392513281',
             'docs/fbs/v093/data/status.json':'24bf5f275b0dadecf5f5cbbf2822708e58bf25a6713228828972cf799976095c',

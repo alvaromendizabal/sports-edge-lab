@@ -168,6 +168,11 @@ class PublishedDataTests(unittest.TestCase):
 
     def test_entire_pre_v090_readme_suffix_is_byte_preserved(self):
         content=(ROOT/'docs/fbs/README.md').read_bytes()
+        current_start=b'<!-- FBS_V097_ACTUAL_RETURN_START -->\n'
+        current_end=b'<!-- FBS_V097_ACTUAL_RETURN_END -->\n\n'
+        if content.startswith(current_start):
+            self.assertEqual(content.count(current_end),1)
+            content=content.split(current_end,1)[1]
         latest_start=b'<!-- FBS_V093_READINESS_START -->\n'
         latest_end=b'<!-- FBS_V093_READINESS_END -->\n\n'
         if content.startswith(latest_start):

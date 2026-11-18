@@ -13,11 +13,11 @@ V097 is **prepared and native-verified** for a finite **306-job XGBoost/CatBoost
 
 The actual control ZIP is **88,491,826 bytes**. Separate new scientific payloads total **1,676,955,059 bytes**; **35,483,901,513 inherited bytes** were referenced without recopying. Source changes remain unmerged; website deployment and production promotion are separate actions.
 
-<!-- FBS_V097_ACTUAL_RETURN_END -->
-
 ## Earlier dated FBS reports
 
 The following sections retain their original evidence and publication dates. Their “latest” labels describe those earlier snapshots.
+
+<!-- FBS_V097_ACTUAL_RETURN_END -->
 
 <!-- FBS_V093_READINESS_START -->
 ## Latest FBS review: V095 validation finished, return publication failed
