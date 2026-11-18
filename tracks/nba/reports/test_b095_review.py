@@ -1,5 +1,6 @@
 """Real aggregate boundary, counting and selection-regression checks."""
 import copy
+import hashlib
 import json
 from pathlib import Path
 import unittest
@@ -16,7 +17,7 @@ class B095ReviewContract(unittest.TestCase):
  def test_deterministic_report_from_public_evidence(self):
   data=build();self.assertEqual(data,(ROOT/'b095_review.html').read_bytes())
   self.assertNotIn(b'fetch(',data);self.assertNotIn(b'<script src',data)
-  self.assertIn(b'B095 prepared',data);self.assertIn(b'RMSE aggregation requires correction',data)
+  self.assertIn(b'B095 failed twice',data);self.assertIn(b'RMSE aggregation requires correction',data)
  def test_all_objectives_have_identical_annual_populations(self):
   validate(self.value)
   self.assertEqual(len(self.value['objective_leaders']),14)
@@ -51,17 +52,17 @@ class B095ReviewContract(unittest.TestCase):
   self.bad(lambda d:d['weight_sensitivity'][0].update(predictions_changed=True),'refitted')
   self.bad(lambda d:d['selection'].update(season_training_row_reweighting=True),'reweighting')
  def test_recovery_and_preserved_work_are_not_new_fits(self):
-  b=self.value['latest_verified_execution'];self.assertEqual((b['uncertainty_new'],b['uncertainty_reused']),(1199,2101))
-  self.bad(lambda d:d['latest_verified_execution'].update(new_estimator_fits=774),'new fitting')
-  self.bad(lambda d:d['latest_verified_execution'].update(uncertainty_new=1200),'Uncertainty accounting')
-  self.bad(lambda d:d['latest_verified_execution'].update(research_program_complete=True),'complete program')
+  b=self.value['latest_completed_recovery'];self.assertEqual((b['uncertainty_new'],b['uncertainty_reused']),(1199,2101))
+  self.bad(lambda d:d['latest_completed_recovery'].update(new_estimator_fits=774),'new fitting')
+  self.bad(lambda d:d['latest_completed_recovery'].update(uncertainty_new=1200),'Uncertainty accounting')
+  self.bad(lambda d:d['latest_completed_recovery'].update(research_program_complete=True),'complete program')
  def test_no_unmeasured_capacity_or_invoiced_cost_claim(self):
-  self.bad(lambda d:d['latest_verified_execution'].update(measured_full_capacity_passes=1),'capacity pass')
-  self.bad(lambda d:d['latest_verified_execution'].update(actual_invoiced_cost_usd=3.01),'invoice')
+  self.bad(lambda d:d['latest_completed_recovery'].update(measured_full_capacity_passes=1),'capacity pass')
+  self.bad(lambda d:d['latest_completed_recovery'].update(actual_invoiced_cost_usd=3.01),'invoice')
  def test_failed_return_and_multipart_representation_remain_honest(self):
   self.bad(lambda d:d['prior_execution'].update(physical_return_sealed=True),'failed sealing')
-  self.bad(lambda d:d['latest_verified_execution'].update(physical_parts=1),'return representation')
-  self.bad(lambda d:d['latest_verified_execution'].update(maximum_part_bytes=536870913),'return representation')
+  self.bad(lambda d:d['latest_completed_recovery'].update(physical_parts=1),'return representation')
+  self.bad(lambda d:d['latest_completed_recovery'].update(maximum_part_bytes=536870913),'return representation')
  def test_named_source_gaps_and_product_identities_are_preserved(self):
   rows=self.value['sources']['named_provider_coverage']
   self.assertEqual(len(rows),84)
@@ -80,6 +81,34 @@ class B095ReviewContract(unittest.TestCase):
   self.bad(lambda d:d['prepared_successor'].update(owner_execution_started=True),'Preparation')
   self.bad(lambda d:d['selection'].update(full_season_champions_certified=1),'champion promotion')
   self.bad(lambda d:d['publication'].update(model_fits_during_preparation=1),'Publication')
+ def test_two_owner_failures_remain_separate_from_recovery(self):
+  attempts=self.value['latest_owner_executions']
+  self.assertEqual([(a['release'],a['attempt'],a['exit_code']) for a in attempts],[('B095',1,2),('B095',2,2)])
+  self.bad(lambda d:d['latest_owner_executions'].pop(),'attempt accounting')
+  self.bad(lambda d:d['latest_owner_executions'][0].update(execution_complete=True),'relabeled complete')
+  self.bad(lambda d:d['latest_owner_executions'][1].update(scientific_work_admitted=True),'relabeled research')
+  self.bad(lambda d:d['latest_owner_executions'][0].update(exit_code=0),'owner exit')
+ def test_unavailable_failed_run_fit_counters_are_not_invented_zeroes(self):
+  self.assertTrue(all(a['new_estimator_fits'] is None and a['new_calibration_fits'] is None for a in self.value['latest_owner_executions']))
+  self.bad(lambda d:d['latest_owner_executions'][0].update(new_estimator_fits=0),'inferred values')
+  self.bad(lambda d:d['latest_owner_executions'][1].update(new_calibration_fits=774),'inferred values')
+  self.bad(lambda d:d['latest_owner_executions'][1].update(fit_counts_complete=True),'inferred values')
+ def test_verified_resumable_archive_does_not_mean_successful_research(self):
+  latest=self.value['latest_verified_return']
+  self.assertEqual(latest['logical_archive_bytes'],19057377)
+  self.assertEqual(latest['payload_count'],16)
+  self.bad(lambda d:d['latest_verified_return'].update(execution_complete=True),'successful execution')
+  self.bad(lambda d:d['latest_verified_return'].update(physical_parts=7),'representation mismatch')
+  self.bad(lambda d:d['latest_verified_return'].update(full_archive_and_payload_readback_verified=False),'verification mismatch')
+  self.bad(lambda d:d['latest_verified_return'].update(registered_new_estimator_checkpoints=1),'checkpoint accounting')
+ def test_failure_cannot_create_invoiced_zero_cost_or_retrieval_claim(self):
+  self.bad(lambda d:d['latest_owner_executions'][0].update(actual_invoiced_cost_usd=0),'invoice claim')
+  self.bad(lambda d:d['latest_owner_executions'][1].update(new_provider_requests=1),'retrieval')
+  self.assertEqual(self.value['prepared_successor']['release'],'B096')
+ def test_all_saved_scientific_sections_remain_exactly_preserved(self):
+  keys=['calibration_comparisons','calibration_scope','family_variant_counts','features','objective_leaders','populations','scientific_snapshot_at_utc','selection','sources','weight_sensitivity']
+  raw=json.dumps({k:self.value[k] for k in keys},sort_keys=True,separators=(',',':'),ensure_ascii=False).encode()
+  self.assertEqual(hashlib.sha256(raw).hexdigest(),'0ee6b1723b080fe2e19b57d9192c36c3b4d26cddc327a870032e6203939bd5ed')
  def test_headline_numbers_match_authenticated_saved_evidence(self):
   r=next(r for r in self.value['objective_leaders'] if r['objective']=='winner_accuracy' and r['horizon_minutes']==60)
   self.assertAlmostEqual(r['annual_metrics'][0]['value'],.6689497716894978)

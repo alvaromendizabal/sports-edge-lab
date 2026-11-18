@@ -56,6 +56,26 @@
     {
       "label": "B094 logical return archive",
       "sha256": "efb1333792f969c7a1c95cfa0d2a65856245143f82a5b5d28f7995345bb2f9e2"
+    },
+    {
+      "label": "First B095 initialization failure report",
+      "sha256": "4c4996a13bc97bff5903477a161c756f3acf3065cb7f24173064bd8412888d93"
+    },
+    {
+      "label": "Second B095 initialization failure report",
+      "sha256": "37d7644eb1872ff5addeb57a8850196c98e7406d08c1e67df33a0570a2697801"
+    },
+    {
+      "label": "Latest B095 verified resumable return",
+      "sha256": "45df8f1b2581191cdef27ae2f11ed0dbb421f52ea0cd48957aff929859289f39"
+    },
+    {
+      "label": "B095 attempt 1 invocation receipt",
+      "sha256": "20cfbe22e0ead329cfa954ee8a3285b55d3dcdd9d7a420e45a3fffc691501810"
+    },
+    {
+      "label": "B095 attempt 2 invocation receipt",
+      "sha256": "9c9f91228fcb389bc2e1f52f112d862b0e87f88f8d7bdf0cd2c56e9756cf5e3e"
     }
   ],
   "family_variant_counts": [
@@ -134,7 +154,7 @@
       "state": "Deferred: schemas and model contracts"
     }
   ],
-  "latest_verified_execution": {
+  "latest_completed_recovery": {
     "actual_invoiced_cost_usd": null,
     "configured_workers": 12,
     "cost_scope": "Whole-instance wall-time estimate across the recorded run intervals; not an invoice or owner allocation",
@@ -167,6 +187,69 @@
     "uncertainty_reused": 2101,
     "uncertainty_unadmitted": 0,
     "verified_at_utc": "2026-11-17T22:58:57.481995Z"
+  },
+  "latest_owner_executions": [
+    {
+      "actual_invoiced_cost_usd": null,
+      "attempt": 1,
+      "execution_complete": false,
+      "exit_code": 2,
+      "failure_class": "Verified cost guard blocked admission: the cached 24-hour pricing proof expired and the live pricing lookup was denied",
+      "failure_stage": "INITIALIZING",
+      "finished_at_utc": "2026-11-18T00:38:08.641706Z",
+      "fit_counter_scope": "Scientific report did not return; null counters are retained. Initialization failed before scientific dispatch.",
+      "fit_counts_complete": false,
+      "invocation_receipt_sha256": "20cfbe22e0ead329cfa954ee8a3285b55d3dcdd9d7a420e45a3fffc691501810",
+      "new_calibration_fits": null,
+      "new_estimator_fits": null,
+      "new_provider_requests": 0,
+      "release": "B095",
+      "report_sha256": "4c4996a13bc97bff5903477a161c756f3acf3065cb7f24173064bd8412888d93",
+      "scientific_report_finished_at_utc": "2026-11-18T00:38:07.010849Z",
+      "scientific_report_started_at_utc": "2026-11-18T00:38:05.985646Z",
+      "scientific_work_admitted": false,
+      "started_at_utc": "2026-11-18T00:38:02.941519Z",
+      "status": "PARTIAL_RESUMABLE"
+    },
+    {
+      "actual_invoiced_cost_usd": null,
+      "attempt": 2,
+      "execution_complete": false,
+      "exit_code": 2,
+      "failure_class": "Verified cost guard blocked admission: the cached 24-hour pricing proof expired and the live pricing lookup was denied",
+      "failure_stage": "INITIALIZING",
+      "finished_at_utc": "2026-11-18T00:39:08.863484Z",
+      "fit_counter_scope": "Scientific report did not return; null counters are retained. Initialization failed before scientific dispatch.",
+      "fit_counts_complete": false,
+      "invocation_receipt_sha256": "9c9f91228fcb389bc2e1f52f112d862b0e87f88f8d7bdf0cd2c56e9756cf5e3e",
+      "new_calibration_fits": null,
+      "new_estimator_fits": null,
+      "new_provider_requests": 0,
+      "release": "B095",
+      "report_sha256": "37d7644eb1872ff5addeb57a8850196c98e7406d08c1e67df33a0570a2697801",
+      "scientific_report_finished_at_utc": "2026-11-18T00:39:07.134941Z",
+      "scientific_report_started_at_utc": "2026-11-18T00:39:06.380134Z",
+      "scientific_work_admitted": false,
+      "started_at_utc": "2026-11-18T00:39:03.313720Z",
+      "status": "PARTIAL_RESUMABLE"
+    }
+  ],
+  "latest_verified_return": {
+    "attempt": 2,
+    "checkpoint_count_scope": "Current B095 run registrations only; preserved B093 and B094 research remains separate",
+    "execution_complete": false,
+    "full_archive_and_payload_readback_verified": true,
+    "logical_archive_bytes": 19057377,
+    "logical_archive_sha256": "45df8f1b2581191cdef27ae2f11ed0dbb421f52ea0cd48957aff929859289f39",
+    "payload_count": 16,
+    "physical_parts": 1,
+    "physical_representation": "Single ZIP",
+    "pointer_updated_at_utc": "2026-11-18T00:39:08.049375Z",
+    "preserved_prior_continuation_references": true,
+    "registered_new_calibration_checkpoints": 0,
+    "registered_new_estimator_checkpoints": 0,
+    "release": "B095",
+    "status": "PARTIAL_RESUMABLE"
   },
   "objective_leaders": [
     {
@@ -759,8 +842,8 @@
     "new_research_fits": 0,
     "new_source_requests": 0,
     "owner_execution_started": false,
-    "release": "B095",
-    "status": "Prepared successor; owner execution pending"
+    "release": "B096",
+    "status": "Preparation in progress; no owner execution"
   },
   "prior_execution": {
     "additional_recovered_base_states": 534,
@@ -787,10 +870,10 @@
     "production_deployment_claimed": false,
     "provider_requests_during_preparation": 0,
     "research_executions_during_preparation": 0,
-    "status": "Prepared public projection; source publication and deployed-site verification are separate"
+    "status": "Prepared public status correction; source publication and deployed-site verification are separate"
   },
   "review_date": "2026-11-17",
-  "schema": "sports_edge_lab.nba.b095.review_public.v1",
+  "schema": "sports_edge_lab.nba.b096.review_public.v1",
   "scientific_snapshot_at_utc": "2026-11-17T19:23:32.990318Z",
   "selection": {
     "automatic_promotions": 0,
