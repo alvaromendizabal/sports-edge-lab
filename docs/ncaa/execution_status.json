@@ -134,60 +134,72 @@
       "release": "R28",
       "return_published": true,
       "reused_startup_tests": 1102
+    },
+    {
+      "elapsed_seconds": 1738.0665354579978,
+      "failure_label": "Live memory-pressure guard stopped source publication before scientific dispatch",
+      "fresh_startup_tests": 0,
+      "historical_checkpoint_reuses": 108,
+      "id": "r29",
+      "label": "R29 \u00b7 verified partial return",
+      "new_target_fits": 0,
+      "note": "All 1,219 startup cases and 108 historical target checkpoints were reused. Four recorded stages completed, including the reused historical study. During the later source stage, 294 chunks were recorded before live memory pressure blocked publication. No new target, calibration or residual fit committed; no scientific worker launched. All 219 return payloads verified.",
+      "outcome": "RESOURCE_DEFERRED_PARTIAL_WORK_PRESERVED",
+      "phase": "BEFORE_FIT",
+      "release": "R29",
+      "return_published": true,
+      "reused_startup_tests": 1219
     }
   ],
   "audit_scope": {
-    "audited_attempts": 9,
+    "audited_attempts": 10,
     "completed_campaigns": 0,
-    "distinct_run_ids": 7,
-    "note": "Nine audited invocations span seven run identities and zero completed research campaigns. Repeated invocations and saved checkpoints are not new fitted models."
+    "distinct_run_ids": 8,
+    "note": "Ten audited invocations span eight run identities and zero completed campaigns. This is a bounded recovery audit, not a project-lifetime execution or model count."
   },
   "current_execution": {
-    "cache_bytes": 533794468,
-    "cache_reads": 83,
-    "completed_at": "2026-11-18T05:00:54.297253+00:00",
+    "cache_bytes": 2985729188,
+    "cache_reads": 2085,
+    "completed_at": "2026-11-18T18:25:34.046067+00:00",
     "completed_child_cpu_seconds": 0.0,
     "cost_basis": "SHARED_INSTANCE_WALL_ESTIMATE_NOT_INVOICE_OR_EXCLUSIVE_PROJECT_ALLOCATION",
     "deferral": {
       "budget_exhaustion_proven": false,
-      "classification": "LAUNCH_SCOPED_DEADLINE_AFTER_PRESSURE_CLEARED",
+      "classification": "SOURCE_PUBLICATION_DEFERRED_BEFORE_SCIENTIFIC_DISPATCH",
       "compute_cost_guard_usd": 200,
-      "configured_wait_minutes": 2,
-      "continuous_pressure_duration_known": false,
-      "deadline_expired_at": "2026-11-18T05:00:53.640Z",
-      "deadline_kind": "LAUNCH_SCOPED_AFTER_FIRST_PRESSURE",
-      "initial_wait_at": "2026-11-18T04:58:47.774Z",
-      "recorded_error": "V112_BOUNDED_RECOVERY_MEMORY_PRESSURE",
+      "out_of_memory_or_external_kill_proven": false,
+      "recorded_error": "V7_BOUNDED_IO_PRESSURE",
       "recorded_status": "RESOURCE_DEFERRED_PARTIAL_WORK_PRESERVED",
-      "root_cause": "PRODUCTIVE_RECOVERY_EXHAUSTED_STALE_LAUNCH_WAIT",
-      "wait_budget_seconds": 120,
+      "root_cause": "LIVE_MEMORY_PRESSURE_DURING_SOURCE_PUBLICATION",
+      "source_refresh_complete": false,
       "wall_limit_disabled": true
     },
-    "estimated_instance_wall_cost_usd": 0.14515028062369395,
-    "explanation": "A genuine initial memory-pressure sample started the configured 120-second recovery deadline. That launch-wide timer stayed armed during productive authentication, including 82 successful verified cache reads, and expired before a new read despite a clear final pressure sample. The last plan reported 82.18 GB of available RAM and 53.98 GB available for admitted I/O. This return does not prove an out-of-memory kill, a failed estimator or budget exhaustion. Price verification succeeded. The prior R27 stale-price failure is not this run\u2019s cause.",
+    "estimated_instance_wall_cost_usd": 1.2399884079552135,
+    "explanation": "The source stage reached chunk publication after recovering 108 historical target fits. A current resource sample reported 42.37% memory full-pressure and 42.72% I/O full-pressure while about 81.16 GB RAM remained available. The bounded publication admission waited 15.15 seconds and deferred before scientific dispatch. This is the new R29 pressure path; it is not the earlier R28 stale recovery timer. Available RAM does not erase measured stall pressure. No failed estimator, out-of-memory kill or exhausted USD 200 budget is established.",
     "fresh_startup_tests": 0,
-    "fresh_storage_bytes": 2589,
-    "fresh_storage_reads": 3,
+    "fresh_storage_bytes": 5393041268,
+    "fresh_storage_reads": 1513,
+    "historical_checkpoint_reuses": 108,
     "maximum_ready_depth": 0,
     "new_calibration_fits": 0,
     "new_residual_fits": 0,
     "new_target_fits": 0,
-    "next_work": "R29 is prepared and installed with verified native engineering evidence. It repairs stale recovery-deadline accounting and implements calibration, empirical residual distributions, evidence-based champion selection, causal V12 features and locked completed/upcoming inference. This is not a completed owner campaign. Resolve the newest verified return and durable checkpoints again at launch; reuse finished work and admit only unfinished eligible tasks under the compute guard.",
-    "owner_elapsed_seconds": 203.60172191999936,
-    "parent_cpu_seconds": 136.849758,
+    "next_work": "R30 is verified and installed to preserve exact completed source shards, bound recovery at the failing publication boundary, and return a deferred source branch to ordinary independent-work admission. The registered V12 feature, target-model, calibration, distribution and forecast work remains pending. Resolve the newest verified return and task commits at user launch; reuse exact completed work and measure actual scientific worker throughput.",
+    "owner_elapsed_seconds": 1738.0665354579978,
+    "parent_cpu_seconds": 1291.072474,
     "peak_scientific_workers": 0,
     "phase": "BEFORE_FIT",
-    "pressure_reason": "INITIAL_PRESSURE_CLEARED_BEFORE_SCOPED_DEADLINE_EXPIRY",
-    "pressure_wait_seconds": null,
-    "recorded_stages_completed": 0,
-    "release": "R28",
+    "pressure_reason": "MEMORY_FULL_PRESSURE",
+    "pressure_wait_seconds": 15.149872975001927,
+    "recorded_stages_completed": 4,
+    "release": "R29",
     "requested_workers": 24,
     "return_published": true,
-    "reused_startup_tests": 1102,
+    "reused_startup_tests": 1219,
     "scientific_gate": "PENDING_REAL_ELIGIBLE_WORK",
     "scientific_gate_executed": false,
-    "started_at": "2026-11-18T04:57:30.759063+00:00",
-    "startup_seconds": 0.06631604299946048,
+    "started_at": "2026-11-18T17:56:36.045679+00:00",
+    "startup_seconds": 0.04599206100101583,
     "verified_reused_target_fits": 0
   },
   "evidence": [
@@ -250,94 +262,121 @@
       "label": "R28 exact return manifest",
       "scope": "Full exact closure, every member size, SHA-256 and CRC verified",
       "sha256": "681fe1fbf752d07b56948ed5b304892b3bef99172bd6482b5686fcc1f9986a8d"
+    },
+    {
+      "label": "R29 verified partial return",
+      "scope": "Full archive, all 219 payloads and embedded source verified; zero new typed fits",
+      "sha256": "2701766810d4b8e0409509a3796f694bd9d105180ec4b76c2a623bece6c6d792"
+    },
+    {
+      "label": "R29 exact return manifest",
+      "scope": "Exact closure, ordered member sizes, SHA-256 and CRC verified",
+      "sha256": "0eacb3c560226ba818454aa048ea1ffe840bb8886fc4da1f48a6d918c0cd2cfd"
+    },
+    {
+      "label": "R29 owner summary",
+      "scope": "Measured CPU, wall, historical reuse, typed fit accounting and live pressure",
+      "sha256": "7595a91ac1f3a141337c1d1966ba8dc2ec76f29695b6fa2d68747cd04514b105"
+    },
+    {
+      "label": "R29 startup receipt",
+      "scope": "1,219 matched cases reused; zero fresh startup cases",
+      "sha256": "41bbc3fd75f03e729d619ee63f4396d150369a9e43f1041a22bbdcbc35b7701b"
+    },
+    {
+      "label": "R29 stage outcomes",
+      "scope": "Four stage completions; later incremental source publication failed",
+      "sha256": "876af0c4ffb85a61bc9d0d50311067568ff8808e54e6f821f64e93eb1048e3ad"
     }
   ],
   "latest_observed_attempt": {
     "evidence_class": "FULL_ARCHIVE_VERIFIED",
-    "note": "R28 reused startup and predecessor archives, then stopped before scientific fitting because a launch-scoped recovery timer remained armed after pressure cleared. The 132-payload partial return is verified. No optimizer, calibration, residual fit or forecast was completed.",
-    "release": "R28",
+    "note": "R29 reused 1,219 startup cases and 108 historical target checkpoints, then encountered live pressure during later source publication. It committed zero new typed fits and launched zero scientific workers. The 219-payload partial return is verified.",
+    "release": "R29",
     "return_published": true,
     "status": "RESOURCE_DEFERRED_PARTIAL_WORK_PRESERVED",
-    "status_label": "Recovery deadline expired \u00b7 partial work preserved"
+    "status_label": "Source publication deferred \u00b7 partial work preserved"
   },
   "latest_verified_return": {
     "integrity": "FULL_ARCHIVE_VERIFIED",
-    "note": "The R28 archive and one of its 132 payloads passed full size, SHA-256 and CRC verification. It preserves zero new fits and the prior durable work. Earlier R27 and R26 partial returns and the R25 recovery record remain dated evidence.",
-    "payloads_verified": 132,
-    "release": "R28",
-    "sha256": "36c2b6fa93b4d01e24815ee47386e5c7a604756dfaf3560529ac51b13e84f780"
+    "note": "The complete R29 archive and all 219 payloads passed size, SHA-256 and CRC verification, including its embedded source. Integrity verification preserves the partial outcome; it does not establish scientific completion. Earlier dated returns remain unchanged.",
+    "payloads_verified": 219,
+    "release": "R29",
+    "sha256": "2701766810d4b8e0409509a3796f694bd9d105180ec4b76c2a623bece6c6d792"
   },
   "next_preparation": {
     "canonical_gate_passed": true,
-    "engineering_evidence_sha256": "53edd7bbd87d57d616adf0e7e511125035e170256a3bdb88abab8cbb71e0ebb2",
+    "engineering_evidence_sha256": "77ecab5cb53bba2802a4797fd6411a1169b80649abfb425a61400f73485bf1a2",
     "engineering_failures": 0,
-    "engineering_tests": 1242,
-    "note": "The sealed package passed the native engineering gate; installed bytes and the preparation record passed integrity verification. Native installation then reused 1,219 matching startup cases with zero fresh cases. An earlier fixture-only engineering failure is retained separately. Owner research has not been executed.",
+    "engineering_tests": 1277,
+    "note": "The R30 replacement passed canonical engineering verification and verified installation. Installation reused 1,255 matching startup cases with zero fresh startup cases. No R30 owner campaign, provider retrieval or scientific fit was launched. Current-run scientific throughput and the registered scientific work remain for user execution.",
     "owner_executions": 0,
-    "release": "R29",
+    "release": "R30",
     "science_completion_claimed": false,
     "stages": [
       {
-        "name": "Forward validation calibration and empirical residual distributions",
+        "name": "Reuse exact committed source shards without rewriting their full prefix",
         "status": "IMPLEMENTED_OWNER_EXECUTION_PENDING"
       },
       {
-        "name": "Evidence-based objective-specific champion selection",
+        "name": "Allow eligible independent work after a source branch deferral",
         "status": "IMPLEMENTED_OWNER_EXECUTION_PENDING"
       },
       {
-        "name": "Causal V12 feature materialization and ablations",
+        "name": "Preserve existing scientific recipes and completed-fit identities",
         "status": "IMPLEMENTED_OWNER_EXECUTION_PENDING"
       },
       {
-        "name": "Locked completed and upcoming forecast inference",
+        "name": "Retain measured worker, queue and completion acceptance",
         "status": "IMPLEMENTED_OWNER_EXECUTION_PENDING"
       }
     ],
     "status": "PREPARED_VERIFIED",
-    "upload_verified": true
+    "upload_verified": true,
+    "verified_delivery": {
+      "canonical_source": {
+        "bytes": 60221397,
+        "sha256": "efdb132ee0687f9d8da805cdc0395021ceb3abd1229fe82429074e394e254d61"
+      },
+      "engineering_gate": {
+        "bytes": 45561,
+        "sha256": "77ecab5cb53bba2802a4797fd6411a1169b80649abfb425a61400f73485bf1a2"
+      },
+      "installation_receipt": {
+        "bytes": 10635,
+        "sha256": "3c1b1be76ed68bc0d6f3aecfcbc30da2db7fad19c0a29b7af0eb0f088b231236"
+      },
+      "installed_at": "2026-11-18T19:01:02.567660+00:00",
+      "new_scientific_fits": 0,
+      "owner_executions": 0,
+      "ready_receipt": {
+        "bytes": 8586,
+        "sha256": "3e8df5e6bf2b3963c0c98e751a3156c80c11ea13213ba8e3e25efad89a84cd71"
+      },
+      "startup_cases_executed": 0,
+      "startup_cases_reused": 1255
+    }
   },
-  "observed_at": "2026-11-18T08:08:47+00:00",
+  "observed_at": "2026-11-18T18:42:13+00:00",
   "owner": "NCAA basketball",
   "preserved_work": {
     "all_repeated_work_eliminated": false,
     "duplicate_fits_proven": false,
     "new_target_fits_in_audited_attempts": 11,
-    "note": "Eleven new physical target fits from R22 remain authenticated. Later historical checkpoint accesses are saved-work reuse, not new model counts. R28 recorded zero new fits and zero current-consumer fit reuse. Nine audited invocations span seven run identities and no completed campaign; this is not a project-lifetime model census.",
-    "repeat_work_note": "R28 did not repeat startup testing, predecessor recompression or scientific optimization: 1,102 startup cases were reused, all 50 predecessor requests were durable hits, and no fit worker ran. Recovery still inspected archives and fingerprinted 6.14 GB of ancestor inputs, consuming 136.85 parent CPU seconds. The small in-memory byte cache evicted 50 entries; the durable predecessor archive cache evicted none. Reuse reduces work but is not zero CPU or zero wall cost."
+    "note": "Eleven newly committed target fits from the earlier R22 attempts remain authenticated. R29 accessed 108 historical target checkpoints, with zero new typed fits and zero current-consumer target-fit reuse. Repeated accesses are not 108 new models and must not be summed across attempts. This audit covers ten invocations, eight run identities and no completed campaign.",
+    "repeat_work_note": "R29 did not rerun the matching 1,219 startup cases or refit the 108 authenticated historical targets. Recovery, source collection and publication still consumed 1,291.07 parent CPU seconds and 1,738.07 owner wall seconds. The source stage recorded 294 chunks before publication admission deferred. Resumption must reuse those durable pieces instead of repeating an entire source stage. This evidence does not establish that all repeated work has been eliminated."
   },
   "publication": {
     "deployment_verified": false,
     "new_fits": 0,
     "new_forecasts": 0,
-    "note": "Prepared NCAA-only source for draft review from the verified R28 partial return. R29 native engineering and installation are verified, with zero R29 owner executions at this observation. This dashboard performs no research, source refresh, rescoring, model fitting or forecast issuance. Website deployment is not verified.",
+    "note": "Prepared NCAA-only source for draft review of the verified R29 partial return. R30 is being prepared and has no owner execution credited here. Generating this dashboard performs no research, source refresh, rescoring, fitting or forecast issuance. Website deployment is not verified.",
     "owner_runs": 0,
     "provider_requests": 0,
     "source_state": "PREPARED"
   },
-  "recovery_evidence": {
-    "ancestor_input_bytes_fingerprinted": 6142295143,
-    "compressed_ancestor_bytes_reused": 2819356013,
-    "durable_and_memory_cache_evictions_are_distinct": true,
-    "durable_predecessor_evictions": 0,
-    "durable_predecessor_hits": 50,
-    "estimated_cost_wall_seconds": 203.32334277799964,
-    "in_memory_byte_cache_evictions": 50,
-    "initial_memory_full_avg10": 1.98,
-    "out_of_memory_or_external_kill_proven": false,
-    "predecessor_recompression_calls": 0,
-    "predecessor_requests": 50,
-    "price_verification_succeeded": true,
-    "productive_cache_reads_after_wait_started": 82,
-    "rate_usd_per_hour": 2.57,
-    "terminal_available_memory_bytes": 82178412544,
-    "terminal_memory_available_for_io_bytes": 53981847552,
-    "terminal_memory_full_avg10": 0.0,
-    "terminal_pressure_reasons": [],
-    "wait_policy_note": "The 120-second bound came from the supplied two-minute wait setting, not from the disabled owner wall limit. Successful reads did not clear the inherited launch-wide deadline. The configured wait bound is not a measurement of continuous pressure."
-  },
   "resume_contract": {
-    "explanation": "R28 is the newest verified published partial return. Preserve its cache and receipt evidence plus the earlier scientific work. At launch resolve fresh return pointers and newer durable journals, apply current admission and cost checks, and continue unfinished work. Productive recovery after pressure clears must not be stopped by a stale launch-wide deadline.",
+    "explanation": "R29 is the newest verified partial return in this snapshot. Preserve its source chunks, historical target receipts and all earlier completed work. Resolve current durable state again when the user launches the replacement. An affected source branch must retain its exact unfinished tasks while independent admissible work can continue.",
     "headline": "A verified partial return is the new continuation point.",
     "steps": [
       "Resolve the latest verified return and newer durable owner journals again at launch; preserve the distinction between an archive and an unpublished checkpoint.",
@@ -347,7 +386,7 @@
       "Checkpoint after bounded tasks, stop new admission when interrupted, drain admitted work safely, and publish a verified partial return only after integrity checks."
     ]
   },
-  "schema": "sel.ncaa.public.execution_status.v4",
+  "schema": "sel.ncaa.public.execution_status.v5",
   "science_contract": {
     "new_full_population_champion": false,
     "note": "Men and women retain independent populations and champion registries. Selection uses annual 2024\u201325 and 2025\u201326 validation metrics, with 50/50 primary and the four declared sensitivity ratios. Changing these ratios does not change training weights or predictions. Completed 2026\u201327 games remain a frozen test report, with zero selection weight. Earlier test exposure remains disclosed; full official populations and a new qualified champion are still incomplete.",
@@ -365,14 +404,44 @@
   },
   "source_coverage": {
     "limits": "The retained report covers 106 bookmakers and 44,520 source/season/market/horizon cells; 1,384 cells were nonzero and no bookmaker had complete coverage. Missing histories remain gaps. Source availability, historical issue-time qualification, model-ready rows and full game populations are different claims.",
-    "note": "The preserved R23 source stage recorded 345 successful HTTP responses: 257 Odds API responses, 50 ESPN and 38 NCAA official. Its bounded acquisition plan recorded 256 of 2,680 captures, with 2,424 pending. These are dated progress counters, not retrievals performed by this dashboard. The newer recovered R25 scoreboard stage reached 21 of 34 units before a source-capture persistence stop; it did not complete a source refresh. R26 records 168 verified storage-cache reads totaling 1,862,389,518 bytes and 19 fresh full object reads totaling 112,366,700 bytes. These are storage I/O observations, not additional provider requests or fitted models. R27 stopped before a source refresh. Its returned evidence does not contain the same storage-read report, so current cache and fresh-read measurements remain unknown; the earlier R26 numbers are not copied forward. R28 newly recorded 83 verified storage-cache reads totaling 533,794,468 bytes and three small full storage readbacks totaling 2,589 bytes. These are not provider retrievals or new fits. Source population construction and source refresh were not reached."
+    "note": "The preserved R23 source stage recorded 345 successful HTTP responses: 257 Odds API responses, 50 ESPN and 38 NCAA official. Its bounded acquisition plan recorded 256 of 2,680 captures, with 2,424 pending. These are dated progress counters, not retrievals performed by this dashboard. The newer recovered R25 scoreboard stage reached 21 of 34 units before a source-capture persistence stop; it did not complete a source refresh. R26 records 168 verified storage-cache reads totaling 1,862,389,518 bytes and 19 fresh full object reads totaling 112,366,700 bytes. These are storage I/O observations, not additional provider requests or fitted models. R27 stopped before a source refresh. Its returned evidence does not contain the same storage-read report, so current cache and fresh-read measurements remain unknown; the earlier R26 numbers are not copied forward. R28 newly recorded 83 verified storage-cache reads totaling 533,794,468 bytes and three small full storage readbacks totaling 2,589 bytes. These are not provider retrievals or new fits. Source population construction and source refresh were not reached. R29 then recorded 294 source chunks with 2,821,813 rows and 4,932,251,561 logical bytes before the publication deferral. Its collector held 3,187,384 outcome rows and 510 completed capture partitions out of 122,177 planned. These are partial source-processing counters, not proof of complete coverage, new provider retrievals, forecasts or fitting. R29 recorded 2,085 verified storage-cache reads (2,985,729,188 bytes) and 1,513 fresh storage readbacks (5,393,041,268 bytes), including publication verification; storage reads are separate from provider requests."
+  },
+  "source_publication_evidence": {
+    "available_memory_bytes": 81163436032,
+    "chunk_progress_is_complete_source_coverage": false,
+    "collector_completed_captures": 510,
+    "collector_outcome_rows": 3187384,
+    "collector_planned_captures": 122177,
+    "current_consumer_target_reuses": 0,
+    "estimated_cost_wall_seconds": 1736.948732525001,
+    "historical_checkpoints_verified": 108,
+    "independent_measurement_seconds": 1728.7068955349969,
+    "io_full_avg10": 42.72,
+    "memory_available_for_io_bytes": 80735543296,
+    "memory_full_avg10": 42.37,
+    "note": "Chunk counts, source-row counts, authenticated checkpoint accesses and completed capture partitions have different scopes. The source refresh did not finish and these counts do not prove full historical coverage or new provider requests. The performance ledger and independent sampler have different observation intervals; neither measured useful scientific worker CPU.",
+    "owner_mean_cores_independent_sampler": 0.7443772008566903,
+    "owner_peak_cores_independent_sampler": 1.5904345375830122,
+    "owner_peak_cores_performance_ledger": 1.3028224135576973,
+    "pressure_reasons": [
+      "MEMORY_FULL_PRESSURE"
+    ],
+    "pressure_sample_at": "2026-11-18T18:25:28.050Z",
+    "price_verification_succeeded": true,
+    "rate_usd_per_hour": 2.57,
+    "recorded_chunk_logical_bytes": 4932251561,
+    "recorded_chunk_rows": 2821813,
+    "recorded_source_chunks": 294,
+    "source_refresh_complete": false,
+    "source_rows_are_forecasts_or_fits": false,
+    "useful_scientific_worker_cores": 0.0
   },
   "throughput": {
     "committed_fits": 11,
     "measurement_seconds": 182.98,
     "newer_12_to_24_core_science_proven": false,
     "next_run_rule": "Target 12 useful scientific workers and admit up to 24 only with verified shared CPU and memory headroom. The explicit worker ceiling must hold. Measure preparation, fit-worker CPU, ready depth, completions and starvation separately; require 75% of admitted capacity over 180 seconds when enough eligible work exists.",
-    "note": "This chart remains the earlier R22 scientific interval and its failed selected-capacity gate. R28 requested 24 workers but reached zero scientific workers and zero ready tasks. Its startup reuse, archive authentication CPU and previous engineering gate do not establish 12\u201324-core scientific throughput.",
+    "note": "This chart retains the earlier R22 scientific interval and its failed selected-capacity gate. R29 requested 24 workers but launched zero scientific workers and reached zero ready scientific tasks. Its performance-ledger owner-CPU peak was 1.30 cores; an independent interval sampler peaked at 1.59, with zero useful worker CPU. Neither is a passed current scientific occupancy gate.",
     "peak_ready_depth": 1,
     "peak_workers": 5,
     "release": "R22",

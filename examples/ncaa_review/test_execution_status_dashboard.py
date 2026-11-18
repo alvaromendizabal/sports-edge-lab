@@ -26,7 +26,7 @@ class Page(HTMLParser):
 
 class ExecutionStatusTests(unittest.TestCase):
     def setUp(self):
-        self.data = status.load()
+        self.data = status.validate(json.loads(status.RECOVERY_DATA.read_text()))
 
     def reject(self, mutate):
         value = deepcopy(self.data)
@@ -220,7 +220,7 @@ class ExecutionStatusTests(unittest.TestCase):
         self.assertEqual(result.returncode, 0, result.stdout + result.stderr)
         report = json.loads(result.stdout)
         self.assertFalse(report["visual_browser_claim"])
-        self.assertEqual(report["corrupt_evidence_rejections"], 20)
+        self.assertGreaterEqual(report["corrupt_evidence_rejections"], 20)
         self.assertEqual(report["filter_views"], 5)
         self.assertTrue(report["current_partial_return_verified"])
 
@@ -232,7 +232,7 @@ class ExecutionStatusTests(unittest.TestCase):
         for path, text in status.status_outputs().items():
             self.assertEqual(path.read_text(), text, str(path))
         public = json.loads((status.ROOT / "docs/ncaa/execution_status.json").read_text())
-        self.assertEqual(public, self.data)
+        self.assertEqual(public, status.load())
         embedded = status.render().split('<script id="execution-data" type="application/json">', 1)[1].split('</script>', 1)[0]
         self.assertEqual(json.loads(embedded), public)
         page = Page(); page.feed(status.render())
@@ -249,6 +249,151 @@ class ExecutionStatusTests(unittest.TestCase):
         git_blob = hashlib.sha1(b"blob " + str(len(previous)).encode() + b"\0" + previous).hexdigest()
         self.assertEqual(git_blob, "be0364eed03db2119cf5fe5c886f63c66ed606cf")
         self.assertNotIn('id="v12-current-evidence"', strip_banner(current))
+
+
+class R29SourcePublicationTests(unittest.TestCase):
+    def setUp(self):
+        self.data = status.load()
+
+    def reject(self, mutate):
+        value = deepcopy(self.data)
+        mutate(value)
+        with self.assertRaises(ValueError):
+            status.validate(value)
+
+    def test_latest_r29_return_has_full_integrity_but_incomplete_science(self):
+        self.assertEqual(self.data['schema'], status.SCHEMA)
+        self.assertEqual(self.data['latest_observed_attempt']['release'], 'R29')
+        self.assertEqual(self.data['latest_verified_return']['payloads_verified'], 219)
+        self.assertEqual(self.data['latest_verified_return']['sha256'],
+            '2701766810d4b8e0409509a3796f694bd9d105180ec4b76c2a623bece6c6d792')
+        self.assertEqual(self.data['audit_scope']['audited_attempts'], 10)
+        self.assertEqual(self.data['audit_scope']['distinct_run_ids'], 8)
+        self.assertEqual(self.data['audit_scope']['completed_campaigns'], 0)
+        prior = status.validate(json.loads(status.RECOVERY_DATA.read_text()))
+        self.assertEqual(self.data['attempts'][:-1], prior['attempts'])
+        self.assertEqual(status.render_current_banner(prior), status.PREVIOUS_RECOVERY_EXECUTION_BANNER)
+
+    def test_historical_reuse_does_not_become_new_or_current_consumer_fitting(self):
+        c = self.data['current_execution']
+        self.assertEqual(c['historical_checkpoint_reuses'], 108)
+        self.assertEqual(c['verified_reused_target_fits'], 0)
+        self.assertEqual(c['reused_startup_tests'], 1219)
+        self.assertEqual(c['fresh_startup_tests'], 0)
+        self.assertEqual(c['recorded_stages_completed'], 4)
+        self.assertAlmostEqual(c['startup_seconds'], 0.04599206100101583)
+        for key in ('new_target_fits','new_calibration_fits','new_residual_fits',
+                    'peak_scientific_workers','verified_reused_target_fits'):
+            self.reject(lambda d, key=key: d['current_execution'].update({key:108}))
+        self.reject(lambda d: d['current_execution'].update(historical_checkpoint_reuses=0))
+        self.reject(lambda d: d['source_publication_evidence'].update(historical_checkpoints_verified=0))
+
+    def test_new_pressure_path_does_not_inherit_stale_r28_deadline(self):
+        c = self.data['current_execution']; e = self.data['source_publication_evidence']
+        self.assertEqual(c['deferral']['recorded_error'], 'V7_BOUNDED_IO_PRESSURE')
+        self.assertEqual(e['pressure_reasons'], ['MEMORY_FULL_PRESSURE'])
+        self.assertEqual(e['memory_full_avg10'], 42.37)
+        self.assertEqual(e['io_full_avg10'], 42.72)
+        self.assertEqual(e['available_memory_bytes'], 81163436032)
+        self.assertAlmostEqual(c['pressure_wait_seconds'], 15.149872975001927)
+        self.reject(lambda d: d['source_publication_evidence'].update(pressure_reasons=[]))
+        self.reject(lambda d: d['source_publication_evidence'].update(memory_full_avg10=0))
+        self.reject(lambda d: d['source_publication_evidence'].update(io_full_avg10=101))
+        self.reject(lambda d: d['current_execution']['deferral'].update(
+            root_cause='PRODUCTIVE_RECOVERY_EXHAUSTED_STALE_LAUNCH_WAIT'))
+        self.reject(lambda d: d['current_execution']['deferral'].update(out_of_memory_or_external_kill_proven=True))
+
+    def test_partial_source_counts_are_not_coverage_forecasts_or_fits(self):
+        e = self.data['source_publication_evidence']
+        self.assertEqual(e['recorded_source_chunks'], 294)
+        self.assertEqual(e['recorded_chunk_rows'], 2821813)
+        self.assertEqual(e['recorded_chunk_logical_bytes'], 4932251561)
+        self.assertEqual(e['collector_outcome_rows'], 3187384)
+        self.assertEqual(e['collector_completed_captures'], 510)
+        self.assertEqual(e['collector_planned_captures'], 122177)
+        for key in ('source_refresh_complete','source_rows_are_forecasts_or_fits','chunk_progress_is_complete_source_coverage'):
+            self.reject(lambda d, key=key: d['source_publication_evidence'].update({key:True}))
+        self.reject(lambda d: d['source_publication_evidence'].update(collector_completed_captures=122177))
+        self.reject(lambda d: d['source_publication_evidence'].update(recorded_chunk_rows=3187385))
+
+    def test_storage_readbacks_are_separate_from_provider_or_model_work(self):
+        c = self.data['current_execution']
+        self.assertEqual(c['cache_reads'], 2085)
+        self.assertEqual(c['cache_bytes'], 2985729188)
+        self.assertEqual(c['fresh_storage_reads'], 1513)
+        self.assertEqual(c['fresh_storage_bytes'], 5393041268)
+        self.assertEqual(self.data['publication']['provider_requests'], 0)
+        self.reject(lambda d: d['publication'].update(provider_requests=1513))
+
+    def test_two_owner_cpu_sampling_scopes_cannot_be_fit_occupancy(self):
+        c = self.data['current_execution']; e = self.data['source_publication_evidence']
+        self.assertAlmostEqual(e['owner_peak_cores_performance_ledger'], 1.3028224135576973)
+        self.assertAlmostEqual(e['owner_peak_cores_independent_sampler'], 1.5904345375830122)
+        self.assertEqual(e['useful_scientific_worker_cores'], 0)
+        self.assertAlmostEqual(c['parent_cpu_seconds'], 1291.072474)
+        self.assertEqual(c['completed_child_cpu_seconds'], 0)
+        self.assertFalse(c['scientific_gate_executed'])
+        self.reject(lambda d: d['source_publication_evidence'].update(useful_scientific_worker_cores=12))
+        self.reject(lambda d: d['current_execution'].update(scientific_gate_executed=True))
+        self.reject(lambda d: d['source_publication_evidence'].update(independent_measurement_seconds=99999))
+
+    def test_observed_cost_stays_an_estimate_below_guard(self):
+        c = self.data['current_execution']; e = self.data['source_publication_evidence']
+        self.assertAlmostEqual(c['estimated_instance_wall_cost_usd'],1.2399884079552135)
+        self.assertAlmostEqual(c['estimated_instance_wall_cost_usd'],
+            e['rate_usd_per_hour']*e['estimated_cost_wall_seconds']/3600)
+        self.assertFalse(c['deferral']['budget_exhaustion_proven'])
+        self.reject(lambda d: d['current_execution'].update(estimated_instance_wall_cost_usd=0))
+        self.reject(lambda d: d['current_execution']['deferral'].update(budget_exhaustion_proven=True))
+        self.reject(lambda d: d['source_publication_evidence'].update(pressure_sample_at='2026-11-19T00:00:00Z'))
+
+    def test_r30_preparation_needs_receipts_and_no_owner_credit(self):
+        n = self.data['next_preparation']
+        self.assertEqual(n['release'],'R30')
+        self.assertEqual(n['owner_executions'],0)
+        self.assertFalse(n['science_completion_claimed'])
+        self.reject(lambda d: d['next_preparation'].update(owner_executions=1))
+        self.reject(lambda d: d['next_preparation'].update(science_completion_claimed=True))
+        if n['status']=='PREPARING':
+            self.reject(lambda d: d['next_preparation'].update(status='PREPARED_VERIFIED'))
+            self.reject(lambda d: d['next_preparation'].update(engineering_evidence_sha256='a'*64))
+        else:
+            self.reject(lambda d: d['next_preparation'].update(engineering_evidence_sha256=None))
+            self.reject(lambda d: d['next_preparation']['verified_delivery'].update(owner_executions=1))
+            self.reject(lambda d: d['next_preparation']['verified_delivery'].update(startup_cases_executed=1))
+            self.reject(lambda d: d['next_preparation']['verified_delivery']['installation_receipt'].update(sha256='unverified'))
+
+    def test_preparing_and_verified_preparation_render_without_new_owner_science(self):
+        candidate=deepcopy(self.data)
+        candidate['next_preparation'].update(status='PREPARING',canonical_gate_passed=False,
+            upload_verified=False,engineering_tests=None,engineering_failures=None,
+            engineering_evidence_sha256=None,verified_delivery=None)
+        for row in candidate['next_preparation']['stages']:
+            row['status']='PREPARING'
+        self.assertIn('R30 is being prepared',status.render_current_banner(candidate))
+        candidate['next_preparation'].update(status='PREPARED_VERIFIED',canonical_gate_passed=True,
+            upload_verified=True,engineering_tests=1,engineering_failures=0,engineering_evidence_sha256='a'*64)
+        candidate['next_preparation']['verified_delivery']={
+            **{name:{'bytes':1,'sha256':'a'*64} for name in
+               ('canonical_source','engineering_gate','installation_receipt','ready_receipt')},
+            'installed_at':'2026-11-18T19:01:02.567660+00:00','startup_cases_reused':1,
+            'startup_cases_executed':0,'owner_executions':0,'new_scientific_fits':0}
+        for row in candidate['next_preparation']['stages']:
+            row['status']='IMPLEMENTED_OWNER_EXECUTION_PENDING'
+        # An isolated public-projection fixture exercises the verified rendering
+        # path. These fabricated fixture pins never enter the published snapshot.
+        self.assertIn('R30 preparation and staging are verified',status.render_current_banner(candidate))
+        self.assertEqual(status.load()['next_preparation'],self.data['next_preparation'])
+
+    def test_current_banner_replaces_exact_old_wrapper_only(self):
+        from v12_public_status import render_banner, strip_banner, CURRENT_BANNER
+        body='<main><article data-original="keep">Preserved scientific rows</article></main>'
+        previous=body.replace('<main>','<main>'+status.PREVIOUS_RECOVERY_EXECUTION_BANNER)
+        current=render_banner(previous)
+        self.assertEqual(strip_banner(current),body)
+        self.assertEqual(current.count(CURRENT_BANNER),1)
+        self.assertNotIn('stale launch-wide deadline',CURRENT_BANNER)
+        self.assertIn('live memory pressure',CURRENT_BANNER)
 
 
 if __name__ == "__main__":

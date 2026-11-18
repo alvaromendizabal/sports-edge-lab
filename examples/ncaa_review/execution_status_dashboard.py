@@ -18,11 +18,13 @@ from zoneinfo import ZoneInfo
 
 HERE = Path(__file__).resolve().parent
 ROOT = HERE.parents[1]
-DATA = HERE / "EXECUTION_STATUS_R28_20261118.json"
+DATA = HERE / "EXECUTION_STATUS_R29_20261118.json"
+RECOVERY_DATA = HERE / "EXECUTION_STATUS_R28_20261118.json"
 PRICE_DATA = HERE / "EXECUTION_STATUS_R27_20261118.json"
 PREVIOUS_VERIFIED_DATA = HERE / "EXECUTION_STATUS_20261118.json"
 HISTORICAL_DATA = HERE / "EXECUTION_STATUS_20261117.json"
-SCHEMA = "sel.ncaa.public.execution_status.v4"
+SCHEMA = "sel.ncaa.public.execution_status.v5"
+RECOVERY_SCHEMA = "sel.ncaa.public.execution_status.v4"
 PRICE_SCHEMA = "sel.ncaa.public.execution_status.v3"
 PREVIOUS_SCHEMA = "sel.ncaa.public.execution_status.v2"
 LEGACY_SCHEMA = "sel.ncaa.public.execution_status.v1"
@@ -123,16 +125,127 @@ def validate_recovery_v4(data, clocks):
         raise ValueError('Verified preparation requires its actual engineering receipt')
 
 
+def validate_source_v5(data, clocks):
+    """Keep the new source-publication failure distinct from older deferrals."""
+    current, evidence, preparation = (data['current_execution'],
+        data['source_publication_evidence'], data['next_preparation'])
+    reason = current['deferral']
+    expected_reason = {'recorded_status', 'recorded_error', 'root_cause', 'classification',
+        'compute_cost_guard_usd', 'budget_exhaustion_proven', 'wall_limit_disabled',
+        'source_refresh_complete', 'out_of_memory_or_external_kill_proven'}
+    if (set(reason) != expected_reason or reason['recorded_status'] != RESOURCE_DEFERRED
+            or reason['recorded_error'] != 'V7_BOUNDED_IO_PRESSURE'
+            or reason['root_cause'] != 'LIVE_MEMORY_PRESSURE_DURING_SOURCE_PUBLICATION'
+            or reason['classification'] != 'SOURCE_PUBLICATION_DEFERRED_BEFORE_SCIENTIFIC_DISPATCH'
+            or reason['compute_cost_guard_usd'] != 200 or reason['budget_exhaustion_proven'] is not False
+            or reason['wall_limit_disabled'] is not True or reason['source_refresh_complete'] is not False
+            or reason['out_of_memory_or_external_kill_proven'] is not False
+            or current['pressure_reason'] != 'MEMORY_FULL_PRESSURE'
+            or current['pressure_wait_seconds'] <= 0):
+        raise ValueError('Live source-publication pressure cannot become a stale timer, spent budget or failed fit')
+    keys = {'pressure_sample_at', 'memory_full_avg10', 'io_full_avg10',
+        'available_memory_bytes', 'memory_available_for_io_bytes', 'pressure_reasons',
+        'historical_checkpoints_verified', 'current_consumer_target_reuses',
+        'recorded_source_chunks', 'recorded_chunk_rows', 'recorded_chunk_logical_bytes',
+        'collector_outcome_rows', 'collector_completed_captures', 'collector_planned_captures',
+        'source_refresh_complete', 'source_rows_are_forecasts_or_fits',
+        'chunk_progress_is_complete_source_coverage', 'owner_peak_cores_performance_ledger',
+        'owner_peak_cores_independent_sampler', 'owner_mean_cores_independent_sampler',
+        'independent_measurement_seconds', 'useful_scientific_worker_cores',
+        'rate_usd_per_hour', 'estimated_cost_wall_seconds', 'price_verification_succeeded', 'note'}
+    if set(evidence) != keys:
+        raise ValueError('Unexpected source-publication evidence fields')
+    count_keys = ('available_memory_bytes', 'memory_available_for_io_bytes',
+        'historical_checkpoints_verified', 'current_consumer_target_reuses',
+        'recorded_source_chunks', 'recorded_chunk_rows', 'recorded_chunk_logical_bytes',
+        'collector_outcome_rows', 'collector_completed_captures', 'collector_planned_captures')
+    if any(type(evidence[k]) is not int or evidence[k] < 0 for k in count_keys):
+        raise ValueError('Source progress and historical reuse need nonnegative integer counts')
+    numeric = ('memory_full_avg10', 'io_full_avg10', 'owner_peak_cores_performance_ledger',
+        'owner_peak_cores_independent_sampler', 'owner_mean_cores_independent_sampler',
+        'independent_measurement_seconds', 'useful_scientific_worker_cores',
+        'rate_usd_per_hour', 'estimated_cost_wall_seconds')
+    if any(type(evidence[k]) not in (int, float) or not math.isfinite(evidence[k])
+           or evidence[k] < 0 for k in numeric):
+        raise ValueError('Resource measurements need finite numbers with explicit scopes')
+    sampled = datetime.fromisoformat(evidence['pressure_sample_at'])
+    historical = current['historical_checkpoint_reuses']
+    if (sampled.tzinfo is None or not clocks[0] <= sampled <= clocks[1]
+            or type(historical) is not int or historical <= 0
+            or historical != evidence['historical_checkpoints_verified']
+            or historical != data['attempts'][-1]['historical_checkpoint_reuses']
+            or evidence['current_consumer_target_reuses'] != current['verified_reused_target_fits']
+            or evidence['current_consumer_target_reuses'] != 0
+            or evidence['pressure_reasons'] != ['MEMORY_FULL_PRESSURE']
+            or not 0 < evidence['memory_full_avg10'] <= 100
+            or not 0 < evidence['io_full_avg10'] <= 100
+            or not 0 < evidence['memory_available_for_io_bytes'] <= evidence['available_memory_bytes']
+            or not 0 < evidence['recorded_chunk_rows'] < evidence['collector_outcome_rows']
+            or not 0 < evidence['collector_completed_captures'] < evidence['collector_planned_captures']
+            or evidence['recorded_source_chunks'] <= 0 or evidence['recorded_chunk_logical_bytes'] <= 0
+            or any(evidence[k] is not False for k in ('source_refresh_complete',
+                       'source_rows_are_forecasts_or_fits', 'chunk_progress_is_complete_source_coverage'))
+            or evidence['useful_scientific_worker_cores'] != 0
+            or evidence['owner_mean_cores_independent_sampler'] > evidence['owner_peak_cores_independent_sampler']
+            or not 0 < evidence['independent_measurement_seconds'] <= current['owner_elapsed_seconds']
+            or evidence['price_verification_succeeded'] is not True):
+        raise ValueError('Partial source work and historical reuse cannot become completed science or full coverage')
+    if (not 0 < evidence['estimated_cost_wall_seconds'] <= current['owner_elapsed_seconds']
+            or evidence['rate_usd_per_hour'] <= 0
+            or not math.isclose(current['estimated_instance_wall_cost_usd'],
+                evidence['rate_usd_per_hour'] * evidence['estimated_cost_wall_seconds'] / 3600,
+                rel_tol=1e-6, abs_tol=1e-6)):
+        raise ValueError('Shared-instance cost estimate must reconcile to its measured wall interval')
+    prep_keys = {'release','status','owner_executions','science_completion_claimed',
+        'canonical_gate_passed','upload_verified','note','stages','engineering_tests',
+        'engineering_failures','engineering_evidence_sha256','verified_delivery'}
+    if (set(preparation) != prep_keys or preparation['release'] != 'R30'
+            or preparation['status'] not in {'PREPARING','PREPARED_VERIFIED'}
+            or preparation['owner_executions'] != 0 or preparation['science_completion_claimed'] is not False
+            or len(preparation['stages']) != 4
+            or any(set(stage) != {'name','status'} or stage['status'] not in
+                {'PREPARING','IMPLEMENTED_OWNER_EXECUTION_PENDING'} for stage in preparation['stages'])):
+        raise ValueError('R30 preparation has no owner execution or scientific completion credit')
+    if preparation['status'] == 'PREPARING':
+        if (any(preparation[k] is not False for k in ('canonical_gate_passed','upload_verified'))
+                or any(preparation[k] is not None for k in
+                    ('engineering_tests','engineering_failures','engineering_evidence_sha256','verified_delivery'))):
+            raise ValueError('Preparing R30 cannot acquire verification credit')
+    elif (any(preparation[k] is not True for k in ('canonical_gate_passed','upload_verified'))
+            or type(preparation['engineering_tests']) is not int or preparation['engineering_tests'] <= 0
+            or preparation['engineering_failures'] != 0
+            or re.fullmatch('[0-9a-f]{64}', str(preparation['engineering_evidence_sha256'])) is None
+            or any(stage['status'] != 'IMPLEMENTED_OWNER_EXECUTION_PENDING' for stage in preparation['stages'])):
+        raise ValueError('Prepared R30 requires verified engineering and installation evidence')
+    if preparation['status'] == 'PREPARED_VERIFIED':
+        delivery = preparation['verified_delivery']
+        pins = ('canonical_source','engineering_gate','installation_receipt','ready_receipt')
+        expected_delivery = set(pins) | {'installed_at','startup_cases_reused','startup_cases_executed',
+            'owner_executions','new_scientific_fits'}
+        if (not isinstance(delivery, dict) or set(delivery) != expected_delivery
+                or any(not isinstance(delivery[k], dict) or set(delivery[k]) != {'bytes','sha256'}
+                    or type(delivery[k]['bytes']) is not int or delivery[k]['bytes'] <= 0
+                    or re.fullmatch('[0-9a-f]{64}', str(delivery[k]['sha256'])) is None for k in pins)
+                or delivery['engineering_gate']['sha256'] != preparation['engineering_evidence_sha256']
+                or type(delivery['startup_cases_reused']) is not int
+                or not 0 < delivery['startup_cases_reused'] <= preparation['engineering_tests']
+                or delivery['startup_cases_executed'] != 0
+                or delivery['owner_executions'] != 0 or delivery['new_scientific_fits'] != 0
+                or datetime.fromisoformat(delivery['installed_at']).tzinfo is None):
+            raise ValueError('Verified delivery needs exact public-safe pins and separate startup reuse')
+
+
 def validate(data):
     """Fail closed on evidence-class confusion, inflated work, or private data."""
     if not isinstance(data, dict):
         raise ValueError("Unexpected public execution fields")
     schema = data.get("schema")
-    expected = (TOP_KEYS | {'audit_scope','recovery_evidence','next_preparation'} if schema == SCHEMA else
+    expected = (TOP_KEYS | {'audit_scope','source_publication_evidence','next_preparation'} if schema == SCHEMA else
+                TOP_KEYS | {'audit_scope','recovery_evidence','next_preparation'} if schema == RECOVERY_SCHEMA else
                 TOP_KEYS | {'audit_scope'} if schema == PRICE_SCHEMA else TOP_KEYS if schema == PREVIOUS_SCHEMA else LEGACY_TOP_KEYS)
     if set(data) != expected:
         raise ValueError("Unexpected public execution fields")
-    if schema not in {SCHEMA, PRICE_SCHEMA, PREVIOUS_SCHEMA, LEGACY_SCHEMA} or data["owner"] != "NCAA basketball":
+    if schema not in {SCHEMA, RECOVERY_SCHEMA, PRICE_SCHEMA, PREVIOUS_SCHEMA, LEGACY_SCHEMA} or data["owner"] != "NCAA basketball":
         raise ValueError("Wrong owner or schema")
     if FORBIDDEN.search(canonical(data)):
         raise ValueError("Private or out-of-owner content")
@@ -197,9 +310,11 @@ def validate(data):
             or s["new_full_population_champion"] is not False
             or s["test_exposure_erased"] is not False):
         raise ValueError("Scientific selection contract changed")
-    if schema in {SCHEMA, PRICE_SCHEMA, PREVIOUS_SCHEMA}:
+    if schema in {SCHEMA, RECOVERY_SCHEMA, PRICE_SCHEMA, PREVIOUS_SCHEMA}:
         current = data["current_execution"]
-        current_keys = CURRENT_KEYS | {"deferral"} if schema in {SCHEMA, PRICE_SCHEMA} else CURRENT_KEYS
+        current_keys = CURRENT_KEYS | {"deferral"} if schema in {SCHEMA, RECOVERY_SCHEMA, PRICE_SCHEMA} else CURRENT_KEYS
+        if schema == SCHEMA:
+            current_keys = current_keys | {"historical_checkpoint_reuses"}
         if not isinstance(current, dict) or set(current) != current_keys:
             raise ValueError("Unexpected current execution fields")
         if (current["release"] != observed["release"] or current["phase"] != "BEFORE_FIT"
@@ -226,7 +341,7 @@ def validate(data):
         for key in ("startup_seconds", "owner_elapsed_seconds", "parent_cpu_seconds",
                     "completed_child_cpu_seconds", "estimated_instance_wall_cost_usd", "pressure_wait_seconds"):
             if (schema == PRICE_SCHEMA and key in ("estimated_instance_wall_cost_usd", "pressure_wait_seconds")
-                    or schema == SCHEMA and key == 'pressure_wait_seconds') and current[key] is None:
+                    or schema == RECOVERY_SCHEMA and key == 'pressure_wait_seconds') and current[key] is None:
                 continue
             if type(current[key]) not in (int, float) or not math.isfinite(current[key]) or current[key] < 0:
                 raise ValueError("Current execution measurements must be finite and nonnegative")
@@ -238,17 +353,19 @@ def validate(data):
         clocks = [datetime.fromisoformat(current[k]) for k in ("started_at", "completed_at")]
         if any(x.tzinfo is None for x in clocks) or not clocks[0] <= clocks[1] <= observed_clock:
             raise ValueError("Current execution requires ordered timezone-aware clocks")
-        if schema in {SCHEMA, PRICE_SCHEMA}:
+        if schema in {SCHEMA, RECOVERY_SCHEMA, PRICE_SCHEMA}:
             scope = data["audit_scope"]
-            scope_keys = {'audited_attempts','distinct_run_ids','note'} | ({'completed_campaigns'} if schema == SCHEMA else set())
+            scope_keys = {'audited_attempts','distinct_run_ids','note'} | ({'completed_campaigns'} if schema in {SCHEMA, RECOVERY_SCHEMA} else set())
             if (not isinstance(scope, dict) or set(scope) != scope_keys
                     or type(scope["audited_attempts"]) is not int or scope["audited_attempts"] != len(rows)
                     or type(scope["distinct_run_ids"]) is not int or not 0 < scope["distinct_run_ids"] <= len(rows)):
                 raise ValueError("Attempt and run identity census must remain separate")
-            if schema == SCHEMA and scope['completed_campaigns'] != 0:
+            if schema in {SCHEMA, RECOVERY_SCHEMA} and scope['completed_campaigns'] != 0:
                 raise ValueError('Partial owner attempts cannot become completed campaigns')
-        if schema == SCHEMA:
+        if schema == RECOVERY_SCHEMA:
             validate_recovery_v4(data, clocks)
+        if schema == SCHEMA:
+            validate_source_v5(data, clocks)
         if schema == PRICE_SCHEMA:
             reason = current["deferral"]
             if (not isinstance(reason, dict) or set(reason) != DEFERRAL_KEYS
@@ -295,6 +412,12 @@ def render_current_banner(data=None):
             summary += (' The saved price evidence had expired before launch. The recorded budget-deferral '
                         'label does not establish USD 200 spending; current cost remains unknown.')
         if data['schema'] == SCHEMA:
+            summary += (' R29 authenticated 108 historical target checkpoints and recorded 294 source chunks before '
+                        'live memory pressure deferred source publication. No scientific worker ran. '
+                        + ('R30 preparation and staging are verified; user execution remains pending.'
+                           if data['next_preparation']['status'] == 'PREPARED_VERIFIED' else
+                           'R30 is being prepared; verification and user execution remain pending.'))
+        if data['schema'] == RECOVERY_SCHEMA:
             summary += (' Startup checks and compressed predecessor archives were reused. A launch-scoped recovery deadline '
                         'expired after pressure had cleared; the shared-instance estimate is about $0.15. '
                         + ('R29 preparation and staging are verified, with owner execution still pending.'
@@ -322,6 +445,7 @@ def render_current_banner(data=None):
 PREVIOUS_EXECUTION_BANNER = render_current_banner(json.loads(HISTORICAL_DATA.read_text()))
 PREVIOUS_VERIFIED_EXECUTION_BANNER = render_current_banner(json.loads(PREVIOUS_VERIFIED_DATA.read_text()))
 PREVIOUS_PRICE_EXECUTION_BANNER = render_current_banner(json.loads(PRICE_DATA.read_text()))
+PREVIOUS_RECOVERY_EXECUTION_BANNER = render_current_banner(json.loads(RECOVERY_DATA.read_text()))
 
 
 def render(data=None):
