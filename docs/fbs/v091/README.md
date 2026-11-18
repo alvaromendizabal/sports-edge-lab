@@ -18,13 +18,15 @@ The latest attempt's zero reuse counter does not mean earlier scientific evidenc
 
 ## Prepared delivery and worker evidence
 
-The registered next campaign contains 936 model jobs and 84 fixed equal-weight blend policies. The display distinguishes its 624 validation and 312 frozen-test jobs, its 12-worker target and 24-worker ceiling, and its still-pending measured optimizer throughput. Native threads, memory, physical storage and the USD 200 compute guard constrain admission. An unlimited wall setting does not waive the cost guard.
+The registered next campaign remains the finite T120 pregame tranche and contains 936 model jobs and 84 fixed equal-weight blend policies. The display distinguishes its 624 validation and 312 frozen-test jobs, its 12-worker target and 24-worker ceiling, and its still-pending measured optimizer throughput. Native threads, memory, physical storage and the USD 200 compute guard constrain admission. An unlimited wall setting does not waive the cost guard.
 
 The return audit found 134,098 of 134,110 payloads already present in V089, carrying 29,410,254,353 decoded bytes. Separately, 7,439,043,130 decoded bytes were duplicated within the same return. These quantities overlap and must not be added together. A metadata-catalog encoding of the exact existing set measured 12,276,949 gzip bytes in an engineering projection; that is not an executed owner return or a forecast of future output size.
 
 The compact design references authenticated retained artifacts instead of repeatedly including them in every report. A small report is not an independent copy of all research data. Its durable dependencies must remain accessible and pass verification before reuse. Scientific work has no aggregate size cap; the existing 512 MiB limit applies to each transport part.
 
-Prepared sizes and engineering-verification status are reported only when physically measured. Prepared software adds zero owner research executions, scientific fits or source retrievals. The actual return pointer advances only after integrity checks and preserves partial versus complete scientific status.
+A changed completed-game population remains an explicit blocker until a safe frozen-inference extension covers all retained contenders. V091 repairs startup and delivery for the same registered campaign; it does not add that extension or establish full V13 completion.
+
+The final canonical executable is 48,384,220 bytes, down from 469,562,847 bytes (89.7% smaller). The separate prepared review ZIP is 64,270 bytes and contains metadata rather than a second executable or raw caches/model states. Its 17 members and physical ZIP readback were verified. The canonical archive passed all 2,817 member CRC/SHA checks and its nonresearch self-test; 141 runner/staging engineering checks passed. Those checks are separate from the public-report tests and future owner research. This public projection does not certify host placement. Prepared software adds zero owner research executions, scientific fits or source retrievals. The actual return pointer advances only after integrity checks and preserves partial versus complete scientific status.
 
 ## Publication and reproduction
 

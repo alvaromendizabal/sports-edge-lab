@@ -25,6 +25,26 @@
       "role": "Return-size root-cause audit",
       "scope": "Authenticated logical-member comparison; inherited bytes, within-return duplication and catalog-only projection remain separate measures.",
       "sha256": "9ec49aa2f304a13f2f88e45c271e70b45c9947a26913a5a3cc606f797f3e92f2"
+    },
+    {
+      "role": "Canonical build verification",
+      "scope": "All 2,817 members passed CRC and SHA-256 checks; 48,384,220 physical bytes. No owner research execution.",
+      "sha256": "9640117f858ec0e99af8ea8de07714712f70ca575071704fe16a7b5626431f41"
+    },
+    {
+      "role": "Prepared review manifest",
+      "scope": "The 64,270-byte metadata-only ZIP passed full member and physical readback verification; the executable is not included a second time.",
+      "sha256": "82a1de2a0fcc9b31568135a77992260dfefa8cf48e2e1b2ae1b319c1bb78e27f"
+    },
+    {
+      "role": "Runner engineering acceptance",
+      "scope": "141 local runner and prepare-only staging checks passed; synthetic engineering is separate from zero new owner fits.",
+      "sha256": "63b56d7b67d6657957ad974fbd52afbdb89a715ab64b791441878a5b3404533c"
+    },
+    {
+      "role": "Canonical nonresearch self-test",
+      "scope": "PASS with zero owner executions, real model fits, provider requests and AWS writes.",
+      "sha256": "6724ee541c90e0858577437dde0d367fc913adff0a30e35b511404c6c60f1033"
     }
   ],
   "latest_attempt": {
@@ -35,7 +55,7 @@
     "end_to_end_seconds": 1570.0559623760018,
     "estimated_full_host_cost_usd": 1.120845506473979,
     "failed_fits": 0,
-    "failure_detail": "Authenticated failure: KeyError 'checked_at_utc'. The price-cache fallback expected checked_at_utc while the shipped cache recorded checked_at and cache_age_seconds. The next release repairs that timestamp interpretation; execution validation remains pending.",
+    "failure_detail": "Authenticated failure: KeyError 'checked_at_utc'. The V090 fallback expected that field while its shipped cache used checked_at and cache_age_seconds. V091 validates the saved timestamp formats, retains the original price-authority clock and enforces the compute guard. The regression is covered by offline engineering checks; owner execution remains pending.",
     "fit_count_complete": false,
     "operational_failures": 1,
     "optimizer_occupancy_accepted": null,
@@ -74,23 +94,24 @@
       }
     ],
     "cost_guard_usd": 200,
-    "delivery_size_scope": "Report and integrity metadata; large retained artifacts remain separately referenced.",
-    "evidence_as_of": "Pending release freeze",
-    "executable_bytes": null,
+    "delivery_size_scope": "Review metadata only. The executable is separate; retained caches and model states are referenced.",
+    "evidence_as_of": "2026-11-18T01:11:50.447437+00:00",
+    "executable_bytes": 48384220,
     "fixed_blend_policies": 84,
     "frozen_test_jobs": 312,
+    "horizon_minutes": 120,
     "measured_optimizer_cores": null,
     "minimum_target_workers": 12,
     "new_scientific_fits": 0,
     "owner_executions": 0,
-    "prepared_report_zip_bytes": null,
+    "prepared_report_zip_bytes": 64270,
     "provider_retrievals": 0,
     "registered_model_jobs": 936,
     "release": "V091",
-    "status": "PREPARATION_IN_PROGRESS",
+    "status": "PREPARED_NOT_EXECUTED",
     "unlimited_wall_waives_cost_guard": false,
     "validation_jobs": 624,
-    "verification_summary": "Compact-delivery engineering is in progress. No owner execution or sustained scientific-throughput acceptance is claimed.",
+    "verification_summary": "141 runner/staging engineering checks and the canonical nonresearch self-test passed. Both prepared files passed physical archive-integrity verification. Owner execution and sustained optimizer acceptance remain pending; this public page makes no host-placement claim.",
     "worker_ceiling": 24
   },
   "publication": {
@@ -104,7 +125,7 @@
     "aggregate_science_cap": null,
     "partial_and_complete_separate": true,
     "preserve_completed_work": true,
-    "remaining_limit": "Full-source coverage, exact historical champion certification and independent official schedule completeness remain open. A changed completed-game population requires a safe frozen-inference extension for every retained contender.",
+    "remaining_limit": "This finite tranche is T120 only. Full-source coverage, exact historical champion certification and independent official schedule completeness remain open. A changed completed-game population is blocked until a safe frozen-inference extension covers every retained contender; V091 does not implement that extension.",
     "resolve_latest_again_at_launch": true,
     "return_changes": [
       "The verified return audit found 134,098 of 134,110 payloads already present in V089, representing 29.41 GB of decoded inherited bytes. It also found 7.44 GB of duplicate decoded bytes within the same return; those overlap and must not be added together.",
@@ -134,6 +155,7 @@
     ],
     "completed_jobs": 90,
     "core_jobs": 150,
+    "horizon_minutes": 120,
     "market_jobs": 432,
     "official_schedule_completeness_certified": false,
     "policy_target_identities": 397,
