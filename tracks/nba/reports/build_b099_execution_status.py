@@ -42,6 +42,8 @@ def validate(data):
                             "new_owner_calibration_fits", "new_owner_distribution_fits",
                             "owner_throughput_pass", "full_v13_complete")):
         raise ValueError("Preparation cannot claim owner execution or scientific capacity")
+    if prep.get("new_owner_inference_rows", 0) or prep.get("new_owner_provider_requests", 0):
+        raise ValueError("Delivery preparation cannot claim inference or provider retrievals")
     if prep["status"] not in {"PREPARATION_IN_PROGRESS", "PREPARED_VERIFIED"}:
         raise ValueError("Unknown preparation state")
     if prep["status"] == "PREPARED_VERIFIED" and prep["final_packaged_verification"] != "VERIFIED":
@@ -79,8 +81,8 @@ def render(data):
     gaps = "".join(f"<li>{esc(v)}</li>" for v in d["scientific_contract"]["remaining_gaps"])
     embedded = json.dumps(d, ensure_ascii=False, indent=2).replace("<", "\\u003c")
     prepared = prep["status"] == "PREPARED_VERIFIED"
-    prep_heading = "B099 preparation verified; owner execution pending" if prepared else "B099 preparation in progress"
-    prep_badge = "Preparation verified · owner execution pending" if prepared else "Final package verification and staging pending"
+    prep_heading = "B099 package verified; native installation pending" if prepared else "B099 preparation in progress"
+    prep_badge = "Remote delivery verified · native preflight and owner execution pending" if prepared else "Final package verification and staging pending"
     prep_evidence = esc(prep.get("verification_summary", "Final package checks and private staging have not yet been certified in this dated public snapshot."))
     return f'''<!doctype html>
 <html lang="en">
@@ -141,6 +143,8 @@ def negative_checks(data):
         (("latest_return", "integrity_is_scientific_completion"), True),
         (("b099_preparation", "new_owner_executions"), 1),
         (("b099_preparation", "owner_throughput_pass"), True),
+        (("b099_preparation", "new_owner_inference_rows"), 1),
+        (("b099_preparation", "new_owner_provider_requests"), 1),
         (("scientific_contract", "test_outcomes_choose_models_or_calibration"), True),
         (("scientific_contract", "training_rows_reweighted_by_season"), True),
         (("scientific_contract", "qualified_full_season_champion"), True),

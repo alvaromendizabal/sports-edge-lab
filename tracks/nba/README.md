@@ -1,7 +1,7 @@
 # Sports Edge Lab · NBA
 
 <!-- NBA B099 EXECUTION STATUS BEGIN -->
-## November 18: two B098 startup failures; B099 preparation in progress
+## November 18: two B098 startup failures; B099 package verified, native installation pending
 
 [Read the latest execution-status review](reports/b099_execution_status.html) · [Download the sanitized aggregate evidence](reports/b099_execution_status.json).
 
@@ -9,7 +9,7 @@
 
 The latest physical return passed integrity verification: **6,530,108,006 logical bytes, 13 ordered parts and 22,500 payloads**. Its scientific status remains **PARTIAL_RESUMABLE**. Re-embedding 22,484 prior identities inflated packaging; transfer volume is not new research. B097's **672 new estimator fits, 1,232 new calibration fits and 5,808 scored variants with uncertainty reports** remain preserved. Its earlier fitting occupancy pass does not carry over to its failed export or either B098 attempt.
 
-**B099 preparation is in progress; final packaged verification and private staging remain pending in this dated snapshot.** Registered work adds current forecasting from locked components and up to 320 residual-distribution heads fitted from authenticated prevalidation history, with no optimizer updates from 2026–27 outcomes. Preparation credits zero owner executions or new owner fits. The next owner launch must resolve the newest durable checkpoint again, respect explicit worker ceilings, and prove useful scientific throughput with real process accounting.
+**The exact canonical B099 archive passed 159 engineering tests with zero failures, errors or skips**, including the actual latest frozen-source boundary. Complete-body SHA-256 readback verified six private delivery files totaling **28,422,157 bytes**. **Space installation and native readiness preflight remain pending** because the authenticated Space session expired; the owner bootstrap installs verified bytes, checks native readiness, then launches the run. Registered work adds current forecasting from locked components and up to 320 residual-distribution heads fitted from authenticated prevalidation history, with no optimizer updates from 2026–27 outcomes. Preparation credits **zero owner executions, fits, inference rows or provider retrievals**, and no scientific occupancy pass. The next owner launch must resolve the newest durable checkpoint again, respect explicit worker ceilings, and prove useful scientific throughput with real process accounting.
 
 Full V13 completion, independently qualified full-season champions and production promotion remain unclaimed. This status addition changes no historical score, forecast value, original issue clock or source-coverage asset. The earlier B098 page below remains a dated record. Main-branch integration and website deployment are separate pending steps.
 <!-- NBA B099 EXECUTION STATUS END -->

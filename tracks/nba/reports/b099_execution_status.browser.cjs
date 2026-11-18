@@ -46,6 +46,13 @@ async function main() {
       }
       const embedded = await page.locator('#aggregate-evidence').textContent();
       assert.deepEqual(JSON.parse(embedded), evidence);
+      if (evidence.b099_preparation.status === 'PREPARED_VERIFIED') {
+        assert.ok(text.includes('B099 package verified; native installation pending'));
+        assert.ok(text.includes(`${evidence.b099_preparation.canonical_engineering_tests} engineering tests`));
+        assert.ok(text.includes('zero failures, errors or skips'));
+        assert.ok(text.includes('Space installation and native readiness preflight remain pending'));
+        assert.equal(evidence.b099_preparation.owner_cpu_acceptance, 'NOT_RUN');
+      }
       assert.equal(await page.locator('.attempts tbody tr').count(), evidence.attempts.length);
       for (const [index, attempt] of evidence.attempts.entries()) {
         const row = await page.locator('.attempts tbody tr').nth(index).innerText();
