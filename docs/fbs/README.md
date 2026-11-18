@@ -1,3 +1,14 @@
+<!-- FBS_V093_READINESS_START -->
+## Latest FBS preparation: V093 readiness and conditional validation
+
+[Open the V093 readiness review](v093/) · [Retained V089 model comparison](v090/) · [V091 failure and V092 repair history](v091/)
+
+V093 prepares guarded price refresh and explicit validation-only continuation when the current test population changes. The full registration remains **936 jobs: 624 validation and 312 frozen test**, plus 84 fixed blends. The fresh current-test census is resolved at owner launch; a completed validation tranche does not claim full-current-test metrics or full-population champion eligibility. An empty admitted validation queue is a reported failure.
+
+The native official public-price read is verified, with the current account/app checks, original 24-hour cache age, **USD 200 compute guard** and **12-worker target / 24-worker ceiling** preserved. Canonical staging, engineering checks, owner execution and measured scientific occupancy remain separate evidence. This preparation creates **zero owner runs, fits or provider refreshes**; the dated scientific results below are unchanged.
+
+<!-- FBS_V093_READINESS_END -->
+
 <!-- FBS_V090_VERIFIED_V089_REVIEW_START -->
 ## Latest FBS review: V089 results and prepared V090 work
 

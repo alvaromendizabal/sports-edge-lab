@@ -33,6 +33,8 @@ jobs:
           python tests/test_fbs_v090_public.py
           python examples/fbs_contracts/v091/build_review.py --check
           python tests/test_fbs_v091_public.py
+          python examples/fbs_contracts/v093/build_review.py --check
+          python tests/test_fbs_v093_public.py
           node tests/fbs_v079_logic.test.cjs
           node tests/fbs_v090_logic.test.cjs
           node tests/fbs_v054_public_view.test.cjs
@@ -89,6 +91,7 @@ jobs:
           GITHUB_HEAD_SHA: ${{ github.event.pull_request.head.sha }}
         run: |
           node tests/fbs_v091_browser.test.cjs
+          node tests/fbs_v093_browser.test.cjs
           node examples/fbs_contracts/tests/test_dashboard_browser.cjs
           node examples/fbs_contracts/tests/test_recovery_browser.cjs
           node examples/fbs_contracts/tests/test_season_browser.cjs
@@ -133,6 +136,7 @@ jobs:
             ${{ runner.temp }}/fbs-screenshots/FBS_V079_*_BROWSER_RECEIPT.json
             ${{ runner.temp }}/fbs-screenshots/FBS_V090_BROWSER_RECEIPT.json
             ${{ runner.temp }}/fbs-screenshots/FBS_V091_BROWSER_RECEIPT.json
+            ${{ runner.temp }}/fbs-screenshots/FBS_V093_BROWSER_RECEIPT.json
           if-no-files-found: error
           retention-days: 14
 

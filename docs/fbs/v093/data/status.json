@@ -1,0 +1,156 @@
+{
+  "schema": "fbs.public.launch-readiness.v093",
+  "owner": "FBS",
+  "as_of": "2026-11-18T03:59:15.024724Z",
+  "publication": {
+    "status": "SOURCE_REVIEW",
+    "website_deployed": false,
+    "production_promoted": false,
+    "new_forecasts_published": false
+  },
+  "prepared": {
+    "release": "V093",
+    "status": "PREPARED_NOT_EXECUTED",
+    "canonical_bytes": 48768273,
+    "canonical_verified": true,
+    "native_packaged_check": true,
+    "native_checked_at": "2026-11-18T03:57:34.061300+00:00",
+    "owner_executions": 0,
+    "scientific_fits": 0,
+    "provider_retrievals": 0,
+    "measured_optimizer_cores": null
+  },
+  "selection": {
+    "validation_seasons": [
+      2024,
+      2025
+    ],
+    "test_season": 2026,
+    "primary_weights": [
+      0.5,
+      0.5
+    ],
+    "test_used_for_selection": false,
+    "season_training_weights_used": false,
+    "prior_test_exposure": true
+  },
+  "campaign": {
+    "horizon_minutes": 120,
+    "registered_jobs": 936,
+    "validation_jobs": 624,
+    "frozen_test_jobs": 312,
+    "fixed_blends": 84,
+    "worker_target": 12,
+    "worker_ceiling": 24,
+    "cost_guard_usd": 200,
+    "wall_time_waives_cost_guard": false
+  },
+  "population": {
+    "fresh_current_test_games": null,
+    "resolved_again_at_launch": true,
+    "validation_identity_required": true,
+    "full_current_population_required": true,
+    "conditional_status": "PARTIAL_VALIDATION_RESEARCH_CURRENT_TEST_BLOCKED",
+    "conditional_scope": "REGISTERED_VALIDATION_ONLY_CURRENT_TEST_BLOCKED",
+    "conditional_stage_complete": false,
+    "conditional_full_current_test_reporting_complete": false,
+    "conditional_current_test_blocked_jobs": 312,
+    "conditional_champion_eligible": false,
+    "no_admission_status": "BLOCKED_NO_ADMITTED_VALIDATION_WORK",
+    "no_admission_operational_failure": true,
+    "no_admission_required_exit_code": 2
+  },
+  "pricing": {
+    "api_result": "ACCESS_DENIED",
+    "public_source_verified": true,
+    "native_public_source_verified": true,
+    "observed_at": "2026-11-18T03:57:33.901990Z",
+    "rate_usd_per_full_host_hour": 2.57,
+    "rate_is_invoice": false,
+    "source": "Official AWS regional Price List",
+    "source_publication_at": "2026-11-18T02:01:05Z",
+    "cache_age_limit_seconds": 86400,
+    "cached_clock_renews_on_reuse": false,
+    "account_and_app_check_required": true,
+    "permissions_changed": false,
+    "public_index_max_bytes": 1048576,
+    "public_region_max_bytes": 16777216,
+    "public_redirects_allowed": false,
+    "official_documentation_url": "https://docs.aws.amazon.com/awsaccountbilling/latest/aboutv2/using-the-aws-price-list-bulk-api-fetching-price-list-files-manually.html"
+  },
+  "retained": {
+    "release": "V089",
+    "completed_jobs": 90,
+    "base_fits": 90,
+    "calibrator_fits": 90,
+    "policy_target_identities": 397,
+    "cohorts": [
+      {
+        "season": 2024,
+        "games": 919
+      },
+      {
+        "season": 2025,
+        "games": 934
+      },
+      {
+        "season": 2026,
+        "games": 752
+      }
+    ],
+    "scientific_complete": false,
+    "official_schedule_completeness_certified": false,
+    "current_as_of_claim": false
+  },
+  "recovery": {
+    "reuse_completed_task_identities": true,
+    "resolve_latest_actual_return_at_launch": true,
+    "actual_pointer_after_integrity_only": true,
+    "partial_status_preserved": true,
+    "deduplicated_payload_references": true,
+    "part_max_bytes": 536870912,
+    "aggregate_science_cap": null,
+    "latest_verified_return_release": "V090",
+    "scoped_failed_releases": [
+      "V090",
+      "V091"
+    ],
+    "scoped_failed_attempts": 3,
+    "scoped_successful_attempts": 0
+  },
+  "verification": {
+    "price_regression_checks": 16,
+    "price_regression_failures": 0,
+    "scientific_occupancy_gate": "PENDING_OWNER_EXECUTION",
+    "native_packaged_children": [
+      0,
+      2,
+      130
+    ],
+    "evidence": [
+      {
+        "label": "Prepared V093 canonical",
+        "sha256": "e1879ff7640b30af63cb10dd99b9036ad021a7a0bc632e67072b480e405c95f8",
+        "scope": "48,768,273 physical bytes verified; software preparation only. No owner execution."
+      },
+      {
+        "label": "Final-archive engineering acceptance",
+        "sha256": "1b7f6c82734b0e89d2dc4777126504386c6c440d2eaf56f5f1e917713983df9c",
+        "scope": "48 focused final-archive checks, including 16 pricing checks, plus 16 current-release compact-resume checks; 64 passed, zero failures."
+      },
+      {
+        "label": "Native packaged verification",
+        "sha256": "5f0c2354ae0a4453a19a1f8bd620bcbb1d91b91453aa45acbf8efda4add13c23",
+        "scope": "2,835 active members verified; actual packaged fixture children exited 0, 2 and 130. Zero owner executions, fits or sports retrievals; actual-return pointer unchanged."
+      },
+      {
+        "label": "Native public-price proof",
+        "sha256": "126f1e07fbc39f4e37fb9665e103f5a3c7cec2a657093fc3fa7de3864c390b0f",
+        "scope": "Exact packaged price helper verified the current app and official regional public price. Original observed clock preserved; full-host estimate is not an invoice."
+      }
+    ],
+    "final_archive_checks": 48,
+    "compact_resume_checks": 16,
+    "software_check_failures": 0
+  }
+}
