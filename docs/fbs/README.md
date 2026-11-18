@@ -1,3 +1,20 @@
+<!-- FBS_V098_ACTUAL_RETURN_START -->
+## Verified V097 ablations; primary T-60 continuation prepared for owner execution
+
+[Read the V098 evidence review](v098/README.md) · [Interactive report](v098/index.html) · [Exact bounded evidence](v098/data/status.json)
+
+V097 completed **306/306 source-ablation jobs**, with **294 new base fits**, **294 calibrator fits**, **12 exact fitted states reused** and zero failed fits. Child and supervisor exited 0 and the return is verified and resumable; full V13 science remains incomplete. All **nine primary leaders and all 45 profile/objective winners remain unchanged** after 204 new policy variants. The dated T-120 comparison now contains 1,309 policies with full known 919/934/755 completed-game denominators.
+
+The two fitting phases admitted 24 workers but observed peaks of **19 and 22 concurrent fits**. They lasted about 48 and 30 seconds, so current sustained occupancy remains **conditional**, with no 180-second pass. Grading now has measured parallel-worker evidence: 612 scoring tasks and 79.263980156 worker CPU seconds. The final whole-host estimate is **USD 1.0620895516821498 over 24.80 minutes**, distinct from the older science-stage estimate and from an invoice.
+
+The separate primary **T-60** continuation is installed and native-verified, with owner execution pending: **1,125 registered jobs**, 750 raw/calibrated policy variants and 84 fixed blends. No owner execution is launched by this source update. The current source-coverage selector keeps T-60 preparation evidence and T-120 results separate; original-possession and scored provider-benchmark gaps remain explicit.
+
+Finite T-60 job completion does not establish campaign CPU acceptance. **T60_CAMPAIGN_RUNTIME_ACCEPTANCE** remains **UNVERIFIED** without an authenticated current-work window of at least **180 seconds** and **75% useful occupancy**; summed short family waves cannot yield a pass.
+
+The complete earlier landing content and dated reports follow unchanged. This source review does not establish website deployment or production promotion.
+
+<!-- FBS_V098_ACTUAL_RETURN_END -->
+
 <!-- FBS_V097_ACTUAL_RETURN_START -->
 ## Latest FBS review: V096 finished its campaign and published a verified partial return
 
