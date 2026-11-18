@@ -1,3 +1,18 @@
+<!-- FBS_V090_VERIFIED_V089_REVIEW_START -->
+## Latest FBS review: V089 results and prepared V090 work
+
+[Open the current verified comparison](v090/) · [Methods and limits](v090/README.md) · [Dated V082-era report](v079/)
+
+V089 completed **90 of 90 additional scientific jobs**, with **90 new base fits, 90 calibrators and zero failed fits**. The comparison now preserves **397 policy/target combinations**, **1,191 annual cards**, **45 objective/profile leaders** and the full **919 / 934 / 752** completed-game populations. Public aliases identify the saved policies; 2026 remains exposed test reporting and never sets the validation ranking.
+
+The new report adds all five evaluation-only season-weight profiles, complete candidate filters and CSV, explicit unavailable CRPS metrics, the observed 2,742-game inventory, source and missing-source controls, separate provider qualifications, and measured execution/delivery accounting. All nine primary leaders change after the new framework extension, while eight have worse 2026 test results than the preceding leaders. The selected identities remain validation-based.
+
+V13 permits qualified DraftKings, Kalshi, Polymarket and other bookmakers as model inputs and separate benchmarks. Permission is distinct from actual source admission; exchange contract adapters and fully matched named-provider comparisons remain incomplete. The earlier comparison-only source policy below is dated historical evidence.
+
+The **V090 936-job campaign and 84 fixed-blend recipes are prepared work**, selected from registered source and feature gaps. They are not completed research, and no owner run is launched by this public update. Source publication, website deployment and production promotion remain separate. New unissued numerical forecast grids, private recipes, owner packages and raw licensed data are excluded.
+
+<!-- FBS_V090_VERIFIED_V089_REVIEW_END -->
+
 <!-- FBS_V079_FIXED_POPULATION_REVIEW_START -->
 ## Current FBS evaluation: V080R1 execution
 

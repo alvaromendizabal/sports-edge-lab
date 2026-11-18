@@ -16,6 +16,11 @@ FORBIDDEN_TEXT = ('circa','s3://','arn:aws:','/home/','/workspace/','nba:espn:ev
 OBJECTIVES = {'winner_accuracy','winner_log_loss','winner_brier','margin_mae','margin_rmse',
  'total_mae','total_rmse'}
 POLICIES = {'50/50':(.5,.5),'40/60':(.4,.6),'30/70':(.3,.7),'20/80':(.2,.8),'10/90':(.1,.9)}
+# Pins are SHA-256 of the complete read-back receipt bytes, including newline.
+INVOCATION_RECEIPT_PINS = {
+ 1:(953,'20cfbe22e0ead329cfa954ee8a3285b55d3dcdd9d7a420e45a3fffc691501810'),
+ 2:(953,'45dff11c54625a9e261a7d94ae92f652dea8b509ea33bb17f78407300e67836a'),
+}
 
 def require(condition, message):
  if not condition: raise ValueError(message)
@@ -33,7 +38,7 @@ def validate(value):
    require(not any(s.lower() in node.lower() for s in FORBIDDEN_TEXT),'Private or wrong-sport payload content')
   elif isinstance(node,float):require(math.isfinite(node),'Nonfinite metric')
  visit(value)
- require(value['schema']=='sports_edge_lab.nba.b095.review_public.v1' and value['owner']=='NBA','Wrong public schema')
+ require(value['schema']=='sports_edge_lab.nba.b096.review_public.v1' and value['owner']=='NBA','Wrong public schema')
  sel=value['selection']
  require(sel['validation_seasons']==['2024-25','2025-26'] and sel['test_season']=='2026-27','Season split changed')
  require(sel['primary_policy']=='50/50','Primary selection policy changed')
@@ -75,7 +80,7 @@ def validate(value):
   expected=math.sqrt(earlier*r['leader_annual_values']['2024-25']**2+later*r['leader_annual_values']['2025-26']**2) if is_rmse else earlier*r['leader_annual_values']['2024-25']+later*r['leader_annual_values']['2025-26']
   require(math.isclose(r['leader_score'],expected,rel_tol=1e-12,abs_tol=1e-12),'Sensitivity score inconsistent with validation')
   require(r['primary_leader_still_tied_for_first']==(r['primary_leader_rank']==1),'Sensitivity rank disagreement')
- b=value['latest_verified_execution']
+ b=value['latest_completed_recovery']
  require(b['release']=='B094' and b['execution_complete'] is True and b['research_program_complete'] is False,'Recovery relabeled complete program')
  require(b['new_estimator_fits']==b['new_calibration_fits']==b['new_provider_requests']==0,'Recovery mislabeled new fitting or retrieval')
  require(b['preserved_base_states']==1644 and b['preserved_prediction_variants']==3300,'Changed preserved science count')
@@ -84,10 +89,29 @@ def validate(value):
  require(b['original_models_modified'] is False and b['selection_or_population_changed'] is False,'Recovery changed original science')
  require(b['physical_parts']==7 and b['logical_archive_bytes']==3258435177 and b['maximum_part_bytes']<=512*1024*1024,'Incorrect return representation')
  require(b['actual_invoiced_cost_usd'] is None,'Estimated cost relabeled invoice')
+ attempts=value['latest_owner_executions']
+ require(len(attempts)==2 and [a['attempt'] for a in attempts]==[1,2],'B095 attempt accounting mismatch')
+ for a in attempts:
+  require(a['release']=='B095' and a['status']=='PARTIAL_RESUMABLE' and a['execution_complete'] is False,'Failed owner execution relabeled complete')
+  require(a['failure_stage']=='INITIALIZING' and a['scientific_work_admitted'] is False,'Initialization failure relabeled research')
+  require(a['new_estimator_fits'] is None and a['new_calibration_fits'] is None and a['fit_counts_complete'] is False,'Unavailable fit counters replaced with inferred values')
+  require(a['new_provider_requests']==0 and a['actual_invoiced_cost_usd'] is None,'Failed attempt creates retrieval or invoice claim')
+  require(re.fullmatch('[a-f0-9]{64}',a['report_sha256']) is not None,'Invalid failure report hash')
+  require(a['exit_code']==2,'Failed owner exit changed')
+  pin=INVOCATION_RECEIPT_PINS[a['attempt']]
+  require((a.get('invocation_receipt_bytes'),a.get('invocation_receipt_sha256'))==pin,'Invocation receipt byte pin mismatch')
+  evidence=[e for e in value['evidence'] if e['label']==f"B095 attempt {a['attempt']} invocation receipt"]
+  require(len(evidence)==1 and (evidence[0].get('bytes'),evidence[0].get('sha256'))==pin,'Invocation evidence byte pin mismatch')
+ latest=value['latest_verified_return']
+ require(latest['release']=='B095' and latest['attempt']==2 and latest['status']=='PARTIAL_RESUMABLE' and latest['execution_complete'] is False,'Verified return relabeled successful execution')
+ require(latest['logical_archive_bytes']==19057377 and latest['physical_parts']==1 and latest['payload_count']==16 and latest['physical_representation']=='Single ZIP','Latest return representation mismatch')
+ require(latest['logical_archive_sha256']=='45df8f1b2581191cdef27ae2f11ed0dbb421f52ea0cd48957aff929859289f39' and latest['full_archive_and_payload_readback_verified'] is True,'Latest return verification mismatch')
+ require(latest['registered_new_estimator_checkpoints']==latest['registered_new_calibration_checkpoints']==0 and latest['preserved_prior_continuation_references'] is True,'Failed attempt changed checkpoint accounting')
  prior=value['prior_execution']
  require(prior['uncertainty_completed']+prior['uncertainty_unadmitted']+prior['uncertainty_failed']==prior['uncertainty_requested'],'Prior uncertainty accounting mismatch')
  require(prior['physical_return_sealed'] is False and prior['exit_code']==2,'Prior failed sealing relabeled success')
  prepared=value['prepared_successor']
+ require(prepared['release']=='B096','Successor identity changed')
  require(prepared['owner_execution_started'] is False and prepared['new_research_fits']==prepared['new_forecasts']==prepared['new_source_requests']==0,'Preparation mislabeled owner execution')
  sources=value['sources']
  require(sources['all_relevant_data_acquired'] is False and sources['live_data'] is False,'Unsupported complete/live source claim')

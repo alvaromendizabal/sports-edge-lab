@@ -2,13 +2,17 @@
 
 
 <!-- NBA B095 CURRENT REVIEW BEGIN -->
-## November 17: verified B094 recovery; B095 prepared
+## November 17 Pacific: two B095 failures before research; B096 prepared
 
-[Open the current recovery and validation review](reports/b095_review.html). B094 preserved 1,644 base estimator states and 3,300 saved variants, completed 1,199 previously unfinished uncertainty tasks, reused 2,101 verified uncertainty results, and sealed one logical return in seven physical pieces. It made zero new estimator/calibration fits and zero provider requests. Recovery completion is separate from the incomplete V13 research program; the measured full-capacity CPU gate did not pass.
+[Open the current execution and validation review](reports/b095_review.html). **Both B095 owner attempts failed during initialization and exited 2.** The cached 24-hour pricing proof had expired, and the live pricing lookup was denied, so the cost guard blocked scientific admission. These attempts produced no new model metrics, forecasts or provider retrievals. The scientific reports retain null estimator/calibration counters because final fit accounting was not reached; the latest failed run registered zero new estimator or calibration checkpoints. This does not erase preserved historical fits.
 
-The public review shows 14 saved objective/horizon roles with annual metrics on declared populations of 1,314, 1,315 and 205 completed games; all five validation-weight policies; 84 named-provider coverage rows; broader bookmaker missingness; and materialized versus deferred feature groups. Independent all-competition census and historical source-clock gaps still block full-season champions. A newly identified RMSE-policy mismatch is explicit: saved rankings use root weighted annual MSE, while V13 requires weighted annual RMSE. The prepared continuation must correct ranking from cached annual metrics without refitting or consulting test outcomes.
+The latest B095 return is **PARTIAL_RESUMABLE**: one verified 19,057,377-byte ZIP with 16 payloads and preserved prior continuation references. Successful archive verification does not make the owner execution successful. Actual B095 invoiced cost is unknown. No 12- or 24-worker scientific capacity pass is claimed.
 
-B095 is prepared, not executed. Public preparation creates no fits, forecasts, retrievals, promotions or production deployment. Earlier dated reports and selected original issues remain preserved and are linked from the review. Source publication, merge, website deployment and live verification remain separately evidenced steps.
+**B094 remains the last completed recovery of the saved research.** It preserved 1,644 base estimator states and 3,300 saved variants, completed 1,199 previously unfinished uncertainty tasks, reused 2,101 verified uncertainty results, and sealed one logical return in seven physical pieces. It made zero new estimator/calibration fits and zero provider requests. Recovery completion is separate from the incomplete V13 research program; the measured full-capacity CPU gate did not pass.
+
+The public review retains the same 14 saved objective/horizon roles, annual metrics on declared populations of 1,314, 1,315 and 205 completed games, all five validation-weight policies, 84 named-provider coverage rows, broader bookmaker missingness, and materialized versus deferred feature groups. Independent all-competition census and historical source-clock gaps still block full-season champions. Saved RMSE rankings use root weighted annual MSE, while V13 requires weighted annual RMSE; correction from cached annual metrics remains pending, with no refit or use of test outcomes for selection.
+
+**B096 delivery preparation was verified at 2026-11-18 01:44 UTC (November 17 Pacific); its owner execution has not started.** Public preparation creates no fits, forecasts, retrievals, promotions or production deployment. Earlier dated reports and selected original issues remain preserved and are linked from the review. Source publication, merge, website deployment and live verification remain separately evidenced steps.
 <!-- NBA B095 CURRENT REVIEW END -->
 
 ## November 16: B091 same-population champion review
