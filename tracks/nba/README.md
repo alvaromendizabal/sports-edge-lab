@@ -2,7 +2,7 @@
 
 
 <!-- NBA B095 CURRENT REVIEW BEGIN -->
-## November 17 Pacific: two B095 failures before research; B096 preparation
+## November 17 Pacific: two B095 failures before research; B096 prepared
 
 [Open the current execution and validation review](reports/b095_review.html). **Both B095 owner attempts failed during initialization and exited 2.** The cached 24-hour pricing proof had expired, and the live pricing lookup was denied, so the cost guard blocked scientific admission. These attempts produced no new model metrics, forecasts or provider retrievals. The scientific reports retain null estimator/calibration counters because final fit accounting was not reached; the latest failed run registered zero new estimator or calibration checkpoints. This does not erase preserved historical fits.
 
@@ -12,7 +12,7 @@ The latest B095 return is **PARTIAL_RESUMABLE**: one verified 19,057,377-byte ZI
 
 The public review retains the same 14 saved objective/horizon roles, annual metrics on declared populations of 1,314, 1,315 and 205 completed games, all five validation-weight policies, 84 named-provider coverage rows, broader bookmaker missingness, and materialized versus deferred feature groups. Independent all-competition census and historical source-clock gaps still block full-season champions. Saved RMSE rankings use root weighted annual MSE, while V13 requires weighted annual RMSE; correction from cached annual metrics remains pending, with no refit or use of test outcomes for selection.
 
-**B096 preparation is in progress; its owner execution has not started.** Public preparation creates no fits, forecasts, retrievals, promotions or production deployment. Earlier dated reports and selected original issues remain preserved and are linked from the review. Source publication, merge, website deployment and live verification remain separately evidenced steps.
+**B096 delivery preparation was verified at 2026-11-18 01:44 UTC (November 17 Pacific); its owner execution has not started.** Public preparation creates no fits, forecasts, retrievals, promotions or production deployment. Earlier dated reports and selected original issues remain preserved and are linked from the review. Source publication, merge, website deployment and live verification remain separately evidenced steps.
 <!-- NBA B095 CURRENT REVIEW END -->
 
 ## November 16: B091 same-population champion review

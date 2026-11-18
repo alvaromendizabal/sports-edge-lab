@@ -20,7 +20,7 @@ async function main(){
   assert.match(await page.locator('#evidence-clock').textContent(),/2026-11-18 00:39:08/);
   assert.equal(await page.locator('#execution-rows tr').count(),5);
   assert.match(await page.locator('#latest-failure').textContent(),/Two failed owner executions/);
-  assert.match(await page.locator('#preparation-note').textContent(),/B096 preparation is in progress/);
+  assert.match(await page.locator('#preparation-note').textContent(),/B096 delivery preparation was verified at 2026-11-18 01:44 UTC/);
   assert.match(await page.locator('#latest-return-detail').textContent(),/19,057,377/);
   assert.match(await page.locator('#throughput-detail').textContent(),/did not establish/);
   assert.match(await page.locator('body').textContent(),/RMSE aggregation requires correction/);
