@@ -45,6 +45,20 @@ async function main() {
         assert.ok(text.includes(phrase), `Missing qualified evidence: ${phrase}`);
       }
       assert.equal(await page.locator('.stages tbody tr').count(), 5);
+      if(width === 390) {
+        const cells = await page.locator('.stages tbody td').evaluateAll(nodes => nodes.map(node => ({
+          label:node.dataset.label, generated:getComputedStyle(node,'::before').content,
+          left:node.getBoundingClientRect().left, right:node.getBoundingClientRect().right,
+          width:node.getBoundingClientRect().width, scroll:node.scrollWidth, client:node.clientWidth
+        })));
+        assert.equal(cells.length,10);
+        for(const cell of cells) {
+          assert.ok(['Completed','Unfinished or qualified'].includes(cell.label));
+          assert.equal(cell.generated,JSON.stringify(cell.label));
+          assert.ok(cell.left>=0 && cell.right<=390 && cell.width>250 && cell.scroll<=cell.client+1,
+            'Each mobile stage cell must be readable without horizontal scrolling');
+        }
+      }
       assert.deepEqual(JSON.parse(await page.locator('#aggregate-evidence').textContent()), evidence);
       if(evidence.b100_preparation.status === 'PREPARED_VERIFIED') {
         assert.ok(text.includes('B100 replacement verified; owner execution pending'));
