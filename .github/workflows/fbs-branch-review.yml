@@ -30,6 +30,8 @@ jobs:
           python tests/test_fbs_v077_public.py
           python tests/test_fbs_v078_public.py
           python tests/test_fbs_v079_public.py
+          python examples/fbs_contracts/v091/build_review.py --check
+          python tests/test_fbs_v091_public.py
           node tests/fbs_v079_logic.test.cjs
           node tests/fbs_v054_public_view.test.cjs
       - name: Execute twice and verify deterministic evidence page
@@ -82,6 +84,7 @@ jobs:
         env:
           PLAYWRIGHT_MODULE_DIR: ${{ runner.temp }}/fbs-browser/node_modules/playwright
           FBS_SCREENSHOTS: ${{ runner.temp }}/fbs-screenshots
+          GITHUB_HEAD_SHA: ${{ github.event.pull_request.head.sha }}
         run: |
           node examples/fbs_contracts/tests/test_dashboard_browser.cjs
           node examples/fbs_contracts/tests/test_recovery_browser.cjs
@@ -96,6 +99,7 @@ jobs:
           node tests/fbs_v077_browser.test.cjs
           node tests/fbs_v078_browser.test.cjs
           node tests/fbs_v079_browser.test.cjs
+          node tests/fbs_v091_browser.test.cjs
       - name: Verify the published V074 URL in an actual public browser
         if: github.event_name == 'pull_request' && github.head_ref == 'fbs/v074-saved-evidence-review'
         env:
@@ -123,8 +127,10 @@ jobs:
             ${{ runner.temp }}/fbs-screenshots/FBS_V077_*_BROWSER_RECEIPT.json
             ${{ runner.temp }}/fbs-screenshots/FBS_V078_*_BROWSER_RECEIPT.json
             ${{ runner.temp }}/fbs-screenshots/FBS_V079_*_BROWSER_RECEIPT.json
+            ${{ runner.temp }}/fbs-screenshots/FBS_V091_BROWSER_RECEIPT.json
           if-no-files-found: error
           retention-days: 14
+
 
 
 

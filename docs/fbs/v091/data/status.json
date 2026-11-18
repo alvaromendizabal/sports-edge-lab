@@ -1,0 +1,175 @@
+{
+  "as_of": "2026-11-18T00:30:18.655469Z",
+  "evidence": [
+    {
+      "role": "Latest verified-return pointer",
+      "scope": "Physically verified pointer; all 42 durable objects passed full-object checksum and size checks. Selected payloads were read separately.",
+      "sha256": "249a0e96c7496b7656fd1725d9ea788f1f64d9312c181c4e36a3a46ca1d7124c"
+    },
+    {
+      "role": "Latest logical return",
+      "scope": "Saved verified return identity; 35 ordered parts.",
+      "sha256": "608e559a232f16e47a58dc10736e1b1dce710256e278162b7748d119c7897198"
+    },
+    {
+      "role": "Retained V089 scientific review",
+      "scope": "Previously authenticated scientific comparison; all results remain dated reconstructions.",
+      "sha256": "6a3998173a043824f5ff7702896844c7ec7287620e6b16d114f2e16ac2b8b0bf"
+    },
+    {
+      "role": "Authenticated startup failure",
+      "scope": "Full 48-byte failure payload physically read and matched to the verified archive manifest.",
+      "sha256": "8a1b91311ae2044b96487d719ac2eaff52457c43292e0b0241a698183e9604a6"
+    },
+    {
+      "role": "Return-size root-cause audit",
+      "scope": "Authenticated logical-member comparison; inherited bytes, within-return duplication and catalog-only projection remain separate measures.",
+      "sha256": "9ec49aa2f304a13f2f88e45c271e70b45c9947a26913a5a3cc606f797f3e92f2"
+    }
+  ],
+  "latest_attempt": {
+    "completed_model_jobs": 0,
+    "cost_is_invoice": false,
+    "count_note": "These are the saved attempt counters. Its fit-count completeness flag is false after the early failure; no registered model stage completed. A zero attempt-reuse count does not delete the earlier verified scientific evidence.",
+    "delivery_failures": 0,
+    "end_to_end_seconds": 1570.0559623760018,
+    "estimated_full_host_cost_usd": 1.120845506473979,
+    "failed_fits": 0,
+    "failure_detail": "Authenticated failure: KeyError 'checked_at_utc'. The price-cache fallback expected checked_at_utc while the shipped cache recorded checked_at and cache_age_seconds. The next release repairs that timestamp interpretation; execution validation remains pending.",
+    "fit_count_complete": false,
+    "operational_failures": 1,
+    "optimizer_occupancy_accepted": null,
+    "pre_finalization_seconds": 0.9431247139982588,
+    "recorded_base_fits": 0,
+    "recorded_calibrator_fits": 0,
+    "recorded_forecasts": 0,
+    "recorded_scored_rows": 0,
+    "registered_model_jobs": 0,
+    "release": "V090",
+    "return_finalization_seconds": 1537.1833607820008,
+    "scientific_complete": false,
+    "started": 1,
+    "status": "OPERATIONAL_FAILURE_VERIFIED_RESUMABLE",
+    "successful": 0,
+    "summary": "A missing price-cache timestamp field raised a startup error before registered modeling. Recovery evidence was delivered and verified; no new scientific work is recorded."
+  },
+  "owner": "FBS",
+  "prepared": {
+    "branches": [
+      {
+        "jobs": 306,
+        "label": "Single-bookmaker nonlinear ablations"
+      },
+      {
+        "jobs": 252,
+        "label": "Football feature-group ablations"
+      },
+      {
+        "jobs": 252,
+        "label": "Market-component controls"
+      },
+      {
+        "jobs": 126,
+        "label": "Predeclared interactions"
+      }
+    ],
+    "cost_guard_usd": 200,
+    "delivery_size_scope": "Report and integrity metadata; large retained artifacts remain separately referenced.",
+    "evidence_as_of": "Pending release freeze",
+    "executable_bytes": null,
+    "fixed_blend_policies": 84,
+    "frozen_test_jobs": 312,
+    "measured_optimizer_cores": null,
+    "minimum_target_workers": 12,
+    "new_scientific_fits": 0,
+    "owner_executions": 0,
+    "prepared_report_zip_bytes": null,
+    "provider_retrievals": 0,
+    "registered_model_jobs": 936,
+    "release": "V091",
+    "status": "PREPARATION_IN_PROGRESS",
+    "unlimited_wall_waives_cost_guard": false,
+    "validation_jobs": 624,
+    "verification_summary": "Compact-delivery engineering is in progress. No owner execution or sustained scientific-throughput acceptance is claimed.",
+    "worker_ceiling": 24
+  },
+  "publication": {
+    "new_numerical_forecasts_published": false,
+    "production_promoted": false,
+    "status": "DRAFT_SOURCE_REVIEW",
+    "website_deployed": false
+  },
+  "recovery": {
+    "actual_pointer_only_after_integrity": true,
+    "aggregate_science_cap": null,
+    "partial_and_complete_separate": true,
+    "preserve_completed_work": true,
+    "remaining_limit": "Full-source coverage, exact historical champion certification and independent official schedule completeness remain open. A changed completed-game population requires a safe frozen-inference extension for every retained contender.",
+    "resolve_latest_again_at_launch": true,
+    "return_changes": [
+      "The verified return audit found 134,098 of 134,110 payloads already present in V089, representing 29.41 GB of decoded inherited bytes. It also found 7.44 GB of duplicate decoded bytes within the same return; those overlap and must not be added together.",
+      "Replace repeated retained artifact copies with an integrity-pinned dependency manifest.",
+      "Keep reports, observed outcomes and continuation metadata small and explicit.",
+      "Verify required durable dependencies before reuse; report missing or corrupt dependencies.",
+      "Preserve partial versus complete status and every completed scientific commitment.",
+      "A catalog-only encoding of the exact existing payload set measured 12.28 MB in an engineering projection. It is not an executed owner return or a prediction of future scientific output size."
+    ],
+    "verify_dependencies_before_reuse": true
+  },
+  "retained_science": {
+    "base_fits": 90,
+    "calibrator_fits": 90,
+    "cohorts": [
+      {
+        "games": 919,
+        "season": 2024
+      },
+      {
+        "games": 934,
+        "season": 2025
+      },
+      {
+        "games": 752,
+        "season": 2026
+      }
+    ],
+    "completed_jobs": 90,
+    "core_jobs": 150,
+    "market_jobs": 432,
+    "official_schedule_completeness_certified": false,
+    "policy_target_identities": 397,
+    "registered_jobs": 90,
+    "release": "V089",
+    "scientific_complete": false
+  },
+  "schema": "fbs.public.execution-delivery.v091",
+  "selection": {
+    "previous_test_exposure": true,
+    "primary_weights": [
+      0.5,
+      0.5
+    ],
+    "season_training_weights_used": false,
+    "test_season": 2026,
+    "test_used_for_selection": false,
+    "validation_seasons": [
+      2024,
+      2025
+    ]
+  },
+  "storage": {
+    "catalog_projection_gzip_bytes": 12276949,
+    "inherited_decoded_bytes": 29410254353,
+    "inherited_payload_count": 134098,
+    "latest_return_bytes": 18480886907,
+    "latest_return_parts": 35,
+    "part_max_bytes": 536870912,
+    "payload_count": 134110,
+    "previous_executable_bytes": 469562847,
+    "previous_prepared_zip_bytes": 482920609,
+    "prior_scientific_return_bytes": 26681271158,
+    "prior_scientific_return_parts": 50,
+    "projection_is_owner_return": false,
+    "within_return_duplicate_decoded_bytes": 7439043130
+  }
+}
