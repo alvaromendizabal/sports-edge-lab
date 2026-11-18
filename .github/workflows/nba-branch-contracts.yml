@@ -132,7 +132,11 @@ jobs:
         env:
           PLAYWRIGHT_MODULE_DIR: ${{ runner.temp }}/nba-current-browser/node_modules/playwright
           NBA_MONITOR_SCREENSHOTS: ${{ runner.temp }}/nba-current-status-screenshots
-        run: node tracks/nba/reports/b095_review.browser.cjs
+          NBA_SOURCE_HEAD_SHA: ${{ github.event.pull_request.head.sha || github.sha }}
+        run: |
+          python tracks/nba/reports/build_b099_execution_status.py --check --self-test
+          node tracks/nba/reports/b095_review.browser.cjs
+          node tracks/nba/reports/b099_execution_status.browser.cjs
       - name: Preserve current NBA desktop and mobile evidence
         if: always()
         uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02
