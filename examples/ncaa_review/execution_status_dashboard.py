@@ -18,7 +18,9 @@ from zoneinfo import ZoneInfo
 
 HERE = Path(__file__).resolve().parent
 ROOT = HERE.parents[1]
-DATA = HERE / "EXECUTION_STATUS_R29_20261118.json"
+DATA = HERE / "EXECUTION_STATUS_R30_20261118.json"
+SOURCE_DATA = HERE / "EXECUTION_STATUS_R29_20261118.json"
+CLOCK_SCHEMA = "sel.ncaa.public.execution_status.v6"
 RECOVERY_DATA = HERE / "EXECUTION_STATUS_R28_20261118.json"
 PRICE_DATA = HERE / "EXECUTION_STATUS_R27_20261118.json"
 PREVIOUS_VERIFIED_DATA = HERE / "EXECUTION_STATUS_20261118.json"
@@ -235,11 +237,163 @@ def validate_source_v5(data, clocks):
             raise ValueError('Verified delivery needs exact public-safe pins and separate startup reuse')
 
 
+def validate_clock_v6(data):
+    """Keep the observed R30 failure separate from R31 release preparation."""
+    if set(data) != TOP_KEYS | {"audit_scope", "clock_recovery_evidence", "next_preparation"}:
+        raise ValueError("Unexpected clock-recovery execution fields")
+    prior = validate(json.loads(SOURCE_DATA.read_text()))
+    if data["owner"] != "NCAA basketball" or FORBIDDEN.search(canonical(data)):
+        raise ValueError("Private or out-of-owner content")
+    observed_clock = datetime.fromisoformat(data["observed_at"])
+    if observed_clock.tzinfo is None:
+        raise ValueError("Evidence clock requires a timezone")
+    publication = data["publication"]
+    if (set(publication) != set(prior["publication"])
+            or publication["source_state"] not in {"PREPARED", "COMMITTED"}
+            or publication["deployment_verified"] is not False
+            or any(publication[k] != 0 for k in ("owner_runs", "new_fits", "new_forecasts", "provider_requests"))):
+        raise ValueError("Dashboard publication cannot acquire research or deployment credit")
+    observed, verified = data["latest_observed_attempt"], data["latest_verified_return"]
+    if (set(observed) != set(prior["latest_observed_attempt"])
+            or observed["release"] != "R30" or observed["status"] != "FAILED_RESUMABLE"
+            or observed["evidence_class"] != "FULL_ARCHIVE_VERIFIED" or observed["return_published"] is not True
+            or set(verified) != set(prior["latest_verified_return"])
+            or verified["release"] != "R30" or verified["integrity"] != "FULL_ARCHIVE_VERIFIED"
+            or verified["sha256"] != "0a98aebdc76da760da72c7af110289efecf48737b6eae7bb94ea55e95a530d55"
+            or verified["payloads_verified"] != 220):
+        raise ValueError("R30 observed failure requires its exact verified return")
+    rows = data["attempts"]
+    if not isinstance(rows, list) or rows[:-1] != prior["attempts"] or len({r["id"] for r in rows}) != len(rows):
+        raise ValueError("Earlier execution history must remain intact")
+    last = rows[-1]
+    if (set(last) != set(prior["attempts"][-1]) or last["id"] != "r30" or last["release"] != "R30"
+            or last["outcome"] != "FAILED_RESUMABLE" or last["phase"] != "BEFORE_FIT"
+            or last["return_published"] is not True):
+        raise ValueError("R30 attempt cannot become a completed research run")
+    scope = data["audit_scope"]
+    if (set(scope) != set(prior["audit_scope"]) or scope["audited_attempts"] != len(rows)
+            or scope["distinct_run_ids"] != 9 or scope["completed_campaigns"] != 0):
+        raise ValueError("Attempt, run and completed-campaign counts are distinct")
+    c = data["current_execution"]
+    if set(c) != CURRENT_KEYS | {"failure", "historical_checkpoint_reuses"}:
+        raise ValueError("Unexpected R30 execution fields")
+    if (c["release"] != "R30" or c["phase"] != "BEFORE_FIT" or c["return_published"] is not True
+            or c["scientific_gate"] != "PENDING_REAL_ELIGIBLE_WORK" or c["scientific_gate_executed"] is not False
+            or c["cost_basis"] != ESTIMATED_COST or c["pressure_reason"] is not None or c["pressure_wait_seconds"] is not None):
+        raise ValueError("Clock recovery is not a pressure deferral or a scientific occupancy pass")
+    counts = ("recorded_stages_completed", "requested_workers", "peak_scientific_workers", "maximum_ready_depth",
+              "new_target_fits", "new_calibration_fits", "new_residual_fits", "verified_reused_target_fits",
+              "historical_checkpoint_reuses", "fresh_startup_tests", "reused_startup_tests", "cache_reads",
+              "cache_bytes", "fresh_storage_reads", "fresh_storage_bytes")
+    if any(type(c[k]) is not int or c[k] < 0 for k in counts):
+        raise ValueError("R30 work counters must be nonnegative integers")
+    if (any(c[k] != 0 for k in ("peak_scientific_workers", "maximum_ready_depth", "new_target_fits",
+                               "new_calibration_fits", "new_residual_fits", "verified_reused_target_fits", "fresh_startup_tests"))
+            or c["historical_checkpoint_reuses"] != 108 or c["reused_startup_tests"] != 1255
+            or c["requested_workers"] != 24 or c["recorded_stages_completed"] != 4
+            or any(c[k] != last[k] for k in ("fresh_startup_tests", "reused_startup_tests", "new_target_fits"))
+            or c["historical_checkpoint_reuses"] != last["historical_checkpoint_reuses"]
+            or c["owner_elapsed_seconds"] != last["elapsed_seconds"]):
+        raise ValueError("Historical reuse and startup checks cannot become new or current-consumer fits")
+    measurements = ("startup_seconds", "owner_elapsed_seconds", "parent_cpu_seconds",
+                    "completed_child_cpu_seconds", "estimated_instance_wall_cost_usd")
+    if any(type(c[k]) not in (int, float) or not math.isfinite(c[k]) or c[k] < 0 for k in measurements):
+        raise ValueError("Observed execution measurements must be finite and nonnegative")
+    if c["completed_child_cpu_seconds"] != 0:
+        raise ValueError("No scientific or completed child CPU was recorded")
+    clocks = [datetime.fromisoformat(c[k]) for k in ("started_at", "completed_at")]
+    if any(x.tzinfo is None for x in clocks) or not clocks[0] <= clocks[1] <= observed_clock:
+        raise ValueError("R30 execution requires ordered timezone-aware clocks")
+    failure = c["failure"]
+    expected_failure = {
+        "recorded_status": "FAILED_PARTIAL_WORK_PRESERVED", "pointer_status": "FAILED_RESUMABLE",
+        "recorded_error": "B104_RESPONSE_HISTORICAL_ORIGINAL_CLOCKS",
+        "caller_error": "B032_EVIDENCE_STORAGE_STOP:espn:durable_pending_response_recovery",
+        "failed_stage": "04b_incremental_model_source_refresh", "classification": "HISTORICAL_RESPONSE_CLOCK_CHECK_FAILED",
+        "diagnosis_status": "RECORDED_TRACEBACK_VERIFIED", "source_refresh_complete": False,
+        "budget_exhaustion_proven": False, "compute_cost_guard_usd": 200,
+        "wall_limit_disabled": True, "out_of_memory_or_external_kill_proven": False}
+    if failure != expected_failure:
+        raise ValueError("Original-clock failure cannot become budget, pressure or science success")
+    e = data["clock_recovery_evidence"]
+    keys = {"historical_checkpoints_verified", "current_consumer_target_reuses", "recorded_source_refresh_complete",
+            "owner_peak_cores_performance_ledger", "owner_peak_cores_independent_sampler", "owner_mean_cores_independent_sampler",
+            "independent_measurement_seconds", "useful_scientific_worker_cores", "rate_usd_per_hour", "estimated_cost_wall_seconds",
+            "price_verification_succeeded", "historical_study_wall_seconds", "historical_study_parent_cpu_seconds",
+            "failed_source_stage_wall_seconds", "failed_source_stage_parent_cpu_seconds", "note"}
+    if set(e) != keys:
+        raise ValueError("Unexpected historical-clock evidence fields")
+    numeric = keys - {"recorded_source_refresh_complete", "price_verification_succeeded", "note"}
+    if any(type(e[k]) not in (int, float) or not math.isfinite(e[k]) or e[k] < 0 for k in numeric):
+        raise ValueError("Clock-recovery measurements must be finite and nonnegative")
+    if (e["historical_checkpoints_verified"] != c["historical_checkpoint_reuses"]
+            or e["current_consumer_target_reuses"] != 0 or e["recorded_source_refresh_complete"] is not False
+            or e["useful_scientific_worker_cores"] != 0 or e["price_verification_succeeded"] is not True
+            or not 0 < e["owner_mean_cores_independent_sampler"] <= e["owner_peak_cores_independent_sampler"] < 12
+            or not 0 < e["owner_peak_cores_performance_ledger"] < 12
+            or not 0 < e["independent_measurement_seconds"] <= c["owner_elapsed_seconds"]
+            or not 0 < e["estimated_cost_wall_seconds"] <= c["owner_elapsed_seconds"]
+            or not 0 < e["rate_usd_per_hour"]
+            or abs(c["estimated_instance_wall_cost_usd"] - e["rate_usd_per_hour"] * e["estimated_cost_wall_seconds"] / 3600) > 1e-6):
+        raise ValueError("CPU, shared-instance cost, historical reuse and fitting have different scopes")
+    p = data["preserved_work"]
+    if (set(p) != set(prior["preserved_work"]) or p["duplicate_fits_proven"] is not False
+            or p["all_repeated_work_eliminated"] is not False
+            or p["new_target_fits_in_audited_attempts"] != sum(r["new_target_fits"] or 0 for r in rows)):
+        raise ValueError("Do not invent scientific progress or eliminated repeat work")
+    if data["science_contract"] != prior["science_contract"]:
+        raise ValueError("Validation, frozen test, population and exposure rules remain unchanged")
+    if {k:v for k,v in data["throughput"].items() if k != "note"} != {k:v for k,v in prior["throughput"].items() if k != "note"}:
+        raise ValueError("Historical measured scientific throughput remains historical")
+    n = data["next_preparation"]
+    if (set(n) != set(prior["next_preparation"]) or n["release"] != "R31"
+            or n["status"] not in {"IN_PROGRESS", "PREPARED_VERIFIED"}
+            or n["owner_executions"] != 0 or n["science_completion_claimed"] is not False
+            or len(n["stages"]) != 4 or any(set(x) != {"name", "status"} for x in n["stages"])):
+        raise ValueError("R31 preparation is separate from the actual R30 execution")
+    if n["status"] == "IN_PROGRESS":
+        if (n["canonical_gate_passed"] is not False or n["upload_verified"] is not False
+                or any(n[k] is not None for k in ("engineering_tests", "engineering_failures", "engineering_evidence_sha256", "verified_delivery"))
+                or any(x["status"] != "IN_PROGRESS" for x in n["stages"])):
+            raise ValueError("In-progress R31 preparation cannot borrow a prior gate or delivery")
+    else:
+        delivery = n["verified_delivery"]
+        pins = {"canonical_source", "engineering_gate", "installation_receipt", "ready_receipt"}
+        if (n["canonical_gate_passed"] is not True or n["upload_verified"] is not True
+                or type(n["engineering_tests"]) is not int or n["engineering_tests"] <= 0 or n["engineering_failures"] != 0
+                or any(x["status"] != "IMPLEMENTED_OWNER_EXECUTION_PENDING" for x in n["stages"])
+                or not isinstance(delivery, dict)
+                or set(delivery) != pins | {"installed_at", "startup_cases_reused", "startup_cases_executed", "owner_executions", "new_scientific_fits"}):
+            raise ValueError("Verified R31 preparation requires a complete canonical gate and delivery")
+        for key in pins:
+            value = delivery[key]
+            if (not isinstance(value, dict) or set(value) != {"bytes", "sha256"}
+                    or type(value["bytes"]) is not int or value["bytes"] <= 0
+                    or not re.fullmatch(r"[0-9a-f]{64}", value["sha256"])):
+                raise ValueError("Verified R31 delivery needs exact public-safe content pins")
+        old_delivery = prior["next_preparation"]["verified_delivery"]
+        if (delivery["engineering_gate"]["sha256"] != n["engineering_evidence_sha256"]
+                or delivery["engineering_gate"] == old_delivery["engineering_gate"]
+                or delivery["canonical_source"] == old_delivery["canonical_source"]
+                or delivery["owner_executions"] != 0 or delivery["new_scientific_fits"] != 0
+                or type(delivery["startup_cases_reused"]) is not int
+                or not 0 < delivery["startup_cases_reused"] <= n["engineering_tests"]
+                or delivery["startup_cases_executed"] != 0
+                or datetime.fromisoformat(delivery["installed_at"]).tzinfo is None):
+            raise ValueError("R31 needs its own release evidence; engineering is not owner science")
+    for record in data["evidence"]:
+        if set(record) != {"label", "scope", "sha256"} or not re.fullmatch(r"[0-9a-f]{64}", record["sha256"]):
+            raise ValueError("Public evidence needs exact scoped digests")
+    return deepcopy(data)
+
+
 def validate(data):
     """Fail closed on evidence-class confusion, inflated work, or private data."""
     if not isinstance(data, dict):
         raise ValueError("Unexpected public execution fields")
     schema = data.get("schema")
+    if schema == CLOCK_SCHEMA:
+        return validate_clock_v6(data)
     expected = (TOP_KEYS | {'audit_scope','source_publication_evidence','next_preparation'} if schema == SCHEMA else
                 TOP_KEYS | {'audit_scope','recovery_evidence','next_preparation'} if schema == RECOVERY_SCHEMA else
                 TOP_KEYS | {'audit_scope'} if schema == PRICE_SCHEMA else TOP_KEYS if schema == PREVIOUS_SCHEMA else LEGACY_TOP_KEYS)
@@ -411,6 +565,12 @@ def render_current_banner(data=None):
         if data["schema"] == PRICE_SCHEMA:
             summary += (' The saved price evidence had expired before launch. The recorded budget-deferral '
                         'label does not establish USD 200 spending; current cost remains unknown.')
+        if data['schema'] == CLOCK_SCHEMA:
+            summary += (' R30 authenticated 108 historical target checkpoints, then stopped at a historical-response '
+                        'original-clock check during source recovery. No scientific worker ran. '
+                        + ('R31 preparation and staging are verified; user execution remains pending.'
+                           if data['next_preparation']['status'] == 'PREPARED_VERIFIED' else
+                           'R31 preparation is in progress; verification and user execution remain pending.'))
         if data['schema'] == SCHEMA:
             summary += (' R29 authenticated 108 historical target checkpoints and recorded 294 source chunks before '
                         'live memory pressure deferred source publication. No scientific worker ran. '
@@ -446,6 +606,7 @@ PREVIOUS_EXECUTION_BANNER = render_current_banner(json.loads(HISTORICAL_DATA.rea
 PREVIOUS_VERIFIED_EXECUTION_BANNER = render_current_banner(json.loads(PREVIOUS_VERIFIED_DATA.read_text()))
 PREVIOUS_PRICE_EXECUTION_BANNER = render_current_banner(json.loads(PRICE_DATA.read_text()))
 PREVIOUS_RECOVERY_EXECUTION_BANNER = render_current_banner(json.loads(RECOVERY_DATA.read_text()))
+PREVIOUS_SOURCE_EXECUTION_BANNER = render_current_banner(json.loads(SOURCE_DATA.read_text()))
 
 
 def render(data=None):

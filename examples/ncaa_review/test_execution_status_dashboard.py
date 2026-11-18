@@ -253,7 +253,7 @@ class ExecutionStatusTests(unittest.TestCase):
 
 class R29SourcePublicationTests(unittest.TestCase):
     def setUp(self):
-        self.data = status.load()
+        self.data = status.validate(json.loads(status.SOURCE_DATA.read_text()))
 
     def reject(self, mutate):
         value = deepcopy(self.data)
@@ -383,7 +383,7 @@ class R29SourcePublicationTests(unittest.TestCase):
         # An isolated public-projection fixture exercises the verified rendering
         # path. These fabricated fixture pins never enter the published snapshot.
         self.assertIn('R30 preparation and staging are verified',status.render_current_banner(candidate))
-        self.assertEqual(status.load()['next_preparation'],self.data['next_preparation'])
+        self.assertEqual(status.validate(json.loads(status.SOURCE_DATA.read_text()))['next_preparation'],self.data['next_preparation'])
 
     def test_current_banner_replaces_exact_old_wrapper_only(self):
         from v12_public_status import render_banner, strip_banner, CURRENT_BANNER
@@ -393,7 +393,112 @@ class R29SourcePublicationTests(unittest.TestCase):
         self.assertEqual(strip_banner(current),body)
         self.assertEqual(current.count(CURRENT_BANNER),1)
         self.assertNotIn('stale launch-wide deadline',CURRENT_BANNER)
-        self.assertIn('live memory pressure',CURRENT_BANNER)
+        self.assertNotIn('live memory pressure',CURRENT_BANNER)
+        self.assertIn('original-clock check',CURRENT_BANNER)
+
+
+class R30ClockRecoveryTests(unittest.TestCase):
+    def setUp(self):
+        self.data = status.load()
+
+    def reject(self, mutate):
+        value = deepcopy(self.data)
+        mutate(value)
+        with self.assertRaises(ValueError):
+            status.validate(value)
+
+    def test_actual_failed_return_and_prior_attempts(self):
+        self.assertEqual(self.data["schema"], status.CLOCK_SCHEMA)
+        self.assertEqual(self.data["latest_observed_attempt"]["status"], "FAILED_RESUMABLE")
+        self.assertEqual(self.data["latest_verified_return"]["payloads_verified"], 220)
+        prior = status.validate(json.loads(status.SOURCE_DATA.read_text()))
+        self.assertEqual(self.data["attempts"][:-1], prior["attempts"])
+        self.assertEqual(self.data["audit_scope"]["audited_attempts"], 11)
+        self.assertEqual(self.data["audit_scope"]["distinct_run_ids"], 9)
+        self.reject(lambda d: d["attempts"][0].update(new_target_fits=100))
+        self.reject(lambda d: d["latest_observed_attempt"].update(status="COMPLETED"))
+        self.reject(lambda d: d["latest_verified_return"].update(sha256=prior["latest_verified_return"]["sha256"]))
+
+    def test_historical_reuse_and_startup_are_not_new_science(self):
+        c = self.data["current_execution"]
+        self.assertEqual(c["historical_checkpoint_reuses"], 108)
+        self.assertEqual(c["reused_startup_tests"], 1255)
+        self.assertEqual(c["fresh_startup_tests"], 0)
+        self.assertEqual(c["new_target_fits"], 0)
+        self.assertEqual(c["verified_reused_target_fits"], 0)
+        self.reject(lambda d: d["current_execution"].update(verified_reused_target_fits=108))
+        self.reject(lambda d: d["current_execution"].update(new_target_fits=108))
+        self.reject(lambda d: d["current_execution"].update(fresh_startup_tests=1255))
+        self.reject(lambda d: d["current_execution"].update(historical_checkpoint_reuses=0))
+
+    def test_clock_failure_never_inherits_pressure_or_budget(self):
+        c = self.data["current_execution"]
+        self.assertEqual(c["failure"]["recorded_error"], "B104_RESPONSE_HISTORICAL_ORIGINAL_CLOCKS")
+        self.assertEqual(c["failure"]["recorded_status"], "FAILED_PARTIAL_WORK_PRESERVED")
+        self.assertEqual(c["failure"]["pointer_status"], "FAILED_RESUMABLE")
+        self.assertIsNone(c["pressure_wait_seconds"])
+        self.assertIsNone(c["pressure_reason"])
+        self.reject(lambda d: d["current_execution"].update(pressure_wait_seconds=15.15))
+        self.reject(lambda d: d["current_execution"]["failure"].update(recorded_error="V7_BOUNDED_IO_PRESSURE"))
+        self.reject(lambda d: d["current_execution"]["failure"].update(budget_exhaustion_proven=True))
+        self.reject(lambda d: d["clock_recovery_evidence"].update(recorded_source_refresh_complete=True))
+
+    def test_measured_parent_cpu_not_worker_occupancy(self):
+        c, e = self.data["current_execution"], self.data["clock_recovery_evidence"]
+        self.assertAlmostEqual(c["parent_cpu_seconds"], 632.602133)
+        self.assertEqual(c["completed_child_cpu_seconds"], 0)
+        self.assertEqual(c["peak_scientific_workers"], 0)
+        self.assertEqual(c["requested_workers"], 24)
+        self.assertAlmostEqual(e["owner_peak_cores_performance_ledger"], 1.226051398173781)
+        self.assertAlmostEqual(e["owner_peak_cores_independent_sampler"], 1.3977839484346002)
+        self.assertEqual(self.data["throughput"]["release"], "R22")
+        self.reject(lambda d: d["current_execution"].update(scientific_gate_executed=True))
+        self.reject(lambda d: d["current_execution"].update(peak_scientific_workers=24))
+        self.reject(lambda d: d["clock_recovery_evidence"].update(useful_scientific_worker_cores=12))
+        self.reject(lambda d: d["throughput"].update(release="R30"))
+
+    def test_exact_shared_wall_estimate_separate_from_cpu_and_billing(self):
+        c, e = self.data["current_execution"], self.data["clock_recovery_evidence"]
+        self.assertAlmostEqual(c["estimated_instance_wall_cost_usd"], 0.670245610164624)
+        self.assertAlmostEqual(c["estimated_instance_wall_cost_usd"],e["rate_usd_per_hour"]*e["estimated_cost_wall_seconds"]/3600)
+        self.reject(lambda d: d["current_execution"].update(cost_basis="INVOICE"))
+        self.reject(lambda d: d["current_execution"].update(estimated_instance_wall_cost_usd=0))
+        self.reject(lambda d: d["clock_recovery_evidence"].update(rate_usd_per_hour=float("nan")))
+
+    def test_r31_has_no_borrowed_r30_preparation_credit(self):
+        n = self.data["next_preparation"]
+        self.assertEqual(n["release"], "R31")
+        self.assertEqual(n["owner_executions"], 0)
+        self.reject(lambda d: d["next_preparation"].update(owner_executions=1))
+        self.reject(lambda d: d["next_preparation"].update(science_completion_claimed=True))
+        prior = status.validate(json.loads(status.SOURCE_DATA.read_text()))
+        self.reject(lambda d: d.update(next_preparation=deepcopy(prior["next_preparation"])))
+        if n["status"] == "IN_PROGRESS":
+            self.assertIsNone(n["verified_delivery"])
+            self.reject(lambda d: d["next_preparation"].update(status="PREPARED_VERIFIED"))
+            self.reject(lambda d: d["next_preparation"].update(engineering_tests=1277))
+        else:
+            self.reject(lambda d: d["next_preparation"].update(verified_delivery=prior["next_preparation"]["verified_delivery"]))
+
+    def test_v13_and_private_boundary_still_enforced(self):
+        self.reject(lambda d: d["science_contract"].update(test_selection_weight=0.1))
+        self.reject(lambda d: d["science_contract"].update(validation_seasons=["2025-26", "2026-27"]))
+        self.reject(lambda d: d["science_contract"].update(new_full_population_champion=True))
+        self.reject(lambda d: d["evidence"][-1].update(label="s3://private-owner/object"))
+        self.reject(lambda d: d["publication"].update(deployment_verified=True))
+        self.reject(lambda d: d["publication"].update(owner_runs=1))
+
+    def test_previous_source_banner_replaced_without_changing_body(self):
+        from v12_public_status import render_banner, strip_banner, CURRENT_BANNER
+        body = '<main><article data-original="keep">Preserved scientific rows</article></main>'
+        previous = body.replace('<main>', '<main>' + status.PREVIOUS_SOURCE_EXECUTION_BANNER)
+        current = render_banner(previous)
+        self.assertEqual(strip_banner(current), body)
+        self.assertEqual(current.count(CURRENT_BANNER), 1)
+        self.assertIn('latest observed R30', CURRENT_BANNER)
+        self.assertIn('220 payloads', CURRENT_BANNER)
+        self.assertIn('R31', CURRENT_BANNER)
+        self.assertNotIn('R30 preparation and staging are verified', CURRENT_BANNER)
 
 
 if __name__ == "__main__":

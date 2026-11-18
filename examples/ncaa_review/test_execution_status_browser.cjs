@@ -19,33 +19,33 @@ async function verifyExecutionStatus(browser, file) {
       await page.setViewportSize({ width, height: 1000 });
       await page.goto(pathToFileURL(file).href);
       await page.locator('#attempt-rows tr').first().waitFor();
-      assert.equal(await page.locator('#observed-release').innerText(), 'R29');
-      assert.equal(await page.locator('#verified-release').innerText(), 'R29');
-      assert.match(await page.locator('#observed-status').innerText(), /source publication deferred/i);
+      assert.equal(await page.locator('#observed-release').innerText(), 'R30');
+      assert.equal(await page.locator('#verified-release').innerText(), 'R30');
+      assert.match(await page.locator('#observed-status').innerText(), /failed resumable/i);
       assert.equal(await page.locator('#current-execution-panel').isVisible(), true);
-      assert.match(await page.locator('#current-work-facts').innerText(), /1,219 reused · 0 fresh/);
+      assert.match(await page.locator('#current-work-facts').innerText(), /1,255 reused · 0 fresh/);
       assert.match(await page.locator('#current-work-facts').innerText(), /Requested workers \/ scientific peak\s+24 \/ 0/);
       assert.match(await page.locator('#current-work-facts').innerText(), /Not run · source stage blocked dispatch/);
       assert.match(await page.locator('#current-cost-facts').innerText(), /Succeeded · integrity verified/);
       assert.match(await page.locator('#current-work-facts').innerText(), /Historical target checkpoint reuses\s+108/);
       assert.match(await page.locator('#current-work-facts').innerText(), /Current-consumer target reuses\s+0/);
       const costFacts = await page.locator('#current-cost-facts').innerText();
-      assert.match(costFacts, /\$1\.24/);
+      assert.match(costFacts, /\$0\.67/);
       assert.doesNotMatch(costFacts, /\$0\.00/);
       assert.match(costFacts, /Budget exhaustion established\s+No · verified estimate below guard/);
-      assert.match(await page.locator('#current-work-facts').innerText(), /2,085 \/ 1,513/);
-      assert.match(await page.locator('#attempt-scope').innerText(), /10 audited attempts · 8 distinct run identities/);
+      assert.match(await page.locator('#current-work-facts').innerText(), /823 \/ 32/);
+      assert.match(await page.locator('#attempt-scope').innerText(), /11 audited attempts · 9 distinct run identities/);
       assert.match(await page.locator('#snapshot-time').innerText(), /Pacific.*not a live status feed/);
       assert.equal(await page.locator('#preserved-fits').innerText(), '11');
       assert.match(await page.locator('#throughput-facts').innerText(), /12–24-core science proven\s+No/);
       assert.equal(await page.locator('#recovery-evidence-panel').isVisible(), true);
-      assert.match(await page.locator('#recovery-archive-facts').innerText(), /Source chunks recorded\s+294/);
-      assert.match(await page.locator('#recovery-clock-facts').innerText(), /42\.37% \/ 42\.72%/);
+      assert.match(await page.locator('#recovery-archive-facts').innerText(), /Historical target checkpoints authenticated\s+108/);
+      assert.match(await page.locator('#recovery-clock-facts').innerText(), /Scientific occupancy gate executed\s+No/);
       assert.equal(await page.locator('#next-preparation-state').innerText(),
-        `R30 · ${expected.next_preparation.status} · 0 owner executions`);
+        `R31 · ${expected.next_preparation.status} · 0 owner executions`);
       assert.equal(await page.locator('#preparation-stages li').count(), 4);
-      assert.match(await page.locator('#recovery-clock-facts').innerText(), /1\.30 cores/);
-      assert.match(await page.locator('#recovery-clock-facts').innerText(), /1\.59 cores/);
+      assert.match(await page.locator('#recovery-clock-facts').innerText(), /1\.23 cores/);
+      assert.match(await page.locator('#recovery-clock-facts').innerText(), /1\.40 cores/);
       if (expected.next_preparation.status === 'PREPARED_VERIFIED') {
         const note = await page.locator('#preparation-note').innerText();
         assert.ok(note.includes(`${expected.next_preparation.engineering_tests.toLocaleString('en-US')} engineering checks passed`));
@@ -89,16 +89,23 @@ async function verifyExecutionStatus(browser, file) {
       assert.equal(await page.locator('#attempt-rows tr').count(), expected.attempts.length);
     }
     await page.goto(pathToFileURL(path.join(path.dirname(file), 'index.html')).href);
-    assert.match(await page.locator('#v12-current-evidence').innerText(), /latest observed R29.*published return and 219 payloads are verified/is);
+    assert.match(await page.locator('#v12-current-evidence').innerText(), /latest observed R30.*published return and 220 payloads are verified/is);
     assert.equal(await page.locator('#v12-current-evidence a[href="execution.html"]').count(), 1);
     await page.locator('#v12-current-evidence a[href="execution.html"]').click();
-    assert.equal(await page.locator('#observed-release').innerText(), 'R29');
+    assert.equal(await page.locator('#observed-release').innerText(), 'R30');
     const raw = fs.readFileSync(file, 'utf8');
-    const mutations = [d => { d.publication.new_fits = 1; }, d => { d.latest_verified_return.integrity = 'UNVERIFIED'; }, d => { d.science_contract.test_selection_weight = 0.5; }, d => { d.throughput.newer_12_to_24_core_science_proven = true; }, d => { d.current_execution.new_target_fits = 1; }, d => { d.current_execution.scientific_gate_executed = true; }, d => { d.latest_observed_attempt.return_published = false; }, d => { d.current_execution.cost_basis = 'INVOICE'; }, d => { d.current_execution.estimated_instance_wall_cost_usd = 0; }, d => { d.current_execution.estimated_instance_wall_cost_usd = 200; }, d => { d.current_execution.deferral.budget_exhaustion_proven = true; }, d => { d.current_execution.deferral.root_cause = 'COMPUTE_BUDGET_SPENT'; }, d => { d.current_execution.historical_checkpoint_reuses = 0; }, d => { d.source_publication_evidence.recorded_source_chunks = 0; }, d => { d.current_execution.pressure_wait_seconds = 0; }, d => { d.audit_scope.audited_attempts = 7; }, d => { d.next_preparation.owner_executions = 1; }, d => { d.source_publication_evidence.source_refresh_complete = true; }, d => { d.source_publication_evidence.pressure_reasons = []; }, d => { d.next_preparation.engineering_evidence_sha256 = 'unverified'; },
-      d => { d.source_publication_evidence.useful_scientific_worker_cores = 12; },
-      d => { d.source_publication_evidence.chunk_progress_is_complete_source_coverage = true; },
-      d => { d.source_publication_evidence.collector_completed_captures = 122177; },
-      d => { d.source_publication_evidence.current_consumer_target_reuses = 108; }];
+    const mutations = [d => {d.publication.new_fits = 1;}, d => {d.latest_verified_return.integrity = 'UNVERIFIED';},
+    d => {d.science_contract.test_selection_weight = .1;}, d => {d.throughput.newer_12_to_24_core_science_proven = true;},
+    d => {d.current_execution.new_target_fits = 1;}, d => {d.current_execution.scientific_gate_executed = true;},
+    d => {d.latest_observed_attempt.return_published = false;}, d => {d.current_execution.cost_basis = 'INVOICE';},
+    d => {d.current_execution.estimated_instance_wall_cost_usd = 0;}, d => {d.current_execution.estimated_instance_wall_cost_usd = 200;},
+    d => {d.current_execution.failure.budget_exhaustion_proven = true;}, d => {d.current_execution.failure.recorded_error = 'V7_BOUNDED_IO_PRESSURE';},
+    d => {d.current_execution.historical_checkpoint_reuses = 0;}, d => {d.clock_recovery_evidence.historical_checkpoints_verified = 0;},
+    d => {d.current_execution.pressure_wait_seconds = 15.15;}, d => {d.audit_scope.audited_attempts = 7;},
+    d => {d.next_preparation.owner_executions = 1;}, d => {d.clock_recovery_evidence.recorded_source_refresh_complete = true;},
+    d => {d.current_execution.failure.pointer_status = 'COMPLETED';}, d => {d.next_preparation.engineering_evidence_sha256 = 'unverified';},
+    d => {d.clock_recovery_evidence.useful_scientific_worker_cores = 12;}, d => {d.current_execution.peak_scientific_workers = 24;},
+    d => {d.current_execution.reused_startup_tests = 1219;}, d => {d.clock_recovery_evidence.current_consumer_target_reuses = 108;}];
     for (const mutate of mutations) {
       const bad = JSON.parse(JSON.stringify(expected)); mutate(bad);
       const html = raw.replace(/(<script id="execution-data" type="application\/json">)[\s\S]*?(<\/script>)/, '$1' + JSON.stringify(bad).replace(/</g, '\\u003c') + '$2');
@@ -106,6 +113,11 @@ async function verifyExecutionStatus(browser, file) {
       assert.equal(await page.locator('#data-error').isVisible(), true);
       assert.equal(await page.locator('#report').isVisible(), false);
     }
+    const sourceData = JSON.parse(fs.readFileSync(path.join(__dirname, 'EXECUTION_STATUS_R29_20261118.json')));
+    await page.setContent(raw.replace(/(<script id="execution-data" type="application\/json">)[\s\S]*?(<\/script>)/, '$1' + JSON.stringify(sourceData).replace(/</g, '\\u003c') + '$2'));
+    assert.equal(await page.locator('#data-error').isVisible(), false);
+    assert.equal(await page.locator('#observed-release').innerText(), 'R29');
+    assert.match(await page.locator('#recovery-archive-facts').innerText(), /Source chunks recorded\s+294/);
     const older = JSON.parse(fs.readFileSync(path.join(__dirname, 'EXECUTION_STATUS_20261118.json')));
     const legacy = raw.replace(/(<script id="execution-data" type="application\/json">)[\s\S]*?(<\/script>)/, '$1' + JSON.stringify(older).replace(/</g, '\\u003c') + '$2');
     await page.setContent(legacy);

@@ -92,11 +92,11 @@ async function verifyR9(browser, filename) {
     // verifies the independent current execution page after the dated R9 checks.
     const currentExecution = await require('./test_execution_status_browser.cjs').verifyExecutionStatus(
       browser, path.join(path.dirname(filename), 'execution.html'));
-    assert.equal(currentExecution.actual_observed_release, 'R29');
+    assert.equal(currentExecution.actual_observed_release, 'R30');
     assert.equal(currentExecution.corrupt_evidence_rejections, 24);
-    assert.equal(currentExecution.checked_cells_per_viewport, 150);
+    assert.equal(currentExecution.checked_cells_per_viewport, 165);
     // The dated R9/R8 values below remain historical; only the separate current
-    // execution hook advances to R29 evidence.
+    // execution hook advances to R30 evidence.
     return {viewports,currentExecution,actualOwnerRelease:'B063R8',actualOwnerStatus:'FAILED_PARTIAL_WORK_PRESERVED',
       actualPeakReservedCPUs:1,actualNewOwnerFits:0,actualVerifiedCacheReads:118,actualHeartbeatRows:26,
       completePostCaptureLogClaim:false,retainedMetricLeaders:14,realChromium:true,

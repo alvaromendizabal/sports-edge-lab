@@ -13,7 +13,7 @@ R17_POPULATION_BANNER = '<section id="v12-current-evidence" aria-labelledby="v12
 
 R19_BANNER = '<section id="v12-current-evidence" aria-labelledby="v12-current-title" class="b063-notice" style="margin-bottom:28px;padding:20px;border:1px solid #ccd8ce;border-radius:12px;background:#eaf0e8"><p class="b063-eyebrow" style="margin-top:0">Latest verified execution R19 · November 16, 2026 Pacific · Population comparison remains R18</p><h2 id="v12-current-title">R19 preserved new science; the utilization gate failed</h2><p>R19 committed 49 new target-model fits, 8 scalar calibrations and 24 empirical residual fits. It preserved 780 pre-cutoff forecast rows across 21 games. The strict-refit ready queue peaked at one task with two concurrent worker processes; measured use was 10.31% of the requested 12-core capacity. Two completed worker outputs still require publication recovery.</p><p>The three-season population, metric and status tables retain their dated R18 evidence because R19\'s final population materialization failed. The 2024–25 and 2025–26 seasons remain validation; 2026–27 has zero model-selection weight. Complete model and provider coverage, a new champion and scientific utilization success remain unproven. Older reports below remain dated archives.</p><p><strong><a href="three_seasons.html">Open the three-season comparison and R19 status →</a></strong> · <a href="v12.html">Preserved V12 comparison</a></p></section>'
 
-from execution_status_dashboard import PREVIOUS_EXECUTION_BANNER, PREVIOUS_VERIFIED_EXECUTION_BANNER, PREVIOUS_PRICE_EXECUTION_BANNER, PREVIOUS_RECOVERY_EXECUTION_BANNER, render_current_banner
+from execution_status_dashboard import PREVIOUS_EXECUTION_BANNER, PREVIOUS_VERIFIED_EXECUTION_BANNER, PREVIOUS_PRICE_EXECUTION_BANNER, PREVIOUS_SOURCE_EXECUTION_BANNER, PREVIOUS_RECOVERY_EXECUTION_BANNER, render_current_banner
 
 CURRENT_BANNER = render_current_banner()
 
@@ -22,7 +22,7 @@ def strip_banner(html: str) -> str:
     """Remove only the exact current wrapper to recover prior archive bytes."""
     if 'id="v12-current-evidence"' not in html:
         return html
-    matches = [banner for banner in (CURRENT_BANNER, PREVIOUS_RECOVERY_EXECUTION_BANNER, PREVIOUS_PRICE_EXECUTION_BANNER, PREVIOUS_VERIFIED_EXECUTION_BANNER, PREVIOUS_EXECUTION_BANNER, R19_BANNER, R17_POPULATION_BANNER, R17_CHECKPOINT_BANNER, R16_BANNER, R15_BANNER, PREVIOUS_BANNER) if html.count(banner) == 1]
+    matches = [banner for banner in (CURRENT_BANNER, PREVIOUS_SOURCE_EXECUTION_BANNER, PREVIOUS_RECOVERY_EXECUTION_BANNER, PREVIOUS_PRICE_EXECUTION_BANNER, PREVIOUS_VERIFIED_EXECUTION_BANNER, PREVIOUS_EXECUTION_BANNER, R19_BANNER, R17_POPULATION_BANNER, R17_CHECKPOINT_BANNER, R16_BANNER, R15_BANNER, PREVIOUS_BANNER) if html.count(banner) == 1]
     if len(matches) != 1:
         raise ValueError('Unexpected current evidence banner')
     return html.replace(matches[0], '', 1)
