@@ -24,6 +24,8 @@ The current authenticated **V090/V091/V093/V095 scope is six failed attempts, ze
 
 The attempt selected **16 scientific workers within a 24-CPU lease**, with native threads bounded to one per worker. Its queue drained without a qualifying three-minute window, producing `CONDITIONAL_INSUFFICIENT_INDEPENDENT_WORK`; this is not a sustained-occupancy pass. Its separately timestamped supervised full-host compute estimate is **USD 0.6371760235109749** at 07:10:07 UTC, not an invoice. These counts and costs are separate from the earlier V093 attempt.
 
+Native runtime evidence separately confirms **16 observed fitting processes**, maxima of **16 simultaneous fits** and **11 simultaneous preparations**. Fit dispatch took **61.628695454 seconds**, or **64.369329440 seconds including checkpoint preflight**. Optimizer CPU was **440.336141801 CPU-seconds**, preparation **142.972695674 CPU-seconds**, and other callback work **260.413735884 CPU-seconds**. Coordinator scoring subsequently used **180.817518470 wall-seconds and 172.643508361 CPU-seconds**. The sampled preparation measure recorded zero queue starvation. These phase-specific CPU and wall measures are not interchangeable and do not establish the 180-second occupancy gate or a full-capacity pass.
+
 Source accounting retains **13,378 reused snapshot shards** and **859/859 historical qualification jobs**. These counts do not establish fresh retrieval, complete market history, or newly filled DraftKings, Kalshi, Polymarket or other bookmaker gaps. Ambiguous cumulative/rescored prediction totals are not presented as new forecasts in this public follow-up.
 
 ### Observed current-season census
@@ -32,11 +34,33 @@ The V095 native evidence contains **888 observed 2026 fixtures: 755 completed an
 
 ### V096 preparation
 
-**In preparation; canonical delivery verification pending.** No staged V096 bytes, native verification or owner execution is claimed until the separately bound `next_preparation` record has the exact canonical hash and size, native verification clock and exact-archive check evidence. Preparation creates no owner research run, fit or provider retrieval and does not advance the latest actual-return pointer.
+**Prepared and native-verified; owner execution pending.** The installed V096 canonical is **49,393,957 bytes**, SHA-256 `fdc7aa6794f4da5e569c8d8e5356b31ab348bcf2e7e849414765718da2460883`. It passed **107 exact-archive engineering checks** and the native packaged self-test at **2026-11-18 08:26:13 UTC**. Packaged startup fixtures observed exits **0, 2 and 130** without owner research. The `next_preparation` record binds the exact canonical and verification receipts. Preparation creates no owner research run, fit or provider retrieval and does not advance the latest actual-return pointer.
 
 The next user execution plans **312 registered pre-test fit/inference jobs and rescoring of 397 retained policies**, reusing the **624 native validation identities and locked selection**. The read-only native admission proof at **2026-11-18 07:53:19 UTC** verifies matching game identities, unchanged frozen target contexts, hidden test labels and training history through the **2025 season, including its postseason**. Test-season outcomes are for grading only; they cannot update fitted components or choose features, blends or champions. The proof creates no fits, forecasts, owner execution or provider calls.
 
 All **397 retained policies cover the 755 observed completed games**, with zero duplicate game rows. Pending coverage remains **123/133 for 288 policies** and **93/133 for 109 policies**. Each frozen target context retains **10 pending-game feature gaps**. The full 133-game pending denominator and all gaps remain explicit. This is prepared research scope, not a completed V096 tranche or certified full official coverage.
+
+The actual native collector preflight passed at **2026-11-18 08:29:29 UTC**. It inspected **3,420 checkpoint receipts and 33,898 dependency descriptors**, preserving all **624 validation receipts** unchanged. It retained **21 authenticated historical version paths**, while ordinary conflicting declared pins remain rejected. The check created **zero return archives, payload uploads, owner research executions or model fits** and did not modify the latest actual-return pointer. This verifies the repaired collection path; its CPU and I/O are engineering work, not a scientific throughput acceptance result.
+
+## Saved native validation leaders
+
+The separately authenticated native extraction at **2026-11-18 08:06:26 UTC** identifies nine objective-specific diagnostic leaders under the declared **50/50 annual validation score**. Every row uses the full registered **919-game 2024** and **934-game 2025** validation populations. The frozen 2024 context also retains **one archived non-completed row**, for 920 total context rows; the annual metrics score **919/919 eligible completed games**, not 920. No reason for that archived status is inferred. This extraction performed no fits or new predictions.
+
+| Objective | Saved family / coarse group | 2024 · n=919 | 2025 · n=934 | 50/50 score | 2026 · n=755 |
+|---|---|---:|---:|---:|---|
+| Winner accuracy | CatBoost / Market components / calibrated | 74.646355% | 76.445396% | 75.545875% | Not executed: 0/755 |
+| Winner Brier | LightGBM / Football group ablation / raw | 0.171696 | 0.162555 | 0.167125 | Not executed: 0/755 |
+| Winner log loss | LightGBM / Football group ablation / raw | 0.511541 | 0.488721 | 0.500131 | Not executed: 0/755 |
+| Margin MAE | LightGBM / Football and market interaction / calibrated | 12.809155 | 12.242273 | 12.525714 | Not executed: 0/755 |
+| Margin RMSE | LightGBM / Football and market interaction / calibrated | 16.216215 | 15.562754 | 15.889484 | Not executed: 0/755 |
+| Margin CRPS | Extra Trees / Football group ablation / calibrated | 9.258225 | 8.749979 | 9.004102 | Not executed: 0/755 |
+| Total MAE | CatBoost / Market components / raw | 12.529965 | 12.465254 | 12.497610 | Not executed: 0/755 |
+| Total RMSE | CatBoost / Market components / raw | 15.955245 | 15.445536 | 15.700390 | Not executed: 0/755 |
+| Total CRPS | CatBoost / Market components / calibrated | 8.986418 | 8.839125 | 8.912771 | Not executed: 0/755 |
+
+Accuracy is higher-is-better; the other listed objectives are lower-is-better. MAE and RMSE are points errors; CRPS evaluates a predictive distribution. The primary averages the two annual metrics. It does not pool games, refit an estimator, change base predictions or reweight training seasons. Full-precision values remain in the aggregate JSON.
+
+These are **native saved frozen-reconstruction diagnostics**, with prior 2026 test exposure disclosed. The new contenders have **zero executed 2026 scoring rows out of 755 required completed games**; their 2026 metrics are unavailable. Retained-policy forecast coverage and older comparison scorecards are separate evidence populations. These results do not establish a portable V095 return, a pristine test set, full-population champions or production promotion. Exact private feature lists, source recipes and hyperparameters are omitted from this public projection.
 
 ## Earlier V093 attempts and retained work
 

@@ -28,7 +28,7 @@ class V093Readiness(unittest.TestCase):
         self.assertEqual(rendered, (ROOT / "docs/fbs/v093/index.html").read_bytes())
         embedded = re.search(rb'<script id="report-data" type="application/json">(.*?)</script>', rendered, re.S).group(1)
         self.assertEqual(json.loads(embedded), DATA)
-        self.assertLess(len(rendered), 75_000)
+        self.assertLess(len(rendered), 90_000)
         self.assertNotIn(b"circa", rendered.lower())
         self.assertNotRegex(rendered.decode(), r'<script[^>]+src=|<link[^>]+stylesheet')
 
@@ -37,6 +37,24 @@ class V093Readiness(unittest.TestCase):
             self.rejects("prepared", key, 1)
         self.rejects("prepared", "status", "SCIENTIFICALLY_COMPLETE")
         self.rejects("prepared", "measured_optimizer_cores", 24)
+
+    def test_collector_integrity_cannot_claim_new_return_or_science(self):
+        self.assertEqual(DATA["collector_preflight"]["checkpoint_receipts"], 3420)
+        for key in ("return_archives_created", "ordinary_conflicting_pins_allowed"):
+            self.rejects("collector_preflight", key, 1)
+        self.rejects("collector_preflight", "verification_is_scientific_work", True)
+
+    def test_runtime_preserves_fit_scoring_and_conditional_gate_scopes(self):
+        runtime = DATA["actual_runtime"]
+        self.assertEqual(runtime["observed_fit_process_count"], 16)
+        self.assertLess(runtime["dispatch_wall_seconds"], runtime["required_gate_window_seconds"])
+        self.rejects("actual_runtime", "full_capacity_pass_claimed", True)
+        self.rejects("actual_runtime", "dispatch_wall_seconds", runtime["coordinator_scoring_wall_seconds"])
+
+    def test_standalone_links_do_not_depend_on_repository_layout(self):
+        rendered = REVIEW.render(DATA).decode()
+        for href in re.findall(r'href="([^"]+)"', rendered):
+            self.assertTrue(href.startswith(("#", "https://")), href)
 
     def test_release_sealing_requires_canonical_and_native_evidence(self):
         d = copy.deepcopy(DATA)
@@ -287,6 +305,39 @@ class V093Readiness(unittest.TestCase):
         self.rejects("next_research", "context_proof_at", DATA["current_attempt"]["observed_at"])
         d = copy.deepcopy(DATA)
         d["verification"]["evidence"] = [x for x in d["verification"]["evidence"] if x["sha256"] != d["next_research"]["context_proof_sha256"]]
+        with self.assertRaises(ValueError):
+            REVIEW.render(d)
+
+    def test_native_objective_leaders_keep_all_annual_denominators(self):
+        self.assertEqual(len(DATA["native_leaders"]["rows"]), 9)
+        self.rejects("native_leaders", "validation_denominators", [900, 934])
+        self.rejects("native_leaders", "archived_2024_noncompleted_rows", 0)
+        self.rejects("native_leaders", "test_denominator", 752)
+        self.rejects("native_leaders", "test_scored_n", 755)
+        self.rejects("native_leaders", "test_metrics_available", True)
+
+    def test_native_diagnostic_leaders_cannot_be_promoted_or_claim_pristine_test(self):
+        for key in ("portable_return_verified", "promotion", "used_test_for_selection"):
+            self.rejects("native_leaders", key, True)
+        self.rejects("native_leaders", "prior_test_exposure", False)
+        self.rejects("native_leaders", "new_fits_by_extraction", 154)
+
+    def test_published_native_values_are_exact_equal_annual_scores(self):
+        for row in DATA["native_leaders"]["rows"]:
+            self.assertAlmostEqual(row["primary_score"], .5 * (row["metric_2024"] + row["metric_2025"]), places=12)
+        self.rejects("native_leaders", "profile", "10/90")
+        d = copy.deepcopy(DATA)
+        d["native_leaders"]["rows"][0]["metric_2024"] = .99
+        with self.assertRaises(ValueError):
+            REVIEW.render(d)
+
+    def test_native_projection_excludes_exact_private_recipes_and_features(self):
+        d = copy.deepcopy(DATA)
+        d["native_leaders"]["rows"][0]["feature_names"] = ["private_transform"]
+        with self.assertRaises(ValueError):
+            REVIEW.render(d)
+        d = copy.deepcopy(DATA)
+        d["native_leaders"]["rows"][0]["family"] = "Unverified family"
         with self.assertRaises(ValueError):
             REVIEW.render(d)
 

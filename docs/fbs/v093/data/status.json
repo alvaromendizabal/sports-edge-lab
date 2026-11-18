@@ -1,7 +1,7 @@
 {
   "schema": "fbs.public.launch-readiness.v093",
   "owner": "FBS",
-  "as_of": "2026-11-18T07:53:19.174711Z",
+  "as_of": "2026-11-18T08:32:33.039460Z",
   "publication": {
     "status": "SOURCE_REVIEW",
     "website_deployed": false,
@@ -219,6 +219,41 @@
         "label": "V096 read-only frozen-context admission proof",
         "sha256": "139cd9cee6c6d20de21d9b03c6313e683e4de727147a665f25d246880595f4ea",
         "scope": "624 native validation identities and locked selection verified; all 397 retained policies cover 755 completed games. Pending coverage remains 123/133 for 288 policies and 93/133 for 109; zero owner runs or provider calls."
+      },
+      {
+        "label": "V095 saved native validation leaders",
+        "sha256": "48b0f784fefdbfc1c1a55ee2100bd516c7e6213aaeed81943a83905db77a1855",
+        "scope": "Nine objective-specific 50/50 diagnostic leaders on full 919/934 validation cohorts; 2026 remains not executed at 0/755. Native frozen reconstruction, prior test exposure, no portable return or promotion."
+      },
+      {
+        "label": "V095 registered 2024 population qualification",
+        "sha256": "115a6ac8def4ffb49e9af98f043289a7d6661cd7c3dd29f7732ee118c361cada",
+        "scope": "The frozen 2024 context retains 919 completed eligible games plus one archived non-completed row. The annual leaders score 919/919 eligible rows; no reason for the other status is inferred."
+      },
+      {
+        "label": "V096 installed canonical",
+        "sha256": "fdc7aa6794f4da5e569c8d8e5356b31ab348bcf2e7e849414765718da2460883",
+        "scope": "49,393,957-byte installed canonical; prepared and native-verified, no owner execution."
+      },
+      {
+        "label": "V096 exact-archive engineering acceptance",
+        "sha256": "15c9cdcf81d1666e6cd5ce9730d37fbae5cce68bba815d7d581f2c8bf408eebf",
+        "scope": "107 sealed-archive checks passed; zero owner research, model fits, scored owner rows or provider calls."
+      },
+      {
+        "label": "V096 native installed-package verification",
+        "sha256": "2bf30242c4c839f1db2d95fde1f14ba855a07c5eaea70ef9f9f45c0a7f807344",
+        "scope": "Native packaged self-test passed at 08:26:13 UTC, including observed fixture exits 0, 2 and 130; actual owner return and predecessors unchanged."
+      },
+      {
+        "label": "V096 actual native collector preflight",
+        "sha256": "dc9e2c6eb958a1f671a8b7b4624199e696d5aeb02276f15db42309f6844c6455",
+        "scope": "3,420 checkpoint receipts and 33,898 dependency descriptors collected; 624 validation receipts unchanged, 21 authenticated version paths preserved, ordinary conflicting pins still rejected; no return archive or owner work created."
+      },
+      {
+        "label": "V095 actual fit and coordinator runtime",
+        "sha256": "8c4f22da55d1a1b612594744c599c1180cf9ce5611a257a28fee8be64d64bdaa",
+        "scope": "16 observed fit processes, maximum 16 concurrent fits and 11 preparations; 61.629-second dispatch followed by separate 180.818-second coordinator scoring. CPU phases, sampled starvation and conditional occupancy remain distinct."
       }
     ],
     "final_archive_checks": 48,
@@ -434,12 +469,12 @@
   },
   "next_preparation": {
     "release": "V096",
-    "status": "IN_PREPARATION",
-    "canonical_bytes": null,
-    "canonical_sha256": null,
-    "native_verified": false,
-    "native_verified_at": null,
-    "archive_checks_passed": null,
+    "status": "PREPARED_NOT_EXECUTED",
+    "canonical_bytes": 49393957,
+    "canonical_sha256": "fdc7aa6794f4da5e569c8d8e5356b31ab348bcf2e7e849414765718da2460883",
+    "native_verified": true,
+    "native_verified_at": "2026-11-18T08:26:13.621683Z",
+    "archive_checks_passed": 107,
     "owner_executions": 0,
     "scientific_fits": 0,
     "provider_retrievals": 0,
@@ -474,5 +509,153 @@
     "pending_feature_gaps_per_frozen_target_context": 10,
     "proof_created_owner_runs": 0,
     "proof_provider_calls": 0
+  },
+  "native_leaders": {
+    "observed_at": "2026-11-18T08:06:26.651413Z",
+    "evidence_sha256": "48b0f784fefdbfc1c1a55ee2100bd516c7e6213aaeed81943a83905db77a1855",
+    "status": "NATIVE_SAVED_VALIDATION_DIAGNOSTIC_LEADERS",
+    "profile": "50/50",
+    "evidence_class": "V13_FROZEN_RECONSTRUCTION",
+    "validation_denominators": [
+      919,
+      934
+    ],
+    "test_denominator": 755,
+    "test_scored_n": 0,
+    "test_metrics_available": false,
+    "portable_return_verified": false,
+    "promotion": false,
+    "prior_test_exposure": true,
+    "used_test_for_selection": false,
+    "new_fits_by_extraction": 0,
+    "rows": [
+      {
+        "target": "winner",
+        "metric": "accuracy",
+        "family": "CatBoost",
+        "feature_group": "Market components",
+        "calibrated": true,
+        "metric_2024": 0.7464635473340587,
+        "metric_2025": 0.7644539614561028,
+        "primary_score": 0.7554587543950808
+      },
+      {
+        "target": "winner",
+        "metric": "brier",
+        "family": "LightGBM",
+        "feature_group": "Football group ablation",
+        "calibrated": false,
+        "metric_2024": 0.1716959672947586,
+        "metric_2025": 0.1625545308284089,
+        "primary_score": 0.16712524906158377
+      },
+      {
+        "target": "winner",
+        "metric": "log_loss",
+        "family": "LightGBM",
+        "feature_group": "Football group ablation",
+        "calibrated": false,
+        "metric_2024": 0.5115414017176997,
+        "metric_2025": 0.48872067355093085,
+        "primary_score": 0.5001310376343153
+      },
+      {
+        "target": "margin",
+        "metric": "mae",
+        "family": "LightGBM",
+        "feature_group": "Football and market interaction",
+        "calibrated": true,
+        "metric_2024": 12.809154703846028,
+        "metric_2025": 12.242272685982783,
+        "primary_score": 12.525713694914405
+      },
+      {
+        "target": "margin",
+        "metric": "rmse",
+        "family": "LightGBM",
+        "feature_group": "Football and market interaction",
+        "calibrated": true,
+        "metric_2024": 16.216214573213374,
+        "metric_2025": 15.562754148752418,
+        "primary_score": 15.889484360982896
+      },
+      {
+        "target": "margin",
+        "metric": "crps",
+        "family": "Extra Trees",
+        "feature_group": "Football group ablation",
+        "calibrated": true,
+        "metric_2024": 9.25822548817149,
+        "metric_2025": 8.74997871668412,
+        "primary_score": 9.004102102427805
+      },
+      {
+        "target": "total",
+        "metric": "mae",
+        "family": "CatBoost",
+        "feature_group": "Market components",
+        "calibrated": false,
+        "metric_2024": 12.529965295800329,
+        "metric_2025": 12.465253863252372,
+        "primary_score": 12.497609579526351
+      },
+      {
+        "target": "total",
+        "metric": "rmse",
+        "family": "CatBoost",
+        "feature_group": "Market components",
+        "calibrated": false,
+        "metric_2024": 15.955245411740668,
+        "metric_2025": 15.445535517385212,
+        "primary_score": 15.70039046456294
+      },
+      {
+        "target": "total",
+        "metric": "crps",
+        "family": "CatBoost",
+        "feature_group": "Market components",
+        "calibrated": true,
+        "metric_2024": 8.986417581665181,
+        "metric_2025": 8.839125374083435,
+        "primary_score": 8.912771477874308
+      }
+    ],
+    "archived_2024_noncompleted_rows": 1
+  },
+  "collector_preflight": {
+    "status": "PASS_ACTUAL_NATIVE_GRAPH_COLLECTED_WITHOUT_RETURN_CREATION",
+    "observed_at": "2026-11-18T08:29:29.482069Z",
+    "source_sha256": "fdc7aa6794f4da5e569c8d8e5356b31ab348bcf2e7e849414765718da2460883",
+    "evidence_sha256": "dc9e2c6eb958a1f671a8b7b4624199e696d5aeb02276f15db42309f6844c6455",
+    "checkpoint_receipts": 3420,
+    "dependency_descriptors": 33898,
+    "versioned_checkpoint_paths": 21,
+    "ordinary_conflicting_pins_allowed": 0,
+    "validation_receipts_unchanged": 624,
+    "return_archives_created": 0,
+    "external_payloads_uploaded": 0,
+    "owner_research_executions": 0,
+    "model_fits": 0,
+    "latest_actual_return_changed": false,
+    "verification_is_scientific_work": false
+  },
+  "actual_runtime": {
+    "observed_at": "2026-11-18T08:32:33.039460Z",
+    "evidence_sha256": "8c4f22da55d1a1b612594744c599c1180cf9ce5611a257a28fee8be64d64bdaa",
+    "observed_fit_process_count": 16,
+    "max_concurrent_fit_workers": 16,
+    "max_concurrent_preparation_workers": 11,
+    "dispatch_wall_seconds": 61.62869545399917,
+    "pipeline_wall_including_checkpoint_seconds": 64.36932944,
+    "optimizer_cpu_seconds": 440.3361418009997,
+    "preparation_cpu_seconds": 142.97269567400008,
+    "other_callback_cpu_seconds": 260.41373588400063,
+    "coordinator_scoring_wall_seconds": 180.81751847000305,
+    "coordinator_scoring_cpu_seconds": 172.64350836099982,
+    "sampled_preparation_starvation_seconds": 0.0,
+    "previous_acceptance_pass_present": false,
+    "full_capacity_pass_claimed": false,
+    "required_gate_status": "CONDITIONAL_INSUFFICIENT_INDEPENDENT_WORK",
+    "required_gate_window_seconds": 180
   }
 }
