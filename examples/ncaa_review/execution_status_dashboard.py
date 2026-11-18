@@ -7,7 +7,7 @@ from __future__ import annotations
 
 import argparse
 from copy import deepcopy
-from datetime import datetime
+from datetime import datetime, timedelta
 import hashlib
 from html import escape
 import json
@@ -18,15 +18,20 @@ from zoneinfo import ZoneInfo
 
 HERE = Path(__file__).resolve().parent
 ROOT = HERE.parents[1]
-DATA = HERE / "EXECUTION_STATUS_20261118.json"
+DATA = HERE / "EXECUTION_STATUS_R27_20261118.json"
+PREVIOUS_VERIFIED_DATA = HERE / "EXECUTION_STATUS_20261118.json"
 HISTORICAL_DATA = HERE / "EXECUTION_STATUS_20261117.json"
-SCHEMA = "sel.ncaa.public.execution_status.v2"
+SCHEMA = "sel.ncaa.public.execution_status.v3"
+PREVIOUS_SCHEMA = "sel.ncaa.public.execution_status.v2"
 LEGACY_SCHEMA = "sel.ncaa.public.execution_status.v1"
 LEGACY_TOP_KEYS = {"schema", "owner", "observed_at", "publication", "latest_observed_attempt",
             "latest_verified_return", "attempts", "preserved_work", "throughput",
             "resume_contract", "science_contract", "source_coverage", "evidence"}
 TOP_KEYS = LEGACY_TOP_KEYS | {"current_execution"}
 RESOURCE_DEFERRED = "RESOURCE_DEFERRED_PARTIAL_WORK_PRESERVED"
+BUDGET_DEFERRED = "WORK_BUDGET_DEFERRED_PARTIAL_WORK_PRESERVED"
+UNKNOWN_COST = "UNVERIFIED_NO_CURRENT_INSTANCE_RATE_OR_BILLING_ASSUMED"
+ESTIMATED_COST = "SHARED_INSTANCE_WALL_ESTIMATE_NOT_INVOICE_OR_EXCLUSIVE_PROJECT_ALLOCATION"
 CURRENT_KEYS = {"release", "started_at", "completed_at", "phase", "recorded_stages_completed",
                 "requested_workers", "peak_scientific_workers", "maximum_ready_depth", "scientific_gate",
                 "scientific_gate_executed", "new_target_fits", "new_calibration_fits", "new_residual_fits",
@@ -35,6 +40,10 @@ CURRENT_KEYS = {"release", "started_at", "completed_at", "phase", "recorded_stag
                 "estimated_instance_wall_cost_usd", "cost_basis", "cache_reads", "cache_bytes",
                 "fresh_storage_reads", "fresh_storage_bytes", "pressure_wait_seconds", "pressure_reason",
                 "return_published", "explanation", "next_work"}
+DEFERRAL_KEYS = {"recorded_status", "recorded_error", "root_cause", "classification",
+                 "quote_observed_at", "quote_expires_at", "quote_max_age_days",
+                 "compute_cost_guard_usd", "budget_exhaustion_proven",
+                 "storage_measurements", "pressure_measurements"}
 FORBIDDEN = re.compile(r"s3://|/home/|sagemaker-sports|arn:aws|AKIA[0-9A-Z]{16}|"
                        r"secret_access_key|api_key|access_token|\.pyz\b|circa", re.I)
 
@@ -47,10 +56,11 @@ def validate(data):
     """Fail closed on evidence-class confusion, inflated work, or private data."""
     if not isinstance(data, dict):
         raise ValueError("Unexpected public execution fields")
-    expected = TOP_KEYS if data.get("schema") == SCHEMA else LEGACY_TOP_KEYS
+    schema = data.get("schema")
+    expected = TOP_KEYS | {"audit_scope"} if schema == SCHEMA else TOP_KEYS if schema == PREVIOUS_SCHEMA else LEGACY_TOP_KEYS
     if set(data) != expected:
         raise ValueError("Unexpected public execution fields")
-    if data["schema"] not in {SCHEMA, LEGACY_SCHEMA} or data["owner"] != "NCAA basketball":
+    if schema not in {SCHEMA, PREVIOUS_SCHEMA, LEGACY_SCHEMA} or data["owner"] != "NCAA basketball":
         raise ValueError("Wrong owner or schema")
     if FORBIDDEN.search(canonical(data)):
         raise ValueError("Private or out-of-owner content")
@@ -88,7 +98,7 @@ def validate(data):
             or rows[-1]["return_published"] != observed["return_published"]):
         raise ValueError("Latest attempt state does not reconcile")
     for row in rows:
-        if row["outcome"] not in {"FAILED_RESUMABLE", "RETURN_PACKAGING_FAILED_RESUMABLE", RESOURCE_DEFERRED}:
+        if row["outcome"] not in {"FAILED_RESUMABLE", "RETURN_PACKAGING_FAILED_RESUMABLE", RESOURCE_DEFERRED, BUDGET_DEFERRED}:
             raise ValueError("Unexpected attempt outcome")
         if type(row["return_published"]) is not bool or row["phase"] not in {"RESEARCH", "BEFORE_FIT"}:
             raise ValueError("Invalid attempt phase or publication state")
@@ -115,23 +125,26 @@ def validate(data):
             or s["new_full_population_champion"] is not False
             or s["test_exposure_erased"] is not False):
         raise ValueError("Scientific selection contract changed")
-    if data["schema"] == SCHEMA:
+    if schema in {SCHEMA, PREVIOUS_SCHEMA}:
         current = data["current_execution"]
-        if not isinstance(current, dict) or set(current) != CURRENT_KEYS:
+        current_keys = CURRENT_KEYS | {"deferral"} if schema == SCHEMA else CURRENT_KEYS
+        if not isinstance(current, dict) or set(current) != current_keys:
             raise ValueError("Unexpected current execution fields")
         if (current["release"] != observed["release"] or current["phase"] != "BEFORE_FIT"
-                or observed["status"] != RESOURCE_DEFERRED
+                or observed["status"] != (BUDGET_DEFERRED if schema == SCHEMA else RESOURCE_DEFERRED)
                 or current["return_published"] is not True
                 or observed["return_published"] is not True
                 or current["scientific_gate"] != "PENDING_REAL_ELIGIBLE_WORK"
                 or current["scientific_gate_executed"] is not False
-                or current["cost_basis"] != "SHARED_INSTANCE_WALL_ESTIMATE_NOT_INVOICE_OR_EXCLUSIVE_PROJECT_ALLOCATION"):
+                or current["cost_basis"] != (UNKNOWN_COST if schema == SCHEMA else ESTIMATED_COST)):
             raise ValueError("Partial return cannot acquire scientific completion or fit occupancy")
         count_keys = ("recorded_stages_completed", "requested_workers", "peak_scientific_workers",
                       "maximum_ready_depth", "new_target_fits", "new_calibration_fits",
                       "new_residual_fits", "verified_reused_target_fits", "fresh_startup_tests",
                       "reused_startup_tests", "cache_reads", "cache_bytes", "fresh_storage_reads", "fresh_storage_bytes")
         for key in count_keys:
+            if schema == SCHEMA and key in ("cache_reads", "cache_bytes", "fresh_storage_reads", "fresh_storage_bytes") and current[key] is None:
+                continue
             if type(current[key]) is not int or current[key] < 0:
                 raise ValueError("Current execution counts require nonnegative integers")
         for key in ("peak_scientific_workers", "maximum_ready_depth", "new_target_fits",
@@ -140,6 +153,8 @@ def validate(data):
                 raise ValueError("Unentered scientific work cannot acquire credit")
         for key in ("startup_seconds", "owner_elapsed_seconds", "parent_cpu_seconds",
                     "completed_child_cpu_seconds", "estimated_instance_wall_cost_usd", "pressure_wait_seconds"):
+            if schema == SCHEMA and key in ("estimated_instance_wall_cost_usd", "pressure_wait_seconds") and current[key] is None:
+                continue
             if type(current[key]) not in (int, float) or not math.isfinite(current[key]) or current[key] < 0:
                 raise ValueError("Current execution measurements must be finite and nonnegative")
         for key in ("fresh_startup_tests", "reused_startup_tests", "new_target_fits"):
@@ -150,6 +165,34 @@ def validate(data):
         clocks = [datetime.fromisoformat(current[k]) for k in ("started_at", "completed_at")]
         if any(x.tzinfo is None for x in clocks) or not clocks[0] <= clocks[1] <= observed_clock:
             raise ValueError("Current execution requires ordered timezone-aware clocks")
+        if schema == SCHEMA:
+            scope = data["audit_scope"]
+            if (not isinstance(scope, dict) or set(scope) != {"audited_attempts", "distinct_run_ids", "note"}
+                    or type(scope["audited_attempts"]) is not int or scope["audited_attempts"] != len(rows)
+                    or type(scope["distinct_run_ids"]) is not int or not 0 < scope["distinct_run_ids"] <= len(rows)):
+                raise ValueError("Attempt and run identity census must remain separate")
+            reason = current["deferral"]
+            if (not isinstance(reason, dict) or set(reason) != DEFERRAL_KEYS
+                    or reason["recorded_status"] != observed["status"]
+                    or reason["recorded_error"] != "B057_WORK_BUDGET_EXHAUSTED"
+                    or reason["root_cause"] != "B060_PRICE_EVIDENCE_STALE_OR_FUTURE"
+                    or reason["classification"] != "EXPIRED_PRICE_EVIDENCE"
+                    or reason["budget_exhaustion_proven"] is not False
+                    or type(reason["compute_cost_guard_usd"]) is not int or reason["compute_cost_guard_usd"] != 200):
+                raise ValueError("Expired price evidence must not become a spent compute budget")
+            quote_clocks = [datetime.fromisoformat(reason[k]) for k in ("quote_observed_at", "quote_expires_at")]
+            if (any(x.tzinfo is None for x in quote_clocks)
+                    or type(reason["quote_max_age_days"]) is not int or reason["quote_max_age_days"] != 7
+                    or quote_clocks[1] - quote_clocks[0] != timedelta(days=reason["quote_max_age_days"])
+                    or not quote_clocks[0] < quote_clocks[1] < clocks[0]):
+                raise ValueError("Expired quote requires its original observation and expiry clocks")
+            if current["estimated_instance_wall_cost_usd"] is not None:
+                raise ValueError("Unverified current rate leaves cost unknown, never zero")
+            if (reason["storage_measurements"] != "NOT_RECORDED_IN_RETURN"
+                    or any(current[k] is not None for k in ("cache_reads", "cache_bytes", "fresh_storage_reads", "fresh_storage_bytes"))
+                    or reason["pressure_measurements"] != "NOT_RECORDED_IN_RETURN"
+                    or current["pressure_wait_seconds"] is not None or current["pressure_reason"] is not None):
+                raise ValueError("Absent storage and pressure measurements remain unknown")
     return deepcopy(data)
 
 
@@ -169,6 +212,9 @@ def render_current_banner(data=None):
                    f'{verified["payloads_verified"]:,} payloads are verified. Startup checks were reused, '
                    'but new scientific fitting was not reached. Continue from this partial return and '
                    'any newer authenticated work.')
+        if data["schema"] == SCHEMA:
+            summary += (' The saved price evidence had expired before launch. The recorded budget-deferral '
+                        'label does not establish USD 200 spending; current cost remains unknown.')
     else:
         heading = "A newer failed attempt is separate from the last verified return"
         summary = (f'The latest observed {escape(observed["release"])} attempt stopped with '
@@ -189,6 +235,7 @@ def render_current_banner(data=None):
 
 
 PREVIOUS_EXECUTION_BANNER = render_current_banner(json.loads(HISTORICAL_DATA.read_text()))
+PREVIOUS_VERIFIED_EXECUTION_BANNER = render_current_banner(json.loads(PREVIOUS_VERIFIED_DATA.read_text()))
 
 
 def render(data=None):

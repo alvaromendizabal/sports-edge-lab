@@ -35,13 +35,13 @@ class ExecutionStatusTests(unittest.TestCase):
             status.validate(value)
 
     def test_latest_execution_is_verified_but_scientifically_partial(self):
-        self.assertEqual(self.data["latest_observed_attempt"]["release"], "R26")
-        self.assertEqual(self.data["latest_observed_attempt"]["status"], status.RESOURCE_DEFERRED)
+        self.assertEqual(self.data["latest_observed_attempt"]["release"], "R27")
+        self.assertEqual(self.data["latest_observed_attempt"]["status"], status.BUDGET_DEFERRED)
         self.assertTrue(self.data["latest_observed_attempt"]["return_published"])
-        self.assertEqual(self.data["latest_verified_return"]["release"], "R26")
-        self.assertEqual(self.data["latest_verified_return"]["payloads_verified"], 201)
+        self.assertEqual(self.data["latest_verified_return"]["release"], "R27")
+        self.assertEqual(self.data["latest_verified_return"]["payloads_verified"], 52)
         self.assertEqual(self.data["latest_verified_return"]["sha256"],
-                         "e64d63158731c5e492edc9867a4f9d792a5a5885c28536b2141df3ebe840cf08")
+                         "45ac375264849a50271db7778a9d1fa83ae04e4b77f9798d6cf2581f16489156")
         self.reject(lambda d: d["latest_observed_attempt"].update(evidence_class="VERIFIED_RECOVERY_EVIDENCE"))
         self.reject(lambda d: d["latest_observed_attempt"].update(return_published=False))
         self.reject(lambda d: d["latest_verified_return"].update(release="R24"))
@@ -52,18 +52,23 @@ class ExecutionStatusTests(unittest.TestCase):
         self.assertEqual(old["latest_observed_attempt"]["release"], "R25")
         self.assertFalse(old["latest_observed_attempt"]["return_published"])
         self.assertEqual(old["latest_verified_return"]["release"], "R24")
-        self.assertEqual(self.data["attempts"][:-1], old["attempts"])
+        previous = status.validate(json.loads(status.PREVIOUS_VERIFIED_DATA.read_text()))
+        self.assertEqual(previous["schema"], status.PREVIOUS_SCHEMA)
+        self.assertEqual(previous["latest_verified_return"]["release"], "R26")
+        self.assertEqual(self.data["attempts"][:-1], previous["attempts"])
+        self.assertEqual(previous["attempts"][:-1], old["attempts"])
+        self.assertEqual(status.render_current_banner(previous), status.PREVIOUS_VERIFIED_EXECUTION_BANNER)
         self.assertEqual(status.render_current_banner(old), status.PREVIOUS_EXECUTION_BANNER)
         self.assertIn("remains R24", status.PREVIOUS_EXECUTION_BANNER)
         self.assertIn("verified partial return", status.render_current_banner())
 
     def test_current_startup_reuse_is_actual_owner_evidence(self):
         c = self.data["current_execution"]
-        self.assertEqual(c["reused_startup_tests"], 981)
+        self.assertEqual(c["reused_startup_tests"], 1074)
         self.assertEqual(c["fresh_startup_tests"], 0)
-        self.assertAlmostEqual(c["startup_seconds"], 0.08316207400275744)
-        self.assertEqual(c["parent_cpu_seconds"], 392.786777)
-        self.assertGreater(c["owner_elapsed_seconds"], 445)
+        self.assertAlmostEqual(c["startup_seconds"], 0.06511124499957077)
+        self.assertEqual(c["parent_cpu_seconds"], 2.228032)
+        self.assertAlmostEqual(c["owner_elapsed_seconds"], 2.6334098740044283)
         self.assertEqual(c["completed_child_cpu_seconds"], 0)
         self.reject(lambda d: d["current_execution"].update(reused_startup_tests=955))
         self.reject(lambda d: d["current_execution"].update(owner_elapsed_seconds=0))
@@ -80,7 +85,8 @@ class ExecutionStatusTests(unittest.TestCase):
         self.reject(lambda d: d["current_execution"].update(scientific_gate="PASS"))
 
     def test_cost_clock_and_unknown_measurement_guards(self):
-        self.assertIn("NOT_INVOICE", self.data["current_execution"]["cost_basis"])
+        self.assertEqual(self.data["current_execution"]["cost_basis"], status.UNKNOWN_COST)
+        self.assertIsNone(self.data["current_execution"]["estimated_instance_wall_cost_usd"])
         self.reject(lambda d: d["current_execution"].update(cost_basis="BILLED_EXCLUSIVE_OWNER_COST"))
         self.reject(lambda d: d["current_execution"].update(parent_cpu_seconds=-1))
         self.reject(lambda d: d["current_execution"].update(cache_reads=True))
@@ -88,6 +94,33 @@ class ExecutionStatusTests(unittest.TestCase):
         self.reject(lambda d: d["current_execution"].update(completed_at="2026-11-19T00:00:00Z"))
         self.reject(lambda d: d["current_execution"].update(started_at="2026-11-18T00:41:59"))
         self.reject(lambda d: d["current_execution"].update(unverified_science={}))
+
+    def test_unknown_cost_cannot_be_zero_or_a_spent_budget(self):
+        for cost in (0, 0.0, 200, -1, True):
+            self.reject(lambda d, cost=cost: d["current_execution"].update(estimated_instance_wall_cost_usd=cost))
+        self.reject(lambda d: d["current_execution"]["deferral"].update(budget_exhaustion_proven=True))
+        self.reject(lambda d: d["current_execution"]["deferral"].update(root_cause="COMPUTE_BUDGET_SPENT"))
+        self.assertEqual(self.data["current_execution"]["deferral"]["recorded_error"], "B057_WORK_BUDGET_EXHAUSTED")
+
+    def test_unreported_storage_or_pressure_cannot_inherit_prior_measurements(self):
+        for key in ("cache_reads", "cache_bytes", "fresh_storage_reads", "fresh_storage_bytes", "pressure_wait_seconds", "pressure_reason"):
+            self.assertIsNone(self.data["current_execution"][key])
+            self.reject(lambda d, key=key: d["current_execution"].update({key: 0}))
+        previous = status.validate(json.loads(status.PREVIOUS_VERIFIED_DATA.read_text()))
+        self.assertEqual(previous["current_execution"]["cache_reads"], 168)
+        self.assertAlmostEqual(previous["current_execution"]["estimated_instance_wall_cost_usd"], 0.31758846043366623)
+
+    def test_original_price_observation_and_expiry_must_precede_launch(self):
+        for patch in ({"quote_expires_at": "2026-11-19T02:36:39.054419+00:00"},
+                      {"quote_max_age_days": 8}, {"quote_observed_at": "2026-11-11T02:36:39.054419"}):
+            self.reject(lambda d, patch=patch: d["current_execution"]["deferral"].update(patch))
+        self.assertEqual(self.data["current_execution"]["deferral"]["compute_cost_guard_usd"], 200)
+
+    def test_attempt_census_counts_invocations_separately_from_run_ids(self):
+        self.assertEqual(self.data["audit_scope"]["audited_attempts"], 8)
+        self.assertEqual(self.data["audit_scope"]["distinct_run_ids"], 6)
+        self.reject(lambda d: d["audit_scope"].update(audited_attempts=7))
+        self.reject(lambda d: d["audit_scope"].update(distinct_run_ids=9))
 
     def test_new_fits_do_not_count_reuse(self):
         rows = {r["id"]: r for r in self.data["attempts"]}
@@ -138,7 +171,7 @@ class ExecutionStatusTests(unittest.TestCase):
         self.assertEqual(result.returncode, 0, result.stdout + result.stderr)
         report = json.loads(result.stdout)
         self.assertFalse(report["visual_browser_claim"])
-        self.assertEqual(report["corrupt_evidence_rejections"], 8)
+        self.assertEqual(report["corrupt_evidence_rejections"], 16)
         self.assertEqual(report["filter_views"], 5)
         self.assertTrue(report["current_partial_return_verified"])
 

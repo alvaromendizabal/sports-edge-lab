@@ -18,15 +18,26 @@ function run(data) {
 }
 (async () => {
   const ui = run(expected), nodes = ui.nodes; let cells = 0;
-  assert.equal(nodes.get('observed-release').textContent, 'R26');
-  assert.equal(nodes.get('verified-release').textContent, 'R26');
+  assert.equal(nodes.get('observed-release').textContent, 'R27');
+  assert.equal(nodes.get('verified-release').textContent, 'R27');
   assert.equal(nodes.get('current-execution-panel').hidden, false);
-  assert.match(nodes.get('current-execution-title').textContent, /R26 actual execution/);
+  assert.match(nodes.get('current-execution-title').textContent, /R27 actual execution/);
   const currentFacts = nodes.get('current-work-facts').children.map(n => n.textContent).join(' ');
-  assert.match(currentFacts, /981 reused · 0 fresh/);
+  assert.match(currentFacts, /1,074 reused · 0 fresh/);
   assert.match(currentFacts, /Requested workers \/ scientific peak 24 \/ 0/);
   assert.match(currentFacts, /Not run · no eligible work/);
   assert.equal(nodes.get('preserved-fits').textContent, '11');
+  const costFacts = nodes.get('current-cost-facts').children.map(n => n.textContent).join(' ');
+  assert.match(costFacts, /Unknown · no verified current rate/);
+  assert.doesNotMatch(costFacts, /\$0\.00/);
+  assert.match(costFacts, /Budget exhaustion established No · price evidence expired/);
+  assert.match(nodes.get('attempt-scope').textContent, /8 audited attempts · 6 distinct run identities/);
+  assert.match(currentFacts, /Unobserved \/ Unobserved/);
+  const older = JSON.parse(fs.readFileSync(path.join(__dirname, 'EXECUTION_STATUS_20261118.json')));
+  const prior = run(older).nodes;
+  assert.equal(prior.get('data-error').hidden, true);
+  assert.equal(prior.get('observed-release').textContent, 'R26');
+  assert.match(prior.get('current-cost-facts').children.map(n => n.textContent).join(' '), /\$0\.32/);
   for (const filter of ['all', 'RESEARCH', 'BEFORE_FIT', 'unpublished', 'published']) {
     nodes.get('attempt-filter').value = filter; nodes.get('attempt-filter').listeners.change();
     const rows = expected.attempts.filter(r => filter === 'all' || (filter === 'unpublished' ? !r.return_published : filter === 'published' ? r.return_published : r.phase === filter));
@@ -45,10 +56,11 @@ function run(data) {
   for (const mutate of [d => {d.publication.new_fits = 1;}, d => {d.latest_verified_return.integrity = 'UNVERIFIED';},
     d => {d.science_contract.test_selection_weight = .1;}, d => {d.throughput.newer_12_to_24_core_science_proven = true;},
     d => {d.current_execution.new_target_fits = 1;}, d => {d.current_execution.scientific_gate_executed = true;},
-    d => {d.latest_observed_attempt.return_published = false;}, d => {d.current_execution.cost_basis = 'INVOICE';}]) {
+    d => {d.latest_observed_attempt.return_published = false;}, d => {d.current_execution.cost_basis = 'INVOICE';},
+    d => {d.current_execution.estimated_instance_wall_cost_usd = 0;}, d => {d.current_execution.estimated_instance_wall_cost_usd = 200;}, d => {d.current_execution.deferral.budget_exhaustion_proven = true;}, d => {d.current_execution.deferral.root_cause = 'COMPUTE_BUDGET_SPENT';}, d => {d.current_execution.deferral.quote_expires_at = '2026-11-19T02:36:39.054419+00:00';}, d => {d.current_execution.cache_reads = 0;}, d => {d.current_execution.pressure_wait_seconds = 0;}, d => {d.audit_scope.audited_attempts = 7;}]) {
     const data = JSON.parse(JSON.stringify(expected)); mutate(data); const bad = run(data).nodes;
     assert.equal(bad.get('data-error').hidden, false); assert.equal(bad.get('report').hidden, true);
   }
   console.log(JSON.stringify({status:'PASS', filter_views:5, checked_cells:cells, exact_downloads:1,
-    corrupt_evidence_rejections:8, current_partial_return_verified:true, new_fits:0, visual_browser_claim:false}));
+    corrupt_evidence_rejections:16, current_partial_return_verified:true, new_fits:0, visual_browser_claim:false}));
 })().catch(error => { console.error(error); process.exitCode = 1; });

@@ -19,14 +19,20 @@ async function verifyExecutionStatus(browser, file) {
       await page.setViewportSize({ width, height: 1000 });
       await page.goto(pathToFileURL(file).href);
       await page.locator('#attempt-rows tr').first().waitFor();
-      assert.equal(await page.locator('#observed-release').innerText(), 'R26');
-      assert.equal(await page.locator('#verified-release').innerText(), 'R26');
-      assert.match(await page.locator('#observed-status').innerText(), /resource deferred/i);
+      assert.equal(await page.locator('#observed-release').innerText(), 'R27');
+      assert.equal(await page.locator('#verified-release').innerText(), 'R27');
+      assert.match(await page.locator('#observed-status').innerText(), /price evidence expired/i);
       assert.equal(await page.locator('#current-execution-panel').isVisible(), true);
-      assert.match(await page.locator('#current-work-facts').innerText(), /981 reused · 0 fresh/);
+      assert.match(await page.locator('#current-work-facts').innerText(), /1,074 reused · 0 fresh/);
       assert.match(await page.locator('#current-work-facts').innerText(), /Requested workers \/ scientific peak\s+24 \/ 0/);
       assert.match(await page.locator('#current-work-facts').innerText(), /Not run · no eligible work/);
       assert.match(await page.locator('#current-cost-facts').innerText(), /Succeeded · integrity verified/);
+      const costFacts = await page.locator('#current-cost-facts').innerText();
+      assert.match(costFacts, /Unknown · no verified current rate/);
+      assert.doesNotMatch(costFacts, /\$0\.00/);
+      assert.match(costFacts, /Budget exhaustion established\s+No · price evidence expired/);
+      assert.match(await page.locator('#current-work-facts').innerText(), /Unobserved \/ Unobserved/);
+      assert.match(await page.locator('#attempt-scope').innerText(), /8 audited attempts · 6 distinct run identities/);
       assert.match(await page.locator('#snapshot-time').innerText(), /Pacific.*not a live status feed/);
       assert.equal(await page.locator('#preserved-fits').innerText(), '11');
       assert.match(await page.locator('#throughput-facts').innerText(), /12–24-core science proven\s+No/);
@@ -68,18 +74,24 @@ async function verifyExecutionStatus(browser, file) {
       assert.equal(await page.locator('#attempt-rows tr').count(), expected.attempts.length);
     }
     await page.goto(pathToFileURL(path.join(path.dirname(file), 'index.html')).href);
-    assert.match(await page.locator('#v12-current-evidence').innerText(), /latest observed R26.*published return and 201 payloads are verified/is);
+    assert.match(await page.locator('#v12-current-evidence').innerText(), /latest observed R27.*published return and 52 payloads are verified/is);
     assert.equal(await page.locator('#v12-current-evidence a[href="execution.html"]').count(), 1);
     await page.locator('#v12-current-evidence a[href="execution.html"]').click();
-    assert.equal(await page.locator('#observed-release').innerText(), 'R26');
+    assert.equal(await page.locator('#observed-release').innerText(), 'R27');
     const raw = fs.readFileSync(file, 'utf8');
-    for (const mutate of [d => { d.publication.new_fits = 1; }, d => { d.latest_verified_return.integrity = 'UNVERIFIED'; }, d => { d.science_contract.test_selection_weight = 0.5; }, d => { d.throughput.newer_12_to_24_core_science_proven = true; }, d => { d.current_execution.new_target_fits = 1; }, d => { d.current_execution.scientific_gate_executed = true; }, d => { d.latest_observed_attempt.return_published = false; }, d => { d.current_execution.cost_basis = 'INVOICE'; }]) {
+    for (const mutate of [d => { d.publication.new_fits = 1; }, d => { d.latest_verified_return.integrity = 'UNVERIFIED'; }, d => { d.science_contract.test_selection_weight = 0.5; }, d => { d.throughput.newer_12_to_24_core_science_proven = true; }, d => { d.current_execution.new_target_fits = 1; }, d => { d.current_execution.scientific_gate_executed = true; }, d => { d.latest_observed_attempt.return_published = false; }, d => { d.current_execution.cost_basis = 'INVOICE'; }, d => { d.current_execution.estimated_instance_wall_cost_usd = 0; }, d => { d.current_execution.estimated_instance_wall_cost_usd = 200; }, d => { d.current_execution.deferral.budget_exhaustion_proven = true; }, d => { d.current_execution.deferral.root_cause = 'COMPUTE_BUDGET_SPENT'; }, d => { d.current_execution.deferral.quote_expires_at = '2026-11-19T02:36:39.054419+00:00'; }, d => { d.current_execution.cache_reads = 0; }, d => { d.current_execution.pressure_wait_seconds = 0; }, d => { d.audit_scope.audited_attempts = 7; }]) {
       const bad = JSON.parse(JSON.stringify(expected)); mutate(bad);
       const html = raw.replace(/(<script id="execution-data" type="application\/json">)[\s\S]*?(<\/script>)/, '$1' + JSON.stringify(bad).replace(/</g, '\\u003c') + '$2');
       await page.setContent(html);
       assert.equal(await page.locator('#data-error').isVisible(), true);
       assert.equal(await page.locator('#report').isVisible(), false);
     }
+    const older = JSON.parse(fs.readFileSync(path.join(__dirname, 'EXECUTION_STATUS_20261118.json')));
+    const legacy = raw.replace(/(<script id="execution-data" type="application\/json">)[\s\S]*?(<\/script>)/, '$1' + JSON.stringify(older).replace(/</g, '\\u003c') + '$2');
+    await page.setContent(legacy);
+    assert.equal(await page.locator('#data-error').isVisible(), false);
+    assert.equal(await page.locator('#observed-release').innerText(), 'R26');
+    assert.match(await page.locator('#current-cost-facts').innerText(), /\$0\.32/);
     assert.deepEqual(errors, []);
     assert.deepEqual(external, []);
   } finally { await context.close(); }
@@ -91,7 +103,7 @@ async function verifyExecutionStatus(browser, file) {
     assert.equal(await reopened.locator('#attempt-rows tr').count(), expected.attempts.length);
   } finally { await fresh.close(); }
   return { status: 'PASS', widths: [1440, 390], filter_views: views, checked_cells: cells,
-    exact_downloads: downloads, corrupt_evidence_rejections: 8, current_partial_return_verified: true, fresh_context_reopened: true,
+    exact_downloads: downloads, corrupt_evidence_rejections: 16, current_partial_return_verified: true, fresh_context_reopened: true,
     script_errors: 0, external_requests: 0, real_chromium: true };
 }
 
