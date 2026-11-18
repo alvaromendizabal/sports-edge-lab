@@ -357,7 +357,7 @@
       "startup_cases_reused": 1255
     }
   },
-  "observed_at": "2026-11-18T18:42:13+00:00",
+  "observed_at": "2026-11-18T19:01:02.567660+00:00",
   "owner": "NCAA basketball",
   "preserved_work": {
     "all_repeated_work_eliminated": false,
@@ -370,7 +370,7 @@
     "deployment_verified": false,
     "new_fits": 0,
     "new_forecasts": 0,
-    "note": "Prepared NCAA-only source for draft review of the verified R29 partial return. R30 is being prepared and has no owner execution credited here. Generating this dashboard performs no research, source refresh, rescoring, fitting or forecast issuance. Website deployment is not verified.",
+    "note": "Prepared NCAA-only source for draft review of the verified R29 partial return. R30 engineering and installation are verified; the owner campaign remains pending user execution. Generating this dashboard performs no research, source refresh, rescoring, fitting or forecast issuance. Website deployment is not verified.",
     "owner_runs": 0,
     "provider_requests": 0,
     "source_state": "PREPARED"
