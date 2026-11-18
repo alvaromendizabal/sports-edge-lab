@@ -1,5 +1,21 @@
 # Sports Edge Lab · NBA
 
+<!-- NBA B100 EXECUTION STATUS BEGIN -->
+## November 18: B099 refreshed inputs and delivered a compact return; scientific queues remain deferred
+
+[Read the current execution-status review](reports/b100_execution_status.html) · [Download the sanitized aggregate evidence](reports/b100_execution_status.json).
+
+**The observed B099 continuation is PARTIAL_RESUMABLE.** Five provider requests refreshed test inputs to **210 completed 2026–27 games**, but the current forecast preparation completed one task and deferred six. All **160 registered residual-input preparation tasks were deferred**, with **zero new estimator, calibration or residual-distribution fits**. The frozen prediction contract therefore remains at 206 completed games; fresh inputs do not certify current forecasts.
+
+Private export projection work did complete: **5,808 verified projections, comprising 3,776 new and 2,032 reused**, followed by three private logical exports. The projection pool peaked at 24 processes, but its measured interval averaged **5.63 cores, 23.47% of 24 admitted cores, over 80.45 seconds**. It recorded **zero full three-minute occupancy passes**. The requested sustained 12–24-core scientific throughput remains unmet.
+
+The verified return is **one ZIP of 340,294,167 bytes with 3,112 payloads**. The through-delivery whole-instance wall estimate is **USD 0.4785**; actual invoiced cost and NBA cost allocation remain unknown. The USD 200 guard is a ceiling, not reported spending.
+
+**The canonical B100 runner is installed, and native readiness passed all eight read-only gates.** The exact archive passed **133 engineering tests with zero failures, errors or skips**, plus **one separate actual-checkpoint entrypoint test** that stopped before owner dispatch. All **1,034 inherited B099 members** remain unchanged. Nine initial private delivery files totaling **9,855,823 bytes** passed installation and complete-body readback verification. The repair preserves safety thresholds while allowing bounded waiting through temporary capacity loss; the private comparison mobile control was verified with its original evidence unchanged. Later preparation documents and pointers are outside this dated certification. This preparation credits **zero owner executions, fits, inference rows or provider requests**. B100 throughput still requires evidence from the owner run.
+
+No full V13 completion, qualified full-season champion or production promotion is claimed. The B099 and B098 preparation pages below remain dated records. This NBA-only status addition changes no historical score, forecast value or source clock. Main integration and website deployment are pending.
+<!-- NBA B100 EXECUTION STATUS END -->
+
 <!-- NBA B099 EXECUTION STATUS BEGIN -->
 ## November 18: two B098 startup failures; B099 package verified, native installation pending
 
