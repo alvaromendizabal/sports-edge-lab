@@ -51,7 +51,14 @@ for(const season of ['2024-25','2025-26','2026-27','all'])for(const status of ['
 }
 assert.equal(rows('book-rows').length,28);$('book-covered').checked=false;$('book-covered').dispatchEvent({type:'change'});assert.equal(rows('book-rows').length,122);
 set('book-search','draftkings','input');assert.equal(rows('book-rows').length,1);assert.ok(rows('book-rows')[0].textContent.includes('7,848'));
-assert.equal(rows('population-rows').length,3);assert.equal(rows('execution-rows').length,3);assert.equal(rows('calibration-rows').length,7);
+assert.equal(rows('population-rows').length,3);assert.equal(rows('execution-rows').length,5);
+assert.ok(rows('execution-rows')[2].textContent.includes('B095 · attempt 1'));
+assert.ok(rows('execution-rows')[3].textContent.includes('B095 · attempt 2'));
+assert.ok(rows('execution-rows')[4].textContent.includes('B096'));
+for(const i of [2,3])assert.ok(rows('execution-rows')[i].textContent.includes('Exit 2; resumable'));
+assert.ok($('latest-return-detail').textContent.includes('19,057,377'));
+assert.ok($('failure-cost-detail').textContent.includes('invoiced cost remains unknown'));
+assert.equal(rows('calibration-rows').length,7);
 for(const e of elements.values())assert.doesNotMatch(e.textContent,/undefined|NaN/);
 $('download-evidence').click();
 (async()=>{assert.deepEqual(JSON.parse(await downloadBlob.text()),data);const summary={status:'PASS',kind:'DOM interaction oracle; not browser rendering',leader_views:leaderViews,weight_views:weightViews,source_views:sourceViews,book_filter_views:3,checked_metric_cells:checkedMetricCells,exact_public_download:true};console.log(JSON.stringify(summary));})().catch(e=>{console.error(e);process.exitCode=1;});

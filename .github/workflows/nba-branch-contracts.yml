@@ -74,7 +74,9 @@ jobs:
 
   offline-browser:
     runs-on: ubuntu-24.04
-    timeout-minutes: 8
+    # The preserved exhaustive report oracle previously took 379 seconds alone.
+    # Keep its assertions and a finite total bound, including checkout/install.
+    timeout-minutes: 12
     steps:
       - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1
         with:
@@ -105,11 +107,6 @@ jobs:
           PLAYWRIGHT_MODULE_DIR: ${{ runner.temp }}/nba-monitor-browser/node_modules/playwright
           NBA_MONITOR_SCREENSHOTS: ${{ runner.temp }}/nba-monitor-screenshots
         run: node tracks/nba/reports/b091_review.browser.cjs
-      - name: Render B095 recovery, selection and source-coverage controls
-        env:
-          PLAYWRIGHT_MODULE_DIR: ${{ runner.temp }}/nba-monitor-browser/node_modules/playwright
-          NBA_MONITOR_SCREENSHOTS: ${{ runner.temp }}/nba-monitor-screenshots
-        run: node tracks/nba/reports/b095_review.browser.cjs
       - name: Preserve rendered review and bounded accessibility checks
         if: always()
         uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02
@@ -119,5 +116,28 @@ jobs:
           if-no-files-found: error
           retention-days: 14
 
-
-
+  current-status-browser:
+    runs-on: ubuntu-24.04
+    # Include observed slow package-mirror setup; all rendering checks remain.
+    timeout-minutes: 8
+    steps:
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1
+        with:
+          persist-credentials: false
+      - name: Install the repository-established pinned browser dependency
+        run: |
+          npm install --prefix "${RUNNER_TEMP}/nba-current-browser" --ignore-scripts --no-audit --no-fund playwright@1.62.1
+          node "${RUNNER_TEMP}/nba-current-browser/node_modules/playwright/cli.js" install --with-deps chromium
+      - name: Render current NBA execution, selection and source-coverage controls
+        env:
+          PLAYWRIGHT_MODULE_DIR: ${{ runner.temp }}/nba-current-browser/node_modules/playwright
+          NBA_MONITOR_SCREENSHOTS: ${{ runner.temp }}/nba-current-status-screenshots
+        run: node tracks/nba/reports/b095_review.browser.cjs
+      - name: Preserve current NBA desktop and mobile evidence
+        if: always()
+        uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02
+        with:
+          name: nba-current-status-browser-review
+          path: ${{ runner.temp }}/nba-current-status-screenshots/*
+          if-no-files-found: error
+          retention-days: 14
