@@ -70,12 +70,14 @@
       "sha256": "45df8f1b2581191cdef27ae2f11ed0dbb421f52ea0cd48957aff929859289f39"
     },
     {
+      "bytes": 953,
       "label": "B095 attempt 1 invocation receipt",
       "sha256": "20cfbe22e0ead329cfa954ee8a3285b55d3dcdd9d7a420e45a3fffc691501810"
     },
     {
+      "bytes": 953,
       "label": "B095 attempt 2 invocation receipt",
-      "sha256": "9c9f91228fcb389bc2e1f52f112d862b0e87f88f8d7bdf0cd2c56e9756cf5e3e"
+      "sha256": "45dff11c54625a9e261a7d94ae92f652dea8b509ea33bb17f78407300e67836a"
     }
   ],
   "family_variant_counts": [
@@ -199,6 +201,7 @@
       "finished_at_utc": "2026-11-18T00:38:08.641706Z",
       "fit_counter_scope": "Scientific report did not return; null counters are retained. Initialization failed before scientific dispatch.",
       "fit_counts_complete": false,
+      "invocation_receipt_bytes": 953,
       "invocation_receipt_sha256": "20cfbe22e0ead329cfa954ee8a3285b55d3dcdd9d7a420e45a3fffc691501810",
       "new_calibration_fits": null,
       "new_estimator_fits": null,
@@ -221,7 +224,8 @@
       "finished_at_utc": "2026-11-18T00:39:08.863484Z",
       "fit_counter_scope": "Scientific report did not return; null counters are retained. Initialization failed before scientific dispatch.",
       "fit_counts_complete": false,
-      "invocation_receipt_sha256": "9c9f91228fcb389bc2e1f52f112d862b0e87f88f8d7bdf0cd2c56e9756cf5e3e",
+      "invocation_receipt_bytes": 953,
+      "invocation_receipt_sha256": "45dff11c54625a9e261a7d94ae92f652dea8b509ea33bb17f78407300e67836a",
       "new_calibration_fits": null,
       "new_estimator_fits": null,
       "new_provider_requests": 0,

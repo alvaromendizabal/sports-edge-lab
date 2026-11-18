@@ -16,6 +16,11 @@ FORBIDDEN_TEXT = ('circa','s3://','arn:aws:','/home/','/workspace/','nba:espn:ev
 OBJECTIVES = {'winner_accuracy','winner_log_loss','winner_brier','margin_mae','margin_rmse',
  'total_mae','total_rmse'}
 POLICIES = {'50/50':(.5,.5),'40/60':(.4,.6),'30/70':(.3,.7),'20/80':(.2,.8),'10/90':(.1,.9)}
+# Pins are SHA-256 of the complete read-back receipt bytes, including newline.
+INVOCATION_RECEIPT_PINS = {
+ 1:(953,'20cfbe22e0ead329cfa954ee8a3285b55d3dcdd9d7a420e45a3fffc691501810'),
+ 2:(953,'45dff11c54625a9e261a7d94ae92f652dea8b509ea33bb17f78407300e67836a'),
+}
 
 def require(condition, message):
  if not condition: raise ValueError(message)
@@ -93,6 +98,10 @@ def validate(value):
   require(a['new_provider_requests']==0 and a['actual_invoiced_cost_usd'] is None,'Failed attempt creates retrieval or invoice claim')
   require(re.fullmatch('[a-f0-9]{64}',a['report_sha256']) is not None,'Invalid failure report hash')
   require(a['exit_code']==2,'Failed owner exit changed')
+  pin=INVOCATION_RECEIPT_PINS[a['attempt']]
+  require((a.get('invocation_receipt_bytes'),a.get('invocation_receipt_sha256'))==pin,'Invocation receipt byte pin mismatch')
+  evidence=[e for e in value['evidence'] if e['label']==f"B095 attempt {a['attempt']} invocation receipt"]
+  require(len(evidence)==1 and (evidence[0].get('bytes'),evidence[0].get('sha256'))==pin,'Invocation evidence byte pin mismatch')
  latest=value['latest_verified_return']
  require(latest['release']=='B095' and latest['attempt']==2 and latest['status']=='PARTIAL_RESUMABLE' and latest['execution_complete'] is False,'Verified return relabeled successful execution')
  require(latest['logical_archive_bytes']==19057377 and latest['physical_parts']==1 and latest['payload_count']==16 and latest['physical_representation']=='Single ZIP','Latest return representation mismatch')

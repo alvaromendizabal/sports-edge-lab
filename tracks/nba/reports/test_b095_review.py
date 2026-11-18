@@ -105,6 +105,13 @@ class B095ReviewContract(unittest.TestCase):
   self.bad(lambda d:d['latest_owner_executions'][0].update(actual_invoiced_cost_usd=0),'invoice claim')
   self.bad(lambda d:d['latest_owner_executions'][1].update(new_provider_requests=1),'retrieval')
   self.assertEqual(self.value['prepared_successor']['release'],'B096')
+ def test_invocation_receipt_pins_match_full_byte_readback(self):
+  a=self.value['latest_owner_executions'][1]
+  self.assertEqual(a['invocation_receipt_bytes'],953)
+  self.assertEqual(a['invocation_receipt_sha256'],'45dff11c54625a9e261a7d94ae92f652dea8b509ea33bb17f78407300e67836a')
+  self.bad(lambda d:d['latest_owner_executions'][1].update(invocation_receipt_sha256='9c9f91228fcb389bc2e1f52f112d862b0e87f88f8d7bdf0cd2c56e9756cf5e3e'),'Invocation receipt byte pin')
+  self.bad(lambda d:d['latest_owner_executions'][1].update(invocation_receipt_bytes=952),'Invocation receipt byte pin')
+  self.bad(lambda d:next(e for e in d['evidence'] if e['label']=='B095 attempt 2 invocation receipt').update(sha256='0'*64),'Invocation evidence byte pin')
  def test_all_saved_scientific_sections_remain_exactly_preserved(self):
   keys=['calibration_comparisons','calibration_scope','family_variant_counts','features','objective_leaders','populations','scientific_snapshot_at_utc','selection','sources','weight_sensitivity']
   raw=json.dumps({k:self.value[k] for k in keys},sort_keys=True,separators=(',',':'),ensure_ascii=False).encode()
