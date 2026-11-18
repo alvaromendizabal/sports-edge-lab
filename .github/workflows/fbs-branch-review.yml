@@ -86,6 +86,7 @@ jobs:
           FBS_SCREENSHOTS: ${{ runner.temp }}/fbs-screenshots
           GITHUB_HEAD_SHA: ${{ github.event.pull_request.head.sha }}
         run: |
+          node tests/fbs_v091_browser.test.cjs
           node examples/fbs_contracts/tests/test_dashboard_browser.cjs
           node examples/fbs_contracts/tests/test_recovery_browser.cjs
           node examples/fbs_contracts/tests/test_season_browser.cjs
@@ -99,7 +100,6 @@ jobs:
           node tests/fbs_v077_browser.test.cjs
           node tests/fbs_v078_browser.test.cjs
           node tests/fbs_v079_browser.test.cjs
-          node tests/fbs_v091_browser.test.cjs
       - name: Verify the published V074 URL in an actual public browser
         if: github.event_name == 'pull_request' && github.head_ref == 'fbs/v074-saved-evidence-review'
         env:

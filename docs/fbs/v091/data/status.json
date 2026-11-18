@@ -108,10 +108,9 @@
     "resolve_latest_again_at_launch": true,
     "return_changes": [
       "The verified return audit found 134,098 of 134,110 payloads already present in V089, representing 29.41 GB of decoded inherited bytes. It also found 7.44 GB of duplicate decoded bytes within the same return; those overlap and must not be added together.",
-      "Replace repeated retained artifact copies with an integrity-pinned dependency manifest.",
-      "Keep reports, observed outcomes and continuation metadata small and explicit.",
-      "Verify required durable dependencies before reuse; report missing or corrupt dependencies.",
-      "Preserve partial versus complete status and every completed scientific commitment.",
+      "Use a small control ZIP plus a compressed logical catalog. Historical payloads remain in their authenticated original archives.",
+      "Restore only missing requested historical members by verified byte ranges. Store new unique payloads once as SHA-addressed durable chunks.",
+      "Verify physical and decoded integrity before reuse, preserve original data and retain partial versus complete scientific status.",
       "A catalog-only encoding of the exact existing payload set measured 12.28 MB in an engineering projection. It is not an executed owner return or a prediction of future scientific output size."
     ],
     "verify_dependencies_before_reuse": true
