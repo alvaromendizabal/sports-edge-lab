@@ -1,7 +1,7 @@
 {
   "schema": "fbs.public.launch-readiness.v093",
   "owner": "FBS",
-  "as_of": "2026-11-18T07:36:17.152832Z",
+  "as_of": "2026-11-18T07:53:19.174711Z",
   "publication": {
     "status": "SOURCE_REVIEW",
     "website_deployed": false,
@@ -214,6 +214,11 @@
         "label": "V095 native continuation review",
         "sha256": "8d791f5e5f876e7feeccd7d600e07964432a3be9a62261f7ba9aff0fe6e86761",
         "scope": "Dated native stage and census evidence. Its provisional prepublication success does not override the observed owner failure."
+      },
+      {
+        "label": "V096 read-only frozen-context admission proof",
+        "sha256": "139cd9cee6c6d20de21d9b03c6313e683e4de727147a665f25d246880595f4ea",
+        "scope": "624 native validation identities and locked selection verified; all 397 retained policies cover 755 completed games. Pending coverage remains 123/133 for 288 policies and 93/133 for 109; zero owner runs or provider calls."
       }
     ],
     "final_archive_checks": 48,
@@ -440,5 +445,34 @@
     "provider_retrievals": 0,
     "process_or_predecessor_restarted": false,
     "latest_return_pointer_changed_by_preparation": false
+  },
+  "next_research": {
+    "status": "PLANNED_USER_EXECUTION",
+    "planned_test_fit_inference_jobs": 312,
+    "retained_policy_rescores": 397,
+    "validation_jobs_to_reuse": 624,
+    "context_proof_at": "2026-11-18T07:53:19.174711Z",
+    "context_proof_sha256": "139cd9cee6c6d20de21d9b03c6313e683e4de727147a665f25d246880595f4ea",
+    "training_through_season": 2025,
+    "test_labels_only_for_grading": true,
+    "same_game_identities_required": true,
+    "validation_lock_reused": true,
+    "full_population_completeness_claimed": false,
+    "retained_policies_with_completed_coverage": 397,
+    "completed_games": 755,
+    "pending_games": 133,
+    "retained_pending_coverage_groups": [
+      {
+        "policies": 288,
+        "covered_pending_games": 123
+      },
+      {
+        "policies": 109,
+        "covered_pending_games": 93
+      }
+    ],
+    "pending_feature_gaps_per_frozen_target_context": 10,
+    "proof_created_owner_runs": 0,
+    "proof_provider_calls": 0
   }
 }

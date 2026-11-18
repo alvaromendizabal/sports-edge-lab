@@ -28,7 +28,8 @@ class V093Readiness(unittest.TestCase):
         self.assertEqual(rendered, (ROOT / "docs/fbs/v093/index.html").read_bytes())
         embedded = re.search(rb'<script id="report-data" type="application/json">(.*?)</script>', rendered, re.S).group(1)
         self.assertEqual(json.loads(embedded), DATA)
-        self.assertLess(len(rendered), 65_536)
+        self.assertLess(len(rendered), 75_000)
+        self.assertNotIn(b"circa", rendered.lower())
         self.assertNotRegex(rendered.decode(), r'<script[^>]+src=|<link[^>]+stylesheet')
 
     def test_prepared_software_cannot_become_scientific_execution(self):
@@ -263,6 +264,31 @@ class V093Readiness(unittest.TestCase):
         self.rejects("current_attempt", "started_at", DATA["prepared"]["snapshot_at"])
         self.rejects("current_attempt", "child_exit_observed_at", "2026-11-18T08:00:00Z")
         self.rejects("current_census", "observed_at", DATA["prepared"]["snapshot_at"])
+
+    def test_planned_fit_and_rescore_scope_preserves_pretest_components(self):
+        for key, value in (("status", "COMPLETED"), ("training_through_season", 2026),
+                           ("test_labels_only_for_grading", False), ("same_game_identities_required", False),
+                           ("validation_lock_reused", False), ("proof_created_owner_runs", 1)):
+            self.rejects("next_research", key, value)
+
+    def test_retained_pending_gaps_cannot_be_claimed_as_complete_forecasts(self):
+        plan = DATA["next_research"]
+        self.assertEqual(sum(g["policies"] for g in plan["retained_pending_coverage_groups"]), 397)
+        self.assertEqual(plan["pending_games"], 133)
+        for i in (0, 1):
+            d = copy.deepcopy(DATA)
+            d["next_research"]["retained_pending_coverage_groups"][i]["covered_pending_games"] = 133
+            with self.assertRaises(ValueError):
+                REVIEW.render(d)
+        self.rejects("next_research", "pending_feature_gaps_per_frozen_target_context", 0)
+        self.rejects("next_research", "full_population_completeness_claimed", True)
+
+    def test_prepared_context_proof_has_its_own_clock_and_pin(self):
+        self.rejects("next_research", "context_proof_at", DATA["current_attempt"]["observed_at"])
+        d = copy.deepcopy(DATA)
+        d["verification"]["evidence"] = [x for x in d["verification"]["evidence"] if x["sha256"] != d["next_research"]["context_proof_sha256"]]
+        with self.assertRaises(ValueError):
+            REVIEW.render(d)
 
 
 if __name__ == "__main__":

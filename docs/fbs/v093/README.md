@@ -34,6 +34,10 @@ The V095 native evidence contains **888 observed 2026 fixtures: 755 completed an
 
 **In preparation; canonical delivery verification pending.** No staged V096 bytes, native verification or owner execution is claimed until the separately bound `next_preparation` record has the exact canonical hash and size, native verification clock and exact-archive check evidence. Preparation creates no owner research run, fit or provider retrieval and does not advance the latest actual-return pointer.
 
+The next user execution plans **312 registered pre-test fit/inference jobs and rescoring of 397 retained policies**, reusing the **624 native validation identities and locked selection**. The read-only native admission proof at **2026-11-18 07:53:19 UTC** verifies matching game identities, unchanged frozen target contexts, hidden test labels and training history through the **2025 season, including its postseason**. Test-season outcomes are for grading only; they cannot update fitted components or choose features, blends or champions. The proof creates no fits, forecasts, owner execution or provider calls.
+
+All **397 retained policies cover the 755 observed completed games**, with zero duplicate game rows. Pending coverage remains **123/133 for 288 policies** and **93/133 for 109 policies**. Each frozen target context retains **10 pending-game feature gaps**. The full 133-game pending denominator and all gaps remain explicit. This is prepared research scope, not a completed V096 tranche or certified full official coverage.
+
 ## Earlier V093 attempts and retained work
 
 The first V093 attempt, `20261118T045410Z-6771c1bd01-fbs093`, started at 2026-11-18 04:54:10 UTC. Its child exited **2**, observed at 05:24:30 UTC. Durable finalization finished at **05:26:48 UTC** and the latest verified actual-return pointer advanced to `SAFE_PARTIAL_FAILURE_V13`.
