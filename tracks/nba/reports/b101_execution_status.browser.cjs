@@ -6,6 +6,7 @@ const path = require('node:path');
 const crypto = require('node:crypto');
 const assert = require('node:assert/strict');
 const {pathToFileURL} = require('node:url');
+const {execFileSync} = require('node:child_process');
 const {chromium} = require(process.env.PLAYWRIGHT_MODULE_DIR || 'playwright');
 const directory = __dirname;
 const output = path.resolve(process.env.NBA_MONITOR_SCREENSHOTS || path.join(directory,'.browser-review'));
@@ -74,6 +75,20 @@ async function main() {
       const [download]=await Promise.all([page.waitForEvent('download'),page.keyboard.press('Enter')]);
       assert.equal(download.suggestedFilename(),'b101_execution_status.json');
       assert.deepEqual(JSON.parse(fs.readFileSync(await download.path(),'utf8')),evidence);
+      const layout=await page.evaluate(()=>({viewport_width:innerWidth,document_width:document.documentElement.scrollWidth,
+        overflowing_elements:[...document.querySelectorAll('body *')].map(node=>{
+          const rect=node.getBoundingClientRect(),style=getComputedStyle(node);
+          return {tag:node.tagName,id:node.id,class_name:String(node.className||''),
+            left:rect.left,right:rect.right,width:rect.width,client:node.clientWidth,scroll:node.scrollWidth,
+            display:style.display,white_space:style.whiteSpace,overflow_x:style.overflowX,
+            text:(node.innerText||'').slice(0,150)};
+        }).filter(r=>r.display!=='none'&&r.width>0&&(r.left<-.5||r.right>innerWidth+.5)).slice(0,35)}));
+      fs.writeFileSync(path.join(output,`nba-b101-layout-${width}.json`),JSON.stringify(layout,null,2)+'\n');
+      if(layout.document_width>width+1) {
+        await page.evaluate(()=>scrollTo(0,0));
+        await page.screenshot({path:path.join(output,`nba-b101-overflow-${width}.png`),fullPage:true});
+        console.error(JSON.stringify({failure:'DOCUMENT_OVERFLOW',width,layout}));
+      }
       if(width===390) {
         const cells=await page.locator('.mobile-cards tbody tr:visible td').evaluateAll(nodes=>nodes.map(node=>({
           label:node.dataset.label,generated:getComputedStyle(node,'::before').content,
@@ -107,9 +122,11 @@ async function main() {
     views.push({width:390,offline:true,javascript:false,all_roles_visible:true,json_link_available:true});
     await context.close();
   } finally {await browser.close();}
+  let checkout=null;
+  try {checkout=execFileSync('git',['rev-parse','HEAD'],{cwd:directory,encoding:'utf8',stdio:['ignore','pipe','ignore']}).trim();}catch{}
   const receipt={schema:'sel.nba.b101.public_browser_receipt.v1',status:'PASS',
     html_sha256:sha256(pageBytes),json_sha256:sha256(source),
-    source_head:process.env.NBA_SOURCE_HEAD_SHA||null,views,owner_executions:0,new_owner_fits:0};
+    source_head:process.env.NBA_SOURCE_HEAD_SHA||null,tested_checkout:checkout,views,owner_executions:0,new_owner_fits:0};
   fs.writeFileSync(path.join(output,'nba-b101-browser-receipt.json'),JSON.stringify(receipt,null,2)+'\n');
   console.log(JSON.stringify(receipt));
 }
