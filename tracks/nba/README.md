@@ -1,5 +1,19 @@
 # Sports Edge Lab · NBA
 
+<!-- NBA B101 EXECUTION STATUS BEGIN -->
+## November 18: B100 completed its registered campaign; B101 research is in preparation
+
+[Read the current execution and research review](reports/b101_execution_status.html) · [Download sanitized aggregate evidence](reports/b101_execution_status.json).
+
+**The audited B100 run completed all 320 new residual-distribution fits and current forecasts for all 5,808 saved point-model variants**, with zero new base-estimator fits, zero new calibration fits, zero failed jobs and zero provider requests. Its current population contains **210 completed 2026–27 games and 990 upcoming games**. The saved current forecast counts supersede the inherited 206-game subsection; they do not establish original historical issuance.
+
+Every point variant and distribution head uses identical retained annual populations of **1,314 / 1,315 / 210 completed games**. The review shows all fourteen 50/50 validation-selected objective/horizon roles with their saved annual metrics. **Fourteen known validation omissions remain: six play-in games and one Cup final in each validation season.** Authentic source records support proposed counts of **1,321 and 1,322**, but those expanded populations have not yet been rescored. No qualified full-season champion or full V13 completion is claimed.
+
+B100 reached 24 fitting worker processes, while its **20.03-second representative interval averaged 6.13 measured cores**; the full residual-fit stage lasted **33.28 seconds**. Safe admission varied from 1 to 24 cores. It recorded **zero full three-minute occupancy passes**, so requested sustained 12–24-core throughput remains unproven. The through-delivery whole-instance wall estimate is **USD 0.479552**; actual invoiced cost and NBA allocation remain unknown.
+
+**B101 is planned and unexecuted.** The finite campaign reuses all 320 original heads, reconciles the expanded common population, and registers up to 240 new box-score estimator recipes with calibrators, 162 learned model combinations, 216 combination residual heads, and 480 fixed positive-tail compositions requiring zero fits. Numerical duplicates share fitted state. The next owner launch must preserve completed identities and measure actual useful CPU. Final packaged and private staging verification are pending. No new per-game forecasts or production promotion are published; main integration and website deployment remain separate pending steps. Earlier dated B100/B099/B098 records below remain unchanged.
+<!-- NBA B101 EXECUTION STATUS END -->
+
 <!-- NBA B100 EXECUTION STATUS BEGIN -->
 ## November 18: B099 refreshed inputs and delivered a compact return; scientific queues remain deferred
 

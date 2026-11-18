@@ -136,9 +136,11 @@ jobs:
         run: |
           python tracks/nba/reports/build_b099_execution_status.py --check --self-test
           python tracks/nba/reports/build_b100_execution_status.py --check --self-test
+          python tracks/nba/reports/build_b101_execution_status.py --check --self-test
           node tracks/nba/reports/b095_review.browser.cjs
           node tracks/nba/reports/b099_execution_status.browser.cjs
           node tracks/nba/reports/b100_execution_status.browser.cjs
+          node tracks/nba/reports/b101_execution_status.browser.cjs
       - name: Preserve current NBA desktop and mobile evidence
         if: always()
         uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02
