@@ -394,12 +394,12 @@ class R29SourcePublicationTests(unittest.TestCase):
         self.assertEqual(current.count(CURRENT_BANNER),1)
         self.assertNotIn('stale launch-wide deadline',CURRENT_BANNER)
         self.assertNotIn('live memory pressure',CURRENT_BANNER)
-        self.assertIn('original-clock check',CURRENT_BANNER)
+        self.assertIn('I/O admission latch',CURRENT_BANNER)
 
 
 class R30ClockRecoveryTests(unittest.TestCase):
     def setUp(self):
-        self.data = status.load()
+        self.data = status.validate(json.loads(status.CLOCK_DATA.read_text()))
 
     def reject(self, mutate):
         value = deepcopy(self.data)
@@ -495,10 +495,175 @@ class R30ClockRecoveryTests(unittest.TestCase):
         current = render_banner(previous)
         self.assertEqual(strip_banner(current), body)
         self.assertEqual(current.count(CURRENT_BANNER), 1)
-        self.assertIn('latest observed R30', CURRENT_BANNER)
-        self.assertIn('220 payloads', CURRENT_BANNER)
-        self.assertIn('R31', CURRENT_BANNER)
+        self.assertIn('latest observed R31', CURRENT_BANNER)
+        self.assertIn('222 payloads', CURRENT_BANNER)
+        self.assertIn('R32', CURRENT_BANNER)
         self.assertNotIn('R30 preparation and staging are verified', CURRENT_BANNER)
+
+
+class R31ContinuationAndBoundedFitTests(unittest.TestCase):
+    def setUp(self):
+        self.data = status.load()
+
+    def reject(self, mutate):
+        bad = deepcopy(self.data)
+        mutate(bad)
+        with self.assertRaises(ValueError):
+            status.validate(bad)
+
+    def test_r31_failure_preserves_all_prior_attempts_and_own_return(self):
+        self.assertEqual(self.data['schema'],status.CONTINUATION_SCHEMA)
+        prior=status.validate(json.loads(status.CLOCK_DATA.read_text()))
+        self.assertEqual(self.data['attempts'][:-1],prior['attempts'])
+        self.assertEqual(self.data['latest_verified_return']['payloads_verified'],222)
+        self.assertEqual(self.data['audit_scope']['audited_attempts'],12)
+        self.reject(lambda d:d['attempts'][0].update(new_target_fits=36))
+        self.reject(lambda d:d['latest_verified_return'].update(sha256=prior['latest_verified_return']['sha256']))
+
+    def test_r31_admission_failure_cannot_be_relabelled_as_r30_clock_failure(self):
+        c=self.data['current_execution']
+        self.assertEqual(c['failure']['recorded_error'],'V7_IO_DEFERRAL_ALREADY_LATCHED')
+        self.assertEqual(c['pressure_reason'],'IO_MEMORY_POOL_LANES_BUSY')
+        self.assertAlmostEqual(c['pressure_wait_seconds'],16.428095466006198)
+        self.reject(lambda d:d['current_execution']['failure'].update(recorded_error='B104_RESPONSE_HISTORICAL_ORIGINAL_CLOCKS'))
+        self.reject(lambda d:d['current_execution'].update(pressure_reason='MEMORY_FULL_PRESSURE'))
+
+    def test_r31_recovery_and_new_catalog_fits_have_separate_counters(self):
+        c=self.data['current_execution'];a=self.data['bounded_scientific_acceptance']
+        self.assertEqual((c['new_target_fits'],c['historical_checkpoint_reuses']),(0,108))
+        self.assertEqual((a['new_physical_fits_completed'],a['owner_campaigns']),(36,0))
+        self.assertEqual(a['prior_linear_components_verified_unchanged'],11)
+        self.assertEqual(self.data['preserved_work']['new_target_fits_in_audited_attempts'],11)
+        self.reject(lambda d:d['current_execution'].update(new_target_fits=36))
+        self.reject(lambda d:d['preserved_work'].update(new_target_fits_in_audited_attempts=47))
+        self.reject(lambda d:d['bounded_scientific_acceptance'].update(new_physical_fits_completed=108))
+
+    def test_four_displayed_tasks_overlap_six_receipts_plus_one_pending(self):
+        q=self.data['source_task_reconciliation']
+        self.assertEqual((q['displayed_completed'],q['displayed_remaining'],q['planned']),(4,28,32))
+        self.assertEqual((q['authenticated_committed_responses'],q['authenticated_pending_captured_responses']),(6,1))
+        self.assertEqual(q['remaining_without_R31_response_proof'],25)
+        for field,value in [('displayed_completed',11),('authenticated_committed_responses',7),('remaining_without_R31_response_proof',0)]:
+            self.reject(lambda d,field=field,value=value:d['source_task_reconciliation'].update({field:value}))
+
+    def test_offline_source_replay_cannot_claim_real_remote_publication(self):
+        o=self.data['offline_source_recovery_acceptance']
+        self.assertEqual(o['additional_pending_capture_published_in_local_test'],1)
+        self.assertEqual(o['warm_normalizer_invocations'],0)
+        for field in ('current_AWS_objects_written','provider_requests','scientific_fits','owner_campaigns'):
+            self.assertEqual(o[field],0)
+            self.reject(lambda d,field=field:d['offline_source_recovery_acceptance'].update({field:1}))
+        self.reject(lambda d:d['source_task_reconciliation'].update(original_clocks_preserved=False))
+
+    def test_stage_11_restart_reuses_stages_without_owner_science_credit(self):
+        z=self.data['stage_resumption_acceptance']
+        self.assertEqual(z['stage11_restart'],dict(completed_stages_reused=10,new_stages_completed=1,invalidated_stages=0,repeated_prior_callbacks=0))
+        self.assertEqual(z['mid_stage_restart'],dict(completed_tasks_reused=2,new_tasks_completed=1,pending_tasks=0))
+        self.assertEqual(z['actual_runner_fixture']['completed_stages_reused'],14)
+        self.assertTrue(z['actual_runner_fixture']['deliberately_reinterrupted_stage11'])
+        self.reject(lambda d:d['stage_resumption_acceptance'].update(owner_campaigns=1))
+        self.reject(lambda d:d['stage_resumption_acceptance']['stage11_restart'].update(repeated_prior_callbacks=10))
+
+    def test_changed_dependency_and_corruption_guards_remain_explicit(self):
+        z=self.data['stage_resumption_acceptance']
+        self.assertEqual(z['changed_input'],dict(source_and_dependent_stages_invalidated=2,independent_stages_reused=1))
+        self.assertTrue(z['corruption_rejected'])
+        self.reject(lambda d:d['stage_resumption_acceptance'].update(corruption_rejected=False))
+        self.reject(lambda d:d['stage_resumption_acceptance'].update(authentic_owner_stage_adoption_status='OWNER_COMPLETE'))
+
+    def test_authentic_r31_three_stage_restart_preserves_models_and_predictions(self):
+        native=self.data['stage_resumption_acceptance']['authentic_native_recovery']
+        self.assertEqual((native['completed_stages_reused'],native['new_stages_completed'],native['invalidated_completed_stages']),(3,0,0))
+        self.assertEqual(native['historical_estimator_checkpoints_preserved'],108)
+        self.assertEqual(native['prediction_rows_preserved'],806688)
+        self.assertEqual((native['verified_local_object_reuses'],native['remote_receipt_reads'],native['remote_receipt_bytes']),(28,3,19449))
+        for key in ('repeated_compute_callbacks','owner_campaigns','new_estimator_fits','new_calibration_fits','provider_requests'):
+            self.assertEqual(native[key],0)
+            self.reject(lambda d,key=key:d['stage_resumption_acceptance']['authentic_native_recovery'].update({key:1}))
+
+    def test_bounded_catalog_requires_all_36_authentic_outputs(self):
+        a=self.data['bounded_scientific_acceptance']
+        self.assertEqual(sum(a['family_counts'].values()),36)
+        self.assertEqual((a['verified_output_checkpoints'],a['failed_tasks'],a['remaining_tasks']),(36,0,0))
+        self.assertFalse(a['synthetic_workload_used'])
+        self.reject(lambda d:d['bounded_scientific_acceptance']['family_counts'].update(xgboost=0))
+        self.reject(lambda d:d['bounded_scientific_acceptance'].update(verified_output_checkpoints=0))
+        self.reject(lambda d:d['bounded_scientific_acceptance'].update(report_sha256='0'*64))
+
+    def test_actual_kernel_overlap_cannot_become_configured_36_worker_claim(self):
+        a=self.data['bounded_scientific_acceptance']
+        self.assertEqual(a['requested_worker_hard_ceiling'],36)
+        self.assertEqual(a['peak_real_estimator_kernel_overlap'],21)
+        self.assertEqual(a['peak_worker_processes'],22)
+        self.assertTrue(a['overlap_of_at_least_12_real_estimator_kernels_observed'])
+        self.assertFalse(a['overlap_of_24_or_36_real_estimator_kernels_observed'])
+        self.reject(lambda d:d['bounded_scientific_acceptance'].update(peak_real_estimator_kernel_overlap=36))
+        self.reject(lambda d:d['bounded_scientific_acceptance'].update(overlap_of_24_or_36_real_estimator_kernels_observed=True))
+
+    def test_incomplete_sustained_gate_is_not_a_pass(self):
+        a=self.data['bounded_scientific_acceptance']
+        self.assertEqual(a['occupancy_gate_status'],'CONDITIONAL_INSUFFICIENT_INDEPENDENT_FIT_WORK')
+        self.assertFalse(a['sustained_180_second_75_percent_gate_certified'])
+        self.reject(lambda d:d['bounded_scientific_acceptance'].update(sustained_180_second_75_percent_gate_certified=True))
+        self.reject(lambda d:d['bounded_scientific_acceptance'].update(occupancy_gate_status='PASS'))
+
+    def test_measured_kernel_cpu_includes_preparation_and_inference(self):
+        a=self.data['bounded_scientific_acceptance']
+        self.assertIn('NOT_OPTIMIZER_ONLY',a['kernel_measurement_scope'])
+        self.assertAlmostEqual(a['kernel_average_core_equivalents'],a['kernel_cpu_seconds']/a['kernel_measurement_span_seconds'])
+        self.reject(lambda d:d['bounded_scientific_acceptance'].update(kernel_measurement_scope='OPTIMIZER_ONLY'))
+        self.reject(lambda d:d['bounded_scientific_acceptance'].update(kernel_average_core_equivalents=36))
+
+    def test_bounded_fits_use_no_test_labels_or_model_promotions(self):
+        for key in ('test_rows_used','champion_promotions','provider_requests','owner_campaigns'):
+            self.assertEqual(self.data['bounded_scientific_acceptance'][key],0)
+            self.reject(lambda d,key=key:d['bounded_scientific_acceptance'].update({key:1}))
+        self.reject(lambda d:d['science_contract'].update(new_full_population_champion=True))
+
+    def test_shared_instance_estimate_reconciles_but_is_not_invoice(self):
+        a=self.data['bounded_scientific_acceptance']
+        self.assertAlmostEqual(a['estimated_full_instance_wall_cost_usd'],a['wall_seconds']*a['verified_rate_usd_per_hour']/3600)
+        self.reject(lambda d:d['bounded_scientific_acceptance'].update(cost_basis='INVOICE'))
+        self.reject(lambda d:d['bounded_scientific_acceptance'].update(estimated_full_instance_wall_cost_usd=0))
+
+    def test_final_release_must_have_its_own_gate_and_installation(self):
+        n=self.data['next_preparation'];self.assertEqual(n['release'],'R32')
+        self.reject(lambda d:d['next_preparation'].update(owner_executions=1))
+        self.reject(lambda d:d['next_preparation'].update(science_completion_claimed=True))
+        if n['status']=='IN_PROGRESS':
+            self.reject(lambda d:d['next_preparation'].update(status='PREPARED_VERIFIED'))
+            self.reject(lambda d:d['next_preparation'].update(engineering_tests=95))
+        else:
+            old=json.loads(status.CLOCK_DATA.read_text())['next_preparation']['verified_delivery']
+            self.reject(lambda d:d['next_preparation'].update(verified_delivery=old))
+
+    def test_changing_old_pin_byte_lengths_does_not_create_a_new_release(self):
+        old=json.loads(status.CLOCK_DATA.read_text())['next_preparation']
+        candidate=deepcopy(self.data)
+        n=candidate['next_preparation']
+        n.update(status='PREPARED_VERIFIED',canonical_gate_passed=True,upload_verified=True,
+            engineering_tests=old['engineering_tests'],engineering_failures=0,
+            engineering_evidence_sha256=old['engineering_evidence_sha256'],verified_delivery=deepcopy(old['verified_delivery']))
+        n['stages']=[dict(name=s['name'],status='IMPLEMENTED_OWNER_EXECUTION_PENDING') for s in n['stages']]
+        for key in ('canonical_source','engineering_gate'):
+            n['verified_delivery'][key]['bytes']+=1
+        with self.assertRaises(ValueError):
+            status.validate(candidate)
+
+    def test_new_banner_preserves_previous_clock_wrapper_and_science_body(self):
+        from v12_public_status import CURRENT_BANNER,render_banner,strip_banner
+        body='<main><article>Preserved scientific rows</article></main>'
+        old=body.replace('<main>','<main>'+status.PREVIOUS_CLOCK_EXECUTION_BANNER)
+        self.assertEqual(strip_banner(render_banner(old)),body)
+        self.assertIn('36 real new estimator components',CURRENT_BANNER)
+        self.assertIn('21 overlapping estimator kernels',CURRENT_BANNER)
+        self.assertIn('gate remain incomplete',CURRENT_BANNER)
+
+    def test_private_paths_and_unknown_fields_are_rejected(self):
+        self.reject(lambda d:d['bounded_scientific_acceptance'].update(private_checkpoint='/home/owner/model'))
+        self.reject(lambda d:d['bounded_scientific_acceptance'].update(note='s3://private/object'))
+        self.reject(lambda d:d.update(owner='NBA'))
+        self.reject(lambda d:d['publication'].update(deployment_verified=True))
 
 
 if __name__ == "__main__":

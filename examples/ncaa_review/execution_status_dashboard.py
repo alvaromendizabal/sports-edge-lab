@@ -15,10 +15,13 @@ import math
 from pathlib import Path
 import re
 from zoneinfo import ZoneInfo
+from execution_status_continuation import validate_continuation_v7
 
 HERE = Path(__file__).resolve().parent
 ROOT = HERE.parents[1]
-DATA = HERE / "EXECUTION_STATUS_R30_20261118.json"
+DATA = HERE / "EXECUTION_STATUS_R31_20261118.json"
+CLOCK_DATA = HERE / "EXECUTION_STATUS_R30_20261118.json"
+CONTINUATION_SCHEMA = "sel.ncaa.public.execution_status.v7"
 SOURCE_DATA = HERE / "EXECUTION_STATUS_R29_20261118.json"
 CLOCK_SCHEMA = "sel.ncaa.public.execution_status.v6"
 RECOVERY_DATA = HERE / "EXECUTION_STATUS_R28_20261118.json"
@@ -392,6 +395,9 @@ def validate(data):
     if not isinstance(data, dict):
         raise ValueError("Unexpected public execution fields")
     schema = data.get("schema")
+    if schema == CONTINUATION_SCHEMA:
+        return validate_continuation_v7(data, validate(json.loads(CLOCK_DATA.read_text())),
+            top_keys=TOP_KEYS, current_keys=CURRENT_KEYS, forbidden=FORBIDDEN, cost_basis=ESTIMATED_COST)
     if schema == CLOCK_SCHEMA:
         return validate_clock_v6(data)
     expected = (TOP_KEYS | {'audit_scope','source_publication_evidence','next_preparation'} if schema == SCHEMA else
@@ -571,6 +577,14 @@ def render_current_banner(data=None):
                         + ('R31 preparation and staging are verified; user execution remains pending.'
                            if data['next_preparation']['status'] == 'PREPARED_VERIFIED' else
                            'R31 preparation is in progress; verification and user execution remain pending.'))
+        if data['schema'] == CONTINUATION_SCHEMA:
+            summary += (' R31 preserved 108 historical target checkpoints and recoverable source responses, '
+                        'then stopped at an I/O admission latch. A separate bounded R32 acceptance completed '
+                        '<strong>36 real new estimator components</strong> and measured '
+                        '<strong>21 overlapping estimator kernels</strong>. '
+                        + ('R32 canonical verification and staging are complete; user execution remains pending.'
+                           if data['next_preparation']['status'] == 'PREPARED_VERIFIED' else
+                           'R32 final verification and installation remain in progress.'))
         if data['schema'] == SCHEMA:
             summary += (' R29 authenticated 108 historical target checkpoints and recorded 294 source chunks before '
                         'live memory pressure deferred source publication. No scientific worker ran. '
@@ -589,13 +603,18 @@ def render_current_banner(data=None):
                    f'<strong>{escape(observed["status_label"])}</strong>. The last fully verified published return remains '
                    f'{escape(verified["release"])}. A failed package does not erase saved work, and an older pointer is not '
                    'evidence that no newer execution occurred.')
+    scope_note = ('The execution review keeps the failed owner run, stage and source recovery tests, and '
+                  'bounded real fitting separate. The full owner campaign, new full-population champions and '
+                  'the 180-second 75% utilization gate remain incomplete.'
+                  if data['schema'] == CONTINUATION_SCHEMA else
+                  'The execution review separates new fits, recovered checkpoints, repeated startup checks, source work '
+                  'and unfinished tasks. No new full-population champion or successful 12–24-core NCAA science run is claimed.')
     return (
         '<section id="v12-current-evidence" aria-labelledby="v12-current-title" class="b063-notice" '
         'style="margin-bottom:28px;padding:20px;border:1px solid #ccd8ce;border-radius:12px;background:#eaf0e8">'
         f'<p class="b063-eyebrow" style="margin-top:0">Execution and recovery · {dated}</p>'
         f'<h2 id="v12-current-title">{heading}</h2><p>{summary}</p>'
-        '<p>The execution review separates new fits, recovered checkpoints, repeated startup checks, source work '
-        'and unfinished tasks. No new full-population champion or successful 12–24-core NCAA science run is claimed.</p>'
+        f'<p>{scope_note}</p>'
         '<p><strong><a href="execution.html">Inspect the latest attempt and preserved work →</a></strong> · '
         '<a href="three_seasons.html">Preserved three-season comparison</a> · '
         '<a href="v12.html">Preserved V12 comparison</a></p></section>'
@@ -607,12 +626,23 @@ PREVIOUS_VERIFIED_EXECUTION_BANNER = render_current_banner(json.loads(PREVIOUS_V
 PREVIOUS_PRICE_EXECUTION_BANNER = render_current_banner(json.loads(PRICE_DATA.read_text()))
 PREVIOUS_RECOVERY_EXECUTION_BANNER = render_current_banner(json.loads(RECOVERY_DATA.read_text()))
 PREVIOUS_SOURCE_EXECUTION_BANNER = render_current_banner(json.loads(SOURCE_DATA.read_text()))
+PREVIOUS_CLOCK_EXECUTION_BANNER = render_current_banner(json.loads(CLOCK_DATA.read_text()))
 
 
 def render(data=None):
     data = load() if data is None else validate(data)
     encoded = json.dumps(data, sort_keys=True, separators=(",", ":"), allow_nan=False).replace("<", "\\u003c")
-    return (HERE / "execution_status.html.tmpl").read_text().replace("__EXECUTION_DATA__", encoded)
+    prior = validate(json.loads(CLOCK_DATA.read_text()))
+    continuation = data if data['schema'] == CONTINUATION_SCHEMA else load()
+    sections = ('publication','latest_observed_attempt','latest_verified_return','current_execution',
+                'source_recovery_evidence','next_preparation','preserved_work','throughput','source_coverage',
+                'science_contract','resume_contract','audit_scope')
+    reference = {'prior_attempts':prior['attempts'], 'science_contract':prior['science_contract'],
+        'historical_throughput':{k:v for k,v in prior['throughput'].items() if k not in {'note','next_run_rule'}},
+        'section_keys':{k:list(continuation[k]) for k in sections}}
+    frozen = json.dumps(reference, sort_keys=True, separators=(",", ":"), allow_nan=False).replace("<", "\\u003c")
+    return ((HERE / "execution_status.html.tmpl").read_text().replace("__EXECUTION_DATA__", encoded)
+            .replace("__CONTINUATION_REFERENCE__", frozen))
 
 
 def status_outputs(existing=None):

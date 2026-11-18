@@ -1,4 +1,5 @@
 'use strict';
+const { mutations } = require('./execution_status_invalid_fixtures.cjs');
 const assert = require('node:assert/strict');
 const fs = require('node:fs');
 const path = require('node:path');
@@ -19,33 +20,45 @@ async function verifyExecutionStatus(browser, file) {
       await page.setViewportSize({ width, height: 1000 });
       await page.goto(pathToFileURL(file).href);
       await page.locator('#attempt-rows tr').first().waitFor();
-      assert.equal(await page.locator('#observed-release').innerText(), 'R30');
-      assert.equal(await page.locator('#verified-release').innerText(), 'R30');
+      assert.equal(await page.locator('#observed-release').innerText(), 'R31');
+      assert.equal(await page.locator('#verified-release').innerText(), 'R31');
       assert.match(await page.locator('#observed-status').innerText(), /failed resumable/i);
       assert.equal(await page.locator('#current-execution-panel').isVisible(), true);
-      assert.match(await page.locator('#current-work-facts').innerText(), /1,255 reused · 0 fresh/);
+      assert.match(await page.locator('#current-work-facts').innerText(), /1,284 reused · 0 fresh/);
       assert.match(await page.locator('#current-work-facts').innerText(), /Requested workers \/ scientific peak\s+24 \/ 0/);
       assert.match(await page.locator('#current-work-facts').innerText(), /Not run · source stage blocked dispatch/);
       assert.match(await page.locator('#current-cost-facts').innerText(), /Succeeded · integrity verified/);
       assert.match(await page.locator('#current-work-facts').innerText(), /Historical target checkpoint reuses\s+108/);
       assert.match(await page.locator('#current-work-facts').innerText(), /Current-consumer target reuses\s+0/);
       const costFacts = await page.locator('#current-cost-facts').innerText();
-      assert.match(costFacts, /\$0\.67/);
+      assert.match(costFacts, /\$0\.42/);
       assert.doesNotMatch(costFacts, /\$0\.00/);
       assert.match(costFacts, /Budget exhaustion established\s+No · verified estimate below guard/);
-      assert.match(await page.locator('#current-work-facts').innerText(), /823 \/ 32/);
-      assert.match(await page.locator('#attempt-scope').innerText(), /11 audited attempts · 9 distinct run identities/);
+      assert.match(await page.locator('#current-work-facts').innerText(), /822 \/ 36/);
+      assert.match(await page.locator('#attempt-scope').innerText(), /12 audited attempts · 10 distinct run identities/);
       assert.match(await page.locator('#snapshot-time').innerText(), /Pacific.*not a live status feed/);
       assert.equal(await page.locator('#preserved-fits').innerText(), '11');
-      assert.match(await page.locator('#throughput-facts').innerText(), /12–24-core science proven\s+No/);
+      assert.equal(await page.locator('#bounded-acceptance-panel').isVisible(), true);
+      assert.equal(await page.locator('#bounded-fit-count').innerText(), '36');
+      assert.equal(await page.locator('#bounded-overlap').innerText(), '21');
+      assert.match(await page.locator('#bounded-cpu-facts').innerText(), /180-second \/ 75% gate certified\s+No/);
+      assert.match(await page.locator('#bounded-cpu-facts').innerText(), /24 or 36 fitting kernels observed\s+No/);
+      assert.match(await page.locator('#bounded-note').innerText(), /21-kernel overlap.*does not establish 24 or 36/);
+      assert.equal(await page.locator('#stage-resumption-panel').isVisible(), true);
+      assert.match(await page.locator('#stage-restart-facts').innerText(), /prior stages skipped\s+10/);
+      assert.match(await page.locator('#source-replay-facts').innerText(), /Warm tasks reused \/ normalizer calls\s+6 \/ 0/);
+      assert.match(await page.locator('#throughput-facts').innerText(), /Historical R22 sustained gate passed\s+No/);
       assert.equal(await page.locator('#recovery-evidence-panel').isVisible(), true);
       assert.match(await page.locator('#recovery-archive-facts').innerText(), /Historical target checkpoints authenticated\s+108/);
+      assert.match(await page.locator('#recovery-archive-facts').innerText(), /Displayed scoreboard completion\s+4 \/ 32/);
+      assert.match(await page.locator('#recovery-archive-facts').innerText(), /Authenticated committed responses\s+6/);
+      assert.match(await page.locator('#recovery-archive-facts').innerText(), /Additional authenticated pending capture\s+1/);
       assert.match(await page.locator('#recovery-clock-facts').innerText(), /Scientific occupancy gate executed\s+No/);
       assert.equal(await page.locator('#next-preparation-state').innerText(),
-        `R31 · ${expected.next_preparation.status} · 0 owner executions`);
+        `R32 · ${expected.next_preparation.status} · 0 owner executions`);
       assert.equal(await page.locator('#preparation-stages li').count(), 4);
-      assert.match(await page.locator('#recovery-clock-facts').innerText(), /1\.23 cores/);
-      assert.match(await page.locator('#recovery-clock-facts').innerText(), /1\.40 cores/);
+      assert.match(await page.locator('#recovery-clock-facts').innerText(), /1\.26 cores/);
+      assert.match(await page.locator('#recovery-clock-facts').innerText(), /1\.41 cores/);
       if (expected.next_preparation.status === 'PREPARED_VERIFIED') {
         const note = await page.locator('#preparation-note').innerText();
         assert.ok(note.includes(`${expected.next_preparation.engineering_tests.toLocaleString('en-US')} engineering checks passed`));
@@ -89,23 +102,11 @@ async function verifyExecutionStatus(browser, file) {
       assert.equal(await page.locator('#attempt-rows tr').count(), expected.attempts.length);
     }
     await page.goto(pathToFileURL(path.join(path.dirname(file), 'index.html')).href);
-    assert.match(await page.locator('#v12-current-evidence').innerText(), /latest observed R30.*published return and 220 payloads are verified/is);
+    assert.match(await page.locator('#v12-current-evidence').innerText(), /latest observed R31.*published return and 222 payloads are verified/is);
     assert.equal(await page.locator('#v12-current-evidence a[href="execution.html"]').count(), 1);
     await page.locator('#v12-current-evidence a[href="execution.html"]').click();
-    assert.equal(await page.locator('#observed-release').innerText(), 'R30');
+    assert.equal(await page.locator('#observed-release').innerText(), 'R31');
     const raw = fs.readFileSync(file, 'utf8');
-    const mutations = [d => {d.publication.new_fits = 1;}, d => {d.latest_verified_return.integrity = 'UNVERIFIED';},
-    d => {d.science_contract.test_selection_weight = .1;}, d => {d.throughput.newer_12_to_24_core_science_proven = true;},
-    d => {d.current_execution.new_target_fits = 1;}, d => {d.current_execution.scientific_gate_executed = true;},
-    d => {d.latest_observed_attempt.return_published = false;}, d => {d.current_execution.cost_basis = 'INVOICE';},
-    d => {d.current_execution.estimated_instance_wall_cost_usd = 0;}, d => {d.current_execution.estimated_instance_wall_cost_usd = 200;},
-    d => {d.current_execution.failure.budget_exhaustion_proven = true;}, d => {d.current_execution.failure.recorded_error = 'V7_BOUNDED_IO_PRESSURE';},
-    d => {d.current_execution.historical_checkpoint_reuses = 0;}, d => {d.clock_recovery_evidence.historical_checkpoints_verified = 0;},
-    d => {d.current_execution.pressure_wait_seconds = 15.15;}, d => {d.audit_scope.audited_attempts = 7;},
-    d => {d.next_preparation.owner_executions = 1;}, d => {d.clock_recovery_evidence.recorded_source_refresh_complete = true;},
-    d => {d.current_execution.failure.pointer_status = 'COMPLETED';}, d => {d.next_preparation.engineering_evidence_sha256 = 'unverified';},
-    d => {d.clock_recovery_evidence.useful_scientific_worker_cores = 12;}, d => {d.current_execution.peak_scientific_workers = 24;},
-    d => {d.current_execution.reused_startup_tests = 1219;}, d => {d.clock_recovery_evidence.current_consumer_target_reuses = 108;}];
     for (const mutate of mutations) {
       const bad = JSON.parse(JSON.stringify(expected)); mutate(bad);
       const html = raw.replace(/(<script id="execution-data" type="application\/json">)[\s\S]*?(<\/script>)/, '$1' + JSON.stringify(bad).replace(/</g, '\\u003c') + '$2');
@@ -146,7 +147,7 @@ async function verifyExecutionStatus(browser, file) {
     assert.equal(await reopened.locator('#attempt-rows tr').count(), expected.attempts.length);
   } finally { await fresh.close(); }
   return { status: 'PASS', widths: [1440, 390], filter_views: views, checked_cells: cells,
-    exact_downloads: downloads, corrupt_evidence_rejections: 24, actual_observed_release: expected.latest_observed_attempt.release, checked_cells_per_viewport: cells / 2, current_partial_return_verified: true, fresh_context_reopened: true,
+    exact_downloads: downloads, corrupt_evidence_rejections: mutations.length, actual_observed_release: expected.latest_observed_attempt.release, checked_cells_per_viewport: cells / 2, current_partial_return_verified: true, fresh_context_reopened: true,
     next_preparation_status: expected.next_preparation.status, next_preparation_owner_executions: 0,
     engineering_tests: expected.next_preparation.engineering_tests,
     script_errors: 0, external_requests: 0, real_chromium: true };

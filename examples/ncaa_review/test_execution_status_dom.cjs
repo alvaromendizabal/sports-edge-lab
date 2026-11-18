@@ -1,4 +1,5 @@
 'use strict';
+const { mutations } = require('./execution_status_invalid_fixtures.cjs');
 // Actual page script, simulated DOM: this is not a visual-browser result.
 const assert = require('node:assert/strict'), fs = require('node:fs'), path = require('node:path'), vm = require('node:vm');
 const html = fs.readFileSync(path.resolve(__dirname, '../../docs/ncaa/execution.html'), 'utf8');
@@ -18,21 +19,30 @@ function run(data) {
 }
 (async () => {
   const ui = run(expected), nodes = ui.nodes; let cells = 0;
-  assert.equal(nodes.get('observed-release').textContent, 'R30');
-  assert.equal(nodes.get('verified-release').textContent, 'R30');
+  assert.equal(nodes.get('observed-release').textContent, 'R31');
+  assert.equal(nodes.get('verified-release').textContent, 'R31');
   assert.equal(nodes.get('current-execution-panel').hidden, false);
-  assert.match(nodes.get('current-execution-title').textContent, /R30 actual execution/);
+  assert.match(nodes.get('current-execution-title').textContent, /R31 actual execution/);
   const currentFacts = nodes.get('current-work-facts').children.map(n => n.textContent).join(' ');
-  assert.match(currentFacts, /1,255 reused · 0 fresh/);
+  assert.match(currentFacts, /1,284 reused · 0 fresh/);
   assert.match(currentFacts, /Requested workers \/ scientific peak 24 \/ 0/);
   assert.match(currentFacts, /Not run · source stage blocked dispatch/);
   assert.equal(nodes.get('preserved-fits').textContent, '11');
+  assert.equal(nodes.get('bounded-acceptance-panel').hidden, false);
+  assert.equal(nodes.get('bounded-fit-count').textContent, '36');
+  assert.equal(nodes.get('bounded-overlap').textContent, '21');
+  assert.match(nodes.get('bounded-cpu-facts').children.map(n=>n.textContent).join(' '), /180-second \/ 75% gate certified No/);
+  assert.match(nodes.get('bounded-cpu-facts').children.map(n=>n.textContent).join(' '), /24 or 36 fitting kernels observed No/);
+  assert.match(nodes.get('bounded-note').textContent, /21-kernel overlap.*does not establish 24 or 36/);
+  assert.equal(nodes.get('stage-resumption-panel').hidden, false);
+  assert.match(nodes.get('stage-restart-facts').children.map(n=>n.textContent).join(' '), /prior stages skipped 10/);
+  assert.match(nodes.get('source-replay-facts').children.map(n=>n.textContent).join(' '), /Warm tasks reused \/ normalizer calls 6 \/ 0/);
   const costFacts = nodes.get('current-cost-facts').children.map(n => n.textContent).join(' ');
-  assert.match(costFacts, /\$0\.67/);
+  assert.match(costFacts, /\$0\.42/);
   assert.doesNotMatch(costFacts, /\$0\.00/);
   assert.match(costFacts, /Budget exhaustion established No · verified estimate below guard/);
-  assert.match(nodes.get('attempt-scope').textContent, /11 audited attempts · 9 distinct run identities/);
-  assert.match(currentFacts, /823 \/ 32/);
+  assert.match(nodes.get('attempt-scope').textContent, /12 audited attempts · 10 distinct run identities/);
+  assert.match(currentFacts, /822 \/ 36/);
   const source = run(JSON.parse(fs.readFileSync(path.join(__dirname, 'EXECUTION_STATUS_R29_20261118.json')))).nodes;
   assert.equal(source.get('data-error').hidden, true);
   assert.equal(source.get('observed-release').textContent, 'R29');
@@ -53,10 +63,13 @@ function run(data) {
   assert.doesNotMatch(price.get('current-cost-facts').children.map(n => n.textContent).join(' '), /\$0\.00/);
   assert.equal(nodes.get('recovery-evidence-panel').hidden, false);
   assert.match(nodes.get('recovery-archive-facts').children.map(n => n.textContent).join(' '), /Historical target checkpoints authenticated 108/);
+  assert.match(nodes.get('recovery-archive-facts').children.map(n => n.textContent).join(' '), /Displayed scoreboard completion 4 \/ 32/);
+  assert.match(nodes.get('recovery-archive-facts').children.map(n => n.textContent).join(' '), /Authenticated committed responses 6/);
+  assert.match(nodes.get('recovery-archive-facts').children.map(n => n.textContent).join(' '), /Additional authenticated pending capture 1/);
   assert.match(currentFacts, /Historical target checkpoint reuses 108/);
   assert.match(currentFacts, /Current-consumer target reuses 0/);
   assert.equal(nodes.get('next-preparation-state').textContent,
-    `R31 · ${expected.next_preparation.status} · 0 owner executions`);
+    `R32 · ${expected.next_preparation.status} · 0 owner executions`);
   assert.equal(nodes.get('preparation-stages').children.length, 4);
   if (expected.next_preparation.status === 'PREPARED_VERIFIED') {
     assert.ok(nodes.get('preparation-note').textContent.includes(
@@ -78,18 +91,6 @@ function run(data) {
   }
   nodes.get('download-report').listeners.click();
   assert.deepEqual(JSON.parse(await ui.download().text()), expected);
-  const mutations = [d => {d.publication.new_fits = 1;}, d => {d.latest_verified_return.integrity = 'UNVERIFIED';},
-    d => {d.science_contract.test_selection_weight = .1;}, d => {d.throughput.newer_12_to_24_core_science_proven = true;},
-    d => {d.current_execution.new_target_fits = 1;}, d => {d.current_execution.scientific_gate_executed = true;},
-    d => {d.latest_observed_attempt.return_published = false;}, d => {d.current_execution.cost_basis = 'INVOICE';},
-    d => {d.current_execution.estimated_instance_wall_cost_usd = 0;}, d => {d.current_execution.estimated_instance_wall_cost_usd = 200;},
-    d => {d.current_execution.failure.budget_exhaustion_proven = true;}, d => {d.current_execution.failure.recorded_error = 'V7_BOUNDED_IO_PRESSURE';},
-    d => {d.current_execution.historical_checkpoint_reuses = 0;}, d => {d.clock_recovery_evidence.historical_checkpoints_verified = 0;},
-    d => {d.current_execution.pressure_wait_seconds = 15.15;}, d => {d.audit_scope.audited_attempts = 7;},
-    d => {d.next_preparation.owner_executions = 1;}, d => {d.clock_recovery_evidence.recorded_source_refresh_complete = true;},
-    d => {d.current_execution.failure.pointer_status = 'COMPLETED';}, d => {d.next_preparation.engineering_evidence_sha256 = 'unverified';},
-    d => {d.clock_recovery_evidence.useful_scientific_worker_cores = 12;}, d => {d.current_execution.peak_scientific_workers = 24;},
-    d => {d.current_execution.reused_startup_tests = 1219;}, d => {d.clock_recovery_evidence.current_consumer_target_reuses = 108;}];
   for (const mutate of mutations) {
     const data = JSON.parse(JSON.stringify(expected)); mutate(data); const bad = run(data).nodes;
     assert.equal(bad.get('data-error').hidden, false); assert.equal(bad.get('report').hidden, true);
