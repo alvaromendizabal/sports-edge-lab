@@ -1,5 +1,20 @@
 # Sports Edge Lab · NBA
 
+<!-- NBA B098 EXECUTION STATUS BEGIN -->
+## November 17 Pacific: B097 completed fits, then failed export; B098 owner run pending
+
+[Read the execution-status review](reports/b098_execution_status.html) · [Aggregate evidence](reports/b098_execution_status.json).
+
+The authenticated B097 science checkpoint records **672 new estimator fits, 1,232 new calibration fits, 150 reused estimators, 150 reused calibrators and 5,808 completed uncertainty reports**. It also records four provider requests, zero failed estimator fits and zero automatic promotions. **The owner execution failed during private export and remains incomplete.** Its projection pool was fixed at one worker after a transient admission sample while the gate retained 24 admitted cores; measured occupancy was 3.62% over 182.33 seconds, with 3,776 projection jobs pending. Earlier fitting independently passed the capacity gate at 92.12% occupancy over 183.01 seconds. The later duplicate-launch refusal preserved an active predecessor; it did not fix this export failure.
+
+**B098 is a locally prepared repair, with owner execution pending.** Eleven focused export checks passed using invented fixtures; configured ceiling cases of 12, 24 and 48 admitted at most four actual local workers. That engineering evidence is not an owner sustained-capacity pass. A later check of the actual packaged runner passed **70 canonical engineering tests at 2026-11-18 05:42:44 UTC**, with zero owner research executions or provider requests. This status proposal does not certify staging or deployment and launches no research.
+
+At the separate **2026-11-18 05:33:19 UTC** observation, B097 physical return finalization was still running, with 12,152 of 41,240 payloads verified. A completed B097 archive or latest-return promotion was not established by that observation. The next owner launch must resolve the newest durable checkpoint again. Actual invoiced cost remains unknown; the approximately USD 2.9222 whole-instance estimate at the 04:29 science checkpoint excludes later finalization.
+
+Earlier scientific metrics, selected original issues and source-coverage assets remain unchanged with their dated qualifications. This notice adds execution accounting, not new public scientific scores, forecast values, certified champions or a production promotion. GitHub source publication and website deployment remain separate.
+<!-- NBA B098 EXECUTION STATUS END -->
+
+
 
 <!-- NBA B095 CURRENT REVIEW BEGIN -->
 ## November 17 Pacific: two B095 failures before research; B096 prepared
