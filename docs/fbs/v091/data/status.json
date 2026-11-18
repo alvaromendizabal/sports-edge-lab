@@ -27,24 +27,29 @@
       "sha256": "9ec49aa2f304a13f2f88e45c271e70b45c9947a26913a5a3cc606f797f3e92f2"
     },
     {
-      "role": "Canonical build verification",
-      "scope": "All 2,817 members passed CRC and SHA-256 checks; 48,384,220 physical bytes. No owner research execution.",
+      "role": "Historical V091 canonical build verification",
+      "scope": "All 2,817 members passed CRC and SHA-256 checks; 48,384,220 physical bytes. No owner research execution. Historical preparation evidence; it did not validate the normal supervised launch and is not V092 acceptance.",
       "sha256": "9640117f858ec0e99af8ea8de07714712f70ca575071704fe16a7b5626431f41"
     },
     {
-      "role": "Prepared review manifest",
-      "scope": "The 64,270-byte metadata-only ZIP passed full member and physical readback verification; the executable is not included a second time.",
+      "role": "Historical V091 prepared review manifest",
+      "scope": "The 64,270-byte metadata-only ZIP passed full member and physical readback verification; the executable is not included a second time. Historical preparation evidence; it did not validate the normal supervised launch and is not V092 acceptance.",
       "sha256": "82a1de2a0fcc9b31568135a77992260dfefa8cf48e2e1b2ae1b319c1bb78e27f"
     },
     {
-      "role": "Runner engineering acceptance",
-      "scope": "141 local runner and prepare-only staging checks passed; synthetic engineering is separate from zero new owner fits.",
+      "role": "Historical V091 runner engineering acceptance",
+      "scope": "141 local runner and prepare-only staging checks passed; synthetic engineering is separate from zero new owner fits. Historical preparation evidence; it did not validate the normal supervised launch and is not V092 acceptance.",
       "sha256": "63b56d7b67d6657957ad974fbd52afbdb89a715ab64b791441878a5b3404533c"
     },
     {
-      "role": "Canonical nonresearch self-test",
-      "scope": "PASS with zero owner executions, real model fits, provider requests and AWS writes.",
+      "role": "Historical V091 canonical nonresearch self-test",
+      "scope": "PASS with zero owner executions, real model fits, provider requests and AWS writes. Historical preparation evidence; it did not validate the normal supervised launch and is not V092 acceptance.",
       "sha256": "6724ee541c90e0858577437dde0d367fc913adff0a30e35b511404c6c60f1033"
+    },
+    {
+      "role": "V091 packaged startup reproduction",
+      "scope": "Isolated local diagnosis: return code 2, empty stdout/stderr and zero child launches. No AWS execution or scientific fits. The operator transcript did not record an exit code.",
+      "sha256": "1014b182aeb0a3a84652ffe69ada71ded293e0dd8d1307956ccca35c6b778378"
     }
   ],
   "latest_attempt": {
@@ -55,7 +60,7 @@
     "end_to_end_seconds": 1570.0559623760018,
     "estimated_full_host_cost_usd": 1.120845506473979,
     "failed_fits": 0,
-    "failure_detail": "Authenticated failure: KeyError 'checked_at_utc'. The V090 fallback expected that field while its shipped cache used checked_at and cache_age_seconds. V091 validates the saved timestamp formats, retains the original price-authority clock and enforces the compute guard. The regression is covered by offline engineering checks; owner execution remains pending.",
+    "failure_detail": "Authenticated V090 failure: KeyError 'checked_at_utc'. The fallback expected that field while its shipped cache used checked_at and cache_age_seconds. V091 repaired the price-record parsing, but its later supervised launch failed for the separate identity-validation defect shown above. V090's saved counters and verified return remain unchanged.",
     "fit_count_complete": false,
     "operational_failures": 1,
     "optimizer_occupancy_accepted": null,
@@ -95,8 +100,8 @@
     ],
     "cost_guard_usd": 200,
     "delivery_size_scope": "Review metadata only. The executable is separate; retained caches and model states are referenced.",
-    "evidence_as_of": "2026-11-18T01:11:50.447437+00:00",
-    "executable_bytes": 48384220,
+    "evidence_as_of": "2026-11-18T02:27:54.329662+00:00",
+    "executable_bytes": null,
     "fixed_blend_policies": 84,
     "frozen_test_jobs": 312,
     "horizon_minutes": 120,
@@ -104,14 +109,14 @@
     "minimum_target_workers": 12,
     "new_scientific_fits": 0,
     "owner_executions": 0,
-    "prepared_report_zip_bytes": 64270,
+    "prepared_report_zip_bytes": null,
     "provider_retrievals": 0,
     "registered_model_jobs": 936,
-    "release": "V091",
-    "status": "PREPARED_NOT_EXECUTED",
+    "release": "V092",
+    "status": "PREPARATION_IN_PROGRESS",
     "unlimited_wall_waives_cost_guard": false,
     "validation_jobs": 624,
-    "verification_summary": "141 runner/staging engineering checks and the canonical nonresearch self-test passed. Both prepared files passed physical archive-integrity verification. Owner execution and sustained optimizer acceptance remain pending; this public page makes no host-placement claim.",
+    "verification_summary": "V092 preparation is in progress. The replacement will share one release identity across startup validators and exercise the actual packaged supervised launch. Final archive sizes and verification receipts remain pending. No V092 owner research execution or sustained optimizer result is claimed.",
     "worker_ceiling": 24
   },
   "publication": {
@@ -125,7 +130,7 @@
     "aggregate_science_cap": null,
     "partial_and_complete_separate": true,
     "preserve_completed_work": true,
-    "remaining_limit": "This finite tranche is T120 only. Full-source coverage, exact historical champion certification and independent official schedule completeness remain open. A changed completed-game population is blocked until a safe frozen-inference extension covers every retained contender; V091 does not implement that extension.",
+    "remaining_limit": "This finite tranche is T120 only. Full-source coverage, exact historical champion certification and independent official schedule completeness remain open. A changed completed-game population is blocked until a safe frozen-inference extension covers every retained contender; The current finite campaign does not implement that extension.",
     "resolve_latest_again_at_launch": true,
     "return_changes": [
       "The verified return audit found 134,098 of 134,110 payloads already present in V089, representing 29.41 GB of decoded inherited bytes. It also found 7.44 GB of duplicate decoded bytes within the same return; those overlap and must not be added together.",
@@ -192,5 +197,28 @@
     "prior_scientific_return_parts": 50,
     "projection_is_owner_return": false,
     "within_return_duplicate_decoded_bytes": 7439043130
+  },
+  "launch_incident": {
+    "release": "V091",
+    "status": "USER_REPORTED_FAILURE_LOCALLY_REPRODUCED",
+    "reviewed_at": "2026-11-18T02:27:54.329662+00:00",
+    "new_reported_failures": 1,
+    "new_reported_successes": 0,
+    "lifetime_failure_total": null,
+    "operator_exit_code": null,
+    "operator_transcript": "Checksum verification passed; the launch returned immediately to the shell with no visible output. The pasted transcript did not capture the process exit code.",
+    "diagnosis": "The new release generated a V091 invocation identity, but two inherited supervisor validators accepted only V090 identities. Startup failed before a research child could launch. The parent saved a failure receipt without printing the error.",
+    "reproduced_error": "SUPERVISOR_RUN_ID_INVALID",
+    "isolated_return_code": 2,
+    "isolated_stdout_bytes": 0,
+    "isolated_stderr_bytes": 0,
+    "isolated_child_launches": 0,
+    "isolated_model_fits": 0,
+    "isolated_aws_calls": 0,
+    "reproduction_scope": "The actual packaged entry function was exercised with isolated temporary owner paths and a nonroot identity override; source integrity and supervisor validation were unchanged. Child launching was forbidden. This is local engineering evidence, not an AWS research execution.",
+    "prior_verification_limit": "The earlier archive checks and nonresearch self-test did not exercise the normal supervised launch path. Their passing results did not establish that V091 could start research.",
+    "repair_status": "PREPARATION_IN_PROGRESS",
+    "next_release": "V092",
+    "summary": "One newly reported V091 launch failed before scientific dispatch. The exact packaged entry function reproduces the silent startup error locally. The last verified owner return remains V090, and the retained scientific result remains V089."
   }
 }

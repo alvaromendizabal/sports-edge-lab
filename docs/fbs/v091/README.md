@@ -1,10 +1,18 @@
-# FBS V091 execution and compact-delivery review
+# FBS V091 launch failure and V092 preparation review
 
 [Open the standalone report](index.html) · [Public aggregate evidence](data/status.json) · [Preserved V089 comparison source review](https://github.com/alvaromendizabal/sports-edge-lab/pull/386)
 
-This small report separates the latest V090 operational failure, the retained V089 scientific results, and the next prepared release. It contains no duplicate candidate roster or game array. Those remain in their dated comparison report. The page runs offline from one HTML file and makes no runtime HTTP requests.
+This small report separates the new V091 launch failure, the last verified V090 owner return, the retained V089 scientific results, and V092 preparation. It contains no duplicate candidate roster or game array. Those remain in their dated comparison report. The page runs offline from one HTML file and makes no runtime HTTP requests.
 
-## Actual attempt
+## Newly reported V091 launch failure
+
+The owner reported one V091 command that passed its checksum check and returned immediately to the shell without visible output. The pasted transcript did not capture an exit code. The exact packaged entry function was reproduced locally with isolated temporary paths and nonroot identity; source integrity and the supervisor validators were unchanged, and child launching was forbidden. It returned 2 with empty stdout/stderr, zero child-launch calls and a saved `SUPERVISOR_RUN_ID_INVALID` receipt. No AWS calls or research fits occurred in that diagnostic.
+
+The cause was release identity drift: V091 generated its own invocation suffix, but two inherited supervisor validators still accepted only V090. The parent caught the startup error, saved a failure record, and printed nothing. Earlier archive integrity checks and nonresearch self-tests did not cover the normal supervised launch. Their passing results do not establish a usable owner launch.
+
+The new incident adds one reported failure and zero successful launches; no all-time total or operator exit code is invented. V092 preparation centralizes release identity and adds a packaged supervised-startup check. Final release measurements and engineering receipts remain pending. V091's launch failure does not advance the verified-return pointer or alter V089 scientific results.
+
+## Last verified owner return
 
 The V090 owner attempt failed before registered model work. The authenticated failure is `KeyError: checked_at_utc`: a price-cache fallback expected that timestamp field, while the shipped cache used `checked_at` with `cache_age_seconds`. Its saved counters record zero base fits, calibrators, forecasts and scored rows; the fit-count completeness flag remains false after the early failure. The attempt has one operational failure and zero delivery failures. Its integrity-verified return contains 18,480,886,907 bytes in 35 ordered parts. Return finalization took 1,537.183 seconds and is separate from the 0.943 seconds measured before finalization.
 
@@ -24,9 +32,9 @@ The return audit found 134,098 of 134,110 payloads already present in V089, carr
 
 The compact design references authenticated retained artifacts instead of repeatedly including them in every report. A small report is not an independent copy of all research data. Its durable dependencies must remain accessible and pass verification before reuse. Scientific work has no aggregate size cap; the existing 512 MiB limit applies to each transport part.
 
-A changed completed-game population remains an explicit blocker until a safe frozen-inference extension covers all retained contenders. V091 repairs startup and delivery for the same registered campaign; it does not add that extension or establish full V13 completion.
+A changed completed-game population remains an explicit blocker until a safe frozen-inference extension covers all retained contenders. The replacement resumes the same registered campaign; the existing campaign does not add that extension or establish full V13 completion.
 
-The final canonical executable is 48,384,220 bytes, down from 469,562,847 bytes (89.7% smaller). The separate prepared review ZIP is 64,270 bytes and contains metadata rather than a second executable or raw caches/model states. Its 17 members and physical ZIP readback were verified. The canonical archive passed all 2,817 member CRC/SHA checks and its nonresearch self-test; 141 runner/staging engineering checks passed. Those checks are separate from the public-report tests and future owner research. This public projection does not certify host placement. Prepared software adds zero owner research executions, scientific fits or source retrievals. The actual return pointer advances only after integrity checks and preserves partial versus complete scientific status.
+The earlier V091 executable measured 48,384,220 bytes and its separate prepared review ZIP measured 64,270 bytes. Those historical archive-integrity and self-test records remain visible with an explicit qualification: they missed the normal supervised-launch defect. They are not V092 acceptance evidence. The V092 executable/review sizes and final verification state remain pending in this draft until the replacement is built and checked. This public projection does not certify host placement. Preparation adds zero owner research executions, scientific fits or source retrievals. The actual return pointer advances only after integrity checks and preserves partial versus complete scientific status.
 
 ## Publication and reproduction
 
@@ -39,3 +47,4 @@ The deterministic generator validates the public aggregate fields, contradictory
 - `node tests/fbs_v091_browser.test.cjs`
 
 Passing public engineering checks do not establish scientific acceptance or 24-core utilization for a future owner run.
+

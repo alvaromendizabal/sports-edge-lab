@@ -109,6 +109,27 @@ class ExecutionReview(unittest.TestCase):
         with self.assertRaises(ValueError):
             REVIEW.render(modified)
 
+    def test_reported_incident_cannot_invent_an_operator_exit_or_lifetime_tally(self):
+        self.rejects("launch_incident", "operator_exit_code", 2)
+        self.rejects("launch_incident", "lifetime_failure_total", 91)
+
+    def test_isolated_reproduction_cannot_become_owner_science(self):
+        for field in ("isolated_child_launches", "isolated_model_fits", "isolated_aws_calls"):
+            self.rejects("launch_incident", field, 1)
+        self.rejects("launch_incident", "new_reported_successes", 1)
+
+    def test_new_incident_does_not_rewrite_last_verified_return(self):
+        self.assertEqual(DATA["launch_incident"]["release"], "V091")
+        self.assertEqual(DATA["launch_incident"]["isolated_return_code"], 2)
+        self.assertEqual(DATA["latest_attempt"]["release"], "V090")
+        self.assertEqual(DATA["retained_science"]["release"], "V089")
+        self.assertEqual(DATA["launch_incident"]["new_reported_failures"], 1)
+
+    def test_repair_status_cannot_disagree_with_prepared_release(self):
+        self.rejects("launch_incident", "next_release", "V091")
+        self.rejects("launch_incident", "repair_status", "OWNER_RESEARCH_COMPLETE")
+
 
 if __name__ == "__main__":
     unittest.main()
+
