@@ -630,6 +630,7 @@ PREVIOUS_CLOCK_EXECUTION_BANNER = render_current_banner(json.loads(CLOCK_DATA.re
 
 
 def render(data=None):
+    from execution_latest import render_panel
     data = load() if data is None else validate(data)
     encoded = json.dumps(data, sort_keys=True, separators=(",", ":"), allow_nan=False).replace("<", "\\u003c")
     prior = validate(json.loads(CLOCK_DATA.read_text()))
@@ -642,13 +643,15 @@ def render(data=None):
         'section_keys':{k:list(continuation[k]) for k in sections}}
     frozen = json.dumps(reference, sort_keys=True, separators=(",", ":"), allow_nan=False).replace("<", "\\u003c")
     return ((HERE / "execution_status.html.tmpl").read_text().replace("__EXECUTION_DATA__", encoded)
-            .replace("__CONTINUATION_REFERENCE__", frozen))
+            .replace("__CONTINUATION_REFERENCE__", frozen).replace("__LATEST_EXECUTION_PANEL__", render_panel()))
 
 
 def status_outputs(existing=None):
+    from execution_latest import canonical as latest_canonical, load as latest_load
     data = load()
     return {**(existing or {}), ROOT / "docs/ncaa/execution.html": render(data),
-            ROOT / "docs/ncaa/execution_status.json": canonical(data)}
+            ROOT / "docs/ncaa/execution_status.json": canonical(data),
+            ROOT / "docs/ncaa/execution_latest.json": latest_canonical(latest_load())}
 
 
 def main():

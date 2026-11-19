@@ -14,12 +14,44 @@ async function verifyExecutionStatus(browser, file) {
     if (!/^(file|data|blob):/.test(request.url())) external.push(request.url());
   });
   const expected = JSON.parse(fs.readFileSync(path.join(path.dirname(file), 'execution_status.json')));
-  let views = 0, cells = 0, downloads = 0;
+  const latest = JSON.parse(fs.readFileSync(path.join(path.dirname(file), 'execution_latest.json')));
+  let views = 0, cells = 0, downloads = 0, latestDownloads = 0, latestCells = 0;
   try {
     for (const width of [1440, 390]) {
       await page.setViewportSize({ width, height: 1000 });
       await page.goto(pathToFileURL(file).href);
       await page.locator('#attempt-rows tr').first().waitFor();
+      assert.equal(await page.locator('#latest-execution-tally').innerText(), '0 / 3');
+      assert.equal(await page.locator('#latest-new-work').innerText(), '0 / 0');
+      assert.equal(await page.locator('#latest-preserved-models').innerText(), '36');
+      assert.match(await page.locator('#latest-execution-title').innerText(), /R32 failed three times/);
+      assert.match(await page.locator('#latest-cpu-limit').innerText(), /zero scientific execution|not evidence of 12–36-core scientific execution/);
+      assert.match(await page.locator('#latest-cpu-limit').innerText(), /180-second, 75% sustained utilization gate remains uncertified/);
+      assert.match(await page.locator('#latest-pointer-repair').innerText(), /newest R32 failed-resumable return.*complete-return pointer was untouched/is);
+      assert.equal(await page.locator('#latest-preparation-state').innerText(), `R33 · ${latest.next_preparation.status} · 0 owner executions`);
+      if (latest.next_preparation.status === 'PREPARED_VERIFIED') {
+        const latestPanel = await page.locator('#latest-execution-panel').innerText();
+        assert.ok(latestPanel.includes(latest.next_preparation.canonical_source.sha256));
+        assert.ok(latestPanel.includes(latest.next_preparation.native_acceptance.report_sha256));
+        assert.match(latestPanel, /existing durable caches in both passes; neither is a cold-artifact-cache benchmark/);
+      }
+      assert.equal(await page.locator('#latest-invocation-rows tr').count(), 3);
+      for (let i = 0; i < latest.invocations.length; i++) {
+        const row = latest.invocations[i], values = await page.locator('#latest-invocation-rows tr').nth(i).locator('td').allTextContents();
+        assert.deepEqual(values, [String(row.invocation), row.started_at.slice(11,26)+' UTC', row.summary_completed_at.slice(11,26)+' UTC',
+          row.elapsed_seconds.toFixed(3)+' s', '0', '36 models / 144 files', row.saved_component_verification_seconds.toFixed(3)+' s']);
+        latestCells += values.length;
+      }
+      const latestDownloadPromise = page.waitForEvent('download');
+      await page.locator('#download-latest-execution').focus();
+      await page.keyboard.press('Enter');
+      const latestDownload = await latestDownloadPromise;
+      assert.equal(latestDownload.suggestedFilename(), 'ncaa-latest-execution.json');
+      const latestStream = await latestDownload.createReadStream(), latestChunks = [];
+      for await (const chunk of latestStream) latestChunks.push(chunk);
+      assert.deepEqual(JSON.parse(Buffer.concat(latestChunks).toString('utf8')), latest);
+      latestDownloads++;
+      assert.match(await page.locator('#earlier-evidence-title').innerText(), /Preserved earlier audit/);
       assert.equal(await page.locator('#observed-release').innerText(), 'R31');
       assert.equal(await page.locator('#verified-release').innerText(), 'R31');
       assert.match(await page.locator('#observed-status').innerText(), /failed resumable/i);
@@ -102,9 +134,10 @@ async function verifyExecutionStatus(browser, file) {
       assert.equal(await page.locator('#attempt-rows tr').count(), expected.attempts.length);
     }
     await page.goto(pathToFileURL(path.join(path.dirname(file), 'index.html')).href);
-    assert.match(await page.locator('#v12-current-evidence').innerText(), /latest observed R31.*published return and 222 payloads are verified/is);
+    assert.match(await page.locator('#v12-current-evidence').innerText(), /latest observed R32.*verified partial return with 116 payloads/is);
     assert.equal(await page.locator('#v12-current-evidence a[href="execution.html"]').count(), 1);
     await page.locator('#v12-current-evidence a[href="execution.html"]').click();
+    assert.equal(await page.locator('#latest-execution-tally').innerText(), '0 / 3');
     assert.equal(await page.locator('#observed-release').innerText(), 'R31');
     const raw = fs.readFileSync(file, 'utf8');
     for (const mutate of mutations) {
@@ -143,10 +176,23 @@ async function verifyExecutionStatus(browser, file) {
   try {
     const reopened = await fresh.newPage();
     await reopened.goto(pathToFileURL(file).href);
+    assert.equal(await reopened.locator('#latest-execution-tally').innerText(), '0 / 3');
+    assert.equal(await reopened.locator('#latest-preserved-models').innerText(), '36');
     assert.equal(await reopened.locator('#attempt-filter').inputValue(), 'all');
     assert.equal(await reopened.locator('#attempt-rows tr').count(), expected.attempts.length);
   } finally { await fresh.close(); }
+  const staticContext = await browser.newContext({ javaScriptEnabled: false });
+  try {
+    const staticPage = await staticContext.newPage();
+    await staticPage.goto(pathToFileURL(file).href);
+    assert.equal(await staticPage.locator('#latest-execution-tally').innerText(), '0 / 3');
+    assert.equal(await staticPage.locator('#latest-invocation-rows tr').count(), 3);
+    assert.match(await staticPage.locator('#latest-cpu-limit').innerText(), /gate remains uncertified/);
+  } finally { await staticContext.close(); }
   return { status: 'PASS', widths: [1440, 390], filter_views: views, checked_cells: cells,
+    latest_actual_release: 'R32', latest_failed_invocations: 3, latest_checked_cells: latestCells,
+    latest_exact_downloads: latestDownloads, latest_preparation_status: latest.next_preparation.status,
+    latest_readable_without_javascript: true,
     exact_downloads: downloads, corrupt_evidence_rejections: mutations.length, actual_observed_release: expected.latest_observed_attempt.release, checked_cells_per_viewport: cells / 2, current_partial_return_verified: true, fresh_context_reopened: true,
     next_preparation_status: expected.next_preparation.status, next_preparation_owner_executions: 0,
     engineering_tests: expected.next_preparation.engineering_tests,

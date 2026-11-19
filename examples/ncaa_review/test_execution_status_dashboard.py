@@ -394,7 +394,7 @@ class R29SourcePublicationTests(unittest.TestCase):
         self.assertEqual(current.count(CURRENT_BANNER),1)
         self.assertNotIn('stale launch-wide deadline',CURRENT_BANNER)
         self.assertNotIn('live memory pressure',CURRENT_BANNER)
-        self.assertIn('I/O admission latch',CURRENT_BANNER)
+        self.assertIn('Three R32 failures',CURRENT_BANNER)
 
 
 class R30ClockRecoveryTests(unittest.TestCase):
@@ -495,9 +495,9 @@ class R30ClockRecoveryTests(unittest.TestCase):
         current = render_banner(previous)
         self.assertEqual(strip_banner(current), body)
         self.assertEqual(current.count(CURRENT_BANNER), 1)
-        self.assertIn('latest observed R31', CURRENT_BANNER)
-        self.assertIn('222 payloads', CURRENT_BANNER)
-        self.assertIn('R32', CURRENT_BANNER)
+        self.assertIn('latest observed R32', CURRENT_BANNER)
+        self.assertIn('116 payloads', CURRENT_BANNER)
+        self.assertIn('R33', CURRENT_BANNER)
         self.assertNotIn('R30 preparation and staging are verified', CURRENT_BANNER)
 
 

@@ -15,14 +15,16 @@ R19_BANNER = '<section id="v12-current-evidence" aria-labelledby="v12-current-ti
 
 from execution_status_dashboard import PREVIOUS_EXECUTION_BANNER, PREVIOUS_VERIFIED_EXECUTION_BANNER, PREVIOUS_PRICE_EXECUTION_BANNER, PREVIOUS_SOURCE_EXECUTION_BANNER, PREVIOUS_RECOVERY_EXECUTION_BANNER, PREVIOUS_CLOCK_EXECUTION_BANNER, render_current_banner
 
-CURRENT_BANNER = render_current_banner()
+PREVIOUS_CONTINUATION_BANNER = render_current_banner()
+from execution_latest import render_banner as render_latest_banner
+CURRENT_BANNER = render_latest_banner()
 
 
 def strip_banner(html: str) -> str:
     """Remove only the exact current wrapper to recover prior archive bytes."""
     if 'id="v12-current-evidence"' not in html:
         return html
-    matches = [banner for banner in (CURRENT_BANNER, PREVIOUS_CLOCK_EXECUTION_BANNER, PREVIOUS_SOURCE_EXECUTION_BANNER, PREVIOUS_RECOVERY_EXECUTION_BANNER, PREVIOUS_PRICE_EXECUTION_BANNER, PREVIOUS_VERIFIED_EXECUTION_BANNER, PREVIOUS_EXECUTION_BANNER, R19_BANNER, R17_POPULATION_BANNER, R17_CHECKPOINT_BANNER, R16_BANNER, R15_BANNER, PREVIOUS_BANNER) if html.count(banner) == 1]
+    matches = [banner for banner in (CURRENT_BANNER, PREVIOUS_CONTINUATION_BANNER, PREVIOUS_CLOCK_EXECUTION_BANNER, PREVIOUS_SOURCE_EXECUTION_BANNER, PREVIOUS_RECOVERY_EXECUTION_BANNER, PREVIOUS_PRICE_EXECUTION_BANNER, PREVIOUS_VERIFIED_EXECUTION_BANNER, PREVIOUS_EXECUTION_BANNER, R19_BANNER, R17_POPULATION_BANNER, R17_CHECKPOINT_BANNER, R16_BANNER, R15_BANNER, PREVIOUS_BANNER) if html.count(banner) == 1]
     if len(matches) != 1:
         raise ValueError('Unexpected current evidence banner')
     return html.replace(matches[0], '', 1)
