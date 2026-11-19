@@ -145,6 +145,14 @@ class PublicReviewTests(unittest.TestCase):
         self.assertIn("Retained source rows", page)
         self.assertIn("<td>2024</td><td>T−60</td><td>10</td><td>20</td><td>3</td><td>6</td><td>0</td><td>0</td>", page)
 
+    def test_source_reason_codes_are_readable_without_changing_evidence(self):
+        status, metrics = fixture()
+        code = "NO_REGISTERED_AUTHENTICATED_FEATURE_MATRIX"
+        status["source_admissions"][0]["reasons"] = [code]
+        page = renderer.render(status, metrics)
+        self.assertIn("<li>No registered authenticated feature matrix</li>", page)
+        self.assertEqual(status["source_admissions"][0]["reasons"], [code])
+
     def test_failure_counts_do_not_conflate_builds_or_attribute_io_origin(self):
         status, metrics = fixture()
         status["failure_accounting"] = {"scope": "Invented scoped ledger", "attributable_builds": 5,

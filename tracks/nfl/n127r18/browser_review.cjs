@@ -13,6 +13,23 @@ const {chromium} = require(process.env.PLAYWRIGHT_MODULE_DIR || 'playwright');
   const out = process.env.NFL_SCREENSHOTS;
   if (out) fs.mkdirSync(out, {recursive: true});
   const report = [];
+  async function verifyWidth(page, name, phase) {
+    const layout = await page.evaluate(() => ({
+      viewport: window.innerWidth,
+      documentWidth: document.documentElement.scrollWidth,
+      overflowing: [...document.querySelectorAll('header,main,footer,section,.grid,.filters,label,input,select,h1,h2,h3,p,li,summary,.table-wrap,.evidence-item')]
+        .filter(element => element.getBoundingClientRect().right > window.innerWidth + 1)
+        .slice(0, 20).map(element => {
+          const rect = element.getBoundingClientRect();
+          return {tag: element.tagName, id: element.id, className: element.className,
+            left: rect.left, right: rect.right, width: rect.width,
+            text: element.textContent.slice(0, 140)};
+        })
+    }));
+    if (out) await page.screenshot({path: path.join(out, `nfl-r18-${name}${phase === 'initial' ? '' : '-' + phase}.png`)});
+    assert.ok(layout.documentWidth <= layout.viewport + 1,
+      'The whole page must not overflow horizontally: ' + JSON.stringify({viewport: name, phase, ...layout}));
+  }
   try {
     for (const [name, viewport] of [['desktop', {width: 1440, height: 1000}], ['mobile', {width: 390, height: 844}]]) {
       const page = await browser.newPage({viewport});
@@ -30,9 +47,7 @@ const {chromium} = require(process.env.PLAYWRIGHT_MODULE_DIR || 'playwright');
       assert.ok(allRows > 0, 'Saved nomination rows must exist');
       const initial = await page.locator('#metrics-body tr:not([hidden])').count();
       assert.ok(initial > 0, 'Primary default filter must show saved rows');
-      const overflows = await page.evaluate(() => document.documentElement.scrollWidth > window.innerWidth + 1);
-      assert.equal(overflows, false, 'The whole page must not overflow horizontally');
-      if (out) await page.screenshot({path: path.join(out, `nfl-r18-${name}.png`)});
+      await verifyWidth(page, name, 'initial');
       if (out) {
         await page.locator('#metric-search').scrollIntoViewIfNeeded();
         await page.screenshot({path: path.join(out, `nfl-r18-${name}-metrics.png`)});
@@ -53,7 +68,7 @@ const {chromium} = require(process.env.PLAYWRIGHT_MODULE_DIR || 'playwright');
       assert.equal(await page.evaluate(() => document.activeElement.id), 'weight-filter');
       await page.locator('#sources details').first().locator('summary').click();
       assert.equal(await page.locator('#sources details').first().getAttribute('open'), '');
-      assert.equal(await page.evaluate(() => document.documentElement.scrollWidth > window.innerWidth + 1), false);
+      await verifyWidth(page, name, 'expanded-source');
       assert.equal(errors.length, 0, errors.join('\n'));
       assert.equal(remoteRequests.length, 0, 'The review must render without a network dependency');
       report.push({viewport: name, total_rows: allRows, initial_primary_rows: initial, script_errors: 0, external_requests: 0, horizontal_page_overflow: false, filters: 'PASS', keyboard: 'PASS'});
