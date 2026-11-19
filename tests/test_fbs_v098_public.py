@@ -137,6 +137,8 @@ class CurrentReturnContracts(unittest.TestCase):
 
     def test_complete_previous_landing_and_v097_assets_are_unchanged(self):
         landing=(ROOT/'docs/fbs/README.md').read_bytes()
+        if landing.startswith(b'<!-- FBS_V099_ACTUAL_RETURN_START -->\n'):
+            landing=landing.split(b'<!-- FBS_V099_ACTUAL_RETURN_END -->\n\n',1)[1]
         start=b'<!-- FBS_V098_ACTUAL_RETURN_START -->\n'
         end=b'<!-- FBS_V098_ACTUAL_RETURN_END -->\n\n'
         self.assertTrue(landing.startswith(start))

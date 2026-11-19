@@ -1,3 +1,13 @@
+<!-- FBS_V099_ACTUAL_RETURN_START -->
+## Latest FBS evidence — verified V098 completion and V099 preparation
+
+[Open the V099 evidence review](v099/index.html) · [Scope and validation](v099/README.md) · [Bounded evidence JSON](v099/data/status.json)
+
+V098 completed all **1,125 registered T60 fitting jobs**: **1,113 new model fits, 12 exact fitted states reused, zero fitting failures**, and 1,113 reported calibrators. Child exit and independently verified return publication succeeded. The 834-policy tranche has 2,278,488 forecasts and 2,175,072 completed-game scores on the same observed 919/934/755 annual populations. Full census, original-issue and broader scientific requirements remain partial/resumable.
+
+The new review shows all nine objective leaders across five validation-weight profiles, actual 24-worker sustained CPU evidence, source-coverage gaps, compact-return storage and the separately prepared V099 scoring extension. V099 adds no owner execution or duplicate base fitting through this publication. No website deployment or production promotion is claimed. All dated evidence below is preserved.
+<!-- FBS_V099_ACTUAL_RETURN_END -->
+
 <!-- FBS_V098_ACTUAL_RETURN_START -->
 ## Verified V097 ablations; primary T-60 continuation prepared for owner execution
 

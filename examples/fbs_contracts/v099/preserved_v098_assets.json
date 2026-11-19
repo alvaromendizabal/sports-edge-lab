@@ -1,0 +1,8 @@
+{
+  "docs/fbs/v098/README.md": "de6fb899b0e5b83328773bd6e996fcef2fadd6aba7b115c90fcca12f0cb454c2",
+  "docs/fbs/v098/data/status.json": "eb839a865f8c7018f803e3dc9a1f6cc67d337cd69e83f1fc1e2628f47e7ee2d6",
+  "docs/fbs/v098/index.html": "5e27aa3df48d48505a1bb431ebff831f3e9e990139b505d892185e95ec760a45",
+  "examples/fbs_contracts/v098/build_review.py": "edc60ba4b4da8e0922dd031ce6314a045a1d4b1a7aef643dad796eb9f550c0fb",
+  "examples/fbs_contracts/v098/template.html.in": "3244ab9deceb484159f49ec8d2d08d2e03219f96178aa6cb35dbdfbf3582c5dc",
+  "tests/fbs_v098_browser.test.cjs": "a709c3f4f028b580d7979fe4eb2c0bb5c32f12004d323599db758fd206cb4c09"
+}
