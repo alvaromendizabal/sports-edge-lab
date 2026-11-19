@@ -53,7 +53,7 @@ q('#return-digest').textContent='Return SHA-256: '+o.return.sha256;
 for(const item of s.remaining_work)tr(q('#remaining-work tbody'),[item.branch.replaceAll('_',' '),item.status,item.reason]);
 for(const text of s.caveats)q('#caveats').append(el('li',text));
 for(const [name,sha]of Object.entries(s.evidence)){const item=el('div');item.append(el('p',name.replaceAll('_',' '),'fine'),el('p',sha,'digest'));q('#evidence').append(item);}
-q('#download').addEventListener('click',()=>{const url=URL.createObjectURL(new Blob([JSON.stringify(d,null,2)+'\n'],{type:'application/json'})),a=el('a');a.href=url;a.download='FBS_V099_COMPLETED_PUBLIC_EVIDENCE.json';document.body.append(a);a.click();a.remove();setTimeout(()=>URL.revokeObjectURL(url),1000);});
+q('#download').addEventListener('click',()=>{const url=URL.createObjectURL(new Blob([raw+'\n'],{type:'application/json'})),a=el('a');a.href=url;a.download='FBS_V099_COMPLETED_PUBLIC_EVIDENCE.json';document.body.append(a);a.click();a.remove();setTimeout(()=>URL.revokeObjectURL(url),1000);});
 q('#report').hidden=false;document.documentElement.dataset.reportReady='true';
 }catch(error){document.getElementById('error').hidden=false;document.getElementById('error').textContent=String(error.message||error);document.documentElement.dataset.reportReady='error';}})();
 </script></body></html>
