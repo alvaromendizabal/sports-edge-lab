@@ -75,6 +75,20 @@ async function checkContent(page) {
     items.filter(el => { const box = el.getBoundingClientRect(); return box.left < -1 || box.right > innerWidth + 1; })
       .map(el => ({tag: el.tagName, text: el.textContent.slice(0, 100)})));
   assert.deepEqual(overflow, [], 'Every population cell, policy and evidence identity must fit');
+  if (page.viewportSize().width < 650) {
+    const mobile = await page.evaluate(() => {
+      const table = document.querySelector('#population table').getBoundingClientRect();
+      const caption = document.querySelector('#population caption').getBoundingClientRect();
+      return {tableWidth: table.width, captionWidth: caption.width,
+        progress: Array.from(document.querySelectorAll('.progress-head')).map(row => ({
+          completeBottom: row.querySelector('strong').getBoundingClientRect().bottom,
+          missingTop: row.querySelector('span').getBoundingClientRect().top}))};
+    });
+    assert.ok(mobile.captionWidth >= mobile.tableWidth - 1,
+      'The mobile table caption must use the available table width');
+    assert.ok(mobile.progress.every(row => row.missingTop >= row.completeBottom - 1),
+      'Mobile completed and missing counts must occupy separate readable lines');
+  }
 }
 
 async function downloadEvidence(page) {
