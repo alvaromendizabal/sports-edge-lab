@@ -16,7 +16,14 @@ R19_BANNER = '<section id="v12-current-evidence" aria-labelledby="v12-current-ti
 from execution_status_dashboard import PREVIOUS_EXECUTION_BANNER, PREVIOUS_VERIFIED_EXECUTION_BANNER, PREVIOUS_PRICE_EXECUTION_BANNER, PREVIOUS_SOURCE_EXECUTION_BANNER, PREVIOUS_RECOVERY_EXECUTION_BANNER, PREVIOUS_CLOCK_EXECUTION_BANNER, render_current_banner
 
 PREVIOUS_CONTINUATION_BANNER = render_current_banner()
-from execution_latest import render_banner as render_latest_banner
+from execution_latest_r32 import render_banner as render_r32_banner
+PREVIOUS_R32_BANNER = render_r32_banner()
+from execution_latest import render_banner as render_latest_banner, load as load_latest_execution
+_pending_r34 = load_latest_execution()
+_pending_r34['next_preparation'].update(status='IN_PROGRESS', canonical_gate_passed=False,
+    upload_verified=False, canonical_source=None, installation_receipt_sha256=None, native_acceptance=None)
+PREVIOUS_R33_PREPARING_BANNER = '<section id="v12-current-evidence" aria-labelledby="v12-current-title" class="b063-notice" style="margin-bottom:28px;padding:20px;border:1px solid #ddc49b;border-radius:12px;background:#fff2db"><p class="b063-eyebrow" style="margin-top:0">Latest actual NCAA execution · R33 · November 18, 2026 Pacific</p><h2 id="v12-current-title">R33 preserved source progress, then stopped before fitting</h2><p>The latest verified partial return contains 553 payloads. An oversized heartbeat caused an automatic internal stop. The owner reused three completed stages and 108 historical fitted checkpoints, completed one new stage, and preserved all 32 scoreboard tasks, 130 box tasks and 209 normalized market snapshots. Market work remains incomplete.</p><p>There were zero new fits and zero fitting workers. Actual mean owner CPU use was 0.884 cores; requesting 36 CPUs and granting 12 slots did not establish scientific parallelism. R34 preparation is in progress; no verified installation or owner execution is claimed.</p><p><strong><a href="execution.html">Inspect the R33 failure and preserved work →</a></strong> · <a href="three_seasons.html">Preserved three-season comparison</a> · <a href="v12.html">Preserved V12 comparison</a></p></section>'
+PREVIOUS_R33_ACCEPTANCE_PENDING_BANNER = render_latest_banner(_pending_r34)
 CURRENT_BANNER = render_latest_banner()
 
 
@@ -24,7 +31,7 @@ def strip_banner(html: str) -> str:
     """Remove only the exact current wrapper to recover prior archive bytes."""
     if 'id="v12-current-evidence"' not in html:
         return html
-    matches = [banner for banner in (CURRENT_BANNER, PREVIOUS_CONTINUATION_BANNER, PREVIOUS_CLOCK_EXECUTION_BANNER, PREVIOUS_SOURCE_EXECUTION_BANNER, PREVIOUS_RECOVERY_EXECUTION_BANNER, PREVIOUS_PRICE_EXECUTION_BANNER, PREVIOUS_VERIFIED_EXECUTION_BANNER, PREVIOUS_EXECUTION_BANNER, R19_BANNER, R17_POPULATION_BANNER, R17_CHECKPOINT_BANNER, R16_BANNER, R15_BANNER, PREVIOUS_BANNER) if html.count(banner) == 1]
+    matches = [banner for banner in dict.fromkeys((CURRENT_BANNER, PREVIOUS_R33_PREPARING_BANNER, PREVIOUS_R33_ACCEPTANCE_PENDING_BANNER, PREVIOUS_R32_BANNER, PREVIOUS_CONTINUATION_BANNER, PREVIOUS_CLOCK_EXECUTION_BANNER, PREVIOUS_SOURCE_EXECUTION_BANNER, PREVIOUS_RECOVERY_EXECUTION_BANNER, PREVIOUS_PRICE_EXECUTION_BANNER, PREVIOUS_VERIFIED_EXECUTION_BANNER, PREVIOUS_EXECUTION_BANNER, R19_BANNER, R17_POPULATION_BANNER, R17_CHECKPOINT_BANNER, R16_BANNER, R15_BANNER, PREVIOUS_BANNER)) if html.count(banner) == 1]
     if len(matches) != 1:
         raise ValueError('Unexpected current evidence banner')
     return html.replace(matches[0], '', 1)

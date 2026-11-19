@@ -394,7 +394,7 @@ class R29SourcePublicationTests(unittest.TestCase):
         self.assertEqual(current.count(CURRENT_BANNER),1)
         self.assertNotIn('stale launch-wide deadline',CURRENT_BANNER)
         self.assertNotIn('live memory pressure',CURRENT_BANNER)
-        self.assertIn('Three R32 failures',CURRENT_BANNER)
+        self.assertIn('R33 preserved source progress',CURRENT_BANNER)
 
 
 class R30ClockRecoveryTests(unittest.TestCase):
@@ -495,8 +495,8 @@ class R30ClockRecoveryTests(unittest.TestCase):
         current = render_banner(previous)
         self.assertEqual(strip_banner(current), body)
         self.assertEqual(current.count(CURRENT_BANNER), 1)
-        self.assertIn('latest observed R32', CURRENT_BANNER)
-        self.assertIn('116 payloads', CURRENT_BANNER)
+        self.assertIn('Latest actual NCAA execution · R33', CURRENT_BANNER)
+        self.assertIn('553 payloads', CURRENT_BANNER)
         self.assertIn('R33', CURRENT_BANNER)
         self.assertNotIn('R30 preparation and staging are verified', CURRENT_BANNER)
 
@@ -655,9 +655,9 @@ class R31ContinuationAndBoundedFitTests(unittest.TestCase):
         body='<main><article>Preserved scientific rows</article></main>'
         old=body.replace('<main>','<main>'+status.PREVIOUS_CLOCK_EXECUTION_BANNER)
         self.assertEqual(strip_banner(render_banner(old)),body)
-        self.assertIn('36 real new estimator components',CURRENT_BANNER)
-        self.assertIn('21 overlapping estimator kernels',CURRENT_BANNER)
-        self.assertIn('gate remain incomplete',CURRENT_BANNER)
+        self.assertIn('108 historical fitted checkpoints',CURRENT_BANNER)
+        self.assertIn('zero new fits and zero fitting workers',CURRENT_BANNER)
+        self.assertIn('did not establish scientific parallelism',CURRENT_BANNER)
 
     def test_private_paths_and_unknown_fields_are_rejected(self):
         self.reject(lambda d:d['bounded_scientific_acceptance'].update(private_checkpoint='/home/owner/model'))

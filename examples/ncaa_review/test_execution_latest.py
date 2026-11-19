@@ -7,7 +7,7 @@ import json
 import re
 import unittest
 
-import execution_latest as latest
+import execution_latest_r32 as latest
 
 
 class LatestExecutionTests(unittest.TestCase):
