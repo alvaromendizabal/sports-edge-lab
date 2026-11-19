@@ -1,0 +1,1536 @@
+{
+  "as_of": "2026-11-18",
+  "cost": {
+    "elapsed_seconds_through_measurement": 4462.145761274005,
+    "estimate_is_invoice": false,
+    "estimated_compute_usd": 3.1854762795761644,
+    "guard_usd": 200,
+    "rate_usd_per_full_host_hour": 2.57,
+    "scope": "SUPERVISED_INVOCATION_THROUGH_POINTER_MEASUREMENT; LATER_COMPLETION_EXCLUDED",
+    "wall_zero_waives_guard": false
+  },
+  "cpu": {
+    "current_gate_status": "PASS_AUTHENTICATED_REAL_180S_WINDOW",
+    "current_sustained_pass": true,
+    "descriptive_average_is_sustained_gate": false,
+    "descriptive_family_wave_wall_seconds": 1238.344217453996,
+    "descriptive_mean_occupancy": 0.747178265640991,
+    "descriptive_useful_cpu_seconds": 21933.11052282,
+    "hard_ceiling": 24,
+    "minimum_occupancy": 0.75,
+    "prior_run_pass_transferred": false,
+    "release": "V098",
+    "required_interval_seconds": 180,
+    "windows": [
+      {
+        "fit_only_cpu_occupancy": 0.9185044004916564,
+        "phase": "Validation",
+        "real_fits_completed_in_window": 136,
+        "representative_seconds": 180.36275852900872,
+        "selected_worker_capacity": 24,
+        "useful_worker_cpu_occupancy": 0.9315736043906468
+      },
+      {
+        "fit_only_cpu_occupancy": 0.9268563837090408,
+        "phase": "Frozen test",
+        "real_fits_completed_in_window": 90,
+        "representative_seconds": 180.22093724300794,
+        "selected_worker_capacity": 24,
+        "useful_worker_cpu_occupancy": 0.9324884289714791
+      }
+    ]
+  },
+  "evidence": [
+    {
+      "bytes": 12607,
+      "label": "Authenticated latest return pointer",
+      "sha256": "c3b4b1b59856b419ad288f8dc43ddbc9a060322f9d840e8ce39ddac87df8f18b"
+    },
+    {
+      "bytes": 26406198,
+      "label": "Completed T60 scientific stage",
+      "sha256": "e486b60cf92fe37f61b672ef675576ba952d561c8e0e852beed680b9187b6a1b"
+    },
+    {
+      "bytes": 4243308,
+      "label": "Frozen T60 registration",
+      "sha256": "b59e6712a744dbc57c5a2422f21e195f85b679a467cbd5ccdf98d69dc09061d6"
+    },
+    {
+      "bytes": 894910,
+      "label": "Immutable observed full-game manifest",
+      "sha256": "b7044c2101f94071944e2ff0e08eb74ad489cc5c187e6431ca63c9876c120271"
+    },
+    {
+      "bytes": 3847709,
+      "label": "Annual full-precision scorecards",
+      "sha256": "aaf184820470b9d50415b17c5fad53e96b441bf4cb38134b55f93095823ab251"
+    },
+    {
+      "bytes": 5510225,
+      "label": "Validation-only selection lock",
+      "sha256": "7e4703efe5f63feeeb980ef32a1728e5851410e61b1ea0e4d50f1b5ab1a0f9e2"
+    },
+    {
+      "bytes": 44043,
+      "label": "Current-run CPU acceptance",
+      "sha256": "fd22d93a0fe13ac3bc442fbc8537a9b24629f6963f05c3446b6b25a20b9680e0"
+    },
+    {
+      "bytes": 804742,
+      "label": "Qualified source coverage",
+      "sha256": "dd642c4ed0b7370b44f30ea87d31637b65b0ec1a62d9bd6ad6bc87b04f81aa8c"
+    },
+    {
+      "bytes": 4470,
+      "label": "Measured checkpoint custody",
+      "sha256": "d8ff039b18300f2993dcc79ca22a7bf4e55f0b838d5c7fd431d8148d5706eeb7"
+    },
+    {
+      "bytes": 6819,
+      "label": "Compact delivery accounting",
+      "sha256": "1e63ec261eebf8e5feefbb8d0899772b4e300028bbc2957a36cc441778f179fe"
+    }
+  ],
+  "execution": {
+    "branches": [
+      {
+        "jobs": 189,
+        "name": "Baseline comparisons"
+      },
+      {
+        "jobs": 306,
+        "name": "Source ablations"
+      },
+      {
+        "jobs": 252,
+        "name": "Football feature-group ablations"
+      },
+      {
+        "jobs": 252,
+        "name": "Market-component ablations"
+      },
+      {
+        "jobs": 126,
+        "name": "Feature interactions"
+      }
+    ],
+    "child_exit_code": 0,
+    "completed_jobs": 1125,
+    "earlier_horizon_minutes": 120,
+    "failed_fits": 0,
+    "families": [
+      "Linear models",
+      "Extra Trees",
+      "XGBoost",
+      "LightGBM",
+      "CatBoost",
+      "PyTorch",
+      "TensorFlow"
+    ],
+    "fixed_blend_policies": 84,
+    "frozen_test_jobs": 375,
+    "new_calibrator_fits": 1113,
+    "new_full_scientific_completions": 0,
+    "new_model_fits": 1113,
+    "new_operational_failures": 0,
+    "new_operational_finishes": 1,
+    "new_policy_count": 834,
+    "new_prediction_rows": 2278488,
+    "new_scored_prediction_rows": 2175072,
+    "operationally_finished": true,
+    "preserved_earlier_horizon_policies": 1309,
+    "raw_calibrated_policies": 750,
+    "registered_jobs": 1125,
+    "release": "V098",
+    "resumable": true,
+    "return_integrity_verified": true,
+    "reused_fit_states": 12,
+    "run_id": "20261118T223005Z-0b62e1bc39-fbs098",
+    "scientific_complete": false,
+    "supervisor_status": "VERIFIED_RETURN_PUBLICATION_FINISHED",
+    "validation_jobs": 750
+  },
+  "next_preparation": {
+    "canonical_bytes": 50176790,
+    "canonical_sha256": "bfbf7f0c17db7b0d96f031691e460fd37183ff703f0a16792bdf81c529ca1e4b",
+    "current_runtime_acceptance": "NOT_EXECUTED",
+    "expected_new_completed_scores": 260800,
+    "expected_new_forecast_rows": 273200,
+    "explicit_worker_limit_is_hard_ceiling": true,
+    "native_verified": true,
+    "native_verified_at": "2026-11-19T01:19:45.660006+00:00",
+    "new_model_fits": 0,
+    "new_work_is_scoring_not_optimizer_fitting": true,
+    "owner_runs_launched": 0,
+    "planned_forecast_policies": 100,
+    "planned_new_calibrator_fits": 0,
+    "planned_new_estimator_fits": 0,
+    "planned_objective_comparisons": 900,
+    "planned_scope": "Reuse completed fitted components; add finite distribution, calibration-diagnostic and paired-uncertainty comparisons on fixed populations.",
+    "planned_test_forecast_tasks": 100,
+    "planned_uncertainty_tasks": 300,
+    "planned_validation_forecast_tasks": 200,
+    "predecessors_stopped": 0,
+    "prior_cpu_pass_transferred": false,
+    "provider_retrievals": 0,
+    "release": "V099",
+    "required_minimum_occupancy": 0.75,
+    "required_representative_seconds": 180,
+    "resolves_latest_at_launch": true,
+    "reuse_completed_work": true,
+    "status": "PREPARED_NOT_EXECUTED",
+    "target_workers": 12,
+    "worker_ceiling": 36
+  },
+  "owner": "FBS",
+  "population": {
+    "annual_completed": [
+      919,
+      934,
+      755
+    ],
+    "annual_observed": [
+      920,
+      934,
+      888
+    ],
+    "annual_pending": [
+      1,
+      0,
+      133
+    ],
+    "earlier_season_games_in_next_calendar_year": [
+      11,
+      11,
+      0
+    ],
+    "full_current_test_reporting_complete": false,
+    "game_rows_removed_for_coverage": 0,
+    "historical_postseason_labels_complete": false,
+    "official_population_complete": false,
+    "postseason_completeness_proven": false,
+    "test_policies_with_full_observed_completed_coverage": 834,
+    "test_policy_count": 834,
+    "unresolved_upcoming_kickoffs": 10
+  },
+  "publication": {
+    "merged": false,
+    "production_promoted": false,
+    "source_only": true,
+    "website_deployed": false
+  },
+  "remaining_work": [
+    {
+      "detail": "Reconcile all completed and postseason games without changing per-model denominators.",
+      "name": "Full official completed-game census",
+      "status": "UNPROVEN"
+    },
+    {
+      "detail": "Reconstruction and previously exposed test results cannot become pristine original issues.",
+      "name": "Historical original-issue evidence",
+      "status": "UNPROVEN"
+    },
+    {
+      "detail": "Authenticate provider routes, exact contracts and as-of history for each product.",
+      "name": "Native exchange inputs",
+      "status": "BLOCKED"
+    },
+    {
+      "detail": "Source presence does not establish continuous admissible odds history or benchmark grading.",
+      "name": "Complete historical market continuity",
+      "status": "BLOCKED"
+    },
+    {
+      "detail": "Bind qualified producer evidence before admitting the remaining registered research.",
+      "name": "Additional football data and variants",
+      "status": "DEFERRED"
+    },
+    {
+      "detail": "Ten observed upcoming games still lack resolved kickoff and original feature rows.",
+      "name": "Upcoming predictions",
+      "status": "BLOCKED"
+    },
+    {
+      "detail": "The owner has not executed the prepared new scoring work.",
+      "name": "Additive distribution and uncertainty study",
+      "status": "NEXT_FINITE_TRANCHE"
+    },
+    {
+      "detail": "Source review, website deployment and model promotion are separate decisions.",
+      "name": "Website publication and production promotion",
+      "status": "DEFERRED"
+    }
+  ],
+  "schema": "fbs.public.actual-and-continuation.v099",
+  "selection": {
+    "all_policy_count": 834,
+    "evidence_class": "V13_FROZEN_RECONSTRUCTION",
+    "full_population_champion_eligible": false,
+    "horizon_minutes": 60,
+    "leaders": [
+      {
+        "annual_values": [
+          9.626633198561207,
+          8.907717316899669,
+          9.14476607125252
+        ],
+        "expected_n": [
+          919,
+          934,
+          755
+        ],
+        "family": "LightGBM",
+        "metric": "crps",
+        "policy_alias": "T60 research 03",
+        "primary_policy_rank": 5,
+        "profile": "10/90",
+        "same_policy_as_primary": false,
+        "scored_n": [
+          919,
+          934,
+          755
+        ],
+        "selection_score": 8.979608905065824,
+        "target": "margin"
+      },
+      {
+        "annual_values": [
+          9.626633198561207,
+          8.907717316899669,
+          9.14476607125252
+        ],
+        "expected_n": [
+          919,
+          934,
+          755
+        ],
+        "family": "LightGBM",
+        "metric": "crps",
+        "policy_alias": "T60 research 03",
+        "primary_policy_rank": 5,
+        "profile": "20/80",
+        "same_policy_as_primary": false,
+        "scored_n": [
+          919,
+          934,
+          755
+        ],
+        "selection_score": 9.051500493231977,
+        "target": "margin"
+      },
+      {
+        "annual_values": [
+          9.626633198561207,
+          8.907717316899669,
+          9.14476607125252
+        ],
+        "expected_n": [
+          919,
+          934,
+          755
+        ],
+        "family": "LightGBM",
+        "metric": "crps",
+        "policy_alias": "T60 research 03",
+        "primary_policy_rank": 5,
+        "profile": "30/70",
+        "same_policy_as_primary": false,
+        "scored_n": [
+          919,
+          934,
+          755
+        ],
+        "selection_score": 9.12339208139813,
+        "target": "margin"
+      },
+      {
+        "annual_values": [
+          9.59829778585102,
+          8.92019431545132,
+          9.034678443135611
+        ],
+        "expected_n": [
+          919,
+          934,
+          755
+        ],
+        "family": "Extra Trees",
+        "metric": "crps",
+        "policy_alias": "T60 research 02",
+        "primary_policy_rank": 4,
+        "profile": "40/60",
+        "same_policy_as_primary": false,
+        "scored_n": [
+          919,
+          934,
+          755
+        ],
+        "selection_score": 9.1914357036112,
+        "target": "margin"
+      },
+      {
+        "annual_values": [
+          9.56750635185286,
+          8.946640598002329,
+          9.15998991331188
+        ],
+        "expected_n": [
+          919,
+          934,
+          755
+        ],
+        "family": "LightGBM",
+        "metric": "crps",
+        "policy_alias": "T60 research 01",
+        "primary_policy_rank": 1,
+        "profile": "50/50",
+        "same_policy_as_primary": true,
+        "scored_n": [
+          919,
+          934,
+          755
+        ],
+        "selection_score": 9.257073474927594,
+        "target": "margin"
+      },
+      {
+        "annual_values": [
+          13.446801680587852,
+          12.414930311902133,
+          12.993410314208326
+        ],
+        "expected_n": [
+          919,
+          934,
+          755
+        ],
+        "family": "LightGBM",
+        "metric": "mae",
+        "policy_alias": "T60 research 03",
+        "primary_policy_rank": 119,
+        "profile": "10/90",
+        "same_policy_as_primary": false,
+        "scored_n": [
+          919,
+          934,
+          755
+        ],
+        "selection_score": 12.518117448770704,
+        "target": "margin"
+      },
+      {
+        "annual_values": [
+          13.37195880135886,
+          12.423364241622354,
+          12.801775385210815
+        ],
+        "expected_n": [
+          919,
+          934,
+          755
+        ],
+        "family": "Extra Trees",
+        "metric": "mae",
+        "policy_alias": "T60 research 02",
+        "primary_policy_rank": 101,
+        "profile": "20/80",
+        "same_policy_as_primary": false,
+        "scored_n": [
+          919,
+          934,
+          755
+        ],
+        "selection_score": 12.613083153569656,
+        "target": "margin"
+      },
+      {
+        "annual_values": [
+          13.37195880135886,
+          12.423364241622354,
+          12.801775385210815
+        ],
+        "expected_n": [
+          919,
+          934,
+          755
+        ],
+        "family": "Extra Trees",
+        "metric": "mae",
+        "policy_alias": "T60 research 02",
+        "primary_policy_rank": 95,
+        "profile": "30/70",
+        "same_policy_as_primary": false,
+        "scored_n": [
+          919,
+          934,
+          755
+        ],
+        "selection_score": 12.707942609543306,
+        "target": "margin"
+      },
+      {
+        "annual_values": [
+          13.37195880135886,
+          12.423364241622354,
+          12.801775385210815
+        ],
+        "expected_n": [
+          919,
+          934,
+          755
+        ],
+        "family": "Extra Trees",
+        "metric": "mae",
+        "policy_alias": "T60 research 02",
+        "primary_policy_rank": 5,
+        "profile": "40/60",
+        "same_policy_as_primary": false,
+        "scored_n": [
+          919,
+          934,
+          755
+        ],
+        "selection_score": 12.802802065516957,
+        "target": "margin"
+      },
+      {
+        "annual_values": [
+          12.598548297566314,
+          12.960609118760942,
+          12.877682248964478
+        ],
+        "expected_n": [
+          919,
+          934,
+          755
+        ],
+        "family": "CatBoost",
+        "metric": "mae",
+        "policy_alias": "T60 research 05",
+        "primary_policy_rank": 1,
+        "profile": "50/50",
+        "same_policy_as_primary": true,
+        "scored_n": [
+          919,
+          934,
+          755
+        ],
+        "selection_score": 12.779578708163628,
+        "target": "margin"
+      },
+      {
+        "annual_values": [
+          16.883918504180965,
+          15.840149319874778,
+          16.247980964050175
+        ],
+        "expected_n": [
+          919,
+          934,
+          755
+        ],
+        "family": "Fixed ensemble",
+        "metric": "rmse",
+        "policy_alias": "T60 research 13",
+        "primary_policy_rank": 1,
+        "profile": "10/90",
+        "same_policy_as_primary": true,
+        "scored_n": [
+          919,
+          934,
+          755
+        ],
+        "selection_score": 15.944526238305397,
+        "target": "margin"
+      },
+      {
+        "annual_values": [
+          16.883918504180965,
+          15.840149319874778,
+          16.247980964050175
+        ],
+        "expected_n": [
+          919,
+          934,
+          755
+        ],
+        "family": "Fixed ensemble",
+        "metric": "rmse",
+        "policy_alias": "T60 research 13",
+        "primary_policy_rank": 1,
+        "profile": "20/80",
+        "same_policy_as_primary": true,
+        "scored_n": [
+          919,
+          934,
+          755
+        ],
+        "selection_score": 16.048903156736017,
+        "target": "margin"
+      },
+      {
+        "annual_values": [
+          16.883918504180965,
+          15.840149319874778,
+          16.247980964050175
+        ],
+        "expected_n": [
+          919,
+          934,
+          755
+        ],
+        "family": "Fixed ensemble",
+        "metric": "rmse",
+        "policy_alias": "T60 research 13",
+        "primary_policy_rank": 1,
+        "profile": "30/70",
+        "same_policy_as_primary": true,
+        "scored_n": [
+          919,
+          934,
+          755
+        ],
+        "selection_score": 16.153280075166634,
+        "target": "margin"
+      },
+      {
+        "annual_values": [
+          16.883918504180965,
+          15.840149319874778,
+          16.247980964050175
+        ],
+        "expected_n": [
+          919,
+          934,
+          755
+        ],
+        "family": "Fixed ensemble",
+        "metric": "rmse",
+        "policy_alias": "T60 research 13",
+        "primary_policy_rank": 1,
+        "profile": "40/60",
+        "same_policy_as_primary": true,
+        "scored_n": [
+          919,
+          934,
+          755
+        ],
+        "selection_score": 16.25765699359725,
+        "target": "margin"
+      },
+      {
+        "annual_values": [
+          16.883918504180965,
+          15.840149319874778,
+          16.247980964050175
+        ],
+        "expected_n": [
+          919,
+          934,
+          755
+        ],
+        "family": "Fixed ensemble",
+        "metric": "rmse",
+        "policy_alias": "T60 research 13",
+        "primary_policy_rank": 1,
+        "profile": "50/50",
+        "same_policy_as_primary": true,
+        "scored_n": [
+          919,
+          934,
+          755
+        ],
+        "selection_score": 16.362033912027872,
+        "target": "margin"
+      },
+      {
+        "annual_values": [
+          8.967518336282833,
+          8.842908241766722,
+          9.010934506302958
+        ],
+        "expected_n": [
+          919,
+          934,
+          755
+        ],
+        "family": "PyTorch",
+        "metric": "crps",
+        "policy_alias": "T60 research 08",
+        "primary_policy_rank": 3,
+        "profile": "10/90",
+        "same_policy_as_primary": false,
+        "scored_n": [
+          919,
+          934,
+          755
+        ],
+        "selection_score": 8.855369251218333,
+        "target": "total"
+      },
+      {
+        "annual_values": [
+          8.967518336282833,
+          8.842908241766722,
+          9.010934506302958
+        ],
+        "expected_n": [
+          919,
+          934,
+          755
+        ],
+        "family": "PyTorch",
+        "metric": "crps",
+        "policy_alias": "T60 research 08",
+        "primary_policy_rank": 3,
+        "profile": "20/80",
+        "same_policy_as_primary": false,
+        "scored_n": [
+          919,
+          934,
+          755
+        ],
+        "selection_score": 8.867830260669944,
+        "target": "total"
+      },
+      {
+        "annual_values": [
+          8.967518336282833,
+          8.842908241766722,
+          9.010934506302958
+        ],
+        "expected_n": [
+          919,
+          934,
+          755
+        ],
+        "family": "PyTorch",
+        "metric": "crps",
+        "policy_alias": "T60 research 08",
+        "primary_policy_rank": 2,
+        "profile": "30/70",
+        "same_policy_as_primary": false,
+        "scored_n": [
+          919,
+          934,
+          755
+        ],
+        "selection_score": 8.880291270121553,
+        "target": "total"
+      },
+      {
+        "annual_values": [
+          8.967518336282833,
+          8.842908241766722,
+          9.010934506302958
+        ],
+        "expected_n": [
+          919,
+          934,
+          755
+        ],
+        "family": "PyTorch",
+        "metric": "crps",
+        "policy_alias": "T60 research 08",
+        "primary_policy_rank": 2,
+        "profile": "40/60",
+        "same_policy_as_primary": false,
+        "scored_n": [
+          919,
+          934,
+          755
+        ],
+        "selection_score": 8.892752279573166,
+        "target": "total"
+      },
+      {
+        "annual_values": [
+          8.93850054891932,
+          8.867993894288608,
+          9.015805701454854
+        ],
+        "expected_n": [
+          919,
+          934,
+          755
+        ],
+        "family": "CatBoost",
+        "metric": "crps",
+        "policy_alias": "T60 research 06",
+        "primary_policy_rank": 1,
+        "profile": "50/50",
+        "same_policy_as_primary": true,
+        "scored_n": [
+          919,
+          934,
+          755
+        ],
+        "selection_score": 8.903247221603964,
+        "target": "total"
+      },
+      {
+        "annual_values": [
+          12.560400318949513,
+          12.432704443506736,
+          12.83118051612902
+        ],
+        "expected_n": [
+          919,
+          934,
+          755
+        ],
+        "family": "PyTorch",
+        "metric": "mae",
+        "policy_alias": "T60 research 09",
+        "primary_policy_rank": 1,
+        "profile": "10/90",
+        "same_policy_as_primary": true,
+        "scored_n": [
+          919,
+          934,
+          755
+        ],
+        "selection_score": 12.445474031051015,
+        "target": "total"
+      },
+      {
+        "annual_values": [
+          12.560400318949513,
+          12.432704443506736,
+          12.83118051612902
+        ],
+        "expected_n": [
+          919,
+          934,
+          755
+        ],
+        "family": "PyTorch",
+        "metric": "mae",
+        "policy_alias": "T60 research 09",
+        "primary_policy_rank": 1,
+        "profile": "20/80",
+        "same_policy_as_primary": true,
+        "scored_n": [
+          919,
+          934,
+          755
+        ],
+        "selection_score": 12.458243618595292,
+        "target": "total"
+      },
+      {
+        "annual_values": [
+          12.560400318949513,
+          12.432704443506736,
+          12.83118051612902
+        ],
+        "expected_n": [
+          919,
+          934,
+          755
+        ],
+        "family": "PyTorch",
+        "metric": "mae",
+        "policy_alias": "T60 research 09",
+        "primary_policy_rank": 1,
+        "profile": "30/70",
+        "same_policy_as_primary": true,
+        "scored_n": [
+          919,
+          934,
+          755
+        ],
+        "selection_score": 12.471013206139569,
+        "target": "total"
+      },
+      {
+        "annual_values": [
+          12.560400318949513,
+          12.432704443506736,
+          12.83118051612902
+        ],
+        "expected_n": [
+          919,
+          934,
+          755
+        ],
+        "family": "PyTorch",
+        "metric": "mae",
+        "policy_alias": "T60 research 09",
+        "primary_policy_rank": 1,
+        "profile": "40/60",
+        "same_policy_as_primary": true,
+        "scored_n": [
+          919,
+          934,
+          755
+        ],
+        "selection_score": 12.483782793683847,
+        "target": "total"
+      },
+      {
+        "annual_values": [
+          12.560400318949513,
+          12.432704443506736,
+          12.83118051612902
+        ],
+        "expected_n": [
+          919,
+          934,
+          755
+        ],
+        "family": "PyTorch",
+        "metric": "mae",
+        "policy_alias": "T60 research 09",
+        "primary_policy_rank": 1,
+        "profile": "50/50",
+        "same_policy_as_primary": true,
+        "scored_n": [
+          919,
+          934,
+          755
+        ],
+        "selection_score": 12.496552381228124,
+        "target": "total"
+      },
+      {
+        "annual_values": [
+          15.961302292170192,
+          15.461897687462358,
+          15.97203633805635
+        ],
+        "expected_n": [
+          919,
+          934,
+          755
+        ],
+        "family": "PyTorch",
+        "metric": "rmse",
+        "policy_alias": "T60 research 09",
+        "primary_policy_rank": 1,
+        "profile": "10/90",
+        "same_policy_as_primary": true,
+        "scored_n": [
+          919,
+          934,
+          755
+        ],
+        "selection_score": 15.511838147933142,
+        "target": "total"
+      },
+      {
+        "annual_values": [
+          15.961302292170192,
+          15.461897687462358,
+          15.97203633805635
+        ],
+        "expected_n": [
+          919,
+          934,
+          755
+        ],
+        "family": "PyTorch",
+        "metric": "rmse",
+        "policy_alias": "T60 research 09",
+        "primary_policy_rank": 1,
+        "profile": "20/80",
+        "same_policy_as_primary": true,
+        "scored_n": [
+          919,
+          934,
+          755
+        ],
+        "selection_score": 15.561778608403925,
+        "target": "total"
+      },
+      {
+        "annual_values": [
+          15.961302292170192,
+          15.461897687462358,
+          15.97203633805635
+        ],
+        "expected_n": [
+          919,
+          934,
+          755
+        ],
+        "family": "PyTorch",
+        "metric": "rmse",
+        "policy_alias": "T60 research 09",
+        "primary_policy_rank": 1,
+        "profile": "30/70",
+        "same_policy_as_primary": true,
+        "scored_n": [
+          919,
+          934,
+          755
+        ],
+        "selection_score": 15.611719068874708,
+        "target": "total"
+      },
+      {
+        "annual_values": [
+          15.961302292170192,
+          15.461897687462358,
+          15.97203633805635
+        ],
+        "expected_n": [
+          919,
+          934,
+          755
+        ],
+        "family": "PyTorch",
+        "metric": "rmse",
+        "policy_alias": "T60 research 09",
+        "primary_policy_rank": 1,
+        "profile": "40/60",
+        "same_policy_as_primary": true,
+        "scored_n": [
+          919,
+          934,
+          755
+        ],
+        "selection_score": 15.66165952934549,
+        "target": "total"
+      },
+      {
+        "annual_values": [
+          15.961302292170192,
+          15.461897687462358,
+          15.97203633805635
+        ],
+        "expected_n": [
+          919,
+          934,
+          755
+        ],
+        "family": "PyTorch",
+        "metric": "rmse",
+        "policy_alias": "T60 research 09",
+        "primary_policy_rank": 1,
+        "profile": "50/50",
+        "same_policy_as_primary": true,
+        "scored_n": [
+          919,
+          934,
+          755
+        ],
+        "selection_score": 15.711599989816275,
+        "target": "total"
+      },
+      {
+        "annual_values": [
+          0.7323177366702938,
+          0.765524625267666,
+          0.7231788079470198
+        ],
+        "expected_n": [
+          919,
+          934,
+          755
+        ],
+        "family": "TensorFlow",
+        "metric": "accuracy",
+        "policy_alias": "T60 research 10",
+        "primary_policy_rank": 11,
+        "profile": "10/90",
+        "same_policy_as_primary": false,
+        "scored_n": [
+          919,
+          934,
+          755
+        ],
+        "selection_score": 0.7622039364079287,
+        "target": "winner"
+      },
+      {
+        "annual_values": [
+          0.7323177366702938,
+          0.765524625267666,
+          0.7231788079470198
+        ],
+        "expected_n": [
+          919,
+          934,
+          755
+        ],
+        "family": "TensorFlow",
+        "metric": "accuracy",
+        "policy_alias": "T60 research 10",
+        "primary_policy_rank": 9,
+        "profile": "20/80",
+        "same_policy_as_primary": false,
+        "scored_n": [
+          919,
+          934,
+          755
+        ],
+        "selection_score": 0.7588832475481916,
+        "target": "winner"
+      },
+      {
+        "annual_values": [
+          0.7399347116430903,
+          0.7623126338329764,
+          0.7284768211920529
+        ],
+        "expected_n": [
+          919,
+          934,
+          755
+        ],
+        "family": "XGBoost",
+        "metric": "accuracy",
+        "policy_alias": "T60 research 11",
+        "primary_policy_rank": 5,
+        "profile": "30/70",
+        "same_policy_as_primary": false,
+        "scored_n": [
+          919,
+          934,
+          755
+        ],
+        "selection_score": 0.7555992571760105,
+        "target": "winner"
+      },
+      {
+        "annual_values": [
+          0.7399347116430903,
+          0.7623126338329764,
+          0.7284768211920529
+        ],
+        "expected_n": [
+          919,
+          934,
+          755
+        ],
+        "family": "XGBoost",
+        "metric": "accuracy",
+        "policy_alias": "T60 research 11",
+        "primary_policy_rank": 2,
+        "profile": "40/60",
+        "same_policy_as_primary": false,
+        "scored_n": [
+          919,
+          934,
+          755
+        ],
+        "selection_score": 0.7533614649570219,
+        "target": "winner"
+      },
+      {
+        "annual_values": [
+          0.7453754080522307,
+          0.7580299785867237,
+          0.7377483443708609
+        ],
+        "expected_n": [
+          919,
+          934,
+          755
+        ],
+        "family": "Linear models",
+        "metric": "accuracy",
+        "policy_alias": "T60 research 07",
+        "primary_policy_rank": 1,
+        "profile": "50/50",
+        "same_policy_as_primary": true,
+        "scored_n": [
+          919,
+          934,
+          755
+        ],
+        "selection_score": 0.7517026933194773,
+        "target": "winner"
+      },
+      {
+        "annual_values": [
+          0.17747977190497596,
+          0.16552909710001176,
+          0.16228964539301136
+        ],
+        "expected_n": [
+          919,
+          934,
+          755
+        ],
+        "family": "LightGBM",
+        "metric": "brier",
+        "policy_alias": "T60 research 04",
+        "primary_policy_rank": 9,
+        "profile": "10/90",
+        "same_policy_as_primary": false,
+        "scored_n": [
+          919,
+          934,
+          755
+        ],
+        "selection_score": 0.16672416458050818,
+        "target": "winner"
+      },
+      {
+        "annual_values": [
+          0.17747977190497596,
+          0.16552909710001176,
+          0.16228964539301136
+        ],
+        "expected_n": [
+          919,
+          934,
+          755
+        ],
+        "family": "LightGBM",
+        "metric": "brier",
+        "policy_alias": "T60 research 04",
+        "primary_policy_rank": 6,
+        "profile": "20/80",
+        "same_policy_as_primary": false,
+        "scored_n": [
+          919,
+          934,
+          755
+        ],
+        "selection_score": 0.16791923206100462,
+        "target": "winner"
+      },
+      {
+        "annual_values": [
+          0.17747977190497596,
+          0.16552909710001176,
+          0.16228964539301136
+        ],
+        "expected_n": [
+          919,
+          934,
+          755
+        ],
+        "family": "LightGBM",
+        "metric": "brier",
+        "policy_alias": "T60 research 04",
+        "primary_policy_rank": 4,
+        "profile": "30/70",
+        "same_policy_as_primary": false,
+        "scored_n": [
+          919,
+          934,
+          755
+        ],
+        "selection_score": 0.169114299541501,
+        "target": "winner"
+      },
+      {
+        "annual_values": [
+          0.17544389141437342,
+          0.1668846745446069,
+          0.1679101922487711
+        ],
+        "expected_n": [
+          919,
+          934,
+          755
+        ],
+        "family": "CatBoost",
+        "metric": "brier",
+        "policy_alias": "T60 research 12",
+        "primary_policy_rank": 1,
+        "profile": "40/60",
+        "same_policy_as_primary": true,
+        "scored_n": [
+          919,
+          934,
+          755
+        ],
+        "selection_score": 0.1703083612925135,
+        "target": "winner"
+      },
+      {
+        "annual_values": [
+          0.17544389141437342,
+          0.1668846745446069,
+          0.1679101922487711
+        ],
+        "expected_n": [
+          919,
+          934,
+          755
+        ],
+        "family": "CatBoost",
+        "metric": "brier",
+        "policy_alias": "T60 research 12",
+        "primary_policy_rank": 1,
+        "profile": "50/50",
+        "same_policy_as_primary": true,
+        "scored_n": [
+          919,
+          934,
+          755
+        ],
+        "selection_score": 0.17116428297949016,
+        "target": "winner"
+      },
+      {
+        "annual_values": [
+          0.5250802187760306,
+          0.4959518599066662,
+          0.4865839080277436
+        ],
+        "expected_n": [
+          919,
+          934,
+          755
+        ],
+        "family": "LightGBM",
+        "metric": "log_loss",
+        "policy_alias": "T60 research 04",
+        "primary_policy_rank": 1,
+        "profile": "10/90",
+        "same_policy_as_primary": true,
+        "scored_n": [
+          919,
+          934,
+          755
+        ],
+        "selection_score": 0.49886469579360265,
+        "target": "winner"
+      },
+      {
+        "annual_values": [
+          0.5250802187760306,
+          0.4959518599066662,
+          0.4865839080277436
+        ],
+        "expected_n": [
+          919,
+          934,
+          755
+        ],
+        "family": "LightGBM",
+        "metric": "log_loss",
+        "policy_alias": "T60 research 04",
+        "primary_policy_rank": 1,
+        "profile": "20/80",
+        "same_policy_as_primary": true,
+        "scored_n": [
+          919,
+          934,
+          755
+        ],
+        "selection_score": 0.5017775316805391,
+        "target": "winner"
+      },
+      {
+        "annual_values": [
+          0.5250802187760306,
+          0.4959518599066662,
+          0.4865839080277436
+        ],
+        "expected_n": [
+          919,
+          934,
+          755
+        ],
+        "family": "LightGBM",
+        "metric": "log_loss",
+        "policy_alias": "T60 research 04",
+        "primary_policy_rank": 1,
+        "profile": "30/70",
+        "same_policy_as_primary": true,
+        "scored_n": [
+          919,
+          934,
+          755
+        ],
+        "selection_score": 0.5046903675674754,
+        "target": "winner"
+      },
+      {
+        "annual_values": [
+          0.5250802187760306,
+          0.4959518599066662,
+          0.4865839080277436
+        ],
+        "expected_n": [
+          919,
+          934,
+          755
+        ],
+        "family": "LightGBM",
+        "metric": "log_loss",
+        "policy_alias": "T60 research 04",
+        "primary_policy_rank": 1,
+        "profile": "40/60",
+        "same_policy_as_primary": true,
+        "scored_n": [
+          919,
+          934,
+          755
+        ],
+        "selection_score": 0.507603203454412,
+        "target": "winner"
+      },
+      {
+        "annual_values": [
+          0.5250802187760306,
+          0.4959518599066662,
+          0.4865839080277436
+        ],
+        "expected_n": [
+          919,
+          934,
+          755
+        ],
+        "family": "LightGBM",
+        "metric": "log_loss",
+        "policy_alias": "T60 research 04",
+        "primary_policy_rank": 1,
+        "profile": "50/50",
+        "same_policy_as_primary": true,
+        "scored_n": [
+          919,
+          934,
+          755
+        ],
+        "selection_score": 0.5105160393413484,
+        "target": "winner"
+      }
+    ],
+    "original_issued": false,
+    "primary_profile": "50/50",
+    "profiles": [
+      "50/50",
+      "40/60",
+      "30/70",
+      "20/80",
+      "10/90"
+    ],
+    "promotion": false,
+    "season_training_weights": false,
+    "sensitivity_changes_predictions": false,
+    "sensitivity_refits": 0,
+    "test_previously_exposed": true,
+    "test_season": 2026,
+    "test_used_for_selection": false,
+    "validation_seasons": [
+      2024,
+      2025
+    ]
+  },
+  "sources": {
+    "admitted_bookmaker_slots": 17,
+    "coverage": [
+      {
+        "all_sources_absent_rows": 123,
+        "rows": 920,
+        "rows_with_any_qualified_t60_source": 797,
+        "season": 2024,
+        "target": "winner"
+      },
+      {
+        "all_sources_absent_rows": 130,
+        "rows": 934,
+        "rows_with_any_qualified_t60_source": 804,
+        "season": 2025,
+        "target": "winner"
+      },
+      {
+        "all_sources_absent_rows": 353,
+        "rows": 888,
+        "rows_with_any_qualified_t60_source": 535,
+        "season": 2026,
+        "target": "winner"
+      },
+      {
+        "all_sources_absent_rows": 54,
+        "rows": 920,
+        "rows_with_any_qualified_t60_source": 866,
+        "season": 2024,
+        "target": "margin"
+      },
+      {
+        "all_sources_absent_rows": 79,
+        "rows": 934,
+        "rows_with_any_qualified_t60_source": 855,
+        "season": 2025,
+        "target": "margin"
+      },
+      {
+        "all_sources_absent_rows": 278,
+        "rows": 888,
+        "rows_with_any_qualified_t60_source": 610,
+        "season": 2026,
+        "target": "margin"
+      },
+      {
+        "all_sources_absent_rows": 55,
+        "rows": 920,
+        "rows_with_any_qualified_t60_source": 865,
+        "season": 2024,
+        "target": "total"
+      },
+      {
+        "all_sources_absent_rows": 79,
+        "rows": 934,
+        "rows_with_any_qualified_t60_source": 855,
+        "season": 2025,
+        "target": "total"
+      },
+      {
+        "all_sources_absent_rows": 278,
+        "rows": 888,
+        "rows_with_any_qualified_t60_source": 610,
+        "season": 2026,
+        "target": "total"
+      }
+    ],
+    "coverage_denominator": "OBSERVED_COMPLETED_PLUS_PENDING_GAME_ROWS",
+    "coverage_is_scored_benchmark": false,
+    "explicit_missing_grid_cells": 348794,
+    "historical_possession_created": false,
+    "outside_feature_history_cells": 621,
+    "providers": [
+      {
+        "count_unit": "SOURCE_TARGET_GAME_CELLS; NOT_UNIQUE_GAMES",
+        "name": "DraftKings",
+        "qualified_grid_cells": 9122,
+        "qualified_pretest_grid_cells": 7371,
+        "status": "QUALIFIED_INPUT_WITH_HISTORY_GAPS"
+      },
+      {
+        "name": "Kalshi",
+        "status": "NATIVE_CONTRACT_ADAPTER_BLOCKED"
+      },
+      {
+        "name": "Polymarket Global",
+        "status": "NATIVE_CONTRACT_ADAPTER_BLOCKED"
+      },
+      {
+        "name": "Polymarket US",
+        "status": "NATIVE_CONTRACT_ADAPTER_BLOCKED"
+      }
+    ],
+    "qualified_grid_cells": 62956,
+    "total_grid_cells": 412371,
+    "unsupported_slots": 11
+  },
+  "storage": {
+    "aggregate_science_cap": null,
+    "checkpoint_collection_seconds": 1930.1323984609917,
+    "checkpoint_receipts": 5485,
+    "control_zip_bytes": 72851201,
+    "declared_descriptors": 541904,
+    "final_identity_verification_seconds": 29.117101516007097,
+    "identity_verification_workers": 24,
+    "inherited_payload_bytes_not_recopied": 38322889879,
+    "is_all_scientific_storage": false,
+    "large_unchanged_payloads_repacked": false,
+    "new_unique_payloads": 22877,
+    "new_uploaded_payload_bytes": 4614872404,
+    "part_limit_bytes": 536870912,
+    "physical_dependency_pins": 58005,
+    "physical_new_chunks": 22879,
+    "return_sha256": "a74a9d1ed2d41dc81f442bdaae7e18e2911d5e8c88c146023970c027ba5baec4",
+    "unique_path_pins": 167487,
+    "verification_is_scientific_fitting": false
+  }
+}

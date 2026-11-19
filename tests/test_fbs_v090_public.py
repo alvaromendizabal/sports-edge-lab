@@ -168,6 +168,24 @@ class PublishedDataTests(unittest.TestCase):
 
     def test_entire_pre_v090_readme_suffix_is_byte_preserved(self):
         content=(ROOT/'docs/fbs/README.md').read_bytes()
+        v099_end=b'<!-- FBS_V099_ACTUAL_RETURN_END -->\n\n'
+        if content.startswith(b'<!-- FBS_V099_ACTUAL_RETURN_START -->\n'):
+            content=content.split(v099_end,1)[1]
+        newest_start=b'<!-- FBS_V098_ACTUAL_RETURN_START -->\n'
+        newest_end=b'<!-- FBS_V098_ACTUAL_RETURN_END -->\n\n'
+        if content.startswith(newest_start):
+            self.assertEqual(content.count(newest_end),1)
+            content=content.split(newest_end,1)[1]
+        current_start=b'<!-- FBS_V097_ACTUAL_RETURN_START -->\n'
+        current_end=b'<!-- FBS_V097_ACTUAL_RETURN_END -->\n\n'
+        if content.startswith(current_start):
+            self.assertEqual(content.count(current_end),1)
+            content=content.split(current_end,1)[1]
+        latest_start=b'<!-- FBS_V093_READINESS_START -->\n'
+        latest_end=b'<!-- FBS_V093_READINESS_END -->\n\n'
+        if content.startswith(latest_start):
+            self.assertEqual(content.count(latest_end),1)
+            content=content.split(latest_end,1)[1]
         start=b'<!-- FBS_V090_VERIFIED_V089_REVIEW_START -->\n'
         end=b'<!-- FBS_V090_VERIFIED_V089_REVIEW_END -->\n\n'
         self.assertTrue(content.startswith(start))

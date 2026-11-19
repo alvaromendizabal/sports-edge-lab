@@ -1,0 +1,3893 @@
+{
+  "schema": "fbs.public.actual-and-continuation.v097",
+  "owner": "FBS",
+  "as_of": "2026-11-18T18:50:06.780603+00:00",
+  "publication": {
+    "source_only": true,
+    "merged": false,
+    "website_deployed": false,
+    "production_promoted": false
+  },
+  "execution": {
+    "release": "V096",
+    "run_id": "20261118T174548Z-4a5cc95a05-fbs096",
+    "observed_at": "2026-11-18T18:19:22.462298Z",
+    "child_exit_code": 0,
+    "supervisor_exit_code": 0,
+    "supervisor_status": "VERIFIED_RETURN_PUBLICATION_FINISHED",
+    "operationally_finished": true,
+    "return_integrity_verified": true,
+    "scientific_complete": false,
+    "resumable": true,
+    "registered_jobs": 936,
+    "completed_jobs": 936,
+    "reused_jobs": 624,
+    "new_model_fits": 312,
+    "new_calibrator_fits": 312,
+    "failed_fits": 0,
+    "registered_test_jobs_completed": 312,
+    "branch_counts": [
+      {
+        "label": "Source ablation",
+        "completed_jobs": 306,
+        "checkpoint_reused_jobs": 204,
+        "new_model_fits": 102,
+        "new_calibrator_fits": 102
+      },
+      {
+        "label": "Football group ablation",
+        "completed_jobs": 252,
+        "checkpoint_reused_jobs": 168,
+        "new_model_fits": 84,
+        "new_calibrator_fits": 84
+      },
+      {
+        "label": "Market components",
+        "completed_jobs": 252,
+        "checkpoint_reused_jobs": 168,
+        "new_model_fits": 84,
+        "new_calibrator_fits": 84
+      },
+      {
+        "label": "Football and market interaction",
+        "completed_jobs": 126,
+        "checkpoint_reused_jobs": 84,
+        "new_model_fits": 42,
+        "new_calibrator_fits": 42
+      }
+    ],
+    "new_callback_prediction_rows": 547872,
+    "materialized_blend_rows": 229488,
+    "materialized_blends_all_novel": false,
+    "scored_inventory_rows": 1846464,
+    "forecast_inventory_rows": 1934256,
+    "scored_inventory_includes_reuse": true,
+    "historical_failed_attempts": 6,
+    "operationally_finished_attempts": 1,
+    "fully_v13_complete_attempts": 0,
+    "tally_scope": "Authenticated V090, V091, V093, V095 and V096 attempts"
+  },
+  "cpu": {
+    "workers": 17,
+    "hard_ceiling": 24,
+    "native_threads_per_worker": 1,
+    "arbitrary_reserved_cores": 0,
+    "observed_fit_processes": 17,
+    "max_concurrent_fits": 17,
+    "max_concurrent_preparations": 17,
+    "dispatch_wall_seconds": 390.3660928870013,
+    "optimizer_cpu_seconds": 5512.199234847004,
+    "preparation_cpu_seconds": 372.46577840500015,
+    "other_callback_cpu_seconds": 578.5577803229917,
+    "scoring_wall_seconds": 267.65668098098104,
+    "scoring_cpu_seconds": 255.87204741000016,
+    "retained_scoring_wall_seconds": 59.30588980599714,
+    "retained_scoring_cpu_seconds": 57.99136599899998,
+    "prepared_queue_high_watermark": 33,
+    "pending_preparation_with_idle_slots_seconds": 0.005469643001561053,
+    "legacy_preparation_not_ready_seconds": 1.0083797460029018,
+    "legacy_not_ready_includes_busy_preparation": true,
+    "useful_gate_status": "PASS_REAL_WORK",
+    "useful_gate_fraction": 0.8700952337718296,
+    "useful_gate_seconds": 180.0783307629972,
+    "useful_gate_workers": 17,
+    "optimizer_gate_fraction": 0.798296958280953,
+    "optimizer_gate_status": "PASS_REAL_WORK",
+    "optimizer_completions_in_gate": 418,
+    "gate_includes_preparation": true,
+    "gate_completions_include_calibrators": true,
+    "end_queue_status": "CONDITIONAL_INSUFFICIENT_INDEPENDENT_WORK",
+    "whole_execution_wall_seconds": 2014.5009344049977
+  },
+  "cost": {
+    "estimated_full_host_usd": 1.438129833728012,
+    "measured_at": "2026-11-18T18:19:22.311153Z",
+    "boundary": "SUPERVISED_INVOCATION_START_THROUGH_THIS_MEASUREMENT",
+    "invoice": false,
+    "guard_usd": 200,
+    "wall_zero_waives_guard": false
+  },
+  "selection": {
+    "seasons": [
+      2024,
+      2025
+    ],
+    "test_season": 2026,
+    "primary_profile": "50/50",
+    "profiles": [
+      "50/50",
+      "40/60",
+      "30/70",
+      "20/80",
+      "10/90"
+    ],
+    "test_used_for_selection": false,
+    "season_training_weights": false,
+    "sensitivity_refits": 0,
+    "sensitivity_changes_predictions": false,
+    "test_previously_exposed": true,
+    "promotion": false,
+    "full_population_champion_eligible": false,
+    "evidence_class": "V13_FROZEN_RECONSTRUCTION",
+    "horizon_minutes": 120,
+    "leaders": [
+      {
+        "profile": "50/50",
+        "target": "winner",
+        "metric": "accuracy",
+        "policy_alias": "Winner policy B",
+        "family": "CatBoost",
+        "feature_group": "Market components",
+        "variant": "calibrated",
+        "annual_values": [
+          0.7464635473340587,
+          0.7644539614561028,
+          0.7470198675496689
+        ],
+        "scored_n": [
+          919,
+          934,
+          755
+        ],
+        "expected_n": [
+          919,
+          934,
+          755
+        ],
+        "selection_score": 0.7554587543950808,
+        "primary_policy_rank": 1,
+        "same_policy_as_primary": true
+      },
+      {
+        "profile": "50/50",
+        "target": "winner",
+        "metric": "brier",
+        "policy_alias": "Winner policy A",
+        "family": "LightGBM",
+        "feature_group": "Football group ablation",
+        "variant": "raw",
+        "annual_values": [
+          0.1716959672947586,
+          0.1625545308284089,
+          0.1621951532089328
+        ],
+        "scored_n": [
+          919,
+          934,
+          755
+        ],
+        "expected_n": [
+          919,
+          934,
+          755
+        ],
+        "selection_score": 0.16712524906158377,
+        "primary_policy_rank": 1,
+        "same_policy_as_primary": true
+      },
+      {
+        "profile": "50/50",
+        "target": "winner",
+        "metric": "log_loss",
+        "policy_alias": "Winner policy A",
+        "family": "LightGBM",
+        "feature_group": "Football group ablation",
+        "variant": "raw",
+        "annual_values": [
+          0.5115414017176997,
+          0.48872067355093085,
+          0.48672496211554384
+        ],
+        "scored_n": [
+          919,
+          934,
+          755
+        ],
+        "expected_n": [
+          919,
+          934,
+          755
+        ],
+        "selection_score": 0.5001310376343153,
+        "primary_policy_rank": 1,
+        "same_policy_as_primary": true
+      },
+      {
+        "profile": "50/50",
+        "target": "margin",
+        "metric": "mae",
+        "policy_alias": "Margin policy B",
+        "family": "LightGBM",
+        "feature_group": "Football and market interaction",
+        "variant": "calibrated",
+        "annual_values": [
+          12.809154703846028,
+          12.242272685982783,
+          12.694324797554692
+        ],
+        "scored_n": [
+          919,
+          934,
+          755
+        ],
+        "expected_n": [
+          919,
+          934,
+          755
+        ],
+        "selection_score": 12.525713694914405,
+        "primary_policy_rank": 1,
+        "same_policy_as_primary": true
+      },
+      {
+        "profile": "50/50",
+        "target": "margin",
+        "metric": "rmse",
+        "policy_alias": "Margin policy B",
+        "family": "LightGBM",
+        "feature_group": "Football and market interaction",
+        "variant": "calibrated",
+        "annual_values": [
+          16.216214573213374,
+          15.562754148752418,
+          15.971703353887222
+        ],
+        "scored_n": [
+          919,
+          934,
+          755
+        ],
+        "expected_n": [
+          919,
+          934,
+          755
+        ],
+        "selection_score": 15.889484360982896,
+        "primary_policy_rank": 1,
+        "same_policy_as_primary": true
+      },
+      {
+        "profile": "50/50",
+        "target": "margin",
+        "metric": "crps",
+        "policy_alias": "Margin policy A",
+        "family": "Extra Trees",
+        "feature_group": "Football group ablation",
+        "variant": "calibrated",
+        "annual_values": [
+          9.25822548817149,
+          8.74997871668412,
+          9.004382169900733
+        ],
+        "scored_n": [
+          919,
+          934,
+          755
+        ],
+        "expected_n": [
+          919,
+          934,
+          755
+        ],
+        "selection_score": 9.004102102427805,
+        "primary_policy_rank": 1,
+        "same_policy_as_primary": true
+      },
+      {
+        "profile": "50/50",
+        "target": "total",
+        "metric": "mae",
+        "policy_alias": "Total policy B",
+        "family": "CatBoost",
+        "feature_group": "Market components",
+        "variant": "raw",
+        "annual_values": [
+          12.529965295800329,
+          12.465253863252372,
+          12.834206921522872
+        ],
+        "scored_n": [
+          919,
+          934,
+          755
+        ],
+        "expected_n": [
+          919,
+          934,
+          755
+        ],
+        "selection_score": 12.497609579526351,
+        "primary_policy_rank": 1,
+        "same_policy_as_primary": true
+      },
+      {
+        "profile": "50/50",
+        "target": "total",
+        "metric": "rmse",
+        "policy_alias": "Total policy B",
+        "family": "CatBoost",
+        "feature_group": "Market components",
+        "variant": "raw",
+        "annual_values": [
+          15.955245411740668,
+          15.445535517385212,
+          15.933972835597466
+        ],
+        "scored_n": [
+          919,
+          934,
+          755
+        ],
+        "expected_n": [
+          919,
+          934,
+          755
+        ],
+        "selection_score": 15.70039046456294,
+        "primary_policy_rank": 1,
+        "same_policy_as_primary": true
+      },
+      {
+        "profile": "50/50",
+        "target": "total",
+        "metric": "crps",
+        "policy_alias": "Total policy A",
+        "family": "CatBoost",
+        "feature_group": "Market components",
+        "variant": "calibrated",
+        "annual_values": [
+          8.986417581665181,
+          8.839125374083435,
+          8.99276897179135
+        ],
+        "scored_n": [
+          919,
+          934,
+          755
+        ],
+        "expected_n": [
+          919,
+          934,
+          755
+        ],
+        "selection_score": 8.912771477874308,
+        "primary_policy_rank": 1,
+        "same_policy_as_primary": true
+      },
+      {
+        "profile": "40/60",
+        "target": "winner",
+        "metric": "accuracy",
+        "policy_alias": "Winner policy B",
+        "family": "CatBoost",
+        "feature_group": "Market components",
+        "variant": "calibrated",
+        "annual_values": [
+          0.7464635473340587,
+          0.7644539614561028,
+          0.7470198675496689
+        ],
+        "scored_n": [
+          919,
+          934,
+          755
+        ],
+        "expected_n": [
+          919,
+          934,
+          755
+        ],
+        "selection_score": 0.7572577958072851,
+        "primary_policy_rank": 1,
+        "same_policy_as_primary": true
+      },
+      {
+        "profile": "40/60",
+        "target": "winner",
+        "metric": "brier",
+        "policy_alias": "Winner policy A",
+        "family": "LightGBM",
+        "feature_group": "Football group ablation",
+        "variant": "raw",
+        "annual_values": [
+          0.1716959672947586,
+          0.1625545308284089,
+          0.1621951532089328
+        ],
+        "scored_n": [
+          919,
+          934,
+          755
+        ],
+        "expected_n": [
+          919,
+          934,
+          755
+        ],
+        "selection_score": 0.16621110541494877,
+        "primary_policy_rank": 1,
+        "same_policy_as_primary": true
+      },
+      {
+        "profile": "40/60",
+        "target": "winner",
+        "metric": "log_loss",
+        "policy_alias": "Winner policy A",
+        "family": "LightGBM",
+        "feature_group": "Football group ablation",
+        "variant": "raw",
+        "annual_values": [
+          0.5115414017176997,
+          0.48872067355093085,
+          0.48672496211554384
+        ],
+        "scored_n": [
+          919,
+          934,
+          755
+        ],
+        "expected_n": [
+          919,
+          934,
+          755
+        ],
+        "selection_score": 0.4978489648176384,
+        "primary_policy_rank": 1,
+        "same_policy_as_primary": true
+      },
+      {
+        "profile": "40/60",
+        "target": "margin",
+        "metric": "mae",
+        "policy_alias": "Margin policy B",
+        "family": "LightGBM",
+        "feature_group": "Football and market interaction",
+        "variant": "calibrated",
+        "annual_values": [
+          12.809154703846028,
+          12.242272685982783,
+          12.694324797554692
+        ],
+        "scored_n": [
+          919,
+          934,
+          755
+        ],
+        "expected_n": [
+          919,
+          934,
+          755
+        ],
+        "selection_score": 12.46902549312808,
+        "primary_policy_rank": 1,
+        "same_policy_as_primary": true
+      },
+      {
+        "profile": "40/60",
+        "target": "margin",
+        "metric": "rmse",
+        "policy_alias": "Margin policy B",
+        "family": "LightGBM",
+        "feature_group": "Football and market interaction",
+        "variant": "calibrated",
+        "annual_values": [
+          16.216214573213374,
+          15.562754148752418,
+          15.971703353887222
+        ],
+        "scored_n": [
+          919,
+          934,
+          755
+        ],
+        "expected_n": [
+          919,
+          934,
+          755
+        ],
+        "selection_score": 15.8241383185368,
+        "primary_policy_rank": 1,
+        "same_policy_as_primary": true
+      },
+      {
+        "profile": "40/60",
+        "target": "margin",
+        "metric": "crps",
+        "policy_alias": "Margin policy A",
+        "family": "Extra Trees",
+        "feature_group": "Football group ablation",
+        "variant": "calibrated",
+        "annual_values": [
+          9.25822548817149,
+          8.74997871668412,
+          9.004382169900733
+        ],
+        "scored_n": [
+          919,
+          934,
+          755
+        ],
+        "expected_n": [
+          919,
+          934,
+          755
+        ],
+        "selection_score": 8.953277425279069,
+        "primary_policy_rank": 1,
+        "same_policy_as_primary": true
+      },
+      {
+        "profile": "40/60",
+        "target": "total",
+        "metric": "mae",
+        "policy_alias": "Total policy B",
+        "family": "CatBoost",
+        "feature_group": "Market components",
+        "variant": "raw",
+        "annual_values": [
+          12.529965295800329,
+          12.465253863252372,
+          12.834206921522872
+        ],
+        "scored_n": [
+          919,
+          934,
+          755
+        ],
+        "expected_n": [
+          919,
+          934,
+          755
+        ],
+        "selection_score": 12.491138436271555,
+        "primary_policy_rank": 1,
+        "same_policy_as_primary": true
+      },
+      {
+        "profile": "40/60",
+        "target": "total",
+        "metric": "rmse",
+        "policy_alias": "Total policy B",
+        "family": "CatBoost",
+        "feature_group": "Market components",
+        "variant": "raw",
+        "annual_values": [
+          15.955245411740668,
+          15.445535517385212,
+          15.933972835597466
+        ],
+        "scored_n": [
+          919,
+          934,
+          755
+        ],
+        "expected_n": [
+          919,
+          934,
+          755
+        ],
+        "selection_score": 15.649419475127395,
+        "primary_policy_rank": 1,
+        "same_policy_as_primary": true
+      },
+      {
+        "profile": "40/60",
+        "target": "total",
+        "metric": "crps",
+        "policy_alias": "Total policy A",
+        "family": "CatBoost",
+        "feature_group": "Market components",
+        "variant": "calibrated",
+        "annual_values": [
+          8.986417581665181,
+          8.839125374083435,
+          8.99276897179135
+        ],
+        "scored_n": [
+          919,
+          934,
+          755
+        ],
+        "expected_n": [
+          919,
+          934,
+          755
+        ],
+        "selection_score": 8.898042257116133,
+        "primary_policy_rank": 1,
+        "same_policy_as_primary": true
+      },
+      {
+        "profile": "30/70",
+        "target": "winner",
+        "metric": "accuracy",
+        "policy_alias": "Winner policy B",
+        "family": "CatBoost",
+        "feature_group": "Market components",
+        "variant": "calibrated",
+        "annual_values": [
+          0.7464635473340587,
+          0.7644539614561028,
+          0.7470198675496689
+        ],
+        "scored_n": [
+          919,
+          934,
+          755
+        ],
+        "expected_n": [
+          919,
+          934,
+          755
+        ],
+        "selection_score": 0.7590568372194895,
+        "primary_policy_rank": 1,
+        "same_policy_as_primary": true
+      },
+      {
+        "profile": "30/70",
+        "target": "winner",
+        "metric": "brier",
+        "policy_alias": "Winner policy A",
+        "family": "LightGBM",
+        "feature_group": "Football group ablation",
+        "variant": "raw",
+        "annual_values": [
+          0.1716959672947586,
+          0.1625545308284089,
+          0.1621951532089328
+        ],
+        "scored_n": [
+          919,
+          934,
+          755
+        ],
+        "expected_n": [
+          919,
+          934,
+          755
+        ],
+        "selection_score": 0.1652969617683138,
+        "primary_policy_rank": 1,
+        "same_policy_as_primary": true
+      },
+      {
+        "profile": "30/70",
+        "target": "winner",
+        "metric": "log_loss",
+        "policy_alias": "Winner policy A",
+        "family": "LightGBM",
+        "feature_group": "Football group ablation",
+        "variant": "raw",
+        "annual_values": [
+          0.5115414017176997,
+          0.48872067355093085,
+          0.48672496211554384
+        ],
+        "scored_n": [
+          919,
+          934,
+          755
+        ],
+        "expected_n": [
+          919,
+          934,
+          755
+        ],
+        "selection_score": 0.4955668920009615,
+        "primary_policy_rank": 1,
+        "same_policy_as_primary": true
+      },
+      {
+        "profile": "30/70",
+        "target": "margin",
+        "metric": "mae",
+        "policy_alias": "Margin policy B",
+        "family": "LightGBM",
+        "feature_group": "Football and market interaction",
+        "variant": "calibrated",
+        "annual_values": [
+          12.809154703846028,
+          12.242272685982783,
+          12.694324797554692
+        ],
+        "scored_n": [
+          919,
+          934,
+          755
+        ],
+        "expected_n": [
+          919,
+          934,
+          755
+        ],
+        "selection_score": 12.412337291341755,
+        "primary_policy_rank": 1,
+        "same_policy_as_primary": true
+      },
+      {
+        "profile": "30/70",
+        "target": "margin",
+        "metric": "rmse",
+        "policy_alias": "Margin policy B",
+        "family": "LightGBM",
+        "feature_group": "Football and market interaction",
+        "variant": "calibrated",
+        "annual_values": [
+          16.216214573213374,
+          15.562754148752418,
+          15.971703353887222
+        ],
+        "scored_n": [
+          919,
+          934,
+          755
+        ],
+        "expected_n": [
+          919,
+          934,
+          755
+        ],
+        "selection_score": 15.758792276090704,
+        "primary_policy_rank": 1,
+        "same_policy_as_primary": true
+      },
+      {
+        "profile": "30/70",
+        "target": "margin",
+        "metric": "crps",
+        "policy_alias": "Margin policy A",
+        "family": "Extra Trees",
+        "feature_group": "Football group ablation",
+        "variant": "calibrated",
+        "annual_values": [
+          9.25822548817149,
+          8.74997871668412,
+          9.004382169900733
+        ],
+        "scored_n": [
+          919,
+          934,
+          755
+        ],
+        "expected_n": [
+          919,
+          934,
+          755
+        ],
+        "selection_score": 8.902452748130331,
+        "primary_policy_rank": 1,
+        "same_policy_as_primary": true
+      },
+      {
+        "profile": "30/70",
+        "target": "total",
+        "metric": "mae",
+        "policy_alias": "Total policy B",
+        "family": "CatBoost",
+        "feature_group": "Market components",
+        "variant": "raw",
+        "annual_values": [
+          12.529965295800329,
+          12.465253863252372,
+          12.834206921522872
+        ],
+        "scored_n": [
+          919,
+          934,
+          755
+        ],
+        "expected_n": [
+          919,
+          934,
+          755
+        ],
+        "selection_score": 12.484667293016757,
+        "primary_policy_rank": 1,
+        "same_policy_as_primary": true
+      },
+      {
+        "profile": "30/70",
+        "target": "total",
+        "metric": "rmse",
+        "policy_alias": "Total policy B",
+        "family": "CatBoost",
+        "feature_group": "Market components",
+        "variant": "raw",
+        "annual_values": [
+          15.955245411740668,
+          15.445535517385212,
+          15.933972835597466
+        ],
+        "scored_n": [
+          919,
+          934,
+          755
+        ],
+        "expected_n": [
+          919,
+          934,
+          755
+        ],
+        "selection_score": 15.598448485691847,
+        "primary_policy_rank": 1,
+        "same_policy_as_primary": true
+      },
+      {
+        "profile": "30/70",
+        "target": "total",
+        "metric": "crps",
+        "policy_alias": "Total policy A",
+        "family": "CatBoost",
+        "feature_group": "Market components",
+        "variant": "calibrated",
+        "annual_values": [
+          8.986417581665181,
+          8.839125374083435,
+          8.99276897179135
+        ],
+        "scored_n": [
+          919,
+          934,
+          755
+        ],
+        "expected_n": [
+          919,
+          934,
+          755
+        ],
+        "selection_score": 8.883313036357958,
+        "primary_policy_rank": 1,
+        "same_policy_as_primary": true
+      },
+      {
+        "profile": "20/80",
+        "target": "winner",
+        "metric": "accuracy",
+        "policy_alias": "Winner policy B",
+        "family": "CatBoost",
+        "feature_group": "Market components",
+        "variant": "calibrated",
+        "annual_values": [
+          0.7464635473340587,
+          0.7644539614561028,
+          0.7470198675496689
+        ],
+        "scored_n": [
+          919,
+          934,
+          755
+        ],
+        "expected_n": [
+          919,
+          934,
+          755
+        ],
+        "selection_score": 0.760855878631694,
+        "primary_policy_rank": 1,
+        "same_policy_as_primary": true
+      },
+      {
+        "profile": "20/80",
+        "target": "winner",
+        "metric": "brier",
+        "policy_alias": "Winner policy A",
+        "family": "LightGBM",
+        "feature_group": "Football group ablation",
+        "variant": "raw",
+        "annual_values": [
+          0.1716959672947586,
+          0.1625545308284089,
+          0.1621951532089328
+        ],
+        "scored_n": [
+          919,
+          934,
+          755
+        ],
+        "expected_n": [
+          919,
+          934,
+          755
+        ],
+        "selection_score": 0.16438281812167885,
+        "primary_policy_rank": 1,
+        "same_policy_as_primary": true
+      },
+      {
+        "profile": "20/80",
+        "target": "winner",
+        "metric": "log_loss",
+        "policy_alias": "Winner policy A",
+        "family": "LightGBM",
+        "feature_group": "Football group ablation",
+        "variant": "raw",
+        "annual_values": [
+          0.5115414017176997,
+          0.48872067355093085,
+          0.48672496211554384
+        ],
+        "scored_n": [
+          919,
+          934,
+          755
+        ],
+        "expected_n": [
+          919,
+          934,
+          755
+        ],
+        "selection_score": 0.49328481918428463,
+        "primary_policy_rank": 1,
+        "same_policy_as_primary": true
+      },
+      {
+        "profile": "20/80",
+        "target": "margin",
+        "metric": "mae",
+        "policy_alias": "Margin policy B",
+        "family": "LightGBM",
+        "feature_group": "Football and market interaction",
+        "variant": "calibrated",
+        "annual_values": [
+          12.809154703846028,
+          12.242272685982783,
+          12.694324797554692
+        ],
+        "scored_n": [
+          919,
+          934,
+          755
+        ],
+        "expected_n": [
+          919,
+          934,
+          755
+        ],
+        "selection_score": 12.355649089555433,
+        "primary_policy_rank": 1,
+        "same_policy_as_primary": true
+      },
+      {
+        "profile": "20/80",
+        "target": "margin",
+        "metric": "rmse",
+        "policy_alias": "Margin policy C",
+        "family": "Fixed arithmetic blend",
+        "feature_group": "Fixed equal blend",
+        "variant": "calibrated",
+        "annual_values": [
+          16.35391604235785,
+          15.507771529722447,
+          15.927334202426609
+        ],
+        "scored_n": [
+          919,
+          934,
+          755
+        ],
+        "expected_n": [
+          919,
+          934,
+          755
+        ],
+        "selection_score": 15.677000432249528,
+        "primary_policy_rank": 5,
+        "same_policy_as_primary": false
+      },
+      {
+        "profile": "20/80",
+        "target": "margin",
+        "metric": "crps",
+        "policy_alias": "Margin policy A",
+        "family": "Extra Trees",
+        "feature_group": "Football group ablation",
+        "variant": "calibrated",
+        "annual_values": [
+          9.25822548817149,
+          8.74997871668412,
+          9.004382169900733
+        ],
+        "scored_n": [
+          919,
+          934,
+          755
+        ],
+        "expected_n": [
+          919,
+          934,
+          755
+        ],
+        "selection_score": 8.851628070981596,
+        "primary_policy_rank": 1,
+        "same_policy_as_primary": true
+      },
+      {
+        "profile": "20/80",
+        "target": "total",
+        "metric": "mae",
+        "policy_alias": "Total policy B",
+        "family": "CatBoost",
+        "feature_group": "Market components",
+        "variant": "raw",
+        "annual_values": [
+          12.529965295800329,
+          12.465253863252372,
+          12.834206921522872
+        ],
+        "scored_n": [
+          919,
+          934,
+          755
+        ],
+        "expected_n": [
+          919,
+          934,
+          755
+        ],
+        "selection_score": 12.478196149761963,
+        "primary_policy_rank": 1,
+        "same_policy_as_primary": true
+      },
+      {
+        "profile": "20/80",
+        "target": "total",
+        "metric": "rmse",
+        "policy_alias": "Total policy D",
+        "family": "Linear",
+        "feature_group": "Market components",
+        "variant": "raw",
+        "annual_values": [
+          16.189471395613165,
+          15.384864649552046,
+          15.85161342498969
+        ],
+        "scored_n": [
+          919,
+          934,
+          755
+        ],
+        "expected_n": [
+          919,
+          934,
+          755
+        ],
+        "selection_score": 15.545785998764272,
+        "primary_policy_rank": 2,
+        "same_policy_as_primary": false
+      },
+      {
+        "profile": "20/80",
+        "target": "total",
+        "metric": "crps",
+        "policy_alias": "Total policy A",
+        "family": "CatBoost",
+        "feature_group": "Market components",
+        "variant": "calibrated",
+        "annual_values": [
+          8.986417581665181,
+          8.839125374083435,
+          8.99276897179135
+        ],
+        "scored_n": [
+          919,
+          934,
+          755
+        ],
+        "expected_n": [
+          919,
+          934,
+          755
+        ],
+        "selection_score": 8.868583815599786,
+        "primary_policy_rank": 1,
+        "same_policy_as_primary": true
+      },
+      {
+        "profile": "10/90",
+        "target": "winner",
+        "metric": "accuracy",
+        "policy_alias": "Winner policy C",
+        "family": "Linear",
+        "feature_group": "Market components",
+        "variant": "raw",
+        "annual_values": [
+          0.73449401523395,
+          0.7665952890792291,
+          0.752317880794702
+        ],
+        "scored_n": [
+          919,
+          934,
+          755
+        ],
+        "expected_n": [
+          919,
+          934,
+          755
+        ],
+        "selection_score": 0.7633851616947012,
+        "primary_policy_rank": 3,
+        "same_policy_as_primary": false
+      },
+      {
+        "profile": "10/90",
+        "target": "winner",
+        "metric": "brier",
+        "policy_alias": "Winner policy A",
+        "family": "LightGBM",
+        "feature_group": "Football group ablation",
+        "variant": "raw",
+        "annual_values": [
+          0.1716959672947586,
+          0.1625545308284089,
+          0.1621951532089328
+        ],
+        "scored_n": [
+          919,
+          934,
+          755
+        ],
+        "expected_n": [
+          919,
+          934,
+          755
+        ],
+        "selection_score": 0.16346867447504387,
+        "primary_policy_rank": 1,
+        "same_policy_as_primary": true
+      },
+      {
+        "profile": "10/90",
+        "target": "winner",
+        "metric": "log_loss",
+        "policy_alias": "Winner policy A",
+        "family": "LightGBM",
+        "feature_group": "Football group ablation",
+        "variant": "raw",
+        "annual_values": [
+          0.5115414017176997,
+          0.48872067355093085,
+          0.48672496211554384
+        ],
+        "scored_n": [
+          919,
+          934,
+          755
+        ],
+        "expected_n": [
+          919,
+          934,
+          755
+        ],
+        "selection_score": 0.49100274636760777,
+        "primary_policy_rank": 1,
+        "same_policy_as_primary": true
+      },
+      {
+        "profile": "10/90",
+        "target": "margin",
+        "metric": "mae",
+        "policy_alias": "Margin policy B",
+        "family": "LightGBM",
+        "feature_group": "Football and market interaction",
+        "variant": "calibrated",
+        "annual_values": [
+          12.809154703846028,
+          12.242272685982783,
+          12.694324797554692
+        ],
+        "scored_n": [
+          919,
+          934,
+          755
+        ],
+        "expected_n": [
+          919,
+          934,
+          755
+        ],
+        "selection_score": 12.298960887769107,
+        "primary_policy_rank": 1,
+        "same_policy_as_primary": true
+      },
+      {
+        "profile": "10/90",
+        "target": "margin",
+        "metric": "rmse",
+        "policy_alias": "Margin policy A",
+        "family": "Extra Trees",
+        "feature_group": "Football group ablation",
+        "variant": "calibrated",
+        "annual_values": [
+          16.388102448492635,
+          15.500741437662377,
+          15.996145188455728
+        ],
+        "scored_n": [
+          919,
+          934,
+          755
+        ],
+        "expected_n": [
+          919,
+          934,
+          755
+        ],
+        "selection_score": 15.589477538745404,
+        "primary_policy_rank": 11,
+        "same_policy_as_primary": false
+      },
+      {
+        "profile": "10/90",
+        "target": "margin",
+        "metric": "crps",
+        "policy_alias": "Margin policy A",
+        "family": "Extra Trees",
+        "feature_group": "Football group ablation",
+        "variant": "calibrated",
+        "annual_values": [
+          9.25822548817149,
+          8.74997871668412,
+          9.004382169900733
+        ],
+        "scored_n": [
+          919,
+          934,
+          755
+        ],
+        "expected_n": [
+          919,
+          934,
+          755
+        ],
+        "selection_score": 8.800803393832858,
+        "primary_policy_rank": 1,
+        "same_policy_as_primary": true
+      },
+      {
+        "profile": "10/90",
+        "target": "total",
+        "metric": "mae",
+        "policy_alias": "Total policy D",
+        "family": "Linear",
+        "feature_group": "Market components",
+        "variant": "raw",
+        "annual_values": [
+          12.85952379350413,
+          12.393048006914178,
+          12.720305377919033
+        ],
+        "scored_n": [
+          919,
+          934,
+          755
+        ],
+        "expected_n": [
+          919,
+          934,
+          755
+        ],
+        "selection_score": 12.439695585573173,
+        "primary_policy_rank": 2,
+        "same_policy_as_primary": false
+      },
+      {
+        "profile": "10/90",
+        "target": "total",
+        "metric": "rmse",
+        "policy_alias": "Total policy D",
+        "family": "Linear",
+        "feature_group": "Market components",
+        "variant": "raw",
+        "annual_values": [
+          16.189471395613165,
+          15.384864649552046,
+          15.85161342498969
+        ],
+        "scored_n": [
+          919,
+          934,
+          755
+        ],
+        "expected_n": [
+          919,
+          934,
+          755
+        ],
+        "selection_score": 15.465325324158158,
+        "primary_policy_rank": 2,
+        "same_policy_as_primary": false
+      },
+      {
+        "profile": "10/90",
+        "target": "total",
+        "metric": "crps",
+        "policy_alias": "Total policy C",
+        "family": "Linear",
+        "feature_group": "Market components",
+        "variant": "calibrated",
+        "annual_values": [
+          9.287360609794314,
+          8.802794613057575,
+          8.940638013917466
+        ],
+        "scored_n": [
+          919,
+          934,
+          755
+        ],
+        "expected_n": [
+          919,
+          934,
+          755
+        ],
+        "selection_score": 8.851251212731249,
+        "primary_policy_rank": 2,
+        "same_policy_as_primary": false
+      }
+    ]
+  },
+  "population": {
+    "completed_test_games": 755,
+    "pending_test_games": 133,
+    "test_policy_count": 1105,
+    "test_policies_with_full_known_completed_coverage": 1105,
+    "official_population_complete": false,
+    "postseason_completeness_proven": false,
+    "ungraded_archived_2024_rows": 1,
+    "game_rows_removed_for_coverage": 0,
+    "retained_policy_count": 397,
+    "retained_predictions_changed": false,
+    "retained_pending_groups": [
+      {
+        "policies": 288,
+        "covered": 123,
+        "expected": 133
+      },
+      {
+        "policies": 109,
+        "covered": 93,
+        "expected": 133
+      }
+    ],
+    "frozen_context_pending_feature_gaps_per_target": 10
+  },
+  "sources": {
+    "as_of": "2026-11-18T17:55:09.881268Z",
+    "qualification_boundary": "2026-11-18T17:30:00Z",
+    "coverage_rows": 2970,
+    "bookmakers": [
+      "betmgm",
+      "betonlineag",
+      "betrivers",
+      "betus",
+      "bovada",
+      "draftkings",
+      "fanatics",
+      "fanduel",
+      "kalshi",
+      "lowvig",
+      "mybookieag",
+      "pointsbetus",
+      "polymarket",
+      "polymarket_us",
+      "superbook",
+      "unibet_us",
+      "williamhill_us",
+      "wynnbet"
+    ],
+    "routes": [
+      "kalshi_native",
+      "polymarket_native",
+      "polymarket_us_native",
+      "the_odds_api_v4"
+    ],
+    "horizons": [
+      "T15m",
+      "T1m",
+      "T24h",
+      "T2h",
+      "T30m",
+      "T5m",
+      "T60m",
+      "T6h",
+      "T72h",
+      "last_pregame_observed",
+      "opening_observed"
+    ],
+    "current_qualification_jobs_completed": 483,
+    "qualified_current_shards": 13378,
+    "historical_jobs_completed": 859,
+    "new_market_provider_requests": 0,
+    "coverage_is_scored_benchmark": false,
+    "historical_possession_created": false,
+    "t120_completed_coverage": [
+      {
+        "bookmaker": "kalshi",
+        "source_route": "kalshi_native",
+        "season": 2024,
+        "target": "margin",
+        "expected_n": 919,
+        "feature_qualified_n": 0,
+        "reference_n": 0,
+        "predictive_baseline_qualified_n": 0,
+        "strict_original_availability_qualified_n": 0,
+        "missing_reason_counts": {
+          "NATIVE_EXCHANGE_CONTRACT_AND_SOURCE_ADAPTER_NOT_BOUND": 919,
+          "NO_CLOCK_VALID_QUOTE_WITHIN_REGISTERED_AGE": 919,
+          "SUPPLIER_ROUTE_RESEARCH_RIGHTS_UNVERIFIED": 919
+        }
+      },
+      {
+        "bookmaker": "kalshi",
+        "source_route": "kalshi_native",
+        "season": 2024,
+        "target": "total",
+        "expected_n": 919,
+        "feature_qualified_n": 0,
+        "reference_n": 0,
+        "predictive_baseline_qualified_n": 0,
+        "strict_original_availability_qualified_n": 0,
+        "missing_reason_counts": {
+          "NATIVE_EXCHANGE_CONTRACT_AND_SOURCE_ADAPTER_NOT_BOUND": 919,
+          "NO_CLOCK_VALID_QUOTE_WITHIN_REGISTERED_AGE": 919,
+          "SUPPLIER_ROUTE_RESEARCH_RIGHTS_UNVERIFIED": 919
+        }
+      },
+      {
+        "bookmaker": "kalshi",
+        "source_route": "kalshi_native",
+        "season": 2024,
+        "target": "winner",
+        "expected_n": 919,
+        "feature_qualified_n": 0,
+        "reference_n": 0,
+        "predictive_baseline_qualified_n": 0,
+        "strict_original_availability_qualified_n": 0,
+        "missing_reason_counts": {
+          "NATIVE_EXCHANGE_CONTRACT_AND_SOURCE_ADAPTER_NOT_BOUND": 919,
+          "NO_CLOCK_VALID_QUOTE_WITHIN_REGISTERED_AGE": 919,
+          "SUPPLIER_ROUTE_RESEARCH_RIGHTS_UNVERIFIED": 919
+        }
+      },
+      {
+        "bookmaker": "polymarket",
+        "source_route": "polymarket_native",
+        "season": 2024,
+        "target": "margin",
+        "expected_n": 919,
+        "feature_qualified_n": 0,
+        "reference_n": 0,
+        "predictive_baseline_qualified_n": 0,
+        "strict_original_availability_qualified_n": 0,
+        "missing_reason_counts": {
+          "NATIVE_EXCHANGE_CONTRACT_AND_SOURCE_ADAPTER_NOT_BOUND": 919,
+          "NO_CLOCK_VALID_QUOTE_WITHIN_REGISTERED_AGE": 919,
+          "SUPPLIER_ROUTE_RESEARCH_RIGHTS_UNVERIFIED": 919
+        }
+      },
+      {
+        "bookmaker": "polymarket",
+        "source_route": "polymarket_native",
+        "season": 2024,
+        "target": "total",
+        "expected_n": 919,
+        "feature_qualified_n": 0,
+        "reference_n": 0,
+        "predictive_baseline_qualified_n": 0,
+        "strict_original_availability_qualified_n": 0,
+        "missing_reason_counts": {
+          "NATIVE_EXCHANGE_CONTRACT_AND_SOURCE_ADAPTER_NOT_BOUND": 919,
+          "NO_CLOCK_VALID_QUOTE_WITHIN_REGISTERED_AGE": 919,
+          "SUPPLIER_ROUTE_RESEARCH_RIGHTS_UNVERIFIED": 919
+        }
+      },
+      {
+        "bookmaker": "polymarket",
+        "source_route": "polymarket_native",
+        "season": 2024,
+        "target": "winner",
+        "expected_n": 919,
+        "feature_qualified_n": 0,
+        "reference_n": 0,
+        "predictive_baseline_qualified_n": 0,
+        "strict_original_availability_qualified_n": 0,
+        "missing_reason_counts": {
+          "NATIVE_EXCHANGE_CONTRACT_AND_SOURCE_ADAPTER_NOT_BOUND": 919,
+          "NO_CLOCK_VALID_QUOTE_WITHIN_REGISTERED_AGE": 919,
+          "SUPPLIER_ROUTE_RESEARCH_RIGHTS_UNVERIFIED": 919
+        }
+      },
+      {
+        "bookmaker": "polymarket_us",
+        "source_route": "polymarket_us_native",
+        "season": 2024,
+        "target": "margin",
+        "expected_n": 919,
+        "feature_qualified_n": 0,
+        "reference_n": 0,
+        "predictive_baseline_qualified_n": 0,
+        "strict_original_availability_qualified_n": 0,
+        "missing_reason_counts": {
+          "NATIVE_EXCHANGE_CONTRACT_AND_SOURCE_ADAPTER_NOT_BOUND": 919,
+          "NO_CLOCK_VALID_QUOTE_WITHIN_REGISTERED_AGE": 919,
+          "SUPPLIER_ROUTE_RESEARCH_RIGHTS_UNVERIFIED": 919
+        }
+      },
+      {
+        "bookmaker": "polymarket_us",
+        "source_route": "polymarket_us_native",
+        "season": 2024,
+        "target": "total",
+        "expected_n": 919,
+        "feature_qualified_n": 0,
+        "reference_n": 0,
+        "predictive_baseline_qualified_n": 0,
+        "strict_original_availability_qualified_n": 0,
+        "missing_reason_counts": {
+          "NATIVE_EXCHANGE_CONTRACT_AND_SOURCE_ADAPTER_NOT_BOUND": 919,
+          "NO_CLOCK_VALID_QUOTE_WITHIN_REGISTERED_AGE": 919,
+          "SUPPLIER_ROUTE_RESEARCH_RIGHTS_UNVERIFIED": 919
+        }
+      },
+      {
+        "bookmaker": "polymarket_us",
+        "source_route": "polymarket_us_native",
+        "season": 2024,
+        "target": "winner",
+        "expected_n": 919,
+        "feature_qualified_n": 0,
+        "reference_n": 0,
+        "predictive_baseline_qualified_n": 0,
+        "strict_original_availability_qualified_n": 0,
+        "missing_reason_counts": {
+          "NATIVE_EXCHANGE_CONTRACT_AND_SOURCE_ADAPTER_NOT_BOUND": 919,
+          "NO_CLOCK_VALID_QUOTE_WITHIN_REGISTERED_AGE": 919,
+          "SUPPLIER_ROUTE_RESEARCH_RIGHTS_UNVERIFIED": 919
+        }
+      },
+      {
+        "bookmaker": "betmgm",
+        "source_route": "the_odds_api_v4",
+        "season": 2024,
+        "target": "margin",
+        "expected_n": 919,
+        "feature_qualified_n": 526,
+        "reference_n": 526,
+        "predictive_baseline_qualified_n": 0,
+        "strict_original_availability_qualified_n": 0,
+        "missing_reason_counts": {
+          "NO_CLOCK_VALID_QUOTE_WITHIN_REGISTERED_AGE": 393
+        }
+      },
+      {
+        "bookmaker": "betmgm",
+        "source_route": "the_odds_api_v4",
+        "season": 2024,
+        "target": "total",
+        "expected_n": 919,
+        "feature_qualified_n": 538,
+        "reference_n": 538,
+        "predictive_baseline_qualified_n": 0,
+        "strict_original_availability_qualified_n": 0,
+        "missing_reason_counts": {
+          "NO_CLOCK_VALID_QUOTE_WITHIN_REGISTERED_AGE": 381
+        }
+      },
+      {
+        "bookmaker": "betmgm",
+        "source_route": "the_odds_api_v4",
+        "season": 2024,
+        "target": "winner",
+        "expected_n": 919,
+        "feature_qualified_n": 493,
+        "reference_n": 493,
+        "predictive_baseline_qualified_n": 0,
+        "strict_original_availability_qualified_n": 0,
+        "missing_reason_counts": {
+          "NO_CLOCK_VALID_QUOTE_WITHIN_REGISTERED_AGE": 426
+        }
+      },
+      {
+        "bookmaker": "betonlineag",
+        "source_route": "the_odds_api_v4",
+        "season": 2024,
+        "target": "margin",
+        "expected_n": 919,
+        "feature_qualified_n": 607,
+        "reference_n": 607,
+        "predictive_baseline_qualified_n": 0,
+        "strict_original_availability_qualified_n": 0,
+        "missing_reason_counts": {
+          "NO_CLOCK_VALID_QUOTE_WITHIN_REGISTERED_AGE": 312
+        }
+      },
+      {
+        "bookmaker": "betonlineag",
+        "source_route": "the_odds_api_v4",
+        "season": 2024,
+        "target": "total",
+        "expected_n": 919,
+        "feature_qualified_n": 604,
+        "reference_n": 604,
+        "predictive_baseline_qualified_n": 0,
+        "strict_original_availability_qualified_n": 0,
+        "missing_reason_counts": {
+          "NO_CLOCK_VALID_QUOTE_WITHIN_REGISTERED_AGE": 315
+        }
+      },
+      {
+        "bookmaker": "betonlineag",
+        "source_route": "the_odds_api_v4",
+        "season": 2024,
+        "target": "winner",
+        "expected_n": 919,
+        "feature_qualified_n": 503,
+        "reference_n": 503,
+        "predictive_baseline_qualified_n": 0,
+        "strict_original_availability_qualified_n": 0,
+        "missing_reason_counts": {
+          "NO_CLOCK_VALID_QUOTE_WITHIN_REGISTERED_AGE": 416
+        }
+      },
+      {
+        "bookmaker": "betrivers",
+        "source_route": "the_odds_api_v4",
+        "season": 2024,
+        "target": "margin",
+        "expected_n": 919,
+        "feature_qualified_n": 584,
+        "reference_n": 584,
+        "predictive_baseline_qualified_n": 0,
+        "strict_original_availability_qualified_n": 0,
+        "missing_reason_counts": {
+          "NO_CLOCK_VALID_QUOTE_WITHIN_REGISTERED_AGE": 335
+        }
+      },
+      {
+        "bookmaker": "betrivers",
+        "source_route": "the_odds_api_v4",
+        "season": 2024,
+        "target": "total",
+        "expected_n": 919,
+        "feature_qualified_n": 584,
+        "reference_n": 584,
+        "predictive_baseline_qualified_n": 0,
+        "strict_original_availability_qualified_n": 0,
+        "missing_reason_counts": {
+          "NO_CLOCK_VALID_QUOTE_WITHIN_REGISTERED_AGE": 335
+        }
+      },
+      {
+        "bookmaker": "betrivers",
+        "source_route": "the_odds_api_v4",
+        "season": 2024,
+        "target": "winner",
+        "expected_n": 919,
+        "feature_qualified_n": 509,
+        "reference_n": 509,
+        "predictive_baseline_qualified_n": 0,
+        "strict_original_availability_qualified_n": 0,
+        "missing_reason_counts": {
+          "NO_CLOCK_VALID_QUOTE_WITHIN_REGISTERED_AGE": 410
+        }
+      },
+      {
+        "bookmaker": "betus",
+        "source_route": "the_odds_api_v4",
+        "season": 2024,
+        "target": "margin",
+        "expected_n": 919,
+        "feature_qualified_n": 529,
+        "reference_n": 529,
+        "predictive_baseline_qualified_n": 0,
+        "strict_original_availability_qualified_n": 0,
+        "missing_reason_counts": {
+          "NO_CLOCK_VALID_QUOTE_WITHIN_REGISTERED_AGE": 390
+        }
+      },
+      {
+        "bookmaker": "betus",
+        "source_route": "the_odds_api_v4",
+        "season": 2024,
+        "target": "total",
+        "expected_n": 919,
+        "feature_qualified_n": 529,
+        "reference_n": 529,
+        "predictive_baseline_qualified_n": 0,
+        "strict_original_availability_qualified_n": 0,
+        "missing_reason_counts": {
+          "NO_CLOCK_VALID_QUOTE_WITHIN_REGISTERED_AGE": 390
+        }
+      },
+      {
+        "bookmaker": "betus",
+        "source_route": "the_odds_api_v4",
+        "season": 2024,
+        "target": "winner",
+        "expected_n": 919,
+        "feature_qualified_n": 493,
+        "reference_n": 493,
+        "predictive_baseline_qualified_n": 0,
+        "strict_original_availability_qualified_n": 0,
+        "missing_reason_counts": {
+          "NO_CLOCK_VALID_QUOTE_WITHIN_REGISTERED_AGE": 426
+        }
+      },
+      {
+        "bookmaker": "bovada",
+        "source_route": "the_odds_api_v4",
+        "season": 2024,
+        "target": "margin",
+        "expected_n": 919,
+        "feature_qualified_n": 528,
+        "reference_n": 528,
+        "predictive_baseline_qualified_n": 0,
+        "strict_original_availability_qualified_n": 0,
+        "missing_reason_counts": {
+          "NO_CLOCK_VALID_QUOTE_WITHIN_REGISTERED_AGE": 391
+        }
+      },
+      {
+        "bookmaker": "bovada",
+        "source_route": "the_odds_api_v4",
+        "season": 2024,
+        "target": "total",
+        "expected_n": 919,
+        "feature_qualified_n": 529,
+        "reference_n": 529,
+        "predictive_baseline_qualified_n": 0,
+        "strict_original_availability_qualified_n": 0,
+        "missing_reason_counts": {
+          "NO_CLOCK_VALID_QUOTE_WITHIN_REGISTERED_AGE": 390
+        }
+      },
+      {
+        "bookmaker": "bovada",
+        "source_route": "the_odds_api_v4",
+        "season": 2024,
+        "target": "winner",
+        "expected_n": 919,
+        "feature_qualified_n": 506,
+        "reference_n": 506,
+        "predictive_baseline_qualified_n": 0,
+        "strict_original_availability_qualified_n": 0,
+        "missing_reason_counts": {
+          "NO_CLOCK_VALID_QUOTE_WITHIN_REGISTERED_AGE": 413
+        }
+      },
+      {
+        "bookmaker": "draftkings",
+        "source_route": "the_odds_api_v4",
+        "season": 2024,
+        "target": "margin",
+        "expected_n": 919,
+        "feature_qualified_n": 863,
+        "reference_n": 863,
+        "predictive_baseline_qualified_n": 0,
+        "strict_original_availability_qualified_n": 0,
+        "missing_reason_counts": {
+          "NO_CLOCK_VALID_QUOTE_WITHIN_REGISTERED_AGE": 56
+        }
+      },
+      {
+        "bookmaker": "draftkings",
+        "source_route": "the_odds_api_v4",
+        "season": 2024,
+        "target": "total",
+        "expected_n": 919,
+        "feature_qualified_n": 863,
+        "reference_n": 863,
+        "predictive_baseline_qualified_n": 0,
+        "strict_original_availability_qualified_n": 0,
+        "missing_reason_counts": {
+          "NO_CLOCK_VALID_QUOTE_WITHIN_REGISTERED_AGE": 56
+        }
+      },
+      {
+        "bookmaker": "draftkings",
+        "source_route": "the_odds_api_v4",
+        "season": 2024,
+        "target": "winner",
+        "expected_n": 919,
+        "feature_qualified_n": 787,
+        "reference_n": 787,
+        "predictive_baseline_qualified_n": 0,
+        "strict_original_availability_qualified_n": 0,
+        "missing_reason_counts": {
+          "NO_CLOCK_VALID_QUOTE_WITHIN_REGISTERED_AGE": 132
+        }
+      },
+      {
+        "bookmaker": "fanatics",
+        "source_route": "the_odds_api_v4",
+        "season": 2024,
+        "target": "margin",
+        "expected_n": 919,
+        "feature_qualified_n": 0,
+        "reference_n": 0,
+        "predictive_baseline_qualified_n": 0,
+        "strict_original_availability_qualified_n": 0,
+        "missing_reason_counts": {
+          "NO_CLOCK_VALID_QUOTE_WITHIN_REGISTERED_AGE": 919
+        }
+      },
+      {
+        "bookmaker": "fanatics",
+        "source_route": "the_odds_api_v4",
+        "season": 2024,
+        "target": "total",
+        "expected_n": 919,
+        "feature_qualified_n": 0,
+        "reference_n": 0,
+        "predictive_baseline_qualified_n": 0,
+        "strict_original_availability_qualified_n": 0,
+        "missing_reason_counts": {
+          "NO_CLOCK_VALID_QUOTE_WITHIN_REGISTERED_AGE": 919
+        }
+      },
+      {
+        "bookmaker": "fanatics",
+        "source_route": "the_odds_api_v4",
+        "season": 2024,
+        "target": "winner",
+        "expected_n": 919,
+        "feature_qualified_n": 0,
+        "reference_n": 0,
+        "predictive_baseline_qualified_n": 0,
+        "strict_original_availability_qualified_n": 0,
+        "missing_reason_counts": {
+          "NO_CLOCK_VALID_QUOTE_WITHIN_REGISTERED_AGE": 919
+        }
+      },
+      {
+        "bookmaker": "fanduel",
+        "source_route": "the_odds_api_v4",
+        "season": 2024,
+        "target": "margin",
+        "expected_n": 919,
+        "feature_qualified_n": 587,
+        "reference_n": 587,
+        "predictive_baseline_qualified_n": 0,
+        "strict_original_availability_qualified_n": 0,
+        "missing_reason_counts": {
+          "NO_CLOCK_VALID_QUOTE_WITHIN_REGISTERED_AGE": 332
+        }
+      },
+      {
+        "bookmaker": "fanduel",
+        "source_route": "the_odds_api_v4",
+        "season": 2024,
+        "target": "total",
+        "expected_n": 919,
+        "feature_qualified_n": 587,
+        "reference_n": 587,
+        "predictive_baseline_qualified_n": 0,
+        "strict_original_availability_qualified_n": 0,
+        "missing_reason_counts": {
+          "NO_CLOCK_VALID_QUOTE_WITHIN_REGISTERED_AGE": 332
+        }
+      },
+      {
+        "bookmaker": "fanduel",
+        "source_route": "the_odds_api_v4",
+        "season": 2024,
+        "target": "winner",
+        "expected_n": 919,
+        "feature_qualified_n": 536,
+        "reference_n": 536,
+        "predictive_baseline_qualified_n": 0,
+        "strict_original_availability_qualified_n": 0,
+        "missing_reason_counts": {
+          "NO_CLOCK_VALID_QUOTE_WITHIN_REGISTERED_AGE": 383
+        }
+      },
+      {
+        "bookmaker": "lowvig",
+        "source_route": "the_odds_api_v4",
+        "season": 2024,
+        "target": "margin",
+        "expected_n": 919,
+        "feature_qualified_n": 566,
+        "reference_n": 566,
+        "predictive_baseline_qualified_n": 0,
+        "strict_original_availability_qualified_n": 0,
+        "missing_reason_counts": {
+          "NO_CLOCK_VALID_QUOTE_WITHIN_REGISTERED_AGE": 353
+        }
+      },
+      {
+        "bookmaker": "lowvig",
+        "source_route": "the_odds_api_v4",
+        "season": 2024,
+        "target": "total",
+        "expected_n": 919,
+        "feature_qualified_n": 564,
+        "reference_n": 564,
+        "predictive_baseline_qualified_n": 0,
+        "strict_original_availability_qualified_n": 0,
+        "missing_reason_counts": {
+          "NO_CLOCK_VALID_QUOTE_WITHIN_REGISTERED_AGE": 355
+        }
+      },
+      {
+        "bookmaker": "lowvig",
+        "source_route": "the_odds_api_v4",
+        "season": 2024,
+        "target": "winner",
+        "expected_n": 919,
+        "feature_qualified_n": 477,
+        "reference_n": 477,
+        "predictive_baseline_qualified_n": 0,
+        "strict_original_availability_qualified_n": 0,
+        "missing_reason_counts": {
+          "NO_CLOCK_VALID_QUOTE_WITHIN_REGISTERED_AGE": 442
+        }
+      },
+      {
+        "bookmaker": "mybookieag",
+        "source_route": "the_odds_api_v4",
+        "season": 2024,
+        "target": "margin",
+        "expected_n": 919,
+        "feature_qualified_n": 81,
+        "reference_n": 81,
+        "predictive_baseline_qualified_n": 0,
+        "strict_original_availability_qualified_n": 0,
+        "missing_reason_counts": {
+          "NO_CLOCK_VALID_QUOTE_WITHIN_REGISTERED_AGE": 838
+        }
+      },
+      {
+        "bookmaker": "mybookieag",
+        "source_route": "the_odds_api_v4",
+        "season": 2024,
+        "target": "total",
+        "expected_n": 919,
+        "feature_qualified_n": 81,
+        "reference_n": 81,
+        "predictive_baseline_qualified_n": 0,
+        "strict_original_availability_qualified_n": 0,
+        "missing_reason_counts": {
+          "NO_CLOCK_VALID_QUOTE_WITHIN_REGISTERED_AGE": 838
+        }
+      },
+      {
+        "bookmaker": "mybookieag",
+        "source_route": "the_odds_api_v4",
+        "season": 2024,
+        "target": "winner",
+        "expected_n": 919,
+        "feature_qualified_n": 81,
+        "reference_n": 81,
+        "predictive_baseline_qualified_n": 0,
+        "strict_original_availability_qualified_n": 0,
+        "missing_reason_counts": {
+          "NO_CLOCK_VALID_QUOTE_WITHIN_REGISTERED_AGE": 838
+        }
+      },
+      {
+        "bookmaker": "pointsbetus",
+        "source_route": "the_odds_api_v4",
+        "season": 2024,
+        "target": "margin",
+        "expected_n": 919,
+        "feature_qualified_n": 0,
+        "reference_n": 0,
+        "predictive_baseline_qualified_n": 0,
+        "strict_original_availability_qualified_n": 0,
+        "missing_reason_counts": {
+          "NO_CLOCK_VALID_QUOTE_WITHIN_REGISTERED_AGE": 919
+        }
+      },
+      {
+        "bookmaker": "pointsbetus",
+        "source_route": "the_odds_api_v4",
+        "season": 2024,
+        "target": "total",
+        "expected_n": 919,
+        "feature_qualified_n": 0,
+        "reference_n": 0,
+        "predictive_baseline_qualified_n": 0,
+        "strict_original_availability_qualified_n": 0,
+        "missing_reason_counts": {
+          "NO_CLOCK_VALID_QUOTE_WITHIN_REGISTERED_AGE": 919
+        }
+      },
+      {
+        "bookmaker": "pointsbetus",
+        "source_route": "the_odds_api_v4",
+        "season": 2024,
+        "target": "winner",
+        "expected_n": 919,
+        "feature_qualified_n": 0,
+        "reference_n": 0,
+        "predictive_baseline_qualified_n": 0,
+        "strict_original_availability_qualified_n": 0,
+        "missing_reason_counts": {
+          "NO_CLOCK_VALID_QUOTE_WITHIN_REGISTERED_AGE": 919
+        }
+      },
+      {
+        "bookmaker": "superbook",
+        "source_route": "the_odds_api_v4",
+        "season": 2024,
+        "target": "margin",
+        "expected_n": 919,
+        "feature_qualified_n": 0,
+        "reference_n": 0,
+        "predictive_baseline_qualified_n": 0,
+        "strict_original_availability_qualified_n": 0,
+        "missing_reason_counts": {
+          "NO_CLOCK_VALID_QUOTE_WITHIN_REGISTERED_AGE": 919
+        }
+      },
+      {
+        "bookmaker": "superbook",
+        "source_route": "the_odds_api_v4",
+        "season": 2024,
+        "target": "total",
+        "expected_n": 919,
+        "feature_qualified_n": 0,
+        "reference_n": 0,
+        "predictive_baseline_qualified_n": 0,
+        "strict_original_availability_qualified_n": 0,
+        "missing_reason_counts": {
+          "NO_CLOCK_VALID_QUOTE_WITHIN_REGISTERED_AGE": 919
+        }
+      },
+      {
+        "bookmaker": "superbook",
+        "source_route": "the_odds_api_v4",
+        "season": 2024,
+        "target": "winner",
+        "expected_n": 919,
+        "feature_qualified_n": 0,
+        "reference_n": 0,
+        "predictive_baseline_qualified_n": 0,
+        "strict_original_availability_qualified_n": 0,
+        "missing_reason_counts": {
+          "NO_CLOCK_VALID_QUOTE_WITHIN_REGISTERED_AGE": 919
+        }
+      },
+      {
+        "bookmaker": "unibet_us",
+        "source_route": "the_odds_api_v4",
+        "season": 2024,
+        "target": "margin",
+        "expected_n": 919,
+        "feature_qualified_n": 0,
+        "reference_n": 0,
+        "predictive_baseline_qualified_n": 0,
+        "strict_original_availability_qualified_n": 0,
+        "missing_reason_counts": {
+          "NO_CLOCK_VALID_QUOTE_WITHIN_REGISTERED_AGE": 919
+        }
+      },
+      {
+        "bookmaker": "unibet_us",
+        "source_route": "the_odds_api_v4",
+        "season": 2024,
+        "target": "total",
+        "expected_n": 919,
+        "feature_qualified_n": 0,
+        "reference_n": 0,
+        "predictive_baseline_qualified_n": 0,
+        "strict_original_availability_qualified_n": 0,
+        "missing_reason_counts": {
+          "NO_CLOCK_VALID_QUOTE_WITHIN_REGISTERED_AGE": 919
+        }
+      },
+      {
+        "bookmaker": "unibet_us",
+        "source_route": "the_odds_api_v4",
+        "season": 2024,
+        "target": "winner",
+        "expected_n": 919,
+        "feature_qualified_n": 0,
+        "reference_n": 0,
+        "predictive_baseline_qualified_n": 0,
+        "strict_original_availability_qualified_n": 0,
+        "missing_reason_counts": {
+          "NO_CLOCK_VALID_QUOTE_WITHIN_REGISTERED_AGE": 919
+        }
+      },
+      {
+        "bookmaker": "williamhill_us",
+        "source_route": "the_odds_api_v4",
+        "season": 2024,
+        "target": "margin",
+        "expected_n": 919,
+        "feature_qualified_n": 516,
+        "reference_n": 516,
+        "predictive_baseline_qualified_n": 0,
+        "strict_original_availability_qualified_n": 0,
+        "missing_reason_counts": {
+          "NO_CLOCK_VALID_QUOTE_WITHIN_REGISTERED_AGE": 403
+        }
+      },
+      {
+        "bookmaker": "williamhill_us",
+        "source_route": "the_odds_api_v4",
+        "season": 2024,
+        "target": "total",
+        "expected_n": 919,
+        "feature_qualified_n": 516,
+        "reference_n": 516,
+        "predictive_baseline_qualified_n": 0,
+        "strict_original_availability_qualified_n": 0,
+        "missing_reason_counts": {
+          "NO_CLOCK_VALID_QUOTE_WITHIN_REGISTERED_AGE": 403
+        }
+      },
+      {
+        "bookmaker": "williamhill_us",
+        "source_route": "the_odds_api_v4",
+        "season": 2024,
+        "target": "winner",
+        "expected_n": 919,
+        "feature_qualified_n": 464,
+        "reference_n": 464,
+        "predictive_baseline_qualified_n": 0,
+        "strict_original_availability_qualified_n": 0,
+        "missing_reason_counts": {
+          "NO_CLOCK_VALID_QUOTE_WITHIN_REGISTERED_AGE": 455
+        }
+      },
+      {
+        "bookmaker": "wynnbet",
+        "source_route": "the_odds_api_v4",
+        "season": 2024,
+        "target": "margin",
+        "expected_n": 919,
+        "feature_qualified_n": 0,
+        "reference_n": 0,
+        "predictive_baseline_qualified_n": 0,
+        "strict_original_availability_qualified_n": 0,
+        "missing_reason_counts": {
+          "NO_CLOCK_VALID_QUOTE_WITHIN_REGISTERED_AGE": 919
+        }
+      },
+      {
+        "bookmaker": "wynnbet",
+        "source_route": "the_odds_api_v4",
+        "season": 2024,
+        "target": "total",
+        "expected_n": 919,
+        "feature_qualified_n": 0,
+        "reference_n": 0,
+        "predictive_baseline_qualified_n": 0,
+        "strict_original_availability_qualified_n": 0,
+        "missing_reason_counts": {
+          "NO_CLOCK_VALID_QUOTE_WITHIN_REGISTERED_AGE": 919
+        }
+      },
+      {
+        "bookmaker": "wynnbet",
+        "source_route": "the_odds_api_v4",
+        "season": 2024,
+        "target": "winner",
+        "expected_n": 919,
+        "feature_qualified_n": 0,
+        "reference_n": 0,
+        "predictive_baseline_qualified_n": 0,
+        "strict_original_availability_qualified_n": 0,
+        "missing_reason_counts": {
+          "NO_CLOCK_VALID_QUOTE_WITHIN_REGISTERED_AGE": 919
+        }
+      },
+      {
+        "bookmaker": "kalshi",
+        "source_route": "kalshi_native",
+        "season": 2025,
+        "target": "margin",
+        "expected_n": 934,
+        "feature_qualified_n": 0,
+        "reference_n": 0,
+        "predictive_baseline_qualified_n": 0,
+        "strict_original_availability_qualified_n": 0,
+        "missing_reason_counts": {
+          "NATIVE_EXCHANGE_CONTRACT_AND_SOURCE_ADAPTER_NOT_BOUND": 934,
+          "NO_CLOCK_VALID_QUOTE_WITHIN_REGISTERED_AGE": 934,
+          "SUPPLIER_ROUTE_RESEARCH_RIGHTS_UNVERIFIED": 934
+        }
+      },
+      {
+        "bookmaker": "kalshi",
+        "source_route": "kalshi_native",
+        "season": 2025,
+        "target": "total",
+        "expected_n": 934,
+        "feature_qualified_n": 0,
+        "reference_n": 0,
+        "predictive_baseline_qualified_n": 0,
+        "strict_original_availability_qualified_n": 0,
+        "missing_reason_counts": {
+          "NATIVE_EXCHANGE_CONTRACT_AND_SOURCE_ADAPTER_NOT_BOUND": 934,
+          "NO_CLOCK_VALID_QUOTE_WITHIN_REGISTERED_AGE": 934,
+          "SUPPLIER_ROUTE_RESEARCH_RIGHTS_UNVERIFIED": 934
+        }
+      },
+      {
+        "bookmaker": "kalshi",
+        "source_route": "kalshi_native",
+        "season": 2025,
+        "target": "winner",
+        "expected_n": 934,
+        "feature_qualified_n": 0,
+        "reference_n": 0,
+        "predictive_baseline_qualified_n": 0,
+        "strict_original_availability_qualified_n": 0,
+        "missing_reason_counts": {
+          "NATIVE_EXCHANGE_CONTRACT_AND_SOURCE_ADAPTER_NOT_BOUND": 934,
+          "NO_CLOCK_VALID_QUOTE_WITHIN_REGISTERED_AGE": 934,
+          "SUPPLIER_ROUTE_RESEARCH_RIGHTS_UNVERIFIED": 934
+        }
+      },
+      {
+        "bookmaker": "polymarket",
+        "source_route": "polymarket_native",
+        "season": 2025,
+        "target": "margin",
+        "expected_n": 934,
+        "feature_qualified_n": 0,
+        "reference_n": 0,
+        "predictive_baseline_qualified_n": 0,
+        "strict_original_availability_qualified_n": 0,
+        "missing_reason_counts": {
+          "NATIVE_EXCHANGE_CONTRACT_AND_SOURCE_ADAPTER_NOT_BOUND": 934,
+          "NO_CLOCK_VALID_QUOTE_WITHIN_REGISTERED_AGE": 934,
+          "SUPPLIER_ROUTE_RESEARCH_RIGHTS_UNVERIFIED": 934
+        }
+      },
+      {
+        "bookmaker": "polymarket",
+        "source_route": "polymarket_native",
+        "season": 2025,
+        "target": "total",
+        "expected_n": 934,
+        "feature_qualified_n": 0,
+        "reference_n": 0,
+        "predictive_baseline_qualified_n": 0,
+        "strict_original_availability_qualified_n": 0,
+        "missing_reason_counts": {
+          "NATIVE_EXCHANGE_CONTRACT_AND_SOURCE_ADAPTER_NOT_BOUND": 934,
+          "NO_CLOCK_VALID_QUOTE_WITHIN_REGISTERED_AGE": 934,
+          "SUPPLIER_ROUTE_RESEARCH_RIGHTS_UNVERIFIED": 934
+        }
+      },
+      {
+        "bookmaker": "polymarket",
+        "source_route": "polymarket_native",
+        "season": 2025,
+        "target": "winner",
+        "expected_n": 934,
+        "feature_qualified_n": 0,
+        "reference_n": 0,
+        "predictive_baseline_qualified_n": 0,
+        "strict_original_availability_qualified_n": 0,
+        "missing_reason_counts": {
+          "NATIVE_EXCHANGE_CONTRACT_AND_SOURCE_ADAPTER_NOT_BOUND": 934,
+          "NO_CLOCK_VALID_QUOTE_WITHIN_REGISTERED_AGE": 934,
+          "SUPPLIER_ROUTE_RESEARCH_RIGHTS_UNVERIFIED": 934
+        }
+      },
+      {
+        "bookmaker": "polymarket_us",
+        "source_route": "polymarket_us_native",
+        "season": 2025,
+        "target": "margin",
+        "expected_n": 934,
+        "feature_qualified_n": 0,
+        "reference_n": 0,
+        "predictive_baseline_qualified_n": 0,
+        "strict_original_availability_qualified_n": 0,
+        "missing_reason_counts": {
+          "NATIVE_EXCHANGE_CONTRACT_AND_SOURCE_ADAPTER_NOT_BOUND": 934,
+          "NO_CLOCK_VALID_QUOTE_WITHIN_REGISTERED_AGE": 934,
+          "SUPPLIER_ROUTE_RESEARCH_RIGHTS_UNVERIFIED": 934
+        }
+      },
+      {
+        "bookmaker": "polymarket_us",
+        "source_route": "polymarket_us_native",
+        "season": 2025,
+        "target": "total",
+        "expected_n": 934,
+        "feature_qualified_n": 0,
+        "reference_n": 0,
+        "predictive_baseline_qualified_n": 0,
+        "strict_original_availability_qualified_n": 0,
+        "missing_reason_counts": {
+          "NATIVE_EXCHANGE_CONTRACT_AND_SOURCE_ADAPTER_NOT_BOUND": 934,
+          "NO_CLOCK_VALID_QUOTE_WITHIN_REGISTERED_AGE": 934,
+          "SUPPLIER_ROUTE_RESEARCH_RIGHTS_UNVERIFIED": 934
+        }
+      },
+      {
+        "bookmaker": "polymarket_us",
+        "source_route": "polymarket_us_native",
+        "season": 2025,
+        "target": "winner",
+        "expected_n": 934,
+        "feature_qualified_n": 0,
+        "reference_n": 0,
+        "predictive_baseline_qualified_n": 0,
+        "strict_original_availability_qualified_n": 0,
+        "missing_reason_counts": {
+          "NATIVE_EXCHANGE_CONTRACT_AND_SOURCE_ADAPTER_NOT_BOUND": 934,
+          "NO_CLOCK_VALID_QUOTE_WITHIN_REGISTERED_AGE": 934,
+          "SUPPLIER_ROUTE_RESEARCH_RIGHTS_UNVERIFIED": 934
+        }
+      },
+      {
+        "bookmaker": "betmgm",
+        "source_route": "the_odds_api_v4",
+        "season": 2025,
+        "target": "margin",
+        "expected_n": 934,
+        "feature_qualified_n": 546,
+        "reference_n": 546,
+        "predictive_baseline_qualified_n": 0,
+        "strict_original_availability_qualified_n": 0,
+        "missing_reason_counts": {
+          "NO_CLOCK_VALID_QUOTE_WITHIN_REGISTERED_AGE": 388
+        }
+      },
+      {
+        "bookmaker": "betmgm",
+        "source_route": "the_odds_api_v4",
+        "season": 2025,
+        "target": "total",
+        "expected_n": 934,
+        "feature_qualified_n": 557,
+        "reference_n": 557,
+        "predictive_baseline_qualified_n": 0,
+        "strict_original_availability_qualified_n": 0,
+        "missing_reason_counts": {
+          "NO_CLOCK_VALID_QUOTE_WITHIN_REGISTERED_AGE": 377
+        }
+      },
+      {
+        "bookmaker": "betmgm",
+        "source_route": "the_odds_api_v4",
+        "season": 2025,
+        "target": "winner",
+        "expected_n": 934,
+        "feature_qualified_n": 477,
+        "reference_n": 477,
+        "predictive_baseline_qualified_n": 0,
+        "strict_original_availability_qualified_n": 0,
+        "missing_reason_counts": {
+          "NO_CLOCK_VALID_QUOTE_WITHIN_REGISTERED_AGE": 457
+        }
+      },
+      {
+        "bookmaker": "betonlineag",
+        "source_route": "the_odds_api_v4",
+        "season": 2025,
+        "target": "margin",
+        "expected_n": 934,
+        "feature_qualified_n": 588,
+        "reference_n": 588,
+        "predictive_baseline_qualified_n": 0,
+        "strict_original_availability_qualified_n": 0,
+        "missing_reason_counts": {
+          "NO_CLOCK_VALID_QUOTE_WITHIN_REGISTERED_AGE": 346
+        }
+      },
+      {
+        "bookmaker": "betonlineag",
+        "source_route": "the_odds_api_v4",
+        "season": 2025,
+        "target": "total",
+        "expected_n": 934,
+        "feature_qualified_n": 588,
+        "reference_n": 588,
+        "predictive_baseline_qualified_n": 0,
+        "strict_original_availability_qualified_n": 0,
+        "missing_reason_counts": {
+          "NO_CLOCK_VALID_QUOTE_WITHIN_REGISTERED_AGE": 346
+        }
+      },
+      {
+        "bookmaker": "betonlineag",
+        "source_route": "the_odds_api_v4",
+        "season": 2025,
+        "target": "winner",
+        "expected_n": 934,
+        "feature_qualified_n": 491,
+        "reference_n": 491,
+        "predictive_baseline_qualified_n": 0,
+        "strict_original_availability_qualified_n": 0,
+        "missing_reason_counts": {
+          "NO_CLOCK_VALID_QUOTE_WITHIN_REGISTERED_AGE": 443
+        }
+      },
+      {
+        "bookmaker": "betrivers",
+        "source_route": "the_odds_api_v4",
+        "season": 2025,
+        "target": "margin",
+        "expected_n": 934,
+        "feature_qualified_n": 588,
+        "reference_n": 588,
+        "predictive_baseline_qualified_n": 0,
+        "strict_original_availability_qualified_n": 0,
+        "missing_reason_counts": {
+          "NO_CLOCK_VALID_QUOTE_WITHIN_REGISTERED_AGE": 346
+        }
+      },
+      {
+        "bookmaker": "betrivers",
+        "source_route": "the_odds_api_v4",
+        "season": 2025,
+        "target": "total",
+        "expected_n": 934,
+        "feature_qualified_n": 573,
+        "reference_n": 573,
+        "predictive_baseline_qualified_n": 0,
+        "strict_original_availability_qualified_n": 0,
+        "missing_reason_counts": {
+          "NO_CLOCK_VALID_QUOTE_WITHIN_REGISTERED_AGE": 361
+        }
+      },
+      {
+        "bookmaker": "betrivers",
+        "source_route": "the_odds_api_v4",
+        "season": 2025,
+        "target": "winner",
+        "expected_n": 934,
+        "feature_qualified_n": 516,
+        "reference_n": 516,
+        "predictive_baseline_qualified_n": 0,
+        "strict_original_availability_qualified_n": 0,
+        "missing_reason_counts": {
+          "NO_CLOCK_VALID_QUOTE_WITHIN_REGISTERED_AGE": 418
+        }
+      },
+      {
+        "bookmaker": "betus",
+        "source_route": "the_odds_api_v4",
+        "season": 2025,
+        "target": "margin",
+        "expected_n": 934,
+        "feature_qualified_n": 514,
+        "reference_n": 514,
+        "predictive_baseline_qualified_n": 0,
+        "strict_original_availability_qualified_n": 0,
+        "missing_reason_counts": {
+          "NO_CLOCK_VALID_QUOTE_WITHIN_REGISTERED_AGE": 420
+        }
+      },
+      {
+        "bookmaker": "betus",
+        "source_route": "the_odds_api_v4",
+        "season": 2025,
+        "target": "total",
+        "expected_n": 934,
+        "feature_qualified_n": 514,
+        "reference_n": 514,
+        "predictive_baseline_qualified_n": 0,
+        "strict_original_availability_qualified_n": 0,
+        "missing_reason_counts": {
+          "NO_CLOCK_VALID_QUOTE_WITHIN_REGISTERED_AGE": 420
+        }
+      },
+      {
+        "bookmaker": "betus",
+        "source_route": "the_odds_api_v4",
+        "season": 2025,
+        "target": "winner",
+        "expected_n": 934,
+        "feature_qualified_n": 460,
+        "reference_n": 460,
+        "predictive_baseline_qualified_n": 0,
+        "strict_original_availability_qualified_n": 0,
+        "missing_reason_counts": {
+          "NO_CLOCK_VALID_QUOTE_WITHIN_REGISTERED_AGE": 474
+        }
+      },
+      {
+        "bookmaker": "bovada",
+        "source_route": "the_odds_api_v4",
+        "season": 2025,
+        "target": "margin",
+        "expected_n": 934,
+        "feature_qualified_n": 574,
+        "reference_n": 574,
+        "predictive_baseline_qualified_n": 0,
+        "strict_original_availability_qualified_n": 0,
+        "missing_reason_counts": {
+          "NO_CLOCK_VALID_QUOTE_WITHIN_REGISTERED_AGE": 360
+        }
+      },
+      {
+        "bookmaker": "bovada",
+        "source_route": "the_odds_api_v4",
+        "season": 2025,
+        "target": "total",
+        "expected_n": 934,
+        "feature_qualified_n": 574,
+        "reference_n": 574,
+        "predictive_baseline_qualified_n": 0,
+        "strict_original_availability_qualified_n": 0,
+        "missing_reason_counts": {
+          "NO_CLOCK_VALID_QUOTE_WITHIN_REGISTERED_AGE": 360
+        }
+      },
+      {
+        "bookmaker": "bovada",
+        "source_route": "the_odds_api_v4",
+        "season": 2025,
+        "target": "winner",
+        "expected_n": 934,
+        "feature_qualified_n": 494,
+        "reference_n": 494,
+        "predictive_baseline_qualified_n": 0,
+        "strict_original_availability_qualified_n": 0,
+        "missing_reason_counts": {
+          "NO_CLOCK_VALID_QUOTE_WITHIN_REGISTERED_AGE": 440
+        }
+      },
+      {
+        "bookmaker": "draftkings",
+        "source_route": "the_odds_api_v4",
+        "season": 2025,
+        "target": "margin",
+        "expected_n": 934,
+        "feature_qualified_n": 860,
+        "reference_n": 860,
+        "predictive_baseline_qualified_n": 0,
+        "strict_original_availability_qualified_n": 0,
+        "missing_reason_counts": {
+          "NO_CLOCK_VALID_QUOTE_WITHIN_REGISTERED_AGE": 74
+        }
+      },
+      {
+        "bookmaker": "draftkings",
+        "source_route": "the_odds_api_v4",
+        "season": 2025,
+        "target": "total",
+        "expected_n": 934,
+        "feature_qualified_n": 860,
+        "reference_n": 860,
+        "predictive_baseline_qualified_n": 0,
+        "strict_original_availability_qualified_n": 0,
+        "missing_reason_counts": {
+          "NO_CLOCK_VALID_QUOTE_WITHIN_REGISTERED_AGE": 74
+        }
+      },
+      {
+        "bookmaker": "draftkings",
+        "source_route": "the_odds_api_v4",
+        "season": 2025,
+        "target": "winner",
+        "expected_n": 934,
+        "feature_qualified_n": 803,
+        "reference_n": 803,
+        "predictive_baseline_qualified_n": 0,
+        "strict_original_availability_qualified_n": 0,
+        "missing_reason_counts": {
+          "NO_CLOCK_VALID_QUOTE_WITHIN_REGISTERED_AGE": 131
+        }
+      },
+      {
+        "bookmaker": "fanatics",
+        "source_route": "the_odds_api_v4",
+        "season": 2025,
+        "target": "margin",
+        "expected_n": 934,
+        "feature_qualified_n": 405,
+        "reference_n": 405,
+        "predictive_baseline_qualified_n": 0,
+        "strict_original_availability_qualified_n": 0,
+        "missing_reason_counts": {
+          "NO_CLOCK_VALID_QUOTE_WITHIN_REGISTERED_AGE": 529
+        }
+      },
+      {
+        "bookmaker": "fanatics",
+        "source_route": "the_odds_api_v4",
+        "season": 2025,
+        "target": "total",
+        "expected_n": 934,
+        "feature_qualified_n": 405,
+        "reference_n": 405,
+        "predictive_baseline_qualified_n": 0,
+        "strict_original_availability_qualified_n": 0,
+        "missing_reason_counts": {
+          "NO_CLOCK_VALID_QUOTE_WITHIN_REGISTERED_AGE": 529
+        }
+      },
+      {
+        "bookmaker": "fanatics",
+        "source_route": "the_odds_api_v4",
+        "season": 2025,
+        "target": "winner",
+        "expected_n": 934,
+        "feature_qualified_n": 376,
+        "reference_n": 376,
+        "predictive_baseline_qualified_n": 0,
+        "strict_original_availability_qualified_n": 0,
+        "missing_reason_counts": {
+          "NO_CLOCK_VALID_QUOTE_WITHIN_REGISTERED_AGE": 558
+        }
+      },
+      {
+        "bookmaker": "fanduel",
+        "source_route": "the_odds_api_v4",
+        "season": 2025,
+        "target": "margin",
+        "expected_n": 934,
+        "feature_qualified_n": 595,
+        "reference_n": 595,
+        "predictive_baseline_qualified_n": 0,
+        "strict_original_availability_qualified_n": 0,
+        "missing_reason_counts": {
+          "NO_CLOCK_VALID_QUOTE_WITHIN_REGISTERED_AGE": 339
+        }
+      },
+      {
+        "bookmaker": "fanduel",
+        "source_route": "the_odds_api_v4",
+        "season": 2025,
+        "target": "total",
+        "expected_n": 934,
+        "feature_qualified_n": 595,
+        "reference_n": 595,
+        "predictive_baseline_qualified_n": 0,
+        "strict_original_availability_qualified_n": 0,
+        "missing_reason_counts": {
+          "NO_CLOCK_VALID_QUOTE_WITHIN_REGISTERED_AGE": 339
+        }
+      },
+      {
+        "bookmaker": "fanduel",
+        "source_route": "the_odds_api_v4",
+        "season": 2025,
+        "target": "winner",
+        "expected_n": 934,
+        "feature_qualified_n": 551,
+        "reference_n": 551,
+        "predictive_baseline_qualified_n": 0,
+        "strict_original_availability_qualified_n": 0,
+        "missing_reason_counts": {
+          "NO_CLOCK_VALID_QUOTE_WITHIN_REGISTERED_AGE": 383
+        }
+      },
+      {
+        "bookmaker": "lowvig",
+        "source_route": "the_odds_api_v4",
+        "season": 2025,
+        "target": "margin",
+        "expected_n": 934,
+        "feature_qualified_n": 546,
+        "reference_n": 546,
+        "predictive_baseline_qualified_n": 0,
+        "strict_original_availability_qualified_n": 0,
+        "missing_reason_counts": {
+          "NO_CLOCK_VALID_QUOTE_WITHIN_REGISTERED_AGE": 388
+        }
+      },
+      {
+        "bookmaker": "lowvig",
+        "source_route": "the_odds_api_v4",
+        "season": 2025,
+        "target": "total",
+        "expected_n": 934,
+        "feature_qualified_n": 546,
+        "reference_n": 546,
+        "predictive_baseline_qualified_n": 0,
+        "strict_original_availability_qualified_n": 0,
+        "missing_reason_counts": {
+          "NO_CLOCK_VALID_QUOTE_WITHIN_REGISTERED_AGE": 388
+        }
+      },
+      {
+        "bookmaker": "lowvig",
+        "source_route": "the_odds_api_v4",
+        "season": 2025,
+        "target": "winner",
+        "expected_n": 934,
+        "feature_qualified_n": 456,
+        "reference_n": 456,
+        "predictive_baseline_qualified_n": 0,
+        "strict_original_availability_qualified_n": 0,
+        "missing_reason_counts": {
+          "NO_CLOCK_VALID_QUOTE_WITHIN_REGISTERED_AGE": 478
+        }
+      },
+      {
+        "bookmaker": "mybookieag",
+        "source_route": "the_odds_api_v4",
+        "season": 2025,
+        "target": "margin",
+        "expected_n": 934,
+        "feature_qualified_n": 506,
+        "reference_n": 506,
+        "predictive_baseline_qualified_n": 0,
+        "strict_original_availability_qualified_n": 0,
+        "missing_reason_counts": {
+          "NO_CLOCK_VALID_QUOTE_WITHIN_REGISTERED_AGE": 428
+        }
+      },
+      {
+        "bookmaker": "mybookieag",
+        "source_route": "the_odds_api_v4",
+        "season": 2025,
+        "target": "total",
+        "expected_n": 934,
+        "feature_qualified_n": 516,
+        "reference_n": 516,
+        "predictive_baseline_qualified_n": 0,
+        "strict_original_availability_qualified_n": 0,
+        "missing_reason_counts": {
+          "NO_CLOCK_VALID_QUOTE_WITHIN_REGISTERED_AGE": 418
+        }
+      },
+      {
+        "bookmaker": "mybookieag",
+        "source_route": "the_odds_api_v4",
+        "season": 2025,
+        "target": "winner",
+        "expected_n": 934,
+        "feature_qualified_n": 500,
+        "reference_n": 500,
+        "predictive_baseline_qualified_n": 0,
+        "strict_original_availability_qualified_n": 0,
+        "missing_reason_counts": {
+          "NO_CLOCK_VALID_QUOTE_WITHIN_REGISTERED_AGE": 434
+        }
+      },
+      {
+        "bookmaker": "pointsbetus",
+        "source_route": "the_odds_api_v4",
+        "season": 2025,
+        "target": "margin",
+        "expected_n": 934,
+        "feature_qualified_n": 0,
+        "reference_n": 0,
+        "predictive_baseline_qualified_n": 0,
+        "strict_original_availability_qualified_n": 0,
+        "missing_reason_counts": {
+          "NO_CLOCK_VALID_QUOTE_WITHIN_REGISTERED_AGE": 934
+        }
+      },
+      {
+        "bookmaker": "pointsbetus",
+        "source_route": "the_odds_api_v4",
+        "season": 2025,
+        "target": "total",
+        "expected_n": 934,
+        "feature_qualified_n": 0,
+        "reference_n": 0,
+        "predictive_baseline_qualified_n": 0,
+        "strict_original_availability_qualified_n": 0,
+        "missing_reason_counts": {
+          "NO_CLOCK_VALID_QUOTE_WITHIN_REGISTERED_AGE": 934
+        }
+      },
+      {
+        "bookmaker": "pointsbetus",
+        "source_route": "the_odds_api_v4",
+        "season": 2025,
+        "target": "winner",
+        "expected_n": 934,
+        "feature_qualified_n": 0,
+        "reference_n": 0,
+        "predictive_baseline_qualified_n": 0,
+        "strict_original_availability_qualified_n": 0,
+        "missing_reason_counts": {
+          "NO_CLOCK_VALID_QUOTE_WITHIN_REGISTERED_AGE": 934
+        }
+      },
+      {
+        "bookmaker": "superbook",
+        "source_route": "the_odds_api_v4",
+        "season": 2025,
+        "target": "margin",
+        "expected_n": 934,
+        "feature_qualified_n": 0,
+        "reference_n": 0,
+        "predictive_baseline_qualified_n": 0,
+        "strict_original_availability_qualified_n": 0,
+        "missing_reason_counts": {
+          "NO_CLOCK_VALID_QUOTE_WITHIN_REGISTERED_AGE": 934
+        }
+      },
+      {
+        "bookmaker": "superbook",
+        "source_route": "the_odds_api_v4",
+        "season": 2025,
+        "target": "total",
+        "expected_n": 934,
+        "feature_qualified_n": 0,
+        "reference_n": 0,
+        "predictive_baseline_qualified_n": 0,
+        "strict_original_availability_qualified_n": 0,
+        "missing_reason_counts": {
+          "NO_CLOCK_VALID_QUOTE_WITHIN_REGISTERED_AGE": 934
+        }
+      },
+      {
+        "bookmaker": "superbook",
+        "source_route": "the_odds_api_v4",
+        "season": 2025,
+        "target": "winner",
+        "expected_n": 934,
+        "feature_qualified_n": 0,
+        "reference_n": 0,
+        "predictive_baseline_qualified_n": 0,
+        "strict_original_availability_qualified_n": 0,
+        "missing_reason_counts": {
+          "NO_CLOCK_VALID_QUOTE_WITHIN_REGISTERED_AGE": 934
+        }
+      },
+      {
+        "bookmaker": "unibet_us",
+        "source_route": "the_odds_api_v4",
+        "season": 2025,
+        "target": "margin",
+        "expected_n": 934,
+        "feature_qualified_n": 0,
+        "reference_n": 0,
+        "predictive_baseline_qualified_n": 0,
+        "strict_original_availability_qualified_n": 0,
+        "missing_reason_counts": {
+          "NO_CLOCK_VALID_QUOTE_WITHIN_REGISTERED_AGE": 934
+        }
+      },
+      {
+        "bookmaker": "unibet_us",
+        "source_route": "the_odds_api_v4",
+        "season": 2025,
+        "target": "total",
+        "expected_n": 934,
+        "feature_qualified_n": 0,
+        "reference_n": 0,
+        "predictive_baseline_qualified_n": 0,
+        "strict_original_availability_qualified_n": 0,
+        "missing_reason_counts": {
+          "NO_CLOCK_VALID_QUOTE_WITHIN_REGISTERED_AGE": 934
+        }
+      },
+      {
+        "bookmaker": "unibet_us",
+        "source_route": "the_odds_api_v4",
+        "season": 2025,
+        "target": "winner",
+        "expected_n": 934,
+        "feature_qualified_n": 0,
+        "reference_n": 0,
+        "predictive_baseline_qualified_n": 0,
+        "strict_original_availability_qualified_n": 0,
+        "missing_reason_counts": {
+          "NO_CLOCK_VALID_QUOTE_WITHIN_REGISTERED_AGE": 934
+        }
+      },
+      {
+        "bookmaker": "williamhill_us",
+        "source_route": "the_odds_api_v4",
+        "season": 2025,
+        "target": "margin",
+        "expected_n": 934,
+        "feature_qualified_n": 545,
+        "reference_n": 545,
+        "predictive_baseline_qualified_n": 0,
+        "strict_original_availability_qualified_n": 0,
+        "missing_reason_counts": {
+          "NO_CLOCK_VALID_QUOTE_WITHIN_REGISTERED_AGE": 389
+        }
+      },
+      {
+        "bookmaker": "williamhill_us",
+        "source_route": "the_odds_api_v4",
+        "season": 2025,
+        "target": "total",
+        "expected_n": 934,
+        "feature_qualified_n": 545,
+        "reference_n": 545,
+        "predictive_baseline_qualified_n": 0,
+        "strict_original_availability_qualified_n": 0,
+        "missing_reason_counts": {
+          "NO_CLOCK_VALID_QUOTE_WITHIN_REGISTERED_AGE": 389
+        }
+      },
+      {
+        "bookmaker": "williamhill_us",
+        "source_route": "the_odds_api_v4",
+        "season": 2025,
+        "target": "winner",
+        "expected_n": 934,
+        "feature_qualified_n": 505,
+        "reference_n": 505,
+        "predictive_baseline_qualified_n": 0,
+        "strict_original_availability_qualified_n": 0,
+        "missing_reason_counts": {
+          "NO_CLOCK_VALID_QUOTE_WITHIN_REGISTERED_AGE": 429
+        }
+      },
+      {
+        "bookmaker": "wynnbet",
+        "source_route": "the_odds_api_v4",
+        "season": 2025,
+        "target": "margin",
+        "expected_n": 934,
+        "feature_qualified_n": 0,
+        "reference_n": 0,
+        "predictive_baseline_qualified_n": 0,
+        "strict_original_availability_qualified_n": 0,
+        "missing_reason_counts": {
+          "NO_CLOCK_VALID_QUOTE_WITHIN_REGISTERED_AGE": 934
+        }
+      },
+      {
+        "bookmaker": "wynnbet",
+        "source_route": "the_odds_api_v4",
+        "season": 2025,
+        "target": "total",
+        "expected_n": 934,
+        "feature_qualified_n": 0,
+        "reference_n": 0,
+        "predictive_baseline_qualified_n": 0,
+        "strict_original_availability_qualified_n": 0,
+        "missing_reason_counts": {
+          "NO_CLOCK_VALID_QUOTE_WITHIN_REGISTERED_AGE": 934
+        }
+      },
+      {
+        "bookmaker": "wynnbet",
+        "source_route": "the_odds_api_v4",
+        "season": 2025,
+        "target": "winner",
+        "expected_n": 934,
+        "feature_qualified_n": 0,
+        "reference_n": 0,
+        "predictive_baseline_qualified_n": 0,
+        "strict_original_availability_qualified_n": 0,
+        "missing_reason_counts": {
+          "NO_CLOCK_VALID_QUOTE_WITHIN_REGISTERED_AGE": 934
+        }
+      },
+      {
+        "bookmaker": "kalshi",
+        "source_route": "kalshi_native",
+        "season": 2026,
+        "target": "margin",
+        "expected_n": 755,
+        "feature_qualified_n": 0,
+        "reference_n": 0,
+        "predictive_baseline_qualified_n": 0,
+        "strict_original_availability_qualified_n": 0,
+        "missing_reason_counts": {
+          "NATIVE_EXCHANGE_CONTRACT_AND_SOURCE_ADAPTER_NOT_BOUND": 755,
+          "NO_CLOCK_VALID_QUOTE_WITHIN_REGISTERED_AGE": 755,
+          "SUPPLIER_ROUTE_RESEARCH_RIGHTS_UNVERIFIED": 755
+        }
+      },
+      {
+        "bookmaker": "kalshi",
+        "source_route": "kalshi_native",
+        "season": 2026,
+        "target": "total",
+        "expected_n": 755,
+        "feature_qualified_n": 0,
+        "reference_n": 0,
+        "predictive_baseline_qualified_n": 0,
+        "strict_original_availability_qualified_n": 0,
+        "missing_reason_counts": {
+          "NATIVE_EXCHANGE_CONTRACT_AND_SOURCE_ADAPTER_NOT_BOUND": 755,
+          "NO_CLOCK_VALID_QUOTE_WITHIN_REGISTERED_AGE": 755,
+          "SUPPLIER_ROUTE_RESEARCH_RIGHTS_UNVERIFIED": 755
+        }
+      },
+      {
+        "bookmaker": "kalshi",
+        "source_route": "kalshi_native",
+        "season": 2026,
+        "target": "winner",
+        "expected_n": 755,
+        "feature_qualified_n": 0,
+        "reference_n": 0,
+        "predictive_baseline_qualified_n": 0,
+        "strict_original_availability_qualified_n": 0,
+        "missing_reason_counts": {
+          "NATIVE_EXCHANGE_CONTRACT_AND_SOURCE_ADAPTER_NOT_BOUND": 755,
+          "NO_CLOCK_VALID_QUOTE_WITHIN_REGISTERED_AGE": 755,
+          "SUPPLIER_ROUTE_RESEARCH_RIGHTS_UNVERIFIED": 755
+        }
+      },
+      {
+        "bookmaker": "polymarket",
+        "source_route": "polymarket_native",
+        "season": 2026,
+        "target": "margin",
+        "expected_n": 755,
+        "feature_qualified_n": 0,
+        "reference_n": 0,
+        "predictive_baseline_qualified_n": 0,
+        "strict_original_availability_qualified_n": 0,
+        "missing_reason_counts": {
+          "NATIVE_EXCHANGE_CONTRACT_AND_SOURCE_ADAPTER_NOT_BOUND": 755,
+          "NO_CLOCK_VALID_QUOTE_WITHIN_REGISTERED_AGE": 755,
+          "SUPPLIER_ROUTE_RESEARCH_RIGHTS_UNVERIFIED": 755
+        }
+      },
+      {
+        "bookmaker": "polymarket",
+        "source_route": "polymarket_native",
+        "season": 2026,
+        "target": "total",
+        "expected_n": 755,
+        "feature_qualified_n": 0,
+        "reference_n": 0,
+        "predictive_baseline_qualified_n": 0,
+        "strict_original_availability_qualified_n": 0,
+        "missing_reason_counts": {
+          "NATIVE_EXCHANGE_CONTRACT_AND_SOURCE_ADAPTER_NOT_BOUND": 755,
+          "NO_CLOCK_VALID_QUOTE_WITHIN_REGISTERED_AGE": 755,
+          "SUPPLIER_ROUTE_RESEARCH_RIGHTS_UNVERIFIED": 755
+        }
+      },
+      {
+        "bookmaker": "polymarket",
+        "source_route": "polymarket_native",
+        "season": 2026,
+        "target": "winner",
+        "expected_n": 755,
+        "feature_qualified_n": 0,
+        "reference_n": 0,
+        "predictive_baseline_qualified_n": 0,
+        "strict_original_availability_qualified_n": 0,
+        "missing_reason_counts": {
+          "NATIVE_EXCHANGE_CONTRACT_AND_SOURCE_ADAPTER_NOT_BOUND": 755,
+          "NO_CLOCK_VALID_QUOTE_WITHIN_REGISTERED_AGE": 755,
+          "SUPPLIER_ROUTE_RESEARCH_RIGHTS_UNVERIFIED": 755
+        }
+      },
+      {
+        "bookmaker": "polymarket_us",
+        "source_route": "polymarket_us_native",
+        "season": 2026,
+        "target": "margin",
+        "expected_n": 755,
+        "feature_qualified_n": 0,
+        "reference_n": 0,
+        "predictive_baseline_qualified_n": 0,
+        "strict_original_availability_qualified_n": 0,
+        "missing_reason_counts": {
+          "NATIVE_EXCHANGE_CONTRACT_AND_SOURCE_ADAPTER_NOT_BOUND": 755,
+          "NO_CLOCK_VALID_QUOTE_WITHIN_REGISTERED_AGE": 755,
+          "SUPPLIER_ROUTE_RESEARCH_RIGHTS_UNVERIFIED": 755
+        }
+      },
+      {
+        "bookmaker": "polymarket_us",
+        "source_route": "polymarket_us_native",
+        "season": 2026,
+        "target": "total",
+        "expected_n": 755,
+        "feature_qualified_n": 0,
+        "reference_n": 0,
+        "predictive_baseline_qualified_n": 0,
+        "strict_original_availability_qualified_n": 0,
+        "missing_reason_counts": {
+          "NATIVE_EXCHANGE_CONTRACT_AND_SOURCE_ADAPTER_NOT_BOUND": 755,
+          "NO_CLOCK_VALID_QUOTE_WITHIN_REGISTERED_AGE": 755,
+          "SUPPLIER_ROUTE_RESEARCH_RIGHTS_UNVERIFIED": 755
+        }
+      },
+      {
+        "bookmaker": "polymarket_us",
+        "source_route": "polymarket_us_native",
+        "season": 2026,
+        "target": "winner",
+        "expected_n": 755,
+        "feature_qualified_n": 0,
+        "reference_n": 0,
+        "predictive_baseline_qualified_n": 0,
+        "strict_original_availability_qualified_n": 0,
+        "missing_reason_counts": {
+          "NATIVE_EXCHANGE_CONTRACT_AND_SOURCE_ADAPTER_NOT_BOUND": 755,
+          "NO_CLOCK_VALID_QUOTE_WITHIN_REGISTERED_AGE": 755,
+          "SUPPLIER_ROUTE_RESEARCH_RIGHTS_UNVERIFIED": 755
+        }
+      },
+      {
+        "bookmaker": "betmgm",
+        "source_route": "the_odds_api_v4",
+        "season": 2026,
+        "target": "margin",
+        "expected_n": 755,
+        "feature_qualified_n": 291,
+        "reference_n": 291,
+        "predictive_baseline_qualified_n": 0,
+        "strict_original_availability_qualified_n": 0,
+        "missing_reason_counts": {
+          "NO_CLOCK_VALID_QUOTE_WITHIN_REGISTERED_AGE": 464
+        }
+      },
+      {
+        "bookmaker": "betmgm",
+        "source_route": "the_odds_api_v4",
+        "season": 2026,
+        "target": "total",
+        "expected_n": 755,
+        "feature_qualified_n": 291,
+        "reference_n": 291,
+        "predictive_baseline_qualified_n": 0,
+        "strict_original_availability_qualified_n": 0,
+        "missing_reason_counts": {
+          "NO_CLOCK_VALID_QUOTE_WITHIN_REGISTERED_AGE": 464
+        }
+      },
+      {
+        "bookmaker": "betmgm",
+        "source_route": "the_odds_api_v4",
+        "season": 2026,
+        "target": "winner",
+        "expected_n": 755,
+        "feature_qualified_n": 232,
+        "reference_n": 232,
+        "predictive_baseline_qualified_n": 0,
+        "strict_original_availability_qualified_n": 0,
+        "missing_reason_counts": {
+          "NO_CLOCK_VALID_QUOTE_WITHIN_REGISTERED_AGE": 523
+        }
+      },
+      {
+        "bookmaker": "betonlineag",
+        "source_route": "the_odds_api_v4",
+        "season": 2026,
+        "target": "margin",
+        "expected_n": 755,
+        "feature_qualified_n": 313,
+        "reference_n": 313,
+        "predictive_baseline_qualified_n": 0,
+        "strict_original_availability_qualified_n": 0,
+        "missing_reason_counts": {
+          "NO_CLOCK_VALID_QUOTE_WITHIN_REGISTERED_AGE": 442
+        }
+      },
+      {
+        "bookmaker": "betonlineag",
+        "source_route": "the_odds_api_v4",
+        "season": 2026,
+        "target": "total",
+        "expected_n": 755,
+        "feature_qualified_n": 313,
+        "reference_n": 313,
+        "predictive_baseline_qualified_n": 0,
+        "strict_original_availability_qualified_n": 0,
+        "missing_reason_counts": {
+          "NO_CLOCK_VALID_QUOTE_WITHIN_REGISTERED_AGE": 442
+        }
+      },
+      {
+        "bookmaker": "betonlineag",
+        "source_route": "the_odds_api_v4",
+        "season": 2026,
+        "target": "winner",
+        "expected_n": 755,
+        "feature_qualified_n": 203,
+        "reference_n": 203,
+        "predictive_baseline_qualified_n": 0,
+        "strict_original_availability_qualified_n": 0,
+        "missing_reason_counts": {
+          "NO_CLOCK_VALID_QUOTE_WITHIN_REGISTERED_AGE": 552
+        }
+      },
+      {
+        "bookmaker": "betrivers",
+        "source_route": "the_odds_api_v4",
+        "season": 2026,
+        "target": "margin",
+        "expected_n": 755,
+        "feature_qualified_n": 304,
+        "reference_n": 304,
+        "predictive_baseline_qualified_n": 0,
+        "strict_original_availability_qualified_n": 0,
+        "missing_reason_counts": {
+          "NO_CLOCK_VALID_QUOTE_WITHIN_REGISTERED_AGE": 451
+        }
+      },
+      {
+        "bookmaker": "betrivers",
+        "source_route": "the_odds_api_v4",
+        "season": 2026,
+        "target": "total",
+        "expected_n": 755,
+        "feature_qualified_n": 304,
+        "reference_n": 304,
+        "predictive_baseline_qualified_n": 0,
+        "strict_original_availability_qualified_n": 0,
+        "missing_reason_counts": {
+          "NO_CLOCK_VALID_QUOTE_WITHIN_REGISTERED_AGE": 451
+        }
+      },
+      {
+        "bookmaker": "betrivers",
+        "source_route": "the_odds_api_v4",
+        "season": 2026,
+        "target": "winner",
+        "expected_n": 755,
+        "feature_qualified_n": 217,
+        "reference_n": 217,
+        "predictive_baseline_qualified_n": 0,
+        "strict_original_availability_qualified_n": 0,
+        "missing_reason_counts": {
+          "NO_CLOCK_VALID_QUOTE_WITHIN_REGISTERED_AGE": 538
+        }
+      },
+      {
+        "bookmaker": "betus",
+        "source_route": "the_odds_api_v4",
+        "season": 2026,
+        "target": "margin",
+        "expected_n": 755,
+        "feature_qualified_n": 217,
+        "reference_n": 217,
+        "predictive_baseline_qualified_n": 0,
+        "strict_original_availability_qualified_n": 0,
+        "missing_reason_counts": {
+          "NO_CLOCK_VALID_QUOTE_WITHIN_REGISTERED_AGE": 538
+        }
+      },
+      {
+        "bookmaker": "betus",
+        "source_route": "the_odds_api_v4",
+        "season": 2026,
+        "target": "total",
+        "expected_n": 755,
+        "feature_qualified_n": 217,
+        "reference_n": 217,
+        "predictive_baseline_qualified_n": 0,
+        "strict_original_availability_qualified_n": 0,
+        "missing_reason_counts": {
+          "NO_CLOCK_VALID_QUOTE_WITHIN_REGISTERED_AGE": 538
+        }
+      },
+      {
+        "bookmaker": "betus",
+        "source_route": "the_odds_api_v4",
+        "season": 2026,
+        "target": "winner",
+        "expected_n": 755,
+        "feature_qualified_n": 187,
+        "reference_n": 187,
+        "predictive_baseline_qualified_n": 0,
+        "strict_original_availability_qualified_n": 0,
+        "missing_reason_counts": {
+          "NO_CLOCK_VALID_QUOTE_WITHIN_REGISTERED_AGE": 568
+        }
+      },
+      {
+        "bookmaker": "bovada",
+        "source_route": "the_odds_api_v4",
+        "season": 2026,
+        "target": "margin",
+        "expected_n": 755,
+        "feature_qualified_n": 277,
+        "reference_n": 277,
+        "predictive_baseline_qualified_n": 0,
+        "strict_original_availability_qualified_n": 0,
+        "missing_reason_counts": {
+          "NO_CLOCK_VALID_QUOTE_WITHIN_REGISTERED_AGE": 478
+        }
+      },
+      {
+        "bookmaker": "bovada",
+        "source_route": "the_odds_api_v4",
+        "season": 2026,
+        "target": "total",
+        "expected_n": 755,
+        "feature_qualified_n": 276,
+        "reference_n": 276,
+        "predictive_baseline_qualified_n": 0,
+        "strict_original_availability_qualified_n": 0,
+        "missing_reason_counts": {
+          "NO_CLOCK_VALID_QUOTE_WITHIN_REGISTERED_AGE": 479
+        }
+      },
+      {
+        "bookmaker": "bovada",
+        "source_route": "the_odds_api_v4",
+        "season": 2026,
+        "target": "winner",
+        "expected_n": 755,
+        "feature_qualified_n": 209,
+        "reference_n": 209,
+        "predictive_baseline_qualified_n": 0,
+        "strict_original_availability_qualified_n": 0,
+        "missing_reason_counts": {
+          "NO_CLOCK_VALID_QUOTE_WITHIN_REGISTERED_AGE": 546
+        }
+      },
+      {
+        "bookmaker": "draftkings",
+        "source_route": "the_odds_api_v4",
+        "season": 2026,
+        "target": "margin",
+        "expected_n": 755,
+        "feature_qualified_n": 617,
+        "reference_n": 617,
+        "predictive_baseline_qualified_n": 0,
+        "strict_original_availability_qualified_n": 0,
+        "missing_reason_counts": {
+          "NO_CLOCK_VALID_QUOTE_WITHIN_REGISTERED_AGE": 138
+        }
+      },
+      {
+        "bookmaker": "draftkings",
+        "source_route": "the_odds_api_v4",
+        "season": 2026,
+        "target": "total",
+        "expected_n": 755,
+        "feature_qualified_n": 617,
+        "reference_n": 617,
+        "predictive_baseline_qualified_n": 0,
+        "strict_original_availability_qualified_n": 0,
+        "missing_reason_counts": {
+          "NO_CLOCK_VALID_QUOTE_WITHIN_REGISTERED_AGE": 138
+        }
+      },
+      {
+        "bookmaker": "draftkings",
+        "source_route": "the_odds_api_v4",
+        "season": 2026,
+        "target": "winner",
+        "expected_n": 755,
+        "feature_qualified_n": 536,
+        "reference_n": 536,
+        "predictive_baseline_qualified_n": 0,
+        "strict_original_availability_qualified_n": 0,
+        "missing_reason_counts": {
+          "NO_CLOCK_VALID_QUOTE_WITHIN_REGISTERED_AGE": 219
+        }
+      },
+      {
+        "bookmaker": "fanatics",
+        "source_route": "the_odds_api_v4",
+        "season": 2026,
+        "target": "margin",
+        "expected_n": 755,
+        "feature_qualified_n": 184,
+        "reference_n": 184,
+        "predictive_baseline_qualified_n": 0,
+        "strict_original_availability_qualified_n": 0,
+        "missing_reason_counts": {
+          "NO_CLOCK_VALID_QUOTE_WITHIN_REGISTERED_AGE": 571
+        }
+      },
+      {
+        "bookmaker": "fanatics",
+        "source_route": "the_odds_api_v4",
+        "season": 2026,
+        "target": "total",
+        "expected_n": 755,
+        "feature_qualified_n": 184,
+        "reference_n": 184,
+        "predictive_baseline_qualified_n": 0,
+        "strict_original_availability_qualified_n": 0,
+        "missing_reason_counts": {
+          "NO_CLOCK_VALID_QUOTE_WITHIN_REGISTERED_AGE": 571
+        }
+      },
+      {
+        "bookmaker": "fanatics",
+        "source_route": "the_odds_api_v4",
+        "season": 2026,
+        "target": "winner",
+        "expected_n": 755,
+        "feature_qualified_n": 155,
+        "reference_n": 155,
+        "predictive_baseline_qualified_n": 0,
+        "strict_original_availability_qualified_n": 0,
+        "missing_reason_counts": {
+          "NO_CLOCK_VALID_QUOTE_WITHIN_REGISTERED_AGE": 600
+        }
+      },
+      {
+        "bookmaker": "fanduel",
+        "source_route": "the_odds_api_v4",
+        "season": 2026,
+        "target": "margin",
+        "expected_n": 755,
+        "feature_qualified_n": 313,
+        "reference_n": 313,
+        "predictive_baseline_qualified_n": 0,
+        "strict_original_availability_qualified_n": 0,
+        "missing_reason_counts": {
+          "NO_CLOCK_VALID_QUOTE_WITHIN_REGISTERED_AGE": 442
+        }
+      },
+      {
+        "bookmaker": "fanduel",
+        "source_route": "the_odds_api_v4",
+        "season": 2026,
+        "target": "total",
+        "expected_n": 755,
+        "feature_qualified_n": 313,
+        "reference_n": 313,
+        "predictive_baseline_qualified_n": 0,
+        "strict_original_availability_qualified_n": 0,
+        "missing_reason_counts": {
+          "NO_CLOCK_VALID_QUOTE_WITHIN_REGISTERED_AGE": 442
+        }
+      },
+      {
+        "bookmaker": "fanduel",
+        "source_route": "the_odds_api_v4",
+        "season": 2026,
+        "target": "winner",
+        "expected_n": 755,
+        "feature_qualified_n": 246,
+        "reference_n": 246,
+        "predictive_baseline_qualified_n": 0,
+        "strict_original_availability_qualified_n": 0,
+        "missing_reason_counts": {
+          "NO_CLOCK_VALID_QUOTE_WITHIN_REGISTERED_AGE": 509
+        }
+      },
+      {
+        "bookmaker": "lowvig",
+        "source_route": "the_odds_api_v4",
+        "season": 2026,
+        "target": "margin",
+        "expected_n": 755,
+        "feature_qualified_n": 284,
+        "reference_n": 284,
+        "predictive_baseline_qualified_n": 0,
+        "strict_original_availability_qualified_n": 0,
+        "missing_reason_counts": {
+          "NO_CLOCK_VALID_QUOTE_WITHIN_REGISTERED_AGE": 471
+        }
+      },
+      {
+        "bookmaker": "lowvig",
+        "source_route": "the_odds_api_v4",
+        "season": 2026,
+        "target": "total",
+        "expected_n": 755,
+        "feature_qualified_n": 284,
+        "reference_n": 284,
+        "predictive_baseline_qualified_n": 0,
+        "strict_original_availability_qualified_n": 0,
+        "missing_reason_counts": {
+          "NO_CLOCK_VALID_QUOTE_WITHIN_REGISTERED_AGE": 471
+        }
+      },
+      {
+        "bookmaker": "lowvig",
+        "source_route": "the_odds_api_v4",
+        "season": 2026,
+        "target": "winner",
+        "expected_n": 755,
+        "feature_qualified_n": 187,
+        "reference_n": 187,
+        "predictive_baseline_qualified_n": 0,
+        "strict_original_availability_qualified_n": 0,
+        "missing_reason_counts": {
+          "NO_CLOCK_VALID_QUOTE_WITHIN_REGISTERED_AGE": 568
+        }
+      },
+      {
+        "bookmaker": "mybookieag",
+        "source_route": "the_odds_api_v4",
+        "season": 2026,
+        "target": "margin",
+        "expected_n": 755,
+        "feature_qualified_n": 216,
+        "reference_n": 216,
+        "predictive_baseline_qualified_n": 0,
+        "strict_original_availability_qualified_n": 0,
+        "missing_reason_counts": {
+          "NO_CLOCK_VALID_QUOTE_WITHIN_REGISTERED_AGE": 539
+        }
+      },
+      {
+        "bookmaker": "mybookieag",
+        "source_route": "the_odds_api_v4",
+        "season": 2026,
+        "target": "total",
+        "expected_n": 755,
+        "feature_qualified_n": 225,
+        "reference_n": 225,
+        "predictive_baseline_qualified_n": 0,
+        "strict_original_availability_qualified_n": 0,
+        "missing_reason_counts": {
+          "NO_CLOCK_VALID_QUOTE_WITHIN_REGISTERED_AGE": 530
+        }
+      },
+      {
+        "bookmaker": "mybookieag",
+        "source_route": "the_odds_api_v4",
+        "season": 2026,
+        "target": "winner",
+        "expected_n": 755,
+        "feature_qualified_n": 200,
+        "reference_n": 200,
+        "predictive_baseline_qualified_n": 0,
+        "strict_original_availability_qualified_n": 0,
+        "missing_reason_counts": {
+          "NO_CLOCK_VALID_QUOTE_WITHIN_REGISTERED_AGE": 555
+        }
+      },
+      {
+        "bookmaker": "pointsbetus",
+        "source_route": "the_odds_api_v4",
+        "season": 2026,
+        "target": "margin",
+        "expected_n": 755,
+        "feature_qualified_n": 0,
+        "reference_n": 0,
+        "predictive_baseline_qualified_n": 0,
+        "strict_original_availability_qualified_n": 0,
+        "missing_reason_counts": {
+          "NO_CLOCK_VALID_QUOTE_WITHIN_REGISTERED_AGE": 755
+        }
+      },
+      {
+        "bookmaker": "pointsbetus",
+        "source_route": "the_odds_api_v4",
+        "season": 2026,
+        "target": "total",
+        "expected_n": 755,
+        "feature_qualified_n": 0,
+        "reference_n": 0,
+        "predictive_baseline_qualified_n": 0,
+        "strict_original_availability_qualified_n": 0,
+        "missing_reason_counts": {
+          "NO_CLOCK_VALID_QUOTE_WITHIN_REGISTERED_AGE": 755
+        }
+      },
+      {
+        "bookmaker": "pointsbetus",
+        "source_route": "the_odds_api_v4",
+        "season": 2026,
+        "target": "winner",
+        "expected_n": 755,
+        "feature_qualified_n": 0,
+        "reference_n": 0,
+        "predictive_baseline_qualified_n": 0,
+        "strict_original_availability_qualified_n": 0,
+        "missing_reason_counts": {
+          "NO_CLOCK_VALID_QUOTE_WITHIN_REGISTERED_AGE": 755
+        }
+      },
+      {
+        "bookmaker": "superbook",
+        "source_route": "the_odds_api_v4",
+        "season": 2026,
+        "target": "margin",
+        "expected_n": 755,
+        "feature_qualified_n": 0,
+        "reference_n": 0,
+        "predictive_baseline_qualified_n": 0,
+        "strict_original_availability_qualified_n": 0,
+        "missing_reason_counts": {
+          "NO_CLOCK_VALID_QUOTE_WITHIN_REGISTERED_AGE": 755
+        }
+      },
+      {
+        "bookmaker": "superbook",
+        "source_route": "the_odds_api_v4",
+        "season": 2026,
+        "target": "total",
+        "expected_n": 755,
+        "feature_qualified_n": 0,
+        "reference_n": 0,
+        "predictive_baseline_qualified_n": 0,
+        "strict_original_availability_qualified_n": 0,
+        "missing_reason_counts": {
+          "NO_CLOCK_VALID_QUOTE_WITHIN_REGISTERED_AGE": 755
+        }
+      },
+      {
+        "bookmaker": "superbook",
+        "source_route": "the_odds_api_v4",
+        "season": 2026,
+        "target": "winner",
+        "expected_n": 755,
+        "feature_qualified_n": 0,
+        "reference_n": 0,
+        "predictive_baseline_qualified_n": 0,
+        "strict_original_availability_qualified_n": 0,
+        "missing_reason_counts": {
+          "NO_CLOCK_VALID_QUOTE_WITHIN_REGISTERED_AGE": 755
+        }
+      },
+      {
+        "bookmaker": "unibet_us",
+        "source_route": "the_odds_api_v4",
+        "season": 2026,
+        "target": "margin",
+        "expected_n": 755,
+        "feature_qualified_n": 0,
+        "reference_n": 0,
+        "predictive_baseline_qualified_n": 0,
+        "strict_original_availability_qualified_n": 0,
+        "missing_reason_counts": {
+          "NO_CLOCK_VALID_QUOTE_WITHIN_REGISTERED_AGE": 755
+        }
+      },
+      {
+        "bookmaker": "unibet_us",
+        "source_route": "the_odds_api_v4",
+        "season": 2026,
+        "target": "total",
+        "expected_n": 755,
+        "feature_qualified_n": 0,
+        "reference_n": 0,
+        "predictive_baseline_qualified_n": 0,
+        "strict_original_availability_qualified_n": 0,
+        "missing_reason_counts": {
+          "NO_CLOCK_VALID_QUOTE_WITHIN_REGISTERED_AGE": 755
+        }
+      },
+      {
+        "bookmaker": "unibet_us",
+        "source_route": "the_odds_api_v4",
+        "season": 2026,
+        "target": "winner",
+        "expected_n": 755,
+        "feature_qualified_n": 0,
+        "reference_n": 0,
+        "predictive_baseline_qualified_n": 0,
+        "strict_original_availability_qualified_n": 0,
+        "missing_reason_counts": {
+          "NO_CLOCK_VALID_QUOTE_WITHIN_REGISTERED_AGE": 755
+        }
+      },
+      {
+        "bookmaker": "williamhill_us",
+        "source_route": "the_odds_api_v4",
+        "season": 2026,
+        "target": "margin",
+        "expected_n": 755,
+        "feature_qualified_n": 200,
+        "reference_n": 200,
+        "predictive_baseline_qualified_n": 0,
+        "strict_original_availability_qualified_n": 0,
+        "missing_reason_counts": {
+          "NO_CLOCK_VALID_QUOTE_WITHIN_REGISTERED_AGE": 555
+        }
+      },
+      {
+        "bookmaker": "williamhill_us",
+        "source_route": "the_odds_api_v4",
+        "season": 2026,
+        "target": "total",
+        "expected_n": 755,
+        "feature_qualified_n": 200,
+        "reference_n": 200,
+        "predictive_baseline_qualified_n": 0,
+        "strict_original_availability_qualified_n": 0,
+        "missing_reason_counts": {
+          "NO_CLOCK_VALID_QUOTE_WITHIN_REGISTERED_AGE": 555
+        }
+      },
+      {
+        "bookmaker": "williamhill_us",
+        "source_route": "the_odds_api_v4",
+        "season": 2026,
+        "target": "winner",
+        "expected_n": 755,
+        "feature_qualified_n": 156,
+        "reference_n": 156,
+        "predictive_baseline_qualified_n": 0,
+        "strict_original_availability_qualified_n": 0,
+        "missing_reason_counts": {
+          "NO_CLOCK_VALID_QUOTE_WITHIN_REGISTERED_AGE": 599
+        }
+      },
+      {
+        "bookmaker": "wynnbet",
+        "source_route": "the_odds_api_v4",
+        "season": 2026,
+        "target": "margin",
+        "expected_n": 755,
+        "feature_qualified_n": 0,
+        "reference_n": 0,
+        "predictive_baseline_qualified_n": 0,
+        "strict_original_availability_qualified_n": 0,
+        "missing_reason_counts": {
+          "NO_CLOCK_VALID_QUOTE_WITHIN_REGISTERED_AGE": 755
+        }
+      },
+      {
+        "bookmaker": "wynnbet",
+        "source_route": "the_odds_api_v4",
+        "season": 2026,
+        "target": "total",
+        "expected_n": 755,
+        "feature_qualified_n": 0,
+        "reference_n": 0,
+        "predictive_baseline_qualified_n": 0,
+        "strict_original_availability_qualified_n": 0,
+        "missing_reason_counts": {
+          "NO_CLOCK_VALID_QUOTE_WITHIN_REGISTERED_AGE": 755
+        }
+      },
+      {
+        "bookmaker": "wynnbet",
+        "source_route": "the_odds_api_v4",
+        "season": 2026,
+        "target": "winner",
+        "expected_n": 755,
+        "feature_qualified_n": 0,
+        "reference_n": 0,
+        "predictive_baseline_qualified_n": 0,
+        "strict_original_availability_qualified_n": 0,
+        "missing_reason_counts": {
+          "NO_CLOCK_VALID_QUOTE_WITHIN_REGISTERED_AGE": 755
+        }
+      }
+    ]
+  },
+  "storage": {
+    "control_zip_bytes": 88491826,
+    "control_zip_sha256": "5053219efea41c7adf7d1aff30e91fb15069dc049339388a4a13f1d912acf475",
+    "new_scientific_payload_bytes": 1676955059,
+    "new_unique_payloads": 8994,
+    "inherited_payload_bytes_not_recopied": 35483901513,
+    "part_limit_bytes": 536870912,
+    "aggregate_science_cap": null,
+    "is_all_scientific_storage": false
+  },
+  "remaining_work": [
+    {
+      "topic": "Official and postseason census",
+      "status": "UNPROVEN",
+      "detail": "An empty postseason response does not establish a complete schedule."
+    },
+    {
+      "topic": "Broader source ablations",
+      "status": "NEXT_FINITE_TRANCHE",
+      "detail": "The existing stage covers 17-source exclusions in Extra Trees and LightGBM. Other families remain unfinished."
+    },
+    {
+      "topic": "Historical market movement",
+      "status": "DEFERRED",
+      "detail": "Both authentic endpoints must be bound before movement can be used."
+    },
+    {
+      "topic": "Native exchange histories",
+      "status": "DEFERRED",
+      "detail": "Exact source routes, contract adapters, rights and clock-valid observations remain gaps."
+    },
+    {
+      "topic": "Additional calibration and blends",
+      "status": "DEFERRED",
+      "detail": "Learned weights and regression-mixture distributions need validation-safe evidence."
+    },
+    {
+      "topic": "Other pregame horizons",
+      "status": "DEFERRED",
+      "detail": "Current frozen fitted contexts and the next tranche are T-120. Primary T-60 remains blocked until separate clock-valid contexts and an evaluated fitting/inference path are bound."
+    },
+    {
+      "topic": "Football, injury and frontier program",
+      "status": "DEFERRED",
+      "detail": "Qualified play, drive, injury, replacement, weather, travel, coaching and event-response bindings remain required."
+    }
+  ],
+  "next_preparation": {
+    "release": "V097",
+    "status": "PREPARED_NOT_EXECUTED",
+    "canonical_bytes": 49593647,
+    "canonical_sha256": "80ced597192a8f03af1e866d00e6e4dc058cfae541b8e5a797b94be465060979",
+    "native_verified": true,
+    "native_verified_at": "2026-11-18T18:50:06.780603+00:00",
+    "engineering_checks_passed": 24,
+    "owner_runs_launched": 0,
+    "new_model_fits": 0,
+    "provider_retrievals": 0,
+    "predecessors_stopped": 0,
+    "target_workers": 12,
+    "worker_ceiling": 24,
+    "planned_source_jobs": 306,
+    "planned_jobs_are_new_fit_promise": false,
+    "planned_families": [
+      "XGBoost",
+      "CatBoost"
+    ],
+    "reuse_completed_registered_jobs": 936,
+    "parallel_checkpointed_scoring": true,
+    "resolves_latest_at_launch": true,
+    "summary_comparison": {
+      "source_release": "V096",
+      "original_bytes": 131276993,
+      "reencoded_bytes": 137541,
+      "scope": "OFFLINE_SERIALIZATION_COMPARISON_ONLY",
+      "full_stage_pins_preserved": true,
+      "future_total_return_size_claimed": false
+    },
+    "native_admission": {
+      "registered_jobs": 306,
+      "admitted_jobs": 306,
+      "validation_jobs": 204,
+      "frozen_test_jobs": 102,
+      "projected_workers": 24,
+      "checkpoint_receipts_verified_unchanged": 937,
+      "preparation_jobs_dispatched": 0,
+      "model_states_deserialized": 0,
+      "projection_only_not_measured_V097_scientific_occupancy": true,
+      "projected_cpu_count": 24
+    }
+  },
+  "evidence": [
+    {
+      "label": "Verified actual return pointer",
+      "bytes": 11871,
+      "sha256": "fb5694c6921eb95cc02a5b348929411cd169f19e24a3a8d8b37d76d188567f14"
+    },
+    {
+      "label": "Observed supervisor completion",
+      "bytes": 5503,
+      "sha256": "7a1f8356d88447ce8924571175e979478f6142018a4f61da62ef77c088b0ccb1"
+    },
+    {
+      "label": "Actual continuation review",
+      "bytes": 126068,
+      "sha256": "eb70867c5b5159f7d2081ae134d6af95021cea951a7cec17aaefdf662a79a63b"
+    },
+    {
+      "label": "Verified actual run summary",
+      "bytes": 131276993,
+      "sha256": "65180917bf217dc437583200de067319a2751fd930d141140e83f35f27534823"
+    },
+    {
+      "label": "Annual scorecards",
+      "bytes": 5196451,
+      "sha256": "50639ec07dccca2997b5f5ee006c3d4eff5886bc72e34ad8fa8b26010e3bae66"
+    },
+    {
+      "label": "Validation selection lock",
+      "bytes": 7111028,
+      "sha256": "c8cca444535df25fe46ce200aaf89edbdcd10205da73c8353bb7b0879af42f08"
+    },
+    {
+      "label": "Source coverage matrix",
+      "bytes": 1194924,
+      "sha256": "f7d6784629e01c23202b3539b507cee0905d9e0ae5c2093271ff04e7aaafb490"
+    },
+    {
+      "label": "Offline summary serialization engineering review",
+      "bytes": 9802,
+      "sha256": "920e91e8a03812abd1886e729cda7898b6aeaaee72061102b7ade751875e74f9"
+    },
+    {
+      "label": "Native canonical and packaged self-test verification",
+      "bytes": 31684,
+      "sha256": "1257b762d8b571422b7d560ac432f00fb4b72cafaa0a9fe44c2181e833ae5ed4"
+    },
+    {
+      "label": "Read-only native frontier admission",
+      "bytes": 13446,
+      "sha256": "830ecd6c891327c3c227dfc68b75c0d85b9b5e5322ec4062dcad9486d6f159c2"
+    }
+  ]
+}

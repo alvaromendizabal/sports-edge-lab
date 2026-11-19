@@ -1,3 +1,72 @@
+<!-- FBS_V099_ACTUAL_RETURN_START -->
+## Latest FBS evidence — verified V099 scoring completion
+
+[Open the completed V099 report](v099/completed/index.html) · [Evidence and limits](v099/completed/README.md) · [Bounded results JSON](v099/completed/data/status.json) · [Earlier V099 preparation](v099/)
+
+V099 completed successfully and published an independently verified **partial/resumable V13 return**. It authenticated and preserved all **1,125 V098 fitting jobs**, completed **600/600 new forecast and uncertainty tasks with zero failures**, and added **100 policies, 273,200 forecast rows and 260,800 completed-game score rows**. It performed **zero new estimator fits**. The earlier V098 campaign remains successful: 1,113 new fits, 12 reused fits, zero fitting failures and 1,113 reported calibrators.
+
+The completed report shows all nine objective leaders across five evaluation-only validation-weight profiles, the unchanged full observed **919/934/755** annual completed-game populations, uncertainty results, source gaps and all 16 final stage states. The 2026 season remains exposed frozen-test reporting, separate from 2024/2025 selection. Full population/postseason census, original-issue evidence, qualified exchange inputs and broader V13 research remain unfinished.
+
+Checkpoint custody took **211.288 seconds**, down from the earlier 1,930.132 seconds on a larger receipt population; recovery before science still took about **724 seconds**. The scoring stage admitted 36 workers and measured about **7.57 average CPU-core equivalents over 21.05 seconds**. Its finite queue was too short for the 180-second sustained occupancy gate; no full-capacity pass is claimed. The full invocation took about **19 minutes 48 seconds** and produced a **72,561,442-byte** compact return. The final whole-host compute estimate is **USD 0.84841345**, separate from an invoice.
+
+A separate overlapping launch was refused while the successful invocation held the owner lock; it did not start research or invalidate the verified return. This GitHub update reports completed owner work and launches no research. Website deployment and production promotion remain separate. All dated evidence below is preserved.
+<!-- FBS_V099_ACTUAL_RETURN_END -->
+
+<!-- FBS_V098_ACTUAL_RETURN_START -->
+## Verified V097 ablations; primary T-60 continuation prepared for owner execution
+
+[Read the V098 evidence review](v098/README.md) · [Interactive report](v098/index.html) · [Exact bounded evidence](v098/data/status.json)
+
+V097 completed **306/306 source-ablation jobs**, with **294 new base fits**, **294 calibrator fits**, **12 exact fitted states reused** and zero failed fits. Child and supervisor exited 0 and the return is verified and resumable; full V13 science remains incomplete. All **nine primary leaders and all 45 profile/objective winners remain unchanged** after 204 new policy variants. The dated T-120 comparison now contains 1,309 policies with full known 919/934/755 completed-game denominators.
+
+The two fitting phases admitted 24 workers but observed peaks of **19 and 22 concurrent fits**. They lasted about 48 and 30 seconds, so current sustained occupancy remains **conditional**, with no 180-second pass. Grading now has measured parallel-worker evidence: 612 scoring tasks and 79.263980156 worker CPU seconds. The final whole-host estimate is **USD 1.0620895516821498 over 24.80 minutes**, distinct from the older science-stage estimate and from an invoice.
+
+The separate primary **T-60** continuation is installed and native-verified, with owner execution pending: **1,125 registered jobs**, 750 raw/calibrated policy variants and 84 fixed blends. No owner execution is launched by this source update. The current source-coverage selector keeps T-60 preparation evidence and T-120 results separate; original-possession and scored provider-benchmark gaps remain explicit.
+
+Finite T-60 job completion does not establish campaign CPU acceptance. **T60_CAMPAIGN_RUNTIME_ACCEPTANCE** remains **UNVERIFIED** without an authenticated current-work window of at least **180 seconds** and **75% useful occupancy**; summed short family waves cannot yield a pass.
+
+The complete earlier landing content and dated reports follow unchanged. This source review does not establish website deployment or production promotion.
+
+<!-- FBS_V098_ACTUAL_RETURN_END -->
+
+<!-- FBS_V097_ACTUAL_RETURN_START -->
+## Latest FBS review: V096 finished its campaign and published a verified partial return
+
+[Open the actual results and V097 continuation review](v097/) · [Evidence and limits](v097/README.md) · [Preserved V093/V095 history](v093/)
+
+The actual V096 invocation finished with **child exit 0 and supervisor exit 0**. Its verified resumable return preserves **936/936 completed registered jobs: 624 reused validation jobs plus 312 new base-model fits and 312 new calibrator fits**, with zero failed fits. The authenticated scope now has **six historical failed attempts, one operationally finished attempt with partial science, and zero fully V13-complete executions**. This dated record supersedes the earlier latest-status description below without rewriting that history.
+
+The new report shows all nine objective-specific **2024/2025 validation-selected leaders with actual 2026 reporting**, all five evaluation-only validation ratios, full **919/934/755** known completed-game denominators and the corresponding sensitivity ranks. It keeps exposed frozen reconstructions, source reference coverage, missing pending rows, official/postseason census uncertainty and production eligibility separate.
+
+Actual fitting used **17 processes within the 24-worker ceiling**. A saved **180.078-second** real-work window passed at **87.0095% preparation-plus-fit occupancy** and **79.8297% optimizer-only occupancy**, both relative to 17 admitted workers. Later coordinator scoring used **267.657 elapsed seconds / 255.872 CPU seconds** and remained serial. The report shows these phases separately rather than treating the entire invocation as a fitting phase. The full supervised compute estimate is **USD 1.438130**, not an invoice.
+
+V097 is **prepared and native-verified** for a finite **306-job XGBoost/CatBoost source-ablation continuation**, preserves the 936 completed identities, and adds parallel checkpointed grading. It targets 12 scientific workers, with an explicit 24-worker ceiling. Preparation has launched **zero owner executions**; the report's preparation status follows the sealed canonical and native verification record. The verified V096 return remains the actual research result until the owner executes a successor.
+
+The actual control ZIP is **88,491,826 bytes**. Separate new scientific payloads total **1,676,955,059 bytes**; **35,483,901,513 inherited bytes** were referenced without recopying. Source changes remain unmerged; website deployment and production promotion are separate actions.
+
+## Earlier dated FBS reports
+
+The following sections retain their original evidence and publication dates. Their “latest” labels describe those earlier snapshots.
+
+<!-- FBS_V097_ACTUAL_RETURN_END -->
+
+<!-- FBS_V093_READINESS_START -->
+## Latest FBS review: V095 validation finished, return publication failed
+
+[Open the execution and continuation review](v093/) · [Retained V089 model comparison](v090/) · [Earlier failure history](v091/)
+
+The user-started V095 attempt recorded **154 new base fits, 154 new calibrators, zero failed fits and 470 checkpoint jobs retained**, completing **624/624 validation jobs in native evidence**. All **312 current-test jobs remain blocked**. Return publication then failed with `COMPACT_CONFLICTING_DECLARED_PINS`; the child exited **2 at 2026-11-18 07:10:07 UTC**, followed by a supervisor failure on null return metadata. The authenticated V090/V091/V093/V095 scope is **six failed attempts / zero finalized successes / zero active attempts** at the dated inspection. A provisional prepublication success is not a completed owner execution.
+
+**The latest verified portable return remains V093, with 470/624 validation jobs.** The newer native 624 are not a verified portable return and did not advance the actual-return pointer. The dashboard separates those custody states, preserves the earlier two V093 attempts and exposes aggregate completed/reused/new work by branch. V096 is **prepared and native-verified, with no owner execution**: its installed 49,393,957-byte canonical passed 107 archive checks, the native packaged self-test and the actual collector preflight. Its next user execution plans **312 pre-test fit/inference jobs plus 397 retained policy rescores**, reusing 624 validation identities and locked selection; preparation creates no owner research execution. All 397 retained policies cover 755 completed games, while pending coverage remains **123/133 for 288 policies and 93/133 for 109**.
+
+The review also exposes **nine saved native 50/50 validation leaders** with model family, coarse feature group, calibration status and full **2024 n=919 / 2025 n=934** objective metrics. All new-leader **2026 results remain not executed at 0/755**. They remain frozen-reconstruction diagnostics with prior test exposure, separate from retained forecasts, verified portable custody and production promotion.
+
+The observed current census is **755 completed / 133 pending games**, inspected at **2026-11-18 07:36:17 UTC**; complete official and postseason coverage remains unproven. Earlier **919 / 934 / 752** comparison cohorts keep their original dates. No new full-current metrics or deployable champion is claimed. V095 used **16 scientific workers within a 24-CPU lease**; its short drained queue did not establish the three-minute occupancy gate. Its supervised compute estimate is **USD 0.637176**, not an invoice.
+
+The verified V093 return retains an **84,885,900-byte control ZIP**, plus **2,324,812,938 new scientific payload bytes** stored separately and **32,435,360,361 inherited bytes referenced without recopying**. The ZIP is not total scientific storage or a science cap. No owner package, raw feed, unissued forecast grid or private recipe is added here. This PR updates source only; website deployment and production promotion remain separate.
+
+<!-- FBS_V093_READINESS_END -->
+
 <!-- FBS_V090_VERIFIED_V089_REVIEW_START -->
 ## Latest FBS review: V089 results and prepared V090 work
 
