@@ -43,6 +43,8 @@ jobs:
           python tests/test_fbs_v099_public.py
           python examples/fbs_contracts/v099/completed/build_review.py --check
           python tests/test_fbs_v099_completed_public.py
+          python examples/fbs_contracts/v101/build_review.py --check
+          python tests/test_fbs_v101_public.py
           node tests/fbs_v079_logic.test.cjs
           node tests/fbs_v090_logic.test.cjs
           node tests/fbs_v054_public_view.test.cjs
@@ -104,6 +106,7 @@ jobs:
           node tests/fbs_v098_browser.test.cjs
           node tests/fbs_v099_browser.test.cjs
           node tests/fbs_v099_completed_browser.test.cjs
+          node tests/fbs_v101_browser.test.cjs
           node examples/fbs_contracts/tests/test_dashboard_browser.cjs
           node examples/fbs_contracts/tests/test_recovery_browser.cjs
           node examples/fbs_contracts/tests/test_season_browser.cjs
@@ -170,6 +173,15 @@ jobs:
             ${{ runner.temp }}/fbs-screenshots/FBS_V099_COMPLETED_BROWSER_RECEIPT.json
           if-no-files-found: error
           retention-days: 14
+      - name: Preserve compact V101 recovery and preparation evidence
+        uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02
+        with:
+          name: fbs-v101-evidence-review
+          path: |
+            ${{ runner.temp }}/fbs-screenshots/FBS_V101_*.png
+            ${{ runner.temp }}/fbs-screenshots/FBS_V101_BROWSER_RECEIPT.json
+          if-no-files-found: error
+          retention-days: 14
       - name: Preserve historical desktop and mobile evidence views
         uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02
         with:
@@ -179,6 +191,7 @@ jobs:
             !${{ runner.temp }}/fbs-screenshots/FBS_V097_*.png
             !${{ runner.temp }}/fbs-screenshots/FBS_V098_*.png
             !${{ runner.temp }}/fbs-screenshots/FBS_V099_*.png
+            !${{ runner.temp }}/fbs-screenshots/FBS_V101_*.png
             ${{ runner.temp }}/fbs-screenshots/FBS_V073_BROWSER_RECEIPT.json
             ${{ runner.temp }}/fbs-screenshots/FBS_V074_*_BROWSER_RECEIPT.json
             ${{ runner.temp }}/fbs-screenshots/FBS_V075_*_BROWSER_RECEIPT.json
