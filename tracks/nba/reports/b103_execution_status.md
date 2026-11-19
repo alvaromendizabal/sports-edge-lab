@@ -1,3 +1,56 @@
+# NBA B103 bounded execution: completed tasks, incomplete campaign
+
+**Evidence cutoff: November 19, 2026, 03:19 UTC. B103 completed its bounded real-work scope and remains PARTIAL_RESUMABLE_BOUNDED_ACCEPTANCE.**
+
+[NBA track](../README.md) · [Sanitized aggregate evidence](b103_execution_status.json) · [Earlier dated B102 projection recovery](b102_execution_status.html)
+
+## What changed since the preparation snapshot
+
+B103 actually ran on the owner workspace from **03:12 to 03:19 UTC**. The authenticated record shows **one completed bounded execution, zero failed bounded executions, zero failed jobs, and zero full campaign executions**. Its invocation exited **2** under the partial-campaign policy after completing the selected bounded tasks; there was no observed execution exception. This is different from the earlier B102 full-run failure preserved below. It is also different from completing the whole owner campaign or passing full V13 acceptance.
+
+| Work | Current B103 result | Cumulative registered progress |
+|---|---|---|
+| Base estimators | **12 new fits**, zero failed fits | **24 of 240** box-score base recipes, including the 12 distinct earlier B102 fits; **216 remain**. |
+| Calibrators | **12 new fits** | **24 completed** across those distinct B102/B103 base recipes. |
+| Preserved validation inference | **12 new replay groups**; **834 prior groups** authenticated and excluded from repeated work | **846 of 2,429** groups complete; **1,583 missing**. These produce **2,151 of 5,808** preserved variants; dependent blends remain incomplete. |
+| Meta-models and residual heads | **Zero new fits** | The original **320 B100 residual-distribution states** remain preserved. |
+| Original B100 states | **320 files verified; zero missing files restored** | **Zero renewed applications credited**. The actual application counter remains unknown; file verification is not application. |
+| Private projections | Prior authenticated authority for **5,808** outputs reused | **Zero current projection tasks, rehashed projection files or new projection CPU credit**. |
+| Provider retrieval | **Zero requests and zero credits** | No source freshness is inferred from fitting or checkpoint reuse. |
+| Compact verified return | **20,226 bytes, eight payloads**, zero unchanged historical payloads repacked | Successful return verification does not establish full campaign completion. |
+
+These cumulative counts are reconciled across distinct task identities. The current bounded run's policy-deferred counters include work deliberately excluded from the run, including some already completed prior work; they are not the number of scientifically missing tasks.
+
+## Measured CPU and the acceptance limit
+
+The context-preparation phase peaked at **20.442 sampled owner CPU equivalents**. The estimator phase peaked at **4.6169**, ran for **50.10 seconds**, and began with **12 ready estimator tasks** using **one native thread per fit**. Context preparation is useful real work, but its peak cannot be reported as estimator-fitting throughput. Neither a requested ceiling of 24 nor a short peak establishes 24 continuously busy cores.
+
+The recorded fit acceptance is **CONDITIONAL_SHORT_QUEUE_COMPLETION_NOT_FULL_CAPACITY_PASS**, with **zero sustained 180-second / 75%-occupancy passes**. The bounded scope completed; sustained 12–24-core fitting and full-campaign acceptance remain unproven. The threshold was not lowered and synthetic CPU work received no credit.
+
+The through-delivery whole-instance wall-time estimate was **USD 0.307878**. Actual invoiced cost and NBA allocation remain unknown. This estimate is separate from earlier executions and from the compute admission ceiling.
+
+## Scientific boundaries and what remains
+
+The expanded frozen evaluation snapshot contains **1,321 / 1,322 / 210** completed games for **2024–25 / 2025–26 / 2026–27**. The preserved B100 snapshot contains **1,314 / 1,315 / 210**. Their metrics cannot be mixed into a single all-model ranking. The expanded all-contender comparison remains incomplete, and an independently verified all-competition census remains open.
+
+The **210 test games are a frozen snapshot**, not a verified fresh count of every completed 2026–27 game. B104 is being prepared to refresh descriptive test reporting **after the validation selection lock**, preserving completed fitted states and validation-task identities. It is also being prepared to repair the reader for the actual pinned storage-navigation bundle and current continuation. **This dated update does not certify a built, uploaded or executed B104 runner.**
+
+Remaining registered work includes the missing preserved replay groups, **216 base-estimator recipes with their calibrators**, application of all **320 original heads without refitting them**, up to **162 meta-models**, **216 combination residual heads**, and **480 fixed mixtures requiring no new fits**. These are finite maxima and remaining tasks, not a promise that one run completes all V13 research. Existing negative findings, source-clock and coverage gaps, injury/replacement and other frontier work, complete forecasts and qualified dashboards remain visible requirements.
+
+Only the two validation seasons select components and champions: **50/50** annual metrics are primary, with **40/60, 30/70, 20/80 and 10/90** sensitivity scores computed without refitting estimators or reweighting training seasons. Previously exposed test outcomes remain descriptive and cannot select or tune components. Original issues and reconstructed/replayed predictions remain separate; external-market overlap does not redefine the full evaluation population.
+
+## Source and publication scope
+
+This update changes only the NBA README notice and these two status documents. It adds no new forecast values, private model or feature recipes, runtime packages, raw provider records, cloud identifiers, owner commands, workflow changes or production changes. The earlier B102 full-run failure and B103 preparation facts remain preserved below and in explicitly historical JSON fields.
+
+The aggregate JSON binds the latest B103 execution and invocation evidence by digest. Those private bodies are not public downloads. **This remains a draft, unmerged source review: no main integration, website deployment or automatic champion promotion.** Existing CI for the new exact source is tracked separately from both historical CI and scientific acceptance. No workflow rerun or timeout change is implied.
+
+---
+
+## Preserved earlier preparation and B102 failure record
+
+**The following record was written before the B103 bounded invocation. Its statements about native access and zero B103 fits describe that earlier preparation snapshot. The actual execution above supersedes those statements for current activity; the B102 failure measurements and engineering history remain unchanged.**
+
 # NBA B103 preparation and latest B102 full-run failure
 
 **Dated status: November 19, 2026 UTC. B102 is PARTIAL_RESUMABLE; B103 is a prepared candidate awaiting native acceptance.**

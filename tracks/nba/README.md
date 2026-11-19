@@ -1,17 +1,17 @@
 # Sports Edge Lab · NBA
 
 <!-- NBA B103 EXECUTION STATUS BEGIN -->
-## November 19: B102 full run failed; B103 candidate awaits native acceptance
+## November 19: B103 completed bounded research; full campaign remains incomplete
 
-[Read the B102 full-run failure and B103 preparation status](reports/b103_execution_status.md) · [Sanitized aggregate evidence](reports/b103_execution_status.json).
+[Read the actual B103 bounded execution and preserved B102 failure audit](reports/b103_execution_status.md) · [Sanitized aggregate evidence](reports/b103_execution_status.json).
 
-**The later B102 full owner execution failed and exited 2.** It verified all **5,808 saved projections**, completed **834 of 2,429 preserved validation replay groups** and retained their checkpoints, then deferred **1,595 groups** when shared memory-pressure admission stayed at zero. It recorded **zero new estimator, calibration, meta-model or residual-distribution fits**. The earlier B102 projection-recovery page below remains a valid dated snapshot; it does not certify this later full run.
+**B103 ran on the owner workspace and completed one bounded execution with 12 new estimator fits, 12 new calibration fits and zero observed failures.** It remains **PARTIAL_RESUMABLE_BOUNDED_ACCEPTANCE**, with exit **2** under the partial-campaign policy and **zero full campaign executions**. The prior preparation-only snapshot and earlier B102 full-run failure remain dated history, not the current B103 activity count.
 
-Validation replay peaked at **24 active scoring processes and 20.02 sampled owner CPU equivalents**, but averaged **4.60 sampled owner CPU equivalents**, with **zero full three-minute/75% occupancy passes**. A worker count or short peak does not satisfy the requested sustained scientific throughput. All **320 B100 distribution states** were verified present; their new application was blocked and is not credited. The earlier bounded B102 check's **12 estimator and 12 calibration fits** remain separate preserved work.
+**846 of 2,429 preserved validation replay groups** are now complete, including **12 new groups** and **834 authenticated prior groups**; **1,583 remain missing**. The registered box-score campaign has **24 of 240 base recipes plus their calibrators** complete across distinct B102/B103 fits, leaving **216** base recipes. All **320 B100 distribution files** were verified; zero missing files were restored and **zero renewed applications are credited**. The actual application counter remains unknown. Prior authority for **5,808 projections** was reused without claiming new projection work.
 
-**B103 is a prepared candidate, with native installation, readiness and real-work acceptance pending.** The corrected candidate passed **96 combined engineering tests** and **11 separate installer checks**; all **1,162 inherited release members** remain byte-identical. These tests performed no B103 owner science. Native access was unavailable during preparation, so no native or CPU pass is claimed. The next owner step is bounded acceptance and evidence review; the full research campaign remains held.
+Context preparation peaked at **20.442 sampled owner CPU equivalents**, while the estimator phase peaked at **4.6169** over **50.10 seconds**. Its gate is **CONDITIONAL_SHORT_QUEUE_COMPLETION_NOT_FULL_CAPACITY_PASS**, with **zero sustained 180-second / 75%-occupancy passes**. Requested workers, context CPU and fitting CPU are separate measurements; sustained 12–24-core fitting remains unproven.
 
-The declared comparison populations are now **1,321 / 1,322 / 210 completed games**, separate from B100's older **1,314 / 1,315 / 210** populations. Complete contender replay and an independently verified all-competition census remain unfinished. No cross-population winner, full-season champion, automatic promotion or website deployment is claimed.
+The frozen comparison populations are **1,321 / 1,322 / 210**, separate from B100's older **1,314 / 1,315 / 210**. The **210 test games are not a fresh all-completed-game census**. B104 is being prepared for post-selection-lock test refresh and the actual storage-navigation format; this snapshot does not certify its build, upload or execution. Full same-population comparison, source qualification, remaining research and resulting dashboards remain unfinished. No full-season champion, automatic promotion, merge or website deployment is claimed.
 <!-- NBA B103 EXECUTION STATUS END -->
 
 <!-- NBA B102 EXECUTION STATUS BEGIN -->
