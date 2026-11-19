@@ -1,5 +1,17 @@
 # Sports Edge Lab · NBA
 
+<!-- NBA B104 EXECUTION STATUS BEGIN -->
+## November 19: B104 preparation and the requested 12–36-core continuation
+
+[Open the current NBA execution and preparation dashboard](reports/b104_execution_status.html) · [Download exact aggregate evidence](reports/b104_execution_status.json) · [Preserved B103 execution audit](reports/b103_execution_status.md).
+
+**Private B104 delivery and native installation have passed verification; owner research execution remains pending.** Read-only native readiness also passed, with no research execution or scientific CPU acceptance credited. The requested owner configuration targets **12 scientific workers normally**, requests **36 cores**, and enforces an explicit **36-worker hard ceiling** subject to safe shared CPU, memory and I/O capacity. Native threads remain bounded per independent fit. Configuration does not establish measured utilization, and unlimited wall time does not waive the **USD 200 compute guard**.
+
+The latest actual B103 bounded execution remains separate: **12 new estimator fits, 12 calibrators, zero observed failures**, and **PARTIAL_RESUMABLE_BOUNDED_ACCEPTANCE** with policy exit 2. Context preparation peaked at **20.442 measured owner CPU equivalents**; the fit phase peaked at **4.6169** over **50.10 seconds**, with **zero sustained 180-second occupancy passes**. No B104 science is credited by this preparation update.
+
+The dashboard preserves **846/2,429 completed replay groups**, **24/240 box-score base recipes**, and **320 original distribution files verified with zero renewed applications credited**. The application counter remains unknown. It distinguishes the frozen **1,321 / 1,322 / 210** population from the older **1,314 / 1,315 / 210** comparison and marks fresh test reporting, full contender scoring, source gaps and remaining research incomplete. B104 prepares test refresh after selection locks and the actual pinned storage-navigation format. No full V13 completion, champion promotion, merge or website deployment is claimed.
+<!-- NBA B104 EXECUTION STATUS END -->
+
 <!-- NBA B103 EXECUTION STATUS BEGIN -->
 ## November 19: B103 completed bounded research; full campaign remains incomplete
 

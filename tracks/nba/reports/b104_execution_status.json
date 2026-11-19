@@ -1,0 +1,229 @@
+{
+  "B104_preparation": {
+    "automatic_promotions": 0,
+    "canonical_executable": {
+      "bytes": 10896772,
+      "sha256": "53ebceccaee8d00316fb79638c14c3c9b9bb9ce6362e812e045be64bad2371b5"
+    },
+    "changes": [
+      "Refresh descriptive test reports after validation selection locks, preserving completed validation and fitted-state identities.",
+      "Read pinned bundled storage navigation and the current continuation with exact content verification.",
+      "Honor the requested 36-worker hard ceiling while retaining shared CPU, memory, disk, cost and checkpoint safeguards."
+    ],
+    "delivery_full_body_readback_verified": true,
+    "delivery_verification_evidence": {
+      "bytes": 32941,
+      "sha256": "6aa9b203c62da6a3c2d4742b25491dd05f6c01e6828f55aedd0648da26982a8e"
+    },
+    "full_v13_complete": false,
+    "native_installation_verification_evidence": {
+      "bytes": 32941,
+      "sha256": "6aa9b203c62da6a3c2d4742b25491dd05f6c01e6828f55aedd0648da26982a8e"
+    },
+    "native_physical_installation_verified": true,
+    "native_readiness_verification_evidence": {
+      "bytes": 433588,
+      "sha256": "e3fad0b8524695d54fc8e80ad4f153ed31cc6f6cadabcdfd34af925e8f60caee"
+    },
+    "native_readiness_verified": true,
+    "new_calibration_fits": 0,
+    "new_estimator_fits": 0,
+    "new_meta_model_fits": 0,
+    "new_owner_executions": 0,
+    "new_residual_distribution_fits": 0,
+    "observed_at_utc": "2026-11-19T04:48:05.522737+00:00",
+    "owner_execution_pending": true,
+    "status": "DELIVERY_AND_NATIVE_INSTALL_VERIFIED_OWNER_EXECUTION_PENDING"
+  },
+  "actual_B103": {
+    "B100_actual_application_counter": null,
+    "B100_distribution_files_verified": 320,
+    "B100_missing_files_restored": 0,
+    "B100_new_application_credit": 0,
+    "actual_invoiced_usd": null,
+    "actual_provider_credits": 0,
+    "bounded_completed_executions": 1,
+    "bounded_executions": 1,
+    "bounded_failed_executions": 0,
+    "bounded_incomplete_executions": 0,
+    "compact_return": {
+      "bytes": 20226,
+      "historical_payloads_repacked": 0,
+      "sha256": "72a74b33a8fb7be074fc6d5db189474a816c2021774554dd31a7a1263904c8a0",
+      "verified_payloads": 8
+    },
+    "cpu": {
+      "acceptance": "CONDITIONAL_SHORT_QUEUE_COMPLETION_NOT_FULL_CAPACITY_PASS",
+      "configured_workers_are_measured_busy_cores": false,
+      "context_peak_is_estimator_fit_utilization": false,
+      "context_preparation_peak_sampled_owner_cores": 20.44237471292999,
+      "estimator_phase_elapsed_seconds": 50.095931,
+      "estimator_phase_peak_sampled_owner_cores": 4.616901583083376,
+      "independent_telemetry_samples": 41,
+      "initial_ready_estimator_tasks": 12,
+      "measured_full_interval_passes": 0,
+      "per_fit_native_threads": 1,
+      "required_occupancy_fraction": 0.75,
+      "required_representative_seconds": 180
+    },
+    "current_projection_files_rehashed": 0,
+    "current_projection_worker_tasks": 0,
+    "execution_complete": false,
+    "execution_mode": "BOUNDED_REAL_OWNER_ACCEPTANCE",
+    "execution_outcome": "BOUNDED_TASKS_COMPLETED_FULL_CAMPAIGN_DEFERRED",
+    "exit_code_meaning": "Partial campaign policy exit after completed bounded tasks; no observed execution exception.",
+    "failed_estimator_fits": 0,
+    "failed_jobs": 0,
+    "finished_at_utc": "2026-11-19T03:19:40.959366Z",
+    "full_owner_completed_executions": 0,
+    "full_owner_executions": 0,
+    "full_research_run_launched": false,
+    "full_v13_complete": false,
+    "hard_max_workers": 24,
+    "invocation_exit_code": 2,
+    "nba_allocated_cost_usd": null,
+    "new_calibration_fits": 12,
+    "new_estimator_fits": 12,
+    "new_meta_model_fits": 0,
+    "new_preserved_validation_replay_groups": 12,
+    "new_provider_requests": 0,
+    "new_residual_distribution_fits": 0,
+    "previous_preserved_validation_replay_groups_authenticated": 834,
+    "prior_projection_checkpoint_count": 5808,
+    "projection_reuse_scope": "PRIOR_PINNED_PROJECTION_CHECKPOINT_NO_NEW_PROJECTION_CPU_CREDIT",
+    "registered_campaign_branch_failures": 0,
+    "release": "B103",
+    "requested_cores": 24,
+    "research_entered": true,
+    "scientific_status": "PARTIAL_RESUMABLE_BOUNDED_ACCEPTANCE",
+    "started_at_utc": "2026-11-19T03:12:40.773501Z",
+    "whole_instance_through_delivery_estimate_usd": "0.3078780719383571618055555556"
+  },
+  "actual_evidence_cutoff_utc": "2026-11-19T03:19:40.959366Z",
+  "cumulative_registered_work": {
+    "basis": "Distinct prior B102 and current B103 fitted/replay identities; prior work is not new B103 credit.",
+    "box_base_estimators_complete": 24,
+    "box_base_recipes_missing": 216,
+    "box_base_recipes_registered": 240,
+    "box_calibrators_complete": 24,
+    "preserved_scored_variants_complete": 2151,
+    "preserved_validation_replay_groups_complete": 846,
+    "preserved_validation_replay_groups_missing": 1583,
+    "preserved_validation_replay_groups_registered": 2429,
+    "preserved_variants_registered": 5808,
+    "registered_counts_are_full_v13_completion": false
+  },
+  "evaluation": {
+    "fresh_all_completed_test_reporting_complete": false,
+    "full_season_champions_qualified": false,
+    "historical_B100_validation_games": [
+      1314,
+      1315
+    ],
+    "independent_full_season_census_verified": false,
+    "market_overlap_is_full_population": false,
+    "primary_validation_selection_weights": [
+      0.5,
+      0.5
+    ],
+    "prior_test_exposure_preserved": true,
+    "same_population_all_contender_comparison_complete": false,
+    "test_count_scope": "FROZEN_210_GAME_SNAPSHOT_NOT_FRESH_ALL_COMPLETED_GAME_CENSUS",
+    "test_declared_completed_games": 210,
+    "test_outcomes_select_models": false,
+    "test_season": "2026-27",
+    "unknown_missing_count_is_zero": false,
+    "validation_declared_completed_games": [
+      1321,
+      1322
+    ],
+    "validation_seasons": [
+      "2024-25",
+      "2025-26"
+    ],
+    "weight_sensitivity_refits_estimators": false
+  },
+  "evidence": [
+    {
+      "bytes": 180593039,
+      "label": "Actual B103 execution report",
+      "sha256": "9c2e946a07b374e47634639990ef631efb6dbd077c0052b663ccc00857b9cc8d"
+    },
+    {
+      "bytes": 2454,
+      "label": "Actual B103 invocation receipt",
+      "sha256": "29d47862d6631c71a5be7851f8d3713731db918ce85ed2782bcb7d7bcda6dd72"
+    },
+    {
+      "bytes": 1037522,
+      "label": "Independent B103 resource log",
+      "sha256": "d469cfd86197734156b6b8c7c12d9ef1ff43aba30d78c44d045990f03412d1d9"
+    },
+    {
+      "bytes": 20226,
+      "label": "Verified B103 compact return",
+      "sha256": "72a74b33a8fb7be074fc6d5db189474a816c2021774554dd31a7a1263904c8a0"
+    }
+  ],
+  "owner": "NBA",
+  "owner_request": {
+    "compute_guard_usd": 200,
+    "explicit_max_workers": 36,
+    "native_threads_per_independent_fit": 1,
+    "normal_scientific_worker_target": 12,
+    "requested_cores": 36,
+    "requested_workers_are_measured_busy_cores": false,
+    "safe_capacity_may_be_lower_than_requested": true,
+    "useful_cpu_acceptance_occupancy": 0.75,
+    "useful_cpu_acceptance_seconds": 180,
+    "wall_minutes": 0,
+    "wall_zero_waives_cost_guard": false
+  },
+  "publication": {
+    "automatic_champion_promotions": 0,
+    "draft_pr": 392,
+    "merged": false,
+    "new_public_forecast_values": 0,
+    "private_runtime_or_raw_provider_data_published": false,
+    "source_review_only": true,
+    "website_deployed": false
+  },
+  "remaining_campaign": {
+    "fixed_mixtures_without_new_fits": 480,
+    "maximum_additional_calibrators": 216,
+    "maximum_additional_combination_residual_heads": 216,
+    "maximum_additional_meta_models": 162,
+    "missing_box_base_recipes": 216,
+    "missing_preserved_validation_replay_groups": 1583,
+    "original_distribution_states_to_apply_without_refit": 320,
+    "registered_maxima_guarantee_full_v13": false
+  },
+  "requirements_still_open": [
+    {
+      "detail": "Complete all saved contenders on the same eligible rows; independently verify the all-competition census and retain missingness.",
+      "name": "Common evaluation populations",
+      "status": "INCOMPLETE"
+    },
+    {
+      "detail": "The 210-game test snapshot is frozen. Refresh after validation selection locks, with no optimizer updates or selection from test outcomes.",
+      "name": "Fresh test reporting",
+      "status": "PREPARED_REPAIR_OWNER_EXECUTION_PENDING"
+    },
+    {
+      "detail": "Apply the 320 verified original states without refitting them, complete missing registered estimators/calibrators, and assess combinations on identical rows.",
+      "name": "Distribution, calibration and blend research",
+      "status": "INCOMPLETE"
+    },
+    {
+      "detail": "Measure actual worker PIDs, CPU, queue, memory and completions. A 36-worker setting and a context-preparation peak do not establish fit throughput.",
+      "name": "Sustained scientific utilization",
+      "status": "UNPROVEN"
+    },
+    {
+      "detail": "Retain all-source as-of coverage and gaps, injury/replacement and frontier branches, completed/upcoming forecasts, and separate DraftKings, Kalshi and Polymarket benchmarks.",
+      "name": "Source coverage and forecasts",
+      "status": "INCOMPLETE"
+    }
+  ],
+  "schema": "sel.nba.public_execution_status.b104.v1"
+}
