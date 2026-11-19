@@ -152,14 +152,14 @@
     "validation_jobs": 750
   },
   "next_preparation": {
-    "canonical_bytes": null,
-    "canonical_sha256": null,
+    "canonical_bytes": 50176790,
+    "canonical_sha256": "bfbf7f0c17db7b0d96f031691e460fd37183ff703f0a16792bdf81c529ca1e4b",
     "current_runtime_acceptance": "NOT_EXECUTED",
     "expected_new_completed_scores": 260800,
     "expected_new_forecast_rows": 273200,
     "explicit_worker_limit_is_hard_ceiling": true,
-    "native_verified": false,
-    "native_verified_at": null,
+    "native_verified": true,
+    "native_verified_at": "2026-11-19T01:19:45.660006+00:00",
     "new_model_fits": 0,
     "new_work_is_scoring_not_optimizer_fitting": true,
     "owner_runs_launched": 0,
@@ -179,7 +179,7 @@
     "required_representative_seconds": 180,
     "resolves_latest_at_launch": true,
     "reuse_completed_work": true,
-    "status": "IN_PREPARATION",
+    "status": "PREPARED_NOT_EXECUTED",
     "target_workers": 12,
     "worker_ceiling": 36
   },
