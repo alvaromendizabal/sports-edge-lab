@@ -1,0 +1,153 @@
+{
+  "B103_preparation": {
+    "automatic_full_research_chaining": false,
+    "combined_engineering_errors": 0,
+    "combined_engineering_failures": 0,
+    "combined_engineering_tests_passed": 96,
+    "configured_workers_are_measured_busy_cores": false,
+    "full_research_run_launched": false,
+    "full_research_run_ready": false,
+    "hard_max_workers": 24,
+    "installer_engineering_tests_passed": 11,
+    "native_blocker": "Authenticated native workspace session unavailable during preparation.",
+    "native_installation_verified": false,
+    "native_readiness_verified": false,
+    "native_workload_acceptance_verified": false,
+    "new_B103_fits": 0,
+    "next_owner_scope": "Installation, read-only readiness and bounded real-work acceptance; then stop for evidence review.",
+    "previous_combined_attempt": {
+      "errors": 13,
+      "failures": 2,
+      "repair": "Resolve test dependencies and isolate test harness hooks; final combined suite includes a regression for worker serialization identity.",
+      "tests": 95
+    },
+    "prior_release_members_byte_preserved": 1162,
+    "repair_scope": [
+      "Use current pressure and verified owner worker identities while retaining memory, CPU, disk, cost and other-owner capacity safeguards.",
+      "Preserve completed replay checkpoints and original numerical identities; do not refit verified completed states.",
+      "Allow independent registered work after valid inputs while retaining full-cohort rejection for dependent comparisons.",
+      "After incomplete campaign work, emit compact diagnostics and defer redundant full dashboard regeneration."
+    ],
+    "requested_cores": 24,
+    "status": "PREPARED_CANDIDATE_NATIVE_ACCEPTANCE_PENDING"
+  },
+  "dated_snapshot_utc": "2026-11-19",
+  "evaluation": {
+    "full_season_champions_qualified": false,
+    "historical_B100_validation_games": [
+      1314,
+      1315
+    ],
+    "independent_full_season_census_verified": false,
+    "market_overlap_is_full_population": false,
+    "primary_validation_selection_weights": [
+      0.5,
+      0.5
+    ],
+    "prior_test_exposure_preserved": true,
+    "same_population_all_contender_comparison_complete": false,
+    "test_declared_completed_games": 210,
+    "test_outcomes_select_models": false,
+    "test_season": "2026-27",
+    "unknown_missing_count_is_zero": false,
+    "validation_declared_completed_games": [
+      1321,
+      1322
+    ],
+    "validation_seasons": [
+      "2024-25",
+      "2025-26"
+    ],
+    "weight_sensitivity_refits_estimators": false
+  },
+  "evidence_provenance": {
+    "execution_report_sha256": "7aa0e2ef6116d5e7b9f4901554dcf37139ace98007286f060413fcd46098eb1c",
+    "invocation_receipt_sha256": "9037feb2db10a03da559cfe8938b5fa44eef351b6b7df69bc7b8dadc9047a0f8",
+    "private_evidence_publicly_downloadable": false,
+    "source_bodies_rehashed_before_projection": true,
+    "telemetry_sha256": "12437df5bb007918899d6cb94d6e1bb5568c98d9c370c483ac7ad7e9020b2f66"
+  },
+  "latest_full_owner_execution": {
+    "actual_invoiced_usd": null,
+    "cause": "Shared memory-pressure admission drained worker grants to zero; a continuous no-capacity wait expired while queued work remained and no scientific worker was active.",
+    "compact_return": {
+      "bytes": 185186,
+      "historical_payloads_repacked": 0,
+      "sha256": "efb8efd2e493cc07f0f6b552f3200f22dabd65841bcac5c540e8b649d3e0bc1e",
+      "verified_payloads": 9
+    },
+    "exception_type": "CurrentForecastsIncomplete",
+    "execution_complete": false,
+    "exit_code": 2,
+    "failed_or_partial_executions": 1,
+    "failure_stage": "preserved_point_replay",
+    "full_v13_complete": false,
+    "individual_estimator_failures": 0,
+    "individual_inference_task_failures": 0,
+    "nba_allocated_cost_usd": null,
+    "new_calibration_fits": 0,
+    "new_estimator_fits": 0,
+    "new_meta_model_fits": 0,
+    "new_provider_requests": 0,
+    "new_residual_distribution_fits": 0,
+    "no_capacity_wait_seconds": 180.03756937400613,
+    "productive_projection_deadline_cause": false,
+    "projection_recovery": {
+      "complete_verified": 5808,
+      "completed_task_cpu_seconds": 24.255078550999958,
+      "deferred": 0,
+      "elapsed_seconds": 53.29116581600101,
+      "failed": 0,
+      "measured_overlapping_tasks": 24,
+      "new_outputs": 0,
+      "proof_basis": "Fresh output/source hash, schema and identity checks; authenticated prior durability reused.",
+      "registered": 5808
+    },
+    "redundant_post_failure_export": {
+      "html_export_seconds": 162.38213678800093,
+      "is_compact_return_packaging": false,
+      "second_projection_verification_seconds": 249.9502333390119
+    },
+    "registered_branch_failures": 1,
+    "release": "B102",
+    "research_entered": true,
+    "scientific_status": "PARTIAL_RESUMABLE",
+    "successful_executions": 0,
+    "sustained_three_minute_75_percent_cpu_passes": 0,
+    "through_delivery_whole_instance_estimate_usd": "1.063516651605999844444444444",
+    "validation_replay": {
+      "candidate_variants": 5808,
+      "completed_base_groups": 834,
+      "completed_task_cpu_seconds": 2764.493739559,
+      "completed_variants": 2127,
+      "deferred_base_groups": 1595,
+      "elapsed_seconds": 614.0229920340062,
+      "measured_peak_active_scoring_processes": 24,
+      "new_fit_credit": 0,
+      "registered_base_groups": 2429,
+      "remaining_variants_including_downstream_blends": 3681,
+      "sample_mean_owner_cpu_equivalents": 4.595356128764722,
+      "sample_peak_owner_cpu_equivalents": 20.018211791367577
+    }
+  },
+  "owner": "NBA",
+  "preserved_prior_work": {
+    "B100_current_application_count": null,
+    "B100_current_application_credit_claimed": false,
+    "B100_missing_states_restored": 0,
+    "B100_residual_distribution_states_verified_present": 320,
+    "earlier_B102_bounded_new_calibrations": 12,
+    "earlier_B102_bounded_new_estimators": 12,
+    "earlier_bounded_work_is_new_full_run_work": false
+  },
+  "publication": {
+    "automatic_champion_promotions": 0,
+    "draft_pr": 392,
+    "main_integrated": false,
+    "private_runtime_source_added": false,
+    "public_forecast_values_added": 0,
+    "website_deployed": false
+  },
+  "schema": "sel.nba.public.b103_execution_status.v1",
+  "scope": "SANITIZED_AGGREGATE_EXECUTION_STATUS_NO_NEW_FORECAST_VALUES"
+}
