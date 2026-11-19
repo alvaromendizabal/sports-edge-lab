@@ -1,5 +1,19 @@
 # Sports Edge Lab · NBA
 
+<!-- NBA B102 EXECUTION STATUS BEGIN -->
+## November 19: B101 failed; B102 authenticated all saved projections, with scientific work still open
+
+[Read the B102 failure and recovery audit](reports/b102_execution_status.html) · [Download the sanitized aggregate evidence](reports/b102_execution_status.json).
+
+**The actual B101 owner execution failed and exited 2.** An earlier historical-input worker exceeded the 64 MiB message limit. The later private projection stage completed **2,374 of 5,808 tasks**, deferred **3,434**, and reported **zero individual task failures and zero new fits**. A global IO-pressure rule admitted only one worker despite a requested ceiling of 24. After 180.84 productive seconds, a scientific occupancy gate incorrectly stopped the presentation work. This observed failure supersedes the earlier B101 preparation notice below; the dated preparation evidence remains unchanged.
+
+**A bounded native B102 recovery check then authenticated all 5,808 existing projection outputs and all 6,969,600 records**, with exactly 1,200 declared games per variant, zero missing outputs, zero missing records, zero null predictions and zero regenerated projections. All 320 original B100 distribution state files were present and verified; zero missing files required restoration. Saved-state verification does not establish renewed model application. This recovery created **zero new estimator, calibration or residual-distribution fits and zero new forecast values**; it did not launch the full research campaign.
+
+The check measured **21 overlapping projection tasks**, reached 24 physical workers, and used about **1.17 completed-task CPU equivalents** over 144.76 seconds. Worker concurrency does not establish sustained 12–24-core utilization. Independent logs exposed a further publication-backlog bottleneck. The next queue revision separates verification from publication and reuses authenticated checkpoint references; **22 targeted engineering tests passed**, while native evidence for that revision remains outside this dated snapshot. The 75% / 180-second scientific acceptance threshold remains unchanged and failed measurements remain failures. The whole-instance interval estimate is **USD 0.109743**, not an invoice or an allocated NBA charge.
+
+**Overall scientific status remains PARTIAL_RESUMABLE.** The retained model comparisons still use identical annual populations of **1,314 / 1,315 / 210 completed games**, with **14 known validation omissions** and no expanded-population rescoring. Full-census qualification, the registered scientific campaign, sustained CPU acceptance, source-clock/coverage closure and complete resulting dashboards remain unfinished. Previously inspected 2026–27 test results remain exposed and cannot select models. No champion promotion, merge or website deployment is established by this NBA-only draft addition.
+<!-- NBA B102 EXECUTION STATUS END -->
+
 <!-- NBA B101 EXECUTION STATUS BEGIN -->
 ## November 18: B100 completed its registered campaign; B101 research is in preparation
 
