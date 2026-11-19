@@ -1,3 +1,17 @@
+<!-- FBS_V101_PREPARATION_START -->
+## Latest FBS attempt — V100 recovery failed; V101 preparation is in progress
+
+[Read the recovery and next-execution review](v101/README.md) · [Interactive evidence](v101/index.html) · [Bounded public JSON](v101/data/status.json) · [Preserved successful V099 report](v099/completed/)
+
+The actual V100 owner invocation exited **2** after checkpoint recovery failed at **28,513 / 44,841 units**. The supervisor also exited **2** and published a verified **73,426,500-byte safe partial/resumable return**. Verified return integrity does not change the failed execution status. Scientific dispatch was not reached: **zero new estimator fits, calibrator fits or scoring tasks** were completed.
+
+The successful V098 **1,125-job fitting campaign** and successful V099 **600-task scoring campaign** remain preserved prior work. V100 performed two authorized current-census source calls and observed two newly finalized games, bringing the current 2026 census to **757 completed / 888 observed games**. V099 model metrics retain their original **919 / 934 / 755** annual completed-game denominators; the two new finals were not scored by V100. Independent full population/postseason coverage remains unproven.
+
+Measured V100 launch recovery took **728.248 seconds**, and final checkpoint custody took **56.965 seconds**. The working parallel verifier remained intact. A 36-worker ceiling does not establish scientific utilization: scientific dispatch was not reached, and no scientific occupancy pass is claimed.
+
+**V101 is in preparation, with owner execution pending.** Its private executable identity and acceptance evidence remain unfinalized in this draft. The next execution must reauthenticate the newest durable checkpoint, preserve all completed science, and run only missing or newly registered work under an explicit 12/24/36 worker ceiling. This source preparation launches no research and makes no website-deployment or production-promotion claim. All earlier dated evidence below is preserved.
+<!-- FBS_V101_PREPARATION_END -->
+
 <!-- FBS_V099_ACTUAL_RETURN_START -->
 ## Latest FBS evidence — verified V099 scoring completion
 
