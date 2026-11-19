@@ -23,9 +23,9 @@ These completed campaigns remain scientifically partial because broader V13 rese
 
 ### Census observations and evaluation populations
 
-V100 made **two authorized CFBD current-census calls** and zero paid market calls. It observed **888 current-season games, 757 completed games and two newly finalized games**. The postseason response was empty, so complete season/postseason coverage remains unproven.
+V100 made **two authorized CFBD current-census calls** and zero paid market calls. It observed **888 current-season games and 757 completed games**, a net completed-count increase of two over the frozen evaluation cohort. Exact IDs and possible label revisions still require reconciliation. The postseason response was empty, so complete season/postseason coverage remains unproven.
 
-The latest completed model comparison remains V099 on identical observed completed cohorts of **919 games in 2024, 934 in 2025 and 755 in 2026**. V100 did not score the two new finals. Older metrics retain their original denominators and evidence clocks.
+The latest completed model comparison remains V099 on identical observed completed cohorts of **919 games in 2024, 934 in 2025 and 755 in 2026**. V100 performed no new scoring. Older metrics retain their original denominators and evidence clocks.
 
 2024 and 2025 remain validation seasons. The separately locked 2026 season remains previously exposed test reporting. Evaluation ratios of 50/50, 40/60, 30/70, 20/80 and 10/90 do not change estimator training, sampling, loss weights or base forecasts. No current-season outcome selects a champion or calibrator.
 
@@ -42,11 +42,15 @@ These are operational recovery/custody measurements. The configured 36-worker ce
 
 ## V101 preparation state
 
-**Preparation is in progress. No V101 owner execution has started.** The private executable pin and final acceptance evidence are pending in this draft. The prepared release must reauthenticate the newest durable checkpoint at launch and reuse all authenticated completed science before entering missing or newly registered work.
+**V101 is prepared and native-verified. No V101 owner execution has started.** The canonical release is **50,800,891 bytes**, SHA-256 `6a5e44924e518c84e741b59eddb535037d912f5bff1c43294bb82a57485f69c0`. Its status remains `PREPARED_NOT_EXECUTED`. The prepared release must reauthenticate the newest durable checkpoint at launch and reuse all authenticated completed science before entering missing or newly registered work.
 
-The finite inherited continuation includes 765 pending source-ablation fitting jobs, split into 510 validation jobs and 255 frozen-test jobs, with 1,530 scoring partitions and 1,530 source-missingness stress partitions. These are planned units, not completed scientific work. V101 also prepares 12 logical census streams and 126 fixed residual-shape policies, with 378 forecast tasks, 378 paired-uncertainty tasks and 1,134 metric comparisons. The distribution extension reuses base estimators; at most 756 distinct residual-parameter fits are registered before exact-identity reuse. The combined T60 comparison has a maximum of 1,570 policies if all eligible branches complete. These additional tasks remain pending owner execution and final preparation acceptance.
+All **14 native command groups passed**: 121 unittest cases across nine suites, one archive self-test and four actual read-only checkpoint-closure replays. The native acceptance record is **3,869,391 bytes**, SHA-256 `a206ed3cc2268b4788cdd37fd649d5e4d1713f4cb6664c80591b97c4089796e7`. All 32 referenced logs, receipts and closure objects were authenticated. These checks performed zero owner research executions, real scientific fits or provider requests and preserved the owner pointers.
 
-The runtime accepts explicit 12, 24 or 36 worker ceilings, bounds native threads, measures scientific PIDs and useful CPU, and keeps the occupancy gate conditional on sufficient eligible independent work. It must never repeat completed fits solely to demonstrate utilization.
+The four replays authenticated identical outputs: **50,009 dependency pins, 1,125 fitting jobs, 600 scoring tasks and all 12 historical transitive dependencies**. All **6,085 checkpoint files** remained unchanged. At 1/12/24/36 workers, elapsed times were **158.721 / 165.155 / 170.364 / 168.441 seconds**, with **1.024 / 1.194 / 1.199 / 1.201 process CPU equivalents**. More workers did not improve this recovery path's throughput. This correctness and recovery evidence does not establish scientific occupancy.
+
+The finite inherited continuation includes 765 pending source-ablation fitting jobs, split into 510 validation jobs and 255 frozen-test jobs, with 1,530 scoring partitions and 1,530 source-missingness stress partitions. These are planned units, not completed scientific work. V101 also prepares 12 logical census streams and 126 fixed residual-shape policies, with 378 forecast tasks, 378 paired-uncertainty tasks and 1,134 metric comparisons. The distribution extension reuses base estimators; at most 756 distinct residual-parameter fits are registered before exact-identity reuse, and the actual authenticated input plan contains 504. The combined T60 comparison has a maximum of 1,570 policies if all eligible branches complete. These additional tasks remain pending owner execution.
+
+The runtime accepts explicit 12, 24 or 36 worker ceilings, bounds native threads, measures scientific PIDs and useful CPU, and keeps the occupancy gate conditional on sufficient eligible independent work. The existing host exposes **48 logical CPUs on 24 physical cores**; a 36-worker ceiling uses its logical CPU capacity. No hardware change or 36-physical-core claim is made. Completed fits must never be repeated solely to demonstrate utilization. The prepared runner has **26 ordered, persisted execution stages**.
 
 ## Stage and scope interpretation
 

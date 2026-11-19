@@ -33,6 +33,12 @@ const invalid = new Map(), server = http.createServer((req, res) => { const cont
       eq(await page.locator('#preparation-status').innerText(), data.next_release.prepared_complete ? 'Prepared · awaiting owner execution' : 'Preparation in progress', 'Preparation status matches evidence');
       eq(await page.locator('#canonical').isVisible(), data.next_release.prepared_complete, 'No premature release identity');
       if (data.next_release.prepared_complete) check((await page.locator('#canonical-facts').innerText()).includes(data.next_release.canonical_sha256), 'Exact final prepared identity');
+      eq(await page.locator('#validation tbody tr').count(), data.next_release.validation_evidence.length, 'Every native and publication evidence row');
+      for (let i = 0; i < data.next_release.validation_evidence.length; i++) {
+        const evidence = data.next_release.validation_evidence[i];
+        eq(await page.locator('#validation tbody tr').nth(i).locator('td').allTextContents(), [evidence.name, evidence.scope, evidence.status, evidence.checks.toLocaleString('en-US')], 'Exact preparation evidence row ' + i);
+      }
+      if (data.next_release.prepared_complete) await page.evaluate(() => document.querySelector('#validation').closest('details').open = true);
       eq(await page.locator('#remaining-work tbody tr').count(), data.remaining_work.length, 'Unfinished science visible');
       for (const state of ['all', 'Failed', 'Pending', 'Authenticated completed', 'Running']) {
         await page.locator('#stage-filter').selectOption(state);

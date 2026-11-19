@@ -58,7 +58,7 @@ def validate(data):
     require(model['completed_cohorts'] == [919, 934, 755] and model['new_2026_census_completed'] == 757 and model['new_census_games_scored_by_v100'] == 0, 'Census cannot rewrite evaluated populations')
     require(model['profiles'] == ['50/50', '40/60', '30/70', '20/80', '10/90'], 'Evaluation-only profiles retained')
     refresh = attempt['source_refresh']
-    require((refresh['provider_calls'], refresh['new_paid_market_calls'], refresh['observed_games'], refresh['completed_games'], refresh['newly_finalized_games']) == (2, 0, 888, 757, 2), 'Actual source refresh accounting')
+    require((refresh['provider_calls'], refresh['new_paid_market_calls'], refresh['observed_games'], refresh['completed_games'], refresh['net_completed_count_increase']) == (2, 0, 888, 757, 2), 'Actual source refresh accounting')
     require(refresh['full_census_certified'] is False and refresh['empty_postseason_response'] is True, 'Empty postseason response cannot prove census')
     perf = data['performance']
     require(perf['configured_workers'] == 36 and perf['sustained_scientific_capacity_pass'] is False and perf['scientific_cpu_acceptance'] == 'NOT_MEASURED_SCIENTIFIC_DISPATCH_NOT_REACHED', 'Configured workers cannot prove scientific CPU')

@@ -67,8 +67,8 @@
       "completed_games",
       "empty_postseason_response",
       "full_census_certified",
+      "net_completed_count_increase",
       "new_paid_market_calls",
-      "newly_finalized_games",
       "observed_games",
       "provider_calls",
       "source_observed_at_utc"

@@ -190,7 +190,7 @@
       "unit": "verified publications"
     }
   ],
-  "evidence_as_of_utc": "2026-11-19T19:53:52Z",
+  "evidence_as_of_utc": "2026-11-19T20:34:42Z",
   "latest_attempt": {
     "child_exit_code": 2,
     "failed_stage": "checkpoint_recovery",
@@ -220,8 +220,8 @@
       "completed_games": 757,
       "empty_postseason_response": true,
       "full_census_certified": false,
+      "net_completed_count_increase": 2,
       "new_paid_market_calls": 0,
-      "newly_finalized_games": 2,
       "observed_games": 888,
       "provider_calls": 2,
       "source_observed_at_utc": "2026-11-19T19:43:24Z"
@@ -266,15 +266,15 @@
     ]
   },
   "next_release": {
-    "canonical_bytes": null,
-    "canonical_sha256": null,
+    "canonical_bytes": 50800891,
+    "canonical_sha256": "6a5e44924e518c84e741b59eddb535037d912f5bff1c43294bb82a57485f69c0",
     "expected_reusable_fit_jobs": 1125,
     "expected_reusable_scoring_tasks": 600,
     "native_threads_per_worker": 1,
     "new_science_claimed": false,
     "owner_execution_started": false,
     "prepared_census_streams": 12,
-    "prepared_complete": false,
+    "prepared_complete": true,
     "prepared_fit_jobs": 765,
     "prepared_frozen_test_fit_jobs": 255,
     "prepared_maximum_residual_parameter_fits": 756,
@@ -289,7 +289,44 @@
     "runtime_reauthentication_required": true,
     "status": "PREPARED_NOT_EXECUTED",
     "sustained_scientific_capacity_pass": false,
-    "validation_evidence": [],
+    "validation_evidence": [
+      {
+        "checks": 14,
+        "name": "Exact packaged native acceptance groups",
+        "scope": "121 unittest cases across nine suites, one archive self-test and four production-closure replays. Native acceptance record: 3,869,391 bytes; SHA-256 a206ed3cc2268b4788cdd37fd649d5e4d1713f4cb6664c80591b97c4089796e7. Zero owner research executions, scientific fits or provider requests.",
+        "status": "PASS"
+      },
+      {
+        "checks": 4,
+        "name": "Native recovery output equivalence",
+        "scope": "The 1 / 12 / 24 / 36-worker passes authenticated the same 50,009 dependency pins, all 1,125 fitting jobs and 600 scoring tasks. All twelve historical transitive dependencies were retained, and all 6,085 checkpoint files remained unchanged.",
+        "status": "PASS"
+      },
+      {
+        "checks": 4,
+        "name": "Recovery width measurement",
+        "scope": "Elapsed seconds at 1 / 12 / 24 / 36 workers: 158.721 / 165.155 / 170.364 / 168.441. Actual process CPU equivalents: 1.024 / 1.194 / 1.199 / 1.201. These correctness-preserving replays did not show a throughput benefit from more workers; scientific occupancy remains pending owner execution.",
+        "status": "PASS"
+      },
+      {
+        "checks": 126,
+        "name": "Actual residual input compatibility",
+        "scope": "Read-only checks authenticated 126 existing baseline jobs, 114,744 forecast rows and 40,656 residual samples; 504 residual-parameter identities are planned before reuse. This produced zero new fits or scores.",
+        "status": "PASS"
+      },
+      {
+        "checks": 1,
+        "name": "Existing compute topology",
+        "scope": "48 logical CPUs on 24 physical cores were observed. A 36-worker ceiling uses logical CPU capacity on this existing host; no hardware change or sustained scientific CPU acceptance is claimed.",
+        "status": "PASS"
+      },
+      {
+        "checks": 13,
+        "name": "Public semantic and preservation tests",
+        "scope": "Closed public fields, failure and reuse counters, evaluation/test separation, canonical identity requirements, exact downloaded data and whole-prior-README preservation. Final hosted browser checks are recorded separately.",
+        "status": "PASS"
+      }
+    ],
     "version": "V101",
     "worker_ceiling_choices": [
       12,
@@ -358,8 +395,8 @@
   },
   "remaining_work": [
     {
-      "branch": "Recovery acceptance",
-      "reason": "Authenticate the repaired dependency resolution and exact executable before owner delivery.",
+      "branch": "Launch-time recovery reauthentication",
+      "reason": "Preparation passed exact native closure at all four measured worker widths. The owner launch must resolve and authenticate the then-newest durable checkpoint again.",
       "status": "Pending"
     },
     {
@@ -369,7 +406,7 @@
     },
     {
       "branch": "Comparable forecasts for newly finalized and upcoming games",
-      "reason": "Two new finals are census observations; V100 performed no scoring, and prior evaluation cohorts remain dated.",
+      "reason": "The latest completed count is two higher than the frozen comparison count. Exact game IDs and label revisions still require reconciliation; V100 performed no scoring.",
       "status": "Pending"
     },
     {
