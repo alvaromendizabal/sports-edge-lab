@@ -41,6 +41,8 @@ jobs:
           python tests/test_fbs_v098_public.py
           python examples/fbs_contracts/v099/build_review.py --check
           python tests/test_fbs_v099_public.py
+          python examples/fbs_contracts/v099/completed/build_review.py --check
+          python tests/test_fbs_v099_completed_public.py
           node tests/fbs_v079_logic.test.cjs
           node tests/fbs_v090_logic.test.cjs
           node tests/fbs_v054_public_view.test.cjs
@@ -101,6 +103,7 @@ jobs:
           node tests/fbs_v097_browser.test.cjs
           node tests/fbs_v098_browser.test.cjs
           node tests/fbs_v099_browser.test.cjs
+          node tests/fbs_v099_completed_browser.test.cjs
           node examples/fbs_contracts/tests/test_dashboard_browser.cjs
           node examples/fbs_contracts/tests/test_recovery_browser.cjs
           node examples/fbs_contracts/tests/test_season_browser.cjs
@@ -154,10 +157,20 @@ jobs:
           name: fbs-v099-evidence-review
           path: |
             ${{ runner.temp }}/fbs-screenshots/FBS_V099_*.png
+            !${{ runner.temp }}/fbs-screenshots/FBS_V099_COMPLETED_*.png
             ${{ runner.temp }}/fbs-screenshots/FBS_V099_BROWSER_RECEIPT.json
           if-no-files-found: error
           retention-days: 14
-      - name: Preserve desktop and mobile evidence views
+      - name: Preserve compact completed V099 render evidence
+        uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02
+        with:
+          name: fbs-v099-completed-evidence-review
+          path: |
+            ${{ runner.temp }}/fbs-screenshots/FBS_V099_COMPLETED_*.png
+            ${{ runner.temp }}/fbs-screenshots/FBS_V099_COMPLETED_BROWSER_RECEIPT.json
+          if-no-files-found: error
+          retention-days: 14
+      - name: Preserve historical desktop and mobile evidence views
         uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02
         with:
           name: fbs-evidence-screenshots

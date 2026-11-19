@@ -1,11 +1,15 @@
 <!-- FBS_V099_ACTUAL_RETURN_START -->
-## Latest FBS evidence — verified V098 completion and V099 preparation
+## Latest FBS evidence — verified V099 scoring completion
 
-[Open the V099 evidence review](v099/index.html) · [Scope and validation](v099/README.md) · [Bounded evidence JSON](v099/data/status.json)
+[Open the completed V099 report](v099/completed/index.html) · [Evidence and limits](v099/completed/README.md) · [Bounded results JSON](v099/completed/data/status.json) · [Earlier V099 preparation](v099/)
 
-V098 completed all **1,125 registered T60 fitting jobs**: **1,113 new model fits, 12 exact fitted states reused, zero fitting failures**, and 1,113 reported calibrators. Child exit and independently verified return publication succeeded. The 834-policy tranche has 2,278,488 forecasts and 2,175,072 completed-game scores on the same observed 919/934/755 annual populations. Full census, original-issue and broader scientific requirements remain partial/resumable.
+V099 completed successfully and published an independently verified **partial/resumable V13 return**. It authenticated and preserved all **1,125 V098 fitting jobs**, completed **600/600 new forecast and uncertainty tasks with zero failures**, and added **100 policies, 273,200 forecast rows and 260,800 completed-game score rows**. It performed **zero new estimator fits**. The earlier V098 campaign remains successful: 1,113 new fits, 12 reused fits, zero fitting failures and 1,113 reported calibrators.
 
-The new review shows all nine objective leaders across five validation-weight profiles, actual 24-worker sustained CPU evidence, source-coverage gaps, compact-return storage and the separately prepared V099 scoring extension. V099 adds no owner execution or duplicate base fitting through this publication. No website deployment or production promotion is claimed. All dated evidence below is preserved.
+The completed report shows all nine objective leaders across five evaluation-only validation-weight profiles, the unchanged full observed **919/934/755** annual completed-game populations, uncertainty results, source gaps and all 16 final stage states. The 2026 season remains exposed frozen-test reporting, separate from 2024/2025 selection. Full population/postseason census, original-issue evidence, qualified exchange inputs and broader V13 research remain unfinished.
+
+Checkpoint custody took **211.288 seconds**, down from the earlier 1,930.132 seconds on a larger receipt population; recovery before science still took about **724 seconds**. The scoring stage admitted 36 workers and measured about **7.57 average CPU-core equivalents over 21.05 seconds**. Its finite queue was too short for the 180-second sustained occupancy gate; no full-capacity pass is claimed. The full invocation took about **19 minutes 48 seconds** and produced a **72,561,442-byte** compact return. The final whole-host compute estimate is **USD 0.84841345**, separate from an invoice.
+
+A separate overlapping launch was refused while the successful invocation held the owner lock; it did not start research or invalidate the verified return. This GitHub update reports completed owner work and launches no research. Website deployment and production promotion remain separate. All dated evidence below is preserved.
 <!-- FBS_V099_ACTUAL_RETURN_END -->
 
 <!-- FBS_V098_ACTUAL_RETURN_START -->

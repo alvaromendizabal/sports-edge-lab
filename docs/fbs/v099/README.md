@@ -1,3 +1,5 @@
+> **Historical preparation snapshot.** V099 has now completed its finite additive study. Read the [authenticated completed V099 report](completed/README.md) for actual results, CPU measurements and verified publication. The original preparation record below retains its original scope.
+
 # FBS V098 completion and V099 preparation
 
 [Evidence dashboard](index.html) · [Exact bounded JSON](data/status.json) · [Earlier dated review](../v098/README.md)
