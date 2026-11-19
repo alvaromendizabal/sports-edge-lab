@@ -23,6 +23,18 @@ class RecoveryPublicEvidenceTests(unittest.TestCase):
         with self.assertRaisesRegex(ValueError, message):
             review.validate(changed)
 
+    def test_complete_preexisting_readme_is_preserved(self):
+        raw = (ROOT / 'docs/fbs/README.md').read_bytes()
+        start = b'<!-- FBS_V101_PREPARATION_START -->\n'
+        end = b'<!-- FBS_V101_PREPARATION_END -->\n\n'
+        self.assertTrue(raw.startswith(start))
+        self.assertEqual(1, raw.count(start))
+        self.assertEqual(1, raw.count(end))
+        prior = raw.split(end, 1)[1]
+        self.assertEqual(78532, len(prior))
+        self.assertEqual('24080dc3b65f7b172130861ec3795c2fb2279a0b09c21cdcc8e1e9411c2db498',
+                         hashlib.sha256(prior).hexdigest())
+
     def test_deterministic_page_and_exact_embedded_digest(self):
         actual = review.OUTPUT.read_bytes()
         self.assertEqual(review.render(self.data), actual)

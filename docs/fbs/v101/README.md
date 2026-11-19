@@ -64,7 +64,7 @@ node tests/fbs_v101_browser.test.cjs
 
 The semantic tests reject private fields, altered predecessor outcomes, a failed execution relabeled as success, census-expanded metric denominators, test-label selection, unearned fitting/reuse credit, fabricated scientific CPU acceptance, premature executable pins and an invented completed stage manifest. The browser suite checks served/offline desktop/mobile rendering, actual keyboard controls, exact source-byte JSON downloads, visible coverage limits and rejection of corrupted or scientifically false evidence.
 
-Local deterministic generation and the 12 semantic tests have passed during draft preparation. Local browser execution is blocked by the environment's Chromium socket restriction; no local browser pass is claimed. Exact-head hosted validation remains required before merge. Source publication is separate from website deployment.
+Local deterministic generation and 13 semantic/preservation tests have passed during draft preparation. The new README notice is removed explicitly by five historical preservation tests, which retain all original expected hashes; the V101 suite also verifies the complete prior README bytes. Local browser execution is blocked by the environment's Chromium socket restriction; no local browser pass is claimed. Exact-head hosted validation remains required before merge. Source publication is separate from website deployment.
 
 ## Publication boundary
 

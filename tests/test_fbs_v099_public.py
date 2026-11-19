@@ -103,6 +103,9 @@ class PublicV099(unittest.TestCase):
 
     def test_previous_landing_and_all_v098_assets_are_byte_preserved(self):
         landing=(ROOT/'docs/fbs/README.md').read_bytes();start=b'<!-- FBS_V099_ACTUAL_RETURN_START -->\n';end=b'<!-- FBS_V099_ACTUAL_RETURN_END -->\n\n'
+        if landing.startswith(b'<!-- FBS_V101_PREPARATION_START -->\n'):
+            self.assertEqual(landing.count(b'<!-- FBS_V101_PREPARATION_END -->\n\n'),1)
+            landing=landing.split(b'<!-- FBS_V101_PREPARATION_END -->\n\n',1)[1]
         self.assertTrue(landing.startswith(start));self.assertEqual(1,landing.count(start));self.assertEqual(1,landing.count(end))
         self.assertEqual(hashlib.sha256(landing.split(end,1)[1]).hexdigest(),'42e6c8c6ad6275928c4c60f431c664aa82e5d1529a596ea4083898da795bccb6')
         expected=json.loads((ROOT/'examples/fbs_contracts/v099/preserved_v098_assets.json').read_text())
