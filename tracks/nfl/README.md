@@ -1,3 +1,18 @@
+# NFL · N127R18 verified partial return · November 18, 2026
+
+[Latest interactive evidence review](n127r18/index.html) · [Execution and coverage report](n127r18/README.md) · [Selected annual metrics](n127r18/selected_metrics.json) · [Current model evidence](CURRENT_MODEL_CARD.md)
+
+**R18 has executed and sealed a verified `PARTIAL_RESUMABLE` return.** The owner ledger records 17 completed, 5 reused, 4 partial and 2 deferred stages. Forecast preservation, validation selection, dashboard generation and market comparisons completed as stages; full scientific acceptance remains incomplete.
+
+The execution reused **31,806 verified fold groups** and made **zero new scientific estimator calls**. The requested ceiling was 36 workers; it does not establish sustained 12–36-core scientific use. The current census contains 285 games in each validation season and 150 completed 2026 games. The public review preserves 641 selected metric rows across the five validation ratios, including 132 primary 50/50 nominations; 90 primary rows still lack a full-cohort test regrade.
+
+Historical drive, injury/replacement and market-response admissions still require evidence. Current results retain prior test exposure, missing values and exact eligible denominators. No production promotion or newly qualified Circa card is claimed. [Full limitations, source coverage, storage benchmarks and work accounting](n127r18/README.md).
+
+**Publication state: GitHub source update.** This merge does not deploy the separately hosted NFL website or refresh providers, research or forecasts. The older website and forecast statements below are dated historical records.
+
+<details>
+<summary>Historical N088 publication and preceding recovery evidence — November 13, 2026</summary>
+
 # NFL · V10 Phase A recovery · November 13, 2026
 
 [Open the NFL browser dashboard](https://sports-edge-lab-nfl.alv-mendizabal.chatgpt.site/) · [Prepared N088 source dashboard](dashboard_n088/index.html) · [Fresh Phase A public scorecards](phase_a_n088_public.json)
@@ -43,5 +58,7 @@ DraftKings, Kalshi and Polymarket have zero admitted equivalent same-cutoff comp
 The executable retained the N084 scientific namespace. The later N086 execution failed as described above; it earns no completed new scientific-result credit in this publication. Source publication, hosted test rendering and website deployment are distinct; no live website deployment or new provider refresh is claimed.
 
 [Prior N085 delivery notice](README_N085_SNAPSHOT.md) · [Prior N083 scientific snapshot](season_review_n084.html) · [Prior model-card history](MODEL_CARD_N085_SNAPSHOT.md)
+
+</details>
 
 </details>

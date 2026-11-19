@@ -1,3 +1,18 @@
+# NFL current model evidence · N127R18 · November 18, 2026
+
+[Latest interactive evidence](n127r18/index.html) · [Selected annual metrics and denominators](n127r18/selected_metrics.json) · [Execution and source coverage](n127r18/README.md)
+
+**R18 is a verified partial recovery and selection return.** It reused 31,806 completed fold groups, made zero new scientific estimator calls and performed no production promotion. Validation selection completed as a stage; source and fitted-layer ancestry acceptance remain incomplete.
+
+The public projection preserves 641 saved selected metric rows across 50/50, 40/60, 30/70, 20/80 and 10/90 validation weights. The 132 primary 50/50 rows are validation nominations from an incomplete campaign. Ninety primary rows retain a missing full-cohort 2026 regrade. Every displayed row keeps its annual values, eligible denominators, exact cohort hashes, test status and validation co-leader count. Public aliases replace private recipes, and 2026 scores do not break validation ties.
+
+The execution summary reports evaluation-only seasonal weights and zero 2026 test labels used for selection. Previously inspected 2026 outcomes remain development-exposed. Proposed historical drive, injury/replacement and market-response feature groups still require content-bound rights and authenticated matrices; their zero-admission status does not apply to every NFL input.
+
+The requested 36-worker ceiling is distinct from measured scientific CPU use. This reuse execution has no new-fit occupancy interval. Detailed stage outcomes, historical qualification, honest Parquet benchmarks and remaining work are in the latest report. No newly qualified current forecasts or production champions are inferred from stage completion.
+
+<details>
+<summary>Historical model-card publications through N086 — original scopes preserved</summary>
+
 # NFL current model evidence · authenticated N085
 
 **Latest actual execution: N086 failed after 564.544 seconds.** Three current-science stages were rejected by an active-attempt path guard; finalization then conflicted with an immutable summary. Final new fit/native/meta/forecast counts remain **unknown**, with **0 observed optimizer callbacks/commits** and no completed new scientific receipt. Mean CPU was **0.397 core equivalents** (peak 1.281); **15 paid calls** occurred. This does not meet twelve-core or scientific-progress acceptance. [Exact sanitized failure evidence](2026-11-13-n086-failed-n087-review.json) · [Visible failure panel](season_review_n086.html#latest-execution).
@@ -211,6 +226,8 @@ There is no universal log-loss or MAE number that bypasses these gates. Any new 
 | Polymarket comparison | Source captures and coverage diagnostics | Complete comparable target/horizon evaluation is not established |
 
 The best saved original 2026 variant is displayed descriptively and does not select the next forward model. A missing primary champion issue is never filled with an operational fallback under the primary label.
+
+</details>
 
 </details>
 

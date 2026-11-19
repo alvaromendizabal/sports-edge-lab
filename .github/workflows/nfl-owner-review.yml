@@ -52,6 +52,8 @@ jobs:
           python tracks/nfl/selected_review_n083.py --check
           python tracks/nfl/selected_review_n084.py --check
           python tracks/nfl/selected_review_n086.py --check
+          python tracks/nfl/n127r18/build_review.py --check
+          python -m unittest discover -s tracks/nfl/n127r18 -p 'test_*.py' -v
       - name: Reenter the credential-free demonstration
         run: |
           python tracks/nfl/contracts.py --demo --output "${{ runner.temp }}/nfl-review-demo.json"
@@ -66,6 +68,11 @@ jobs:
         run: |
           npm install --prefix "${RUNNER_TEMP}/nfl-review-browser" --ignore-scripts --no-audit --no-fund playwright@1.62.1
           node "${RUNNER_TEMP}/nfl-review-browser/node_modules/playwright/cli.js" install --with-deps chromium
+      - name: Exercise R18 desktop, mobile and keyboard controls
+        env:
+          PLAYWRIGHT_MODULE_DIR: ${{ runner.temp }}/nfl-review-browser/node_modules/playwright
+          NFL_SCREENSHOTS: ${{ runner.temp }}/nfl-review-screenshots
+        run: node tracks/nfl/n127r18/browser_review.cjs
       - name: Exercise NFL desktop, mobile and keyboard controls
         env:
           PLAYWRIGHT_MODULE_DIR: ${{ runner.temp }}/nfl-review-browser/node_modules/playwright
@@ -89,6 +96,7 @@ jobs:
           node tracks/nfl/selected_review_browser_n084.cjs
           node tracks/nfl/selected_review_browser_n086.cjs
       - name: Preserve rendered NFL evidence review
+        if: always()
         uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02
         with:
           name: nfl-owner-review-screenshots

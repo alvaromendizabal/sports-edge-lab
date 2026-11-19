@@ -1,3 +1,16 @@
+# NFL forecast status · N127R18 · November 18, 2026
+
+[Latest evidence review](n127r18/index.html) · [Execution and remaining gaps](n127r18/README.md) · [Current model evidence](CURRENT_MODEL_CARD.md)
+
+**The latest inspected R18 owner return is verified and `PARTIAL_RESUMABLE`.** Forecast preservation completed, and previous authenticated issues remain preserved. This GitHub publication does not create a new forecast issue, refresh the live schedule or re-date archived selected outputs.
+
+The current scientific census reports 150 completed 2026 games. This is a census count, not proof that every selected forecast or test metric covers all 150 games. Of the 132 primary 50/50 validation nomination rows, 90 retain a missing full-cohort test regrade. Exact eligible denominators, cohort identities and missing states appear in the [selected-metric export](n127r18/selected_metrics.json).
+
+Source and fitted-layer acceptance remain incomplete. No automatic promotion, prospective performance claim, newly qualified Circa card or hosted deployment is established. Older selected issues below retain their original source, fit and issue clocks and their original evidence scope.
+
+<details>
+<summary>Historical N076 forecast publication — November 12, 2026</summary>
+
 # NFL forecast status · November 12, 2026
 
 [Latest all-game review](season_review_n077.html) · [Selected forecasts](selected_forecasts_n077.json) · [Actual N076 evidence](2026-11-12-n076-actual-n077-review.json) · [Model card](CURRENT_MODEL_CARD.md)
@@ -23,3 +36,5 @@ N076 ran **9,819.494 seconds** and returned partial. Core source namespace failu
 N077 canonical executable/source recovery remains blocked. No repaired N077 owner runner or new N077 owner execution is claimed by this publication.
 
 [Prior forecast status](CURRENT_FORECAST_STATUS_N076_SNAPSHOT.md) · [Prior selected snapshot](selected_forecasts_n073.json).
+
+</details>

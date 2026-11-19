@@ -1,0 +1,809 @@
+{
+  "schema_version": 1,
+  "owner": "NFL",
+  "revision": "N127R18",
+  "evidence_as_of_utc": "2026-11-19T07:28:40Z",
+  "owner_run": {
+    "status": "PARTIAL_RESUMABLE",
+    "run_started_utc": "2026-11-19T00:02:37Z",
+    "return_sha256": "d803399ab179bd644da6f0c0ba1852477613d2b1f0b5ecba8796faecb68b02b6",
+    "return_bytes": 56714649989,
+    "return_parts": 106,
+    "return_integrity": "VERIFIED",
+    "pointer_readback": true,
+    "new_estimator_fits": 0,
+    "reused_fold_groups": 31806,
+    "requested_workers": 36,
+    "sustained_occupancy_claimed": false,
+    "production_promotions": 0,
+    "elapsed_seconds_before_seal": 14361.708491146012,
+    "compute_estimate_before_seal_usd": 10.252664115087995,
+    "actual_invoice_usd": null,
+    "logical_archive_rehashed_in_github_publication": false,
+    "verification_scope": "Freshly read committed pointer and matching native post-seal integrity receipt; this publication did not rehash the complete archive."
+  },
+  "stage_counts": {
+    "COMPLETED": 17,
+    "DEFERRED": 2,
+    "PARTIAL": 4,
+    "REUSED": 5
+  },
+  "stages": [
+    {
+      "name": "campaign",
+      "status": "PARTIAL",
+      "elapsed_seconds": 0.0,
+      "reused": true
+    },
+    {
+      "name": "chronological_calibration_and_blends",
+      "status": "REUSED",
+      "elapsed_seconds": 0.0,
+      "reused": true
+    },
+    {
+      "name": "circa_policy_research",
+      "status": "COMPLETED",
+      "elapsed_seconds": 686.6431916930014,
+      "reused": false
+    },
+    {
+      "name": "current_market_comparisons",
+      "status": "COMPLETED",
+      "elapsed_seconds": 5496.763902452993,
+      "reused": false
+    },
+    {
+      "name": "dashboard",
+      "status": "COMPLETED",
+      "elapsed_seconds": 557.3294684360008,
+      "reused": false
+    },
+    {
+      "name": "distribution_calibration_and_blends",
+      "status": "REUSED",
+      "elapsed_seconds": 0.0,
+      "reused": true
+    },
+    {
+      "name": "historical_drive_source_recovery",
+      "status": "DEFERRED",
+      "elapsed_seconds": 0.011158442008309066,
+      "reused": false
+    },
+    {
+      "name": "historical_inplay_source_response",
+      "status": "DEFERRED",
+      "elapsed_seconds": 0.01681742000801023,
+      "reused": false
+    },
+    {
+      "name": "historical_original_forecast_journals",
+      "status": "COMPLETED",
+      "elapsed_seconds": 3.29620472699753,
+      "reused": false
+    },
+    {
+      "name": "injury_and_replacement_sources",
+      "status": "COMPLETED",
+      "elapsed_seconds": 15.721837431992753,
+      "reused": false
+    },
+    {
+      "name": "legacy_event_market_pairs",
+      "status": "COMPLETED",
+      "elapsed_seconds": 1.0704605719947722,
+      "reused": false
+    },
+    {
+      "name": "local_completed_stage_recovery",
+      "status": "COMPLETED",
+      "elapsed_seconds": 361.4396548030054,
+      "reused": false
+    },
+    {
+      "name": "next_source_backfill_T120",
+      "status": "COMPLETED",
+      "elapsed_seconds": 37.697300979998545,
+      "reused": false
+    },
+    {
+      "name": "next_source_backfill_T1440",
+      "status": "COMPLETED",
+      "elapsed_seconds": 5.766344696006854,
+      "reused": false
+    },
+    {
+      "name": "next_source_backfill_T60",
+      "status": "COMPLETED",
+      "elapsed_seconds": 48.54289344900462,
+      "reused": false
+    },
+    {
+      "name": "preserve_verified_forecasts",
+      "status": "COMPLETED",
+      "elapsed_seconds": 2525.3876247119915,
+      "reused": false
+    },
+    {
+      "name": "price_and_space",
+      "status": "COMPLETED",
+      "elapsed_seconds": 0.5200323269964429,
+      "reused": false
+    },
+    {
+      "name": "r14_r9_calibration_and_blends",
+      "status": "PARTIAL",
+      "elapsed_seconds": 0.0,
+      "reused": true
+    },
+    {
+      "name": "r14_validation_calibration_and_blend_contrasts",
+      "status": "COMPLETED",
+      "elapsed_seconds": 74.33709737499885,
+      "reused": false
+    },
+    {
+      "name": "r15_frontier_feature_campaign",
+      "status": "PARTIAL",
+      "elapsed_seconds": 0.0,
+      "reused": true
+    },
+    {
+      "name": "r18_source_admission_audit",
+      "status": "COMPLETED",
+      "elapsed_seconds": 0.5598555269971257,
+      "reused": false
+    },
+    {
+      "name": "r5_pregame_score_mass_calibration",
+      "status": "REUSED",
+      "elapsed_seconds": 0.0,
+      "reused": true
+    },
+    {
+      "name": "r6_outcome_probability_blends",
+      "status": "REUSED",
+      "elapsed_seconds": 0.0,
+      "reused": true
+    },
+    {
+      "name": "r7_joint_score_lattice",
+      "status": "REUSED",
+      "elapsed_seconds": 0.0,
+      "reused": true
+    },
+    {
+      "name": "schedule",
+      "status": "COMPLETED",
+      "elapsed_seconds": 0.9371006529981969,
+      "reused": false
+    },
+    {
+      "name": "selection",
+      "status": "COMPLETED",
+      "elapsed_seconds": 2833.879574696999,
+      "reused": false
+    },
+    {
+      "name": "single_event_market_history",
+      "status": "PARTIAL",
+      "elapsed_seconds": 35.9282562169974,
+      "reused": false
+    },
+    {
+      "name": "upcoming_market_snapshot",
+      "status": "COMPLETED",
+      "elapsed_seconds": 0.7981934239942348,
+      "reused": false
+    }
+  ],
+  "science": {
+    "full_games_by_season": {
+      "2024": 285,
+      "2025": 285,
+      "2026": 150
+    },
+    "objective_clock_groups": 114,
+    "prior_test_exposure": true,
+    "weights_used_in_training": false,
+    "validation_ratios": [
+      [
+        50,
+        50
+      ],
+      [
+        40,
+        60
+      ],
+      [
+        30,
+        70
+      ],
+      [
+        20,
+        80
+      ],
+      [
+        10,
+        90
+      ]
+    ],
+    "primary_ratio": [
+      50,
+      50
+    ],
+    "test_labels_used_for_selection_reported": 0,
+    "fit_ancestry_and_source_acceptance_complete": false,
+    "selection_status": "VALIDATION_NOMINATIONS_PARTIAL_ACCEPTANCE",
+    "scientific_status": "PARTIAL_RESUMABLE",
+    "full_v13_completion": false,
+    "selected_nomination_rows": 641,
+    "primary_nomination_rows": 132,
+    "primary_nomination_test_gaps": 90
+  },
+  "portfolio": {
+    "model_products": 85291,
+    "current_registered_model_products": 78125
+  },
+  "source_admissions": [
+    {
+      "source": "drive",
+      "status": "REQUIRES_OWNER_EVIDENCE",
+      "reasons": [
+        "NO_CONTENT_BOUND_RIGHTS_DECISION",
+        "NO_REGISTERED_AUTHENTICATED_FEATURE_MATRIX"
+      ],
+      "coverage": [
+        {
+          "season": 2020,
+          "horizon_minutes": 120,
+          "full_games": 269,
+          "full_team_rows": 538,
+          "retained_source_rows": 2,
+          "retained_source_objects_for_year": null,
+          "admissible_team_rows": 0,
+          "both_team_admissible_games": 0
+        },
+        {
+          "season": 2020,
+          "horizon_minutes": 60,
+          "full_games": 269,
+          "full_team_rows": 538,
+          "retained_source_rows": 0,
+          "retained_source_objects_for_year": null,
+          "admissible_team_rows": 0,
+          "both_team_admissible_games": 0
+        },
+        {
+          "season": 2021,
+          "horizon_minutes": 120,
+          "full_games": 285,
+          "full_team_rows": 570,
+          "retained_source_rows": 1,
+          "retained_source_objects_for_year": null,
+          "admissible_team_rows": 0,
+          "both_team_admissible_games": 0
+        },
+        {
+          "season": 2021,
+          "horizon_minutes": 60,
+          "full_games": 285,
+          "full_team_rows": 570,
+          "retained_source_rows": 0,
+          "retained_source_objects_for_year": null,
+          "admissible_team_rows": 0,
+          "both_team_admissible_games": 0
+        },
+        {
+          "season": 2022,
+          "horizon_minutes": 120,
+          "full_games": 284,
+          "full_team_rows": 568,
+          "retained_source_rows": 2,
+          "retained_source_objects_for_year": null,
+          "admissible_team_rows": 0,
+          "both_team_admissible_games": 0
+        },
+        {
+          "season": 2022,
+          "horizon_minutes": 60,
+          "full_games": 284,
+          "full_team_rows": 568,
+          "retained_source_rows": 0,
+          "retained_source_objects_for_year": null,
+          "admissible_team_rows": 0,
+          "both_team_admissible_games": 0
+        },
+        {
+          "season": 2023,
+          "horizon_minutes": 120,
+          "full_games": 285,
+          "full_team_rows": 570,
+          "retained_source_rows": 2,
+          "retained_source_objects_for_year": null,
+          "admissible_team_rows": 0,
+          "both_team_admissible_games": 0
+        },
+        {
+          "season": 2023,
+          "horizon_minutes": 60,
+          "full_games": 285,
+          "full_team_rows": 570,
+          "retained_source_rows": 0,
+          "retained_source_objects_for_year": null,
+          "admissible_team_rows": 0,
+          "both_team_admissible_games": 0
+        },
+        {
+          "season": 2024,
+          "horizon_minutes": 120,
+          "full_games": 285,
+          "full_team_rows": 570,
+          "retained_source_rows": 4,
+          "retained_source_objects_for_year": null,
+          "admissible_team_rows": 0,
+          "both_team_admissible_games": 0
+        },
+        {
+          "season": 2024,
+          "horizon_minutes": 60,
+          "full_games": 285,
+          "full_team_rows": 570,
+          "retained_source_rows": 64,
+          "retained_source_objects_for_year": null,
+          "admissible_team_rows": 0,
+          "both_team_admissible_games": 0
+        },
+        {
+          "season": 2025,
+          "horizon_minutes": 120,
+          "full_games": 285,
+          "full_team_rows": 570,
+          "retained_source_rows": 3,
+          "retained_source_objects_for_year": null,
+          "admissible_team_rows": 0,
+          "both_team_admissible_games": 0
+        },
+        {
+          "season": 2025,
+          "horizon_minutes": 60,
+          "full_games": 285,
+          "full_team_rows": 570,
+          "retained_source_rows": 62,
+          "retained_source_objects_for_year": null,
+          "admissible_team_rows": 0,
+          "both_team_admissible_games": 0
+        },
+        {
+          "season": 2026,
+          "horizon_minutes": 120,
+          "full_games": 272,
+          "full_team_rows": 544,
+          "retained_source_rows": 1,
+          "retained_source_objects_for_year": null,
+          "admissible_team_rows": 0,
+          "both_team_admissible_games": 0
+        },
+        {
+          "season": 2026,
+          "horizon_minutes": 60,
+          "full_games": 272,
+          "full_team_rows": 544,
+          "retained_source_rows": 0,
+          "retained_source_objects_for_year": null,
+          "admissible_team_rows": 0,
+          "both_team_admissible_games": 0
+        }
+      ]
+    },
+    {
+      "source": "injury",
+      "status": "REQUIRES_OWNER_EVIDENCE",
+      "reasons": [
+        "NO_CONTENT_BOUND_RIGHTS_DECISION",
+        "NO_REGISTERED_AUTHENTICATED_FEATURE_MATRIX"
+      ],
+      "coverage": [
+        {
+          "season": 2020,
+          "horizon_minutes": 120,
+          "full_games": 269,
+          "full_team_rows": 538,
+          "retained_source_rows": 0,
+          "retained_source_objects_for_year": 3,
+          "admissible_team_rows": 0,
+          "both_team_admissible_games": 0
+        },
+        {
+          "season": 2020,
+          "horizon_minutes": 60,
+          "full_games": 269,
+          "full_team_rows": 538,
+          "retained_source_rows": 0,
+          "retained_source_objects_for_year": 3,
+          "admissible_team_rows": 0,
+          "both_team_admissible_games": 0
+        },
+        {
+          "season": 2021,
+          "horizon_minutes": 120,
+          "full_games": 285,
+          "full_team_rows": 570,
+          "retained_source_rows": 0,
+          "retained_source_objects_for_year": 3,
+          "admissible_team_rows": 0,
+          "both_team_admissible_games": 0
+        },
+        {
+          "season": 2021,
+          "horizon_minutes": 60,
+          "full_games": 285,
+          "full_team_rows": 570,
+          "retained_source_rows": 0,
+          "retained_source_objects_for_year": 3,
+          "admissible_team_rows": 0,
+          "both_team_admissible_games": 0
+        },
+        {
+          "season": 2022,
+          "horizon_minutes": 120,
+          "full_games": 284,
+          "full_team_rows": 568,
+          "retained_source_rows": 0,
+          "retained_source_objects_for_year": 3,
+          "admissible_team_rows": 0,
+          "both_team_admissible_games": 0
+        },
+        {
+          "season": 2022,
+          "horizon_minutes": 60,
+          "full_games": 284,
+          "full_team_rows": 568,
+          "retained_source_rows": 0,
+          "retained_source_objects_for_year": 3,
+          "admissible_team_rows": 0,
+          "both_team_admissible_games": 0
+        },
+        {
+          "season": 2023,
+          "horizon_minutes": 120,
+          "full_games": 285,
+          "full_team_rows": 570,
+          "retained_source_rows": 0,
+          "retained_source_objects_for_year": 3,
+          "admissible_team_rows": 0,
+          "both_team_admissible_games": 0
+        },
+        {
+          "season": 2023,
+          "horizon_minutes": 60,
+          "full_games": 285,
+          "full_team_rows": 570,
+          "retained_source_rows": 0,
+          "retained_source_objects_for_year": 3,
+          "admissible_team_rows": 0,
+          "both_team_admissible_games": 0
+        },
+        {
+          "season": 2024,
+          "horizon_minutes": 120,
+          "full_games": 285,
+          "full_team_rows": 570,
+          "retained_source_rows": 0,
+          "retained_source_objects_for_year": 3,
+          "admissible_team_rows": 0,
+          "both_team_admissible_games": 0
+        },
+        {
+          "season": 2024,
+          "horizon_minutes": 60,
+          "full_games": 285,
+          "full_team_rows": 570,
+          "retained_source_rows": 0,
+          "retained_source_objects_for_year": 3,
+          "admissible_team_rows": 0,
+          "both_team_admissible_games": 0
+        },
+        {
+          "season": 2025,
+          "horizon_minutes": 120,
+          "full_games": 285,
+          "full_team_rows": 570,
+          "retained_source_rows": 0,
+          "retained_source_objects_for_year": 3,
+          "admissible_team_rows": 0,
+          "both_team_admissible_games": 0
+        },
+        {
+          "season": 2025,
+          "horizon_minutes": 60,
+          "full_games": 285,
+          "full_team_rows": 570,
+          "retained_source_rows": 0,
+          "retained_source_objects_for_year": 3,
+          "admissible_team_rows": 0,
+          "both_team_admissible_games": 0
+        },
+        {
+          "season": 2026,
+          "horizon_minutes": 120,
+          "full_games": 272,
+          "full_team_rows": 544,
+          "retained_source_rows": 0,
+          "retained_source_objects_for_year": 8,
+          "admissible_team_rows": 0,
+          "both_team_admissible_games": 0
+        },
+        {
+          "season": 2026,
+          "horizon_minutes": 60,
+          "full_games": 272,
+          "full_team_rows": 544,
+          "retained_source_rows": 0,
+          "retained_source_objects_for_year": 8,
+          "admissible_team_rows": 0,
+          "both_team_admissible_games": 0
+        }
+      ]
+    },
+    {
+      "source": "market_response",
+      "status": "REQUIRES_OWNER_EVIDENCE",
+      "reasons": [
+        "NO_CONTENT_BOUND_RIGHTS_DECISION",
+        "NO_REGISTERED_AUTHENTICATED_FEATURE_MATRIX"
+      ],
+      "coverage": [
+        {
+          "season": 2020,
+          "horizon_minutes": 120,
+          "full_games": 269,
+          "full_team_rows": 538,
+          "retained_source_rows": 0,
+          "retained_source_objects_for_year": null,
+          "admissible_team_rows": 0,
+          "both_team_admissible_games": 0
+        },
+        {
+          "season": 2020,
+          "horizon_minutes": 60,
+          "full_games": 269,
+          "full_team_rows": 538,
+          "retained_source_rows": 0,
+          "retained_source_objects_for_year": null,
+          "admissible_team_rows": 0,
+          "both_team_admissible_games": 0
+        },
+        {
+          "season": 2021,
+          "horizon_minutes": 120,
+          "full_games": 285,
+          "full_team_rows": 570,
+          "retained_source_rows": 0,
+          "retained_source_objects_for_year": null,
+          "admissible_team_rows": 0,
+          "both_team_admissible_games": 0
+        },
+        {
+          "season": 2021,
+          "horizon_minutes": 60,
+          "full_games": 285,
+          "full_team_rows": 570,
+          "retained_source_rows": 0,
+          "retained_source_objects_for_year": null,
+          "admissible_team_rows": 0,
+          "both_team_admissible_games": 0
+        },
+        {
+          "season": 2022,
+          "horizon_minutes": 120,
+          "full_games": 284,
+          "full_team_rows": 568,
+          "retained_source_rows": 0,
+          "retained_source_objects_for_year": null,
+          "admissible_team_rows": 0,
+          "both_team_admissible_games": 0
+        },
+        {
+          "season": 2022,
+          "horizon_minutes": 60,
+          "full_games": 284,
+          "full_team_rows": 568,
+          "retained_source_rows": 0,
+          "retained_source_objects_for_year": null,
+          "admissible_team_rows": 0,
+          "both_team_admissible_games": 0
+        },
+        {
+          "season": 2023,
+          "horizon_minutes": 120,
+          "full_games": 285,
+          "full_team_rows": 570,
+          "retained_source_rows": 0,
+          "retained_source_objects_for_year": null,
+          "admissible_team_rows": 0,
+          "both_team_admissible_games": 0
+        },
+        {
+          "season": 2023,
+          "horizon_minutes": 60,
+          "full_games": 285,
+          "full_team_rows": 570,
+          "retained_source_rows": 0,
+          "retained_source_objects_for_year": null,
+          "admissible_team_rows": 0,
+          "both_team_admissible_games": 0
+        },
+        {
+          "season": 2024,
+          "horizon_minutes": 120,
+          "full_games": 285,
+          "full_team_rows": 570,
+          "retained_source_rows": 0,
+          "retained_source_objects_for_year": null,
+          "admissible_team_rows": 0,
+          "both_team_admissible_games": 0
+        },
+        {
+          "season": 2024,
+          "horizon_minutes": 60,
+          "full_games": 285,
+          "full_team_rows": 570,
+          "retained_source_rows": 0,
+          "retained_source_objects_for_year": null,
+          "admissible_team_rows": 0,
+          "both_team_admissible_games": 0
+        },
+        {
+          "season": 2025,
+          "horizon_minutes": 120,
+          "full_games": 285,
+          "full_team_rows": 570,
+          "retained_source_rows": 0,
+          "retained_source_objects_for_year": null,
+          "admissible_team_rows": 0,
+          "both_team_admissible_games": 0
+        },
+        {
+          "season": 2025,
+          "horizon_minutes": 60,
+          "full_games": 285,
+          "full_team_rows": 570,
+          "retained_source_rows": 0,
+          "retained_source_objects_for_year": null,
+          "admissible_team_rows": 0,
+          "both_team_admissible_games": 0
+        },
+        {
+          "season": 2026,
+          "horizon_minutes": 120,
+          "full_games": 272,
+          "full_team_rows": 544,
+          "retained_source_rows": 0,
+          "retained_source_objects_for_year": null,
+          "admissible_team_rows": 0,
+          "both_team_admissible_games": 0
+        },
+        {
+          "season": 2026,
+          "horizon_minutes": 60,
+          "full_games": 272,
+          "full_team_rows": 544,
+          "retained_source_rows": 0,
+          "retained_source_objects_for_year": null,
+          "admissible_team_rows": 0,
+          "both_team_admissible_games": 0
+        }
+      ]
+    }
+  ],
+  "source_scope": "These admission results concern three proposed historical frontier groups, not every NFL input or market source.",
+  "preparation": {
+    "evidence_as_of_utc": "2026-11-18T23:49:03.708041Z",
+    "tests_passed": 946,
+    "tests_failed": 0,
+    "tests_errors": 0,
+    "tests_skipped": 0,
+    "scientific_fits": 0,
+    "scope": "Historical native engineering qualification; separate from the later owner execution"
+  },
+  "parquet_benchmarks": [
+    {
+      "dataset": "Historical schedule",
+      "rows": 7548,
+      "columns": 46,
+      "csv_ms": 36.469309,
+      "parquet_ms": 11.943955,
+      "csv_rss_mib": 21.6015625,
+      "parquet_rss_mib": 91.73828125
+    },
+    {
+      "dataset": "Evaluation calendar",
+      "rows": 842,
+      "columns": 11,
+      "csv_ms": 1.580935,
+      "parquet_ms": 2.87009,
+      "csv_rss_mib": 21.4765625,
+      "parquet_rss_mib": 86.87109375
+    }
+  ],
+  "parquet_scope": "Bounded full-column reader measurements, including reader runtime RSS. Typed equivalence passed. No whole-campaign speedup or complete legacy migration is established.",
+  "prior_r17_incident": {
+    "status": "FAILED_RECOVERY_REQUIRED",
+    "cause": "I/O resource-admission refusal",
+    "wait_seconds_each": 120,
+    "current_io_full_percent": 93.4,
+    "ten_second_io_full_percent": 85.76,
+    "exclusive_origin_established": false,
+    "forecast_corruption_established": false,
+    "peak_fit_core_equivalents": 22.44,
+    "overlapping_fit_pids": 24
+  },
+  "remaining_work": [
+    "Complete missing full-population regrades; retain every missing test value as a gap.",
+    "Resolve historical drive, injury/replacement and market-response rights, physical source clocks and authenticated matrices.",
+    "Complete source-producer, fitted-layer ancestry and checkpoint-binding acceptance checks.",
+    "Retain deferred successor adapters for historical drive and in-play sources; current source snapshots do not establish historical availability.",
+    "Verify a naturally eligible sustained scientific occupancy interval; a 36-worker ceiling is not measured CPU use.",
+    "Verify current official Circa lines and original issue evidence before claiming a new qualified card.",
+    "A hosted website deployment remains separate from this GitHub source publication."
+  ],
+  "publication": {
+    "kind": "GitHub source update",
+    "hosted_deployment": false,
+    "source_refresh_performed_by_publication": false,
+    "new_scientific_execution_performed_by_publication": false
+  },
+  "failure_accounting": {
+    "scope": "Reconciled N127 ledger plus this observed R18 owner execution",
+    "attributable_builds": 32,
+    "named_revisions": 18,
+    "recorded_owner_entries": 13,
+    "verified_partial_returns": 11,
+    "identified_owner_recovery_or_completion_failures": 2,
+    "pre_owner_launch_failures": 1,
+    "scoped_attempts": 14,
+    "full_v13_returns": 0,
+    "recorded_scientific_estimator_calls": 81552
+  },
+  "evidence": [
+    {
+      "id": "owner_handoff",
+      "sha256": "55d4a654b8997af1a16694ca09036f49da225a55b1178cab22a12b4ab747b108"
+    },
+    {
+      "id": "nfl_execution_summary",
+      "sha256": "43f556995d731571b668d77a848f12792886387f26df82d19329420e716b2443"
+    },
+    {
+      "id": "postseal",
+      "sha256": "d311a1d0255aaa8c9d7d8dc382e0f96f1fa0f3591f1be001592e4c6274f9dd3f"
+    },
+    {
+      "id": "stage_ledger",
+      "sha256": "f81f966c422dc23a074af4a93343ecac8eba6712f7ed5d2a580a2853ed7cf59a"
+    },
+    {
+      "id": "r18_stage_adoption",
+      "sha256": "fab3de73255d215e2201d54284938daf4195d60d6955f3932cbd966b9a3dc208"
+    },
+    {
+      "id": "r18_source_admission_audit",
+      "sha256": "8258ef43c321e623730ad61c38b27dd870029efb4dbdf67a54e20bf3f404abeb"
+    },
+    {
+      "id": "dashboard_n127_dashboard_receipt",
+      "sha256": "662c6d1d956f793a190389ebc7926c475fe8a33d41287e2862fd1e999ba0fe37"
+    },
+    {
+      "id": "selection_n127_objective_champions.csv",
+      "sha256": "98ddfed6aa423b8767fbded1fb5317f6277007044ec6bb4f5caaa8ca56e15dd4"
+    },
+    {
+      "id": "selection_n127_validation_freeze",
+      "sha256": "613aa19b5bd200c2b87c428d9916568519e63a351fda7d70cf8a389550acaf54"
+    }
+  ],
+  "evidence_note": "Opaque hashes refer to private authenticated owner evidence. The full receipts and active research recipe are not public downloads."
+}
