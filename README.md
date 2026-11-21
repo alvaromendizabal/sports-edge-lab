@@ -86,9 +86,17 @@ The prepared V7 continuation prioritizes current forecasts, restores exact old f
 
 **Sports Edge Lab** connects probabilistic sports modeling with reliable ML infrastructure: chronological training, immutable forecasts, matched market comparisons and recoverable cloud execution. Built by [Alvaro Mendizabal](https://github.com/alvaromendizabal).
 
-[**Latest NFL V10 all-game research view →**](tracks/nfl/dashboard_n088/index.html) · [Current NFL evidence](tracks/nfl/README.md) · [Open the NFL V10 dashboard](https://sports-edge-lab-nfl.alv-mendizabal.chatgpt.site/) (version 42) · [Five-minute technical review](docs/REVIEW_GUIDE.md) · [System design](docs/SYSTEM_DESIGN.md) · [Reproducibility boundary](docs/PUBLICATION_BOUNDARY.md)
+[**Current NFL game outlook**](tracks/nfl/current/index.html) · [Open the public NFL dashboard](https://sports-edge-lab-nfl-current.alv-mendizabal.chatgpt.site/) · [Current NFL evidence](tracks/nfl/README.md) · [Five-minute technical review](docs/REVIEW_GUIDE.md) · [System design](docs/SYSTEM_DESIGN.md) · [Reproducibility boundary](docs/PUBLICATION_BOUNDARY.md)
 
 [**Open the FBS browser dashboard →**](https://sports-edge-lab-fbs.alv-mendizabal.chatgpt.site) · [FBS clock and coverage methodology](docs/fbs/SEASON_EXPLORER_2026-11-03.md) · [FBS source and model card](tracks/ncaaf/README.md)
+
+## NFL current slate and model audit · November 20, 2026 Pacific
+
+[Current dashboard](tracks/nfl/current/index.html) · [Selected evidence](tracks/nfl/current/evidence.json) · [Newest-fit comparison](tracks/nfl/current/newest_model_comparison.json) · [Every Circa side](tracks/nfl/current/circa_evidence.json)
+
+The responsive dashboard covers all **11 Sunday, November 22 games plus Monday**, with probability, margin and total, 24 official Circa sides, metric-specific model scorecards, four game phone cards and two Circa phone cards. The usable matchup snapshot retains **November 16 inputs** and the models selected in the **R18 return**. Current T60 matchup inputs are unqualified and remain blank.
+
+A bounded review of **216 already-fitted R20 models** found **zero improvements in 14 same-clock, same-cohort comparisons** across seven objectives at T60 and T120. Selection remains an equal blend of 2024/2025 metrics; 2026 stays descriptive. Exact Circa cover/push probabilities were evaluated from authenticated saved integer-margin distributions at the official Week 11 lines, without a new fit or price refresh. Historical reports below keep their original scientific and deployment scopes.
 
 ## NFL V10 recovery · November 13, 2026 UTC
 
@@ -197,7 +205,7 @@ a narrow missing-clock checkpoint repair.
 
 | Track | Entry point | Publication boundary |
 |---|---|---|
-| NFL | [V10 all-game view](tracks/nfl/dashboard_n088/index.html) · [Current evidence](tracks/nfl/README.md) | N088 Phase A: 171 recomputed cards, 10,216 scored rows, zero new fits. N087 actual owner run failed. All 272 games and 444 original selected outputs preserved; full single-model season coverage and provider comparisons incomplete. Existing public Site version 42 deployed; production browser checks linked. |
+| NFL | [Current game outlook](tracks/nfl/current/index.html) · [Public dashboard](https://sports-edge-lab-nfl-current.alv-mendizabal.chatgpt.site/) · [Evidence](tracks/nfl/README.md) | Week 11: 12 upcoming games, 24 exact-line Circa sides and six phone cards. R18-selected T120 models retain dated November 16 inputs; current T60 values remain unavailable. All 216 newer R20 fits audited, zero improvements across 14 same-cohort comparisons; no new fits or campaign launch. |
 | NCAA FBS | [Browser dashboard](https://sports-edge-lab-fbs.alv-mendizabal.chatgpt.site) · [Track](tracks/ncaaf/README.md) | Actual V053 partial; V055 prepared; 500 saved issue contexts across 122 games, with dated provider coverage |
 | NBA | [Research view](docs/NBA_RESEARCH_CARD.md) | Separately dated basketball evidence |
 | NCAA basketball | [Open dashboards](https://alvaro-ncaa-research-review.alv-mendizabal.chatgpt.site/) · [Men's evidence](tracks/ncaam/README.md) · [Women's evidence](tracks/ncaaw/README.md) · [Runnable contracts](examples/ncaa_review/README.md) | Separate historical selections, current execution gaps and three-provider qualification |

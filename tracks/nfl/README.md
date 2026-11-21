@@ -1,3 +1,13 @@
+<!-- NFL_CURRENT_SLATE_20261120_START -->
+# NFL current slate dashboard · November 20, 2026
+
+[Current browser dashboard source](current/index.html) · [Saved selected data](current/data.json) · [Dashboard methodology](current/README.md)
+
+**Publication state: prepared for the public Site.** This responsive view brings the selected upcoming-game outlooks, both Circa sides, objective-specific model scorecards and phone-sized sharing cards together. Its verified evidence and original issue clocks are separate from the publication time. The live deployment URL and receipt will be recorded after deployment verification.
+
+Earlier reports below retain their original dates, scientific qualifications and source/deployment states.
+<!-- NFL_CURRENT_SLATE_20261120_END -->
+
 # NFL · N127R18 verified partial return · November 18, 2026
 
 [Latest interactive evidence review](n127r18/index.html) · [Execution and coverage report](n127r18/README.md) · [Selected annual metrics](n127r18/selected_metrics.json) · [Current model evidence](CURRENT_MODEL_CARD.md)

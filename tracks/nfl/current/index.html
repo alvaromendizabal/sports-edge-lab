@@ -1,0 +1,80 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#0d1c29">
+  <meta name="description" content="Sports Edge Lab NFL: selected game forecasts, model performance, and the complete Circa comparison board, with clear evidence dates.">
+  <title>Sports Edge Lab · NFL</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to games</a>
+  <header class="site-header">
+    <div class="header-inner">
+      <a class="brand" href="?view=slate" aria-label="Sports Edge Lab NFL home"><span class="brand-mark" aria-hidden="true"><i></i><i></i><i></i></span><span>SPORTS EDGE LAB<span class="brand-sport">NFL RESEARCH</span></span></a>
+      <div class="header-actions"><span class="edition-date">NOV 20, 2026</span><button class="button button-quiet" id="share-button" type="button"><svg aria-hidden="true" viewBox="0 0 24 24"><path d="M12 16V3m0 0L7 8m5-5 5 5M6 12H4v8h16v-8h-2"/></svg><span>Share</span></button></div>
+    </div>
+    <nav class="view-nav" aria-label="Dashboard views">
+      <a href="?view=slate" data-view-link="slate" aria-current="page">Game outlook</a>
+      <a href="?view=circa" data-view-link="circa">Circa board</a>
+      <a href="?view=performance" data-view-link="performance">Model leaders</a>
+      <a href="?view=cards&page=1" data-view-link="cards">Phone cards</a>
+    </nav>
+  </header>
+
+  <main id="main" tabindex="-1">
+    <section class="view" id="view-slate" aria-labelledby="slate-title">
+      <div class="hero">
+        <div class="eyebrow"><span class="live-dot" aria-hidden="true"></span><span id="edition-label">2026 NFL · UPCOMING SLATE</span></div>
+        <h1 id="slate-title">The weekend,<br><em>by the numbers.</em></h1>
+        <p class="hero-copy" id="slate-intro">Selected model probabilities, projected margins and totals for the next NFL slate.</p>
+        <div class="hero-meta"><span id="slate-date-label">Sunday, November 22</span><span class="meta-dot">·</span><span>All times Pacific</span><span class="meta-dot">·</span><span id="evidence-date">Evidence date pending</span></div>
+      </div>
+      <div class="slate-summary" id="slate-summary" aria-label="Slate coverage"></div>
+      <div class="forecast-clock-bar"><div class="clock-switch" role="group" aria-label="Selected forecast information clock"><button type="button" data-forecast-clock="T120" class="active" aria-pressed="true">T120 <span>usable snapshot</span></button><button type="button" data-forecast-clock="T60" aria-pressed="false">T60 <span>audit only</span></button></div><p id="forecast-clock-note">Forecasts keep their original issue dates.</p></div>
+      <div class="section-head"><div><span class="eyebrow dark">THE MATCHUPS</span><h2>Every game. A clearer picture.</h2></div><a class="text-link" href="?view=cards&page=1" data-view-link="cards">Open phone cards</a></div>
+      <div class="filter-bar">
+        <div class="segmented" role="group" aria-label="Filter game day"><button type="button" class="active" data-day="sunday" aria-pressed="true">Sunday <span id="sunday-count"></span></button><button type="button" data-day="monday" aria-pressed="false">Monday <span id="monday-count"></span></button><button type="button" data-day="all" aria-pressed="false">All games</button></div>
+        <div class="filter-inputs"><label class="search-field"><svg aria-hidden="true" viewBox="0 0 24 24"><circle cx="10.5" cy="10.5" r="6.5"/><path d="m16 16 5 5"/></svg><span class="sr-only">Search teams</span><input id="team-search" type="search" placeholder="Find a team" autocomplete="off"></label><label class="sort-field"><span class="sr-only">Sort games</span><select id="game-sort"><option value="kickoff">Kickoff time</option><option value="probability">Win probability</option></select></label></div>
+      </div>
+      <p class="results-label" id="game-count" aria-live="polite"></p>
+      <div class="games-grid" id="games-grid"></div>
+      <div class="method-note"><span class="note-symbol" aria-hidden="true">i</span><p><strong>How to read a projection.</strong> Win probability describes the outright result. The margin is the projected winner’s point advantage; total is the combined score. A win probability alone does not tell you the chance of covering a spread.</p></div>
+    </section>
+
+    <section class="view" id="view-circa" aria-labelledby="circa-title" hidden>
+      <div class="hero hero-compact"><div class="eyebrow"><span class="live-dot" aria-hidden="true"></span>THE COMPLETE CONTEST BOARD</div><h1 id="circa-title">Circa Million Picks &amp;<br><em>Performance Dashboard</em></h1><p class="hero-copy">Both sides of every remaining matchup. Cover and push probabilities stay tied to their exact contest line.</p><div class="hero-meta"><span id="circa-date-label">Upcoming NFL slate</span><span class="meta-dot">·</span><span id="circa-coverage-label">Verifying contest evidence</span></div></div>
+      <div class="circa-evidence-banner" id="circa-evidence-banner" hidden><div><span class="eyebrow dark">DISTRIBUTION &amp; LINE DATES</span><p id="circa-source-summary"></p></div><div class="circa-deadline" id="circa-deadline-wrap" hidden><span>Contest deadline</span><strong id="circa-deadline"></strong></div></div>
+      <div class="circa-layout">
+        <div class="circa-board-wrap"><div class="section-head"><div><span class="eyebrow dark">ALL THE OPTIONS</span><h2>Compare both sides.</h2></div><label class="sort-field"><span class="sr-only">Sort Circa games</span><select id="circa-sort"><option value="kickoff">Kickoff time</option><option value="expected">Expected points</option></select></label></div><div class="circa-key"><span><i class="mint-key"></i>Cover</span><span><i class="gray-key"></i>Push</span><span>Expected points = cover + ½ push</span></div><div id="circa-board" class="circa-board"></div></div>
+        <aside class="pick-card" aria-labelledby="pick-title"><div class="eyebrow dark">YOUR RESEARCH CARD</div><div class="pick-title-row"><h2 id="pick-title">Five games.</h2><span class="pick-count" id="pick-count">0 / 5</span></div><p class="muted" id="pick-explainer">Choose one side from five different games with verified lines and available cover probabilities.</p><div id="picked-sides" class="picked-sides"></div><div class="pick-total"><span>Expected contest points</span><strong id="pick-expected">—</strong></div><button class="button button-primary" id="best-card" type="button" disabled>Use highest expected points</button><button class="button button-outline" id="clear-card" type="button">Clear selection</button><p class="fineprint">A saved research comparison. No contest entry is submitted here. A five-game expected score is the sum of the five individual expectations.</p></aside>
+      </div>
+      <details class="evidence-details"><summary>Contest rules and evidence</summary><div id="circa-method"></div><p>A whole-number spread can push. A half-point spread cannot. Cover probability is calculated from the saved margin distribution; it is never substituted with the outright win probability.</p><p>Circa Million is a spread contest. The projected game totals shown elsewhere are model outputs, not additional Circa Million selections.</p></details>
+    </section>
+
+    <section class="view" id="view-performance" aria-labelledby="performance-title" hidden>
+      <div class="hero hero-compact"><div class="eyebrow"><span class="live-dot" aria-hidden="true"></span>THE EVIDENCE BEHIND THE OUTLOOK</div><h1 id="performance-title">Different targets.<br><em>Different leaders.</em></h1><p class="hero-copy">Probability quality, winning picks, margins and totals each have their own scorecard. Compare the same model across seasons.</p><div class="hero-meta"><span id="performance-asof">Latest verified saved results</span></div></div>
+      <div class="performance-context" id="performance-context"></div>
+      <section class="newest-comparison" id="newest-comparison" aria-labelledby="newest-title" hidden><div class="newest-heading"><div><span class="eyebrow dark">THE NEWEST MODEL CHECK</span><h2 id="newest-title">Did the latest fits improve?</h2></div><label class="sort-field"><span class="sr-only">Newest-model comparison information clock</span><select id="newest-horizon"></select></label></div><div id="newest-summary" class="newest-summary"></div><div id="newest-table" class="comparison-table-wrap"></div><p class="comparison-key">Accuracy: higher is better. Error and probability scores: lower is better. Change is newest minus the earlier leader.</p><details class="comparison-details"><summary>2026 results and comparison scope</summary><div id="newest-test-table" class="comparison-table-wrap"></div><p id="newest-qualification"></p></details></section>
+      <div class="section-head"><div><span class="eyebrow dark">METRIC-SPECIFIC LEADERS</span><h2>The strongest saved evidence.</h2></div><label class="sort-field"><span class="sr-only">Filter information horizon</span><select id="performance-horizon"><option value="all">All horizons</option></select></label></div>
+      <div id="performance-grid" class="performance-grid"></div>
+      <details class="evidence-details"><summary>Selection, cohorts and limitations</summary><div id="performance-method"></div><p>Previously examined results remain development-exposed. A better saved score does not by itself establish a new prospective result. Missing current-season regrades stay unavailable.</p></details>
+    </section>
+
+    <section class="view" id="view-cards" aria-labelledby="cards-title" hidden>
+      <div class="cards-toolbar"><div><span class="eyebrow dark">MADE FOR YOUR PHONE</span><h1 id="cards-title">The slate, ready to share.</h1><p>Three games per card. Swipe through, screenshot, or share a direct link.</p></div><div class="card-pagination"><button type="button" id="cards-prev" class="button button-outline" aria-label="Previous phone card">Prev</button><span id="cards-page-label" aria-live="polite">1 / 1</span><button type="button" id="cards-next" class="button button-outline" aria-label="Next phone card">Next</button></div></div>
+      <div class="card-type-switch" role="group" aria-label="Phone card content"><button type="button" data-card-type="games" class="active" aria-pressed="true">Game forecasts</button><button type="button" data-card-type="circa" aria-pressed="false">Circa options</button></div>
+      <div class="forecast-clock-bar phone-clock-bar" id="phone-clock-bar"><div class="clock-switch" role="group" aria-label="Phone card forecast information clock"><button type="button" data-forecast-clock="T120" class="active" aria-pressed="true">T120 <span>usable snapshot</span></button><button type="button" data-forecast-clock="T60" aria-pressed="false">T60 <span>audit only</span></button></div><p id="phone-clock-note">Forecasts keep their original issue dates.</p></div>
+      <div class="phone-stage"><article class="phone-sheet" id="phone-sheet" aria-label="Screenshot-friendly game card"></article></div>
+      <div class="cards-foot"><button type="button" id="share-card-button" class="button button-primary">Share this card</button><span>390-pixel layout · precise model values · no download required</span></div>
+    </section>
+
+    <section class="source-section" aria-labelledby="source-title"><div><span class="eyebrow dark">READ THE EVIDENCE</span><h2 id="source-title">Clear dates. Traceable results.</h2><p id="source-summary">The forecast issue time, the saved evaluation date and the publication time describe different events.</p></div><details class="evidence-details"><summary>Sources and snapshot details</summary><ul id="source-list"></ul><div id="source-notes"></div><p class="fineprint" id="published-at"></p></details></section>
+  </main>
+  <footer class="site-footer"><div class="footer-brand">SPORTS EDGE LAB <span>Independent NFL research</span></div><div class="footer-links"><a href="../n127r18/index.html" id="archive-r18">R18 evidence archive</a><a href="../dashboard_n088/index.html" id="archive-v10">Earlier V10 snapshot</a><a href="https://github.com/alvaromendizabal/sports-edge-lab/tree/main/tracks/nfl" target="_blank" rel="noopener noreferrer">Research source</a></div><p>Analytical projections with explicit coverage and timing. Displayed values are rounded; saved metrics retain their original cohorts.</p></footer>
+  <div class="toast" id="toast" role="status" aria-live="polite"></div>
+  <noscript><div class="noscript">This dashboard needs JavaScript to filter games and render its saved scorecards. The <a href="data.json">readable data snapshot</a> and <a href="../n127r18/README.md">historical evidence report</a> remain available.</div></noscript>
+  <script src="app.js" defer></script>
+</body>
+</html>

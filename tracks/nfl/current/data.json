@@ -1,0 +1,2441 @@
+{
+  "schema_version": 1,
+  "title": "Sports Edge Lab · NFL",
+  "season": 2026,
+  "week": 11,
+  "as_of": "2026-11-16T22:04:51.508512+00:00",
+  "published_at": "2026-11-21T01:11:41.100815+00:00",
+  "performance_as_of": "2026-11-19T04:01:59.037077+00:00",
+  "reviewed_at": "2026-11-21T01:11:41.100815+00:00",
+  "slate_date": "2026-11-22",
+  "edition_date": "2026-11-20",
+  "status": "DATED_USABLE_T120_SNAPSHOT_WITH_CURRENT_SELECTION_AND_OFFICIAL_LINES",
+  "slate_intro": "All 11 Sunday games, plus Monday for the complete Circa board. There are no NFL games on Saturday, November 21. The default outlook uses the strongest usable saved matchup snapshot, with its original November 16 inputs clearly dated.",
+  "card_date_label": "NOV 22 + 23, 2026 · ALL TIMES PT",
+  "forecast_clock_default": "T120",
+  "winner_target": "three_way_unconditional",
+  "winner_target_label": "Outright win probability; ties remain separate",
+  "forecast_clock_meta": {
+    "T120": {
+      "label": "T120 usable snapshot",
+      "as_of": "2026-11-16T22:04:51.508512+00:00",
+      "description": "Prices observed Nov 16; projections compiled Nov 16 at 2:14 p.m. PT. These models remained selected in the Nov 18–19 R18 return. This is a dated early outlook, not a current-price refresh."
+    },
+    "T60": {
+      "label": "T60 audit · unavailable",
+      "as_of": null,
+      "description": "The latest T60 future rows lack qualified current winner prices. Several selected policies return constant outputs across the slate. Current matchup forecasts are unavailable; retrospective model scores remain visible under Model leaders."
+    }
+  },
+  "performance_note": [
+    "Selection uses an equal blend of 2024 and 2025 annual scores. The 2026 results are reported separately and do not select or break ties between models.",
+    "R18 remains the latest verified selection. A bounded review of all 216 newer R20 fits found no improvement on any of the seven standard objectives at either T60 or T120, using the same exact historical game cohorts.",
+    "These are partial-campaign validation nominees with prior test exposure. Strong retrospective scores do not establish current-input readiness. The default game outlook uses the usable T120 snapshot; T60 matchup values remain unavailable."
+  ],
+  "performance_method": [
+    "Primary validation = 0.5 × the 2024 annual metric + 0.5 × the 2025 annual metric. Every winner, margin and total objective has its own selected model; no single overall champion is assumed.",
+    "Binary winner metrics exclude actual ties and renormalize home/away probabilities. Displayed matchup probabilities retain a separate tie category. Binary game counts are 285 / 284 / 149 for 2024 / 2025 / 2026; point-error counts are 285 / 285 / 150.",
+    "MAE is average absolute point error. RMSE takes the square root within each season before the 50/50 annual blend. Lower error, log loss and Brier scores are better; higher winner accuracy is better.",
+    "T60 and T120 are different information-clock groups. Compare a contender with its own clock’s incumbent. T120’s smaller validation score is not proof that changing the horizon causes an improvement.",
+    "Three T60 winner-accuracy nominees tie on validation. All remain co-leaders; one has an unavailable 2026 regrade. No 2026 result was used to resolve that tie.",
+    "The R20 comparison reads existing, hash-verified predictions. It performed zero estimator fits, did not alter official rankings, and did not launch the unfinished research campaign."
+  ],
+  "newest_model_comparison": {
+    "status": "INDEPENDENT_READ_ONLY_CHECK_OF_EXISTING_FORECASTS",
+    "scientific_fits": 0,
+    "official_ranking_changed": false,
+    "validation": "Equal weight to2024 and2025 annual metrics; no2026 selection",
+    "source_bytes_read": 52310031,
+    "models_checked": 216,
+    "same_exact_calendar_game_ids_as_incumbent": {
+      "2024": true,
+      "2025": true,
+      "2026": true
+    },
+    "future_evidence": "Conditional future fixtures using scheduled future origin, not original issued current forecasts",
+    "comparison_qualification": "Same horizon and exact full-season games. Model families and inputs differ; this is comparative performance, not a controlled causal ablation. Prior test exposure remains disclosed.",
+    "rows": [
+      {
+        "horizon_minutes": 60,
+        "objective": "binary_accuracy",
+        "label": "Winner accuracy",
+        "incumbent_release": "N127 R18",
+        "new_fit_set": "R20 216-model frontier batch",
+        "incumbent_validation": 0.6958858413639732,
+        "best_new_validation": 0.6115455893254262,
+        "new_fit_beats_incumbent": false,
+        "new_minus_incumbent": -0.084340252038547,
+        "incumbent_2026": 0.6577181208053692,
+        "validation_selected_new_2026": 0.6241610738255033,
+        "games_2024": 285,
+        "games_2025": 284,
+        "games_2026": 149
+      },
+      {
+        "horizon_minutes": 60,
+        "objective": "binary_log_loss",
+        "label": "Probability log loss",
+        "incumbent_release": "N127 R18",
+        "new_fit_set": "R20 216-model frontier batch",
+        "incumbent_validation": 0.6024723829746201,
+        "best_new_validation": 0.6621031198778173,
+        "new_fit_beats_incumbent": false,
+        "new_minus_incumbent": 0.0596307369031972,
+        "incumbent_2026": 0.6202712498757066,
+        "validation_selected_new_2026": 0.6552006933012022,
+        "games_2024": 285,
+        "games_2025": 284,
+        "games_2026": 149
+      },
+      {
+        "horizon_minutes": 60,
+        "objective": "binary_brier",
+        "label": "Probability Brier score",
+        "incumbent_release": "N127 R18",
+        "new_fit_set": "R20 216-model frontier batch",
+        "incumbent_validation": 0.2075282494556057,
+        "best_new_validation": 0.2352357093108619,
+        "new_fit_beats_incumbent": false,
+        "new_minus_incumbent": 0.027707459855256217,
+        "incumbent_2026": 0.21454641381662634,
+        "validation_selected_new_2026": 0.23103695687774695,
+        "games_2024": 285,
+        "games_2025": 284,
+        "games_2026": 149
+      },
+      {
+        "horizon_minutes": 60,
+        "objective": "margin_mae",
+        "label": "Margin MAE",
+        "incumbent_release": "N127 R18",
+        "new_fit_set": "R20 216-model frontier batch",
+        "incumbent_validation": 9.670264477758495,
+        "best_new_validation": 10.651055627847754,
+        "new_fit_beats_incumbent": false,
+        "new_minus_incumbent": 0.9807911500892583,
+        "incumbent_2026": 9.583402621287169,
+        "validation_selected_new_2026": 10.203432440268365,
+        "games_2024": 285,
+        "games_2025": 285,
+        "games_2026": 150
+      },
+      {
+        "horizon_minutes": 60,
+        "objective": "margin_rmse",
+        "label": "Margin RMSE",
+        "incumbent_release": "N127 R18",
+        "new_fit_set": "R20 216-model frontier batch",
+        "incumbent_validation": 12.446848275113583,
+        "best_new_validation": 13.66250305007131,
+        "new_fit_beats_incumbent": false,
+        "new_minus_incumbent": 1.2156547749577271,
+        "incumbent_2026": 12.386311255723385,
+        "validation_selected_new_2026": 13.145810177925691,
+        "games_2024": 285,
+        "games_2025": 285,
+        "games_2026": 150
+      },
+      {
+        "horizon_minutes": 60,
+        "objective": "total_mae",
+        "label": "Total MAE",
+        "incumbent_release": "N127 R18",
+        "new_fit_set": "R20 216-model frontier batch",
+        "incumbent_validation": 10.077733424254522,
+        "best_new_validation": 10.296773830635725,
+        "new_fit_beats_incumbent": false,
+        "new_minus_incumbent": 0.21904040638120392,
+        "incumbent_2026": 10.423328583233635,
+        "validation_selected_new_2026": 11.067916147510909,
+        "games_2024": 285,
+        "games_2025": 285,
+        "games_2026": 150
+      },
+      {
+        "horizon_minutes": 60,
+        "objective": "total_rmse",
+        "label": "Total RMSE",
+        "incumbent_release": "N127 R18",
+        "new_fit_set": "R20 216-model frontier batch",
+        "incumbent_validation": 12.842353352344162,
+        "best_new_validation": 13.248062677586315,
+        "new_fit_beats_incumbent": false,
+        "new_minus_incumbent": 0.4057093252421531,
+        "incumbent_2026": 13.1324292515417,
+        "validation_selected_new_2026": 13.982646989876148,
+        "games_2024": 285,
+        "games_2025": 285,
+        "games_2026": 150
+      },
+      {
+        "horizon_minutes": 120,
+        "objective": "binary_accuracy",
+        "label": "Winner accuracy",
+        "incumbent_release": "N127 R18",
+        "new_fit_set": "R20 216-model frontier batch",
+        "incumbent_validation": 0.6959167284408204,
+        "best_new_validation": 0.6115455893254262,
+        "new_fit_beats_incumbent": false,
+        "new_minus_incumbent": -0.08437113911539418,
+        "incumbent_2026": 0.6778523489932886,
+        "validation_selected_new_2026": 0.6241610738255033,
+        "games_2024": 285,
+        "games_2025": 284,
+        "games_2026": 149
+      },
+      {
+        "horizon_minutes": 120,
+        "objective": "binary_log_loss",
+        "label": "Probability log loss",
+        "incumbent_release": "N127 R18",
+        "new_fit_set": "R20 216-model frontier batch",
+        "incumbent_validation": 0.5970355348132501,
+        "best_new_validation": 0.6621031198778173,
+        "new_fit_beats_incumbent": false,
+        "new_minus_incumbent": 0.06506758506456722,
+        "incumbent_2026": 0.6301804113146735,
+        "validation_selected_new_2026": 0.6552006933012022,
+        "games_2024": 285,
+        "games_2025": 284,
+        "games_2026": 149
+      },
+      {
+        "horizon_minutes": 120,
+        "objective": "binary_brier",
+        "label": "Probability Brier score",
+        "incumbent_release": "N127 R18",
+        "new_fit_set": "R20 216-model frontier batch",
+        "incumbent_validation": 0.20545088062607902,
+        "best_new_validation": 0.2352357093108619,
+        "new_fit_beats_incumbent": false,
+        "new_minus_incumbent": 0.029784828684782882,
+        "incumbent_2026": 0.21813405274191136,
+        "validation_selected_new_2026": 0.23103695687774695,
+        "games_2024": 285,
+        "games_2025": 284,
+        "games_2026": 149
+      },
+      {
+        "horizon_minutes": 120,
+        "objective": "margin_mae",
+        "label": "Margin MAE",
+        "incumbent_release": "N127 R18",
+        "new_fit_set": "R20 216-model frontier batch",
+        "incumbent_validation": 9.65059700432135,
+        "best_new_validation": 10.651055627847754,
+        "new_fit_beats_incumbent": false,
+        "new_minus_incumbent": 1.000458623526404,
+        "incumbent_2026": 9.837479843743361,
+        "validation_selected_new_2026": 10.203432440268365,
+        "games_2024": 285,
+        "games_2025": 285,
+        "games_2026": 150
+      },
+      {
+        "horizon_minutes": 120,
+        "objective": "margin_rmse",
+        "label": "Margin RMSE",
+        "incumbent_release": "N127 R18",
+        "new_fit_set": "R20 216-model frontier batch",
+        "incumbent_validation": 12.425424160087111,
+        "best_new_validation": 13.66250305007131,
+        "new_fit_beats_incumbent": false,
+        "new_minus_incumbent": 1.2370788899841987,
+        "incumbent_2026": 12.158193950465185,
+        "validation_selected_new_2026": 13.145810177925691,
+        "games_2024": 285,
+        "games_2025": 285,
+        "games_2026": 150
+      },
+      {
+        "horizon_minutes": 120,
+        "objective": "total_mae",
+        "label": "Total MAE",
+        "incumbent_release": "N127 R18",
+        "new_fit_set": "R20 216-model frontier batch",
+        "incumbent_validation": 9.990968676708999,
+        "best_new_validation": 10.296773830635725,
+        "new_fit_beats_incumbent": false,
+        "new_minus_incumbent": 0.3058051539267268,
+        "incumbent_2026": 10.50624508766517,
+        "validation_selected_new_2026": 11.067916147510909,
+        "games_2024": 285,
+        "games_2025": 285,
+        "games_2026": 150
+      },
+      {
+        "horizon_minutes": 120,
+        "objective": "total_rmse",
+        "label": "Total RMSE",
+        "incumbent_release": "N127 R18",
+        "new_fit_set": "R20 216-model frontier batch",
+        "incumbent_validation": 12.805041484413314,
+        "best_new_validation": 13.248062677586315,
+        "new_fit_beats_incumbent": false,
+        "new_minus_incumbent": 0.44302119317300104,
+        "incumbent_2026": 13.22132945862232,
+        "validation_selected_new_2026": 13.982646989876148,
+        "games_2024": 285,
+        "games_2025": 285,
+        "games_2026": 150
+      }
+    ],
+    "source_sha256": {
+      "r20_review": "e924b5f5c0c1b04e049100f34745064eb9da388d8054d3a2ebb6afa7f3febbd1",
+      "incumbent_champions": "98ddfed6aa423b8767fbded1fb5317f6277007044ec6bb4f5caaa8ca56e15dd4"
+    }
+  },
+  "circa_deadline": {
+    "label": "ENTRY DEADLINE · SAT NOV 21 · 4:00 PM PT",
+    "utc": "2026-11-22T00:00:00Z"
+  },
+  "circa_source_summary": "Official Week 11 contest lines, verified November 20. Cover probabilities use the preserved November 16 T120 distribution and are a dated research comparison at these exact lines.",
+  "circa_note": "Choose five distinct games, one side per game. Win = 1 point, push = 0.5, loss = 0. Totals are not Circa Million entries.",
+  "circa_method": [
+    "The official Circa Million VIII Week 11 sheet determines the contest spreads. All 24 remaining sides are included. The completed Thursday game is excluded.",
+    "The entry deadline is Saturday, November 21 at 4:00 p.m. Pacific. A contest card uses exactly five different games, with one side per game.",
+    "Expected contest points = P(cover) + 0.5 × P(push). A five-game expectation is the sum of its five individual expectations; independence is not required for that sum.",
+    "Probabilities must come from the saved integer-margin distribution evaluated at the official line. The outright win probability and the projected margin alone are not cover probabilities.",
+    "The saved integer margin grid runs from −100 to +100, in one-point steps, with away-minus-home orientation. Its probabilities reproduce the source win/tie values within 6.1e−13. No normal approximation, new fit, reconstructed distribution or renormalization is used.",
+    "The primary Circa role is the T120 spread-Brier and spread-log-loss selection. The accuracy-selected policy is retained as a separate comparison in the public evidence. Neither role receives a fresh 2026 regrade here.",
+    "These are exact evaluations of the saved November 16 conditional margin distributions at the official Week 11 contest lines. Prices, injuries and model inputs have not been refreshed. This is an early conditional card, not a newly issued forecast."
+  ],
+  "source_summary": "Forecast inputs: November 16. Retained selection: R18, verified November 18–19. Newer-fit audit and official-line review: November 20. Publishing this page does not refresh the underlying model inputs.",
+  "notes": [
+    "All dates and kickoff times use America/Los_Angeles. Minnesota–San Francisco is in Mexico City; San Francisco is the designated home team.",
+    "Forecast issue, compilation, market observation, selection and dashboard publication are separate clocks. No original live T60 issue is claimed for the conditional future rows.",
+    "Probability, projected margin and projected total use separate objective-selected policies. Implied scores from combining margin and total would be a synthesis, not a single joint score forecast.",
+    "Only selected rounded forecast values, aggregate performance and public role aliases are published. Historical releases remain available as dated evidence."
+  ],
+  "sources": [
+    {
+      "label": "Official NFL Week 11 schedule",
+      "url": "https://media.nfl.com/content/dam/communications/documents/2026/Week%2011%20Schedule%20Change.pdf",
+      "note": "November 9 schedule update; Sunday and Monday kickoff times checked."
+    },
+    {
+      "label": "Official Circa Week 11 point-spread sheet",
+      "url": "https://www.circasports.com/wp-content/uploads/sb-twitter-feed-images/2123484378601083202-0-800.jpg",
+      "note": "Verified from the official image on November 20; Kansas City is −16."
+    },
+    {
+      "label": "Circa Million VIII contest rules",
+      "url": "https://www.circasports.com/wp-content/uploads/2026/10/4CircaSportsMillionVIII.2026.ContestRules-FINAL.pdf",
+      "note": "Five distinct games; Saturday 4 p.m. Pacific deadline; half-point credit for a push."
+    },
+    {
+      "label": "R18 selected-model evidence",
+      "url": "https://github.com/alvaromendizabal/sports-edge-lab/tree/main/tracks/nfl/n127r18",
+      "as_of": "2026-11-19T04:01:59.037077+00:00",
+      "note": "Primary 2024/2025 selection and separately reported exposed 2026 results."
+    },
+    {
+      "label": "Current dashboard evidence and review",
+      "url": "https://github.com/alvaromendizabal/sports-edge-lab/tree/main/tracks/nfl/current",
+      "note": "Selected snapshot, negative findings, newest-fit comparison and publication receipt."
+    }
+  ],
+  "archive_links": {
+    "r18": "../n127r18/index.html",
+    "v10": "../dashboard_n088/index.html"
+  },
+  "games": [
+    {
+      "id": "2026_11_MIA_BUF",
+      "away": "MIA",
+      "home": "BUF",
+      "away_name": "Miami Dolphins",
+      "home_name": "Buffalo Bills",
+      "kickoff_utc": "2026-11-22T18:00:00+00:00",
+      "date_pt": "2026-11-22",
+      "day": "sunday",
+      "neutral": false,
+      "note": null,
+      "remaining": true,
+      "status": "scheduled",
+      "win_home": 0.918349,
+      "win_away": 0.076664,
+      "tie_probability": 0.004988,
+      "margin_home": 16.4547,
+      "total": 42.2311,
+      "issued_at": null,
+      "compiled_at": "2026-11-16T22:14:36+00:00",
+      "as_of": "2026-11-16T22:04:51.508512+00:00",
+      "forecast_status": "DATED_CONDITIONAL_SNAPSHOT",
+      "forecast_label": "Nov 16 snapshot",
+      "forecast_note": "Dated early projection using prices observed November 16. Latest R18 selection retains these T120 models; no current-price refresh or original live issue is claimed.",
+      "evidence_label": "Selected model · dated inputs",
+      "card_note": "Nov 16 inputs · early outlook",
+      "winner_target": "three_way_unconditional",
+      "winner_target_label": "Outright win probability, with tie mass separate",
+      "model_roles": {
+        "winner": {
+          "alias": "T120 Probability",
+          "horizon": "T120",
+          "objective_label": "Binary log loss and Brier selection",
+          "issued_at": null
+        },
+        "margin": {
+          "alias": "T120 Margin",
+          "horizon": "T120",
+          "objective_label": "Margin MAE selection",
+          "issued_at": null
+        },
+        "total": {
+          "alias": "T120 Total",
+          "horizon": "T120",
+          "objective_label": "Total MAE selection",
+          "issued_at": null
+        }
+      },
+      "forecasts": {
+        "T120": {
+          "win_home": 0.918349,
+          "win_away": 0.076664,
+          "tie_probability": 0.004988,
+          "margin_home": 16.4547,
+          "total": 42.2311,
+          "issued_at": null,
+          "compiled_at": "2026-11-16T22:14:36+00:00",
+          "as_of": "2026-11-16T22:04:51.508512+00:00",
+          "forecast_status": "DATED_CONDITIONAL_SNAPSHOT",
+          "forecast_label": "Nov 16 snapshot",
+          "forecast_note": "Dated early projection using prices observed November 16. Latest R18 selection retains these T120 models; no current-price refresh or original live issue is claimed.",
+          "evidence_label": "Selected model · dated inputs",
+          "card_note": "Nov 16 inputs · early outlook",
+          "winner_target": "three_way_unconditional",
+          "winner_target_label": "Outright win probability, with tie mass separate",
+          "model_roles": {
+            "winner": {
+              "alias": "T120 Probability",
+              "horizon": "T120",
+              "objective_label": "Binary log loss and Brier selection",
+              "issued_at": null
+            },
+            "margin": {
+              "alias": "T120 Margin",
+              "horizon": "T120",
+              "objective_label": "Margin MAE selection",
+              "issued_at": null
+            },
+            "total": {
+              "alias": "T120 Total",
+              "horizon": "T120",
+              "objective_label": "Total MAE selection",
+              "issued_at": null
+            }
+          }
+        },
+        "T60": {
+          "win_home": null,
+          "win_away": null,
+          "tie_probability": null,
+          "margin_home": null,
+          "total": null,
+          "issued_at": null,
+          "compiled_at": null,
+          "as_of": null,
+          "forecast_status": "CURRENT_INPUTS_UNAVAILABLE",
+          "forecast_label": "No current forecast",
+          "forecast_note": "Saved future rows lack qualified current winner prices. The selected total-MAE, total-RMSE and margin-RMSE policies return constant values across all12 matchups. These rows are conditional future fixtures, not newly issued forecasts.",
+          "evidence_label": "Current-input gap",
+          "card_note": "No qualified current matchup forecast",
+          "winner_target": "three_way_unconditional",
+          "winner_target_label": "Unavailable",
+          "model_roles": {
+            "winner": {
+              "alias": "Nominee 005",
+              "horizon": "T60"
+            },
+            "margin": {
+              "alias": "Nominee 005",
+              "horizon": "T60"
+            },
+            "total": {
+              "alias": "Nominee 001",
+              "horizon": "T60"
+            }
+          }
+        }
+      },
+      "circa": {
+        "home_spread": -16.5,
+        "line_verified": true,
+        "source_url": "https://www.circasports.com/wp-content/uploads/sb-twitter-feed-images/2123484378601083202-0-800.jpg",
+        "pick_number_home": 15,
+        "pick_number_away": 16,
+        "cover_home": 0.51944,
+        "cover_away": 0.48056,
+        "push": 0.0,
+        "expected_home": 0.51944,
+        "expected_away": 0.48056,
+        "note": "Nov 16 saved distribution · official Week 11 line · T120 Circa Probability",
+        "model_role_alias": "T120 Circa Probability",
+        "accuracy_model_comparison": {
+          "model_role_alias": "T120 Circa Accuracy",
+          "cover_home": 0.517367,
+          "cover_away": 0.482633,
+          "push": 0.0,
+          "expected_home": 0.517367,
+          "expected_away": 0.482633
+        },
+        "distribution_as_of": "2026-11-16T22:04:51.508512+00:00",
+        "evaluated_at": "2026-11-21T01:09:50.556287+00:00"
+      }
+    },
+    {
+      "id": "2026_11_BAL_CAR",
+      "away": "BAL",
+      "home": "CAR",
+      "away_name": "Baltimore Ravens",
+      "home_name": "Carolina Panthers",
+      "kickoff_utc": "2026-11-22T18:00:00+00:00",
+      "date_pt": "2026-11-22",
+      "day": "sunday",
+      "neutral": false,
+      "note": null,
+      "remaining": true,
+      "status": "scheduled",
+      "win_home": 0.5467,
+      "win_away": 0.443138,
+      "tie_probability": 0.010161,
+      "margin_home": 1.2541,
+      "total": 43.3548,
+      "issued_at": null,
+      "compiled_at": "2026-11-16T22:14:36+00:00",
+      "as_of": "2026-11-16T22:04:51.508512+00:00",
+      "forecast_status": "DATED_CONDITIONAL_SNAPSHOT",
+      "forecast_label": "Nov 16 snapshot",
+      "forecast_note": "Dated early projection using prices observed November 16. Latest R18 selection retains these T120 models; no current-price refresh or original live issue is claimed.",
+      "evidence_label": "Selected model · dated inputs",
+      "card_note": "Nov 16 inputs · early outlook",
+      "winner_target": "three_way_unconditional",
+      "winner_target_label": "Outright win probability, with tie mass separate",
+      "model_roles": {
+        "winner": {
+          "alias": "T120 Probability",
+          "horizon": "T120",
+          "objective_label": "Binary log loss and Brier selection",
+          "issued_at": null
+        },
+        "margin": {
+          "alias": "T120 Margin",
+          "horizon": "T120",
+          "objective_label": "Margin MAE selection",
+          "issued_at": null
+        },
+        "total": {
+          "alias": "T120 Total",
+          "horizon": "T120",
+          "objective_label": "Total MAE selection",
+          "issued_at": null
+        }
+      },
+      "forecasts": {
+        "T120": {
+          "win_home": 0.5467,
+          "win_away": 0.443138,
+          "tie_probability": 0.010161,
+          "margin_home": 1.2541,
+          "total": 43.3548,
+          "issued_at": null,
+          "compiled_at": "2026-11-16T22:14:36+00:00",
+          "as_of": "2026-11-16T22:04:51.508512+00:00",
+          "forecast_status": "DATED_CONDITIONAL_SNAPSHOT",
+          "forecast_label": "Nov 16 snapshot",
+          "forecast_note": "Dated early projection using prices observed November 16. Latest R18 selection retains these T120 models; no current-price refresh or original live issue is claimed.",
+          "evidence_label": "Selected model · dated inputs",
+          "card_note": "Nov 16 inputs · early outlook",
+          "winner_target": "three_way_unconditional",
+          "winner_target_label": "Outright win probability, with tie mass separate",
+          "model_roles": {
+            "winner": {
+              "alias": "T120 Probability",
+              "horizon": "T120",
+              "objective_label": "Binary log loss and Brier selection",
+              "issued_at": null
+            },
+            "margin": {
+              "alias": "T120 Margin",
+              "horizon": "T120",
+              "objective_label": "Margin MAE selection",
+              "issued_at": null
+            },
+            "total": {
+              "alias": "T120 Total",
+              "horizon": "T120",
+              "objective_label": "Total MAE selection",
+              "issued_at": null
+            }
+          }
+        },
+        "T60": {
+          "win_home": null,
+          "win_away": null,
+          "tie_probability": null,
+          "margin_home": null,
+          "total": null,
+          "issued_at": null,
+          "compiled_at": null,
+          "as_of": null,
+          "forecast_status": "CURRENT_INPUTS_UNAVAILABLE",
+          "forecast_label": "No current forecast",
+          "forecast_note": "Saved future rows lack qualified current winner prices. The selected total-MAE, total-RMSE and margin-RMSE policies return constant values across all12 matchups. These rows are conditional future fixtures, not newly issued forecasts.",
+          "evidence_label": "Current-input gap",
+          "card_note": "No qualified current matchup forecast",
+          "winner_target": "three_way_unconditional",
+          "winner_target_label": "Unavailable",
+          "model_roles": {
+            "winner": {
+              "alias": "Nominee 005",
+              "horizon": "T60"
+            },
+            "margin": {
+              "alias": "Nominee 005",
+              "horizon": "T60"
+            },
+            "total": {
+              "alias": "Nominee 001",
+              "horizon": "T60"
+            }
+          }
+        }
+      },
+      "circa": {
+        "home_spread": -3,
+        "line_verified": true,
+        "source_url": "https://www.circasports.com/wp-content/uploads/sb-twitter-feed-images/2123484378601083202-0-800.jpg",
+        "pick_number_home": 3,
+        "pick_number_away": 4,
+        "cover_home": 0.430566,
+        "cover_away": 0.506773,
+        "push": 0.062661,
+        "expected_home": 0.461896,
+        "expected_away": 0.538104,
+        "note": "Nov 16 saved distribution · official Week 11 line · T120 Circa Probability",
+        "model_role_alias": "T120 Circa Probability",
+        "accuracy_model_comparison": {
+          "model_role_alias": "T120 Circa Accuracy",
+          "cover_home": 0.44628,
+          "cover_away": 0.483365,
+          "push": 0.070355,
+          "expected_home": 0.481457,
+          "expected_away": 0.518543
+        },
+        "distribution_as_of": "2026-11-16T22:04:51.508512+00:00",
+        "evaluated_at": "2026-11-21T01:09:50.556287+00:00"
+      }
+    },
+    {
+      "id": "2026_11_NO_CHI",
+      "away": "NO",
+      "home": "CHI",
+      "away_name": "New Orleans Saints",
+      "home_name": "Chicago Bears",
+      "kickoff_utc": "2026-11-22T18:00:00+00:00",
+      "date_pt": "2026-11-22",
+      "day": "sunday",
+      "neutral": false,
+      "note": null,
+      "remaining": true,
+      "status": "scheduled",
+      "win_home": 0.842122,
+      "win_away": 0.149956,
+      "tie_probability": 0.007922,
+      "margin_home": 11.5801,
+      "total": 47.5711,
+      "issued_at": null,
+      "compiled_at": "2026-11-16T22:14:36+00:00",
+      "as_of": "2026-11-16T22:04:51.508512+00:00",
+      "forecast_status": "DATED_CONDITIONAL_SNAPSHOT",
+      "forecast_label": "Nov 16 snapshot",
+      "forecast_note": "Dated early projection using prices observed November 16. Latest R18 selection retains these T120 models; no current-price refresh or original live issue is claimed.",
+      "evidence_label": "Selected model · dated inputs",
+      "card_note": "Nov 16 inputs · early outlook",
+      "winner_target": "three_way_unconditional",
+      "winner_target_label": "Outright win probability, with tie mass separate",
+      "model_roles": {
+        "winner": {
+          "alias": "T120 Probability",
+          "horizon": "T120",
+          "objective_label": "Binary log loss and Brier selection",
+          "issued_at": null
+        },
+        "margin": {
+          "alias": "T120 Margin",
+          "horizon": "T120",
+          "objective_label": "Margin MAE selection",
+          "issued_at": null
+        },
+        "total": {
+          "alias": "T120 Total",
+          "horizon": "T120",
+          "objective_label": "Total MAE selection",
+          "issued_at": null
+        }
+      },
+      "forecasts": {
+        "T120": {
+          "win_home": 0.842122,
+          "win_away": 0.149956,
+          "tie_probability": 0.007922,
+          "margin_home": 11.5801,
+          "total": 47.5711,
+          "issued_at": null,
+          "compiled_at": "2026-11-16T22:14:36+00:00",
+          "as_of": "2026-11-16T22:04:51.508512+00:00",
+          "forecast_status": "DATED_CONDITIONAL_SNAPSHOT",
+          "forecast_label": "Nov 16 snapshot",
+          "forecast_note": "Dated early projection using prices observed November 16. Latest R18 selection retains these T120 models; no current-price refresh or original live issue is claimed.",
+          "evidence_label": "Selected model · dated inputs",
+          "card_note": "Nov 16 inputs · early outlook",
+          "winner_target": "three_way_unconditional",
+          "winner_target_label": "Outright win probability, with tie mass separate",
+          "model_roles": {
+            "winner": {
+              "alias": "T120 Probability",
+              "horizon": "T120",
+              "objective_label": "Binary log loss and Brier selection",
+              "issued_at": null
+            },
+            "margin": {
+              "alias": "T120 Margin",
+              "horizon": "T120",
+              "objective_label": "Margin MAE selection",
+              "issued_at": null
+            },
+            "total": {
+              "alias": "T120 Total",
+              "horizon": "T120",
+              "objective_label": "Total MAE selection",
+              "issued_at": null
+            }
+          }
+        },
+        "T60": {
+          "win_home": null,
+          "win_away": null,
+          "tie_probability": null,
+          "margin_home": null,
+          "total": null,
+          "issued_at": null,
+          "compiled_at": null,
+          "as_of": null,
+          "forecast_status": "CURRENT_INPUTS_UNAVAILABLE",
+          "forecast_label": "No current forecast",
+          "forecast_note": "Saved future rows lack qualified current winner prices. The selected total-MAE, total-RMSE and margin-RMSE policies return constant values across all12 matchups. These rows are conditional future fixtures, not newly issued forecasts.",
+          "evidence_label": "Current-input gap",
+          "card_note": "No qualified current matchup forecast",
+          "winner_target": "three_way_unconditional",
+          "winner_target_label": "Unavailable",
+          "model_roles": {
+            "winner": {
+              "alias": "Nominee 005",
+              "horizon": "T60"
+            },
+            "margin": {
+              "alias": "Nominee 005",
+              "horizon": "T60"
+            },
+            "total": {
+              "alias": "Nominee 001",
+              "horizon": "T60"
+            }
+          }
+        }
+      },
+      "circa": {
+        "home_spread": -11.5,
+        "line_verified": true,
+        "source_url": "https://www.circasports.com/wp-content/uploads/sb-twitter-feed-images/2123484378601083202-0-800.jpg",
+        "pick_number_home": 9,
+        "pick_number_away": 10,
+        "cover_home": 0.502697,
+        "cover_away": 0.497303,
+        "push": 0.0,
+        "expected_home": 0.502697,
+        "expected_away": 0.497303,
+        "note": "Nov 16 saved distribution · official Week 11 line · T120 Circa Probability",
+        "model_role_alias": "T120 Circa Probability",
+        "accuracy_model_comparison": {
+          "model_role_alias": "T120 Circa Accuracy",
+          "cover_home": 0.490988,
+          "cover_away": 0.509012,
+          "push": 0.0,
+          "expected_home": 0.490988,
+          "expected_away": 0.509012
+        },
+        "distribution_as_of": "2026-11-16T22:04:51.508512+00:00",
+        "evaluated_at": "2026-11-21T01:09:50.556287+00:00"
+      }
+    },
+    {
+      "id": "2026_11_TEN_DAL",
+      "away": "TEN",
+      "home": "DAL",
+      "away_name": "Tennessee Titans",
+      "home_name": "Dallas Cowboys",
+      "kickoff_utc": "2026-11-22T18:00:00+00:00",
+      "date_pt": "2026-11-22",
+      "day": "sunday",
+      "neutral": false,
+      "note": null,
+      "remaining": true,
+      "status": "scheduled",
+      "win_home": 0.785643,
+      "win_away": 0.207339,
+      "tie_probability": 0.007018,
+      "margin_home": 8.2064,
+      "total": 53.9553,
+      "issued_at": null,
+      "compiled_at": "2026-11-16T22:14:36+00:00",
+      "as_of": "2026-11-16T22:04:51.508512+00:00",
+      "forecast_status": "DATED_CONDITIONAL_SNAPSHOT",
+      "forecast_label": "Nov 16 snapshot",
+      "forecast_note": "Dated early projection using prices observed November 16. Latest R18 selection retains these T120 models; no current-price refresh or original live issue is claimed.",
+      "evidence_label": "Selected model · dated inputs",
+      "card_note": "Nov 16 inputs · early outlook",
+      "winner_target": "three_way_unconditional",
+      "winner_target_label": "Outright win probability, with tie mass separate",
+      "model_roles": {
+        "winner": {
+          "alias": "T120 Probability",
+          "horizon": "T120",
+          "objective_label": "Binary log loss and Brier selection",
+          "issued_at": null
+        },
+        "margin": {
+          "alias": "T120 Margin",
+          "horizon": "T120",
+          "objective_label": "Margin MAE selection",
+          "issued_at": null
+        },
+        "total": {
+          "alias": "T120 Total",
+          "horizon": "T120",
+          "objective_label": "Total MAE selection",
+          "issued_at": null
+        }
+      },
+      "forecasts": {
+        "T120": {
+          "win_home": 0.785643,
+          "win_away": 0.207339,
+          "tie_probability": 0.007018,
+          "margin_home": 8.2064,
+          "total": 53.9553,
+          "issued_at": null,
+          "compiled_at": "2026-11-16T22:14:36+00:00",
+          "as_of": "2026-11-16T22:04:51.508512+00:00",
+          "forecast_status": "DATED_CONDITIONAL_SNAPSHOT",
+          "forecast_label": "Nov 16 snapshot",
+          "forecast_note": "Dated early projection using prices observed November 16. Latest R18 selection retains these T120 models; no current-price refresh or original live issue is claimed.",
+          "evidence_label": "Selected model · dated inputs",
+          "card_note": "Nov 16 inputs · early outlook",
+          "winner_target": "three_way_unconditional",
+          "winner_target_label": "Outright win probability, with tie mass separate",
+          "model_roles": {
+            "winner": {
+              "alias": "T120 Probability",
+              "horizon": "T120",
+              "objective_label": "Binary log loss and Brier selection",
+              "issued_at": null
+            },
+            "margin": {
+              "alias": "T120 Margin",
+              "horizon": "T120",
+              "objective_label": "Margin MAE selection",
+              "issued_at": null
+            },
+            "total": {
+              "alias": "T120 Total",
+              "horizon": "T120",
+              "objective_label": "Total MAE selection",
+              "issued_at": null
+            }
+          }
+        },
+        "T60": {
+          "win_home": null,
+          "win_away": null,
+          "tie_probability": null,
+          "margin_home": null,
+          "total": null,
+          "issued_at": null,
+          "compiled_at": null,
+          "as_of": null,
+          "forecast_status": "CURRENT_INPUTS_UNAVAILABLE",
+          "forecast_label": "No current forecast",
+          "forecast_note": "Saved future rows lack qualified current winner prices. The selected total-MAE, total-RMSE and margin-RMSE policies return constant values across all12 matchups. These rows are conditional future fixtures, not newly issued forecasts.",
+          "evidence_label": "Current-input gap",
+          "card_note": "No qualified current matchup forecast",
+          "winner_target": "three_way_unconditional",
+          "winner_target_label": "Unavailable",
+          "model_roles": {
+            "winner": {
+              "alias": "Nominee 005",
+              "horizon": "T60"
+            },
+            "margin": {
+              "alias": "Nominee 005",
+              "horizon": "T60"
+            },
+            "total": {
+              "alias": "Nominee 001",
+              "horizon": "T60"
+            }
+          }
+        }
+      },
+      "circa": {
+        "home_spread": -8,
+        "line_verified": true,
+        "source_url": "https://www.circasports.com/wp-content/uploads/sb-twitter-feed-images/2123484378601083202-0-800.jpg",
+        "pick_number_home": 13,
+        "pick_number_away": 14,
+        "cover_home": 0.383399,
+        "cover_away": 0.575577,
+        "push": 0.041024,
+        "expected_home": 0.403911,
+        "expected_away": 0.596089,
+        "note": "Nov 16 saved distribution · official Week 11 line · T120 Circa Probability",
+        "model_role_alias": "T120 Circa Probability",
+        "accuracy_model_comparison": {
+          "model_role_alias": "T120 Circa Accuracy",
+          "cover_home": 0.418154,
+          "cover_away": 0.536741,
+          "push": 0.045105,
+          "expected_home": 0.440707,
+          "expected_away": 0.559293
+        },
+        "distribution_as_of": "2026-11-16T22:04:51.508512+00:00",
+        "evaluated_at": "2026-11-21T01:09:50.556287+00:00"
+      }
+    },
+    {
+      "id": "2026_11_TB_DET",
+      "away": "TB",
+      "home": "DET",
+      "away_name": "Tampa Bay Buccaneers",
+      "home_name": "Detroit Lions",
+      "kickoff_utc": "2026-11-22T18:00:00+00:00",
+      "date_pt": "2026-11-22",
+      "day": "sunday",
+      "neutral": false,
+      "note": null,
+      "remaining": true,
+      "status": "scheduled",
+      "win_home": 0.71461,
+      "win_away": 0.276228,
+      "tie_probability": 0.009162,
+      "margin_home": 6.4979,
+      "total": 46.7997,
+      "issued_at": null,
+      "compiled_at": "2026-11-16T22:14:36+00:00",
+      "as_of": "2026-11-16T22:04:51.508512+00:00",
+      "forecast_status": "DATED_CONDITIONAL_SNAPSHOT",
+      "forecast_label": "Nov 16 snapshot",
+      "forecast_note": "Dated early projection using prices observed November 16. Latest R18 selection retains these T120 models; no current-price refresh or original live issue is claimed.",
+      "evidence_label": "Selected model · dated inputs",
+      "card_note": "Nov 16 inputs · early outlook",
+      "winner_target": "three_way_unconditional",
+      "winner_target_label": "Outright win probability, with tie mass separate",
+      "model_roles": {
+        "winner": {
+          "alias": "T120 Probability",
+          "horizon": "T120",
+          "objective_label": "Binary log loss and Brier selection",
+          "issued_at": null
+        },
+        "margin": {
+          "alias": "T120 Margin",
+          "horizon": "T120",
+          "objective_label": "Margin MAE selection",
+          "issued_at": null
+        },
+        "total": {
+          "alias": "T120 Total",
+          "horizon": "T120",
+          "objective_label": "Total MAE selection",
+          "issued_at": null
+        }
+      },
+      "forecasts": {
+        "T120": {
+          "win_home": 0.71461,
+          "win_away": 0.276228,
+          "tie_probability": 0.009162,
+          "margin_home": 6.4979,
+          "total": 46.7997,
+          "issued_at": null,
+          "compiled_at": "2026-11-16T22:14:36+00:00",
+          "as_of": "2026-11-16T22:04:51.508512+00:00",
+          "forecast_status": "DATED_CONDITIONAL_SNAPSHOT",
+          "forecast_label": "Nov 16 snapshot",
+          "forecast_note": "Dated early projection using prices observed November 16. Latest R18 selection retains these T120 models; no current-price refresh or original live issue is claimed.",
+          "evidence_label": "Selected model · dated inputs",
+          "card_note": "Nov 16 inputs · early outlook",
+          "winner_target": "three_way_unconditional",
+          "winner_target_label": "Outright win probability, with tie mass separate",
+          "model_roles": {
+            "winner": {
+              "alias": "T120 Probability",
+              "horizon": "T120",
+              "objective_label": "Binary log loss and Brier selection",
+              "issued_at": null
+            },
+            "margin": {
+              "alias": "T120 Margin",
+              "horizon": "T120",
+              "objective_label": "Margin MAE selection",
+              "issued_at": null
+            },
+            "total": {
+              "alias": "T120 Total",
+              "horizon": "T120",
+              "objective_label": "Total MAE selection",
+              "issued_at": null
+            }
+          }
+        },
+        "T60": {
+          "win_home": null,
+          "win_away": null,
+          "tie_probability": null,
+          "margin_home": null,
+          "total": null,
+          "issued_at": null,
+          "compiled_at": null,
+          "as_of": null,
+          "forecast_status": "CURRENT_INPUTS_UNAVAILABLE",
+          "forecast_label": "No current forecast",
+          "forecast_note": "Saved future rows lack qualified current winner prices. The selected total-MAE, total-RMSE and margin-RMSE policies return constant values across all12 matchups. These rows are conditional future fixtures, not newly issued forecasts.",
+          "evidence_label": "Current-input gap",
+          "card_note": "No qualified current matchup forecast",
+          "winner_target": "three_way_unconditional",
+          "winner_target_label": "Unavailable",
+          "model_roles": {
+            "winner": {
+              "alias": "Nominee 005",
+              "horizon": "T60"
+            },
+            "margin": {
+              "alias": "Nominee 005",
+              "horizon": "T60"
+            },
+            "total": {
+              "alias": "Nominee 001",
+              "horizon": "T60"
+            }
+          }
+        }
+      },
+      "circa": {
+        "home_spread": -6.5,
+        "line_verified": true,
+        "source_url": "https://www.circasports.com/wp-content/uploads/sb-twitter-feed-images/2123484378601083202-0-800.jpg",
+        "pick_number_home": 5,
+        "pick_number_away": 6,
+        "cover_home": 0.521682,
+        "cover_away": 0.478318,
+        "push": 0.0,
+        "expected_home": 0.521682,
+        "expected_away": 0.478318,
+        "note": "Nov 16 saved distribution · official Week 11 line · T120 Circa Probability",
+        "model_role_alias": "T120 Circa Probability",
+        "accuracy_model_comparison": {
+          "model_role_alias": "T120 Circa Accuracy",
+          "cover_home": 0.491227,
+          "cover_away": 0.508773,
+          "push": 0.0,
+          "expected_home": 0.491227,
+          "expected_away": 0.508773
+        },
+        "distribution_as_of": "2026-11-16T22:04:51.508512+00:00",
+        "evaluated_at": "2026-11-21T01:09:50.556287+00:00"
+      }
+    },
+    {
+      "id": "2026_11_ARI_KC",
+      "away": "ARI",
+      "home": "KC",
+      "away_name": "Arizona Cardinals",
+      "home_name": "Kansas City Chiefs",
+      "kickoff_utc": "2026-11-22T18:00:00+00:00",
+      "date_pt": "2026-11-22",
+      "day": "sunday",
+      "neutral": false,
+      "note": null,
+      "remaining": true,
+      "status": "scheduled",
+      "win_home": 0.92492,
+      "win_away": 0.070287,
+      "tie_probability": 0.004793,
+      "margin_home": 16.6104,
+      "total": 39.4557,
+      "issued_at": null,
+      "compiled_at": "2026-11-16T22:14:36+00:00",
+      "as_of": "2026-11-16T22:04:51.508512+00:00",
+      "forecast_status": "DATED_CONDITIONAL_SNAPSHOT",
+      "forecast_label": "Nov 16 snapshot",
+      "forecast_note": "Dated early projection using prices observed November 16. Latest R18 selection retains these T120 models; no current-price refresh or original live issue is claimed.",
+      "evidence_label": "Selected model · dated inputs",
+      "card_note": "Nov 16 inputs · early outlook",
+      "winner_target": "three_way_unconditional",
+      "winner_target_label": "Outright win probability, with tie mass separate",
+      "model_roles": {
+        "winner": {
+          "alias": "T120 Probability",
+          "horizon": "T120",
+          "objective_label": "Binary log loss and Brier selection",
+          "issued_at": null
+        },
+        "margin": {
+          "alias": "T120 Margin",
+          "horizon": "T120",
+          "objective_label": "Margin MAE selection",
+          "issued_at": null
+        },
+        "total": {
+          "alias": "T120 Total",
+          "horizon": "T120",
+          "objective_label": "Total MAE selection",
+          "issued_at": null
+        }
+      },
+      "forecasts": {
+        "T120": {
+          "win_home": 0.92492,
+          "win_away": 0.070287,
+          "tie_probability": 0.004793,
+          "margin_home": 16.6104,
+          "total": 39.4557,
+          "issued_at": null,
+          "compiled_at": "2026-11-16T22:14:36+00:00",
+          "as_of": "2026-11-16T22:04:51.508512+00:00",
+          "forecast_status": "DATED_CONDITIONAL_SNAPSHOT",
+          "forecast_label": "Nov 16 snapshot",
+          "forecast_note": "Dated early projection using prices observed November 16. Latest R18 selection retains these T120 models; no current-price refresh or original live issue is claimed.",
+          "evidence_label": "Selected model · dated inputs",
+          "card_note": "Nov 16 inputs · early outlook",
+          "winner_target": "three_way_unconditional",
+          "winner_target_label": "Outright win probability, with tie mass separate",
+          "model_roles": {
+            "winner": {
+              "alias": "T120 Probability",
+              "horizon": "T120",
+              "objective_label": "Binary log loss and Brier selection",
+              "issued_at": null
+            },
+            "margin": {
+              "alias": "T120 Margin",
+              "horizon": "T120",
+              "objective_label": "Margin MAE selection",
+              "issued_at": null
+            },
+            "total": {
+              "alias": "T120 Total",
+              "horizon": "T120",
+              "objective_label": "Total MAE selection",
+              "issued_at": null
+            }
+          }
+        },
+        "T60": {
+          "win_home": null,
+          "win_away": null,
+          "tie_probability": null,
+          "margin_home": null,
+          "total": null,
+          "issued_at": null,
+          "compiled_at": null,
+          "as_of": null,
+          "forecast_status": "CURRENT_INPUTS_UNAVAILABLE",
+          "forecast_label": "No current forecast",
+          "forecast_note": "Saved future rows lack qualified current winner prices. The selected total-MAE, total-RMSE and margin-RMSE policies return constant values across all12 matchups. These rows are conditional future fixtures, not newly issued forecasts.",
+          "evidence_label": "Current-input gap",
+          "card_note": "No qualified current matchup forecast",
+          "winner_target": "three_way_unconditional",
+          "winner_target_label": "Unavailable",
+          "model_roles": {
+            "winner": {
+              "alias": "Nominee 005",
+              "horizon": "T60"
+            },
+            "margin": {
+              "alias": "Nominee 005",
+              "horizon": "T60"
+            },
+            "total": {
+              "alias": "Nominee 001",
+              "horizon": "T60"
+            }
+          }
+        }
+      },
+      "circa": {
+        "home_spread": -16,
+        "line_verified": true,
+        "source_url": "https://www.circasports.com/wp-content/uploads/sb-twitter-feed-images/2123484378601083202-0-800.jpg",
+        "pick_number_home": 11,
+        "pick_number_away": 12,
+        "cover_home": 0.569827,
+        "cover_away": 0.39738,
+        "push": 0.032793,
+        "expected_home": 0.586224,
+        "expected_away": 0.413776,
+        "note": "Nov 16 saved distribution · official Week 11 line · T120 Circa Probability",
+        "model_role_alias": "T120 Circa Probability",
+        "accuracy_model_comparison": {
+          "model_role_alias": "T120 Circa Accuracy",
+          "cover_home": 0.532525,
+          "cover_away": 0.433504,
+          "push": 0.033971,
+          "expected_home": 0.549511,
+          "expected_away": 0.450489
+        },
+        "distribution_as_of": "2026-11-16T22:04:51.508512+00:00",
+        "evaluated_at": "2026-11-21T01:09:50.556287+00:00"
+      }
+    },
+    {
+      "id": "2026_11_PIT_PHI",
+      "away": "PIT",
+      "home": "PHI",
+      "away_name": "Pittsburgh Steelers",
+      "home_name": "Philadelphia Eagles",
+      "kickoff_utc": "2026-11-22T18:00:00+00:00",
+      "date_pt": "2026-11-22",
+      "day": "sunday",
+      "neutral": false,
+      "note": null,
+      "remaining": true,
+      "status": "scheduled",
+      "win_home": 0.375932,
+      "win_away": 0.616427,
+      "tie_probability": 0.007641,
+      "margin_home": -2.4388,
+      "total": 38.0897,
+      "issued_at": null,
+      "compiled_at": "2026-11-16T22:14:36+00:00",
+      "as_of": "2026-11-16T22:04:51.508512+00:00",
+      "forecast_status": "DATED_CONDITIONAL_SNAPSHOT",
+      "forecast_label": "Nov 16 snapshot",
+      "forecast_note": "Dated early projection using prices observed November 16. Latest R18 selection retains these T120 models; no current-price refresh or original live issue is claimed.",
+      "evidence_label": "Selected model · dated inputs",
+      "card_note": "Nov 16 inputs · early outlook",
+      "winner_target": "three_way_unconditional",
+      "winner_target_label": "Outright win probability, with tie mass separate",
+      "model_roles": {
+        "winner": {
+          "alias": "T120 Probability",
+          "horizon": "T120",
+          "objective_label": "Binary log loss and Brier selection",
+          "issued_at": null
+        },
+        "margin": {
+          "alias": "T120 Margin",
+          "horizon": "T120",
+          "objective_label": "Margin MAE selection",
+          "issued_at": null
+        },
+        "total": {
+          "alias": "T120 Total",
+          "horizon": "T120",
+          "objective_label": "Total MAE selection",
+          "issued_at": null
+        }
+      },
+      "forecasts": {
+        "T120": {
+          "win_home": 0.375932,
+          "win_away": 0.616427,
+          "tie_probability": 0.007641,
+          "margin_home": -2.4388,
+          "total": 38.0897,
+          "issued_at": null,
+          "compiled_at": "2026-11-16T22:14:36+00:00",
+          "as_of": "2026-11-16T22:04:51.508512+00:00",
+          "forecast_status": "DATED_CONDITIONAL_SNAPSHOT",
+          "forecast_label": "Nov 16 snapshot",
+          "forecast_note": "Dated early projection using prices observed November 16. Latest R18 selection retains these T120 models; no current-price refresh or original live issue is claimed.",
+          "evidence_label": "Selected model · dated inputs",
+          "card_note": "Nov 16 inputs · early outlook",
+          "winner_target": "three_way_unconditional",
+          "winner_target_label": "Outright win probability, with tie mass separate",
+          "model_roles": {
+            "winner": {
+              "alias": "T120 Probability",
+              "horizon": "T120",
+              "objective_label": "Binary log loss and Brier selection",
+              "issued_at": null
+            },
+            "margin": {
+              "alias": "T120 Margin",
+              "horizon": "T120",
+              "objective_label": "Margin MAE selection",
+              "issued_at": null
+            },
+            "total": {
+              "alias": "T120 Total",
+              "horizon": "T120",
+              "objective_label": "Total MAE selection",
+              "issued_at": null
+            }
+          }
+        },
+        "T60": {
+          "win_home": null,
+          "win_away": null,
+          "tie_probability": null,
+          "margin_home": null,
+          "total": null,
+          "issued_at": null,
+          "compiled_at": null,
+          "as_of": null,
+          "forecast_status": "CURRENT_INPUTS_UNAVAILABLE",
+          "forecast_label": "No current forecast",
+          "forecast_note": "Saved future rows lack qualified current winner prices. The selected total-MAE, total-RMSE and margin-RMSE policies return constant values across all12 matchups. These rows are conditional future fixtures, not newly issued forecasts.",
+          "evidence_label": "Current-input gap",
+          "card_note": "No qualified current matchup forecast",
+          "winner_target": "three_way_unconditional",
+          "winner_target_label": "Unavailable",
+          "model_roles": {
+            "winner": {
+              "alias": "Nominee 005",
+              "horizon": "T60"
+            },
+            "margin": {
+              "alias": "Nominee 005",
+              "horizon": "T60"
+            },
+            "total": {
+              "alias": "Nominee 001",
+              "horizon": "T60"
+            }
+          }
+        }
+      },
+      "circa": {
+        "home_spread": 4.5,
+        "line_verified": true,
+        "source_url": "https://www.circasports.com/wp-content/uploads/sb-twitter-feed-images/2123484378601083202-0-800.jpg",
+        "pick_number_home": 22,
+        "pick_number_away": 21,
+        "cover_home": 0.613657,
+        "cover_away": 0.386343,
+        "push": 0.0,
+        "expected_home": 0.613657,
+        "expected_away": 0.386343,
+        "note": "Nov 16 saved distribution · official Week 11 line · T120 Circa Probability",
+        "model_role_alias": "T120 Circa Probability",
+        "accuracy_model_comparison": {
+          "model_role_alias": "T120 Circa Accuracy",
+          "cover_home": 0.570219,
+          "cover_away": 0.429781,
+          "push": 0.0,
+          "expected_home": 0.570219,
+          "expected_away": 0.429781
+        },
+        "distribution_as_of": "2026-11-16T22:04:51.508512+00:00",
+        "evaluated_at": "2026-11-21T01:09:50.556287+00:00"
+      }
+    },
+    {
+      "id": "2026_11_NYJ_LAC",
+      "away": "NYJ",
+      "home": "LAC",
+      "away_name": "New York Jets",
+      "home_name": "Los Angeles Chargers",
+      "kickoff_utc": "2026-11-22T21:05:00+00:00",
+      "date_pt": "2026-11-22",
+      "day": "sunday",
+      "neutral": false,
+      "note": null,
+      "remaining": true,
+      "status": "scheduled",
+      "win_home": 0.668331,
+      "win_away": 0.32151,
+      "tie_probability": 0.010159,
+      "margin_home": 4.1176,
+      "total": 40.2398,
+      "issued_at": null,
+      "compiled_at": "2026-11-16T22:14:36+00:00",
+      "as_of": "2026-11-16T22:04:51.508512+00:00",
+      "forecast_status": "DATED_CONDITIONAL_SNAPSHOT",
+      "forecast_label": "Nov 16 snapshot",
+      "forecast_note": "Dated early projection using prices observed November 16. Latest R18 selection retains these T120 models; no current-price refresh or original live issue is claimed.",
+      "evidence_label": "Selected model · dated inputs",
+      "card_note": "Nov 16 inputs · early outlook",
+      "winner_target": "three_way_unconditional",
+      "winner_target_label": "Outright win probability, with tie mass separate",
+      "model_roles": {
+        "winner": {
+          "alias": "T120 Probability",
+          "horizon": "T120",
+          "objective_label": "Binary log loss and Brier selection",
+          "issued_at": null
+        },
+        "margin": {
+          "alias": "T120 Margin",
+          "horizon": "T120",
+          "objective_label": "Margin MAE selection",
+          "issued_at": null
+        },
+        "total": {
+          "alias": "T120 Total",
+          "horizon": "T120",
+          "objective_label": "Total MAE selection",
+          "issued_at": null
+        }
+      },
+      "forecasts": {
+        "T120": {
+          "win_home": 0.668331,
+          "win_away": 0.32151,
+          "tie_probability": 0.010159,
+          "margin_home": 4.1176,
+          "total": 40.2398,
+          "issued_at": null,
+          "compiled_at": "2026-11-16T22:14:36+00:00",
+          "as_of": "2026-11-16T22:04:51.508512+00:00",
+          "forecast_status": "DATED_CONDITIONAL_SNAPSHOT",
+          "forecast_label": "Nov 16 snapshot",
+          "forecast_note": "Dated early projection using prices observed November 16. Latest R18 selection retains these T120 models; no current-price refresh or original live issue is claimed.",
+          "evidence_label": "Selected model · dated inputs",
+          "card_note": "Nov 16 inputs · early outlook",
+          "winner_target": "three_way_unconditional",
+          "winner_target_label": "Outright win probability, with tie mass separate",
+          "model_roles": {
+            "winner": {
+              "alias": "T120 Probability",
+              "horizon": "T120",
+              "objective_label": "Binary log loss and Brier selection",
+              "issued_at": null
+            },
+            "margin": {
+              "alias": "T120 Margin",
+              "horizon": "T120",
+              "objective_label": "Margin MAE selection",
+              "issued_at": null
+            },
+            "total": {
+              "alias": "T120 Total",
+              "horizon": "T120",
+              "objective_label": "Total MAE selection",
+              "issued_at": null
+            }
+          }
+        },
+        "T60": {
+          "win_home": null,
+          "win_away": null,
+          "tie_probability": null,
+          "margin_home": null,
+          "total": null,
+          "issued_at": null,
+          "compiled_at": null,
+          "as_of": null,
+          "forecast_status": "CURRENT_INPUTS_UNAVAILABLE",
+          "forecast_label": "No current forecast",
+          "forecast_note": "Saved future rows lack qualified current winner prices. The selected total-MAE, total-RMSE and margin-RMSE policies return constant values across all12 matchups. These rows are conditional future fixtures, not newly issued forecasts.",
+          "evidence_label": "Current-input gap",
+          "card_note": "No qualified current matchup forecast",
+          "winner_target": "three_way_unconditional",
+          "winner_target_label": "Unavailable",
+          "model_roles": {
+            "winner": {
+              "alias": "Nominee 005",
+              "horizon": "T60"
+            },
+            "margin": {
+              "alias": "Nominee 005",
+              "horizon": "T60"
+            },
+            "total": {
+              "alias": "Nominee 001",
+              "horizon": "T60"
+            }
+          }
+        }
+      },
+      "circa": {
+        "home_spread": -3,
+        "line_verified": true,
+        "source_url": "https://www.circasports.com/wp-content/uploads/sb-twitter-feed-images/2123484378601083202-0-800.jpg",
+        "pick_number_home": 17,
+        "pick_number_away": 18,
+        "cover_home": 0.507849,
+        "cover_away": 0.423015,
+        "push": 0.069136,
+        "expected_home": 0.542417,
+        "expected_away": 0.457583,
+        "note": "Nov 16 saved distribution · official Week 11 line · T120 Circa Probability",
+        "model_role_alias": "T120 Circa Probability",
+        "accuracy_model_comparison": {
+          "model_role_alias": "T120 Circa Accuracy",
+          "cover_home": 0.531062,
+          "cover_away": 0.401125,
+          "push": 0.067813,
+          "expected_home": 0.564968,
+          "expected_away": 0.435032
+        },
+        "distribution_as_of": "2026-11-16T22:04:51.508512+00:00",
+        "evaluated_at": "2026-11-21T01:09:50.556287+00:00"
+      }
+    },
+    {
+      "id": "2026_11_LV_DEN",
+      "away": "LV",
+      "home": "DEN",
+      "away_name": "Las Vegas Raiders",
+      "home_name": "Denver Broncos",
+      "kickoff_utc": "2026-11-22T21:25:00+00:00",
+      "date_pt": "2026-11-22",
+      "day": "sunday",
+      "neutral": false,
+      "note": null,
+      "remaining": true,
+      "status": "scheduled",
+      "win_home": 0.837456,
+      "win_away": 0.154616,
+      "tie_probability": 0.007928,
+      "margin_home": 10.8462,
+      "total": 38.4557,
+      "issued_at": null,
+      "compiled_at": "2026-11-16T22:14:36+00:00",
+      "as_of": "2026-11-16T22:04:51.508512+00:00",
+      "forecast_status": "DATED_CONDITIONAL_SNAPSHOT",
+      "forecast_label": "Nov 16 snapshot",
+      "forecast_note": "Dated early projection using prices observed November 16. Latest R18 selection retains these T120 models; no current-price refresh or original live issue is claimed.",
+      "evidence_label": "Selected model · dated inputs",
+      "card_note": "Nov 16 inputs · early outlook",
+      "winner_target": "three_way_unconditional",
+      "winner_target_label": "Outright win probability, with tie mass separate",
+      "model_roles": {
+        "winner": {
+          "alias": "T120 Probability",
+          "horizon": "T120",
+          "objective_label": "Binary log loss and Brier selection",
+          "issued_at": null
+        },
+        "margin": {
+          "alias": "T120 Margin",
+          "horizon": "T120",
+          "objective_label": "Margin MAE selection",
+          "issued_at": null
+        },
+        "total": {
+          "alias": "T120 Total",
+          "horizon": "T120",
+          "objective_label": "Total MAE selection",
+          "issued_at": null
+        }
+      },
+      "forecasts": {
+        "T120": {
+          "win_home": 0.837456,
+          "win_away": 0.154616,
+          "tie_probability": 0.007928,
+          "margin_home": 10.8462,
+          "total": 38.4557,
+          "issued_at": null,
+          "compiled_at": "2026-11-16T22:14:36+00:00",
+          "as_of": "2026-11-16T22:04:51.508512+00:00",
+          "forecast_status": "DATED_CONDITIONAL_SNAPSHOT",
+          "forecast_label": "Nov 16 snapshot",
+          "forecast_note": "Dated early projection using prices observed November 16. Latest R18 selection retains these T120 models; no current-price refresh or original live issue is claimed.",
+          "evidence_label": "Selected model · dated inputs",
+          "card_note": "Nov 16 inputs · early outlook",
+          "winner_target": "three_way_unconditional",
+          "winner_target_label": "Outright win probability, with tie mass separate",
+          "model_roles": {
+            "winner": {
+              "alias": "T120 Probability",
+              "horizon": "T120",
+              "objective_label": "Binary log loss and Brier selection",
+              "issued_at": null
+            },
+            "margin": {
+              "alias": "T120 Margin",
+              "horizon": "T120",
+              "objective_label": "Margin MAE selection",
+              "issued_at": null
+            },
+            "total": {
+              "alias": "T120 Total",
+              "horizon": "T120",
+              "objective_label": "Total MAE selection",
+              "issued_at": null
+            }
+          }
+        },
+        "T60": {
+          "win_home": null,
+          "win_away": null,
+          "tie_probability": null,
+          "margin_home": null,
+          "total": null,
+          "issued_at": null,
+          "compiled_at": null,
+          "as_of": null,
+          "forecast_status": "CURRENT_INPUTS_UNAVAILABLE",
+          "forecast_label": "No current forecast",
+          "forecast_note": "Saved future rows lack qualified current winner prices. The selected total-MAE, total-RMSE and margin-RMSE policies return constant values across all12 matchups. These rows are conditional future fixtures, not newly issued forecasts.",
+          "evidence_label": "Current-input gap",
+          "card_note": "No qualified current matchup forecast",
+          "winner_target": "three_way_unconditional",
+          "winner_target_label": "Unavailable",
+          "model_roles": {
+            "winner": {
+              "alias": "Nominee 005",
+              "horizon": "T60"
+            },
+            "margin": {
+              "alias": "Nominee 005",
+              "horizon": "T60"
+            },
+            "total": {
+              "alias": "Nominee 001",
+              "horizon": "T60"
+            }
+          }
+        }
+      },
+      "circa": {
+        "home_spread": -10,
+        "line_verified": true,
+        "source_url": "https://www.circasports.com/wp-content/uploads/sb-twitter-feed-images/2123484378601083202-0-800.jpg",
+        "pick_number_home": 19,
+        "pick_number_away": 20,
+        "cover_home": 0.554623,
+        "cover_away": 0.402954,
+        "push": 0.042423,
+        "expected_home": 0.575834,
+        "expected_away": 0.424166,
+        "note": "Nov 16 saved distribution · official Week 11 line · T120 Circa Probability",
+        "model_role_alias": "T120 Circa Probability",
+        "accuracy_model_comparison": {
+          "model_role_alias": "T120 Circa Accuracy",
+          "cover_home": 0.512019,
+          "cover_away": 0.442956,
+          "push": 0.045025,
+          "expected_home": 0.534532,
+          "expected_away": 0.465468
+        },
+        "distribution_as_of": "2026-11-16T22:04:51.508512+00:00",
+        "evaluated_at": "2026-11-21T01:09:50.556287+00:00"
+      }
+    },
+    {
+      "id": "2026_11_JAX_NYG",
+      "away": "JAX",
+      "home": "NYG",
+      "away_name": "Jacksonville Jaguars",
+      "home_name": "New York Giants",
+      "kickoff_utc": "2026-11-22T21:25:00+00:00",
+      "date_pt": "2026-11-22",
+      "day": "sunday",
+      "neutral": false,
+      "note": null,
+      "remaining": true,
+      "status": "scheduled",
+      "win_home": 0.377608,
+      "win_away": 0.614695,
+      "tie_probability": 0.007697,
+      "margin_home": -3.6327,
+      "total": 45.7793,
+      "issued_at": null,
+      "compiled_at": "2026-11-16T22:14:36+00:00",
+      "as_of": "2026-11-16T22:04:51.508512+00:00",
+      "forecast_status": "DATED_CONDITIONAL_SNAPSHOT",
+      "forecast_label": "Nov 16 snapshot",
+      "forecast_note": "Dated early projection using prices observed November 16. Latest R18 selection retains these T120 models; no current-price refresh or original live issue is claimed.",
+      "evidence_label": "Selected model · dated inputs",
+      "card_note": "Nov 16 inputs · early outlook",
+      "winner_target": "three_way_unconditional",
+      "winner_target_label": "Outright win probability, with tie mass separate",
+      "model_roles": {
+        "winner": {
+          "alias": "T120 Probability",
+          "horizon": "T120",
+          "objective_label": "Binary log loss and Brier selection",
+          "issued_at": null
+        },
+        "margin": {
+          "alias": "T120 Margin",
+          "horizon": "T120",
+          "objective_label": "Margin MAE selection",
+          "issued_at": null
+        },
+        "total": {
+          "alias": "T120 Total",
+          "horizon": "T120",
+          "objective_label": "Total MAE selection",
+          "issued_at": null
+        }
+      },
+      "forecasts": {
+        "T120": {
+          "win_home": 0.377608,
+          "win_away": 0.614695,
+          "tie_probability": 0.007697,
+          "margin_home": -3.6327,
+          "total": 45.7793,
+          "issued_at": null,
+          "compiled_at": "2026-11-16T22:14:36+00:00",
+          "as_of": "2026-11-16T22:04:51.508512+00:00",
+          "forecast_status": "DATED_CONDITIONAL_SNAPSHOT",
+          "forecast_label": "Nov 16 snapshot",
+          "forecast_note": "Dated early projection using prices observed November 16. Latest R18 selection retains these T120 models; no current-price refresh or original live issue is claimed.",
+          "evidence_label": "Selected model · dated inputs",
+          "card_note": "Nov 16 inputs · early outlook",
+          "winner_target": "three_way_unconditional",
+          "winner_target_label": "Outright win probability, with tie mass separate",
+          "model_roles": {
+            "winner": {
+              "alias": "T120 Probability",
+              "horizon": "T120",
+              "objective_label": "Binary log loss and Brier selection",
+              "issued_at": null
+            },
+            "margin": {
+              "alias": "T120 Margin",
+              "horizon": "T120",
+              "objective_label": "Margin MAE selection",
+              "issued_at": null
+            },
+            "total": {
+              "alias": "T120 Total",
+              "horizon": "T120",
+              "objective_label": "Total MAE selection",
+              "issued_at": null
+            }
+          }
+        },
+        "T60": {
+          "win_home": null,
+          "win_away": null,
+          "tie_probability": null,
+          "margin_home": null,
+          "total": null,
+          "issued_at": null,
+          "compiled_at": null,
+          "as_of": null,
+          "forecast_status": "CURRENT_INPUTS_UNAVAILABLE",
+          "forecast_label": "No current forecast",
+          "forecast_note": "Saved future rows lack qualified current winner prices. The selected total-MAE, total-RMSE and margin-RMSE policies return constant values across all12 matchups. These rows are conditional future fixtures, not newly issued forecasts.",
+          "evidence_label": "Current-input gap",
+          "card_note": "No qualified current matchup forecast",
+          "winner_target": "three_way_unconditional",
+          "winner_target_label": "Unavailable",
+          "model_roles": {
+            "winner": {
+              "alias": "Nominee 005",
+              "horizon": "T60"
+            },
+            "margin": {
+              "alias": "Nominee 005",
+              "horizon": "T60"
+            },
+            "total": {
+              "alias": "Nominee 001",
+              "horizon": "T60"
+            }
+          }
+        }
+      },
+      "circa": {
+        "home_spread": 5.5,
+        "line_verified": true,
+        "source_url": "https://www.circasports.com/wp-content/uploads/sb-twitter-feed-images/2123484378601083202-0-800.jpg",
+        "pick_number_home": 8,
+        "pick_number_away": 7,
+        "cover_home": 0.484779,
+        "cover_away": 0.515221,
+        "push": 0.0,
+        "expected_home": 0.484779,
+        "expected_away": 0.515221,
+        "note": "Nov 16 saved distribution · official Week 11 line · T120 Circa Probability",
+        "model_role_alias": "T120 Circa Probability",
+        "accuracy_model_comparison": {
+          "model_role_alias": "T120 Circa Accuracy",
+          "cover_home": 0.49841,
+          "cover_away": 0.50159,
+          "push": 0.0,
+          "expected_home": 0.49841,
+          "expected_away": 0.50159
+        },
+        "distribution_as_of": "2026-11-16T22:04:51.508512+00:00",
+        "evaluated_at": "2026-11-21T01:09:50.556287+00:00"
+      }
+    },
+    {
+      "id": "2026_11_MIN_SF",
+      "away": "MIN",
+      "home": "SF",
+      "away_name": "Minnesota Vikings",
+      "home_name": "San Francisco 49ers",
+      "kickoff_utc": "2026-11-23T01:20:00+00:00",
+      "date_pt": "2026-11-22",
+      "day": "sunday",
+      "neutral": true,
+      "note": "Mexico City; SF designated home",
+      "remaining": true,
+      "status": "scheduled",
+      "win_home": 0.637871,
+      "win_away": 0.352019,
+      "tie_probability": 0.010111,
+      "margin_home": 4.6473,
+      "total": 45.6292,
+      "issued_at": null,
+      "compiled_at": "2026-11-16T22:14:36+00:00",
+      "as_of": "2026-11-16T22:04:51.508512+00:00",
+      "forecast_status": "DATED_CONDITIONAL_SNAPSHOT",
+      "forecast_label": "Nov 16 snapshot",
+      "forecast_note": "Dated early projection using prices observed November 16. Latest R18 selection retains these T120 models; no current-price refresh or original live issue is claimed.",
+      "evidence_label": "Selected model · dated inputs",
+      "card_note": "Nov 16 inputs · early outlook",
+      "winner_target": "three_way_unconditional",
+      "winner_target_label": "Outright win probability, with tie mass separate",
+      "model_roles": {
+        "winner": {
+          "alias": "T120 Probability",
+          "horizon": "T120",
+          "objective_label": "Binary log loss and Brier selection",
+          "issued_at": null
+        },
+        "margin": {
+          "alias": "T120 Margin",
+          "horizon": "T120",
+          "objective_label": "Margin MAE selection",
+          "issued_at": null
+        },
+        "total": {
+          "alias": "T120 Total",
+          "horizon": "T120",
+          "objective_label": "Total MAE selection",
+          "issued_at": null
+        }
+      },
+      "forecasts": {
+        "T120": {
+          "win_home": 0.637871,
+          "win_away": 0.352019,
+          "tie_probability": 0.010111,
+          "margin_home": 4.6473,
+          "total": 45.6292,
+          "issued_at": null,
+          "compiled_at": "2026-11-16T22:14:36+00:00",
+          "as_of": "2026-11-16T22:04:51.508512+00:00",
+          "forecast_status": "DATED_CONDITIONAL_SNAPSHOT",
+          "forecast_label": "Nov 16 snapshot",
+          "forecast_note": "Dated early projection using prices observed November 16. Latest R18 selection retains these T120 models; no current-price refresh or original live issue is claimed.",
+          "evidence_label": "Selected model · dated inputs",
+          "card_note": "Nov 16 inputs · early outlook",
+          "winner_target": "three_way_unconditional",
+          "winner_target_label": "Outright win probability, with tie mass separate",
+          "model_roles": {
+            "winner": {
+              "alias": "T120 Probability",
+              "horizon": "T120",
+              "objective_label": "Binary log loss and Brier selection",
+              "issued_at": null
+            },
+            "margin": {
+              "alias": "T120 Margin",
+              "horizon": "T120",
+              "objective_label": "Margin MAE selection",
+              "issued_at": null
+            },
+            "total": {
+              "alias": "T120 Total",
+              "horizon": "T120",
+              "objective_label": "Total MAE selection",
+              "issued_at": null
+            }
+          }
+        },
+        "T60": {
+          "win_home": null,
+          "win_away": null,
+          "tie_probability": null,
+          "margin_home": null,
+          "total": null,
+          "issued_at": null,
+          "compiled_at": null,
+          "as_of": null,
+          "forecast_status": "CURRENT_INPUTS_UNAVAILABLE",
+          "forecast_label": "No current forecast",
+          "forecast_note": "Saved future rows lack qualified current winner prices. The selected total-MAE, total-RMSE and margin-RMSE policies return constant values across all12 matchups. These rows are conditional future fixtures, not newly issued forecasts.",
+          "evidence_label": "Current-input gap",
+          "card_note": "No qualified current matchup forecast",
+          "winner_target": "three_way_unconditional",
+          "winner_target_label": "Unavailable",
+          "model_roles": {
+            "winner": {
+              "alias": "Nominee 005",
+              "horizon": "T60"
+            },
+            "margin": {
+              "alias": "Nominee 005",
+              "horizon": "T60"
+            },
+            "total": {
+              "alias": "Nominee 001",
+              "horizon": "T60"
+            }
+          }
+        }
+      },
+      "circa": {
+        "home_spread": -3,
+        "line_verified": true,
+        "source_url": "https://www.circasports.com/wp-content/uploads/sb-twitter-feed-images/2123484378601083202-0-800.jpg",
+        "pick_number_home": 23,
+        "pick_number_away": 24,
+        "cover_home": 0.458296,
+        "cover_away": 0.475513,
+        "push": 0.06619,
+        "expected_home": 0.491391,
+        "expected_away": 0.508609,
+        "note": "Nov 16 saved distribution · official Week 11 line · T120 Circa Probability",
+        "model_role_alias": "T120 Circa Probability",
+        "accuracy_model_comparison": {
+          "model_role_alias": "T120 Circa Accuracy",
+          "cover_home": 0.457332,
+          "cover_away": 0.469576,
+          "push": 0.073092,
+          "expected_home": 0.493878,
+          "expected_away": 0.506122
+        },
+        "distribution_as_of": "2026-11-16T22:04:51.508512+00:00",
+        "evaluated_at": "2026-11-21T01:09:50.556287+00:00"
+      }
+    },
+    {
+      "id": "2026_11_CIN_WAS",
+      "away": "CIN",
+      "home": "WAS",
+      "away_name": "Cincinnati Bengals",
+      "home_name": "Washington Commanders",
+      "kickoff_utc": "2026-11-24T01:15:00+00:00",
+      "date_pt": "2026-11-23",
+      "day": "monday",
+      "neutral": false,
+      "note": null,
+      "remaining": true,
+      "status": "scheduled",
+      "win_home": 0.327873,
+      "win_away": 0.664877,
+      "tie_probability": 0.00725,
+      "margin_home": -6.5172,
+      "total": 52.0375,
+      "issued_at": null,
+      "compiled_at": "2026-11-16T22:14:36+00:00",
+      "as_of": "2026-11-16T22:04:51.508512+00:00",
+      "forecast_status": "DATED_CONDITIONAL_SNAPSHOT",
+      "forecast_label": "Nov 16 snapshot",
+      "forecast_note": "Dated early projection using prices observed November 16. Latest R18 selection retains these T120 models; no current-price refresh or original live issue is claimed.",
+      "evidence_label": "Selected model · dated inputs",
+      "card_note": "Nov 16 inputs · early outlook",
+      "winner_target": "three_way_unconditional",
+      "winner_target_label": "Outright win probability, with tie mass separate",
+      "model_roles": {
+        "winner": {
+          "alias": "T120 Probability",
+          "horizon": "T120",
+          "objective_label": "Binary log loss and Brier selection",
+          "issued_at": null
+        },
+        "margin": {
+          "alias": "T120 Margin",
+          "horizon": "T120",
+          "objective_label": "Margin MAE selection",
+          "issued_at": null
+        },
+        "total": {
+          "alias": "T120 Total",
+          "horizon": "T120",
+          "objective_label": "Total MAE selection",
+          "issued_at": null
+        }
+      },
+      "forecasts": {
+        "T120": {
+          "win_home": 0.327873,
+          "win_away": 0.664877,
+          "tie_probability": 0.00725,
+          "margin_home": -6.5172,
+          "total": 52.0375,
+          "issued_at": null,
+          "compiled_at": "2026-11-16T22:14:36+00:00",
+          "as_of": "2026-11-16T22:04:51.508512+00:00",
+          "forecast_status": "DATED_CONDITIONAL_SNAPSHOT",
+          "forecast_label": "Nov 16 snapshot",
+          "forecast_note": "Dated early projection using prices observed November 16. Latest R18 selection retains these T120 models; no current-price refresh or original live issue is claimed.",
+          "evidence_label": "Selected model · dated inputs",
+          "card_note": "Nov 16 inputs · early outlook",
+          "winner_target": "three_way_unconditional",
+          "winner_target_label": "Outright win probability, with tie mass separate",
+          "model_roles": {
+            "winner": {
+              "alias": "T120 Probability",
+              "horizon": "T120",
+              "objective_label": "Binary log loss and Brier selection",
+              "issued_at": null
+            },
+            "margin": {
+              "alias": "T120 Margin",
+              "horizon": "T120",
+              "objective_label": "Margin MAE selection",
+              "issued_at": null
+            },
+            "total": {
+              "alias": "T120 Total",
+              "horizon": "T120",
+              "objective_label": "Total MAE selection",
+              "issued_at": null
+            }
+          }
+        },
+        "T60": {
+          "win_home": null,
+          "win_away": null,
+          "tie_probability": null,
+          "margin_home": null,
+          "total": null,
+          "issued_at": null,
+          "compiled_at": null,
+          "as_of": null,
+          "forecast_status": "CURRENT_INPUTS_UNAVAILABLE",
+          "forecast_label": "No current forecast",
+          "forecast_note": "Saved future rows lack qualified current winner prices. The selected total-MAE, total-RMSE and margin-RMSE policies return constant values across all12 matchups. These rows are conditional future fixtures, not newly issued forecasts.",
+          "evidence_label": "Current-input gap",
+          "card_note": "No qualified current matchup forecast",
+          "winner_target": "three_way_unconditional",
+          "winner_target_label": "Unavailable",
+          "model_roles": {
+            "winner": {
+              "alias": "Nominee 005",
+              "horizon": "T60"
+            },
+            "margin": {
+              "alias": "Nominee 005",
+              "horizon": "T60"
+            },
+            "total": {
+              "alias": "Nominee 001",
+              "horizon": "T60"
+            }
+          }
+        }
+      },
+      "circa": {
+        "home_spread": 6.5,
+        "line_verified": true,
+        "source_url": "https://www.circasports.com/wp-content/uploads/sb-twitter-feed-images/2123484378601083202-0-800.jpg",
+        "pick_number_home": 26,
+        "pick_number_away": 25,
+        "cover_home": 0.501699,
+        "cover_away": 0.498301,
+        "push": 0.0,
+        "expected_home": 0.501699,
+        "expected_away": 0.498301,
+        "note": "Nov 16 saved distribution · official Week 11 line · T120 Circa Probability",
+        "model_role_alias": "T120 Circa Probability",
+        "accuracy_model_comparison": {
+          "model_role_alias": "T120 Circa Accuracy",
+          "cover_home": 0.485153,
+          "cover_away": 0.514847,
+          "push": 0.0,
+          "expected_home": 0.485153,
+          "expected_away": 0.514847
+        },
+        "distribution_as_of": "2026-11-16T22:04:51.508512+00:00",
+        "evaluated_at": "2026-11-21T01:09:50.556287+00:00"
+      }
+    }
+  ],
+  "performance": [
+    {
+      "objective": "binary_accuracy",
+      "role_alias": "T120 Accuracy",
+      "horizon": "T120",
+      "validation_score": 0.6959167284408204,
+      "season_2024": 0.7192982456140351,
+      "season_2025": 0.6725352112676056,
+      "test_2026": 0.6778523489932886,
+      "games_2024": 285,
+      "games_2025": 284,
+      "games_2026": 149,
+      "status_label": "R18 validation nominee · partial campaign",
+      "cohort": "Full historical cohorts; 2026 remains development-exposed",
+      "co_leaders": [],
+      "note": "2026 is reported separately and does not select the model."
+    },
+    {
+      "objective": "binary_brier",
+      "role_alias": "T120 Probability",
+      "horizon": "T120",
+      "validation_score": 0.20545088062607902,
+      "season_2024": 0.19943198091407263,
+      "season_2025": 0.21146978033808544,
+      "test_2026": 0.21813405274191136,
+      "games_2024": 285,
+      "games_2025": 284,
+      "games_2026": 149,
+      "status_label": "R18 validation nominee · partial campaign",
+      "cohort": "Full historical cohorts; 2026 remains development-exposed",
+      "co_leaders": [],
+      "note": "2026 is reported separately and does not select the model."
+    },
+    {
+      "objective": "binary_log_loss",
+      "role_alias": "T120 Probability",
+      "horizon": "T120",
+      "validation_score": 0.5970355348132501,
+      "season_2024": 0.5858267646536656,
+      "season_2025": 0.6082443049728348,
+      "test_2026": 0.6301804113146735,
+      "games_2024": 285,
+      "games_2025": 284,
+      "games_2026": 149,
+      "status_label": "R18 validation nominee · partial campaign",
+      "cohort": "Full historical cohorts; 2026 remains development-exposed",
+      "co_leaders": [],
+      "note": "2026 is reported separately and does not select the model."
+    },
+    {
+      "objective": "margin_mae",
+      "role_alias": "T120 Margin",
+      "horizon": "T120",
+      "validation_score": 9.65059700432135,
+      "season_2024": 9.65257683059223,
+      "season_2025": 9.648617178050472,
+      "test_2026": 9.837479843743361,
+      "games_2024": 285,
+      "games_2025": 285,
+      "games_2026": 150,
+      "status_label": "R18 validation nominee · partial campaign",
+      "cohort": "Full historical cohorts; 2026 remains development-exposed",
+      "co_leaders": [],
+      "note": "2026 is reported separately and does not select the model."
+    },
+    {
+      "objective": "margin_rmse",
+      "role_alias": "T120 Margin RMSE",
+      "horizon": "T120",
+      "validation_score": 12.425424160087111,
+      "season_2024": 12.703555853611729,
+      "season_2025": 12.147292466562494,
+      "test_2026": 12.158193950465185,
+      "games_2024": 285,
+      "games_2025": 285,
+      "games_2026": 150,
+      "status_label": "R18 validation nominee · partial campaign",
+      "cohort": "Full historical cohorts; 2026 remains development-exposed",
+      "co_leaders": [],
+      "note": "2026 is reported separately and does not select the model."
+    },
+    {
+      "objective": "total_mae",
+      "role_alias": "T120 Total",
+      "horizon": "T120",
+      "validation_score": 9.990968676708999,
+      "season_2024": 9.617723531845467,
+      "season_2025": 10.364213821572532,
+      "test_2026": 10.50624508766517,
+      "games_2024": 285,
+      "games_2025": 285,
+      "games_2026": 150,
+      "status_label": "R18 validation nominee · partial campaign",
+      "cohort": "Full historical cohorts; 2026 remains development-exposed",
+      "co_leaders": [],
+      "note": "2026 is reported separately and does not select the model."
+    },
+    {
+      "objective": "total_rmse",
+      "role_alias": "T120 Total RMSE",
+      "horizon": "T120",
+      "validation_score": 12.805041484413314,
+      "season_2024": 12.439685354029287,
+      "season_2025": 13.17039761479734,
+      "test_2026": 13.22132945862232,
+      "games_2024": 285,
+      "games_2025": 285,
+      "games_2026": 150,
+      "status_label": "R18 validation nominee · partial campaign",
+      "cohort": "Full historical cohorts; 2026 remains development-exposed",
+      "co_leaders": [],
+      "note": "2026 is reported separately and does not select the model."
+    },
+    {
+      "objective": "binary_accuracy",
+      "role_alias": "Nominee 002",
+      "horizon": "T60",
+      "validation_score": 0.6958858413639732,
+      "season_2024": 0.7368421052631579,
+      "season_2025": 0.6549295774647887,
+      "test_2026": null,
+      "games_2024": 285,
+      "games_2025": 284,
+      "games_2026": null,
+      "status_label": "R18 validation nominee · partial campaign",
+      "cohort": "Full historical cohorts; 2026 remains development-exposed",
+      "co_leaders": [
+        "Nominee 002",
+        "Nominee 003",
+        "Nominee 004"
+      ],
+      "note": "Three models tie on 2024/2025 validation. The 2026 results do not break the tie. This nominee’s 2026 regrade is unavailable. Current T60 matchup inputs remain unavailable."
+    },
+    {
+      "objective": "binary_accuracy",
+      "role_alias": "Nominee 003",
+      "horizon": "T60",
+      "validation_score": 0.6958858413639732,
+      "season_2024": 0.7368421052631579,
+      "season_2025": 0.6549295774647887,
+      "test_2026": 0.6577181208053692,
+      "games_2024": 285,
+      "games_2025": 284,
+      "games_2026": 149,
+      "status_label": "R18 validation nominee · partial campaign",
+      "cohort": "Full historical cohorts; 2026 remains development-exposed",
+      "co_leaders": [
+        "Nominee 002",
+        "Nominee 003",
+        "Nominee 004"
+      ],
+      "note": "Three models tie on 2024/2025 validation. The 2026 results do not break the tie. This is the saved 2026 result for this co-leader. Current T60 matchup inputs remain unavailable."
+    },
+    {
+      "objective": "binary_accuracy",
+      "role_alias": "Nominee 004",
+      "horizon": "T60",
+      "validation_score": 0.6958858413639732,
+      "season_2024": 0.7368421052631579,
+      "season_2025": 0.6549295774647887,
+      "test_2026": 0.6577181208053692,
+      "games_2024": 285,
+      "games_2025": 284,
+      "games_2026": 149,
+      "status_label": "R18 validation nominee · partial campaign",
+      "cohort": "Full historical cohorts; 2026 remains development-exposed",
+      "co_leaders": [
+        "Nominee 002",
+        "Nominee 003",
+        "Nominee 004"
+      ],
+      "note": "Three models tie on 2024/2025 validation. The 2026 results do not break the tie. This is the saved 2026 result for this co-leader. Current T60 matchup inputs remain unavailable."
+    },
+    {
+      "objective": "binary_brier",
+      "role_alias": "Nominee 005",
+      "horizon": "T60",
+      "validation_score": 0.2075282494556057,
+      "season_2024": 0.20215094454652194,
+      "season_2025": 0.21290555436468947,
+      "test_2026": 0.21454641381662634,
+      "games_2024": 285,
+      "games_2025": 284,
+      "games_2026": 149,
+      "status_label": "R18 validation nominee · partial campaign",
+      "cohort": "Full historical cohorts; 2026 remains development-exposed",
+      "co_leaders": [],
+      "note": "2026 is reported separately and does not select the model. Current T60 matchup inputs remain unavailable."
+    },
+    {
+      "objective": "binary_log_loss",
+      "role_alias": "Nominee 005",
+      "horizon": "T60",
+      "validation_score": 0.6024723829746201,
+      "season_2024": 0.5921967080745159,
+      "season_2025": 0.6127480578747244,
+      "test_2026": 0.6202712498757066,
+      "games_2024": 285,
+      "games_2025": 284,
+      "games_2026": 149,
+      "status_label": "R18 validation nominee · partial campaign",
+      "cohort": "Full historical cohorts; 2026 remains development-exposed",
+      "co_leaders": [],
+      "note": "2026 is reported separately and does not select the model. Current T60 matchup inputs remain unavailable."
+    },
+    {
+      "objective": "margin_mae",
+      "role_alias": "Nominee 005",
+      "horizon": "T60",
+      "validation_score": 9.670264477758495,
+      "season_2024": 9.6836377992728,
+      "season_2025": 9.65689115624419,
+      "test_2026": 9.583402621287169,
+      "games_2024": 285,
+      "games_2025": 285,
+      "games_2026": 150,
+      "status_label": "R18 validation nominee · partial campaign",
+      "cohort": "Full historical cohorts; 2026 remains development-exposed",
+      "co_leaders": [],
+      "note": "2026 is reported separately and does not select the model. Current T60 matchup inputs remain unavailable."
+    },
+    {
+      "objective": "margin_rmse",
+      "role_alias": "Nominee 010",
+      "horizon": "T60",
+      "validation_score": 12.446848275113583,
+      "season_2024": 12.690901545351752,
+      "season_2025": 12.202795004875414,
+      "test_2026": 12.386311255723385,
+      "games_2024": 285,
+      "games_2025": 285,
+      "games_2026": 150,
+      "status_label": "R18 validation nominee · partial campaign",
+      "cohort": "Full historical cohorts; 2026 remains development-exposed",
+      "co_leaders": [],
+      "note": "2026 is reported separately and does not select the model. Current T60 matchup inputs remain unavailable."
+    },
+    {
+      "objective": "total_mae",
+      "role_alias": "Nominee 001",
+      "horizon": "T60",
+      "validation_score": 10.077733424254522,
+      "season_2024": 9.707880900321456,
+      "season_2025": 10.447585948187587,
+      "test_2026": 10.423328583233635,
+      "games_2024": 285,
+      "games_2025": 285,
+      "games_2026": 150,
+      "status_label": "R18 validation nominee · partial campaign",
+      "cohort": "Full historical cohorts; 2026 remains development-exposed",
+      "co_leaders": [],
+      "note": "2026 is reported separately and does not select the model. Current T60 matchup inputs remain unavailable."
+    },
+    {
+      "objective": "total_rmse",
+      "role_alias": "Nominee 009",
+      "horizon": "T60",
+      "validation_score": 12.842353352344162,
+      "season_2024": 12.49655603088886,
+      "season_2025": 13.188150673799466,
+      "test_2026": 13.1324292515417,
+      "games_2024": 285,
+      "games_2025": 285,
+      "games_2026": 150,
+      "status_label": "R18 validation nominee · partial campaign",
+      "cohort": "Full historical cohorts; 2026 remains development-exposed",
+      "co_leaders": [],
+      "note": "2026 is reported separately and does not select the model. Current T60 matchup inputs remain unavailable."
+    },
+    {
+      "objective": "spread_accuracy",
+      "role_alias": "T120 Circa Accuracy",
+      "horizon": "T120 Circa",
+      "validation_score": 0.536842,
+      "season_2024": 0.536842,
+      "season_2025": 0.536842,
+      "test_2026": null,
+      "games_2024": 285,
+      "games_2025": 285,
+      "games_2026": null,
+      "status_label": "R18 validation nominee · current-season regrade unavailable",
+      "cohort": "Historical spread outcomes: cover, push, loss",
+      "note": "Historical three-outcome spread metric. 2026 regrade remains unavailable; exact Week 11 probabilities are evaluated from the dated saved distribution."
+    },
+    {
+      "objective": "spread_brier",
+      "role_alias": "T120 Circa Probability",
+      "horizon": "T120 Circa",
+      "validation_score": 0.514945,
+      "season_2024": 0.527025,
+      "season_2025": 0.502864,
+      "test_2026": null,
+      "games_2024": 285,
+      "games_2025": 285,
+      "games_2026": null,
+      "status_label": "R18 validation nominee · current-season regrade unavailable",
+      "cohort": "Historical spread outcomes: cover, push, loss",
+      "note": "Historical three-outcome spread metric. 2026 regrade remains unavailable; exact Week 11 probabilities are evaluated from the dated saved distribution."
+    },
+    {
+      "objective": "spread_log_loss",
+      "role_alias": "T120 Circa Probability",
+      "horizon": "T120 Circa",
+      "validation_score": 0.757341,
+      "season_2024": 0.783797,
+      "season_2025": 0.730884,
+      "test_2026": null,
+      "games_2024": 285,
+      "games_2025": 285,
+      "games_2026": null,
+      "status_label": "R18 validation nominee · current-season regrade unavailable",
+      "cohort": "Historical spread outcomes: cover, push, loss",
+      "note": "Historical three-outcome spread metric. 2026 regrade remains unavailable; exact Week 11 probabilities are evaluated from the dated saved distribution."
+    }
+  ],
+  "circa_evaluation_at": "2026-11-21T01:09:50.556287+00:00",
+  "circa_top_five": [
+    {
+      "game_id": "2026_11_PIT_PHI",
+      "team": "PHI",
+      "side": "home",
+      "circa_pick_number": 22,
+      "spread": 4.5,
+      "cover": 0.613657,
+      "push": 0.0,
+      "loss": 0.386343,
+      "expected_points": 0.613657,
+      "model_role_alias": "T120 Circa Probability"
+    },
+    {
+      "game_id": "2026_11_TEN_DAL",
+      "team": "TEN",
+      "side": "away",
+      "circa_pick_number": 14,
+      "spread": 8,
+      "cover": 0.575577,
+      "push": 0.041024,
+      "loss": 0.383399,
+      "expected_points": 0.596089,
+      "model_role_alias": "T120 Circa Probability"
+    },
+    {
+      "game_id": "2026_11_ARI_KC",
+      "team": "KC",
+      "side": "home",
+      "circa_pick_number": 11,
+      "spread": -16,
+      "cover": 0.569827,
+      "push": 0.032793,
+      "loss": 0.39738,
+      "expected_points": 0.586224,
+      "model_role_alias": "T120 Circa Probability"
+    },
+    {
+      "game_id": "2026_11_LV_DEN",
+      "team": "DEN",
+      "side": "home",
+      "circa_pick_number": 19,
+      "spread": -10,
+      "cover": 0.554623,
+      "push": 0.042423,
+      "loss": 0.402954,
+      "expected_points": 0.575834,
+      "model_role_alias": "T120 Circa Probability"
+    },
+    {
+      "game_id": "2026_11_NYJ_LAC",
+      "team": "LAC",
+      "side": "home",
+      "circa_pick_number": 17,
+      "spread": -3,
+      "cover": 0.507849,
+      "push": 0.069136,
+      "loss": 0.423015,
+      "expected_points": 0.542417,
+      "model_role_alias": "T120 Circa Probability"
+    }
+  ],
+  "circa_top_five_expected_points": 2.914221,
+  "circa_card_note": "Nov 16 distribution · official Week 11 lines",
+  "circa_distribution_as_of": "2026-11-16T22:04:51.508512+00:00"
+}

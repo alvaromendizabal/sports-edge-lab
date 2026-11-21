@@ -33,6 +33,10 @@ jobs:
           python tracks/nfl/paired_evaluation.py --demo --output "${{ runner.temp }}/nfl-paired.json"
       - name: Check NFL denominator, matched-cohort and coordinator contracts
         run: python -m unittest discover -s tracks/nfl -p 'test_*.py' -v
+      - name: Validate the current selected slate and both forecast clocks
+        run: |
+          python tracks/nfl/current/validate_snapshot.py
+          node --check tracks/nfl/current/app.js
       - name: Check the published review against its aggregate evidence
         run: |
           python tracks/nfl/contracts.py --check-review

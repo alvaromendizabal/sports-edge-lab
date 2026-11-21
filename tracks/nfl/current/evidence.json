@@ -1,0 +1,53 @@
+{
+  "release": "N127 R18",
+  "selection_verified_return_reported_utc": "2026-11-19T04:01:59.037077+00:00",
+  "selection_source_sha256": "98ddfed6aa423b8767fbded1fb5317f6277007044ec6bb4f5caaa8ca56e15dd4",
+  "selection_uses_2026": false,
+  "prior_test_exposure": true,
+  "production_promotion": false,
+  "public_recipe_redaction": true,
+  "status": "DATED_USABLE_T120_SNAPSHOT_WITH_CURRENT_SELECTION_AND_OFFICIAL_LINES",
+  "reviewed_at": "2026-11-21T01:11:41.100815+00:00",
+  "projection_compiled_utc": "2026-11-16T22:14:36+00:00",
+  "market_source_as_of_utc": "2026-11-16T22:04:51.508512+00:00",
+  "projection_source_sha256": "c17b490523cf8c579b5c076080c72c04e43dd9bd636a74a7c8047b7c56d02f73",
+  "current_game_count": 12,
+  "current_t60_ready": false,
+  "t60_gap": "Saved future rows lack qualified current winner prices. The selected total-MAE, total-RMSE and margin-RMSE policies return constant values across all12 matchups. These rows are conditional future fixtures, not newly issued forecasts.",
+  "newer_models_checked": 216,
+  "newer_comparisons": 14,
+  "newer_comparisons_improved": 0,
+  "new_model_fits_in_this_review": 0,
+  "new_campaign_launches_in_this_review": 0,
+  "official_contest_lines": 12,
+  "official_contest_sides": 24,
+  "official_line_source": "https://www.circasports.com/wp-content/uploads/sb-twitter-feed-images/2123484378601083202-0-800.jpg",
+  "circa_evaluation_at": "2026-11-21T01:09:50.556287+00:00",
+  "circa_saved_pmf_sha256": "0915283b939a02f6c118b81b4c30aee220bfef634ca188a0cc388c57dfe2929b",
+  "circa_grid_validation": {
+    "margin_support": [
+      -100,
+      100
+    ],
+    "step": 1,
+    "margin_orientation": "away minus home",
+    "source_runner_sha256": "aff3c7c3f7b422beb16d6aff6f6db5af5a9faaa5b831b46c8cd102212e5536b5",
+    "source_functions": [
+      "n121_scoring.py:point",
+      "n121_scoring.py:scores",
+      "n124_bench.py:row_grade"
+    ],
+    "source_byte_hash_verified": true,
+    "pmf_member_byte_hash_verified": true,
+    "model_game_pairs_validated": 24,
+    "selected_model_games": 12,
+    "all_24_sides_evaluated": true,
+    "max_normalization_error": 9.999778782798785e-13,
+    "max_win_tie_binding_error": 6.096234628216735e-13,
+    "half_point_push_mass_is_zero": true,
+    "new_fits": 0,
+    "distribution_reconstruction": false,
+    "renormalization": false,
+    "rounding_decimal_places": 6
+  }
+}
