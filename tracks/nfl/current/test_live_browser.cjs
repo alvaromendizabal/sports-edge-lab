@@ -9,11 +9,40 @@ const { chromium } = require(process.env.PLAYWRIGHT_MODULE_DIR || "playwright");
 const root = __dirname;
 const output = process.env.NFL_CURRENT_EVIDENCE || path.join(process.env.RUNNER_TEMP || "/tmp", "nfl-current-live-evidence");
 fs.mkdirSync(output, { recursive: true });
-const report = { status: "RUNNING", method: "Anonymous deployed asset hashes and live Chromium interactions", checks: [], assets: [], viewports: [1440, 390], page_errors: [], console_errors: [] };
+const report = { status: "RUNNING", method: "Anonymous deployed asset hashes and live Chromium interactions", checks: [], assets: [], html_verifications: [], viewports: [1440, 390], page_errors: [], console_errors: [] };
 const digest = (bytes) => crypto.createHash("sha256").update(bytes).digest("hex");
 const check = async (name, action) => { await action(); report.checks.push(name); };
 const save = () => fs.writeFileSync(path.join(output, "live-browser.json"), JSON.stringify(report, null, 2) + "\n");
 let browser;
+
+// This is the same narrowly anchored hosting exception used by the preserved N089
+// live verifier. Every original HTML byte must still match; arbitrary changes fail.
+function verifyHostedHtml(observed, source, context) {
+  const bodyFile = `${context}-response.html`;
+  fs.writeFileSync(path.join(output, bodyFile), observed);
+  const record = { context, response_file: bodyFile, received_bytes: observed.length, received_sha256: digest(observed), original_bytes: source.length, original_sha256: digest(source), status: "UNVERIFIED" };
+  report.html_verifications.push(record);
+  if (observed.equals(source)) {
+    record.status = "EXACT_ORIGINAL_BYTES";
+    return record;
+  }
+  const text = observed.toString("utf8");
+  const matches = [...text.matchAll(/<script>\(function\(\)\{function c\(\)\{var b=a\.contentDocument[\s\S]*?<\/script>(?=<\/body>\s*<\/html>\s*$)/g)];
+  assert.equal(matches.length, 1, `${context}: unexpected hosted HTML change; raw response retained`);
+  const added = matches[0][0];
+  record.fragment_file = `${context}-hosting-fragment.txt`;
+  fs.writeFileSync(path.join(output, record.fragment_file), added);
+  assert(added.length < 4096 && added.includes("/cdn-cgi/challenge-platform/scripts/jsd/main.js") && added.includes("window.__CF$cv$params"), `${context}: unknown host script`);
+  const original = Buffer.from(text.slice(0, matches[0].index) + text.slice(matches[0].index + added.length));
+  record.canonical_sha256 = digest(original);
+  record.inserted_script_bytes = Buffer.byteLength(added);
+  record.insertion_byte_offset = Buffer.byteLength(text.slice(0, matches[0].index));
+  assert.equal(digest(original), digest(source), `${context}: original HTML/data/scripts changed`);
+  assert(original.equals(source), `${context}: original bytes changed`);
+  record.status = "ORIGINAL_BYTES_EQUAL_WITH_OBSERVED_CLOUDFLARE_APPEND";
+  record.transformation = "SINGLE_OBSERVED_CLOUDFLARE_CHALLENGE_SCRIPT_APPENDED";
+  return record;
+}
 
 (async () => {
   const receipt = JSON.parse(fs.readFileSync(path.join(root, "publication.json"), "utf8"));
@@ -32,7 +61,7 @@ let browser;
   browser = await chromium.launch({ headless: true });
   const assetContext = await browser.newContext();
   const requiredAssets = ["index.html", "app.js", "styles.css", "data.json", "evidence.json", "circa_evidence.json", "newest_model_comparison.json"];
-  await check("Seven deployed assets exactly match the committed publication and application bytes", async () => {
+  await check("Seven canonical deployed assets match publication bytes; any Cloudflare HTML append is separately recorded", async () => {
     assert.deepEqual(receipt.verification.assets.map(a => a.path).sort(), [...requiredAssets].sort());
     for (const asset of receipt.verification.assets) {
       assert.equal(asset.status, 200);
@@ -47,8 +76,12 @@ let browser;
       report.assets.push(observed);
       assert.equal(response.status(), 200, `${asset.path}: live HTTP status`);
       assert.equal(new URL(response.url()).origin, base.origin, "Unexpected origin redirect");
-      assert.equal(observed.sha256, asset.sha256, `${asset.path}: deployed bytes differ`);
-      assert.equal(observed.bytes, asset.bytes);
+      if (asset.path === "index.html") {
+        observed.html_verification = verifyHostedHtml(bytes, local, "asset-index").status;
+      } else {
+        assert.equal(observed.sha256, asset.sha256, `${asset.path}: deployed bytes differ`);
+        assert.equal(observed.bytes, asset.bytes);
+      }
     }
   });
   await assetContext.close();
@@ -62,9 +95,12 @@ let browser;
     const text = selector => page.locator(selector).innerText();
     const count = (selector, expected) => page.locator(selector).count().then(actual => assert.equal(actual, expected, selector));
     const noOverflow = async () => assert(await page.evaluate(() => document.documentElement.scrollWidth <= innerWidth + 1), `${width}px layout overflows horizontally`);
+    let navigation = 0;
     const go = async query => {
       const response = await page.goto(new URL(query, base).href, { waitUntil: "domcontentloaded" });
       assert.equal(response.status(), 200);
+      assert.equal(new URL(response.url()).origin, base.origin);
+      verifyHostedHtml(await response.body(), fs.readFileSync(path.join(root, "index.html")), `navigation-${width}-${++navigation}`);
       await page.waitForFunction(() => document.querySelectorAll("#games-grid .game-card").length > 0);
     };
     await go("?view=slate&clock=T120");
