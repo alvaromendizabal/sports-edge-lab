@@ -1,0 +1,599 @@
+{
+  "schema": "sel.nba.public_execution_status.b101.v1",
+  "owner": "NBA",
+  "evidence_as_of_utc": "2026-11-18T21:16:59.352627Z",
+  "scope": "One authenticated B100 owner execution and a separate, unexecuted B101 preparation. Earlier dated reports remain unchanged.",
+  "actual_owner_status": "AVAILABLE_REGISTERED_CAMPAIGN_COMPLETE_V13_PROGRAM_PARTIAL",
+  "execution_complete": true,
+  "full_v13_complete": false,
+  "qualified_full_season_champions": 0,
+  "automatic_promotions": 0,
+  "b100_actual": {
+    "observed_owner_executions": 1,
+    "completed_registered_campaigns": 1,
+    "new_estimator_fits": 0,
+    "new_calibration_fits": 0,
+    "new_residual_distribution_fits": 320,
+    "failed_jobs": 0,
+    "new_provider_requests": 0,
+    "actual_provider_credits": 0,
+    "completed_point_variants": 5808,
+    "completed_distribution_heads": 320,
+    "completed_test_games": 210,
+    "upcoming_games": 990,
+    "forecast_population_games": 1200,
+    "completed_prediction_rows": 1219680,
+    "upcoming_prediction_rows": 5749920,
+    "new_prediction_ledgers": 5808,
+    "current_forecasts_complete": true,
+    "strict_original_issuance_claimed": false,
+    "test_used_for_selection": false,
+    "publication_performed": false,
+    "prior_test_exposure_preserved": true
+  },
+  "population": {
+    "common_retained_population_verified": true,
+    "same_point_variant_count": 5808,
+    "same_distribution_head_count": 320,
+    "full_independent_census_verified": false,
+    "known_missing_validation_games": 14,
+    "proposed_extension_rescored": false,
+    "seasons": [
+      {
+        "season": "2024-25",
+        "retained_completed_games": 1314,
+        "source_supported_completed_games": 1321,
+        "known_missing_games": 7,
+        "missing_play_in_games": 6,
+        "missing_cup_final_games": 1,
+        "role": "validation"
+      },
+      {
+        "season": "2025-26",
+        "retained_completed_games": 1315,
+        "source_supported_completed_games": 1322,
+        "known_missing_games": 7,
+        "missing_play_in_games": 6,
+        "missing_cup_final_games": 1,
+        "role": "validation"
+      },
+      {
+        "season": "2026-27",
+        "retained_completed_games": 210,
+        "source_supported_completed_games": null,
+        "known_missing_games": null,
+        "missing_play_in_games": null,
+        "missing_cup_final_games": null,
+        "role": "previously exposed test"
+      }
+    ],
+    "extension_status": "Source-supported proposal; every contender must be rescored on the expanded identical population before new selection. Independent full-season and historical-clock qualification remain separate."
+  },
+  "selected_research_roles": [
+    {
+      "role": "winner_accuracy",
+      "horizon_minutes": 60,
+      "model_family": "CatBoost",
+      "annual": {
+        "2024-25": {
+          "n": 1314,
+          "value": 0.66895
+        },
+        "2025-26": {
+          "n": 1315,
+          "value": 0.678327
+        },
+        "2026-27": {
+          "n": 210,
+          "value": 0.647619
+        }
+      },
+      "primary_validation_score": 0.673638,
+      "higher_is_better": true,
+      "selection_policy": "50/50 annual validation",
+      "test_selected": false,
+      "qualified_full_season_champion": false
+    },
+    {
+      "role": "winner_log_loss",
+      "horizon_minutes": 60,
+      "model_family": "Fixed model blend",
+      "annual": {
+        "2024-25": {
+          "n": 1314,
+          "value": 0.61198
+        },
+        "2025-26": {
+          "n": 1315,
+          "value": 0.605263
+        },
+        "2026-27": {
+          "n": 210,
+          "value": 0.633729
+        }
+      },
+      "primary_validation_score": 0.608621,
+      "higher_is_better": false,
+      "selection_policy": "50/50 annual validation",
+      "test_selected": false,
+      "qualified_full_season_champion": false
+    },
+    {
+      "role": "winner_brier",
+      "horizon_minutes": 60,
+      "model_family": "Fixed model blend",
+      "annual": {
+        "2024-25": {
+          "n": 1314,
+          "value": 0.21203
+        },
+        "2025-26": {
+          "n": 1315,
+          "value": 0.208647
+        },
+        "2026-27": {
+          "n": 210,
+          "value": 0.221755
+        }
+      },
+      "primary_validation_score": 0.210338,
+      "higher_is_better": false,
+      "selection_policy": "50/50 annual validation",
+      "test_selected": false,
+      "qualified_full_season_champion": false
+    },
+    {
+      "role": "margin_mae",
+      "horizon_minutes": 60,
+      "model_family": "Fixed model blend",
+      "annual": {
+        "2024-25": {
+          "n": 1314,
+          "value": 11.074372
+        },
+        "2025-26": {
+          "n": 1315,
+          "value": 11.554018
+        },
+        "2026-27": {
+          "n": 210,
+          "value": 12.343646
+        }
+      },
+      "primary_validation_score": 11.314195,
+      "higher_is_better": false,
+      "selection_policy": "50/50 annual validation",
+      "test_selected": false,
+      "qualified_full_season_champion": false
+    },
+    {
+      "role": "margin_rmse",
+      "horizon_minutes": 60,
+      "model_family": "Fixed model blend",
+      "annual": {
+        "2024-25": {
+          "n": 1314,
+          "value": 14.220484
+        },
+        "2025-26": {
+          "n": 1315,
+          "value": 14.719653
+        },
+        "2026-27": {
+          "n": 210,
+          "value": 16.093698
+        }
+      },
+      "primary_validation_score": 14.470069,
+      "higher_is_better": false,
+      "selection_policy": "50/50 annual validation",
+      "test_selected": false,
+      "qualified_full_season_champion": false
+    },
+    {
+      "role": "total_mae",
+      "horizon_minutes": 60,
+      "model_family": "Fixed model blend",
+      "annual": {
+        "2024-25": {
+          "n": 1314,
+          "value": 15.067101
+        },
+        "2025-26": {
+          "n": 1315,
+          "value": 15.407308
+        },
+        "2026-27": {
+          "n": 210,
+          "value": 15.030337
+        }
+      },
+      "primary_validation_score": 15.237205,
+      "higher_is_better": false,
+      "selection_policy": "50/50 annual validation",
+      "test_selected": false,
+      "qualified_full_season_champion": false
+    },
+    {
+      "role": "total_rmse",
+      "horizon_minutes": 60,
+      "model_family": "CatBoost",
+      "annual": {
+        "2024-25": {
+          "n": 1314,
+          "value": 18.781311
+        },
+        "2025-26": {
+          "n": 1315,
+          "value": 19.465665
+        },
+        "2026-27": {
+          "n": 210,
+          "value": 18.153613
+        }
+      },
+      "primary_validation_score": 19.123488,
+      "higher_is_better": false,
+      "selection_policy": "50/50 annual validation",
+      "test_selected": false,
+      "qualified_full_season_champion": false
+    },
+    {
+      "role": "winner_accuracy",
+      "horizon_minutes": 120,
+      "model_family": "Fixed model blend",
+      "annual": {
+        "2024-25": {
+          "n": 1314,
+          "value": 0.672755
+        },
+        "2025-26": {
+          "n": 1315,
+          "value": 0.676806
+        },
+        "2026-27": {
+          "n": 210,
+          "value": 0.657143
+        }
+      },
+      "primary_validation_score": 0.674781,
+      "higher_is_better": true,
+      "selection_policy": "50/50 annual validation",
+      "test_selected": false,
+      "qualified_full_season_champion": false
+    },
+    {
+      "role": "winner_log_loss",
+      "horizon_minutes": 120,
+      "model_family": "Fixed model blend",
+      "annual": {
+        "2024-25": {
+          "n": 1314,
+          "value": 0.612182
+        },
+        "2025-26": {
+          "n": 1315,
+          "value": 0.605729
+        },
+        "2026-27": {
+          "n": 210,
+          "value": 0.642367
+        }
+      },
+      "primary_validation_score": 0.608955,
+      "higher_is_better": false,
+      "selection_policy": "50/50 annual validation",
+      "test_selected": false,
+      "qualified_full_season_champion": false
+    },
+    {
+      "role": "winner_brier",
+      "horizon_minutes": 120,
+      "model_family": "Fixed model blend",
+      "annual": {
+        "2024-25": {
+          "n": 1314,
+          "value": 0.212098
+        },
+        "2025-26": {
+          "n": 1315,
+          "value": 0.208794
+        },
+        "2026-27": {
+          "n": 210,
+          "value": 0.225416
+        }
+      },
+      "primary_validation_score": 0.210446,
+      "higher_is_better": false,
+      "selection_policy": "50/50 annual validation",
+      "test_selected": false,
+      "qualified_full_season_champion": false
+    },
+    {
+      "role": "margin_mae",
+      "horizon_minutes": 120,
+      "model_family": "Fixed model blend",
+      "annual": {
+        "2024-25": {
+          "n": 1314,
+          "value": 11.077867
+        },
+        "2025-26": {
+          "n": 1315,
+          "value": 11.553978
+        },
+        "2026-27": {
+          "n": 210,
+          "value": 12.391748
+        }
+      },
+      "primary_validation_score": 11.315922,
+      "higher_is_better": false,
+      "selection_policy": "50/50 annual validation",
+      "test_selected": false,
+      "qualified_full_season_champion": false
+    },
+    {
+      "role": "margin_rmse",
+      "horizon_minutes": 120,
+      "model_family": "Fixed model blend",
+      "annual": {
+        "2024-25": {
+          "n": 1314,
+          "value": 14.209843
+        },
+        "2025-26": {
+          "n": 1315,
+          "value": 14.718266
+        },
+        "2026-27": {
+          "n": 210,
+          "value": 16.153935
+        }
+      },
+      "primary_validation_score": 14.464054,
+      "higher_is_better": false,
+      "selection_policy": "50/50 annual validation",
+      "test_selected": false,
+      "qualified_full_season_champion": false
+    },
+    {
+      "role": "total_mae",
+      "horizon_minutes": 120,
+      "model_family": "Fixed model blend",
+      "annual": {
+        "2024-25": {
+          "n": 1314,
+          "value": 15.069017
+        },
+        "2025-26": {
+          "n": 1315,
+          "value": 15.409834
+        },
+        "2026-27": {
+          "n": 210,
+          "value": 14.964273
+        }
+      },
+      "primary_validation_score": 15.239426,
+      "higher_is_better": false,
+      "selection_policy": "50/50 annual validation",
+      "test_selected": false,
+      "qualified_full_season_champion": false
+    },
+    {
+      "role": "total_rmse",
+      "horizon_minutes": 120,
+      "model_family": "Regularized linear model",
+      "annual": {
+        "2024-25": {
+          "n": 1314,
+          "value": 18.832113
+        },
+        "2025-26": {
+          "n": 1315,
+          "value": 19.406979
+        },
+        "2026-27": {
+          "n": 210,
+          "value": 19.095491
+        }
+      },
+      "primary_validation_score": 19.119546,
+      "higher_is_better": false,
+      "selection_policy": "50/50 annual validation",
+      "test_selected": false,
+      "qualified_full_season_champion": false
+    }
+  ],
+  "distribution_findings": {
+    "empirical_heads": 160,
+    "gaussian_heads": 160,
+    "empirical_heads_with_infinite_validation_log_mass": 160,
+    "gaussian_heads_with_finite_validation_log_mass": 160,
+    "validation_zero_mass_head_games": 3925,
+    "zero_mass_count_is_unique_games": false,
+    "empirical_heads_remain_eligible_for_crps_and_interval_scores": true,
+    "qualified_exact_line_comparison_cells": 0,
+    "source_comparisons": [
+      {
+        "source": "DraftKings",
+        "status": "Historical quote coverage exists; exact settlement-qualified distribution comparison unavailable."
+      },
+      {
+        "source": "Kalshi",
+        "status": "No qualified exact-line distribution comparison in this saved campaign."
+      },
+      {
+        "source": "Polymarket US",
+        "status": "No qualified exact-line distribution comparison in this saved campaign."
+      },
+      {
+        "source": "Polymarket International",
+        "status": "No qualified exact-line distribution comparison in this saved campaign."
+      }
+    ]
+  },
+  "cpu": {
+    "requested_worker_ceiling": 24,
+    "peak_fit_worker_processes": 24,
+    "residual_fit_stage_seconds": 33.276485862996196,
+    "representative_interval_seconds": 20.030090267,
+    "measured_cpu_seconds": 122.87295699999999,
+    "representative_average_cores": 6.134418535418974,
+    "minimum_admitted_capacity": 1,
+    "maximum_admitted_capacity": 24,
+    "occupancy_of_admitted_capacity": 0.49096742872159727,
+    "measured_full_interval_passes": 0,
+    "status": "CONDITIONAL_SHORT_QUEUE_COMPLETION_NOT_FULL_CAPACITY_PASS",
+    "current_frozen_inference_dispatch_seconds": 178.07573368000158,
+    "worker_count_is_measured_occupancy": false
+  },
+  "cost": {
+    "whole_instance_wall_estimate_usd": 0.479552,
+    "hourly_usd": 2.57,
+    "compute_guard_usd": 200,
+    "actual_billed_cost_usd": null,
+    "nba_allocated_cost_usd": null
+  },
+  "b101_preparation": {
+    "status": "IN_PREPARATION",
+    "packaged_verification": "PENDING",
+    "private_staging_verification": "PENDING",
+    "owner_executions": 0,
+    "new_estimator_fits": 0,
+    "new_calibration_fits": 0,
+    "new_meta_model_fits": 0,
+    "new_residual_distribution_fits": 0,
+    "new_inference_rows": 0,
+    "new_provider_requests": 0,
+    "research_launched": false,
+    "owner_cpu_acceptance": "NOT_RUN",
+    "default_scientific_workers": 12,
+    "opportunistic_scientific_workers": 24,
+    "explicit_max_workers_is_hard_ceiling": true,
+    "native_threads_per_worker": 1,
+    "log_interval_seconds": 10,
+    "occupancy_minimum_percent": 75,
+    "occupancy_interval_seconds": 180,
+    "occupancy_gate_is_conditional": true,
+    "completed_states_reused": true,
+    "latest_checkpoint_resolved_at_owner_launch": true,
+    "planned_branches": [
+      {
+        "branch": "Expanded common population",
+        "registered_maximum": null,
+        "unit": "14 additional authentic validation games to reconcile; then frozen inference for all 5,808 variants",
+        "new_fit_type": "No old model refits",
+        "status": "PLANNED_NOT_EXECUTED"
+      },
+      {
+        "branch": "Preserved distribution heads",
+        "registered_maximum": 320,
+        "unit": "Existing fitted heads reused and rescored on the same expanded population",
+        "new_fit_type": "Zero new fits",
+        "status": "PLANNED_NOT_EXECUTED"
+      },
+      {
+        "branch": "Causal box-score challengers",
+        "registered_maximum": 240,
+        "unit": "Estimator recipes; up to 240 heldout calibrators and 480 raw/calibrated variants",
+        "new_fit_type": "New estimators and calibrators; numerical duplicates share fitted state",
+        "status": "PLANNED_NOT_EXECUTED"
+      },
+      {
+        "branch": "Learned model combinations",
+        "registered_maximum": 162,
+        "unit": "Learned combinations and family-removal controls",
+        "new_fit_type": "New prevalidation combination fits",
+        "status": "PLANNED_NOT_EXECUTED"
+      },
+      {
+        "branch": "Combination residual heads",
+        "registered_maximum": 216,
+        "unit": "Empirical and Gaussian heads for the new margin/total combinations",
+        "new_fit_type": "New prevalidation residual fits",
+        "status": "PLANNED_NOT_EXECUTED"
+      },
+      {
+        "branch": "Positive-tail mixtures",
+        "registered_maximum": 480,
+        "unit": "Fixed compositions of existing empirical and Gaussian heads",
+        "new_fit_type": "Zero fits; all 320 original states preserved",
+        "status": "PLANNED_NOT_EXECUTED"
+      },
+      {
+        "branch": "Unified validation review",
+        "registered_maximum": null,
+        "unit": "Common-population ranks, five validation ratios, paired week-block contrasts and private forecasts",
+        "new_fit_type": "Scoring and reporting",
+        "status": "PLANNED_NOT_EXECUTED"
+      }
+    ]
+  },
+  "scientific_contract": {
+    "validation_seasons": [
+      "2024-25",
+      "2025-26"
+    ],
+    "test_season": "2026-27",
+    "selection_weights": [
+      [
+        50,
+        50
+      ],
+      [
+        40,
+        60
+      ],
+      [
+        30,
+        70
+      ],
+      [
+        20,
+        80
+      ],
+      [
+        10,
+        90
+      ]
+    ],
+    "primary_validation_weight": [
+      50,
+      50
+    ],
+    "selection_weights_refit_estimators": false,
+    "training_rows_reweighted_by_season": false,
+    "test_outcomes_choose_models_or_calibration": false,
+    "prior_test_exposure_can_be_erased": false,
+    "rendered_metrics_are_rounded_saved_aggregates": true,
+    "full_precision_metrics_recomputed_from_public_values": false,
+    "remaining_gaps": [
+      "Reconcile the 14 known validation census omissions and rescore every contender on the expanded shared population.",
+      "Authenticate complete competition calendars and original historical release/revision clocks.",
+      "Complete player, lineup, injury and replacement histories with valid pregame availability.",
+      "Complete source/bookmaker/season/market/horizon coverage, historical market response and exact settlement-qualified comparisons.",
+      "Execute the registered new box-score, learned-combination and residual research with paired validation evidence.",
+      "Measure useful scientific CPU occupancy under the conditional three-minute gate; requested workers do not establish a pass.",
+      "Keep scientific qualification, source publication, hosted deployment and production promotion separate."
+    ]
+  },
+  "publication": {
+    "status": "DRAFT_SOURCE_REVIEW",
+    "main_branch_integration": "PENDING",
+    "website_deployment": "PENDING",
+    "scientific_completion": "B100_REGISTERED_CAMPAIGN_COMPLETE_V13_INCOMPLETE",
+    "production_promotion": "NONE",
+    "new_public_forecast_values": 0,
+    "historical_assets_changed": false
+  },
+  "evidence": {
+    "authenticated_saved_scores_only": true,
+    "saved_aggregate_reconciliation_complete": true,
+    "new_scientific_work_performed_by_this_public_review": false,
+    "private_evidence_excluded": true,
+    "scope": "Sanitized authenticated execution and selected-role aggregates; private recipes, model identities, source payloads, checkpoints and storage locators are excluded."
+  }
+}

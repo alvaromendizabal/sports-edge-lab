@@ -1,0 +1,231 @@
+{
+  "schema": "sel.nba.public_execution_status.b100.v1",
+  "owner": "NBA",
+  "snapshot_at_utc": "2026-11-18T20:41:45Z",
+  "evidence_scope": "One observed B099 owner continuation, with earlier B097 science and B098 failures preserved as dated evidence. This is not an all-time owner-attempt census.",
+  "actual_owner_status": "PARTIAL_RESUMABLE",
+  "execution_complete": false,
+  "full_v13_complete": false,
+  "automatic_promotions": 0,
+  "b099_actual": {
+    "scientific_status": "PARTIAL_RESUMABLE",
+    "execution_complete": false,
+    "full_v13_complete": false,
+    "new_estimator_fits": 0,
+    "new_calibration_fits": 0,
+    "new_residual_distribution_fits": 0,
+    "new_provider_requests": 5,
+    "actual_provider_credits": 0,
+    "started_at_utc": "2026-11-18T19:47:06.540362Z",
+    "finished_at_utc": "2026-11-18T19:57:03.362413Z",
+    "automatic_promotions": 0,
+    "publication_performed": false,
+    "observed_owner_invocations": 1,
+    "complete_owner_executions": 0,
+    "exit_code": null
+  },
+  "current_forecast": {
+    "current_completed_games": 210,
+    "current_population_games": 1200,
+    "current_census_verified": false,
+    "all_current_forecast_variants_completed": false,
+    "candidate_variants": 5808,
+    "completed_feature_tasks": 1,
+    "deferred_feature_tasks": 6,
+    "failure_reasons": [
+      "DeferredWork:B095_NO_CURRENT_SAFE_CPU_OR_MEMORY_CAPACITY"
+    ],
+    "peak_feature_workers": 1
+  },
+  "distribution": {
+    "registered_base_tasks": 160,
+    "completed_base_tasks": 0,
+    "completed_distribution_heads": 0,
+    "new_residual_distribution_fits": 0,
+    "deferred_base_tasks": 160,
+    "deferred_reasons": [
+      "B095_NO_CURRENT_SAFE_CPU_OR_MEMORY_CAPACITY"
+    ]
+  },
+  "projections": {
+    "completed": 5808,
+    "reused": 2032,
+    "new": 3776,
+    "peak_processes": 24,
+    "new_fits": 0,
+    "independent_exports": 3
+  },
+  "cpu": {
+    "sample_count": 59,
+    "measured_full_interval_passes": 0,
+    "requested_maximum_aggregate_cpus": 24,
+    "projection_interval_seconds": 80.450788157,
+    "projection_cpu_seconds": 453.161289,
+    "projection_average_cores": 5.632776252181074,
+    "projection_occupancy": 0.23469901050754474,
+    "projection_capacity_cores": 24,
+    "projection_interval_gate_pass": false
+  },
+  "cost": {
+    "whole_instance_wall_interval_estimate_usd": "0.4784801481421891808333333333",
+    "actual_billed_cost_usd": null,
+    "hourly_usd": "2.5700000000",
+    "budget_usd": "200.0",
+    "stage_elapsed_seconds": 670.2445654910043,
+    "observed_at_utc": "2026-11-18T19:58:02.529346Z"
+  },
+  "latest_return": {
+    "bytes": 340294167,
+    "sha256": "af86c3bb2cfa95942ad2fa7e71345b8bd6a85087ee6348afcab64d9701b61bc3",
+    "single_zip": true,
+    "payloads": 3112,
+    "full_sha256_verified": true,
+    "all_member_crc_verified": true,
+    "scientific_status": "PARTIAL_RESUMABLE",
+    "parts": 1
+  },
+  "population": {
+    "refreshed_completed_test_games": 210,
+    "frozen_prediction_contract_completed_test_games": 206,
+    "full_census_verified": false,
+    "current_forecast_refresh_completed": false,
+    "validation": [
+      {
+        "season": "2024-25",
+        "completed_games": 1314,
+        "full_season_census_verified": false
+      },
+      {
+        "season": "2025-26",
+        "completed_games": 1315,
+        "full_season_census_verified": false
+      }
+    ]
+  },
+  "preserved_b097": {
+    "new_estimator_fits": 672,
+    "new_calibration_fits": 1232,
+    "reused_estimator_fits": 150,
+    "reused_calibration_fits": 150,
+    "completed_base_jobs": 822,
+    "completed_scored_variants_and_uncertainty_reports": 5808,
+    "failed_estimator_jobs": 0,
+    "provider_requests": 4,
+    "fit_occupancy_percent": 92.11995517394568,
+    "fit_interval_seconds": 183.005918088,
+    "fit_measured_cores": 22.11,
+    "fit_admitted_cores": 24,
+    "private_export_occupancy_percent": 3.623826,
+    "private_export_interval_seconds": 182.334907,
+    "private_export_measured_cores": 0.87,
+    "private_export_configured_workers": 1,
+    "private_export_gate_cores": 24,
+    "private_export_pending_jobs": 3776,
+    "execution_complete": false,
+    "full_v13_complete": false
+  },
+  "b100_preparation": {
+    "status": "PREPARED_VERIFIED",
+    "final_packaged_verification": "VERIFIED",
+    "private_staging_verification": "INITIAL_NINE_FILES_INSTALLED_AND_FULL_BODY_READBACK_VERIFIED",
+    "canonical_engineering_tests": 133,
+    "engineering_failures": 0,
+    "engineering_errors": 0,
+    "engineering_skips": 0,
+    "new_owner_executions": 0,
+    "new_owner_estimator_fits": 0,
+    "new_owner_calibration_fits": 0,
+    "new_owner_distribution_fits": 0,
+    "new_owner_inference_rows": 0,
+    "new_owner_provider_requests": 0,
+    "owner_cpu_acceptance": "NOT_RUN",
+    "planned_distribution_heads": 320,
+    "default_scientific_workers": 12,
+    "opportunistic_scientific_workers": 24,
+    "explicit_max_workers_is_hard_ceiling": true,
+    "native_threads_per_worker": 1,
+    "log_interval_seconds": 10,
+    "occupancy_minimum_percent": 75,
+    "occupancy_interval_seconds": 180,
+    "occupancy_gate_conditional_on_sufficient_independent_work_and_safe_capacity": true,
+    "newest_checkpoint_resolved_at_owner_launch": true,
+    "completed_tasks_reused": true,
+    "research_launched_during_preparation": false,
+    "verification_summary": "The canonical runner is installed and its native readiness preflight passed all eight read-only gates. The exact archive passed 133 engineering tests with zero failures, errors or skips, plus one separate actual-checkpoint entrypoint test that stopped before owner dispatch. All 1,034 inherited B099 members remain unchanged. Nine initial private delivery files totaling 9,855,823 bytes passed physical installation and complete-body readback verification. The repair retains safety thresholds while allowing bounded waiting through temporary capacity loss; its mobile comparison control was verified with the original evidence unchanged. Later preparation documents and pointers are outside this dated certification. No B100 owner research was launched.",
+    "planned_capacity_repair": "Bounded waiting through recoverable capacity loss; retain actual guard decisions and safety thresholds, preserve queued work and resume after safe capacity returns.",
+    "separate_actual_checkpoint_entrypoint_tests": 1,
+    "entrypoint_test_owner_dispatches": 0,
+    "inherited_b099_archive_members_preserved": 1034,
+    "native_readiness_preflight": "READY_FOR_OWNER_LAUNCH_NO_RESEARCH",
+    "native_readiness_successful_gates": 8,
+    "native_readiness_failed_gates": 0,
+    "native_readiness_finished_at_utc": "2026-11-18T20:39:52.828242Z",
+    "initial_delivery_files_full_body_verified": 9,
+    "initial_delivery_bytes_full_body_verified": 9855823,
+    "later_preparation_documents_or_pointers_certified_by_this_snapshot": false,
+    "private_comparison_mobile_controls_verified": true
+  },
+  "scientific_contract": {
+    "validation_seasons": [
+      "2024\u201325",
+      "2025\u201326"
+    ],
+    "test_season": "2026\u201327",
+    "selection_weights": [
+      [
+        50,
+        50
+      ],
+      [
+        40,
+        60
+      ],
+      [
+        30,
+        70
+      ],
+      [
+        20,
+        80
+      ],
+      [
+        10,
+        90
+      ]
+    ],
+    "primary_validation_weight": [
+      50,
+      50
+    ],
+    "test_outcomes_choose_models_or_calibration": false,
+    "training_rows_reweighted_by_season": false,
+    "previous_test_exposure_erased": false,
+    "full_independent_game_census_proven": false,
+    "qualified_full_season_champion": false,
+    "remaining_gaps": [
+      "Independent all-competition and postseason census qualification",
+      "Complete point-in-time player, lineup, injury and replacement input lineage",
+      "Additional possession and box-score interactions with authenticated clocks",
+      "Complete historical opening/closing paths and additional market schemas",
+      "Source-specific historical rights, clocks, coverage and matched comparisons",
+      "Broader registered validation-safe calibration and blending program"
+    ]
+  },
+  "evidence": {
+    "execution_report_bytes": 187545364,
+    "execution_report_sha256": "b9199568b54ea2518375f6e6b89c4f8b3d528559fb06228aac401efb374f8d88",
+    "post_seal_delivery_sha256": "46413c6d740bb4bca6296e2c2c1f50dd9065dde2df1578f95292941d22bf6f6a",
+    "authenticated_full_report_hash_reverified": true,
+    "authenticated_full_delivery_hash_reverified": true,
+    "public_projection_scope": "Sanitized execution aggregates only; private owner contents remain excluded."
+  },
+  "publication": {
+    "status": "DRAFT_SOURCE_REVIEW",
+    "main_branch_integration": "PENDING",
+    "website_deployment": "PENDING",
+    "scientific_completion": "INCOMPLETE",
+    "production_promotion": "NONE",
+    "new_public_forecast_values": 0,
+    "historical_scientific_assets_changed": false
+  }
+}

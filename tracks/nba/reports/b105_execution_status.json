@@ -1,0 +1,709 @@
+{
+  "schema": "sel.nba.public_execution_status.b105.v1",
+  "owner": "NBA",
+  "observed_date_utc": "2026-11-19",
+  "actual_B104": {
+    "owner_executions_observed": 1,
+    "execution_complete": false,
+    "full_v13_complete": false,
+    "verified_final_return_published": false,
+    "owner_exact_exit_code": null,
+    "owner_exact_signal": null,
+    "registered_fit_tasks": 240,
+    "successful_model_recipes": 225,
+    "new_estimator_fits": 201,
+    "new_calibration_fits": 201,
+    "reused_estimator_fits": 24,
+    "reused_calibration_fits": 24,
+    "failed_model_recipes": 15,
+    "pytorch_interop_failures": 13,
+    "tensorflow_serialization_parity_failures": 2,
+    "context_tasks_reused": 30,
+    "validation_tasks": 225,
+    "validation_scored_variants": 450,
+    "new_validation_ledgers": 402,
+    "reused_validation_ledgers": 48,
+    "reused_original_distribution_fits": 320,
+    "new_residual_distribution_fits": 0,
+    "registry_bodies_verified": 975,
+    "native_artifact_references_verified": 6291,
+    "unique_content_hashes": 5607,
+    "actual_invoiced_usd": null,
+    "nba_allocated_cost_usd": null,
+    "unique_s3_payloads_full_get_sha_verified": 5607,
+    "unique_s3_payload_bytes_verified": 2683086355,
+    "s3_payload_missing": 0,
+    "s3_payload_unknown": 0,
+    "s3_payload_mismatches": 0,
+    "current_run_s3_box_frozen_test_task_receipts": 0
+  },
+  "incident": {
+    "classification": "MEMORY_AMPLIFICATION_WITH_OBSERVED_OOM_AND_WORKER_SIGKILL",
+    "selection_lock_bytes": 1141248706,
+    "frozen_test_workers_admitted": 36,
+    "nominal_per_worker_reservation_bytes": 1073741824,
+    "root_cgroup_peak_bytes": 97784340480,
+    "host_physical_memory_bytes": 99615150080,
+    "oom_kill_before": 0,
+    "oom_kill_after": 15,
+    "identified_frozen_test_workers_sigkilled": 13,
+    "owner_disappearance_observed_at_utc": "2026-11-19T19:27:29.229Z",
+    "owner_oom_victim_attribution": "INFERENCE_EXACT_OWNER_EXIT_STATUS_UNAVAILABLE",
+    "fixed_180_second_timeout_established": false,
+    "lightgbm_fit_failure_caused_incident": false
+  },
+  "cpu": {
+    "base_fit_peak_measured_cores": 32.2775324707236,
+    "base_fit_active_workers_at_peak": 35,
+    "validation_peak_measured_cores": 29.44683110253298,
+    "validation_active_workers_at_peak": 32,
+    "sustained_180_second_occupancy_gate": "NOT_ESTABLISHED_FROM_PEAK_SAMPLES",
+    "peak_is_sustained_acceptance": false,
+    "configured_workers_are_measured_busy_cores": false
+  },
+  "B105_preparation": {
+    "status": "DELIVERY_AND_NATIVE_INSTALL_VERIFIED",
+    "new_owner_executions": 0,
+    "new_estimator_fits": 0,
+    "new_calibration_fits": 0,
+    "new_residual_distribution_fits": 0,
+    "canonical_executable": {
+      "bytes": 11163003,
+      "sha256": "5673b4689fb8f9da7c7c1c5303b71cc04b3e154e00ea9fcc62ff4c193d199a0f"
+    },
+    "delivery_full_body_readback_verified": true,
+    "native_installation_verified": true,
+    "verification_evidence": {
+      "bytes": 27338,
+      "sha256": "85c0c9fc76ab6bfbab0826a5df3266e20786b2b1289cc02ad07f6b89ef48f5ea"
+    },
+    "engineering_evidence": {
+      "bytes": 3221,
+      "sha256": "1dee0fb0acc697b6c84edbd8d83483e8784ac8e283bba49248128c6145cdd247"
+    },
+    "full_v13_complete": false
+  },
+  "owner_request": {
+    "normal_scientific_worker_target": 12,
+    "requested_cores": 36,
+    "explicit_max_workers": 36,
+    "native_threads_per_independent_fit": 1,
+    "safe_shared_capacity_required": true,
+    "compute_guard_usd": 200,
+    "wall_minutes": 0,
+    "wall_zero_waives_cost_guard": false
+  },
+  "comparison": {
+    "scope": "320_PRESERVED_DISTRIBUTION_HEAD_REPLAYS_ONLY",
+    "original_state_pins_unchanged": true,
+    "validation_seasons": [
+      "2024-25",
+      "2025-26"
+    ],
+    "test_season": "2026-27",
+    "evaluation_rows": [
+      1321,
+      1322,
+      210
+    ],
+    "historical_B100_rows": [
+      1314,
+      1315,
+      210
+    ],
+    "same_manifest_membership_verified_for_320_heads": true,
+    "missing_predictions_in_these_cohorts": 0,
+    "fresh_all_completed_test_census_verified": false,
+    "independent_full_season_census_verified": false,
+    "same_population_all_contenders_complete": false,
+    "full_season_champions_qualified": false,
+    "prior_test_exposure_preserved": true,
+    "test_outcomes_select_models": false,
+    "selection_ratios": [
+      [
+        0.5,
+        0.5
+      ],
+      [
+        0.4,
+        0.6
+      ],
+      [
+        0.3,
+        0.7
+      ],
+      [
+        0.2,
+        0.8
+      ],
+      [
+        0.1,
+        0.9
+      ]
+    ],
+    "primary_weights": [
+      0.5,
+      0.5
+    ],
+    "sensitivity_changes_fit_or_predictions": false,
+    "metric": "CRPS",
+    "lower_is_better": true,
+    "rows": [
+      {
+        "target": "margin",
+        "horizon_minutes": 60,
+        "family": "sklearn_linear",
+        "method": "gaussian",
+        "crps_2024": 7.989218408474941,
+        "crps_2025": 8.26869118514521,
+        "crps_2026": 8.919788699453504,
+        "validation_50_50": 8.128954796810076,
+        "candidates_in_role": 80,
+        "distinct_sensitivity_leaders": 1
+      },
+      {
+        "target": "margin",
+        "horizon_minutes": 120,
+        "family": "sklearn_linear",
+        "method": "gaussian",
+        "crps_2024": 7.985643889825906,
+        "crps_2025": 8.271059671940503,
+        "crps_2026": 8.929669318172593,
+        "validation_50_50": 8.128351780883204,
+        "candidates_in_role": 80,
+        "distinct_sensitivity_leaders": 1
+      },
+      {
+        "target": "total",
+        "horizon_minutes": 60,
+        "family": "sklearn_extra_trees",
+        "method": "gaussian",
+        "crps_2024": 10.621005246205515,
+        "crps_2025": 10.95996247482126,
+        "crps_2026": 10.305655466990936,
+        "validation_50_50": 10.790483860513387,
+        "candidates_in_role": 80,
+        "distinct_sensitivity_leaders": 3
+      },
+      {
+        "target": "total",
+        "horizon_minutes": 120,
+        "family": "sklearn_extra_trees",
+        "method": "gaussian",
+        "crps_2024": 10.62607904760502,
+        "crps_2025": 10.95485889499729,
+        "crps_2026": 10.365619803150262,
+        "validation_50_50": 10.790468971301156,
+        "candidates_in_role": 80,
+        "distinct_sensitivity_leaders": 3
+      }
+    ],
+    "stale_population_qualification_field_detected": true
+  },
+  "repair_scope": [
+    "Compact repeated tie membership without changing validation scores, ranks or model identities.",
+    "Authenticate a bounded frozen-test authorization once; avoid every worker decoding the full selection lock.",
+    "Report stage entry, queue state and lock preparation separately from validation completion.",
+    "Observe the owner from a small outer process; retain bounded logs, actual child exits and compact diagnostic returns.",
+    "Recover verified completed artifacts and repair only failed or missing scientific identities."
+  ],
+  "requirements_still_open": [
+    {
+      "name": "Frozen-test scoring",
+      "detail": "Reuse 46 verified saved base-model test results and 92 raw/calibrated ledgers. At most 179 of the original 225 base-model inference calls remain, plus successful replacements for up to 15 failed neural recipes. Current-run S3 test registry closures are absent; all 161 recovered payload files have a separately verified immutable backup.",
+      "status": "UNFINISHED"
+    },
+    {
+      "name": "Failed neural recipes",
+      "detail": "Repair 13 PyTorch interop initialization failures and two TensorFlow serialization-parity failures with explicit changed recipe/version lineage.",
+      "status": "UNFINISHED"
+    },
+    {
+      "name": "Calibration, combinations and ablations",
+      "detail": "Reconcile the registered task graph after recovery. Preserve qualified calibrations; complete only missing combinations, residual heads, fixed mixtures and grouped ablations.",
+      "status": "UNFINISHED"
+    },
+    {
+      "name": "Full populations and champions",
+      "detail": "Preserved point models and all 450 box variants have identical validation cohorts; 46 saved base-model test results and all 320 preserved heads share the 210-game test snapshot. All four new total-point objective leaders still lack test results. Independent full-season census, full-contender test coverage and fresh reporting remain unfinished.",
+      "status": "UNFINISHED"
+    },
+    {
+      "name": "Source coverage and forecasts",
+      "detail": "Complete authenticated as-of coverage, missing-source controls, completed/upcoming forecasts and separate DraftKings, Kalshi and Polymarket comparisons.",
+      "status": "UNFINISHED"
+    },
+    {
+      "name": "Scientific utilization and final return",
+      "detail": "Verify current useful PID/CPU/queue/completion evidence and the conditional 180-second occupancy gate, then publish a compact integrity-verified owner return.",
+      "status": "UNFINISHED"
+    }
+  ],
+  "publication": {
+    "draft_pr": 392,
+    "source_review_only": true,
+    "merged": false,
+    "website_deployed": false,
+    "automatic_champion_promotions": 0,
+    "new_public_forecast_values": 0,
+    "private_runtime_or_raw_provider_data_published": false
+  },
+  "evidence": [
+    {
+      "label": "Verified scientific task counts",
+      "bytes": 2882,
+      "sha256": "9f50efaf2ead6e4acb29d8500a84a04384179b2e0e33812298319d4e2fef34a7"
+    },
+    {
+      "label": "Independent registry-body audit",
+      "bytes": 765,
+      "sha256": "92228cd21352f40a91f99b001e41b7b7d869ac995d25bd9ae4854e014914eaff"
+    },
+    {
+      "label": "Native artifact audit",
+      "bytes": 20070308,
+      "sha256": "a1e20c06f2f0e2de329926af6bf8538ef6ece1b952746ff5777bf93d92b80ecc"
+    },
+    {
+      "label": "Native termination evidence",
+      "bytes": 1341436,
+      "sha256": "8f7c1d811e80e9bec241bb4816bad66ec765a4906d161f3e6eae3504193a15fd"
+    },
+    {
+      "label": "CloudWatch termination window",
+      "bytes": 7993,
+      "sha256": "383a1f079cfee75111473b00ca94ec289fdea422719cc96a08e86ed76d69379a"
+    },
+    {
+      "label": "Original-state replay population audit",
+      "bytes": 5103,
+      "sha256": "c99b91da45c9d966ed4ca47331e9b3b5ee830f82ba78b63069c164fa326b642c"
+    },
+    {
+      "label": "Authenticated residual comparison extraction",
+      "bytes": 270341,
+      "sha256": "6f1ab0e60f5ef68dbdaabecb137001d1c0b5970355d035bb6850bccddbf79dd7"
+    },
+    {
+      "label": "All unique S3 payload full-readback audit",
+      "bytes": 762234,
+      "sha256": "f46e6dd79b7d06a6eda7c1f843dd962b2e3444f10206f3db513804c98a73eedd"
+    },
+    {
+      "label": "Authenticated point and winner comparison",
+      "bytes": 16622446,
+      "sha256": "13576aaac1bcce526d09f5f453a3d2cc65d71f9144602318ccd5c4358ee75b20"
+    },
+    {
+      "label": "Native validation population and schema audit",
+      "bytes": 66464,
+      "sha256": "5b789583408df537089d094804de5fdadc782c6f0ec259d1368dc2e88cf4501a"
+    },
+    {
+      "label": "Native engineering evidence bundle",
+      "bytes": 61587128,
+      "sha256": "67289c76333feb15b6ee6b2edd35e58ad131bbcd2d0c8d3cb1ec4e91964587a8"
+    },
+    {
+      "label": "Twelve-worker existing-model application check",
+      "bytes": 12317,
+      "sha256": "e19976934bb03c2486663e1b76d6afe8c730cd2396997745e8da32840adec7e1"
+    },
+    {
+      "label": "Native isolated supervisor and real-S3 publication check",
+      "bytes": 17385,
+      "sha256": "3878050eef45b145b51f98e46872cb7d6e3335305e38011b3401ab4d92f13a52"
+    },
+    {
+      "label": "Native engineering proof delivery receipt",
+      "bytes": 3221,
+      "sha256": "1dee0fb0acc697b6c84edbd8d83483e8784ac8e283bba49248128c6145cdd247"
+    },
+    {
+      "label": "Recovered frozen-test output audit",
+      "bytes": 101198,
+      "sha256": "837967179a1666aa6170809e8556a36cb9c01a6ab604c65e7cb042a87b469aed"
+    },
+    {
+      "label": "Recovered frozen-test status",
+      "bytes": 2496,
+      "sha256": "9082617e2a9eb773a33e4e9ef0bc05bced7542cceb4f122cc7d256ed9441951b"
+    },
+    {
+      "label": "Recovered frozen-test immutable payload backup",
+      "bytes": 134950,
+      "sha256": "e0d6350dc2307afa9cbe570fbb2f20d2d5003cff9a3af84e28d6741ce3e73e85"
+    },
+    {
+      "label": "Canonical archive member verification",
+      "bytes": 556,
+      "sha256": "e256659d27c5dc94738489f6ffec77cc274ef5e66bd5338e8faa5ae90636b361"
+    },
+    {
+      "label": "Final private delivery and native-installation proof",
+      "bytes": 27338,
+      "sha256": "85c0c9fc76ab6bfbab0826a5df3266e20786b2b1289cc02ad07f6b89ef48f5ea"
+    },
+    {
+      "label": "Read-only native launch readiness",
+      "bytes": 407359,
+      "sha256": "0ba2b2bd0ffb8bbae5a4a262fd33acb9d63beb4bb1815377ae2dc76754f638b0"
+    },
+    {
+      "label": "Final native archive self-test log",
+      "bytes": 99,
+      "sha256": "0886e631299c4d5c8d862063ce7097f6b81df769029fc868827b416afa0f0626"
+    },
+    {
+      "label": "Final source and native archive regression review",
+      "bytes": 9375,
+      "sha256": "13bb691ce32ae1b05f62e9d94f7df69509d8b122f8a4965437425631549468fd"
+    }
+  ],
+  "point_comparison": {
+    "scope": "PRESERVED_BASELINE_AND_B104_BOX_VALIDATION",
+    "baseline_variants": 5808,
+    "box_validation_variants": 450,
+    "negative_controls_excluded_from_rankings": 24,
+    "ranked_validation_variants": 6234,
+    "validation_rows": [
+      1321,
+      1322
+    ],
+    "baseline_test_rows": 210,
+    "baseline_metric_cells_verified": 52272,
+    "baseline_nonempty_metric_cells_verified": 40656,
+    "box_validation_manifest_membership_verified": true,
+    "all_box_test_results_complete": false,
+    "independent_full_season_census_verified": false,
+    "all_contender_test_comparison_complete": false,
+    "test_outcomes_select_models": false,
+    "predictions_or_fits_changed_by_comparison": false,
+    "primary_weights": [
+      0.5,
+      0.5
+    ],
+    "rmse_aggregation": "RECOMBINE_PHASE_SQUARED_RMSE_BY_ROW_COUNT_THEN_SQRT; ANNUAL_SCORES_WEIGHTED_50_50",
+    "rows": [
+      {
+        "target": "margin",
+        "horizon_minutes": 60,
+        "objective": "rmse",
+        "higher_is_better": false,
+        "family": "B095_FIXED_CONVEX_BLEND",
+        "origin": "PRESERVED_BASELINE",
+        "metric_2024": 14.247066478767792,
+        "metric_2025": 14.704449419186727,
+        "validation_50_50": 14.47575794897726,
+        "metric_2026": 15.975421393356301,
+        "ranked_variants_in_role": 1031,
+        "test_status": "AUTHENTICATED_210_ROW_REPLAY"
+      },
+      {
+        "target": "margin",
+        "horizon_minutes": 60,
+        "objective": "mae",
+        "higher_is_better": false,
+        "family": "B095_FIXED_CONVEX_BLEND",
+        "origin": "PRESERVED_BASELINE",
+        "metric_2024": 11.103903414811933,
+        "metric_2025": 11.541136681350649,
+        "validation_50_50": 11.322520048081293,
+        "metric_2026": 12.283830928711563,
+        "ranked_variants_in_role": 1031,
+        "test_status": "AUTHENTICATED_210_ROW_REPLAY"
+      },
+      {
+        "target": "margin",
+        "horizon_minutes": 120,
+        "objective": "rmse",
+        "higher_is_better": false,
+        "family": "B095_FIXED_CONVEX_BLEND",
+        "origin": "PRESERVED_BASELINE",
+        "metric_2024": 14.238957233314425,
+        "metric_2025": 14.702451437479146,
+        "validation_50_50": 14.470704335396785,
+        "metric_2026": 16.026749032494333,
+        "ranked_variants_in_role": 1023,
+        "test_status": "AUTHENTICATED_210_ROW_REPLAY"
+      },
+      {
+        "target": "margin",
+        "horizon_minutes": 120,
+        "objective": "mae",
+        "higher_is_better": false,
+        "family": "B095_FIXED_CONVEX_BLEND",
+        "origin": "PRESERVED_BASELINE",
+        "metric_2024": 11.111935331827324,
+        "metric_2025": 11.544086946253753,
+        "validation_50_50": 11.32801113904054,
+        "metric_2026": 12.32098170781973,
+        "ranked_variants_in_role": 1023,
+        "test_status": "AUTHENTICATED_210_ROW_REPLAY"
+      },
+      {
+        "target": "total",
+        "horizon_minutes": 60,
+        "objective": "rmse",
+        "higher_is_better": false,
+        "family": "catboost",
+        "origin": "B104_BOX_VALIDATION",
+        "metric_2024": 18.70969231905539,
+        "metric_2025": 19.309875956798006,
+        "validation_50_50": 19.009784137926697,
+        "metric_2026": null,
+        "ranked_variants_in_role": 1021,
+        "test_status": "PENDING_AUTHENTICATED_BOX_TEST_COMPLETION"
+      },
+      {
+        "target": "total",
+        "horizon_minutes": 60,
+        "objective": "mae",
+        "higher_is_better": false,
+        "family": "catboost",
+        "origin": "B104_BOX_VALIDATION",
+        "metric_2024": 14.887333165963383,
+        "metric_2025": 15.38351349842509,
+        "validation_50_50": 15.135423332194236,
+        "metric_2026": null,
+        "ranked_variants_in_role": 1021,
+        "test_status": "PENDING_AUTHENTICATED_BOX_TEST_COMPLETION"
+      },
+      {
+        "target": "total",
+        "horizon_minutes": 120,
+        "objective": "rmse",
+        "higher_is_better": false,
+        "family": "catboost",
+        "origin": "B104_BOX_VALIDATION",
+        "metric_2024": 18.634165503293268,
+        "metric_2025": 19.353932294521965,
+        "validation_50_50": 18.994048898907618,
+        "metric_2026": null,
+        "ranked_variants_in_role": 1025,
+        "test_status": "PENDING_AUTHENTICATED_BOX_TEST_COMPLETION"
+      },
+      {
+        "target": "total",
+        "horizon_minutes": 120,
+        "objective": "mae",
+        "higher_is_better": false,
+        "family": "catboost",
+        "origin": "B104_BOX_VALIDATION",
+        "metric_2024": 14.854673973212932,
+        "metric_2025": 15.342373088468602,
+        "validation_50_50": 15.098523530840767,
+        "metric_2026": null,
+        "ranked_variants_in_role": 1025,
+        "test_status": "PENDING_AUTHENTICATED_BOX_TEST_COMPLETION"
+      },
+      {
+        "target": "winner",
+        "horizon_minutes": 60,
+        "objective": "log_loss",
+        "higher_is_better": false,
+        "family": "B095_FIXED_CONVEX_BLEND",
+        "origin": "PRESERVED_BASELINE",
+        "metric_2024": 0.6135877334925194,
+        "metric_2025": 0.6050855100640153,
+        "validation_50_50": 0.6093366217782673,
+        "metric_2026": 0.6259438698761487,
+        "ranked_variants_in_role": 1069,
+        "test_status": "AUTHENTICATED_210_ROW_REPLAY"
+      },
+      {
+        "target": "winner",
+        "horizon_minutes": 60,
+        "objective": "brier",
+        "higher_is_better": false,
+        "family": "B095_FIXED_CONVEX_BLEND",
+        "origin": "PRESERVED_BASELINE",
+        "metric_2024": 0.21272666802250395,
+        "metric_2025": 0.2085303089931908,
+        "validation_50_50": 0.2106284885078474,
+        "metric_2026": 0.21819028163687035,
+        "ranked_variants_in_role": 1069,
+        "test_status": "AUTHENTICATED_210_ROW_REPLAY"
+      },
+      {
+        "target": "winner",
+        "horizon_minutes": 60,
+        "objective": "accuracy",
+        "higher_is_better": true,
+        "family": "catboost",
+        "origin": "PRESERVED_BASELINE",
+        "metric_2024": 0.6691900075700227,
+        "metric_2025": 0.6785173978819969,
+        "validation_50_50": 0.6738537027260098,
+        "metric_2026": 0.6523809523809524,
+        "ranked_variants_in_role": 1069,
+        "test_status": "AUTHENTICATED_210_ROW_REPLAY"
+      },
+      {
+        "target": "winner",
+        "horizon_minutes": 120,
+        "objective": "log_loss",
+        "higher_is_better": false,
+        "family": "B095_FIXED_CONVEX_BLEND",
+        "origin": "PRESERVED_BASELINE",
+        "metric_2024": 0.6137260664736284,
+        "metric_2025": 0.6055847507156056,
+        "validation_50_50": 0.609655408594617,
+        "metric_2026": 0.633289981349907,
+        "ranked_variants_in_role": 1065,
+        "test_status": "AUTHENTICATED_210_ROW_REPLAY"
+      },
+      {
+        "target": "winner",
+        "horizon_minutes": 120,
+        "objective": "brier",
+        "higher_is_better": false,
+        "family": "sklearn_extra_trees",
+        "origin": "PRESERVED_BASELINE",
+        "metric_2024": 0.2123881139619231,
+        "metric_2025": 0.20895472678331078,
+        "validation_50_50": 0.21067142037261694,
+        "metric_2026": 0.21806555813422787,
+        "ranked_variants_in_role": 1065,
+        "test_status": "AUTHENTICATED_210_ROW_REPLAY"
+      },
+      {
+        "target": "winner",
+        "horizon_minutes": 120,
+        "objective": "accuracy",
+        "higher_is_better": true,
+        "family": "B095_FIXED_CONVEX_BLEND",
+        "origin": "PRESERVED_BASELINE",
+        "metric_2024": 0.6737320211960636,
+        "metric_2025": 0.6754916792738276,
+        "validation_50_50": 0.6746118502349455,
+        "metric_2026": 0.6571428571428571,
+        "ranked_variants_in_role": 1065,
+        "test_status": "AUTHENTICATED_210_ROW_REPLAY"
+      }
+    ]
+  },
+  "native_verification": {
+    "scope": "BOUNDED_EXISTING_MODEL_APPLICATION_AND_ISOLATED_PUBLICATION",
+    "status": "PASS_REPRESENTATIVE_ENGINEERING_CHECKS",
+    "selected_existing_models": 12,
+    "completed_existing_model_tasks": 12,
+    "failed_tasks": 0,
+    "missing_tasks": 0,
+    "new_owner_scientific_fits": 0,
+    "new_owner_calibration_fits": 0,
+    "owner_research_executions": 0,
+    "engineering_fixture_optimizer_calls": 4,
+    "frozen_test_inference_calls": 12,
+    "warm_repeat_inference_calls": 0,
+    "model_states_preserved": 225,
+    "worker_rss_peak_bytes": 4889866240,
+    "sustained_180_second_75_percent_gate": "NOT_EVALUATED_SHORT_WORKLOAD",
+    "worker_count_is_measured_core_count": false,
+    "phase_measurements": [
+      {
+        "phase": "FROZEN_TEST_AUTHORIZED_INFERENCE",
+        "actual_operations": 12,
+        "all_observed_native_pools_one_thread": true,
+        "distinct_worker_pids": 12,
+        "measured_average_cores_during_call_window": 4.678330273807633,
+        "native_call_window_seconds": 0.116075726,
+        "peak_overlapping_real_native_prediction_calls": 12,
+        "sum_native_process_cpu_seconds": 0.5430405829999998,
+        "total_original_rows_predicted": 14400
+      },
+      {
+        "phase": "HISTORICAL_CALIBRATION_SERIALIZATION_PARITY",
+        "actual_operations": 12,
+        "all_observed_native_pools_one_thread": true,
+        "distinct_worker_pids": 12,
+        "measured_average_cores_during_call_window": 4.318433650843113,
+        "native_call_window_seconds": 0.22412538,
+        "peak_overlapping_real_native_prediction_calls": 12,
+        "sum_native_process_cpu_seconds": 0.9678705830000001,
+        "total_original_rows_predicted": 27444
+      },
+      {
+        "phase": "VALIDATION_REPLAY_COMPARE_WITH_B104",
+        "actual_operations": 12,
+        "all_observed_native_pools_one_thread": true,
+        "distinct_worker_pids": 12,
+        "measured_average_cores_during_call_window": 4.175309734728146,
+        "native_call_window_seconds": 0.266882892,
+        "peak_overlapping_real_native_prediction_calls": 12,
+        "sum_native_process_cpu_seconds": 1.1143187370000005,
+        "total_original_rows_predicted": 31716
+      }
+    ],
+    "real_s3_publication": {
+      "status": "PASS",
+      "isolated_child_cases": 3,
+      "case_types": [
+        "EXIT_2_WITHOUT_FINAL_RETURN",
+        "OWNED_CHILD_SIGKILL",
+        "NORMAL_VERIFIED_PARTIAL_RETURN"
+      ],
+      "full_get_sha_verified_objects": 35,
+      "canonical_owner_pointer_writes": 0,
+      "owner_research_executions": 0,
+      "scientific_fits": 0,
+      "namespace_isolated": true,
+      "S3_responses_mocked": false,
+      "normal_partial_duplicate_abnormal_return": false
+    },
+    "full_research_run_launched": false,
+    "full_v13_complete": false,
+    "archive_self_test": {
+      "result": "PASS",
+      "tests_run": 60,
+      "seconds": 23.522,
+      "failures": 0,
+      "errors": 0,
+      "includes_full_pyarrow_point_replay_case": true,
+      "executable_pin": {
+        "bytes": 11163003,
+        "sha256": "5673b4689fb8f9da7c7c1c5303b71cc04b3e154e00ea9fcc62ff4c193d199a0f"
+      },
+      "owner_research_executions": 0
+    },
+    "launch_readiness": {
+      "elapsed_seconds": 106.85967603699919,
+      "failed_gates": 0,
+      "not_run_gates": 0,
+      "protected_wait_required_before_owner_execution": false,
+      "status": "READY_FOR_OWNER_LAUNCH",
+      "successful_gates": 9,
+      "owner_research_dispatches": 0,
+      "owner_execution_started": false,
+      "must_resolve_latest_checkpoint_again_at_owner_launch": true
+    }
+  },
+  "recovered_frozen_test": {
+    "local_verified_base_results": 46,
+    "local_verified_prediction_ledgers": 92,
+    "earlier_cached_base_results": 24,
+    "new_B104_base_inference_results": 22,
+    "B104_local_completion_records": 23,
+    "B104_new_prediction_ledgers": 44,
+    "B104_reused_prediction_ledgers": 2,
+    "completed_game_rows": 210,
+    "forecast_population_rows": 1200,
+    "remaining_original_225_base_test_inferences_at_most": 179,
+    "additional_failed_neural_replacements_at_most": 15,
+    "identity_hash_schema_and_population_verified": true,
+    "all_four_new_total_leaders_test_pending": true,
+    "audit_new_fits": 0,
+    "audit_new_predictions": 0,
+    "frozen_test_stage_complete": false,
+    "immutable_backup": {
+      "status": "FULL_GET_SHA_VERIFIED",
+      "source_payload_files": 161,
+      "source_payload_bytes": 14719711,
+      "canonical_owner_pointer_writes": 0,
+      "verification_evidence": {
+        "bytes": 134950,
+        "sha256": "e0d6350dc2307afa9cbe570fbb2f20d2d5003cff9a3af84e28d6741ce3e73e85"
+      }
+    }
+  }
+}

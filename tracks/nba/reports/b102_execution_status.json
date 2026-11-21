@@ -1,0 +1,158 @@
+{
+  "schema": "sel.nba.public_execution_status.b102.v1",
+  "owner": "NBA",
+  "evidence_through_utc": "2026-11-18T23:59:48.776365+00:00",
+  "engineering_observed_at_utc": "2026-11-19T00:05:30.697423+00:00",
+  "overall_scientific_status": "PARTIAL_RESUMABLE",
+  "full_v13_complete": false,
+  "automatic_promotions": 0,
+  "b101_failure": {
+    "status": "FAILED",
+    "exit_code": 2,
+    "projection_tasks": 5808,
+    "completed_projection_tasks": 2374,
+    "deferred_projection_tasks": 3434,
+    "individual_projection_failures": 0,
+    "new_estimator_fits": 0,
+    "new_calibration_fits": 0,
+    "new_meta_model_fits": 0,
+    "new_residual_distribution_fits": 0,
+    "requested_worker_ceiling": 24,
+    "admitted_projection_workers": 1,
+    "measured_cpu_seconds": 60.436192000000005,
+    "representative_interval_seconds": 180.84465288,
+    "occupancy": 0.33418843763162087,
+    "productive_progress_observed": true,
+    "earlier_input_failure": "DECODED_HISTORY_EXCEEDED_64_MIB_IPC_BOUND",
+    "projection_admission_cause": "GLOBAL_IO_PSI_UNCONDITIONAL_SINGLE_WORKER_LIMIT",
+    "projection_stop_cause": "SCIENTIFIC_OCCUPANCY_GATE_APPLIED_TO_PRODUCTIVE_PRESENTATION_WORK"
+  },
+  "preserved_work": {
+    "b100_residual_distribution_fits": 320,
+    "b101_original_states_verified": 320,
+    "b101_missing_states_restored": 0,
+    "b101_hydration_model_applications_verified": false,
+    "historical_point_variants": 5808,
+    "new_fit_credit_from_restoration": 0
+  },
+  "b102_projection_v1": {
+    "status": "COMPLETE",
+    "native_owner_workload_observed": true,
+    "full_research_run_launched": false,
+    "model_variants": 5808,
+    "completed_projection_tasks": 5808,
+    "new_projections_created": 0,
+    "verified_warm_reuses": 5808,
+    "failed_tasks": 0,
+    "deferred_tasks": 0,
+    "declared_games_each": 1200,
+    "completed_test_games": 210,
+    "upcoming_games": 990,
+    "verified_records": 6969600,
+    "missing_records": 0,
+    "null_predictions": 0,
+    "missing_outputs": 0,
+    "durably_verified_projection_count": 5808,
+    "requested_worker_ceiling": 24,
+    "peak_physical_workers": 24,
+    "measured_overlapping_projection_tasks": 21,
+    "distinct_completed_worker_pids": 29,
+    "stage_wall_seconds": 144.75718207699538,
+    "completed_task_cpu_seconds": 168.66606646399998,
+    "task_cpu_per_stage_wall_second": 1.1651654449468878,
+    "native_independent_logging_seconds": 10,
+    "scientific_occupancy_pass_claimed": false,
+    "new_estimator_fits": 0,
+    "new_calibration_fits": 0,
+    "new_residual_distribution_fits": 0,
+    "new_forecast_values": 0,
+    "provider_data_requests": 0,
+    "whole_instance_wall_interval_estimate_usd": 0.10974343368618558,
+    "actual_billed_cost_usd": null,
+    "nba_allocated_cost_usd": null,
+    "remaining_bottleneck": "PUBLICATION_BACKLOG_STARVED_VERIFICATION_QUEUE"
+  },
+  "b102_projection_v2": {
+    "status": "ENGINEERING_TESTED_OWNER_CHECK_PENDING_AT_THIS_EVIDENCE_CUTOFF",
+    "targeted_engineering_tests_passed": 22,
+    "targeted_engineering_tests_failed": 0,
+    "verification_and_publication_queues_independent": true,
+    "completed_checkpoint_reference_reuse": true,
+    "historical_remote_proofs_relabeled_as_current": false,
+    "scientific_worker_hard_ceiling_preserved": true,
+    "productive_work_fixed_wall_timeout": false,
+    "unchanged_cpu_acceptance_percent": 75,
+    "unchanged_cpu_acceptance_interval_seconds": 180,
+    "new_owner_model_fits_claimed": 0
+  },
+  "retained_comparison_population": [
+    {
+      "season": "2024-25",
+      "completed_games": 1314,
+      "purpose": "VALIDATION"
+    },
+    {
+      "season": "2025-26",
+      "completed_games": 1315,
+      "purpose": "VALIDATION"
+    },
+    {
+      "season": "2026-27",
+      "completed_games": 210,
+      "purpose": "PREVIOUSLY_EXPOSED_TEST"
+    }
+  ],
+  "population_qualification": {
+    "known_validation_omissions": 14,
+    "full_independent_census_verified": false,
+    "expanded_population_rescored": false,
+    "test_used_for_selection": false,
+    "evaluation_weights_change_training_rows": false,
+    "primary_validation_weight": "50/50"
+  },
+  "publication": {
+    "source_scope": "NBA_SANITIZED_AGGREGATES_ONLY",
+    "draft_review": true,
+    "merged": false,
+    "deployed": false,
+    "private_models_or_cloud_paths_published": false,
+    "new_scientific_score_claimed": false
+  },
+  "evidence": [
+    {
+      "label": "B101 failure diagnostic",
+      "bytes": 1071,
+      "sha256": "49208abf2c5677048646a756e06221f99ef092a0ab448528aab9a970f6946652"
+    },
+    {
+      "label": "B101 scientific input failure",
+      "bytes": 2470,
+      "sha256": "0a5deeee3f7ef85fb313b544e51f467a58180bd0a5d6e3525feceb3764f38636"
+    },
+    {
+      "label": "B101 measured CPU acceptance",
+      "bytes": 66255,
+      "sha256": "8f6f37845aa77d8911f2b2064209f539ac5f03fb4dc2c705e44f2a2d4e7cad75"
+    },
+    {
+      "label": "B101 independent telemetry",
+      "bytes": 749478,
+      "sha256": "3b257c008d265efff40145cab89d2b82a524bda5d713a47064a1b17aa685c317"
+    },
+    {
+      "label": "B102 native projection acceptance",
+      "bytes": 50273,
+      "sha256": "40be64e4ab0c57b36895c9998518ce2d3a376e84b0c7a2d8367ec3eb11f009aa"
+    },
+    {
+      "label": "B102 completed projection checkpoint",
+      "bytes": 24610192,
+      "sha256": "b9f229b9fcc5b92538510e5ff23981633a8a88c9f073efc939fd98c0c37def0d"
+    },
+    {
+      "label": "B102 projection V2 engineering verification",
+      "bytes": 1457,
+      "sha256": "a0997fd857e7dac70e080a0f001d9d65f2cb93455261ef99fe65fb9a89fc7c85"
+    }
+  ]
+}

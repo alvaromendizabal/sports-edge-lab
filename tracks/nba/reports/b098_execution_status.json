@@ -1,0 +1,123 @@
+{
+  "b097": {
+    "actual_invoiced_cost_usd": null,
+    "automatic_promotions": 0,
+    "cost_estimate_scope": "Whole-instance wall time through the science checkpoint only; no project allocation, later return-finalization cost or invoiced total is established.",
+    "cpu_stages": [
+      {
+        "configured_workers": 24,
+        "measured_capacity": 24,
+        "measured_cpu_seconds": 4046.0392730000003,
+        "measured_pass": true,
+        "occupancy_fraction": 0.9211995517394568,
+        "pending_tasks": 0,
+        "representative_seconds": 183.00591808800002,
+        "stage": "Context preparation and fitting",
+        "status": "PASS"
+      },
+      {
+        "configured_workers": 24,
+        "measured_capacity": 24,
+        "measured_cpu_seconds": 403.90000000000015,
+        "measured_pass": false,
+        "occupancy_fraction": 0.5566858296244864,
+        "pending_tasks": 0,
+        "representative_seconds": 30.230995242,
+        "stage": "Uncertainty evaluation",
+        "status": "CONDITIONAL_SHORT_QUEUE_COMPLETION_NOT_FULL_CAPACITY_PASS"
+      },
+      {
+        "configured_workers": 1,
+        "measured_capacity": 24,
+        "measured_cpu_seconds": 158.5799999999998,
+        "measured_pass": false,
+        "occupancy_fraction": 0.03623826133761229,
+        "pending_tasks": 3776,
+        "representative_seconds": 182.334906701,
+        "stage": "Private prediction export",
+        "status": "FAILED_STOP_NEW_ADMISSION_DRAINED"
+      }
+    ],
+    "execution_complete": false,
+    "failed_estimator_fits": 0,
+    "failure_reason": "The projection pool was fixed at one worker after a transient admission sample while the useful-work gate retained 24 admitted cores. The gate stopped new work after the measured occupancy requirement failed; final export then had no admitted capacity.",
+    "failure_stage": "Private prediction export",
+    "full_v13_complete": false,
+    "new_calibration_fits": 1232,
+    "new_estimator_fits": 672,
+    "new_provider_requests": 4,
+    "projection_jobs_initial": 5808,
+    "projection_jobs_pending_at_gate_stop": 3776,
+    "publication_performed": false,
+    "reused_calibration_fits": 150,
+    "reused_estimator_fits": 150,
+    "science_checkpoint_at_utc": "2026-11-18T04:29:03.984300Z",
+    "science_started_at_utc": "2026-11-18T03:20:50.798658Z",
+    "source_evidence": {
+      "bytes": 167708494,
+      "kind": "Authenticated scientific checkpoint, not a completed portable return",
+      "sha256": "62ecf63666834e836790d476c2ce46c53abc9fe659356c73c12b5113d96107c1"
+    },
+    "status": "FAILED_DURING_PRIVATE_EXPORT_WITH_SCIENCE_CHECKPOINTS_PRESERVED",
+    "uncertainty_reports_completed": 5808,
+    "uncertainty_reports_failed": 0,
+    "whole_instance_estimate_usd_at_science_checkpoint": 2.9222069888514945
+  },
+  "b098": {
+    "actual_local_fixture_peak_workers": 4,
+    "canonical_runner_engineering": {
+      "actual_packaged_entrypoint_tested": true,
+      "observed_at_utc": "2026-11-18T05:42:44.866377+00:00",
+      "owner_research_executions": 0,
+      "owner_sustained_capacity_pass_claimed": false,
+      "provider_requests": 0,
+      "tests_passed": 70
+    },
+    "configured_worker_ceiling_cases": [
+      12,
+      24,
+      48
+    ],
+    "local_export_checks_passed": 11,
+    "new_forecasts_during_preparation": 0,
+    "owner_execution_started": false,
+    "owner_sustained_capacity_pass_claimed": false,
+    "preparation_observed_at_utc": "2026-11-18T05:36:07Z",
+    "provider_requests_during_preparation": 0,
+    "repair_summary": "Keep the configured worker ceiling independent of transient admission, expand and contract bounded workers with the shared capacity lease, reuse authenticated projection caches, and credit completed output only after durability verification. Drain running jobs and preserve deferred work when admission stops.",
+    "scientific_fits_during_preparation": 0,
+    "staging_verification": "Not included in this local proposal; delivery evidence is reported separately.",
+    "status": "LOCAL_REPAIR_PREPARED_OWNER_EXECUTION_PENDING"
+  },
+  "owner": "NBA",
+  "preserved_reviews": [
+    {
+      "href": "b095_review.html",
+      "label": "Earlier saved validation and source-coverage review"
+    },
+    {
+      "href": "season_comparison.html",
+      "label": "Previously issued selected forecasts and dated comparisons"
+    }
+  ],
+  "publication": {
+    "main_branch_updated": false,
+    "new_scientific_metrics_published": false,
+    "production_promotion": false,
+    "status": "DRAFT_SOURCE_PROPOSAL_PENDING_REVIEW",
+    "website_deployed": false
+  },
+  "return_observation": {
+    "full_archive_integrity_verified": false,
+    "heartbeat_at_utc": "2026-11-18T05:33:10Z",
+    "new_latest_return_promotion_claimed": false,
+    "note": "This dated snapshot does not establish a completed B097 return. The launch path must resolve the latest durable checkpoint and verified return again.",
+    "observed_at_utc": "2026-11-18T05:33:19Z",
+    "payloads_to_verify": 41240,
+    "status": "B097_PHYSICAL_RETURN_FINALIZATION_STILL_RUNNING",
+    "verified_payloads": 12152
+  },
+  "review_prepared_at_utc": "2026-11-18T05:36:07Z",
+  "schema": "sports_edge_lab.nba.b098.execution_status_public.v1",
+  "scope": "Sanitized execution and recovery status. Existing public scientific metrics and selected issued forecasts remain dated and unchanged."
+}
