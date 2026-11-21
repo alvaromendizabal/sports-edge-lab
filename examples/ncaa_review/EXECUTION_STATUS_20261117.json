@@ -1,0 +1,204 @@
+{
+  "attempts": [
+    {
+      "elapsed_seconds": 5381.66,
+      "failure_label": "Progress publication failed after model fitting",
+      "fresh_startup_tests": null,
+      "historical_checkpoint_reuses": null,
+      "id": "r22-first",
+      "label": "R22 \u00b7 first attempt",
+      "new_target_fits": 11,
+      "note": "Eleven completed target-fit commits were preserved. The failed parent progress callback did not mean eleven failed estimators.",
+      "outcome": "FAILED_RESUMABLE",
+      "phase": "RESEARCH",
+      "release": "R22",
+      "return_published": true,
+      "reused_startup_tests": null
+    },
+    {
+      "elapsed_seconds": 16.09,
+      "failure_label": "Population registration conflict",
+      "fresh_startup_tests": null,
+      "historical_checkpoint_reuses": null,
+      "id": "r22-retry",
+      "label": "R22 \u00b7 retry",
+      "new_target_fits": 0,
+      "note": "No new target-fit credit. The prior completed artifacts remain separate from this failed retry.",
+      "outcome": "FAILED_RESUMABLE",
+      "phase": "BEFORE_FIT",
+      "release": "R22",
+      "return_published": true,
+      "reused_startup_tests": null
+    },
+    {
+      "elapsed_seconds": 1320.52,
+      "failure_label": "Source aggregate exceeded its object bound",
+      "fresh_startup_tests": null,
+      "historical_checkpoint_reuses": 108,
+      "id": "r23",
+      "label": "R23",
+      "new_target_fits": 0,
+      "note": "Source acquisition advanced and 108 historical checkpoints were verified for reuse. New optimization was not reached.",
+      "outcome": "FAILED_RESUMABLE",
+      "phase": "BEFORE_FIT",
+      "release": "R23",
+      "return_published": true,
+      "reused_startup_tests": null
+    },
+    {
+      "elapsed_seconds": 315.364679428,
+      "failure_label": "Required recovery wrapper was missing",
+      "fresh_startup_tests": 867,
+      "historical_checkpoint_reuses": null,
+      "id": "r24-first",
+      "label": "R24 \u00b7 first attempt",
+      "new_target_fits": 0,
+      "note": "Cold engineering checks completed. Recovery failed before source refresh or ready fit tasks.",
+      "outcome": "FAILED_RESUMABLE",
+      "phase": "BEFORE_FIT",
+      "release": "R24",
+      "return_published": true,
+      "reused_startup_tests": 0
+    },
+    {
+      "elapsed_seconds": 74.202625541,
+      "failure_label": "Same missing recovery wrapper",
+      "fresh_startup_tests": 0,
+      "historical_checkpoint_reuses": null,
+      "id": "r24-retry",
+      "label": "R24 \u00b7 retry",
+      "new_target_fits": 0,
+      "note": "The matching startup-test receipt was reused. Recovery still repeated and failed; its CPU and elapsed cost were not zero.",
+      "outcome": "FAILED_RESUMABLE",
+      "phase": "BEFORE_FIT",
+      "release": "R24",
+      "return_published": true,
+      "reused_startup_tests": 867
+    },
+    {
+      "elapsed_seconds": 840.300989544,
+      "failure_label": "Source persistence stop; packaging lease exhausted",
+      "fresh_startup_tests": 955,
+      "historical_checkpoint_reuses": 108,
+      "id": "r25",
+      "label": "R25 \u00b7 newer local attempt",
+      "new_target_fits": 0,
+      "note": "Zero new optimizer or calibration fits. Recovery authenticated 108 historical target checkpoints. Incremental scoreboard work reached 21/34 units. The 840.30-second owner summary precedes failed packaging; terminal elapsed was 905.00 seconds.",
+      "outcome": "RETURN_PACKAGING_FAILED_RESUMABLE",
+      "phase": "BEFORE_FIT",
+      "release": "R25",
+      "return_published": false,
+      "reused_startup_tests": 0
+    }
+  ],
+  "evidence": [
+    {
+      "label": "R24 retry return",
+      "scope": "Full archive and 104 payloads verified",
+      "sha256": "9853bda9c8fe96e00cea2a6b23b13aa078747e90399fe4a2eb77a49fa5aa4e0e"
+    },
+    {
+      "label": "R24 earlier return",
+      "scope": "Full archive and 103 payloads verified",
+      "sha256": "59c1f3f5dc345483e21951d9451924b653f0b3e93448023f5986c47471dd0a06"
+    },
+    {
+      "label": "R22 preserved fit evidence",
+      "scope": "Earlier authenticated return; 11 new physical target commits",
+      "sha256": "7cbf0c776a56b5b549f60c5846e9c8c3080409b61914ce36ce6ae71e3193e757"
+    },
+    {
+      "label": "R23 source and checkpoint evidence",
+      "scope": "Earlier authenticated return; source progress and historical reuse",
+      "sha256": "659591f05656a93c6bc89025a4f5e15a13d28f8807dd0f5bab9aab6ab3b2eaaa"
+    },
+    {
+      "label": "R25 local terminal status",
+      "scope": "Read-only captured bytes, not a complete owner-return integrity proof",
+      "sha256": "cc7f4540528e0e5aafce721b50ca8625d17b2c44611bb1a06664959af13b1939"
+    },
+    {
+      "label": "R25 recovered failed-execution evidence",
+      "scope": "Full read-only recovery copy: 411 payloads and 198 journal entries verified; zero new owner executions",
+      "sha256": "385a3a7a6d2ea86c062dccfa8acdc3dd8b2a445168a6edeb38a02dc34aed5c96"
+    }
+  ],
+  "latest_observed_attempt": {
+    "evidence_class": "VERIFIED_RECOVERY_EVIDENCE",
+    "note": "The newer R25 execution completed 4 of 20 stages, then source persistence failed and return packaging also failed. A read-only recovery copy now verifies 411 payloads and 198 journal entries; the original owner return was never published.",
+    "release": "R25",
+    "return_published": false,
+    "status": "RETURN_PACKAGING_FAILED_RESUMABLE",
+    "status_label": "Return packaging failed \u00b7 resumable"
+  },
+  "latest_verified_return": {
+    "integrity": "FULL_ARCHIVE_VERIFIED",
+    "note": "The R24 retry archive and its 104 payloads passed full verification. Its scientific result is failed/resumable, with zero new target fits. It predates the newer local R25 failure.",
+    "payloads_verified": 104,
+    "release": "R24",
+    "sha256": "9853bda9c8fe96e00cea2a6b23b13aa078747e90399fe4a2eb77a49fa5aa4e0e"
+  },
+  "observed_at": "2026-11-17T22:49:17.961565+00:00",
+  "owner": "NCAA basketball",
+  "preserved_work": {
+    "all_repeated_work_eliminated": false,
+    "duplicate_fits_proven": false,
+    "new_target_fits_in_audited_attempts": 11,
+    "note": "Eleven new physical target fits from R22 remain authenticated. R23 and R25 each accessed 108 historical checkpoints; those are reused artifacts, not 216 newly fitted models. Later audited attempts made no new target fits.",
+    "repeat_work_note": "No duplicate target optimization is evidenced in these later failed attempts. The R24 retry reused all 867 matching startup cases in about 0.064 seconds, but repeated recovery still cost time. R25 then ran 955 fresh prerequisite cases in 294.12 seconds under its new code identity. That is repeated engineering cost, separate from scientific fitting; preparation checks do not make an owner run free. R25 passed the previous recovery-wrapper barrier and reached incremental source work before a different persistence failure."
+  },
+  "publication": {
+    "deployment_verified": false,
+    "new_fits": 0,
+    "new_forecasts": 0,
+    "note": "Prepared source for review. Deployment has not been verified. This publication performs no owner research, model fitting, source refresh, rescoring or forecast issuance.",
+    "owner_runs": 0,
+    "provider_requests": 0,
+    "source_state": "PREPARED"
+  },
+  "resume_contract": {
+    "explanation": "A crash during return packaging correctly leaves the previous verified return in place. Continuation must also inspect newer owner run journals and incomplete packaging, authenticate completed task receipts, and resume unfinished work. It must not infer a clean restart from the older pointer.",
+    "headline": "The published pointer must not hide a newer durable checkpoint.",
+    "steps": [
+      "Resolve the latest verified return and newer durable owner journals again at launch; preserve the distinction between an archive and an unpublished checkpoint.",
+      "Authenticate saved fit and prediction receipts against the same inputs, recipe, temporal split and population. Reuse completed scientific work; changed reporting weights alone must not refit it.",
+      "Recover completed worker outputs whose parent publication failed. A wrapper or reporting failure must not discard an already completed estimator.",
+      "Keep paid source captures and normalized partitions keyed by their real request and content identities. Fetch actual gaps, not the entire history again.",
+      "Checkpoint after bounded tasks, stop new admission when interrupted, drain admitted work safely, and publish a verified partial return only after integrity checks."
+    ]
+  },
+  "schema": "sel.ncaa.public.execution_status.v1",
+  "science_contract": {
+    "new_full_population_champion": false,
+    "note": "Men and women retain independent populations and champion registries. Selection uses annual 2024\u201325 and 2025\u201326 validation metrics, with 50/50 primary and the four declared sensitivity ratios. Changing these ratios does not change training weights or predictions. Completed 2026\u201327 games remain a frozen test report, with zero selection weight. Earlier test exposure remains disclosed; full official populations and a new qualified champion are still incomplete.",
+    "primary_weights": [
+      0.5,
+      0.5
+    ],
+    "test_exposure_erased": false,
+    "test_season": "2026-27",
+    "test_selection_weight": 0,
+    "validation_seasons": [
+      "2024-25",
+      "2025-26"
+    ]
+  },
+  "source_coverage": {
+    "limits": "The retained report covers 106 bookmakers and 44,520 source/season/market/horizon cells; 1,384 cells were nonzero and no bookmaker had complete coverage. Missing histories remain gaps. Source availability, historical issue-time qualification, model-ready rows and full game populations are different claims.",
+    "note": "The preserved R23 source stage recorded 345 successful HTTP responses: 257 Odds API responses, 50 ESPN and 38 NCAA official. Its bounded acquisition plan recorded 256 of 2,680 captures, with 2,424 pending. These are dated progress counters, not retrievals performed by this dashboard. The newer recovered R25 scoreboard stage reached 21 of 34 units before a source-capture persistence stop; it did not complete a source refresh."
+  },
+  "throughput": {
+    "committed_fits": 11,
+    "measurement_seconds": 182.98,
+    "newer_12_to_24_core_science_proven": false,
+    "next_run_rule": "Target 12 useful scientific workers and admit up to 24 only with verified shared CPU and memory headroom. The explicit worker ceiling must hold. Measure preparation, fit-worker CPU, ready depth, completions and starvation separately; require 75% of admitted capacity over 180 seconds when enough eligible work exists.",
+    "note": "The earlier measured NCAA scientific interval failed its selected-capacity gate. Its queue supplied work too slowly and the parent progress callback later failed. No newer passing NCAA scientific interval is established by these records.",
+    "peak_ready_depth": 1,
+    "peak_workers": 5,
+    "release": "R22",
+    "reported_capacity_percent": 4.2313,
+    "requested_workers": 12,
+    "required_percent": 75,
+    "scientific_gate": "FAILED"
+  }
+}
