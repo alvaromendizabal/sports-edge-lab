@@ -3,7 +3,9 @@
 
 [Current browser dashboard source](current/index.html) · [Saved selected data](current/data.json) · [Dashboard methodology](current/README.md)
 
-**Publication state: prepared for the public Site.** This responsive view brings the selected upcoming-game outlooks, both Circa sides, objective-specific model scorecards and phone-sized sharing cards together. Its verified evidence and original issue clocks are separate from the publication time. The live deployment URL and receipt will be recorded after deployment verification.
+**Publication state: public Site deployed, version 1.** [Open the current NFL dashboard](https://sports-edge-lab-nfl-current.alv-mendizabal.chatgpt.site/) · [Publication receipt](current/publication.json). All seven current application assets returned HTTP 200 anonymously and matched the browser-tested preview bytes. The production browser reopen was blocked by unavailable tool connection/context and remains explicitly unverified.
+
+The dashboard includes 12 upcoming games, 24 exact-line Circa sides and six phone cards. Default forecasts retain November 16 inputs with R18-selected T120 models. Current T60 matchup values remain unavailable. All 216 newer R20 fits were audited without training; none improved the incumbent in 14 same-clock, same-cohort comparisons. Original source, compilation and selection clocks remain separate from publication time.
 
 Earlier reports below retain their original dates, scientific qualifications and source/deployment states.
 <!-- NFL_CURRENT_SLATE_20261120_END -->

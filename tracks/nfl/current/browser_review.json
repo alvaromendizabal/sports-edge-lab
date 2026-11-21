@@ -34,6 +34,9 @@
     "circa_evidence.json": "c289471d8d45bde905b2c037bd314f93368f8595ba361c1e933067ccaaf702dc",
     "newest_model_comparison.json": "97f501f0cd40bde3e54cc80821744558602db916a9f883cc93480777fa66a442"
   },
-  "hosted_validation": "PENDING_DEPLOYMENT",
-  "scope": "Reporting and exact-line probability evaluation only; no training, campaign launch, provider refresh or production promotion."
+  "hosted_validation": "DEPLOYED_ASSET_BYTES_MATCH_PREVIEW",
+  "scope": "Reporting and exact-line probability evaluation only; no training, campaign launch, provider refresh or production promotion.",
+  "hosted_verified_at": "2026-11-21T01:29:28.804537+00:00",
+  "live_browser_reopen": "UNAVAILABLE_TOOL_CONNECTION",
+  "anonymous_http_assets_verified": 7
 }

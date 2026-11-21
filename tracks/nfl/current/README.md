@@ -4,7 +4,7 @@
 
 This is the buildless browser presentation for the next NFL slate. `index.html`, `styles.css`, `app.js` and `data.json` are deployed together. No framework, package installation, external font or third-party asset is required.
 
-The current source is prepared for publication. The deployment receipt and canonical source commit are recorded separately after the live Site has been updated and checked.
+**Deployed publicly, version 1:** [Open the NFL dashboard](https://sports-edge-lab-nfl-current.alv-mendizabal.chatgpt.site/). The [publication receipt](publication.json) records the pushed Site source, application-source commit and exact anonymous HTTP asset verification. Local browser checks passed; the browser connection was unavailable for the final production reopen, so that separate check is not claimed.
 
 ## Verified content — November 20, 2026 Pacific
 
