@@ -1,4 +1,4 @@
-name: NFL V10 online publication review
+name: NFL online publication and archive review
 on:
   pull_request:
     paths: ['tracks/nfl/**', '.github/workflows/nfl-static-review.yml']
@@ -58,17 +58,31 @@ jobs:
           PLAYWRIGHT_MODULE_DIR: ${{ runner.temp }}/nfl-static-browser/node_modules/playwright
           NFL_N088_EVIDENCE: ${{ runner.temp }}/nfl-static-evidence
         run: node tracks/nfl/dashboard_n088_browser.cjs
-      - name: Verify existing production NFL Site when deployment receipt is present
-        env:
-          PLAYWRIGHT_MODULE_DIR: ${{ runner.temp }}/nfl-static-browser/node_modules/playwright
-          NFL_N088_EVIDENCE: ${{ runner.temp }}/nfl-static-evidence/online
-          NFL_N088_ONLINE_URL: https://sports-edge-lab-nfl.alv-mendizabal.chatgpt.site/n088/
+      - name: Record archived origin availability separately from current publication
         run: |
-          if test -f tracks/nfl/n088_online_deployment.json; then
-            node tracks/nfl/dashboard_n088_browser.cjs
-          else
-            echo 'No N088 deployment receipt yet; source verification is not a deployment claim.'
-          fi
+          python - <<'PY'
+          import datetime, json, os, urllib.error, urllib.request
+          from pathlib import Path
+          results=[]
+          for release,url in {
+              'N088':'https://sports-edge-lab-nfl.alv-mendizabal.chatgpt.site/n088/',
+              'Circa archive':'https://sports-edge-lab-nfl.alv-mendizabal.chatgpt.site/circa/',
+          }.items():
+              row={'release':release,'url':url,'role':'ARCHIVED_ORIGIN','gating':False}
+              try:
+                  with urllib.request.urlopen(url,timeout=20) as response:
+                      row.update(http_status=response.status,availability='AVAILABLE' if response.status==200 else 'UNAVAILABLE')
+              except urllib.error.HTTPError as exc:
+                  row.update(http_status=exc.code,availability='UNAVAILABLE')
+              except (OSError,TimeoutError) as exc:
+                  row.update(http_status=None,availability='PROBE_FAILED',error_type=type(exc).__name__)
+              results.append(row)
+          record={'checked_at':datetime.datetime.now(datetime.timezone.utc).isoformat(),'scope':'Availability observations only. Historical deployment receipts are not rewritten; the current publication has a separate mandatory live browser gate.','origins':results}
+          out=Path(os.environ['RUNNER_TEMP'])/'nfl-static-evidence'/'archived-origin-availability.json'
+          out.parent.mkdir(exist_ok=True,parents=True)
+          out.write_text(json.dumps(record,indent=2)+'\n')
+          print(json.dumps(record))
+          PY
       - name: Verify the exact public dashboard emitted by the sealed N088 executable
         env:
           PLAYWRIGHT_MODULE_DIR: ${{ runner.temp }}/nfl-static-browser/node_modules/playwright
@@ -101,17 +115,6 @@ jobs:
           PLAYWRIGHT_MODULE_DIR: ${{ runner.temp }}/nfl-static-browser/node_modules/playwright
           CIRCA_N089_EVIDENCE: ${{ runner.temp }}/nfl-static-evidence/circa-source
         run: node tracks/nfl/circa_million_2026/test_current_n089_browser.cjs
-      - name: Verify actual published Circa route when a deployment receipt is present
-        env:
-          PLAYWRIGHT_MODULE_DIR: ${{ runner.temp }}/nfl-static-browser/node_modules/playwright
-          CIRCA_N089_EVIDENCE: ${{ runner.temp }}/nfl-static-evidence/circa-online
-          CIRCA_N089_ONLINE_URL: https://sports-edge-lab-nfl.alv-mendizabal.chatgpt.site/circa/
-        run: |
-          if python -c "import json,pathlib; p=pathlib.Path('tracks/nfl/circa_million_2026/current/online_deployment.json'); d=json.loads(p.read_text()) if p.exists() else {}; raise SystemExit(0 if str(d.get('state','')).startswith(('DEPLOYED','VERIFIED')) else 1)"; then
-            node tracks/nfl/circa_million_2026/test_current_n089_browser.cjs
-          else
-            echo 'Circa source prepared; this source does not yet have a matching deployment receipt.'
-          fi
       - name: Verify the sanitized projection of the preserved N089 runtime fixture
         if: always()
         env:
@@ -139,14 +142,23 @@ jobs:
           print(json.dumps({'fixture':'privacy-sanitized N089 runtime projection','html_sha256':fixture['html_sha256'],'new_model_fits':0}))
           PYFIXTURE
           node tracks/nfl/circa_million_2026/test_current_n089_browser.cjs
+      - name: Verify current published assets and real desktop and mobile interactions
+        env:
+          PLAYWRIGHT_MODULE_DIR: ${{ runner.temp }}/nfl-static-browser/node_modules/playwright
+          NFL_CURRENT_EVIDENCE: ${{ runner.temp }}/nfl-static-evidence/current-online
+          NFL_CURRENT_PR_HEAD: ${{ github.event.pull_request.head.sha || github.sha }}
+        run: |
+          python tracks/nfl/current/validate_snapshot.py
+          node tracks/nfl/current/test_live_browser.cjs
       - name: Preserve exact public bundle and browser evidence
         if: always()
         uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02
         with:
-          name: nfl-v10-publication-evidence
+          name: nfl-publication-and-archive-evidence
           path: |
             ${{ runner.temp }}/nfl-static-evidence
             tracks/nfl/dashboard_n088
             tracks/nfl/circa_million_2026/current
+            tracks/nfl/current
           if-no-files-found: error
           retention-days: 14
