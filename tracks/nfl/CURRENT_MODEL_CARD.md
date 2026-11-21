@@ -1,3 +1,15 @@
+# NFL current matchup readiness · November 20, 2026 Pacific
+
+[Current selected outlook](current/index.html) · [Selection and freshness evidence](current/evidence.json) · [Same-cohort newest-fit audit](current/newest_model_comparison.json) · [Exact official-line Circa calculations](current/circa_evidence.json)
+
+**R18 remains the verified selection; the newest R20 fits do not improve it.** All 216 existing new-fit candidates were checked on the exact same 2024/2025/2026 game cohorts, with zero new estimator calls. Their best 50/50 validation scores trail the retained nominees on all seven headline objectives at both T60 and T120. No 2026 label selects a replacement or breaks a validation tie.
+
+**Current matchup readiness differs from historical performance.** The recovered T60 future rows have zero qualified current winner-price sources; several selected policies repeat constant outputs across all 12 games. These rows remain unavailable in the public outlook. The default is the usable T120 matchup snapshot, compiled November 16 at 22:14:36 UTC from prices observed at 22:04:51.508512 UTC. R18 subsequently retained its selected probability, margin-MAE and total-MAE models. These are dated early projections, not refreshed or original live issues.
+
+The Circa board evaluates authenticated November 16 integer-margin distributions at all 24 remaining official Week 11 sides. Cover, push and expected-point arithmetic are exact to saved precision; no Gaussian approximation is substituted. Current-season full-cohort spread regrading remains unavailable. Publication is a reporting update, not a completed research campaign or automatic production promotion.
+
+The dated R18 and earlier model-card evidence below is preserved.
+
 # NFL current model evidence · N127R18 · November 18, 2026
 
 [Latest interactive evidence](n127r18/index.html) · [Selected annual metrics and denominators](n127r18/selected_metrics.json) · [Execution and source coverage](n127r18/README.md)

@@ -1,3 +1,15 @@
+<!-- NFL_CURRENT_SLATE_20261120_START -->
+# NFL current slate dashboard · November 20, 2026
+
+[Current browser dashboard source](current/index.html) · [Saved selected data](current/data.json) · [Dashboard methodology](current/README.md)
+
+**Publication state: public Site deployed, version 1.** [Open the current NFL dashboard](https://sports-edge-lab-nfl-current.alv-mendizabal.chatgpt.site/) · [Publication receipt](current/publication.json). All seven current application assets returned HTTP 200 anonymously and matched the browser-tested preview bytes. The production browser reopen was blocked by unavailable tool connection/context and remains explicitly unverified.
+
+The dashboard includes 12 upcoming games, 24 exact-line Circa sides and six phone cards. Default forecasts retain November 16 inputs with R18-selected T120 models. Current T60 matchup values remain unavailable. All 216 newer R20 fits were audited without training; none improved the incumbent in 14 same-clock, same-cohort comparisons. Original source, compilation and selection clocks remain separate from publication time.
+
+Earlier reports below retain their original dates, scientific qualifications and source/deployment states.
+<!-- NFL_CURRENT_SLATE_20261120_END -->
+
 # NFL · N127R18 verified partial return · November 18, 2026
 
 [Latest interactive evidence review](n127r18/index.html) · [Execution and coverage report](n127r18/README.md) · [Selected annual metrics](n127r18/selected_metrics.json) · [Current model evidence](CURRENT_MODEL_CARD.md)

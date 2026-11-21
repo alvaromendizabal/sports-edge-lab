@@ -1,0 +1,42 @@
+{
+  "status": "LOCAL_PREVIEW_VERIFIED",
+  "reviewed_at": "2026-11-21T01:22:39.703598+00:00",
+  "method": "Browser-driven review of the actual static preview, including a 390-pixel responsive viewport and clean 2x card screenshots.",
+  "checks": {
+    "desktop_render": "PASS",
+    "mobile_390px_no_horizontal_overflow": "PASS",
+    "sunday_11_monday_1_all_12": "PASS",
+    "team_search_chiefs_one_game": "PASS",
+    "three_way_outcome_labels_and_tie_mass": "PASS",
+    "t60_all_12_matchup_values_unavailable": "PASS",
+    "t120_model_horizon_filter_seven_cards": "PASS",
+    "newer_fit_comparison_216_models_14_comparisons_zero_improved": "PASS",
+    "circa_all_24_sides": "PASS",
+    "top_five_expected_points_2_914": "PASS",
+    "five_game_limit": "PASS",
+    "opposite_side_replaces_same_game": "PASS",
+    "clear_card": "PASS",
+    "four_game_phone_cards": "PASS",
+    "two_circa_phone_cards": "PASS",
+    "last_page_next_disabled": "PASS",
+    "snapshot_compilation_original_issue_distinction": "PASS"
+  },
+  "structural_snapshot_validation": "PASS",
+  "javascript_syntax": "PASS",
+  "games": 12,
+  "performance_rows": 19,
+  "source_files": {
+    "index.html": "b683e787da43b9936ca2412edd064d3fe8e03e23fd6c47b8c88b33c48c74813b",
+    "styles.css": "b5d96c7ab1ee471e50dd804dbf9e080e9ee2d66f5b09d901a73d8cd356670920",
+    "app.js": "9e3b6d5fb67b95639c2159e0199e38387436ed5d7dbb83821614621cb6a3f0a9",
+    "data.json": "2487388b0bb9da5d67e1249460b44f905baa5677c0f751ed486fc41e35aa20fb",
+    "evidence.json": "66a149027c8a84d871cf8824ba33489d2fc2270f41947e8b0504b3d205dde2e7",
+    "circa_evidence.json": "c289471d8d45bde905b2c037bd314f93368f8595ba361c1e933067ccaaf702dc",
+    "newest_model_comparison.json": "97f501f0cd40bde3e54cc80821744558602db916a9f883cc93480777fa66a442"
+  },
+  "hosted_validation": "DEPLOYED_ASSET_BYTES_MATCH_PREVIEW",
+  "scope": "Reporting and exact-line probability evaluation only; no training, campaign launch, provider refresh or production promotion.",
+  "hosted_verified_at": "2026-11-21T01:29:28.804537+00:00",
+  "live_browser_reopen": "UNAVAILABLE_TOOL_CONNECTION",
+  "anonymous_http_assets_verified": 7
+}
