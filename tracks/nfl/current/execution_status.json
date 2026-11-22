@@ -1,7 +1,7 @@
 {
   "schema": "sports-edge-lab.nfl.public-execution-status.v1",
-  "as_of": "2026-11-21T20:01:44-08:00",
-  "status": "HISTORICAL_VALIDATION_COMPLETE_FULL_V13_PENDING",
+  "as_of": "2026-11-22T04:37:39.510873+00:00",
+  "status": "HISTORICAL_POLICY_EVALUATION_COMPLETE_FULL_V13_PENDING",
   "owner": "NFL",
   "new_owner_campaign_executions": 0,
   "new_owner_scientific_fits": 0,
@@ -204,17 +204,21 @@
     "failure": "Resource deferral also blocked the activation progress writer, masking clean shutdown with repeated pause exceptions."
   },
   "latest_attempt": {
-    "status": "COMPLETE_HISTORICAL_VALIDATION_ONLY",
-    "expected_exports": 108,
-    "verified_exports": 108,
-    "score_rows": 2160,
-    "validation_rows": 123120,
-    "peak_workers": 12,
-    "worker_cpu_seconds": 1.6430807200000002,
     "base_fits": 0,
+    "build": "1fee13189c7e57184c7352579026aaa97c4930ad4a13b7041f6a6e79ed8c2d9e",
+    "completed_policies": 216,
     "current_forecasts": 0,
-    "production_promotions": 0,
-    "scores_sha256": "0a23a5e84f6cf98bb670870a7ac8c2ec259573f46efaf509b005e8d32d51473c"
+    "learned_target_weights": 108,
+    "manifest": "1ebeace9936d50f09e65989cc14c5cc5b90194c997e58dfdc9a797ca5071dc7f",
+    "metric_rows": 23328,
+    "scope": "HISTORICAL_PARAMETER_FITS_AND_VALIDATION",
+    "scores_sha256": "678b8d524a15cc216ad41cb30641f16ac9ceb46793c83e47f9d631da817c66c3",
+    "validation_predictions": 738720,
+    "failed_tasks": 0,
+    "deferred_tasks": 0,
+    "peak_workers": 12,
+    "parameter_worker_cpu_seconds": 3.9877883239999994,
+    "validation_worker_cpu_seconds": 77.688817483
   },
   "prior_parquet_qualification": {
     "candidate": "R24P1 986ae0fdeb40",
@@ -227,5 +231,2052 @@
       "campaign_validation.csv"
     ],
     "verified_pointer_unchanged": true
+  },
+  "r20_policy_comparison": {
+    "policy_return_sha256": "075d9bcbcd2109566f4343eaba691716a9934f255ed44291836996cca2bac111",
+    "baseline_scores_sha256": "0a23a5e84f6cf98bb670870a7ac8c2ec259573f46efaf509b005e8d32d51473c",
+    "policy_scores_sha256": "678b8d524a15cc216ad41cb30641f16ac9ceb46793c83e47f9d631da817c66c3",
+    "population": "Recovered R20 candidates. T120 inputs are carried to T60. Primary ties are reported; the displayed representative is lexicographically first.",
+    "primary": "50/50",
+    "scope": {
+      "base_fits": 0,
+      "build": "1fee13189c7e57184c7352579026aaa97c4930ad4a13b7041f6a6e79ed8c2d9e",
+      "completed_policies": 216,
+      "current_forecasts": 0,
+      "learned_target_weights": 108,
+      "manifest": "1ebeace9936d50f09e65989cc14c5cc5b90194c997e58dfdc9a797ca5071dc7f",
+      "metric_rows": 23328,
+      "scope": "HISTORICAL_PARAMETER_FITS_AND_VALIDATION",
+      "scores_sha256": "678b8d524a15cc216ad41cb30641f16ac9ceb46793c83e47f9d631da817c66c3",
+      "validation_predictions": 738720
+    },
+    "objectives": {
+      "binary_accuracy": {
+        "50/50": {
+          "policy": {
+            "weighted": 0.6115764764022733,
+            "annual_2024": 0.624561403508772,
+            "annual_2025": 0.5985915492957746,
+            "games_2024": 285,
+            "games_2025": 284,
+            "recipe": "add_qb_form",
+            "families": "catboost+tensorflow",
+            "policy": "fixed_equal",
+            "method": "heldout_normal",
+            "exact_ties": 1
+          },
+          "prior": {
+            "weighted": 0.6115455893254262,
+            "annual_2024": 0.6421052631578947,
+            "annual_2025": 0.5809859154929577,
+            "games_2024": 285,
+            "games_2025": 284,
+            "recipe": "add_qb_coach",
+            "families": "tensorflow",
+            "policy": "retained_export",
+            "method": "original_export",
+            "exact_ties": 1
+          },
+          "improvement": 3.088707684706371e-05
+        },
+        "40/60": {
+          "policy": {
+            "weighted": 0.6089794909809736,
+            "annual_2024": 0.624561403508772,
+            "annual_2025": 0.5985915492957746,
+            "games_2024": 285,
+            "games_2025": 284,
+            "recipe": "add_qb_form",
+            "families": "catboost+tensorflow",
+            "policy": "fixed_equal",
+            "method": "heldout_normal",
+            "exact_ties": 1
+          },
+          "prior": {
+            "weighted": 0.6054336545589325,
+            "annual_2024": 0.6421052631578947,
+            "annual_2025": 0.5809859154929577,
+            "games_2024": 285,
+            "games_2025": 284,
+            "recipe": "add_qb_coach",
+            "families": "tensorflow",
+            "policy": "retained_export",
+            "method": "original_export",
+            "exact_ties": 1
+          },
+          "improvement": 0.003545836422041093
+        },
+        "30/70": {
+          "policy": {
+            "weighted": 0.6063825055596739,
+            "annual_2024": 0.624561403508772,
+            "annual_2025": 0.5985915492957746,
+            "games_2024": 285,
+            "games_2025": 284,
+            "recipe": "add_qb_form",
+            "families": "catboost+tensorflow",
+            "policy": "fixed_equal",
+            "method": "heldout_normal",
+            "exact_ties": 1
+          },
+          "prior": {
+            "weighted": 0.5993217197924389,
+            "annual_2024": 0.6421052631578947,
+            "annual_2025": 0.5809859154929577,
+            "games_2024": 285,
+            "games_2025": 284,
+            "recipe": "add_qb_coach",
+            "families": "tensorflow",
+            "policy": "retained_export",
+            "method": "original_export",
+            "exact_ties": 1
+          },
+          "improvement": 0.007060785767235012
+        },
+        "20/80": {
+          "policy": {
+            "weighted": 0.603785520138374,
+            "annual_2024": 0.624561403508772,
+            "annual_2025": 0.5985915492957746,
+            "games_2024": 285,
+            "games_2025": 284,
+            "recipe": "add_qb_form",
+            "families": "catboost+tensorflow",
+            "policy": "fixed_equal",
+            "method": "heldout_normal",
+            "exact_ties": 1
+          },
+          "prior": {
+            "weighted": 0.5946627131208302,
+            "annual_2024": 0.5789473684210527,
+            "annual_2025": 0.5985915492957746,
+            "games_2024": 285,
+            "games_2025": 284,
+            "recipe": "add_coach_form",
+            "families": "xgboost",
+            "policy": "retained_export",
+            "method": "original_export",
+            "exact_ties": 1
+          },
+          "improvement": 0.009122807017543866
+        },
+        "10/90": {
+          "policy": {
+            "weighted": 0.6011885347170743,
+            "annual_2024": 0.624561403508772,
+            "annual_2025": 0.5985915492957746,
+            "games_2024": 285,
+            "games_2025": 284,
+            "recipe": "add_qb_form",
+            "families": "catboost+tensorflow",
+            "policy": "fixed_equal",
+            "method": "heldout_normal",
+            "exact_ties": 1
+          },
+          "prior": {
+            "weighted": 0.5966271312083025,
+            "annual_2024": 0.5789473684210527,
+            "annual_2025": 0.5985915492957746,
+            "games_2024": 285,
+            "games_2025": 284,
+            "recipe": "add_coach_form",
+            "families": "xgboost",
+            "policy": "retained_export",
+            "method": "original_export",
+            "exact_ties": 1
+          },
+          "improvement": 0.004561403508771877
+        }
+      },
+      "binary_brier": {
+        "50/50": {
+          "policy": {
+            "weighted": 0.23385717075248216,
+            "annual_2024": 0.22682788680239985,
+            "annual_2025": 0.24088645470256445,
+            "games_2024": 285,
+            "games_2025": 284,
+            "recipe": "add_qb_coach",
+            "families": "catboost+tensorflow",
+            "policy": "fixed_equal",
+            "method": "uncalibrated_normal",
+            "exact_ties": 1
+          },
+          "prior": {
+            "weighted": 0.2352357093108619,
+            "annual_2024": 0.22565708379950458,
+            "annual_2025": 0.2448143348222192,
+            "games_2024": 285,
+            "games_2025": 284,
+            "recipe": "add_qb_coach",
+            "families": "tensorflow",
+            "policy": "retained_export",
+            "method": "original_export",
+            "exact_ties": 1
+          },
+          "improvement": 0.0013785385583797438
+        },
+        "40/60": {
+          "policy": {
+            "weighted": 0.23526302754249862,
+            "annual_2024": 0.22682788680239985,
+            "annual_2025": 0.24088645470256445,
+            "games_2024": 285,
+            "games_2025": 284,
+            "recipe": "add_qb_coach",
+            "families": "catboost+tensorflow",
+            "policy": "fixed_equal",
+            "method": "uncalibrated_normal",
+            "exact_ties": 1
+          },
+          "prior": {
+            "weighted": 0.23715143441313338,
+            "annual_2024": 0.22565708379950458,
+            "annual_2025": 0.2448143348222192,
+            "games_2024": 285,
+            "games_2025": 284,
+            "recipe": "add_qb_coach",
+            "families": "tensorflow",
+            "policy": "retained_export",
+            "method": "original_export",
+            "exact_ties": 1
+          },
+          "improvement": 0.0018884068706347679
+        },
+        "30/70": {
+          "policy": {
+            "weighted": 0.23666888433251507,
+            "annual_2024": 0.22682788680239985,
+            "annual_2025": 0.24088645470256445,
+            "games_2024": 285,
+            "games_2025": 284,
+            "recipe": "add_qb_coach",
+            "families": "catboost+tensorflow",
+            "policy": "fixed_equal",
+            "method": "uncalibrated_normal",
+            "exact_ties": 1
+          },
+          "prior": {
+            "weighted": 0.2387984452669275,
+            "annual_2024": 0.23150539108141283,
+            "annual_2025": 0.24192403991786238,
+            "games_2024": 285,
+            "games_2025": 284,
+            "recipe": "omit_one_season_history",
+            "families": "lightgbm",
+            "policy": "retained_export",
+            "method": "original_export",
+            "exact_ties": 1
+          },
+          "improvement": 0.002129560934412439
+        },
+        "20/80": {
+          "policy": {
+            "weighted": 0.23803083174120704,
+            "annual_2024": 0.23013399160394385,
+            "annual_2025": 0.24000504177552284,
+            "games_2024": 285,
+            "games_2025": 284,
+            "recipe": "omit_one_season_history",
+            "families": "lightgbm",
+            "policy": "single_parent",
+            "method": "uncalibrated_normal",
+            "exact_ties": 2
+          },
+          "prior": {
+            "weighted": 0.23984031015057247,
+            "annual_2024": 0.23150539108141283,
+            "annual_2025": 0.24192403991786238,
+            "games_2024": 285,
+            "games_2025": 284,
+            "recipe": "omit_one_season_history",
+            "families": "lightgbm",
+            "policy": "retained_export",
+            "method": "original_export",
+            "exact_ties": 1
+          },
+          "improvement": 0.0018094784093654337
+        },
+        "10/90": {
+          "policy": {
+            "weighted": 0.23901793675836494,
+            "annual_2024": 0.23013399160394385,
+            "annual_2025": 0.24000504177552284,
+            "games_2024": 285,
+            "games_2025": 284,
+            "recipe": "omit_one_season_history",
+            "families": "lightgbm",
+            "policy": "single_parent",
+            "method": "uncalibrated_normal",
+            "exact_ties": 2
+          },
+          "prior": {
+            "weighted": 0.2408821750342174,
+            "annual_2024": 0.23150539108141283,
+            "annual_2025": 0.24192403991786238,
+            "games_2024": 285,
+            "games_2025": 284,
+            "recipe": "omit_one_season_history",
+            "families": "lightgbm",
+            "policy": "retained_export",
+            "method": "original_export",
+            "exact_ties": 1
+          },
+          "improvement": 0.00186423827585247
+        }
+      },
+      "binary_log_loss": {
+        "50/50": {
+          "policy": {
+            "weighted": 0.6597675186746937,
+            "annual_2024": 0.6452689508132016,
+            "annual_2025": 0.6742660865361859,
+            "games_2024": 285,
+            "games_2025": 284,
+            "recipe": "add_qb_coach",
+            "families": "catboost+tensorflow",
+            "policy": "fixed_equal",
+            "method": "uncalibrated_normal",
+            "exact_ties": 1
+          },
+          "prior": {
+            "weighted": 0.6621031198778173,
+            "annual_2024": 0.6420602569027053,
+            "annual_2025": 0.6821459828529294,
+            "games_2024": 285,
+            "games_2025": 284,
+            "recipe": "add_qb_coach",
+            "families": "tensorflow",
+            "policy": "retained_export",
+            "method": "original_export",
+            "exact_ties": 1
+          },
+          "improvement": 0.002335601203123594
+        },
+        "40/60": {
+          "policy": {
+            "weighted": 0.6626672322469922,
+            "annual_2024": 0.6452689508132016,
+            "annual_2025": 0.6742660865361859,
+            "games_2024": 285,
+            "games_2025": 284,
+            "recipe": "add_qb_coach",
+            "families": "catboost+tensorflow",
+            "policy": "fixed_equal",
+            "method": "uncalibrated_normal",
+            "exact_ties": 1
+          },
+          "prior": {
+            "weighted": 0.6661116924728396,
+            "annual_2024": 0.6420602569027053,
+            "annual_2025": 0.6821459828529294,
+            "games_2024": 285,
+            "games_2025": 284,
+            "recipe": "add_qb_coach",
+            "families": "tensorflow",
+            "policy": "retained_export",
+            "method": "original_export",
+            "exact_ties": 1
+          },
+          "improvement": 0.0034444602258474344
+        },
+        "30/70": {
+          "policy": {
+            "weighted": 0.6655669458192907,
+            "annual_2024": 0.6452689508132016,
+            "annual_2025": 0.6742660865361859,
+            "games_2024": 285,
+            "games_2025": 284,
+            "recipe": "add_qb_coach",
+            "families": "catboost+tensorflow",
+            "policy": "fixed_equal",
+            "method": "uncalibrated_normal",
+            "exact_ties": 1
+          },
+          "prior": {
+            "weighted": 0.6701202650678622,
+            "annual_2024": 0.6420602569027053,
+            "annual_2025": 0.6821459828529294,
+            "games_2024": 285,
+            "games_2025": 284,
+            "recipe": "add_qb_coach",
+            "families": "tensorflow",
+            "policy": "retained_export",
+            "method": "original_export",
+            "exact_ties": 1
+          },
+          "improvement": 0.004553319248571497
+        },
+        "20/80": {
+          "policy": {
+            "weighted": 0.6684666593915891,
+            "annual_2024": 0.6452689508132016,
+            "annual_2025": 0.6742660865361859,
+            "games_2024": 285,
+            "games_2025": 284,
+            "recipe": "add_qb_coach",
+            "families": "catboost+tensorflow",
+            "policy": "fixed_equal",
+            "method": "uncalibrated_normal",
+            "exact_ties": 1
+          },
+          "prior": {
+            "weighted": 0.6723226127330233,
+            "annual_2024": 0.6550179800485861,
+            "annual_2025": 0.6766487709041324,
+            "games_2024": 285,
+            "games_2025": 284,
+            "recipe": "omit_one_season_history",
+            "families": "lightgbm",
+            "policy": "retained_export",
+            "method": "original_export",
+            "exact_ties": 1
+          },
+          "improvement": 0.0038559533414341818
+        },
+        "10/90": {
+          "policy": {
+            "weighted": 0.670607381990077,
+            "annual_2024": 0.6523527407740786,
+            "annual_2025": 0.6726356754585213,
+            "games_2024": 285,
+            "games_2025": 284,
+            "recipe": "omit_one_season_history",
+            "families": "lightgbm",
+            "policy": "single_parent",
+            "method": "uncalibrated_normal",
+            "exact_ties": 2
+          },
+          "prior": {
+            "weighted": 0.6744856918185778,
+            "annual_2024": 0.6550179800485861,
+            "annual_2025": 0.6766487709041324,
+            "games_2024": 285,
+            "games_2025": 284,
+            "recipe": "omit_one_season_history",
+            "families": "lightgbm",
+            "policy": "retained_export",
+            "method": "original_export",
+            "exact_ties": 1
+          },
+          "improvement": 0.003878309828500792
+        }
+      },
+      "margin_crps": {
+        "50/50": {
+          "policy": {
+            "weighted": 7.654262109877155,
+            "annual_2024": 7.625701393671138,
+            "annual_2025": 7.682822826083171,
+            "games_2024": 285,
+            "games_2025": 285,
+            "recipe": "add_qb_coach",
+            "families": "catboost+tensorflow",
+            "policy": "fixed_equal",
+            "method": "heldout_empirical",
+            "exact_ties": 1
+          },
+          "prior": null,
+          "improvement": null
+        },
+        "40/60": {
+          "policy": {
+            "weighted": 7.6599742531183574,
+            "annual_2024": 7.625701393671138,
+            "annual_2025": 7.682822826083171,
+            "games_2024": 285,
+            "games_2025": 285,
+            "recipe": "add_qb_coach",
+            "families": "catboost+tensorflow",
+            "policy": "fixed_equal",
+            "method": "heldout_empirical",
+            "exact_ties": 1
+          },
+          "prior": null,
+          "improvement": null
+        },
+        "30/70": {
+          "policy": {
+            "weighted": 7.66568639635956,
+            "annual_2024": 7.625701393671138,
+            "annual_2025": 7.682822826083171,
+            "games_2024": 285,
+            "games_2025": 285,
+            "recipe": "add_qb_coach",
+            "families": "catboost+tensorflow",
+            "policy": "fixed_equal",
+            "method": "heldout_empirical",
+            "exact_ties": 1
+          },
+          "prior": null,
+          "improvement": null
+        },
+        "20/80": {
+          "policy": {
+            "weighted": 7.671398539600764,
+            "annual_2024": 7.625701393671138,
+            "annual_2025": 7.682822826083171,
+            "games_2024": 285,
+            "games_2025": 285,
+            "recipe": "add_qb_coach",
+            "families": "catboost+tensorflow",
+            "policy": "fixed_equal",
+            "method": "heldout_empirical",
+            "exact_ties": 1
+          },
+          "prior": null,
+          "improvement": null
+        },
+        "10/90": {
+          "policy": {
+            "weighted": 7.677110682841967,
+            "annual_2024": 7.625701393671138,
+            "annual_2025": 7.682822826083171,
+            "games_2024": 285,
+            "games_2025": 285,
+            "recipe": "add_qb_coach",
+            "families": "catboost+tensorflow",
+            "policy": "fixed_equal",
+            "method": "heldout_empirical",
+            "exact_ties": 1
+          },
+          "prior": null,
+          "improvement": null
+        }
+      },
+      "margin_exact_log_loss": {
+        "50/50": {
+          "policy": {
+            "weighted": 4.033479339393905,
+            "annual_2024": 4.03329480380402,
+            "annual_2025": 4.033663874983789,
+            "games_2024": 285,
+            "games_2025": 285,
+            "recipe": "omit_one_season_history",
+            "families": "sklearn+torch",
+            "policy": "target_least_squares",
+            "method": "uncalibrated_normal",
+            "exact_ties": 1
+          },
+          "prior": null,
+          "improvement": null
+        },
+        "40/60": {
+          "policy": {
+            "weighted": 4.033516246511882,
+            "annual_2024": 4.03329480380402,
+            "annual_2025": 4.033663874983789,
+            "games_2024": 285,
+            "games_2025": 285,
+            "recipe": "omit_one_season_history",
+            "families": "sklearn+torch",
+            "policy": "target_least_squares",
+            "method": "uncalibrated_normal",
+            "exact_ties": 1
+          },
+          "prior": null,
+          "improvement": null
+        },
+        "30/70": {
+          "policy": {
+            "weighted": 4.033395462416783,
+            "annual_2024": 4.036092805173084,
+            "annual_2025": 4.032239458378367,
+            "games_2024": 285,
+            "games_2025": 285,
+            "recipe": "omit_one_season_history",
+            "families": "torch",
+            "policy": "single_parent",
+            "method": "uncalibrated_normal",
+            "exact_ties": 1
+          },
+          "prior": null,
+          "improvement": null
+        },
+        "20/80": {
+          "policy": {
+            "weighted": 4.0330101277373105,
+            "annual_2024": 4.036092805173084,
+            "annual_2025": 4.032239458378367,
+            "games_2024": 285,
+            "games_2025": 285,
+            "recipe": "omit_one_season_history",
+            "families": "torch",
+            "policy": "single_parent",
+            "method": "uncalibrated_normal",
+            "exact_ties": 1
+          },
+          "prior": null,
+          "improvement": null
+        },
+        "10/90": {
+          "policy": {
+            "weighted": 4.032624793057838,
+            "annual_2024": 4.036092805173084,
+            "annual_2025": 4.032239458378367,
+            "games_2024": 285,
+            "games_2025": 285,
+            "recipe": "omit_one_season_history",
+            "families": "torch",
+            "policy": "single_parent",
+            "method": "uncalibrated_normal",
+            "exact_ties": 1
+          },
+          "prior": null,
+          "improvement": null
+        }
+      },
+      "margin_interval_score_50": {
+        "50/50": {
+          "policy": {
+            "weighted": 34.5280701754386,
+            "annual_2024": 34.50526315789474,
+            "annual_2025": 34.550877192982455,
+            "games_2024": 285,
+            "games_2025": 285,
+            "recipe": "omit_one_season_history",
+            "families": "sklearn+torch",
+            "policy": "target_least_squares",
+            "method": "heldout_empirical",
+            "exact_ties": 1
+          },
+          "prior": null,
+          "improvement": null
+        },
+        "40/60": {
+          "policy": {
+            "weighted": 34.532631578947374,
+            "annual_2024": 34.50526315789474,
+            "annual_2025": 34.550877192982455,
+            "games_2024": 285,
+            "games_2025": 285,
+            "recipe": "omit_one_season_history",
+            "families": "sklearn+torch",
+            "policy": "target_least_squares",
+            "method": "heldout_empirical",
+            "exact_ties": 1
+          },
+          "prior": null,
+          "improvement": null
+        },
+        "30/70": {
+          "policy": {
+            "weighted": 34.53719298245614,
+            "annual_2024": 34.50526315789474,
+            "annual_2025": 34.550877192982455,
+            "games_2024": 285,
+            "games_2025": 285,
+            "recipe": "omit_one_season_history",
+            "families": "sklearn+torch",
+            "policy": "target_least_squares",
+            "method": "heldout_empirical",
+            "exact_ties": 1
+          },
+          "prior": null,
+          "improvement": null
+        },
+        "20/80": {
+          "policy": {
+            "weighted": 34.52701754385965,
+            "annual_2024": 34.83859649122807,
+            "annual_2025": 34.449122807017545,
+            "games_2024": 285,
+            "games_2025": 285,
+            "recipe": "omit_one_season_history",
+            "families": "torch",
+            "policy": "single_parent",
+            "method": "uncalibrated_normal",
+            "exact_ties": 1
+          },
+          "prior": null,
+          "improvement": null
+        },
+        "10/90": {
+          "policy": {
+            "weighted": 34.488070175438594,
+            "annual_2024": 34.83859649122807,
+            "annual_2025": 34.449122807017545,
+            "games_2024": 285,
+            "games_2025": 285,
+            "recipe": "omit_one_season_history",
+            "families": "torch",
+            "policy": "single_parent",
+            "method": "uncalibrated_normal",
+            "exact_ties": 1
+          },
+          "prior": null,
+          "improvement": null
+        }
+      },
+      "margin_interval_score_80": {
+        "50/50": {
+          "policy": {
+            "weighted": 48.96491228070175,
+            "annual_2024": 49.43157894736842,
+            "annual_2025": 48.498245614035085,
+            "games_2024": 285,
+            "games_2025": 285,
+            "recipe": "omit_one_season_history",
+            "families": "sklearn",
+            "policy": "single_parent",
+            "method": "uncalibrated_normal",
+            "exact_ties": 1
+          },
+          "prior": null,
+          "improvement": null
+        },
+        "40/60": {
+          "policy": {
+            "weighted": 48.87157894736842,
+            "annual_2024": 49.43157894736842,
+            "annual_2025": 48.498245614035085,
+            "games_2024": 285,
+            "games_2025": 285,
+            "recipe": "omit_one_season_history",
+            "families": "sklearn",
+            "policy": "single_parent",
+            "method": "uncalibrated_normal",
+            "exact_ties": 1
+          },
+          "prior": null,
+          "improvement": null
+        },
+        "30/70": {
+          "policy": {
+            "weighted": 48.778245614035086,
+            "annual_2024": 49.43157894736842,
+            "annual_2025": 48.498245614035085,
+            "games_2024": 285,
+            "games_2025": 285,
+            "recipe": "omit_one_season_history",
+            "families": "sklearn",
+            "policy": "single_parent",
+            "method": "uncalibrated_normal",
+            "exact_ties": 1
+          },
+          "prior": null,
+          "improvement": null
+        },
+        "20/80": {
+          "policy": {
+            "weighted": 48.68491228070175,
+            "annual_2024": 49.43157894736842,
+            "annual_2025": 48.498245614035085,
+            "games_2024": 285,
+            "games_2025": 285,
+            "recipe": "omit_one_season_history",
+            "families": "sklearn",
+            "policy": "single_parent",
+            "method": "uncalibrated_normal",
+            "exact_ties": 1
+          },
+          "prior": null,
+          "improvement": null
+        },
+        "10/90": {
+          "policy": {
+            "weighted": 48.59157894736842,
+            "annual_2024": 49.43157894736842,
+            "annual_2025": 48.498245614035085,
+            "games_2024": 285,
+            "games_2025": 285,
+            "recipe": "omit_one_season_history",
+            "families": "sklearn",
+            "policy": "single_parent",
+            "method": "uncalibrated_normal",
+            "exact_ties": 1
+          },
+          "prior": null,
+          "improvement": null
+        }
+      },
+      "margin_mae": {
+        "50/50": {
+          "policy": {
+            "weighted": 10.567389011388409,
+            "annual_2024": 10.435769862807154,
+            "annual_2025": 10.699008159969663,
+            "games_2024": 285,
+            "games_2025": 285,
+            "recipe": "add_qb_coach",
+            "families": "catboost+tensorflow",
+            "policy": "fixed_equal",
+            "method": "uncalibrated_normal",
+            "exact_ties": 1
+          },
+          "prior": {
+            "weighted": 10.651055627847754,
+            "annual_2024": 10.461927718640695,
+            "annual_2025": 10.840183537054811,
+            "games_2024": 285,
+            "games_2025": 285,
+            "recipe": "add_qb_coach",
+            "families": "tensorflow",
+            "policy": "retained_export",
+            "method": "original_export",
+            "exact_ties": 1
+          },
+          "improvement": 0.08366661645934492
+        },
+        "40/60": {
+          "policy": {
+            "weighted": 10.593712841104661,
+            "annual_2024": 10.435769862807154,
+            "annual_2025": 10.699008159969663,
+            "games_2024": 285,
+            "games_2025": 285,
+            "recipe": "add_qb_coach",
+            "families": "catboost+tensorflow",
+            "policy": "fixed_equal",
+            "method": "uncalibrated_normal",
+            "exact_ties": 1
+          },
+          "prior": {
+            "weighted": 10.688881209689166,
+            "annual_2024": 10.461927718640695,
+            "annual_2025": 10.840183537054811,
+            "games_2024": 285,
+            "games_2025": 285,
+            "recipe": "add_qb_coach",
+            "families": "tensorflow",
+            "policy": "retained_export",
+            "method": "original_export",
+            "exact_ties": 1
+          },
+          "improvement": 0.09516836858450439
+        },
+        "30/70": {
+          "policy": {
+            "weighted": 10.620036670820912,
+            "annual_2024": 10.435769862807154,
+            "annual_2025": 10.699008159969663,
+            "games_2024": 285,
+            "games_2025": 285,
+            "recipe": "add_qb_coach",
+            "families": "catboost+tensorflow",
+            "policy": "fixed_equal",
+            "method": "uncalibrated_normal",
+            "exact_ties": 1
+          },
+          "prior": {
+            "weighted": 10.726706791530576,
+            "annual_2024": 10.461927718640695,
+            "annual_2025": 10.840183537054811,
+            "games_2024": 285,
+            "games_2025": 285,
+            "recipe": "add_qb_coach",
+            "families": "tensorflow",
+            "policy": "retained_export",
+            "method": "original_export",
+            "exact_ties": 1
+          },
+          "improvement": 0.10667012070966386
+        },
+        "20/80": {
+          "policy": {
+            "weighted": 10.646360500537162,
+            "annual_2024": 10.435769862807154,
+            "annual_2025": 10.699008159969663,
+            "games_2024": 285,
+            "games_2025": 285,
+            "recipe": "add_qb_coach",
+            "families": "catboost+tensorflow",
+            "policy": "fixed_equal",
+            "method": "uncalibrated_normal",
+            "exact_ties": 1
+          },
+          "prior": {
+            "weighted": 10.764532373371987,
+            "annual_2024": 10.461927718640695,
+            "annual_2025": 10.840183537054811,
+            "games_2024": 285,
+            "games_2025": 285,
+            "recipe": "add_qb_coach",
+            "families": "tensorflow",
+            "policy": "retained_export",
+            "method": "original_export",
+            "exact_ties": 1
+          },
+          "improvement": 0.11817187283482511
+        },
+        "10/90": {
+          "policy": {
+            "weighted": 10.672684330253412,
+            "annual_2024": 10.435769862807154,
+            "annual_2025": 10.699008159969663,
+            "games_2024": 285,
+            "games_2025": 285,
+            "recipe": "add_qb_coach",
+            "families": "catboost+tensorflow",
+            "policy": "fixed_equal",
+            "method": "uncalibrated_normal",
+            "exact_ties": 1
+          },
+          "prior": {
+            "weighted": 10.788211602466365,
+            "annual_2024": 10.635003170999552,
+            "annual_2025": 10.805234761518234,
+            "games_2024": 285,
+            "games_2025": 285,
+            "recipe": "omit_one_season_history",
+            "families": "lightgbm",
+            "policy": "retained_export",
+            "method": "original_export",
+            "exact_ties": 1
+          },
+          "improvement": 0.11552727221295278
+        }
+      },
+      "margin_rmse": {
+        "50/50": {
+          "policy": {
+            "weighted": 13.652355920693235,
+            "annual_2024": 13.64970615780654,
+            "annual_2025": 13.655005683579928,
+            "games_2024": 285,
+            "games_2025": 285,
+            "recipe": "omit_one_season_history",
+            "families": "sklearn+torch",
+            "policy": "target_least_squares",
+            "method": "uncalibrated_normal",
+            "exact_ties": 1
+          },
+          "prior": {
+            "weighted": 13.66250305007131,
+            "annual_2024": 13.688341829147914,
+            "annual_2025": 13.636664270994705,
+            "games_2024": 285,
+            "games_2025": 285,
+            "recipe": "omit_one_season_history",
+            "families": "torch",
+            "policy": "retained_export",
+            "method": "original_export",
+            "exact_ties": 1
+          },
+          "improvement": 0.010147129378074382
+        },
+        "40/60": {
+          "policy": {
+            "weighted": 13.652885873270572,
+            "annual_2024": 13.64970615780654,
+            "annual_2025": 13.655005683579928,
+            "games_2024": 285,
+            "games_2025": 285,
+            "recipe": "omit_one_season_history",
+            "families": "sklearn+torch",
+            "policy": "target_least_squares",
+            "method": "uncalibrated_normal",
+            "exact_ties": 1
+          },
+          "prior": {
+            "weighted": 13.657335294255988,
+            "annual_2024": 13.688341829147914,
+            "annual_2025": 13.636664270994705,
+            "games_2024": 285,
+            "games_2025": 285,
+            "recipe": "omit_one_season_history",
+            "families": "torch",
+            "policy": "retained_export",
+            "method": "original_export",
+            "exact_ties": 1
+          },
+          "improvement": 0.004449420985416452
+        },
+        "30/70": {
+          "policy": {
+            "weighted": 13.651128082680673,
+            "annual_2024": 13.689834743704901,
+            "annual_2025": 13.634539513670289,
+            "games_2024": 285,
+            "games_2025": 285,
+            "recipe": "omit_one_season_history",
+            "families": "torch",
+            "policy": "single_parent",
+            "method": "uncalibrated_normal",
+            "exact_ties": 1
+          },
+          "prior": {
+            "weighted": 13.652167538440667,
+            "annual_2024": 13.688341829147914,
+            "annual_2025": 13.636664270994705,
+            "games_2024": 285,
+            "games_2025": 285,
+            "recipe": "omit_one_season_history",
+            "families": "torch",
+            "policy": "retained_export",
+            "method": "original_export",
+            "exact_ties": 1
+          },
+          "improvement": 0.001039455759993757
+        },
+        "20/80": {
+          "policy": {
+            "weighted": 13.64559855967721,
+            "annual_2024": 13.689834743704901,
+            "annual_2025": 13.634539513670289,
+            "games_2024": 285,
+            "games_2025": 285,
+            "recipe": "omit_one_season_history",
+            "families": "torch",
+            "policy": "single_parent",
+            "method": "uncalibrated_normal",
+            "exact_ties": 1
+          },
+          "prior": {
+            "weighted": 13.646999782625349,
+            "annual_2024": 13.688341829147914,
+            "annual_2025": 13.636664270994705,
+            "games_2024": 285,
+            "games_2025": 285,
+            "recipe": "omit_one_season_history",
+            "families": "torch",
+            "policy": "retained_export",
+            "method": "original_export",
+            "exact_ties": 1
+          },
+          "improvement": 0.0014012229481394911
+        },
+        "10/90": {
+          "policy": {
+            "weighted": 13.64006903667375,
+            "annual_2024": 13.689834743704901,
+            "annual_2025": 13.634539513670289,
+            "games_2024": 285,
+            "games_2025": 285,
+            "recipe": "omit_one_season_history",
+            "families": "torch",
+            "policy": "single_parent",
+            "method": "uncalibrated_normal",
+            "exact_ties": 1
+          },
+          "prior": {
+            "weighted": 13.641832026810025,
+            "annual_2024": 13.688341829147914,
+            "annual_2025": 13.636664270994705,
+            "games_2024": 285,
+            "games_2025": 285,
+            "recipe": "omit_one_season_history",
+            "families": "torch",
+            "policy": "retained_export",
+            "method": "original_export",
+            "exact_ties": 1
+          },
+          "improvement": 0.001762990136274567
+        }
+      },
+      "three_way_accuracy": {
+        "50/50": {
+          "policy": {
+            "weighted": 0.6105263157894737,
+            "annual_2024": 0.624561403508772,
+            "annual_2025": 0.5964912280701754,
+            "games_2024": 285,
+            "games_2025": 285,
+            "recipe": "add_qb_form",
+            "families": "catboost+tensorflow",
+            "policy": "fixed_equal",
+            "method": "heldout_normal",
+            "exact_ties": 1
+          },
+          "prior": {
+            "weighted": 0.6105263157894737,
+            "annual_2024": 0.6421052631578947,
+            "annual_2025": 0.5789473684210527,
+            "games_2024": 285,
+            "games_2025": 285,
+            "recipe": "add_qb_coach",
+            "families": "tensorflow",
+            "policy": "retained_export",
+            "method": "original_export",
+            "exact_ties": 1
+          },
+          "improvement": 0.0
+        },
+        "40/60": {
+          "policy": {
+            "weighted": 0.6077192982456141,
+            "annual_2024": 0.624561403508772,
+            "annual_2025": 0.5964912280701754,
+            "games_2024": 285,
+            "games_2025": 285,
+            "recipe": "add_qb_form",
+            "families": "catboost+tensorflow",
+            "policy": "fixed_equal",
+            "method": "heldout_normal",
+            "exact_ties": 1
+          },
+          "prior": {
+            "weighted": 0.6042105263157894,
+            "annual_2024": 0.6421052631578947,
+            "annual_2025": 0.5789473684210527,
+            "games_2024": 285,
+            "games_2025": 285,
+            "recipe": "add_qb_coach",
+            "families": "tensorflow",
+            "policy": "retained_export",
+            "method": "original_export",
+            "exact_ties": 1
+          },
+          "improvement": 0.0035087719298246833
+        },
+        "30/70": {
+          "policy": {
+            "weighted": 0.6049122807017544,
+            "annual_2024": 0.624561403508772,
+            "annual_2025": 0.5964912280701754,
+            "games_2024": 285,
+            "games_2025": 285,
+            "recipe": "add_qb_form",
+            "families": "catboost+tensorflow",
+            "policy": "fixed_equal",
+            "method": "heldout_normal",
+            "exact_ties": 1
+          },
+          "prior": {
+            "weighted": 0.5978947368421053,
+            "annual_2024": 0.6421052631578947,
+            "annual_2025": 0.5789473684210527,
+            "games_2024": 285,
+            "games_2025": 285,
+            "recipe": "add_qb_coach",
+            "families": "tensorflow",
+            "policy": "retained_export",
+            "method": "original_export",
+            "exact_ties": 1
+          },
+          "improvement": 0.007017543859649145
+        },
+        "20/80": {
+          "policy": {
+            "weighted": 0.6021052631578947,
+            "annual_2024": 0.624561403508772,
+            "annual_2025": 0.5964912280701754,
+            "games_2024": 285,
+            "games_2025": 285,
+            "recipe": "add_qb_form",
+            "families": "catboost+tensorflow",
+            "policy": "fixed_equal",
+            "method": "heldout_normal",
+            "exact_ties": 1
+          },
+          "prior": {
+            "weighted": 0.5929824561403509,
+            "annual_2024": 0.5789473684210527,
+            "annual_2025": 0.5964912280701754,
+            "games_2024": 285,
+            "games_2025": 285,
+            "recipe": "add_coach_form",
+            "families": "xgboost",
+            "policy": "retained_export",
+            "method": "original_export",
+            "exact_ties": 1
+          },
+          "improvement": 0.009122807017543755
+        },
+        "10/90": {
+          "policy": {
+            "weighted": 0.5992982456140351,
+            "annual_2024": 0.624561403508772,
+            "annual_2025": 0.5964912280701754,
+            "games_2024": 285,
+            "games_2025": 285,
+            "recipe": "add_qb_form",
+            "families": "catboost+tensorflow",
+            "policy": "fixed_equal",
+            "method": "heldout_normal",
+            "exact_ties": 1
+          },
+          "prior": {
+            "weighted": 0.5947368421052631,
+            "annual_2024": 0.5789473684210527,
+            "annual_2025": 0.5964912280701754,
+            "games_2024": 285,
+            "games_2025": 285,
+            "recipe": "add_coach_form",
+            "families": "xgboost",
+            "policy": "retained_export",
+            "method": "original_export",
+            "exact_ties": 1
+          },
+          "improvement": 0.004561403508771988
+        }
+      },
+      "three_way_brier": {
+        "50/50": {
+          "policy": {
+            "weighted": 0.47068982590336317,
+            "annual_2024": 0.45533520242435993,
+            "annual_2025": 0.48604444938236646,
+            "games_2024": 285,
+            "games_2025": 285,
+            "recipe": "add_qb_coach",
+            "families": "catboost+tensorflow",
+            "policy": "fixed_equal",
+            "method": "uncalibrated_normal",
+            "exact_ties": 1
+          },
+          "prior": {
+            "weighted": 0.4728684242600309,
+            "annual_2024": 0.4524999729261517,
+            "annual_2025": 0.49323687559391005,
+            "games_2024": 285,
+            "games_2025": 285,
+            "recipe": "add_qb_coach",
+            "families": "tensorflow",
+            "policy": "retained_export",
+            "method": "original_export",
+            "exact_ties": 1
+          },
+          "improvement": 0.002178598356667727
+        },
+        "40/60": {
+          "policy": {
+            "weighted": 0.4737607505991639,
+            "annual_2024": 0.45533520242435993,
+            "annual_2025": 0.48604444938236646,
+            "games_2024": 285,
+            "games_2025": 285,
+            "recipe": "add_qb_coach",
+            "families": "catboost+tensorflow",
+            "policy": "fixed_equal",
+            "method": "uncalibrated_normal",
+            "exact_ties": 1
+          },
+          "prior": {
+            "weighted": 0.47694211452680674,
+            "annual_2024": 0.4524999729261517,
+            "annual_2025": 0.49323687559391005,
+            "games_2024": 285,
+            "games_2025": 285,
+            "recipe": "add_qb_coach",
+            "families": "tensorflow",
+            "policy": "retained_export",
+            "method": "original_export",
+            "exact_ties": 1
+          },
+          "improvement": 0.003181363927642844
+        },
+        "30/70": {
+          "policy": {
+            "weighted": 0.4768316752949645,
+            "annual_2024": 0.45533520242435993,
+            "annual_2025": 0.48604444938236646,
+            "games_2024": 285,
+            "games_2025": 285,
+            "recipe": "add_qb_coach",
+            "families": "catboost+tensorflow",
+            "policy": "fixed_equal",
+            "method": "uncalibrated_normal",
+            "exact_ties": 1
+          },
+          "prior": {
+            "weighted": 0.48064166565175553,
+            "annual_2024": 0.464167616556929,
+            "annual_2025": 0.4877019724066812,
+            "games_2024": 285,
+            "games_2025": 285,
+            "recipe": "omit_one_season_history",
+            "families": "lightgbm",
+            "policy": "retained_export",
+            "method": "original_export",
+            "exact_ties": 1
+          },
+          "improvement": 0.0038099903567910265
+        },
+        "20/80": {
+          "policy": {
+            "weighted": 0.47964696768137927,
+            "annual_2024": 0.46165865712643006,
+            "annual_2025": 0.4841440453201166,
+            "games_2024": 285,
+            "games_2025": 285,
+            "recipe": "omit_one_season_history",
+            "families": "lightgbm",
+            "policy": "single_parent",
+            "method": "uncalibrated_normal",
+            "exact_ties": 2
+          },
+          "prior": {
+            "weighted": 0.48299510123673073,
+            "annual_2024": 0.464167616556929,
+            "annual_2025": 0.4877019724066812,
+            "games_2024": 285,
+            "games_2025": 285,
+            "recipe": "omit_one_season_history",
+            "families": "lightgbm",
+            "policy": "retained_export",
+            "method": "original_export",
+            "exact_ties": 1
+          },
+          "improvement": 0.0033481335553514624
+        },
+        "10/90": {
+          "policy": {
+            "weighted": 0.4818955065007479,
+            "annual_2024": 0.46165865712643006,
+            "annual_2025": 0.4841440453201166,
+            "games_2024": 285,
+            "games_2025": 285,
+            "recipe": "omit_one_season_history",
+            "families": "lightgbm",
+            "policy": "single_parent",
+            "method": "uncalibrated_normal",
+            "exact_ties": 2
+          },
+          "prior": {
+            "weighted": 0.4853485368217059,
+            "annual_2024": 0.464167616556929,
+            "annual_2025": 0.4877019724066812,
+            "games_2024": 285,
+            "games_2025": 285,
+            "recipe": "omit_one_season_history",
+            "families": "lightgbm",
+            "policy": "retained_export",
+            "method": "original_export",
+            "exact_ties": 1
+          },
+          "improvement": 0.003453030320958006
+        }
+      },
+      "three_way_log_loss": {
+        "50/50": {
+          "policy": {
+            "weighted": 0.6925967642045688,
+            "annual_2024": 0.6730416603862034,
+            "annual_2025": 0.7121518680229344,
+            "games_2024": 285,
+            "games_2025": 285,
+            "recipe": "add_qb_coach",
+            "families": "catboost+tensorflow",
+            "policy": "fixed_equal",
+            "method": "uncalibrated_normal",
+            "exact_ties": 1
+          },
+          "prior": {
+            "weighted": 0.6941919951159118,
+            "annual_2024": 0.6690369460243659,
+            "annual_2025": 0.7193470442074577,
+            "games_2024": 285,
+            "games_2025": 285,
+            "recipe": "add_qb_coach",
+            "families": "tensorflow",
+            "policy": "retained_export",
+            "method": "original_export",
+            "exact_ties": 1
+          },
+          "improvement": 0.0015952309113429486
+        },
+        "40/60": {
+          "policy": {
+            "weighted": 0.6965077849682421,
+            "annual_2024": 0.6730416603862034,
+            "annual_2025": 0.7121518680229344,
+            "games_2024": 285,
+            "games_2025": 285,
+            "recipe": "add_qb_coach",
+            "families": "catboost+tensorflow",
+            "policy": "fixed_equal",
+            "method": "uncalibrated_normal",
+            "exact_ties": 1
+          },
+          "prior": {
+            "weighted": 0.6992230049342208,
+            "annual_2024": 0.6690369460243659,
+            "annual_2025": 0.7193470442074577,
+            "games_2024": 285,
+            "games_2025": 285,
+            "recipe": "add_qb_coach",
+            "families": "tensorflow",
+            "policy": "retained_export",
+            "method": "original_export",
+            "exact_ties": 1
+          },
+          "improvement": 0.002715219965978788
+        },
+        "30/70": {
+          "policy": {
+            "weighted": 0.7004188057319151,
+            "annual_2024": 0.6730416603862034,
+            "annual_2025": 0.7121518680229344,
+            "games_2024": 285,
+            "games_2025": 285,
+            "recipe": "add_qb_coach",
+            "families": "catboost+tensorflow",
+            "policy": "fixed_equal",
+            "method": "uncalibrated_normal",
+            "exact_ties": 1
+          },
+          "prior": {
+            "weighted": 0.7042540147525301,
+            "annual_2024": 0.6690369460243659,
+            "annual_2025": 0.7193470442074577,
+            "games_2024": 285,
+            "games_2025": 285,
+            "recipe": "add_qb_coach",
+            "families": "tensorflow",
+            "policy": "retained_export",
+            "method": "original_export",
+            "exact_ties": 1
+          },
+          "improvement": 0.0038352090206150713
+        },
+        "20/80": {
+          "policy": {
+            "weighted": 0.7041806952592574,
+            "annual_2024": 0.6799406392646808,
+            "annual_2025": 0.7102407092579016,
+            "games_2024": 285,
+            "games_2025": 285,
+            "recipe": "omit_one_season_history",
+            "families": "lightgbm",
+            "policy": "single_parent",
+            "method": "uncalibrated_normal",
+            "exact_ties": 2
+          },
+          "prior": {
+            "weighted": 0.7080247836345324,
+            "annual_2024": 0.6827690684143035,
+            "annual_2025": 0.7143387124395896,
+            "games_2024": 285,
+            "games_2025": 285,
+            "recipe": "omit_one_season_history",
+            "families": "lightgbm",
+            "policy": "retained_export",
+            "method": "original_export",
+            "exact_ties": 1
+          },
+          "improvement": 0.0038440883752749455
+        },
+        "10/90": {
+          "policy": {
+            "weighted": 0.7072107022585796,
+            "annual_2024": 0.6799406392646808,
+            "annual_2025": 0.7102407092579016,
+            "games_2024": 285,
+            "games_2025": 285,
+            "recipe": "omit_one_season_history",
+            "families": "lightgbm",
+            "policy": "single_parent",
+            "method": "uncalibrated_normal",
+            "exact_ties": 2
+          },
+          "prior": {
+            "weighted": 0.711181748037061,
+            "annual_2024": 0.6827690684143035,
+            "annual_2025": 0.7143387124395896,
+            "games_2024": 285,
+            "games_2025": 285,
+            "recipe": "omit_one_season_history",
+            "families": "lightgbm",
+            "policy": "retained_export",
+            "method": "original_export",
+            "exact_ties": 1
+          },
+          "improvement": 0.003971045778481397
+        }
+      },
+      "total_crps": {
+        "50/50": {
+          "policy": {
+            "weighted": 7.417507004439733,
+            "annual_2024": 7.215274745160311,
+            "annual_2025": 7.619739263719155,
+            "games_2024": 285,
+            "games_2025": 285,
+            "recipe": "omit_coach",
+            "families": "sklearn+torch",
+            "policy": "fixed_equal",
+            "method": "heldout_empirical",
+            "exact_ties": 1
+          },
+          "prior": null,
+          "improvement": null
+        },
+        "40/60": {
+          "policy": {
+            "weighted": 7.455681338752209,
+            "annual_2024": 7.250831723768921,
+            "annual_2025": 7.592247748741066,
+            "games_2024": 285,
+            "games_2025": 285,
+            "recipe": "omit_three_season_history",
+            "families": "sklearn+torch",
+            "policy": "fixed_equal",
+            "method": "heldout_empirical",
+            "exact_ties": 1
+          },
+          "prior": null,
+          "improvement": null
+        },
+        "30/70": {
+          "policy": {
+            "weighted": 7.489822941249422,
+            "annual_2024": 7.250831723768921,
+            "annual_2025": 7.592247748741066,
+            "games_2024": 285,
+            "games_2025": 285,
+            "recipe": "omit_three_season_history",
+            "families": "sklearn+torch",
+            "policy": "fixed_equal",
+            "method": "heldout_empirical",
+            "exact_ties": 1
+          },
+          "prior": null,
+          "improvement": null
+        },
+        "20/80": {
+          "policy": {
+            "weighted": 7.5239645437466365,
+            "annual_2024": 7.250831723768921,
+            "annual_2025": 7.592247748741066,
+            "games_2024": 285,
+            "games_2025": 285,
+            "recipe": "omit_three_season_history",
+            "families": "sklearn+torch",
+            "policy": "fixed_equal",
+            "method": "heldout_empirical",
+            "exact_ties": 1
+          },
+          "prior": null,
+          "improvement": null
+        },
+        "10/90": {
+          "policy": {
+            "weighted": 7.558106146243851,
+            "annual_2024": 7.250831723768921,
+            "annual_2025": 7.592247748741066,
+            "games_2024": 285,
+            "games_2025": 285,
+            "recipe": "omit_three_season_history",
+            "families": "sklearn+torch",
+            "policy": "fixed_equal",
+            "method": "heldout_empirical",
+            "exact_ties": 1
+          },
+          "prior": null,
+          "improvement": null
+        }
+      },
+      "total_exact_log_loss": {
+        "50/50": {
+          "policy": {
+            "weighted": 4.004793501835316,
+            "annual_2024": 3.9877550058734,
+            "annual_2025": 4.02183199779723,
+            "games_2024": 285,
+            "games_2025": 285,
+            "recipe": "omit_coach",
+            "families": "sklearn+torch",
+            "policy": "target_least_squares",
+            "method": "uncalibrated_normal",
+            "exact_ties": 1
+          },
+          "prior": null,
+          "improvement": null
+        },
+        "40/60": {
+          "policy": {
+            "weighted": 4.008201201027698,
+            "annual_2024": 3.9877550058734,
+            "annual_2025": 4.02183199779723,
+            "games_2024": 285,
+            "games_2025": 285,
+            "recipe": "omit_coach",
+            "families": "sklearn+torch",
+            "policy": "target_least_squares",
+            "method": "uncalibrated_normal",
+            "exact_ties": 1
+          },
+          "prior": null,
+          "improvement": null
+        },
+        "30/70": {
+          "policy": {
+            "weighted": 4.011608900220081,
+            "annual_2024": 3.9877550058734,
+            "annual_2025": 4.02183199779723,
+            "games_2024": 285,
+            "games_2025": 285,
+            "recipe": "omit_coach",
+            "families": "sklearn+torch",
+            "policy": "target_least_squares",
+            "method": "uncalibrated_normal",
+            "exact_ties": 1
+          },
+          "prior": null,
+          "improvement": null
+        },
+        "20/80": {
+          "policy": {
+            "weighted": 4.015016599412465,
+            "annual_2024": 3.9877550058734,
+            "annual_2025": 4.02183199779723,
+            "games_2024": 285,
+            "games_2025": 285,
+            "recipe": "omit_coach",
+            "families": "sklearn+torch",
+            "policy": "target_least_squares",
+            "method": "uncalibrated_normal",
+            "exact_ties": 1
+          },
+          "prior": null,
+          "improvement": null
+        },
+        "10/90": {
+          "policy": {
+            "weighted": 4.018424298604847,
+            "annual_2024": 3.9877550058734,
+            "annual_2025": 4.02183199779723,
+            "games_2024": 285,
+            "games_2025": 285,
+            "recipe": "omit_coach",
+            "families": "sklearn+torch",
+            "policy": "target_least_squares",
+            "method": "uncalibrated_normal",
+            "exact_ties": 1
+          },
+          "prior": null,
+          "improvement": null
+        }
+      },
+      "total_interval_score_50": {
+        "50/50": {
+          "policy": {
+            "weighted": 33.45789473684211,
+            "annual_2024": 32.59298245614035,
+            "annual_2025": 34.32280701754386,
+            "games_2024": 285,
+            "games_2025": 285,
+            "recipe": "omit_coach",
+            "families": "sklearn+torch",
+            "policy": "target_least_squares",
+            "method": "uncalibrated_normal",
+            "exact_ties": 1
+          },
+          "prior": null,
+          "improvement": null
+        },
+        "40/60": {
+          "policy": {
+            "weighted": 33.63087719298246,
+            "annual_2024": 32.59298245614035,
+            "annual_2025": 34.32280701754386,
+            "games_2024": 285,
+            "games_2025": 285,
+            "recipe": "omit_coach",
+            "families": "sklearn+torch",
+            "policy": "target_least_squares",
+            "method": "uncalibrated_normal",
+            "exact_ties": 1
+          },
+          "prior": null,
+          "improvement": null
+        },
+        "30/70": {
+          "policy": {
+            "weighted": 33.803859649122806,
+            "annual_2024": 32.59298245614035,
+            "annual_2025": 34.32280701754386,
+            "games_2024": 285,
+            "games_2025": 285,
+            "recipe": "omit_coach",
+            "families": "sklearn+torch",
+            "policy": "target_least_squares",
+            "method": "uncalibrated_normal",
+            "exact_ties": 1
+          },
+          "prior": null,
+          "improvement": null
+        },
+        "20/80": {
+          "policy": {
+            "weighted": 33.97684210526316,
+            "annual_2024": 32.59298245614035,
+            "annual_2025": 34.32280701754386,
+            "games_2024": 285,
+            "games_2025": 285,
+            "recipe": "omit_coach",
+            "families": "sklearn+torch",
+            "policy": "target_least_squares",
+            "method": "uncalibrated_normal",
+            "exact_ties": 1
+          },
+          "prior": null,
+          "improvement": null
+        },
+        "10/90": {
+          "policy": {
+            "weighted": 34.14982456140351,
+            "annual_2024": 32.59298245614035,
+            "annual_2025": 34.32280701754386,
+            "games_2024": 285,
+            "games_2025": 285,
+            "recipe": "omit_coach",
+            "families": "sklearn+torch",
+            "policy": "target_least_squares",
+            "method": "uncalibrated_normal",
+            "exact_ties": 1
+          },
+          "prior": null,
+          "improvement": null
+        }
+      },
+      "total_interval_score_80": {
+        "50/50": {
+          "policy": {
+            "weighted": 47.28421052631578,
+            "annual_2024": 47.280701754385966,
+            "annual_2025": 47.28771929824561,
+            "games_2024": 285,
+            "games_2025": 285,
+            "recipe": "add_qb_coach",
+            "families": "catboost+tensorflow",
+            "policy": "fixed_equal",
+            "method": "heldout_empirical",
+            "exact_ties": 1
+          },
+          "prior": null,
+          "improvement": null
+        },
+        "40/60": {
+          "policy": {
+            "weighted": 47.257543859649125,
+            "annual_2024": 47.59649122807018,
+            "annual_2025": 47.03157894736842,
+            "games_2024": 285,
+            "games_2025": 285,
+            "recipe": "add_qb_form",
+            "families": "catboost+tensorflow",
+            "policy": "fixed_equal",
+            "method": "heldout_empirical",
+            "exact_ties": 1
+          },
+          "prior": null,
+          "improvement": null
+        },
+        "30/70": {
+          "policy": {
+            "weighted": 47.20105263157895,
+            "annual_2024": 47.59649122807018,
+            "annual_2025": 47.03157894736842,
+            "games_2024": 285,
+            "games_2025": 285,
+            "recipe": "add_qb_form",
+            "families": "catboost+tensorflow",
+            "policy": "fixed_equal",
+            "method": "heldout_empirical",
+            "exact_ties": 1
+          },
+          "prior": null,
+          "improvement": null
+        },
+        "20/80": {
+          "policy": {
+            "weighted": 47.14456140350878,
+            "annual_2024": 47.59649122807018,
+            "annual_2025": 47.03157894736842,
+            "games_2024": 285,
+            "games_2025": 285,
+            "recipe": "add_qb_form",
+            "families": "catboost+tensorflow",
+            "policy": "fixed_equal",
+            "method": "heldout_empirical",
+            "exact_ties": 1
+          },
+          "prior": null,
+          "improvement": null
+        },
+        "10/90": {
+          "policy": {
+            "weighted": 47.08807017543861,
+            "annual_2024": 47.59649122807018,
+            "annual_2025": 47.03157894736842,
+            "games_2024": 285,
+            "games_2025": 285,
+            "recipe": "add_qb_form",
+            "families": "catboost+tensorflow",
+            "policy": "fixed_equal",
+            "method": "heldout_empirical",
+            "exact_ties": 1
+          },
+          "prior": null,
+          "improvement": null
+        }
+      },
+      "total_mae": {
+        "50/50": {
+          "policy": {
+            "weighted": 10.2650543219628,
+            "annual_2024": 9.869717747867846,
+            "annual_2025": 10.660390896057754,
+            "games_2024": 285,
+            "games_2025": 285,
+            "recipe": "omit_coach",
+            "families": "torch",
+            "policy": "single_parent",
+            "method": "heldout_empirical",
+            "exact_ties": 2
+          },
+          "prior": {
+            "weighted": 10.296773830635725,
+            "annual_2024": 9.912218957151328,
+            "annual_2025": 10.681328704120123,
+            "games_2024": 285,
+            "games_2025": 285,
+            "recipe": "omit_coach",
+            "families": "torch",
+            "policy": "retained_export",
+            "method": "original_export",
+            "exact_ties": 1
+          },
+          "improvement": 0.031719508672924945
+        },
+        "40/60": {
+          "policy": {
+            "weighted": 10.33641008385905,
+            "annual_2024": 9.92571142842772,
+            "annual_2025": 10.610209187479938,
+            "games_2024": 285,
+            "games_2025": 285,
+            "recipe": "omit_three_season_history",
+            "families": "sklearn",
+            "policy": "single_parent",
+            "method": "heldout_empirical",
+            "exact_ties": 4
+          },
+          "prior": {
+            "weighted": 10.373684805332605,
+            "annual_2024": 9.912218957151328,
+            "annual_2025": 10.681328704120123,
+            "games_2024": 285,
+            "games_2025": 285,
+            "recipe": "omit_coach",
+            "families": "torch",
+            "policy": "retained_export",
+            "method": "original_export",
+            "exact_ties": 1
+          },
+          "improvement": 0.037274721473554706
+        },
+        "30/70": {
+          "policy": {
+            "weighted": 10.404859859764274,
+            "annual_2024": 9.92571142842772,
+            "annual_2025": 10.610209187479938,
+            "games_2024": 285,
+            "games_2025": 285,
+            "recipe": "omit_three_season_history",
+            "families": "sklearn",
+            "policy": "single_parent",
+            "method": "heldout_empirical",
+            "exact_ties": 4
+          },
+          "prior": {
+            "weighted": 10.450595780029484,
+            "annual_2024": 9.912218957151328,
+            "annual_2025": 10.681328704120123,
+            "games_2024": 285,
+            "games_2025": 285,
+            "recipe": "omit_coach",
+            "families": "torch",
+            "policy": "retained_export",
+            "method": "original_export",
+            "exact_ties": 1
+          },
+          "improvement": 0.04573592026521034
+        },
+        "20/80": {
+          "policy": {
+            "weighted": 10.473309635669496,
+            "annual_2024": 9.92571142842772,
+            "annual_2025": 10.610209187479938,
+            "games_2024": 285,
+            "games_2025": 285,
+            "recipe": "omit_three_season_history",
+            "families": "sklearn",
+            "policy": "single_parent",
+            "method": "heldout_empirical",
+            "exact_ties": 4
+          },
+          "prior": {
+            "weighted": 10.520678678165961,
+            "annual_2024": 10.021567157968791,
+            "annual_2025": 10.645456558215255,
+            "games_2024": 285,
+            "games_2025": 285,
+            "recipe": "omit_three_season_history",
+            "families": "sklearn",
+            "policy": "retained_export",
+            "method": "original_export",
+            "exact_ties": 1
+          },
+          "improvement": 0.047369042496464786
+        },
+        "10/90": {
+          "policy": {
+            "weighted": 10.541759411574716,
+            "annual_2024": 9.92571142842772,
+            "annual_2025": 10.610209187479938,
+            "games_2024": 285,
+            "games_2025": 285,
+            "recipe": "omit_three_season_history",
+            "families": "sklearn",
+            "policy": "single_parent",
+            "method": "heldout_empirical",
+            "exact_ties": 4
+          },
+          "prior": {
+            "weighted": 10.583067618190608,
+            "annual_2024": 10.021567157968791,
+            "annual_2025": 10.645456558215255,
+            "games_2024": 285,
+            "games_2025": 285,
+            "recipe": "omit_three_season_history",
+            "families": "sklearn",
+            "policy": "retained_export",
+            "method": "original_export",
+            "exact_ties": 1
+          },
+          "improvement": 0.04130820661589141
+        }
+      },
+      "total_rmse": {
+        "50/50": {
+          "policy": {
+            "weighted": 13.231930334911672,
+            "annual_2024": 12.973203848847232,
+            "annual_2025": 13.490656820976113,
+            "games_2024": 285,
+            "games_2025": 285,
+            "recipe": "omit_coach",
+            "families": "sklearn+torch",
+            "policy": "fixed_equal",
+            "method": "heldout_empirical",
+            "exact_ties": 2
+          },
+          "prior": {
+            "weighted": 13.248062677586315,
+            "annual_2024": 12.953867789331342,
+            "annual_2025": 13.542257565841288,
+            "games_2024": 285,
+            "games_2025": 285,
+            "recipe": "omit_venue",
+            "families": "sklearn",
+            "policy": "retained_export",
+            "method": "original_export",
+            "exact_ties": 1
+          },
+          "improvement": 0.01613234267464314
+        },
+        "40/60": {
+          "policy": {
+            "weighted": 13.28367563212456,
+            "annual_2024": 12.973203848847232,
+            "annual_2025": 13.490656820976113,
+            "games_2024": 285,
+            "games_2025": 285,
+            "recipe": "omit_coach",
+            "families": "sklearn+torch",
+            "policy": "fixed_equal",
+            "method": "heldout_empirical",
+            "exact_ties": 2
+          },
+          "prior": {
+            "weighted": 13.305719926471655,
+            "annual_2024": 12.995209247096026,
+            "annual_2025": 13.512727046055407,
+            "games_2024": 285,
+            "games_2025": 285,
+            "recipe": "add_qb_form",
+            "families": "sklearn",
+            "policy": "retained_export",
+            "method": "original_export",
+            "exact_ties": 1
+          },
+          "improvement": 0.022044294347095317
+        },
+        "30/70": {
+          "policy": {
+            "weighted": 13.335420929337449,
+            "annual_2024": 12.973203848847232,
+            "annual_2025": 13.490656820976113,
+            "games_2024": 285,
+            "games_2025": 285,
+            "recipe": "omit_coach",
+            "families": "sklearn+torch",
+            "policy": "fixed_equal",
+            "method": "heldout_empirical",
+            "exact_ties": 2
+          },
+          "prior": {
+            "weighted": 13.357471706367592,
+            "annual_2024": 12.995209247096026,
+            "annual_2025": 13.512727046055407,
+            "games_2024": 285,
+            "games_2025": 285,
+            "recipe": "add_qb_form",
+            "families": "sklearn",
+            "policy": "retained_export",
+            "method": "original_export",
+            "exact_ties": 1
+          },
+          "improvement": 0.022050777030143465
+        },
+        "20/80": {
+          "policy": {
+            "weighted": 13.387166226550336,
+            "annual_2024": 12.973203848847232,
+            "annual_2025": 13.490656820976113,
+            "games_2024": 285,
+            "games_2025": 285,
+            "recipe": "omit_coach",
+            "families": "sklearn+torch",
+            "policy": "fixed_equal",
+            "method": "heldout_empirical",
+            "exact_ties": 2
+          },
+          "prior": {
+            "weighted": 13.40922348626353,
+            "annual_2024": 12.995209247096026,
+            "annual_2025": 13.512727046055407,
+            "games_2024": 285,
+            "games_2025": 285,
+            "recipe": "add_qb_form",
+            "families": "sklearn",
+            "policy": "retained_export",
+            "method": "original_export",
+            "exact_ties": 1
+          },
+          "improvement": 0.02205725971319339
+        },
+        "10/90": {
+          "policy": {
+            "weighted": 13.437838621835624,
+            "annual_2024": 13.09428711498825,
+            "annual_2025": 13.476011011485333,
+            "games_2024": 285,
+            "games_2025": 285,
+            "recipe": "omit_three_season_history",
+            "families": "sklearn+torch",
+            "policy": "fixed_equal",
+            "method": "heldout_empirical",
+            "exact_ties": 2
+          },
+          "prior": {
+            "weighted": 13.460975266159469,
+            "annual_2024": 12.995209247096026,
+            "annual_2025": 13.512727046055407,
+            "games_2024": 285,
+            "games_2025": 285,
+            "recipe": "add_qb_form",
+            "families": "sklearn",
+            "policy": "retained_export",
+            "method": "original_export",
+            "exact_ties": 1
+          },
+          "improvement": 0.02313664432384499
+        }
+      }
+    }
   }
 }
