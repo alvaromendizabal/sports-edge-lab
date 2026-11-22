@@ -67,8 +67,6 @@ function verifyHostedHtml(observed, source, context) {
       assert.equal(asset.status, 200);
       assert.equal(asset.matches_pushed_source, true);
       const local = fs.readFileSync(path.join(root, asset.path));
-      assert.equal(digest(local), asset.sha256, `${asset.path}: committed source differs from publication receipt`);
-      assert.equal(local.length, asset.bytes);
       const url = new URL(asset.path === "index.html" ? "./" : asset.path, base);
       const response = await assetContext.request.get(url.href, { timeout: 30000 });
       const bytes = await response.body();
@@ -77,11 +75,15 @@ function verifyHostedHtml(observed, source, context) {
       assert.equal(response.status(), 200, `${asset.path}: live HTTP status`);
       assert.equal(new URL(response.url()).origin, base.origin, "Unexpected origin redirect");
       if (asset.path === "index.html") {
-        observed.html_verification = verifyHostedHtml(bytes, local, "asset-index").status;
+        const canonical = verifyHostedHtml(bytes, local, "asset-index");
+        observed.html_verification = canonical.status;
+        console.log("Production HTML evidence", JSON.stringify(canonical));
       } else {
         assert.equal(observed.sha256, asset.sha256, `${asset.path}: deployed bytes differ`);
         assert.equal(observed.bytes, asset.bytes);
       }
+      assert.equal(digest(local), asset.sha256, `${asset.path}: committed source differs from publication receipt`);
+      assert.equal(local.length, asset.bytes);
     }
   });
   await assetContext.close();
@@ -169,6 +171,38 @@ function verifyHostedHtml(observed, source, context) {
       assert.equal(await text("#pick-count"), "0 / 5");
     });
     await page.locator('.view-nav [data-view-link="performance"]').click();
+    await check(`${width}px: locked results preserve eligibility and matched venue populations`, async () => {
+      const grading = page.locator("#n164-grading");
+      const leaders = grading.locator(":scope > .comparison-table-wrap tbody tr");
+      assert.match(await leaders.nth(0).innerText(), /58\.78%[\s\S]*148 \/ 150/);
+      assert.match(await leaders.nth(2).innerText(), /149 \/ 151/);
+      assert.match(await grading.innerText(), /zero original forecasts/);
+      const candidates = page.locator("#n164-candidates");
+      if (await candidates.getAttribute("open") === null) {
+        await candidates.locator("summary").click();
+      }
+      const rows = candidates.locator("[data-grade-metric]");
+      assert.equal(await rows.count(), 112);
+      await page.locator("#n164-metric").selectOption("margin_rmse");
+      for (const horizon of ["60", "120"]) {
+        await page.locator("#n164-horizon").selectOption(horizon);
+        const expected = rows.and(page.locator(`[data-grade-metric="margin_rmse"][data-grade-horizon="${horizon}"]`));
+        assert((await expected.count()) > 0);
+        assert.equal(await candidates.locator("[data-grade-metric]:visible").count(), await expected.count());
+        assert.equal(await expected.first().isVisible(), true);
+        assert.match(await expected.first().innerText(), /149 \/ 151/);
+      }
+      const markets = page.locator("#n164-market-results");
+      await markets.locator("summary").click();
+      const paired = markets.locator("tbody tr");
+      assert.equal(await paired.count(), 4);
+      for (const [i, venue, graded] of [[0, "DraftKings", 148], [1, "Kalshi", 141], [2, "Polymarket", 139], [3, "Polymarket US", 69]]) {
+        const row = paired.nth(i);
+        assert.equal(await row.locator("th").innerText(), venue);
+        assert.equal(await row.locator("td").last().innerText(), `${graded} / 151`);
+      }
+      await noOverflow();
+    });
     await check(`${width}px: model clocks and latest-fit negative finding`, async () => {
       await count("#performance-grid .performance-card", data.performance.length);
       await page.locator("#performance-horizon").selectOption("T120");
