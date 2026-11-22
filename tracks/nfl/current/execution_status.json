@@ -1,6 +1,6 @@
 {
   "schema": "sports-edge-lab.nfl.public-execution-status.v1",
-  "as_of": "2026-11-22T04:37:39.510873+00:00",
+  "as_of": "2026-11-22T05:03:00.454213+00:00",
   "status": "HISTORICAL_POLICY_EVALUATION_COMPLETE_FULL_V13_PENDING",
   "owner": "NFL",
   "new_owner_campaign_executions": 0,
@@ -2278,5 +2278,1575 @@
         }
       }
     }
+  },
+  "scope_qualification": {
+    "as_of_utc": "2026-11-22T05:03:00.454213+00:00",
+    "build_sha256": "d8d7308b1ec6a14f35e09dce4fbc86aa603d97d52ff656446bfd40a2f6471758",
+    "registered_tests": 1946,
+    "test_failures": 0,
+    "test_errors": 0,
+    "skips": 0,
+    "engineering_worker_ceiling": 4,
+    "checkpoint_groups": 40758,
+    "pointer_unchanged": true,
+    "representative_fits": 12,
+    "distinct_worker_pids": 12,
+    "peak_overlapping_optimizers": 2,
+    "measured_optimizer_cpu_seconds": 0.24388409599999994,
+    "owner_campaigns_started": 0,
+    "general_current_forecast_adapter": "INCOMPLETE"
+  },
+  "verified_current_population": {
+    "source": {
+      "status": "CURRENT_VERIFIED",
+      "fresh_current_census": true,
+      "checked_utc": "2026-11-22T05:03:00.454213+00:00",
+      "census_sha256": "929490c31c560ab28dbf4167c86be559abbfd832a0931851f1aff39f9fda9a61",
+      "source_commit": "32d14e40877d8e51eb413ab2bd7c6d200694d953",
+      "source_blob": "bd1435c9d1eb7c3b6f3263cdc1a522cc4629fa45",
+      "source_sha256": "90c06edbe6e4ea0bd696ce75807e7b194ca92fb66e00fe51e218990ef961a850",
+      "source_publication": "2026-11-22T04:45:21Z",
+      "cache_hit": false,
+      "removed_unsettled_fixture_ids": []
+    },
+    "completed": 151,
+    "scheduled": 121,
+    "retained_parent_eligibility": [
+      {
+        "horizon": 60,
+        "fixture": "completed",
+        "eligibility": "ARCHIVED_TIME_VALID_REPLAY",
+        "games": 149
+      },
+      {
+        "horizon": 60,
+        "fixture": "completed",
+        "eligibility": "CONDITIONAL_RECONSTRUCTION_ONLY",
+        "games": 2
+      },
+      {
+        "horizon": 60,
+        "fixture": "scheduled",
+        "eligibility": "CONDITIONAL_RECONSTRUCTION_ONLY",
+        "games": 92
+      },
+      {
+        "horizon": 60,
+        "fixture": "scheduled",
+        "eligibility": "GAP",
+        "games": 29
+      },
+      {
+        "horizon": 120,
+        "fixture": "completed",
+        "eligibility": "ARCHIVED_TIME_VALID_REPLAY",
+        "games": 149
+      },
+      {
+        "horizon": 120,
+        "fixture": "completed",
+        "eligibility": "CONDITIONAL_RECONSTRUCTION_ONLY",
+        "games": 2
+      },
+      {
+        "horizon": 120,
+        "fixture": "scheduled",
+        "eligibility": "CONDITIONAL_RECONSTRUCTION_ONLY",
+        "games": 92
+      },
+      {
+        "horizon": 120,
+        "fixture": "scheduled",
+        "eligibility": "GAP",
+        "games": 29
+      },
+      {
+        "horizon": 1440,
+        "fixture": "completed",
+        "eligibility": "GAP",
+        "games": 151
+      },
+      {
+        "horizon": 1440,
+        "fixture": "scheduled",
+        "eligibility": "GAP",
+        "games": 121
+      }
+    ],
+    "original_issues_this_preparation": 0
+  },
+  "frozen_market_coverage": {
+    "scope": "Pre-existing authenticated R20 market coverage; retrospective policy recalibration did not admit additional market rows.",
+    "horizons": [
+      {
+        "minutes": 1440,
+        "rows": 4200,
+        "sources": 105,
+        "coverage_sha256": "b42e4dd25f5ad53fb75dead93f171fdba522069497ae8591ffb775475fecf084"
+      },
+      {
+        "minutes": 120,
+        "rows": 3840,
+        "sources": 96,
+        "coverage_sha256": "606dfe7bbf8f3a5f7f561592acceb0fc67fa66e9d47fd125a6107e86a2b03254"
+      },
+      {
+        "minutes": 60,
+        "rows": 4120,
+        "sources": 103,
+        "coverage_sha256": "fcb5fd1959d3b85f885477fe6bd86aeb28810f60b945827cd674de0b483bfeb6"
+      }
+    ],
+    "cells": 12160,
+    "sources": 105,
+    "products": [
+      "away_margin_1_to_6",
+      "away_margin_7_to_12",
+      "spread",
+      "total",
+      "winner"
+    ],
+    "comparison": [
+      {
+        "horizon_minutes": 1440,
+        "source": "dk",
+        "scope": "validation",
+        "season": "2024",
+        "product": "winner",
+        "eligible_games": 285,
+        "missing": 0,
+        "population": 285
+      },
+      {
+        "horizon_minutes": 1440,
+        "source": "dk",
+        "scope": "validation",
+        "season": "2024",
+        "product": "spread",
+        "eligible_games": 285,
+        "missing": 0,
+        "population": 285
+      },
+      {
+        "horizon_minutes": 1440,
+        "source": "dk",
+        "scope": "validation",
+        "season": "2024",
+        "product": "total",
+        "eligible_games": 285,
+        "missing": 0,
+        "population": 285
+      },
+      {
+        "horizon_minutes": 1440,
+        "source": "dk",
+        "scope": "validation",
+        "season": "2025",
+        "product": "winner",
+        "eligible_games": 285,
+        "missing": 0,
+        "population": 285
+      },
+      {
+        "horizon_minutes": 1440,
+        "source": "dk",
+        "scope": "validation",
+        "season": "2025",
+        "product": "spread",
+        "eligible_games": 285,
+        "missing": 0,
+        "population": 285
+      },
+      {
+        "horizon_minutes": 1440,
+        "source": "dk",
+        "scope": "validation",
+        "season": "2025",
+        "product": "total",
+        "eligible_games": 285,
+        "missing": 0,
+        "population": 285
+      },
+      {
+        "horizon_minutes": 1440,
+        "source": "dk",
+        "scope": "forward",
+        "season": "2026",
+        "product": "winner",
+        "eligible_games": 0,
+        "missing": 123,
+        "population": 123
+      },
+      {
+        "horizon_minutes": 1440,
+        "source": "dk",
+        "scope": "forward",
+        "season": "2026",
+        "product": "spread",
+        "eligible_games": 0,
+        "missing": 123,
+        "population": 123
+      },
+      {
+        "horizon_minutes": 1440,
+        "source": "dk",
+        "scope": "forward",
+        "season": "2026",
+        "product": "total",
+        "eligible_games": 0,
+        "missing": 123,
+        "population": 123
+      },
+      {
+        "horizon_minutes": 1440,
+        "source": "dk",
+        "scope": "test",
+        "season": "2026",
+        "product": "winner",
+        "eligible_games": 148,
+        "missing": 1,
+        "population": 149
+      },
+      {
+        "horizon_minutes": 1440,
+        "source": "dk",
+        "scope": "test",
+        "season": "2026",
+        "product": "spread",
+        "eligible_games": 148,
+        "missing": 1,
+        "population": 149
+      },
+      {
+        "horizon_minutes": 1440,
+        "source": "dk",
+        "scope": "test",
+        "season": "2026",
+        "product": "total",
+        "eligible_games": 148,
+        "missing": 1,
+        "population": 149
+      },
+      {
+        "horizon_minutes": 1440,
+        "source": "kalshi",
+        "scope": "validation",
+        "season": "2024",
+        "product": "winner",
+        "eligible_games": 0,
+        "missing": 285,
+        "population": 285
+      },
+      {
+        "horizon_minutes": 1440,
+        "source": "kalshi",
+        "scope": "validation",
+        "season": "2024",
+        "product": "spread",
+        "eligible_games": 0,
+        "missing": 285,
+        "population": 285
+      },
+      {
+        "horizon_minutes": 1440,
+        "source": "kalshi",
+        "scope": "validation",
+        "season": "2024",
+        "product": "total",
+        "eligible_games": 0,
+        "missing": 285,
+        "population": 285
+      },
+      {
+        "horizon_minutes": 1440,
+        "source": "kalshi",
+        "scope": "validation",
+        "season": "2025",
+        "product": "winner",
+        "eligible_games": 0,
+        "missing": 285,
+        "population": 285
+      },
+      {
+        "horizon_minutes": 1440,
+        "source": "kalshi",
+        "scope": "validation",
+        "season": "2025",
+        "product": "spread",
+        "eligible_games": 0,
+        "missing": 285,
+        "population": 285
+      },
+      {
+        "horizon_minutes": 1440,
+        "source": "kalshi",
+        "scope": "validation",
+        "season": "2025",
+        "product": "total",
+        "eligible_games": 0,
+        "missing": 285,
+        "population": 285
+      },
+      {
+        "horizon_minutes": 1440,
+        "source": "kalshi",
+        "scope": "forward",
+        "season": "2026",
+        "product": "winner",
+        "eligible_games": 0,
+        "missing": 123,
+        "population": 123
+      },
+      {
+        "horizon_minutes": 1440,
+        "source": "kalshi",
+        "scope": "forward",
+        "season": "2026",
+        "product": "spread",
+        "eligible_games": 0,
+        "missing": 123,
+        "population": 123
+      },
+      {
+        "horizon_minutes": 1440,
+        "source": "kalshi",
+        "scope": "forward",
+        "season": "2026",
+        "product": "total",
+        "eligible_games": 0,
+        "missing": 123,
+        "population": 123
+      },
+      {
+        "horizon_minutes": 1440,
+        "source": "kalshi",
+        "scope": "test",
+        "season": "2026",
+        "product": "winner",
+        "eligible_games": 0,
+        "missing": 149,
+        "population": 149
+      },
+      {
+        "horizon_minutes": 1440,
+        "source": "kalshi",
+        "scope": "test",
+        "season": "2026",
+        "product": "spread",
+        "eligible_games": 0,
+        "missing": 149,
+        "population": 149
+      },
+      {
+        "horizon_minutes": 1440,
+        "source": "kalshi",
+        "scope": "test",
+        "season": "2026",
+        "product": "total",
+        "eligible_games": 0,
+        "missing": 149,
+        "population": 149
+      },
+      {
+        "horizon_minutes": 1440,
+        "source": "polymarket",
+        "scope": "validation",
+        "season": "2024",
+        "product": "winner",
+        "eligible_games": 0,
+        "missing": 285,
+        "population": 285
+      },
+      {
+        "horizon_minutes": 1440,
+        "source": "polymarket",
+        "scope": "validation",
+        "season": "2024",
+        "product": "spread",
+        "eligible_games": 0,
+        "missing": 285,
+        "population": 285
+      },
+      {
+        "horizon_minutes": 1440,
+        "source": "polymarket",
+        "scope": "validation",
+        "season": "2024",
+        "product": "total",
+        "eligible_games": 0,
+        "missing": 285,
+        "population": 285
+      },
+      {
+        "horizon_minutes": 1440,
+        "source": "polymarket",
+        "scope": "validation",
+        "season": "2025",
+        "product": "winner",
+        "eligible_games": 0,
+        "missing": 285,
+        "population": 285
+      },
+      {
+        "horizon_minutes": 1440,
+        "source": "polymarket",
+        "scope": "validation",
+        "season": "2025",
+        "product": "spread",
+        "eligible_games": 0,
+        "missing": 285,
+        "population": 285
+      },
+      {
+        "horizon_minutes": 1440,
+        "source": "polymarket",
+        "scope": "validation",
+        "season": "2025",
+        "product": "total",
+        "eligible_games": 0,
+        "missing": 285,
+        "population": 285
+      },
+      {
+        "horizon_minutes": 1440,
+        "source": "polymarket",
+        "scope": "forward",
+        "season": "2026",
+        "product": "winner",
+        "eligible_games": 0,
+        "missing": 123,
+        "population": 123
+      },
+      {
+        "horizon_minutes": 1440,
+        "source": "polymarket",
+        "scope": "forward",
+        "season": "2026",
+        "product": "spread",
+        "eligible_games": 0,
+        "missing": 123,
+        "population": 123
+      },
+      {
+        "horizon_minutes": 1440,
+        "source": "polymarket",
+        "scope": "forward",
+        "season": "2026",
+        "product": "total",
+        "eligible_games": 0,
+        "missing": 123,
+        "population": 123
+      },
+      {
+        "horizon_minutes": 1440,
+        "source": "polymarket",
+        "scope": "test",
+        "season": "2026",
+        "product": "winner",
+        "eligible_games": 0,
+        "missing": 149,
+        "population": 149
+      },
+      {
+        "horizon_minutes": 1440,
+        "source": "polymarket",
+        "scope": "test",
+        "season": "2026",
+        "product": "spread",
+        "eligible_games": 0,
+        "missing": 149,
+        "population": 149
+      },
+      {
+        "horizon_minutes": 1440,
+        "source": "polymarket",
+        "scope": "test",
+        "season": "2026",
+        "product": "total",
+        "eligible_games": 0,
+        "missing": 149,
+        "population": 149
+      },
+      {
+        "horizon_minutes": 1440,
+        "source": "polymarket_us",
+        "scope": "validation",
+        "season": "2024",
+        "product": "winner",
+        "eligible_games": 0,
+        "missing": 285,
+        "population": 285
+      },
+      {
+        "horizon_minutes": 1440,
+        "source": "polymarket_us",
+        "scope": "validation",
+        "season": "2024",
+        "product": "spread",
+        "eligible_games": 0,
+        "missing": 285,
+        "population": 285
+      },
+      {
+        "horizon_minutes": 1440,
+        "source": "polymarket_us",
+        "scope": "validation",
+        "season": "2024",
+        "product": "total",
+        "eligible_games": 0,
+        "missing": 285,
+        "population": 285
+      },
+      {
+        "horizon_minutes": 1440,
+        "source": "polymarket_us",
+        "scope": "validation",
+        "season": "2025",
+        "product": "winner",
+        "eligible_games": 0,
+        "missing": 285,
+        "population": 285
+      },
+      {
+        "horizon_minutes": 1440,
+        "source": "polymarket_us",
+        "scope": "validation",
+        "season": "2025",
+        "product": "spread",
+        "eligible_games": 0,
+        "missing": 285,
+        "population": 285
+      },
+      {
+        "horizon_minutes": 1440,
+        "source": "polymarket_us",
+        "scope": "validation",
+        "season": "2025",
+        "product": "total",
+        "eligible_games": 0,
+        "missing": 285,
+        "population": 285
+      },
+      {
+        "horizon_minutes": 1440,
+        "source": "polymarket_us",
+        "scope": "forward",
+        "season": "2026",
+        "product": "winner",
+        "eligible_games": 0,
+        "missing": 123,
+        "population": 123
+      },
+      {
+        "horizon_minutes": 1440,
+        "source": "polymarket_us",
+        "scope": "forward",
+        "season": "2026",
+        "product": "spread",
+        "eligible_games": 0,
+        "missing": 123,
+        "population": 123
+      },
+      {
+        "horizon_minutes": 1440,
+        "source": "polymarket_us",
+        "scope": "forward",
+        "season": "2026",
+        "product": "total",
+        "eligible_games": 0,
+        "missing": 123,
+        "population": 123
+      },
+      {
+        "horizon_minutes": 1440,
+        "source": "polymarket_us",
+        "scope": "test",
+        "season": "2026",
+        "product": "winner",
+        "eligible_games": 0,
+        "missing": 149,
+        "population": 149
+      },
+      {
+        "horizon_minutes": 1440,
+        "source": "polymarket_us",
+        "scope": "test",
+        "season": "2026",
+        "product": "spread",
+        "eligible_games": 0,
+        "missing": 149,
+        "population": 149
+      },
+      {
+        "horizon_minutes": 1440,
+        "source": "polymarket_us",
+        "scope": "test",
+        "season": "2026",
+        "product": "total",
+        "eligible_games": 0,
+        "missing": 149,
+        "population": 149
+      },
+      {
+        "horizon_minutes": 120,
+        "source": "dk",
+        "scope": "validation",
+        "season": "2024",
+        "product": "winner",
+        "eligible_games": 285,
+        "missing": 0,
+        "population": 285
+      },
+      {
+        "horizon_minutes": 120,
+        "source": "dk",
+        "scope": "validation",
+        "season": "2024",
+        "product": "spread",
+        "eligible_games": 283,
+        "missing": 2,
+        "population": 285
+      },
+      {
+        "horizon_minutes": 120,
+        "source": "dk",
+        "scope": "validation",
+        "season": "2024",
+        "product": "total",
+        "eligible_games": 283,
+        "missing": 2,
+        "population": 285
+      },
+      {
+        "horizon_minutes": 120,
+        "source": "dk",
+        "scope": "validation",
+        "season": "2025",
+        "product": "winner",
+        "eligible_games": 285,
+        "missing": 0,
+        "population": 285
+      },
+      {
+        "horizon_minutes": 120,
+        "source": "dk",
+        "scope": "validation",
+        "season": "2025",
+        "product": "spread",
+        "eligible_games": 284,
+        "missing": 1,
+        "population": 285
+      },
+      {
+        "horizon_minutes": 120,
+        "source": "dk",
+        "scope": "validation",
+        "season": "2025",
+        "product": "total",
+        "eligible_games": 283,
+        "missing": 2,
+        "population": 285
+      },
+      {
+        "horizon_minutes": 120,
+        "source": "dk",
+        "scope": "forward",
+        "season": "2026",
+        "product": "winner",
+        "eligible_games": 0,
+        "missing": 123,
+        "population": 123
+      },
+      {
+        "horizon_minutes": 120,
+        "source": "dk",
+        "scope": "forward",
+        "season": "2026",
+        "product": "spread",
+        "eligible_games": 0,
+        "missing": 123,
+        "population": 123
+      },
+      {
+        "horizon_minutes": 120,
+        "source": "dk",
+        "scope": "forward",
+        "season": "2026",
+        "product": "total",
+        "eligible_games": 0,
+        "missing": 123,
+        "population": 123
+      },
+      {
+        "horizon_minutes": 120,
+        "source": "dk",
+        "scope": "test",
+        "season": "2026",
+        "product": "winner",
+        "eligible_games": 149,
+        "missing": 0,
+        "population": 149
+      },
+      {
+        "horizon_minutes": 120,
+        "source": "dk",
+        "scope": "test",
+        "season": "2026",
+        "product": "spread",
+        "eligible_games": 149,
+        "missing": 0,
+        "population": 149
+      },
+      {
+        "horizon_minutes": 120,
+        "source": "dk",
+        "scope": "test",
+        "season": "2026",
+        "product": "total",
+        "eligible_games": 149,
+        "missing": 0,
+        "population": 149
+      },
+      {
+        "horizon_minutes": 120,
+        "source": "kalshi",
+        "scope": "validation",
+        "season": "2024",
+        "product": "winner",
+        "eligible_games": 0,
+        "missing": 285,
+        "population": 285
+      },
+      {
+        "horizon_minutes": 120,
+        "source": "kalshi",
+        "scope": "validation",
+        "season": "2024",
+        "product": "spread",
+        "eligible_games": 0,
+        "missing": 285,
+        "population": 285
+      },
+      {
+        "horizon_minutes": 120,
+        "source": "kalshi",
+        "scope": "validation",
+        "season": "2024",
+        "product": "total",
+        "eligible_games": 0,
+        "missing": 285,
+        "population": 285
+      },
+      {
+        "horizon_minutes": 120,
+        "source": "kalshi",
+        "scope": "validation",
+        "season": "2025",
+        "product": "winner",
+        "eligible_games": 107,
+        "missing": 178,
+        "population": 285
+      },
+      {
+        "horizon_minutes": 120,
+        "source": "kalshi",
+        "scope": "validation",
+        "season": "2025",
+        "product": "spread",
+        "eligible_games": 112,
+        "missing": 173,
+        "population": 285
+      },
+      {
+        "horizon_minutes": 120,
+        "source": "kalshi",
+        "scope": "validation",
+        "season": "2025",
+        "product": "total",
+        "eligible_games": 112,
+        "missing": 173,
+        "population": 285
+      },
+      {
+        "horizon_minutes": 120,
+        "source": "kalshi",
+        "scope": "forward",
+        "season": "2026",
+        "product": "winner",
+        "eligible_games": 0,
+        "missing": 123,
+        "population": 123
+      },
+      {
+        "horizon_minutes": 120,
+        "source": "kalshi",
+        "scope": "forward",
+        "season": "2026",
+        "product": "spread",
+        "eligible_games": 0,
+        "missing": 123,
+        "population": 123
+      },
+      {
+        "horizon_minutes": 120,
+        "source": "kalshi",
+        "scope": "forward",
+        "season": "2026",
+        "product": "total",
+        "eligible_games": 0,
+        "missing": 123,
+        "population": 123
+      },
+      {
+        "horizon_minutes": 120,
+        "source": "kalshi",
+        "scope": "test",
+        "season": "2026",
+        "product": "winner",
+        "eligible_games": 141,
+        "missing": 8,
+        "population": 149
+      },
+      {
+        "horizon_minutes": 120,
+        "source": "kalshi",
+        "scope": "test",
+        "season": "2026",
+        "product": "spread",
+        "eligible_games": 130,
+        "missing": 19,
+        "population": 149
+      },
+      {
+        "horizon_minutes": 120,
+        "source": "kalshi",
+        "scope": "test",
+        "season": "2026",
+        "product": "total",
+        "eligible_games": 130,
+        "missing": 19,
+        "population": 149
+      },
+      {
+        "horizon_minutes": 120,
+        "source": "polymarket",
+        "scope": "validation",
+        "season": "2024",
+        "product": "winner",
+        "eligible_games": 211,
+        "missing": 74,
+        "population": 285
+      },
+      {
+        "horizon_minutes": 120,
+        "source": "polymarket",
+        "scope": "validation",
+        "season": "2024",
+        "product": "spread",
+        "eligible_games": 0,
+        "missing": 285,
+        "population": 285
+      },
+      {
+        "horizon_minutes": 120,
+        "source": "polymarket",
+        "scope": "validation",
+        "season": "2024",
+        "product": "total",
+        "eligible_games": 0,
+        "missing": 285,
+        "population": 285
+      },
+      {
+        "horizon_minutes": 120,
+        "source": "polymarket",
+        "scope": "validation",
+        "season": "2025",
+        "product": "winner",
+        "eligible_games": 107,
+        "missing": 178,
+        "population": 285
+      },
+      {
+        "horizon_minutes": 120,
+        "source": "polymarket",
+        "scope": "validation",
+        "season": "2025",
+        "product": "spread",
+        "eligible_games": 245,
+        "missing": 40,
+        "population": 285
+      },
+      {
+        "horizon_minutes": 120,
+        "source": "polymarket",
+        "scope": "validation",
+        "season": "2025",
+        "product": "total",
+        "eligible_games": 10,
+        "missing": 275,
+        "population": 285
+      },
+      {
+        "horizon_minutes": 120,
+        "source": "polymarket",
+        "scope": "forward",
+        "season": "2026",
+        "product": "winner",
+        "eligible_games": 0,
+        "missing": 123,
+        "population": 123
+      },
+      {
+        "horizon_minutes": 120,
+        "source": "polymarket",
+        "scope": "forward",
+        "season": "2026",
+        "product": "spread",
+        "eligible_games": 0,
+        "missing": 123,
+        "population": 123
+      },
+      {
+        "horizon_minutes": 120,
+        "source": "polymarket",
+        "scope": "forward",
+        "season": "2026",
+        "product": "total",
+        "eligible_games": 0,
+        "missing": 123,
+        "population": 123
+      },
+      {
+        "horizon_minutes": 120,
+        "source": "polymarket",
+        "scope": "test",
+        "season": "2026",
+        "product": "winner",
+        "eligible_games": 139,
+        "missing": 10,
+        "population": 149
+      },
+      {
+        "horizon_minutes": 120,
+        "source": "polymarket",
+        "scope": "test",
+        "season": "2026",
+        "product": "spread",
+        "eligible_games": 139,
+        "missing": 10,
+        "population": 149
+      },
+      {
+        "horizon_minutes": 120,
+        "source": "polymarket",
+        "scope": "test",
+        "season": "2026",
+        "product": "total",
+        "eligible_games": 139,
+        "missing": 10,
+        "population": 149
+      },
+      {
+        "horizon_minutes": 120,
+        "source": "polymarket_us",
+        "scope": "validation",
+        "season": "2024",
+        "product": "winner",
+        "eligible_games": 0,
+        "missing": 285,
+        "population": 285
+      },
+      {
+        "horizon_minutes": 120,
+        "source": "polymarket_us",
+        "scope": "validation",
+        "season": "2024",
+        "product": "spread",
+        "eligible_games": 0,
+        "missing": 285,
+        "population": 285
+      },
+      {
+        "horizon_minutes": 120,
+        "source": "polymarket_us",
+        "scope": "validation",
+        "season": "2024",
+        "product": "total",
+        "eligible_games": 0,
+        "missing": 285,
+        "population": 285
+      },
+      {
+        "horizon_minutes": 120,
+        "source": "polymarket_us",
+        "scope": "validation",
+        "season": "2025",
+        "product": "winner",
+        "eligible_games": 0,
+        "missing": 285,
+        "population": 285
+      },
+      {
+        "horizon_minutes": 120,
+        "source": "polymarket_us",
+        "scope": "validation",
+        "season": "2025",
+        "product": "spread",
+        "eligible_games": 0,
+        "missing": 285,
+        "population": 285
+      },
+      {
+        "horizon_minutes": 120,
+        "source": "polymarket_us",
+        "scope": "validation",
+        "season": "2025",
+        "product": "total",
+        "eligible_games": 0,
+        "missing": 285,
+        "population": 285
+      },
+      {
+        "horizon_minutes": 120,
+        "source": "polymarket_us",
+        "scope": "forward",
+        "season": "2026",
+        "product": "winner",
+        "eligible_games": 0,
+        "missing": 123,
+        "population": 123
+      },
+      {
+        "horizon_minutes": 120,
+        "source": "polymarket_us",
+        "scope": "forward",
+        "season": "2026",
+        "product": "spread",
+        "eligible_games": 0,
+        "missing": 123,
+        "population": 123
+      },
+      {
+        "horizon_minutes": 120,
+        "source": "polymarket_us",
+        "scope": "forward",
+        "season": "2026",
+        "product": "total",
+        "eligible_games": 0,
+        "missing": 123,
+        "population": 123
+      },
+      {
+        "horizon_minutes": 120,
+        "source": "polymarket_us",
+        "scope": "test",
+        "season": "2026",
+        "product": "winner",
+        "eligible_games": 69,
+        "missing": 80,
+        "population": 149
+      },
+      {
+        "horizon_minutes": 120,
+        "source": "polymarket_us",
+        "scope": "test",
+        "season": "2026",
+        "product": "spread",
+        "eligible_games": 0,
+        "missing": 149,
+        "population": 149
+      },
+      {
+        "horizon_minutes": 120,
+        "source": "polymarket_us",
+        "scope": "test",
+        "season": "2026",
+        "product": "total",
+        "eligible_games": 0,
+        "missing": 149,
+        "population": 149
+      },
+      {
+        "horizon_minutes": 60,
+        "source": "dk",
+        "scope": "validation",
+        "season": "2024",
+        "product": "winner",
+        "eligible_games": 121,
+        "missing": 164,
+        "population": 285
+      },
+      {
+        "horizon_minutes": 60,
+        "source": "dk",
+        "scope": "validation",
+        "season": "2024",
+        "product": "spread",
+        "eligible_games": 120,
+        "missing": 165,
+        "population": 285
+      },
+      {
+        "horizon_minutes": 60,
+        "source": "dk",
+        "scope": "validation",
+        "season": "2024",
+        "product": "total",
+        "eligible_games": 120,
+        "missing": 165,
+        "population": 285
+      },
+      {
+        "horizon_minutes": 60,
+        "source": "dk",
+        "scope": "validation",
+        "season": "2025",
+        "product": "winner",
+        "eligible_games": 120,
+        "missing": 165,
+        "population": 285
+      },
+      {
+        "horizon_minutes": 60,
+        "source": "dk",
+        "scope": "validation",
+        "season": "2025",
+        "product": "spread",
+        "eligible_games": 120,
+        "missing": 165,
+        "population": 285
+      },
+      {
+        "horizon_minutes": 60,
+        "source": "dk",
+        "scope": "validation",
+        "season": "2025",
+        "product": "total",
+        "eligible_games": 120,
+        "missing": 165,
+        "population": 285
+      },
+      {
+        "horizon_minutes": 60,
+        "source": "dk",
+        "scope": "forward",
+        "season": "2026",
+        "product": "winner",
+        "eligible_games": 0,
+        "missing": 123,
+        "population": 123
+      },
+      {
+        "horizon_minutes": 60,
+        "source": "dk",
+        "scope": "forward",
+        "season": "2026",
+        "product": "spread",
+        "eligible_games": 0,
+        "missing": 123,
+        "population": 123
+      },
+      {
+        "horizon_minutes": 60,
+        "source": "dk",
+        "scope": "forward",
+        "season": "2026",
+        "product": "total",
+        "eligible_games": 0,
+        "missing": 123,
+        "population": 123
+      },
+      {
+        "horizon_minutes": 60,
+        "source": "dk",
+        "scope": "test",
+        "season": "2026",
+        "product": "winner",
+        "eligible_games": 148,
+        "missing": 1,
+        "population": 149
+      },
+      {
+        "horizon_minutes": 60,
+        "source": "dk",
+        "scope": "test",
+        "season": "2026",
+        "product": "spread",
+        "eligible_games": 148,
+        "missing": 1,
+        "population": 149
+      },
+      {
+        "horizon_minutes": 60,
+        "source": "dk",
+        "scope": "test",
+        "season": "2026",
+        "product": "total",
+        "eligible_games": 148,
+        "missing": 1,
+        "population": 149
+      },
+      {
+        "horizon_minutes": 60,
+        "source": "kalshi",
+        "scope": "validation",
+        "season": "2024",
+        "product": "winner",
+        "eligible_games": 0,
+        "missing": 285,
+        "population": 285
+      },
+      {
+        "horizon_minutes": 60,
+        "source": "kalshi",
+        "scope": "validation",
+        "season": "2024",
+        "product": "spread",
+        "eligible_games": 0,
+        "missing": 285,
+        "population": 285
+      },
+      {
+        "horizon_minutes": 60,
+        "source": "kalshi",
+        "scope": "validation",
+        "season": "2024",
+        "product": "total",
+        "eligible_games": 0,
+        "missing": 285,
+        "population": 285
+      },
+      {
+        "horizon_minutes": 60,
+        "source": "kalshi",
+        "scope": "validation",
+        "season": "2025",
+        "product": "winner",
+        "eligible_games": 0,
+        "missing": 285,
+        "population": 285
+      },
+      {
+        "horizon_minutes": 60,
+        "source": "kalshi",
+        "scope": "validation",
+        "season": "2025",
+        "product": "spread",
+        "eligible_games": 0,
+        "missing": 285,
+        "population": 285
+      },
+      {
+        "horizon_minutes": 60,
+        "source": "kalshi",
+        "scope": "validation",
+        "season": "2025",
+        "product": "total",
+        "eligible_games": 0,
+        "missing": 285,
+        "population": 285
+      },
+      {
+        "horizon_minutes": 60,
+        "source": "kalshi",
+        "scope": "forward",
+        "season": "2026",
+        "product": "winner",
+        "eligible_games": 0,
+        "missing": 123,
+        "population": 123
+      },
+      {
+        "horizon_minutes": 60,
+        "source": "kalshi",
+        "scope": "forward",
+        "season": "2026",
+        "product": "spread",
+        "eligible_games": 0,
+        "missing": 123,
+        "population": 123
+      },
+      {
+        "horizon_minutes": 60,
+        "source": "kalshi",
+        "scope": "forward",
+        "season": "2026",
+        "product": "total",
+        "eligible_games": 0,
+        "missing": 123,
+        "population": 123
+      },
+      {
+        "horizon_minutes": 60,
+        "source": "kalshi",
+        "scope": "test",
+        "season": "2026",
+        "product": "winner",
+        "eligible_games": 0,
+        "missing": 149,
+        "population": 149
+      },
+      {
+        "horizon_minutes": 60,
+        "source": "kalshi",
+        "scope": "test",
+        "season": "2026",
+        "product": "spread",
+        "eligible_games": 0,
+        "missing": 149,
+        "population": 149
+      },
+      {
+        "horizon_minutes": 60,
+        "source": "kalshi",
+        "scope": "test",
+        "season": "2026",
+        "product": "total",
+        "eligible_games": 0,
+        "missing": 149,
+        "population": 149
+      },
+      {
+        "horizon_minutes": 60,
+        "source": "polymarket",
+        "scope": "validation",
+        "season": "2024",
+        "product": "winner",
+        "eligible_games": 211,
+        "missing": 74,
+        "population": 285
+      },
+      {
+        "horizon_minutes": 60,
+        "source": "polymarket",
+        "scope": "validation",
+        "season": "2024",
+        "product": "spread",
+        "eligible_games": 0,
+        "missing": 285,
+        "population": 285
+      },
+      {
+        "horizon_minutes": 60,
+        "source": "polymarket",
+        "scope": "validation",
+        "season": "2024",
+        "product": "total",
+        "eligible_games": 0,
+        "missing": 285,
+        "population": 285
+      },
+      {
+        "horizon_minutes": 60,
+        "source": "polymarket",
+        "scope": "validation",
+        "season": "2025",
+        "product": "winner",
+        "eligible_games": 107,
+        "missing": 178,
+        "population": 285
+      },
+      {
+        "horizon_minutes": 60,
+        "source": "polymarket",
+        "scope": "validation",
+        "season": "2025",
+        "product": "spread",
+        "eligible_games": 0,
+        "missing": 285,
+        "population": 285
+      },
+      {
+        "horizon_minutes": 60,
+        "source": "polymarket",
+        "scope": "validation",
+        "season": "2025",
+        "product": "total",
+        "eligible_games": 0,
+        "missing": 285,
+        "population": 285
+      },
+      {
+        "horizon_minutes": 60,
+        "source": "polymarket",
+        "scope": "forward",
+        "season": "2026",
+        "product": "winner",
+        "eligible_games": 0,
+        "missing": 123,
+        "population": 123
+      },
+      {
+        "horizon_minutes": 60,
+        "source": "polymarket",
+        "scope": "forward",
+        "season": "2026",
+        "product": "spread",
+        "eligible_games": 0,
+        "missing": 123,
+        "population": 123
+      },
+      {
+        "horizon_minutes": 60,
+        "source": "polymarket",
+        "scope": "forward",
+        "season": "2026",
+        "product": "total",
+        "eligible_games": 0,
+        "missing": 123,
+        "population": 123
+      },
+      {
+        "horizon_minutes": 60,
+        "source": "polymarket",
+        "scope": "test",
+        "season": "2026",
+        "product": "winner",
+        "eligible_games": 0,
+        "missing": 149,
+        "population": 149
+      },
+      {
+        "horizon_minutes": 60,
+        "source": "polymarket",
+        "scope": "test",
+        "season": "2026",
+        "product": "spread",
+        "eligible_games": 0,
+        "missing": 149,
+        "population": 149
+      },
+      {
+        "horizon_minutes": 60,
+        "source": "polymarket",
+        "scope": "test",
+        "season": "2026",
+        "product": "total",
+        "eligible_games": 0,
+        "missing": 149,
+        "population": 149
+      },
+      {
+        "horizon_minutes": 60,
+        "source": "polymarket_us",
+        "scope": "validation",
+        "season": "2024",
+        "product": "winner",
+        "eligible_games": 0,
+        "missing": 285,
+        "population": 285
+      },
+      {
+        "horizon_minutes": 60,
+        "source": "polymarket_us",
+        "scope": "validation",
+        "season": "2024",
+        "product": "spread",
+        "eligible_games": 0,
+        "missing": 285,
+        "population": 285
+      },
+      {
+        "horizon_minutes": 60,
+        "source": "polymarket_us",
+        "scope": "validation",
+        "season": "2024",
+        "product": "total",
+        "eligible_games": 0,
+        "missing": 285,
+        "population": 285
+      },
+      {
+        "horizon_minutes": 60,
+        "source": "polymarket_us",
+        "scope": "validation",
+        "season": "2025",
+        "product": "winner",
+        "eligible_games": 0,
+        "missing": 285,
+        "population": 285
+      },
+      {
+        "horizon_minutes": 60,
+        "source": "polymarket_us",
+        "scope": "validation",
+        "season": "2025",
+        "product": "spread",
+        "eligible_games": 0,
+        "missing": 285,
+        "population": 285
+      },
+      {
+        "horizon_minutes": 60,
+        "source": "polymarket_us",
+        "scope": "validation",
+        "season": "2025",
+        "product": "total",
+        "eligible_games": 0,
+        "missing": 285,
+        "population": 285
+      },
+      {
+        "horizon_minutes": 60,
+        "source": "polymarket_us",
+        "scope": "forward",
+        "season": "2026",
+        "product": "winner",
+        "eligible_games": 0,
+        "missing": 123,
+        "population": 123
+      },
+      {
+        "horizon_minutes": 60,
+        "source": "polymarket_us",
+        "scope": "forward",
+        "season": "2026",
+        "product": "spread",
+        "eligible_games": 0,
+        "missing": 123,
+        "population": 123
+      },
+      {
+        "horizon_minutes": 60,
+        "source": "polymarket_us",
+        "scope": "forward",
+        "season": "2026",
+        "product": "total",
+        "eligible_games": 0,
+        "missing": 123,
+        "population": 123
+      },
+      {
+        "horizon_minutes": 60,
+        "source": "polymarket_us",
+        "scope": "test",
+        "season": "2026",
+        "product": "winner",
+        "eligible_games": 0,
+        "missing": 149,
+        "population": 149
+      },
+      {
+        "horizon_minutes": 60,
+        "source": "polymarket_us",
+        "scope": "test",
+        "season": "2026",
+        "product": "spread",
+        "eligible_games": 0,
+        "missing": 149,
+        "population": 149
+      },
+      {
+        "horizon_minutes": 60,
+        "source": "polymarket_us",
+        "scope": "test",
+        "season": "2026",
+        "product": "total",
+        "eligible_games": 0,
+        "missing": 149,
+        "population": 149
+      }
+    ]
   }
 }
