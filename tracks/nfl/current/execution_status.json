@@ -1,0 +1,61 @@
+{
+  "schema": "sports-edge-lab.nfl.public-execution-status.v1",
+  "as_of": "2026-11-21T18:29:07-08:00",
+  "status": "PREPARED_NOT_NATIVE_QUALIFIED",
+  "owner": "NFL",
+  "new_owner_campaign_executions": 0,
+  "new_owner_scientific_fits": 0,
+  "historical_recovery": {
+    "producer": "R20",
+    "estimator_fit_states": 216,
+    "status": "DURABLE_UNPUBLISHED_REUSABLE_AFTER_AUTHENTICATION"
+  },
+  "prior_candidate_native_qualification": {
+    "candidate": "R24 47550",
+    "passed_phases": 18,
+    "total_phases": 24,
+    "incomplete_phases": [
+      "parquet",
+      "storage-benchmark",
+      "launch-preflight",
+      "frontier-postprocess",
+      "forest-extension",
+      "forest-extension-warm"
+    ],
+    "qualifies_changed_successor": false
+  },
+  "successor": {
+    "candidate": "R24 06f4e7e81ba5",
+    "status": "PREPARED_NOT_NATIVE_QUALIFIED",
+    "exact_package_native_certificate": null,
+    "full_current_game_adapter_complete": false,
+    "frozen_vintage_subset_scope": "Retained authenticated values only; general current-game inference remains blocked"
+  },
+  "resource_observation": {
+    "sample_seconds": 6.019923295996705,
+    "active_shared_reservations": 0,
+    "waiting_shared_controllers": 0,
+    "active_nfl_jobs_observed": 0,
+    "processes_signalled": 0,
+    "active_reservations_removed": 0,
+    "other_project_work_preserved": true
+  },
+  "publication_scope": {
+    "changes_forecast_values": false,
+    "changes_champions": false,
+    "refreshes_prices": false,
+    "refreshes_research": false,
+    "full_v13_completion": false
+  },
+  "remaining_gates": [
+    "Exact-package native package and actual-data qualification",
+    "Integrity-verified qualification and installed-delivery certificates",
+    "General current-game inference and source-clock/input certificates",
+    "Full immutable population reconciliation",
+    "Sustained scientific CPU acceptance when the conditional gate is eligible"
+  ],
+  "source_evidence_sha256": {
+    "bounded_space_inspection": "95b3d4e36ceea56a0d1149dbb47a39115bdd2ad913fe0d6f68dbac0884e5a4a7",
+    "prior_io_adoption": "fde9acb5e7dc1bf0c6df6105ded81bc03fa704549e3462dca19cb75f597f39c3"
+  }
+}
