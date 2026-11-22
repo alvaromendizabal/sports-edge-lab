@@ -1,6 +1,6 @@
 {
   "schema": "sports-edge-lab.nfl.public-execution-status.v1",
-  "as_of": "2026-11-22T06:16:14.344232+00:00",
+  "as_of": "2026-11-22T06:31:37.121839+00:00",
   "status": "HISTORICAL_POLICY_EVALUATION_COMPLETE_FULL_V13_PENDING",
   "owner": "NFL",
   "new_owner_campaign_executions": 0,
@@ -3966,9 +3966,17 @@
     "owner_campaign_executions": 0
   },
   "pregame_research_successor": {
+    "native_suite": {
+      "tests_passed": 1976,
+      "registered_modules": 223,
+      "skips": 0,
+      "errors": 0,
+      "failures": 0
+    },
+    "representative_fit_states_across_two_native_checks": 24,
     "release_state": {
-      "code": "QUALIFICATION_PENDING",
-      "public_label": "Native qualification in progress",
+      "code": "NATIVE_SUITE_PASSED",
+      "public_label": "Native suite passed all 1,976 tests across 223 modules with zero skips",
       "owner_launches": 0,
       "full_v13_complete": false
     },
