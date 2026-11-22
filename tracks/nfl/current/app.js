@@ -143,6 +143,16 @@
     const horizon=perfHorizon(p);
     return `<article class="performance-card"><div class="metric-category"><span>${esc(/margin/.test(objective)?"POINT MARGIN":/total/.test(objective)?"GAME TOTAL":"WINNER MODEL")}</span><span>${esc(horizon)}</span></div><h3>${esc(name)}</h3><p class="performance-alias">${esc(aliasText)}${p.model_family?` · ${esc(p.model_family)}`:""}</p><div class="performance-main"><strong class="performance-value">${perfValue(p,v)}</strong><small>${esc(scoreLabel)}<br>${higher?"Higher is better":"Lower is better"}</small></div><table class="annual-table"><caption class="sr-only">${esc(name)} performance by season</caption><thead><tr><th scope="col">Season</th><th scope="col">Score</th><th scope="col">Games</th></tr></thead><tbody>${annuals.map(a=>`<tr><td>${a.year}${a.year==="2026"?"*":""}</td><td>${perfValue(p,a.value)}</td><td>${num(a.games)===null?"—":Number(a.games).toLocaleString("en-US")}</td></tr>`).join("")}</tbody></table><p class="performance-note">${esc(p.note || (num(p.test_2026 ?? p.season_2026)===null?"2026 regrade unavailable. Missing values remain explicit.":"*2026 is a saved exposed evaluation, separate from the 2024–2025 selection."))}</p><div class="performance-foot">${esc(statusLabel)}${p.cohort ? `<br>${esc(p.cohort)}` : ""}</div></article>`;
   }
+  function filterLockedGrades() {
+    const metric = $("n164-metric").value;
+    const horizon = $("n164-horizon").value;
+    for (const row of document.querySelectorAll("#n164-candidates [data-grade-metric]")) {
+      row.hidden = row.dataset.gradeMetric !== metric || row.dataset.gradeHorizon !== horizon;
+    }
+  }
+  $("n164-metric").addEventListener("change", filterLockedGrades);
+  $("n164-horizon").addEventListener("change", filterLockedGrades);
+
   function renderPerformance() {
     const rows=(state.data.performance||[]).filter(p=>state.horizon==="all" || perfHorizon(p)===state.horizon);
     $("performance-grid").innerHTML = rows.length ? rows.map(performanceCard).join("") : `<div class="empty-state"><h3>Performance evidence pending.</h3><p>Metric-specific leaders appear only after their saved annual scores, target definitions and game denominators have been reconciled.</p></div>`;
