@@ -1,41 +1,48 @@
 {
   "status": "DEPLOYED_HTTP_VERIFIED",
+  "version": 12,
+  "deployed_at": "2026-11-22T18:28:51.688695+00:00",
   "public_url": "https://sports-edge-lab-nfl-current.alv-mendizabal.chatgpt.site/",
+  "site_source_commit": "1072f3e3304ab4f85c0ef9d34d34751c8d29cd8a",
+  "github_application_source_commit": "d4648fda180a174aa762f32d7f8f177c2a929c81",
   "audience": "public",
-  "version": 10,
-  "deployed_at": "2026-11-22T17:53:06.694297+00:00",
-  "site_source_commit": "6ef179d987094d3854d8b9d6ac525c28d31bc6ef",
-  "github_application_source_commit": "d582c2e4eda77fbbb31dcde9e2c5d9a61c7ea406",
-  "archive_sha256": "9cc1f0e3c087498b9ef60d0e42c72a0f0bb233fbee62e8d3fcddd7237c103679",
+  "archive_sha256": "f088241bb54b19f9759c61a020176aaff3305ca23fa1000ba3e4f383c2c96b7d",
+  "browser_preview_validation": "Static snapshot validator passed with 12 dated game cards and 19 archived scorecards.",
+  "live_browser_reopen": "Verified the public quantile results and switched the additional-bookmaker table to the 121-game upcoming population.",
+  "forecast_inputs_refreshed": false,
+  "new_fits": 0,
+  "campaign_launches": 0,
+  "old_public_url": "https://sports-edge-lab-nfl.alv-mendizabal.chatgpt.site/",
+  "old_public_url_modified": false,
+  "notes": [
+    "The owner recorded 180 new quantile fits, reused 24 and fitted the separate schedule-only control once. Dashboard publication did not execute a scientific campaign.",
+    "N165 is a verified partial return with an incomplete contest stage. All original N164 per-venue aggregates and dated weekly forecasts remain available."
+  ],
   "verification": {
-    "checked_at": "2026-11-22T17:53:48.294444+00:00",
+    "checked_at": "2026-11-22T18:30:09.3840127Z",
     "base_url": "https://sports-edge-lab-nfl-current.alv-mendizabal.chatgpt.site/",
     "assets": [
       {
         "path": "index.html",
         "status": 200,
         "url": "https://sports-edge-lab-nfl-current.alv-mendizabal.chatgpt.site/",
-        "bytes": 50224,
-        "sha256": "cef3749e2bed75986922fa1f7d2e3b99a58dddda37fbc147bdc435da00c42531",
-        "received_bytes": 51338,
-        "received_sha256": "483b755658484edfe5629e6fa5a86e28f427a0443d1debffde0e3ee1cec8882c",
+        "bytes": 77361,
+        "sha256": "927f40e9b7bc98ed8548983fc6b25ce460126b02448f3a8ca98312fba5948475",
+        "received_bytes": 78475,
+        "received_sha256": "cf1854af980ac434f407a82f225afdb47d2851c92ecd00d3e0c5b9ffae3a9d44",
         "matches_pushed_source": true,
         "verification": "ORIGINAL_BYTES_EQUAL_WITH_OBSERVED_CLOUDFLARE_APPEND",
         "hosting_fragment_bytes": 1114,
-        "hosting_fragment_offset": 50208,
-        "canonical_sha256": "cef3749e2bed75986922fa1f7d2e3b99a58dddda37fbc147bdc435da00c42531",
-        "verified_at": "2026-11-22T18:03:56.6202498Z",
-        "method": "GitHub Actions anonymous Chromium HTTP; repository anchored HTML verification",
-        "evidence_url": "https://github.com/alvaromendizabal/sports-edge-lab/actions/runs/45052773890/job/137301339543"
+        "hosting_fragment_offset": 77345
       },
       {
         "path": "app.js",
         "status": 200,
         "url": "https://sports-edge-lab-nfl-current.alv-mendizabal.chatgpt.site/app.js",
-        "bytes": 46324,
-        "sha256": "792346a4d366864e66833de5b7532a0038b8902564c925b106b59c1526cdb9a1",
-        "received_bytes": 46324,
-        "received_sha256": "792346a4d366864e66833de5b7532a0038b8902564c925b106b59c1526cdb9a1",
+        "bytes": 47150,
+        "sha256": "493376db6674be2e3b1baca34c2c1ed536a5e6fa7ed0f1f7ab9387f08a3707e3",
+        "received_bytes": 47150,
+        "received_sha256": "493376db6674be2e3b1baca34c2c1ed536a5e6fa7ed0f1f7ab9387f08a3707e3",
         "matches_pushed_source": true,
         "verification": "EXACT_BYTES"
       },
@@ -54,10 +61,10 @@
         "path": "data.json",
         "status": 200,
         "url": "https://sports-edge-lab-nfl-current.alv-mendizabal.chatgpt.site/data.json",
-        "bytes": 97385,
-        "sha256": "2487388b0bb9da5d67e1249460b44f905baa5677c0f751ed486fc41e35aa20fb",
-        "received_bytes": 97385,
-        "received_sha256": "2487388b0bb9da5d67e1249460b44f905baa5677c0f751ed486fc41e35aa20fb",
+        "bytes": 97247,
+        "sha256": "5815e9c27bdca24dae4124daea44d056bae8973deca0f261afde9892f5e12cb7",
+        "received_bytes": 97247,
+        "received_sha256": "5815e9c27bdca24dae4124daea44d056bae8973deca0f261afde9892f5e12cb7",
         "matches_pushed_source": true,
         "verification": "EXACT_BYTES"
       },
@@ -65,10 +72,10 @@
         "path": "execution_status.json",
         "status": 200,
         "url": "https://sports-edge-lab-nfl-current.alv-mendizabal.chatgpt.site/execution_status.json",
-        "bytes": 202226,
-        "sha256": "a051e253f1ecb7e7833bea7c21223918d62040740ceab52fc712194354cfa7e1",
-        "received_bytes": 202226,
-        "received_sha256": "a051e253f1ecb7e7833bea7c21223918d62040740ceab52fc712194354cfa7e1",
+        "bytes": 376394,
+        "sha256": "a59930ed2f28fa90b77140a0595726be7f68df8720138f59ce81b6ef2eff15a5",
+        "received_bytes": 376394,
+        "received_sha256": "a59930ed2f28fa90b77140a0595726be7f68df8720138f59ce81b6ef2eff15a5",
         "matches_pushed_source": true,
         "verification": "EXACT_BYTES"
       },
@@ -106,18 +113,8 @@
         "verification": "EXACT_BYTES"
       }
     ],
-    "method": "Anonymous HTTPS responses compared with the deployed source. Seven assets matched as received. The original HTML matched byte for byte after isolating a single recognized hosting-provider script.",
-    "all_match": true
-  },
-  "browser_preview_validation": "Passed the repository snapshot validator and verified changing the objective and horizon in a browser.",
-  "live_browser_reopen": "Reopened public Performance, observed the full and covered denominators, and expanded the four-venue market comparison.",
-  "forecast_inputs_refreshed": false,
-  "new_fits": 0,
-  "campaign_launches": 0,
-  "old_public_url": "https://sports-edge-lab-nfl.alv-mendizabal.chatgpt.site/",
-  "old_public_url_modified": false,
-  "notes": [
-    "The completed N164 owner execution graded 30 locked candidates across 272 fixtures. Publication introduced zero new estimators or original forecasts.",
-    "All 112 primary rows have restricted coverage. The original November 16 weekly cards retain their input and preparation timestamps."
-  ]
+    "method": "Anonymous live Chromium HTTP requests compared to committed source, with an anchored identity check for any hosting-provider addition to HTML.",
+    "all_match": true,
+    "evidence_url": "https://github.com/alvaromendizabal/sports-edge-lab/actions/runs/45055287305/job/137309116052"
+  }
 }
