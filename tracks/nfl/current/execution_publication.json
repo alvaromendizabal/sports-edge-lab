@@ -1,14 +1,15 @@
 {
   "schema": "sports-edge-lab.nfl.execution-status-publication.v1",
-  "version": 4,
+  "version": 5,
   "status": "DEPLOYED_HTTP_VERIFIED",
-  "deployed_at": "2026-11-22T03:47:06.495123+00:00",
+  "deployed_at": "2026-11-22T04:04:44.458748+00:00",
   "public_url": "https://sports-edge-lab-nfl-current.alv-mendizabal.chatgpt.site/",
-  "site_source_commit": "f796bf8e283035068807b9a5e575e75518bce9dd",
-  "github_application_source_commit": "67d571797b2ba3aa1431fd7f3fe8fc51d80bed78",
-  "public_execution_status_sha256": "51b32673a7285ed89dc3dc373a884d425d4b9fe07f0114927df30d2ab176a672",
+  "site_source_commit": "d561579fd3271ce838f2c73778b92e00114202f2",
+  "github_application_source_commit": "ec03be3bc7df5c16c10ad62be3456a9adef4e3fb",
+  "public_execution_status_sha256": "3a0531daf23bda0da1977a50043fe12a75aada858c908a9993c47b28a0a021c8",
   "anonymous_asset_verification": "8 of 8 assets passed",
   "full_v13_qualification": false,
   "new_owner_fits": 0,
-  "research_campaigns_started": 0
+  "research_campaigns_started": 0,
+  "historical_exports_completed": 108
 }
