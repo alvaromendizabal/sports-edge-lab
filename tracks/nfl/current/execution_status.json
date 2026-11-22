@@ -1,7 +1,7 @@
 {
   "schema": "sports-edge-lab.nfl.public-execution-status.v1",
-  "as_of": "2026-11-21T18:29:07-08:00",
-  "status": "PREPARED_NOT_NATIVE_QUALIFIED",
+  "as_of": "2026-11-21T19:09:02-08:00",
+  "status": "PAUSE_REPORTING_FIX_TARGETED_TESTED_NOT_NATIVE_QUALIFIED",
   "owner": "NFL",
   "new_owner_campaign_executions": 0,
   "new_owner_scientific_fits": 0,
@@ -25,20 +25,27 @@
     "qualifies_changed_successor": false
   },
   "successor": {
-    "candidate": "R24 06f4e7e81ba5",
-    "status": "PREPARED_NOT_NATIVE_QUALIFIED",
+    "candidate": "R24P1 986ae0fdeb40",
+    "status": "TARGETED_REGRESSION_PASS_NOT_NATIVE_QUALIFIED",
+    "local_targeted_tests_passed": 31,
+    "native_targeted_tests_passed": 31,
+    "native_targeted_test_failures": 0,
     "exact_package_native_certificate": null,
     "full_current_game_adapter_complete": false,
-    "frozen_vintage_subset_scope": "Retained authenticated values only; general current-game inference remains blocked"
+    "fix": "A bounded atomic progress record can be written during data-admission pauses; scientific output remains paced and guarded.",
+    "scope": "Same 31 regression cases passed locally and in the native Space; these are not 62 unique cases or full package qualification."
   },
   "resource_observation": {
-    "sample_seconds": 6.019923295996705,
+    "as_of": "2026-11-21T19:04:42-08:00",
+    "sample_seconds": 6.004192273001536,
     "active_shared_reservations": 0,
     "waiting_shared_controllers": 0,
     "active_nfl_jobs_observed": 0,
     "processes_signalled": 0,
     "active_reservations_removed": 0,
-    "other_project_work_preserved": true
+    "other_project_work_preserved": true,
+    "host_io_full_avg10_percent": 90.24,
+    "attribution": "Other-project I/O was observed; exclusive causation of host pressure is not established."
   },
   "publication_scope": {
     "changes_forecast_values": false,
@@ -55,7 +62,16 @@
     "Sustained scientific CPU acceptance when the conditional gate is eligible"
   ],
   "source_evidence_sha256": {
-    "bounded_space_inspection": "95b3d4e36ceea56a0d1149dbb47a39115bdd2ad913fe0d6f68dbac0884e5a4a7",
-    "prior_io_adoption": "fde9acb5e7dc1bf0c6df6105ded81bc03fa704549e3462dca19cb75f597f39c3"
+    "bounded_space_inspection": "672a42992a214c7b559ab4ce1cb07ed2cefd25eebeef3be8bb5cd7d364edd76b",
+    "attached_failure_log": "84b7b2d4f77835a3d55b5b9f22ca53f3100d041358ba2eaa73c92f4ca1d9cce7"
+  },
+  "latest_attempt": {
+    "candidate": "R24 06f4e7e81ba5",
+    "phase": "parquet",
+    "status": "QUALIFICATION_INCOMPLETE",
+    "wall_seconds": 157.63791809199756,
+    "completed_partitions": 0,
+    "scientific_fits": 0,
+    "failure": "Resource deferral also blocked the activation progress writer, masking clean shutdown with repeated pause exceptions."
   }
 }
