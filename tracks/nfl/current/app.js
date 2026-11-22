@@ -143,6 +143,23 @@
     const horizon=perfHorizon(p);
     return `<article class="performance-card"><div class="metric-category"><span>${esc(/margin/.test(objective)?"POINT MARGIN":/total/.test(objective)?"GAME TOTAL":"WINNER MODEL")}</span><span>${esc(horizon)}</span></div><h3>${esc(name)}</h3><p class="performance-alias">${esc(aliasText)}${p.model_family?` · ${esc(p.model_family)}`:""}</p><div class="performance-main"><strong class="performance-value">${perfValue(p,v)}</strong><small>${esc(scoreLabel)}<br>${higher?"Higher is better":"Lower is better"}</small></div><table class="annual-table"><caption class="sr-only">${esc(name)} performance by season</caption><thead><tr><th scope="col">Season</th><th scope="col">Score</th><th scope="col">Games</th></tr></thead><tbody>${annuals.map(a=>`<tr><td>${a.year}${a.year==="2026"?"*":""}</td><td>${perfValue(p,a.value)}</td><td>${num(a.games)===null?"—":Number(a.games).toLocaleString("en-US")}</td></tr>`).join("")}</tbody></table><p class="performance-note">${esc(p.note || (num(p.test_2026 ?? p.season_2026)===null?"2026 regrade unavailable. Missing values remain explicit.":"*2026 is a saved exposed evaluation, separate from the 2024–2025 selection."))}</p><div class="performance-foot">${esc(statusLabel)}${p.cohort ? `<br>${esc(p.cohort)}` : ""}</div></article>`;
   }
+  function renderBookCoverage() {
+    const product = $("n165-product");
+    const clock = $("n165-clock");
+    const scope = $("n165-scope");
+    const column = Number(product.value) * 4 + Number(clock.value) * 2 + Number(scope.value);
+    const games = scope.value === "0" ? 151 : 121;
+    for (const row of document.querySelectorAll("#n165-books [data-coverage]")) {
+      const qualified = row.dataset.coverage.split(",")[column];
+      row.cells[1].textContent = qualified + " / " + games;
+    }
+    $("n165-coverage-caption").textContent = product.selectedOptions[0].text + " · " +
+      clock.selectedOptions[0].text + " · " + games + " " + scope.selectedOptions[0].text.toLowerCase() + " games";
+  }
+  for (const id of ["n165-product", "n165-clock", "n165-scope"]) {
+    $(id).addEventListener("change", renderBookCoverage);
+  }
+
   function filterLockedGrades() {
     const metric = $("n164-metric").value;
     const horizon = $("n164-horizon").value;
@@ -166,7 +183,7 @@
     if(!horizons.includes(state.newestHorizon))state.newestHorizon=horizons[0];
     $("newest-horizon").innerHTML=horizons.map(h=>`<option value="${h}"${h===state.newestHorizon?" selected":""}>T${h} comparison</option>`).join("");
     const rows=all.filter(r=>num(r.horizon_minutes)===state.newestHorizon),objectives=new Set(all.map(r=>r.objective)).size,improved=all.filter(r=>r.new_fit_beats_incumbent===true).length;
-    $("newest-summary").innerHTML=`<div><strong>${esc(comparison.models_checked ?? "—")}</strong><span>newer models checked</span></div><div><strong>${objectives}</strong><span>objectives · ${horizons.length} clocks</span></div><div><strong>${improved}</strong><span>of ${all.length} comparisons improved</span></div><p>${improved===0?"The latest batch did not beat the retained validation nominees on any checked objective. No promotion was made.":"Saved validation comparisons are shown below. A numerical improvement does not establish a production promotion."}</p>`;
+    $("newest-summary").innerHTML=`<div><strong>${esc(comparison.models_checked ?? "—")}</strong><span>newer models checked</span></div><div><strong>${objectives}</strong><span>objectives · ${horizons.length} clocks</span></div><div><strong>${improved}</strong><span>of ${all.length} comparisons improved</span></div><p>${improved===0?"The R20 batch did not beat the R18 nominees in this historical comparison. No promotion was made.":"Saved validation comparisons are shown below. A numerical improvement does not establish a production promotion."}</p>`;
     const score=(r,v)=>/accuracy/.test(r.objective)?pct(v,2):decimal(v,/loss|brier/.test(r.objective)?3:2);
     const delta=(r)=>{const v=num(r.new_minus_incumbent);if(v===null)return "—";const sign=v>0?"+":v<0?"−":"";return /accuracy/.test(r.objective)?`${sign}${Math.abs(v*100).toFixed(2)} pp`:`${sign}${Math.abs(v).toFixed(/loss|brier/.test(r.objective)?3:2)}`;};
     $("newest-table").innerHTML=`<table class="comparison-table"><caption class="sr-only">Same-cohort validation comparison at T${state.newestHorizon}</caption><thead><tr><th scope="col">Objective</th><th scope="col">R18 leader</th><th scope="col">Best R20</th><th scope="col">Change</th></tr></thead><tbody>${rows.map(r=>`<tr><th scope="row">${esc(r.label || r.objective)}<small>${esc(r.games_2024 ?? "—")} / ${esc(r.games_2025 ?? "—")} games</small></th><td>${score(r,r.incumbent_validation)}</td><td>${score(r,r.best_new_validation)}</td><td class="${r.new_fit_beats_incumbent===true?"comparison-better":"comparison-worse"}">${delta(r)}</td></tr>`).join("")}</tbody></table>`;
