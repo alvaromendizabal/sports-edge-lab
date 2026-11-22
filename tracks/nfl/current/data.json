@@ -5,7 +5,7 @@
   "week": 11,
   "as_of": "2026-11-16T22:04:51.508512+00:00",
   "published_at": "2026-11-21T01:11:41.100815+00:00",
-  "performance_as_of": "2026-11-19T04:01:59.037077+00:00",
+  "performance_as_of": "2026-11-22T18:11:57.477524+00:00",
   "reviewed_at": "2026-11-21T01:11:41.100815+00:00",
   "slate_date": "2026-11-22",
   "edition_date": "2026-11-20",
@@ -28,9 +28,8 @@
     }
   },
   "performance_note": [
-    "Selection uses an equal blend of 2024 and 2025 annual scores. The 2026 results are reported separately and do not select or break ties between models.",
-    "R18 remains the latest verified selection. A bounded review of all 216 newer R20 fits found no improvement on any of the seven standard objectives at either T60 or T120, using the same exact historical game cohorts.",
-    "These are partial-campaign validation nominees with prior test exposure. Strong retrospective scores do not establish current-input readiness. The default game outlook uses the usable T120 snapshot; T60 matchup values remain unavailable."
+    "The November 22 research compares new two-hour and one-hour quantile models with the prior leaders registered in the N162 fit program. The 2024 and 2025 annual scores each count for half. The 2026 games were graded after selection.",
+    "The earlier R18 cards use their own historical registry. The R20 and N164 sections keep their original comparison populations and dates. The weekly outlook uses its November 16 forecast inputs."
   ],
   "performance_method": [
     "Primary validation = 0.5 × the 2024 annual metric + 0.5 × the 2025 annual metric. Every winner, margin and total objective has its own selected model; no single overall champion is assumed.",
@@ -300,7 +299,7 @@
     "The primary Circa role is the T120 spread-Brier and spread-log-loss selection. The accuracy-selected policy is retained as a separate comparison in the public evidence. Neither role receives a fresh 2026 regrade here.",
     "These are exact evaluations of the saved November 16 conditional margin distributions at the official Week 11 contest lines. Prices, injuries and model inputs have not been refreshed. This is an early conditional card, not a newly issued forecast."
   ],
-  "source_summary": "Forecast inputs: November 16. Retained selection: R18, verified November 18–19. Newer-fit audit and official-line review: November 20. Publishing this page does not refresh the underlying model inputs.",
+  "source_summary": "Weekly forecast inputs were observed November 16. The R18 evaluation was verified November 18–19, the archived R20 comparison and original contest-line review on November 20, and the quantile research and reconstructed contest grades on November 22.",
   "notes": [
     "All dates and kickoff times use America/Los_Angeles. Minnesota–San Francisco is in Mexico City; San Francisco is the designated home team.",
     "Forecast issue, compilation, market observation, selection and dashboard publication are separate clocks. No original live T60 issue is claimed for the conditional future rows.",
