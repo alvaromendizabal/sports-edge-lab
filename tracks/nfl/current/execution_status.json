@@ -1,6 +1,6 @@
 {
   "schema": "sports-edge-lab.nfl.public-execution-status.v1",
-  "as_of": "2026-11-22T05:03:00.454213+00:00",
+  "as_of": "2026-11-22T06:31:37.121839+00:00",
   "status": "HISTORICAL_POLICY_EVALUATION_COMPLETE_FULL_V13_PENDING",
   "owner": "NFL",
   "new_owner_campaign_executions": 0,
@@ -3848,5 +3848,157 @@
         "population": 149
       }
     ]
+  },
+  "historical_paired_validation": {
+    "report_executions": {
+      "started": 3,
+      "created": 1,
+      "verified_existing": 2,
+      "failed": 0
+    },
+    "scope": "Paired 2024 and 2025 validation at T120, including postseason. Selection uses a 50/50 average of the annual scores. Each class is selected separately by objective.",
+    "metric_game_rows": 2848,
+    "objectives": 5,
+    "annual": {
+      "binary_accuracy": {
+        "2024": {
+          "average_advantage_for_blend": -0.010526315789473684,
+          "blend": 0.624561403508772,
+          "games": 285,
+          "games_blend_better": 35,
+          "games_equal": 212,
+          "games_single_better": 38,
+          "single": 0.6350877192982456
+        },
+        "2025": {
+          "average_advantage_for_blend": 0.017605633802816902,
+          "blend": 0.5985915492957746,
+          "games": 284,
+          "games_blend_better": 42,
+          "games_equal": 205,
+          "games_single_better": 37,
+          "single": 0.5809859154929577
+        }
+      },
+      "binary_log_loss": {
+        "2024": {
+          "average_advantage_for_blend": 0.007083789960876883,
+          "blend": 0.6452689508132016,
+          "games": 285,
+          "games_blend_better": 152,
+          "games_equal": 0,
+          "games_single_better": 133,
+          "single": 0.6523527407740786
+        },
+        "2025": {
+          "average_advantage_for_blend": -0.0016304110776645417,
+          "blend": 0.6742660865361859,
+          "games": 284,
+          "games_blend_better": 141,
+          "games_equal": 0,
+          "games_single_better": 143,
+          "single": 0.6726356754585213
+        }
+      },
+      "margin_mae": {
+        "2024": {
+          "average_advantage_for_blend": 0.11814207652559139,
+          "blend": 10.435769862807154,
+          "games": 285,
+          "games_blend_better": 158,
+          "games_equal": 0,
+          "games_single_better": 127,
+          "single": 10.553911939332746
+        },
+        "2025": {
+          "average_advantage_for_blend": 0.03614661310997871,
+          "blend": 10.699008159969663,
+          "games": 285,
+          "games_blend_better": 152,
+          "games_equal": 0,
+          "games_single_better": 133,
+          "single": 10.735154773079643
+        }
+      },
+      "three_way_brier": {
+        "2024": {
+          "average_advantage_for_blend": 0.006323454702070065,
+          "blend": 0.45533520242435993,
+          "games": 285,
+          "games_blend_better": 152,
+          "games_equal": 0,
+          "games_single_better": 133,
+          "single": 0.46165865712643006
+        },
+        "2025": {
+          "average_advantage_for_blend": -0.0019004040622498989,
+          "blend": 0.48604444938236646,
+          "games": 285,
+          "games_blend_better": 141,
+          "games_equal": 0,
+          "games_single_better": 144,
+          "single": 0.4841440453201166
+        }
+      },
+      "total_mae": {
+        "2024": {
+          "average_advantage_for_blend": -0.05599368055987586,
+          "blend": 9.92571142842772,
+          "games": 285,
+          "games_blend_better": 130,
+          "games_equal": 0,
+          "games_single_better": 155,
+          "single": 9.869717747867846
+        },
+        "2025": {
+          "average_advantage_for_blend": 0.05018170857781687,
+          "blend": 10.610209187479938,
+          "games": 285,
+          "games_blend_better": 134,
+          "games_equal": 0,
+          "games_single_better": 151,
+          "single": 10.660390896057754
+        }
+      }
+    },
+    "current_forecasts": 0,
+    "new_base_fits": 0,
+    "owner_campaign_executions": 0
+  },
+  "pregame_research_successor": {
+    "native_suite": {
+      "tests_passed": 1976,
+      "registered_modules": 223,
+      "skips": 0,
+      "errors": 0,
+      "failures": 0
+    },
+    "representative_fit_states_across_two_native_checks": 24,
+    "release_state": {
+      "code": "NATIVE_SUITE_PASSED",
+      "public_label": "Native suite passed all 1,976 tests across 223 modules with zero skips",
+      "owner_launches": 0,
+      "full_v13_complete": false
+    },
+    "actual_input_checks": {
+      "qualified_projected_parquet_partitions": 51,
+      "validated_warm_input_matrices": 17,
+      "scopes": [
+        "2020\u201322 fit",
+        "2023 calibration",
+        "2024/25 validation",
+        "2026 blind projections"
+      ]
+    },
+    "representative_parallel_fits": {
+      "estimator_family": "CatBoost",
+      "fit_calls": 12,
+      "distinct_fit_processes": 12,
+      "peak_concurrent_optimizers": 5,
+      "optimizer_cpu_seconds": 0.5835497940000001,
+      "worker_process_cpu_seconds": 12.83606522,
+      "dispatch_elapsed_seconds": 2.8981772660044953,
+      "eligible_three_minute_windows": 0
+    }
   }
 }
