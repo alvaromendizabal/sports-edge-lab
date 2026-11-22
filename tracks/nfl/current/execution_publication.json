@@ -1,0 +1,26 @@
+{
+  "schema": "sports-edge-lab.nfl.execution-status-publication.v1",
+  "status": "DEPLOYED_LIVE_BROWSER_VERIFIED",
+  "version": 2,
+  "deployed_at": "2026-11-22T02:41:57.545080+00:00",
+  "public_url": "https://sports-edge-lab-nfl-current.alv-mendizabal.chatgpt.site",
+  "site_source_commit": "ae3272848591a0b5813327d8f55cdd87b291b19a",
+  "github_application_source_commit": "8aea5d40fb048a079a69e0fff23385a9f9bdbc1a",
+  "github_pull_request": "https://github.com/alvaromendizabal/sports-edge-lab/pull/396",
+  "scope": "Dated execution status only; all forecast, scorecard, script, style and prior archive bytes unchanged",
+  "preview_snapshot_validation": {
+    "status": "PASS",
+    "games": 12,
+    "performance_rows": 19,
+    "errors": []
+  },
+  "live_browser_reopen": "PASS: dated disclosure opened and current qualification limitations observed",
+  "anonymous_asset_byte_verification": {
+    "status": "INCOMPLETE",
+    "attempt": "Anonymous HTTPS from SageMaker returned HTTP 403 on the first page; no other asset HTTP success inferred"
+  },
+  "prior_publication_receipt": "publication.json retains its dated November 20 version-1 byte evidence",
+  "merge_status": "NOT_MERGED_PENDING_PUBLICATION_BYTE_CHECKS_AND_CI",
+  "research_campaigns_started": 0,
+  "new_owner_fits": 0
+}
