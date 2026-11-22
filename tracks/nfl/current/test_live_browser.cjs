@@ -175,6 +175,15 @@ function verifyHostedHtml(observed, source, context) {
       assert.equal(await text("#pick-count"), "0 / 5");
     });
     await page.locator('.view-nav [data-view-link="performance"]').click();
+    await check(`${width}px: N166 certificate refusal and N165 scientific results are distinguished`, async () => {
+      const panel = page.locator("#execution-status");
+      await panel.locator("summary").click();
+      const status = await panel.innerText();
+      for (const phrase of ["3:00:57 p.m. Pacific", "code 2", "all eight gate files", "Python 3.12.15", "Python 3.13.18", "zero new fits and zero forecasts", "N165 remains the latest verified scientific return", "partial and resumable"]) {
+        assert(status.includes(phrase), `Missing execution outcome: ${phrase}`);
+      }
+      await panel.locator("summary").click();
+    });
     await check(`${width}px: N165 annual scores, complete market denominators and issue timing`, async () => {
       const newResults = page.locator("#n165-frontier");
       assert.match(await newResults.innerText(), /204 quantile fits/);

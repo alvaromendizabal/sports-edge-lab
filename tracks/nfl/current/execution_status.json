@@ -203,17 +203,21 @@
     "failure": "Resource deferral also blocked the activation progress writer, masking clean shutdown with repeated pause exceptions."
   },
   "latest_attempt": {
-    "scope": "N165 pregame research",
-    "status": "PARTIAL_RESUMABLE",
-    "v13_status": "INCOMPLETE",
-    "published_return_status": "VERIFIED",
-    "exit_code": 75,
-    "wall_seconds": 59.923432178999974,
-    "new_quantile_fits": 180,
-    "reused_quantile_fits": 24,
-    "new_schedule_only_fits": 1,
-    "private_prospective_issues": 114,
-    "production_promotions": 0
+    "release": "N166",
+    "user_launches": 1,
+    "started_at": "2026-11-22T15:00:57-08:00",
+    "phase": "certificate_validation",
+    "status": "REFUSED_BEFORE_RESEARCH",
+    "exit_code": 2,
+    "executable_hash_matches": true,
+    "gate_hashes_matched": 8,
+    "gate_hashes_expected": 8,
+    "certificate_python": "3.12.15",
+    "launch_python": "3.13.18",
+    "fitting_started": false,
+    "new_scientific_fits": 0,
+    "new_forecasts": 0,
+    "new_scientific_returns": 0
   },
   "prior_parquet_qualification": {
     "candidate": "R24P1 986ae0fdeb40",
@@ -12656,5 +12660,18 @@
     },
     "scientific_compute_estimate_usd": 0.03769161600936102,
     "actual_bill_verified": false
+  },
+  "latest_verified_scientific_return": {
+    "scope": "N165 pregame research",
+    "status": "PARTIAL_RESUMABLE",
+    "v13_status": "INCOMPLETE",
+    "published_return_status": "VERIFIED",
+    "exit_code": 75,
+    "wall_seconds": 59.923432178999974,
+    "new_quantile_fits": 180,
+    "reused_quantile_fits": 24,
+    "new_schedule_only_fits": 1,
+    "private_prospective_issues": 114,
+    "production_promotions": 0
   }
 }
