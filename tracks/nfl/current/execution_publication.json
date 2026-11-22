@@ -1,15 +1,17 @@
 {
   "schema": "sports-edge-lab.nfl.execution-status-publication.v1",
-  "version": 5,
+  "version": 6,
   "status": "DEPLOYED_HTTP_VERIFIED",
-  "deployed_at": "2026-11-22T04:04:44.458748+00:00",
+  "deployed_at": "2026-11-22T04:39:03.216716+00:00",
   "public_url": "https://sports-edge-lab-nfl-current.alv-mendizabal.chatgpt.site/",
-  "site_source_commit": "d561579fd3271ce838f2c73778b92e00114202f2",
-  "github_application_source_commit": "ec03be3bc7df5c16c10ad62be3456a9adef4e3fb",
-  "public_execution_status_sha256": "3a0531daf23bda0da1977a50043fe12a75aada858c908a9993c47b28a0a021c8",
+  "site_source_commit": "538045b0e12898c7f48f0fcc278109cb1b89d6be",
+  "github_application_source_commit": "2d68c32cb97edae8f90a859eebb594572a3ed36b",
+  "public_execution_status_sha256": "dbe5ca9f0f4e96a496c0a5c7bd109532a0de52d298a814419e0aa186e556d04d",
   "anonymous_asset_verification": "8 of 8 assets passed",
   "full_v13_qualification": false,
   "new_owner_fits": 0,
   "research_campaigns_started": 0,
-  "historical_exports_completed": 108
+  "historical_exports_completed": 108,
+  "historical_policies_completed": 216,
+  "policy_validation_prediction_rows": 738720
 }
