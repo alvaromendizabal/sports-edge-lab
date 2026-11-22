@@ -1,14 +1,23 @@
 {
   "schema": "sports-edge-lab.nfl.public-execution-status.v1",
-  "as_of": "2026-11-21T19:09:02-08:00",
-  "status": "PAUSE_REPORTING_FIX_TARGETED_TESTED_NOT_NATIVE_QUALIFIED",
+  "as_of": "2026-11-21T19:46:09-08:00",
+  "status": "NATIVE_PARQUET_PASSED_HISTORICAL_VALIDATION_HANDOFF",
   "owner": "NFL",
   "new_owner_campaign_executions": 0,
   "new_owner_scientific_fits": 0,
   "historical_recovery": {
     "producer": "R20",
     "estimator_fit_states": 216,
-    "status": "DURABLE_UNPUBLISHED_REUSABLE_AFTER_AUTHENTICATION"
+    "status": "PINNED_EXPORTS_AVAILABLE_FOR_INDEPENDENT_VALIDATION",
+    "registered_exports": 108,
+    "validation_rows": 123120,
+    "native_sample": {
+      "exports": 1,
+      "rows": 1140,
+      "warm_reuse": "PASS"
+    },
+    "full_validation_rescore_executed": false,
+    "postprocessing_policies_registered": 216
   },
   "prior_candidate_native_qualification": {
     "candidate": "R24 47550",
@@ -26,7 +35,7 @@
   },
   "successor": {
     "candidate": "R24P1 986ae0fdeb40",
-    "status": "TARGETED_REGRESSION_PASS_NOT_NATIVE_QUALIFIED",
+    "status": "NATIVE_PARQUET_AND_TARGETED_REGRESSION_PASS_FULL_RELEASE_INCOMPLETE",
     "local_targeted_tests_passed": 31,
     "native_targeted_tests_passed": 31,
     "native_targeted_test_failures": 0,
@@ -36,16 +45,13 @@
     "scope": "Same 31 regression cases passed locally and in the native Space; these are not 62 unique cases or full package qualification."
   },
   "resource_observation": {
-    "as_of": "2026-11-21T19:04:42-08:00",
-    "sample_seconds": 6.004192273001536,
+    "as_of": "2026-11-21T19:39:16-08:00",
+    "sample_seconds": 4.003642327999842,
     "active_shared_reservations": 0,
     "waiting_shared_controllers": 0,
     "active_nfl_jobs_observed": 0,
     "processes_signalled": 0,
-    "active_reservations_removed": 0,
-    "other_project_work_preserved": true,
-    "host_io_full_avg10_percent": 90.24,
-    "attribution": "Other-project I/O was observed; exclusive causation of host pressure is not established."
+    "active_reservations_removed": 0
   },
   "publication_scope": {
     "changes_forecast_values": false,
@@ -62,10 +68,11 @@
     "Sustained scientific CPU acceptance when the conditional gate is eligible"
   ],
   "source_evidence_sha256": {
-    "bounded_space_inspection": "672a42992a214c7b559ab4ce1cb07ed2cefd25eebeef3be8bb5cd7d364edd76b",
-    "attached_failure_log": "84b7b2d4f77835a3d55b5b9f22ca53f3100d041358ba2eaa73c92f4ca1d9cce7"
+    "attached_failure_log": "84b7b2d4f77835a3d55b5b9f22ca53f3100d041358ba2eaa73c92f4ca1d9cce7",
+    "native_parquet_receipt": "2059fba268c9dfcdd5435af97c5f2beb3f388c7ae6fd34fda7a046ee9a4ab67e",
+    "prior_bounded_space_inspection": "672a42992a214c7b559ab4ce1cb07ed2cefd25eebeef3be8bb5cd7d364edd76b"
   },
-  "latest_attempt": {
+  "prior_failed_attempt": {
     "candidate": "R24 06f4e7e81ba5",
     "phase": "parquet",
     "status": "QUALIFICATION_INCOMPLETE",
@@ -73,5 +80,17 @@
     "completed_partitions": 0,
     "scientific_fits": 0,
     "failure": "Resource deferral also blocked the activation progress writer, masking clean shutdown with repeated pause exceptions."
+  },
+  "latest_attempt": {
+    "candidate": "R24P1 986ae0fdeb40",
+    "phase": "parquet",
+    "status": "PASS",
+    "wall_seconds": 567.9556511810006,
+    "rows_verified": 120719180,
+    "tables": [
+      "campaign_forecasts.csv",
+      "campaign_validation.csv"
+    ],
+    "verified_pointer_unchanged": true
   }
 }
