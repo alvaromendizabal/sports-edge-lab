@@ -60,8 +60,8 @@ function verifyHostedHtml(observed, source, context) {
   report.pr_head = process.env.NFL_CURRENT_PR_HEAD || null;
   browser = await chromium.launch({ headless: true });
   const assetContext = await browser.newContext();
-  const requiredAssets = ["index.html", "app.js", "styles.css", "data.json", "evidence.json", "circa_evidence.json", "newest_model_comparison.json"];
-  await check("Seven canonical deployed assets match publication bytes; any Cloudflare HTML append is separately recorded", async () => {
+  const requiredAssets = ["index.html", "app.js", "styles.css", "data.json", "evidence.json", "circa_evidence.json", "newest_model_comparison.json", "execution_status.json"];
+  await check("Eight canonical deployed assets match publication bytes; any Cloudflare HTML append is separately recorded", async () => {
     assert.deepEqual(receipt.verification.assets.map(a => a.path).sort(), [...requiredAssets].sort());
     for (const asset of receipt.verification.assets) {
       assert.equal(asset.status, 200);

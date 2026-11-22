@@ -2,24 +2,26 @@
   "status": "DEPLOYED_HTTP_VERIFIED",
   "public_url": "https://sports-edge-lab-nfl-current.alv-mendizabal.chatgpt.site/",
   "audience": "public",
-  "version": 1,
-  "deployed_at": "2026-11-21T01:26:07.162183+00:00",
-  "site_source_commit": "fc3d7cf85e9d84539da62af67cfea38cd0bb9b80",
-  "github_application_source_commit": "cf7902403755b3b7831254af00fc839995442194",
-  "archive_sha256": "7b7236781e50585576b7d2aed96d2f40bef70aab15d1c3b6abbce5d7b4203fa7",
+  "version": 4,
+  "deployed_at": "2026-11-22T03:47:06.495123+00:00",
+  "site_source_commit": "f796bf8e283035068807b9a5e575e75518bce9dd",
+  "github_application_source_commit": "67d571797b2ba3aa1431fd7f3fe8fc51d80bed78",
+  "archive_sha256": "aa5ba448d9368b3b5b67370e7bcba3da803c83b0a17197d42602b27e4c05722e",
   "verification": {
-    "checked_at": "2026-11-21T01:29:28.804537+00:00",
+    "checked_at": "2026-11-22T03:48:33.760224+00:00",
     "base_url": "https://sports-edge-lab-nfl-current.alv-mendizabal.chatgpt.site/",
-    "method": "Anonymous HTTPS response and exact deployed asset byte comparison",
     "assets": [
       {
         "path": "index.html",
         "status": 200,
         "url": "https://sports-edge-lab-nfl-current.alv-mendizabal.chatgpt.site/",
         "content_type": "text/html",
-        "bytes": 12849,
-        "sha256": "b683e787da43b9936ca2412edd064d3fe8e03e23fd6c47b8c88b33c48c74813b",
-        "matches_pushed_source": true
+        "bytes": 13872,
+        "sha256": "7bfb981ab4c4ffbdfc8703846ffbd6d8f0509c9b674961beddce333ff7aaeb9d",
+        "matches_pushed_source": true,
+        "received_bytes": 13872,
+        "received_sha256": "7bfb981ab4c4ffbdfc8703846ffbd6d8f0509c9b674961beddce333ff7aaeb9d",
+        "verification": "EXACT_BYTES"
       },
       {
         "path": "app.js",
@@ -28,7 +30,10 @@
         "content_type": "text/javascript",
         "bytes": 45870,
         "sha256": "9e3b6d5fb67b95639c2159e0199e38387436ed5d7dbb83821614621cb6a3f0a9",
-        "matches_pushed_source": true
+        "matches_pushed_source": true,
+        "received_bytes": 45870,
+        "received_sha256": "9e3b6d5fb67b95639c2159e0199e38387436ed5d7dbb83821614621cb6a3f0a9",
+        "verification": "EXACT_BYTES"
       },
       {
         "path": "styles.css",
@@ -37,7 +42,10 @@
         "content_type": "text/css",
         "bytes": 40562,
         "sha256": "b5d96c7ab1ee471e50dd804dbf9e080e9ee2d66f5b09d901a73d8cd356670920",
-        "matches_pushed_source": true
+        "matches_pushed_source": true,
+        "received_bytes": 40562,
+        "received_sha256": "b5d96c7ab1ee471e50dd804dbf9e080e9ee2d66f5b09d901a73d8cd356670920",
+        "verification": "EXACT_BYTES"
       },
       {
         "path": "data.json",
@@ -46,7 +54,10 @@
         "content_type": "application/json",
         "bytes": 97385,
         "sha256": "2487388b0bb9da5d67e1249460b44f905baa5677c0f751ed486fc41e35aa20fb",
-        "matches_pushed_source": true
+        "matches_pushed_source": true,
+        "received_bytes": 97385,
+        "received_sha256": "2487388b0bb9da5d67e1249460b44f905baa5677c0f751ed486fc41e35aa20fb",
+        "verification": "EXACT_BYTES"
       },
       {
         "path": "evidence.json",
@@ -55,7 +66,10 @@
         "content_type": "application/json",
         "bytes": 2363,
         "sha256": "66a149027c8a84d871cf8824ba33489d2fc2270f41947e8b0504b3d205dde2e7",
-        "matches_pushed_source": true
+        "matches_pushed_source": true,
+        "received_bytes": 2363,
+        "received_sha256": "66a149027c8a84d871cf8824ba33489d2fc2270f41947e8b0504b3d205dde2e7",
+        "verification": "EXACT_BYTES"
       },
       {
         "path": "circa_evidence.json",
@@ -64,7 +78,10 @@
         "content_type": "application/json",
         "bytes": 29196,
         "sha256": "c289471d8d45bde905b2c037bd314f93368f8595ba361c1e933067ccaaf702dc",
-        "matches_pushed_source": true
+        "matches_pushed_source": true,
+        "received_bytes": 29196,
+        "received_sha256": "c289471d8d45bde905b2c037bd314f93368f8595ba361c1e933067ccaaf702dc",
+        "verification": "EXACT_BYTES"
       },
       {
         "path": "newest_model_comparison.json",
@@ -73,21 +90,36 @@
         "content_type": "application/json",
         "bytes": 8860,
         "sha256": "97f501f0cd40bde3e54cc80821744558602db916a9f883cc93480777fa66a442",
-        "matches_pushed_source": true
+        "matches_pushed_source": true,
+        "received_bytes": 8860,
+        "received_sha256": "97f501f0cd40bde3e54cc80821744558602db916a9f883cc93480777fa66a442",
+        "verification": "EXACT_BYTES"
+      },
+      {
+        "path": "execution_status.json",
+        "status": 200,
+        "url": "https://sports-edge-lab-nfl-current.alv-mendizabal.chatgpt.site/execution_status.json",
+        "content_type": "application/json",
+        "bytes": 3540,
+        "sha256": "51b32673a7285ed89dc3dc373a884d425d4b9fe07f0114927df30d2ab176a672",
+        "matches_pushed_source": true,
+        "received_bytes": 3540,
+        "received_sha256": "51b32673a7285ed89dc3dc373a884d425d4b9fe07f0114927df30d2ab176a672",
+        "verification": "EXACT_BYTES"
       }
     ],
+    "method": "Anonymous HTTPS comparison with the published source files",
     "all_match": true
   },
-  "browser_preview_validation": "PASS: 17 functional/render checks, 390px viewport, six phone graphics",
-  "live_browser_reopen": "UNAVAILABLE: browser tool connection/context failed after successful deployment",
+  "browser_preview_validation": "Snapshot validation passed with 12 games and 19 performance rows. Browser interactions are independently exercised in CI.",
+  "live_browser_reopen": "Anonymous HTTP readback passed. CI records responsive browser results separately.",
   "forecast_inputs_refreshed": false,
   "new_fits": 0,
   "campaign_launches": 0,
   "old_public_url": "https://sports-edge-lab-nfl.alv-mendizabal.chatgpt.site/",
   "old_public_url_modified": false,
   "notes": [
-    "This replacement public Site is independently deployed. The original Site project was unavailable through the management API.",
-    "All seven current application assets returned HTTP 200 anonymously and exactly matched the browser-tested preview bytes. Live post-deployment browser verification remains a separately stated tooling gap.",
-    "The publication receipt is a reporting follow-up; the application source commit and file hashes identify the deployed code and data."
+    "All eight listed assets returned HTTP 200 and matched source bytes.",
+    "The model scores and forecast data are the existing dated snapshot."
   ]
 }
