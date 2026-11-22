@@ -2,13 +2,13 @@
   "status": "DEPLOYED_HTTP_VERIFIED",
   "public_url": "https://sports-edge-lab-nfl-current.alv-mendizabal.chatgpt.site/",
   "audience": "public",
-  "version": 6,
-  "deployed_at": "2026-11-22T04:39:03.216716+00:00",
-  "site_source_commit": "538045b0e12898c7f48f0fcc278109cb1b89d6be",
-  "github_application_source_commit": "2d68c32cb97edae8f90a859eebb594572a3ed36b",
-  "archive_sha256": "60fa2ea4684d74cfb75b327c593a38eb877f5166d1c705c33971196c7937c296",
+  "version": 7,
+  "deployed_at": "2026-11-22T05:21:23.649170+00:00",
+  "site_source_commit": "926950e0bf9eba68a4fe396a61168745dbe8e48d",
+  "github_application_source_commit": "5ceaa59293b8b4e34e340d70bffb96b036982096",
+  "archive_sha256": "da18d076d8e98da0ae07151e146965914167b0f60bde88a21937f6eec1b001c6",
   "verification": {
-    "checked_at": "2026-11-22T04:39:28.615525+00:00",
+    "checked_at": "2026-11-22T05:21:45.548244+00:00",
     "base_url": "https://sports-edge-lab-nfl-current.alv-mendizabal.chatgpt.site/",
     "assets": [
       {
@@ -16,11 +16,11 @@
         "status": 200,
         "url": "https://sports-edge-lab-nfl-current.alv-mendizabal.chatgpt.site/",
         "content_type": "text/html",
-        "bytes": 15903,
-        "sha256": "4068a05375537e203c6f71cd81a330087ec936e2a45fe897d5bf6b16306fd201",
+        "bytes": 16924,
+        "sha256": "1b38f9fe49db3258a52118aaa46d25cbe633702852e124d5588f47694bcb1a82",
         "matches_pushed_source": true,
-        "received_bytes": 15903,
-        "received_sha256": "4068a05375537e203c6f71cd81a330087ec936e2a45fe897d5bf6b16306fd201",
+        "received_bytes": 16924,
+        "received_sha256": "1b38f9fe49db3258a52118aaa46d25cbe633702852e124d5588f47694bcb1a82",
         "verification": "EXACT_BYTES"
       },
       {
@@ -100,11 +100,11 @@
         "status": 200,
         "url": "https://sports-edge-lab-nfl-current.alv-mendizabal.chatgpt.site/execution_status.json",
         "content_type": "application/json",
-        "bytes": 76858,
-        "sha256": "dbe5ca9f0f4e96a496c0a5c7bd109532a0de52d298a814419e0aa186e556d04d",
+        "bytes": 115303,
+        "sha256": "c47091256978932591d49c49b150a2aa4eb689f29a11419220a3ebe18c0a401a",
         "matches_pushed_source": true,
-        "received_bytes": 76858,
-        "received_sha256": "dbe5ca9f0f4e96a496c0a5c7bd109532a0de52d298a814419e0aa186e556d04d",
+        "received_bytes": 115303,
+        "received_sha256": "c47091256978932591d49c49b150a2aa4eb689f29a11419220a3ebe18c0a401a",
         "verification": "EXACT_BYTES"
       }
     ],
@@ -119,7 +119,7 @@
   "old_public_url": "https://sports-edge-lab-nfl.alv-mendizabal.chatgpt.site/",
   "old_public_url_modified": false,
   "notes": [
-    "All 216 historical policies completed on both validation seasons. Exact denominators and five selection sensitivities are available in the execution status.",
-    "Issued weekly forecasts retain their original dates. Historical policy evaluation produced no current forecasts or production promotions."
+    "The Performance view includes authenticated price availability by bookmaker, game population and horizon.",
+    "Current schedule and frozen replay eligibility are dated separately. No new forecasts were issued."
   ]
 }
