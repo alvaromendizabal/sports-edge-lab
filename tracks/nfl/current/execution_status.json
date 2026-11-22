@@ -1,10 +1,10 @@
 {
   "schema": "sports-edge-lab.nfl.public-execution-status.v1",
-  "as_of": "2026-11-22T06:31:37.121839+00:00",
-  "status": "HISTORICAL_POLICY_EVALUATION_COMPLETE_FULL_V13_PENDING",
+  "as_of": "2026-11-22T06:55:47.070739+00:00",
+  "status": "OWNER_FROZEN_FITS_COMPLETE_2026_GRADING_PENDING",
   "owner": "NFL",
-  "new_owner_campaign_executions": 0,
-  "new_owner_scientific_fits": 0,
+  "new_owner_campaign_executions": 1,
+  "new_owner_scientific_fits": 384,
   "historical_recovery": {
     "producer": "R20",
     "estimator_fit_states": 216,
@@ -183,11 +183,10 @@
     "full_v13_completion": false
   },
   "remaining_gates": [
-    "Exact-package native package and actual-data qualification",
-    "Integrity-verified qualification and installed-delivery certificates",
-    "General current-game inference and source-clock/input certificates",
-    "Full immutable population reconciliation",
-    "Sustained scientific CPU acceptance when the conditional gate is eligible"
+    "Full 2026 completed-game grading and population reconciliation",
+    "Original current-game input clocks and physical source evidence",
+    "Whole-portfolio qualification and production-promotion review",
+    "Sustained scientific CPU acceptance when an eligible window exists"
   ],
   "source_evidence_sha256": {
     "attached_failure_log": "84b7b2d4f77835a3d55b5b9f22ca53f3100d041358ba2eaa73c92f4ca1d9cce7",
@@ -204,21 +203,39 @@
     "failure": "Resource deferral also blocked the activation progress writer, masking clean shutdown with repeated pause exceptions."
   },
   "latest_attempt": {
-    "base_fits": 0,
-    "build": "1fee13189c7e57184c7352579026aaa97c4930ad4a13b7041f6a6e79ed8c2d9e",
-    "completed_policies": 216,
-    "current_forecasts": 0,
-    "learned_target_weights": 108,
-    "manifest": "1ebeace9936d50f09e65989cc14c5cc5b90194c997e58dfdc9a797ca5071dc7f",
-    "metric_rows": 23328,
-    "scope": "HISTORICAL_PARAMETER_FITS_AND_VALIDATION",
-    "scores_sha256": "678b8d524a15cc216ad41cb30641f16ac9ceb46793c83e47f9d631da817c66c3",
-    "validation_predictions": 738720,
-    "failed_tasks": 0,
-    "deferred_tasks": 0,
-    "peak_workers": 12,
-    "parameter_worker_cpu_seconds": 3.9877883239999994,
-    "validation_worker_cpu_seconds": 77.688817483
+    "completion_utc": "2026-11-22T06:55:47.070739+00:00",
+    "scope": "NFL frozen-input fit and validation stage",
+    "status": "COMPLETE_REGISTERED_STAGES",
+    "full_v13_status": "INCOMPLETE",
+    "owner_executions": 1,
+    "fit_tasks_registered": 408,
+    "fits_new": 384,
+    "fits_reused": 24,
+    "fits_failed": 0,
+    "fits_deferred": 0,
+    "completed_candidate_groups": 102,
+    "training_years": [
+      2020,
+      2021,
+      2022
+    ],
+    "calibration_year": 2023,
+    "validation_games": 570,
+    "heldout_test_labels_used_in_selection": 0,
+    "newly_issued_forecasts": 0,
+    "production_promotions": 0,
+    "owner_2026_test_grade": "PENDING_FULL_COMPLETED_POPULATION",
+    "compute": {
+      "distinct_fit_processes": 99,
+      "peak_workers": 12,
+      "peak_concurrent_optimizers": 10,
+      "measured_optimizer_cpu_seconds": 26.783701512999997,
+      "fit_dispatch_process_cpu_seconds": 174.91003311,
+      "fit_dispatch_wall_seconds": 34.27128300900222,
+      "sustained_occupancy": "NO_ELIGIBLE_180S_WINDOW",
+      "estimated_whole_instance_cost_usd": 0.036986237589806785,
+      "actual_billing_verified": false
+    }
   },
   "prior_parquet_qualification": {
     "candidate": "R24P1 986ae0fdeb40",
@@ -3975,9 +3992,9 @@
     },
     "representative_fit_states_across_two_native_checks": 24,
     "release_state": {
-      "code": "NATIVE_SUITE_PASSED",
-      "public_label": "Native suite passed all 1,976 tests across 223 modules with zero skips",
-      "owner_launches": 0,
+      "code": "COMPLETE_REGISTERED_STAGES",
+      "public_label": "Owner completed the registered frozen-input stage",
+      "owner_launches": 1,
       "full_v13_complete": false
     },
     "actual_input_checks": {
@@ -3999,6 +4016,541 @@
       "worker_process_cpu_seconds": 12.83606522,
       "dispatch_elapsed_seconds": 2.8981772660044953,
       "eligible_three_minute_windows": 0
+    },
+    "preparation_release_state": {
+      "code": "NATIVE_SUITE_PASSED",
+      "public_label": "Native suite passed all 1,976 tests across 223 modules with zero skips",
+      "owner_launches": 0,
+      "full_v13_complete": false
     }
+  },
+  "historical_policy_owner_run": {
+    "base_fits": 0,
+    "build": "1fee13189c7e57184c7352579026aaa97c4930ad4a13b7041f6a6e79ed8c2d9e",
+    "completed_policies": 216,
+    "current_forecasts": 0,
+    "learned_target_weights": 108,
+    "manifest": "1ebeace9936d50f09e65989cc14c5cc5b90194c997e58dfdc9a797ca5071dc7f",
+    "metric_rows": 23328,
+    "scope": "HISTORICAL_PARAMETER_FITS_AND_VALIDATION",
+    "scores_sha256": "678b8d524a15cc216ad41cb30641f16ac9ceb46793c83e47f9d631da817c66c3",
+    "validation_predictions": 738720,
+    "failed_tasks": 0,
+    "deferred_tasks": 0,
+    "peak_workers": 12,
+    "parameter_worker_cpu_seconds": 3.9877883239999994,
+    "validation_worker_cpu_seconds": 77.688817483
+  },
+  "n162_owner_results": {
+    "completion_utc": "2026-11-22T06:55:47.070739+00:00",
+    "scope": "NFL frozen-input fit and validation stage",
+    "status": "COMPLETE_REGISTERED_STAGES",
+    "full_v13_status": "INCOMPLETE",
+    "owner_executions": 1,
+    "fit_tasks_registered": 408,
+    "fits_new": 384,
+    "fits_reused": 24,
+    "fits_failed": 0,
+    "fits_deferred": 0,
+    "completed_candidate_groups": 102,
+    "training_years": [
+      2020,
+      2021,
+      2022
+    ],
+    "calibration_year": 2023,
+    "validation_games": 570,
+    "heldout_test_labels_used_in_selection": 0,
+    "newly_issued_forecasts": 0,
+    "production_promotions": 0,
+    "owner_2026_test_grade": "PENDING_FULL_COMPLETED_POPULATION",
+    "compute": {
+      "distinct_fit_processes": 99,
+      "peak_workers": 12,
+      "peak_concurrent_optimizers": 10,
+      "measured_optimizer_cpu_seconds": 26.783701512999997,
+      "fit_dispatch_process_cpu_seconds": 174.91003311,
+      "fit_dispatch_wall_seconds": 34.27128300900222,
+      "sustained_occupancy": "NO_ELIGIBLE_180S_WINDOW",
+      "estimated_whole_instance_cost_usd": 0.036986237589806785,
+      "actual_billing_verified": false
+    },
+    "primary_policy": {
+      "weights": [
+        50,
+        50
+      ],
+      "horizon_minutes": 120,
+      "scope": "Best new entry versus best recovered entry per objective. T60 carries the T120 observations. Binary winner metrics exclude the 2025 tie.",
+      "objectives": {
+        "binary_accuracy": {
+          "outcome": "prior",
+          "eligible_games_2024": 285,
+          "eligible_games_2025": 284,
+          "prior": {
+            "primary_weighted": 0.6115764764022733,
+            "score_2024": 0.624561403508772,
+            "score_2025": 0.5985915492957746,
+            "pooled_rank": 1,
+            "compared_entries": 756,
+            "tied_at_this_score": 1
+          },
+          "new": {
+            "primary_weighted": 0.6027674820854955,
+            "score_2024": 0.6280701754385964,
+            "score_2025": 0.5774647887323944,
+            "pooled_rank": 10,
+            "compared_entries": 204,
+            "tied_at_this_score": 2
+          }
+        },
+        "binary_brier": {
+          "outcome": "prior",
+          "eligible_games_2024": 285,
+          "eligible_games_2025": 284,
+          "prior": {
+            "primary_weighted": 0.23385717075248216,
+            "score_2024": 0.22682788680239985,
+            "score_2025": 0.24088645470256445,
+            "pooled_rank": 1,
+            "compared_entries": 756,
+            "tied_at_this_score": 1
+          },
+          "new": {
+            "primary_weighted": 0.23555817748993163,
+            "score_2024": 0.22903286124531413,
+            "score_2025": 0.24208349373454915,
+            "pooled_rank": 11,
+            "compared_entries": 204,
+            "tied_at_this_score": 1
+          }
+        },
+        "binary_log_loss": {
+          "outcome": "prior",
+          "eligible_games_2024": 285,
+          "eligible_games_2025": 284,
+          "prior": {
+            "primary_weighted": 0.6597675186746937,
+            "score_2024": 0.6452689508132016,
+            "score_2025": 0.6742660865361859,
+            "pooled_rank": 1,
+            "compared_entries": 756,
+            "tied_at_this_score": 1
+          },
+          "new": {
+            "primary_weighted": 0.6649333898096751,
+            "score_2024": 0.6542480621268257,
+            "score_2025": 0.6756187174925247,
+            "pooled_rank": 15,
+            "compared_entries": 204,
+            "tied_at_this_score": 1
+          }
+        },
+        "margin_crps": {
+          "outcome": "prior",
+          "eligible_games_2024": 285,
+          "eligible_games_2025": 285,
+          "prior": {
+            "primary_weighted": 7.654262109877155,
+            "score_2024": 7.625701393671138,
+            "score_2025": 7.682822826083171,
+            "pooled_rank": 1,
+            "compared_entries": 648,
+            "tied_at_this_score": 1
+          },
+          "new": {
+            "primary_weighted": 7.7315454288774985,
+            "score_2024": 7.553783288126541,
+            "score_2025": 7.9093075696284565,
+            "pooled_rank": 28,
+            "compared_entries": 204,
+            "tied_at_this_score": 1
+          }
+        },
+        "margin_exact_log_loss": {
+          "outcome": "prior",
+          "eligible_games_2024": 285,
+          "eligible_games_2025": 285,
+          "prior": {
+            "primary_weighted": 4.033479339393905,
+            "score_2024": 4.03329480380402,
+            "score_2025": 4.033663874983789,
+            "pooled_rank": 1,
+            "compared_entries": 648,
+            "tied_at_this_score": 1
+          },
+          "new": {
+            "primary_weighted": 4.041499830104791,
+            "score_2024": 4.020463768568138,
+            "score_2025": 4.062535891641444,
+            "pooled_rank": 22,
+            "compared_entries": 204,
+            "tied_at_this_score": 1
+          }
+        },
+        "margin_interval_score_50": {
+          "outcome": "prior",
+          "eligible_games_2024": 285,
+          "eligible_games_2025": 285,
+          "prior": {
+            "primary_weighted": 34.5280701754386,
+            "score_2024": 34.50526315789474,
+            "score_2025": 34.550877192982455,
+            "pooled_rank": 1,
+            "compared_entries": 648,
+            "tied_at_this_score": 1
+          },
+          "new": {
+            "primary_weighted": 34.907017543859645,
+            "score_2024": 34.35438596491228,
+            "score_2025": 35.459649122807015,
+            "pooled_rank": 23,
+            "compared_entries": 204,
+            "tied_at_this_score": 1
+          }
+        },
+        "margin_interval_score_80": {
+          "outcome": "prior",
+          "eligible_games_2024": 285,
+          "eligible_games_2025": 285,
+          "prior": {
+            "primary_weighted": 48.96491228070175,
+            "score_2024": 49.43157894736842,
+            "score_2025": 48.498245614035085,
+            "pooled_rank": 1,
+            "compared_entries": 648,
+            "tied_at_this_score": 1
+          },
+          "new": {
+            "primary_weighted": 49.12105263157894,
+            "score_2024": 49.64912280701754,
+            "score_2025": 48.59298245614035,
+            "pooled_rank": 10,
+            "compared_entries": 204,
+            "tied_at_this_score": 1
+          }
+        },
+        "margin_mae": {
+          "outcome": "prior",
+          "eligible_games_2024": 285,
+          "eligible_games_2025": 285,
+          "prior": {
+            "primary_weighted": 10.567389011388409,
+            "score_2024": 10.435769862807154,
+            "score_2025": 10.699008159969663,
+            "pooled_rank": 1,
+            "compared_entries": 756,
+            "tied_at_this_score": 1
+          },
+          "new": {
+            "primary_weighted": 10.741075400052518,
+            "score_2024": 10.541526952502887,
+            "score_2025": 10.94062384760215,
+            "pooled_rank": 77,
+            "compared_entries": 204,
+            "tied_at_this_score": 2
+          }
+        },
+        "margin_normal_nll": {
+          "outcome": "no_prior_comparator",
+          "eligible_games_2024": 285,
+          "eligible_games_2025": 285,
+          "new": {
+            "primary_weighted": 4.041490662394062,
+            "score_2024": 4.02044568249217,
+            "score_2025": 4.062535642295954,
+            "pooled_rank": 1,
+            "compared_entries": 204,
+            "tied_at_this_score": 1
+          }
+        },
+        "margin_rmse": {
+          "outcome": "prior",
+          "eligible_games_2024": 285,
+          "eligible_games_2025": 285,
+          "prior": {
+            "primary_weighted": 13.652355920693235,
+            "score_2024": 13.64970615780654,
+            "score_2025": 13.655005683579928,
+            "pooled_rank": 1,
+            "compared_entries": 756,
+            "tied_at_this_score": 1
+          },
+          "new": {
+            "primary_weighted": 13.761667074273404,
+            "score_2024": 13.459640167625071,
+            "score_2025": 14.06369398092174,
+            "pooled_rank": 35,
+            "compared_entries": 204,
+            "tied_at_this_score": 2
+          }
+        },
+        "three_way_accuracy": {
+          "outcome": "prior",
+          "eligible_games_2024": 285,
+          "eligible_games_2025": 285,
+          "prior": {
+            "primary_weighted": 0.6105263157894737,
+            "score_2024": 0.6421052631578947,
+            "score_2025": 0.5789473684210527,
+            "pooled_rank": 1,
+            "compared_entries": 756,
+            "tied_at_this_score": 2
+          },
+          "new": {
+            "primary_weighted": 0.6017543859649123,
+            "score_2024": 0.6280701754385964,
+            "score_2025": 0.5754385964912281,
+            "pooled_rank": 11,
+            "compared_entries": 204,
+            "tied_at_this_score": 2
+          }
+        },
+        "three_way_brier": {
+          "outcome": "prior",
+          "eligible_games_2024": 285,
+          "eligible_games_2025": 285,
+          "prior": {
+            "primary_weighted": 0.47068982590336317,
+            "score_2024": 0.45533520242435993,
+            "score_2025": 0.48604444938236646,
+            "pooled_rank": 1,
+            "compared_entries": 756,
+            "tied_at_this_score": 1
+          },
+          "new": {
+            "primary_weighted": 0.47337383502000635,
+            "score_2024": 0.4588689076230607,
+            "score_2025": 0.48787876241695194,
+            "pooled_rank": 7,
+            "compared_entries": 204,
+            "tied_at_this_score": 1
+          }
+        },
+        "three_way_log_loss": {
+          "outcome": "prior",
+          "eligible_games_2024": 285,
+          "eligible_games_2025": 285,
+          "prior": {
+            "primary_weighted": 0.6925967642045688,
+            "score_2024": 0.6730416603862034,
+            "score_2025": 0.7121518680229344,
+            "pooled_rank": 1,
+            "compared_entries": 756,
+            "tied_at_this_score": 1
+          },
+          "new": {
+            "primary_weighted": 0.6953370151528361,
+            "score_2024": 0.6788966388537409,
+            "score_2025": 0.7117773914519312,
+            "pooled_rank": 6,
+            "compared_entries": 204,
+            "tied_at_this_score": 1
+          }
+        },
+        "total_crps": {
+          "outcome": "prior",
+          "eligible_games_2024": 285,
+          "eligible_games_2025": 285,
+          "prior": {
+            "primary_weighted": 7.417507004439733,
+            "score_2024": 7.215274745160311,
+            "score_2025": 7.619739263719155,
+            "pooled_rank": 1,
+            "compared_entries": 648,
+            "tied_at_this_score": 1
+          },
+          "new": {
+            "primary_weighted": 7.421797156605069,
+            "score_2024": 7.2028024938659465,
+            "score_2025": 7.640791819344192,
+            "pooled_rank": 3,
+            "compared_entries": 204,
+            "tied_at_this_score": 1
+          }
+        },
+        "total_exact_log_loss": {
+          "outcome": "new",
+          "eligible_games_2024": 285,
+          "eligible_games_2025": 285,
+          "new": {
+            "primary_weighted": 4.003087556264479,
+            "score_2024": 3.983699032631028,
+            "score_2025": 4.022476079897929,
+            "pooled_rank": 1,
+            "compared_entries": 204,
+            "tied_at_this_score": 1
+          },
+          "prior": {
+            "primary_weighted": 4.004793501835316,
+            "score_2024": 3.9877550058734,
+            "score_2025": 4.02183199779723,
+            "pooled_rank": 8,
+            "compared_entries": 648,
+            "tied_at_this_score": 1
+          }
+        },
+        "total_interval_score_50": {
+          "outcome": "prior",
+          "eligible_games_2024": 285,
+          "eligible_games_2025": 285,
+          "prior": {
+            "primary_weighted": 33.45789473684211,
+            "score_2024": 32.59298245614035,
+            "score_2025": 34.32280701754386,
+            "pooled_rank": 1,
+            "compared_entries": 648,
+            "tied_at_this_score": 1
+          },
+          "new": {
+            "primary_weighted": 33.49122807017544,
+            "score_2024": 32.50526315789474,
+            "score_2025": 34.47719298245614,
+            "pooled_rank": 4,
+            "compared_entries": 204,
+            "tied_at_this_score": 1
+          }
+        },
+        "total_interval_score_80": {
+          "outcome": "prior",
+          "eligible_games_2024": 285,
+          "eligible_games_2025": 285,
+          "prior": {
+            "primary_weighted": 47.28421052631578,
+            "score_2024": 47.280701754385966,
+            "score_2025": 47.28771929824561,
+            "pooled_rank": 1,
+            "compared_entries": 648,
+            "tied_at_this_score": 1
+          },
+          "new": {
+            "primary_weighted": 47.340350877192975,
+            "score_2024": 47.8280701754386,
+            "score_2025": 46.85263157894737,
+            "pooled_rank": 3,
+            "compared_entries": 204,
+            "tied_at_this_score": 1
+          }
+        },
+        "total_mae": {
+          "outcome": "prior",
+          "eligible_games_2024": 285,
+          "eligible_games_2025": 285,
+          "prior": {
+            "primary_weighted": 10.2650543219628,
+            "score_2024": 9.869717747867846,
+            "score_2025": 10.660390896057754,
+            "pooled_rank": 1,
+            "compared_entries": 756,
+            "tied_at_this_score": 2
+          },
+          "new": {
+            "primary_weighted": 10.29988628172278,
+            "score_2024": 9.988572283143343,
+            "score_2025": 10.611200280302217,
+            "pooled_rank": 14,
+            "compared_entries": 204,
+            "tied_at_this_score": 2
+          }
+        },
+        "total_normal_nll": {
+          "outcome": "no_prior_comparator",
+          "eligible_games_2024": 285,
+          "eligible_games_2025": 285,
+          "new": {
+            "primary_weighted": 4.003075591871154,
+            "score_2024": 3.9836783372465794,
+            "score_2025": 4.022472846495728,
+            "pooled_rank": 1,
+            "compared_entries": 204,
+            "tied_at_this_score": 1
+          }
+        },
+        "total_rmse": {
+          "outcome": "prior",
+          "eligible_games_2024": 285,
+          "eligible_games_2025": 285,
+          "prior": {
+            "primary_weighted": 13.231930334911672,
+            "score_2024": 12.973203848847232,
+            "score_2025": 13.490656820976113,
+            "pooled_rank": 1,
+            "compared_entries": 756,
+            "tied_at_this_score": 2
+          },
+          "new": {
+            "primary_weighted": 13.240354685376092,
+            "score_2024": 12.96976571627983,
+            "score_2025": 13.510943654472351,
+            "pooled_rank": 4,
+            "compared_entries": 204,
+            "tied_at_this_score": 2
+          }
+        }
+      }
+    },
+    "sensitivity": [
+      {
+        "validation_weights": [
+          50,
+          50
+        ],
+        "new_leads": [
+          "total_exact_log_loss"
+        ],
+        "prior_leads": 17,
+        "ties": 0
+      },
+      {
+        "validation_weights": [
+          40,
+          60
+        ],
+        "new_leads": [
+          "total_exact_log_loss",
+          "total_interval_score_80"
+        ],
+        "prior_leads": 16,
+        "ties": 0
+      },
+      {
+        "validation_weights": [
+          30,
+          70
+        ],
+        "new_leads": [
+          "total_exact_log_loss",
+          "total_interval_score_80"
+        ],
+        "prior_leads": 16,
+        "ties": 0
+      },
+      {
+        "validation_weights": [
+          20,
+          80
+        ],
+        "new_leads": [
+          "total_exact_log_loss",
+          "total_interval_score_80",
+          "total_rmse"
+        ],
+        "prior_leads": 15,
+        "ties": 0
+      },
+      {
+        "validation_weights": [
+          10,
+          90
+        ],
+        "new_leads": [
+          "total_exact_log_loss",
+          "total_interval_score_80",
+          "total_rmse"
+        ],
+        "prior_leads": 15,
+        "ties": 0
+      }
+    ]
   }
 }
