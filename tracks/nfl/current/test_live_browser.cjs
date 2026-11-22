@@ -79,9 +79,13 @@ function verifyHostedHtml(observed, source, context) {
         observed.html_verification = canonical.status;
         console.log("Production HTML evidence", JSON.stringify(canonical));
       } else {
-        assert.equal(observed.sha256, asset.sha256, `${asset.path}: deployed bytes differ`);
-        assert.equal(observed.bytes, asset.bytes);
+        assert.equal(observed.sha256, digest(local), `${asset.path}: live and committed bytes differ`);
+        assert.equal(observed.bytes, local.length);
       }
+    }
+    console.log("Production asset evidence", JSON.stringify(report.assets));
+    for (const asset of receipt.verification.assets) {
+      const local = fs.readFileSync(path.join(root, asset.path));
       assert.equal(digest(local), asset.sha256, `${asset.path}: committed source differs from publication receipt`);
       assert.equal(local.length, asset.bytes);
     }
@@ -171,6 +175,29 @@ function verifyHostedHtml(observed, source, context) {
       assert.equal(await text("#pick-count"), "0 / 5");
     });
     await page.locator('.view-nav [data-view-link="performance"]').click();
+    await check(`${width}px: N165 annual scores, complete market denominators and issue timing`, async () => {
+      const newResults = page.locator("#n165-frontier");
+      assert.match(await newResults.innerText(), /204 quantile fits/);
+      assert.match(await newResults.innerText(), /58\.11%[\s\S]*148 \/ 150/);
+      for (const minutes of [60, 120]) {
+        const nominations = page.locator(`#n165-h${minutes}`);
+        await nominations.locator("summary").click();
+        assert.equal(await nominations.locator("tbody tr").count(), 24);
+        assert.match(await nominations.innerText(), /149 \/ 151/);
+      }
+      await page.locator("#n165-issues summary").click();
+      assert.match(await page.locator("#n165-issues").innerText(), /114 private forecasts/);
+      const coverage = page.locator("#n165-books");
+      await coverage.locator("summary").click();
+      assert.equal(await coverage.locator("tbody tr").count(), 99);
+      await page.locator("#n165-clock").selectOption("1");
+      await page.locator("#n165-product").selectOption("1");
+      await page.locator("#n165-scope").selectOption("1");
+      assert.equal(await text("#n165-coverage-caption"), "Point spread · 1 hour · 121 upcoming games");
+      const denominators = await coverage.locator("tbody td").allTextContents();
+      assert(denominators.every(value => value === "0 / 121"));
+      await noOverflow();
+    });
     await check(`${width}px: locked results preserve eligibility and matched venue populations`, async () => {
       const grading = page.locator("#n164-grading");
       const leaders = grading.locator(":scope > .comparison-table-wrap tbody tr");

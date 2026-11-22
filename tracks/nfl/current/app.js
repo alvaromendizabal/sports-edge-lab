@@ -143,6 +143,23 @@
     const horizon=perfHorizon(p);
     return `<article class="performance-card"><div class="metric-category"><span>${esc(/margin/.test(objective)?"POINT MARGIN":/total/.test(objective)?"GAME TOTAL":"WINNER MODEL")}</span><span>${esc(horizon)}</span></div><h3>${esc(name)}</h3><p class="performance-alias">${esc(aliasText)}${p.model_family?` · ${esc(p.model_family)}`:""}</p><div class="performance-main"><strong class="performance-value">${perfValue(p,v)}</strong><small>${esc(scoreLabel)}<br>${higher?"Higher is better":"Lower is better"}</small></div><table class="annual-table"><caption class="sr-only">${esc(name)} performance by season</caption><thead><tr><th scope="col">Season</th><th scope="col">Score</th><th scope="col">Games</th></tr></thead><tbody>${annuals.map(a=>`<tr><td>${a.year}${a.year==="2026"?"*":""}</td><td>${perfValue(p,a.value)}</td><td>${num(a.games)===null?"—":Number(a.games).toLocaleString("en-US")}</td></tr>`).join("")}</tbody></table><p class="performance-note">${esc(p.note || (num(p.test_2026 ?? p.season_2026)===null?"2026 regrade unavailable. Missing values remain explicit.":"*2026 is a saved exposed evaluation, separate from the 2024–2025 selection."))}</p><div class="performance-foot">${esc(statusLabel)}${p.cohort ? `<br>${esc(p.cohort)}` : ""}</div></article>`;
   }
+  function renderBookCoverage() {
+    const product = $("n165-product");
+    const clock = $("n165-clock");
+    const scope = $("n165-scope");
+    const column = Number(product.value) * 4 + Number(clock.value) * 2 + Number(scope.value);
+    const games = scope.value === "0" ? 151 : 121;
+    for (const row of document.querySelectorAll("#n165-books [data-coverage]")) {
+      const qualified = row.dataset.coverage.split(",")[column];
+      row.cells[1].textContent = qualified + " / " + games;
+    }
+    $("n165-coverage-caption").textContent = product.selectedOptions[0].text + " · " +
+      clock.selectedOptions[0].text + " · " + games + " " + scope.selectedOptions[0].text.toLowerCase() + " games";
+  }
+  for (const id of ["n165-product", "n165-clock", "n165-scope"]) {
+    $(id).addEventListener("change", renderBookCoverage);
+  }
+
   function filterLockedGrades() {
     const metric = $("n164-metric").value;
     const horizon = $("n164-horizon").value;
