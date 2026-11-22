@@ -1,0 +1,231 @@
+{
+  "schema": "sports-edge-lab.nfl.public-execution-status.v1",
+  "as_of": "2026-11-21T20:01:44-08:00",
+  "status": "HISTORICAL_VALIDATION_COMPLETE_FULL_V13_PENDING",
+  "owner": "NFL",
+  "new_owner_campaign_executions": 0,
+  "new_owner_scientific_fits": 0,
+  "historical_recovery": {
+    "producer": "R20",
+    "estimator_fit_states": 216,
+    "status": "HISTORICAL_VALIDATION_COMPLETE",
+    "registered_exports": 108,
+    "validation_rows": 123120,
+    "native_sample": {
+      "exports": 1,
+      "rows": 1140,
+      "warm_reuse": "PASS"
+    },
+    "full_validation_rescore_executed": true,
+    "postprocessing_policies_registered": 216,
+    "full_validation": {
+      "base_fits": 0,
+      "build_sha256": "08903a66a52eaa2b0dbe11b39b6b139e2ef20e5c39b8f6571097420fd3f7c3a8",
+      "current_forecasts": 0,
+      "deferred_tasks": [],
+      "expected_exports": 108,
+      "failed_tasks": {},
+      "manifest_sha256": "1ebeace9936d50f09e65989cc14c5cc5b90194c997e58dfdc9a797ca5071dc7f",
+      "peak_workers": 12,
+      "production_promotions": 0,
+      "score_rows": 2160,
+      "scores_sha256": "0a23a5e84f6cf98bb670870a7ac8c2ec259573f46efaf509b005e8d32d51473c",
+      "status": "COMPLETE_HISTORICAL_VALIDATION_ONLY",
+      "validation_rows": 123120,
+      "verified_exports": 108,
+      "warm_exports": 0,
+      "worker_cpu_seconds": 1.6430807200000002,
+      "metric_leaders_t120": [
+        {
+          "metric": "binary_accuracy",
+          "recipe": "add_qb_coach",
+          "family": "tensorflow",
+          "games_2024": 285,
+          "games_2025": 284,
+          "score_2024": 0.6421052631578947,
+          "score_2025": 0.5809859154929577,
+          "weighted_50_50": 0.6115455893254262
+        },
+        {
+          "metric": "binary_brier",
+          "recipe": "add_qb_coach",
+          "family": "tensorflow",
+          "games_2024": 285,
+          "games_2025": 284,
+          "score_2024": 0.22565708379950458,
+          "score_2025": 0.2448143348222192,
+          "weighted_50_50": 0.2352357093108619
+        },
+        {
+          "metric": "binary_log_loss",
+          "recipe": "add_qb_coach",
+          "family": "tensorflow",
+          "games_2024": 285,
+          "games_2025": 284,
+          "score_2024": 0.6420602569027053,
+          "score_2025": 0.6821459828529294,
+          "weighted_50_50": 0.6621031198778173
+        },
+        {
+          "metric": "margin_mae",
+          "recipe": "add_qb_coach",
+          "family": "tensorflow",
+          "games_2024": 285,
+          "games_2025": 285,
+          "score_2024": 10.461927718640695,
+          "score_2025": 10.840183537054811,
+          "weighted_50_50": 10.651055627847754
+        },
+        {
+          "metric": "margin_rmse",
+          "recipe": "omit_one_season_history",
+          "family": "torch",
+          "games_2024": 285,
+          "games_2025": 285,
+          "score_2024": 13.688341829147914,
+          "score_2025": 13.636664270994705,
+          "weighted_50_50": 13.66250305007131
+        },
+        {
+          "metric": "three_way_accuracy",
+          "recipe": "add_qb_coach",
+          "family": "tensorflow",
+          "games_2024": 285,
+          "games_2025": 285,
+          "score_2024": 0.6421052631578947,
+          "score_2025": 0.5789473684210527,
+          "weighted_50_50": 0.6105263157894737
+        },
+        {
+          "metric": "three_way_brier",
+          "recipe": "add_qb_coach",
+          "family": "tensorflow",
+          "games_2024": 285,
+          "games_2025": 285,
+          "score_2024": 0.4524999729261517,
+          "score_2025": 0.49323687559391005,
+          "weighted_50_50": 0.4728684242600309
+        },
+        {
+          "metric": "three_way_log_loss",
+          "recipe": "add_qb_coach",
+          "family": "tensorflow",
+          "games_2024": 285,
+          "games_2025": 285,
+          "score_2024": 0.6690369460243659,
+          "score_2025": 0.7193470442074577,
+          "weighted_50_50": 0.6941919951159118
+        },
+        {
+          "metric": "total_mae",
+          "recipe": "omit_coach",
+          "family": "torch",
+          "games_2024": 285,
+          "games_2025": 285,
+          "score_2024": 9.912218957151328,
+          "score_2025": 10.681328704120123,
+          "weighted_50_50": 10.296773830635725
+        },
+        {
+          "metric": "total_rmse",
+          "recipe": "omit_venue",
+          "family": "sklearn",
+          "games_2024": 285,
+          "games_2025": 285,
+          "score_2024": 12.953867789331342,
+          "score_2025": 13.542257565841288,
+          "weighted_50_50": 13.248062677586315
+        }
+      ],
+      "annual_weighting": "50/50",
+      "pool_wall_seconds": 1.4003066510013014
+    }
+  },
+  "prior_candidate_native_qualification": {
+    "candidate": "R24 47550",
+    "passed_phases": 18,
+    "total_phases": 24,
+    "incomplete_phases": [
+      "parquet",
+      "storage-benchmark",
+      "launch-preflight",
+      "frontier-postprocess",
+      "forest-extension",
+      "forest-extension-warm"
+    ],
+    "qualifies_changed_successor": false
+  },
+  "successor": {
+    "candidate": "R24P1 986ae0fdeb40",
+    "status": "NATIVE_PARQUET_AND_TARGETED_REGRESSION_PASS_FULL_RELEASE_INCOMPLETE",
+    "local_targeted_tests_passed": 31,
+    "native_targeted_tests_passed": 31,
+    "native_targeted_test_failures": 0,
+    "exact_package_native_certificate": null,
+    "full_current_game_adapter_complete": false,
+    "fix": "A bounded atomic progress record can be written during data-admission pauses; scientific output remains paced and guarded.",
+    "scope": "Same 31 regression cases passed locally and in the native Space; these are not 62 unique cases or full package qualification."
+  },
+  "resource_observation": {
+    "as_of": "2026-11-21T20:01:44-08:00",
+    "sample_seconds": 4.003128244999971,
+    "active_shared_reservations": 0,
+    "waiting_shared_controllers": 0,
+    "active_nfl_jobs_observed": 0,
+    "processes_signalled": 0,
+    "active_reservations_removed": 0
+  },
+  "publication_scope": {
+    "changes_forecast_values": false,
+    "changes_champions": false,
+    "refreshes_prices": false,
+    "refreshes_research": true,
+    "full_v13_completion": false
+  },
+  "remaining_gates": [
+    "Exact-package native package and actual-data qualification",
+    "Integrity-verified qualification and installed-delivery certificates",
+    "General current-game inference and source-clock/input certificates",
+    "Full immutable population reconciliation",
+    "Sustained scientific CPU acceptance when the conditional gate is eligible"
+  ],
+  "source_evidence_sha256": {
+    "attached_failure_log": "84b7b2d4f77835a3d55b5b9f22ca53f3100d041358ba2eaa73c92f4ca1d9cce7",
+    "native_parquet_receipt": "2059fba268c9dfcdd5435af97c5f2beb3f388c7ae6fd34fda7a046ee9a4ab67e",
+    "prior_bounded_space_inspection": "672a42992a214c7b559ab4ce1cb07ed2cefd25eebeef3be8bb5cd7d364edd76b"
+  },
+  "prior_failed_attempt": {
+    "candidate": "R24 06f4e7e81ba5",
+    "phase": "parquet",
+    "status": "QUALIFICATION_INCOMPLETE",
+    "wall_seconds": 157.63791809199756,
+    "completed_partitions": 0,
+    "scientific_fits": 0,
+    "failure": "Resource deferral also blocked the activation progress writer, masking clean shutdown with repeated pause exceptions."
+  },
+  "latest_attempt": {
+    "status": "COMPLETE_HISTORICAL_VALIDATION_ONLY",
+    "expected_exports": 108,
+    "verified_exports": 108,
+    "score_rows": 2160,
+    "validation_rows": 123120,
+    "peak_workers": 12,
+    "worker_cpu_seconds": 1.6430807200000002,
+    "base_fits": 0,
+    "current_forecasts": 0,
+    "production_promotions": 0,
+    "scores_sha256": "0a23a5e84f6cf98bb670870a7ac8c2ec259573f46efaf509b005e8d32d51473c"
+  },
+  "prior_parquet_qualification": {
+    "candidate": "R24P1 986ae0fdeb40",
+    "phase": "parquet",
+    "status": "PASS",
+    "wall_seconds": 567.9556511810006,
+    "rows_verified": 120719180,
+    "tables": [
+      "campaign_forecasts.csv",
+      "campaign_validation.csv"
+    ],
+    "verified_pointer_unchanged": true
+  }
+}
