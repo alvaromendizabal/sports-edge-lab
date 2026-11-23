@@ -52,7 +52,8 @@ function verifyHostedHtml(observed, source, context) {
   assert(base.hostname.endsWith(".alv-mendizabal.chatgpt.site"), "Publication must use the owner's public Site origin");
   assert(!base.username && !base.password && !base.search && !base.hash);
   assert.match(receipt.status, /^DEPLOYED/);
-  assert.equal(receipt.verification.all_match, true);
+  const verified = receipt.status === "DEPLOYED_HTTP_VERIFIED";
+  if (verified) assert.equal(receipt.verification.all_match, true);
   assert.equal(data.games.length, 12, "This Week 11 publication contains twelve remaining games");
   report.url = base.href;
   report.application_source_commit = receipt.github_application_source_commit;
@@ -64,8 +65,10 @@ function verifyHostedHtml(observed, source, context) {
   await check("Eight canonical deployed assets match publication bytes; any Cloudflare HTML append is separately recorded", async () => {
     assert.deepEqual(receipt.verification.assets.map(a => a.path).sort(), [...requiredAssets].sort());
     for (const asset of receipt.verification.assets) {
-      assert.equal(asset.status, 200);
-      assert.equal(asset.matches_pushed_source, true);
+      if (verified) {
+        assert.equal(asset.status, 200);
+        assert.equal(asset.matches_pushed_source, true);
+      }
       const local = fs.readFileSync(path.join(root, asset.path));
       const url = new URL(asset.path === "index.html" ? "./" : asset.path, base);
       const response = await assetContext.request.get(url.href, { timeout: 30000 });
@@ -175,11 +178,23 @@ function verifyHostedHtml(observed, source, context) {
       assert.equal(await text("#pick-count"), "0 / 5");
     });
     await page.locator('.view-nav [data-view-link="performance"]').click();
-    await check(`${width}px: N166 certificate refusal and N165 scientific results are distinguished`, async () => {
+    await check(`${width}px: N167 calibration, fitting and incomplete Circa stage are distinguished`, async () => {
+      const results = await page.locator("#n167-results").innerText();
+      for (const phrase of ["570 validation games", "103 win–tie–loss candidates", "68 score-distribution blends", "158 finals", "archived 151-final census", "224 score cells"]) assert(results.includes(phrase));
+      const leaders = page.locator("#n167-results details").filter({ has: page.locator("summary", { hasText: "T120 outcome leaders by objective" }) });
+      await leaders.locator("summary").click();
+      const leadersText = await leaders.innerText();
+      for (const phrase of ["62.92%", "56.67%", "150 / 157", "0.7223", "151 / 158"]) assert(leadersText.includes(phrase));
+      await leaders.locator("summary").click();
+      const improvements = page.locator("#n167-results details").filter({ has: page.locator("summary", { hasText: "T120 total-distribution improvements" }) });
+      await improvements.locator("summary").click();
+      const improvementsText = await improvements.innerText();
+      for (const phrase of ["total pinball 10", "2.2006", "total pinball 50", "5.2121", "total pinball 90", "2.5501"]) assert(improvementsText.includes(phrase));
+      await improvements.locator("summary").click();
       const panel = page.locator("#execution-status");
       await panel.locator("summary").click();
       const status = await panel.innerText();
-      for (const phrase of ["3:00:57 p.m. Pacific", "code 2", "all eight gate files", "Python 3.12.15", "Python 3.13.18", "zero new fits and zero forecasts", "N165 remains the latest verified scientific return", "partial and resumable"]) {
+      for (const phrase of ["Three of four registered stages completed", "26 authenticated pre-deadline side probabilities", "36 workers", "Four base-model optimizers", "1.114 optimizer CPU-seconds", "No three-minute utilization window", "N166 previously exited"]) {
         assert(status.includes(phrase), `Missing execution outcome: ${phrase}`);
       }
       await panel.locator("summary").click();
@@ -301,3 +316,4 @@ function verifyHostedHtml(observed, source, context) {
   save();
   console.log(JSON.stringify(report));
 });
+

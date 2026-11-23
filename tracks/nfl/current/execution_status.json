@@ -1,10 +1,10 @@
 {
   "schema": "sports-edge-lab.nfl.public-execution-status.v1",
-  "as_of": "2026-11-22T18:12:04.587540+00:00",
+  "as_of": "2026-11-22T23:48:03.026415+00:00",
   "status": "PARTIAL_RESUMABLE",
   "owner": "NFL",
-  "new_owner_campaign_executions": 3,
-  "new_owner_scientific_fits": 565,
+  "new_owner_campaign_executions": 4,
+  "new_owner_scientific_fits": 577,
   "historical_recovery": {
     "producer": "R20",
     "estimator_fit_states": 216,
@@ -183,10 +183,10 @@
     "full_v13_completion": false
   },
   "remaining_gates": [
-    "Authenticated changed-fixture inputs for the earlier locked portfolio",
-    "Original contest boards and complete pre-lock probabilities for unsupported weeks",
-    "Full 2026 eligible populations and whole-portfolio qualification",
-    "Sustained scientific CPU acceptance when an eligible window exists"
+    "Original Week 11 pre-lock side probabilities for the primary Circa policy",
+    "Verified pregame coverage for each candidate across the frozen target and horizon population",
+    "Historical injury, replacement and market-response sources with documented access and timing",
+    "Whole-owner performance when three minutes of eligible queued fit work are available"
   ],
   "source_evidence_sha256": {
     "attached_failure_log": "84b7b2d4f77835a3d55b5b9f22ca53f3100d041358ba2eaa73c92f4ca1d9cce7",
@@ -203,21 +203,27 @@
     "failure": "Resource deferral also blocked the activation progress writer, masking clean shutdown with repeated pause exceptions."
   },
   "latest_attempt": {
-    "release": "N166",
-    "user_launches": 1,
-    "started_at": "2026-11-22T15:00:57-08:00",
-    "phase": "certificate_validation",
-    "status": "REFUSED_BEFORE_RESEARCH",
-    "exit_code": 2,
-    "executable_hash_matches": true,
-    "gate_hashes_matched": 8,
-    "gate_hashes_expected": 8,
-    "certificate_python": "3.12.15",
-    "launch_python": "3.13.18",
-    "fitting_started": false,
-    "new_scientific_fits": 0,
-    "new_forecasts": 0,
-    "new_scientific_returns": 0
+    "release": "N167",
+    "scope": "NFL pregame continuation",
+    "started_at": "2026-11-22T15:47:29-08:00",
+    "published_at": "2026-11-22T23:48:03.026415+00:00",
+    "registered_stages": 4,
+    "completed_stages": 3,
+    "status": "PARTIAL_RESUMABLE",
+    "v13_status": "INCOMPLETE",
+    "remote_return_status": "VERIFIED",
+    "logical_return_sha256": "8399c898c7b0e2dec9a7ce3849ec7e8afc13882e1df55951810fc05d30227a84",
+    "invocation_wall_seconds": 33.720977090999895,
+    "scientific_stage_wall_seconds": 21.80886703399983,
+    "finalization_wall_seconds": 4.061945252999976,
+    "estimated_whole_space_compute_usd": 0.024073047542758193,
+    "actual_bill_claimed": false,
+    "requested_max_workers": 36,
+    "admitted_workers_in_parallel_science": 36,
+    "new_base_fits": 12,
+    "new_calibrator_fits": 64,
+    "new_original_issues": 0,
+    "production_promotions": 0
   },
   "prior_parquet_qualification": {
     "candidate": "R24P1 986ae0fdeb40",
@@ -2296,83 +2302,13 @@
     "general_current_forecast_adapter": "INCOMPLETE"
   },
   "verified_current_population": {
-    "source": {
-      "cache_hit": false,
-      "census_sha256": "929490c31c560ab28dbf4167c86be559abbfd832a0931851f1aff39f9fda9a61",
-      "checked_utc": "2026-11-22T17:26:20.303291+00:00",
-      "fresh_current_census": true,
-      "removed_unsettled_fixture_ids": [],
-      "source_blob": "6a3f96f8423e8d2e40aa9e9e1db85ca8cc0acc5c",
-      "source_commit": "94c35c2cc55a5afc0f6675bdd3dcf080e263c300",
-      "source_publication": "2026-11-22T17:15:18Z",
-      "source_sha256": "520800813a78e4510797f67e267c14caf9a0241184e05d7668ac05ac5307885c",
-      "status": "CURRENT_VERIFIED"
-    },
-    "completed": 151,
-    "scheduled": 121,
-    "retained_parent_eligibility": [
-      {
-        "horizon": 60,
-        "fixture": "completed",
-        "eligibility": "ARCHIVED_TIME_VALID_REPLAY",
-        "games": 149
-      },
-      {
-        "horizon": 60,
-        "fixture": "completed",
-        "eligibility": "CONDITIONAL_RECONSTRUCTION_ONLY",
-        "games": 2
-      },
-      {
-        "horizon": 60,
-        "fixture": "scheduled",
-        "eligibility": "CONDITIONAL_RECONSTRUCTION_ONLY",
-        "games": 92
-      },
-      {
-        "horizon": 60,
-        "fixture": "scheduled",
-        "eligibility": "GAP",
-        "games": 29
-      },
-      {
-        "horizon": 120,
-        "fixture": "completed",
-        "eligibility": "ARCHIVED_TIME_VALID_REPLAY",
-        "games": 149
-      },
-      {
-        "horizon": 120,
-        "fixture": "completed",
-        "eligibility": "CONDITIONAL_RECONSTRUCTION_ONLY",
-        "games": 2
-      },
-      {
-        "horizon": 120,
-        "fixture": "scheduled",
-        "eligibility": "CONDITIONAL_RECONSTRUCTION_ONLY",
-        "games": 92
-      },
-      {
-        "horizon": 120,
-        "fixture": "scheduled",
-        "eligibility": "GAP",
-        "games": 29
-      },
-      {
-        "horizon": 1440,
-        "fixture": "completed",
-        "eligibility": "GAP",
-        "games": 151
-      },
-      {
-        "horizon": 1440,
-        "fixture": "scheduled",
-        "eligibility": "GAP",
-        "games": 121
-      }
-    ],
-    "original_issues_this_preparation": 0
+    "scope": "N167 blend and outcome grading census",
+    "as_of": "2026-11-22T23:47:43.960287+00:00",
+    "completed": 158,
+    "decisive": 157,
+    "registered": 272,
+    "ties": 1,
+    "unsettled": 114
   },
   "frozen_market_coverage": {
     "scope": "Pre-existing authenticated R20 market coverage; retrospective policy recalibration did not admit additional market rows.",
@@ -12662,6 +12598,46 @@
     "actual_bill_verified": false
   },
   "latest_verified_scientific_return": {
+    "release": "N167",
+    "scope": "NFL pregame continuation",
+    "started_at": "2026-11-22T15:47:29-08:00",
+    "published_at": "2026-11-22T23:48:03.026415+00:00",
+    "registered_stages": 4,
+    "completed_stages": 3,
+    "status": "PARTIAL_RESUMABLE",
+    "v13_status": "INCOMPLETE",
+    "remote_return_status": "VERIFIED",
+    "logical_return_sha256": "8399c898c7b0e2dec9a7ce3849ec7e8afc13882e1df55951810fc05d30227a84",
+    "invocation_wall_seconds": 33.720977090999895,
+    "scientific_stage_wall_seconds": 21.80886703399983,
+    "finalization_wall_seconds": 4.061945252999976,
+    "estimated_whole_space_compute_usd": 0.024073047542758193,
+    "actual_bill_claimed": false,
+    "requested_max_workers": 36,
+    "admitted_workers_in_parallel_science": 36,
+    "new_base_fits": 12,
+    "new_calibrator_fits": 64,
+    "new_original_issues": 0,
+    "production_promotions": 0
+  },
+  "n166_failed_owner_attempt": {
+    "release": "N166",
+    "user_launches": 1,
+    "started_at": "2026-11-22T15:00:57-08:00",
+    "phase": "certificate_validation",
+    "status": "REFUSED_BEFORE_RESEARCH",
+    "exit_code": 2,
+    "executable_hash_matches": true,
+    "gate_hashes_matched": 8,
+    "gate_hashes_expected": 8,
+    "certificate_python": "3.12.15",
+    "launch_python": "3.13.18",
+    "fitting_started": false,
+    "new_scientific_fits": 0,
+    "new_forecasts": 0,
+    "new_scientific_returns": 0
+  },
+  "n165_verified_return_summary": {
     "scope": "N165 pregame research",
     "status": "PARTIAL_RESUMABLE",
     "v13_status": "INCOMPLETE",
@@ -12673,5 +12649,379 @@
     "new_schedule_only_fits": 1,
     "private_prospective_issues": 114,
     "production_promotions": 0
+  },
+  "n164_verified_population": {
+    "source": {
+      "cache_hit": false,
+      "census_sha256": "929490c31c560ab28dbf4167c86be559abbfd832a0931851f1aff39f9fda9a61",
+      "checked_utc": "2026-11-22T17:26:20.303291+00:00",
+      "fresh_current_census": true,
+      "removed_unsettled_fixture_ids": [],
+      "source_blob": "6a3f96f8423e8d2e40aa9e9e1db85ca8cc0acc5c",
+      "source_commit": "94c35c2cc55a5afc0f6675bdd3dcf080e263c300",
+      "source_publication": "2026-11-22T17:15:18Z",
+      "source_sha256": "520800813a78e4510797f67e267c14caf9a0241184e05d7668ac05ac5307885c",
+      "status": "CURRENT_VERIFIED"
+    },
+    "completed": 151,
+    "scheduled": 121,
+    "retained_parent_eligibility": [
+      {
+        "horizon": 60,
+        "fixture": "completed",
+        "eligibility": "ARCHIVED_TIME_VALID_REPLAY",
+        "games": 149
+      },
+      {
+        "horizon": 60,
+        "fixture": "completed",
+        "eligibility": "CONDITIONAL_RECONSTRUCTION_ONLY",
+        "games": 2
+      },
+      {
+        "horizon": 60,
+        "fixture": "scheduled",
+        "eligibility": "CONDITIONAL_RECONSTRUCTION_ONLY",
+        "games": 92
+      },
+      {
+        "horizon": 60,
+        "fixture": "scheduled",
+        "eligibility": "GAP",
+        "games": 29
+      },
+      {
+        "horizon": 120,
+        "fixture": "completed",
+        "eligibility": "ARCHIVED_TIME_VALID_REPLAY",
+        "games": 149
+      },
+      {
+        "horizon": 120,
+        "fixture": "completed",
+        "eligibility": "CONDITIONAL_RECONSTRUCTION_ONLY",
+        "games": 2
+      },
+      {
+        "horizon": 120,
+        "fixture": "scheduled",
+        "eligibility": "CONDITIONAL_RECONSTRUCTION_ONLY",
+        "games": 92
+      },
+      {
+        "horizon": 120,
+        "fixture": "scheduled",
+        "eligibility": "GAP",
+        "games": 29
+      },
+      {
+        "horizon": 1440,
+        "fixture": "completed",
+        "eligibility": "GAP",
+        "games": 151
+      },
+      {
+        "horizon": 1440,
+        "fixture": "scheduled",
+        "eligibility": "GAP",
+        "games": 121
+      }
+    ],
+    "original_issues_this_preparation": 0
+  },
+  "owner_tally_scope": "N162, N164, N165 and N167 reached registered science. N166 exited before science. The base-estimator count excludes calibrator and qualification fits.",
+  "n167_research": {
+    "clock": {
+      "status": "COMPLETE",
+      "source_snapshot": "N164 authenticated fixture census",
+      "completed_games": 151,
+      "repaired_forecast_cells": 104,
+      "new_metric_game_scores": 224,
+      "locked_objective_rows": 112,
+      "full_denominator_rows": 112,
+      "original_issues": 0
+    },
+    "blends": {
+      "status": "COMPLETE",
+      "base_heads": 204,
+      "new_base_fits": 0,
+      "new_calibrator_fits": 64,
+      "reused_calibrators": 4,
+      "verified_candidate_groups": 68,
+      "concurrent_calibrations": 4,
+      "calibrator_cpu_seconds": 0.26859381099999946,
+      "validation_games": 570,
+      "validation_registry": {
+        "candidates": 68,
+        "improved_primary": 6,
+        "pooled_comparisons": 240,
+        "rank_rows": 16320
+      }
+    },
+    "outcomes": {
+      "status": "COMPLETE",
+      "new_fits": 12,
+      "reused_fits": 39,
+      "verified_fits": 51,
+      "validation_games": 570,
+      "validation": {
+        "leader_rows": 132,
+        "new_candidates": 103,
+        "nominations": 14,
+        "rank_rows": 8378
+      },
+      "peak_overlapping_optimizers": 4,
+      "optimizer_cpu_seconds": 1.114460351,
+      "occupancy_gate": {
+        "eligible_windows": 0,
+        "first_pass": [],
+        "optimizer_cpu_credit": "complete intervals fully inside each window",
+        "passing_windows": 0,
+        "status": "NO_ELIGIBLE_180S_WINDOW"
+      }
+    },
+    "census": {
+      "completed": 158,
+      "decisive": 157,
+      "registered": 272,
+      "ties": 1,
+      "unsettled": 114
+    },
+    "blend_grading": {
+      "forecast_rows": 5440,
+      "new_replay_rows": 40,
+      "original_issues": 0,
+      "test_metric_rows": 56,
+      "full_coverage_metrics": 0
+    },
+    "outcome_grading": {
+      "metric_rows": 24,
+      "per_candidate_replay_rows": 2114,
+      "original_issues": 0,
+      "coverage_gaps": {
+        "MISSING_PHYSICAL_INPUT_ASOF_CERTIFICATE": 1316,
+        "UNIMPLEMENTED_CHANGED_CLOCK_FROZEN_VINTAGE_POLICY": 42,
+        "UNIMPLEMENTED_NEW_CLOCK_PROJECTION_FOR_FROZEN_UNCLOCKED_ROW": 336
+      }
+    },
+    "circa": {
+      "status": "PARTIAL_RESUMABLE",
+      "official_boards_verified": 1,
+      "official_sides": 26,
+      "primary_policy_status": "BLOCKED",
+      "primary_policy_reason": "MISSING_AUTHENTICATED_PRELOCK_WEEK11_PRIMARY_POLICY_SIDE_PROBABILITIES",
+      "new_primary_selections": 0,
+      "current_cards_issued": 0,
+      "owner_submissions": 0
+    },
+    "prior_2026_exposure": true,
+    "production_promotions": 0,
+    "validation_selected_results": {
+      "horizon_minutes": 120,
+      "primary_validation_weights": [
+        50,
+        50
+      ],
+      "direct_comparison": [
+        {
+          "metric": "binary_accuracy",
+          "candidate": "exclude one-season history · LightGBM · raw probabilities",
+          "validation_2024": 0.6385964912280702,
+          "validation_2025": 0.6197183098591549,
+          "n_2024": 285,
+          "n_2025": 284,
+          "primary": 0.6291574005436125,
+          "test_subset_score": 0.5666666666666667,
+          "test_graded": 150,
+          "test_eligible": 157
+        },
+        {
+          "metric": "binary_accuracy",
+          "candidate": "exclude one-season history · LightGBM · temperature calibration",
+          "validation_2024": 0.6385964912280702,
+          "validation_2025": 0.6197183098591549,
+          "n_2024": 285,
+          "n_2025": 284,
+          "primary": 0.6291574005436125,
+          "test_subset_score": 0.5666666666666667,
+          "test_graded": 150,
+          "test_eligible": 157
+        },
+        {
+          "metric": "binary_brier",
+          "candidate": "exclude one-season history · LightGBM quantiles",
+          "validation_2024": 0.22617903589399366,
+          "validation_2025": 0.23149281090646318,
+          "n_2024": 285,
+          "n_2025": 284,
+          "primary": 0.22883592340022843,
+          "test_subset_score": null,
+          "test_graded": null,
+          "test_eligible": null
+        },
+        {
+          "metric": "binary_log_loss",
+          "candidate": "exclude one-season history · LightGBM quantiles",
+          "validation_2024": 0.64430066742575,
+          "validation_2025": 0.6551859296284179,
+          "n_2024": 285,
+          "n_2025": 284,
+          "primary": 0.6497432985270839,
+          "test_subset_score": null,
+          "test_graded": null,
+          "test_eligible": null
+        },
+        {
+          "metric": "three_way_accuracy",
+          "candidate": "joint inputs without form · LightGBM · raw probabilities",
+          "validation_2024": 0.6491228070175439,
+          "validation_2025": 0.6070175438596491,
+          "n_2024": 285,
+          "n_2025": 285,
+          "primary": 0.6280701754385964,
+          "test_subset_score": 0.5364238410596026,
+          "test_graded": 151,
+          "test_eligible": 158
+        },
+        {
+          "metric": "three_way_accuracy",
+          "candidate": "joint inputs without form · LightGBM · temperature calibration",
+          "validation_2024": 0.6491228070175439,
+          "validation_2025": 0.6070175438596491,
+          "n_2024": 285,
+          "n_2025": 285,
+          "primary": 0.6280701754385964,
+          "test_subset_score": 0.5364238410596026,
+          "test_graded": 151,
+          "test_eligible": 158
+        },
+        {
+          "metric": "three_way_accuracy",
+          "candidate": "exclude one-season history · LightGBM · raw probabilities",
+          "validation_2024": 0.6385964912280702,
+          "validation_2025": 0.6175438596491228,
+          "n_2024": 285,
+          "n_2025": 285,
+          "primary": 0.6280701754385964,
+          "test_subset_score": 0.5629139072847682,
+          "test_graded": 151,
+          "test_eligible": 158
+        },
+        {
+          "metric": "three_way_accuracy",
+          "candidate": "exclude one-season history · LightGBM · temperature calibration",
+          "validation_2024": 0.6385964912280702,
+          "validation_2025": 0.6175438596491228,
+          "n_2024": 285,
+          "n_2025": 285,
+          "primary": 0.6280701754385964,
+          "test_subset_score": 0.5629139072847682,
+          "test_graded": 151,
+          "test_eligible": 158
+        },
+        {
+          "metric": "three_way_brier",
+          "candidate": "include prior rest · LightGBM · temperature calibration",
+          "validation_2024": 0.4435859126798404,
+          "validation_2025": 0.47583474949216675,
+          "n_2024": 285,
+          "n_2025": 285,
+          "primary": 0.4597103310860035,
+          "test_subset_score": 0.4967556737458876,
+          "test_graded": 151,
+          "test_eligible": 158
+        },
+        {
+          "metric": "three_way_log_loss",
+          "candidate": "include prior rest · LightGBM · temperature calibration",
+          "validation_2024": 0.6405899651664732,
+          "validation_2025": 0.6889550574606004,
+          "n_2024": 285,
+          "n_2025": 285,
+          "primary": 0.6647725113135369,
+          "test_subset_score": 0.7222974896162673,
+          "test_graded": 151,
+          "test_eligible": 158
+        },
+        {
+          "metric": "tie_brier",
+          "candidate": "Training-frequency baseline",
+          "validation_2024": 2.2784103530966448e-05,
+          "validation_2025": 0.0034980594039538617,
+          "n_2024": 285,
+          "n_2025": 285,
+          "primary": 0.001760421753742414,
+          "test_subset_score": 0.0065820785447264964,
+          "test_graded": 151,
+          "test_eligible": 158
+        },
+        {
+          "metric": "tie_log_loss",
+          "candidate": "exclude three-season history · LightGBM · raw probabilities",
+          "validation_2024": 0.00331118241719388,
+          "validation_2025": 0.024588799265819167,
+          "n_2024": 285,
+          "n_2025": 285,
+          "primary": 0.013949990841506523,
+          "test_subset_score": 0.04497556933628931,
+          "test_graded": 151,
+          "test_eligible": 158
+        }
+      ],
+      "blend_improvements": [
+        {
+          "metric": "total_pinball_10",
+          "candidate": "exclude three-season history · weighted quantile blend with conformal correction",
+          "validation_2024": 2.1590710729633575,
+          "validation_2025": 2.2422243606623486,
+          "n_2024": 285,
+          "n_2025": 285,
+          "primary": 2.200647716812853,
+          "test_subset_score": 2.292747538840567,
+          "test_graded": 151,
+          "test_eligible": 158,
+          "previous_primary": 2.216596011130099
+        },
+        {
+          "metric": "total_pinball_50",
+          "candidate": "exclude rest · weighted quantile blend with conformal correction",
+          "validation_2024": 5.067980842069256,
+          "validation_2025": 5.356205150797117,
+          "n_2024": 285,
+          "n_2025": 285,
+          "primary": 5.212092996433187,
+          "test_subset_score": 5.670446322020797,
+          "test_graded": 151,
+          "test_eligible": 158,
+          "previous_primary": 5.231425186776843
+        },
+        {
+          "metric": "total_pinball_50",
+          "candidate": "exclude rest · weighted quantile blend with offset",
+          "validation_2024": 5.067980842069256,
+          "validation_2025": 5.356205150797117,
+          "n_2024": 285,
+          "n_2025": 285,
+          "primary": 5.212092996433187,
+          "test_subset_score": 5.670446322020797,
+          "test_graded": 151,
+          "test_eligible": 158,
+          "previous_primary": 5.231425186776843
+        },
+        {
+          "metric": "total_pinball_90",
+          "candidate": "include history shape · weighted quantile blend with conformal correction",
+          "validation_2024": 2.5612521477698262,
+          "validation_2025": 2.538927394791003,
+          "n_2024": 285,
+          "n_2025": 285,
+          "primary": 2.5500897712804145,
+          "test_subset_score": 2.60980569219832,
+          "test_graded": 151,
+          "test_eligible": 158,
+          "previous_primary": 2.5540225584465275
+        }
+      ]
+    }
   }
 }
