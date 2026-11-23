@@ -228,10 +228,21 @@ function verifyHostedHtml(observed, source, context) {
         assert((await section.innerText()).includes(phrase), key + " missing " + phrase);
         await section.locator("summary").click();
       }
+      await noOverflow();
+    });
+    await check(`${width}px: N170 form and source ranks, historical report gaps and owner completion`, async () => {
+      const results = page.locator("#n170-results");
+      for (const phrase of ["66.32%", "62.42% on 157 of 160", "792 new fits", "4,057 of 12,240", "50 of 1,088", "24 points on 54 graded picks out of 55"]) assert((await results.innerText()).includes(phrase),phrase);
+      for (const [key, size] of [["form-120",12],["form-60",12],["sources-120",10],["sources-60",14]]) {
+        const section = page.locator(`#n170-${key}`);
+        await section.locator("summary").click();
+        assert.equal(await section.locator("tbody tr").count(),size);
+        await section.locator("summary").click();
+      }
       const panel = page.locator("#execution-status");
       await panel.locator("summary").click();
-      const status = await panel.innerText();
-      for (const phrase of ["Three of four registered stages completed", "777 newly computed", "23 simultaneous scoring workers", "58.07 seconds", "$0.0415"]) assert(status.includes(phrase));
+      const body = await panel.innerText();
+      for (const phrase of ["Four of four registered stages completed","218 optimizer PIDs","15 simultaneous optimizers","$0.0817"]) assert(body.includes(phrase));
       await panel.locator("summary").click();
       await noOverflow();
     });
