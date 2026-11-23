@@ -181,6 +181,16 @@ function verifyHostedHtml(observed, source, context) {
     await check(`${width}px: N167 calibration, fitting and incomplete Circa stage are distinguished`, async () => {
       const results = await page.locator("#n167-results").innerText();
       for (const phrase of ["570 validation games", "103 win–tie–loss candidates", "68 score-distribution blends", "158 finals", "archived 151-final census", "224 score cells"]) assert(results.includes(phrase));
+      const leaders = page.locator("#n167-results details").filter({ has: page.locator("summary", { hasText: "T120 outcome leaders by objective" }) });
+      await leaders.locator("summary").click();
+      const leadersText = await leaders.innerText();
+      for (const phrase of ["62.92%", "56.67%", "150 / 157", "0.7223", "151 / 158"]) assert(leadersText.includes(phrase));
+      await leaders.locator("summary").click();
+      const improvements = page.locator("#n167-results details").filter({ has: page.locator("summary", { hasText: "T120 total-distribution improvements" }) });
+      await improvements.locator("summary").click();
+      const improvementsText = await improvements.innerText();
+      for (const phrase of ["total pinball 10", "2.2006", "total pinball 50", "5.2121", "total pinball 90", "2.5501"]) assert(improvementsText.includes(phrase));
+      await improvements.locator("summary").click();
       const panel = page.locator("#execution-status");
       await panel.locator("summary").click();
       const status = await panel.innerText();
