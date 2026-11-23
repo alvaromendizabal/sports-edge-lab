@@ -1,31 +1,31 @@
 {
-  "version": 22,
+  "version": 23,
   "status": "DEPLOYED_HTTP_VERIFIED",
   "public_url": "https://sports-edge-lab-nfl-current.alv-mendizabal.chatgpt.site/",
-  "deployed_at": "2026-11-23T19:49:20.718866Z",
-  "site_source_commit": "c05eef04a4be080e1ba017a61cb87227caf14dcd",
-  "github_application_source_commit": "afc1581d3892fa5a24b84d3a09ae38052c24132a",
+  "deployed_at": "2026-11-23T20:42:40.545394+00:00",
+  "site_source_commit": "0bf7009fd738d434c8022daf79cbfec33f79fbac",
+  "github_application_source_commit": "6c0a37938e3fd121499330008cd14d34065d7ee6",
   "audience": "public",
-  "archive_sha256": "6c69db479e056332d0d2aee7f62731d0842e0803308ccdc4124d634100f01034",
+  "archive_sha256": "8d39298366e162f197b6048e3fe9f3ca18974b20f06bad00f73708b39fdcd388",
   "forecast_inputs_refreshed": false,
-  "new_fits": 0,
+  "new_fits": 272,
   "new_distribution_calibration_pairs": 0,
   "new_schedule_calibrators": 0,
   "campaign_launches": 1,
   "notes": [
-    "N174 retained 10,129 previous grades and recovered 107, producing 10,236 of 10,362 eligible game-level grades. Twelve of 64 objectives now have full 2026 scores. The owner executed 192 new blend weight fits and 192 stability analyses, reused 24 checkpoints on each branch and made zero production promotions."
+    "N175 fitted 272 new conditional forests and reused 24 fit checkpoints. One Extra Trees margin model won exact-score log loss at both forecast horizons. Each score in the 64 primary objectives reconciles to the graded game rows. The selected winners scored 10,260 of 10,362 eligible 2026 rows. Twelve objectives had complete scores. No original issues or production promotions were recorded."
   ],
   "verification": {
     "base_url": "https://sports-edge-lab-nfl-current.alv-mendizabal.chatgpt.site/",
     "assets": [
       {
         "path": "index.html",
-        "bytes": 197828,
-        "sha256": "4a0687dd908cbf58e07e1917143fc194572abfb0ab3f6cba8eaf2feda7bcd510",
+        "bytes": 229463,
+        "sha256": "80bf439ad4567d16edc600195785b202c14524c8fd03d0cca5a7502fb1453aba",
         "url": "https://sports-edge-lab-nfl-current.alv-mendizabal.chatgpt.site/",
         "status": 200,
-        "received_sha256": "e09944fb868e7e57a9d19a92892162935ae8f1514382b7e931154ae89f5fbf69",
-        "received_bytes": 198942,
+        "received_sha256": "064af21d71aa311e9bcd7ac4d11f7bb0be33604b490641f961d9040e9744ebd1",
+        "received_bytes": 230577,
         "matches_pushed_source": true,
         "verification": "ORIGINAL_BYTES_EQUAL_WITH_OBSERVED_CLOUDFLARE_APPEND"
       },
@@ -97,21 +97,21 @@
       },
       {
         "path": "execution_status.json",
-        "bytes": 1119927,
-        "sha256": "6ce7ce08f5deb4b7734586b1fec82abe7cf26b07e76aafab8cba2edafc76c7ee",
+        "bytes": 1310529,
+        "sha256": "d9f0a36f97ab14403264e018a500f4bc53d536052ca42aa506bab5f76201db74",
         "url": "https://sports-edge-lab-nfl-current.alv-mendizabal.chatgpt.site/execution_status.json",
         "status": 200,
-        "received_sha256": "6ce7ce08f5deb4b7734586b1fec82abe7cf26b07e76aafab8cba2edafc76c7ee",
-        "received_bytes": 1119927,
+        "received_sha256": "d9f0a36f97ab14403264e018a500f4bc53d536052ca42aa506bab5f76201db74",
+        "received_bytes": 1310529,
         "matches_pushed_source": true,
         "verification": "EXACT_BYTE_MATCH"
       }
     ],
     "method": "Canonical deployed asset equality, with any hosting-only HTML appendix verified separately",
     "all_match": true,
-    "checked_at": "2026-11-23T19:53:14.289Z",
-    "evidence_url": "https://github.com/alvaromendizabal/sports-edge-lab/actions/runs/45253022778/job/137967415901"
+    "checked_at": "2026-11-23T20:47:10.388Z",
+    "evidence_url": "https://github.com/alvaromendizabal/sports-edge-lab/actions/runs/45262246887/job/137999795313"
   },
-  "new_pretest_blend_fits": 192,
-  "new_stability_analyses": 192
+  "new_pretest_blend_fits": 0,
+  "new_stability_analyses": 0
 }
