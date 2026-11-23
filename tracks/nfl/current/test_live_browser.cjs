@@ -203,10 +203,22 @@ function verifyHostedHtml(observed, source, context) {
         assert((await section.innerText()).includes("150 / 158"));
         await section.locator("summary").click();
       }
+      await noOverflow();
+    });
+    await check(`${width}px: N169 distribution and score-form metrics, separate market overlaps and owner disposition`, async () => {
+      const results = page.locator("#n169-results");
+      for (const phrase of ["46.8298", "47.2842", "2,352 residual distributions", "441 private forecasts across 110 games"]) assert((await results.innerText()).includes(phrase));
+      for (const [key, rows, phrase] of [["distributions-120", 11, "151 / 161"], ["distributions-60", 11, "46.4667"], ["causal-60", 12, "157 / 160"], ["causal-120", 12, "157 / 160"], ["markets", 12, "141 / 159"]]) {
+        const section = page.locator(`#n169-${key}`);
+        await section.locator("summary").click();
+        assert.equal(await section.locator("tbody tr").count(), rows);
+        assert((await section.innerText()).includes(phrase), key + " missing " + phrase);
+        await section.locator("summary").click();
+      }
       const panel = page.locator("#execution-status");
       await panel.locator("summary").click();
       const status = await panel.innerText();
-      for (const phrase of ["Two of three registered stages completed", "315 new and 21 reused", "26 authenticated pre-deadline side probabilities", "24 simultaneous optimizers", "163.94 optimizer CPU-seconds", "No three-minute fit window", "$0.0518"]) assert(status.includes(phrase));
+      for (const phrase of ["Three of four registered stages completed", "777 newly computed", "23 simultaneous scoring workers", "58.07 seconds", "$0.0415"]) assert(status.includes(phrase));
       await panel.locator("summary").click();
       await noOverflow();
     });
