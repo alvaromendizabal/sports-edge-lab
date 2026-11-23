@@ -1,117 +1,64 @@
 {
-  "version": 13,
-  "status": "DEPLOYED_HTTP_VERIFIED",
+  "version": 14,
+  "status": "DEPLOYED_PENDING_HTTP_VERIFICATION",
   "public_url": "https://sports-edge-lab-nfl-current.alv-mendizabal.chatgpt.site/",
-  "deployed_at": "2026-11-22T23:16:11.750271+00:00",
-  "site_source_commit": "2ef4338f41cc1d4f495965e6e1e9e626c772ddb2",
-  "github_application_source_commit": "3a06f30c30f20cd989999a9331c50f857b6b36b4",
+  "deployed_at": "2026-11-23T00:00:24.007279+00:00",
+  "site_source_commit": "0ab216772578aafa30f4a19788c4af026fa23633",
+  "github_application_source_commit": "eb8ff4e8098c36144640575706496047d6a4794b",
   "audience": "public",
-  "archive_sha256": "c5723f77f8376003c4fc217beadf440a9a8f60fe366ee4a3e918233bc681b51a",
+  "archive_sha256": "88e1f8dade876f86bb8626f16c8913e337534da45306d7c81a77fcd679371076",
   "forecast_inputs_refreshed": false,
-  "new_fits": 0,
-  "campaign_launches": 0,
-  "old_public_url": "https://sports-edge-lab-nfl.alv-mendizabal.chatgpt.site/",
-  "old_public_url_modified": false,
+  "new_fits": 12,
+  "new_calibrator_fits": 64,
+  "campaign_launches": 1,
   "notes": [
-    "Execution-status update for an N166 owner invocation that stopped during qualification. The November 22 N165 performance timestamp and population denominators were preserved."
+    "N167 partial owner research return. The existing public forecast cards retain their original issue times. The research tables contain aggregate, retrospective coverage."
   ],
   "verification": {
-    "checked_at": "2026-11-22T23:17:23.4082641Z",
     "base_url": "https://sports-edge-lab-nfl-current.alv-mendizabal.chatgpt.site/",
     "assets": [
       {
         "path": "index.html",
-        "url": "https://sports-edge-lab-nfl-current.alv-mendizabal.chatgpt.site/",
-        "status": 200,
-        "bytes": 77756,
-        "sha256": "286d5df0b30273c0493ea25ba8c9871af7167cea8491c599fd4b32f22c49ca5d",
-        "received_sha256": "3799d7b7779b62da517d3f28445eca2bcceec9a8bbdde173dd4edc5c88522516",
-        "received_bytes": 78870,
-        "matches_pushed_source": true,
-        "verification": "ORIGINAL_BYTES_EQUAL_WITH_OBSERVED_CLOUDFLARE_APPEND",
-        "hosting_fragment_bytes": 1114,
-        "hosting_fragment_offset": 77740
+        "bytes": 83769,
+        "sha256": "a9699b855def3254c561c548b5916cabdc82bb7fa14cd26d65c5b866e8b60660"
       },
       {
         "path": "app.js",
-        "url": "https://sports-edge-lab-nfl-current.alv-mendizabal.chatgpt.site/app.js",
-        "status": 200,
         "bytes": 47150,
-        "sha256": "493376db6674be2e3b1baca34c2c1ed536a5e6fa7ed0f1f7ab9387f08a3707e3",
-        "received_sha256": "493376db6674be2e3b1baca34c2c1ed536a5e6fa7ed0f1f7ab9387f08a3707e3",
-        "received_bytes": 47150,
-        "matches_pushed_source": true,
-        "verification": "EXACT_BYTES"
+        "sha256": "493376db6674be2e3b1baca34c2c1ed536a5e6fa7ed0f1f7ab9387f08a3707e3"
       },
       {
         "path": "styles.css",
-        "url": "https://sports-edge-lab-nfl-current.alv-mendizabal.chatgpt.site/styles.css",
-        "status": 200,
         "bytes": 40562,
-        "sha256": "b5d96c7ab1ee471e50dd804dbf9e080e9ee2d66f5b09d901a73d8cd356670920",
-        "received_sha256": "b5d96c7ab1ee471e50dd804dbf9e080e9ee2d66f5b09d901a73d8cd356670920",
-        "received_bytes": 40562,
-        "matches_pushed_source": true,
-        "verification": "EXACT_BYTES"
+        "sha256": "b5d96c7ab1ee471e50dd804dbf9e080e9ee2d66f5b09d901a73d8cd356670920"
       },
       {
         "path": "data.json",
-        "url": "https://sports-edge-lab-nfl-current.alv-mendizabal.chatgpt.site/data.json",
-        "status": 200,
         "bytes": 97247,
-        "sha256": "5815e9c27bdca24dae4124daea44d056bae8973deca0f261afde9892f5e12cb7",
-        "received_sha256": "5815e9c27bdca24dae4124daea44d056bae8973deca0f261afde9892f5e12cb7",
-        "received_bytes": 97247,
-        "matches_pushed_source": true,
-        "verification": "EXACT_BYTES"
-      },
-      {
-        "path": "execution_status.json",
-        "url": "https://sports-edge-lab-nfl-current.alv-mendizabal.chatgpt.site/execution_status.json",
-        "status": 200,
-        "bytes": 376917,
-        "sha256": "711f048b09102fb9d59463b5970071a0361bc824e9bd682168f1deb1c4348735",
-        "received_sha256": "711f048b09102fb9d59463b5970071a0361bc824e9bd682168f1deb1c4348735",
-        "received_bytes": 376917,
-        "matches_pushed_source": true,
-        "verification": "EXACT_BYTES"
+        "sha256": "5815e9c27bdca24dae4124daea44d056bae8973deca0f261afde9892f5e12cb7"
       },
       {
         "path": "evidence.json",
-        "url": "https://sports-edge-lab-nfl-current.alv-mendizabal.chatgpt.site/evidence.json",
-        "status": 200,
         "bytes": 2363,
-        "sha256": "66a149027c8a84d871cf8824ba33489d2fc2270f41947e8b0504b3d205dde2e7",
-        "received_sha256": "66a149027c8a84d871cf8824ba33489d2fc2270f41947e8b0504b3d205dde2e7",
-        "received_bytes": 2363,
-        "matches_pushed_source": true,
-        "verification": "EXACT_BYTES"
-      },
-      {
-        "path": "newest_model_comparison.json",
-        "url": "https://sports-edge-lab-nfl-current.alv-mendizabal.chatgpt.site/newest_model_comparison.json",
-        "status": 200,
-        "bytes": 8860,
-        "sha256": "97f501f0cd40bde3e54cc80821744558602db916a9f883cc93480777fa66a442",
-        "received_sha256": "97f501f0cd40bde3e54cc80821744558602db916a9f883cc93480777fa66a442",
-        "received_bytes": 8860,
-        "matches_pushed_source": true,
-        "verification": "EXACT_BYTES"
+        "sha256": "66a149027c8a84d871cf8824ba33489d2fc2270f41947e8b0504b3d205dde2e7"
       },
       {
         "path": "circa_evidence.json",
-        "url": "https://sports-edge-lab-nfl-current.alv-mendizabal.chatgpt.site/circa_evidence.json",
-        "status": 200,
         "bytes": 29196,
-        "sha256": "c289471d8d45bde905b2c037bd314f93368f8595ba361c1e933067ccaaf702dc",
-        "received_sha256": "c289471d8d45bde905b2c037bd314f93368f8595ba361c1e933067ccaaf702dc",
-        "received_bytes": 29196,
-        "matches_pushed_source": true,
-        "verification": "EXACT_BYTES"
+        "sha256": "c289471d8d45bde905b2c037bd314f93368f8595ba361c1e933067ccaaf702dc"
+      },
+      {
+        "path": "newest_model_comparison.json",
+        "bytes": 8860,
+        "sha256": "97f501f0cd40bde3e54cc80821744558602db916a9f883cc93480777fa66a442"
+      },
+      {
+        "path": "execution_status.json",
+        "bytes": 389344,
+        "sha256": "942e39c3c9eba3c281299bdfd6343209a6deac8436830c27116df2b7d65859b1"
       }
     ],
-    "method": "Anonymous HTTPS asset comparison with a source identity check for any hosting-provider HTML append.",
-    "all_match": true,
-    "evidence_url": "https://github.com/alvaromendizabal/sports-edge-lab/actions/runs/45082308320/job/137392972037"
+    "method": "Live anonymous HTTPS byte checks and browser interactions on the 1440px and 390px views.",
+    "all_match": null
   }
 }
