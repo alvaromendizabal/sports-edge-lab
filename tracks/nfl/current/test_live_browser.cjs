@@ -191,13 +191,24 @@ function verifyHostedHtml(observed, source, context) {
       const improvementsText = await improvements.innerText();
       for (const phrase of ["total pinball 10", "2.2006", "total pinball 50", "5.2121", "total pinball 90", "2.5501"]) assert(improvementsText.includes(phrase));
       await improvements.locator("summary").click();
+    });
+    await check(`${width}px: N168 selected leaders, scoring coverage and owner accounting`, async () => {
+      const results = page.locator("#n168-results");
+      const initial = await results.innerText();
+      for (const phrase of ["672 raw and calibrated", "0.00175", "0.01281", "151 / 159", "113 unsettled games", "2,114 archived time-valid replays", "zero new original forecasts"]) assert(initial.includes(phrase));
+      for (const horizon of [60, 120]) {
+        const section = page.locator(`#n168-nominees-${horizon}`);
+        await section.locator("summary").click();
+        assert.equal(await section.locator("tbody tr").count(), 14);
+        assert((await section.innerText()).includes("150 / 158"));
+        await section.locator("summary").click();
+      }
       const panel = page.locator("#execution-status");
       await panel.locator("summary").click();
       const status = await panel.innerText();
-      for (const phrase of ["Three of four registered stages completed", "26 authenticated pre-deadline side probabilities", "36 workers", "Four base-model optimizers", "1.114 optimizer CPU-seconds", "No three-minute utilization window", "N166 previously exited"]) {
-        assert(status.includes(phrase), `Missing execution outcome: ${phrase}`);
-      }
+      for (const phrase of ["Two of three registered stages completed", "315 new and 21 reused", "26 authenticated pre-deadline side probabilities", "24 simultaneous optimizers", "163.94 optimizer CPU-seconds", "No three-minute fit window", "$0.0518"]) assert(status.includes(phrase));
       await panel.locator("summary").click();
+      await noOverflow();
     });
     await check(`${width}px: N165 annual scores, complete market denominators and issue timing`, async () => {
       const newResults = page.locator("#n165-frontier");
