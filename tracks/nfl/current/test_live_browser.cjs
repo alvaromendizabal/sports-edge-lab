@@ -242,9 +242,21 @@ function verifyHostedHtml(observed, source, context) {
       const panel = page.locator("#execution-status");
       await panel.locator("summary").click();
       const body = await panel.innerText();
-      for (const phrase of ["Four of four registered stages completed","218 optimizer PIDs","15 simultaneous optimizers","$0.0817"]) assert(body.includes(phrase));
+      for (const phrase of ["Four of four registered stages completed","150 distinct drive fit PIDs","15 overlapping market optimizers","$0.1362"]) assert(body.includes(phrase), phrase);
       await panel.locator("summary").click();
       await noOverflow();
+    });
+    await check(`${width}px: N171 locked champions, replay gaps and separate market source populations`, async () => {
+      const panel = page.locator("#n171-results");
+      for (const phrase of ["6,415 candidates","9,190 grades for 10,298","59.87% on 157 of 160","12,274 have archived time-valid replays","5,134 have explicit gaps"]) assert((await panel.innerText()).includes(phrase),phrase);
+      for (const [id,count] of [["h120",32],["h60",32],["sources",18]]) {
+        const section = page.locator("#n171-"+id);
+        await section.locator("summary").click();
+        assert.equal(await section.locator("tbody tr").count(),count);
+        if (id==="sources") for (const name of ["DraftKings","Kalshi","Polymarket"]) assert((await section.innerText()).includes(name));
+        await noOverflow();
+        await section.locator("summary").click();
+      }
     });
     await check(`${width}px: N165 annual scores, complete market denominators and issue timing`, async () => {
       const newResults = page.locator("#n165-frontier");
