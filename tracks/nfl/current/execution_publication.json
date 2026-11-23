@@ -48,7 +48,7 @@
   },
   "production_promotions": 0,
   "checked_at": "2026-11-23T01:52:46.581Z",
-  "live_http_browser_checks": 23,
-  "live_http_verified_assets": 8,
-  "live_verification_url": "https://github.com/alvaromendizabal/sports-edge-lab/actions/runs/45096890864/job/137438565217"
+  "anonymous_asset_verification": "8 of 8 canonical assets matched",
+  "live_browser_checks": 23,
+  "live_check_url": "https://github.com/alvaromendizabal/sports-edge-lab/actions/runs/45096890864/job/137438565217"
 }
