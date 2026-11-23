@@ -242,9 +242,24 @@ function verifyHostedHtml(observed, source, context) {
       const panel = page.locator("#execution-status");
       await panel.locator("summary").click();
       const body = await panel.innerText();
-      for (const phrase of ["Four of four registered stages completed","171 distinct optimizer PIDs","17 overlapping optimizers","$0.1378"]) assert(body.includes(phrase), phrase);
+      for (const phrase of ["Three of three registered stages completed","222 distinct optimizer PIDs","30 overlapping optimizers","$0.1265"]) assert(body.includes(phrase), phrase);
       await panel.locator("summary").click();
       await noOverflow();
+    });
+    await check(`${width}px: N173 completed grades, missing scores, sensitivities and paired benchmarks`, async () => {
+      const panel = page.locator("#n173-results");
+      for (const phrase of ["10,129 of 10,362", "151", "8,305 candidates", "162 completed games", "1,776 newly evaluated source candidates"])
+        assert((await panel.innerText()).includes(phrase), phrase);
+      for (const [key,count] of [["h120",32],["h60",32],["sensitivity",5],["coverage",5],["markets",24]]) {
+        const section = page.locator("#n173-"+key);
+        await section.locator("summary").click();
+        assert.equal(await section.locator("tbody tr").count(),count);
+        if (key.startsWith("h")) assert.equal(await section.locator("tbody tr td:last-child").allTextContents().then(values => values.filter(v => v==="Unavailable").length),32);
+        if (key==="coverage") assert((await section.innerText()).includes("1,160 explicit gaps"));
+        if (key==="markets") for (const venue of ["DraftKings","Kalshi","Polymarket","Polymarket US"]) assert((await section.innerText()).includes(venue));
+        await noOverflow();
+        await section.locator("summary").click();
+      }
     });
     await check(`${width}px: N172 owner grades, sensitivities and separate forecast evidence`, async () => {
       const p = page.locator("#n172-results");
