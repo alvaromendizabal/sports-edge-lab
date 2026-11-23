@@ -1,7 +1,7 @@
 {
   "schema": "sports-edge-lab.nfl.execution-status-publication.v1",
   "version": 21,
-  "status": "DEPLOYED_PENDING_HTTP_VERIFICATION",
+  "status": "DEPLOYED_HTTP_VERIFIED",
   "public_url": "https://sports-edge-lab-nfl-current.alv-mendizabal.chatgpt.site/",
   "deployed_at": "2026-11-23T18:15:09.390386Z",
   "site_source_commit": "666db9972667905d0cd0cbd3e0c3b8cb9f9d2b6b",
@@ -90,8 +90,8 @@
       }
     ]
   },
-  "checked_at": null,
-  "live_browser_checks": null,
-  "anonymous_asset_verification": "Pending live verification",
-  "live_check_url": null
+  "checked_at": "2026-11-23T18:17:39.690Z",
+  "live_browser_checks": 33,
+  "anonymous_asset_verification": "8 of 8 canonical assets matched",
+  "live_check_url": "https://github.com/alvaromendizabal/sports-edge-lab/actions/runs/45236540961/job/137909640844"
 }
