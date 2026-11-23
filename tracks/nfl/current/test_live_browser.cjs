@@ -242,9 +242,21 @@ function verifyHostedHtml(observed, source, context) {
       const panel = page.locator("#execution-status");
       await panel.locator("summary").click();
       const body = await panel.innerText();
-      for (const phrase of ["Four of four registered stages completed","150 distinct drive fit PIDs","15 overlapping market optimizers","$0.1362"]) assert(body.includes(phrase), phrase);
+      for (const phrase of ["Four of four registered stages completed","171 distinct optimizer PIDs","17 overlapping optimizers","$0.1378"]) assert(body.includes(phrase), phrase);
       await panel.locator("summary").click();
       await noOverflow();
+    });
+    await check(`${width}px: N172 owner grades, sensitivities and separate forecast evidence`, async () => {
+      const p = page.locator("#n172-results");
+      for (const phrase of ["9,978 of 10,298", "788 game-level grades", "6,529 candidates", "114 dispersion laws"]) assert((await p.innerText()).includes(phrase),phrase);
+      for (const [id, count] of [["h120",32],["h60",32],["sensitivity",5],["coverage",4]]) {
+        const detail = page.locator("#n172-"+id);
+        await detail.locator("summary").click();
+        assert.equal(await detail.locator("tbody tr").count(),count);
+        if (id==="coverage") assert((await detail.innerText()).includes("2,540 explicit gaps"));
+        await noOverflow();
+        await detail.locator("summary").click();
+      }
     });
     await check(`${width}px: N171 locked champions, replay gaps and separate market source populations`, async () => {
       const panel = page.locator("#n171-results");
