@@ -1,7 +1,7 @@
 {
   "schema": "sports-edge-lab.nfl.execution-status-publication.v1",
   "version": 15,
-  "status": "DEPLOYED_PENDING_HTTP_VERIFICATION",
+  "status": "DEPLOYED_HTTP_VERIFIED",
   "public_url": "https://sports-edge-lab-nfl-current.alv-mendizabal.chatgpt.site/",
   "deployed_at": "2026-11-23T00:58:57.787158+00:00",
   "site_source_commit": "edc9992e5556bac91980dba5ca60fdf44013a589",
@@ -48,5 +48,8 @@
     "observed_completed_games": 159,
     "decisive_games": 158
   },
-  "production_promotions": 0
+  "production_promotions": 0,
+  "anonymous_asset_verification": "8 of 8 canonical assets matched",
+  "live_browser_checks": 21,
+  "live_check_url": "https://github.com/alvaromendizabal/sports-edge-lab/actions/runs/45092000556/job/137423439955"
 }
