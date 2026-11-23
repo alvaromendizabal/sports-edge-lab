@@ -1,12 +1,12 @@
 {
   "schema": "sports-edge-lab.nfl.execution-status-publication.v1",
-  "version": 16,
+  "version": 17,
   "status": "DEPLOYED_HTTP_VERIFIED",
   "public_url": "https://sports-edge-lab-nfl-current.alv-mendizabal.chatgpt.site/",
-  "deployed_at": "2026-11-23T01:48:44.141323+00:00",
-  "site_source_commit": "b8ee9f8740a4021ba526a1cc80c6ad6fd27be810",
-  "github_application_source_commit": "2e73a3ed006c02d2ab53bf85860a77f57502571d",
-  "public_execution_status_sha256": "fb9553f778f72e985d5d31c6b0956f0a168355870e3938e16feb5b2cbae594d5",
+  "deployed_at": "2026-11-23T02:05:18.158907+00:00",
+  "site_source_commit": "8c80697bad8b401d5d17f23f933d9353e92f8960",
+  "github_application_source_commit": "20b8f29b0e8e67fb919c893f18e44ce0d734ef7d",
+  "public_execution_status_sha256": "113db330bf3a56e3410e1471a2bd812eb51c5a93939e37ec3d0ebe30e8e21776",
   "full_v13_qualification": false,
   "latest_owner_attempt": {
     "release": "N169",
@@ -47,8 +47,54 @@
     "decisive_games": 160
   },
   "production_promotions": 0,
-  "checked_at": "2026-11-23T01:52:46.581Z",
+  "primary_policy_recovery": {
+    "status": "EXACT_FROZEN_POLICY_REPLAY",
+    "week": 11,
+    "season": 2026,
+    "source": "Archived Week 11 contest sheet",
+    "sheet_sides": 26,
+    "sheet_games": 13,
+    "distinct_selected_games": 5,
+    "retrospective_wins": 3,
+    "retrospective_losses": 2,
+    "retrospective_pushes": 0,
+    "retrospective_points": 3,
+    "original_submission_receipts": 0,
+    "current_forecasts_issued": 0,
+    "new_owner_runs": 0,
+    "historic_regression_weeks": 10,
+    "historic_selection_matches": 50,
+    "prior_test_exposure": true,
+    "selected": [
+      {
+        "rank": 1,
+        "team": "Kansas City",
+        "grade": "Win"
+      },
+      {
+        "rank": 2,
+        "team": "Buffalo",
+        "grade": "Win"
+      },
+      {
+        "rank": 3,
+        "team": "Houston",
+        "grade": "Win"
+      },
+      {
+        "rank": 4,
+        "team": "Chicago",
+        "grade": "Loss"
+      },
+      {
+        "rank": 5,
+        "team": "Carolina",
+        "grade": "Loss"
+      }
+    ]
+  },
+  "checked_at": "2026-11-23T02:07:55.375Z",
+  "live_browser_checks": 25,
   "anonymous_asset_verification": "8 of 8 canonical assets matched",
-  "live_browser_checks": 23,
-  "live_check_url": "https://github.com/alvaromendizabal/sports-edge-lab/actions/runs/45096890864/job/137438565217"
+  "live_check_url": "https://github.com/alvaromendizabal/sports-edge-lab/actions/runs/45098238093/job/137442792107"
 }

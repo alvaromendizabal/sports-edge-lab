@@ -1,31 +1,31 @@
 {
-  "version": 16,
+  "version": 17,
   "status": "DEPLOYED_HTTP_VERIFIED",
   "public_url": "https://sports-edge-lab-nfl-current.alv-mendizabal.chatgpt.site/",
-  "deployed_at": "2026-11-23T01:48:44.141323+00:00",
-  "site_source_commit": "b8ee9f8740a4021ba526a1cc80c6ad6fd27be810",
-  "github_application_source_commit": "2e73a3ed006c02d2ab53bf85860a77f57502571d",
+  "deployed_at": "2026-11-23T02:05:18.158907+00:00",
+  "site_source_commit": "8c80697bad8b401d5d17f23f933d9353e92f8960",
+  "github_application_source_commit": "20b8f29b0e8e67fb919c893f18e44ce0d734ef7d",
   "audience": "public",
-  "archive_sha256": "019a69b7852087f56b01ac327989f54aa55b77743270fbc31151f331c644d558",
+  "archive_sha256": "f12f6da000a3b2ec786fa4146a4188ed685fee6103f9b4281576327a3fd0c6c6",
   "forecast_inputs_refreshed": false,
   "new_fits": 0,
-  "new_distribution_calibration_pairs": 777,
-  "new_schedule_calibrators": 20,
-  "campaign_launches": 1,
+  "new_distribution_calibration_pairs": 0,
+  "new_schedule_calibrators": 0,
+  "campaign_launches": 0,
   "notes": [
-    "The N169 owner partial return produced the validation and aggregate grading results on this page. Prior public forecast cards retain their issue times."
+    "The November 22 historical reconstruction recovered the five primary Week 11 selections and graded them against the archived contest sheet. No original submission receipt was recovered. Private source records and prices remain outside this publication."
   ],
   "verification": {
     "base_url": "https://sports-edge-lab-nfl-current.alv-mendizabal.chatgpt.site/",
     "assets": [
       {
         "path": "index.html",
-        "bytes": 105979,
-        "sha256": "53f6ed0cf9c445f8f6ed731d5df44659064e3c0c96e58e38279d32bf09980e56",
+        "bytes": 107671,
+        "sha256": "95ae15ea620e109d3805a12be37ee2a79acecf3f51703bdcee9a952b1ed2d1eb",
         "url": "https://sports-edge-lab-nfl-current.alv-mendizabal.chatgpt.site/",
         "status": 200,
-        "received_sha256": "7b45d6691f2c8805e14cb2e36ccd72383add6977e366a9417d23b18f30d535ce",
-        "received_bytes": 107093,
+        "received_sha256": "b79ad8d29587386d1717e9d7947384ae9e6f1906ea51abb5df8132132a86f6f2",
+        "received_bytes": 108785,
         "matches_pushed_source": true,
         "verification": "ORIGINAL_BYTES_EQUAL_WITH_OBSERVED_CLOUDFLARE_APPEND"
       },
@@ -97,19 +97,19 @@
       },
       {
         "path": "execution_status.json",
-        "bytes": 480023,
-        "sha256": "fb9553f778f72e985d5d31c6b0956f0a168355870e3938e16feb5b2cbae594d5",
+        "bytes": 481082,
+        "sha256": "113db330bf3a56e3410e1471a2bd812eb51c5a93939e37ec3d0ebe30e8e21776",
         "url": "https://sports-edge-lab-nfl-current.alv-mendizabal.chatgpt.site/execution_status.json",
         "status": 200,
-        "received_sha256": "fb9553f778f72e985d5d31c6b0956f0a168355870e3938e16feb5b2cbae594d5",
-        "received_bytes": 480023,
+        "received_sha256": "113db330bf3a56e3410e1471a2bd812eb51c5a93939e37ec3d0ebe30e8e21776",
+        "received_bytes": 481082,
         "matches_pushed_source": true,
         "verification": "EXACT_BYTES"
       }
     ],
     "method": "Live anonymous HTTPS byte checks and browser interactions on the 1440px and 390px views.",
     "all_match": true,
-    "checked_at": "2026-11-23T01:52:46.581Z",
-    "evidence_url": "https://github.com/alvaromendizabal/sports-edge-lab/actions/runs/45096890864/job/137438565217"
+    "checked_at": "2026-11-23T02:07:55.375Z",
+    "evidence_url": "https://github.com/alvaromendizabal/sports-edge-lab/actions/runs/45098238093/job/137442792107"
   }
 }

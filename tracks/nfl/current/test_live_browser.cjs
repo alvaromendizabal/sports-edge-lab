@@ -156,6 +156,19 @@ function verifyHostedHtml(observed, source, context) {
       assert.equal(await text("#circa-deadline"), data.circa_deadline.label);
       await noOverflow();
     });
+    await check(`${width}px: Week 11 retrospective primary card and original entry status`, async () => {
+      const replay = page.locator("#week11-primary-replay");
+      assert(await replay.isVisible());
+      const complete = await replay.innerText();
+      for (const phrase of ["3 wins, 2 losses", "26 sides across 13 games", "all 50 earlier selections", "zero original submission receipts"]) assert(complete.includes(phrase), phrase);
+      const sides = await replay.locator("tbody tr").allInnerTexts();
+      assert.deepEqual(sides.map(row => row.trim().split(/\s+/).slice(1).join(" ")), ["Kansas City Win", "Buffalo Win", "Houston Win", "Chicago Loss", "Carolina Loss"]);
+      await replay.locator("summary").click();
+      assert.equal(await replay.locator("tbody").isVisible(), false);
+      await replay.locator("summary").click();
+      assert.equal(await text("#pick-count"), "0 / 5");
+      await noOverflow();
+    });
     await check(`${width}px: five distinct games, replacement, sixth-game limit, clear`, async () => {
       await page.locator("#best-card").click();
       const selected = () => page.locator('#circa-board [data-pick-game][aria-pressed="true"]').evaluateAll(nodes => nodes.map(n => ({ id: n.dataset.pickGame, side: n.dataset.pickSide })));

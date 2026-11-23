@@ -183,7 +183,7 @@
     "full_v13_completion": false
   },
   "remaining_gates": [
-    "Original Week 11 pre-lock side probabilities for the primary Circa policy",
+    "Original Week 11 issuance or submission receipt, if a contemporaneous entry is to be claimed",
     "Verified pregame coverage for each candidate across the frozen target and horizon population",
     "Historical injury, replacement and market-response sources with documented access and timing",
     "Whole-owner performance when three minutes of eligible queued fit work are available"
@@ -15432,5 +15432,51 @@
     "circa_alternatives": 126,
     "circa_new_settlements": 20,
     "circa_original_entries": 0
+  },
+  "week11_primary_policy_recovery": {
+    "status": "EXACT_FROZEN_POLICY_REPLAY",
+    "week": 11,
+    "season": 2026,
+    "source": "Archived Week 11 contest sheet",
+    "sheet_sides": 26,
+    "sheet_games": 13,
+    "distinct_selected_games": 5,
+    "retrospective_wins": 3,
+    "retrospective_losses": 2,
+    "retrospective_pushes": 0,
+    "retrospective_points": 3,
+    "original_submission_receipts": 0,
+    "current_forecasts_issued": 0,
+    "new_owner_runs": 0,
+    "historic_regression_weeks": 10,
+    "historic_selection_matches": 50,
+    "prior_test_exposure": true,
+    "selected": [
+      {
+        "rank": 1,
+        "team": "Kansas City",
+        "grade": "Win"
+      },
+      {
+        "rank": 2,
+        "team": "Buffalo",
+        "grade": "Win"
+      },
+      {
+        "rank": 3,
+        "team": "Houston",
+        "grade": "Win"
+      },
+      {
+        "rank": 4,
+        "team": "Chicago",
+        "grade": "Loss"
+      },
+      {
+        "rank": 5,
+        "team": "Carolina",
+        "grade": "Loss"
+      }
+    ]
   }
 }
