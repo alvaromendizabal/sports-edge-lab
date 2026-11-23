@@ -242,9 +242,31 @@ function verifyHostedHtml(observed, source, context) {
       const panel = page.locator("#execution-status");
       await panel.locator("summary").click();
       const body = await panel.innerText();
-      for (const phrase of ["Three of three registered stages completed","192 new blend weights","12 simultaneous optimizers","36 simultaneous optimizers","$0.1167"]) assert(body.includes(phrase), phrase);
+      for (const phrase of ["Three of three registered stages completed","272 new forests","69,632 new trees","36 simultaneous optimizers","$0.1269"]) assert(body.includes(phrase), phrase);
       await panel.locator("summary").click();
       await noOverflow();
+    });
+    await check(`${width}px: N175 primary winners, full and covered scores, clock and source evidence`, async () => {
+      const published = JSON.parse(fs.readFileSync(path.join(root,"execution_status.json"))).n175_research;
+      const panel = page.locator("#n175-results");
+      for (const phrase of ["10,260 of 10,362", "Twelve of 64", "9,033 candidates", "Extra Trees"]) assert((await panel.innerText()).includes(phrase),phrase);
+      for (const [key,count] of [["h120",32],["h60",32],["sensitivity",5],["coverage",4],["markets",24]]) {
+        const section = page.locator("#n175-"+key);
+        await section.locator("summary").click();
+        assert.equal(await section.locator("tbody tr").count(),count);
+        if (key.startsWith("h")) {
+          const expected = published.primary.filter(r=>r.horizon_minutes===Number(key.slice(1))).sort((a,b)=>a.metric.localeCompare(b.metric));
+          const actual = await section.locator("tbody tr").allTextContents();
+          for (let i=0;i<expected.length;i++) {
+            const r=expected[i];
+            assert(actual[i].includes(r.metric.replaceAll("_"," ")));
+            assert.equal(await section.locator("tbody tr").nth(i).locator("td").last().textContent(),r.score_2026_full===null?"Unavailable":r.score_2026_full.toFixed(4));
+          }
+        }
+        if (key==="markets") for (const venue of ["DraftKings","Kalshi","Polymarket","Polymarket US"]) assert((await section.innerText()).includes(venue));
+        await noOverflow();
+        await section.locator("summary").click();
+      }
     });
     await check(`${width}px: N174 primary winners, full and covered scores, clock and source evidence`, async () => {
       const published = JSON.parse(fs.readFileSync(path.join(root,"execution_status.json"))).n174_research;
