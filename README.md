@@ -1,3 +1,11 @@
+# NFL Week 12 · Sports Edge Lab V13
+
+**[Open the Week 12 field notes](https://sports-edge-lab-nfl-current.alv-mendizabal.chatgpt.site/week-12-field-notes/)** · [All 16 game forecasts](https://sports-edge-lab-nfl-current.alv-mendizabal.chatgpt.site/week-12-field-notes/#games) · [Official Circa sides](https://sports-edge-lab-nfl-current.alv-mendizabal.chatgpt.site/week-12-field-notes/#circa) · [Phone graphics](https://sports-edge-lab-nfl-current.alv-mendizabal.chatgpt.site/week-12-field-notes/#phone)
+
+The November 25 N196 return verified the refreshed spread and total comparisons and retained the original league forecasts. The standing N195 model earned 147.5/272 and 154/272 official all-game points in the two validation seasons, then 83/163 on the exposed 2026 replay. Its weekly-five selection earned 53/90, 57/90 and 28/55. The dashboard includes the separate N196 challengers, original forecast clocks and the three named venues.
+
+---
+
 ## NCAA V10 recovery — November 13, 2026
 
 [Open the live NCAA dashboard](https://alvaro-ncaa-research-review.alv-mendizabal.chatgpt.site) · [Versioned dashboard source](docs/ncaa/v10.html)
