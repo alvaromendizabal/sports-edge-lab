@@ -143,6 +143,9 @@ function verifyHostedHtml(observed, source, context) {
       await count("[data-joint-games] tbody tr", 109);
       await count("[data-recovered-ratio] tbody tr", 15);
       assert.match(await text("#recovered-validation"), /70.35%/);
+      assert.match(await text("#recovered-validation"), /65.64%/);
+      assert.match(await text("#recovered-validation"), /60.54%/);
+      await count("[data-recovered-forecast-week] tbody tr", 109);
       await count("[data-joint-ratio] tbody tr", 15);
       assert.match(await text("#joint-scores"), /25.17/);
       await count("[data-secondary-ratio] tbody tr", 15);
