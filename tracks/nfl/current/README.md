@@ -1,10 +1,10 @@
-# NFL current slate dashboard
+# NFL game day and research dashboard
 
-[Open the source dashboard](index.html) · [Saved data](data.json) · [Earlier R18 evidence](../n127r18/README.md)
+[Open the public NFL dashboard](https://sports-edge-lab-nfl-current.alv-mendizabal.chatgpt.site/) · [Public release receipt](publication.json) · [Earlier NFL research](research-history.html?view=performance)
 
-This is the buildless browser presentation for the next NFL slate. `index.html`, `styles.css`, `app.js` and `data.json` are deployed together. No framework, package installation, external font or third-party asset is required.
+Week 12 covers all 16 scheduled matchups. The public board shows the NFL models' issued picks for winner, point margin and total, with the forecast and price observations dated separately. The contest view grades a cover as one point and a push as half a point. Its weekday preview uses the named sportsbook's lines until the official Circa worksheet has been observed and verified. The performance view records the validation and exposed-season denominators.
 
-**Deployed publicly, version 1:** [Open the NFL dashboard](https://sports-edge-lab-nfl-current.alv-mendizabal.chatgpt.site/). The [publication receipt](publication.json) records the pushed Site source, application-source commit and exact anonymous HTTP asset verification. Local browser checks passed; the browser connection was unavailable for the final production reopen, so that separate check is not claimed.
+The earlier Week 11 dashboard, its clock selectors, its archived evidence and its phone cards are available at the original bookmarked query routes and the [Week 11 archive](research-history.html). The [November 23 receipt](publication-n175.json) documents the earlier deployment.
 
 ## Verified content — November 20, 2026 Pacific
 
@@ -97,3 +97,4 @@ python3 tracks/nfl/current/validate_snapshot.py
 The snapshot validator checks unique game identities, finite nullable values, probability bounds, cover/push conservation, half-point push rules, expected-point arithmetic, issue-before-kickoff ordering, linked local assets, document controls and private-path exclusions. `--allow-empty` is available only while preparing a placeholder; a populated publication uses the normal command.
 
 Browser checks on the live Site are separate from this structural/data validation. Source publication, deployment and research refresh are different events.
+

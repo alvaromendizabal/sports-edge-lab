@@ -46,6 +46,7 @@ function verifyHostedHtml(observed, source, context) {
 
 (async () => {
   const receipt = JSON.parse(fs.readFileSync(path.join(root, "publication.json"), "utf8"));
+  const historyReceipt = JSON.parse(fs.readFileSync(path.join(root, "publication-n175.json"), "utf8"));
   const data = JSON.parse(fs.readFileSync(path.join(root, "data.json"), "utf8"));
   const base = new URL(receipt.public_url);
   assert.equal(base.protocol, "https:");
@@ -61,16 +62,17 @@ function verifyHostedHtml(observed, source, context) {
   report.pr_head = process.env.NFL_CURRENT_PR_HEAD || null;
   browser = await chromium.launch({ headless: true });
   const assetContext = await browser.newContext();
+  const archivedFile = name => name === "index.html" ? "research-history.html" : name;
   const requiredAssets = ["index.html", "app.js", "styles.css", "data.json", "evidence.json", "circa_evidence.json", "newest_model_comparison.json", "execution_status.json"];
   await check("Eight canonical deployed assets match publication bytes; any Cloudflare HTML append is separately recorded", async () => {
-    assert.deepEqual(receipt.verification.assets.map(a => a.path).sort(), [...requiredAssets].sort());
-    for (const asset of receipt.verification.assets) {
+    assert.deepEqual(historyReceipt.verification.assets.map(a => a.path).sort(), [...requiredAssets].sort());
+    for (const asset of historyReceipt.verification.assets) {
       if (verified) {
         assert.equal(asset.status, 200);
         assert.equal(asset.matches_pushed_source, true);
       }
-      const local = fs.readFileSync(path.join(root, asset.path));
-      const url = new URL(asset.path === "index.html" ? "./" : asset.path, base);
+      const local = fs.readFileSync(path.join(root, archivedFile(asset.path)));
+      const url = new URL(archivedFile(asset.path), base);
       const response = await assetContext.request.get(url.href, { timeout: 30000 });
       const bytes = await response.body();
       const observed = { path: asset.path, url: response.url(), status: response.status(), bytes: bytes.length, sha256: digest(bytes) };
@@ -87,10 +89,30 @@ function verifyHostedHtml(observed, source, context) {
       }
     }
     console.log("Production asset evidence", JSON.stringify(report.assets));
-    for (const asset of receipt.verification.assets) {
-      const local = fs.readFileSync(path.join(root, asset.path));
+    for (const asset of historyReceipt.verification.assets) {
+      const local = fs.readFileSync(path.join(root, archivedFile(asset.path)));
       assert.equal(digest(local), asset.sha256, `${asset.path}: committed source differs from publication receipt`);
       assert.equal(local.length, asset.bytes);
+    }
+  });
+  await check("Current anonymous release matches every declared published asset", async () => {
+    assert(verified, "Current game day publication needs an anonymous HTTP receipt");
+    const assets = receipt.verification.assets;
+    assert(assets.some(a => a.path === "index.html"));
+    assert(assets.filter(a => a.path.endsWith(".png")).length >= 4);
+    for (const asset of assets) {
+      const local = fs.readFileSync(path.join(root, asset.path));
+      assert.equal(digest(local), asset.sha256);
+      assert.equal(local.length, asset.bytes);
+      const response = await assetContext.request.get(new URL(asset.path, base).href, { timeout: 30000 });
+      assert.equal(response.status(), 200, asset.path);
+      assert.equal(new URL(response.url()).origin, base.origin);
+      const bytes = await response.body();
+      if (asset.path.endsWith(".html")) {
+        verifyHostedHtml(bytes, local, `current-${path.basename(asset.path, ".html")}`);
+      } else {
+        assert(bytes.equals(local), asset.path);
+      }
     }
   });
   await assetContext.close();
@@ -104,12 +126,43 @@ function verifyHostedHtml(observed, source, context) {
     const text = selector => page.locator(selector).innerText();
     const count = (selector, expected) => page.locator(selector).count().then(actual => assert.equal(actual, expected, selector));
     const noOverflow = async () => assert(await page.evaluate(() => document.documentElement.scrollWidth <= innerWidth + 1), `${width}px layout overflows horizontally`);
+    await check(`${width}px: home opens the current release; older shared links still open the original dated slate`, async () => {
+      await page.goto(base.href, { waitUntil: "domcontentloaded" });
+      await noOverflow();
+      assert.match(await page.locator("body").innerText(), /Week 12/i);
+      assert(page.url().startsWith(base.href));
+      await count("#games details.game:visible", 16);
+      await page.locator("#day").selectOption("Thu Nov 26");
+      await count("#games details.game:visible", 3);
+      await page.locator("#day").selectOption("");
+      await page.locator("#game-search").fill("Packers");
+      await count("#games details.game:visible", 1);
+      await page.locator("#games details.game:visible > summary").click();
+      assert.match(await text("#games details.game:visible .detail"), /58.0%/);
+      await page.locator("#game-search").fill("");
+      await count("#circa .contest-game", 16);
+      await count("#circa .contest-game tbody tr", 32);
+      await page.locator("#rank-filter").selectOption("top");
+      await count("#circa .contest-game:visible", 5);
+      await page.locator("#rank-filter").selectOption("all");
+      for (const weight of ["50", "40", "30", "20", "10"]) {
+        await page.locator("#weights").selectOption(weight);
+        await count(`.score-table tr[data-weight="${weight}"]:visible`, 7);
+        await count(".score-table tbody tr:visible", 7);
+      }
+      await noOverflow();
+      await page.screenshot({ path: path.join(output, `week12-${width}.png`), fullPage: false });
+      assert(await page.locator('a[href*="research-history.html"]').count());
+      await page.goto(new URL("?view=cards&type=games&clock=T60&page=4", base).href);
+      await page.waitForURL(u => u.pathname.endsWith("/research-history.html") && u.searchParams.get("page") === "4");
+      await page.waitForFunction(() => document.querySelector("#cards-page-label")?.textContent.trim() === "4 / 4");
+    });
     let navigation = 0;
     const go = async query => {
-      const response = await page.goto(new URL(query, base).href, { waitUntil: "domcontentloaded" });
+      const response = await page.goto(new URL("research-history.html" + query, base).href, { waitUntil: "domcontentloaded" });
       assert.equal(response.status(), 200);
       assert.equal(new URL(response.url()).origin, base.origin);
-      verifyHostedHtml(await response.body(), fs.readFileSync(path.join(root, "index.html")), `navigation-${width}-${++navigation}`);
+      verifyHostedHtml(await response.body(), fs.readFileSync(path.join(root, "research-history.html")), `navigation-${width}-${++navigation}`);
       await page.waitForFunction(() => document.querySelectorAll("#games-grid .game-card").length > 0);
     };
     await go("?view=slate&clock=T120");
