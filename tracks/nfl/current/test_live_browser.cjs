@@ -226,6 +226,7 @@ function verifyHostedHtml(observed, source, context) {
         await noOverflow();
       }
       await page.goto(new URL("all-games/#policy-hybrid",base).href);
+      await page.waitForFunction(()=>document.getElementById("policy").value==="hybrid");
       assert.equal(await page.locator("#policy").inputValue(),"hybrid");
       assert.match(await text("section[data-policy]:visible"),/108.5 points/);
       await page.screenshot({path:path.join(output,`all-games-${width}.png`),fullPage:false});
