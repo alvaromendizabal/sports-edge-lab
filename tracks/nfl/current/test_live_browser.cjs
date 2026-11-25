@@ -134,8 +134,11 @@ function verifyHostedHtml(observed, source, context) {
     const text = selector => page.locator(selector).innerText();
     const count = (selector, expected) => page.locator(selector).count().then(actual => assert.equal(actual, expected, selector));
     const noOverflow = async () => { const layout = await page.evaluate(() => ({ width: window.innerWidth, scroll: document.documentElement.scrollWidth, outside: [...document.querySelectorAll("main *, header *")].filter(e => e.getBoundingClientRect().right > innerWidth + 1 && !e.closest(".scroll")).slice(0, 8).map(e => [e.tagName, e.id, e.className, e.getBoundingClientRect().right]) })); assert(layout.scroll <= layout.width + 1, JSON.stringify(layout)); };
-    await check(`${width}px: N196 field notes show all games, markets, roles and seven share cards`, async () => {
+    await check(`${width}px: N197 field notes show all games, markets, roles and seven share cards`, async () => {
       await page.goto(new URL("week-12-field-notes/", base).href, {waitUntil: "domcontentloaded"});
+      assert.match(await text(".dateline"), /3:07 p.m. Pacific.*N197/);
+      assert.match(await text("#record"), /141 new estimators/);
+      assert.match(await text("#markets"), /1,703 exact pregame line observations/);
       await count("article.game:visible", 16);
       await page.selectOption("#day", "Thursday");
       await count("article.game:visible", 3);
@@ -150,6 +153,14 @@ function verifyHostedHtml(observed, source, context) {
         await page.selectOption("#venue", venue);
         await count("[data-venue]:visible tbody tr", 16);
       }
+      await count("#availability details.health", 16);
+      await count("#availability .health-grid article", 32);
+      await count(".five .pick-alert", 2);
+      await page.locator('.rosterlink[href="#availability-NE-LAC"]').click();
+      assert(await page.locator("#availability-NE-LAC").evaluate(el => el.open));
+      assert.match(await text("#availability-NE-LAC"), /Tommy DeVito/);
+      assert.match(await text("#availability-NE-LAC"), /Justin Herbert/);
+      assert.match(await text("#availability"), /256 players across 26 of 32/);
       await count("#phone img", 7);
       assert.match(await text("#circa"), /before Wednesday’s 5 p.m./);
       await noOverflow();

@@ -1,8 +1,8 @@
 # NFL Week 12 · Sports Edge Lab V13
 
-**[Open the Week 12 field notes](https://sports-edge-lab-nfl-current.alv-mendizabal.chatgpt.site/week-12-field-notes/)** · [All 16 game forecasts](https://sports-edge-lab-nfl-current.alv-mendizabal.chatgpt.site/week-12-field-notes/#games) · [Official Circa sides](https://sports-edge-lab-nfl-current.alv-mendizabal.chatgpt.site/week-12-field-notes/#circa) · [Phone graphics](https://sports-edge-lab-nfl-current.alv-mendizabal.chatgpt.site/week-12-field-notes/#phone)
+**[Open the Week 12 field notes](https://sports-edge-lab-nfl-current.alv-mendizabal.chatgpt.site/week-12-field-notes/)** · [All 16 game forecasts](https://sports-edge-lab-nfl-current.alv-mendizabal.chatgpt.site/week-12-field-notes/#games) · [Official Circa sides](https://sports-edge-lab-nfl-current.alv-mendizabal.chatgpt.site/week-12-field-notes/#circa) · [All 32 team availability reports](https://sports-edge-lab-nfl-current.alv-mendizabal.chatgpt.site/week-12-field-notes/#availability) · [Phone graphics](https://sports-edge-lab-nfl-current.alv-mendizabal.chatgpt.site/week-12-field-notes/#phone)
 
-The November 25 N196 return verified the refreshed spread and total comparisons and retained the original league forecasts. The standing N195 model earned 147.5/272 and 154/272 official all-game points in the two validation seasons, then 83/163 on the exposed 2026 replay. Its weekly-five selection earned 53/90, 57/90 and 28/55. The dashboard includes the separate N196 challengers, original forecast clocks and the three named venues.
+The November 25 N197 run fitted 141 estimators and 282 calibration transformations. Its ordinary spread-points model averaged 145.0/272 in matched validation, up from 142.5, and earned 72.5/163 on the exposed 2026 replay. The N195 official-line model retained the strongest standing all-game and weekly-five policies. The 3:07 p.m. Pacific market assessment covers all 16 games. [Earlier N196 edition](https://sports-edge-lab-nfl-current.alv-mendizabal.chatgpt.site/week-12-field-notes/n196.html).
 
 ---
 
