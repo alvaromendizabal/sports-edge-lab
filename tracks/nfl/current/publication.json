@@ -4,11 +4,11 @@
   "public_url": "https://sports-edge-lab-nfl-current.alv-mendizabal.chatgpt.site/",
   "thanksgiving_url": "https://sports-edge-lab-nfl-current.alv-mendizabal.chatgpt.site/thanksgiving/",
   "dedicated_circa_url": "https://sports-edge-lab-nfl-current.alv-mendizabal.chatgpt.site/circa/",
-  "deployed_at": "2026-11-25T18:36:02.449723+00:00",
-  "site_source_commit": "e427988264fd3272a17ea93476d24e70c2858f97",
-  "github_application_source_commit": "b81deb405f6a398c4988fbf080b214e5efacbb13",
+  "deployed_at": "2026-11-25T18:41:53.950097+00:00",
+  "site_source_commit": "cf4bd4c22f7ad2c9acd79bb06dc68f0791a4aa59",
+  "github_application_source_commit": "3556245ea7714810d39183cb10845b5f3d612dc8",
   "audience": "public",
-  "archive_sha256": "880dda5feeaabe9e16c348a2486a5992b2ee9d472632ee12b8aa5f4d0a8441c0",
+  "archive_sha256": "3ee249dd18737ddd68b639357f01fa0632e99fa74004e6b9479f560f8af302f7",
   "scientific_scope": {
     "release": "N190",
     "historical_circa": {
@@ -757,10 +757,10 @@
         "path": "circa/index.html",
         "url": "https://sports-edge-lab-nfl-current.alv-mendizabal.chatgpt.site/circa/index.html",
         "status": 200,
-        "bytes": 30728,
-        "sha256": "3ca1e2dd28891bf65db1360f0f1a8bb7820299eb1fed10b786b0df1cba47cd11",
-        "received_sha256": "3ca1e2dd28891bf65db1360f0f1a8bb7820299eb1fed10b786b0df1cba47cd11",
-        "received_bytes": 30728,
+        "bytes": 32044,
+        "sha256": "280530f99d41d07866ba190e9f806c88f4ec5bbd37609b4d3d09df52e4df2e75",
+        "received_sha256": "280530f99d41d07866ba190e9f806c88f4ec5bbd37609b4d3d09df52e4df2e75",
+        "received_bytes": 32044,
         "matches_pushed_source": true,
         "verification": "EXACT_ORIGINAL_BYTES"
       },
@@ -1239,8 +1239,9 @@
       }
     ],
     "all_match": true,
-    "checked_at": "2026-11-25T18:37:12.042489+00:00",
+    "checked_at": "2026-11-25T18:42:59.783742+00:00",
     "method": "Anonymous HTTPS GET and SHA-256 comparison of every declared asset. Original bytes verified separately from any identified edge-script append."
   },
-  "prior_morning_contest": "https://sports-edge-lab-nfl-current.alv-mendizabal.chatgpt.site/circa/draftkings-1003.html"
+  "prior_morning_contest": "https://sports-edge-lab-nfl-current.alv-mendizabal.chatgpt.site/circa/draftkings-1003.html",
+  "site_version": 35
 }
