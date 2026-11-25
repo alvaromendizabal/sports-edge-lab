@@ -16,9 +16,25 @@ class Document(HTMLParser):
         super().__init__()
         self.ids = []
         self.assets = []
+        self.games = []
+        self.ranks = []
+        self.weights = []
+        self.images = set()
+        self.links = set()
 
     def handle_starttag(self, tag, attrs):
         attrs = dict(attrs)
+        classes = attrs.get("class", "").split()
+        if tag == "details" and "game" in classes:
+            self.games.append(attrs.get("data-search"))
+        if tag == "article" and "contest-game" in classes:
+            self.ranks.append(attrs.get("data-rank"))
+        if tag == "tr" and "data-weight" in attrs:
+            self.weights.append(attrs["data-weight"])
+        if tag == "a" and attrs.get("href"):
+            self.links.add(attrs["href"])
+            if attrs["href"].endswith(".png"):
+                self.images.add(attrs["href"])
         if "id" in attrs:
             self.ids.append(attrs["id"])
         if tag == "script" and "src" in attrs:
@@ -127,7 +143,7 @@ def validate(root: Path, allow_empty=False):
             expected = change > 0 if "accuracy" in row.get("objective", "") else change < 0
             if row.get("new_fit_beats_incumbent") is not expected:
                 errors.append(f"Newest comparison row {i}: improvement direction conflicts with objective")
-    html = (root / "index.html").read_text()
+    html = (root / "research-history.html").read_text()
     js = (root / "app.js").read_text()
     document = Document()
     document.feed(html)
@@ -146,7 +162,32 @@ def validate(root: Path, allow_empty=False):
     for marker in private_markers:
         if marker in public_text:
             errors.append(f"Public snapshot contains a private/internal marker: {marker}")
-    return {"status": "FAIL" if errors else "PASS", "games": len(games), "performance_rows": len(performance), "placeholder_allowed": allow_empty, "errors": errors}
+    current_html = (root / "index.html").read_text()
+    current = Document()
+    current.feed(current_html)
+    if len(current.ids) != len(set(current.ids)):
+        errors.append("Week 12 duplicate HTML anchors")
+    if set(("gameday", "slate", "circa", "results", "cards")) - set(current.ids):
+        errors.append("Week 12 game day, contest, results or share card navigation missing")
+    if len(current.games) != 16 or len(set(current.games)) != 16:
+        errors.append("Week 12 must present all sixteen distinct games")
+    if sorted(int(x) for x in current.ranks) != list(range(1, 17)):
+        errors.append("Contest decision requires all sixteen game ranks")
+    if len(current.weights) != 35 or any(current.weights.count(w) != 7 for w in ("50", "40", "30", "20", "10")):
+        errors.append("All seven league objectives need all five validation weightings")
+    if len(current.images) != 4 or any(not (root / p).is_file() for p in current.images):
+        errors.append("Four downloadable public mobile cards are required")
+    if not any(p.startswith("research-history.html") for p in current.links):
+        errors.append("The current release must link to historical research")
+    for asset in current.assets:
+        if "://" in asset or not (root / asset).is_file():
+            errors.append(f"Current page requires missing or nonlocal asset {asset}")
+    for marker in private_markers:
+        if marker in current_html:
+            errors.append(f"Week 12 contains an internal marker {marker}")
+    return {"status": "FAIL" if errors else "PASS", "current_games": len(current.games),
+            "contest_games": len(current.ranks), "objective_weights": len(current.weights),
+            "games": len(games), "performance_rows": len(performance), "placeholder_allowed": allow_empty, "errors": errors}
 
 
 if __name__ == "__main__":

@@ -1,9 +1,17 @@
+# NFL Week 12 · November 24, 2026 Pacific
+
+[Open the live game dashboard](https://sports-edge-lab-nfl-current.alv-mendizabal.chatgpt.site/) · [All contest options](https://sports-edge-lab-nfl-current.alv-mendizabal.chatgpt.site/#circa) · [Model results](https://sports-edge-lab-nfl-current.alv-mendizabal.chatgpt.site/#results) · [Phone cards](https://sports-edge-lab-nfl-current.alv-mendizabal.chatgpt.site/#cards) · [Public release receipt](current/publication.json)
+
+The N186 return issued model forecasts for every Week 12 game. Los Angeles opens Wednesday at 5 p.m. Pacific with a 58.0% win probability, a projected 3.47-point advantage and a 46.28-point total against Green Bay. The public comparison dates those forecasts separately from DraftKings, Kalshi and Polymarket observations. The 32 provisional contest sides use DraftKings spreads pending the official Circa worksheet. The annual model comparisons use 2024 and 2025 validation and a previously exposed 2026 replay.
+
+[Archived Week 11 dashboard](current/research-history.html?view=slate) · [Archived November 23 publication](current/publication-n175.json)
+
 <!-- NFL_CURRENT_SLATE_20261120_START -->
-# NFL current slate dashboard · November 20, 2026
+# Archived NFL slate dashboard · November 20, 2026
 
-[Current browser dashboard source](current/index.html) · [Saved selected data](current/data.json) · [Dashboard methodology](current/README.md)
+[Week 11 browser dashboard source](current/research-history.html) · [Saved selected data](current/data.json) · [Dashboard methodology](current/README.md)
 
-**Publication state: public Site deployed, version 1.** [Open the current NFL dashboard](https://sports-edge-lab-nfl-current.alv-mendizabal.chatgpt.site/) · [Publication receipt](current/publication.json). All seven current application assets returned HTTP 200 anonymously and matched the browser-tested preview bytes. The production browser reopen was blocked by unavailable tool connection/context and remains explicitly unverified.
+**November 20 publication state.** [Open the Week 11 archive](https://sports-edge-lab-nfl-current.alv-mendizabal.chatgpt.site/research-history.html) · [Subsequent Week 11 publication receipt](current/publication-n175.json). All seven current application assets returned HTTP 200 anonymously and matched the browser-tested preview bytes. The production browser reopen was blocked by unavailable tool connection/context and remains explicitly unverified.
 
 The dashboard includes 12 upcoming games, 24 exact-line Circa sides and six phone cards. Default forecasts retain November 16 inputs with R18-selected T120 models. Current T60 matchup values remain unavailable. All 216 newer R20 fits were audited without training; none improved the incumbent in 14 same-clock, same-cohort comparisons. Original source, compilation and selection clocks remain separate from publication time.
 
@@ -27,16 +35,16 @@ Historical drive, injury/replacement and market-response admissions still requir
 
 # NFL · V10 Phase A recovery · November 13, 2026
 
-[Open the NFL browser dashboard](https://sports-edge-lab-nfl.alv-mendizabal.chatgpt.site/) · [Prepared N088 source dashboard](dashboard_n088/index.html) · [Fresh Phase A public scorecards](phase_a_n088_public.json)
+[Open the archived N088 dashboard](https://sports-edge-lab-nfl-current.alv-mendizabal.chatgpt.site/dashboard_n088/index.html) · [Prepared N088 source dashboard](dashboard_n088/index.html) · [Fresh Phase A public scorecards](phase_a_n088_public.json)
 
-**Current Circa / Manual alternative:** [Open the browser-ready N089 comparison](https://sports-edge-lab-nfl.alv-mendizabal.chatgpt.site/circa/) · [Source and evidence](circa_million_2026/current/README.md). Every official current-board game, frozen model-only versus manual cards, exact history and team splits; missing cover distributions remain explicit. The existing N088 root below is preserved unchanged.
+**Archived N089 Circa / manual comparison.** [N089 comparison source](circa_million_2026/current/index.html) · [Source and evidence](circa_million_2026/current/README.md). Every official current-board game, frozen model-only versus manual cards, exact history and team splits; missing cover distributions remain explicit. The existing N088 root below is preserved unchanged.
 **New evidence: 171 saved-model scorecards and 10,216 model–game rows were recomputed with zero new fits.** The recovered schedule contains all 272 games: 137 finals, 111 confirmed upcoming and 24 kickoff TBD. Original forecast clocks and the 444 previously issued selected outputs remain intact. Later November fits are labeled later-fitted reconstructions; no historical pregame issue is invented.
 
 **Recovery is partial.** Current union coverage reaches 136 non-tied winner outcomes and 137 point outcomes across different models; the largest single-model cohorts remain 119 winner and 120 margin/total games, at least 17 missing per target. Only one current-season game has recovered original-issued scored rows. Full independent 2024/2025 census reconciliation, missing model bodies, exact same-cutoff provider comparisons and controlled Phase B prerequisites remain unresolved. Automatic rolling refits and automatic promotion are off.
 
 **Actual N087 failed:** 678.674 seconds, 0.399 mean / 1.213 peak CPU core equivalents, 15 paid calls, and zero verified completed new scientific receipts. Final fit totals remain unreconciled. Both live log streams exist; closing the return did not repair the child runtime. The exact packaged cold-import installer chain independently reproduces a recursion error before it can write the required response.
 
-**Publication state: DEPLOYED, version 42.** The same public NFL URL now serves N088, pinned to canonical GitHub commit `a32506fb28e6a7a8a72b5964714fd4fc5a748374`. The previous live N063 version remains at [/archive/v41/index.html](https://sports-edge-lab-nfl.alv-mendizabal.chatgpt.site/archive/v41/index.html). [Exact native deployment receipt](n088_online_deployment.json) · [Production browser verification workflow](https://github.com/alvaromendizabal/sports-edge-lab/actions/workflows/nfl-static-review.yml). GitHub Pages returned HTTP 404; this uses the existing authorized public hosting mechanism, with no Pages or AWS configuration change. Native deployment and browser verification are separate checks.
+**November 13 publication state.** The former NFL address served version 42 of N088, pinned to canonical GitHub commit `a32506fb28e6a7a8a72b5964714fd4fc5a748374`. Its deployment record identifies the N063 archive at the old origin. The former NFL origin returned HTTP 404 in the November 24 check. [Exact native deployment receipt](n088_online_deployment.json) · [Production browser verification workflow](https://github.com/alvaromendizabal/sports-edge-lab/actions/workflows/nfl-static-review.yml). GitHub Pages returned HTTP 404; this uses the existing authorized public hosting mechanism, with no Pages or AWS configuration change. Native deployment and browser verification are separate checks.
 
 <details>
 <summary>Preserved N085 scientific snapshot and N086/N087 delivery history</summary>
@@ -74,3 +82,4 @@ The executable retained the N084 scientific namespace. The later N086 execution 
 </details>
 
 </details>
+
