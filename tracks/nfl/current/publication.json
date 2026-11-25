@@ -50,7 +50,23 @@
       272,
       163
     ],
-    "original_return_sha256": "ceaa70e21e76a1af878e0591b23bb36ff8cf5c8a20b2cc1318d4ad7f878adbfc"
+    "original_return_sha256": "ceaa70e21e76a1af878e0591b23bb36ff8cf5c8a20b2cc1318d4ad7f878adbfc",
+    "markets": {
+      "sources": 80,
+      "records": 2894,
+      "matched_combinations": 2838,
+      "named_slots": 144,
+      "named_population": 144,
+      "status_records": {
+        "MATCHED_CURRENT": 2838,
+        "MISSING_MARKET_PRICE": 32,
+        "OLDER_THAN_10_MINUTES": 16,
+        "PRIOR_OR_MISSING": 8
+      },
+      "games": 16,
+      "scope": "Preserved N195 league dashboard market section only",
+      "observed_utc": "2026-11-25T21:27:16.332247+00:00"
+    }
   },
   "verification": {
     "base_url": "https://sports-edge-lab-nfl-current.alv-mendizabal.chatgpt.site/",
