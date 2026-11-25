@@ -1,13 +1,13 @@
 {
-  "version": 27,
+  "version": 28,
   "status": "DEPLOYED_HTTP_VERIFIED",
   "public_url": "https://sports-edge-lab-nfl-current.alv-mendizabal.chatgpt.site/",
   "dedicated_circa_url": "https://sports-edge-lab-nfl-current.alv-mendizabal.chatgpt.site/circa/",
-  "deployed_at": "2026-11-25T05:49:17.326526+00:00",
-  "site_source_commit": "85e06a768c4e91766584906df43339e6f74a4315",
-  "github_application_source_commit": "e7dd8846982fd07a367b0ebdf979ab1b0be993ce",
+  "deployed_at": "2026-11-25T05:56:20.747323+00:00",
+  "site_source_commit": "d393343055423755bf403f98b7527971d01938e2",
+  "github_application_source_commit": "000593a50fdee67a2e5dd7f53848f7dce26edeac",
   "audience": "public",
-  "archive_sha256": "0c2098203432041e326e0f4d45862949408535ba213a50c930928f777727a2e1",
+  "archive_sha256": "afe2ac87e045644df0be593599f8d80c211d3817117297ae733bbef2b1b66750",
   "scientific_scope": {
     "release": "N188",
     "issue_utc": "2026-11-25T05:39:25.212137+00:00",
@@ -21,6 +21,12 @@
     "official_sheet": "AWAITING_OFFICIAL_RELEASE",
     "new_grades": 0,
     "weights": 35,
+    "secondary_saved_nominee_decisions": 15,
+    "secondary_pools": {
+      "winner_accuracy": 10,
+      "margin_rmse": 10,
+      "total_rmse": 3
+    },
     "primary_validation_improved": 1,
     "primary_replay_worsened": 1,
     "headline": {
@@ -108,7 +114,7 @@
         "status": 200,
         "bytes": 41690,
         "sha256": "19c58c9225d27de51fb59a1f5e7bf6e0b7634908c4f26862ca2f1daaab985b86",
-        "received_sha256": "4d823cc29ddb7736edff72667f5cbad547b1314e1b380e58cdfd2037a32ce941",
+        "received_sha256": "8552e79cf100c2161ea33d58bc7062ae590e70aa13700283e11dc83d579613ba",
         "received_bytes": 42804,
         "matches_pushed_source": true,
         "verification": "ORIGINAL_BYTES_EQUAL_WITH_OBSERVED_CLOUDFLARE_APPEND"
@@ -130,7 +136,7 @@
         "status": 200,
         "bytes": 330,
         "sha256": "e6920e73f0f8396e333ba2bb8f1e548d95e8653387f9e5998d36fd1ea43fc9d2",
-        "received_sha256": "a37a84c97f394d744d60da6b3e145817f73cbb54a7ba0df8b90685018a3da611",
+        "received_sha256": "948ea4b6e2884be11a8f4404bf2e25f7371cdc9f80b421ec5a8b1cdd939ccb91",
         "received_bytes": 1444,
         "matches_pushed_source": true,
         "verification": "ORIGINAL_BYTES_EQUAL_WITH_OBSERVED_CLOUDFLARE_APPEND"
@@ -185,7 +191,7 @@
         "status": 200,
         "bytes": 330,
         "sha256": "038306be8d13bc97fb68486e6f1f938e1ab574bc342ee3cae63cbf9867356fa7",
-        "received_sha256": "a8d940e543014a141590571435d5678bc510aff90e410d5f07ecc66b912cd261",
+        "received_sha256": "cc53648ec471a400ab5d2eadbc38dcbf1cb15f4151c2bd73bfb3f85aaaf4576a",
         "received_bytes": 1444,
         "matches_pushed_source": true,
         "verification": "ORIGINAL_BYTES_EQUAL_WITH_OBSERVED_CLOUDFLARE_APPEND"
@@ -240,7 +246,7 @@
         "status": 200,
         "bytes": 94155,
         "sha256": "81df8bdc012459553d90b3143dbd7e9e7242b83acc3dee6ddd64b34b6ae99700",
-        "received_sha256": "66c32176c69ae54563c220c27b5fa6dfc903016c6b63eb1b2636266630aaa930",
+        "received_sha256": "24cf4c42299f43fd86fae94b5610392f81326c62f6e5fd14e10c827b09c46d03",
         "received_bytes": 95269,
         "matches_pushed_source": true,
         "verification": "ORIGINAL_BYTES_EQUAL_WITH_OBSERVED_CLOUDFLARE_APPEND"
@@ -262,7 +268,7 @@
         "status": 200,
         "bytes": 336,
         "sha256": "df44f15ef7e34799193ce87ee623b039fb05601f1fb1bfb5b8aa7fc9a0ed11aa",
-        "received_sha256": "1b6be91a75932f97ea9026cd14e013eb3865d06869d6c05eeb7f68d3ca9b62a3",
+        "received_sha256": "9b2b70cb70499c23b8f71b8932373d21be551e97c4141cb9341ccdf907349bcb",
         "received_bytes": 1450,
         "matches_pushed_source": true,
         "verification": "ORIGINAL_BYTES_EQUAL_WITH_OBSERVED_CLOUDFLARE_APPEND"
@@ -339,7 +345,7 @@
         "status": 200,
         "bytes": 21549,
         "sha256": "a27ebbb817628bec27259f9580393c20608b2b5aec94d8ae0cd026a32fb42d8c",
-        "received_sha256": "1d3155af65b5f35d3185a5e42f0a74b44534b516d442c75deb2ce5a45189e3c6",
+        "received_sha256": "e962241a650ee2269fa3fe610979b5da5c77870762f85a0033e3fe2dcc7623ef",
         "received_bytes": 22663,
         "matches_pushed_source": true,
         "verification": "ORIGINAL_BYTES_EQUAL_WITH_OBSERVED_CLOUDFLARE_APPEND"
@@ -414,10 +420,10 @@
         "path": "index.html",
         "url": "https://sports-edge-lab-nfl-current.alv-mendizabal.chatgpt.site/",
         "status": 200,
-        "bytes": 123360,
-        "sha256": "74a7d9e1765d22f77b4d2d4b9d18bdc6d7e95078d7bfaba31a7d8fd40dff9123",
-        "received_sha256": "e5dd44c6cc81495f99edd4c497db186f6d296b12b49b7cea982dd0b9b6c49cb1",
-        "received_bytes": 124474,
+        "bytes": 128572,
+        "sha256": "1a013a8097bfcc6ba1ef8a5e168de0a9f7c2e85637180d43bf9bdfe246b22ecd",
+        "received_sha256": "63b4b606583b49178f3330be933494532dc025670208607cf91448927d8cd1f8",
+        "received_bytes": 129686,
         "matches_pushed_source": true,
         "verification": "ORIGINAL_BYTES_EQUAL_WITH_OBSERVED_CLOUDFLARE_APPEND"
       },
@@ -449,7 +455,7 @@
         "status": 200,
         "bytes": 229463,
         "sha256": "80bf439ad4567d16edc600195785b202c14524c8fd03d0cca5a7502fb1453aba",
-        "received_sha256": "5980e13a4436efe6c0011267d6ed24ddd527e01348a76165affde1e47963f5b2",
+        "received_sha256": "ff36343520f7f5892dfdfb7036e5c0a8a4086f672d5dbf2a9f7d9960c0ab080a",
         "received_bytes": 230577,
         "matches_pushed_source": true,
         "verification": "ORIGINAL_BYTES_EQUAL_WITH_OBSERVED_CLOUDFLARE_APPEND"
@@ -522,7 +528,7 @@
       }
     ],
     "all_match": true,
-    "checked_at": "2026-11-25T05:49:37.870064+00:00",
+    "checked_at": "2026-11-25T05:56:27.069409+00:00",
     "method": "Anonymous HTTPS GET from a separate NFL diagnostic environment. Exact asset bytes or the single recognized host HTML addition were verified against the prepared release."
   }
 }
