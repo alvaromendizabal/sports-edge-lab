@@ -1,10 +1,12 @@
 # NFL Week 12 · November 24, 2026 Pacific
 
-[Open the live game dashboard](https://sports-edge-lab-nfl-current.alv-mendizabal.chatgpt.site/) · [All contest options](https://sports-edge-lab-nfl-current.alv-mendizabal.chatgpt.site/#circa) · [Model results](https://sports-edge-lab-nfl-current.alv-mendizabal.chatgpt.site/#results) · [Phone cards](https://sports-edge-lab-nfl-current.alv-mendizabal.chatgpt.site/#cards) · [Public release receipt](current/publication.json)
+[Open the live game dashboard](https://sports-edge-lab-nfl-current.alv-mendizabal.chatgpt.site/) · [All contest options](https://sports-edge-lab-nfl-current.alv-mendizabal.chatgpt.site/circa/) · [Model results](https://sports-edge-lab-nfl-current.alv-mendizabal.chatgpt.site/#results) · [Phone cards](https://sports-edge-lab-nfl-current.alv-mendizabal.chatgpt.site/#cards) · [Public release receipt](current/publication.json)
 
-N187 issued 109 pregame forecasts, including every Week 12 matchup. The Los Angeles Rams have a 58.0% win chance against Green Bay, a projected 4.25-point advantage and a 46.28-point total. All 16 matchups have separate DraftKings, Kalshi and Polymarket comparison slots at the dated market observation. The source table records 79 venues with their coverage and gaps. The Circa preview uses DraftKings spreads until an official worksheet is verified.
+[Circa Million Picks & Performance Dashboard](https://sports-edge-lab-nfl-current.alv-mendizabal.chatgpt.site/circa/) covers all 32 provisional sides, five distinct games and 47 reconstructed weekly cards. The [completed-game scoreboard](https://sports-edge-lab-nfl-current.alv-mendizabal.chatgpt.site/#completed-games) provides all 163 dated 2026 post-game reconstructions.
 
-[Previous Week 12 forecast — N186](current/archive/n186/index.html) · [Archived Week 11 dashboard](current/research-history.html?view=slate) · [Archived November 23 publication](current/publication-n175.json)
+N188 issued 109 pregame forecasts, including every Week 12 matchup. The Los Angeles Rams have a 58.0% win chance against Green Bay, a projected 4.25-point advantage and a 47.22-point total. All 16 matchups have separate DraftKings, Kalshi and Polymarket comparison slots at the dated market observation. The source table records 79 venues with their coverage and gaps. The Circa preview uses DraftKings spreads until an official worksheet is verified.
+
+[Previous Week 12 forecast · N187](current/archive/n187/index.html) · [Previous Week 12 forecast — N186](current/archive/n186/index.html) · [Archived Week 11 dashboard](current/research-history.html?view=slate) · [Archived November 23 publication](current/publication-n175.json)
 
 <!-- NFL_CURRENT_SLATE_20261120_START -->
 # Archived NFL slate dashboard · November 20, 2026

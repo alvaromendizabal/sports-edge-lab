@@ -185,8 +185,13 @@ def validate(root: Path, allow_empty=False):
         errors.append("Contest decision requires all sixteen game ranks")
     if len(current.weights) != 35 or any(current.weights.count(w) != 7 for w in ("50", "40", "30", "20", "10")):
         errors.append("All seven league objectives need all five validation weightings")
-    if len(current.images) != 4 or any(not (root / p).is_file() for p in current.images):
-        errors.append("Four downloadable public mobile cards are required")
+    contest = (root / "circa/index.html").read_text()
+    if "<h1>Circa Million Picks &amp; Performance Dashboard</h1>" not in contest or contest.count("data-card-season=") != 3:
+        errors.append("Dedicated contest page or its season evidence is missing")
+    if current_html.count("data-replay-week=") != 11 or not (root / "archive/n187/index.html").is_file():
+        errors.append("Completed NFL weeks and prior issue archive are required")
+    if len(current.images) != 5 or any(not (root / p).is_file() for p in current.images):
+        errors.append("Five downloadable public mobile cards are required")
     if not any(p.startswith("research-history.html") for p in current.links):
         errors.append("The current release must link to historical research")
     for asset in current.assets:
