@@ -4,11 +4,11 @@
   "public_url": "https://sports-edge-lab-nfl-current.alv-mendizabal.chatgpt.site/",
   "thanksgiving_url": "https://sports-edge-lab-nfl-current.alv-mendizabal.chatgpt.site/thanksgiving/",
   "dedicated_circa_url": "https://sports-edge-lab-nfl-current.alv-mendizabal.chatgpt.site/circa/",
-  "deployed_at": "2026-11-25T21:19:51.675799+00:00",
-  "site_source_commit": "2f7be99f2d28eb53a5bfca4f7362cf936230c710",
-  "github_application_source_commit": "36d02b3759b900e747458d5c0f7fb7fe49ef443f",
+  "deployed_at": "2026-11-25T21:26:57.291416+00:00",
+  "site_source_commit": "cec9d4dab3d4e04d897df070e0d9bb971acbaaf3",
+  "github_application_source_commit": "6c7fc9cced219183730d7cdc79ade4751501a13d",
   "audience": "public",
-  "archive_sha256": "7c6c75fc93313318b2b4f9de67cb137230711904dc85ed8e540870b915856144",
+  "archive_sha256": "5370e7dbfba11eee9b781bf389c574da2c4a8cb5b2c9e9aa8f6e16dfa3c88427",
   "scientific_scope": {
     "release": "N193",
     "historical_circa": {
@@ -181,8 +181,8 @@
       {
         "path": "all-games/index.html",
         "url": "https://sports-edge-lab-nfl-current.alv-mendizabal.chatgpt.site/all-games/index.html",
-        "sha256": "0cf27a1bba3fa8780af19d2a9fb3b88a9e16e57758c6ffa1d99e1e41e24fc271",
-        "bytes": 40429
+        "sha256": "c15b1aaac5ef7669d081ff65e5fd0fd1562322718fedf472c524b5a00efb97a2",
+        "bytes": 40522
       },
       {
         "path": "app.js",
@@ -1401,7 +1401,7 @@
     "method": "Expected source-byte manifest for the deployed Site. The public readback workflow checks all assets and interactive views."
   },
   "prior_morning_contest": "https://sports-edge-lab-nfl-current.alv-mendizabal.chatgpt.site/circa/draftkings-1003.html",
-  "site_version": 39,
-  "provider_saved_tar_sha256": "sha256:5ac7fe6fbe097e726b0b103e0285505796e23dc6f1dbbe663ab3d594230076e1",
+  "site_version": 40,
+  "provider_saved_tar_sha256": "sha256:577998cc99959b4929fa7284bbd8751e783eaaefe8207a22a0649f0c314271a1",
   "all_games_url": "https://sports-edge-lab-nfl-current.alv-mendizabal.chatgpt.site/all-games/"
 }
