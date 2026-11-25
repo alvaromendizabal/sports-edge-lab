@@ -134,6 +134,26 @@ function verifyHostedHtml(observed, source, context) {
     const text = selector => page.locator(selector).innerText();
     const count = (selector, expected) => page.locator(selector).count().then(actual => assert.equal(actual, expected, selector));
     const noOverflow = async () => { const layout = await page.evaluate(() => ({ width: window.innerWidth, scroll: document.documentElement.scrollWidth, outside: [...document.querySelectorAll("main *, header *")].filter(e => e.getBoundingClientRect().right > innerWidth + 1 && !e.closest(".scroll")).slice(0, 8).map(e => [e.tagName, e.id, e.className, e.getBoundingClientRect().right]) })); assert(layout.scroll <= layout.width + 1, JSON.stringify(layout)); };
+    await check(`${width}px: N196 field notes show all games, markets, roles and seven share cards`, async () => {
+      await page.goto(new URL("week-12-field-notes/", base).href, {waitUntil: "domcontentloaded"});
+      await count("article.game:visible", 16);
+      await page.selectOption("#day", "Thursday");
+      await count("article.game:visible", 3);
+      await page.selectOption("#day", "all");
+      assert.match(await text("article.game:has-text('DEN at PIT')"), /Rudolph/);
+      for (const role of ["0","1","2","3","4","5"]) {
+        await page.selectOption("#role", role);
+        await count(".objective:visible tbody tr", 32);
+        await count(".objective:visible .star", 5);
+      }
+      for (const venue of ["draftkings", "kalshi", "polymarket"]) {
+        await page.selectOption("#venue", venue);
+        await count("[data-venue]:visible tbody tr", 16);
+      }
+      await count("#phone img", 7);
+      assert.match(await text("#circa"), /before Wednesday’s 5 p.m./);
+      await noOverflow();
+    });
     await check(`${width}px: N195 official research choices and source-matched comparisons`, async () => {
       await page.goto(new URL('against-the-spread/', base).href, {waitUntil:'domcontentloaded'});
       await count('[data-n195="official-games"] tbody tr', 16);
