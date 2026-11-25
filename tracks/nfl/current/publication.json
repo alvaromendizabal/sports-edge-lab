@@ -1,23 +1,23 @@
 {
-  "version": "NFL_WEEK12_V13_N198_GAMEDAY",
+  "version": "NFL_WEEK12_V13_N198_BOTH_GAMEDAY_LISTS",
   "status": "DEPLOYED_AWAITING_HTTP_HASH_AUDIT",
   "public_url": "https://sports-edge-lab-nfl-current.alv-mendizabal.chatgpt.site/",
   "field_notes_url": "https://sports-edge-lab-nfl-current.alv-mendizabal.chatgpt.site/week-12-field-notes/",
   "thanksgiving_url": "https://sports-edge-lab-nfl-current.alv-mendizabal.chatgpt.site/thanksgiving/",
   "dedicated_circa_url": "https://sports-edge-lab-nfl-current.alv-mendizabal.chatgpt.site/circa/",
   "all_games_url": "https://sports-edge-lab-nfl-current.alv-mendizabal.chatgpt.site/all-games/",
-  "deployed_at": "2026-11-25T23:49:42.641950+00:00",
-  "site_version": 49,
-  "site_source_commit": "263623552dc3ed4a6d12660eed8e5f3b2e760810",
-  "github_application_source_commit": "d0c5d89285f3b487b5c7a44266aacfe045d73792",
-  "archive_sha256": "16b39fef1ff3b25b0e7942c715532216138aba759c71b450e083356d237df9f1",
-  "provider_saved_tar_sha256": "sha256:075059f936a6851bdf4a5ecd2c782ec1ed90d409b9827910e770c7e3731c81af",
+  "deployed_at": "2026-11-25T23:54:08.917612+00:00",
+  "site_version": 50,
+  "site_source_commit": "f10e92c503d095d7725eb5f830a03bbd517b2725",
+  "github_application_source_commit": "73e3b7c391135ee781188548fa576aa1ac3177af",
+  "archive_sha256": "b204695078791b323e4e4ec417bb9fb22a56d7f5a956501a1ac34a4e024fea22",
+  "provider_saved_tar_sha256": "sha256:48a8018f24db98f1208b0d56887d6e2a31143827c6ed5e6de58e1cf34b476417",
   "audience": "public",
   "scientific_scope": {
     "release": "N198",
     "previous": "N197",
     "outcome": "All 33 registered stages complete; V13 incomplete",
-    "prior_edition_receipt": "publication-n198-v48.json",
+    "prior_edition_receipt": "publication-n198-v49.json",
     "original_pregame_forecasts": 109,
     "week12_games": 16,
     "existing_league_issues_retained": true,
@@ -102,8 +102,8 @@
       "player_rows": 256,
       "published_league_designations": 40,
       "final_designation_reports": 8,
-      "game_day_inactive_cutoff_utc": "2026-11-25T23:47:38.212752+00:00",
-      "game_day_lists": "GREEN_BAY_VERIFIED_LOS_ANGELES_PENDING_AT_CUTOFF",
+      "game_day_inactive_cutoff_utc": "2026-11-25T23:51:03.827850+00:00",
+      "game_day_lists": "BOTH_CONFIRMED",
       "later_club_notes": [
         "SEA",
         "SF",
@@ -123,7 +123,27 @@
       "green_bay_official_source_sha256": "b82103a19694cbc36183c18c6604ad884f9b7150b8c363194bec191939bfc6fa",
       "green_bay_confirmed_active": 3,
       "green_bay_inactive": 5,
-      "prior_forecasts_preserved": true
+      "prior_forecasts_preserved": true,
+      "both_official_source_sha256": "c996f32f7292d57dac8dc34495d96419623064dc643aa33354973b0351f4f5af",
+      "los_angeles_inactive": 6,
+      "emergency_third_quarterback": "Ty Simpson",
+      "bounded_sensitivity": {
+        "observed_utc": "2026-11-25T23:52:33.100244+00:00",
+        "evidence_sha256": "a156b4ca76534ef32a2ab1bfaadc3e7e0524084d648a897bfbbf51e07c47ea8d",
+        "rams_win": [
+          0.6446030261721042,
+          0.6867743937095836
+        ],
+        "median_margin_rams": [
+          4,
+          6
+        ],
+        "median_total": [
+          44,
+          45
+        ],
+        "original_issue_preserved": true
+      }
     },
     "distinct_term_scope": "Distinct signed numeric terms across all matched venue rows"
   },
@@ -1694,8 +1714,8 @@
       {
         "path": "week-12-field-notes/index.html",
         "url": "https://sports-edge-lab-nfl-current.alv-mendizabal.chatgpt.site/week-12-field-notes/index.html",
-        "bytes": 91418,
-        "sha256": "a72645f5a71b5de7ed0882d4e41e123ee64011bb0e54ebb35204357615029af9"
+        "bytes": 92985,
+        "sha256": "7e70e1d128a8712a03a32e8ee7436ee963cdc0f1b83f4a3c83e514569b9f68e8"
       },
       {
         "path": "week-12-field-notes/n196.html",
@@ -1714,6 +1734,12 @@
         "url": "https://sports-edge-lab-nfl-current.alv-mendizabal.chatgpt.site/week-12-field-notes/n198-1533.html",
         "bytes": 90026,
         "sha256": "02054a7d8a67e188d32aad223827e920a14a26ae99dcf4120def61c34abd3ef0"
+      },
+      {
+        "path": "week-12-field-notes/n198-1545.html",
+        "url": "https://sports-edge-lab-nfl-current.alv-mendizabal.chatgpt.site/week-12-field-notes/n198-1545.html",
+        "bytes": 91418,
+        "sha256": "a72645f5a71b5de7ed0882d4e41e123ee64011bb0e54ebb35204357615029af9"
       },
       {
         "path": "week-12-field-notes/N198-public-Circa-five.png",
