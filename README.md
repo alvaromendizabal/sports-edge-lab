@@ -94,9 +94,9 @@ The prepared V7 continuation prioritizes current forecasts, restores exact old f
 
 [Open the NFL dashboard](https://sports-edge-lab-nfl-current.alv-mendizabal.chatgpt.site/) · [Thanksgiving tripleheader](https://sports-edge-lab-nfl-current.alv-mendizabal.chatgpt.site/thanksgiving/) · [All Week 12 games](https://sports-edge-lab-nfl-current.alv-mendizabal.chatgpt.site/weeks/12/) · [Circa picks and performance](https://sports-edge-lab-nfl-current.alv-mendizabal.chatgpt.site/circa/) · [Phone graphics](https://sports-edge-lab-nfl-current.alv-mendizabal.chatgpt.site/#cards)
 
-N192 added 80 validation decisions for eight [football score events](https://sports-edge-lab-nfl-current.alv-mendizabal.chatgpt.site/#game-events), with probabilities for all 109 upcoming games and retrospective grades for all 163 completed games. The two new 50/50 winners improve forecasts of games decided by eight points or fewer. The N189 league win chances and points, the N190 accuracy and RMSE estimates, and the N191 ranges retain their original issue times.
+N193 compared nine forecasts on every eligible game in each validation season. The new point-margin model won the 50/50 margin-MAE objective. The other eight primary selections retained their original forecast clocks. See [season-by-season results](https://sports-edge-lab-nfl-current.alv-mendizabal.chatgpt.site/#score-review), the [16-game board](https://sports-edge-lab-nfl-current.alv-mendizabal.chatgpt.site/weeks/12/) and the separate late-price scenarios.
 
-The [Circa dashboard](https://sports-edge-lab-nfl-current.alv-mendizabal.chatgpt.site/circa/#weekly-objectives) compares 281 five-game policies across both validation seasons and the 11-week 2026 replay. The points and four-win cards share five selections. The perfect-week policy keeps Buffalo and changes four games. All 32 official sides are available for each objective, with zero contest submissions. The [previous N191 edition](https://sports-edge-lab-nfl-current.alv-mendizabal.chatgpt.site/archive/n191/) retains the original forecasts and 13 phone graphics.
+The [official Circa dashboard](https://sports-edge-lab-nfl-current.alv-mendizabal.chatgpt.site/circa/#margin-edge-cards) compares 45,249 policies. The points and four-win selections keep the earlier five, while the perfect-week and probability-score choices produce two other cards. All alternatives and 17 phone graphics are accessible without downloading a report. There were zero contest submissions. [Earlier N192 game-event edition](https://sports-edge-lab-nfl-current.alv-mendizabal.chatgpt.site/archive/n192/).
 
 ## NFL Week 11 archive and model audit · November 20, 2026 Pacific
 
@@ -213,7 +213,7 @@ a narrow missing-clock checkpoint repair.
 
 | Track | Entry point | Publication boundary |
 |---|---|---|
-| NFL | [Week 12 and Thanksgiving](https://sports-edge-lab-nfl-current.alv-mendizabal.chatgpt.site/thanksgiving/) · [Public dashboard](https://sports-edge-lab-nfl-current.alv-mendizabal.chatgpt.site/) · [Evidence](tracks/nfl/README.md) | N192 covers 109 scheduled and 163 completed games with separately dated model, market and contest evidence. |
+| NFL | [Week 12 and Thanksgiving](https://sports-edge-lab-nfl-current.alv-mendizabal.chatgpt.site/thanksgiving/) · [Public dashboard](https://sports-edge-lab-nfl-current.alv-mendizabal.chatgpt.site/) · [Evidence](tracks/nfl/README.md) | N193 covers 109 scheduled and 163 completed games with separately dated model, market and contest evidence. |
 | NCAA FBS | [Browser dashboard](https://sports-edge-lab-fbs.alv-mendizabal.chatgpt.site) · [Track](tracks/ncaaf/README.md) | Actual V053 partial; V055 prepared; 500 saved issue contexts across 122 games, with dated provider coverage |
 | NBA | [Research view](docs/NBA_RESEARCH_CARD.md) | Separately dated basketball evidence |
 | NCAA basketball | [Open dashboards](https://alvaro-ncaa-research-review.alv-mendizabal.chatgpt.site/) · [Men's evidence](tracks/ncaam/README.md) · [Women's evidence](tracks/ncaaw/README.md) · [Runnable contracts](examples/ncaa_review/README.md) | Separate historical selections, current execution gaps and three-provider qualification |

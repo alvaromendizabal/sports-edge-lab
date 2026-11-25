@@ -192,7 +192,7 @@ def validate(root: Path, allow_empty=False):
         errors.append("Completed NFL weeks and prior issue archive are required")
     if current_html.count("data-joint-games=") != 7 or current_html.count("data-joint-ratio=") != 5:
         errors.append("Paired scores require the remaining scheduled weeks and all selection weights")
-    if len({p for p in current.images if p.startswith("share/")}) != 16 or any(not (root / p).is_file() for p in current.images):
+    if len({p for p in current.images if p.startswith("share/")}) != 17 or any(not (root / p).is_file() for p in current.images):
         errors.append("Seventeen downloadable public phone cards are required")
     if not any(p.startswith("research-history.html") for p in current.links):
         errors.append("The current release must link to historical research")
@@ -210,6 +210,8 @@ def validate(root: Path, allow_empty=False):
         errors.append("Interval decisions, game forecasts and matched contest comparisons required")
     if current_html.count('data-event-weight=') != 5 or current_html.count('data-event-game=') != 16 or contest.count('data-weekly-utility-weight=') != 5:
         errors.append("All five event and contest ratios and all Week 12 probabilities are required")
+    if current_html.count('data-n193-game=') != 16 or current_html.count('data-n193-validation=') != 5 or contest.count('data-n193-sides=') != 3:
+        errors.append("Nine score objectives and all three distinct official cards are required")
     for marker in private_markers:
         if marker in current_html:
             errors.append(f"Week 12 contains an internal marker {marker}")

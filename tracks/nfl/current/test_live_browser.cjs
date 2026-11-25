@@ -136,7 +136,7 @@ function verifyHostedHtml(observed, source, context) {
       await noOverflow();
       assert.match(await page.locator("body").innerText(), /Week 12/i);
       assert(page.url().startsWith(base.href));
-      assert.match(await text(".hero-stats"), /LAR by 4.25|Rams by 4.25/);
+      assert.match(await text(".hero-stats"), /LAR by 4.66|Rams by 4.66/);
       assert.match(await text(".hero-footer"), /10:08 PM PT/);
       assert.match(await text("#results"), /N190 VS N189/i);
       await count("#completed-games tbody tr", 163);
@@ -146,6 +146,10 @@ function verifyHostedHtml(observed, source, context) {
       await count("[data-ats-horizons] tbody tr", 206);
       await count("#slate [data-range-game]", 16);
       await count("#slate [data-event-game]", 16);
+      await count("#slate [data-n193-game]",16);
+      await count("[data-n193-validation] tbody tr",45);
+      await count("[data-n193-replay] tbody tr",163);
+      assert.match(await text("#score-review"),/1 of 9/);
       await count("[data-event-weight] tbody tr",80);
       await count("[data-event-replay-week] tbody tr",163);
       await count("[data-event-calibration] tbody tr",240);
@@ -212,6 +216,9 @@ function verifyHostedHtml(observed, source, context) {
       await count("[data-n191-cards-annual] tbody tr", 9);
       await count("[data-weekly-utility-weight] tbody tr",15);
       await count("[data-weekly-official] tbody tr",96);
+      await count("[data-n193-sides] tbody tr",96);
+      await count("[data-n193-contest-weight] tbody tr",25);
+      await count("[data-n193-legacy] tbody tr",35);
       await count("[data-weekly-utility-five] tbody tr",5);
       assert.match(await text("main"), /Expected points across these five selections/);
       assert.match(await text("#historic-rules"), /28.5 out of 45/);
@@ -236,14 +243,15 @@ function verifyHostedHtml(observed, source, context) {
         const fixtures = await page.locator("[data-fixture]").count();
         await count("[data-range-game]", fixtures);
         await count("[data-event-game]", fixtures);
+        await count("[data-n193-game]",fixtures);
         scheduled += fixtures;
       }
       assert.equal(scheduled, 109);
       await page.goto(new URL("#current-objectives", base).href);
       await count("[data-current-ratio] tbody tr", 15);
       await count("#aux-replays tbody tr", 163);
-      await count("#cards a.gallery-card", 16);
-      await count("#cards a.gallery-card[href*=n192-circa]", 8);
+      await count("#cards a.gallery-card", 17);
+      await count("#cards a.gallery-card[href*=n193-circa]", 8);
     });
     let navigation = 0;
     const go = async query => {
