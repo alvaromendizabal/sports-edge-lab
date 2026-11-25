@@ -153,6 +153,14 @@ function verifyHostedHtml(observed, source, context) {
         await page.selectOption("#venue", venue);
         await count("[data-venue]:visible tbody tr", 16);
       }
+      await count("#availability details.health", 16);
+      await count("#availability .health-grid article", 32);
+      await count(".five .pick-alert", 2);
+      await page.locator('.rosterlink[href="#availability-NE-LAC"]').click();
+      assert(await page.locator("#availability-NE-LAC").evaluate(el => el.open));
+      assert.match(await text("#availability-NE-LAC"), /Tommy DeVito/);
+      assert.match(await text("#availability-NE-LAC"), /Justin Herbert/);
+      assert.match(await text("#availability"), /256 players across 26 of 32/);
       await count("#phone img", 7);
       assert.match(await text("#circa"), /before Wednesday’s 5 p.m./);
       await noOverflow();
