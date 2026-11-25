@@ -106,7 +106,7 @@ A bounded review of **216 already-fitted R20 models** found **zero improvements 
 
 ## NFL V10 recovery · November 13, 2026 UTC
 
-**Current Circa / Manual alternative:** [Open the N089 comparison](https://sports-edge-lab-nfl.alv-mendizabal.chatgpt.site/circa/) · [Current source and evidence](tracks/nfl/circa_million_2026/current/README.md). Frozen model cards and the requested manual JAX −10.5 card remain separate; unavailable cover probabilities are not fabricated. The N088 season dashboard remains unchanged.
+**Archived N089 Circa / manual comparison.** [N089 comparison source](tracks/nfl/circa_million_2026/current/index.html) · [Archived evidence](tracks/nfl/circa_million_2026/current/README.md). Frozen model cards and the requested manual JAX −10.5 card remain separate; unavailable cover probabilities are not fabricated. The N088 season dashboard remains unchanged.
 
 [Prepared N088 interactive source](tracks/nfl/dashboard_n088/index.html) · [Current NFL evidence](tracks/nfl/README.md) · [Fresh public Phase A scorecards](tracks/nfl/phase_a_n088_public.json)
 
@@ -114,7 +114,7 @@ A bounded review of **216 already-fitted R20 models** found **zero improvements 
 
 **The actual N087 owner run failed** after 678.674 seconds at 0.399 mean CPU cores. Both live logs and the return closure succeeded, but all three scientific children exited without responses. A cold-import recursion defect is independently reproduced in the exact packaged executable. Fifteen paid calls occurred; zero completed new scientific receipts were verified.
 
-**The public NFL dashboard is now deployed as version 42** at [the same browser-ready URL](https://sports-edge-lab-nfl.alv-mendizabal.chatgpt.site/), pinned to GitHub merge `a32506fb28e6a7a8a72b5964714fd4fc5a748374`. The previously stale November 9 N063 site is preserved under `/archive/v41/`. [Deployment receipt](tracks/nfl/n088_online_deployment.json) · [Real production Chromium checks](https://github.com/alvaromendizabal/sports-edge-lab/actions/workflows/nfl-static-review.yml). GitHub Pages itself returned HTTP 404; the existing authorized host serves the app.
+**The November 13 deployment was version 42** at the former public origin. The [archived N088 page](https://sports-edge-lab-nfl-current.alv-mendizabal.chatgpt.site/dashboard_n088/index.html) remains viewable; that deployment was pinned to GitHub merge `a32506fb28e6a7a8a72b5964714fd4fc5a748374`. The previously stale November 9 N063 site is preserved under `/archive/v41/`. [Deployment receipt](tracks/nfl/n088_online_deployment.json) · [Real production Chromium checks](https://github.com/alvaromendizabal/sports-edge-lab/actions/workflows/nfl-static-review.yml). GitHub Pages itself returned HTTP 404; the existing authorized host serves the app.
 
 ## Preserved NFL N085 / N086 evidence · November 13, 2026 Pacific
 
@@ -154,7 +154,7 @@ The latest bounded source capture has **7,125 normalized observations, 78 observ
 
 **N058 V4 historical preparation failed before fitting at a safe-file boundary. N059 repairs that exact boundary and remains prepared.** It preserves recent completed-season selection, earlier-only per-cutoff fitting, train-only transformations, genuine OOF meta layers and exact checkpoint reuse. The retained 211-candidate/159-extractor registry receives no new owner admission or evaluation credit.
 
-[Complete NFL evidence](tracks/nfl/README.md) · [Open interactive dashboard](https://sports-edge-lab-nfl.alv-mendizabal.chatgpt.site/) · [Bounded offline public HTML](tracks/nfl/season_review_n054.html)
+[Complete NFL evidence](tracks/nfl/README.md) · [Open current NFL dashboard](https://sports-edge-lab-nfl-current.alv-mendizabal.chatgpt.site/) · [Bounded offline public HTML](tracks/nfl/season_review_n054.html)
 
 The Site is a dated publication of an exact canonical commit. Publication requires exact PR-head CI, a permitted merge, final-main readbacks and deployment/content verification. Active NFL presentation is research-only.
 

@@ -156,10 +156,10 @@ function verifyHostedHtml(observed, source, context) {
       for (const [view, anchor] of Object.entries({slate:"slate", circa:"circa", performance:"results", cards:"cards"})) {
         await page.goto(new URL("?view=" + view, base).href);
         await page.waitForURL(u => u.hash === "#" + anchor && !u.searchParams.has("view"));
-        assert(!new URL(page.url()).pathname.endsWith("research-history.html"));
+        assert(!/\/research-history(?:\.html)?$/.test(new URL(page.url()).pathname));
       }
       await page.goto(new URL("?view=cards&type=games&clock=T60&page=4", base).href);
-      await page.waitForURL(u => u.pathname.endsWith("/research-history.html") && u.searchParams.get("page") === "4");
+      await page.waitForURL(u => /\/research-history(?:\.html)?$/.test(u.pathname) && u.searchParams.get("page") === "4");
       await page.waitForFunction(() => document.querySelector("#cards-page-label")?.textContent.trim() === "4 / 4");
     });
     let navigation = 0;
