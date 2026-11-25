@@ -140,6 +140,11 @@ function verifyHostedHtml(observed, source, context) {
       assert.match(await text(".hero-footer"), /10:08 PM PT/);
       assert.match(await text("#results"), /N190 VS N189/i);
       await count("#completed-games tbody tr", 163);
+      await count("[data-interval-weight] tbody tr", 40);
+      await count("[data-interval-reliability] tbody tr", 18);
+      await count("[data-interval-replay-week] tbody tr", 163);
+      await count("[data-ats-horizons] tbody tr", 206);
+      await count("#slate [data-range-game]", 16);
       await count("[data-joint-games] tbody tr", 109);
       await count("[data-recovered-ratio] tbody tr", 15);
       assert.match(await text("#recovered-validation"), /70.35%/);
@@ -197,6 +202,9 @@ function verifyHostedHtml(observed, source, context) {
       assert.equal(await text("h1"), "Circa Million Picks & Performance Dashboard");
       await count("[data-card-season] tbody tr", 47);
       await count("[data-card-validation] tbody tr", 5);
+      await count("[data-n191-card-rule] tbody tr", 15);
+      await count("[data-card-vintages] tbody tr", 5);
+      await count("[data-n191-cards-annual] tbody tr", 9);
       assert.match(await text("main"), /Expected points across these five selections/);
       assert.match(await text("#historic-rules"), /28.5 out of 45/);
       assert.match(await text("#historic-rules"), /30.5\/55/);
@@ -217,14 +225,16 @@ function verifyHostedHtml(observed, source, context) {
       for (let week = 12; week <= 18; week++) {
         await page.goto(new URL("weeks/" + week + "/", base).href);
         await noOverflow();
-        scheduled += await page.locator("[data-fixture]").count();
+        const fixtures = await page.locator("[data-fixture]").count();
+        await count("[data-range-game]", fixtures);
+        scheduled += fixtures;
       }
       assert.equal(scheduled, 109);
       await page.goto(new URL("#current-objectives", base).href);
       await count("[data-current-ratio] tbody tr", 15);
       await count("#aux-replays tbody tr", 163);
-      await count("#cards a.gallery-card", 17);
-      await count("#cards a.gallery-card[href*=circa-official]", 5);
+      await count("#cards a.gallery-card", 13);
+      await count("#cards a.gallery-card[href*=n191-circa]", 5);
     });
     let navigation = 0;
     const go = async query => {
