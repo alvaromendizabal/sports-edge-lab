@@ -192,7 +192,7 @@ def validate(root: Path, allow_empty=False):
         errors.append("Completed NFL weeks and prior issue archive are required")
     if current_html.count("data-joint-games=") != 7 or current_html.count("data-joint-ratio=") != 5:
         errors.append("Paired scores require the remaining scheduled weeks and all selection weights")
-    if len({p for p in current.images if p.startswith("share/")}) != 17 or any(not (root / p).is_file() for p in current.images):
+    if len({p for p in current.images if p.startswith("share/")}) != 18 or any(not (root / p).is_file() for p in current.images):
         errors.append("Seventeen downloadable public phone cards are required")
     if not any(p.startswith("research-history.html") for p in current.links):
         errors.append("The current release must link to historical research")
@@ -212,6 +212,8 @@ def validate(root: Path, allow_empty=False):
         errors.append("All five event and contest ratios and all Week 12 probabilities are required")
     if current_html.count('data-n193-game=') != 16 or current_html.count('data-n193-validation=') != 5 or contest.count('data-n193-sides=') != 3:
         errors.append("Nine score objectives and all three distinct official cards are required")
+    if current_html.count('data-n194-game=') != 16 or current_html.count('data-n194-validation=') != 5 or contest.count('data-n194-sides=') != 5 or not (root / 'archive/n193/all-games/index.html').is_file():
+        errors.append("Current and historical N194/N193 consumer routes and official model cards are incomplete")
     for marker in private_markers:
         if marker in current_html:
             errors.append(f"Week 12 contains an internal marker {marker}")
