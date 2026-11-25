@@ -134,17 +134,17 @@ function verifyHostedHtml(observed, source, context) {
     const text = selector => page.locator(selector).innerText();
     const count = (selector, expected) => page.locator(selector).count().then(actual => assert.equal(actual, expected, selector));
     const noOverflow = async () => { const layout = await page.evaluate(() => ({ width: window.innerWidth, scroll: document.documentElement.scrollWidth, outside: [...document.querySelectorAll("main *, header *")].filter(e => e.getBoundingClientRect().right > innerWidth + 1 && !e.closest(".scroll")).slice(0, 8).map(e => [e.tagName, e.id, e.className, e.getBoundingClientRect().right]) })); assert(layout.scroll <= layout.width + 1, JSON.stringify(layout)); };
-    await check(`${width}px: N197 field notes show all games, markets, roles and seven share cards`, async () => {
+    await check(`${width}px: N198 field notes show all 16 roster forecasts, 284 public assets, all Circa roles and seven current share cards`, async () => {
       await page.goto(new URL("week-12-field-notes/", base).href, {waitUntil: "domcontentloaded"});
-      assert.match(await text(".dateline"), /3:07 p.m. Pacific.*N197/);
-      assert.match(await text("#record"), /141 new estimators/);
-      assert.match(await text("#markets"), /1,703 exact pregame line observations/);
+      assert.match(await text(".dateline"), /3:33 p.m. Pacific.*N198/);
+      assert.match(await text("#record"), /227 new estimators/);
+      assert.match(await text("#markets"), /1,672 exact pregame line observations/);
       await count("article.game:visible", 16);
       await page.selectOption("#day", "Thursday");
       await count("article.game:visible", 3);
       await page.selectOption("#day", "all");
       assert.match(await text("article.game:has-text('DEN at PIT')"), /Rudolph/);
-      for (const role of ["0","1","2","3","4","5"]) {
+      for (const role of ["0","1","2","3","4","5","6","7","8"]) {
         await page.selectOption("#role", role);
         await count(".objective:visible tbody tr", 32);
         await count(".objective:visible .star", 5);
@@ -161,6 +161,18 @@ function verifyHostedHtml(observed, source, context) {
       assert.match(await text("#availability-NE-LAC"), /Tommy DeVito/);
       assert.match(await text("#availability-NE-LAC"), /Justin Herbert/);
       assert.match(await text("#availability"), /256 players across 26 of 32/);
+      await count("#worksheet-models tbody tr", 16);
+      assert.match(await text("#worksheet-models"), /7 of 16 games.*split in 9/);
+      await count("#roster-forecast tr[id^='roster-estimate-']",16);
+      await count("#roster-forecast details tbody tr",32);
+      assert.match(await text("#roster-forecast"), /272 forecast distributions/);
+      await count("#phone img[src^='N198-public-']",7);
+      await page.locator('.rosterlink[href="#availability-SEA-SF"]').click();
+      assert.match(await text("#availability-SEA-SF"), /Brock Purdy.*ankle/);
+      assert.match(await text("#availability-SEA-SF"), /Darnold.*practice/);
+      await page.locator('.rosterlink[href="#availability-GB-LAR"]').click();
+      assert.match(await text("#availability-GB-LAR"), /Puka Nacua/);
+      assert.match(await text("#availability"), /awaiting official verification at 3:34 p.m./);
       await count("#phone img", 7);
       assert.match(await text("#circa"), /before Wednesday’s 5 p.m./);
       await noOverflow();
