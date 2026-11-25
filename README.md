@@ -92,15 +92,17 @@ The prepared V7 continuation prioritizes current forecasts, restores exact old f
 
 ## NFL Week 12 · November 24, 2026 Pacific
 
-[Open the public NFL dashboard](https://sports-edge-lab-nfl-current.alv-mendizabal.chatgpt.site/) · [Contest alternatives](https://sports-edge-lab-nfl-current.alv-mendizabal.chatgpt.site/circa/) · [Objective-specific models](https://sports-edge-lab-nfl-current.alv-mendizabal.chatgpt.site/#results) · [Five phone cards](https://sports-edge-lab-nfl-current.alv-mendizabal.chatgpt.site/#cards) · [Deployment evidence](tracks/nfl/current/publication.json)
+[Open the public NFL dashboard](https://sports-edge-lab-nfl-current.alv-mendizabal.chatgpt.site/) · [Contest alternatives](https://sports-edge-lab-nfl-current.alv-mendizabal.chatgpt.site/circa/) · [Objective-specific models](https://sports-edge-lab-nfl-current.alv-mendizabal.chatgpt.site/#results) · [Six phone cards](https://sports-edge-lab-nfl-current.alv-mendizabal.chatgpt.site/#cards) · [Deployment evidence](tracks/nfl/current/publication.json)
+
+[Joint team scores](https://sports-edge-lab-nfl-current.alv-mendizabal.chatgpt.site/#joint-scores) includes expected points for each team, the likeliest exact score and its probability for all 109 future games. N189 also tested joint log loss and both teams’ point errors across five validation weightings, with a matched independence control.
 
 [Circa Million Picks & Performance Dashboard](https://sports-edge-lab-nfl-current.alv-mendizabal.chatgpt.site/circa/) covers all 32 provisional sides, five distinct games and 47 reconstructed weekly cards. The [completed-game scoreboard](https://sports-edge-lab-nfl-current.alv-mendizabal.chatgpt.site/#completed-games) provides all 163 dated 2026 post-game reconstructions.
 
-N188 issued winner, margin and total forecasts for all 109 remaining games. Week 12 includes 16 matchups, 32 provisional contest sides and five mobile cards. The dashboard compares 35 validation decisions with N187 and shows the current three named venues plus coverage across all 79 observed sources.
+N189 issued winner, margin and total forecasts for all 109 remaining games. Week 12 includes 16 matchups, 32 provisional contest sides and six mobile cards. The dashboard compares 35 validation decisions with N188 and shows the current three named venues plus coverage across all 79 observed sources.
 
 ## NFL Week 11 archive and model audit · November 20, 2026 Pacific
 
-[Previous Week 12 forecast · N187](tracks/nfl/current/archive/n187/index.html) · [Previous Week 12 forecast — N186](tracks/nfl/current/archive/n186/index.html) · [Archived Week 11 dashboard](tracks/nfl/current/research-history.html) · [Selected evidence](tracks/nfl/current/evidence.json) · [Newest-fit comparison](tracks/nfl/current/newest_model_comparison.json) · [Every Circa side](tracks/nfl/current/circa_evidence.json)
+[Previous Week 12 forecast · N188](tracks/nfl/current/archive/n188/index.html) · [Previous Week 12 forecast · N187](tracks/nfl/current/archive/n187/index.html) · [Previous Week 12 forecast — N186](tracks/nfl/current/archive/n186/index.html) · [Archived Week 11 dashboard](tracks/nfl/current/research-history.html) · [Selected evidence](tracks/nfl/current/evidence.json) · [Newest-fit comparison](tracks/nfl/current/newest_model_comparison.json) · [Every Circa side](tracks/nfl/current/circa_evidence.json)
 
 The responsive dashboard covers all **11 Sunday, November 22 games plus Monday**, with probability, margin and total, 24 official Circa sides, metric-specific model scorecards, four game phone cards and two Circa phone cards. The usable matchup snapshot retains **November 16 inputs** and the models selected in the **R18 return**. Current T60 matchup inputs are unqualified and remain blank.
 
@@ -213,7 +215,7 @@ a narrow missing-clock checkpoint repair.
 
 | Track | Entry point | Publication boundary |
 |---|---|---|
-| NFL | [Current game outlook](tracks/nfl/current/index.html) · [Public dashboard](https://sports-edge-lab-nfl-current.alv-mendizabal.chatgpt.site/) · [Evidence](tracks/nfl/README.md) | N187 covers 109 pending games, 16 Week 12 matchups, 32 provisional contest sides, 79 observed sources and five mobile cards. Seven objectives use five 2024/2025 weightings. All dated Week 11 views remain accessible. |
+| NFL | [Current game outlook](tracks/nfl/current/index.html) · [Public dashboard](https://sports-edge-lab-nfl-current.alv-mendizabal.chatgpt.site/) · [Evidence](tracks/nfl/README.md) | N187 covers 109 pending games, 16 Week 12 matchups, 32 provisional contest sides, 79 observed sources and six mobile cards. Seven objectives use five 2024/2025 weightings. All dated Week 11 views remain accessible. |
 | NCAA FBS | [Browser dashboard](https://sports-edge-lab-fbs.alv-mendizabal.chatgpt.site) · [Track](tracks/ncaaf/README.md) | Actual V053 partial; V055 prepared; 500 saved issue contexts across 122 games, with dated provider coverage |
 | NBA | [Research view](docs/NBA_RESEARCH_CARD.md) | Separately dated basketball evidence |
 | NCAA basketball | [Open dashboards](https://alvaro-ncaa-research-review.alv-mendizabal.chatgpt.site/) · [Men's evidence](tracks/ncaam/README.md) · [Women's evidence](tracks/ncaaw/README.md) · [Runnable contracts](examples/ncaa_review/README.md) | Separate historical selections, current execution gaps and three-provider qualification |

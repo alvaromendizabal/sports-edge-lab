@@ -190,8 +190,10 @@ def validate(root: Path, allow_empty=False):
         errors.append("Dedicated contest page or its season evidence is missing")
     if current_html.count("data-replay-week=") != 11 or not (root / "archive/n187/index.html").is_file():
         errors.append("Completed NFL weeks and prior issue archive are required")
-    if len(current.images) != 5 or any(not (root / p).is_file() for p in current.images):
-        errors.append("Five downloadable public mobile cards are required")
+    if current_html.count("data-joint-games=") != 7 or current_html.count("data-joint-ratio=") != 5:
+        errors.append("Paired scores require the remaining scheduled weeks and all selection weights")
+    if len(current.images) != 6 or any(not (root / p).is_file() for p in current.images):
+        errors.append("Six downloadable public mobile cards are required")
     if not any(p.startswith("research-history.html") for p in current.links):
         errors.append("The current release must link to historical research")
     for asset in current.assets:
