@@ -2,7 +2,7 @@
 
 **[Open the Week 12 field notes](https://sports-edge-lab-nfl-current.alv-mendizabal.chatgpt.site/week-12-field-notes/)** · [All 16 game forecasts](https://sports-edge-lab-nfl-current.alv-mendizabal.chatgpt.site/week-12-field-notes/#games) · [Official Circa sides](https://sports-edge-lab-nfl-current.alv-mendizabal.chatgpt.site/week-12-field-notes/#circa) · [Phone graphics](https://sports-edge-lab-nfl-current.alv-mendizabal.chatgpt.site/week-12-field-notes/#phone)
 
-The November 25 N197 run fitted 141 estimators and 282 calibration transformations. Its ordinary spread-points model averaged 145.0/272 in matched validation, up from 142.5, and earned 72.5/163 on the exposed 2026 replay. The N195 official-line model retained the strongest standing all-game and weekly-five policies. The 3:07 p.m. Pacific market assessment covers all 16 games. [Earlier N196 edition](https://sports-edge-lab-nfl-current.alv-mendizabal.chatgpt.site/week-12-field-notes/n196.html).
+The November 25 N197 run fitted 141 estimators and 282 calibration transformations. Its ordinary handicap-points model averaged 145.0/272 in matched validation, up from 142.5, and earned 72.5/163 on the exposed 2026 replay. The standing N195 official-line model retained its all-game and weekly-five roles. The 3:07 p.m. Pacific market assessment covers 16 games. [Earlier N196 edition](https://sports-edge-lab-nfl-current.alv-mendizabal.chatgpt.site/week-12-field-notes/n196.html).
 
 # NFL Week 12 and Thanksgiving · November 25, 2026 Pacific
 
