@@ -114,6 +114,8 @@ class ActualV070Publication(unittest.TestCase):
             stripped=re.sub(r'<!-- FBS_V071_LATEST_LINK_START -->.*?<!-- FBS_V071_LATEST_LINK_END -->','',txt,flags=re.S)
             self.assertEqual(blob(stripped.encode()),sha)
         txt=(P/'README.md').read_text()
+        txt = re.sub(r'\A<!-- FBS_V117_SPREAD_TOTALS_START -->.*?<!-- FBS_V117_SPREAD_TOTALS_END -->\n\n', '', txt, count=1, flags=re.S)
+        txt = re.sub(r'\A<!-- FBS_V116_SELECTED_REVIEW_START -->.*?<!-- FBS_V116_SELECTED_REVIEW_END -->\n\n', '', txt, count=1, flags=re.S)
         txt = re.sub(r'\A<!-- FBS_V101_PREPARATION_START -->.*?<!-- FBS_V101_PREPARATION_END -->\n\n', '', txt, count=1, flags=re.S)
         txt = re.sub(r'<!-- FBS_V099_ACTUAL_RETURN_START -->.*?<!-- FBS_V099_ACTUAL_RETURN_END -->\n\n', '', txt, flags=re.S)
         txt = re.sub(r'<!-- FBS_V098_ACTUAL_RETURN_START -->.*?<!-- FBS_V098_ACTUAL_RETURN_END -->\n\n', '', txt, flags=re.S)

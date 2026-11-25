@@ -1,0 +1,31 @@
+{
+  "schema": "fbs.spread-totals.external-schedule-status.v1",
+  "owner": "fbs",
+  "reconciled_at": "2026-11-25T23:49:33.652874Z",
+  "source_manifest_modified": false,
+  "rows": [
+    {
+      "game_id": "401640992",
+      "season": 2024,
+      "away": "Liberty",
+      "home": "App State",
+      "scheduled_kickoff_utc": "2024-09-28T19:30:00Z",
+      "source_completed": false,
+      "official_status": "canceled",
+      "rescheduled": false,
+      "reason": "Hurricane Helene impacts; the host university stated the game would not be rescheduled.",
+      "published_date": "2024-09-27",
+      "sources": [
+        {
+          "publisher": "App State Athletics",
+          "url": "https://appstatesports.com/news/2024/9/27/app-state-liberty-football-game-canceled.aspx"
+        },
+        {
+          "publisher": "Liberty University Athletics",
+          "url": "https://libertyflames.com/news/2024/9/27/football-liberty-vs-appalachian-state-game-canceled"
+        }
+      ],
+      "eligible_for_completed_game_grading": false
+    }
+  ]
+}
