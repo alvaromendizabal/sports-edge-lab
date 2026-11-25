@@ -140,6 +140,8 @@ function verifyHostedHtml(observed, source, context) {
       assert.match(await text(".hero-footer"), /9:39 PM PT/);
       assert.match(await text("#results"), /N188 VS N187/i);
       await count("#completed-games tbody tr", 163);
+      await count("[data-secondary-ratio] tbody tr", 15);
+      assert.match(await text("#secondary-nominees"), /74.04%/);
       assert.match(await text(".hero-stats"), /47.22/);
       await count("#season-outlook .source-table tbody tr", 109);
       await count("[data-market-game]", 16);
