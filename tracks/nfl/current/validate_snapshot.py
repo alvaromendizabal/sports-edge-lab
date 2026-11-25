@@ -192,8 +192,8 @@ def validate(root: Path, allow_empty=False):
         errors.append("Completed NFL weeks and prior issue archive are required")
     if current_html.count("data-joint-games=") != 7 or current_html.count("data-joint-ratio=") != 5:
         errors.append("Paired scores require the remaining scheduled weeks and all selection weights")
-    if len({p for p in current.images if p.startswith("share/")}) != 12 or any(not (root / p).is_file() for p in current.images):
-        errors.append("Twelve downloadable public phone cards are required")
+    if len({p for p in current.images if p.startswith("share/")}) != 17 or any(not (root / p).is_file() for p in current.images):
+        errors.append("Seventeen downloadable public phone cards are required")
     if not any(p.startswith("research-history.html") for p in current.links):
         errors.append("The current release must link to historical research")
     for week in range(12, 19):

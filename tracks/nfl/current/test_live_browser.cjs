@@ -130,7 +130,7 @@ function verifyHostedHtml(observed, source, context) {
     page.on("console", message => { if (message.type() === "error") report.console_errors.push({ width, text: message.text(), location: message.location() }); });
     const text = selector => page.locator(selector).innerText();
     const count = (selector, expected) => page.locator(selector).count().then(actual => assert.equal(actual, expected, selector));
-    const noOverflow = async () => assert(await page.evaluate(() => document.documentElement.scrollWidth <= innerWidth + 1), `${width}px layout overflows horizontally`);
+    const noOverflow = async () => { const layout = await page.evaluate(() => ({ width: window.innerWidth, scroll: document.documentElement.scrollWidth, outside: [...document.querySelectorAll("main *, header *")].filter(e => e.getBoundingClientRect().right > innerWidth + 1 && !e.closest(".scroll")).slice(0, 8).map(e => [e.tagName, e.id, e.className, e.getBoundingClientRect().right]) })); assert(layout.scroll <= layout.width + 1, JSON.stringify(layout)); };
     await check(`${width}px: home opens the current release; older shared links still open the original dated slate`, async () => {
       await page.goto(base.href, { waitUntil: "domcontentloaded" });
       await noOverflow();
@@ -223,7 +223,8 @@ function verifyHostedHtml(observed, source, context) {
       await page.goto(new URL("#current-objectives", base).href);
       await count("[data-current-ratio] tbody tr", 15);
       await count("#aux-replays tbody tr", 163);
-      await count("#cards a.gallery-card", 12);
+      await count("#cards a.gallery-card", 17);
+      await count("#cards a.gallery-card[href*=circa-official]", 5);
     });
     let navigation = 0;
     const go = async query => {
