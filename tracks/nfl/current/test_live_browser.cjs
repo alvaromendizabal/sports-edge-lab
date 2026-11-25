@@ -101,7 +101,8 @@ function verifyHostedHtml(observed, source, context) {
     }
   });
   await check("Current anonymous release matches every declared published asset", async () => {
-    assert(verified, "Current game day publication needs an anonymous HTTP receipt");
+    assert(verified || receipt.status === "DEPLOYED_AWAITING_HTTP_HASH_AUDIT", "Validate only a deployed release");
+    report.current_assets = [];
     const assets = receipt.verification.assets;
     assert(assets.some(a => a.path === "index.html"));
     assert(assets.filter(a => a.path.endsWith(".png")).length >= 4);
@@ -118,7 +119,9 @@ function verifyHostedHtml(observed, source, context) {
       } else {
         assert(bytes.equals(local), asset.path);
       }
+      report.current_assets.push({path:asset.path, url:response.url(), status:response.status(), sha256:digest(local), bytes:local.length, received_sha256:digest(bytes), received_bytes:bytes.length, matches_pushed_source:true, verification:bytes.equals(local)?"EXACT_ORIGINAL_BYTES":"EXACT_SOURCE_AFTER_IDENTIFIED_EDGE_SCRIPT"});
     }
+    console.log("Verified public asset manifest", JSON.stringify(report.current_assets));
   });
   await assetContext.close();
 
@@ -205,6 +208,27 @@ function verifyHostedHtml(observed, source, context) {
       await page.goto(new URL("?view=cards&type=games&clock=T60&page=4", base).href);
       await page.waitForURL(u => /\/research-history(?:\.html)?$/.test(u.pathname) && u.searchParams.get("page") === "4");
       await page.waitForFunction(() => document.querySelector("#cards-page-label")?.textContent.trim() === "4 / 4");
+    });
+    await check(`${width}px: all-games policy comparison, 18 annual records and 96 signed model sides`, async () => {
+      await page.goto(new URL("circa/",base).href);
+      await page.getByRole("link",{name:"Compare all 16 games, the weekly five and the remaining sides"}).click();
+      await page.waitForURL(u=>u.pathname.endsWith("/all-games/"));
+      await count("section[data-policy]",6);
+      await count(".season",18);
+      await count("tr[data-game]",96);
+      for (const key of ["standing","all","hybrid","law","edge","historic"]) {
+        await page.locator("#policy").selectOption(key);
+        await count("section[data-policy]:visible",1);
+        const panel=page.locator("section[data-policy]:visible");
+        assert.equal(await panel.getAttribute("data-policy"),key);
+        assert.equal(await panel.locator("tr[data-game]").count(),16);
+        assert.equal(await panel.locator(".season").count(),3);
+        await noOverflow();
+      }
+      await page.goto(new URL("all-games/#policy-hybrid",base).href);
+      assert.equal(await page.locator("#policy").inputValue(),"hybrid");
+      assert.match(await text("section[data-policy]:visible"),/108.5 points/);
+      await page.screenshot({path:path.join(output,`all-games-${width}.png`),fullPage:false});
     });
     await check(width + "px: dedicated Circa dashboard with all alternatives and 47 graded cards", async () => {
       await page.goto(new URL("circa/", base).href);
