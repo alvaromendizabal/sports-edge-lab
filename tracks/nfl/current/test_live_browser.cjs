@@ -141,6 +141,7 @@ function verifyHostedHtml(observed, source, context) {
       await count('[data-n195="annual"] tbody tr', 15);
       await count('[data-n195="ratios"] tbody tr', 15);
       await count('#five .cards li',15);
+      await count('#n195-week12-phone a img',4);
       assert.match(await text('#lines'), /55 adjacent strike checks, the specialist failed 52/);
       assert.match(await text('main'), /Zero contest entries/);
       await noOverflow();
