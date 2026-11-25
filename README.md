@@ -90,15 +90,13 @@ The prepared V7 continuation prioritizes current forecasts, restores exact old f
 
 [**Open the FBS browser dashboard →**](https://sports-edge-lab-fbs.alv-mendizabal.chatgpt.site) · [FBS clock and coverage methodology](docs/fbs/SEASON_EXPLORER_2026-11-03.md) · [FBS source and model card](tracks/ncaaf/README.md)
 
-## NFL Week 12 · November 24, 2026 Pacific
+## NFL Week 12 and Thanksgiving · November 25, 2026 Pacific
 
-[Open the public NFL dashboard](https://sports-edge-lab-nfl-current.alv-mendizabal.chatgpt.site/) · [Contest alternatives](https://sports-edge-lab-nfl-current.alv-mendizabal.chatgpt.site/circa/) · [Objective-specific models](https://sports-edge-lab-nfl-current.alv-mendizabal.chatgpt.site/#results) · [Six phone cards](https://sports-edge-lab-nfl-current.alv-mendizabal.chatgpt.site/#cards) · [Deployment evidence](tracks/nfl/current/publication.json)
+[Open the NFL dashboard](https://sports-edge-lab-nfl-current.alv-mendizabal.chatgpt.site/) · [Thanksgiving tripleheader](https://sports-edge-lab-nfl-current.alv-mendizabal.chatgpt.site/thanksgiving/) · [All Week 12 games](https://sports-edge-lab-nfl-current.alv-mendizabal.chatgpt.site/weeks/12/) · [Circa picks and performance](https://sports-edge-lab-nfl-current.alv-mendizabal.chatgpt.site/circa/) · [Phone graphics](https://sports-edge-lab-nfl-current.alv-mendizabal.chatgpt.site/#cards)
 
-[Joint team scores](https://sports-edge-lab-nfl-current.alv-mendizabal.chatgpt.site/#joint-scores) includes expected points for each team, the likeliest exact score and its probability for all 109 future games. N189 also tested joint log loss and both teams’ point errors across five validation weightings, with a matched independence control.
+N190 retained the original N189 league and paired team-score forecasts for all 109 scheduled games. It selected 15 additional decisions for winner accuracy, margin RMSE and total RMSE across five validation ratios. The [seasonal scorecard](https://sports-edge-lab-nfl-current.alv-mendizabal.chatgpt.site/#current-objectives) covers 285 games each in 2024 and 2025, plus 163 previously examined 2026 games graded after selection. The week pages show the two issue clocks separately. Week 12 compares DraftKings, Kalshi and Polymarket at matched lines and discloses coverage across the full source inventory.
 
-[Circa Million Picks & Performance Dashboard](https://sports-edge-lab-nfl-current.alv-mendizabal.chatgpt.site/circa/) covers all 32 provisional sides, five distinct games and 47 reconstructed weekly cards. The [completed-game scoreboard](https://sports-edge-lab-nfl-current.alv-mendizabal.chatgpt.site/#completed-games) provides all 163 dated 2026 post-game reconstructions.
-
-N189 issued winner, margin and total forecasts for all 109 remaining games. Week 12 includes 16 matchups, 32 provisional contest sides and six mobile cards. The dashboard compares 35 validation decisions with N188 and shows the current three named venues plus coverage across all 79 observed sources.
+The [contest dashboard](https://sports-edge-lab-nfl-current.alv-mendizabal.chatgpt.site/circa/) separates official worksheet verification, sportsbook reference lines and actual submissions. The [N189 archive](https://sports-edge-lab-nfl-current.alv-mendizabal.chatgpt.site/archive/n189/) preserves the preceding board and six original mobile graphics.
 
 ## NFL Week 11 archive and model audit · November 20, 2026 Pacific
 
@@ -215,7 +213,7 @@ a narrow missing-clock checkpoint repair.
 
 | Track | Entry point | Publication boundary |
 |---|---|---|
-| NFL | [Current game outlook](tracks/nfl/current/index.html) · [Public dashboard](https://sports-edge-lab-nfl-current.alv-mendizabal.chatgpt.site/) · [Evidence](tracks/nfl/README.md) | N187 covers 109 pending games, 16 Week 12 matchups, 32 provisional contest sides, 79 observed sources and six mobile cards. Seven objectives use five 2024/2025 weightings. All dated Week 11 views remain accessible. |
+| NFL | [Week 12 and Thanksgiving](https://sports-edge-lab-nfl-current.alv-mendizabal.chatgpt.site/thanksgiving/) · [Public dashboard](https://sports-edge-lab-nfl-current.alv-mendizabal.chatgpt.site/) · [Evidence](tracks/nfl/README.md) | N190 covers 109 scheduled and 163 completed games with separately dated model, market and contest evidence. |
 | NCAA FBS | [Browser dashboard](https://sports-edge-lab-fbs.alv-mendizabal.chatgpt.site) · [Track](tracks/ncaaf/README.md) | Actual V053 partial; V055 prepared; 500 saved issue contexts across 122 games, with dated provider coverage |
 | NBA | [Research view](docs/NBA_RESEARCH_CARD.md) | Separately dated basketball evidence |
 | NCAA basketball | [Open dashboards](https://alvaro-ncaa-research-review.alv-mendizabal.chatgpt.site/) · [Men's evidence](tracks/ncaam/README.md) · [Women's evidence](tracks/ncaaw/README.md) · [Runnable contracts](examples/ncaa_review/README.md) | Separate historical selections, current execution gaps and three-provider qualification |

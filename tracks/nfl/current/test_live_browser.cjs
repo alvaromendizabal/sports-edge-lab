@@ -138,7 +138,7 @@ function verifyHostedHtml(observed, source, context) {
       assert(page.url().startsWith(base.href));
       assert.match(await text(".hero-stats"), /LAR by 4.25|Rams by 4.25/);
       assert.match(await text(".hero-footer"), /10:08 PM PT/);
-      assert.match(await text("#results"), /N189 VS N188/i);
+      assert.match(await text("#results"), /N190 VS N189/i);
       await count("#completed-games tbody tr", 163);
       await count("[data-joint-games] tbody tr", 109);
       await count("[data-recovered-ratio] tbody tr", 15);
@@ -156,9 +156,9 @@ function verifyHostedHtml(observed, source, context) {
       await count("[data-market-game] tbody tr", 144);
       await page.locator("#market-matchup").selectOption("2026_12_NE_LAC");
       await count("[data-market-game]:visible tbody tr", 9);
-      assert.match(await text("[data-market-game]:visible"), /Direct exchange observation/);
+      assert.match(await text("[data-market-game]:visible"), /Kalshi/);
       await page.locator("#market-matchup").selectOption("2026_12_GB_LA");
-      assert.equal(await page.locator(".source-ledger summary").filter({hasText:"79 sources"}).count(), 1);
+      assert.equal(await page.locator(".source-ledger summary").filter({hasText:receipt.scientific_scope.markets.sources + " sources"}).count(), 1);
       const archiveLink=page.locator('a[href="archive/n186/index.html"]');
       assert.equal(await archiveLink.count(),1);
       await count("#games details.game:visible", 16);
@@ -197,7 +197,7 @@ function verifyHostedHtml(observed, source, context) {
       assert.equal(await text("h1"), "Circa Million Picks & Performance Dashboard");
       await count("[data-card-season] tbody tr", 47);
       await count("[data-card-validation] tbody tr", 5);
-      assert.match(await text("main"), /42.07%/);
+      assert.match(await text("main"), /Expected points across these five selections/);
       assert.match(await text("#historic-rules"), /28.5 out of 45/);
       assert.match(await text("#historic-rules"), /30.5\/55/);
       await count("#option-grid tbody tr", 32);
@@ -206,6 +206,24 @@ function verifyHostedHtml(observed, source, context) {
       await page.locator("#contest-search").fill("does-not-match");
       await count(".contest-game:visible", 0);
       await noOverflow();
+    });
+    await check(width + "px: Thanksgiving and every scheduled week open on clean, shareable routes", async () => {
+      await page.goto(new URL("thanksgiving/", base).href);
+      await noOverflow();
+      await count("[data-fixture]", 3);
+      assert.deepEqual(await page.locator("[data-fixture]").evaluateAll(nodes => nodes.map(n => n.dataset.fixture)), ["2026_12_CHI_DET","2026_12_PHI_DAL","2026_12_KC_BUF"]);
+      await count("a.gallery-card", 4);
+      let scheduled = 0;
+      for (let week = 12; week <= 18; week++) {
+        await page.goto(new URL("weeks/" + week + "/", base).href);
+        await noOverflow();
+        scheduled += await page.locator("[data-fixture]").count();
+      }
+      assert.equal(scheduled, 109);
+      await page.goto(new URL("#current-objectives", base).href);
+      await count("[data-current-ratio] tbody tr", 15);
+      await count("#aux-replays tbody tr", 163);
+      await count("#cards a.gallery-card", 12);
     });
     let navigation = 0;
     const go = async query => {

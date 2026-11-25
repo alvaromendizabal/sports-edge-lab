@@ -1,14 +1,12 @@
 # NFL game day and research dashboard
 
-[Open the public NFL dashboard](https://sports-edge-lab-nfl-current.alv-mendizabal.chatgpt.site/) · [Public release receipt](publication.json) · [Earlier NFL research](research-history.html?view=performance)
+[Open the NFL dashboard](https://sports-edge-lab-nfl-current.alv-mendizabal.chatgpt.site/) · [Thanksgiving tripleheader](https://sports-edge-lab-nfl-current.alv-mendizabal.chatgpt.site/thanksgiving/) · [All Week 12 games](https://sports-edge-lab-nfl-current.alv-mendizabal.chatgpt.site/weeks/12/) · [Circa picks and performance](https://sports-edge-lab-nfl-current.alv-mendizabal.chatgpt.site/circa/) · [Phone graphics](https://sports-edge-lab-nfl-current.alv-mendizabal.chatgpt.site/#cards)
 
-[Joint team scores](https://sports-edge-lab-nfl-current.alv-mendizabal.chatgpt.site/#joint-scores) includes expected points for each team, the likeliest exact score and its probability for all 109 future games. N189 also tested joint log loss and both teams’ point errors across five validation weightings, with a matched independence control.
+N190 retained the original N189 league and paired team-score forecasts for all 109 scheduled games. It selected 15 additional decisions for winner accuracy, margin RMSE and total RMSE across five validation ratios. The [seasonal scorecard](https://sports-edge-lab-nfl-current.alv-mendizabal.chatgpt.site/#current-objectives) covers 285 games each in 2024 and 2025, plus 163 previously examined 2026 games graded after selection. The week pages show the two issue clocks separately. Week 12 compares DraftKings, Kalshi and Polymarket at matched lines and discloses coverage across the full source inventory.
 
-[Circa Million Picks & Performance Dashboard](https://sports-edge-lab-nfl-current.alv-mendizabal.chatgpt.site/circa/) covers all 32 provisional sides, five distinct games and 47 reconstructed weekly cards. The [completed-game scoreboard](https://sports-edge-lab-nfl-current.alv-mendizabal.chatgpt.site/#completed-games) provides all 163 dated 2026 post-game reconstructions.
+The [contest dashboard](https://sports-edge-lab-nfl-current.alv-mendizabal.chatgpt.site/circa/) separates official worksheet verification, sportsbook reference lines and actual submissions. The [N189 archive](https://sports-edge-lab-nfl-current.alv-mendizabal.chatgpt.site/archive/n189/) preserves the preceding board and six original mobile graphics.
 
-The verified N189 owner issued 109 pregame forecasts. The Week 12 page opens with all 16 matchups and compares named games and markets across DraftKings, Kalshi and Polymarket. Source coverage is shown for all 79 venues in the dated capture. The contest view grades a cover as one point and a push as half a point. The sportsbook preview remains provisional until an official Circa worksheet has been verified. The performance report compares N189 against N188 on identical annual rows and records previously inspected 2026 results separately.
-
-[Previous Week 12 forecast · N188](archive/n188/index.html) · [Previous Week 12 forecast · N187](archive/n187/index.html) · [Previous Week 12 release](archive/n186/index.html) · [Previous public release receipt](publication-n186.json)
+[Current public release receipt](publication.json) · [N189 receipt](publication-n189.json)
 
 The earlier Week 11 dashboard, its clock selectors, its archived evidence and its phone cards remain available at dated, clocked and paginated bookmarks and the [Week 11 archive](research-history.html). The [November 23 receipt](publication-n175.json) documents the earlier deployment.
 
