@@ -217,7 +217,7 @@ function verifyHostedHtml(observed, source, context) {
     });
     await check(`${width}px: all-games policy comparison, 18 annual records and 96 signed model sides`, async () => {
       await page.goto(new URL("circa/",base).href);
-      await page.locator("#circa").getByRole("link",{name:"Compare all 16 games, the weekly five and the remaining sides"}).click();
+      await page.locator("#circa .contest-intro").getByRole("link",{name:"Compare all 16 games, the weekly five and the remaining sides"}).click();
       await page.waitForURL(u=>u.pathname.endsWith("/all-games/"));
       await count("section[data-policy]",6);
       await count(".season",18);
