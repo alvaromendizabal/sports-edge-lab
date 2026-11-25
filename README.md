@@ -98,7 +98,7 @@ N187 issued winner, margin and total forecasts for all 109 remaining games. Week
 
 ## NFL Week 11 archive and model audit · November 20, 2026 Pacific
 
-[Previous Week 12 forecast — N186](current/archive/n186/index.html) · [Archived Week 11 dashboard](tracks/nfl/current/research-history.html) · [Selected evidence](tracks/nfl/current/evidence.json) · [Newest-fit comparison](tracks/nfl/current/newest_model_comparison.json) · [Every Circa side](tracks/nfl/current/circa_evidence.json)
+[Previous Week 12 forecast — N186](tracks/nfl/current/archive/n186/index.html) · [Archived Week 11 dashboard](tracks/nfl/current/research-history.html) · [Selected evidence](tracks/nfl/current/evidence.json) · [Newest-fit comparison](tracks/nfl/current/newest_model_comparison.json) · [Every Circa side](tracks/nfl/current/circa_evidence.json)
 
 The responsive dashboard covers all **11 Sunday, November 22 games plus Monday**, with probability, margin and total, 24 official Circa sides, metric-specific model scorecards, four game phone cards and two Circa phone cards. The usable matchup snapshot retains **November 16 inputs** and the models selected in the **R18 return**. Current T60 matchup inputs are unqualified and remain blank.
 
