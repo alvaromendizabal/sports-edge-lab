@@ -141,6 +141,16 @@ function verifyHostedHtml(observed, source, context) {
       await count('[data-n195="annual"] tbody tr', 15);
       await count('[data-n195="ratios"] tbody tr', 15);
       await count('#five .cards li',15);
+      for (const role of ['top5_points','all_points','direct_brier']) {
+        const opts = page.locator('[data-n195="alternatives-'+role+'"]');
+        const panel = opts.locator('xpath=ancestor::details[1]');
+        await panel.locator('summary').click();
+        assert.equal(await opts.locator('tbody tr').count(),32);
+        assert.equal(await opts.locator('td').filter({hasText:/^Card #[1-5]$/}).count(),5);
+        await noOverflow();
+        await panel.locator('summary').click();
+      }
+
       await count('#n195-week12-phone a img',4);
       assert.match(await text('#lines'), /55 adjacent strike checks, the specialist failed 52/);
       assert.match(await text('main'), /Zero contest entries/);
