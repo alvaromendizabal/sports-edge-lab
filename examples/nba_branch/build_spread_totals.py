@@ -113,7 +113,12 @@ def render(data):
     validate(data)
     compact = json.dumps(data, ensure_ascii=False, separators=(",", ":"), allow_nan=False)
     compact = compact.replace("<", "\\u003c").replace(">", "\\u003e").replace("&", "\\u0026")
-    return TEMPLATE.read_text().replace("__BOARD_JSON__", compact)
+    # The source template and generated page live at different depths. Keep
+    # both real download links valid without changing the evidence contents.
+    template = TEMPLATE.read_text().replace(
+        'href="../../tracks/nba/current/board.json"', 'href="board.json"'
+    )
+    return template.replace("__BOARD_JSON__", compact)
 
 
 def main(argv=None):
