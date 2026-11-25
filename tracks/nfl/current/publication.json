@@ -1,13 +1,13 @@
 {
-  "version": 29,
+  "version": 30,
   "status": "DEPLOYED_HTTP_VERIFIED",
   "public_url": "https://sports-edge-lab-nfl-current.alv-mendizabal.chatgpt.site/",
   "dedicated_circa_url": "https://sports-edge-lab-nfl-current.alv-mendizabal.chatgpt.site/circa/",
-  "deployed_at": "2026-11-25T06:22:30.671119+00:00",
-  "site_source_commit": "1dc021505d48125f89c46fec6a318779c56aba57",
-  "github_application_source_commit": "bd45fade78929301b8abf61f414e74dd1a393579",
+  "deployed_at": "2026-11-25T06:25:12.833166+00:00",
+  "site_source_commit": "6bc98be5d11736ec6022ff73be2ee12e6cea8580",
+  "github_application_source_commit": "c36a43d822d21dc8d03a7778d66faefbd2746499",
   "audience": "public",
-  "archive_sha256": "3ba10c95b924cb102257465fa7dc62de0340c0c80090d3a1891a4aa3539a8966",
+  "archive_sha256": "acf1be5183419bf74981174b70ac644afc63862f878a23004acc9e497115f6e0",
   "scientific_scope": {
     "release": "N189",
     "issue_utc": "2026-11-25T06:08:46.629440+00:00",
@@ -21,6 +21,17 @@
     "official_sheet": "AWAITING_OFFICIAL_RELEASE",
     "new_grades": 0,
     "weights": 35,
+    "recovered_validation": {
+      "historical_registry": 8952,
+      "eligible_per_metric": 4476,
+      "decisions": 15,
+      "games": [
+        285,
+        285
+      ],
+      "test_status": "PENDING",
+      "new_fits": 0
+    },
     "joint_scores": {
       "future_games": 109,
       "week12_games": 16,
@@ -124,7 +135,7 @@
         "status": 200,
         "bytes": 41690,
         "sha256": "19c58c9225d27de51fb59a1f5e7bf6e0b7634908c4f26862ca2f1daaab985b86",
-        "received_sha256": "e8f5552056bb4908bceb93f66c0abedec50672caa9400b39dd9d4c25bde1133a",
+        "received_sha256": "ffcf69962c94f460b6724a6b77bec8d7aad476c9c093a6e7aa8e16fdef93b867",
         "received_bytes": 42804,
         "matches_pushed_source": true,
         "verification": "ORIGINAL_BYTES_EQUAL_WITH_OBSERVED_CLOUDFLARE_APPEND"
@@ -146,7 +157,7 @@
         "status": 200,
         "bytes": 330,
         "sha256": "e6920e73f0f8396e333ba2bb8f1e548d95e8653387f9e5998d36fd1ea43fc9d2",
-        "received_sha256": "97f6280049f4d259f75e8e354201f1d6bfd7b30562e10bd22a03d7b78ceaa5d2",
+        "received_sha256": "6115d4f05252b22474857f1342e8b82c8c67aa48dfe4a0c4d4a0c027631f2114",
         "received_bytes": 1444,
         "matches_pushed_source": true,
         "verification": "ORIGINAL_BYTES_EQUAL_WITH_OBSERVED_CLOUDFLARE_APPEND"
@@ -201,7 +212,7 @@
         "status": 200,
         "bytes": 330,
         "sha256": "038306be8d13bc97fb68486e6f1f938e1ab574bc342ee3cae63cbf9867356fa7",
-        "received_sha256": "29cd27d1cf4116b23d8253a4a0d1d2fe86e2f5cdee991af60af9d1594605ac12",
+        "received_sha256": "f980849cff031d581dce9451762eef647d9e34e2aafbe1875bac985c933101a0",
         "received_bytes": 1444,
         "matches_pushed_source": true,
         "verification": "ORIGINAL_BYTES_EQUAL_WITH_OBSERVED_CLOUDFLARE_APPEND"
@@ -256,7 +267,7 @@
         "status": 200,
         "bytes": 94155,
         "sha256": "81df8bdc012459553d90b3143dbd7e9e7242b83acc3dee6ddd64b34b6ae99700",
-        "received_sha256": "9e482fc75429c361e39e009cfc999ed8668be0d5c4412eb2dd3d7ff33cc01152",
+        "received_sha256": "833298f29ab9c1164ca855616f9f2cedcd82f72d743b45478d55100af47b2600",
         "received_bytes": 95269,
         "matches_pushed_source": true,
         "verification": "ORIGINAL_BYTES_EQUAL_WITH_OBSERVED_CLOUDFLARE_APPEND"
@@ -278,7 +289,7 @@
         "status": 200,
         "bytes": 336,
         "sha256": "df44f15ef7e34799193ce87ee623b039fb05601f1fb1bfb5b8aa7fc9a0ed11aa",
-        "received_sha256": "4f00befd7a6f7dfbf145075085482a0926a37b643922825157ed2ef73249ca48",
+        "received_sha256": "5379011ba3862dcc8f5eaad482c0186dbac68bdbd84292b9cd3312ff5dee8f9f",
         "received_bytes": 1450,
         "matches_pushed_source": true,
         "verification": "ORIGINAL_BYTES_EQUAL_WITH_OBSERVED_CLOUDFLARE_APPEND"
@@ -333,7 +344,7 @@
         "status": 200,
         "bytes": 330,
         "sha256": "038306be8d13bc97fb68486e6f1f938e1ab574bc342ee3cae63cbf9867356fa7",
-        "received_sha256": "9824f9d22ddac26bc41a9e9fa70070a66f01fc733170c1040e3cf4bc3d52c5c6",
+        "received_sha256": "09d2e6adcdaad9fb22901ad96b690047c996e4a9eda97d90f37b5c3da17ccdb9",
         "received_bytes": 1444,
         "matches_pushed_source": true,
         "verification": "ORIGINAL_BYTES_EQUAL_WITH_OBSERVED_CLOUDFLARE_APPEND"
@@ -344,7 +355,7 @@
         "status": 200,
         "bytes": 330,
         "sha256": "5e5abbb396a7d1a372dec74f7121bff7514eda695477899aa8c7038f580e23b0",
-        "received_sha256": "4200f96d063d5995c6877396c0f8df97af9a3bb09d7c9fa5cd6792837e7c2e87",
+        "received_sha256": "6d0da8b204f71223ecd16e9e065093f9ce540cf0f8d7976855337a193e6779dd",
         "received_bytes": 1444,
         "matches_pushed_source": true,
         "verification": "ORIGINAL_BYTES_EQUAL_WITH_OBSERVED_CLOUDFLARE_APPEND"
@@ -377,7 +388,7 @@
         "status": 200,
         "bytes": 21549,
         "sha256": "a27ebbb817628bec27259f9580393c20608b2b5aec94d8ae0cd026a32fb42d8c",
-        "received_sha256": "a3d3f58a2c9e595891eaec19ca9bef3673b6925fe03542fefd8dc68b6ab884c6",
+        "received_sha256": "560bcba52a440e8868416b56274263a79fbd484e1a0dfd268dbc03369307ed5a",
         "received_bytes": 22663,
         "matches_pushed_source": true,
         "verification": "ORIGINAL_BYTES_EQUAL_WITH_OBSERVED_CLOUDFLARE_APPEND"
@@ -410,7 +421,7 @@
         "status": 200,
         "bytes": 128572,
         "sha256": "1a013a8097bfcc6ba1ef8a5e168de0a9f7c2e85637180d43bf9bdfe246b22ecd",
-        "received_sha256": "ec2df37873092a12d55ca884b62a1b688e01157c32dbf6ce165f943a6d4e9036",
+        "received_sha256": "f1b5a3628f3f44be235edd5f7c0467fd69db364d52a92a71d654bb6abc2d3524",
         "received_bytes": 129686,
         "matches_pushed_source": true,
         "verification": "ORIGINAL_BYTES_EQUAL_WITH_OBSERVED_CLOUDFLARE_APPEND"
@@ -432,7 +443,7 @@
         "status": 200,
         "bytes": 336,
         "sha256": "df44f15ef7e34799193ce87ee623b039fb05601f1fb1bfb5b8aa7fc9a0ed11aa",
-        "received_sha256": "146c556dc2f2e49aac9cd0310d3888f042e634d05f53bbf69a5aa4e7cd6bf0d8",
+        "received_sha256": "4c108199e86f2ccc70c9fdd4c519e8c045e919bb9db751a6228a9d296fcf5603",
         "received_bytes": 1450,
         "matches_pushed_source": true,
         "verification": "ORIGINAL_BYTES_EQUAL_WITH_OBSERVED_CLOUDFLARE_APPEND"
@@ -520,7 +531,7 @@
         "status": 200,
         "bytes": 23502,
         "sha256": "e9e09a54d59fcd32f04607068e9bd4c247297d0c8fb453416043b67c1e002408",
-        "received_sha256": "2b41695404448b7147808aebd0452e91c71f0c4e74e6675ec375aba156c431f6",
+        "received_sha256": "c7b8a31fa745ee0bdd4e373d1899cf3ef6fc1d34372bed17954e552053b474b8",
         "received_bytes": 24616,
         "matches_pushed_source": true,
         "verification": "ORIGINAL_BYTES_EQUAL_WITH_OBSERVED_CLOUDFLARE_APPEND"
@@ -595,10 +606,10 @@
         "path": "index.html",
         "url": "https://sports-edge-lab-nfl-current.alv-mendizabal.chatgpt.site/",
         "status": 200,
-        "bytes": 151997,
-        "sha256": "d8da0f96b6064e08cffc2704977f8fe5e2a126016b15e2b897399f1f41ad595c",
-        "received_sha256": "5616f6909297a67e4831a5c3eaad9533447e48c26495c6d01245018e340ac996",
-        "received_bytes": 153111,
+        "bytes": 156973,
+        "sha256": "6b68852d30a2e931a23bf65dcfb5cc7382ec0a07e459a82e04eb1c3a8450c668",
+        "received_sha256": "4681f97cfecf3aa6a40f283b4b2a9ee41d7cc2f74fdc7654d665e2afe9bc6225",
+        "received_bytes": 158087,
         "matches_pushed_source": true,
         "verification": "ORIGINAL_BYTES_EQUAL_WITH_OBSERVED_CLOUDFLARE_APPEND"
       },
@@ -630,7 +641,7 @@
         "status": 200,
         "bytes": 229463,
         "sha256": "80bf439ad4567d16edc600195785b202c14524c8fd03d0cca5a7502fb1453aba",
-        "received_sha256": "e687bdcdb875cfea0a68ad86f6de71ef6c6c9609e06f39ad82153f6d2550bd0a",
+        "received_sha256": "5bd14ff9d17273f90038b792a3f29f3cf309ad0bb2572abd4811c0632d5761d6",
         "received_bytes": 230577,
         "matches_pushed_source": true,
         "verification": "ORIGINAL_BYTES_EQUAL_WITH_OBSERVED_CLOUDFLARE_APPEND"
@@ -714,7 +725,7 @@
       }
     ],
     "all_match": true,
-    "checked_at": "2026-11-25T06:22:43.428266+00:00",
+    "checked_at": "2026-11-25T06:25:20.966194+00:00",
     "method": "Anonymous HTTPS GET from a separate NFL diagnostic environment. Exact asset bytes or the single recognized host HTML addition were verified against the prepared release."
   }
 }
