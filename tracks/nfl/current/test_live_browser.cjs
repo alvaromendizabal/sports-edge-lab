@@ -137,8 +137,10 @@ function verifyHostedHtml(observed, source, context) {
       assert.match(await page.locator("body").innerText(), /Week 12/i);
       assert(page.url().startsWith(base.href));
       assert.match(await text(".hero-stats"), /LAR by 4.25|Rams by 4.25/);
-      assert.match(await text(".hero-footer"), /9:02 PM PT/);
-      assert.match(await text("#results"), /N187 VS N186/i);
+      assert.match(await text(".hero-footer"), /9:39 PM PT/);
+      assert.match(await text("#results"), /N188 VS N187/i);
+      await count("#completed-games tbody tr", 163);
+      assert.match(await text(".hero-stats"), /47.22/);
       await count("#season-outlook .source-table tbody tr", 109);
       await count("[data-market-game]", 16);
       await count("[data-market-game] tbody tr", 144);
@@ -179,6 +181,17 @@ function verifyHostedHtml(observed, source, context) {
       await page.goto(new URL("?view=cards&type=games&clock=T60&page=4", base).href);
       await page.waitForURL(u => /\/research-history(?:\.html)?$/.test(u.pathname) && u.searchParams.get("page") === "4");
       await page.waitForFunction(() => document.querySelector("#cards-page-label")?.textContent.trim() === "4 / 4");
+    });
+    await check(width + "px: dedicated Circa dashboard with all alternatives and 47 graded cards", async () => {
+      await page.goto(new URL("circa/", base).href);
+      assert.equal(await text("h1"), "Circa Million Picks & Performance Dashboard");
+      await count("[data-card-season] tbody tr", 47);
+      await count("#option-grid tbody tr", 32);
+      await page.locator("#rank-filter").selectOption("top");
+      await count(".contest-game:visible", 5);
+      await page.locator("#contest-search").fill("does-not-match");
+      await count(".contest-game:visible", 0);
+      await noOverflow();
     });
     let navigation = 0;
     const go = async query => {

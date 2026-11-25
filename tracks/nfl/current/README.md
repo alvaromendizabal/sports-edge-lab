@@ -2,9 +2,11 @@
 
 [Open the public NFL dashboard](https://sports-edge-lab-nfl-current.alv-mendizabal.chatgpt.site/) · [Public release receipt](publication.json) · [Earlier NFL research](research-history.html?view=performance)
 
-The verified N187 owner issued 109 pregame forecasts. The Week 12 page opens with all 16 matchups and compares named games and markets across DraftKings, Kalshi and Polymarket. Source coverage is shown for all 79 venues in the dated capture. The contest view grades a cover as one point and a push as half a point. The sportsbook preview remains provisional until an official Circa worksheet has been verified. The performance report compares N187 against N186 on identical annual rows and records previously inspected 2026 results separately.
+[Circa Million Picks & Performance Dashboard](https://sports-edge-lab-nfl-current.alv-mendizabal.chatgpt.site/circa/) covers all 32 provisional sides, five distinct games and 47 reconstructed weekly cards. The [completed-game scoreboard](https://sports-edge-lab-nfl-current.alv-mendizabal.chatgpt.site/#completed-games) provides all 163 dated 2026 post-game reconstructions.
 
-[Previous Week 12 release](archive/n186/index.html) · [Previous public release receipt](publication-n186.json)
+The verified N188 owner issued 109 pregame forecasts. The Week 12 page opens with all 16 matchups and compares named games and markets across DraftKings, Kalshi and Polymarket. Source coverage is shown for all 79 venues in the dated capture. The contest view grades a cover as one point and a push as half a point. The sportsbook preview remains provisional until an official Circa worksheet has been verified. The performance report compares N188 against N187 on identical annual rows and records previously inspected 2026 results separately.
+
+[Previous Week 12 forecast · N187](archive/n187/index.html) · [Previous Week 12 release](archive/n186/index.html) · [Previous public release receipt](publication-n186.json)
 
 The earlier Week 11 dashboard, its clock selectors, its archived evidence and its phone cards remain available at dated, clocked and paginated bookmarks and the [Week 11 archive](research-history.html). The [November 23 receipt](publication-n175.json) documents the earlier deployment.
 
