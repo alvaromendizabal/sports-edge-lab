@@ -48,3 +48,14 @@
     }
   });
 })();
+
+(() => {
+  const picker = document.getElementById('market-matchup');
+  if (!picker) return;
+  picker.addEventListener('change', () => {
+    for (const table of document.querySelectorAll('[data-market-game]')) {
+      table.hidden = table.dataset.marketGame !== picker.value;
+    }
+    document.getElementById('announce').textContent = 'Market comparisons updated for ' + picker.selectedOptions[0].textContent;
+  });
+})();

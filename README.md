@@ -94,11 +94,11 @@ The prepared V7 continuation prioritizes current forecasts, restores exact old f
 
 [Open the public NFL dashboard](https://sports-edge-lab-nfl-current.alv-mendizabal.chatgpt.site/) · [Contest alternatives](https://sports-edge-lab-nfl-current.alv-mendizabal.chatgpt.site/#circa) · [Objective-specific models](https://sports-edge-lab-nfl-current.alv-mendizabal.chatgpt.site/#results) · [Four phone cards](https://sports-edge-lab-nfl-current.alv-mendizabal.chatgpt.site/#cards) · [Deployment evidence](tracks/nfl/current/publication.json)
 
-N186 issued winner, margin and total forecasts for all 16 games. The sheet shows 32 provisional contest options with a five-game ranking at the dated DraftKings spreads. Official Week 12 contest lines and entry receipts were unavailable at publication. Performance includes 35 validation decisions across seven objectives and five season ratios.
+N187 issued winner, margin and total forecasts for all 109 remaining games. Week 12 includes 16 matchups, 32 provisional contest sides and four mobile cards. The dashboard compares 35 validation decisions with N186 and shows the current three named venues plus coverage across all 79 observed sources.
 
 ## NFL Week 11 archive and model audit · November 20, 2026 Pacific
 
-[Archived Week 11 dashboard](tracks/nfl/current/research-history.html) · [Selected evidence](tracks/nfl/current/evidence.json) · [Newest-fit comparison](tracks/nfl/current/newest_model_comparison.json) · [Every Circa side](tracks/nfl/current/circa_evidence.json)
+[Previous Week 12 forecast — N186](current/archive/n186/index.html) · [Archived Week 11 dashboard](tracks/nfl/current/research-history.html) · [Selected evidence](tracks/nfl/current/evidence.json) · [Newest-fit comparison](tracks/nfl/current/newest_model_comparison.json) · [Every Circa side](tracks/nfl/current/circa_evidence.json)
 
 The responsive dashboard covers all **11 Sunday, November 22 games plus Monday**, with probability, margin and total, 24 official Circa sides, metric-specific model scorecards, four game phone cards and two Circa phone cards. The usable matchup snapshot retains **November 16 inputs** and the models selected in the **R18 return**. Current T60 matchup inputs are unqualified and remain blank.
 
@@ -211,7 +211,7 @@ a narrow missing-clock checkpoint repair.
 
 | Track | Entry point | Publication boundary |
 |---|---|---|
-| NFL | [Current game outlook](tracks/nfl/current/index.html) · [Public dashboard](https://sports-edge-lab-nfl-current.alv-mendizabal.chatgpt.site/) · [Evidence](tracks/nfl/README.md) | Week 12 covers all 16 matchups, 32 provisional contest sides and four mobile cards. Seven objectives use five 2024/2025 weightings. All dated Week 11 views remain accessible. |
+| NFL | [Current game outlook](tracks/nfl/current/index.html) · [Public dashboard](https://sports-edge-lab-nfl-current.alv-mendizabal.chatgpt.site/) · [Evidence](tracks/nfl/README.md) | N187 covers 109 pending games, 16 Week 12 matchups, 32 provisional contest sides, 79 observed sources and four mobile cards. Seven objectives use five 2024/2025 weightings. All dated Week 11 views remain accessible. |
 | NCAA FBS | [Browser dashboard](https://sports-edge-lab-fbs.alv-mendizabal.chatgpt.site) · [Track](tracks/ncaaf/README.md) | Actual V053 partial; V055 prepared; 500 saved issue contexts across 122 games, with dated provider coverage |
 | NBA | [Research view](docs/NBA_RESEARCH_CARD.md) | Separately dated basketball evidence |
 | NCAA basketball | [Open dashboards](https://alvaro-ncaa-research-review.alv-mendizabal.chatgpt.site/) · [Men's evidence](tracks/ncaam/README.md) · [Women's evidence](tracks/ncaaw/README.md) · [Runnable contracts](examples/ncaa_review/README.md) | Separate historical selections, current execution gaps and three-provider qualification |
@@ -363,6 +363,7 @@ The latest authenticated V056 owner added 31 base fits and five statistical stat
 V057 prepares exact historical-recipe recovery, reusable per-candidate metrics before global closure, and bounded recovery that can advance after interruption. Its 64-unit chunks retain the eight-chunk ceiling, for an effective maximum of 512 units per recovery slice. Complete-population cache reuse requires independent canonical receipt, source and selector verification. No V057 AWS execution, new model improvement or automatic promotion is claimed. The requirement for hundreds of certified new feature concepts remains unmet.
 
 Evidence: [latest saved owner counts](docs/fbs/actual-owner-v056.json), [historical scorecards and qualifications](docs/fbs/historical-contenders-v057.json), and [FBS evidence dashboard](docs/fbs/current.html). Publication is not a data refresh or model run. NFL, NBA and NCAA basketball retain their independent owners and evidence.
+
 
 
 

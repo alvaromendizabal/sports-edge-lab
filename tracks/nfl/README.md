@@ -2,9 +2,9 @@
 
 [Open the live game dashboard](https://sports-edge-lab-nfl-current.alv-mendizabal.chatgpt.site/) · [All contest options](https://sports-edge-lab-nfl-current.alv-mendizabal.chatgpt.site/#circa) · [Model results](https://sports-edge-lab-nfl-current.alv-mendizabal.chatgpt.site/#results) · [Phone cards](https://sports-edge-lab-nfl-current.alv-mendizabal.chatgpt.site/#cards) · [Public release receipt](current/publication.json)
 
-The N186 return issued model forecasts for every Week 12 game. Los Angeles opens Wednesday at 5 p.m. Pacific with a 58.0% win probability, a projected 3.47-point advantage and a 46.28-point total against Green Bay. The public comparison dates those forecasts separately from DraftKings, Kalshi and Polymarket observations. The 32 provisional contest sides use DraftKings spreads pending the official Circa worksheet. The annual model comparisons use 2024 and 2025 validation and a previously exposed 2026 replay.
+N187 issued 109 pregame forecasts, including every Week 12 matchup. The Los Angeles Rams have a 58.0% win chance against Green Bay, a projected 4.25-point advantage and a 46.28-point total. All 16 matchups have separate DraftKings, Kalshi and Polymarket comparison slots at the dated market observation. The source table records 79 venues with their coverage and gaps. The Circa preview uses DraftKings spreads until an official worksheet is verified.
 
-[Archived Week 11 dashboard](current/research-history.html?view=slate) · [Archived November 23 publication](current/publication-n175.json)
+[Previous Week 12 forecast — N186](current/archive/n186/index.html) · [Archived Week 11 dashboard](current/research-history.html?view=slate) · [Archived November 23 publication](current/publication-n175.json)
 
 <!-- NFL_CURRENT_SLATE_20261120_START -->
 # Archived NFL slate dashboard · November 20, 2026
@@ -82,4 +82,5 @@ The executable retained the N084 scientific namespace. The later N086 execution 
 </details>
 
 </details>
+
 

@@ -20,11 +20,17 @@ class Document(HTMLParser):
         self.ranks = []
         self.weights = []
         self.images = set()
+        self.future_weeks = []
+        self.market_games = []
         self.links = set()
 
     def handle_starttag(self, tag, attrs):
         attrs = dict(attrs)
         classes = attrs.get("class", "").split()
+        if "data-future-week" in attrs:
+            self.future_weeks.append(attrs["data-future-week"])
+        if "data-market-game" in attrs:
+            self.market_games.append(attrs["data-market-game"])
         if tag == "details" and "game" in classes:
             self.games.append(attrs.get("data-search"))
         if tag == "article" and "contest-game" in classes:
@@ -169,6 +175,10 @@ def validate(root: Path, allow_empty=False):
         errors.append("Week 12 duplicate HTML anchors")
     if set(("gameday", "slate", "circa", "results", "cards")) - set(current.ids):
         errors.append("Week 12 game day, contest, results or share card navigation missing")
+    if set(current.future_weeks) != set(map(str, range(12,19))) or len(set(current.market_games)) != 16:
+        errors.append("Future-season and all-week market registration incomplete")
+    if not (root / "archive/n186/index.html").is_file():
+        errors.append("Prior issued Week 12 archive missing")
     if len(current.games) != 16 or len(set(current.games)) != 16:
         errors.append("Week 12 must present all sixteen distinct games")
     if sorted(int(x) for x in current.ranks) != list(range(1, 17)):
