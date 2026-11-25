@@ -1,14 +1,12 @@
-# NFL Week 12 · November 24, 2026 Pacific
+# NFL Week 12 and Thanksgiving · November 25, 2026 Pacific
 
-[Open the live game dashboard](https://sports-edge-lab-nfl-current.alv-mendizabal.chatgpt.site/) · [All contest options](https://sports-edge-lab-nfl-current.alv-mendizabal.chatgpt.site/circa/) · [Model results](https://sports-edge-lab-nfl-current.alv-mendizabal.chatgpt.site/#results) · [Phone cards](https://sports-edge-lab-nfl-current.alv-mendizabal.chatgpt.site/#cards) · [Public release receipt](current/publication.json)
+[Open the NFL dashboard](https://sports-edge-lab-nfl-current.alv-mendizabal.chatgpt.site/) · [Thanksgiving tripleheader](https://sports-edge-lab-nfl-current.alv-mendizabal.chatgpt.site/thanksgiving/) · [All Week 12 games](https://sports-edge-lab-nfl-current.alv-mendizabal.chatgpt.site/weeks/12/) · [Circa picks and performance](https://sports-edge-lab-nfl-current.alv-mendizabal.chatgpt.site/circa/) · [Phone graphics](https://sports-edge-lab-nfl-current.alv-mendizabal.chatgpt.site/#cards)
 
-[Joint team scores](https://sports-edge-lab-nfl-current.alv-mendizabal.chatgpt.site/#joint-scores) includes expected points for each team, the likeliest exact score and its probability for all 109 future games. N189 also tested joint log loss and both teams’ point errors across five validation weightings, with a matched independence control.
+N190 retained the original N189 league and paired team-score forecasts for all 109 scheduled games. It selected 15 additional decisions for winner accuracy, margin RMSE and total RMSE across five validation ratios. The [seasonal scorecard](https://sports-edge-lab-nfl-current.alv-mendizabal.chatgpt.site/#current-objectives) covers 285 games each in 2024 and 2025, plus 163 previously examined 2026 games graded after selection. The week pages show the two issue clocks separately. Week 12 compares DraftKings, Kalshi and Polymarket at matched lines and discloses coverage across the full source inventory.
 
-[Circa Million Picks & Performance Dashboard](https://sports-edge-lab-nfl-current.alv-mendizabal.chatgpt.site/circa/) covers all 32 provisional sides, five distinct games and 47 reconstructed weekly cards. The [completed-game scoreboard](https://sports-edge-lab-nfl-current.alv-mendizabal.chatgpt.site/#completed-games) provides all 163 dated 2026 post-game reconstructions.
+The [contest dashboard](https://sports-edge-lab-nfl-current.alv-mendizabal.chatgpt.site/circa/) shows all 32 posted official sides, the model’s five at 10:32 a.m. Pacific and the separate 10:03 DraftKings reference. None were submitted as a contest entry. The [N189 archive](https://sports-edge-lab-nfl-current.alv-mendizabal.chatgpt.site/archive/n189/) preserves the preceding board and six original mobile graphics.
 
-N189 issued 109 pregame forecasts, including every Week 12 matchup. The Los Angeles Rams have a 58.0% win chance against Green Bay, a projected 4.25-point advantage and a 47.22-point total. All 16 matchups have separate DraftKings, Kalshi and Polymarket comparison slots at the dated market observation. The source table records 79 venues with their coverage and gaps. The Circa preview uses DraftKings spreads until an official worksheet is verified.
-
-[Previous Week 12 forecast · N188](current/archive/n188/index.html) · [Previous Week 12 forecast · N187](current/archive/n187/index.html) · [Previous Week 12 forecast — N186](current/archive/n186/index.html) · [Archived Week 11 dashboard](current/research-history.html?view=slate) · [Archived November 23 publication](current/publication-n175.json)
+[Current public release receipt](current/publication.json)
 
 <!-- NFL_CURRENT_SLATE_20261120_START -->
 # Archived NFL slate dashboard · November 20, 2026

@@ -130,7 +130,7 @@ function verifyHostedHtml(observed, source, context) {
     page.on("console", message => { if (message.type() === "error") report.console_errors.push({ width, text: message.text(), location: message.location() }); });
     const text = selector => page.locator(selector).innerText();
     const count = (selector, expected) => page.locator(selector).count().then(actual => assert.equal(actual, expected, selector));
-    const noOverflow = async () => assert(await page.evaluate(() => document.documentElement.scrollWidth <= innerWidth + 1), `${width}px layout overflows horizontally`);
+    const noOverflow = async () => { const layout = await page.evaluate(() => ({ width: window.innerWidth, scroll: document.documentElement.scrollWidth, outside: [...document.querySelectorAll("main *, header *")].filter(e => e.getBoundingClientRect().right > innerWidth + 1 && !e.closest(".scroll")).slice(0, 8).map(e => [e.tagName, e.id, e.className, e.getBoundingClientRect().right]) })); assert(layout.scroll <= layout.width + 1, JSON.stringify(layout)); };
     await check(`${width}px: home opens the current release; older shared links still open the original dated slate`, async () => {
       await page.goto(base.href, { waitUntil: "domcontentloaded" });
       await noOverflow();
@@ -138,7 +138,7 @@ function verifyHostedHtml(observed, source, context) {
       assert(page.url().startsWith(base.href));
       assert.match(await text(".hero-stats"), /LAR by 4.25|Rams by 4.25/);
       assert.match(await text(".hero-footer"), /10:08 PM PT/);
-      assert.match(await text("#results"), /N189 VS N188/i);
+      assert.match(await text("#results"), /N190 VS N189/i);
       await count("#completed-games tbody tr", 163);
       await count("[data-joint-games] tbody tr", 109);
       await count("[data-recovered-ratio] tbody tr", 15);
@@ -156,9 +156,9 @@ function verifyHostedHtml(observed, source, context) {
       await count("[data-market-game] tbody tr", 144);
       await page.locator("#market-matchup").selectOption("2026_12_NE_LAC");
       await count("[data-market-game]:visible tbody tr", 9);
-      assert.match(await text("[data-market-game]:visible"), /Direct exchange observation/);
+      assert.match(await text("[data-market-game]:visible"), /Kalshi/);
       await page.locator("#market-matchup").selectOption("2026_12_GB_LA");
-      assert.equal(await page.locator(".source-ledger summary").filter({hasText:"79 sources"}).count(), 1);
+      assert.equal(await page.locator(".source-ledger summary").filter({hasText:receipt.scientific_scope.markets.sources + " sources"}).count(), 1);
       const archiveLink=page.locator('a[href="archive/n186/index.html"]');
       assert.equal(await archiveLink.count(),1);
       await count("#games details.game:visible", 16);
@@ -197,7 +197,7 @@ function verifyHostedHtml(observed, source, context) {
       assert.equal(await text("h1"), "Circa Million Picks & Performance Dashboard");
       await count("[data-card-season] tbody tr", 47);
       await count("[data-card-validation] tbody tr", 5);
-      assert.match(await text("main"), /42.07%/);
+      assert.match(await text("main"), /Expected points across these five selections/);
       assert.match(await text("#historic-rules"), /28.5 out of 45/);
       assert.match(await text("#historic-rules"), /30.5\/55/);
       await count("#option-grid tbody tr", 32);
@@ -206,6 +206,25 @@ function verifyHostedHtml(observed, source, context) {
       await page.locator("#contest-search").fill("does-not-match");
       await count(".contest-game:visible", 0);
       await noOverflow();
+    });
+    await check(width + "px: Thanksgiving and every scheduled week open on clean, shareable routes", async () => {
+      await page.goto(new URL("thanksgiving/", base).href);
+      await noOverflow();
+      await count("[data-fixture]", 3);
+      assert.deepEqual(await page.locator("[data-fixture]").evaluateAll(nodes => nodes.map(n => n.dataset.fixture)), ["2026_12_CHI_DET","2026_12_PHI_DAL","2026_12_KC_BUF"]);
+      await count("a.gallery-card", 4);
+      let scheduled = 0;
+      for (let week = 12; week <= 18; week++) {
+        await page.goto(new URL("weeks/" + week + "/", base).href);
+        await noOverflow();
+        scheduled += await page.locator("[data-fixture]").count();
+      }
+      assert.equal(scheduled, 109);
+      await page.goto(new URL("#current-objectives", base).href);
+      await count("[data-current-ratio] tbody tr", 15);
+      await count("#aux-replays tbody tr", 163);
+      await count("#cards a.gallery-card", 17);
+      await count("#cards a.gallery-card[href*=circa-official]", 5);
     });
     let navigation = 0;
     const go = async query => {
