@@ -150,6 +150,12 @@ function verifyHostedHtml(observed, source, context) {
       await count("#slate [data-range-game]", 16);
       await count("#slate [data-event-game]", 16);
       await count("#slate [data-n193-game]",16);
+      await count("[data-n194-validation] tbody tr",45);
+      await count("[data-n194-replay] tbody tr",163);
+      await count("[data-n194-ats-live] tbody tr",16);
+      await count("[data-n194-ats-history] tbody tr",3);
+      await count("#slate [data-n194-game]",16);
+      assert.match(await text("#situation-review"),/0 of 9/);
       await count("[data-n193-validation] tbody tr",45);
       await count("[data-n193-replay] tbody tr",163);
       assert.match(await text("#score-review"),/1 of 9/);
@@ -211,7 +217,7 @@ function verifyHostedHtml(observed, source, context) {
     });
     await check(`${width}px: all-games policy comparison, 18 annual records and 96 signed model sides`, async () => {
       await page.goto(new URL("circa/",base).href);
-      await page.getByRole("link",{name:"Compare all 16 games, the weekly five and the remaining sides"}).click();
+      await page.locator("#circa .contest-intro").getByRole("link",{name:"Compare all 16 games, the weekly five and the remaining sides"}).click();
       await page.waitForURL(u=>u.pathname.endsWith("/all-games/"));
       await count("section[data-policy]",6);
       await count(".season",18);
@@ -228,6 +234,7 @@ function verifyHostedHtml(observed, source, context) {
       await page.goto(new URL("all-games/#policy-hybrid",base).href);
       await page.waitForFunction(()=>document.getElementById("policy").value==="hybrid");
       assert.equal(await page.locator("#policy").inputValue(),"hybrid");
+      assert.match(await text("main"),/46,019/);
       assert.match(await text("section[data-policy]:visible"),/108.5 points/);
       await page.screenshot({path:path.join(output,`all-games-${width}.png`),fullPage:false});
     });
@@ -241,6 +248,9 @@ function verifyHostedHtml(observed, source, context) {
       await count("[data-n191-cards-annual] tbody tr", 9);
       await count("[data-weekly-utility-weight] tbody tr",15);
       await count("[data-weekly-official] tbody tr",96);
+      await count("[data-n194-sides] tbody tr",160);
+      await count("[data-n194-card-weight] tbody tr",25);
+      await count("[data-n194-current-cards] tbody tr",5);
       await count("[data-n193-sides] tbody tr",96);
       await count("[data-n193-contest-weight] tbody tr",25);
       await count("[data-n193-legacy] tbody tr",35);
@@ -269,14 +279,15 @@ function verifyHostedHtml(observed, source, context) {
         await count("[data-range-game]", fixtures);
         await count("[data-event-game]", fixtures);
         await count("[data-n193-game]",fixtures);
+        await count("[data-n194-game]",fixtures);
         scheduled += fixtures;
       }
       assert.equal(scheduled, 109);
       await page.goto(new URL("#current-objectives", base).href);
       await count("[data-current-ratio] tbody tr", 15);
       await count("#aux-replays tbody tr", 163);
-      await count("#cards a.gallery-card", 17);
-      await count("#cards a.gallery-card[href*=n193-circa]", 8);
+      await count("#cards a.gallery-card", 18);
+      await count("#cards a.gallery-card[href*=n194-circa]", 9);
     });
     let navigation = 0;
     const go = async query => {
