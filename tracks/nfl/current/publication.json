@@ -4,33 +4,204 @@
   "public_url": "https://sports-edge-lab-nfl-current.alv-mendizabal.chatgpt.site/",
   "thanksgiving_url": "https://sports-edge-lab-nfl-current.alv-mendizabal.chatgpt.site/thanksgiving/",
   "dedicated_circa_url": "https://sports-edge-lab-nfl-current.alv-mendizabal.chatgpt.site/circa/",
-  "deployed_at": "2026-11-25T22:03:57.823182+00:00",
-  "site_source_commit": "4c6e9ad38f576b297d1e767c7daedb93426c50ca",
-  "github_application_source_commit": "65a981b43a3aa61234f843670ca76eb344cfed09",
+  "deployed_at": "2026-11-25T22:09:57.974714+00:00",
+  "site_source_commit": "e49d71e86dab2fc7d80b7d071a8c1849bc39828e",
+  "github_application_source_commit": "2173c8060f2c5e0a2014e7f7bcb68e191081f645",
   "audience": "public",
-  "archive_sha256": "a72ac9addcd281fef59e8ea4087b55e6002ee7efeb4d8333a65c43f69be2d4db",
+  "archive_sha256": "82b6e2f96dc33f3fe77dc3a056cb899a1a7ca470f6e19fc3971663360567b4bb",
   "scientific_scope": {
-    "owner": "NFL",
-    "edition": "N195",
-    "observed": "2026-11-25T21:54:37.990554+00:00",
-    "current_games": 16,
-    "earlier_league_forecasts": 109,
-    "contest_entries": 0,
-    "official_choices_per_objective": 32,
-    "registered": 47579,
-    "all_source_spreads": 862,
-    "current_source_spreads": 828,
-    "cross_strike_checks": {
-      "league": {
-        "PASS": 55
-      },
-      "direct": {
-        "INCONSISTENT_ACROSS_STRIKES": 52,
-        "PASS": 3
-      }
+    "release": "N195",
+    "historical_circa": {
+      "nine_week_points": 28.5,
+      "nine_week_slots": 45,
+      "eleven_week_points": 30.5,
+      "eleven_week_slots": 55
     },
-    "league_direct_side_agreements": 9,
-    "role": "Public aggregates and dated research forecasts"
+    "issue_utc": "2026-11-25T06:08:46.629440+00:00",
+    "feature_cutoff_utc": "2026-11-25T02:39:13+00:00",
+    "market_observation_utc": "2026-11-25T21:27:16.332247+00:00",
+    "market_recheck_utc": "2026-11-25T21:30:03.597177+00:00",
+    "forecast_games_week12": 16,
+    "all_forecast_games": 109,
+    "completed_replay_games": 163,
+    "original_entries": 0,
+    "official_sheet": "VERIFIED_PREKICKOFF_PRIMARY_AND_REFERENCE",
+    "new_grades": 0,
+    "weights": 35,
+    "recovered_validation": {
+      "historical_registry": 8952,
+      "eligible_per_metric": 4476,
+      "decisions": 15,
+      "games": [
+        285,
+        285
+      ],
+      "test_status": "BOUNDED_POSTLOCK_RECONSTRUCTION",
+      "historical_test_games": 163,
+      "future_games": 109,
+      "owner_forecasts_updated": false
+    },
+    "joint_scores": {
+      "future_games": 109,
+      "week12_games": 16,
+      "decisions": 15,
+      "validation_candidates": 1944,
+      "registered_games": [
+        285,
+        285,
+        163
+      ]
+    },
+    "secondary_saved_nominee_decisions": 15,
+    "secondary_pools": {
+      "winner_accuracy": 10,
+      "margin_rmse": 10,
+      "total_rmse": 3
+    },
+    "primary_validation_improved": 0,
+    "primary_replay_worsened": 0,
+    "headline": {
+      "home_win": 0.579969985743727,
+      "away_win": 0.39023875356087134,
+      "tie": 0.02979126069540161,
+      "away_minus_home_margin": -4.254195787719487,
+      "total": 47.21936743615401
+    },
+    "markets": {
+      "sources": 80,
+      "records": 2894,
+      "matched_combinations": 2838,
+      "named_slots": 144,
+      "named_population": 144,
+      "status_records": {
+        "MATCHED_CURRENT": 2838,
+        "MISSING_MARKET_PRICE": 32,
+        "OLDER_THAN_10_MINUTES": 16,
+        "PRIOR_OR_MISSING": 8
+      },
+      "games": 16
+    },
+    "forecast_generation": "N189",
+    "official_line_card": true,
+    "auxiliary_decisions": 15,
+    "auxiliary_issue_utc": "2026-11-25T18:04:41.591022+00:00",
+    "thanksgiving_games": 3,
+    "weekly_routes": [
+      12,
+      13,
+      14,
+      15,
+      16,
+      17,
+      18
+    ],
+    "iphone_cards": 18,
+    "official_card_utc": "2026-11-25T21:29:55.234521+00:00",
+    "official_source_utc": "2026-11-25T18:46:21.090426+00:00",
+    "official_contest_alternatives": 32,
+    "official_contest_selections": 5,
+    "official_source_proof": "RAW_FIRST_PARTY_PDF_WITH_BYTE_DIGEST",
+    "original_n190_sheet_status": "OFFICIAL_SOURCE_OR_FULL_BOARD_UNVERIFIED",
+    "intervals": {
+      "issue_utc": "2026-11-25T18:49:36.637774+00:00",
+      "decisions": 40,
+      "covered_games": [
+        285,
+        285,
+        163
+      ],
+      "upcoming": 109,
+      "registered_weight_ratios": 5,
+      "new_winners_50": 1,
+      "new_winners_all": 7
+    },
+    "contest_decisions": 15,
+    "contest_eligible": 281,
+    "events": {
+      "issue_utc": "2026-11-25T19:24:35.980087+00:00",
+      "decisions": 80,
+      "future": 109,
+      "week12": 16,
+      "completed": 163,
+      "validation_games": [
+        285,
+        285
+      ],
+      "primary_new_wins": 2,
+      "all_new_wins": 10
+    },
+    "weekly_objectives": {
+      "decisions": 15,
+      "policies": 281,
+      "source_utc": "2026-11-25T19:25:00.163612+00:00",
+      "official_games": 16,
+      "objectives": [
+        "four_wins",
+        "perfect_weeks",
+        "four_points"
+      ],
+      "entries": 0
+    },
+    "score_review": {
+      "decisions": 45,
+      "new_primary": 1,
+      "new_all_ratios": 6,
+      "upcoming": 109,
+      "completed": 163
+    },
+    "margin_edge": {
+      "policies": 45249,
+      "objectives": 5,
+      "ratios": 5,
+      "cards": 3,
+      "entries": 0
+    },
+    "price_scenario": {
+      "eligible": 16,
+      "issue_utc": "2026-11-25T20:41:45.697412+00:00"
+    },
+    "situational_review": {
+      "primary_new": 0,
+      "new_all_ratios": 2,
+      "decision_count": 45,
+      "forecast_games": 109,
+      "completed_replays": 163
+    },
+    "all_offered": {
+      "policies": 46019,
+      "games": [
+        272,
+        272,
+        163
+      ],
+      "upcoming": 16
+    },
+    "new_original_grades": 0,
+    "prior_league_release": "N194",
+    "direct_specialist_review": {
+      "owner": "NFL",
+      "edition": "N195",
+      "observed": "2026-11-25T21:54:37.990554+00:00",
+      "current_games": 16,
+      "earlier_league_forecasts": 109,
+      "contest_entries": 0,
+      "official_choices_per_objective": 32,
+      "registered": 47579,
+      "all_source_spreads": 862,
+      "current_source_spreads": 828,
+      "cross_strike_checks": {
+        "league": {
+          "PASS": 55
+        },
+        "direct": {
+          "INCONSISTENT_ACROSS_STRIKES": 52,
+          "PASS": 3
+        }
+      },
+      "league_direct_side_agreements": 9,
+      "role": "Public aggregates and dated research forecasts"
+    },
+    "public_phone_cards_n195": 5
   },
   "verification": {
     "base_url": "https://sports-edge-lab-nfl-current.alv-mendizabal.chatgpt.site/",
@@ -38,8 +209,8 @@
       {
         "path": "against-the-spread/index.html",
         "url": "https://sports-edge-lab-nfl-current.alv-mendizabal.chatgpt.site/against-the-spread/index.html",
-        "sha256": "237d6ec25f86b2936b5671ad3eb3cbccbc59d5e2b3379ffd3d0ef35e78da5065",
-        "bytes": 25108
+        "sha256": "af727bf852bc61741943083e296bfd1970a86cc404ed0e31d09315834fdd76db",
+        "bytes": 27470
       },
       {
         "path": "all-games/index.html",
@@ -1494,6 +1665,30 @@
         "bytes": 149959
       },
       {
+        "path": "share/n195-week12-1.png",
+        "url": "https://sports-edge-lab-nfl-current.alv-mendizabal.chatgpt.site/share/n195-week12-1.png",
+        "sha256": "304f0b3b42df88ed7f2e46b883b71cf8e7ee88dbe45a3055e411218458b256da",
+        "bytes": 163640
+      },
+      {
+        "path": "share/n195-week12-2.png",
+        "url": "https://sports-edge-lab-nfl-current.alv-mendizabal.chatgpt.site/share/n195-week12-2.png",
+        "sha256": "b274f86820e0a81ac91b39d06495801a26cb5a17bbd2ee7385c331b7f19d2cb7",
+        "bytes": 169062
+      },
+      {
+        "path": "share/n195-week12-3.png",
+        "url": "https://sports-edge-lab-nfl-current.alv-mendizabal.chatgpt.site/share/n195-week12-3.png",
+        "sha256": "e58a50889eab6dc05e3fdc0d369d9c259f3dd5830ffd46465f18177082b5a23a",
+        "bytes": 171397
+      },
+      {
+        "path": "share/n195-week12-4.png",
+        "url": "https://sports-edge-lab-nfl-current.alv-mendizabal.chatgpt.site/share/n195-week12-4.png",
+        "sha256": "5201d00501d4aa9d1ff337882954e29684f913fe6fda27fa203cda811e82f950",
+        "bytes": 170522
+      },
+      {
         "path": "share/packers-rams.png",
         "url": "https://sports-edge-lab-nfl-current.alv-mendizabal.chatgpt.site/share/packers-rams.png",
         "sha256": "a54e5a858e0c08e2889f3257f076233cb869a68de5ca80734b7ee498e513ebef",
@@ -1562,8 +1757,8 @@
       {
         "path": "weeks/12/index.html",
         "url": "https://sports-edge-lab-nfl-current.alv-mendizabal.chatgpt.site/weeks/12/index.html",
-        "sha256": "76abfd55e06aa3142e8259015930752faa1050484cc97b026b4971caae9cd3c1",
-        "bytes": 121758
+        "sha256": "085355d554c30ebba286c8c2870895c1e49437e107b1d62d0a348d4a90c850b5",
+        "bytes": 124143
       },
       {
         "path": "weeks/13/index.html",
@@ -1606,7 +1801,7 @@
     "method": "Committed expected source manifest issued with the public deployment. The anonymous browser workflow independently checks every deployed asset."
   },
   "prior_morning_contest": "https://sports-edge-lab-nfl-current.alv-mendizabal.chatgpt.site/circa/draftkings-1003.html",
-  "site_version": 42,
-  "provider_saved_tar_sha256": "sha256:05dd0eb830fa57e81950dc8b34ce73334f2b0b75cb52bf8f14ff44081dffbc6e",
+  "site_version": 43,
+  "provider_saved_tar_sha256": "sha256:ecacbeeba56aaa9bbf59c56d9a13f05b5cbdfadd78508d66856f190ca36e6d59",
   "all_games_url": "https://sports-edge-lab-nfl-current.alv-mendizabal.chatgpt.site/all-games/"
 }
