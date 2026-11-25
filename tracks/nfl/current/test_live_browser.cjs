@@ -27,7 +27,12 @@ function verifyHostedHtml(observed, source, context) {
     return record;
   }
   const text = observed.toString("utf8");
-  const matches = [...text.matchAll(/<script>\(function\(\)\{function c\(\)\{var b=a\.contentDocument[\s\S]*?<\/script>(?=<\/body>\s*<\/html>\s*$)/g)];
+  // The archived redirect ends without an explicit body tag. On this one artifact Cloudflare appends
+  // its known script at EOF. Exact recovery of all of the pinned original bytes still applies.
+  const change = context === "current-archive-n186-research-history.html"
+    ? /<script>\(function\(\)\{function c\(\)\{var b=a\.contentDocument[\s\S]*?<\/script>$/g
+    : /<script>\(function\(\)\{function c\(\)\{var b=a\.contentDocument[\s\S]*?<\/script>(?=<\/body>\s*<\/html>\s*$)/g;
+  const matches = [...text.matchAll(change)];
   assert.equal(matches.length, 1, `${context}: unexpected hosted HTML change; raw response retained`);
   const added = matches[0][0];
   record.fragment_file = `${context}-hosting-fragment.txt`;
