@@ -27,7 +27,12 @@ function verifyHostedHtml(observed, source, context) {
     return record;
   }
   const text = observed.toString("utf8");
-  const matches = [...text.matchAll(/<script>\(function\(\)\{function c\(\)\{var b=a\.contentDocument[\s\S]*?<\/script>(?=<\/body>\s*<\/html>\s*$)/g)];
+  // The archived redirect ends without an explicit body tag. On this one artifact Cloudflare appends
+  // its known script at EOF. Exact recovery of all of the pinned original bytes still applies.
+  const change = context === "current-archive-n186-research-history.html"
+    ? /<script>\(function\(\)\{function c\(\)\{var b=a\.contentDocument[\s\S]*?<\/script>$/g
+    : /<script>\(function\(\)\{function c\(\)\{var b=a\.contentDocument[\s\S]*?<\/script>(?=<\/body>\s*<\/html>\s*$)/g;
+  const matches = [...text.matchAll(change)];
   assert.equal(matches.length, 1, `${context}: unexpected hosted HTML change; raw response retained`);
   const added = matches[0][0];
   record.fragment_file = `${context}-hosting-fragment.txt`;
@@ -109,7 +114,7 @@ function verifyHostedHtml(observed, source, context) {
       assert.equal(new URL(response.url()).origin, base.origin);
       const bytes = await response.body();
       if (asset.path.endsWith(".html")) {
-        verifyHostedHtml(bytes, local, `current-${path.basename(asset.path, ".html")}`);
+        verifyHostedHtml(bytes, local, `current-${asset.path.replace(/[^a-zA-Z0-9_.-]/g, "-")}`);
       } else {
         assert(bytes.equals(local), asset.path);
       }
@@ -131,6 +136,19 @@ function verifyHostedHtml(observed, source, context) {
       await noOverflow();
       assert.match(await page.locator("body").innerText(), /Week 12/i);
       assert(page.url().startsWith(base.href));
+      assert.match(await text(".hero-stats"), /LAR by 4.25|Rams by 4.25/);
+      assert.match(await text(".hero-footer"), /9:02 PM PT/);
+      assert.match(await text("#results"), /N187 VS N186/i);
+      await count("#season-outlook .source-table tbody tr", 109);
+      await count("[data-market-game]", 16);
+      await count("[data-market-game] tbody tr", 144);
+      await page.locator("#market-matchup").selectOption("2026_12_NE_LAC");
+      await count("[data-market-game]:visible tbody tr", 9);
+      assert.match(await text("[data-market-game]:visible"), /Direct exchange observation/);
+      await page.locator("#market-matchup").selectOption("2026_12_GB_LA");
+      assert.equal(await page.locator(".source-ledger summary").filter({hasText:"79 sources"}).count(), 1);
+      const archiveLink=page.locator('a[href="archive/n186/index.html"]');
+      assert.equal(await archiveLink.count(),1);
       await count("#games details.game:visible", 16);
       await page.locator("#day").selectOption("Thu Nov 26");
       await count("#games details.game:visible", 3);

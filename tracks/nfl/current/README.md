@@ -2,7 +2,9 @@
 
 [Open the public NFL dashboard](https://sports-edge-lab-nfl-current.alv-mendizabal.chatgpt.site/) · [Public release receipt](publication.json) · [Earlier NFL research](research-history.html?view=performance)
 
-Week 12 covers all 16 scheduled matchups. The public board shows the NFL models' issued picks for winner, point margin and total, with the forecast and price observations dated separately. The contest view grades a cover as one point and a push as half a point. Its weekday preview uses the named sportsbook's lines until the official Circa worksheet has been observed and verified. The performance view records the validation and exposed-season denominators.
+The verified N187 owner issued 109 pregame forecasts. The Week 12 page opens with all 16 matchups and compares named games and markets across DraftKings, Kalshi and Polymarket. Source coverage is shown for all 79 venues in the dated capture. The contest view grades a cover as one point and a push as half a point. The sportsbook preview remains provisional until an official Circa worksheet has been verified. The performance report compares N187 against N186 on identical annual rows and records previously inspected 2026 results separately.
+
+[Previous Week 12 release](archive/n186/index.html) · [Previous public release receipt](publication-n186.json)
 
 The earlier Week 11 dashboard, its clock selectors, its archived evidence and its phone cards remain available at dated, clocked and paginated bookmarks and the [Week 11 archive](research-history.html). The [November 23 receipt](publication-n175.json) documents the earlier deployment.
 
@@ -97,4 +99,5 @@ python3 tracks/nfl/current/validate_snapshot.py
 The snapshot validator checks unique game identities, finite nullable values, probability bounds, cover/push conservation, half-point push rules, expected-point arithmetic, issue-before-kickoff ordering, linked local assets, document controls and private-path exclusions. `--allow-empty` is available only while preparing a placeholder; a populated publication uses the normal command.
 
 Browser checks on the live Site are separate from this structural/data validation. Source publication, deployment and research refresh are different events.
+
 
