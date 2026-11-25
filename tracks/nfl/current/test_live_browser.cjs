@@ -195,6 +195,8 @@ function verifyHostedHtml(observed, source, context) {
       await count("[data-card-season] tbody tr", 47);
       await count("[data-card-validation] tbody tr", 5);
       assert.match(await text("main"), /42.07%/);
+      assert.match(await text("#historic-rules"), /28.5 out of 45/);
+      assert.match(await text("#historic-rules"), /30.5\/55/);
       await count("#option-grid tbody tr", 32);
       await page.locator("#rank-filter").selectOption("top");
       await count(".contest-game:visible", 5);
